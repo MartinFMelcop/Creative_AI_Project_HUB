@@ -8,3 +8,7 @@ The remaining lines are described in [the seed](../SEED.md) and
 [project registry](../registry/projects.json). Historical sources remain in
 the archive. Add a working project only when it has concrete material, a
 defined scope, acceptance criteria, and its own execution instructions.
+
+[P02 — EVAL-001](../evaluations/chat-send-buffering/README.md) is an executable
+task harness under `evaluations/`, using P11's app and tests without duplicating
+the application. Its calibrated artifact gates do not establish model performance.

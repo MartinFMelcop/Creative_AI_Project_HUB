@@ -4,8 +4,9 @@ An evolving laboratory of games, narrative, images, audio, data, and AI
 evaluation by **Martin Melcop Neto**. Projects are adaptable seeds: build small
 slices, verify behavior, record decisions, and test reuse in actual destinations.
 
-**Current seed: v0.3.1.** The lab includes eleven project lines, 178 preserved
-historical texts, and one working local text-chat adaptation. No game migration,
+**Current seed: v0.4.0.** The lab includes eleven project lines, 178 preserved
+historical texts, one working local text-chat adaptation, and one calibrated
+practice-task harness. No game migration,
 model benchmark, finished music catalogue, or public deployment is claimed.
 The containing directory keeps its original v0.2.0 package name.
 
@@ -14,7 +15,9 @@ The containing directory keeps its original v0.2.0 package name.
 - [State](docs/STATE.md): completed increment, limits, and next action.
 - [Assessment](docs/ASSESSMENT.md) and [improvement plan](docs/IMPROVEMENT_PLAN.md): evidence and selected priorities.
 - [P11 — Live exchange](projects/realtime-integration-lab/README.md): install, run, test, provenance, and contribution.
-- [Current execution evidence](evidence/realtime-chat/POLLING_SEND_RUN.json): transport regressions, source versions, environment, and artifact hashes.
+- [P02 — EVAL-001](evaluations/chat-send-buffering/README.md): export a starter, check a client, and inspect limits.
+- [Current calibration evidence](evidence/evaluation-task/CALIBRATION.json): known baseline/reference, commands, environment, and hashes.
+- [P11 transport evidence](evidence/realtime-chat/POLLING_SEND_RUN.json): prior correction and its bounded tests.
 - [SEED.md](SEED.md), [agent instructions](AGENTS.md), and [decisions](docs/DECISIONS.md): direction and operating context.
 - [Project registry](registry/projects.json) and [legacy inventory](registry/legacy_sources.json): IDs and evidence boundaries.
 - [Recovered sources](docs/LEGACY_REPOSITORIES.md): historical snapshots and their limitations.
@@ -33,6 +36,7 @@ From this lab directory, with Python 3.9+:
 ```bash
 python3 tools/validate_repo.py
 python3 tools/test_validate_repo.py
+python3 evaluations/chat-send-buffering/test_runner.py
 sha256sum -c MANIFEST.sha256
 ```
 
@@ -40,7 +44,8 @@ The first check validates registries, local Markdown file links, and preserved
 source hashes, excluding dependency documentation under `node_modules`. The
 regression suite checks that maintained broken links and archive corruption still
 fail. The manifest covers maintained files inside this lab, excluding
-itself, ignored dependencies, and generated outputs. Neither check runs projects.
+itself, ignored dependencies, and generated outputs. These lab checks do not run
+the browser acceptance suite; P02's checker and P11's test commands do.
 P11 has its own installation and test commands; other projects do not need to
 be installed to develop it.
 
@@ -52,6 +57,7 @@ documentation, UI, code comments, and evidence are in English; historical texts
 remain in their original language. Martin supplied direction and authorization;
 Codex performed this increment. Manual usability review by Martin is pending.
 
-Candidate transfers remain candidates until a destination uses and verifies
-them. Publication and deployment require separate authorization; this session
-produces a local working sample and resumable repository state.
+TR-009 now has a verified P02 task consumer: baseline rejects at 15/17 and
+reference accepts at 17/17. Other transfers remain candidates. No independent
+model was evaluated. P11 is Git-published in `df1bd59`; this P02 iteration remains
+local and uncommitted. Publication and deployment require explicit authorization.

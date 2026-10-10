@@ -113,3 +113,33 @@ Transfers to P02/P01 remain candidates; no destination consumer has been verifie
 **Revisit:** upgrade Socket.IO, introduce retries or another outgoing event,
 or require outage recovery. Recheck queue lifetimes and acknowledgement behavior
 before changing the policy. Martin's UI review remains separate and unperformed.
+
+## ADR-010 — adapt a reproduced P11 defect into a bounded P02 task
+
+**Date:** 2026-10-10. **Status:** implemented and locally calibrated.
+**Authority:** current continuous-development request; selection and execution by Codex.
+
+P11's working slice is already published and validated. P02 has only guidance,
+while the environment can reproduce a real client defect without Unity or model
+credentials. Choose one send-policy repair task rather than creating another app
+or manufacturing a candidate score. P02 becomes AI Evaluation & QA Lab; Unity
+stays its historical proposal and remains conditional on an actual engine task.
+
+Export an explicit allowlist from committed P11 0.1.0 (`66041e7`), plus brief and
+hashes, into a fresh workspace. Do not include Git, solution, tests, evidence, or
+knowledge. Keep the evaluator's pinned server and 17 tests in P11; load only the
+submitted client bytes through the existing route. Support-file mutations are
+rejected; altered evaluator artifacts require recalibration. Output records and
+existing workspaces cannot be overwritten. A missing browser or incomplete run
+is inconclusive, distinct from a rejected artifact.
+
+The known baseline fails exactly two checks and the known correction passes all
+17; eight harness regressions pass. This validates TR-009's task adaptation into
+P02, with no shared abstraction or change to P11. These controlled probes are
+not independent candidate/model attempts. Public source remains discoverable;
+export separation is not a secrecy guarantee, OS isolation, or a security sandbox.
+
+**Revisit:** a real independent candidate, new test/suite version, additional
+editable files, reserved material, engine integration, or a requirement to execute
+untrusted artifacts. Record actual identity/context/attempts before performance
+claims. Never infer model training or knowledge transfer from co-located files.

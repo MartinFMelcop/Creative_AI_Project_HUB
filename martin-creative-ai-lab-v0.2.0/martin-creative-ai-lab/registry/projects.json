@@ -20,13 +20,13 @@
     },
     {
       "id": "P02",
-      "name": "Unity AI Evaluation & QA Lab",
-      "slug": "unity-ai-evaluation-lab",
-      "status": "seed",
-      "maturity": "M0",
-      "phase": "proposal",
+      "name": "AI Evaluation & QA Lab",
+      "slug": "ai-evaluation-qa-lab",
+      "status": "active",
+      "maturity": "M4",
+      "phase": "practice-task-calibrated",
       "origin": "proposed",
-      "next_action": "Escolher task verificável: chat Node de P11 ou domínio de P10; Unity somente após validar ambiente.",
+      "next_action": "Run one independently produced EVAL-001 client with recorded candidate context/tools/attempts; do not infer a model score from calibration.",
       "related_projects": [
         "P01",
         "P03",
@@ -34,7 +34,15 @@
         "P10",
         "P11"
       ],
-      "evidence": []
+      "evidence": [
+        "evaluations/chat-send-buffering/README.md",
+        "evidence/evaluation-task/CALIBRATION.json",
+        "knowledge/evaluation-artifacts.md"
+      ],
+      "working_path": "evaluations/chat-send-buffering",
+      "working_version": "0.1.0",
+      "historical_name": "Unity AI Evaluation & QA Lab",
+      "maturity_scope": "EVAL-001 export and artifact-checking harness: eight runner regressions, baseline rejected at 15/17, reference accepted at 17/17, unavailable-browser probe inconclusive, and starter installation/CLI smoke passed. No independent model candidate or score."
     },
     {
       "id": "P03",
@@ -180,7 +188,7 @@
       "maturity": "M4",
       "phase": "local-chat-validated",
       "origin": "github_snapshot_inspected",
-      "next_action": "Capture human UI feedback; next possible coding increment is a bounded P02 defect task with explicit candidate/reference isolation.",
+      "next_action": "Capture human UI feedback; EVAL-001 now verifies the bounded TR-009 task adaptation. Lobby reuse still needs its own baseline and contract.",
       "related_projects": [
         "P01",
         "P02",
@@ -194,7 +202,7 @@
         "evidence/realtime-chat/POLLING_SEND_RUN.json"
       ],
       "source_id": "LEGACY-002",
-      "maturity_scope": "Local text-chat correction 0.1.1: 17 current automated checks (6 protocol, 11 Chromium) passed, including live polling congestion and injected heartbeat expiry. Prior CLI smoke belongs to 0.1.0. Human UI review, public deployment and destination transfer remain outside verified scope.",
+      "maturity_scope": "Local text-chat correction 0.1.1: 17 current automated checks (6 protocol, 11 Chromium) passed, including live polling congestion and injected heartbeat expiry. Prior CLI smoke belongs to 0.1.0. Human UI review and public deployment remain outside the local chat scope. TR-009 is separately validated for P02 task adaptation/calibration only.",
       "working_path": "projects/realtime-integration-lab",
       "working_version": "0.1.1"
     }

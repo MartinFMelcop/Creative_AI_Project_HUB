@@ -86,15 +86,18 @@
       "id": "TR-009",
       "source_project": "P11",
       "target_project": "P02",
-      "status": "candidate",
-      "unit": "Reproduced chat delivery and transport defects as evaluation task candidates",
+      "status": "validated",
+      "unit": "Reproduced P11 send-buffering defects adapted into P02 EVAL-001",
       "evidence": [
         "evidence/realtime-chat/RUN.json",
         "knowledge/realtime-delivery.md",
-        "evidence/realtime-chat/POLLING_SEND_RUN.json"
+        "evidence/realtime-chat/POLLING_SEND_RUN.json",
+        "evaluations/chat-send-buffering/README.md",
+        "evidence/evaluation-task/CALIBRATION.json"
       ],
       "source_reference": "SEED.md — seção 28.5",
-      "next_action": "Select one defect, define candidate/reference isolation, and adapt its criteria into P02 before claiming a transfer or model evaluation."
+      "next_action": "Run a separately produced client with recorded context and tools; extend the claim only after destination execution supplies evidence.",
+      "verification_scope": "Task export and artifact-checker calibration only; not an independent candidate, model benchmark, or shared component."
     },
     {
       "id": "TR-010",

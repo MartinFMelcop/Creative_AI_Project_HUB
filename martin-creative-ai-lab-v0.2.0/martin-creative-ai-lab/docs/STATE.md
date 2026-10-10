@@ -1,75 +1,85 @@
 # Lab state
 
-**Updated:** 2026-10-10. **Seed version:** 0.3.1.
-**Primary workstream:** P11 local text chat, correction 0.1.1 completed and
-locally verified. The containing directory retains its v0.2.0 package name.
+**Updated:** 2026-10-10. **Seed version:** 0.4.0.
+**Primary workstream:** P02 EVAL-001 task harness 0.1.0, locally calibrated.
+P11 remains 0.1.1. The containing directory retains its v0.2.0 package name.
 
 ## What changed
 
-The checkout began clean at `66041e7fdd7687ee21099f95129dff41933c74dd`, with
-P11 0.1.0 committed. Inspection and two new browser checks found a connected form
-submission discarded behind an in-flight polling write, plus a heartbeat race
-that retained a packet for reconnect replay. [P11 0.1.1](../projects/realtime-integration-lab/README.md)
-uses ordinary acknowledged emission for the live transport queue and immediately
-clears Socket.IO's separate reconnect queue. The offline guard, draft handling,
-timeout feedback, text-only rendering, validation, and retention bound remain.
+The checkout began clean on `work` at
+`df1bd5937e6168dd0ba42ce2f614304d80ffb59d`; a fresh remote query confirmed `main`
+at the same merge commit. Both P11 development commits (`66041e7`, `2d4e9a7`)
+and remote root-instructions commit `e30f799` are preserved and published.
+The earlier state statement that P11 0.1.1 was uncommitted is superseded.
 
-Changes are limited to the client send path, browser regression harness, working
-version metadata, and continuity/evidence. Dependency resolutions, event contract,
-server, historical ZIP, legacy inventory, and original 0.1.0 run record are unchanged.
-The new correction remains uncommitted in this working tree.
+[P02's working task](../evaluations/chat-send-buffering/README.md) exports a
+fresh, allowlisted P11 0.1.0 starter plus a behavior brief, without Git history,
+reference code, tests, knowledge, or prior evidence. Its evaluator checks only
+the submitted client through the existing browser route; source and evaluator
+hashes, tool versions, commands, complete output, counts, and failures are recorded.
+Support files are immutable; partial or unavailable execution is inconclusive.
+
+No duplicate app, engine migration, model call, dependency change, or shared
+framework was introduced. P02's current name is AI Evaluation & QA Lab; Unity
+remains its historical proposal. TR-009 is validated for task adaptation and
+calibration only. TR-010 and the other nine transfers remain candidates.
+P11 implementation/tests/dependencies, source ZIP/inventory, and prior run records
+are unchanged; its README now links the destination task.
+This new increment is local and uncommitted; it has not been published.
 
 ## Verification and evidence
 
-[Current run](../evidence/realtime-chat/POLLING_SEND_RUN.json) records environment,
-inputs, baseline source identity, injected boundaries, and working artifact hashes.
+[Calibration evidence](../evidence/evaluation-task/CALIBRATION.json) includes
+complete evaluator records and the separation, installation, and execution scope.
 
-- Two regressions fail on the recorded 0.1.0 client: missing polling submission
-  and an unexpected reconnect-buffer entry. The harness serves the old client
-  through a browser route without overwriting working or historical files.
-- The same two checks pass on 0.1.1. The full `npm test` suite passes 17 tests
-  (6 protocol, 11 Chromium), with zero failures, skips, or uncaught page errors.
-- Frozen `npm ci` passes (97 packages). Parsed lockfile comparison confirms only
-  root project version metadata changed; resolved dependencies are identical.
-- The documentary validator passed: 11 projects, 11 transfers, 0 assets,
-  2 legacy sources, and 66 maintained local links. All 3 existing validator
-  regression checks passed. The final manifest is refreshed and verified at
-  closure; documentary outcomes are recorded in the execution evidence.
+- Eight runner regression tests passed: exact starter export, overwrite
+  protection, immutable support files, extra/missing/linked artifacts, complete
+  result classification, and incomplete/skipped result rejection.
+- Exported 0.1.0 client: 17 checks executed, 15 passed, 2 failed as expected
+  (polling congestion and stale-state reconnect buffering); rejected artifact.
+- Corrected P11 0.1.1 client, submitted through a separate export: 17 checks
+  passed (6 protocol, 11 Chromium), zero failed/skipped/cancelled; accepted artifact.
+- Missing-browser negative probe: inconclusive, exit 2; no behavior-test pass claim.
+- Exported starter frozen installation passed, 97 packages. Its actual CLI
+  served health/page and broadcast trimmed text to two Socket.IO peers. The
+  server was stopped. This does not turn the defective starter client into a
+  working browser solution; its two failures above remain the baseline.
+- Documentary validation passed: 11 projects, 11 transfers, 0 assets, 2 sources,
+  84 local links. Three existing validator regressions passed. Diff whitespace,
+  preserved source/evidence checks and final manifest closure (52 entries) are
+  recorded after maintained content is final.
 
-The polling regression uses actual HTTP writes. The heartbeat regression forces
-expiry at the pinned Socket.IO predicate, restores it immediately, then verifies
-no replay through a real reconnect. This is controlled fault injection, not a
-real elapsed-time/network-loss study. CLI startup is unchanged and was not rerun;
-its prior smoke and 15-test result remain [0.1.0 evidence](../evidence/realtime-chat/RUN.json).
-
-Environment: Linux cloud container, Node 24.19.0, npm 11.9.0, Python 3.12.14,
-Chromium 154.0.8037.57, Playwright Core 1.64.0, Socket.IO 4.8.4. Browser tests
-start and close their own local servers. The recorded machine capabilities do
-not establish installation on Martin's machine.
+Environment: Linux cloud container, Python 3.12.14, Node 24.19.0, npm 11.9.0,
+Chromium 154.0.8037.57, Playwright Core 1.64.0, Socket.IO 4.8.4. The evaluator
+probes real browser startup; each suite owns its ephemeral server and browsers.
+No additional setup dependency or credential is required.
 
 ## Limits and learning
 
-P11 stays M4 for its local slice. No persistence, automatic retry, identity,
-public hosting, cross-browser study, model benchmark, game runtime, media master,
-formal accessibility audit, or human usability review was added. Uncertain
-delivery still requires judgement before manual resend; duplicates remain possible.
+P02 is M4 for a calibrated artifact-checking harness, not for candidate/model
+performance. Both artifacts are controlled calibration inputs. No independent
+candidate, model identity, cost, score, benchmark, or human review is invented.
+The same Codex session designed this harness and reused the existing correction
+and tests. Exported context separation is not secrecy, OS isolation, or a sandbox;
+public history exposes the answer. Future independent runs need controlled
+candidate execution and explicit context/tool/attempt records.
 
-[The delivery lesson](../knowledge/realtime-delivery.md) now distinguishes live
-congestion from reconnect buffering. P02/P01 applications remain candidate
-transfers without a verified destination consumer; no shared component was promoted.
-Other projects' evidence boundaries remain unchanged. The archive is still a
-selected textual recovery, not a complete backup or proof of available art/audio.
+The heartbeat test injects expiry at the pinned library predicate; polling uses
+real HTTP writes. These bounded checks do not establish real-world outage
+reliability, cross-browser behavior, accessibility, or human usability.
+P01 baselines and creative/game/media masters remain missing; P10 remains a
+source reservoir. No maturity or availability is inferred from asset labels.
 
-Martin provided the portfolio request and project context. Codex selected,
-implemented, tested, and documented this correction. Martin is not credited with
-manual review or testing, and no remote publication was performed in this session.
+Martin supplied direction and authorization. Codex implemented and calibrated
+the task; no independent candidate attempt or manual testing is attributed to Martin.
+[Evaluation learning](../knowledge/evaluation-artifacts.md) separates artifact
+acceptance, harness calibration, context boundaries, and claims about an author.
 
 ## Next concrete action
 
-Review the local P11 interaction with Martin: keyboard input, message readability,
-connection feedback, and uncertain-delivery wording. The next possible technical
-increment is a bounded P02 task using one reproduced defect, with explicit
-candidate/reference isolation and acceptance criteria before any candidate run.
-That independent preparation does not require inventing human feedback. P01
-still needs its own baseline; P10 remains a source reservoir rather than an
-active parallel project.
+Run one independently produced EVAL-001 client with an explicit candidate brief,
+separate workspace/context, permitted tools, source exposure policy, attempts,
+timing and available cost. Preserve its artifact and evaluator result before
+making any claim about a model. Martin's P11 two-tab usability review remains
+pending and independent. Prepare a commit from the current diff; publishing this
+increment requires explicit authorization in its publication task.

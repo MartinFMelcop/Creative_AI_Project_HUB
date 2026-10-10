@@ -20,13 +20,12 @@ Sem calendário contratado. Definir esforço e ordem conforme recursos e objetiv
 
 A recuperação seletiva de P10/P11 encerrou uma unidade documental da descoberta. Ambiente de Martin e seleção da primeira frente continuam pendentes. A Fase 2 pode usar uma task Node/Socket.IO de P11 ou domínio puro de P10, identificando a stack real; isso não equivale a executar Unity. Fases posteriores continuam condicionais, não compromissos simultâneos.
 
-## Current progress — v0.3.1
+## Current progress — v0.4.0
 
-The paragraph above records the v0.2.0 recovery. The current workstream is P11:
-one local chat interaction implemented and automatically validated in this
-cloud machine. Correction 0.1.1 verifies connected sends during polling congestion
-and no reconnect replay after controlled heartbeat expiry. [The maintained plan](IMPROVEMENT_PLAN.md) selects the scope and
-[state](STATE.md) identifies the next action. This is technical sample production,
-not a Unity milestone or model evaluation. Presentation still requires Martin's
-review; transfer still requires a second verified destination. P01 recovery
-remains conditional on selecting that workstream.
+P11 0.1.1 is completed and Git-published in merge `df1bd59`. P02's first practice
+task now has a fresh starter export and pinned evaluator. Calibration rejects
+the known baseline and accepts the existing correction. [The plan](IMPROVEMENT_PLAN.md)
+and [state](STATE.md) distinguish this validated harness from independent model
+evaluation. Next: one candidate-produced client with explicit context/tools and
+recorded attempts. Human P11 UI review and engine/media recovery remain separate.
+No calendar, parallel project activation, or task-count target is added.

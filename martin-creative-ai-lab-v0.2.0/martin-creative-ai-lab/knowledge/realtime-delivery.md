@@ -41,9 +41,7 @@ The heartbeat test pins a specific internal predicate in Socket.IO 4.8.4, restor
 it immediately, and then uses a real transport reconnect. This proves the policy
 at that boundary, not every timing/packet-loss scenario or distributed delivery.
 
-Candidates: TR-009 could turn the reproduced defect into a P02 evaluation task;
-TR-010 could inform P01 event ownership. Both require destination-specific
-criteria and tests before claiming a completed transfer. A chat is not a game
+TR-009 now consumes this defect in [P02 EVAL-001](../evaluations/chat-send-buffering/README.md), with a calibrated export/checker and destination-specific gates. That bounded adaptation is verified; no independent model evaluation is implied. TR-010 remains a candidate for P01 event ownership. A chat is not a game
 lobby or authoritative multiplayer system. A public reference solution must
 not be treated as private evaluation material. No component was promoted to
 `shared/` in this session.

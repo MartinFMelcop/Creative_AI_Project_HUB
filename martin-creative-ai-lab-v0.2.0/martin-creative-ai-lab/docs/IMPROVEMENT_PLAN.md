@@ -2,16 +2,46 @@
 
 Updated: 2026-10-10. One primary workstream; no mandatory backlog expansion.
 
+## Current iteration — P02 chat send-buffering task
+
+**Priority:** 1 — completed and locally calibrated. P11 0.1.1 is published;
+P02 began this iteration with only templates.
+Use its reproduced 0.1.0 transport defects as one bounded repair task. This adds
+an executable evaluation workflow without a new application, engine, or model
+dependency. P11's working implementation remains unchanged.
+
+**Scope:** `evaluations/chat-send-buffering/`: candidate brief, allowlisted export
+from commit `66041e7`, evaluator-owned artifact runner, and runner regressions.
+Use existing P11 locked dependencies, server, and 17 protocol/Chromium checks.
+Update maintained continuity, P02/TR-009 records, provenance, and final hashes.
+
+**Acceptance:** export a fresh workspace without Git history, reference client,
+tests, knowledge, or prior evidence; preserve starter/support files; distinguish
+rejected artifacts from unavailable or incomplete execution; record artifact,
+test-suite and environment identity. Calibrate the baseline at two known failures
+and the corrected artifact at 17 passes. Verify scope violations and incomplete
+result handling. Public-source separation is not secrecy or a security sandbox.
+
+**Dependencies:** Python 3.9+, retained Git objects, Node 22+, installed P11
+dependencies and system Chromium. No credentials, model calls, Unity, or media
+masters are required. No candidate model is evaluated or scored in this iteration.
+
+**Next gate:** an independently produced client with known context/tool identity,
+separate candidate execution, and recorded attempts; Martin's P11 UI review remains
+independent. Existing P11 completion notes below are historical, not active work.
+
+## Prior completed work and constrained alternatives
+
 | Priority | Problem / evidence | Value | Scope, dependencies, acceptance |
 |---|---|---|---|
 | 1 — completed | P11 0.1.0 drops a connected form submission while a polling write is busy; a stale connected state can also retain a reconnect packet. Both fail current targeted browser checks | Correct the existing sample's send semantics without expanding product scope | Existing Node/Socket.IO/Chromium stack. The form submission must reach both browsers once after a real polling write drains; a simulated expired heartbeat must leave no reconnect packet, preserve the draft, and never replay the failed attempt |
 | 2 — deferred | P10 has combat vectors and dialogue scenarios but no working destination project | Executable rules or a coherent interactive scene | Select a source subset and formalize edge cases; compare expected transitions or combat outcomes. Independent workstream; do not start during P11 |
 | 3 — blocked by missing source | P01/P03/P04/P05/P06 have historical direction without full baseline packages here; P07/P08 lack inspected masters | Higher creative value once a real source is chosen | Recover a bounded baseline or master, define adaptation criteria, then verify in its destination. Do not reconstruct missing content from inventory labels |
 
-## P11 objective and boundaries
+## Completed P11 objective and boundaries
 
 Continue the already implemented chat in `projects/realtime-integration-lab/`.
-The current increment is 0.1.1: correct connected-send buffering in `public/client.js`
+The prior correction was 0.1.1: correct connected-send buffering in `public/client.js`
 and extend `tests/browser.test.cjs`. Update version metadata, provenance/usage,
 assessment, state, significant decisions, P11's registry entry, candidate lessons,
 seed summaries, execution evidence, and the integrity manifest. The historical
@@ -43,8 +73,8 @@ delivery: the gate is one visible item per accepted broadcast while connected.
 5. Record current artifact hashes and refresh the manifest after maintained
    content is final. Human review remains a separate outstanding action.
 
-Learning may support TR-009 (P11 → P02) or TR-010 (P11 → P01), but both remain
-candidates until adapted and verified in those destinations. No shared
+TR-009 is now adapted and calibrated in P02. TR-010 (P11 → P01) remains
+a candidate until adapted and verified in that destination. No shared
 component is justified by a single chat consumer.
 
 ## Previous completed increment — 0.1.0
@@ -74,5 +104,15 @@ The full working suite completes 17 tests with no failures or skips; dependencie
 are unchanged and frozen installation passes. [Current evidence](../evidence/realtime-chat/POLLING_SEND_RUN.json)
 records the baseline client hash, regression inputs, injected boundary, and
 working artifact hashes. No new engine, feature workstream, or shared component
-was introduced. Human UI review is still pending; defining P02 candidate/reference
-isolation is the next possible coding increment, not a completed transfer.
+was introduced. Human UI review is still pending; the P02 export/checker is now implemented
+and calibrated. Its bounded TR-009 adaptation is verified, without model evaluation.
+
+## Completed P02 increment — 0.1.0
+
+Nine files exported from the recorded starter/brief/manifest, eight runner checks
+passed, baseline rejected at 15/17 and corrected artifact accepted at 17/17.
+Missing-browser probe returned inconclusive; starter frozen installation and CLI
+server smoke passed. [Calibration](../evidence/evaluation-task/CALIBRATION.json)
+records exact sources and complete evaluator output. No new shared abstraction,
+model candidate, score or app was introduced. Next priority is one independently
+produced client with explicit context and tools, rather than more task inventory.

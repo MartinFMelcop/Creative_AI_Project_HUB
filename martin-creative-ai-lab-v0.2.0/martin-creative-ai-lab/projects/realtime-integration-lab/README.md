@@ -127,5 +127,4 @@ public hosting readiness, or a model benchmark.
 
 Next: have Martin try the two-tab interaction and review readability, keyboard
 use, and the uncertain-delivery wording before selecting this as a public case.
-Keep P11 → P02 and P11 → P01 as candidate transfers until a destination task
-actually uses and verifies the lesson. No shared library is needed yet.
+P11 → P02 is now verified for [EVAL-001 task adaptation/calibration](../../evaluations/chat-send-buffering/README.md) only; no independent model was evaluated. P11 → P01 remains a candidate. No shared library is needed.
