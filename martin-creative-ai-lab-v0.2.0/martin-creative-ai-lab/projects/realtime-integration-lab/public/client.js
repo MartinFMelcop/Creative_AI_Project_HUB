@@ -36,8 +36,8 @@ form.addEventListener('submit', (event) => {
   pending = true;
   button.disabled = true;
   feedback.textContent = '';
-  // Volatile emission prevents offline buffering. A timeout never triggers a retry.
-  socket.timeout(3000).volatile.emit('chat message', draft, (error, response) => {
+  // Let the live transport queue this text behind an in-flight polling write.
+  socket.timeout(3000).emit('chat message', draft, (error, response) => {
     pending = false;
     button.disabled = !socket.connected;
     if (error) {
@@ -48,4 +48,6 @@ form.addEventListener('submit', (event) => {
       input.value = '';
     }
   });
+  // Heartbeat expiry can enqueue despite connected=true. Never replay that attempt.
+  socket.sendBuffer.length = 0;
 });

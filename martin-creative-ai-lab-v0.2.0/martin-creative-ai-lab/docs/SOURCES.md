@@ -27,7 +27,7 @@ Ver [síntese e limites](LEGACY_REPOSITORIES.md), [inventário](../registry/lega
 
 ## P11 working adaptation — 2026-10-10
 
-The current session read the three `LEGACY-002` source files from the unchanged
+The 0.1.0 session read the three `LEGACY-002` source files from the unchanged
 archive, verified its archive/file hashes, and extracted only those files to
 a temporary directory. A browser check executed the baseline with Express
 4.22.3 and Socket.IO 4.8.4, both within its declared semver ranges. The working
@@ -35,3 +35,13 @@ adaptation lives outside the archive; see its
 [origin and differences](../projects/realtime-integration-lab/README.md) and
 [execution record](../evidence/realtime-chat/RUN.json). No additional remote
 legacy repository was downloaded or retired in this session.
+
+## P11 send-path correction — 0.1.1
+
+This session starts from committed working revision `66041e7`. No historical
+files were extracted. Existing source provenance is retained; the new
+[execution record](../evidence/realtime-chat/POLLING_SEND_RUN.json) identifies
+both the committed baseline client and tested correction. The pinned installed
+Socket.IO 4.8.4 source and exported `sendBuffer` declaration were inspected to
+distinguish live Engine.IO writes from reconnect buffering. Dependency versions,
+checksums, and trust configuration remain unchanged.

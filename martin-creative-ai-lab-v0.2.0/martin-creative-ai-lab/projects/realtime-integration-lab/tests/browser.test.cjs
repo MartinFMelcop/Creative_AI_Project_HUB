@@ -32,6 +32,13 @@ after(async () => {
 
 beforeEach(async () => {
   context = await browser.newContext();
+  if (process.env.CHAT_TEST_CLIENT_PATH) {
+    // Serve a recorded client revision without replacing working or historical files.
+    await context.route('**/client.js', (route) => route.fulfill({
+      path: process.env.CHAT_TEST_CLIENT_PATH,
+      contentType: 'application/javascript',
+    }));
+  }
   errors = [];
   first = await context.newPage();
   second = await context.newPage();
@@ -67,6 +74,55 @@ test('two browser clients display accepted messages once in both directions', as
   await send(second, 'Second participant');
   await expectMessages(first, ['First participant', 'Second participant']);
   await expectMessages(second, ['First participant', 'Second participant']);
+});
+
+test('a connected form submission waits behind an in-flight polling write', async () => {
+  await first.evaluate(async () => {
+    socket.disconnect();
+    socket.io.opts.transports = ['polling'];
+    socket.io.opts.upgrade = false;
+    const connected = new Promise((resolve) => socket.once('connect', resolve));
+    socket.connect();
+    await connected;
+  });
+  assert.equal(await first.evaluate(() => socket.io.engine.transport.name), 'polling');
+  const state = await first.evaluate(() => {
+    document.getElementById('input').value = 'Submitted while connected';
+    socket.emit('chat message', 'Earlier packet');
+    const observed = { connected: socket.connected, writable: socket.io.engine.transport.writable };
+    document.getElementById('form').requestSubmit();
+    return observed;
+  });
+  assert.deepEqual(state, { connected: true, writable: false });
+  await expectMessages(first, ['Earlier packet', 'Submitted while connected']);
+  await expectMessages(second, ['Earlier packet', 'Submitted while connected']);
+  await first.waitForFunction(() => document.getElementById('input').value === '');
+  assert.equal(await first.locator('#feedback').textContent(), '');
+});
+
+test('a stale connected state does not retain a message for reconnect replay', async () => {
+  await first.waitForFunction(() => socket.io.engine.transport.name === 'websocket' && socket.io.engine.transport.writable);
+  const previousId = await first.evaluate(() => socket.id);
+  const state = await first.evaluate(() => {
+    const engine = socket.io.engine;
+    const original = engine._hasPingExpired;
+    // Pin the heartbeat race at the Socket.IO acceptance boundary, then restore it.
+    engine._hasPingExpired = () => true;
+    try {
+      document.getElementById('input').value = 'Draft during heartbeat expiry';
+      document.getElementById('form').requestSubmit();
+      return { connected: socket.connected, buffered: socket.sendBuffer.length };
+    } finally {
+      engine._hasPingExpired = original;
+    }
+  });
+  assert.deepEqual(state, { connected: true, buffered: 0 });
+  await first.evaluate(() => socket.io.engine.close());
+  await first.waitForFunction((id) => socket.connected && socket.id !== id, previousId);
+  await send(second, 'After the heartbeat race');
+  await expectMessages(first, ['After the heartbeat race']);
+  await expectMessages(second, ['After the heartbeat race']);
+  assert.equal(await first.locator('#input').inputValue(), 'Draft during heartbeat expiry');
 });
 
 test('markup remains literal text in both browsers', async () => {

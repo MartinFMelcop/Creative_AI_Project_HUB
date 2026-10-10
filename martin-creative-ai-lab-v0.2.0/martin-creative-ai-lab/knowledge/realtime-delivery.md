@@ -16,8 +16,30 @@ after a broadcast was delivered. This prototype avoids automatic retry,
 preserves the draft, and tells the participant that delivery is uncertain.
 A durable system would require an explicit message identity, idempotency, and
 recovery contract, rather than inferring exactly-once behavior from one happy
-path. Volatile emission and an offline guard prevent buffered offline sends in
-this bounded prototype. They do not guarantee delivery during transport races.
+path. The offline guard prevents intentional disconnected submissions, but is
+not sufficient for heartbeat races: `connected` can lag behind the emitter's
+connection check.
+
+## Separate live congestion from reconnect buffering
+
+P11 0.1.1 corrects two behavior gaps in 0.1.0. The pinned Socket.IO client drops
+volatile events when the transport is not writable, even if connected. A real
+polling write followed immediately by a form submission reproduced that loss.
+Separately, a controlled heartbeat-expiry check retained a packet for replay even
+with the earlier volatile flag. Both regression tests fail on the recorded
+0.1.0 client and pass on 0.1.1; see
+[current evidence](../evidence/realtime-chat/POLLING_SEND_RUN.json).
+
+Ordinary emission lets the live Engine.IO write queue drain. Clearing the distinct
+Socket.IO reconnect `sendBuffer` immediately after emission preserves the
+prototype's no-replay policy when connection state is stale. The existing
+timeout and draft feedback still apply; no automatic retry or persistence was
+added. Recheck these semantics when upgrading Socket.IO: a property name or
+an online flag alone does not establish a queue's lifetime.
+
+The heartbeat test pins a specific internal predicate in Socket.IO 4.8.4, restores
+it immediately, and then uses a real transport reconnect. This proves the policy
+at that boundary, not every timing/packet-loss scenario or distributed delivery.
 
 Candidates: TR-009 could turn the reproduced defect into a P02 evaluation task;
 TR-010 could inform P01 event ownership. Both require destination-specific

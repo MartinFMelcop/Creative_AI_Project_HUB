@@ -1,0 +1,246 @@
+{
+  "schema_version": 1,
+  "recorded_at_utc": "2026-10-10T21:21:41.514021+00:00",
+  "project": "P11",
+  "working_version": "0.1.1",
+  "starting_git_head": "66041e7fdd7687ee21099f95129dff41933c74dd",
+  "working_tree": "Clean at start; current correction and evidence are uncommitted. Executed runtime, test and dependency SHA-256 values are recorded below.",
+  "objective": "Deliver a connected form submission behind a busy polling write while preserving no reconnect replay during stale connection state.",
+  "environment": {
+    "os": "Linux",
+    "architecture": "x86_64",
+    "node": "24.19.0",
+    "npm": "11.9.0",
+    "python": "3.12.14",
+    "chromium": "154.0.8037.57",
+    "playwright_core": "1.64.0",
+    "socket_io": "4.8.4",
+    "express": "4.22.3",
+    "browser": "Headless system Chromium with --no-sandbox in this container"
+  },
+  "provenance": {
+    "working_origin": "P11 0.1.0 at 66041e7fdd7687ee21099f95129dff41933c74dd",
+    "legacy_origin": "MartinFMelcop/WebSocket at df651a9ddef39c7b05a48f25f1b7fdaff6760185; LEGACY-002",
+    "archive_sha256": "6da636a270284eac1e11d00407dab364c2d9aa8c2f0485e77509e6ccf0dbc1dc",
+    "inventory_sha256": "c1a4a4d0c285af27dad6acf81568e71d0fe211c003c173d797bda9cf171cd9ec",
+    "source_note": "No legacy files extracted in this session. Historical archive, source inventory, and the earlier 0.1.0 execution record are preserved unchanged."
+  },
+  "baseline": {
+    "version": "0.1.0",
+    "client_sha256": "1b559d97a981060467725dbed26545cf175dd383bbb6fdc992e4cb761ef3eaff",
+    "client_export_command": "git show 66041e7fdd7687ee21099f95129dff41933c74dd:martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/projects/realtime-integration-lab/public/client.js > /tmp/creative-ai-p11-0.1.0-client.js",
+    "command": "CHAT_TEST_CLIENT_PATH=/tmp/creative-ai-p11-0.1.0-client.js node --test --test-name-pattern='in-flight polling write|stale connected state' tests/browser.test.cjs",
+    "cwd": "projects/realtime-integration-lab",
+    "method": "Playwright route serves only the recorded client; unchanged server and other assets use the working project. Repository files are not replaced.",
+    "exit_code": 1,
+    "executed": 2,
+    "passed": 0,
+    "expected_failed": 2,
+    "cancelled": 0,
+    "skipped": 0,
+    "outcomes": [
+      {
+        "test": "a connected form submission waits behind an in-flight polling write",
+        "input": [
+          "Earlier packet",
+          "Submitted while connected"
+        ],
+        "boundary": {
+          "connected": true,
+          "transport": "polling",
+          "writable": false
+        },
+        "outcome": "Expected two rendered messages never arrived in the sender list; timeout after 4000 ms.",
+        "cause": "Volatile emission discards the form message while the live transport is temporarily unwritable."
+      },
+      {
+        "test": "a stale connected state does not retain a message for reconnect replay",
+        "input": "Draft during heartbeat expiry",
+        "boundary": "Force the pinned client heartbeat predicate to report expiry while connected remains true and WebSocket transport is writable; restore predicate immediately.",
+        "actual": {
+          "connected": true,
+          "buffered": 1
+        },
+        "expected": {
+          "connected": true,
+          "buffered": 0
+        },
+        "cause": "The old volatile flag does not prevent Socket.IO queuing when its connection check rejects an otherwise writable transport."
+      }
+    ]
+  },
+  "correction": {
+    "files": [
+      "projects/realtime-integration-lab/public/client.js",
+      "projects/realtime-integration-lab/tests/browser.test.cjs",
+      "projects/realtime-integration-lab/package.json",
+      "projects/realtime-integration-lab/package-lock.json"
+    ],
+    "behavior": "Use normal acknowledged emission for the live Engine.IO write queue, then immediately clear Socket.IO reconnect sendBuffer. Existing offline guard, timeout, draft handling, inclusive broadcast and rendering rules remain.",
+    "dependencies": "No resolved package changes; only working-project version metadata changed in package and lockfile."
+  },
+  "targeted_verification": {
+    "command": "node --test --test-name-pattern='in-flight polling write|stale connected state' tests/browser.test.cjs",
+    "exit_code": 0,
+    "executed": 2,
+    "passed": 2,
+    "failed": 0,
+    "skipped": 0
+  },
+  "verification": {
+    "cwd": "projects/realtime-integration-lab",
+    "command": "npm test",
+    "exit_code": 0,
+    "executed": 17,
+    "passed": 17,
+    "failed": 0,
+    "cancelled": 0,
+    "skipped": 0,
+    "todo": 0,
+    "protocol_tests": 6,
+    "browser_tests": 11,
+    "tests": [
+      {
+        "suite": "protocol",
+        "name": "protocol broadcasts trimmed messages to sender and peer in order",
+        "outcome": "passed"
+      },
+      {
+        "suite": "protocol",
+        "name": "non-string payloads are rejected without broadcasts",
+        "outcome": "passed"
+      },
+      {
+        "suite": "protocol",
+        "name": "empty and whitespace-only payloads are rejected without broadcasts",
+        "outcome": "passed"
+      },
+      {
+        "suite": "protocol",
+        "name": "501 code units are rejected even when trimming would shorten the payload",
+        "outcome": "passed"
+      },
+      {
+        "suite": "protocol",
+        "name": "500 UTF-16 code units are accepted including non-ASCII text",
+        "outcome": "passed"
+      },
+      {
+        "suite": "protocol",
+        "name": "messages without acknowledgement callbacks do not crash the server",
+        "outcome": "passed"
+      },
+      {
+        "suite": "browser",
+        "name": "two browser clients display accepted messages once in both directions",
+        "outcome": "passed"
+      },
+      {
+        "suite": "browser",
+        "name": "a connected form submission waits behind an in-flight polling write",
+        "outcome": "passed"
+      },
+      {
+        "suite": "browser",
+        "name": "a stale connected state does not retain a message for reconnect replay",
+        "outcome": "passed"
+      },
+      {
+        "suite": "browser",
+        "name": "markup remains literal text in both browsers",
+        "outcome": "passed"
+      },
+      {
+        "suite": "browser",
+        "name": "rejection is visible, preserves the draft, and does not broadcast",
+        "outcome": "passed"
+      },
+      {
+        "suite": "browser",
+        "name": "a departed client keeps its draft and receives only future messages on rejoining",
+        "outcome": "passed"
+      },
+      {
+        "suite": "browser",
+        "name": "transport interruption reconnects automatically without duplicating listeners",
+        "outcome": "passed"
+      },
+      {
+        "suite": "browser",
+        "name": "browser retains only the latest 200 messages",
+        "outcome": "passed"
+      },
+      {
+        "suite": "browser",
+        "name": "new browser receives future messages without server-side history",
+        "outcome": "passed"
+      },
+      {
+        "suite": "browser",
+        "name": "missing acknowledgement reports uncertainty and does not retry automatically",
+        "outcome": "passed"
+      },
+      {
+        "suite": "browser",
+        "name": "an acknowledgement does not erase a newer draft typed during sending",
+        "outcome": "passed"
+      }
+    ],
+    "browser_errors": 0
+  },
+  "installation": {
+    "command": "npm ci --cache /workspace/.cache/creative-ai-npm --no-fund --no-audit",
+    "exit_code": 0,
+    "installed_packages": 97,
+    "resolution_comparison": "Parsed package-lock matches baseline after changing only the two root project version fields to 0.1.1.",
+    "integrity_note": "No checksum, signature or TLS verification bypassed."
+  },
+  "artifact_sha256": {
+    "projects/realtime-integration-lab/package-lock.json": "9623c8212f0ddf7e742f0936973f43a87512ffd0dbd5ea1cdc0312b5b97be4ac",
+    "projects/realtime-integration-lab/package.json": "1ad160afedc2487c95094d842d23fb1abfa851fdeee17c86cb28eb58bdc39697",
+    "projects/realtime-integration-lab/public/client.js": "6c98996c81ceae54e6b44f6761d347de5fd3c9fdf5962b84d5b00fbba2836634",
+    "projects/realtime-integration-lab/public/index.html": "7cb6866cc5f603ae89263db31620a99053439650a0e3e86e215ab2cc13cd9665",
+    "projects/realtime-integration-lab/public/style.css": "7f4e6e73f8b6ac534369275f9a3461d00afbe7ab1605d46199d50ff25503d323",
+    "projects/realtime-integration-lab/server.cjs": "f84e170aa785a6fa5caf223a1c8a245f51688f347eefa8e2d0e37e0f5f3cf9e7",
+    "projects/realtime-integration-lab/tests/browser.test.cjs": "5d31f58d99d9e6cd51f24e448063349d916acb2fab4c4585a84a969cb3dca63e",
+    "projects/realtime-integration-lab/tests/protocol.test.cjs": "cdf15bd3522bf9c74dc60bf307fc56f4050d74d61b45f27341867ce537254a7a"
+  },
+  "documentary_check": {
+    "command": "python3 tools/validate_repo.py",
+    "exit_code": 0,
+    "projects": 11,
+    "transfers": 11,
+    "assets": 0,
+    "legacy_sources": 2,
+    "local_file_links": 66,
+    "scope": "Maintained lab records, local links and historical archive hashes; no project runtime claim."
+  },
+  "limits": [
+    "The polling case uses a real in-flight HTTP write; the heartbeat boundary is controlled fault injection, not an elapsed-time or real packet-loss study.",
+    "No automatic retry, outage recovery, persistence, public deployment, model evaluation, or human usability review added.",
+    "Manual resend after uncertain delivery may still duplicate a delivered message.",
+    "No creative asset, game engine or cross-project destination executed; all transfers remain candidates.",
+    "The default suite starts and closes its own local servers. CLI startup is unchanged from the previously verified 0.1.0 server and was not rerun in this session."
+  ],
+  "contribution": {
+    "Martin": "Provided the current portfolio increment request and historical project context; no manual review or test attributed.",
+    "Codex": "Assessed the current committed sample, reproduced both send-path defects, implemented the correction, executed browser/protocol checks, and updated continuity."
+  },
+  "validator_regression": {
+    "command": "python3 tools/test_validate_repo.py",
+    "exit_code": 0,
+    "executed": 3,
+    "passed": 3,
+    "failed": 0,
+    "scope": "Existing documented lab suite: dependency docs excluded, broken working links fail, archive corruption fails."
+  },
+  "manifest": {
+    "command": "sha256sum -c MANIFEST.sha256",
+    "scope": "Maintained lab files except the manifest itself; ignored dependencies/generated output excluded. Refreshed after final content; closure output records checksum verification."
+  },
+  "inspected_library_sources": {
+    "socket.io-client/build/cjs/socket.js": "0a86fc79b5856456cf4d00453654e003c3f0d0f02848273640e740d09713a444",
+    "socket.io-client/build/esm/socket.d.ts": "d342d8a9aca5fe4eca8f7396a81298a80875f9668eb8bc721ad43695cb671d71",
+    "engine.io-client/build/cjs/socket.js": "964a1484eb844db1e77174451831c2977a1b2d7ec708a2f13cb5ae435b7ed6ee"
+  }
+}

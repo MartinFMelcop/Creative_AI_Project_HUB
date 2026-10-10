@@ -1,75 +1,75 @@
 # Lab state
 
-**Updated:** 2026-10-10. **Seed version:** 0.3.0.
-**Primary workstream:** P11 local text chat, increment 0.1.0 completed and
-automatically validated. Working directory names retain their v0.2.0 package
-origin; no historical source archive was rewritten.
+**Updated:** 2026-10-10. **Seed version:** 0.3.1.
+**Primary workstream:** P11 local text chat, correction 0.1.1 completed and
+locally verified. The containing directory retains its v0.2.0 package name.
 
 ## What changed
 
-P11 moved from recovered source to an active working project in
-[projects/realtime-integration-lab](../projects/realtime-integration-lab/README.md).
-The preserved server received/logged messages but had no broadcast; its UI had
-no receive/render path. The adaptation supplies both paths, input validation,
-literal text rendering, visible connection/error state, draft preservation,
-rejoin semantics, and a 200-item local retention bound. Pinned dependencies and
-a lockfile replace the historical placeholder test workflow.
+The checkout began clean at `66041e7fdd7687ee21099f95129dff41933c74dd`, with
+P11 0.1.0 committed. Inspection and two new browser checks found a connected form
+submission discarded behind an in-flight polling write, plus a heartbeat race
+that retained a packet for reconnect replay. [P11 0.1.1](../projects/realtime-integration-lab/README.md)
+uses ordinary acknowledged emission for the live transport queue and immediately
+clears Socket.IO's separate reconnect queue. The offline guard, draft handling,
+timeout feedback, text-only rendering, validation, and retention bound remain.
 
-[Assessment](ASSESSMENT.md) and [improvement plan](IMPROVEMENT_PLAN.md) continue
-the v0.2.0 recovery without activating the other ten seeds. The root README now
-points to the nested lab and its working sample. ADR-008 records the selected
-scope; [knowledge](../knowledge/realtime-delivery.md) records candidate learning.
+Changes are limited to the client send path, browser regression harness, working
+version metadata, and continuity/evidence. Dependency resolutions, event contract,
+server, historical ZIP, legacy inventory, and original 0.1.0 run record are unchanged.
+The new correction remains uncommitted in this working tree.
 
-## Verification
+## Verification and evidence
 
-See [execution evidence and artifact hashes](../evidence/realtime-chat/RUN.json).
+[Current run](../evidence/realtime-chat/POLLING_SEND_RUN.json) records environment,
+inputs, baseline source identity, injected boundaries, and working artifact hashes.
 
-- Original P11 files: archive and three individual SHA-256 checks passed.
-  The current browser delivery test reproduced the defect: 1 test executed,
-  1 expected failure; server logged receipt but the sender's list stayed empty.
-- Working P11: `npm test` completed 15 tests, all passed (6 protocol, 9 Chromium).
-  Checks include two-way display, no sender duplication, literal markup,
-  rejected payloads and length boundaries, offline drafts, new/rejoining clients,
-  automatic transport reconnect, bounded history, and delayed/lost acknowledgements.
-- Frozen reinstall: `npm ci` passed with the saved lockfile (97 packages).
-- CLI startup: `PORT=3123 npm start` served health, the page, the Socket.IO script,
-  and one accepted broadcast to two clients. The temporary servers were stopped.
-- Lab validation also exposed upstream dependency-document traversal; the
-  validator now prunes `node_modules`. All 3 regression tests passed, including
-  maintained-link and archive-corruption failures.
+- Two regressions fail on the recorded 0.1.0 client: missing polling submission
+  and an unexpected reconnect-buffer entry. The harness serves the old client
+  through a browser route without overwriting working or historical files.
+- The same two checks pass on 0.1.1. The full `npm test` suite passes 17 tests
+  (6 protocol, 11 Chromium), with zero failures, skips, or uncaught page errors.
+- Frozen `npm ci` passes (97 packages). Parsed lockfile comparison confirms only
+  root project version metadata changed; resolved dependencies are identical.
 - The documentary validator passed: 11 projects, 11 transfers, 0 assets,
-  2 legacy sources, and 62 maintained local links. The manifest is regenerated
-  from actual maintained files and checked at closure; its inherited two
-  absent-file entries are removed. Runtime and documentary outcomes are in the
-  execution record. Reusable installation/startup instructions were tested and
-  saved as an environment draft; saving did not publish or restart the environment.
+  2 legacy sources, and 66 maintained local links. All 3 existing validator
+  regression checks passed. The final manifest is refreshed and verified at
+  closure; documentary outcomes are recorded in the execution evidence.
+
+The polling regression uses actual HTTP writes. The heartbeat regression forces
+expiry at the pinned Socket.IO predicate, restores it immediately, then verifies
+no replay through a real reconnect. This is controlled fault injection, not a
+real elapsed-time/network-loss study. CLI startup is unchanged and was not rerun;
+its prior smoke and 15-test result remain [0.1.0 evidence](../evidence/realtime-chat/RUN.json).
 
 Environment: Linux cloud container, Node 24.19.0, npm 11.9.0, Python 3.12.14,
-system Chromium 154.0.8037.57, Playwright Core 1.64.0. Starting Git HEAD:
-`951c21ec8565d9ac64ab8207f569bb2fe4f01c27`; changes remain in the working tree.
-The environment is not evidence of installation or review on Martin's machine.
+Chromium 154.0.8037.57, Playwright Core 1.64.0, Socket.IO 4.8.4. Browser tests
+start and close their own local servers. The recorded machine capabilities do
+not establish installation on Martin's machine.
 
-## Limits and attribution
+## Limits and learning
 
-Martin provided direction, source context, and authorization. Codex performed
-this assessment, implementation, and automated verification. Martin has not
-been credited with reviewing or testing the sample.
+P11 stays M4 for its local slice. No persistence, automatic retry, identity,
+public hosting, cross-browser study, model benchmark, game runtime, media master,
+formal accessibility audit, or human usability review was added. Uncertain
+delivery still requires judgement before manual resend; duplicates remain possible.
 
-P11 is an ephemeral, local, single-room prototype. There is no persistence,
-identity, public deployment, reliability guarantee across outages, cross-browser
-study, human usability review, or formal accessibility audit. A lost acknowledgement
-can follow successful delivery; manual resend can duplicate it. No game runtime,
-Unity/RMXP integration, model benchmark, audio master, or image asset was validated.
-The v0.2.0 combat/dialogue PASS reports remain historical evidence, not new runs.
+[The delivery lesson](../knowledge/realtime-delivery.md) now distinguishes live
+congestion from reconnect buffering. P02/P01 applications remain candidate
+transfers without a verified destination consumer; no shared component was promoted.
+Other projects' evidence boundaries remain unchanged. The archive is still a
+selected textual recovery, not a complete backup or proof of available art/audio.
 
-The source archive still contains 175 Rave Master texts and 3 WebSocket files.
-It is not a complete backup. All eleven transfer records remain candidates;
-none has a verified destination consumer. No shared component was promoted.
+Martin provided the portfolio request and project context. Codex selected,
+implemented, tested, and documented this correction. Martin is not credited with
+manual review or testing, and no remote publication was performed in this session.
 
 ## Next concrete action
 
-Have Martin try P11 in two tabs and review message readability, keyboard use,
-connection feedback, and uncertain-delivery wording. Capture that feedback
-before choosing a public portfolio case. After that, select whether to adapt
-the reproduced defect into P02; define evaluation/reference isolation before
-running any candidate. P01 still requires recovery of its own baseline.
+Review the local P11 interaction with Martin: keyboard input, message readability,
+connection feedback, and uncertain-delivery wording. The next possible technical
+increment is a bounded P02 task using one reproduced defect, with explicit
+candidate/reference isolation and acceptance criteria before any candidate run.
+That independent preparation does not require inventing human feedback. P01
+still needs its own baseline; P10 remains a source reservoir rather than an
+active parallel project.

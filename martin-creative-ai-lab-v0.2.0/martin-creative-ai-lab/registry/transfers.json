@@ -87,13 +87,14 @@
       "source_project": "P11",
       "target_project": "P02",
       "status": "candidate",
-      "unit": "Reproduced missing chat delivery as an evaluation task candidate",
+      "unit": "Reproduced chat delivery and transport defects as evaluation task candidates",
       "evidence": [
         "evidence/realtime-chat/RUN.json",
-        "knowledge/realtime-delivery.md"
+        "knowledge/realtime-delivery.md",
+        "evidence/realtime-chat/POLLING_SEND_RUN.json"
       ],
       "source_reference": "SEED.md — seção 28.5",
-      "next_action": "Define candidate/reference isolation and adapt the reproduced defect into P02 before claiming a transfer or model evaluation."
+      "next_action": "Select one defect, define candidate/reference isolation, and adapt its criteria into P02 before claiming a transfer or model evaluation."
     },
     {
       "id": "TR-010",
@@ -102,10 +103,11 @@
       "status": "candidate",
       "unit": "Event ownership and reconnect semantics for a lobby candidate",
       "evidence": [
-        "knowledge/realtime-delivery.md"
+        "knowledge/realtime-delivery.md",
+        "evidence/realtime-chat/POLLING_SEND_RUN.json"
       ],
       "source_reference": "SEED.md — seção 28.5",
-      "next_action": "Specify authoritative lobby state in P01 and test a real destination consumer before promoting shared code."
+      "next_action": "Specify authoritative lobby state and queue/reconnect lifetimes in P01; verify a destination consumer before promoting shared code."
     },
     {
       "id": "TR-011",

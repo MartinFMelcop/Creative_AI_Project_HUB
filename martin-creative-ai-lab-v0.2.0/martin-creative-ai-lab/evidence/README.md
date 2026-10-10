@@ -1,6 +1,8 @@
 # Execution evidence
 
-- [P11 current run](realtime-chat/RUN.json): source identity, reproduced browser
+- [P11 transport correction](realtime-chat/POLLING_SEND_RUN.json): two baseline
+  regressions, 17 current protocol/browser checks, version and fault-injection scope.
+- [P11 original adaptation](realtime-chat/RUN.json): source identity, reproduced browser
   failure, corrected local interaction, command outcomes, and artifact hashes.
 - [v0.2.0 recovery runs](legacy-audit/RUNS.json): historical offline combat/dialogue
   checks and syntax inspection; these were not rerun in the P11 session.

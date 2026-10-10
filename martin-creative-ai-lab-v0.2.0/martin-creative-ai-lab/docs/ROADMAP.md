@@ -20,11 +20,12 @@ Sem calendário contratado. Definir esforço e ordem conforme recursos e objetiv
 
 A recuperação seletiva de P10/P11 encerrou uma unidade documental da descoberta. Ambiente de Martin e seleção da primeira frente continuam pendentes. A Fase 2 pode usar uma task Node/Socket.IO de P11 ou domínio puro de P10, identificando a stack real; isso não equivale a executar Unity. Fases posteriores continuam condicionais, não compromissos simultâneos.
 
-## Current progress — v0.3.0
+## Current progress — v0.3.1
 
 The paragraph above records the v0.2.0 recovery. The current workstream is P11:
 one local chat interaction implemented and automatically validated in this
-cloud machine. [The maintained plan](IMPROVEMENT_PLAN.md) selects the scope and
+cloud machine. Correction 0.1.1 verifies connected sends during polling congestion
+and no reconnect replay after controlled heartbeat expiry. [The maintained plan](IMPROVEMENT_PLAN.md) selects the scope and
 [state](STATE.md) identifies the next action. This is technical sample production,
 not a Unity milestone or model evaluation. Presentation still requires Martin's
 review; transfer still requires a second verified destination. P01 recovery

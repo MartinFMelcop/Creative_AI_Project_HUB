@@ -83,3 +83,33 @@ checks preserve working-project link and archive-integrity enforcement.
 for persistent/reliable delivery changes the contract. P02 evaluation work
 must keep candidate and reference contexts separate; a public repository alone
 does not provide that separation.
+
+## ADR-009 — separate live writes from reconnect replay
+
+**Date:** 2026-10-10. **Status:** implemented and locally verified in P11 0.1.1.
+**Authority:** current portfolio increment request; diagnosis and correction by Codex.
+
+The committed 0.1.0 client used volatile emission to prevent offline buffering.
+Two new browser checks show that the policy was incomplete: a connected polling
+transport drops a form message while its previous write is in flight, and a
+stale connected flag can still leave a Socket.IO reconnect packet when the
+heartbeat predicate reports expiry. Both checks fail against the recorded old
+client and pass against the correction.
+
+Use ordinary acknowledged emission to retain the live Engine.IO write queue,
+then immediately clear Socket.IO's separate reconnect `sendBuffer`. Keep the
+offline guard, timeout feedback, draft handling, and no automatic retry policy.
+This corrects text delivery during local congestion without introducing durable
+delivery, server persistence, message identities, or a new shared abstraction.
+The exported buffer property and pinned client implementation were inspected;
+dependency resolutions and server code remain unchanged.
+
+The polling regression uses real HTTP writes. Heartbeat expiry is explicitly
+injected at a pinned internal predicate, restored immediately, and followed by
+an actual reconnect; it is not a network-loss or timing study. The full suite
+passes 17 tests. The historical source archive and prior run record are preserved.
+Transfers to P02/P01 remain candidates; no destination consumer has been verified.
+
+**Revisit:** upgrade Socket.IO, introduce retries or another outgoing event,
+or require outage recovery. Recheck queue lifetimes and acknowledgement behavior
+before changing the policy. Martin's UI review remains separate and unperformed.

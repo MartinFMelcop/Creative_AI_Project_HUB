@@ -1,6 +1,6 @@
 # SEED — Martin Creative AI Lab
 
-**Version:** 0.3.0
+**Version:** 0.3.1
 **Data-base:** 10 de outubro de 2026  
 **Autor e responsável pelo portfólio:** Martin Melcop Neto  
 **Working language:** English for new documentation, plans, code comments, UI, and reports. Preserve original creative titles and historical source languages.
@@ -46,11 +46,11 @@ Se apenas este arquivo estiver disponível, ele é suficiente para iniciar a Fas
 |---|---|
 | Repository | MartinFMelcop/Creative_AI_Project_HUB; actual Git root `/workspace/Creative_AI_Project_HUB`; lab remains nested in its original package directory |
 | Preserved sources | 175 Rave Master texts and 3 WebSocket files; unchanged ZIP and inventory; not a complete RMXP backup |
-| Primary workstream | P11 local chat increment 0.1.0; implemented and automatically validated, M4 for this bounded slice |
+| Primary workstream | P11 local chat correction 0.1.1; connected-send regression checks pass, M4 for this bounded slice |
 | Engine execution | No Unity or RMXP runtime verified; P11 uses Node/Express/Socket.IO |
-| Current verification | Baseline browser delivery failure reproduced; adaptation passes 15 tests (6 protocol, 9 Chromium) and CLI startup smoke; see `evidence/realtime-chat/RUN.json` |
+| Current verification | Recorded 0.1.0 client fails 2 new send-path checks; 0.1.1 passes 17 tests (6 protocol, 11 Chromium); see `evidence/realtime-chat/POLLING_SEND_RUN.json`. Prior CLI smoke remains historical evidence |
 | Historical verification | v0.2.0 combat/dialogue runner reports remain historical; not rerun during P11 work |
-| Next action | Martin's two-tab readability, keyboard, and connection-feedback review; then consider P02 adaptation with candidate/reference isolation |
+| Next action | Martin's two-tab UI review remains pending; next possible technical increment is a bounded P02 task with candidate/reference isolation |
 | Other seeds | P01 baseline still absent; P10 remains recovered material; other creative/runtime baselines require targeted recovery |
 | Transfer / shared status | All transfer records remain candidates; no verified destination consumer or shared component |
 | Portfolio / attribution | Local technical sample available; Codex implemented/tested it under Martin's direction; no manual review or publication attributed to Martin |
@@ -401,7 +401,7 @@ Reservatório recuperado de RPG Maker XP/RGSS: narrativa, personalidade e diálo
 
 ### P11 — Real-time Integration Lab / WebSocket
 
-The recovered Node/Express/Socket.IO snapshot only logs incoming messages. Its working adaptation now broadcasts validated text and renders it in all connected browsers. P11 is the selected primary workstream; fifteen automated checks verify its bounded local contract. See section 28.3 and `projects/realtime-integration-lab/README.md` for provenance, differences, usage, and limits. Evaluation and lobby reuse remain candidates.
+The recovered Node/Express/Socket.IO snapshot only logs incoming messages. Its working adaptation now broadcasts validated text and renders it in all connected browsers. P11 is the selected primary workstream; seventeen current automated checks verify its bounded local contract. See section 28.3 and `projects/realtime-integration-lab/README.md` for provenance, differences, usage, and limits. Evaluation and lobby reuse remain candidates.
 
 ## 6. Arquitetura do laboratório
 
@@ -1270,7 +1270,15 @@ Consultadas em 10/10/2026. São apoio aos pontos técnicos, não pesquisa de mer
 - Added maintained assessment and priorities, updated project continuity, and corrected the manifest's absent-file references.
 - Recorded transfer lessons as candidates; no model evaluation, public deployment, game migration, or shared abstraction was claimed.
 
-**Next action:** review P11's local two-tab experience with Martin before selecting public presentation or a destination evaluation task. P01 baseline recovery remains pending if that workstream is selected.
+### 0.3.1 — 2026-10-10
+
+- Continued from committed P11 0.1.0 instead of repeating the original recovery.
+- Reproduced connected-send loss during live polling congestion and a controlled stale-state reconnect queue; the same tests fail on the recorded old client and pass on 0.1.1.
+- Kept normal live-transport buffering while clearing the distinct reconnect queue, retaining draft and uncertain-delivery semantics without retry or persistence.
+- Verified 17 current protocol/browser tests and unchanged dependency resolutions; updated existing assessment, plan, state, and candidate lessons.
+- Preserved historical archives, source inventory, and earlier execution evidence. No human review, destination transfer, model evaluation, or remote publication was attributed.
+
+**Next action:** Martin's local two-tab review remains pending before portfolio selection. A bounded P02 task with candidate/reference isolation can be prepared independently; no evaluation or transfer is implied. P01 baseline recovery remains pending if that workstream is selected.
 
 ## 28. Recuperação dos repositórios antigos — v0.2.0
 
@@ -1370,7 +1378,7 @@ has no lockfile and its test script is a failing placeholder. Its declared ISC
 metadata does not establish licensing for unrelated material.
 
 **Working increment:** [P11 — Live exchange](projects/realtime-integration-lab/README.md),
-version 0.1.0, separate from the unchanged historical archive. Retain the event
+version 0.1.1, separate from the unchanged historical archive. Retain the event
 name and string payload. Accept trimmed non-empty text, enforce 500 UTF-16 code
 units before trimming, broadcast to all connected clients including the sender,
 and render text nodes. Rejection and connection state are visible. A single
@@ -1379,12 +1387,22 @@ page; no server history, accounts, rooms, offline buffering, or automatic retry.
 Acknowledgement loss leaves delivery uncertain and keeps the draft. Manual
 resubmission may duplicate an already delivered message.
 
+The 0.1.1 correction permits the live Engine.IO write queue to drain during
+polling congestion, then clears Socket.IO's distinct reconnect buffer. Two new
+checks fail against the recorded 0.1.0 client: volatile emission discards a
+connected form submission behind an in-flight polling write, and heartbeat expiry
+can queue a packet before `connected` becomes false. This correction preserves
+the no-replay policy without adding automatic retry or durable delivery.
+
 **Evidence:** the same browser delivery check fails against the preserved source
-and passes against the adaptation. Fifteen current tests (6 protocol, 9 Chromium)
+and passes against the adaptation. Seventeen current tests (6 protocol, 11 Chromium)
 verify accepted/rejected payloads, two-way rendering, literal markup, drafts,
-rejoining/new clients, automatic transport reconnect, bounded history, and
-acknowledgement behavior. CLI startup is checked separately. See
-[evidence](evidence/realtime-chat/RUN.json). This is local automated validation,
+rejoining/new clients, automatic transport reconnect, bounded history,
+acknowledgement behavior, live polling congestion, and stale-state reconnect policy.
+The original CLI startup smoke remains prior evidence; the unchanged server was
+not restarted separately in this correction session. See
+[current evidence](evidence/realtime-chat/POLLING_SEND_RUN.json) and
+[original adaptation evidence](evidence/realtime-chat/RUN.json). This is local automated validation,
 not human usability review, public hosting, a game playtest, or a model benchmark.
 
 **Candidates:** P02 may reuse the defect as an evaluation task if candidate and
@@ -1422,7 +1440,7 @@ Ambiente dos runners: Python 3.12.14, em cópia local selecionada dos arquivos. 
 
 All entries remain candidates in `registry/transfers.json`; no destination runtime transfer has been completed. P10 remains recovered material in triage. P11 now has an active, locally validated working adaptation; its maturity does not transfer to P02 or P01. More source material does not require more active projects.
 
-**Current order after v0.3.0:** P11 is the selected increment; review its local interaction before expanding scope. Dialogue and combat remain alternative future workstreams, not simultaneous commitments. If Artemyra is selected, recover its own baseline; Rave Master is not a substitute. The evidence-based rationale is in `docs/IMPROVEMENT_PLAN.md` and ADR-008.
+**Current order after v0.3.1:** P11 is the selected increment; review its local interaction before expanding scope. Dialogue and combat remain alternative future workstreams, not simultaneous commitments. If Artemyra is selected, recover its own baseline; Rave Master is not a substitute. The maintained rationale is in `docs/IMPROVEMENT_PLAN.md`; ADR-008 selects P11 and ADR-009 records the 0.1.1 correction.
 
 ### 28.6. Como uma IA deve expandir e modificar esta seed
 

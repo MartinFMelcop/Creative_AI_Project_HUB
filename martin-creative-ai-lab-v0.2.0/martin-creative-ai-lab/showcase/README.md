@@ -2,7 +2,7 @@
 
 [P11 — Live exchange](../projects/realtime-integration-lab/README.md) is a local
 technical sample with provenance, a reproduced defect, an implemented correction,
-and [automated execution evidence](../evidence/realtime-chat/RUN.json). It is
+and [current automated evidence](../evidence/realtime-chat/POLLING_SEND_RUN.json). It is
 available for review in the checkout; it has not been publicly hosted or approved
 by Martin as a presentation case.
 

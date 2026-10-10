@@ -180,7 +180,7 @@
       "maturity": "M4",
       "phase": "local-chat-validated",
       "origin": "github_snapshot_inspected",
-      "next_action": "Capture Martin's two-tab usability review before public presentation or destination evaluation work.",
+      "next_action": "Capture human UI feedback; next possible coding increment is a bounded P02 defect task with explicit candidate/reference isolation.",
       "related_projects": [
         "P01",
         "P02",
@@ -190,12 +190,13 @@
         "docs/LEGACY_REPOSITORIES.md",
         "evidence/legacy-audit/RUNS.json",
         "projects/realtime-integration-lab/README.md",
-        "evidence/realtime-chat/RUN.json"
+        "evidence/realtime-chat/RUN.json",
+        "evidence/realtime-chat/POLLING_SEND_RUN.json"
       ],
       "source_id": "LEGACY-002",
-      "maturity_scope": "Working local text-chat increment 0.1.0: 15 automated protocol/browser checks and CLI startup smoke passed; no human usability review, public deployment, or destination transfer.",
+      "maturity_scope": "Local text-chat correction 0.1.1: 17 current automated checks (6 protocol, 11 Chromium) passed, including live polling congestion and injected heartbeat expiry. Prior CLI smoke belongs to 0.1.0. Human UI review, public deployment and destination transfer remain outside verified scope.",
       "working_path": "projects/realtime-integration-lab",
-      "working_version": "0.1.0"
+      "working_version": "0.1.1"
     }
   ]
 }
