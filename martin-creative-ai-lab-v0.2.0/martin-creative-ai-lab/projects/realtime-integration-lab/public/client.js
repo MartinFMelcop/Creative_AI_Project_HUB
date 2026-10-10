@@ -6,6 +6,9 @@ const messages = document.getElementById('messages');
 const status = document.getElementById('status');
 const feedback = document.getElementById('feedback');
 let pending = false;
+let scrollRemainder = 0;
+// Own anchoring while retention can remove earlier messages from the list.
+messages.style.overflowAnchor = 'none';
 
 function updateConnection(text) {
   status.textContent = text;
@@ -17,12 +20,29 @@ socket.on('disconnect', () => updateConnection('Disconnected · reconnecting'));
 socket.on('connect_error', () => updateConnection('Unable to connect · retrying'));
 
 socket.on('chat message', (text) => {
+  const following = messages.scrollHeight - messages.clientHeight - messages.scrollTop <= 24;
+  const top = messages.getBoundingClientRect().top;
+  const anchor = following ? null : [...messages.children].find((item) => item.getBoundingClientRect().bottom > top);
+  const offset = anchor ? anchor.getBoundingClientRect().top - top : 0;
   const item = document.createElement('li');
   item.textContent = text;
   messages.appendChild(item);
   while (messages.children.length > 200) messages.firstElementChild.remove();
   document.getElementById('empty').hidden = true;
-  messages.scrollTop = messages.scrollHeight;
+  if (following) {
+    scrollRemainder = 0;
+    messages.scrollTop = messages.scrollHeight;
+  } else if (anchor?.isConnected) {
+    // Preserve content position, including when variable-height earlier items expire.
+    const target = messages.scrollTop + anchor.getBoundingClientRect().top - messages.getBoundingClientRect().top - offset + scrollRemainder;
+    messages.scrollTop = target;
+    // Carry subpixel correction so rounded scrollTop values do not accumulate drift.
+    scrollRemainder = target - messages.scrollTop;
+  } else {
+    // Evicted text cannot be recovered; stay at the retained-history boundary.
+    messages.scrollTop = 0;
+    scrollRemainder = 0;
+  }
 });
 
 form.addEventListener('submit', (event) => {

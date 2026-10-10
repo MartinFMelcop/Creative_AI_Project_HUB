@@ -1,6 +1,6 @@
 # P11 — Live exchange
 
-**Project:** Real-time Integration Lab / WebSocket. **Version:** 0.1.1.
+**Project:** Real-time Integration Lab / WebSocket. **Version:** 0.1.2.
 **Scope:** one local, ephemeral text conversation. This is a working adaptation
 of the historical Socket.IO exercise, not a raw WebSocket implementation.
 
@@ -21,6 +21,9 @@ The UI renders only the broadcast, avoiding a second optimistic sender copy.
 | A stale connected state does not retain a packet for reconnect replay | Controlled heartbeat-expiry check followed by an actual transport reconnect |
 | New typing is preserved when an earlier send is acknowledged | Controlled delayed-acknowledgement browser test |
 | Only latest 200 messages retained per page | Browser retention test |
+| Follow incoming messages only within 24 CSS pixels of the bottom | Real-browser geometry check |
+| Browsing earlier text keeps the visible message and its pixel offset | Broadcast and variable-height retention checks |
+| An evicted reading anchor shows the earliest retained text | Retained-history boundary check |
 
 The event remains `chat message`. Client → server payload is a string; server →
 client payload is its trimmed string. Acknowledgement is `{ "ok": true }` or
@@ -35,6 +38,13 @@ after emission it clears Socket.IO's distinct reconnect `sendBuffer`: a heartbea
 can expire before `socket.connected` becomes false. Clearing that reconnect queue
 does not clear the live Engine.IO write queue. The policy remains no automatic
 replay after a failed connection; it is not durable message delivery.
+
+Version 0.1.2 keeps the reading position when new text arrives. Within 24 CSS
+pixels of the bottom, the list follows live messages. Farther away, it preserves
+the first visible message and its pixel offset, including when earlier messages
+leave the 200-item window. If that visible message is evicted, the list stays at
+the earliest retained text. Scroll to the bottom to resume following. No unread
+counter, new history store, or recovery of evicted text is introduced.
 
 On transport interruption Socket.IO reconnects. Messages sent while away are
 not recovered. Existing messages remain in that page's memory until reload or
@@ -62,7 +72,8 @@ the source's historical semver ranges. Playwright Core 1.64.0 drives existing
 system Chromium; it does not download a browser. The tests use headless Chromium
 with `--no-sandbox` for this container. Outside this machine, set `CHROMIUM_PATH`
 to a compatible browser executable. Missing Chromium is a failed prerequisite,
-not a skipped browser suite. Protocol-only tests use `npm run test:protocol`.
+not a skipped browser suite. Protocol-only tests use `npm run test:protocol`; `npm run test:reading` runs
+the five reading checks, and `npm run test:browser` includes both browser suites.
 
 The server binds to `127.0.0.1:3000` by default; `HOST` and `PORT` can override
 the bind address. Open that address in two local browser tabs. A remote cloud
@@ -109,11 +120,13 @@ and outage contract, English UI, labelled controls, visible focus, responsive
 layout, dependency lock, testable startup, and meaningful tests. No historical
 creative title, game content, art, or audio was rewritten. The source package
 declares ISC; it does not establish licensing for unrelated portfolio material.
-The working package is private and this session did not publish it.
+The working package remains private in npm metadata. Git publication is
+recorded separately in the lab state; no npm package or hosted service is released.
 
 ## Evidence, contribution, and next step
 
-See [current transport correction evidence](../../evidence/realtime-chat/POLLING_SEND_RUN.json),
+See [current reading-position evidence](../../evidence/realtime-chat/READING_RUN.json),
+[previous transport correction evidence](../../evidence/realtime-chat/POLLING_SEND_RUN.json),
 [original adaptation evidence](../../evidence/realtime-chat/RUN.json),
 [the selected plan](../../docs/IMPROVEMENT_PLAN.md), and
 [transfer learning](../../knowledge/realtime-delivery.md).
@@ -128,3 +141,10 @@ public hosting readiness, or a model benchmark.
 Next: have Martin try the two-tab interaction and review readability, keyboard
 use, and the uncertain-delivery wording before selecting this as a public case.
 P11 → P02 is now verified for [EVAL-001 task adaptation/calibration](../../evaluations/chat-send-buffering/README.md) only; no independent model was evaluated. P11 → P01 remains a candidate. No shared library is needed.
+
+The five reading checks run actual Socket.IO broadcasts through Chromium at a
+1280×800 viewport with variable-height message fixtures. Three fail on the
+recorded 0.1.1 client; all five pass on the correction. These checks establish
+scroll geometry for that browser/viewport, not human usability or all layouts.
+P02 keeps its 17 send-policy checks; its runtime pin is refreshed and recalibrated
+for this package revision without changing the nine-file starter contract.
