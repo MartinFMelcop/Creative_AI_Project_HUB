@@ -2,7 +2,33 @@
 
 Updated: 2026-10-10. One primary workstream; no mandatory backlog expansion.
 
-## Current iteration — P02 chat send-buffering task
+## Current iteration — P02 timeout evidence and process cleanup
+
+**Priority:** 1 — completed and locally verified. P02 0.1.0 is published at `e1850d0`. Two executed probes
+show missing timed-command diagnostics and a live child surviving parent timeout.
+The old runner returned promptly on Python 3.12 POSIX; an initial pipe-wait
+hypothesis was not reproduced. Correct the observed failures before an independent
+artifact run, without changing the chat or expanding the task inventory.
+
+**Value:** make incomplete evaluation evidence inspectable and prevent the runner's
+ordinary child processes from continuing after an expired command.
+
+**Scope:** `run.py`, `test_runner.py`, runner version 0.1.1, current documentation,
+provenance, and final manifest. Preserve the starter, P11 implementation/suite,
+dependencies, historical archive/inventory and prior calibration record.
+
+**Acceptance:** record every attempted command, partial stdout/stderr, elapsed
+time, deadline, timeout/launch status and capture completeness. Timeout at syntax,
+startup or behavior gates must be inconclusive. On POSIX, terminate the runner's
+private process group, with bounded cleanup; retain normal command outcomes.
+Verify child termination and forced shutdown, and recalibrate the known clients
+at 15/17 and 17/17. Process-group cleanup is not a security sandbox and does not
+control descendants that create another session/group. No model run is claimed.
+
+**Dependencies:** existing Python, Git, Node and Chromium; no new package. The
+next independent-candidate gate and Martin's P11 usability review remain pending.
+
+## Completed P02 task setup — 0.1.0
 
 **Priority:** 1 — completed and locally calibrated. P11 0.1.1 is published;
 P02 began this iteration with only templates.
@@ -116,3 +142,12 @@ server smoke passed. [Calibration](../evidence/evaluation-task/CALIBRATION.json)
 records exact sources and complete evaluator output. No new shared abstraction,
 model candidate, score or app was introduced. Next priority is one independently
 produced client with explicit context and tools, rather than more task inventory.
+
+## Completed P02 correction — runner 0.1.1
+
+Fifteen runner tests pass; the seven new methods fail on the recorded runner.
+Timeout output/attempts are retained, missing executables are inconclusive, and
+inherited child termination/escaped-pipe limits are executed on Linux. Starter
+contract remains 0.1.0; byte-identical old exports recalibrate at 15/17 and 17/17.
+See [current evidence](../evidence/evaluation-task/TIMEOUT_RUN.json). No independent
+candidate, model score, dependency change or extra workstream was introduced.

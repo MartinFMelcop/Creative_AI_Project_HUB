@@ -10,3 +10,8 @@ candidate, score, or model comparison has been recorded. Use the [task template]
 and [seed protocol](../SEED.md) for later tasks, without mandatory expansion.
 Copy only the exported workspace into a separate candidate context. Public
 repository folders are not confidential; packaging does not establish secrecy.
+
+Runner 0.1.1 preserves timeout/launch attempts and partial output, and terminates
+inherited POSIX process groups with bounded capture. Starter contract 0.1.0 is
+unchanged. [Current correction evidence](../evidence/evaluation-task/TIMEOUT_RUN.json)
+records executed cleanup limits; no sandbox or independent model score is claimed.

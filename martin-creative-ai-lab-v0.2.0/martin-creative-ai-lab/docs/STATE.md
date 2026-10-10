@@ -1,85 +1,79 @@
 # Lab state
 
-**Updated:** 2026-10-10. **Seed version:** 0.4.0.
-**Primary workstream:** P02 EVAL-001 task harness 0.1.0, locally calibrated.
-P11 remains 0.1.1. The containing directory retains its v0.2.0 package name.
+**Updated:** 2026-10-10. **Seed version:** 0.4.1.
+**Primary workstream:** P02 evaluator runner 0.1.1, timeout diagnostics and cleanup.
+EVAL-001's starter contract remains 0.1.0; P11 remains 0.1.1. The enclosing
+directory retains its original v0.2.0 package name.
 
 ## What changed
 
-The checkout began clean on `work` at
-`df1bd5937e6168dd0ba42ce2f614304d80ffb59d`; a fresh remote query confirmed `main`
-at the same merge commit. Both P11 development commits (`66041e7`, `2d4e9a7`)
-and remote root-instructions commit `e30f799` are preserved and published.
-The earlier state statement that P11 0.1.1 was uncommitted is superseded.
+The checkout began clean on `work` at published commit
+`e1850d0f0a78211a02784bf5c7ff568fe2433b4e`; remote `main` matched. The earlier P02
+increment is committed and published, superseding the prior uncommitted statement.
+Both P11 development commits and the root `AGENTS.md` remain preserved.
 
-[P02's working task](../evaluations/chat-send-buffering/README.md) exports a
-fresh, allowlisted P11 0.1.0 starter plus a behavior brief, without Git history,
-reference code, tests, knowledge, or prior evidence. Its evaluator checks only
-the submitted client through the existing browser route; source and evaluator
-hashes, tool versions, commands, complete output, counts, and failures are recorded.
-Support files are immutable; partial or unavailable execution is inconclusive.
+Two actual probes found that P02 0.1.0 omits timed-command attempts/partial output
+from records and leaves an inherited child running after parent timeout. The old
+runner returned promptly on Python 3.12 POSIX; a delayed pipe-wait hypothesis was
+not reproduced. [The runner](../evaluations/chat-send-buffering/README.md) now
+records attempted command, real exit/launch state, elapsed time, deadline,
+timeout, capture completeness, stdout and stderr. Timeouts at every gate are
+inconclusive, including a late otherwise-passing summary.
 
-No duplicate app, engine migration, model call, dependency change, or shared
-framework was introduced. P02's current name is AI Evaluation & QA Lab; Unity
-remains its historical proposal. TR-009 is validated for task adaptation and
-calibration only. TR-010 and the other nine transfers remain candidates.
-P11 implementation/tests/dependencies, source ZIP/inventory, and prior run records
-are unchanged; its README now links the destination task.
-This new increment is local and uncommitted; it has not been published.
+Each command uses a private process group on POSIX. Timeout requests termination,
+then forced shutdown if necessary, with bounded output draining. An escaped child
+holding pipes marks capture incomplete instead of keeping the checker waiting.
+This controls inherited groups, not all detached descendants or untrusted code.
+
+Runner version and starter-contract version are separate. All nine exported
+files remain byte-identical to 0.1.0, and old exports are accepted as submissions.
+No app, dependency, chat test, candidate brief, model call, or shared framework
+changed. P11 implementation, historical ZIP/inventory, and earlier evidence are
+unchanged. This correction remains local and uncommitted; no publication occurred.
 
 ## Verification and evidence
 
-[Calibration evidence](../evidence/evaluation-task/CALIBRATION.json) includes
-complete evaluator records and the separation, installation, and execution scope.
+[Current timeout record](../evidence/evaluation-task/TIMEOUT_RUN.json) identifies
+the old source, current hashes, real command probes, injected boundaries and
+full artifact-check output. [Original calibration](../evidence/evaluation-task/CALIBRATION.json)
+remains historical evidence, unchanged.
 
-- Eight runner regression tests passed: exact starter export, overwrite
-  protection, immutable support files, extra/missing/linked artifacts, complete
-  result classification, and incomplete/skipped result rejection.
-- Exported 0.1.0 client: 17 checks executed, 15 passed, 2 failed as expected
-  (polling congestion and stale-state reconnect buffering); rejected artifact.
-- Corrected P11 0.1.1 client, submitted through a separate export: 17 checks
-  passed (6 protocol, 11 Chromium), zero failed/skipped/cancelled; accepted artifact.
-- Missing-browser negative probe: inconclusive, exit 2; no behavior-test pass claim.
-- Exported starter frozen installation passed, 97 packages. Its actual CLI
-  served health/page and broadcast trimmed text to two Socket.IO peers. The
-  server was stopped. This does not turn the defective starter client into a
-  working browser solution; its two failures above remain the baseline.
-- Documentary validation passed: 11 projects, 11 transfers, 0 assets, 2 sources,
-  84 local links. Three existing validator regressions passed. Diff whitespace,
-  preserved source/evidence checks and final manifest closure (52 entries) are
-  recorded after maintained content is final.
+- Current 15 runner tests pass, no skips. The recorded 0.1.0 runner fails all
+  seven new test methods; the original eight methods continue to pass. Failure
+  events include subtests and exceptions, separately recorded.
+- Real command tests cover both streams, partial timeout diagnostics, nonzero
+  exit, forced inherited-child termination, escaped-pipe capture, and launch failure.
+- Gate injection substitutes real short-lived Python commands at syntax/startup/
+  behavior boundaries; this is controlled fault injection, not three browser outages.
+- Exact old exports remain compatible. Recalibration rejects the old client at
+  15/17 and accepts P11's existing correction at 17/17 (6 protocol, 11 Chromium).
+  These are controlled artifacts, not independent model candidates.
+- Documentary validator passes: 11 projects, 11 transfers, 0 assets, 2 legacy
+  sources and 90 local links. All three validator regressions pass; preserved
+  sources/commits and `git diff --check` pass. Final manifest verification is
+  recorded at closure after content is final.
 
 Environment: Linux cloud container, Python 3.12.14, Node 24.19.0, npm 11.9.0,
-Chromium 154.0.8037.57, Playwright Core 1.64.0, Socket.IO 4.8.4. The evaluator
-probes real browser startup; each suite owns its ephemeral server and browsers.
-No additional setup dependency or credential is required.
+Chromium 154.0.8037.57, Playwright Core 1.64.0, Socket.IO 4.8.4. POSIX/Linux
+process-group behavior was executed; the non-POSIX direct-process fallback was not.
+No new package or credential is required. Prior installation/CLI starter smoke
+belongs to 0.1.0 evidence and was not repeated for this source-preserving correction.
 
-## Limits and learning
+## Limits, learning and next action
 
-P02 is M4 for a calibrated artifact-checking harness, not for candidate/model
-performance. Both artifacts are controlled calibration inputs. No independent
-candidate, model identity, cost, score, benchmark, or human review is invented.
-The same Codex session designed this harness and reused the existing correction
-and tests. Exported context separation is not secrecy, OS isolation, or a sandbox;
-public history exposes the answer. Future independent runs need controlled
-candidate execution and explicit context/tool/attempt records.
+Process cleanup is not a sandbox. Children that create another group/session can
+escape it; the detached fixture is stopped separately by its owning test. Public
+source remains discoverable. There is no model identity, score, independent
+candidate, human usability review, Unity/game runtime, or recovered media master.
+The heartbeat check remains an injected pinned predicate; polling uses real HTTP.
 
-The heartbeat test injects expiry at the pinned library predicate; polling uses
-real HTTP writes. These bounded checks do not establish real-world outage
-reliability, cross-browser behavior, accessibility, or human usability.
-P01 baselines and creative/game/media masters remain missing; P10 remains a
-source reservoir. No maturity or availability is inferred from asset labels.
+TR-009 remains validated only for P02 task adaptation/calibration. Timeout-record
+handling is a candidate lesson for other projects until a destination verifies it;
+no new shared component or transfer record is promoted. Martin supplied direction;
+Codex diagnosed, corrected and verified this increment.
 
-Martin supplied direction and authorization. Codex implemented and calibrated
-the task; no independent candidate attempt or manual testing is attributed to Martin.
-[Evaluation learning](../knowledge/evaluation-artifacts.md) separates artifact
-acceptance, harness calibration, context boundaries, and claims about an author.
-
-## Next concrete action
-
-Run one independently produced EVAL-001 client with an explicit candidate brief,
-separate workspace/context, permitted tools, source exposure policy, attempts,
-timing and available cost. Preserve its artifact and evaluator result before
-making any claim about a model. Martin's P11 two-tab usability review remains
-pending and independent. Prepare a commit from the current diff; publishing this
-increment requires explicit authorization in its publication task.
+Next: one independently produced EVAL-001 client with a separate context, explicit
+source/tool policy, identity, attempts, timing and available cost. Preserve artifact
+and raw evaluator result before performance claims. Martin's P11 UI review remains
+pending. Review the current diff and commit text; publishing this correction needs
+explicit authorization in its publication task.

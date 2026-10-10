@@ -1,0 +1,519 @@
+{
+  "schema_version": 1,
+  "recorded_at": "2026-10-10T23:03:10.731090+00:00",
+  "project": "P02",
+  "task": "EVAL-001",
+  "task_contract_version": "0.1.0",
+  "runner_version": "0.1.1",
+  "seed_version": "0.4.1",
+  "run_kind": "runner_regressions_and_controlled_artifact_recalibration",
+  "repository": {
+    "name": "MartinFMelcop/Creative_AI_Project_HUB",
+    "branch": "work",
+    "start_commit": "e1850d0f0a78211a02784bf5c7ff568fe2433b4e",
+    "working_tree_clean_at_start": true,
+    "remote_main_observed_at_start": "e1850d0f0a78211a02784bf5c7ff568fe2433b4e",
+    "remote_main_observed_at_closure": "e1850d0f0a78211a02784bf5c7ff568fe2433b4e",
+    "increment_state": "local_uncommitted",
+    "publication_performed": false,
+    "preserved_ancestor_commits": [
+      "66041e7fdd7687ee21099f95129dff41933c74dd",
+      "2d4e9a765ec4edc6401879259270e5d66970e6e2",
+      "e30f799247d5a11ec90582635006ee2ca9214ccf",
+      "e1850d0f0a78211a02784bf5c7ff568fe2433b4e"
+    ]
+  },
+  "source_versions": {
+    "old_runner_commit": "e1850d0f0a78211a02784bf5c7ff568fe2433b4e",
+    "old_runner_sha256": "3065e723777d138a986c3a5cadc5cb0a8c3842b592fadaf58a4f5ab44580e6a3",
+    "starter_client_commit": "66041e7fdd7687ee21099f95129dff41933c74dd",
+    "evaluator_suite_commit": "2d4e9a765ec4edc6401879259270e5d66970e6e2",
+    "legacy_origin": {
+      "repository": "MartinFMelcop/WebSocket",
+      "commit": "df651a9ddef39c7b05a48f25f1b7fdaff6760185",
+      "project_id": "P11"
+    },
+    "archive": {
+      "path": "archive/legacy-source-extracts-v0.2.0.zip",
+      "sha256": "6da636a270284eac1e11d00407dab364c2d9aa8c2f0485e77509e6ccf0dbc1dc",
+      "complete_repository_backup": false
+    },
+    "new_legacy_extractions": []
+  },
+  "environment": {
+    "platform": "Linux-6.18.44-x86_64-with-glibc2.41",
+    "python": "3.12.14",
+    "node": "v24.19.0",
+    "chromium": "154.0.8037.57",
+    "playwright": "1.64.0",
+    "socket_io": "4.8.4",
+    "npm": "11.9.0",
+    "chromium_path": "/usr/bin/chromium",
+    "new_dependency_installation": false,
+    "non_posix_fallback_executed": false
+  },
+  "acceptance_criteria": [
+    "Keep every attempted command and available stdout/stderr, including timeout or launch failure.",
+    "Record elapsed time, deadline, timeout/launch state, actual exit code and capture completeness.",
+    "Timeout at syntax, environment or behavior gates remains inconclusive, even with a passing late summary.",
+    "Terminate the private inherited POSIX process group; bound capture even when an escaped descendant holds pipes.",
+    "Preserve normal nonzero command outcomes and all nine original starter-contract files.",
+    "Recalibrate the known defective client at 15/17 and existing correction at 17/17 without skipped checks.",
+    "Preserve prior evidence, archive/inventory, P11 implementation/tests/dependencies and root instructions."
+  ],
+  "before_correction": {
+    "baseline_commit": "e1850d0f0a78211a02784bf5c7ff568fe2433b4e",
+    "runner_sha256": "3065e723777d138a986c3a5cadc5cb0a8c3842b592fadaf58a4f5ab44580e6a3",
+    "lost_attempt_probe": {
+      "method": "real timed-out Python command substituted at syntax gate",
+      "record": {
+        "schema_version": 1,
+        "task": "EVAL-001",
+        "task_version": "0.1.0",
+        "started_at": "2026-10-10T22:50:56.268313+00:00",
+        "run_kind": "artifact_check",
+        "status": "inconclusive",
+        "baseline_commit": "66041e7fdd7687ee21099f95129dff41933c74dd",
+        "suite_commit": "2d4e9a765ec4edc6401879259270e5d66970e6e2",
+        "runner_sha256": "3065e723777d138a986c3a5cadc5cb0a8c3842b592fadaf58a4f5ab44580e6a3",
+        "commands": [],
+        "candidate_model": null,
+        "score": null,
+        "artifact_sha256": "1b559d97a981060467725dbed26545cf175dd383bbb6fdc992e4cb761ef3eaff",
+        "evaluator_artifacts": {
+          "server.cjs": "f84e170aa785a6fa5caf223a1c8a245f51688f347eefa8e2d0e37e0f5f3cf9e7",
+          "public/index.html": "7cb6866cc5f603ae89263db31620a99053439650a0e3e86e215ab2cc13cd9665",
+          "public/style.css": "7f4e6e73f8b6ac534369275f9a3461d00afbe7ab1605d46199d50ff25503d323",
+          "package.json": "1ad160afedc2487c95094d842d23fb1abfa851fdeee17c86cb28eb58bdc39697",
+          "package-lock.json": "9623c8212f0ddf7e742f0936973f43a87512ffd0dbd5ea1cdc0312b5b97be4ac",
+          "tests/browser.test.cjs": "5d31f58d99d9e6cd51f24e448063349d916acb2fab4c4585a84a969cb3dca63e",
+          "tests/protocol.test.cjs": "cdf15bd3522bf9c74dc60bf307fc56f4050d74d61b45f27341867ce537254a7a"
+        },
+        "gate": "execution",
+        "reason": "Command '['/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3', '-c', \"import sys,time; print('syntax progress',flush=True); print('syntax diagnostic',file=sys.stderr,flush=True); time.sleep(2)\"]' timed out after 0.2 seconds"
+      }
+    },
+    "child_probe": {
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-c",
+        "import subprocess,sys,time; child=subprocess.Popen([sys.executable,'-c','import time; time.sleep(60)']); print('child_pid='+str(child.pid),flush=True); time.sleep(60)"
+      ],
+      "requested_timeout_seconds": 0.3,
+      "elapsed_seconds": 0.30277193899996746,
+      "partial_output": "child_pid=1613\n",
+      "child_state_after_parent_timeout": "S",
+      "child_survived": true,
+      "cleanup": "explicitly killed only probe child"
+    },
+    "refuted_hypothesis": "On Python 3.12.14 POSIX the old invocation returned promptly; no over-deadline pipe-wait claim."
+  },
+  "recorded_runner_regressions": {
+    "source_commit": "e1850d0f0a78211a02784bf5c7ff568fe2433b4e",
+    "runner_sha256": "3065e723777d138a986c3a5cadc5cb0a8c3842b592fadaf58a4f5ab44580e6a3",
+    "test_suite_sha256": "64ac380861aec62e8a01a87f883e5f40b981bcc712a08a221beb655d22aa3ad6",
+    "method": "Load recorded runner into current tests; restore original HERE/LAB/PROJECT after temporary relocation; no source changes.",
+    "tests": 15,
+    "failures": 4,
+    "errors": 5,
+    "skipped": 0,
+    "failed_test_ids": [
+      "runner_tests.TaskRunnerTests.test_pass_summary_after_deadline_cannot_be_accepted",
+      "runner_tests.TaskRunnerTests.test_timeout_at_each_gate_is_inconclusive_and_keeps_diagnostics (gate='client_syntax')",
+      "runner_tests.TaskRunnerTests.test_timeout_at_each_gate_is_inconclusive_and_keeps_diagnostics (gate='environment')",
+      "runner_tests.TaskRunnerTests.test_timeout_at_each_gate_is_inconclusive_and_keeps_diagnostics (gate='behavior_and_regressions')",
+      "runner_tests.TaskRunnerTests.test_command_failure_preserves_both_streams_and_actual_exit",
+      "runner_tests.TaskRunnerTests.test_detached_pipe_holder_marks_incomplete_capture_and_returns",
+      "runner_tests.TaskRunnerTests.test_missing_executable_keeps_attempt_without_rejecting_artifact",
+      "runner_tests.TaskRunnerTests.test_timeout_preserves_attempt_and_partial_output",
+      "runner_tests.TaskRunnerTests.test_timeout_stops_inherited_child_even_when_it_ignores_termination"
+    ],
+    "output": "test_command_failure_preserves_both_streams_and_actual_exit (runner_tests.TaskRunnerTests.test_command_failure_preserves_both_streams_and_actual_exit) ... ERROR\ntest_complete_results_distinguish_acceptance_and_rejection (runner_tests.TaskRunnerTests.test_complete_results_distinguish_acceptance_and_rejection) ... ok\ntest_detached_pipe_holder_marks_incomplete_capture_and_returns (runner_tests.TaskRunnerTests.test_detached_pipe_holder_marks_incomplete_capture_and_returns) ... ERROR\ntest_export_has_only_starter_and_brief_without_reference_or_history (runner_tests.TaskRunnerTests.test_export_has_only_starter_and_brief_without_reference_or_history) ... ok\ntest_export_never_overwrites_an_existing_workspace (runner_tests.TaskRunnerTests.test_export_never_overwrites_an_existing_workspace) ... ok\ntest_incomplete_or_skipped_execution_is_never_accepted (runner_tests.TaskRunnerTests.test_incomplete_or_skipped_execution_is_never_accepted) ... ok\ntest_linked_client_cannot_substitute_an_external_artifact (runner_tests.TaskRunnerTests.test_linked_client_cannot_substitute_an_external_artifact) ... ok\ntest_missing_client_is_a_rejected_submission (runner_tests.TaskRunnerTests.test_missing_client_is_a_rejected_submission) ... ok\ntest_missing_executable_keeps_attempt_without_rejecting_artifact (runner_tests.TaskRunnerTests.test_missing_executable_keeps_attempt_without_rejecting_artifact) ... ERROR\ntest_pass_summary_after_deadline_cannot_be_accepted (runner_tests.TaskRunnerTests.test_pass_summary_after_deadline_cannot_be_accepted) ... FAIL\ntest_reference_or_extra_file_in_submission_is_rejected (runner_tests.TaskRunnerTests.test_reference_or_extra_file_in_submission_is_rejected) ... ok\ntest_support_file_change_is_rejected_before_execution (runner_tests.TaskRunnerTests.test_support_file_change_is_rejected_before_execution) ... ok\ntest_timeout_at_each_gate_is_inconclusive_and_keeps_diagnostics (runner_tests.TaskRunnerTests.test_timeout_at_each_gate_is_inconclusive_and_keeps_diagnostics) ... \n  test_timeout_at_each_gate_is_inconclusive_and_keeps_diagnostics (runner_tests.TaskRunnerTests.test_timeout_at_each_gate_is_inconclusive_and_keeps_diagnostics) (gate='client_syntax') ... FAIL\n  test_timeout_at_each_gate_is_inconclusive_and_keeps_diagnostics (runner_tests.TaskRunnerTests.test_timeout_at_each_gate_is_inconclusive_and_keeps_diagnostics) (gate='environment') ... FAIL\n  test_timeout_at_each_gate_is_inconclusive_and_keeps_diagnostics (runner_tests.TaskRunnerTests.test_timeout_at_each_gate_is_inconclusive_and_keeps_diagnostics) (gate='behavior_and_regressions') ... FAIL\ntest_timeout_preserves_attempt_and_partial_output (runner_tests.TaskRunnerTests.test_timeout_preserves_attempt_and_partial_output) ... ERROR\ntest_timeout_stops_inherited_child_even_when_it_ignores_termination (runner_tests.TaskRunnerTests.test_timeout_stops_inherited_child_even_when_it_ignores_termination) ... ERROR\n\n======================================================================\nERROR: test_command_failure_preserves_both_streams_and_actual_exit (runner_tests.TaskRunnerTests.test_command_failure_preserves_both_streams_and_actual_exit)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/evaluations/chat-send-buffering/test_runner.py\", line 83, in test_command_failure_preserves_both_streams_and_actual_exit\n    self.assertFalse(record['timed_out'])\n                     ~~~~~~^^^^^^^^^^^^^\nKeyError: 'timed_out'\n\n======================================================================\nERROR: test_detached_pipe_holder_marks_incomplete_capture_and_returns (runner_tests.TaskRunnerTests.test_detached_pipe_holder_marks_incomplete_capture_and_returns)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/evaluations/chat-send-buffering/test_runner.py\", line 133, in test_detached_pipe_holder_marks_incomplete_capture_and_returns\n    record = runner.invoke([sys.executable, '-c', parent], Path(self.scratch.name), os.environ.copy(), .3)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/p02-old-runner-qznmhi6k/run.py\", line 103, in invoke\n    result = subprocess.run(command, cwd=cwd, env=environment, capture_output=True,\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/subprocess.py\", line 550, in run\n    stdout, stderr = process.communicate(input, timeout=timeout)\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/subprocess.py\", line 1209, in communicate\n    stdout, stderr = self._communicate(input, endtime, timeout)\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/subprocess.py\", line 2116, in _communicate\n    self._check_timeout(endtime, orig_timeout, stdout, stderr)\n  File \"/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/subprocess.py\", line 1253, in _check_timeout\n    raise TimeoutExpired(\nsubprocess.TimeoutExpired: Command '['/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3', '-c', 'import subprocess,sys,time; child=subprocess.Popen([sys.executable,\\'-c\\',\\'import time; print(\"detached ready\",flush=True); time.sleep(60)\\'],start_new_session=True); print(\\'child_pid=\\'+str(child.pid),flush=True); time.sleep(60)']' timed out after 0.3 seconds\n\n======================================================================\nERROR: test_missing_executable_keeps_attempt_without_rejecting_artifact (runner_tests.TaskRunnerTests.test_missing_executable_keeps_attempt_without_rejecting_artifact)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/evaluations/chat-send-buffering/test_runner.py\", line 181, in test_missing_executable_keeps_attempt_without_rejecting_artifact\n    self.assertEqual(record['commands'][-1]['command'], command)\n                     ~~~~~~~~~~~~~~~~~~^^^^\nIndexError: list index out of range\n\n======================================================================\nERROR: test_timeout_preserves_attempt_and_partial_output (runner_tests.TaskRunnerTests.test_timeout_preserves_attempt_and_partial_output)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/evaluations/chat-send-buffering/test_runner.py\", line 87, in test_timeout_preserves_attempt_and_partial_output\n    record = runner.invoke(command, Path(self.scratch.name), os.environ.copy(), .3)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/p02-old-runner-qznmhi6k/run.py\", line 103, in invoke\n    result = subprocess.run(command, cwd=cwd, env=environment, capture_output=True,\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/subprocess.py\", line 550, in run\n    stdout, stderr = process.communicate(input, timeout=timeout)\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/subprocess.py\", line 1209, in communicate\n    stdout, stderr = self._communicate(input, endtime, timeout)\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/subprocess.py\", line 2116, in _communicate\n    self._check_timeout(endtime, orig_timeout, stdout, stderr)\n  File \"/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/subprocess.py\", line 1253, in _check_timeout\n    raise TimeoutExpired(\nsubprocess.TimeoutExpired: Command '['/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3', '-c', \"import sys,time; print('progress',flush=True); print('diagnostic',file=sys.stderr,flush=True); time.sleep(60)\"]' timed out after 0.3 seconds\n\n======================================================================\nERROR: test_timeout_stops_inherited_child_even_when_it_ignores_termination (runner_tests.TaskRunnerTests.test_timeout_stops_inherited_child_even_when_it_ignores_termination)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/evaluations/chat-send-buffering/test_runner.py\", line 102, in test_timeout_stops_inherited_child_even_when_it_ignores_termination\n    record = runner.invoke([sys.executable, '-c', parent, child],\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/p02-old-runner-qznmhi6k/run.py\", line 103, in invoke\n    result = subprocess.run(command, cwd=cwd, env=environment, capture_output=True,\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/subprocess.py\", line 550, in run\n    stdout, stderr = process.communicate(input, timeout=timeout)\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/subprocess.py\", line 1209, in communicate\n    stdout, stderr = self._communicate(input, endtime, timeout)\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/subprocess.py\", line 2116, in _communicate\n    self._check_timeout(endtime, orig_timeout, stdout, stderr)\n  File \"/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/subprocess.py\", line 1253, in _check_timeout\n    raise TimeoutExpired(\nsubprocess.TimeoutExpired: Command '['/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3', '-c', \"import signal,subprocess,sys,time; signal.signal(signal.SIGTERM,signal.SIG_IGN); child=subprocess.Popen([sys.executable,'-c',sys.argv[1]]); print('child_pid='+str(child.pid),flush=True); time.sleep(60)\", \"import signal,time; signal.signal(signal.SIGTERM,signal.SIG_IGN); print('child ready',flush=True); time.sleep(60)\"]' timed out after 0.5 seconds\n\n======================================================================\nFAIL: test_pass_summary_after_deadline_cannot_be_accepted (runner_tests.TaskRunnerTests.test_pass_summary_after_deadline_cannot_be_accepted)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/evaluations/chat-send-buffering/test_runner.py\", line 172, in test_pass_summary_after_deadline_cannot_be_accepted\n    self.assertEqual(record['status'], 'inconclusive')\nAssertionError: 'accepted' != 'inconclusive'\n- accepted\n+ inconclusive\n\n\n======================================================================\nFAIL: test_timeout_at_each_gate_is_inconclusive_and_keeps_diagnostics (runner_tests.TaskRunnerTests.test_timeout_at_each_gate_is_inconclusive_and_keeps_diagnostics) (gate='client_syntax')\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/evaluations/chat-send-buffering/test_runner.py\", line 162, in test_timeout_at_each_gate_is_inconclusive_and_keeps_diagnostics\n    self.assertEqual(record['gate'], gate)\nAssertionError: 'execution' != 'client_syntax'\n- execution\n+ client_syntax\n\n\n======================================================================\nFAIL: test_timeout_at_each_gate_is_inconclusive_and_keeps_diagnostics (runner_tests.TaskRunnerTests.test_timeout_at_each_gate_is_inconclusive_and_keeps_diagnostics) (gate='environment')\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/evaluations/chat-send-buffering/test_runner.py\", line 162, in test_timeout_at_each_gate_is_inconclusive_and_keeps_diagnostics\n    self.assertEqual(record['gate'], gate)\nAssertionError: 'execution' != 'environment'\n- execution\n+ environment\n\n\n======================================================================\nFAIL: test_timeout_at_each_gate_is_inconclusive_and_keeps_diagnostics (runner_tests.TaskRunnerTests.test_timeout_at_each_gate_is_inconclusive_and_keeps_diagnostics) (gate='behavior_and_regressions')\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/evaluations/chat-send-buffering/test_runner.py\", line 162, in test_timeout_at_each_gate_is_inconclusive_and_keeps_diagnostics\n    self.assertEqual(record['gate'], gate)\nAssertionError: 'execution' != 'behavior_and_regressions'\n- execution\n+ behavior_and_regressions\n\n\n----------------------------------------------------------------------\nRan 15 tests in 2.457s\n\nFAILED (failures=4, errors=5)\n",
+    "unique_new_methods_failed": [
+      "runner_tests.TaskRunnerTests.test_command_failure_preserves_both_streams_and_actual_exit",
+      "runner_tests.TaskRunnerTests.test_detached_pipe_holder_marks_incomplete_capture_and_returns",
+      "runner_tests.TaskRunnerTests.test_missing_executable_keeps_attempt_without_rejecting_artifact",
+      "runner_tests.TaskRunnerTests.test_pass_summary_after_deadline_cannot_be_accepted",
+      "runner_tests.TaskRunnerTests.test_timeout_at_each_gate_is_inconclusive_and_keeps_diagnostics",
+      "runner_tests.TaskRunnerTests.test_timeout_preserves_attempt_and_partial_output",
+      "runner_tests.TaskRunnerTests.test_timeout_stops_inherited_child_even_when_it_ignores_termination"
+    ],
+    "unique_new_method_failure_count": 7,
+    "original_methods_passed": 8,
+    "interpretation": "Four failure events and five error events include three gate subtests; seven unique new methods fail. This is not nine failing methods."
+  },
+  "current_runner_regressions": {
+    "command": [
+      "python3",
+      "evaluations/chat-send-buffering/test_runner.py"
+    ],
+    "cwd": "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab",
+    "runner_sha256": "e0ec81df194ce442d2b2c0611222a3ab0c248202aede733456ff8d503b2469aa",
+    "test_suite_sha256": "64ac380861aec62e8a01a87f883e5f40b981bcc712a08a221beb655d22aa3ad6",
+    "tests": 15,
+    "pass": 15,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "exit_code": 0,
+    "coverage": {
+      "real_commands": [
+        "nonzero exit and both streams",
+        "partial timeout output",
+        "inherited SIGTERM-ignoring child forced shutdown",
+        "detached pipe holder and bounded incomplete capture",
+        "missing executable"
+      ],
+      "controlled_gate_injection": "Substitute a real short Python timeout at each gate; earlier gates are successful fixtures. Not three actual browser outages.",
+      "synthetic_summary_fixture": "Passing TAP with exit 0 and timed_out=true must remain inconclusive. Not a reproduced late-summary race.",
+      "retained_checks": "Original eight export, preservation, allowlist, symlink and TAP-completeness methods.",
+      "detached_fixture_cleanup": "The owning test explicitly kills only its escaped child PID after checking capture; the runner does not contain escaped sessions."
+    }
+  },
+  "corrected_timeout_probe": {
+    "method": "Repeat the real Python timeout substituted at the syntax boundary; not a Node syntax outage.",
+    "result": {
+      "schema_version": 1,
+      "task": "EVAL-001",
+      "task_version": "0.1.0",
+      "runner_version": "0.1.1",
+      "started_at": "2026-10-10T22:57:28.986685+00:00",
+      "run_kind": "artifact_check",
+      "status": "inconclusive",
+      "baseline_commit": "66041e7fdd7687ee21099f95129dff41933c74dd",
+      "suite_commit": "2d4e9a765ec4edc6401879259270e5d66970e6e2",
+      "runner_sha256": "e0ec81df194ce442d2b2c0611222a3ab0c248202aede733456ff8d503b2469aa",
+      "commands": [
+        {
+          "command": [
+            "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+            "-c",
+            "import sys,time; print('syntax progress',flush=True); print('syntax diagnostic',file=sys.stderr,flush=True); time.sleep(2)"
+          ],
+          "exit_code": -15,
+          "stdout": "syntax progress\n",
+          "stderr": "syntax diagnostic\n",
+          "timeout_seconds": 0.2,
+          "timed_out": true,
+          "launch_error": null,
+          "capture_complete": true,
+          "termination_strategy": "posix_process_group",
+          "elapsed_seconds": 0.202
+        }
+      ],
+      "candidate_model": null,
+      "score": null,
+      "artifact_sha256": "1b559d97a981060467725dbed26545cf175dd383bbb6fdc992e4cb761ef3eaff",
+      "evaluator_artifacts": {
+        "server.cjs": "f84e170aa785a6fa5caf223a1c8a245f51688f347eefa8e2d0e37e0f5f3cf9e7",
+        "public/index.html": "7cb6866cc5f603ae89263db31620a99053439650a0e3e86e215ab2cc13cd9665",
+        "public/style.css": "7f4e6e73f8b6ac534369275f9a3461d00afbe7ab1605d46199d50ff25503d323",
+        "package.json": "1ad160afedc2487c95094d842d23fb1abfa851fdeee17c86cb28eb58bdc39697",
+        "package-lock.json": "9623c8212f0ddf7e742f0936973f43a87512ffd0dbd5ea1cdc0312b5b97be4ac",
+        "tests/browser.test.cjs": "5d31f58d99d9e6cd51f24e448063349d916acb2fab4c4585a84a969cb3dca63e",
+        "tests/protocol.test.cjs": "cdf15bd3522bf9c74dc60bf307fc56f4050d74d61b45f27341867ce537254a7a"
+      },
+      "gate": "client_syntax",
+      "reason": "Syntax check did not complete"
+    }
+  },
+  "export_compatibility": {
+    "method": "Compare recorded runner starter() and current starter() byte for byte; read both workspaces originally exported by the recorded runner with current read_submission().",
+    "old_exports_accepted": true,
+    "byte_identical_export_count": 9,
+    "export_sha256": {
+      ".node-version": "7e8a2fa94951112b894a3dbe3d05efef5e9263741fa49125f0a70f40fedab4cc",
+      "BRIEF.md": "13b49044c82465f988f23709e76027bf7c75849fdaab23848af325c9da0ccef9",
+      "package-lock.json": "4aef642ad8308c3a87ef328008fce3d75ba4ebd6935edb9f1ac3c833ab1e1727",
+      "package.json": "313b6467e18c7a9b91ab4a208a60fa455dd02e971bab6f99f361d585ca080203",
+      "public/client.js": "1b559d97a981060467725dbed26545cf175dd383bbb6fdc992e4cb761ef3eaff",
+      "public/index.html": "7cb6866cc5f603ae89263db31620a99053439650a0e3e86e215ab2cc13cd9665",
+      "public/style.css": "7f4e6e73f8b6ac534369275f9a3461d00afbe7ab1605d46199d50ff25503d323",
+      "server.cjs": "f84e170aa785a6fa5caf223a1c8a245f51688f347eefa8e2d0e37e0f5f3cf9e7",
+      "task-manifest.json": "ada80ac2958cf856a82b63d74c632d41349c95ddf0ad2d91626e6657f6ed1e5f"
+    },
+    "reference_difference": "Only public/client.js, copied from the unchanged working P11 0.1.1 correction.",
+    "task_manifest_version": "0.1.0",
+    "runner_version": "0.1.1"
+  },
+  "artifact_recalibration": [
+    {
+      "role": "known_defective_baseline",
+      "cli_exit_code": 1,
+      "record": {
+        "schema_version": 1,
+        "task": "EVAL-001",
+        "task_version": "0.1.0",
+        "runner_version": "0.1.1",
+        "started_at": "2026-10-10T22:57:29.508932+00:00",
+        "run_kind": "artifact_check",
+        "status": "rejected",
+        "baseline_commit": "66041e7fdd7687ee21099f95129dff41933c74dd",
+        "suite_commit": "2d4e9a765ec4edc6401879259270e5d66970e6e2",
+        "runner_sha256": "e0ec81df194ce442d2b2c0611222a3ab0c248202aede733456ff8d503b2469aa",
+        "commands": [
+          {
+            "command": [
+              "node",
+              "--check",
+              "/tmp/p02-client-mgupkh15/client.js"
+            ],
+            "exit_code": 0,
+            "stdout": "",
+            "stderr": "",
+            "timeout_seconds": 15,
+            "timed_out": false,
+            "launch_error": null,
+            "capture_complete": true,
+            "termination_strategy": null,
+            "elapsed_seconds": 0.023
+          },
+          {
+            "command": [
+              "node",
+              "-e",
+              "\nconst { chromium } = require('playwright-core');\nif (Number(process.versions.node.split('.')[0]) < 22) process.exit(2);\n(async () => {\n  const browser = await chromium.launch({\n    executablePath: process.env.CHROMIUM_PATH || '/usr/bin/chromium',\n    headless: true, args: ['--no-sandbox'],\n  });\n  console.log(JSON.stringify({ node: process.version, chromium: browser.version(),\n    playwright: require('playwright-core/package.json').version,\n    socket_io: require('socket.io/package.json').version }));\n  await browser.close();\n})().catch(error => { console.error(error.message); process.exit(2); });\n"
+            ],
+            "exit_code": 0,
+            "stdout": "{\"node\":\"v24.19.0\",\"chromium\":\"154.0.8037.57\",\"playwright\":\"1.64.0\",\"socket_io\":\"4.8.4\"}\n",
+            "stderr": "",
+            "timeout_seconds": 20,
+            "timed_out": false,
+            "launch_error": null,
+            "capture_complete": true,
+            "termination_strategy": null,
+            "elapsed_seconds": 0.557
+          },
+          {
+            "command": [
+              "node",
+              "--test",
+              "--test-reporter=tap",
+              "tests/browser.test.cjs",
+              "tests/protocol.test.cjs"
+            ],
+            "exit_code": 1,
+            "stdout": "TAP version 13\n# Subtest: two browser clients display accepted messages once in both directions\nok 1 - two browser clients display accepted messages once in both directions\n  ---\n  duration_ms: 1790.383222\n  type: 'test'\n  ...\n# Subtest: a connected form submission waits behind an in-flight polling write\nnot ok 2 - a connected form submission waits behind an in-flight polling write\n  ---\n  duration_ms: 4349.959702\n  type: 'test'\n  location: '/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/projects/realtime-integration-lab/tests/browser.test.cjs:79:1'\n  failureType: 'testCodeFailure'\n  error: 'page.waitForFunction: Timeout 4000ms exceeded.'\n  code: 'ERR_TEST_FAILURE'\n  name: 'TimeoutError'\n  stack: |-\n    expectMessages (/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/projects/realtime-integration-lab/tests/browser.test.cjs:63:14)\n    TestContext.<anonymous> (/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/projects/realtime-integration-lab/tests/browser.test.cjs:97:9)\n  ...\n# Subtest: a stale connected state does not retain a message for reconnect replay\nnot ok 3 - a stale connected state does not retain a message for reconnect replay\n  ---\n  duration_ms: 330.661212\n  type: 'test'\n  location: '/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/projects/realtime-integration-lab/tests/browser.test.cjs:103:1'\n  failureType: 'testCodeFailure'\n  error: |-\n    Expected values to be strictly deep-equal:\n    + actual - expected\n    \n      {\n    +   buffered: 1,\n    -   buffered: 0,\n        connected: true\n      }\n    \n  code: 'ERR_ASSERTION'\n  name: 'AssertionError'\n  expected:\n    connected: true\n    buffered: 0\n  actual:\n    connected: true\n    buffered: 1\n  operator: 'deepStrictEqual'\n  stack: |-\n    TestContext.<anonymous> (/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/projects/realtime-integration-lab/tests/browser.test.cjs:119:10)\n    async Test.run (node:internal/test_runner/test:1389:7)\n    async Test.processPendingSubtests (node:internal/test_runner/test:960:7)\n  ...\n# Subtest: markup remains literal text in both browsers\nok 4 - markup remains literal text in both browsers\n  ---\n  duration_ms: 1525.006088\n  type: 'test'\n  ...\n# Subtest: rejection is visible, preserves the draft, and does not broadcast\nok 5 - rejection is visible, preserves the draft, and does not broadcast\n  ---\n  duration_ms: 3503.897305\n  type: 'test'\n  ...\n# Subtest: a departed client keeps its draft and receives only future messages on rejoining\nok 6 - a departed client keeps its draft and receives only future messages on rejoining\n  ---\n  duration_ms: 3587.907424\n  type: 'test'\n  ...\n# Subtest: transport interruption reconnects automatically without duplicating listeners\nok 7 - transport interruption reconnects automatically without duplicating listeners\n  ---\n  duration_ms: 2529.391481\n  type: 'test'\n  ...\n# Subtest: browser retains only the latest 200 messages\nok 8 - browser retains only the latest 200 messages\n  ---\n  duration_ms: 605.873278\n  type: 'test'\n  ...\n# Subtest: new browser receives future messages without server-side history\nok 9 - new browser receives future messages without server-side history\n  ---\n  duration_ms: 2476.324504\n  type: 'test'\n  ...\n# Subtest: missing acknowledgement reports uncertainty and does not retry automatically\nok 10 - missing acknowledgement reports uncertainty and does not retry automatically\n  ---\n  duration_ms: 3833.388696\n  type: 'test'\n  ...\n# Subtest: an acknowledgement does not erase a newer draft typed during sending\nok 11 - an acknowledgement does not erase a newer draft typed during sending\n  ---\n  duration_ms: 1386.112897\n  type: 'test'\n  ...\n# Subtest: protocol broadcasts trimmed messages to sender and peer in order\nok 12 - protocol broadcasts trimmed messages to sender and peer in order\n  ---\n  duration_ms: 50.952563\n  type: 'test'\n  ...\n# Subtest: non-string payloads are rejected without broadcasts\nok 13 - non-string payloads are rejected without broadcasts\n  ---\n  duration_ms: 114.656526\n  type: 'test'\n  ...\n# Subtest: empty and whitespace-only payloads are rejected without broadcasts\nok 14 - empty and whitespace-only payloads are rejected without broadcasts\n  ---\n  duration_ms: 15.394144\n  type: 'test'\n  ...\n# Subtest: 501 code units are rejected even when trimming would shorten the payload\nok 15 - 501 code units are rejected even when trimming would shorten the payload\n  ---\n  duration_ms: 14.504926\n  type: 'test'\n  ...\n# Subtest: 500 UTF-16 code units are accepted including non-ASCII text\nok 16 - 500 UTF-16 code units are accepted including non-ASCII text\n  ---\n  duration_ms: 18.220699\n  type: 'test'\n  ...\n# Subtest: messages without acknowledgement callbacks do not crash the server\nok 17 - messages without acknowledgement callbacks do not crash the server\n  ---\n  duration_ms: 15.148119\n  type: 'test'\n  ...\n1..17\n# tests 17\n# suites 0\n# pass 15\n# fail 2\n# cancelled 0\n# skipped 0\n# todo 0\n# duration_ms 26401.875081\n",
+            "stderr": "",
+            "timeout_seconds": 180,
+            "timed_out": false,
+            "launch_error": null,
+            "capture_complete": true,
+            "termination_strategy": null,
+            "elapsed_seconds": 26.436
+          }
+        ],
+        "candidate_model": null,
+        "score": null,
+        "artifact_sha256": "1b559d97a981060467725dbed26545cf175dd383bbb6fdc992e4cb761ef3eaff",
+        "evaluator_artifacts": {
+          "server.cjs": "f84e170aa785a6fa5caf223a1c8a245f51688f347eefa8e2d0e37e0f5f3cf9e7",
+          "public/index.html": "7cb6866cc5f603ae89263db31620a99053439650a0e3e86e215ab2cc13cd9665",
+          "public/style.css": "7f4e6e73f8b6ac534369275f9a3461d00afbe7ab1605d46199d50ff25503d323",
+          "package.json": "1ad160afedc2487c95094d842d23fb1abfa851fdeee17c86cb28eb58bdc39697",
+          "package-lock.json": "9623c8212f0ddf7e742f0936973f43a87512ffd0dbd5ea1cdc0312b5b97be4ac",
+          "tests/browser.test.cjs": "5d31f58d99d9e6cd51f24e448063349d916acb2fab4c4585a84a969cb3dca63e",
+          "tests/protocol.test.cjs": "cdf15bd3522bf9c74dc60bf307fc56f4050d74d61b45f27341867ce537254a7a"
+        },
+        "environment": {
+          "node": "v24.19.0",
+          "chromium": "154.0.8037.57",
+          "playwright": "1.64.0",
+          "socket_io": "4.8.4"
+        },
+        "counts": {
+          "tests": 17,
+          "pass": 15,
+          "fail": 2,
+          "cancelled": 0,
+          "skipped": 0,
+          "todo": 0
+        },
+        "gate": "behavior_and_regressions",
+        "failed_checks": [
+          "a connected form submission waits behind an in-flight polling write",
+          "a stale connected state does not retain a message for reconnect replay"
+        ]
+      }
+    },
+    {
+      "role": "existing_corrected_reference",
+      "cli_exit_code": 0,
+      "record": {
+        "schema_version": 1,
+        "task": "EVAL-001",
+        "task_version": "0.1.0",
+        "runner_version": "0.1.1",
+        "started_at": "2026-10-10T23:01:23.844388+00:00",
+        "run_kind": "artifact_check",
+        "status": "accepted",
+        "baseline_commit": "66041e7fdd7687ee21099f95129dff41933c74dd",
+        "suite_commit": "2d4e9a765ec4edc6401879259270e5d66970e6e2",
+        "runner_sha256": "e0ec81df194ce442d2b2c0611222a3ab0c248202aede733456ff8d503b2469aa",
+        "commands": [
+          {
+            "command": [
+              "node",
+              "--check",
+              "/tmp/p02-client-54e6r6wv/client.js"
+            ],
+            "exit_code": 0,
+            "stdout": "",
+            "stderr": "",
+            "timeout_seconds": 15,
+            "timed_out": false,
+            "launch_error": null,
+            "capture_complete": true,
+            "termination_strategy": null,
+            "elapsed_seconds": 0.03
+          },
+          {
+            "command": [
+              "node",
+              "-e",
+              "\nconst { chromium } = require('playwright-core');\nif (Number(process.versions.node.split('.')[0]) < 22) process.exit(2);\n(async () => {\n  const browser = await chromium.launch({\n    executablePath: process.env.CHROMIUM_PATH || '/usr/bin/chromium',\n    headless: true, args: ['--no-sandbox'],\n  });\n  console.log(JSON.stringify({ node: process.version, chromium: browser.version(),\n    playwright: require('playwright-core/package.json').version,\n    socket_io: require('socket.io/package.json').version }));\n  await browser.close();\n})().catch(error => { console.error(error.message); process.exit(2); });\n"
+            ],
+            "exit_code": 0,
+            "stdout": "{\"node\":\"v24.19.0\",\"chromium\":\"154.0.8037.57\",\"playwright\":\"1.64.0\",\"socket_io\":\"4.8.4\"}\n",
+            "stderr": "",
+            "timeout_seconds": 20,
+            "timed_out": false,
+            "launch_error": null,
+            "capture_complete": true,
+            "termination_strategy": null,
+            "elapsed_seconds": 0.692
+          },
+          {
+            "command": [
+              "node",
+              "--test",
+              "--test-reporter=tap",
+              "tests/browser.test.cjs",
+              "tests/protocol.test.cjs"
+            ],
+            "exit_code": 0,
+            "stdout": "TAP version 13\n# Subtest: two browser clients display accepted messages once in both directions\nok 1 - two browser clients display accepted messages once in both directions\n  ---\n  duration_ms: 1843.642316\n  type: 'test'\n  ...\n# Subtest: a connected form submission waits behind an in-flight polling write\nok 2 - a connected form submission waits behind an in-flight polling write\n  ---\n  duration_ms: 457.994128\n  type: 'test'\n  ...\n# Subtest: a stale connected state does not retain a message for reconnect replay\nok 3 - a stale connected state does not retain a message for reconnect replay\n  ---\n  duration_ms: 2520.924852\n  type: 'test'\n  ...\n# Subtest: markup remains literal text in both browsers\nok 4 - markup remains literal text in both browsers\n  ---\n  duration_ms: 1461.780442\n  type: 'test'\n  ...\n# Subtest: rejection is visible, preserves the draft, and does not broadcast\nok 5 - rejection is visible, preserves the draft, and does not broadcast\n  ---\n  duration_ms: 3494.475185\n  type: 'test'\n  ...\n# Subtest: a departed client keeps its draft and receives only future messages on rejoining\nok 6 - a departed client keeps its draft and receives only future messages on rejoining\n  ---\n  duration_ms: 3537.69788\n  type: 'test'\n  ...\n# Subtest: transport interruption reconnects automatically without duplicating listeners\nok 7 - transport interruption reconnects automatically without duplicating listeners\n  ---\n  duration_ms: 1235.668387\n  type: 'test'\n  ...\n# Subtest: browser retains only the latest 200 messages\nok 8 - browser retains only the latest 200 messages\n  ---\n  duration_ms: 622.703829\n  type: 'test'\n  ...\n# Subtest: new browser receives future messages without server-side history\nok 9 - new browser receives future messages without server-side history\n  ---\n  duration_ms: 2524.014093\n  type: 'test'\n  ...\n# Subtest: missing acknowledgement reports uncertainty and does not retry automatically\nok 10 - missing acknowledgement reports uncertainty and does not retry automatically\n  ---\n  duration_ms: 3868.010431\n  type: 'test'\n  ...\n# Subtest: an acknowledgement does not erase a newer draft typed during sending\nok 11 - an acknowledgement does not erase a newer draft typed during sending\n  ---\n  duration_ms: 1491.491181\n  type: 'test'\n  ...\n# Subtest: protocol broadcasts trimmed messages to sender and peer in order\nok 12 - protocol broadcasts trimmed messages to sender and peer in order\n  ---\n  duration_ms: 148.234558\n  type: 'test'\n  ...\n# Subtest: non-string payloads are rejected without broadcasts\nok 13 - non-string payloads are rejected without broadcasts\n  ---\n  duration_ms: 21.259014\n  type: 'test'\n  ...\n# Subtest: empty and whitespace-only payloads are rejected without broadcasts\nok 14 - empty and whitespace-only payloads are rejected without broadcasts\n  ---\n  duration_ms: 16.029382\n  type: 'test'\n  ...\n# Subtest: 501 code units are rejected even when trimming would shorten the payload\nok 15 - 501 code units are rejected even when trimming would shorten the payload\n  ---\n  duration_ms: 15.58272\n  type: 'test'\n  ...\n# Subtest: 500 UTF-16 code units are accepted including non-ASCII text\nok 16 - 500 UTF-16 code units are accepted including non-ASCII text\n  ---\n  duration_ms: 15.889524\n  type: 'test'\n  ...\n# Subtest: messages without acknowledgement callbacks do not crash the server\nok 17 - messages without acknowledgement callbacks do not crash the server\n  ---\n  duration_ms: 16.509913\n  type: 'test'\n  ...\n1..17\n# tests 17\n# suites 0\n# pass 17\n# fail 0\n# cancelled 0\n# skipped 0\n# todo 0\n# duration_ms 23543.050922\n",
+            "stderr": "",
+            "timeout_seconds": 180,
+            "timed_out": false,
+            "launch_error": null,
+            "capture_complete": true,
+            "termination_strategy": null,
+            "elapsed_seconds": 23.578
+          }
+        ],
+        "candidate_model": null,
+        "score": null,
+        "artifact_sha256": "6c98996c81ceae54e6b44f6761d347de5fd3c9fdf5962b84d5b00fbba2836634",
+        "evaluator_artifacts": {
+          "server.cjs": "f84e170aa785a6fa5caf223a1c8a245f51688f347eefa8e2d0e37e0f5f3cf9e7",
+          "public/index.html": "7cb6866cc5f603ae89263db31620a99053439650a0e3e86e215ab2cc13cd9665",
+          "public/style.css": "7f4e6e73f8b6ac534369275f9a3461d00afbe7ab1605d46199d50ff25503d323",
+          "package.json": "1ad160afedc2487c95094d842d23fb1abfa851fdeee17c86cb28eb58bdc39697",
+          "package-lock.json": "9623c8212f0ddf7e742f0936973f43a87512ffd0dbd5ea1cdc0312b5b97be4ac",
+          "tests/browser.test.cjs": "5d31f58d99d9e6cd51f24e448063349d916acb2fab4c4585a84a969cb3dca63e",
+          "tests/protocol.test.cjs": "cdf15bd3522bf9c74dc60bf307fc56f4050d74d61b45f27341867ce537254a7a"
+        },
+        "environment": {
+          "node": "v24.19.0",
+          "chromium": "154.0.8037.57",
+          "playwright": "1.64.0",
+          "socket_io": "4.8.4"
+        },
+        "counts": {
+          "tests": 17,
+          "pass": 17,
+          "fail": 0,
+          "cancelled": 0,
+          "skipped": 0,
+          "todo": 0
+        },
+        "gate": "behavior_and_regressions",
+        "failed_checks": []
+      }
+    }
+  ],
+  "working_artifacts_sha256": {
+    "evaluations/chat-send-buffering/run.py": "e0ec81df194ce442d2b2c0611222a3ab0c248202aede733456ff8d503b2469aa",
+    "evaluations/chat-send-buffering/test_runner.py": "64ac380861aec62e8a01a87f883e5f40b981bcc712a08a221beb655d22aa3ad6",
+    "evaluations/chat-send-buffering/README.md": "c8ad02c7cb0bd72db5fcf617a9b133b94b1d2c5235c7dfb38dee1ec674289e73",
+    "evaluations/chat-send-buffering/BRIEF.md": "13b49044c82465f988f23709e76027bf7c75849fdaab23848af325c9da0ccef9"
+  },
+  "continuity_checks": {
+    "source_preservation": {
+      "command": [
+        "git",
+        "diff",
+        "--exit-code",
+        "e1850d0f0a78211a02784bf5c7ff568fe2433b4e",
+        "--",
+        "AGENTS.md",
+        "martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/AGENTS.md",
+        "martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/archive",
+        "martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/registry/legacy_sources.json",
+        "martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/evidence/legacy-audit",
+        "martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/evidence/realtime-chat",
+        "martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/evidence/evaluation-task/CALIBRATION.json",
+        "martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/projects/realtime-integration-lab",
+        "martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/evaluations/chat-send-buffering/BRIEF.md"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    "preserved_commits": "All listed prior commits remain ancestors of HEAD.",
+    "documentary_validation": {
+      "command": "python3 tools/validate_repo.py",
+      "cwd": "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab",
+      "status": "passed",
+      "exit_code": 0,
+      "output": "PASS: 11 projects, 11 transfers, 0 assets, 2 legacy sources; 90 local file links.\nDocumentary checks only; no game, model benchmark or media runtime executed.\n"
+    },
+    "validator_regressions": {
+      "command": "python3 tools/test_validate_repo.py",
+      "cwd": "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab",
+      "status": "passed",
+      "exit_code": 0,
+      "output": "...\n----------------------------------------------------------------------\nRan 3 tests in 0.127s\n\nOK\n"
+    },
+    "whitespace": {
+      "command": "git diff --check",
+      "cwd": "/workspace/Creative_AI_Project_HUB",
+      "status": "passed",
+      "exit_code": 0,
+      "output": ""
+    },
+    "final_manifest": {
+      "command": "sha256sum -c MANIFEST.sha256",
+      "cwd": "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab",
+      "status": "passed",
+      "exit_code": 0,
+      "entries": 53,
+      "scope": "All maintained lab files, including this record; excludes manifest itself, root wrapper files and ignored dependencies/runtime outputs. Refresh and recheck after recording this outcome."
+    }
+  },
+  "attribution": {
+    "Martin": "Portfolio direction and iteration request; no new human review claimed.",
+    "Codex": "Failure diagnosis, implementation, fault injection, automated verification and maintained documentation in this session.",
+    "historical_material": "Unchanged original ZIP/inventory and pinned P11 commits; no new extraction.",
+    "candidate_model": null,
+    "model_calls": 0,
+    "score": null
+  },
+  "learning": {
+    "verified_here": "Record incomplete execution at the command boundary; deadline status overrides a late pass summary. Version orchestration separately from unchanged submission contracts.",
+    "other_projects": "Candidate reuse lesson only; no new destination adaptation, shared component or transfer promotion.",
+    "TR-009": "Remains validated only for the bounded P11-to-P02 task adaptation/calibration."
+  },
+  "limitations": [
+    "Private POSIX group cleanup is not a sandbox or complete containment of untrusted code; escaped groups/sessions are outside the policy.",
+    "The non-POSIX direct-process fallback was not executed.",
+    "No independent candidate, model identity, context isolation, cost, score or comparison was evaluated.",
+    "Public reference/history remains discoverable.",
+    "The pinned heartbeat check is controlled predicate injection; the polling check uses actual HTTP.",
+    "Prior install/CLI smoke and missing-browser probes were not rerun; those records remain historical.",
+    "Martin usability review, game-engine execution and missing creative/media masters remain outstanding.",
+    "This increment is local and uncommitted; no new GitHub publication."
+  ],
+  "next_action": "Produce one independent EVAL-001 client under explicit source/tool/context policy, preserve attempts and artifact, then run the evaluator separately."
+}

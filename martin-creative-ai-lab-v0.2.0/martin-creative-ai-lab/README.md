@@ -4,7 +4,7 @@ An evolving laboratory of games, narrative, images, audio, data, and AI
 evaluation by **Martin Melcop Neto**. Projects are adaptable seeds: build small
 slices, verify behavior, record decisions, and test reuse in actual destinations.
 
-**Current seed: v0.4.0.** The lab includes eleven project lines, 178 preserved
+**Current seed: v0.4.1.** The lab includes eleven project lines, 178 preserved
 historical texts, one working local text-chat adaptation, and one calibrated
 practice-task harness. No game migration,
 model benchmark, finished music catalogue, or public deployment is claimed.
@@ -16,7 +16,7 @@ The containing directory keeps its original v0.2.0 package name.
 - [Assessment](docs/ASSESSMENT.md) and [improvement plan](docs/IMPROVEMENT_PLAN.md): evidence and selected priorities.
 - [P11 — Live exchange](projects/realtime-integration-lab/README.md): install, run, test, provenance, and contribution.
 - [P02 — EVAL-001](evaluations/chat-send-buffering/README.md): export a starter, check a client, and inspect limits.
-- [Current calibration evidence](evidence/evaluation-task/CALIBRATION.json): known baseline/reference, commands, environment, and hashes.
+- [Current timeout/recalibration evidence](evidence/evaluation-task/TIMEOUT_RUN.json): actual command probes, source comparison, compatible artifacts, environment and hashes.
 - [P11 transport evidence](evidence/realtime-chat/POLLING_SEND_RUN.json): prior correction and its bounded tests.
 - [SEED.md](SEED.md), [agent instructions](AGENTS.md), and [decisions](docs/DECISIONS.md): direction and operating context.
 - [Project registry](registry/projects.json) and [legacy inventory](registry/legacy_sources.json): IDs and evidence boundaries.
@@ -59,5 +59,7 @@ Codex performed this increment. Manual usability review by Martin is pending.
 
 TR-009 now has a verified P02 task consumer: baseline rejects at 15/17 and
 reference accepts at 17/17. Other transfers remain candidates. No independent
-model was evaluated. P11 is Git-published in `df1bd59`; this P02 iteration remains
-local and uncommitted. Publication and deployment require explicit authorization.
+model was evaluated. P11 is Git-published in `df1bd59`; this runner correction remains
+local and uncommitted. Task setup is published in `e1850d0`; runner 0.1.1
+retains diagnostics and cleans inherited groups without changing starter 0.1.0.
+Publication and deployment require explicit authorization.

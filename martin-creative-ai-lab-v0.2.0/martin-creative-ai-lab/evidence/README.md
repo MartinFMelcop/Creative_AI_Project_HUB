@@ -1,6 +1,8 @@
 # Execution evidence
 
-- [P02 EVAL-001 calibration](evaluation-task/CALIBRATION.json): exact starter,
+- [P02 timeout correction](evaluation-task/TIMEOUT_RUN.json): recorded-runner
+  failures, partial diagnostics, cleanup boundaries and compatible artifact checks.
+- [P02 EVAL-001 original calibration](evaluation-task/CALIBRATION.json): exact starter,
   export boundaries, runner tests, baseline/reference checks with complete output,
   unavailable-browser probe, and exported CLI smoke. No independent model attempt.
 - [P11 transport correction](realtime-chat/POLLING_SEND_RUN.json): prior two

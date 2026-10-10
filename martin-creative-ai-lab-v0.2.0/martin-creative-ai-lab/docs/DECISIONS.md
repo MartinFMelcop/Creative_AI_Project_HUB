@@ -143,3 +143,30 @@ export separation is not a secrecy guarantee, OS isolation, or a security sandbo
 editable files, reserved material, engine integration, or a requirement to execute
 untrusted artifacts. Record actual identity/context/attempts before performance
 claims. Never infer model training or knowledge transfer from co-located files.
+
+## ADR-011 — retain incomplete command evidence and bound process cleanup
+
+**Date:** 2026-10-10. **Status:** implemented and locally verified, P02 runner 0.1.1.
+**Authority:** current development request; diagnosis/correction by Codex.
+
+The published runner omitted timeout/launch attempts from result records. An
+actual timeout probe lost both diagnostic streams, and an inherited child remained
+alive after the direct process was stopped. A delayed-return hypothesis was not
+reproduced on Python 3.12 POSIX; do not inherit it as an observed defect.
+
+Use stdlib Popen with a private POSIX process group. Preserve attempted command,
+both captured streams, elapsed/deadline values, actual exit/launch state and capture
+completeness. Request SIGTERM, then forced shutdown and bounded draining; do not
+wait indefinitely for an escaped pipe holder. Every timed-out gate is inconclusive,
+including a late passing summary. Keep nonzero exits and genuine syntax rejection.
+Non-POSIX direct-process fallback remains unverified. Group cleanup cannot contain
+descendants that create another group/session; it does not establish a sandbox.
+
+Separate runner 0.1.1 from starter/task contract 0.1.0 so the correction does not
+invalidate existing exports. All nine export files are unchanged. Fifteen current
+runner tests pass; seven new methods fail against the recorded runner. Known old
+and corrected clients retain the 15/17 and 17/17 calibration outcomes.
+
+**Revisit:** independently produced code, another OS, stronger isolation, different
+deadline requirements, changed suite/runtime or a new output consumer. Record
+tested limits instead of assuming process-group termination controls a browser tree.

@@ -37,12 +37,14 @@
       "evidence": [
         "evaluations/chat-send-buffering/README.md",
         "evidence/evaluation-task/CALIBRATION.json",
-        "knowledge/evaluation-artifacts.md"
+        "knowledge/evaluation-artifacts.md",
+        "evidence/evaluation-task/TIMEOUT_RUN.json"
       ],
       "working_path": "evaluations/chat-send-buffering",
-      "working_version": "0.1.0",
+      "working_version": "0.1.1",
       "historical_name": "Unity AI Evaluation & QA Lab",
-      "maturity_scope": "EVAL-001 export and artifact-checking harness: eight runner regressions, baseline rejected at 15/17, reference accepted at 17/17, unavailable-browser probe inconclusive, and starter installation/CLI smoke passed. No independent model candidate or score."
+      "maturity_scope": "Runner 0.1.1: 15 regression tests, retained timeout/launch evidence, inherited POSIX group cleanup and bounded escaped-pipe capture; byte-identical 0.1.0 exports retain baseline 15/17 and reference 17/17. No independent candidate, score or sandbox.",
+      "task_contract_version": "0.1.0"
     },
     {
       "id": "P03",

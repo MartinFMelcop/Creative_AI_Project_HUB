@@ -1,6 +1,6 @@
 # P02 — Chat send-buffering practice task
 
-**Task:** EVAL-001. **Version:** 0.1.0. **Runtime:** Python orchestration and
+**Task:** EVAL-001. **Runner version:** 0.1.1. **Starter contract:** 0.1.0. **Runtime:** Python orchestration and
 Node/Socket.IO/Chromium behavior checks. This is P02's first working task, adapted
 from P11; its earlier Unity proposal remains an origin, not a runtime requirement.
 
@@ -50,8 +50,22 @@ incomplete, contradictory, or zero-test outcomes cannot be accepted. Changed
 evaluator files require explicit recalibration.
 
 Records contain the client hash, runner and evaluator hashes, source commits,
-tool/browser versions, commands, complete captured output, test counts, and
-failed check names. No model identity or score is inferred from an artifact.
+tool/browser versions, attempted commands, captured output, test counts and failed
+check names. Each command adds elapsed time, deadline, timeout/launch status,
+real exit code and capture completeness. Timeout at syntax/startup/behavior gates
+is inconclusive even if a late output contains a passing summary. Launch failure
+keeps the attempt in the record; it does not reject the client as invalid syntax.
+
+On POSIX, each command owns a new process group. Timeout sends SIGTERM, waits up
+to one second, then SIGKILL if needed, with up to one further second for output
+draining. An escaped pipe holder marks capture incomplete; closing pipes and a
+bounded final reap avoid indefinite waiting. The non-POSIX fallback targets only
+the direct process and has not been executed here. This is cleanup, not a sandbox:
+children creating another session/group are outside the group policy.
+
+Runner 0.1.1 leaves the starter contract at 0.1.0, preserving existing exports byte
+for byte. `runner_version` identifies the correction separately from `task_version`.
+No model identity or score is inferred from an artifact.
 
 ## Calibration and limits
 
@@ -59,7 +73,7 @@ Calibration uses two controlled artifacts: the exported 0.1.0 client and P11's
 already corrected 0.1.1 client. To prepare a reference probe, export a **second**
 fresh directory, copy only P11's working `public/client.js` into it, and check it.
 The baseline must reject with the polling and stale-state checks failing; the
-reference must accept with all 17 passing. See [recorded calibration](../../evidence/evaluation-task/CALIBRATION.json).
+reference must accept with all 17 passing. See [current timeout/recalibration evidence](../../evidence/evaluation-task/TIMEOUT_RUN.json) and [original calibration](../../evidence/evaluation-task/CALIBRATION.json).
 
 These probes validate the harness and TR-009's bounded P11 → P02 adaptation.
 They are not independent candidate attempts, a model comparison, a score, or

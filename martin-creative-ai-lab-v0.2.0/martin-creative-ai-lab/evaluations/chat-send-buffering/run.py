@@ -6,13 +6,16 @@ import hashlib
 import json
 import os
 import re
+import signal
 import subprocess
 import tempfile
+import time
 from datetime import datetime, timezone
 from pathlib import Path
 
 TASK = "EVAL-001"
-VERSION = "0.1.0"
+VERSION = "0.1.1"
+TASK_VERSION = "0.1.0"
 BASELINE = "66041e7fdd7687ee21099f95129dff41933c74dd"
 SUITE_COMMIT = "2d4e9a765ec4edc6401879259270e5d66970e6e2"
 HERE = Path(__file__).resolve().parent
@@ -37,7 +40,7 @@ def git_bytes(commit, path):
 def starter():
     files = {name: git_bytes(BASELINE, name) for name in FILES}
     files["BRIEF.md"] = (HERE / "BRIEF.md").read_bytes()
-    manifest = {"task": TASK, "version": VERSION, "baseline_commit": BASELINE,
+    manifest = {"task": TASK, "version": TASK_VERSION, "baseline_commit": BASELINE,
                 "files": {name: sha(data) for name, data in files.items()}}
     files["task-manifest.json"] = (json.dumps(manifest, indent=2) + "\n").encode()
     return files
@@ -51,7 +54,8 @@ def prepare(destination):
         path = destination / name
         path.parent.mkdir(parents=True, exist_ok=True)
         path.write_bytes(data)
-    return {"task": TASK, "version": VERSION, "workspace": str(destination),
+    return {"task": TASK, "version": TASK_VERSION, "runner_version": VERSION,
+            "workspace": str(destination),
             "exported_files": sorted(files), "baseline_commit": BASELINE}
 
 
@@ -100,14 +104,67 @@ def classify_tap(output, returncode):
 
 
 def invoke(command, cwd, environment, timeout):
-    result = subprocess.run(command, cwd=cwd, env=environment, capture_output=True,
-                            text=True, timeout=timeout)
-    return {"command": command, "exit_code": result.returncode,
-            "stdout": result.stdout, "stderr": result.stderr}
+    started = time.monotonic()
+    record = {"command": command, "exit_code": None, "stdout": "", "stderr": "",
+              "timeout_seconds": timeout, "timed_out": False, "launch_error": None,
+              "capture_complete": True, "termination_strategy": None}
+    try:
+        process = subprocess.Popen(command, cwd=cwd, env=environment,
+                                   stdout=subprocess.PIPE, stderr=subprocess.PIPE,
+                                   encoding="utf-8", errors="replace",
+                                   start_new_session=os.name == "posix")
+    except OSError as exc:
+        record["launch_error"] = str(exc)
+        record["elapsed_seconds"] = round(time.monotonic() - started, 3)
+        return record
+
+    def terminate(force=False):
+        try:
+            if os.name == "posix":
+                # Only this command's private group; unrelated processes are excluded.
+                os.killpg(process.pid, signal.SIGKILL if force else signal.SIGTERM)
+            elif force:
+                process.kill()
+            else:
+                process.terminate()
+        except ProcessLookupError:
+            pass
+
+    try:
+        stdout, stderr = process.communicate(timeout=timeout)
+    except subprocess.TimeoutExpired:
+        record["timed_out"] = True
+        record["termination_strategy"] = "posix_process_group" if os.name == "posix" else "direct_process"
+        terminate()
+        try:
+            stdout, stderr = process.communicate(timeout=1)
+        except subprocess.TimeoutExpired:
+            terminate(force=True)
+            try:
+                stdout, stderr = process.communicate(timeout=1)
+            except subprocess.TimeoutExpired as exc:
+                # A descendant outside the group can retain pipes. Do not wait forever.
+                def text(value):
+                    return value.decode("utf-8", errors="replace") if isinstance(value, bytes) else value or ""
+                stdout, stderr = text(exc.stdout), text(exc.stderr)
+                record["capture_complete"] = False
+                process.stdout.close()
+                process.stderr.close()
+                try:
+                    process.wait(timeout=1)
+                except subprocess.TimeoutExpired:
+                    pass
+        finally:
+            # The parent can exit while an inherited child closes its pipes and lives on.
+            terminate(force=True)
+    record.update(exit_code=process.poll(), stdout=stdout, stderr=stderr,
+                  elapsed_seconds=round(time.monotonic() - started, 3))
+    return record
 
 
 def check(workspace):
-    record = {"schema_version": 1, "task": TASK, "task_version": VERSION,
+    record = {"schema_version": 1, "task": TASK, "task_version": TASK_VERSION,
+              "runner_version": VERSION,
               "started_at": datetime.now(timezone.utc).isoformat(),
               "run_kind": "artifact_check", "status": "inconclusive",
               "baseline_commit": BASELINE, "suite_commit": SUITE_COMMIT,
@@ -140,6 +197,9 @@ def check(workspace):
             client.write_bytes(artifact)
             syntax = invoke(["node", "--check", str(client)], PROJECT, environment, 15)
             record["commands"].append(syntax)
+            if syntax["timed_out"] or syntax["launch_error"]:
+                record.update(gate="client_syntax", reason="Syntax check did not complete")
+                return record
             if syntax["exit_code"]:
                 record.update(status="rejected", gate="client_syntax",
                               reason="Submitted client is not valid JavaScript")
@@ -160,7 +220,7 @@ if (Number(process.versions.node.split('.')[0]) < 22) process.exit(2);
 """
             ready = invoke(["node", "-e", probe], PROJECT, environment, 20)
             record["commands"].append(ready)
-            if ready["exit_code"]:
+            if ready["timed_out"] or ready["launch_error"] or ready["exit_code"]:
                 record.update(gate="environment", reason="Browser/dependency preflight failed")
                 return record
             record["environment"] = json.loads(ready["stdout"])
@@ -171,6 +231,8 @@ if (Number(process.versions.node.split('.')[0]) < 22) process.exit(2);
             record["status"], record["counts"] = classify_tap(tests["stdout"], tests["exit_code"])
             record["gate"] = "behavior_and_regressions"
             record["failed_checks"] = re.findall(r"^not ok \d+ - (.+)$", tests["stdout"], re.M)
+            if tests["timed_out"] or tests["launch_error"]:
+                record.update(status="inconclusive", reason="Behavior checks did not complete")
     except (OSError, ValueError, subprocess.CalledProcessError, subprocess.TimeoutExpired) as exc:
         record.update(status="inconclusive", gate="execution", reason=str(exc))
     return record
