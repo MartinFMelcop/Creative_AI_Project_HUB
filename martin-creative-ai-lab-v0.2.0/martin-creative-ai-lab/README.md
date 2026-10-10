@@ -59,7 +59,8 @@ Codex performed this increment. Manual usability review by Martin is pending.
 
 TR-009 now has a verified P02 task consumer: baseline rejects at 15/17 and
 reference accepts at 17/17. Other transfers remain candidates. No independent
-model was evaluated. P11 is Git-published in `df1bd59`; this runner correction remains
-local and uncommitted. Task setup is published in `e1850d0`; runner 0.1.1
-retains diagnostics and cleans inherited groups without changing starter 0.1.0.
-Publication and deployment require explicit authorization.
+model was evaluated. P11 is Git-published in `df1bd59`; task setup is published in
+`e1850d0`. Runner 0.1.1 is published in [995bb24](https://github.com/MartinFMelcop/Creative_AI_Project_HUB/commit/995bb24d4969c8e7bfea2fbdfeeb39540449725f),
+with remote `main` confirmed after a normal push. It retains diagnostics and
+cleans inherited groups without changing starter 0.1.0. The publication task
+explicitly authorized this push; deployment remains outside the completed work.

@@ -4,7 +4,7 @@
 **Data-base:** 10 de outubro de 2026  
 **Autor e responsável pelo portfólio:** Martin Melcop Neto  
 **Working language:** English for new documentation, plans, code comments, UI, and reports. Preserve original creative titles and historical source languages.
-**Current state:** selected historical sources, published P11 local chat 0.1.1, and published P02 task setup plus local runner correction 0.1.1 (starter contract 0.1.0). No independent model evaluation, migrated game, finished music, or public hosting is claimed.
+**Current state:** selected historical sources, published P11 local chat 0.1.1, and published P02 task setup and runner correction 0.1.1 (starter contract 0.1.0). No independent model evaluation, migrated game, finished music, or public hosting is claimed.
 
 > Construir um laboratório autoral em Git que transforma ideias, obras e experimentos em produtos pequenos, sistemas reutilizáveis e evidências técnicas verificáveis. A IA participa da criação e execução; Martin desenvolve sua capacidade de especificar, compreender, selecionar, corrigir, validar e explicar os resultados.
 
@@ -53,7 +53,7 @@ Se apenas este arquivo estiver disponível, ele é suficiente para iniciar a Fas
 | Next action | One independently produced EVAL-001 client with recorded context/tools/attempts. Martin's P11 two-tab UI review remains pending |
 | Other seeds | P01 baseline still absent; P10 remains recovered material; other creative/runtime baselines require targeted recovery |
 | Transfer / shared status | TR-009 validated for P02 task adaptation/calibration only; 10 other transfers remain candidates; no shared component |
-| Portfolio / attribution | P11 and P02 setup published through `e1850d0`; runner correction remains local. Martin supplied direction; Codex implemented/tested. No independent candidate/model result or Martin usability review |
+| Portfolio / attribution | P11 and P02 setup preserved; runner correction published in `995bb24`, with remote SHA verified. Martin supplied direction; Codex implemented/tested. No independent candidate/model result or Martin usability review |
 
 Maintained [assessment](docs/ASSESSMENT.md) and [plan](docs/IMPROVEMENT_PLAN.md)
 continue the recovery. Preserve the historical source archive; adaptations and
@@ -1472,7 +1472,7 @@ calibration only; the other ten entries remain candidates. P10 remains recovered
 material in triage. P02's M4 claim comes from its own harness checks and controlled
 probes, not inherited P11 maturity. No shared component or model training is implied.
 
-**Current order after v0.4.1:** P11 and P02 task setup are published; P02 runner correction is verified locally. Next, record one independent client attempt with separate context/tools and evaluate its artifact. Martin's P11 UI review remains pending. Dialogue/combat are alternatives, not simultaneous commitments. P01 needs its own baseline. The maintained plan and ADR-010/ADR-011 record the choice.
+**Current order after v0.4.1:** P11, P02 task setup and runner correction are published; remote `main` confirmed development commit `995bb24`. Next, record one independent client attempt with separate context/tools and evaluate its artifact. Martin's P11 UI review remains pending. Dialogue/combat are alternatives, not simultaneous commitments. P01 needs its own baseline. The maintained plan and ADR-010/ADR-011 record the choice.
 
 ### 28.6. Como uma IA deve expandir e modificar esta seed
 

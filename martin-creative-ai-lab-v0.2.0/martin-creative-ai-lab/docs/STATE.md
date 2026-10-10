@@ -29,7 +29,10 @@ Runner version and starter-contract version are separate. All nine exported
 files remain byte-identical to 0.1.0, and old exports are accepted as submissions.
 No app, dependency, chat test, candidate brief, model call, or shared framework
 changed. P11 implementation, historical ZIP/inventory, and earlier evidence are
-unchanged. This correction remains local and uncommitted; no publication occurred.
+unchanged. The correction is committed and published in
+[995bb24](https://github.com/MartinFMelcop/Creative_AI_Project_HUB/commit/995bb24d4969c8e7bfea2fbdfeeb39540449725f). A normal push succeeded and `git ls-remote origin refs/heads/main`
+confirmed the full development commit SHA. Subsequent documentation commits
+record this confirmation without changing the implementation or original evidence.
 
 ## Verification and evidence
 
@@ -75,5 +78,19 @@ Codex diagnosed, corrected and verified this increment.
 Next: one independently produced EVAL-001 client with a separate context, explicit
 source/tool policy, identity, attempts, timing and available cost. Preserve artifact
 and raw evaluator result before performance claims. Martin's P11 UI review remains
-pending. Review the current diff and commit text; publishing this correction needs
-explicit authorization in its publication task.
+pending. The current publication task explicitly authorized a normal push to
+`origin/main`; it completed without rewriting history.
+
+## Publication verification — 2026-10-10
+
+The 18 development files were backed up before staging. Remote `main` fetched at
+`e1850d0`; after committing the existing work, `git merge --no-edit FETCH_HEAD`
+reported "Already up to date." The working tree was clean, `git diff --check`
+passed, and the normal push advanced `main` to the development commit above.
+Root instructions and all prior commits remain preserved.
+
+Before publication, 15 runner regressions and all 17 chat checks (6 protocol,
+11 Chromium) passed without failures or skips. All three validator regressions,
+90 documentary links and 53 integrity entries passed. The original timeout
+record remains a development-time snapshot; it is not rewritten as a new run.
+Only continuity documentation and its hashes change in the publication follow-up.
