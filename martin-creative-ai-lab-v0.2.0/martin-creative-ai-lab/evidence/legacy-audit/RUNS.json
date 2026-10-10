@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-10",
+  "scope": "Offline checks against selected local snapshot files; no engine playtest or model evaluation.",
+  "sources": {
+    "rave": "36af1651271422ae33856e8b5d7b45702215f165",
+    "websocket": "df651a9ddef39c7b05a48f25f1b7fdaff6760185"
+  },
+  "environment": {
+    "python": "3.12.14",
+    "node": "24.19.0",
+    "ruby": "unavailable",
+    "rpg_maker_xp": "not executed"
+  },
+  "runs": [
+    {
+      "command": "python3 RM_QA/DATA/QA/TOOLS/run_combat_vector_runner.py RM_QA --out DATA/QA/RECHECK_COMBAT_20261010.csv",
+      "cwd": "selected rave snapshot root",
+      "exit_code": 0,
+      "checked_rows": 49,
+      "failures": 0,
+      "report": "RECHECK_COMBAT_20261010.csv",
+      "report_sha256": "93c39ceaf0db4d470d2aad822c12414740be4e73d09659507cdd5b3a71e63dbb"
+    },
+    {
+      "command": "python3 RM_QA/DATA/QA/TOOLS/run_dialogue_scenario_runner.py --qa-root RM_QA --act1-root RM_ACT1 --out-rel DATA/QA/RECHECK_DIALOGUE_20261010.csv",
+      "cwd": "selected rave snapshot root",
+      "exit_code": 0,
+      "checked_rows": 19,
+      "failures": 0,
+      "report": "RECHECK_DIALOGUE_20261010.csv",
+      "report_sha256": "876ba87482d15ae957f123ac184f6cfdd46f309f9c2cc8c053dd21d08b721d78"
+    },
+    {
+      "command": "node --check index.js",
+      "cwd": "selected websocket snapshot root",
+      "exit_code": 0,
+      "scope": "Syntax only; dependencies not installed, server and browser not executed."
+    }
+  ]
+}

@@ -1,0 +1,197 @@
+{
+  "schema_version": 1,
+  "updated_at": "2026-10-10",
+  "projects": [
+    {
+      "id": "P01",
+      "name": "Artemyra / ArtemiZ4",
+      "slug": "artemyra",
+      "status": "seed",
+      "maturity": "M0",
+      "phase": "legacy-triage",
+      "origin": "historical_context",
+      "next_action": "Recuperar baseline útil e construir matriz de evidência.",
+      "related_projects": [
+        "P02",
+        "P03",
+        "P09"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "P02",
+      "name": "Unity AI Evaluation & QA Lab",
+      "slug": "unity-ai-evaluation-lab",
+      "status": "seed",
+      "maturity": "M0",
+      "phase": "proposal",
+      "origin": "proposed",
+      "next_action": "Escolher task verificável: chat Node de P11 ou domínio de P10; Unity somente após validar ambiente.",
+      "related_projects": [
+        "P01",
+        "P03",
+        "P09",
+        "P10",
+        "P11"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "P03",
+      "name": "Tokyo 80s",
+      "slug": "tokyo80s",
+      "status": "seed",
+      "maturity": "M0",
+      "phase": "legacy-triage",
+      "origin": "historical_context",
+      "next_action": "Localizar fonte histórica e definir fatia de ritmo.",
+      "related_projects": [
+        "P01",
+        "P02",
+        "P07",
+        "P08"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "P04",
+      "name": "O Lich mais velho da tumba mais antiga",
+      "slug": "lich",
+      "status": "seed",
+      "maturity": "M0",
+      "phase": "adaptation-triage",
+      "origin": "source_inspected",
+      "next_action": "Escolher finalidade de adaptação e fonte selecionada.",
+      "related_projects": [
+        "P06",
+        "P07",
+        "P08"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "P05",
+      "name": "The Dark Knight",
+      "slug": "dark-knight",
+      "status": "seed",
+      "maturity": "M0",
+      "phase": "legacy-triage",
+      "origin": "historical_context",
+      "next_action": "Selecionar regra de combate e localizar fonte editável.",
+      "related_projects": [
+        "P02",
+        "P06"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "P06",
+      "name": "Véu Partido",
+      "slug": "veu-partido",
+      "status": "seed",
+      "maturity": "M0",
+      "phase": "legacy-triage",
+      "origin": "historical_context",
+      "next_action": "Abrir starter real e avaliar uma arena pequena.",
+      "related_projects": [
+        "P02",
+        "P04",
+        "P05"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "P07",
+      "name": "Visual Generation & Asset Lab",
+      "slug": "visual-asset-lab",
+      "status": "seed",
+      "maturity": "M0",
+      "phase": "source-inventory",
+      "origin": "historical_context",
+      "next_action": "Catalogar pequena seleção visual com origem e finalidade.",
+      "related_projects": [
+        "P03",
+        "P04",
+        "P10"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "P08",
+      "name": "Audio, Poetry & Music Lab",
+      "slug": "audio-poetry-music-lab",
+      "status": "seed",
+      "maturity": "M0",
+      "phase": "source-inventory",
+      "origin": "user_directive",
+      "next_action": "Recuperar sons e poemas; usar cues planejados de P10 como briefs, sem tratar planos como música entregue.",
+      "related_projects": [
+        "P03",
+        "P04",
+        "P10"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "P09",
+      "name": "AI Delivery & Operations Cases",
+      "slug": "ai-delivery-operations",
+      "status": "seed",
+      "maturity": "M0",
+      "phase": "case-triage",
+      "origin": "resume_reported_and_historical_context",
+      "next_action": "Recuperar cases anteriores e separar experiência real de simulação.",
+      "related_projects": [
+        "P01",
+        "P02"
+      ],
+      "evidence": []
+    },
+    {
+      "id": "P10",
+      "name": "Adventures Unleashed / Rave Master",
+      "slug": "rave-master",
+      "status": "triage",
+      "maturity": "M0",
+      "phase": "source-recovered",
+      "origin": "github_snapshot_inspected",
+      "next_action": "Selecionar uma única extração: diálogo, domínio de combate ou workflow de QA.",
+      "related_projects": [
+        "P01",
+        "P02",
+        "P04",
+        "P05",
+        "P06",
+        "P07",
+        "P08",
+        "P09"
+      ],
+      "evidence": [
+        "docs/LEGACY_REPOSITORIES.md",
+        "evidence/legacy-audit/RUNS.json"
+      ],
+      "source_id": "LEGACY-001"
+    },
+    {
+      "id": "P11",
+      "name": "Real-time Integration Lab / WebSocket",
+      "slug": "realtime-integration-lab",
+      "status": "triage",
+      "maturity": "M2",
+      "phase": "source-recovered",
+      "origin": "github_snapshot_inspected",
+      "next_action": "Definir task de chat bidirecional e verificar ambiente antes da implementação.",
+      "related_projects": [
+        "P01",
+        "P02",
+        "P09"
+      ],
+      "evidence": [
+        "docs/LEGACY_REPOSITORIES.md",
+        "evidence/legacy-audit/RUNS.json"
+      ],
+      "source_id": "LEGACY-002",
+      "maturity_scope": "Historical unidirectional emission implementation inspected; completed bidirectional task and runtime pending."
+    }
+  ]
+}
