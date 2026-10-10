@@ -6,6 +6,7 @@ This checks documentary structure, not runtime, creative quality or link anchors
 
 import hashlib
 import json
+import os
 import re
 import sys
 from datetime import date
@@ -132,7 +133,12 @@ def main():
     except (OSError, ValueError, KeyError, TypeError, BadZipFile) as exc:
         fail(f"legacy source validation: {exc}")
 
-    documents = sorted(ROOT.rglob("*.md"))
+    # npm dependencies contain upstream documentation outside this lab's ownership.
+    documents = []
+    for directory, subdirectories, files in os.walk(ROOT):
+        subdirectories[:] = sorted(name for name in subdirectories if name not in {".git", "node_modules"})
+        documents.extend(Path(directory) / name for name in files if name.endswith(".md"))
+    documents.sort()
     checked_links = 0
     for path in documents:
         if ".git" in path.parts:

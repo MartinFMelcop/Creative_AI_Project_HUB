@@ -176,11 +176,11 @@
       "id": "P11",
       "name": "Real-time Integration Lab / WebSocket",
       "slug": "realtime-integration-lab",
-      "status": "triage",
-      "maturity": "M2",
-      "phase": "source-recovered",
+      "status": "active",
+      "maturity": "M4",
+      "phase": "local-chat-validated",
       "origin": "github_snapshot_inspected",
-      "next_action": "Definir task de chat bidirecional e verificar ambiente antes da implementação.",
+      "next_action": "Capture Martin's two-tab usability review before public presentation or destination evaluation work.",
       "related_projects": [
         "P01",
         "P02",
@@ -188,10 +188,14 @@
       ],
       "evidence": [
         "docs/LEGACY_REPOSITORIES.md",
-        "evidence/legacy-audit/RUNS.json"
+        "evidence/legacy-audit/RUNS.json",
+        "projects/realtime-integration-lab/README.md",
+        "evidence/realtime-chat/RUN.json"
       ],
       "source_id": "LEGACY-002",
-      "maturity_scope": "Historical unidirectional emission implementation inspected; completed bidirectional task and runtime pending."
+      "maturity_scope": "Working local text-chat increment 0.1.0: 15 automated protocol/browser checks and CLI startup smoke passed; no human usability review, public deployment, or destination transfer.",
+      "working_path": "projects/realtime-integration-lab",
+      "working_version": "0.1.0"
     }
   ]
 }

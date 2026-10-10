@@ -1,0 +1,250 @@
+{
+  "schema_version": 1,
+  "recorded_at_utc": "2026-10-10T21:00:11.207629+00:00",
+  "project": "P11",
+  "working_version": "0.1.0",
+  "starting_git_head": "951c21ec8565d9ac64ab8207f569bb2fe4f01c27",
+  "working_tree": "Local uncommitted adaptation; artifact SHA-256 values identify the executed runtime, dependencies, and tests.",
+  "scope": "Local automated protocol/browser verification. No human usability review, game playtest, public deployment, or model evaluation.",
+  "environment": {
+    "os": "Linux",
+    "architecture": "x86_64",
+    "node": "24.19.0",
+    "npm": "11.9.0",
+    "python": "3.12.14",
+    "chromium": "154.0.8037.57",
+    "playwright_core": "1.64.0",
+    "express": "4.22.3",
+    "socket_io": "4.8.4",
+    "browser_mode": "Headless system Chromium with --no-sandbox in the cloud container"
+  },
+  "origin": {
+    "repository": "MartinFMelcop/WebSocket",
+    "commit": "df651a9ddef39c7b05a48f25f1b7fdaff6760185",
+    "source_id": "LEGACY-002",
+    "archive_path": "archive/legacy-source-extracts-v0.2.0.zip",
+    "archive_sha256": "6da636a270284eac1e11d00407dab364c2d9aa8c2f0485e77509e6ccf0dbc1dc",
+    "extracted_files": [
+      {
+        "path": "index.html",
+        "sha256": "fcb1fdf978778615aadfa8de49877464dfa4d3043afe459ba3f2371439927f0c"
+      },
+      {
+        "path": "index.js",
+        "sha256": "4002c77a6dafa16bc975cc34bdd7db5ce3fb60136c4e96fc045fffcdd419b3c9"
+      },
+      {
+        "path": "package.json",
+        "sha256": "26f23da67e4b5a5df9294cdc689cd0d4a785a80808bf068c18a9c8f56379f6ba"
+      }
+    ],
+    "selection": "Exactly three P11 files; no Rave source extracted. Archive and per-file hashes verified before extraction. Historical snapshots and source inventory unchanged."
+  },
+  "baseline": {
+    "cwd": "/tmp/creative-ai-p11-legacy",
+    "startup": "NODE_PATH=<working-project>/node_modules node index.js",
+    "dependency_note": "Used installed Express 4.22.3 and Socket.IO 4.8.4, within the unchanged source package ranges; not an exact historical dependency installation.",
+    "check_cwd": "projects/realtime-integration-lab",
+    "command": "CHAT_TEST_URL=http://127.0.0.1:3000 node --test --test-name-pattern='two browser clients' tests/browser.test.cjs",
+    "exit_code": 1,
+    "executed": 1,
+    "passed": 0,
+    "expected_failed": 1,
+    "cancelled": 0,
+    "skipped": 0,
+    "observation": "Server logged message: First participant. The sender browser never rendered it; expectMessages timed out after 4000 ms. Neither source file contains a broadcast/receive path.",
+    "diagnosis": "Missing server broadcast and browser receive/render implementation, not a browser startup or dependency failure."
+  },
+  "install": {
+    "cwd": "projects/realtime-integration-lab",
+    "initial_command": "npm install --cache /workspace/.cache/creative-ai-npm --no-fund --no-audit",
+    "repeat_command": "npm ci --cache /workspace/.cache/creative-ai-npm --no-fund --no-audit",
+    "exit_code": 0,
+    "installed_packages": 97,
+    "note": "Frozen reinstall completed before the final 15-test run. npm cache relocated from a non-writable home directory; verification settings unchanged.",
+    "saved_script_check": {
+      "command": "bash /tmp/creative-ai-p11-install.sh",
+      "cwd": "/workspace",
+      "exit_code": 0,
+      "result": "Version gates, frozen npm install, and documentary validator all completed."
+    }
+  },
+  "verification": {
+    "cwd": "projects/realtime-integration-lab",
+    "command": "npm test",
+    "exit_code": 0,
+    "executed": 15,
+    "passed": 15,
+    "failed": 0,
+    "expected_failed": 0,
+    "cancelled": 0,
+    "skipped": 0,
+    "todo": 0,
+    "protocol_tests": 6,
+    "browser_tests": 9,
+    "tests": [
+      {
+        "suite": "protocol",
+        "name": "protocol broadcasts trimmed messages to sender and peer in order",
+        "outcome": "passed"
+      },
+      {
+        "suite": "protocol",
+        "name": "non-string payloads are rejected without broadcasts",
+        "outcome": "passed"
+      },
+      {
+        "suite": "protocol",
+        "name": "empty and whitespace-only payloads are rejected without broadcasts",
+        "outcome": "passed"
+      },
+      {
+        "suite": "protocol",
+        "name": "501 code units are rejected even when trimming would shorten the payload",
+        "outcome": "passed"
+      },
+      {
+        "suite": "protocol",
+        "name": "500 UTF-16 code units are accepted including non-ASCII text",
+        "outcome": "passed"
+      },
+      {
+        "suite": "protocol",
+        "name": "messages without acknowledgement callbacks do not crash the server",
+        "outcome": "passed"
+      },
+      {
+        "suite": "browser",
+        "name": "two browser clients display accepted messages once in both directions",
+        "outcome": "passed"
+      },
+      {
+        "suite": "browser",
+        "name": "markup remains literal text in both browsers",
+        "outcome": "passed"
+      },
+      {
+        "suite": "browser",
+        "name": "rejection is visible, preserves the draft, and does not broadcast",
+        "outcome": "passed"
+      },
+      {
+        "suite": "browser",
+        "name": "a departed client keeps its draft and receives only future messages on rejoining",
+        "outcome": "passed"
+      },
+      {
+        "suite": "browser",
+        "name": "transport interruption reconnects automatically without duplicating listeners",
+        "outcome": "passed"
+      },
+      {
+        "suite": "browser",
+        "name": "browser retains only the latest 200 messages",
+        "outcome": "passed"
+      },
+      {
+        "suite": "browser",
+        "name": "new browser receives future messages without server-side history",
+        "outcome": "passed"
+      },
+      {
+        "suite": "browser",
+        "name": "missing acknowledgement reports uncertainty and does not retry automatically",
+        "outcome": "passed"
+      },
+      {
+        "suite": "browser",
+        "name": "an acknowledgement does not erase a newer draft typed during sending",
+        "outcome": "passed"
+      }
+    ],
+    "browser_errors": 0
+  },
+  "startup_smoke": {
+    "cwd": "projects/realtime-integration-lab",
+    "command": "PORT=3123 npm start",
+    "checks": [
+      "GET /health: 200 and {status: ok}",
+      "GET /: 200 with Live exchange content",
+      "GET /socket.io/socket.io.js: 200",
+      "Two connected Socket.IO clients both receive CLI startup smoke; acknowledgement is {ok: true}"
+    ],
+    "check_exit_code": 0,
+    "cleanup": "Legacy and working CLI servers stopped after verification; test servers closed by test hooks."
+  },
+  "documentary_check": {
+    "command": "python3 tools/validate_repo.py",
+    "exit_code": 0,
+    "projects": 11,
+    "transfers": 11,
+    "assets": 0,
+    "legacy_sources": 2,
+    "local_file_links": 62,
+    "scope": "Maintained lab documents and registries; no dependency-package Markdown."
+  },
+  "manifest_check": {
+    "command": "sha256sum -c MANIFEST.sha256",
+    "scope": "All maintained lab files except the manifest itself; dependency and generated files excluded using Git ignore rules. Final closure output establishes the check result.",
+    "baseline_issue": "Inherited manifest referenced two absent nested files (.gitignore, .gitattributes). Their entries are removed; the new root .gitignore is outside the nested manifest scope."
+  },
+  "artifact_sha256": {
+    "projects/realtime-integration-lab/package-lock.json": "4aef642ad8308c3a87ef328008fce3d75ba4ebd6935edb9f1ac3c833ab1e1727",
+    "projects/realtime-integration-lab/package.json": "313b6467e18c7a9b91ab4a208a60fa455dd02e971bab6f99f361d585ca080203",
+    "projects/realtime-integration-lab/public/client.js": "1b559d97a981060467725dbed26545cf175dd383bbb6fdc992e4cb761ef3eaff",
+    "projects/realtime-integration-lab/public/index.html": "7cb6866cc5f603ae89263db31620a99053439650a0e3e86e215ab2cc13cd9665",
+    "projects/realtime-integration-lab/public/style.css": "7f4e6e73f8b6ac534369275f9a3461d00afbe7ab1605d46199d50ff25503d323",
+    "projects/realtime-integration-lab/server.cjs": "f84e170aa785a6fa5caf223a1c8a245f51688f347eefa8e2d0e37e0f5f3cf9e7",
+    "projects/realtime-integration-lab/tests/browser.test.cjs": "5a9b4eaeeaa264336287c23dd2aa911081b6e4ea1ca5b72bb45975697b517ad8",
+    "projects/realtime-integration-lab/tests/protocol.test.cjs": "cdf15bd3522bf9c74dc60bf307fc56f4050d74d61b45f27341867ce537254a7a",
+    "tools/validate_repo.py": "7aea6aa70ae57ee16962d15a3e4b4d01768960322a53820fef4152d2f89ef7f1",
+    "tools/test_validate_repo.py": "4580c38d591eba79739561332824cd6f3567ec04308cc2c2eed57a3c98a2452c"
+  },
+  "limitations": [
+    "Automated Chromium checks only; no human usability or formal accessibility review.",
+    "No other browser, public hosting, accounts, persistence, rate/scale study, or guaranteed outage recovery tested.",
+    "Manual resend after lost acknowledgement can duplicate an already delivered message.",
+    "No model candidate or cross-project destination consumer executed; transfer records remain candidates.",
+    "Historical combat/dialogue reports were not rerun in this session."
+  ],
+  "contribution": {
+    "Martin": "Provided portfolio direction, source context, and authorization; no manual review/test attributed.",
+    "Codex": "Assessment, prioritization, working adaptation, automated verification, continuity updates, and evidence capture in this session."
+  },
+  "validator_regression": {
+    "baseline_exit_code": 1,
+    "baseline_errors": 30,
+    "baseline_diagnosis": "After P11 installation, validator scanned node_modules and reported upstream links not shipped with dependencies.",
+    "correction": "Prune node_modules and .git while keeping all maintained documents, registry validation, and archive/file hash checks.",
+    "command": "python3 tools/test_validate_repo.py",
+    "exit_code": 0,
+    "executed": 3,
+    "passed": 3,
+    "failed": 0,
+    "tests": [
+      "Installed dependency docs excluded",
+      "Broken working-project links still fail",
+      "Source archive hash corruption still fails"
+    ],
+    "scope": "Isolated temporary fixtures with current registry/archive copies; tracked historical material unchanged."
+  },
+  "fault_injection": {
+    "browser_rejoin": "Client Socket.IO disconnect/connect; missing messages are not replayed.",
+    "transport_reconnect": "Explicitly closed the client Engine.IO transport and observed automatic reconnect with a new socket ID.",
+    "lost_and_delayed_acknowledgements": "Controlled server-handler replacements inside browser tests; not a real network packet-loss study."
+  },
+  "visual_inspection": {
+    "method": "Codex inspected rendered screenshots of the working UI at 820x780 and 375x740; browser confirmed no horizontal overflow at 375px.",
+    "outcome": "Message text, connection state, labelled composer, and footer remain legible in these samples.",
+    "limits": "Agent inspection only; no Martin review, assistive-technology audit, or full device/browser study. Screenshots kept in temporary storage, not presented as creative assets."
+  },
+  "environment_configuration": {
+    "fields_saved": [
+      "install_script",
+      "start_skill"
+    ],
+    "status": "saved draft",
+    "published_in_this_session": false,
+    "runtime_note": "Script was tested locally before saving; draft save itself does not execute scripts, publish, or restart services."
+  }
+}

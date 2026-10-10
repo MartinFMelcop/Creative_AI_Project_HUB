@@ -1,5 +1,10 @@
-# Projetos
+# Working projects
 
-Nenhuma fonte de jogo foi importada nesta fundação. O inventário e as propostas estão em [SEED.md](../SEED.md), e o estado de cada linha está em [projects.json](../registry/projects.json).
+[P11 — Live exchange](realtime-integration-lab/README.md) is the first executable
+adaptation: a local Socket.IO text chat with its own locked dependencies and
+protocol/browser tests. It does not require installing the other project seeds.
 
-Crie `projects/<slug>/` quando houver charter e material concreto. Use o [modelo de projeto](../templates/PROJECT.md). Cada executável precisa de instalação, execução e verificações próprias; não deve exigir instalar todo o monorepositório.
+The remaining lines are described in [the seed](../SEED.md) and
+[project registry](../registry/projects.json). Historical sources remain in
+the archive. Add a working project only when it has concrete material, a
+defined scope, acceptance criteria, and its own execution instructions.

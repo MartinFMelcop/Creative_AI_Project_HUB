@@ -31,7 +31,7 @@ websocket/ contém index.js, index.html e package.json. As instruções encontra
 | Domínio de combate | Regras escolhidas executadas no destino com limites e arredondamento definidos |
 | Consistência do pack | Fonte escolhida e exportação conferida por hash |
 
-Escolher um, conforme recursos e interesse. Nenhum está implementado no destino.
+Current selection: P11 now has a [working local chat](../projects/realtime-integration-lab/README.md) with automated browser verification. Other cuts remain candidates; no cross-project destination transfer has been completed. The evidence below describes the historical v0.2.0 recovery, not the current P11 run.
 
 ## Evidência atual
 

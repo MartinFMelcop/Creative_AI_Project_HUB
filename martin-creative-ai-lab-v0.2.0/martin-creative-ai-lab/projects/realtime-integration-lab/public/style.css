@@ -1,0 +1,24 @@
+:root { color-scheme: light; font-family: system-ui, sans-serif; color: #202f3b; background: #f4f1eb; }
+* { box-sizing: border-box; }
+body { margin: 0; padding: 2.5rem 1rem; }
+main { width: min(100%, 46rem); margin: auto; background: #fff; border: 1px solid #d8dedc; border-radius: 1rem; overflow: hidden; }
+header, form { padding: 1.5rem 2rem; }
+header { border-bottom: 1px solid #d8dedc; }
+h1 { margin: .5rem 0; font-size: clamp(2rem, 6vw, 3rem); letter-spacing: -.04em; }
+p { line-height: 1.5; }
+.eyebrow { text-transform: uppercase; letter-spacing: .12em; font-size: .75rem; }
+#status { font-size: .9rem; color: #216354; }
+section { padding: 1rem 2rem; min-height: 12rem; }
+#empty { color: #58636a; }
+#messages { margin: 0; padding: 0; list-style: none; max-height: 45vh; overflow-y: auto; }
+#messages li { padding: .8rem 1rem; margin: .5rem 0; background: #edf5f1; border-radius: .5rem; white-space: pre-wrap; overflow-wrap: anywhere; }
+label { display: block; margin-bottom: .5rem; font-weight: 600; }
+.compose { display: flex; gap: .6rem; }
+input { min-width: 0; flex: 1; padding: .8rem; border: 1px solid #879a94; border-radius: .4rem; font: inherit; }
+button { padding: .8rem 1.2rem; border: 0; border-radius: .4rem; background: #216354; color: #fff; font: inherit; cursor: pointer; }
+button:disabled { background: #64776f; cursor: default; }
+:focus-visible { outline: 3px solid #b76422; outline-offset: 3px; }
+#hint, footer { color: #58636a; font-size: .8rem; }
+#feedback { color: #9d3020; min-height: 1.5rem; margin-bottom: 0; }
+footer { padding: 1rem 2rem; border-top: 1px solid #d8dedc; line-height: 1.5; }
+@media (max-width: 480px) { body { padding: 1rem .5rem; } header, section, form, footer { padding: 1rem; } }

@@ -1,55 +1,55 @@
 # Martin Creative AI Lab
 
-Laboratório autoral de jogos, narrativas, imagens, áudio, dados e avaliação de IA de **Martin Melcop Neto**.
+An evolving laboratory of games, narrative, images, audio, data, and AI
+evaluation by **Martin Melcop Neto**. Projects are adaptable seeds: build small
+slices, verify behavior, record decisions, and test reuse in actual destinations.
 
-A proposta é transformar projetos existentes em seeds evolutivas: construir fatias pequenas, validar o comportamento, registrar decisões e reaproveitar conhecimento entre contextos. O histórico profissional em Agile Delivery e Business Analysis orienta requisitos, produção e qualidade; as competências técnicas e criativas serão demonstradas por trabalhos concretos.
+**Current seed: v0.3.0.** The lab includes eleven project lines, 178 preserved
+historical texts, and one working local text-chat adaptation. No game migration,
+model benchmark, finished music catalogue, or public deployment is claimed.
+The containing directory keeps its original v0.2.0 package name.
 
-**Estado atual: seed v0.2.0 com recuperação seletiva de legado.** Inclui 178 fontes textuais preservadas, inventário dos snapshots e dois runners Python reexecutados. Não contém jogo migrado, benchmark de modelos ou músicas finalizadas.
+## Start here
 
-## Comece aqui
+- [State](docs/STATE.md): completed increment, limits, and next action.
+- [Assessment](docs/ASSESSMENT.md) and [improvement plan](docs/IMPROVEMENT_PLAN.md): evidence and selected priorities.
+- [P11 — Live exchange](projects/realtime-integration-lab/README.md): install, run, test, provenance, and contribution.
+- [Execution evidence](evidence/realtime-chat/RUN.json): baseline failure, current results, environment, and artifact hashes.
+- [SEED.md](SEED.md), [agent instructions](AGENTS.md), and [decisions](docs/DECISIONS.md): direction and operating context.
+- [Project registry](registry/projects.json) and [legacy inventory](registry/legacy_sources.json): IDs and evidence boundaries.
+- [Recovered sources](docs/LEGACY_REPOSITORIES.md): historical snapshots and their limitations.
 
-- [SEED.md](SEED.md): base completa, perfil, inventário, direção, fases, métodos e prompts.
-- [Estado atual](docs/STATE.md): frente recomendada, lacunas e próxima ação.
-- [Roadmap](docs/ROADMAP.md): fases definidas por entregas e gates.
-- [Instruções para agentes](AGENTS.md): operação e continuidade.
-- [Registro de projetos](registry/projects.json): IDs e estado inicial.
-- [Registro de fontes](docs/SOURCES.md): o que foi lido e o que permanece legado.
-- [Evolução da seed](docs/SEED_EVOLUTION.md): continuidade, revisão e expansão com IA.
-- [Fontes recuperadas](docs/LEGACY_REPOSITORIES.md): Rave Master e WebSocket, evidências e recortes.
-- [Inventário de legado](registry/legacy_sources.json): snapshots e conteúdos preservados.
+Original creative titles include Artemyra / ArtemiZ4, Tokyo 80s,
+O Lich mais velho da tumba mais antiga, The Dark Knight, and Véu Partido.
+Their complete runtime baselines are not present here. Rave Master supplies
+selected narrative, combat, and production material; planned art/audio indices
+do not establish available masters. [The assessment](docs/ASSESSMENT.md) states
+what was actually inspected or executed.
 
-## Fontes criativas e técnicas
+## Verify the lab
 
-| Seed | Explorações possíveis |
-|---|---|
-| Artemyra / ArtemiZ4 | Produção, economia, board, minigames e agentes de jogo |
-| Unity AI Evaluation & QA Lab | Bugs verificáveis, tasks, testes e avaliação |
-| Tokyo 80s | Ritmo, aura, timing e áudio interativo |
-| O Lich mais velho da tumba mais antiga | Narrativa, continuidade, adaptação e direção visual |
-| The Dark Knight / Véu Partido | Combate, progressão, status, bosses e extração de sistemas |
-| Visual / Audio / Poetry Labs | Assets, música, poemas e integração entre mídias |
-| AI Delivery & Operations Cases | Processo, requisitos, avaliação e evidência |
-| Rave Master | Diálogo, personalidade, combate, mundo, crafting e QA |
-| WebSocket / Real-time Lab | Eventos cliente/servidor, debugging e integrações |
-
-Os projetos podem mudar de nome, mídia, linguagem, engine e escopo. A origem permanece documentada; a próxima versão não precisa reproduzir integralmente o legado.
-
-## AI-assisted workflow
-
-AI may assist with planning, implementation, creative variants and review. Every case must state the actual contribution of the tools and Martin, the checks performed and the remaining limitations. Simulated work is identified as simulated; implementation is distinguished from runtime validation.
-
-## Verificação documental
-
-Com Python 3.9 ou superior disponível, na raiz:
+From this lab directory, with Python 3.9+:
 
 ```bash
 python3 tools/validate_repo.py
+python3 tools/test_validate_repo.py
+sha256sum -c MANIFEST.sha256
 ```
 
-O comando verifica registros JSON, referências, links locais e integridade do acervo textual preservado. Não executa jogos nem valida a qualidade das obras.
+The first check validates registries, local Markdown file links, and preserved
+source hashes, excluding dependency documentation under `node_modules`. The
+regression suite checks that maintained broken links and archive corruption still
+fail. The manifest covers maintained files inside this lab, excluding
+itself, ignored dependencies, and generated outputs. Neither check runs projects.
+P11 has its own installation and test commands; other projects do not need to
+be installed to develop it.
 
-## Primeiro trabalho recomendado
+The same browser delivery test failed on the preserved P11 source and passed
+on its adaptation. Fifteen automated tests verify the local contract. New
+documentation, UI, code comments, and evidence are in English; historical texts
+remain in their original language. Martin supplied direction and authorization;
+Codex performed this increment. Manual usability review by Martin is pending.
 
-Selecionar uma única fatia usando fontes recuperadas: chat bidirecional, diálogo com estado ou domínio de combate. Se Artemyra continuar prioritário, recuperar seu baseline. Verificar ambiente e definir aceitação antes do desenvolvimento.
-
-Os cases públicos entrarão em [showcase](showcase/README.md) quando houver artefatos e evidências. Licenciamento de distribuição de código e conteúdo será decidido conforme o material efetivamente publicado.
+Candidate transfers remain candidates until a destination uses and verifies
+them. Publication and deployment require separate authorization; this session
+produces a local working sample and resumable repository state.

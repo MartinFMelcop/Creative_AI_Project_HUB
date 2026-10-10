@@ -1,10 +1,10 @@
 # SEED — Martin Creative AI Lab
 
-**Versão:** 0.2.0  
+**Version:** 0.3.0
 **Data-base:** 10 de outubro de 2026  
 **Autor e responsável pelo portfólio:** Martin Melcop Neto  
-**Idioma de trabalho:** português brasileiro; documentação de apresentação internacional em inglês quando houver material demonstrável.  
-**Estado:** fundação ampliada com recuperação de duas fontes GitHub, acervo textual selecionado e verificações offline de combate/diálogo. Não representa jogos migrados, benchmarks de modelos, músicas finalizadas ou produtos publicados.
+**Working language:** English for new documentation, plans, code comments, UI, and reports. Preserve original creative titles and historical source languages.
+**Current state:** selected historical sources plus a working P11 local chat adaptation, automatically validated with protocol and Chromium checks. No migrated game, model benchmark, finished music, or public deployment is claimed.
 
 > Construir um laboratório autoral em Git que transforma ideias, obras e experimentos em produtos pequenos, sistemas reutilizáveis e evidências técnicas verificáveis. A IA participa da criação e execução; Martin desenvolve sua capacidade de especificar, compreender, selecionar, corrigir, validar e explicar os resultados.
 
@@ -40,19 +40,25 @@ Se apenas este arquivo estiver disponível, ele é suficiente para iniciar a Fas
 
 **Nunca declarar como realizado o que foi apenas planejado, gerado em texto, compilado parcialmente ou descrito por um agente anterior.**
 
-### Estado atual que deve orientar a próxima execução
+### Current state for the next session
 
-| Campo | Valor inicial |
+| Field | Current evidence |
 |---|---|
-| Repositório remoto | Dois repositórios antigos consultados; destino do novo laboratório ainda não informado |
-| Fontes preservadas | 175 arquivos textuais de Rave Master e os 3 arquivos de WebSocket; seleção não equivale a projeto RMXP completo |
-| Engine instalada e validada | Não verificada |
-| Build produzida | Nenhuma |
-| Verificações novas | 49 checks de combate e 19 etapas de diálogo em Python; sintaxe de index.js verificada; sem playtest |
-| Frente recomendada | Uma extração pequena de P10/P11 ou auditoria P01, conforme a direção escolhida; ver seção 28.5 |
-| Frente auxiliar recomendada | Preparação técnica do P02, somente após verificar ambiente e disponibilidade de Martin |
-| Regra de prioridade | Uma frente principal; trabalho auxiliar apenas quando servir a ela ou a uma lacuna profissional deliberada |
-| Material de áudio/poesia | Interesse declarado; catálogo específico ainda não recuperado |
+| Repository | MartinFMelcop/Creative_AI_Project_HUB; actual Git root `/workspace/Creative_AI_Project_HUB`; lab remains nested in its original package directory |
+| Preserved sources | 175 Rave Master texts and 3 WebSocket files; unchanged ZIP and inventory; not a complete RMXP backup |
+| Primary workstream | P11 local chat increment 0.1.0; implemented and automatically validated, M4 for this bounded slice |
+| Engine execution | No Unity or RMXP runtime verified; P11 uses Node/Express/Socket.IO |
+| Current verification | Baseline browser delivery failure reproduced; adaptation passes 15 tests (6 protocol, 9 Chromium) and CLI startup smoke; see `evidence/realtime-chat/RUN.json` |
+| Historical verification | v0.2.0 combat/dialogue runner reports remain historical; not rerun during P11 work |
+| Next action | Martin's two-tab readability, keyboard, and connection-feedback review; then consider P02 adaptation with candidate/reference isolation |
+| Other seeds | P01 baseline still absent; P10 remains recovered material; other creative/runtime baselines require targeted recovery |
+| Transfer / shared status | All transfer records remain candidates; no verified destination consumer or shared component |
+| Portfolio / attribution | Local technical sample available; Codex implemented/tested it under Martin's direction; no manual review or publication attributed to Martin |
+
+Maintained [assessment](docs/ASSESSMENT.md) and [plan](docs/IMPROVEMENT_PLAN.md)
+continue the recovery. Preserve the historical source archive; adaptations and
+translations belong in working projects. Read [state](docs/STATE.md) for the
+current unit and evidence, rather than assuming the v0.2.0 recovery is current.
 
 ## 1. Mandato do autor: tudo pode evoluir
 
@@ -220,7 +226,7 @@ Identificadores persistem mesmo quando nomes mudam. Um projeto arquivado pode co
 | P08 | Audio, Poetry & Music Lab | Sons, poemas, letras e conceitos | Música, EP conceitual, trilhas, áudio adaptativo | Eixo autorizado; fontes específicas pendentes |
 | P09 | AI Delivery & Operations Cases | Carreira real e avaliação simulada | Case de entrega, análise de workflow e rubricas | Base profissional lida; cases anteriores pendentes |
 | P10 | Adventures Unleashed / Rave Master | Narrativa, NPCs, combate, dados, arte/áudio e QA | Reservatório de sistemas e cenas; fatias adaptadas | 177 fontes textuais lidas; 175 preservadas; dois runners offline executados |
-| P11 | Real-time Integration Lab / WebSocket | Eventos cliente/servidor em Node e Socket.IO | Chat, task de debugging, painel e protótipo de lobby | Três fontes preservadas; sintaxe de servidor verificada; rede não executada |
+| P11 | Real-time Integration Lab / WebSocket | Node/Socket.IO event flow; three preserved source files | Local chat; later evaluation task or lobby candidate | Working chat adaptation locally validated, M4; no public deployment or destination transfer |
 
 P02 agrupa evaluation e QA porque podem compartilhar a mesma aplicação pequena. Não criar dois projetos Unity idênticos apenas para apresentar títulos diferentes. P01 pode abrigar produção, economia e analytics como cases distintos de uma fonte comum.
 
@@ -395,7 +401,7 @@ Reservatório recuperado de RPG Maker XP/RGSS: narrativa, personalidade e diálo
 
 ### P11 — Real-time Integration Lab / WebSocket
 
-Fonte pequena de Node/Express/Socket.IO recuperada integralmente no snapshot. O comportamento atual envia mensagens ao servidor, que as registra; a UI ainda não recebe nem apresenta mensagens. Pode originar uma task curta de debugging ou integração em tempo real. Detalhes e critérios na seção 28.3.
+The recovered Node/Express/Socket.IO snapshot only logs incoming messages. Its working adaptation now broadcasts validated text and renders it in all connected browsers. P11 is the selected primary workstream; fifteen automated checks verify its bounded local contract. See section 28.3 and `projects/realtime-integration-lab/README.md` for provenance, differences, usage, and limits. Evaluation and lobby reuse remain candidates.
 
 ## 6. Arquitetura do laboratório
 
@@ -409,6 +415,7 @@ Um monorepositório permite descoberta e troca de conhecimento. Cada projeto man
 | `SEED.md` | Fundamentos, inventário e direção evolutiva |
 | `AGENTS.md` | Instruções curtas de operação para agentes |
 | `docs/STATE.md` | Estado atual e próxima unidade de trabalho |
+| `docs/ASSESSMENT.md`, `docs/IMPROVEMENT_PLAN.md` | Maintained evidence overview, selected scope, priorities, and acceptance |
 | `docs/DECISIONS.md` | Decisões relevantes e alternativas |
 | `docs/ROADMAP.md` | Fases e gates, sem promessa de calendário |
 | `docs/SEED_EVOLUTION.md` | Manutenção da seed e continuidade por fases |
@@ -515,7 +522,7 @@ Antes do score, verificar bloqueios: fontes inacessíveis; execução impossíve
 
 ### Recomendação inicial, com razão
 
-**Na v0.1.0, P01 foi recomendado como primeira auditoria**, aproveitando a base profissional e o inventário do legado. Na v0.2.0, P10/P11 possuem fontes concretas recuperadas e podem fornecer uma primeira unidade executável menor. A seção 28.5 atualiza as alternativas sem declarar uma escolha de Martin.
+**Historical order:** v0.1.0 recommended P01 discovery; v0.2.0 recovered concrete P10/P11 sources. Under the current request to select and implement an increment, Codex prioritized P11 because its defect and full local interaction can be verified here. ADR-008 records the choice; the assessment and plan preserve alternatives without activating them. This is not a claim that Martin individually selected or tested P11.
 
 **Depois uma task pequena de P02**, porque cria evidência de avaliação e desenvolve autonomia técnica. Sem engine validada, preparar especificação e um domínio puro, registrando que a integração Unity está pendente.
 
@@ -1255,7 +1262,15 @@ Consultadas em 10/10/2026. São apoio aos pontos técnicos, não pesquisa de mer
 - Substituição do tutorial de envio ao Git por instruções de evolução da seed.
 - Nenhuma alteração, exclusão ou aposentadoria aplicada aos remotes.
 
-**Próxima ação recomendada:** selecionar uma única unidade a partir das alternativas da seção 28.5 e dos recursos reais. O inventário de P01 continua pendente se essa frente for escolhida.
+### 0.3.0 — 2026-10-10
+
+- Selected P11 as one executable increment under the current user request.
+- Reproduced the original missing receive/render behavior, then implemented a local chat in a working project while preserving the historical ZIP and inventory.
+- Added locked dependencies, explicit event/outage rules, and 15 protocol/browser tests; recorded current environment and artifact hashes outside the seed.
+- Added maintained assessment and priorities, updated project continuity, and corrected the manifest's absent-file references.
+- Recorded transfer lessons as candidates; no model evaluation, public deployment, game migration, or shared abstraction was claimed.
+
+**Next action:** review P11's local two-tab experience with Martin before selecting public presentation or a destination evaluation task. P01 baseline recovery remains pending if that workstream is selected.
 
 ## 28. Recuperação dos repositórios antigos — v0.2.0
 
@@ -1344,21 +1359,42 @@ O checklist de release contém seis verificações `PENDING`. Encounter e loot t
 
 O workflow `ai-ajustes.yml` previa execução a cada 30 minutos e commits diretos de ajustes com IA. Ele referencia `automation/package-lock.json` e `automation/ai_apply_next_adjustment.mjs`, ausentes na árvore consultada. Os cinco runs recentes consultados terminaram em falha; logs causais desses runs não foram auditados. A ausência das dependências no snapshot atual é um problema concreto, mas não permite afirmar a causa exata de cada falha histórica. Não transportar essa automação para a seed nem reativá-la. O novo fluxo é por tarefa delimitada e critérios de conclusão, sem obrigação de gerar código continuamente.
 
-### 28.3. P11 — WebSocket como laboratório de integrações
+### 28.3. P11 — recovered source and working adaptation
 
-**Natureza recuperada:** exercício pequeno de Node.js, Express, HTTP e Socket.IO. Apesar do nome, usa Socket.IO; não é uma implementação manual do protocolo WebSocket. O snapshot contém somente `index.js`, `index.html` e `package.json`.
+**Historical source:** Node.js, Express, HTTP, and Socket.IO exercise, commit
+`df651a9ddef39c7b05a48f25f1b7fdaff6760185`. The snapshot contains only
+`index.js`, `index.html`, and `package.json`. It uses Socket.IO rather than a
+manual WebSocket implementation. The server logs `chat message`; it does not
+broadcast, and the page has no receive/render listener. The historical package
+has no lockfile and its test script is a failing placeholder. Its declared ISC
+metadata does not establish licensing for unrelated material.
 
-O servidor entrega a página na rota `/`, aceita conexões e registra conexão, desconexão e o evento `chat message` no console. O formulário do navegador emite o evento e limpa o input. A lista HTML de mensagens permanece sem lógica de preenchimento: o servidor não transmite o evento aos clientes, e a página não possui listener para receber e renderizar mensagens. Portanto o comportamento existente demonstra emissão e recepção no servidor; ainda não demonstra conversa visível entre participantes.
+**Working increment:** [P11 — Live exchange](projects/realtime-integration-lab/README.md),
+version 0.1.0, separate from the unchanged historical archive. Retain the event
+name and string payload. Accept trimmed non-empty text, enforce 500 UTF-16 code
+units before trimming, broadcast to all connected clients including the sender,
+and render text nodes. Rejection and connection state are visible. A single
+broadcast path prevents an optimistic duplicate. Retain at most 200 items per
+page; no server history, accounts, rooms, offline buffering, or automatic retry.
+Acknowledgement loss leaves delivery uncertain and keeps the draft. Manual
+resubmission may duplicate an already delivered message.
 
-O package declara Express `^4.17.1`, Socket.IO `^4.4.0` e licença ISC nos metadados. Essas são dependências históricas, não versões recomendadas atualmente. Não existe lockfile no snapshot, e o comando de teste é um placeholder que falha. A execução desta auditoria fez somente `node --check` de `index.js`; não instalou dependências, iniciou servidor ou realizou teste de dois navegadores. Licença declarada no package não resolve autoria ou licenciamento de materiais que possam ser adicionados depois.
+**Evidence:** the same browser delivery check fails against the preserved source
+and passes against the adaptation. Fifteen current tests (6 protocol, 9 Chromium)
+verify accepted/rejected payloads, two-way rendering, literal markup, drafts,
+rejoining/new clients, automatic transport reconnect, bounded history, and
+acknowledgement behavior. CLI startup is checked separately. See
+[evidence](evidence/realtime-chat/RUN.json). This is local automated validation,
+not human usability review, public hosting, a game playtest, or a model benchmark.
 
-**Primeira fatia candidata:** completar um chat bidirecional pequeno. Definir payload, validar mensagem, transmitir aos participantes e renderizar texto. Gate: dois clientes recebem a mensagem conforme o contrato; reconexão tem comportamento definido; mensagem vazia é tratada; conteúdo textual não é interpretado como HTML; falhas de conexão são observáveis. Registrar se o emissor recebe uma confirmação ou o mesmo broadcast para evitar duplicação visual. Histórico, autenticação, múltiplas salas e persistência entram somente se a tarefa exigir.
+**Candidates:** P02 may reuse the defect as an evaluation task if candidate and
+reference contexts are isolated. P01 may adapt event ownership for a lobby,
+which needs its own authoritative state/recovery rules. Neither transfer has
+been implemented or verified; no shared library was introduced. Martin supplied
+direction and authorization, and Codex performed this increment's implementation
+and checks. Martin's manual two-tab review is the next bounded action.
 
-**Adaptações posteriores:** painel que recebe eventos de um experimento, observador de simulação, ferramenta de acompanhamento de avaliação ou protótipo de lobby para Artemyra. Um lobby não equivale a multiplayer funcional. Caso essa direção seja escolhida, estado autoritativo, sincronização, validação de ações e reconexão precisam de contratos próprios.
-
-P11 também fornece uma task de avaliação mais acessível que uma migração completa para Unity: o agente recebe um defeito delimitado e precisa produzir comportamento observável. A task pode pertencer a P02 mantendo o nome da stack real e a origem P11; o título “Unity” não deve fazer um experimento Node parecer executado na engine.
-
-### 28.4. Verificações executadas nesta recuperação
+### 28.4. Historical verification from the v0.2.0 recovery
 
 | Verificação atual | Resultado | O que prova | O que permanece fora do alcance |
 |---|---|---|---|
@@ -1384,9 +1420,9 @@ Ambiente dos runners: Python 3.12.14, em cópia local selecionada dos arquivos. 
 | P11 → P01 | Contrato de eventos e protótipo de lobby | Entrada/saída da sala e estados definidos | Multiplayer completo requer novo escopo |
 | P11 → P09 | Painel de eventos de avaliação | Uma execução alimenta a interface | Instrumentação pode ficar local e simples |
 
-Todos são candidatos, registrados em `registry/transfers.json`; nenhuma transferência de runtime foi concluída nesta recuperação. P10/P11 permanecem fontes em triagem. Ter mais matéria-prima não exige aumentar o número de projetos ativos.
+All entries remain candidates in `registry/transfers.json`; no destination runtime transfer has been completed. P10 remains recovered material in triage. P11 now has an active, locally validated working adaptation; its maturity does not transfer to P02 or P01. More source material does not require more active projects.
 
-**Próxima unidade recomendada após a v0.2.0:** escolher um único recorte com fontes já disponíveis. A tarefa de chat bidirecional oferece retorno visual pequeno; diálogo oferece proximidade com narrativa; domínio de combate aproveita vetores já executados. Se Martin mantiver Artemyra como prioridade, recuperar seu baseline segue necessário: o Rave não substitui essa fonte. Escolher pelo interesse atual e pelo ambiente executável, e registrar a mudança de ordem em `docs/STATE.md`.
+**Current order after v0.3.0:** P11 is the selected increment; review its local interaction before expanding scope. Dialogue and combat remain alternative future workstreams, not simultaneous commitments. If Artemyra is selected, recover its own baseline; Rave Master is not a substitute. The evidence-based rationale is in `docs/IMPROVEMENT_PLAN.md` and ADR-008.
 
 ### 28.6. Como uma IA deve expandir e modificar esta seed
 

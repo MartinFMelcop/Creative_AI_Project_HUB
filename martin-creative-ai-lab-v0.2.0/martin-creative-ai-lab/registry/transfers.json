@@ -87,20 +87,25 @@
       "source_project": "P11",
       "target_project": "P02",
       "status": "candidate",
-      "unit": "Task de chat bidirecional",
-      "evidence": [],
+      "unit": "Reproduced missing chat delivery as an evaluation task candidate",
+      "evidence": [
+        "evidence/realtime-chat/RUN.json",
+        "knowledge/realtime-delivery.md"
+      ],
       "source_reference": "SEED.md — seção 28.5",
-      "next_action": "Selecionar somente se servir à frente ativa; adaptar e verificar no destino."
+      "next_action": "Define candidate/reference isolation and adapt the reproduced defect into P02 before claiming a transfer or model evaluation."
     },
     {
       "id": "TR-010",
       "source_project": "P11",
       "target_project": "P01",
       "status": "candidate",
-      "unit": "Contrato de eventos para protótipo de lobby",
-      "evidence": [],
+      "unit": "Event ownership and reconnect semantics for a lobby candidate",
+      "evidence": [
+        "knowledge/realtime-delivery.md"
+      ],
       "source_reference": "SEED.md — seção 28.5",
-      "next_action": "Selecionar somente se servir à frente ativa; adaptar e verificar no destino."
+      "next_action": "Specify authoritative lobby state in P01 and test a real destination consumer before promoting shared code."
     },
     {
       "id": "TR-011",
