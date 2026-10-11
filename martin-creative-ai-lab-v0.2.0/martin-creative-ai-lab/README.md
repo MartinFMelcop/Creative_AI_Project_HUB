@@ -4,7 +4,7 @@ An evolving laboratory of games, narrative, images, audio, data, and AI
 evaluation by **Martin Melcop Neto**. Projects are adaptable seeds: build small
 slices, verify behavior, record decisions, and test reuse in actual destinations.
 
-**Current seed: v0.4.3.** The lab includes eleven project lines, 178 preserved
+**Current seed: v0.4.4.** The lab includes eleven project lines, 178 preserved
 historical texts, one working local text-chat adaptation, and one calibrated
 practice-task harness. No game migration,
 model benchmark, finished music catalogue, or public deployment is claimed.

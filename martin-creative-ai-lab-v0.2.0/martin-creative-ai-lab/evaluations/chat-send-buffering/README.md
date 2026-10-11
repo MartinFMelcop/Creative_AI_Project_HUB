@@ -1,6 +1,6 @@
 # P02 — Chat send-buffering practice task
 
-**Task:** EVAL-001. **Runner version:** 0.1.2. **Starter contract:** 0.1.0. **Runtime:** Python orchestration and
+**Task:** EVAL-001. **Runner version:** 0.1.3. **Starter contract:** 0.1.0. **Runtime:** Python orchestration and
 Node/Socket.IO/Chromium behavior checks. This is P02's first working task, adapted
 from P11; its earlier Unity proposal remains an origin, not a runtime requirement.
 
@@ -55,6 +55,10 @@ check names. Each command adds elapsed time, deadline, timeout/launch status,
 real exit code and capture completeness. Timeout at syntax/startup/behavior gates
 is inconclusive even if a late output contains a passing summary. Launch failure
 keeps the attempt in the record; it does not reject the client as invalid syntax.
+Only exit 1 with a complete SyntaxError diagnostic naming the temporary client
+rejects at the syntax gate. Runtime option/preload failures, signals and unknown
+nonzero outcomes are inconclusive; diagnostic changes fail conservatively.
+See [syntax-gate evidence](../../evidence/evaluation-task/SYNTAX_RUN.json).
 
 On POSIX, each command owns a new process group. Timeout sends SIGTERM, waits up
 to one second, then SIGKILL if needed, with up to one further second for output
@@ -63,7 +67,7 @@ bounded final reap avoid indefinite waiting. The non-POSIX fallback targets only
 the direct process and has not been executed here. This is cleanup, not a sandbox:
 children creating another session/group are outside the group policy.
 
-Runner 0.1.2 leaves the starter contract at 0.1.0, preserving existing exports byte
+Runner 0.1.3 leaves the starter contract at 0.1.0, preserving existing exports byte
 for byte. `runner_version` identifies the correction separately from `task_version`.
 No model identity or score is inferred from an artifact.
 
@@ -91,7 +95,7 @@ Neither proves production outage reliability, human usability, or Unity behavior
 Next: run one independently produced client with recorded context and permitted
 tools. Keep raw artifact acceptance separate from any claim about its author.
 
-Runner 0.1.2 pins P11 commit `2aed760251bb8d1544e906606cd954ed80f1df2f`
+Runner 0.1.3 retains the 0.1.2 pin for P11 commit `2aed760251bb8d1544e906606cd954ed80f1df2f`
 after package metadata changed. The original guard returned inconclusive, then
 the baseline/reference recalibrated at 15/17 and 17/17. The original 17 task
 checks are byte-identical; P11's five reading checks remain outside EVAL-001.

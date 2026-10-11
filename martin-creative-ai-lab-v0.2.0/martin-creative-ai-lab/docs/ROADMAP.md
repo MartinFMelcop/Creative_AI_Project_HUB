@@ -38,3 +38,9 @@ reference validation. See [the contract](REGISTRY_VALIDATION.md) and
 [current state](STATE.md). This closes an integrity gap without adding a phase,
 task inventory, project maturity claim or product version. The existing human
 review and independent EVAL-001 candidate gates remain next.
+
+## Current progress — v0.4.4
+
+P02 runner 0.1.3 distinguishes client parser errors from Node configuration,
+preload and signal failures. Starter 0.1.0 and the recalibrated P11 0.1.2 suite
+pin remain unchanged. Independent candidate provenance is still the next gate.

@@ -42,3 +42,13 @@ The original delayed-return hypothesis was not reproduced on Python 3.12 POSIX.
 Separate runner version from unchanged task contract so a repair does not reject
 old exports. Candidate reuse of this command-recording lesson in P09 or another
 consumer remains unverified; no new shared component or transfer is promoted.
+
+## Attribute parser failures before rejecting artifacts
+
+[Real Node probes](../evidence/evaluation-task/SYNTAX_RUN.json) show that runtime
+options and missing preloads can fail a syntax command without parsing the client.
+P02 runner 0.1.3 requires complete parser diagnostics identifying its temporary
+client, rather than treating any nonzero exit as invalid candidate syntax. A
+preload SyntaxError identifies a different file; signal exits and unknown formats
+remain inconclusive. This is a candidate lesson for other consumers, not a new
+validated transfer or defense against a malicious runtime.

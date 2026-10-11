@@ -216,3 +216,18 @@ contracts. No external-link fetching, new dependency or framework is justified.
 
 **Revisit:** another evidence format, external evidence policy, maturity gate or
 registry schema migration. Keep source integrity distinct from claim validation.
+
+## ADR-014 — attribute syntax rejection to the submitted client
+
+**Date:** 2026-10-10 (client date). **Status:** implemented, P02 runner 0.1.3.
+
+A real invalid NODE_OPTIONS probe rejected the unchanged valid starter with exit
+9. Missing preloads also fail with exit 1; exit status alone cannot identify an
+artifact defect. Require complete exit-1 parser diagnostics naming the evaluator's
+temporary client before rejecting syntax. Unknown failures remain inconclusive
+and retain command evidence. Do not erase inherited runtime options to conceal
+configuration failures. Starter, suite, dependencies and P11 remain unchanged.
+
+Revisit on Node diagnostic-format changes; conservative inconclusive outcomes
+require investigation, rather than guessing candidate failure. This is attribution
+of observed diagnostics, not a security boundary for hostile runtime injection.

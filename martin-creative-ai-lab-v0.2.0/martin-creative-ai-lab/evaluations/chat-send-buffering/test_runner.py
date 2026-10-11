@@ -181,6 +181,44 @@ class TaskRunnerTests(unittest.TestCase):
         self.assertEqual(record['commands'][-1]['command'], command)
         self.assertIsNotNone(record['commands'][-1]['launch_error'])
 
+    def test_node_configuration_failures_do_not_reject_valid_client(self):
+        for options in ('--definitely-invalid-p02-option',
+                        '--require=/absent-p02-preload.cjs'):
+            with self.subTest(options=options), patch.dict(os.environ, NODE_OPTIONS=options):
+                record = runner.check(self.workspace)
+                self.assertEqual(record['status'], 'inconclusive')
+                self.assertEqual(record['gate'], 'client_syntax')
+                self.assertNotEqual(record['commands'][0]['exit_code'], 0)
+                self.assertTrue(record['commands'][0]['stderr'])
+
+    def test_actual_invalid_client_is_rejected_with_parser_evidence(self):
+        (self.workspace / 'public/client.js').write_text('const broken = ;\n')
+        with patch.dict(os.environ, NODE_OPTIONS=''):
+            record = runner.check(self.workspace)
+        self.assertEqual(record['status'], 'rejected')
+        self.assertEqual(record['gate'], 'client_syntax')
+        self.assertIn('SyntaxError:', record['commands'][0]['stderr'])
+
+    def test_signal_exit_and_incomplete_parser_capture_are_inconclusive(self):
+        def failure(command, *args):
+            return {'exit_code': -9, 'stdout': '', 'stderr': '',
+                    'timed_out': False, 'launch_error': None, 'capture_complete': True}
+        with patch.object(runner, 'invoke', side_effect=failure):
+            self.assertEqual(runner.check(self.workspace)['status'], 'inconclusive')
+        def partial(command, *args):
+            return {**failure(command), 'exit_code': 1, 'capture_complete': False,
+                    'stderr': f'{command[-1]}:1\nSyntaxError: unexpected token\n'}
+        with patch.object(runner, 'invoke', side_effect=partial):
+            self.assertEqual(runner.check(self.workspace)['status'], 'inconclusive')
+
+    def test_preload_syntax_error_is_not_attributed_to_client(self):
+        preload = Path(self.scratch.name) / 'preload.cjs'
+        preload.write_text('const broken = ;\n')
+        with patch.dict(os.environ, NODE_OPTIONS=f'--require={preload}'):
+            record = runner.check(self.workspace)
+        self.assertEqual(record['status'], 'inconclusive')
+        self.assertIn('SyntaxError:', record['commands'][0]['stderr'])
+
 
 if __name__ == "__main__":
     unittest.main()

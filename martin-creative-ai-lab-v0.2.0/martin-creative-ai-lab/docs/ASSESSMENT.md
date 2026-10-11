@@ -1,3 +1,16 @@
+# Current assessment — syntax attribution
+
+The clean checkout started at `7866785`. Read-only remote inspection found four
+new commits; the increment was preserved in a stash before fast-forwarding to
+`6405a557ffcae2cef78a6546be1f5d9b1b0dfe6d`. P11 reading-position fixes, P02 suite
+recalibration and registry-reference validation remain intact.
+
+A valid exported starter was rejected solely because Node received an invalid
+NODE_OPTIONS value (exit 9). Missing preloads can also exit 1. This is a feasible
+evaluator reliability fix without a new workstream or fabricated candidate run.
+The correction now requires client-specific parser evidence before rejection.
+Earlier assessment and source-recovery boundaries follow as historical context.
+
 # Portfolio assessment
 
 Updated: 2026-10-11. Scope: maintained lab documents, registries, legacy inventory,

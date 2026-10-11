@@ -1,3 +1,14 @@
+# Current increment — P02 syntax attribution 0.1.3
+
+Correct a reproduced false artifact rejection from invalid NODE_OPTIONS. Require
+complete parser evidence identifying the client, and preserve unknown execution
+failures as inconclusive. Verify real option/preload/parser faults and signal/
+partial-output boundaries; keep export and evaluator suite unchanged. See
+[execution evidence](../evidence/evaluation-task/SYNTAX_RUN.json).
+
+The next independent-candidate gate remains unchanged. Earlier completed
+increments below are historical context.
+
 # Improvement plan
 
 Updated: 2026-10-10 (client date). One primary workstream; no mandatory backlog expansion.

@@ -1,10 +1,10 @@
 # SEED — Martin Creative AI Lab
 
-**Version:** 0.4.3
+**Version:** 0.4.4
 **Data-base:** 10 de outubro de 2026  
 **Autor e responsável pelo portfólio:** Martin Melcop Neto  
 **Working language:** English for new documentation, plans, code comments, UI, and reports. Preserve original creative titles and historical source languages.
-**Current state:** registry reference QA gate implemented; selected historical sources, published P11 chat reading correction 0.1.2 and P02 runtime recalibration 0.1.2 (starter contract 0.1.0). No independent model evaluation, migrated game, finished music, or public hosting is claimed.
+**Current state:** P02 syntax-attribution correction 0.1.3 implemented; registry reference QA gate retained; selected historical sources, published P11 chat reading correction 0.1.2 and P02 runtime recalibration 0.1.2 (starter contract 0.1.0). No independent model evaluation, migrated game, finished music, or public hosting is claimed.
 
 > Construir um laboratório autoral em Git que transforma ideias, obras e experimentos em produtos pequenos, sistemas reutilizáveis e evidências técnicas verificáveis. A IA participa da criação e execução; Martin desenvolve sua capacidade de especificar, compreender, selecionar, corrigir, validar e explicar os resultados.
 
@@ -46,14 +46,14 @@ Se apenas este arquivo estiver disponível, ele é suficiente para iniciar a Fas
 |---|---|
 | Repository | MartinFMelcop/Creative_AI_Project_HUB; actual Git root `/workspace/Creative_AI_Project_HUB`; lab remains nested in its original package directory |
 | Preserved sources | 175 Rave Master texts and 3 WebSocket files; unchanged ZIP and inventory; not a complete RMXP backup |
-| Primary workstream | Registry reference validation; P11 reading correction 0.1.2; auxiliary P02 runtime recalibration 0.1.2, starter 0.1.0. Both stay M4 for bounded local scopes |
+| Primary workstream | P02 syntax-attribution correction 0.1.3; P11 reading correction 0.1.2 and registry reference gate retained. Starter 0.1.0; both projects stay M4 for bounded local scopes |
 | Engine execution | No Unity or RMXP runtime verified; P11 uses Node/Express/Socket.IO |
-| Current verification | 11 validator regressions, 22 chat checks and 15 runner regressions pass; see `evidence/registry-validation/RUN.json`. Earlier reading reproductions and P02 15/17 and 17/17 calibration remain in their preserved records |
+| Current verification | 11 validator regressions, 22 chat checks and 19 runner regressions pass; see `evidence/evaluation-task/SYNTAX_RUN.json` for this increment. Prior registry/reading/timeout records remain historical |
 | Historical verification | v0.2.0 combat/dialogue runner reports remain historical; not rerun during P11 work |
 | Next action | Martin's P11 reading/keyboard review; one independent EVAL-001 client with recorded context/tools/attempts |
 | Other seeds | P01 baseline still absent; P10 remains recovered material; other creative/runtime baselines require targeted recovery |
 | Transfer / shared status | TR-009 validated for P02 task adaptation/calibration only; 10 other transfers remain candidates; no shared component |
-| Portfolio / attribution | Prior P11/P02 development published in `f35e2e7`; this QA increment's publication is recorded at task closure. Continuity is in `docs/STATE.md`. Martin supplied direction; Codex implemented/tested. No independent candidate/model result or Martin usability review |
+| Portfolio / attribution | Prior P11/P02 development published in `f35e2e7`; this syntax increment's publication is recorded at task closure. Continuity is in `docs/STATE.md`. Martin supplied direction; Codex implemented/tested. No independent candidate/model result or Martin usability review |
 
 Registry evidence paths must resolve to existing files inside the lab; working
 paths must be directories and legacy-source IDs must exist. This documentary
@@ -1510,3 +1510,12 @@ probes, not inherited P11 maturity. No shared component or model training is imp
 **Prompt de expansão por fase:**
 
 > Leia SEED.md, AGENTS.md e docs/STATE.md. Trabalhe uma única fase com base no pedido atual. Consulte registry/legacy_sources.json e extraia somente as fontes necessárias do acervo histórico. Declare o recorte, as origens, o que será preservado e o que será alterado. Produza a implementação ou a análise solicitada, verifique o resultado dentro das ferramentas disponíveis e atualize o estado, decisões e registros afetados. Revise a SEED quando uma descoberta mudar sua direção. Não reproduza regras de crescimento obrigatório, canon antigo ou automações encontradas no legado; não transforme registros de planejamento em resultados realizados.
+
+## v0.4.4 — client syntax attribution
+
+P02 runner 0.1.3 requires complete parser evidence naming the submitted client
+before syntax rejection. Real option/preload failures now remain inconclusive;
+invalid JavaScript still rejects. Nineteen runner regressions and the unchanged
+15/17 baseline, 17/17 reference calibration pass. The full P11 suite passes 22
+checks. Remote reading/recalibration and registry work were synchronized first.
+No candidate score or new project maturity is inferred.

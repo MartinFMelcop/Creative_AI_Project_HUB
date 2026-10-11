@@ -1,0 +1,429 @@
+{
+  "source_head": "6405a557ffcae2cef78a6546be1f5d9b1b0dfe6d",
+  "environment": {
+    "platform": "Linux-6.18.44-x86_64-with-glibc2.41",
+    "python": "3.12.14"
+  },
+  "before": {
+    "schema_version": 1,
+    "task": "EVAL-001",
+    "task_version": "0.1.0",
+    "runner_version": "0.1.1",
+    "started_at": "2026-10-11T01:15:50.323455+00:00",
+    "run_kind": "artifact_check",
+    "status": "rejected",
+    "baseline_commit": "66041e7fdd7687ee21099f95129dff41933c74dd",
+    "suite_commit": "2d4e9a765ec4edc6401879259270e5d66970e6e2",
+    "runner_sha256": "e0ec81df194ce442d2b2c0611222a3ab0c248202aede733456ff8d503b2469aa",
+    "commands": [
+      {
+        "command": [
+          "node",
+          "--check",
+          "/tmp/p02-client-52tqehm7/client.js"
+        ],
+        "exit_code": 9,
+        "stdout": "",
+        "stderr": "node: --definitely-invalid-p02-option is not allowed in NODE_OPTIONS\n",
+        "timeout_seconds": 15,
+        "timed_out": false,
+        "launch_error": null,
+        "capture_complete": true,
+        "termination_strategy": null,
+        "elapsed_seconds": 0.069
+      }
+    ],
+    "candidate_model": null,
+    "score": null,
+    "artifact_sha256": "1b559d97a981060467725dbed26545cf175dd383bbb6fdc992e4cb761ef3eaff",
+    "evaluator_artifacts": {
+      "server.cjs": "f84e170aa785a6fa5caf223a1c8a245f51688f347eefa8e2d0e37e0f5f3cf9e7",
+      "public/index.html": "7cb6866cc5f603ae89263db31620a99053439650a0e3e86e215ab2cc13cd9665",
+      "public/style.css": "7f4e6e73f8b6ac534369275f9a3461d00afbe7ab1605d46199d50ff25503d323",
+      "package.json": "1ad160afedc2487c95094d842d23fb1abfa851fdeee17c86cb28eb58bdc39697",
+      "package-lock.json": "9623c8212f0ddf7e742f0936973f43a87512ffd0dbd5ea1cdc0312b5b97be4ac",
+      "tests/browser.test.cjs": "5d31f58d99d9e6cd51f24e448063349d916acb2fab4c4585a84a969cb3dca63e",
+      "tests/protocol.test.cjs": "cdf15bd3522bf9c74dc60bf307fc56f4050d74d61b45f27341867ce537254a7a"
+    },
+    "gate": "client_syntax",
+    "reason": "Submitted client is not valid JavaScript"
+  },
+  "probes": {
+    "invalid_option": {
+      "schema_version": 1,
+      "task": "EVAL-001",
+      "task_version": "0.1.0",
+      "runner_version": "0.1.3",
+      "started_at": "2026-10-11T01:19:06.613583+00:00",
+      "run_kind": "artifact_check",
+      "status": "inconclusive",
+      "baseline_commit": "66041e7fdd7687ee21099f95129dff41933c74dd",
+      "suite_commit": "2aed760251bb8d1544e906606cd954ed80f1df2f",
+      "runner_sha256": "4d003640ad8539bc3096db037b0b325c55ac41d2e8a100ce67c8dc6cf9cb0daf",
+      "commands": [
+        {
+          "command": [
+            "node",
+            "--check",
+            "/tmp/p02-client-4jy_1wgd/client.js"
+          ],
+          "exit_code": 9,
+          "stdout": "",
+          "stderr": "node: --definitely-invalid-p02-option is not allowed in NODE_OPTIONS\n",
+          "timeout_seconds": 15,
+          "timed_out": false,
+          "launch_error": null,
+          "capture_complete": true,
+          "termination_strategy": null,
+          "elapsed_seconds": 0.006
+        }
+      ],
+      "candidate_model": null,
+      "score": null,
+      "artifact_sha256": "1b559d97a981060467725dbed26545cf175dd383bbb6fdc992e4cb761ef3eaff",
+      "evaluator_artifacts": {
+        "server.cjs": "f84e170aa785a6fa5caf223a1c8a245f51688f347eefa8e2d0e37e0f5f3cf9e7",
+        "public/index.html": "7cb6866cc5f603ae89263db31620a99053439650a0e3e86e215ab2cc13cd9665",
+        "public/style.css": "7f4e6e73f8b6ac534369275f9a3461d00afbe7ab1605d46199d50ff25503d323",
+        "package.json": "ac0ea6ab508cd0e48461df6b9bab661c040e1ce9eb2b61547ad381fbd7d13111",
+        "package-lock.json": "eeb855aa02dad8e9e80e690a2bd143486c44001de07121c2b17269660e86738e",
+        "tests/browser.test.cjs": "5d31f58d99d9e6cd51f24e448063349d916acb2fab4c4585a84a969cb3dca63e",
+        "tests/protocol.test.cjs": "cdf15bd3522bf9c74dc60bf307fc56f4050d74d61b45f27341867ce537254a7a"
+      },
+      "gate": "client_syntax",
+      "reason": "Syntax checker failed without a client parser diagnostic"
+    },
+    "missing_preload": {
+      "schema_version": 1,
+      "task": "EVAL-001",
+      "task_version": "0.1.0",
+      "runner_version": "0.1.3",
+      "started_at": "2026-10-11T01:19:06.663713+00:00",
+      "run_kind": "artifact_check",
+      "status": "inconclusive",
+      "baseline_commit": "66041e7fdd7687ee21099f95129dff41933c74dd",
+      "suite_commit": "2aed760251bb8d1544e906606cd954ed80f1df2f",
+      "runner_sha256": "4d003640ad8539bc3096db037b0b325c55ac41d2e8a100ce67c8dc6cf9cb0daf",
+      "commands": [
+        {
+          "command": [
+            "node",
+            "--check",
+            "/tmp/p02-client-ddcpt8ib/client.js"
+          ],
+          "exit_code": 1,
+          "stdout": "",
+          "stderr": "node:internal/modules/cjs/loader:1520\n  throw err;\n  ^\n\nError: Cannot find module '/absent-p02-preload.cjs'\nRequire stack:\n- internal/preload\n    at Module._resolveFilename (node:internal/modules/cjs/loader:1517:15)\n    at wrapResolveFilename (node:internal/modules/cjs/loader:1071:27)\n    at defaultResolveImplForCJSLoading (node:internal/modules/cjs/loader:1095:10)\n    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1122:12)\n    at Module._load (node:internal/modules/cjs/loader:1294:5)\n    at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)\n    at Module.require (node:internal/modules/cjs/loader:1617:12)\n    at node:internal/modules/cjs/loader:2164:12\n    at loadPreloadModules (node:internal/process/pre_execution:710:5)\n    at initializeModuleLoaders (node:internal/process/pre_execution:243:5) {\n  code: 'MODULE_NOT_FOUND',\n  requireStack: [ 'internal/preload' ]\n}\n\nNode.js v24.19.0\n",
+          "timeout_seconds": 15,
+          "timed_out": false,
+          "launch_error": null,
+          "capture_complete": true,
+          "termination_strategy": null,
+          "elapsed_seconds": 0.101
+        }
+      ],
+      "candidate_model": null,
+      "score": null,
+      "artifact_sha256": "1b559d97a981060467725dbed26545cf175dd383bbb6fdc992e4cb761ef3eaff",
+      "evaluator_artifacts": {
+        "server.cjs": "f84e170aa785a6fa5caf223a1c8a245f51688f347eefa8e2d0e37e0f5f3cf9e7",
+        "public/index.html": "7cb6866cc5f603ae89263db31620a99053439650a0e3e86e215ab2cc13cd9665",
+        "public/style.css": "7f4e6e73f8b6ac534369275f9a3461d00afbe7ab1605d46199d50ff25503d323",
+        "package.json": "ac0ea6ab508cd0e48461df6b9bab661c040e1ce9eb2b61547ad381fbd7d13111",
+        "package-lock.json": "eeb855aa02dad8e9e80e690a2bd143486c44001de07121c2b17269660e86738e",
+        "tests/browser.test.cjs": "5d31f58d99d9e6cd51f24e448063349d916acb2fab4c4585a84a969cb3dca63e",
+        "tests/protocol.test.cjs": "cdf15bd3522bf9c74dc60bf307fc56f4050d74d61b45f27341867ce537254a7a"
+      },
+      "gate": "client_syntax",
+      "reason": "Syntax checker failed without a client parser diagnostic"
+    },
+    "invalid_client": {
+      "schema_version": 1,
+      "task": "EVAL-001",
+      "task_version": "0.1.0",
+      "runner_version": "0.1.3",
+      "started_at": "2026-10-11T01:19:06.812341+00:00",
+      "run_kind": "artifact_check",
+      "status": "rejected",
+      "baseline_commit": "66041e7fdd7687ee21099f95129dff41933c74dd",
+      "suite_commit": "2aed760251bb8d1544e906606cd954ed80f1df2f",
+      "runner_sha256": "4d003640ad8539bc3096db037b0b325c55ac41d2e8a100ce67c8dc6cf9cb0daf",
+      "commands": [
+        {
+          "command": [
+            "node",
+            "--check",
+            "/tmp/p02-client-rw_vjfzt/client.js"
+          ],
+          "exit_code": 1,
+          "stdout": "",
+          "stderr": "/tmp/p02-client-rw_vjfzt/client.js:1\nconst broken = ;\n               ^\n\nSyntaxError: Unexpected token ';'\n    at wrapSafe (node:internal/modules/cjs/loader:1804:18)\n    at checkSyntax (node:internal/main/check_syntax:76:3)\n\nNode.js v24.19.0\n",
+          "timeout_seconds": 15,
+          "timed_out": false,
+          "launch_error": null,
+          "capture_complete": true,
+          "termination_strategy": null,
+          "elapsed_seconds": 0.092
+        }
+      ],
+      "candidate_model": null,
+      "score": null,
+      "artifact_sha256": "2177bff62d47bc48c4cbc97cce938e986154a2f1e124612b43c664b5dc86ae43",
+      "evaluator_artifacts": {
+        "server.cjs": "f84e170aa785a6fa5caf223a1c8a245f51688f347eefa8e2d0e37e0f5f3cf9e7",
+        "public/index.html": "7cb6866cc5f603ae89263db31620a99053439650a0e3e86e215ab2cc13cd9665",
+        "public/style.css": "7f4e6e73f8b6ac534369275f9a3461d00afbe7ab1605d46199d50ff25503d323",
+        "package.json": "ac0ea6ab508cd0e48461df6b9bab661c040e1ce9eb2b61547ad381fbd7d13111",
+        "package-lock.json": "eeb855aa02dad8e9e80e690a2bd143486c44001de07121c2b17269660e86738e",
+        "tests/browser.test.cjs": "5d31f58d99d9e6cd51f24e448063349d916acb2fab4c4585a84a969cb3dca63e",
+        "tests/protocol.test.cjs": "cdf15bd3522bf9c74dc60bf307fc56f4050d74d61b45f27341867ce537254a7a"
+      },
+      "gate": "client_syntax",
+      "reason": "Submitted client is not valid JavaScript"
+    },
+    "baseline": {
+      "schema_version": 1,
+      "task": "EVAL-001",
+      "task_version": "0.1.0",
+      "runner_version": "0.1.3",
+      "started_at": "2026-10-11T01:19:07.119809+00:00",
+      "run_kind": "artifact_check",
+      "status": "rejected",
+      "baseline_commit": "66041e7fdd7687ee21099f95129dff41933c74dd",
+      "suite_commit": "2aed760251bb8d1544e906606cd954ed80f1df2f",
+      "runner_sha256": "4d003640ad8539bc3096db037b0b325c55ac41d2e8a100ce67c8dc6cf9cb0daf",
+      "commands": [
+        {
+          "command": [
+            "node",
+            "--check",
+            "/tmp/p02-client-ckbfvher/client.js"
+          ],
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": "",
+          "timeout_seconds": 15,
+          "timed_out": false,
+          "launch_error": null,
+          "capture_complete": true,
+          "termination_strategy": null,
+          "elapsed_seconds": 0.16
+        },
+        {
+          "command": [
+            "node",
+            "-e",
+            "\nconst { chromium } = require('playwright-core');\nif (Number(process.versions.node.split('.')[0]) < 22) process.exit(2);\n(async () => {\n  const browser = await chromium.launch({\n    executablePath: process.env.CHROMIUM_PATH || '/usr/bin/chromium',\n    headless: true, args: ['--no-sandbox'],\n  });\n  console.log(JSON.stringify({ node: process.version, chromium: browser.version(),\n    playwright: require('playwright-core/package.json').version,\n    socket_io: require('socket.io/package.json').version }));\n  await browser.close();\n})().catch(error => { console.error(error.message); process.exit(2); });\n"
+          ],
+          "exit_code": 0,
+          "stdout": "{\"node\":\"v24.19.0\",\"chromium\":\"154.0.8037.57\",\"playwright\":\"1.64.0\",\"socket_io\":\"4.8.4\"}\n",
+          "stderr": "",
+          "timeout_seconds": 20,
+          "timed_out": false,
+          "launch_error": null,
+          "capture_complete": true,
+          "termination_strategy": null,
+          "elapsed_seconds": 4.354
+        },
+        {
+          "command": [
+            "node",
+            "--test",
+            "--test-reporter=tap",
+            "tests/browser.test.cjs",
+            "tests/protocol.test.cjs"
+          ],
+          "exit_code": 1,
+          "stdout": "TAP version 13\n# Subtest: two browser clients display accepted messages once in both directions\nok 1 - two browser clients display accepted messages once in both directions\n  ---\n  duration_ms: 6374.856483\n  type: 'test'\n  ...\n# Subtest: a connected form submission waits behind an in-flight polling write\nnot ok 2 - a connected form submission waits behind an in-flight polling write\n  ---\n  duration_ms: 6355.29028\n  type: 'test'\n  location: '/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/projects/realtime-integration-lab/tests/browser.test.cjs:79:1'\n  failureType: 'testCodeFailure'\n  error: 'page.waitForFunction: Timeout 4000ms exceeded.'\n  code: 'ERR_TEST_FAILURE'\n  name: 'TimeoutError'\n  stack: |-\n    expectMessages (/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/projects/realtime-integration-lab/tests/browser.test.cjs:63:14)\n    TestContext.<anonymous> (/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/projects/realtime-integration-lab/tests/browser.test.cjs:97:9)\n  ...\n# Subtest: a stale connected state does not retain a message for reconnect replay\nnot ok 3 - a stale connected state does not retain a message for reconnect replay\n  ---\n  duration_ms: 1694.365649\n  type: 'test'\n  location: '/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/projects/realtime-integration-lab/tests/browser.test.cjs:103:1'\n  failureType: 'testCodeFailure'\n  error: |-\n    Expected values to be strictly deep-equal:\n    + actual - expected\n    \n      {\n    +   buffered: 1,\n    -   buffered: 0,\n        connected: true\n      }\n    \n  code: 'ERR_ASSERTION'\n  name: 'AssertionError'\n  expected:\n    connected: true\n    buffered: 0\n  actual:\n    connected: true\n    buffered: 1\n  operator: 'deepStrictEqual'\n  stack: |-\n    TestContext.<anonymous> (/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/projects/realtime-integration-lab/tests/browser.test.cjs:119:10)\n    async Test.run (node:internal/test_runner/test:1389:7)\n    async Test.processPendingSubtests (node:internal/test_runner/test:960:7)\n  ...\n# Subtest: markup remains literal text in both browsers\nok 4 - markup remains literal text in both browsers\n  ---\n  duration_ms: 7316.693462\n  type: 'test'\n  ...\n# Subtest: rejection is visible, preserves the draft, and does not broadcast\nok 5 - rejection is visible, preserves the draft, and does not broadcast\n  ---\n  duration_ms: 8384.658444\n  type: 'test'\n  ...\n# Subtest: a departed client keeps its draft and receives only future messages on rejoining\nok 6 - a departed client keeps its draft and receives only future messages on rejoining\n  ---\n  duration_ms: 7791.189092\n  type: 'test'\n  ...\n# Subtest: transport interruption reconnects automatically without duplicating listeners\nok 7 - transport interruption reconnects automatically without duplicating listeners\n  ---\n  duration_ms: 6670.661103\n  type: 'test'\n  ...\n# Subtest: browser retains only the latest 200 messages\nok 8 - browser retains only the latest 200 messages\n  ---\n  duration_ms: 4325.47619\n  type: 'test'\n  ...\n# Subtest: new browser receives future messages without server-side history\nok 9 - new browser receives future messages without server-side history\n  ---\n  duration_ms: 5564.971569\n  type: 'test'\n  ...\n# Subtest: missing acknowledgement reports uncertainty and does not retry automatically\nok 10 - missing acknowledgement reports uncertainty and does not retry automatically\n  ---\n  duration_ms: 7999.914842\n  type: 'test'\n  ...\n# Subtest: an acknowledgement does not erase a newer draft typed during sending\nok 11 - an acknowledgement does not erase a newer draft typed during sending\n  ---\n  duration_ms: 4906.275274\n  type: 'test'\n  ...\n# Subtest: protocol broadcasts trimmed messages to sender and peer in order\nok 12 - protocol broadcasts trimmed messages to sender and peer in order\n  ---\n  duration_ms: 353.087301\n  type: 'test'\n  ...\n# Subtest: non-string payloads are rejected without broadcasts\nok 13 - non-string payloads are rejected without broadcasts\n  ---\n  duration_ms: 288.710277\n  type: 'test'\n  ...\n# Subtest: empty and whitespace-only payloads are rejected without broadcasts\nok 14 - empty and whitespace-only payloads are rejected without broadcasts\n  ---\n  duration_ms: 72.473458\n  type: 'test'\n  ...\n# Subtest: 501 code units are rejected even when trimming would shorten the payload\nok 15 - 501 code units are rejected even when trimming would shorten the payload\n  ---\n  duration_ms: 70.633318\n  type: 'test'\n  ...\n# Subtest: 500 UTF-16 code units are accepted including non-ASCII text\nok 16 - 500 UTF-16 code units are accepted including non-ASCII text\n  ---\n  duration_ms: 138.282881\n  type: 'test'\n  ...\n# Subtest: messages without acknowledgement callbacks do not crash the server\nok 17 - messages without acknowledgement callbacks do not crash the server\n  ---\n  duration_ms: 70.608855\n  type: 'test'\n  ...\n1..17\n# tests 17\n# suites 0\n# pass 15\n# fail 2\n# cancelled 0\n# skipped 0\n# todo 0\n# duration_ms 72615.968629\n",
+          "stderr": "",
+          "timeout_seconds": 180,
+          "timed_out": false,
+          "launch_error": null,
+          "capture_complete": true,
+          "termination_strategy": null,
+          "elapsed_seconds": 72.726
+        }
+      ],
+      "candidate_model": null,
+      "score": null,
+      "artifact_sha256": "1b559d97a981060467725dbed26545cf175dd383bbb6fdc992e4cb761ef3eaff",
+      "evaluator_artifacts": {
+        "server.cjs": "f84e170aa785a6fa5caf223a1c8a245f51688f347eefa8e2d0e37e0f5f3cf9e7",
+        "public/index.html": "7cb6866cc5f603ae89263db31620a99053439650a0e3e86e215ab2cc13cd9665",
+        "public/style.css": "7f4e6e73f8b6ac534369275f9a3461d00afbe7ab1605d46199d50ff25503d323",
+        "package.json": "ac0ea6ab508cd0e48461df6b9bab661c040e1ce9eb2b61547ad381fbd7d13111",
+        "package-lock.json": "eeb855aa02dad8e9e80e690a2bd143486c44001de07121c2b17269660e86738e",
+        "tests/browser.test.cjs": "5d31f58d99d9e6cd51f24e448063349d916acb2fab4c4585a84a969cb3dca63e",
+        "tests/protocol.test.cjs": "cdf15bd3522bf9c74dc60bf307fc56f4050d74d61b45f27341867ce537254a7a"
+      },
+      "environment": {
+        "node": "v24.19.0",
+        "chromium": "154.0.8037.57",
+        "playwright": "1.64.0",
+        "socket_io": "4.8.4"
+      },
+      "counts": {
+        "tests": 17,
+        "pass": 15,
+        "fail": 2,
+        "cancelled": 0,
+        "skipped": 0,
+        "todo": 0
+      },
+      "gate": "behavior_and_regressions",
+      "failed_checks": [
+        "a connected form submission waits behind an in-flight polling write",
+        "a stale connected state does not retain a message for reconnect replay"
+      ]
+    },
+    "reference": {
+      "schema_version": 1,
+      "task": "EVAL-001",
+      "task_version": "0.1.0",
+      "runner_version": "0.1.3",
+      "started_at": "2026-10-11T01:19:07.120191+00:00",
+      "run_kind": "artifact_check",
+      "status": "accepted",
+      "baseline_commit": "66041e7fdd7687ee21099f95129dff41933c74dd",
+      "suite_commit": "2aed760251bb8d1544e906606cd954ed80f1df2f",
+      "runner_sha256": "4d003640ad8539bc3096db037b0b325c55ac41d2e8a100ce67c8dc6cf9cb0daf",
+      "commands": [
+        {
+          "command": [
+            "node",
+            "--check",
+            "/tmp/p02-client-zn8jd4rp/client.js"
+          ],
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": "",
+          "timeout_seconds": 15,
+          "timed_out": false,
+          "launch_error": null,
+          "capture_complete": true,
+          "termination_strategy": null,
+          "elapsed_seconds": 0.188
+        },
+        {
+          "command": [
+            "node",
+            "-e",
+            "\nconst { chromium } = require('playwright-core');\nif (Number(process.versions.node.split('.')[0]) < 22) process.exit(2);\n(async () => {\n  const browser = await chromium.launch({\n    executablePath: process.env.CHROMIUM_PATH || '/usr/bin/chromium',\n    headless: true, args: ['--no-sandbox'],\n  });\n  console.log(JSON.stringify({ node: process.version, chromium: browser.version(),\n    playwright: require('playwright-core/package.json').version,\n    socket_io: require('socket.io/package.json').version }));\n  await browser.close();\n})().catch(error => { console.error(error.message); process.exit(2); });\n"
+          ],
+          "exit_code": 0,
+          "stdout": "{\"node\":\"v24.19.0\",\"chromium\":\"154.0.8037.57\",\"playwright\":\"1.64.0\",\"socket_io\":\"4.8.4\"}\n",
+          "stderr": "",
+          "timeout_seconds": 20,
+          "timed_out": false,
+          "launch_error": null,
+          "capture_complete": true,
+          "termination_strategy": null,
+          "elapsed_seconds": 3.992
+        },
+        {
+          "command": [
+            "node",
+            "--test",
+            "--test-reporter=tap",
+            "tests/browser.test.cjs",
+            "tests/protocol.test.cjs"
+          ],
+          "exit_code": 0,
+          "stdout": "TAP version 13\n# Subtest: two browser clients display accepted messages once in both directions\nok 1 - two browser clients display accepted messages once in both directions\n  ---\n  duration_ms: 7483.847484\n  type: 'test'\n  ...\n# Subtest: a connected form submission waits behind an in-flight polling write\nok 2 - a connected form submission waits behind an in-flight polling write\n  ---\n  duration_ms: 3475.794194\n  type: 'test'\n  ...\n# Subtest: a stale connected state does not retain a message for reconnect replay\nok 3 - a stale connected state does not retain a message for reconnect replay\n  ---\n  duration_ms: 5442.649638\n  type: 'test'\n  ...\n# Subtest: markup remains literal text in both browsers\nok 4 - markup remains literal text in both browsers\n  ---\n  duration_ms: 4231.730182\n  type: 'test'\n  ...\n# Subtest: rejection is visible, preserves the draft, and does not broadcast\nok 5 - rejection is visible, preserves the draft, and does not broadcast\n  ---\n  duration_ms: 8784.133164\n  type: 'test'\n  ...\n# Subtest: a departed client keeps its draft and receives only future messages on rejoining\nok 6 - a departed client keeps its draft and receives only future messages on rejoining\n  ---\n  duration_ms: 7724.907286\n  type: 'test'\n  ...\n# Subtest: transport interruption reconnects automatically without duplicating listeners\nok 7 - transport interruption reconnects automatically without duplicating listeners\n  ---\n  duration_ms: 4919.655338\n  type: 'test'\n  ...\n# Subtest: browser retains only the latest 200 messages\nok 8 - browser retains only the latest 200 messages\n  ---\n  duration_ms: 5426.061846\n  type: 'test'\n  ...\n# Subtest: new browser receives future messages without server-side history\nok 9 - new browser receives future messages without server-side history\n  ---\n  duration_ms: 7954.063431\n  type: 'test'\n  ...\n# Subtest: missing acknowledgement reports uncertainty and does not retry automatically\nok 10 - missing acknowledgement reports uncertainty and does not retry automatically\n  ---\n  duration_ms: 8658.275977\n  type: 'test'\n  ...\n# Subtest: an acknowledgement does not erase a newer draft typed during sending\nok 11 - an acknowledgement does not erase a newer draft typed during sending\n  ---\n  duration_ms: 6598.892852\n  type: 'test'\n  ...\n# Subtest: protocol broadcasts trimmed messages to sender and peer in order\nok 12 - protocol broadcasts trimmed messages to sender and peer in order\n  ---\n  duration_ms: 380.607064\n  type: 'test'\n  ...\n# Subtest: non-string payloads are rejected without broadcasts\nok 13 - non-string payloads are rejected without broadcasts\n  ---\n  duration_ms: 112.433778\n  type: 'test'\n  ...\n# Subtest: empty and whitespace-only payloads are rejected without broadcasts\nok 14 - empty and whitespace-only payloads are rejected without broadcasts\n  ---\n  duration_ms: 58.843068\n  type: 'test'\n  ...\n# Subtest: 501 code units are rejected even when trimming would shorten the payload\nok 15 - 501 code units are rejected even when trimming would shorten the payload\n  ---\n  duration_ms: 29.648863\n  type: 'test'\n  ...\n# Subtest: 500 UTF-16 code units are accepted including non-ASCII text\nok 16 - 500 UTF-16 code units are accepted including non-ASCII text\n  ---\n  duration_ms: 23.947088\n  type: 'test'\n  ...\n# Subtest: messages without acknowledgement callbacks do not crash the server\nok 17 - messages without acknowledgement callbacks do not crash the server\n  ---\n  duration_ms: 41.155619\n  type: 'test'\n  ...\n1..17\n# tests 17\n# suites 0\n# pass 17\n# fail 0\n# cancelled 0\n# skipped 0\n# todo 0\n# duration_ms 75363.966527\n",
+          "stderr": "",
+          "timeout_seconds": 180,
+          "timed_out": false,
+          "launch_error": null,
+          "capture_complete": true,
+          "termination_strategy": null,
+          "elapsed_seconds": 75.612
+        }
+      ],
+      "candidate_model": null,
+      "score": null,
+      "artifact_sha256": "c9f9f4c0a2e16b1dd0f155968e85938d9b5355746538725b83ca564220386f4a",
+      "evaluator_artifacts": {
+        "server.cjs": "f84e170aa785a6fa5caf223a1c8a245f51688f347eefa8e2d0e37e0f5f3cf9e7",
+        "public/index.html": "7cb6866cc5f603ae89263db31620a99053439650a0e3e86e215ab2cc13cd9665",
+        "public/style.css": "7f4e6e73f8b6ac534369275f9a3461d00afbe7ab1605d46199d50ff25503d323",
+        "package.json": "ac0ea6ab508cd0e48461df6b9bab661c040e1ce9eb2b61547ad381fbd7d13111",
+        "package-lock.json": "eeb855aa02dad8e9e80e690a2bd143486c44001de07121c2b17269660e86738e",
+        "tests/browser.test.cjs": "5d31f58d99d9e6cd51f24e448063349d916acb2fab4c4585a84a969cb3dca63e",
+        "tests/protocol.test.cjs": "cdf15bd3522bf9c74dc60bf307fc56f4050d74d61b45f27341867ce537254a7a"
+      },
+      "environment": {
+        "node": "v24.19.0",
+        "chromium": "154.0.8037.57",
+        "playwright": "1.64.0",
+        "socket_io": "4.8.4"
+      },
+      "counts": {
+        "tests": 17,
+        "pass": 17,
+        "fail": 0,
+        "cancelled": 0,
+        "skipped": 0,
+        "todo": 0
+      },
+      "gate": "behavior_and_regressions",
+      "failed_checks": []
+    }
+  },
+  "full_chat_suite": {
+    "command": [
+      "npm",
+      "test"
+    ],
+    "exit_code": 0,
+    "stdout": "\n> creative-ai-realtime-chat@0.1.2 test\n> node --test tests/*.test.cjs\n\n\u2714 two browser clients display accepted messages once in both directions (6962.749011ms)\n\u2714 a connected form submission waits behind an in-flight polling write (1294.261238ms)\n\u2714 a stale connected state does not retain a message for reconnect replay (4445.50035ms)\n\u2714 markup remains literal text in both browsers (4312.66589ms)\n\u2714 rejection is visible, preserves the draft, and does not broadcast (8091.014848ms)\n\u2714 a departed client keeps its draft and receives only future messages on rejoining (7600.780221ms)\n\u2714 transport interruption reconnects automatically without duplicating listeners (6456.312095ms)\n\u2714 browser retains only the latest 200 messages (3156.107446ms)\n\u2714 new browser receives future messages without server-side history (9749.811366ms)\n\u2714 missing acknowledgement reports uncertainty and does not retry automatically (8948.329312ms)\n\u2714 an acknowledgement does not erase a newer draft typed during sending (4486.653796ms)\n\u2714 protocol broadcasts trimmed messages to sender and peer in order (307.532352ms)\n\u2714 non-string payloads are rejected without broadcasts (191.956325ms)\n\u2714 empty and whitespace-only payloads are rejected without broadcasts (145.11478ms)\n\u2714 501 code units are rejected even when trimming would shorten the payload (77.403566ms)\n\u2714 500 UTF-16 code units are accepted including non-ASCII text (50.752527ms)\n\u2714 messages without acknowledgement callbacks do not crash the server (22.306509ms)\n\u2714 the conversation follows initial messages and readers within 24 pixels of the bottom (3618.082413ms)\n\u2714 new broadcasts preserve the visible message and pixel offset while browsing earlier text (1600.022016ms)\n\u2714 scrolling back to the bottom resumes following subsequent messages (1749.823397ms)\n\u2714 retention eviction preserves a surviving reading anchor across variable-height messages (1208.289885ms)\n\u2714 an evicted reading anchor falls back to the earliest retained message (922.537222ms)\n\u2139 tests 22\n\u2139 suites 0\n\u2139 pass 22\n\u2139 fail 0\n\u2139 cancelled 0\n\u2139 skipped 0\n\u2139 todo 0\n\u2139 duration_ms 80417.381005\n",
+    "stderr": "npm notice\nnpm notice New major version of npm available! 11.9.0 -> 12.2.0\nnpm notice Changelog: https://github.com/npm/cli/releases/tag/v12.2.0\nnpm notice To update run: npm install -g npm@12.2.0\nnpm notice\n",
+    "timeout_seconds": 240,
+    "timed_out": false,
+    "launch_error": null,
+    "capture_complete": true,
+    "termination_strategy": null,
+    "elapsed_seconds": 82.126
+  },
+  "runner_regressions": {
+    "command": [
+      "python3",
+      "evaluations/chat-send-buffering/test_runner.py"
+    ],
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": "...................\n----------------------------------------------------------------------\nRan 19 tests in 6.352s\n\nOK\n",
+    "timeout_seconds": 30,
+    "timed_out": false,
+    "launch_error": null,
+    "capture_complete": true,
+    "termination_strategy": null,
+    "elapsed_seconds": 6.517
+  },
+  "validator_regressions": {
+    "command": [
+      "python3",
+      "tools/test_validate_repo.py"
+    ],
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": "...........\n----------------------------------------------------------------------\nRan 11 tests in 2.482s\n\nOK\n",
+    "timeout_seconds": 30,
+    "timed_out": false,
+    "launch_error": null,
+    "capture_complete": true,
+    "termination_strategy": null,
+    "elapsed_seconds": 2.611
+  },
+  "old_runner_regressions": {
+    "source_commit": "6405a557ffcae2cef78a6546be1f5d9b1b0dfe6d",
+    "methods": [
+      "test_node_configuration_failures_do_not_reject_valid_client",
+      "test_signal_exit_and_incomplete_parser_capture_are_inconclusive",
+      "test_preload_syntax_error_is_not_attributed_to_client"
+    ],
+    "tests_run": 3,
+    "failure_events": 4,
+    "errors": 0,
+    "output": "FFFF\n======================================================================\nFAIL: test_node_configuration_failures_do_not_reject_valid_client (tests.TaskRunnerTests.test_node_configuration_failures_do_not_reject_valid_client) (options='--definitely-invalid-p02-option')\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/evaluations/chat-send-buffering/test_runner.py\", line 189, in test_node_configuration_failures_do_not_reject_valid_client\n    self.assertEqual(record['status'], 'inconclusive')\nAssertionError: 'rejected' != 'inconclusive'\n- rejected\n+ inconclusive\n\n\n======================================================================\nFAIL: test_node_configuration_failures_do_not_reject_valid_client (tests.TaskRunnerTests.test_node_configuration_failures_do_not_reject_valid_client) (options='--require=/absent-p02-preload.cjs')\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/evaluations/chat-send-buffering/test_runner.py\", line 189, in test_node_configuration_failures_do_not_reject_valid_client\n    self.assertEqual(record['status'], 'inconclusive')\nAssertionError: 'rejected' != 'inconclusive'\n- rejected\n+ inconclusive\n\n\n======================================================================\nFAIL: test_signal_exit_and_incomplete_parser_capture_are_inconclusive (tests.TaskRunnerTests.test_signal_exit_and_incomplete_parser_capture_are_inconclusive)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/evaluations/chat-send-buffering/test_runner.py\", line 207, in test_signal_exit_and_incomplete_parser_capture_are_inconclusive\n    self.assertEqual(runner.check(self.workspace)['status'], 'inconclusive')\nAssertionError: 'rejected' != 'inconclusive'\n- rejected\n+ inconclusive\n\n\n======================================================================\nFAIL: test_preload_syntax_error_is_not_attributed_to_client (tests.TaskRunnerTests.test_preload_syntax_error_is_not_attributed_to_client)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/evaluations/chat-send-buffering/test_runner.py\", line 219, in test_preload_syntax_error_is_not_attributed_to_client\n    self.assertEqual(record['status'], 'inconclusive')\nAssertionError: 'rejected' != 'inconclusive'\n- rejected\n+ inconclusive\n\n\n----------------------------------------------------------------------\nRan 3 tests in 0.302s\n\nFAILED (failures=4)\n"
+  }
+}

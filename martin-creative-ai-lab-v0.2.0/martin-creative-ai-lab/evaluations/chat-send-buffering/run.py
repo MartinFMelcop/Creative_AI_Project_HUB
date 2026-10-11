@@ -14,7 +14,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 TASK = "EVAL-001"
-VERSION = "0.1.2"
+VERSION = "0.1.3"
 TASK_VERSION = "0.1.0"
 BASELINE = "66041e7fdd7687ee21099f95129dff41933c74dd"
 SUITE_COMMIT = "2aed760251bb8d1544e906606cd954ed80f1df2f"
@@ -200,9 +200,18 @@ def check(workspace):
             if syntax["timed_out"] or syntax["launch_error"]:
                 record.update(gate="client_syntax", reason="Syntax check did not complete")
                 return record
-            if syntax["exit_code"]:
-                record.update(status="rejected", gate="client_syntax",
-                              reason="Submitted client is not valid JavaScript")
+            if syntax["exit_code"] != 0:
+                # Node also fails for runtime options, preload errors and signals.
+                # Reject only a complete parser diagnostic naming our client copy.
+                client_error = (syntax["exit_code"] == 1 and
+                                syntax["capture_complete"] and
+                                re.search(rf"^{re.escape(str(client))}:\d+\s*$",
+                                          syntax["stderr"], re.M) and
+                                re.search(r"^SyntaxError:", syntax["stderr"], re.M))
+                record.update(status="rejected" if client_error else "inconclusive",
+                              gate="client_syntax",
+                              reason="Submitted client is not valid JavaScript" if client_error
+                              else "Syntax checker failed without a client parser diagnostic")
                 return record
             probe = """
 const { chromium } = require('playwright-core');
