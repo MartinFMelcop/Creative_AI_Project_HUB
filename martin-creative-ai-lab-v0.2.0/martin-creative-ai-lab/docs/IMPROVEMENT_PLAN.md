@@ -1,16 +1,16 @@
-# Current increment — P10 dusk continuity
+# Current increment — P11 edited-draft timeout recovery
 
-Correct five reproduced final-turn invitations in the existing CLI. Render
-closing requests from the current clock and memory; retain recovery narration
-without announcing renewed conversation after dusk. Preserve last-turn agreement
-and departure, all rules, source records and four endings. No new content system.
+Correct the reproduced loss of an earlier attempt after new typing and ack
+expiry. Reuse captured send text and existing feedback; preserve current input,
+show the earlier attempt literally, and wrap it at narrow width. Keep explicit
+uncertainty and no automatic retry. Feedback clears on another submission/reload.
 
-Acceptance is met: three new methods fail on 0.1.2 and all 32 current checks pass.
-Seven actual CLI comparisons and exhaustive reachable-state comparison preserve
-every nontext trace field and menu; changed text occurs only at terminal dusk.
-Same-agent creative comparison is not independent audience approval. Next: reader
-feedback on early cooperation, delayed closure, conflict and five-wait pacing.
-P02 candidate provenance and P11 human usability remain separate pending gates.
+Acceptance is met: two real-browser regressions fail on 0.1.6 and pass on 0.1.7;
+all 38 chat checks pass. Controlled dropped/broadcast outcomes retain both texts
+and one attempt without inventing delivery certainty. P02's working-client check
+passes 17/17 and all 25 runner tests pass; task/export/dependency sources stay
+unchanged. Next: human manual-recovery and keyboard/readability review. Independent
+candidate provenance and P10 reader pacing remain separate gates.
 
 # Previous increment — P11 text reflow
 

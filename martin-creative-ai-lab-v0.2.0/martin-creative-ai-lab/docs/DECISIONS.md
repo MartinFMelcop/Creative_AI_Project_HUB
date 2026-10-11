@@ -490,3 +490,16 @@ cleared bench and unresolved fault relevant. Preserve last-turn agreement and
 departure, source records and every rule. Exhaustive comparison changes text only
 at DUSK. This corrects continuity without changing balance; reader preference and
 five-wait pacing still require independent human feedback.
+
+## ADR-027 — retain an earlier uncertain attempt without replacing current typing
+
+**Date:** 2026-10-11 (client date, America/Sao_Paulo). **Status:** P11 0.1.7.
+
+Controlled drop/broadcast probes show that a timed-out attempt disappears from
+the input after new typing, while feedback still promises retention. Reuse the
+send callback's captured text in existing feedback when the values differ.
+Keep current input, literal content, wrapping and explicit uncertainty. One
+feedback message persists until another submission or reload; no retry, history
+store, clipboard permission or recovery control is added. Thirty-eight chat
+checks pass, with unchanged dependency graph and pinned task. Human readability,
+manual recovery and assistive-technology review remain unverified.

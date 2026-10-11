@@ -1,39 +1,41 @@
 # Lab state
 
-**Updated:** 2026-10-11 (environment UTC date).
-**Seed version:** 0.4.6, unchanged. **Current increment:** P10 dialogue 0.1.3.
+**Updated:** 2026-10-11 (client date, America/Sao_Paulo).
+**Seed version:** 0.4.6, unchanged. **Current increment:** P11 chat 0.1.7.
 
-The checkout began clean on `work` at `ac71b7b8a576394d1b7ceb3f76790f7f213d407f`,
+The checkout began clean on `work` at `e2cbabe6e4e4246046e00716b0cac597d6b420e3`,
 matching remote main verified through GitHub. Git fetch could not reach the
 configured proxy; authorized publication uses the connected integration with a
 non-force update and remote verification. This record precedes publication.
 
-[P10](../projects/waystone-dialogue/README.md) closes final-turn requests at the
-existing dusk deadline. The Keeper acknowledges lost daylight rather than asking
-for unavailable work or another argument. Cooldown completion retains physical
-recovery and announces readiness only while another turn remains. Last-turn
-agreement and departure keep their existing precedence and responses.
+[P11](../projects/realtime-integration-lab/README.md) retains the exact earlier
+attempt in existing feedback when acknowledgement times out after the input has
+changed. Current typing stays untouched. Feedback distinguishes the texts,
+renders markup literally and wraps long words at narrow width. An unchanged
+input keeps the original feedback. No new control, history store or retry is added.
+The recovery text clears on another submission or reload; it is not saved history
+or a delivery receipt. Users must check the conversation before resending.
 
-[Dusk evidence](../evidence/waystone-dialogue/DUSK_RUN.json) records five reproduced
-CLI gaps, seven before/after CLI paths, three baseline-failing regression methods
-(eight failure events) and 32 passing scene checks. All 6,131 reachable states and
-17,994 transitions retain menus, effects, memory, selected variants and four
-endings. Changed wording occurs only at terminal dusk. Legacy source hashes and
-archive are unchanged; no character, choice, state, asset or dependency is added.
+[Recovery evidence](../evidence/realtime-chat/DRAFT_RECOVERY_RUN.json) records
+real Chromium/Socket.IO probes with controlled dropped/broadcast message outcomes.
+Two new regressions fail on 0.1.6 and pass on 0.1.7. All 38 chat checks pass
+(6 protocol, 32 browser), including existing send, reading, activity and reflow
+behavior. Narrow-screen output was inspected; this is agent QA, not human or
+assistive-technology validation. No production outage or exactly-once claim.
 
-Same-agent editorial comparison finds clearer closure and preserved practical
-voice, unresolved-fault causality and recovery. It is not independent audience
-validation. The simple cooperative route, five-wait pacing, human comprehension,
-adoption and commercial demand remain unverified. Bounded M4 is unchanged.
+P02 runner 0.2.1 and its pinned task are unchanged. All 25 runner tests pass and
+a controlled working-client check passes 17/17. Dependency graph, nine starter
+files and evaluator sources are unchanged; no independent candidate is claimed.
+Both 11-test integrity suites and syntax checks pass. Final link/archive and
+manifest results are recorded in the execution evidence.
 
-Final documentary validation and refreshed manifest results are in the execution
-record. P02 runner 0.2.1 and P11 chat 0.1.6 are unchanged; their runtime suites were
-not rerun locally. Earlier calibration/browser records remain historical evidence.
-SEED.md retains its prior operational summary after the previously rejected upload
-of its existing personal/professional material; state and registry give current
-continuity. Seed direction, sources, transfers and asset inventory are unchanged.
+P10 dialogue 0.1.3 is unchanged; its runtime suite was not rerun locally. Human
+creative quality, copy/recovery usability, other browsers and commercial demand
+remain unverified. Bounded M4, source archive, transfers and asset inventory stay
+unchanged. SEED.md retains its prior summary after the previously blocked upload
+of existing personal/professional material; state and registry give current
+continuity. No seed direction or architecture change is needed.
 
-Next: a reader compares early cooperation, conflict recovery and the delayed
-paths ending at dusk, especially closure clarity and five-wait pacing. Revise
-balance only with feedback. Independent EVAL-001 provenance and P11 human
-reading/keyboard review remain separate pending gates.
+Next: a human reviews edited-draft uncertainty, checks conversation delivery and
+copies the earlier text manually, including long feedback and keyboard/enlarged
+text. P10 reader feedback and independent EVAL-001 provenance remain separate gates.

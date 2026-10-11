@@ -216,6 +216,47 @@ test('missing acknowledgement reports uncertainty and does not retry automatical
   await expectMessages(second, ['Acknowledgement lost', 'Still connected']);
 });
 
+for (const delivered of [false, true]) {
+  test(`timeout with a changed draft retains earlier text ${delivered ? 'after broadcast' : 'without broadcast'}`, async () => {
+    await first.setViewportSize({ width: 320, height: 700 });
+    const id = await first.evaluate(() => socket.id);
+    const peer = runtime.io.sockets.sockets.get(id);
+    let attempts = 0;
+    let capture;
+    const captured = new Promise((resolve) => { capture = resolve; });
+    peer.removeAllListeners('chat message');
+    // Model both possible delivery outcomes behind the same real ack timeout.
+    peer.on('chat message', (text) => {
+      attempts++;
+      if (delivered) runtime.io.emit('chat message', text.trim());
+      capture();
+    });
+    const earlier = '  <b>' + 'x'.repeat(480) + '</b>  ';
+    await send(first, earlier);
+    await captured;
+    await first.locator('#input').fill('Next draft');
+    await first.locator('#feedback').filter({ hasText: 'Delivery is uncertain' }).waitFor();
+    assert.equal(await first.locator('#input').inputValue(), 'Next draft');
+    const feedback = await first.locator('#feedback').textContent();
+    assert.ok(feedback.endsWith(earlier), 'Keep the exact earlier attempt available for manual recovery');
+    assert.match(feedback, /check the conversation/i, 'Uncertainty must not suggest automatic resending');
+    assert.equal(await first.locator('#feedback').evaluate((element) => element.childElementCount), 0,
+      'Earlier text remains literal, including markup');
+    assert.ok(await first.locator('#feedback').evaluate((element) => element.scrollWidth <= element.clientWidth + 1),
+      'Long earlier text remains readable inside the narrow feedback area');
+    assert.equal(attempts, 1, 'A timeout must not resend the earlier attempt');
+    const expected = delivered ? [earlier.trim()] : [];
+    await expectMessages(first, expected);
+    await expectMessages(second, expected);
+    await send(second, 'Peer still live');
+    await expectMessages(first, [...expected, 'Peer still live']);
+    await expectMessages(second, [...expected, 'Peer still live']);
+    assert.equal(await first.locator('#input').inputValue(), 'Next draft');
+    assert.equal(await first.locator('#feedback').textContent(), feedback);
+    assert.equal(attempts, 1);
+  });
+}
+
 test('an acknowledgement does not erase a newer draft typed during sending', async () => {
   const id = await first.evaluate(() => socket.id);
   const peer = runtime.io.sockets.sockets.get(id);

@@ -1,0 +1,361 @@
+{
+  "run_kind": "p11_edited_draft_timeout_recovery",
+  "recorded_at": "2026-10-11T19:39:44.236653-03:00",
+  "baseline_commit": "e2cbabe6e4e4246046e00716b0cac597d6b420e3",
+  "before_version": "0.1.6",
+  "after_version": "0.1.7",
+  "environment": {
+    "python": "3.12.14",
+    "platform": "Linux-6.18.44-x86_64-with-glibc2.41",
+    "node": "v24.19.0",
+    "chromium": "154.0.8037.57",
+    "playwright": "1.64.0",
+    "socket_io": "4.8.4",
+    "dependencies": {
+      "express": "4.22.3",
+      "socket.io": "4.8.4",
+      "playwright-core": "1.64.0",
+      "socket.io-client": "4.8.4"
+    }
+  },
+  "files": {
+    "client_before_sha256": "c28697bffd07a74bdda2443c5eb47f743028382d5b2d01a42781bc9a404ac300",
+    "client_after_sha256": "faaa107c452061ec547f185eea6dfc2bfd4dc07e41f8fb599ab8bc05ae28b6ad",
+    "style_before_sha256": "0e90d0c17dd64e139538357240194fc24b8261bc21e4cb887768f1004948b13d",
+    "style_after_sha256": "b376ca2bd933f1c9cb369dcebd9c7047312b6aa226309abf54c00ab73016e36e",
+    "browser_tests_sha256": "b2a4455f60e9d9ac015b059aa83be0b8133363c81dda9de55e8a4dfad8e6ecff"
+  },
+  "reproduce": [
+    "Run the two named regressions against the committed baseline client using CHAT_TEST_CLIENT_PATH; run them again with the working client.",
+    "Each test submits through the real form and Socket.IO timer. A handler controls broadcast/drop and withholds acknowledgement; the input is edited after receipt.",
+    "Compare current input, exact retained earlier text, literal DOM content, 320-pixel wrapping, one attempt and later peer broadcasts.",
+    "Run npm test for the full chat suite. Export a fresh EVAL-001 starter, copy only the working client and check against the unchanged evaluator snapshot."
+  ],
+  "before": [
+    {
+      "delivered": false,
+      "earlier": "  <b>xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</b>  ",
+      "attempts": 1,
+      "errors": [],
+      "currentDraft": "My next draft",
+      "feedback": "Delivery is uncertain. Your draft is kept; check the conversation before sending again.",
+      "messages": [],
+      "feedbackChildren": 0,
+      "feedbackWidth": 270,
+      "feedbackScrollWidth": 270,
+      "earlierRetainedInFeedback": false
+    },
+    {
+      "delivered": true,
+      "earlier": "  <b>xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</b>  ",
+      "attempts": 1,
+      "errors": [],
+      "currentDraft": "My next draft",
+      "feedback": "Delivery is uncertain. Your draft is kept; check the conversation before sending again.",
+      "messages": [
+        "<b>xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</b>"
+      ],
+      "feedbackChildren": 0,
+      "feedbackWidth": 270,
+      "feedbackScrollWidth": 270,
+      "earlierRetainedInFeedback": false
+    }
+  ],
+  "after": [
+    {
+      "delivered": false,
+      "earlier": "  <b>xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</b>  ",
+      "attempts": 1,
+      "errors": [],
+      "currentDraft": "My next draft",
+      "feedback": "Delivery is uncertain. Your current draft is unchanged. Check the conversation before resending this earlier message:\n  <b>xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</b>  ",
+      "messages": [],
+      "feedbackChildren": 0,
+      "feedbackWidth": 270,
+      "feedbackScrollWidth": 270,
+      "earlierRetainedInFeedback": true
+    },
+    {
+      "delivered": true,
+      "earlier": "  <b>xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</b>  ",
+      "attempts": 1,
+      "errors": [],
+      "currentDraft": "My next draft",
+      "feedback": "Delivery is uncertain. Your current draft is unchanged. Check the conversation before resending this earlier message:\n  <b>xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</b>  ",
+      "messages": [
+        "<b>xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</b>"
+      ],
+      "feedbackChildren": 0,
+      "feedbackWidth": 270,
+      "feedbackScrollWidth": 270,
+      "earlierRetainedInFeedback": true
+    }
+  ],
+  "verification": {
+    "baseline": {
+      "command": [
+        "node",
+        "--test",
+        "--test-name-pattern=timeout with a changed draft",
+        "tests/browser.test.cjs"
+      ],
+      "exit_code": 1,
+      "output": "\u2716 timeout with a changed draft retains earlier text without broadcast (6533.028203ms)\n\u2716 timeout with a changed draft retains earlier text after broadcast (6780.750418ms)\n\u2139 tests 2\n\u2139 suites 0\n\u2139 pass 0\n\u2139 fail 2\n\u2139 cancelled 0\n\u2139 skipped 0\n\u2139 todo 0\n\u2139 duration_ms 13915.677873\n\n\u2716 failing tests:\n\ntest at tests/browser.test.cjs:220:3\n\u2716 timeout with a changed draft retains earlier text without broadcast (6533.028203ms)\n  AssertionError [ERR_ASSERTION]: Keep the exact earlier attempt available for manual recovery\n      at TestContext.<anonymous> (/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/projects/realtime-integration-lab/tests/browser.test.cjs:241:12)\n      at async Test.run (node:internal/test_runner/test:1389:7)\n      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3) {\n    generatedMessage: false,\n    code: 'ERR_ASSERTION',\n    actual: false,\n    expected: true,\n    operator: '==',\n    diff: 'simple'\n  }\n\ntest at tests/browser.test.cjs:220:3\n\u2716 timeout with a changed draft retains earlier text after broadcast (6780.750418ms)\n  AssertionError [ERR_ASSERTION]: Keep the exact earlier attempt available for manual recovery\n      at TestContext.<anonymous> (/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/projects/realtime-integration-lab/tests/browser.test.cjs:241:12)\n      at async Test.run (node:internal/test_runner/test:1389:7)\n      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {\n    generatedMessage: false,\n    code: 'ERR_ASSERTION',\n    actual: false,\n    expected: true,\n    operator: '==',\n    diff: 'simple'\n  }\n",
+      "counts": {
+        "tests": 2,
+        "pass": 0,
+        "fail": 2,
+        "cancelled": 0,
+        "skipped": 0,
+        "todo": 0
+      }
+    },
+    "targeted": {
+      "command": [
+        "node",
+        "--test",
+        "--test-name-pattern=timeout with a changed draft",
+        "tests/browser.test.cjs"
+      ],
+      "exit_code": 0,
+      "output": "\u2714 timeout with a changed draft retains earlier text without broadcast (7938.014643ms)\n\u2714 timeout with a changed draft retains earlier text after broadcast (8369.68546ms)\n\u2139 tests 2\n\u2139 suites 0\n\u2139 pass 2\n\u2139 fail 0\n\u2139 cancelled 0\n\u2139 skipped 0\n\u2139 todo 0\n\u2139 duration_ms 17022.797311\n",
+      "counts": {
+        "tests": 2,
+        "pass": 2,
+        "fail": 0,
+        "cancelled": 0,
+        "skipped": 0,
+        "todo": 0
+      }
+    },
+    "chat": {
+      "command": [
+        "npm",
+        "test"
+      ],
+      "exit_code": 0,
+      "output": "\u2714 two browser clients display accepted messages once in both directions (5092.141987ms)\n\u2714 a connected form submission waits behind an in-flight polling write (2046.798078ms)\n\u2714 a stale connected state does not retain a message for reconnect replay (2498.079532ms)\n\u2714 markup remains literal text in both browsers (6073.270981ms)\n\u2714 rejection is visible, preserves the draft, and does not broadcast (4802.982991ms)\n\u2714 a departed client keeps its draft and receives only future messages on rejoining (5148.281445ms)\n\u2714 transport interruption reconnects automatically without duplicating listeners (2762.94753ms)\n\u2714 browser retains only the latest 200 messages (2044.392738ms)\n\u2714 new browser receives future messages without server-side history (3575.927275ms)\n\u2714 missing acknowledgement reports uncertainty and does not retry automatically (4688.469183ms)\n\u2714 timeout with a changed draft retains earlier text without broadcast (7214.692855ms)\n\u2714 timeout with a changed draft retains earlier text after broadcast (7655.980206ms)\n\u2714 an acknowledgement does not erase a newer draft typed during sending (3159.182544ms)\n\u2714 protocol broadcasts trimmed messages to sender and peer in order (146.814003ms)\n\u2714 non-string payloads are rejected without broadcasts (50.403922ms)\n\u2714 empty and whitespace-only payloads are rejected without broadcasts (31.931532ms)\n\u2714 501 code units are rejected even when trimming would shorten the payload (43.070144ms)\n\u2714 500 UTF-16 code units are accepted including non-ASCII text (111.6903ms)\n\u2714 messages without acknowledgement callbacks do not crash the server (15.568578ms)\n\u2714 the conversation follows initial messages and readers within 24 pixels of the bottom (1469.809211ms)\n\u2714 new broadcasts preserve the visible message and pixel offset while browsing earlier text (983.830765ms)\n\u2714 scrolling back to the bottom resumes following subsequent messages (1193.693163ms)\n\u2714 retention eviction preserves a surviving reading anchor across variable-height messages (886.195506ms)\n\u2714 an evicted reading anchor falls back to the earliest retained message (1085.398161ms)\n\u2714 new arrivals show their count while preserving the reading position (774.238018ms)\n\u2714 keyboard activation returns to live text and keeps conversation focus (630.359914ms)\n\u2714 manual scrolling to live text clears the count before the next browsing session (1246.809231ms)\n\u2714 unread counts stay bounded when arrivals exceed the retained history (1668.034343ms)\n\u2714 inactive tab counts arrivals at the live edge and clears them on focus (1520.728706ms)\n\u2714 returning to an inactive tab at earlier text retains its unread count and anchor (1554.815377ms)\n\u2714 hidden page keeps unread arrivals until visible at the live edge (1189.502627ms)\n\u2714 inactive tab unread count stays bounded to retained messages (1371.911422ms)\n\u2714 viewport height changes keep live readers at the bottom (941.632844ms)\n\u2714 viewport width reflow preserves earlier text through narrowing and widening (1189.321108ms)\n\u2714 viewport resizing preserves inactive unread state at the live edge (1170.05716ms)\n\u2714 text enlargement with an unchanged panel keeps live readers at the bottom (969.851459ms)\n\u2714 text size and spacing reflow preserves an earlier anchor through retention eviction (998.709594ms)\n\u2714 text enlargement preserves inactive unread arrivals at the live edge (1331.171557ms)\n\u2139 tests 38\n\u2139 suites 0\n\u2139 pass 38\n\u2139 fail 0\n\u2139 cancelled 0\n\u2139 skipped 0\n\u2139 todo 0\n\u2139 duration_ms 81099.965941\nnpm notice\nnpm notice New major version of npm available! 11.9.0 -> 12.2.0\nnpm notice Changelog: https://github.com/npm/cli/releases/tag/v12.2.0\nnpm notice To update run: npm install -g npm@12.2.0\nnpm notice\n",
+      "counts": {
+        "tests": 38,
+        "pass": 38,
+        "fail": 0,
+        "cancelled": 0,
+        "skipped": 0,
+        "todo": 0
+      }
+    },
+    "runner": {
+      "command": [
+        "python3",
+        "evaluations/chat-send-buffering/test_runner.py"
+      ],
+      "exit_code": 0,
+      "output": ".....................\n----------------------------------------------------------------------\nRan 25 tests in 8.005s\n\nOK\n"
+    },
+    "syntax": {
+      "exit_code": 0,
+      "output": "",
+      "commands": [
+        [
+          "node",
+          "--check",
+          "public/client.js"
+        ],
+        [
+          "node",
+          "--check",
+          "tests/browser.test.cjs"
+        ],
+        [
+          "git",
+          "diff",
+          "--check"
+        ]
+      ]
+    },
+    "registry": {
+      "command": [
+        "python3",
+        "tools/test_validate_repo.py"
+      ],
+      "exit_code": 0,
+      "output": "...........\n----------------------------------------------------------------------\nRan 11 tests in 2.220s\n\nOK\n"
+    },
+    "manifest_regressions": {
+      "command": [
+        "python3",
+        "tools/test_check_manifest.py"
+      ],
+      "exit_code": 0,
+      "output": "...........\n----------------------------------------------------------------------\nRan 11 tests in 0.659s\n\nOK\n"
+    },
+    "working_client": {
+      "command": [
+        "python3",
+        "/workspace/work/p11-draft-recovery/check_working.py"
+      ],
+      "exit_code": 0,
+      "output": "{\"status\": \"accepted\", \"counts\": {\"tests\": 17, \"pass\": 17, \"fail\": 0, \"cancelled\": 0, \"skipped\": 0, \"todo\": 0}, \"gate\": \"behavior_and_regressions\", \"reason\": null}\n"
+    },
+    "documentary": {
+      "command": [
+        "python3",
+        "tools/validate_repo.py"
+      ],
+      "exit_code": 0,
+      "local_file_links": 156
+    }
+  },
+  "working_client": {
+    "schema_version": 1,
+    "task": "EVAL-001",
+    "task_version": "0.1.0",
+    "runner_version": "0.2.1",
+    "started_at": "2026-10-11T22:32:04.178093+00:00",
+    "run_kind": "controlled_working_client_compatibility",
+    "status": "accepted",
+    "baseline_commit": "66041e7fdd7687ee21099f95129dff41933c74dd",
+    "suite_commit": "911bf789e31dc2b1df9586a894e37312375771f3",
+    "runner_sha256": "192058674188670ce90e7fc1446a453e20992ebc426e66cb9b82938c1452a0ab",
+    "candidate_model": null,
+    "score": null,
+    "artifact_sha256": "faaa107c452061ec547f185eea6dfc2bfd4dc07e41f8fb599ab8bc05ae28b6ad",
+    "evaluator_artifacts": {
+      "server.cjs": "f84e170aa785a6fa5caf223a1c8a245f51688f347eefa8e2d0e37e0f5f3cf9e7",
+      "public/index.html": "abf2c41b7fc6c0d7ae081ac7b6ef15af0de658fb9e738bbcde8dfd07aa852848",
+      "public/style.css": "0e90d0c17dd64e139538357240194fc24b8261bc21e4cb887768f1004948b13d",
+      "package.json": "2eb527a56b15c7949329d7582469bcf1fe12aafedf6c6f70d865b5d3c0766a80",
+      "package-lock.json": "1fcbdb915d484b376a5126d4fd5087bd04df618dd8e461aeb0131506ff0bdcaf",
+      "tests/browser.test.cjs": "5d31f58d99d9e6cd51f24e448063349d916acb2fab4c4585a84a969cb3dca63e",
+      "tests/protocol.test.cjs": "cdf15bd3522bf9c74dc60bf307fc56f4050d74d61b45f27341867ce537254a7a"
+    },
+    "evaluator_source": "git_snapshot",
+    "expected_dependency_versions": {
+      "express": "4.22.3",
+      "playwright-core": "1.64.0",
+      "socket.io": "4.8.4",
+      "socket.io-client": "4.8.4"
+    },
+    "environment": {
+      "node": "v24.19.0",
+      "chromium": "154.0.8037.57",
+      "playwright": "1.64.0",
+      "socket_io": "4.8.4",
+      "dependencies": {
+        "express": "4.22.3",
+        "socket.io": "4.8.4",
+        "playwright-core": "1.64.0",
+        "socket.io-client": "4.8.4"
+      }
+    },
+    "counts": {
+      "tests": 17,
+      "pass": 17,
+      "fail": 0,
+      "cancelled": 0,
+      "skipped": 0,
+      "todo": 0
+    },
+    "gate": "behavior_and_regressions",
+    "failed_checks": [],
+    "commands": [
+      {
+        "command": [
+          "node",
+          "--check",
+          "/tmp/p02-client-q9jgcmci/client.js"
+        ],
+        "exit_code": 0,
+        "stdout": "",
+        "stderr": "",
+        "timeout_seconds": 15,
+        "timed_out": false,
+        "launch_error": null,
+        "capture_complete": true,
+        "termination_strategy": null,
+        "elapsed_seconds": 0.032
+      },
+      {
+        "command": [
+          "node",
+          "-e",
+          "\nconst { chromium } = require('playwright-core');\nconst manifest = require('./package.json');\nconst dependencies = Object.fromEntries(\n  Object.keys({ ...manifest.dependencies, ...manifest.devDependencies })\n    .map(name => [name, require(name + '/package.json').version]));\nif (Number(process.versions.node.split('.')[0]) < 22) process.exit(2);\n(async () => {\n  const browser = await chromium.launch({\n    executablePath: process.env.CHROMIUM_PATH || '/usr/bin/chromium',\n    headless: true, args: ['--no-sandbox'],\n  });\n  console.log(JSON.stringify({ node: process.version, chromium: browser.version(),\n    playwright: require('playwright-core/package.json').version,\n    socket_io: require('socket.io/package.json').version, dependencies }));\n  await browser.close();\n})().catch(error => { console.error(error.message); process.exit(2); });\n"
+        ],
+        "exit_code": 0,
+        "stdout": "{\"node\":\"v24.19.0\",\"chromium\":\"154.0.8037.57\",\"playwright\":\"1.64.0\",\"socket_io\":\"4.8.4\",\"dependencies\":{\"express\":\"4.22.3\",\"socket.io\":\"4.8.4\",\"playwright-core\":\"1.64.0\",\"socket.io-client\":\"4.8.4\"}}\n",
+        "stderr": "",
+        "timeout_seconds": 20,
+        "timed_out": false,
+        "launch_error": null,
+        "capture_complete": true,
+        "termination_strategy": null,
+        "elapsed_seconds": 1.319
+      },
+      {
+        "command": [
+          "node",
+          "--test",
+          "--test-reporter=tap",
+          "tests/browser.test.cjs",
+          "tests/protocol.test.cjs"
+        ],
+        "exit_code": 0,
+        "stderr": "",
+        "timeout_seconds": 180,
+        "timed_out": false,
+        "launch_error": null,
+        "capture_complete": true,
+        "termination_strategy": null,
+        "elapsed_seconds": 48.959,
+        "tap_summary": [
+          "# tests 17",
+          "# pass 17",
+          "# fail 0",
+          "# cancelled 0",
+          "# skipped 0",
+          "# todo 0"
+        ],
+        "full_test_stdout_included": false
+      }
+    ]
+  },
+  "boundaries": {
+    "dependency_graph_unchanged": true,
+    "evaluator_commit": "911bf789e31dc2b1df9586a894e37312375771f3",
+    "runner_version": "0.2.1",
+    "starter_hashes": {
+      ".node-version": "7e8a2fa94951112b894a3dbe3d05efef5e9263741fa49125f0a70f40fedab4cc",
+      "package.json": "313b6467e18c7a9b91ab4a208a60fa455dd02e971bab6f99f361d585ca080203",
+      "package-lock.json": "4aef642ad8308c3a87ef328008fce3d75ba4ebd6935edb9f1ac3c833ab1e1727",
+      "server.cjs": "f84e170aa785a6fa5caf223a1c8a245f51688f347eefa8e2d0e37e0f5f3cf9e7",
+      "public/index.html": "7cb6866cc5f603ae89263db31620a99053439650a0e3e86e215ab2cc13cd9665",
+      "public/style.css": "7f4e6e73f8b6ac534369275f9a3461d00afbe7ab1605d46199d50ff25503d323",
+      "public/client.js": "1b559d97a981060467725dbed26545cf175dd383bbb6fdc992e4cb761ef3eaff",
+      "BRIEF.md": "13b49044c82465f988f23709e76027bf7c75849fdaab23848af325c9da0ccef9",
+      "task-manifest.json": "ada80ac2958cf856a82b63d74c632d41349c95ddf0ad2d91626e6657f6ed1e5f"
+    },
+    "runner_sha256": "192058674188670ce90e7fc1446a453e20992ebc426e66cb9b82938c1452a0ab"
+  },
+  "visual_inspection": {
+    "capture": "Headless Chromium at 320x700 with synthetic fixture text",
+    "sha256": "cda2bfb7902c87f0d53bd02cb505315685f207014bf9ba593eac5a752c916820",
+    "inspected": true,
+    "committed": false,
+    "observation": "Current input remains visible; literal earlier markup wraps inside the feedback area. Capture is QA output, not a creative asset or human readability review."
+  },
+  "limits": [
+    "The server handler controls outcomes; this is not a real network-loss study or production reliability validation.",
+    "Recovery text lasts only until another submission or reload. No automatic retry, clipboard operation, extra control or persistent store is added.",
+    "Manual resending may duplicate an already broadcast message; feedback instructs checking the conversation first.",
+    "Human copy/readability, assistive technology, other browsers, adoption and paid demand remain unverified.",
+    "Working-client acceptance is a controlled compatibility probe, not an independent candidate attempt or model score.",
+    "P10 runtime and known-artifact calibration were not rerun locally; their existing records remain historical."
+  ],
+  "manifest": {
+    "command": [
+      "python3",
+      "tools/check_manifest.py"
+    ],
+    "maintained_files": 80
+  }
+}

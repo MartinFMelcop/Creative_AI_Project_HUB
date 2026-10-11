@@ -1,40 +1,41 @@
-# Current assessment — P10 dusk continuity
+# Current assessment — P11 edited-draft timeout recovery
 
-Updated: 2026-10-11 (environment UTC date). Clean `work` at `ac71b7b` matches
-remote main through GitHub. Git transport cannot reach its configured proxy.
-Reviewed current instructions, seed, registry/decisions, P10 code/tests/provenance
-and selected legacy rows, P11 client/server and P02's current preflight guard.
+Updated: 2026-10-11 (client date, America/Sao_Paulo). Clean `work` at `e2cbabe`
+matches remote main through GitHub; Git transport cannot reach its proxy.
+Reviewed instructions, state/registry/seed, decisions, actual P10 scene/provenance,
+P11 client/styles/server/tests and P02's current evaluator boundary.
 
-**Confirmed defect:** five real CLI paths close at DUSK while the response asks
-for another request, basket clearing or renewed conversation. The final cooldown
-wait also says the Keeper is ready to listen despite no available actions.
-Existing tests verify terminal state but miss these contradictory invitations.
+**Confirmed defect:** a timed-out earlier attempt becomes unavailable in the UI
+if the input has changed and no broadcast arrives. Feedback still promises that
+the draft is kept. Real browser submissions and the Socket.IO timer reproduce
+this with controlled dropped/broadcast outcomes; existing tests cover unchanged
+input and successful delayed acknowledgement but omit their combined failure.
 
 | Candidate | Evidence and priority |
 |---|---|
-| P10 final-turn dialogue | Reproduced in actual CLI output; small wording correction preserves mechanics and directly improves the scene |
-| P10 strategic depth / pacing | Two-action cooperation and five waits are observable; whether they harm enjoyment needs reader playthroughs |
-| P02 independent candidate / P11 usability | Current artifacts are inspectable, but independent context and human feedback are unavailable |
-| Other creative seeds | No selected full manuscript, game baseline or media master supports a verified correction here |
+| P11 edited-draft timeout | Reproduced loss of recovery text in an executable user flow; reuse captured text and existing feedback at low implementation cost |
+| P10 dialogue pacing | Current scene has coherent memory/deadline responses; enjoyment of simple cooperation and five waits needs readers before balance changes |
+| P02 independent candidate | No independent artifact/context is available; controlled reference checks cannot supply author performance evidence |
+| Other creative seeds | Inventory supplies selected historical text, not complete game, manuscript or media masters for a verified increment |
 
-Use the existing clock and memory to close requests, and announce cooldown
-readiness only while another turn remains. Removing the deadline would discard
-the opening's purpose; no new timer, choice or personality state is needed.
-[Execution](../evidence/waystone-dialogue/DUSK_RUN.json) compares seven CLI paths,
-32 scene checks and all 6,131 reachable states / 17,994 transitions. Every nontext
-trace field and action menu stays identical; only terminal-dusk text changes.
-The archived source records and new adaptation wording remain distinguishable.
+Retain the earlier attempt as literal feedback when values differ, leaving current
+typing intact. Wrap and preserve whitespace in that existing area; no new control,
+clipboard operation, history store, retry or dependency is necessary. Removing
+new typing or promising definite failure would discard useful work or misrepresent
+unknown delivery. Recovery stays bounded to one feedback message until the next
+submission/reload; manual retries still risk duplication.
 
-Creative review preserves the Keeper's practical voice, herb distraction, refusal
-of false authority and cautious recovery; the deadline now closes the exchange
-without demanding unavailable actions. These are same-agent judgments, not reader
-approval. Product value is clearer cause and consequence in an existing playable
-artifact. **Hypotheses:** cooperation may feel too obvious and five waits may feel
-slow; verify through cooperative/conflict reader sessions before balance changes.
-A narrative-systems portfolio sample is plausible. **Unverified:** human clarity,
-enjoyment, adoption, paid demand and wider distribution rights. No license file
-was found in the repository's maintained file inventory; no commercial license
-is invented. P02/P11 versions, maturity, seed direction and inventory stay unchanged.
+[Execution](../evidence/realtime-chat/DRAFT_RECOVERY_RUN.json) records two baseline
+failures becoming passes, all 38 chat checks, 25 runner tests, the working-client
+17/17 probe and unchanged dependencies/task sources. Narrow output was inspected:
+old markup is literal, long text fits, and current input remains visible. Visual
+identity and creative material stay unchanged; agent inspection is not audience
+or assistive-technology validation. **Hypotheses:** this feedback may help manual
+recovery and support a focused interaction-QA portfolio case; verify through a
+human two-tab recovery session and intended-audience review. **Unverified:** human
+copy/readability, real outage behavior, other browsers, adoption and paid demand.
+The local ephemeral app has no deployment/service contract. Correct stale P11
+README runner wording without changing P02; seed direction and maturity remain.
 
 # Previous assessment — P11 text reflow
 

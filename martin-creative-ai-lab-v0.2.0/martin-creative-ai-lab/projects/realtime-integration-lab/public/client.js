@@ -152,7 +152,9 @@ form.addEventListener('submit', (event) => {
     pending = false;
     button.disabled = !socket.connected;
     if (error) {
-      feedback.textContent = 'Delivery is uncertain. Your draft is kept; check the conversation before sending again.';
+      feedback.textContent = input.value === draft
+        ? 'Delivery is uncertain. Your draft is kept; check the conversation before sending again.'
+        : `Delivery is uncertain. Your current draft is unchanged. Check the conversation before resending this earlier message:\n${draft}`;
     } else if (!response.ok) {
       feedback.textContent = response.error;
     } else if (input.value === draft) {

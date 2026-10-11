@@ -205,7 +205,7 @@
       "maturity": "M4",
       "phase": "local-chat-validated",
       "origin": "github_snapshot_inspected",
-      "next_action": "Review reading with enlarged/spaced text, desktop/narrow resizing, unread feedback and keyboard use with Martin; independent EVAL-001 execution remains a separate gate.",
+      "next_action": "Review edited-draft uncertain delivery and manual recovery, long feedback, keyboard use and enlarged/spaced text with Martin; independent EVAL-001 execution remains separate.",
       "related_projects": [
         "P01",
         "P02",
@@ -221,12 +221,13 @@
         "evidence/realtime-chat/UNREAD_RUN.json",
         "evidence/realtime-chat/ACTIVITY_RUN.json",
         "evidence/realtime-chat/RESIZE_RUN.json",
-        "evidence/realtime-chat/TEXT_REFLOW_RUN.json"
+        "evidence/realtime-chat/TEXT_REFLOW_RUN.json",
+        "evidence/realtime-chat/DRAFT_RECOVERY_RUN.json"
       ],
       "source_id": "LEGACY-002",
-      "maturity_scope": "Local chat 0.1.6: 36 checks (6 protocol, 30 Chromium), including fixed-panel font-size/line/letter-spacing changes, viewport reflow, retained reading anchors and inactive unread counts. Existing send, retention, keyboard and activity checks remain covered. Controlled user styles do not establish native zoom, real minimized-window, human/assistive-technology or other-browser review; no deployment.",
+      "maturity_scope": "Local chat 0.1.7: 38 checks (6 protocol, 32 Chromium), including edited-draft timeout recovery under controlled dropped/broadcast outcomes. Current typing stays intact; earlier text remains literal and wraps at narrow width, with no automatic retry. Existing send, retention, reading/activity/reflow checks pass. Feedback clears on another submission or reload. No real-outage, human copy/usability, assistive-technology or other-browser validation; no deployment.",
       "working_path": "projects/realtime-integration-lab",
-      "working_version": "0.1.6"
+      "working_version": "0.1.7"
     }
   ]
 }

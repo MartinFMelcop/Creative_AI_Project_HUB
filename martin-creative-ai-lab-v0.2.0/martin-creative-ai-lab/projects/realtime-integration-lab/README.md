@@ -1,6 +1,6 @@
 # P11 — Live exchange
 
-**Project:** Real-time Integration Lab / WebSocket. **Version:** 0.1.6.
+**Project:** Real-time Integration Lab / WebSocket. **Version:** 0.1.7.
 **Scope:** one local, ephemeral text conversation. This is a working adaptation
 of the historical Socket.IO exercise, not a raw WebSocket implementation.
 
@@ -20,6 +20,7 @@ The UI renders only the broadcast, avoiding a second optimistic sender copy.
 | No offline buffering, missed-message replay, or automatic retry after acknowledgement timeout | Offline submission, rejoin, new client, and lost-acknowledgement browser tests |
 | A stale connected state does not retain a packet for reconnect replay | Controlled heartbeat-expiry check followed by an actual transport reconnect |
 | New typing is preserved when an earlier send is acknowledged | Controlled delayed-acknowledgement browser test |
+| A timed-out earlier attempt stays available when current typing differs | Real acknowledgement timeout with controlled broadcast/drop outcomes; literal text and narrow-width checks |
 | Only latest 200 messages retained per page | Browser retention test |
 | Follow incoming messages only within 24 CSS pixels of the bottom | Real-browser geometry check |
 | Browsing earlier text keeps the visible message and its pixel offset | Broadcast and variable-height retention checks |
@@ -83,11 +84,20 @@ at their retained message/offset. Inactive unread counts keep the existing rule.
 These are Chromium user-style checks, not native zoom or assistive-technology
 validation; human readability and other browsers remain unverified.
 
+Version 0.1.7 preserves the exact earlier attempt in the existing feedback area
+if its acknowledgement times out after the input has changed. Current typing
+stays untouched. Feedback distinguishes the two texts, keeps markup literal and
+wraps long words without clipping. If the input is unchanged, the original
+draft-kept feedback remains. No new control, persistent store, retry or protocol is added.
+
 On transport interruption Socket.IO reconnects. Messages sent while away are
 not recovered. Existing messages remain in that page's memory until reload or
 retention eviction. Offline drafts require explicit submission after reconnect.
-If an acknowledgement is lost, the UI keeps the draft and reports uncertain
-delivery. Check the conversation before resending; manual retries can duplicate
+If an acknowledgement is lost, the UI reports uncertain delivery. Current typing
+stays in the input; an earlier attempt displaced by edits remains in feedback
+until another submission or reload. It is page-local recovery text, not saved
+history or confirmation that a peer received the message. Check the conversation
+before resending; manual retries can duplicate
 an already delivered message. This prototype makes no distributed exactly-once
 claim and has no persistence, identities, rooms, or production service contract.
 
@@ -162,7 +172,8 @@ recorded separately in the lab state; no npm package or hosted service is releas
 
 ## Evidence, contribution, and next step
 
-See [text-reflow evidence](../../evidence/realtime-chat/TEXT_REFLOW_RUN.json),
+See [draft-recovery evidence](../../evidence/realtime-chat/DRAFT_RECOVERY_RUN.json),
+[prior text-reflow evidence](../../evidence/realtime-chat/TEXT_REFLOW_RUN.json),
 [prior viewport resize evidence](../../evidence/realtime-chat/RESIZE_RUN.json),
 [activity-aware unread evidence](../../evidence/realtime-chat/ACTIVITY_RUN.json),
 [prior unread-navigation evidence](../../evidence/realtime-chat/UNREAD_RUN.json),
@@ -189,7 +200,7 @@ recorded 0.1.1 client; all five pass on the correction. These checks establish
 scroll geometry for that browser/viewport, not human usability or all layouts.
 P02 keeps its 17 send-policy checks. The historical runner 0.1.4
 [recalibrated the P11 0.1.3 runtime](../../evidence/evaluation-task/UNREAD_CALIBRATION.json)
-without changing the nine-file starter contract. Current runner 0.2.0 executes
+without changing the nine-file starter contract. Current runner 0.2.1 executes
 its own committed evaluator snapshot, so this working-client update does not
 repin that task. The nineteen reading/activity/reflow checks remain P11-only.
 
@@ -204,9 +215,18 @@ actual Chromium viewport dimensions, including 1280-pixel desktop and 390-pixel
 narrow widths, and verify retention and native tab focus after reflow. They do
 not establish every layout, browser zoom, font-only reflow or human usability.
 
-The three new text-reflow checks fail on committed 0.1.5 and pass on 0.1.6;
-the full suite passes 36 checks (6 protocol, 30 Chromium). They explicitly apply
+The three text-reflow checks failed on committed 0.1.5 and passed on 0.1.6;
+that suite passed 36 checks (6 protocol, 30 Chromium). They explicitly apply
 user styles while asserting unchanged panel dimensions. They cover enlargement
 and reset, line/letter spacing, subsequent eviction, and native tab focus after
 reflow. P02's unchanged pinned suite also accepts the corrected client at 17/17;
 this is a controlled compatibility probe, not an independent candidate attempt.
+
+The two new draft-recovery checks fail on 0.1.6 and pass on 0.1.7; all 38 checks
+pass (6 protocol, 32 Chromium). Each submits through the real form and timer;
+an evaluator-owned server handler controls whether the earlier message is
+broadcast, while withholding its acknowledgement. Both outcomes preserve new
+typing and earlier text, render markup literally at 320-pixel width, and make
+one attempt. The working client still passes P02's pinned 17 checks. Controlled
+faults do not establish real network-outage reliability, human copy/readability
+or assistive-technology behavior. Human review remains the next gate.
