@@ -1,10 +1,10 @@
 # SEED — Martin Creative AI Lab
 
-**Version:** 0.4.2
+**Version:** 0.4.3
 **Data-base:** 10 de outubro de 2026  
 **Autor e responsável pelo portfólio:** Martin Melcop Neto  
 **Working language:** English for new documentation, plans, code comments, UI, and reports. Preserve original creative titles and historical source languages.
-**Current state:** selected historical sources, published P11 chat reading correction 0.1.2 and P02 runtime recalibration 0.1.2 (starter contract 0.1.0). No independent model evaluation, migrated game, finished music, or public hosting is claimed.
+**Current state:** registry reference QA gate implemented; selected historical sources, published P11 chat reading correction 0.1.2 and P02 runtime recalibration 0.1.2 (starter contract 0.1.0). No independent model evaluation, migrated game, finished music, or public hosting is claimed.
 
 > Construir um laboratório autoral em Git que transforma ideias, obras e experimentos em produtos pequenos, sistemas reutilizáveis e evidências técnicas verificáveis. A IA participa da criação e execução; Martin desenvolve sua capacidade de especificar, compreender, selecionar, corrigir, validar e explicar os resultados.
 
@@ -46,14 +46,19 @@ Se apenas este arquivo estiver disponível, ele é suficiente para iniciar a Fas
 |---|---|
 | Repository | MartinFMelcop/Creative_AI_Project_HUB; actual Git root `/workspace/Creative_AI_Project_HUB`; lab remains nested in its original package directory |
 | Preserved sources | 175 Rave Master texts and 3 WebSocket files; unchanged ZIP and inventory; not a complete RMXP backup |
-| Primary workstream | P11 reading correction 0.1.2; auxiliary P02 runtime recalibration 0.1.2, starter 0.1.0. Both stay M4 for bounded local scopes |
+| Primary workstream | Registry reference validation; P11 reading correction 0.1.2; auxiliary P02 runtime recalibration 0.1.2, starter 0.1.0. Both stay M4 for bounded local scopes |
 | Engine execution | No Unity or RMXP runtime verified; P11 uses Node/Express/Socket.IO |
-| Current verification | 22 chat checks and 15 runner regressions pass. Three reading failures reproduce on 0.1.1; P02 retains 15/17 and 17/17 outcomes. See `evidence/realtime-chat/READING_RUN.json`; prior records stay historical |
+| Current verification | 11 validator regressions, 22 chat checks and 15 runner regressions pass; see `evidence/registry-validation/RUN.json`. Earlier reading reproductions and P02 15/17 and 17/17 calibration remain in their preserved records |
 | Historical verification | v0.2.0 combat/dialogue runner reports remain historical; not rerun during P11 work |
 | Next action | Martin's P11 reading/keyboard review; one independent EVAL-001 client with recorded context/tools/attempts |
 | Other seeds | P01 baseline still absent; P10 remains recovered material; other creative/runtime baselines require targeted recovery |
 | Transfer / shared status | TR-009 validated for P02 task adaptation/calibration only; 10 other transfers remain candidates; no shared component |
-| Portfolio / attribution | Current development published in `f35e2e7`, with remote SHA verified; continuity is in `docs/STATE.md`. Martin supplied direction; Codex implemented/tested. No independent candidate/model result or Martin usability review |
+| Portfolio / attribution | Prior P11/P02 development published in `f35e2e7`; this QA increment's publication is recorded at task closure. Continuity is in `docs/STATE.md`. Martin supplied direction; Codex implemented/tested. No independent candidate/model result or Martin usability review |
+
+Registry evidence paths must resolve to existing files inside the lab; working
+paths must be directories and legacy-source IDs must exist. This documentary
+gate does not validate report contents or promote project maturity. See
+[the QA contract](docs/REGISTRY_VALIDATION.md) for checks and limits.
 
 Maintained [assessment](docs/ASSESSMENT.md) and [plan](docs/IMPROVEMENT_PLAN.md)
 continue the recovery. Preserve the historical source archive; adaptations and

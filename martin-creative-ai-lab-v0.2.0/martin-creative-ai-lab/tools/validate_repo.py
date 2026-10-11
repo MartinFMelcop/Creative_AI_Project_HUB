@@ -69,12 +69,43 @@ def list_refs(row, field, valid_ids, label):
             fail(f"{label}: unknown project in {field}: {ref!r}")
 
 
+def local_reference(value, label, *, directory=False):
+    """Registry paths are literal lab-relative paths, never URLs or anchors."""
+    if not isinstance(value, str) or not value.strip():
+        fail(f"{label}: expected nonempty local path")
+        return
+    path = Path(value)
+    if path.is_absolute() or re.match(r"^[A-Za-z][A-Za-z0-9+.-]*:", value):
+        fail(f"{label}: expected relative path: {value}")
+        return
+    try:
+        destination = (ROOT / path).resolve()
+    except (OSError, ValueError, RuntimeError) as exc:
+        fail(f"{label}: invalid path: {value!r}: {exc}")
+        return
+    if not destination.is_relative_to(ROOT):
+        fail(f"{label}: target leaves repository: {value}")
+    elif not (destination.is_dir() if directory else destination.is_file()):
+        kind = "directory" if directory else "file"
+        fail(f"{label}: missing {kind}: {value}")
+
+
+def evidence_refs(row, label):
+    refs = row.get("evidence")
+    if not isinstance(refs, list):
+        fail(f"{label}: evidence must be a list")
+        return
+    for index, ref in enumerate(refs):
+        local_reference(ref, f"{label}: evidence[{index}]")
+
+
 def main():
     projects = read_registry("projects.json", "projects")
     transfers = read_registry("transfers.json", "transfers")
     assets = read_registry("assets.json", "assets")
     sources = read_registry("legacy_sources.json", "sources")
     ids = {r["id"] for r in projects if isinstance(r.get("id"), str)}
+    source_ids = {r["id"] for r in sources if isinstance(r.get("id"), str)}
     slugs = set()
     for row in projects:
         label = str(row.get("id", "<missing-id>"))
@@ -92,17 +123,25 @@ def main():
             fail(f"{label}: invalid status")
         if not isinstance(row.get("maturity"), str) or row["maturity"] not in MATURITIES:
             fail(f"{label}: invalid maturity")
-        if not isinstance(row.get("evidence"), list):
-            fail(f"{label}: evidence must be a list")
+        evidence_refs(row, label)
+        if "working_path" in row:
+            local_reference(row["working_path"], f"{label}: working_path", directory=True)
+        if "source_id" in row:
+            source_id = row["source_id"]
+            if not isinstance(source_id, str) or source_id not in source_ids:
+                fail(f"{label}: unknown source_id: {source_id!r}")
         list_refs(row, "related_projects", ids, label)
     for row in transfers:
         label = str(row.get("id", "<missing-id>"))
+        evidence_refs(row, label)
         for field in ("source_project", "target_project"):
             if not isinstance(row.get(field), str) or row[field] not in ids:
                 fail(f"{label}: unknown {field}")
         if row.get("source_project") == row.get("target_project"):
             fail(f"{label}: transfer requires different projects")
     for row in assets:
+        if "evidence" in row:
+            evidence_refs(row, str(row.get("id")))
         list_refs(row, "consumer_projects", ids, str(row.get("id")))
 
     try:

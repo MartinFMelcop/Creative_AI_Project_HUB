@@ -6,6 +6,16 @@ was extracted and no complete game, manuscript, image, or audio corpus was audit
 in this session. This assessment continues the v0.2.0 recovery and v0.3.0 increment
 described in [the seed](../SEED.md) and [legacy guide](LEGACY_REPOSITORIES.md).
 
+## Current QA finding — registry references
+
+The checkout has synchronized the newer published work through `b5c0ced`.
+The registry gate previously accepted missing evidence files, invalid working
+paths and unknown legacy-source IDs. These concrete false passes justify a
+bounded QA increment. The new [contract](REGISTRY_VALIDATION.md) closes those
+gaps; project maturity and creative/runtime boundaries in the table remain.
+No further creative source recovery was performed. Earlier assessment scope and
+execution statements below are prior iteration context.
+
 ## Evidence and opportunities
 
 | Projects / resources | Available evidence | Strength / issue | Current evidence boundary |

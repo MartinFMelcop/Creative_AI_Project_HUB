@@ -197,3 +197,22 @@ rather than an incompatible intermediate. No shared component/model result.
 **Revisit:** human feedback, resize/zoom/other browsers, rich media, retention
 rules or repeated runtime changes that justify an isolated evaluator fixture.
 Keep pixel geometry distinct from human usability.
+
+## ADR-013 — validate registry references without evaluating their claims
+
+**Date:** 2026-10-10 (client date). **Status:** implemented and locally verified.
+**Authority:** current development/publication request; work by Codex.
+
+Missing registry evidence could pass the documentary gate. Use a common literal
+lab-relative path checker for evidence files and optional working directories,
+resolving symlinks before containment checks; cross-check project source IDs.
+Require project/transfer evidence lists; retain optional asset evidence and empty
+lists for seeds/candidates. Schema version 1 and existing registries remain valid.
+
+Eight new regression methods fail against the recorded implementation. All 11
+current methods pass. Existence/type checking is deliberately bounded: parsing
+heterogeneous evidence and imposing maturity rules would require separate
+contracts. No external-link fetching, new dependency or framework is justified.
+
+**Revisit:** another evidence format, external evidence policy, maturity gate or
+registry schema migration. Keep source integrity distinct from claim validation.

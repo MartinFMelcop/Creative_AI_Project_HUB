@@ -30,3 +30,11 @@ and [state](STATE.md) record evidence and publication confirmation.
 Next: Martin's reading/keyboard review and one independently produced EVAL-001
 client with explicit context/tools/attempts. Neither is implied by this increment.
 Engine/media recovery stays conditional; no calendar or task-count target is added.
+
+## QA contract — v0.4.3
+
+Registry evidence, working directories and source IDs now have executable
+reference validation. See [the contract](REGISTRY_VALIDATION.md) and
+[current state](STATE.md). This closes an integrity gap without adding a phase,
+task inventory, project maturity claim or product version. The existing human
+review and independent EVAL-001 candidate gates remain next.

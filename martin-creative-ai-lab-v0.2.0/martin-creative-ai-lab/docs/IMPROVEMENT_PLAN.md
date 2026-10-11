@@ -1,8 +1,25 @@
 # Improvement plan
 
-Updated: 2026-10-11. One primary workstream; no mandatory backlog expansion.
+Updated: 2026-10-10 (client date). One primary workstream; no mandatory backlog expansion.
 
-## Current iteration — P11 reading position and P02 compatibility
+## Current iteration — registry reference validation
+
+**Priority:** 1 — completed and locally verified; publication at task closure.
+Implemented the missing integrity gate without changing project
+runtime or creating more evaluation tasks. Existing evidence references were
+type-checked but missing targets passed. Centralize local-path validation for
+project/transfer evidence, optional asset evidence and project working paths;
+cross-check source IDs. Preserve valid empty evidence lists and schema version 1.
+
+**Acceptance:** reproduce false passes on the recorded validator; pass all 11
+current validator regressions, current documentary/archive checks, 15 P02 runner
+regressions and the 22-test P11 suite. Preserve historical sources and refresh
+the final manifest. [QA contract](REGISTRY_VALIDATION.md) defines the boundary.
+No new dependency, product version, model score or maturity promotion.
+
+**Next:** existing human-review and independent-candidate gates below remain.
+
+## Previous completed iteration — P11 reading position and P02 compatibility
 
 **Priority:** 1 — completed, verified and published in `f35e2e7`. At clean published base `7866785`, the chat receive
 handler always scrolls to the bottom. Incoming text can interrupt reading earlier

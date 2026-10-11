@@ -7,7 +7,7 @@ experiments with documented evidence and reusable learning.
 The working lab is nested under
 [martin-creative-ai-lab](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/README.md).
 The directory retains its original package name; its maintained seed is now
-v0.4.2. Historical source snapshots remain unchanged.
+v0.4.3. Historical source snapshots remain unchanged.
 
 - [Current state](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/docs/STATE.md)
 - [Assessment and priorities](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/docs/IMPROVEMENT_PLAN.md)
