@@ -10,7 +10,7 @@ practice-task harness, and a playable terminal dialogue scene. No game migration
 model benchmark, finished music catalogue, or public deployment is claimed.
 The containing directory keeps its original v0.2.0 package name. Latest verified
 project versions are in the state and registry; SEED's current-state summary
-precedes this P11 patch and remains unchanged.
+precedes the latest verified increments and remains unchanged.
 
 ## Start here
 
@@ -18,6 +18,7 @@ precedes this P11 patch and remains unchanged.
 - [Assessment](docs/ASSESSMENT.md) and [improvement plan](docs/IMPROVEMENT_PLAN.md): evidence and selected priorities.
 - [P11 — Live exchange](projects/realtime-integration-lab/README.md): install, run, test, provenance, and contribution.
 - [P02 — EVAL-001](evaluations/chat-send-buffering/README.md): export a starter, check a client, and inspect limits.
+- [Current dependency-gate evidence](evidence/evaluation-task/DEPENDENCY_RUN.json): installed direct version checks, controlled mismatch and unchanged calibration.
 - [P10 — The Last Waystone](projects/waystone-dialogue/README.md): play a stateful dialogue scene, restart, inspect traces and verify its origin.
 - [Current dialogue evidence](evidence/waystone-dialogue/DIALOGUE_RUN.json): 29 checks, contextual responses, before/after CLI comparisons and unchanged rules across all reachable states.
 - [Current text-reflow evidence](evidence/realtime-chat/TEXT_REFLOW_RUN.json): fixed-panel user styles, reading anchors, full chat checks and pinned evaluator compatibility.

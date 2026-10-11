@@ -43,12 +43,13 @@
         "evidence/evaluation-task/SYNTAX_RUN.json",
         "evidence/evaluation-task/UNREAD_CALIBRATION.json",
         "evidence/evaluation-task/SNAPSHOT_RUN.json",
-        "evidence/continuous-integration/FOLLOWUP_RUN.json"
+        "evidence/continuous-integration/FOLLOWUP_RUN.json",
+        "evidence/evaluation-task/DEPENDENCY_RUN.json"
       ],
       "working_path": "evaluations/chat-send-buffering",
-      "working_version": "0.2.0",
+      "working_version": "0.2.1",
       "historical_name": "Unity AI Evaluation & QA Lab",
-      "maturity_scope": "Runner 0.2.0 executes committed evaluator snapshots with compatible evaluator-owned modules; 23 regressions include a hosted cleanup-test reaping correction. Controlled calibration preserves baseline 15/17 and reference 17/17. Nine starter files and the 17-check task remain unchanged. Installed module bytes and non-POSIX symlinks are not independently verified; no candidate score or sandbox.",
+      "maturity_scope": "Runner 0.2.1 executes committed evaluator snapshots, checks the working lock and installed direct version declarations, and stops mismatches or incomplete reports as inconclusive environment results. All 25 runner regressions pass; controlled calibration retains baseline 15/17 and reference 17/17. Nine exports and the 17-check task stay unchanged. Installed bytes, transitive versions and non-POSIX symlinks remain unverified; no independent candidate score or sandbox.",
       "task_contract_version": "0.1.0"
     },
     {

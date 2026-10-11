@@ -14,7 +14,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 TASK = "EVAL-001"
-VERSION = "0.2.0"
+VERSION = "0.2.1"
 TASK_VERSION = "0.1.0"
 BASELINE = "66041e7fdd7687ee21099f95129dff41933c74dd"
 SUITE_COMMIT = "911bf789e31dc2b1df9586a894e37312375771f3"
@@ -243,6 +243,10 @@ def check(workspace):
                 return record
             probe = """
 const { chromium } = require('playwright-core');
+const manifest = require('./package.json');
+const dependencies = Object.fromEntries(
+  Object.keys({ ...manifest.dependencies, ...manifest.devDependencies })
+    .map(name => [name, require(name + '/package.json').version]));
 if (Number(process.versions.node.split('.')[0]) < 22) process.exit(2);
 (async () => {
   const browser = await chromium.launch({
@@ -251,7 +255,7 @@ if (Number(process.versions.node.split('.')[0]) < 22) process.exit(2);
   });
   console.log(JSON.stringify({ node: process.version, chromium: browser.version(),
     playwright: require('playwright-core/package.json').version,
-    socket_io: require('socket.io/package.json').version }));
+    socket_io: require('socket.io/package.json').version, dependencies }));
   await browser.close();
 })().catch(error => { console.error(error.message); process.exit(2); });
 """
@@ -260,7 +264,24 @@ if (Number(process.versions.node.split('.')[0]) < 22) process.exit(2);
             if ready["timed_out"] or ready["launch_error"] or ready["exit_code"]:
                 record.update(gate="environment", reason="Browser/dependency preflight failed")
                 return record
-            record["environment"] = json.loads(ready["stdout"])
+            lock = dependency_lock((runtime / "package-lock.json").read_bytes())
+            root = lock["packages"][""]
+            expected = {name: lock["packages"][f"node_modules/{name}"]["version"]
+                        for name in {*root.get("dependencies", {}),
+                                     *root.get("devDependencies", {})}}
+            record["expected_dependency_versions"] = dict(sorted(expected.items()))
+            try:
+                report = json.loads(ready["stdout"])
+                if not isinstance(report, dict) or not isinstance(report.get("dependencies"), dict):
+                    raise ValueError("Preflight did not report installed dependency versions")
+                record["environment"] = report
+                for name, version in sorted(expected.items()):
+                    actual = report["dependencies"].get(name)
+                    if actual != version:
+                        raise ValueError(f"Installed {name} version {actual!r}; pinned {version!r} required")
+            except ValueError as exc:
+                record.update(gate="environment", reason=str(exc))
+                return record
             environment["CHAT_TEST_CLIENT_PATH"] = str(client)
             tests = invoke(["node", "--test", "--test-reporter=tap", *TESTS],
                            runtime, environment, 180)

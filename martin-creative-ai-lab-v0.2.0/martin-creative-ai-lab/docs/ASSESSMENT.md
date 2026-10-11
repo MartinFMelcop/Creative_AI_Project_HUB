@@ -1,4 +1,41 @@
-# Current assessment — P11 text reflow
+# Current assessment — P02 installed dependency versions
+
+Updated: 2026-10-11 (environment UTC date). Clean `work` at `b227863` matches
+remote main through GitHub. The configured Git proxy remains unreachable.
+Assessment uses current state/registry/seed, decisions, P10's scene, P11's client
+and the actual evaluator and tests. Missing creative baselines remain unverified.
+
+**Confirmed defect:** runner 0.2.0 checks lock compatibility but does not enforce
+the installed versions it reports. An isolated copy with Socket.IO's version
+declaration changed to `0.0.0-controlled` still accepts the pinned reference at
+17/17. No package code, lock or working installation was changed. This proves
+the prerequisite omission, not behavior of another Socket.IO release.
+
+| Candidate | Evidence and decision |
+|---|---|
+| P02 installed direct versions | Reproduced incorrect prerequisite acceptance; a small guard prevents artifact verdicts under reported version drift |
+| P10 dialogue pacing / P11 reading experience | Existing artifacts are inspectable; human comprehension/enjoyment gates cannot be supplied by agent self-review |
+| Independent P02 candidate | Important next evaluation, but no independent artifact/context is available |
+| Other game/manuscript/media seeds | No selected executable baseline or full creative master supports a concrete correction here |
+
+Compare all direct runtime/dev declarations with the pinned lock. Missing or
+invalid reports and mismatches stop as inconclusive environment results, rather
+than rejecting the submitted artifact. Reuse preflight and lock metadata; removing
+tests or the gate would leave the same reliability gap. No new subsystem,
+dependency, candidate task or creative content is justified. This improves an
+existing executable evaluator and its diagnostic value at modest maintenance cost.
+
+[Evidence](../evidence/evaluation-task/DEPENDENCY_RUN.json) records the before/after
+fault, 25 passing runner tests, unchanged exports and 15/17 versus 17/17 calibration.
+**Hypothesis:** stale direct package installations could otherwise contaminate a
+future candidate verdict; verify by testing a real alternate release in isolation
+if that operational fault occurs. Direct metadata checks do not authenticate code
+or verify transitive versions. **Unverified:** independent author performance,
+audience preference, adoption or paid demand. A reproducible QA portfolio sample
+is plausible; intended-audience review and actual customer evidence are still
+needed. No creative material changes, so no new creative approval is claimed.
+
+# Previous assessment — P11 text reflow
 
 Updated: 2026-10-11 (environment UTC date). Clean `work` at `3d2b271` matches
 remote main through GitHub. Git transport cannot reach its configured proxy.

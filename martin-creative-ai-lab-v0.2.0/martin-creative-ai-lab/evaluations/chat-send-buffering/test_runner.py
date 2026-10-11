@@ -33,6 +33,16 @@ class TaskRunnerTests(unittest.TestCase):
         self.addCleanup(self.scratch.cleanup)
         self.workspace = Path(self.scratch.name) / "candidate"
         runner.prepare(self.workspace)
+        lock = json.loads(runner.git_bytes(runner.SUITE_COMMIT, 'package-lock.json'))
+        self.environment_report = {'node': 'v24.19.0', 'chromium': 'test-browser',
+                                   'dependencies': {name: lock['packages'][f'node_modules/{name}']['version']
+                                                    for name in ('express', 'socket.io', 'socket.io-client', 'playwright-core')}}
+        self.passing_summary = '# tests 17\n# pass 17\n# fail 0\n# cancelled 0\n# skipped 0\n# todo 0\n'
+
+    def successful_command(self, stdout=None):
+        return {'exit_code': 0, 'stdout': stdout if stdout is not None else json.dumps(self.environment_report),
+                'stderr': '', 'timed_out': False, 'launch_error': None,
+                'capture_complete': True}
 
     def test_process_state_handles_reaping_without_hiding_other_states_or_errors(self):
         with patch.object(Path, 'read_text', return_value='123 (probe) S 1 2 3'):
@@ -166,7 +176,7 @@ class TaskRunnerTests(unittest.TestCase):
     def test_timeout_at_each_gate_is_inconclusive_and_keeps_diagnostics(self):
         actual_invoke = runner.invoke
         command = [sys.executable, '-c', "import time; print('gate progress',flush=True); time.sleep(60)"]
-        success = {'exit_code': 0, 'stdout': '{}', 'stderr': '', 'timed_out': False, 'launch_error': None}
+        success = self.successful_command()
         for index, gate in enumerate(('client_syntax', 'environment', 'behavior_and_regressions')):
             with self.subTest(gate=gate):
                 calls = []
@@ -183,7 +193,7 @@ class TaskRunnerTests(unittest.TestCase):
                 self.assertTrue(record['commands'][-1]['timed_out'])
 
     def test_pass_summary_after_deadline_cannot_be_accepted(self):
-        success = {'exit_code': 0, 'stdout': '{}', 'stderr': '', 'timed_out': False, 'launch_error': None}
+        success = self.successful_command()
         late = {**success, 'timed_out': True,
                 'stdout': '# tests 17\n# pass 17\n# fail 0\n# cancelled 0\n# skipped 0\n# todo 0\n'}
         with patch.object(runner, 'invoke', side_effect=[success, success, late]):
@@ -257,9 +267,7 @@ class TaskRunnerTests(unittest.TestCase):
             observed.append(cwd)
             for name in runner.EVALUATOR_FILES:
                 self.assertEqual((cwd / name).read_bytes(), runner.git_bytes(runner.SUITE_COMMIT, name))
-            return {'exit_code': 0, 'stdout': passing if len(observed) == 3 else '{}',
-                    'stderr': '', 'timed_out': False, 'launch_error': None,
-                    'capture_complete': True}
+            return self.successful_command(passing if len(observed) == 3 else None)
         with patch.object(runner, 'PROJECT', project), patch.object(runner, 'invoke', side_effect=inspect):
             record = runner.check(self.workspace)
         self.assertEqual(record['status'], 'accepted')
@@ -267,6 +275,41 @@ class TaskRunnerTests(unittest.TestCase):
         self.assertEqual(len(observed), 3)
         self.assertTrue(all(path == observed[0] and path != project for path in observed))
         self.assertFalse(observed[0].exists(), 'Temporary evaluator must be cleaned up')
+
+    def test_each_installed_direct_version_mismatch_stops_before_behavior(self):
+        for name, version in self.environment_report['dependencies'].items():
+            report = json.loads(json.dumps(self.environment_report))
+            report['dependencies'][name] = '0.0.0-controlled'
+            with self.subTest(package=name), patch.object(runner, 'invoke', side_effect=[
+                    self.successful_command(), self.successful_command(json.dumps(report)),
+                    self.successful_command(self.passing_summary)]) as invoke:
+                record = runner.check(self.workspace)
+                self.assertEqual(record['status'], 'inconclusive')
+                self.assertEqual(record['gate'], 'environment')
+                self.assertIn(name, record['reason'])
+                self.assertIn(version, record['reason'])
+                self.assertIn('0.0.0-controlled', record['reason'])
+                self.assertEqual(record['environment'], report)
+                self.assertEqual(record['expected_dependency_versions'][name], version)
+                self.assertNotIn('counts', record)
+                self.assertEqual(invoke.call_count, 2, 'No behavior verdict with mismatched prerequisites')
+
+    def test_missing_or_malformed_version_reports_stop_before_behavior(self):
+        incomplete = json.loads(json.dumps(self.environment_report))
+        del incomplete['dependencies']['socket.io-client']
+        wrong_type = json.loads(json.dumps(self.environment_report))
+        wrong_type['dependencies']['express'] = 4
+        for stdout in ('not json', '[]', '{}', '{"dependencies": null}',
+                       json.dumps(incomplete), json.dumps(wrong_type)):
+            with self.subTest(report=stdout), patch.object(runner, 'invoke', side_effect=[
+                    self.successful_command(), self.successful_command(stdout),
+                    self.successful_command(self.passing_summary)]) as invoke:
+                record = runner.check(self.workspace)
+                self.assertEqual(record['status'], 'inconclusive')
+                self.assertEqual(record['gate'], 'environment')
+                self.assertTrue(record['reason'])
+                self.assertNotIn('counts', record)
+                self.assertEqual(invoke.call_count, 2)
 
     def test_changed_dependency_graph_is_inconclusive_before_execution(self):
         project = self.dependency_source()

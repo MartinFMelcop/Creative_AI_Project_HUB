@@ -1,4 +1,19 @@
-# Current increment — P11 text reflow
+# Current increment — P02 installed direct versions
+
+Correct the reproduced prerequisite omission in runner 0.2.0: reported Socket.IO
+version drift still permits an accepted artifact. Compare all installed direct
+runtime/dev version declarations against the committed evaluator lock before
+behavior tests. Record expected/actual versions and make mismatches or missing
+reports inconclusive environment results. No installation, task or suite change.
+
+Acceptance is met: the same isolated metadata fault stops at preflight; two new
+methods cover four package mismatches and six invalid reports; all 25 runner
+tests pass. Known calibration remains 15/17 baseline and 17/17 reference, with all
+nine exports unchanged. Version metadata is verified, not dependency code or
+transitive versions. Next: an independent client with recorded context/tools and
+attempts; no additional benchmark task or creative expansion is scheduled.
+
+# Previous increment — P11 text reflow
 
 Correct the reproduced loss of reading position when text grows/reflows inside
 an unchanged panel. Reuse ResizeObserver and the existing anchor restoration;

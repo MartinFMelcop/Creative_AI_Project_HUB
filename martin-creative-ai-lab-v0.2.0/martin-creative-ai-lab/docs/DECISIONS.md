@@ -460,3 +460,21 @@ controlled working-client compatibility is not an independent evaluation.
 Seed 0.4.6 and bounded maturity stay unchanged. Revisit after human text-reading
 feedback, native zoom, another browser or changing content that this contract
 does not cover.
+
+## ADR-025 — check installed direct versions before artifact verdicts
+
+**Date:** 2026-10-11 (environment UTC date). **Status:** P02 runner 0.2.1.
+
+A controlled evaluator-owned Socket.IO metadata mismatch still yields an accepted
+17/17 artifact with runner 0.2.0, despite its recorded version disagreeing with
+the pinned lock. Compare all installed direct runtime/dev version declarations
+with the committed evaluator lock after preflight and before behavior tests.
+Keep expected and actual versions in the record; missing/malformed reports or
+mismatches are inconclusive environment failures, never artifact rejections.
+
+Two new regression methods cover four package mismatches and six invalid reports;
+25 runner checks pass. Known calibration and all nine exports remain unchanged.
+No installation, new dependency, task revision, maturity promotion or model score
+is introduced. This checks version metadata only: installed bytes and transitive
+versions remain unverified. Revisit if a new pinned package prevents reading its
+metadata or stronger dependency provenance becomes an actual requirement.

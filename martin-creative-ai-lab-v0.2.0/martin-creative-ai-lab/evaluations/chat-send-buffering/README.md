@@ -1,6 +1,6 @@
 # P02 — Chat send-buffering practice task
 
-**Task:** EVAL-001. **Runner version:** 0.2.0. **Starter contract:** 0.1.0. **Runtime:** Python orchestration and
+**Task:** EVAL-001. **Runner version:** 0.2.1. **Starter contract:** 0.1.0. **Runtime:** Python orchestration and
 Node/Socket.IO/Chromium behavior checks. This is P02's first working task, adapted
 from P11; its earlier Unity proposal remains an origin, not a runtime requirement.
 
@@ -54,9 +54,13 @@ the evaluator commit still requires explicit recalibration.
 
 The temporary runtime links to the evaluator-owned P11 `node_modules`. Its
 working dependency lock must match the pinned graph; only top-level and root
-package version metadata may differ. Missing modules, invalid locks or dependency
-changes are inconclusive. No installation or network operation is automatic.
-This verifies lock compatibility, not installed module bytes. POSIX symlink
+package version metadata may differ. Preflight reports all direct runtime/dev
+dependency versions and compares them with that committed lock. A mismatch,
+missing version report, missing modules or invalid/changed lock is inconclusive
+at the environment gate, before behavior tests. Records retain expected versions
+and the actual report. No installation or network operation is automatic.
+This verifies lock compatibility and direct version metadata, not installed
+module bytes or transitive versions. POSIX symlink
 execution is tested; a Windows symlink policy has not been verified.
 
 Records contain the client hash, runner and evaluator hashes, source commits,
@@ -78,7 +82,7 @@ bounded final reap avoid indefinite waiting. The non-POSIX fallback targets only
 the direct process and has not been executed here. This is cleanup, not a sandbox:
 children creating another session/group are outside the group policy.
 
-Runner 0.2.0 leaves the starter contract at 0.1.0, preserving existing exports byte
+Runner 0.2.1 leaves the starter contract at 0.1.0, preserving existing exports byte
 for byte. `runner_version` identifies the correction separately from `task_version`.
 No model identity or score is inferred from an artifact.
 
@@ -107,8 +111,16 @@ Neither proves production outage reliability, human usability, or Unity behavior
 Next: run one independently produced client with recorded context and permitted
 tools. Keep raw artifact acceptance separate from any claim about its author.
 
-Runner 0.2.0 retains P11 commit `911bf789e31dc2b1df9586a894e37312375771f3`
+Runner 0.2.1 retains P11 commit `911bf789e31dc2b1df9586a894e37312375771f3`
 without importing current app sources. Controlled changed-working-project checks
 retain the 15/17 and 17/17 outcomes; all nine exports remain unchanged. The
 original 17 task checks are byte-identical; P11's reading suites remain
 outside EVAL-001. No current app or candidate contract change is required.
+
+[Version-gate evidence](../../evidence/evaluation-task/DEPENDENCY_RUN.json)
+records an isolated Socket.IO package-version declaration changed to
+`0.0.0-controlled`, with code and lock unchanged. Runner 0.2.0 still accepted
+the reference at 17/17; 0.2.1 stops before behavior with an inconclusive environment
+result. All 25 runner regressions pass and normal calibration remains 15/17 and
+17/17. This controlled metadata fault does not test another package release or
+authenticate dependency code; it demonstrates the missing prerequisite guard.
