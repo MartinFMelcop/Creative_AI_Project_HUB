@@ -8,7 +8,7 @@ import json
 from dataclasses import dataclass, field
 from typing import Callable
 
-VERSION = "0.1.2"
+VERSION = "0.1.3"
 MAX_TURNS = 12
 OUTBURST_COOLDOWN = 5
 INTRO = (
@@ -149,6 +149,25 @@ def response_text(variant: Variant | None, state: State) -> str:
             return "Lamplight catches the loose rune on the cleared bench. The Keeper checks a seed pod beside it."
         return "The Keeper picks another seed pod from the wet leaves. The light outside is fading."
 
+    # Close requests that cannot be answered before the scene's dusk deadline.
+    # Successful agreements and departures retain their existing responses.
+    if state.turn + 1 >= MAX_TURNS:
+        if variant.action == "ask":
+            if state.herbs_sorted:
+                return "The basket is sorted. The light's gone; take the rune home tonight."
+            return "My tools are still under these leaves. It's too dark to start the repair now."
+        if variant.action == "bargain":
+            if state.apology_due:
+                return "You haven't withdrawn the false order. I won't agree to the repair. The light's gone."
+            if state.trust >= 40 and not state.herbs_sorted:
+                return "The tools are still under that basket. We can't finish before dark now."
+        if variant.action == "lie" and variant.mood != "OUTBURST":
+            return "There was no council order. Take the rune home. I won't start a repair in the dark."
+        if variant.action == "apologize":
+            if "EVT_NPC_OUTBURST" in state.events:
+                return "I heard you. I'm still not agreeing to the repair. Take the rune home; we're out of daylight."
+            return "You've withdrawn the order. It's too dark to start the repair tonight."
+
     if variant.action == "ask" and state.herbs_sorted:
         return "The basket is sorted. I can see that. Tell me who needs this crossing tonight."
     if variant.action == "bargain" and not state.apology_due:
@@ -230,7 +249,9 @@ class Scene:
             s.cooldown = before["cooldown"] - 1
             if s.cooldown == 0 and s.mood == "OUTBURST":
                 s.mood = "WARY"
-                text += "\nTheir breathing steadies. They are ready to listen again."
+                text += "\nTheir breathing steadies."
+                if s.turn + 1 < MAX_TURNS:
+                    text += " They are ready to listen again."
 
         s.turn += 1
         if (action == "bargain" and s.herbs_sorted and before["trust"] >= 40

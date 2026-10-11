@@ -478,3 +478,15 @@ No installation, new dependency, task revision, maturity promotion or model scor
 is introduced. This checks version metadata only: installed bytes and transitive
 versions remain unverified. Revisit if a new pinned package prevents reading its
 metadata or stronger dependency provenance becomes an actual requirement.
+
+## ADR-026 — close P10 dialogue invitations at the existing deadline
+
+**Date:** 2026-10-11 (environment UTC date). **Status:** P10 CLI 0.1.3.
+
+Five CLI paths invite unavailable follow-up actions on terminal dusk. Render
+final requests from the existing turn clock and memory; announce listening after
+cooldown only if another turn remains. Keep the Keeper's practical voice, the
+cleared bench and unresolved fault relevant. Preserve last-turn agreement and
+departure, source records and every rule. Exhaustive comparison changes text only
+at DUSK. This corrects continuity without changing balance; reader preference and
+five-wait pacing still require independent human feedback.

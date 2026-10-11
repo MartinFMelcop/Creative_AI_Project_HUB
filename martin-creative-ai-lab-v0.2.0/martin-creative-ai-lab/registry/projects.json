@@ -171,7 +171,7 @@
       "maturity": "M4",
       "phase": "dialogue-cli-validated",
       "origin": "github_snapshot_inspected",
-      "next_action": "Reader comparison of cooperative/conflict paths for clarity, repeated requests and five-wait pacing before changing balance or expanding content.",
+      "next_action": "Reader comparison of cooperative/conflict paths, including final-turn closure, clarity and five-wait pacing, before changing balance or expanding content.",
       "related_projects": [
         "P01",
         "P02",
@@ -189,12 +189,13 @@
         "projects/waystone-dialogue/provenance.json",
         "evidence/waystone-dialogue/RUN.json",
         "evidence/waystone-dialogue/TRUST_RUN.json",
-        "evidence/waystone-dialogue/DIALOGUE_RUN.json"
+        "evidence/waystone-dialogue/DIALOGUE_RUN.json",
+        "evidence/waystone-dialogue/DUSK_RUN.json"
       ],
       "source_id": "LEGACY-001",
       "working_path": "projects/waystone-dialogue",
-      "working_version": "0.1.2",
-      "maturity_scope": "Waystone CLI 0.1.2 only: 29 behavior/CLI/source checks, committed-baseline response failures and five real CLI comparisons. Existing memory changes later wording; wait narration has a distinct speaker. All 6,131 default-reachable states and 17,994 transitions preserve 0.1.1 rules and four endings. No independent human narrative/balance review, full personality scoring, assets or engine integration."
+      "working_version": "0.1.3",
+      "maturity_scope": "Waystone CLI 0.1.3 only: 32 behavior/CLI/source checks, three baseline-failing dusk methods and seven actual before/after CLI paths. Final requests close at dusk; recovery announces readiness only while the scene is open. All 6,131 default-reachable states and 17,994 transitions preserve rules, menus, source records and four endings; only terminal-dusk text changes. No independent human narrative/balance review, full personality model, assets or engine integration."
     },
     {
       "id": "P11",

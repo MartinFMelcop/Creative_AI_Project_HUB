@@ -20,7 +20,8 @@ precedes the latest verified increments and remains unchanged.
 - [P02 — EVAL-001](evaluations/chat-send-buffering/README.md): export a starter, check a client, and inspect limits.
 - [Current dependency-gate evidence](evidence/evaluation-task/DEPENDENCY_RUN.json): installed direct version checks, controlled mismatch and unchanged calibration.
 - [P10 — The Last Waystone](projects/waystone-dialogue/README.md): play a stateful dialogue scene, restart, inspect traces and verify its origin.
-- [Current dialogue evidence](evidence/waystone-dialogue/DIALOGUE_RUN.json): 29 checks, contextual responses, before/after CLI comparisons and unchanged rules across all reachable states.
+- [Current dialogue evidence](evidence/waystone-dialogue/DUSK_RUN.json): 32 checks, deadline-aware closing responses, seven CLI comparisons and unchanged rules across all reachable states.
+- [Previous dialogue evidence](evidence/waystone-dialogue/DIALOGUE_RUN.json): 29 checks, contextual responses and unchanged rules across all reachable states.
 - [Current text-reflow evidence](evidence/realtime-chat/TEXT_REFLOW_RUN.json): fixed-panel user styles, reading anchors, full chat checks and pinned evaluator compatibility.
 - [Prior activity evidence](evidence/realtime-chat/ACTIVITY_RUN.json): inactive-page arrivals, tab-title counts, focus/visibility reset and bounded history.
 - [Prior unread-navigation evidence](evidence/realtime-chat/UNREAD_RUN.json): arrival counts and keyboard focus.

@@ -1,39 +1,40 @@
-# Current assessment — P02 installed dependency versions
+# Current assessment — P10 dusk continuity
 
-Updated: 2026-10-11 (environment UTC date). Clean `work` at `b227863` matches
-remote main through GitHub. The configured Git proxy remains unreachable.
-Assessment uses current state/registry/seed, decisions, P10's scene, P11's client
-and the actual evaluator and tests. Missing creative baselines remain unverified.
+Updated: 2026-10-11 (environment UTC date). Clean `work` at `ac71b7b` matches
+remote main through GitHub. Git transport cannot reach its configured proxy.
+Reviewed current instructions, seed, registry/decisions, P10 code/tests/provenance
+and selected legacy rows, P11 client/server and P02's current preflight guard.
 
-**Confirmed defect:** runner 0.2.0 checks lock compatibility but does not enforce
-the installed versions it reports. An isolated copy with Socket.IO's version
-declaration changed to `0.0.0-controlled` still accepts the pinned reference at
-17/17. No package code, lock or working installation was changed. This proves
-the prerequisite omission, not behavior of another Socket.IO release.
+**Confirmed defect:** five real CLI paths close at DUSK while the response asks
+for another request, basket clearing or renewed conversation. The final cooldown
+wait also says the Keeper is ready to listen despite no available actions.
+Existing tests verify terminal state but miss these contradictory invitations.
 
-| Candidate | Evidence and decision |
+| Candidate | Evidence and priority |
 |---|---|
-| P02 installed direct versions | Reproduced incorrect prerequisite acceptance; a small guard prevents artifact verdicts under reported version drift |
-| P10 dialogue pacing / P11 reading experience | Existing artifacts are inspectable; human comprehension/enjoyment gates cannot be supplied by agent self-review |
-| Independent P02 candidate | Important next evaluation, but no independent artifact/context is available |
-| Other game/manuscript/media seeds | No selected executable baseline or full creative master supports a concrete correction here |
+| P10 final-turn dialogue | Reproduced in actual CLI output; small wording correction preserves mechanics and directly improves the scene |
+| P10 strategic depth / pacing | Two-action cooperation and five waits are observable; whether they harm enjoyment needs reader playthroughs |
+| P02 independent candidate / P11 usability | Current artifacts are inspectable, but independent context and human feedback are unavailable |
+| Other creative seeds | No selected full manuscript, game baseline or media master supports a verified correction here |
 
-Compare all direct runtime/dev declarations with the pinned lock. Missing or
-invalid reports and mismatches stop as inconclusive environment results, rather
-than rejecting the submitted artifact. Reuse preflight and lock metadata; removing
-tests or the gate would leave the same reliability gap. No new subsystem,
-dependency, candidate task or creative content is justified. This improves an
-existing executable evaluator and its diagnostic value at modest maintenance cost.
+Use the existing clock and memory to close requests, and announce cooldown
+readiness only while another turn remains. Removing the deadline would discard
+the opening's purpose; no new timer, choice or personality state is needed.
+[Execution](../evidence/waystone-dialogue/DUSK_RUN.json) compares seven CLI paths,
+32 scene checks and all 6,131 reachable states / 17,994 transitions. Every nontext
+trace field and action menu stays identical; only terminal-dusk text changes.
+The archived source records and new adaptation wording remain distinguishable.
 
-[Evidence](../evidence/evaluation-task/DEPENDENCY_RUN.json) records the before/after
-fault, 25 passing runner tests, unchanged exports and 15/17 versus 17/17 calibration.
-**Hypothesis:** stale direct package installations could otherwise contaminate a
-future candidate verdict; verify by testing a real alternate release in isolation
-if that operational fault occurs. Direct metadata checks do not authenticate code
-or verify transitive versions. **Unverified:** independent author performance,
-audience preference, adoption or paid demand. A reproducible QA portfolio sample
-is plausible; intended-audience review and actual customer evidence are still
-needed. No creative material changes, so no new creative approval is claimed.
+Creative review preserves the Keeper's practical voice, herb distraction, refusal
+of false authority and cautious recovery; the deadline now closes the exchange
+without demanding unavailable actions. These are same-agent judgments, not reader
+approval. Product value is clearer cause and consequence in an existing playable
+artifact. **Hypotheses:** cooperation may feel too obvious and five waits may feel
+slow; verify through cooperative/conflict reader sessions before balance changes.
+A narrative-systems portfolio sample is plausible. **Unverified:** human clarity,
+enjoyment, adoption, paid demand and wider distribution rights. No license file
+was found in the repository's maintained file inventory; no commercial license
+is invented. P02/P11 versions, maturity, seed direction and inventory stay unchanged.
 
 # Previous assessment — P11 text reflow
 

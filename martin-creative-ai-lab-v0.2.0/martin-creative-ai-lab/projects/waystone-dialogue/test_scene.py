@@ -18,6 +18,55 @@ ROOT = HERE.parents[1]
 
 
 class SceneTests(unittest.TestCase):
+    def test_last_turn_requests_close_without_inviting_unavailable_followups(self):
+        cases = [
+            ([], "ask", "Start with this basket"),
+            (["herbs"], "ask", "Tell me who"),
+            ([], "bargain", "Clear this basket"),
+            ([], "lie", "Ask me yourself"),
+            (["lie"], "apologize", "Tell me what"),
+            (["lie"], "bargain", "First, correct"),
+        ]
+        for setup, action, invitation in cases:
+            with self.subTest(setup=setup, action=action):
+                live, late = Scene(), Scene()
+                for scene in (live, late):
+                    for choice in setup:
+                        scene.act(choice)
+                live_response = live.act(action)
+                self.assertIn(invitation, live_response["text"])
+                for _ in range(MAX_TURNS - len(setup) - 1):
+                    late.act("wait")
+                final = late.act(action)
+                self.assertNotIn(invitation, final["text"])
+                self.assertNotEqual(final["text"], live_response["text"])
+                self.assertEqual(final["variant_id"], live_response["variant_id"])
+                self.assertEqual((late.state.turn, late.state.ending), (MAX_TURNS, "DUSK"))
+                self.assertEqual(late.available_actions(), [])
+
+    def test_recovery_invites_listening_only_while_the_scene_is_open(self):
+        for delay in (0, MAX_TURNS - 4 - OUTBURST_COOLDOWN):
+            with self.subTest(delay=delay):
+                scene = Scene()
+                for choice in ["wait"] * delay + ["lie"] * 4:
+                    scene.act(choice)
+                for _ in range(OUTBURST_COOLDOWN):
+                    final = scene.act("wait")
+                self.assertEqual((scene.state.mood, scene.state.cooldown), ("WARY", 0))
+                self.assertIn("breathing steadies", final["text"])
+                self.assertEqual(final["speaker"], "Narrator")
+                if delay:
+                    self.assertEqual(scene.state.ending, "DUSK")
+                    self.assertNotIn("ready to listen", final["text"])
+                    before = scene.state.snapshot()
+                    with self.assertRaises(ValueError):
+                        scene.act("apologize")
+                    self.assertEqual(scene.state.snapshot(), before)
+                else:
+                    self.assertIsNone(scene.state.ending)
+                    self.assertIn("ready to listen", final["text"])
+                    self.assertIn("apologize", scene.available_actions())
+
     def test_help_is_acknowledged_without_promising_a_blocked_repair(self):
         for trust, lie in [(45, False), (39, False), (45, True)]:
             with self.subTest(trust=trust, lie=lie):
@@ -367,6 +416,19 @@ class CliTests(unittest.TestCase):
 
     def traces(self, output):
         return [json.loads(line[6:]) for line in output.splitlines() if line.startswith("TRACE ")]
+
+    def test_dusk_response_trace_and_restart_agree_with_available_actions(self):
+        output = self.run_cli("herbs\n" + "wait\n" * (MAX_TURNS - 2) +
+                              "ask\napologize\nstatus\nrestart\nherbs\nbargain\nquit\n", "--trace")
+        trace = self.traces(output)
+        self.assertNotIn("Tell me who", trace[MAX_TURNS - 1]["text"])
+        self.assertEqual(trace[MAX_TURNS - 1]["after"]["ending"], "DUSK")
+        self.assertIn("The scene has ended", output)
+        self.assertEqual(len(trace), MAX_TURNS + 2)
+        self.assertEqual(trace[MAX_TURNS]["before"], State().snapshot())
+        self.assertEqual(trace[-1]["after"]["ending"], "COOPERATED")
+        self.assertEqual(output.count("Ending: DUSK"), 1)
+        self.assertEqual(output.count("Ending: COOPERATED"), 1)
 
     def test_real_cli_separates_wait_narration_from_keeper_speech(self):
         output = self.run_cli("wait\nherbs\nbargain\nquit\n", "--trace")

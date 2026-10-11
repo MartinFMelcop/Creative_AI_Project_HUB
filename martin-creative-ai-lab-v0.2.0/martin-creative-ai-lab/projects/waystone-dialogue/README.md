@@ -1,6 +1,6 @@
 # P10 — The Last Waystone
 
-Version **0.1.2**. A short, playable terminal scene about persuading a distracted
+Version **0.1.3**. A short, playable terminal scene about persuading a distracted
 Keeper to repair a crossing before dusk. Helping, lying, waiting and apologizing
 change later responses. Four endings close the scene; restart clears the session.
 This is P10's first working destination, adapted from the recovered NPC dialogue
@@ -42,6 +42,12 @@ a withdrawn order used again, and an apology after outburst receive distinct
 responses based on existing memory. Five cooldown waits show physical recovery
 and print as narration. These changes add no choices or numerical effects.
 
+Final-turn requests now acknowledge the existing dusk deadline. The Keeper does
+not ask for more work or another argument after the conversation has closed.
+Cooldown completion still shows steady breathing, but announces readiness to
+listen only while another turn is available. Last-turn agreement and departure
+retain their responses and precedence; no timing or balance rule changes.
+
 ## Behavior and acceptance
 
 The initial Keeper state is stress 20, trust 45, respect 55 and mood NEUTRAL.
@@ -68,10 +74,15 @@ selected legacy BaseScore values are zero. There is no expression evaluation.
   accepted action ends at dusk. A successful agreement or departure on that last
   turn takes precedence over dusk. Restart restores all initial state and trace.
 
-The 29 checks cover these gates, boundary values, clamping, terminal behavior,
+The 32 checks cover these gates, boundary values, clamping, terminal behavior,
 isolated sessions, replay, invalid input, real subprocess CLI flows and source
 identity, plus contextual responses and speaker attribution.
-[Current dialogue evidence](../../evidence/waystone-dialogue/DIALOGUE_RUN.json)
+[Current dusk evidence](../../evidence/waystone-dialogue/DUSK_RUN.json) records
+three new methods failing on committed 0.1.2, all 32 checks passing, seven actual
+before/after CLI paths and unchanged rules/menus across all 6,131 reachable states
+and 17,994 transitions. Only terminal-dusk wording changes; four endings remain
+reachable. The editorial comparison is by the implementing agent, not a reader.
+[Previous dialogue evidence](../../evidence/waystone-dialogue/DIALOGUE_RUN.json)
 records six new methods failing on committed 0.1.1, all 29 checks passing on 0.1.2,
 five before/after CLI comparisons, and identical rules across all 6,131 reachable
 states and 17,994 transitions from the default initial state. Four endings remain
@@ -106,6 +117,8 @@ The 0.1.2 wording, including the Keeper's attendance at a council meeting, is ne
 scene fiction; it is not recovered canon. A pure renderer reads existing pre-turn
 state, historical lie flags and outburst events without changing the selected
 legacy effects. Traits and respect do not constitute a full personality system.
+Version 0.1.3 also reads the existing turn clock to close final requests; the
+deadline, scene facts and selected source records remain unchanged.
 
 No fear/debt simulation, weighted trait or faction scoring, TTL memory, persistence,
 assets, combat, multiplayer, Unity/RGSS binding or full game is delivered. The

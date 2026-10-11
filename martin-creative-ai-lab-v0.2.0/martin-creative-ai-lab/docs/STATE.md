@@ -1,42 +1,39 @@
 # Lab state
 
 **Updated:** 2026-10-11 (environment UTC date).
-**Seed version:** 0.4.6, unchanged. **Current increment:** P02 runner 0.2.1.
+**Seed version:** 0.4.6, unchanged. **Current increment:** P10 dialogue 0.1.3.
 
-The checkout began clean on `work` at `b2278637e67d00025dda1985e23a237f06e6a0f1`.
-GitHub inspection confirmed the same remote main before edits. Git fetch could
-not reach the configured proxy; authorized publication uses the connected GitHub
-integration with a non-force update and remote verification. This record precedes
-publication; the final report gives the resulting SHA.
+The checkout began clean on `work` at `ac71b7b8a576394d1b7ceb3f76790f7f213d407f`,
+matching remote main verified through GitHub. Git fetch could not reach the
+configured proxy; authorized publication uses the connected integration with a
+non-force update and remote verification. This record precedes publication.
 
-[P02](../evaluations/chat-send-buffering/README.md) checks installed direct
-runtime/dev dependency version declarations against the committed evaluator lock
-before behavior tests. Mismatches and missing/malformed reports are inconclusive
-environment failures. Expected and reported versions remain in the execution
-record. No automatic installation or new dependency is introduced.
+[P10](../projects/waystone-dialogue/README.md) closes final-turn requests at the
+existing dusk deadline. The Keeper acknowledges lost daylight rather than asking
+for unavailable work or another argument. Cooldown completion retains physical
+recovery and announces readiness only while another turn remains. Last-turn
+agreement and departure keep their existing precedence and responses.
 
-[Execution evidence](../evidence/evaluation-task/DEPENDENCY_RUN.json) compares the
-same isolated Socket.IO metadata fault: 0.2.0 accepted the reference at 17/17,
-while 0.2.1 stops at preflight. Package code and lock were unchanged. Two new
-regression methods cover four mismatches and six incomplete/invalid reports;
-all 25 runner tests pass. Normal calibration still rejects the baseline at 15/17
-and accepts the pinned reference at 17/17. All nine starter exports, task 0.1.0,
-evaluator commit and working dependency graph remain unchanged.
+[Dusk evidence](../evidence/waystone-dialogue/DUSK_RUN.json) records five reproduced
+CLI gaps, seven before/after CLI paths, three baseline-failing regression methods
+(eight failure events) and 32 passing scene checks. All 6,131 reachable states and
+17,994 transitions retain menus, effects, memory, selected variants and four
+endings. Changed wording occurs only at terminal dusk. Legacy source hashes and
+archive are unchanged; no character, choice, state, asset or dependency is added.
 
-Eleven registry and eleven manifest regression tests pass. Final documentary
-validation and the refreshed manifest are recorded in the execution evidence.
-Installed module bytes, transitive version checks, non-POSIX symlink execution
-and independent candidate provenance remain unverified. Artifact acceptance
-does not establish author/model performance, human usability or commercial demand.
+Same-agent editorial comparison finds clearer closure and preserved practical
+voice, unresolved-fault causality and recovery. It is not independent audience
+validation. The simple cooperative route, five-wait pacing, human comprehension,
+adoption and commercial demand remain unverified. Bounded M4 is unchanged.
 
-P10 dialogue 0.1.2 and P11 chat 0.1.6 are unchanged; their runtime suites were not
-rerun locally. Existing creative comparisons and browser results are historical
-evidence. Bounded M4 and seed direction stay unchanged. SEED.md retains its prior
-summary because automatic approval review previously blocked upload of its
-existing personal/professional material; this state and the registry supply
-current continuity. Preserved sources and assets remain unchanged.
+Final documentary validation and refreshed manifest results are in the execution
+record. P02 runner 0.2.1 and P11 chat 0.1.6 are unchanged; their runtime suites were
+not rerun locally. Earlier calibration/browser records remain historical evidence.
+SEED.md retains its prior operational summary after the previously rejected upload
+of its existing personal/professional material; state and registry give current
+continuity. Seed direction, sources, transfers and asset inventory are unchanged.
 
-Next: obtain one independently produced EVAL-001 client with recorded context,
-permitted tools, source exposure and attempts. Apply the calibrated runner while
-keeping its artifact verdict separate from claims about the author. P10 reader
-feedback and P11 human reading/keyboard review remain independent pending gates.
+Next: a reader compares early cooperation, conflict recovery and the delayed
+paths ending at dusk, especially closure clarity and five-wait pacing. Revise
+balance only with feedback. Independent EVAL-001 provenance and P11 human
+reading/keyboard review remain separate pending gates.

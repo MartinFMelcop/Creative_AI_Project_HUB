@@ -1,17 +1,16 @@
-# Current increment — P02 installed direct versions
+# Current increment — P10 dusk continuity
 
-Correct the reproduced prerequisite omission in runner 0.2.0: reported Socket.IO
-version drift still permits an accepted artifact. Compare all installed direct
-runtime/dev version declarations against the committed evaluator lock before
-behavior tests. Record expected/actual versions and make mismatches or missing
-reports inconclusive environment results. No installation, task or suite change.
+Correct five reproduced final-turn invitations in the existing CLI. Render
+closing requests from the current clock and memory; retain recovery narration
+without announcing renewed conversation after dusk. Preserve last-turn agreement
+and departure, all rules, source records and four endings. No new content system.
 
-Acceptance is met: the same isolated metadata fault stops at preflight; two new
-methods cover four package mismatches and six invalid reports; all 25 runner
-tests pass. Known calibration remains 15/17 baseline and 17/17 reference, with all
-nine exports unchanged. Version metadata is verified, not dependency code or
-transitive versions. Next: an independent client with recorded context/tools and
-attempts; no additional benchmark task or creative expansion is scheduled.
+Acceptance is met: three new methods fail on 0.1.2 and all 32 current checks pass.
+Seven actual CLI comparisons and exhaustive reachable-state comparison preserve
+every nontext trace field and menu; changed text occurs only at terminal dusk.
+Same-agent creative comparison is not independent audience approval. Next: reader
+feedback on early cooperation, delayed closure, conflict and five-wait pacing.
+P02 candidate provenance and P11 human usability remain separate pending gates.
 
 # Previous increment — P11 text reflow
 

@@ -1,0 +1,350 @@
+{
+  "run_kind": "p10_dusk_response_continuity",
+  "recorded_at": "2026-10-11T19:57:40.552925+00:00",
+  "baseline_commit": "ac71b7b8a576394d1b7ceb3f76790f7f213d407f",
+  "before_version": "0.1.2",
+  "after_version": "0.1.3",
+  "environment": {
+    "python": "3.12.14",
+    "platform": "Linux-6.18.44-x86_64-with-glibc2.41",
+    "runtime": "Python standard library; real CLI subprocesses from /tmp"
+  },
+  "scene_before_sha256": "6a2e54edf034edc4138ab993fbb2c0add7f699d4326ac43bc010b840387e5020",
+  "scene_after_sha256": "d68cb4f3b412711aab454629f944b09a7e142e4bec24758c925ce0b3432b1eeb",
+  "tests_sha256": "32ac52cab2f94462055094d4b9a2462cc3717c3d34a2cc8ff7306ca0a25078dc",
+  "preserved_source": {
+    "commit": "36af1651271422ae33856e8b5d7b45702215f165",
+    "archive_sha256": "6da636a270284eac1e11d00407dab364c2d9aa8c2f0485e77509e6ccf0dbc1dc",
+    "selected_files": [
+      {
+        "path": "RM_ACT1/DATA/DEV/DIALOGUE_VARIANTS.csv",
+        "sha256": "7434223aa7fe25a8449796d1648b04257efa355bced6d62a0224e3b3f2606787"
+      },
+      {
+        "path": "RM_ACT1/DATA/DEV/NPC_STATE.csv",
+        "sha256": "79fd03294259329dd23e328bc037e34a405dc1819ae999cb80eeb3bb1282fe3c"
+      },
+      {
+        "path": "RM_ACT1/DATA/DEV/NPC_RELATIONS.csv",
+        "sha256": "be7135b8c9fdfdfc36cad00122b27ba30eb7d30ba2c2a49cda6c5e304d98abbe"
+      },
+      {
+        "path": "RM_ACT1/DATA/DEV/NPC_PROFILE.csv",
+        "sha256": "cc804653f0939ce6d18682f0c8171325e9b1ed9abfe712b981f591a741bef158"
+      },
+      {
+        "path": "RM_CORE/DATA/GOV/SF-0310_NPC_PERSONALITY.md",
+        "sha256": "1576ebfb1785c273a899ec23abff59de80e739d93c783ffd164f62d3de5202a2"
+      }
+    ]
+  },
+  "reproduce": [
+    "Read the baseline scene bytes using git show at baseline_commit and run the standalone script with --trace.",
+    "For each path below, send its actions as newline-separated stdin, followed by status and quit.",
+    "Repeat on current scene.py; extract TRACE lines and compare all final fields except text.",
+    "For exhaustive comparison, breadth-first enumerate unique snapshot states from State(), stop expanding terminal states, reconstruct identical old/new state sets and compare every available action and nontext trace field.",
+    "Run the three named new regression methods against the baseline classes and baseline CLI; then run the complete current test suite."
+  ],
+  "baseline_regressions": {
+    "methods": [
+      "test_last_turn_requests_close_without_inviting_unavailable_followups",
+      "test_recovery_invites_listening_only_while_the_scene_is_open",
+      "test_dusk_response_trace_and_restart_agree_with_available_actions"
+    ],
+    "tests_run": 3,
+    "failure_events": 8,
+    "errors": 0
+  },
+  "rule_comparison": {
+    "reachable_states": 6131,
+    "transitions": 17994,
+    "changed_text_transitions": 2326,
+    "changes_only_at_terminal_dusk": true,
+    "all_nontext_trace_fields_and_available_actions_unchanged": true,
+    "reachable_endings": [
+      "COOPERATED",
+      "DISMISSED",
+      "DUSK",
+      "LEFT"
+    ]
+  },
+  "cli_comparisons": {
+    "cooldown_at_dusk": {
+      "actions": [
+        "wait",
+        "wait",
+        "wait",
+        "lie",
+        "lie",
+        "lie",
+        "lie",
+        "wait",
+        "wait",
+        "wait",
+        "wait",
+        "wait"
+      ],
+      "command": [
+        "python3",
+        "<committed/current scene.py>",
+        "--trace"
+      ],
+      "exit_code": 0,
+      "speaker": "Narrator",
+      "variant_id": "SCENE_WAIT",
+      "ending": "DUSK",
+      "before_text": "The Keeper turns the stool to face you.\nTheir breathing steadies. They are ready to listen again.",
+      "after_text": "The Keeper turns the stool to face you.\nTheir breathing steadies.",
+      "nontext_final_trace_unchanged": true
+    },
+    "request_after_help_at_dusk": {
+      "actions": [
+        "herbs",
+        "wait",
+        "wait",
+        "wait",
+        "wait",
+        "wait",
+        "wait",
+        "wait",
+        "wait",
+        "wait",
+        "wait",
+        "ask"
+      ],
+      "command": [
+        "python3",
+        "<committed/current scene.py>",
+        "--trace"
+      ],
+      "exit_code": 0,
+      "speaker": "Keeper",
+      "variant_id": "DV_NPC0007_REQUEST_HELP_002",
+      "ending": "DUSK",
+      "before_text": "The basket is sorted. I can see that. Tell me who needs this crossing tonight.",
+      "after_text": "The basket is sorted. The light's gone; take the rune home tonight.",
+      "nontext_final_trace_unchanged": true
+    },
+    "bargain_before_help_at_dusk": {
+      "actions": [
+        "wait",
+        "wait",
+        "wait",
+        "wait",
+        "wait",
+        "wait",
+        "wait",
+        "wait",
+        "wait",
+        "wait",
+        "wait",
+        "bargain"
+      ],
+      "command": [
+        "python3",
+        "<committed/current scene.py>",
+        "--trace"
+      ],
+      "exit_code": 0,
+      "speaker": "Keeper",
+      "variant_id": "DV_NPC0007_NEGOTIATION_001",
+      "ending": "DUSK",
+      "before_text": "The village needs the crossing tonight? Clear this basket so I can reach my tools.",
+      "after_text": "The tools are still under that basket. We can't finish before dark now.",
+      "nontext_final_trace_unchanged": true
+    },
+    "first_lie_at_dusk": {
+      "actions": [
+        "wait",
+        "wait",
+        "wait",
+        "wait",
+        "wait",
+        "wait",
+        "wait",
+        "wait",
+        "wait",
+        "wait",
+        "wait",
+        "lie"
+      ],
+      "command": [
+        "python3",
+        "<committed/current scene.py>",
+        "--trace"
+      ],
+      "exit_code": 0,
+      "speaker": "Keeper",
+      "variant_id": "DV_NPC0007_MANIP_CONF_WARN_001",
+      "ending": "DUSK",
+      "before_text": "I was at this morning's council meeting. No repair order. Ask me yourself.",
+      "after_text": "There was no council order. Take the rune home. I won't start a repair in the dark.",
+      "nontext_final_trace_unchanged": true
+    },
+    "apology_at_dusk": {
+      "actions": [
+        "lie",
+        "wait",
+        "wait",
+        "wait",
+        "wait",
+        "wait",
+        "wait",
+        "wait",
+        "wait",
+        "wait",
+        "wait",
+        "apologize"
+      ],
+      "command": [
+        "python3",
+        "<committed/current scene.py>",
+        "--trace"
+      ],
+      "exit_code": 0,
+      "speaker": "Keeper",
+      "variant_id": "DV_NPC0007_APOLOGY_001",
+      "ending": "DUSK",
+      "before_text": "All right. You've withdrawn the order. Tell me what you actually need.",
+      "after_text": "You've withdrawn the order. It's too dark to start the repair tonight.",
+      "nontext_final_trace_unchanged": true
+    },
+    "agreement_at_dusk": {
+      "actions": [
+        "herbs",
+        "wait",
+        "wait",
+        "wait",
+        "wait",
+        "wait",
+        "wait",
+        "wait",
+        "wait",
+        "wait",
+        "wait",
+        "bargain"
+      ],
+      "command": [
+        "python3",
+        "<committed/current scene.py>",
+        "--trace"
+      ],
+      "exit_code": 0,
+      "speaker": "Keeper",
+      "variant_id": "DV_NPC0007_NEGOTIATION_001",
+      "ending": "COOPERATED",
+      "before_text": "A crossing for the village, before dark. I'll fit the rune; hold the lamp steady.",
+      "after_text": "A crossing for the village, before dark. I'll fit the rune; hold the lamp steady.",
+      "nontext_final_trace_unchanged": true
+    },
+    "departure_at_dusk": {
+      "actions": [
+        "wait",
+        "wait",
+        "wait",
+        "wait",
+        "wait",
+        "wait",
+        "wait",
+        "wait",
+        "wait",
+        "wait",
+        "wait",
+        "leave"
+      ],
+      "command": [
+        "python3",
+        "<committed/current scene.py>",
+        "--trace"
+      ],
+      "exit_code": 0,
+      "speaker": "Keeper",
+      "variant_id": "DV_NPC0007_GOODBYE_001",
+      "ending": "LEFT",
+      "before_text": "Go on. And don't make more work for me.",
+      "after_text": "Go on. And don't make more work for me.",
+      "nontext_final_trace_unchanged": true
+    }
+  },
+  "verification": [
+    {
+      "command": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "exit_code": 0,
+      "output": ""
+    },
+    {
+      "command": [
+        "python3",
+        "projects/waystone-dialogue/test_scene.py"
+      ],
+      "exit_code": 0,
+      "output": "test_all_waits_reach_dusk_in_real_cli (__main__.CliTests.test_all_waits_reach_dusk_in_real_cli) ... ok\ntest_bad_input_and_status_consume_no_turn (__main__.CliTests.test_bad_input_and_status_consume_no_turn) ... ok\ntest_dusk_response_trace_and_restart_agree_with_available_actions (__main__.CliTests.test_dusk_response_trace_and_restart_agree_with_available_actions) ... ok\ntest_eof_during_live_and_terminal_scene_exits_cleanly (__main__.CliTests.test_eof_during_live_and_terminal_scene_exits_cleanly) ... ok\ntest_named_choices_trace_conflict_and_restart (__main__.CliTests.test_named_choices_trace_conflict_and_restart) ... ok\ntest_number_choices_play_to_completion_without_trace (__main__.CliTests.test_number_choices_play_to_completion_without_trace) ... ok\ntest_real_cli_requires_apology_before_granting_passage (__main__.CliTests.test_real_cli_requires_apology_before_granting_passage) ... ok\ntest_real_cli_separates_wait_narration_from_keeper_speech (__main__.CliTests.test_real_cli_separates_wait_narration_from_keeper_speech) ... ok\ntest_agreement_answers_the_crossing_request_and_remembers_a_retraction (__main__.SceneTests.test_agreement_answers_the_crossing_request_and_remembers_a_retraction) ... ok\ntest_apology_requires_an_unresolved_fault_and_cannot_be_repeated (__main__.SceneTests.test_apology_requires_an_unresolved_fault_and_cannot_be_repeated) ... ok\ntest_catalog_stress_boundary_is_checked_before_effects (__main__.SceneTests.test_catalog_stress_boundary_is_checked_before_effects) ... ok\ntest_cooldown_blocks_repair_and_apology_until_five_waits (__main__.SceneTests.test_cooldown_blocks_repair_and_apology_until_five_waits) ... ok\ntest_cooldown_has_observable_progress_without_speaking_narration (__main__.SceneTests.test_cooldown_has_observable_progress_without_speaking_narration) ... ok\ntest_crossing_requires_help_before_agreement (__main__.SceneTests.test_crossing_requires_help_before_agreement) ... ok\ntest_dusk_is_terminal_and_last_turn_can_still_succeed_or_leave (__main__.SceneTests.test_dusk_is_terminal_and_last_turn_can_still_succeed_or_leave) ... ok\ntest_false_order_responses_distinguish_unresolved_and_retracted_history (__main__.SceneTests.test_false_order_responses_distinguish_unresolved_and_retracted_history) ... ok\ntest_help_is_acknowledged_without_promising_a_blocked_repair (__main__.SceneTests.test_help_is_acknowledged_without_promising_a_blocked_repair) ... ok\ntest_herbs_cannot_be_spent_twice (__main__.SceneTests.test_herbs_cannot_be_spent_twice) ... ok\ntest_last_turn_requests_close_without_inviting_unavailable_followups (__main__.SceneTests.test_last_turn_requests_close_without_inviting_unavailable_followups) ... ok\ntest_leaving_calm_or_in_outburst_selects_distinct_endings (__main__.SceneTests.test_leaving_calm_or_in_outburst_selects_distinct_endings) ... ok\ntest_negotiation_trust_boundary (__main__.SceneTests.test_negotiation_trust_boundary) ... ok\ntest_new_lies_and_apologies_cannot_increase_pre_fault_trust (__main__.SceneTests.test_new_lies_and_apologies_cannot_increase_pre_fault_trust) ... ok\ntest_numeric_effects_clamp_at_both_bounds (__main__.SceneTests.test_numeric_effects_clamp_at_both_bounds) ... ok\ntest_outburst_apology_and_refusal_explain_lasting_damage (__main__.SceneTests.test_outburst_apology_and_refusal_explain_lasting_damage) ... ok\ntest_recovery_invites_listening_only_while_the_scene_is_open (__main__.SceneTests.test_recovery_invites_listening_only_while_the_scene_is_open) ... ok\ntest_repeated_false_orders_have_visible_consequences (__main__.SceneTests.test_repeated_false_orders_have_visible_consequences) ... ok\ntest_restart_removes_memory_clock_cooldown_ending_and_trace (__main__.SceneTests.test_restart_removes_memory_clock_cooldown_ending_and_trace) ... ok\ntest_same_choices_replay_identical_decisions (__main__.SceneTests.test_same_choices_replay_identical_decisions) ... ok\ntest_selected_records_match_verified_preserved_sources (__main__.SceneTests.test_selected_records_match_verified_preserved_sources) ... ok\ntest_sessions_and_trace_snapshots_do_not_share_memory (__main__.SceneTests.test_sessions_and_trace_snapshots_do_not_share_memory) ... ok\ntest_unresolved_lie_blocks_agreement_until_apology (__main__.SceneTests.test_unresolved_lie_blocks_agreement_until_apology) ... ok\ntest_unresolved_lie_cannot_win_on_the_last_turn (__main__.SceneTests.test_unresolved_lie_cannot_win_on_the_last_turn) ... ok\n\n----------------------------------------------------------------------\nRan 32 tests in 1.048s\n\nOK\n"
+    },
+    {
+      "command": [
+        "python3",
+        "tools/test_validate_repo.py"
+      ],
+      "exit_code": 0,
+      "output": "...........\n----------------------------------------------------------------------\nRan 11 tests in 2.046s\n\nOK\n"
+    },
+    {
+      "command": [
+        "python3",
+        "tools/test_check_manifest.py"
+      ],
+      "exit_code": 0,
+      "output": "...........\n----------------------------------------------------------------------\nRan 11 tests in 0.529s\n\nOK\n"
+    },
+    {
+      "command": [
+        "python3",
+        "-m",
+        "py_compile",
+        "projects/waystone-dialogue/scene.py",
+        "projects/waystone-dialogue/test_scene.py"
+      ],
+      "exit_code": 0,
+      "output": ""
+    },
+    {
+      "command": [
+        "python3",
+        "tools/validate_repo.py"
+      ],
+      "exit_code": 0,
+      "projects": 11,
+      "transfers": 11,
+      "assets": 0,
+      "legacy_sources": 2,
+      "local_file_links": 154
+    }
+  ],
+  "creative_evaluation": {
+    "reviewer": "Implementing Codex agent; not independent human review",
+    "confirmed_before_weakness": "Five terminal-dusk CLI responses invite unavailable follow-up actions or listening.",
+    "after_observation": "Closing responses acknowledge the established deadline; physical recovery remains without promising another unavailable turn. Last-turn agreement and departure retain their wording.",
+    "character_and_causality": "The Keeper stays practical, distracted by herbs and resistant to false council authority. Cleared work, unresolved lies and cautious recovery retain their meaning. No new canon, character, moral summary or mechanic is introduced.",
+    "unverified": [
+      "Reader comprehension/preference, the simple cooperative route and five-wait pacing require human comparison.",
+      "Portfolio usefulness and paid demand are hypotheses; wider distribution rights are unverified."
+    ]
+  },
+  "limits": [
+    "Comparison covers default-reachable states, not arbitrary externally mutated states.",
+    "Raw CLI transcripts stay in scratch; this record preserves inputs and final trace excerpts.",
+    "No P02 or P11 runtime suite was executed locally in this increment.",
+    "Source records, seed direction, transfers and asset inventory are unchanged."
+  ],
+  "manifest": {
+    "command": [
+      "python3",
+      "tools/check_manifest.py"
+    ],
+    "maintained_files": 79
+  }
+}
