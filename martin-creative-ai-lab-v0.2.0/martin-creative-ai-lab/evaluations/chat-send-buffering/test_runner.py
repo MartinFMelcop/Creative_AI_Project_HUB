@@ -4,6 +4,7 @@ import importlib.util
 import json
 import os
 import signal
+import shutil
 import subprocess
 import sys
 import tempfile
@@ -218,6 +219,63 @@ class TaskRunnerTests(unittest.TestCase):
             record = runner.check(self.workspace)
         self.assertEqual(record['status'], 'inconclusive')
         self.assertIn('SyntaxError:', record['commands'][0]['stderr'])
+
+    def dependency_source(self):
+        project = Path(self.scratch.name) / 'working-project'
+        project.mkdir()
+        shutil.copyfile(runner.PROJECT / 'package-lock.json', project / 'package-lock.json')
+        (project / 'node_modules').symlink_to(runner.PROJECT / 'node_modules', target_is_directory=True)
+        return project
+
+    def test_working_project_changes_cannot_replace_pinned_runtime_or_tests(self):
+        project = self.dependency_source()
+        # No working server, page or test files are available to this checker.
+        lock = json.loads((project / 'package-lock.json').read_text())
+        lock['version'] = lock['packages']['']['version'] = '9.9.9'
+        (project / 'package-lock.json').write_text(json.dumps(lock))
+        passing = '# tests 17\n# pass 17\n# fail 0\n# cancelled 0\n# skipped 0\n# todo 0\n'
+        observed = []
+        def inspect(command, cwd, *args):
+            observed.append(cwd)
+            for name in runner.EVALUATOR_FILES:
+                self.assertEqual((cwd / name).read_bytes(), runner.git_bytes(runner.SUITE_COMMIT, name))
+            return {'exit_code': 0, 'stdout': passing if len(observed) == 3 else '{}',
+                    'stderr': '', 'timed_out': False, 'launch_error': None,
+                    'capture_complete': True}
+        with patch.object(runner, 'PROJECT', project), patch.object(runner, 'invoke', side_effect=inspect):
+            record = runner.check(self.workspace)
+        self.assertEqual(record['status'], 'accepted')
+        self.assertEqual(record['evaluator_source'], 'git_snapshot')
+        self.assertEqual(len(observed), 3)
+        self.assertTrue(all(path == observed[0] and path != project for path in observed))
+        self.assertFalse(observed[0].exists(), 'Temporary evaluator must be cleaned up')
+
+    def test_changed_dependency_graph_is_inconclusive_before_execution(self):
+        project = self.dependency_source()
+        lock = json.loads((project / 'package-lock.json').read_text())
+        lock['packages']['node_modules/socket.io']['version'] = '0.0.0'
+        (project / 'package-lock.json').write_text(json.dumps(lock))
+        with patch.object(runner, 'PROJECT', project), patch.object(runner, 'invoke') as invoke:
+            record = runner.check(self.workspace)
+        self.assertEqual(record['status'], 'inconclusive')
+        self.assertEqual(record['gate'], 'environment')
+        self.assertIn('dependency lock changed', record['reason'])
+        invoke.assert_not_called()
+
+    def test_missing_modules_and_invalid_locks_are_inconclusive(self):
+        project = self.dependency_source()
+        (project / 'node_modules').unlink()
+        with patch.object(runner, 'PROJECT', project):
+            record = runner.check(self.workspace)
+        self.assertEqual(record['status'], 'inconclusive')
+        self.assertEqual(record['gate'], 'environment')
+        self.assertIn('not installed', record['reason'])
+        for invalid in ('[]', '{"packages": {}}', 'not json'):
+            (project / 'package-lock.json').write_text(invalid)
+            with self.subTest(lock=invalid), patch.object(runner, 'PROJECT', project):
+                record = runner.check(self.workspace)
+            self.assertEqual(record['status'], 'inconclusive')
+            self.assertEqual(record['gate'], 'environment')
 
 
 if __name__ == "__main__":

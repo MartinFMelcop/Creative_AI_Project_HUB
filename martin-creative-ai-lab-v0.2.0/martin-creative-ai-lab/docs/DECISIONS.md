@@ -248,3 +248,19 @@ commit. Publish the verified commits together; keep its 17 candidate checks and
 0.1.0 starter unchanged. Human and assistive-technology review remain separate
 from executed Chromium keyboard/geometry checks. Revisit on actual feedback,
 new retention requirements, another browser or a need for per-reader identity.
+
+## ADR-016 — execute evaluator sources from the pinned commit
+
+**Date:** 2026-10-10 (client date). **Status:** P02 runner 0.2.0.
+
+Two P11 updates required P02 repinning because the checker consumed working app
+files. Materialize the existing evaluator allowlist from its fixed Git commit
+in each temporary runtime instead. Link evaluator-owned installed modules only
+when dependency locks match, ignoring app version metadata alone. Reject no
+artifact merely because a dependency environment is unavailable. Preserve the
+17 checks and nine-file starter; no new shared package or network installation.
+
+This supersedes the working-file guard in ADR-010/012/015. Pin/dependency changes
+still need calibration. Lock compatibility is not verification of installed
+module bytes; symlink portability and stronger execution isolation remain
+unverified. Revisit when changing dependencies, OS or evaluator contract.

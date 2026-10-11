@@ -1,6 +1,6 @@
 # P02 — Chat send-buffering practice task
 
-**Task:** EVAL-001. **Runner version:** 0.1.4. **Starter contract:** 0.1.0. **Runtime:** Python orchestration and
+**Task:** EVAL-001. **Runner version:** 0.2.0. **Starter contract:** 0.1.0. **Runtime:** Python orchestration and
 Node/Socket.IO/Chromium behavior checks. This is P02's first working task, adapted
 from P11; its earlier Unity proposal remains an origin, not a runtime requirement.
 
@@ -12,7 +12,7 @@ the application, locked dependencies, reference client, and evaluator-owned test
 
 ## Prepare and check
 
-Requires Python 3.9+, Git with commits `66041e7` and `2aed760` retained, Node 22+,
+Requires Python 3.9+, Git with commits `66041e7` and `911bf78` retained, Node 22+,
 P11's locked dependencies installed, and compatible system Chromium. Use P11's
 documented `npm ci` command if needed. No Unity, model API, token, or new npm
 dependency is required. Run from the lab directory:
@@ -39,17 +39,28 @@ result records are never overwritten. Exit codes: `0` accepted artifact,
 `1` rejected artifact, `2` inconclusive execution or command/input error. Command
 errors before execution print the error without manufacturing a run result.
 
-The checker verifies immutable support files against Git, copies only the client
-bytes to a temporary evaluator location, checks syntax, probes real browser
-startup/dependencies, and runs the pinned 17 P11 checks (6 protocol, 11 browser).
+The checker verifies submitted support files against Git, materializes its server,
+page, styles, package metadata and tests from pinned commit `911bf78` into a
+temporary runtime, and copies only the submitted client bytes. It checks syntax,
+probes real browser startup/dependencies and runs the pinned 17 P11 checks
+(6 protocol, 11 browser). Ordinary working-project source changes cannot replace
+those committed evaluator files.
 Submitted `node_modules` is ignored, never imported by the evaluator. It removes
 external URL/client override variables from the test environment. The submitted
 client reaches both real browser pages through the existing test route; the
 working application files are never replaced. Skipped, cancelled, missing,
-incomplete, contradictory, or zero-test outcomes cannot be accepted. Changed
-evaluator files require explicit recalibration.
+incomplete, contradictory, or zero-test outcomes cannot be accepted. Changing
+the evaluator commit still requires explicit recalibration.
+
+The temporary runtime links to the evaluator-owned P11 `node_modules`. Its
+working dependency lock must match the pinned graph; only top-level and root
+package version metadata may differ. Missing modules, invalid locks or dependency
+changes are inconclusive. No installation or network operation is automatic.
+This verifies lock compatibility, not installed module bytes. POSIX symlink
+execution is tested; a Windows symlink policy has not been verified.
 
 Records contain the client hash, runner and evaluator hashes, source commits,
+`evaluator_source: git_snapshot`,
 tool/browser versions, attempted commands, captured output, test counts and failed
 check names. Each command adds elapsed time, deadline, timeout/launch status,
 real exit code and capture completeness. Timeout at syntax/startup/behavior gates
@@ -67,7 +78,7 @@ bounded final reap avoid indefinite waiting. The non-POSIX fallback targets only
 the direct process and has not been executed here. This is cleanup, not a sandbox:
 children creating another session/group are outside the group policy.
 
-Runner 0.1.4 leaves the starter contract at 0.1.0, preserving existing exports byte
+Runner 0.2.0 leaves the starter contract at 0.1.0, preserving existing exports byte
 for byte. `runner_version` identifies the correction separately from `task_version`.
 No model identity or score is inferred from an artifact.
 
@@ -77,7 +88,7 @@ Calibration uses two controlled artifacts: the exported 0.1.0 client and P11's
 current corrected 0.1.3 client. To prepare a reference probe, export a **second**
 fresh directory, copy only P11's working `public/client.js` into it, and check it.
 The baseline must reject with the polling and stale-state checks failing; the
-reference must accept with all 17 passing. See [unread runtime calibration](../../evidence/evaluation-task/UNREAD_CALIBRATION.json), [prior runtime recalibration](../../evidence/realtime-chat/READING_RUN.json), [prior timeout evidence](../../evidence/evaluation-task/TIMEOUT_RUN.json) and [original calibration](../../evidence/evaluation-task/CALIBRATION.json).
+reference must accept with all 17 passing. See [snapshot calibration](../../evidence/evaluation-task/SNAPSHOT_RUN.json), [prior unread runtime calibration](../../evidence/evaluation-task/UNREAD_CALIBRATION.json), [prior runtime recalibration](../../evidence/realtime-chat/READING_RUN.json), [prior timeout evidence](../../evidence/evaluation-task/TIMEOUT_RUN.json) and [original calibration](../../evidence/evaluation-task/CALIBRATION.json).
 
 These probes validate the harness and TR-009's bounded P11 → P02 adaptation.
 They are not independent candidate attempts, a model comparison, a score, or
@@ -95,8 +106,8 @@ Neither proves production outage reliability, human usability, or Unity behavior
 Next: run one independently produced client with recorded context and permitted
 tools. Keep raw artifact acceptance separate from any claim about its author.
 
-Runner 0.1.4 pins P11 0.1.3 commit `911bf789e31dc2b1df9586a894e37312375771f3`
-after package metadata changed. The original guard returned inconclusive, then
-the baseline/reference recalibrated at 15/17 and 17/17. The original 17 task
-checks are byte-identical; P11's nine reading checks remain outside EVAL-001.
-All nine exports are unchanged and previously exported workspaces remain accepted.
+Runner 0.2.0 retains P11 commit `911bf789e31dc2b1df9586a894e37312375771f3`
+without importing current app sources. Controlled changed-working-project checks
+retain the 15/17 and 17/17 outcomes; all nine exports remain unchanged. The
+original 17 task checks are byte-identical; P11's nine reading checks remain
+outside EVAL-001. No current app or candidate contract change is required.

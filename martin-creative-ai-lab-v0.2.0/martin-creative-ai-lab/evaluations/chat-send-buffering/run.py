@@ -14,7 +14,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 TASK = "EVAL-001"
-VERSION = "0.1.4"
+VERSION = "0.2.0"
 TASK_VERSION = "0.1.0"
 BASELINE = "66041e7fdd7687ee21099f95129dff41933c74dd"
 SUITE_COMMIT = "911bf789e31dc2b1df9586a894e37312375771f3"
@@ -26,6 +26,8 @@ FILES = (".node-version", "package.json", "package-lock.json", "server.cjs",
          "public/index.html", "public/style.css", "public/client.js")
 TESTS = ("tests/browser.test.cjs", "tests/protocol.test.cjs")
 TOTAL = 17
+EVALUATOR_FILES = ("server.cjs", "public/index.html", "public/style.css",
+                   "package.json", "package-lock.json", *TESTS)
 
 
 def sha(data):
@@ -57,6 +59,34 @@ def prepare(destination):
     return {"task": TASK, "version": TASK_VERSION, "runner_version": VERSION,
             "workspace": str(destination),
             "exported_files": sorted(files), "baseline_commit": BASELINE}
+
+
+def dependency_lock(data):
+    """Compare dependency graphs while allowing version-only app releases."""
+    lock = json.loads(data)
+    if (not isinstance(lock, dict) or not isinstance(lock.get("packages"), dict) or
+            not isinstance(lock["packages"].get(""), dict)):
+        raise ValueError("Invalid evaluator dependency lock")
+    lock.pop("version", None)
+    lock["packages"][""].pop("version", None)
+    return lock
+
+
+def evaluator_snapshot(destination):
+    """Materialize committed evaluator files; reuse only compatible local modules."""
+    files = {name: git_bytes(SUITE_COMMIT, name) for name in EVALUATOR_FILES}
+    if dependency_lock((PROJECT / "package-lock.json").read_bytes()) != dependency_lock(files["package-lock.json"]):
+        raise ValueError("Evaluator dependency lock changed; pinned dependencies required")
+    modules = PROJECT / "node_modules"
+    if not modules.is_dir():
+        raise ValueError("Evaluator dependencies are not installed")
+    destination.mkdir()
+    for name, data in files.items():
+        path = destination / name
+        path.parent.mkdir(parents=True, exist_ok=True)
+        path.write_bytes(data)
+    (destination / "node_modules").symlink_to(modules.resolve(), target_is_directory=True)
+    return {name: sha(data) for name, data in files.items()}
 
 
 def read_submission(workspace):
@@ -183,19 +213,17 @@ def check(workspace):
     environment.pop("CHAT_TEST_URL", None)
     environment.pop("CHAT_TEST_CLIENT_PATH", None)
     try:
-        # Pin the evaluator runtime and suite; later changes require recalibration.
-        trusted = ("server.cjs", "public/index.html", "public/style.css",
-                   "package.json", "package-lock.json", *TESTS)
-        record["evaluator_artifacts"] = {}
-        for name in trusted:
-            data = (PROJECT / name).read_bytes()
-            if data != git_bytes(SUITE_COMMIT, name):
-                raise ValueError(f"Evaluator changed; recalibration required: {name}")
-            record["evaluator_artifacts"][name] = sha(data)
         with tempfile.TemporaryDirectory(prefix="p02-client-") as scratch:
+            runtime = Path(scratch) / "runtime"
+            try:
+                record["evaluator_artifacts"] = evaluator_snapshot(runtime)
+            except ValueError as exc:
+                record.update(gate="environment", reason=str(exc))
+                return record
+            record["evaluator_source"] = "git_snapshot"
             client = Path(scratch) / "client.js"
             client.write_bytes(artifact)
-            syntax = invoke(["node", "--check", str(client)], PROJECT, environment, 15)
+            syntax = invoke(["node", "--check", str(client)], runtime, environment, 15)
             record["commands"].append(syntax)
             if syntax["timed_out"] or syntax["launch_error"]:
                 record.update(gate="client_syntax", reason="Syntax check did not complete")
@@ -227,7 +255,7 @@ if (Number(process.versions.node.split('.')[0]) < 22) process.exit(2);
   await browser.close();
 })().catch(error => { console.error(error.message); process.exit(2); });
 """
-            ready = invoke(["node", "-e", probe], PROJECT, environment, 20)
+            ready = invoke(["node", "-e", probe], runtime, environment, 20)
             record["commands"].append(ready)
             if ready["timed_out"] or ready["launch_error"] or ready["exit_code"]:
                 record.update(gate="environment", reason="Browser/dependency preflight failed")
@@ -235,7 +263,7 @@ if (Number(process.versions.node.split('.')[0]) < 22) process.exit(2);
             record["environment"] = json.loads(ready["stdout"])
             environment["CHAT_TEST_CLIENT_PATH"] = str(client)
             tests = invoke(["node", "--test", "--test-reporter=tap", *TESTS],
-                           PROJECT, environment, 180)
+                           runtime, environment, 180)
             record["commands"].append(tests)
             record["status"], record["counts"] = classify_tap(tests["stdout"], tests["exit_code"])
             record["gate"] = "behavior_and_regressions"

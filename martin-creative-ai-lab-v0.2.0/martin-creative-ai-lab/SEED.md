@@ -4,7 +4,7 @@
 **Data-base:** 10 de outubro de 2026  
 **Autor e responsável pelo portfólio:** Martin Melcop Neto  
 **Working language:** English for new documentation, plans, code comments, UI, and reports. Preserve original creative titles and historical source languages.
-**Current state:** P11 unread navigation 0.1.3 implemented; P02 runner 0.1.4 retains syntax attribution and pins the P11 0.1.3 runtime. Historical sources and registry QA remain preserved. No independent model result, game migration or public hosting is claimed.
+**Current state:** P11 unread navigation 0.1.3 implemented; P02 runner 0.2.0 retains syntax attribution and executes the pinned P11 0.1.3 evaluator snapshot. Historical sources and registry QA remain preserved. No independent model result, game migration or public hosting is claimed.
 
 > Construir um laboratório autoral em Git que transforma ideias, obras e experimentos em produtos pequenos, sistemas reutilizáveis e evidências técnicas verificáveis. A IA participa da criação e execução; Martin desenvolve sua capacidade de especificar, compreender, selecionar, corrigir, validar e explicar os resultados.
 
@@ -46,14 +46,14 @@ Se apenas este arquivo estiver disponível, ele é suficiente para iniciar a Fas
 |---|---|
 | Repository | MartinFMelcop/Creative_AI_Project_HUB; actual Git root `/workspace/Creative_AI_Project_HUB`; lab remains nested in its original package directory |
 | Preserved sources | 175 Rave Master texts and 3 WebSocket files; unchanged ZIP and inventory; not a complete RMXP backup |
-| Primary workstream | P11 unread navigation 0.1.3; P02 runner 0.1.4 runtime recalibration. Starter 0.1.0; bounded M4 scopes unchanged |
+| Primary workstream | P02 runner 0.2.0: committed evaluator snapshot, compatible installed dependency graph; P11 stays 0.1.3 and starter stays 0.1.0. Bounded M4 scopes unchanged |
 | Engine execution | No Unity or RMXP runtime verified; P11 uses Node/Express/Socket.IO |
-| Current verification | P11 current execution in `evidence/realtime-chat/UNREAD_RUN.json`; prior syntax/registry/reading evidence remains historical. P02 evidence is in `evidence/evaluation-task/UNREAD_CALIBRATION.json` |
+| Current verification | P11 current execution in `evidence/realtime-chat/UNREAD_RUN.json`; prior syntax/registry/reading evidence remains historical. Current P02 snapshot evidence is in `evidence/evaluation-task/SNAPSHOT_RUN.json` |
 | Historical verification | v0.2.0 combat/dialogue runner reports remain historical; not rerun during P11 work |
 | Next action | Martin's P11 reading/keyboard review; one independent EVAL-001 client with recorded context/tools/attempts |
 | Other seeds | P01 baseline still absent; P10 remains recovered material; other creative/runtime baselines require targeted recovery |
 | Transfer / shared status | TR-009 validated for P02 task adaptation/calibration only; 10 other transfers remain candidates; no shared component |
-| Portfolio / attribution | P02 syntax correction published at `e322e35`. Current P11/P02 combined publication is verified at task closure. Martin supplied direction; Codex implemented/tested; human and independent candidate reviews remain pending |
+| Portfolio / attribution | P02 syntax correction published at `e322e35`. P11 unread/P02 recalibration publication is verified at `de1fd1a`; the snapshot increment is published and verified at task closure. Martin supplied direction; Codex implemented/tested; human and independent candidate reviews remain pending |
 
 Registry evidence paths must resolve to existing files inside the lab; working
 paths must be directories and legacy-source IDs must exist. This documentary

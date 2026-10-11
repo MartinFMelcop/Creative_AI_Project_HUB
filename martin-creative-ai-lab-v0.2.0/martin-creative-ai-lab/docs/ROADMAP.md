@@ -51,3 +51,8 @@ P11 0.1.3 makes paused reading visible with an unread count and explicit return
 to live text. The same bounded chat remains the product scope. P02 runner 0.1.4 pins the new runtime with the same
 candidate contract; human review and independent candidate provenance
 remain the next gates, without new task inventory.
+
+P02 runner 0.2.0 now materializes the evaluator from its fixed Git commit, so
+working app source updates do not require another pin change. Dependency and
+evaluator contract changes still require explicit calibration. Existing human
+review and independent-candidate gates remain unchanged.

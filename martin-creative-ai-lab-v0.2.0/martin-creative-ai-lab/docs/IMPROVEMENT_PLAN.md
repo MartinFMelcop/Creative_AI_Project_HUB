@@ -1,15 +1,12 @@
-# Current increment — P11 unread navigation
+# Current increment — pinned evaluator snapshots
 
-Preserve the validated reading anchor while making new arrivals discoverable.
-Add one native return-to-live button with a bounded count, reset on manual
-following, and explicit keyboard focus transfer. Verify actual broadcasts,
-Enter/Space at a mobile viewport and retention beyond 200 arrivals.
+P02 runner 0.2.0 now materializes its existing evaluator commit into a temporary
+runtime. Verify ordinary working source changes cannot replace server/UI/tests;
+retain dependency-graph compatibility checks and the existing task/export.
+Controlled calibration stays 15/17 and 17/17. No new task, dependency or project
+is activated. Independent candidate provenance remains the next gate.
 
-The tested P11 0.1.3 app is committed; P02 runner 0.1.4 now pins that app while
-retaining the same known-artifact calibration contract. Publish both verified commits. No candidate task change
-or additional workstream is introduced. Prior increments follow as history.
-
-# Current increment — P02 syntax attribution 0.1.3
+# Completed increment — P02 syntax attribution 0.1.3
 
 Correct a reproduced false artifact rejection from invalid NODE_OPTIONS. Require
 complete parser evidence identifying the client, and preserve unknown execution
