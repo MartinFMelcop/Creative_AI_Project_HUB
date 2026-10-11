@@ -48,7 +48,7 @@ Se apenas este arquivo estiver disponível, ele é suficiente para iniciar a Fas
 | Preserved sources | 175 Rave Master texts and 3 WebSocket files; unchanged ZIP and inventory; not a complete RMXP backup |
 | Primary workstream | Shared regression CI for existing P10/P11/P02 contracts; no product or maturity expansion |
 | Engine execution | P10 uses Python standard library; P11 uses Node/Express/Socket.IO. No Unity or RMXP runtime verified |
-| Current verification | Local 11 validator, 23 scene, 22 runner and 26 chat checks; workflow lint and expected calibration in `evidence/continuous-integration/RUN.json`. GitHub logs establish hosted execution |
+| Current verification | Local 11 validator, 23 scene, 23 runner and 26 chat checks; initial CI/calibration in `evidence/continuous-integration/RUN.json` and hosted cleanup-test correction in `FOLLOWUP_RUN.json`. GitHub logs establish hosted execution |
 | Historical verification | v0.2.0 combat/dialogue, P10 trust, P11 unread and P02 snapshot records remain preserved; the old scenario runner was not rerun |
 | Next action | Reader review of P10 cooperative/conflict paths; P11 human review and independent EVAL-001 provenance remain separate gates |
 | Other seeds | P02 runner 0.2.0, P11 app 0.1.3 and EVAL-001 starter 0.1.0 remain unchanged; missing creative/media baselines still need targeted recovery |

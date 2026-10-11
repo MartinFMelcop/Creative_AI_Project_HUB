@@ -4,6 +4,9 @@
   suites, workflow lint and controlled calibration, including missing-browser
   and unexpected-baseline failures. This records local execution; GitHub job
   logs establish hosted runner results. No independent candidate is evaluated.
+- [Hosted CI follow-up](continuous-integration/FOLLOWUP_RUN.json): actual first
+  hosted failure, controlled reproduction and cleanup-test race correction.
+  All 23 evaluator regressions pass locally; the application/task stay unchanged.
 - [P10 trust correction](waystone-dialogue/TRUST_RUN.json): committed 0.1.0
   regression failures, all 23 current checks and actual old/new CLI decisions.
   Unresolved lies now block agreement; apologies repair up to pre-fault trust.

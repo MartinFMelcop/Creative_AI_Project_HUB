@@ -18,12 +18,31 @@ runner = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(runner)
 
 
+def process_state(pid):
+    """A killed child can be reaped while /proc is being opened or read."""
+    try:
+        data = Path(f"/proc/{pid}/stat").read_text()
+    except (FileNotFoundError, ProcessLookupError):
+        return None
+    return data.rsplit(") ", 1)[1].split()[0]
+
+
 class TaskRunnerTests(unittest.TestCase):
     def setUp(self):
         self.scratch = tempfile.TemporaryDirectory()
         self.addCleanup(self.scratch.cleanup)
         self.workspace = Path(self.scratch.name) / "candidate"
         runner.prepare(self.workspace)
+
+    def test_process_state_handles_reaping_without_hiding_other_states_or_errors(self):
+        with patch.object(Path, 'read_text', return_value='123 (probe) S 1 2 3'):
+            self.assertEqual(process_state(123), 'S', 'A live child must remain visible')
+        for error in (FileNotFoundError, ProcessLookupError):
+            with self.subTest(error=error), patch.object(Path, 'read_text', side_effect=error):
+                self.assertIsNone(process_state(123))
+        with patch.object(Path, 'read_text', side_effect=PermissionError):
+            with self.assertRaises(PermissionError):
+                process_state(123)
 
     def test_export_has_only_starter_and_brief_without_reference_or_history(self):
         paths = {p.relative_to(self.workspace).as_posix()
@@ -108,8 +127,7 @@ class TaskRunnerTests(unittest.TestCase):
             raise
         try:
             child_pid = int(record['stdout'].split('child_pid=')[1].splitlines()[0])
-            state_path = Path(f'/proc/{child_pid}/stat')
-            state = state_path.read_text().split(') ', 1)[1].split()[0] if state_path.exists() else None
+            state = process_state(child_pid)
             self.assertIn(state, (None, 'Z', 'X'), 'No running probe child may survive timeout')
             self.assertTrue(record['timed_out'])
             self.assertIn('child ready', record['stdout'])

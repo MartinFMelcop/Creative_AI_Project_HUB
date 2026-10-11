@@ -341,3 +341,10 @@ other operating systems and deployment remain separate evidence gates.
 
 **Revisit:** runtime/dependency changes, explicit evaluator recalibration or a
 required branch-protection policy. Adding a workflow does not enable protection.
+
+The first hosted run passed the chat suite but exposed a P02 test-only `/proc`
+race during child reaping. Read stat directly; treat FileNotFoundError and
+ProcessLookupError as absence, while preserving live-state assertions and other
+read errors. A controlled real-child probe fails on the published assertion and
+passes after correction; 23 runner regressions cover the retained cleanup gate.
+The runner implementation, task contract and project version are unchanged.

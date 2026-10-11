@@ -26,7 +26,7 @@ creates new JSON records without replacing prior runs; CI retains diagnostics
 for 14 days, including failure records when available. This is calibration,
 not an independently produced model submission or score.
 
-[Local CI evidence](../evidence/continuous-integration/RUN.json) records commands,
+[Initial local CI evidence](../evidence/continuous-integration/RUN.json) records commands,
 environment, artifact identity and controlled probes. All 11 validator, 23 scene,
 22 runner and 26 chat checks pass; actionlint 1.7.12 accepts the workflow. Live
 calibration has the expected 15/17 and 17/17 results. Missing-browser and changed
@@ -36,7 +36,17 @@ that environment restriction. Final links/archive and manifest checks run at
 closure. Prior [dialogue evidence](../evidence/waystone-dialogue/TRUST_RUN.json),
 all historical records, sources and project implementations stay unchanged.
 
-This record precedes publication. Local execution uses Linux, Python 3.12.14,
+The [first hosted run](https://github.com/MartinFMelcop/Creative_AI_Project_HUB/actions/runs/38106719666)
+passed integrity/dialogue and all 26 chat checks, then exposed a cleanup-test race:
+a killed child disappears between checking `/proc` and reading its state. Read
+the state directly and tolerate only missing-file/missing-process errors; retain
+the assertion rejecting a live child and propagate permission errors. A new
+regression verifies those distinctions. [Follow-up evidence](../evidence/continuous-integration/FOLLOWUP_RUN.json)
+reproduces the published error and corrected success with a real child and a
+controlled stat-read race. All 23 current evaluator regressions pass. P02 runtime
+and its 17-check task are unchanged; the initial evidence remains historical.
+
+This record precedes follow-up publication. Local execution uses Linux, Python 3.12.14,
 Node 24.19.0 and system Chromium 154; GitHub installs Playwright's browser.
 The final report supplies the verified remote SHA and hosted-run result; local
 checks alone do not establish remote success. Branch protection is not enabled

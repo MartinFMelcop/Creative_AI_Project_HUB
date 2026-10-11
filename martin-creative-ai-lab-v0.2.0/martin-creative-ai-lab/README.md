@@ -76,8 +76,10 @@ The output directory must be new. The command requires the baseline to reject at
 Any changed counts, wrong gate or inconclusive execution exits nonzero. Two JSON
 records preserve diagnostics; CI uploads them for 14 days, including on failure
 when records exist. These are controlled artifacts, not independent candidates.
-[CI evidence](evidence/continuous-integration/RUN.json) records local execution;
-GitHub job logs establish remote runner results.
+[Initial CI evidence](evidence/continuous-integration/RUN.json) records local execution.
+[Follow-up evidence](evidence/continuous-integration/FOLLOWUP_RUN.json) records
+the first hosted cleanup-test race and its correction; the current evaluator
+suite has 23 regressions. GitHub job logs establish remote runner results.
 
 The original delivery test failed on the preserved source and passed on 0.1.0.
 Two further send-path regressions fail on that committed client and pass on 0.1.1.

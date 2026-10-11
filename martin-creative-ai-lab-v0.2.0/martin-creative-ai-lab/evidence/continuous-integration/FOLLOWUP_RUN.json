@@ -1,0 +1,80 @@
+{
+  "run_kind": "hosted_ci_cleanup_test_followup",
+  "recorded_at": "2026-10-11T02:59:42.344392+00:00",
+  "source_head": "e3bc346870613eef10b69e1d8290735c28b35cb9",
+  "local_environment": {
+    "platform": "Linux-6.18.44-x86_64-with-glibc2.41",
+    "python": "3.12.14"
+  },
+  "hosted_failure": {
+    "run_id": 38106719666,
+    "sha": "e3bc346870613eef10b69e1d8290735c28b35cb9",
+    "url": "https://github.com/MartinFMelcop/Creative_AI_Project_HUB/actions/runs/38106719666",
+    "integrity_job": "success",
+    "chat_checks": {
+      "tests": 26,
+      "pass": 26,
+      "fail": 0
+    },
+    "failure": "Evaluator cleanup test races process reaping between exists() and read_text(); the application and browser checks passed.",
+    "log_excerpt": [
+      "2026-10-11T02:56:45.8417319Z ERROR: test_timeout_stops_inherited_child_even_when_it_ignores_termination (__main__.TaskRunnerTests.test_timeout_stops_inherited_child_even_when_it_ignores_termination)",
+      "2026-10-11T02:56:45.8421591Z   File \"/home/runner/work/Creative_AI_Project_HUB/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/evaluations/chat-send-buffering/test_runner.py\", line 112, in test_timeout_stops_inherited_child_even_when_it_ignores_termination",
+      "2026-10-11T02:56:45.8423656Z     state = state_path.read_text().split(') ', 1)[1].split()[0] if state_path.exists() else None",
+      "2026-10-11T02:56:45.8426756Z ProcessLookupError: [Errno 3] No such process",
+      "2026-10-11T02:56:45.8428013Z Ran 22 tests in 6.846s",
+      "2026-10-11T02:56:45.8428392Z FAILED (errors=1)"
+    ]
+  },
+  "hosted_environment": {
+    "runner": "ubuntu-24.04",
+    "python": "3.12.15",
+    "node": "24.19.0",
+    "chromium": "156.0.8078.4"
+  },
+  "corrected_test_sha256": "b80e02a82f9e94406d949a57425fd3a5adc04e7cd7b4aed72e17d292862e4826",
+  "commands": [
+    {
+      "label": "reaping-probe",
+      "cwd": "/workspace",
+      "command": [
+        "python3",
+        "/workspace/work/probe_process_reaping.py"
+      ],
+      "started_at": "2026-10-11T02:58:33.920417+00:00",
+      "exit_code": 0,
+      "stdout": "Controlled real-child probe: published assertion errors; corrected assertion passes\n",
+      "stderr": ""
+    },
+    {
+      "label": "corrected-runner",
+      "cwd": "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab",
+      "command": [
+        "python3",
+        "evaluations/chat-send-buffering/test_runner.py"
+      ],
+      "started_at": "2026-10-11T02:58:33.935638+00:00",
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ".......................\n----------------------------------------------------------------------\nRan 23 tests in 6.604s\n\nOK\n"
+    }
+  ],
+  "controlled_probe": {
+    "published": {
+      "tests": 1,
+      "failures": 0,
+      "errors": 1,
+      "output": "E\n======================================================================\nERROR: test_timeout_stops_inherited_child_even_when_it_ignores_termination (cleanup_published.TaskRunnerTests.test_timeout_stops_inherited_child_even_when_it_ignores_termination)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/evaluations/chat-send-buffering/test_runner.py\", line 112, in test_timeout_stops_inherited_child_even_when_it_ignores_termination\n    self.assertEqual(record['timeout_seconds'], .3)\n                ^^^^^^^^^^^^^^^^^^^^^^\n  File \"/workspace/work/probe_process_reaping.py\", line 16, in reaped_read\n    raise ProcessLookupError('controlled reaping during stat read')\nProcessLookupError: controlled reaping during stat read\n\n----------------------------------------------------------------------\nRan 1 test in 1.528s\n\nFAILED (errors=1)\n"
+    },
+    "corrected": {
+      "tests": 1,
+      "failures": 0,
+      "errors": 0,
+      "output": ".\n----------------------------------------------------------------------\nRan 1 test in 1.531s\n\nOK\n"
+    }
+  },
+  "probe_source": "import io\nimport json\nimport subprocess\nimport types\nimport unittest\nfrom pathlib import Path\nfrom unittest.mock import patch\n\nrepo=Path('/workspace/Creative_AI_Project_HUB')\nrelative='martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/evaluations/chat-send-buffering/test_runner.py'\npath=repo/relative\noriginal_read=Path.read_text\noriginal_exists=Path.exists\ndef reaped_read(self,*args,**kwargs):\n    if str(self).startswith('/proc/'):\n        raise ProcessLookupError('controlled reaping during stat read')\n    return original_read(self,*args,**kwargs)\ndef observed_before_reaping(self):\n    return True if str(self).startswith('/proc/') else original_exists(self)\n\nresults={}\nfor version, source in (\n        ('published',subprocess.check_output(['git','show',f'e3bc346:{relative}'],cwd=repo,text=True)),\n        ('corrected',path.read_text())):\n    module=types.ModuleType(f'cleanup_{version}')\n    module.__file__=str(path)\n    exec(compile(source,str(path),'exec'),module.__dict__)\n    stream=io.StringIO()\n    suite=unittest.TestSuite([module.TaskRunnerTests('test_timeout_stops_inherited_child_even_when_it_ignores_termination')])\n    with patch.object(Path,'read_text',reaped_read),patch.object(Path,'exists',observed_before_reaping):\n        result=unittest.TextTestRunner(stream=stream).run(suite)\n    results[version]={'tests':result.testsRun,'failures':len(result.failures),'errors':len(result.errors),'output':stream.getvalue()}\nassert results['published']['errors']==1 and 'ProcessLookupError' in results['published']['output']\nassert results['corrected']['errors']==results['corrected']['failures']==0\nPath('/workspace/work/reaping-probe-result.json').write_text(json.dumps(results,indent=2)+'\\n')\nprint('Controlled real-child probe: published assertion errors; corrected assertion passes')\n",
+  "result": "The published cleanup assertion errors on a controlled real-child stat-read race; the corrected assertion passes. All 23 evaluator regression methods pass locally. The added method preserves visible live states, accepts only file/process disappearance and propagates permission errors.",
+  "unchanged_scope": "P02 runtime 0.2.0, task 0.1.0, P10/P11 code, source archive and all earlier evidence are unchanged. Only the evaluator regression harness changes.",
+  "publication_scope": "This record precedes the follow-up commit and hosted rerun; the final report supplies the verified main SHA and final workflow result."
+}
