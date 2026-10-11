@@ -316,3 +316,28 @@ existing P10 destination, so seed version 0.4.6 and bounded M4 do not change.
 
 **Revisit:** reader feedback or an honest trust-gaining action. Future unrelated
 trust effects need an explicit recovery rule instead of silently expanding this cap.
+
+## ADR-019 — run existing bounded contracts on GitHub changes
+
+**Date:** 2026-10-11 (environment UTC date). **Status:** shared lab CI.
+
+The three active destinations have executable regressions but no GitHub workflow.
+Use two Ubuntu 24.04 jobs for integrity/dialogue and chat/evaluation, triggered by
+main pushes, pull requests to main and manual dispatch. Keep the project versions,
+starter contract, maturity and seed version unchanged. CI is a shared QA consumer,
+not a new product, evaluation task or automatic creative-development loop.
+
+Pin actions to verified commits, grant only contents-read, disable persisted
+checkout credentials and impose job deadlines. Fetch full history because P02
+materializes historical starter/evaluator snapshots. Install the existing locked
+npm graph and its Playwright Chromium; fail browser setup rather than skip it.
+
+A small standard-library command exports two temporary workspaces and requires
+the original 15/17 rejection and pinned reference 17/17 acceptance, including
+complete counts and the behavior gate. Unexpected or inconclusive outcomes fail
+the job. Preserve JSON diagnostics as artifacts for 14 days. Controlled references
+are never independent candidates or model scores. Human creative/usability review,
+other operating systems and deployment remain separate evidence gates.
+
+**Revisit:** runtime/dependency changes, explicit evaluator recalibration or a
+required branch-protection policy. Adding a workflow does not enable protection.

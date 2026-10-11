@@ -14,6 +14,7 @@ v0.4.6. Historical source snapshots remain unchanged.
 - [P11 — Live exchange](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/projects/realtime-integration-lab/README.md): a runnable local text chat with a reproduced baseline defect and automated browser verification.
 - [P02 — EVAL-001](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/evaluations/chat-send-buffering/README.md): a calibrated practice-task exporter and client checker. No independent model score is claimed.
 - [P10 — The Last Waystone](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/projects/waystone-dialogue/README.md): a playable Python dialogue scene with stateful consequences, four endings, restart and verified source provenance.
+- [Lab checks](https://github.com/MartinFMelcop/Creative_AI_Project_HUB/actions/workflows/lab-checks.yml): shared integrity, dialogue, chat and controlled evaluation checks for main pushes and pull requests.
 
 This is a portfolio in development. Local automated validation is distinguished
 from human review, public deployment, engine playtesting, and model evaluation.

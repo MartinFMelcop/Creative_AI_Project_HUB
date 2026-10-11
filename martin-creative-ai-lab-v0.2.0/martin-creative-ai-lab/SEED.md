@@ -4,7 +4,7 @@
 **Data-base:** 10 de outubro de 2026  
 **Autor e responsável pelo portfólio:** Martin Melcop Neto  
 **Working language:** English for new documentation, plans, code comments, UI, and reports. Preserve original creative titles and historical source languages.
-**Current state:** P10 Waystone dialogue 0.1.1 is a playable Python CLI adaptation with 23 behavior/CLI/source checks, unresolved-lie agreement refusal and capped apology recovery. P02 runner 0.2.0 and P11 chat 0.1.3 remain unchanged. Historical sources stay preserved; human creative review, independent model evidence and engine migration remain unperformed.
+**Current state:** Shared GitHub checks cover lab integrity, P10 dialogue 0.1.1, P11 chat 0.1.3 and P02 runner 0.2.0, including controlled 15/17 baseline and 17/17 reference calibration. Project versions, starter contract 0.1.0 and bounded maturity stay unchanged. Historical sources stay preserved; human creative review, independent model evidence and engine migration remain unperformed.
 
 > Construir um laboratório autoral em Git que transforma ideias, obras e experimentos em produtos pequenos, sistemas reutilizáveis e evidências técnicas verificáveis. A IA participa da criação e execução; Martin desenvolve sua capacidade de especificar, compreender, selecionar, corrigir, validar e explicar os resultados.
 
@@ -46,14 +46,14 @@ Se apenas este arquivo estiver disponível, ele é suficiente para iniciar a Fas
 |---|---|
 | Repository | MartinFMelcop/Creative_AI_Project_HUB; actual Git root `/workspace/Creative_AI_Project_HUB`; lab remains nested in its original package directory |
 | Preserved sources | 175 Rave Master texts and 3 WebSocket files; unchanged ZIP and inventory; not a complete RMXP backup |
-| Primary workstream | P10 Waystone dialogue 0.1.1: require resolving lies before agreement; cap apology recovery at pre-fault trust; same bounded CLI M4 |
+| Primary workstream | Shared regression CI for existing P10/P11/P02 contracts; no product or maturity expansion |
 | Engine execution | P10 uses Python standard library; P11 uses Node/Express/Socket.IO. No Unity or RMXP runtime verified |
-| Current verification | P10: 23 checks and committed old/new comparisons in `evidence/waystone-dialogue/TRUST_RUN.json`; registry/link/archive validation. Unchanged P02/P11 evidence remains historical |
-| Historical verification | v0.2.0 combat/dialogue runner reports, P11 unread and P02 snapshot records remain preserved; those runtimes were not rerun in this increment |
+| Current verification | Local 11 validator, 23 scene, 22 runner and 26 chat checks; workflow lint and expected calibration in `evidence/continuous-integration/RUN.json`. GitHub logs establish hosted execution |
+| Historical verification | v0.2.0 combat/dialogue, P10 trust, P11 unread and P02 snapshot records remain preserved; the old scenario runner was not rerun |
 | Next action | Reader review of P10 cooperative/conflict paths; P11 human review and independent EVAL-001 provenance remain separate gates |
 | Other seeds | P02 runner 0.2.0, P11 app 0.1.3 and EVAL-001 starter 0.1.0 remain unchanged; missing creative/media baselines still need targeted recovery |
 | Transfer / shared status | TR-009 validated for P02 task adaptation/calibration only; 10 other transfers remain candidates; no shared component |
-| Portfolio / attribution | P10 0.1.0 published at `73bf8ee`; the trust correction is verified at task closure. Martin supplied direction; Codex adapted/implemented/tested. Human and independent candidate reviews remain pending |
+| Portfolio / attribution | P10 trust correction published at `6f9891a`; shared CI publication is verified at task closure. Martin supplied direction; Codex implemented/tested. Human and independent candidate reviews remain pending |
 
 Registry evidence paths must resolve to existing files inside the lab; working
 paths must be directories and legacy-source IDs must exist. This documentary
@@ -222,7 +222,7 @@ Identificadores persistem mesmo quando nomes mudam. Um projeto arquivado pode co
 | ID | Seed | Matéria-prima principal | Destinos possíveis | Estado nesta fundação |
 |---|---|---|---|---|
 | P01 | Artemyra / ArtemiZ4 | Board, economia, minigames, IA de jogo, produção | Auditoria, simulador, pequeno party game, benchmark | Legado descrito; runtime atual não auditado |
-| P02 | AI Evaluation & QA Lab (historical Unity proposal) | Requirements, reproduced bugs, artifact checks | Bounded practice tasks and later independent evaluation | EVAL-001 runner 0.1.2 recalibrated, starter 0.1.0; M4 harness scope, no model candidate |
+| P02 | AI Evaluation & QA Lab (historical Unity proposal) | Requirements, reproduced bugs, artifact checks | Bounded practice tasks and later independent evaluation | EVAL-001 runner 0.2.0 uses pinned snapshots, starter 0.1.0; M4 harness scope, no model candidate |
 | P03 | Tokyo 80s | Ritmo, city pop/wave, dança, aura, arcade | Vertical slice, toolkit de timing, áudio interativo | Conceito e pacote histórico |
 | P04 | O Lich mais velho da tumba mais antiga | Romance, mundo, personagens, arte e continuidade | Narrativa interativa, amostra editorial, jogo, animatic | Pacote v0.4.48 parcialmente inspecionado |
 | P05 | The Dark Knight | Combate por turnos, classes, progressão, conteúdo | Laboratório de combate e balanceamento | Legado RMXP descrito |

@@ -1,5 +1,9 @@
 # Execution evidence
 
+- [Shared CI validation](continuous-integration/RUN.json): existing regression
+  suites, workflow lint and controlled calibration, including missing-browser
+  and unexpected-baseline failures. This records local execution; GitHub job
+  logs establish hosted runner results. No independent candidate is evaluated.
 - [P10 trust correction](waystone-dialogue/TRUST_RUN.json): committed 0.1.0
   regression failures, all 23 current checks and actual old/new CLI decisions.
   Unresolved lies now block agreement; apologies repair up to pre-fault trust.

@@ -1,40 +1,48 @@
 # Lab state
 
 **Updated:** 2026-10-11 (environment UTC date). **Seed version:** 0.4.6, unchanged.
-**Current increment:** P10 Waystone dialogue 0.1.1, trust consequences.
-P02 runner 0.2.0, P11 app 0.1.3 and starter contract 0.1.0 remain unchanged.
+**Current increment:** shared GitHub regression checks.
+P10 dialogue 0.1.1, P02 runner 0.2.0, P11 app 0.1.3 and starter contract 0.1.0
+remain unchanged; their bounded M4 scopes are not promoted by CI.
 
 The checkout began clean at published
-`73bf8ee235d1f2ba235a17e99dc12d1b810c71eb`; fetch/merge confirmed the same main.
-Actual 0.1.0 execution grants passage after lie/help/agreement with apology still
-unresolved. Three lie/apology cycles raise trust from 45 to 63. Choose this
-bounded correction before expanding the existing scene or inventing human review.
+`6f9891a3f5fc754140d84f3a42514517a1ca9094`; fetch/merge confirmed the same main.
+The three working destinations have regressions but no GitHub workflow. Choose
+shared QA rather than expand products or manufacture human/candidate evidence.
 
-[The Last Waystone](../projects/waystone-dialogue/README.md) now remembers trust
-when the first unresolved lie opens. Additional lies keep that ceiling, including
-after an outburst. Apology recovers up to +6 without exceeding it, then clears the
-obligation/ceiling. Cooperation requires no unresolved lie. A new scene response
-asks the player to correct the false order; refusal takes a turn and can reach
-dusk. Traces distinguish scene responses from the nine retained legacy records.
-ADR-018 records the new rules, retained catalog deltas and effective recovery.
+[Lab checks](https://github.com/MartinFMelcop/Creative_AI_Project_HUB/actions/workflows/lab-checks.yml)
+now defines two Ubuntu 24.04 jobs for main pushes, pull requests to main and manual
+dispatch. Integrity/dialogue runs the registry, link, archive, validator, scene
+and manifest checks. Chat/evaluation installs locked dependencies and matching
+Playwright Chromium, requires its executable, runs real protocol/browser checks,
+runner regressions and controlled calibration. Actions are commit-pinned with
+contents-read permissions, no persisted checkout credentials and job deadlines.
+Full Git history preserves pinned evaluator/starter snapshots. ADR-019 records
+the durable QA choice and its limits.
 
-[Trust evidence](../evidence/waystone-dialogue/TRUST_RUN.json) records source/test
-hashes, environment, actual commands and old/new CLI decisions. Four regression
-methods fail on committed 0.1.0, with five failures including two trust subtests;
-all 23 current behavior/CLI/source checks pass. The truthful cooperation path,
-other endings, cooldown, restart, invalid-input and source checks remain covered.
-Registry/link/archive validation and 11 validator regressions pass; the final
-manifest is refreshed. [Initial 0.1.0 evidence](../evidence/waystone-dialogue/RUN.json)
-stays historical. P02/P11 and the old scenario runner were not rerun.
+`tools/check_calibration.py` requires baseline rejection at 15/17 and pinned
+reference acceptance at 17/17 with complete counts and the behavior gate. It
+creates new JSON records without replacing prior runs; CI retains diagnostics
+for 14 days, including failure records when available. This is calibration,
+not an independently produced model submission or score.
 
-P10 remains active at bounded CLI M4. The nine retained catalog records, archive
-and source inventory are unchanged; the new refusal and trust ceiling are explicit
-scene rules. No dependency, engine, other project or shared consumer is added.
-Human narrative quality, usability and balance remain unreviewed; only Linux
-Python 3.12.14 is executed. Martin supplied direction; Codex implemented/tested.
+[Local CI evidence](../evidence/continuous-integration/RUN.json) records commands,
+environment, artifact identity and controlled probes. All 11 validator, 23 scene,
+22 runner and 26 chat checks pass; actionlint 1.7.12 accepts the workflow. Live
+calibration has the expected 15/17 and 17/17 results. Missing-browser and changed
+baseline probes both fail; an existing output directory exits 2 without replacing
+records. The workspace initially blocked localhost; permitted execution resolved
+that environment restriction. Final links/archive and manifest checks run at
+closure. Prior [dialogue evidence](../evidence/waystone-dialogue/TRUST_RUN.json),
+all historical records, sources and project implementations stay unchanged.
 
-Next: reader playthrough of truthful cooperation, lying and repaired dialogue,
-then feedback on wording/pacing. Independent EVAL-001 provenance and Martin's
-P11 review remain separate gates. Publish the verified correction via the
-Workflow 2.0 fetch/merge/push sequence; this record precedes publication and the
-final report supplies the matching remote SHA/URL.
+This record precedes publication. Local execution uses Linux, Python 3.12.14,
+Node 24.19.0 and system Chromium 154; GitHub installs Playwright's browser.
+The final report supplies the verified remote SHA and hosted-run result; local
+checks alone do not establish remote success. Branch protection is not enabled
+by this workflow. Human narrative/usability review, other platforms, engine
+migration and an independent EVAL-001 candidate remain unverified.
+
+Next: reader playthrough of P10 truthful/conflict/repair paths and wording/pacing
+feedback; then one independent EVAL-001 submission with recorded provenance and
+Martin's P11 usability review. Martin supplied direction; Codex implemented/tested.

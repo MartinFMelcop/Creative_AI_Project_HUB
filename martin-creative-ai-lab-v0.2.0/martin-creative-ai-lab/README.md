@@ -35,7 +35,7 @@ what was actually inspected or executed.
 
 ## Verify the lab
 
-From this lab directory, with Python 3.9+:
+From this lab directory, with Python 3.10+ (CI uses 3.12):
 
 ```bash
 python3 tools/validate_repo.py
@@ -53,8 +53,31 @@ itself, ignored dependencies, and generated outputs. These lab checks do not run
 the browser acceptance suite; P02's checker and P11's test commands do.
 P10's scene requires Python 3.10+ and has no external dependencies. P11 has its
 own installation and test commands; other projects do not need to be installed
-to develop it. Current dialogue evidence and unchanged P02/P11 historical checks
-are distinguished in the state record.
+to develop it. Current execution and historical records are distinguished in
+the state record.
+
+[Lab checks](https://github.com/MartinFMelcop/Creative_AI_Project_HUB/actions/workflows/lab-checks.yml)
+runs these checks on main pushes, pull requests to main, and manual dispatch.
+Two Ubuntu 24.04 jobs use Python 3.12, P11's recorded Node version, locked npm
+packages and Playwright's matching Chromium. Browser installation/startup must
+succeed; unavailable execution cannot produce a passing calibration. Full Git
+history retains the evaluator's pinned starter and suite commits. Actions have
+read-only repository permissions; no product deployment or model API is involved.
+
+With P11 dependencies and Chromium available, run the same controlled calibration
+locally from this lab directory (set `CHROMIUM_PATH` for a non-default browser):
+
+```bash
+python3 tools/check_calibration.py /tmp/lab-calibration-run
+```
+
+The output directory must be new. The command requires the baseline to reject at
+15/17 and the pinned reference to accept at 17/17, with no skips or cancellation.
+Any changed counts, wrong gate or inconclusive execution exits nonzero. Two JSON
+records preserve diagnostics; CI uploads them for 14 days, including on failure
+when records exist. These are controlled artifacts, not independent candidates.
+[CI evidence](evidence/continuous-integration/RUN.json) records local execution;
+GitHub job logs establish remote runner results.
 
 The original delivery test failed on the preserved source and passed on 0.1.0.
 Two further send-path regressions fail on that committed client and pass on 0.1.1.
