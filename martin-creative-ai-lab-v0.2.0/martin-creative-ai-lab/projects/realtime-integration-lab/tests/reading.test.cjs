@@ -354,3 +354,70 @@ test('viewport resizing preserves inactive unread state at the live edge', async
   await page.waitForFunction(() => document.hasFocus() && document.getElementById('latest').hidden);
   assert.equal(await page.title(), title);
 });
+
+async function textStyle(style) {
+  // Controlled user styles change text metrics without resizing the panel.
+  await page.locator('#messages').evaluate((list, values) => Object.assign(list.style, values), style);
+  await settleLayout();
+}
+
+async function panelSize() {
+  return page.locator('#messages').evaluate((list) => ({ width: list.clientWidth, height: list.clientHeight }));
+}
+
+test('text enlargement with an unchanged panel keeps live readers at the bottom', async () => {
+  await publish(Array.from({ length: 60 }, (_, index) => message(index)));
+  await settleLayout();
+  const size = await panelSize();
+  for (const fontSize of ['24px', '16px']) {
+    await textStyle({ fontSize });
+    assert.deepEqual(await panelSize(), size, 'Only text metrics change');
+    assert.ok((await position()).distance <= 1, `Live text stays visible at ${fontSize}`);
+  }
+  await publish([message(60)]);
+  assert.ok((await position()).distance <= 1);
+  assert.equal(await page.locator('#latest').isVisible(), false);
+});
+
+test('text size and spacing reflow preserves an earlier anchor through retention eviction', async () => {
+  const title = await page.title();
+  await publish(Array.from({ length: 200 }, (_, index) => message(index)));
+  await browse(100);
+  await settleLayout();
+  const previous = await position();
+  const size = await panelSize();
+  let next = 200;
+  for (const style of [
+    { fontSize: '24px', lineHeight: '1.5', letterSpacing: '.12em' },
+    { fontSize: '16px', lineHeight: 'normal', letterSpacing: 'normal' },
+  ]) {
+    await textStyle(style);
+    assert.deepEqual(await panelSize(), size, 'The panel has not resized');
+    let current = await position();
+    assert.equal(current.anchor, previous.anchor, 'Text reflow keeps the same message');
+    assert.ok(Math.abs(current.offset - previous.offset) <= 1, 'Text reflow keeps its pixel offset');
+    await publish([message(next++)]);
+    current = await position();
+    assert.equal(current.count, 200);
+    assert.equal(current.anchor, previous.anchor, 'Eviction after text reflow keeps the anchor');
+    assert.ok(Math.abs(current.offset - previous.offset) <= 1);
+  }
+  await page.getByRole('button', { name: '2 new messages · Jump to latest', exact: true }).waitFor();
+  assert.equal(await page.title(), `(2) ${title}`);
+});
+
+test('text enlargement preserves inactive unread arrivals at the live edge', async () => {
+  const title = await page.title();
+  await publish(Array.from({ length: 40 }, (_, index) => message(index)));
+  await leaveTabInactive();
+  await publish([message(40), message(41)]);
+  await settleLayout();
+  const size = await panelSize();
+  await textStyle({ fontSize: '24px' });
+  assert.deepEqual(await panelSize(), size);
+  assert.ok((await position()).distance <= 1, 'Inactive live readers still follow after text reflow');
+  assert.equal(await page.title(), `(2) ${title}`, 'Text reflow cannot mark inactive arrivals read');
+  await page.bringToFront();
+  await page.waitForFunction(() => document.hasFocus() && document.getElementById('latest').hidden);
+  assert.equal(await page.title(), title);
+});

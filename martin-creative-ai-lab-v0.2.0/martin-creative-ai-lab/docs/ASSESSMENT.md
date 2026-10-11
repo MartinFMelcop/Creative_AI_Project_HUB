@@ -1,4 +1,45 @@
-# Current assessment — P10 dialogue continuity
+# Current assessment — P11 text reflow
+
+Updated: 2026-10-11 (environment UTC date). Clean `work` at `3d2b271` matches
+remote main through GitHub. Git transport cannot reach its configured proxy.
+Read the state, registry, seed, decisions, actual P10 scene, P11 client/server/tests
+and P02 runner. Missing game/manuscript/media baselines remain unverified.
+
+**Confirmed limitation:** the client observes panel dimensions alone. Controlled
+font enlargement inside a fixed-size panel loses live text; size/spacing changes
+move an earlier reader from message 100 to message 70. Three browser regressions
+fail on the committed client. Preserve message/offset with the existing observer
+and restoration logic rather than adding controls or another history store.
+
+| Candidate | Evidence and priority |
+|---|---|
+| P11 fixed-panel text reflow | Real browser loss of reading position; small correction in the executable app, no dependency or protocol change |
+| P10 pacing/creative review | The scene and prior correction are inspectable, but enjoyment and five-wait pacing require readers before changing balance |
+| P02 independent candidate | Snapshot boundaries are inspectable; no independent artifact/context is available. Do not manufacture performance evidence |
+| Missing game/media baselines | Recovery may have high creative value but no selected full source/master can be executed here |
+
+Technical acceptance is the three corrected cases plus all 36 chat checks,
+including retention, unread/focus and viewport behavior. Observer membership
+stays bounded to retained messages. P02 keeps its committed evaluator, task and
+dependency graph; a working-client compatibility probe is separate from its
+pinned reference. [Execution](../evidence/realtime-chat/TEXT_REFLOW_RUN.json)
+records the comparison and checks. A stale calibration-version statement is
+corrected without expanding the task. SEED retains its prior operational summary:
+automatic approval review blocked the full-file upload of its existing personal
+material. State and registry supply current continuity without that optional edit.
+
+Product value is continuity when text metrics change. The visual identity and
+creative content stay intact; geometry checks do not establish human readability
+or accessibility. Native default-font enlargement passed an exploratory probe;
+a minimum-font-size probe did not change text, so it establishes no coverage.
+**Hypotheses:** readers may benefit from enlarged/spaced text, and this bounded
+chat can demonstrate interaction QA in a portfolio. Verify through a human
+reading/keyboard session and an intended-audience review. **Unverified:** native
+zoom, assistive technology, other browsers, enjoyment/adoption and paid demand.
+The local ephemeral app has no public service/deployment contract. No traction,
+commercial validation or broader legacy licensing is inferred.
+
+# Previous assessment — P10 dialogue continuity
 
 Updated: 2026-10-11 (client date, America/Sao_Paulo). Clean branch `work` at
 `72b9383` matches remote main read through GitHub. Git fetch cannot reach the

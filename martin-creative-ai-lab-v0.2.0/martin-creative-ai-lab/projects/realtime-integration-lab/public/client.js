@@ -58,17 +58,20 @@ function restoreReadingPosition({ following, anchor, offset }) {
 let readingPosition;
 let layoutWidth;
 let layoutHeight;
+let contentHeight;
 function rememberReadingPosition() {
   readingPosition = captureReadingPosition();
   layoutWidth = messages.clientWidth;
   layoutHeight = messages.clientHeight;
+  contentHeight = messages.scrollHeight;
 }
 
 function layoutChanged() {
-  return layoutWidth !== messages.clientWidth || layoutHeight !== messages.clientHeight;
+  return layoutWidth !== messages.clientWidth || layoutHeight !== messages.clientHeight ||
+    contentHeight !== messages.scrollHeight;
 }
 
-function restoreResizedPosition() {
+function restoreReflowedPosition() {
   if (!layoutChanged()) return;
   restoreReadingPosition(readingPosition);
   rememberReadingPosition();
@@ -76,7 +79,9 @@ function restoreResizedPosition() {
 }
 
 rememberReadingPosition();
-new ResizeObserver(restoreResizedPosition).observe(messages);
+// Text can reflow inside a fixed-size panel. Observe retained items too.
+const readingObserver = new ResizeObserver(restoreReflowedPosition);
+readingObserver.observe(messages);
 messages.addEventListener('scroll', () => {
   // Reflow can itself dispatch scroll before ResizeObserver restores the old anchor.
   if (layoutChanged()) return;
@@ -105,13 +110,18 @@ socket.on('disconnect', () => updateConnection('Disconnected · reconnecting'));
 socket.on('connect_error', () => updateConnection('Unable to connect · retrying'));
 
 socket.on('chat message', (text) => {
-  // A broadcast can arrive before the observer delivers a pending resize.
-  restoreResizedPosition();
+  // A broadcast can arrive before the observer delivers a pending reflow.
+  restoreReflowedPosition();
   const position = captureReadingPosition();
   const item = document.createElement('li');
   item.textContent = text;
   messages.appendChild(item);
-  while (messages.children.length > 200) messages.firstElementChild.remove();
+  readingObserver.observe(item);
+  while (messages.children.length > 200) {
+    const oldest = messages.firstElementChild;
+    readingObserver.unobserve(oldest);
+    oldest.remove();
+  }
   document.getElementById('empty').hidden = true;
   restoreReadingPosition(position);
   rememberReadingPosition();

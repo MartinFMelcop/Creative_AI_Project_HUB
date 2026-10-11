@@ -440,3 +440,23 @@ All reachable default-state transitions preserve menus, effects and endings.
 Same-agent editorial comparison does not establish human preference or balance.
 Seed 0.4.6 and bounded M4 remain unchanged. Revisit only after reader feedback on
 clarity, the simple cooperative path or five-turn recovery pacing.
+
+## ADR-024 — observe retained text reflow as well as panel resizing
+
+**Date:** 2026-10-11 (environment UTC date). **Status:** P11 0.1.6.
+
+Panel-only observation misses text-size/spacing changes inside an unchanged
+conversation. Three real-browser user-style checks reproduce lost live text and
+earlier anchors. Extend the existing ResizeObserver to retained message items,
+unobserve each evicted item, and remember content height alongside dimensions.
+Reuse restoration before observer delivery or new broadcasts; reflow scroll
+events must not overwrite the saved anchor. Keep the near-bottom, fractional
+offset, eviction fallback and inactive unread rules.
+
+The set stays bounded to 200 messages plus the panel; no new UI, dependency or
+protocol is needed. This preserves a message/offset where scroll range permits,
+not the same word after wrapping. P02 keeps its snapshot and task contract;
+controlled working-client compatibility is not an independent evaluation.
+Seed 0.4.6 and bounded maturity stay unchanged. Revisit after human text-reading
+feedback, native zoom, another browser or changing content that this contract
+does not cover.

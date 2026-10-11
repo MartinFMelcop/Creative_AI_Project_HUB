@@ -8,7 +8,9 @@ slices, verify behavior, record decisions, and test reuse in actual destinations
 historical texts, a working local text-chat adaptation, a calibrated
 practice-task harness, and a playable terminal dialogue scene. No game migration,
 model benchmark, finished music catalogue, or public deployment is claimed.
-The containing directory keeps its original v0.2.0 package name.
+The containing directory keeps its original v0.2.0 package name. Latest verified
+project versions are in the state and registry; SEED's current-state summary
+precedes this P11 patch and remains unchanged.
 
 ## Start here
 
@@ -18,7 +20,8 @@ The containing directory keeps its original v0.2.0 package name.
 - [P02 — EVAL-001](evaluations/chat-send-buffering/README.md): export a starter, check a client, and inspect limits.
 - [P10 — The Last Waystone](projects/waystone-dialogue/README.md): play a stateful dialogue scene, restart, inspect traces and verify its origin.
 - [Current dialogue evidence](evidence/waystone-dialogue/DIALOGUE_RUN.json): 29 checks, contextual responses, before/after CLI comparisons and unchanged rules across all reachable states.
-- [Current activity evidence](evidence/realtime-chat/ACTIVITY_RUN.json): inactive-page arrivals, tab-title counts, focus/visibility reset and bounded history.
+- [Current text-reflow evidence](evidence/realtime-chat/TEXT_REFLOW_RUN.json): fixed-panel user styles, reading anchors, full chat checks and pinned evaluator compatibility.
+- [Prior activity evidence](evidence/realtime-chat/ACTIVITY_RUN.json): inactive-page arrivals, tab-title counts, focus/visibility reset and bounded history.
 - [Prior unread-navigation evidence](evidence/realtime-chat/UNREAD_RUN.json): arrival counts and keyboard focus.
 - [Prior reading/recalibration evidence](evidence/realtime-chat/READING_RUN.json): geometry, source comparison, full chat results and P02 compatibility.
 - [Previous timeout/recalibration evidence](evidence/evaluation-task/TIMEOUT_RUN.json): actual command probes, source comparison, compatible artifacts, environment and hashes.
@@ -90,9 +93,9 @@ GitHub job logs establish remote runner results.
 
 The original delivery test failed on the preserved source and passed on 0.1.0.
 Two further send-path regressions fail on that committed client and pass on 0.1.1.
-Thirty-three current automated tests verify the local contract, including connected
+Thirty-six current automated tests verify the local contract, including connected
 polling congestion, stale-state reconnect buffering, preserved reading position,
-activity-aware unread counts and viewport resizing. New
+activity-aware unread counts, viewport resizing and fixed-panel text reflow. New
 documentation, UI, code comments, and evidence are in English; historical texts
 remain in their original language. Martin supplied direction and authorization;
 Codex performed this increment. Manual usability review by Martin is pending.

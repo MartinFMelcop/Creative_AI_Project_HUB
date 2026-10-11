@@ -1,6 +1,6 @@
 # P11 — Live exchange
 
-**Project:** Real-time Integration Lab / WebSocket. **Version:** 0.1.5.
+**Project:** Real-time Integration Lab / WebSocket. **Version:** 0.1.6.
 **Scope:** one local, ephemeral text conversation. This is a working adaptation
 of the historical Socket.IO exercise, not a raw WebSocket implementation.
 
@@ -27,6 +27,7 @@ The UI renders only the broadcast, avoiding a second optimistic sender copy.
 | Browsing readers see new arrivals and can return to live text by keyboard | Unread count, manual reset, Enter/Space and focus checks |
 | Inactive pages retain unread arrivals and show a bounded count in the tab title | Native Chromium tab focus, controlled visibility, retained-window and return-to-live checks |
 | Viewport resizing keeps live text at the bottom or preserves earlier reading | Height changes, desktop/narrow text reflow, subsequent eviction and inactive-tab checks |
+| Text size/spacing changes inside an unchanged panel preserve reading | Controlled user-style enlargement/reset, retention eviction and native inactive-tab checks |
 
 The event remains `chat message`. Client → server payload is a string; server →
 client payload is its trimmed string. Acknowledgement is `{ "ok": true }` or
@@ -70,8 +71,17 @@ that position before reflow, then restore it through ResizeObserver. Reflow's ow
 scroll events must not overwrite the saved anchor. Broadcasts also reconcile a
 pending resize before appending text. Resizing clears unread state only under
 the existing visible, focused, near-bottom rule. This preserves message position,
-not the same word or line after wrapping; browser zoom and font-only changes
-remain unverified.
+not the same word or line after wrapping.
+
+Version 0.1.6 also restores reading after text reflows inside an unchanged panel.
+The same ResizeObserver watches retained message items; eviction removes their
+observations, keeping the set bounded to 200 items plus the panel. Remember
+content height as well as panel dimensions so reflow scroll events and incoming
+broadcasts cannot replace the earlier anchor. Controlled font-size, line-height
+and letter-spacing changes keep live readers at the bottom and earlier readers
+at their retained message/offset. Inactive unread counts keep the existing rule.
+These are Chromium user-style checks, not native zoom or assistive-technology
+validation; human readability and other browsers remain unverified.
 
 On transport interruption Socket.IO reconnects. Messages sent while away are
 not recovered. Existing messages remain in that page's memory until reload or
@@ -100,7 +110,7 @@ system Chromium; it does not download a browser. The tests use headless Chromium
 with `--no-sandbox` for this container. Outside this machine, set `CHROMIUM_PATH`
 to a compatible browser executable. Missing Chromium is a failed prerequisite,
 not a skipped browser suite. Protocol-only tests use `npm run test:protocol`; `npm run test:reading` runs
-the sixteen reading/activity/resize checks, and `npm run test:browser` includes both browser suites.
+the nineteen reading/activity/reflow checks, and `npm run test:browser` includes both browser suites.
 
 The server binds to `127.0.0.1:3000` by default; `HOST` and `PORT` can override
 the bind address. Open that address in two local browser tabs. A remote cloud
@@ -152,7 +162,8 @@ recorded separately in the lab state; no npm package or hosted service is releas
 
 ## Evidence, contribution, and next step
 
-See [viewport resize evidence](../../evidence/realtime-chat/RESIZE_RUN.json),
+See [text-reflow evidence](../../evidence/realtime-chat/TEXT_REFLOW_RUN.json),
+[prior viewport resize evidence](../../evidence/realtime-chat/RESIZE_RUN.json),
 [activity-aware unread evidence](../../evidence/realtime-chat/ACTIVITY_RUN.json),
 [prior unread-navigation evidence](../../evidence/realtime-chat/UNREAD_RUN.json),
 [prior reading-position evidence](../../evidence/realtime-chat/READING_RUN.json),
@@ -169,7 +180,7 @@ do not establish cross-browser compatibility, human accessibility/usability,
 public hosting readiness, or a model benchmark.
 
 Next: have Martin try the two-tab interaction and review readability, keyboard
-use, and the uncertain-delivery wording before selecting this as a public case.
+use with enlarged/spaced text, and the uncertain-delivery wording before selecting this as a public case.
 P11 → P02 is now verified for [EVAL-001 task adaptation/calibration](../../evaluations/chat-send-buffering/README.md) only; no independent model was evaluated. P11 → P01 remains a candidate. No shared library is needed.
 
 The five historical 0.1.2 reading checks run actual Socket.IO broadcasts through Chromium at a
@@ -180,7 +191,7 @@ P02 keeps its 17 send-policy checks. The historical runner 0.1.4
 [recalibrated the P11 0.1.3 runtime](../../evidence/evaluation-task/UNREAD_CALIBRATION.json)
 without changing the nine-file starter contract. Current runner 0.2.0 executes
 its own committed evaluator snapshot, so this working-client update does not
-repin that task. The sixteen reading/activity/resize checks remain P11-only.
+repin that task. The nineteen reading/activity/reflow checks remain P11-only.
 
 The four new activity checks fail on committed 0.1.3. Three use real tab focus
 transitions after disabling Playwright's forced-focus emulation. Headless Chromium
@@ -192,3 +203,10 @@ The three resize checks fail on committed 0.1.4 and pass on 0.1.5. They change
 actual Chromium viewport dimensions, including 1280-pixel desktop and 390-pixel
 narrow widths, and verify retention and native tab focus after reflow. They do
 not establish every layout, browser zoom, font-only reflow or human usability.
+
+The three new text-reflow checks fail on committed 0.1.5 and pass on 0.1.6;
+the full suite passes 36 checks (6 protocol, 30 Chromium). They explicitly apply
+user styles while asserting unchanged panel dimensions. They cover enlargement
+and reset, line/letter spacing, subsequent eviction, and native tab focus after
+reflow. P02's unchanged pinned suite also accepts the corrected client at 17/17;
+this is a controlled compatibility probe, not an independent candidate attempt.

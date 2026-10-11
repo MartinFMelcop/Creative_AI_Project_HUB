@@ -1,0 +1,365 @@
+{
+  "schema_version": 1,
+  "project": "P11",
+  "increment": "fixed-panel text reflow",
+  "working_version": "0.1.6",
+  "recorded_at": "2026-10-11T18:25:59.525411+00:00",
+  "baseline": {
+    "branch": "work",
+    "commit": "3d2b271e7beb3fe43b7d0a0e2ce347e7cdfe35f7",
+    "working_tree": "clean before edits",
+    "remote_main_verified_before_edits": true,
+    "client_version": "0.1.5",
+    "client_sha256": "b6288185b5ba4dbe9ec8d31f465401bc43c0937e4230a0105df3eae89f356c2d"
+  },
+  "environment": {
+    "platform": "Linux-6.18.44-x86_64-with-glibc2.41",
+    "python": "3.12.14",
+    "node": "v24.19.0",
+    "chromium": "Chromium 154.0.8037.57 built on Debian GNU/Linux 13 (trixie)",
+    "playwright_core": "1.64.0",
+    "socket_io": "4.8.4",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "browser": "headless Chromium with --no-sandbox",
+    "execution": "local loopback servers; sandbox loopback denial required authorized escalated test execution",
+    "git_transport": "fetch failed: configured proxy port 8080 unreachable; GitHub integration available"
+  },
+  "acceptance": [
+    "Controlled text enlargement and reset keep live text within 1 CSS pixel of the bottom with unchanged panel dimensions.",
+    "Font-size, line-height and letter-spacing changes retain the earlier message and pixel offset within 1 pixel, including subsequent eviction.",
+    "Inactive text reflow keeps unread count/title until focused at the live edge.",
+    "Preserve all existing send, retention, reading, keyboard, viewport and activity checks; keep P02 committed task and dependency graph."
+  ],
+  "implementation": {
+    "observer": "one existing ResizeObserver, bounded to the panel and 200 retained items; evicted items unobserved",
+    "reflow_guard": "panel width/height plus content scroll height",
+    "restoration": "existing anchor, fractional correction, near-bottom following and eviction fallback",
+    "protocol_and_dependency_changes": false
+  },
+  "artifact_sha256": {
+    "public/client.js": "c28697bffd07a74bdda2443c5eb47f743028382d5b2d01a42781bc9a404ac300",
+    "tests/reading.test.cjs": "cdb65653df8dcc927b5059599ac812a5c55011d9e6ac3d79cae0c531f0abd4c8",
+    "tests/browser.test.cjs": "5d31f58d99d9e6cd51f24e448063349d916acb2fab4c4585a84a969cb3dca63e",
+    "tests/protocol.test.cjs": "cdf15bd3522bf9c74dc60bf307fc56f4050d74d61b45f27341867ce537254a7a",
+    "server.cjs": "f84e170aa785a6fa5caf223a1c8a245f51688f347eefa8e2d0e37e0f5f3cf9e7",
+    "public/index.html": "abf2c41b7fc6c0d7ae081ac7b6ef15af0de658fb9e738bbcde8dfd07aa852848",
+    "public/style.css": "0e90d0c17dd64e139538357240194fc24b8261bc21e4cb887768f1004948b13d",
+    "package.json": "b84d667f23305b33518c2222f50444d162d71a144bb90c96919aaeccf27d9c74",
+    "package-lock.json": "c85834c05a98cab44cf447b899522e9e2543a649e4a5f128683bbd0447bef1b8"
+  },
+  "baseline_regressions": {
+    "command": [
+      "node",
+      "--test",
+      "--test-reporter=tap",
+      "--test-name-pattern=text enlargement|text size and spacing",
+      "tests/reading.test.cjs"
+    ],
+    "cwd": "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/projects/realtime-integration-lab",
+    "exit_code": 1,
+    "expected_exit_code": 1,
+    "elapsed_seconds": 3.59,
+    "stdout": "TAP version 13\n# Subtest: text enlargement with an unchanged panel keeps live readers at the bottom\nnot ok 1 - text enlargement with an unchanged panel keeps live readers at the bottom\n  ---\n  duration_ms: 993.883879\n  type: 'test'\n  location: '/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/projects/realtime-integration-lab/tests/reading.test.cjs:368:1'\n  failureType: 'testCodeFailure'\n  error: 'Live text stays visible at 24px'\n  code: 'ERR_ASSERTION'\n  name: 'AssertionError'\n  expected: true\n  actual: false\n  operator: '=='\n  stack: |-\n    TestContext.<anonymous> (/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/projects/realtime-integration-lab/tests/reading.test.cjs:375:12)\n    async Test.run (node:internal/test_runner/test:1389:7)\n    async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3)\n  ...\n# Subtest: text size and spacing reflow preserves an earlier anchor through retention eviction\nnot ok 2 - text size and spacing reflow preserves an earlier anchor through retention eviction\n  ---\n  duration_ms: 789.476672\n  type: 'test'\n  location: '/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/projects/realtime-integration-lab/tests/reading.test.cjs:382:1'\n  failureType: 'testCodeFailure'\n  error: |-\n    Text reflow keeps the same message\n    + actual - expected\n    \n    + 'Message 70\\nA readable line for item 70.\\nA readable line for item 70.'\n    - 'Message 100\\nA readable line for item 100.\\nA readable line for item 100.'\n    \n  code: 'ERR_ASSERTION'\n  name: 'AssertionError'\n  expected: |-\n    Message 100\n    A readable line for item 100.\n    A readable line for item 100.\n  actual: |-\n    Message 70\n    A readable line for item 70.\n    A readable line for item 70.\n  operator: 'strictEqual'\n  stack: |-\n    TestContext.<anonymous> (/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/projects/realtime-integration-lab/tests/reading.test.cjs:397:12)\n    async Test.run (node:internal/test_runner/test:1389:7)\n    async Test.processPendingSubtests (node:internal/test_runner/test:960:7)\n  ...\n# Subtest: text enlargement preserves inactive unread arrivals at the live edge\nnot ok 3 - text enlargement preserves inactive unread arrivals at the live edge\n  ---\n  duration_ms: 1063.80142\n  type: 'test'\n  location: '/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/projects/realtime-integration-lab/tests/reading.test.cjs:409:1'\n  failureType: 'testCodeFailure'\n  error: 'Inactive live readers still follow after text reflow'\n  code: 'ERR_ASSERTION'\n  name: 'AssertionError'\n  expected: true\n  actual: false\n  operator: '=='\n  stack: |-\n    TestContext.<anonymous> (/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/projects/realtime-integration-lab/tests/reading.test.cjs:418:10)\n    async Test.run (node:internal/test_runner/test:1389:7)\n    async Test.processPendingSubtests (node:internal/test_runner/test:960:7)\n  ...\n1..3\n# tests 3\n# suites 0\n# pass 0\n# fail 3\n# cancelled 0\n# skipped 0\n# todo 0\n# duration_ms 3540.965432\n",
+    "stderr": "",
+    "environment_overrides": {
+      "CHAT_TEST_CLIENT_PATH": "/workspace/work/p11-font-reflow/baseline-client.js",
+      "CHAT_TEST_URL": null
+    }
+  },
+  "corrected_regressions": {
+    "command": [
+      "node",
+      "--test",
+      "--test-reporter=tap",
+      "--test-name-pattern=text enlargement|text size and spacing",
+      "tests/reading.test.cjs"
+    ],
+    "cwd": "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/projects/realtime-integration-lab",
+    "exit_code": 0,
+    "counts": {
+      "tests": 3,
+      "pass": 3,
+      "fail": 0,
+      "cancelled": 0,
+      "skipped": 0,
+      "todo": 0
+    },
+    "stdout": "TAP version 13\n# Subtest: text enlargement with an unchanged panel keeps live readers at the bottom\nok 1 - text enlargement with an unchanged panel keeps live readers at the bottom\n  ---\n  duration_ms: 1306.928483\n  type: 'test'\n  ...\n# Subtest: text size and spacing reflow preserves an earlier anchor through retention eviction\nok 2 - text size and spacing reflow preserves an earlier anchor through retention eviction\n  ---\n  duration_ms: 1211.343393\n  type: 'test'\n  ...\n# Subtest: text enlargement preserves inactive unread arrivals at the live edge\nok 3 - text enlargement preserves inactive unread arrivals at the live edge\n  ---\n  duration_ms: 1079.482796\n  type: 'test'\n  ...\n1..3\n# tests 3\n# suites 0\n# pass 3\n# fail 0\n# cancelled 0\n# skipped 0\n# todo 0\n# duration_ms 4146.5538\n"
+  },
+  "full_chat_suite": {
+    "command": [
+      "node",
+      "--test",
+      "--test-reporter=tap",
+      "tests/*.test.cjs"
+    ],
+    "cwd": "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/projects/realtime-integration-lab",
+    "exit_code": 0,
+    "counts": {
+      "tests": 36,
+      "pass": 36,
+      "fail": 0,
+      "cancelled": 0,
+      "skipped": 0,
+      "todo": 0
+    },
+    "stdout": "TAP version 13\n# Subtest: two browser clients display accepted messages once in both directions\nok 1 - two browser clients display accepted messages once in both directions\n  ---\n  duration_ms: 2431.562021\n  type: 'test'\n  ...\n# Subtest: a connected form submission waits behind an in-flight polling write\nok 2 - a connected form submission waits behind an in-flight polling write\n  ---\n  duration_ms: 800.699248\n  type: 'test'\n  ...\n# Subtest: a stale connected state does not retain a message for reconnect replay\nok 3 - a stale connected state does not retain a message for reconnect replay\n  ---\n  duration_ms: 1783.512592\n  type: 'test'\n  ...\n# Subtest: markup remains literal text in both browsers\nok 4 - markup remains literal text in both browsers\n  ---\n  duration_ms: 1761.253327\n  type: 'test'\n  ...\n# Subtest: rejection is visible, preserves the draft, and does not broadcast\nok 5 - rejection is visible, preserves the draft, and does not broadcast\n  ---\n  duration_ms: 4872.954061\n  type: 'test'\n  ...\n# Subtest: a departed client keeps its draft and receives only future messages on rejoining\nok 6 - a departed client keeps its draft and receives only future messages on rejoining\n  ---\n  duration_ms: 3840.26799\n  type: 'test'\n  ...\n# Subtest: transport interruption reconnects automatically without duplicating listeners\nok 7 - transport interruption reconnects automatically without duplicating listeners\n  ---\n  duration_ms: 2756.775824\n  type: 'test'\n  ...\n# Subtest: browser retains only the latest 200 messages\nok 8 - browser retains only the latest 200 messages\n  ---\n  duration_ms: 1000.939786\n  type: 'test'\n  ...\n# Subtest: new browser receives future messages without server-side history\nok 9 - new browser receives future messages without server-side history\n  ---\n  duration_ms: 2743.686361\n  type: 'test'\n  ...\n# Subtest: missing acknowledgement reports uncertainty and does not retry automatically\nok 10 - missing acknowledgement reports uncertainty and does not retry automatically\n  ---\n  duration_ms: 6201.223333\n  type: 'test'\n  ...\n# Subtest: an acknowledgement does not erase a newer draft typed during sending\nok 11 - an acknowledgement does not erase a newer draft typed during sending\n  ---\n  duration_ms: 2147.666674\n  type: 'test'\n  ...\n# Subtest: protocol broadcasts trimmed messages to sender and peer in order\nok 12 - protocol broadcasts trimmed messages to sender and peer in order\n  ---\n  duration_ms: 66.123805\n  type: 'test'\n  ...\n# Subtest: non-string payloads are rejected without broadcasts\nok 13 - non-string payloads are rejected without broadcasts\n  ---\n  duration_ms: 23.41197\n  type: 'test'\n  ...\n# Subtest: empty and whitespace-only payloads are rejected without broadcasts\nok 14 - empty and whitespace-only payloads are rejected without broadcasts\n  ---\n  duration_ms: 24.266932\n  type: 'test'\n  ...\n# Subtest: 501 code units are rejected even when trimming would shorten the payload\nok 15 - 501 code units are rejected even when trimming would shorten the payload\n  ---\n  duration_ms: 19.514901\n  type: 'test'\n  ...\n# Subtest: 500 UTF-16 code units are accepted including non-ASCII text\nok 16 - 500 UTF-16 code units are accepted including non-ASCII text\n  ---\n  duration_ms: 20.422574\n  type: 'test'\n  ...\n# Subtest: messages without acknowledgement callbacks do not crash the server\nok 17 - messages without acknowledgement callbacks do not crash the server\n  ---\n  duration_ms: 109.28051\n  type: 'test'\n  ...\n# Subtest: the conversation follows initial messages and readers within 24 pixels of the bottom\nok 18 - the conversation follows initial messages and readers within 24 pixels of the bottom\n  ---\n  duration_ms: 1003.604216\n  type: 'test'\n  ...\n# Subtest: new broadcasts preserve the visible message and pixel offset while browsing earlier text\nok 19 - new broadcasts preserve the visible message and pixel offset while browsing earlier text\n  ---\n  duration_ms: 758.151381\n  type: 'test'\n  ...\n# Subtest: scrolling back to the bottom resumes following subsequent messages\nok 20 - scrolling back to the bottom resumes following subsequent messages\n  ---\n  duration_ms: 765.583656\n  type: 'test'\n  ...\n# Subtest: retention eviction preserves a surviving reading anchor across variable-height messages\nok 21 - retention eviction preserves a surviving reading anchor across variable-height messages\n  ---\n  duration_ms: 934.552076\n  type: 'test'\n  ...\n# Subtest: an evicted reading anchor falls back to the earliest retained message\nok 22 - an evicted reading anchor falls back to the earliest retained message\n  ---\n  duration_ms: 721.111722\n  type: 'test'\n  ...\n# Subtest: new arrivals show their count while preserving the reading position\nok 23 - new arrivals show their count while preserving the reading position\n  ---\n  duration_ms: 986.139282\n  type: 'test'\n  ...\n# Subtest: keyboard activation returns to live text and keeps conversation focus\nok 24 - keyboard activation returns to live text and keeps conversation focus\n  ---\n  duration_ms: 1436.621004\n  type: 'test'\n  ...\n# Subtest: manual scrolling to live text clears the count before the next browsing session\nok 25 - manual scrolling to live text clears the count before the next browsing session\n  ---\n  duration_ms: 2474.09526\n  type: 'test'\n  ...\n# Subtest: unread counts stay bounded when arrivals exceed the retained history\nok 26 - unread counts stay bounded when arrivals exceed the retained history\n  ---\n  duration_ms: 2105.156917\n  type: 'test'\n  ...\n# Subtest: inactive tab counts arrivals at the live edge and clears them on focus\nok 27 - inactive tab counts arrivals at the live edge and clears them on focus\n  ---\n  duration_ms: 1370.015228\n  type: 'test'\n  ...\n# Subtest: returning to an inactive tab at earlier text retains its unread count and anchor\nok 28 - returning to an inactive tab at earlier text retains its unread count and anchor\n  ---\n  duration_ms: 1412.369579\n  type: 'test'\n  ...\n# Subtest: hidden page keeps unread arrivals until visible at the live edge\nok 29 - hidden page keeps unread arrivals until visible at the live edge\n  ---\n  duration_ms: 538.635269\n  type: 'test'\n  ...\n# Subtest: inactive tab unread count stays bounded to retained messages\nok 30 - inactive tab unread count stays bounded to retained messages\n  ---\n  duration_ms: 1789.114782\n  type: 'test'\n  ...\n# Subtest: viewport height changes keep live readers at the bottom\nok 31 - viewport height changes keep live readers at the bottom\n  ---\n  duration_ms: 559.953465\n  type: 'test'\n  ...\n# Subtest: viewport width reflow preserves earlier text through narrowing and widening\nok 32 - viewport width reflow preserves earlier text through narrowing and widening\n  ---\n  duration_ms: 1538.076044\n  type: 'test'\n  ...\n# Subtest: viewport resizing preserves inactive unread state at the live edge\nok 33 - viewport resizing preserves inactive unread state at the live edge\n  ---\n  duration_ms: 1668.317682\n  type: 'test'\n  ...\n# Subtest: text enlargement with an unchanged panel keeps live readers at the bottom\nok 34 - text enlargement with an unchanged panel keeps live readers at the bottom\n  ---\n  duration_ms: 1424.03421\n  type: 'test'\n  ...\n# Subtest: text size and spacing reflow preserves an earlier anchor through retention eviction\nok 35 - text size and spacing reflow preserves an earlier anchor through retention eviction\n  ---\n  duration_ms: 1455.212041\n  type: 'test'\n  ...\n# Subtest: text enlargement preserves inactive unread arrivals at the live edge\nok 36 - text enlargement preserves inactive unread arrivals at the live edge\n  ---\n  duration_ms: 1191.809372\n  type: 'test'\n  ...\n1..36\n# tests 36\n# suites 0\n# pass 36\n# fail 0\n# cancelled 0\n# skipped 0\n# todo 0\n# duration_ms 56065.543836\n",
+    "note": "Shell expands the glob. Only root package version metadata changed after this run; executed client/server/test bytes stayed unchanged."
+  },
+  "supporting_checks": [
+    {
+      "command": [
+        "python3",
+        "tools/test_validate_repo.py"
+      ],
+      "cwd": "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab",
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "elapsed_seconds": 2.207,
+      "stdout": "",
+      "stderr": "...........\n----------------------------------------------------------------------\nRan 11 tests in 2.068s\n\nOK\n"
+    },
+    {
+      "command": [
+        "python3",
+        "tools/test_check_manifest.py"
+      ],
+      "cwd": "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab",
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "elapsed_seconds": 0.6,
+      "stdout": "",
+      "stderr": "...........\n----------------------------------------------------------------------\nRan 11 tests in 0.456s\n\nOK\n"
+    },
+    {
+      "command": [
+        "python3",
+        "evaluations/chat-send-buffering/test_runner.py"
+      ],
+      "cwd": "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab",
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "elapsed_seconds": 6.999,
+      "stdout": "",
+      "stderr": ".......................\n----------------------------------------------------------------------\nRan 23 tests in 6.863s\n\nOK\n"
+    },
+    {
+      "command": [
+        "python3",
+        "tools/check_calibration.py",
+        "/workspace/work/p11-font-reflow/calibration"
+      ],
+      "cwd": "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab",
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "elapsed_seconds": 83.881,
+      "stdout": "baseline: rejected, {'tests': 17, 'pass': 15, 'fail': 2, 'cancelled': 0, 'skipped': 0, 'todo': 0}; expected match: True\nreference: accepted, {'tests': 17, 'pass': 17, 'fail': 0, 'cancelled': 0, 'skipped': 0, 'todo': 0}; expected match: True\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python3",
+        "evaluations/chat-send-buffering/run.py",
+        "check",
+        "/workspace/work/p11-font-reflow/working-client",
+        "--result",
+        "/workspace/work/p11-font-reflow/working-reference.json"
+      ],
+      "cwd": "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab",
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "elapsed_seconds": 42.935,
+      "stdout": "{\n  \"status\": \"accepted\",\n  \"result\": \"/workspace/work/p11-font-reflow/working-reference.json\",\n  \"counts\": {\n    \"tests\": 17,\n    \"pass\": 17,\n    \"fail\": 0,\n    \"cancelled\": 0,\n    \"skipped\": 0,\n    \"todo\": 0\n  },\n  \"reason\": null\n}\n",
+      "stderr": ""
+    }
+  ],
+  "compatibility": {
+    "dependency_graph_unchanged": true,
+    "evaluator_hashes_unchanged": true,
+    "starter_hashes": {
+      ".node-version": "7e8a2fa94951112b894a3dbe3d05efef5e9263741fa49125f0a70f40fedab4cc",
+      "package.json": "313b6467e18c7a9b91ab4a208a60fa455dd02e971bab6f99f361d585ca080203",
+      "package-lock.json": "4aef642ad8308c3a87ef328008fce3d75ba4ebd6935edb9f1ac3c833ab1e1727",
+      "server.cjs": "f84e170aa785a6fa5caf223a1c8a245f51688f347eefa8e2d0e37e0f5f3cf9e7",
+      "public/index.html": "7cb6866cc5f603ae89263db31620a99053439650a0e3e86e215ab2cc13cd9665",
+      "public/style.css": "7f4e6e73f8b6ac534369275f9a3461d00afbe7ab1605d46199d50ff25503d323",
+      "public/client.js": "1b559d97a981060467725dbed26545cf175dd383bbb6fdc992e4cb761ef3eaff",
+      "BRIEF.md": "13b49044c82465f988f23709e76027bf7c75849fdaab23848af325c9da0ccef9",
+      "task-manifest.json": "ada80ac2958cf856a82b63d74c632d41349c95ddf0ad2d91626e6657f6ed1e5f"
+    },
+    "known_calibration": {
+      "baseline": {
+        "status": "rejected",
+        "counts": {
+          "tests": 17,
+          "pass": 15,
+          "fail": 2,
+          "cancelled": 0,
+          "skipped": 0,
+          "todo": 0
+        },
+        "artifact_sha256": "1b559d97a981060467725dbed26545cf175dd383bbb6fdc992e4cb761ef3eaff",
+        "calibration_matched": true
+      },
+      "reference": {
+        "status": "accepted",
+        "counts": {
+          "tests": 17,
+          "pass": 17,
+          "fail": 0,
+          "cancelled": 0,
+          "skipped": 0,
+          "todo": 0
+        },
+        "artifact_sha256": "1b51b9ba200318222f0f509c5e0d8588fe9a0a9c5e878154abce7cb4995b36a2",
+        "calibration_matched": true
+      }
+    },
+    "working_client_probe": {
+      "schema_version": 1,
+      "task": "EVAL-001",
+      "task_version": "0.1.0",
+      "runner_version": "0.2.0",
+      "started_at": "2026-10-11T18:23:41.617317+00:00",
+      "run_kind": "artifact_check",
+      "status": "accepted",
+      "baseline_commit": "66041e7fdd7687ee21099f95129dff41933c74dd",
+      "suite_commit": "911bf789e31dc2b1df9586a894e37312375771f3",
+      "runner_sha256": "4c43d8f460458ad78d2048909ccf1d3e3310b999a2232136c7a610712673c908",
+      "commands": [
+        {
+          "command": [
+            "node",
+            "--check",
+            "/tmp/p02-client-fkff8qng/client.js"
+          ],
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": "",
+          "timeout_seconds": 15,
+          "timed_out": false,
+          "launch_error": null,
+          "capture_complete": true,
+          "termination_strategy": null,
+          "elapsed_seconds": 0.029
+        },
+        {
+          "command": [
+            "node",
+            "-e",
+            "\nconst { chromium } = require('playwright-core');\nif (Number(process.versions.node.split('.')[0]) < 22) process.exit(2);\n(async () => {\n  const browser = await chromium.launch({\n    executablePath: process.env.CHROMIUM_PATH || '/usr/bin/chromium',\n    headless: true, args: ['--no-sandbox'],\n  });\n  console.log(JSON.stringify({ node: process.version, chromium: browser.version(),\n    playwright: require('playwright-core/package.json').version,\n    socket_io: require('socket.io/package.json').version }));\n  await browser.close();\n})().catch(error => { console.error(error.message); process.exit(2); });\n"
+          ],
+          "exit_code": 0,
+          "stdout": "{\"node\":\"v24.19.0\",\"chromium\":\"154.0.8037.57\",\"playwright\":\"1.64.0\",\"socket_io\":\"4.8.4\"}\n",
+          "stderr": "",
+          "timeout_seconds": 20,
+          "timed_out": false,
+          "launch_error": null,
+          "capture_complete": true,
+          "termination_strategy": null,
+          "elapsed_seconds": 0.687
+        },
+        {
+          "command": [
+            "node",
+            "--test",
+            "--test-reporter=tap",
+            "tests/browser.test.cjs",
+            "tests/protocol.test.cjs"
+          ],
+          "exit_code": 0,
+          "stdout": "TAP version 13\n# Subtest: two browser clients display accepted messages once in both directions\nok 1 - two browser clients display accepted messages once in both directions\n  ---\n  duration_ms: 4660.033032\n  type: 'test'\n  ...\n# Subtest: a connected form submission waits behind an in-flight polling write\nok 2 - a connected form submission waits behind an in-flight polling write\n  ---\n  duration_ms: 1532.364392\n  type: 'test'\n  ...\n# Subtest: a stale connected state does not retain a message for reconnect replay\nok 3 - a stale connected state does not retain a message for reconnect replay\n  ---\n  duration_ms: 2531.984464\n  type: 'test'\n  ...\n# Subtest: markup remains literal text in both browsers\nok 4 - markup remains literal text in both browsers\n  ---\n  duration_ms: 2403.045389\n  type: 'test'\n  ...\n# Subtest: rejection is visible, preserves the draft, and does not broadcast\nok 5 - rejection is visible, preserves the draft, and does not broadcast\n  ---\n  duration_ms: 4022.672048\n  type: 'test'\n  ...\n# Subtest: a departed client keeps its draft and receives only future messages on rejoining\nok 6 - a departed client keeps its draft and receives only future messages on rejoining\n  ---\n  duration_ms: 5474.124312\n  type: 'test'\n  ...\n# Subtest: transport interruption reconnects automatically without duplicating listeners\nok 7 - transport interruption reconnects automatically without duplicating listeners\n  ---\n  duration_ms: 3189.11608\n  type: 'test'\n  ...\n# Subtest: browser retains only the latest 200 messages\nok 8 - browser retains only the latest 200 messages\n  ---\n  duration_ms: 1911.191017\n  type: 'test'\n  ...\n# Subtest: new browser receives future messages without server-side history\nok 9 - new browser receives future messages without server-side history\n  ---\n  duration_ms: 5926.835113\n  type: 'test'\n  ...\n# Subtest: missing acknowledgement reports uncertainty and does not retry automatically\nok 10 - missing acknowledgement reports uncertainty and does not retry automatically\n  ---\n  duration_ms: 6769.530351\n  type: 'test'\n  ...\n# Subtest: an acknowledgement does not erase a newer draft typed during sending\nok 11 - an acknowledgement does not erase a newer draft typed during sending\n  ---\n  duration_ms: 2339.968029\n  type: 'test'\n  ...\n# Subtest: protocol broadcasts trimmed messages to sender and peer in order\nok 12 - protocol broadcasts trimmed messages to sender and peer in order\n  ---\n  duration_ms: 59.347602\n  type: 'test'\n  ...\n# Subtest: non-string payloads are rejected without broadcasts\nok 13 - non-string payloads are rejected without broadcasts\n  ---\n  duration_ms: 166.20747\n  type: 'test'\n  ...\n# Subtest: empty and whitespace-only payloads are rejected without broadcasts\nok 14 - empty and whitespace-only payloads are rejected without broadcasts\n  ---\n  duration_ms: 18.887228\n  type: 'test'\n  ...\n# Subtest: 501 code units are rejected even when trimming would shorten the payload\nok 15 - 501 code units are rejected even when trimming would shorten the payload\n  ---\n  duration_ms: 16.550805\n  type: 'test'\n  ...\n# Subtest: 500 UTF-16 code units are accepted including non-ASCII text\nok 16 - 500 UTF-16 code units are accepted including non-ASCII text\n  ---\n  duration_ms: 18.886663\n  type: 'test'\n  ...\n# Subtest: messages without acknowledgement callbacks do not crash the server\nok 17 - messages without acknowledgement callbacks do not crash the server\n  ---\n  duration_ms: 16.974436\n  type: 'test'\n  ...\n1..17\n# tests 17\n# suites 0\n# pass 17\n# fail 0\n# cancelled 0\n# skipped 0\n# todo 0\n# duration_ms 42054.424425\n",
+          "stderr": "",
+          "timeout_seconds": 180,
+          "timed_out": false,
+          "launch_error": null,
+          "capture_complete": true,
+          "termination_strategy": null,
+          "elapsed_seconds": 42.12
+        }
+      ],
+      "candidate_model": null,
+      "score": null,
+      "artifact_sha256": "c28697bffd07a74bdda2443c5eb47f743028382d5b2d01a42781bc9a404ac300",
+      "evaluator_artifacts": {
+        "server.cjs": "f84e170aa785a6fa5caf223a1c8a245f51688f347eefa8e2d0e37e0f5f3cf9e7",
+        "public/index.html": "abf2c41b7fc6c0d7ae081ac7b6ef15af0de658fb9e738bbcde8dfd07aa852848",
+        "public/style.css": "0e90d0c17dd64e139538357240194fc24b8261bc21e4cb887768f1004948b13d",
+        "package.json": "2eb527a56b15c7949329d7582469bcf1fe12aafedf6c6f70d865b5d3c0766a80",
+        "package-lock.json": "1fcbdb915d484b376a5126d4fd5087bd04df618dd8e461aeb0131506ff0bdcaf",
+        "tests/browser.test.cjs": "5d31f58d99d9e6cd51f24e448063349d916acb2fab4c4585a84a969cb3dca63e",
+        "tests/protocol.test.cjs": "cdf15bd3522bf9c74dc60bf307fc56f4050d74d61b45f27341867ce537254a7a"
+      },
+      "evaluator_source": "git_snapshot",
+      "environment": {
+        "node": "v24.19.0",
+        "chromium": "154.0.8037.57",
+        "playwright": "1.64.0",
+        "socket_io": "4.8.4"
+      },
+      "counts": {
+        "tests": 17,
+        "pass": 17,
+        "fail": 0,
+        "cancelled": 0,
+        "skipped": 0,
+        "todo": 0
+      },
+      "gate": "behavior_and_regressions",
+      "failed_checks": []
+    }
+  },
+  "reproduce_baseline": {
+    "extract_command": "git show 3d2b271e7beb3fe43b7d0a0e2ce347e7cdfe35f7:martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/projects/realtime-integration-lab/public/client.js > /tmp/creative-ai-p11-0.1.5-client.js",
+    "project_command": "CHAT_TEST_CLIENT_PATH=/tmp/creative-ai-p11-0.1.5-client.js node --test --test-reporter=tap --test-name-pattern='text enlargement|text size and spacing' tests/reading.test.cjs",
+    "expected": "three failures, no skipped or cancelled checks; unset the override for corrected execution"
+  },
+  "evaluation_limits": [
+    "User styles are controlled CSS font-size, line-height and letter-spacing changes; these are not native browser zoom tests.",
+    "Native default-font-size enlargement preserved reading in an exploratory probe; minimum-font-size changes did not affect the rendered text and establish no coverage.",
+    "Message/offset retention does not preserve a word or wrapped line; available scroll range can limit restoration.",
+    "No human readability, assistive-technology, other-browser, minimized-window, independent candidate or commercial validation.",
+    "P10 runtime checks were not executed locally; historical creative sources and evidence were preserved."
+  ],
+  "attribution": {
+    "Martin": "direction and authorization",
+    "Codex": "assessment, implementation, tests and documentation"
+  },
+  "final_integrity_checks": [
+    {
+      "command": [
+        "python3",
+        "tools/validate_repo.py"
+      ],
+      "exit_code": 0,
+      "stdout": "PASS: 11 projects, 11 transfers, 0 assets, 2 legacy sources; 149 local file links.\nDocumentary checks only; no game, model benchmark or media runtime executed.\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python3",
+        "tools/check_manifest.py"
+      ],
+      "exit_code": 0,
+      "stdout": "PASS: 77 maintained lab files covered exactly once; all SHA-256 hashes match.\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    }
+  ],
+  "publication_scope": {
+    "seed": "byte-identical to baseline; no direction/inventory change",
+    "reason": "Automatic approval review rejected uploading the full revised SEED with its existing personal/professional material. Omit that optional edit; publish the implemented runtime and remaining continuity. State/registry record current P11 version."
+  }
+}

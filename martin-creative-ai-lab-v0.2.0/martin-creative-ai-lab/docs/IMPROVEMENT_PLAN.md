@@ -1,4 +1,19 @@
-# Current increment — P10 dialogue continuity
+# Current increment — P11 text reflow
+
+Correct the reproduced loss of reading position when text grows/reflows inside
+an unchanged panel. Reuse ResizeObserver and the existing anchor restoration;
+observe retained items, remove observations on eviction, and remember content
+height before reflow scroll events or broadcasts. No new control, history store,
+protocol, dependency or shared abstraction is needed.
+
+Acceptance: three committed-client failures become passes; all 36 chat checks
+pass, preserving earlier anchors, live following, inactive unread counts and
+subsequent retention. Verify unchanged dependency graph and evaluator snapshot,
+known calibration plus working-client 17/17 compatibility. Update only affected
+continuity/evidence and hashes. Next: human reading/keyboard review with enlarged
+and spaced text; P10 reader feedback and independent P02 provenance remain pending.
+
+# Previous increment — P10 dialogue continuity
 
 Implement 0.1.2 in the existing CLI: acknowledge completed help, answer the
 crossing request at agreement, recall retracted/repeated orders and outburst,

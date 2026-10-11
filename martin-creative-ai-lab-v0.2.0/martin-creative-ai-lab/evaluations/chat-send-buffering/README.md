@@ -84,8 +84,9 @@ No model identity or score is inferred from an artifact.
 
 ## Calibration and limits
 
-Calibration uses two controlled artifacts: the exported 0.1.0 client and P11's
-current corrected 0.1.3 client. To prepare a reference probe, export a **second**
+The lab's `tools/check_calibration.py` uses two controlled artifacts: the exported
+0.1.0 client and the committed 0.1.3 reference from `SUITE_COMMIT`. To check the
+working P11 client separately, export a **second**
 fresh directory, copy only P11's working `public/client.js` into it, and check it.
 The baseline must reject with the polling and stale-state checks failing; the
 reference must accept with all 17 passing. See [snapshot calibration](../../evidence/evaluation-task/SNAPSHOT_RUN.json), [prior unread runtime calibration](../../evidence/evaluation-task/UNREAD_CALIBRATION.json), [prior runtime recalibration](../../evidence/realtime-chat/READING_RUN.json), [prior timeout evidence](../../evidence/evaluation-task/TIMEOUT_RUN.json) and [original calibration](../../evidence/evaluation-task/CALIBRATION.json).
@@ -109,5 +110,5 @@ tools. Keep raw artifact acceptance separate from any claim about its author.
 Runner 0.2.0 retains P11 commit `911bf789e31dc2b1df9586a894e37312375771f3`
 without importing current app sources. Controlled changed-working-project checks
 retain the 15/17 and 17/17 outcomes; all nine exports remain unchanged. The
-original 17 task checks are byte-identical; P11's nine reading checks remain
+original 17 task checks are byte-identical; P11's reading suites remain
 outside EVAL-001. No current app or candidate contract change is required.
