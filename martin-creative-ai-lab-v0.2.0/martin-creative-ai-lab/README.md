@@ -60,7 +60,7 @@ Codex performed this increment. Manual usability review by Martin is pending.
 
 TR-009 now has a verified P02 task consumer: baseline rejects at 15/17 and
 reference accepts at 17/17. Other transfers remain candidates. No independent
-model was evaluated. Prior work is Git-published through `7866785`. P11 0.1.2
-preserves reading position; P02 runner 0.1.2 pins the tested runtime while leaving
-starter contract 0.1.0 unchanged. [State](docs/STATE.md) records current commits
-and remote confirmation. This task explicitly authorizes normal publication.
+model was evaluated. P11 0.1.2 and P02 runtime recalibration are Git-published in
+[f35e2e7](https://github.com/MartinFMelcop/Creative_AI_Project_HUB/commit/f35e2e767f215040e9e300eb0ee480fa2fc082d5), confirmed on remote main after a normal push.
+The starter contract remains 0.1.0. [State](docs/STATE.md) records source commits,
+verification and publication. This task explicitly authorized the publication.

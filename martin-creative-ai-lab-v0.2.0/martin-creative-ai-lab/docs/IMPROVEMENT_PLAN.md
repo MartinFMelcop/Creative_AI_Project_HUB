@@ -4,7 +4,7 @@ Updated: 2026-10-11. One primary workstream; no mandatory backlog expansion.
 
 ## Current iteration — P11 reading position and P02 compatibility
 
-**Priority:** 1 — completed and locally verified. At clean published base `7866785`, the chat receive
+**Priority:** 1 — completed, verified and published in `f35e2e7`. At clean published base `7866785`, the chat receive
 handler always scrolls to the bottom. Incoming text can interrupt reading earlier
 messages. Verify the failure through a real browser and real Socket.IO broadcasts.
 The independent P02 candidate remains a future run; this session cannot manufacture

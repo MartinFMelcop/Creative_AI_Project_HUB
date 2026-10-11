@@ -24,14 +24,15 @@ Carrying fractional scroll correction resolved that failure without relaxing
 the one-pixel criterion. Server, markup/style, original 17 tests, send policy,
 dependency resolutions and historical material are unchanged.
 
-P11 is checkpointed locally at `2aed760251bb8d1544e906606cd954ed80f1df2f`.
+P11 is committed at `2aed760251bb8d1544e906606cd954ed80f1df2f` and included
+in the verified published increment [f35e2e7](https://github.com/MartinFMelcop/Creative_AI_Project_HUB/commit/f35e2e767f215040e9e300eb0ee480fa2fc082d5).
 Package metadata changed to 0.1.2, so P02's old pin correctly returned inconclusive.
 Runner 0.1.2 now pins that tested revision. Its 17 send-policy checks exclude the
 five new reading checks; starter contract, brief and all nine exports stay
 byte-identical. See [the evaluator](../evaluations/chat-send-buffering/README.md).
-The current task authorizes committing and normal publication to origin/main.
-Publication confirmation is recorded after remote verification; prior development
-records retain their original point-in-time status.
+The current task explicitly authorized normal publication to origin/main.
+The push succeeded and remote main matched the full development SHA above;
+prior development records retain their original point-in-time status.
 
 ## Verification and evidence
 
@@ -73,3 +74,18 @@ Next: Martin's two-tab review of reading, resuming live following, keyboard use
 and uncertain-delivery wording; separately produce one independent EVAL-001
 client with explicit identity/context/tools/attempts and raw evaluator evidence.
 Do not grow task inventory before completing that evidence gate.
+
+## Publication verification — 2026-10-11
++
++The verified increment contains P11 commit `2aed760` and P02/continuity commit
++`f35e2e7`. After implementation, tests, documentation and commit creation, the
++required fetch → merge → status → diff check → normal push → remote lookup
++sequence completed in order. Fetch observed the prior published base; merge
++reported "Already up to date." No conflicts, history rewriting or discarded files.
++Remote main and local HEAD both confirmed the full development SHA above.
++
++A documentation follow-up records that confirmation and refreshes integrity
++hashes. Implementation and raw execution records remain unchanged. Current
++publication can be rechecked with `git ls-remote origin refs/heads/main`; a later
++documentation tip still contains both verified development commits.
++
