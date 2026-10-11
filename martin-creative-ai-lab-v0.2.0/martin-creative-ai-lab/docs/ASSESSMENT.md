@@ -1,7 +1,7 @@
 # Portfolio assessment
 
-Updated: 2026-10-10. Scope: maintained lab documents, registries, legacy inventory,
-the published P11 0.1.1 app/tests, and P02 EVAL-001 at published base `e1850d0`. No legacy source
+Updated: 2026-10-11. Scope: maintained lab documents, registries, legacy inventory,
+P11 0.1.2 and P02 EVAL-001 continued from published base `7866785`. No legacy source
 was extracted and no complete game, manuscript, image, or audio corpus was audited
 in this session. This assessment continues the v0.2.0 recovery and v0.3.0 increment
 described in [the seed](../SEED.md) and [legacy guide](LEGACY_REPOSITORIES.md).
@@ -10,12 +10,12 @@ described in [the seed](../SEED.md) and [legacy guide](LEGACY_REPOSITORIES.md).
 
 | Projects / resources | Available evidence | Strength / issue | Current evidence boundary |
 |---|---|---|---|
-| P11 — Real-time Integration Lab / WebSocket | Three preserved historical files; working 0.1.0 committed at `66041e7` | Bidirectional chat already exists. New tests expose connected-send loss during polling and a stale-state reconnect queue; 0.1.1 corrects both | 17 current tests passed; [transport evidence](../evidence/realtime-chat/POLLING_SEND_RUN.json) distinguishes real polling writes from injected heartbeat expiry |
+| P11 — Real-time Integration Lab / WebSocket | Preserved origin and published transport correction | 0.1.2 preserves earlier-text reading during broadcasts and variable-height eviction | 22 current tests pass; [reading evidence](../evidence/realtime-chat/READING_RUN.json) separates browser geometry from human review. Prior transport evidence is preserved |
 | P10 — Adventures Unleashed / Rave Master | 175 preserved texts; source inventory and previous runner reports | Useful dialogue, combat, and QA specifications. Ten pairs of same-named Ruby scripts have different hashes; source selection matters | Historical recovery reports show 49 combat checks and 19 dialogue steps; not rerun here. No RMXP runtime, equivalent engine implementation, or game balance claim |
 | P01, P03, P05, P06 | Seed descriptions and references to historical packages | Economy, timing, and combat could produce useful slices | Baselines absent from this checkout; no execution. Unity and RMXP are not prerequisites for P11 |
 | P04 — O Lich mais velho da tumba mais antiga | Narrative and editorial summary in the seed | Concrete character/world direction and potential for interactive adaptation | Full manuscript absent; dramatic quality of a new scene requires selected source and reader review |
 | P07 / P08 | P10 art specifications and asset/cue inventory summaries | Visual consistency and cue-driven integration have useful contracts | 293 indexed images are metadata, not inspected images; 25 cues are planned, not audio. No actual masters validated here |
-| P02 / P09 | P02 EVAL-001 export/checker plus prior case templates | Actual P11 defects now support a bounded practice task with calibrated gates | P02 runner 0.1.1: 15 runner tests, preserved diagnostics/cleanup, compatible old exports, 15/17 baseline and 17/17 reference. Original missing-browser probe remains prior evidence. No independent model, external client or professional outcome |
+| P02 / P09 | P02 EVAL-001 export/checker plus prior case templates | Actual P11 defects now support a bounded practice task with calibrated gates | P02 runner 0.1.2: 15 runner tests and recalibrated runtime pin; unchanged exports, 15/17 baseline and 17/17 new reference. Original missing-browser probe remains prior evidence. No independent model, external client or professional outcome |
 | Shared lab structure | Registries, templates, validator, source archive | Clear project IDs and origin records; documented local checks | The 0.1.0 manifest/validator defects were corrected previously. Retain those checks; refresh integrity hashes after this increment is final |
 
 The previous P11 correction checkout began clean at
@@ -60,9 +60,9 @@ restores the lab check; 3 regression tests preserve meaningful failures for
 maintained links and corrupted source archives. The source archive and its
 inventory remain byte-identical to the starting checkout.
 
-## Current execution — P11 0.1.1
+## Previous execution — P11 0.1.1
 
-Seventeen current tests pass (6 protocol, 11 Chromium), including existing text,
+Seventeen tests passed in that correction (6 protocol, 11 Chromium), including text,
 validation, draft, retention, reconnection, and acknowledgement behavior. Frozen
 installation passed with unchanged dependency resolutions. A test-harness route
 can serve the recorded client revision for a two-failure baseline comparison.
@@ -95,7 +95,7 @@ proof. No model/author comparison was run. The next evidence gap is one independ
 artifact with an explicit source-exposure/tool policy. UI appeal, human usability,
 game execution and missing masters remain outside current acceptance.
 
-## Current correction — P02 runner 0.1.1
+## Previous correction — P02 runner 0.1.1
 
 This iteration began clean at `e1850d0`, also observed on remote main. Before an
 independent artifact attempt, real command probes revealed lost timeout evidence
@@ -110,3 +110,16 @@ byte-identical old exports. [Current evidence](../evidence/evaluation-task/TIMEO
 separates real processes, injected gate boundaries, and browser checks. No model
 performance or sandbox property is inferred. Independent context and human review
 remain the next evidence gaps; no missing creative master was reconstructed.
+
+## Current increment — P11 reading position and P02 compatibility
+
+Clean published base `7866785` preserves both previous workstreams. Unconditional
+scroll interrupts reading; three real-browser failures establish the defect.
+This correction is feasible now, while independent candidate context and Martin
+review remain unperformed. Preserve the 200-item window and existing transport.
+
+Five geometry checks and all 22 chat checks pass. The initial correction drifted
+4.0625 pixels after ten evictions; fractional correction meets the one-pixel gate.
+P02 first returns inconclusive on changed metadata, then recalibrates at 15/17
+and 17/17 with an explicit pin. No new candidate requirement or model result is
+inferred. Other creative baselines and masters remain recovery opportunities.

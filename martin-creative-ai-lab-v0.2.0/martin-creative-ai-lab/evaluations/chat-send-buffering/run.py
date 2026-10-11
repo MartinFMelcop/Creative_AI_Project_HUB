@@ -14,10 +14,10 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 TASK = "EVAL-001"
-VERSION = "0.1.1"
+VERSION = "0.1.2"
 TASK_VERSION = "0.1.0"
 BASELINE = "66041e7fdd7687ee21099f95129dff41933c74dd"
-SUITE_COMMIT = "2d4e9a765ec4edc6401879259270e5d66970e6e2"
+SUITE_COMMIT = "2aed760251bb8d1544e906606cd954ed80f1df2f"
 HERE = Path(__file__).resolve().parent
 LAB = HERE.parents[1]
 PROJECT = LAB / "projects/realtime-integration-lab"

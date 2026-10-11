@@ -1,6 +1,6 @@
 # P02 — Chat send-buffering practice task
 
-**Task:** EVAL-001. **Runner version:** 0.1.1. **Starter contract:** 0.1.0. **Runtime:** Python orchestration and
+**Task:** EVAL-001. **Runner version:** 0.1.2. **Starter contract:** 0.1.0. **Runtime:** Python orchestration and
 Node/Socket.IO/Chromium behavior checks. This is P02's first working task, adapted
 from P11; its earlier Unity proposal remains an origin, not a runtime requirement.
 
@@ -12,7 +12,7 @@ the application, locked dependencies, reference client, and evaluator-owned test
 
 ## Prepare and check
 
-Requires Python 3.9+, Git with commits `66041e7` and `2d4e9a7` retained, Node 22+,
+Requires Python 3.9+, Git with commits `66041e7` and `2aed760` retained, Node 22+,
 P11's locked dependencies installed, and compatible system Chromium. Use P11's
 documented `npm ci` command if needed. No Unity, model API, token, or new npm
 dependency is required. Run from the lab directory:
@@ -63,17 +63,17 @@ bounded final reap avoid indefinite waiting. The non-POSIX fallback targets only
 the direct process and has not been executed here. This is cleanup, not a sandbox:
 children creating another session/group are outside the group policy.
 
-Runner 0.1.1 leaves the starter contract at 0.1.0, preserving existing exports byte
+Runner 0.1.2 leaves the starter contract at 0.1.0, preserving existing exports byte
 for byte. `runner_version` identifies the correction separately from `task_version`.
 No model identity or score is inferred from an artifact.
 
 ## Calibration and limits
 
 Calibration uses two controlled artifacts: the exported 0.1.0 client and P11's
-already corrected 0.1.1 client. To prepare a reference probe, export a **second**
+current corrected 0.1.2 client. To prepare a reference probe, export a **second**
 fresh directory, copy only P11's working `public/client.js` into it, and check it.
 The baseline must reject with the polling and stale-state checks failing; the
-reference must accept with all 17 passing. See [current timeout/recalibration evidence](../../evidence/evaluation-task/TIMEOUT_RUN.json) and [original calibration](../../evidence/evaluation-task/CALIBRATION.json).
+reference must accept with all 17 passing. See [current runtime recalibration](../../evidence/realtime-chat/READING_RUN.json), [prior timeout evidence](../../evidence/evaluation-task/TIMEOUT_RUN.json) and [original calibration](../../evidence/evaluation-task/CALIBRATION.json).
 
 These probes validate the harness and TR-009's bounded P11 → P02 adaptation.
 They are not independent candidate attempts, a model comparison, a score, or
@@ -90,3 +90,9 @@ Neither proves production outage reliability, human usability, or Unity behavior
 
 Next: run one independently produced client with recorded context and permitted
 tools. Keep raw artifact acceptance separate from any claim about its author.
+
+Runner 0.1.2 pins P11 commit `2aed760251bb8d1544e906606cd954ed80f1df2f`
+after package metadata changed. The original guard returned inconclusive, then
+the baseline/reference recalibrated at 15/17 and 17/17. The original 17 task
+checks are byte-identical; P11's five reading checks remain outside EVAL-001.
+All nine exports are unchanged and previously exported workspaces remain accepted.

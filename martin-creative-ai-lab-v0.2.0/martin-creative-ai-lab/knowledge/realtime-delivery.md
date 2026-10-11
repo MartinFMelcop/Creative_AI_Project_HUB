@@ -45,3 +45,18 @@ TR-009 now consumes this defect in [P02 EVAL-001](../evaluations/chat-send-buffe
 lobby or authoritative multiplayer system. A public reference solution must
 not be treated as private evaluation material. No component was promoted to
 `shared/` in this session.
+
+## Receiving text must respect reading position
+
+[P11 0.1.2 evidence](../evidence/realtime-chat/READING_RUN.json) shows a correct
+broadcast can still interrupt reading if rendering always scrolls to the end.
+Follow near the bottom; otherwise preserve the visible message and pixel offset.
+A cap removes variable-height text before that anchor, so numerical scrollTop
+alone is insufficient. If the anchor expires, show the retained-history boundary.
+
+Browser scroll values quantize geometry: a measured 4.0625-pixel drift appeared
+across ten evictions. Carrying fractional correction meets the one-pixel checks
+here. Reuse in logs or narrative histories is a candidate until a destination
+adapts and verifies it; no shared code is promoted. Human readability, resize/zoom
+and other browsers remain separate. P02's pin detected changed runtime metadata;
+recalibrate controlled inputs without adding UI requirements to its send task.

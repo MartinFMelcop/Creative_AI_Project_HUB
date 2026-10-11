@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-10-10",
+  "updated_at": "2026-10-11",
   "transfers": [
     {
       "id": "TR-001",
@@ -94,11 +94,12 @@
         "evidence/realtime-chat/POLLING_SEND_RUN.json",
         "evaluations/chat-send-buffering/README.md",
         "evidence/evaluation-task/CALIBRATION.json",
-        "evidence/evaluation-task/TIMEOUT_RUN.json"
+        "evidence/evaluation-task/TIMEOUT_RUN.json",
+        "evidence/realtime-chat/READING_RUN.json"
       ],
       "source_reference": "SEED.md — seção 28.5",
       "next_action": "Run a separately produced client with recorded context and tools; extend the claim only after destination execution supplies evidence.",
-      "verification_scope": "Task export and artifact-checker calibration only; not an independent candidate, model benchmark, or shared component."
+      "verification_scope": "Task export/checker calibration, including runtime 0.1.2 recalibration; original 17 send-policy checks only. Not independent candidate/model performance, reading-policy reuse or shared code."
     },
     {
       "id": "TR-010",

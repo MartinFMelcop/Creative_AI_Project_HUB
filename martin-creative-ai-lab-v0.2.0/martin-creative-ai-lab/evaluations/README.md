@@ -11,7 +11,11 @@ and [seed protocol](../SEED.md) for later tasks, without mandatory expansion.
 Copy only the exported workspace into a separate candidate context. Public
 repository folders are not confidential; packaging does not establish secrecy.
 
-Runner 0.1.1 preserves timeout/launch attempts and partial output, and terminates
+Runner 0.1.2 preserves timeout/launch attempts and partial output, and terminates
 inherited POSIX process groups with bounded capture. Starter contract 0.1.0 is
-unchanged. [Current correction evidence](../evidence/evaluation-task/TIMEOUT_RUN.json)
+unchanged. [Previous timeout evidence](../evidence/evaluation-task/TIMEOUT_RUN.json)
 records executed cleanup limits; no sandbox or independent model score is claimed.
+
+[Runtime recalibration](../evidence/realtime-chat/READING_RUN.json) pins P11
+0.1.2 while keeping EVAL-001's original 17 checks and nine-file contract. The
+five new P11 reading tests are outside the candidate task scope.

@@ -1,10 +1,10 @@
 # SEED — Martin Creative AI Lab
 
-**Version:** 0.4.1
+**Version:** 0.4.2
 **Data-base:** 10 de outubro de 2026  
 **Autor e responsável pelo portfólio:** Martin Melcop Neto  
 **Working language:** English for new documentation, plans, code comments, UI, and reports. Preserve original creative titles and historical source languages.
-**Current state:** selected historical sources, published P11 local chat 0.1.1, and published P02 task setup and runner correction 0.1.1 (starter contract 0.1.0). No independent model evaluation, migrated game, finished music, or public hosting is claimed.
+**Current state:** selected historical sources, preserved published P11/P02 work, P11 reading correction 0.1.2 and P02 runtime recalibration 0.1.2 (starter contract 0.1.0). No independent model evaluation, migrated game, finished music, or public hosting is claimed.
 
 > Construir um laboratório autoral em Git que transforma ideias, obras e experimentos em produtos pequenos, sistemas reutilizáveis e evidências técnicas verificáveis. A IA participa da criação e execução; Martin desenvolve sua capacidade de especificar, compreender, selecionar, corrigir, validar e explicar os resultados.
 
@@ -46,14 +46,14 @@ Se apenas este arquivo estiver disponível, ele é suficiente para iniciar a Fas
 |---|---|
 | Repository | MartinFMelcop/Creative_AI_Project_HUB; actual Git root `/workspace/Creative_AI_Project_HUB`; lab remains nested in its original package directory |
 | Preserved sources | 175 Rave Master texts and 3 WebSocket files; unchanged ZIP and inventory; not a complete RMXP backup |
-| Primary workstream | P02 runner 0.1.1: timeout evidence and inherited-process cleanup verified; starter contract 0.1.0. M4 for the harness only; P11 stays 0.1.1 |
+| Primary workstream | P11 reading correction 0.1.2; auxiliary P02 runtime recalibration 0.1.2, starter 0.1.0. Both stay M4 for bounded local scopes |
 | Engine execution | No Unity or RMXP runtime verified; P11 uses Node/Express/Socket.IO |
-| Current verification | 15 runner regressions pass; recorded runner fails 7 new methods. Compatible old exports retain 15/17 and 17/17 outcomes. See `evidence/evaluation-task/TIMEOUT_RUN.json`; original installation/missing-browser evidence remains historical |
+| Current verification | 22 chat checks and 15 runner regressions pass. Three reading failures reproduce on 0.1.1; P02 retains 15/17 and 17/17 outcomes. See `evidence/realtime-chat/READING_RUN.json`; prior records stay historical |
 | Historical verification | v0.2.0 combat/dialogue runner reports remain historical; not rerun during P11 work |
-| Next action | One independently produced EVAL-001 client with recorded context/tools/attempts. Martin's P11 two-tab UI review remains pending |
+| Next action | Martin's P11 reading/keyboard review; one independent EVAL-001 client with recorded context/tools/attempts |
 | Other seeds | P01 baseline still absent; P10 remains recovered material; other creative/runtime baselines require targeted recovery |
 | Transfer / shared status | TR-009 validated for P02 task adaptation/calibration only; 10 other transfers remain candidates; no shared component |
-| Portfolio / attribution | P11 and P02 setup preserved; runner correction published in `995bb24`, with remote SHA verified. Martin supplied direction; Codex implemented/tested. No independent candidate/model result or Martin usability review |
+| Portfolio / attribution | Prior work published through `7866785`; current commits/publication are recorded in `docs/STATE.md`. Martin supplied direction; Codex implemented/tested. No independent candidate/model result or Martin usability review |
 
 Maintained [assessment](docs/ASSESSMENT.md) and [plan](docs/IMPROVEMENT_PLAN.md)
 continue the recovery. Preserve the historical source archive; adaptations and
@@ -217,7 +217,7 @@ Identificadores persistem mesmo quando nomes mudam. Um projeto arquivado pode co
 | ID | Seed | Matéria-prima principal | Destinos possíveis | Estado nesta fundação |
 |---|---|---|---|---|
 | P01 | Artemyra / ArtemiZ4 | Board, economia, minigames, IA de jogo, produção | Auditoria, simulador, pequeno party game, benchmark | Legado descrito; runtime atual não auditado |
-| P02 | AI Evaluation & QA Lab (historical Unity proposal) | Requirements, reproduced bugs, artifact checks | Bounded practice tasks and later independent evaluation | EVAL-001 runner 0.1.1 validated, starter 0.1.0; M4 harness scope, no model candidate |
+| P02 | AI Evaluation & QA Lab (historical Unity proposal) | Requirements, reproduced bugs, artifact checks | Bounded practice tasks and later independent evaluation | EVAL-001 runner 0.1.2 recalibrated, starter 0.1.0; M4 harness scope, no model candidate |
 | P03 | Tokyo 80s | Ritmo, city pop/wave, dança, aura, arcade | Vertical slice, toolkit de timing, áudio interativo | Conceito e pacote histórico |
 | P04 | O Lich mais velho da tumba mais antiga | Romance, mundo, personagens, arte e continuidade | Narrativa interativa, amostra editorial, jogo, animatic | Pacote v0.4.48 parcialmente inspecionado |
 | P05 | The Dark Knight | Combate por turnos, classes, progressão, conteúdo | Laboratório de combate e balanceamento | Legado RMXP descrito |
@@ -271,8 +271,8 @@ The existing P11 app owns the runtime; no engine migration or new dependency.
 are retained and inherited child cleanup verified. Compatible old exports retain
 two failures out of 17 on the defective client and 17 passes on the correction.
 Original starter installation/CLI smoke and missing-browser probe remain prior
-evidence; this correction changes no app/dependency. Runner version is 0.1.1
-while the starter contract remains 0.1.0, preserving all nine exported files. This is M4
+evidence. Runner 0.1.2 pins P11 0.1.2 after recalibration; dependencies are unchanged.
+The starter contract remains 0.1.0, preserving all nine exported files. This is M4
 for the calibrated harness and validates TR-009's bounded adaptation; it does not
 evaluate a model or produce a score. No reference was supplied to an independent
 candidate because no candidate attempt has run.
@@ -282,7 +282,7 @@ tools, context, attempts and available cost; execute the evaluator separately.
 Public reference/history is discoverable. Bundle separation is not secrecy,
 OS isolation or a security sandbox. Recalibrate after changes to the pinned
 suite; reject scope violations and preserve incomplete outcomes as inconclusive.
-See ADR-010/ADR-011 and `evidence/evaluation-task/TIMEOUT_RUN.json`. Process-group
+See ADR-010/ADR-011/ADR-012 and `evidence/realtime-chat/READING_RUN.json`; timeout evidence stays historical. Process-group
 cleanup is not isolation; escaped sessions remain outside its tested contract.
 
 ### P03 — Tokyo 80s
@@ -407,7 +407,7 @@ Reservatório recuperado de RPG Maker XP/RGSS: narrativa, personalidade e diálo
 
 ### P11 — Real-time Integration Lab / WebSocket
 
-The recovered Node/Express/Socket.IO snapshot only logs incoming messages. Its working adaptation now broadcasts validated text and renders it in all connected browsers. P11 is a completed local slice; seventeen automated checks verify its bounded local contract. P02 is now the selected workstream. See section 28.3 and `projects/realtime-integration-lab/README.md` for provenance, differences, usage, and limits. TR-009 evaluation-task adaptation is calibrated in P02; lobby reuse remains a candidate.
+The recovered Node/Express/Socket.IO snapshot only logs incoming messages. Its working adaptation now broadcasts validated text and renders it in all connected browsers. P11 0.1.2 is a completed local slice; twenty-two checks verify transport and reading position. Its reading correction is selected, with P02 recalibration as support. See section 28.3 and `projects/realtime-integration-lab/README.md` for provenance, differences, usage, and limits. TR-009 evaluation-task adaptation is calibrated in P02; lobby reuse remains a candidate.
 
 ## 6. Arquitetura do laboratório
 
@@ -1281,6 +1281,17 @@ Consultadas em 10/10/2026. São apoio aos pontos técnicos, não pesquisa de mer
 - Added maintained assessment and priorities, updated project continuity, and corrected the manifest's absent-file references.
 - Recorded transfer lessons as candidates; no model evaluation, public deployment, game migration, or shared abstraction was claimed.
 
+### 0.4.2 — 2026-10-11
+
+- Corrected P11 reading disruption during broadcasts and retention eviction;
+  five new checks reproduce three failures on 0.1.1; all 22 chat checks pass.
+- Carried fractional correction after measured 4.0625-pixel drift; preserved
+  dependencies, transport and the 200-message window.
+- Recalibrated P02 runner 0.1.2 without changing its 17 tests, nine export files
+  or contract 0.1.0. No independent candidate or human review is claimed.
+- Preserved sources/evidence; current state records authorized publication
+  after checking remote Git refs.
+
 ### 0.4.1 — 2026-10-10
 
 - Corrected P02 timeout/launch records and inherited-process cleanup; 15 tests
@@ -1408,7 +1419,7 @@ has no lockfile and its test script is a failing placeholder. Its declared ISC
 metadata does not establish licensing for unrelated material.
 
 **Working increment:** [P11 — Live exchange](projects/realtime-integration-lab/README.md),
-version 0.1.1, separate from the unchanged historical archive. Retain the event
+version 0.1.2, separate from the unchanged historical archive. Retain the event
 name and string payload. Accept trimmed non-empty text, enforce 500 UTF-16 code
 units before trimming, broadcast to all connected clients including the sender,
 and render text nodes. Rejection and connection state are visible. A single
@@ -1425,13 +1436,15 @@ can queue a packet before `connected` becomes false. This correction preserves
 the no-replay policy without adding automatic retry or durable delivery.
 
 **Evidence:** the same browser delivery check fails against the preserved source
-and passes against the adaptation. Seventeen current tests (6 protocol, 11 Chromium)
+and passes against the adaptation. Twenty-two current tests (6 protocol, 16 Chromium)
 verify accepted/rejected payloads, two-way rendering, literal markup, drafts,
 rejoining/new clients, automatic transport reconnect, bounded history,
-acknowledgement behavior, live polling congestion, and stale-state reconnect policy.
+acknowledgement behavior, live polling congestion, stale-state reconnect policy,
+and retained reading position with a 24-pixel following threshold.
 The original CLI startup smoke remains prior evidence; the unchanged server was
 not restarted separately in this correction session. See
-[current evidence](evidence/realtime-chat/POLLING_SEND_RUN.json) and
+[current reading evidence](evidence/realtime-chat/READING_RUN.json),
+[prior transport evidence](evidence/realtime-chat/POLLING_SEND_RUN.json) and
 [original adaptation evidence](evidence/realtime-chat/RUN.json). This is local automated validation,
 not human usability review, public hosting, a game playtest, or a model benchmark.
 
@@ -1472,7 +1485,7 @@ calibration only; the other ten entries remain candidates. P10 remains recovered
 material in triage. P02's M4 claim comes from its own harness checks and controlled
 probes, not inherited P11 maturity. No shared component or model training is implied.
 
-**Current order after v0.4.1:** P11, P02 task setup and runner correction are published; remote `main` confirmed development commit `995bb24`. Next, record one independent client attempt with separate context/tools and evaluate its artifact. Martin's P11 UI review remains pending. Dialogue/combat are alternatives, not simultaneous commitments. P01 needs its own baseline. The maintained plan and ADR-010/ADR-011 record the choice.
+**Current order after v0.4.2:** P11 reading position and P02 compatibility are verified; current state records authorized publication. Next: Martin's reading/keyboard review and an independent EVAL-001 artifact with separate context and explicit tools/attempts. Dialogue/combat remain alternatives; P01 needs a baseline. See the plan and ADR-012.
 
 ### 28.6. Como uma IA deve expandir e modificar esta seed
 

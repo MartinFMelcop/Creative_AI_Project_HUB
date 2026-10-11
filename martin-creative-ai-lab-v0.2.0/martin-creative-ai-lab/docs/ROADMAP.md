@@ -20,16 +20,13 @@ Sem calendário contratado. Definir esforço e ordem conforme recursos e objetiv
 
 A recuperação seletiva de P10/P11 encerrou uma unidade documental da descoberta. Ambiente de Martin e seleção da primeira frente continuam pendentes. A Fase 2 pode usar uma task Node/Socket.IO de P11 ou domínio puro de P10, identificando a stack real; isso não equivale a executar Unity. Fases posteriores continuam condicionais, não compromissos simultâneos.
 
-## Current progress — v0.4.1
+## Current progress — v0.4.2
 
-P11 0.1.1 is completed and Git-published in merge `df1bd59`. P02's first practice
-task now has a fresh starter export and pinned evaluator. Calibration rejects
-the known baseline and accepts the existing correction. [The plan](IMPROVEMENT_PLAN.md)
-and [state](STATE.md) distinguish this validated harness from independent model
-evaluation. Next: one candidate-produced client with explicit context/tools and
-recorded attempts. Human P11 UI review and engine/media recovery remain separate.
-No calendar, parallel project activation, or task-count target is added.
+P11 0.1.2 preserves reading position during live updates; 22 automated checks
+pass. P02 runner 0.1.2 pins the tested runtime and retains its 17-check task scope,
+starter contract 0.1.0 and known artifact outcomes. [The plan](IMPROVEMENT_PLAN.md)
+and [state](STATE.md) record evidence and publication confirmation.
 
-P02 runner 0.1.1 now preserves incomplete-run diagnostics and bounds cleanup of
-inherited process groups. Starter exports remain byte-identical to 0.1.0. An
-independent candidate remains the next gate; the correction does not satisfy it.
+Next: Martin's reading/keyboard review and one independently produced EVAL-001
+client with explicit context/tools/attempts. Neither is implied by this increment.
+Engine/media recovery stays conditional; no calendar or task-count target is added.

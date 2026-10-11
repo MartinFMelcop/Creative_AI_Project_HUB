@@ -4,7 +4,7 @@ An evolving laboratory of games, narrative, images, audio, data, and AI
 evaluation by **Martin Melcop Neto**. Projects are adaptable seeds: build small
 slices, verify behavior, record decisions, and test reuse in actual destinations.
 
-**Current seed: v0.4.1.** The lab includes eleven project lines, 178 preserved
+**Current seed: v0.4.2.** The lab includes eleven project lines, 178 preserved
 historical texts, one working local text-chat adaptation, and one calibrated
 practice-task harness. No game migration,
 model benchmark, finished music catalogue, or public deployment is claimed.
@@ -16,7 +16,8 @@ The containing directory keeps its original v0.2.0 package name.
 - [Assessment](docs/ASSESSMENT.md) and [improvement plan](docs/IMPROVEMENT_PLAN.md): evidence and selected priorities.
 - [P11 — Live exchange](projects/realtime-integration-lab/README.md): install, run, test, provenance, and contribution.
 - [P02 — EVAL-001](evaluations/chat-send-buffering/README.md): export a starter, check a client, and inspect limits.
-- [Current timeout/recalibration evidence](evidence/evaluation-task/TIMEOUT_RUN.json): actual command probes, source comparison, compatible artifacts, environment and hashes.
+- [Current reading/recalibration evidence](evidence/realtime-chat/READING_RUN.json): geometry, source comparison, full chat results and P02 compatibility.
+- [Previous timeout/recalibration evidence](evidence/evaluation-task/TIMEOUT_RUN.json): actual command probes, source comparison, compatible artifacts, environment and hashes.
 - [P11 transport evidence](evidence/realtime-chat/POLLING_SEND_RUN.json): prior correction and its bounded tests.
 - [SEED.md](SEED.md), [agent instructions](AGENTS.md), and [decisions](docs/DECISIONS.md): direction and operating context.
 - [Project registry](registry/projects.json) and [legacy inventory](registry/legacy_sources.json): IDs and evidence boundaries.
@@ -51,16 +52,15 @@ be installed to develop it.
 
 The original delivery test failed on the preserved source and passed on 0.1.0.
 Two further send-path regressions fail on that committed client and pass on 0.1.1.
-Seventeen current automated tests verify the local contract, including connected
-polling congestion and stale-state reconnect buffering. New
+Twenty-two current automated tests verify the local contract, including connected
+polling congestion, stale-state reconnect buffering and preserved reading position. New
 documentation, UI, code comments, and evidence are in English; historical texts
 remain in their original language. Martin supplied direction and authorization;
 Codex performed this increment. Manual usability review by Martin is pending.
 
 TR-009 now has a verified P02 task consumer: baseline rejects at 15/17 and
 reference accepts at 17/17. Other transfers remain candidates. No independent
-model was evaluated. P11 is Git-published in `df1bd59`; task setup is published in
-`e1850d0`. Runner 0.1.1 is published in [995bb24](https://github.com/MartinFMelcop/Creative_AI_Project_HUB/commit/995bb24d4969c8e7bfea2fbdfeeb39540449725f),
-with remote `main` confirmed after a normal push. It retains diagnostics and
-cleans inherited groups without changing starter 0.1.0. The publication task
-explicitly authorized this push; deployment remains outside the completed work.
+model was evaluated. Prior work is Git-published through `7866785`. P11 0.1.2
+preserves reading position; P02 runner 0.1.2 pins the tested runtime while leaving
+starter contract 0.1.0 unchanged. [State](docs/STATE.md) records current commits
+and remote confirmation. This task explicitly authorizes normal publication.

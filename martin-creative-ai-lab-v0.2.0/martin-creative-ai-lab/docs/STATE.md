@@ -1,96 +1,75 @@
 # Lab state
 
-**Updated:** 2026-10-10. **Seed version:** 0.4.1.
-**Primary workstream:** P02 evaluator runner 0.1.1, timeout diagnostics and cleanup.
-EVAL-001's starter contract remains 0.1.0; P11 remains 0.1.1. The enclosing
-directory retains its original v0.2.0 package name.
+**Updated:** 2026-10-11. **Seed version:** 0.4.2.
+**Primary workstream:** P11 0.1.2, preserve reading position during live updates.
+**Auxiliary:** P02 runner 0.1.2 runtime recalibration; EVAL-001 contract stays 0.1.0.
+The enclosing directory keeps its original v0.2.0 package name.
 
 ## What changed
 
 The checkout began clean on `work` at published commit
-`e1850d0f0a78211a02784bf5c7ff568fe2433b4e`; remote `main` matched. The earlier P02
-increment is committed and published, superseding the prior uncommitted statement.
-Both P11 development commits and the root `AGENTS.md` remain preserved.
+`786678549e586dc35ce82985bf6014b4d24e64d3`; remote main matched. Previous chat,
+evaluation, root instructions and publication commits remain preserved.
 
-Two actual probes found that P02 0.1.0 omits timed-command attempts/partial output
-from records and leaves an inherited child running after parent timeout. The old
-runner returned promptly on Python 3.12 POSIX; a delayed pipe-wait hypothesis was
-not reproduced. [The runner](../evaluations/chat-send-buffering/README.md) now
-records attempted command, real exit/launch state, elapsed time, deadline,
-timeout, capture completeness, stdout and stderr. Timeouts at every gate are
-inconclusive, including a late otherwise-passing summary.
+P11 always scrolled to the end of each broadcast, interrupting earlier-text
+reading. Five real Chromium/Socket.IO checks reproduce three disruptions on the
+recorded 0.1.1 client. [P11 0.1.2](../projects/realtime-integration-lab/README.md)
+follows within 24 CSS pixels of the bottom; otherwise it preserves the visible
+message and pixel offset. Scrolling back down resumes following. A surviving
+anchor stays stable during variable-height eviction; an evicted anchor falls
+back to the earliest retained text. The 200-message cap is unchanged.
 
-Each command uses a private process group on POSIX. Timeout requests termination,
-then forced shutdown if necessary, with bounded output draining. An escaped child
-holding pipes marks capture incomplete instead of keeping the checker waiting.
-This controls inherited groups, not all detached descendants or untrusted code.
+An initial correction accumulated 4.0625 pixels of drift after ten evictions.
+Carrying fractional scroll correction resolved that failure without relaxing
+the one-pixel criterion. Server, markup/style, original 17 tests, send policy,
+dependency resolutions and historical material are unchanged.
 
-Runner version and starter-contract version are separate. All nine exported
-files remain byte-identical to 0.1.0, and old exports are accepted as submissions.
-No app, dependency, chat test, candidate brief, model call, or shared framework
-changed. P11 implementation, historical ZIP/inventory, and earlier evidence are
-unchanged. The correction is committed and published in
-[995bb24](https://github.com/MartinFMelcop/Creative_AI_Project_HUB/commit/995bb24d4969c8e7bfea2fbdfeeb39540449725f). A normal push succeeded and `git ls-remote origin refs/heads/main`
-confirmed the full development commit SHA. Subsequent documentation commits
-record this confirmation without changing the implementation or original evidence.
+P11 is checkpointed locally at `2aed760251bb8d1544e906606cd954ed80f1df2f`.
+Package metadata changed to 0.1.2, so P02's old pin correctly returned inconclusive.
+Runner 0.1.2 now pins that tested revision. Its 17 send-policy checks exclude the
+five new reading checks; starter contract, brief and all nine exports stay
+byte-identical. See [the evaluator](../evaluations/chat-send-buffering/README.md).
+The current task authorizes committing and normal publication to origin/main.
+Publication confirmation is recorded after remote verification; prior development
+records retain their original point-in-time status.
 
 ## Verification and evidence
 
-[Current timeout record](../evidence/evaluation-task/TIMEOUT_RUN.json) identifies
-the old source, current hashes, real command probes, injected boundaries and
-full artifact-check output. [Original calibration](../evidence/evaluation-task/CALIBRATION.json)
-remains historical evidence, unchanged.
+[Current record](../evidence/realtime-chat/READING_RUN.json) contains source
+identities, raw before/after output, the intermediate drift failure, full chat
+results, frozen installation and P02 compatibility checks.
 
-- Current 15 runner tests pass, no skips. The recorded 0.1.0 runner fails all
-  seven new test methods; the original eight methods continue to pass. Failure
-  events include subtests and exceptions, separately recorded.
-- Real command tests cover both streams, partial timeout diagnostics, nonzero
-  exit, forced inherited-child termination, escaped-pipe capture, and launch failure.
-- Gate injection substitutes real short-lived Python commands at syntax/startup/
-  behavior boundaries; this is controlled fault injection, not three browser outages.
-- Exact old exports remain compatible. Recalibration rejects the old client at
-  15/17 and accepts P11's existing correction at 17/17 (6 protocol, 11 Chromium).
-  These are controlled artifacts, not independent model candidates.
-- Documentary validator passes: 11 projects, 11 transfers, 0 assets, 2 legacy
-  sources and 90 local links. All three validator regressions pass; preserved
-  sources/commits and `git diff --check` pass. Final manifest verification is
-  recorded at closure after content is final.
+- Recorded 0.1.1 client: 5 reading checks, 2 pass and 3 expected failures.
+- Corrected client: 5 reading checks pass; full suite passes 22 tests (6 protocol,
+  16 Chromium), with no failures, skips or uncaught browser errors.
+- Frozen installation passes; all dependency resolutions/integrity entries match
+  the prior lockfile. Only root package version metadata differs in the lockfile.
+- P02's 15 runner regressions pass. Original-contract baseline rejects at 15/17
+  with exactly the two send-policy failures; new P11 reference accepts at 17/17.
+  These are controlled calibration artifacts, not independent model candidates.
+- Documentary validation passes: 11 projects, 11 transfers, 0 assets, 2 legacy
+  sources and 99 local links. All three validator regressions, preserved source
+  bytes/commits and whitespace checks pass. Final integrity is recorded at closure.
 
-Environment: Linux cloud container, Python 3.12.14, Node 24.19.0, npm 11.9.0,
-Chromium 154.0.8037.57, Playwright Core 1.64.0, Socket.IO 4.8.4. POSIX/Linux
-process-group behavior was executed; the non-POSIX direct-process fallback was not.
-No new package or credential is required. Prior installation/CLI starter smoke
-belongs to 0.1.0 evidence and was not repeated for this source-preserving correction.
+Environment: Python 3.12.14, Node 24.19.0, npm 11.9.0, Chromium 154.0.8037.57,
+Playwright Core 1.64.0 and Socket.IO 4.8.4 in the Linux cloud container. New reading
+checks use a 1280×800 viewport and variable-height text. Tests start/close their
+own servers; standalone CLI startup was not rerun. Existing setup suffices.
 
 ## Limits, learning and next action
 
-Process cleanup is not a sandbox. Children that create another group/session can
-escape it; the detached fixture is stopped separately by its owning test. Public
-source remains discoverable. There is no model identity, score, independent
-candidate, human usability review, Unity/game runtime, or recovered media master.
-The heartbeat check remains an injected pinned predicate; polling uses real HTTP.
+Automated geometry is not Martin's usability review or other-browser/zoom/resize
+coverage. Evicted text cannot be recovered. The heartbeat check is predicate
+injection; polling uses actual HTTP. P02's public reference is discoverable;
+process cleanup is not a sandbox and non-POSIX cleanup remains untested. No
+independent candidate, model score, game runtime or creative/media master is claimed.
 
-TR-009 remains validated only for P02 task adaptation/calibration. Timeout-record
-handling is a candidate lesson for other projects until a destination verifies it;
-no new shared component or transfer record is promoted. Martin supplied direction;
-Codex diagnosed, corrected and verified this increment.
+Pixel anchoring and rounding are candidate lessons for other interfaces; no
+destination adaptation, shared component or new transfer promotion occurred.
+TR-009 remains validated only for P02 task adaptation/calibration. Martin supplied
+direction; Codex implemented, tested and documented this increment.
 
-Next: one independently produced EVAL-001 client with a separate context, explicit
-source/tool policy, identity, attempts, timing and available cost. Preserve artifact
-and raw evaluator result before performance claims. Martin's P11 UI review remains
-pending. The current publication task explicitly authorized a normal push to
-`origin/main`; it completed without rewriting history.
-
-## Publication verification — 2026-10-10
-
-The 18 development files were backed up before staging. Remote `main` fetched at
-`e1850d0`; after committing the existing work, `git merge --no-edit FETCH_HEAD`
-reported "Already up to date." The working tree was clean, `git diff --check`
-passed, and the normal push advanced `main` to the development commit above.
-Root instructions and all prior commits remain preserved.
-
-Before publication, 15 runner regressions and all 17 chat checks (6 protocol,
-11 Chromium) passed without failures or skips. All three validator regressions,
-90 documentary links and 53 integrity entries passed. The original timeout
-record remains a development-time snapshot; it is not rewritten as a new run.
-Only continuity documentation and its hashes change in the publication follow-up.
+Next: Martin's two-tab review of reading, resuming live following, keyboard use
+and uncertain-delivery wording; separately produce one independent EVAL-001
+client with explicit identity/context/tools/attempts and raw evaluator evidence.
+Do not grow task inventory before completing that evidence gate.

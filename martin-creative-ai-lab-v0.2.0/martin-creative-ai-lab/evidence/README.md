@@ -1,5 +1,9 @@
 # Execution evidence
 
+- [P11 reading and P02 compatibility](realtime-chat/READING_RUN.json): three
+  baseline disruptions, fractional drift, five corrected reading checks, full
+  22-test chat results, frozen installation and controlled task recalibration.
+
 - [P02 timeout correction](evaluation-task/TIMEOUT_RUN.json): recorded-runner
   failures, partial diagnostics, cleanup boundaries and compatible artifact checks.
 - [P02 EVAL-001 original calibration](evaluation-task/CALIBRATION.json): exact starter,

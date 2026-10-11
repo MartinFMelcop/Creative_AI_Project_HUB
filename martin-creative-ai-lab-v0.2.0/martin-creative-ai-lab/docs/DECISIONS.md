@@ -170,3 +170,30 @@ and corrected clients retain the 15/17 and 17/17 calibration outcomes.
 **Revisit:** independently produced code, another OS, stronger isolation, different
 deadline requirements, changed suite/runtime or a new output consumer. Record
 tested limits instead of assuming process-group termination controls a browser tree.
+
+## ADR-012 — preserve the viewport and recalibrate the pinned consumer
+
+**Date:** 2026-10-11. **Status:** implemented and locally verified.
+**Authority:** current development/publication request; work by Codex.
+
+The published chat jumps to the latest text on every broadcast. Three Chromium
+checks reproduce disrupted reading. Choose a usable UI correction before more
+task inventory; independent candidate evidence remains unperformed.
+
+Follow within 24 CSS pixels of the bottom. Otherwise anchor the first visible
+message and its offset, adjusting after the 200-item window removes earlier text.
+If the anchor expires, keep the earliest retained text visible. Own browser
+anchoring and carry fractional correction: the initial implementation drifted
+4.0625 pixels across ten variable-height evictions. Five geometry checks now meet
+one pixel. Preserve transport, markup/style, retention and dependencies.
+
+P11 package 0.1.2 changes runtime metadata. P02's guard correctly refuses it until
+recalibrated. Pin the tested P11 commit in runner 0.1.2; keep the existing 17
+send-policy tests, brief and nine-file contract 0.1.0. The five reading tests
+belong to P11 and add no candidate requirements. Controlled artifacts recalibrate
+at 15/17 and 17/17. Publish the combined verified commits, preserving history,
+rather than an incompatible intermediate. No shared component/model result.
+
+**Revisit:** human feedback, resize/zoom/other browsers, rich media, retention
+rules or repeated runtime changes that justify an isolated evaluator fixture.
+Keep pixel geometry distinct from human usability.

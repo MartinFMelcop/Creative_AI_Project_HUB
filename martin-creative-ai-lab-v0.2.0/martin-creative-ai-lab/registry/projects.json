@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-10-10",
+  "updated_at": "2026-10-11",
   "projects": [
     {
       "id": "P01",
@@ -38,12 +38,13 @@
         "evaluations/chat-send-buffering/README.md",
         "evidence/evaluation-task/CALIBRATION.json",
         "knowledge/evaluation-artifacts.md",
-        "evidence/evaluation-task/TIMEOUT_RUN.json"
+        "evidence/evaluation-task/TIMEOUT_RUN.json",
+        "evidence/realtime-chat/READING_RUN.json"
       ],
       "working_path": "evaluations/chat-send-buffering",
-      "working_version": "0.1.1",
+      "working_version": "0.1.2",
       "historical_name": "Unity AI Evaluation & QA Lab",
-      "maturity_scope": "Runner 0.1.1: 15 regression tests, retained timeout/launch evidence, inherited POSIX group cleanup and bounded escaped-pipe capture; byte-identical 0.1.0 exports retain baseline 15/17 and reference 17/17. No independent candidate, score or sandbox.",
+      "maturity_scope": "Runner 0.1.2 pins tested P11 0.1.2 runtime; 15 runner regressions, unchanged exports, baseline 15/17 and current reference 17/17. Timeout cleanup remains verified on POSIX; five P11 reading tests are outside this task. No independent candidate, score or sandbox.",
       "task_contract_version": "0.1.0"
     },
     {
@@ -190,7 +191,7 @@
       "maturity": "M4",
       "phase": "local-chat-validated",
       "origin": "github_snapshot_inspected",
-      "next_action": "Capture human UI feedback; EVAL-001 now verifies the bounded TR-009 task adaptation. Lobby reuse still needs its own baseline and contract.",
+      "next_action": "Review reading position, resuming live following and keyboard use with Martin; independent EVAL-001 execution remains a separate gate.",
       "related_projects": [
         "P01",
         "P02",
@@ -201,12 +202,13 @@
         "evidence/legacy-audit/RUNS.json",
         "projects/realtime-integration-lab/README.md",
         "evidence/realtime-chat/RUN.json",
-        "evidence/realtime-chat/POLLING_SEND_RUN.json"
+        "evidence/realtime-chat/POLLING_SEND_RUN.json",
+        "evidence/realtime-chat/READING_RUN.json"
       ],
       "source_id": "LEGACY-002",
-      "maturity_scope": "Local text-chat correction 0.1.1: 17 current automated checks (6 protocol, 11 Chromium) passed, including live polling congestion and injected heartbeat expiry. Prior CLI smoke belongs to 0.1.0. Human UI review and public deployment remain outside the local chat scope. TR-009 is separately validated for P02 task adaptation/calibration only.",
+      "maturity_scope": "Local chat 0.1.2: 22 checks (6 protocol, 16 Chromium), including five reading checks; three reproduce failures on 0.1.1. Visible anchor, fractional correction and 200-item boundary verified at 1280x800. Human review, other browsers and deployment remain outside scope.",
       "working_path": "projects/realtime-integration-lab",
-      "working_version": "0.1.1"
+      "working_version": "0.1.2"
     }
   ]
 }

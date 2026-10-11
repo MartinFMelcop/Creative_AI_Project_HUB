@@ -1,8 +1,38 @@
 # Improvement plan
 
-Updated: 2026-10-10. One primary workstream; no mandatory backlog expansion.
+Updated: 2026-10-11. One primary workstream; no mandatory backlog expansion.
 
-## Current iteration — P02 timeout evidence and process cleanup
+## Current iteration — P11 reading position and P02 compatibility
+
+**Priority:** 1 — completed and locally verified. At clean published base `7866785`, the chat receive
+handler always scrolls to the bottom. Incoming text can interrupt reading earlier
+messages. Verify the failure through a real browser and real Socket.IO broadcasts.
+The independent P02 candidate remains a future run; this session cannot manufacture
+independent context or Martin's UI feedback.
+
+**Value:** make the existing conversation usable while reviewing earlier text,
+without adding persistence, rooms, new creative content, or a second application.
+
+**Scope:** P11 `public/client.js`, a separate `tests/reading.test.cjs`, package
+version 0.1.2, project README, and maintained continuity/evidence. Auxiliary P02
+work is limited to runner 0.1.2's runtime commit pin and controlled recalibration;
+its existing 17 checks, task contract 0.1.0 and nine export files stay unchanged.
+Commit the tested P11 revision locally before pinning it; publish both verified
+commits together so remote main does not receive an incompatible intermediate.
+
+**Acceptance:** follow incoming messages when within 24 CSS pixels of the bottom;
+otherwise preserve the visible retained message and its pixel offset. Scrolling
+back to the bottom resumes following. When the 200-item window evicts an anchor,
+show the earliest retained message instead of jumping to the end. Reproduce three
+reading disruptions on the recorded client, pass five browser checks and all
+existing chat checks, then preserve P02's 15/17 baseline and 17/17 reference
+outcomes. Use real browser geometry and broadcasts, not a simulated scroll model.
+
+**Dependencies:** existing Node, Python, locked dependencies and Chromium. No
+new package, engine, model credential, historical extraction or shared component.
+Human review, other browsers and independent candidate evaluation remain separate.
+
+## Previous completed iteration — P02 timeout evidence and process cleanup
 
 **Priority:** 1 — completed and locally verified. P02 0.1.0 is published at `e1850d0`. Two executed probes
 show missing timed-command diagnostics and a live child surviving parent timeout.
@@ -151,3 +181,13 @@ inherited child termination/escaped-pipe limits are executed on Linux. Starter
 contract remains 0.1.0; byte-identical old exports recalibrate at 15/17 and 17/17.
 See [current evidence](../evidence/evaluation-task/TIMEOUT_RUN.json). No independent
 candidate, model score, dependency change or extra workstream was introduced.
+
+## Completed reading increment — P11 0.1.2
+
+Three reading disruptions fail on the recorded client; all five new checks and
+the full 22-test chat suite pass on the correction. Frozen installation preserves
+dependency resolutions. The intermediate fractional drift failure is retained
+as learning. P02 runner 0.1.2 recalibrates its runtime pin while preserving the
+nine exports and existing 15/17 and 17/17 task outcomes. See
+[current evidence](../evidence/realtime-chat/READING_RUN.json). Human review and
+independent candidate evaluation remain separate; no extra workstream is started.
