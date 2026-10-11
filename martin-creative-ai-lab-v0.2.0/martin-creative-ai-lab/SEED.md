@@ -4,7 +4,7 @@
 **Data-base:** 10 de outubro de 2026  
 **Autor e responsável pelo portfólio:** Martin Melcop Neto  
 **Working language:** English for new documentation, plans, code comments, UI, and reports. Preserve original creative titles and historical source languages.
-**Current state:** P11 unread navigation 0.1.3 implemented; P02 syntax attribution 0.1.3 retained with runtime recalibration required before combined publication. Historical sources and registry QA remain preserved. No independent model result, game migration or public hosting is claimed.
+**Current state:** P11 unread navigation 0.1.3 implemented; P02 runner 0.1.4 retains syntax attribution and pins the P11 0.1.3 runtime. Historical sources and registry QA remain preserved. No independent model result, game migration or public hosting is claimed.
 
 > Construir um laboratório autoral em Git que transforma ideias, obras e experimentos em produtos pequenos, sistemas reutilizáveis e evidências técnicas verificáveis. A IA participa da criação e execução; Martin desenvolve sua capacidade de especificar, compreender, selecionar, corrigir, validar e explicar os resultados.
 
@@ -46,9 +46,9 @@ Se apenas este arquivo estiver disponível, ele é suficiente para iniciar a Fas
 |---|---|
 | Repository | MartinFMelcop/Creative_AI_Project_HUB; actual Git root `/workspace/Creative_AI_Project_HUB`; lab remains nested in its original package directory |
 | Preserved sources | 175 Rave Master texts and 3 WebSocket files; unchanged ZIP and inventory; not a complete RMXP backup |
-| Primary workstream | P11 unread navigation 0.1.3; P02 runtime pin must be refreshed and calibrated before publication. Starter 0.1.0; bounded M4 scopes unchanged |
+| Primary workstream | P11 unread navigation 0.1.3; P02 runner 0.1.4 runtime recalibration. Starter 0.1.0; bounded M4 scopes unchanged |
 | Engine execution | No Unity or RMXP runtime verified; P11 uses Node/Express/Socket.IO |
-| Current verification | P11 current execution in `evidence/realtime-chat/UNREAD_RUN.json`; prior syntax/registry/reading evidence remains historical. P02 recalibration follows the P11 commit |
+| Current verification | P11 current execution in `evidence/realtime-chat/UNREAD_RUN.json`; prior syntax/registry/reading evidence remains historical. P02 evidence is in `evidence/evaluation-task/UNREAD_CALIBRATION.json` |
 | Historical verification | v0.2.0 combat/dialogue runner reports remain historical; not rerun during P11 work |
 | Next action | Martin's P11 reading/keyboard review; one independent EVAL-001 client with recorded context/tools/attempts |
 | Other seeds | P01 baseline still absent; P10 remains recovered material; other creative/runtime baselines require targeted recovery |
@@ -1524,6 +1524,5 @@ No candidate score or new project maturity is inferred.
 
 P11 0.1.3 adds a bounded unread-arrival count and a keyboard-operable Jump to
 latest control while preserving earlier reading position. Returning to the bottom
-clears the count; activation transfers focus into the conversation. P02 keeps
-its candidate contract and requires recalibration against the new app commit
-before the combined iteration is published. No extra project or maturity gate.
+clears the count; activation transfers focus into the conversation. P02 runner 0.1.4 pins the new app commit and preserves
+its candidate contract; controlled calibration is recorded separately. No extra project or maturity gate.

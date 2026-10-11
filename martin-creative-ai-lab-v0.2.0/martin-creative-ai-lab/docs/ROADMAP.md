@@ -48,6 +48,6 @@ pin remain unchanged. Independent candidate provenance is still the next gate.
 ## Current progress — v0.4.5
 
 P11 0.1.3 makes paused reading visible with an unread count and explicit return
-to live text. The same bounded chat remains the product scope. Recalibrate P02
-before combined publication; human review and independent candidate provenance
+to live text. The same bounded chat remains the product scope. P02 runner 0.1.4 pins the new runtime with the same
+candidate contract; human review and independent candidate provenance
 remain the next gates, without new task inventory.

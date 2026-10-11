@@ -150,9 +150,11 @@ Next: have Martin try the two-tab interaction and review readability, keyboard
 use, and the uncertain-delivery wording before selecting this as a public case.
 P11 → P02 is now verified for [EVAL-001 task adaptation/calibration](../../evaluations/chat-send-buffering/README.md) only; no independent model was evaluated. P11 → P01 remains a candidate. No shared library is needed.
 
-The five reading checks run actual Socket.IO broadcasts through Chromium at a
+The five historical 0.1.2 reading checks run actual Socket.IO broadcasts through Chromium at a
 1280×800 viewport with variable-height message fixtures. Three fail on the
 recorded 0.1.1 client; all five pass on the correction. These checks establish
 scroll geometry for that browser/viewport, not human usability or all layouts.
-P02 keeps its 17 send-policy checks; its runtime pin is refreshed and recalibrated
-for this package revision without changing the nine-file starter contract.
+P02 keeps its 17 send-policy checks. Runner 0.1.4
+[recalibrates the P11 0.1.3 runtime](../../evidence/evaluation-task/UNREAD_CALIBRATION.json)
+without changing the nine-file starter contract; all nine current reading checks
+remain P11-only.

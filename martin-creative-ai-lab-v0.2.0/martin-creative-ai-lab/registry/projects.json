@@ -40,12 +40,13 @@
         "knowledge/evaluation-artifacts.md",
         "evidence/evaluation-task/TIMEOUT_RUN.json",
         "evidence/realtime-chat/READING_RUN.json",
-        "evidence/evaluation-task/SYNTAX_RUN.json"
+        "evidence/evaluation-task/SYNTAX_RUN.json",
+        "evidence/evaluation-task/UNREAD_CALIBRATION.json"
       ],
       "working_path": "evaluations/chat-send-buffering",
-      "working_version": "0.1.3",
+      "working_version": "0.1.4",
       "historical_name": "Unity AI Evaluation & QA Lab",
-      "maturity_scope": "Runner 0.1.3: 19 regressions; syntax rejection requires complete client parser evidence. Runtime option/preload failures and signal exits are inconclusive. P11 0.1.2 suite pin, timeout cleanup and starter 0.1.0 contract retained. No independent candidate, score or sandbox.",
+      "maturity_scope": "Runner 0.1.4 pins tested P11 0.1.3 runtime; 19 runner regressions, unchanged nine-file exports and known baseline 15/17/reference 17/17. Syntax attribution and timeout cleanup retained; nine P11 reading checks remain outside candidate scope. No independent candidate, score or sandbox.",
       "task_contract_version": "0.1.0"
     },
     {

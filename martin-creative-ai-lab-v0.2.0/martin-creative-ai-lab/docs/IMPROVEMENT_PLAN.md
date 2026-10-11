@@ -5,8 +5,8 @@ Add one native return-to-live button with a bounded count, reset on manual
 following, and explicit keyboard focus transfer. Verify actual broadcasts,
 Enter/Space at a mobile viewport and retention beyond 200 arrivals.
 
-Commit the tested P11 0.1.3 app first, then refresh P02's suite pin and recalibrate
-its known artifacts before publishing both commits. No candidate task change
+The tested P11 0.1.3 app is committed; P02 runner 0.1.4 now pins that app while
+retaining the same known-artifact calibration contract. Publish both verified commits. No candidate task change
 or additional workstream is introduced. Prior increments follow as history.
 
 # Current increment — P02 syntax attribution 0.1.3

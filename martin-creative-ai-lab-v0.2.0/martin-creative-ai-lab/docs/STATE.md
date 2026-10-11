@@ -2,8 +2,8 @@
 
 **Updated:** 2026-10-10 (client date). **Seed version:** 0.4.5.
 **Current iteration:** P11 unread navigation, app 0.1.3.
-P02 runner 0.1.3 retains syntax attribution; its runtime pin must be recalibrated
-against the new P11 commit before combined publication. Starter contract 0.1.0.
+P02 runner 0.1.4 retains syntax attribution and pins the P11 development commit.
+Starter contract remains 0.1.0.
 The enclosing folder retains its original v0.2.0 package name.
 
 ## Change and starting state
@@ -33,15 +33,20 @@ One targeted check on the recorded 0.1.2 client fails as expected: no new-arriva
 control becomes visible. This is a controlled old-client route with current
 markup, not an independent candidate or complete old-app execution.
 
-The app's trusted markup/style/package bytes change. P02 correctly requires a
-fresh suite pin and controlled 15/17 baseline, 17/17 reference calibration after
-the P11 commit. That integration remains pending in this first development
-commit and must be completed before either commit is pushed.
+The app's trusted markup/style/package bytes change. P02 runner 0.1.4 pins
+P11 development commit `911bf789e31dc2b1df9586a894e37312375771f3`.
+[Recalibration evidence](../evidence/evaluation-task/UNREAD_CALIBRATION.json)
+records runner regressions, unchanged export hashes and both known artifacts.
+All 19 runner regressions pass. The old starter rejects at 15/17 and the current
+reference accepts at 17/17; all nine exported files match the preceding runner
+byte for byte. The original 17-check candidate task excludes P11's nine reading checks; neither
+artifact is an independent model candidate. Earlier evidence remains unchanged.
 
 Environment: Linux cloud container, Python 3.12.14, Node 24.19.0, retained locked
 dependencies and system Chromium. Real localhost servers and headless browser
 execution use approved permissions. Documentary and manifest checks run after
-final content; they do not validate behavior.
+final content: 112 local links and 60 manifest entries pass. These checks do
+not validate behavior.
 
 ## Limits and next action
 
@@ -50,8 +55,8 @@ receipts. Removed history is not recoverable. Human/assistive-technology review,
 other browsers, hosted service and independent model evaluation remain pending.
 Martin supplied direction; Codex implemented and tested this increment.
 
-Next in this iteration: commit tested P11, recalibrate P02, commit its new pin and
-publish both verified commits. Next product gate: Martin's two-tab reading and
+The combined P11/P02 increment is implemented and validated, ready for the
+authorized fetch/merge/push and remote confirmation. Next product gate: Martin's two-tab reading and
 keyboard review; one independently produced EVAL-001 client with context/tool/
 attempt provenance. Project maturity remains M4 for the existing bounded slices.
 
