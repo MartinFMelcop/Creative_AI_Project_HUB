@@ -12,6 +12,7 @@ section { padding: 1rem 2rem; min-height: 12rem; }
 #empty { color: #58636a; }
 #messages { margin: 0; padding: 0; list-style: none; max-height: 45vh; overflow-y: auto; }
 #messages li { padding: .8rem 1rem; margin: .5rem 0; background: #edf5f1; border-radius: .5rem; white-space: pre-wrap; overflow-wrap: anywhere; }
+#latest { margin-top: .75rem; width: 100%; }
 label { display: block; margin-bottom: .5rem; font-weight: 600; }
 .compose { display: flex; gap: .6rem; }
 input { min-width: 0; flex: 1; padding: .8rem; border: 1px solid #879a94; border-radius: .4rem; font: inherit; }

@@ -231,3 +231,20 @@ configuration failures. Starter, suite, dependencies and P11 remain unchanged.
 Revisit on Node diagnostic-format changes; conservative inconclusive outcomes
 require investigation, rather than guessing candidate failure. This is attribution
 of observed diagnostics, not a security boundary for hostile runtime injection.
+
+## ADR-015 — give browsing readers an explicit return to live text
+
+**Date:** 2026-10-10 (client date). **Status:** implemented, P11 0.1.3.
+
+Preserved reading position needs a discoverable way to return to new arrivals.
+Show one native button outside the message list, with a count bounded to its
+200-item retained window. Keep existing anchoring and the 24-pixel follow rule.
+Clear arrivals when following resumes manually or via the button; move focus
+into the keyboard-focusable conversation before hiding the activated control.
+Use no identity, persistence, extra live region or shared library.
+
+P02's app-artifact guard requires a new suite pin and calibration after the P11
+commit. Publish the verified commits together; keep its 17 candidate checks and
+0.1.0 starter unchanged. Human and assistive-technology review remain separate
+from executed Chromium keyboard/geometry checks. Revisit on actual feedback,
+new retention requirements, another browser or a need for per-reader identity.

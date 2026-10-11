@@ -44,3 +44,10 @@ review and independent EVAL-001 candidate gates remain next.
 P02 runner 0.1.3 distinguishes client parser errors from Node configuration,
 preload and signal failures. Starter 0.1.0 and the recalibrated P11 0.1.2 suite
 pin remain unchanged. Independent candidate provenance is still the next gate.
+
+## Current progress — v0.4.5
+
+P11 0.1.3 makes paused reading visible with an unread count and explicit return
+to live text. The same bounded chat remains the product scope. Recalibrate P02
+before combined publication; human review and independent candidate provenance
+remain the next gates, without new task inventory.

@@ -18,7 +18,8 @@
     </header>
     <section aria-label="Conversation">
       <p id="empty">A shared space for a short conversation.</p>
-      <ul id="messages" aria-label="Messages" aria-live="polite" aria-relevant="additions"></ul>
+      <ul id="messages" tabindex="0" aria-label="Messages" aria-live="polite" aria-relevant="additions"></ul>
+      <button id="latest" type="button" aria-controls="messages" hidden>Jump to latest</button>
     </section>
     <form id="form">
       <label for="input">Your message</label>

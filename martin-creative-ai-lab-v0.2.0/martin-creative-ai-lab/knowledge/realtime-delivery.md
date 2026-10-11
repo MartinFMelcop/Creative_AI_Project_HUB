@@ -60,3 +60,12 @@ here. Reuse in logs or narrative histories is a candidate until a destination
 adapts and verifies it; no shared code is promoted. Human readability, resize/zoom
 and other browsers remain separate. P02's pin detected changed runtime metadata;
 recalibrate controlled inputs without adding UI requirements to its send task.
+
+## Make preserved reading position discoverable
+
+P11's [unread-navigation checks](../evidence/realtime-chat/UNREAD_RUN.json) combine
+anchoring with a bounded count and native return-to-live button. Hiding an
+activated control requires an explicit focus destination; Enter and Space move
+focus into the conversation before the button disappears. Returning manually
+clears old counts. This is a local chat result, not a verified shared abstraction
+or a human/assistive-technology usability finding.

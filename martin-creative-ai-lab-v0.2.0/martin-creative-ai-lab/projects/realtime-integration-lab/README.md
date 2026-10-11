@@ -1,6 +1,6 @@
 # P11 — Live exchange
 
-**Project:** Real-time Integration Lab / WebSocket. **Version:** 0.1.2.
+**Project:** Real-time Integration Lab / WebSocket. **Version:** 0.1.3.
 **Scope:** one local, ephemeral text conversation. This is a working adaptation
 of the historical Socket.IO exercise, not a raw WebSocket implementation.
 
@@ -24,6 +24,7 @@ The UI renders only the broadcast, avoiding a second optimistic sender copy.
 | Follow incoming messages only within 24 CSS pixels of the bottom | Real-browser geometry check |
 | Browsing earlier text keeps the visible message and its pixel offset | Broadcast and variable-height retention checks |
 | An evicted reading anchor shows the earliest retained text | Retained-history boundary check |
+| Browsing readers see new arrivals and can return to live text by keyboard | Unread count, manual reset, Enter/Space and focus checks |
 
 The event remains `chat message`. Client → server payload is a string; server →
 client payload is its trimmed string. Acknowledgement is `{ "ok": true }` or
@@ -43,8 +44,14 @@ Version 0.1.2 keeps the reading position when new text arrives. Within 24 CSS
 pixels of the bottom, the list follows live messages. Farther away, it preserves
 the first visible message and its pixel offset, including when earlier messages
 leave the 200-item window. If that visible message is evicted, the list stays at
-the earliest retained text. Scroll to the bottom to resume following. No unread
-counter, new history store, or recovery of evicted text is introduced.
+the earliest retained text. Scroll to the bottom to resume following.
+
+Version 0.1.3 shows a Jump to latest button when new messages arrive while you
+read earlier text. Its count is bounded to the 200 retained arrivals. Activate
+it with Enter or Space to return to live text; focus moves into the conversation
+before the button disappears. Manual scrolling within 24 pixels of the bottom
+also clears the count. The conversation is keyboard-focusable. No extra history
+store or recovery of evicted text is introduced.
 
 On transport interruption Socket.IO reconnects. Messages sent while away are
 not recovered. Existing messages remain in that page's memory until reload or
@@ -73,7 +80,7 @@ system Chromium; it does not download a browser. The tests use headless Chromium
 with `--no-sandbox` for this container. Outside this machine, set `CHROMIUM_PATH`
 to a compatible browser executable. Missing Chromium is a failed prerequisite,
 not a skipped browser suite. Protocol-only tests use `npm run test:protocol`; `npm run test:reading` runs
-the five reading checks, and `npm run test:browser` includes both browser suites.
+the nine reading checks, and `npm run test:browser` includes both browser suites.
 
 The server binds to `127.0.0.1:3000` by default; `HOST` and `PORT` can override
 the bind address. Open that address in two local browser tabs. A remote cloud
@@ -125,7 +132,8 @@ recorded separately in the lab state; no npm package or hosted service is releas
 
 ## Evidence, contribution, and next step
 
-See [current reading-position evidence](../../evidence/realtime-chat/READING_RUN.json),
+See [unread-navigation evidence](../../evidence/realtime-chat/UNREAD_RUN.json),
+[prior reading-position evidence](../../evidence/realtime-chat/READING_RUN.json),
 [previous transport correction evidence](../../evidence/realtime-chat/POLLING_SEND_RUN.json),
 [original adaptation evidence](../../evidence/realtime-chat/RUN.json),
 [the selected plan](../../docs/IMPROVEMENT_PLAN.md), and

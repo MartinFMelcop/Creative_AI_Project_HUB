@@ -1,10 +1,10 @@
 # SEED — Martin Creative AI Lab
 
-**Version:** 0.4.4
+**Version:** 0.4.5
 **Data-base:** 10 de outubro de 2026  
 **Autor e responsável pelo portfólio:** Martin Melcop Neto  
 **Working language:** English for new documentation, plans, code comments, UI, and reports. Preserve original creative titles and historical source languages.
-**Current state:** P02 syntax-attribution correction 0.1.3 implemented; registry reference QA gate retained; selected historical sources, published P11 chat reading correction 0.1.2 and P02 runtime recalibration 0.1.2 (starter contract 0.1.0). No independent model evaluation, migrated game, finished music, or public hosting is claimed.
+**Current state:** P11 unread navigation 0.1.3 implemented; P02 syntax attribution 0.1.3 retained with runtime recalibration required before combined publication. Historical sources and registry QA remain preserved. No independent model result, game migration or public hosting is claimed.
 
 > Construir um laboratório autoral em Git que transforma ideias, obras e experimentos em produtos pequenos, sistemas reutilizáveis e evidências técnicas verificáveis. A IA participa da criação e execução; Martin desenvolve sua capacidade de especificar, compreender, selecionar, corrigir, validar e explicar os resultados.
 
@@ -46,14 +46,14 @@ Se apenas este arquivo estiver disponível, ele é suficiente para iniciar a Fas
 |---|---|
 | Repository | MartinFMelcop/Creative_AI_Project_HUB; actual Git root `/workspace/Creative_AI_Project_HUB`; lab remains nested in its original package directory |
 | Preserved sources | 175 Rave Master texts and 3 WebSocket files; unchanged ZIP and inventory; not a complete RMXP backup |
-| Primary workstream | P02 syntax-attribution correction 0.1.3; P11 reading correction 0.1.2 and registry reference gate retained. Starter 0.1.0; both projects stay M4 for bounded local scopes |
+| Primary workstream | P11 unread navigation 0.1.3; P02 runtime pin must be refreshed and calibrated before publication. Starter 0.1.0; bounded M4 scopes unchanged |
 | Engine execution | No Unity or RMXP runtime verified; P11 uses Node/Express/Socket.IO |
-| Current verification | 11 validator regressions, 22 chat checks and 19 runner regressions pass; see `evidence/evaluation-task/SYNTAX_RUN.json` for this increment. Prior registry/reading/timeout records remain historical |
+| Current verification | P11 current execution in `evidence/realtime-chat/UNREAD_RUN.json`; prior syntax/registry/reading evidence remains historical. P02 recalibration follows the P11 commit |
 | Historical verification | v0.2.0 combat/dialogue runner reports remain historical; not rerun during P11 work |
 | Next action | Martin's P11 reading/keyboard review; one independent EVAL-001 client with recorded context/tools/attempts |
 | Other seeds | P01 baseline still absent; P10 remains recovered material; other creative/runtime baselines require targeted recovery |
 | Transfer / shared status | TR-009 validated for P02 task adaptation/calibration only; 10 other transfers remain candidates; no shared component |
-| Portfolio / attribution | Prior P11/P02 development published in `f35e2e7`; this syntax increment's publication is recorded at task closure. Continuity is in `docs/STATE.md`. Martin supplied direction; Codex implemented/tested. No independent candidate/model result or Martin usability review |
+| Portfolio / attribution | P02 syntax correction published at `e322e35`. Current P11/P02 combined publication is verified at task closure. Martin supplied direction; Codex implemented/tested; human and independent candidate reviews remain pending |
 
 Registry evidence paths must resolve to existing files inside the lab; working
 paths must be directories and legacy-source IDs must exist. This documentary
@@ -1519,3 +1519,11 @@ invalid JavaScript still rejects. Nineteen runner regressions and the unchanged
 15/17 baseline, 17/17 reference calibration pass. The full P11 suite passes 22
 checks. Remote reading/recalibration and registry work were synchronized first.
 No candidate score or new project maturity is inferred.
+
+## v0.4.5 — resume live reading explicitly
+
+P11 0.1.3 adds a bounded unread-arrival count and a keyboard-operable Jump to
+latest control while preserving earlier reading position. Returning to the bottom
+clears the count; activation transfers focus into the conversation. P02 keeps
+its candidate contract and requires recalibration against the new app commit
+before the combined iteration is published. No extra project or maturity gate.

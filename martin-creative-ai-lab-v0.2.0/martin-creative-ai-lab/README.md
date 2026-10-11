@@ -4,7 +4,7 @@ An evolving laboratory of games, narrative, images, audio, data, and AI
 evaluation by **Martin Melcop Neto**. Projects are adaptable seeds: build small
 slices, verify behavior, record decisions, and test reuse in actual destinations.
 
-**Current seed: v0.4.4.** The lab includes eleven project lines, 178 preserved
+**Current seed: v0.4.5.** The lab includes eleven project lines, 178 preserved
 historical texts, one working local text-chat adaptation, and one calibrated
 practice-task harness. No game migration,
 model benchmark, finished music catalogue, or public deployment is claimed.
@@ -16,7 +16,8 @@ The containing directory keeps its original v0.2.0 package name.
 - [Assessment](docs/ASSESSMENT.md) and [improvement plan](docs/IMPROVEMENT_PLAN.md): evidence and selected priorities.
 - [P11 — Live exchange](projects/realtime-integration-lab/README.md): install, run, test, provenance, and contribution.
 - [P02 — EVAL-001](evaluations/chat-send-buffering/README.md): export a starter, check a client, and inspect limits.
-- [Current reading/recalibration evidence](evidence/realtime-chat/READING_RUN.json): geometry, source comparison, full chat results and P02 compatibility.
+- [Current unread-navigation evidence](evidence/realtime-chat/UNREAD_RUN.json): arrival counts, keyboard focus and bounded history.
+- [Prior reading/recalibration evidence](evidence/realtime-chat/READING_RUN.json): geometry, source comparison, full chat results and P02 compatibility.
 - [Previous timeout/recalibration evidence](evidence/evaluation-task/TIMEOUT_RUN.json): actual command probes, source comparison, compatible artifacts, environment and hashes.
 - [P11 transport evidence](evidence/realtime-chat/POLLING_SEND_RUN.json): prior correction and its bounded tests.
 - [SEED.md](SEED.md), [agent instructions](AGENTS.md), and [decisions](docs/DECISIONS.md): direction and operating context.
@@ -52,7 +53,7 @@ be installed to develop it.
 
 The original delivery test failed on the preserved source and passed on 0.1.0.
 Two further send-path regressions fail on that committed client and pass on 0.1.1.
-Twenty-two current automated tests verify the local contract, including connected
+Twenty-six current automated tests verify the local contract, including connected
 polling congestion, stale-state reconnect buffering and preserved reading position. New
 documentation, UI, code comments, and evidence are in English; historical texts
 remain in their original language. Martin supplied direction and authorization;

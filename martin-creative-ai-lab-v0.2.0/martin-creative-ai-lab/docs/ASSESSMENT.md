@@ -1,3 +1,13 @@
+# Current assessment — unread navigation
+
+The clean checkout at published `e322e35` matches the fetched remote main. P11
+has real-browser delivery and reading-position coverage; P02's syntax correction
+and the registry reference gate are preserved. The inspected client keeps earlier
+text in view but has no visible arrival count or direct return-to-live control.
+That small product improvement uses the existing Node/Chromium stack and advances
+P11 presentation without recreating missing game/media baselines. Human review
+and an independent evaluation candidate still need their own evidence.
+
 # Current assessment — syntax attribution
 
 The clean checkout started at `7866785`. Read-only remote inspection found four

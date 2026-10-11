@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-10-11",
+  "updated_at": "2026-10-10",
   "projects": [
     {
       "id": "P01",
@@ -192,7 +192,7 @@
       "maturity": "M4",
       "phase": "local-chat-validated",
       "origin": "github_snapshot_inspected",
-      "next_action": "Review reading position, resuming live following and keyboard use with Martin; independent EVAL-001 execution remains a separate gate.",
+      "next_action": "Review unread navigation, reading position and keyboard use with Martin; independent EVAL-001 execution remains a separate gate.",
       "related_projects": [
         "P01",
         "P02",
@@ -204,12 +204,13 @@
         "projects/realtime-integration-lab/README.md",
         "evidence/realtime-chat/RUN.json",
         "evidence/realtime-chat/POLLING_SEND_RUN.json",
-        "evidence/realtime-chat/READING_RUN.json"
+        "evidence/realtime-chat/READING_RUN.json",
+        "evidence/realtime-chat/UNREAD_RUN.json"
       ],
       "source_id": "LEGACY-002",
-      "maturity_scope": "Local chat 0.1.2: 22 checks (6 protocol, 16 Chromium), including five reading checks; three reproduce failures on 0.1.1. Visible anchor, fractional correction and 200-item boundary verified at 1280x800. Human review, other browsers and deployment remain outside scope.",
+      "maturity_scope": "Local chat 0.1.3: 26 checks (6 protocol, 20 Chromium), including bounded unread arrivals, manual return-to-live reset, Enter/Space activation and focus at 390x844; retained reading geometry at 1280x800. No human or assistive-technology review, other-browser verification or deployment.",
       "working_path": "projects/realtime-integration-lab",
-      "working_version": "0.1.2"
+      "working_version": "0.1.3"
     }
   ]
 }

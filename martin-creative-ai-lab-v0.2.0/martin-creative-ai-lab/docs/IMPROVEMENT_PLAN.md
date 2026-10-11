@@ -1,3 +1,14 @@
+# Current increment — P11 unread navigation
+
+Preserve the validated reading anchor while making new arrivals discoverable.
+Add one native return-to-live button with a bounded count, reset on manual
+following, and explicit keyboard focus transfer. Verify actual broadcasts,
+Enter/Space at a mobile viewport and retention beyond 200 arrivals.
+
+Commit the tested P11 0.1.3 app first, then refresh P02's suite pin and recalibrate
+its known artifacts before publishing both commits. No candidate task change
+or additional workstream is introduced. Prior increments follow as history.
+
 # Current increment — P02 syntax attribution 0.1.3
 
 Correct a reproduced false artifact rejection from invalid NODE_OPTIONS. Require

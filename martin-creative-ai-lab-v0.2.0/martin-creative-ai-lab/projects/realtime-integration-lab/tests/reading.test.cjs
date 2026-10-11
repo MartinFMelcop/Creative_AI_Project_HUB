@@ -141,3 +141,64 @@ test('an evicted reading anchor falls back to the earliest retained message', as
   assert.equal(current.first, message(1));
   assert.equal(current.scrollTop, 0, 'Stay at the retained-history boundary instead of jumping to live text');
 });
+
+test('new arrivals show their count while preserving the reading position', async () => {
+  assert.equal(await page.locator('#latest').isVisible(), false);
+  await publish(Array.from({ length: 60 }, (_, index) => message(index)));
+  assert.equal(await page.locator('#latest').isVisible(), false);
+  await browse(15);
+  const previous = await position();
+  await publish([message(60)]);
+  await page.getByRole('button', { name: '1 new message · Jump to latest', exact: true }).waitFor({ timeout: 4000 });
+  await publish([message(61), message(62)]);
+  await page.getByRole('button', { name: '3 new messages · Jump to latest', exact: true }).waitFor();
+  const current = await position();
+  assert.equal(current.anchor, previous.anchor);
+  assert.ok(Math.abs(current.offset - previous.offset) <= 1);
+});
+
+test('keyboard activation returns to live text and keeps conversation focus', async () => {
+  await page.setViewportSize({ width: 390, height: 844 });
+  await publish(Array.from({ length: 40 }, (_, index) => message(index)));
+  await browse(10);
+  await publish([message(40), message(41)]);
+  await page.locator('#latest').focus();
+  await page.keyboard.press('Enter');
+  await page.waitForFunction(() => document.getElementById('latest').hidden);
+  assert.ok((await position()).distance <= 1);
+  assert.equal(await page.evaluate(() => document.activeElement.id), 'messages');
+  await publish([message(42)]);
+  assert.ok((await position()).distance <= 1);
+  assert.equal(await page.locator('#latest').isVisible(), false);
+  await browse(10);
+  await publish([message(43)]);
+  await page.locator('#latest').focus();
+  await page.keyboard.press('Space');
+  await page.waitForFunction(() => document.getElementById('latest').hidden);
+  assert.ok((await position()).distance <= 1);
+  assert.equal(await page.evaluate(() => document.activeElement.id), 'messages');
+});
+
+test('manual scrolling to live text clears the count before the next browsing session', async () => {
+  await publish(Array.from({ length: 40 }, (_, index) => message(index)));
+  await browse(10);
+  await publish([message(40), message(41)]);
+  await page.locator('#latest').waitFor();
+  await page.locator('#messages').focus();
+  await page.keyboard.press('Control+End');
+  await page.waitForFunction(() => document.getElementById('latest').hidden);
+  await browse(10);
+  await publish([message(42)]);
+  await page.getByRole('button', { name: '1 new message · Jump to latest', exact: true }).waitFor();
+});
+
+test('unread counts stay bounded when arrivals exceed the retained history', async () => {
+  await publish(Array.from({ length: 200 }, (_, index) => message(index)));
+  await page.evaluate(() => { document.getElementById('messages').scrollTop = 0; });
+  await publish(Array.from({ length: 205 }, (_, index) => message(index + 200)));
+  await page.getByRole('button', { name: '200 new messages · Jump to latest', exact: true }).waitFor();
+  const current = await position();
+  assert.equal(current.count, 200);
+  assert.equal(current.first, message(205));
+  assert.equal(current.scrollTop, 0);
+});

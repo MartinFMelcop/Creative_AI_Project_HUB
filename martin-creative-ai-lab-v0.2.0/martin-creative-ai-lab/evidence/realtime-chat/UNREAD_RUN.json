@@ -1,0 +1,59 @@
+{
+  "run_kind": "p11_unread_navigation",
+  "source_head": "e322e3527d8516bdbb1e08bc47d5e945be74cd37",
+  "project_version": "0.1.3",
+  "environment": {
+    "platform": "Linux-6.18.44-x86_64-with-glibc2.41",
+    "python": "3.12.14",
+    "node": "v24.19.0",
+    "chromium": "Chromium 154.0.8037.57 built on Debian GNU/Linux 13 (trixie)"
+  },
+  "baseline_client_sha256": "c9f9f4c0a2e16b1dd0f155968e85938d9b5355746538725b83ca564220386f4a",
+  "working_artifacts": {
+    "public/client.js": "1b51b9ba200318222f0f509c5e0d8588fe9a0a9c5e878154abce7cb4995b36a2",
+    "public/index.html": "abf2c41b7fc6c0d7ae081ac7b6ef15af0de658fb9e738bbcde8dfd07aa852848",
+    "public/style.css": "0e90d0c17dd64e139538357240194fc24b8261bc21e4cb887768f1004948b13d",
+    "tests/reading.test.cjs": "292fed1ffaca17c59ca880ed9973900c4ea1790e74e38f9b8db29ac28507dcef",
+    "package.json": "2eb527a56b15c7949329d7582469bcf1fe12aafedf6c6f70d865b5d3c0766a80",
+    "package-lock.json": "1fcbdb915d484b376a5126d4fd5087bd04df618dd8e461aeb0131506ff0bdcaf"
+  },
+  "baseline_probe": {
+    "command": [
+      "node",
+      "--test",
+      "--test-reporter=tap",
+      "--test-name-pattern=new arrivals show their count",
+      "tests/reading.test.cjs"
+    ],
+    "exit_code": 1,
+    "stdout": "TAP version 13\n# Subtest: new arrivals show their count while preserving the reading position\nnot ok 1 - new arrivals show their count while preserving the reading position\n  ---\n  duration_ms: 6778.928946\n  type: 'test'\n  location: '/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/projects/realtime-integration-lab/tests/reading.test.cjs:145:1'\n  failureType: 'testCodeFailure'\n  error: |-\n    locator.waitFor: Timeout 4000ms exceeded.\n    Call log:\n    \u001b[2m  - waiting for getByRole('button', { name: '1 new message \u00b7 Jump to latest', exact: true }) to be visible\u001b[22m\n    \n  code: 'ERR_TEST_FAILURE'\n  name: 'TimeoutError'\n  stack: |-\n    TestContext.<anonymous> (/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/projects/realtime-integration-lab/tests/reading.test.cjs:152:91)\n  ...\n1..1\n# tests 1\n# suites 0\n# pass 0\n# fail 1\n# cancelled 0\n# skipped 0\n# todo 0\n# duration_ms 7947.269335\n",
+    "stderr": "",
+    "timeout_seconds": 60,
+    "timed_out": false,
+    "launch_error": null,
+    "capture_complete": true,
+    "termination_strategy": null,
+    "elapsed_seconds": 8.08
+  },
+  "full_suite": {
+    "command": [
+      "npm",
+      "test"
+    ],
+    "exit_code": 0,
+    "stdout": "\n> creative-ai-realtime-chat@0.1.3 test\n> node --test tests/*.test.cjs\n\n\u2714 two browser clients display accepted messages once in both directions (6028.687129ms)\n\u2714 a connected form submission waits behind an in-flight polling write (1102.817772ms)\n\u2714 a stale connected state does not retain a message for reconnect replay (2044.26067ms)\n\u2714 markup remains literal text in both browsers (4066.642552ms)\n\u2714 rejection is visible, preserves the draft, and does not broadcast (5954.307287ms)\n\u2714 a departed client keeps its draft and receives only future messages on rejoining (3918.549852ms)\n\u2714 transport interruption reconnects automatically without duplicating listeners (2876.202321ms)\n\u2714 browser retains only the latest 200 messages (1187.412649ms)\n\u2714 new browser receives future messages without server-side history (2872.316236ms)\n\u2714 missing acknowledgement reports uncertainty and does not retry automatically (4359.272673ms)\n\u2714 an acknowledgement does not erase a newer draft typed during sending (2083.755679ms)\n\u2714 protocol broadcasts trimmed messages to sender and peer in order (80.110693ms)\n\u2714 non-string payloads are rejected without broadcasts (29.363392ms)\n\u2714 empty and whitespace-only payloads are rejected without broadcasts (20.684098ms)\n\u2714 501 code units are rejected even when trimming would shorten the payload (19.402111ms)\n\u2714 500 UTF-16 code units are accepted including non-ASCII text (21.954393ms)\n\u2714 messages without acknowledgement callbacks do not crash the server (19.523453ms)\n\u2714 the conversation follows initial messages and readers within 24 pixels of the bottom (1623.268951ms)\n\u2714 new broadcasts preserve the visible message and pixel offset while browsing earlier text (910.629357ms)\n\u2714 scrolling back to the bottom resumes following subsequent messages (639.78213ms)\n\u2714 retention eviction preserves a surviving reading anchor across variable-height messages (1191.802623ms)\n\u2714 an evicted reading anchor falls back to the earliest retained message (963.206271ms)\n\u2714 new arrivals show their count while preserving the reading position (852.647285ms)\n\u2714 keyboard activation returns to live text and keeps conversation focus (802.330342ms)\n\u2714 manual scrolling to live text clears the count before the next browsing session (807.897684ms)\n\u2714 unread counts stay bounded when arrivals exceed the retained history (1285.095399ms)\n\u2139 tests 26\n\u2139 suites 0\n\u2139 pass 26\n\u2139 fail 0\n\u2139 cancelled 0\n\u2139 skipped 0\n\u2139 todo 0\n\u2139 duration_ms 47796.94152\n",
+    "stderr": "",
+    "timeout_seconds": 240,
+    "timed_out": false,
+    "launch_error": null,
+    "capture_complete": true,
+    "termination_strategy": null,
+    "elapsed_seconds": 48.131
+  },
+  "limits": [
+    "Baseline is a controlled old-client route, not an independent candidate.",
+    "Keyboard activation is executed at 390x844; other reading checks at 1280x800.",
+    "Human usability and assistive-technology review remain pending."
+  ],
+  "recorded_at": "2026-10-11T01:26:51.734611+00:00"
+}

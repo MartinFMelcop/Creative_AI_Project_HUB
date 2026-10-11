@@ -5,10 +5,34 @@ const button = form.querySelector('button');
 const messages = document.getElementById('messages');
 const status = document.getElementById('status');
 const feedback = document.getElementById('feedback');
+const latest = document.getElementById('latest');
 let pending = false;
 let scrollRemainder = 0;
+let unread = 0;
 // Own anchoring while retention can remove earlier messages from the list.
 messages.style.overflowAnchor = 'none';
+
+function followingLatest() {
+  return messages.scrollHeight - messages.clientHeight - messages.scrollTop <= 24;
+}
+
+function clearUnread() {
+  unread = 0;
+  latest.hidden = true;
+  latest.textContent = 'Jump to latest';
+}
+
+messages.addEventListener('scroll', () => {
+  if (followingLatest()) clearUnread();
+});
+
+latest.addEventListener('click', () => {
+  // Keep keyboard focus in the conversation when its navigation control disappears.
+  messages.focus({ preventScroll: true });
+  messages.scrollTop = messages.scrollHeight;
+  scrollRemainder = 0;
+  clearUnread();
+});
 
 function updateConnection(text) {
   status.textContent = text;
@@ -20,7 +44,7 @@ socket.on('disconnect', () => updateConnection('Disconnected · reconnecting'));
 socket.on('connect_error', () => updateConnection('Unable to connect · retrying'));
 
 socket.on('chat message', (text) => {
-  const following = messages.scrollHeight - messages.clientHeight - messages.scrollTop <= 24;
+  const following = followingLatest();
   const top = messages.getBoundingClientRect().top;
   const anchor = following ? null : [...messages.children].find((item) => item.getBoundingClientRect().bottom > top);
   const offset = anchor ? anchor.getBoundingClientRect().top - top : 0;
@@ -32,6 +56,7 @@ socket.on('chat message', (text) => {
   if (following) {
     scrollRemainder = 0;
     messages.scrollTop = messages.scrollHeight;
+    clearUnread();
   } else if (anchor?.isConnected) {
     // Preserve content position, including when variable-height earlier items expire.
     const target = messages.scrollTop + anchor.getBoundingClientRect().top - messages.getBoundingClientRect().top - offset + scrollRemainder;
@@ -42,6 +67,12 @@ socket.on('chat message', (text) => {
     // Evicted text cannot be recovered; stay at the retained-history boundary.
     messages.scrollTop = 0;
     scrollRemainder = 0;
+  }
+  if (!following) {
+    // Counts describe arrivals still available in this page's retained window.
+    unread = Math.min(unread + 1, 200);
+    latest.textContent = `${unread} new ${unread === 1 ? 'message' : 'messages'} · Jump to latest`;
+    latest.hidden = false;
   }
 });
 
