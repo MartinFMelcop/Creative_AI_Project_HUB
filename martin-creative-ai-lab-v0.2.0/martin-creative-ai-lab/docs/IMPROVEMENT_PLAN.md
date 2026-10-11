@@ -1,4 +1,16 @@
-# Current increment — P10 trust consequences
+# Current increment — P10 dialogue continuity
+
+Implement 0.1.2 in the existing CLI: acknowledge completed help, answer the
+crossing request at agreement, recall retracted/repeated orders and outburst,
+and distinguish cooldown narration from speech. Preserve all rules and endings.
+Six targeted methods reproduce the old response gaps; 29 scene checks and
+exhaustive reachable-state comparison pass. [Assessment](ASSESSMENT.md) records
+the alternatives and hypotheses; [execution](../evidence/waystone-dialogue/DIALOGUE_RUN.json)
+records actual evidence. Next: reader comparison of cooperative/conflict paths,
+especially the simple cooperative route and five-wait pacing. No expansion is
+justified without that feedback.
+
+# Previous increment — P10 trust consequences
 
 Published 0.1.0 grants passage with an unresolved lie and rewards repeated
 lie/apology cycles with extra trust. Correct those two observed behaviors before

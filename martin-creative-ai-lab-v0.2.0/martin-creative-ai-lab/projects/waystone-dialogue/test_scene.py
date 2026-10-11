@@ -18,6 +18,76 @@ ROOT = HERE.parents[1]
 
 
 class SceneTests(unittest.TestCase):
+    def test_help_is_acknowledged_without_promising_a_blocked_repair(self):
+        for trust, lie in [(45, False), (39, False), (45, True)]:
+            with self.subTest(trust=trust, lie=lie):
+                scene = Scene()
+                scene.state.trust = trust
+                if lie:
+                    scene.act("lie")
+                help_response = scene.act("herbs")
+                self.assertNotIn("yes", help_response["text"].lower())
+                self.assertNotIn("I'll fit", help_response["text"])
+                self.assertIsNone(scene.state.ending)
+                ask_response = scene.act("ask")
+                self.assertIn("basket is sorted", ask_response["text"])
+                self.assertEqual(scene.state.respect, 54)
+
+    def test_agreement_answers_the_crossing_request_and_remembers_a_retraction(self):
+        clean, repaired = Scene(), Scene()
+        repaired.act("lie")
+        repaired.act("apologize")
+        responses = []
+        for scene in [clean, repaired]:
+            scene.act("herbs")
+            response = scene.act("bargain")
+            self.assertNotIn("Make your case", response["text"])
+            self.assertIn("crossing", response["text"])
+            self.assertIn("I'll fit", response["text"])
+            self.assertEqual(scene.state.ending, "COOPERATED")
+            responses.append(response["text"])
+        self.assertNotEqual(*responses)
+        self.assertIn("withdrew the order", responses[1])
+
+    def test_false_order_responses_distinguish_unresolved_and_retracted_history(self):
+        scene = Scene()
+        first = scene.act("lie")
+        repeated = scene.act("lie")
+        scene.act("apologize")
+        renewed = scene.act("lie")
+        self.assertEqual(len({r["text"] for r in [first, repeated, renewed]}), 3)
+        self.assertIn("council meeting", first["text"])
+        self.assertIn("already tried", repeated["text"])
+        self.assertIn("withdrew", renewed["text"])
+        self.assertEqual({r["variant_id"] for r in [first, repeated, renewed]},
+                         {"DV_NPC0007_MANIP_CONF_WARN_001"})
+        self.assertEqual(scene.state.trust, 45)
+
+    def test_outburst_apology_and_refusal_explain_lasting_damage(self):
+        scene = Scene()
+        for _ in range(4):
+            scene.act("lie")
+        for _ in range(OUTBURST_COOLDOWN):
+            scene.act("wait")
+        apology = scene.act("apologize")
+        self.assertIn("door", apology["text"])
+        scene.act("herbs")
+        refusal = scene.act("bargain")
+        self.assertIn("kept repeating", refusal["text"])
+        self.assertNotIn("I'll fit", refusal["text"])
+        self.assertEqual((scene.state.trust, scene.state.ending), (39, "DUSK"))
+
+    def test_cooldown_has_observable_progress_without_speaking_narration(self):
+        scene = Scene()
+        for _ in range(4):
+            scene.act("lie")
+        waits = [scene.act("wait") for _ in range(OUTBURST_COOLDOWN)]
+        self.assertEqual(len({r["text"] for r in waits}), OUTBURST_COOLDOWN)
+        self.assertTrue(all(r["speaker"] == "Narrator" for r in waits))
+        self.assertTrue(all(r["after"]["mood"] == "OUTBURST" for r in waits[:-1]))
+        self.assertEqual(waits[-1]["after"]["mood"], "WARY")
+        self.assertIn("ready to listen again", waits[-1]["text"])
+
     def test_unresolved_lie_blocks_agreement_until_apology(self):
         scene = Scene()
         scene.act("lie")
@@ -297,6 +367,15 @@ class CliTests(unittest.TestCase):
 
     def traces(self, output):
         return [json.loads(line[6:]) for line in output.splitlines() if line.startswith("TRACE ")]
+
+    def test_real_cli_separates_wait_narration_from_keeper_speech(self):
+        output = self.run_cli("wait\nherbs\nbargain\nquit\n", "--trace")
+        trace = self.traces(output)
+        self.assertIn("loose rune", output)
+        self.assertIn("Narrator: " + trace[0]["text"], output)
+        self.assertNotIn("Keeper: " + trace[0]["text"], output)
+        self.assertEqual([r["speaker"] for r in trace], ["Narrator", "Keeper", "Keeper"])
+        self.assertEqual(trace[-1]["after"]["ending"], "COOPERATED")
 
     def test_real_cli_requires_apology_before_granting_passage(self):
         output = self.run_cli("lie\nherbs\nbargain\nstatus\napologize\nbargain\nquit\n", "--trace")

@@ -1,0 +1,886 @@
+{
+  "project_id": "P10",
+  "project_version": "0.1.2",
+  "seed_version": "0.4.6",
+  "captured_utc": "2026-10-11T09:11:17.457822+00:00",
+  "baseline_branch": "work",
+  "baseline_commit": "72b93832c73cf1d4ef69640968a6879d7b196d03",
+  "baseline_scene_sha256": "dda662e3c28c214658700ce66709d16300e9549bf7da681250f24c8a93f7ee44",
+  "environment": {
+    "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+    "platform": "Linux-6.18.44-x86_64-with-glibc2.41",
+    "execution": "Managed Linux cloud; Python standard library; no media or engine required."
+  },
+  "artifact_sha256": {
+    "projects/waystone-dialogue/scene.py": "6a2e54edf034edc4138ab993fbb2c0add7f699d4326ac43bc010b840387e5020",
+    "projects/waystone-dialogue/test_scene.py": "032aff85190eab2137222f5fda4186f684b59bebaf0c497bda85f175d8f1f298",
+    "projects/waystone-dialogue/README.md": "60c5d1626050954d0a69787df6ec6720fd48ee118ca2ef69680a4b1402e1fb5d",
+    "projects/waystone-dialogue/provenance.json": "757234937c2aa52cf449e5e33f45a7306ce88de7c3e9695b3d622dabfe1ec67c"
+  },
+  "baseline_regressions": {
+    "argv": [
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+      "/workspace/work/waystone-dialogue-baseline/test_scene.py",
+      "SceneTests.test_help_is_acknowledged_without_promising_a_blocked_repair",
+      "SceneTests.test_agreement_answers_the_crossing_request_and_remembers_a_retraction",
+      "SceneTests.test_false_order_responses_distinguish_unresolved_and_retracted_history",
+      "SceneTests.test_outburst_apology_and_refusal_explain_lasting_damage",
+      "SceneTests.test_cooldown_has_observable_progress_without_speaking_narration",
+      "CliTests.test_real_cli_separates_wait_narration_from_keeper_speech"
+    ],
+    "cwd": "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab",
+    "stdin": null,
+    "exit_code": 1,
+    "elapsed_seconds": 0.141,
+    "stdout": "",
+    "stderr_summary": "test_help_is_acknowledged_without_promising_a_blocked_repair (__main__.SceneTests.test_help_is_acknowledged_without_promising_a_blocked_repair) ... \n  test_help_is_acknowledged_without_promising_a_blocked_repair (__main__.SceneTests.test_help_is_acknowledged_without_promising_a_blocked_repair) (trust=45, lie=False) ... FAIL\n  test_help_is_acknowledged_without_promising_a_blocked_repair (__main__.SceneTests.test_help_is_acknowledged_without_promising_a_blocked_repair) (trust=39, lie=False) ... FAIL\n  test_help_is_acknowledged_without_promising_a_blocked_repair (__main__.SceneTests.test_help_is_acknowledged_without_promising_a_blocked_repair) (trust=45, lie=True) ... FAIL\ntest_agreement_answers_the_crossing_request_and_remembers_a_retraction (__main__.SceneTests.test_agreement_answers_the_crossing_request_and_remembers_a_retraction) ... FAIL\ntest_false_order_responses_distinguish_unresolved_and_retracted_history (__main__.SceneTests.test_false_order_responses_distinguish_unresolved_and_retracted_history) ... FAIL\ntest_outburst_apology_and_refusal_explain_lasting_damage (__main__.SceneTests.test_outburst_apology_and_refusal_explain_lasting_damage) ... FAIL\ntest_cooldown_has_observable_progress_without_speaking_narration (__main__.SceneTests.test_cooldown_has_observable_progress_without_speaking_narration) ... FAIL\ntest_real_cli_separates_wait_narration_from_keeper_speech (__main__.CliTests.test_real_cli_separates_wait_narration_from_keeper_speech) ... FAIL\nRan 6 tests; FAILED (failures=8). Three help-state subtests account for three failures; each other method fails once.",
+    "methods": [
+      "SceneTests.test_help_is_acknowledged_without_promising_a_blocked_repair",
+      "SceneTests.test_agreement_answers_the_crossing_request_and_remembers_a_retraction",
+      "SceneTests.test_false_order_responses_distinguish_unresolved_and_retracted_history",
+      "SceneTests.test_outburst_apology_and_refusal_explain_lasting_damage",
+      "SceneTests.test_cooldown_has_observable_progress_without_speaking_narration",
+      "CliTests.test_real_cli_separates_wait_narration_from_keeper_speech"
+    ],
+    "source_materialization": "git show 72b93832c73cf1d4ef69640968a6879d7b196d03:martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/projects/waystone-dialogue/scene.py > scene.py; copy the current test_scene.py beside it and execute the six listed methods."
+  },
+  "checks": [
+    {
+      "argv": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "projects/waystone-dialogue/test_scene.py"
+      ],
+      "cwd": "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab",
+      "stdin": null,
+      "exit_code": 0,
+      "elapsed_seconds": 0.523,
+      "stdout": "",
+      "stderr": "test_all_waits_reach_dusk_in_real_cli (__main__.CliTests.test_all_waits_reach_dusk_in_real_cli) ... ok\ntest_bad_input_and_status_consume_no_turn (__main__.CliTests.test_bad_input_and_status_consume_no_turn) ... ok\ntest_eof_during_live_and_terminal_scene_exits_cleanly (__main__.CliTests.test_eof_during_live_and_terminal_scene_exits_cleanly) ... ok\ntest_named_choices_trace_conflict_and_restart (__main__.CliTests.test_named_choices_trace_conflict_and_restart) ... ok\ntest_number_choices_play_to_completion_without_trace (__main__.CliTests.test_number_choices_play_to_completion_without_trace) ... ok\ntest_real_cli_requires_apology_before_granting_passage (__main__.CliTests.test_real_cli_requires_apology_before_granting_passage) ... ok\ntest_real_cli_separates_wait_narration_from_keeper_speech (__main__.CliTests.test_real_cli_separates_wait_narration_from_keeper_speech) ... ok\ntest_agreement_answers_the_crossing_request_and_remembers_a_retraction (__main__.SceneTests.test_agreement_answers_the_crossing_request_and_remembers_a_retraction) ... ok\ntest_apology_requires_an_unresolved_fault_and_cannot_be_repeated (__main__.SceneTests.test_apology_requires_an_unresolved_fault_and_cannot_be_repeated) ... ok\ntest_catalog_stress_boundary_is_checked_before_effects (__main__.SceneTests.test_catalog_stress_boundary_is_checked_before_effects) ... ok\ntest_cooldown_blocks_repair_and_apology_until_five_waits (__main__.SceneTests.test_cooldown_blocks_repair_and_apology_until_five_waits) ... ok\ntest_cooldown_has_observable_progress_without_speaking_narration (__main__.SceneTests.test_cooldown_has_observable_progress_without_speaking_narration) ... ok\ntest_crossing_requires_help_before_agreement (__main__.SceneTests.test_crossing_requires_help_before_agreement) ... ok\ntest_dusk_is_terminal_and_last_turn_can_still_succeed_or_leave (__main__.SceneTests.test_dusk_is_terminal_and_last_turn_can_still_succeed_or_leave) ... ok\ntest_false_order_responses_distinguish_unresolved_and_retracted_history (__main__.SceneTests.test_false_order_responses_distinguish_unresolved_and_retracted_history) ... ok\ntest_help_is_acknowledged_without_promising_a_blocked_repair (__main__.SceneTests.test_help_is_acknowledged_without_promising_a_blocked_repair) ... ok\ntest_herbs_cannot_be_spent_twice (__main__.SceneTests.test_herbs_cannot_be_spent_twice) ... ok\ntest_leaving_calm_or_in_outburst_selects_distinct_endings (__main__.SceneTests.test_leaving_calm_or_in_outburst_selects_distinct_endings) ... ok\ntest_negotiation_trust_boundary (__main__.SceneTests.test_negotiation_trust_boundary) ... ok\ntest_new_lies_and_apologies_cannot_increase_pre_fault_trust (__main__.SceneTests.test_new_lies_and_apologies_cannot_increase_pre_fault_trust) ... ok\ntest_numeric_effects_clamp_at_both_bounds (__main__.SceneTests.test_numeric_effects_clamp_at_both_bounds) ... ok\ntest_outburst_apology_and_refusal_explain_lasting_damage (__main__.SceneTests.test_outburst_apology_and_refusal_explain_lasting_damage) ... ok\ntest_repeated_false_orders_have_visible_consequences (__main__.SceneTests.test_repeated_false_orders_have_visible_consequences) ... ok\ntest_restart_removes_memory_clock_cooldown_ending_and_trace (__main__.SceneTests.test_restart_removes_memory_clock_cooldown_ending_and_trace) ... ok\ntest_same_choices_replay_identical_decisions (__main__.SceneTests.test_same_choices_replay_identical_decisions) ... ok\ntest_selected_records_match_verified_preserved_sources (__main__.SceneTests.test_selected_records_match_verified_preserved_sources) ... ok\ntest_sessions_and_trace_snapshots_do_not_share_memory (__main__.SceneTests.test_sessions_and_trace_snapshots_do_not_share_memory) ... ok\ntest_unresolved_lie_blocks_agreement_until_apology (__main__.SceneTests.test_unresolved_lie_blocks_agreement_until_apology) ... ok\ntest_unresolved_lie_cannot_win_on_the_last_turn (__main__.SceneTests.test_unresolved_lie_cannot_win_on_the_last_turn) ... ok\n\n----------------------------------------------------------------------\nRan 29 tests in 0.408s\n\nOK\n"
+    },
+    {
+      "argv": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "tools/test_validate_repo.py"
+      ],
+      "cwd": "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab",
+      "stdin": null,
+      "exit_code": 0,
+      "elapsed_seconds": 1.278,
+      "stdout": "",
+      "stderr": "...........\n----------------------------------------------------------------------\nRan 11 tests in 1.201s\n\nOK\n"
+    },
+    {
+      "argv": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "tools/test_check_manifest.py"
+      ],
+      "cwd": "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab",
+      "stdin": null,
+      "exit_code": 0,
+      "elapsed_seconds": 0.376,
+      "stdout": "",
+      "stderr": "...........\n----------------------------------------------------------------------\nRan 11 tests in 0.302s\n\nOK\n"
+    },
+    {
+      "argv": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "tools/validate_repo.py"
+      ],
+      "cwd": "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab",
+      "exit_code": 0,
+      "stdout": "PASS: 11 projects, 11 transfers, 0 assets, 2 legacy sources; 146 local file links.\nDocumentary checks only; no game, model benchmark or media runtime executed.\n",
+      "stderr": ""
+    }
+  ],
+  "rules_equivalence": {
+    "method": "Breadth-first enumeration of every distinct reachable snapshot from the default initial state through the 12-turn terminal boundary. Reconstruct independent states before each action; compare menu, action, variant identity/origin, eligible variants and complete before/after snapshots. Dialogue and the new speaker field are intentionally excluded.",
+    "states": 6131,
+    "transitions": 17994,
+    "endings": [
+      "COOPERATED",
+      "DISMISSED",
+      "DUSK",
+      "LEFT"
+    ],
+    "differences": 0,
+    "elapsed_seconds": 0.416
+  },
+  "cli_comparisons": [
+    {
+      "case": "cooperation_after_help_and_repeated_request",
+      "before": {
+        "argv": [
+          "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+          "/workspace/work/waystone-dialogue-baseline/scene.py",
+          "--trace"
+        ],
+        "cwd": "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab",
+        "stdin": "herbs\nask\nbargain\nquit\n",
+        "exit_code": 0,
+        "elapsed_seconds": 0.04,
+        "stderr": "",
+        "decisions": [
+          {
+            "action": "herbs",
+            "variant_id": "DV_NPC0007_REQUEST_HELP_001",
+            "speaker": null,
+            "text": "Now that I can see my desk, yes. Give me the rune. And don't interrupt.",
+            "after": {
+              "turn": 1,
+              "trust": 45,
+              "mood": "OBSESSED",
+              "ending": null
+            }
+          },
+          {
+            "action": "ask",
+            "variant_id": "DV_NPC0007_REQUEST_HELP_002",
+            "speaker": null,
+            "text": "That sounds like work. You start. I'll correct it later.",
+            "after": {
+              "turn": 2,
+              "trust": 45,
+              "mood": "NEUTRAL",
+              "ending": null
+            }
+          },
+          {
+            "action": "bargain",
+            "variant_id": "DV_NPC0007_NEGOTIATION_001",
+            "speaker": null,
+            "text": "All right. Make your case. If it makes sense, I'm listening.",
+            "after": {
+              "turn": 3,
+              "trust": 45,
+              "mood": "NEUTRAL",
+              "ending": "COOPERATED"
+            }
+          }
+        ]
+      },
+      "after": {
+        "argv": [
+          "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+          "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/projects/waystone-dialogue/scene.py",
+          "--trace"
+        ],
+        "cwd": "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab",
+        "stdin": "herbs\nask\nbargain\nquit\n",
+        "exit_code": 0,
+        "elapsed_seconds": 0.037,
+        "stderr": "",
+        "decisions": [
+          {
+            "action": "herbs",
+            "variant_id": "DV_NPC0007_REQUEST_HELP_001",
+            "speaker": "Keeper",
+            "text": "Leaves in that basket. Seed pods here. Good. Now there's room to see the rune.",
+            "after": {
+              "turn": 1,
+              "trust": 45,
+              "mood": "OBSESSED",
+              "ending": null
+            }
+          },
+          {
+            "action": "ask",
+            "variant_id": "DV_NPC0007_REQUEST_HELP_002",
+            "speaker": "Keeper",
+            "text": "The basket is sorted. I can see that. Tell me who needs this crossing tonight.",
+            "after": {
+              "turn": 2,
+              "trust": 45,
+              "mood": "NEUTRAL",
+              "ending": null
+            }
+          },
+          {
+            "action": "bargain",
+            "variant_id": "DV_NPC0007_NEGOTIATION_001",
+            "speaker": "Keeper",
+            "text": "A crossing for the village, before dark. I'll fit the rune; hold the lamp steady.",
+            "after": {
+              "turn": 3,
+              "trust": 45,
+              "mood": "NEUTRAL",
+              "ending": "COOPERATED"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "case": "retracted_lie_then_cooperation",
+      "before": {
+        "argv": [
+          "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+          "/workspace/work/waystone-dialogue-baseline/scene.py",
+          "--trace"
+        ],
+        "cwd": "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab",
+        "stdin": "lie\nherbs\nbargain\napologize\nbargain\nquit\n",
+        "exit_code": 0,
+        "elapsed_seconds": 0.04,
+        "stderr": "",
+        "decisions": [
+          {
+            "action": "lie",
+            "variant_id": "DV_NPC0007_MANIP_CONF_WARN_001",
+            "speaker": null,
+            "text": "I saw the trick. Stop now, or this conversation is over.",
+            "after": {
+              "turn": 1,
+              "trust": 45,
+              "mood": "PRESSURIZED",
+              "ending": null
+            }
+          },
+          {
+            "action": "herbs",
+            "variant_id": "DV_NPC0007_REQUEST_HELP_001",
+            "speaker": null,
+            "text": "Now that I can see my desk, yes. Give me the rune. And don't interrupt.",
+            "after": {
+              "turn": 2,
+              "trust": 45,
+              "mood": "OBSESSED",
+              "ending": null
+            }
+          },
+          {
+            "action": "bargain",
+            "variant_id": "SCENE_BARGAIN_UNRESOLVED_LIE",
+            "speaker": null,
+            "text": "First, correct the false order. I won't agree while you're hiding behind the council.",
+            "after": {
+              "turn": 3,
+              "trust": 45,
+              "mood": "WARY",
+              "ending": null
+            }
+          },
+          {
+            "action": "apologize",
+            "variant_id": "DV_NPC0007_APOLOGY_001",
+            "speaker": null,
+            "text": "All right. It happens. Correct it, and we move on.",
+            "after": {
+              "turn": 4,
+              "trust": 45,
+              "mood": "NEUTRAL",
+              "ending": null
+            }
+          },
+          {
+            "action": "bargain",
+            "variant_id": "DV_NPC0007_NEGOTIATION_001",
+            "speaker": null,
+            "text": "All right. Make your case. If it makes sense, I'm listening.",
+            "after": {
+              "turn": 5,
+              "trust": 45,
+              "mood": "NEUTRAL",
+              "ending": "COOPERATED"
+            }
+          }
+        ]
+      },
+      "after": {
+        "argv": [
+          "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+          "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/projects/waystone-dialogue/scene.py",
+          "--trace"
+        ],
+        "cwd": "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab",
+        "stdin": "lie\nherbs\nbargain\napologize\nbargain\nquit\n",
+        "exit_code": 0,
+        "elapsed_seconds": 0.039,
+        "stderr": "",
+        "decisions": [
+          {
+            "action": "lie",
+            "variant_id": "DV_NPC0007_MANIP_CONF_WARN_001",
+            "speaker": "Keeper",
+            "text": "I was at this morning's council meeting. No repair order. Ask me yourself.",
+            "after": {
+              "turn": 1,
+              "trust": 45,
+              "mood": "PRESSURIZED",
+              "ending": null
+            }
+          },
+          {
+            "action": "herbs",
+            "variant_id": "DV_NPC0007_REQUEST_HELP_001",
+            "speaker": "Keeper",
+            "text": "Leaves in that basket. Seed pods here. Good. Now there's room to see the rune.",
+            "after": {
+              "turn": 2,
+              "trust": 45,
+              "mood": "OBSESSED",
+              "ending": null
+            }
+          },
+          {
+            "action": "bargain",
+            "variant_id": "SCENE_BARGAIN_UNRESOLVED_LIE",
+            "speaker": "Keeper",
+            "text": "First, correct the false order. I won't agree while you're hiding behind the council.",
+            "after": {
+              "turn": 3,
+              "trust": 45,
+              "mood": "WARY",
+              "ending": null
+            }
+          },
+          {
+            "action": "apologize",
+            "variant_id": "DV_NPC0007_APOLOGY_001",
+            "speaker": "Keeper",
+            "text": "All right. You've withdrawn the order. Tell me what you actually need.",
+            "after": {
+              "turn": 4,
+              "trust": 45,
+              "mood": "NEUTRAL",
+              "ending": null
+            }
+          },
+          {
+            "action": "bargain",
+            "variant_id": "DV_NPC0007_NEGOTIATION_001",
+            "speaker": "Keeper",
+            "text": "You withdrew the order. The village still needs the crossing. I'll fit the rune; hold the lamp.",
+            "after": {
+              "turn": 5,
+              "trust": 45,
+              "mood": "NEUTRAL",
+              "ending": "COOPERATED"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "case": "unresolved_then_renewed_false_order",
+      "before": {
+        "argv": [
+          "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+          "/workspace/work/waystone-dialogue-baseline/scene.py",
+          "--trace"
+        ],
+        "cwd": "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab",
+        "stdin": "lie\nlie\napologize\nlie\nquit\n",
+        "exit_code": 0,
+        "elapsed_seconds": 0.038,
+        "stderr": "",
+        "decisions": [
+          {
+            "action": "lie",
+            "variant_id": "DV_NPC0007_MANIP_CONF_WARN_001",
+            "speaker": null,
+            "text": "I saw the trick. Stop now, or this conversation is over.",
+            "after": {
+              "turn": 1,
+              "trust": 45,
+              "mood": "PRESSURIZED",
+              "ending": null
+            }
+          },
+          {
+            "action": "lie",
+            "variant_id": "DV_NPC0007_MANIP_CONF_WARN_001",
+            "speaker": null,
+            "text": "I saw the trick. Stop now, or this conversation is over.",
+            "after": {
+              "turn": 2,
+              "trust": 45,
+              "mood": "PRESSURIZED",
+              "ending": null
+            }
+          },
+          {
+            "action": "apologize",
+            "variant_id": "DV_NPC0007_APOLOGY_001",
+            "speaker": null,
+            "text": "All right. It happens. Correct it, and we move on.",
+            "after": {
+              "turn": 3,
+              "trust": 45,
+              "mood": "NEUTRAL",
+              "ending": null
+            }
+          },
+          {
+            "action": "lie",
+            "variant_id": "DV_NPC0007_MANIP_CONF_WARN_001",
+            "speaker": null,
+            "text": "I saw the trick. Stop now, or this conversation is over.",
+            "after": {
+              "turn": 4,
+              "trust": 45,
+              "mood": "PRESSURIZED",
+              "ending": null
+            }
+          }
+        ]
+      },
+      "after": {
+        "argv": [
+          "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+          "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/projects/waystone-dialogue/scene.py",
+          "--trace"
+        ],
+        "cwd": "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab",
+        "stdin": "lie\nlie\napologize\nlie\nquit\n",
+        "exit_code": 0,
+        "elapsed_seconds": 0.05,
+        "stderr": "",
+        "decisions": [
+          {
+            "action": "lie",
+            "variant_id": "DV_NPC0007_MANIP_CONF_WARN_001",
+            "speaker": "Keeper",
+            "text": "I was at this morning's council meeting. No repair order. Ask me yourself.",
+            "after": {
+              "turn": 1,
+              "trust": 45,
+              "mood": "PRESSURIZED",
+              "ending": null
+            }
+          },
+          {
+            "action": "lie",
+            "variant_id": "DV_NPC0007_MANIP_CONF_WARN_001",
+            "speaker": "Keeper",
+            "text": "You already tried that order. Stop repeating it. The council gave you no authority here.",
+            "after": {
+              "turn": 2,
+              "trust": 45,
+              "mood": "PRESSURIZED",
+              "ending": null
+            }
+          },
+          {
+            "action": "apologize",
+            "variant_id": "DV_NPC0007_APOLOGY_001",
+            "speaker": "Keeper",
+            "text": "All right. You've withdrawn the order. Tell me what you actually need.",
+            "after": {
+              "turn": 3,
+              "trust": 45,
+              "mood": "NEUTRAL",
+              "ending": null
+            }
+          },
+          {
+            "action": "lie",
+            "variant_id": "DV_NPC0007_MANIP_CONF_WARN_001",
+            "speaker": "Keeper",
+            "text": "You withdrew that order. Now you're using it again?",
+            "after": {
+              "turn": 4,
+              "trust": 45,
+              "mood": "PRESSURIZED",
+              "ending": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "case": "outburst_cooldown_apology_and_refusal",
+      "before": {
+        "argv": [
+          "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+          "/workspace/work/waystone-dialogue-baseline/scene.py",
+          "--trace"
+        ],
+        "cwd": "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab",
+        "stdin": "lie\nlie\nlie\nlie\nwait\nwait\nwait\nwait\nwait\napologize\nherbs\nbargain\nquit\n",
+        "exit_code": 0,
+        "elapsed_seconds": 0.04,
+        "stderr": "",
+        "decisions": [
+          {
+            "action": "lie",
+            "variant_id": "DV_NPC0007_MANIP_CONF_WARN_001",
+            "speaker": null,
+            "text": "I saw the trick. Stop now, or this conversation is over.",
+            "after": {
+              "turn": 1,
+              "trust": 45,
+              "mood": "PRESSURIZED",
+              "ending": null
+            }
+          },
+          {
+            "action": "lie",
+            "variant_id": "DV_NPC0007_MANIP_CONF_WARN_001",
+            "speaker": null,
+            "text": "I saw the trick. Stop now, or this conversation is over.",
+            "after": {
+              "turn": 2,
+              "trust": 45,
+              "mood": "PRESSURIZED",
+              "ending": null
+            }
+          },
+          {
+            "action": "lie",
+            "variant_id": "DV_NPC0007_MANIP_CONF_WARN_001",
+            "speaker": null,
+            "text": "I saw the trick. Stop now, or this conversation is over.",
+            "after": {
+              "turn": 3,
+              "trust": 45,
+              "mood": "PRESSURIZED",
+              "ending": null
+            }
+          },
+          {
+            "action": "lie",
+            "variant_id": "DV_NPC0007_MANIP_CONF_OUTBURST_001",
+            "speaker": null,
+            "text": "Enough. I saw it. You're trying to bend me with words. I am not a fool.",
+            "after": {
+              "turn": 4,
+              "trust": 33,
+              "mood": "OUTBURST",
+              "ending": null
+            }
+          },
+          {
+            "action": "wait",
+            "variant_id": "SCENE_WAIT",
+            "speaker": null,
+            "text": "The Keeper measures a pinch of herbs. You let the silence stand.",
+            "after": {
+              "turn": 5,
+              "trust": 33,
+              "mood": "OUTBURST",
+              "ending": null
+            }
+          },
+          {
+            "action": "wait",
+            "variant_id": "SCENE_WAIT",
+            "speaker": null,
+            "text": "The Keeper measures a pinch of herbs. You let the silence stand.",
+            "after": {
+              "turn": 6,
+              "trust": 33,
+              "mood": "OUTBURST",
+              "ending": null
+            }
+          },
+          {
+            "action": "wait",
+            "variant_id": "SCENE_WAIT",
+            "speaker": null,
+            "text": "The Keeper measures a pinch of herbs. You let the silence stand.",
+            "after": {
+              "turn": 7,
+              "trust": 33,
+              "mood": "OUTBURST",
+              "ending": null
+            }
+          },
+          {
+            "action": "wait",
+            "variant_id": "SCENE_WAIT",
+            "speaker": null,
+            "text": "The Keeper measures a pinch of herbs. You let the silence stand.",
+            "after": {
+              "turn": 8,
+              "trust": 33,
+              "mood": "OUTBURST",
+              "ending": null
+            }
+          },
+          {
+            "action": "wait",
+            "variant_id": "SCENE_WAIT",
+            "speaker": null,
+            "text": "The Keeper measures a pinch of herbs. You let the silence stand.\nTheir breathing steadies. They are ready to listen again.",
+            "after": {
+              "turn": 9,
+              "trust": 33,
+              "mood": "WARY",
+              "ending": null
+            }
+          },
+          {
+            "action": "apologize",
+            "variant_id": "DV_NPC0007_APOLOGY_001",
+            "speaker": null,
+            "text": "All right. It happens. Correct it, and we move on.",
+            "after": {
+              "turn": 10,
+              "trust": 39,
+              "mood": "NEUTRAL",
+              "ending": null
+            }
+          },
+          {
+            "action": "herbs",
+            "variant_id": "DV_NPC0007_REQUEST_HELP_001",
+            "speaker": null,
+            "text": "Now that I can see my desk, yes. Give me the rune. And don't interrupt.",
+            "after": {
+              "turn": 11,
+              "trust": 39,
+              "mood": "OBSESSED",
+              "ending": null
+            }
+          },
+          {
+            "action": "bargain",
+            "variant_id": "DV_NPC0007_NEGOTIATION_002",
+            "speaker": null,
+            "text": "What are you trying to sell me, exactly?",
+            "after": {
+              "turn": 12,
+              "trust": 39,
+              "mood": "WARY",
+              "ending": "DUSK"
+            }
+          }
+        ]
+      },
+      "after": {
+        "argv": [
+          "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+          "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/projects/waystone-dialogue/scene.py",
+          "--trace"
+        ],
+        "cwd": "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab",
+        "stdin": "lie\nlie\nlie\nlie\nwait\nwait\nwait\nwait\nwait\napologize\nherbs\nbargain\nquit\n",
+        "exit_code": 0,
+        "elapsed_seconds": 0.037,
+        "stderr": "",
+        "decisions": [
+          {
+            "action": "lie",
+            "variant_id": "DV_NPC0007_MANIP_CONF_WARN_001",
+            "speaker": "Keeper",
+            "text": "I was at this morning's council meeting. No repair order. Ask me yourself.",
+            "after": {
+              "turn": 1,
+              "trust": 45,
+              "mood": "PRESSURIZED",
+              "ending": null
+            }
+          },
+          {
+            "action": "lie",
+            "variant_id": "DV_NPC0007_MANIP_CONF_WARN_001",
+            "speaker": "Keeper",
+            "text": "You already tried that order. Stop repeating it. The council gave you no authority here.",
+            "after": {
+              "turn": 2,
+              "trust": 45,
+              "mood": "PRESSURIZED",
+              "ending": null
+            }
+          },
+          {
+            "action": "lie",
+            "variant_id": "DV_NPC0007_MANIP_CONF_WARN_001",
+            "speaker": "Keeper",
+            "text": "You already tried that order. Stop repeating it. The council gave you no authority here.",
+            "after": {
+              "turn": 3,
+              "trust": 45,
+              "mood": "PRESSURIZED",
+              "ending": null
+            }
+          },
+          {
+            "action": "lie",
+            "variant_id": "DV_NPC0007_MANIP_CONF_OUTBURST_001",
+            "speaker": "Keeper",
+            "text": "Enough about the council. One more word and I'm closing that door.",
+            "after": {
+              "turn": 4,
+              "trust": 33,
+              "mood": "OUTBURST",
+              "ending": null
+            }
+          },
+          {
+            "action": "wait",
+            "variant_id": "SCENE_WAIT",
+            "speaker": "Narrator",
+            "text": "The Keeper grips the edge of the bench. You step back from the door.",
+            "after": {
+              "turn": 5,
+              "trust": 33,
+              "mood": "OUTBURST",
+              "ending": null
+            }
+          },
+          {
+            "action": "wait",
+            "variant_id": "SCENE_WAIT",
+            "speaker": "Narrator",
+            "text": "They turn away and loosen their grip, one finger at a time.",
+            "after": {
+              "turn": 6,
+              "trust": 33,
+              "mood": "OUTBURST",
+              "ending": null
+            }
+          },
+          {
+            "action": "wait",
+            "variant_id": "SCENE_WAIT",
+            "speaker": "Narrator",
+            "text": "They set a fallen seed pod beside the basket. You keep quiet.",
+            "after": {
+              "turn": 7,
+              "trust": 33,
+              "mood": "OUTBURST",
+              "ending": null
+            }
+          },
+          {
+            "action": "wait",
+            "variant_id": "SCENE_WAIT",
+            "speaker": "Narrator",
+            "text": "They pull the stool upright and sit. Their hands are still.",
+            "after": {
+              "turn": 8,
+              "trust": 33,
+              "mood": "OUTBURST",
+              "ending": null
+            }
+          },
+          {
+            "action": "wait",
+            "variant_id": "SCENE_WAIT",
+            "speaker": "Narrator",
+            "text": "The Keeper turns the stool to face you.\nTheir breathing steadies. They are ready to listen again.",
+            "after": {
+              "turn": 9,
+              "trust": 33,
+              "mood": "WARY",
+              "ending": null
+            }
+          },
+          {
+            "action": "apologize",
+            "variant_id": "DV_NPC0007_APOLOGY_001",
+            "speaker": "Keeper",
+            "text": "I heard you. I'll leave the door open. That doesn't mean I've agreed to the repair.",
+            "after": {
+              "turn": 10,
+              "trust": 39,
+              "mood": "NEUTRAL",
+              "ending": null
+            }
+          },
+          {
+            "action": "herbs",
+            "variant_id": "DV_NPC0007_REQUEST_HELP_001",
+            "speaker": "Keeper",
+            "text": "Leaves in that basket. Seed pods here. Good. Now there's room to see the rune.",
+            "after": {
+              "turn": 11,
+              "trust": 39,
+              "mood": "OBSESSED",
+              "ending": null
+            }
+          },
+          {
+            "action": "bargain",
+            "variant_id": "DV_NPC0007_NEGOTIATION_002",
+            "speaker": "Keeper",
+            "text": "You kept repeating that false order. I heard your apology, but I won't risk this repair on your word tonight.",
+            "after": {
+              "turn": 12,
+              "trust": 39,
+              "mood": "WARY",
+              "ending": "DUSK"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "case": "departure",
+      "before": {
+        "argv": [
+          "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+          "/workspace/work/waystone-dialogue-baseline/scene.py",
+          "--trace"
+        ],
+        "cwd": "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab",
+        "stdin": "leave\nquit\n",
+        "exit_code": 0,
+        "elapsed_seconds": 0.038,
+        "stderr": "",
+        "decisions": [
+          {
+            "action": "leave",
+            "variant_id": "DV_NPC0007_GOODBYE_001",
+            "speaker": null,
+            "text": "Go on. And don't make more work for me.",
+            "after": {
+              "turn": 1,
+              "trust": 45,
+              "mood": "NEUTRAL",
+              "ending": "LEFT"
+            }
+          }
+        ]
+      },
+      "after": {
+        "argv": [
+          "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+          "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/projects/waystone-dialogue/scene.py",
+          "--trace"
+        ],
+        "cwd": "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab",
+        "stdin": "leave\nquit\n",
+        "exit_code": 0,
+        "elapsed_seconds": 0.036,
+        "stderr": "",
+        "decisions": [
+          {
+            "action": "leave",
+            "variant_id": "DV_NPC0007_GOODBYE_001",
+            "speaker": "Keeper",
+            "text": "Go on. And don't make more work for me.",
+            "after": {
+              "turn": 1,
+              "trust": 45,
+              "mood": "NEUTRAL",
+              "ending": "LEFT"
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "limits": [
+    "Same-agent implementation, regression tests and editorial comparison are not independent reader validation.",
+    "No strategy/balance change; herbs then bargain remains the shortest cooperative path.",
+    "No human playtest, demand evidence, full personality simulation, media or engine integration."
+  ],
+  "editorial_comparison": {
+    "reviewer": "Codex, the implementing agent; not independent human review",
+    "observed_changes": [
+      "Help clears the bench without granting the repair; a later ask acknowledges completed sorting.",
+      "Agreement responds to the crossing request instead of inviting an argument after it has already been made.",
+      "The Keeper gives a concrete reason for detecting the first false order and recalls both unresolved repetition and a withdrawn order used again.",
+      "Cooldown shows grip releasing, attention returning and willingness to listen, without implying restored trust or agreement.",
+      "Outburst apology/refusal explains why trust 39 still prevents repair; departure and four endings remain available under the same rules."
+    ],
+    "remaining_questions": [
+      "Does the brief cooperative route offer enough engagement?",
+      "Do five forced waits support tension or create tedious pacing?"
+    ],
+    "validation_method_for_questions": "A reader plays and compares cooperative/conflict paths; record comprehension, perceived agency and pacing before changing rules."
+  },
+  "reproduction_code": "# Run from the lab directory with Python 3.10+ and retained Git history.\nimport importlib.util, json, subprocess, sys, tempfile\nfrom collections import deque\nfrom pathlib import Path\n\ndef load(name, path):\n    spec = importlib.util.spec_from_file_location(name, path)\n    module = importlib.util.module_from_spec(spec)\n    sys.modules[name] = module\n    spec.loader.exec_module(module)\n    return module\n\nwith tempfile.TemporaryDirectory() as tmp:\n    baseline = Path(tmp) / 'scene.py'\n    baseline.write_bytes(subprocess.check_output(['git', 'show',\n        '72b93832c73cf1d4ef69640968a6879d7b196d03:martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/projects/waystone-dialogue/scene.py']))\n    old = load('original_scene', baseline)\n    new = load('current_scene', Path('projects/waystone-dialogue/scene.py'))\n    initial = old.State().snapshot()\n    queue = deque([initial])\n    seen = {json.dumps(initial, sort_keys=True)}\n    edges = 0\n    endings = set()\n    while queue:\n        state = queue.popleft()\n        a, b = old.Scene(), new.Scene()\n        def restore(module):\n            return module.State(**{**state, 'flags': set(state['flags']), 'events': set(state['events'])})\n        a.state, b.state = restore(old), restore(new)\n        assert a.available_actions() == b.available_actions()\n        for action in a.available_actions():\n            a.state, b.state = restore(old), restore(new)\n            original, current = a.act(action), b.act(action)\n            for field in ['action','variant_id','variant_origin','eligible_variants','before','after']:\n                assert original[field] == current[field], (state, action, field)\n            edges += 1\n            next_state = original['after']\n            if next_state['ending']:\n                endings.add(next_state['ending'])\n            key = json.dumps(next_state, sort_keys=True)\n            if key not in seen:\n                seen.add(key)\n                queue.append(next_state)\n    print(len(seen), edges, sorted(endings))\n"
+}

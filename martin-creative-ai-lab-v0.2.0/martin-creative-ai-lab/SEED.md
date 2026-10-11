@@ -4,7 +4,7 @@
 **Data-base:** 10 de outubro de 2026  
 **Autor e responsável pelo portfólio:** Martin Melcop Neto  
 **Working language:** English for new documentation, plans, code comments, UI, and reports. Preserve original creative titles and historical source languages.
-**Current state:** Shared lab integrity now requires complete maintained-file manifest coverage and matching hashes, with 11 new omission/tampering regressions. P11 chat 0.1.5, P10 dialogue 0.1.1 and P02 runner 0.2.0 stay unchanged; GitHub CI continues their existing runtime contracts. Starter contract 0.1.0 and bounded maturity stay unchanged. Historical sources stay preserved; human creative review, independent model evidence and engine migration remain unperformed.
+**Current state:** P10 dialogue 0.1.2 improves response continuity using existing help, lie and outburst memory; cooldown narration has its own speaker. Twenty-nine checks and exhaustive reachable-state comparison preserve the prior rules and four endings. P11 chat 0.1.5, P02 runner 0.2.0, starter contract 0.1.0, shared integrity gates and bounded maturity stay unchanged. Historical sources remain preserved; independent human review, model evidence and engine migration remain unperformed.
 
 > Construir um laboratório autoral em Git que transforma ideias, obras e experimentos em produtos pequenos, sistemas reutilizáveis e evidências técnicas verificáveis. A IA participa da criação e execução; Martin desenvolve sua capacidade de especificar, compreender, selecionar, corrigir, validar e explicar os resultados.
 
@@ -46,14 +46,14 @@ Se apenas este arquivo estiver disponível, ele é suficiente para iniciar a Fas
 |---|---|
 | Repository | MartinFMelcop/Creative_AI_Project_HUB; actual Git root `/workspace/Creative_AI_Project_HUB`; lab remains nested in its original package directory |
 | Preserved sources | 175 Rave Master texts and 3 WebSocket files; unchanged ZIP and inventory; not a complete RMXP backup |
-| Primary workstream | Shared lab integrity: reject incomplete/stale hash manifests and verify every maintained lab file; existing project maturity stays unchanged |
+| Primary workstream | P10 dialogue 0.1.2: coherent responses and observable memory, with prior rules and bounded M4 unchanged |
 | Engine execution | P10 uses Python standard library; P11 uses Node/Express/Socket.IO. No Unity or RMXP runtime verified |
-| Current verification | 11 manifest and 11 registry regressions; the old hash-only command falsely passes an omitted entry, while the new gate rejects it. `evidence/continuous-integration/MANIFEST_RUN.json` records actual commands; GitHub logs establish hosted execution |
+| Current verification | 29 scene checks, six baseline-failing response methods, five CLI comparisons and identical rules across 6,131 reachable states / 17,994 transitions. `evidence/waystone-dialogue/DIALOGUE_RUN.json` records commands and boundaries |
 | Historical verification | v0.2.0 combat/dialogue, P10 trust, P11 unread and P02 snapshot records remain preserved; the old scenario runner was not rerun |
-| Next action | Reader review of P10 cooperative/conflict paths; P11 human review and independent EVAL-001 provenance remain separate gates |
-| Other seeds | P11 chat 0.1.5, P10 dialogue 0.1.1, P02 runner 0.2.0 and EVAL-001 starter 0.1.0 remain unchanged; missing creative/media baselines still need targeted recovery |
+| Next action | Reader comparison of P10 clarity, repetition and five-wait pacing; P11 human review and independent EVAL-001 provenance remain separate gates |
+| Other seeds | P11 chat 0.1.5, P02 runner 0.2.0 and EVAL-001 starter 0.1.0 remain unchanged; missing creative/media baselines still need targeted recovery |
 | Transfer / shared status | TR-009 validated for P02 task adaptation/calibration only; 10 other transfers remain candidates; no shared component |
-| Portfolio / attribution | P11 resize published at `a57a7f7`, with both hosted jobs passing; manifest-gate publication is verified at task closure. Martin supplied direction; Codex implemented/tested. Human and independent candidate reviews remain pending |
+| Portfolio / attribution | Baseline `72b9383` matches remote main through GitHub inspection; publication uses the connected integration because Git transport is unavailable. Martin supplied direction; Codex implemented/tested. Independent reader and candidate reviews remain pending |
 
 Registry evidence paths must resolve to existing files inside the lab; working
 paths must be directories and legacy-source IDs must exist. This documentary
@@ -230,7 +230,7 @@ Identificadores persistem mesmo quando nomes mudam. Um projeto arquivado pode co
 | P07 | Visual Generation & Asset Lab | Capas, ilustrações, sprites e direção | Assets consistentes, pipeline e estudo de seleção | Material visual histórico; inventário pendente |
 | P08 | Audio, Poetry & Music Lab | Sons, poemas, letras e conceitos | Música, EP conceitual, trilhas, áudio adaptativo | Eixo autorizado; fontes específicas pendentes |
 | P09 | AI Delivery & Operations Cases | Carreira real e avaliação simulada | Case de entrega, análise de workflow e rubricas | Base profissional lida; cases anteriores pendentes |
-| P10 | Adventures Unleashed / Rave Master | Narrativa, NPCs, combate, dados, arte/áudio e QA | Reservatório de sistemas e cenas; fatias adaptadas | Waystone CLI 0.1.1: 23 checks, bounded M4; preserved origin and historical runners unchanged |
+| P10 | Adventures Unleashed / Rave Master | Narrativa, NPCs, combate, dados, arte/áudio e QA | Reservatório de sistemas e cenas; fatias adaptadas | Waystone CLI 0.1.2: 29 checks, coherent memory-based responses, bounded M4; historical sources/rules unchanged |
 | P11 | Real-time Integration Lab / WebSocket | Node/Socket.IO event flow; three preserved source files | Local chat; later evaluation task or lobby candidate | Working chat 0.1.5: viewport reading restoration and activity-aware unread/title feedback; TR-009 task adaptation verified; no public hosting |
 
 P02 agrupa evaluation e QA porque podem compartilhar a mesma aplicação pequena. Não criar dois projetos Unity idênticos apenas para apresentar títulos diferentes. P01 pode abrigar produção, economia e analytics como cases distintos de uma fonte comum.
@@ -412,15 +412,16 @@ Reservatório recuperado de RPG Maker XP/RGSS: narrativa, personalidade e diálo
 
 [The Last Waystone](projects/waystone-dialogue/README.md) is now P10's first working
 adaptation: nine verified NPC-0007 variants, English framing/responses, closed
-state predicates, session memory, four endings and restart. Version 0.1.1 adds
-unresolved-lie agreement refusal and capped apology recovery. Twenty-three checks
-validate its bounded CLI contract. New scene rules and catalog/profile threshold
-choice are recorded in provenance and ADR-017/018; no full RPG equivalence, weighted
+state predicates, session memory, four endings and restart. Version 0.1.2 revises
+responses using existing help, lie and outburst history and separates narration
+from speech; the 0.1.1 agreement/trust-recovery gates remain unchanged. Twenty-nine
+checks and exhaustive reachable-state comparison validate the bounded CLI contract.
+Scene rules and adaptation fiction are recorded in provenance and ADR-017/018/023; no full RPG equivalence, weighted
 scoring, human creative review or engine migration is claimed.
 
 ### P11 — Real-time Integration Lab / WebSocket
 
-The recovered Node/Express/Socket.IO snapshot only logs incoming messages. Its working adaptation broadcasts validated text in connected browsers. P11 0.1.3 is a completed local slice with twenty-six protocol/Chromium checks, including reading position and unread navigation. Human review remains pending. See section 28.3 and `projects/realtime-integration-lab/README.md` for provenance and limits. TR-009 is calibrated in P02; lobby reuse remains a candidate.
+The recovered Node/Express/Socket.IO snapshot only logs incoming messages. Its working adaptation broadcasts validated text in connected browsers. P11 0.1.5 is the maintained local slice with thirty-three protocol/Chromium checks recorded in its README, including activity-aware unread state and viewport reading restoration. Those checks were not rerun locally in this P10 increment. Human review remains pending. See section 28.3 and `projects/realtime-integration-lab/README.md` for provenance and limits. TR-009 is calibrated in P02; lobby reuse remains a candidate.
 
 ## 6. Arquitetura do laboratório
 
@@ -1431,7 +1432,7 @@ broadcast, and the page has no receive/render listener. The historical package
 has no lockfile and its test script is a failing placeholder. Its declared ISC
 metadata does not establish licensing for unrelated material.
 
-**Working increment:** [P11 — Live exchange](projects/realtime-integration-lab/README.md),
+**Historical working increment (0.1.2):** [P11 — Live exchange](projects/realtime-integration-lab/README.md),
 version 0.1.2, separate from the unchanged historical archive. Retain the event
 name and string payload. Accept trimmed non-empty text, enforce 500 UTF-16 code
 units before trimming, broadcast to all connected clients including the sender,
@@ -1448,7 +1449,7 @@ connected form submission behind an in-flight polling write, and heartbeat expir
 can queue a packet before `connected` becomes false. This correction preserves
 the no-replay policy without adding automatic retry or durable delivery.
 
-**Evidence:** the same browser delivery check fails against the preserved source
+**Historical evidence at 0.1.2:** the same browser delivery check fails against the preserved source
 and passes against the adaptation. Twenty-two current tests (6 protocol, 16 Chromium)
 verify accepted/rejected payloads, two-way rendering, literal markup, drafts,
 rejoining/new clients, automatic transport reconnect, bounded history,

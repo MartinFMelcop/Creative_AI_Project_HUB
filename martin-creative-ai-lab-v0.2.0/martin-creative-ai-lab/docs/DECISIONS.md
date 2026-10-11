@@ -422,3 +422,21 @@ unchanged. Preserve all prior execution records and historical sources.
 
 **Revisit:** a changed ownership/ignore policy, escaped filenames, repository-wide
 coverage or a signed-artifact requirement.
+
+## ADR-023 — render P10 dialogue from existing action history
+
+**Date:** 2026-10-11 (client date, America/Sao_Paulo). **Status:** P10 0.1.2.
+
+The CLI's successful negotiation asks for a case already made; help sounds like
+agreement before the actual gates. Repeated lies and cooldown waits hide useful
+state behind generic responses. Correct wording and speaker attribution through
+one pure renderer reading pre-turn help, trust, unresolved-fault and historical
+lie/outburst memory. Keep legacy variant identities/effects separate from newly
+authored scene wording. Establish the loose rune, blocked bench and council
+meeting as explicit adaptation fiction. No trait model or new state is needed.
+
+Six new regression methods fail on the published baseline; 29 checks pass.
+All reachable default-state transitions preserve menus, effects and endings.
+Same-agent editorial comparison does not establish human preference or balance.
+Seed 0.4.6 and bounded M4 remain unchanged. Revisit only after reader feedback on
+clarity, the simple cooperative path or five-turn recovery pacing.

@@ -17,7 +17,7 @@ The containing directory keeps its original v0.2.0 package name.
 - [P11 — Live exchange](projects/realtime-integration-lab/README.md): install, run, test, provenance, and contribution.
 - [P02 — EVAL-001](evaluations/chat-send-buffering/README.md): export a starter, check a client, and inspect limits.
 - [P10 — The Last Waystone](projects/waystone-dialogue/README.md): play a stateful dialogue scene, restart, inspect traces and verify its origin.
-- [Current dialogue evidence](evidence/waystone-dialogue/TRUST_RUN.json): 23 checks, old/new CLI comparisons, agreement refusal and capped apology recovery.
+- [Current dialogue evidence](evidence/waystone-dialogue/DIALOGUE_RUN.json): 29 checks, contextual responses, before/after CLI comparisons and unchanged rules across all reachable states.
 - [Current activity evidence](evidence/realtime-chat/ACTIVITY_RUN.json): inactive-page arrivals, tab-title counts, focus/visibility reset and bounded history.
 - [Prior unread-navigation evidence](evidence/realtime-chat/UNREAD_RUN.json): arrival counts and keyboard focus.
 - [Prior reading/recalibration evidence](evidence/realtime-chat/READING_RUN.json): geometry, source comparison, full chat results and P02 compatibility.

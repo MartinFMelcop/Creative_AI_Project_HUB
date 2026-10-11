@@ -1,4 +1,42 @@
-# Current assessment — P10 trust consequences
+# Current assessment — P10 dialogue continuity
+
+Updated: 2026-10-11 (client date, America/Sao_Paulo). Clean branch `work` at
+`72b9383` matches remote main read through GitHub. Git fetch cannot reach the
+configured proxy. Assessment uses the actual scene, its tests/provenance, selected
+NPC-0007 source rows, registry, seed and maintained decisions; no missing game,
+manuscript or media master is treated as available.
+
+**Confirmed:** in the real CLI, helping sounds like agreement even when a lie
+or low trust blocks repair. Successful bargaining asks for an argument already
+submitted, then jumps to completion. Repeated lies return the same warning;
+cooldown waits repeat narration printed as Keeper speech. Existing tests validate
+state but miss these visible continuity problems. The original trace remains
+reproducible from the baseline commit in [the comparison](../evidence/waystone-dialogue/DIALOGUE_RUN.json).
+
+Technical review preserves the nine source effects, trust ceiling, cooldown and
+four endings. Creative review gives help and agreement distinct functions, uses
+existing lie/outburst memory in later responses, and shows physical recovery.
+The Keeper remains distracted by swamp herbs, terse and protective of their work;
+no philosophical exposition or new character is added. These are same-agent
+editorial judgments, not independent audience approval.
+
+| Candidate | Evidence and decision |
+|---|---|
+| P10 dialogue continuity | Reproduced in an executable artifact; choose a wording/rendering correction with unchanged mechanics and no dependency |
+| P11 human reading review / P02 independent candidate | Valuable pending gates, but this agent cannot supply human review or claim independent candidate provenance |
+| Other game, manuscript or media seeds | Full selected baselines/masters are absent or uninspected; do not reconstruct them from specifications |
+
+Product value is clearer feedback about what the Keeper has accepted and why
+trust still matters. **Hypotheses:** the two-action cooperative path may feel too
+obvious, and five waits may feel slow; verify through reader playthroughs before
+changing balance. **Unverified:** enjoyment, audience comprehension and adoption.
+A narrative-system portfolio sample is plausible; paid game/tool demand, licensing
+for broader legacy reuse and distribution readiness need separate evidence.
+No commercial traction is established. Maintainability favors one pure text
+renderer over new scoring, memory fields or branching systems. Correct current
+P10 pointers; preserve historical assessments and execution records below.
+
+# Previous assessment — P10 trust consequences
 
 The clean published `73bf8ee` checkout matches fetched main. In actual 0.1.0
 execution, `lie`, `herbs`, `bargain` ends in cooperation while apology is still

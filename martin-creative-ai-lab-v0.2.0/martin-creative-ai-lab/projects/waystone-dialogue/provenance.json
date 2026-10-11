@@ -40,6 +40,7 @@
     "Existing outbursts permit only wait or leave. Five subsequent accepted waits restore WARY; the entry turn and invalid/diagnostic input do not tick cooldown.",
     "Herbs can be sorted once. Each new lie opens one apology; apology closes that obligation while historical lie flags remain. Memory is session-local and reset by restart.",
     "Cooperation now requires resolving a lie. SCENE_BARGAIN_UNRESOLVED_LIE is a new scene response, not a legacy row; traces mark scene versus legacy-adaptation origin.",
-    "The first unresolved lie remembers pre-fault trust. Later lies retain this ceiling. The retained +6 apology delta is capped at that trust level; resolving the episode clears the ceiling."
+    "The first unresolved lie remembers pre-fault trust. Later lies retain this ceiling. The retained +6 apology delta is capped at that trust level; resolving the episode clears the ceiling.",
+    "0.1.2 revises English wording and framing: the player brings a loose rune, herbs obstruct the repair bench, and the Keeper attended a council meeting. These are new scene facts, not recovered canon. A pure renderer reads existing pre-turn help/trust/fault flags and outburst events; rules and nine retained numeric records stay unchanged. Five cooldown waits show physical recovery. Trace speaker separates narration from Keeper dialogue."
   ]
 }

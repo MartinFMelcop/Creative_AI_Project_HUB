@@ -8,19 +8,19 @@ import json
 from dataclasses import dataclass, field
 from typing import Callable
 
-VERSION = "0.1.1"
+VERSION = "0.1.2"
 MAX_TURNS = 12
 OUTBURST_COOLDOWN = 5
 INTRO = (
     "The Last Waystone\n"
-    "Fog is swallowing the road. The Keeper can repair the village Waystone,\n"
-    "but a basket of swamp herbs has absorbed all their attention. You need\n"
-    "a safe route before dusk. Help with the herbs, then make your case.\n"
-    "A false order from the council might get attention. It might also cost it."
+    "Fog is swallowing the road. You carry the village Waystone's loose rune;\n"
+    "without its light, the villagers face a long detour to the ferry.\n"
+    "The Keeper's repair bench is buried under swamp herbs. They pick through\n"
+    "the wet leaves, muttering about the seed pods. You need the crossing before dusk."
 )
 ENDINGS = {
     "COOPERATED": "The Keeper fits the last rune. A path shines through the fog.\n"
-                  "'Next time, lead with the herbs.' You cross before dusk.",
+                  "You cross before dusk; villagers follow the light behind you.",
     "LEFT": "You leave the Keeper to the herbs and follow the lanterns toward the ferry.\n"
             "The Waystone stays dark; another route will have to do.",
     "DISMISSED": "The workshop door closes. The Waystone will stay dark tonight.\n"
@@ -29,8 +29,8 @@ ENDINGS = {
             "You find shelter in the village. The crossing must wait until morning.",
 }
 ACTIONS = {
-    "ask": "Ask for the repair without offering help.",
-    "herbs": "Sort the swamp herbs and ask about the missing rune.",
+    "ask": "Ask the Keeper to start the repair.",
+    "herbs": "Sort the swamp herbs and show the loose rune.",
     "bargain": "Explain why the village needs the crossing.",
     "lie": "Claim the council has ordered an immediate repair.",
     "apologize": "Admit your false order and apologize.",
@@ -89,30 +89,30 @@ def calm(state: State) -> bool:
 # an English adaptation, not a claim to preserve the original scene or canon.
 VARIANTS = (
     Variant("DV_NPC0007_REQUEST_HELP_001", "herbs", 60, calm,
-            "Now that I can see my desk, yes. Give me the rune. And don't interrupt.",
+            "Leaves in that basket. Seed pods here. Good. Now there's room to see the rune.",
             stress=-6, mood="OBSESSED", events=("EVT_PLAYER_HELPED",)),
     Variant("DV_NPC0007_REQUEST_HELP_002", "ask", 55, calm,
-            "That sounds like work. You start. I'll correct it later.", respect=-1),
+            "Start with this basket. I can't even find my tools under it.", respect=-1),
     Variant("DV_NPC0007_NEGOTIATION_001", "bargain", 55,
             lambda s: calm(s) and s.trust >= 40,
-            "All right. Make your case. If it makes sense, I'm listening."),
+            "The village needs the crossing tonight? Clear this basket so I can reach my tools."),
     Variant("DV_NPC0007_NEGOTIATION_002", "bargain", 55,
             lambda s: calm(s) and s.trust < 40,
-            "What are you trying to sell me, exactly?", stress=4, mood="WARY",
+            "I won't work on your word alone. Take the ferry road tonight.", stress=4, mood="WARY",
             events=("EVT_MANIPULATION_SUSPECTED",)),
     Variant("DV_NPC0007_MANIP_CONF_WARN_001", "lie", 70,
             lambda s: calm(s) and s.stress < 80,
-            "I saw the trick. Stop now, or this conversation is over.",
+            "I was at this morning's council meeting. No repair order. Ask me yourself.",
             stress=22, mood="PRESSURIZED", flags=("FLAG_PLAYER_LIED",),
             events=("EVT_PLAYER_LIED",)),
     Variant("DV_NPC0007_MANIP_CONF_OUTBURST_001", "lie", 95,
             lambda s: calm(s) and s.stress >= 80,
-            "Enough. I saw it. You're trying to bend me with words. I am not a fool.",
+            "Enough about the council. One more word and I'm closing that door.",
             stress=-5, trust=-12, respect=-6, mood="OUTBURST",
             flags=("FLAG_PLAYER_LIED", "FLAG_OUTBURST_RECENT"),
             events=("EVT_PLAYER_LIED", "EVT_NPC_OUTBURST")),
     Variant("DV_NPC0007_APOLOGY_001", "apologize", 55, calm,
-            "All right. It happens. Correct it, and we move on.",
+            "All right. You've withdrawn the order. Tell me what you actually need.",
             stress=-12, trust=6, events=("EVT_PLAYER_PRAISED",)),
     Variant("DV_NPC0007_GOODBYE_001", "leave", 55,
             lambda s: calm(s) and "FLAG_NPC0007_AVOID_PLAYER_TEMP" not in s.flags,
@@ -132,6 +132,40 @@ SCENE_VARIANTS = (
             "First, correct the false order. I won't agree while you're hiding behind the council.",
             mood="WARY"),
 )
+
+
+def response_text(variant: Variant | None, state: State) -> str:
+    """Render the selected response from existing pre-turn state and memory."""
+    if variant is None:
+        if state.cooldown:
+            return (
+                "The Keeper grips the edge of the bench. You step back from the door.",
+                "They turn away and loosen their grip, one finger at a time.",
+                "They set a fallen seed pod beside the basket. You keep quiet.",
+                "They pull the stool upright and sit. Their hands are still.",
+                "The Keeper turns the stool to face you.",
+            )[OUTBURST_COOLDOWN - state.cooldown]
+        if state.herbs_sorted:
+            return "Lamplight catches the loose rune on the cleared bench. The Keeper checks a seed pod beside it."
+        return "The Keeper picks another seed pod from the wet leaves. The light outside is fading."
+
+    if variant.action == "ask" and state.herbs_sorted:
+        return "The basket is sorted. I can see that. Tell me who needs this crossing tonight."
+    if variant.action == "bargain" and not state.apology_due:
+        if state.trust >= 40 and state.herbs_sorted:
+            if "FLAG_PLAYER_LIED" in state.flags:
+                return "You withdrew the order. The village still needs the crossing. I'll fit the rune; hold the lamp."
+            return "A crossing for the village, before dark. I'll fit the rune; hold the lamp steady."
+        if state.trust < 40 and "EVT_NPC_OUTBURST" in state.events:
+            return "You kept repeating that false order. I heard your apology, but I won't risk this repair on your word tonight."
+    if variant.action == "lie" and variant.mood != "OUTBURST":
+        if state.apology_due:
+            return "You already tried that order. Stop repeating it. The council gave you no authority here."
+        if "FLAG_PLAYER_LIED" in state.flags:
+            return "You withdrew that order. Now you're using it again?"
+    if variant.action == "apologize" and "EVT_NPC_OUTBURST" in state.events:
+        return "I heard you. I'll leave the door open. That doesn't mean I've agreed to the repair."
+    return variant.text
 
 
 class Scene:
@@ -169,6 +203,7 @@ class Scene:
                    if candidates else None)
         if action != "wait" and variant is None:
             raise RuntimeError(f"No response for an available action: {action}")
+        text = response_text(variant, s)
 
         if variant:
             s.stress = max(0, min(100, s.stress + variant.stress))
@@ -177,9 +212,6 @@ class Scene:
             s.mood = variant.mood
             s.flags.update(variant.flags)
             s.events.update(variant.events)
-            text = variant.text
-        else:
-            text = "The Keeper measures a pinch of herbs. You let the silence stand."
 
         if action == "herbs":
             s.herbs_sorted = True
@@ -208,15 +240,13 @@ class Scene:
             s.ending = "DISMISSED" if s.mood == "AVOIDANT" else "LEFT"
         elif s.turn >= MAX_TURNS:
             s.ending = "DUSK"
-        elif (action == "bargain" and before["trust"] >= 40
-              and not s.herbs_sorted and not s.apology_due):
-            text += "\n'But first, this basket. I can't work under a heap of herbs.'"
 
         result = {
             "action": action,
             "variant_id": variant.source_id if variant else "SCENE_WAIT",
             "variant_origin": "legacy-adaptation" if variant in VARIANTS else "scene",
             "eligible_variants": sorted(v.source_id for v in candidates),
+            "speaker": "Narrator" if action == "wait" else "Keeper",
             "text": text, "before": before, "after": s.snapshot(),
         }
         self.history.append(result)
@@ -271,7 +301,7 @@ def main() -> int:
             except ValueError as exc:
                 print(str(exc))
                 continue
-            print(f"\nKeeper: {result['text']}")
+            print(f"\n{result['speaker']}: {result['text']}")
             if args.trace:
                 print("TRACE " + json.dumps(result, sort_keys=True))
     except KeyboardInterrupt:

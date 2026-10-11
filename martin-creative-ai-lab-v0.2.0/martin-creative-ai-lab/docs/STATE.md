@@ -1,43 +1,40 @@
 # Lab state
 
-**Updated:** 2026-10-11 (environment UTC date). **Seed version:** 0.4.6, unchanged.
-**Current increment:** complete maintained-lab manifest coverage in shared CI.
-P11 chat 0.1.5, P10 dialogue 0.1.1, P02 runner 0.2.0 and starter 0.1.0 stay unchanged.
+**Updated:** 2026-10-11 (client date, America/Sao_Paulo).
+**Seed version:** 0.4.6, unchanged. **Current increment:** P10 dialogue 0.1.2.
 
-The checkout began clean at published
-`a57a7f75615babde69352a27d9a57a5cde809721`; fetch/merge confirmed the same main.
-[The previous hosted run](https://github.com/MartinFMelcop/Creative_AI_Project_HUB/actions/runs/38108640021)
-passed both jobs. A real manifest probe omitting `scene.py` still passes the old
-CI hash command. This is a coverage defect in shared QA: listed hashes can match
-while a maintained file receives no integrity check.
+The checkout began clean on `work` at `72b93832c73cf1d4ef69640968a6879d7b196d03`.
+GitHub inspection confirmed the same remote main before edits. Git fetch failed
+because the configured proxy was unreachable; authorized publication uses the
+connected GitHub integration with a non-force update and remote verification.
+This record precedes publication; the final report gives the resulting SHA.
 
-The new standard-library `tools/check_manifest.py` requires exactly the files
-Git tracks plus nonignored untracked files under the nested lab, excluding the
-manifest itself. It rejects omissions, stale entries, duplicate/malformed paths,
-missing/linked files and byte mismatches. Tracked ignored files remain required;
-normal ignored installation outputs stay outside the inventory. CI now runs this
-gate and its 11 regressions. ADR-022 and the
-[integrity contract](REGISTRY_VALIDATION.md) define scope and deletion handling.
-The root workflow remains outside the nested manifest's coverage.
+[P10](../projects/waystone-dialogue/README.md) now acknowledges completed help,
+answers the crossing request before granting passage, and recalls repeated or
+retracted orders and prior outburst. Help makes space without promising repair.
+The opening establishes the loose rune and blocked bench; cooldown waits show
+physical recovery and print as narration rather than Keeper speech. The council
+meeting is new scene fiction, not recovered canon. One pure renderer reads
+existing pre-turn state; no rules, choices, stats or dependencies are added.
 
-[Manifest evidence](../evidence/continuous-integration/MANIFEST_RUN.json) records
-actual commands, input/source hashes and environment. The same omission probe
-passes the old command, fails the new one, and its complete counterpart passes.
-All 11 new real-Git fixture checks and 11 existing registry regressions pass.
-Workflow lint passes. Documentary validation passes with 142 local file links.
-Complete-manifest/hash verification runs after final continuity updates. Alternative probes preserve the
-maintained manifest and source files. Historical execution records, source
-archive, registries and all product implementations remain unchanged.
+[Dialogue evidence](../evidence/waystone-dialogue/DIALOGUE_RUN.json) records six
+new regression methods failing on committed 0.1.1 (eight failures with subtests),
+all 29 scene behavior/CLI/source checks passing, and five real CLI comparisons.
+Exhaustive default-state enumeration compares 6,131 reachable states and 17,994
+transitions with no rule/menu/variant differences; all four endings remain
+reachable. Wording and the new trace `speaker` field are intentionally excluded.
+Eleven registry and eleven manifest regressions pass. Final documentary/archive
+validation and complete manifest verification run after continuity updates.
 
-This is a shared QA correction, not a new product or maturity promotion. Git is
-a required inventory source; missing inventory fails. Matching hashes establish
-consistency with the maintained list, not authenticity or runtime behavior.
-Escaped/newline filenames are unsupported. No dependency is added. Martin
-supplied direction and authorization; Codex implemented/tested. Product runtime
-regressions and fixed 15/17 baseline rejection / 17/17 reference acceptance run in
-hosted CI; those unchanged suites were not rerun locally in this iteration.
+Same-agent editorial comparison finds clearer causality and memory feedback;
+it is not independent audience validation. The two-action cooperative route and
+five-wait recovery remain unchanged. Enjoyment, balance, audience comprehension
+and commercial demand remain unverified. Martin supplied direction and
+authorization; Codex implemented, compared and tested.
 
-This record precedes publication. The final report supplies the matching remote
-main SHA and actual hosted result. Next: human review of P11 resizing/keyboard
-reading, P10 dialogue/consequences and an independent EVAL-001 submission remain
-separate valuable gates. No human review or model score is inferred from CI.
+P10 remains bounded M4 for this CLI. P11 0.1.5, P02 runner 0.2.0, starter 0.1.0,
+all preserved sources and prior evidence remain unchanged. Their runtime suites
+were not rerun locally; no hosted result is inferred from previous runs.
+Next: a reader compares cooperative/conflict paths for clarity, repetition and
+cooldown pacing before any balance or content expansion. P11 human review and
+an independent EVAL-001 candidate remain separate gates.
