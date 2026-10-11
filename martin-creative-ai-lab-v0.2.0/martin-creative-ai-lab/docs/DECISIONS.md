@@ -397,3 +397,28 @@ native tab focus. Seed version and bounded maturity do not change.
 
 **Revisit:** human reading feedback, browser zoom, font-only reflow or another
 browser. The current evidence covers viewport geometry in Chromium.
+
+## ADR-022 — require manifest completeness before validating digests
+
+**Date:** 2026-10-11 (environment UTC date). **Status:** shared lab integrity gate.
+
+The existing CI hash command accepts a manifest after an entry is removed;
+matching listed hashes do not prove coverage. Compare the manifest with Git's
+tracked plus nonignored untracked inventory under the nested lab, excluding only
+the manifest itself. This matches the maintained-file generation convention.
+Tracked ignored files remain required; normal installation/cache outputs remain
+outside the inventory. Stage deletions before refreshing the list.
+
+A standard-library checker rejects omitted or stale entries, duplicates,
+malformed/noncanonical paths, linked or missing files and byte mismatches. Keep
+the registry/link/archive validator separate. Replace CI's hash-only command and
+run 11 new real-Git regressions, including before/after staging and an alternative
+manifest that leaves the maintained file intact. The workflow remains read-only.
+
+Scope is the nested lab; the root workflow is outside its manifest. Hashes prove
+consistency with a maintained list, not authenticity, game behavior or model
+quality. Existing project versions, seed 0.4.6, maturity and task contracts stay
+unchanged. Preserve all prior execution records and historical sources.
+
+**Revisit:** a changed ownership/ignore policy, escaped filenames, repository-wide
+coverage or a signed-artifact requirement.

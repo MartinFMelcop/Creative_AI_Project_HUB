@@ -4,7 +4,7 @@
 **Data-base:** 10 de outubro de 2026  
 **Autor e responsável pelo portfólio:** Martin Melcop Neto  
 **Working language:** English for new documentation, plans, code comments, UI, and reports. Preserve original creative titles and historical source languages.
-**Current state:** P11 chat 0.1.5 preserves reading position through viewport resizing, with 33 protocol/Chromium checks; activity-aware unread counts and tab-title feedback remain covered. Shared GitHub checks also cover lab integrity, P10 dialogue 0.1.1 and P02 runner 0.2.0. Starter contract 0.1.0 and bounded maturity stay unchanged. Historical sources stay preserved; human creative review, independent model evidence and engine migration remain unperformed.
+**Current state:** Shared lab integrity now requires complete maintained-file manifest coverage and matching hashes, with 11 new omission/tampering regressions. P11 chat 0.1.5, P10 dialogue 0.1.1 and P02 runner 0.2.0 stay unchanged; GitHub CI continues their existing runtime contracts. Starter contract 0.1.0 and bounded maturity stay unchanged. Historical sources stay preserved; human creative review, independent model evidence and engine migration remain unperformed.
 
 > Construir um laboratório autoral em Git que transforma ideias, obras e experimentos em produtos pequenos, sistemas reutilizáveis e evidências técnicas verificáveis. A IA participa da criação e execução; Martin desenvolve sua capacidade de especificar, compreender, selecionar, corrigir, validar e explicar os resultados.
 
@@ -46,14 +46,14 @@ Se apenas este arquivo estiver disponível, ele é suficiente para iniciar a Fas
 |---|---|
 | Repository | MartinFMelcop/Creative_AI_Project_HUB; actual Git root `/workspace/Creative_AI_Project_HUB`; lab remains nested in its original package directory |
 | Preserved sources | 175 Rave Master texts and 3 WebSocket files; unchanged ZIP and inventory; not a complete RMXP backup |
-| Primary workstream | P11 0.1.5: preserve the live edge or earlier reading anchor through viewport resizing; retain inactive unread state; same bounded local-chat M4 |
+| Primary workstream | Shared lab integrity: reject incomplete/stale hash manifests and verify every maintained lab file; existing project maturity stays unchanged |
 | Engine execution | P10 uses Python standard library; P11 uses Node/Express/Socket.IO. No Unity or RMXP runtime verified |
-| Current verification | Local chat and evaluator regressions; three resize checks fail on published 0.1.4 and pass on 0.1.5. `evidence/realtime-chat/RESIZE_RUN.json` records actual commands and boundaries; GitHub logs establish hosted execution |
+| Current verification | 11 manifest and 11 registry regressions; the old hash-only command falsely passes an omitted entry, while the new gate rejects it. `evidence/continuous-integration/MANIFEST_RUN.json` records actual commands; GitHub logs establish hosted execution |
 | Historical verification | v0.2.0 combat/dialogue, P10 trust, P11 unread and P02 snapshot records remain preserved; the old scenario runner was not rerun |
 | Next action | Reader review of P10 cooperative/conflict paths; P11 human review and independent EVAL-001 provenance remain separate gates |
-| Other seeds | P10 dialogue 0.1.1, P02 runner 0.2.0 and EVAL-001 starter 0.1.0 remain unchanged; missing creative/media baselines still need targeted recovery |
+| Other seeds | P11 chat 0.1.5, P10 dialogue 0.1.1, P02 runner 0.2.0 and EVAL-001 starter 0.1.0 remain unchanged; missing creative/media baselines still need targeted recovery |
 | Transfer / shared status | TR-009 validated for P02 task adaptation/calibration only; 10 other transfers remain candidates; no shared component |
-| Portfolio / attribution | P11 activity published at `615fd7b`, with both hosted jobs passing; resize publication is verified at task closure. Martin supplied direction; Codex implemented/tested. Human and independent candidate reviews remain pending |
+| Portfolio / attribution | P11 resize published at `a57a7f7`, with both hosted jobs passing; manifest-gate publication is verified at task closure. Martin supplied direction; Codex implemented/tested. Human and independent candidate reviews remain pending |
 
 Registry evidence paths must resolve to existing files inside the lab; working
 paths must be directories and legacy-source IDs must exist. This documentary

@@ -1,0 +1,169 @@
+{
+  "recorded_at": "2026-10-11T03:41:43.678673+00:00",
+  "run_kind": "shared_lab_manifest_integrity",
+  "baseline_commit": "a57a7f75615babde69352a27d9a57a5cde809721",
+  "baseline_workflow_sha256": "b9323b228fe3bca9a9fab7cf10625be02ec414adb0984995c0879ddc713fa469",
+  "environment": {
+    "platform": "Linux-6.18.44-x86_64-with-glibc2.41",
+    "timezone": "Etc/UTC",
+    "python": {
+      "command": [
+        "python3",
+        "--version"
+      ],
+      "exit_code": 0,
+      "output": "Python 3.12.14"
+    },
+    "git": {
+      "command": [
+        "git",
+        "--version"
+      ],
+      "exit_code": 0,
+      "output": "git version 2.52.0"
+    },
+    "actionlint": {
+      "command": [
+        "/workspace/work/actionlint-bin/actionlint",
+        "--version"
+      ],
+      "exit_code": 0,
+      "output": "1.7.12\ninstalled by downloading from release page\nbuilt with go1.26.1 compiler for linux/amd64"
+    }
+  },
+  "commands": [
+    {
+      "label": "manifest-old-omission",
+      "cwd": "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab",
+      "command": [
+        "sha256sum",
+        "--strict",
+        "-c",
+        "/workspace/work/manifest-omission-probe.sha256"
+      ],
+      "started_at": "2026-10-11T03:38:58.957355+00:00",
+      "exit_code": 0,
+      "stdout": "AGENTS.md: OK\nREADME.md: OK\nSEED.md: OK\narchive/legacy-source-extracts-v0.2.0.zip: OK\ndocs/ASSESSMENT.md: OK\ndocs/DECISIONS.md: OK\ndocs/IMPROVEMENT_PLAN.md: OK\ndocs/LEGACY_REPOSITORIES.md: OK\ndocs/REGISTRY_VALIDATION.md: OK\ndocs/ROADMAP.md: OK\ndocs/SEED_EVOLUTION.md: OK\ndocs/SOURCES.md: OK\ndocs/STATE.md: OK\nevaluations/README.md: OK\nevaluations/chat-send-buffering/BRIEF.md: OK\nevaluations/chat-send-buffering/README.md: OK\nevaluations/chat-send-buffering/run.py: OK\nevaluations/chat-send-buffering/test_runner.py: OK\nevidence/README.md: OK\nevidence/continuous-integration/FOLLOWUP_RUN.json: OK\nevidence/continuous-integration/RUN.json: OK\nevidence/evaluation-task/CALIBRATION.json: OK\nevidence/evaluation-task/SNAPSHOT_RUN.json: OK\nevidence/evaluation-task/SYNTAX_RUN.json: OK\nevidence/evaluation-task/TIMEOUT_RUN.json: OK\nevidence/evaluation-task/UNREAD_CALIBRATION.json: OK\nevidence/legacy-audit/RECHECK_COMBAT_20261010.csv: OK\nevidence/legacy-audit/RECHECK_DIALOGUE_20261010.csv: OK\nevidence/legacy-audit/RUNS.json: OK\nevidence/realtime-chat/ACTIVITY_RUN.json: OK\nevidence/realtime-chat/POLLING_SEND_RUN.json: OK\nevidence/realtime-chat/READING_RUN.json: OK\nevidence/realtime-chat/RESIZE_RUN.json: OK\nevidence/realtime-chat/RUN.json: OK\nevidence/realtime-chat/UNREAD_RUN.json: OK\nevidence/registry-validation/RUN.json: OK\nevidence/waystone-dialogue/RUN.json: OK\nevidence/waystone-dialogue/TRUST_RUN.json: OK\nexperiments/README.md: OK\nknowledge/README.md: OK\nknowledge/evaluation-artifacts.md: OK\nknowledge/realtime-delivery.md: OK\nprojects/README.md: OK\nprojects/realtime-integration-lab/.node-version: OK\nprojects/realtime-integration-lab/README.md: OK\nprojects/realtime-integration-lab/package-lock.json: OK\nprojects/realtime-integration-lab/package.json: OK\nprojects/realtime-integration-lab/public/client.js: OK\nprojects/realtime-integration-lab/public/index.html: OK\nprojects/realtime-integration-lab/public/style.css: OK\nprojects/realtime-integration-lab/server.cjs: OK\nprojects/realtime-integration-lab/tests/browser.test.cjs: OK\nprojects/realtime-integration-lab/tests/protocol.test.cjs: OK\nprojects/realtime-integration-lab/tests/reading.test.cjs: OK\nprojects/waystone-dialogue/README.md: OK\nprojects/waystone-dialogue/provenance.json: OK\nprojects/waystone-dialogue/test_scene.py: OK\nregistry/assets.json: OK\nregistry/legacy_sources.json: OK\nregistry/projects.json: OK\nregistry/transfers.json: OK\nshared/README.md: OK\nshowcase/README.md: OK\ntemplates/CASE_STUDY.md: OK\ntemplates/EVALUATION_TASK.md: OK\ntemplates/EXPERIMENT.md: OK\ntemplates/HANDOFF.md: OK\ntemplates/PROJECT.md: OK\ntools/check_calibration.py: OK\ntools/check_manifest.py: OK\ntools/test_check_manifest.py: OK\ntools/test_validate_repo.py: OK\ntools/validate_repo.py: OK\n",
+      "stderr": ""
+    },
+    {
+      "label": "manifest-new-omission",
+      "cwd": "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab",
+      "command": [
+        "python3",
+        "tools/check_manifest.py",
+        "--manifest",
+        "/workspace/work/manifest-omission-probe.sha256"
+      ],
+      "started_at": "2026-10-11T03:38:58.959505+00:00",
+      "exit_code": 1,
+      "stdout": "",
+      "stderr": "FAIL: Unlisted maintained files: projects/waystone-dialogue/scene.py\n"
+    },
+    {
+      "label": "manifest-complete-probe",
+      "cwd": "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab",
+      "command": [
+        "python3",
+        "tools/check_manifest.py",
+        "--manifest",
+        "/workspace/work/manifest-complete-probe.sha256"
+      ],
+      "started_at": "2026-10-11T03:38:59.156208+00:00",
+      "exit_code": 0,
+      "stdout": "PASS: 74 maintained lab files covered exactly once; all SHA-256 hashes match.\n",
+      "stderr": ""
+    },
+    {
+      "label": "manifest-regressions",
+      "cwd": "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab",
+      "command": [
+        "python3",
+        "tools/test_check_manifest.py"
+      ],
+      "started_at": "2026-10-11T03:38:16.621635+00:00",
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "...........\n----------------------------------------------------------------------\nRan 11 tests in 0.574s\n\nOK\n"
+    },
+    {
+      "label": "manifest-registry-regressions",
+      "cwd": "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab",
+      "command": [
+        "python3",
+        "tools/test_validate_repo.py"
+      ],
+      "started_at": "2026-10-11T03:38:33.831206+00:00",
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "...........\n----------------------------------------------------------------------\nRan 11 tests in 1.720s\n\nOK\n"
+    },
+    {
+      "label": "manifest-workflow-lint",
+      "cwd": "/workspace/Creative_AI_Project_HUB",
+      "command": [
+        "/workspace/work/actionlint-bin/actionlint",
+        ".github/workflows/lab-checks.yml"
+      ],
+      "started_at": "2026-10-11T03:38:58.991421+00:00",
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "label": "manifest-integrity",
+      "cwd": "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab",
+      "command": [
+        "python3",
+        "tools/validate_repo.py"
+      ],
+      "started_at": "2026-10-11T03:41:43.763612+00:00",
+      "exit_code": 0,
+      "stdout": "PASS: 11 projects, 11 transfers, 0 assets, 2 legacy sources; 142 local file links.\nDocumentary checks only; no game, model benchmark or media runtime executed.\n",
+      "stderr": ""
+    }
+  ],
+  "probe_inputs": {
+    "omitted_path": "projects/waystone-dialogue/scene.py",
+    "complete_sha256": "5ac028c5281da848cb079a65fdbfa5de2bdede4849f0253fb3e0733128e0d59c",
+    "omitted_sha256": "d03a84c48b4a611736c7244ee0dee156926d230df1b47b651734a2e51bddda32",
+    "complete_file_count_at_probe": 74,
+    "omitted_list_file_count": 73,
+    "lifecycle": "Read-only alternative manifests created before continuity/evidence updates; final maintained manifest is regenerated and verified at closure."
+  },
+  "summary": {
+    "old_command_false_pass": true,
+    "new_command_rejects_same_omission": true,
+    "complete_probe_accepted": true,
+    "manifest_regressions_passed": 11,
+    "registry_regressions_passed": 11,
+    "workflow_lint_passed": true,
+    "preserved_product_registry_source_and_execution_files": 43,
+    "documentary_validation": {
+      "projects": 11,
+      "transfers": 11,
+      "assets": 0,
+      "legacy_sources": 2,
+      "local_file_links": 142
+    }
+  },
+  "artifacts_sha256": {
+    ".github/workflows/lab-checks.yml": "7146899518d1e85f94774ab6394bf7e11df6afa4064d68886a0233cebbae145e",
+    "martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/tools/check_manifest.py": "531faffdb4045c807873ffa415dbd5a508cd23caacf73bf2806c8ee78e99912b",
+    "martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/tools/test_check_manifest.py": "d6dab6578e691b83de767b8d7c939878bbb9108d4d5f9701a2ddc6cb0af64185"
+  },
+  "preserved_files_identity_sha256": "c1e39ecff0e9f0a97341dcaaa9906d62a9cf326bec694b85a3f08ac9b595aad6",
+  "limits": [
+    "Manifest inventory covers tracked and nonignored untracked files under the nested lab; excludes the manifest itself and root repository files outside that lab.",
+    "Git inventory is mandatory; normal ignored installation outputs are excluded, but tracked ignored files remain required.",
+    "Escaped/newline filenames are unsupported; hashes establish consistency, not authenticity or runtime behavior.",
+    "Unchanged product/runtime and calibration suites run in hosted CI; not rerun locally in this iteration.",
+    "No project version, seed version, maturity, task contract, registry, dependency or historical source change."
+  ],
+  "candidate_model": null,
+  "model_score": null,
+  "attribution": {
+    "Martin": "Direction and explicit autonomous-development/publication authorization.",
+    "Codex": "Assessment, implementation, automated verification and documentation."
+  }
+}

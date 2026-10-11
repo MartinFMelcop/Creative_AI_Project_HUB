@@ -27,3 +27,32 @@ The baseline failure is intentional defect reproduction, not a current failure.
 No project maturity, task contract, chat version, dependency, transfer status or
 historical source changes in this iteration. Human P11 review and an independent
 EVAL-001 artifact remain the next product/evaluation gates.
+
+## Complete manifest coverage
+
+Run `python3 tools/check_manifest.py` from the lab directory, and
+`python3 tools/test_check_manifest.py` for its 11 regressions. Git is a prerequisite;
+a missing inventory fails rather than checking only whatever rows are supplied.
+The existing documentary validator remains a separate gate.
+
+The required inventory is Git-tracked plus nonignored untracked files under the
+lab root, with `MANIFEST.sha256` excluded to avoid self-reference. Root repository
+files outside this nested lab, including the GitHub workflow, are outside this
+manifest's scope. Ignored dependency/cache outputs are excluded; tracked ignored
+files still require coverage. Stage intended deletions before regenerating the
+manifest so deleted index entries cease to be required. Regenerate the manifest
+after final maintained content changes, then run both integrity checks.
+
+Require one lowercase SHA-256 digest, two spaces and a canonical relative POSIX
+path per line. Spaces inside filenames are supported. Duplicate, malformed,
+absolute, traversal, self-reference and stale entries fail. Every maintained file
+must be listed and readable as a regular file within the lab; symlink substitution
+and mismatched file bytes fail. Escaped/newline filenames are unsupported.
+`--root PATH` selects a lab checkout; `--manifest PATH` inspects an alternative
+list without replacing the maintained manifest. Both retain the same coverage rule.
+
+The former `sha256sum --strict -c` command accepted a list omitting `scene.py`.
+The new gate rejects that same omission and accepts the complete list.
+[Actual execution](../evidence/continuous-integration/MANIFEST_RUN.json) records
+the comparison and real nested-Git fixtures. Matching hashes establish file
+integrity against this list, not authenticity or product runtime behavior.

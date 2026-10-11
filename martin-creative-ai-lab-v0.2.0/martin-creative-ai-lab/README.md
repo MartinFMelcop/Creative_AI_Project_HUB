@@ -41,16 +41,20 @@ From this lab directory, with Python 3.10+ (CI uses 3.12):
 ```bash
 python3 tools/validate_repo.py
 python3 tools/test_validate_repo.py
+python3 tools/test_check_manifest.py
 python3 projects/waystone-dialogue/test_scene.py
 python3 evaluations/chat-send-buffering/test_runner.py
-sha256sum -c MANIFEST.sha256
+python3 tools/check_manifest.py
 ```
 
 The first check validates registries, local Markdown file links, and preserved
 source hashes, excluding dependency documentation under `node_modules`. The
 regression suite checks that maintained broken links and archive corruption still
-fail. The manifest covers maintained files inside this lab, excluding
-itself, ignored dependencies, and generated outputs. These lab checks do not run
+fail. The manifest checker requires every Git-tracked or nonignored untracked
+file inside this lab exactly once, excluding the manifest itself. Ignored
+installation outputs are excluded; a tracked file remains required even if an
+ignore pattern matches it. Missing entries, stale entries and hash mismatches
+fail. See [the integrity contract](docs/REGISTRY_VALIDATION.md). These lab checks do not run
 the browser acceptance suite; P02's checker and P11's test commands do.
 P10's scene requires Python 3.10+ and has no external dependencies. P11 has its
 own installation and test commands; other projects do not need to be installed
@@ -80,13 +84,15 @@ when records exist. These are controlled artifacts, not independent candidates.
 [Initial CI evidence](evidence/continuous-integration/RUN.json) records local execution.
 [Follow-up evidence](evidence/continuous-integration/FOLLOWUP_RUN.json) records
 the first hosted cleanup-test race and its correction; the current evaluator
-suite has 23 regressions. GitHub job logs establish remote runner results.
+suite has 23 regressions. [Manifest evidence](evidence/continuous-integration/MANIFEST_RUN.json)
+records the former omission false pass and complete-coverage correction.
+GitHub job logs establish remote runner results.
 
 The original delivery test failed on the preserved source and passed on 0.1.0.
 Two further send-path regressions fail on that committed client and pass on 0.1.1.
-Thirty current automated tests verify the local contract, including connected
-polling congestion, stale-state reconnect buffering, preserved reading position
-and activity-aware unread counts. New
+Thirty-three current automated tests verify the local contract, including connected
+polling congestion, stale-state reconnect buffering, preserved reading position,
+activity-aware unread counts and viewport resizing. New
 documentation, UI, code comments, and evidence are in English; historical texts
 remain in their original language. Martin supplied direction and authorization;
 Codex performed this increment. Manual usability review by Martin is pending.

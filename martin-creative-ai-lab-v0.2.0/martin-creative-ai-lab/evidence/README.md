@@ -1,5 +1,9 @@
 # Execution evidence
 
+- [Complete manifest coverage](continuous-integration/MANIFEST_RUN.json): the
+  former omission false pass, corrected rejection and full-list acceptance,
+  11 new real-Git fixture regressions and unchanged registry checks. This covers
+  maintained files inside the nested lab, not all repository files or runtime.
 - [P11 viewport resizing](realtime-chat/RESIZE_RUN.json): three committed 0.1.4
   failures and the 0.1.5 correction, real desktop/narrow reflow, height changes,
   retained-message anchoring and inactive unread counts. Zoom and font-only

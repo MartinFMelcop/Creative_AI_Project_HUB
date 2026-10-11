@@ -33,10 +33,12 @@ jobs:
         run: python3 tools/validate_repo.py
       - name: Exercise validator failure detection
         run: python3 tools/test_validate_repo.py
+      - name: Exercise manifest omission and tampering detection
+        run: python3 tools/test_check_manifest.py
       - name: Exercise Waystone behavior, CLI and provenance
         run: python3 projects/waystone-dialogue/test_scene.py
-      - name: Verify maintained lab hashes
-        run: sha256sum --strict -c MANIFEST.sha256
+      - name: Require complete maintained lab coverage and matching hashes
+        run: python3 tools/check_manifest.py
 
   chat-and-evaluation:
     runs-on: ubuntu-24.04
