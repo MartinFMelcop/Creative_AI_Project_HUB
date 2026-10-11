@@ -202,3 +202,95 @@ test('unread counts stay bounded when arrivals exceed the retained history', asy
   assert.equal(current.first, message(205));
   assert.equal(current.scrollTop, 0);
 });
+
+async function leaveTabInactive() {
+  // Playwright forces focus by default. Disable that override on both real tabs.
+  await (await context.newCDPSession(page)).send('Emulation.setFocusEmulationEnabled', { enabled: false });
+  const away = await context.newPage();
+  await (await context.newCDPSession(away)).send('Emulation.setFocusEmulationEnabled', { enabled: false });
+  await page.bringToFront();
+  await page.waitForFunction(() => document.hasFocus());
+  await away.bringToFront();
+  await page.waitForFunction(() => !document.hasFocus());
+  return away;
+}
+
+test('inactive tab counts arrivals at the live edge and clears them on focus', async () => {
+  const title = await page.title();
+  await publish(Array.from({ length: 30 }, (_, index) => message(index)));
+  await leaveTabInactive();
+  await publish([message(30)]);
+  await page.getByRole('button', { name: '1 new message · Jump to latest', exact: true }).waitFor({ timeout: 4000 });
+  assert.equal(await page.title(), `(1) ${title}`);
+  await publish([message(31), message(32)]);
+  assert.equal(await page.title(), `(3) ${title}`);
+  assert.ok((await position()).distance <= 1);
+  await page.bringToFront();
+  await page.waitForFunction(() => document.hasFocus() && document.getElementById('latest').hidden);
+  assert.equal(await page.title(), title);
+  await publish([message(33)]);
+  assert.equal(await page.locator('#latest').isVisible(), false);
+  assert.equal(await page.title(), title);
+});
+
+test('returning to an inactive tab at earlier text retains its unread count and anchor', async () => {
+  const title = await page.title();
+  await publish(Array.from({ length: 40 }, (_, index) => message(index)));
+  await browse(10);
+  const previous = await position();
+  await leaveTabInactive();
+  await publish([message(40), message(41), message(42)]);
+  assert.equal(await page.title(), `(3) ${title}`);
+  await page.bringToFront();
+  await page.waitForFunction(() => document.hasFocus());
+  await page.getByRole('button', { name: '3 new messages · Jump to latest', exact: true }).waitFor();
+  const current = await position();
+  assert.equal(current.anchor, previous.anchor);
+  assert.ok(Math.abs(current.offset - previous.offset) <= 1);
+  assert.equal(await page.title(), `(3) ${title}`);
+  await page.locator('#latest').focus();
+  await page.keyboard.press('Enter');
+  await page.waitForFunction(() => document.getElementById('latest').hidden);
+  assert.equal(await page.title(), title);
+  assert.equal(await page.evaluate(() => document.activeElement.id), 'messages');
+});
+
+test('hidden page keeps unread arrivals until visible at the live edge', async () => {
+  const title = await page.title();
+  await publish(Array.from({ length: 30 }, (_, index) => message(index)));
+  // Headless tabs remain visible: this is an explicit Page Visibility API boundary.
+  await page.evaluate(() => {
+    Object.defineProperty(document, 'visibilityState', { configurable: true, value: 'hidden' });
+    document.dispatchEvent(new Event('visibilitychange'));
+  });
+  await publish([message(30), message(31)]);
+  await page.getByRole('button', { name: '2 new messages · Jump to latest', exact: true }).waitFor({ timeout: 4000 });
+  assert.equal(await page.title(), `(2) ${title}`);
+  await page.evaluate(() => {
+    const list = document.getElementById('messages');
+    list.scrollTop = 0;
+    list.scrollTop = list.scrollHeight;
+    list.dispatchEvent(new Event('scroll'));
+  });
+  assert.equal(await page.title(), `(2) ${title}`, 'Hidden scroll events cannot mark arrivals read');
+  await page.evaluate(() => {
+    delete document.visibilityState;
+    document.dispatchEvent(new Event('visibilitychange'));
+  });
+  await page.waitForFunction(() => document.getElementById('latest').hidden);
+  assert.equal(await page.title(), title);
+});
+
+test('inactive tab unread count stays bounded to retained messages', async () => {
+  const title = await page.title();
+  await leaveTabInactive();
+  await publish(Array.from({ length: 205 }, (_, index) => message(index)));
+  await page.getByRole('button', { name: '200 new messages · Jump to latest', exact: true }).waitFor({ timeout: 4000 });
+  assert.equal(await page.title(), `(200) ${title}`);
+  const current = await position();
+  assert.equal(current.count, 200);
+  assert.equal(current.first, message(5));
+  await page.bringToFront();
+  await page.waitForFunction(() => document.getElementById('latest').hidden);
+  assert.equal(await page.title(), title);
+});

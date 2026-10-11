@@ -1,6 +1,6 @@
 # P11 — Live exchange
 
-**Project:** Real-time Integration Lab / WebSocket. **Version:** 0.1.3.
+**Project:** Real-time Integration Lab / WebSocket. **Version:** 0.1.4.
 **Scope:** one local, ephemeral text conversation. This is a working adaptation
 of the historical Socket.IO exercise, not a raw WebSocket implementation.
 
@@ -25,6 +25,7 @@ The UI renders only the broadcast, avoiding a second optimistic sender copy.
 | Browsing earlier text keeps the visible message and its pixel offset | Broadcast and variable-height retention checks |
 | An evicted reading anchor shows the earliest retained text | Retained-history boundary check |
 | Browsing readers see new arrivals and can return to live text by keyboard | Unread count, manual reset, Enter/Space and focus checks |
+| Inactive pages retain unread arrivals and show a bounded count in the tab title | Native Chromium tab focus, controlled visibility, retained-window and return-to-live checks |
 
 The event remains `chat message`. Client → server payload is a string; server →
 client payload is its trimmed string. Acknowledgement is `{ "ok": true }` or
@@ -53,6 +54,14 @@ before the button disappears. Manual scrolling within 24 pixels of the bottom
 also clears the count. The conversation is keyboard-focusable. No extra history
 store or recovery of evicted text is introduced.
 
+Version 0.1.4 also counts arrivals while the page is hidden or lacks focus,
+including when the conversation is at the bottom. The tab title shows the same
+bounded count as Jump to latest. Returning to a visible, focused page clears the
+count only within 24 pixels of the bottom; returning to earlier text preserves
+the count and reading anchor. Scrolling to live text or activating Jump to latest
+restores the original title. Hidden scroll events do not mark messages read.
+This is a page-local indicator; it does not request notifications or save history.
+
 On transport interruption Socket.IO reconnects. Messages sent while away are
 not recovered. Existing messages remain in that page's memory until reload or
 retention eviction. Offline drafts require explicit submission after reconnect.
@@ -80,7 +89,7 @@ system Chromium; it does not download a browser. The tests use headless Chromium
 with `--no-sandbox` for this container. Outside this machine, set `CHROMIUM_PATH`
 to a compatible browser executable. Missing Chromium is a failed prerequisite,
 not a skipped browser suite. Protocol-only tests use `npm run test:protocol`; `npm run test:reading` runs
-the nine reading checks, and `npm run test:browser` includes both browser suites.
+the thirteen reading/activity checks, and `npm run test:browser` includes both browser suites.
 
 The server binds to `127.0.0.1:3000` by default; `HOST` and `PORT` can override
 the bind address. Open that address in two local browser tabs. A remote cloud
@@ -132,7 +141,8 @@ recorded separately in the lab state; no npm package or hosted service is releas
 
 ## Evidence, contribution, and next step
 
-See [unread-navigation evidence](../../evidence/realtime-chat/UNREAD_RUN.json),
+See [activity-aware unread evidence](../../evidence/realtime-chat/ACTIVITY_RUN.json),
+[prior unread-navigation evidence](../../evidence/realtime-chat/UNREAD_RUN.json),
 [prior reading-position evidence](../../evidence/realtime-chat/READING_RUN.json),
 [previous transport correction evidence](../../evidence/realtime-chat/POLLING_SEND_RUN.json),
 [original adaptation evidence](../../evidence/realtime-chat/RUN.json),
@@ -154,7 +164,14 @@ The five historical 0.1.2 reading checks run actual Socket.IO broadcasts through
 1280×800 viewport with variable-height message fixtures. Three fail on the
 recorded 0.1.1 client; all five pass on the correction. These checks establish
 scroll geometry for that browser/viewport, not human usability or all layouts.
-P02 keeps its 17 send-policy checks. Runner 0.1.4
-[recalibrates the P11 0.1.3 runtime](../../evidence/evaluation-task/UNREAD_CALIBRATION.json)
-without changing the nine-file starter contract; all nine current reading checks
-remain P11-only.
+P02 keeps its 17 send-policy checks. The historical runner 0.1.4
+[recalibrated the P11 0.1.3 runtime](../../evidence/evaluation-task/UNREAD_CALIBRATION.json)
+without changing the nine-file starter contract. Current runner 0.2.0 executes
+its own committed evaluator snapshot, so this working-client update does not
+repin that task. The thirteen reading/activity checks remain P11-only.
+
+The four new activity checks fail on committed 0.1.3. Three use real tab focus
+transitions after disabling Playwright's forced-focus emulation. Headless Chromium
+keeps tabs visible, so the hidden-page check explicitly controls the Page Visibility
+API boundary. These checks do not establish real minimized-window behavior,
+other-browser support, operating-system notifications or human accessibility.

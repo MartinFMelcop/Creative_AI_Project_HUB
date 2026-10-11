@@ -1,5 +1,9 @@
 # Execution evidence
 
+- [P11 page activity](realtime-chat/ACTIVITY_RUN.json): committed 0.1.3 failures
+  and 0.1.4 activity-aware unread counts, tab-title reset and preserved reading.
+  Native Chromium focus and controlled visibility are distinguished; no human
+  review or independent model evaluation is claimed.
 - [Shared CI validation](continuous-integration/RUN.json): existing regression
   suites, workflow lint and controlled calibration, including missing-browser
   and unexpected-baseline failures. This records local execution; GitHub job

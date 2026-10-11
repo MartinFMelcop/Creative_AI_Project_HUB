@@ -69,3 +69,13 @@ activated control requires an explicit focus destination; Enter and Space move
 focus into the conversation before the button disappears. Returning manually
 clears old counts. This is a local chat result, not a verified shared abstraction
 or a human/assistive-technology usability finding.
+
+## Scroll position does not establish page activity
+
+P11's [activity checks](../evidence/realtime-chat/ACTIVITY_RUN.json) show that a
+page can be at the live edge while its tab lacks focus. Keep arrival counts until
+activity and reading position both permit clearing; show the same count in the
+title without storing more history. Returning to earlier text preserves its anchor.
+Playwright forces focus by default, so disable that override when testing native
+tab transitions. Headless visibility still needs an explicitly bounded probe;
+do not describe it as real minimized-window or human attention verification.

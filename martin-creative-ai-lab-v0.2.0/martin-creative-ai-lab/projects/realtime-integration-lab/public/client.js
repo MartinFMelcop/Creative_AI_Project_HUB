@@ -6,6 +6,7 @@ const messages = document.getElementById('messages');
 const status = document.getElementById('status');
 const feedback = document.getElementById('feedback');
 const latest = document.getElementById('latest');
+const pageTitle = document.title;
 let pending = false;
 let scrollRemainder = 0;
 let unread = 0;
@@ -16,15 +17,24 @@ function followingLatest() {
   return messages.scrollHeight - messages.clientHeight - messages.scrollTop <= 24;
 }
 
+function pageActive() {
+  return document.visibilityState === 'visible' && document.hasFocus();
+}
+
 function clearUnread() {
   unread = 0;
   latest.hidden = true;
   latest.textContent = 'Jump to latest';
+  document.title = pageTitle;
 }
 
-messages.addEventListener('scroll', () => {
-  if (followingLatest()) clearUnread();
-});
+function clearVisibleUnread() {
+  if (pageActive() && followingLatest()) clearUnread();
+}
+
+messages.addEventListener('scroll', clearVisibleUnread);
+window.addEventListener('focus', clearVisibleUnread);
+document.addEventListener('visibilitychange', clearVisibleUnread);
 
 latest.addEventListener('click', () => {
   // Keep keyboard focus in the conversation when its navigation control disappears.
@@ -56,7 +66,6 @@ socket.on('chat message', (text) => {
   if (following) {
     scrollRemainder = 0;
     messages.scrollTop = messages.scrollHeight;
-    clearUnread();
   } else if (anchor?.isConnected) {
     // Preserve content position, including when variable-height earlier items expire.
     const target = messages.scrollTop + anchor.getBoundingClientRect().top - messages.getBoundingClientRect().top - offset + scrollRemainder;
@@ -68,11 +77,14 @@ socket.on('chat message', (text) => {
     messages.scrollTop = 0;
     scrollRemainder = 0;
   }
-  if (!following) {
+  if (following && pageActive()) {
+    clearUnread();
+  } else {
     // Counts describe arrivals still available in this page's retained window.
     unread = Math.min(unread + 1, 200);
     latest.textContent = `${unread} new ${unread === 1 ? 'message' : 'messages'} · Jump to latest`;
     latest.hidden = false;
+    document.title = `(${unread}) ${pageTitle}`;
   }
 });
 

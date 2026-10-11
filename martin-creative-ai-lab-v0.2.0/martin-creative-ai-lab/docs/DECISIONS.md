@@ -348,3 +348,28 @@ ProcessLookupError as absence, while preserving live-state assertions and other
 read errors. A controlled real-child probe fails on the published assertion and
 passes after correction; 23 runner regressions cover the retained cleanup gate.
 The runner implementation, task contract and project version are unchanged.
+
+## ADR-020 — page activity participates in local unread state
+
+**Date:** 2026-10-11 (client date; America/Sao_Paulo). **Status:** P11 0.1.4.
+
+The published client clears arrivals at the bottom even when its page lacks
+focus. Count an arrival as unseen when the page is hidden, lacks focus or is
+browsing earlier text. Preserve existing near-bottom following and anchoring;
+activity controls marking arrivals read, not transport or history retention.
+Show the same bounded count in the tab title and Jump to latest.
+
+Focus/visibility changes and scrolling clear only on a visible, focused page
+within 24 pixels of the bottom. Returning to earlier text retains the count and
+anchor. Explicit Jump to latest restores the title and existing focus destination.
+The count remains capped at 200 retained arrivals. No notification permission,
+persistence, identity, new package or P02 task requirement is introduced.
+
+Three regression checks disable Playwright's forced-focus override and activate
+real Chromium tabs; a fourth explicitly controls the Page Visibility API because
+headless tabs stay visible. All four fail on the published 0.1.3 client. This
+proves the local policy at those boundaries, not minimized windows, human
+attention, assistive technology or other browsers. P02 retains its own snapshot.
+
+**Revisit:** human review, a different browser, resize/zoom semantics or an
+explicit durable read-receipt/notification requirement.

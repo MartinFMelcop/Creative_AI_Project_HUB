@@ -18,7 +18,8 @@ The containing directory keeps its original v0.2.0 package name.
 - [P02 — EVAL-001](evaluations/chat-send-buffering/README.md): export a starter, check a client, and inspect limits.
 - [P10 — The Last Waystone](projects/waystone-dialogue/README.md): play a stateful dialogue scene, restart, inspect traces and verify its origin.
 - [Current dialogue evidence](evidence/waystone-dialogue/TRUST_RUN.json): 23 checks, old/new CLI comparisons, agreement refusal and capped apology recovery.
-- [Current unread-navigation evidence](evidence/realtime-chat/UNREAD_RUN.json): arrival counts, keyboard focus and bounded history.
+- [Current activity evidence](evidence/realtime-chat/ACTIVITY_RUN.json): inactive-page arrivals, tab-title counts, focus/visibility reset and bounded history.
+- [Prior unread-navigation evidence](evidence/realtime-chat/UNREAD_RUN.json): arrival counts and keyboard focus.
 - [Prior reading/recalibration evidence](evidence/realtime-chat/READING_RUN.json): geometry, source comparison, full chat results and P02 compatibility.
 - [Previous timeout/recalibration evidence](evidence/evaluation-task/TIMEOUT_RUN.json): actual command probes, source comparison, compatible artifacts, environment and hashes.
 - [P11 transport evidence](evidence/realtime-chat/POLLING_SEND_RUN.json): prior correction and its bounded tests.
@@ -83,8 +84,9 @@ suite has 23 regressions. GitHub job logs establish remote runner results.
 
 The original delivery test failed on the preserved source and passed on 0.1.0.
 Two further send-path regressions fail on that committed client and pass on 0.1.1.
-Twenty-six current automated tests verify the local contract, including connected
-polling congestion, stale-state reconnect buffering and preserved reading position. New
+Thirty current automated tests verify the local contract, including connected
+polling congestion, stale-state reconnect buffering, preserved reading position
+and activity-aware unread counts. New
 documentation, UI, code comments, and evidence are in English; historical texts
 remain in their original language. Martin supplied direction and authorization;
 Codex performed this increment. Manual usability review by Martin is pending.

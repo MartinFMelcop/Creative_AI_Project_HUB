@@ -1,0 +1,327 @@
+{
+  "run_kind": "p11_activity_aware_unread",
+  "recorded_at": "2026-10-11T00:15:27.326404-03:00",
+  "report_timezone": "America/Sao_Paulo",
+  "source_head": "d498f08e20e4c59140771ed0ab502e5a099f110c",
+  "published_client_sha256": "1b51b9ba200318222f0f509c5e0d8588fe9a0a9c5e878154abce7cb4995b36a2",
+  "working_app_version": "0.1.4",
+  "environment": {
+    "platform": "Linux-6.18.44-x86_64-with-glibc2.41",
+    "python": "3.12.14",
+    "node": "v24.19.0",
+    "chromium": "154.0.8037.57",
+    "playwright": "1.64.0",
+    "socket_io": "4.8.4"
+  },
+  "artifact_sha256": {
+    "projects/realtime-integration-lab/public/client.js": "5574440edd5b582dede0b267f276b0f6a30bc062c339302994aab3eaf93750c3",
+    "projects/realtime-integration-lab/tests/reading.test.cjs": "ed6a9080ccd2e90f55c32d12cfa7dd35c2507417451babac075a53b72ea2b007",
+    "projects/realtime-integration-lab/package.json": "34145fdd4e159e642fc8679a756fabe8211250ebba86e1568eedbe033598f2ef",
+    "projects/realtime-integration-lab/package-lock.json": "3b1f10306f64c71b95a7d26a9eb92dcbe837bd3aae538b4f3bd8ec6323dd8946"
+  },
+  "commands": [
+    {
+      "label": "activity-baseline",
+      "cwd": "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/projects/realtime-integration-lab",
+      "command": [
+        "env",
+        "CHAT_TEST_CLIENT_PATH=/workspace/work/p11-013-activity-baseline.js",
+        "node",
+        "--test",
+        "--test-reporter=tap",
+        "--test-name-pattern=inactive tab|hidden page",
+        "tests/reading.test.cjs"
+      ],
+      "started_at": "2026-10-11T00:10:29.199641-03:00",
+      "exit_code": 1,
+      "stdout": "TAP version 13\n# Subtest: inactive tab counts arrivals at the live edge and clears them on focus\nnot ok 1 - inactive tab counts arrivals at the live edge and clears them on focus\n  ---\n  duration_ms: 7589.609526\n  type: 'test'\n  location: '/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/projects/realtime-integration-lab/tests/reading.test.cjs:218:1'\n  failureType: 'testCodeFailure'\n  error: |-\n    locator.waitFor: Timeout 4000ms exceeded.\n    Call log:\n    \u001b[2m  - waiting for getByRole('button', { name: '1 new message \u00b7 Jump to latest', exact: true }) to be visible\u001b[22m\n    \n  code: 'ERR_TEST_FAILURE'\n  name: 'TimeoutError'\n  stack: |-\n    TestContext.<anonymous> (/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/projects/realtime-integration-lab/tests/reading.test.cjs:223:91)\n  ...\n# Subtest: returning to an inactive tab at earlier text retains its unread count and anchor\nnot ok 2 - returning to an inactive tab at earlier text retains its unread count and anchor\n  ---\n  duration_ms: 1208.960499\n  type: 'test'\n  location: '/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/projects/realtime-integration-lab/tests/reading.test.cjs:236:1'\n  failureType: 'testCodeFailure'\n  error: |-\n    Expected values to be strictly equal:\n    + actual - expected\n    \n    + 'Live exchange \u00b7 Creative AI Lab'\n    - '(3) Live exchange \u00b7 Creative AI Lab'\n    \n  code: 'ERR_ASSERTION'\n  name: 'AssertionError'\n  expected: '(3) Live exchange \u00b7 Creative AI Lab'\n  actual: 'Live exchange \u00b7 Creative AI Lab'\n  operator: 'strictEqual'\n  stack: |-\n    TestContext.<anonymous> (/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/projects/realtime-integration-lab/tests/reading.test.cjs:243:10)\n    async Test.run (node:internal/test_runner/test:1389:7)\n    async Test.processPendingSubtests (node:internal/test_runner/test:960:7)\n  ...\n# Subtest: hidden page keeps unread arrivals until visible at the live edge\nnot ok 3 - hidden page keeps unread arrivals until visible at the live edge\n  ---\n  duration_ms: 4877.105944\n  type: 'test'\n  location: '/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/projects/realtime-integration-lab/tests/reading.test.cjs:258:1'\n  failureType: 'testCodeFailure'\n  error: |-\n    locator.waitFor: Timeout 4000ms exceeded.\n    Call log:\n    \u001b[2m  - waiting for getByRole('button', { name: '2 new messages \u00b7 Jump to latest', exact: true }) to be visible\u001b[22m\n    \n  code: 'ERR_TEST_FAILURE'\n  name: 'TimeoutError'\n  stack: |-\n    TestContext.<anonymous> (/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/projects/realtime-integration-lab/tests/reading.test.cjs:267:92)\n  ...\n# Subtest: inactive tab unread count stays bounded to retained messages\nnot ok 4 - inactive tab unread count stays bounded to retained messages\n  ---\n  duration_ms: 5546.074757\n  type: 'test'\n  location: '/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/projects/realtime-integration-lab/tests/reading.test.cjs:284:1'\n  failureType: 'testCodeFailure'\n  error: |-\n    locator.waitFor: Timeout 4000ms exceeded.\n    Call log:\n    \u001b[2m  - waiting for getByRole('button', { name: '200 new messages \u00b7 Jump to latest', exact: true }) to be visible\u001b[22m\n    \n  code: 'ERR_TEST_FAILURE'\n  name: 'TimeoutError'\n  stack: |-\n    TestContext.<anonymous> (/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/projects/realtime-integration-lab/tests/reading.test.cjs:288:94)\n  ...\n1..4\n# tests 4\n# suites 0\n# pass 0\n# fail 4\n# cancelled 0\n# skipped 0\n# todo 0\n# duration_ms 21114.935331\n",
+      "stderr": ""
+    },
+    {
+      "label": "activity-targeted",
+      "cwd": "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/projects/realtime-integration-lab",
+      "command": [
+        "node",
+        "--test",
+        "--test-reporter=tap",
+        "--test-name-pattern=inactive tab|hidden page",
+        "tests/reading.test.cjs"
+      ],
+      "started_at": "2026-10-11T00:10:25.581464-03:00",
+      "exit_code": 0,
+      "stdout": "TAP version 13\n# Subtest: inactive tab counts arrivals at the live edge and clears them on focus\nok 1 - inactive tab counts arrivals at the live edge and clears them on focus\n  ---\n  duration_ms: 1813.79375\n  type: 'test'\n  ...\n# Subtest: returning to an inactive tab at earlier text retains its unread count and anchor\nok 2 - returning to an inactive tab at earlier text retains its unread count and anchor\n  ---\n  duration_ms: 1170.333944\n  type: 'test'\n  ...\n# Subtest: hidden page keeps unread arrivals until visible at the live edge\nok 3 - hidden page keeps unread arrivals until visible at the live edge\n  ---\n  duration_ms: 975.79929\n  type: 'test'\n  ...\n# Subtest: inactive tab unread count stays bounded to retained messages\nok 4 - inactive tab unread count stays bounded to retained messages\n  ---\n  duration_ms: 3453.708066\n  type: 'test'\n  ...\n1..4\n# tests 4\n# suites 0\n# pass 4\n# fail 0\n# cancelled 0\n# skipped 0\n# todo 0\n# duration_ms 8837.571165\n",
+      "stderr": ""
+    },
+    {
+      "label": "activity-full-chat",
+      "cwd": "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/projects/realtime-integration-lab",
+      "command": [
+        "npm",
+        "test"
+      ],
+      "started_at": "2026-10-11T00:11:48.495644-03:00",
+      "exit_code": 0,
+      "stdout": "\n> creative-ai-realtime-chat@0.1.4 test\n> node --test tests/*.test.cjs\n\n\u2714 two browser clients display accepted messages once in both directions (6834.128699ms)\n\u2714 a connected form submission waits behind an in-flight polling write (1820.144416ms)\n\u2714 a stale connected state does not retain a message for reconnect replay (2336.296333ms)\n\u2714 markup remains literal text in both browsers (5156.703275ms)\n\u2714 rejection is visible, preserves the draft, and does not broadcast (6267.898095ms)\n\u2714 a departed client keeps its draft and receives only future messages on rejoining (7306.032733ms)\n\u2714 transport interruption reconnects automatically without duplicating listeners (2931.976923ms)\n\u2714 browser retains only the latest 200 messages (2558.095203ms)\n\u2714 new browser receives future messages without server-side history (8033.198099ms)\n\u2714 missing acknowledgement reports uncertainty and does not retry automatically (7901.598364ms)\n\u2714 an acknowledgement does not erase a newer draft typed during sending (3870.159922ms)\n\u2714 protocol broadcasts trimmed messages to sender and peer in order (65.986851ms)\n\u2714 non-string payloads are rejected without broadcasts (114.903137ms)\n\u2714 empty and whitespace-only payloads are rejected without broadcasts (51.535174ms)\n\u2714 501 code units are rejected even when trimming would shorten the payload (111.163557ms)\n\u2714 500 UTF-16 code units are accepted including non-ASCII text (20.82132ms)\n\u2714 messages without acknowledgement callbacks do not crash the server (15.859845ms)\n\u2714 the conversation follows initial messages and readers within 24 pixels of the bottom (2376.117446ms)\n\u2714 new broadcasts preserve the visible message and pixel offset while browsing earlier text (2128.889969ms)\n\u2714 scrolling back to the bottom resumes following subsequent messages (1582.092309ms)\n\u2714 retention eviction preserves a surviving reading anchor across variable-height messages (1200.596343ms)\n\u2714 an evicted reading anchor falls back to the earliest retained message (2111.336536ms)\n\u2714 new arrivals show their count while preserving the reading position (2019.227036ms)\n\u2714 keyboard activation returns to live text and keeps conversation focus (1408.062032ms)\n\u2714 manual scrolling to live text clears the count before the next browsing session (2833.723584ms)\n\u2714 unread counts stay bounded when arrivals exceed the retained history (2956.967838ms)\n\u2714 inactive tab counts arrivals at the live edge and clears them on focus (915.912624ms)\n\u2714 returning to an inactive tab at earlier text retains its unread count and anchor (2237.004834ms)\n\u2714 hidden page keeps unread arrivals until visible at the live edge (1891.791117ms)\n\u2714 inactive tab unread count stays bounded to retained messages (1603.270337ms)\n\u2139 tests 30\n\u2139 suites 0\n\u2139 pass 30\n\u2139 fail 0\n\u2139 cancelled 0\n\u2139 skipped 0\n\u2139 todo 0\n\u2139 duration_ms 83372.40696\n",
+      "stderr": ""
+    },
+    {
+      "label": "activity-p02-regressions",
+      "cwd": "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab",
+      "command": [
+        "python3",
+        "evaluations/chat-send-buffering/test_runner.py"
+      ],
+      "started_at": "2026-10-11T00:11:46.096878-03:00",
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ".......................\n----------------------------------------------------------------------\nRan 23 tests in 9.377s\n\nOK\n"
+    },
+    {
+      "label": "activity-calibration",
+      "cwd": "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab",
+      "command": [
+        "python3",
+        "tools/check_calibration.py",
+        "/workspace/work/activity-p02-calibration"
+      ],
+      "started_at": "2026-10-11T00:11:51.358034-03:00",
+      "exit_code": 0,
+      "stdout": "baseline: rejected, {'tests': 17, 'pass': 15, 'fail': 2, 'cancelled': 0, 'skipped': 0, 'todo': 0}; expected match: True\nreference: accepted, {'tests': 17, 'pass': 17, 'fail': 0, 'cancelled': 0, 'skipped': 0, 'todo': 0}; expected match: True\n",
+      "stderr": ""
+    }
+  ],
+  "counts": {
+    "published_activity": {
+      "tests": 4,
+      "pass": 0,
+      "fail": 4,
+      "cancelled": 0,
+      "skipped": 0,
+      "todo": 0
+    },
+    "working_activity": {
+      "tests": 4,
+      "pass": 4,
+      "fail": 0,
+      "cancelled": 0,
+      "skipped": 0,
+      "todo": 0
+    },
+    "working_full_chat": {
+      "tests": 30,
+      "pass": 30,
+      "fail": 0,
+      "cancelled": 0,
+      "skipped": 0,
+      "todo": 0
+    },
+    "evaluator_regressions": 23
+  },
+  "dependency_lock_comparison": {
+    "command": "Compare published and working package-lock JSON, excluding only top-level/root-package app version metadata",
+    "source_commit": "d498f08e20e4c59140771ed0ab502e5a099f110c",
+    "dependency_graph_unchanged": true
+  },
+  "controlled_calibration": {
+    "baseline": {
+      "schema_version": 1,
+      "task": "EVAL-001",
+      "task_version": "0.1.0",
+      "runner_version": "0.2.0",
+      "started_at": "2026-10-11T03:11:51.771196+00:00",
+      "run_kind": "controlled_calibration",
+      "status": "rejected",
+      "baseline_commit": "66041e7fdd7687ee21099f95129dff41933c74dd",
+      "suite_commit": "911bf789e31dc2b1df9586a894e37312375771f3",
+      "runner_sha256": "4c43d8f460458ad78d2048909ccf1d3e3310b999a2232136c7a610712673c908",
+      "commands": [
+        {
+          "command": [
+            "node",
+            "--check",
+            "/tmp/p02-client-ho9upn2b/client.js"
+          ],
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": "",
+          "timeout_seconds": 15,
+          "timed_out": false,
+          "launch_error": null,
+          "capture_complete": true,
+          "termination_strategy": null,
+          "elapsed_seconds": 0.16
+        },
+        {
+          "command": [
+            "node",
+            "-e",
+            "\nconst { chromium } = require('playwright-core');\nif (Number(process.versions.node.split('.')[0]) < 22) process.exit(2);\n(async () => {\n  const browser = await chromium.launch({\n    executablePath: process.env.CHROMIUM_PATH || '/usr/bin/chromium',\n    headless: true, args: ['--no-sandbox'],\n  });\n  console.log(JSON.stringify({ node: process.version, chromium: browser.version(),\n    playwright: require('playwright-core/package.json').version,\n    socket_io: require('socket.io/package.json').version }));\n  await browser.close();\n})().catch(error => { console.error(error.message); process.exit(2); });\n"
+          ],
+          "exit_code": 0,
+          "stdout": "{\"node\":\"v24.19.0\",\"chromium\":\"154.0.8037.57\",\"playwright\":\"1.64.0\",\"socket_io\":\"4.8.4\"}\n",
+          "stderr": "",
+          "timeout_seconds": 20,
+          "timed_out": false,
+          "launch_error": null,
+          "capture_complete": true,
+          "termination_strategy": null,
+          "elapsed_seconds": 1.402
+        },
+        {
+          "command": [
+            "node",
+            "--test",
+            "--test-reporter=tap",
+            "tests/browser.test.cjs",
+            "tests/protocol.test.cjs"
+          ],
+          "exit_code": 1,
+          "stdout": "TAP version 13\n# Subtest: two browser clients display accepted messages once in both directions\nok 1 - two browser clients display accepted messages once in both directions\n  ---\n  duration_ms: 7993.362329\n  type: 'test'\n  ...\n# Subtest: a connected form submission waits behind an in-flight polling write\nnot ok 2 - a connected form submission waits behind an in-flight polling write\n  ---\n  duration_ms: 5878.144143\n  type: 'test'\n  location: '/tmp/p02-client-ho9upn2b/runtime/tests/browser.test.cjs:79:1'\n  failureType: 'testCodeFailure'\n  error: 'page.waitForFunction: Timeout 4000ms exceeded.'\n  code: 'ERR_TEST_FAILURE'\n  name: 'TimeoutError'\n  stack: |-\n    expectMessages (/tmp/p02-client-ho9upn2b/runtime/tests/browser.test.cjs:63:14)\n    TestContext.<anonymous> (/tmp/p02-client-ho9upn2b/runtime/tests/browser.test.cjs:97:9)\n  ...\n# Subtest: a stale connected state does not retain a message for reconnect replay\nnot ok 3 - a stale connected state does not retain a message for reconnect replay\n  ---\n  duration_ms: 1673.742164\n  type: 'test'\n  location: '/tmp/p02-client-ho9upn2b/runtime/tests/browser.test.cjs:103:1'\n  failureType: 'testCodeFailure'\n  error: |-\n    Expected values to be strictly deep-equal:\n    + actual - expected\n    \n      {\n    +   buffered: 1,\n    -   buffered: 0,\n        connected: true\n      }\n    \n  code: 'ERR_ASSERTION'\n  name: 'AssertionError'\n  expected:\n    connected: true\n    buffered: 0\n  actual:\n    connected: true\n    buffered: 1\n  operator: 'deepStrictEqual'\n  stack: |-\n    TestContext.<anonymous> (/tmp/p02-client-ho9upn2b/runtime/tests/browser.test.cjs:119:10)\n    async Test.run (node:internal/test_runner/test:1389:7)\n    async Test.processPendingSubtests (node:internal/test_runner/test:960:7)\n  ...\n# Subtest: markup remains literal text in both browsers\nok 4 - markup remains literal text in both browsers\n  ---\n  duration_ms: 3915.055604\n  type: 'test'\n  ...\n# Subtest: rejection is visible, preserves the draft, and does not broadcast\nok 5 - rejection is visible, preserves the draft, and does not broadcast\n  ---\n  duration_ms: 6515.755143\n  type: 'test'\n  ...\n# Subtest: a departed client keeps its draft and receives only future messages on rejoining\nok 6 - a departed client keeps its draft and receives only future messages on rejoining\n  ---\n  duration_ms: 5475.311809\n  type: 'test'\n  ...\n# Subtest: transport interruption reconnects automatically without duplicating listeners\nok 7 - transport interruption reconnects automatically without duplicating listeners\n  ---\n  duration_ms: 5511.222639\n  type: 'test'\n  ...\n# Subtest: browser retains only the latest 200 messages\nok 8 - browser retains only the latest 200 messages\n  ---\n  duration_ms: 2564.906635\n  type: 'test'\n  ...\n# Subtest: new browser receives future messages without server-side history\nok 9 - new browser receives future messages without server-side history\n  ---\n  duration_ms: 6147.737362\n  type: 'test'\n  ...\n# Subtest: missing acknowledgement reports uncertainty and does not retry automatically\nok 10 - missing acknowledgement reports uncertainty and does not retry automatically\n  ---\n  duration_ms: 8108.744064\n  type: 'test'\n  ...\n# Subtest: an acknowledgement does not erase a newer draft typed during sending\nok 11 - an acknowledgement does not erase a newer draft typed during sending\n  ---\n  duration_ms: 5795.637355\n  type: 'test'\n  ...\n# Subtest: protocol broadcasts trimmed messages to sender and peer in order\nok 12 - protocol broadcasts trimmed messages to sender and peer in order\n  ---\n  duration_ms: 531.757094\n  type: 'test'\n  ...\n# Subtest: non-string payloads are rejected without broadcasts\nok 13 - non-string payloads are rejected without broadcasts\n  ---\n  duration_ms: 68.996516\n  type: 'test'\n  ...\n# Subtest: empty and whitespace-only payloads are rejected without broadcasts\nok 14 - empty and whitespace-only payloads are rejected without broadcasts\n  ---\n  duration_ms: 27.03766\n  type: 'test'\n  ...\n# Subtest: 501 code units are rejected even when trimming would shorten the payload\nok 15 - 501 code units are rejected even when trimming would shorten the payload\n  ---\n  duration_ms: 168.727331\n  type: 'test'\n  ...\n# Subtest: 500 UTF-16 code units are accepted including non-ASCII text\nok 16 - 500 UTF-16 code units are accepted including non-ASCII text\n  ---\n  duration_ms: 22.112259\n  type: 'test'\n  ...\n# Subtest: messages without acknowledgement callbacks do not crash the server\nok 17 - messages without acknowledgement callbacks do not crash the server\n  ---\n  duration_ms: 85.942799\n  type: 'test'\n  ...\n1..17\n# tests 17\n# suites 0\n# pass 15\n# fail 2\n# cancelled 0\n# skipped 0\n# todo 0\n# duration_ms 61864.599318\n",
+          "stderr": "",
+          "timeout_seconds": 180,
+          "timed_out": false,
+          "launch_error": null,
+          "capture_complete": true,
+          "termination_strategy": null,
+          "elapsed_seconds": 62.018
+        }
+      ],
+      "candidate_model": null,
+      "score": null,
+      "artifact_sha256": "1b559d97a981060467725dbed26545cf175dd383bbb6fdc992e4cb761ef3eaff",
+      "evaluator_artifacts": {
+        "server.cjs": "f84e170aa785a6fa5caf223a1c8a245f51688f347eefa8e2d0e37e0f5f3cf9e7",
+        "public/index.html": "abf2c41b7fc6c0d7ae081ac7b6ef15af0de658fb9e738bbcde8dfd07aa852848",
+        "public/style.css": "0e90d0c17dd64e139538357240194fc24b8261bc21e4cb887768f1004948b13d",
+        "package.json": "2eb527a56b15c7949329d7582469bcf1fe12aafedf6c6f70d865b5d3c0766a80",
+        "package-lock.json": "1fcbdb915d484b376a5126d4fd5087bd04df618dd8e461aeb0131506ff0bdcaf",
+        "tests/browser.test.cjs": "5d31f58d99d9e6cd51f24e448063349d916acb2fab4c4585a84a969cb3dca63e",
+        "tests/protocol.test.cjs": "cdf15bd3522bf9c74dc60bf307fc56f4050d74d61b45f27341867ce537254a7a"
+      },
+      "evaluator_source": "git_snapshot",
+      "environment": {
+        "node": "v24.19.0",
+        "chromium": "154.0.8037.57",
+        "playwright": "1.64.0",
+        "socket_io": "4.8.4"
+      },
+      "counts": {
+        "tests": 17,
+        "pass": 15,
+        "fail": 2,
+        "cancelled": 0,
+        "skipped": 0,
+        "todo": 0
+      },
+      "gate": "behavior_and_regressions",
+      "failed_checks": [
+        "a connected form submission waits behind an in-flight polling write",
+        "a stale connected state does not retain a message for reconnect replay"
+      ],
+      "calibration_artifact": "baseline",
+      "calibration_matched": true
+    },
+    "reference": {
+      "schema_version": 1,
+      "task": "EVAL-001",
+      "task_version": "0.1.0",
+      "runner_version": "0.2.0",
+      "started_at": "2026-10-11T03:12:55.803261+00:00",
+      "run_kind": "controlled_calibration",
+      "status": "accepted",
+      "baseline_commit": "66041e7fdd7687ee21099f95129dff41933c74dd",
+      "suite_commit": "911bf789e31dc2b1df9586a894e37312375771f3",
+      "runner_sha256": "4c43d8f460458ad78d2048909ccf1d3e3310b999a2232136c7a610712673c908",
+      "commands": [
+        {
+          "command": [
+            "node",
+            "--check",
+            "/tmp/p02-client-3hx857dv/client.js"
+          ],
+          "exit_code": 0,
+          "stdout": "",
+          "stderr": "",
+          "timeout_seconds": 15,
+          "timed_out": false,
+          "launch_error": null,
+          "capture_complete": true,
+          "termination_strategy": null,
+          "elapsed_seconds": 0.086
+        },
+        {
+          "command": [
+            "node",
+            "-e",
+            "\nconst { chromium } = require('playwright-core');\nif (Number(process.versions.node.split('.')[0]) < 22) process.exit(2);\n(async () => {\n  const browser = await chromium.launch({\n    executablePath: process.env.CHROMIUM_PATH || '/usr/bin/chromium',\n    headless: true, args: ['--no-sandbox'],\n  });\n  console.log(JSON.stringify({ node: process.version, chromium: browser.version(),\n    playwright: require('playwright-core/package.json').version,\n    socket_io: require('socket.io/package.json').version }));\n  await browser.close();\n})().catch(error => { console.error(error.message); process.exit(2); });\n"
+          ],
+          "exit_code": 0,
+          "stdout": "{\"node\":\"v24.19.0\",\"chromium\":\"154.0.8037.57\",\"playwright\":\"1.64.0\",\"socket_io\":\"4.8.4\"}\n",
+          "stderr": "",
+          "timeout_seconds": 20,
+          "timed_out": false,
+          "launch_error": null,
+          "capture_complete": true,
+          "termination_strategy": null,
+          "elapsed_seconds": 1.912
+        },
+        {
+          "command": [
+            "node",
+            "--test",
+            "--test-reporter=tap",
+            "tests/browser.test.cjs",
+            "tests/protocol.test.cjs"
+          ],
+          "exit_code": 0,
+          "stdout": "TAP version 13\n# Subtest: two browser clients display accepted messages once in both directions\nok 1 - two browser clients display accepted messages once in both directions\n  ---\n  duration_ms: 7650.952972\n  type: 'test'\n  ...\n# Subtest: a connected form submission waits behind an in-flight polling write\nok 2 - a connected form submission waits behind an in-flight polling write\n  ---\n  duration_ms: 4499.438412\n  type: 'test'\n  ...\n# Subtest: a stale connected state does not retain a message for reconnect replay\nok 3 - a stale connected state does not retain a message for reconnect replay\n  ---\n  duration_ms: 3535.94979\n  type: 'test'\n  ...\n# Subtest: markup remains literal text in both browsers\nok 4 - markup remains literal text in both browsers\n  ---\n  duration_ms: 4505.184154\n  type: 'test'\n  ...\n# Subtest: rejection is visible, preserves the draft, and does not broadcast\nok 5 - rejection is visible, preserves the draft, and does not broadcast\n  ---\n  duration_ms: 4867.477292\n  type: 'test'\n  ...\n# Subtest: a departed client keeps its draft and receives only future messages on rejoining\nok 6 - a departed client keeps its draft and receives only future messages on rejoining\n  ---\n  duration_ms: 5714.124966\n  type: 'test'\n  ...\n# Subtest: transport interruption reconnects automatically without duplicating listeners\nok 7 - transport interruption reconnects automatically without duplicating listeners\n  ---\n  duration_ms: 2522.252072\n  type: 'test'\n  ...\n# Subtest: browser retains only the latest 200 messages\nok 8 - browser retains only the latest 200 messages\n  ---\n  duration_ms: 1930.957784\n  type: 'test'\n  ...\n# Subtest: new browser receives future messages without server-side history\nok 9 - new browser receives future messages without server-side history\n  ---\n  duration_ms: 3236.613059\n  type: 'test'\n  ...\n# Subtest: missing acknowledgement reports uncertainty and does not retry automatically\nok 10 - missing acknowledgement reports uncertainty and does not retry automatically\n  ---\n  duration_ms: 7251.532058\n  type: 'test'\n  ...\n# Subtest: an acknowledgement does not erase a newer draft typed during sending\nok 11 - an acknowledgement does not erase a newer draft typed during sending\n  ---\n  duration_ms: 3560.131956\n  type: 'test'\n  ...\n# Subtest: protocol broadcasts trimmed messages to sender and peer in order\nok 12 - protocol broadcasts trimmed messages to sender and peer in order\n  ---\n  duration_ms: 86.874126\n  type: 'test'\n  ...\n# Subtest: non-string payloads are rejected without broadcasts\nok 13 - non-string payloads are rejected without broadcasts\n  ---\n  duration_ms: 126.348766\n  type: 'test'\n  ...\n# Subtest: empty and whitespace-only payloads are rejected without broadcasts\nok 14 - empty and whitespace-only payloads are rejected without broadcasts\n  ---\n  duration_ms: 127.808519\n  type: 'test'\n  ...\n# Subtest: 501 code units are rejected even when trimming would shorten the payload\nok 15 - 501 code units are rejected even when trimming would shorten the payload\n  ---\n  duration_ms: 34.029925\n  type: 'test'\n  ...\n# Subtest: 500 UTF-16 code units are accepted including non-ASCII text\nok 16 - 500 UTF-16 code units are accepted including non-ASCII text\n  ---\n  duration_ms: 139.527535\n  type: 'test'\n  ...\n# Subtest: messages without acknowledgement callbacks do not crash the server\nok 17 - messages without acknowledgement callbacks do not crash the server\n  ---\n  duration_ms: 25.318606\n  type: 'test'\n  ...\n1..17\n# tests 17\n# suites 0\n# pass 17\n# fail 0\n# cancelled 0\n# skipped 0\n# todo 0\n# duration_ms 51832.824343\n",
+          "stderr": "",
+          "timeout_seconds": 180,
+          "timed_out": false,
+          "launch_error": null,
+          "capture_complete": true,
+          "termination_strategy": null,
+          "elapsed_seconds": 51.898
+        }
+      ],
+      "candidate_model": null,
+      "score": null,
+      "artifact_sha256": "1b51b9ba200318222f0f509c5e0d8588fe9a0a9c5e878154abce7cb4995b36a2",
+      "evaluator_artifacts": {
+        "server.cjs": "f84e170aa785a6fa5caf223a1c8a245f51688f347eefa8e2d0e37e0f5f3cf9e7",
+        "public/index.html": "abf2c41b7fc6c0d7ae081ac7b6ef15af0de658fb9e738bbcde8dfd07aa852848",
+        "public/style.css": "0e90d0c17dd64e139538357240194fc24b8261bc21e4cb887768f1004948b13d",
+        "package.json": "2eb527a56b15c7949329d7582469bcf1fe12aafedf6c6f70d865b5d3c0766a80",
+        "package-lock.json": "1fcbdb915d484b376a5126d4fd5087bd04df618dd8e461aeb0131506ff0bdcaf",
+        "tests/browser.test.cjs": "5d31f58d99d9e6cd51f24e448063349d916acb2fab4c4585a84a969cb3dca63e",
+        "tests/protocol.test.cjs": "cdf15bd3522bf9c74dc60bf307fc56f4050d74d61b45f27341867ce537254a7a"
+      },
+      "evaluator_source": "git_snapshot",
+      "environment": {
+        "node": "v24.19.0",
+        "chromium": "154.0.8037.57",
+        "playwright": "1.64.0",
+        "socket_io": "4.8.4"
+      },
+      "counts": {
+        "tests": 17,
+        "pass": 17,
+        "fail": 0,
+        "cancelled": 0,
+        "skipped": 0,
+        "todo": 0
+      },
+      "gate": "behavior_and_regressions",
+      "failed_checks": [],
+      "calibration_artifact": "reference",
+      "calibration_matched": true
+    }
+  },
+  "activity_probe_scope": {
+    "native_focus": "Three checks disable Emulation.setFocusEmulationEnabled on both real Chromium tabs, use bringToFront, and verify document.hasFocus transitions while actual Socket.IO broadcasts arrive.",
+    "controlled_visibility": "Headless Chromium reports both tabs visible. One check overrides document.visibilityState to hidden and dispatches visibilitychange, then restores the native property; it also proves hidden scroll events cannot clear counts.",
+    "limits": "No claim of real minimized-window behavior, operating-system notifications, human attention or assistive-technology verification."
+  },
+  "unchanged_scope": "No send-policy, server, dependency graph, source archive, P10 runtime, P02 runner/starter/evaluator pin, transfer status or maturity change. Prior evidence stays historical.",
+  "publication_scope": "This local record precedes commit/publication. Final report supplies matching main SHA and hosted CI outcome. P10 and validator regression suites were not rerun locally in this increment."
+}

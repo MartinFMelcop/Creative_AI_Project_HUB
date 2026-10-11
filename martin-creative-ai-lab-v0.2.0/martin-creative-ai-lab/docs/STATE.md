@@ -1,58 +1,47 @@
 # Lab state
 
-**Updated:** 2026-10-11 (environment UTC date). **Seed version:** 0.4.6, unchanged.
-**Current increment:** shared GitHub regression checks.
-P10 dialogue 0.1.1, P02 runner 0.2.0, P11 app 0.1.3 and starter contract 0.1.0
-remain unchanged; their bounded M4 scopes are not promoted by CI.
+**Updated:** 2026-10-11 (client date; America/Sao_Paulo). **Seed version:** 0.4.6, unchanged.
+**Current increment:** P11 local chat 0.1.4, activity-aware unread feedback.
+P10 dialogue 0.1.1, P02 runner 0.2.0 and starter contract 0.1.0 stay unchanged.
 
 The checkout began clean at published
-`6f9891a3f5fc754140d84f3a42514517a1ca9094`; fetch/merge confirmed the same main.
-The three working destinations have regressions but no GitHub workflow. Choose
-shared QA rather than expand products or manufacture human/candidate evidence.
+`d498f08e20e4c59140771ed0ab502e5a099f110c`; fetch/merge confirmed the same main.
+[The previous CI run](https://github.com/MartinFMelcop/Creative_AI_Project_HUB/actions/runs/38106979790)
+passed both hosted jobs. The working chat still clears incoming unread state at
+its live edge when the page lacks focus. Select this user-visible correction
+within the existing prototype, without inventing human or candidate review.
 
-[Lab checks](https://github.com/MartinFMelcop/Creative_AI_Project_HUB/actions/workflows/lab-checks.yml)
-now defines two Ubuntu 24.04 jobs for main pushes, pull requests to main and manual
-dispatch. Integrity/dialogue runs the registry, link, archive, validator, scene
-and manifest checks. Chat/evaluation installs locked dependencies and matching
-Playwright Chromium, requires its executable, runs real protocol/browser checks,
-runner regressions and controlled calibration. Actions are commit-pinned with
-contents-read permissions, no persisted checkout credentials and job deadlines.
-Full Git history preserves pinned evaluator/starter snapshots. ADR-019 records
-the durable QA choice and its limits.
+[P11](../projects/realtime-integration-lab/README.md) now counts an arrival when
+its page is hidden, lacks focus or is reading earlier text. The tab title and
+Jump to latest show the same count, capped at 200 retained arrivals. Returning
+to a visible, focused page clears the count only within 24 pixels of the bottom;
+returning to earlier text preserves the count and reading anchor. Hidden scroll
+events cannot mark messages read. Jump to latest keeps its existing keyboard
+focus destination and restores the title. Near-bottom following, transport,
+no-replay behavior and retained-history limits remain in place. ADR-020 records
+this page-local activity policy; the dependency graph is unchanged.
 
-`tools/check_calibration.py` requires baseline rejection at 15/17 and pinned
-reference acceptance at 17/17 with complete counts and the behavior gate. It
-creates new JSON records without replacing prior runs; CI retains diagnostics
-for 14 days, including failure records when available. This is calibration,
-not an independently produced model submission or score.
+[Activity evidence](../evidence/realtime-chat/ACTIVITY_RUN.json) records the
+published client identity, source/test hashes, environment and actual commands.
+Four new checks fail on committed 0.1.3 and pass on 0.1.4; all 30 current chat
+checks and 23 evaluator regressions pass. Three activity checks use real Chromium
+tab focus after disabling Playwright's forced-focus override. Headless tabs stay
+visible, so the fourth explicitly controls the Page Visibility API boundary.
+The fixed P02 baseline/reference calibration remains 15/17 rejection and 17/17
+acceptance. P02's evaluator snapshot, nine-file starter and 17-check task are
+unchanged. Final registry/link/archive and manifest verification runs at closure.
+P10 and validator regression suites were not rerun locally; hosted CI checks them.
 
-[Initial local CI evidence](../evidence/continuous-integration/RUN.json) records commands,
-environment, artifact identity and controlled probes. All 11 validator, 23 scene,
-22 runner and 26 chat checks pass; actionlint 1.7.12 accepts the workflow. Live
-calibration has the expected 15/17 and 17/17 results. Missing-browser and changed
-baseline probes both fail; an existing output directory exits 2 without replacing
-records. The workspace initially blocked localhost; permitted execution resolved
-that environment restriction. Final links/archive and manifest checks run at
-closure. Prior [dialogue evidence](../evidence/waystone-dialogue/TRUST_RUN.json),
-all historical records, sources and project implementations stay unchanged.
+P11 remains bounded local-chat M4. No notification permission, persistence,
+identity, extra package, shared library or deployment is added. Earlier evidence,
+archives and source inventory remain unchanged. Local execution uses Linux,
+Node 24.19.0 and system Chromium 154; the visibility probe does not establish
+real minimized-window behavior. Human/assistive-technology review, other browsers,
+resize/zoom behavior, independent candidate provenance and engine migration
+remain unverified. Martin supplied direction; Codex implemented/tested.
 
-The [first hosted run](https://github.com/MartinFMelcop/Creative_AI_Project_HUB/actions/runs/38106719666)
-passed integrity/dialogue and all 26 chat checks, then exposed a cleanup-test race:
-a killed child disappears between checking `/proc` and reading its state. Read
-the state directly and tolerate only missing-file/missing-process errors; retain
-the assertion rejecting a live child and propagate permission errors. A new
-regression verifies those distinctions. [Follow-up evidence](../evidence/continuous-integration/FOLLOWUP_RUN.json)
-reproduces the published error and corrected success with a real child and a
-controlled stat-read race. All 23 current evaluator regressions pass. P02 runtime
-and its 17-check task are unchanged; the initial evidence remains historical.
-
-This record precedes follow-up publication. Local execution uses Linux, Python 3.12.14,
-Node 24.19.0 and system Chromium 154; GitHub installs Playwright's browser.
-The final report supplies the verified remote SHA and hosted-run result; local
-checks alone do not establish remote success. Branch protection is not enabled
-by this workflow. Human narrative/usability review, other platforms, engine
-migration and an independent EVAL-001 candidate remain unverified.
-
-Next: reader playthrough of P10 truthful/conflict/repair paths and wording/pacing
-feedback; then one independent EVAL-001 submission with recorded provenance and
-Martin's P11 usability review. Martin supplied direction; Codex implemented/tested.
+This record precedes publication. The final report supplies the matching remote
+main SHA and actual hosted-run result; the previous CI record remains historical.
+Next: Martin reviews inactive-page title/count feedback and keyboard reading;
+reader feedback on P10 and one independent EVAL-001 submission remain separate
+valuable gates.
