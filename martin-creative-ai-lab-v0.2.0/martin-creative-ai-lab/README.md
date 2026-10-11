@@ -4,9 +4,9 @@ An evolving laboratory of games, narrative, images, audio, data, and AI
 evaluation by **Martin Melcop Neto**. Projects are adaptable seeds: build small
 slices, verify behavior, record decisions, and test reuse in actual destinations.
 
-**Current seed: v0.4.5.** The lab includes eleven project lines, 178 preserved
-historical texts, one working local text-chat adaptation, and one calibrated
-practice-task harness. No game migration,
+**Current seed: v0.4.6.** The lab includes eleven project lines, 178 preserved
+historical texts, a working local text-chat adaptation, a calibrated
+practice-task harness, and a playable terminal dialogue scene. No game migration,
 model benchmark, finished music catalogue, or public deployment is claimed.
 The containing directory keeps its original v0.2.0 package name.
 
@@ -16,6 +16,8 @@ The containing directory keeps its original v0.2.0 package name.
 - [Assessment](docs/ASSESSMENT.md) and [improvement plan](docs/IMPROVEMENT_PLAN.md): evidence and selected priorities.
 - [P11 — Live exchange](projects/realtime-integration-lab/README.md): install, run, test, provenance, and contribution.
 - [P02 — EVAL-001](evaluations/chat-send-buffering/README.md): export a starter, check a client, and inspect limits.
+- [P10 — The Last Waystone](projects/waystone-dialogue/README.md): play a stateful dialogue scene, restart, inspect traces and verify its origin.
+- [Current dialogue evidence](evidence/waystone-dialogue/RUN.json): 19 checks, four CLI endings and preserved-source verification.
 - [Current unread-navigation evidence](evidence/realtime-chat/UNREAD_RUN.json): arrival counts, keyboard focus and bounded history.
 - [Prior reading/recalibration evidence](evidence/realtime-chat/READING_RUN.json): geometry, source comparison, full chat results and P02 compatibility.
 - [Previous timeout/recalibration evidence](evidence/evaluation-task/TIMEOUT_RUN.json): actual command probes, source comparison, compatible artifacts, environment and hashes.
@@ -38,6 +40,7 @@ From this lab directory, with Python 3.9+:
 ```bash
 python3 tools/validate_repo.py
 python3 tools/test_validate_repo.py
+python3 projects/waystone-dialogue/test_scene.py
 python3 evaluations/chat-send-buffering/test_runner.py
 sha256sum -c MANIFEST.sha256
 ```
@@ -48,8 +51,10 @@ regression suite checks that maintained broken links and archive corruption stil
 fail. The manifest covers maintained files inside this lab, excluding
 itself, ignored dependencies, and generated outputs. These lab checks do not run
 the browser acceptance suite; P02's checker and P11's test commands do.
-P11 has its own installation and test commands; other projects do not need to
-be installed to develop it.
+P10's scene requires Python 3.10+ and has no external dependencies. P11 has its
+own installation and test commands; other projects do not need to be installed
+to develop it. Current dialogue evidence and unchanged P02/P11 historical checks
+are distinguished in the state record.
 
 The original delivery test failed on the preserved source and passed on 0.1.0.
 Two further send-path regressions fail on that committed client and pass on 0.1.1.

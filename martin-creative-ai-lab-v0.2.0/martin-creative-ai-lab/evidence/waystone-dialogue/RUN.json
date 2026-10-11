@@ -1,0 +1,1098 @@
+{
+  "project_id": "P10",
+  "project_version": "0.1.0",
+  "captured_utc": "2026-10-11T02:24:56.161375+00:00",
+  "base_commit": "89323bf4068686b93d254c1f052ea2f62bf636ec",
+  "environment": {
+    "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+    "platform": "Linux-6.18.44-x86_64-with-glibc2.41",
+    "execution": "Linux cloud; standard library; no network or engine required"
+  },
+  "artifact_sha256": {
+    "projects/waystone-dialogue/README.md": "82efb025b2ffb95f35826c819632b63794432746dc4709d5d2fdc0b767fa12c1",
+    "projects/waystone-dialogue/provenance.json": "28e18ac8cd36a10a6e146cb2db9c1ac93e8a03bad12cd7346bbe5cf4223b053a",
+    "projects/waystone-dialogue/scene.py": "c75c89fd19288436d495db37e59000c7a1ac884dc98947654e6637c9ef2cd95b",
+    "projects/waystone-dialogue/test_scene.py": "b59e827bd52ba0cb3e01392d6592259453ba6da103658bd600d2f9cc08abc8e5"
+  },
+  "preserved_source": {
+    "source_id": "LEGACY-001",
+    "repository": "MartinFMelcop/Adventures_Unleashed_Rave_Master_Project",
+    "commit": "36af1651271422ae33856e8b5d7b45702215f165",
+    "archive": {
+      "path": "archive/legacy-source-extracts-v0.2.0.zip",
+      "sha256": "6da636a270284eac1e11d00407dab364c2d9aa8c2f0485e77509e6ccf0dbc1dc",
+      "complete_repository_backup": false
+    },
+    "archive_prefix": "rave",
+    "files": [
+      {
+        "path": "RM_ACT1/DATA/DEV/DIALOGUE_VARIANTS.csv",
+        "sha256": "7434223aa7fe25a8449796d1648b04257efa355bced6d62a0224e3b3f2606787"
+      },
+      {
+        "path": "RM_ACT1/DATA/DEV/NPC_STATE.csv",
+        "sha256": "79fd03294259329dd23e328bc037e34a405dc1819ae999cb80eeb3bb1282fe3c"
+      },
+      {
+        "path": "RM_ACT1/DATA/DEV/NPC_RELATIONS.csv",
+        "sha256": "be7135b8c9fdfdfc36cad00122b27ba30eb7d30ba2c2a49cda6c5e304d98abbe"
+      },
+      {
+        "path": "RM_ACT1/DATA/DEV/NPC_PROFILE.csv",
+        "sha256": "cc804653f0939ce6d18682f0c8171325e9b1ed9abfe712b981f591a741bef158"
+      },
+      {
+        "path": "RM_CORE/DATA/GOV/SF-0310_NPC_PERSONALITY.md",
+        "sha256": "1576ebfb1785c273a899ec23abff59de80e739d93c783ffd164f62d3de5202a2"
+      }
+    ],
+    "npc_id": "NPC-0007",
+    "adaptation": "Codex-authored English CLI scene, closed predicates, nine selected variants. Historical NPC/table identity is provenance, not a new canon claim.",
+    "accepted_differences": [
+      "New framing, English responses, herbs prerequisite, four endings and 12-turn budget.",
+      "Only stress, trust, respect, mood, session flags/events and cooldown are modeled. No fear, debt, trait/norm scoring, arbitrary DSL, event TTL or engine binding.",
+      "Action-specific gates replace the original tags: herbs=OBSESSION_TOPIC, ask=STAKES_LOW, apologize=PLAYER_IS_WRONG + PLAYER_APOLOGIZED only for an unresolved lie.",
+      "Stress 80 comes from the selected catalog conditions; profile OutburstThreshold 88 is not used. Cooldown 5 comes from the profile.",
+      "Existing outbursts permit only wait or leave. Five subsequent accepted waits restore WARY; the entry turn and invalid/diagnostic input do not tick cooldown.",
+      "Herbs can be sorted once. Each new lie opens one apology; apology closes that obligation while historical lie flags remain. Memory is session-local and reset by restart."
+    ]
+  },
+  "scene_checks": {
+    "count": 19,
+    "failures": 0,
+    "skips": 0,
+    "command": {
+      "argv": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "projects/waystone-dialogue/test_scene.py"
+      ],
+      "cwd": "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab",
+      "stdin": null,
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "test_all_waits_reach_dusk_in_real_cli (__main__.CliTests.test_all_waits_reach_dusk_in_real_cli) ... ok\ntest_bad_input_and_status_consume_no_turn (__main__.CliTests.test_bad_input_and_status_consume_no_turn) ... ok\ntest_eof_during_live_and_terminal_scene_exits_cleanly (__main__.CliTests.test_eof_during_live_and_terminal_scene_exits_cleanly) ... ok\ntest_named_choices_trace_conflict_and_restart (__main__.CliTests.test_named_choices_trace_conflict_and_restart) ... ok\ntest_number_choices_play_to_completion_without_trace (__main__.CliTests.test_number_choices_play_to_completion_without_trace) ... ok\ntest_apology_requires_an_unresolved_fault_and_cannot_be_repeated (__main__.SceneTests.test_apology_requires_an_unresolved_fault_and_cannot_be_repeated) ... ok\ntest_catalog_stress_boundary_is_checked_before_effects (__main__.SceneTests.test_catalog_stress_boundary_is_checked_before_effects) ... ok\ntest_cooldown_blocks_repair_and_apology_until_five_waits (__main__.SceneTests.test_cooldown_blocks_repair_and_apology_until_five_waits) ... ok\ntest_crossing_requires_help_before_agreement (__main__.SceneTests.test_crossing_requires_help_before_agreement) ... ok\ntest_dusk_is_terminal_and_last_turn_can_still_succeed_or_leave (__main__.SceneTests.test_dusk_is_terminal_and_last_turn_can_still_succeed_or_leave) ... ok\ntest_herbs_cannot_be_spent_twice (__main__.SceneTests.test_herbs_cannot_be_spent_twice) ... ok\ntest_leaving_calm_or_in_outburst_selects_distinct_endings (__main__.SceneTests.test_leaving_calm_or_in_outburst_selects_distinct_endings) ... ok\ntest_negotiation_trust_boundary (__main__.SceneTests.test_negotiation_trust_boundary) ... ok\ntest_numeric_effects_clamp_at_both_bounds (__main__.SceneTests.test_numeric_effects_clamp_at_both_bounds) ... ok\ntest_repeated_false_orders_have_visible_consequences (__main__.SceneTests.test_repeated_false_orders_have_visible_consequences) ... ok\ntest_restart_removes_memory_clock_cooldown_ending_and_trace (__main__.SceneTests.test_restart_removes_memory_clock_cooldown_ending_and_trace) ... ok\ntest_same_choices_replay_identical_decisions (__main__.SceneTests.test_same_choices_replay_identical_decisions) ... ok\ntest_selected_records_match_verified_preserved_sources (__main__.SceneTests.test_selected_records_match_verified_preserved_sources) ... ok\ntest_sessions_and_trace_snapshots_do_not_share_memory (__main__.SceneTests.test_sessions_and_trace_snapshots_do_not_share_memory) ... ok\n\n----------------------------------------------------------------------\nRan 19 tests in 0.306s\n\nOK\n",
+      "started_utc": "2026-10-11T02:24:55.463671+00:00",
+      "elapsed_seconds": 0.436
+    }
+  },
+  "cli_plays": [
+    {
+      "argv": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/projects/waystone-dialogue/scene.py",
+        "--trace"
+      ],
+      "cwd": "/tmp",
+      "stdin": "status\nunknown\nask\nherbs\nbargain\nstatus\nquit\n",
+      "exit_code": 0,
+      "stderr": "",
+      "started_utc": "2026-10-11T02:24:55.900172+00:00",
+      "elapsed_seconds": 0.101,
+      "name": "cooperation",
+      "traces": [
+        {
+          "action": "ask",
+          "after": {
+            "apology_due": false,
+            "cooldown": 0,
+            "ending": null,
+            "events": [],
+            "flags": [],
+            "herbs_sorted": false,
+            "mood": "NEUTRAL",
+            "respect": 54,
+            "stress": 20,
+            "trust": 45,
+            "turn": 1
+          },
+          "before": {
+            "apology_due": false,
+            "cooldown": 0,
+            "ending": null,
+            "events": [],
+            "flags": [],
+            "herbs_sorted": false,
+            "mood": "NEUTRAL",
+            "respect": 55,
+            "stress": 20,
+            "trust": 45,
+            "turn": 0
+          },
+          "eligible_variants": [
+            "DV_NPC0007_REQUEST_HELP_002"
+          ],
+          "text": "That sounds like work. You start. I'll correct it later.",
+          "variant_id": "DV_NPC0007_REQUEST_HELP_002"
+        },
+        {
+          "action": "herbs",
+          "after": {
+            "apology_due": false,
+            "cooldown": 0,
+            "ending": null,
+            "events": [
+              "EVT_PLAYER_HELPED"
+            ],
+            "flags": [],
+            "herbs_sorted": true,
+            "mood": "OBSESSED",
+            "respect": 54,
+            "stress": 14,
+            "trust": 45,
+            "turn": 2
+          },
+          "before": {
+            "apology_due": false,
+            "cooldown": 0,
+            "ending": null,
+            "events": [],
+            "flags": [],
+            "herbs_sorted": false,
+            "mood": "NEUTRAL",
+            "respect": 54,
+            "stress": 20,
+            "trust": 45,
+            "turn": 1
+          },
+          "eligible_variants": [
+            "DV_NPC0007_REQUEST_HELP_001"
+          ],
+          "text": "Now that I can see my desk, yes. Give me the rune. And don't interrupt.",
+          "variant_id": "DV_NPC0007_REQUEST_HELP_001"
+        },
+        {
+          "action": "bargain",
+          "after": {
+            "apology_due": false,
+            "cooldown": 0,
+            "ending": "COOPERATED",
+            "events": [
+              "EVT_PLAYER_HELPED"
+            ],
+            "flags": [],
+            "herbs_sorted": true,
+            "mood": "NEUTRAL",
+            "respect": 54,
+            "stress": 14,
+            "trust": 45,
+            "turn": 3
+          },
+          "before": {
+            "apology_due": false,
+            "cooldown": 0,
+            "ending": null,
+            "events": [
+              "EVT_PLAYER_HELPED"
+            ],
+            "flags": [],
+            "herbs_sorted": true,
+            "mood": "OBSESSED",
+            "respect": 54,
+            "stress": 14,
+            "trust": 45,
+            "turn": 2
+          },
+          "eligible_variants": [
+            "DV_NPC0007_NEGOTIATION_001"
+          ],
+          "text": "All right. Make your case. If it makes sense, I'm listening.",
+          "variant_id": "DV_NPC0007_NEGOTIATION_001"
+        }
+      ],
+      "observed_ending": "COOPERATED",
+      "stdout_sha256": "1691035b301d72e0cac5ffb2fb5ae4f43ff5556c7c0dd245d678c305387da5a4",
+      "narrative_output": "The Last Waystone\nFog is swallowing the road. The Keeper can repair the village Waystone,\nbut a basket of swamp herbs has absorbed all their attention. You need\na safe route before dusk. Help with the herbs, then make your case.\nA false order from the council might get attention. It might also cost it.\n\nChoose a number or its name. Commands: status, restart, quit.\n\nDusk in 12 turns. The Keeper is neutral.\n> {\"apology_due\": false, \"cooldown\": 0, \"ending\": null, \"events\": [], \"flags\": [], \"herbs_sorted\": false, \"mood\": \"NEUTRAL\", \"respect\": 55, \"stress\": 20, \"trust\": 45, \"turn\": 0}\n\nDusk in 12 turns. The Keeper is neutral.\n> That choice is unavailable. Use a listed choice.\n\nDusk in 12 turns. The Keeper is neutral.\n> \nKeeper: That sounds like work. You start. I'll correct it later.\n\nDusk in 11 turns. The Keeper is neutral.\n> \nKeeper: Now that I can see my desk, yes. Give me the rune. And don't interrupt.\n\nDusk in 10 turns. The Keeper is obsessed.\n> \nKeeper: All right. Make your case. If it makes sense, I'm listening.\n\nEnding: COOPERATED\nThe Keeper fits the last rune. A path shines through the fog.\n'Next time, lead with the herbs.' You cross before dusk.\nCommands: restart, status, quit.\n> {\"apology_due\": false, \"cooldown\": 0, \"ending\": \"COOPERATED\", \"events\": [\"EVT_PLAYER_HELPED\"], \"flags\": [], \"herbs_sorted\": true, \"mood\": \"NEUTRAL\", \"respect\": 54, \"stress\": 14, \"trust\": 45, \"turn\": 3}\n> ",
+      "capture_note": "Exact stdout hashed; repeated choice menus omitted, actual JSON trace retained."
+    },
+    {
+      "argv": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/projects/waystone-dialogue/scene.py",
+        "--trace"
+      ],
+      "cwd": "/tmp",
+      "stdin": "lie\nlie\nlie\nlie\nherbs\nstatus\nleave\nquit\n",
+      "exit_code": 0,
+      "stderr": "",
+      "started_utc": "2026-10-11T02:24:56.001356+00:00",
+      "elapsed_seconds": 0.056,
+      "name": "conflict",
+      "traces": [
+        {
+          "action": "lie",
+          "after": {
+            "apology_due": true,
+            "cooldown": 0,
+            "ending": null,
+            "events": [
+              "EVT_PLAYER_LIED"
+            ],
+            "flags": [
+              "FLAG_PLAYER_LIED"
+            ],
+            "herbs_sorted": false,
+            "mood": "PRESSURIZED",
+            "respect": 55,
+            "stress": 42,
+            "trust": 45,
+            "turn": 1
+          },
+          "before": {
+            "apology_due": false,
+            "cooldown": 0,
+            "ending": null,
+            "events": [],
+            "flags": [],
+            "herbs_sorted": false,
+            "mood": "NEUTRAL",
+            "respect": 55,
+            "stress": 20,
+            "trust": 45,
+            "turn": 0
+          },
+          "eligible_variants": [
+            "DV_NPC0007_MANIP_CONF_WARN_001"
+          ],
+          "text": "I saw the trick. Stop now, or this conversation is over.",
+          "variant_id": "DV_NPC0007_MANIP_CONF_WARN_001"
+        },
+        {
+          "action": "lie",
+          "after": {
+            "apology_due": true,
+            "cooldown": 0,
+            "ending": null,
+            "events": [
+              "EVT_PLAYER_LIED"
+            ],
+            "flags": [
+              "FLAG_PLAYER_LIED"
+            ],
+            "herbs_sorted": false,
+            "mood": "PRESSURIZED",
+            "respect": 55,
+            "stress": 64,
+            "trust": 45,
+            "turn": 2
+          },
+          "before": {
+            "apology_due": true,
+            "cooldown": 0,
+            "ending": null,
+            "events": [
+              "EVT_PLAYER_LIED"
+            ],
+            "flags": [
+              "FLAG_PLAYER_LIED"
+            ],
+            "herbs_sorted": false,
+            "mood": "PRESSURIZED",
+            "respect": 55,
+            "stress": 42,
+            "trust": 45,
+            "turn": 1
+          },
+          "eligible_variants": [
+            "DV_NPC0007_MANIP_CONF_WARN_001"
+          ],
+          "text": "I saw the trick. Stop now, or this conversation is over.",
+          "variant_id": "DV_NPC0007_MANIP_CONF_WARN_001"
+        },
+        {
+          "action": "lie",
+          "after": {
+            "apology_due": true,
+            "cooldown": 0,
+            "ending": null,
+            "events": [
+              "EVT_PLAYER_LIED"
+            ],
+            "flags": [
+              "FLAG_PLAYER_LIED"
+            ],
+            "herbs_sorted": false,
+            "mood": "PRESSURIZED",
+            "respect": 55,
+            "stress": 86,
+            "trust": 45,
+            "turn": 3
+          },
+          "before": {
+            "apology_due": true,
+            "cooldown": 0,
+            "ending": null,
+            "events": [
+              "EVT_PLAYER_LIED"
+            ],
+            "flags": [
+              "FLAG_PLAYER_LIED"
+            ],
+            "herbs_sorted": false,
+            "mood": "PRESSURIZED",
+            "respect": 55,
+            "stress": 64,
+            "trust": 45,
+            "turn": 2
+          },
+          "eligible_variants": [
+            "DV_NPC0007_MANIP_CONF_WARN_001"
+          ],
+          "text": "I saw the trick. Stop now, or this conversation is over.",
+          "variant_id": "DV_NPC0007_MANIP_CONF_WARN_001"
+        },
+        {
+          "action": "lie",
+          "after": {
+            "apology_due": true,
+            "cooldown": 5,
+            "ending": null,
+            "events": [
+              "EVT_NPC_OUTBURST",
+              "EVT_PLAYER_LIED"
+            ],
+            "flags": [
+              "FLAG_OUTBURST_RECENT",
+              "FLAG_PLAYER_LIED"
+            ],
+            "herbs_sorted": false,
+            "mood": "OUTBURST",
+            "respect": 49,
+            "stress": 81,
+            "trust": 33,
+            "turn": 4
+          },
+          "before": {
+            "apology_due": true,
+            "cooldown": 0,
+            "ending": null,
+            "events": [
+              "EVT_PLAYER_LIED"
+            ],
+            "flags": [
+              "FLAG_PLAYER_LIED"
+            ],
+            "herbs_sorted": false,
+            "mood": "PRESSURIZED",
+            "respect": 55,
+            "stress": 86,
+            "trust": 45,
+            "turn": 3
+          },
+          "eligible_variants": [
+            "DV_NPC0007_MANIP_CONF_OUTBURST_001"
+          ],
+          "text": "Enough. I saw it. You're trying to bend me with words. I am not a fool.",
+          "variant_id": "DV_NPC0007_MANIP_CONF_OUTBURST_001"
+        },
+        {
+          "action": "leave",
+          "after": {
+            "apology_due": true,
+            "cooldown": 4,
+            "ending": "DISMISSED",
+            "events": [
+              "EVT_NPC0007_LEAVE_SCENE",
+              "EVT_NPC_OUTBURST",
+              "EVT_PLAYER_LIED"
+            ],
+            "flags": [
+              "FLAG_NPC0007_AVOID_PLAYER_TEMP",
+              "FLAG_OUTBURST_RECENT",
+              "FLAG_PLAYER_LIED"
+            ],
+            "herbs_sorted": false,
+            "mood": "AVOIDANT",
+            "respect": 49,
+            "stress": 71,
+            "trust": 33,
+            "turn": 5
+          },
+          "before": {
+            "apology_due": true,
+            "cooldown": 5,
+            "ending": null,
+            "events": [
+              "EVT_NPC_OUTBURST",
+              "EVT_PLAYER_LIED"
+            ],
+            "flags": [
+              "FLAG_OUTBURST_RECENT",
+              "FLAG_PLAYER_LIED"
+            ],
+            "herbs_sorted": false,
+            "mood": "OUTBURST",
+            "respect": 49,
+            "stress": 81,
+            "trust": 33,
+            "turn": 4
+          },
+          "eligible_variants": [
+            "DV_NPC0007_GOODBYE_002"
+          ],
+          "text": "I'm done. Get out of my sight.",
+          "variant_id": "DV_NPC0007_GOODBYE_002"
+        }
+      ],
+      "observed_ending": "DISMISSED",
+      "stdout_sha256": "2b9ddaa05dcbb29b3bc3861263af8ce16d41483f18724010477675926dd72e2a",
+      "narrative_output": "The Last Waystone\nFog is swallowing the road. The Keeper can repair the village Waystone,\nbut a basket of swamp herbs has absorbed all their attention. You need\na safe route before dusk. Help with the herbs, then make your case.\nA false order from the council might get attention. It might also cost it.\n\nChoose a number or its name. Commands: status, restart, quit.\n\nDusk in 12 turns. The Keeper is neutral.\n> \nKeeper: I saw the trick. Stop now, or this conversation is over.\n\nDusk in 11 turns. The Keeper is pressurized.\n> \nKeeper: I saw the trick. Stop now, or this conversation is over.\n\nDusk in 10 turns. The Keeper is pressurized.\n> \nKeeper: I saw the trick. Stop now, or this conversation is over.\n\nDusk in 9 turns. The Keeper is pressurized.\n> \nKeeper: Enough. I saw it. You're trying to bend me with words. I am not a fool.\n\nDusk in 8 turns. The Keeper is outburst.\n> That choice is unavailable. Use a listed choice.\n\nDusk in 8 turns. The Keeper is outburst.\n> {\"apology_due\": true, \"cooldown\": 5, \"ending\": null, \"events\": [\"EVT_NPC_OUTBURST\", \"EVT_PLAYER_LIED\"], \"flags\": [\"FLAG_OUTBURST_RECENT\", \"FLAG_PLAYER_LIED\"], \"herbs_sorted\": false, \"mood\": \"OUTBURST\", \"respect\": 49, \"stress\": 81, \"trust\": 33, \"turn\": 4}\n\nDusk in 8 turns. The Keeper is outburst.\n> \nKeeper: I'm done. Get out of my sight.\n\nEnding: DISMISSED\nThe workshop door closes. The Waystone will stay dark tonight.\nYou turn back toward the village, carrying no shortcut.\nCommands: restart, status, quit.\n> ",
+      "capture_note": "Exact stdout hashed; repeated choice menus omitted, actual JSON trace retained."
+    },
+    {
+      "argv": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/projects/waystone-dialogue/scene.py",
+        "--trace"
+      ],
+      "cwd": "/tmp",
+      "stdin": "lie\nlie\nlie\nlie\nwait\nwait\nwait\nwait\nwait\napologize\nherbs\nbargain\nquit\n",
+      "exit_code": 0,
+      "stderr": "",
+      "started_utc": "2026-10-11T02:24:56.057410+00:00",
+      "elapsed_seconds": 0.047,
+      "name": "cooldown_and_low_trust",
+      "traces": [
+        {
+          "action": "lie",
+          "after": {
+            "apology_due": true,
+            "cooldown": 0,
+            "ending": null,
+            "events": [
+              "EVT_PLAYER_LIED"
+            ],
+            "flags": [
+              "FLAG_PLAYER_LIED"
+            ],
+            "herbs_sorted": false,
+            "mood": "PRESSURIZED",
+            "respect": 55,
+            "stress": 42,
+            "trust": 45,
+            "turn": 1
+          },
+          "before": {
+            "apology_due": false,
+            "cooldown": 0,
+            "ending": null,
+            "events": [],
+            "flags": [],
+            "herbs_sorted": false,
+            "mood": "NEUTRAL",
+            "respect": 55,
+            "stress": 20,
+            "trust": 45,
+            "turn": 0
+          },
+          "eligible_variants": [
+            "DV_NPC0007_MANIP_CONF_WARN_001"
+          ],
+          "text": "I saw the trick. Stop now, or this conversation is over.",
+          "variant_id": "DV_NPC0007_MANIP_CONF_WARN_001"
+        },
+        {
+          "action": "lie",
+          "after": {
+            "apology_due": true,
+            "cooldown": 0,
+            "ending": null,
+            "events": [
+              "EVT_PLAYER_LIED"
+            ],
+            "flags": [
+              "FLAG_PLAYER_LIED"
+            ],
+            "herbs_sorted": false,
+            "mood": "PRESSURIZED",
+            "respect": 55,
+            "stress": 64,
+            "trust": 45,
+            "turn": 2
+          },
+          "before": {
+            "apology_due": true,
+            "cooldown": 0,
+            "ending": null,
+            "events": [
+              "EVT_PLAYER_LIED"
+            ],
+            "flags": [
+              "FLAG_PLAYER_LIED"
+            ],
+            "herbs_sorted": false,
+            "mood": "PRESSURIZED",
+            "respect": 55,
+            "stress": 42,
+            "trust": 45,
+            "turn": 1
+          },
+          "eligible_variants": [
+            "DV_NPC0007_MANIP_CONF_WARN_001"
+          ],
+          "text": "I saw the trick. Stop now, or this conversation is over.",
+          "variant_id": "DV_NPC0007_MANIP_CONF_WARN_001"
+        },
+        {
+          "action": "lie",
+          "after": {
+            "apology_due": true,
+            "cooldown": 0,
+            "ending": null,
+            "events": [
+              "EVT_PLAYER_LIED"
+            ],
+            "flags": [
+              "FLAG_PLAYER_LIED"
+            ],
+            "herbs_sorted": false,
+            "mood": "PRESSURIZED",
+            "respect": 55,
+            "stress": 86,
+            "trust": 45,
+            "turn": 3
+          },
+          "before": {
+            "apology_due": true,
+            "cooldown": 0,
+            "ending": null,
+            "events": [
+              "EVT_PLAYER_LIED"
+            ],
+            "flags": [
+              "FLAG_PLAYER_LIED"
+            ],
+            "herbs_sorted": false,
+            "mood": "PRESSURIZED",
+            "respect": 55,
+            "stress": 64,
+            "trust": 45,
+            "turn": 2
+          },
+          "eligible_variants": [
+            "DV_NPC0007_MANIP_CONF_WARN_001"
+          ],
+          "text": "I saw the trick. Stop now, or this conversation is over.",
+          "variant_id": "DV_NPC0007_MANIP_CONF_WARN_001"
+        },
+        {
+          "action": "lie",
+          "after": {
+            "apology_due": true,
+            "cooldown": 5,
+            "ending": null,
+            "events": [
+              "EVT_NPC_OUTBURST",
+              "EVT_PLAYER_LIED"
+            ],
+            "flags": [
+              "FLAG_OUTBURST_RECENT",
+              "FLAG_PLAYER_LIED"
+            ],
+            "herbs_sorted": false,
+            "mood": "OUTBURST",
+            "respect": 49,
+            "stress": 81,
+            "trust": 33,
+            "turn": 4
+          },
+          "before": {
+            "apology_due": true,
+            "cooldown": 0,
+            "ending": null,
+            "events": [
+              "EVT_PLAYER_LIED"
+            ],
+            "flags": [
+              "FLAG_PLAYER_LIED"
+            ],
+            "herbs_sorted": false,
+            "mood": "PRESSURIZED",
+            "respect": 55,
+            "stress": 86,
+            "trust": 45,
+            "turn": 3
+          },
+          "eligible_variants": [
+            "DV_NPC0007_MANIP_CONF_OUTBURST_001"
+          ],
+          "text": "Enough. I saw it. You're trying to bend me with words. I am not a fool.",
+          "variant_id": "DV_NPC0007_MANIP_CONF_OUTBURST_001"
+        },
+        {
+          "action": "wait",
+          "after": {
+            "apology_due": true,
+            "cooldown": 4,
+            "ending": null,
+            "events": [
+              "EVT_NPC_OUTBURST",
+              "EVT_PLAYER_LIED"
+            ],
+            "flags": [
+              "FLAG_OUTBURST_RECENT",
+              "FLAG_PLAYER_LIED"
+            ],
+            "herbs_sorted": false,
+            "mood": "OUTBURST",
+            "respect": 49,
+            "stress": 81,
+            "trust": 33,
+            "turn": 5
+          },
+          "before": {
+            "apology_due": true,
+            "cooldown": 5,
+            "ending": null,
+            "events": [
+              "EVT_NPC_OUTBURST",
+              "EVT_PLAYER_LIED"
+            ],
+            "flags": [
+              "FLAG_OUTBURST_RECENT",
+              "FLAG_PLAYER_LIED"
+            ],
+            "herbs_sorted": false,
+            "mood": "OUTBURST",
+            "respect": 49,
+            "stress": 81,
+            "trust": 33,
+            "turn": 4
+          },
+          "eligible_variants": [],
+          "text": "The Keeper measures a pinch of herbs. You let the silence stand.",
+          "variant_id": "SCENE_WAIT"
+        },
+        {
+          "action": "wait",
+          "after": {
+            "apology_due": true,
+            "cooldown": 3,
+            "ending": null,
+            "events": [
+              "EVT_NPC_OUTBURST",
+              "EVT_PLAYER_LIED"
+            ],
+            "flags": [
+              "FLAG_OUTBURST_RECENT",
+              "FLAG_PLAYER_LIED"
+            ],
+            "herbs_sorted": false,
+            "mood": "OUTBURST",
+            "respect": 49,
+            "stress": 81,
+            "trust": 33,
+            "turn": 6
+          },
+          "before": {
+            "apology_due": true,
+            "cooldown": 4,
+            "ending": null,
+            "events": [
+              "EVT_NPC_OUTBURST",
+              "EVT_PLAYER_LIED"
+            ],
+            "flags": [
+              "FLAG_OUTBURST_RECENT",
+              "FLAG_PLAYER_LIED"
+            ],
+            "herbs_sorted": false,
+            "mood": "OUTBURST",
+            "respect": 49,
+            "stress": 81,
+            "trust": 33,
+            "turn": 5
+          },
+          "eligible_variants": [],
+          "text": "The Keeper measures a pinch of herbs. You let the silence stand.",
+          "variant_id": "SCENE_WAIT"
+        },
+        {
+          "action": "wait",
+          "after": {
+            "apology_due": true,
+            "cooldown": 2,
+            "ending": null,
+            "events": [
+              "EVT_NPC_OUTBURST",
+              "EVT_PLAYER_LIED"
+            ],
+            "flags": [
+              "FLAG_OUTBURST_RECENT",
+              "FLAG_PLAYER_LIED"
+            ],
+            "herbs_sorted": false,
+            "mood": "OUTBURST",
+            "respect": 49,
+            "stress": 81,
+            "trust": 33,
+            "turn": 7
+          },
+          "before": {
+            "apology_due": true,
+            "cooldown": 3,
+            "ending": null,
+            "events": [
+              "EVT_NPC_OUTBURST",
+              "EVT_PLAYER_LIED"
+            ],
+            "flags": [
+              "FLAG_OUTBURST_RECENT",
+              "FLAG_PLAYER_LIED"
+            ],
+            "herbs_sorted": false,
+            "mood": "OUTBURST",
+            "respect": 49,
+            "stress": 81,
+            "trust": 33,
+            "turn": 6
+          },
+          "eligible_variants": [],
+          "text": "The Keeper measures a pinch of herbs. You let the silence stand.",
+          "variant_id": "SCENE_WAIT"
+        },
+        {
+          "action": "wait",
+          "after": {
+            "apology_due": true,
+            "cooldown": 1,
+            "ending": null,
+            "events": [
+              "EVT_NPC_OUTBURST",
+              "EVT_PLAYER_LIED"
+            ],
+            "flags": [
+              "FLAG_OUTBURST_RECENT",
+              "FLAG_PLAYER_LIED"
+            ],
+            "herbs_sorted": false,
+            "mood": "OUTBURST",
+            "respect": 49,
+            "stress": 81,
+            "trust": 33,
+            "turn": 8
+          },
+          "before": {
+            "apology_due": true,
+            "cooldown": 2,
+            "ending": null,
+            "events": [
+              "EVT_NPC_OUTBURST",
+              "EVT_PLAYER_LIED"
+            ],
+            "flags": [
+              "FLAG_OUTBURST_RECENT",
+              "FLAG_PLAYER_LIED"
+            ],
+            "herbs_sorted": false,
+            "mood": "OUTBURST",
+            "respect": 49,
+            "stress": 81,
+            "trust": 33,
+            "turn": 7
+          },
+          "eligible_variants": [],
+          "text": "The Keeper measures a pinch of herbs. You let the silence stand.",
+          "variant_id": "SCENE_WAIT"
+        },
+        {
+          "action": "wait",
+          "after": {
+            "apology_due": true,
+            "cooldown": 0,
+            "ending": null,
+            "events": [
+              "EVT_NPC_OUTBURST",
+              "EVT_PLAYER_LIED"
+            ],
+            "flags": [
+              "FLAG_OUTBURST_RECENT",
+              "FLAG_PLAYER_LIED"
+            ],
+            "herbs_sorted": false,
+            "mood": "WARY",
+            "respect": 49,
+            "stress": 81,
+            "trust": 33,
+            "turn": 9
+          },
+          "before": {
+            "apology_due": true,
+            "cooldown": 1,
+            "ending": null,
+            "events": [
+              "EVT_NPC_OUTBURST",
+              "EVT_PLAYER_LIED"
+            ],
+            "flags": [
+              "FLAG_OUTBURST_RECENT",
+              "FLAG_PLAYER_LIED"
+            ],
+            "herbs_sorted": false,
+            "mood": "OUTBURST",
+            "respect": 49,
+            "stress": 81,
+            "trust": 33,
+            "turn": 8
+          },
+          "eligible_variants": [],
+          "text": "The Keeper measures a pinch of herbs. You let the silence stand.\nTheir breathing steadies. They are ready to listen again.",
+          "variant_id": "SCENE_WAIT"
+        },
+        {
+          "action": "apologize",
+          "after": {
+            "apology_due": false,
+            "cooldown": 0,
+            "ending": null,
+            "events": [
+              "EVT_NPC_OUTBURST",
+              "EVT_PLAYER_LIED",
+              "EVT_PLAYER_PRAISED"
+            ],
+            "flags": [
+              "FLAG_OUTBURST_RECENT",
+              "FLAG_PLAYER_LIED"
+            ],
+            "herbs_sorted": false,
+            "mood": "NEUTRAL",
+            "respect": 49,
+            "stress": 69,
+            "trust": 39,
+            "turn": 10
+          },
+          "before": {
+            "apology_due": true,
+            "cooldown": 0,
+            "ending": null,
+            "events": [
+              "EVT_NPC_OUTBURST",
+              "EVT_PLAYER_LIED"
+            ],
+            "flags": [
+              "FLAG_OUTBURST_RECENT",
+              "FLAG_PLAYER_LIED"
+            ],
+            "herbs_sorted": false,
+            "mood": "WARY",
+            "respect": 49,
+            "stress": 81,
+            "trust": 33,
+            "turn": 9
+          },
+          "eligible_variants": [
+            "DV_NPC0007_APOLOGY_001"
+          ],
+          "text": "All right. It happens. Correct it, and we move on.",
+          "variant_id": "DV_NPC0007_APOLOGY_001"
+        },
+        {
+          "action": "herbs",
+          "after": {
+            "apology_due": false,
+            "cooldown": 0,
+            "ending": null,
+            "events": [
+              "EVT_NPC_OUTBURST",
+              "EVT_PLAYER_HELPED",
+              "EVT_PLAYER_LIED",
+              "EVT_PLAYER_PRAISED"
+            ],
+            "flags": [
+              "FLAG_OUTBURST_RECENT",
+              "FLAG_PLAYER_LIED"
+            ],
+            "herbs_sorted": true,
+            "mood": "OBSESSED",
+            "respect": 49,
+            "stress": 63,
+            "trust": 39,
+            "turn": 11
+          },
+          "before": {
+            "apology_due": false,
+            "cooldown": 0,
+            "ending": null,
+            "events": [
+              "EVT_NPC_OUTBURST",
+              "EVT_PLAYER_LIED",
+              "EVT_PLAYER_PRAISED"
+            ],
+            "flags": [
+              "FLAG_OUTBURST_RECENT",
+              "FLAG_PLAYER_LIED"
+            ],
+            "herbs_sorted": false,
+            "mood": "NEUTRAL",
+            "respect": 49,
+            "stress": 69,
+            "trust": 39,
+            "turn": 10
+          },
+          "eligible_variants": [
+            "DV_NPC0007_REQUEST_HELP_001"
+          ],
+          "text": "Now that I can see my desk, yes. Give me the rune. And don't interrupt.",
+          "variant_id": "DV_NPC0007_REQUEST_HELP_001"
+        },
+        {
+          "action": "bargain",
+          "after": {
+            "apology_due": false,
+            "cooldown": 0,
+            "ending": "DUSK",
+            "events": [
+              "EVT_MANIPULATION_SUSPECTED",
+              "EVT_NPC_OUTBURST",
+              "EVT_PLAYER_HELPED",
+              "EVT_PLAYER_LIED",
+              "EVT_PLAYER_PRAISED"
+            ],
+            "flags": [
+              "FLAG_OUTBURST_RECENT",
+              "FLAG_PLAYER_LIED"
+            ],
+            "herbs_sorted": true,
+            "mood": "WARY",
+            "respect": 49,
+            "stress": 67,
+            "trust": 39,
+            "turn": 12
+          },
+          "before": {
+            "apology_due": false,
+            "cooldown": 0,
+            "ending": null,
+            "events": [
+              "EVT_NPC_OUTBURST",
+              "EVT_PLAYER_HELPED",
+              "EVT_PLAYER_LIED",
+              "EVT_PLAYER_PRAISED"
+            ],
+            "flags": [
+              "FLAG_OUTBURST_RECENT",
+              "FLAG_PLAYER_LIED"
+            ],
+            "herbs_sorted": true,
+            "mood": "OBSESSED",
+            "respect": 49,
+            "stress": 63,
+            "trust": 39,
+            "turn": 11
+          },
+          "eligible_variants": [
+            "DV_NPC0007_NEGOTIATION_002"
+          ],
+          "text": "What are you trying to sell me, exactly?",
+          "variant_id": "DV_NPC0007_NEGOTIATION_002"
+        }
+      ],
+      "observed_ending": "DUSK",
+      "stdout_sha256": "f8c2025e36d5dcc7229a76b721643dd2a705ad3dcf681cd499b64238aa2e5fb4",
+      "narrative_output": "The Last Waystone\nFog is swallowing the road. The Keeper can repair the village Waystone,\nbut a basket of swamp herbs has absorbed all their attention. You need\na safe route before dusk. Help with the herbs, then make your case.\nA false order from the council might get attention. It might also cost it.\n\nChoose a number or its name. Commands: status, restart, quit.\n\nDusk in 12 turns. The Keeper is neutral.\n> \nKeeper: I saw the trick. Stop now, or this conversation is over.\n\nDusk in 11 turns. The Keeper is pressurized.\n> \nKeeper: I saw the trick. Stop now, or this conversation is over.\n\nDusk in 10 turns. The Keeper is pressurized.\n> \nKeeper: I saw the trick. Stop now, or this conversation is over.\n\nDusk in 9 turns. The Keeper is pressurized.\n> \nKeeper: Enough. I saw it. You're trying to bend me with words. I am not a fool.\n\nDusk in 8 turns. The Keeper is outburst.\n> \nKeeper: The Keeper measures a pinch of herbs. You let the silence stand.\n\nDusk in 7 turns. The Keeper is outburst.\n> \nKeeper: The Keeper measures a pinch of herbs. You let the silence stand.\n\nDusk in 6 turns. The Keeper is outburst.\n> \nKeeper: The Keeper measures a pinch of herbs. You let the silence stand.\n\nDusk in 5 turns. The Keeper is outburst.\n> \nKeeper: The Keeper measures a pinch of herbs. You let the silence stand.\n\nDusk in 4 turns. The Keeper is outburst.\n> \nKeeper: The Keeper measures a pinch of herbs. You let the silence stand.\nTheir breathing steadies. They are ready to listen again.\n\nDusk in 3 turns. The Keeper is wary.\n> \nKeeper: All right. It happens. Correct it, and we move on.\n\nDusk in 2 turns. The Keeper is neutral.\n> \nKeeper: Now that I can see my desk, yes. Give me the rune. And don't interrupt.\n\nDusk in 1 turns. The Keeper is obsessed.\n> \nKeeper: What are you trying to sell me, exactly?\n\nEnding: DUSK\nThe last light fades before an agreement is made.\nYou find shelter in the village. The crossing must wait until morning.\nCommands: restart, status, quit.\n> ",
+      "capture_note": "Exact stdout hashed; repeated choice menus omitted, actual JSON trace retained."
+    },
+    {
+      "argv": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/projects/waystone-dialogue/scene.py",
+        "--trace"
+      ],
+      "cwd": "/tmp",
+      "stdin": "leave\nquit\n",
+      "exit_code": 0,
+      "stderr": "",
+      "started_utc": "2026-10-11T02:24:56.105731+00:00",
+      "elapsed_seconds": 0.055,
+      "name": "departure",
+      "traces": [
+        {
+          "action": "leave",
+          "after": {
+            "apology_due": false,
+            "cooldown": 0,
+            "ending": "LEFT",
+            "events": [],
+            "flags": [],
+            "herbs_sorted": false,
+            "mood": "NEUTRAL",
+            "respect": 55,
+            "stress": 20,
+            "trust": 45,
+            "turn": 1
+          },
+          "before": {
+            "apology_due": false,
+            "cooldown": 0,
+            "ending": null,
+            "events": [],
+            "flags": [],
+            "herbs_sorted": false,
+            "mood": "NEUTRAL",
+            "respect": 55,
+            "stress": 20,
+            "trust": 45,
+            "turn": 0
+          },
+          "eligible_variants": [
+            "DV_NPC0007_GOODBYE_001"
+          ],
+          "text": "Go on. And don't make more work for me.",
+          "variant_id": "DV_NPC0007_GOODBYE_001"
+        }
+      ],
+      "observed_ending": "LEFT",
+      "stdout_sha256": "3507d7e589990adcb7cc229a6d5ab6d55126d1cef6bd5b37eecb48606dd423bb",
+      "narrative_output": "The Last Waystone\nFog is swallowing the road. The Keeper can repair the village Waystone,\nbut a basket of swamp herbs has absorbed all their attention. You need\na safe route before dusk. Help with the herbs, then make your case.\nA false order from the council might get attention. It might also cost it.\n\nChoose a number or its name. Commands: status, restart, quit.\n\nDusk in 12 turns. The Keeper is neutral.\n> \nKeeper: Go on. And don't make more work for me.\n\nEnding: LEFT\nYou leave the Keeper to the herbs and follow the lanterns toward the ferry.\nThe Waystone stays dark; another route will have to do.\nCommands: restart, status, quit.\n> ",
+      "capture_note": "Exact stdout hashed; repeated choice menus omitted, actual JSON trace retained."
+    }
+  ],
+  "interactive_review": {
+    "reviewer": "Codex, not Martin",
+    "command": "python3 projects/waystone-dialogue/scene.py --trace",
+    "inputs": [
+      "ask",
+      "herbs",
+      "bargain",
+      "status",
+      "quit"
+    ],
+    "observed": "Cooperation at turn 3; status exposed repeated ending text, then fixed and checked by the real CLI test.",
+    "limit": "Manual terminal flow inspection, not independent human usability or creative acceptance."
+  },
+  "limits": [
+    "Bounded CLI contract only; new narrative and scene rules are adaptations.",
+    "No human narrative, usability or balance review; only this Linux/Python version executed.",
+    "No full trait/norm scoring, TTL memory, persistence, media, game engine or shared transfer.",
+    "Unchanged P02/P11 suites and historical scenario runners not rerun."
+  ],
+  "lab_checks": {
+    "documentary": {
+      "argv": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "tools/validate_repo.py"
+      ],
+      "cwd": "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab",
+      "stdin": null,
+      "exit_code": 0,
+      "stdout": "PASS: 11 projects, 11 transfers, 0 assets, 2 legacy sources; 125 local file links.\nDocumentary checks only; no game, model benchmark or media runtime executed.\n",
+      "stderr": "",
+      "started_utc": "2026-10-11T02:24:56.167231+00:00",
+      "elapsed_seconds": 0.062
+    },
+    "validator_regressions": {
+      "argv": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "tools/test_validate_repo.py"
+      ],
+      "cwd": "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab",
+      "stdin": null,
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "...........\n----------------------------------------------------------------------\nRan 11 tests in 1.480s\n\nOK\n",
+      "started_utc": "2026-10-11T02:24:56.229070+00:00",
+      "elapsed_seconds": 1.568
+    },
+    "validator_count": 11,
+    "scope": "Registry/file-link/archive integrity only; not creative or engine validation."
+  }
+}

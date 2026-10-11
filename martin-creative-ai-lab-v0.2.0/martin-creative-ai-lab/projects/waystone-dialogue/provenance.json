@@ -1,0 +1,43 @@
+{
+  "source_id": "LEGACY-001",
+  "repository": "MartinFMelcop/Adventures_Unleashed_Rave_Master_Project",
+  "commit": "36af1651271422ae33856e8b5d7b45702215f165",
+  "archive": {
+    "path": "archive/legacy-source-extracts-v0.2.0.zip",
+    "sha256": "6da636a270284eac1e11d00407dab364c2d9aa8c2f0485e77509e6ccf0dbc1dc",
+    "complete_repository_backup": false
+  },
+  "archive_prefix": "rave",
+  "files": [
+    {
+      "path": "RM_ACT1/DATA/DEV/DIALOGUE_VARIANTS.csv",
+      "sha256": "7434223aa7fe25a8449796d1648b04257efa355bced6d62a0224e3b3f2606787"
+    },
+    {
+      "path": "RM_ACT1/DATA/DEV/NPC_STATE.csv",
+      "sha256": "79fd03294259329dd23e328bc037e34a405dc1819ae999cb80eeb3bb1282fe3c"
+    },
+    {
+      "path": "RM_ACT1/DATA/DEV/NPC_RELATIONS.csv",
+      "sha256": "be7135b8c9fdfdfc36cad00122b27ba30eb7d30ba2c2a49cda6c5e304d98abbe"
+    },
+    {
+      "path": "RM_ACT1/DATA/DEV/NPC_PROFILE.csv",
+      "sha256": "cc804653f0939ce6d18682f0c8171325e9b1ed9abfe712b981f591a741bef158"
+    },
+    {
+      "path": "RM_CORE/DATA/GOV/SF-0310_NPC_PERSONALITY.md",
+      "sha256": "1576ebfb1785c273a899ec23abff59de80e739d93c783ffd164f62d3de5202a2"
+    }
+  ],
+  "npc_id": "NPC-0007",
+  "adaptation": "Codex-authored English CLI scene, closed predicates, nine selected variants. Historical NPC/table identity is provenance, not a new canon claim.",
+  "accepted_differences": [
+    "New framing, English responses, herbs prerequisite, four endings and 12-turn budget.",
+    "Only stress, trust, respect, mood, session flags/events and cooldown are modeled. No fear, debt, trait/norm scoring, arbitrary DSL, event TTL or engine binding.",
+    "Action-specific gates replace the original tags: herbs=OBSESSION_TOPIC, ask=STAKES_LOW, apologize=PLAYER_IS_WRONG + PLAYER_APOLOGIZED only for an unresolved lie.",
+    "Stress 80 comes from the selected catalog conditions; profile OutburstThreshold 88 is not used. Cooldown 5 comes from the profile.",
+    "Existing outbursts permit only wait or leave. Five subsequent accepted waits restore WARY; the entry turn and invalid/diagnostic input do not tick cooldown.",
+    "Herbs can be sorted once. Each new lie opens one apology; apology closes that obligation while historical lie flags remain. Memory is session-local and reset by restart."
+  ]
+}

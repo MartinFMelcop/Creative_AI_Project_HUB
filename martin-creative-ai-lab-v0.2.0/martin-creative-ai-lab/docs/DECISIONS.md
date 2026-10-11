@@ -264,3 +264,30 @@ This supersedes the working-file guard in ADR-010/012/015. Pin/dependency change
 still need calibration. Lock compatibility is not verification of installed
 module bytes; symlink portability and stronger execution isolation remain
 unverified. Revisit when changing dependencies, OS or evaluator contract.
+
+## ADR-017 — adapt one recovered dialogue scene into a playable destination
+
+**Date:** 2026-10-11 (environment UTC date). **Status:** P10 CLI 0.1.0.
+
+P02's snapshot increment is complete; independent candidate and P11 human review
+remain evidence gaps. P10 has inspected, preserved NPC dialogue data but no
+working destination. Choose one creative slice that can actually execute here:
+an English Waystone scene in Python's standard library. Avoid missing game/media
+baseline reconstruction, engine binding and another evaluation task inventory.
+
+Reuse nine NPC-0007 priorities, deltas, moods, flags/events and initial
+state/relations with verified source hashes. Replace expression evaluation with
+closed predicates. New framing, a one-time herbs prerequisite, one apology per
+unresolved lie, four endings and a 12-turn budget are explicit adaptation rules.
+Use the catalog's stress-80 gate, not the profile's threshold 88; use its five-turn
+cooldown and define expiry to WARY after five accepted waits. No claim of full
+personality scoring or legacy-game equivalence follows from those retained fields.
+
+Nineteen behavior/CLI/source checks and recorded command playthroughs support
+bounded M4. Human creative quality, usability, balance and portability remain
+unverified. The seed patch records this durable destination/workstream change;
+P02/P11 stay unchanged. Keep the archive read-only and cross-project transfers
+as candidates until a second destination proves actual use.
+
+**Revisit:** reader feedback, another scene consumer, persistence, different
+memory/selection semantics or an engine requirement with its own runtime evidence.

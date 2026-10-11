@@ -4,6 +4,11 @@
 adaptation: a local Socket.IO text chat with its own locked dependencies and
 protocol/browser tests. It does not require installing the other project seeds.
 
+[P10 — The Last Waystone](waystone-dialogue/README.md) adapts nine preserved NPC
+responses into a playable Python dialogue scene with consequences, four endings,
+restart and a decision trace. It has 19 behavior/CLI/source checks; human creative
+review remains pending. No engine or external dependency is required.
+
 The remaining lines are described in [the seed](../SEED.md) and
 [project registry](../registry/projects.json). Historical sources remain in
 the archive. Add a working project only when it has concrete material, a

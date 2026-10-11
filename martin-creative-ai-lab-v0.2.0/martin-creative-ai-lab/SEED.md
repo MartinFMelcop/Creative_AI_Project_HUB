@@ -1,10 +1,10 @@
 # SEED — Martin Creative AI Lab
 
-**Version:** 0.4.5
+**Version:** 0.4.6
 **Data-base:** 10 de outubro de 2026  
 **Autor e responsável pelo portfólio:** Martin Melcop Neto  
 **Working language:** English for new documentation, plans, code comments, UI, and reports. Preserve original creative titles and historical source languages.
-**Current state:** P11 unread navigation 0.1.3 implemented; P02 runner 0.2.0 retains syntax attribution and executes the pinned P11 0.1.3 evaluator snapshot. Historical sources and registry QA remain preserved. No independent model result, game migration or public hosting is claimed.
+**Current state:** P10 Waystone dialogue 0.1.0 is a playable Python CLI adaptation with 19 behavior/CLI/source checks. P02 runner 0.2.0 and P11 chat 0.1.3 remain unchanged. Historical sources stay preserved; human creative review, independent model evidence and engine migration remain unperformed.
 
 > Construir um laboratório autoral em Git que transforma ideias, obras e experimentos em produtos pequenos, sistemas reutilizáveis e evidências técnicas verificáveis. A IA participa da criação e execução; Martin desenvolve sua capacidade de especificar, compreender, selecionar, corrigir, validar e explicar os resultados.
 
@@ -46,14 +46,14 @@ Se apenas este arquivo estiver disponível, ele é suficiente para iniciar a Fas
 |---|---|
 | Repository | MartinFMelcop/Creative_AI_Project_HUB; actual Git root `/workspace/Creative_AI_Project_HUB`; lab remains nested in its original package directory |
 | Preserved sources | 175 Rave Master texts and 3 WebSocket files; unchanged ZIP and inventory; not a complete RMXP backup |
-| Primary workstream | P02 runner 0.2.0: committed evaluator snapshot, compatible installed dependency graph; P11 stays 0.1.3 and starter stays 0.1.0. Bounded M4 scopes unchanged |
-| Engine execution | No Unity or RMXP runtime verified; P11 uses Node/Express/Socket.IO |
-| Current verification | P11 current execution in `evidence/realtime-chat/UNREAD_RUN.json`; prior syntax/registry/reading evidence remains historical. Current P02 snapshot evidence is in `evidence/evaluation-task/SNAPSHOT_RUN.json` |
-| Historical verification | v0.2.0 combat/dialogue runner reports remain historical; not rerun during P11 work |
-| Next action | Martin's P11 reading/keyboard review; one independent EVAL-001 client with recorded context/tools/attempts |
-| Other seeds | P01 baseline still absent; P10 remains recovered material; other creative/runtime baselines require targeted recovery |
+| Primary workstream | P10 Waystone dialogue 0.1.0: bounded CLI scene, stateful consequences, four endings and restart; technical M4 only |
+| Engine execution | P10 uses Python standard library; P11 uses Node/Express/Socket.IO. No Unity or RMXP runtime verified |
+| Current verification | P10: 19 checks and CLI play traces in `evidence/waystone-dialogue/RUN.json`; registry/link/archive validation. Unchanged P02/P11 evidence remains historical |
+| Historical verification | v0.2.0 combat/dialogue runner reports, P11 unread and P02 snapshot records remain preserved; those runtimes were not rerun in this increment |
+| Next action | Reader review of P10 cooperative/conflict paths; P11 human review and independent EVAL-001 provenance remain separate gates |
+| Other seeds | P02 runner 0.2.0, P11 app 0.1.3 and EVAL-001 starter 0.1.0 remain unchanged; missing creative/media baselines still need targeted recovery |
 | Transfer / shared status | TR-009 validated for P02 task adaptation/calibration only; 10 other transfers remain candidates; no shared component |
-| Portfolio / attribution | P02 syntax correction published at `e322e35`. P11 unread/P02 recalibration publication is verified at `de1fd1a`; the snapshot increment is published and verified at task closure. Martin supplied direction; Codex implemented/tested; human and independent candidate reviews remain pending |
+| Portfolio / attribution | P02 snapshots published at `89323bf`; P10 publication is verified at task closure. Martin supplied direction; Codex adapted/implemented/tested. Human and independent candidate reviews remain pending |
 
 Registry evidence paths must resolve to existing files inside the lab; working
 paths must be directories and legacy-source IDs must exist. This documentary
@@ -230,7 +230,7 @@ Identificadores persistem mesmo quando nomes mudam. Um projeto arquivado pode co
 | P07 | Visual Generation & Asset Lab | Capas, ilustrações, sprites e direção | Assets consistentes, pipeline e estudo de seleção | Material visual histórico; inventário pendente |
 | P08 | Audio, Poetry & Music Lab | Sons, poemas, letras e conceitos | Música, EP conceitual, trilhas, áudio adaptativo | Eixo autorizado; fontes específicas pendentes |
 | P09 | AI Delivery & Operations Cases | Carreira real e avaliação simulada | Case de entrega, análise de workflow e rubricas | Base profissional lida; cases anteriores pendentes |
-| P10 | Adventures Unleashed / Rave Master | Narrativa, NPCs, combate, dados, arte/áudio e QA | Reservatório de sistemas e cenas; fatias adaptadas | 177 fontes textuais lidas; 175 preservadas; dois runners offline executados |
+| P10 | Adventures Unleashed / Rave Master | Narrativa, NPCs, combate, dados, arte/áudio e QA | Reservatório de sistemas e cenas; fatias adaptadas | Waystone CLI 0.1.0: 19 checks, bounded M4; preserved origin and historical runners unchanged |
 | P11 | Real-time Integration Lab / WebSocket | Node/Socket.IO event flow; three preserved source files | Local chat; later evaluation task or lobby candidate | Working chat 0.1.1 validated and Git-published; TR-009 task adaptation verified; no public hosting |
 
 P02 agrupa evaluation e QA porque podem compartilhar a mesma aplicação pequena. Não criar dois projetos Unity idênticos apenas para apresentar títulos diferentes. P01 pode abrigar produção, economia e analytics como cases distintos de uma fonte comum.
@@ -410,9 +410,16 @@ Contagem de sprints não comprova produto final ou estabilidade. Sem auditarmos 
 
 Reservatório recuperado de RPG Maker XP/RGSS: narrativa, personalidade e diálogo de NPCs, combate, progressão, crafting, reputação, planejamento de arte/áudio e QA. A extração completa, os estados e limites estão na seção 28.2. Não é um novo compromisso de terminar um RPG extenso nem uma fusão automática com os outros RPGs do inventário.
 
+[The Last Waystone](projects/waystone-dialogue/README.md) is now P10's first working
+adaptation: nine verified NPC-0007 variants, English framing/responses, closed
+state predicates, session memory, four endings and restart. Nineteen checks
+validate its bounded CLI contract. New scene rules and catalog/profile threshold
+choice are recorded in provenance and ADR-017; no full RPG equivalence, weighted
+scoring, human creative review or engine migration is claimed.
+
 ### P11 — Real-time Integration Lab / WebSocket
 
-The recovered Node/Express/Socket.IO snapshot only logs incoming messages. Its working adaptation now broadcasts validated text and renders it in all connected browsers. P11 0.1.2 is a completed local slice; twenty-two checks verify transport and reading position. Its reading correction is selected, with P02 recalibration as support. See section 28.3 and `projects/realtime-integration-lab/README.md` for provenance, differences, usage, and limits. TR-009 evaluation-task adaptation is calibrated in P02; lobby reuse remains a candidate.
+The recovered Node/Express/Socket.IO snapshot only logs incoming messages. Its working adaptation broadcasts validated text in connected browsers. P11 0.1.3 is a completed local slice with twenty-six protocol/Chromium checks, including reading position and unread navigation. Human review remains pending. See section 28.3 and `projects/realtime-integration-lab/README.md` for provenance and limits. TR-009 is calibrated in P02; lobby reuse remains a candidate.
 
 ## 6. Arquitetura do laboratório
 
@@ -535,10 +542,10 @@ Antes do score, verificar bloqueios: fontes inacessíveis; execução impossíve
 
 **Historical order:** v0.1.0 recommended P01 discovery; v0.2.0 recovered concrete P10/P11 sources. Under the current request to select and implement an increment, Codex prioritized P11 because its defect and full local interaction can be verified here. ADR-008 records the choice; the assessment and plan preserve alternatives without activating them. This is not a claim that Martin individually selected or tested P11.
 
-**Current work order:** P02 EVAL-001 now has a calibrated task/exporter using the
-available P11 runtime. Next, record one independently produced client and its
-context/tools before evaluation claims. Unity is conditional on a future engine
-task; it is not a prerequisite for this working Node/Chromium task.
+**Current work order:** the completed P02 snapshot increment is followed by one
+P10 creative dialogue destination. Next, review its cooperative/conflict paths
+with a reader. The independent EVAL-001 artifact and Martin's P11 review remain
+separate gates. No engine or media recovery is a prerequisite for this CLI scene.
 
 **P01 economia e P03 vertical slice na sequência**, conforme interesses profissionais e disponibilidade. P04/P07/P08 podem fornecer conteúdo às fatias escolhidas. P05/P06 começam como fontes de extração, e não dois grandes RPGs simultâneos.
 
@@ -1486,11 +1493,12 @@ Ambiente dos runners: Python 3.12.14, em cópia local selecionada dos arquivos. 
 | P11 → P09 | Painel de eventos de avaliação | Uma execução alimenta a interface | Instrumentação pode ficar local e simples |
 
 TR-009 is validated in `registry/transfers.json` for P02 task adaptation and
-calibration only; the other ten entries remain candidates. P10 remains recovered
-material in triage. P02's M4 claim comes from its own harness checks and controlled
-probes, not inherited P11 maturity. No shared component or model training is implied.
+calibration only; the other ten entries remain candidates. P10's within-project
+CLI adaptation has its own bounded M4 checks, not inherited legacy-game maturity.
+P02's M4 claim still comes from its harness checks and controlled probes. No shared
+component or model training is implied.
 
-**Current order after v0.4.2:** P11 reading position and P02 compatibility are published and verified in `f35e2e7`; current state records remote confirmation. Next: Martin's reading/keyboard review and an independent EVAL-001 artifact with separate context and explicit tools/attempts. Dialogue/combat remain alternatives; P01 needs a baseline. See the plan and ADR-012.
+**Historical order after v0.4.2:** P11 reading position and P02 compatibility are published and verified in `f35e2e7`; current state records remote confirmation. Next: Martin's reading/keyboard review and an independent EVAL-001 artifact with separate context and explicit tools/attempts. Dialogue/combat remain alternatives; P01 needs a baseline. See the plan and ADR-012.
 
 ### 28.6. Como uma IA deve expandir e modificar esta seed
 
@@ -1526,3 +1534,13 @@ P11 0.1.3 adds a bounded unread-arrival count and a keyboard-operable Jump to
 latest control while preserving earlier reading position. Returning to the bottom
 clears the count; activation transfers focus into the conversation. P02 runner 0.1.4 pins the new app commit and preserves
 its candidate contract; controlled calibration is recorded separately. No extra project or maturity gate.
+
+### Current destination — v0.4.6
+
+P10 Waystone dialogue 0.1.0 makes one preserved dialogue subset playable.
+[The scene](projects/waystone-dialogue/README.md) and
+[execution evidence](evidence/waystone-dialogue/RUN.json) define its behavior,
+origin and limits. Seed 0.4.6 records the durable working destination/primary
+workstream change; project version 0.1.0 and bounded technical M4 are separate.
+P02/P11 and historical source bytes remain unchanged. Human creative quality
+and broader game/engine claims require their own evidence.

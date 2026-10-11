@@ -1,4 +1,23 @@
-# Current assessment — unread navigation
+# Current assessment — a playable recovered dialogue slice
+
+The clean checkout at published `89323bf` matches fetched main. P02's snapshot
+runner is complete; an independent candidate and Martin's P11 review are still
+unperformed. P10's preserved material can support actual creative execution
+without guessing missing game baselines or media. Inspect and hash-check the
+NPC-0007 variants, state, relations, profile and personality specification.
+
+Select nine responses for a bounded English Waystone scene with consequences,
+endings and restart. Closed predicates avoid importing the historical expression
+evaluator. The catalog and profile disagree on outburst threshold (80/88); record
+that this adaptation chooses the catalog gate. Full weighted scoring, TTL memory
+and engine binding would add unsupported scope, so leave them outside this slice.
+
+Nineteen behavior/CLI/source checks and recorded ending/cooldown paths establish
+the technical destination contract. P10 moves from recovered M0 to bounded M4
+for this CLI only. Narrative quality, usability and balance require human review.
+Earlier assessment scopes, tables and results below remain historical context.
+
+# Previous assessment — unread navigation
 
 The clean checkout at published `e322e35` matches the fetched remote main. P11
 has real-browser delivery and reading-position coverage; P02's syntax correction

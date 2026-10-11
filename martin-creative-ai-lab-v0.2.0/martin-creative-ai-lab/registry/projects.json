@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-10-10",
+  "updated_at": "2026-10-11",
   "projects": [
     {
       "id": "P01",
@@ -165,11 +165,11 @@
       "id": "P10",
       "name": "Adventures Unleashed / Rave Master",
       "slug": "rave-master",
-      "status": "triage",
-      "maturity": "M0",
-      "phase": "source-recovered",
+      "status": "active",
+      "maturity": "M4",
+      "phase": "dialogue-cli-validated",
       "origin": "github_snapshot_inspected",
-      "next_action": "Selecionar uma única extração: diálogo, domínio de combate ou workflow de QA.",
+      "next_action": "Reader playthrough of cooperative/conflict paths; review dialogue, consequences and turn budget before expanding.",
       "related_projects": [
         "P01",
         "P02",
@@ -182,9 +182,15 @@
       ],
       "evidence": [
         "docs/LEGACY_REPOSITORIES.md",
-        "evidence/legacy-audit/RUNS.json"
+        "evidence/legacy-audit/RUNS.json",
+        "projects/waystone-dialogue/README.md",
+        "projects/waystone-dialogue/provenance.json",
+        "evidence/waystone-dialogue/RUN.json"
       ],
-      "source_id": "LEGACY-001"
+      "source_id": "LEGACY-001",
+      "working_path": "projects/waystone-dialogue",
+      "working_version": "0.1.0",
+      "maturity_scope": "Waystone CLI contract only: 19 behavior/CLI/source checks, four executed endings, stress/trust/memory consequences and restart. No human narrative/balance review, full weighted scoring, assets or RGSS/Unity integration."
     },
     {
       "id": "P11",

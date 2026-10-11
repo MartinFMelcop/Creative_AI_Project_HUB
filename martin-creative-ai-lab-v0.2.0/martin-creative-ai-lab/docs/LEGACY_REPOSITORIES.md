@@ -31,7 +31,12 @@ websocket/ contém index.js, index.html e package.json. As instruções encontra
 | Domínio de combate | Regras escolhidas executadas no destino com limites e arredondamento definidos |
 | Consistência do pack | Fonte escolhida e exportação conferida por hash |
 
-Current selection: P11 now has a [working local chat](../projects/realtime-integration-lab/README.md) with automated browser verification. Other cuts remain candidates; no cross-project destination transfer has been completed. The evidence below describes the historical v0.2.0 recovery, not the current P11 run.
+Current selection: P10 has a [working CLI dialogue scene](../projects/waystone-dialogue/README.md)
+adapted from nine verified NPC-0007 variants and four supporting state/specification
+files. P11's [local chat](../projects/realtime-integration-lab/README.md) and its
+calibrated P02 consumer remain completed work. Dialogue adaptation stays within
+P10; other P10 transfers remain candidates. The evidence below describes the
+historical v0.2.0 recovery, not execution of the new destination or current P11.
 
 ## Evidência atual
 

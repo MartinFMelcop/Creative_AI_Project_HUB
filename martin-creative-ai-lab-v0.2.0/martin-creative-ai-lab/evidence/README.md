@@ -1,5 +1,9 @@
 # Execution evidence
 
+- [P10 Waystone dialogue](waystone-dialogue/RUN.json): 19 behavior/CLI/source
+  checks, actual ending/cooldown play traces, environment and artifact identity.
+  This validates the bounded CLI contract, not human narrative quality or RGSS.
+
 - [P11 reading and P02 compatibility](realtime-chat/READING_RUN.json): three
   baseline disruptions, fractional drift, five corrected reading checks, full
   22-test chat results, frozen installation and controlled task recalibration.

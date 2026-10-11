@@ -1,4 +1,20 @@
-# Current increment — pinned evaluator snapshots
+# Current increment — playable P10 dialogue
+
+Adapt a selected NPC-0007 catalog into one coherent English CLI scene. Keep the
+archive read-only, verify the nine selected records and four supporting files,
+and define new scene rules explicitly. Python standard library execution avoids
+missing media/engine dependencies. Do not expand into a campaign or shared system.
+
+Acceptance: observable stress/trust/memory consequences, one-time help and
+apology gates, outburst cooldown, four terminal endings, restart, invalid-input
+stability, deterministic trace and real CLI execution. Nineteen checks and
+[recorded play traces](../evidence/waystone-dialogue/RUN.json) validate the contract.
+Human creative quality/balance remain pending. P02/P11 stay unchanged.
+
+Next: reader feedback on cooperation and conflict. Earlier completed increments
+below retain their original acceptance/evidence as historical context.
+
+# Completed increment — pinned evaluator snapshots
 
 P02 runner 0.2.0 now materializes its existing evaluator commit into a temporary
 runtime. Verify ordinary working source changes cannot replace server/UI/tests;

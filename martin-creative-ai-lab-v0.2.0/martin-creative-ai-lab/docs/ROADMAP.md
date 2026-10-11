@@ -16,6 +16,18 @@ Detalhamento: [SEED, seção 19](../SEED.md).
 
 Sem calendário contratado. Definir esforço e ordem conforme recursos e objetivo atual. Uma frente principal por vez; outra frente somente com finalidade delimitada.
 
+## Current progress — v0.4.6
+
+P10 has its first playable destination: [The Last Waystone](../projects/waystone-dialogue/README.md),
+a bounded CLI scene using nine verified dialogue variants, stateful consequences,
+four endings and restart. Nineteen behavior/CLI/source checks validate its technical
+contract. The new creative slice follows the completed P02 snapshot increment;
+it does not start the other creative seeds or complete an engine migration.
+
+Next: a reader reviews the dialogue and consequences on cooperative/conflict
+paths. Independent EVAL-001 provenance and Martin's P11 review remain separate
+gates. The earlier progress sections below are historical milestones.
+
 ## Atualização v0.2.0
 
 A recuperação seletiva de P10/P11 encerrou uma unidade documental da descoberta. Ambiente de Martin e seleção da primeira frente continuam pendentes. A Fase 2 pode usar uma task Node/Socket.IO de P11 ou domínio puro de P10, identificando a stack real; isso não equivale a executar Unity. Fases posteriores continuam condicionais, não compromissos simultâneos.
