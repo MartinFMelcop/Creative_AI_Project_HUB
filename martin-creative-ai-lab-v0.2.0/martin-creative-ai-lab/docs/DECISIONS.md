@@ -373,3 +373,27 @@ attention, assistive technology or other browsers. P02 retains its own snapshot.
 
 **Revisit:** human review, a different browser, resize/zoom semantics or an
 explicit durable read-receipt/notification requirement.
+
+## ADR-021 — preserve reading intent before viewport reflow
+
+**Date:** 2026-10-11 (environment UTC date). **Status:** P11 0.1.5.
+
+The published client loses the live edge on height reduction and changes the
+visible message when long text wraps at a narrow width. Remember whether the
+reader follows live text, or their first visible retained message and pixel
+offset, together with the conversation's last dimensions. ResizeObserver restores
+that position when width/height changes. Ignore reflow-generated scroll events
+until restoration; ordinary scrolling updates the remembered reading position.
+Reconcile a pending resize before a broadcast, and reuse the same restoration
+logic for retained-history eviction. Keep fractional correction and the existing
+fallback when an anchor expires.
+
+Unread clearing still requires a visible, focused page near the bottom. Retain
+inactive counts through resizing. This choice preserves a message and offset
+where the scroll range permits, rather than a word/line after wrapping. It adds
+no dependencies or P02 requirements. Three real-viewport regressions fail on
+committed 0.1.4 and pass on the correction, including subsequent eviction and
+native tab focus. Seed version and bounded maturity do not change.
+
+**Revisit:** human reading feedback, browser zoom, font-only reflow or another
+browser. The current evidence covers viewport geometry in Chromium.

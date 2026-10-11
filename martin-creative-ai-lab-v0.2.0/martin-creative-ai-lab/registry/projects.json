@@ -202,7 +202,7 @@
       "maturity": "M4",
       "phase": "local-chat-validated",
       "origin": "github_snapshot_inspected",
-      "next_action": "Review inactive-page unread/title feedback, reading position and keyboard use with Martin; independent EVAL-001 execution remains a separate gate.",
+      "next_action": "Review desktop/narrow resizing, unread feedback and keyboard reading with Martin; independent EVAL-001 execution remains a separate gate.",
       "related_projects": [
         "P01",
         "P02",
@@ -216,12 +216,13 @@
         "evidence/realtime-chat/POLLING_SEND_RUN.json",
         "evidence/realtime-chat/READING_RUN.json",
         "evidence/realtime-chat/UNREAD_RUN.json",
-        "evidence/realtime-chat/ACTIVITY_RUN.json"
+        "evidence/realtime-chat/ACTIVITY_RUN.json",
+        "evidence/realtime-chat/RESIZE_RUN.json"
       ],
       "source_id": "LEGACY-002",
-      "maturity_scope": "Local chat 0.1.4: 30 checks (6 protocol, 24 Chromium), including inactive-page unread/title feedback, native tab focus, controlled visibility and 200-arrival bounds. Prior send, keyboard and reading geometry checks remain covered. No real minimized-window, human/assistive-technology or other-browser review, and no deployment.",
+      "maturity_scope": "Local chat 0.1.5: 33 checks (6 protocol, 27 Chromium), including real viewport height changes, desktop/narrow wrapping, retained reading anchors and inactive unread counts. Existing send, retention, keyboard and activity checks remain covered. No zoom, font-only reflow, real minimized-window, human/assistive-technology or other-browser review, and no deployment.",
       "working_path": "projects/realtime-integration-lab",
-      "working_version": "0.1.4"
+      "working_version": "0.1.5"
     }
   ]
 }

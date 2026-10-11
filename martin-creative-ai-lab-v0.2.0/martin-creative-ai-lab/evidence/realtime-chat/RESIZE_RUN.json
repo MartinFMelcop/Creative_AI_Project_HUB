@@ -1,0 +1,189 @@
+{
+  "recorded_at": "2026-10-11T03:30:01.347404+00:00",
+  "project": "P11",
+  "version": "0.1.5",
+  "run_kind": "local_viewport_regression",
+  "baseline": {
+    "commit": "615fd7bef60d497a7b4d574b0ef391870fc3c945",
+    "version": "0.1.4",
+    "path": "projects/realtime-integration-lab/public/client.js",
+    "sha256": "5574440edd5b582dede0b267f276b0f6a30bc062c339302994aab3eaf93750c3",
+    "execution": "Only the committed client is served through CHAT_TEST_CLIENT_PATH; all other assets use the working project."
+  },
+  "environment": {
+    "node": {
+      "command": [
+        "node",
+        "--version"
+      ],
+      "exit_code": 0,
+      "output": "v24.19.0"
+    },
+    "npm": {
+      "command": [
+        "npm",
+        "--version"
+      ],
+      "exit_code": 0,
+      "output": "11.9.0"
+    },
+    "chromium": {
+      "command": [
+        "/usr/bin/chromium",
+        "--version"
+      ],
+      "exit_code": 0,
+      "output": "Chromium 154.0.8037.57 built on Debian GNU/Linux 13 (trixie)"
+    },
+    "python": {
+      "command": [
+        "python3",
+        "--version"
+      ],
+      "exit_code": 0,
+      "output": "Python 3.12.14"
+    },
+    "platform": "Linux-6.18.44-x86_64-with-glibc2.41",
+    "browser_path": "/usr/bin/chromium",
+    "timezone": "Etc/UTC"
+  },
+  "commands": [
+    {
+      "label": "resize-baseline",
+      "cwd": "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/projects/realtime-integration-lab",
+      "command": [
+        "env",
+        "CHAT_TEST_CLIENT_PATH=/workspace/work/p11-014-resize-baseline.js",
+        "node",
+        "--test",
+        "--test-reporter=tap",
+        "--test-name-pattern=viewport",
+        "tests/reading.test.cjs"
+      ],
+      "started_at": "2026-10-11T03:27:03.091180+00:00",
+      "exit_code": 1,
+      "stdout": "TAP version 13\n# Subtest: viewport height changes keep live readers at the bottom\nnot ok 1 - viewport height changes keep live readers at the bottom\n  ---\n  duration_ms: 1104.435799\n  type: 'test'\n  location: '/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/projects/realtime-integration-lab/tests/reading.test.cjs:304:1'\n  failureType: 'testCodeFailure'\n  error: 'Live text stays visible at height 480'\n  code: 'ERR_ASSERTION'\n  name: 'AssertionError'\n  expected: true\n  actual: false\n  operator: '=='\n  stack: |-\n    TestContext.<anonymous> (/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/projects/realtime-integration-lab/tests/reading.test.cjs:310:12)\n    async Test.run (node:internal/test_runner/test:1389:7)\n    async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3)\n  ...\n# Subtest: viewport width reflow preserves earlier text through narrowing and widening\nnot ok 2 - viewport width reflow preserves earlier text through narrowing and widening\n  ---\n  duration_ms: 1159.883258\n  type: 'test'\n  location: '/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/projects/realtime-integration-lab/tests/reading.test.cjs:317:1'\n  failureType: 'testCodeFailure'\n  error: |-\n    Reflow keeps the same visible message\n    + actual - expected\n    \n    + 'Message 62: A long sentence wraps on a narrow screen and stays readable. A long sentence wraps on a narrow screen and stays readable. A long sentence wraps on a narrow screen and stays readable. A long sentence wraps on a narrow screen and stays readable.'\n    - 'Message 100: A long sentence wraps on a narrow screen and stays readable. A long sentence wraps on a narrow screen and stays readable. A long sentence wraps on a narrow screen and stays readable.'\n    \n  code: 'ERR_ASSERTION'\n  name: 'AssertionError'\n  expected: 'Message 100: A long sentence wraps on a narrow screen and stays readable. A long sentence wraps on a narrow screen and stays readable. A long sentence wraps on a narrow screen and stays readable.'\n  actual: 'Message 62: A long sentence wraps on a narrow screen and stays readable. A long sentence wraps on a narrow screen and stays readable. A long sentence wraps on a narrow screen and stays readable. A long sentence wraps on a narrow screen and stays readable.'\n  operator: 'strictEqual'\n  stack: |-\n    TestContext.<anonymous> (/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/projects/realtime-integration-lab/tests/reading.test.cjs:329:12)\n    async Test.run (node:internal/test_runner/test:1389:7)\n    async Test.processPendingSubtests (node:internal/test_runner/test:960:7)\n  ...\n# Subtest: viewport resizing preserves inactive unread state at the live edge\nnot ok 3 - viewport resizing preserves inactive unread state at the live edge\n  ---\n  duration_ms: 991.419374\n  type: 'test'\n  location: '/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/projects/realtime-integration-lab/tests/reading.test.cjs:343:1'\n  failureType: 'testCodeFailure'\n  error: 'Inactive live readers still follow after reflow'\n  code: 'ERR_ASSERTION'\n  name: 'AssertionError'\n  expected: true\n  actual: false\n  operator: '=='\n  stack: |-\n    TestContext.<anonymous> (/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/projects/realtime-integration-lab/tests/reading.test.cjs:351:10)\n    async Test.run (node:internal/test_runner/test:1389:7)\n    async Test.processPendingSubtests (node:internal/test_runner/test:960:7)\n  ...\n1..3\n# tests 3\n# suites 0\n# pass 0\n# fail 3\n# cancelled 0\n# skipped 0\n# todo 0\n# duration_ms 3966.558095\n",
+      "stderr": ""
+    },
+    {
+      "label": "resize-targeted",
+      "cwd": "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/projects/realtime-integration-lab",
+      "command": [
+        "node",
+        "--test",
+        "--test-reporter=tap",
+        "--test-name-pattern=viewport",
+        "tests/reading.test.cjs"
+      ],
+      "started_at": "2026-10-11T03:27:27.969249+00:00",
+      "exit_code": 0,
+      "stdout": "TAP version 13\n# Subtest: viewport height changes keep live readers at the bottom\nok 1 - viewport height changes keep live readers at the bottom\n  ---\n  duration_ms: 1388.499753\n  type: 'test'\n  ...\n# Subtest: viewport width reflow preserves earlier text through narrowing and widening\nok 2 - viewport width reflow preserves earlier text through narrowing and widening\n  ---\n  duration_ms: 1227.349716\n  type: 'test'\n  ...\n# Subtest: viewport resizing preserves inactive unread state at the live edge\nok 3 - viewport resizing preserves inactive unread state at the live edge\n  ---\n  duration_ms: 1023.315603\n  type: 'test'\n  ...\n1..3\n# tests 3\n# suites 0\n# pass 3\n# fail 0\n# cancelled 0\n# skipped 0\n# todo 0\n# duration_ms 4572.061187\n",
+      "stderr": ""
+    },
+    {
+      "label": "resize-full-chat",
+      "cwd": "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/projects/realtime-integration-lab",
+      "command": [
+        "npm",
+        "test"
+      ],
+      "started_at": "2026-10-11T03:27:59.045604+00:00",
+      "exit_code": 0,
+      "stdout": "\n> creative-ai-realtime-chat@0.1.5 test\n> node --test tests/*.test.cjs\n\n✔ two browser clients display accepted messages once in both directions (3806.082476ms)\n✔ a connected form submission waits behind an in-flight polling write (2267.944983ms)\n✔ a stale connected state does not retain a message for reconnect replay (2958.843031ms)\n✔ markup remains literal text in both browsers (4223.034823ms)\n✔ rejection is visible, preserves the draft, and does not broadcast (6178.874242ms)\n✔ a departed client keeps its draft and receives only future messages on rejoining (5480.838582ms)\n✔ transport interruption reconnects automatically without duplicating listeners (2156.95403ms)\n✔ browser retains only the latest 200 messages (1803.338382ms)\n✔ new browser receives future messages without server-side history (3103.038446ms)\n✔ missing acknowledgement reports uncertainty and does not retry automatically (6521.379044ms)\n✔ an acknowledgement does not erase a newer draft typed during sending (4368.850305ms)\n✔ protocol broadcasts trimmed messages to sender and peer in order (64.479656ms)\n✔ non-string payloads are rejected without broadcasts (21.291203ms)\n✔ empty and whitespace-only payloads are rejected without broadcasts (19.653833ms)\n✔ 501 code units are rejected even when trimming would shorten the payload (22.13624ms)\n✔ 500 UTF-16 code units are accepted including non-ASCII text (20.012269ms)\n✔ messages without acknowledgement callbacks do not crash the server (17.752857ms)\n✔ the conversation follows initial messages and readers within 24 pixels of the bottom (1374.003237ms)\n✔ new broadcasts preserve the visible message and pixel offset while browsing earlier text (986.301196ms)\n✔ scrolling back to the bottom resumes following subsequent messages (815.309792ms)\n✔ retention eviction preserves a surviving reading anchor across variable-height messages (1317.068393ms)\n✔ an evicted reading anchor falls back to the earliest retained message (1521.354898ms)\n✔ new arrivals show their count while preserving the reading position (900.188176ms)\n✔ keyboard activation returns to live text and keeps conversation focus (1018.388383ms)\n✔ manual scrolling to live text clears the count before the next browsing session (1225.531676ms)\n✔ unread counts stay bounded when arrivals exceed the retained history (1276.928787ms)\n✔ inactive tab counts arrivals at the live edge and clears them on focus (805.982833ms)\n✔ returning to an inactive tab at earlier text retains its unread count and anchor (814.3703ms)\n✔ hidden page keeps unread arrivals until visible at the live edge (856.367601ms)\n✔ inactive tab unread count stays bounded to retained messages (2248.104183ms)\n✔ viewport height changes keep live readers at the bottom (1386.99605ms)\n✔ viewport width reflow preserves earlier text through narrowing and widening (2110.833505ms)\n✔ viewport resizing preserves inactive unread state at the live edge (1608.459178ms)\nℹ tests 33\nℹ suites 0\nℹ pass 33\nℹ fail 0\nℹ cancelled 0\nℹ skipped 0\nℹ todo 0\nℹ duration_ms 64796.947294\n",
+      "stderr": ""
+    },
+    {
+      "label": "resize-p02-regressions",
+      "cwd": "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab",
+      "command": [
+        "python3",
+        "evaluations/chat-send-buffering/test_runner.py"
+      ],
+      "started_at": "2026-10-11T03:27:54.132194+00:00",
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ".......................\n----------------------------------------------------------------------\nRan 23 tests in 7.160s\n\nOK\n"
+    },
+    {
+      "label": "resize-integrity",
+      "cwd": "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab",
+      "command": [
+        "python3",
+        "tools/validate_repo.py"
+      ],
+      "started_at": "2026-10-11T03:30:01.697122+00:00",
+      "exit_code": 0,
+      "stdout": "PASS: 11 projects, 11 transfers, 0 assets, 2 legacy sources; 138 local file links.\nDocumentary checks only; no game, model benchmark or media runtime executed.\n",
+      "stderr": ""
+    }
+  ],
+  "summary": {
+    "baseline_resize_checks": {
+      "tests": 3,
+      "pass": 0,
+      "fail": 3
+    },
+    "corrected_resize_checks": {
+      "tests": 3,
+      "pass": 3,
+      "fail": 0
+    },
+    "full_chat": {
+      "tests": 33,
+      "pass": 33,
+      "fail": 0,
+      "skipped": 0,
+      "cancelled": 0
+    },
+    "evaluator_regressions": {
+      "tests": 23,
+      "pass": 23
+    },
+    "dependency_graph_unchanged_except_root_version": true,
+    "documentary_validation": {
+      "projects": 11,
+      "transfers": 11,
+      "assets": 0,
+      "legacy_sources": 2,
+      "local_file_links": 138
+    }
+  },
+  "artifacts_sha256": {
+    "projects/realtime-integration-lab/public/client.js": "b6288185b5ba4dbe9ec8d31f465401bc43c0937e4230a0105df3eae89f356c2d",
+    "projects/realtime-integration-lab/tests/reading.test.cjs": "137517f457bb35c458d693c8813335549bc1b17ff3efeedfb9b677500400ee65",
+    "projects/realtime-integration-lab/package.json": "c56324f42b185816a963dd0ceffbf34d5a216cdc14a1b2362c0c0231631bc809",
+    "projects/realtime-integration-lab/package-lock.json": "c81846f592febaa034d97e83d614fdbdad4f37756538dd5dc2ff1af85dd06325"
+  },
+  "preserved_execution_records_sha256": {
+    "evidence/continuous-integration/FOLLOWUP_RUN.json": "487092a306b4fb9bd6d19e838c559df10c5105361fe06d86223cafbbd1068249",
+    "evidence/continuous-integration/RUN.json": "6edbd9045c852ba41b5ff7f94acc748229628ef27a8b16800dafc9cfaf38c1f1",
+    "evidence/evaluation-task/CALIBRATION.json": "e5752a4b719b7bd1f291ff653e7b0b9be8cb58e9fff1956af251328ed4720a0a",
+    "evidence/evaluation-task/SNAPSHOT_RUN.json": "df2a757545babe9a9c3b18a236597e6611230240fe4135390ebb6d10d8cdefab",
+    "evidence/evaluation-task/SYNTAX_RUN.json": "c4bb9b672ed190eccc8ec6916c1c2b4e6131a9264cac162e42935139a0745ebf",
+    "evidence/evaluation-task/TIMEOUT_RUN.json": "5d28e144adc3ac2bbb5a220deef2b3107dcb97295c2f168e6c4d46d867331649",
+    "evidence/evaluation-task/UNREAD_CALIBRATION.json": "4ab059f3b3db46b2aaac111fdf901b1edb064224ade3ec3622178ebb9329ed89",
+    "evidence/legacy-audit/RUNS.json": "a25818fe9d9b6e6fd050403b17947c9d3e4c9cb65118c208b23919a24e3f7ff8",
+    "evidence/realtime-chat/ACTIVITY_RUN.json": "d531210f00e25772971f6383cd1f5f4785d14c148fd15c5b138d26cdedb36485",
+    "evidence/realtime-chat/POLLING_SEND_RUN.json": "8a84ac8e54f3a387e1d5d5db23b8856e47f1f98c19df6fe79b064b24f74ecbb7",
+    "evidence/realtime-chat/READING_RUN.json": "0bf52fea5812460bb589a1a66209f2280ce3fd50210cf25c6d9bb169b9e17992",
+    "evidence/realtime-chat/RUN.json": "c9fe2d2f53d0ff9a05f00a48c2dc13fbedc88f3a76615c1fc73d6337423a6f0c",
+    "evidence/realtime-chat/UNREAD_RUN.json": "1d7486ce6ee2d06b7acbdf653e7a002c8b555c03151c80e6488cb517f2e1b496",
+    "evidence/registry-validation/RUN.json": "6ce0e34df342d9bbe1991f51804bbdd57cdb06c97b23c2b6d68080702529c3fc",
+    "evidence/waystone-dialogue/RUN.json": "00fb2d8431b1d8c3fb145474430c23c12e8ad8f6e2c4d045fb3b0a33b5881596",
+    "evidence/waystone-dialogue/TRUST_RUN.json": "90542c344c438c6be7053645da95514e5ce553d0d081efaf69ccff53a555c110"
+  },
+  "preserved_archive_sha256": "6da636a270284eac1e11d00407dab364c2d9aa8c2f0485e77509e6ccf0dbc1dc",
+  "limits": [
+    "Real Chromium viewport dimensions and native tab focus are exercised; not human or assistive-technology review.",
+    "Preserves a message and CSS-pixel offset where scroll range permits, not a word or line after wrapping.",
+    "Browser zoom, font-only reflow, real minimized-window behavior and other browsers remain unverified.",
+    "P02 snapshots and its task contract are unchanged; calibration and other untouched suites will run in hosted CI.",
+    "No independent model candidate, score, shared component or deployment."
+  ],
+  "candidate_model": null,
+  "model_score": null,
+  "attribution": {
+    "Martin": "Portfolio direction and authorization.",
+    "Codex": "Assessment, implementation, automated validation and documentation."
+  }
+}

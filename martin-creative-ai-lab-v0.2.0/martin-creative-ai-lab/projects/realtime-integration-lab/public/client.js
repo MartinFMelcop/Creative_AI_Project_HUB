@@ -32,7 +32,57 @@ function clearVisibleUnread() {
   if (pageActive() && followingLatest()) clearUnread();
 }
 
-messages.addEventListener('scroll', clearVisibleUnread);
+function captureReadingPosition() {
+  const following = followingLatest();
+  const top = messages.getBoundingClientRect().top;
+  const anchor = following ? null : [...messages.children].find((item) => item.getBoundingClientRect().bottom > top);
+  return { following, anchor, offset: anchor ? anchor.getBoundingClientRect().top - top : 0 };
+}
+
+function restoreReadingPosition({ following, anchor, offset }) {
+  if (following) {
+    scrollRemainder = 0;
+    messages.scrollTop = messages.scrollHeight;
+  } else if (anchor?.isConnected) {
+    const target = messages.scrollTop + anchor.getBoundingClientRect().top - messages.getBoundingClientRect().top - offset + scrollRemainder;
+    messages.scrollTop = target;
+    // Carry subpixel correction so rounded scrollTop values do not accumulate drift.
+    scrollRemainder = target - messages.scrollTop;
+  } else {
+    // Evicted text cannot be recovered; stay at the retained-history boundary.
+    messages.scrollTop = 0;
+    scrollRemainder = 0;
+  }
+}
+
+let readingPosition;
+let layoutWidth;
+let layoutHeight;
+function rememberReadingPosition() {
+  readingPosition = captureReadingPosition();
+  layoutWidth = messages.clientWidth;
+  layoutHeight = messages.clientHeight;
+}
+
+function layoutChanged() {
+  return layoutWidth !== messages.clientWidth || layoutHeight !== messages.clientHeight;
+}
+
+function restoreResizedPosition() {
+  if (!layoutChanged()) return;
+  restoreReadingPosition(readingPosition);
+  rememberReadingPosition();
+  clearVisibleUnread();
+}
+
+rememberReadingPosition();
+new ResizeObserver(restoreResizedPosition).observe(messages);
+messages.addEventListener('scroll', () => {
+  // Reflow can itself dispatch scroll before ResizeObserver restores the old anchor.
+  if (layoutChanged()) return;
+  rememberReadingPosition();
+  clearVisibleUnread();
+});
 window.addEventListener('focus', clearVisibleUnread);
 document.addEventListener('visibilitychange', clearVisibleUnread);
 
@@ -41,6 +91,7 @@ latest.addEventListener('click', () => {
   messages.focus({ preventScroll: true });
   messages.scrollTop = messages.scrollHeight;
   scrollRemainder = 0;
+  rememberReadingPosition();
   clearUnread();
 });
 
@@ -54,30 +105,17 @@ socket.on('disconnect', () => updateConnection('Disconnected · reconnecting'));
 socket.on('connect_error', () => updateConnection('Unable to connect · retrying'));
 
 socket.on('chat message', (text) => {
-  const following = followingLatest();
-  const top = messages.getBoundingClientRect().top;
-  const anchor = following ? null : [...messages.children].find((item) => item.getBoundingClientRect().bottom > top);
-  const offset = anchor ? anchor.getBoundingClientRect().top - top : 0;
+  // A broadcast can arrive before the observer delivers a pending resize.
+  restoreResizedPosition();
+  const position = captureReadingPosition();
   const item = document.createElement('li');
   item.textContent = text;
   messages.appendChild(item);
   while (messages.children.length > 200) messages.firstElementChild.remove();
   document.getElementById('empty').hidden = true;
-  if (following) {
-    scrollRemainder = 0;
-    messages.scrollTop = messages.scrollHeight;
-  } else if (anchor?.isConnected) {
-    // Preserve content position, including when variable-height earlier items expire.
-    const target = messages.scrollTop + anchor.getBoundingClientRect().top - messages.getBoundingClientRect().top - offset + scrollRemainder;
-    messages.scrollTop = target;
-    // Carry subpixel correction so rounded scrollTop values do not accumulate drift.
-    scrollRemainder = target - messages.scrollTop;
-  } else {
-    // Evicted text cannot be recovered; stay at the retained-history boundary.
-    messages.scrollTop = 0;
-    scrollRemainder = 0;
-  }
-  if (following && pageActive()) {
+  restoreReadingPosition(position);
+  rememberReadingPosition();
+  if (position.following && pageActive()) {
     clearUnread();
   } else {
     // Counts describe arrivals still available in this page's retained window.

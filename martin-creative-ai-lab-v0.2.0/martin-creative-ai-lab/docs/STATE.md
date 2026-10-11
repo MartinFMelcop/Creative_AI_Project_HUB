@@ -1,47 +1,48 @@
 # Lab state
 
-**Updated:** 2026-10-11 (client date; America/Sao_Paulo). **Seed version:** 0.4.6, unchanged.
-**Current increment:** P11 local chat 0.1.4, activity-aware unread feedback.
+**Updated:** 2026-10-11 (environment UTC date). **Seed version:** 0.4.6, unchanged.
+**Current increment:** P11 local chat 0.1.5, viewport reading-position correction.
 P10 dialogue 0.1.1, P02 runner 0.2.0 and starter contract 0.1.0 stay unchanged.
 
 The checkout began clean at published
-`d498f08e20e4c59140771ed0ab502e5a099f110c`; fetch/merge confirmed the same main.
-[The previous CI run](https://github.com/MartinFMelcop/Creative_AI_Project_HUB/actions/runs/38106979790)
-passed both hosted jobs. The working chat still clears incoming unread state at
-its live edge when the page lacks focus. Select this user-visible correction
-within the existing prototype, without inventing human or candidate review.
+`615fd7bef60d497a7b4d574b0ef391870fc3c945`; fetch/merge confirmed the same main.
+[The previous hosted run](https://github.com/MartinFMelcop/Creative_AI_Project_HUB/actions/runs/38107882219)
+passed both jobs. Current tests covered arrivals and activity but left resizing
+unverified. Real viewport changes reproduce live-edge loss and earlier-message
+reflow displacement, making this the selected user-visible correction.
 
-[P11](../projects/realtime-integration-lab/README.md) now counts an arrival when
-its page is hidden, lacks focus or is reading earlier text. The tab title and
-Jump to latest show the same count, capped at 200 retained arrivals. Returning
-to a visible, focused page clears the count only within 24 pixels of the bottom;
-returning to earlier text preserves the count and reading anchor. Hidden scroll
-events cannot mark messages read. Jump to latest keeps its existing keyboard
-focus destination and restores the title. Near-bottom following, transport,
-no-replay behavior and retained-history limits remain in place. ADR-020 records
-this page-local activity policy; the dependency graph is unchanged.
+[P11](../projects/realtime-integration-lab/README.md) remembers live-following
+intent or the first visible message and pixel offset before layout changes.
+ResizeObserver restores it when the conversation's width or height changes;
+reflow-generated scroll events cannot overwrite that saved anchor. Broadcasts
+reconcile a pending resize before appending, and reuse the same restoration
+logic for retention eviction. Live readers stay at the bottom; earlier readers
+keep their message and offset where the scroll range permits. Inactive unread
+counts survive resizing; clearing still requires an active page near the bottom.
+ADR-021 records this choice. The dependency graph is unchanged.
 
-[Activity evidence](../evidence/realtime-chat/ACTIVITY_RUN.json) records the
-published client identity, source/test hashes, environment and actual commands.
-Four new checks fail on committed 0.1.3 and pass on 0.1.4; all 30 current chat
-checks and 23 evaluator regressions pass. Three activity checks use real Chromium
-tab focus after disabling Playwright's forced-focus override. Headless tabs stay
-visible, so the fourth explicitly controls the Page Visibility API boundary.
-The fixed P02 baseline/reference calibration remains 15/17 rejection and 17/17
-acceptance. P02's evaluator snapshot, nine-file starter and 17-check task are
-unchanged. Final registry/link/archive and manifest verification runs at closure.
-P10 and validator regression suites were not rerun locally; hosted CI checks them.
+[Resize evidence](../evidence/realtime-chat/RESIZE_RUN.json) records actual
+commands, environment, committed-baseline identity and artifact hashes. Three
+new checks fail on committed 0.1.4 and pass on 0.1.5. All 33 current chat checks
+(6 protocol, 27 Chromium) and 23 evaluator regressions pass locally. Real height
+changes and desktop/narrow wrapping include subsequent retention eviction and
+native tab focus. Historical execution JSON and the source archive are unchanged.
+Registry/link/archive validation passes with 138 local file links. The manifest
+is regenerated and verified at closure.
 
-P11 remains bounded local-chat M4. No notification permission, persistence,
-identity, extra package, shared library or deployment is added. Earlier evidence,
-archives and source inventory remain unchanged. Local execution uses Linux,
-Node 24.19.0 and system Chromium 154; the visibility probe does not establish
-real minimized-window behavior. Human/assistive-technology review, other browsers,
-resize/zoom behavior, independent candidate provenance and engine migration
-remain unverified. Martin supplied direction; Codex implemented/tested.
+P02 still materializes its committed evaluator snapshot; no task repinning or
+extra task requirement follows from working-client UI changes. Its controlled
+15/17 baseline rejection and 17/17 reference acceptance, plus unchanged dialogue
+and validator regressions, run in shared hosted CI after publication. They were
+not rerun locally in this iteration. P11 remains bounded local-chat M4.
+
+This preserves a message and CSS-pixel offset, not the same word after wrapping.
+Browser zoom, font-only reflow, other browsers, real minimized-window behavior,
+human/assistive-technology review and independent candidate provenance remain
+unverified. No deployment or shared component is introduced. Martin supplied
+direction; Codex implemented/tested.
 
 This record precedes publication. The final report supplies the matching remote
-main SHA and actual hosted-run result; the previous CI record remains historical.
-Next: Martin reviews inactive-page title/count feedback and keyboard reading;
-reader feedback on P10 and one independent EVAL-001 submission remain separate
-valuable gates.
+main SHA and actual hosted result. Next: Martin reviews resizing, unread feedback
+and keyboard reading; P10 reader feedback and an independent EVAL-001 submission
+remain separate valuable gates.

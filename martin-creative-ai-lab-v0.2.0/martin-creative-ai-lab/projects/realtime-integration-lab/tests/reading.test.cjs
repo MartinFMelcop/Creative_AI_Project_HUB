@@ -294,3 +294,63 @@ test('inactive tab unread count stays bounded to retained messages', async () =>
   await page.waitForFunction(() => document.getElementById('latest').hidden);
   assert.equal(await page.title(), title);
 });
+
+async function settleLayout() {
+  await page.evaluate(() => new Promise((resolve) => {
+    requestAnimationFrame(() => requestAnimationFrame(resolve));
+  }));
+}
+
+test('viewport height changes keep live readers at the bottom', async () => {
+  await publish(Array.from({ length: 40 }, (_, index) => message(index)));
+  await settleLayout();
+  for (const height of [480, 1000, 600]) {
+    await page.setViewportSize({ width: 1280, height });
+    await settleLayout();
+    assert.ok((await position()).distance <= 1, `Live text stays visible at height ${height}`);
+  }
+  await publish([message(40)]);
+  assert.ok((await position()).distance <= 1);
+  assert.equal(await page.locator('#latest').isVisible(), false);
+});
+
+test('viewport width reflow preserves earlier text through narrowing and widening', async () => {
+  const title = await page.title();
+  const reflowMessage = (index) => `Message ${index}: ${'A long sentence wraps on a narrow screen and stays readable. '.repeat(2 + index % 3)}`.trim();
+  await publish(Array.from({ length: 200 }, (_, index) => reflowMessage(index)));
+  await browse(100);
+  await settleLayout();
+  const previous = await position();
+  let next = 200;
+  for (const viewport of [{ width: 390, height: 844 }, { width: 1280, height: 800 }]) {
+    await page.setViewportSize(viewport);
+    await settleLayout();
+    let current = await position();
+    assert.equal(current.anchor, previous.anchor, 'Reflow keeps the same visible message');
+    assert.ok(Math.abs(current.offset - previous.offset) <= 1, 'Reflow keeps the visible offset');
+    await publish([reflowMessage(next++)]);
+    current = await position();
+    assert.equal(current.anchor, previous.anchor, 'Eviction after reflow keeps the same anchor');
+    assert.ok(Math.abs(current.offset - previous.offset) <= 1);
+  }
+  await page.getByRole('button', { name: '2 new messages · Jump to latest', exact: true }).waitFor();
+  assert.equal(await page.title(), `(2) ${title}`);
+  await page.locator('#latest').click();
+  assert.ok((await position()).distance <= 1);
+  assert.equal(await page.title(), title);
+});
+
+test('viewport resizing preserves inactive unread state at the live edge', async () => {
+  const title = await page.title();
+  await publish(Array.from({ length: 40 }, (_, index) => message(index)));
+  await leaveTabInactive();
+  await publish([message(40), message(41)]);
+  await settleLayout();
+  await page.setViewportSize({ width: 390, height: 600 });
+  await settleLayout();
+  assert.ok((await position()).distance <= 1, 'Inactive live readers still follow after reflow');
+  assert.equal(await page.title(), `(2) ${title}`, 'Resize does not mark inactive arrivals read');
+  await page.bringToFront();
+  await page.waitForFunction(() => document.hasFocus() && document.getElementById('latest').hidden);
+  assert.equal(await page.title(), title);
+});

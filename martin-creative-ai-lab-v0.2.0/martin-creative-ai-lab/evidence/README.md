@@ -1,5 +1,9 @@
 # Execution evidence
 
+- [P11 viewport resizing](realtime-chat/RESIZE_RUN.json): three committed 0.1.4
+  failures and the 0.1.5 correction, real desktop/narrow reflow, height changes,
+  retained-message anchoring and inactive unread counts. Zoom and font-only
+  changes remain unverified.
 - [P11 page activity](realtime-chat/ACTIVITY_RUN.json): committed 0.1.3 failures
   and 0.1.4 activity-aware unread counts, tab-title reset and preserved reading.
   Native Chromium focus and controlled visibility are distinguished; no human

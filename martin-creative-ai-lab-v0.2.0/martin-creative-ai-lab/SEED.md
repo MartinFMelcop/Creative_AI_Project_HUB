@@ -4,7 +4,7 @@
 **Data-base:** 10 de outubro de 2026  
 **Autor e responsável pelo portfólio:** Martin Melcop Neto  
 **Working language:** English for new documentation, plans, code comments, UI, and reports. Preserve original creative titles and historical source languages.
-**Current state:** P11 chat 0.1.4 adds activity-aware unread counts and tab-title feedback, with 30 protocol/Chromium checks. Shared GitHub checks also cover lab integrity, P10 dialogue 0.1.1 and P02 runner 0.2.0. Starter contract 0.1.0 and bounded maturity stay unchanged. Historical sources stay preserved; human creative review, independent model evidence and engine migration remain unperformed.
+**Current state:** P11 chat 0.1.5 preserves reading position through viewport resizing, with 33 protocol/Chromium checks; activity-aware unread counts and tab-title feedback remain covered. Shared GitHub checks also cover lab integrity, P10 dialogue 0.1.1 and P02 runner 0.2.0. Starter contract 0.1.0 and bounded maturity stay unchanged. Historical sources stay preserved; human creative review, independent model evidence and engine migration remain unperformed.
 
 > Construir um laboratório autoral em Git que transforma ideias, obras e experimentos em produtos pequenos, sistemas reutilizáveis e evidências técnicas verificáveis. A IA participa da criação e execução; Martin desenvolve sua capacidade de especificar, compreender, selecionar, corrigir, validar e explicar os resultados.
 
@@ -46,14 +46,14 @@ Se apenas este arquivo estiver disponível, ele é suficiente para iniciar a Fas
 |---|---|
 | Repository | MartinFMelcop/Creative_AI_Project_HUB; actual Git root `/workspace/Creative_AI_Project_HUB`; lab remains nested in its original package directory |
 | Preserved sources | 175 Rave Master texts and 3 WebSocket files; unchanged ZIP and inventory; not a complete RMXP backup |
-| Primary workstream | P11 0.1.4: count inactive-page arrivals and show/reset the tab title without losing earlier reading position; same bounded local-chat M4 |
+| Primary workstream | P11 0.1.5: preserve the live edge or earlier reading anchor through viewport resizing; retain inactive unread state; same bounded local-chat M4 |
 | Engine execution | P10 uses Python standard library; P11 uses Node/Express/Socket.IO. No Unity or RMXP runtime verified |
-| Current verification | Local 30 chat and 23 runner checks; four activity checks fail on published 0.1.3 and pass on 0.1.4. `evidence/realtime-chat/ACTIVITY_RUN.json` records commands, calibration and boundaries; GitHub logs establish hosted execution |
+| Current verification | Local chat and evaluator regressions; three resize checks fail on published 0.1.4 and pass on 0.1.5. `evidence/realtime-chat/RESIZE_RUN.json` records actual commands and boundaries; GitHub logs establish hosted execution |
 | Historical verification | v0.2.0 combat/dialogue, P10 trust, P11 unread and P02 snapshot records remain preserved; the old scenario runner was not rerun |
 | Next action | Reader review of P10 cooperative/conflict paths; P11 human review and independent EVAL-001 provenance remain separate gates |
 | Other seeds | P10 dialogue 0.1.1, P02 runner 0.2.0 and EVAL-001 starter 0.1.0 remain unchanged; missing creative/media baselines still need targeted recovery |
 | Transfer / shared status | TR-009 validated for P02 task adaptation/calibration only; 10 other transfers remain candidates; no shared component |
-| Portfolio / attribution | Shared CI published at `d498f08`, with both hosted jobs passing; P11 activity publication is verified at task closure. Martin supplied direction; Codex implemented/tested. Human and independent candidate reviews remain pending |
+| Portfolio / attribution | P11 activity published at `615fd7b`, with both hosted jobs passing; resize publication is verified at task closure. Martin supplied direction; Codex implemented/tested. Human and independent candidate reviews remain pending |
 
 Registry evidence paths must resolve to existing files inside the lab; working
 paths must be directories and legacy-source IDs must exist. This documentary
@@ -231,7 +231,7 @@ Identificadores persistem mesmo quando nomes mudam. Um projeto arquivado pode co
 | P08 | Audio, Poetry & Music Lab | Sons, poemas, letras e conceitos | Música, EP conceitual, trilhas, áudio adaptativo | Eixo autorizado; fontes específicas pendentes |
 | P09 | AI Delivery & Operations Cases | Carreira real e avaliação simulada | Case de entrega, análise de workflow e rubricas | Base profissional lida; cases anteriores pendentes |
 | P10 | Adventures Unleashed / Rave Master | Narrativa, NPCs, combate, dados, arte/áudio e QA | Reservatório de sistemas e cenas; fatias adaptadas | Waystone CLI 0.1.1: 23 checks, bounded M4; preserved origin and historical runners unchanged |
-| P11 | Real-time Integration Lab / WebSocket | Node/Socket.IO event flow; three preserved source files | Local chat; later evaluation task or lobby candidate | Working chat 0.1.4: 30 checks, activity-aware unread/title feedback; TR-009 task adaptation verified; no public hosting |
+| P11 | Real-time Integration Lab / WebSocket | Node/Socket.IO event flow; three preserved source files | Local chat; later evaluation task or lobby candidate | Working chat 0.1.5: viewport reading restoration and activity-aware unread/title feedback; TR-009 task adaptation verified; no public hosting |
 
 P02 agrupa evaluation e QA porque podem compartilhar a mesma aplicação pequena. Não criar dois projetos Unity idênticos apenas para apresentar títulos diferentes. P01 pode abrigar produção, economia e analytics como cases distintos de uma fonte comum.
 
