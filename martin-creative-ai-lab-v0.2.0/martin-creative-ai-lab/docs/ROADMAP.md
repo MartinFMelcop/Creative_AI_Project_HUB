@@ -20,8 +20,9 @@ Sem calendário contratado. Definir esforço e ordem conforme recursos e objetiv
 
 P10 has its first playable destination: [The Last Waystone](../projects/waystone-dialogue/README.md),
 a bounded CLI scene using nine verified dialogue variants, stateful consequences,
-four endings and restart. Nineteen behavior/CLI/source checks validate its technical
-contract. The new creative slice follows the completed P02 snapshot increment;
+four endings and restart. Version 0.1.1 requires resolving a lie before agreement
+and caps apology recovery at pre-fault trust; twenty-three behavior/CLI/source
+checks validate the contract. The creative slice follows the completed P02 snapshot increment;
 it does not start the other creative seeds or complete an engine migration.
 
 Next: a reader reviews the dialogue and consequences on cooperative/conflict

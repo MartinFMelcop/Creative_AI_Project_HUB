@@ -291,3 +291,28 @@ as candidates until a second destination proves actual use.
 
 **Revisit:** reader feedback, another scene consumer, persistence, different
 memory/selection semantics or an engine requirement with its own runtime evidence.
+
+## ADR-018 — let apology repair harm and require resolving deception
+
+**Date:** 2026-10-11 (environment UTC date). **Status:** P10 CLI 0.1.1.
+
+Observed 0.1.0 grants passage with an unresolved false order. Three lie/apology
+cycles also increase trust 45 to 63; at trust 39, one cycle crosses the threshold.
+The single-apology gate stops repeats of one apology but leaves manufactured
+new faults profitable. Correct this scene behavior without changing the archive
+or claiming the legacy design itself is defective.
+
+Remember trust when the first unresolved lie opens. Retain that ceiling through
+additional lies and outbursts. Cap the catalog's +6 apology recovery at this
+ceiling, then clear the obligation/ceiling. Each new episode remembers current
+trust. Require no unresolved lie for cooperation. A higher-priority scene refusal
+asks for correction and takes a turn; a refused last-turn agreement reaches dusk.
+Trace origin distinguishes that new response from the nine retained records.
+
+Four new regression methods produce five failures on committed 0.1.0, including
+both initial-trust subtests. All 23 behavior/CLI/source checks pass on 0.1.1.
+Human dramatic quality and balance remain unreviewed. This stays within the
+existing P10 destination, so seed version 0.4.6 and bounded M4 do not change.
+
+**Revisit:** reader feedback or an honest trust-gaining action. Future unrelated
+trust effects need an explicit recovery rule instead of silently expanding this cap.

@@ -18,6 +18,47 @@ ROOT = HERE.parents[1]
 
 
 class SceneTests(unittest.TestCase):
+    def test_unresolved_lie_blocks_agreement_until_apology(self):
+        scene = Scene()
+        scene.act("lie")
+        scene.act("herbs")
+        response = scene.act("bargain")
+        self.assertIsNone(scene.state.ending)
+        self.assertTrue(scene.state.apology_due)
+        self.assertEqual(scene.state.apology_trust_ceiling, 45)
+        self.assertEqual(scene.state.mood, "WARY")
+        self.assertEqual(response["variant_id"], "SCENE_BARGAIN_UNRESOLVED_LIE")
+        self.assertEqual(response["variant_origin"], "scene")
+        self.assertIn("false order", response["text"])
+        scene.act("apologize")
+        scene.act("bargain")
+        self.assertEqual((scene.state.ending, scene.state.turn), ("COOPERATED", 5))
+
+    def test_new_lies_and_apologies_cannot_increase_pre_fault_trust(self):
+        for initial in [45, 39]:
+            with self.subTest(initial=initial):
+                scene = Scene()
+                scene.state.trust = initial
+                for _ in range(3):
+                    scene.act("lie")
+                    scene.act("apologize")
+                    self.assertEqual(scene.state.trust, initial)
+                    self.assertIsNone(scene.state.apology_trust_ceiling)
+                scene.act("herbs")
+                scene.act("bargain")
+                self.assertEqual(scene.state.ending, "COOPERATED" if initial >= 40 else None)
+
+    def test_unresolved_lie_cannot_win_on_the_last_turn(self):
+        scene = Scene()
+        scene.act("herbs")
+        scene.act("lie")
+        for _ in range(MAX_TURNS - 3):
+            scene.act("wait")
+        response = scene.act("bargain")
+        self.assertEqual((scene.state.turn, scene.state.ending), (MAX_TURNS, "DUSK"))
+        self.assertIn("false order", response["text"])
+        self.assertTrue(scene.state.apology_due)
+
     def test_crossing_requires_help_before_agreement(self):
         scene = Scene()
         first = scene.act("bargain")
@@ -43,6 +84,13 @@ class SceneTests(unittest.TestCase):
         self.assertEqual(scene.state.flags, {"FLAG_PLAYER_LIED", "FLAG_OUTBURST_RECENT"})
         self.assertIn("EVT_NPC_OUTBURST", scene.state.events)
         self.assertTrue(turns[-1]["variant_id"].endswith("OUTBURST_001"))
+        self.assertTrue(all(r["after"]["apology_trust_ceiling"] == 45 for r in turns))
+        for _ in range(5):
+            scene.act("wait")
+        repeated = scene.act("lie")
+        self.assertEqual(repeated["before"]["trust"], 33)
+        self.assertEqual(scene.state.trust, 21)
+        self.assertEqual(scene.state.apology_trust_ceiling, 45)
 
     def test_negotiation_trust_boundary(self):
         for trust, variant, mood, stress, ending in [
@@ -72,8 +120,9 @@ class SceneTests(unittest.TestCase):
         scene.act("lie")
         scene.act("apologize")
         self.assertEqual((scene.state.stress, scene.state.trust, scene.state.mood),
-                         (30, 51, "NEUTRAL"))
+                         (30, 45, "NEUTRAL"))
         self.assertFalse(scene.state.apology_due)
+        self.assertIsNone(scene.state.apology_trust_ceiling)
         self.assertIn("FLAG_PLAYER_LIED", scene.state.flags)
         self.assertIn("EVT_PLAYER_PRAISED", scene.state.events)
         before = scene.state.snapshot()
@@ -107,6 +156,7 @@ class SceneTests(unittest.TestCase):
         self.assertEqual(scene.state.turn, 9)
         scene.act("apologize")
         self.assertEqual(scene.state.trust, 39)
+        self.assertIsNone(scene.state.apology_trust_ceiling)
         self.assertEqual(scene.state.stress, 69)
         scene.act("herbs")
         scene.act("bargain")
@@ -118,6 +168,7 @@ class SceneTests(unittest.TestCase):
         scene.state.stress = 5
         scene.state.trust = 99
         scene.state.apology_due = True
+        scene.state.apology_trust_ceiling = 100
         scene.act("apologize")
         self.assertEqual((scene.state.stress, scene.state.trust), (0, 100))
         scene.state.stress = 80
@@ -246,6 +297,19 @@ class CliTests(unittest.TestCase):
 
     def traces(self, output):
         return [json.loads(line[6:]) for line in output.splitlines() if line.startswith("TRACE ")]
+
+    def test_real_cli_requires_apology_before_granting_passage(self):
+        output = self.run_cli("lie\nherbs\nbargain\nstatus\napologize\nbargain\nquit\n", "--trace")
+        trace = self.traces(output)
+        self.assertEqual(len(trace), 5)
+        self.assertIsNone(trace[2]["after"]["ending"])
+        self.assertEqual(trace[2]["variant_id"], "SCENE_BARGAIN_UNRESOLVED_LIE")
+        self.assertEqual(trace[3]["after"]["trust"], 45)
+        self.assertFalse(trace[3]["after"]["apology_due"])
+        self.assertIsNone(trace[3]["after"]["apology_trust_ceiling"])
+        self.assertEqual(trace[3]["variant_origin"], "legacy-adaptation")
+        self.assertEqual(trace[4]["after"]["ending"], "COOPERATED")
+        self.assertEqual(output.count("Ending: COOPERATED"), 1)
 
     def test_number_choices_play_to_completion_without_trace(self):
         output = self.run_cli("2\n2\nstatus\nwait\nquit\n")

@@ -4,7 +4,7 @@
 **Data-base:** 10 de outubro de 2026  
 **Autor e responsável pelo portfólio:** Martin Melcop Neto  
 **Working language:** English for new documentation, plans, code comments, UI, and reports. Preserve original creative titles and historical source languages.
-**Current state:** P10 Waystone dialogue 0.1.0 is a playable Python CLI adaptation with 19 behavior/CLI/source checks. P02 runner 0.2.0 and P11 chat 0.1.3 remain unchanged. Historical sources stay preserved; human creative review, independent model evidence and engine migration remain unperformed.
+**Current state:** P10 Waystone dialogue 0.1.1 is a playable Python CLI adaptation with 23 behavior/CLI/source checks, unresolved-lie agreement refusal and capped apology recovery. P02 runner 0.2.0 and P11 chat 0.1.3 remain unchanged. Historical sources stay preserved; human creative review, independent model evidence and engine migration remain unperformed.
 
 > Construir um laboratório autoral em Git que transforma ideias, obras e experimentos em produtos pequenos, sistemas reutilizáveis e evidências técnicas verificáveis. A IA participa da criação e execução; Martin desenvolve sua capacidade de especificar, compreender, selecionar, corrigir, validar e explicar os resultados.
 
@@ -46,14 +46,14 @@ Se apenas este arquivo estiver disponível, ele é suficiente para iniciar a Fas
 |---|---|
 | Repository | MartinFMelcop/Creative_AI_Project_HUB; actual Git root `/workspace/Creative_AI_Project_HUB`; lab remains nested in its original package directory |
 | Preserved sources | 175 Rave Master texts and 3 WebSocket files; unchanged ZIP and inventory; not a complete RMXP backup |
-| Primary workstream | P10 Waystone dialogue 0.1.0: bounded CLI scene, stateful consequences, four endings and restart; technical M4 only |
+| Primary workstream | P10 Waystone dialogue 0.1.1: require resolving lies before agreement; cap apology recovery at pre-fault trust; same bounded CLI M4 |
 | Engine execution | P10 uses Python standard library; P11 uses Node/Express/Socket.IO. No Unity or RMXP runtime verified |
-| Current verification | P10: 19 checks and CLI play traces in `evidence/waystone-dialogue/RUN.json`; registry/link/archive validation. Unchanged P02/P11 evidence remains historical |
+| Current verification | P10: 23 checks and committed old/new comparisons in `evidence/waystone-dialogue/TRUST_RUN.json`; registry/link/archive validation. Unchanged P02/P11 evidence remains historical |
 | Historical verification | v0.2.0 combat/dialogue runner reports, P11 unread and P02 snapshot records remain preserved; those runtimes were not rerun in this increment |
 | Next action | Reader review of P10 cooperative/conflict paths; P11 human review and independent EVAL-001 provenance remain separate gates |
 | Other seeds | P02 runner 0.2.0, P11 app 0.1.3 and EVAL-001 starter 0.1.0 remain unchanged; missing creative/media baselines still need targeted recovery |
 | Transfer / shared status | TR-009 validated for P02 task adaptation/calibration only; 10 other transfers remain candidates; no shared component |
-| Portfolio / attribution | P02 snapshots published at `89323bf`; P10 publication is verified at task closure. Martin supplied direction; Codex adapted/implemented/tested. Human and independent candidate reviews remain pending |
+| Portfolio / attribution | P10 0.1.0 published at `73bf8ee`; the trust correction is verified at task closure. Martin supplied direction; Codex adapted/implemented/tested. Human and independent candidate reviews remain pending |
 
 Registry evidence paths must resolve to existing files inside the lab; working
 paths must be directories and legacy-source IDs must exist. This documentary
@@ -230,7 +230,7 @@ Identificadores persistem mesmo quando nomes mudam. Um projeto arquivado pode co
 | P07 | Visual Generation & Asset Lab | Capas, ilustrações, sprites e direção | Assets consistentes, pipeline e estudo de seleção | Material visual histórico; inventário pendente |
 | P08 | Audio, Poetry & Music Lab | Sons, poemas, letras e conceitos | Música, EP conceitual, trilhas, áudio adaptativo | Eixo autorizado; fontes específicas pendentes |
 | P09 | AI Delivery & Operations Cases | Carreira real e avaliação simulada | Case de entrega, análise de workflow e rubricas | Base profissional lida; cases anteriores pendentes |
-| P10 | Adventures Unleashed / Rave Master | Narrativa, NPCs, combate, dados, arte/áudio e QA | Reservatório de sistemas e cenas; fatias adaptadas | Waystone CLI 0.1.0: 19 checks, bounded M4; preserved origin and historical runners unchanged |
+| P10 | Adventures Unleashed / Rave Master | Narrativa, NPCs, combate, dados, arte/áudio e QA | Reservatório de sistemas e cenas; fatias adaptadas | Waystone CLI 0.1.1: 23 checks, bounded M4; preserved origin and historical runners unchanged |
 | P11 | Real-time Integration Lab / WebSocket | Node/Socket.IO event flow; three preserved source files | Local chat; later evaluation task or lobby candidate | Working chat 0.1.1 validated and Git-published; TR-009 task adaptation verified; no public hosting |
 
 P02 agrupa evaluation e QA porque podem compartilhar a mesma aplicação pequena. Não criar dois projetos Unity idênticos apenas para apresentar títulos diferentes. P01 pode abrigar produção, economia e analytics como cases distintos de uma fonte comum.
@@ -412,9 +412,10 @@ Reservatório recuperado de RPG Maker XP/RGSS: narrativa, personalidade e diálo
 
 [The Last Waystone](projects/waystone-dialogue/README.md) is now P10's first working
 adaptation: nine verified NPC-0007 variants, English framing/responses, closed
-state predicates, session memory, four endings and restart. Nineteen checks
+state predicates, session memory, four endings and restart. Version 0.1.1 adds
+unresolved-lie agreement refusal and capped apology recovery. Twenty-three checks
 validate its bounded CLI contract. New scene rules and catalog/profile threshold
-choice are recorded in provenance and ADR-017; no full RPG equivalence, weighted
+choice are recorded in provenance and ADR-017/018; no full RPG equivalence, weighted
 scoring, human creative review or engine migration is claimed.
 
 ### P11 — Real-time Integration Lab / WebSocket
@@ -1535,7 +1536,7 @@ latest control while preserving earlier reading position. Returning to the botto
 clears the count; activation transfers focus into the conversation. P02 runner 0.1.4 pins the new app commit and preserves
 its candidate contract; controlled calibration is recorded separately. No extra project or maturity gate.
 
-### Current destination — v0.4.6
+### First destination milestone — v0.4.6
 
 P10 Waystone dialogue 0.1.0 makes one preserved dialogue subset playable.
 [The scene](projects/waystone-dialogue/README.md) and

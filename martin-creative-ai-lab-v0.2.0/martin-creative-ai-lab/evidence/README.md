@@ -1,6 +1,9 @@
 # Execution evidence
 
-- [P10 Waystone dialogue](waystone-dialogue/RUN.json): 19 behavior/CLI/source
+- [P10 trust correction](waystone-dialogue/TRUST_RUN.json): committed 0.1.0
+  regression failures, all 23 current checks and actual old/new CLI decisions.
+  Unresolved lies now block agreement; apologies repair up to pre-fault trust.
+- [P10 initial Waystone dialogue](waystone-dialogue/RUN.json): 19 behavior/CLI/source
   checks, actual ending/cooldown play traces, environment and artifact identity.
   This validates the bounded CLI contract, not human narrative quality or RGSS.
 

@@ -6,7 +6,8 @@ protocol/browser tests. It does not require installing the other project seeds.
 
 [P10 — The Last Waystone](waystone-dialogue/README.md) adapts nine preserved NPC
 responses into a playable Python dialogue scene with consequences, four endings,
-restart and a decision trace. It has 19 behavior/CLI/source checks; human creative
+restart and a decision trace. Version 0.1.1 has 23 behavior/CLI/source checks,
+with unresolved-lie agreement refusal and capped apology recovery; human creative
 review remains pending. No engine or external dependency is required.
 
 The remaining lines are described in [the seed](../SEED.md) and

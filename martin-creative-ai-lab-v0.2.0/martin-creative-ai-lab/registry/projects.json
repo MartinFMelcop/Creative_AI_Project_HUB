@@ -185,12 +185,13 @@
         "evidence/legacy-audit/RUNS.json",
         "projects/waystone-dialogue/README.md",
         "projects/waystone-dialogue/provenance.json",
-        "evidence/waystone-dialogue/RUN.json"
+        "evidence/waystone-dialogue/RUN.json",
+        "evidence/waystone-dialogue/TRUST_RUN.json"
       ],
       "source_id": "LEGACY-001",
       "working_path": "projects/waystone-dialogue",
-      "working_version": "0.1.0",
-      "maturity_scope": "Waystone CLI contract only: 19 behavior/CLI/source checks, four executed endings, stress/trust/memory consequences and restart. No human narrative/balance review, full weighted scoring, assets or RGSS/Unity integration."
+      "working_version": "0.1.1",
+      "maturity_scope": "Waystone CLI 0.1.1 contract only: 23 behavior/CLI/source checks, committed-baseline failures and real CLI comparisons. Unresolved lies block agreement; apology recovery cannot exceed pre-fault trust. Previous endings/restart/cooldown remain tested. No human narrative/balance review, full scoring, assets or engine integration."
     },
     {
       "id": "P11",

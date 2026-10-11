@@ -38,6 +38,8 @@
     "Action-specific gates replace the original tags: herbs=OBSESSION_TOPIC, ask=STAKES_LOW, apologize=PLAYER_IS_WRONG + PLAYER_APOLOGIZED only for an unresolved lie.",
     "Stress 80 comes from the selected catalog conditions; profile OutburstThreshold 88 is not used. Cooldown 5 comes from the profile.",
     "Existing outbursts permit only wait or leave. Five subsequent accepted waits restore WARY; the entry turn and invalid/diagnostic input do not tick cooldown.",
-    "Herbs can be sorted once. Each new lie opens one apology; apology closes that obligation while historical lie flags remain. Memory is session-local and reset by restart."
+    "Herbs can be sorted once. Each new lie opens one apology; apology closes that obligation while historical lie flags remain. Memory is session-local and reset by restart.",
+    "Cooperation now requires resolving a lie. SCENE_BARGAIN_UNRESOLVED_LIE is a new scene response, not a legacy row; traces mark scene versus legacy-adaptation origin.",
+    "The first unresolved lie remembers pre-fault trust. Later lies retain this ceiling. The retained +6 apology delta is capped at that trust level; resolving the episode clears the ceiling."
   ]
 }

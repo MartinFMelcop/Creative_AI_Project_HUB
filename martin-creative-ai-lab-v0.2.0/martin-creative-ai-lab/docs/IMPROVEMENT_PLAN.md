@@ -1,4 +1,19 @@
-# Current increment — playable P10 dialogue
+# Current increment — P10 trust consequences
+
+Published 0.1.0 grants passage with an unresolved lie and rewards repeated
+lie/apology cycles with extra trust. Correct those two observed behaviors before
+expanding the scene. Preserve its nine retained source records; define one new
+scene refusal and cap apology recovery at the trust remembered when a fault opens.
+
+Acceptance: after a lie, no agreement before apology; no trust farming from repeated episodes
+above or below the negotiation threshold, original ceiling retained during
+unresolved escalation, correct last-turn dusk and a playable repaired CLI path.
+Four new regression methods reproduce the old flaws; all 23 current scene checks
+pass. [Evidence](../evidence/waystone-dialogue/TRUST_RUN.json) records the comparison.
+The same P10 workstream and bounded M4 remain; seed version stays 0.4.6. Human
+creative/balance review and independent P02/P11 gates remain separate.
+
+# Completed increment — playable P10 dialogue
 
 Adapt a selected NPC-0007 catalog into one coherent English CLI scene. Keep the
 archive read-only, verify the nine selected records and four supporting files,

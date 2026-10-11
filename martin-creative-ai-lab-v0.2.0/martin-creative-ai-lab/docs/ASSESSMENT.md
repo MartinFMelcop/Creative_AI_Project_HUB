@@ -1,4 +1,19 @@
-# Current assessment — a playable recovered dialogue slice
+# Current assessment — P10 trust consequences
+
+The clean published `73bf8ee` checkout matches fetched main. In actual 0.1.0
+execution, `lie`, `herbs`, `bargain` ends in cooperation while apology is still
+due. Three lie/apology cycles raise trust from 45 to 63; even low trust 39 can
+cross the agreement gate by manufacturing a fault. These observable consequences
+undermine the scene's warning and apology interaction.
+
+Select a bounded correction: require resolving the lie before agreement and
+limit apology recovery to remembered pre-fault trust. Retain legacy deltas as
+catalog values, with the episode ceiling as an explicit scene rule. Four new
+regression methods reproduce the defects on committed 0.1.0; all 23 scene checks
+pass on 0.1.1. This is technical/narrative-logic validation, not a human balance
+or creative-quality review. Earlier assessments below are historical context.
+
+# Previous assessment — a playable recovered dialogue slice
 
 The clean checkout at published `89323bf` matches fetched main. P02's snapshot
 runner is complete; an independent candidate and Martin's P11 review are still

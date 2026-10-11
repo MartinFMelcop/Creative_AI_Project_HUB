@@ -8,7 +8,7 @@ import json
 from dataclasses import dataclass, field
 from typing import Callable
 
-VERSION = "0.1.0"
+VERSION = "0.1.1"
 MAX_TURNS = 12
 OUTBURST_COOLDOWN = 5
 INTRO = (
@@ -49,6 +49,7 @@ class State:
     turn: int = 0
     herbs_sorted: bool = False
     apology_due: bool = False
+    apology_trust_ceiling: int | None = None
     flags: set[str] = field(default_factory=set)
     events: set[str] = field(default_factory=set)
     ending: str | None = None
@@ -58,6 +59,7 @@ class State:
             "stress": self.stress, "trust": self.trust, "respect": self.respect,
             "mood": self.mood, "cooldown": self.cooldown, "turn": self.turn,
             "herbs_sorted": self.herbs_sorted, "apology_due": self.apology_due,
+            "apology_trust_ceiling": self.apology_trust_ceiling,
             "flags": sorted(self.flags), "events": sorted(self.events),
             "ending": self.ending,
         }
@@ -122,6 +124,15 @@ VARIANTS = (
             events=("EVT_NPC0007_LEAVE_SCENE",)),
 )
 
+# This response belongs to the new scene, not the preserved NPC catalog. Its
+# higher priority keeps an unresolved lie from selecting an agreement response.
+SCENE_VARIANTS = (
+    Variant("SCENE_BARGAIN_UNRESOLVED_LIE", "bargain", 100,
+            lambda s: calm(s) and s.apology_due,
+            "First, correct the false order. I won't agree while you're hiding behind the council.",
+            mood="WARY"),
+)
+
 
 class Scene:
     def __init__(self):
@@ -147,10 +158,13 @@ class Scene:
             raise ValueError("The scene has ended. Restart to play again.")
         if action not in self.available_actions():
             raise ValueError("That choice is unavailable. Use a listed choice.")
+        if action == "apologize" and s.apology_trust_ceiling is None:
+            raise RuntimeError("An unresolved lie must retain its earlier trust level.")
 
         # Reject unavailable input before advancing any memory, clock or cooldown.
         before = s.snapshot()
-        candidates = [v for v in VARIANTS if v.action == action and v.gate(s)]
+        candidates = [v for v in VARIANTS + SCENE_VARIANTS
+                      if v.action == action and v.gate(s)]
         variant = (max(candidates, key=lambda v: (v.priority, v.source_id))
                    if candidates else None)
         if action != "wait" and variant is None:
@@ -170,9 +184,13 @@ class Scene:
         if action == "herbs":
             s.herbs_sorted = True
         elif action == "lie":
+            if not before["apology_due"]:
+                s.apology_trust_ceiling = before["trust"]
             s.apology_due = True
         elif action == "apologize":
+            s.trust = min(s.trust, before["apology_trust_ceiling"])
             s.apology_due = False
+            s.apology_trust_ceiling = None
 
         if s.mood == "OUTBURST" and before["mood"] != "OUTBURST":
             s.cooldown = OUTBURST_COOLDOWN
@@ -183,18 +201,21 @@ class Scene:
                 text += "\nTheir breathing steadies. They are ready to listen again."
 
         s.turn += 1
-        if action == "bargain" and s.herbs_sorted and before["trust"] >= 40:
+        if (action == "bargain" and s.herbs_sorted and before["trust"] >= 40
+                and not s.apology_due):
             s.ending = "COOPERATED"
         elif action == "leave":
             s.ending = "DISMISSED" if s.mood == "AVOIDANT" else "LEFT"
         elif s.turn >= MAX_TURNS:
             s.ending = "DUSK"
-        elif action == "bargain" and before["trust"] >= 40 and not s.herbs_sorted:
+        elif (action == "bargain" and before["trust"] >= 40
+              and not s.herbs_sorted and not s.apology_due):
             text += "\n'But first, this basket. I can't work under a heap of herbs.'"
 
         result = {
             "action": action,
             "variant_id": variant.source_id if variant else "SCENE_WAIT",
+            "variant_origin": "legacy-adaptation" if variant in VARIANTS else "scene",
             "eligible_variants": sorted(v.source_id for v in candidates),
             "text": text, "before": before, "after": s.snapshot(),
         }
