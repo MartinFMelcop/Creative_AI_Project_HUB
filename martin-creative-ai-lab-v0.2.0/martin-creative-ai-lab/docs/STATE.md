@@ -35,3 +35,8 @@ evidence is historical, not overwritten. No Sites update or external service.
 Next compare unassisted P06 play/listening and animation with P03's distinct second
 stage, P01 board presentation and P11 actual collaborator/access requirements.
 Do not make media generation or native technology an automatic next priority.
+
+Hosted verification follow-up: initial commit `924fd5e` passed native-media and
+C# jobs, but the documentary regression fixture omitted asset-only evidence.
+The fixture now creates evidence for projects, transfers and assets. All eleven
+validator and eleven manifest regressions pass locally; validation policy unchanged.

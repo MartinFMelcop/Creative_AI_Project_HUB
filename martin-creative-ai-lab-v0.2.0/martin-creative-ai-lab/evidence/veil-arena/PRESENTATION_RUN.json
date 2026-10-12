@@ -145,5 +145,13 @@
     "registry_scope": "Only P06/P07/P08, VIS-001/AUD-002 and TR-013/TR-014 changed; existing other IDs equal baseline",
     "preserved_projects_and_archive": "git diff --exit-code 8864e4d confirms unchanged",
     "manifest": "217 maintained files covered exactly once; all SHA-256 hashes verified"
+  },
+  "hosted_followup": {
+    "initial_commit": "924fd5ec8104dec58b1276b37e9a0648ad09f420",
+    "run_id": 38221249185,
+    "native_and_eclipse_jobs": "success",
+    "documentary_failure": "Existing regression fixture did not create asset-only audio-catalog evidence; actual registry validation passed.",
+    "correction": "Include optional asset evidence in fixture setup; validator policy unchanged.",
+    "executed": "11 validator regressions, 11 manifest regressions and current registry validation pass locally."
   }
 }

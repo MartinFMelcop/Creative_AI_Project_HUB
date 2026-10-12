@@ -21,10 +21,11 @@ class DocumentOwnershipTests(unittest.TestCase):
         shutil.copytree(ROOT / "registry", self.fixture / "registry")
         shutil.copytree(ROOT / "archive", self.fixture / "archive")
         # Supply the registry's referenced files without copying runtime dependencies.
-        for filename, key in (("projects.json", "projects"), ("transfers.json", "transfers")):
+        for filename, key in (("projects.json", "projects"), ("transfers.json", "transfers"),
+                              ("assets.json", "assets")):
             rows = json.loads((self.fixture / "registry" / filename).read_text())[key]
             for row in rows:
-                for name in row["evidence"]:
+                for name in row.get("evidence", []):
                     path = self.fixture / name
                     path.parent.mkdir(parents=True, exist_ok=True)
                     path.touch()
