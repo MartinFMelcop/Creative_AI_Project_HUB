@@ -1,0 +1,12 @@
+{
+  "name": "tokyo80s-midnight-signal",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "P03 original four-lane rhythm prototype with a rendered P08 soundtrack",
+  "scripts": {
+    "test": "node --test tests/core.test.mjs",
+    "test:browser": "node --test tests/browser.test.mjs",
+    "serve": "node server.mjs"
+  }
+}

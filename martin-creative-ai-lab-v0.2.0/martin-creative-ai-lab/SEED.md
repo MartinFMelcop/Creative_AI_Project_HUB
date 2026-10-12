@@ -1,10 +1,10 @@
 # SEED — Martin Creative AI Lab
 
-**Version:** 0.5.0
+**Version:** 0.6.0
 **Data-base:** 10 de outubro de 2026  
 **Autor e responsável pelo portfólio:** Martin Melcop Neto  
 **Working language:** English for new documentation, plans, code comments, UI, and reports. Preserve original creative titles and historical source languages.
-**Current state:** P10 now has Flood Crossing, a complete terminal rescue adventure joining preparation, Keeper negotiation, two river routes and consequence-specific endings. The original dialogue remains a standalone adaptation. See `docs/STATE.md` and the registry for current versions and executed evidence; human playtesting and commercial demand remain unverified.
+**Current state:** P03 Tokyo 80s now has Midnight Signal, a complete browser rhythm stage using an actual original P08 soundtrack. P10's rescue operation and P11/P02 sources are preserved. See `docs/STATE.md` and the registry for exact verification and publication; human play/listening and commercial demand remain unverified.
 
 > Construir um laboratório autoral em Git que transforma ideias, obras e experimentos em produtos pequenos, sistemas reutilizáveis e evidências técnicas verificáveis. A IA participa da criação e execução; Martin desenvolve sua capacidade de especificar, compreender, selecionar, corrigir, validar e explicar os resultados.
 
@@ -46,14 +46,14 @@ Se apenas este arquivo estiver disponível, ele é suficiente para iniciar a Fas
 |---|---|
 | Repository | MartinFMelcop/Creative_AI_Project_HUB; actual Git root `/workspace/Creative_AI_Project_HUB`; lab remains nested in its original package directory |
 | Preserved sources | 175 Rave Master texts and 3 WebSocket files; unchanged ZIP and inventory; not a complete RMXP backup |
-| Primary workstream | P10 Flood Crossing 0.2.0: an integrated rescue operation; standalone dialogue 0.1.3 remains preserved |
-| Engine execution | P10 uses Python standard library; P11 uses Node/Express/Socket.IO. No Unity or RMXP runtime verified |
-| Current verification | Scene and adventure tests, actual route playthroughs and cargo-order comparison are recorded in `evidence/waystone-dialogue/ADVENTURE_RUN.json`; technical checks do not establish enjoyment |
+| Primary workstream | P03 Midnight Signal 0.1.0: complete original rhythm stage; P08 owns the rendered soundtrack and verified P03 consumer |
+| Engine execution | P03 uses browser Canvas/Web Audio; P10 Python; P11 Node/Express/Socket.IO. No Unity/RMXP execution claim |
+| Current verification | Real 69s browser playback, judgments/results/replay, instrument-aligned charts and measured actual audio bytes; `evidence/tokyo80s/RUN.json` records commands/limits |
 | Historical verification | v0.2.0 combat/dialogue, P10 trust, P11 unread and P02 snapshot records remain preserved; the old scenario runner was not rerun |
-| Next action | Unprompted reader play of both rescue routes, then a browser adaptation if feedback supports it; P11 human review and independent EVAL-001 provenance remain separate |
-| Other seeds | P11 chat 0.1.7, P02 runner 0.2.1 and EVAL-001 starter 0.1.0 are preserved; unavailable creative/media baselines still need targeted recovery |
-| Transfer / shared status | TR-009 validated for P02 task adaptation/calibration only; 10 other transfers remain candidates; no shared component |
-| Portfolio / attribution | Started at `e2cbabe`, synchronized remote `abf80db` before development and confirmed through normal Git fetch. Martin supplied direction; Codex implemented and reviewed. Publication must be verified on the remote reference |
+| Next action | Unassisted physical-hardware play and listening for P03/P08, then a distinct second stage; P10 reader review and P02/P11 independent gates remain separate |
+| Other seeds | P10 adventure 0.2.0, standalone scene 0.1.3, P11 chat 0.1.7 and P02 runner 0.2.1 are preserved |
+| Transfer / shared status | TR-009 (evaluation adaptation) and TR-012 (real P08 audio in P03) validated for bounded consumers; ten earlier candidates remain; no shared engine |
+| Portfolio / attribution | Baseline `90fb740` verified on main via Git fetch/ls-remote. Martin supplied direction; Codex implemented/reviewed; new native Site keeps owner-only access |
 
 Registry evidence paths must resolve to existing files inside the lab; working
 paths must be directories and legacy-source IDs must exist. This documentary
@@ -223,14 +223,14 @@ Identificadores persistem mesmo quando nomes mudam. Um projeto arquivado pode co
 |---|---|---|---|---|
 | P01 | Artemyra / ArtemiZ4 | Board, economia, minigames, IA de jogo, produção | Auditoria, simulador, pequeno party game, benchmark | Legado descrito; runtime atual não auditado |
 | P02 | AI Evaluation & QA Lab (historical Unity proposal) | Requirements, reproduced bugs, artifact checks | Bounded practice tasks and later independent evaluation | EVAL-001 runner 0.2.0 uses pinned snapshots, starter 0.1.0; M4 harness scope, no model candidate |
-| P03 | Tokyo 80s | Ritmo, city pop/wave, dança, aura, arcade | Vertical slice, toolkit de timing, áudio interativo | Conceito e pacote histórico |
+| P03 | Tokyo 80s | Original soundtrack, timing and browser gameplay | Complete Midnight Signal stage; physical play/listening still pending | P03 0.1.0 with real P08 audio; see registry/evidence |
 | P04 | O Lich mais velho da tumba mais antiga | Romance, mundo, personagens, arte e continuidade | Narrativa interativa, amostra editorial, jogo, animatic | Pacote v0.4.48 parcialmente inspecionado |
 | P05 | The Dark Knight | Combate por turnos, classes, progressão, conteúdo | Laboratório de combate e balanceamento | Legado RMXP descrito |
 | P06 | Véu Partido | RPG 3D, dano, bosses e crafting | Arena pequena, boss framework, teste de combate | Starter Unity histórico descrito |
 | P07 | Visual Generation & Asset Lab | Capas, ilustrações, sprites e direção | Assets consistentes, pipeline e estudo de seleção | Material visual histórico; inventário pendente |
-| P08 | Audio, Poetry & Music Lab | Sons, poemas, letras e conceitos | Música, EP conceitual, trilhas, áudio adaptativo | Eixo autorizado; fontes específicas pendentes |
+| P08 | Audio, Poetry & Music Lab | Original musical production and integration | One rendered instrumental with a real game consumer | Midnight Signal PCM/OGG and score provenance; no album or human approval |
 | P09 | AI Delivery & Operations Cases | Carreira real e avaliação simulada | Case de entrega, análise de workflow e rubricas | Base profissional lida; cases anteriores pendentes |
-| P10 | Adventures Unleashed / Rave Master | Narrativa, NPCs, combate, dados, arte/áudio e QA | Reservatório de sistemas e cenas; fatias adaptadas | Waystone CLI 0.1.2: 29 checks, coherent memory-based responses, bounded M4; historical sources/rules unchanged |
+| P10 | Adventures Unleashed / Rave Master | Narrative, NPCs and recovered systems | Preserved complete Flood Crossing terminal operation | Adventure 0.2.0; standalone 0.1.3; bounded evidence in registry |
 | P11 | Real-time Integration Lab / WebSocket | Node/Socket.IO event flow; three preserved source files | Local chat; later evaluation task or lobby candidate | Working chat 0.1.5: viewport reading restoration and activity-aware unread/title feedback; TR-009 task adaptation verified; no public hosting |
 
 P02 agrupa evaluation e QA porque podem compartilhar a mesma aplicação pequena. Não criar dois projetos Unity idênticos apenas para apresentar títulos diferentes. P01 pode abrigar produção, economia e analytics como cases distintos de uma fonte comum.
@@ -544,11 +544,11 @@ Antes do score, verificar bloqueios: fontes inacessíveis; execução impossíve
 
 **Historical order:** v0.1.0 recommended P01 discovery; v0.2.0 recovered concrete P10/P11 sources. Under the current request to select and implement an increment, Codex prioritized P11 because its defect and full local interaction can be verified here. ADR-008 records the choice; the assessment and plan preserve alternatives without activating them. This is not a claim that Martin individually selected or tested P11.
 
-**Current work order:** P10 has a complete rescue operation connecting the prior
-Keeper dialogue to resource choices, river navigation and concrete consequences.
-Evaluate the experience with readers, then adapt this coherent operation for a
-browser portfolio demo. Independent EVAL-001 and P11 human review remain separate;
-additional QA infrastructure is not the default development objective.
+**Current work order:** P03/P08 now provide a complete rhythm stage and real
+original audio. Validate physical timing, note density and musical direction
+with players/listeners, then build a distinct second stage. Preserve P10's
+operation; its browser adaptation and P02/P11 independent gates remain separate.
+More QA infrastructure is not the default product development objective.
 
 **P01 economia e P03 vertical slice na sequência**, conforme interesses profissionais e disponibilidade. P04/P07/P08 podem fornecer conteúdo às fatias escolhidas. P05/P06 começam como fontes de extração, e não dois grandes RPGs simultâneos.
 
@@ -1559,3 +1559,15 @@ change the delivered people/cargo and tomorrow's transport. Original sources and
 standalone behavior remain preserved. [Milestone evidence](evidence/waystone-dialogue/ADVENTURE_RUN.json)
 distinguishes executed technical checks, implementing-agent review and pending
 reader/commercial validation. No media asset, full RPG migration or model score.
+
+
+### Original playable rhythm destination — v0.6.0
+
+[Tokyo 80s: Midnight Signal](projects/tokyo80s/README.md) is a new browser stage,
+not recovery of the unavailable historical ZIP. A real original P08 instrumental
+is rendered, exported, registered and consumed by two instrument-aligned charts.
+Audio-clock judgment, aura, calibration, pause/focus, results and replay complete
+one player workflow. TR-012 records actual production/consumer integration.
+[Evidence](evidence/tokyo80s/RUN.json) distinguishes synthetic full playback,
+implementing-agent review and pending human play/listening. P10 and historical
+source bytes remain preserved; no commercial product or exclusive rights claim.

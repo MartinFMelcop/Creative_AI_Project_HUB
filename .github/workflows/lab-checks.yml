@@ -39,6 +39,8 @@ jobs:
         run: |
           python3 projects/waystone-dialogue/test_scene.py
           python3 projects/waystone-dialogue/test_adventure.py
+      - name: Verify rendered Tokyo 80s audio and score contracts
+        run: python3 projects/tokyo80s/tools/check_audio.py
       - name: Require complete maintained lab coverage and matching hashes
         run: python3 tools/check_manifest.py
 
@@ -77,6 +79,8 @@ jobs:
       - name: Exercise real protocol and browser behavior
         working-directory: martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/projects/realtime-integration-lab
         run: npm test
+      - name: Exercise Tokyo 80s timing and complete audio/browser workflow
+        run: node --test projects/tokyo80s/tests/core.test.mjs projects/tokyo80s/tests/browser.test.mjs
       - name: Exercise evaluator boundaries and failure attribution
         run: python3 evaluations/chat-send-buffering/test_runner.py
       - name: Require known baseline and reference outcomes

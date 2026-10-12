@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Play Midnight Signal: an original four-lane synth rhythm experience from Tokyo 80s.">
+<title>Tokyo 80s — Midnight Signal</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="shell">
+<header class="masthead"><a href="#" aria-label="Tokyo 80s home" class="wordmark">TOKYO<span>80s</span></a><p>RHYTHM / NIGHT SHIFT</p><span class="edition">SIDE A · 001</span></header>
+<main>
+<section class="liner" aria-labelledby="title">
+<div class="eyebrow"><span class="dot"></span> ORIGINAL TRACK · 120 BPM</div>
+<h1 id="title">MIDNIGHT<br><span>SIGNAL.</span></h1>
+<p class="intro">The last train is leaving.<br>Keep the city moving.</p>
+<div class="city" aria-hidden="true"><div class="moon"></div><div class="buildings"><i></i><i></i><i></i><i></i><i></i><i></i></div><div class="rail"></div><span>NIGHT LINE / 80</span></div>
+<div class="instructions"><h2>Find your rhythm</h2><p>Hit <kbd>D</kbd> <kbd>F</kbd> <kbd>J</kbd> <kbd>K</kbd> as notes reach the line. Touch the pads on mobile. Keep a combo to build aura.</p><p>At full aura, <kbd>Space</kbd> activates <strong>Pulse</strong>: protect your combo from two misses for eight seconds. Misses still lower accuracy.</p></div>
+<div class="track-meta"><span>01:09 / INSTRUMENTAL</span><span>HEADPHONES RECOMMENDED</span></div>
+</section>
+<section class="console" aria-label="Rhythm game">
+<div class="scorebar"><div><small>SCORE</small><output id="score">000000</output></div><div><small>COMBO</small><output id="combo">0</output></div><div><small>ACCURACY</small><output id="accuracy">—</output></div></div>
+<div class="stage" id="stage" data-mode="ready" data-position="0">
+<canvas id="board" aria-label="Four note lanes. Use the D, F, J and K keys or the touch pads."></canvas>
+<div class="section-name" id="section">PLATFORM LIGHTS</div>
+<div class="center-message" id="center"><span>READY WHEN YOU ARE</span><strong>Hit play.</strong><p>A full run lasts 69 seconds.<br>Sound starts after you choose Start run.</p></div>
+<div class="judgment" id="judgment" aria-hidden="true"></div>
+</div>
+<div class="pads" aria-label="Lane controls"><button data-lane="0" aria-label="Lane D"><span>D</span><small>BASS</small></button><button data-lane="1" aria-label="Lane F"><span>F</span><small>CHORD</small></button><button data-lane="2" aria-label="Lane J"><span>J</span><small>LEAD</small></button><button data-lane="3" aria-label="Lane K"><span>K</span><small>SNARE</small></button></div>
+<div class="timeline"><progress id="progress" max="69" value="0" aria-label="Track progress"></progress><output id="timer">00:00 / 01:09</output></div>
+<div class="aura"><div><span>AURA</span><progress id="aura" max="100" value="0" aria-label="Aura charge"></progress></div><button id="pulse" disabled>Pulse <span>SPACE</span></button><small id="shield">Build a combo. Protect your next difficult phrase.</small></div>
+<div class="controls"><button id="start" class="primary">Start run <span aria-hidden="true">PLAY</span></button><button id="pause" disabled>Pause</button><button id="restart" disabled>Restart</button></div>
+<p id="status" role="status" aria-live="polite">Choose Practice for the first ride, then try Arcade.</p>
+<div class="settings"><label>CHART<select id="difficulty"><option value="practice">Practice</option><option value="arcade">Arcade</option></select></label><label class="volume">VOLUME<input id="volume" type="range" min="0" max="100" value="70"></label><button id="calibrate">Adjust timing</button></div>
+<div id="results" class="results" hidden tabindex="-1"><div class="result-heading"><span>LAST STOP / RUN COMPLETE</span><strong id="rank">S</strong></div><h2>Your night in numbers.</h2><p id="result-summary"></p><dl><div><dt>Perfect</dt><dd id="perfect">0</dd></div><div><dt>Good</dt><dd id="good">0</dd></div><div><dt>OK</dt><dd id="ok">0</dd></div><div><dt>Miss</dt><dd id="miss">0</dd></div></dl><p id="timing-result"></p><p id="best"></p><div class="result-actions"><button id="replay" class="primary">Ride again</button><button id="export">Save run JSON</button></div></div>
+</section>
+</main>
+<footer><span>CREATIVE AI PROJECT HUB / P03 × P08</span><span>Original synthesized music. No accounts. Best scores stay in this browser.</span></footer>
+</div>
+<dialog id="calibration"><form method="dialog"><button class="close" aria-label="Close timing adjustment">×</button></form><span class="eyebrow">TIMING / SOUND FIRST</span><h2>Make the hit line yours.</h2><p>Listen to twelve clicks and tap the button with the sound. We use the middle of your taps, not a guessed device latency.</p><button id="clicks" class="primary">Start clicks</button><button id="tap" disabled>Tap with the click · F</button><p id="cal-status" role="status">Headphones and keyboard give a useful starting point.</p><label class="offset">INPUT OFFSET <output id="offset-value">0 ms</output><input id="offset" type="range" min="-150" max="150" step="5" value="0"></label><p class="fineprint">Positive values compensate for late input; negative values compensate for early input. Adjust between runs. This is a personal setting, not a hardware measurement.</p><button id="apply">Apply and close</button></dialog>
+<script type="module" src="app.js"></script>
+</body>
+</html>

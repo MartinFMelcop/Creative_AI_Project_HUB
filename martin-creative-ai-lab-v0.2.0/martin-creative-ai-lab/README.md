@@ -4,9 +4,10 @@ An evolving laboratory of games, narrative, images, audio, data, and AI
 evaluation by **Martin Melcop Neto**. Projects are adaptable seeds: build small
 slices, verify behavior, record decisions, and test reuse in actual destinations.
 
-**Current seed: v0.5.0.** The lab includes eleven project lines, 178 preserved
+**Current seed: v0.6.0.** The lab includes eleven project lines, 178 preserved
 historical texts, a working local text-chat adaptation, a calibrated
-practice-task harness, and a complete terminal rescue adventure. No game migration,
+practice-task harness, a complete terminal rescue adventure, and an original
+browser rhythm stage with a real rendered soundtrack. No game migration,
 model benchmark, finished music catalogue, or public deployment is claimed.
 The containing directory keeps its original v0.2.0 package name. Latest verified
 project versions and execution boundaries are in the state and registry.
@@ -15,6 +16,8 @@ project versions and execution boundaries are in the state and registry.
 
 - [State](docs/STATE.md): completed increment, limits, and next action.
 - [Assessment](docs/ASSESSMENT.md) and [improvement plan](docs/IMPROVEMENT_PLAN.md): evidence and selected priorities.
+- [P03 — Midnight Signal](projects/tokyo80s/README.md): play an original four-lane rhythm stage, calibrate timing, finish and replay.
+- [Rhythm/audio evidence](evidence/tokyo80s/RUN.json): real 69-second Web Audio run and registered master/export, with honest review limits.
 - [P11 — Live exchange](projects/realtime-integration-lab/README.md): install, run, test, provenance, and contribution.
 - [P02 — EVAL-001](evaluations/chat-send-buffering/README.md): export a starter, check a client, and inspect limits.
 - [Current dependency-gate evidence](evidence/evaluation-task/DEPENDENCY_RUN.json): installed direct version checks, controlled mismatch and unchanged calibration.
@@ -35,7 +38,8 @@ project versions and execution boundaries are in the state and registry.
 
 Original creative titles include Artemyra / ArtemiZ4, Tokyo 80s,
 O Lich mais velho da tumba mais antiga, The Dark Knight, and Véu Partido.
-Their complete runtime baselines are not present here. Rave Master supplies
+Their historical full runtime baselines are not present here. Tokyo 80s now
+has a new original browser destination, distinct from its unavailable old ZIP. Rave Master supplies
 selected narrative, combat, and production material; planned art/audio indices
 do not establish available masters. [The assessment](docs/ASSESSMENT.md) states
 what was actually inspected or executed.
@@ -50,6 +54,7 @@ python3 tools/test_validate_repo.py
 python3 tools/test_check_manifest.py
 python3 projects/waystone-dialogue/test_scene.py
 python3 projects/waystone-dialogue/test_adventure.py
+python3 projects/tokyo80s/tools/check_audio.py
 python3 evaluations/chat-send-buffering/test_runner.py
 python3 tools/check_manifest.py
 ```

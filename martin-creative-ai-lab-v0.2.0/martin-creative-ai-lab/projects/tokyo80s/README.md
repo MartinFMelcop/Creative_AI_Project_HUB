@@ -1,0 +1,113 @@
+# P03 — Tokyo 80s: Midnight Signal
+
+Version **0.1.0**. A complete browser rhythm prototype: an original 69-second
+instrumental, four lanes, two score-aligned charts, judgments, combo/aura, personal
+timing calibration, pause, results, local best and replay. P08 supplies the real
+rendered soundtrack, not a planned cue or external recording. This is a new
+implementation from the Tokyo 80s seed; the historical ZIP was not recovered.
+
+## Play locally
+
+From the lab directory, with Node 22+:
+
+```bash
+node projects/tokyo80s/server.mjs
+```
+
+Open `http://127.0.0.1:4173`. The game is buildless static HTML/JS; any ordinary
+static server can serve `dist/`. No npm installation, account, model API or
+remote service is needed for gameplay. Opening `index.html` directly as a file
+is unsupported because the browser fetches the score and audio.
+
+Click **Start run**, listen to the count-in, and press **D F J K** or the arrow
+keys at the hit line. Touch the four pads on mobile. Practice has 112 notes;
+Arcade has 236, with lead syncopation, chord hits and a busier finale. Each lane
+matches attacks of its named instrument in the rendered score. The underpass
+section gives both the music and chart a quieter phrase.
+
+Perfect/Good/OK windows are ±45/95/145 ms. Late notes become misses; off-beat
+presses break combo and deduct points/aura, so key spam cannot farm score.
+Holding a key does not hit repeatedly. Combo raises the score multiplier to four.
+At full aura, **Space** or **Pulse** protects combo from two misses for eight
+seconds; it does not hit notes or award points, and misses still lower accuracy.
+Protection uses the note deadline, so a delayed rendering frame cannot change it.
+
+**Pause**, **P** or **Escape** freezes the actual audio clock. Leaving the tab
+pauses; returning never automatically resumes. **Restart** clears the session.
+Results include all judgments, score, best combo, timing bias and Pulse use.
+**Save run JSON** exports actual scored notes. Best scores and input offset stay
+in this browser when storage is available; gameplay/export still work without it.
+
+**Adjust timing** plays twelve real scheduled clicks. Tap with F/the pad; the
+first two are warm-up. At least six later taps yield a median offset. Positive
+values compensate late input, negative values early input; the range is ±150 ms.
+Apply between runs. This is a personal calibration, not a measured device latency.
+Closing the dialog cancels remaining sound nodes. Volume stays adjustable in play.
+
+A private Sites identity is retained in [.openai/hosting.json](.openai/hosting.json).
+Its actual deployment status is reported separately; an ID is not publication
+proof. GitHub remains the maintained source. The Site publishes only `dist/`
+and its hosting manifest, with owner-only access and no accounts/connector data.
+
+## Audio and origin
+
+[Production provenance](media/provenance.json) identifies the actual WAV master,
+OGG runtime asset, score/chart hashes and deterministic synthesis seed. The
+[producer](tools/render_track.py) contains the new eight-bar call/response,
+four-chord progression, bass, pad, lead and percussion synthesis. No third-party
+samples, MIDI import, licensed song or historical audio master was used. This
+is Codex-authored algorithmic music under Martin's direction, not human composition
+or exclusive copyright validation. The visual city is original CSS, not imported art.
+
+The track has a three-second count-in, 32 four-beat bars at 120 BPM and a two-second
+ending: **69 seconds**, stereo PCM16 at 44.1 kHz. OGG is the browser export.
+Measured decoded OGG loudness is -14.3 LUFS with -0.7 dBFS true peak; the PCM
+master has no clipped samples. These technical measurements do not prove musical
+taste or hardware sound quality. No independent listening session has occurred.
+
+To regenerate, install NumPy and ffmpeg with libvorbis, then run:
+
+```bash
+python3 projects/tokyo80s/tools/render_track.py
+```
+
+The PCM master uses a fixed synthesis seed. Encoded OGG stream metadata can vary
+between encoder runs/versions; rerun checks and update provenance after production.
+Do not regenerate assets as part of normal gameplay or QA.
+
+## Verify
+
+Timing/scoring and audio contracts need Node/Python, without game dependencies:
+
+```bash
+node --test projects/tokyo80s/tests/core.test.mjs
+python3 projects/tokyo80s/tools/check_audio.py
+```
+
+Browser checks reuse the already-pinned Playwright QA dependency from P11; this
+is a test dependency, not a shared gameplay module or P11 runtime change:
+
+```bash
+npm ci --prefix projects/realtime-integration-lab
+CHROMIUM_PATH=/usr/bin/chromium node --test projects/tokyo80s/tests/browser.test.mjs
+```
+
+Choose an installed matching Chromium path. The browser suite executes the real
+AudioContext/decoded OGG, keyboard and touch, native tab-focus pause, calibration,
+retry, mobile/desktop layouts, a complete 69-second Arcade run, JSON export and
+replay. Synthetic inputs establish integration, not human rhythmic skill.
+[Milestone evidence](../../evidence/tokyo80s/RUN.json) records current execution,
+actual outcomes and boundaries. Existing CI includes these checks.
+
+## Quality boundaries and next milestone
+
+This is a playable prototype, not a released commercial rhythm game. Human
+play on real keyboard/touch/audio hardware, speaker/headphone latency, enjoyment,
+accessibility, Safari/Firefox and musical quality remain unverified. There are
+no hold notes, career progression, licensed catalogue, global leaderboard or
+competitive anti-cheat. The caller controls local score data.
+
+Next: observe an unassisted Practice/Arcade session and a listening review, revise
+note density, timing feedback and arrangement from those results, then build a
+second original stage with a distinct musical/mechanical identity. Preserve the
+completed P10 operation and independent P02/P11 review gates.

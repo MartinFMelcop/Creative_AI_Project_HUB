@@ -1,0 +1,158 @@
+{
+  "milestone": "P03 Tokyo 80s / Midnight Signal 0.1.0 with a real P08 soundtrack",
+  "baseline_commit": "90fb74029279e7c9150038c944d2906bfd37c214",
+  "recorded_at_utc": "2026-10-12T01:22:28.414113+00:00",
+  "client_date": "2026-10-11",
+  "client_timezone": "America/Sao_Paulo",
+  "environment": {
+    "os": "Linux-6.18.44-x86_64-with-glibc2.41",
+    "python": "3.12.14",
+    "node": "v24.19.0",
+    "chromium": "Chromium 154.0.8037.57 built on Debian GNU/Linux 13 (trixie)"
+  },
+  "before_after": {
+    "before": "P03 registry M0, no working path/runtime; only a historical ZIP reference and first-slice proposal. P08 registry M0 and asset registry empty. P10 0.2.0 is a completed terminal operation, preserved.",
+    "after": "A complete buildless rhythm game consumes a real rendered original instrumental. Two instrument-aligned charts, audio-clock judgment, aura, pause, calibration, results and replay are connected. A WAV master and OGG consumer asset have real hashes."
+  },
+  "checks": [
+    {
+      "command": "node --test tests/core.test.mjs tests/browser.test.mjs (Tokyo 80s directory)",
+      "exit_code": 0,
+      "result": "19 passed (12 core, 7 Chromium); zero skips/cancellation. Includes real 69s Arcade audio-clock run and exported results.",
+      "scope": "Full run after musical chart alignment and restart/calibration corrections; followed by a mobile view adjustment."
+    },
+    {
+      "command": "node --test --test-name-pattern='desktop and narrow|touch input|real audio starts' tests/browser.test.mjs",
+      "exit_code": 0,
+      "result": "3 affected browser workflows pass after the final mobile start-view adjustment."
+    },
+    {
+      "command": "python3 projects/tokyo80s/tools/check_audio.py",
+      "exit_code": 0,
+      "result": "Actual stereo PCM master, OGG/score hashes, duration, no PCM clipping, sorted unique charts and instrument-onset correspondence pass."
+    },
+    {
+      "command": "ffmpeg -i dist/assets/midnight-signal.ogg -af ebur128=peak=true -f null /dev/null",
+      "exit_code": 0,
+      "result": "Actual OGG decodes for 69s; integrated -14.3 LUFS, LRA 2.6 LU, true peak -0.7 dBFS."
+    },
+    {
+      "command": "python3 projects/waystone-dialogue/test_scene.py",
+      "exit_code": 0,
+      "result": "32 passed; unchanged standalone scene/source records"
+    },
+    {
+      "command": "python3 projects/waystone-dialogue/test_adventure.py",
+      "exit_code": 0,
+      "result": "20 passed; preserved complete rescue operation"
+    },
+    {
+      "command": "python3 evaluations/chat-send-buffering/test_runner.py",
+      "exit_code": 0,
+      "result": "25 passed"
+    },
+    {
+      "command": "python3 tools/test_validate_repo.py",
+      "exit_code": 0,
+      "result": "11 passed"
+    },
+    {
+      "command": "python3 tools/test_check_manifest.py",
+      "exit_code": 0,
+      "result": "11 passed"
+    },
+    {
+      "command": "CHROMIUM_PATH=/usr/bin/chromium npm test (P11 directory)",
+      "exit_code": 0,
+      "result": "38 passed; zero skips/cancellation; preserved chat source"
+    },
+    {
+      "command": "CHROMIUM_PATH=/usr/bin/chromium python3 tools/check_calibration.py /workspace/work/tokyo80s/calibration",
+      "exit_code": 0,
+      "result": "Controlled baseline rejected 15/17; reference accepted 17/17, no skips/cancellation. No independent candidate."
+    },
+    {
+      "command": "python3 tools/validate_repo.py",
+      "exit_code": 0,
+      "result": "11 projects, 12 transfers, 1 actual audio asset, 2 historical sources; 169 valid local links."
+    },
+    {
+      "command": "python3 tools/check_manifest.py",
+      "exit_code": 0,
+      "result": "100 maintained files covered exactly once with matching SHA-256 hashes."
+    },
+    {
+      "command": "JavaScript/Python syntax checks and git diff --check",
+      "exit_code": 0,
+      "result": "Passed."
+    }
+  ],
+  "actual_arcade_run": {
+    "game": "Tokyo 80s",
+    "version": "0.1.0",
+    "track": "midnight-signal",
+    "chart": "arcade",
+    "offsetMs": 0,
+    "score": 827000,
+    "maxCombo": 236,
+    "counts": {
+      "perfect": 236,
+      "good": 0,
+      "ok": 0,
+      "miss": 0,
+      "pending": 0
+    },
+    "strays": 0,
+    "pulses": 1,
+    "accuracy": 100,
+    "meanErrorMs": 7.6,
+    "rank": "S"
+  },
+  "audio": {
+    "duration_seconds": 69,
+    "sample_rate": 44100,
+    "channels": 2,
+    "pcm_peak_dbfs": -1.1103465569966273,
+    "pcm_rms_dbfs": -16.500366330029358,
+    "decoded_ogg_lufs": -14.3,
+    "decoded_ogg_lra_lu": 2.6,
+    "decoded_ogg_true_peak_dbfs": -0.7,
+    "charts": {
+      "practice": 112,
+      "arcade": 236
+    },
+    "provenance": "New algorithmic score and synthesized instruments; no external samples or imported MIDI/recordings. Not a recovered historical Tokyo 80s runtime. No human listening session."
+  },
+  "artifact_sha256": {
+    "projects/tokyo80s/dist/app.js": "d429d6c3e1d54a0c58b945f494f4a6f0b9a3405b7e183ca4c08b89643e836b3c",
+    "projects/tokyo80s/dist/assets/midnight-signal.ogg": "6feda179da6a5b454cd697a58527c83bf754f144069b975bfe2cb2f07a0bc166",
+    "projects/tokyo80s/dist/core.js": "a705047cc820754163fa9449cb0393e75604292379c6ee6e35ee332d8252d9c6",
+    "projects/tokyo80s/dist/index.html": "3b34ce67e3f1b7199eb0443db15321d6601cdffa84cd119469744749ebb6a369",
+    "projects/tokyo80s/dist/style.css": "2dce8d700bca98f13b3464fc9e7e2a1e996e03f4f3d978acb510d976d58b9d67",
+    "projects/tokyo80s/dist/track.json": "f73646df2b7d6601f1f654d855aaecd114b7172f2ef5c55852dfd898ec0b59b4",
+    "projects/tokyo80s/tools/render_track.py": "d84eb89d5cf3f46ff063ee631ca16864800a8a23935fe767a97537315b2b1875",
+    "projects/tokyo80s/tools/check_audio.py": "65f369740c0b0179c134490e107968e6d612451094aadaaf351fc156b22ada07",
+    "projects/tokyo80s/tests/core.test.mjs": "df9b2d2db0413fcaa3df0e5a7b564dc69e22d9d3ab3b027095f7e4921d0d2961",
+    "projects/tokyo80s/tests/browser.test.mjs": "d530bd99a633c6ff9149a8ce1d37c6b4fb33796385e745adcb3e879d5dea4b6f",
+    "projects/tokyo80s/media/provenance.json": "9a63d986d9909bb13d31eca84bbc96630f0c02bfc00d48674d501d1218000935",
+    "projects/tokyo80s/media/midnight-signal.wav": "b49e3df218287dd39eb3e3260f6f9ac62f776e29a0c22f639d77128e87022eab"
+  },
+  "implementing_agent_review": {
+    "by": "Codex, the implementing agent; source/gameplay reasoning, real browser interaction and screenshot inspection. No independent audience or listening approval.",
+    "observed": [
+      "Desktop and 390px layouts are readable and do not overflow; mobile Start brings the complete note field into view.",
+      "The final Arcade run judges all 236 notes, exports observed results and replays from zero using real decoded audio. Inputs are synthetic, not a human performance.",
+      "Charts now derive from actual bass/chord/lead/snare attacks; Practice and the Underpass are less dense than the Arcade finale.",
+      "Resource agency comes from earning Pulse and selecting its eight-second protection window; it never auto-hits or awards missed notes. Strays cannot farm points.",
+      "Observed restart feedback and Escape-calibration cleanup gaps were corrected; delayed frames now preserve note-deadline Pulse consequences."
+    ],
+    "assessment": "A coherent playable prototype and technically integrated original audio asset. Enjoyment, physical timing feel and musical quality require readers/listeners."
+  },
+  "limits": [
+    "No independent human playtest/listening, hardware latency study, assistive-technology or Safari/Firefox validation.",
+    "Local score/JSON are user-controlled and not a competitive anti-cheat or public leaderboard.",
+    "Single short stage; no career/hold notes/catalogue or commercially finished product.",
+    "Official Sites helper scripts are absent from the selected executor and skill resources; hosting uses a documented native-credential Git/static packaging fallback. Credential values stay in stdin/process memory and are never stored in source."
+  ],
+  "publication": "This record precedes normal GitHub publication and owner-private Sites deployment. Final session report verifies actual SHAs, commit message and deployment status."
+}

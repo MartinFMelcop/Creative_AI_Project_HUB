@@ -530,3 +530,29 @@ medicine condition. Hand rescue can preserve rope for a temporary crossing.
 These demonstrate consequence, not human enjoyment. Revisit balance/pacing after
 unprompted reader sessions; preserve sources and publish the honest prototype
 rather than claiming a commercial game or imposing further maintenance gates.
+
+
+## ADR-029 — build a complete rhythm stage around an actual original score
+
+**Date:** 2026-10-11 (America/Sao_Paulo). **Status:** P03/P08 0.1.0.
+**Authority:** Martin's explicit portfolio development and main publication request.
+
+P10 now has a complete operation; the dormant P03 seed specifies a tractable
+four-lane rhythm slice while P08 lacks delivered media. Create one original
+69-second synthesized instrumental, master/export and instrument-aligned charts.
+This is new implementation, not reconstruction of an unavailable historical ZIP.
+Use buildless browser-local HTML/JS, Web Audio as the song clock, a small pure
+judgment model and actual results/replay. Keep all game assets local to P03;
+P08 records production and its verified consumer. No shared framework or model API.
+
+Pulse consumes earned aura to preserve two missed-note combos for eight seconds;
+accuracy and score still record the misses. A note's deadline determines protection,
+not the time a rendering frame happens to observe it. Focus loss pauses actual
+audio; resumption is explicit. Calibration is personal tap-derived offset, not
+a hardware measurement. Native Sites identity remains owner-private; GitHub is
+the maintained repository. Missing local helper scripts permit a documented
+native credential/normal Git/static archive fallback; never persist credentials.
+
+Technical checks and scripted full playback do not establish human enjoyment or
+musical quality. Revisit note density, arrangement and timing after unassisted
+hardware play/listening. Preserve the P10 operation and independent P02/P11 gates.

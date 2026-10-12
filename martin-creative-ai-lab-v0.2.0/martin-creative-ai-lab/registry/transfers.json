@@ -123,6 +123,20 @@
       "evidence": [],
       "source_reference": "SEED.md — seção 28.5",
       "next_action": "Selecionar somente se servir à frente ativa; adaptar e verificar no destino."
+    },
+    {
+      "id": "TR-012",
+      "source_project": "P08",
+      "target_project": "P03",
+      "status": "validated",
+      "unit": "Original rendered soundtrack and musical score consumed by a complete browser rhythm stage",
+      "source_reference": "projects/tokyo80s/media/provenance.json",
+      "evidence": [
+        "projects/tokyo80s/README.md",
+        "evidence/tokyo80s/RUN.json"
+      ],
+      "verification_scope": "Actual OGG decoding/playback, instrument-aligned charts and full 69s browser run. Production/consumer integration only; no human musical approval, model learning or universal shared engine.",
+      "next_action": "Review the track and physical timing with listeners/players before making the second stage."
     }
   ]
 }

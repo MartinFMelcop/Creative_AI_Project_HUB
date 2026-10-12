@@ -56,18 +56,25 @@
       "id": "P03",
       "name": "Tokyo 80s",
       "slug": "tokyo80s",
-      "status": "seed",
-      "maturity": "M0",
-      "phase": "legacy-triage",
-      "origin": "historical_context",
-      "next_action": "Localizar fonte histórica e definir fatia de ritmo.",
+      "status": "active",
+      "maturity": "M4",
+      "phase": "original-rhythm-stage-validated",
+      "origin": "new_seed_implementation",
+      "next_action": "Observe unassisted Practice/Arcade play on keyboard and touch hardware; review the original track, then create a distinct second musical stage.",
       "related_projects": [
         "P01",
         "P02",
         "P07",
         "P08"
       ],
-      "evidence": []
+      "evidence": [
+        "projects/tokyo80s/README.md",
+        "projects/tokyo80s/media/provenance.json",
+        "evidence/tokyo80s/RUN.json"
+      ],
+      "working_path": "projects/tokyo80s",
+      "working_version": "0.1.0",
+      "maturity_scope": "Single buildless browser rhythm prototype: 69s real synthesized audio, 112/236 instrument-aligned notes, 12 core and 7 Chromium checks, actual full Arcade playback/results/export/replay, timing calibration, pause/focus and touch. Synthetic input and implementing-agent visual/gameplay review only; no human timing/listening, other-browser, accessibility or commercial validation."
     },
     {
       "id": "P04",
@@ -136,17 +143,24 @@
       "id": "P08",
       "name": "Audio, Poetry & Music Lab",
       "slug": "audio-poetry-music-lab",
-      "status": "seed",
-      "maturity": "M0",
-      "phase": "source-inventory",
+      "status": "active",
+      "maturity": "M4",
+      "phase": "original-audio-integrated",
       "origin": "user_directive",
-      "next_action": "Recuperar sons e poemas; usar cues planejados de P10 como briefs, sem tratar planos como música entregue.",
+      "next_action": "Listen on real speakers/headphones and review arrangement before a second original track; retain the current master and P03 consumer.",
       "related_projects": [
         "P03",
         "P04",
         "P10"
       ],
-      "evidence": []
+      "evidence": [
+        "projects/tokyo80s/media/provenance.json",
+        "projects/tokyo80s/tools/render_track.py",
+        "evidence/tokyo80s/RUN.json"
+      ],
+      "working_path": "projects/tokyo80s/media",
+      "working_version": "0.1.0",
+      "maturity_scope": "One actual 69s stereo PCM master/OGG export with new score and synthesized instruments, hashes, decoding/loudness/peak and a verified P03 Web Audio consumer. No human listening, album/catalogue, exclusive copyright or commercial quality claim."
     },
     {
       "id": "P09",

@@ -1,5 +1,27 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-10-10",
-  "assets": []
+  "updated_at": "2026-10-11",
+  "assets": [
+    {
+      "id": "AUD-001",
+      "name": "Midnight Signal",
+      "type": "audio",
+      "status": "integrated",
+      "source_project": "P08",
+      "consumer_projects": [
+        "P03"
+      ],
+      "master_path": "projects/tokyo80s/media/midnight-signal.wav",
+      "runtime_path": "projects/tokyo80s/dist/assets/midnight-signal.ogg",
+      "duration_seconds": 69,
+      "sample_rate": 44100,
+      "channels": 2,
+      "provenance": "New Codex-authored algorithmic score/synthesis under Martin's direction; no external samples or MIDI. Not a recovered historical recording.",
+      "rights": "No third-party audio imported; no exclusive copyright or commercial clearance claim.",
+      "evidence": [
+        "projects/tokyo80s/media/provenance.json",
+        "evidence/tokyo80s/RUN.json"
+      ]
+    }
+  ]
 }

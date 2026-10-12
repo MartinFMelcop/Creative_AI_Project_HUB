@@ -1,20 +1,22 @@
-# Current milestone — Flood Crossing
+# Current milestone — Midnight Signal
 
-Complete one P10 adventure: equipment preparation, existing Keeper negotiation,
-river approach, causeway/ferry rescue and an outcome-specific shelter scene.
-Connect trust history, conversation time, scarce supplies, rescue deadlines,
-ferry capacity/current and next-day transport. Preserve `scene.py` 0.1.3 and its
-standalone endings, selected legacy records, archive and unrelated projects.
+Deliver P03's first complete four-lane browser stage and a real P08 soundtrack:
+original score/synthesis, WAV master and OGG export, two musically aligned charts,
+audio-clock judgments, combo/aura, input calibration, focus/pause, results,
+local best and replay. Preserve P10, P11, P02 and historical source bytes.
 
-Acceptance: both routes complete actual operations; decisions change who reaches
-the road, medicine condition and future transport; deadlines/costs are visible;
-invalid input is atomic; traces retain workshop provenance; replay/restart work.
-Verify actual CLI routes, cargo-order comparison, boundary conditions, session
-invariants and the existing lab/browser/evaluator checks. Update concise state,
-registry, durable decision and seed direction, integrate the new suite into CI,
-then commit and publish normally to main. [Evidence](../evidence/waystone-dialogue/ADVENTURE_RUN.json)
-records execution and limits. Next: observe unprompted play of both routes, then
-adapt the complete operation to a browser demo if comprehension/pacing hold up.
+Acceptance: actual sound decodes/plays; notes follow instrument attacks; keyboard
+and touch share judgment; dropped frames do not change timing/protection;
+resumption cannot silently advance paused notes; failed loading is retryable;
+a full track reaches truthful results and can replay/export. Review desktop and
+mobile, technical audio properties and strategic use of Pulse. Integrate existing
+CI and concise provenance/registries. Publish normally to main and deploy the
+same static source through the retained private Site identity.
+
+[Execution](../evidence/tokyo80s/RUN.json) records the realized workflow and limits.
+Next: unassisted Practice/Arcade hardware play and a listening session, then a
+second original musical stage with a distinct pattern/mechanical identity.
+
 
 # Previous increment — P11 text reflow
 

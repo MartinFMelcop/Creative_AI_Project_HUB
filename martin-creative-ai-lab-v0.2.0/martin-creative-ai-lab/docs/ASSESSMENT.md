@@ -1,40 +1,33 @@
-# Current assessment — a complete P10 rescue operation
+# Current assessment — an original playable rhythm stage
 
-Updated: 2026-10-11 (client date, America/Sao_Paulo). The clean checkout began
-at `e2cbabe`; inspection found newer remote `abf80db`. Exact GitHub object hashes
-were imported and fast-forwarded before development; a subsequent normal fetch
-confirmed the same main head after localhost/network sandbox restrictions were
-resolved. The chat author's 0.1.7 changes are preserved.
+Updated: 2026-10-11 (America/Sao_Paulo). Clean `work` at `90fb740` matches remote
+main through authenticated fetch/ls-remote. Instructions, state/registry, seed
+sections 0/P03/P08, durable decisions, P10 actual source and P11/P02 boundaries
+were inspected. P10's latest milestone is meaningful; prior history concentrates
+on chat/evaluator/dialogue maintenance. Preserve that completed operation.
 
-The recent history concentrates on small P11 reading/delivery, P02 guard and
-P10 wording corrections. Actual P10 0.1.3 has coherent trust memory but ends after
-`herbs, bargain`, automatically declaring a crossing that has no playable travel,
-rescue, resource allocation or village consequence. This is a verified product
-boundary; whether readers enjoyed the short scene remains unknown.
-
-| Opportunity | Evidence and selection |
+| Opportunity | Evidence and choice |
 |---|---|
-| P10 complete expedition | Executable Python scene, inspected selected dialogue/state/profile sources, preserved provenance and no engine dependency. Extend the crossing into an operation with meaningful priorities; selected. |
-| P11 useful shared-room product | Working ephemeral chat and real browser tests; accounts, room lifecycle and service storage would require a separate delivery/security contract. More viewport polishing would not meet this milestone. |
-| P02 independent evaluation | A calibrated runner exists; no independently produced candidate/context is available. More controlled probes cannot substitute for that evidence. |
-| Other games, narrative and media | Seed and source inventory contain concepts and selected P10 text; complete playable baselines, P04 manuscript and inspected media masters are absent here. Do not reconstruct them from summaries or fabricate assets. |
+| P03 rhythm + P08 real audio | Concrete seed brief, no runtime/master, available browser/audio synthesis tools. Deliver a complete original stage and its actual soundtrack; selected. |
+| P10 browser adaptation | Executable complete operation exists; a GUI would improve access, while reader understanding/pacing remains unknown. A valuable separate next milestone. |
+| P11 service workflow | Existing ephemeral room works. Accounts/storage/room lifecycle require a separate product contract; more narrow UI maintenance is not this milestone. |
+| P02 independent evaluation | Calibrated harness available, independent candidate/context unavailable. Controlled probes cannot supply independent performance. |
+| P04/P05/P06 historical recovery | No complete manuscript/engine baseline in this checkout. Do not invent restoration or judge absent creative masters. |
 
-Flood Crossing 0.2.0 now links preparation, the actual Keeper scene, two river
-routes and concrete rescue epilogues. Rope, timber and oil compete for two slots.
-A nine-beat shared clock makes conversation delay matter. Rescuing Iven changes
-capacity and travel; forecasts let cargo order and holding respond to current.
-Permanent infrastructure, temporary passage, medicine and residents are separate
-outcomes. It adds no framework, personality DSL or disconnected portfolio work.
+Midnight Signal now combines a real 69-second instrumental and score-aligned
+Practice/Arcade charts with an audio-clock game. Pause freezes the sound, focus
+loss pauses, personal offset calibration uses actual scheduled clicks, and
+results/replay/export complete the player workflow. Aura protects combo without
+fabricating hits. A musical-source review corrected arbitrary voice labels by
+aligning notes to actual instrument attacks; an underpass and finale supply pacing.
 
-[Executed evidence](../evidence/waystone-dialogue/ADVENTURE_RUN.json) includes
-twelve CLI paths and an explicit same-equipment comparison: changing cargo order
-saves the same four residents while determining whether the clinic chest survives.
-The implementing agent reviewed causal continuity, character voice, feedback,
-resource priorities and complete closures. This supports a reasoned assessment
-of greater agency and a presentable prototype, not independent enjoyment or
-market validation. The existing conversation, archive, P02 and P11 sources remain
-unchanged by this development. A paid narrative-game opportunity requires reader
-sessions, distribution/rights review and production work; no demand is claimed.
+[Evidence](../evidence/tokyo80s/RUN.json) separates real execution, implementing-agent
+visual/gameplay judgment and unverified listening/enjoyment. Browser integration
+and measured signal properties establish a usable prototype/asset; synthetic
+perfect play does not establish human skill, balance or musical appeal. The next
+valuable test is unassisted hardware play and listening, followed by a distinct
+second stage if feedback supports it. No licensed catalogue or paid demand claim.
+
 
 # Previous assessment — P11 text reflow
 
