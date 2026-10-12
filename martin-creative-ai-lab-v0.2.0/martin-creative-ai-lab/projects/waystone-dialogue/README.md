@@ -1,6 +1,9 @@
 # P10 — The Last Waystone: Flood Crossing
 
-Browser edition **0.3.0** makes the complete rescue operation playable through
+Browser campaign **0.4.0** connects the complete rescue to a playable relief morning.
+Night outcomes determine transport, clinical supplies and crew availability;
+new decisions recover residents, deliver food, preserve seed and restore routes.
+The complete operation is playable through
 an illustrated map, connected flood/cargo feedback, a crossing journal, local
 autosave and portable file saves. [Play and run the browser edition](browser/README.md).
 No Python installation is needed by the player; its static source can be hosted
@@ -117,7 +120,6 @@ python3 projects/waystone-dialogue/scene.py --trace
 [dialogue continuity](../../evidence/waystone-dialogue/DIALOGUE_RUN.json),
 [trust correction](../../evidence/waystone-dialogue/TRUST_RUN.json) and
 [initial scene](../../evidence/waystone-dialogue/RUN.json) remain historical.
-Next: observe readers playing the browser without the example sequences, then
-develop a connected morning operation in which the retained road/ferry, medicine
-and residents change the available work. No independent playtest has been
+Next: observe readers playing both days without the example sequences; refine
+work-order comprehension, dramatic pacing and character scenes before expanding. No independent playtest has been
 performed. A paid narrative game is a possibility, not validated demand.

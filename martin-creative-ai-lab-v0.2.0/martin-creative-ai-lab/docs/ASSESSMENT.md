@@ -1,37 +1,32 @@
-# Current assessment — a complete browser rescue
+# Current assessment — consequences become a playable morning
 
-Updated: 2026-10-11 (America/Sao_Paulo). Clean `work` at `07df669` synchronized
-with main via authenticated fetch/merge. Read current instructions/state/registry,
-pertinent SEED sections and decisions, actual Python rescue/dialogue, the browser
-rhythm destination and P11 service boundaries. The two latest commits deliver
-real projects; the preceding history repeatedly polished narrow chat/dialogue QA.
+Updated: 2026-10-11 (America/Sao_Paulo). Clean `757c0e7` matched main after
+fetch/merge. Read instructions, current state/registry/SEED, durable decisions,
+actual flood/dialogue/browser sources and current P03/P11 implementations.
+Recent commits deliver a rescue, a rhythm stage and a browser edition; earlier
+history concentrated on narrow chat/evaluator/dialogue polish.
 
 | Opportunity | Evidence and choice |
 |---|---|
-| P10 browser rescue | Complete Python operation exists, but requires terminal/Python and loses progress on exit. Select a complete static play workflow with visible situation, decision consequences and resumable journeys. |
-| P03 second musical stage | Real first stage/master now exists. Physical timing and listening are unknown; a second stage is valuable, but a distinct musical direction deserves audience review. Preserve the current stage. |
-| P11 service workflow | Real ephemeral room exists. Rooms/identity/storage would form a separate service contract; another narrow send/reading correction is not this cycle. |
-| P02 independent candidate | Calibrated runner exists; independent candidate/context remains absent. More controlled probes cannot establish model performance. |
-| Other creative recovery | Complete manuscript/engine masters remain unavailable in this checkout. Do not invent their latest implementation or critique absent prose. |
+| P10 connected relief chapter | Existing transport, medicine and residents end as epilogue facts. Turn them into a new playable operation with scarce work time and new scenes; selected. |
+| P03 second original stage | Actual first track/game exists; listening and hardware timing remain unknown. A distinct second stage is valuable but remains a separate direction. |
+| P11 complete service | Ephemeral chat works; rooms, identity and persistence need a coherent service contract. Another isolated guard is not the milestone. |
+| P02/other recovery | Independent candidate context and complete historical creative masters remain absent. Do not fabricate model results or recovery. |
 
-The browser now realizes both routes, all five endings, original situational
-vector art, connected flood/cargo feedback, journal, local resume and portable
-saves. Python parity protects the actual adaptation; [execution](../evidence/waystone-dialogue/BROWSER_RUN.json)
-records full browser journeys rather than isolated function success.
+The campaign now gives night decisions continuing value. With the same spoiled
+medicine night, prioritizing the clinic versus grain changes morning/afternoon
+care while preserving the final residents, grain and dry seed. Road, ferry and
+ridge have different load/time contracts; stranded crew recovery enables faster
+boat work and Senn's planting. Failure leaves actionable afternoon work instead
+of ending access to the game. The public council record retains the night fault.
 
-Same-agent assessment: the map/roster makes separate rescue and transport outcomes
-inspectable. Explicit projected hull and medicine damage translate the existing
-current into a choice the player can assess. The same kit changes clinic outcome
-through cargo order; a stable road and retained ferry leave different morning work.
-No solved route is supplied in the interface. Original scenes/voices remain intact;
-this milestone improves access, feedback and continuity rather than claiming a
-literary rewrite. Visual review corrected geographic/final-state inconsistencies.
-
-Human understanding, strategy appeal, screen-reader/physical touch/other-browser
-behavior and commercial interest remain unverified. A short browser narrative
-prototype is now easier to demonstrate and distribute; that is not paid demand.
-Next develop a connected morning operation after unassisted player observations,
-so current transport, medicine and resident consequences govern new decisions.
+Same-agent review: new scenes focus on physical work and specific requests,
+not moral summaries. Character presence is respected; planted seed is not a
+claimed harvest. A dominated depot choice was removed where dry-chest retrieval
+already dominates, and backup ferry/consumed reserve appear in actual outcomes.
+[Execution](../evidence/waystone-dialogue/CAMPAIGN_RUN.json) records browser
+journeys and bounded state exploration, not human enjoyment or commercial demand.
+Next evaluate unassisted priorities and scene pacing before further chapters.
 
 
 # Previous assessment — an original playable rhythm stage

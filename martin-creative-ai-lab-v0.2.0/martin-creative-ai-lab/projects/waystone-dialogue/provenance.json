@@ -57,7 +57,7 @@
     ]
   },
   "browser": {
-    "version": "0.3.0",
+    "version": "0.4.0",
     "entry_point": "browser/dist/index.html",
     "engine_reference": "Unchanged adventure.py 0.2.0 and scene.py 0.1.3; the JavaScript port is checked against actual Python transitions.",
     "authorship": "New Codex-authored browser interface, SVG situational diagram, action replay and English interaction framing under Martin's direction. No external art, samples or fonts.",
@@ -66,8 +66,10 @@
       "Scene variant data is generated directly from Python; dynamic response rendering and transition code are ported and compared by the oracle.",
       "All route rules, resource effects, deadlines, current, workshop memory and five epilogues are preserved.",
       "Adds map, state-based action risks, local autosave, portable decision-journal import/export and replay. Saves are bounded, versioned, replay-validated and browser-local; no account or cloud sync.",
-      "New cover and interface wording clarifies the existing deterministic rules. No independent reader approval, historical illustration rights or commercial license is inferred."
+      "New cover and interface wording clarifies the existing deterministic rules. No independent reader approval, historical illustration rights or commercial license is inferred.",
+      "0.4.0 adds a new JavaScript-only relief morning after every actual night ending. Six work slots, grain/seed, clinical timing, new scenes and route restoration are new adaptation fiction, not preserved RPG canon or Python-equivalent morning execution.",
+      "Night rules remain unchanged. Campaign schema 2 replays both days; existing schema-1 night saves explicitly migrate by continuing into the new chapter."
     ],
-    "verification": "evidence/waystone-dialogue/BROWSER_RUN.json"
+    "verification": "evidence/waystone-dialogue/CAMPAIGN_RUN.json"
   }
 }

@@ -1,10 +1,10 @@
 {
   "name": "waystone-flood-crossing",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "private": true,
   "type": "module",
   "scripts": {
     "start": "node server.mjs",
-    "test": "node --test tests/engine.test.mjs tests/browser.test.mjs"
+    "test": "node --test tests/engine.test.mjs tests/browser.test.mjs tests/campaign.test.mjs tests/campaign-browser.test.mjs"
   }
 }

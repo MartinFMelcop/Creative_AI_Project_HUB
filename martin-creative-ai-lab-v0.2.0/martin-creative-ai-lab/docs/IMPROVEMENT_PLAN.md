@@ -1,21 +1,22 @@
-# Current milestone — Flood Crossing browser
+# Current milestone — the morning crew
 
-Deliver the complete P10 rescue without requiring a terminal: faithful static
-engine, original situational map, connected flood/resident/cargo/current feedback,
-scene/choice interface, actual journal, local resume and portable replay saves.
-Preserve Python 0.2.0/0.1.3, its narrative/rules, P03/P08, P11/P02 and the archive.
+Complete a two-day P10 campaign. Preserve the original night, derive morning
+transport/clinic/crew/record from its actual ending, and connect six work slots
+to recovery, clinical delivery, food, seed and restoration. Write scene-specific
+responses and a concrete handover; integrate map/status/choices/journal and old
+save continuation with full campaign replay. No shared framework or third-party
+media is needed.
 
-Acceptance: compare real Python traces and choices; play both full routes and
-all five endings through DOM controls; demonstrate the same-equipment cargo-order
-consequence; reload loaded cargo and import into a fresh browser profile; reject
-bad saves atomically; permit export/play without browser storage; use keyboard
-and touch; review desktop/mobile and deadline/forecast feedback. Connect existing
-CI, record bounded evidence, commit and publish normally to main, and deploy the
-same static bytes with a retained owner-private Site identity.
+Acceptance: actual work-order and night-outcome comparisons; preserve night
+facts; complete both days; explain costs/deadlines; respect absent characters;
+explore bounded successors; import legacy saves, reload/export/import midmorning
+and restart safely; review desktop/mobile; keep Python parity and portfolio bytes.
+Run the complete campaign in CI. Publish normally to main and update the same
+explicitly authorized private Site, with unchanged audience and exact static bytes.
 
-[Execution](../evidence/waystone-dialogue/BROWSER_RUN.json) records completion
-and limits. Next: unassisted player comprehension, then a connected morning
-operation with transport, medicine and resident outcomes as actual inputs.
+[Execution](../evidence/waystone-dialogue/CAMPAIGN_RUN.json) records completion
+and limits. Next: unassisted two-day play and substantive pacing/scene review,
+then choose whether another chapter improves the short campaign.
 
 
 # Previous milestone — Midnight Signal

@@ -56,14 +56,14 @@
   <figcaption id="map-caption">Two ways across. Neither can carry a promise.</figcaption>
   </figure>
   <div id="situation" hidden>
-    <div class="flood-header"><h2>The flood window</h2><p><strong id="remaining">9</strong> <span>beats left</span></p></div>
+    <div class="flood-header"><h2 id="flood-title">The flood window</h2><p><strong id="remaining">9</strong> <span id="time-unit">beats left</span></p></div>
     <ol id="clock" class="clock" aria-label="Flood clock"></ol>
-    <p class="clock-note">Your choices move the water. Reading takes no time.</p>
+    <p id="clock-note" class="clock-note">Your choices move the water. Reading takes no time.</p>
     <dl id="roster" class="roster"></dl>
     <div id="river" hidden><div class="small-heading">CHANNEL FORECAST</div><ol id="forecast" class="forecast"></ol><p id="boat-info"></p></div>
     <p id="equipment" class="equipment"></p>
   </div>
-  <p class="map-footnote">A short narrative strategy game<br>One evening. Every crossing leaves a morning.</p>
+  <p class="map-footnote">A short narrative strategy game<br>Two days. The crossing changes the work that follows.</p>
 </aside>
 <div class="story-column" id="story" tabindex="-1">
   <section id="cover">
@@ -71,6 +71,7 @@
     <h1>The Last<br>Waystone<span>Flood Crossing</span></h1>
     <p class="cover-lead">Before the water<br>takes the road.</p>
     <p>Mara has four villagers to bring home and a medicine chest to keep dry. The ferry is pinned. The causeway is broken. The Keeper is still sorting herbs.</p>
+    <p>The crossing is the first part. What reaches shelter changes the next morning's relief work.</p>
     <blockquote>“Don't tell me we'll get everything out unless you've looked at what we can carry.”<cite>— Mara</cite></blockquote>
     <div class="cover-actions"><button id="begin" class="primary">Begin the crossing <span aria-hidden="true">↗</span></button><button id="resume" class="primary" hidden>Continue crossing <span aria-hidden="true">↗</span></button><p id="resume-note" hidden></p></div>
     <div class="cover-facts"><span>Play at your own pace</span><span>Two river routes</span><span>No reflexes required</span></div>
@@ -81,11 +82,11 @@
     <div id="narrative" class="narrative"></div>
     <div id="context" class="context"></div>
     <div id="choices-area"><div class="choice-heading"><h2 id="decision-title">What will you do?</h2><span id="decision-note"></span></div><div id="choices"></div></div>
-    <section id="ending" hidden aria-label="Crossing outcome"><dl id="outcome" class="outcome"></dl><div id="epilogue" class="narrative"></div><button id="replay" class="primary">Try another crossing <span aria-hidden="true">↗</span></button><p class="ending-note">There is no single score. People, medicine and tomorrow's route have separate outcomes.</p></section>
+    <section id="ending" hidden aria-label="Crossing outcome"><dl id="outcome" class="outcome"></dl><div id="epilogue" class="narrative"></div><button id="continue-morning" class="primary" hidden>Meet the morning crew <span aria-hidden="true">↗</span></button><button id="replay" class="primary">Try another crossing <span aria-hidden="true">↗</span></button><p id="ending-note" class="ending-note">There is no single score. People, medicine and tomorrow's route have separate outcomes.</p></section>
     <details id="journal"><summary>Crossing journal <span id="journal-count"></span></summary><ol id="journal-entries"></ol></details>
   </section>
   <p id="notice" role="status" class="notice"></p>
-  <footer><span id="save-status">Progress stays in this browser; Save file lets you carry it elsewhere.</span><span>A Martin Creative AI Lab prototype · 0.3.0</span></footer>
+  <footer><span id="save-status">Progress stays in this browser; Save file lets you carry it elsewhere.</span><span>A Martin Creative AI Lab prototype · 0.4.0</span></footer>
 </div>
 </main>
 <dialog id="instructions" aria-labelledby="help-title"><button class="dialog-close" data-close="instructions" aria-label="Close instructions">×</button><p class="eyebrow">KEEP THE FLOOD IN VIEW</p><h2 id="help-title">Before you set out</h2>
@@ -93,6 +94,7 @@
   <p>You have <strong>nine beats</strong>, including talk and travel. Each choice lists its cost. The roof workers leave for refuge at beat 6; Iven leaves the jetty at beat 5. Completing a rescue on its deadline succeeds. Reading, loading and unloading take no time.</p>
   <p>The Keeper can provide light for the causeway. You can leave for the ferry without agreement. Time spent talking is still time lost to the flood.</p>
   <p>On the ferry, people and medicine share cargo slots. Iven steers faster with more capacity. The current repeats <strong>slack → pull → surge</strong>: pull damages hull; surge damages it more and spoils exposed medicine. A guide line protects both; timber protects only the hull.</p>
+  <p><strong>The morning follows your night ending.</strong> Six work shifts compete for clinic supplies, isolated people, grain and sowing seed. Dry medicine is needed by shift 3; the wagon leaves at shift 6. A repaired road, retained ferry and Iven change load capacity and work costs. The ridge trail always offers a slow fallback.</p>
   <p>Your last accepted choice is saved locally. <strong>Save file</strong> exports the journey; <strong>Load file</strong> restores it on another browser. If storage is unavailable, file saves still work. No account or network is needed after the page loads.</p>
   <button class="primary" data-close="instructions">Back to the crossing</button>
 </dialog>

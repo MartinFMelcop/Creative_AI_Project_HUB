@@ -4,7 +4,7 @@ An evolving laboratory of games, narrative, images, audio, data, and AI
 evaluation by **Martin Melcop Neto**. Projects are adaptable seeds: build small
 slices, verify behavior, record decisions, and test reuse in actual destinations.
 
-**Current seed: v0.7.0.** The lab includes eleven project lines, 178 preserved
+**Current seed: v0.8.0.** The lab includes eleven project lines, 178 preserved
 historical texts, a working local text-chat adaptation, a calibrated
 practice-task harness, a complete rescue adventure with browser/terminal editions,
 and an original browser rhythm stage with a real rendered soundtrack. Private
@@ -22,7 +22,7 @@ project versions and execution boundaries are in the state and registry.
 - [P11 — Live exchange](projects/realtime-integration-lab/README.md): install, run, test, provenance, and contribution.
 - [P02 — EVAL-001](evaluations/chat-send-buffering/README.md): export a starter, check a client, and inspect limits.
 - [Current dependency-gate evidence](evidence/evaluation-task/DEPENDENCY_RUN.json): installed direct version checks, controlled mismatch and unchanged calibration.
-- [P10 — Flood Crossing browser](projects/waystone-dialogue/browser/README.md): illustrated crossing, flood/cargo feedback, local resume, portable saves and the complete rescue operation.
+- [P10 — Flood Crossing browser](projects/waystone-dialogue/browser/README.md): two connected days: rescue, relief priorities, clinical timing, food/seed, local resume and backward-compatible portable saves.
 - [Browser milestone evidence](evidence/waystone-dialogue/BROWSER_RUN.json): Python parity, actual Chromium journeys and implementing-agent presentation review.
 - [Rescue milestone evidence](evidence/waystone-dialogue/ADVENTURE_RUN.json): actual route playthroughs, cargo-order comparison, connected checks and same-agent review.
 - [Prior dialogue evidence](evidence/waystone-dialogue/DUSK_RUN.json): 32 checks, deadline-aware closing responses, seven CLI comparisons and unchanged rules across all reachable states.

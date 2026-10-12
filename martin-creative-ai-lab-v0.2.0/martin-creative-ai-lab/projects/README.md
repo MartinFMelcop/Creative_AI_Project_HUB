@@ -7,7 +7,8 @@ protocol/browser tests. It does not require installing the other project seeds.
 [P10 — The Last Waystone](waystone-dialogue/browser/README.md) is a complete
 browser rescue: equipment, Keeper negotiation, two river routes, current/cargo
 decisions, five endings, illustrated situation, local resume and portable saves.
-Browser 0.3.0 preserves Python adventure 0.2.0 and standalone dialogue 0.1.3.
+Campaign 0.4.0 adds a morning whose crew, transport and clinic depend on the
+night. It preserves Python adventure 0.2.0 and standalone dialogue 0.1.3.
 Human play remains pending; no RPG engine is required.
 
 [P03 — Tokyo 80s](tokyo80s/README.md) is an original four-lane browser rhythm

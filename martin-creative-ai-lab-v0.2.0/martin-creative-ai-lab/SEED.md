@@ -1,10 +1,10 @@
 # SEED — Martin Creative AI Lab
 
-**Version:** 0.7.0
+**Version:** 0.8.0
 **Data-base:** 10 de outubro de 2026  
 **Autor e responsável pelo portfólio:** Martin Melcop Neto  
 **Working language:** English for new documentation, plans, code comments, UI, and reports. Preserve original creative titles and historical source languages.
-**Current state:** P10 Flood Crossing 0.3.0 is a complete browser rescue with a live situational map, connected flood/cargo risks, journal, local resume and portable saves. Python adventure 0.2.0 / scene 0.1.3 remain unchanged. P03/P08 and P11/P02 are preserved; state and registry distinguish execution from unverified human play and demand.
+**Current state:** P10 Flood Crossing 0.4.0 is a two-day browser campaign. Actual night transport, medicine, residents and council-record memory govern a playable relief morning with food/seed, clinical timing and route work. Existing night saves continue; both days replay from portable saves. Python night 0.2.0 / scene 0.1.3 and the other projects remain preserved.
 
 > Construir um laboratório autoral em Git que transforma ideias, obras e experimentos em produtos pequenos, sistemas reutilizáveis e evidências técnicas verificáveis. A IA participa da criação e execução; Martin desenvolve sua capacidade de especificar, compreender, selecionar, corrigir, validar e explicar os resultados.
 
@@ -46,14 +46,14 @@ Se apenas este arquivo estiver disponível, ele é suficiente para iniciar a Fas
 |---|---|
 | Repository | MartinFMelcop/Creative_AI_Project_HUB; actual Git root `/workspace/Creative_AI_Project_HUB`; lab remains nested in its original package directory |
 | Preserved sources | 175 Rave Master texts and 3 WebSocket files; unchanged ZIP and inventory; not a complete RMXP backup |
-| Primary workstream | P10 Flood Crossing browser 0.3.0: complete rescue, illustrated situation and durable local play workflow |
+| Primary workstream | P10 Flood Crossing campaign 0.4.0: night rescue and consequential relief morning |
 | Engine execution | P10 static ES-module browser port and unchanged Python reference; P03 Canvas/Web Audio; P11 Node/Socket.IO. No Unity/RMXP execution claim |
-| Current verification | 4 domain / 10 Chromium checks; 20,124 actual Python transitions compared, complete routes/all endings, reload/import/export and same-agent presentation review; `evidence/waystone-dialogue/BROWSER_RUN.json` |
+| Current verification | 25 campaign/retained checks; 525 morning states / 720 transitions, 20,124 Python night comparisons, actual two-day browser/save journeys; `evidence/waystone-dialogue/CAMPAIGN_RUN.json` |
 | Historical verification | v0.2.0 combat/dialogue, P10 trust, P11 unread and P02 snapshot records remain preserved; the old scenario runner was not rerun |
-| Next action | Unassisted P10 browser play, then a connected morning operation driven by transport/medicine/resident outcomes; P03 listening/hardware play and independent P02/P11 gates remain separate |
+| Next action | Unassisted P10 two-day play and review of relief priorities, dramatic pacing and character scenes; P03 listening/hardware play and independent P02/P11 gates remain separate |
 | Other seeds | P03/P08 0.1.0, P10 Python adventure 0.2.0 / standalone 0.1.3, P11 chat 0.1.7 and P02 runner 0.2.1 preserved |
 | Transfer / shared status | TR-009 (evaluation adaptation) and TR-012 (real P08 audio in P03) validated for bounded consumers; ten earlier candidates remain; no shared engine |
-| Portfolio / attribution | Baseline `07df669` synchronized with main by authenticated fetch/merge. Martin supplied direction; Codex implemented/reviewed. P10 has its own retained owner-private Site identity; final publication SHA is verified in the session delivery |
+| Portfolio / attribution | Baseline `757c0e7` synchronized with main by authenticated fetch/merge. Martin supplied direction; Codex implemented/reviewed. P10 has its own retained owner-private Site identity; final publication SHA is verified in the session delivery |
 
 Registry evidence paths must resolve to existing files inside the lab; working
 paths must be directories and legacy-source IDs must exist. This documentary
@@ -230,7 +230,7 @@ Identificadores persistem mesmo quando nomes mudam. Um projeto arquivado pode co
 | P07 | Visual Generation & Asset Lab | Capas, ilustrações, sprites e direção | Assets consistentes, pipeline e estudo de seleção | Material visual histórico; inventário pendente |
 | P08 | Audio, Poetry & Music Lab | Original musical production and integration | One rendered instrumental with a real game consumer | Midnight Signal PCM/OGG and score provenance; no album or human approval |
 | P09 | AI Delivery & Operations Cases | Carreira real e avaliação simulada | Case de entrega, análise de workflow e rubricas | Base profissional lida; cases anteriores pendentes |
-| P10 | Adventures Unleashed / Rave Master | Narrative, NPCs and recovered systems | Complete browser rescue with local resume and portable saves | Browser 0.3.0; Python adventure 0.2.0 / standalone 0.1.3; bounded evidence in registry |
+| P10 | Adventures Unleashed / Rave Master | Narrative, NPCs and recovered systems | Two-day browser rescue/relief campaign with local resume and portable saves | Campaign 0.4.0; Python adventure 0.2.0 / standalone 0.1.3; bounded evidence in registry |
 | P11 | Real-time Integration Lab / WebSocket | Node/Socket.IO event flow; three preserved source files | Local chat; later evaluation task or lobby candidate | Working chat 0.1.7: draft recovery, reading restoration and activity-aware unread/title feedback; TR-009 task adaptation verified; no service deployment |
 
 P02 agrupa evaluation e QA porque podem compartilhar a mesma aplicação pequena. Não criar dois projetos Unity idênticos apenas para apresentar títulos diferentes. P01 pode abrigar produção, economia e analytics como cases distintos de uma fonte comum.
@@ -413,8 +413,10 @@ Reservatório recuperado de RPG Maker XP/RGSS: narrativa, personalidade e diálo
 [The Last Waystone](projects/waystone-dialogue/browser/README.md) is a complete
 browser rescue operation with equipment, Keeper negotiation, two routes,
 forecast current, residents/cargo and five consequential shelter endings.
-Browser 0.3.0 adds an original live SVG diagram, action risks, journal, local
-resume and replay-validated file saves. The Python adventure 0.2.0 and standalone
+Campaign 0.4.0 includes the original live SVG diagram, action risks, journal,
+local resume and replay-validated saves. A new morning consumes night outcomes
+for clinic timing, stranded crew, grain, seed and restoration. Existing night
+saves continue into the chapter; Python parity applies to the preserved night. The Python adventure 0.2.0 and standalone
 scene 0.1.3 remain unchanged. Its oracle compares actual choices, trace/state and
 epilogues; browser checks execute the complete workflow. No full RPG equivalence,
 independent reader approval, shared engine or commercial product is claimed.
@@ -550,8 +552,8 @@ Antes do score, verificar bloqueios: fontes inacessíveis; execução impossíve
 **Historical order:** v0.1.0 recommended P01 discovery; v0.2.0 recovered concrete P10/P11 sources. Under the current request to select and implement an increment, Codex prioritized P11 because its defect and full local interaction can be verified here. ADR-008 records the choice; the assessment and plan preserve alternatives without activating them. This is not a claim that Martin individually selected or tested P11.
 
 **Current work order:** P10's complete rescue is now playable without a terminal.
-Observe unassisted browser decisions and comprehension, then create a connected
-morning operation using its separate transport, resident and medicine outcomes.
+Observe unassisted two-day decisions, relief priorities and scene pacing before
+further chapters. Night outcomes now govern the implemented morning.
 P03/P08 hardware play/listening and the independent P02/P11 gates remain separate.
 More QA infrastructure is not the default product development objective.
 
@@ -1588,3 +1590,14 @@ forecast risks without supplying solved paths. [Execution](evidence/waystone-dia
 records real Python comparisons, Chromium journeys and implementing-agent review.
 Human understanding, screen-reader/other-browser behavior and paid demand remain
 unverified. Historical sources and P03/P08, P11 and P02 stay preserved.
+
+
+### Connected relief morning — v0.8.0
+
+P10 campaign 0.4.0 turns the night epilogue's transport, medicine and resident
+facts into another playable operation. Six work slots force priorities among
+recovery, clinical care, grain, seed and route restoration. New scenes preserve
+character presence and night memory; dry, spoiled and abandoned medicine differ.
+[Execution](evidence/waystone-dialogue/CAMPAIGN_RUN.json) records actual two-day
+journeys, saves and implementing-agent design review. No independent reader,
+commercial, harvest, clinical casualty or Python morning execution claim.

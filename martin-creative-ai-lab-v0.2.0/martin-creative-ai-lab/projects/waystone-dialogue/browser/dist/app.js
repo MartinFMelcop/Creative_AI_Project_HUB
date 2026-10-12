@@ -1,4 +1,5 @@
-import {Adventure,serialize,restore} from './engine.js';
+import {Campaign as Adventure,serialize,restore} from './campaign.js';
+import {renderMorning} from './morning-ui.js';
 const $=id=>document.getElementById(id), KEY='waystone-crossing-v1';
 let game=new Adventure(), candidate=null, active=false, replacement=null;
 const titles={pack:'What can you carry?',workshop:'The Keeper’s workshop',route:'Two ways to the mill',causeway:'A gap in the stones',ferry:'The river keeps moving'};
@@ -110,12 +111,19 @@ function choiceDetail(choice) {
   return detail;
 }
 function render() {
+  if(game.morning){renderMorning(game,{p,row,paragraphs,onAction:morningAction});return;}
+  document.querySelector('.layout').classList.remove('morning');
+  $('chapters').hidden=false;$('flood-title').textContent='The flood window';$('time-unit').textContent='beats left';
+  $('clock-note').textContent='Your choices move the water. Reading takes no time.';
+  $('ending-note').textContent='There is no single score. People, medicine and tomorrow’s route have separate outcomes.';
+  $('boat-marker').setAttribute('opacity','1');
   const s=game.state,stage=s.ending?4:s.phase==='pack'?0:s.phase==='workshop'?1:s.phase==='route'?2:3;
   $('play').dataset.phase=s.phase;$('play').dataset.ending=s.ending||'';
   [...$('chapters').children].forEach((li,i)=>{li.classList.toggle('done',i<stage);if(i===stage)li.setAttribute('aria-current','step');else li.removeAttribute('aria-current');});
   $('chapter').textContent=`0${stage+1} / ${s.ending?'THE MORNING LIST':s.phase==='pack'?'PREPARATION':s.phase==='workshop'?'THE LOOSE RUNE':s.phase==='route'?'THE DEPARTURE':'THE CROSSING'}`;
   $('scene-title').textContent=s.ending?endingTitles[s.ending]:titles[s.phase];
   renderNarrative();renderContext();renderSituation();
+  $('continue-morning').hidden=!s.ending;
   $('choices').replaceChildren();$('choices-area').hidden=!!s.ending;$('ending').hidden=!s.ending;
   $('decision-title').textContent=s.phase==='pack'?'Choose your equipment':'What will you do?';
   $('decision-note').textContent=s.phase==='pack'?'No time spent packing':'Costs shown before you choose';
@@ -149,6 +157,8 @@ function render() {
     p(entry.text,li);$('journal-entries').append(li);
   }
 }
+function morningAction(action){try{game.act(action);say('');render();persist();focusScene();}catch(e){say(e.message);}}
+$('continue-morning').addEventListener('click',()=>morningAction('morning'));
 $('begin').addEventListener('click',()=>requestReplace(new Adventure()));
 $('resume').addEventListener('click',()=>{say('');activate(candidate);});
 $('restart').addEventListener('click',()=>requestReplace(new Adventure()));
@@ -181,7 +191,7 @@ try {
     if(text.length>65536)throw new Error('Oversized save');
     candidate=restore(JSON.parse(text));$('resume').hidden=false;$('begin').classList.remove('primary');
     $('begin').textContent='Begin a new crossing';$('resume-note').hidden=false;
-    $('resume-note').textContent=candidate.state.ending?`Saved ending: ${endingTitles[candidate.state.ending]}`:`Saved at ${candidate.state.phase} · ${candidate.state.time} beats left.`;
+    $('resume-note').textContent=candidate.morning?`Saved morning · ${candidate.morning.state.time} shifts left.`:candidate.state.ending?`Saved ending: ${endingTitles[candidate.state.ending]}`:`Saved at ${candidate.state.phase} · ${candidate.state.time} beats left.`;
     $('export').hidden=false;
     // A recovered save can be exported before deciding to replace it.
     game=candidate;

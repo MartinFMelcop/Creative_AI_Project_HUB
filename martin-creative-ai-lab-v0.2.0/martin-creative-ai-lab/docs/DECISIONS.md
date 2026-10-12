@@ -589,3 +589,33 @@ an archive from the pushed source provide the bounded fallback. No audience
 change, credentials in files, full RPG restoration or commercial approval.
 Revisit comprehension/pacing through unassisted play and build a connected morning
 operation from the actual outcomes rather than collecting unrelated features.
+
+
+## ADR-031 — turn night outcomes into a playable relief morning
+
+**Date:** 2026-10-11 (America/Sao_Paulo). **Status:** campaign 0.4.0.
+**Authority:** explicit development/main publication and retained private-demo authorization.
+
+Night rescue, browser delivery and original rhythm production are already real.
+Choose connected gameplay/content over further narrow guards: a six-work-slot
+morning uses actual residents, medicine, road/ferry, Iven and the council record.
+The slow ridge fallback permits continued play after every ending. Grain, clinic
+timing, seed, reserve and routes remain separate outcomes; do not collapse them
+into a morality score. Remove redundant replacement when dry medicine is available.
+
+Keep the flood engine/Python and its trace unchanged. New JavaScript Morning
+owns daytime rules/scenes; Campaign connects it after a completed night. Python
+parity covers the night only. A public record correction enables new supervised
+repair without retroactively changing trust or historical apology. New grain,
+planting and relief fiction is an adaptation, not recovered historical canon.
+
+Senn's planting requires the full mill party; absent characters do not deliver
+lines/actions. Clinic time is a fictional deadline, not a casualty model; seed
+sown is not a harvest. Structural transport viability carries over, while morning
+work abstracts calm return trips rather than reusing night surge damage.
+
+Night-only schema-1 saves stay readable/exportable; after entering morning,
+schema 2 records the complete accepted action journal. Replay validates fresh
+state across both days and ignores supplied snapshots. Preserve the existing
+owner-private Site identity and explicit session authorization. Revisit priorities,
+pacing and voices through unassisted play before expanding another chapter.

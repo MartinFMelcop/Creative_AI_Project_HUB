@@ -1,0 +1,179 @@
+{
+  "schema_version": 1,
+  "project": "P10",
+  "version": "0.4.0",
+  "milestone": "Two-day flood rescue and relief campaign",
+  "baseline_commit": "757c0e7cfb943598bf9273d7b24212ec8e97a8a7",
+  "date": "2026-10-11",
+  "timezone": "America/Sao_Paulo",
+  "environment": {
+    "node": "24.19.0",
+    "python": "3.12.14",
+    "chromium": "154.0.8037.57",
+    "input": "Playwright synthetic DOM/touch; no human playtest"
+  },
+  "before": "Night rescue outcomes ended as prose; no new operation used the retained transport, medicine, residents or council record.",
+  "after": "Six-shift morning continues every night ending with actual inherited access/crew/medicine, recovery, clinical timing, grain, seed, repair work and separate afternoon handover facts. Existing night saves continue; new saves replay both chapters.",
+  "executed": [
+    {
+      "command": "npm test (projects/waystone-dialogue/browser)",
+      "result": "PASS: 25 checks, no failures/skips/cancellation; final run 26.226s",
+      "scope": "14 retained checks, 7 new campaign-domain and 4 new Chromium cases. Includes both days, priority comparisons, legacy continuation, morning reload/export/import in a fresh profile, mobile fallback and restart."
+    },
+    {
+      "command": "Morning successor graph in campaign.test.mjs",
+      "result": "PASS: 525 states, 720 transitions from six specified actual night endings; work budget, people, grain, timber, terminal choices and unchanged night snapshot checked. Not every possible night ending."
+    },
+    {
+      "command": "Retained Python oracle in engine.test.mjs",
+      "result": "PASS: 20,124 real Python night transitions over 8,583 river states plus seeded dialogue paths. Python parity covers the unchanged night, not the new JavaScript morning."
+    },
+    {
+      "command": "python3 projects/waystone-dialogue/test_scene.py and test_adventure.py",
+      "result": "PASS: 32 scene + 20 adventure; original 8,922-state graph/five night endings."
+    },
+    {
+      "command": "python3 projects/waystone-dialogue/browser/tools/export_dialogue.py --check",
+      "result": "PASS: generated dialogue data matches Python."
+    },
+    {
+      "command": "python3 tools/test_validate_repo.py and tools/test_check_manifest.py",
+      "result": "PASS: 11 + 11 integrity regressions."
+    },
+    {
+      "command": "git diff --exit-code 757c0e7 -- retained projects/evaluations/archive and night Python files",
+      "result": "PASS: retained P03/P08, P11/P02, archive, adventure.py and scene.py are byte-unchanged."
+    },
+    {
+      "command": "Four explicit Campaign runs via Node and actual epilogues recorded",
+      "result": "PASS: road planting/standby ferry, clinic-first/food-first same-night comparison, and retreat recovery."
+    }
+  ],
+  "campaign_runs": [
+    {
+      "name": "Road, planted seed and standby ferry",
+      "actions": "rope, timber, ready, herbs, bargain, causeway, iven, roof, span, convoy, morning, grain, seed, plant, ready-ferry",
+      "night": {
+        "ending": "FULL_RESCUE",
+        "route": "causeway",
+        "saved": 4,
+        "medicine": "delivered",
+        "iven": "rescued",
+        "bridge": "stable"
+      },
+      "morning": {
+        "ending": "READY_FOR_NOON",
+        "elapsed": 6,
+        "people": 4,
+        "timely": true,
+        "grain": 4,
+        "seed": "sown",
+        "road": true,
+        "ferry": true,
+        "reserve_used": false
+      }
+    },
+    {
+      "name": "Spoiled night, clinic first",
+      "actions": "timber, oil, ready, leave, ferry, iven, roof, board, row, row, load, board, row, morning, depot, supply-clinic, grain, grain, seed",
+      "night": {
+        "ending": "PEOPLE_SAFE",
+        "route": "ferry",
+        "saved": 4,
+        "medicine": "spoiled",
+        "iven": "rescued",
+        "bridge": null
+      },
+      "morning": {
+        "ending": "READY_FOR_NOON",
+        "elapsed": 6,
+        "people": 4,
+        "timely": true,
+        "grain": 4,
+        "seed": "saved",
+        "road": false,
+        "ferry": true,
+        "reserve_used": true
+      }
+    },
+    {
+      "name": "Same spoiled night, food first",
+      "actions": "timber, oil, ready, leave, ferry, iven, roof, board, row, row, load, board, row, morning, grain, grain, depot, supply-clinic, seed",
+      "night": {
+        "ending": "PEOPLE_SAFE",
+        "route": "ferry",
+        "saved": 4,
+        "medicine": "spoiled",
+        "iven": "rescued",
+        "bridge": null
+      },
+      "morning": {
+        "ending": "READY_FOR_NOON",
+        "elapsed": 6,
+        "people": 4,
+        "timely": false,
+        "grain": 4,
+        "seed": "saved",
+        "road": false,
+        "ferry": true,
+        "reserve_used": true
+      }
+    },
+    {
+      "name": "Early retreat, recovery and dry seed",
+      "actions": "rope, oil, ready, leave, retreat, morning, seed, recover-crew, close",
+      "night": {
+        "ending": "SHELTERED",
+        "route": null,
+        "saved": 0,
+        "medicine": "waiting",
+        "iven": "waiting",
+        "bridge": null
+      },
+      "morning": {
+        "ending": "WORK_REMAINS",
+        "elapsed": 5,
+        "people": 4,
+        "timely": false,
+        "grain": 0,
+        "seed": "saved",
+        "road": false,
+        "ferry": false,
+        "reserve_used": false
+      }
+    }
+  ],
+  "creative_review": {
+    "reviewer": "Implementing Codex agent, not independent audience",
+    "inspected": "Actual new scene text, state contracts, work orders and Chromium desktop/mobile screenshots of opening, complete handover and fallback recovery.",
+    "assessment": "Night successes release labor; partial failures remain playable. Clinic deadline and transport capacity create competing work orders. Physical work, written council correction and character-specific requests replace abstract moral summaries. Seed sown is not a harvest; delayed care is not a invented casualty result.",
+    "refinements": [
+      "Removed redundant depot replacement when dry medicine can be retrieved.",
+      "Restricted planting to a returned mill crew so Senn cannot act while stranded.",
+      "Removed absent-character narration from repair, solo ferry and clinical scenes.",
+      "Made standby ferry and consumed depot reserve visible in the handover."
+    ]
+  },
+  "source_sha256": {
+    "projects/waystone-dialogue/browser/dist/app.js": "64b8f5f4a2fcc96be8db3ffc68264038e54497ab9a7b0e5240efc441b41e60a0",
+    "projects/waystone-dialogue/browser/dist/campaign.js": "959a66659629b51c2e5d89624d9ada33b6d99da0521dc76ede1d26fd7bf441f7",
+    "projects/waystone-dialogue/browser/dist/dialogue.js": "4feeff8da32a5a9af52cf93fa3ce0b481a849725a08dd8c819624c8889902b6e",
+    "projects/waystone-dialogue/browser/dist/engine.js": "568516f20c573e253b93bcfdac2ba3c499f6c34284d73dac73393c3d1bec880f",
+    "projects/waystone-dialogue/browser/dist/index.html": "09fc6eba76d2671a731ae31210c2903fcb1d3902ec49448a47ae7b8ba97f0035",
+    "projects/waystone-dialogue/browser/dist/morning-ui.js": "cce0daf04d033267926eb08c2dea6d2cd4215a4bcd185a58274a5b4f0c3f7cbf",
+    "projects/waystone-dialogue/browser/dist/morning.js": "7fab9c17e357ba8ede0749d521034ec2cf3db70674fa839deb410ade839e91b6",
+    "projects/waystone-dialogue/browser/dist/scene.js": "65a9054d3703fa52b650347efc4c975d9e9f5624c79b09d1f8aed0afcb4afe3b",
+    "projects/waystone-dialogue/browser/dist/style.css": "048528b39c0acb455ccb9598d11979d293c1913cd4e217821ece2b33daf7c422"
+  },
+  "unverified": [
+    "Unassisted player understanding, engagement, narrative pacing and balance.",
+    "Physical touch hardware, assistive technology and Safari/Firefox.",
+    "Paid demand, commercial readiness, harvest simulation and clinical outcome modeling."
+  ],
+  "publication": {
+    "state": "Record precedes commit/deployment; final delivery verifies actual main SHA/message and native private deployment.",
+    "project_id": "appgprj_6acc3b6c386c8191b922c092a956a1fe",
+    "audience": "Existing owner-private, unchanged; explicit private-demo authorization persists.",
+    "source_workflow": "Official helpers absent; opened existing source using hidden-stdin native credential and normal Git; same committed static bytes are packaged after main publication."
+  }
+}

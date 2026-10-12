@@ -84,7 +84,7 @@ jobs:
       - name: Exercise Waystone browser journeys, saves and Python parity
         run: |
           python3 projects/waystone-dialogue/browser/tools/export_dialogue.py --check
-          node --test projects/waystone-dialogue/browser/tests/engine.test.mjs projects/waystone-dialogue/browser/tests/browser.test.mjs
+          npm test --prefix projects/waystone-dialogue/browser
       - name: Exercise evaluator boundaries and failure attribution
         run: python3 evaluations/chat-send-buffering/test_runner.py
       - name: Require known baseline and reference outcomes
