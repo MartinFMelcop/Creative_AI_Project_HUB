@@ -1,0 +1,63 @@
+{
+  "schema": 1,
+  "version": "0.1.0",
+  "seed": 1,
+  "rules": {
+    "startingGold": 4,
+    "goal": 3,
+    "roundLimit": 20,
+    "sealBase": 6,
+    "sealStep": 2,
+    "moveCost": 1,
+    "riteCost": 2,
+    "workBonus": 0
+  },
+  "policies": [
+    "collector",
+    "keeper",
+    "opportunist",
+    "collector"
+  ],
+  "actions": [
+    {
+      "destination": 3,
+      "action": "Work",
+      "target": -1
+    },
+    {
+      "destination": 5,
+      "action": "Work",
+      "target": -1
+    },
+    {
+      "destination": 0,
+      "action": "Work",
+      "target": -1
+    },
+    {
+      "destination": 1,
+      "action": "Work",
+      "target": -1
+    },
+    {
+      "destination": 4,
+      "action": "Buy",
+      "target": -1
+    },
+    {
+      "destination": 0,
+      "action": "Work",
+      "target": -1
+    },
+    {
+      "destination": 0,
+      "action": "Buy",
+      "target": -1
+    },
+    {
+      "destination": 4,
+      "action": "Buy",
+      "target": -1
+    }
+  ]
+}

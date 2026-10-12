@@ -4,10 +4,10 @@ An evolving laboratory of games, narrative, images, audio, data, and AI
 evaluation by **Martin Melcop Neto**. Projects are adaptable seeds: build small
 slices, verify behavior, record decisions, and test reuse in actual destinations.
 
-**Current seed: v0.10.0.** The lab includes eleven project lines, 178 preserved
+**Current seed: v0.11.0.** The lab includes eleven project lines, 178 preserved
 historical texts, a working local project-conversation workspace, a calibrated
 practice-task harness, a complete rescue adventure with browser/terminal editions,
-an original browser rhythm stage with a real rendered soundtrack, and a native
+an original browser rhythm stage with a real rendered soundtrack, a compiled C# economy trial, and a native
 Godot boss arena with an executed PCK. Private
 Sites demos support the browser games. No full RPG migration, model benchmark,
 finished music catalogue or public-audience deployment is claimed.
@@ -15,6 +15,9 @@ The containing directory keeps its original v0.2.0 package name. Latest verified
 project versions and execution boundaries are in the state and registry.
 
 ## Start here
+
+- [P01 — Eclipse Fair](projects/eclipse-fair/README.md): compiled C# economy match, terminal play, journal/replay and actual rule comparisons.
+- [Economy execution](evidence/eclipse-fair/RUN.json): source/compiled package, synthetic play and tuning limits.
 
 - [P06 — Veilbreak](projects/veil-arena/README.md): native Godot boss encounter, source and playable resource pack.
 - [Native execution](evidence/veil-arena/RUN.json): actual physics, OpenGL frames, full fight and pack build/run boundaries.
@@ -83,7 +86,7 @@ the state record.
 
 [Lab checks](https://github.com/MartinFMelcop/Creative_AI_Project_HUB/actions/workflows/lab-checks.yml)
 runs these checks on main pushes, pull requests to main, and manual dispatch.
-Three Ubuntu 24.04 jobs include pinned Godot native gameplay/package checks,
+Four Ubuntu 24.04 jobs include pinned .NET 10 compiled economy and Godot native gameplay/package checks,
 Python 3.12, P11's recorded Node version, locked npm
 packages and Playwright's matching Chromium. Browser installation/startup must
 succeed; unavailable execution cannot produce a passing calibration. Full Git

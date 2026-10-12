@@ -7,10 +7,11 @@ experiments with documented evidence and reusable learning.
 The working lab is nested under
 [martin-creative-ai-lab](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/README.md).
 The directory retains its original package name; its maintained seed is now
-v0.10.0. Historical source snapshots remain unchanged.
+v0.11.0. Historical source snapshots remain unchanged.
 
 - [Current state](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/docs/STATE.md)
 - [Assessment and priorities](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/docs/IMPROVEMENT_PLAN.md)
+- [P01 — Eclipse Fair](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/projects/eclipse-fair/README.md): a compiled C# terminal economy match, durable replay and common-seed rule comparison.
 - [P06 — Veilbreak](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/projects/veil-arena/README.md): a native Godot boss trial with actual physics, two phases, counter/ward mechanics and a built playable resource pack.
 - [P03 — Midnight Signal](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/projects/tokyo80s/README.md): a complete browser rhythm stage with original rendered music, four lanes, calibration, combo/aura and replay.
 - [P11 — Project Rooms](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/projects/realtime-integration-lab/README.md): a local workspace with persistent project conversations/decisions, identity, history recovery and export; the original chat exercise remains available.

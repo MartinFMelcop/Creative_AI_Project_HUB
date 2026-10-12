@@ -1,10 +1,10 @@
 # SEED — Martin Creative AI Lab
 
-**Version:** 0.10.0
+**Version:** 0.11.0
 **Data-base:** 10 de outubro de 2026  
 **Autor e responsável pelo portfólio:** Martin Melcop Neto  
 **Working language:** English for new documentation, plans, code comments, UI, and reports. Preserve original creative titles and historical source languages.
-**Current state:** P11 Project Rooms 0.2.0 adds local identity, persistent project conversations/decisions, reconnect history, per-participant drafts, explicit idempotent retries and complete JSON export. Native P06 0.1.0, P10 campaign 0.4.0 and P03/P08 remain preserved; no public service, verified accounts or human/commercial approval is claimed.
+**Current state:** P01 Eclipse Fair 0.1.0 is a new compiled C#/.NET terminal match and economy workbench: four participants, eight venues, sigils/curse/rites/ward/theft, replay and common-seed scenario comparison. The runtime-dependent ZIP was executed. P11/P06/P03/P08/P10 and P02 remain preserved; no graphical engine, historical restoration or human/commercial claim.
 
 > Construir um laboratório autoral em Git que transforma ideias, obras e experimentos em produtos pequenos, sistemas reutilizáveis e evidências técnicas verificáveis. A IA participa da criação e execução; Martin desenvolve sua capacidade de especificar, compreender, selecionar, corrigir, validar e explicar os resultados.
 
@@ -46,14 +46,14 @@ Se apenas este arquivo estiver disponível, ele é suficiente para iniciar a Fas
 |---|---|
 | Repository | MartinFMelcop/Creative_AI_Project_HUB; actual Git root `/workspace/Creative_AI_Project_HUB`; lab remains nested in its original package directory |
 | Preserved sources | 175 Rave Master texts and 3 WebSocket files; unchanged ZIP and inventory; not a complete RMXP backup |
-| Primary workstream | P11 Project Rooms 0.2.0: complete local persistent collaboration workflow |
-| Engine execution | P11 Node 24/Socket.IO/SQLite and Chromium; retained P06 Godot source/PCK, P10 browser/Python and P03 Web Audio. No new Unity/RMXP execution |
-| Current verification | 6 SQL/API/socket + 8 Chromium room checks, 38 retained legacy checks; DB/server restart, lost-ack recovery, invitation, pagination/export; `evidence/realtime-chat/ROOMS_RUN.json` |
+| Primary workstream | P01 Eclipse Fair 0.1.0: playable terminal economy and executed compiled package |
+| Engine execution | P01 C#/.NET 10 compilation, terminal and batch execution. Existing Godot/Python/browser/Node projects preserved; no new engine build |
+| Current verification | 10 C# contracts, actual CLI/source/package workflows and 100 seeds × four seat rotations per scenario; `evidence/eclipse-fair/RUN.json` |
 | Historical verification | v0.2.0 combat/dialogue, P10 trust, P11 unread and P02 snapshot records remain preserved; the old scenario runner was not rerun |
-| Next action | Compare real collaborator/account/backup needs, native P06 presentation/pacing, distinct P03 music and bounded P01 economy |
-| Other seeds | P06 0.1.0, P10 campaign 0.4.0 / Python night 0.2.0 / standalone 0.1.3, P03/P08 0.1.0 and P02 runner 0.2.1 preserved |
+| Next action | Compare unassisted P01/native presentation, P06 sound/art, distinct P03 music and P11 collaborator/service needs |
+| Other seeds | P11 0.2.0, P06 0.1.0, P10 campaign 0.4.0, P03/P08 0.1.0 and P02 runner 0.2.1 preserved |
 | Transfer / shared status | TR-009 (evaluation adaptation) and TR-012 (real P08 audio in P03) validated for bounded consumers; ten earlier candidates remain; no shared engine |
-| Portfolio / attribution | Clean baseline `25d4588` matched main after fetch/merge. Martin supplied direction; Codex implemented/reviewed. Main publication authorized; Sites untouched |
+| Portfolio / attribution | Clean baseline `7f36267` matched main after fetch/merge. Martin supplied direction; Codex implemented/reviewed. Main publication authorized; Sites untouched |
 
 Registry evidence paths must resolve to existing files inside the lab; working
 paths must be directories and legacy-source IDs must exist. This documentary
@@ -221,7 +221,7 @@ Identificadores persistem mesmo quando nomes mudam. Um projeto arquivado pode co
 
 | ID | Seed | Matéria-prima principal | Destinos possíveis | Estado nesta fundação |
 |---|---|---|---|---|
-| P01 | Artemyra / ArtemiZ4 | Board, economia, minigames, IA de jogo, produção | Auditoria, simulador, pequeno party game, benchmark | Legado descrito; runtime atual não auditado |
+| P01 | Artemyra / Eclipse Fair | Typed game economy and strategy | Playable C# terminal match, replay and scenario comparison | New 0.1.0 compiled destination; no historical runtime restoration |
 | P02 | AI Evaluation & QA Lab (historical Unity proposal) | Requirements, reproduced bugs, artifact checks | Bounded practice tasks and later independent evaluation | EVAL-001 runner 0.2.0 uses pinned snapshots, starter 0.1.0; M4 harness scope, no model candidate |
 | P03 | Tokyo 80s | Original soundtrack, timing and browser gameplay | Complete Midnight Signal stage; physical play/listening still pending | P03 0.1.0 with real P08 audio; see registry/evidence |
 | P04 | O Lich mais velho da tumba mais antiga | Romance, mundo, personagens, arte e continuidade | Narrativa interativa, amostra editorial, jogo, animatic | Pacote v0.4.48 parcialmente inspecionado |
@@ -236,6 +236,15 @@ Identificadores persistem mesmo quando nomes mudam. Um projeto arquivado pode co
 P02 agrupa evaluation e QA porque podem compartilhar a mesma aplicação pequena. Não criar dois projetos Unity idênticos apenas para apresentar títulos diferentes. P01 pode abrigar produção, economia e analytics como cases distintos de uma fonte comum.
 
 ### P01 — Artemyra / ArtemiZ4
+
+[Eclipse Fair](projects/eclipse-fair/README.md) 0.1.0 now realizes a new C#/.NET
+terminal match and economy workbench. Source and compiled package execute four
+participants, eight venues, route/work/sigil/curse/rite/ward/theft choices, public
+forecasts, rotating initiative, Gate/deadline endings and replay. Common-seed
+rule comparison exports actual CSV/JSON; all four policy/seat rotations are used.
+Twenty rounds replace the old candidate fifteen after synthetic pacing review.
+No historical code/package, graphical engine, LAN or human approval is claimed.
+The historical context below remains a source of direction, not current runtime.
 
 **Núcleo histórico:** party RPG competitivo originado em RPG Maker XP/RGSS. Quatro jogadores, MVP com um humano contra três IAs, tabuleiro, minigames e recursos temporários. O histórico inclui formatos FFA e propostas de 2v2, sem campanha e com LAN como expansão.
 
@@ -561,7 +570,7 @@ Antes do score, verificar bloqueios: fontes inacessíveis; execução impossíve
 **Historical order:** v0.1.0 recommended P01 discovery; v0.2.0 recovered concrete P10/P11 sources. Under the current request to select and implement an increment, Codex prioritized P11 because its defect and full local interaction can be verified here. ADR-008 records the choice; the assessment and plan preserve alternatives without activating them. This is not a claim that Martin individually selected or tested P11.
 
 **Current work order:** reassess the portfolio every session. P06 now has a native
-trial, P11 a persistent project workspace, P10 two playable days and P03 an original rhythm stage.
+trial, P01 a compiled economy match, P11 a persistent project workspace, P10 two playable days and P03 an original rhythm stage.
 Compare unassisted native/play/listening evidence, P11's account/backup needs,
 independent P02 context and recovered-source opportunities before choosing again.
 Recent browser concentration is a reason to investigate alternatives, not a quota.

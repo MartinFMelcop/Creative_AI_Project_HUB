@@ -1,0 +1,4 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup><OutputType>Exe</OutputType><AssemblyName>eclipse</AssemblyName><UseAppHost>false</UseAppHost></PropertyGroup>
+  <ItemGroup><ProjectReference Include="../Core/Eclipse.Core.csproj" /></ItemGroup>
+</Project>

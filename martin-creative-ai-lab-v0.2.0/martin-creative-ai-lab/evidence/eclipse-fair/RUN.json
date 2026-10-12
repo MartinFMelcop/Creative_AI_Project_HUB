@@ -1,0 +1,85 @@
+{
+  "project_id": "P01",
+  "version": "0.1.0",
+  "recorded_at": "2026-10-12",
+  "baseline_commit": "7f36267a0689b7e922de9b46e17c34c83211fb2c",
+  "contribution": {
+    "direction": "Martin Melcop Neto",
+    "implementation_and_review": "Codex; no independent human playtest"
+  },
+  "before": "Seed with no P01 runtime/package in this checkout or the Rave/WebSocket source archive.",
+  "after": "C# terminal match and economic comparison workbench, connected rules/agents/journal/CLI and executed compiled ZIP.",
+  "environment": {
+    "platform": "Linux x86_64",
+    "sdk": {
+      "sdk": "10.0.401",
+      "url": "https://builds.dotnet.microsoft.com/dotnet/Sdk/10.0.401/dotnet-sdk-10.0.401-linux-x64.tar.gz",
+      "sha512": "51c8b999af9e8dd9998c9edc5944e19a90788862068acd38694e098889054ce8c23d4f0c5cccfa16bf187d044562359e5ee69a9f8ad0bbe913ba90311fbce25b"
+    },
+    "runtime": "Microsoft.NETCore.App 10.0.12",
+    "external_nuget_packages": 0,
+    "engine": "No Unity/Godot execution or graphical build for this project",
+    "initial_setup": "Channel discovery fallback requested forbidden ci.dot.net. Stable published metadata/package on allowed builds.dotnet.microsoft.com was installed with its official SHA-512; no proxy/policy change."
+  },
+  "executed": [
+    {
+      "command": "dotnet build Cli/Eclipse.Cli.csproj -c Release",
+      "result": "Successful actual compilation; 0 warnings/0 errors"
+    },
+    {
+      "command": "dotnet run --project Checks -c Release",
+      "result": "10/10 core/journal contracts, no failures; actual 100 complete property rollouts, 63 Gate claims",
+      "scope": "Atomic rejection, initiative, price/curse/wage, ward/theft, route/rite/claim, deadline/ties, preview isolation, conservation/resources, replay/tamper/atomic file and configuration"
+    },
+    {
+      "command": "python3 tools/check_cli.py",
+      "result": "Real compiled terminal input: invalid plan/hint, failed save without ending match, valid save, resume to same full assisted result, replay, invalid journal/options and four-seat CSV comparison"
+    },
+    {
+      "command": "dotnet publish Cli/Eclipse.Cli.csproj -c Release --no-self-contained -p:DebugType=None -o <scratch>/publish; python3 tools/pack.py <scratch>/publish",
+      "result": "Actual compiled resource package, 8 files; own DLLs/config/rules/example, runtime not included",
+      "bytes": 30282
+    },
+    {
+      "command": "python3 tools/check_cli.py <extracted package>/eclipse.dll",
+      "result": "Same complete process workflow passed using the shipped binary from scratch outside source"
+    },
+    {
+      "command": "dotnet <extracted>/eclipse.dll play --load <extracted>/examples/partial-journal.json",
+      "input": "Repeated auto commands; synthetic assisted terminal input",
+      "result": "gate claimed. Winner(s): Nira. Turns: 66. Minted 149, spent 144, stolen 3."
+    },
+    {
+      "command": "dotnet eclipse.dll compare --variant rules/expensive-seals.json --runs 100 --seed 0 --out <scratch>/rotated-compare",
+      "result": "100 common seeds × four policy/seat rotations × two scenarios = 800 matches, 3200 participant CSV rows",
+      "summary": "COMPARISON.json"
+    }
+  ],
+  "comparative_review": {
+    "initial_observation": "The tested 15-round/weak-route policies produced 0/100 baseline Gate claims; after production-aware planning, 15 rounds still produced 0/100. This did not prove human impossibility.",
+    "connected_revision": "Next-round productive wages receive meaningful agent value; 20-round budget permits return rites/Gate travel. Actual Gate/deadline outcomes now occur.",
+    "final_observation": "258/400 baseline Gate claims; 223/400 with first price raised 6→8. Every policy occupies every seat for each seed; relative policy order stays fixed. Opportunist leads these synthetic policies; Worker is deliberately income-only and receives zero win credit.",
+    "assessment": "Routes and curse make purchase timing costly; cash accumulation alone does not win this sampled objective. Protection/theft shifts existing currency and produces recovery choices. Heuristic-agent outcomes do not establish fair human balance, optimal play or absence of exploits."
+  },
+  "example_origin": "Eight accepted actions from the seed-1 development trace, replayed under final 20-round rules. No arbitrary player state or result snapshot supplied.",
+  "preservation": "P11/P06/P03/P08/P10, evaluator snapshot, archives and asset/transfer records byte-unchanged against baseline. No historical restoration or transfer promoted.",
+  "limits": [
+    "Framework-dependent net10.0 DLLs need .NET 10; no standalone platform host or SDK/runtime redistributed. Linux executed; other platforms unverified.",
+    "No graphical engine binding, original 48-tile runtime, minigames/LAN, controller, art/audio or human play.",
+    "Four heuristic policies and four rotations are not all permutations or independent balance validation. Worker is a control, not a balanced character class.",
+    "No human enjoyment, external usability, commercial audience/demand or exclusive rights conclusion.",
+    "Existing/new hosted CI results must be read from GitHub Actions, not inferred from local runs."
+  ],
+  "sha256": {
+    "Core/Game.cs": "59c4e50b13d0189c88b0a7cc11310f001bed0c687640b9a68b052a16fa2bea94",
+    "Core/Agents.cs": "275b568d7a4100be56a850941c661accf63c0759b57541af772dda9554ac4535",
+    "Cli/Program.cs": "e52528433d3a1a1aae649bd4c68d2363008ad4233ea20ea5a56f9a81a427ca40",
+    "Cli/Journal.cs": "9dd9ad24ec286d4d0110c2f40c8bc56ea9dd4ee25340fcc5de7a164d39e7f24b",
+    "Checks/Program.cs": "93fd6407404ad6ced8e15816a7451c367cacfb4363b3d95648af6e83a37c15ac",
+    "tools/check_cli.py": "48a9c8f963fd9b0f5ed4bf6ed7abce238e2dcb748717e465d45932b45d2aca5d",
+    "dist/eclipse-fair-0.1.0.zip": "1d931daa1d630fe9201be3af07999d8969447c1cad6e685d1f6f5e34814f1422",
+    "examples/partial-journal.json": "7b6d79726248ada4cb1b2b591d8c7b789b0f30ffa8483bed16b8843e868edd6c",
+    "Directory.Build.props": "62720f290d07a9d7f4899af16ff649dec8969a0b825aacdf1f5df943bea3668d",
+    "global.json": "a0dcc4ee0c1b8044f9498734741bd764d5c2585f4d0d8e31e27e26e9662f751f"
+  }
+}

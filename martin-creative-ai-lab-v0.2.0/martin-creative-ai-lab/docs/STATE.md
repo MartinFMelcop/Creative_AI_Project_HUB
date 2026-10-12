@@ -1,43 +1,42 @@
 # Lab state
 
-**Updated:** 2026-10-12 (UTC). **Seed:** 0.10.0.
-**Current milestone:** P11 Project Rooms 0.2.0.
+**Updated:** 2026-10-12 (UTC). **Seed:** 0.11.0.
+**Current milestone:** P01 Eclipse Fair 0.1.0.
 
-[Run Project Rooms](../projects/realtime-integration-lab/README.md) with Node 24
-and `npm run rooms`, then open `/studio/`. Choose a remembered local participant,
-create/share a project, exchange saved notes, record decisions, switch rooms with
-drafts intact and export the complete record. SQLite commits before broadcast;
-rejoining recovers missed entries. A fixed attempt ID permits explicit retry of
-uncertain sends without another insert. Earlier attempts and newer typing survive
-reload separately. The original ephemeral exercise and its protocol remain at `/`.
+[Play or compare economies](../projects/eclipse-fair/README.md) using the compiled
+.NET 10 package or C# source. One participant and three agents travel eight venues,
+earn obols, buy sigils, manage curse, cleanse at the Chapel, ward/theft and claim
+the Gate. Twenty rounds bound the match; deadline ranking shares exact ties.
+Current/next forecasts, full resources and rotating initiative inform choices.
+Save/resume rebuilds accepted actions; JSON/CSV reports compare scenario changes
+across the same seeds and all four policy/seat rotations.
 
-[Execution](../evidence/realtime-chat/ROOMS_RUN.json) covers six SQLite/API/socket
-and eight Chromium workflow checks, plus 38 retained legacy checks. Actual database
-reopening and server restart, disconnect recovery, lost acknowledgement with/without
-commit, rejection, shared URLs, pagination/download and narrow UI were exercised.
-CLI startup outside the project serves both modes; the new startup creates a real
-ignored SQLite file. Source and desktop/narrow review are by the implementer.
+[Execution](../evidence/eclipse-fair/RUN.json) records SDK installation/official
+SHA-512, compilation, ten C# contract checks, actual terminal input, journal/replay,
+800 scenario matches and the independently executed compiled ZIP. Baseline Gate
+claims are 258/400 versus 223/400 with higher prices. Currency conservation is
+checked through 100 complete matches. Worker is an income-only control; synthetic
+policy outcomes do not establish human balance or an optimal strategy.
 
-This trusted local workspace has chosen display names, not verified accounts.
-All participants may open every project. Browser storage keeps bearer identity
-and per-participant drafts; SQLite keeps hashed tokens and the record. No automatic
-offline sending, public hosting, roles, cross-process delivery, full restore/import,
-human usability, assistive technology or commercial demand is claimed. Export is
-a complete consumable record; operational backup needs the stopped database.
+The initial tested 15-round/weak-route policies produced no Gate claims. Better
+production-aware planning and twenty rounds produced observed claims; no claim
+is made that the earlier rules were impossible for humans. Failed saves preserve
+the live match. Source and strategy review are by Codex, not audience approval.
 
-Baseline `25d4588` was clean and matched main after fetch/merge. Portfolio review
-compared native P06, P03 music, P01 economy and P11 service completeness. Persistent
-collaboration removes a real limitation while P06 already has an executed trial
-and the games need unassisted play/listening. No mandatory project rotation.
-Node/Socket.IO preserve the useful transport; built-in SQLite adds relational
-persistence without another dependency/service. No rewrite to another stack.
+SDK 10.0.401 and runtime 10.0.12 were installed from the published stable package,
+with its official digest, under scratch. No NuGet dependency. C# serves deterministic
+transactions, batch comparisons and an actual terminal consumer. Godot remains
+available for presentation; no Unity starter exists. No graphical engine, restored
+RPG Maker, self-contained executable, LAN/minigame or human/commercial claim.
 
-P02 retains its pinned snapshot and dependency graph; historical archives, P06,
-P03/P08 and P10 remain unchanged. No Sites deployment. Martin supplied direction
-and main publication authority; Codex implemented and reviewed. Final delivery
-confirms the stored message, remote SHA and hosted checks.
+Clean baseline `7f36267` matched main after fetch/merge. Portfolio comparison
+included P06 presentation, P03 music, P11 access/backup and missing P04/P02 inputs;
+P01's dormant playable/economy seed was selected. Other projects, evaluator snapshot,
+assets/transfers and archive remain unchanged. Martin supplied direction and normal
+main publication authority; Codex implemented/reviewed. No Sites deployment.
+Final delivery verifies the stored message, published SHA and hosted checks.
 
-Next compare P11 real collaborator workflow/account/backup needs, P06 human pacing
-and integrated sound/art, P03 a distinct musical stage, and P01 a bounded economy
-loop. Missing full P04 manuscript and independent P02 candidate context remain
-separate constraints; do not substitute fabricated feedback or recovery.
+Next reassess unassisted P01 decisions/native board presentation, P06 integrated
+sound/art, a distinct P03 musical stage and P11 real collaborator/access needs.
+Do not prioritize .NET merely because its SDK is now available, or expand historical
+rosters before a concrete experience warrants them.

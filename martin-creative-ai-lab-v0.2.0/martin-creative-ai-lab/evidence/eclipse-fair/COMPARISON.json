@@ -1,0 +1,54 @@
+{
+  "version": "0.1.0",
+  "startSeed": 0,
+  "seeds": 100,
+  "matchesPerScenario": 400,
+  "seatRotation": "all four rotations for each seed; relative policy order retained",
+  "assessment": "Synthetic strategies and common-seed scenarios; not human balance or market evidence.",
+  "scenarios": [
+    {
+      "scenario": "baseline",
+      "rules": {
+        "startingGold": 4,
+        "goal": 3,
+        "roundLimit": 20,
+        "sealBase": 6,
+        "sealStep": 2,
+        "moveCost": 1,
+        "riteCost": 2,
+        "workBonus": 0
+      },
+      "matches": 400,
+      "gateClaims": 258,
+      "meanTurns": 74.8875,
+      "winCredits": {
+        "collector": 120.83333333333334,
+        "keeper": 93.33333333333334,
+        "opportunist": 185.83333333333331,
+        "worker": 0
+      }
+    },
+    {
+      "scenario": "variant",
+      "rules": {
+        "startingGold": 4,
+        "goal": 3,
+        "roundLimit": 20,
+        "sealBase": 8,
+        "sealStep": 2,
+        "moveCost": 1,
+        "riteCost": 2,
+        "workBonus": 0
+      },
+      "matches": 400,
+      "gateClaims": 223,
+      "meanTurns": 77.66,
+      "winCredits": {
+        "collector": 141,
+        "keeper": 95.5,
+        "opportunist": 163.5,
+        "worker": 0
+      }
+    }
+  ]
+}

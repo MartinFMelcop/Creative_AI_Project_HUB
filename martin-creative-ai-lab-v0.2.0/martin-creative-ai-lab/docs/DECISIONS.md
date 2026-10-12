@@ -666,3 +666,28 @@ JSON export is a full consumable record, not a restore tool. A stopped SQLite
 file preserves continuation; a running WAL main file alone is not a backup.
 Public operation requires an actual account/access/retention/backup contract and
 user evidence. No hosted deployment, independent usability or market claim.
+
+
+## ADR-034 — a new C# economy destination for P01
+
+**Date:** 2026-10-12 (UTC). **Status:** Eclipse Fair 0.1.0.
+**Authority:** continuous portfolio development and normal main publication.
+
+P01 has a usable economic/party seed but no source package here. Create eight
+venues and one participant/three agents rather than claiming restoration of
+48 tiles, old RPG scripts or minigames. C#/.NET serves deterministic transactions,
+previews, replay and batch comparisons with an actual terminal consumer. Install
+published SDK 10.0.401 with its official digest; no external NuGet or new framework.
+Godot is available for a later board presentation; no engine build is inferred.
+
+Validate whole plans before mutation. Buying raises curse; rites, wards/theft,
+route cost and changing wages compete with objective progress. Rotate initiative.
+Twenty rounds replace the historical candidate fifteen after tested policies
+failed to claim the Gate; this is a new design, not human balance validation.
+
+Journals replay accepted actions in a fresh match; failed writes preserve play.
+Compare common seeds with all four policy/seat rotations and fractional tie credits.
+Fixed relative policy order and heuristic agents limit balance conclusions.
+Deliver own compiled DLL/config/rules/example ZIP requiring .NET 10, not a runtime
+binary or self-contained/graphical product. Human play and a native presentation
+remain separate gates; no transfer or commercial claim is promoted.

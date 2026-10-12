@@ -1,4 +1,21 @@
-# Current milestone — Project Rooms
+# Current milestone — Eclipse Fair
+
+Deliver P01's new playable C# economy: four participants/eight venues, travel/work,
+sigils/curse/rites, wards/theft, public forecasts, rotating initiative, Gate/deadline
+results, terminal choices/help and durable replay. Add actual common-seed rule
+comparison/CSV and an independently executed compiled runtime-dependent ZIP.
+No historical RPG restoration, graphical engine or LAN/minigame obligation.
+
+Acceptance: compile actual source; execute legal full matches and currency budgets;
+show viable objectives and meaningful variant differences; exercise real terminal
+save/failure/resume/replay; reject untrusted journal state; compare four seat
+rotations; validate records/manifest and integrate .NET CI. Publish normally to main.
+[Execution](../evidence/eclipse-fair/RUN.json) records completion and limits.
+Next reassess native presentation/user decisions, P06 media, P03 music and P11
+service needs rather than making installed SDKs the selection criterion.
+
+
+# Previous milestone — Project Rooms
 
 Complete a trusted local project workspace in P11: remembered participant,
 create/share/switch rooms, persisted notes/decisions, recoverable history,

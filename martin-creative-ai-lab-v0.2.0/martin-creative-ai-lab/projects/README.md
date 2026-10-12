@@ -31,3 +31,8 @@ the application. Its calibrated artifact gates do not establish model performanc
 physics movement/cover, blade/seal/ward choices, two phases and complete results,
 pause and restart. Source and built PCK are delivered; PCK requires Godot.
 This is new implementation, not recovery of the missing Unity starter.
+
+[P01 — Eclipse Fair](eclipse-fair/README.md) is a new C#/.NET 10 terminal match
+and economy workbench, with four participants/eight venues, durable replay,
+scenario comparison and an executed compiled resource package. Native graphical
+presentation and human play remain unverified.

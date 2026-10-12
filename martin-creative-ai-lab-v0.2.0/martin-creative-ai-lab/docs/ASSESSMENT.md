@@ -1,4 +1,39 @@
-# Current assessment — durable project collaboration
+# Current assessment — a playable economy workbench
+
+Updated: 2026-10-12 (UTC). Clean `7f36267` matched main after fetch/merge. Read
+instructions, records, relevant seed/decisions and seed evolution; inspected actual
+P06/P03/P11 destinations and archive families. No P01 package/source appears in
+this checkout. Recent milestones completed browser campaign/music, native combat
+and project collaboration; another narrow service/QA correction is not the default.
+
+| Opportunity | Evidence and choice |
+|---|---|
+| P01 economy and match | Concrete four-participant/obol/sigil seed, no runtime. Complete playable transactions, agents, replay and real rule comparisons; selected. |
+| P06 sound/presentation | Native encounter executes and has no sound. Integrated feedback/art is valuable, with unassisted pacing still unknown. |
+| P03 distinct music stage | Original track/runtime exist; another musical identity is valuable rather than timing guards. Human listening remains absent. |
+| P11 service operations | Persistent workflow works; account/access/backup needs a coherent user contract. Preserve the new local destination. |
+| P04/P02 | Full manuscript or independent candidate context absent. Do not fabricate recovery, reader judgment or model performance. |
+
+Investigated tooling: Godot standard is present, Unity/.NET initially absent.
+Installed a published .NET 10 SDK using the official stable artifact/digest.
+C# fits typed economic transactions, deterministic previews, journals and fast
+comparisons; its terminal consumer delivers actual play now. A graphical Godot
+board is a serious separate presentation decision, not an unverified engine build.
+No browser substitute, stack rewrite or shared framework is needed.
+
+Before: P01 was a seed without executable rules. After: a complete match and
+consumable compiled workbench connect route, funds, curse, rites, protection/theft,
+initiative, objectives and endings. Early agent rollouts exposed market camping
+and no Gate claims at fifteen rounds. Production-aware planning and twenty rounds
+produced observed completions. Every policy now occupies every seat per common
+seed; relative policy order is still fixed. Income-only Worker never won in the
+recorded comparison; Opportunist leads these heuristic policies. These observations
+identify tuning questions, not a proof of human fairness or absence of exploits.
+[Execution](../evidence/eclipse-fair/RUN.json) separates actual software behavior,
+implementer judgment and unverified native presentation/enjoyment/paid demand.
+
+
+# Previous assessment — durable project collaboration
 
 Updated: 2026-10-12 (UTC). Clean `25d4588` matched main after authenticated
 fetch/merge. Read instructions/current records/seed evolution, actual P11 source,
