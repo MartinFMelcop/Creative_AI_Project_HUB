@@ -1,36 +1,34 @@
 # Lab state
 
-**Updated:** 2026-10-12 (America/Sao_Paulo). **Seed:** 0.14.0.
-**Current milestone:** P01 Eclipse Fair native board 0.2.0.
+**Updated:** 2026-10-12 (America/Sao_Paulo). **Seed:** 0.15.0.
+**Current milestone:** P03 Night Shift 0.2.0 / P08 Rain Circuit 0.3.0.
 
-[Play the native board](../projects/eclipse-fair/Native/README.md): eight venues,
-real route/action forecasts, human confirmation, visible paced rivals, optional
-theft/wards, rites, Gate/deadline outcomes and persistent replayable continuation.
-The compiled project pack contains only owned assemblies/source/configuration;
-it uses installed Godot .NET 4.6.3 APIs and .NET 10 runtime. No SDK/NuGet is needed
-for its executed runtime-only workflow; this is not a standalone OS export.
+[Play two original stages](../projects/tokyo80s/README.md). Rain Circuit adds a
+complete 84.5s/96 BPM arrangement with swung hats, FM-like keys, eight-bar lead
+call/answer and a stripped bridge. Practice/Arcade consume actual instrument
+attacks and sustain envelopes. Select a track, carry long notes, finish, export
+and move into the other stage. No external samples or restored recording.
 
-[Execution](../evidence/eclipse-fair/BOARD_RUN.json) identifies compilation/import,
-actual native controls/keyboard, ten synthetic complete matches, optional actions,
-preview immutability, malformed-load/write failure, journal parity and rival
-clock/focus boundary. Source and outside-source pack execute. Actual OpenGL
-captures were inspected; revisions corrected clipped journal, objective feedback,
-Gate winner ordering and resource-card layout. No independent human approval.
+Tail scoring earns the head judgment once; early release loses the note. Pause
+freezes audio/holds; re-hold before Resume or inside grace, without automatically
+finishing an abandoned hold. Pulse keeps bounded combo protection, not accuracy.
+Chronological event resolution preserves outcomes after frame delays. Separate
+bests preserve original keys; calibration remains shared and compatible.
 
-Started clean at `7b65a5e`, matched fetched main. Compared P03 new music, P11
-service workflows, P06 animation and P04 reader needs; selected P01 because its
-terminal-only spatial discovery prevented a convincing native board experience.
-Godot .NET directly consumes the existing C# Core and journal. Standard Godot
-cannot load C#; Unity is absent. Official Mono engine downloaded/digest verified.
-No general framework, economy redesign, cross-project transfer or engine binary
-redistribution. Core/CLI/rules/terminal ZIP remain 0.1.0 and byte-preserved.
-Other projects, prior evidence, assets, transfers and archive remain unchanged.
+[Execution](../evidence/tokyo80s/SETLIST_RUN.json) records real full-song clock
+workflows, carried/broken/paused holds, keyboard/touch, score/JSON/transition and
+PCM/played-score/decoded-Vorbis checks. Measured Rain Circuit export is -14.3 LUFS,
+-2.9 dBFS true peak; physical listening and device latency are not established.
+Codex reviewed source score and rendered desktop/narrow views; no independent
+musical/enjoyment/reader/accessibility or commercial approval.
 
-Source/pack native journeys and original C#/CLI regressions are executed; repo
-structure/manifest checks support integrity, not enjoyment. Linux x86_64/software
-OpenGL only. Human strategy/pacing, accessibility, controller/other-platform,
-physical hardware and market evidence remain unverified. No sound/minigame or
-standalone-export claim. No Sites deployment or messages.
+Started clean at `694f33e`, matching fetched main. Compared P11 restore/backup,
+P06 animation and P04 readers; selected content plus interaction for single-track
+P03. JavaScript/Web Audio retains the actual product/timing architecture; Python/
+NumPy/ffmpeg produce real media. Godot exists, Unity absent; no engine rewrite.
+Original Midnight Signal master/OGG/score/producer/evidence and all other project
+sources/archive remain unchanged. Extend only P08-to-P03 TR-012 and add AUD-003.
+No shared framework, new deployment or Sites update; GitHub main is authorized.
 
-Next compare unassisted native decisions with a distinct P03 music stage, P04
-reader feedback and P11 access/backup requirements; reassess the portfolio.
+Next compare physical play/listening of the two stages with P11 restore needs,
+P06 movement/attack animation and P04 independent reader feedback.

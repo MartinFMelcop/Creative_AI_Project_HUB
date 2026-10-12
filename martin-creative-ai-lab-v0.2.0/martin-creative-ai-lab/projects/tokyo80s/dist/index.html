@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Play Midnight Signal: an original four-lane synth rhythm experience from Tokyo 80s.">
+<meta name="description" content="Play two original Tokyo 80s stages: Midnight Signal and Rain Circuit, with sustained notes.">
 <title>Tokyo 80s — Midnight Signal</title>
 <link rel="stylesheet" href="style.css">
 </head>
@@ -15,7 +15,7 @@
 <h1 id="title">MIDNIGHT<br><span>SIGNAL.</span></h1>
 <p class="intro">The last train is leaving.<br>Keep the city moving.</p>
 <div class="city" aria-hidden="true"><div class="moon"></div><div class="buildings"><i></i><i></i><i></i><i></i><i></i><i></i></div><div class="rail"></div><span>NIGHT LINE / 80</span></div>
-<div class="instructions"><h2>Find your rhythm</h2><p>Hit <kbd>D</kbd> <kbd>F</kbd> <kbd>J</kbd> <kbd>K</kbd> as notes reach the line. Touch the pads on mobile. Keep a combo to build aura.</p><p>At full aura, <kbd>Space</kbd> activates <strong>Pulse</strong>: protect your combo from two misses for eight seconds. Misses still lower accuracy.</p></div>
+<div class="instructions"><h2>Find your rhythm</h2><p>Hit <kbd>D</kbd> <kbd>F</kbd> <kbd>J</kbd> <kbd>K</kbd> as notes reach the line. Touch the pads on mobile. Rain Circuit adds long bars: hold until their tails reach the line; releasing more than 95 ms early loses the note. Keep a combo to build aura.</p><p>At full aura, <kbd>Space</kbd> activates <strong>Pulse</strong>: protect your combo from two misses for eight seconds. Misses still lower accuracy.</p></div>
 <div class="track-meta"><span>01:09 / INSTRUMENTAL</span><span>HEADPHONES RECOMMENDED</span></div>
 </section>
 <section class="console" aria-label="Rhythm game">
@@ -31,8 +31,9 @@
 <div class="aura"><div><span>AURA</span><progress id="aura" max="100" value="0" aria-label="Aura charge"></progress></div><button id="pulse" disabled>Pulse <span>SPACE</span></button><small id="shield">Build a combo. Protect your next difficult phrase.</small></div>
 <div class="controls"><button id="start" class="primary">Start run <span aria-hidden="true">PLAY</span></button><button id="pause" disabled>Pause</button><button id="restart" disabled>Restart</button></div>
 <p id="status" role="status" aria-live="polite">Choose Practice for the first ride, then try Arcade.</p>
+<label class="setlist">TRACK<select id="song" disabled><option>Loading setlist…</option></select></label>
 <div class="settings"><label>CHART<select id="difficulty"><option value="practice">Practice</option><option value="arcade">Arcade</option></select></label><label class="volume">VOLUME<input id="volume" type="range" min="0" max="100" value="70"></label><button id="calibrate">Adjust timing</button></div>
-<div id="results" class="results" hidden tabindex="-1"><div class="result-heading"><span>LAST STOP / RUN COMPLETE</span><strong id="rank">S</strong></div><h2>Your night in numbers.</h2><p id="result-summary"></p><dl><div><dt>Perfect</dt><dd id="perfect">0</dd></div><div><dt>Good</dt><dd id="good">0</dd></div><div><dt>OK</dt><dd id="ok">0</dd></div><div><dt>Miss</dt><dd id="miss">0</dd></div></dl><p id="timing-result"></p><p id="best"></p><div class="result-actions"><button id="replay" class="primary">Ride again</button><button id="export">Save run JSON</button></div></div>
+<div id="results" class="results" hidden tabindex="-1"><div class="result-heading"><span>LAST STOP / RUN COMPLETE</span><strong id="rank">S</strong></div><h2>Your night in numbers.</h2><p id="result-summary"></p><dl><div><dt>Perfect</dt><dd id="perfect">0</dd></div><div><dt>Good</dt><dd id="good">0</dd></div><div><dt>OK</dt><dd id="ok">0</dd></div><div><dt>Miss</dt><dd id="miss">0</dd></div></dl><p id="timing-result"></p><p id="best"></p><div class="result-actions"><button id="replay" class="primary">Ride again</button><button id="next-stage">Next stage</button><button id="export">Save run JSON</button></div></div>
 </section>
 </main>
 <footer><span>CREATIVE AI PROJECT HUB / P03 × P08</span><span>Original synthesized music. No accounts. Best scores stay in this browser.</span></footer>

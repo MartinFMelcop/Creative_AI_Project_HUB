@@ -4,7 +4,7 @@ const canvas=$('board'), context=canvas.getContext('2d');
 const pads=[...document.querySelectorAll('[data-lane]')];
 const colors=['#83e9e5','#b6a1e5','#fe8ca8','#ffd0a0'];
 const held=new Set();
-let track, run, audioContext, gain, buffer, source;
+let track, tracks=[], run, audioContext, gain, buffer, source;
 let mode='ready', started=0, frozen=0, epoch=0, selected='practice', offset=0;
 let flash={text:'',color:'#fff',until:0}, bursts=[];
 let calibrating=false, calibrationStart=0, calibrationSamples=[], calibrationBeat=-1, calibrationToken=0;
@@ -23,19 +23,40 @@ function setMode(next) {
   const active=['playing','paused','pausing','loading'].includes(mode);
   $('start').disabled=active||!track;
   $('difficulty').disabled=active;
+  $('song').disabled=active||!tracks.length;
   $('calibrate').disabled=active;
   $('restart').disabled=!run||['pausing','loading'].includes(mode);
   $('pause').disabled=!['playing','paused'].includes(mode);
   $('pause').textContent=mode==='paused'?'Resume':'Pause';
   $('pulse').disabled=mode!=='playing'||!run||run.aura<100;
-  pads.forEach(p=>p.disabled=mode!=='playing');
+  pads.forEach((p,lane)=>p.disabled=mode!=='playing'&&!(mode==='paused'&&run?.notes.some(n=>n.lane===lane&&n.state==='holding')));
 }
 function message(text) { $('status').textContent=text; }
 function center(title,subtitle='') {
   $('center').hidden=false;
   $('center').querySelector('strong').textContent=title;
   $('center').querySelector('p').textContent=subtitle;
-  $('center').querySelector('span').textContent='TOKYO 80s / MIDNIGHT SIGNAL';
+  $('center').querySelector('span').textContent=`TOKYO 80s / ${track?.title.toUpperCase()||'NIGHT SHIFT'}`;
+}
+function stamp(seconds) {const sec=Math.floor(seconds);return `${String(Math.floor(sec/60)).padStart(2,'0')}:${String(sec%60).padStart(2,'0')}`;}
+function chooseTrack(id) {
+  if(['playing','paused','pausing','loading'].includes(mode))return;
+  const next=tracks.find(t=>t.id===id);if(!next)return;
+  epoch++;stopSource();clearHeld();track=next;buffer=null;run=null;lastExport=null;frozen=0;
+  flash={text:'',color:'#fff',until:0};bursts=[];
+  $('shield').textContent='Build a combo. Protect your next difficult phrase.';
+  $('results').hidden=true;document.title=`Tokyo 80s — ${track.title}`;
+  const [first,...rest]=track.title.toUpperCase().split(' ');
+  $('title').replaceChildren(document.createTextNode(first),document.createElement('br'));
+  const titleEnd=document.createElement('span');titleEnd.textContent=rest.join(' ')+'.';$('title').append(titleEnd);
+  document.querySelector('.intro').textContent=track.intro;
+  document.querySelector('.eyebrow').lastChild.textContent=` ORIGINAL TRACK · ${track.bpm} BPM`;
+  document.querySelector('.edition').textContent=track.side;
+  document.querySelector('.track-meta span').textContent=`${stamp(track.duration)} / INSTRUMENTAL`;
+  $('progress').max=track.duration;$('stage').dataset.track=track.id;$('section').textContent=track.sections[0].name.toUpperCase();
+  $('score').textContent='000000';$('combo').textContent='0';$('accuracy').textContent='—';$('aura').value=0;
+  setMode('ready');center('Hit play.',`${track.title} · ${stamp(track.duration)} · ${track.id==='rain-circuit'?'Carry the long notes to their tails.':'Tap the instrumental attacks.'}`);
+  message('Choose Practice or Arcade. Selecting a track does not start sound.');
 }
 function position() {
   if(!audioContext) return 0;
@@ -70,7 +91,7 @@ async function startRun() {
   run=new RhythmRun(track.charts[selected]);
   flash={text:'',color:'#fff',until:0};bursts=[];frozen=0;
   $('results').hidden=true;lastExport=null;
-  setMode('loading');updateStats();$('stage').dataset.position='0';$('progress').value=0;$('timer').textContent='00:00 / 01:09';center('Tuning in…','Loading the original soundtrack.');message('Preparing sound.');
+  setMode('loading');updateStats();$('stage').dataset.position='0';$('progress').value=0;$('timer').textContent=`00:00 / ${stamp(track.duration)}`;center('Tuning in…','Loading the original soundtrack.');message('Preparing sound.');
   try {
     await ensureAudio();
     const decoded=await loadTrackAudio();
@@ -94,11 +115,13 @@ async function togglePause(reason='Paused. The song and notes are frozen.') {
     await audioContext.suspend();
     if(mode!=='pausing')return;
     frozen=Math.max(0,audioContext.currentTime-started);
-    setMode('paused');center('Take a breath.','Resume when you are ready. No notes pass while paused.');message(reason);
+    run.pause(adjustedTime(frozen,offset));
+    setMode('paused');center('Take a breath.','Re-hold lit lanes before Resume, or within 200 ms after. No notes pass while paused.');message(reason);
   } else if(mode==='paused') {
     const token=epoch;
     await audioContext.resume();
     if(token!==epoch||mode!=='paused')return;
+    run.resume(adjustedTime(frozen,offset),[...held].map(id=>Number(id.split(':').at(-1))));
     setMode('playing');$('center').hidden=true;message('Back on the night line.');
   }
 }
@@ -109,7 +132,7 @@ function hit(lane) {
   if(time<track.leadIn-.145)return;
   const note=run.hit(lane,adjustedTime(time,offset));
   if(!note)return;
-  flash={text:note.state==='stray'?'OFF BEAT':note.state.toUpperCase(),
+  flash={text:note.state==='holding'?'HOLD':note.state==='stray'?'OFF BEAT':note.state.toUpperCase(),
     color:note.state==='perfect'?colors[lane]:note.state==='stray'?'#9498ae':'#eee',until:time+.38};
   if(note.state!=='stray')bursts.push({lane,time});
   updateStats();
@@ -143,19 +166,29 @@ function completeRun() {
   $('timing-result').textContent=stats.meanErrorMs===null?'No scored hits yet. Try Practice and tap with the drum.':`Average timing: ${stats.meanErrorMs>0?'+':''}${stats.meanErrorMs.toFixed(1)} ms (${stats.meanErrorMs>15?'late':stats.meanErrorMs< -15?'early':'close to the beat'}). Input offset used: ${offset} ms. Adjust timing between runs if hits consistently feel displaced.`;
   let best=stats.score,newBest=false;
   try {
-    const key=`tokyo80s-best-v1-${selected}`;
+    const key=track.id==='midnight-signal'?`tokyo80s-best-v1-${selected}`:`tokyo80s-best-v2-${track.id}-${selected}`;
     const old=Number(localStorage.getItem(key))||0;
     best=Math.max(old,stats.score);newBest=stats.score>old;
     localStorage.setItem(key,String(best));
   } catch {storeOK=false;}
   $('best').textContent=storeOK?`${newBest?'New best. ':''}${selected==='practice'?'Practice':'Arcade'} best in this browser: ${best.toLocaleString()}.`:'Browser storage is unavailable; this run still counts and can be exported.';
-  lastExport={game:'Tokyo 80s',version:'0.1.0',track:track.id,chart:selected,offsetMs:offset,...stats,
-    notes:run.notes.map(({id,time,lane,state,error,protected:shield})=>({id,time,lane,state,errorMs:error===null?null:Math.round(error*10000)/10,comboProtected:shield}))};
+  lastExport={game:'Tokyo 80s',version:'0.2.0',track:track.id,chart:selected,offsetMs:offset,...stats,
+    notes:run.notes.map(({id,time,lane,state,error,duration,protected:shield})=>({id,time,lane,state,duration:duration||0,errorMs:error===null?null:Math.round(error*10000)/10,comboProtected:shield}))};
+  const next=tracks[(tracks.indexOf(track)+1)%tracks.length];$('next-stage').textContent=`Play ${next.title}`;
   $('results').hidden=false;$('results').focus({preventScroll:true});
   message('Run complete. Replay, try the other chart, or save your actual run data.');updateStats();
 }
-function press(lane,id) { if(held.has(id))return;held.add(id);pads[lane].classList.add('down');hit(lane); }
-function release(lane,id) { held.delete(id);if(![...held].some(k=>k.endsWith(`:${lane}`)))pads[lane].classList.remove('down'); }
+function press(lane,id) { if(held.has(id))return;const already=[...held].some(k=>k.endsWith(`:${lane}`));held.add(id);pads[lane].classList.add('down');if(!already)hit(lane); }
+function release(lane,id) {
+  if(!held.delete(id))return;
+  if([...held].some(k=>k.endsWith(`:${lane}`)))return;
+  pads[lane].classList.remove('down');
+  if(mode==='playing'){
+    const note=run.release(lane,adjustedTime(position(),offset));
+    if(note?.state==='miss')flash={text:note.protected?'COMBO SAVED':'HOLD LOST',color:'#fe8ca8',until:position()+.38};
+    updateStats();
+  }
+}
 pads.forEach((pad,lane)=>{
   pad.addEventListener('pointerdown',e=>{e.preventDefault();pad.setPointerCapture(e.pointerId);press(lane,`pointer${e.pointerId}:${lane}`);});
   for(const name of ['pointerup','pointercancel','lostpointercapture'])pad.addEventListener(name,e=>release(lane,`pointer${e.pointerId}:${lane}`));
@@ -176,11 +209,13 @@ window.addEventListener('blur',()=>{clearHeld();if(mode==='playing')togglePause(
 document.addEventListener('visibilitychange',()=>{if(document.hidden&&mode==='playing')togglePause('Paused while the page was hidden. Resume when you return.');});
 $('start').addEventListener('click',startRun);$('restart').addEventListener('click',startRun);$('replay').addEventListener('click',startRun);
 $('pause').addEventListener('click',()=>togglePause());$('pulse').addEventListener('click',pulse);
+$('song').addEventListener('change',()=>chooseTrack($('song').value));
+$('next-stage').addEventListener('click',()=>{const next=tracks[(tracks.indexOf(track)+1)%tracks.length];$('song').value=next.id;chooseTrack(next.id);startRun();});
 $('volume').addEventListener('input',()=>{if(gain)gain.gain.setTargetAtTime(Number($('volume').value)/100,audioContext.currentTime,.02);});
 $('export').addEventListener('click',()=>{
   if(!lastExport)return;
   const url=URL.createObjectURL(new Blob([JSON.stringify(lastExport,null,2)+'\n'],{type:'application/json'}));
-  const a=document.createElement('a');a.href=url;a.download=`midnight-signal-${selected}-run.json`;a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);
+  const a=document.createElement('a');a.href=url;a.download=`${track.id}-${selected}-run.json`;a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);
 });
 $('calibrate').addEventListener('click',()=>{$('calibration').showModal();$('offset').value=offset;});
 $('offset').addEventListener('input',()=>{$('offset-value').textContent=`${Number($('offset').value)>0?'+':''}${$('offset').value} ms`;});
@@ -244,13 +279,21 @@ function draw(time) {
   for(let j=0;j<8;j++){const y=((j/8+time/4)%1)*hitY;context.beginPath();context.moveTo(0,y);context.lineTo(width,y);context.stroke();}
   if(run){
     for(const note of run.notes){
-      if(note.state!=='pending')continue;
+      if(!['pending','holding'].includes(note.state))continue;
       const delta=note.time-time;
-      if(delta>2||delta<-.25)continue;
+      if(delta>2||(note.state!=='holding'&&delta<-.25))continue;
       const y=hitY-delta/2*(hitY-25),x=note.lane*laneW+14;
+      if(note.duration) {
+        const bottom=note.state==='holding'?hitY:y;
+        const top=hitY-(note.time+note.duration-time)/2*(hitY-25);
+        context.fillStyle=colors[note.lane]+(note.engaged?'b0':'55');
+        context.fillRect(x+laneW*.2,top,laneW*.6-28,Math.max(0,bottom-top));
+        context.strokeStyle=colors[note.lane];context.strokeRect(x+laneW*.2,top,laneW*.6-28,Math.max(0,bottom-top));
+      }
       context.fillStyle=colors[note.lane];context.shadowColor=colors[note.lane];context.shadowBlur=8;
-      context.fillRect(x,y-4,laneW-28,8);context.shadowBlur=0;
-      context.fillStyle='#ffffff70';context.fillRect(x,y-4,laneW-28,2);
+      const headY=note.state==='holding'?hitY:y;
+      context.fillRect(x,headY-4,laneW-28,8);context.shadowBlur=0;
+      context.fillStyle='#ffffff70';context.fillRect(x,headY-4,laneW-28,2);
     }
   }
   if(!window.matchMedia('(prefers-reduced-motion: reduce)').matches){
@@ -276,13 +319,19 @@ function frame() {
   }
   $('stage').dataset.position=String(time);
   $('progress').value=time;
-  const sec=Math.min(69,Math.floor(time));$('timer').textContent=`${String(Math.floor(sec/60)).padStart(2,'0')}:${String(sec%60).padStart(2,'0')} / 01:09`;
+  $('timer').textContent=`${stamp(Math.min(track?.duration||69,time))} / ${stamp(track?.duration||69)}`;
+  pads.forEach((p,lane)=>p.classList.toggle('sustaining',!!run?.notes.some(n=>n.lane===lane&&n.state==='holding')));
   $('judgment').textContent=time<flash.until?flash.text:'';$('judgment').style.color=flash.color;
   draw(time);
   if(calibrating&&audioContext.currentTime>calibrationStart+6)finishCalibration();
   requestAnimationFrame(frame);
 }
 setMode('ready');requestAnimationFrame(frame);
-fetch('track.json').then(r=>{if(!r.ok)throw new Error('Could not load the chart.');return r.json();}).then(data=>{
-  track=data;setMode('ready');
+fetch('setlist.json').then(r=>{if(!r.ok)throw new Error('Could not load the setlist.');return r.json();}).then(list=>Promise.all(list.map(async item=>{
+  const response=await fetch(item.score);if(!response.ok)throw new Error('Could not load the chart.');
+  const data=await response.json();if(data.id!==item.id)throw new Error('Setlist and chart disagree.');
+  return {...data,...item};
+}))).then(data=>{
+  tracks=data;$('song').replaceChildren(...tracks.map(t=>{const option=document.createElement('option');option.value=t.id;option.textContent=`${t.title} · ${t.bpm} BPM`;return option;}));
+  chooseTrack(tracks[0].id);
 }).catch(error=>{setMode('error');center('Signal lost.',error.message);message(error.message);});

@@ -764,3 +764,28 @@ No engine/API/runtime redistribution, full multi-platform templates or OS export
 Native scene tests drive controls/keyboard and timing, not a human playtest.
 Inspect actual OpenGL frames; hardware/accessibility/balance/enjoyment and market
 validation remain separate. No Sites deployment or cross-project promotion.
+
+
+## ADR-038 — complete a second musical stage with performed sustains
+
+**Date:** 2026-10-12 (America/Sao_Paulo). **Status:** P03 0.2.0 / P08 0.3.0.
+**Authority:** continuous portfolio development and normal main publication.
+
+Select distinct P03 content/interaction after comparing P11 restore, P06 animation
+and P04 readers. Keep existing browser audio clock/core; available Godot is useful
+for native products but does not require replacing this distribution/timing loop.
+Python/NumPy/ffmpeg render original Rain Circuit with no external samples/MIDI.
+Align chart heads/tails to actual performed instrument events, not arbitrary counts.
+
+A carried hold earns its timed-head judgment once, at its tail; an early release
+misses with bounded Pulse protection. Resolve due misses/tails in song order,
+not iteration/frame order. Pause freezes; allow pre-held resume or 200ms re-grab,
+and fail abandoned holds. Do not automatically reward cleared physical input.
+Two tracks available immediately; separate bests keep the original storage keys.
+Selection/next stage owns audio buffer/clock/reset; no new shared framework.
+
+Keep first soundtrack/score/producer and other projects byte-preserved. Extend
+existing P08-to-P03 integration and register real AUD-003. Full real-audio-clock
+synthetic inputs, signal measurements and score/visual review verify contracts,
+not independent music/enjoyment/accessibility or commercial quality. No Sites
+redeployment; physical play/listening and catalogue expansion remain separate.

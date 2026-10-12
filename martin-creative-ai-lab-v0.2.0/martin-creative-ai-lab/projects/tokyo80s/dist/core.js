@@ -8,8 +8,13 @@ export class RhythmRun {
     this.notes = chart.map(n => {
       if (!Number.isFinite(n.time) || n.time < 0 || !Number.isInteger(n.lane) || n.lane < 0 || n.lane > 3 || ids.has(n.id)) throw new TypeError('Invalid chart note.');
       ids.add(n.id);
-      return { ...n, state: 'pending', error: null, protected: false };
+      if(n.duration!==undefined && (!Number.isFinite(n.duration)||n.duration<.2||n.duration>4)) throw new TypeError('Invalid sustain duration.');
+      return { ...n, state: 'pending', error: null, protected: false, engaged:false };
     }).sort((a,b) => a.time-b.time || a.lane-b.lane);
+    for(let lane=0;lane<4;lane++) {
+      const notes=this.notes.filter(n=>n.lane===lane);
+      for(let i=1;i<notes.length;i++)if(notes[i-1].duration && notes[i].time<notes[i-1].time+notes[i-1].duration-EPS) throw new TypeError('Overlapping sustain lane.');
+    }
     this.score = 0;
     this.combo = 0;
     this.maxCombo = 0;
@@ -26,22 +31,36 @@ export class RhythmRun {
     if (this.finished) return [];
     this.lastTime = Math.max(this.lastTime, time);
     const misses = [];
-    for (const n of this.notes) {
-      if (n.state !== 'pending' || this.lastTime-n.time <= WINDOWS.ok+EPS) continue;
-      n.state = 'miss';
-      if (this.shields > 0 && n.time+WINDOWS.ok <= this.shieldUntil+EPS) {
-        n.protected = true;
-        this.shields--;
-      } else this.combo = 0;
-      this.aura = Math.max(0, this.aura-16);
-      misses.push(n);
+    // Resolve due events in song order, including tails, independently of frame gaps.
+    const due=this.notes.flatMap(n=>{
+      if(n.state==='pending' && this.lastTime>n.time+WINDOWS.ok+EPS) return [{n,deadline:n.time+WINDOWS.ok,success:false}];
+      if(n.state==='holding' && n.engaged && this.lastTime>=n.time+n.duration-EPS) return [{n,deadline:n.time+n.duration,success:true}];
+      if(n.state==='holding' && !n.engaged && this.lastTime>n.regrabUntil+EPS) return [{n,deadline:n.regrabUntil,success:false}];
+      return [];
+    }).sort((a,b)=>a.deadline-b.deadline||a.n.id-b.n.id);
+    for(const event of due) {
+      if(event.success) this.award(event.n,event.n.startJudgment);
+      else {this.fail(event.n,event.deadline);misses.push(event.n);}
     }
     return misses;
+  }
+  fail(n,deadline) {
+    n.state='miss';n.engaged=false;
+    if(this.shields>0&&deadline<=this.shieldUntil+EPS){n.protected=true;this.shields--;}else this.combo=0;
+    this.aura=Math.max(0,this.aura-16);
+  }
+  award(n,judgment) {
+    n.state=judgment;n.engaged=false;
+    this.combo++;this.maxCombo=Math.max(this.maxCombo,this.combo);
+    this.aura=Math.min(100,this.aura+{perfect:9,good:6,ok:3}[judgment]);
+    this.score+={perfect:1000,good:700,ok:400}[judgment]*Math.min(4,1+Math.floor(this.combo/20));
   }
   hit(lane,time) {
     if (!Number.isInteger(lane) || lane<0 || lane>3 || !Number.isFinite(time)) throw new TypeError('Invalid input.');
     if (this.finished) return null;
     this.advance(time);
+    const regrab=this.notes.find(n=>n.state==='holding'&&!n.engaged&&n.lane===lane&&time<=n.regrabUntil+EPS);
+    if(regrab){regrab.engaged=true;this.advance(time);return regrab;}
     const n = this.notes.find(n => n.state==='pending' && n.lane===lane && Math.abs(time-n.time)<=WINDOWS.ok+EPS);
     if (!n) {
       this.strays++;
@@ -52,12 +71,29 @@ export class RhythmRun {
     }
     n.error = time-n.time;
     const d=Math.abs(n.error);
-    n.state=d<=WINDOWS.perfect+EPS?'perfect':d<=WINDOWS.good+EPS?'good':'ok';
-    this.combo++;
-    this.maxCombo=Math.max(this.maxCombo,this.combo);
-    this.aura=Math.min(100,this.aura+{perfect:9,good:6,ok:3}[n.state]);
-    this.score+={perfect:1000,good:700,ok:400}[n.state]*Math.min(4,1+Math.floor(this.combo/20));
+    const judgment=d<=WINDOWS.perfect+EPS?'perfect':d<=WINDOWS.good+EPS?'good':'ok';
+    if(n.duration){n.state='holding';n.startJudgment=judgment;n.engaged=true;}
+    else this.award(n,judgment);
     return n;
+  }
+  release(lane,time) {
+    if(!Number.isInteger(lane)||lane<0||lane>3||!Number.isFinite(time))throw new TypeError('Invalid release.');
+    if(this.finished)return null;
+    this.advance(time);
+    const n=this.notes.find(n=>n.state==='holding'&&n.engaged&&n.lane===lane);
+    if(!n)return null;
+    if(time>=n.time+n.duration-WINDOWS.good-EPS)this.award(n,n.startJudgment);
+    else this.fail(n,time);
+    return n;
+  }
+  pause(time) {
+    this.advance(time);
+    for(const n of this.notes)if(n.state==='holding'){n.engaged=false;n.regrabUntil=Infinity;}
+  }
+  resume(time,lanes=[]) {
+    if(!Number.isFinite(time))throw new TypeError('Time must be finite.');
+    if(this.finished)return;
+    for(const n of this.notes)if(n.state==='holding'&&!n.engaged){n.engaged=lanes.includes(n.lane);n.regrabUntil=time+.2;}
   }
   pulse(time) {
     if (!Number.isFinite(time)) throw new TypeError('Time must be finite.');
@@ -72,14 +108,16 @@ export class RhythmRun {
   }
   finish(time) {
     if (!Number.isFinite(time)) throw new TypeError('Time must be finite.');
-    this.advance(Math.max(time, this.notes.at(-1).time+WINDOWS.ok+1));
+    if(this.finished)return this.summary();
+    for(const n of this.notes)if(n.state==='holding'&&!n.engaged)n.regrabUntil=Math.min(n.regrabUntil,time);
+    this.advance(Math.max(time+1,...this.notes.map(n=>n.time+(n.duration||0)+WINDOWS.ok+1)));
     this.finished=true;
     return this.summary();
   }
   summary() {
     const counts={perfect:0,good:0,ok:0,miss:0,pending:0};
     const hits=[];
-    for(const n of this.notes) { counts[n.state]++; if(n.error!==null) hits.push(n.error); }
+    for(const n of this.notes) { counts[n.state==='holding'?'pending':n.state]++; if(n.error!==null&&n.state!=='miss'&&n.state!=='holding') hits.push(n.error); }
     const judged=this.notes.length-counts.pending;
     const accuracy=judged?100*(counts.perfect+counts.good*.7+counts.ok*.4)/(judged+this.strays*.1):0;
     return { score:this.score, maxCombo:this.maxCombo, counts, strays:this.strays, pulses:this.pulses,

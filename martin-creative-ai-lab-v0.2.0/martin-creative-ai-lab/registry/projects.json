@@ -68,9 +68,9 @@
       "slug": "tokyo80s",
       "status": "active",
       "maturity": "M4",
-      "phase": "original-rhythm-stage-validated",
+      "phase": "two-stage-sustain-workflow-validated",
       "origin": "new_seed_implementation",
-      "next_action": "Observe unassisted Practice/Arcade play on keyboard and touch hardware; review the original track, then create a distinct second musical stage.",
+      "next_action": "Observe keyboard/touch play and independent listening to both songs; review holds, pause/re-hold and difficulty pacing before expanding content or changing platforms.",
       "related_projects": [
         "P01",
         "P02",
@@ -80,11 +80,12 @@
       "evidence": [
         "projects/tokyo80s/README.md",
         "projects/tokyo80s/media/provenance.json",
-        "evidence/tokyo80s/RUN.json"
+        "evidence/tokyo80s/RUN.json",
+        "evidence/tokyo80s/SETLIST_RUN.json"
       ],
       "working_path": "projects/tokyo80s",
-      "working_version": "0.1.0",
-      "maturity_scope": "Single buildless browser rhythm prototype: 69s real synthesized audio, 112/236 instrument-aligned notes, 12 core and 7 Chromium checks, actual full Arcade playback/results/export/replay, timing calibration, pause/focus and touch. Synthetic input and implementing-agent visual/gameplay review only; no human timing/listening, other-browser, accessibility or commercial validation."
+      "working_version": "0.2.0",
+      "maturity_scope": "Two complete original browser stages: preserved 69s/120 BPM Midnight Signal, new 84.5s/96 BPM Rain Circuit with Practice/Arcade and real musical sustains. Track selection/transition, earned-tail scoring, early-release/Pulse, pause/re-hold, chronological frame-gap resolution, separate bests and exported durations. Actual full real-audio-clock runs plus keyboard/touch/metadata/audio contracts. Synthetic execution and Codex score/visual review; no human listening, natural device timing, other-browser/accessibility or market validation."
     },
     {
       "id": "P04",
@@ -179,9 +180,9 @@
       "slug": "audio-poetry-music-lab",
       "status": "active",
       "maturity": "M4",
-      "phase": "two-consumer-audio-integrated",
+      "phase": "two-rhythm-stages-and-native-audio-integrated",
       "origin": "user_directive",
-      "next_action": "Listen to Tokyo 80s and Veilbreak on real output hardware; review arrangement, cue distinction and phase transitions before extending the catalogue.",
+      "next_action": "Listen to both rhythm stages and Veilbreak on real output hardware; compare arrangement, dynamics and cue distinction before catalogue expansion.",
       "related_projects": [
         "P03",
         "P04",
@@ -193,11 +194,13 @@
         "evidence/tokyo80s/RUN.json",
         "projects/veil-arena/tools/render_audio.py",
         "projects/veil-arena/media/provenance.json",
-        "evidence/veil-arena/PRESENTATION_RUN.json"
+        "evidence/veil-arena/PRESENTATION_RUN.json",
+        "projects/tokyo80s/media/rain-provenance.json",
+        "evidence/tokyo80s/SETLIST_RUN.json"
       ],
       "working_path": "projects/tokyo80s/media",
-      "working_version": "0.2.0",
-      "maturity_scope": "Retained original P03 Midnight Signal plus new P06 production: two 24s mono PCM/Vorbis music loops and 14 original synthesized WAV cues, deterministic producer and catalog. Actual native AudioServer samples verify music/isolated cue, phase alignment, mute/pause/resume and eight-voice limiter stress. No external samples/vocals or imported recordings. Physical listening, human composition, album/catalogue, exclusive rights and commercial quality remain unverified.",
+      "working_version": "0.3.0",
+      "maturity_scope": "Original Midnight Signal and Rain Circuit masters/Vorbis/scores consumed by P03; preserved P06 fourteen cues/two loops. Rain Circuit 96 BPM with swung hats/FM-like keys/sustained call-answer, real chart tails and measured -14.3 LUFS/-2.9 dBFS decoded export. No external samples/MIDI/voices, historical recovery, human listening/album or exclusive-rights/commercial approval.",
       "working_paths": [
         "projects/tokyo80s/media",
         "projects/veil-arena/media/audio"

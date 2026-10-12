@@ -39,3 +39,29 @@ for name,notes in track['charts'].items():
    assert any(abs(within-onset)<1e-6 for onset,_ in phrase)
   else: assert min(abs(within-1),abs(within-3))<1e-6
 print(f'PASS: real 69s stereo PCM master, matching OGG/chart hashes, no clipped PCM samples; {provenance["notes"]}.')
+
+rain=json.loads((root/'media/rain-provenance.json').read_text())
+for path,digest in rain['files'].items():
+ assert hashlib.sha256((root/path).read_bytes()).hexdigest()==digest,path
+with wave.open(str(root/'media/rain-circuit.wav'),'rb') as w:
+ assert (w.getnchannels(),w.getsampwidth(),w.getframerate())==(2,2,44100)
+ assert w.getnframes()==round(84.5*44100)
+ samples=memoryview(w.readframes(w.getnframes())).cast('h')
+ assert 0<max(abs(n) for n in samples)<32767
+ assert max(abs(n) for n in samples[-200:])<100,'Ending must approach silence.'
+score=json.loads((root/'dist/rain-circuit.json').read_text())
+assert score['duration']==84.5 and score['bpm']==96
+for mode,notes in score['charts'].items():
+ assert len(notes)==rain['notes'][mode]
+ assert sum('duration' in n for n in notes)==rain['holds'][mode]>0
+ assert notes==sorted(notes,key=lambda n:(n['time'],n['lane']))
+ assert len({(n['time'],n['lane']) for n in notes})==len(notes)
+ for n in notes:
+  assert 2.5<=n['time']<82.5 and 0<=n['lane']<4
+  assert any(e['time']==n['time'] and e['lane']==n['lane'] and n.get('duration',0)<=e['duration'] for e in score['sourceScore']['played']),n
+  if 'duration' in n: assert n['time']+n['duration']<=score['musicEnd']
+setlist=json.loads((root/'dist/setlist.json').read_text())
+assert {item['id'] for item in setlist}=={'midnight-signal','rain-circuit'}
+for item in setlist:
+ assert json.loads((root/'dist'/item['score']).read_text())['id']==item['id']
+print(f'PASS: Rain Circuit 84.5s PCM/hash/ending/actual attack and sustain score contracts; {rain["notes"]}, holds {rain["holds"]}.')

@@ -164,7 +164,7 @@ jobs:
         working-directory: martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/projects/realtime-integration-lab
         run: npm test
       - name: Exercise Tokyo 80s timing and complete audio/browser workflow
-        run: node --test projects/tokyo80s/tests/core.test.mjs projects/tokyo80s/tests/browser.test.mjs
+        run: node --test projects/tokyo80s/tests/*.test.mjs
       - name: Exercise Waystone browser journeys, saves and Python parity
         run: |
           python3 projects/waystone-dialogue/browser/tools/export_dialogue.py --check

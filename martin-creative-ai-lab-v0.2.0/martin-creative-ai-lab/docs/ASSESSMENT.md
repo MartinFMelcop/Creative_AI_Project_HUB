@@ -1,4 +1,22 @@
-# Current assessment — a usable native economy board
+# Current assessment — two musical stages with sustained interaction
+
+Clean `694f33e` matched fetched main. Current records/seed and actual P03 score,
+renderer/core/app and P11 SQLite source inspected. Recent work spans native C#,
+literature, native media and rooms; no automatic continuation of P01.
+
+| Opportunity | Evidence and decision |
+|---|---|
+| P03 new music/interaction | Single complete 69s track exists. A distinct composition plus performed sustains and complete setlist flow adds observable creative/gameplay value; selected. |
+| P11 restore/backup | Durable rooms and consumable export work; restoring complete trusted-workspace data is a valuable professional milestone. |
+| P06 animation | Real native art/audio and encounter work; movement/attack frames would improve action readability. |
+| P04 readers | Complete prose/editions exist; external reading/canon evidence is preferable to automatic chapter expansion. |
+
+Keep the existing Web Audio clock/JS core rather than reimplement timing in an
+available engine for a content milestone. Python/NumPy/ffmpeg create real music,
+score onsets/durations and distribution assets. Musical/creative assessment is
+limited to implementing-agent score/visual review and signal checks, not taste.
+
+# Previous assessment — a usable native economy board
 
 Updated: 2026-10-12 (America/Sao_Paulo). Clean `7b65a5e` matched fetched main.
 Read instructions/state/registry, relevant seed/decisions and actual sources.

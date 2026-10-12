@@ -1,0 +1,90 @@
+{
+  "project_id": "P03",
+  "audio_project": "P08",
+  "version": "0.2.0",
+  "recorded_at": "2026-10-12 (America/Sao_Paulo)",
+  "baseline_commit": "694f33e142347ade8baa3b7be2acf14775eb1629",
+  "contribution": "Martin direction/main authorization; Codex original score/synthesis, implementation and score/visual review. Synthetic keyboard/touch; no human listening/playtest.",
+  "before": "One original tap-only stage, fixed audio metadata/bests and no selectable musical destination.",
+  "after": "Two selectable original stages; Rain Circuit 84.5s at 96 BPM, 106/286 notes with 28/45 played sustains, explicit tails/release/pause-rehold, exported durations and next-stage buffer/clock/reset. Original song/charts/best keys preserved.",
+  "environment": "Linux x86_64; Node 24.19.0 / existing pinned Playwright Chromium; Python/NumPy 2.3.5, ffmpeg/libvorbis, Web Audio actual decoded buffers and clock.",
+  "executed": [
+    {
+      "command": "python3 tools/render_rain.py",
+      "result": "Actual stereo PCM16 44.1kHz master, Vorbis game asset, performed score/charts and hashes generated"
+    },
+    {
+      "command": "python3 tools/check_audio.py",
+      "result": "Both masters/assets/metadata hashes, no PCM clipping, musical attacks/hold envelopes, sorted charts and silent endpoint pass"
+    },
+    {
+      "command": "ffmpeg -i dist/assets/rain-circuit.ogg -af ebur128=peak=true -f null -",
+      "result": {
+        "integrated_lufs": -14.3,
+        "true_peak_dbfs": -2.9,
+        "loudness_range_lu": 1.8
+      }
+    },
+    {
+      "command": "node tests/core.test.mjs; node tests/holds.test.mjs",
+      "result": "12 original plus 7 hold contracts pass; boundaries, pause/rehold, Pulse, frame gaps, full source-chart completion and no farming"
+    },
+    {
+      "command": "node --test tests/browser.test.mjs tests/setlist.test.mjs",
+      "result": "All 7 original browser workflows pass, including complete 69s Arcade clock/export. Initial new failures were rendered-frame assertion timing and a stale provisional 48-hold count; corrected to actual final score (45), not relaxed gameplay contracts."
+    },
+    {
+      "command": "node --test tests/setlist.test.mjs",
+      "result": "All 3 new browser workflows pass: early release, prearmed paused hold, touch sustain/calibration, full 84.5s Arcade export, isolated bests and transition into original 69s decoded buffer"
+    },
+    {
+      "command": "node --test --test-name-pattern=\"track selection decodes|narrow touch\" tests/setlist.test.mjs",
+      "result": "Both affected short workflows pass after ready-state feedback reset; final CI repeats whole workflows"
+    }
+  ],
+  "actual_rain_run": {
+    "track": "rain-circuit",
+    "chart": "arcade",
+    "score": 1027000,
+    "accuracy": 100,
+    "counts": {
+      "perfect": 286,
+      "good": 0,
+      "ok": 0,
+      "miss": 0,
+      "pending": 0
+    },
+    "maxCombo": 286,
+    "meanErrorMs": 10.8
+  },
+  "actual_rain_run_scope": "RAF-scheduled synthetic events through browser controls on the real soundtrack clock; 100% validates that controlled path, not human musical skill or enjoyment.",
+  "export_sha256": "7dc2a462538682e7d34db6f6a3137ee97c32f7eb6cde30e642029c573de65c80",
+  "review": "Actual score/envelopes and desktop, narrow-touch, carried-note and result images inspected by Codex. New D-major/B-minor colour, 96 BPM swung hats, FM-like keys and eight-bar call/answer differ from first 120 BPM score. Changed pause to allow pre-held resume; matched decoded loudness. No auditory taste claim.",
+  "limits": [
+    "No independent listening, physical output/touch/key latency, other browser/platform or accessibility workflow.",
+    "Algorithmic production and signal conformity do not prove musical originality clearance, exclusive rights or commercial demand.",
+    "GitHub only; retained private Sites version was not redeployed."
+  ],
+  "sha256": {
+    "dist/app.js": "f92115d61657118aa53d1abdc5e261a1a6b3fae9ab6c092bf6777f7c90f52703",
+    "dist/core.js": "153e9427a6948b727f797c5766cdcba4559f9821fffcaa7c79516c75bc766184",
+    "dist/index.html": "10508ef09df063baa5d5d31918d7b98ae7e01366b1a56005d060862e8337abc7",
+    "dist/style.css": "11943660e443899c9e3b466f80293bb69f36e5669de35d096d1e2e9357a4b2a3",
+    "dist/setlist.json": "c4bcd9df9b7c3404eba399d331ec0b4df0c10a56c8bd6e6a3770458742477b98",
+    "dist/rain-circuit.json": "c19f7d819ef3dda530b33b06199cf7c374e243c253112d7104943d73348d6771",
+    "dist/assets/rain-circuit.ogg": "cebdec6cee49e56b8f890a912f96387ed5680410965aeb79973fff1eda4d8c49",
+    "media/rain-circuit.wav": "1256e5d5de17570c19d746175fa261571c4b1848b0c8a519b48737233466f190",
+    "media/rain-provenance.json": "5d1775e99319a8cb49aea9d1ab1b1376fa708931e0ad81cb89f0dce057b21893",
+    "tools/render_rain.py": "eeb409f750de1ef0cba4d9ee710f66cd689d9d0055624a33ec1c5930cb64b7e7",
+    "tools/check_audio.py": "4ec972f1656bb656505be36e287c92e965affd6ae3a7666a12715ba8df252c67",
+    "tests/holds.test.mjs": "4a7a294b3252eb2f239ba6ebd57f4b47a0e088044a9f6c7478d783a90dfb9fca",
+    "tests/setlist.test.mjs": "deb513c814674c36562717047b327ed27201ce9b2d4e46de7194482d15545597"
+  },
+  "preview_sha256": "e16d4fa1136cb3a316176872e36fe96701e1c304a2aaf60a6bae435deb12efe1",
+  "repository_checks": {
+    "records": "11 projects / 14 transfers / 5 assets / 2 legacy sources / 237 links pass",
+    "regressions": "11 registry and 11 manifest regressions pass",
+    "preservation": "Original music/score/producer/prior evidence and other project/archive bytes unchanged; only P03/P08/TR-012 plus real AUD-003 registry changes",
+    "manifest_files": 259
+  }
+}

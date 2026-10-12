@@ -4,10 +4,10 @@ An evolving laboratory of games, narrative, images, audio, data, and AI
 evaluation by **Martin Melcop Neto**. Projects are adaptable seeds: build small
 slices, verify behavior, record decisions, and test reuse in actual destinations.
 
-**Current seed: v0.14.0.** The lab includes eleven project lines, 178 preserved
+**Current seed: v0.15.0.** The lab includes eleven project lines, 178 preserved
 historical texts, a working local project-conversation workspace, a calibrated
 practice-task harness, a complete rescue adventure with browser/terminal editions,
-an original browser rhythm stage with a real rendered soundtrack, a native C# economy board with preserved terminal workbench, a complete Portuguese story with EPUB/PDF, and a native
+two original browser rhythm stages with rendered soundtracks and sustained notes, a native C# economy board with preserved terminal workbench, a complete Portuguese story with EPUB/PDF, and a native
 Godot boss arena with painted art, adaptive audio and an executed PCK. Private
 Sites demos support the browser games. No full RPG migration, model benchmark,
 finished music catalogue or public-audience deployment is claimed.
@@ -28,7 +28,7 @@ project versions and execution boundaries are in the state and registry.
 
 - [State](docs/STATE.md): completed increment, limits, and next action.
 - [Assessment](docs/ASSESSMENT.md) and [improvement plan](docs/IMPROVEMENT_PLAN.md): evidence and selected priorities.
-- [P03 — Midnight Signal](projects/tokyo80s/README.md): play an original four-lane rhythm stage, calibrate timing, finish and replay.
+- [P03 — Tokyo 80s Night Shift](projects/tokyo80s/README.md): choose Midnight Signal or Rain Circuit, carry long notes, calibrate timing and finish/replay.
 - [Rhythm/audio evidence](evidence/tokyo80s/RUN.json): real 69-second Web Audio run and registered master/export, with honest review limits.
 - [P11 — Project Rooms](projects/realtime-integration-lab/README.md): persistent project notes/decisions, local identity, history recovery, drafts and export.
 - [P02 — EVAL-001](evaluations/chat-send-buffering/README.md): export a starter, check a client, and inspect limits.

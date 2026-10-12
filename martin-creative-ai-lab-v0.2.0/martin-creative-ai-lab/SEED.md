@@ -1,10 +1,10 @@
 # SEED — Martin Creative AI Lab
 
-**Version:** 0.14.0
+**Version:** 0.15.0
 **Data-base:** 10 de outubro de 2026  
 **Autor e responsável pelo portfólio:** Martin Melcop Neto  
 **Working language:** English for new documentation, plans, code comments, UI, and reports. Preserve original creative titles and historical source languages.
-**Current state:** P01 Eclipse Fair 0.2.0 delivers a playable native Godot .NET board and compiled runtime-dependent project pack. Real controls, previews, rival pacing, saves and complete Gate/deadline workflows were executed; original C# core/CLI and other projects remain preserved. Synthetic execution and Codex visual review are not independent human or commercial validation.
+**Current state:** P03 Night Shift 0.2.0 contains Midnight Signal and a complete original Rain Circuit stage with performed sustains, track selection/transition and separate bests. P08 0.3.0 supplies real media. Real-clock synthetic runs and score/visual checks are executed; human listening/play and commercial quality remain unverified.
 
 > Construir um laboratório autoral em Git que transforma ideias, obras e experimentos em produtos pequenos, sistemas reutilizáveis e evidências técnicas verificáveis. A IA participa da criação e execução; Martin desenvolve sua capacidade de especificar, compreender, selecionar, corrigir, validar e explicar os resultados.
 
@@ -46,14 +46,14 @@ Se apenas este arquivo estiver disponível, ele é suficiente para iniciar a Fas
 |---|---|
 | Repository | MartinFMelcop/Creative_AI_Project_HUB; actual Git root `/workspace/Creative_AI_Project_HUB`; lab remains nested in its original package directory |
 | Preserved sources | 175 Rave Master texts and 3 WebSocket files; unchanged ZIP and inventory; not a complete RMXP backup |
-| Primary workstream | P01 native Eclipse Fair board 0.2.0 |
-| Engine execution | Godot .NET 4.6.3 with net10.0 domain; compiled source and outside-source runtime-only project pack actually executed |
-| Current verification | Native control/keyboard/save/complete-match contracts, rendered OpenGL review and unchanged C# CLI regressions; `evidence/eclipse-fair/BOARD_RUN.json` |
+| Primary workstream | P03 two original rhythm stages and sustain interaction; P08 Rain Circuit production |
+| Engine execution | Existing JavaScript/Web Audio game and actual Chromium clock; Python/NumPy/ffmpeg music production. Available Godot preserved without migration |
+| Current verification | Core/hold, both full audio-clock stage workflows, keyboard/touch/transition/storage/export and PCM/score/Vorbis checks; `evidence/tokyo80s/SETLIST_RUN.json` |
 | Historical verification | v0.2.0 combat/dialogue, P10 trust, P11 unread and P02 snapshot records remain preserved; the old scenario runner was not rerun |
-| Next action | Compare unassisted native decisions/pacing, distinct P03 music, P04 readers and P11 access/backup needs |
-| Other seeds | P03 0.1.0, P04 0.1.0, P06 0.2.0, P07 0.1.0, P08 0.2.0, P10 0.4.0, P11 0.2.0 and P02 0.2.1 preserved |
+| Next action | Compare independent listening/physical play with P11 restore needs, P06 animation and P04 readers |
+| Other seeds | P01 0.2.0, P04 0.1.0, P06 0.2.0, P07 0.1.0, P10 0.4.0, P11 0.2.0 and P02 0.2.1 preserved |
 | Transfer / shared status | TR-009/012 retained; TR-013 P07-to-P06 art and TR-014 P08-to-P06 audio validated for bounded native consumers; no shared engine |
-| Portfolio / attribution | Clean `7b65a5e` matched main after fetch. Martin authorized direction/publication; Codex implemented/verified/reviewed. No human playtest or Sites update |
+| Portfolio / attribution | Clean `694f33e` matched fetched main. Martin authorizes portfolio/main; Codex composition/implementation/review, synthetic input. No human listening or Sites deployment |
 
 Registry evidence paths must resolve to existing files inside the lab; working
 paths must be directories and legacy-source IDs must exist. This documentary
@@ -223,12 +223,12 @@ Identificadores persistem mesmo quando nomes mudam. Um projeto arquivado pode co
 |---|---|---|---|---|
 | P01 | Artemyra / Eclipse Fair | Typed economy and native C# presentation | Godot .NET board, terminal workbench, replay and comparison | Native 0.2.0; core/CLI 0.1.0 retained, no historical restoration |
 | P02 | AI Evaluation & QA Lab (historical Unity proposal) | Requirements, reproduced bugs, artifact checks | Bounded practice tasks and later independent evaluation | EVAL-001 runner 0.2.0 uses pinned snapshots, starter 0.1.0; M4 harness scope, no model candidate |
-| P03 | Tokyo 80s | Original soundtrack, timing and browser gameplay | Complete Midnight Signal stage; physical play/listening still pending | P03 0.1.0 with real P08 audio; see registry/evidence |
+| P03 | Tokyo 80s | Original music, timing and sustained interaction | Midnight Signal and Rain Circuit with track selection/transition | P03 0.2.0 / P08 0.3.0 real media; human play/listening pending |
 | P04 | O Lich mais velho da tumba mais antiga | Romance, mundo, personagens, arte e continuidade | Narrativa interativa, amostra editorial, jogo, animatic | Historical summary only here; new standalone story/EPUB/PDF 0.1.0 delivered |
 | P05 | The Dark Knight | Combate por turnos, classes, progressão, conteúdo | Laboratório de combate e balanceamento | Legado RMXP descrito |
 | P06 | Véu Partido / Veilbreak | Native combat trial; historical 3D RPG seed | Playable two-phase Godot arena, source and executed PCK | New destination; missing Unity starter remains historical |
 | P07 | Visual Generation & Asset Lab | Capas, ilustrações, sprites e direção | Assets consistentes, pipeline e estudo de seleção | Material visual histórico; inventário pendente |
-| P08 | Audio, Poetry & Music Lab | Original musical production and integration | One rendered instrumental with a real game consumer | Midnight Signal PCM/OGG and score provenance; no album or human approval |
+| P08 | Audio, Poetry & Music Lab | Original musical production and integration | Two P03 stages and P06 native soundscape | Real masters/exports/scores; no album or human listening approval |
 | P09 | AI Delivery & Operations Cases | Carreira real e avaliação simulada | Case de entrega, análise de workflow e rubricas | Base profissional lida; cases anteriores pendentes |
 | P10 | Adventures Unleashed / Rave Master | Narrative, NPCs and recovered systems | Two-day browser rescue/relief campaign with local resume and portable saves | Campaign 0.4.0; Python adventure 0.2.0 / standalone 0.1.3; bounded evidence in registry |
 | P11 | Real-time Integration Lab / Project Rooms | Node/Socket.IO/SQLite | Trusted local project conversations, decisions and full export | Workspace 0.2.0; original protocol and P02 snapshot preserved; no public service |
@@ -299,6 +299,14 @@ See ADR-010/ADR-011/ADR-012 and `evidence/realtime-chat/READING_RUN.json`; timeo
 cleanup is not isolation; escaped sessions remain outside its tested contract.
 
 ### P03 — Tokyo 80s
+
+[Tokyo 80s Night Shift](projects/tokyo80s/README.md) 0.2.0 now has two original
+tracks. Rain Circuit adds 84.5s at 96 BPM with performed hold tails, Practice/Arcade,
+track transitions and per-song bests while preserving Midnight Signal media and
+old scores. Tail scoring, early release, pause/re-hold and chronological misses
+are connected to actual musical envelopes and real browser audio-clock runs.
+No engine migration, recovered ZIP or human musical/play approval is claimed.
+
 
 **Núcleo histórico:** Tóquio dos anos 1980, city pop/wave, arcade, dança como luta, aura e poderes evocando stands/personas. Protagonista associado a top score e topete azul-noite. O projeto anterior recebeu o nome `TOKYO80s_RhythmGame_v0.0.1.zip`; seu runtime não foi inspecionado aqui.
 
@@ -406,6 +414,11 @@ Each actor has one static pose; no complete animation set or audience approval.
 **Gate:** pacote pequeno consistente, proveniência registrada e avaliação no tamanho real de uso. Não gerar centenas de imagens antes de verificar esse fluxo.
 
 ### P08 — Audio, Poetry & Music Lab
+
+Current 0.3.0 also delivers [Rain Circuit](projects/tokyo80s/media/rain-provenance.json):
+actual master/Vorbis, original score/producer, played durations consumed by P03
+holds and measured decoded loudness/peak. Prior P03/P06 media stays intact.
+
 
 **Current destinations:** P03 retains Midnight Signal. [P06 media](projects/veil-arena/media/provenance.json)
 adds fourteen original cues and two aligned 24s music loops, masters/producer and

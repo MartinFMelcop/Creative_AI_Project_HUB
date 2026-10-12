@@ -1,4 +1,17 @@
-# Current milestone — native Eclipse Fair board
+# Current milestone — two musical stages with sustained interaction
+
+Deliver Rain Circuit as a complete original composition, master/Vorbis/score,
+Practice/Arcade with meaningful sustained notes and selectable two-stage flow.
+Connect earned tails, release, Pulse, pause/re-hold, visuals, separate records,
+export and next-stage audio. Preserve original music/charts/bests and other seeds.
+
+Acceptance: source/played-score alignment, non-clipped PCM/ending, decoded audio
+metrics, hold/core boundaries, both full real-clock browser workflows, keyboard/
+touch/paused-hold/transition/storage/export, actual rendered review and repository
+validation. Publish normally to main. [Evidence](../evidence/tokyo80s/SETLIST_RUN.json)
+qualifies synthetic inputs, signal/score review and missing physical feedback.
+
+# Previous milestone — native Eclipse Fair board
 
 Connect the existing P01 C# Core/journal to a usable Godot .NET desktop board.
 Deliver venue inspection, route/action forecasts, explicit confirmation, visible

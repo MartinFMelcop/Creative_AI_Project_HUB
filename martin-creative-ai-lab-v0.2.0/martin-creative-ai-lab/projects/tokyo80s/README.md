@@ -1,10 +1,45 @@
-# P03 — Tokyo 80s: Midnight Signal
+# P03 — Tokyo 80s: Night Shift
 
-Version **0.1.0**. A complete browser rhythm prototype: an original 69-second
+Version **0.2.0**. Two complete original stages with a selectable setlist.
+Midnight Signal preserves its original audio/charts and best-score keys; Rain
+Circuit introduces musical sustain interaction. The original 0.1.0 stage is an
+original 69-second
 instrumental, four lanes, two score-aligned charts, judgments, combo/aura, personal
 timing calibration, pause, results, local best and replay. P08 supplies the real
 rendered soundtrack, not a planned cue or external recording. This is a new
 implementation from the Tokyo 80s seed; the historical ZIP was not recovered.
+
+## Rain Circuit
+
+![Actual sustained-note performance](../../evidence/tokyo80s/rain-preview.png)
+
+[Listen/download the Vorbis track](dist/assets/rain-circuit.ogg) · [PCM master](media/rain-circuit.wav).
+
+A new 84.5-second stage at **96 BPM**, with swung hats, FM-like keys, rounded bass,
+an eight-bar lead call/answer, a stripped canopy bridge and higher-key finale.
+The actual stereo WAV master, Vorbis game asset, score and producer are included;
+no samples/MIDI/quoted melody or historical audio recovery. [Production](media/rain-provenance.json)
+separates technical measurements from musical judgment.
+
+Select **TRACK** before playing. Practice has 106 notes/28 holds; Arcade has
+286 notes/45 holds. Long bars require a timed head and carried tail; releasing
+more than 95 ms early misses the entire note. A successful tail earns its head
+judgment once, with no bonus for repeated/aliased input. Score/aura are earned
+only at completion. Other lanes remain playable while sustaining.
+
+Pause freezes audio and holds. Re-hold lit lanes before Resume, or within 200 ms
+after resuming; otherwise the hold fails. This avoids automatically completing
+an abandoned hold. Window/tab interruption uses the same explicit resume policy.
+Pulse can protect combo on a failed hold; accuracy still counts the miss. Miss
+and tail events resolve in chronological song order even after delayed frames.
+
+Results identify the actual track/difficulty and hold durations in exported JSON.
+**Play the other stage** starts that selected song with reset state and its own
+buffer/clock. Bests are separate per song/chart; old Midnight Signal bests and
+personal timing offset stay compatible. Both stages are available immediately.
+[Execution](../../evidence/tokyo80s/SETLIST_RUN.json) records real clock workflows,
+keyboard/touch, carried/broken/paused holds, exports and source-score contracts.
+Synthetic play and Codex score/visual review are not human listening/playtests.
 
 ## Play locally
 
@@ -19,7 +54,7 @@ static server can serve `dist/`. No npm installation, account, model API or
 remote service is needed for gameplay. Opening `index.html` directly as a file
 is unsupported because the browser fetches the score and audio.
 
-Click **Start run**, listen to the count-in, and press **D F J K** or the arrow
+For Midnight Signal, click **Start run**, listen to the count-in, and press **D F J K** or the arrow
 keys at the hit line. Touch the four pads on mobile. Practice has 112 notes;
 Arcade has 236, with lead syncopation, chord hits and a busier finale. Each lane
 matches attacks of its named instrument in the rendered score. The underpass
@@ -45,7 +80,8 @@ Apply between runs. This is a personal calibration, not a measured device latenc
 Closing the dialog cancels remaining sound nodes. Volume stays adjustable in play.
 
 A private Sites identity is retained in [.openai/hosting.json](.openai/hosting.json).
-Its actual deployment status is reported separately; an ID is not publication
+This 0.2.0 execution updates GitHub only; the retained Site was not redeployed.
+Its deployment status is reported separately; an ID is not publication
 proof. GitHub remains the maintained source. The Site publishes only `dist/`
 and its hosting manifest, with owner-only access and no accounts/connector data.
 
@@ -107,7 +143,13 @@ accessibility, Safari/Firefox and musical quality remain unverified. There are
 no hold notes, career progression, licensed catalogue, global leaderboard or
 competitive anti-cheat. The caller controls local score data.
 
-Next: observe an unassisted Practice/Arcade session and a listening review, revise
-note density, timing feedback and arrangement from those results, then build a
-second original stage with a distinct musical/mechanical identity. Preserve the
-completed P10 operation and independent P02/P11 review gates.
+Next: compare unassisted Practice/Arcade play and listening across both stages.
+Use that feedback to revise note density, sustained-note readability and arrangement.
+Preserve the completed P10 operation and independent P02/P11 review gates.
+
+Rain Circuit rebuilding uses `python3 projects/tokyo80s/tools/render_rain.py`; the original producer
+remains unchanged. Decoded Vorbis measures -14.3 LUFS and -2.9 dBFS true peak.
+The new stage's PCM master has no clipped samples and approaches silence at its
+ending. These are executed signal measurements, not listening approval.
+Next compare human responses to both arrangements, sustained-note readability
+and pause/re-hold before adding more songs or an engine migration.
