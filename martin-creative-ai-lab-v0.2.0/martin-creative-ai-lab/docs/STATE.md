@@ -34,3 +34,9 @@ geometric UI has no soundtrack/character animation. Native pack requires Godot
 .NET 4.6.3 and .NET 10; no independent balance/art/accessibility/platform or market
 approval. Next compare unassisted P05 tactics with P01 strategy, P10's dramatic
 purpose, P03 physical listening/play, P04 readers and P11 recovery use.
+
+Closeout CI found P03's existing touch test assumed a perfect head despite CDP
+latency. A real 49.7 ms Good input correctly scored 700. The test now observes
+actual head timing and verifies the exact tail award/zero early score/combo; three
+local Chromium runs pass. P03 product rules/music remain unchanged. See the
+execution followup and final-head GitHub workflow for the full result.

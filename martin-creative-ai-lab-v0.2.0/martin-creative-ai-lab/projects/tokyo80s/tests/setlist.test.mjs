@@ -3,6 +3,7 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs/promises';
 import {createRequire} from 'node:module';
 import {createServer} from '../server.mjs';
+import {WINDOWS} from '../dist/core.js';
 const require=createRequire(new URL('../../realtime-integration-lab/package.json',import.meta.url));
 const {chromium}=require('playwright-core');
 const rain=JSON.parse(await fs.readFile(new URL('../dist/rain-circuit.json',import.meta.url),'utf8'));
@@ -83,16 +84,33 @@ test('a complete Rain Circuit Arcade performance carries actual tails and moves 
   assert.ok(Math.abs((await page.evaluate(()=>window.decodedDurations.at(-1)))-69)<.05);
   assert.deepEqual(errors,[]);await context.close();
 });
-test('narrow touch can carry a real hold and changing stages preserves calibration',{timeout:12000},async()=>{
+test('narrow touch carries a hold at its actual head judgment and calibrated offset',{timeout:12000},async()=>{
   const {context,page,errors}=await fixture({viewport:{width:390,height:844},hasTouch:true,isMobile:true});
   await page.locator('#song').selectOption('rain-circuit');assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth));
   await page.locator('#calibrate').click();await page.locator('#offset').fill('20');await page.locator('#apply').click();
+  // Observe the real model input without changing its timing, scoring or return value.
+  await page.evaluate(async()=>{
+    const {RhythmRun}=await import('/core.js'),original=RhythmRun.prototype.hit;
+    RhythmRun.prototype.hit=function(lane,time){
+      const note=original.call(this,lane,time);
+      if(note?.duration)window.touchHead={state:note.state,lane:note.lane,error:note.error,duration:note.duration};
+      return note;
+    };
+  });
+  const cdp=await context.newCDPSession(page);
   await page.locator('#start').click();await mode(page,'playing');
+  // Starting the mobile stage scrolls it into view, so resolve coordinates before the timed input.
+  const activeBox=await page.locator('[data-lane="1"]').boundingBox();
   await at(page,2.52);
-  const box=await page.locator('[data-lane="1"]').boundingBox(),cdp=await context.newCDPSession(page);
-  await cdp.send('Input.dispatchTouchEvent',{type:'touchStart',touchPoints:[{x:box.x+box.width/2,y:box.y+box.height/2,id:1}]});
+  await cdp.send('Input.dispatchTouchEvent',{type:'touchStart',touchPoints:[{x:activeBox.x+activeBox.width/2,y:activeBox.y+activeBox.height/2,id:1}]});
+  const head=await page.evaluate(()=>window.touchHead);
+  assert.equal(head?.state,'holding');assert.equal(head.lane,1);assert.equal(head.duration,1.25);
+  assert.ok(Number.isFinite(head.error)&&Math.abs(head.error)<=WINDOWS.ok+1e-9);
+  assert.equal(Number(await page.locator('#score').textContent()),0,'A head earns no sustain points before the tail.');
   await at(page,3.81);await cdp.send('Input.dispatchTouchEvent',{type:'touchEnd',touchPoints:[]});
-  assert.equal(Number(await page.locator('#score').textContent()),1000);
+  const expected=Math.abs(head.error)<=WINDOWS.perfect+1e-9?1000:Math.abs(head.error)<=WINDOWS.good+1e-9?700:400;
+  assert.equal(Number(await page.locator('#score').textContent()),expected,'The carried tail must award exactly its real head judgment.');
+  assert.equal(Number(await page.locator('#combo').textContent()),1);
   assert.equal(await page.locator('#offset').inputValue(),'20');
   if(process.env.RHYTHM_SCREENSHOT_DIR)await page.screenshot({path:process.env.RHYTHM_SCREENSHOT_DIR+'/rain-mobile.png'});
   assert.deepEqual(errors,[]);await context.close();

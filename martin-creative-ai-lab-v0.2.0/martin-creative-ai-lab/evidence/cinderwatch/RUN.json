@@ -159,7 +159,8 @@
     "projects/cinderwatch/Core/Journal.cs": "46bae735fc58e58dce317234c418775f410e58ad8bea728df2d41c8f098f38e4",
     "projects/cinderwatch/Native/Main.cs": "adc5a1a3ca03d9d2e98c48ead228f0fd62b196d60a733eb29530bded1b3e4db9",
     "projects/cinderwatch/Native/NativeChecks.cs": "3c33504fb4dc59bebe0822e877cd7b86b40be70f7c8c9dfc9dc1f9940e5a9255",
-    "projects/cinderwatch/dist/cinderwatch-0.1.0.zip": "f463d4d21239a1af8cb964ac5190e4b3a04896e5077f33638b5c61c91543c597"
+    "projects/cinderwatch/dist/cinderwatch-0.1.0.zip": "f463d4d21239a1af8cb964ac5190e4b3a04896e5077f33638b5c61c91543c597",
+    "projects/tokyo80s/tests/setlist.test.mjs": "340ce957950b98299da412b22c015db43eb2742ae1327ff21b2ce1af83b4632c"
   },
   "repository_validation": {
     "projects": 11,
@@ -168,5 +169,49 @@
     "legacy_sources": 2,
     "local_links": 251,
     "validator_regressions": 11
+  },
+  "verification_followup": {
+    "first_ci_run": "https://github.com/MartinFMelcop/Creative_AI_Project_HUB/actions/runs/38323679863",
+    "p05_ci": "Source, delivered and fresh runner rebuild all pass with 667 native checks and the same four journey outcomes.",
+    "unrelated_failure": "Existing P03 narrow-touch test expected 1000 but observed 700; its protocol setup followed the target wait.",
+    "diagnostic": {
+      "results": [
+        {
+          "syntheticSchedulingDelayMs": 0,
+          "lane": 1,
+          "time": 2.538049886621315,
+          "errorMs": 38.04988662131503,
+          "judgment": "perfect",
+          "score": 1000
+        },
+        {
+          "syntheticSchedulingDelayMs": 0,
+          "lane": 1,
+          "time": 2.532244897959184,
+          "errorMs": 32.24489795918384,
+          "judgment": "perfect",
+          "score": 1000
+        },
+        {
+          "syntheticSchedulingDelayMs": 0,
+          "lane": 1,
+          "time": 2.549659863945578,
+          "errorMs": 49.65986394557787,
+          "judgment": "good",
+          "score": 700
+        },
+        {
+          "syntheticSchedulingDelayMs": 55,
+          "lane": 1,
+          "time": 2.590294784580499,
+          "errorMs": 90.29478458049888,
+          "judgment": "good",
+          "score": 700
+        }
+      ],
+      "scope": "Scratch diagnostic: real audio clock and CDP touch; one explicitly delayed input; no product or test changes."
+    },
+    "correction": "Prepare CDP/coordinates before the target; transparently observe actual head error, require a valid holding note, zero score before tail, exact judgment-derived tail award, combo 1 and retained offset. Product timing windows/music/scoring are unchanged.",
+    "executed": "Three separate Chromium targeted test executions: 1 passed, 0 failed in each. Full final-head CI is the published workflow record."
   }
 }
