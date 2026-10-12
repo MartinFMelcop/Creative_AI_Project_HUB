@@ -42,6 +42,11 @@
     {
       "command": "Compare dependency_lock(current lock) with pinned evaluator lock",
       "result": "Equal; versions removed according to the unchanged evaluator contract. No module dependency or evaluator snapshot change."
+    },
+    {
+      "command": "CHROMIUM_PATH=/usr/bin/chromium node --test --test-concurrency=2 tests/*.test.cjs",
+      "result": "Final complete 52/52 passed, no failures/skips/cancellations",
+      "elapsed_seconds": 48.553006914
     }
   ],
   "verified_behavior": [
@@ -86,5 +91,10 @@
     "projects/realtime-integration-lab/tests/rooms.test.cjs": "ae3d01c85ec5eecf01d02a5866ba424e40c38715917a70f22a392d941399d1e8",
     "projects/realtime-integration-lab/tests/rooms-browser.test.cjs": "d6923a03ac7b44c7dd13f10987c3cec15b5c541a01992d669f69330f970086bd",
     "evidence/realtime-chat/rooms-preview.png": "c1260d0cc390e4ac84e0741e97d11f4ec45a9f72c0555c687263788453ffb28b"
+  },
+  "execution_followup": {
+    "first_hosted_run": "38209696950 remained in P11 for over fifteen minutes; other two jobs passed. Cause not established before the bounded-worker followup.",
+    "matching_browser_attempt": "The library-reported browser path did not exist; explicit run failed its prerequisite. Official Chromium 156 download was denied by network policy (403 Domain forbidden). No bypass or passing-browser claim.",
+    "adjustment": "npm test limits concurrent file workers to two; the hosted P11 step has a five-minute timeout. All 52 checks and assertions remain."
   }
 }

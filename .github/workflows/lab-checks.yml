@@ -101,6 +101,7 @@ jobs:
           "$browser_path" --version
           printf 'CHROMIUM_PATH=%s\n' "$browser_path" >> "$GITHUB_ENV"
       - name: Exercise real protocol and browser behavior
+        timeout-minutes: 5
         working-directory: martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/projects/realtime-integration-lab
         run: npm test
       - name: Exercise Tokyo 80s timing and complete audio/browser workflow
