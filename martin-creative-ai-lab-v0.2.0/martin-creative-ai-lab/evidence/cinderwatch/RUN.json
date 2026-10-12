@@ -1,0 +1,172 @@
+{
+  "project_id": "P05",
+  "version": "0.1.0",
+  "date": "2026-10-12",
+  "baseline_commit": "4725d7582cf56115ca2b8d59948d6f25fb601cd3",
+  "before": "Historical AGI/rows/states seed; no P05 executable/source package in the maintained inventory.",
+  "after": "New playable native tactical rescue with three encounters, three roles, persistent injuries/supplies, two salvage decisions, replay and conditional ending.",
+  "environment": {
+    "os": "Debian Linux x86_64",
+    "sdk": "10.0.401",
+    "godot": "4.6.3.stable.mono.official.7d41c59c4",
+    "consumer_runtime": [
+      "Microsoft.AspNetCore.App 10.0.12 [/workspace/work/eclipse-board/runtime-only/shared/Microsoft.AspNetCore.App]",
+      "Microsoft.NETCore.App 10.0.12 [/workspace/work/eclipse-board/runtime-only/shared/Microsoft.NETCore.App]"
+    ],
+    "consumer_sdks": [],
+    "render": "X11 / OpenGL 4.5 Mesa 25.0.7 llvmpipe",
+    "audio": "Explicit Dummy driver; game has no audio assets",
+    "native_engine_archive_sha256": "702a8a6785060203fd46373adf864586ecf0c377ac685d7107dde66b1eba0a9e"
+  },
+  "executed": [
+    {
+      "command": "dotnet run --project Checks -c Release",
+      "exit_code": 0,
+      "result": {
+        "checks": 74,
+        "journeys": [
+          {
+            "first": "coolant",
+            "second": "plates",
+            "phase": "Victory",
+            "sparks": 0,
+            "kits": 0,
+            "hp": [
+              6,
+              6,
+              28
+            ],
+            "actions": 65
+          },
+          {
+            "first": "coolant",
+            "second": "edge",
+            "phase": "Victory",
+            "sparks": 0,
+            "kits": 0,
+            "hp": [
+              6,
+              13,
+              28
+            ],
+            "actions": 59
+          },
+          {
+            "first": "sparks",
+            "second": "plates",
+            "phase": "Victory",
+            "sparks": 0,
+            "kits": 0,
+            "hp": [
+              7,
+              16,
+              28
+            ],
+            "actions": 71
+          },
+          {
+            "first": "sparks",
+            "second": "edge",
+            "phase": "Victory",
+            "sparks": 0,
+            "kits": 0,
+            "hp": [
+              7,
+              23,
+              28
+            ],
+            "actions": 65
+          }
+        ],
+        "naive": {
+          "phase": "Defeat",
+          "actions": 37
+        },
+        "assessment": "Synthetic implementing-agent policies; no human balance evidence"
+      }
+    },
+    {
+      "command": "dotnet build Native/Cinder.Native.csproj -c Debug",
+      "exit_code": 0,
+      "warnings": 0,
+      "errors": 0
+    },
+    {
+      "command": "Godot .NET --headless --path Native --editor --import --quit",
+      "exit_code": 0,
+      "errors": 0
+    },
+    {
+      "command": "Godot .NET --headless --path Native -- --verify --save-path <scratch>/final-source-save.json",
+      "exit_code": 0,
+      "checks": 667
+    },
+    {
+      "command": "python3 tools/pack.py; python3 tools/check_pack.py --assemblies",
+      "exit_code": 0,
+      "result": {
+        "files": 20,
+        "bytes": 65791,
+        "sha256": "f463d4d21239a1af8cb964ac5190e4b3a04896e5077f33638b5c61c91543c597"
+      }
+    },
+    {
+      "command": "unzip delivered ZIP outside source; runtime-only Godot .NET --headless --path Native -- --verify --save-path <scratch>/delivered-save.json",
+      "exit_code": 0,
+      "checks": 667,
+      "sdk_needed": false,
+      "nuget_restore_executed": false
+    },
+    {
+      "command": "runtime-only Godot .NET --audio-driver Dummy --path Native -- --verify --save-path <scratch>/final-visual-save.json --capture-dir <scratch>/final-frames",
+      "exit_code": 0,
+      "checks": 677,
+      "actual_native_frames": 10
+    }
+  ],
+  "source_and_delivered_journey_results_equal": true,
+  "contracts": [
+    "Fixed initiative, front/rear screening and all-rear boundary",
+    "Upcoming-only Pin, one action/cell, once-only Cover and shield expiry",
+    "Repair drone restores actual damage; party-wide Gout and timed scorch",
+    "Controlled injury/scorch and down-ending fixtures explicitly identify synthetic state",
+    "Pure previews, illegal action rejection and complete/intermediate replay",
+    "Native keyboard selection/confirmation, all legal controls, scrolling and text bounds",
+    "Accepted-action autosave, malformed resume preservation, failed write memory progress, restart",
+    "Four full salvage routes, ending display and 12-round deadline defeat",
+    "Actual un-interrupted native Gout: all three scorch states and simultaneous Neri shield/timed scorch displayed without clipping"
+  ],
+  "implementer_review": {
+    "technical": "Source and delivered pack journeys agree; real native controls/engine executed. CI is configured to repeat source/delivered/rebuilt consumers.",
+    "creative": "Short physical rescue conflict and role-specific speech; actual ending respects incapacitated rescuers. Final opening/Governor/ending frames inspected by Codex. Early supply tuning and clipping were corrected. Also inspected actual shield/scorch frame after deliberately allowing Gout.",
+    "assessment": "Strike-only loses after 37 accepted entries; declared tactical controller wins all four routes with finite supplies. Brace-only loses at round 13. These are bounded policy comparisons, not proof of optimal balance or audience enjoyment."
+  },
+  "unverified": [
+    "Independent human tactical/creative/accessibility review",
+    "Alternative optimal strategies and broader balance",
+    "Physical input on target hardware, other OS and standalone OS exports",
+    "Soundtrack/character art/animation production",
+    "Commercial interest or exclusive intellectual-property clearance"
+  ],
+  "hashes": {
+    "evidence/cinderwatch/ending.png": "cdf2c5b3ec1092f3c99554bb1b7dfcc5ba775bc8fcb97646beba89bf219b90d9",
+    "evidence/cinderwatch/governor.png": "ccf6f189c830ff017fdc7e08a997a7203e02bab8bac95a5caad9fa59574287a0",
+    "projects/cinderwatch/Checks/Probe.cs": "e119d4ff44256cb3d2ce9acbdc045f5842373baccf4e5ca38f57c60f233f5193",
+    "projects/cinderwatch/Checks/Program.cs": "a917480917097876782794f27d4e906b4494dc636b0b207bd1ebc3155d651f21",
+    "projects/cinderwatch/Core/AssemblyInfo.cs": "a14dad30ab9e586a7ae0ae9d9dbf20d2a0d0accc9b79207903ecc729cd1a21f8",
+    "projects/cinderwatch/Core/Content.cs": "d37035eab4aa09802511dd3b5806ae8d295156824a18962a9ed14d19184fb3bb",
+    "projects/cinderwatch/Core/Game.cs": "53dd7148e63dd57ae0796943b810d0652398d72fd75e46bdd76a8f322d2674d7",
+    "projects/cinderwatch/Core/Journal.cs": "46bae735fc58e58dce317234c418775f410e58ad8bea728df2d41c8f098f38e4",
+    "projects/cinderwatch/Native/Main.cs": "adc5a1a3ca03d9d2e98c48ead228f0fd62b196d60a733eb29530bded1b3e4db9",
+    "projects/cinderwatch/Native/NativeChecks.cs": "3c33504fb4dc59bebe0822e877cd7b86b40be70f7c8c9dfc9dc1f9940e5a9255",
+    "projects/cinderwatch/dist/cinderwatch-0.1.0.zip": "f463d4d21239a1af8cb964ac5190e4b3a04896e5077f33638b5c61c91543c597"
+  },
+  "repository_validation": {
+    "projects": 11,
+    "transfers": 14,
+    "assets": 6,
+    "legacy_sources": 2,
+    "local_links": 251,
+    "validator_regressions": 11
+  }
+}

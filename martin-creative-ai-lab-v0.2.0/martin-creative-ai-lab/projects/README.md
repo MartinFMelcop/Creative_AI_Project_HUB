@@ -35,9 +35,15 @@ This is new implementation, not recovery of the missing Unity starter.
 
 [P01 — Eclipse Fair](eclipse-fair/README.md) is a new C#/.NET 10 terminal match
 and economy workbench, with four participants/eight venues, durable replay,
-scenario comparison and an executed compiled resource package. Native graphical
-presentation and human play remain unverified.
+scenario comparison and an executed compiled resource package. The native 0.2.0 board directly consumes those rules with graphical previews,
+paced rivals and resume. Human play remains unverified.
 
 [P04 — A água sob Darsen](lich-cistern/README.md) delivers a complete standalone
 Portuguese story with EPUB/PDF editions and editable prose. It is a new adaptation
 from the seed summary, not restored B01 or ratified canon.
+
+
+[P05 — Cinderwatch](cinderwatch/README.md) is a new native C# tactical rescue:
+three encounters/roles, announced enemy turns, row screening, finite supplies,
+two salvage decisions and a conditional ending. Source and compiled Godot .NET
+project are executed; no historical RMXP restoration or standalone OS build.

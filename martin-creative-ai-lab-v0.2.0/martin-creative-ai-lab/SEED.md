@@ -1,10 +1,10 @@
 # SEED — Martin Creative AI Lab
 
-**Version:** 0.17.0
+**Version:** 0.18.0
 **Data-base:** 10 de outubro de 2026  
 **Autor e responsável pelo portfólio:** Martin Melcop Neto  
 **Working language:** English for new documentation, plans, code comments, UI, and reports. Preserve original creative titles and historical source languages.
-**Current state:** P06 Veilbreak 0.3.0/P07 motion 0.2.0 integrates two actual 16-pose atlases with native foot alignment and committed blade/cast contact, recovery and cancellation. Source and built packs, OpenGL frames/movie and the full fight are executed. Other destinations remain preserved; human balance/art approval and commercial quality remain unverified.
+**Current state:** P05 Cinderwatch 0.1.0 is a new native C# tactical rescue campaign: three roles/encounters, announced actions, persistent supplies, salvage and a conditional ending. Source and compiled Godot .NET project are executed, including the pack outside source with runtime-only .NET and OpenGL review. P06 motion and other destinations remain preserved; independent play and commercial quality remain unverified.
 
 > Construir um laboratório autoral em Git que transforma ideias, obras e experimentos em produtos pequenos, sistemas reutilizáveis e evidências técnicas verificáveis. A IA participa da criação e execução; Martin desenvolve sua capacidade de especificar, compreender, selecionar, corrigir, validar e explicar os resultados.
 
@@ -46,14 +46,14 @@ Se apenas este arquivo estiver disponível, ele é suficiente para iniciar a Fas
 |---|---|
 | Repository | MartinFMelcop/Creative_AI_Project_HUB; actual Git root `/workspace/Creative_AI_Project_HUB`; lab remains nested in its original package directory |
 | Preserved sources | 175 Rave Master texts and 3 WebSocket files; unchanged ZIP and inventory; not a complete RMXP backup |
-| Primary workstream | P06/P07 embodied native combat: real poses and committed contact/recovery |
-| Runtime execution | Godot 4.6.3 standard/GDScript, native image metadata production, OpenGL/AudioServer and delivered/fresh PCK; no engine rewrite |
-| Current verification | Complete source/pack fights, motion/audio contracts, alpha/wall bounds, actual frames and 7.2s fixture movie; `evidence/veil-arena/MOTION_RUN.json` |
-| Historical verification | Old 0.2.0 pack executed for the same-controller comparison; other project records retained |
-| Next action | Compare native player/artist feedback with P01 strategy, a scoped P05 destination, P03 listening/play, P04 readers and P11 recovery use |
-| Other seeds | P01 0.2.0, P03 0.2.0, P04 0.1.0, P08 0.3.0, P10 0.4.0, P11 0.3.0 and P02 0.2.1 preserved |
-| Transfer / shared status | Extend only TR-013 P07-to-P06 with VIS-002; other transfers retained; no shared engine |
-| Portfolio / attribution | Clean `eb474a5` matched fetched main. Martin authorizes portfolio/main; Codex production/implementation/review, synthetic fixtures. No independent play or hosting deployment |
+| Primary workstream | P05 Cinderwatch: complete native tactical rescue campaign |
+| Runtime execution | C#/.NET 10 domain and Godot .NET 4.6.3; direct project reference; delivered owned assemblies run outside source with runtime-only .NET |
+| Current verification | Four complete salvage routes, meaningful contrasts, native controls/keyboard, forecast isolation, save/failure/replay, deadlines and actual OpenGL frames; `evidence/cinderwatch/RUN.json` |
+| Historical verification | P06 0.3.0 motion/media and other prior evidence retained; not rerun as this milestone's creative validation |
+| Next action | Compare P05 unassisted tactical play with P01 strategy, P10 dramatic progression, P03 listening/play, P04 readers and P11 real recovery use |
+| Other seeds | P01 0.2.0, P03 0.2.0, P04 0.1.0, P06 0.3.0, P07 0.2.0, P08 0.3.0, P10 0.4.0, P11 0.3.0 and P02 0.2.1 preserved |
+| Transfer / shared status | No code/media transfer or shared framework promoted; historical archive unchanged |
+| Portfolio / attribution | Clean `4725d75` matched fetched main. Martin authorizes portfolio/main; Codex implementation/review and declared synthetic fixtures. No independent play or hosting deployment |
 
 Registry evidence paths must resolve to existing files inside the lab; working
 paths must be directories and legacy-source IDs must exist. This documentary
@@ -225,7 +225,7 @@ Identificadores persistem mesmo quando nomes mudam. Um projeto arquivado pode co
 | P02 | AI Evaluation & QA Lab (historical Unity proposal) | Requirements, reproduced bugs, artifact checks | Bounded practice tasks and later independent evaluation | EVAL-001 runner 0.2.0 uses pinned snapshots, starter 0.1.0; M4 harness scope, no model candidate |
 | P03 | Tokyo 80s | Original music, timing and sustained interaction | Midnight Signal and Rain Circuit with track selection/transition | P03 0.2.0 / P08 0.3.0 real media; human play/listening pending |
 | P04 | O Lich mais velho da tumba mais antiga | Romance, mundo, personagens, arte e continuidade | Narrativa interativa, amostra editorial, jogo, animatic | Historical summary only here; new standalone story/EPUB/PDF 0.1.0 delivered |
-| P05 | The Dark Knight | Combate por turnos, classes, progressão, conteúdo | Laboratório de combate e balanceamento | Legado RMXP descrito |
+| P05 | The Dark Knight / Cinderwatch | Turn-based seed, AGI, rows and states | Native three-encounter tactical rescue campaign | New 0.1.0 destination; historical RMXP packages remain absent |
 | P06 | Véu Partido / Veilbreak | Native combat trial; historical 3D RPG seed | Animated two-phase arena with committed contact, source and executed PCK | New 0.3.0 destination; missing Unity starter remains historical |
 | P07 | Visual Generation & Asset Lab | Native visual production | Three paintings plus two real motion atlases consumed by P06 | 0.2.0 production/integration; independent artist approval absent |
 | P08 | Audio, Poetry & Music Lab | Original musical production and integration | Two P03 stages and P06 native soundscape | Real masters/exports/scores; no album or human listening approval |
@@ -355,19 +355,31 @@ independent audience or author canon approval.
 
 **Gate de continuação:** escolher uma finalidade e público, uma fatia e um conjunto de regras vigente. Manter contraditórios como variantes de origem até decisão; não fundir todo o legado em uma suposta versão definitiva.
 
-### P05 — The Dark Knight
+### P05 — The Dark Knight / Cinderwatch
 
-**Legado histórico:** RPG Maker XP; combate com uma ação por turno, AGI, linhas e estados; 21 classes, cinco raças, curva de nível 1–180 e itens em sete tiers em planos anteriores. Há pacotes históricos de Sprint 100 divididos em core e áudio, além de referências de openings e ilustrações.
+Historical direction: RPG Maker XP, one action per turn, AGI, rows and states.
+Plans mentioned 21 classes, five races, levels 1–180, seven item tiers and Sprint
+100 core/audio packages. Those packages/runtime are not present in this checkout;
+the Rave archive belongs to P10 and does not establish P05 provenance.
 
-Contagem de sprints não comprova produto final ou estabilidade. Sem auditarmos fontes e runtime, esse material é reservatório de sistemas e conteúdo.
+Current destination **Cinderwatch 0.1.0** is a new bounded adaptation, not a
+restoration. Pure C#/.NET 10 owns three roles, row screening, fixed initiative,
+announced enemy targets, one action, shield/cover expiry, limited interrupts and
+treatment, timed scorch, three encounters and two salvage choices. Dead locked
+targets waste attacks; initiative is snapshotted each round and ties use stable ID.
+The Governor's party-wide attack bypasses Cover. Injuries/resources carry forward;
+the final rescue scene recognizes incapacitated heroes. No XP/class catalogue.
 
-**Destino técnico candidato:** núcleo de combate por turnos em C# separado da apresentação; uma arena pequena com duas ou três classes para demonstrar ordem de ações, status, alvo e balanceamento.
+Godot .NET 4.6.3 directly consumes the core for selection, computed previews,
+confirmation, paced enemy resolution, keyboard, rules/logs, accepted-action save
+and validated replay/failure feedback. Source and a compiled owned-assembly ZIP
+are executed outside source with runtime-only .NET; this is not an OS executable.
+[Play/build](projects/cinderwatch/README.md), [execution](evidence/cinderwatch/RUN.json).
 
-**Perguntas a resolver:** como AGI desempata; quando estados expiram; se a ordem é recalculada; o que ocorre quando um alvo morre; como efeitos simultâneos se resolvem; quais regras de linha são legíveis ao jogador.
-
-**Extrações:** effect resolver, catálogo de estados, curva de XP, tiers de itens, cálculo de dano e regras de turno. Não transportar automaticamente 180 níveis e 21 classes para provar uma única mecânica.
-
-**Risco:** nome genérico ou associado a obras existentes, conteúdo excessivo e dificuldade de atribuição de ativos. Renomear é permitido e pode tornar o produto mais distintivo.
+Four implementing-agent routes win; Strike-only and Brace-only comparisons lose.
+Technical contracts and rendered review do not prove optimal balance, creative
+appeal or commercial demand. Next seek unassisted tactical choices, especially
+screening, Cover/resource use and salvage trade-offs. No historical media reused.
 
 ### P06 — Véu Partido / Veilbreak
 

@@ -1,37 +1,36 @@
 # Lab state
 
-**Updated:** 2026-10-12 (UTC). **Seed:** 0.17.0.
-**Current milestone:** P06 Veilbreak 0.3.0 / P07 native motion 0.2.0.
+**Updated:** 2026-10-12 (America/Sao_Paulo). **Seed:** 0.18.0.
+**Current milestone:** P05 Cinderwatch 0.1.0.
 
-[Play the native trial](../projects/veil-arena/README.md). Two actual corrected
-RGBA atlases supply 32 poses: courier walk/blade/dodge/seal and Warden
-walk/sweep/charge/wave. Native production derives isolated regions, foot pivots
-and scale from alpha without editing PNG bytes. Displacement and combat clocks
-choose poses; pause/result freeze them and restart clears them.
+[Run the native campaign](../projects/cinderwatch/README.md). P05 previously had
+only historical context. A new three-encounter rescue now connects Rook's cover,
+Vale's screened-target attacks/interrupts and Neri's limited treatment to fixed
+initiative, front/rear formation and visible enemy intentions. Injuries/supplies
+carry forward; two one-time salvage choices and a conditional ending complete it.
+The repair drone and alternating Governor require different tactical responses.
 
-Blade aim locks, contact lands after 100ms, and recovery lasts to 320ms. Seal
-release follows 75ms gather. One action starts at a time; movement slows while
-committed. Dodge or damage cancels unfinished contact without refund. Facing,
-pose and cue follow the actual emission event. Boss damage/costs/cooldowns,
-patterns/echo, floor/portraits/audio and the complete native lifecycle remain.
+C#/.NET 10 owns the rules; Godot .NET 4.6.3 directly consumes them. The native UI
+offers real forked previews, confirmation, deliberate enemy pacing, keyboard,
+rules/logs, accepted-action autosave/replay, error feedback and restart. A compiled
+owned-assembly ZIP runs with the engine/runtime; no browser bridge or OS export.
 
-[Execution](../evidence/veil-arena/MOTION_RUN.json) records source and shipped/
-rebuilt PCK, complete fight, actual AudioServer and motion contracts. OpenGL
-frames and a 7.2s Movie Maker demonstration come from the pack outside source;
-fixtures/scripted input are not human play or a hardware performance benchmark.
-The same controller wins both versions: 0.2.0 51.87s/2 health; 0.3.0 55.58s/1 health.
-This comparison establishes completion/increased commitment risk, not balance.
+[Execution](../evidence/cinderwatch/RUN.json) records domain/engine checks, four
+complete native salvage routes, save failure/invalid replay, deadline loss, and
+the delivered consumer outside source with runtime-only .NET/no SDK. Actual
+OpenGL frames were reviewed. Strike-only loses the bounded campaign comparison;
+Brace-only reaches the deadline. Early supplies, clipped labels and down-hero
+ending continuity were revised. These are Codex fixtures/review, not human play.
 
-Started clean at `eb474a5`, matching fetched main. Reviewed portfolio/seed/history
-and actual native/comparison sources. Selected body-readable committed combat
-over another P11 operation, speculative P05 recovery or automatic P03/P04 content.
-Godot 4.6.3/GDScript fits the real native consumer; no engine/language rewrite.
-Extend only P07-to-P06 TR-013, add VIS-002; original assets/archive/other projects
-remain preserved. GitHub main is authorized; no hosting deployment.
+Started clean at `4725d75`, matching fetched main. Compared P01 strategy and P10
+progression plus P03/P04 feedback and completed P11/P06 work. Selected P05's
+missing usable destination over automatic expansion of another existing product.
+Unity was not located; actual .NET/Godot .NET compiled and ran. Historical archive
+and other project implementations/media remain preserved; no transfer promoted.
+GitHub main is authorized; no Sites deployment.
 
-Codex asset/pose review only. Four-keyframe clips and horizontal mirroring retain
-some generated pose/proportion variation; no full directional/hand-animated set.
-PCK requires Godot; no standalone OS build, independent player/artist approval,
-physical input/listening or commercial clearance. Next compare actual committed
-combat feedback with P01 strategy, P05's scoped turn-based destination, P03 physical
-play/listening, P04 readers and P11 real recovery use before choosing again.
+Technical M4 is bounded to this destination, not the historical RPG. Functional
+geometric UI has no soundtrack/character animation. Native pack requires Godot
+.NET 4.6.3 and .NET 10; no independent balance/art/accessibility/platform or market
+approval. Next compare unassisted P05 tactics with P01 strategy, P10's dramatic
+purpose, P03 physical listening/play, P04 readers and P11 recovery use.

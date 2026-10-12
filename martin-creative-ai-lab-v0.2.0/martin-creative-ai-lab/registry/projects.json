@@ -113,18 +113,27 @@
     },
     {
       "id": "P05",
-      "name": "The Dark Knight",
+      "name": "The Dark Knight / Cinderwatch",
       "slug": "dark-knight",
-      "status": "seed",
-      "maturity": "M0",
-      "phase": "legacy-triage",
-      "origin": "historical_context",
-      "next_action": "Selecionar regra de combate e localizar fonte editável.",
+      "status": "active",
+      "maturity": "M4",
+      "phase": "native-tactical-campaign-validated",
+      "origin": "new_seed_implementation",
+      "next_action": "Observe unassisted native tactical play and compare screening, resource use, Cover versus damage and salvage pacing; reassess P01 strategy, P10 dramatic progression and P03/P04 feedback before choosing the next milestone.",
       "related_projects": [
         "P02",
         "P06"
       ],
-      "evidence": []
+      "evidence": [
+        "projects/cinderwatch/README.md",
+        "projects/cinderwatch/Native/README.md",
+        "projects/cinderwatch/provenance.json",
+        "evidence/cinderwatch/RUN.json"
+      ],
+      "historical_name": "The Dark Knight",
+      "working_path": "projects/cinderwatch",
+      "working_version": "0.1.0",
+      "maturity_scope": "Bounded technical M4: new pure C#/.NET 10 domain and real Godot .NET 4.6.3 consumer; three roles/encounters, announced initiative/row screening, finite interrupts/treatment, cover/scorch, two one-time salvage decisions and conditional rescue ending. Native forecasts/confirmation, keyboard, explicit enemy pacing, accepted-action autosave/replay and failure handling. Compiled owned-assembly ZIP executed outside source with runtime-only .NET and OpenGL frames. Four synthetic routes win; Strike-only and Brace-only comparisons lose. No historical RMXP recovery, standalone OS export, artwork/audio production, independent human balance/accessibility or commercial validation."
     },
     {
       "id": "P06",

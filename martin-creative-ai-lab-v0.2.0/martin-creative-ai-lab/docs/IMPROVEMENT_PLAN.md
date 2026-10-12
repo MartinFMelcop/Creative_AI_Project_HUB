@@ -1,19 +1,17 @@
-# Current milestone — embodied native combat
+# Current milestone — Cinderwatch tactical rescue
 
-Deliver P06 0.3.0/P07 0.2.0 with real character atlases, foot-aligned walk/dodge/
-blade/cast and Warden windup/active/recovery poses. Connect blade preparation,
-locked aim, once-only contact, cast release, movement commitment and dodge/hurt
-cancellation. Keep resource prices, nominal damage/cooldowns, boss patterns/echo,
-existing media and pause/restart behavior. No shared framework or engine rewrite.
+Deliver a complete bounded P05 native campaign: three connected encounters,
+three distinct roles, announced fixed initiative, rows/screening, limited
+interrupts/treatment, cover/scorch, persistent injuries, two salvage decisions
+and a conditional ending. Direct C# core/Godot .NET UI, no inherited RPG scale.
 
-Acceptance: corrected isolated RGBA cells; native metadata production; actual
-imported alpha/bounds and wall limits; contact/pose/cue synchronization, whiffs,
-cancellation, one-action priority, pause/resume/restart and legal-input full fight.
-Execute source and shipped/rebuilt PCK, inspect OpenGL frames, record a declared
-fixture movie and compare the old actual pack with the same controller. Maintain
-registry/manifest and publish normally to main. [Evidence](../evidence/veil-arena/MOTION_RUN.json)
-separates production, engine execution and Codex review from independent play,
-physical timing, hand animation, commercial rights and standalone OS export.
+Acceptance: compile/run source and delivered owned-assembly pack outside source;
+execute complete routes through actual controls; verify meaningful tactical
+contrasts, previews, keyboard, status/target boundaries, saves/failures/replay and
+defeat/restart. Inspect OpenGL text/scene continuity. Maintain records/manifest,
+CI and publish normally to main. [Evidence](../evidence/cinderwatch/RUN.json)
+distinguishes execution from independent balance, human usability and market
+approval. Other implementations/media and historical snapshots stay intact.
 
 # Previous milestone — native Eclipse Fair board
 

@@ -1,25 +1,23 @@
-# Current assessment — embodied native combat
+# Current assessment — a complete native tactical destination
 
-Clean `eb474a5` matches fetched main. Instructions/state/registry/seed, recent
-native/literary/music/workspace history and actual P06 arena/media/tests were
-inspected. P01 agent/board and P10 campaign sources provide credible comparisons.
-The portfolio already has several real destinations; no automatic P11 extension.
+Clean `4725d75` matches fetched main. Read instructions, state/registry/seed,
+recent decisions/history, actual P01 agents/native workflow and P10 morning
+scenes/rules. Source inventory has no P05 game package; P10's archive is separate.
 
 | Opportunity | Evidence and decision |
 |---|---|
-| P06/P07 motion and contact | Two-phase native fight works, but one static pose/bob per actor and instantaneous radial blade damage weaken embodied action. Produce usable atlases, real preparation/contact/recovery and cancellation, connected to current physics/audio; selected. |
-| P01 strategy/progression | C# rules, eight-venue native board and heuristic opponents exist. Unassisted strategy/pacing evidence would guide broader progression better than speculative additions. |
-| P10 narrative/progression | Two playable days, inherited relief outcomes and replayable saves exist. Another chapter needs a distinct dramatic/gameplay purpose and reader/player response. |
-| P03/P04 feedback | Two original songs and a complete Portuguese story/editions exist; physical listening/play and independent readers remain meaningful missing evidence. |
-| P05/P09 | Registry records historical seeds, not full local game/client sources. A newly scoped turn-based game is possible; do not fabricate restoration or professional cases. |
-| P11 operations | Full local recovery now exists. Real collaborator, retention and off-site/account requirements should precede another operation or public hosting. |
+| P05 usable destination | Historical AGI/rows/states seed has no executable consumer. A new three-role rescue campaign can connect tactical choices, consequences and progression now; selected. |
+| P01 strategy | Native economy and heuristic rivals exist. Broader strategy/progression is valuable; player decisions would guide it better than another speculative mechanism. |
+| P10 progression | Actual morning scenes/relief outcomes already connect two days. Another chapter needs a distinct dramatic purpose and player response. |
+| P03/P04 feedback | Real songs/stories exist; independent listening/play/reading is a larger remaining gap than automatic new content. |
+| P06/P11 | Recent motion and full recovery milestones are complete. Actual play/recovery use should guide further work. |
 
-Keep standard Godot/GDScript for the actual 2D physics/presentation loop. Native
-image/alpha processing derives metadata, not another web app or dependency service.
-Generate reference edits from owned current portraits, reject crowded cells,
-inspect resulting poses and execute the consuming PCK. Preserve existing audio,
-portrait/floor bytes and other projects. Human motion/balance/art approval remains
-unverified; four keyframes and two mirrored orientations are a bounded milestone.
+C# gives a pure domain; Godot .NET directly presents a native turn-based game.
+Both compiled and executed; Unity was not found. This fits the intended game
+without migrating another working product or copying P10 combat. Compare the
+new usable campaign against the absent P05 runtime, not against an invented
+historical game. See [execution](../evidence/cinderwatch/RUN.json) for bounded
+strategy comparisons and implementer review. No independent enjoyment evidence.
 
 # Previous assessment — a usable native economy board
 

@@ -836,3 +836,30 @@ and OpenGL frames/movie verify integration. Four-keyframe generated clips retain
 proportion variation and only mirror horizontally. No hand-animation/directional
 completeness, independent art/enjoyment approval or standalone OS build. Extend
 TR-013/add VIS-002 only; other projects and historical sources remain intact.
+
+## ADR-041 — give P05 a bounded native tactical campaign
+
+**Date:** 2026-10-12 (America/Sao_Paulo). **Status:** Cinderwatch 0.1.0.
+
+Select a missing P05 destination after comparing P01 strategy, P10 scenes,
+P03/P04 audience feedback and completed P06/P11 milestones. No P05 game sources
+are present; do not claim recovery or borrow P10 provenance. Rename and scope
+the AGI/rows/states seed to three roles/encounters and two salvage decisions.
+
+C#/.NET 10 separates deterministic rules from Godot .NET 4.6.3 presentation.
+Both tools execute; Unity was not located. No duplicate web/domain bridge or
+cross-project shared framework. Stable per-round order, locked enemy intent,
+screening, finite interrupts/treatment and shield/scorch expiry create decisions.
+Dead locked targets waste attacks. Gout bypasses Cover. Adapt the ending to down
+heroes instead of assigning them impossible actions. Retain historical sources.
+
+Preview forks the actual domain; confirmation accepts one action. Inspection and
+enemy pacing are deliberate; no automated player turns. Replay accepted actions
+for a one-slot save; illegal/unsupported saves keep live play, failed writes keep
+memory with feedback. No undo/cloud save or power-loss durability claim.
+
+Compile/import/execute native controls and the owned-assembly pack outside source
+with runtime-only .NET, inspect real OpenGL frames. Supply tuning and comparisons
+are implementing-agent fixtures, not human balance approval. Functional UI has no
+soundtrack/animated characters. Independent play, alternative strategies, OS
+exports, production art/audio and demand remain separate milestones. GitHub only.

@@ -56,6 +56,22 @@ jobs:
           python3 tools/check_board_pack.py
           unzip -q dist/eclipse-board-0.2.0.zip -d "$RUNNER_TEMP/eclipse-board-pack"
           "$eclipse_engine" --headless --path "$RUNNER_TEMP/eclipse-board-pack/eclipse-board/Native" -- --verify --save-path "$RUNNER_TEMP/eclipse-pack-check/match.json"
+      - name: Compile and play Cinderwatch source, delivered and rebuilt consumers
+        working-directory: martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/projects/cinderwatch
+        run: |
+          cinder_engine="$RUNNER_TEMP/eclipse-godot/Godot_v4.6.3-stable_mono_linux_x86_64/Godot_v4.6.3-stable_mono_linux.x86_64"
+          export XDG_DATA_HOME="$RUNNER_TEMP/cinder-data" XDG_CONFIG_HOME="$RUNNER_TEMP/cinder-config" XDG_CACHE_HOME="$RUNNER_TEMP/cinder-cache"
+          dotnet run --project Checks -c Release
+          dotnet build Native/Cinder.Native.csproj -c Debug
+          "$cinder_engine" --headless --path Native --editor --import --quit
+          "$cinder_engine" --headless --path Native -- --verify --save-path "$RUNNER_TEMP/cinder-source/save.json"
+          python3 tools/check_pack.py
+          unzip -q dist/cinderwatch-0.1.0.zip -d "$RUNNER_TEMP/cinder-delivered"
+          "$cinder_engine" --headless --path "$RUNNER_TEMP/cinder-delivered/cinderwatch/Native" -- --verify --save-path "$RUNNER_TEMP/cinder-delivered-check/save.json"
+          python3 tools/pack.py
+          python3 tools/check_pack.py --assemblies
+          unzip -q dist/cinderwatch-0.1.0.zip -d "$RUNNER_TEMP/cinder-rebuilt"
+          "$cinder_engine" --headless --path "$RUNNER_TEMP/cinder-rebuilt/cinderwatch/Native" -- --verify --save-path "$RUNNER_TEMP/cinder-rebuilt-check/save.json"
 
   native-arena:
     runs-on: ubuntu-24.04
