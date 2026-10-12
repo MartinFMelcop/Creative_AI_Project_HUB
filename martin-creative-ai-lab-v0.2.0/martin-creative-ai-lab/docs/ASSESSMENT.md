@@ -1,41 +1,40 @@
-# Current assessment — P11 edited-draft timeout recovery
+# Current assessment — a complete P10 rescue operation
 
-Updated: 2026-10-11 (client date, America/Sao_Paulo). Clean `work` at `e2cbabe`
-matches remote main through GitHub; Git transport cannot reach its proxy.
-Reviewed instructions, state/registry/seed, decisions, actual P10 scene/provenance,
-P11 client/styles/server/tests and P02's current evaluator boundary.
+Updated: 2026-10-11 (client date, America/Sao_Paulo). The clean checkout began
+at `e2cbabe`; inspection found newer remote `abf80db`. Exact GitHub object hashes
+were imported and fast-forwarded before development; a subsequent normal fetch
+confirmed the same main head after localhost/network sandbox restrictions were
+resolved. The chat author's 0.1.7 changes are preserved.
 
-**Confirmed defect:** a timed-out earlier attempt becomes unavailable in the UI
-if the input has changed and no broadcast arrives. Feedback still promises that
-the draft is kept. Real browser submissions and the Socket.IO timer reproduce
-this with controlled dropped/broadcast outcomes; existing tests cover unchanged
-input and successful delayed acknowledgement but omit their combined failure.
+The recent history concentrates on small P11 reading/delivery, P02 guard and
+P10 wording corrections. Actual P10 0.1.3 has coherent trust memory but ends after
+`herbs, bargain`, automatically declaring a crossing that has no playable travel,
+rescue, resource allocation or village consequence. This is a verified product
+boundary; whether readers enjoyed the short scene remains unknown.
 
-| Candidate | Evidence and priority |
+| Opportunity | Evidence and selection |
 |---|---|
-| P11 edited-draft timeout | Reproduced loss of recovery text in an executable user flow; reuse captured text and existing feedback at low implementation cost |
-| P10 dialogue pacing | Current scene has coherent memory/deadline responses; enjoyment of simple cooperation and five waits needs readers before balance changes |
-| P02 independent candidate | No independent artifact/context is available; controlled reference checks cannot supply author performance evidence |
-| Other creative seeds | Inventory supplies selected historical text, not complete game, manuscript or media masters for a verified increment |
+| P10 complete expedition | Executable Python scene, inspected selected dialogue/state/profile sources, preserved provenance and no engine dependency. Extend the crossing into an operation with meaningful priorities; selected. |
+| P11 useful shared-room product | Working ephemeral chat and real browser tests; accounts, room lifecycle and service storage would require a separate delivery/security contract. More viewport polishing would not meet this milestone. |
+| P02 independent evaluation | A calibrated runner exists; no independently produced candidate/context is available. More controlled probes cannot substitute for that evidence. |
+| Other games, narrative and media | Seed and source inventory contain concepts and selected P10 text; complete playable baselines, P04 manuscript and inspected media masters are absent here. Do not reconstruct them from summaries or fabricate assets. |
 
-Retain the earlier attempt as literal feedback when values differ, leaving current
-typing intact. Wrap and preserve whitespace in that existing area; no new control,
-clipboard operation, history store, retry or dependency is necessary. Removing
-new typing or promising definite failure would discard useful work or misrepresent
-unknown delivery. Recovery stays bounded to one feedback message until the next
-submission/reload; manual retries still risk duplication.
+Flood Crossing 0.2.0 now links preparation, the actual Keeper scene, two river
+routes and concrete rescue epilogues. Rope, timber and oil compete for two slots.
+A nine-beat shared clock makes conversation delay matter. Rescuing Iven changes
+capacity and travel; forecasts let cargo order and holding respond to current.
+Permanent infrastructure, temporary passage, medicine and residents are separate
+outcomes. It adds no framework, personality DSL or disconnected portfolio work.
 
-[Execution](../evidence/realtime-chat/DRAFT_RECOVERY_RUN.json) records two baseline
-failures becoming passes, all 38 chat checks, 25 runner tests, the working-client
-17/17 probe and unchanged dependencies/task sources. Narrow output was inspected:
-old markup is literal, long text fits, and current input remains visible. Visual
-identity and creative material stay unchanged; agent inspection is not audience
-or assistive-technology validation. **Hypotheses:** this feedback may help manual
-recovery and support a focused interaction-QA portfolio case; verify through a
-human two-tab recovery session and intended-audience review. **Unverified:** human
-copy/readability, real outage behavior, other browsers, adoption and paid demand.
-The local ephemeral app has no deployment/service contract. Correct stale P11
-README runner wording without changing P02; seed direction and maturity remain.
+[Executed evidence](../evidence/waystone-dialogue/ADVENTURE_RUN.json) includes
+twelve CLI paths and an explicit same-equipment comparison: changing cargo order
+saves the same four residents while determining whether the clinic chest survives.
+The implementing agent reviewed causal continuity, character voice, feedback,
+resource priorities and complete closures. This supports a reasoned assessment
+of greater agency and a presentable prototype, not independent enjoyment or
+market validation. The existing conversation, archive, P02 and P11 sources remain
+unchanged by this development. A paid narrative-game opportunity requires reader
+sessions, distribution/rights review and production work; no demand is claimed.
 
 # Previous assessment — P11 text reflow
 

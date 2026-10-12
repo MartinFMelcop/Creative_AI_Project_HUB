@@ -1,0 +1,212 @@
+{
+  "milestone": "P10 Flood Crossing 0.2.0",
+  "recorded_at_utc": "2026-10-12T00:11:52.680012+00:00",
+  "client_date": "2026-10-11",
+  "client_timezone": "America/Sao_Paulo",
+  "baseline_commit": "abf80db16000cacbd0e92baeec9d76ac0cdfc7f1",
+  "started_checkout": "e2cbabe6e4e4246046e00716b0cac597d6b420e3",
+  "environment": {
+    "os": "Linux-6.18.44-x86_64-with-glibc2.41",
+    "python": "3.12.14",
+    "node": "v24.19.0",
+    "chromium": "Chromium 154.0.8037.57 built on Debian GNU/Linux 13 (trixie)"
+  },
+  "before_after": {
+    "before": "Standalone 0.1.3 executes herbs, bargain and declares COOPERATED: automatic passage, no river operation. Actual CLI exit 0; scene bytes equal the synchronized baseline.",
+    "after": "Adventure reuses the actual Scene transition/trace, then requires equipment, travel, rescues, crossing and cargo delivery. Both complete routes have verified CLI paths and distinct future transport."
+  },
+  "checks": [
+    {
+      "command": "python3 projects/waystone-dialogue/test_scene.py",
+      "exit_code": 0,
+      "result": "32 passed; unchanged scene, CLI and preserved source records"
+    },
+    {
+      "command": "python3 projects/waystone-dialogue/test_adventure.py",
+      "exit_code": 0,
+      "result": "20 passed; 8,922 successor states from twelve actual river-entry configurations; five ending labels"
+    },
+    {
+      "command": "python3 tools/test_validate_repo.py",
+      "exit_code": 0,
+      "result": "11 passed"
+    },
+    {
+      "command": "python3 tools/test_check_manifest.py",
+      "exit_code": 0,
+      "result": "11 passed"
+    },
+    {
+      "command": "python3 evaluations/chat-send-buffering/test_runner.py",
+      "exit_code": 0,
+      "result": "25 passed"
+    },
+    {
+      "command": "CHROMIUM_PATH=/usr/bin/chromium npm test (P11 directory)",
+      "exit_code": 0,
+      "result": "38 passed; zero failures, skips or cancellation; verified incoming P11 0.1.7"
+    },
+    {
+      "command": "CHROMIUM_PATH=/usr/bin/chromium python3 tools/check_calibration.py /workspace/work/waystone/calibration-network",
+      "exit_code": 0,
+      "result": "Controlled baseline rejected at 15/17; reference accepted at 17/17; zero skips/cancellation. No independent candidate."
+    },
+    {
+      "command": "python3 tools/validate_repo.py",
+      "exit_code": 0,
+      "result": "11 projects, 11 transfers, 0 assets, 2 sources; 161 valid local links."
+    },
+    {
+      "command": "python3 tools/check_manifest.py",
+      "exit_code": 0,
+      "result": "83 maintained lab files covered exactly once; matching SHA-256 hashes."
+    }
+  ],
+  "cli_playthroughs": [
+    {
+      "id": "permanent_road_full",
+      "actions": "rope, timber, ready, herbs, bargain, causeway, iven, roof, span, convoy",
+      "exit_code": 0,
+      "ending": "FULL_RESCUE",
+      "arrivals": 4,
+      "medicine": "delivered",
+      "iven": "rescued"
+    },
+    {
+      "id": "ferry_people_first_spoils",
+      "actions": "timber, oil, ready, leave, ferry, iven, roof, board, row, row, load, board, row",
+      "exit_code": 0,
+      "ending": "PEOPLE_SAFE",
+      "arrivals": 4,
+      "medicine": "spoiled",
+      "iven": "rescued"
+    },
+    {
+      "id": "ferry_medicine_first_full",
+      "actions": "timber, oil, ready, leave, ferry, iven, roof, load, board, row, row, board, row",
+      "exit_code": 0,
+      "ending": "FULL_RESCUE",
+      "arrivals": 4,
+      "medicine": "delivered",
+      "iven": "rescued"
+    },
+    {
+      "id": "ferry_fast_rope_oil_full",
+      "actions": "rope, oil, ready, leave, ferry, iven, roof, board, row, row, load, board, row, finish",
+      "exit_code": 0,
+      "ending": "FULL_RESCUE",
+      "arrivals": 4,
+      "medicine": "delivered",
+      "iven": "rescued"
+    },
+    {
+      "id": "temporary_full",
+      "actions": "rope, oil, ready, herbs, bargain, causeway, iven_hands, roof, lash, lead, medicine",
+      "exit_code": 0,
+      "ending": "FULL_RESCUE",
+      "arrivals": 4,
+      "medicine": "delivered",
+      "iven": "rescued"
+    },
+    {
+      "id": "road_people_iven_no_medicine",
+      "actions": "timber, oil, ready, herbs, bargain, causeway, iven, roof, span, lead",
+      "exit_code": 0,
+      "ending": "PEOPLE_SAFE",
+      "arrivals": 4,
+      "medicine": "waiting",
+      "iven": "rescued"
+    },
+    {
+      "id": "road_cargo_no_iven",
+      "actions": "timber, oil, ready, herbs, bargain, causeway, roof, span, convoy, finish",
+      "exit_code": 0,
+      "ending": "PEOPLE_SAFE",
+      "arrivals": 4,
+      "medicine": "delivered",
+      "iven": "sheltered"
+    },
+    {
+      "id": "lie_corrected_people_only",
+      "actions": "rope, timber, ready, lie, apologize, herbs, bargain, causeway, roof, span, lead",
+      "exit_code": 0,
+      "ending": "PEOPLE_SAFE",
+      "arrivals": 4,
+      "medicine": "waiting",
+      "iven": "sheltered"
+    },
+    {
+      "id": "lie_unresolved_retreat",
+      "actions": "rope, oil, ready, lie, leave, retreat",
+      "exit_code": 0,
+      "ending": "SHELTERED",
+      "arrivals": 0,
+      "medicine": "waiting",
+      "iven": "waiting"
+    },
+    {
+      "id": "boat_lost",
+      "actions": "rope, oil, ready, leave, ferry, board, row, row, load, row",
+      "exit_code": 0,
+      "ending": "BOAT_LOST",
+      "arrivals": 2,
+      "medicine": "spoiled",
+      "iven": "sheltered"
+    },
+    {
+      "id": "late_dusk",
+      "actions": "rope, oil, ready, wait, wait, wait, wait, wait, wait, wait, wait, wait, wait, wait, wait",
+      "exit_code": 0,
+      "ending": "SHELTERED",
+      "arrivals": 0,
+      "medicine": "waiting",
+      "iven": "sheltered"
+    },
+    {
+      "id": "guide_line_partial",
+      "actions": "rope, oil, ready, leave, ferry, secure, load, board, row, finish",
+      "exit_code": 0,
+      "ending": "PARTIAL_CROSSING",
+      "arrivals": 1,
+      "medicine": "delivered",
+      "iven": "sheltered"
+    }
+  ],
+  "consequence_comparison": {
+    "same_setup": "timber, oil, ready, leave, ferry, iven, roof",
+    "people_first": "board, row, row, load, board, row -> four arrivals, medicine spoiled",
+    "medicine_first": "load, board, row, row, board, row -> four arrivals, medicine delivered",
+    "cause": "The shared forecast clock places the last crossing in surge. Delivering the chest on the first slack crossing protects it; an unprotected chest aboard the last crossing is spoiled."
+  },
+  "preservation": {
+    "scene_sha256": "d68cb4f3b412711aab454629f944b09a7e142e4bec24758c925ce0b3432b1eeb",
+    "scene_equals_baseline": true,
+    "legacy_archive_sha256": "6da636a270284eac1e11d00407dab364c2d9aa8c2f0485e77509e6ccf0dbc1dc",
+    "unrelated_sources": "P02 and P11 files are unchanged relative to synchronized abf80db. Incoming author commit was preserved before development."
+  },
+  "artifact_sha256": {
+    "projects/waystone-dialogue/adventure.py": "35476d946146533d7684396af59117cada26935cb7a4d2d5ec93635f759c590d",
+    "projects/waystone-dialogue/test_adventure.py": "2a7f2b45aa2f329f4731a6c324869cc4dbdc4c7ff0494725d70fb74c1bba7a8c",
+    "projects/waystone-dialogue/provenance.json": "dc279e8fa1404f0a86c7b8f307a7a83c41e2e97ed1cbb0ead39f6b64a16c8a5b",
+    "../../.github/workflows/lab-checks.yml": "fd71e1778445bdfaba86ca95ba214a1a065befa1f530a2642cb0a15a1a05862c"
+  },
+  "implementing_agent_review": {
+    "by": "Codex, the implementing agent; scripted playthrough and editorial/gameplay review, not independent audience feedback",
+    "findings": [
+      "Choices allocate time and consumable equipment across connected goals; hand rescue preserves rope for another use.",
+      "The same cargo setup can save four people with either intact or spoiled medicine. Ferry rescue changes capacity and steering; forecasts match damage.",
+      "A full causeway outcome restores a permanent road; a full ferry outcome retains the river route. Neither result automatically replaces the other infrastructure.",
+      "Mara prioritizes concrete passengers/cargo; Iven supplies steering expertise; roof workers and the clinic appear in actual scenes. Repeated preparation exposition and a generic moral summary were removed during review.",
+      "Standalone conversation rules, trace and archived records remain preserved; adventure cooperation is a route unlock rather than an automatic crossing."
+    ]
+  },
+  "limitations": [
+    "No independent playtest, accessibility/usability or market evidence; enjoyment and pacing are hypotheses.",
+    "Graph exploration starts at twelve representative river-entry configurations; it does not exhaust all workshop histories or prove literary quality.",
+    "Deterministic terminal prototype; no graphics, generated media, save/load or engine binding. No complete commercial product or license inferred."
+  ],
+  "execution_notes": [
+    "Initial sandboxed chat/calibration attempts could not open localhost sockets (listen EPERM) and produced no product result. P11 was rerun successfully with authorized sandbox escalation.",
+    "Initial sandboxed Git fetch could not connect to the configured proxy. GitHub objects were imported with exact SHA verification and fast-forwarded; normal Git fetch/ls-remote then succeeded outside that sandbox."
+  ]
+}

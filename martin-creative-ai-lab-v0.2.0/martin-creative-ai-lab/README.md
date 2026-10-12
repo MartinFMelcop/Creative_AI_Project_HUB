@@ -4,13 +4,12 @@ An evolving laboratory of games, narrative, images, audio, data, and AI
 evaluation by **Martin Melcop Neto**. Projects are adaptable seeds: build small
 slices, verify behavior, record decisions, and test reuse in actual destinations.
 
-**Current seed: v0.4.6.** The lab includes eleven project lines, 178 preserved
+**Current seed: v0.5.0.** The lab includes eleven project lines, 178 preserved
 historical texts, a working local text-chat adaptation, a calibrated
-practice-task harness, and a playable terminal dialogue scene. No game migration,
+practice-task harness, and a complete terminal rescue adventure. No game migration,
 model benchmark, finished music catalogue, or public deployment is claimed.
 The containing directory keeps its original v0.2.0 package name. Latest verified
-project versions are in the state and registry; SEED's current-state summary
-precedes the latest verified increments and remains unchanged.
+project versions and execution boundaries are in the state and registry.
 
 ## Start here
 
@@ -19,8 +18,9 @@ precedes the latest verified increments and remains unchanged.
 - [P11 — Live exchange](projects/realtime-integration-lab/README.md): install, run, test, provenance, and contribution.
 - [P02 — EVAL-001](evaluations/chat-send-buffering/README.md): export a starter, check a client, and inspect limits.
 - [Current dependency-gate evidence](evidence/evaluation-task/DEPENDENCY_RUN.json): installed direct version checks, controlled mismatch and unchanged calibration.
-- [P10 — The Last Waystone](projects/waystone-dialogue/README.md): play a stateful dialogue scene, restart, inspect traces and verify its origin.
-- [Current dialogue evidence](evidence/waystone-dialogue/DUSK_RUN.json): 32 checks, deadline-aware closing responses, seven CLI comparisons and unchanged rules across all reachable states.
+- [P10 — Flood Crossing](projects/waystone-dialogue/README.md): play a complete rescue adventure with two routes, equipment, current and consequential cargo choices.
+- [Rescue milestone evidence](evidence/waystone-dialogue/ADVENTURE_RUN.json): actual route playthroughs, cargo-order comparison, connected checks and same-agent review.
+- [Prior dialogue evidence](evidence/waystone-dialogue/DUSK_RUN.json): 32 checks, deadline-aware closing responses, seven CLI comparisons and unchanged rules across all reachable states.
 - [Previous dialogue evidence](evidence/waystone-dialogue/DIALOGUE_RUN.json): 29 checks, contextual responses and unchanged rules across all reachable states.
 - [Current chat evidence](evidence/realtime-chat/DRAFT_RECOVERY_RUN.json): edited-draft timeout recovery, both controlled delivery outcomes, literal wrapping and all 38 chat checks.
 - [Prior text-reflow evidence](evidence/realtime-chat/TEXT_REFLOW_RUN.json): fixed-panel user styles, reading anchors and pinned evaluator compatibility.
@@ -49,6 +49,7 @@ python3 tools/validate_repo.py
 python3 tools/test_validate_repo.py
 python3 tools/test_check_manifest.py
 python3 projects/waystone-dialogue/test_scene.py
+python3 projects/waystone-dialogue/test_adventure.py
 python3 evaluations/chat-send-buffering/test_runner.py
 python3 tools/check_manifest.py
 ```
@@ -96,7 +97,7 @@ GitHub job logs establish remote runner results.
 
 The original delivery test failed on the preserved source and passed on 0.1.0.
 Two further send-path regressions fail on that committed client and pass on 0.1.1.
-Thirty-six current automated tests verify the local contract, including connected
+Thirty-eight current automated tests verify the local contract, including connected
 polling congestion, stale-state reconnect buffering, preserved reading position,
 activity-aware unread counts, viewport resizing and fixed-panel text reflow. New
 documentation, UI, code comments, and evidence are in English; historical texts

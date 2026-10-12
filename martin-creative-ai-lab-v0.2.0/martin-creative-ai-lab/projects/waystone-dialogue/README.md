@@ -1,128 +1,117 @@
-# P10 — The Last Waystone
+# P10 — The Last Waystone: Flood Crossing
 
-Version **0.1.3**. A short, playable terminal scene about persuading a distracted
-Keeper to repair a crossing before dusk. Helping, lying, waiting and apologizing
-change later responses. Four endings close the scene; restart clears the session.
-This is P10's first working destination, adapted from the recovered NPC dialogue
-material. The original creative title and archive remain historical provenance.
+Adventure **0.2.0** turns the existing Keeper conversation into a complete
+terminal rescue operation. Choose equipment, negotiate or leave for the ferry,
+reach the mill, rescue its workers, move people and medicine across the river,
+and see what remains for the village tomorrow. The standalone scene **0.1.3**
+is preserved and reused directly; the historical RPG sources remain immutable.
 
-## Play and verify
+## Play
 
 Python **3.10+**, standard library only. From the lab directory:
 
 ```bash
-python3 projects/waystone-dialogue/scene.py
-python3 projects/waystone-dialogue/scene.py --trace
-python3 projects/waystone-dialogue/test_scene.py
+python3 projects/waystone-dialogue/adventure.py
+python3 projects/waystone-dialogue/adventure.py --trace
 ```
 
-Choose a displayed number or action name. Numbers follow the current menu as
-choices become unavailable. `status` shows state, `restart` starts over, and
-`quit`, EOF or Ctrl-C closes the process. Nothing is saved to disk. The optional
-trace prints the selected variant and its origin, eligible variants and before/after
-state as one JSON record per accepted turn. Its `speaker` distinguishes Keeper
-speech from wait narration. Variant origin identifies the rule record; all
-displayed wording is this scene's English adaptation. Diagnostics and rejected input
-consume no turns. `scene.py` can run alone from any working directory; the source
-audit in the test suite needs this lab's registry and preserved ZIP.
+Choose a displayed number or action name. `look` repeats the situation, `status`
+shows the full session state, `restart` starts over, and `quit`, EOF or Ctrl-C
+closes the process. Invalid input and diagnostics cost no time. Nothing is saved.
+Run from any working directory; keep `adventure.py` beside `scene.py`.
 
-Try `herbs`, `bargain` for cooperation; `leave` for another route; four `lie`
-choices followed by `leave` for dismissal; or twelve `wait` choices for dusk.
-After an ending, choose `restart` or `quit`. These are deterministic example
-paths, not evidence of narrative balance or a human playtest.
+The game announces deadlines, consumptions, capacity and current before actions.
+There are **nine flood-window beats**, including workshop choices and travel.
+The workshop retains its separate twelve-turn dusk limit: continuing the talk
+past the flood window cannot reopen tonight's crossing. Preparation, boarding,
+unloading and ending the operation cost no beats. Rescue completed on its exact
+deadline succeeds; otherwise Iven seeks the north shoal at beat five and the roof
+workers leave for the north loft at beat six. They are stranded, not declared dead.
 
-After `lie`, `herbs`, `bargain`, the Keeper now asks you to correct the false
-order. Choose `apologize`, then `bargain` to finish. Lying and apologizing repeatedly
-cannot improve trust above the level before the unresolved fault began.
+Pack two of **rope**, **timber**, **oil**. Items have competing uses; a listed
+hand rescue lets you preserve rope at the cost of time. Agreement supplies the
+Waystone light and opens the causeway. Ferry departure needs no agreement.
+Workshop delays and lie/apology history persist into the operation and epilogue.
 
-The loose rune and the herbs covering the repair bench now appear in the opening.
-Help clears space without promising a repair; a later request acknowledges that
-work. Agreement answers the village's crossing request. Repeated false orders,
-a withdrawn order used again, and an apology after outburst receive distinct
-responses based on existing memory. Five cooldown waits show physical recovery
-and print as narration. These changes add no choices or numerical effects.
+| Route | Decisions and consequences |
+|---|---|
+| Causeway | Replace boards for a permanent road, lash a temporary crossing, or mark a wet footpath. Rescue order competes with construction. Move people and cargo together or separately; medicine cannot follow the wet footpath. |
+| Ferry | Choose cargo order, rescue Iven for three slots and one-beat trips, or row alone with two slots and two-beat trips. Slack/pull/surge repeats on the shared clock. Pull costs one hull; surge costs two and spoils aboard medicine. A rope guide line prevents both; timber adds buoyancy but does not waterproof cargo. Holding safely advances the current. |
 
-Final-turn requests now acknowledge the existing dusk deadline. The Keeper does
-not ask for more work or another argument after the conversation has closed.
-Cooldown completion still shows steady breathing, but announces readiness to
-listen only while another turn is available. Last-turn agreement and departure
-retain their responses and precedence; no timing or balance rule changes.
+Four residents, the clinic chest, Iven and next day's transport have separate
+outcomes. Five ending labels summarize these facts; the epilogue distinguishes
+intact medicine, spoiled cargo, stranded people, a permanent road and a retained
+ferry. An early end preserves actual arrivals. Boat failure adds no arrivals and
+closes the operation with an explicit emergency escape.
 
-## Behavior and acceptance
+## Reproducible examples (spoilers)
 
-The initial Keeper state is stress 20, trust 45, respect 55 and mood NEUTRAL.
-Stress, trust and respect clamp to 0–100. Responses use closed action/state
-predicates and priority, with variant ID as a deterministic tie break; the nine
-selected legacy BaseScore values are zero. There is no expression evaluation.
+Enter one action per line. The different outcomes are implemented behavior,
+not a claim that players find the balance compelling.
 
-- Sorting herbs reduces stress by 6 and supplies the one-time prerequisite.
-  Agreement also needs trust at least 40 and no unresolved lie. A new scene
-  response prioritizes correction of a false order; bargaining without help
-  otherwise asks for it. Refusal is an accepted turn and can reach dusk.
-- False orders increase stress by 22 while pre-turn stress is below 80. The next
-  false order at stress 80 or above triggers an outburst, reduces stress by 5,
-  trust by 12 and respect by 6, and records the lie/outburst in session memory.
-- An unresolved lie permits one apology outside an outburst: stress -12, trust
-  recovery up to +6, capped at trust before that fault began. Later lies during
-  the same unresolved episode keep that original ceiling, including after an
-  outburst. Apology clears the obligation/ceiling and preserves historical lie
-  memory. A new fault remembers the current trust level, preventing farming.
-- Outburst starts a five-turn cooldown. Only waiting or leaving is then offered.
-  Five subsequent accepted waits restore WARY; entry and invalid input do not
-  decrement the counter. Departure during outburst selects the avoidant response.
-- Cooperation, departure and dismissal are terminal. Otherwise the twelfth
-  accepted action ends at dusk. A successful agreement or departure on that last
-  turn takes precedence over dusk. Restart restores all initial state and trace.
+- Permanent road, four residents, Iven and intact medicine:
+  `rope, timber, ready, herbs, bargain, causeway, iven, roof, span, convoy`.
+- Ferry with timber/oil: `timber, oil, ready, leave, ferry, iven, roof`.
+  Continue with `load, board, row, row, board, row` to deliver medicine first
+  and save everyone. `board, row, row, load, board, row` saves the same people
+  but exposes the chest to the final surge and spoils it.
+- A temporary road that saves everyone: `rope, oil, ready, herbs, bargain,
+  causeway, iven_hands, roof, lash, lead, medicine`. Keeping the rope matters;
+  tomorrow's crossing still needs proper boards.
 
-The 32 checks cover these gates, boundary values, clamping, terminal behavior,
-isolated sessions, replay, invalid input, real subprocess CLI flows and source
-identity, plus contextual responses and speaker attribution.
-[Current dusk evidence](../../evidence/waystone-dialogue/DUSK_RUN.json) records
-three new methods failing on committed 0.1.2, all 32 checks passing, seven actual
-before/after CLI paths and unchanged rules/menus across all 6,131 reachable states
-and 17,994 transitions. Only terminal-dusk wording changes; four endings remain
-reachable. The editorial comparison is by the implementing agent, not a reader.
-[Previous dialogue evidence](../../evidence/waystone-dialogue/DIALOGUE_RUN.json)
-records six new methods failing on committed 0.1.1, all 29 checks passing on 0.1.2,
-five before/after CLI comparisons, and identical rules across all 6,131 reachable
-states and 17,994 transitions from the default initial state. Four endings remain
-reachable. This comparison excludes wording and the new trace speaker field.
-[Previous trust evidence](../../evidence/waystone-dialogue/TRUST_RUN.json)
-records four new regression methods failing on committed 0.1.0 (five failures,
-including two trust subtests), all 23 checks passing on 0.1.1, and actual old/new
-CLI decisions. [Initial execution](../../evidence/waystone-dialogue/RUN.json)
-remains historical. Technical M4 is
-limited to this CLI contract; narrative quality and human usability await review.
+## Verification and scope
 
-## Origin and accepted changes
+```bash
+python3 projects/waystone-dialogue/test_scene.py
+python3 projects/waystone-dialogue/test_adventure.py
+```
 
-[Provenance](provenance.json) identifies LEGACY-001 commit
-`36af1651271422ae33856e8b5d7b45702215f165`, the unchanged archive and five source
-file hashes: dialogue variants, initial state, relations, profile and personality
-specification. Tests compare all nine retained priorities, numeric effects,
-moods, flags and events with the preserved NPC-0007 rows, and check baseline
-state/relations and the five-turn cooldown. QA-only rows are excluded. The new
-`SCENE_BARGAIN_UNRESOLVED_LIE` response has a scene origin in traces and is separate
-from those nine preserved records. The retained apology delta +6 is a maximum
-recovery; the new episode ceiling limits its effective result.
+The unchanged scene's 32 checks cover trust, one-time help, capped apology
+recovery, outburst/cooldown, four dialogue endings, CLI and archived source
+identity. The adventure's 20 checks cover integrated routes, cargo-order
+consequences, deadlines, shared clock/current, resource tradeoffs, capacity,
+boat loss, atomic invalid input, isolated sessions, restart and actual CLI
+execution outside the project directory. A graph check explores successors of
+twelve real river-entry configurations, including free loading/unloading loops;
+it is not exhaustive coverage of every possible workshop history.
 
-Codex wrote this English framing, responses, CLI and tests under Martin's
-direction. Original tags become action-specific gates. The herbs prerequisite,
-four endings, turn budget, one-apology-per-fault rule, capped trust recovery,
-unresolved-lie agreement gate and cooldown expiry to WARY
-are new scene rules. The stress-80 trigger follows the selected catalog; the
-profile's separate threshold of 88 is deliberately unused. This is an adaptation
-with recorded differences, rather than equivalent execution of the legacy RPG.
-The 0.1.2 wording, including the Keeper's attendance at a council meeting, is new
-scene fiction; it is not recovered canon. A pure renderer reads existing pre-turn
-state, historical lie flags and outburst events without changing the selected
-legacy effects. Traits and respect do not constitute a full personality system.
-Version 0.1.3 also reads the existing turn clock to close final requests; the
-deadline, scene facts and selected source records remain unchanged.
+[Milestone evidence](../../evidence/waystone-dialogue/ADVENTURE_RUN.json)
+records twelve CLI playthroughs, before/after behavior, source hashes, executed
+checks and a same-agent editorial/gameplay assessment. Automated contracts do
+not establish enjoyment, accessibility, literary quality or commercial demand.
+This is a complete **prototype operation**, not a finished commercial game.
+There is no graphical interface, save/load, generated art/audio, combat or engine
+binding. External evaluation and chat versions are unchanged by this milestone.
 
-No fear/debt simulation, weighted trait or faction scoring, TTL memory, persistence,
-assets, combat, multiplayer, Unity/RGSS binding or full game is delivered. The
-historical scenario runner was inspected, not copied or rerun. No cross-project
-transfer or shared library is promoted. Next: have a reader compare cooperative and
-conflict paths, review clarity, repetition and the five-wait pacing, then revise only what that feedback
-supports. P02 independent-candidate and P11 human-review gates remain separate.
+## Origin and continuity
+
+[Provenance](provenance.json) traces NPC-0007's nine selected rule records and
+five source files to LEGACY-001 commit
+`36af1651271422ae33856e8b5d7b45702215f165`. Tests compare priorities, numerical
+effects, moods, flags/events, initial relations and cooldown with the preserved
+archive. The source archive is a selected text extract, not a complete RPG backup.
+The existing scene uses closed predicates, a help prerequisite, unresolved-lie
+gate and apology ceiling; it is an adaptation, not equivalent RGSS execution.
+
+All Flood Crossing characters, English scenes, flood rules, equipment, river
+routes and epilogues are new Codex-authored adaptation under Martin's direction.
+No historical canon, art ownership or commercial license is inferred. The
+adventure calls `Scene.act` and retains its trace rather than implementing a
+second personality model. In adventure mode its cooperative ending grants the
+rune, not an automatic crossing; the original `scene.py` ending remains unchanged.
+
+The standalone conversation is still playable:
+
+```bash
+python3 projects/waystone-dialogue/scene.py
+python3 projects/waystone-dialogue/scene.py --trace
+```
+
+[Prior dusk evidence](../../evidence/waystone-dialogue/DUSK_RUN.json),
+[dialogue continuity](../../evidence/waystone-dialogue/DIALOGUE_RUN.json),
+[trust correction](../../evidence/waystone-dialogue/TRUST_RUN.json) and
+[initial scene](../../evidence/waystone-dialogue/RUN.json) remain historical.
+Next: observe readers playing both routes without the example sequences; revise
+forecast comprehension, rescue priorities and pacing from that feedback before
+adapting this complete operation to a browser demo. No independent playtest has
+been performed. A paid narrative game is a possibility, not validated demand.

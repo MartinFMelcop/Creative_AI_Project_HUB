@@ -1,16 +1,20 @@
-# Current increment — P11 edited-draft timeout recovery
+# Current milestone — Flood Crossing
 
-Correct the reproduced loss of an earlier attempt after new typing and ack
-expiry. Reuse captured send text and existing feedback; preserve current input,
-show the earlier attempt literally, and wrap it at narrow width. Keep explicit
-uncertainty and no automatic retry. Feedback clears on another submission/reload.
+Complete one P10 adventure: equipment preparation, existing Keeper negotiation,
+river approach, causeway/ferry rescue and an outcome-specific shelter scene.
+Connect trust history, conversation time, scarce supplies, rescue deadlines,
+ferry capacity/current and next-day transport. Preserve `scene.py` 0.1.3 and its
+standalone endings, selected legacy records, archive and unrelated projects.
 
-Acceptance is met: two real-browser regressions fail on 0.1.6 and pass on 0.1.7;
-all 38 chat checks pass. Controlled dropped/broadcast outcomes retain both texts
-and one attempt without inventing delivery certainty. P02's working-client check
-passes 17/17 and all 25 runner tests pass; task/export/dependency sources stay
-unchanged. Next: human manual-recovery and keyboard/readability review. Independent
-candidate provenance and P10 reader pacing remain separate gates.
+Acceptance: both routes complete actual operations; decisions change who reaches
+the road, medicine condition and future transport; deadlines/costs are visible;
+invalid input is atomic; traces retain workshop provenance; replay/restart work.
+Verify actual CLI routes, cargo-order comparison, boundary conditions, session
+invariants and the existing lab/browser/evaluator checks. Update concise state,
+registry, durable decision and seed direction, integrate the new suite into CI,
+then commit and publish normally to main. [Evidence](../evidence/waystone-dialogue/ADVENTURE_RUN.json)
+records execution and limits. Next: observe unprompted play of both routes, then
+adapt the complete operation to a browser demo if comprehension/pacing hold up.
 
 # Previous increment — P11 text reflow
 

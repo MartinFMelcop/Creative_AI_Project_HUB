@@ -1,10 +1,10 @@
 # SEED — Martin Creative AI Lab
 
-**Version:** 0.4.6
+**Version:** 0.5.0
 **Data-base:** 10 de outubro de 2026  
 **Autor e responsável pelo portfólio:** Martin Melcop Neto  
 **Working language:** English for new documentation, plans, code comments, UI, and reports. Preserve original creative titles and historical source languages.
-**Current state:** P10 dialogue 0.1.2 improves response continuity using existing help, lie and outburst memory; cooldown narration has its own speaker. Twenty-nine checks and exhaustive reachable-state comparison preserve the prior rules and four endings. P11 chat 0.1.5, P02 runner 0.2.0, starter contract 0.1.0, shared integrity gates and bounded maturity stay unchanged. Historical sources remain preserved; independent human review, model evidence and engine migration remain unperformed.
+**Current state:** P10 now has Flood Crossing, a complete terminal rescue adventure joining preparation, Keeper negotiation, two river routes and consequence-specific endings. The original dialogue remains a standalone adaptation. See `docs/STATE.md` and the registry for current versions and executed evidence; human playtesting and commercial demand remain unverified.
 
 > Construir um laboratório autoral em Git que transforma ideias, obras e experimentos em produtos pequenos, sistemas reutilizáveis e evidências técnicas verificáveis. A IA participa da criação e execução; Martin desenvolve sua capacidade de especificar, compreender, selecionar, corrigir, validar e explicar os resultados.
 
@@ -46,14 +46,14 @@ Se apenas este arquivo estiver disponível, ele é suficiente para iniciar a Fas
 |---|---|
 | Repository | MartinFMelcop/Creative_AI_Project_HUB; actual Git root `/workspace/Creative_AI_Project_HUB`; lab remains nested in its original package directory |
 | Preserved sources | 175 Rave Master texts and 3 WebSocket files; unchanged ZIP and inventory; not a complete RMXP backup |
-| Primary workstream | P10 dialogue 0.1.2: coherent responses and observable memory, with prior rules and bounded M4 unchanged |
+| Primary workstream | P10 Flood Crossing 0.2.0: an integrated rescue operation; standalone dialogue 0.1.3 remains preserved |
 | Engine execution | P10 uses Python standard library; P11 uses Node/Express/Socket.IO. No Unity or RMXP runtime verified |
-| Current verification | 29 scene checks, six baseline-failing response methods, five CLI comparisons and identical rules across 6,131 reachable states / 17,994 transitions. `evidence/waystone-dialogue/DIALOGUE_RUN.json` records commands and boundaries |
+| Current verification | Scene and adventure tests, actual route playthroughs and cargo-order comparison are recorded in `evidence/waystone-dialogue/ADVENTURE_RUN.json`; technical checks do not establish enjoyment |
 | Historical verification | v0.2.0 combat/dialogue, P10 trust, P11 unread and P02 snapshot records remain preserved; the old scenario runner was not rerun |
-| Next action | Reader comparison of P10 clarity, repetition and five-wait pacing; P11 human review and independent EVAL-001 provenance remain separate gates |
-| Other seeds | P11 chat 0.1.5, P02 runner 0.2.0 and EVAL-001 starter 0.1.0 remain unchanged; missing creative/media baselines still need targeted recovery |
+| Next action | Unprompted reader play of both rescue routes, then a browser adaptation if feedback supports it; P11 human review and independent EVAL-001 provenance remain separate |
+| Other seeds | P11 chat 0.1.7, P02 runner 0.2.1 and EVAL-001 starter 0.1.0 are preserved; unavailable creative/media baselines still need targeted recovery |
 | Transfer / shared status | TR-009 validated for P02 task adaptation/calibration only; 10 other transfers remain candidates; no shared component |
-| Portfolio / attribution | Baseline `72b9383` matches remote main through GitHub inspection; publication uses the connected integration because Git transport is unavailable. Martin supplied direction; Codex implemented/tested. Independent reader and candidate reviews remain pending |
+| Portfolio / attribution | Started at `e2cbabe`, synchronized remote `abf80db` before development and confirmed through normal Git fetch. Martin supplied direction; Codex implemented and reviewed. Publication must be verified on the remote reference |
 
 Registry evidence paths must resolve to existing files inside the lab; working
 paths must be directories and legacy-source IDs must exist. This documentary
@@ -544,10 +544,11 @@ Antes do score, verificar bloqueios: fontes inacessíveis; execução impossíve
 
 **Historical order:** v0.1.0 recommended P01 discovery; v0.2.0 recovered concrete P10/P11 sources. Under the current request to select and implement an increment, Codex prioritized P11 because its defect and full local interaction can be verified here. ADR-008 records the choice; the assessment and plan preserve alternatives without activating them. This is not a claim that Martin individually selected or tested P11.
 
-**Current work order:** the completed P02 snapshot increment is followed by one
-P10 creative dialogue destination. Next, review its cooperative/conflict paths
-with a reader. The independent EVAL-001 artifact and Martin's P11 review remain
-separate gates. No engine or media recovery is a prerequisite for this CLI scene.
+**Current work order:** P10 has a complete rescue operation connecting the prior
+Keeper dialogue to resource choices, river navigation and concrete consequences.
+Evaluate the experience with readers, then adapt this coherent operation for a
+browser portfolio demo. Independent EVAL-001 and P11 human review remain separate;
+additional QA infrastructure is not the default development objective.
 
 **P01 economia e P03 vertical slice na sequência**, conforme interesses profissionais e disponibilidade. P04/P07/P08 podem fornecer conteúdo às fatias escolhidas. P05/P06 começam como fontes de extração, e não dois grandes RPGs simultâneos.
 
@@ -1546,3 +1547,15 @@ origin and limits. Seed 0.4.6 records the durable working destination/primary
 workstream change; project version 0.1.0 and bounded technical M4 are separate.
 P02/P11 and historical source bytes remain unchanged. Human creative quality
 and broader game/engine claims require their own evidence.
+
+
+### Complete rescue destination — v0.5.0
+
+[The Last Waystone: Flood Crossing](projects/waystone-dialogue/README.md)
+advances P10 from an isolated conversation to a complete prototype operation.
+It reuses the original scene and adds equipment, two routes, time-sensitive
+rescue, ferry cargo/current and outcome-specific shelter scenes. Choices now
+change the delivered people/cargo and tomorrow's transport. Original sources and
+standalone behavior remain preserved. [Milestone evidence](evidence/waystone-dialogue/ADVENTURE_RUN.json)
+distinguishes executed technical checks, implementing-agent review and pending
+reader/commercial validation. No media asset, full RPG migration or model score.

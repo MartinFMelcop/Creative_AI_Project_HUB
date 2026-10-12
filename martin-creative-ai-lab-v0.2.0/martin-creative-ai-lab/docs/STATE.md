@@ -1,41 +1,47 @@
 # Lab state
 
 **Updated:** 2026-10-11 (client date, America/Sao_Paulo).
-**Seed version:** 0.4.6, unchanged. **Current increment:** P11 chat 0.1.7.
+**Seed:** 0.5.0. **Current milestone:** P10 Flood Crossing 0.2.0.
 
-The checkout began clean on `work` at `e2cbabe6e4e4246046e00716b0cac597d6b420e3`,
-matching remote main verified through GitHub. Git fetch could not reach the
-configured proxy; authorized publication uses the connected integration with a
-non-force update and remote verification. This record precedes publication.
+[The adventure](../projects/waystone-dialogue/README.md) now connects equipment,
+Keeper negotiation, two river routes, deadline rescues, cargo/current and village
+consequences. Cooperation unlocks the causeway; ferry departure is independently
+viable. A shared flood clock makes workshop delay matter. Hand rescue can save
+rope for the crossing. Cargo order determines whether medicine survives the
+forecast surge even when the same four residents arrive. Road/boat condition,
+Iven, residents and medicine contribute separate epilogue facts.
 
-[P11](../projects/realtime-integration-lab/README.md) retains the exact earlier
-attempt in existing feedback when acknowledgement times out after the input has
-changed. Current typing stays untouched. Feedback distinguishes the texts,
-renders markup literally and wraps long words at narrow width. An unchanged
-input keeps the original feedback. No new control, history store or retry is added.
-The recovery text clears on another submission or reload; it is not saved history
-or a delivery receipt. Users must check the conversation before resending.
+[Milestone evidence](../evidence/waystone-dialogue/ADVENTURE_RUN.json) records
+twelve actual CLI paths, before/after behavior, source hashes and implementing-agent
+review. All 20 adventure and 32 unchanged scene/source checks pass. The successor
+check covers 8,922 states from twelve river-entry configurations, including free
+loading/unloading loops; it does not exhaust all workshop histories. CLI numbers,
+invalid input, diagnostics, EOF, restart and execution outside the project
+folder are covered. The original `scene.py` 0.1.3, archive and selected source
+records are byte-preserved. The adventure suite is added to existing CI.
 
-[Recovery evidence](../evidence/realtime-chat/DRAFT_RECOVERY_RUN.json) records
-real Chromium/Socket.IO probes with controlled dropped/broadcast message outcomes.
-Two new regressions fail on 0.1.6 and pass on 0.1.7. All 38 chat checks pass
-(6 protocol, 32 browser), including existing send, reading, activity and reflow
-behavior. Narrow-screen output was inspected; this is agent QA, not human or
-assistive-technology validation. No production outage or exactly-once claim.
+The same-agent gameplay/editorial review supports greater agency and causal
+continuity through concrete cargo/rescue comparisons. It is not independent
+playtesting. Deterministic terminal prototype only: no graphics, generated media,
+save/load, game engine, accessibility validation or market evidence. Bounded M4
+is retained for the demonstrated operation, not promoted to a commercial game.
 
-P02 runner 0.2.1 and its pinned task are unchanged. All 25 runner tests pass and
-a controlled working-client check passes 17/17. Dependency graph, nine starter
-files and evaluator sources are unchanged; no independent candidate is claimed.
-Both 11-test integrity suites and syntax checks pass. Final link/archive and
-manifest results are recorded in the execution evidence.
+P11 0.1.7 and P02 0.2.1 are preserved. Their 38 chat and 25 runner checks pass;
+controlled calibration retains baseline 15/17 rejection and reference 17/17
+acceptance. Eleven validator and eleven manifest regressions pass. Documentary
+validation covers current registries, links and legacy archive; the refreshed
+manifest records maintained files. Those checks establish their contracts, not
+reader preference or independent model performance.
 
-P10 dialogue 0.1.3 is unchanged; its runtime suite was not rerun locally. Human
-creative quality, copy/recovery usability, other browsers and commercial demand
-remain unverified. Bounded M4, source archive, transfers and asset inventory stay
-unchanged. SEED.md retains its prior summary after the previously blocked upload
-of existing personal/professional material; state and registry give current
-continuity. No seed direction or architecture change is needed.
+The checkout began clean at `e2cbabe`; newer remote `abf80db` was imported with
+exact object SHA verification and fast-forwarded before development. Normal Git
+fetch and ls-remote subsequently confirmed that head with network sockets enabled.
+Initial sandboxed Git/browser attempts were blocked; successful reruns are recorded.
+This state is included in the implementation commit. Authorized publication targets
+`main` using normal fetch/merge/push and remote SHA/message verification; the final
+session report identifies the actual published commit. No history rewrite.
 
-Next: a human reviews edited-draft uncertainty, checks conversation delivery and
-copies the earlier text manually, including long feedback and keyboard/enlarged
-text. P10 reader feedback and independent EVAL-001 provenance remain separate gates.
+Next: observe readers playing both routes without supplied solutions, revise
+forecast comprehension and priorities from their actions, then adapt the complete
+operation into an accessible browser demonstration. Independent EVAL-001 provenance
+and P11 human reading/manual-recovery review remain separate pending work.

@@ -169,9 +169,9 @@
       "slug": "rave-master",
       "status": "active",
       "maturity": "M4",
-      "phase": "dialogue-cli-validated",
+      "phase": "rescue-adventure-validated",
       "origin": "github_snapshot_inspected",
-      "next_action": "Reader comparison of cooperative/conflict paths, including final-turn closure, clarity and five-wait pacing, before changing balance or expanding content.",
+      "next_action": "Observe readers playing both rescue routes without supplied paths; revise forecast comprehension and pacing, then adapt the complete operation to a browser demo.",
       "related_projects": [
         "P01",
         "P02",
@@ -190,12 +190,13 @@
         "evidence/waystone-dialogue/RUN.json",
         "evidence/waystone-dialogue/TRUST_RUN.json",
         "evidence/waystone-dialogue/DIALOGUE_RUN.json",
-        "evidence/waystone-dialogue/DUSK_RUN.json"
+        "evidence/waystone-dialogue/DUSK_RUN.json",
+        "evidence/waystone-dialogue/ADVENTURE_RUN.json"
       ],
       "source_id": "LEGACY-001",
       "working_path": "projects/waystone-dialogue",
-      "working_version": "0.1.3",
-      "maturity_scope": "Waystone CLI 0.1.3 only: 32 behavior/CLI/source checks, three baseline-failing dusk methods and seven actual before/after CLI paths. Final requests close at dusk; recovery announces readiness only while the scene is open. All 6,131 default-reachable states and 17,994 transitions preserve rules, menus, source records and four endings; only terminal-dusk text changes. No independent human narrative/balance review, full personality model, assets or engine integration."
+      "working_version": "0.2.0",
+      "maturity_scope": "Flood Crossing 0.2.0 terminal prototype only: 20 integrated adventure checks, 32 unchanged scene/source checks, twelve actual CLI paths, cargo-order consequence comparison and successor exploration from twelve river-entry configurations. Equipment, conversation history/time, two routes, deadline rescues, cargo/current/hull and five adaptive endings are connected. No independent playtest, graphical/media production, save/load, engine integration or market validation."
     },
     {
       "id": "P11",

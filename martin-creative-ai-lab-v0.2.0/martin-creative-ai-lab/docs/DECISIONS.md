@@ -503,3 +503,30 @@ feedback message persists until another submission or reload; no retry, history
 store, clipboard permission or recovery control is added. Thirty-eight chat
 checks pass, with unchanged dependency graph and pinned task. Human readability,
 manual recovery and assistive-technology review remain unverified.
+
+
+## ADR-028 — complete the crossing instead of extending maintenance loops
+
+**Date:** 2026-10-11 (America/Sao_Paulo). **Status:** P10 adventure 0.2.0.
+**Authority:** Martin explicitly requests meaningful portfolio implementation and
+normal publication to main; selection, implementation and review by Codex.
+
+Recent work repeatedly polished P11/P02 and P10's single conversation. Choose a
+complete rescue operation because P10 has executable source and a specific missing
+experience: passage is granted in text without player-controlled travel or results.
+Other creative masters are unavailable; candidate evaluation needs independent
+context; a service chat product would introduce unrelated operational dependencies.
+
+Keep `Scene` unchanged as the workshop. An adjacent standard-library adventure
+owns the shared flood clock, two-item kit, river routes, residents/cargo, forecast
+current and adaptive endings. Cooperative dialogue grants a rune rather than
+automatic passage in this mode. Early ferry departure is also viable. Nine flood
+beats and the original twelve dialogue turns are separate limits. Rescues completed
+on their deadline win before abandonment; invalid/diagnostic input spends neither.
+No universal shared framework, engine, media generation or new documentation system.
+
+The implemented cargo-order comparison preserves four arrivals while changing
+medicine condition. Hand rescue can preserve rope for a temporary crossing.
+These demonstrate consequence, not human enjoyment. Revisit balance/pacing after
+unprompted reader sessions; preserve sources and publish the honest prototype
+rather than claiming a commercial game or imposing further maintenance gates.
