@@ -1,4 +1,33 @@
-# Current assessment — a playable economy workbench
+# Current assessment — native identity and feedback
+
+Updated: 2026-10-12 (UTC). Clean `8864e4d` matched main after fetch/merge. Read
+instructions, registry/state/seed/decisions/evolution and actual P06/P03 sources;
+inventoried archive families. Recent work spans P03/P10/P06/P11/P01. Reassess the
+portfolio rather than mechanically continuing the most recent C# workbench.
+
+| Opportunity | Evidence and choice |
+|---|---|
+| P06 with P07/P08 | Complete native combat exists but is silent and uses provisional shapes. Produce/integrate actual media and readable state feedback; selected. |
+| P03 second musical identity | Real first stage exists. Distinct arrangement/content is valuable; physical listening/timing remains unverified. |
+| P01 graphical board | New terminal game already works. A native board may improve discovery; human strategy evidence is still absent. |
+| P11 access/backup | Complete trusted workspace exists; needs real collaborator/retention requirements before public operation. |
+| P04/P02 | No full manuscript in available archive or independent candidate context. Do not fabricate recovery/review/performance. |
+
+Godot/GDScript fits the existing native physics/Canvas scene and AudioServer.
+Unity editor/starter absent; .NET SDK available, but a C# rewrite or browser would
+add integration cost without delivering this media milestone. Use image_gen for
+actual original PNGs and Python/NumPy/ffmpeg for original deterministic sounds.
+
+Before: geometry-only silent trial. After: bronze/violet Warden, masked teal courier,
+quiet paving, semantic attack sounds and aligned quiet/fracture music. Existing
+warnings and precise state labels remain independent of audio. Review corrected
+cropped generated prongs, waveform cutoffs and HUD clipping at physical walls.
+Actual mixer/pack checks and unchanged scripted fight establish integration,
+not human enjoyment, artistic excellence or commercial interest. Static poses,
+alpha fringes and physical output/listening remain production limitations.
+[Execution](../evidence/veil-arena/PRESENTATION_RUN.json) records evidence.
+
+# Previous assessment — a playable economy workbench
 
 Updated: 2026-10-12 (UTC). Clean `7f36267` matched main after fetch/merge. Read
 instructions, records, relevant seed/decisions and seed evolution; inspected actual

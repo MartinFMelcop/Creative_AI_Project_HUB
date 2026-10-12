@@ -9,6 +9,11 @@ const TEAL := Color("70dacd")
 const RED := Color("ed7f92")
 const INK := Color("0d1426")
 const WHITE := Color("e5e9ef")
+const COURTYARD = preload("res://media/art/courtyard.png")
+const RUNNER = preload("res://media/art/veil-runner.png")
+const WARDEN = preload("res://media/art/bell-warden.png")
+const SoundDirector = preload("res://sound.gd")
+var sound: Node
 var player: CharacterBody2D
 var boss: CharacterBody2D
 var font: Font
@@ -50,18 +55,21 @@ var paused_from := "fight"
 var start_button: Button
 var help_button: Button
 var help_panel: PanelContainer
+var audio_button: Button
 
 func _ready() -> void:
 	font = ThemeDB.fallback_font
 	_setup_input()
 	_build_world()
 	_build_ui()
+	sound = SoundDirector.new()
+	add_child(sound)
 	reset_encounter()
 	mode = "title"
 	_sync_ui()
 
 func _setup_input() -> void:
-	var keys := {"left":[KEY_A,KEY_LEFT],"right":[KEY_D,KEY_RIGHT],"up":[KEY_W,KEY_UP],"down":[KEY_S,KEY_DOWN],"strike":[KEY_J],"seal":[KEY_K],"dash":[KEY_SPACE],"begin":[KEY_ENTER],"pause":[KEY_ESCAPE],"help":[KEY_F1]}
+	var keys := {"left":[KEY_A,KEY_LEFT],"right":[KEY_D,KEY_RIGHT],"up":[KEY_W,KEY_UP],"down":[KEY_S,KEY_DOWN],"strike":[KEY_J],"seal":[KEY_K],"dash":[KEY_SPACE],"begin":[KEY_ENTER],"pause":[KEY_ESCAPE],"help":[KEY_F1],"mute":[KEY_M]}
 	for action in keys:
 		if not InputMap.has_action(action): InputMap.add_action(action)
 		for key in keys[action]:
@@ -119,6 +127,12 @@ func _build_ui() -> void:
 	help_button.size = Vector2(180,36)
 	help_button.pressed.connect(toggle_tactics)
 	add_child(help_button)
+	audio_button = Button.new()
+	audio_button.focus_mode = Control.FOCUS_NONE
+	audio_button.position = Vector2(1040,691)
+	audio_button.size = Vector2(180,32)
+	audio_button.pressed.connect(toggle_audio)
+	add_child(audio_button)
 	help_panel = PanelContainer.new()
 	help_panel.position = Vector2(275,215)
 	help_panel.size = Vector2(730,285)
@@ -135,11 +149,13 @@ func _build_ui() -> void:
 	label.text = "MOVE   WASD / arrows\nSTRIKE   J — 12 resolve; short range. Guarded: 4 / open: 24 damage.\nSEAL   K — 34 resolve; projectile, 8 damage + 36 ward pressure.\nDODGE   Space — 25 resolve; brief invulnerability, then vulnerable.\nPAUSE   Esc — focus loss also pauses. Enter resumes.\n\nStone columns stop charges and block seals. Amber shapes lock.
 Step outside a sweep; cross a wave\nwith a well-timed dodge. Punish recovery or break the ward with seals.\nAt half health the Warden attacks faster and charges leave an echo.\nThe violet echo gives a separate warning — leave its circle."
 	label.add_theme_font_size_override("font_size",18)
+	label.text += "\nSOUND   M / Sound button — mute or restore all music and cues."
 	help_panel.add_child(label)
 	add_child(help_panel)
 	help_panel.hide()
 
 func reset_encounter() -> void:
+	if is_instance_valid(sound): sound.reset()
 	player.position = Vector2(300,490)
 	boss.position = Vector2(955,345)
 	player.velocity = Vector2.ZERO
@@ -192,6 +208,9 @@ func _notification(what: int) -> void:
 	if what == NOTIFICATION_WM_WINDOW_FOCUS_OUT and is_node_ready(): pause_game()
 
 func _sync_ui() -> void:
+	if is_instance_valid(sound):
+		sound.set_suspended(mode == "paused")
+		audio_button.text = "Sound off [M]" if sound.muted else "Sound on [M]"
 	start_button.visible = mode != "fight" and not help_panel.visible
 	help_button.text = "Close tactics [F1]" if help_panel.visible else "Tactics [F1]"
 	start_button.text = "Resume  [Enter]" if mode == "paused" else ("Begin trial  [Enter]" if mode == "title" else "Try again  [Enter]")
@@ -202,7 +221,12 @@ func toggle_tactics() -> void:
 	help_panel.visible = not help_panel.visible
 	_sync_ui()
 
+func toggle_audio() -> void:
+	sound.toggle_mute()
+	_sync_ui()
+
 func _physics_process(delta: float) -> void:
+	if Input.is_action_just_pressed("mute"): toggle_audio()
 	if Input.is_action_just_pressed("help"): toggle_tactics()
 	if Input.is_action_just_pressed("pause"):
 		if mode == "fight": pause_game()
@@ -233,6 +257,7 @@ func step_fight(delta: float, move: Vector2, strike: bool, cast_seal: bool, dodg
 		invulnerable = 0.16
 		dash_cooldown = 0.65
 		stats.dodges += 1
+		sound.cue("dodge",player.position)
 	if dash_time > 0:
 		dash_time -= delta
 		player.velocity = dash_direction*620
@@ -243,14 +268,17 @@ func step_fight(delta: float, move: Vector2, strike: bool, cast_seal: bool, dodg
 		strike_cooldown = 0.40
 		swing = 0.16
 		stats.strikes += 1
+		sound.cue("strike",player.position)
 		if player.position.distance_to(boss.position) <= 103:
 			var was_open := _boss_open()
 			var applied := _damage_boss(24 if was_open else 4)
+			if applied > 0: sound.cue("counter" if was_open else "guard",boss.position)
 			_feedback(("COUNTER  +%d"%applied if was_open else "GUARDED  +%d — wait for an opening"%applied) if applied > 0 else "The fracturing ward repels the strike. Regroup.", TEAL)
 	if cast_seal and seal_cooldown <= 0 and stamina >= 34 and dash_time <= 0:
 		stamina -= 34
 		seal_cooldown = 1.10
 		stats.seals += 1
+		sound.cue("seal",player.position)
 		seals.append({"position":player.position,"direction":player.position.direction_to(boss.position),"life":0.70})
 	_update_seals(delta)
 	_update_boss(delta)
@@ -259,7 +287,10 @@ func step_fight(delta: float, move: Vector2, strike: bool, cast_seal: bool, dodg
 	effects = effects.filter(func(e): return e.life > 0)
 	if hp <= 0: mode = "defeat"
 	elif boss_hp <= 0: mode = "victory"
-	if mode != "fight": _sync_ui()
+	if mode != "fight":
+		sound.cue(mode)
+		sound.set_phase(false)
+		_sync_ui()
 
 func _boss_open() -> bool:
 	return boss_stage != "transition" and (exposed > 0 or boss_stage == "recover")
@@ -280,6 +311,8 @@ func _damage_boss(amount: float) -> float:
 		ward = 0
 		cycle = 1 # Phase two opens with a charge, demonstrating the new echo threat.
 		stats.phase_changes += 1
+		sound.set_phase(true)
+		sound.cue("phase",boss.position)
 		_feedback("THE VEIL FRACTURES — phase two: watch for charge echoes", RED)
 	return applied
 
@@ -306,6 +339,7 @@ func _update_seals(delta: float) -> void:
 					ward = 0
 					exposed = 2.4
 					stats.breaks += 1
+					sound.cue("break",boss.position)
 					_feedback("WARD BROKEN — strike while the core is open", TEAL)
 			else: _feedback("The seal struck stone. Move out from cover.", AMBER)
 		elif projectile.life > 0: keep.append(projectile)
@@ -317,6 +351,7 @@ func _take_hit() -> void:
 	stats.damage_taken += 1
 	invulnerable = 0.75
 	damage_flash = 0.25
+	sound.cue("hurt",player.position)
 	feedback = "Hit. Regroup outside the next warning."
 	feedback_time = 1.5
 
@@ -331,6 +366,7 @@ func _start_pattern() -> void:
 	aim = boss.position.direction_to(player.position)
 	attack_origin = boss.position
 	attack_hit = false
+	sound.cue(pattern,boss.position)
 
 func _update_boss(delta: float) -> void:
 	if boss_hp <= 0: return
@@ -369,6 +405,7 @@ func _update_boss(delta: float) -> void:
 				echo_origin = boss.position
 				echo_time = 0
 				echo_hit = false
+				sound.cue("echo",echo_origin)
 			boss_stage = "recover"
 			stage_time = 0
 			stage_duration = 0.90 if phase == 1 else 0.70
@@ -390,13 +427,20 @@ func _draw() -> void:
 	if not is_node_ready(): return
 	draw_rect(Rect2(0,0,1280,800), INK)
 	draw_rect(FIELD,Color("151b32"))
-	for x in range(80,1201,56): draw_line(Vector2(x,175),Vector2(x,665),Color("202941"),1)
-	for y in range(175,666,49): draw_line(Vector2(80,y),Vector2(1200,y),Color("202941"),1)
+	draw_texture_rect(COURTYARD,FIELD,false,Color(0.72,0.78,0.87))
 	draw_rect(FIELD,Color("56637b"),false,2)
 	for pos in [Vector2(365,305),Vector2(870,425)]:
+		# The visible footprint remains the real 45x110 collision rectangle.
+		draw_rect(Rect2(pos+Vector2(7,8),Vector2(45,110)),Color(0,0,0,.28))
 		draw_rect(Rect2(pos,Vector2(45,110)),Color("35425a"))
-		draw_rect(Rect2(pos+Vector2(6,6),Vector2(33,98)),Color("1d293e"))
-		draw_line(pos+Vector2(22,12),pos+Vector2(22,98),AMBER,2)
+		draw_rect(Rect2(pos+Vector2(5,7),Vector2(35,98)),Color("26344b"))
+		draw_rect(Rect2(pos,Vector2(45,7)),Color("657082"))
+		draw_line(pos+Vector2(4,9),pos+Vector2(4,104),Color("57637b"),2)
+		for y in [32,68,95]:
+			draw_line(pos+Vector2(6,y),pos+Vector2(38,y+3),Color("172438"),2)
+		draw_arc(pos+Vector2(22,46),9,PI,TAU,12,Color("ad956e"),2)
+		draw_line(pos+Vector2(14,48),pos+Vector2(30,48),Color("ad956e"),2)
+		draw_line(pos+Vector2(22,49),pos+Vector2(22,73),Color("ad956e"),2)
 	_draw_warnings()
 	_draw_actor(boss.position,false)
 	_draw_actor(player.position,true)
@@ -433,20 +477,22 @@ func _draw_warnings() -> void:
 func _draw_actor(pos: Vector2, hero: bool) -> void:
 	draw_ellipse_shadow(pos)
 	if hero:
-		var color := WHITE if damage_flash > 0 else TEAL
 		if dash_time > 0: draw_circle(pos,28,Color(TEAL,0.25))
-		draw_colored_polygon(PackedVector2Array([pos+Vector2(-15,10),pos+Vector2(0,22),pos+Vector2(15,10),pos+Vector2(7,-8),pos+Vector2(-7,-8)]),Color("426b87"))
-		draw_circle(pos-Vector2(0,7),10,color)
-		draw_line(pos+Vector2(12,0),pos+Vector2(21,-17),WHITE,3)
+		draw_arc(pos,18,0,TAU,24,TEAL,2)
+		var bob := sin(elapsed*15)*2 if player.velocity.length()>30 else 0.0
+		draw_texture_rect(RUNNER,Rect2(pos+Vector2(-32,-45+bob),Vector2(64,72)),false,Color(1.5,1.5,1.5) if damage_flash>0 else Color.WHITE)
 	else:
 		var color := WHITE if boss_flash > 0 else (TEAL if _boss_open() else (RED if phase == 2 else AMBER))
-		draw_circle(pos,31,Color("4c3e5a"))
-		draw_colored_polygon(PackedVector2Array([pos+Vector2(-37,8),pos+Vector2(-23,-25),pos+Vector2(23,-25),pos+Vector2(37,8),pos+Vector2(15,32),pos+Vector2(-15,32)]),Color("384257"))
-		draw_line(pos+Vector2(-21,-20),pos+Vector2(-32,-43),color,5)
-		draw_line(pos+Vector2(21,-20),pos+Vector2(32,-43),color,5)
-		draw_circle(pos,13,color)
-		draw_line(pos+Vector2(-7,-6),pos+Vector2(7,6),INK,2)
-		if exposed > 0: draw_arc(pos,42,0,TAU*exposed/2.4,32,TEAL,3)
+		draw_arc(pos,34,0,TAU,32,color,3)
+		var breath := sin(elapsed*3)*1.5
+		draw_texture_rect(WARDEN,Rect2(pos+Vector2(-56,-63+breath),Vector2(112,112)),false,Color(1.5,1.5,1.5) if boss_flash>0 else Color.WHITE)
+		# State marker sits above the illustration; color never carries the state alone.
+		draw_circle(pos+Vector2(0,-45),5,color)
+		if _boss_open():
+			draw_arc(pos,46,0,TAU,32,TEAL,3)
+			_text(Vector2(pos.x-23,maxf(154,pos.y-65)),"OPEN",12,TEAL)
+		elif boss_stage == "transition": _text(Vector2(pos.x-32,maxf(154,pos.y-65)),"FRACTURE",12,RED)
+		if exposed > 0: draw_arc(pos,50,0,TAU*exposed/2.4,32,TEAL,3)
 
 func draw_ellipse_shadow(pos: Vector2) -> void:
 	draw_set_transform(pos+Vector2(0,22),0,Vector2(1,0.35))
@@ -461,11 +507,12 @@ func _bar(pos: Vector2, width: float, value: float, maximum: float, color: Color
 	draw_rect(Rect2(pos,Vector2(width*clampf(value/maximum,0,1),10)),color)
 
 func _draw_hud() -> void:
-	# Keep arena hazards out of the interface even when a wave reaches a wall.
-	draw_rect(Rect2(0,0,1280,174),INK)
-	draw_rect(Rect2(0,666,1280,134),INK)
-	draw_rect(Rect2(0,174,79,492),INK)
-	draw_rect(Rect2(1201,174,79,492),INK)
+	# Breathing space accommodates illustrated bodies beyond their floor circles.
+	# Hazards still cannot cover the actual HUD, and physics footprints stay fixed.
+	draw_rect(Rect2(0,0,1280,140),INK)
+	draw_rect(Rect2(0,690,1280,110),INK)
+	draw_rect(Rect2(0,140,30,550),INK)
+	draw_rect(Rect2(1250,140,30,550),INK)
 	draw_rect(FIELD,Color("56637b"),false,2)
 	_text(Vector2(80,47),"VEILBREAK",30,WHITE)
 	_text(Vector2(80,74),"THE BELL WARDEN  /  COURTYARD TRIAL",13,AMBER)
@@ -489,10 +536,11 @@ func _draw_overlay() -> void:
 	var title := "The bell has stopped." if mode=="victory" else "The Warden holds the gate." if mode=="defeat" else "Trial paused." if mode=="paused" else "The Bell Warden."
 	_text(Vector2(290,279),title,36,WHITE)
 	if mode=="title":
-		_text(Vector2(290,325),"Break the Warden's guard and cross the Veil gate.",22,AMBER)
-		_text(Vector2(290,365),"Warnings lock before impact. Dodge, then punish recovery.",20)
-		_text(Vector2(290,401),"Seals pressure the ward; blade counters exploit the open core.",20)
-		_text(Vector2(290,445),"At half health, charges leave a second threat. Watch the echo.",20)
+		draw_texture_rect(WARDEN,Rect2(260,315,155,190),false)
+		_text(Vector2(450,325),"Break the guard. Cross the Veil gate.",22,AMBER)
+		_text(Vector2(450,365),"Move beyond locked amber warnings.",20)
+		_text(Vector2(450,401),"Counter an open core; seals build ward pressure.",20)
+		_text(Vector2(450,445),"Phase two adds echoes. Leave the violet circle.",20)
 	elif mode=="paused":
 		_text(Vector2(290,335),"The encounter is frozen. Resume when you are ready.",22)
 	else:

@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-10-11",
+  "updated_at": "2026-10-12",
   "transfers": [
     {
       "id": "TR-001",
@@ -137,6 +137,34 @@
       ],
       "verification_scope": "Actual OGG decoding/playback, instrument-aligned charts and full 69s browser run. Production/consumer integration only; no human musical approval, model learning or universal shared engine.",
       "next_action": "Review the track and physical timing with listeners/players before making the second stage."
+    },
+    {
+      "id": "TR-013",
+      "source_project": "P07",
+      "target_project": "P06",
+      "status": "validated",
+      "unit": "Original painted character/courtyard production consumed by the native Bell Warden trial",
+      "source_reference": "projects/veil-arena/media/provenance.json",
+      "evidence": [
+        "projects/veil-arena/README.md",
+        "evidence/veil-arena/PRESENTATION_RUN.json"
+      ],
+      "verification_scope": "Actual texture import, compiled-pack rendering and implementing-agent review at gameplay/title/wall scale; static poses, not independent visual approval or a shared art engine.",
+      "next_action": "Use unassisted play and physical listening/visual review before extending the production claims."
+    },
+    {
+      "id": "TR-014",
+      "source_project": "P08",
+      "target_project": "P06",
+      "status": "validated",
+      "unit": "Original adaptive score and semantic cues consumed by native combat",
+      "source_reference": "projects/veil-arena/media/provenance.json",
+      "evidence": [
+        "projects/veil-arena/README.md",
+        "evidence/veil-arena/PRESENTATION_RUN.json"
+      ],
+      "verification_scope": "Actual Vorbis/WAV resource playback, AudioServer samples, legal-input cues, aligned phase crossfade, mute/pause/restart and limiter stress; no human listening or reuse of the P03 track.",
+      "next_action": "Use unassisted play and physical listening/visual review before extending the production claims."
     }
   ]
 }

@@ -1,0 +1,55 @@
+{
+  "project_version": "0.2.0",
+  "source_projects": [
+    "P07",
+    "P08"
+  ],
+  "consumer_project": "P06",
+  "direction": "Martin portfolio mandate; Codex brief, synthesis, integration and implementing-agent review",
+  "art": {
+    "tool": "image_gen.imagegen",
+    "requests": 4,
+    "accepted_files": 3,
+    "reviewed_but_not_shipped": "First Warden generation exec-c1649f6d-cfaf-4e4d-aa33-0b6ac5538bca cut the upper prongs; a reference edit corrected framing. Runner uses that first image as style reference. No external reference artwork imported.",
+    "brief": "Painted navy/slate, bronze/violet Warden and teal courier; broad static silhouettes, transparent character backgrounds, low-contrast overhead paving with no implied collision. Telegraphs, state rings and columns stay authored native geometry.",
+    "files": {
+      "media/art/bell-warden.png": {
+        "generated_image_id": "exec-97932c08-5dda-48f4-9aaa-00241435c070",
+        "width": 1254,
+        "height": 1254,
+        "sha256": "af3a2227cb962d54c3aa3cd5f085c19a0085e3873009fcd66c2fc6e25e652b00",
+        "role": "Original bell/stone sentinel; in-play body and title portrait",
+        "modification": "Copied from image_gen output unchanged; Godot applies runtime scale/tint only."
+      },
+      "media/art/veil-runner.png": {
+        "generated_image_id": "exec-d7b8b30e-cde9-478d-b97b-6f79abc226d1",
+        "width": 1254,
+        "height": 1254,
+        "sha256": "e80492deff04a7207bc74edf960ed69d4f0625b468dfb5bc8b55c9f68ebe9c57",
+        "role": "Original hooded courier; in-play body",
+        "modification": "Copied from image_gen output unchanged; Godot applies runtime scale/tint only."
+      },
+      "media/art/courtyard.png": {
+        "generated_image_id": "exec-a8fee8fd-a814-4a41-825d-700ee16e976b",
+        "width": 1897,
+        "height": 829,
+        "sha256": "f508690dee9ea79fac382ca207f610b356cc3c82e27487aa129acbe3e041d314",
+        "role": "Low-contrast walkable stone floor; contains no raised obstacles",
+        "modification": "Copied from image_gen output unchanged; Godot applies runtime scale/tint only."
+      }
+    },
+    "limits": "Single static pose per character with runtime bob/flash; not a full animation set. Generated edge alpha and small details are not hand-cleaned. Native screenshots, not independent audience approval, support readability judgment."
+  },
+  "audio": {
+    "origin": "Original deterministic algorithmic score and synthesis; no external samples, MIDI, vocals or historical masters.",
+    "producer": "tools/render_audio.py",
+    "catalog": "media/audio-catalog.json",
+    "seed": 61012,
+    "score": "80 BPM, 8 bars, D/F/E-flat motif and low sustained fifth; quiet bronze bells versus denser phase-two pulse. Two aligned 24s mono transports.",
+    "delivery": "Two PCM16/44.1kHz WAV masters, two Vorbis runtime loops and fourteen short PCM cues. Eight pooled positional voices, -1.5dB limiter, equal-power crossfade, explicit mute/pause/restart.",
+    "review": "PCM/hash/endpoint checks plus real AudioServer capture, isolated cue, lifecycle and gain-stress execution. No physical speaker/headphone or human listening claim."
+  },
+  "rights": "New model-generated images and Codex-authored synthesis under the authorized project scope. No third-party media imported; exclusive copyright, non-infringement and commercial clearance have not been established.",
+  "evidence": "evidence/veil-arena/PRESENTATION_RUN.json",
+  "path_scope": "Media paths are relative to projects/veil-arena; evidence is relative to the lab."
+}

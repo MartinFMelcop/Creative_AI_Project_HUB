@@ -1,0 +1,149 @@
+{
+  "project_id": "P06",
+  "version": "0.2.0",
+  "recorded_at": "2026-10-12",
+  "baseline_commit": "8864e4d189c4a50169426d39005e7bc85f7333da",
+  "contribution": {
+    "direction_and_publication_authority": "Martin Melcop Neto",
+    "production_implementation_review": "Codex; synthetic input, no independent human review"
+  },
+  "before": "A complete two-phase geometry-only silent native trial, P07 without real maintained assets, P08 with one P03 consumer.",
+  "after": "Three actual paintings, fourteen original synthesized cues and two aligned 24s music loops consumed by native combat/title/phase/results; mute/pause/restart, positional playback and limiter. Combat rules preserved.",
+  "environment": {
+    "engine": "Godot 4.6.3.stable.official.7d41c59c4 standard",
+    "platform": "Linux x86_64",
+    "display": "Xorg 1.21.1.16 dummy driver, :98, 1280x800, TCP disabled",
+    "renderer": "OpenGL 4.5 Compatibility/Mesa 25.0.7-2+deb13u1 llvmpipe",
+    "audio": "Actual AudioServer software mixing via Dummy backend; no physical output device",
+    "production": "image_gen plus Python 3.12/NumPy 2.3.5 and ffmpeg/libvorbis; zero external reference media/samples"
+  },
+  "production": {
+    "images": "Four requests, three accepted PNGs. Initial cut prongs corrected by reference edit; accepted files copied unchanged. Media/provenance.json records image IDs/hashes.",
+    "audio": "Deterministic original score/synthesis, two 24s mono 44.1kHz PCM masters, two Vorbis runtime loops and fourteen WAV cues. Catalog records all media hashes.",
+    "checks": "python3 tools/check_media.py: sixteen WAV format/duration/hash/peak/endpoint checks, two OGG headers/hashes and three PNG dimension/alpha-channel checks."
+  },
+  "executed": [
+    {
+      "command": "godot --headless --path . --editor --import --quit",
+      "result": "Exit 0; actual import/compile, no human editor session"
+    },
+    {
+      "command": "godot --headless --path . --script tests/encounter.gd --fixed-fps 60",
+      "result": "22 retained checks pass; whole scripted victory and actual idle defeat"
+    },
+    {
+      "command": "godot --headless --path . --script tests/presentation.gd",
+      "result": {
+        "audio_frames": 192512,
+        "checks": 24,
+        "display": "headless",
+        "failures": [],
+        "measured_peak": 0.841408967971802
+      }
+    },
+    {
+      "command": "DISPLAY=:98 godot --path . --script tests/presentation.gd --audio-driver Dummy --disable-vsync",
+      "result": "24 checks pass and actual frames captured; final HUD/wall framing reviewed"
+    },
+    {
+      "command": "godot --headless --path . --export-pack Linux dist/veilbreak.pck",
+      "result": "Exit 0; 0.2.0 pack contains only art/audio media dirs; masters/tests/tools absent",
+      "bytes": 3965736
+    },
+    {
+      "command": "godot --headless --main-pack <delivered> --script <external encounter.gd> --fixed-fps 60",
+      "working_directory": "Scratch outside source",
+      "result": "22 checks pass; actual complete fight"
+    },
+    {
+      "command": "DISPLAY=:98 godot --main-pack <delivered> --script <external presentation.gd> --audio-driver Dummy --disable-vsync",
+      "working_directory": "Scratch outside source",
+      "result": {
+        "audio_frames": 180224,
+        "checks": 24,
+        "display": "X11",
+        "failures": [],
+        "measured_peak": 0.841428637504578
+      }
+    },
+    {
+      "command": "godot --headless --path . --export-pack Linux <scratch>/rebuilt.pck; run external encounter/presentation scripts on that pack",
+      "result": {
+        "encounter_checks": 22,
+        "presentation": {
+          "audio_frames": 192512,
+          "checks": 24,
+          "display": "headless",
+          "failures": [],
+          "measured_peak": 0.841408967971802
+        },
+        "sha256": "0332356c8f917813ac41ce6c5885f51cc503903a8fa7e1d8efdc062e1252ed41",
+        "binary_equal": false,
+        "resource_equal": true,
+        "resource_files_compared": 47
+      }
+    },
+    {
+      "command": "DISPLAY=:98 godot --main-pack <delivered> --script <external encounter.gd> --fixed-fps 60 --audio-driver Dummy --disable-vsync",
+      "working_directory": "Scratch outside source",
+      "result": {
+        "checks": 30,
+        "failures": []
+      },
+      "scope": "Final compiled-pack whole fight plus eight native framebuffer captures after HUD framing correction"
+    }
+  ],
+  "comparative_gameplay": {
+    "baseline_reference": "RUN.json integrated_victory",
+    "current": {
+      "boss_hp": 0.0,
+      "hp": 2,
+      "mode": "victory",
+      "stats": {
+        "breaks": 1,
+        "damage_taken": 4,
+        "dodges": 3,
+        "hits": 26,
+        "patterns": [
+          "sweep",
+          "charge",
+          "wave"
+        ],
+        "phase_changes": 1,
+        "seals": 14,
+        "strikes": 12
+      },
+      "time": 51.866666666665
+    },
+    "same_simulated_time_health_hits_phase_changes": true,
+    "meaning": "Rules/trajectory retained; media integration does not prove greater human skill/enjoyment"
+  },
+  "audio_scope": "Actual non-silent music and isolated cue, keyboard/mouse mute, paused transport/silence, resumed output, real phase crossfade/alignment, restart preserving mute, post-limiter eight-voice/+12dB stress. Warm/drain backend buffers before silence measurement; not zero-latency audio or physical listening.",
+  "implementer_review": "Inspected original PNGs and actual native title/warnings/open core/tactics/echo/results/wall captures. Corrected cropped image framing, abrupt PCM ends and illustrated-body HUD cropping. Blue/bronze/violet/teal identity is coherent by implementing-agent judgment; static poses/detail/alpha edges still need audience review.",
+  "pack_comparison_note": "Delivered/rebuilt PCK containers differ, but all 47 virtual resource files have identical SHA-256. Both are executed; no byte-reproducible container claim.",
+  "preservation": "git diff --exit-code baseline confirms P01/P03/P10/P11/P02 and archive unchanged. Existing P06 RUN.json/preview.png retained historical.",
+  "limits": [
+    "Single pose per actor with native bob/flash; no full movement/attack animation set.",
+    "No human keyboard, headphone/speaker listening, independent visual approval, natural hardware latency, other-platform, accessibility or commercial-demand validation.",
+    "Compiled PCK requires Godot; no standalone OS export or Unity restoration.",
+    "Generated images and original synthesized score do not establish exclusive copyright/commercial clearance. No Sites publication."
+  ],
+  "sha256": {
+    "arena.gd": "c3ee64de221d09c952d8e6121a90983413bc333d3add60b40886456f52b0d820",
+    "sound.gd": "de2c9a344a73e5675eea03c784a169803b62dcea15ee5c6e50d9741c0870750a",
+    "project.godot": "ddf7bf3f46122d49da4852e03aad5773bfb30773ac2e5b6524aa49081100ca94",
+    "export_presets.cfg": "cc918885887799eeeb736a51969ce1b7892cac5026ea6e1cd5e80f2f3f5c05a9",
+    "tools/render_audio.py": "6c287af79c22a18d07659b6fbbac69066610b4168f57cb99880f8b53b306c6fe",
+    "tools/check_media.py": "7a861268be3e91f84386671b2be069560c1ee0d2c7564094bdd88bb149c97baf",
+    "tests/encounter.gd": "75e175e456546acffcacd832876858afcd5c9f7823e1fe402c3d545fc93da78c",
+    "tests/presentation.gd": "ae68370066d0541d14b15201511b76a95716fc904ab7d6439fe81a2933bd5c92",
+    "dist/veilbreak.pck": "87d050dd62cc5738581f07c1e1eefcc01f06a83f5d8563336f95909496bddeec"
+  },
+  "presentation_frame_sha256": "52e90dec069bf8465939cb7b864e88aaee158ea5fa96f177592791e49fc631c5",
+  "repository_checks": {
+    "validator": "11 projects, 14 transfers, 3 assets, 2 legacy sources, 212 links pass",
+    "registry_scope": "Only P06/P07/P08, VIS-001/AUD-002 and TR-013/TR-014 changed; existing other IDs equal baseline",
+    "preserved_projects_and_archive": "git diff --exit-code 8864e4d confirms unchanged",
+    "manifest": "217 maintained files covered exactly once; all SHA-256 hashes verified"
+  }
+}

@@ -1,0 +1,131 @@
+{
+  "version": "0.2.0",
+  "producer": "Codex original algorithmic score/synthesis",
+  "seed": 61012,
+  "sample_rate": 44100,
+  "channels": 1,
+  "music": {
+    "bpm": 80,
+    "bars": 8,
+    "beats_per_bar": 4,
+    "transport_seconds": 24,
+    "motif_hz": [
+      293.665,
+      349.228,
+      311.127,
+      220,
+      293.665,
+      440,
+      349.228,
+      311.127
+    ]
+  },
+  "files": {
+    "media/audio/sweep.wav": {
+      "frames": 16758,
+      "duration_seconds": 0.38,
+      "peak_dbfs": -9.37,
+      "sha256": "8c5fd0b0511d00ddb1bbabcf817afd7ecd6eefd1540fdc5f63f679f78cd3a9a0"
+    },
+    "media/audio/charge.wav": {
+      "frames": 18522,
+      "duration_seconds": 0.42,
+      "peak_dbfs": -9.37,
+      "sha256": "9d8bc1dca6d0de9eb27f0629b74eeeecf0fb37c36cfe392b9e08a918cf9d6994"
+    },
+    "media/audio/wave.wav": {
+      "frames": 24255,
+      "duration_seconds": 0.55,
+      "peak_dbfs": -9.37,
+      "sha256": "1a4369fb0e6422f950b7850dffa6d46960b68b6848dd57ed765809f0c466c5de"
+    },
+    "media/audio/strike.wav": {
+      "frames": 5733,
+      "duration_seconds": 0.13,
+      "peak_dbfs": -9.37,
+      "sha256": "3a73b35b915e772cf463aa9c5e3009b79e22d8a5887d72a8e387e3b63372d270"
+    },
+    "media/audio/seal.wav": {
+      "frames": 10143,
+      "duration_seconds": 0.23,
+      "peak_dbfs": -9.37,
+      "sha256": "13950cd8b7fcd590714dbe524caf5bb9560160ef3b66d425234ce2f2f44985f6"
+    },
+    "media/audio/guard.wav": {
+      "frames": 8820,
+      "duration_seconds": 0.2,
+      "peak_dbfs": -9.37,
+      "sha256": "6fc04238cbe2ef03f2ec04c9b722c176dafefba82527eedfc3218f9fb216d5bd"
+    },
+    "media/audio/counter.wav": {
+      "frames": 16758,
+      "duration_seconds": 0.38,
+      "peak_dbfs": -9.37,
+      "sha256": "f207180c7c7d2b4186a877cc9818dac236d8300c247c1de1e84c4656dfce09d8"
+    },
+    "media/audio/break.wav": {
+      "frames": 30870,
+      "duration_seconds": 0.7,
+      "peak_dbfs": -9.37,
+      "sha256": "b1d63aaea6d0fb5e9ce1295916e80c21693a508236ddb33136e71e2682d283c4"
+    },
+    "media/audio/hurt.wav": {
+      "frames": 13230,
+      "duration_seconds": 0.3,
+      "peak_dbfs": -9.37,
+      "sha256": "f0eb81a6e44d9ff29bae9ed48931d7f37bafc3951588e4f165d0396f51d8a144"
+    },
+    "media/audio/dodge.wav": {
+      "frames": 7056,
+      "duration_seconds": 0.16,
+      "peak_dbfs": -9.37,
+      "sha256": "b03da5758d81540d425d61d7a7cf336fda5b36c72977275a3d16a73f4e7a420a"
+    },
+    "media/audio/phase.wav": {
+      "frames": 50715,
+      "duration_seconds": 1.15,
+      "peak_dbfs": -9.37,
+      "sha256": "32261a143bfea4eb3e21d3c95b0014106b00a812e5f1bc9d9a2e658fdefeaf10"
+    },
+    "media/audio/echo.wav": {
+      "frames": 21168,
+      "duration_seconds": 0.48,
+      "peak_dbfs": -9.37,
+      "sha256": "fce10f784afd0609766197114e26e67d2ee8e9970198e32d90467d156bc4c998"
+    },
+    "media/audio/victory.wav": {
+      "frames": 52920,
+      "duration_seconds": 1.2,
+      "peak_dbfs": -9.37,
+      "sha256": "ea33b771ae8cbf4eb232faa3ea544b1cfaa2c3d4ba28441e32e0f7a0ad11f928"
+    },
+    "media/audio/defeat.wav": {
+      "frames": 41895,
+      "duration_seconds": 0.95,
+      "peak_dbfs": -9.37,
+      "sha256": "b1d757617b9d5519423924a1d8fcc255315465f94923e13e8b773be780365ef5"
+    },
+    "media/masters/courtyard.wav": {
+      "frames": 1058400,
+      "duration_seconds": 24.0,
+      "peak_dbfs": -5.19,
+      "sha256": "74c80d6a23ad393b5b88492cc3879cbb22ec8ea0ac6af6eeeb8731894ff57e53"
+    },
+    "media/audio/courtyard.ogg": {
+      "duration_seconds": 24,
+      "loop": true,
+      "sha256": "273d39c6fbeedeffb05cd558c8280b9f9b03934fd457438ba8aa1f1cd1fc083d"
+    },
+    "media/masters/fracture.wav": {
+      "frames": 1058400,
+      "duration_seconds": 24.0,
+      "peak_dbfs": -5.19,
+      "sha256": "10727068f2d47d136b8a29f047dff60c21494c0b81bf6063a4cc7cb1f051aaba"
+    },
+    "media/audio/fracture.ogg": {
+      "duration_seconds": 24,
+      "loop": true,
+      "sha256": "25537961cfb15f4d7b3cb6b084ed6f57a0b44f5285c4d1d6b71e6e2acdba875f"
+    }
+  }
+}

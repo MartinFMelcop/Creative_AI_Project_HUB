@@ -1,10 +1,10 @@
 # SEED — Martin Creative AI Lab
 
-**Version:** 0.11.0
+**Version:** 0.12.0
 **Data-base:** 10 de outubro de 2026  
 **Autor e responsável pelo portfólio:** Martin Melcop Neto  
 **Working language:** English for new documentation, plans, code comments, UI, and reports. Preserve original creative titles and historical source languages.
-**Current state:** P01 Eclipse Fair 0.1.0 is a new compiled C#/.NET terminal match and economy workbench: four participants, eight venues, sigils/curse/rites/ward/theft, replay and common-seed scenario comparison. The runtime-dependent ZIP was executed. P11/P06/P03/P08/P10 and P02 remain preserved; no graphical engine, historical restoration or human/commercial claim.
+**Current state:** P06 Veilbreak 0.2.0 integrates actual P07 paintings and P08 original cues/aligned adaptive music into the native trial. Media lifecycle, mixer, OpenGL and compiled PCK are executed; combat rules remain unchanged. P01/P03/P10/P11/P02 and historical sources are preserved. No human listening/play or commercial claim.
 
 > Construir um laboratório autoral em Git que transforma ideias, obras e experimentos em produtos pequenos, sistemas reutilizáveis e evidências técnicas verificáveis. A IA participa da criação e execução; Martin desenvolve sua capacidade de especificar, compreender, selecionar, corrigir, validar e explicar os resultados.
 
@@ -46,14 +46,14 @@ Se apenas este arquivo estiver disponível, ele é suficiente para iniciar a Fas
 |---|---|
 | Repository | MartinFMelcop/Creative_AI_Project_HUB; actual Git root `/workspace/Creative_AI_Project_HUB`; lab remains nested in its original package directory |
 | Preserved sources | 175 Rave Master texts and 3 WebSocket files; unchanged ZIP and inventory; not a complete RMXP backup |
-| Primary workstream | P01 Eclipse Fair 0.1.0: playable terminal economy and executed compiled package |
-| Engine execution | P01 C#/.NET 10 compilation, terminal and batch execution. Existing Godot/Python/browser/Node projects preserved; no new engine build |
-| Current verification | 10 C# contracts, actual CLI/source/package workflows and 100 seeds × four seat rotations per scenario; `evidence/eclipse-fair/RUN.json` |
+| Primary workstream | P06 Veilbreak 0.2.0 with P07/P08 visual and adaptive audio production |
+| Engine execution | Godot 4.6.3 native physics, Canvas, AudioServer samples and independent media-inclusive PCK |
+| Current verification | Retained combat checks; 24 presentation/mixer/lifecycle checks, native captures and package execution; `evidence/veil-arena/PRESENTATION_RUN.json` |
 | Historical verification | v0.2.0 combat/dialogue, P10 trust, P11 unread and P02 snapshot records remain preserved; the old scenario runner was not rerun |
-| Next action | Compare unassisted P01/native presentation, P06 sound/art, distinct P03 music and P11 collaborator/service needs |
-| Other seeds | P11 0.2.0, P06 0.1.0, P10 campaign 0.4.0, P03/P08 0.1.0 and P02 runner 0.2.1 preserved |
-| Transfer / shared status | TR-009 (evaluation adaptation) and TR-012 (real P08 audio in P03) validated for bounded consumers; ten earlier candidates remain; no shared engine |
-| Portfolio / attribution | Clean baseline `7f36267` matched main after fetch/merge. Martin supplied direction; Codex implemented/reviewed. Main publication authorized; Sites untouched |
+| Next action | Compare unassisted P06 play/listening/animation, a distinct P03 stage, P01 board and P11 service needs |
+| Other seeds | P01 0.1.0, P11 0.2.0, P10 0.4.0, P03 0.1.0 and P02 0.2.1 preserved; P07 0.1.0/P08 0.2.0 media integrated |
+| Transfer / shared status | TR-009/012 retained; TR-013 P07-to-P06 art and TR-014 P08-to-P06 audio validated for bounded native consumers; no shared engine |
+| Portfolio / attribution | Clean baseline `8864e4d` matched main; Martin authorized direction/publication, Codex implemented/reviewed; Sites unchanged |
 
 Registry evidence paths must resolve to existing files inside the lab; working
 paths must be directories and legacy-source IDs must exist. This documentary
@@ -360,20 +360,28 @@ plans and the breadcrumb `VeuPartido_UnityStarter_v0.0.47.zip`. The starter is n
 present, and plans are not executable evidence. No restored Unity code or franchise
 characters enter the new destination.
 
-[Veilbreak: The Bell Warden](projects/veil-arena/README.md) 0.1.0 is a new native
-Godot 2D trial. One opponent has locked sweep/charge/wave warnings, a faster second
+[Veilbreak: The Bell Warden](projects/veil-arena/README.md) 0.2.0 is a new native
+Godot 2D trial with painted characters/courtyard, fourteen semantic cues and two
+aligned phase-responsive music loops. P07/P08 assets are actually imported, mixed
+and packed; M/mouse mute and pause/resume/restart govern their lifecycle. One opponent has locked sweep/charge/wave warnings, a faster second
 phase with delayed charge echo, and a ward pressured by projectile seals. Native
 movement/collisions, resolve, blade counters, results/pause/restart are connected.
 The actual engine and resource pack were executed. This is a bounded native
 prototype; no standalone platform build, human balance or commercial claim.
 
 Godot/GDScript suits the small physics/presentation loop and available standard
-editor. Unity/.NET are absent; compiling a C# domain alone would not demonstrate
+editor. Unity/editor/starter remain absent; .NET is now installed for P01, but
+compiling a C# domain alone would not demonstrate
 this playable milestone. A browser rewrite adds little after recent P10/P03 work.
 Future Unity/3D adoption remains a product decision requiring real sources/tools,
 not an automatic migration or language quota.
 
 ### P07 — Visual Generation & Asset Lab
+
+**Current destination:** [P06 media](projects/veil-arena/media/provenance.json)
+contains three actual PNG paintings with a shared style/reference and one framing
+correction. Native rendering and wall/HUD review establish bounded integration.
+Each actor has one static pose; no complete animation set or audience approval.
 
 **Origem:** geração e revisão de imagens para Lich e outros interesses criativos; capas, ilustrações em ação e correções de personagens/gênero/consistência relatadas. Ainda falta inventário das fontes de melhor qualidade.
 
@@ -390,6 +398,10 @@ not an automatic migration or language quota.
 **Gate:** pacote pequeno consistente, proveniência registrada e avaliação no tamanho real de uso. Não gerar centenas de imagens antes de verificar esse fluxo.
 
 ### P08 — Audio, Poetry & Music Lab
+
+**Current destinations:** P03 retains Midnight Signal. [P06 media](projects/veil-arena/media/provenance.json)
+adds fourteen original cues and two aligned 24s music loops, masters/producer and
+actual AudioServer/compiled-pack consumption. No physical listening/album claim.
 
 **Origem atual:** Martin autoriza transformar sons e poemas em músicas e álbuns. Não há, neste levantamento, nomes de álbuns, letras completas, ferramentas específicas ou gravações suficientes para alegar catálogo publicado.
 

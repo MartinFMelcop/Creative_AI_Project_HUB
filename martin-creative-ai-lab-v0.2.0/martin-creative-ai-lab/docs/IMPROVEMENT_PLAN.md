@@ -1,4 +1,18 @@
-# Current milestone — Eclipse Fair
+# Current milestone — native Veilbreak presentation
+
+Integrate P07 paintings and P08 original media into the actual P06 trial: coherent
+characters/courtyard, precise native warnings, semantic positional cues, aligned
+phase music, mute/pause/resume/restart and shipped PCK. Preserve verified combat
+rules and other projects; create no general asset framework or extra encounter.
+
+Acceptance: produce/inspect actual images/sounds, review in native scale and wall
+bounds, measure AudioServer output/lifecycle/peaks, retain full encounter behavior,
+execute media and combat from the compiled pack, validate continuity/integrity
+and publish normally. [Execution](../evidence/veil-arena/PRESENTATION_RUN.json)
+records completion and boundaries. Human play/listening and full animation remain
+separate milestones; compare them with opportunities elsewhere next session.
+
+# Previous milestone — Eclipse Fair
 
 Deliver P01's new playable C# economy: four participants/eight venues, travel/work,
 sigils/curse/rites, wards/theft, public forecasts, rotating initiative, Gate/deadline

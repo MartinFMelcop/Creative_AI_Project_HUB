@@ -60,11 +60,16 @@ jobs:
           chmod +x "$veil_engine"
           export XDG_DATA_HOME="$RUNNER_TEMP/veil-data" XDG_CONFIG_HOME="$RUNNER_TEMP/veil-config" XDG_CACHE_HOME="$RUNNER_TEMP/veil-cache"
           "$veil_engine" --headless --path . --editor --import --quit
+          python3 tools/check_media.py
           "$veil_engine" --headless --path . --script tests/encounter.gd --fixed-fps 60
+          "$veil_engine" --headless --path . --script tests/presentation.gd
           cp tests/encounter.gd "$RUNNER_TEMP/veil-godot/encounter.gd"
+          cp tests/presentation.gd "$RUNNER_TEMP/veil-godot/presentation.gd"
           "$veil_engine" --headless --main-pack "$PWD/dist/veilbreak.pck" --script "$RUNNER_TEMP/veil-godot/encounter.gd" --fixed-fps 60
+          "$veil_engine" --headless --main-pack "$PWD/dist/veilbreak.pck" --script "$RUNNER_TEMP/veil-godot/presentation.gd"
           "$veil_engine" --headless --path . --export-pack Linux "$RUNNER_TEMP/veil-godot/rebuilt.pck"
           "$veil_engine" --headless --main-pack "$RUNNER_TEMP/veil-godot/rebuilt.pck" --script "$RUNNER_TEMP/veil-godot/encounter.gd" --fixed-fps 60
+          "$veil_engine" --headless --main-pack "$RUNNER_TEMP/veil-godot/rebuilt.pck" --script "$RUNNER_TEMP/veil-godot/presentation.gd"
 
   integrity-and-dialogue:
     runs-on: ubuntu-24.04

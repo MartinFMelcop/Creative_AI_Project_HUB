@@ -691,3 +691,27 @@ Fixed relative policy order and heuristic agents limit balance conclusions.
 Deliver own compiled DLL/config/rules/example ZIP requiring .NET 10, not a runtime
 binary or self-contained/graphical product. Human play and a native presentation
 remain separate gates; no transfer or commercial claim is promoted.
+
+
+## ADR-035 — connect native combat to real visual and audio production
+
+**Date:** 2026-10-12 (UTC). **Status:** Veilbreak 0.2.0.
+**Authority:** continuous portfolio development and normal main publication.
+
+Select P06's silent/provisional presentation after comparing P01's completed
+workbench, P03 content, P11 access and missing P04 manuscript. Keep the actual
+Godot physics/Canvas/AudioServer architecture; installed .NET is not a reason
+for migration. Integrate P07/P08 assets without a general shared engine.
+
+Generate three original PNGs; correct the first Warden's cropped framing through
+image_gen and retain accepted outputs unchanged. Keep hazards/state labels native
+and reserve illustration space outside the collision floor without changing rules.
+Synthesize original bell motifs, fourteen cues and two aligned 24s transports;
+apply endpoint envelopes, positional voice pooling, phase crossfade and explicit
+mute/pause/restart. Measure actual post-limiter output, including gain stress.
+
+Pack and execute textures/audio with the complete trial outside source. Register
+bounded production-to-consumer transfers, not historical asset recovery or AI
+learning. Static poses, small-detail/alpha review, physical listening/input,
+audience approval and commercial clearance remain separate gates. Preserve all
+other project sources, previous encounter evidence and archive; no Sites update.

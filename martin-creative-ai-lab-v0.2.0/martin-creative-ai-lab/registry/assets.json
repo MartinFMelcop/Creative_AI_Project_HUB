@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-10-11",
+  "updated_at": "2026-10-12",
   "assets": [
     {
       "id": "AUD-001",
@@ -21,6 +21,48 @@
       "evidence": [
         "projects/tokyo80s/media/provenance.json",
         "evidence/tokyo80s/RUN.json"
+      ]
+    },
+    {
+      "id": "VIS-001",
+      "name": "Veilbreak painted courtyard and actors",
+      "type": "visual-pack",
+      "status": "integrated",
+      "source_project": "P07",
+      "consumer_projects": [
+        "P06"
+      ],
+      "runtime_paths": [
+        "projects/veil-arena/media/art/bell-warden.png",
+        "projects/veil-arena/media/art/veil-runner.png",
+        "projects/veil-arena/media/art/courtyard.png"
+      ],
+      "provenance": "Three accepted image_gen outputs from four requests, including Warden framing correction and shared style reference. No external reference imported.",
+      "rights": "New generated media; no exclusive copyright or commercial clearance claim.",
+      "evidence": [
+        "projects/veil-arena/media/provenance.json",
+        "evidence/veil-arena/PRESENTATION_RUN.json"
+      ]
+    },
+    {
+      "id": "AUD-002",
+      "name": "Bell Warden adaptive soundscape",
+      "type": "audio-pack",
+      "status": "integrated",
+      "source_project": "P08",
+      "consumer_projects": [
+        "P06"
+      ],
+      "master_path": "projects/veil-arena/media/masters",
+      "runtime_path": "projects/veil-arena/media/audio",
+      "sample_rate": 44100,
+      "channels": 1,
+      "provenance": "New original algorithmic synthesis/score, 14 PCM cues and two aligned 24s PCM/Vorbis loops. Native positional playback, crossfade and actual AudioServer capture. No external samples/MIDI/vocals.",
+      "rights": "No third-party audio imported; no exclusive copyright or commercial quality claim.",
+      "evidence": [
+        "projects/veil-arena/media/audio-catalog.json",
+        "projects/veil-arena/media/provenance.json",
+        "evidence/veil-arena/PRESENTATION_RUN.json"
       ]
     }
   ]

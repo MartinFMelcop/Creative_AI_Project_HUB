@@ -28,7 +28,8 @@ the application. Its calibrated artifact gates do not establish model performanc
 
 
 [P06 — Veilbreak](veil-arena/README.md) is a native Godot 4.6.3 boss trial with
-physics movement/cover, blade/seal/ward choices, two phases and complete results,
+physics movement/cover, painted characters/courtyard, semantic sounds, adaptive
+music, blade/seal/ward choices, two phases and complete results,
 pause and restart. Source and built PCK are delivered; PCK requires Godot.
 This is new implementation, not recovery of the missing Unity starter.
 

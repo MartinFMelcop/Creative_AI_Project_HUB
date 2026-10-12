@@ -1,42 +1,37 @@
 # Lab state
 
-**Updated:** 2026-10-12 (UTC). **Seed:** 0.11.0.
-**Current milestone:** P01 Eclipse Fair 0.1.0.
+**Updated:** 2026-10-12 (UTC). **Seed:** 0.12.0.
+**Current milestone:** P06 Veilbreak 0.2.0 with integrated P07/P08 media.
 
-[Play or compare economies](../projects/eclipse-fair/README.md) using the compiled
-.NET 10 package or C# source. One participant and three agents travel eight venues,
-earn obols, buy sigils, manage curse, cleanse at the Chapel, ward/theft and claim
-the Gate. Twenty rounds bound the match; deadline ranking shares exact ties.
-Current/next forecasts, full resources and rotating initiative inform choices.
-Save/resume rebuilds accepted actions; JSON/CSV reports compare scenario changes
-across the same seeds and all four policy/seat rotations.
+[Play the native trial](../projects/veil-arena/README.md) from Godot source or the
+compiled PCK. Painted Warden/courier/paving, authored collision columns, distinct
+attack/impact/result cues and phase-responsive music now form one experience.
+Warning geometry, state rings/labels and actual physics/combat rules stay connected.
+Media fits the HUD at physical walls; M/native mouse mute, pause/focus, resume and
+restart control the actual audio lifecycle. Character images are single poses.
 
-[Execution](../evidence/eclipse-fair/RUN.json) records SDK installation/official
-SHA-512, compilation, ten C# contract checks, actual terminal input, journal/replay,
-800 scenario matches and the independently executed compiled ZIP. Baseline Gate
-claims are 258/400 versus 223/400 with higher prices. Currency conservation is
-checked through 100 complete matches. Worker is an income-only control; synthetic
-policy outcomes do not establish human balance or an optimal strategy.
+[Execution](../evidence/veil-arena/PRESENTATION_RUN.json) records three real PNGs,
+four generation/edit requests, fourteen original cues, two aligned 24s music loops,
+actual AudioServer samples, 24 presentation checks, retained full-fight contracts,
+OpenGL captures and compiled-pack execution. The original reactive controller still
+wins at 51.87 simulated seconds with 2 health/26 hits/one phase change. Media does
+not establish better human performance. Peak stress, not listening, bounds the mix.
+[Provenance](../projects/veil-arena/media/provenance.json) and asset/transfer records
+identify P07/P08 production and P06 consumers without a new shared engine.
 
-The initial tested 15-round/weak-route policies produced no Gate claims. Better
-production-aware planning and twenty rounds produced observed claims; no claim
-is made that the earlier rules were impossible for humans. Failed saves preserve
-the live match. Source and strategy review are by Codex, not audience approval.
+Clean baseline `8864e4d` matched main after fetch/merge. Compared P01 native board,
+P03 second musical stage, P11 service access and P04 source recovery; chose the
+native trial's missing identity/feedback over another small economic/service fix.
+Godot 4.6.3/GDScript continues the existing physics/Canvas/AudioServer architecture;
+Unity/editor/starter absent, installed .NET preserved. No engine/stack migration.
 
-SDK 10.0.401 and runtime 10.0.12 were installed from the published stable package,
-with its official digest, under scratch. No NuGet dependency. C# serves deterministic
-transactions, batch comparisons and an actual terminal consumer. Godot remains
-available for presentation; no Unity starter exists. No graphical engine, restored
-RPG Maker, self-contained executable, LAN/minigame or human/commercial claim.
+Martin authorized portfolio work and normal main publication. Codex implemented
+and reviewed; no independent audience or physical listening/keyboard session.
+Linux/OpenGL dummy display and actual software mixer were executed. No standalone
+OS export, full animation set, controller, other-platform or commercial claim.
+P01/P03/P10/P11/P02, original P03 music and archive remain unchanged; previous P06
+evidence is historical, not overwritten. No Sites update or external service.
 
-Clean baseline `7f36267` matched main after fetch/merge. Portfolio comparison
-included P06 presentation, P03 music, P11 access/backup and missing P04/P02 inputs;
-P01's dormant playable/economy seed was selected. Other projects, evaluator snapshot,
-assets/transfers and archive remain unchanged. Martin supplied direction and normal
-main publication authority; Codex implemented/reviewed. No Sites deployment.
-Final delivery verifies the stored message, published SHA and hosted checks.
-
-Next reassess unassisted P01 decisions/native board presentation, P06 integrated
-sound/art, a distinct P03 musical stage and P11 real collaborator/access needs.
-Do not prioritize .NET merely because its SDK is now available, or expand historical
-rosters before a concrete experience warrants them.
+Next compare unassisted P06 play/listening and animation with P03's distinct second
+stage, P01 board presentation and P11 actual collaborator/access requirements.
+Do not make media generation or native technology an automatic next priority.

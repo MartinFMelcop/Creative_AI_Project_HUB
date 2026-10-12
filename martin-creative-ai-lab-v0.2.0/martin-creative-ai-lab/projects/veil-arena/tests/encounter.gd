@@ -147,6 +147,9 @@ func run() -> void:
 	check(arena.stats.phase_changes==1,"Complete fight encounters one second phase")
 	await capture("result")
 	print("ENCOUNTER_CHECKS ",JSON.stringify({"checks":checks,"failures":failures}))
+	# Let the audio mix thread retire active playbacks before process teardown.
+	arena.sound.stop()
+	OS.delay_msec(150)
 	quit(0 if failures.is_empty() else 1)
 
 func clear_inputs() -> void:

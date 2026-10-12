@@ -4,11 +4,11 @@ An evolving laboratory of games, narrative, images, audio, data, and AI
 evaluation by **Martin Melcop Neto**. Projects are adaptable seeds: build small
 slices, verify behavior, record decisions, and test reuse in actual destinations.
 
-**Current seed: v0.11.0.** The lab includes eleven project lines, 178 preserved
+**Current seed: v0.12.0.** The lab includes eleven project lines, 178 preserved
 historical texts, a working local project-conversation workspace, a calibrated
 practice-task harness, a complete rescue adventure with browser/terminal editions,
 an original browser rhythm stage with a real rendered soundtrack, a compiled C# economy trial, and a native
-Godot boss arena with an executed PCK. Private
+Godot boss arena with painted art, adaptive audio and an executed PCK. Private
 Sites demos support the browser games. No full RPG migration, model benchmark,
 finished music catalogue or public-audience deployment is claimed.
 The containing directory keeps its original v0.2.0 package name. Latest verified
@@ -19,8 +19,8 @@ project versions and execution boundaries are in the state and registry.
 - [P01 — Eclipse Fair](projects/eclipse-fair/README.md): compiled C# economy match, terminal play, journal/replay and actual rule comparisons.
 - [Economy execution](evidence/eclipse-fair/RUN.json): source/compiled package, synthetic play and tuning limits.
 
-- [P06 — Veilbreak](projects/veil-arena/README.md): native Godot boss encounter, source and playable resource pack.
-- [Native execution](evidence/veil-arena/RUN.json): actual physics, OpenGL frames, full fight and pack build/run boundaries.
+- [P06 — Veilbreak](projects/veil-arena/README.md): native painted Godot boss encounter, adaptive audio, source and playable resource pack.
+- [Native media execution](evidence/veil-arena/PRESENTATION_RUN.json): actual mixer, OpenGL frames, preserved full fight and media-inclusive pack execution.
 
 - [State](docs/STATE.md): completed increment, limits, and next action.
 - [Assessment](docs/ASSESSMENT.md) and [improvement plan](docs/IMPROVEMENT_PLAN.md): evidence and selected priorities.
