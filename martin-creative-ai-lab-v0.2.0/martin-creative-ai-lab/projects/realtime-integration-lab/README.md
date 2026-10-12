@@ -1,7 +1,8 @@
 # P11 — Project Rooms / Live exchange
 
-**Version:** 0.2.0. A local project workspace with remembered participants,
-separate conversations, saved notes/decisions, recoverable history and JSON export.
+**Version:** 0.3.0. A local project workspace with remembered participants,
+separate conversations, saved notes/decisions, recoverable history, JSON export
+and an operator workflow for consistent live backups and full workspace recovery.
 The original ephemeral exercise remains available with its unchanged protocol.
 
 ![Actual Chromium workspace with fictional test participants](../../evidence/realtime-chat/rooms-preview.png)
@@ -61,12 +62,69 @@ The decision panel shows the latest 100; JSON export includes the complete recor
 without credentials. Limits: 500 characters per entry, 40 per participant name,
 60 per project name, 100 projects, 5,000 local identities and 10,000 entries per
 project. Export is a consumable record, not a database restore/import tool.
-Back up a stopped database if you need full identity/continuation preservation.
+Use the workspace recovery workflow below to preserve full continuation.
 Do not copy a running WAL database as though its main file alone were complete.
+
+## Back up, inspect and recover a workspace
+
+The Node 24 operator CLI runs locally; there is no backup HTTP endpoint. It can
+snapshot a **running** Project Rooms database using SQLite's online backup API,
+including committed WAL pages. It produces a new private directory containing
+`workspace.sqlite` and `manifest.json`: date, application/schema versions,
+SHA-256/size and per-project inventory. The database also retains participant
+token hashes, authorship, immutable attempt IDs and entry sequence. The report
+does not print credentials or entry bodies. Keep the entire bundle private;
+`data/` and `backups/` are ignored by Git, and **no sample live backup is shipped**.
+
+From this project directory (the destination parent must already exist):
+
+```bash
+mkdir -p backups
+# While the server is running; use a NEW bundle path for each savepoint:
+npm run rooms:backup -- --db data/rooms.sqlite --out backups/pre-review
+npm run rooms:inspect -- --from backups/pre-review
+# Check the reported date, project counts and SHA-256. Stop the server (Ctrl+C).
+# Restore to a NEW database, leaving the original available for comparison:
+npm run rooms:restore -- --from backups/pre-review --db data/recovered.sqlite
+ROOMS_DB=data/recovered.sqlite npm run rooms
+```
+
+Restore also accepts `--expect-sha` followed by the SHA-256 printed by inspection
+to pin the reviewed savepoint. Direct `node /path/to/rooms-backup.cjs` commands
+work outside the project directory; `--help` shows the complete workflow. Paths
+are resolved from the caller's current directory. Existing bundles, destination
+files, links and SQLite journal/sidecar paths are refused; there is no force or
+overwrite option. An interrupted backup with no completed manifest is refused.
+
+Inspection checks checksum/size, exact schema, SQLite integrity, foreign keys,
+data contracts, capacity, entry sequence and matching inventory. Recovery checks
+the staged bytes again before exclusive, atomic file publication. It never opens
+the destination as a live workspace or replaces a running database. POSIX
+bundles are created with directory mode 0700 and files 0600; files/directories
+are flushed before completion. Linux was executed; other filesystems/platforms,
+power-loss behavior and hostile concurrent filesystem changes are unverified.
+Checksums detect accidental changes; the manifest is **not signed** and does not
+authenticate a backup's origin. Use a trusted private copy.
+
+Reopen the same browser origin with its existing storage: remembered identities,
+project links and browser drafts can continue against the recovered server. Browser
+storage itself is **not in the backup**. Losing it loses tokens/drafts; display
+names cannot recover an account. A snapshot excludes writes committed after its
+savepoint, including later acknowledged entries. Preserve the newer original
+when comparing records. History resolves attempts saved in the snapshot; an
+unsaved browser attempt stays available for an explicit retry, without replacing
+newer typing. No automatic import/merge of JSON exports is performed.
+
+[Recovery execution](../../evidence/realtime-chat/RECOVERY_RUN.json) exercises
+live WAL backup in a separate operator process, simulated original-file loss,
+inspection, restore, same-origin server restart, two remembered participants,
+deduplication, explicit uncertain retry, pagination/download and new saved work.
+Fictional fixtures and synthetic Chromium input are not independent usability
+or human collaboration evidence. Run `npm run test:recovery` to repeat it.
 
 This is a local prototype for trusted collaborators. Public service operation,
 verified accounts/roles, TLS hosting, revocation/retention policies, multi-process
-writers, disaster recovery, encryption at rest and assistive technology remain
+writers, scheduled/off-site disaster recovery, encryption at rest and assistive technology remain
 outside the validated contract. No hosted service, customer adoption or paid
 market claim. Local-storage denial permits current-session use but prevents
 remembering identity/drafts; the UI explains this limitation.

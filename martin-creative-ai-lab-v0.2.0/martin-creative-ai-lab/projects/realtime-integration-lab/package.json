@@ -1,6 +1,6 @@
 {
   "name": "creative-ai-realtime-chat",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "private": true,
   "description": "P11 local text chat adapted from the preserved Socket.IO exercise",
   "engines": {
@@ -13,7 +13,11 @@
     "test:browser": "node --test tests/browser.test.cjs tests/reading.test.cjs",
     "test:reading": "node --test tests/reading.test.cjs",
     "rooms": "node rooms-server.cjs",
-    "test:rooms": "node --test tests/rooms.test.cjs tests/rooms-browser.test.cjs"
+    "test:rooms": "node --test tests/rooms.test.cjs tests/rooms-browser.test.cjs",
+    "rooms:backup": "node rooms-backup.cjs backup",
+    "rooms:inspect": "node rooms-backup.cjs inspect",
+    "rooms:restore": "node rooms-backup.cjs restore",
+    "test:recovery": "node --test tests/backup.test.cjs tests/recovery-browser.test.cjs"
   },
   "dependencies": {
     "express": "4.22.3",

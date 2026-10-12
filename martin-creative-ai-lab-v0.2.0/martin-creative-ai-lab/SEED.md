@@ -1,10 +1,10 @@
 # SEED — Martin Creative AI Lab
 
-**Version:** 0.15.0
+**Version:** 0.16.0
 **Data-base:** 10 de outubro de 2026  
 **Autor e responsável pelo portfólio:** Martin Melcop Neto  
 **Working language:** English for new documentation, plans, code comments, UI, and reports. Preserve original creative titles and historical source languages.
-**Current state:** P03 Night Shift 0.2.0 contains Midnight Signal and a complete original Rain Circuit stage with performed sustains, track selection/transition and separate bests. P08 0.3.0 supplies real media. Real-clock synthetic runs and score/visual checks are executed; human listening/play and commercial quality remain unverified.
+**Current state:** P11 Project Rooms 0.3.0 adds a private operator backup/inspect/restore workflow for live SQLite/WAL data. New-file recovery preserves projects, authorship, identities and attempts; actual Chromium continuation is executed. P03/P08 two-stage music and other destinations remain preserved; human use and commercial quality remain unverified.
 
 > Construir um laboratório autoral em Git que transforma ideias, obras e experimentos em produtos pequenos, sistemas reutilizáveis e evidências técnicas verificáveis. A IA participa da criação e execução; Martin desenvolve sua capacidade de especificar, compreender, selecionar, corrigir, validar e explicar os resultados.
 
@@ -46,14 +46,14 @@ Se apenas este arquivo estiver disponível, ele é suficiente para iniciar a Fas
 |---|---|
 | Repository | MartinFMelcop/Creative_AI_Project_HUB; actual Git root `/workspace/Creative_AI_Project_HUB`; lab remains nested in its original package directory |
 | Preserved sources | 175 Rave Master texts and 3 WebSocket files; unchanged ZIP and inventory; not a complete RMXP backup |
-| Primary workstream | P03 two original rhythm stages and sustain interaction; P08 Rain Circuit production |
-| Engine execution | Existing JavaScript/Web Audio game and actual Chromium clock; Python/NumPy/ffmpeg music production. Available Godot preserved without migration |
-| Current verification | Core/hold, both full audio-clock stage workflows, keyboard/touch/transition/storage/export and PCM/score/Vorbis checks; `evidence/tokyo80s/SETLIST_RUN.json` |
-| Historical verification | v0.2.0 combat/dialogue, P10 trust, P11 unread and P02 snapshot records remain preserved; the old scenario runner was not rerun |
-| Next action | Compare independent listening/physical play with P11 restore needs, P06 animation and P04 readers |
-| Other seeds | P01 0.2.0, P04 0.1.0, P06 0.2.0, P07 0.1.0, P10 0.4.0, P11 0.2.0 and P02 0.2.1 preserved |
-| Transfer / shared status | TR-009/012 retained; TR-013 P07-to-P06 art and TR-014 P08-to-P06 audio validated for bounded native consumers; no shared engine |
-| Portfolio / attribution | Clean `694f33e` matched fetched main. Martin authorizes portfolio/main; Codex composition/implementation/review, synthetic input. No human listening or Sites deployment |
+| Primary workstream | P11 0.3.0 consistent workspace backup, inspection and safe new-file recovery |
+| Runtime execution | Node 24 built-in SQLite online backup; separate operator CLI and actual Chromium recovery; no dependency or engine migration |
+| Current verification | Live WAL, data/CLI boundaries, simulated file loss and restored two-participant browser continuation; `evidence/realtime-chat/RECOVERY_RUN.json` |
+| Historical verification | Earlier project evidence retained; legacy chat/rooms regressions executed; P02's pinned practice task remains independent |
+| Next action | Compare real recovery use with P06 animation, physical P03 play/listening and independent P04 readers |
+| Other seeds | P01 0.2.0, P03 0.2.0, P04 0.1.0, P06 0.2.0, P07 0.1.0, P08 0.3.0, P10 0.4.0 and P02 0.2.1 preserved |
+| Transfer / shared status | Existing TR-009/012/013/014 boundaries retained; no shared engine or new cross-project transfer |
+| Portfolio / attribution | Clean `32f70ea` matched fetched main. Martin authorizes portfolio/main; Codex implementation/review and fictional synthetic workflow. No human approval or hosting deployment |
 
 Registry evidence paths must resolve to existing files inside the lab; working
 paths must be directories and legacy-source IDs must exist. This documentary
@@ -231,7 +231,7 @@ Identificadores persistem mesmo quando nomes mudam. Um projeto arquivado pode co
 | P08 | Audio, Poetry & Music Lab | Original musical production and integration | Two P03 stages and P06 native soundscape | Real masters/exports/scores; no album or human listening approval |
 | P09 | AI Delivery & Operations Cases | Carreira real e avaliação simulada | Case de entrega, análise de workflow e rubricas | Base profissional lida; cases anteriores pendentes |
 | P10 | Adventures Unleashed / Rave Master | Narrative, NPCs and recovered systems | Two-day browser rescue/relief campaign with local resume and portable saves | Campaign 0.4.0; Python adventure 0.2.0 / standalone 0.1.3; bounded evidence in registry |
-| P11 | Real-time Integration Lab / Project Rooms | Node/Socket.IO/SQLite | Trusted local project conversations, decisions and full export | Workspace 0.2.0; original protocol and P02 snapshot preserved; no public service |
+| P11 | Real-time Integration Lab / Project Rooms | Node/Socket.IO/SQLite | Trusted local project conversations, decisions, export and workspace recovery | Workspace 0.3.0; original protocol and P02 snapshot preserved; no public service |
 
 P02 agrupa evaluation e QA porque podem compartilhar a mesma aplicação pequena. Não criar dois projetos Unity idênticos apenas para apresentar títulos diferentes. P01 pode abrigar produção, economia e analytics como cases distintos de uma fonte comum.
 
@@ -471,15 +471,18 @@ independent reader approval, shared engine or commercial product is claimed.
 
 ### P11 — Real-time Integration Lab / WebSocket
 
-The historical snapshot only logs incoming messages. P11 0.2.0 now has
+The historical snapshot only logs incoming messages. P11 0.3.0 now has
 [Project Rooms](projects/realtime-integration-lab/README.md): local participant,
 create/share/switch projects, saved notes/decisions, history recovery, drafts,
-explicit idempotent retries and complete JSON export. Node 24 built-in SQLite
-adds persistence without another dependency/service; the legacy ephemeral protocol
-and its 38 checks remain. All trusted participants can open all rooms; chosen
-names are not verified accounts. Human usability and public service operation
-remain unverified. P02 retains its pinned snapshot/dependency graph and calibrated
-TR-009; no evaluation task or transfer is automatically expanded.
+explicit idempotent retries, complete JSON export and operator workspace recovery.
+Node 24 built-in SQLite adds persistence and consistent live WAL backup without
+another dependency/service. Inspect private bundles, restore into a new database
+and resume from retained browser identities; later writes and browser storage are
+outside the snapshot. Existing files/sidecars are refused. Original ephemeral
+protocol remains unchanged. All trusted participants can open all rooms; chosen
+names are not verified accounts. Human usability, power-loss/off-site recovery
+and public operation remain unverified. P02 retains its pinned snapshot/dependency
+graph and calibrated TR-009; no evaluation task/transfer is automatically expanded.
 
 ## 6. Arquitetura do laboratório
 
@@ -603,8 +606,8 @@ Antes do score, verificar bloqueios: fontes inacessíveis; execução impossíve
 **Historical order:** v0.1.0 recommended P01 discovery; v0.2.0 recovered concrete P10/P11 sources. Under the current request to select and implement an increment, Codex prioritized P11 because its defect and full local interaction can be verified here. ADR-008 records the choice; the assessment and plan preserve alternatives without activating them. This is not a claim that Martin individually selected or tested P11.
 
 **Current work order:** reassess the portfolio every session. P06 now has a native
-trial, P01 a compiled economy match, P11 a persistent project workspace, P10 two playable days and P03 an original rhythm stage.
-Compare unassisted native/play/listening evidence, P11's account/backup needs,
+trial, P01 a native economy board, P11 a recoverable persistent workspace, P10 two playable days and P03 two original rhythm stages.
+Compare unassisted native/play/listening evidence, P11's account/retention/off-site needs,
 independent P02 context and recovered-source opportunities before choosing again.
 Recent browser concentration is a reason to investigate alternatives, not a quota.
 

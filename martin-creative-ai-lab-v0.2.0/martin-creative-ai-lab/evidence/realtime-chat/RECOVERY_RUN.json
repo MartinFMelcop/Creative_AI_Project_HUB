@@ -1,0 +1,123 @@
+{
+  "milestone": "P11 Project Rooms 0.3.0 workspace recovery",
+  "recorded_at_utc": "2026-10-12T19:58:30.390219+00:00",
+  "baseline_commit": "32f70ea15fd619b1ac1604bf6c07b022aab15989",
+  "environment": {
+    "platform": "Linux-6.18.44-x86_64-with-glibc2.41",
+    "node": "v24.19.0",
+    "chromium": "154.0.8037.57",
+    "SQLite": "Node 24 built-in node:sqlite; schema 1"
+  },
+  "implementation": "Local Node CLI: online SQLite/WAL backup, private standalone database/manifest bundle, inventory/digest inspection and exclusive new-file restore. No HTTP backup endpoint or dependency upgrade.",
+  "executed": [
+    {
+      "command": "npm test",
+      "status": "passed",
+      "tests": 60,
+      "fail": 0,
+      "scope": "38 legacy checks, 14 rooms checks, seven backup/CLI contracts and one recovery browser journey"
+    },
+    {
+      "command": "npm run test:recovery",
+      "status": "passed",
+      "tests": 8,
+      "fail": 0,
+      "scope": "Final focused rerun after actionable existing-bundle refusal"
+    },
+    {
+      "command": "python3 tools/check_calibration.py /workspace/work/rooms-recovery/calibration",
+      "status": "matched",
+      "results": {
+        "baseline": {
+          "status": "rejected",
+          "counts": {
+            "tests": 17,
+            "pass": 15,
+            "fail": 2,
+            "cancelled": 0,
+            "skipped": 0,
+            "todo": 0
+          },
+          "calibration_matched": true
+        },
+        "reference": {
+          "status": "accepted",
+          "counts": {
+            "tests": 17,
+            "pass": 17,
+            "fail": 0,
+            "cancelled": 0,
+            "skipped": 0,
+            "todo": 0
+          },
+          "calibration_matched": true
+        }
+      },
+      "scope": "Controlled artifacts, not an independent model evaluation"
+    },
+    {
+      "command": "python3 evaluations/chat-send-buffering/test_runner.py",
+      "status": "passed",
+      "tests": 25
+    },
+    {
+      "command": "python3 tools/test_validate_repo.py",
+      "status": "passed",
+      "tests": 11
+    },
+    {
+      "command": "python3 tools/test_check_manifest.py",
+      "status": "passed",
+      "tests": 11
+    }
+  ],
+  "browser_workflow": {
+    "application_version": "0.3.0",
+    "backup": {
+      "sha256": "ddb98fc8a37c629a8a8abcae0178bde8ee90f130a4cf7e2d5d2f4d64530de4ef",
+      "bytes": 65536,
+      "projects": 2,
+      "participants": 2,
+      "entries": 63,
+      "decisions": 2
+    },
+    "restored_entries": 63,
+    "continued_entries": 65,
+    "checks": [
+      "live WAL via separate CLI process",
+      "inspect inventory and digest",
+      "original file unavailable",
+      "restore to new file and restart same origin",
+      "both remembered identities and permalink",
+      "later write excluded",
+      "earlier retry deduplicated",
+      "uncommitted browser retry exactly once; newer draft retained",
+      "history pagination and downloaded export",
+      "switch project and continue sequential IDs"
+    ],
+    "fixture": "Fictional participants, 60 explicitly seeded history entries and synthetic Chromium input; no human collaboration or disaster recovery service claim."
+  },
+  "review": {
+    "attribution": "Codex implementing agent; no independent participant review",
+    "actual_frame": "recovery-preview.png",
+    "observed": "Restored Rain Circuit decision and new saved note, remembered Mara identity and both project counts visible. Source/CLI review confirms separate private bundle and new-file workflow."
+  },
+  "execution_notes": [
+    "Initial restricted child-process run returned EPERM and was not treated as CLI validation; approved local runtime executions passed.",
+    "An initial combined recovery test process remained pending and was explicitly stopped; diagnostic run and final complete/focused runs passed. Browser journey now has a 60-second test deadline."
+  ],
+  "limitations": [
+    "Fictional data and synthetic inputs, not human collaboration, usability or commercial evidence.",
+    "Browser tokens/drafts are separate; snapshot excludes later committed writes. No merge/import, overwrite or scheduled/off-site/encrypted backup service.",
+    "Checksum is not a signature/authenticated origin. Keep trusted bundles private; they contain full project data and token hashes.",
+    "Linux only; power interruption, maximal-capacity workload, other platforms/filesystems and hostile concurrent filesystem mutations unverified."
+  ],
+  "source_sha256": {
+    "projects/realtime-integration-lab/rooms-backup.cjs": "f776f87818b3b5206a3e1cd8e521da0475dc7110bfcc746314919b9f4119081e",
+    "projects/realtime-integration-lab/package.json": "fe5251ea3689e63265d3359f5ee976d036bde9be12da4d0b3ff4b6ebc0048b6d",
+    "projects/realtime-integration-lab/package-lock.json": "0f189d110bd0d447c8bba08e3047d02250025f83a64093f12222e6afdfe79f83",
+    "projects/realtime-integration-lab/tests/backup.test.cjs": "34072619a29c4b5fdd424a83198e6e9a66ecf1e14a338fc0bf17962c3a149bff",
+    "projects/realtime-integration-lab/tests/recovery-browser.test.cjs": "509e657066db02187355d90dc813522bcbe98232f8ecbca3bba812d7d5f61a8e",
+    "evidence/realtime-chat/recovery-preview.png": "abfe2007342930c05980ce03c8c43962129b6e9570d98c6a58bd5473283f832e"
+  }
+}

@@ -1,20 +1,23 @@
-# Current assessment — two musical stages with sustained interaction
+# Current assessment — complete recovery of a trusted workspace
 
-Clean `694f33e` matched fetched main. Current records/seed and actual P03 score,
-renderer/core/app and P11 SQLite source inspected. Recent work spans native C#,
-literature, native media and rooms; no automatic continuation of P01.
+Clean `32f70ea` matches fetched main. Actual P11 store/server/browser sources,
+current registry/seed/decisions and recent portfolio history were inspected.
+Recent milestones span native C#, literature, game media and original music.
 
 | Opportunity | Evidence and decision |
 |---|---|
-| P03 new music/interaction | Single complete 69s track exists. A distinct composition plus performed sustains and complete setlist flow adds observable creative/gameplay value; selected. |
-| P11 restore/backup | Durable rooms and consumable export work; restoring complete trusted-workspace data is a valuable professional milestone. |
-| P06 animation | Real native art/audio and encounter work; movement/attack frames would improve action readability. |
-| P04 readers | Complete prose/editions exist; external reading/canon evidence is preferable to automatic chapter expansion. |
+| P11 recovery | SQLite rooms store real persistent work, but JSON export cannot restore authorship/identity/attempts. A consistent live snapshot, inspect and safe restore removes a consequential product limitation; selected. |
+| P06 animation | Real native encounter uses static painted poses with bob/flash. Movement/attack animation could improve action readability; a separate coherent production milestone. |
+| P03 listening/play | Two complete original stages and sustain interaction already exist. Human listening/device timing feedback is more informative than another automatic composition. |
+| P04 readers | Complete source/EPUB/PDF exist. Inspected prose has a concrete waterworks conflict; independent reading/canon evidence remains absent. |
+| P05/P09 sources | Registry still records seed/triage, without an executable game or real professional case. Do not fabricate source recovery or client work. |
 
-Keep the existing Web Audio clock/JS core rather than reimplement timing in an
-available engine for a content milestone. Python/NumPy/ffmpeg create real music,
-score onsets/durations and distribution assets. Musical/creative assessment is
-limited to implementing-agent score/visual review and signal checks, not taste.
+Keep Node 24/SQLite and the existing real-time service. Built-in online backup
+covers WAL; the operator CLI does not expose full workspace data over HTTP. No
+new dependency, C#/Go rewrite or game engine is needed. Before: consumable JSON
+and an unsafe temptation to copy a live main file. After: private savepoint,
+inspect inventory/hash, new-file recovery and verified browser continuation.
+Human usability and public service readiness are not established by these checks.
 
 # Previous assessment — a usable native economy board
 

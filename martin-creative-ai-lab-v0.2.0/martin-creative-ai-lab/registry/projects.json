@@ -265,9 +265,9 @@
       "slug": "realtime-integration-lab",
       "status": "active",
       "maturity": "M4",
-      "phase": "persistent-workspace-validated",
+      "phase": "workspace-recovery-validated",
       "origin": "github_snapshot_inspected",
-      "next_action": "Observe trusted collaborators using rooms/decisions/export; define account access, retention and backup requirements before public service hosting.",
+      "next_action": "Observe trusted collaborators using recovery and decide retention/off-site/account needs before public hosting; compare other portfolio opportunities.",
       "related_projects": [
         "P01",
         "P02",
@@ -285,12 +285,13 @@
         "evidence/realtime-chat/RESIZE_RUN.json",
         "evidence/realtime-chat/TEXT_REFLOW_RUN.json",
         "evidence/realtime-chat/DRAFT_RECOVERY_RUN.json",
-        "evidence/realtime-chat/ROOMS_RUN.json"
+        "evidence/realtime-chat/ROOMS_RUN.json",
+        "evidence/realtime-chat/RECOVERY_RUN.json"
       ],
       "source_id": "LEGACY-002",
-      "maturity_scope": "Project Rooms 0.2.0: Node 24/SQLite persistent identities, project streams, notes/decisions, paginated history, per-identity/project drafts, explicit idempotent retries and complete JSON export. Six SQL/API/socket and eight Chromium workflow checks; 38 retained legacy checks. Actual DB/server reopening, missed-history recovery, lost acknowledgements, rejection, permalink and narrow UI exercised. Local trusted workspace: names unverified, every participant can open every room, no public service/roles, human usability, other-browser or commercial claim. P02 snapshot/dependency graph preserved.",
+      "maturity_scope": "Project Rooms 0.3.0 adds private live SQLite/WAL backup bundles, inventory/checksum inspection and safe new-file restore preserving participants, authorship, immutable attempts and sequence. Node 24 CLI plus storage and real Chromium recovery checks; retained legacy and rooms workflows pass. Browser storage is separate, later writes excluded, no overwrite or public backup endpoint. Linux and synthetic inputs only; human usability, power-loss/off-site/encrypted recovery, authenticated backup origin, public accounts and commercial validation remain open. P02 snapshot/dependency graph preserved.",
       "working_path": "projects/realtime-integration-lab",
-      "working_version": "0.2.0"
+      "working_version": "0.3.0"
     }
   ]
 }

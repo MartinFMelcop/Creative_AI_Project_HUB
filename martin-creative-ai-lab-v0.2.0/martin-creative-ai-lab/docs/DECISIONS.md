@@ -789,3 +789,26 @@ existing P08-to-P03 integration and register real AUD-003. Full real-audio-clock
 synthetic inputs, signal measurements and score/visual review verify contracts,
 not independent music/enjoyment/accessibility or commercial quality. No Sites
 redeployment; physical play/listening and catalogue expansion remain separate.
+
+## ADR-039 — recover a workspace through private local savepoints
+
+**Date:** 2026-10-12 (America/Sao_Paulo). **Status:** P11 0.3.0.
+
+Select complete P11 recovery after comparing native P06 animation, two-stage P03
+feedback and P04 reading. Persistent work has value worth preserving; consumable
+JSON lacks identity/attempt state and a live main-file copy can omit WAL data.
+Node 24's online backup fits the existing SQLite service without new dependencies.
+Use a local operator CLI, private schema-1 bundle and inventory/checksum inspection;
+retain the public room export contract and legacy namespace. No backup HTTP route.
+
+Validate the exact schema, data/foreign-key/integrity contracts, sequence and
+inventory. Recheck staged bytes, then publish exclusively to a NEW database;
+refuse existing main/sidecars instead of replacing a live store. Keep originals
+for comparison. The manifest is not signed. Browser tokens/drafts are separate;
+same-origin continuation needs retained browser storage. Later writes are excluded.
+
+Real CLI and Chromium restore after simulated file loss preserve authorship,
+project links, idempotency, pagination and new work. Synthetic fixtures are not
+human collaboration or power-loss evidence. Scheduled/off-site/encrypted recovery,
+public accounts/retention and commercial validation remain separate milestones.
+Other sources/assets and P02's pinned task remain unchanged. GitHub source only.

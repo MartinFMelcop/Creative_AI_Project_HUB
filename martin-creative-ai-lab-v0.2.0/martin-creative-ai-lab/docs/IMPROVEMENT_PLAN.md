@@ -1,15 +1,18 @@
-# Current milestone — two musical stages with sustained interaction
+# Current milestone — recover persistent project work
 
-Deliver Rain Circuit as a complete original composition, master/Vorbis/score,
-Practice/Arcade with meaningful sustained notes and selectable two-stage flow.
-Connect earned tails, release, Pulse, pause/re-hold, visuals, separate records,
-export and next-stage audio. Preserve original music/charts/bests and other seeds.
+Deliver Project Rooms 0.3.0 operator backup/inspect/restore as one end-to-end
+workflow. Include live committed WAL pages, projects, authorship, identity hashes,
+immutable send attempts and sequential history. Verify the private bundle before
+exclusive restoration into a new file; preserve originals and refuse overwrite.
+Restart at the same origin and continue from the original browser storage.
 
-Acceptance: source/played-score alignment, non-clipped PCM/ending, decoded audio
-metrics, hold/core boundaries, both full real-clock browser workflows, keyboard/
-touch/paused-hold/transition/storage/export, actual rendered review and repository
-validation. Publish normally to main. [Evidence](../evidence/tokyo80s/SETLIST_RUN.json)
-qualifies synthetic inputs, signal/score review and missing physical feedback.
+Acceptance: live WAL/empty/multi-project recovery, CLI outside the project,
+checksum/schema/foreign-key/content/inventory failure detection, existing/linked/
+sidecar refusal and a real browser journey through restored identities, decisions,
+history/export, saved/unsaved retries, preserved newer typing and new work. Run
+retained P11 regressions and repository validation. [Evidence](../evidence/realtime-chat/RECOVERY_RUN.json)
+qualifies synthetic input, point-in-time rollback and unavailable human/platform/
+power-loss/off-site evidence. Publish verified source normally to main.
 
 # Previous milestone — native Eclipse Fair board
 
