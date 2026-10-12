@@ -715,3 +715,27 @@ bounded production-to-consumer transfers, not historical asset recovery or AI
 learning. Static poses, small-detail/alpha review, physical listening/input,
 audience approval and commercial clearance remain separate gates. Preserve all
 other project sources, previous encounter evidence and archive; no Sites update.
+
+
+## ADR-036 — deliver a new standalone P04 reading edition
+
+**Date:** 2026-10-12 (America/Sao_Paulo). **Status:** Darsen story 0.1.0.
+**Authority:** continuous portfolio development and normal main publication.
+
+Choose a complete literary artifact after comparing P03 music, P01 presentation,
+P06 animation and P11 operations. Historical manuscript/ZIP is unavailable here;
+write from qualified seed premises rather than claim restoration or a literary
+judgment of unread prose. Preserve Baldino/Aevren/Darsen and identify new local
+characters, incident, waterworks and corpse-binding rules. No canon ratification.
+
+Use Portuguese for the creative work, English for maintained technical records.
+Five scenes connect misconduct, loss, expertise, constrained emergency permission,
+physical rescue and aftermath. Read/edit actual scenes; format tests cannot grade
+literature or stand in for independent readers.
+
+Markdown/Pandoc/ReportLab suit source/reflow/print, without an engine/browser app.
+Embed licensed unchanged DejaVu Serif after font-substitution problems; retain
+notices in source/PDF. Compare source/EPUB/PDF content and run official EPUBCheck.
+A small publisher serves this real story, not a promoted shared framework.
+Physical devices, assistive technology, reader/canon approval, exclusive rights
+and commercial interest require separate evidence. No Sites deployment.

@@ -1,4 +1,33 @@
-# Current assessment — native identity and feedback
+# Current assessment — a complete literary destination
+
+Updated: 2026-10-12 (America/Sao_Paulo). Clean `9b4a730` matched main. Read root/lab
+instructions, current records, relevant seed/decisions/evolution and actual P03/P01/
+P11 material. Inventory contains no historical P04 ZIP, manuscript or reading edition.
+Recent milestones span games, collaboration, economy and media; no active task
+requires automatic continuation of the last native-art workstream.
+
+| Opportunity | Evidence and choice |
+|---|---|
+| P04 complete new story | Useful narrator/lich/city premises but no current prose deliverable. Write a clearly scoped standalone adaptation with complete scenes and reader formats; selected. |
+| P03 second music stage | Existing single original track works. Distinct content remains valuable; physical listening/timing absent. |
+| P01 native board | Current terminal match works; graphical discovery/pacing is a separate worthwhile milestone. |
+| P06 animation | Real art/audio already integrated. Full poses and human input can advance the arena without another minor correction. |
+| P11 service workflow | Trusted local collaboration exists; real access/backup requirements and users remain important dependencies. |
+
+Choose Markdown as editorial source, Pandoc EPUB and Python/ReportLab A5 PDF.
+Installed publisher/Java/Poppler enable actual production and official EPUB checking.
+A game engine or new browser reader would not complete the literary gap as directly.
+No reusable publisher framework or restored manuscript is claimed.
+
+Before: P04 seed/context only. After: a complete five-scene narrative plus two
+consumable editions. Implementer review corrected missing shortage causality,
+Aevren's physical limit, unnecessary object-return imagery and the funeral timeline.
+Visual production corrected font substitution and an isolated closing sentence.
+Technical conformance/text identity and same-agent creative judgment are distinct;
+independent reader response, broader canon fit and demand remain unknown.
+[Execution](../evidence/lich-cistern/RUN.json) records actual checks.
+
+# Previous assessment — native identity and feedback
 
 Updated: 2026-10-12 (UTC). Clean `8864e4d` matched main after fetch/merge. Read
 instructions, registry/state/seed/decisions/evolution and actual P06/P03 sources;

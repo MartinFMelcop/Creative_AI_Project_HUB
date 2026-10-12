@@ -37,3 +37,7 @@ This is new implementation, not recovery of the missing Unity starter.
 and economy workbench, with four participants/eight venues, durable replay,
 scenario comparison and an executed compiled resource package. Native graphical
 presentation and human play remain unverified.
+
+[P04 — A água sob Darsen](lich-cistern/README.md) delivers a complete standalone
+Portuguese story with EPUB/PDF editions and editable prose. It is a new adaptation
+from the seed summary, not restored B01 or ratified canon.

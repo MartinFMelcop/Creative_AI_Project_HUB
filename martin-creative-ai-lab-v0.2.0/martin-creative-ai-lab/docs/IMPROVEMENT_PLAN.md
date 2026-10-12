@@ -1,4 +1,18 @@
-# Current milestone — native Veilbreak presentation
+# Current milestone — a complete Darsen story
+
+Write/edit P04's new standalone Portuguese adaptation, with Baldino's agency/fault,
+Sava/Nera stakes, practical limits on Aevren's corpse movement, a complete physical
+climax and consequential denouement. Deliver actual EPUB/PDF and editable text.
+Keep unavailable historical manuscripts qualified and other projects intact.
+
+Acceptance: inspect current sources, review the entire narrative/continuity,
+build reader editions, verify exact text/navigation/Unicode and official EPUB
+conformance, inspect rendered pages/reflow and retain licensed font notices.
+Validate existing documentary/manifest regressions and publish normally to main.
+[Execution](../evidence/lich-cistern/RUN.json) records completed work and limits.
+Reader/canon feedback and expansion are separate future decisions.
+
+# Previous milestone — native Veilbreak presentation
 
 Integrate P07 paintings and P08 original media into the actual P06 trial: coherent
 characters/courtyard, precise native warnings, semantic positional cues, aligned

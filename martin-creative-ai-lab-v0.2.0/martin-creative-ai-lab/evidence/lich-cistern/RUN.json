@@ -1,0 +1,119 @@
+{
+  "project_id": "P04",
+  "version": "0.1.0",
+  "recorded_at": "2026-10-12T07:25:07.081807-03:00",
+  "baseline_commit": "9b4a730c4bc27602f0f81dffedf726908b74fa2d",
+  "contribution": "Martin authorized portfolio development/main publication; Codex wrote, edited, produced and reviewed. No independent reader or Martin canon review.",
+  "before": "P04 had a qualified seed summary, no current narrative or reading edition in checkout. Preserved ZIP families contain no P04 manuscript.",
+  "after": "Complete new five-scene Portuguese narrative, editable manuscript, EPUB3 and A5 PDF. Bound local adaptation choices; not restored B01 or ratified canon.",
+  "artifact_facts": {
+    "words": 4466,
+    "scenes": 5,
+    "paragraphs": 240,
+    "pdf_pages": 28,
+    "meaning": "Extent and format only; not a literary score"
+  },
+  "environment": {
+    "publishing": "Pandoc 3.1.11.1, Python 3.12, ReportLab 4.4.9, Poppler",
+    "validator": "Official EPUBCheck 5.4.0; archive SHA-256 33350c61038e71dfb3d45a76aed04bf5481e6d5500cb780f6e98db8bbd15a28c verified against GitHub release asset before execution",
+    "java": "OpenJDK 21.0.12.1",
+    "layout": "Chromium via existing pinned Playwright QA dependency, no runtime/browser project added"
+  },
+  "executed": [
+    {
+      "command": "python3 tools/build.py",
+      "result": "Exit 0; actual delivered EPUB/PDF generated"
+    },
+    {
+      "command": "python3 tools/check_editions.py",
+      "result": "Exit 0; every narrative heading/paragraph matches source, EPUB spine and extracted PDF; metadata/navigation and embedded Unicode fonts verified"
+    },
+    {
+      "command": "java -jar <official epubcheck.jar> dist/a-agua-sob-darsen-0.1.0.epub --json <scratch>",
+      "result": {
+        "fatals": 0,
+        "errors": 0,
+        "warnings": 0
+      }
+    },
+    {
+      "command": "python3 <absolute build.py> --out <scratch>/rebuild; python3 <absolute check_editions.py> --dist <scratch>/rebuild",
+      "working_directory": "Scratch outside project",
+      "result": "Exit 0; fresh editions preserve complete source content"
+    },
+    {
+      "command": "java -jar <official epubcheck.jar> <rebuilt EPUB>",
+      "result": "Exit 0; zero messages"
+    },
+    {
+      "check": "Change closing paragraph in a scratch EPUB; run actual checker",
+      "result": "Nonzero exit and explicit EPUB text/order mismatch; missing/stale content detection executed"
+    },
+    {
+      "command": "pdfinfo/pdffonts/pdftotext/pdftoppm on delivered PDF",
+      "result": "28 A5 pages, no JavaScript/encryption; two embedded Unicode serif faces; rendered pages inspected"
+    },
+    {
+      "check": "Actual EPUB first-chapter XHTML/CSS at 360 and 900 pixels via temporary loopback HTTP",
+      "result": [
+        {
+          "width": 360,
+          "lang": "pt-BR",
+          "heading": "1. A mão do zelador",
+          "paragraphs": 35,
+          "overflow": false,
+          "first": "O zelador perdeu dois dedos dentro da roda, e eu tive de procurá-los antes de limpar o chão."
+        },
+        {
+          "width": 900,
+          "lang": "pt-BR",
+          "heading": "1. A mão do zelador",
+          "paragraphs": 35,
+          "overflow": false,
+          "first": "O zelador perdeu dois dedos dentro da roda, e eu tive de procurá-los antes de limpar o chão."
+        }
+      ],
+      "limit": "Content/reflow inspection only, not EPUB reader hardware/application validation"
+    }
+  ],
+  "editorial_review": {
+    "method": "Read complete manuscript and inspect actual rendered pages; implementing-agent judgment, no independent literary approval",
+    "draft_sha256": "e9987c926ba69e2f8c0e317ce18c7dc2691efdbf55831a7c27880c7aba1eef64",
+    "final_sha256": "a61ac74cea523e7882607a0b33586792e9dae8f35752ec21527f1a1097b1ad79",
+    "changes": [
+      "Explain blocked outlet/false cleaning as the shortage cause while the private pipe taps before it; pressure and closure have connected consequences.",
+      "Show Aevren own brittle hand slipping on the brake before corpse use; contact/tendon limits are demonstrated, not used as an unexplained last-minute solution.",
+      "Remove the gratuitous lamp/leather-return scene; Sava visits to require testimony about the body, with grief/expertise and constrained permission rather than instant forgiveness.",
+      "Explicitly place Sava visit on the first afternoon and funeral next day, despite retrospective reporting of later cleanup; do not assert a week-old body is unchanged.",
+      "Embed licensed serif fonts after actual PDF substitution problems, and keep the concluding paragraphs together."
+    ],
+    "continuity_read": "Baldino lives and recounts witness knowledge; Lesto remains dead; Nera/Sava/Baldino injuries persist; two active guards and a fixed inlet/outlet/drain geography support the operation. New rules/characters are scoped outside unavailable canon."
+  },
+  "font_rights": "Unchanged installed DejaVu Serif regular/bold copied after reading permission notice; source and PDF retain required copyright/trademark/license. No unlicensed imagery or story imported.",
+  "limits": [
+    "No historical manuscript audit/rewrite, fixed world chronology or canon ratification.",
+    "No independent reader, physical EPUB-device, assistive-technology or commercial-demand evidence. PDF is untagged.",
+    "Conformance and text identity do not establish engaging prose, original-exclusive rights or finished publication quality."
+  ],
+  "execution_notes": "Chromium file: navigation was blocked by its administrator policy; tested through normal local HTTP instead, without changing policy. Tool-created font caches moved to scratch. Container timestamps/IDs are not a byte-reproducibility promise.",
+  "sha256": {
+    "README.md": "042e22c8d79e3be949cfb196c6399f6ee2920c623abef49e19e579838786dff0",
+    "book.css": "aed5b245fab8a7e1385b89d6269323233311120d144dec061a8b8be112865ca2",
+    "dist/a-agua-sob-darsen-0.1.0.epub": "f22ccce92b6c96b7622cadebc088e045bd9181a6c87b2983865e075cb20c7460",
+    "dist/a-agua-sob-darsen-0.1.0.pdf": "456b0dc894c76abd5e556ea5e52e00cb4a09e477a3d480d94fab17c84fa0e588",
+    "fonts/DejaVuSerif-Bold.ttf": "aac3f559445d23f0f567a243f91f3f6ad6cb4b5cafa1521a3479fffe0637f0bd",
+    "fonts/DejaVuSerif.ttf": "8cb29f7db250ebb2551a6ce2c1e0bfd5a0eb520e9e233370db0493e82e1f36f7",
+    "fonts/LICENSE.txt": "b7479ebea92402c340a89f82d1ece5a7a879c043e3294243c0d2dc78f372415e",
+    "metadata.yaml": "63b5d46e6434c691db17b57752104cc604515ea131e7af7f969e2a0206c39f82",
+    "requirements-build.txt": "054e7483ed0899a13425d3ff89d0ae162290c88989825c77d22174ceb36f33f1",
+    "story.md": "a61ac74cea523e7882607a0b33586792e9dae8f35752ec21527f1a1097b1ad79",
+    "tools/build.py": "9d8b00094de352a0838e0ac57fac90535dbfeba273f42ce04492d8fc36b82231",
+    "tools/check_editions.py": "3c754d3f36cbe9ee54601a3dc2cec315211517f2de3254ed788115498c157ef5"
+  },
+  "repository_checks": {
+    "registry": "11 projects, 14 transfers, 4 assets, 2 legacy sources and 224 links pass",
+    "regressions": "11 documentary and 11 manifest regressions pass",
+    "scope": "Other project sources/archive/transfers unchanged; only P04 and FNT-001 registry IDs changed",
+    "manifest_files": 231
+  }
+}

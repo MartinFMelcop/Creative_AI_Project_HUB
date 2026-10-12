@@ -1,42 +1,36 @@
 # Lab state
 
-**Updated:** 2026-10-12 (UTC). **Seed:** 0.12.0.
-**Current milestone:** P06 Veilbreak 0.2.0 with integrated P07/P08 media.
+**Updated:** 2026-10-12 (America/Sao_Paulo). **Seed:** 0.13.0.
+**Current milestone:** P04 A água sob Darsen 0.1.0.
 
-[Play the native trial](../projects/veil-arena/README.md) from Godot source or the
-compiled PCK. Painted Warden/courier/paving, authored collision columns, distinct
-attack/impact/result cues and phase-responsive music now form one experience.
-Warning geometry, state rings/labels and actual physics/combat rules stay connected.
-Media fits the HUD at physical walls; M/native mouse mute, pause/focus, resume and
-restart control the actual audio lifecycle. Character images are single poses.
+[Read the complete story](../projects/lich-cistern/README.md) as editable Markdown,
+EPUB 3 or A5 PDF. Five connected Portuguese scenes follow Baldino's diverted water
+and false inspections into a cistern failure, Sava's grief/expertise, Nera's public
+water duty and Aevren's bounded use of dead tissue. The operation ends; injuries,
+body return, cleanup and accountability carry through the denouement.
 
-[Execution](../evidence/veil-arena/PRESENTATION_RUN.json) records three real PNGs,
-four generation/edit requests, fourteen original cues, two aligned 24s music loops,
-actual AudioServer samples, 24 presentation checks, retained full-fight contracts,
-OpenGL captures and compiled-pack execution. The original reactive controller still
-wins at 51.87 simulated seconds with 2 health/26 hits/one phase change. Media does
-not establish better human performance. Peak stress, not listening, bounds the mix.
-[Provenance](../projects/veil-arena/media/provenance.json) and asset/transfer records
-identify P07/P08 production and P06 consumers without a new shared engine.
+This is a new seed adaptation. The historical novel ZIP/manuscript is absent from
+this checkout; no source restoration, manuscript rewrite or canon ratification.
+Codex wrote/edited under Martin's mandate, with no independent reader/author review.
+[Provenance](../projects/lich-cistern/provenance.json) separates retained premises,
+new characters/rules, narration knowledge and licensed font production.
 
-Clean baseline `8864e4d` matched main after fetch/merge. Compared P01 native board,
-P03 second musical stage, P11 service access and P04 source recovery; chose the
-native trial's missing identity/feedback over another small economic/service fix.
-Godot 4.6.3/GDScript continues the existing physics/Canvas/AudioServer architecture;
-Unity/editor/starter absent, installed .NET preserved. No engine/stack migration.
+[Execution](../evidence/lich-cistern/RUN.json) records Pandoc/ReportLab builds,
+source/EPUB/PDF text identity, EPUBCheck 5.4.0 with zero messages, embedded Unicode
+fonts, 28-page PDF raster review, 360/900px XHTML layout, rebuild and edited-EPUB
+rejection. Revision addressed shortage causality, magic limits, object-return
+ending and funeral chronology. Format checks are not a literary-quality score.
 
-Martin authorized portfolio work and normal main publication. Codex implemented
-and reviewed; no independent audience or physical listening/keyboard session.
-Linux/OpenGL dummy display and actual software mixer were executed. No standalone
-OS export, full animation set, controller, other-platform or commercial claim.
-P01/P03/P10/P11/P02, original P03 music and archive remain unchanged; previous P06
-evidence is historical, not overwritten. No Sites update or external service.
+Clean `9b4a730` matched main after fetch/merge. Compared P03 second music, P01
+native board, P06 animation and P11 access; selected a complete consumable literary
+artifact for the dormant P04 seed. Markdown/Pandoc/Python suit reading/publishing;
+Godot exists but a game presentation would add scope to this manuscript milestone.
+No historical prose/media imported; licensed unchanged DejaVu fonts are included.
 
-Next compare unassisted P06 play/listening and animation with P03's distinct second
-stage, P01 board presentation and P11 actual collaborator/access requirements.
-Do not make media generation or native technology an automatic next priority.
+Other project sources, previous evidence, archive and transfers remain unchanged.
+No Sites deployment or messages. Main publication is explicitly authorized.
+The PDF is untagged; hardware EPUB readers, physical reading, assistive technology,
+independent literary/canon approval and commercial interest remain unverified.
 
-Hosted verification follow-up: initial commit `924fd5e` passed native-media and
-C# jobs, but the documentary regression fixture omitted asset-only evidence.
-The fixture now creates evidence for projects, transfers and assets. All eleven
-validator and eleven manifest regressions pass locally; validation policy unchanged.
+Next compare independent P04 reading/canon fit with a distinct P03 musical stage,
+P01 native board and P06 animation/input needs; reassess the portfolio each session.

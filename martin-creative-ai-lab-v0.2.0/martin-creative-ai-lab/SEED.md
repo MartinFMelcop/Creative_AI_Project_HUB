@@ -1,10 +1,10 @@
 # SEED — Martin Creative AI Lab
 
-**Version:** 0.12.0
+**Version:** 0.13.0
 **Data-base:** 10 de outubro de 2026  
 **Autor e responsável pelo portfólio:** Martin Melcop Neto  
 **Working language:** English for new documentation, plans, code comments, UI, and reports. Preserve original creative titles and historical source languages.
-**Current state:** P06 Veilbreak 0.2.0 integrates actual P07 paintings and P08 original cues/aligned adaptive music into the native trial. Media lifecycle, mixer, OpenGL and compiled PCK are executed; combat rules remain unchanged. P01/P03/P10/P11/P02 and historical sources are preserved. No human listening/play or commercial claim.
+**Current state:** P04 A água sob Darsen 0.1.0 is a complete new Portuguese story with delivered EPUB/PDF and editable source. Official EPUB checking, text identity and rendered editions were executed; editorial review is by Codex. The historical manuscript is unavailable here; no restoration, canon approval or independent reader/commercial claim. Other projects remain preserved.
 
 > Construir um laboratório autoral em Git que transforma ideias, obras e experimentos em produtos pequenos, sistemas reutilizáveis e evidências técnicas verificáveis. A IA participa da criação e execução; Martin desenvolve sua capacidade de especificar, compreender, selecionar, corrigir, validar e explicar os resultados.
 
@@ -46,14 +46,14 @@ Se apenas este arquivo estiver disponível, ele é suficiente para iniciar a Fas
 |---|---|
 | Repository | MartinFMelcop/Creative_AI_Project_HUB; actual Git root `/workspace/Creative_AI_Project_HUB`; lab remains nested in its original package directory |
 | Preserved sources | 175 Rave Master texts and 3 WebSocket files; unchanged ZIP and inventory; not a complete RMXP backup |
-| Primary workstream | P06 Veilbreak 0.2.0 with P07/P08 visual and adaptive audio production |
-| Engine execution | Godot 4.6.3 native physics, Canvas, AudioServer samples and independent media-inclusive PCK |
-| Current verification | Retained combat checks; 24 presentation/mixer/lifecycle checks, native captures and package execution; `evidence/veil-arena/PRESENTATION_RUN.json` |
+| Primary workstream | P04 complete standalone Darsen story and reader editions |
+| Engine execution | Pandoc/ReportLab publishing, Java EPUBCheck, Poppler text/raster and XHTML inspection; game sources preserved |
+| Current verification | EPUBCheck 5.4.0, exact source/EPUB/PDF text sequence, font/navigation/page review and rebuild; `evidence/lich-cistern/RUN.json` |
 | Historical verification | v0.2.0 combat/dialogue, P10 trust, P11 unread and P02 snapshot records remain preserved; the old scenario runner was not rerun |
-| Next action | Compare unassisted P06 play/listening/animation, a distinct P03 stage, P01 board and P11 service needs |
-| Other seeds | P01 0.1.0, P11 0.2.0, P10 0.4.0, P03 0.1.0 and P02 0.2.1 preserved; P07 0.1.0/P08 0.2.0 media integrated |
+| Next action | Compare independent P04 reading/canon fit, P03 music, P01 board, P06 animation and P11 actual service needs |
+| Other seeds | P01 0.1.0, P03 0.1.0, P06 0.2.0, P07 0.1.0, P08 0.2.0, P10 0.4.0, P11 0.2.0 and P02 0.2.1 preserved |
 | Transfer / shared status | TR-009/012 retained; TR-013 P07-to-P06 art and TR-014 P08-to-P06 audio validated for bounded native consumers; no shared engine |
-| Portfolio / attribution | Clean baseline `8864e4d` matched main; Martin authorized direction/publication, Codex implemented/reviewed; Sites unchanged |
+| Portfolio / attribution | Clean `9b4a730` matched main. Martin authorized direction/publication; Codex wrote/edited/verified. No independent reading or Sites update |
 
 Registry evidence paths must resolve to existing files inside the lab; working
 paths must be directories and legacy-source IDs must exist. This documentary
@@ -224,7 +224,7 @@ Identificadores persistem mesmo quando nomes mudam. Um projeto arquivado pode co
 | P01 | Artemyra / Eclipse Fair | Typed game economy and strategy | Playable C# terminal match, replay and scenario comparison | New 0.1.0 compiled destination; no historical runtime restoration |
 | P02 | AI Evaluation & QA Lab (historical Unity proposal) | Requirements, reproduced bugs, artifact checks | Bounded practice tasks and later independent evaluation | EVAL-001 runner 0.2.0 uses pinned snapshots, starter 0.1.0; M4 harness scope, no model candidate |
 | P03 | Tokyo 80s | Original soundtrack, timing and browser gameplay | Complete Midnight Signal stage; physical play/listening still pending | P03 0.1.0 with real P08 audio; see registry/evidence |
-| P04 | O Lich mais velho da tumba mais antiga | Romance, mundo, personagens, arte e continuidade | Narrativa interativa, amostra editorial, jogo, animatic | Pacote v0.4.48 parcialmente inspecionado |
+| P04 | O Lich mais velho da tumba mais antiga | Romance, mundo, personagens, arte e continuidade | Narrativa interativa, amostra editorial, jogo, animatic | Historical summary only here; new standalone story/EPUB/PDF 0.1.0 delivered |
 | P05 | The Dark Knight | Combate por turnos, classes, progressão, conteúdo | Laboratório de combate e balanceamento | Legado RMXP descrito |
 | P06 | Véu Partido / Veilbreak | Native combat trial; historical 3D RPG seed | Playable two-phase Godot arena, source and executed PCK | New destination; missing Unity starter remains historical |
 | P07 | Visual Generation & Asset Lab | Capas, ilustrações, sprites e direção | Assets consistentes, pipeline e estudo de seleção | Material visual histórico; inventário pendente |
@@ -314,6 +314,13 @@ cleanup is not isolation; escaped sessions remain outside its tested contract.
 **Gate de continuação:** o loop executa e reinicia; judgments têm comportamento de fronteira especificado; há validação do clock e uma sessão de playtest em hardware registrado.
 
 ### P04 — O Lich mais velho da tumba mais antiga
+
+**Current destination:** [A água sob Darsen](projects/lich-cistern/README.md) 0.1.0
+is a complete five-scene Portuguese story with EPUB/PDF. It is newly written from
+this summary: the historical ZIP/manuscript is not available in this checkout.
+Baldino/Aevren/Darsen remain; new characters/waterworks/rules are scoped adaptation
+choices. Narrative continuity and reader formats were reviewed by Codex, not an
+independent audience or author canon approval.
 
 **Origem histórica:** light novel de dark fantasy em vasto universo; referência de estrutura e ambição associada a Overlord, múltiplas linhas narrativas e passado extenso. Baldino como narrador; Aevren/Garran em rascunhos, Dorian, Elira, Maelis e Orvek entre personagens recorrentes.
 

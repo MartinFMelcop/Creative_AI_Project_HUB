@@ -86,19 +86,27 @@
     },
     {
       "id": "P04",
-      "name": "O Lich mais velho da tumba mais antiga",
+      "name": "O Lich mais velho da tumba mais antiga / A \u00e1gua sob Darsen",
       "slug": "lich",
-      "status": "seed",
-      "maturity": "M0",
-      "phase": "adaptation-triage",
-      "origin": "source_inspected",
-      "next_action": "Escolher finalidade de adapta\u00e7\u00e3o e fonte selecionada.",
+      "status": "active",
+      "maturity": "M4",
+      "phase": "standalone-reading-editions-validated",
+      "origin": "new_seed_implementation",
+      "next_action": "Read the complete story with independent Portuguese readers and compare against the actual manuscript if it becomes available; assess the climax, constrained permission and accountability before expansion.",
       "related_projects": [
         "P06",
         "P07",
         "P08"
       ],
-      "evidence": []
+      "evidence": [
+        "projects/lich-cistern/README.md",
+        "projects/lich-cistern/provenance.json",
+        "evidence/lich-cistern/RUN.json"
+      ],
+      "historical_name": "O Lich mais velho da tumba mais antiga",
+      "working_path": "projects/lich-cistern",
+      "working_version": "0.1.0",
+      "maturity_scope": "A new complete five-scene Portuguese story, 4,466 words, narrated by Baldino around a Darsen cistern failure, Sava/Nera agency, bounded corpse movement and consequences. Editable source, EPUB3 navigation and 28-page A5 PDF with licensed embedded Unicode fonts; source/EPUB/PDF sequence and official EPUBCheck 5.4.0 pass. Source and rendered-page review by implementing agent only. Historical manuscript absent; no B01 restoration, canon ratification, independent literary approval, hardware-reader/assistive technology or commercial-demand validation."
     },
     {
       "id": "P05",

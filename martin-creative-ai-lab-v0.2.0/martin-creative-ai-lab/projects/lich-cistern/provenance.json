@@ -1,0 +1,51 @@
+{
+  "project_id": "P04",
+  "version": "0.1.0",
+  "working_title": "A água sob Darsen",
+  "language": "pt-BR",
+  "origin": "New complete seed adaptation, written and edited by Codex under Martin Melcop Neto portfolio direction. Not restored, rewritten or canon-approved historical B01.",
+  "source_available": "Maintained SEED.md P04 summary, author mandate and narrative-production guidance. Historical Lightnovel Darkfantasy v0.4.48.zip and its full manuscript are not present in this checkout. Archive inventory contains Rave/WebSocket families, not P04 prose.",
+  "retained_seed_elements": [
+    "Baldino as narrator",
+    "Aevren reconstructs older knowledge, rather than inventing all world systems",
+    "Darsen is cosmopolitan; nonhuman workers have practical agency",
+    "A small maintenance/intrusion incident can demonstrate a rule of the world"
+  ],
+  "new_adaptation_choices": [
+    "New Sava/Nera/Lesto/Eno/Tila, plot, waterworks and social arrangements. Broad Saelir hands are a local character detail, not an asserted historical species canon.",
+    "Corpse muscle requires contact/intact tissue; no resurrection, answering soul, healing of broken joints or remote worker intelligence. Aevren own embodied existence is assumed by the lich premise, not a new full cosmology.",
+    "Baldino remains alive and narrates witnessed events after the incident; no ghost/post-death knowledge. No fixed year or Aevren/Garran/Dorian identity equivalence.",
+    "Sava emergency permission to use the body is constrained, not portrayed as unpressured consent or forgiveness. Water cleanup, injuries, family testimony and pending accountability follow the rescue."
+  ],
+  "production": {
+    "source": "story.md",
+    "metadata": "metadata.yaml",
+    "producer": "tools/build.py",
+    "epub": "Pandoc 3.1.11.1 / EPUB 3 / reader fonts / chapter navigation",
+    "pdf": "ReportLab 4.4.9 / A5 / Unicode embedded DejaVu Serif / linked TOC and bookmarks / full font notices",
+    "fonts": {
+      "source": "Installed Debian fonts-dejavu-core; DejaVuSerif.ttf and DejaVuSerif-Bold.ttf copied unchanged",
+      "upstream": "https://dejavu-fonts.github.io/",
+      "license": "fonts/LICENSE.txt",
+      "rights": "Read installed copyright/permission notice before copying; retained copyright/trademark/permission in source and PDF. No Debian packaging code is redistributed."
+    }
+  },
+  "review": "Implementing-agent source/continuity and rendered-page review. No independent reader, Martin canon review or commercial-interest claim.",
+  "limits": [
+    "Historical manuscript unavailable; no literary before/after judgment about its quality.",
+    "No Kindle/Apple Books/Kobo/device or assistive-technology workflow executed; PDF untagged.",
+    "New adaptation and algorithmic publishing do not establish literary excellence, exclusive authorship rights or commercial readiness."
+  ],
+  "path_scope": "Paths below relative to this project; evidence relative to lab.",
+  "files": {
+    "book.css": "aed5b245fab8a7e1385b89d6269323233311120d144dec061a8b8be112865ca2",
+    "dist/a-agua-sob-darsen-0.1.0.epub": "f22ccce92b6c96b7622cadebc088e045bd9181a6c87b2983865e075cb20c7460",
+    "dist/a-agua-sob-darsen-0.1.0.pdf": "456b0dc894c76abd5e556ea5e52e00cb4a09e477a3d480d94fab17c84fa0e588",
+    "fonts/DejaVuSerif-Bold.ttf": "aac3f559445d23f0f567a243f91f3f6ad6cb4b5cafa1521a3479fffe0637f0bd",
+    "fonts/DejaVuSerif.ttf": "8cb29f7db250ebb2551a6ce2c1e0bfd5a0eb520e9e233370db0493e82e1f36f7",
+    "fonts/LICENSE.txt": "b7479ebea92402c340a89f82d1ece5a7a879c043e3294243c0d2dc78f372415e",
+    "metadata.yaml": "63b5d46e6434c691db17b57752104cc604515ea131e7af7f969e2a0206c39f82",
+    "story.md": "a61ac74cea523e7882607a0b33586792e9dae8f35752ec21527f1a1097b1ad79"
+  },
+  "evidence": "evidence/lich-cistern/RUN.json"
+}

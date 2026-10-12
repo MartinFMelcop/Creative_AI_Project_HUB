@@ -1,0 +1,9 @@
+/* Reflowable typography respects the reader's color and font controls. */
+body { font-family: serif; line-height: 1.5; }
+p { margin: 0 0 0.7em; text-align: left; orphans: 2; widows: 2; }
+h1 { font-size: 1.65em; line-height: 1.2; margin: 1.5em 0 1.2em; break-after: avoid; }
+nav a { text-decoration: none; }
+.titlepage { text-align: center; padding-top: 10%; }
+.titlepage .title { font-size: 2em; }
+.titlepage .subtitle { font-size: 1.1em; }
+.titlepage .author { margin-top: 3em; font-size: 0.95em; }

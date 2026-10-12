@@ -4,7 +4,7 @@ An evolving laboratory of games, narrative, images, audio, data, and AI
 evaluation by **Martin Melcop Neto**. Projects are adaptable seeds: build small
 slices, verify behavior, record decisions, and test reuse in actual destinations.
 
-**Current seed: v0.12.0.** The lab includes eleven project lines, 178 preserved
+**Current seed: v0.13.0.** The lab includes eleven project lines, 178 preserved
 historical texts, a working local project-conversation workspace, a calibrated
 practice-task harness, a complete rescue adventure with browser/terminal editions,
 an original browser rhythm stage with a real rendered soundtrack, a compiled C# economy trial, and a native
@@ -15,6 +15,9 @@ The containing directory keeps its original v0.2.0 package name. Latest verified
 project versions and execution boundaries are in the state and registry.
 
 ## Start here
+
+- [P04 — A água sob Darsen](projects/lich-cistern/README.md): complete standalone story, EPUB and A5 PDF.
+- [Reading edition execution](evidence/lich-cistern/RUN.json): conformance, text identity and implementer editorial review.
 
 - [P01 — Eclipse Fair](projects/eclipse-fair/README.md): compiled C# economy match, terminal play, journal/replay and actual rule comparisons.
 - [Economy execution](evidence/eclipse-fair/RUN.json): source/compiled package, synthetic play and tuning limits.
