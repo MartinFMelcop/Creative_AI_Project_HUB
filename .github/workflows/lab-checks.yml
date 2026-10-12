@@ -81,6 +81,10 @@ jobs:
         run: npm test
       - name: Exercise Tokyo 80s timing and complete audio/browser workflow
         run: node --test projects/tokyo80s/tests/core.test.mjs projects/tokyo80s/tests/browser.test.mjs
+      - name: Exercise Waystone browser journeys, saves and Python parity
+        run: |
+          python3 projects/waystone-dialogue/browser/tools/export_dialogue.py --check
+          node --test projects/waystone-dialogue/browser/tests/engine.test.mjs projects/waystone-dialogue/browser/tests/browser.test.mjs
       - name: Exercise evaluator boundaries and failure attribution
         run: python3 evaluations/chat-send-buffering/test_runner.py
       - name: Require known baseline and reference outcomes

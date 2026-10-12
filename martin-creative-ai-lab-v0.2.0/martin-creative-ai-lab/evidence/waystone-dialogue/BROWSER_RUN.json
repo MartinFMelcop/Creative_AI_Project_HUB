@@ -1,0 +1,166 @@
+{
+  "schema_version": 1,
+  "project": "P10",
+  "milestone": "Flood Crossing browser edition",
+  "browser_version": "0.3.0",
+  "python_adventure_version": "0.2.0",
+  "python_scene_version": "0.1.3",
+  "date": "2026-10-11",
+  "timezone": "America/Sao_Paulo",
+  "baseline_commit": "07df669e1332faf684758fe735dae9f0ef303cf9",
+  "environment": {
+    "python": "3.12.14",
+    "node": "24.19.0",
+    "chromium": "154.0.8037.57",
+    "os": "Debian GNU/Linux 13",
+    "browser_inputs": "Playwright synthetic DOM keyboard/touch; no human playtest"
+  },
+  "before": "Complete terminal rescue required Python/CLI and discarded progress on exit; no graphical situation, browser controls or portable saves.",
+  "after": "Complete static browser rescue with original live SVG diagram, actual flood/resident/cargo/current feedback, projected action risks, all five endings, journal, local resume, decision-replay file saves and replay.",
+  "executed": [
+    {
+      "command": "python3 projects/waystone-dialogue/browser/tools/export_dialogue.py --check",
+      "result": "PASS: generated source data matches Python"
+    },
+    {
+      "command": "node --test tests/engine.test.mjs tests/browser.test.mjs (browser directory)",
+      "result": "PASS: 14 tests, no failures/cancellation/skips; 4 domain and 10 Chromium; final run 18.384s"
+    },
+    {
+      "command": "Python oracle launched by engine.test.mjs",
+      "result": "PASS: 8,583 unique river states from twelve specified entry histories; 20,124 transitions including seeded workshop paths; choices, all trace fields, resulting state and epilogues equal",
+      "scope_limit": "Not all possible workshop histories. Graph differs from prior Python 8,922-state check because entry histories are explicitly different."
+    },
+    {
+      "command": "python3 projects/waystone-dialogue/test_scene.py and test_adventure.py",
+      "result": "PASS: 32 + 20 retained tests; original graph 8,922 states and five endings"
+    },
+    {
+      "command": "npm test (P11)",
+      "result": "PASS: 38 protocol/Chromium tests"
+    },
+    {
+      "command": "node --test tests/core.test.mjs tests/browser.test.mjs (P03)",
+      "result": "PASS: 19 tests including actual full 69-second Arcade Web Audio workflow"
+    },
+    {
+      "command": "python3 projects/tokyo80s/tools/check_audio.py",
+      "result": "PASS: actual PCM/OGG/score hashes, 69s stereo, unclipped PCM and 112/236 aligned charts"
+    },
+    {
+      "command": "python3 tools/test_validate_repo.py and tools/test_check_manifest.py",
+      "result": "PASS: 11 + 11 integrity regressions"
+    },
+    {
+      "command": "python3 evaluations/chat-send-buffering/test_runner.py",
+      "result": "PASS: 25 runner regressions"
+    },
+    {
+      "command": "python3 tools/check_calibration.py /workspace/work/waystone/calibration-browser-03",
+      "result": "PASS: baseline rejected 15/17; reference accepted 17/17; no skipped/cancelled checks",
+      "setup_note": "First attempt used an existing output directory and was refused without overwriting it; executed calibration in the fresh directory above."
+    },
+    {
+      "command": "git diff --exit-code 07df669 -- retained P03, P11, evaluations and archive paths",
+      "result": "PASS: no changed tracked bytes in those destinations"
+    }
+  ],
+  "browser_demonstrations": [
+    {
+      "journey": "Permanent causeway",
+      "actions": [
+        "rope",
+        "timber",
+        "ready",
+        "herbs",
+        "bargain",
+        "causeway",
+        "iven",
+        "roof",
+        "span",
+        "convoy"
+      ],
+      "outcome": "FULL_RESCUE; four residents, Iven, dry medicine and repaired road; final beat 9; actual journal exported and replayed."
+    },
+    {
+      "journey": "Same ferry kit, medicine first",
+      "actions": [
+        "timber",
+        "oil",
+        "ready",
+        "leave",
+        "ferry",
+        "iven",
+        "roof",
+        "load",
+        "board",
+        "row",
+        "row",
+        "board",
+        "row"
+      ],
+      "outcome": "FULL_RESCUE; four residents, Iven and dry medicine."
+    },
+    {
+      "journey": "Same ferry kit, medicine last",
+      "actions": [
+        "timber",
+        "oil",
+        "ready",
+        "leave",
+        "ferry",
+        "iven",
+        "roof",
+        "board",
+        "row",
+        "row",
+        "load",
+        "board",
+        "row"
+      ],
+      "outcome": "PEOPLE_SAFE; same four residents and Iven, medicine spoiled by final surge; risk shown before stroke."
+    },
+    {
+      "journey": "Save continuity",
+      "observed": "Reload with medicine and two residents aboard; import exported file into a fresh independent browser profile; both finish the same complete rescue."
+    },
+    {
+      "journey": "Boundaries and other endings",
+      "observed": "Actual early retreat, partial arrival, boat loss, delayed workshop, invalid/wrong-version/hostile/oversized file rejection, explicit replacement cancellation, blocked localStorage with full play/export/import, keyboard and 390px touch controls."
+    }
+  ],
+  "creative_assessment": {
+    "reviewer": "Implementing Codex agent; not independent audience approval",
+    "inspected": "Actual engine/text and Chromium desktop/mobile screenshots of cover, packing, loaded ferry, surge risk and causeway ending.",
+    "reasoned_assessment": "Warm-paper/river-ink visual direction supports the crossing notebook; readable scene/choice hierarchy, separate residents/medicine/transport outcomes and certain current damage expose meaningful existing decisions. No solver or generic victory score. Original scene and epilogues are preserved rather than claiming a literary rewrite.",
+    "revisions_from_review": [
+      "Moved north shoal north on the diagram.",
+      "Removed misleading group position from completed endings; live yard/arrival counts retained.",
+      "Added mobile map expansion and CSS-drawn arrows independent of font glyphs.",
+      "Distinguished stranded residents and the four-resident PEOPLE_SAFE title from Iven.",
+      "Explained flooded landing while original twelve-turn conversation remains open."
+    ]
+  },
+  "source_sha256": {
+    "adventure.py": "35476d946146533d7684396af59117cada26935cb7a4d2d5ec93635f759c590d",
+    "scene.py": "d68cb4f3b412711aab454629f944b09a7e142e4bec24758c925ce0b3432b1eeb",
+    "browser/dist/index.html": "c77c7c482ff6f7ad6933d2d4a1ff8295b4db6e2f827fa05048c819bacc1f48cb",
+    "browser/dist/app.js": "de179f0fdd350e750176a39be269320b7678f9738ffab9f2a604dcc3fdcbedf4",
+    "browser/dist/engine.js": "568516f20c573e253b93bcfdac2ba3c499f6c34284d73dac73393c3d1bec880f",
+    "browser/dist/scene.js": "65a9054d3703fa52b650347efc4c975d9e9f5624c79b09d1f8aed0afcb4afe3b",
+    "browser/dist/dialogue.js": "4feeff8da32a5a9af52cf93fa3ce0b481a849725a08dd8c819624c8889902b6e",
+    "browser/dist/style.css": "c4e7856277acd42d2aa837fdbebd02f7001cdef4c3bb460611f4cd1de1584448"
+  },
+  "publication": {
+    "state": "This execution record precedes the Git commit and deployment; session delivery verifies actual main SHA and native deployment.",
+    "site_project_id": "appgprj_6acc3b6c386c8191b922c092a956a1fe",
+    "audience": "Owner-private, unchanged",
+    "source_workflow": "Official helpers absent; stdin-only native credential with normal Git/static archive fallback; exact committed static bytes only."
+  },
+  "unverified": [
+    "Unassisted player comprehension, enjoyment and reader pacing.",
+    "Physical touch hardware, screen readers, native accessibility preferences, Safari/Firefox.",
+    "Commercial demand, full RPG migration, exclusive rights or finished product quality.",
+    "Cross-device sync, multi-tab coordination, future save migration and campaign continuation are not implemented."
+  ]
+}

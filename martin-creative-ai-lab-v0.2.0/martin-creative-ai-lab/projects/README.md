@@ -4,11 +4,15 @@
 adaptation: a local Socket.IO text chat with its own locked dependencies and
 protocol/browser tests. It does not require installing the other project seeds.
 
-[P10 — The Last Waystone](waystone-dialogue/README.md) adapts nine preserved NPC
-responses into a playable Python dialogue scene with consequences, four endings,
-restart and a decision trace. Version 0.1.1 has 23 behavior/CLI/source checks,
-with unresolved-lie agreement refusal and capped apology recovery; human creative
-review remains pending. No engine or external dependency is required.
+[P10 — The Last Waystone](waystone-dialogue/browser/README.md) is a complete
+browser rescue: equipment, Keeper negotiation, two river routes, current/cargo
+decisions, five endings, illustrated situation, local resume and portable saves.
+Browser 0.3.0 preserves Python adventure 0.2.0 and standalone dialogue 0.1.3.
+Human play remains pending; no RPG engine is required.
+
+[P03 — Tokyo 80s](tokyo80s/README.md) is an original four-lane browser rhythm
+stage consuming P08's actual synthesized soundtrack, with timing calibration,
+Practice/Arcade, combo/Pulse, results and replay.
 
 The remaining lines are described in [the seed](../SEED.md) and
 [project registry](../registry/projects.json). Historical sources remain in

@@ -183,9 +183,9 @@
       "slug": "rave-master",
       "status": "active",
       "maturity": "M4",
-      "phase": "rescue-adventure-validated",
+      "phase": "browser-rescue-validated",
       "origin": "github_snapshot_inspected",
-      "next_action": "Observe readers playing both rescue routes without supplied paths; revise forecast comprehension and pacing, then adapt the complete operation to a browser demo.",
+      "next_action": "Observe unassisted browser play on both routes; develop a connected morning operation using the retained transport, medicine and resident outcomes.",
       "related_projects": [
         "P01",
         "P02",
@@ -205,12 +205,14 @@
         "evidence/waystone-dialogue/TRUST_RUN.json",
         "evidence/waystone-dialogue/DIALOGUE_RUN.json",
         "evidence/waystone-dialogue/DUSK_RUN.json",
-        "evidence/waystone-dialogue/ADVENTURE_RUN.json"
+        "evidence/waystone-dialogue/ADVENTURE_RUN.json",
+        "projects/waystone-dialogue/browser/README.md",
+        "evidence/waystone-dialogue/BROWSER_RUN.json"
       ],
       "source_id": "LEGACY-001",
       "working_path": "projects/waystone-dialogue",
-      "working_version": "0.2.0",
-      "maturity_scope": "Flood Crossing 0.2.0 terminal prototype only: 20 integrated adventure checks, 32 unchanged scene/source checks, twelve actual CLI paths, cargo-order consequence comparison and successor exploration from twelve river-entry configurations. Equipment, conversation history/time, two routes, deadline rescues, cargo/current/hull and five adaptive endings are connected. No independent playtest, graphical/media production, save/load, engine integration or market validation."
+      "working_version": "0.3.0",
+      "maturity_scope": "Browser edition 0.3.0 of unchanged Python adventure 0.2.0 / scene 0.1.3: original live SVG diagram, flood/cargo/current feedback, journal, local resume and replay-validated file saves. Four domain and ten Chromium checks pass; 20,124 transitions compared with Python across 8,583 river states from twelve specified entry histories plus seeded dialogue paths. Both full routes, all five endings, cargo-order difference, loaded-cargo reload/import, invalid saves, blocked storage, keyboard/touch and late workshop executed. Same-agent visual/gameplay review only; no independent play, physical touch, screen-reader, other-browser or commercial validation."
     },
     {
       "id": "P11",

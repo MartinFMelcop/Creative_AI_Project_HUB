@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#193e43">
+  <meta name="description" content="Four villagers, one medicine chest, nine flood beats. A short playable rescue on a rising river.">
+  <title>The Last Waystone — Flood Crossing</title>
+  <link rel="stylesheet" href="style.css"><script type="module" src="app.js"></script>
+</head>
+<body>
+<a class="skip" href="#story">Skip to the story</a>
+<header class="masthead"><a class="brand" href="./" aria-label="The Last Waystone home"><span class="rune" aria-hidden="true">◇</span><span>The Last Waystone<small>FLOOD CROSSING</small></span></a>
+  <nav aria-label="Session controls"><button id="help">How to play</button><button id="export" hidden>Save file</button><button id="import">Load file</button><button id="restart" hidden>New crossing</button></nav>
+  <input id="save-input" type="file" accept="application/json,.json" hidden>
+</header>
+<main class="layout">
+<aside class="field-notes" aria-label="Crossing map and situation">
+  <div class="map-heading"><span class="eyebrow">MARA'S CROSSING NOTES</span><span class="map-index">01 / THE MILL</span></div>
+  <button id="toggle-map" aria-expanded="false" aria-controls="map-frame" hidden>Show crossing map</button>
+  <figure id="map-frame" class="map-frame">
+  <svg id="map" viewBox="0 0 640 470" role="img" aria-labelledby="map-title map-desc">
+    <title id="map-title">The mill crossing</title><desc id="map-desc">The workshop and mill are on the west bank. A broken causeway and ferry lead across the channel to the high road. The north loft and shoal offer refuge.</desc>
+    <defs>
+      <pattern id="contour" width="62" height="38" patternUnits="userSpaceOnUse"><path d="M-12 19 Q15 -2 43 19 T101 19 M-12 27 Q15 6 43 27 T101 27" fill="none" stroke="#658279" opacity=".25"/></pattern>
+      <pattern id="water" width="56" height="34" patternUnits="userSpaceOnUse"><path d="M5 15 Q16 9 28 15 T51 15 M16 26 h17" fill="none" stroke="#95c1b6" opacity=".24"/></pattern>
+      <filter id="glow"><feGaussianBlur stdDeviation="5"/></filter>
+    </defs>
+    <rect width="640" height="470" fill="#203c3c"/><rect width="640" height="470" fill="url(#contour)"/>
+    <path d="M300 -20 C248 105 418 154 326 280 S250 403 352 500 L442 500 C325 369 425 318 425 245 S339 96 397 -20Z" fill="#315f63"/>
+    <path d="M300 -20 C248 105 418 154 326 280 S250 403 352 500 L442 500 C325 369 425 318 425 245 S339 96 397 -20Z" fill="url(#water)"/>
+    <path d="M284 0 C245 116 394 157 314 280 S242 403 331 470 M408 0 C355 120 454 186 435 257 S334 375 451 470" fill="none" stroke="#b5c4ad" stroke-width="2" opacity=".4"/>
+    <path d="M120 379 Q200 340 182 229 T208 142 L310 157 M430 183 Q480 175 488 121 T557 57" fill="none" stroke="#c8b184" stroke-width="5" stroke-dasharray="2 10" stroke-linecap="round" opacity=".6"/>
+    <path id="causeway-line" d="M249 143 L443 191" fill="none" stroke="#c8b184" stroke-width="8" stroke-dasharray="15 9" opacity=".3"/>
+    <path id="guide-line" d="M254 285 L452 308" fill="none" stroke="#f2cb87" stroke-width="2" stroke-dasharray="5 4" opacity="0"/>
+    <g id="lantern-glow" opacity="0"><circle cx="255" cy="144" r="29" fill="#f0c87e" filter="url(#glow)"/></g>
+    <g stroke="#e1cc9e" fill="#314b42" stroke-width="2">
+      <g transform="translate(155 189)"><path d="M0 25 V-7 L26 -24 54 -7 V25Z"/><path d="M-6 -5 L26 -29 61 -5 M18 25 V4 h16 v21"/><path d="M8 9 h5 m29 0 h5"/></g>
+      <g transform="translate(101 349)"><path d="M0 25 V-4 L25 -20 50 -4 V25Z M-5 -4 L25 -25 55 -4 M20 25 V9 h12 v16"/></g>
+      <g transform="translate(189 55)"><path d="M0 19 V-4 L21 -18 43 -4 V19Z M-5 -4 L21 -23 48 -4 M6 19 V2 h31 v17"/></g>
+      <g transform="translate(492 84)"><path d="M0 30 V0 L23 -17 46 0 V30Z M-5 0 L23 -22 51 0 M17 30 V12 h12 v18"/></g>
+    </g>
+    <g fill="#e8d9b8" font-family="Georgia,serif" font-size="19">
+      <text x="139" y="244">Mill yard</text><text x="63" y="409">Workshop</text><text x="141" y="105">North loft</text><text x="478" y="148">High road</text>
+      <text x="425" y="43" font-size="16">North shoal</text>
+    </g>
+    <g fill="#b2c7b7" font-family="system-ui,sans-serif" font-size="12" letter-spacing="2">
+      <text x="313" y="128" transform="rotate(13 313 128)">CAUSEWAY</text><text x="328" y="367" transform="rotate(-56 328 367)">RISING CHANNEL</text>
+    </g>
+    <g id="boat-marker" transform="translate(260 293)" stroke="#ebd1a1" stroke-width="2" fill="#a87948"><path d="M-23 -7 h46 L13 9 h-26Z"/><path d="M-2 -11 v-15 m-9 0 h20" fill="none"/></g>
+    <g id="party-marker" transform="translate(118 327)"><circle r="12" fill="#efd3a0" stroke="#183a3e" stroke-width="3"/><path d="M0 -6 L4 2 h-8Z" fill="#284447"/></g>
+    <g fill="#193e43" stroke="#c5b797" stroke-width="1.5"><circle cx="173" cy="158" r="8"/><circle cx="193" cy="158" r="8"/><circle cx="254" cy="267" r="8"/><circle cx="455" cy="261" r="8"/></g>
+    <g id="map-people" fill="#efc581"><circle cx="173" cy="158" r="4"/><circle cx="193" cy="158" r="4"/></g>
+    <g id="map-counts" fill="#efc581" font-family="system-ui,sans-serif" font-size="13" visibility="hidden"><text id="yard-count" x="139" y="267"></text><text id="road-count" x="478" y="169"></text></g>
+    <g transform="translate(559 413)" stroke="#c3c8af" fill="none"><path d="M0 -28 V20 M-17 -5 H17 M0 -26 L-5 -14 L0 -18 L5 -14Z"/><text x="-5" y="-35" fill="#d9d7ba" stroke="none" font-family="serif" font-size="14">N</text></g>
+  </svg>
+  <figcaption id="map-caption">Two ways across. Neither can carry a promise.</figcaption>
+  </figure>
+  <div id="situation" hidden>
+    <div class="flood-header"><h2>The flood window</h2><p><strong id="remaining">9</strong> <span>beats left</span></p></div>
+    <ol id="clock" class="clock" aria-label="Flood clock"></ol>
+    <p class="clock-note">Your choices move the water. Reading takes no time.</p>
+    <dl id="roster" class="roster"></dl>
+    <div id="river" hidden><div class="small-heading">CHANNEL FORECAST</div><ol id="forecast" class="forecast"></ol><p id="boat-info"></p></div>
+    <p id="equipment" class="equipment"></p>
+  </div>
+  <p class="map-footnote">A short narrative strategy game<br>One evening. Every crossing leaves a morning.</p>
+</aside>
+<div class="story-column" id="story" tabindex="-1">
+  <section id="cover">
+    <p class="eyebrow">AN EVENING ON THE FLOODPLAIN</p>
+    <h1>The Last<br>Waystone<span>Flood Crossing</span></h1>
+    <p class="cover-lead">Before the water<br>takes the road.</p>
+    <p>Mara has four villagers to bring home and a medicine chest to keep dry. The ferry is pinned. The causeway is broken. The Keeper is still sorting herbs.</p>
+    <blockquote>“Don't tell me we'll get everything out unless you've looked at what we can carry.”<cite>— Mara</cite></blockquote>
+    <div class="cover-actions"><button id="begin" class="primary">Begin the crossing <span aria-hidden="true">↗</span></button><button id="resume" class="primary" hidden>Continue crossing <span aria-hidden="true">↗</span></button><p id="resume-note" hidden></p></div>
+    <div class="cover-facts"><span>Play at your own pace</span><span>Two river routes</span><span>No reflexes required</span></div>
+  </section>
+  <section id="play" hidden aria-label="Adventure">
+    <ol id="chapters" class="chapters" aria-label="Adventure progress"><li>Pack</li><li>Workshop</li><li>Route</li><li>Crossing</li><li>Shelter</li></ol>
+    <p id="chapter" class="eyebrow"></p><h1 id="scene-title" tabindex="-1"></h1>
+    <div id="narrative" class="narrative"></div>
+    <div id="context" class="context"></div>
+    <div id="choices-area"><div class="choice-heading"><h2 id="decision-title">What will you do?</h2><span id="decision-note"></span></div><div id="choices"></div></div>
+    <section id="ending" hidden aria-label="Crossing outcome"><dl id="outcome" class="outcome"></dl><div id="epilogue" class="narrative"></div><button id="replay" class="primary">Try another crossing <span aria-hidden="true">↗</span></button><p class="ending-note">There is no single score. People, medicine and tomorrow's route have separate outcomes.</p></section>
+    <details id="journal"><summary>Crossing journal <span id="journal-count"></span></summary><ol id="journal-entries"></ol></details>
+  </section>
+  <p id="notice" role="status" class="notice"></p>
+  <footer><span id="save-status">Progress stays in this browser; Save file lets you carry it elsewhere.</span><span>A Martin Creative AI Lab prototype · 0.3.0</span></footer>
+</div>
+</main>
+<dialog id="instructions" aria-labelledby="help-title"><button class="dialog-close" data-close="instructions" aria-label="Close instructions">×</button><p class="eyebrow">KEEP THE FLOOD IN VIEW</p><h2 id="help-title">Before you set out</h2>
+  <p>Pack <strong>two different items</strong>. Rope speeds one rescue, secures the ferry or makes a temporary crossing. Timber repairs the road or reinforces the hull. Oil signals the roof when the Waystone is dark.</p>
+  <p>You have <strong>nine beats</strong>, including talk and travel. Each choice lists its cost. The roof workers leave for refuge at beat 6; Iven leaves the jetty at beat 5. Completing a rescue on its deadline succeeds. Reading, loading and unloading take no time.</p>
+  <p>The Keeper can provide light for the causeway. You can leave for the ferry without agreement. Time spent talking is still time lost to the flood.</p>
+  <p>On the ferry, people and medicine share cargo slots. Iven steers faster with more capacity. The current repeats <strong>slack → pull → surge</strong>: pull damages hull; surge damages it more and spoils exposed medicine. A guide line protects both; timber protects only the hull.</p>
+  <p>Your last accepted choice is saved locally. <strong>Save file</strong> exports the journey; <strong>Load file</strong> restores it on another browser. If storage is unavailable, file saves still work. No account or network is needed after the page loads.</p>
+  <button class="primary" data-close="instructions">Back to the crossing</button>
+</dialog>
+<dialog id="replacement" aria-labelledby="replacement-title"><p class="eyebrow">A DIFFERENT EVENING</p><h2 id="replacement-title">Replace this crossing?</h2><p>The current journey will be replaced in this browser. Save file first if you want to keep it.</p><div class="dialog-actions"><button id="cancel-replacement">Keep this crossing</button><button id="confirm-replacement" class="primary">Replace crossing</button></div></dialog>
+<noscript><p class="no-script">JavaScript is needed to play. The repository also includes a Python terminal version.</p></noscript>
+</body></html>

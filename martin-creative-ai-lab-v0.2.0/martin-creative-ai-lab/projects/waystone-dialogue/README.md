@@ -1,12 +1,16 @@
 # P10 — The Last Waystone: Flood Crossing
 
-Adventure **0.2.0** turns the existing Keeper conversation into a complete
-terminal rescue operation. Choose equipment, negotiate or leave for the ferry,
+Browser edition **0.3.0** makes the complete rescue operation playable through
+an illustrated map, connected flood/cargo feedback, a crossing journal, local
+autosave and portable file saves. [Play and run the browser edition](browser/README.md).
+No Python installation is needed by the player; its static source can be hosted
+independently. The unchanged Python adventure **0.2.0** remains the rule reference
+and terminal option. Choose equipment, negotiate or leave for the ferry,
 reach the mill, rescue its workers, move people and medicine across the river,
 and see what remains for the village tomorrow. The standalone scene **0.1.3**
 is preserved and reused directly; the historical RPG sources remain immutable.
 
-## Play
+## Play in the terminal
 
 Python **3.10+**, standard library only. From the lab directory:
 
@@ -80,8 +84,10 @@ records twelve CLI playthroughs, before/after behavior, source hashes, executed
 checks and a same-agent editorial/gameplay assessment. Automated contracts do
 not establish enjoyment, accessibility, literary quality or commercial demand.
 This is a complete **prototype operation**, not a finished commercial game.
-There is no graphical interface, save/load, generated art/audio, combat or engine
-binding. External evaluation and chat versions are unchanged by this milestone.
+The terminal remains session-only. The browser now supplies a graphical interface,
+save/load and an original situational SVG diagram; no generated painting/audio,
+combat or RPG engine binding is claimed. Browser verification and limits are in
+[the new execution record](../../evidence/waystone-dialogue/BROWSER_RUN.json).
 
 ## Origin and continuity
 
@@ -111,7 +117,7 @@ python3 projects/waystone-dialogue/scene.py --trace
 [dialogue continuity](../../evidence/waystone-dialogue/DIALOGUE_RUN.json),
 [trust correction](../../evidence/waystone-dialogue/TRUST_RUN.json) and
 [initial scene](../../evidence/waystone-dialogue/RUN.json) remain historical.
-Next: observe readers playing both routes without the example sequences; revise
-forecast comprehension, rescue priorities and pacing from that feedback before
-adapting this complete operation to a browser demo. No independent playtest has
-been performed. A paid narrative game is a possibility, not validated demand.
+Next: observe readers playing the browser without the example sequences, then
+develop a connected morning operation in which the retained road/ferry, medicine
+and residents change the available work. No independent playtest has been
+performed. A paid narrative game is a possibility, not validated demand.

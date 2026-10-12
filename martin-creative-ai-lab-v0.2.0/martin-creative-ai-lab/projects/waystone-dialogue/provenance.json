@@ -55,5 +55,19 @@
       "The workshop's original twelve-turn deadline remains separate. Workshop choices advance the flood clock; a late ending cannot reopen the river operation.",
       "All behavior is deterministic and session-local. No imported media, game engine, market evidence or commercial license is implied."
     ]
+  },
+  "browser": {
+    "version": "0.3.0",
+    "entry_point": "browser/dist/index.html",
+    "engine_reference": "Unchanged adventure.py 0.2.0 and scene.py 0.1.3; the JavaScript port is checked against actual Python transitions.",
+    "authorship": "New Codex-authored browser interface, SVG situational diagram, action replay and English interaction framing under Martin's direction. No external art, samples or fonts.",
+    "accepted_differences": [
+      "Static browser port rather than a live Python process; no RPG engine execution or generic shared framework.",
+      "Scene variant data is generated directly from Python; dynamic response rendering and transition code are ported and compared by the oracle.",
+      "All route rules, resource effects, deadlines, current, workshop memory and five epilogues are preserved.",
+      "Adds map, state-based action risks, local autosave, portable decision-journal import/export and replay. Saves are bounded, versioned, replay-validated and browser-local; no account or cloud sync.",
+      "New cover and interface wording clarifies the existing deterministic rules. No independent reader approval, historical illustration rights or commercial license is inferred."
+    ],
+    "verification": "evidence/waystone-dialogue/BROWSER_RUN.json"
   }
 }

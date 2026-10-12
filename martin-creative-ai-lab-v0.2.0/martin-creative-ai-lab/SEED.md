@@ -1,10 +1,10 @@
 # SEED — Martin Creative AI Lab
 
-**Version:** 0.6.0
+**Version:** 0.7.0
 **Data-base:** 10 de outubro de 2026  
 **Autor e responsável pelo portfólio:** Martin Melcop Neto  
 **Working language:** English for new documentation, plans, code comments, UI, and reports. Preserve original creative titles and historical source languages.
-**Current state:** P03 Tokyo 80s now has Midnight Signal, a complete browser rhythm stage using an actual original P08 soundtrack. P10's rescue operation and P11/P02 sources are preserved. See `docs/STATE.md` and the registry for exact verification and publication; human play/listening and commercial demand remain unverified.
+**Current state:** P10 Flood Crossing 0.3.0 is a complete browser rescue with a live situational map, connected flood/cargo risks, journal, local resume and portable saves. Python adventure 0.2.0 / scene 0.1.3 remain unchanged. P03/P08 and P11/P02 are preserved; state and registry distinguish execution from unverified human play and demand.
 
 > Construir um laboratório autoral em Git que transforma ideias, obras e experimentos em produtos pequenos, sistemas reutilizáveis e evidências técnicas verificáveis. A IA participa da criação e execução; Martin desenvolve sua capacidade de especificar, compreender, selecionar, corrigir, validar e explicar os resultados.
 
@@ -46,14 +46,14 @@ Se apenas este arquivo estiver disponível, ele é suficiente para iniciar a Fas
 |---|---|
 | Repository | MartinFMelcop/Creative_AI_Project_HUB; actual Git root `/workspace/Creative_AI_Project_HUB`; lab remains nested in its original package directory |
 | Preserved sources | 175 Rave Master texts and 3 WebSocket files; unchanged ZIP and inventory; not a complete RMXP backup |
-| Primary workstream | P03 Midnight Signal 0.1.0: complete original rhythm stage; P08 owns the rendered soundtrack and verified P03 consumer |
-| Engine execution | P03 uses browser Canvas/Web Audio; P10 Python; P11 Node/Express/Socket.IO. No Unity/RMXP execution claim |
-| Current verification | Real 69s browser playback, judgments/results/replay, instrument-aligned charts and measured actual audio bytes; `evidence/tokyo80s/RUN.json` records commands/limits |
+| Primary workstream | P10 Flood Crossing browser 0.3.0: complete rescue, illustrated situation and durable local play workflow |
+| Engine execution | P10 static ES-module browser port and unchanged Python reference; P03 Canvas/Web Audio; P11 Node/Socket.IO. No Unity/RMXP execution claim |
+| Current verification | 4 domain / 10 Chromium checks; 20,124 actual Python transitions compared, complete routes/all endings, reload/import/export and same-agent presentation review; `evidence/waystone-dialogue/BROWSER_RUN.json` |
 | Historical verification | v0.2.0 combat/dialogue, P10 trust, P11 unread and P02 snapshot records remain preserved; the old scenario runner was not rerun |
-| Next action | Unassisted physical-hardware play and listening for P03/P08, then a distinct second stage; P10 reader review and P02/P11 independent gates remain separate |
-| Other seeds | P10 adventure 0.2.0, standalone scene 0.1.3, P11 chat 0.1.7 and P02 runner 0.2.1 are preserved |
+| Next action | Unassisted P10 browser play, then a connected morning operation driven by transport/medicine/resident outcomes; P03 listening/hardware play and independent P02/P11 gates remain separate |
+| Other seeds | P03/P08 0.1.0, P10 Python adventure 0.2.0 / standalone 0.1.3, P11 chat 0.1.7 and P02 runner 0.2.1 preserved |
 | Transfer / shared status | TR-009 (evaluation adaptation) and TR-012 (real P08 audio in P03) validated for bounded consumers; ten earlier candidates remain; no shared engine |
-| Portfolio / attribution | Baseline `90fb740` verified on main via Git fetch/ls-remote. Martin supplied direction; Codex implemented/reviewed; new native Site keeps owner-only access |
+| Portfolio / attribution | Baseline `07df669` synchronized with main by authenticated fetch/merge. Martin supplied direction; Codex implemented/reviewed. P10 has its own retained owner-private Site identity; final publication SHA is verified in the session delivery |
 
 Registry evidence paths must resolve to existing files inside the lab; working
 paths must be directories and legacy-source IDs must exist. This documentary
@@ -230,8 +230,8 @@ Identificadores persistem mesmo quando nomes mudam. Um projeto arquivado pode co
 | P07 | Visual Generation & Asset Lab | Capas, ilustrações, sprites e direção | Assets consistentes, pipeline e estudo de seleção | Material visual histórico; inventário pendente |
 | P08 | Audio, Poetry & Music Lab | Original musical production and integration | One rendered instrumental with a real game consumer | Midnight Signal PCM/OGG and score provenance; no album or human approval |
 | P09 | AI Delivery & Operations Cases | Carreira real e avaliação simulada | Case de entrega, análise de workflow e rubricas | Base profissional lida; cases anteriores pendentes |
-| P10 | Adventures Unleashed / Rave Master | Narrative, NPCs and recovered systems | Preserved complete Flood Crossing terminal operation | Adventure 0.2.0; standalone 0.1.3; bounded evidence in registry |
-| P11 | Real-time Integration Lab / WebSocket | Node/Socket.IO event flow; three preserved source files | Local chat; later evaluation task or lobby candidate | Working chat 0.1.5: viewport reading restoration and activity-aware unread/title feedback; TR-009 task adaptation verified; no public hosting |
+| P10 | Adventures Unleashed / Rave Master | Narrative, NPCs and recovered systems | Complete browser rescue with local resume and portable saves | Browser 0.3.0; Python adventure 0.2.0 / standalone 0.1.3; bounded evidence in registry |
+| P11 | Real-time Integration Lab / WebSocket | Node/Socket.IO event flow; three preserved source files | Local chat; later evaluation task or lobby candidate | Working chat 0.1.7: draft recovery, reading restoration and activity-aware unread/title feedback; TR-009 task adaptation verified; no service deployment |
 
 P02 agrupa evaluation e QA porque podem compartilhar a mesma aplicação pequena. Não criar dois projetos Unity idênticos apenas para apresentar títulos diferentes. P01 pode abrigar produção, economia e analytics como cases distintos de uma fonte comum.
 
@@ -410,18 +410,23 @@ Contagem de sprints não comprova produto final ou estabilidade. Sem auditarmos 
 
 Reservatório recuperado de RPG Maker XP/RGSS: narrativa, personalidade e diálogo de NPCs, combate, progressão, crafting, reputação, planejamento de arte/áudio e QA. A extração completa, os estados e limites estão na seção 28.2. Não é um novo compromisso de terminar um RPG extenso nem uma fusão automática com os outros RPGs do inventário.
 
-[The Last Waystone](projects/waystone-dialogue/README.md) is now P10's first working
-adaptation: nine verified NPC-0007 variants, English framing/responses, closed
-state predicates, session memory, four endings and restart. Version 0.1.2 revises
-responses using existing help, lie and outburst history and separates narration
-from speech; the 0.1.1 agreement/trust-recovery gates remain unchanged. Twenty-nine
-checks and exhaustive reachable-state comparison validate the bounded CLI contract.
-Scene rules and adaptation fiction are recorded in provenance and ADR-017/018/023; no full RPG equivalence, weighted
-scoring, human creative review or engine migration is claimed.
+[The Last Waystone](projects/waystone-dialogue/browser/README.md) is a complete
+browser rescue operation with equipment, Keeper negotiation, two routes,
+forecast current, residents/cargo and five consequential shelter endings.
+Browser 0.3.0 adds an original live SVG diagram, action risks, journal, local
+resume and replay-validated file saves. The Python adventure 0.2.0 and standalone
+scene 0.1.3 remain unchanged. Its oracle compares actual choices, trace/state and
+epilogues; browser checks execute the complete workflow. No full RPG equivalence,
+independent reader approval, shared engine or commercial product is claimed.
 
 ### P11 — Real-time Integration Lab / WebSocket
 
-The recovered Node/Express/Socket.IO snapshot only logs incoming messages. Its working adaptation broadcasts validated text in connected browsers. P11 0.1.5 is the maintained local slice with thirty-three protocol/Chromium checks recorded in its README, including activity-aware unread state and viewport reading restoration. Those checks were not rerun locally in this P10 increment. Human review remains pending. See section 28.3 and `projects/realtime-integration-lab/README.md` for provenance and limits. TR-009 is calibrated in P02; lobby reuse remains a candidate.
+The recovered Node/Express/Socket.IO snapshot only logs incoming messages. Its
+working adaptation is P11 0.1.7: a bounded local ephemeral chat with send/uncertainty,
+draft recovery, reading-position and activity feedback. All 38 protocol/Chromium
+checks pass in the current browser-rescue regression run. Human review remains
+pending. See section 28.3 and `projects/realtime-integration-lab/README.md` for origin
+and limits. P02 0.2.1 retains calibrated TR-009; lobby reuse remains a candidate.
 
 ## 6. Arquitetura do laboratório
 
@@ -544,10 +549,10 @@ Antes do score, verificar bloqueios: fontes inacessíveis; execução impossíve
 
 **Historical order:** v0.1.0 recommended P01 discovery; v0.2.0 recovered concrete P10/P11 sources. Under the current request to select and implement an increment, Codex prioritized P11 because its defect and full local interaction can be verified here. ADR-008 records the choice; the assessment and plan preserve alternatives without activating them. This is not a claim that Martin individually selected or tested P11.
 
-**Current work order:** P03/P08 now provide a complete rhythm stage and real
-original audio. Validate physical timing, note density and musical direction
-with players/listeners, then build a distinct second stage. Preserve P10's
-operation; its browser adaptation and P02/P11 independent gates remain separate.
+**Current work order:** P10's complete rescue is now playable without a terminal.
+Observe unassisted browser decisions and comprehension, then create a connected
+morning operation using its separate transport, resident and medicine outcomes.
+P03/P08 hardware play/listening and the independent P02/P11 gates remain separate.
 More QA infrastructure is not the default product development objective.
 
 **P01 economia e P03 vertical slice na sequência**, conforme interesses profissionais e disponibilidade. P04/P07/P08 podem fornecer conteúdo às fatias escolhidas. P05/P06 começam como fontes de extração, e não dois grandes RPGs simultâneos.
@@ -1571,3 +1576,15 @@ one player workflow. TR-012 records actual production/consumer integration.
 [Evidence](evidence/tokyo80s/RUN.json) distinguishes synthetic full playback,
 implementing-agent review and pending human play/listening. P10 and historical
 source bytes remain preserved; no commercial product or exclusive rights claim.
+
+
+### Browser rescue destination — v0.7.0
+
+[P10 Flood Crossing browser](projects/waystone-dialogue/browser/README.md) makes
+both rescue routes consumable as a static game with original situational drawing,
+connected flood/cargo feedback and durable local play. Decision-journal replay
+preserves the unchanged Python rules and dialogue memory; the UI clarifies
+forecast risks without supplying solved paths. [Execution](evidence/waystone-dialogue/BROWSER_RUN.json)
+records real Python comparisons, Chromium journeys and implementing-agent review.
+Human understanding, screen-reader/other-browser behavior and paid demand remain
+unverified. Historical sources and P03/P08, P11 and P02 stay preserved.

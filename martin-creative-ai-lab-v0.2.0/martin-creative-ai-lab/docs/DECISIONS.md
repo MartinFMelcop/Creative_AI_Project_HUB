@@ -556,3 +556,36 @@ native credential/normal Git/static archive fallback; never persist credentials.
 Technical checks and scripted full playback do not establish human enjoyment or
 musical quality. Revisit note density, arrangement and timing after unassisted
 hardware play/listening. Preserve the P10 operation and independent P02/P11 gates.
+
+
+## ADR-030 — a static, resumable browser edition of the complete rescue
+
+**Date:** 2026-10-11 (America/Sao_Paulo). **Status:** P10 browser 0.3.0.
+**Authority:** Martin's explicit portfolio development and main publication request.
+
+The complete Python rescue is a stronger source for an accessible demonstration
+than further chat guards or another evidence-only increment. Build a static
+browser edition with original situational SVG, actual action risk, journal,
+local resume and portable saves. No backend, framework, remote font/image or
+new shared engine is needed. A Python-backed server would retain a runtime
+installation barrier; an ES-module port can be distributed as static files.
+
+Preserve Python as the rule reference and terminal option. Export its dialogue
+catalogue and compare real choices, all trace fields, state and epilogues across
+representative workshop histories and the complete successor graph of twelve
+specified river entries. This bounds duplication risk without claiming all
+possible workshop histories. A later Python rule change must update the port.
+
+Saves store accepted actions, not trusted state snapshots. Rebuild a fresh game
+before an explicit replacement, reject unavailable actions and version/size
+mismatches, and keep file export usable when localStorage fails. No undo, account,
+cloud sync or future schema migration. Preserve the nine-beat flood and separate
+twelve-turn dialogue window; explain a flooded landing rather than changing rules.
+The map is a new diagram, not recovered art; no broad P07/rights claim follows.
+
+Use a separate retained owner-private Sites identity for P10. Source helpers are
+unavailable in this executor; native credentials on hidden stdin, normal Git and
+an archive from the pushed source provide the bounded fallback. No audience
+change, credentials in files, full RPG restoration or commercial approval.
+Revisit comprehension/pacing through unassisted play and build a connected morning
+operation from the actual outcomes rather than collecting unrelated features.

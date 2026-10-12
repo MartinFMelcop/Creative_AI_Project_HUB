@@ -1,4 +1,24 @@
-# Current milestone — Midnight Signal
+# Current milestone — Flood Crossing browser
+
+Deliver the complete P10 rescue without requiring a terminal: faithful static
+engine, original situational map, connected flood/resident/cargo/current feedback,
+scene/choice interface, actual journal, local resume and portable replay saves.
+Preserve Python 0.2.0/0.1.3, its narrative/rules, P03/P08, P11/P02 and the archive.
+
+Acceptance: compare real Python traces and choices; play both full routes and
+all five endings through DOM controls; demonstrate the same-equipment cargo-order
+consequence; reload loaded cargo and import into a fresh browser profile; reject
+bad saves atomically; permit export/play without browser storage; use keyboard
+and touch; review desktop/mobile and deadline/forecast feedback. Connect existing
+CI, record bounded evidence, commit and publish normally to main, and deploy the
+same static bytes with a retained owner-private Site identity.
+
+[Execution](../evidence/waystone-dialogue/BROWSER_RUN.json) records completion
+and limits. Next: unassisted player comprehension, then a connected morning
+operation with transport, medicine and resident outcomes as actual inputs.
+
+
+# Previous milestone — Midnight Signal
 
 Deliver P03's first complete four-lane browser stage and a real P08 soundtrack:
 original score/synthesis, WAV master and OGG export, two musically aligned charts,
