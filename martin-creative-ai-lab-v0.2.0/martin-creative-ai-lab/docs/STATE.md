@@ -1,49 +1,39 @@
 # Lab state
 
-**Updated:** 2026-10-11 (America/Sao_Paulo). **Seed:** 0.8.0.
-**Current milestone:** P10 Flood Crossing two-day browser campaign 0.4.0.
+**Updated:** 2026-10-12 (America/Sao_Paulo). **Seed:** 0.9.0.
+**Current milestone:** P06 Veilbreak — The Bell Warden 0.1.0.
 
-[Play](../projects/waystone-dialogue/browser/README.md) the unchanged night rescue,
-then meet the morning crew after any ending. Actual road/ferry, dry/spoiled/left
-medicine, villagers/Iven and unresolved council-order history determine the
-six-shift relief operation. Recovery, clinic delivery, grain, sowing seed and
-transport work compete. A supplied clinic frees time; a stable road carries four
-crates per shift; a ferry carries two and Iven speeds it. The ridge is a slow
-fallback. Timely/late care, kept/planted seed, depot reserve and afternoon routes
-are separate facts in the handover, without casualty or harvest inventions.
+[Play the native trial](../projects/veil-arena/README.md) from its Godot project
+or delivered `dist/veilbreak.pck`. Real physics bodies collide with walls, two
+columns and the opponent. Blade counters, resolve, projectile seals, ward breaks
+and dodges connect to one continuous two-phase fight. Locked sweep/charge/wave
+warnings permit repositioning; the faster second phase adds a warned charge echo.
+Title/tactics, keyboard/mouse help, pause, victory/defeat, results and restart
+complete the encounter. Original runtime geometry supplies actual visual feedback.
 
-New scenes use Mara's work list, Iven's load limits, Senn's seed/planting work and
-the Keeper's public repair record. Named characters do not act while absent.
-A correction changes morning cooperation without rewriting the night trace.
-Existing schema-1 night saves continue; schema 2 replays both days. Local reload,
-portable saves, explicit replacement, keyboard/touch and the day map/clock/roster
-are connected. The Python adventure 0.2.0 / scene 0.1.3 remain night-only options.
+[Execution](../evidence/veil-arena/RUN.json) distinguishes source import, 22 actual
+scene/physics checks, eight OpenGL framebuffer checks and independent built-pack
+execution. Legal scripted inputs win after both phases with two health remaining;
+idle play and a passive ranged circuit lose. Fixed-fps automation and same-agent
+visual/strategy review establish behavior, not human balance or enjoyment.
 
-[Execution](../evidence/waystone-dialogue/CAMPAIGN_RUN.json): all 25 checks pass,
-including 14 retained, seven campaign-domain and four campaign-Chromium checks.
-The morning graph covers 525 states / 720 transitions from six specified night
-endings. Night parity retains 20,124 actual Python transitions over 8,583 river
-states plus specified dialogue paths. All 52 Python checks and source catalogue
-validation pass. P03/P08, P11/P02, archive and night-rule files are byte-unchanged;
-the existing CI now executes the complete campaign suite and portfolio gates.
+Godot 4.6.3 standard is installed; Unity, its historical starter and .NET are not.
+This new 2D destination realizes the small-arena seed, not recovered Unity/3D
+code. PCK resources were built and executed; the pack requires Godot. No standalone
+OS executable, audio, controller, campaign, human input, hardware performance,
+other-platform compatibility or commercial approval is claimed. Native CI checks
+source, shipped pack and a rebuilt pack with a pinned official engine download.
+Hosted job outcomes are established by GitHub, not inferred from local execution.
 
-Implementing-agent source/gameplay and desktop/mobile visual review removed a
-dominated replacement choice when dry medicine can be recovered, made a standby
-ferry visible in the handover, and corrected scenes requiring absent characters.
-Actual same-night work order preserves people/food/seed while changing care timing.
-These are technical/creative assessments by the implementer, not audience approval.
-Unassisted comprehension/enjoyment, physical hardware, assistive technology,
-Safari/Firefox and commercial interest remain unverified. Two-chapter prototype;
-no full RPG, cloud sync, harvest simulation or clinical outcome model.
+The clean baseline `297044b` matched main after fetch/merge. Recent P10/browser
+concentration prompted comparison with native P06, P03 music, P11 service and
+missing creative masters. P10/P03/P08, P11/P02, historical archive and transfer
+records are unchanged. No Sites deployment is part of this native milestone.
+Martin supplied direction/authorization; Codex implemented and reviewed the work.
+Normal main publication is explicitly authorized; the final delivery verifies
+its actual stored message and local/remote SHA.
 
-Baseline `757c0e7` was clean and synchronized with main through Git fetch/merge.
-Normal main publication is explicitly authorized. The existing owner-private P10
-Site identity/audience is retained, with the prior session's explicit private-demo
-authorization. Official source helpers remain unavailable; hidden-stdin native
-credentials and normal Git/static packaging preserve exact committed runtime
-bytes without persisted secrets. This state precedes publication; final delivery
-verifies the actual commit/main SHA and deployment result.
-
-Next: observe unassisted two-day play, refine relief priorities and dramatic
-pacing, then decide whether another chapter strengthens the short campaign.
-P03 hardware/listening and independent P02/P11 review remain separate.
+Next session must compare portfolio opportunities again: unassisted native
+keyboard play and encounter pacing; P11 rooms/identity/persistence as a coherent
+service; P03 listening/hardware timing and a distinct musical stage. Independent
+P02 candidate context and complete P04 manuscript remain separate missing inputs.

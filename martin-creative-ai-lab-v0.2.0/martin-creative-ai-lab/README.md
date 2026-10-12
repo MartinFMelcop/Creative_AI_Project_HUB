@@ -4,16 +4,20 @@ An evolving laboratory of games, narrative, images, audio, data, and AI
 evaluation by **Martin Melcop Neto**. Projects are adaptable seeds: build small
 slices, verify behavior, record decisions, and test reuse in actual destinations.
 
-**Current seed: v0.8.0.** The lab includes eleven project lines, 178 preserved
+**Current seed: v0.9.0.** The lab includes eleven project lines, 178 preserved
 historical texts, a working local text-chat adaptation, a calibrated
 practice-task harness, a complete rescue adventure with browser/terminal editions,
-and an original browser rhythm stage with a real rendered soundtrack. Private
+an original browser rhythm stage with a real rendered soundtrack, and a native
+Godot boss arena with an executed PCK. Private
 Sites demos support the browser games. No full RPG migration, model benchmark,
 finished music catalogue or public-audience deployment is claimed.
 The containing directory keeps its original v0.2.0 package name. Latest verified
 project versions and execution boundaries are in the state and registry.
 
 ## Start here
+
+- [P06 — Veilbreak](projects/veil-arena/README.md): native Godot boss encounter, source and playable resource pack.
+- [Native execution](evidence/veil-arena/RUN.json): actual physics, OpenGL frames, full fight and pack build/run boundaries.
 
 - [State](docs/STATE.md): completed increment, limits, and next action.
 - [Assessment](docs/ASSESSMENT.md) and [improvement plan](docs/IMPROVEMENT_PLAN.md): evidence and selected priorities.
@@ -78,7 +82,8 @@ the state record.
 
 [Lab checks](https://github.com/MartinFMelcop/Creative_AI_Project_HUB/actions/workflows/lab-checks.yml)
 runs these checks on main pushes, pull requests to main, and manual dispatch.
-Two Ubuntu 24.04 jobs use Python 3.12, P11's recorded Node version, locked npm
+Three Ubuntu 24.04 jobs include pinned Godot native gameplay/package checks,
+Python 3.12, P11's recorded Node version, locked npm
 packages and Playwright's matching Chromium. Browser installation/startup must
 succeed; unavailable execution cannot produce a passing calibration. Full Git
 history retains the evaluator's pinned starter and suite commits. Actions have

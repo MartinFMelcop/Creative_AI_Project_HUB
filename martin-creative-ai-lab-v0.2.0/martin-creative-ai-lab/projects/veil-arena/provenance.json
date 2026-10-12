@@ -1,0 +1,19 @@
+{
+  "project_id": "P06",
+  "version": "0.1.0",
+  "historical_title": "Véu Partido",
+  "working_title": "Veilbreak — The Bell Warden",
+  "origin": "New Codex-authored native encounter under Martin's portfolio direction, using the seed's small two-phase arena objective.",
+  "missing_source": "VeuPartido_UnityStarter_v0.0.47.zip is a historical breadcrumb, not present in this checkout. No Unity migration or recovered code is claimed.",
+  "technology": "Godot 4.6.3 standard / GDScript / CharacterBody2D and StaticBody2D / native Canvas rendering and Controls.",
+  "inspected_but_not_transferred": "P10's preserved COMBAT_FORMULAS.csv and RM_COMBAT_RUNTIME.rb contain random accuracy/crit and level-scaled mitigation. They are not used by this deterministic real-time encounter; the related transfer remains a candidate.",
+  "accepted_differences": [
+    "New 2D desktop trial, original Bell Warden, blade/seal/resolve/ward interactions and original procedural geometry; not restored historical 3D gameplay or franchise characters.",
+    "One enemy with three locked patterns, phase-two echo, pressure/opening tradeoffs and actual victory/defeat. No 20-boss catalogue, damage taxonomy, crafting or campaign claim.",
+    "Native source and built PCK are delivered. PCK requires Godot; no standalone platform executable, Unity editor or .NET compilation is claimed."
+  ],
+  "media_origin": "All runtime visual geometry and UI are authored in arena.gd; preview.png is an actual Godot framebuffer capture from scripted play. No external image, font file or audio is imported.",
+  "engine_license": "Godot is MIT-licensed: https://godotengine.org/license/ . No engine binary is redistributed in the repository.",
+  "quality_boundary": "Engine execution and implementing-agent visual/strategy review, not human input, audience approval or commercial validation.",
+  "evidence": "evidence/veil-arena/RUN.json"
+}

@@ -1,0 +1,146 @@
+{
+  "project_id": "P06",
+  "version": "0.1.0",
+  "recorded_at": "2026-10-12",
+  "baseline_commit": "297044b7b5cdc70d80a4e3ec498de7d03fda5966",
+  "contribution": {
+    "direction_and_publication_authority": "Martin Melcop Neto",
+    "implementation_and_review": "Codex; no independent human playtest"
+  },
+  "before": "Seed/specification and missing VeuPartido_UnityStarter_v0.0.47.zip; no executable P06 destination in this checkout.",
+  "after": "Native two-phase Bell Warden encounter, physics/collisions, blade/seal/resolve/ward decisions, three locked warnings, charge echo, complete pause/tactics/results/restart and executed compiled PCK.",
+  "environment": {
+    "engine": "Godot 4.6.3.stable.official.7d41c59c4 standard",
+    "platform": "Linux x86_64",
+    "renderer": "OpenGL 4.5 Compatibility; Mesa 25.0.7-2+deb13u1 llvmpipe (LLVM 19.1.7, 256 bits)",
+    "display": "Existing Xorg 1.21.1.16 dummy driver, 1280x800, local display :98, TCP disabled",
+    "simulation": "60 Hz physics; --fixed-fps 60 synthetic input",
+    "audio": "Dummy driver; no game audio",
+    "unity_and_dotnet": "Not installed; historical Unity starter absent",
+    "network": "Inherited managed network policy; no proxy bypass"
+  },
+  "executed": [
+    {
+      "check": "Source editor import",
+      "command": "godot --headless --path . --editor --import --quit",
+      "result": "Exit 0; actual engine import, not a human graphical editor session"
+    },
+    {
+      "check": "Source scene/physics behavior",
+      "command": "godot --headless --path . --script tests/encounter.gd --fixed-fps 60",
+      "checks": 22,
+      "failures": []
+    },
+    {
+      "check": "Native OpenGL scene/physics/screens",
+      "command": "DISPLAY=:98 VEIL_CAPTURE_DIR=<scratch> godot --path . --script tests/encounter.gd --fixed-fps 60 --audio-driver Dummy --disable-vsync",
+      "checks": 30,
+      "breakdown": "22 behavior checks plus eight unique framebuffer-width checks/captures",
+      "failures": [],
+      "screens": [
+        "title",
+        "paused",
+        "tactics",
+        "ward-broken",
+        "defeat",
+        "warning",
+        "phase-two-echo",
+        "result"
+      ]
+    },
+    {
+      "check": "Compiled game resource pack export",
+      "command": "godot --headless --path . --export-pack Linux dist/veilbreak.pck",
+      "result": "Exit 0; compiled GDScript and scene packed; tests/documentation/dist excluded",
+      "bytes": 19772
+    },
+    {
+      "check": "Shipped pack independent execution",
+      "command": "godot --headless --main-pack <absolute delivered PCK> --script <external scratch encounter.gd> --fixed-fps 60",
+      "working_directory": "Scratch outside the source project",
+      "checks": 22,
+      "failures": []
+    },
+    {
+      "check": "Fresh pack rebuild and execution",
+      "command": "godot --headless --path . --export-pack Linux <scratch>/rebuilt.pck; godot --headless --main-pack <rebuilt PCK> --script <external scratch encounter.gd> --fixed-fps 60",
+      "checks": 22,
+      "failures": [],
+      "rebuilt_sha256": "22f48979aa263847e697c1b68fce89ff4cdadf6dedddac55bef0edb5609e1129",
+      "matches_delivered_pack": true
+    },
+    {
+      "check": "Delivered main scene native launch",
+      "command": "DISPLAY=:98 godot --main-pack <absolute delivered PCK> --audio-driver Dummy --quit-after 120",
+      "result": "Exit 0; main-scene startup with actual OpenGL, no test SceneTree override"
+    },
+    {
+      "check": "Repository validator regressions",
+      "command": "python3 tools/test_validate_repo.py",
+      "checks": 11,
+      "result": "Pass"
+    },
+    {
+      "check": "Manifest regressions",
+      "command": "python3 tools/test_check_manifest.py",
+      "checks": 11,
+      "result": "Pass"
+    }
+  ],
+  "behavior_scope": "Actual native wall/column movement; guarded/open damage and insufficient resolve; three real projectile hits and ward break; protected phase transition; idle defeat; reset; Viewport mouse input and F1 tactics; pause/explicit resume/focus notification; full legal-input victory. Boundary fixtures set positions/stages; integrated fight resets and uses only Input actions.",
+  "integrated_victory": {
+    "mode": "victory",
+    "simulated_seconds": 51.866666666665,
+    "boss_hp": 0,
+    "player_hp": 2,
+    "phase_changes": 1,
+    "hits": 26,
+    "strikes": 12,
+    "seals": 14,
+    "ward_breaks": 1,
+    "dodges": 3,
+    "damage_taken": 4,
+    "patterns": [
+      "sweep",
+      "charge",
+      "wave"
+    ],
+    "method": "Reactive scripted legal actions, no injected victory damage; not human/wall-clock timing"
+  },
+  "strategy_probe": {
+    "method": "Separate synthetic passive ranged circuit; movement/seals, no blade/dodge, actual boss damage",
+    "mode": "defeat",
+    "boss_hp_remaining": 64,
+    "player_hp": 0,
+    "ward_breaks": 0,
+    "damage_taken": 6,
+    "assessment": "One losing strategy and one winning strategy do not establish balance or absence of exploits",
+    "simulated_seconds_approx": 79.02
+  },
+  "implementing_agent_review": {
+    "inspected": "All eight actual framebuffer captures and source; published preview is the integrated phase-two echo frame",
+    "improvements": "Clear locked threat shapes, visible open-core/ward/resolve, HUD masking, opaque tactics, keyboard help and buttons that do not capture combat Space/Enter",
+    "assessment": "Counters reward timing/position; seals trade resolve for pressure; stone blocks both projectiles and charges; echo challenges phase-one recovery habits",
+    "independent_review": false
+  },
+  "preservation": "P10/P03/P08, P11/P02, archive, asset/transfer records unchanged against baseline; no claimed historical combat transfer or Sites deployment.",
+  "execution_notes": [
+    "Initial default-sandbox engine socket errors were resolved through reviewed execution; no parser failure remained.",
+    "The Xorg software driver warns that changing V-Sync is unsupported; no hardware performance claim.",
+    "Final pack/native checks completed after automatic approval review capacity resumed."
+  ],
+  "limits": [
+    "PCK requires the matching Godot runtime; no export templates, standalone OS executable or engine binary delivered.",
+    "No human physical keyboard/mouse timing, natural OS focus test, accessibility review, controller/touch, audio, save/campaign or finished production art.",
+    "Windows/macOS and hardware GPU behavior unverified; synthetic victory is not audience enjoyment or market evidence.",
+    "Native CI is configured to verify a pinned official archive and source/shipped/rebuilt packs; hosted results must be read from GitHub Actions."
+  ],
+  "sha256": {
+    "projects/veil-arena/arena.gd": "a24531dbebcc53be121a1eb3fc2fd8f344429fdeada82bc1612b14361ba92085",
+    "projects/veil-arena/project.godot": "c867fde303bb56dddf313fb6f914688c0b30f1a463bbc5c1ff78709e2da897f6",
+    "projects/veil-arena/arena.tscn": "053f5dca5ca70648d18518402b0bb926d7d599a801fa13c5f8bc9c08e0fa3dbe",
+    "projects/veil-arena/tests/encounter.gd": "ddff11c1dd904665bf9820026731108b251cc5eefaee49d0733819d619ed955f",
+    "projects/veil-arena/dist/veilbreak.pck": "22f48979aa263847e697c1b68fce89ff4cdadf6dedddac55bef0edb5609e1129",
+    "evidence/veil-arena/preview.png": "bf3f86d6ba2c1427ff7ab668db03d2f24b8a06b7469850009740ff21360b5449"
+  }
+}

@@ -15,6 +15,30 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
+  native-arena:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    defaults:
+      run:
+        working-directory: martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/projects/veil-arena
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+      - name: Verify pinned Godot, run native gameplay and built resource packs
+        run: |
+          mkdir -p "$RUNNER_TEMP/veil-godot" "$RUNNER_TEMP/veil-data" "$RUNNER_TEMP/veil-config" "$RUNNER_TEMP/veil-cache"
+          curl --fail --location --retry 2 --output "$RUNNER_TEMP/veil-godot/engine.zip" https://github.com/godotengine/godot/releases/download/4.6.3-stable/Godot_v4.6.3-stable_linux.x86_64.zip
+          printf '%s  %s\n' d0bc2113065e481c9c2c2b2c37daa4e8be3fe9e27f0ab9ab0b6096e9a37907f3 "$RUNNER_TEMP/veil-godot/engine.zip" | sha256sum --check
+          unzip -q "$RUNNER_TEMP/veil-godot/engine.zip" -d "$RUNNER_TEMP/veil-godot"
+          veil_engine="$RUNNER_TEMP/veil-godot/Godot_v4.6.3-stable_linux.x86_64"
+          chmod +x "$veil_engine"
+          export XDG_DATA_HOME="$RUNNER_TEMP/veil-data" XDG_CONFIG_HOME="$RUNNER_TEMP/veil-config" XDG_CACHE_HOME="$RUNNER_TEMP/veil-cache"
+          "$veil_engine" --headless --path . --editor --import --quit
+          "$veil_engine" --headless --path . --script tests/encounter.gd --fixed-fps 60
+          cp tests/encounter.gd "$RUNNER_TEMP/veil-godot/encounter.gd"
+          "$veil_engine" --headless --main-pack "$PWD/dist/veilbreak.pck" --script "$RUNNER_TEMP/veil-godot/encounter.gd" --fixed-fps 60
+          "$veil_engine" --headless --path . --export-pack Linux "$RUNNER_TEMP/veil-godot/rebuilt.pck"
+          "$veil_engine" --headless --main-pack "$RUNNER_TEMP/veil-godot/rebuilt.pck" --script "$RUNNER_TEMP/veil-godot/encounter.gd" --fixed-fps 60
+
   integrity-and-dialogue:
     runs-on: ubuntu-24.04
     timeout-minutes: 10

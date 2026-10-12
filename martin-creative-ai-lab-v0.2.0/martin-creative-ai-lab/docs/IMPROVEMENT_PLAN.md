@@ -1,4 +1,21 @@
-# Current milestone — the morning crew
+# Current milestone — The Bell Warden
+
+Deliver P06 as one complete native Godot 2D encounter: real movement/collision,
+blade/seal/resolve/ward, three readable locked attacks, a meaningful second-phase
+echo, complete title/tactics/pause/results/restart and a built resource pack.
+Preserve historical sources and existing portfolio runtimes. No Unity recovery,
+standalone platform executable or unrelated shared combat framework is required.
+
+Acceptance: import the actual project; execute scene/physics boundaries and a
+complete legal-input fight; compare idle/passive-ranged failure with reactive play;
+render/inspect native screens; build and independently execute the shipped PCK;
+validate records/manifest and add reproducible native CI. Publish normally to main.
+[Execution](../evidence/veil-arena/RUN.json) records the completed milestone and
+remaining limits. Reassess portfolio priorities next session; human keyboard
+pacing, P11 service completeness and a distinct P03 stage are separate candidates.
+
+
+# Previous milestone — the morning crew
 
 Complete a two-day P10 campaign. Preserve the original night, derive morning
 transport/clinic/crew/record from its actual ending, and connect six work slots

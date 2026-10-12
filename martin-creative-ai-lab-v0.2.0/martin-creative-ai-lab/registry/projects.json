@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-10-11",
+  "updated_at": "2026-10-12",
   "projects": [
     {
       "id": "P01",
@@ -109,19 +109,27 @@
     },
     {
       "id": "P06",
-      "name": "Véu Partido",
+      "name": "Véu Partido / Veilbreak",
       "slug": "veu-partido",
-      "status": "seed",
-      "maturity": "M0",
-      "phase": "legacy-triage",
-      "origin": "historical_context",
-      "next_action": "Abrir starter real e avaliar uma arena pequena.",
+      "status": "active",
+      "maturity": "M4",
+      "phase": "native-arena-validated",
+      "origin": "new_seed_implementation",
+      "next_action": "Observe unassisted keyboard play; refine boss pacing and physical input before production art/audio or a further native encounter.",
       "related_projects": [
         "P02",
         "P04",
         "P05"
       ],
-      "evidence": []
+      "evidence": [
+        "projects/veil-arena/README.md",
+        "projects/veil-arena/provenance.json",
+        "evidence/veil-arena/RUN.json"
+      ],
+      "historical_name": "Véu Partido",
+      "working_path": "projects/veil-arena",
+      "working_version": "0.1.0",
+      "maturity_scope": "Godot 4.6.3 native 2D encounter only: actual CharacterBody2D collision/movement, blade/seal/resolve/ward, three locked patterns, second-phase charge echo, title/controls/pause/results/restart. Twenty-two actual scene/physics checks pass; OpenGL virtual-display execution adds eight framebuffer checks. Scripted victory and idle/passive-ranged defeat observed. Compiled PCK built and executed independently; requires Godot. Missing Unity starter not restored, no standalone OS export, human input/enjoyment, audio, controller, other-platform or commercial validation."
     },
     {
       "id": "P07",

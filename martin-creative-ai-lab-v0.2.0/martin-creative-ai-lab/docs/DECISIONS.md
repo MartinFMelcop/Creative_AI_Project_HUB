@@ -619,3 +619,27 @@ schema 2 records the complete accepted action journal. Replay validates fresh
 state across both days and ignores supplied snapshots. Preserve the existing
 owner-private Site identity and explicit session authorization. Revisit priorities,
 pacing and voices through unassisted play before expanding another chapter.
+
+
+## ADR-032 — realize P06 as an executed native combat trial
+
+**Date:** 2026-10-12 (America/Sao_Paulo). **Status:** Veilbreak 0.1.0.
+**Authority:** explicit portfolio development, technology assessment and main publication.
+
+Recent browser concentration merits comparison with a dormant native seed.
+Choose one complete two-phase arena over a new catalogue/framework. Godot 4.6.3
+standard is installed and actually executes physics/Canvas/Controls; Unity,
+its historical starter and .NET are absent. GDScript serves this coherent 2D
+milestone; adopting C#/3D later requires a product reason and real tools/sources.
+
+Create original Bell Warden geometry and deterministic sweep/charge/wave patterns.
+Projectile pressure, counters, cover and a delayed phase-two echo produce connected
+choices. Do not copy historical random accuracy/crit or level mitigation merely
+to claim reuse; the P10-to-P06 transfer remains a candidate. Preserve the archive.
+
+Deliver source and an exported, independently executed PCK requiring Godot.
+Platform export templates are unavailable; this is not a standalone OS executable.
+CI pins/verifies the official engine archive and tests source, shipped and rebuilt
+packs. Synthetic legal input and actual OpenGL captures establish execution, not
+human timing/enjoyment, accessibility, hardware performance or commercial approval.
+No Sites publication or new engine binary redistribution is part of this work.

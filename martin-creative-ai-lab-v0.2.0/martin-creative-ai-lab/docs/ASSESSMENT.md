@@ -1,4 +1,42 @@
-# Current assessment — consequences become a playable morning
+# Current assessment — a native combat trial
+
+Updated: 2026-10-12 (America/Sao_Paulo). The clean `297044b` checkout matched main
+after fetch/merge. Read current records, actual implementations, recent decisions,
+seed evolution and selected historical combat sources. Recent substantive work
+concentrated on P10's rescue/browser/morning and P03's first rhythm stage; neither
+is a reason to keep selecting browser delivery.
+
+| Opportunity | Evidence and decision |
+|---|---|
+| P06 native arena | Small two-phase seed, no available Unity starter, actual Godot/physics/rendering tools. Complete a new playable encounter; selected. |
+| P11 usable service | Working ephemeral chat; rooms, identity and persistence could form a meaningful user workflow. Valuable separate contract, rather than more isolated guards. |
+| P03 distinct second stage | Real soundtrack and runtime exist. Human listening/input timing remain unverified; another original musical identity is a separate milestone. |
+| P10 campaign expansion | Two connected days already work. Observe unassisted priorities/pacing before assuming another chapter is the highest value. |
+| P04/P05/P02 recovery/evaluation | Full manuscript/engine masters or independent candidate context remain absent. Selected Rave formulas can be inspected but are not an executable game. |
+
+Technology was investigated, not assumed: Godot 4.6.3 standard and Xorg's dummy
+OpenGL display are available; Unity/editor and .NET are absent. GDScript with
+native physics/Canvas/Controls can deliver actual gameplay here. A C# domain alone
+would not prove this encounter, and a browser replacement would reinforce recent
+concentration. No migration or language-diversity quota justifies this choice.
+
+Before: P06 had direction and an unavailable Unity breadcrumb. After: source and
+an executed resource pack deliver blade/seal/ward decisions, cover, three locked
+patterns, a faster phase with charge echo, complete results and replay. Historical
+random hit/crit and level mitigation were inspected and deliberately not copied;
+readable deterministic impacts better serve this small real-time trial.
+
+Implementing-agent assessment: counters reward positioning; seals trade resolve
+for damage/pressure, while columns obstruct them. Phase-two echoes interrupt safe
+recovery assumptions. A passive ranged circuit lost and a reactive mixed strategy
+won, but two synthetic strategies do not establish balance or eliminate dominant
+play. Render review corrected HUD clipping, opaque tactics and button keyboard
+activation. [Execution](../evidence/veil-arena/RUN.json) separates verified engine
+behavior from human input/enjoyment and commercial hypotheses. A bounded native
+portfolio demonstration now exists; paid demand and production readiness do not.
+
+
+# Previous assessment — consequences become a playable morning
 
 Updated: 2026-10-11 (America/Sao_Paulo). Clean `757c0e7` matched main after
 fetch/merge. Read instructions, current state/registry/SEED, durable decisions,

@@ -23,3 +23,9 @@ defined scope, acceptance criteria, and its own execution instructions.
 [P02 — EVAL-001](../evaluations/chat-send-buffering/README.md) is an executable
 task harness under `evaluations/`, using P11's app and tests without duplicating
 the application. Its calibrated artifact gates do not establish model performance.
+
+
+[P06 — Veilbreak](veil-arena/README.md) is a native Godot 4.6.3 boss trial with
+physics movement/cover, blade/seal/ward choices, two phases and complete results,
+pause and restart. Source and built PCK are delivered; PCK requires Godot.
+This is new implementation, not recovery of the missing Unity starter.

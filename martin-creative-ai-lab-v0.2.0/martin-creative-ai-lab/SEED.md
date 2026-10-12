@@ -1,10 +1,10 @@
 # SEED — Martin Creative AI Lab
 
-**Version:** 0.8.0
+**Version:** 0.9.0
 **Data-base:** 10 de outubro de 2026  
 **Autor e responsável pelo portfólio:** Martin Melcop Neto  
 **Working language:** English for new documentation, plans, code comments, UI, and reports. Preserve original creative titles and historical source languages.
-**Current state:** P10 Flood Crossing 0.4.0 is a two-day browser campaign. Actual night transport, medicine, residents and council-record memory govern a playable relief morning with food/seed, clinical timing and route work. Existing night saves continue; both days replay from portable saves. Python night 0.2.0 / scene 0.1.3 and the other projects remain preserved.
+**Current state:** P06 Veilbreak 0.1.0 is a native Godot 2D boss trial with real physics, blade/seal/ward choices, two phases, readable warnings and complete title/pause/results/restart. Its built PCK was executed independently. P10/P03/P08 and P11/P02 are preserved; no Unity restoration, standalone OS executable or human/commercial approval is claimed.
 
 > Construir um laboratório autoral em Git que transforma ideias, obras e experimentos em produtos pequenos, sistemas reutilizáveis e evidências técnicas verificáveis. A IA participa da criação e execução; Martin desenvolve sua capacidade de especificar, compreender, selecionar, corrigir, validar e explicar os resultados.
 
@@ -46,14 +46,14 @@ Se apenas este arquivo estiver disponível, ele é suficiente para iniciar a Fas
 |---|---|
 | Repository | MartinFMelcop/Creative_AI_Project_HUB; actual Git root `/workspace/Creative_AI_Project_HUB`; lab remains nested in its original package directory |
 | Preserved sources | 175 Rave Master texts and 3 WebSocket files; unchanged ZIP and inventory; not a complete RMXP backup |
-| Primary workstream | P10 Flood Crossing campaign 0.4.0: night rescue and consequential relief morning |
-| Engine execution | P10 static ES-module browser port and unchanged Python reference; P03 Canvas/Web Audio; P11 Node/Socket.IO. No Unity/RMXP execution claim |
-| Current verification | 25 campaign/retained checks; 525 morning states / 720 transitions, 20,124 Python night comparisons, actual two-day browser/save journeys; `evidence/waystone-dialogue/CAMPAIGN_RUN.json` |
+| Primary workstream | P06 Veilbreak 0.1.0: complete native boss encounter and verified PCK |
+| Engine execution | P06 Godot 4.6.3/GDScript: source imported, native game rendered/played and PCK built/executed; P10 browser/Python, P03 Web Audio, P11 Node. No Unity/RMXP execution claim |
+| Current verification | 22 native scene/physics checks plus 8 framebuffer checks; complete scripted fight, passive loss and independent PCK; `evidence/veil-arena/RUN.json` |
 | Historical verification | v0.2.0 combat/dialogue, P10 trust, P11 unread and P02 snapshot records remain preserved; the old scenario runner was not rerun |
-| Next action | Unassisted P10 two-day play and review of relief priorities, dramatic pacing and character scenes; P03 listening/hardware play and independent P02/P11 gates remain separate |
-| Other seeds | P03/P08 0.1.0, P10 Python adventure 0.2.0 / standalone 0.1.3, P11 chat 0.1.7 and P02 runner 0.2.1 preserved |
+| Next action | Compare P06 physical keyboard play/pacing, P11 service workflow and a distinct P03 musical stage; no automatic next-project priority |
+| Other seeds | P10 campaign 0.4.0 / Python night 0.2.0 / standalone 0.1.3, P03/P08 0.1.0, P11 chat 0.1.7 and P02 runner 0.2.1 preserved |
 | Transfer / shared status | TR-009 (evaluation adaptation) and TR-012 (real P08 audio in P03) validated for bounded consumers; ten earlier candidates remain; no shared engine |
-| Portfolio / attribution | Baseline `757c0e7` synchronized with main by authenticated fetch/merge. Martin supplied direction; Codex implemented/reviewed. P10 has its own retained owner-private Site identity; final publication SHA is verified in the session delivery |
+| Portfolio / attribution | Baseline `297044b` synchronized with main by authenticated fetch/merge. Martin supplied direction; Codex implemented/reviewed. Native project publishes to authorized main; existing private Sites are untouched |
 
 Registry evidence paths must resolve to existing files inside the lab; working
 paths must be directories and legacy-source IDs must exist. This documentary
@@ -226,7 +226,7 @@ Identificadores persistem mesmo quando nomes mudam. Um projeto arquivado pode co
 | P03 | Tokyo 80s | Original soundtrack, timing and browser gameplay | Complete Midnight Signal stage; physical play/listening still pending | P03 0.1.0 with real P08 audio; see registry/evidence |
 | P04 | O Lich mais velho da tumba mais antiga | Romance, mundo, personagens, arte e continuidade | Narrativa interativa, amostra editorial, jogo, animatic | Pacote v0.4.48 parcialmente inspecionado |
 | P05 | The Dark Knight | Combate por turnos, classes, progressão, conteúdo | Laboratório de combate e balanceamento | Legado RMXP descrito |
-| P06 | Véu Partido | RPG 3D, dano, bosses e crafting | Arena pequena, boss framework, teste de combate | Starter Unity histórico descrito |
+| P06 | Véu Partido / Veilbreak | Native combat trial; historical 3D RPG seed | Playable two-phase Godot arena, source and executed PCK | New destination; missing Unity starter remains historical |
 | P07 | Visual Generation & Asset Lab | Capas, ilustrações, sprites e direção | Assets consistentes, pipeline e estudo de seleção | Material visual histórico; inventário pendente |
 | P08 | Audio, Poetry & Music Lab | Original musical production and integration | One rendered instrumental with a real game consumer | Midnight Signal PCM/OGG and score provenance; no album or human approval |
 | P09 | AI Delivery & Operations Cases | Carreira real e avaliação simulada | Case de entrega, análise de workflow e rubricas | Base profissional lida; cases anteriores pendentes |
@@ -346,17 +346,25 @@ Contagem de sprints não comprova produto final ou estabilidade. Sem auditarmos 
 
 **Risco:** nome genérico ou associado a obras existentes, conteúdo excessivo e dificuldade de atribuição de ativos. Renomear é permitido e pode tornar o produto mais distintivo.
 
-### P06 — Véu Partido
+### P06 — Véu Partido / Veilbreak
 
-**Legado histórico:** starter Unity 3D inspirado em energia e conflitos sobrenaturais associados a Yu Yu Hakusho; três categorias físicas, dez mágicas e dano Absoluto; 20 bosses e 14 secretos em planos; masmorra central e crafting. Breadcrumb de versão: `VeuPartido_UnityStarter_v0.0.47.zip`.
+Historical direction: Unity 3D supernatural combat, damage taxonomy, boss/crafting
+plans and the breadcrumb `VeuPartido_UnityStarter_v0.0.47.zip`. The starter is not
+present, and plans are not executable evidence. No restored Unity code or franchise
+characters enter the new destination.
 
-**Destino candidato:** uma arena com um inimigo, duas fases e dois tipos de dano; comportamento legível e testes de transição. Alternativamente, fornecer conteúdo ao combate de P05 se houver sobreposição comprovada.
+[Veilbreak: The Bell Warden](projects/veil-arena/README.md) 0.1.0 is a new native
+Godot 2D trial. One opponent has locked sweep/charge/wave warnings, a faster second
+phase with delayed charge echo, and a ward pressured by projectile seals. Native
+movement/collisions, resolve, blade counters, results/pause/restart are connected.
+The actual engine and resource pack were executed. This is a bounded native
+prototype; no standalone platform build, human balance or commercial claim.
 
-**Competências:** state machine, comportamento de inimigo, telegraph, dano, cooldown, profiling e QA de combate. Um projeto Unity histórico não comprova domínio de Unity independente.
-
-**Extrações:** fases de boss, taxonomia de dano, encounter configuration e casos de regressão. Não criar framework universal de bosses antes de existir um encontro útil.
-
-**Gate:** abrir projeto real, registrar versão e erros, identificar se reparar ou reconstruir uma fatia custa menos e produz melhor evidência.
+Godot/GDScript suits the small physics/presentation loop and available standard
+editor. Unity/.NET are absent; compiling a C# domain alone would not demonstrate
+this playable milestone. A browser rewrite adds little after recent P10/P03 work.
+Future Unity/3D adoption remains a product decision requiring real sources/tools,
+not an automatic migration or language quota.
 
 ### P07 — Visual Generation & Asset Lab
 
@@ -551,13 +559,15 @@ Antes do score, verificar bloqueios: fontes inacessíveis; execução impossíve
 
 **Historical order:** v0.1.0 recommended P01 discovery; v0.2.0 recovered concrete P10/P11 sources. Under the current request to select and implement an increment, Codex prioritized P11 because its defect and full local interaction can be verified here. ADR-008 records the choice; the assessment and plan preserve alternatives without activating them. This is not a claim that Martin individually selected or tested P11.
 
-**Current work order:** P10's complete rescue is now playable without a terminal.
-Observe unassisted two-day decisions, relief priorities and scene pacing before
-further chapters. Night outcomes now govern the implemented morning.
-P03/P08 hardware play/listening and the independent P02/P11 gates remain separate.
-More QA infrastructure is not the default product development objective.
+**Current work order:** reassess the portfolio every session. P06 now has a native
+trial, while P10 has two playable days and P03 has an original rhythm stage.
+Compare unassisted native/play/listening evidence, P11's complete service workflow,
+independent P02 context and recovered-source opportunities before choosing again.
+Recent browser concentration is a reason to investigate alternatives, not a quota.
 
-**P01 economia e P03 vertical slice na sequência**, conforme interesses profissionais e disponibilidade. P04/P07/P08 podem fornecer conteúdo às fatias escolhidas. P05/P06 começam como fontes de extração, e não dois grandes RPGs simultâneos.
+The former P01/P03-first order is historical planning, not a current mandate.
+Reassess actual portfolio opportunities and technologies; P06 now has its own
+native destination. Related projects should contribute only to a concrete result.
 
 Se Martin escolher arte e música como prioridade principal, reorganizar a rota: uma peça criativa final + processo de geração/seleção + integração pequena. A estrutura não obriga todos os interesses a servirem a uma única carreira de games.
 
@@ -1601,3 +1611,12 @@ character presence and night memory; dry, spoiled and abandoned medicine differ.
 [Execution](evidence/waystone-dialogue/CAMPAIGN_RUN.json) records actual two-day
 journeys, saves and implementing-agent design review. No independent reader,
 commercial, harvest, clinical casualty or Python morning execution claim.
+
+
+### Native combat destination — v0.9.0
+
+P06 now delivers an actual Godot encounter, rather than an unavailable starter
+reference. [Execution](evidence/veil-arena/RUN.json) distinguishes source/editor
+import, physics gameplay, OpenGL rendering, PCK build/run and unverified standalone
+platform/human/commercial outcomes. Procedural geometry is actual runtime visual
+work, not a recovered asset catalogue. No historical combat transfer is promoted.
