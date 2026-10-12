@@ -812,3 +812,27 @@ project links, idempotency, pagination and new work. Synthetic fixtures are not
 human collaboration or power-loss evidence. Scheduled/off-site/encrypted recovery,
 public accounts/retention and commercial validation remain separate milestones.
 Other sources/assets and P02's pinned task remain unchanged. GitHub source only.
+
+## ADR-040 — connect native poses to committed combat contact
+
+**Date:** 2026-10-12 (UTC). **Status:** P06 0.3.0 / P07 0.2.0.
+
+Select P06/P07 motion after comparing completed P11 recovery, P01 strategy,
+P10 progression and P03/P04 feedback. Static poses and instant radial blade hits
+limit the real native experience. Standard Godot/GDScript retains the existing
+physics/audio/presentation consumer without a web or language migration.
+
+Generate two 16-pose reference-edited atlases from current portraits; reject
+crowded cells, preserve accepted PNG bytes and derive foot pivots/scale natively.
+Use actual displacement and combat clocks; freeze on pause/results and clear on
+restart. Blade locks aim and lands at 100ms; seal gathers 75ms. One action, slowed
+movement and visible recovery make commitment observable. Dodge/damage cancels
+unfinished contact without refund. Damage/cue/pose share the emission event.
+
+Preserve resource costs/cooldowns, nominal damage, boss patterns/echo and original
+media. Same controller still wins both versions, with greater damage taken in the
+new bounded run; this is not human balance evidence. Actual source/PCK execution
+and OpenGL frames/movie verify integration. Four-keyframe generated clips retain
+proportion variation and only mirror horizontally. No hand-animation/directional
+completeness, independent art/enjoyment approval or standalone OS build. Extend
+TR-013/add VIS-002 only; other projects and historical sources remain intact.

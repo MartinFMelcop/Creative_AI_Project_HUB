@@ -13,6 +13,18 @@ const COURTYARD = preload("res://media/art/courtyard.png")
 const RUNNER = preload("res://media/art/veil-runner.png")
 const WARDEN = preload("res://media/art/bell-warden.png")
 const SoundDirector = preload("res://sound.gd")
+const Motion = preload("res://motion.gd")
+const STRIKE_CONTACT := 0.10
+const SEAL_CONTACT := 0.075
+var player_action := ""
+var action_time := 0.0
+var action_emitted := false
+var action_aim := Vector2.RIGHT
+var runner_walk_clock := 0.0
+var warden_walk_clock := 0.0
+var runner_moving := false
+var warden_moving := false
+var runner_flipped := false
 var sound: Node
 var player: CharacterBody2D
 var boss: CharacterBody2D
@@ -135,7 +147,7 @@ func _build_ui() -> void:
 	add_child(audio_button)
 	help_panel = PanelContainer.new()
 	help_panel.position = Vector2(275,215)
-	help_panel.size = Vector2(730,285)
+	help_panel.size = Vector2(730,370)
 	var style := StyleBoxFlat.new()
 	style.bg_color = INK
 	style.border_color = Color("50617b")
@@ -146,10 +158,8 @@ func _build_ui() -> void:
 	style.content_margin_bottom = 18
 	help_panel.add_theme_stylebox_override("panel",style)
 	var label := Label.new()
-	label.text = "MOVE   WASD / arrows\nSTRIKE   J — 12 resolve; short range. Guarded: 4 / open: 24 damage.\nSEAL   K — 34 resolve; projectile, 8 damage + 36 ward pressure.\nDODGE   Space — 25 resolve; brief invulnerability, then vulnerable.\nPAUSE   Esc — focus loss also pauses. Enter resumes.\n\nStone columns stop charges and block seals. Amber shapes lock.
-Step outside a sweep; cross a wave\nwith a well-timed dodge. Punish recovery or break the ward with seals.\nAt half health the Warden attacks faster and charges leave an echo.\nThe violet echo gives a separate warning — leave its circle."
-	label.add_theme_font_size_override("font_size",18)
-	label.text += "\nSOUND   M / Sound button — mute or restore all music and cues."
+	label.text = "MOVE   WASD / arrows\nBLADE   J — 12 resolve; aim locks, then 100ms preparation.\nContact: guarded 4 / open 24. Finish recovery before another attack.\nSEAL   K — 34 resolve; gather, then 8 damage + 36 ward pressure.\nDODGE   Space — 25 resolve; can cancel preparation, without refund.\nBrief invulnerability, then vulnerable. Columns still stop movement.\nPAUSE   Esc — focus loss also pauses. Enter resumes.\nSOUND   M / Sound button — mute or restore music and cues.\n\nStone columns stop charges and block seals. Amber warnings lock.\nLeave a sweep; cross a wave with a well-timed dodge.\nPunish recovery or break the ward with three close seal impacts.\nAt half health attacks accelerate and charges leave a violet echo.\nLeave the echo circle even when the core is open."
+	label.add_theme_font_size_override("font_size",17)
 	help_panel.add_child(label)
 	add_child(help_panel)
 	help_panel.hide()
@@ -179,6 +189,12 @@ func reset_encounter() -> void:
 	seal_cooldown = 0.0
 	dash_cooldown = 0.0
 	swing = 0.0
+	_clear_player_action()
+	runner_walk_clock = 0.0
+	warden_walk_clock = 0.0
+	runner_moving = false
+	warden_moving = false
+	runner_flipped = false
 	damage_flash = 0.0
 	boss_flash = 0.0
 	elapsed = 0.0
@@ -251,6 +267,8 @@ func step_fight(delta: float, move: Vector2, strike: bool, cast_seal: bool, dodg
 	feedback_time = maxf(0,feedback_time-delta)
 	if elapsed-last_seal > 2.0: ward = maxf(0,ward-delta*18)
 	if dodge and dash_cooldown <= 0 and stamina >= 25:
+		_clear_player_action() # Cancel pending contact; paid resolve and cooldown stay spent.
+		swing = 0
 		stamina -= 25
 		dash_direction = move.normalized() if move.length() > 0.1 else boss.position.direction_to(player.position)
 		dash_time = 0.20
@@ -259,29 +277,31 @@ func step_fight(delta: float, move: Vector2, strike: bool, cast_seal: bool, dodg
 		stats.dodges += 1
 		sound.cue("dodge",player.position)
 	if dash_time > 0:
-		dash_time -= delta
+		dash_time = maxf(0,dash_time-delta)
 		player.velocity = dash_direction*620
-	else: player.velocity = move.limit_length()*PLAYER_SPEED
+	else: player.velocity = move.limit_length()*PLAYER_SPEED*(0.65 if not player_action.is_empty() else 1.0)
+	var old_player_position := player.position
 	player.move_and_slide()
-	if strike and strike_cooldown <= 0 and stamina >= 12 and dash_time <= 0:
+	runner_moving = player.position.distance_to(old_player_position) > 0.1
+	if runner_moving:
+		runner_walk_clock += player.position.distance_to(old_player_position)/PLAYER_SPEED
+		if player_action.is_empty() and swing<=0 and absf(player.velocity.x)>1: runner_flipped = player.velocity.x<0
+	_advance_player_action(delta)
+	if strike and strike_cooldown <= 0 and stamina >= 12 and dash_time <= 0 and player_action.is_empty():
 		stamina -= 12
 		strike_cooldown = 0.40
-		swing = 0.16
 		stats.strikes += 1
-		sound.cue("strike",player.position)
-		if player.position.distance_to(boss.position) <= 103:
-			var was_open := _boss_open()
-			var applied := _damage_boss(24 if was_open else 4)
-			if applied > 0: sound.cue("counter" if was_open else "guard",boss.position)
-			_feedback(("COUNTER  +%d"%applied if was_open else "GUARDED  +%d — wait for an opening"%applied) if applied > 0 else "The fracturing ward repels the strike. Regroup.", TEAL)
-	if cast_seal and seal_cooldown <= 0 and stamina >= 34 and dash_time <= 0:
+		_start_player_action("strike")
+	elif cast_seal and seal_cooldown <= 0 and stamina >= 34 and dash_time <= 0 and player_action.is_empty():
 		stamina -= 34
 		seal_cooldown = 1.10
 		stats.seals += 1
-		sound.cue("seal",player.position)
-		seals.append({"position":player.position,"direction":player.position.direction_to(boss.position),"life":0.70})
+		_start_player_action("seal")
 	_update_seals(delta)
+	var old_boss_position := boss.position
 	_update_boss(delta)
+	warden_moving = boss.position.distance_to(old_boss_position)>0.1
+	if warden_moving: warden_walk_clock += boss.position.distance_to(old_boss_position)/135.0
 	_update_echo(delta)
 	for effect in effects: effect.life -= delta
 	effects = effects.filter(func(e): return e.life > 0)
@@ -291,6 +311,41 @@ func step_fight(delta: float, move: Vector2, strike: bool, cast_seal: bool, dodg
 		sound.cue(mode)
 		sound.set_phase(false)
 		_sync_ui()
+
+func _clear_player_action() -> void:
+	player_action = ""
+	action_time = 0
+	action_emitted = false
+
+func _start_player_action(kind: String) -> void:
+	player_action = kind
+	action_time = 0
+	action_emitted = false
+	action_aim = player.position.direction_to(boss.position)
+	if action_aim.is_zero_approx(): action_aim = Vector2.LEFT if runner_flipped else Vector2.RIGHT
+	if absf(action_aim.x)>0.01: runner_flipped = action_aim.x<0
+
+func _advance_player_action(delta: float) -> void:
+	if player_action.is_empty(): return
+	action_time += delta
+	var contact := STRIKE_CONTACT if player_action=="strike" else SEAL_CONTACT
+	if not action_emitted and action_time+0.000001 >= contact:
+		action_emitted = true
+		sound.cue(player_action,player.position)
+		if player_action=="strike":
+			swing = 0.14
+			var offset := boss.position-player.position
+			if offset.length() <= 103 and (offset.is_zero_approx() or action_aim.dot(offset.normalized()) >= cos(PI/3)):
+				var was_open := _boss_open()
+				var applied := _damage_boss(24 if was_open else 4)
+				if applied > 0: sound.cue("counter" if was_open else "guard",boss.position)
+				_feedback(("COUNTER  +%d"%applied if was_open else "GUARDED  +%d — wait for an opening"%applied) if applied > 0 else "The fracturing ward repels the strike. Regroup.", TEAL)
+			else:
+				feedback = "Missed. Aim locks when the blade is drawn."
+				feedback_time = 1.3
+		else:
+			seals.append({"position":player.position,"direction":action_aim,"life":0.70})
+	if action_time >= (0.32 if player_action=="strike" else 0.30): _clear_player_action()
 
 func _boss_open() -> bool:
 	return boss_stage != "transition" and (exposed > 0 or boss_stage == "recover")
@@ -348,6 +403,8 @@ func _update_seals(delta: float) -> void:
 func _take_hit() -> void:
 	if invulnerable > 0 or hp <= 0: return
 	hp -= 1
+	_clear_player_action()
+	swing = 0
 	stats.damage_taken += 1
 	invulnerable = 0.75
 	damage_flash = 0.25
@@ -449,7 +506,7 @@ func _draw() -> void:
 		draw_line(projectile.position-projectile.direction*22,projectile.position,TEAL,3)
 	for effect in effects: draw_arc(effect.position,40+(0.35-effect.life)*90,0,TAU,32,Color(effect.color, effect.life/0.35),2)
 	if swing > 0:
-		var angle := player.position.direction_to(boss.position).angle()
+		var angle := action_aim.angle()
 		draw_arc(player.position,90,angle-PI/3,angle+PI/3,24,TEAL,5)
 	_draw_hud()
 	if mode != "fight": _draw_overlay()
@@ -479,13 +536,12 @@ func _draw_actor(pos: Vector2, hero: bool) -> void:
 	if hero:
 		if dash_time > 0: draw_circle(pos,28,Color(TEAL,0.25))
 		draw_arc(pos,18,0,TAU,24,TEAL,2)
-		var bob := sin(elapsed*15)*2 if player.velocity.length()>30 else 0.0
-		draw_texture_rect(RUNNER,Rect2(pos+Vector2(-32,-45+bob),Vector2(64,72)),false,Color(1.5,1.5,1.5) if damage_flash>0 else Color.WHITE)
+		Motion.draw_actor(self,pos,"runner",Motion.runner_frame(self),runner_flipped,Color(1.5,1.5,1.5) if damage_flash>0 else Color.WHITE)
 	else:
 		var color := WHITE if boss_flash > 0 else (TEAL if _boss_open() else (RED if phase == 2 else AMBER))
 		draw_arc(pos,34,0,TAU,32,color,3)
-		var breath := sin(elapsed*3)*1.5
-		draw_texture_rect(WARDEN,Rect2(pos+Vector2(-56,-63+breath),Vector2(112,112)),false,Color(1.5,1.5,1.5) if boss_flash>0 else Color.WHITE)
+		var facing := aim if boss_stage in ["windup","active"] else boss.position.direction_to(player.position)
+		Motion.draw_actor(self,pos,"warden",Motion.warden_frame(self),facing.x<0,Color(1.5,1.5,1.5) if boss_flash>0 else Color.WHITE)
 		# State marker sits above the illustration; color never carries the state alone.
 		draw_circle(pos+Vector2(0,-45),5,color)
 		if _boss_open():
@@ -526,13 +582,13 @@ func _draw_hud() -> void:
 	_bar(Vector2(315,125),255,stamina,100,TEAL)
 	var state_label := "Approaching" if boss_stage=="approach" else ("Open for a counter" if boss_stage=="recover" else "Veil fracture" if boss_stage=="transition" else pattern.to_upper()+" / "+boss_stage.to_upper())
 	_text(Vector2(80,706),state_label,20,AMBER)
-	_text(Vector2(80,742),"WASD move    J strike    K seal    Space dodge    Esc pause",16,Color("aab6cb"))
+	_text(Vector2(80,742),"WASD move    J commit blade    K seal    Space dodge / cancel    Esc pause",16,Color("aab6cb"))
 	if feedback_time > 0: _text(Vector2(420,706),feedback,17,TEAL)
 
 func _draw_overlay() -> void:
+	if help_panel.visible: return
 	draw_rect(Rect2(220,210,840,385),Color(INK,0.94))
 	draw_rect(Rect2(220,210,840,385),Color("50617b"),false,2)
-	if help_panel.visible: return
 	var title := "The bell has stopped." if mode=="victory" else "The Warden holds the gate." if mode=="defeat" else "Trial paused." if mode=="paused" else "The Bell Warden."
 	_text(Vector2(290,279),title,36,WHITE)
 	if mode=="title":

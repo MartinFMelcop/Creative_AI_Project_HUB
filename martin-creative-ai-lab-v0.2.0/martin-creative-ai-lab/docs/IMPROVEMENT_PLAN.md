@@ -1,18 +1,19 @@
-# Current milestone — recover persistent project work
+# Current milestone — embodied native combat
 
-Deliver Project Rooms 0.3.0 operator backup/inspect/restore as one end-to-end
-workflow. Include live committed WAL pages, projects, authorship, identity hashes,
-immutable send attempts and sequential history. Verify the private bundle before
-exclusive restoration into a new file; preserve originals and refuse overwrite.
-Restart at the same origin and continue from the original browser storage.
+Deliver P06 0.3.0/P07 0.2.0 with real character atlases, foot-aligned walk/dodge/
+blade/cast and Warden windup/active/recovery poses. Connect blade preparation,
+locked aim, once-only contact, cast release, movement commitment and dodge/hurt
+cancellation. Keep resource prices, nominal damage/cooldowns, boss patterns/echo,
+existing media and pause/restart behavior. No shared framework or engine rewrite.
 
-Acceptance: live WAL/empty/multi-project recovery, CLI outside the project,
-checksum/schema/foreign-key/content/inventory failure detection, existing/linked/
-sidecar refusal and a real browser journey through restored identities, decisions,
-history/export, saved/unsaved retries, preserved newer typing and new work. Run
-retained P11 regressions and repository validation. [Evidence](../evidence/realtime-chat/RECOVERY_RUN.json)
-qualifies synthetic input, point-in-time rollback and unavailable human/platform/
-power-loss/off-site evidence. Publish verified source normally to main.
+Acceptance: corrected isolated RGBA cells; native metadata production; actual
+imported alpha/bounds and wall limits; contact/pose/cue synchronization, whiffs,
+cancellation, one-action priority, pause/resume/restart and legal-input full fight.
+Execute source and shipped/rebuilt PCK, inspect OpenGL frames, record a declared
+fixture movie and compare the old actual pack with the same controller. Maintain
+registry/manifest and publish normally to main. [Evidence](../evidence/veil-arena/MOTION_RUN.json)
+separates production, engine execution and Codex review from independent play,
+physical timing, hand animation, commercial rights and standalone OS export.
 
 # Previous milestone — native Eclipse Fair board
 

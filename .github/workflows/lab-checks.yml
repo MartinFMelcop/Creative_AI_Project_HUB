@@ -78,13 +78,17 @@ jobs:
           python3 tools/check_media.py
           "$veil_engine" --headless --path . --script tests/encounter.gd --fixed-fps 60
           "$veil_engine" --headless --path . --script tests/presentation.gd
+          "$veil_engine" --headless --path . --script tests/motion.gd
           cp tests/encounter.gd "$RUNNER_TEMP/veil-godot/encounter.gd"
           cp tests/presentation.gd "$RUNNER_TEMP/veil-godot/presentation.gd"
+          cp tests/motion.gd "$RUNNER_TEMP/veil-godot/motion.gd"
           "$veil_engine" --headless --main-pack "$PWD/dist/veilbreak.pck" --script "$RUNNER_TEMP/veil-godot/encounter.gd" --fixed-fps 60
           "$veil_engine" --headless --main-pack "$PWD/dist/veilbreak.pck" --script "$RUNNER_TEMP/veil-godot/presentation.gd"
+          "$veil_engine" --headless --main-pack "$PWD/dist/veilbreak.pck" --script "$RUNNER_TEMP/veil-godot/motion.gd"
           "$veil_engine" --headless --path . --export-pack Linux "$RUNNER_TEMP/veil-godot/rebuilt.pck"
           "$veil_engine" --headless --main-pack "$RUNNER_TEMP/veil-godot/rebuilt.pck" --script "$RUNNER_TEMP/veil-godot/encounter.gd" --fixed-fps 60
           "$veil_engine" --headless --main-pack "$RUNNER_TEMP/veil-godot/rebuilt.pck" --script "$RUNNER_TEMP/veil-godot/presentation.gd"
+          "$veil_engine" --headless --main-pack "$RUNNER_TEMP/veil-godot/rebuilt.pck" --script "$RUNNER_TEMP/veil-godot/motion.gd"
 
   integrity-and-dialogue:
     runs-on: ubuntu-24.04

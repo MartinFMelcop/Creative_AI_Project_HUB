@@ -1,33 +1,37 @@
 # Lab state
 
-**Updated:** 2026-10-12 (America/Sao_Paulo). **Seed:** 0.16.0.
-**Current milestone:** P11 Project Rooms 0.3.0 workspace recovery.
+**Updated:** 2026-10-12 (UTC). **Seed:** 0.17.0.
+**Current milestone:** P06 Veilbreak 0.3.0 / P07 native motion 0.2.0.
 
-[Project Rooms](../projects/realtime-integration-lab/README.md) now has a local
-operator workflow: consistent live SQLite/WAL snapshot, inspect date/inventory/
-checksum and restore into a new database. Private bundles preserve projects,
-participants, authorship, attempt IDs and entry sequence. Exact schema, content,
-foreign-key/integrity checks and staged-byte verification precede exclusive file
-publication. Existing destinations/sidecars are refused; no force/overwrite.
+[Play the native trial](../projects/veil-arena/README.md). Two actual corrected
+RGBA atlases supply 32 poses: courier walk/blade/dodge/seal and Warden
+walk/sweep/charge/wave. Native production derives isolated regions, foot pivots
+and scale from alpha without editing PNG bytes. Displacement and combat clocks
+choose poses; pause/result freeze them and restart clears them.
 
-[Execution](../evidence/realtime-chat/RECOVERY_RUN.json) records storage/CLI
-contracts and a real Chromium journey after simulated original-file loss: same
-origin, both remembered identities, projects/decisions, pagination/download,
-deduplicated saved attempt, explicit unsaved retry, newer draft and new saved work.
-Later writes are deliberately excluded. Browser tokens/drafts are not in the
-backup; continuation requires retained browser storage. Fixtures are fictional;
-Codex review and synthetic input are not independent collaborator approval.
+Blade aim locks, contact lands after 100ms, and recovery lasts to 320ms. Seal
+release follows 75ms gather. One action starts at a time; movement slows while
+committed. Dodge or damage cancels unfinished contact without refund. Facing,
+pose and cue follow the actual emission event. Boss damage/costs/cooldowns,
+patterns/echo, floor/portraits/audio and the complete native lifecycle remain.
 
-Started clean at `32f70ea`, matching fetched main. Reviewed portfolio/state/seed,
-recent native/literary/music milestones and actual P11 sources. Compared P06
-animation, P03 listening/play and P04 readers; selected recovery of persistent
-work over another content or narrow QA iteration. Node 24 built-in SQLite fits
-this service; no dependency/service/engine rewrite or shared framework.
-Historical sources, legacy chat protocol, P02 pinned evaluation and other projects
+[Execution](../evidence/veil-arena/MOTION_RUN.json) records source and shipped/
+rebuilt PCK, complete fight, actual AudioServer and motion contracts. OpenGL
+frames and a 7.2s Movie Maker demonstration come from the pack outside source;
+fixtures/scripted input are not human play or a hardware performance benchmark.
+The same controller wins both versions: 0.2.0 51.87s/2 health; 0.3.0 55.58s/1 health.
+This comparison establishes completion/increased commitment risk, not balance.
+
+Started clean at `eb474a5`, matching fetched main. Reviewed portfolio/seed/history
+and actual native/comparison sources. Selected body-readable committed combat
+over another P11 operation, speculative P05 recovery or automatic P03/P04 content.
+Godot 4.6.3/GDScript fits the real native consumer; no engine/language rewrite.
+Extend only P07-to-P06 TR-013, add VIS-002; original assets/archive/other projects
 remain preserved. GitHub main is authorized; no hosting deployment.
 
-Linux filesystem/Node/Chromium execution does not prove power-loss recovery,
-other platforms, hostile filesystem safety, backup authenticity, human usability
-or commercial demand. No scheduled/off-site/encrypted recovery service or public
-accounts/access policy is supplied. Next compare real recovery use, P06 animation,
-physical P03 play/listening and independent P04 reading before selecting work.
+Codex asset/pose review only. Four-keyframe clips and horizontal mirroring retain
+some generated pose/proportion variation; no full directional/hand-animated set.
+PCK requires Godot; no standalone OS build, independent player/artist approval,
+physical input/listening or commercial clearance. Next compare actual committed
+combat feedback with P01 strategy, P05's scoped turn-based destination, P03 physical
+play/listening, P04 readers and P11 real recovery use before choosing again.

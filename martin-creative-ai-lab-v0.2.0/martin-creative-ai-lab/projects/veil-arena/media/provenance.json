@@ -1,5 +1,5 @@
 {
-  "project_version": "0.2.0",
+  "project_version": "0.3.0",
   "source_projects": [
     "P07",
     "P08"
@@ -38,7 +38,7 @@
         "modification": "Copied from image_gen output unchanged; Godot applies runtime scale/tint only."
       }
     },
-    "limits": "Single static pose per character with runtime bob/flash; not a full animation set. Generated edge alpha and small details are not hand-cleaned. Native screenshots, not independent audience approval, support readability judgment."
+    "limits": "The original portrait/floor PNGs are unchanged. Motion production below adds four-keyframe clips and two mirrored orientations, not a hand-animated eight-direction production set. Independent visual/play approval remains absent."
   },
   "audio": {
     "origin": "Original deterministic algorithmic score and synthesis; no external samples, MIDI, vocals or historical masters.",
@@ -51,5 +51,28 @@
   },
   "rights": "New model-generated images and Codex-authored synthesis under the authorized project scope. No third-party media imported; exclusive copyright, non-infringement and commercial clearance have not been established.",
   "evidence": "evidence/veil-arena/PRESENTATION_RUN.json",
-  "path_scope": "Media paths are relative to projects/veil-arena; evidence is relative to the lab."
+  "path_scope": "Media paths are relative to projects/veil-arena; evidence is relative to the lab.",
+  "motion": {
+    "tool": "image_gen.imagegen",
+    "requests": 4,
+    "accepted_files": 2,
+    "source_references": [
+      "media/art/veil-runner.png",
+      "media/art/bell-warden.png"
+    ],
+    "rejected_generations": [
+      "exec-a8a79640-802a-4623-bf57-2f39b5e3a544: runner dagger/cell overlap",
+      "exec-0b26dcfb-4380-4447-8021-27537b6aaad3: warden fist/cloak cell overlap"
+    ],
+    "accepted_generations": {
+      "media/art/runner-motion.png": "exec-21ae1f03-bf4f-45c1-8162-c6d587930e39",
+      "media/art/warden-motion.png": "exec-b825c682-7483-4e14-adb9-fb1e1255e8b8"
+    },
+    "brief": "Same masked navy/teal courier and bronze/slate/purple Warden; sixteen poses each, corrected for isolated transparent cells. Courier walk/blade/dodge/seal; Warden walk/sweep/charge/wave. No external reference media.",
+    "modification": "Accepted PNGs copied unchanged; native tools/build_motion_catalog.gd reads alpha and derives foot pivots/regions/scale. Runtime mirrors frames; no pixel cleanup or invented extra animation assets.",
+    "catalog": "media/motion-catalog.json",
+    "integration": "motion.gd selects frames from actual body displacement, contact emission and boss stages. Pause/result freeze clocks; restart clears them.",
+    "limits": "Implementing-agent review only. Generated pose/proportion variation, four-keyframe clips, horizontal mirroring; no hand-animated interpolation, full directional coverage or independent audience approval.",
+    "evidence": "evidence/veil-arena/MOTION_RUN.json"
+  }
 }

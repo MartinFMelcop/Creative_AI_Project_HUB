@@ -35,8 +35,13 @@ def main():
         width,height,depth,color=struct.unpack('>IIBB',data[16:26])
         assert width>1000 and height>700 and depth==8,path.name
         assert color==(2 if path.stem=='courtyard' else 6),path.name
-    print(json.dumps({'wav_files':pcm_files,'ogg_files':2,'png_files':3,
-                      'verified':'hashes, PCM format/length/peaks/endpoints, PNG format/dimensions/alpha channel'}))
+    motion = json.loads((ROOT/'media/motion-catalog.json').read_text())
+    for actor in motion['actors'].values():
+        path = ROOT/actor['texture']
+        assert hashlib.sha256(path.read_bytes()).hexdigest()==actor['sha256'],path
+        assert len(actor['frames'])==16
+    print(json.dumps({'wav_files':pcm_files,'ogg_files':2,'png_files':len(list((ROOT/'media/art').glob('*.png'))),'motion_frames':32,
+                      'verified':'hashes, PCM format/length/peaks/endpoints, PNG format/dimensions/alpha channel, delivered atlas hash/frame count'}))
 
 
 if __name__=='__main__': main()

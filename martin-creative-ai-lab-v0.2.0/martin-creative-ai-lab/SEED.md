@@ -1,10 +1,10 @@
 # SEED — Martin Creative AI Lab
 
-**Version:** 0.16.0
+**Version:** 0.17.0
 **Data-base:** 10 de outubro de 2026  
 **Autor e responsável pelo portfólio:** Martin Melcop Neto  
 **Working language:** English for new documentation, plans, code comments, UI, and reports. Preserve original creative titles and historical source languages.
-**Current state:** P11 Project Rooms 0.3.0 adds a private operator backup/inspect/restore workflow for live SQLite/WAL data. New-file recovery preserves projects, authorship, identities and attempts; actual Chromium continuation is executed. P03/P08 two-stage music and other destinations remain preserved; human use and commercial quality remain unverified.
+**Current state:** P06 Veilbreak 0.3.0/P07 motion 0.2.0 integrates two actual 16-pose atlases with native foot alignment and committed blade/cast contact, recovery and cancellation. Source and built packs, OpenGL frames/movie and the full fight are executed. Other destinations remain preserved; human balance/art approval and commercial quality remain unverified.
 
 > Construir um laboratório autoral em Git que transforma ideias, obras e experimentos em produtos pequenos, sistemas reutilizáveis e evidências técnicas verificáveis. A IA participa da criação e execução; Martin desenvolve sua capacidade de especificar, compreender, selecionar, corrigir, validar e explicar os resultados.
 
@@ -46,14 +46,14 @@ Se apenas este arquivo estiver disponível, ele é suficiente para iniciar a Fas
 |---|---|
 | Repository | MartinFMelcop/Creative_AI_Project_HUB; actual Git root `/workspace/Creative_AI_Project_HUB`; lab remains nested in its original package directory |
 | Preserved sources | 175 Rave Master texts and 3 WebSocket files; unchanged ZIP and inventory; not a complete RMXP backup |
-| Primary workstream | P11 0.3.0 consistent workspace backup, inspection and safe new-file recovery |
-| Runtime execution | Node 24 built-in SQLite online backup; separate operator CLI and actual Chromium recovery; no dependency or engine migration |
-| Current verification | Live WAL, data/CLI boundaries, simulated file loss and restored two-participant browser continuation; `evidence/realtime-chat/RECOVERY_RUN.json` |
-| Historical verification | Earlier project evidence retained; legacy chat/rooms regressions executed; P02's pinned practice task remains independent |
-| Next action | Compare real recovery use with P06 animation, physical P03 play/listening and independent P04 readers |
-| Other seeds | P01 0.2.0, P03 0.2.0, P04 0.1.0, P06 0.2.0, P07 0.1.0, P08 0.3.0, P10 0.4.0 and P02 0.2.1 preserved |
-| Transfer / shared status | Existing TR-009/012/013/014 boundaries retained; no shared engine or new cross-project transfer |
-| Portfolio / attribution | Clean `32f70ea` matched fetched main. Martin authorizes portfolio/main; Codex implementation/review and fictional synthetic workflow. No human approval or hosting deployment |
+| Primary workstream | P06/P07 embodied native combat: real poses and committed contact/recovery |
+| Runtime execution | Godot 4.6.3 standard/GDScript, native image metadata production, OpenGL/AudioServer and delivered/fresh PCK; no engine rewrite |
+| Current verification | Complete source/pack fights, motion/audio contracts, alpha/wall bounds, actual frames and 7.2s fixture movie; `evidence/veil-arena/MOTION_RUN.json` |
+| Historical verification | Old 0.2.0 pack executed for the same-controller comparison; other project records retained |
+| Next action | Compare native player/artist feedback with P01 strategy, a scoped P05 destination, P03 listening/play, P04 readers and P11 recovery use |
+| Other seeds | P01 0.2.0, P03 0.2.0, P04 0.1.0, P08 0.3.0, P10 0.4.0, P11 0.3.0 and P02 0.2.1 preserved |
+| Transfer / shared status | Extend only TR-013 P07-to-P06 with VIS-002; other transfers retained; no shared engine |
+| Portfolio / attribution | Clean `eb474a5` matched fetched main. Martin authorizes portfolio/main; Codex production/implementation/review, synthetic fixtures. No independent play or hosting deployment |
 
 Registry evidence paths must resolve to existing files inside the lab; working
 paths must be directories and legacy-source IDs must exist. This documentary
@@ -226,8 +226,8 @@ Identificadores persistem mesmo quando nomes mudam. Um projeto arquivado pode co
 | P03 | Tokyo 80s | Original music, timing and sustained interaction | Midnight Signal and Rain Circuit with track selection/transition | P03 0.2.0 / P08 0.3.0 real media; human play/listening pending |
 | P04 | O Lich mais velho da tumba mais antiga | Romance, mundo, personagens, arte e continuidade | Narrativa interativa, amostra editorial, jogo, animatic | Historical summary only here; new standalone story/EPUB/PDF 0.1.0 delivered |
 | P05 | The Dark Knight | Combate por turnos, classes, progressão, conteúdo | Laboratório de combate e balanceamento | Legado RMXP descrito |
-| P06 | Véu Partido / Veilbreak | Native combat trial; historical 3D RPG seed | Playable two-phase Godot arena, source and executed PCK | New destination; missing Unity starter remains historical |
-| P07 | Visual Generation & Asset Lab | Capas, ilustrações, sprites e direção | Assets consistentes, pipeline e estudo de seleção | Material visual histórico; inventário pendente |
+| P06 | Véu Partido / Veilbreak | Native combat trial; historical 3D RPG seed | Animated two-phase arena with committed contact, source and executed PCK | New 0.3.0 destination; missing Unity starter remains historical |
+| P07 | Visual Generation & Asset Lab | Native visual production | Three paintings plus two real motion atlases consumed by P06 | 0.2.0 production/integration; independent artist approval absent |
 | P08 | Audio, Poetry & Music Lab | Original musical production and integration | Two P03 stages and P06 native soundscape | Real masters/exports/scores; no album or human listening approval |
 | P09 | AI Delivery & Operations Cases | Carreira real e avaliação simulada | Case de entrega, análise de workflow e rubricas | Base profissional lida; cases anteriores pendentes |
 | P10 | Adventures Unleashed / Rave Master | Narrative, NPCs and recovered systems | Two-day browser rescue/relief campaign with local resume and portable saves | Campaign 0.4.0; Python adventure 0.2.0 / standalone 0.1.3; bounded evidence in registry |
@@ -376,12 +376,17 @@ plans and the breadcrumb `VeuPartido_UnityStarter_v0.0.47.zip`. The starter is n
 present, and plans are not executable evidence. No restored Unity code or franchise
 characters enter the new destination.
 
-[Veilbreak: The Bell Warden](projects/veil-arena/README.md) 0.2.0 is a new native
+[Veilbreak: The Bell Warden](projects/veil-arena/README.md) 0.3.0 is a new native
 Godot 2D trial with painted characters/courtyard, fourteen semantic cues and two
 aligned phase-responsive music loops. P07/P08 assets are actually imported, mixed
 and packed; M/mouse mute and pause/resume/restart govern their lifecycle. One opponent has locked sweep/charge/wave warnings, a faster second
 phase with delayed charge echo, and a ward pressured by projectile seals. Native
 movement/collisions, resolve, blade counters, results/pause/restart are connected.
+Two actual 16-pose atlases now connect displacement-driven walking and actor
+preparation/contact/recovery. Blade locks aim and lands after 100ms; cast gathers
+75ms. Dodge/hurt can cancel unfinished actions without refund; pose and cue follow
+actual contact, not an unrelated wall clock. Four-keyframe clips and horizontal
+mirroring are bounded production, not a complete directional/hand-animated set.
 The actual engine and resource pack were executed. This is a bounded native
 prototype; no standalone platform build, human balance or commercial claim.
 
@@ -395,9 +400,12 @@ not an automatic migration or language quota.
 ### P07 — Visual Generation & Asset Lab
 
 **Current destination:** [P06 media](projects/veil-arena/media/provenance.json)
-contains three actual PNG paintings with a shared style/reference and one framing
-correction. Native rendering and wall/HUD review establish bounded integration.
-Each actor has one static pose; no complete animation set or audience approval.
+contains the preserved three PNG paintings and two actual reference-edited RGBA
+motion atlases with 16 poses each. Crowded first sheets were rejected and spacing
+corrected. Native alpha processing derives pivots/scale/regions without editing
+PNG bytes; actual P06 state and displacement consume them. Rendering, wall/alpha
+checks and source/pack execution establish bounded integration, not independent
+artist/player approval or full directional/hand-animated coverage.
 
 **Origem:** geração e revisão de imagens para Lich e outros interesses criativos; capas, ilustrações em ação e correções de personagens/gênero/consistência relatadas. Ainda falta inventário das fontes de melhor qualidade.
 

@@ -1,0 +1,125 @@
+{
+  "milestone": "P06 Veilbreak 0.3.0 / P07 motion 0.2.0",
+  "recorded_at_utc": "2026-10-12T20:49:39.332827+00:00",
+  "baseline_commit": "eb474a5d31a96d68f2ceab7dbdd9abeee9186d8b",
+  "environment": {
+    "engine": "Godot 4.6.3.stable.official.7d41c59c4 standard",
+    "platform": "Linux-6.18.44-x86_64-with-glibc2.41",
+    "render": "Xorg dummy :96, TCP disabled; OpenGL 4.5 Compatibility/Mesa llvmpipe",
+    "audio": "Actual AudioServer software output through Dummy backend; no physical output device"
+  },
+  "production": {
+    "requests": 4,
+    "accepted_atlases": 2,
+    "frames": 32,
+    "review": "First crowded sheets rejected; reference edits isolated poses. Actual PNG bytes unchanged; native alpha reader derives regions/foot pivots/scale. IDs/hashes in media/provenance.json and motion-catalog.json."
+  },
+  "before": "Single static pose with bob/flash per character and immediate radial blade damage.",
+  "after": "Real walk/blade/dodge/cast and Warden anticipation/active/recovery poses. Locked-aim 100ms blade and 75ms seal contact, one committed action, slower movement, visible recovery and dodge/hurt cancellation. Pose/cue/damage share actual contact; pause/result/restart own their clocks.",
+  "executed": [
+    {
+      "scope": "source",
+      "gameplay_checks": 24,
+      "motion_checks": 36,
+      "audio_checks": 24,
+      "failures": [],
+      "audio_frames": 212992,
+      "audio_peak": 0.841408967971802
+    },
+    {
+      "scope": "pack",
+      "gameplay_checks": 24,
+      "motion_checks": 36,
+      "audio_checks": 24,
+      "failures": [],
+      "audio_frames": 204800,
+      "audio_peak": 0.841408967971802
+    },
+    {
+      "scope": "rebuilt",
+      "gameplay_checks": 24,
+      "motion_checks": 36,
+      "audio_checks": 24,
+      "failures": [],
+      "audio_frames": 208896,
+      "audio_peak": 0.841408967971802
+    }
+  ],
+  "commands": [
+    "godot --headless --path . --editor --import --quit",
+    "godot --headless --path . --script tests/encounter.gd --fixed-fps 60",
+    "godot --headless --path . --script tests/motion.gd",
+    "godot --headless --path . --script tests/presentation.gd",
+    "godot --headless --path . --export-pack Linux <scratch-pack>",
+    "godot --headless --main-pack <delivered-or-rebuilt-pack> --script <external-test-script> [--fixed-fps 60 for encounter]",
+    "godot --headless --path . --script tools/build_motion_catalog.gd; catalog byte-reproduction check",
+    "python3 tools/check_media.py",
+    "python3 tools/test_validate_repo.py; python3 tools/test_check_manifest.py (11 each)"
+  ],
+  "comparison": {
+    "0.2.0": {
+      "mode": "victory",
+      "simulated_seconds": 51.866666666665,
+      "health": 2,
+      "hits": 26,
+      "phase_changes": 1,
+      "damage_taken": 4
+    },
+    "0.3.0": {
+      "mode": "victory",
+      "simulated_seconds": 55.5833333333315,
+      "health": 1,
+      "hits": 26,
+      "phase_changes": 1,
+      "damage_taken": 5
+    }
+  },
+  "comparison_limit": "Same unchanged scripted reactive controller and fixed timestep, not independent human balance/difficulty evidence. Position/state boundary fixtures are declared, not undisclosed player behavior.",
+  "rendered_review": {
+    "attribution": "Codex implementing agent",
+    "scope": "Native contact/preparation, charge/wave/sweep poses, isolated cells, both facing orientations/wall bounds and expanded tactics. Body pose changes while telegraphs/explicit status remain legible at native size. Some generated proportions vary; no independent artist approval.",
+    "source": "Delivered PCK run from /workspace/work/veil-motion, outside project sources",
+    "movie": "Godot Movie Maker, 216 actual frames at 30 FPS, then ffmpeg H.264/AAC faststart encoding and complete decode check",
+    "artifact": "motion-preview.mp4",
+    "poster": "motion.png",
+    "probe": {
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "codec_name": "h264",
+          "width": 1280,
+          "height": 800,
+          "r_frame_rate": "30/1"
+        },
+        {
+          "codec_name": "aac",
+          "r_frame_rate": "0/0"
+        }
+      ],
+      "format": {
+        "duration": "7.200000",
+        "size": "569363"
+      }
+    },
+    "motion_checks": 36
+  },
+  "limitations": [
+    "Four-keyframe clips and horizontal mirrors, not hand animation or eight-direction coverage.",
+    "PCK requires matching Godot runtime; no standalone OS export.",
+    "Movie Maker uses fixed timestep and declared fixtures/scripted input, not human play or hardware frame-rate measurement.",
+    "Physical input/listening, human motion/strategy/enjoyment feedback, other platforms/accessibility, exclusive rights and commercial demand unverified."
+  ],
+  "source_sha256": {
+    "projects/veil-arena/arena.gd": "c9e3b85ef93a3e470105d7fa8eff60e95f6ac0598254c2782aae370cf9017022",
+    "projects/veil-arena/motion.gd": "fd5822a382c406eca3d174fcfeec98277ea11259165dfcbee4e06ec8120e4c29",
+    "projects/veil-arena/media/motion-catalog.json": "cf4a853fd7e59a27f962ee704b394fef339b52e925301dee132015ee7fd79f41",
+    "projects/veil-arena/media/art/runner-motion.png": "2565b68c380b5fef83d6266a8a3656ccec31c299da31f7e268181fde8190f5bd",
+    "projects/veil-arena/media/art/warden-motion.png": "1764bc35582ceb9a79b45077d017f0b6b044c5f83f7e73156c8dd45755bc4137",
+    "projects/veil-arena/tools/build_motion_catalog.gd": "761257428c0ccf70034ef818ac4b5c76ae6842d4d53838daf987635d111fa776",
+    "projects/veil-arena/tests/motion.gd": "c7503b485f241fddea237f08a431621e5251b70efbcb2b0a02864b4eab71ab59",
+    "projects/veil-arena/dist/veilbreak.pck": "a839a70af36463696f5d9fec872a72f4a9394cc9bc4d9080a8328595f678de1b",
+    "evidence/veil-arena/motion-preview.mp4": "40d3f891950260a0448d0c51106e721a62adc7ac4152e8387ca872b3d7f40b6e",
+    "evidence/veil-arena/motion.png": "4aad9d4ddcedb2822665d3371fe7dce337257466d2d354a9f447a298d95fa95b"
+  }
+}

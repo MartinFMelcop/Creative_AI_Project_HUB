@@ -145,14 +145,15 @@
       "source_project": "P07",
       "target_project": "P06",
       "status": "validated",
-      "unit": "Original painted character/courtyard production consumed by the native Bell Warden trial",
+      "unit": "Original painted floor/portraits and reference-edited character motion consumed by the native Bell Warden trial",
       "source_reference": "projects/veil-arena/media/provenance.json",
       "evidence": [
         "projects/veil-arena/README.md",
-        "evidence/veil-arena/PRESENTATION_RUN.json"
+        "evidence/veil-arena/PRESENTATION_RUN.json",
+        "evidence/veil-arena/MOTION_RUN.json"
       ],
-      "verification_scope": "Actual texture import, compiled-pack rendering and implementing-agent review at gameplay/title/wall scale; static poses, not independent visual approval or a shared art engine.",
-      "next_action": "Use unassisted play and physical listening/visual review before extending the production claims."
+      "verification_scope": "P06 0.3.0 actual atlas import/alpha, state-driven poses, foot anchors/wall bounds and shipped/rebuilt native PCK render. Implementing-agent visual review and 7.2s fixture movie; no hand-animated directional completeness, independent art/enjoyment approval or shared engine.",
+      "next_action": "Review small-scale transitions, generated proportions and committed attack feel with actual native players before extending the asset pipeline."
     },
     {
       "id": "TR-014",

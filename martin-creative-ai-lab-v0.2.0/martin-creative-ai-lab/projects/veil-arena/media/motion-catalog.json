@@ -1,0 +1,54 @@
+{
+  "version": 1,
+  "origin": "Accepted model-generated PNG bytes unchanged; native tools/build_motion_catalog.gd derives integration regions, foot pivots and scale.",
+  "actors": {
+    "runner": {
+      "texture": "media/art/runner-motion.png",
+      "sha256": "2565b68c380b5fef83d6266a8a3656ccec31c299da31f7e268181fde8190f5bd",
+      "size": [1254,1254],
+      "scale": 0.331658,
+      "frames": [
+        {"opaque_bounds":[77,110,239,305],"pivot":[186.45,305],"region":[0,0,314,314]},
+        {"opaque_bounds":[74,108,238,306],"pivot":[186.67,306],"region":[314,0,313,314]},
+        {"opaque_bounds":[73,109,236,306],"pivot":[187.3,306],"region":[627,0,314,314]},
+        {"opaque_bounds":[68,108,227,307],"pivot":[178.23,307],"region":[941,0,313,314]},
+        {"opaque_bounds":[76,102,274,286],"pivot":[115.94,286],"region":[0,314,314,313]},
+        {"opaque_bounds":[70,107,307,285],"pivot":[162.66,285],"region":[314,314,313,313]},
+        {"opaque_bounds":[72,106,251,287],"pivot":[207.22,287],"region":[627,314,314,313]},
+        {"opaque_bounds":[82,105,255,287],"pivot":[204.58,287],"region":[941,314,313,313]},
+        {"opaque_bounds":[75,96,268,252],"pivot":[143.69,252],"region":[0,627,314,314]},
+        {"opaque_bounds":[80,92,260,249],"pivot":[175.07,249],"region":[314,627,313,314]},
+        {"opaque_bounds":[42,104,283,248],"pivot":[185.3,248],"region":[627,627,314,314]},
+        {"opaque_bounds":[63,83,262,259],"pivot":[117.78,259],"region":[941,627,313,314]},
+        {"opaque_bounds":[78,47,243,241],"pivot":[157.41,241],"region":[0,941,314,313]},
+        {"opaque_bounds":[66,46,270,241],"pivot":[148.52,241],"region":[314,941,313,313]},
+        {"opaque_bounds":[59,52,271,237],"pivot":[166.74,237],"region":[627,941,314,313]},
+        {"opaque_bounds":[67,46,236,239],"pivot":[162.71,239],"region":[941,941,313,313]}
+      ]
+    },
+    "warden": {
+      "texture": "media/art/warden-motion.png",
+      "sha256": "1764bc35582ceb9a79b45077d017f0b6b044c5f83f7e73156c8dd45755bc4137",
+      "size": [1254,1254],
+      "scale": 0.506024,
+      "frames": [
+        {"opaque_bounds":[76,99,242,262],"pivot":[186.13,262],"region":[0,0,314,314]},
+        {"opaque_bounds":[76,102,245,263],"pivot":[190.98,263],"region":[314,0,313,314]},
+        {"opaque_bounds":[59,103,232,268],"pivot":[183.0,268],"region":[627,0,314,314]},
+        {"opaque_bounds":[57,101,227,263],"pivot":[142.84,263],"region":[941,0,313,314]},
+        {"opaque_bounds":[90,86,262,252],"pivot":[159.99,252],"region":[0,314,314,313]},
+        {"opaque_bounds":[71,94,276,253],"pivot":[149.65,253],"region":[314,314,313,313]},
+        {"opaque_bounds":[61,97,266,254],"pivot":[145.16,254],"region":[627,314,314,313]},
+        {"opaque_bounds":[66,97,236,253],"pivot":[150.87,253],"region":[941,314,313,313]},
+        {"opaque_bounds":[82,93,258,235],"pivot":[161.05,235],"region":[0,627,314,314]},
+        {"opaque_bounds":[68,79,257,240],"pivot":[190.63,240],"region":[314,627,313,314]},
+        {"opaque_bounds":[67,77,259,240],"pivot":[159.78,240],"region":[627,627,314,314]},
+        {"opaque_bounds":[58,97,250,235],"pivot":[176.21,235],"region":[941,627,313,314]},
+        {"opaque_bounds":[80,51,256,209],"pivot":[157.84,209],"region":[0,941,314,313]},
+        {"opaque_bounds":[84,41,257,206],"pivot":[174.92,206],"region":[314,941,313,313]},
+        {"opaque_bounds":[53,55,273,207],"pivot":[152.57,207],"region":[627,941,314,313]},
+        {"opaque_bounds":[65,55,237,203],"pivot":[149.6,203],"region":[941,941,313,313]}
+      ]
+    }
+  }
+}

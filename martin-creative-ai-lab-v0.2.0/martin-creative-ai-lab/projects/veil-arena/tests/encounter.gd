@@ -86,16 +86,27 @@ func run() -> void:
 	arena.boss_stage="windup"
 	arena.stage_duration=100
 	await press("strike")
+	check(arena.boss_hp==160,"Blade preparation does not apply early damage")
+	await wait_frames(7)
 	check(arena.boss_hp==156,"Armored blade chips exactly 4")
+	await wait_frames(16)
 	arena.strike_cooldown=0
 	arena.boss_stage="recover"
 	await press("strike")
+	await wait_frames(7)
 	check(arena.boss_hp==132,"Recovery counter applies exactly 24")
 	arena.stamina=0
 	arena.strike_cooldown=0
 	var health: float=arena.boss_hp
 	await press("strike")
 	check(arena.boss_hp==health,"Insufficient resolve cannot buy an attack")
+	arena.reset_encounter()
+	arena.boss_stage="windup"
+	arena.stage_duration=100
+	Input.action_press("strike")
+	await wait_frames(45)
+	Input.action_release("strike")
+	check(arena.stats.strikes==1,"Holding the native blade key does not repeat or queue another action")
 	arena.reset_encounter()
 	arena.boss.position=Vector2(650,400)
 	arena.player.position=Vector2(475,400)

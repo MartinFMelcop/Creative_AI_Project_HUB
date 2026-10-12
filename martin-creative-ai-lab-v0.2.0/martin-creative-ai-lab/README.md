@@ -4,7 +4,7 @@ An evolving laboratory of games, narrative, images, audio, data, and AI
 evaluation by **Martin Melcop Neto**. Projects are adaptable seeds: build small
 slices, verify behavior, record decisions, and test reuse in actual destinations.
 
-**Current seed: v0.16.0.** The lab includes eleven project lines, 178 preserved
+**Current seed: v0.17.0.** The lab includes eleven project lines, 178 preserved
 historical texts, a working local project-conversation workspace, a calibrated
 practice-task harness, a complete rescue adventure with browser/terminal editions,
 two original browser rhythm stages with rendered soundtracks and sustained notes, a native C# economy board with preserved terminal workbench, a complete Portuguese story with EPUB/PDF, and a native
@@ -23,7 +23,7 @@ project versions and execution boundaries are in the state and registry.
 - [Native board execution](evidence/eclipse-fair/BOARD_RUN.json): compiled source and runtime-only package, UI journeys and rendered review.
 - [Economy execution](evidence/eclipse-fair/RUN.json): source/compiled package, synthetic play and tuning limits.
 
-- [P06 — Veilbreak](projects/veil-arena/README.md): native painted Godot boss encounter, adaptive audio, source and playable resource pack.
+- [P06 — Veilbreak](projects/veil-arena/README.md): native animated Godot boss encounter, committed attack contact/cancellation, adaptive audio and playable resource pack.
 - [Native media execution](evidence/veil-arena/PRESENTATION_RUN.json): actual mixer, OpenGL frames, preserved full fight and media-inclusive pack execution.
 
 - [State](docs/STATE.md): completed increment, limits, and next action.

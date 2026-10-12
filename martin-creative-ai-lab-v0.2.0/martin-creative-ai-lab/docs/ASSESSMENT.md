@@ -1,23 +1,25 @@
-# Current assessment — complete recovery of a trusted workspace
+# Current assessment — embodied native combat
 
-Clean `32f70ea` matches fetched main. Actual P11 store/server/browser sources,
-current registry/seed/decisions and recent portfolio history were inspected.
-Recent milestones span native C#, literature, game media and original music.
+Clean `eb474a5` matches fetched main. Instructions/state/registry/seed, recent
+native/literary/music/workspace history and actual P06 arena/media/tests were
+inspected. P01 agent/board and P10 campaign sources provide credible comparisons.
+The portfolio already has several real destinations; no automatic P11 extension.
 
 | Opportunity | Evidence and decision |
 |---|---|
-| P11 recovery | SQLite rooms store real persistent work, but JSON export cannot restore authorship/identity/attempts. A consistent live snapshot, inspect and safe restore removes a consequential product limitation; selected. |
-| P06 animation | Real native encounter uses static painted poses with bob/flash. Movement/attack animation could improve action readability; a separate coherent production milestone. |
-| P03 listening/play | Two complete original stages and sustain interaction already exist. Human listening/device timing feedback is more informative than another automatic composition. |
-| P04 readers | Complete source/EPUB/PDF exist. Inspected prose has a concrete waterworks conflict; independent reading/canon evidence remains absent. |
-| P05/P09 sources | Registry still records seed/triage, without an executable game or real professional case. Do not fabricate source recovery or client work. |
+| P06/P07 motion and contact | Two-phase native fight works, but one static pose/bob per actor and instantaneous radial blade damage weaken embodied action. Produce usable atlases, real preparation/contact/recovery and cancellation, connected to current physics/audio; selected. |
+| P01 strategy/progression | C# rules, eight-venue native board and heuristic opponents exist. Unassisted strategy/pacing evidence would guide broader progression better than speculative additions. |
+| P10 narrative/progression | Two playable days, inherited relief outcomes and replayable saves exist. Another chapter needs a distinct dramatic/gameplay purpose and reader/player response. |
+| P03/P04 feedback | Two original songs and a complete Portuguese story/editions exist; physical listening/play and independent readers remain meaningful missing evidence. |
+| P05/P09 | Registry records historical seeds, not full local game/client sources. A newly scoped turn-based game is possible; do not fabricate restoration or professional cases. |
+| P11 operations | Full local recovery now exists. Real collaborator, retention and off-site/account requirements should precede another operation or public hosting. |
 
-Keep Node 24/SQLite and the existing real-time service. Built-in online backup
-covers WAL; the operator CLI does not expose full workspace data over HTTP. No
-new dependency, C#/Go rewrite or game engine is needed. Before: consumable JSON
-and an unsafe temptation to copy a live main file. After: private savepoint,
-inspect inventory/hash, new-file recovery and verified browser continuation.
-Human usability and public service readiness are not established by these checks.
+Keep standard Godot/GDScript for the actual 2D physics/presentation loop. Native
+image/alpha processing derives metadata, not another web app or dependency service.
+Generate reference edits from owned current portraits, reject crowded cells,
+inspect resulting poses and execute the consuming PCK. Preserve existing audio,
+portrait/floor bytes and other projects. Human motion/balance/art approval remains
+unverified; four keyframes and two mirrored orientations are a bounded milestone.
 
 # Previous assessment — a usable native economy board
 

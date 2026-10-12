@@ -1,14 +1,21 @@
 # P06 — Veilbreak: The Bell Warden
 
-Version **0.2.0**, a complete native Godot 2D boss encounter. Move, strike,
+Version **0.3.0**, a complete native Godot 2D boss encounter. Move, strike,
 cast seals, dodge locked warnings, exploit an open core and survive two phases.
 The trial has title/controls, victory/defeat, actual results, pause and restart.
 Painted characters/courtyard, distinct attack sounds and phase-responsive music
-now give the Bell Warden an integrated visual and sonic identity.
+give the Bell Warden a visual and sonic identity. Two new animation atlases
+connect walking, blade preparation/contact/recovery, seal casting, dodge and
+Warden attacks to real combat clocks. Committed attacks can miss or be cancelled.
 This is a new destination for the Véu Partido seed, not a reconstruction of its
 unavailable Unity starter or execution of historical RPG combat formulas.
 
-![Actual Godot-rendered illustrated charge warning](../../evidence/veil-arena/presentation.png)
+![Actual native blade contact and Warden anticipation](../../evidence/veil-arena/motion.png)
+
+[Watch the engine-rendered action demonstration](../../evidence/veil-arena/motion-preview.mp4)
+(7.2s, 1280x800/30fps, Godot Movie Maker). Positions/stages are declared fixtures
+and input is scripted; this is a pose/timing demonstration, not human gameplay
+or a real-time hardware performance measurement. Download if GitHub cannot play it inline.
 
 ## Play
 
@@ -30,9 +37,9 @@ were verified; no claim is made that a human opened the graphical editor.
 | Input | Action |
 |---|---|
 | WASD / arrows | Move; native physics bodies collide with walls, columns and the Warden |
-| J | Strike, 12 resolve, 0.4s cooldown, short reach; 4 guarded / 24 open-core damage |
-| K | Seal projectile, 34 resolve, 1.1s cooldown; 8 damage and 36 ward pressure on impact |
-| Space | Directional dodge, 25 resolve, 0.65s cooldown; first 0.16s invulnerable, 0.20s movement |
+| J | Blade, 12 resolve, 0.4s cooldown; aim locks at preparation, contact after 100ms; 4 guarded / 24 open-core damage |
+| K | Seal, 34 resolve, 1.1s cooldown; gather for 75ms, then release; 8 damage and 36 ward pressure on impact |
+| Space | Directional dodge, 25 resolve, 0.65s cooldown; cancels a pending action; first 0.16s invulnerable, 0.20s movement |
 | Enter | Begin, resume or restart after a result |
 | Esc | Pause/resume; focus loss also requests pause |
 | F1 / Tactics button | Keyboard or native mouse help; freezes the encounter until explicit resume |
@@ -42,6 +49,14 @@ Resolve regenerates at 25/s. Seals travel through the arena and collide with
 stone; three sufficiently close impacts break the ward for 2.4s. Pressure decays
 after two seconds without another impact. Blade counters use recovery and ward
 breaks. Holding J/K/Space does not repeat input; press for each action.
+
+Blade contact checks range (103px) and a 120-degree sector around the locked aim,
+at the actual impact time. Moving behind or away from the prepared blade can make
+it miss. Blade/cast reduce movement to 65% while committed; their actions last
+320/300ms. One action starts at a time; simultaneous J/K favors the legal blade.
+Dodge can cancel preparation/recovery, and damage interrupts an unfinished action.
+Spent resolve/cooldown stay spent; cancelled contact never lands later. Guard/open
+damage is evaluated at contact, so starting just before a recovery closes is risky.
 
 The Warden cycles **sweep**, **charge** and expanding **wave**, locking its aim
 during the amber windup. Columns stop a charge and block seals. Wave timing
@@ -53,8 +68,8 @@ can make an apparent counter unsafe. No random hit/crit roll conceals the outcom
 Six health units and one continuous 160-health boss fight keep the trial bounded.
 Restart clears positions, projectiles, phases, hazards, cooldowns, pressure and
 results. Progress is session-only. Controller/touch, campaign and saves are
-not implemented. The two static painted character poses use native bob/flash;
-full movement/attack animation remains a separate production opportunity.
+not implemented. Pause/result screens freeze pose clocks alongside gameplay;
+restart clears action, walk, facing and contact state.
 
 ## Art and sound
 
@@ -63,6 +78,21 @@ teal courier and subdued slate paving. Native columns retain their real collisio
 footprints. Amber warnings, violet echoes, teal open-core rings and the OPEN label
 remain explicit game information. Breathing space around the floor prevents the
 illustrated bodies from being cropped by the HUD at the physics walls.
+
+P07 also supplies two actual RGBA atlases: 16 poses per character. Courier rows
+contain four walk, blade, dodge and seal keyframes; Warden rows contain four heavy
+walk, sweep, charge and wave keyframes. Windup holds the anticipatory pose; real
+active/recovery stages choose the strike, drive/brake or spent pose. Movement
+clocks follow actual body displacement, so a blocked actor does not keep walking.
+Frames mirror horizontally to face the action; this is not an eight-direction set.
+
+Initial crowded generations were rejected, then edited for transparent gutters.
+Accepted PNG bytes are unchanged. Native [catalog production](tools/build_motion_catalog.gd)
+reads alpha bounds, aligns low foot/contact pixels and derives scale/regions; the
+game consumes [the catalog](media/motion-catalog.json) without a second animation
+clock. Atlas/pose review is Codex judgment, not independent artist/player approval.
+These four-keyframe clips retain some generated pose/proportion variation; no
+hand-animated interpolation or production-complete character set is claimed.
 
 P08 supplies fourteen actual sound cues and two aligned 24-second music loops.
 Sweep, charge and wave have different bell motifs. Guarded hits, counters, seal
@@ -89,7 +119,10 @@ godot --headless --path . --editor --import --quit
 godot --headless --path . --script tests/encounter.gd --fixed-fps 60
 python3 tools/check_media.py
 godot --headless --path . --script tests/presentation.gd
+godot --headless --path . --script tests/motion.gd
 godot --headless --path . --export-pack Linux dist/veilbreak.pck
+# Only after accepting new source PNGs; does not modify their pixels:
+godot --headless --path . --script tools/build_motion_catalog.gd
 ```
 
 The export preset excludes tests/tools/documentation/distribution and PCM music
@@ -101,14 +134,15 @@ SHA-256, runs source gameplay, executes the shipped pack and builds/tests a fres
 pack. The same media/lifecycle checks execute outside the source directory against
 the delivered and rebuilt PCK. Cache folders are ignored; import/UID metadata is retained.
 
-Twenty-two retained scene/PhysicsServer checks exercise actual movement/columns, guarded/open
+Twenty-four scene/PhysicsServer checks exercise actual movement/columns, guarded/open
 damage, resolve, real projectile impacts, ward break, transition, idle defeat,
 native Viewport GUI input, focus-notification handling, pause/restart and complete
-scripted victory. An OpenGL/Xorg dummy-display run adds eight framebuffer checks
-and screenshots. Fixed-fps automation is synthetic input, not hardware timing
-or human playtesting. A passive ranged circuit lost; a reactive counter/seal
-controller won. The same scripted victory remains 51.87 simulated seconds, 2 health,
-26 hits and one phase change after this media integration. One comparison does
+scripted victory, delayed contact and held-key behavior. Fixed-fps automation is synthetic input, not hardware timing
+or human playtesting. Historical 0.1.0 experiments recorded a passive ranged loss;
+the current reactive counter/seal controller completes 0.3.0 in 55.58 simulated seconds,
+1 health/26 hits/one phase change; the executed 0.2.0 pack completes in 51.87s,
+2 health/26 hits. This bounded comparison shows increased commitment risk,
+not human balance or difficulty suitability. One comparison does
 not establish absence of dominant strategies.
 
 Twenty-four additional native checks decode actual music resources, exercise
@@ -119,8 +153,15 @@ mix without a physical output device. This is technical audio verification,
 not a listening review. OpenGL captures support Codex's visual assessment of
 title, warnings, open core, echo, tactics, results and top/bottom wall framing.
 
-[Current execution](../../evidence/veil-arena/PRESENTATION_RUN.json) separates
-media production, import, actual mix, native rendering and pack execution.
+Thirty-six motion checks cover actual imported alpha borders/content, opaque pose
+bounds at wall limits, delayed once-only contacts, locked orientation/whiffs,
+dodge/hurt cancellation, action priority, pause/resume/restart and walk frames.
+Source, delivered PCK and fresh rebuilt PCK execute outside-source workflows.
+
+[Current execution](../../evidence/veil-arena/MOTION_RUN.json) records production,
+combat comparison, actual OpenGL frames/movie and source/pack checks.
+[Prior presentation execution](../../evidence/veil-arena/PRESENTATION_RUN.json) separates
+0.2.0 media production, import, mix and rendering.
 [Initial encounter execution](../../evidence/veil-arena/RUN.json) remains historical.
 Windows,
 macOS, physical input, accessibility, natural OS focus behavior, enjoyment and

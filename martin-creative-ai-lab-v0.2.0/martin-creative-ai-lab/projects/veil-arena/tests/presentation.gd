@@ -80,11 +80,14 @@ func run() -> void:
 	await physics_frame
 	await physics_frame
 	Input.action_release("strike")
+	await wait_audio(.12)
 	check(arena.sound.events.has("strike"),"A legal blade input emits its real attack cue")
+	await wait_audio(.24)
 	Input.action_press("seal")
 	await physics_frame
 	await physics_frame
 	Input.action_release("seal")
+	await wait_audio(.10)
 	check(arena.sound.events.has("seal"),"A legal seal input emits its real projectile cue")
 	Input.action_press("dash")
 	await physics_frame

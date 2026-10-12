@@ -104,6 +104,27 @@
         "projects/tokyo80s/media/rain-provenance.json",
         "evidence/tokyo80s/SETLIST_RUN.json"
       ]
+    },
+    {
+      "id": "VIS-002",
+      "name": "Veilbreak courier and Warden motion atlases",
+      "type": "visual-pack",
+      "status": "integrated",
+      "source_project": "P07",
+      "consumer_projects": [
+        "P06"
+      ],
+      "runtime_paths": [
+        "projects/veil-arena/media/art/runner-motion.png",
+        "projects/veil-arena/media/art/warden-motion.png",
+        "projects/veil-arena/media/motion-catalog.json"
+      ],
+      "provenance": "Two accepted reference-edited image_gen RGBA outputs, unchanged PNG bytes, from four new requests; first crowded sheets rejected. Native catalog production derives regions/foot pivots/scale; each actor supplies sixteen poses. No external reference media.",
+      "rights": "New generated media; no exclusive copyright, hand-animation authorship or commercial clearance claim.",
+      "evidence": [
+        "projects/veil-arena/media/provenance.json",
+        "evidence/veil-arena/MOTION_RUN.json"
+      ]
     }
   ]
 }
