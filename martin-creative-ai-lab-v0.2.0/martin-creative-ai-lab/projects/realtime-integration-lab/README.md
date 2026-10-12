@@ -1,8 +1,98 @@
-# P11 — Live exchange
+# P11 — Project Rooms / Live exchange
 
-**Project:** Real-time Integration Lab / WebSocket. **Version:** 0.1.7.
-**Scope:** one local, ephemeral text conversation. This is a working adaptation
-of the historical Socket.IO exercise, not a raw WebSocket implementation.
+**Version:** 0.2.0. A local project workspace with remembered participants,
+separate conversations, saved notes/decisions, recoverable history and JSON export.
+The original ephemeral exercise remains available with its unchanged protocol.
+
+![Actual Chromium workspace with fictional test participants](../../evidence/realtime-chat/rooms-preview.png)
+
+## Run Project Rooms
+
+Use **Node 24+** (tested 24.19.0) for the persistent mode and complete test suite.
+From this directory:
+
+```bash
+npm ci
+npm run rooms
+# Open http://127.0.0.1:3000/studio/ in two browsers or tabs.
+npm test
+# New workflow only:
+npm run test:rooms
+```
+
+1. Choose a display name, then create or open a project.
+2. Share its browser address or Copy project link. Another participant chooses
+   their own name; the address selects the same room.
+3. Send a discussion note or record a decision. Both are saved before broadcast;
+   decisions also appear in a separate project record.
+4. Switch projects without losing drafts, reload, reconnect or restart the server.
+   Your remembered local identity reopens the saved room and its latest entries.
+5. Load earlier entries or Export record to download every note/decision as JSON.
+
+`ROOMS_DB` selects the SQLite file; default `data/rooms.sqlite` is ignored by Git.
+`HOST`/`PORT` default to `127.0.0.1:3000`. CLI assets/database paths work outside
+this directory. Stop with Ctrl+C; restart against the same database to continue.
+The separate `npm start` command runs the original ephemeral lab at `/`.
+Project Rooms also serves that exercise at `/`; their Socket.IO namespaces do not
+share events. The package's Node 22 minimum remains for that legacy exercise;
+the rooms entry explicitly requires Node 24. No dependencies were added or upgraded.
+
+## Persistence and delivery contract
+
+SQLite schema 1 has sessions, unique project names and ordered entries with
+foreign keys/indexes. Session tokens are random, stored as hashes in the database
+and remembered by this browser. Display names are chosen, not verified accounts.
+All participants in this trusted workspace can open every room; stream separation
+is not private-room authorization. Changing participant creates a new identity
+and leaves earlier authorship intact. Browser drafts are scoped to that identity.
+Clearing browser storage loses its remembered identity/drafts, not saved entries.
+
+A send has an immutable client attempt ID, scoped to its participant. Commit
+precedes broadcast/acknowledgement. Retrying the same content/ID returns the saved
+entry without another insert/broadcast; reusing an ID for different content is
+rejected. Lost acknowledgement keeps an explicit Previous attempt, without
+replacing newer typing. Rejoining history resolves a saved attempt; an unsaved
+attempt can be retried explicitly. No offline send or automatic replay is queued.
+An explicit rejection preserves the editable draft and releases the retry state.
+This is single-server idempotency, not a distributed exactly-once guarantee.
+
+History pages contain 50 chronological entries; the browser holds at most 300.
+The decision panel shows the latest 100; JSON export includes the complete record
+without credentials. Limits: 500 characters per entry, 40 per participant name,
+60 per project name, 100 projects, 5,000 local identities and 10,000 entries per
+project. Export is a consumable record, not a database restore/import tool.
+Back up a stopped database if you need full identity/continuation preservation.
+Do not copy a running WAL database as though its main file alone were complete.
+
+This is a local prototype for trusted collaborators. Public service operation,
+verified accounts/roles, TLS hosting, revocation/retention policies, multi-process
+writers, disaster recovery, encryption at rest and assistive technology remain
+outside the validated contract. No hosted service, customer adoption or paid
+market claim. Local-storage denial permits current-session use but prevents
+remembering identity/drafts; the UI explains this limitation.
+
+## Verification and origin
+
+[Rooms execution](../../evidence/realtime-chat/ROOMS_RUN.json) records actual
+SQLite reopening, HTTP/Socket.IO isolation, Chromium collaboration, permalink,
+reload/server restart, controlled lost acknowledgements, explicit rejection,
+pagination/export and desktop/narrow rendering. Existing 38 chat checks are
+retained. Source and visual review are by Codex, not independent user approval.
+The screenshot contains fictional automated fixtures, not actual collaboration.
+
+Node/Express/Socket.IO remain appropriate for this existing real-time service.
+Native SQLite adds relational persistence without another service or dependency.
+A C#/ASP.NET or Go rewrite would duplicate the verified transport; a game engine
+does not serve this workflow. P02 keeps its pinned evaluator and unchanged
+dependency graph. This new workspace is authored under Martin's portfolio mandate,
+not recovered historical functionality; the three original files and ZIP remain
+unchanged. Human usability and commercial validation are future evidence.
+
+# Legacy exercise — Live exchange
+
+The retained ephemeral mode preserves the 0.1.7 interaction and event contract.
+It is a working adaptation of the historical Socket.IO exercise, not a raw
+WebSocket implementation.
 
 ## Purpose and acceptance
 

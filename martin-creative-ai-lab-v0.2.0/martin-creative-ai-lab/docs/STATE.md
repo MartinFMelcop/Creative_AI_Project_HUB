@@ -1,39 +1,43 @@
 # Lab state
 
-**Updated:** 2026-10-12 (America/Sao_Paulo). **Seed:** 0.9.0.
-**Current milestone:** P06 Veilbreak — The Bell Warden 0.1.0.
+**Updated:** 2026-10-12 (UTC). **Seed:** 0.10.0.
+**Current milestone:** P11 Project Rooms 0.2.0.
 
-[Play the native trial](../projects/veil-arena/README.md) from its Godot project
-or delivered `dist/veilbreak.pck`. Real physics bodies collide with walls, two
-columns and the opponent. Blade counters, resolve, projectile seals, ward breaks
-and dodges connect to one continuous two-phase fight. Locked sweep/charge/wave
-warnings permit repositioning; the faster second phase adds a warned charge echo.
-Title/tactics, keyboard/mouse help, pause, victory/defeat, results and restart
-complete the encounter. Original runtime geometry supplies actual visual feedback.
+[Run Project Rooms](../projects/realtime-integration-lab/README.md) with Node 24
+and `npm run rooms`, then open `/studio/`. Choose a remembered local participant,
+create/share a project, exchange saved notes, record decisions, switch rooms with
+drafts intact and export the complete record. SQLite commits before broadcast;
+rejoining recovers missed entries. A fixed attempt ID permits explicit retry of
+uncertain sends without another insert. Earlier attempts and newer typing survive
+reload separately. The original ephemeral exercise and its protocol remain at `/`.
 
-[Execution](../evidence/veil-arena/RUN.json) distinguishes source import, 22 actual
-scene/physics checks, eight OpenGL framebuffer checks and independent built-pack
-execution. Legal scripted inputs win after both phases with two health remaining;
-idle play and a passive ranged circuit lose. Fixed-fps automation and same-agent
-visual/strategy review establish behavior, not human balance or enjoyment.
+[Execution](../evidence/realtime-chat/ROOMS_RUN.json) covers six SQLite/API/socket
+and eight Chromium workflow checks, plus 38 retained legacy checks. Actual database
+reopening and server restart, disconnect recovery, lost acknowledgement with/without
+commit, rejection, shared URLs, pagination/download and narrow UI were exercised.
+CLI startup outside the project serves both modes; the new startup creates a real
+ignored SQLite file. Source and desktop/narrow review are by the implementer.
 
-Godot 4.6.3 standard is installed; Unity, its historical starter and .NET are not.
-This new 2D destination realizes the small-arena seed, not recovered Unity/3D
-code. PCK resources were built and executed; the pack requires Godot. No standalone
-OS executable, audio, controller, campaign, human input, hardware performance,
-other-platform compatibility or commercial approval is claimed. Native CI checks
-source, shipped pack and a rebuilt pack with a pinned official engine download.
-Hosted job outcomes are established by GitHub, not inferred from local execution.
+This trusted local workspace has chosen display names, not verified accounts.
+All participants may open every project. Browser storage keeps bearer identity
+and per-participant drafts; SQLite keeps hashed tokens and the record. No automatic
+offline sending, public hosting, roles, cross-process delivery, full restore/import,
+human usability, assistive technology or commercial demand is claimed. Export is
+a complete consumable record; operational backup needs the stopped database.
 
-The clean baseline `297044b` matched main after fetch/merge. Recent P10/browser
-concentration prompted comparison with native P06, P03 music, P11 service and
-missing creative masters. P10/P03/P08, P11/P02, historical archive and transfer
-records are unchanged. No Sites deployment is part of this native milestone.
-Martin supplied direction/authorization; Codex implemented and reviewed the work.
-Normal main publication is explicitly authorized; the final delivery verifies
-its actual stored message and local/remote SHA.
+Baseline `25d4588` was clean and matched main after fetch/merge. Portfolio review
+compared native P06, P03 music, P01 economy and P11 service completeness. Persistent
+collaboration removes a real limitation while P06 already has an executed trial
+and the games need unassisted play/listening. No mandatory project rotation.
+Node/Socket.IO preserve the useful transport; built-in SQLite adds relational
+persistence without another dependency/service. No rewrite to another stack.
 
-Next session must compare portfolio opportunities again: unassisted native
-keyboard play and encounter pacing; P11 rooms/identity/persistence as a coherent
-service; P03 listening/hardware timing and a distinct musical stage. Independent
-P02 candidate context and complete P04 manuscript remain separate missing inputs.
+P02 retains its pinned snapshot and dependency graph; historical archives, P06,
+P03/P08 and P10 remain unchanged. No Sites deployment. Martin supplied direction
+and main publication authority; Codex implemented and reviewed. Final delivery
+confirms the stored message, remote SHA and hosted checks.
+
+Next compare P11 real collaborator workflow/account/backup needs, P06 human pacing
+and integrated sound/art, P03 a distinct musical stage, and P01 a bounded economy
+loop. Missing full P04 manuscript and independent P02 candidate context remain
+separate constraints; do not substitute fabricated feedback or recovery.

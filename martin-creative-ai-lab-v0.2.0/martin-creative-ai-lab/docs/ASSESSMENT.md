@@ -1,4 +1,36 @@
-# Current assessment — a native combat trial
+# Current assessment — durable project collaboration
+
+Updated: 2026-10-12 (UTC). Clean `25d4588` matched main after authenticated
+fetch/merge. Read instructions/current records/seed evolution, actual P11 source,
+P06/P03/P10 state, recent history and the archive inventory. Last milestone added
+native gameplay; earlier work concentrated on browser games and narrow chat polish.
+
+| Opportunity | Evidence and choice |
+|---|---|
+| P11 complete collaboration | Actual chat has no identity, project separation or saved history; a coherent persistent workflow removes those limits. Selected. |
+| P01 economy loop | Concrete board/resource seed but no available full baseline; creating rules remains a valuable separate design milestone. Rave crafting tables are another project's historical source. |
+| P06 presentation/progression | A native two-phase trial now executes; human pacing/controls remain unverified. Sound/art or a distinct encounter should follow a concrete direction. |
+| P03/P10 content | Real musical stage/two-day campaign exist. A second musical identity or substantive scenes are valuable alternatives, with human listening/play still absent. |
+| P04/P02 | Full manuscript or independent candidate context remains missing; cannot manufacture editorial comparison or model performance. |
+
+Node 24/Express/Socket.IO suit the existing real-time service. Built-in SQLite
+provides indexed relational history, participant identity and idempotency without
+another dependency or external database. A C#/ASP.NET or Go rewrite would duplicate
+the existing transport; native game engines suit games, not this workspace.
+
+Before: reload/restart loses the conversation and every project shares one anonymous
+stream. After: participants create/share rooms, keep discussion and decisions,
+return after restart, recover missed entries, retain separate drafts and export
+all records. Chosen names and stream isolation do not establish private-room access.
+Same-agent UI/source review added immutable retries, protected newer typing and
+separated participant drafts. Actual permalink execution found a missing hash
+navigation handler; storage denial now has a persistent warning. These improve
+observable workflows, not merely message wording. SQL/API/browser execution is
+recorded in [evidence](../evidence/realtime-chat/ROOMS_RUN.json); independent usability,
+public service readiness and market demand remain unverified.
+
+
+# Previous assessment — a native combat trial
 
 Updated: 2026-10-12 (America/Sao_Paulo). The clean `297044b` checkout matched main
 after fetch/merge. Read current records, actual implementations, recent decisions,

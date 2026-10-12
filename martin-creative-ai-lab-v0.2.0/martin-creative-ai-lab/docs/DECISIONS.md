@@ -643,3 +643,26 @@ CI pins/verifies the official engine archive and tests source, shipped and rebui
 packs. Synthetic legal input and actual OpenGL captures establish execution, not
 human timing/enjoyment, accessibility, hardware performance or commercial approval.
 No Sites publication or new engine binary redistribution is part of this work.
+
+
+## ADR-033 — persist project conversations without replacing the lab protocol
+
+**Date:** 2026-10-12 (UTC). **Status:** Project Rooms 0.2.0.
+**Authority:** explicit continuous portfolio development and normal main publication.
+
+Select P11's missing project/identity/history workflow after comparing P01, native
+P06 and the existing creative games. Node/Express/Socket.IO remain appropriate;
+Node 24 built-in SQLite adds ordered relational persistence without a new package,
+service or stack rewrite. The separate rooms entry requires Node 24; the legacy
+package minimum/lock graph stay compatible with P02's pinned evaluator.
+
+Namespace `/studio` owns saved project entries; `/` retains the exercise protocol.
+Commit before broadcast; immutable participant/attempt IDs deduplicate explicit
+retries. Recover snapshots on join, keep drafts/uncertain attempts per participant
+and room, and preserve newer typing. Chosen names are not verified accounts;
+all trusted workspace participants can open every room. No privacy/roles inference.
+
+JSON export is a full consumable record, not a restore tool. A stopped SQLite
+file preserves continuation; a running WAL main file alone is not a backup.
+Public operation requires an actual account/access/retention/backup contract and
+user evidence. No hosted deployment, independent usability or market claim.

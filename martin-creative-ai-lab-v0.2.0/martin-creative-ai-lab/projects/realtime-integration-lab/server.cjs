@@ -30,7 +30,7 @@ function createChatServer() {
       if (typeof acknowledge === 'function') acknowledge({ ok: true });
     });
   });
-  return { server, io };
+  return { app, server, io };
 }
 
 if (require.main === module) {

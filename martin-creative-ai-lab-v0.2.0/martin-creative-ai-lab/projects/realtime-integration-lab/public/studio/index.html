@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Project Rooms · Creative AI Lab</title>
+  <link rel="stylesheet" href="/studio/style.css">
+  <script src="/socket.io/socket.io.js" defer></script><script src="/studio/client.js" defer></script>
+</head>
+<body>
+  <header class="mast"><div><p class="eyebrow">Creative AI Lab / P11</p><h1>Project Rooms</h1></div>
+    <div class="identity"><span id="participant"></span><button id="change" type="button" hidden>Change participant</button></div>
+  </header>
+  <p id="storage" class="storage" role="status" hidden>This browser cannot remember your identity or drafts after reload. Saved project entries remain available; export your record before leaving.</p>
+  <section id="welcome" class="welcome" aria-labelledby="welcome-title">
+    <p class="eyebrow">A place to continue the work</p><h2 id="welcome-title">Keep the conversation.<br>Carry decisions forward.</h2>
+    <p>Create a project room, invite another participant and leave a record you can return to.</p>
+    <form id="identity-form"><label for="name">Your display name</label><div class="inline"><input id="name" maxlength="40" required autocomplete="nickname"><button>Enter workspace</button></div></form>
+    <p class="muted">Local workspace for trusted collaborators. Names are chosen, not verified accounts. Everyone in this workspace can open every project.</p>
+  </section>
+  <main id="workspace" hidden>
+    <aside class="projects"><h2>Projects</h2><ul id="rooms" aria-label="Project rooms"></ul>
+      <form id="room-form"><label for="room-name">New project</label><input id="room-name" maxlength="60" required placeholder="e.g. Veilbreak playtest"><button>Create project</button></form>
+    </aside>
+    <section class="conversation" aria-labelledby="room-title">
+      <div class="room-head"><div><p class="eyebrow" id="connection" role="status">Connecting…</p><h2 id="room-title">Choose a project</h2></div>
+        <div class="tools"><button id="export" disabled>Export record</button><button id="link" disabled>Copy project link</button></div></div>
+      <p id="room-hint" class="muted">Open an existing room or create a project to begin.</p>
+      <button id="older" hidden>Load earlier entries</button>
+      <ol id="entries" tabindex="0" aria-label="Project conversation"></ol>
+      <button id="latest" hidden>Jump to latest</button>
+      <form id="compose"><label for="body">Your contribution</label>
+        <textarea id="body" maxlength="500" rows="3" required disabled aria-describedby="compose-hint"></textarea>
+        <div class="compose-actions"><select id="kind" aria-label="Entry type"><option value="note">Discussion note</option><option value="decision">Recorded decision</option></select><button id="send" disabled>Send note</button></div>
+        <p id="compose-hint" class="muted">Up to 500 characters. Saved entries remain after a server restart. Decisions also appear in the project record.</p>
+      </form>
+      <section id="pending" hidden aria-label="Unconfirmed attempt"><h3>Previous attempt</h3><p id="pending-body"></p><p>Delivery is unconfirmed. Check the conversation or retry this same attempt.</p><button id="retry" disabled>Retry same attempt</button></section>
+    </section>
+    <aside class="decisions"><p class="eyebrow">Project record</p><h2>Decisions</h2><p class="muted">The latest 100 decisions, kept apart from the discussion. Export includes every entry.</p><ol id="decisions"></ol></aside>
+  </main>
+  <p id="feedback" role="status" aria-live="polite"></p>
+  <footer>Private local prototype · No automatic offline sends · <a href="/">Open the ephemeral lab exercise</a></footer>
+</body></html>

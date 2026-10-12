@@ -4,8 +4,8 @@ An evolving laboratory of games, narrative, images, audio, data, and AI
 evaluation by **Martin Melcop Neto**. Projects are adaptable seeds: build small
 slices, verify behavior, record decisions, and test reuse in actual destinations.
 
-**Current seed: v0.9.0.** The lab includes eleven project lines, 178 preserved
-historical texts, a working local text-chat adaptation, a calibrated
+**Current seed: v0.10.0.** The lab includes eleven project lines, 178 preserved
+historical texts, a working local project-conversation workspace, a calibrated
 practice-task harness, a complete rescue adventure with browser/terminal editions,
 an original browser rhythm stage with a real rendered soundtrack, and a native
 Godot boss arena with an executed PCK. Private
@@ -23,7 +23,7 @@ project versions and execution boundaries are in the state and registry.
 - [Assessment](docs/ASSESSMENT.md) and [improvement plan](docs/IMPROVEMENT_PLAN.md): evidence and selected priorities.
 - [P03 — Midnight Signal](projects/tokyo80s/README.md): play an original four-lane rhythm stage, calibrate timing, finish and replay.
 - [Rhythm/audio evidence](evidence/tokyo80s/RUN.json): real 69-second Web Audio run and registered master/export, with honest review limits.
-- [P11 — Live exchange](projects/realtime-integration-lab/README.md): install, run, test, provenance, and contribution.
+- [P11 — Project Rooms](projects/realtime-integration-lab/README.md): persistent project notes/decisions, local identity, history recovery, drafts and export.
 - [P02 — EVAL-001](evaluations/chat-send-buffering/README.md): export a starter, check a client, and inspect limits.
 - [Current dependency-gate evidence](evidence/evaluation-task/DEPENDENCY_RUN.json): installed direct version checks, controlled mismatch and unchanged calibration.
 - [P10 — Flood Crossing browser](projects/waystone-dialogue/browser/README.md): two connected days: rescue, relief priorities, clinical timing, food/seed, local resume and backward-compatible portable saves.
@@ -31,7 +31,8 @@ project versions and execution boundaries are in the state and registry.
 - [Rescue milestone evidence](evidence/waystone-dialogue/ADVENTURE_RUN.json): actual route playthroughs, cargo-order comparison, connected checks and same-agent review.
 - [Prior dialogue evidence](evidence/waystone-dialogue/DUSK_RUN.json): 32 checks, deadline-aware closing responses, seven CLI comparisons and unchanged rules across all reachable states.
 - [Previous dialogue evidence](evidence/waystone-dialogue/DIALOGUE_RUN.json): 29 checks, contextual responses and unchanged rules across all reachable states.
-- [Current chat evidence](evidence/realtime-chat/DRAFT_RECOVERY_RUN.json): edited-draft timeout recovery, both controlled delivery outcomes, literal wrapping and all 38 chat checks.
+- [Persistent rooms evidence](evidence/realtime-chat/ROOMS_RUN.json): database/server reopening, collaborator workflow, idempotent retry and complete export.
+- [Previous chat evidence](evidence/realtime-chat/DRAFT_RECOVERY_RUN.json): edited-draft timeout recovery, both controlled delivery outcomes, literal wrapping and all 38 chat checks.
 - [Prior text-reflow evidence](evidence/realtime-chat/TEXT_REFLOW_RUN.json): fixed-panel user styles, reading anchors and pinned evaluator compatibility.
 - [Prior activity evidence](evidence/realtime-chat/ACTIVITY_RUN.json): inactive-page arrivals, tab-title counts, focus/visibility reset and bounded history.
 - [Prior unread-navigation evidence](evidence/realtime-chat/UNREAD_RUN.json): arrival counts and keyboard focus.
@@ -110,7 +111,7 @@ GitHub job logs establish remote runner results.
 
 The original delivery test failed on the preserved source and passed on 0.1.0.
 Two further send-path regressions fail on that committed client and pass on 0.1.1.
-Thirty-eight current automated tests verify the local contract, including connected
+Thirty-eight retained legacy tests verify the ephemeral contract, including connected
 polling congestion, stale-state reconnect buffering, preserved reading position,
 activity-aware unread counts, viewport resizing and fixed-panel text reflow. New
 documentation, UI, code comments, and evidence are in English; historical texts

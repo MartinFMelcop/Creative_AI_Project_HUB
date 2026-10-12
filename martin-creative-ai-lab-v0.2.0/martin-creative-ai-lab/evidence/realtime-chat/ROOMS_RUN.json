@@ -1,0 +1,90 @@
+{
+  "project": "P11",
+  "version": "0.2.0",
+  "recorded_at": "2026-10-12",
+  "baseline_commit": "25d4588f383505645b9d4b18b45e56e0dcf7ba67",
+  "contribution": {
+    "direction": "Martin Melcop Neto",
+    "implementation_and_review": "Codex; no independent human usability or collaboration approval"
+  },
+  "before": "One anonymous ephemeral stream; reload/restart loses conversation; no saved decisions, rooms or identity.",
+  "after": "Project Rooms provides local identity, saved project notes/decisions, per-participant drafts, history recovery/pagination, explicit idempotent retries, project links and complete JSON export. Legacy exercise/protocol remains separate.",
+  "environment": {
+    "node": "24.19.0",
+    "sqlite": "3.53.3 via node:sqlite",
+    "chromium": "154.0.8037.57 Debian 13",
+    "playwright_core": "1.64.0",
+    "platform": "Linux x86_64",
+    "browser_mode": "Headless, --no-sandbox in managed container",
+    "display_checks": "1280x900 desktop; 390x844 narrow; actual Chromium screenshots, synthetic input"
+  },
+  "executed": [
+    {
+      "command": "npm test",
+      "result": "51/51 passed before final permalink/storage-warning additions; includes all 38 retained legacy checks and 13 new checks",
+      "elapsed_seconds": 68.321853603
+    },
+    {
+      "command": "npm run test:rooms",
+      "result": "Final 14/14 passed, no failures/skips/cancellations",
+      "breakdown": "6 SQL/API/socket checks and 8 Chromium workflow checks",
+      "elapsed_seconds": 18.490456295
+    },
+    {
+      "command": "node --check rooms-store.cjs; node --check rooms-server.cjs; node --check public/studio/client.js",
+      "result": "Passed"
+    },
+    {
+      "command": "PORT=38623 ROOMS_DB=<scratch>/rooms.sqlite node <absolute>/rooms-server.cjs",
+      "working_directory": "Scratch outside the project",
+      "result": "Actual CLI startup; /health, /studio/ and / return 200; real session/project API creation; Ctrl+C shutdown"
+    },
+    {
+      "command": "Compare dependency_lock(current lock) with pinned evaluator lock",
+      "result": "Equal; versions removed according to the unchanged evaluator contract. No module dependency or evaluator snapshot change."
+    }
+  ],
+  "verified_behavior": [
+    "SQLite reopened from a real temporary file preserves chosen identity, notes, decisions and order; token hashes differ from bearer tokens.",
+    "Real authenticated namespace sockets receive only their active project stream; switching retrieves a chronological snapshot. Every authenticated workspace participant may join every project.",
+    "The same participant/attempt ID returns its existing entry without duplicate insert/broadcast; mismatched content is rejected.",
+    "Two independent browser contexts exchange literal notes/decisions and share a permalink, switch projects, retain drafts and reload identity/history.",
+    "Real disconnect misses peer entries; reconnection and a real server shutdown/restart recover them against the same SQLite file.",
+    "Controlled server handlers withhold acknowledgements with/without commit. Reload resolves an already saved attempt; explicit retry commits an unsaved attempt once. Newer typing survives both.",
+    "Explicit rejection preserves editable draft and removes uncertain retry state. Storage denial still permits current-session use with a persistent warning.",
+    "123 declared fixture entries paginate in chronological order; the actual downloaded JSON contains all 123, without credentials.",
+    "390-pixel workflow wraps a 500-character unbroken entry without horizontal document overflow; participant change retains earlier authorship."
+  ],
+  "review": {
+    "reviewer": "Implementing agent",
+    "material": "Actual desktop/narrow screenshots and source/data flow",
+    "assessment": "Distinct project selection, saved timeline, decision panel and export form one coherent workflow; current identity and delivery state remain visible. Source review protected newer typing, scoped drafts by participant, buffered join-time arrivals and made the 300-entry display limit explicit.",
+    "corrected_during_development": [
+      "Ambiguous SQL id in joined history/decision queries.",
+      "Missing hash-only permalink navigation found by actual Chromium workflow.",
+      "A test initially observed stale DOM during participant change; workspace now clears previous content and the test waits for the new identity."
+    ],
+    "independent_user_feedback": false
+  },
+  "preservation": "P06/P03/P08/P10, P02 evaluation files/snapshot, archive and asset/transfer records unchanged against baseline. Legacy client/protocol/reading tests unchanged; server factory additionally returns app for room integration.",
+  "scope_limits": [
+    "Trusted local workspace, default loopback; chosen names are not verified accounts and rooms are not access-controlled groups.",
+    "Node 24+ required for rooms/full suite; legacy entry retains Node 22 minimum and the evaluator lock graph. No added/upgraded package, hosted service or Sites deployment.",
+    "Single-server SQLite idempotency, not distributed exactly-once delivery; no automatic offline replay.",
+    "50-entry pages, 300 displayed timeline entries, latest 100 decisions; export includes every entry up to the 10,000/project cap.",
+    "Export is a consumable record, not restore/import. Full backup needs stopped SQLite data; active WAL main-file-only copying is insufficient.",
+    "Browser storage loss removes remembered identity/drafts; tokens lack revocation/expiry. Public identity/roles/TLS/retention, multiple writers and disaster recovery remain separate requirements.",
+    "No human usability, physical mobile/assistive technology, other-browser or commercial evidence. Test participants and project content are fictional fixtures.",
+    "Existing CI automatically runs the complete P11 suite; hosted outcomes must be read from Actions, not inferred from local results."
+  ],
+  "sha256": {
+    "projects/realtime-integration-lab/rooms-store.cjs": "e0410028e31514700067bb14af1dfe4fc937f9f9b15e00c58f34dde124ace0b9",
+    "projects/realtime-integration-lab/rooms-server.cjs": "cc514020aac3be3363b18f44095123300ee5ae8ad7de0f53d58c8eebc5366ab9",
+    "projects/realtime-integration-lab/public/studio/client.js": "a3cb0630c42e1b574de14506ee5e79ab6746199affad4bf6c1afee69460a1138",
+    "projects/realtime-integration-lab/public/studio/index.html": "60640fb0bf9ba91c3626137d4543f5bcbf8a5942145493f1af769b0942a9011b",
+    "projects/realtime-integration-lab/public/studio/style.css": "d6fb4b034898cb515023de1c9cc458e8f0f51653ae5ce2329f357ae6cc03da44",
+    "projects/realtime-integration-lab/tests/rooms.test.cjs": "ae3d01c85ec5eecf01d02a5866ba424e40c38715917a70f22a392d941399d1e8",
+    "projects/realtime-integration-lab/tests/rooms-browser.test.cjs": "d6923a03ac7b44c7dd13f10987c3cec15b5c541a01992d669f69330f970086bd",
+    "evidence/realtime-chat/rooms-preview.png": "c1260d0cc390e4ac84e0741e97d11f4ec45a9f72c0555c687263788453ffb28b"
+  }
+}

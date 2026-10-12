@@ -1,10 +1,10 @@
 # SEED — Martin Creative AI Lab
 
-**Version:** 0.9.0
+**Version:** 0.10.0
 **Data-base:** 10 de outubro de 2026  
 **Autor e responsável pelo portfólio:** Martin Melcop Neto  
 **Working language:** English for new documentation, plans, code comments, UI, and reports. Preserve original creative titles and historical source languages.
-**Current state:** P06 Veilbreak 0.1.0 is a native Godot 2D boss trial with real physics, blade/seal/ward choices, two phases, readable warnings and complete title/pause/results/restart. Its built PCK was executed independently. P10/P03/P08 and P11/P02 are preserved; no Unity restoration, standalone OS executable or human/commercial approval is claimed.
+**Current state:** P11 Project Rooms 0.2.0 adds local identity, persistent project conversations/decisions, reconnect history, per-participant drafts, explicit idempotent retries and complete JSON export. Native P06 0.1.0, P10 campaign 0.4.0 and P03/P08 remain preserved; no public service, verified accounts or human/commercial approval is claimed.
 
 > Construir um laboratório autoral em Git que transforma ideias, obras e experimentos em produtos pequenos, sistemas reutilizáveis e evidências técnicas verificáveis. A IA participa da criação e execução; Martin desenvolve sua capacidade de especificar, compreender, selecionar, corrigir, validar e explicar os resultados.
 
@@ -46,14 +46,14 @@ Se apenas este arquivo estiver disponível, ele é suficiente para iniciar a Fas
 |---|---|
 | Repository | MartinFMelcop/Creative_AI_Project_HUB; actual Git root `/workspace/Creative_AI_Project_HUB`; lab remains nested in its original package directory |
 | Preserved sources | 175 Rave Master texts and 3 WebSocket files; unchanged ZIP and inventory; not a complete RMXP backup |
-| Primary workstream | P06 Veilbreak 0.1.0: complete native boss encounter and verified PCK |
-| Engine execution | P06 Godot 4.6.3/GDScript: source imported, native game rendered/played and PCK built/executed; P10 browser/Python, P03 Web Audio, P11 Node. No Unity/RMXP execution claim |
-| Current verification | 22 native scene/physics checks plus 8 framebuffer checks; complete scripted fight, passive loss and independent PCK; `evidence/veil-arena/RUN.json` |
+| Primary workstream | P11 Project Rooms 0.2.0: complete local persistent collaboration workflow |
+| Engine execution | P11 Node 24/Socket.IO/SQLite and Chromium; retained P06 Godot source/PCK, P10 browser/Python and P03 Web Audio. No new Unity/RMXP execution |
+| Current verification | 6 SQL/API/socket + 8 Chromium room checks, 38 retained legacy checks; DB/server restart, lost-ack recovery, invitation, pagination/export; `evidence/realtime-chat/ROOMS_RUN.json` |
 | Historical verification | v0.2.0 combat/dialogue, P10 trust, P11 unread and P02 snapshot records remain preserved; the old scenario runner was not rerun |
-| Next action | Compare P06 physical keyboard play/pacing, P11 service workflow and a distinct P03 musical stage; no automatic next-project priority |
-| Other seeds | P10 campaign 0.4.0 / Python night 0.2.0 / standalone 0.1.3, P03/P08 0.1.0, P11 chat 0.1.7 and P02 runner 0.2.1 preserved |
+| Next action | Compare real collaborator/account/backup needs, native P06 presentation/pacing, distinct P03 music and bounded P01 economy |
+| Other seeds | P06 0.1.0, P10 campaign 0.4.0 / Python night 0.2.0 / standalone 0.1.3, P03/P08 0.1.0 and P02 runner 0.2.1 preserved |
 | Transfer / shared status | TR-009 (evaluation adaptation) and TR-012 (real P08 audio in P03) validated for bounded consumers; ten earlier candidates remain; no shared engine |
-| Portfolio / attribution | Baseline `297044b` synchronized with main by authenticated fetch/merge. Martin supplied direction; Codex implemented/reviewed. Native project publishes to authorized main; existing private Sites are untouched |
+| Portfolio / attribution | Clean baseline `25d4588` matched main after fetch/merge. Martin supplied direction; Codex implemented/reviewed. Main publication authorized; Sites untouched |
 
 Registry evidence paths must resolve to existing files inside the lab; working
 paths must be directories and legacy-source IDs must exist. This documentary
@@ -231,7 +231,7 @@ Identificadores persistem mesmo quando nomes mudam. Um projeto arquivado pode co
 | P08 | Audio, Poetry & Music Lab | Original musical production and integration | One rendered instrumental with a real game consumer | Midnight Signal PCM/OGG and score provenance; no album or human approval |
 | P09 | AI Delivery & Operations Cases | Carreira real e avaliação simulada | Case de entrega, análise de workflow e rubricas | Base profissional lida; cases anteriores pendentes |
 | P10 | Adventures Unleashed / Rave Master | Narrative, NPCs and recovered systems | Two-day browser rescue/relief campaign with local resume and portable saves | Campaign 0.4.0; Python adventure 0.2.0 / standalone 0.1.3; bounded evidence in registry |
-| P11 | Real-time Integration Lab / WebSocket | Node/Socket.IO event flow; three preserved source files | Local chat; later evaluation task or lobby candidate | Working chat 0.1.7: draft recovery, reading restoration and activity-aware unread/title feedback; TR-009 task adaptation verified; no service deployment |
+| P11 | Real-time Integration Lab / Project Rooms | Node/Socket.IO/SQLite | Trusted local project conversations, decisions and full export | Workspace 0.2.0; original protocol and P02 snapshot preserved; no public service |
 
 P02 agrupa evaluation e QA porque podem compartilhar a mesma aplicação pequena. Não criar dois projetos Unity idênticos apenas para apresentar títulos diferentes. P01 pode abrigar produção, economia e analytics como cases distintos de uma fonte comum.
 
@@ -272,15 +272,13 @@ starter and checks only a submitted client with the pinned Node/Chromium suite.
 Candidate exports exclude reference, tests, Git history, knowledge and evidence.
 The existing P11 app owns the runtime; no engine migration or new dependency.
 
-**Current evidence:** fifteen runner regressions pass; timeout attempts/output
-are retained and inherited child cleanup verified. Compatible old exports retain
-two failures out of 17 on the defective client and 17 passes on the correction.
-Original starter installation/CLI smoke and missing-browser probe remain prior
-evidence. Runner 0.1.2 pins P11 0.1.2 after recalibration; dependencies are unchanged.
-The starter contract remains 0.1.0, preserving all nine exported files. This is M4
-for the calibrated harness and validates TR-009's bounded adaptation; it does not
-evaluate a model or produce a score. No reference was supplied to an independent
-candidate because no candidate attempt has run.
+**Current evidence:** runner 0.2.1 executes its committed evaluator snapshot,
+checks installed direct versions and preserves the known 15/17 baseline and
+17/17 reference outcomes. Its 25 regressions and calibration are prior verified
+results; current hosted gates establish new execution. The nine-file starter
+contract remains 0.1.0. P11's Project Rooms addition does not repin the task or
+change its dependency graph. This is M4 for a calibrated harness, not independent
+model performance, secrecy or OS isolation.
 
 **Gate:** record an independently produced artifact, actual candidate identity,
 tools, context, attempts and available cost; execute the evaluator separately.
@@ -431,12 +429,15 @@ independent reader approval, shared engine or commercial product is claimed.
 
 ### P11 — Real-time Integration Lab / WebSocket
 
-The recovered Node/Express/Socket.IO snapshot only logs incoming messages. Its
-working adaptation is P11 0.1.7: a bounded local ephemeral chat with send/uncertainty,
-draft recovery, reading-position and activity feedback. All 38 protocol/Chromium
-checks pass in the current browser-rescue regression run. Human review remains
-pending. See section 28.3 and `projects/realtime-integration-lab/README.md` for origin
-and limits. P02 0.2.1 retains calibrated TR-009; lobby reuse remains a candidate.
+The historical snapshot only logs incoming messages. P11 0.2.0 now has
+[Project Rooms](projects/realtime-integration-lab/README.md): local participant,
+create/share/switch projects, saved notes/decisions, history recovery, drafts,
+explicit idempotent retries and complete JSON export. Node 24 built-in SQLite
+adds persistence without another dependency/service; the legacy ephemeral protocol
+and its 38 checks remain. All trusted participants can open all rooms; chosen
+names are not verified accounts. Human usability and public service operation
+remain unverified. P02 retains its pinned snapshot/dependency graph and calibrated
+TR-009; no evaluation task or transfer is automatically expanded.
 
 ## 6. Arquitetura do laboratório
 
@@ -560,8 +561,8 @@ Antes do score, verificar bloqueios: fontes inacessíveis; execução impossíve
 **Historical order:** v0.1.0 recommended P01 discovery; v0.2.0 recovered concrete P10/P11 sources. Under the current request to select and implement an increment, Codex prioritized P11 because its defect and full local interaction can be verified here. ADR-008 records the choice; the assessment and plan preserve alternatives without activating them. This is not a claim that Martin individually selected or tested P11.
 
 **Current work order:** reassess the portfolio every session. P06 now has a native
-trial, while P10 has two playable days and P03 has an original rhythm stage.
-Compare unassisted native/play/listening evidence, P11's complete service workflow,
+trial, P11 a persistent project workspace, P10 two playable days and P03 an original rhythm stage.
+Compare unassisted native/play/listening evidence, P11's account/backup needs,
 independent P02 context and recovered-source opportunities before choosing again.
 Recent browser concentration is a reason to investigate alternatives, not a quota.
 

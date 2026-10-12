@@ -1,8 +1,10 @@
 # Working projects
 
-[P11 — Live exchange](realtime-integration-lab/README.md) is the first executable
-adaptation: a local Socket.IO text chat with its own locked dependencies and
-protocol/browser tests. It does not require installing the other project seeds.
+[P11 — Project Rooms](realtime-integration-lab/README.md) provides persistent
+project conversations/decisions, local identity, missed-history recovery, per-room
+drafts and complete export using Node 24/SQLite/Socket.IO. The original ephemeral
+exercise/protocol remains available. No public service or verified accounts.
+
 
 [P10 — The Last Waystone](waystone-dialogue/browser/README.md) is a complete
 browser rescue: equipment, Keeper negotiation, two river routes, current/cargo

@@ -225,13 +225,13 @@
     },
     {
       "id": "P11",
-      "name": "Real-time Integration Lab / WebSocket",
+      "name": "Real-time Integration Lab / Project Rooms",
       "slug": "realtime-integration-lab",
       "status": "active",
       "maturity": "M4",
-      "phase": "local-chat-validated",
+      "phase": "persistent-workspace-validated",
       "origin": "github_snapshot_inspected",
-      "next_action": "Review edited-draft uncertain delivery and manual recovery, long feedback, keyboard use and enlarged/spaced text with Martin; independent EVAL-001 execution remains separate.",
+      "next_action": "Observe trusted collaborators using rooms/decisions/export; define account access, retention and backup requirements before public service hosting.",
       "related_projects": [
         "P01",
         "P02",
@@ -248,12 +248,13 @@
         "evidence/realtime-chat/ACTIVITY_RUN.json",
         "evidence/realtime-chat/RESIZE_RUN.json",
         "evidence/realtime-chat/TEXT_REFLOW_RUN.json",
-        "evidence/realtime-chat/DRAFT_RECOVERY_RUN.json"
+        "evidence/realtime-chat/DRAFT_RECOVERY_RUN.json",
+        "evidence/realtime-chat/ROOMS_RUN.json"
       ],
       "source_id": "LEGACY-002",
-      "maturity_scope": "Local chat 0.1.7: 38 checks (6 protocol, 32 Chromium), including edited-draft timeout recovery under controlled dropped/broadcast outcomes. Current typing stays intact; earlier text remains literal and wraps at narrow width, with no automatic retry. Existing send, retention, reading/activity/reflow checks pass. Feedback clears on another submission or reload. No real-outage, human copy/usability, assistive-technology or other-browser validation; no deployment.",
+      "maturity_scope": "Project Rooms 0.2.0: Node 24/SQLite persistent identities, project streams, notes/decisions, paginated history, per-identity/project drafts, explicit idempotent retries and complete JSON export. Six SQL/API/socket and eight Chromium workflow checks; 38 retained legacy checks. Actual DB/server reopening, missed-history recovery, lost acknowledgements, rejection, permalink and narrow UI exercised. Local trusted workspace: names unverified, every participant can open every room, no public service/roles, human usability, other-browser or commercial claim. P02 snapshot/dependency graph preserved.",
       "working_path": "projects/realtime-integration-lab",
-      "working_version": "0.1.7"
+      "working_version": "0.2.0"
     }
   ]
 }

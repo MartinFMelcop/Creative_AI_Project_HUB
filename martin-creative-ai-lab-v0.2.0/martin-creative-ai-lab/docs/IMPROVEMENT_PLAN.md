@@ -1,4 +1,21 @@
-# Current milestone — The Bell Warden
+# Current milestone — Project Rooms
+
+Complete a trusted local project workspace in P11: remembered participant,
+create/share/switch rooms, persisted notes/decisions, recoverable history,
+per-participant drafts, explicit idempotent uncertain-send retry and full export.
+Keep the ephemeral exercise and P02 task snapshot usable. Avoid public hosting,
+roles, framework migration or a general messaging platform in this milestone.
+
+Acceptance: real SQL/socket collaboration and isolation; DB/server reopen;
+missed history; lost acknowledgements with and without commit; editable rejection;
+URL invitation; pagination/download; desktop/narrow interface and storage denial.
+Retain legacy checks, validate records/manifest and publish normally to main.
+[Execution](../evidence/realtime-chat/ROOMS_RUN.json) records outcomes/limits.
+Next session compares collaborator feedback/service access needs with meaningful
+native, musical and economy opportunities rather than automatically extending chat.
+
+
+# Previous milestone — The Bell Warden
 
 Deliver P06 as one complete native Godot 2D encounter: real movement/collision,
 blade/seal/resolve/ward, three readable locked attacks, a meaningful second-phase
