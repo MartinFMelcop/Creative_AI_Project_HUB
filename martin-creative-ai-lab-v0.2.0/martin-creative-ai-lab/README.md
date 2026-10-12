@@ -4,10 +4,10 @@ An evolving laboratory of games, narrative, images, audio, data, and AI
 evaluation by **Martin Melcop Neto**. Projects are adaptable seeds: build small
 slices, verify behavior, record decisions, and test reuse in actual destinations.
 
-**Current seed: v0.13.0.** The lab includes eleven project lines, 178 preserved
+**Current seed: v0.14.0.** The lab includes eleven project lines, 178 preserved
 historical texts, a working local project-conversation workspace, a calibrated
 practice-task harness, a complete rescue adventure with browser/terminal editions,
-an original browser rhythm stage with a real rendered soundtrack, a compiled C# economy trial, and a native
+an original browser rhythm stage with a real rendered soundtrack, a native C# economy board with preserved terminal workbench, a complete Portuguese story with EPUB/PDF, and a native
 Godot boss arena with painted art, adaptive audio and an executed PCK. Private
 Sites demos support the browser games. No full RPG migration, model benchmark,
 finished music catalogue or public-audience deployment is claimed.
@@ -19,7 +19,8 @@ project versions and execution boundaries are in the state and registry.
 - [P04 — A água sob Darsen](projects/lich-cistern/README.md): complete standalone story, EPUB and A5 PDF.
 - [Reading edition execution](evidence/lich-cistern/RUN.json): conformance, text identity and implementer editorial review.
 
-- [P01 — Eclipse Fair](projects/eclipse-fair/README.md): compiled C# economy match, terminal play, journal/replay and actual rule comparisons.
+- [P01 — Eclipse Fair](projects/eclipse-fair/README.md): playable Godot .NET board, concrete previews, paced rivals and replayable resume; terminal workbench preserved.
+- [Native board execution](evidence/eclipse-fair/BOARD_RUN.json): compiled source and runtime-only package, UI journeys and rendered review.
 - [Economy execution](evidence/eclipse-fair/RUN.json): source/compiled package, synthetic play and tuning limits.
 
 - [P06 — Veilbreak](projects/veil-arena/README.md): native painted Godot boss encounter, adaptive audio, source and playable resource pack.

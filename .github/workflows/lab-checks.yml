@@ -41,6 +41,21 @@ jobs:
           mkdir -p "$RUNNER_TEMP/eclipse-pack"
           unzip -q dist/eclipse-fair-0.1.0.zip -d "$RUNNER_TEMP/eclipse-pack"
           python3 tools/check_cli.py "$RUNNER_TEMP/eclipse-pack/eclipse.dll"
+      - name: Compile and execute the native C# board and delivered project pack
+        run: |
+          mkdir -p "$RUNNER_TEMP/eclipse-godot" "$RUNNER_TEMP/eclipse-board-pack"
+          curl --fail --location --output "$RUNNER_TEMP/eclipse-godot/engine.zip" https://github.com/godotengine/godot/releases/download/4.6.3-stable/Godot_v4.6.3-stable_mono_linux_x86_64.zip
+          printf '%s  %s\n' 702a8a6785060203fd46373adf864586ecf0c377ac685d7107dde66b1eba0a9e "$RUNNER_TEMP/eclipse-godot/engine.zip" | sha256sum --check
+          unzip -q "$RUNNER_TEMP/eclipse-godot/engine.zip" -d "$RUNNER_TEMP/eclipse-godot"
+          eclipse_engine="$RUNNER_TEMP/eclipse-godot/Godot_v4.6.3-stable_mono_linux_x86_64/Godot_v4.6.3-stable_mono_linux.x86_64"
+          chmod +x "$eclipse_engine"
+          export XDG_DATA_HOME="$RUNNER_TEMP/eclipse-data" XDG_CONFIG_HOME="$RUNNER_TEMP/eclipse-config" XDG_CACHE_HOME="$RUNNER_TEMP/eclipse-cache"
+          dotnet build Native/Eclipse.Board.csproj -c Debug
+          "$eclipse_engine" --headless --path Native --editor --import --quit
+          "$eclipse_engine" --headless --path Native -- --verify --save-path "$RUNNER_TEMP/eclipse-source-check/match.json"
+          python3 tools/check_board_pack.py
+          unzip -q dist/eclipse-board-0.2.0.zip -d "$RUNNER_TEMP/eclipse-board-pack"
+          "$eclipse_engine" --headless --path "$RUNNER_TEMP/eclipse-board-pack/eclipse-board/Native" -- --verify --save-path "$RUNNER_TEMP/eclipse-pack-check/match.json"
 
   native-arena:
     runs-on: ubuntu-24.04

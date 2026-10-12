@@ -1,4 +1,29 @@
-# Current assessment — a complete literary destination
+# Current assessment — a usable native economy board
+
+Updated: 2026-10-12 (America/Sao_Paulo). Clean `7b65a5e` matched fetched main.
+Read instructions/state/registry, relevant seed/decisions and actual sources.
+Recent milestones span literature, native media, economy and collaboration;
+there is no reason to automatically extend P04 or another narrow maintenance loop.
+
+| Opportunity | Evidence and decision |
+|---|---|
+| P01 native board | Functional C# terminal economy, no graphical spatial workflow. Reuse the actual core/journal to make routing, previews, rivals and results usable in an engine; selected. |
+| P03 second music stage | Real first track/charts exist. Distinct musical/gameplay content is a strong separate milestone; physical listening/timing remains unverified. |
+| P11 access/backup | Trusted persisted rooms work. A public/shared service needs actual account/retention/backup requirements rather than inferred privacy. |
+| P06 animation | Native art/audio already work. Movement/attack frames offer real value, with player readability still pending. |
+| P04 readers | Complete new prose/editions exist. Independent reading/canon feedback is more informative than automatic chapter expansion. |
+
+Godot .NET 4.6.3 integrates directly with net10.0 rules. Standard Godot is present;
+Unity absent. Inspect/download the official Mono editor with verified digest,
+then compile and actually execute. Native source and a small runtime-dependent
+compiled project pack provide an end-to-end milestone without copying economy
+rules, installing full multi-platform exports or replacing the working terminal.
+
+Before: typed route/action lists. After: inspect the live board, compare actual
+resource consequences, confirm one transaction, watch paced rivals, resume and
+finish. Rendered review is Codex judgment, not human usability/balance evidence.
+
+# Previous assessment — a complete literary destination
 
 Updated: 2026-10-12 (America/Sao_Paulo). Clean `9b4a730` matched main. Read root/lab
 instructions, current records, relevant seed/decisions/evolution and actual P03/P01/

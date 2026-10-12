@@ -739,3 +739,28 @@ notices in source/PDF. Compare source/EPUB/PDF content and run official EPUBChec
 A small publisher serves this real story, not a promoted shared framework.
 Physical devices, assistive technology, reader/canon approval, exclusive rights
 and commercial interest require separate evidence. No Sites deployment.
+
+
+## ADR-037 — bind the C# economy to a real native board
+
+**Date:** 2026-10-12 (America/Sao_Paulo). **Status:** Eclipse Fair board 0.2.0.
+**Authority:** continuous portfolio development and normal main publication.
+
+Choose P01 spatial/pacing/continuation workflow after comparing P03 music, P11
+service needs, P06 animation and P04 reading. Preserve core/CLI 0.1.0. Godot .NET
+4.6.3 directly references the net10.0 Core and unchanged journal source; do not
+translate/reimplement rules, add a IPC/web bridge or claim drop-in Unity support.
+Install official Mono archive with release digest; .NET SDK 10.0.401 is available.
+
+Venue inspection does not spend turns. Forecast real forked actions, confirm,
+recompute legality through Core, then save accepted actions. Pace rivals visibly
+and stop auto on focus-out. Invalid load keeps live play; failed writes keep
+accepted memory progress with feedback. New fair restores baseline rules/policies;
+first turn or explicit Save replaces the old slot. No undo/automatic backup.
+
+Deliver owned compiled assemblies plus editable project/configuration, consuming
+installed engine APIs. Execute outside source using runtime-only .NET/no NuGet.
+No engine/API/runtime redistribution, full multi-platform templates or OS export.
+Native scene tests drive controls/keyboard and timing, not a human playtest.
+Inspect actual OpenGL frames; hardware/accessibility/balance/enjoyment and market
+validation remain separate. No Sites deployment or cross-project promotion.

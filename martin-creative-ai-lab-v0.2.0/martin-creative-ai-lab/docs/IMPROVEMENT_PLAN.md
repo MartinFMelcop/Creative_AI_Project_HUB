@@ -1,4 +1,21 @@
-# Current milestone — a complete Darsen story
+# Current milestone — native Eclipse Fair board
+
+Connect the existing P01 C# Core/journal to a usable Godot .NET desktop board.
+Deliver venue inspection, route/action forecasts, explicit confirmation, visible
+rivals, pacing/focus stop, contextual goal, save/replay and complete results.
+Keep core/CLI/economy and every other project unchanged; no general engine or
+unrelated minigame expansion. Deliver an actually executed compiled project pack.
+
+Acceptance: compile/open/import the real engine project; exercise native controls,
+keyboard, optional theft/ward, all objective phases, Gate/deadline endings,
+preview isolation, saves/failures/resume, rival clock and controlled focus-out.
+Inspect actual rendered frames, then execute the delivered pack outside source
+with runtime-only .NET and no NuGet packages. Run original C#/CLI regressions,
+package source/ownership checks, lab validation/integrity and normal main publish.
+[Execution](../evidence/eclipse-fair/BOARD_RUN.json) distinguishes synthetic input,
+rendered judgment, runtime requirements and remaining human/hardware limits.
+
+# Previous milestone — a complete Darsen story
 
 Write/edit P04's new standalone Portuguese adaptation, with Baldino's agency/fault,
 Sava/Nera stakes, practical limits on Aevren's corpse movement, a complete physical

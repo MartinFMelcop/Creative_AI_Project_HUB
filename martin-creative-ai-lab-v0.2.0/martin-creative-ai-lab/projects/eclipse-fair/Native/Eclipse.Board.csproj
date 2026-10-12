@@ -1,0 +1,11 @@
+<Project Sdk="Godot.NET.Sdk/4.6.3">
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <EnableDynamicLoading>true</EnableDynamicLoading>
+    <Version>0.2.0</Version>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="../Core/Eclipse.Core.csproj" />
+    <Compile Include="../Cli/Journal.cs" Link="Journal.cs" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,89 @@
+{
+  "project_id": "P01",
+  "version": "0.2.0",
+  "baseline_commit": "7b65a5ebd99f529ce0963e405d5764146ac51622",
+  "recorded_at": "2026-10-12 (America/Sao_Paulo)",
+  "contribution": "Martin authorizes direction/main publication. Codex implementation, synthetic input and rendered review; no independent human playtest.",
+  "before": "C# 0.1.0 economy/CLI/replay works, but no native spatial/decision/continuation workflow.",
+  "after": "Complete clickable native board using unchanged Core/journal: previews, confirmation, paced rivals/focus stop, save/resume, optional actions and Gate/deadline results.",
+  "environment": {
+    "engine": "Official Godot 4.6.3.stable.mono.7d41c59c4; release archive digest 702a8a6785060203fd46373adf864586ecf0c377ac685d7107dde66b1eba0a9e verified before extraction",
+    "build": "SDK 10.0.401 / Godot.NET.Sdk 4.6.3 / net10.0",
+    "runtime_only": "Microsoft.NETCore.App 10.0.12; isolated root has no SDK, empty package path; installed engine supplies GodotSharp APIs",
+    "platform": "Linux x86_64, Xorg dummy local display with TCP disabled, OpenGL 4.5 / Mesa 25.0.7-2+deb13u1 llvmpipe"
+  },
+  "executed": [
+    {
+      "command": "dotnet build Native/Eclipse.Board.csproj -c Debug",
+      "result": "Zero errors/warnings"
+    },
+    {
+      "command": "Godot_mono --headless --path Native --editor --import --quit",
+      "result": "Final import exits 0; no errors in captured log"
+    },
+    {
+      "command": "DISPLAY=:97 Godot_mono --path Native --audio-driver Dummy -- --verify --save-path <scratch>/match.json --capture <scratch>/frames",
+      "result": {
+        "native_board": "pass",
+        "assertions": 263,
+        "complete_matches": 10,
+        "rendered": true
+      }
+    },
+    {
+      "command": "Godot_mono --headless --path <unpacked>/Native -- --verify --save-path <scratch>/match.json",
+      "configuration": "Fresh unpack outside source, runtime-only DOTNET_ROOT, no SDK in PATH or NuGet package cache",
+      "result": {
+        "native_board": "pass",
+        "assertions": 258,
+        "complete_matches": 10,
+        "rendered": false
+      }
+    },
+    {
+      "command": "python3 tools/pack_board.py; python3 tools/check_board_pack.py",
+      "result": "22 entries: current source/config, owned assemblies, no engine/API/runtime redistribution"
+    },
+    {
+      "command": "dotnet build Checks/Eclipse.Checks.csproj -c Release; dotnet run --project Checks -c Release --no-build",
+      "result": "All ten preserved domain/journal contracts pass; currency/complete-match checks execute"
+    },
+    {
+      "command": "python3 tools/check_cli.py; python3 tools/check_cli.py <preserved compiled package>/eclipse.dll",
+      "result": "Both actual CLI workflows pass, including save failure/resume/replay/comparison"
+    }
+  ],
+  "native_contracts": "Actual focused Enter venue input and Godot control signals; no preview mutation, exactly one confirmed turn, optional ward/block/successful theft, malformed load keeps play, failed save keeps accepted memory progress, exact source-rule/journal parity for seeds 0..7 and 18, human Gate claim and 80-turn worker deadline, actual rival timer and controlled engine focus-out notification.",
+  "review": "Inspected actual opening/plan/rival/Gate/deadline OpenGL frames. Corrected clipped journal, explicit staged objective, Gate winner ordering and resource-card shaping with separate labels. Gold routes, public resources and explicit confirmation expose decisions; improved readability is implementing-agent judgment, not independent usability evidence.",
+  "notes": "Initial restricted import had local editor socket errors; final approved normal import is clean. A later display lifetime interruption was resolved by owning Xorg/cleanup within the execution command. No security policy changes. Debug source/package are compiled; no OS export/templates build claimed.",
+  "limits": [
+    "Synthetic input and controlled focus-out are not human play, natural Alt-Tab or hardware/controller tests.",
+    "Runtime-dependent project pack requires Godot .NET 4.6.3 and .NET 10; not standalone OS executable/export.",
+    "No audio, new minigame, economy rewrite, cross-platform/accessibility approval, independent balance/enjoyment or market evidence."
+  ],
+  "sha256": {
+    "Native/.gitignore": "648c5cf3a2897d5216dfae6db0db53767c2c2ffd13b3b2f86ce8317d9b0d0731",
+    "Native/BoardChecks.cs": "5d8e79de7262eed047b888fecb0168087fb24b06cc3c2c88d29af3f68525a2eb",
+    "Native/BoardChecks.cs.uid": "e5d43f62476b0e4a91e13debf09ea6742855625a50e365da661ef4f73c2fa598",
+    "Native/BoardSession.cs": "9c3695b64b100433febb111a787147eada6eab09f2aeb90fe8f7405fe20b9da9",
+    "Native/BoardSession.cs.uid": "bf214ed73e87c0e136bade24dea51fe7b453e041d1ec2c326dccf7388692cfcd",
+    "Native/Eclipse.Board.csproj": "b1f5a4b56a7851812e985682a6b758fd02f9429c14c87ad64abb65f66d0b8bff",
+    "Native/Main.cs": "c5c4e992ca07594f41eb396f8e0c0e875c2882091c63e3b21abbcbe9e8e37e44",
+    "Native/Main.cs.uid": "fceda9ce212e1d665252488ebc406a51c403338da77b8e014b3b4ef4fab8cf43",
+    "Native/Main.tscn": "dfdda7f8d2c7c1cb0ebbbbdccbb7aee6379e59df3b9b57af72f769311c3547b6",
+    "Native/MapView.cs": "741b54b01d4f5d27a4b3eb63e041c5632bec701dc0f250c8ef02d70c6f5309e1",
+    "Native/MapView.cs.uid": "83fac5a5a1cfa8a6d94261463ac81accc03b9985dd6b30d62b90aa97abf9382d",
+    "Native/README.md": "44202f0882891967351c75cee19f8d1448fe316907400fd4ed996dd277254bc6",
+    "Native/project.godot": "e4c19c41a01bb81255f4bcf7d52b7cdb39fa627533ca0d4417fc4e9a75d15006",
+    "dist/eclipse-board-0.2.0.zip": "faadb4309cd0f7003d8ce3d23646dde455beecab0fe18245db292c94af303c6b",
+    "tools/check_board_pack.py": "f87c2327b50854964e16e5a47111a0d7eb0fcabf2abef98e1e95778e3b25041b",
+    "tools/pack_board.py": "4ffae5ef6a6e88e9a3111caa0e84c2d9182378f518a9774fd262219fae29f1b7"
+  },
+  "preview_sha256": "69df6d33b512de47db774b0d1d67f34fb9f748045f0c8928d3784684222556c9",
+  "repository_checks": {
+    "registry": "11 projects / 14 transfers / 4 assets / 2 legacy sources / 229 links pass",
+    "regressions": "11 registry and 11 manifest regressions pass",
+    "preservation": "Git byte comparison: original P01 core/CLI/rules/compiled workbench/prior evidence, all other projects/archive/evaluations/assets/transfers unchanged; only P01 registry row changes",
+    "maintained_files": 249
+  }
+}

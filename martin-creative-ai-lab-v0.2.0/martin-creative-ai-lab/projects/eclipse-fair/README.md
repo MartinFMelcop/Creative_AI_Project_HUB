@@ -1,12 +1,20 @@
 # P01 — Eclipse Fair
 
-**0.1.0**, a new C#/.NET economy workbench and playable terminal match from
+**0.2.0** adds a complete [native Godot .NET board](Native/README.md) to the
+existing **0.1.0** C#/.NET economy workbench and playable terminal match from
 Artemyra's Feira do Eclipse seed. One participant faces three agents on eight
 connected venues. Earn obols, buy three sigils, cleanse curse and claim the Gate.
 Compare rule variants across common seeds and all four policy/seat rotations.
-This is new gameplay, not recovered RPG Maker code or a graphical engine build.
+This is new gameplay, not recovered RPG Maker code. The native consumer uses
+the existing Core and journal without duplicating transactions or changing rules.
+Download [the compiled native project pack](dist/eclipse-board-0.2.0.zip); it requires
+Godot .NET 4.6.3 and .NET 10 runtime, not an SDK. It is not a standalone executable.
+[Native execution](../../evidence/eclipse-fair/BOARD_RUN.json) records actual engine
+journeys, runtime-only consumption and implementing-agent presentation review.
 
-## Play the compiled package
+![Executed native board](../../evidence/eclipse-fair/board.png)
+
+## Play the original compiled terminal package
 
 Install the **.NET 10 runtime**, unzip `dist/eclipse-fair-0.1.0.zip`, then:
 
@@ -87,7 +95,8 @@ dotnet publish Cli/Eclipse.Cli.csproj -c Release --no-self-contained -p:DebugTyp
 python3 tools/pack.py
 ```
 
-No NuGet package or test framework is required. Core owns transactions/agents;
+No NuGet package or test framework is required for Core/CLI; the native consumer
+uses the pinned Godot SDK. Core owns transactions/agents;
 CLI owns JSON/files/terminal/reporting. Ten C# checks cover actual public contracts,
 including conservation across 100 complete matches. The Python workflow drives
 the compiled process through input rejection, hint/save/resume, full assisted play,
@@ -95,11 +104,11 @@ replay and comparison/CSV. CI compiles source and executes the shipped package.
 
 [Execution](../../evidence/eclipse-fair/RUN.json) distinguishes compilation,
 terminal input, package consumption, synthetic comparisons and implementing-agent
-design review. [Provenance](provenance.json) records the seed adaptation. No full
-historical baseline, graphical/native-engine build, physical controller, human
-enjoyment, commercial adoption or exclusive rights is claimed. A game engine is a
-serious later presentation option; this net10.0 domain is not a drop-in Unity DLL.
+design review. [Provenance](provenance.json) records the seed adaptation. The original evidence is for the terminal 0.1.0 workbench; native 0.2.0 execution
+is recorded separately. No historical runtime restoration, standalone export,
+physical controller, human enjoyment, commercial adoption or exclusive rights is
+claimed. This net10.0 domain is not a drop-in Unity DLL.
 
-Next compare unassisted decisions with these policies, then choose a native board
-presentation and any minigame from actual product needs. Avoid expanding the old
+Next observe unassisted native decisions, forecast understanding and rival pacing
+before choosing new minigames, maps or economy changes. Avoid expanding the old
 48-tile roster/LAN plan before the smaller economy earns that scope.

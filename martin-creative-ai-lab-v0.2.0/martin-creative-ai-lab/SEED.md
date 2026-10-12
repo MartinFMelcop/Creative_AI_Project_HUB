@@ -1,10 +1,10 @@
 # SEED — Martin Creative AI Lab
 
-**Version:** 0.13.0
+**Version:** 0.14.0
 **Data-base:** 10 de outubro de 2026  
 **Autor e responsável pelo portfólio:** Martin Melcop Neto  
 **Working language:** English for new documentation, plans, code comments, UI, and reports. Preserve original creative titles and historical source languages.
-**Current state:** P04 A água sob Darsen 0.1.0 is a complete new Portuguese story with delivered EPUB/PDF and editable source. Official EPUB checking, text identity and rendered editions were executed; editorial review is by Codex. The historical manuscript is unavailable here; no restoration, canon approval or independent reader/commercial claim. Other projects remain preserved.
+**Current state:** P01 Eclipse Fair 0.2.0 delivers a playable native Godot .NET board and compiled runtime-dependent project pack. Real controls, previews, rival pacing, saves and complete Gate/deadline workflows were executed; original C# core/CLI and other projects remain preserved. Synthetic execution and Codex visual review are not independent human or commercial validation.
 
 > Construir um laboratório autoral em Git que transforma ideias, obras e experimentos em produtos pequenos, sistemas reutilizáveis e evidências técnicas verificáveis. A IA participa da criação e execução; Martin desenvolve sua capacidade de especificar, compreender, selecionar, corrigir, validar e explicar os resultados.
 
@@ -46,14 +46,14 @@ Se apenas este arquivo estiver disponível, ele é suficiente para iniciar a Fas
 |---|---|
 | Repository | MartinFMelcop/Creative_AI_Project_HUB; actual Git root `/workspace/Creative_AI_Project_HUB`; lab remains nested in its original package directory |
 | Preserved sources | 175 Rave Master texts and 3 WebSocket files; unchanged ZIP and inventory; not a complete RMXP backup |
-| Primary workstream | P04 complete standalone Darsen story and reader editions |
-| Engine execution | Pandoc/ReportLab publishing, Java EPUBCheck, Poppler text/raster and XHTML inspection; game sources preserved |
-| Current verification | EPUBCheck 5.4.0, exact source/EPUB/PDF text sequence, font/navigation/page review and rebuild; `evidence/lich-cistern/RUN.json` |
+| Primary workstream | P01 native Eclipse Fair board 0.2.0 |
+| Engine execution | Godot .NET 4.6.3 with net10.0 domain; compiled source and outside-source runtime-only project pack actually executed |
+| Current verification | Native control/keyboard/save/complete-match contracts, rendered OpenGL review and unchanged C# CLI regressions; `evidence/eclipse-fair/BOARD_RUN.json` |
 | Historical verification | v0.2.0 combat/dialogue, P10 trust, P11 unread and P02 snapshot records remain preserved; the old scenario runner was not rerun |
-| Next action | Compare independent P04 reading/canon fit, P03 music, P01 board, P06 animation and P11 actual service needs |
-| Other seeds | P01 0.1.0, P03 0.1.0, P06 0.2.0, P07 0.1.0, P08 0.2.0, P10 0.4.0, P11 0.2.0 and P02 0.2.1 preserved |
+| Next action | Compare unassisted native decisions/pacing, distinct P03 music, P04 readers and P11 access/backup needs |
+| Other seeds | P03 0.1.0, P04 0.1.0, P06 0.2.0, P07 0.1.0, P08 0.2.0, P10 0.4.0, P11 0.2.0 and P02 0.2.1 preserved |
 | Transfer / shared status | TR-009/012 retained; TR-013 P07-to-P06 art and TR-014 P08-to-P06 audio validated for bounded native consumers; no shared engine |
-| Portfolio / attribution | Clean `9b4a730` matched main. Martin authorized direction/publication; Codex wrote/edited/verified. No independent reading or Sites update |
+| Portfolio / attribution | Clean `7b65a5e` matched main after fetch. Martin authorized direction/publication; Codex implemented/verified/reviewed. No human playtest or Sites update |
 
 Registry evidence paths must resolve to existing files inside the lab; working
 paths must be directories and legacy-source IDs must exist. This documentary
@@ -221,7 +221,7 @@ Identificadores persistem mesmo quando nomes mudam. Um projeto arquivado pode co
 
 | ID | Seed | Matéria-prima principal | Destinos possíveis | Estado nesta fundação |
 |---|---|---|---|---|
-| P01 | Artemyra / Eclipse Fair | Typed game economy and strategy | Playable C# terminal match, replay and scenario comparison | New 0.1.0 compiled destination; no historical runtime restoration |
+| P01 | Artemyra / Eclipse Fair | Typed economy and native C# presentation | Godot .NET board, terminal workbench, replay and comparison | Native 0.2.0; core/CLI 0.1.0 retained, no historical restoration |
 | P02 | AI Evaluation & QA Lab (historical Unity proposal) | Requirements, reproduced bugs, artifact checks | Bounded practice tasks and later independent evaluation | EVAL-001 runner 0.2.0 uses pinned snapshots, starter 0.1.0; M4 harness scope, no model candidate |
 | P03 | Tokyo 80s | Original soundtrack, timing and browser gameplay | Complete Midnight Signal stage; physical play/listening still pending | P03 0.1.0 with real P08 audio; see registry/evidence |
 | P04 | O Lich mais velho da tumba mais antiga | Romance, mundo, personagens, arte e continuidade | Narrativa interativa, amostra editorial, jogo, animatic | Historical summary only here; new standalone story/EPUB/PDF 0.1.0 delivered |
@@ -237,14 +237,15 @@ P02 agrupa evaluation e QA porque podem compartilhar a mesma aplicação pequena
 
 ### P01 — Artemyra / ArtemiZ4
 
-[Eclipse Fair](projects/eclipse-fair/README.md) 0.1.0 now realizes a new C#/.NET
-terminal match and economy workbench. Source and compiled package execute four
-participants, eight venues, route/work/sigil/curse/rite/ward/theft choices, public
-forecasts, rotating initiative, Gate/deadline endings and replay. Common-seed
-rule comparison exports actual CSV/JSON; all four policy/seat rotations are used.
-Twenty rounds replace the old candidate fifteen after synthetic pacing review.
-No historical code/package, graphical engine, LAN or human approval is claimed.
-The historical context below remains a source of direction, not current runtime.
+[Eclipse Fair](projects/eclipse-fair/README.md) 0.2.0 adds a native Godot .NET
+board: clickable routes, actual forecasts/action previews, confirmation, paced
+rivals, focus-out stop, full Gate/deadline results, autosave and replay resume.
+The 0.1.0 domain/CLI/journal/compiled workbench and comparisons remain unchanged.
+Source and a runtime-dependent compiled project pack execute in Godot; the pack
+works outside source with .NET runtime only, using the installed engine APIs.
+No duplicated engine rules, OS export, LAN/minigames, historic restoration,
+human balance or commercial approval. See native evidence/README for boundaries.
+The historical context below remains direction, not current runtime.
 
 **Núcleo histórico:** party RPG competitivo originado em RPG Maker XP/RGSS. Quatro jogadores, MVP com um humano contra três IAs, tabuleiro, minigames e recursos temporários. O histórico inclui formatos FFA e propostas de 2v2, sem campanha e com LAN como expansão.
 
