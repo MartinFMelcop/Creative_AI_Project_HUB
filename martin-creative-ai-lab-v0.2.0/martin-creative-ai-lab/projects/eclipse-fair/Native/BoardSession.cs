@@ -7,14 +7,17 @@ namespace Eclipse.Board;
 public sealed class BoardSession
 {
     public Game Game { get; private set; }
-    public string[] Policies { get; private set; } = ["collector", "keeper", "opportunist", "collector"];
+    public string[] Policies { get; private set; } = Planning.NativePolicies.ToArray();
+    private Game? adviceGame;
+    private int adviceTurns = -1;
+    private PlanAdvice? advice;
     public string SavePath { get; }
     public string Notice { get; private set; } = "Choose a venue, compare an action, then commit your turn.";
 
     public BoardSession(string savePath, int seed = 1) { SavePath = savePath; Game = new(seed); }
-    public void New(int seed)
+    public void New(int seed, bool strategic = true)
     {
-        Game = new(seed); Policies = ["collector", "keeper", "opportunist", "collector"];
+        Game = new(seed); Policies = strategic ? Planning.NativePolicies.ToArray() : ["collector", "keeper", "opportunist", "collector"];
         Notice = "New fair. Previous save stays until an accepted turn or explicit Save.";
     }
     public bool Act(Intent intent)
@@ -25,8 +28,17 @@ public sealed class BoardSession
     public bool Rival()
     {
         if (Game.Result != null || Game.Current == 0) return false;
-        return Apply(Agents.Choose(Game, Policies[Game.Current]));
+        return Apply(Advice().First);
     }
+    public PlanAdvice Advice()
+    {
+        if (advice != null && ReferenceEquals(adviceGame, Game) && adviceTurns == Game.Journal.Count) return advice;
+        var profile = Policies[Game.Current];
+        if (Planning.Names.Contains(profile)) advice = Planning.Analyze(Game, profile, Policies);
+        else { var intent = Agents.Choose(Game, profile); advice = new(intent, [intent], "Classic one-turn profile", 0); }
+        adviceGame = Game; adviceTurns = Game.Journal.Count; return advice;
+    }
+    public ReplyForecast Forecast(Intent intent) => Planning.Forecast(Game, intent, Policies);
     private bool Apply(Intent intent)
     {
         if (!Game.Apply(intent, out var description)) { Notice = description; return false; }

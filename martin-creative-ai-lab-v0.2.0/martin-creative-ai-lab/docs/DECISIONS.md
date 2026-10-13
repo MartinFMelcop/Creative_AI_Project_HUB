@@ -886,3 +886,28 @@ and new-file restore. Older apps cannot read schema 2. Public JSON remains schem
 1 with additive action histories. Preserve the legacy/P02 graph and archive.
 Actual browser/old-runtime checks and Codex frames are not independent team use,
 scale, account/market approval or public hosting. Reassess those needs after use.
+
+## ADR-043 — score native rival plans by complete race outcomes
+
+**Date:** 2026-10-13 (UTC). **Status:** P01 native 0.3.0.
+
+Select P01's verified one-step rival limitation after comparing P11 handoffs,
+P04 prose and P10 relief scenes. Retain C#/Godot .NET, game transactions and four
+classic policies. Add Planner/Warden/Raider without silently upgrading old saves.
+
+A three-own-turn beam with local resource/protection weights performed worse
+against the matched Collector proxy. Reject it. Compare every legal first action
+by projecting the actual Gate/deadline under public classic policy models; prefer
+win credit, earlier completion and actual standings. Replan after accepted turns.
+Stable ties preserve the corresponding classic move. No recursive search or
+knowledge of future human input. Show three considered moves as assumptions.
+
+The response dialog executes actual configured profiles through the next human
+turn in a fork, including initiative rotation and early endings. Compare choices
+explicitly; stop auto rivals and keep live state intact. Cache advice per live
+game/accepted-turn count. Classic mode and loaded profile names preserve continuity;
+new names need the current consumer while rule/journal schema stays 0.1.0.
+
+Deliver and run owned compiled sources/assemblies outside checkout with runtime-only
+.NET. Preserve previous packs. Matched synthetic results and Codex frames establish
+this bounded capability, not optimal play, human enjoyment, OS exports or demand.

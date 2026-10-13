@@ -23,7 +23,7 @@ def main():
             else:
                 assert archive.read(name) == (ROOT / relative).read_bytes(), f"Stale packaged source: {relative}"
         required = {"Native/project.godot", "Native/Main.tscn", "Native/Eclipse.Board.csproj", "Native/Main.cs", "Native/MapView.cs", "Native/BoardSession.cs", "Native/BoardChecks.cs", "Native/README.md",
-                    "Core/Game.cs", "Core/Agents.cs", "Core/Eclipse.Core.csproj", "Cli/Journal.cs", "Directory.Build.props", "global.json"}
+                    "Core/Game.cs", "Core/Agents.cs", "Core/Planning.cs", "Core/Eclipse.Core.csproj", "Cli/Journal.cs", "Directory.Build.props", "global.json"}
         required |= {"Native/.godot/mono/temp/bin/Debug/" + f for f in ["Eclipse.Board.dll", "Eclipse.Core.dll", "Eclipse.Board.deps.json", "Eclipse.Board.runtimeconfig.json"]}
         required |= {p.relative_to(ROOT).as_posix() for p in (ROOT / "Native").glob("*.uid")}
         assert set(names) == {"eclipse-board/" + f for f in required}, "Missing/unintended package entries"

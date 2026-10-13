@@ -1,16 +1,17 @@
-# Current milestone — assigned Project Rooms workflow
+# Current milestone — adaptive native rival competition
 
-Complete decision-to-action handoff with responsible participants, progress,
-blockers/outcomes, reopening and history. Connect atomic optimistic revisions,
-immutable retries, conflict review, preserved drafts/reading, owner views and
-complete export. Adapt schema migration and operator recovery to the actual data.
+Connect full-race action projections to Planner/Warden/Raider, visible routes,
+conditional actual reply comparison and Planning/Classic selection. Preserve
+transactions, old-policy journals and existing packages. Deliver compiled 0.3.0
+with the same real Godot/.NET consumer.
 
-Acceptance: real sockets and two-context Chromium journeys; stale edits, lost
-confirmation before/after commit, newer work, reload/offline drafts, narrow/literal
-content and recovery. Execute actual previous-version migration and rollback;
-validate audit corruption, retained legacy suites, records and manifest. Publish
-normally to main. [Evidence](../evidence/realtime-chat/ACTIONS_RUN.json) records
-completion/limits. Independent teams, accounts and scale remain separate evidence.
+Acceptance executed: matched synthetic races with unchanged Collector proxy,
+capital-to-Gate contrast, currency/legality/replay, exact conditional replies,
+winning forecast, native input/controls/modes and ten complete matches. Inspect
+OpenGL frames and run final shipped pack outside checkout with runtime-only
+.NET/no SDK. Records/manifest and authorized main publication close the work.
+[Evidence](../evidence/eclipse-fair/PLANNING_RUN.json) records results/assumptions.
+Independent play and general balance remain future evidence.
 
 # Previous milestone — native Eclipse Fair board
 

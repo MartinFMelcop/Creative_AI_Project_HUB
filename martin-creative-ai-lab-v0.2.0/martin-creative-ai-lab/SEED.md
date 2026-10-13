@@ -1,10 +1,10 @@
 # SEED — Martin Creative AI Lab
 
-**Version:** 0.19.0
+**Version:** 0.20.0
 **Data-base:** 10 de outubro de 2026  
 **Autor e responsável pelo portfólio:** Martin Melcop Neto  
 **Working language:** English for new documentation, plans, code comments, UI, and reports. Preserve original creative titles and historical source languages.
-**Current state:** P11 Project Rooms 0.4.0 connects recorded decisions to assigned work, blockers, completion and audited reopening. Transactional revisions, browser draft/conflict review, immutable retry receipts and schema-1/2 recovery are executed. Native/literary/music destinations remain preserved; human usability, public operation and commercial quality remain unverified.
+**Current state:** P01 Eclipse Fair native 0.3.0 adds adaptive planning rivals and conditional response comparison. Full-race projections, Classic continuity, actual native play and the runtime-only delivered pack are verified. Other destinations remain preserved; unassisted enjoyment, general balance and commercialization remain unverified.
 
 > Construir um laboratório autoral em Git que transforma ideias, obras e experimentos em produtos pequenos, sistemas reutilizáveis e evidências técnicas verificáveis. A IA participa da criação e execução; Martin desenvolve sua capacidade de especificar, compreender, selecionar, corrigir, validar e explicar os resultados.
 
@@ -46,14 +46,14 @@ Se apenas este arquivo estiver disponível, ele é suficiente para iniciar a Fas
 |---|---|
 | Repository | MartinFMelcop/Creative_AI_Project_HUB; actual Git root `/workspace/Creative_AI_Project_HUB`; lab remains nested in its original package directory |
 | Preserved sources | 175 Rave Master texts and 3 WebSocket files; unchanged ZIP and inventory; not a complete RMXP backup |
-| Primary workstream | P11 decision-to-action collaboration: responsibility, progress, blockers and recorded outcomes |
-| Runtime execution | Existing Node 24/SQLite/Socket.IO application; separate conversation/actions views, atomic updates and live backup |
-| Current verification | Full 73-test P11 suite, final 13 action checks, two-context Chromium journeys, uncertain saves, conflicts, recovery and actual 0.3.0 migration; `evidence/realtime-chat/ACTIONS_RUN.json` |
-| Historical verification | Prior native, music, story and workspace evidence retained; not inherited as new creative validation |
-| Next action | Compare real team handoff with P01 rival strategy, P10 dramatic progression, native unassisted play and P03/P04 listening/readers |
-| Other seeds | P01 0.2.0, P03 0.2.0, P04 0.1.0, P05 0.1.0, P06 0.3.0, P07 0.2.0, P08 0.3.0, P10 0.4.0 and P02 0.2.1 preserved |
-| Transfer / shared status | Existing transfers/archive preserved; no portfolio shared framework or candidate evaluation promoted |
-| Portfolio / attribution | Clean `3cac6b9` matched fetched main. Martin authorizes implementation/main; Codex development/review and declared synthetic participants. No independent human approval |
+| Primary workstream | P01 adaptive rival competition and inspectable conditional replies |
+| Runtime execution | C#/.NET 10 domain and Godot .NET 4.6.3 board; source and compiled pack outside checkout with runtime-only .NET |
+| Current verification | 13 C# checks, CLI continuity, final OpenGL/source 283 and delivered 275 assertions; matched 12-seed/four-seat comparisons; `evidence/eclipse-fair/PLANNING_RUN.json` |
+| Historical verification | Prior native/music/story/workspace evidence retained; no inherited human approval |
+| Next action | Compare unassisted Planning/Classic decisions with P10 drama, P03/P04 audience feedback and P11 real team handoffs |
+| Other seeds | P03 0.2.0, P04 0.1.0, P05 0.1.0, P06 0.3.0, P07 0.2.0, P08 0.3.0, P10 0.4.0, P11 0.4.0 and P02 0.2.1 preserved |
+| Transfer / shared status | No cross-project framework or transfer promoted; historical archive unchanged |
+| Portfolio / attribution | Clean `a1e418f` matched fetched main. Martin authorizes implementation/main; Codex development/review and declared synthetic profiles. No human play or hosting approval |
 
 Registry evidence paths must resolve to existing files inside the lab; working
 paths must be directories and legacy-source IDs must exist. This documentary
@@ -237,14 +237,23 @@ P02 agrupa evaluation e QA porque podem compartilhar a mesma aplicação pequena
 
 ### P01 — Artemyra / ArtemiZ4
 
-[Eclipse Fair](projects/eclipse-fair/README.md) 0.2.0 adds a native Godot .NET
-board: clickable routes, actual forecasts/action previews, confirmation, paced
-rivals, focus-out stop, full Gate/deadline results, autosave and replay resume.
-The 0.1.0 domain/CLI/journal/compiled workbench and comparisons remain unchanged.
-Source and a runtime-dependent compiled project pack execute in Godot; the pack
-works outside source with .NET runtime only, using the installed engine APIs.
-No duplicated engine rules, OS export, LAN/minigames, historic restoration,
-human balance or commercial approval. See native evidence/README for boundaries.
+[Eclipse Fair](projects/eclipse-fair/README.md) **0.3.0** adds native planning
+rivals and conditional response comparison. Planner, Warden and Raider evaluate
+legal first actions by projecting actual Gate/deadline outcomes with public
+classic response models, then replan. The board shows considered routes; Rival
+response executes configured profiles in a fork through the human's next turn.
+Compare another action without spending a turn. Rotating initiative, theft,
+wards and intervening endings remain part of the forecast.
+
+Classic mode preserves all four original profiles. Old journals keep their stored
+profiles; new planning names need the current consumer. Rules/schema remain
+0.1.0, previous terminal/native packs are retained. Source and the compiled 0.3.0
+project pack execute in Godot .NET, including outside source with runtime-only
+.NET/no SDK. [Execution](evidence/eclipse-fair/PLANNING_RUN.json) distinguishes
+technical/native review from synthetic comparative observations. The short-beam
+prototype was rejected after worse matched outcomes; final projections score
+real endings. No hidden human input, optimality, independent enjoyment, historical
+RPG restoration, standalone OS export or commercial approval is claimed.
 The historical context below remains direction, not current runtime.
 
 **Núcleo histórico:** party RPG competitivo originado em RPG Maker XP/RGSS. Quatro jogadores, MVP com um humano contra três IAs, tabuleiro, minigames e recursos temporários. O histórico inclui formatos FFA e propostas de 2v2, sem campanha e com LAN como expansão.

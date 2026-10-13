@@ -1,0 +1,189 @@
+{
+  "project": "P01",
+  "version": "0.3.0",
+  "date_utc": "2026-10-13",
+  "baseline_commit": "a1e418f0503861c89fe579330e77e4eaf4313b5c",
+  "before": "Native board with fixed-target one-turn rivals; immediate action preview only.",
+  "after": "Adaptive full-race public policy projections, visible routes, actual conditional reply comparison, Planning/Classic and old-profile continuity.",
+  "environment": {
+    "sdk": "10.0.401",
+    "runtime": "10.0.12",
+    "engine": "Godot .NET 4.6.3.stable.mono.official.7d41c59c4",
+    "platform": "Debian Linux x86_64",
+    "viewport": "1280x800",
+    "renderer": "OpenGL Compatibility / llvmpipe on local Xorg dummy display",
+    "dependencies_changed": false
+  },
+  "executed": {
+    "csharp_checks": 13,
+    "csharp_failures": 0,
+    "classic_conservation_matches": 100,
+    "cli_workflow": {
+      "workflow": "real compiled CLI",
+      "input": "synthetic",
+      "passed": [
+        "numbered-plan rejection/hint/atomic save",
+        "resume to same complete result",
+        "independent replay",
+        "invalid journal/option rejection",
+        "common-seed four-seat comparison/CSV"
+      ],
+      "configured_planning_profile_replay": true
+    },
+    "native_source": {
+      "native_board": "pass",
+      "assertions": 283,
+      "complete_gate_or_deadline_matches": 10,
+      "source_rule_parity": true,
+      "journal_replay": true,
+      "keyboard_venue_input": true,
+      "strategic_profiles": true,
+      "conditional_forecast": true,
+      "classic_mode": true,
+      "auto_rival_clock": true,
+      "controlled_focus_out": true,
+      "rendered": true
+    },
+    "delivered_pack": {
+      "native_board": "pass",
+      "assertions": 275,
+      "complete_gate_or_deadline_matches": 10,
+      "source_rule_parity": true,
+      "journal_replay": true,
+      "keyboard_venue_input": true,
+      "strategic_profiles": true,
+      "conditional_forecast": true,
+      "classic_mode": true,
+      "auto_rival_clock": true,
+      "controlled_focus_out": true,
+      "rendered": false
+    },
+    "delivered_without_sdk": true,
+    "native_workflow": "Real engine controls/keyboard, modes, response comparison, objective/ending, theft/ward, failures/replay, paced rivals/focus stop."
+  },
+  "capital_fixture": {
+    "inputs": "Seed 0; initial Work at 1,1,5,5; Warden versus Keeper in seat 1, three income-only controls; baseline rules.",
+    "planning_turns": 63,
+    "classic_turns": 69,
+    "both_endings": "gate claimed"
+  },
+  "opening_response": {
+    "seed": 1,
+    "suggested": {
+      "destination": 1,
+      "action": "Guard",
+      "target": -1
+    },
+    "suggested_replies": [
+      "R2 Nira \u2192 Veil Bazaar: bought sigil 1/3 for 6; curse rose to 2.",
+      "R2 Morrak \u2192 Eclipse Gate: raised a raven ward (1/2)."
+    ],
+    "work_replies": [
+      "R2 Nira \u2192 Eclipse Market: stole 3 from Morrak; curse rose to 2.",
+      "R2 Morrak \u2192 Eclipse Market: raised a raven ward (1/2)."
+    ]
+  },
+  "comparison": {
+    "scope": "Declared synthetic profiles, common seeds and four seat rotations; collector proxy is not a human player. No universal strength/balance claim.",
+    "rules": {
+      "StartingGold": 4,
+      "Goal": 3,
+      "RoundLimit": 20,
+      "SealBase": 6,
+      "SealStep": 2,
+      "MoveCost": 1,
+      "RiteCost": 2,
+      "WorkBonus": 0
+    },
+    "scenarios": [
+      {
+        "mode": "classic",
+        "profiles": [
+          "collector",
+          "keeper",
+          "opportunist",
+          "collector"
+        ],
+        "matched_seeds": 12,
+        "seat_rotations": 4,
+        "matches": 48,
+        "gates": 31,
+        "deadlines": 17,
+        "mean_turns": 74.25,
+        "guard_actions": 12,
+        "steal_actions": 81,
+        "blocked_thefts": 0,
+        "profile_win_credits": {
+          "keeper": 11.5,
+          "opportunist": 22,
+          "collector": 14.5
+        },
+        "collector_proxy_win_credits": 10.5
+      },
+      {
+        "mode": "planning",
+        "profiles": [
+          "collector",
+          "warden",
+          "raider",
+          "planner"
+        ],
+        "matched_seeds": 12,
+        "seat_rotations": 4,
+        "matches": 48,
+        "gates": 28,
+        "deadlines": 20,
+        "mean_turns": 74.8125,
+        "guard_actions": 66,
+        "steal_actions": 242,
+        "blocked_thefts": 20,
+        "profile_win_credits": {
+          "raider": 14,
+          "warden": 16,
+          "collector": 2,
+          "planner": 16
+        },
+        "collector_proxy_win_credits": 2
+      }
+    ],
+    "planned_decisions": 2698,
+    "changed_vs_corresponding_one_turn_profile": 689,
+    "latency_ms": {
+      "samples": 2698,
+      "mean": 3.6276914010378043,
+      "p95": 6.6562,
+      "max": 40.6543
+    }
+  },
+  "review": {
+    "verified": "Actual source/rendered/pack executions and declared synthetic comparisons. Original transactions and four classic profiles retained. Final frames inspected by Codex.",
+    "reasoned": "Observed budget disruption/protection and conditional replies make the race more strategically contested. An initially weaker short-beam design was rejected; complete-outcome scoring shipped.",
+    "unverified": [
+      "Independent human enjoyment/balance/accessibility",
+      "Other hardware/platforms/controller and standalone exports",
+      "General optimality or strength beyond these public models/cohorts",
+      "Commercial demand or external creative approval"
+    ]
+  },
+  "limits": "Projected long races use classic response models; only the next-cycle dialog executes actual configured profiles. Future considered actions are assumptions and replan. Old-policy journals load unchanged; planning names need the new consumer. No rules/schema migration or redistributed engine/API/runtime.",
+  "hashes": {
+    "projects/eclipse-fair/Core/Game.cs": "59c4e50b13d0189c88b0a7cc11310f001bed0c687640b9a68b052a16fa2bea94",
+    "projects/eclipse-fair/Core/Agents.cs": "026f77026f4bad7839f3f6f70ff350246e6d6d661aa3a97e6138b292c25dfb05",
+    "projects/eclipse-fair/Core/Planning.cs": "f7dfef9127a59def7b6c862d5293574232c7dac202a84f528c6c9c5a4b849829",
+    "projects/eclipse-fair/Cli/Journal.cs": "9dd9ad24ec286d4d0110c2f40c8bc56ea9dd4ee25340fcc5de7a164d39e7f24b",
+    "projects/eclipse-fair/Checks/Program.cs": "2d3f4fce8c38e8caf10379eed0a1cd0d7c072e3847cd541bb2c5b1d26d04f7a5",
+    "projects/eclipse-fair/Native/Main.cs": "dd6ef6e523540a2283a6fe9327699b5d4da2e81f03478b7cc5b902cdcbd84b64",
+    "projects/eclipse-fair/Native/BoardSession.cs": "a2f4215725fab810be62a78cff947ce78094fdabf21197b0f09504a70c9379eb",
+    "projects/eclipse-fair/Native/BoardChecks.cs": "e20a1551192f13fb84b95ce0a640fb3b8b04601b30b0973bd2437e51e04c7648",
+    "projects/eclipse-fair/Native/Eclipse.Board.csproj": "456a57055ca15274125b2de7ddf48403f7dc850b55455c0a9dced6b22f659a17",
+    "projects/eclipse-fair/Native/project.godot": "e4c19c41a01bb81255f4bcf7d52b7cdb39fa627533ca0d4417fc4e9a75d15006",
+    "projects/eclipse-fair/Native/README.md": "e932c34fdbc4ceec64b524ec94a43d0981f254c2d6593fafd2a74e8b4bd85a96",
+    "projects/eclipse-fair/tools/pack_board.py": "bcdc5ab70ff64c473b14886380a1d5eb48f03f7c833a4528969fab1214948ff5",
+    "projects/eclipse-fair/tools/check_board_pack.py": "f58ead410abc1c3a1a972124d9fa5cb6f309e482e565d8cb3f729f9017b42a5a",
+    "projects/eclipse-fair/dist/eclipse-board-0.3.0.zip": "a77f3be31829f5f0fb6ba3d1b798a88e8b0525d917860850f81b1c0e5aeee569",
+    "evidence/eclipse-fair/planning-rival.png": "1670a0a20c057db58450c8c5b0a58d24f95187b8541bf11952b8d84099b3e9fd",
+    "evidence/eclipse-fair/planning-response.png": "09db18821b7a1ff7311c43bf85e2a99f2916dbcd9df2c0256c214b4e5aee7a08",
+    "projects/eclipse-fair/Cli/Program.cs": "5fff23038345740d54c1dced60576de152be171d8be0d955eefe21872936a9da",
+    "projects/eclipse-fair/tools/check_cli.py": "65a0bd6ab753b05528b6a51252ecddc35e819ebfe371f9937e4174fa652cd790"
+  }
+}

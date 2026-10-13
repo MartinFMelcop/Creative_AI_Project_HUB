@@ -4,7 +4,7 @@ An evolving laboratory of games, narrative, images, audio, data, and AI
 evaluation by **Martin Melcop Neto**. Projects are adaptable seeds: build small
 slices, verify behavior, record decisions, and test reuse in actual destinations.
 
-**Current seed: v0.19.0.** The lab includes eleven project lines, 178 preserved
+**Current seed: v0.20.0.** The lab includes eleven project lines, 178 preserved
 historical texts, a working local project-conversation workspace, a calibrated
 practice-task harness, a complete rescue adventure with browser/terminal editions,
 two original browser rhythm stages with rendered soundtracks and sustained notes, a native C# economy board with preserved terminal workbench, a complete Portuguese story with EPUB/PDF, and a native
@@ -20,7 +20,7 @@ project versions and execution boundaries are in the state and registry.
 - [P04 — A água sob Darsen](projects/lich-cistern/README.md): complete standalone story, EPUB and A5 PDF.
 - [Reading edition execution](evidence/lich-cistern/RUN.json): conformance, text identity and implementer editorial review.
 
-- [P01 — Eclipse Fair](projects/eclipse-fair/README.md): playable Godot .NET board, concrete previews, paced rivals and replayable resume; terminal workbench preserved.
+- [P01 — Eclipse Fair](projects/eclipse-fair/README.md): Godot .NET board with adaptive planning rivals, conditional response comparison, Classic mode and replayable resume.
 - [Native board execution](evidence/eclipse-fair/BOARD_RUN.json): compiled source and runtime-only package, UI journeys and rendered review.
 - [Economy execution](evidence/eclipse-fair/RUN.json): source/compiled package, synthetic play and tuning limits.
 

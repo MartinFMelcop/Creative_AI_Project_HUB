@@ -1,24 +1,23 @@
-# Current assessment — decisions that become completed work
+# Current assessment — native rivals that plan a complete race
 
-Clean `3cac6b9` matches fetched main. Read current records/history, actual P11
-store/server/browser/backup, P01 rivals and P04 opening prose. Recent substantive
-work spans native games, literature, music and recovery; the latest cycles leaned
-toward games. Select by the product gap, not mandatory rotation or installed SDKs.
+Clean `a1e418f` matches fetched main. Inspected current instructions/records/history,
+P01 game/agents/UI/journal, P04 prose and P10 morning interactions. Recent cycles
+span collaboration, native games, music and literature; no mandatory rotation.
 
 | Opportunity | Evidence and decision |
 |---|---|
-| P11 execution handoff | Saved notes/decisions and recovery exist, but no assigned action, blocker/outcome or concurrent editing workflow. Connect a complete auditable handoff; selected. |
-| P01 rival strategy | Actual agents score one immediate action and route toward fixed goals. Longer planning and opponent reactions are a strong separate gameplay milestone. |
-| P04 readers/content | Complete prose/editions exist. No independent reader evidence; assess connected scenes before speculative expansion. |
-| P05/P06 native play | Recent campaign/motion milestones work. Unassisted choices and feedback should guide another native content pass. |
-| P03/P10 | Songs and two-day narrative exist. Listening/player response and a distinct dramatic purpose outrank automatic stage/chapter accumulation. |
+| P01 rival competition | One-action scores/fixed targets limit the playable native race. Adaptive decisions and inspectable replies add meaningful interaction; selected. |
+| P11 actual handoff | Complete assigned workflow just shipped. Independent collaborators should reveal useful next requirements. |
+| P04 literary work | Complete dramatic opening/editions inspected. Reader response and actual manuscript recovery would guide substantive continuation. |
+| P10 drama | Morning scenes connect real relief consequences. A distinct dramatic conflict is stronger than another repeated logistics chapter. |
+| P03/P05/P06 | Existing music/native experiences need unassisted listening/play before automatic content accumulation. |
 
-Node 24/SQLite/Socket.IO suit P11's real-time data workflow; native tools are
-available for the game alternatives. No service/framework migration. Preserve
-trusted-room semantics, old data/backups, prior exercise and P02 context. The
-new owner/status/history view makes the improvement visible without a changelog.
-[Execution](../evidence/realtime-chat/ACTIONS_RUN.json) bounds technical checks
-and implementer visual judgment; it does not prove team adoption or demand.
+Keep C#/.NET 10 and Godot .NET 4.6.3 for the actual native board. Tools execute;
+no rules migration, web substitute or shared framework. A short-beam prototype
+performed worse in matched races and was discarded. Full-race public policy
+projections produce effective competition in the bounded comparison, with
+actual theft/ward responses and unchanged Classic access. [Execution](../evidence/eclipse-fair/PLANNING_RUN.json)
+separates technical proof, implementing-agent judgment and unverified human balance.
 
 # Previous assessment — a usable native economy board
 

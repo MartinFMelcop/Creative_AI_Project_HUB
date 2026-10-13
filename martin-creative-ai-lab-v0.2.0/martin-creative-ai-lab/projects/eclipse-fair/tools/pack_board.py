@@ -6,13 +6,14 @@ from zipfile import ZipFile, ZIP_DEFLATED
 ROOT = Path(__file__).resolve().parents[1]
 NATIVE = ROOT / "Native"
 ASSEMBLIES = NATIVE / ".godot/mono/temp/bin/Debug"
-OUT = ROOT / "dist/eclipse-board-0.2.0.zip"
+OUT = ROOT / "dist/eclipse-board-0.3.0.zip"
 
 
 def main():
     files = [ROOT / "Directory.Build.props", ROOT / "global.json", NATIVE / "project.godot",
              NATIVE / "Main.tscn", NATIVE / "Eclipse.Board.csproj", NATIVE / "README.md",
-             ROOT / "Cli/Journal.cs", ROOT / "Core/Eclipse.Core.csproj", ROOT / "Core/Game.cs", ROOT / "Core/Agents.cs"]
+             ROOT / "Cli/Journal.cs", ROOT / "Core/Eclipse.Core.csproj"]
+    files += sorted((ROOT / "Core").glob("*.cs"))
     files += sorted(NATIVE.glob("*.cs")) + sorted(NATIVE.glob("*.uid"))
     files += [ASSEMBLIES / name for name in ("Eclipse.Board.dll", "Eclipse.Core.dll", "Eclipse.Board.deps.json", "Eclipse.Board.runtimeconfig.json")]
     for path in files:

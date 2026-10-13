@@ -1,18 +1,33 @@
 # P01 — Eclipse Fair
 
-**0.2.0** adds a complete [native Godot .NET board](Native/README.md) to the
+**0.3.0** adds planning rivals and conditional response comparison to the
+[native Godot .NET board](Native/README.md), alongside the
 existing **0.1.0** C#/.NET economy workbench and playable terminal match from
 Artemyra's Feira do Eclipse seed. One participant faces three agents on eight
 connected venues. Earn obols, buy three sigils, cleanse curse and claim the Gate.
 Compare rule variants across common seeds and all four policy/seat rotations.
 This is new gameplay, not recovered RPG Maker code. The native consumer uses
 the existing Core and journal without duplicating transactions or changing rules.
-Download [the compiled native project pack](dist/eclipse-board-0.2.0.zip); it requires
+Download [the compiled native project pack](dist/eclipse-board-0.3.0.zip); it requires
 Godot .NET 4.6.3 and .NET 10 runtime, not an SDK. It is not a standalone executable.
-[Native execution](../../evidence/eclipse-fair/BOARD_RUN.json) records actual engine
-journeys, runtime-only consumption and implementing-agent presentation review.
+[Planning execution](../../evidence/eclipse-fair/PLANNING_RUN.json) records actual engine
+journeys, runtime-only consumption, comparative fixtures and implementing-agent review.
 
-![Executed native board](../../evidence/eclipse-fair/board.png)
+![Executed planning rival](../../evidence/eclipse-fair/planning-rival.png)
+
+Planning mode adds Planner, Warden and Raider. Each compares legal first moves by
+projecting a race to the actual Gate/deadline using public classic policy models,
+then replans after accepted actions. **Rival response** executes the configured
+profiles in a fork through your next turn; compare another legal plan to see
+different replies and budgets. New fair also offers **Classic**. Saved classic
+profiles stay classic; the previous 0.2.0 native pack is retained.
+
+The bounded comparison uses 12 common seeds and four seat rotations, with an
+unchanged Collector proxy: win credit falls from 10.5/48 to 2/48 against the new
+rivals; actual blocked thefts rise from 0 to 20. Gate finishes are 31 versus 28;
+the new race is more contested in this fixture, not universally faster or proven
+balanced for people. A separate income-control fixture finishes in 63 versus 69
+accepted turns. No independent human play or general optimality is claimed.
 
 ## Play the original compiled terminal package
 
@@ -59,7 +74,11 @@ round. Current/next forecasts and all positions/resources are public information
 Collector prioritizes purchases, rites and the Gate; Keeper values protection
 around rivals; Opportunist considers disrupting a co-located competitor. Worker
 is an intentionally income-only control, not a balanced fourth playable class.
-Policies use one-turn previews and next wages; they are not optimal solvers.
+These four classic policies retain their original one-turn previews/next wages.
+The new planning profiles are available in current source/native mode; old
+compiled packages reject their names. Journal schema/rules remain 0.1.0; new
+planning names require the new consumer. Projections assume public response
+models and do not know a human's future input. They are not optimal solvers.
 
 ## Compare an actual scenario
 
@@ -97,15 +116,16 @@ python3 tools/pack.py
 
 No NuGet package or test framework is required for Core/CLI; the native consumer
 uses the pinned Godot SDK. Core owns transactions/agents;
-CLI owns JSON/files/terminal/reporting. Ten C# checks cover actual public contracts,
-including conservation across 100 complete matches. The Python workflow drives
+CLI owns JSON/files/terminal/reporting. Thirteen C# checks cover actual public contracts,
+including conservation across 100 classic matches, three planning checks for
+actual racing, conditional replies, determinism/replay and bounded rules. The Python workflow drives
 the compiled process through input rejection, hint/save/resume, full assisted play,
 replay and comparison/CSV. CI compiles source and executes the shipped package.
 
 [Execution](../../evidence/eclipse-fair/RUN.json) distinguishes compilation,
 terminal input, package consumption, synthetic comparisons and implementing-agent
 design review. [Provenance](provenance.json) records the seed adaptation. The original evidence is for the terminal 0.1.0 workbench; native 0.2.0 execution
-is recorded separately. No historical runtime restoration, standalone export,
+is recorded separately, with 0.3.0 planning in PLANNING_RUN.json. No historical runtime restoration, standalone export,
 physical controller, human enjoyment, commercial adoption or exclusive rights is
 claimed. This net10.0 domain is not a drop-in Unity DLL.
 

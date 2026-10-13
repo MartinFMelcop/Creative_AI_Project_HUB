@@ -51,7 +51,20 @@ with tempfile.TemporaryDirectory(prefix="eclipse-cli-") as scratch:
         assert abs(sum(scenario["winCredits"].values()) - scenario["matches"]) < 1e-9
     run("compare", "--runs", "0", "--variant", str(ROOT / "rules/expensive-seals.json"), success=False)
     run("demo", "--unknown", "value", success=False)
+    planning_checked = False
+    if len(sys.argv) == 1:
+        # The preserved 0.1.0 delivered CLI rejects the new profile names.
+        planned = cwd / "planning-partial.json"
+        first = run("demo", "--seed", "0", "--policies", "warden,worker,raider,collector", "--out", str(cwd / "planning"))
+        data = json.loads((cwd / "planning/journal.json").read_text())
+        data["actions"] = data["actions"][:8]
+        planned.write_text(json.dumps(data))
+        resumed = run("play", "--load", str(planned), text="hint\nauto\n" * 40)
+        expected = run("replay", "--load", str(cwd / "planning/journal.json"))
+        assert "Warden suggestion:" in resumed.stdout
+        assert resumed.stdout.split("RESULT:")[-1] == expected.stdout.split("RESULT:")[-1]
+        planning_checked = True
     print(json.dumps({"workflow": "real compiled CLI", "input": "synthetic", "passed": [
         "numbered-plan rejection/hint/atomic save", "resume to same complete result",
         "independent replay", "invalid journal/option rejection", "common-seed four-seat comparison/CSV"
-    ]}))
+    ], "configured_planning_profile_replay": planning_checked}))

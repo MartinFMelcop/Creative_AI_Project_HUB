@@ -1,40 +1,37 @@
 # Lab state
 
-**Updated:** 2026-10-13 (UTC). **Seed:** 0.19.0.
-**Current milestone:** P11 Project Rooms 0.4.0.
+**Updated:** 2026-10-13 (UTC). **Seed:** 0.20.0.
+**Current milestone:** P01 Eclipse Fair native 0.3.0.
 
-[Run Project Rooms](../projects/realtime-integration-lab/README.md). The former
-conversation/decision workspace now carries decisions into assigned actions,
-progress, blockers, completion and reopening with a new reason. Sources remain
-immutable; every change records its author/revision. Separate views, owner filters,
-history and complete export make the handoff inspectable.
+[Play the native board](../projects/eclipse-fair/Native/README.md). Planner,
+Warden and Raider compare legal first moves using complete projected races,
+then replan after accepted actions. The board exposes their considered route.
+Rival response lets a human compare actual configured replies through their
+next turn without changing live play. Planning/Classic selection and stored
+profiles preserve the original experience; core transaction rules are unchanged.
 
-SQLite commits each revision and event atomically. Stale edits keep their draft
-and require explicit comparison/reapplication. Immutable attempts and receipts
-recover uncertain committed/uncommitted sends without duplication or reverting
-newer work. Offline changes require explicit saves. Updates preserve the current
-reading view; drafts are scoped to participant/room and protected from replacement.
+[Execution](../evidence/eclipse-fair/PLANNING_RUN.json): 13 C# checks, retained
+compiled CLI workflow, ten native complete matches with forecast/mode/save checks.
+Final source OpenGL execution passed 283 assertions; final compiled pack passed
+275 outside checkout with runtime-only .NET/no SDK. Actual frames inspected.
+Old packs and historical archive retained. New policy names require 0.3.0/source;
+save schema/rules stay 0.1.0. Package is an engine project, not an OS executable.
 
-Schema 2 upgrades schema 1 transactionally; failed upgrades roll back. Backup
-format 1 inspects/restores both database versions, including audit/attempt state.
-An actual 0.3.0 savepoint was restored and migrated with identity/records intact.
-Keep an old savepoint before upgrade; older applications cannot open schema 2.
+Compared 12 common seeds and four seat rotations (48 matches per configuration).
+Collector proxy win credit fell from 10.5 to 2; blocked thefts rose from 0 to 20.
+Gate finishes were 31 versus 28; no universal pace/balance claim. A capital fixture
+finished in 63 versus 69 accepted turns. A short-beam design was discarded after
+weaker matched results; the shipped design evaluates actual endings. Forecasts
+and later considered moves remain conditional on public policy models.
 
-[Execution](../evidence/realtime-chat/ACTIONS_RUN.json): full P11 suite 73 passes;
-final 13 workflow checks pass after reopening/late-script review. Two Chromium
-contexts exercise the complete handoff; declared fixtures cover lost confirmation,
-newer peer writes, restore, corruption and failed migration. Desktop/narrow frames
-reviewed by Codex. These are synthetic tests, not independent collaborator approval.
+Started clean at `a1e418f`, matching fetched main. Compared P11 handoffs, actual
+P04 prose, P10 morning content and P01 one-step agents. P01's strategic limitation
+offered a coherent native milestone. SDK/engine were located and executed;
+C#/Godot reuse the existing domain with no web bridge or dependency migration.
+Other project code/media and pinned evaluation remain preserved. GitHub main
+publication is authorized; no service hosting deployment.
 
-Started clean at `3cac6b9`, matching fetched main. Compared actual P01 one-step
-rivals, P04 prose/feedback and completed native/game/music work. P11's missing
-execution handoff offered a concrete product workflow. Retain Node/SQLite/Socket.IO;
-dependency graph, legacy protocol, P02 snapshot, other projects/media and archive
-remain preserved. GitHub main is authorized; no service hosting deployment.
-
-Trusted local prototype: all participants can open/edit rooms; chosen names and
-ownership are not verified accounts/permissions. Outcomes are recorded text,
-not artifact certification. Browser storage is separate from backups. Independent
-team usability, large workspace performance, public accounts and market demand
-remain unverified. Next compare real handoff needs with P01 rival strategy, P10
-dramatic progression and unassisted native/music/reader feedback.
+Codex review and declared controllers are not independent human playtests.
+Unassisted enjoyment/difficulty, accessibility, other hardware/platforms and demand
+remain open. Next compare Planning/Classic choices with P10 dramatic scenes,
+P03/P04 listening/readers and P11 real collaborator handoffs.

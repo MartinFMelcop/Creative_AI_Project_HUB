@@ -12,7 +12,7 @@ public partial class Main : Control
     private readonly Label[,] roster = new Label[4, 3];
     private VBoxContainer actions = null!;
     private RichTextLabel log = null!;
-    private Button commit = null!, next = null!, hint = null!, save = null!, load = null!;
+    private Button commit = null!, next = null!, hint = null!, save = null!, load = null!, response = null!;
     private CheckButton automatic = null!;
     private readonly Dictionary<Intent, Button> planButtons = [];
     private Intent? selected;
@@ -102,6 +102,8 @@ public partial class Main : Control
         var confirm = new HBoxContainer(); sidebar.AddChild(confirm);
         commit = Button("Commit this plan", CommitTurn); commit.SizeFlagsHorizontal = SizeFlags.ExpandFill; confirm.AddChild(commit);
         hint = Button("Suggest plan", Suggest); confirm.AddChild(hint);
+        response = Button("Rival response", ForecastDialog); confirm.AddChild(response);
+        response.TooltipText = "Compare the next rival turns if you commit the selected plan.";
         notice = Text("", 14, Gold); notice.CustomMinimumSize = new(0, 40); stack.AddChild(notice);
         log = new RichTextLabel { BbcodeEnabled = false, ScrollFollowing = true, CustomMinimumSize = new(0, 95), SelectionEnabled = true };
         log.AddThemeFontSizeOverride("normal_font_size", 14); log.AddThemeStyleboxOverride("normal", Box(Ink, Edge)); stack.AddChild(log);
@@ -122,6 +124,7 @@ public partial class Main : Control
             roster[i, 2].Text = $"Curse {who.Curse} · Ward {who.Ward} · {Game.Board[who.Position].Name}";
         }
         next.Disabled = human || game.Result != null; hint.Disabled = !human;
+        response.Disabled = !human || selected == null;
         turn.Text = game.Result != null ? "Start a new fair to play again." : human ? "Your turn — compare before committing." : game.People[game.Current].Name + " is next.";
         venue.Text = Game.Board[destination].Name; venueInfo.Text = functions[destination];
         if (destination == 0 || destination == 4)
@@ -163,7 +166,15 @@ public partial class Main : Control
                 }
             }
         }
-        else { selected = null; actions.AddChild(Text("Rivals use the same costs and route rules. Watch the next turn or enable Auto rivals.", 17)); preview.Text = "You can inspect every venue while rivals act."; }
+        else
+        {
+            selected = null; var advice = session.Advice();
+            actions.AddChild(Text(game.People[game.Current].Name + " · " + session.Policies[game.Current], 20, Gold));
+            actions.AddChild(Text(advice.Purpose, 17));
+            actions.AddChild(Text("Considering: " + string.Join(" → ", advice.Route.Select(PlanName)), 15));
+            actions.AddChild(Text("This turn: " + PlanName(advice.First), 17, Mint));
+            preview.Text = "Plans are reconsidered after each accepted action. Watch the next turn or enable Auto rivals.";
+        }
         commit.Disabled = !human || selected == null;
         notice.Text = session.Notice; save.TooltipText = "Save/replay file: " + session.SavePath; load.TooltipText = "Loading replaces only after every saved action has been validated.";
         log.Text = string.Join("\n", game.Journal.TakeLast(40).Select(e => e.Description));
@@ -177,8 +188,27 @@ public partial class Main : Control
     private void Suggest()
     {
         if (session.Game.Result != null || session.Game.Current != 0) return;
-        selected = Agents.Choose(session.Game, "collector"); destination = selected.Destination; Refresh();
-        notice.Text = "Heuristic suggestion selected; inspect it, then choose whether to commit.";
+        var advice = session.Advice(); selected = advice.First; destination = selected.Destination; Refresh();
+        notice.Text = "Suggestion: " + advice.Purpose + ". Inspect the plan and compare rival replies before committing.";
+    }
+    private string PlanName(Intent intent) => ActionName(intent) + " at " + Game.Board[intent.Destination].Name;
+    private string ForecastText(ReplyForecast forecast)
+    {
+        var after = forecast.After; var p = after.People[0];
+        var replies = forecast.Replies.Length == 0 ? (after.Result != null ? "Your plan ends the fair before another turn." : "Your next turn follows immediately; no rival acts.")
+            : string.Join("\n", forecast.Replies.Select(r => r.Description));
+        var end = after.Result == null ? $"Your next turn: round {after.Round}; {p.Gold} obols, {p.Sigils} sigils, {p.Curse} curse, {p.Ward} ward."
+            : "The fair ends: " + after.Result.Reason + ". Winner(s): " + string.Join(", ", after.Result.Winners.Select(i => after.People[i].Name));
+        return "If you commit " + PlanName(selected!) + ":\n\n" + replies + "\n\n" + end +
+            "\n\nConditional forecast: these public profiles respond to this plan. Compare another plan to see different replies. Your live match is unchanged.";
+    }
+    private void ForecastDialog()
+    {
+        if (selected == null || session.Game.Current != 0 || session.Game.Result != null) return;
+        automatic.ButtonPressed = false;
+        var dialog = new AcceptDialog { Title = "Compare the next rival turns", MinSize = new(840, 560), DialogText = ForecastText(session.Forecast(selected)) };
+        dialog.GetLabel().AutowrapMode = TextServer.AutowrapMode.WordSmart;
+        AddChild(dialog); dialog.Confirmed += () => dialog.QueueFree(); dialog.PopupCentered();
     }
     public override void _Process(double delta)
     {
@@ -192,10 +222,14 @@ public partial class Main : Control
     private void NewDialog()
     {
         automatic.ButtonPressed = false;
-        var dialog = new ConfirmationDialog { Title = "Start a new fair", DialogText = "Choose a seed. Accepted turns or explicit Save replace the current save.", MinSize = new(520, 180) };
+        var dialog = new ConfirmationDialog { Title = "Start a new fair", DialogText = "Choose a seed and rivals. Accepted turns or Save replace the current save.", MinSize = new(660, 245) };
         var seed = new SpinBox { MinValue = 0, MaxValue = 1000000, Value = session.Game.Seed + 1, Position = new(20, 78), Size = new(180, 36) };
-        dialog.AddChild(seed); AddChild(dialog);
-        dialog.Confirmed += () => { session.New((int)seed.Value); ResetSelection(); Refresh(); dialog.QueueFree(); };
+        var profiles = new OptionButton { Position = new(220, 78), Size = new(410, 36) };
+        profiles.AddItem("Planning rivals — forecast and adapt"); profiles.AddItem("Classic rivals — original one-turn decisions");
+        var detail = Text("Planning rivals consider wages, curse and nearby competition.\nClassic preserves the previous fair; the rules are identical.", 14, Muted);
+        detail.Position = new(20, 125); detail.Size = new(610, 60);
+        dialog.AddChild(seed); dialog.AddChild(profiles); dialog.AddChild(detail); AddChild(dialog);
+        dialog.Confirmed += () => { session.New((int)seed.Value, profiles.Selected == 0); ResetSelection(); Refresh(); dialog.QueueFree(); };
         dialog.Canceled += () => dialog.QueueFree(); dialog.PopupCentered();
     }
     private void Help()
@@ -206,6 +240,7 @@ public partial class Main : Control
             "2. Earn obols; buy three sigils at Market or Bazaar. Prices rise with\nyour sigils and again after round 10. Each purchase adds curse.\n\n" +
             "3. Visit the Chapel for rites: remove two curse for two obols,\nor free during a procession. Curse also reduces your work income.\n\n" +
             "4. Reach the Gate with three sigils and zero curse; CLAIM it.\nA raven ward costs two obols and blocks one co-located theft.\nTheft adds curse if successful. Forecasts and rival resources are public.\n\n" +
+            "Planning rivals project races and replan after changes.\nRival response forecasts the next cycle for your selected plan.\nNew fair also offers Classic rivals. Saved profiles are preserved.\n\n" +
             "Initiative rotates. At round 20, rank by sigils, least curse, obols.\nAccepted turns autosave. Resume replays them; no hidden time passes.\nTab/arrow keys navigate controls; Enter/Space activates a focused button." };
         AddChild(dialog); dialog.Confirmed += () => dialog.QueueFree(); dialog.PopupCentered();
     }

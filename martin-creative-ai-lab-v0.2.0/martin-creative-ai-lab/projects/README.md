@@ -36,8 +36,8 @@ This is new implementation, not recovery of the missing Unity starter.
 
 [P01 — Eclipse Fair](eclipse-fair/README.md) is a new C#/.NET 10 terminal match
 and economy workbench, with four participants/eight venues, durable replay,
-scenario comparison and an executed compiled resource package. The native 0.2.0 board directly consumes those rules with graphical previews,
-paced rivals and resume. Human play remains unverified.
+scenario comparison and an executed compiled resource package. The native 0.3.0 board directly consumes those rules with planning rivals, conditional response comparison,
+Classic selection and resume. Human play remains unverified.
 
 [P04 — A água sob Darsen](lich-cistern/README.md) delivers a complete standalone
 Portuguese story with EPUB/PDF editions and editable prose. It is a new adaptation

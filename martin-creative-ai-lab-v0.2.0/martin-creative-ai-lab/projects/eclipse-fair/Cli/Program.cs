@@ -49,7 +49,7 @@ static void Run(string[] args)
     Console.WriteLine("ECLIPSE FAIR — you are Vaelis. Three agents share the fair.\nBuy three sigils, cleanse your curse, then claim the Gate before the fair closes.\nMove up to one edge and take one action per turn; movement costs obols.\nMarkets: 0/4. Chapel: 2. Gate: 7. Shortcuts: 0↔4, 2↔6.\nAt closure, rank by sigils, least curse, then obols; exact ties share the result.\nType help for tactics or save <path> to pause your match.");
     while(game.Result==null)
     {
-        if(game.Current!=0) {game.Apply(Agents.Choose(game,policies[game.Current]),out var story);Console.WriteLine(story);continue;}
+        if(game.Current!=0) {game.Apply(Agents.Choose(game,policies[game.Current],policies),out var story);Console.WriteLine(story);continue;}
         Show(game);var plans=game.Legal();
         for(int i=0;i<plans.Count;i++)Console.WriteLine($"{i+1,2}. {Describe(game,plans[i])}");
         Console.Write("Plan > ");var line=Console.ReadLine()?.Trim();
@@ -61,8 +61,8 @@ static void Run(string[] args)
             {Console.WriteLine($"Save failed: {error.Message} Match is still active and unchanged.");}
             continue;
         }
-        if(line=="hint") {var suggestion=Agents.Choose(game,policies[0]);Console.WriteLine($"Collector suggestion: plan {plans.ToList().IndexOf(suggestion)+1}. It considers funds, curse, destination and next wages; it is not an optimal solver.");continue;}
-        if(line=="auto") {game.Apply(Agents.Choose(game,policies[0]),out var automatic);Console.WriteLine("Assisted turn: "+automatic);continue;}
+        if(line=="hint") {var suggestion=Agents.Choose(game,policies[0],policies);var label=char.ToUpperInvariant(policies[0][0])+policies[0][1..];Console.WriteLine($"{label} suggestion: plan {plans.ToList().IndexOf(suggestion)+1}. It uses public policy information; it is not an optimal solver.");continue;}
+        if(line=="auto") {game.Apply(Agents.Choose(game,policies[0],policies),out var automatic);Console.WriteLine("Assisted turn: "+automatic);continue;}
         if(line=="help") {Console.WriteLine("Work follows this round's forecast; curse reduces income. Buying adds curse. Chapel rites remove up to two.\nA two-obol raven ward blocks one co-located theft. Successful stealing transfers up to three obols and adds curse.\nSeals cost more as you collect them; late prices rise by one. Returning to the Chapel and Gate costs turns.\nProtect a purchase reserve, compare routes, and watch opponents' positions. Saving replaces the specified file atomically.");continue;}
         if(!int.TryParse(line,out var index) || index<1 || index>plans.Count){Console.WriteLine("Choose a displayed plan; nothing changed.");continue;}
         game.Apply(plans[index-1],out var feedback);Console.WriteLine(feedback);

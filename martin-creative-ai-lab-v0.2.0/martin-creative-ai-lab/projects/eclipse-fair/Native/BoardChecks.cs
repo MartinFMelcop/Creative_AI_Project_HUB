@@ -47,6 +47,16 @@ public partial class Main
                 Require(preview.Text.Contains(session.Preview(intent).People[0].Gold + " obols"), "Preview omitted actual budget");
             }
             hint.EmitSignal(BaseButton.SignalName.Pressed); await Capture("plan");
+            var suggestedForecast = session.Forecast(selected!);
+            var workForecast = session.Forecast(new Intent(session.Game.People[0].Position, ActionKind.Work));
+            var beforeResponse = Fingerprint(session.Game);
+            response.EmitSignal(BaseButton.SignalName.Pressed);
+            var openingResponse = GetChildren().OfType<AcceptDialog>().Single();
+            Require(Fingerprint(session.Game) == beforeResponse, "Comparing the suggested response spent a turn");
+            await Capture("suggested-response"); openingResponse.EmitSignal(AcceptDialog.SignalName.Confirmed); await Frame();
+            Require(!suggestedForecast.Replies.Select(r => r.Intent).SequenceEqual(workForecast.Replies.Select(r => r.Intent)), "Suggested protection did not change the opening rival responses");
+            GD.Print(JsonSerializer.Serialize(new { opening_response = new { seed = 1, suggested = selected,
+                suggested_replies = suggestedForecast.Replies.Select(r => r.Description), work_replies = workForecast.Replies.Select(r => r.Description) } }, Journal.Json));
             var humanCount = session.Game.Journal.Count;
             commit.EmitSignal(BaseButton.SignalName.Pressed);
             Require(session.Game.Journal.Count == humanCount + 1, "Confirmation did not accept exactly one turn");
@@ -76,6 +86,25 @@ public partial class Main
                 Require(Fingerprint(session.Game) == Fingerprint(expected), "Theft/ward UI changed transaction effects");
                 await Frame();
             }
+            // Compare the actual response dialog with subsequently accepted rival turns.
+            session.New(0); ResetSelection(); Refresh();
+            var forecastIntent = new Intent(1, ActionKind.Work);
+            map.Venues[1].EmitSignal(BaseButton.SignalName.Pressed); planButtons[forecastIntent].EmitSignal(BaseButton.SignalName.Pressed);
+            var liveBeforeForecast = Fingerprint(session.Game); var forecast = session.Forecast(forecastIntent);
+            response.EmitSignal(BaseButton.SignalName.Pressed);
+            var forecastWindow = GetChildren().OfType<AcceptDialog>().Single();
+            Require(forecastWindow.DialogText.Contains("Conditional forecast") && forecastWindow.DialogText.Contains("6 obols"), "Response dialog omitted actual replies");
+            Require(Fingerprint(session.Game) == liveBeforeForecast && !automatic.ButtonPressed, "Response comparison advanced live play");
+            await Capture("response"); forecastWindow.EmitSignal(AcceptDialog.SignalName.Confirmed); await Frame();
+            commit.EmitSignal(BaseButton.SignalName.Pressed); await Capture("rival-plan");
+            Require(session.Advice().Route.Length > 1 && actions.GetChildCount() >= 4, "Native rival plan omitted its route/purpose");
+            while(session.Game.Result == null && session.Game.Current != 0) { next.EmitSignal(BaseButton.SignalName.Pressed); await Frame(); }
+            Require(Fingerprint(session.Game) == Fingerprint(forecast.After), "Native rival turns diverged from the displayed forecast");
+            NewDialog(); var newWindow = GetChildren().OfType<ConfirmationDialog>().Single();
+            newWindow.GetChildren().OfType<OptionButton>().Single().Select(1); newWindow.EmitSignal(ConfirmationDialog.SignalName.Confirmed); await Frame();
+            Require(session.Policies.SequenceEqual(new[]{"collector","keeper","opportunist","collector"}), "Classic mode changed original profiles");
+            session.Save(); var classicPolicies = session.Policies.ToArray(); session.New(4); load.EmitSignal(BaseButton.SignalName.Pressed);
+            Require(session.Policies.SequenceEqual(classicPolicies), "Loading an old-policy save silently upgraded its rivals");
             var seen = new HashSet<ActionKind>();
             foreach (var seed in new[] { 0, 1, 2, 3, 4, 5, 6, 7, 18 })
             {
@@ -130,6 +159,7 @@ public partial class Main
             Require(Fingerprint(session.Game) == afterFocus, "Auto rivals advanced after focus-out");
             GD.Print(JsonSerializer.Serialize(new { native_board = "pass", assertions, complete_gate_or_deadline_matches = 10,
                 source_rule_parity = true, journal_replay = true, keyboard_venue_input = true,
+                strategic_profiles = true, conditional_forecast = true, classic_mode = true,
                 auto_rival_clock = true, controlled_focus_out = true,
                 rendered = DisplayServer.GetName() != "headless" }, Journal.Json));
             GetTree().Quit(0);

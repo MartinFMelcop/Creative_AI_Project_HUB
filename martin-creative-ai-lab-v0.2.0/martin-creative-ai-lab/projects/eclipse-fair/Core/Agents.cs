@@ -4,8 +4,9 @@ namespace Eclipse.Core;
 public static class Agents
 {
     public static readonly ImmutableArray<string> Names = ["collector","keeper","opportunist","worker"];
-    public static Intent Choose(Game game, string policy)
+    public static Intent Choose(Game game, string policy, IReadOnlyList<string>? policies = null)
     {
+        if (Planning.Names.Contains(policy)) return Planning.Analyze(game, policy, policies).First;
         if (!Names.Contains(policy)) throw new ArgumentException($"Unknown policy: {policy}");
         var before=game.People[game.Current];
         int Target(Participant p) => p.Curse>=2 || (p.Sigils>=game.Rules.Goal && p.Curse>0) ? 2 :
@@ -41,11 +42,11 @@ public static class Agents
     public static Game Finish(Game game, string[] policies)
     {
         ValidatePolicies(policies);
-        while(game.Result==null)if(!game.Apply(Choose(game,policies[game.Current]),out _))throw new InvalidOperationException("Agent chose an illegal plan.");
+        while(game.Result==null)if(!game.Apply(Choose(game,policies[game.Current],policies),out _))throw new InvalidOperationException("Agent chose an illegal plan.");
         return game;
     }
     public static void ValidatePolicies(string[] policies)
     {
-        if(policies.Length!=4 || policies.Any(p=>!Names.Contains(p)))throw new ArgumentException("Choose four policies: collector, keeper, opportunist, worker.");
+        if(policies.Length!=4 || policies.Any(p=>!Names.Contains(p)&&!Planning.Names.Contains(p)))throw new ArgumentException("Choose four supported policies: collector, keeper, opportunist, worker, planner, warden, raider.");
     }
 }
