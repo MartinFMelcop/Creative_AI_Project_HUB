@@ -144,7 +144,16 @@ test('a full Arcade run uses the real 69-second audio clock and exports actual r
   assert.ok(result.accuracy>=90,`Synthetic audio-clock inputs achieved ${result.accuracy}%`);
   assert.equal(result.pulses,1);assert.ok(result.score>100000);assert.equal(result.strays,0);
   assert.match(await page.locator('#best').textContent(),/Arcade best/);
+  assert.equal(result.mode,'full');assert.equal(result.playbackRate,1);
+  assert.equal(result.phrases.length,8);assert.equal(result.phrases.reduce((sum,p)=>sum+p.notes,0),result.notes.length);
+  assert.equal(await page.locator('#phrase-results button').count(),8);
   if(process.env.RHYTHM_SCREENSHOT_DIR){await fs.writeFile(process.env.RHYTHM_SCREENSHOT_DIR+'/actual-run.json',JSON.stringify(result,null,2)+'\n');await page.screenshot({path:process.env.RHYTHM_SCREENSHOT_DIR+'/results.png',fullPage:true});}
-  await page.locator('#replay').click();await mode(page,'playing');assert.equal(Number(await page.locator('#score').textContent()),0);
+  const best=await page.evaluate(()=>localStorage.getItem('tokyo80s-best-v1-arcade'));
+  await page.locator('#phrase-results button[data-phrase="7"]').click();await mode(page,'playing');
+  assert.equal(await page.locator('#phrase').inputValue(),'7');assert.equal(await page.locator('#stage').getAttribute('data-session'),'rehearsal');
+  assert.ok(Number(await page.locator('#stage').getAttribute('data-song-position'))>=49);
+  assert.equal(await page.evaluate(()=>localStorage.getItem('tokyo80s-best-v1-arcade')),best);
+  await page.locator('#full-run').click();await mode(page,'ready');await page.locator('#start').click();await mode(page,'playing');
+  assert.equal(await page.locator('#stage').getAttribute('data-session'),'full');assert.equal(Number(await page.locator('#score').textContent()),0);
   assert.deepEqual(errors,[]);await page.context().close();
 });

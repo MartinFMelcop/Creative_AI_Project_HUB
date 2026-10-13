@@ -1,4 +1,5 @@
 import { RhythmRun, adjustedTime, calibrationOffset } from './core.js';
+import { phrases, makeSession, phraseResults } from './rehearsal.js';
 const $=id=>document.getElementById(id);
 const canvas=$('board'), context=canvas.getContext('2d');
 const pads=[...document.querySelectorAll('[data-lane]')];
@@ -11,6 +12,7 @@ let calibrating=false, calibrationStart=0, calibrationSamples=[], calibrationBea
 let lastExport;
 let calibrationNodes=[];
 let storeOK=true;
+let session, countNodes=[], previousTake;
 try {
   const remembered=JSON.parse(localStorage.getItem('tokyo80s-settings')||'{}');
   if(Number.isFinite(remembered.offset)&&Math.abs(remembered.offset)<=150) offset=Math.round(remembered.offset/5)*5;
@@ -25,6 +27,9 @@ function setMode(next) {
   $('difficulty').disabled=active;
   $('song').disabled=active||!tracks.length;
   $('calibrate').disabled=active;
+  $('phrase').disabled=active||!track;
+  $('rate').disabled=active||$('phrase').value==='full';
+  $('full-run').disabled=['pausing','loading'].includes(mode);
   $('restart').disabled=!run||['pausing','loading'].includes(mode);
   $('pause').disabled=!['playing','paused'].includes(mode);
   $('pause').textContent=mode==='paused'?'Resume':'Pause';
@@ -42,7 +47,7 @@ function stamp(seconds) {const sec=Math.floor(seconds);return `${String(Math.flo
 function chooseTrack(id) {
   if(['playing','paused','pausing','loading'].includes(mode))return;
   const next=tracks.find(t=>t.id===id);if(!next)return;
-  epoch++;stopSource();clearHeld();track=next;buffer=null;run=null;lastExport=null;frozen=0;
+  epoch++;stopSource();clearHeld();track=next;buffer=null;run=null;lastExport=null;frozen=0;session=null;
   flash={text:'',color:'#fff',until:0};bursts=[];
   $('shield').textContent='Build a combo. Protect your next difficult phrase.';
   $('results').hidden=true;document.title=`Tokyo 80s — ${track.title}`;
@@ -55,13 +60,31 @@ function chooseTrack(id) {
   document.querySelector('.track-meta span').textContent=`${stamp(track.duration)} / INSTRUMENTAL`;
   $('progress').max=track.duration;$('stage').dataset.track=track.id;$('section').textContent=track.sections[0].name.toUpperCase();
   $('score').textContent='000000';$('combo').textContent='0';$('accuracy').textContent='—';$('aura').value=0;
+  $('phrase').replaceChildren(...[{id:'full',label:'Full run'},...phrases(track)].map(p=>{
+    const option=document.createElement('option');option.value=p.id;option.textContent=p.label;return option;
+  }));
+  rehearsalInfo();
   setMode('ready');center('Hit play.',`${track.title} · ${stamp(track.duration)} · ${track.id==='rain-circuit'?'Carry the long notes to their tails.':'Tap the instrumental attacks.'}`);
   message('Choose Practice or Arcade. Selecting a track does not start sound.');
 }
 function position() {
   if(!audioContext) return 0;
   if(['paused','loading','error','results','ready'].includes(mode)) return frozen;
-  return Math.max(0,Math.min(track?.duration||69,audioContext.currentTime-started));
+  return Math.max(0,Math.min(session?.duration||track?.duration||69,audioContext.currentTime-started));
+}
+function rehearsalInfo() {
+  const chosen=phrases(track).find(p=>p.id===$('phrase').value);
+  if(!chosen)$('rate').value='1';
+  const rate=Number($('rate').value);
+  $('rate').disabled=!chosen;
+  $('full-run').hidden=!chosen;
+  $('start').firstChild.textContent=chosen?'Start rehearsal ':'Start run ';
+  $('rehearsal-info').textContent=chosen?`${chosen.label} · ${Math.round(track.bpm*rate*10)/10} BPM · four-click entrance · no full-run best.`:'Full track · original tempo.';
+  if(!run) {
+    session=makeSession(track,$('difficulty').value,$('phrase').value,rate);
+    $('progress').max=session.duration;
+    center(chosen?'Phrase ready.':'Hit play.',chosen?`${chosen.label} · ${rate*100}% speed · four clicks before the first note.`:`${track.title} · ${stamp(track.duration)} · full track at original tempo.`);
+  }
 }
 async function ensureAudio() {
   if(!audioContext) {
@@ -82,28 +105,48 @@ async function loadTrackAudio() {
   return buffer;
 }
 function clearHeld() { held.clear();pads.forEach(p=>p.classList.remove('down')); }
-function stopSource() { if(source) { source.onended=null;try{source.stop();}catch{}source.disconnect();source=null; } }
+function stopSource() {
+  if(source) { source.onended=null;try{source.stop();}catch{}source.disconnect();source=null; }
+  for(const node of countNodes){try{node.stop();}catch{}node.disconnect();}countNodes=[];
+}
+function countIn() {
+  if(session.mode!=='rehearsal')return;
+  const beat=60/track.bpm/session.rate;
+  for(let i=0;i<4;i++) {
+    const when=started+session.headStart-(4-i)*beat;
+    const oscillator=audioContext.createOscillator(),volume=audioContext.createGain();
+    oscillator.frequency.value=i===0?1000:700;
+    volume.gain.setValueAtTime(.12,when);volume.gain.exponentialRampToValueAtTime(.001,when+.05);
+    oscillator.connect(volume);volume.connect(gain);oscillator.start(when);oscillator.stop(when+.06);
+    oscillator.onended=()=>volume.disconnect();countNodes.push(oscillator);
+  }
+}
 async function startRun() {
   const token=++epoch;
   calibrationToken++;
   stopSource();clearHeld();
   selected=$('difficulty').value;
-  run=new RhythmRun(track.charts[selected]);
+  session=makeSession(track,selected,$('phrase').value,Number($('rate').value));
+  run=new RhythmRun(session.notes);
   flash={text:'',color:'#fff',until:0};bursts=[];frozen=0;
   $('results').hidden=true;lastExport=null;
+  $('progress').max=session.duration;
+  $('stage').dataset.session=session.mode;$('stage').dataset.rate=String(session.rate);
   setMode('loading');updateStats();$('stage').dataset.position='0';$('progress').value=0;$('timer').textContent=`00:00 / ${stamp(track.duration)}`;center('Tuning in…','Loading the original soundtrack.');message('Preparing sound.');
   try {
     await ensureAudio();
     const decoded=await loadTrackAudio();
     if(token!==epoch) return;
     source=audioContext.createBufferSource();source.buffer=decoded;source.connect(gain);
+    source.playbackRate.value=session.rate;
     started=audioContext.currentTime+.06;
     source.onended=()=>{ if(token===epoch&&mode==='playing') completeRun(); };
-    source.start(started);
+    source.start(started,session.cueStart,session.audioEnd-session.cueStart);
+    countIn();
     setMode('playing');
     $('center').hidden=true;
     if(window.matchMedia('(max-width: 800px)').matches)$('stage').scrollIntoView({block:'center',behavior:'instant'});
-    message('D F J K / touch pads · P or Escape to pause · Space for Pulse.');
+    message(session.mode==='rehearsal'?`${session.phrase.label} at ${session.rate*100}% · follow four clicks, carry every tail. Each take stops for review.`:'D F J K / touch pads · P or Escape to pause · Space for Pulse.');
   } catch(error) {
     if(token!==epoch)return;
     setMode('error');center('Signal lost.',error.message);message(error.message);
@@ -129,7 +172,7 @@ function hit(lane) {
   if(mode!=='playing')return;
   const time=position();
   // The lead-in permits learning the controls without ghost-input penalties.
-  if(time<track.leadIn-.145)return;
+  if(time<(session?.headStart??track.leadIn)-.145)return;
   const note=run.hit(lane,adjustedTime(time,offset));
   if(!note)return;
   flash={text:note.state==='holding'?'HOLD':note.state==='stray'?'OFF BEAT':note.state.toUpperCase(),
@@ -156,27 +199,49 @@ function updateStats() {
 }
 function completeRun() {
   if(!run||mode!=='playing')return;
-  frozen=track.duration;
-  const stats=run.finish(adjustedTime(track.duration,offset));
+  frozen=session.duration;
+  const stats=run.finish(adjustedTime(session.duration,offset));
   setMode('results');stopSource();clearHeld();
-  center('Last stop.',`${stats.rank} rank · ${stats.accuracy.toFixed(1)}% accuracy`);
+  const rehearsal=session.mode==='rehearsal';
+  center(rehearsal?'Phrase complete.':'Last stop.',`${stats.rank} rank · ${stats.accuracy.toFixed(1)}% accuracy`);
+  $('result-label').textContent=rehearsal?`REHEARSAL / ${session.phrase.label.toUpperCase()} / ${session.rate*100}%`:'LAST STOP / RUN COMPLETE';
   $('rank').textContent=stats.rank;
   for(const name of ['perfect','good','ok','miss'])$(name).textContent=String(stats.counts[name]);
   $('result-summary').textContent=`${stats.score.toLocaleString()} points · best combo ${stats.maxCombo} · ${stats.strays} off-beat inputs · ${stats.pulses} Pulse use(s).`;
   $('timing-result').textContent=stats.meanErrorMs===null?'No scored hits yet. Try Practice and tap with the drum.':`Average timing: ${stats.meanErrorMs>0?'+':''}${stats.meanErrorMs.toFixed(1)} ms (${stats.meanErrorMs>15?'late':stats.meanErrorMs< -15?'early':'close to the beat'}). Input offset used: ${offset} ms. Adjust timing between runs if hits consistently feel displaced.`;
-  let best=stats.score,newBest=false;
-  try {
-    const key=track.id==='midnight-signal'?`tokyo80s-best-v1-${selected}`:`tokyo80s-best-v2-${track.id}-${selected}`;
-    const old=Number(localStorage.getItem(key))||0;
-    best=Math.max(old,stats.score);newBest=stats.score>old;
-    localStorage.setItem(key,String(best));
-  } catch {storeOK=false;}
-  $('best').textContent=storeOK?`${newBest?'New best. ':''}${selected==='practice'?'Practice':'Arcade'} best in this browser: ${best.toLocaleString()}.`:'Browser storage is unavailable; this run still counts and can be exported.';
-  lastExport={game:'Tokyo 80s',version:'0.2.0',track:track.id,chart:selected,offsetMs:offset,...stats,
-    notes:run.notes.map(({id,time,lane,state,error,duration,protected:shield})=>({id,time,lane,state,duration:duration||0,errorMs:error===null?null:Math.round(error*10000)/10,comboProtected:shield}))};
+  if(rehearsal) {
+    const key=`${track.id}/${selected}/${session.phrase.id}/${session.rate}/${offset}`;
+    const comparison=previousTake?.key===key?` Previous identical setup: ${previousTake.accuracy.toFixed(1)}%. Change: ${(stats.accuracy-previousTake.accuracy).toFixed(1)} percentage points.`:'';
+    $('best').textContent=`${session.phrase.label} · ${session.rate*100}% speed. Rehearsals do not update full-run bests.${comparison}`;
+    previousTake={key,accuracy:stats.accuracy};
+  } else {
+    let best=stats.score,newBest=false;
+    try {
+      const key=track.id==='midnight-signal'?`tokyo80s-best-v1-${selected}`:`tokyo80s-best-v2-${track.id}-${selected}`;
+      const old=Number(localStorage.getItem(key))||0;
+      best=Math.max(old,stats.score);newBest=stats.score>old;
+      localStorage.setItem(key,String(best));
+    } catch {storeOK=false;}
+    $('best').textContent=storeOK?`${newBest?'New best. ':''}${selected==='practice'?'Practice':'Arcade'} best in this browser: ${best.toLocaleString()}.`:'Browser storage is unavailable; this run still counts and can be exported.';
+  }
+  const breakdown=phraseResults(track,run.notes);
+  lastExport={game:'Tokyo 80s',version:'0.3.0',track:track.id,chart:selected,offsetMs:offset,...stats,
+    mode:session.mode,playbackRate:session.rate,
+    ...(rehearsal?{phrase:session.phrase,cueStart:session.cueStart,audioEnd:session.audioEnd}:{}),
+    timeUnit:'performance-seconds',phrases:breakdown,
+    notes:run.notes.map(({id,time,lane,state,error,duration,sourceTime,sourceDuration,protected:shield})=>({id,time,lane,state,duration:duration||0,
+      ...(rehearsal?{sourceTime,sourceDuration}:{}),errorMs:error===null?null:Math.round(error*10000)/10,comboProtected:shield}))};
+  $('phrase-results').replaceChildren(...breakdown.map(p=>{
+    const row=document.createElement('div');row.className='phrase-row';
+    const info=document.createElement('p');info.textContent=`${p.label}\n${p.accuracy}% note accuracy · ${p.counts.miss}/${p.notes} missed · ${p.lostHolds} lost holds`;
+    const button=document.createElement('button');button.textContent='Rehearse';button.dataset.phrase=p.id;
+    button.setAttribute('aria-label',`Rehearse ${p.label}`);
+    button.addEventListener('click',()=>{$('phrase').value=p.id;rehearsalInfo();startRun();});row.append(info,button);return row;
+  }));
+  $('replay').textContent=rehearsal?'Repeat phrase':'Ride again';
   const next=tracks[(tracks.indexOf(track)+1)%tracks.length];$('next-stage').textContent=`Play ${next.title}`;
   $('results').hidden=false;$('results').focus({preventScroll:true});
-  message('Run complete. Replay, try the other chart, or save your actual run data.');updateStats();
+  message(rehearsal?'Take complete. Repeat, change speed between takes, or return to a full run.':'Run complete. Review each phrase, rehearse a difficult passage, or save your actual run data.');updateStats();
 }
 function press(lane,id) { if(held.has(id))return;const already=[...held].some(k=>k.endsWith(`:${lane}`));held.add(id);pads[lane].classList.add('down');if(!already)hit(lane); }
 function release(lane,id) {
@@ -210,12 +275,21 @@ document.addEventListener('visibilitychange',()=>{if(document.hidden&&mode==='pl
 $('start').addEventListener('click',startRun);$('restart').addEventListener('click',startRun);$('replay').addEventListener('click',startRun);
 $('pause').addEventListener('click',()=>togglePause());$('pulse').addEventListener('click',pulse);
 $('song').addEventListener('change',()=>chooseTrack($('song').value));
+$('phrase').addEventListener('change',rehearsalInfo);$('rate').addEventListener('change',rehearsalInfo);$('difficulty').addEventListener('change',rehearsalInfo);
+$('full-run').addEventListener('click',()=>{
+  epoch++;stopSource();clearHeld();run=null;session=null;frozen=0;lastExport=null;
+  flash={text:'',color:'#fff',until:0};bursts=[];
+  $('results').hidden=true;$('phrase').value='full';rehearsalInfo();
+  $('progress').max=track.duration;$('stage').dataset.session='full';setMode('ready');
+  $('score').textContent='000000';$('combo').textContent='0';$('accuracy').textContent='—';$('aura').value=0;
+  center('Hit play.',`${track.title} · full track at original tempo.`);message('Full run ready. Choose Start run when you want sound.');
+});
 $('next-stage').addEventListener('click',()=>{const next=tracks[(tracks.indexOf(track)+1)%tracks.length];$('song').value=next.id;chooseTrack(next.id);startRun();});
 $('volume').addEventListener('input',()=>{if(gain)gain.gain.setTargetAtTime(Number($('volume').value)/100,audioContext.currentTime,.02);});
 $('export').addEventListener('click',()=>{
   if(!lastExport)return;
   const url=URL.createObjectURL(new Blob([JSON.stringify(lastExport,null,2)+'\n'],{type:'application/json'}));
-  const a=document.createElement('a');a.href=url;a.download=`${track.id}-${selected}-run.json`;a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);
+  const a=document.createElement('a');a.href=url;a.download=lastExport.mode==='rehearsal'?`${track.id}-${selected}-phrase-${lastExport.phrase.id}-${lastExport.playbackRate*100}.json`:`${track.id}-${selected}-run.json`;a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);
 });
 $('calibrate').addEventListener('click',()=>{$('calibration').showModal();$('offset').value=offset;});
 $('offset').addEventListener('input',()=>{$('offset-value').textContent=`${Number($('offset').value)>0?'+':''}${$('offset').value} ms`;});
@@ -310,16 +384,22 @@ function frame() {
   if(mode==='playing'){
     const misses=run.advance(adjustedTime(time,offset));
     if(misses.length)flash={text:misses.every(n=>n.protected)?'COMBO SAVED':'MISS',color:'#a4a7b7',until:time+.38};
-    if(time<track.leadIn){center(String(Math.max(1,Math.ceil(track.leadIn-time))),'Listen to the clicks. First note lands on the downbeat.');}
+    if(time<session.headStart){
+      const beat=60/track.bpm/session.rate;
+      center(String(Math.max(1,Math.ceil((session.headStart-time)/(session.mode==='rehearsal'?beat:1)))),session.mode==='rehearsal'?'Four clicks. First note lands after the fourth.':'Listen to the clicks. First note lands on the downbeat.');
+    }
     else $('center').hidden=true;
-    const section=[...track.sections].reverse().find(s=>time>=s.time);
-    $('section').textContent=(section?.name||'COUNT IN').toUpperCase();
-    if(time>=track.duration)completeRun();
+    const songTime=session.cueStart+time*session.rate;
+    const section=[...track.sections].reverse().find(s=>songTime>=s.time);
+    $('section').textContent=session.mode==='rehearsal'?`BARS ${Number(session.phrase.id)*4+1}–${Number(session.phrase.id)*4+4} · ${session.rate*100}% SPEED`:(section?.name||'COUNT IN').toUpperCase();
+    if(time>=session.duration)completeRun();
     updateStats();
   }
   $('stage').dataset.position=String(time);
+  $('stage').dataset.songPosition=String(session?session.cueStart+time*session.rate:time);
   $('progress').value=time;
-  $('timer').textContent=`${stamp(Math.min(track?.duration||69,time))} / ${stamp(track?.duration||69)}`;
+  const duration=session?.duration||track?.duration||69;
+  $('timer').textContent=`${stamp(Math.min(duration,time))} / ${stamp(duration)}`;
   pads.forEach((p,lane)=>p.classList.toggle('sustaining',!!run?.notes.some(n=>n.lane===lane&&n.state==='holding')));
   $('judgment').textContent=time<flash.until?flash.text:'';$('judgment').style.color=flash.color;
   draw(time);

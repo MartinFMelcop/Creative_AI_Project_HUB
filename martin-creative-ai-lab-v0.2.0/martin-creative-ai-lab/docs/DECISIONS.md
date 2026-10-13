@@ -961,3 +961,26 @@ with the editor and operate the final release window through X11 separately;
 never present those as a physical controller or independent human playtest.
 Preserve historical sources/other products. GitHub source/player publication is
 authorized; physical output, other OS, accessibility and demand need later evidence.
+
+## ADR-046 — rehearse a musical phrase using the existing audio clock
+
+**Date:** 2026-10-13 (UTC). **Status:** P03 0.3.0.
+
+Choose P03's verified whole-song/original-speed retry gap after comparing native
+distribution, completed strategy/narrative/workflow and missing audience sources.
+Retain the actual JavaScript/Web Audio consumer and original score/master bytes.
+
+Partition heads into four-bar phrases. Include one preceding bar and four click
+nodes; preserve tails crossing the boundary. Convert charts into performance
+seconds so rate changes keep real judgment/offset/release/re-hold windows.
+Slower buffer playback also lowers pitch; do not claim time-stretch quality.
+
+Finish each take for explicit review/repeat rather than unattended looping.
+Separate rehearsal exports/identity and full-run bests. Compare only the preceding
+identical song/chart/phrase/rate/offset; never imply human learning from synthetic
+results. Full results link actual note judgments/lost holds to playable passages.
+Preserve full runs and historical scores. No new shared framework or media assets.
+
+Real source-node/clock and old-artifact checks, full regressions and same-agent
+frames establish integration, not physical listening, independent usability,
+learning benefit or commercial demand. GitHub publication only; Sites unchanged.

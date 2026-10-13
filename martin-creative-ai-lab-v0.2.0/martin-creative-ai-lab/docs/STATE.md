@@ -1,36 +1,33 @@
 # Lab state
 
-**Updated:** 2026-10-13 (UTC). **Seed:** 0.22.0.
-**Current milestone:** P06 Veilbreak 0.4.0 — Linux player and mapped gamepad.
+**Updated:** 2026-10-13 (UTC). **Seed:** 0.23.0.
+**Current milestone:** P03 Tokyo 80s 0.3.0 — targeted musical rehearsal.
 
-[Download/play](../projects/veil-arena/README.md). A six-file Linux x86_64 ZIP
-includes the verified official Godot release runtime, actual exported resources,
-checksums, instructions and engine/asset notices. Extract and run; no editor,
-SDK, .NET or source checkout is required. Desktop/system OpenGL libraries remain
-requirements. Existing source and the current engine-dependent PCK are retained.
+[Play locally](../projects/tokyo80s/README.md). Both original songs/charts now
+support eight four-bar phrases, 75/90/100% playback and a four-click entrance.
+Performance seconds preserve real judgment/offset/release/re-hold windows;
+cross-boundary tails remain complete. Rehearsal supports keyboard/touch,
+pause/restart/cancel, per-take export and same-setup comparison. Full results
+link actual missed-note/lost-hold summaries to rehearsal. Full runs retain
+original tempo/charts and best keys; rehearsals never update those bests.
 
-Left stick/D-pad, three combat buttons and begin/pause/tactics/sound/restart now
-use native input. Deadzone/partial speed, bounded diagonal movement, fresh presses,
-automatic hints and active-pad loss handling preserve keyboard continuity.
-Reconnection never auto-resumes. A keyboard player is not paused by an old pad's
-loss. Costs/contact clocks, opponent rules and existing media remain unchanged.
+[Execution](../evidence/tokyo80s/REHEARSAL_RUN.json) records real Chromium/Web Audio
+and synthetic inputs: all 36 checks pass, including both full songs. Original-
+version comparison, media contracts, repository checks and rendered review pass.
+Slower
+backing lowers pitch; no pitch-preserving stretch is claimed. Independent
+learning/enjoyment, physical listening/latency, other browsers and commercial
+interest remain unverified. Same-agent screenshots are not human approval.
 
-[Execution](../evidence/veil-arena/RELEASE_RUN.json): 30 native controller checks,
-116 checks on the exact exported PCK, complete two-phase synthetic pad/keyboard
-victories, package/digest checks and a rejected real GDScript import failure.
-The final release ELF window was operated by X11 keyboard events outside checkout:
-title/combat/pause/tactics, actual idle defeat and restart. Real OpenGL frames
-reviewed. Release templates lack the test-script executor: PCK checks use the
-editor, while release-window input is separate evidence. Physical controller and
-audio output, independent enjoyment/accessibility, other OS and demand are open.
+Started clean at `493a311`, matching fetched main; GitHub push permitted.
+Compared P05 distribution, P01/P10 completed systems, P04 reader needs and P11
+handoffs. A verified P03 whole-song/original-tempo retry limitation makes a bounded
+learning workflow stronger than repeating native packaging or adding speculative
+story/service scope. Existing JavaScript/Web Audio directly serves this musical
+consumer; standard Godot/.NET remain available but do not resolve that gap.
 
-Started clean at `a9af690`, matching fetched main; push permission verified.
-Compared completed P10/P01/P11 work, P03 feedback needs, P05's .NET packaging and
-P06's required external engine. Native delivery with input removes a demonstrable
-access barrier; standard Godot/GDScript fits its existing physics/audio consumer.
-Official templates were available, downloaded and verified; Unity was not located.
-No new art/audio, shared framework, legacy recovery or Sites deployment. Archive
-and other product bytes remain preserved. Main publication is authorized.
-
-Next compare real Linux/controller use with P01 strategy, P10 reader/player
-choices, P03 listening and P11 team handoffs before selecting another milestone.
+Original scores/masters/Vorbis, P08 records, other products and historical sources
+remain unchanged. No shared framework, new music, external users, Sites deployment
+or commercial clearance. Main publication is authorized. Next compare real phrase
+practice with native play, independent readers and collaborative handoffs before
+selecting the next workstream.

@@ -1,0 +1,200 @@
+{
+  "project_id": "P03",
+  "version": "0.3.0",
+  "seed_version": "0.23.0",
+  "recorded_at": "2026-10-13T20:11:45.917353+00:00",
+  "baseline_commit": "493a3118d8575ac0081158251044dbb0681dbba0",
+  "contribution": "Martin portfolio/main authorization; Codex implementation and rendered review. Declared synthetic browser keyboard/touch input; no human play/listening or independent learning assessment.",
+  "portfolio_decision": "Inspect eleven project lines and twelve commits. Select the verified whole-song/original-tempo P03 retry gap over another native distribution cycle, completed P01/P10/P11 systems and literary expansion without readers. P02 candidate context and P09 real case sources remain missing.",
+  "technology_decision": "Reuse JavaScript/Web Audio and original media. Buffer offsets/rates plus performance-time chart conversion preserve real judgment/offset/release/re-hold behavior; no engine migration, dependencies or shared framework.",
+  "environment": {
+    "system": "Linux-6.18.44-x86_64-with-glibc2.41",
+    "machine": "x86_64",
+    "node": "24.19.0",
+    "python": "3.12.14",
+    "chromium": "154.0.8037.57 (Debian 13)",
+    "playwright_core": "1.64.0",
+    "audio": "Real AudioContext, decoded original Vorbis, source playback and scheduled oscillator nodes; physical output unverified."
+  },
+  "before": {
+    "version": "0.2.0",
+    "sourceCommit": "493a3118d8575ac0081158251044dbb0681dbba0",
+    "phraseControls": 0,
+    "rateControls": 0,
+    "progressMax": "84.5",
+    "realAudio": {
+      "args": [
+        0.2602721088435374
+      ],
+      "rate": 1,
+      "bufferDuration": 84.5
+    }
+  },
+  "after": "Eight four-bar phrases in both songs/charts, 75/90/100% speed, preceding musical bar/four clicks, complete boundary tails, actual result-to-rehearsal links, repeated-take comparison and source/performance JSON. Rehearsal never writes full-run bests; full runs remain original.",
+  "executed": [
+    {
+      "command": "node /workspace/work/tokyo-rehearsal/baseline-probe.mjs",
+      "result": "Actual isolated 0.2.0 browser: Practice Rain Circuit has no phrase/rate controls and plays the full 84.5s decoded buffer at rate 1. Source extracted from baseline Git object; no old files replaced."
+    },
+    {
+      "command": "CHROMIUM_PATH=/usr/bin/chromium RHYTHM_SCREENSHOT_DIR=/workspace/work/tokyo-rehearsal/frames node --test projects/tokyo80s/tests/*.test.mjs",
+      "result": "Final 36/36 pass; 0 failed/cancelled/skipped. 23 domain contracts and 13 real browser workflows. Both full Arcade songs complete; new 75% pause/regrab, 75/90% bounded attempts/repeats/exports, 100% result shortcut, 90% narrow touch/restart/cancel and unchanged calibration/failure/focus paths.",
+      "duration_ms": 256581.003494,
+      "test_log_sha256": "0b4ed3cb6795e7f277207f268e12f8fe20cfb7026d55bf4753aa3e64004f28b2"
+    },
+    {
+      "command": "node --check projects/tokyo80s/dist/app.js",
+      "result": "Pass"
+    },
+    {
+      "command": "python3 projects/tokyo80s/tools/check_audio.py",
+      "result": "Both original masters/OGG/score hashes, PCM non-clipping, attacks/sustains and ending contracts pass; no audio regenerated."
+    },
+    {
+      "command": "python3 tools/validate_repo.py",
+      "result": "Pass: 11 projects, 14 transfers, 6 assets, 2 legacy sources and 264 local file links. Documentary structure only."
+    },
+    {
+      "command": "python3 tools/test_validate_repo.py",
+      "result": "11/11 pass"
+    },
+    {
+      "command": "python3 tools/test_check_manifest.py",
+      "result": "11/11 omission/tampering regressions pass"
+    }
+  ],
+  "rehearsal_playback_observed": {
+    "source": {
+      "args": [
+        0.23124716553287983,
+        30,
+        12.725000000000001
+      ],
+      "rate": 0.75,
+      "bufferDuration": 84.5
+    },
+    "clicks": [
+      0.23124716553288005,
+      1.0645804988662135,
+      1.8979138321995468,
+      2.73124716553288
+    ],
+    "elapsedAudioSeconds": 17.021179138321994
+  },
+  "same_setup_attempts": [
+    {
+      "setup": "Rain Circuit / Arcade / bars 13\u201316 / 75% / offset 0",
+      "score": 26000,
+      "accuracy": 95.83,
+      "counts": {
+        "perfect": 23,
+        "good": 0,
+        "ok": 0,
+        "miss": 1,
+        "pending": 0
+      },
+      "maxCombo": 22,
+      "meanErrorMs": 9.3,
+      "lost_holds": 1
+    },
+    {
+      "setup": "Rain Circuit / Arcade / bars 13\u201316 / 75% / offset 0",
+      "score": 29000,
+      "accuracy": 100,
+      "counts": {
+        "perfect": 24,
+        "good": 0,
+        "ok": 0,
+        "miss": 0,
+        "pending": 0
+      },
+      "maxCombo": 24,
+      "meanErrorMs": 7.4,
+      "lost_holds": 0
+    }
+  ],
+  "attempt_scope": "First controller deliberately omits one hold head; second carries all heads/tails on the actual clock. Different synthetic inputs prove recorded consequences and comparison, not human improvement. Full-song scores and existing best keys remain separate.",
+  "complete_full_arcade_performances": [
+    {
+      "track": "midnight-signal",
+      "chart": "arcade",
+      "mode": "full",
+      "playbackRate": 1,
+      "score": 827000,
+      "accuracy": 100,
+      "counts": {
+        "perfect": 236,
+        "good": 0,
+        "ok": 0,
+        "miss": 0,
+        "pending": 0
+      },
+      "maxCombo": 236,
+      "meanErrorMs": 15.3
+    },
+    {
+      "track": "rain-circuit",
+      "chart": "arcade",
+      "mode": "full",
+      "playbackRate": 1,
+      "score": 1027000,
+      "accuracy": 100,
+      "counts": {
+        "perfect": 286,
+        "good": 0,
+        "ok": 0,
+        "miss": 0,
+        "pending": 0
+      },
+      "maxCombo": 286,
+      "meanErrorMs": 8
+    }
+  ],
+  "preservation": {
+    "baseline": "493a3118d8575ac0081158251044dbb0681dbba0",
+    "files_compared": 232,
+    "all_equal": true,
+    "tokyo_unchanged": [
+      "projects/tokyo80s/dist/assets/midnight-signal.ogg",
+      "projects/tokyo80s/dist/assets/rain-circuit.ogg",
+      "projects/tokyo80s/dist/core.js",
+      "projects/tokyo80s/dist/rain-circuit.json",
+      "projects/tokyo80s/dist/setlist.json",
+      "projects/tokyo80s/dist/track.json",
+      "projects/tokyo80s/media/midnight-signal.wav",
+      "projects/tokyo80s/media/provenance.json",
+      "projects/tokyo80s/media/rain-circuit.wav",
+      "projects/tokyo80s/media/rain-provenance.json",
+      "projects/tokyo80s/tools/check_audio.py",
+      "projects/tokyo80s/tools/render_rain.py",
+      "projects/tokyo80s/tools/render_track.py"
+    ]
+  },
+  "creative_assessment": {
+    "classification": "Reasoned assessment by implementing agent",
+    "scope": "Raw desktop/390px frames inspected. Phrase-ready/count/selected bars/speed/results and explicit full-run return are readable within the existing visual identity. Preparation text was corrected after first frame review. No independent accessibility, audience or listening approval."
+  },
+  "limits": [
+    "Slower buffer playback lowers pitch. Pitch-preserving stretching is not implemented or claimed.",
+    "No physical speaker/headphone/touch/key latency, independent musical quality/learning/enjoyment or assistive technology validation.",
+    "Chromium/Linux execution only; Safari/Firefox and other hardware remain unverified.",
+    "Prior take comparison is local memory, limited to identical song/chart/phrase/rate/offset. No run importer or competitive anti-cheat.",
+    "No new music/media ownership or commercial demand/clearance claim. GitHub publication only; private Sites was not redeployed."
+  ],
+  "sha256": {
+    "projects/tokyo80s/dist/app.js": "49a533ab0a0903d2124eb6a05e115f76aff3b5e0444e648dd4f7f5291e36922a",
+    "projects/tokyo80s/dist/core.js": "153e9427a6948b727f797c5766cdcba4559f9821fffcaa7c79516c75bc766184",
+    "projects/tokyo80s/dist/rehearsal.js": "2fefed499e1d41c15c37d441158d92354f1c11d7698b68546cdc5dd25be86ad7",
+    "projects/tokyo80s/dist/index.html": "44948970a43a0aae55430026c722040b2f49043d63905c0bc81c0347c2ef3eb8",
+    "projects/tokyo80s/dist/style.css": "51095718977f87c4ea585926d2df09ea8af5c82b5d996ad2183569b4276c4995",
+    "projects/tokyo80s/dist/track.json": "f73646df2b7d6601f1f654d855aaecd114b7172f2ef5c55852dfd898ec0b59b4",
+    "projects/tokyo80s/dist/rain-circuit.json": "c19f7d819ef3dda530b33b06199cf7c374e243c253112d7104943d73348d6771",
+    "projects/tokyo80s/dist/setlist.json": "c4bcd9df9b7c3404eba399d331ec0b4df0c10a56c8bd6e6a3770458742477b98",
+    "projects/tokyo80s/tests/browser.test.mjs": "b456e6667f4fcf0ea0cf260ec1f5a93f073b3af38e5dce881ea93846f8034ab5",
+    "projects/tokyo80s/tests/setlist.test.mjs": "340ce957950b98299da412b22c015db43eb2742ae1327ff21b2ce1af83b4632c",
+    "projects/tokyo80s/tests/rehearsal-browser.test.mjs": "7a68084105b050453ec91a42a4ebf0d6b708f7570f61b8846d9d0c45c8d1c80e",
+    "projects/tokyo80s/tests/rehearsal.test.mjs": "958335cc5d88420563db93c55efff2636b9463c8728af080f06a4ca8d5a1665d",
+    "evidence/tokyo80s/rehearsal-results.png": "64b7c1ac4ad3c30882231b536f3de83725cc4183a2eaddd5341a268a342d772a",
+    "evidence/tokyo80s/rehearsal-mobile.png": "290fb296b735fd5a4f99a759f5406177cab1627ba973f6577d24271b903b2880"
+  }
+}

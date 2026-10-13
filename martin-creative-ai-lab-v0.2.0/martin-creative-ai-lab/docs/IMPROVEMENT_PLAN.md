@@ -1,18 +1,22 @@
-# Current milestone — a playable Linux distribution
+# Current milestone — targeted musical rehearsal
 
-Deliver the existing P06 trial as a verified official-template Linux player,
-with standard mapped-pad input, readable prompts and safe explicit resume.
-Preserve keyboard controls, combat clocks/rules/media and source/PCK workflows.
-Package real ELF/PCK, checksum, engine notices and asset provenance only.
+P03 0.3.0 connects full-run phrase summaries to a playable four-bar rehearsal.
+Select either original song/chart and 75/90/100% backing, hear a scheduled
+four-click entrance, carry complete tails, pause/re-hold, repeat/restart or return
+to the full track. Review actual missed heads/holds, compare identical setups
+and export source/performance identity. Rehearsals never update full-run bests.
 
-Acceptance executed: official archive/template digest, import-error rejection,
-exact bundle/permissions, native pad/keyboard comparison and complete fights,
-exported PCK combat/audio/motion/input, real release window keyboard workflow
-and final frames outside source with no editor/SDK in PATH. CI boots delivered
-and rebuilt players and runs real source/resource checks. Validate records and
-manifest, then normal main publication. [Execution](../evidence/veil-arena/RELEASE_RUN.json).
-Physical pad/listening, independent play and other OS remain future evidence;
-compare those with other portfolio opportunities before choosing more content.
+Acceptance: execute original 0.2.0 comparison and real Chromium decoded audio,
+source offsets/rates/count-in, keyboard/touch, pause/resume, bounded attempts,
+repeat comparison, export and cancellation. Run both full original performances
+and existing timing/calibration/failure regressions; inspect desktop/390px frames.
+Verify all source heads partition without tail truncation across both charts/rates;
+check original media contracts, repository/manifest and normal main publication.
+[Execution](../evidence/tokyo80s/REHEARSAL_RUN.json) records actual results.
+
+Slower playback lowers pitch. Human learning/quality, physical listening/latency,
+other browsers and commercial interest require later evidence. Reassess these
+against native play, readers and trusted team handoffs before another milestone.
 
 # Previous milestone — native Eclipse Fair board
 

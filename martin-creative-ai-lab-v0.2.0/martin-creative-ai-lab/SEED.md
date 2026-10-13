@@ -1,10 +1,10 @@
 # SEED — Martin Creative AI Lab
 
-**Version:** 0.22.0
+**Version:** 0.23.0
 **Data-base:** 10 de outubro de 2026  
 **Autor e responsável pelo portfólio:** Martin Melcop Neto  
 **Working language:** English for new documentation, plans, code comments, UI, and reports. Preserve original creative titles and historical source languages.
-**Current state:** P06 Veilbreak 0.4.0 delivers a verified standalone Linux player and mapped-pad workflow. Real export, exact resource tests and release-window execution remove the external-editor barrier. Physical hardware, independent play and commercial validation remain open.
+**Current state:** P03 Tokyo 80s 0.3.0 connects full-run errors to targeted four-bar musical rehearsal at 75/90/100%. Real Web Audio, complete tails and separate bests support a bounded learning workflow; independent learning/listening and commercial validation remain open.
 
 > Construir um laboratório autoral em Git que transforma ideias, obras e experimentos em produtos pequenos, sistemas reutilizáveis e evidências técnicas verificáveis. A IA participa da criação e execução; Martin desenvolve sua capacidade de especificar, compreender, selecionar, corrigir, validar e explicar os resultados.
 
@@ -44,16 +44,16 @@ Se apenas este arquivo estiver disponível, ele é suficiente para iniciar a Fas
 
 | Field | Current evidence |
 |---|---|
-| Repository | MartinFMelcop/Creative_AI_Project_HUB; actual Git root `/workspace/Creative_AI_Project_HUB`; lab remains nested in its original package directory |
-| Preserved sources | 175 Rave Master texts and 3 WebSocket files; unchanged ZIP and inventory; not a complete RMXP backup |
-| Primary workstream | P06 standalone Linux delivery and mapped-pad native workflow |
-| Runtime execution | Standard Godot 4.6.3 official release template / GDScript; actual ELF window and exported PCK outside source |
-| Current verification | Official digests, 30 pad checks, 116 exported-PCK checks, real release X11 workflow and frames; `evidence/veil-arena/RELEASE_RUN.json` |
-| Historical verification | Prior native/music/story/workspace evidence retained; no inherited human approval |
-| Next action | Compare physical Linux/controller use with P01 strategy, P10 reader/player choices, P03 listening and P11 handoffs |
-| Other seeds | P01 0.3.0, P03 0.2.0, P04 0.1.0, P05 0.1.0, P07 0.2.0, P08 0.3.0, P10 0.5.0, P11 0.4.0 and P02 0.2.1 preserved |
-| Transfer / shared status | No cross-project framework or transfer promoted; historical archive unchanged |
-| Portfolio / attribution | Clean `a9af690` matched fetched main; push permission verified. Martin authorizes implementation/main; Codex development/review and synthetic native/X11 input. No independent human approval or Sites deployment |
+| Repository | MartinFMelcop/Creative_AI_Project_HUB; Git root `/workspace/Creative_AI_Project_HUB`; lab retains original wrapper |
+| Preserved sources | 175 Rave Master texts and 3 WebSocket files; unchanged ZIP/inventory; not a full RMXP backup |
+| Current workstream | P03 targeted musical rehearsal; eight four-bar phrases in both original songs/charts |
+| Runtime execution | Existing JavaScript/Web Audio; real decoded buffer offsets/rates/clicks and Chromium input |
+| Current verification | Original-artifact comparison, rehearsal and full-run regressions, source/media contracts and rendered review; `evidence/tokyo80s/REHEARSAL_RUN.json` |
+| Limitations | Slower backing lowers pitch; no independent learning/listening, hardware latency, other-browser or commercial validation |
+| Next action | Compare unassisted musical rehearsal with native play, independent readers and trusted team handoffs |
+| Other versions | P01 0.3.0, P04 0.1.0, P05 0.1.0, P06 0.4.0, P07 0.2.0, P08 0.3.0, P10 0.5.0, P11 0.4.0 and P02 0.2.1 preserved |
+| Transfer / assets | No shared framework/transfer/asset promotion; original scores/masters/Vorbis and archive unchanged |
+| Attribution / publication | Clean `493a311` matched fetched main; push permission verified. Martin authorizes implementation/main; Codex development and synthetic execution; no human approval or Sites redeployment |
 
 Registry evidence paths must resolve to existing files inside the lab; working
 paths must be directories and legacy-source IDs must exist. This documentary
@@ -309,13 +309,13 @@ cleanup is not isolation; escaped sessions remain outside its tested contract.
 
 ### P03 — Tokyo 80s
 
-[Tokyo 80s Night Shift](projects/tokyo80s/README.md) 0.2.0 now has two original
-tracks. Rain Circuit adds 84.5s at 96 BPM with performed hold tails, Practice/Arcade,
-track transitions and per-song bests while preserving Midnight Signal media and
-old scores. Tail scoring, early release, pause/re-hold and chronological misses
-are connected to actual musical envelopes and real browser audio-clock runs.
-No engine migration, recovered ZIP or human musical/play approval is claimed.
-
+[Tokyo 80s Night Shift](projects/tokyo80s/README.md) 0.3.0 keeps Midnight Signal
+and Rain Circuit, their original scores/masters, full runs and bests. It adds
+four-bar musical rehearsal with 75/90/100% backing and a four-click entrance.
+Actual result phrases link to playable retries; complete tails, real-time
+judgment/offset/pause windows, separate exports and identical-setup comparison
+support focused practice. Slower backing lowers pitch; no time stretching,
+engine migration, recovered ZIP or human learning/play approval is claimed.
 
 **Núcleo histórico:** Tóquio dos anos 1980, city pop/wave, arcade, dança como luta, aura e poderes evocando stands/personas. Protagonista associado a top score e topete azul-noite. O projeto anterior recebeu o nome `TOKYO80s_RhythmGame_v0.0.1.zip`; seu runtime não foi inspecionado aqui.
 

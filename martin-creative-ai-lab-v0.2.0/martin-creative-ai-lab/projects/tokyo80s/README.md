@@ -1,6 +1,6 @@
 # P03 — Tokyo 80s: Night Shift
 
-Version **0.2.0**. Two complete original stages with a selectable setlist.
+Version **0.3.0**. Two complete original stages with a selectable setlist.
 Midnight Signal preserves its original audio/charts and best-score keys; Rain
 Circuit introduces musical sustain interaction. The original 0.1.0 stage is an
 original 69-second
@@ -8,6 +8,38 @@ instrumental, four lanes, two score-aligned charts, judgments, combo/aura, perso
 timing calibration, pause, results, local best and replay. P08 supplies the real
 rendered soundtrack, not a planned cue or external recording. This is a new
 implementation from the Tokyo 80s seed; the historical ZIP was not recovered.
+
+## Musical rehearsal
+
+![Actual phrase result and identical-setup comparison](../../evidence/tokyo80s/rehearsal-results.png)
+
+Choose a four-bar phrase in **PLAY**, choose **75%, 90% or 100% SPEED**, then
+**Start rehearsal**. Both songs/charts have eight phrases. One bar of the actual
+preceding soundtrack and four scheduled clicks lead into the selected notes.
+The original backing uses Web Audio playback rate: slower speed also lowers
+pitch; pitch-preserving time stretching is not implemented. The stage identifies
+bars/speed. Each take stops for review rather than starting an unattended loop.
+
+Performance-time conversion keeps the ±45/95/145 ms judgments, personal offset,
+release grace and pause/re-hold behavior in real seconds. Note heads belong to
+one phrase; sustained tails crossing its boundary finish without truncation.
+Keyboard/touch, pause, restart and **Return to full run** work within rehearsal.
+Aborting stops source/click nodes and requires an explicit start for more sound.
+
+Full-run results show actual note accuracy, missed notes and lost holds for each
+phrase, with **Rehearse** shortcuts. Phrase note accuracy excludes off-beat inputs;
+whole-run accuracy still includes them. Lost holds include missed heads and
+broken tails. Repeating the same song/chart/phrase/speed/offset compares the last
+two completed takes in memory. It is a local observation, not evidence of a
+person's learning. Different setups are not compared.
+
+Rehearsals never write full-track bests. Returning to a full run restores original
+tempo/charts and the existing best keys. **Save run JSON** identifies mode/rate,
+phrase bounds, source audio offset and note source times/durations alongside
+performance seconds. Full-run exports retain their previous note times/durations
+at rate 1, with additive mode and phrase summaries. No run importer is added.
+[Execution](../../evidence/tokyo80s/REHEARSAL_RUN.json) separates real playback,
+synthetic input, original-version comparison and implementing-agent visual review.
 
 ## Rain Circuit
 
@@ -80,7 +112,7 @@ Apply between runs. This is a personal calibration, not a measured device latenc
 Closing the dialog cancels remaining sound nodes. Volume stays adjustable in play.
 
 A private Sites identity is retained in [.openai/hosting.json](.openai/hosting.json).
-This 0.2.0 execution updates GitHub only; the retained Site was not redeployed.
+This 0.3.0 execution updates GitHub only; the retained Site was not redeployed.
 Its deployment status is reported separately; an ID is not publication
 proof. GitHub remains the maintained source. The Site publishes only `dist/`
 and its hosting manifest, with owner-only access and no accounts/connector data.
@@ -116,7 +148,7 @@ Do not regenerate assets as part of normal gameplay or QA.
 Timing/scoring and audio contracts need Node/Python, without game dependencies:
 
 ```bash
-node --test projects/tokyo80s/tests/core.test.mjs
+node --test projects/tokyo80s/tests/core.test.mjs projects/tokyo80s/tests/holds.test.mjs projects/tokyo80s/tests/rehearsal.test.mjs
 python3 projects/tokyo80s/tools/check_audio.py
 ```
 
@@ -125,7 +157,7 @@ is a test dependency, not a shared gameplay module or P11 runtime change:
 
 ```bash
 npm ci --prefix projects/realtime-integration-lab
-CHROMIUM_PATH=/usr/bin/chromium node --test projects/tokyo80s/tests/browser.test.mjs
+CHROMIUM_PATH=/usr/bin/chromium node --test projects/tokyo80s/tests/browser.test.mjs projects/tokyo80s/tests/setlist.test.mjs projects/tokyo80s/tests/rehearsal-browser.test.mjs
 ```
 
 Choose an installed matching Chromium path. The browser suite executes the real
@@ -139,17 +171,14 @@ actual outcomes and boundaries. Existing CI includes these checks.
 
 This is a playable prototype, not a released commercial rhythm game. Human
 play on real keyboard/touch/audio hardware, speaker/headphone latency, enjoyment,
-accessibility, Safari/Firefox and musical quality remain unverified. There are
-no hold notes, career progression, licensed catalogue, global leaderboard or
+accessibility, Safari/Firefox and musical quality remain unverified. There is
+no career progression, licensed catalogue, global leaderboard or
 competitive anti-cheat. The caller controls local score data.
-
-Next: compare unassisted Practice/Arcade play and listening across both stages.
-Use that feedback to revise note density, sustained-note readability and arrangement.
-Preserve the completed P10 operation and independent P02/P11 review gates.
 
 Rain Circuit rebuilding uses `python3 projects/tokyo80s/tools/render_rain.py`; the original producer
 remains unchanged. Decoded Vorbis measures -14.3 LUFS and -2.9 dBFS true peak.
 The new stage's PCM master has no clipped samples and approaches silence at its
 ending. These are executed signal measurements, not listening approval.
-Next compare human responses to both arrangements, sustained-note readability
-and pause/re-hold before adding more songs or an engine migration.
+Next compare unassisted phrase selection, slowed backing and repeat/return behavior
+on real hardware alongside both original arrangements. Independent musical
+quality, learning benefit, other browsers and commercial interest remain open.

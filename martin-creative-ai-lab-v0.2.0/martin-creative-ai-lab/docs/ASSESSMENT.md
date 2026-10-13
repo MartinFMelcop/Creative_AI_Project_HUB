@@ -1,28 +1,29 @@
-# Current assessment — put a native trial in the player's hands
+# Current assessment — rehearse the passage that needs work
 
-Clean `a9af690` matches fetched main; root/lab instructions, current registry/seed,
-recent decisions/evolution and twelve commits inspected. Actual P05/P06 build,
-input/media/export sources and P03 gameplay are available. Recent work spans
-native games, collaboration, music and P10 narrative; no automatic continuation.
+Clean `493a311` matches fetched main; local branch `work`, push permitted.
+Instructions, state/registry/seed, recent decisions and twelve commits inspected.
+Recent development spans P06/P10/P01/P11/P05; repeated native work makes a distinct
+musical opportunity worth investigation, without requiring rotation.
 
 | Opportunity | Evidence and decision |
 |---|---|
-| P06 player access | Existing art/audio/animated encounter requires an external engine and has keyboard-only input. Verified standalone Linux delivery plus mapped-pad flow makes it easier to demonstrate and evaluate; selected. |
-| P05 distribution | Real C# campaign exists but requires Godot .NET/runtime. Shipping it is valuable; additional runtime/export validation costs exceed the standard P06 trial's coherent first delivery. |
-| P01 / P10 | Strategic rivals and dramatic handover just shipped. Independent choices/comprehension should guide more rules or scenes. |
-| P03 / P04 / P11 | Actual music/prose/workflows exist. Listening/readers/team use should inform content and service needs; no external feedback is invented. |
-| P02 / P09 | Independent candidate context and real professional sources remain missing. Avoid another calibration loop or fictional cases. |
+| P03 targeted rehearsal | Actual Practice only reduces density; audio still runs the entire song at original speed. Phrase selection, slow backing and result-to-retry close a verified learning-workflow gap; selected. |
+| P05 distribution | C# native campaign exists but needs engine/runtime. Valuable access milestone, though P06 just delivered that category; compare with deeper tactical/art work after play. |
+| P01 / P10 / P11 | Rival planning, dramatic handover and assigned work are functional. Unassisted strategy/reading/team handoffs would guide the next substantial capability. |
+| P04 / P07 / P08 | Actual story/art/music exist. Reader/artist/listener response is more useful than automatic content expansion; no outside feedback is invented. |
+| P02 / P09 | Independent evaluation context and real case sources remain absent. Avoid calibration repetition or fictional professional facts. |
 
-Use existing Godot/GDScript. Standard 4.6.3 executes; official release templates
-are available and verified. No browser substitute, .NET rewrite or technology quota.
-The actual standard Linux release runtime has lower setup burden than an editor
-project. Known GL/system libraries remain requirements; other OS need execution.
+Retain JavaScript/Web Audio for the existing static rhythm consumer. Rate-adjusted
+performance time preserves physical judgment windows; actual buffer offsets give
+musical context, complete tails and four scheduled entrance clicks. No new player,
+engine migration, source regeneration, npm dependency or generic timing framework.
 
-Before: old 0.3.0 native events cannot begin/move; PCK needs an engine. After:
-same events begin/move, the controller completes both phases and a real release
-window works outside source. Packaging/no install and input are verified; physical
-hardware, unassisted quality and commercial usefulness need independent evidence.
-[Execution](../evidence/veil-arena/RELEASE_RUN.json) separates those boundaries.
+Before: actual 0.2.0 Practice still plays 84.5s at rate 1, with no phrase/rate controls.
+After: the chosen Rain Circuit passage begins after one bar and plays a bounded
+take at 75/90/100%, with actual errors, repeat comparison and a return to original
+full-run scoring. Lower pitch is disclosed. Learning/appeal remain hypotheses;
+[execution](../evidence/tokyo80s/REHEARSAL_RUN.json) separates technical evidence,
+implementing-agent rendered judgment and missing human/commercial validation.
 
 # Previous assessment — a consequence that people can answer
 
