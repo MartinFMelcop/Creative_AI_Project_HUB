@@ -1,0 +1,51 @@
+{
+  "project": "P06",
+  "date_utc": "2026-10-13",
+  "baseline_commit": "bf0a88ce5e173904a69c970ef7812f26a680df44",
+  "trigger": "CI run 38335958162, native-arena: rebuilt PCK alignment observation failed while source/delivered cases passed.",
+  "engine": "Godot 4.6.3.stable.official.7d41c59c4, Debian Linux x86_64, headless real AudioServer mixer",
+  "diagnosis": "Separate live playback reads can span a mixer update; compare one driver-locked instant. The 15 ms alignment limit remains unchanged.",
+  "declared_probe": {
+    "main_thread_delay_ms": 100,
+    "observed": {
+      "atomic": [
+        0.374421775341034,
+        0.374421775341034
+      ],
+      "atomic_delta": 0.0,
+      "delayed_reads_delta": 0.0928798019886017
+    },
+    "interpretation": "A false difference is reproduced on aligned streams by reading at different times; this does not establish physical device latency."
+  },
+  "engine_source": "https://github.com/godotengine/godot/blob/4.6.3-stable/servers/audio/audio_server.cpp",
+  "executed": {
+    "source": {
+      "audio_frames": 233472,
+      "checks": 26,
+      "display": "headless",
+      "failures": [],
+      "measured_peak": 0.841408967971802
+    },
+    "delivered": {
+      "audio_frames": 233472,
+      "checks": 26,
+      "display": "headless",
+      "failures": [],
+      "measured_peak": 0.841408967971802
+    },
+    "rebuilt": {
+      "audio_frames": 233472,
+      "checks": 26,
+      "display": "headless",
+      "failures": [],
+      "measured_peak": 0.841408967971802
+    }
+  },
+  "fault_detection": "A real 100 ms seek is detected above 50 ms; reset restores alignment below the original 15 ms limit. All original media/lifecycle/limiter checks remain.",
+  "scope": "Test observation only; game rules, sound implementation, assets and delivered PCK remain unchanged. No physical listening or independent review.",
+  "hashes": {
+    "projects/veil-arena/tests/presentation.gd": "e266a5c86d1e1ba2a02c74220bb043dfee3738563dd3e0de83416a1763f657bf",
+    "projects/veil-arena/sound.gd": "de2c9a344a73e5675eea03c784a169803b62dcea15ee5c6e50d9741c0870750a",
+    "projects/veil-arena/dist/veilbreak.pck": "a839a70af36463696f5d9fec872a72f4a9394cc9bc4d9080a8328595f678de1b"
+  }
+}

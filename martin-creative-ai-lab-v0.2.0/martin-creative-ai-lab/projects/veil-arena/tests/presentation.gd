@@ -29,6 +29,15 @@ func energy(samples: PackedVector2Array) -> float:
 	for sample in samples: result += sample.length_squared()
 	return sqrt(result/maxi(1,samples.size()))
 
+func stem_skew() -> float:
+	# These getters expose live playback positions. Compare one mixer instant;
+	# an audio block between two independent reads is not actual stem drift.
+	AudioServer.lock()
+	var first: float = arena.sound.tracks[0].get_playback_position()
+	var second: float = arena.sound.tracks[1].get_playback_position()
+	AudioServer.unlock()
+	return absf(first-second)
+
 func screenshot(name: String) -> void:
 	var folder := OS.get_environment("VEIL_CAPTURE_DIR")
 	if folder.is_empty() or DisplayServer.get_name()=="headless": return
@@ -50,7 +59,14 @@ func run() -> void:
 	await wait_audio(.3) # Prime the real backend rather than assuming zero latency.
 	var music := await wait_audio()
 	check(music.size()>100 && energy(music)>.001,"The AudioServer produces actual non-silent music samples")
-	check(absf(arena.sound.tracks[0].get_playback_position()-arena.sound.tracks[1].get_playback_position())<.015,"Both stems advance on the same audio transport")
+	check(stem_skew()<.015,"Both stems advance on the same audio transport")
+	# A declared real seek must still expose misalignment; never relax the limit.
+	arena.sound.tracks[1].seek(arena.sound.tracks[0].get_playback_position()+.1)
+	await wait_audio(.2)
+	check(stem_skew()>.05,"Atomic sampling still detects a real shifted stream")
+	arena.sound.reset()
+	await wait_audio(.25)
+	check(stem_skew()<.015,"Reset restores actual alignment after the seek fixture")
 	# Native input toggles sound without altering the current encounter.
 	Input.action_press("mute")
 	await physics_frame
@@ -113,7 +129,7 @@ func run() -> void:
 	await wait_audio(1.25)
 	check(arena.phase==2 && arena.sound.events.has("phase") && arena.sound.target_mix==1 && arena.sound.mix>.98,"A real phase transition completes the adaptive crossfade")
 	await screenshot("fracture-art")
-	check(absf(arena.sound.tracks[0].get_playback_position()-arena.sound.tracks[1].get_playback_position())<.015,"Phase transition preserves stem alignment")
+	check(stem_skew()<.015,"Phase transition preserves stem alignment")
 	# Deliberate gain stress fixture exercises the limiter, not just quiet files.
 	arena.sound.limiter.pre_gain_db = 12
 	for i in 8: arena.sound.cue("wave")

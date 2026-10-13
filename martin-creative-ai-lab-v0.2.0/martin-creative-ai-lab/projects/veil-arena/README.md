@@ -145,10 +145,13 @@ the current reactive counter/seal controller completes 0.3.0 in 55.58 simulated 
 not human balance or difficulty suitability. One comparison does
 not establish absence of dominant strategies.
 
-Twenty-four additional native checks decode actual music resources, exercise
+Twenty-six additional native checks decode actual music resources, exercise
 legal-input cues, mouse/keyboard mute, pause/resume and restart, measure actual
 AudioServer samples with music and an isolated cue, preserve stem alignment and
-stress the limiter with eight voices/+12dB gain. Dummy audio produces a measured
+stress the limiter with eight voices/+12dB gain. Alignment samples both clocks
+at one driver-locked instant; a real seek verifies that drift is still detected.
+[Clock followup](../../evidence/veil-arena/AUDIO_CLOCK_RUN.json) records the CI
+observation correction. Dummy audio produces a measured
 mix without a physical output device. This is technical audio verification,
 not a listening review. OpenGL captures support Codex's visual assessment of
 title, warnings, open core, echo, tactics, results and top/bottom wall framing.

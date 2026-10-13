@@ -35,3 +35,11 @@ Codex review and declared controllers are not independent human playtests.
 Unassisted enjoyment/difficulty, accessibility, other hardware/platforms and demand
 remain open. Next compare Planning/Classic choices with P10 dramatic scenes,
 P03/P04 listening/readers and P11 real collaborator handoffs.
+
+Closeout CI passed P01 but exposed P06's independent live-clock reads spanning
+a mixer update. [Audio followup](../evidence/veil-arena/AUDIO_CLOCK_RUN.json)
+reproduced a false 92.9 ms delta on aligned streams with a declared 100 ms reading
+delay. The test now samples one driver-locked instant, retains 15 ms and detects
+a real seek. All 26 audio checks pass on source, delivered and rebuilt PCK.
+P06 product/media bytes remain unchanged; this is observation repair, not a new
+creative milestone or independent listening evidence.
