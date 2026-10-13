@@ -911,3 +911,28 @@ new names need the current consumer while rule/journal schema stays 0.1.0.
 Deliver and run owned compiled sources/assemblies outside checkout with runtime-only
 .NET. Preserve previous packs. Matched synthetic results and Codex frames establish
 this bounded capability, not optimal play, human enjoyment, OS exports or demand.
+
+## ADR-044 — let characters answer the actual relief outcome
+
+**Date:** 2026-10-13 (UTC). **Status:** P10 browser 0.5.0.
+
+Choose the verified list-only P10 finale over automatic continuation of completed
+P01 planning/P11 workflows or literary expansion without readers. Reuse the static
+JavaScript/replay consumer: a conversation needs no physics or native migration.
+
+Dain requests a ready boat or channel guide. Hear actual present characters;
+Iven must offer before being assigned. Lending the ferry changes local routes;
+sending Iven changes ferry pace, preserving morning facts. Terms create a dusk
+obligation or open loan, never an invented return. Refusal/review stay distinct.
+No morality meter or new relief clock. Characters want specific work to continue;
+no guaranteed happy ending or distant casualties are inferred from the loan.
+
+A public order withdrawal is a new record, not retroactive trust repair or an
+absent Keeper signature. Preserve night/morning sources and schema 1/2; only a
+handover journal uses schema 3/version 0.5.0. Replay accepted actions and ignore
+supplied snapshots. Old consumers do not support schema 3.
+
+Execute actual baseline/current comparisons, complete browser journeys and the
+six-history reachable graph; inspect prose/frames. Same-agent creative judgment
+is not independent player approval. GitHub source publication only; preserve the
+historical archive/other projects and the private demo's audience/deployment.

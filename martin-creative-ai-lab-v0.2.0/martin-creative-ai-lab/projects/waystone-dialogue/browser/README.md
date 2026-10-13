@@ -1,4 +1,4 @@
-# Flood Crossing — two-day campaign 0.4.0
+# Flood Crossing — the noon receipt 0.5.0
 
 A complete playable two-day adaptation of [P10's terminal adventure](../README.md).
 Pack two items, talk to the Keeper, choose a river route, rescue the mill party
@@ -6,7 +6,9 @@ and decide what reaches shelter. The illustrated crossing map, shared flood
 clock, residents/cargo, current forecast and action risks stay connected to
 actual game state. All five endings have their own consequences and replay.
 
-[Owner-private demo](https://the-last-waystone.sturdyspice.chatgpt.site).
+[Previously deployed owner-private demo](https://the-last-waystone.sturdyspice.chatgpt.site).
+This session publishes 0.5.0 to GitHub; the private demo was not redeployed.
+Use the local commands below to play the current scene.
 GitHub remains the maintained source. Site identity is retained in
 `.openai/hosting.json`; deployment does not change its audience.
 
@@ -35,6 +37,28 @@ supply-clinic, seed` gives late care with the same people, grain and saved seed.
 After a full permanent-road rescue, `grain, seed, plant, ready-ferry` completes
 both days with planted seed, food and two usable afternoon routes. These are
 spoilers and executed examples, not human balance approval.
+
+## The noon receipt
+
+After either morning ending, choose **Meet the noon courier**. Dain arrives with
+two boat hands; the upstream landing has lost its boat. Mara wants the remaining
+work counted before anything leaves. Senn answers for the seed and her crew;
+Iven can offer his own help. Witnesses appear only when the actual mill party,
+Iven and public record permit it. Hear as much as you want; no work shifts pass.
+
+Keep the local resources, lend a **ready** ferry, or accept Iven's voluntary guide
+offer. These have different local costs. With a ferry-only morning, keeping it
+allows 2 crates/shift; lending it leaves the ridge at 1 crate/2 shifts. Sending
+Iven instead retains the ferry at 2 crates/2 shifts. A permanent causeway still
+carries 4 crates/shift when its backup ferry leaves. Nothing changes prior food,
+seed or clinical deliveries. There is no morality score or automatically best loan.
+
+Write a return due at dusk or an open loan through the upstream recovery.
+Dusk is an obligation, not an observed return. Refusal and a request for later
+review are separate. The final receipt records what departed, local capacity,
+actual deliveries and outstanding work; it claims no upstream rescue or future
+harvest. A still-disputed council order can be publicly withdrawn here, without
+rewriting the workshop lie, morning record or an absent Keeper's signature.
 
 ## Play locally
 
@@ -75,8 +99,10 @@ Blocked/full browser storage does not prevent play or file export/import.
 Night-only saves retain format `waystone-save`, schema 1 and engine version
 `0.2.0`. Existing 0.3.0 saves, including endings, still load and can continue.
 Once morning begins, schema 2 / engine version `0.4.0` saves the full action
-sequence across both days. Replay reconstructs inherited facts rather than
-trusting supplied morning snapshots.
+sequence across both days. Handover journals use schema 3 / engine version
+`0.5.0`; schema-1/2 saves still load and continue. Old consumers reject schema 3.
+Replay reconstructs inherited facts, witnesses, consent and terms from decisions,
+ignoring supplied snapshots.
 Snapshots and additional file fields are never trusted as game state. Files are
 limited to 64 KiB and 1,024 decisions; a normal operation is much shorter. An
 unusually long free-action loop can continue playing, but save controls explain
@@ -125,12 +151,18 @@ the actual run and limits.
 Automated inputs and same-agent design review do not establish unassisted player
 understanding, literary quality, accessibility or commercial demand. Screen-reader
 behavior, physical touch hardware, Safari/Firefox and reader enjoyment remain
-unverified. This is a two-chapter prototype, not a finished paid game.
+unverified. This is a two-day prototype with a closing conversation, not a finished paid game.
 
 
 [Campaign execution](../../../evidence/waystone-dialogue/CAMPAIGN_RUN.json)
 records 0.4.0. The morning is new Codex-authored fiction/rules under Martin's
 direction, implemented in JavaScript; Python parity applies to the preserved
-night, not to an invented Python morning reference. Next: unassisted two-day
-play, then revise order/deadline pacing and character scenes before a further
-chapter or commercial pitch.
+night, not to an invented Python morning reference. The 0.5.0 [handover execution](../../../evidence/waystone-dialogue/HANDOVER_RUN.json)
+adds six domain checks and four Chromium journeys: all **35** current tests pass.
+The six specified night histories yield 330 morning endings and 50,640 canonical
+handover states (heard-name order normalized), with 65,140 accepted transitions.
+This is bounded coverage, not every possible workshop history. Actual 0.4.0 code
+rejects a handover after the same morning; current code preserves that morning
+and completes different loans. Desktop/mobile frames and actual prose received
+implementer review. Next: independent choices/voice feedback, compared with other
+portfolio opportunities before another chapter or commercial pitch.

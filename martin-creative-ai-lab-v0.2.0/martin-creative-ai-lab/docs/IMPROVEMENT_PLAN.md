@@ -1,17 +1,18 @@
-# Current milestone — adaptive native rival competition
+# Current milestone — the noon receipt
 
-Connect full-race action projections to Planner/Warden/Raider, visible routes,
-conditional actual reply comparison and Planning/Classic selection. Preserve
-transactions, old-policy journals and existing packages. Deliver compiled 0.3.0
-with the same real Godot/.NET consumer.
+Complete P10's consequence-driven handover after the existing two-day campaign.
+Hear present characters, use actual delivery facts, accept Iven's voluntary offer
+or lend the ready ferry, and make the local cost and return obligation visible.
+Preserve night/morning rules and schema-1/2 saves; schema 3 replays new decisions.
+No new relief timer, morality score, shared engine or unobserved upstream success.
 
-Acceptance executed: matched synthetic races with unchanged Collector proxy,
-capital-to-Gate contrast, currency/legality/replay, exact conditional replies,
-winning forecast, native input/controls/modes and ten complete matches. Inspect
-OpenGL frames and run final shipped pack outside checkout with runtime-only
-.NET/no SDK. Records/manifest and authorized main publication close the work.
-[Evidence](../evidence/eclipse-fair/PLANNING_RUN.json) records results/assumptions.
-Independent play and general balance remain future evidence.
+Acceptance executed: actual old 0.4.0 artifact versus current same-work comparison,
+conditional witnesses/consent, all reachable handovers from six specified night
+histories, full Chromium journeys, capacity contrasts, reload/files/old saves,
+blocked storage, invalid import, touch/keyboard and desktop/mobile frame review.
+Retain Python parity, validate records/manifest and publish normally to main.
+[Execution](../evidence/waystone-dialogue/HANDOVER_RUN.json) separates checks,
+Codex creative assessment and independent reader/player evidence still needed.
 
 # Previous milestone — native Eclipse Fair board
 

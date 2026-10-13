@@ -1,4 +1,31 @@
-# Current assessment — native rivals that plan a complete race
+# Current assessment — a consequence that people can answer
+
+Clean `04e1864` matches fetched main; working tree clean and GitHub push permitted.
+Inspected instructions, seed/state/registry/recent decisions and twelve commits,
+actual P10 domain/UI/prose, P04 opening and the completed P01/P11 contracts.
+Recent work spans native systems, music, literature and collaboration. The latest
+native milestone does not choose this session's project or technology.
+
+| Opportunity | Evidence and decision |
+|---|---|
+| P10 dramatic handover | The playable rescue/morning ends at a work list. Give actual outcomes character voices, voluntary help and a costly local loan; selected. |
+| P01 strategic competition | Native 0.3.0 just delivered. Unassisted Planning/Classic decisions and response comprehension are stronger evidence than another automatic rival feature. |
+| P11 collaboration | Assigned actions and recovery work. Real team handoffs should reveal access/retention/usability needs. |
+| P04 literature | Actual complete story has specific causality and voice; independent readers/manuscript recovery should guide expansion. |
+| P03/P05/P06/P09 | Listening/native play need external observation; professional cases still need real sources. No invented feedback or new historical claims. |
+
+JavaScript fits the existing static interactive fiction and replay journal.
+Godot/.NET tools are available from real prior execution, but this conversation
+needs no new physics, engine binding, language migration or shared framework.
+
+Before: the same executed 0.4.0 morning has no further actions and rejects a
+handover. After: actual loan/guide/refusal decisions change local route capacity,
+with conditional witnesses, separate return terms and saved scene continuity.
+No morality score, perfect ending or extra logistics clock. Character/pacing
+assessment is implementing-agent judgment; independent engagement and commercial
+interest remain unverified. [Execution](../evidence/waystone-dialogue/HANDOVER_RUN.json).
+
+# Previous assessment — native rivals that plan a complete race
 
 Clean `a1e418f` matches fetched main. Inspected current instructions/records/history,
 P01 game/agents/UI/journal, P04 prose and P10 morning interactions. Recent cycles

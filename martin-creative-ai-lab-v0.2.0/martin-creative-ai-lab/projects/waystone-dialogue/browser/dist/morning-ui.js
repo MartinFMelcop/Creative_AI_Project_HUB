@@ -1,6 +1,8 @@
 export function renderMorning(game,ui) {
   const {p,row,paragraphs,onAction}=ui,$=id=>document.getElementById(id),day=game.morning,s=day.state;
   document.querySelector('.layout').classList.add('morning');
+  document.querySelector('.layout').classList.remove('handover');
+  $('continue-handover').hidden=!s.ending;
   $('play').dataset.phase='morning';$('play').dataset.ending=s.ending||'';
   $('chapters').hidden=true;$('chapter').textContent=s.ending?'DAY TWO / THE AFTERNOON LIST':'DAY TWO / THE MORNING CREW';
   $('scene-title').textContent=s.ending?(s.ending==='READY_FOR_NOON'?'The kitchen gate is open.':'Work for the next crew.'):'Six shifts before noon.';
@@ -49,6 +51,6 @@ export function renderMorning(game,ui) {
   $('journal-count').textContent=`${game.history.length} campaign decisions`;$('journal-entries').replaceChildren();
   for(const entry of game.history) {
     const li=document.createElement('li'),clock=entry.after.morning;
-    p(`${clock?`Morning shift ${clock.elapsed}`:`Night beat ${entry.after.expedition.elapsed}`} · ${entry.action}`,li,'entry-heading');p(entry.text,li);$('journal-entries').append(li);
+    p(`${entry.after.handover?'Handover':clock?`Morning shift ${clock.elapsed}`:`Night beat ${entry.after.expedition.elapsed}`} · ${entry.action}`,li,'entry-heading');p(entry.text,li);$('journal-entries').append(li);
   }
 }

@@ -1,0 +1,250 @@
+{
+  "project": "P10 / Flood Crossing",
+  "version": "0.5.0",
+  "executed_at": "2026-10-13T03:15:03.393998+00:00",
+  "baseline_commit": "04e18649e85486052fa23ad7aeb7d32567a772fa",
+  "authorship": "New Codex-authored English adaptation fiction and code under Martin’s authorized portfolio direction; not recovered RPG canon.",
+  "environment": {
+    "os": "Debian GNU/Linux 13, Linux x86_64",
+    "node": "24.19.0",
+    "python": "3.12.14",
+    "chromium": "154.0.8037.57",
+    "browser": "Actual headless system Chromium through existing locked playwright-core; local HTTP; desktop 1440x1050, mobile 390x844 with emulated touch/keyboard."
+  },
+  "verified": {
+    "comparison": {
+      "baseline": "Actual 0.4.0 JavaScript modules read from the baseline Git object and executed outside checkout. Same accepted work order yields no choices and rejects handover.",
+      "input_actions": [
+        "timber",
+        "oil",
+        "ready",
+        "leave",
+        "ferry",
+        "iven",
+        "roof",
+        "board",
+        "row",
+        "row",
+        "load",
+        "board",
+        "row",
+        "morning",
+        "depot",
+        "supply-clinic",
+        "grain",
+        "grain",
+        "seed"
+      ],
+      "before": {
+        "choices": [],
+        "handover_rejected": "That morning choice is unavailable."
+      },
+      "inherited_morning_equal": true,
+      "after": [
+        {
+          "decision": "keep-crossing",
+          "term": "decline",
+          "local_afternoon": {
+            "road": false,
+            "ferry": true,
+            "iven": true,
+            "route": "ferry",
+            "grain_per_trip": 2,
+            "shifts_per_trip": 1
+          }
+        },
+        {
+          "decision": "lend-ferry",
+          "term": "return-at-dusk",
+          "local_afternoon": {
+            "road": false,
+            "ferry": false,
+            "iven": true,
+            "route": "ridge trail",
+            "grain_per_trip": 1,
+            "shifts_per_trip": 2
+          }
+        },
+        {
+          "decision": "send-guide",
+          "term": "open-return",
+          "local_afternoon": {
+            "road": false,
+            "ferry": true,
+            "iven": false,
+            "route": "ferry",
+            "grain_per_trip": 2,
+            "shifts_per_trip": 2
+          }
+        }
+      ]
+    },
+    "checks": [
+      {
+        "command": "npm test --prefix projects/waystone-dialogue/browser",
+        "result": "35 passes, 0 failures/skips: 25 retained, 6 new domain and 4 new Chromium. Final reviewed run 71.3 seconds."
+      },
+      {
+        "command": "python3 projects/waystone-dialogue/browser/tools/export_dialogue.py --check",
+        "result": "Source-derived dialogue catalogue matches."
+      },
+      {
+        "command": "python3 projects/waystone-dialogue/test_scene.py; python3 projects/waystone-dialogue/test_adventure.py",
+        "result": "32 + 20 passes, original terminal scenes/rescue retained."
+      },
+      {
+        "command": "python3 tools/validate_repo.py; python3 tools/test_validate_repo.py; python3 tools/test_check_manifest.py; python3 tools/check_manifest.py",
+        "result": "11 projects/14 transfers/6 assets/2 sources and 257 links pass; 11 + 11 integrity regressions; 327 maintained files covered exactly once with matching hashes."
+      }
+    ],
+    "graph": {
+      "night_histories": [
+        [
+          "rope",
+          "timber",
+          "ready",
+          "herbs",
+          "bargain",
+          "causeway",
+          "iven",
+          "roof",
+          "span",
+          "convoy"
+        ],
+        [
+          "timber",
+          "oil",
+          "ready",
+          "leave",
+          "ferry",
+          "iven",
+          "roof",
+          "load",
+          "board",
+          "row",
+          "row",
+          "board",
+          "row"
+        ],
+        [
+          "timber",
+          "oil",
+          "ready",
+          "leave",
+          "ferry",
+          "iven",
+          "roof",
+          "board",
+          "row",
+          "row",
+          "load",
+          "board",
+          "row"
+        ],
+        [
+          "rope",
+          "oil",
+          "ready",
+          "leave",
+          "retreat"
+        ],
+        [
+          "rope",
+          "timber",
+          "ready",
+          "lie",
+          "leave",
+          "retreat"
+        ],
+        [
+          "rope",
+          "oil",
+          "ready",
+          "leave",
+          "ferry",
+          "board",
+          "row",
+          "row",
+          "load",
+          "row"
+        ]
+      ],
+      "morning_states": 525,
+      "morning_transitions": 720,
+      "morning_endings": 330,
+      "canonical_handover_states": 50640,
+      "handover_transitions": 65140,
+      "completed_receipt_states": 25280,
+      "canonicalization": "Sort heard-name lists for graph keys only; dialogue history remains in accepted order. These counts are bounded to the six entry histories, not every workshop state.",
+      "invariants": "Replay every edge; inherited morning/night unchanged, zero work-shift cost, voluntary guide and ready-ferry gates, bounded capacity, terminal receipts, save reconstruction. Existing Python oracle separately compares 8,583 river states / 20,124 transitions."
+    },
+    "browser_journeys": [
+      "Complete causeway rescue, morning and voiced handover; witness choices, back to table, ferry terms, complete journal and final receipt.",
+      "Same ferry morning: retain, lend ferry and accept guide; actual local capacity differences with prior deliveries retained.",
+      "Import actual schema-2 work order, continue, reload pending terms, export/import into independent profile, finish/reload ending; invalid later choice rejected after its async read, current save retained; restart clears new view.",
+      "390px emulated touch/keyboard fallback with absent witnesses, new public withdrawal, blocked storage and portable file import."
+    ],
+    "preserved_bytes": [
+      "archive/legacy-source-extracts-v0.2.0.zip",
+      "projects/waystone-dialogue/adventure.py",
+      "projects/waystone-dialogue/scene.py",
+      "projects/waystone-dialogue/browser/dist/engine.js",
+      "projects/waystone-dialogue/browser/dist/scene.js",
+      "projects/waystone-dialogue/browser/dist/dialogue.js",
+      "projects/waystone-dialogue/browser/dist/morning.js",
+      "projects/realtime-integration-lab/package-lock.json"
+    ],
+    "other_project_evaluation_files_equal": 203
+  },
+  "reasoned_assessment": {
+    "reviewer": "Implementing Codex agent; not independent readers or human playtests.",
+    "review": "Read actual branching prose and final rendered Senn/receipt/mobile frames. Mara tracks local work and late care; Iven volunteers rather than becoming a cargo assignment; Senn rejects labor promised on other people’s behalf; Dain must limit the receipt. Choices carry concrete local costs rather than a moral score. Narrative effectiveness for an audience is still a hypothesis.",
+    "refinements": [
+      "Conditional narration removes absent Iven/seed/medicine claims. Morning presence is explicitly dated rather than confused with post-loan presence.",
+      "Replaced a generic Senn maxim with Dain offering unasked-for labor, a boat hand refusing and the offer being crossed off.",
+      "Removed simulation/debug wording from the player-facing ending.",
+      "Final suite first caught a browser test reading the file-rejection message too early; await the observable async rejection, then full 35 passed.",
+      "Final diff review removed an absent Iven from ferry choice text and an unready second route from guide narration; existing checks now cover both actual morning branches."
+    ]
+  },
+  "screenshots": {
+    "handover-senn.png": {
+      "path": "evidence/waystone-dialogue/handover-senn.png",
+      "sha256": "be5780f11906d38864db42ab79b19dd29352c2a680904167fef165393de59046",
+      "editing": "None; exact real browser capture bytes."
+    },
+    "handover-receipt.png": {
+      "path": "evidence/waystone-dialogue/handover-receipt.png",
+      "sha256": "a55d3dd408a40b36f3fe452c852fc1ea1e0ac79346c9f1792da5f2b8f1432736",
+      "editing": "None; exact real browser capture bytes."
+    },
+    "handover-mobile.png": {
+      "path": "evidence/waystone-dialogue/handover-mobile.png",
+      "sha256": "384745cf9b5f3bfd5b9222d9a4c609c82a1f0b74269d1155d753b4f60af98067",
+      "editing": "None; exact real browser capture bytes."
+    }
+  },
+  "source_sha256": {
+    "projects/waystone-dialogue/browser/dist/app.js": "1a0dd03a148d29ea6fcf3b8eda7aa1eaf1716e9782ace9230d9ba01b5954def5",
+    "projects/waystone-dialogue/browser/dist/campaign.js": "8b57b803394877c9bcf77424e67920b9007c820aef755fe979105e13de48c77b",
+    "projects/waystone-dialogue/browser/dist/dialogue.js": "4feeff8da32a5a9af52cf93fa3ce0b481a849725a08dd8c819624c8889902b6e",
+    "projects/waystone-dialogue/browser/dist/engine.js": "568516f20c573e253b93bcfdac2ba3c499f6c34284d73dac73393c3d1bec880f",
+    "projects/waystone-dialogue/browser/dist/handover-ui.js": "a32e627aeeeef3bc0e2de1dcfee01c49050f672f5605fd79df9726c3f436bdb5",
+    "projects/waystone-dialogue/browser/dist/handover.js": "16233e48892773b330aaf71bf51b28d22175afbccd2add49e65bb4163da6a5d2",
+    "projects/waystone-dialogue/browser/dist/index.html": "e8e1205321287d372ce24d265ed53b23c5968d4feefa5d3006bf79b1cfc398c8",
+    "projects/waystone-dialogue/browser/dist/morning-ui.js": "5a42354ead0dcd1be871d45b8a0547a23c9a75db5db00f6ec0af97cb9a66b835",
+    "projects/waystone-dialogue/browser/dist/morning.js": "7fab9c17e357ba8ede0749d521034ec2cf3db70674fa839deb410ade839e91b6",
+    "projects/waystone-dialogue/browser/dist/scene.js": "65a9054d3703fa52b650347efc4c975d9e9f5624c79b09d1f8aed0afcb4afe3b",
+    "projects/waystone-dialogue/browser/dist/style.css": "c892b1a90dd83d051041676878529eeea25283e7baf7fb64ddbdeda2d767e629",
+    "projects/waystone-dialogue/browser/package.json": "39357997833dd94011ae5283964fd212a413fa7871fc45900fd3bdb0d2893ca2",
+    "projects/waystone-dialogue/browser/tests/handover-browser.test.mjs": "5ad2cf02de92307898142a4888601601ffc67e10710b974e37a1bc463cef5f1b",
+    "projects/waystone-dialogue/browser/tests/handover.test.mjs": "5f5c20f739eb0418d0c8e054dec2fdd7c9a7c3639667d3fe0eca7b9f9f1d701a"
+  },
+  "unverified": [
+    "Independent literary quality, character attachment, unassisted choice comprehension and enjoyment.",
+    "Physical touch hardware, screen readers, Safari/Firefox and accessibility conformance.",
+    "Upstream rescue, future deliveries/returns/harvests; no such simulation is included.",
+    "Commercial demand or readiness; next evidence is actual independent play/read response."
+  ],
+  "publication_scope": "Authorized GitHub main source commit. Record precedes final commit. No Sites redeployment or audience change in this session."
+}

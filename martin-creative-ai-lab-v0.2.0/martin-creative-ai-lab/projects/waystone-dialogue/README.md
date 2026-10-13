@@ -1,6 +1,6 @@
 # P10 — The Last Waystone: Flood Crossing
 
-Browser campaign **0.4.0** connects the complete rescue to a playable relief morning.
+Browser campaign **0.5.0** connects rescue, relief morning and a consequential noon handover: hear the people present, keep resources, lend the ferry or accept Iven’s voluntary guide offer.
 Night outcomes determine transport, clinical supplies and crew availability;
 new decisions recover residents, deliver food, preserve seed and restore routes.
 The complete operation is playable through

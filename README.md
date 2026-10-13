@@ -7,7 +7,7 @@ experiments with documented evidence and reusable learning.
 The working lab is nested under
 [martin-creative-ai-lab](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/README.md).
 The directory retains its original package name; its maintained seed is now
-v0.20.0. Historical source snapshots remain unchanged.
+v0.21.0. Historical source snapshots remain unchanged.
 
 - [Current state](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/docs/STATE.md)
 - [Assessment and priorities](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/docs/IMPROVEMENT_PLAN.md)
@@ -18,7 +18,7 @@ v0.20.0. Historical source snapshots remain unchanged.
 - [P03 — Tokyo 80s Night Shift](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/projects/tokyo80s/README.md): two original rhythm stages with rendered music, sustained notes, track selection, calibration and replay.
 - [P11 — Project Rooms](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/projects/realtime-integration-lab/README.md): a local workspace with persistent conversations/decisions, assigned actions, blockers/outcomes, versioned history and workspace recovery; the original chat exercise remains available.
 - [P02 — EVAL-001](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/evaluations/chat-send-buffering/README.md): a calibrated practice-task exporter and client checker. No independent model score is claimed.
-- [P10 — The Last Waystone](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/projects/waystone-dialogue/browser/README.md): a two-day browser campaign: the flood rescue determines morning relief, food/seed, clinic timing and transport; old saves and Python versions remain available.
+- [P10 — The Last Waystone](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/projects/waystone-dialogue/browser/README.md): a two-day campaign with a voiced noon handover: real relief outcomes constrain ferry loans and voluntary guide help; old saves and Python versions remain available.
 - [Lab checks](https://github.com/MartinFMelcop/Creative_AI_Project_HUB/actions/workflows/lab-checks.yml): shared integrity, dialogue, chat and controlled evaluation checks for main pushes and pull requests.
 
 This is a portfolio in development. Local automated validation is distinguished

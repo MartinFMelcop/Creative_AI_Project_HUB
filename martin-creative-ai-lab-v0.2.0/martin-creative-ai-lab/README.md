@@ -4,7 +4,7 @@ An evolving laboratory of games, narrative, images, audio, data, and AI
 evaluation by **Martin Melcop Neto**. Projects are adaptable seeds: build small
 slices, verify behavior, record decisions, and test reuse in actual destinations.
 
-**Current seed: v0.20.0.** The lab includes eleven project lines, 178 preserved
+**Current seed: v0.21.0.** The lab includes eleven project lines, 178 preserved
 historical texts, a working local project-conversation workspace, a calibrated
 practice-task harness, a complete rescue adventure with browser/terminal editions,
 two original browser rhythm stages with rendered soundtracks and sustained notes, a native C# economy board with preserved terminal workbench, a complete Portuguese story with EPUB/PDF, and a native
@@ -34,7 +34,7 @@ project versions and execution boundaries are in the state and registry.
 - [P11 — Project Rooms](projects/realtime-integration-lab/README.md): decisions linked to assigned actions, blockers/outcomes, conflict review, drafts, export and workspace recovery.
 - [P02 — EVAL-001](evaluations/chat-send-buffering/README.md): export a starter, check a client, and inspect limits.
 - [Current dependency-gate evidence](evidence/evaluation-task/DEPENDENCY_RUN.json): installed direct version checks, controlled mismatch and unchanged calibration.
-- [P10 — Flood Crossing browser](projects/waystone-dialogue/browser/README.md): two connected days: rescue, relief priorities, clinical timing, food/seed, local resume and backward-compatible portable saves.
+- [P10 — Flood Crossing browser](projects/waystone-dialogue/browser/README.md): rescue, relief priorities and a voiced noon handover with voluntary guide help, local loan costs and backward-compatible replay saves.
 - [Browser milestone evidence](evidence/waystone-dialogue/BROWSER_RUN.json): Python parity, actual Chromium journeys and implementing-agent presentation review.
 - [Rescue milestone evidence](evidence/waystone-dialogue/ADVENTURE_RUN.json): actual route playthroughs, cargo-order comparison, connected checks and same-agent review.
 - [Prior dialogue evidence](evidence/waystone-dialogue/DUSK_RUN.json): 32 checks, deadline-aware closing responses, seven CLI comparisons and unchanged rules across all reachable states.

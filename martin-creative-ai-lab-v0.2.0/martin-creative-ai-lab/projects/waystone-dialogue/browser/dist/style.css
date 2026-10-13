@@ -782,3 +782,5 @@ dialog .eyebrow {
 
 .layout.morning #map { filter: sepia(.22) brightness(1.13); }
 #continue-morning { margin: 0 12px 12px 0; }
+#continue-handover { margin: 0 12px 12px 0; }
+.layout.handover .clock { grid-template-columns: repeat(3, 1fr); }

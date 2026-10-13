@@ -1,10 +1,10 @@
 # SEED — Martin Creative AI Lab
 
-**Version:** 0.20.0
+**Version:** 0.21.0
 **Data-base:** 10 de outubro de 2026  
 **Autor e responsável pelo portfólio:** Martin Melcop Neto  
 **Working language:** English for new documentation, plans, code comments, UI, and reports. Preserve original creative titles and historical source languages.
-**Current state:** P01 Eclipse Fair native 0.3.0 adds adaptive planning rivals and conditional response comparison. Full-race projections, Classic continuity, actual native play and the runtime-only delivered pack are verified. Other destinations remain preserved; unassisted enjoyment, general balance and commercialization remain unverified.
+**Current state:** P10 Flood Crossing 0.5.0 connects real two-day outcomes to a voiced noon handover, voluntary help, local loan costs and return terms. Old saves continue; real browser journeys and comparative execution verify the workflow. Independent creative/play/commercial validation remains open.
 
 > Construir um laboratório autoral em Git que transforma ideias, obras e experimentos em produtos pequenos, sistemas reutilizáveis e evidências técnicas verificáveis. A IA participa da criação e execução; Martin desenvolve sua capacidade de especificar, compreender, selecionar, corrigir, validar e explicar os resultados.
 
@@ -46,14 +46,14 @@ Se apenas este arquivo estiver disponível, ele é suficiente para iniciar a Fas
 |---|---|
 | Repository | MartinFMelcop/Creative_AI_Project_HUB; actual Git root `/workspace/Creative_AI_Project_HUB`; lab remains nested in its original package directory |
 | Preserved sources | 175 Rave Master texts and 3 WebSocket files; unchanged ZIP and inventory; not a complete RMXP backup |
-| Primary workstream | P01 adaptive rival competition and inspectable conditional replies |
-| Runtime execution | C#/.NET 10 domain and Godot .NET 4.6.3 board; source and compiled pack outside checkout with runtime-only .NET |
-| Current verification | 13 C# checks, CLI continuity, final OpenGL/source 283 and delivered 275 assertions; matched 12-seed/four-seat comparisons; `evidence/eclipse-fair/PLANNING_RUN.json` |
+| Primary workstream | P10 consequence-driven noon handover after the complete rescue/morning |
+| Runtime execution | Existing static JavaScript/browser consumer and deterministic replay; no new engine/dependency |
+| Current verification | 35 P10 checks, actual 0.4.0 comparison, four new Chromium journeys and six-history handover graph; `evidence/waystone-dialogue/HANDOVER_RUN.json` |
 | Historical verification | Prior native/music/story/workspace evidence retained; no inherited human approval |
-| Next action | Compare unassisted Planning/Classic decisions with P10 drama, P03/P04 audience feedback and P11 real team handoffs |
-| Other seeds | P03 0.2.0, P04 0.1.0, P05 0.1.0, P06 0.3.0, P07 0.2.0, P08 0.3.0, P10 0.4.0, P11 0.4.0 and P02 0.2.1 preserved |
+| Next action | Compare unassisted P10 choices/voices with P01 strategy, P03/P04 audience feedback and real P11 handoffs |
+| Other seeds | P01 0.3.0, P03 0.2.0, P04 0.1.0, P05 0.1.0, P06 0.3.0, P07 0.2.0, P08 0.3.0, P11 0.4.0 and P02 0.2.1 preserved |
 | Transfer / shared status | No cross-project framework or transfer promoted; historical archive unchanged |
-| Portfolio / attribution | Clean `a1e418f` matched fetched main. Martin authorizes implementation/main; Codex development/review and declared synthetic profiles. No human play or hosting approval |
+| Portfolio / attribution | Clean `04e1864` matched fetched main; push permission verified. Martin authorizes implementation/main; Codex development/review and declared synthetic inputs. No human approval or Sites redeployment |
 
 Registry evidence paths must resolve to existing files inside the lab; working
 paths must be directories and legacy-source IDs must exist. This documentary
@@ -487,16 +487,19 @@ actual AudioServer/compiled-pack consumption. No physical listening/album claim.
 
 Reservatório recuperado de RPG Maker XP/RGSS: narrativa, personalidade e diálogo de NPCs, combate, progressão, crafting, reputação, planejamento de arte/áudio e QA. A extração completa, os estados e limites estão na seção 28.2. Não é um novo compromisso de terminar um RPG extenso nem uma fusão automática com os outros RPGs do inventário.
 
-[The Last Waystone](projects/waystone-dialogue/browser/README.md) is a complete
-browser rescue operation with equipment, Keeper negotiation, two routes,
-forecast current, residents/cargo and five consequential shelter endings.
-Campaign 0.4.0 includes the original live SVG diagram, action risks, journal,
-local resume and replay-validated saves. A new morning consumes night outcomes
-for clinic timing, stranded crew, grain, seed and restoration. Existing night
-saves continue into the chapter; Python parity applies to the preserved night. The Python adventure 0.2.0 and standalone
-scene 0.1.3 remain unchanged. Its oracle compares actual choices, trace/state and
-epilogues; browser checks execute the complete workflow. No full RPG equivalence,
-independent reader approval, shared engine or commercial product is claimed.
+[The Last Waystone](projects/waystone-dialogue/browser/README.md) preserves the
+complete night rescue and six-shift relief morning. Browser 0.5.0 adds a noon
+request with Mara, Iven, Senn and the Keeper only when present. Actual deliveries,
+clinical timing, seed and council record shape their scenes. Keep resources,
+lend a ready ferry or accept Iven's own guide offer; write dusk or open return
+terms. The local cost is observable without simulating upstream success.
+
+Schema 1/2 saves retain their formats; schema 3 replays new scene decisions.
+Python adventure 0.2.0/scene 0.1.3 and browser night/morning rules stay unchanged.
+Actual 0.4.0 comparison, 35 checks and desktop/mobile frames verify this bounded
+milestone. Implementer narrative review is not independent audience approval,
+full RPG equivalence, native gameplay or commercial validation. The previously
+private demo is not redeployed in this GitHub source session.
 
 ### P11 — Real-time Integration Lab / Project Rooms
 
