@@ -863,3 +863,26 @@ with runtime-only .NET, inspect real OpenGL frames. Supply tuning and comparison
 are implementing-agent fixtures, not human balance approval. Functional UI has no
 soundtrack/animated characters. Independent play, alternative strategies, OS
 exports, production art/audio and demand remain separate milestones. GitHub only.
+
+## ADR-042 — connect decisions to assigned action outcomes
+
+**Date:** 2026-10-13 (UTC). **Status:** P11 0.4.0.
+
+Choose P11's missing execution handoff after comparing P01 immediate-action rivals,
+P04 reader needs and recent native milestones. Keep Node 24/SQLite/Socket.IO for
+the actual collaborative consumer. Ownership coordinates responsibility; trusted
+participants still access/edit every room. Done is a stated outcome, not external
+artifact certification. Keep decision sources and complete revision authorship.
+
+Commit revision plus event atomically; check expected version and deduplicate the
+immutable attempt before stale-version checks. Recover accepted receipts without
+regressing a newer board. Compare/reapply drafts explicitly; never send offline
+changes automatically or replace pending drafts. Peer updates preserve reading.
+Reopening requires a new reason. Keep one resumable draft per participant/room.
+
+Migrate database schema 1 to 2 transactionally; preserve old savepoints and support
+both in backup format 1. Verify exact schemas, contiguous audit/attempt snapshots
+and new-file restore. Older apps cannot read schema 2. Public JSON remains schema
+1 with additive action histories. Preserve the legacy/P02 graph and archive.
+Actual browser/old-runtime checks and Codex frames are not independent team use,
+scale, account/market approval or public hosting. Reassess those needs after use.

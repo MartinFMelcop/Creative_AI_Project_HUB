@@ -4,7 +4,7 @@ An evolving laboratory of games, narrative, images, audio, data, and AI
 evaluation by **Martin Melcop Neto**. Projects are adaptable seeds: build small
 slices, verify behavior, record decisions, and test reuse in actual destinations.
 
-**Current seed: v0.18.0.** The lab includes eleven project lines, 178 preserved
+**Current seed: v0.19.0.** The lab includes eleven project lines, 178 preserved
 historical texts, a working local project-conversation workspace, a calibrated
 practice-task harness, a complete rescue adventure with browser/terminal editions,
 two original browser rhythm stages with rendered soundtracks and sustained notes, a native C# economy board with preserved terminal workbench, a complete Portuguese story with EPUB/PDF, and a native
@@ -31,7 +31,7 @@ project versions and execution boundaries are in the state and registry.
 - [Assessment](docs/ASSESSMENT.md) and [improvement plan](docs/IMPROVEMENT_PLAN.md): evidence and selected priorities.
 - [P03 — Tokyo 80s Night Shift](projects/tokyo80s/README.md): choose Midnight Signal or Rain Circuit, carry long notes, calibrate timing and finish/replay.
 - [Rhythm/audio evidence](evidence/tokyo80s/RUN.json): real 69-second Web Audio run and registered master/export, with honest review limits.
-- [P11 — Project Rooms](projects/realtime-integration-lab/README.md): persistent project notes/decisions, local identity, drafts, export and consistent live backup/new-file recovery.
+- [P11 — Project Rooms](projects/realtime-integration-lab/README.md): decisions linked to assigned actions, blockers/outcomes, conflict review, drafts, export and workspace recovery.
 - [P02 — EVAL-001](evaluations/chat-send-buffering/README.md): export a starter, check a client, and inspect limits.
 - [Current dependency-gate evidence](evidence/evaluation-task/DEPENDENCY_RUN.json): installed direct version checks, controlled mismatch and unchanged calibration.
 - [P10 — Flood Crossing browser](projects/waystone-dialogue/browser/README.md): two connected days: rescue, relief priorities, clinical timing, food/seed, local resume and backward-compatible portable saves.

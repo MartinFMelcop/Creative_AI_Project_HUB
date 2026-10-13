@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-10-12",
+  "updated_at": "2026-10-13",
   "projects": [
     {
       "id": "P01",
@@ -276,9 +276,9 @@
       "slug": "realtime-integration-lab",
       "status": "active",
       "maturity": "M4",
-      "phase": "workspace-recovery-validated",
+      "phase": "assigned-workflow-validated",
       "origin": "github_snapshot_inspected",
-      "next_action": "Observe trusted collaborators using recovery and decide retention/off-site/account needs before public hosting; compare other portfolio opportunities.",
+      "next_action": "Observe trusted collaborators carrying decisions into assigned work, conflict review and recorded outcomes; assess real workflow/retention needs alongside P01 rival strategy, P10 narrative progression and native play feedback before selecting another milestone.",
       "related_projects": [
         "P01",
         "P02",
@@ -297,12 +297,13 @@
         "evidence/realtime-chat/TEXT_REFLOW_RUN.json",
         "evidence/realtime-chat/DRAFT_RECOVERY_RUN.json",
         "evidence/realtime-chat/ROOMS_RUN.json",
-        "evidence/realtime-chat/RECOVERY_RUN.json"
+        "evidence/realtime-chat/RECOVERY_RUN.json",
+        "evidence/realtime-chat/ACTIONS_RUN.json"
       ],
       "source_id": "LEGACY-002",
-      "maturity_scope": "Project Rooms 0.3.0 adds private live SQLite/WAL backup bundles, inventory/checksum inspection and safe new-file restore preserving participants, authorship, immutable attempts and sequence. Node 24 CLI plus storage and real Chromium recovery checks; retained legacy and rooms workflows pass. Browser storage is separate, later writes excluded, no overwrite or public backup endpoint. Linux and synthetic inputs only; human usability, power-loss/off-site/encrypted recovery, authenticated backup origin, public accounts and commercial validation remain open. P02 snapshot/dependency graph preserved.",
+      "maturity_scope": "Project Rooms 0.4.0 adds decision-linked/independent assigned actions, four states, recorded blockers/outcomes, new reasons for reopening and immutable revision history. Transactional optimistic updates and attempt receipts preserve retries; native browser UI retains drafts, explicit conflict review and reading position across collaboration/reconnect. SQL schema 2 migrates schema 1 atomically; backup format 1 validates/restores both, including action audit/dedupe and identities. Actual old 0.3.0 code created the successfully migrated savepoint. Full P11 suite 73 plus final 13 workflow checks; real Chromium contexts and declared fixtures. Legacy/P02 dependency graph retained. Technical M4 for trusted local use; chosen names/ownership are not verified accounts/access roles, outcome text is not artifact certification. Independent usability, scale, public accounts and commercial validation remain open.",
       "working_path": "projects/realtime-integration-lab",
-      "working_version": "0.3.0"
+      "working_version": "0.4.0"
     }
   ]
 }

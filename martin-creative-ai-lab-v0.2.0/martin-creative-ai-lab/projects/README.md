@@ -1,8 +1,9 @@
 # Working projects
 
 [P11 — Project Rooms](realtime-integration-lab/README.md) provides persistent
-project conversations/decisions, local identity, missed-history recovery, per-room
-drafts and complete export using Node 24/SQLite/Socket.IO. The original ephemeral
+project conversations/decisions and assigned actions with blockers/outcomes,
+revision history, conflict review, retained drafts/export and workspace recovery
+using Node 24/SQLite/Socket.IO. The original ephemeral
 exercise/protocol remains available. No public service or verified accounts.
 
 

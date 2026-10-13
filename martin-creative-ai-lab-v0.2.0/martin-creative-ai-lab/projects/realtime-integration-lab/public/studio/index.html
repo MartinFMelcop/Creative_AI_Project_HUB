@@ -4,7 +4,7 @@
   <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Project Rooms · Creative AI Lab</title>
   <link rel="stylesheet" href="/studio/style.css">
-  <script src="/socket.io/socket.io.js" defer></script><script src="/studio/client.js" defer></script>
+  <script src="/socket.io/socket.io.js" defer></script><script src="/studio/client.js" defer></script><script src="/studio/actions.js" defer></script>
 </head>
 <body>
   <header class="mast"><div><p class="eyebrow">Creative AI Lab / P11</p><h1>Project Rooms</h1></div>
@@ -25,6 +25,8 @@
       <div class="room-head"><div><p class="eyebrow" id="connection" role="status">Connecting…</p><h2 id="room-title">Choose a project</h2></div>
         <div class="tools"><button id="export" disabled>Export record</button><button id="link" disabled>Copy project link</button></div></div>
       <p id="room-hint" class="muted">Open an existing room or create a project to begin.</p>
+      <nav class="workspace-tabs" aria-label="Project view"><button id="conversation-tab" aria-pressed="true">Conversation</button><button id="actions-tab" aria-pressed="false" disabled>Actions</button></nav>
+      <div id="discussion">
       <button id="older" hidden>Load earlier entries</button>
       <ol id="entries" tabindex="0" aria-label="Project conversation"></ol>
       <button id="latest" hidden>Jump to latest</button>
@@ -34,6 +36,22 @@
         <p id="compose-hint" class="muted">Up to 500 characters. Saved entries remain after a server restart. Decisions also appear in the project record.</p>
       </form>
       <section id="pending" hidden aria-label="Unconfirmed attempt"><h3>Previous attempt</h3><p id="pending-body"></p><p>Delivery is unconfirmed. Check the conversation or retry this same attempt.</p><button id="retry" disabled>Retry same attempt</button></section>
+      </div>
+      <section id="action-panel" hidden aria-labelledby="action-heading">
+        <div class="action-heading"><div><h2 id="action-heading">Carry the work forward</h2><p class="muted">Assigned actions, blockers and recorded outcomes.</p></div><button id="new-action" disabled>New action</button></div>
+        <label for="action-filter">Show actions</label><select id="action-filter"><option value="all">All owners</option><option value="mine">Assigned to me</option><option value="unassigned">Unassigned</option></select>
+        <p id="action-count" class="muted" role="status"></p><button id="action-resume" hidden>Resume action draft</button><div id="action-board"></div>
+        <form id="action-editor" hidden>
+          <h3 id="action-editor-title">New action</h3><p id="action-source" class="muted"></p>
+          <label for="action-title">Action to deliver</label><input id="action-title" maxlength="140" required placeholder="e.g. Run three unassisted native play sessions">
+          <div class="action-fields"><div><label for="action-owner">Responsible participant</label><select id="action-owner"></select></div><div><label for="action-status">Status</label><select id="action-status"><option value="todo">To do</option><option value="doing">In progress</option><option value="blocked">Blocked</option><option value="done">Done</option></select></div></div>
+          <label for="action-note">Update, blocker or completed outcome</label><textarea id="action-note" maxlength="500" rows="3" placeholder="Required for blockers, completion and reopening"></textarea>
+          <section id="action-conflict" hidden aria-label="Changed action"><h3>Latest version differs from your draft</h3><p id="action-latest"></p><button id="action-use-latest" type="button">Use latest version</button><button id="action-rebase" type="button">Reapply my draft for review</button></section>
+          <section id="action-pending" hidden aria-label="Unconfirmed action"><p>Delivery is unconfirmed. Your exact attempt is kept; reconnect and check the board or retry it.</p><button id="action-retry" type="button">Retry same action attempt</button></section>
+          <div class="action-buttons"><button id="action-save">Save action</button><button id="action-close" type="button">Close editor · keep draft</button><button id="action-discard" type="button">Discard action draft</button></div>
+        </form>
+        <section id="action-history" hidden aria-label="Action change history"><h3 id="action-history-title"></h3><ol id="action-events"></ol><p id="action-history-limit" class="muted"></p></section>
+      </section>
     </section>
     <aside class="decisions"><p class="eyebrow">Project record</p><h2>Decisions</h2><p class="muted">The latest 100 decisions, kept apart from the discussion. Export includes every entry.</p><ol id="decisions"></ol></aside>
   </main>

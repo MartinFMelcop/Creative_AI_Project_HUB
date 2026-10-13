@@ -61,8 +61,8 @@ test('history pagination is chronological, bounded and complete; export omits id
 });
 test('newer database schemas are refused without downgrading their version',()=>{
   const dir=mkdtempSync(join(tmpdir(),'p11-schema-')),file=join(dir,'rooms.sqlite');
-  try {const db=new DatabaseSync(file);db.exec('PRAGMA user_version=2');db.close();assert.throws(()=>new RoomsStore(file),/newer/);
-    const reopened=new DatabaseSync(file);assert.equal(reopened.prepare('PRAGMA user_version').get().user_version,2);reopened.close();
+  try {const db=new DatabaseSync(file);db.exec('PRAGMA user_version=3');db.close();assert.throws(()=>new RoomsStore(file),/newer/);
+    const reopened=new DatabaseSync(file);assert.equal(reopened.prepare('PRAGMA user_version').get().user_version,3);reopened.close();
   } finally {rmSync(dir,{recursive:true,force:true});}
 });
 test('real sockets isolate projects, switch rooms and deduplicate uncertain retries',async()=>{

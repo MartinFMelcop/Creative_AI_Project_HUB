@@ -19,7 +19,7 @@ function request(event,payload) {
     if (!socket?.connected) return reject(new Error('Reconnect before sending.'));
     socket.timeout(4000).emit(event,payload,(error,reply) => {
       if (error) reject(new Error('Delivery could not be confirmed.'));
-      else if (!reply?.ok) { const rejected=new Error(reply?.error || 'Request rejected.');rejected.rejected=true;reject(rejected); }
+      else if (!reply?.ok) { const rejected=new Error(reply?.error || 'Request rejected.');rejected.rejected=true;rejected.code=reply?.code;rejected.action=reply?.action;reject(rejected); }
       else resolve(reply);
     });
     // An uncertain attempt is retried explicitly with the same ID, never replayed offline.
@@ -39,6 +39,7 @@ function controls() {
     : 'Discussion and decisions share one saved timeline. Load earlier entries or export the complete record.';
   byId('older').disabled = joining;
   byId('send').textContent = byId('kind').value === 'decision' ? 'Record decision' : 'Send note';
+  window.WorkBoard?.controls();
   byId('connection').textContent = joining ? 'Opening project…' : online ? 'Connected · entries saved' : 'Offline · drafts kept';
 }
 function meta(message) {
@@ -48,7 +49,9 @@ function entryElement(message) {
   const li=document.createElement('li'); li.dataset.id=message.id; li.dataset.kind=message.kind;
   const label=document.createElement('p');label.className='entry-meta';label.textContent=meta(message);
   const body=document.createElement('p');body.className='entry-body';body.textContent=message.body;
-  li.append(label,body); return li;
+  li.append(label,body);
+  if(message.kind==='decision') {const button=document.createElement('button');button.textContent='Create action';button.className='decision-action';button.onclick=()=>window.WorkBoard?.newAction(message);li.append(button);}
+  return li;
 }
 function drawDecisions() { byId('decisions').replaceChildren(...decisions.map(entryElement)); }
 function pendingView() {
@@ -103,8 +106,9 @@ async function openRoom(id) {
     const d=draft();byId('body').value=d.body;byId('kind').value=d.kind;
     for (const message of entries) accepted(message);
     byId('entries').replaceChildren(...entries.map(entryElement));byId('entries').scrollTop=byId('entries').scrollHeight;
+    await window.WorkBoard?.load(result);
     unread=0;byId('latest').hidden=true;drawDecisions();drawRooms();pendingView();
-  } finally { if(generation===joinGeneration) { joining=false;const arrivals=queued;queued=[];for(const message of arrivals)receive(message);controls(); } }
+  } finally { if(generation===joinGeneration) { joining=false;const arrivals=queued;queued=[];for(const message of arrivals)receive(message);window.WorkBoard?.flush();controls(); } }
 }
 async function enter(saved) {
   identity=saved;await api('/me');save('p11-room-identity',identity);
@@ -113,6 +117,8 @@ async function enter(saved) {
   byId('participant').textContent=identity.name;byId('change').hidden=false;byId('welcome').hidden=true;byId('workspace').hidden=false;
   socket=io('/studio',{ auth:{ token:identity.token } });
   socket.on('project entry',receive);
+  socket.on('project action',r=>window.WorkBoard?.receive(r));
+  socket.on('project members',r=>window.WorkBoard?.members(r));
   socket.on('rooms changed',()=>refreshRooms().catch(e=>notice(e.message)));
   socket.on('connect',async()=>{
     online=true;controls();
@@ -137,7 +143,7 @@ async function sendAttempt(attempt) {
   pendingView();
 }
 byId('identity-form').onsubmit=async e=>{e.preventDefault();try { const saved=await api('/sessions',{method:'POST',body:JSON.stringify({name:byId('name').value})});await enter(saved);notice(''); }catch(e){notice(e.message);} };
-byId('change').onclick=()=>{socket?.disconnect();identity=null;room=null;online=false;drafts={};entries=[];decisions=[];byId('entries').replaceChildren();byId('decisions').replaceChildren();save('p11-room-identity',null);byId('workspace').hidden=true;byId('welcome').hidden=false;byId('change').hidden=true;byId('participant').textContent='';byId('name').focus();};
+byId('change').onclick=()=>{window.WorkBoard?.reset();socket?.disconnect();identity=null;room=null;online=false;drafts={};entries=[];decisions=[];byId('entries').replaceChildren();byId('decisions').replaceChildren();save('p11-room-identity',null);byId('workspace').hidden=true;byId('welcome').hidden=false;byId('change').hidden=true;byId('participant').textContent='';byId('name').focus();};
 byId('room-form').onsubmit=async e=>{e.preventDefault();try {const created=await api('/rooms',{method:'POST',body:JSON.stringify({name:byId('room-name').value})});await refreshRooms();await openRoom(created.id);byId('room-name').value='';notice('Project created.');}catch(e){notice(e.message);} };
 for (const id of ['body','kind']) byId(id).addEventListener('input',()=>{if(room){draft().body=byId('body').value;draft().kind=byId('kind').value;saveDrafts();controls();}});
 byId('compose').onsubmit=async e=>{e.preventDefault();if(!room||!online||joining||draft().attempt)return;

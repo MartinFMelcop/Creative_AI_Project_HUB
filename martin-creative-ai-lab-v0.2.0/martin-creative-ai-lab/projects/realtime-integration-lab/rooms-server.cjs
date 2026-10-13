@@ -26,6 +26,9 @@ function createRoomsServer({ dbPath = ':memory:' } = {}) {
     res.status(201).json(room);
   }));
   app.get('/api/studio/rooms/:id/history',route((req,res) => res.json(store.history(req.params.id,req.query.before === undefined ? undefined : Number(req.query.before)))));
+  app.get('/api/studio/rooms/:id/actions',route((req,res)=>res.json(store.work.snapshot(req.params.id))));
+  app.get('/api/studio/rooms/:id/action-attempts/:attempt',route((req,res)=>res.json(store.work.receipt(req.participant,req.params.id,req.params.attempt))));
+  app.get('/api/studio/rooms/:id/actions/:action/history',route((req,res)=>res.json(store.work.history(req.params.action,req.params.id))));
   app.get('/api/studio/rooms/:id/export',route((req,res) => {
     res.set('Content-Disposition','attachment; filename="project-conversation.json"').json(store.export(req.params.id));
   }));
@@ -42,21 +45,29 @@ function createRoomsServer({ dbPath = ':memory:' } = {}) {
     function reply(ack, action) {
       if (typeof ack !== 'function') return;
       try { ack({ ok:true, ...action() }); }
-      catch (error) { ack({ ok:false,error:error.message }); }
+      catch (error) { ack({ ok:false,error:error.message,...(error.code==='conflict'?{code:'conflict',action:error.action}:{}) }); }
     }
     socket.on('join project',(roomId,ack) => reply(ack,() => {
       const room = store.room(roomId);
       if (socket.data.roomId) socket.leave(socket.data.roomId);
       socket.data.roomId = room.id;
       socket.join(room.id);
+      store.work.join(room.id,socket.data.session);
+      namespace.to(room.id).emit('project members',{roomId:room.id,members:store.work.members(room.id)});
       // Synchronous DB snapshot and namespace join cannot interleave an append.
-      return { room, ...store.history(room.id), decisions:store.decisions(room.id) };
+      return { room, ...store.history(room.id), decisions:store.decisions(room.id),...store.work.snapshot(room.id) };
     }));
     socket.on('project entry',(payload,ack) => reply(ack,() => {
       if (payload?.roomId !== socket.data.roomId) throw new Error('Join this project before sending.');
       const result = store.append(socket.data.session,payload);
       if (result.inserted) namespace.to(payload.roomId).emit('project entry',result.message);
       return { message:result.message, duplicate:!result.inserted };
+    }));
+    socket.on('project action',(payload,ack)=>reply(ack,()=>{
+      if(payload?.roomId!==socket.data.roomId)throw new Error('Join this project before changing actions.');
+      const result=store.work.apply(socket.data.session,payload);
+      if(!result.duplicate)namespace.to(payload.roomId).emit('project action',result);
+      return result;
     }));
   });
   server.once('close',() => store.close());

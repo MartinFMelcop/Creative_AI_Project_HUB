@@ -92,7 +92,7 @@ test('a replaced manifest cannot authorize changed schema, broken references or 
     ['trigger',"CREATE TRIGGER altered AFTER INSERT ON entries BEGIN DELETE FROM entries; END",/schema/],
     ['reference',"PRAGMA foreign_keys=OFF; UPDATE entries SET session_id='missing'",/references/],
     ['content',"UPDATE entries SET body=''",/entry/],
-    ['future','PRAGMA user_version=2',/schema/],
+    ['future','PRAGMA user_version=3',/schema/],
     ['sequence','UPDATE sqlite_sequence SET seq=0',/sequence/]
   ]) {
     const bundle=join(f.dir,name);await createBackup(f.file,bundle);

@@ -1,10 +1,10 @@
 # SEED — Martin Creative AI Lab
 
-**Version:** 0.18.0
+**Version:** 0.19.0
 **Data-base:** 10 de outubro de 2026  
 **Autor e responsável pelo portfólio:** Martin Melcop Neto  
 **Working language:** English for new documentation, plans, code comments, UI, and reports. Preserve original creative titles and historical source languages.
-**Current state:** P05 Cinderwatch 0.1.0 is a new native C# tactical rescue campaign: three roles/encounters, announced actions, persistent supplies, salvage and a conditional ending. Source and compiled Godot .NET project are executed, including the pack outside source with runtime-only .NET and OpenGL review. P06 motion and other destinations remain preserved; independent play and commercial quality remain unverified.
+**Current state:** P11 Project Rooms 0.4.0 connects recorded decisions to assigned work, blockers, completion and audited reopening. Transactional revisions, browser draft/conflict review, immutable retry receipts and schema-1/2 recovery are executed. Native/literary/music destinations remain preserved; human usability, public operation and commercial quality remain unverified.
 
 > Construir um laboratório autoral em Git que transforma ideias, obras e experimentos em produtos pequenos, sistemas reutilizáveis e evidências técnicas verificáveis. A IA participa da criação e execução; Martin desenvolve sua capacidade de especificar, compreender, selecionar, corrigir, validar e explicar os resultados.
 
@@ -46,14 +46,14 @@ Se apenas este arquivo estiver disponível, ele é suficiente para iniciar a Fas
 |---|---|
 | Repository | MartinFMelcop/Creative_AI_Project_HUB; actual Git root `/workspace/Creative_AI_Project_HUB`; lab remains nested in its original package directory |
 | Preserved sources | 175 Rave Master texts and 3 WebSocket files; unchanged ZIP and inventory; not a complete RMXP backup |
-| Primary workstream | P05 Cinderwatch: complete native tactical rescue campaign |
-| Runtime execution | C#/.NET 10 domain and Godot .NET 4.6.3; direct project reference; delivered owned assemblies run outside source with runtime-only .NET |
-| Current verification | Four complete salvage routes, meaningful contrasts, native controls/keyboard, forecast isolation, save/failure/replay, deadlines and actual OpenGL frames; `evidence/cinderwatch/RUN.json` |
-| Historical verification | P06 0.3.0 motion/media and other prior evidence retained; not rerun as this milestone's creative validation |
-| Next action | Compare P05 unassisted tactical play with P01 strategy, P10 dramatic progression, P03 listening/play, P04 readers and P11 real recovery use |
-| Other seeds | P01 0.2.0, P03 0.2.0, P04 0.1.0, P06 0.3.0, P07 0.2.0, P08 0.3.0, P10 0.4.0, P11 0.3.0 and P02 0.2.1 preserved |
-| Transfer / shared status | No code/media transfer or shared framework promoted; historical archive unchanged |
-| Portfolio / attribution | Clean `4725d75` matched fetched main. Martin authorizes portfolio/main; Codex implementation/review and declared synthetic fixtures. No independent play or hosting deployment |
+| Primary workstream | P11 decision-to-action collaboration: responsibility, progress, blockers and recorded outcomes |
+| Runtime execution | Existing Node 24/SQLite/Socket.IO application; separate conversation/actions views, atomic updates and live backup |
+| Current verification | Full 73-test P11 suite, final 13 action checks, two-context Chromium journeys, uncertain saves, conflicts, recovery and actual 0.3.0 migration; `evidence/realtime-chat/ACTIONS_RUN.json` |
+| Historical verification | Prior native, music, story and workspace evidence retained; not inherited as new creative validation |
+| Next action | Compare real team handoff with P01 rival strategy, P10 dramatic progression, native unassisted play and P03/P04 listening/readers |
+| Other seeds | P01 0.2.0, P03 0.2.0, P04 0.1.0, P05 0.1.0, P06 0.3.0, P07 0.2.0, P08 0.3.0, P10 0.4.0 and P02 0.2.1 preserved |
+| Transfer / shared status | Existing transfers/archive preserved; no portfolio shared framework or candidate evaluation promoted |
+| Portfolio / attribution | Clean `3cac6b9` matched fetched main. Martin authorizes implementation/main; Codex development/review and declared synthetic participants. No independent human approval |
 
 Registry evidence paths must resolve to existing files inside the lab; working
 paths must be directories and legacy-source IDs must exist. This documentary
@@ -489,20 +489,32 @@ scene 0.1.3 remain unchanged. Its oracle compares actual choices, trace/state an
 epilogues; browser checks execute the complete workflow. No full RPG equivalence,
 independent reader approval, shared engine or commercial product is claimed.
 
-### P11 — Real-time Integration Lab / WebSocket
+### P11 — Real-time Integration Lab / Project Rooms
 
-The historical snapshot only logs incoming messages. P11 0.3.0 now has
-[Project Rooms](projects/realtime-integration-lab/README.md): local participant,
-create/share/switch projects, saved notes/decisions, history recovery, drafts,
-explicit idempotent retries, complete JSON export and operator workspace recovery.
-Node 24 built-in SQLite adds persistence and consistent live WAL backup without
-another dependency/service. Inspect private bundles, restore into a new database
-and resume from retained browser identities; later writes and browser storage are
-outside the snapshot. Existing files/sidecars are refused. Original ephemeral
-protocol remains unchanged. All trusted participants can open all rooms; chosen
-names are not verified accounts. Human usability, power-loss/off-site recovery
-and public operation remain unverified. P02 retains its pinned snapshot/dependency
-graph and calibrated TR-009; no evaluation task/transfer is automatically expanded.
+The historical Socket.IO snapshot only logs messages. Current **0.4.0**
+[Project Rooms](projects/realtime-integration-lab/README.md) connects notes and
+decisions to assigned actions: To do, In progress, Blocked and Done. Immutable
+source decisions and action histories record who changed each revision; completion
+requires an outcome and reopening a new reason. Ownership is responsibility,
+not an access role or independently verified delivery.
+
+Node 24/SQLite/Socket.IO fit the existing collaborative workflow. Version-checked
+atomic saves prevent silent stale overwrites; the browser preserves drafts for
+explicit comparison/reapplication, and uncertain attempts keep their immutable
+IDs. Receipt recovery never replaces a newer action version. Updates preserve
+the reading view; one active action draft per room can be resumed or discarded.
+
+SQL schema 2 migrates schema 1 transactionally. Backup format 1 supports both
+database schemas and validates the action audit/attempt history before new-file
+restore. Actual 0.3.0 code produced a verified old savepoint; retain it before an
+upgrade. Browser tokens/drafts and later writes remain outside the savepoint.
+Export keeps schema-1 project/entries fields and adds complete action histories.
+
+[Execution](evidence/realtime-chat/ACTIONS_RUN.json) separates real server/browser
+checks from Codex usability judgment. All trusted participants can open all rooms;
+chosen names are not accounts. Legacy exercise, P02 pinned snapshot/calibration
+and dependency graph are retained. Independent team use, public operation, scale
+and commercial interest remain unverified.
 
 ## 6. Arquitetura do laboratório
 

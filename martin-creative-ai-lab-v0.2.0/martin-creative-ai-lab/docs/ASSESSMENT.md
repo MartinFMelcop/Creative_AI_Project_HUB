@@ -1,23 +1,24 @@
-# Current assessment — a complete native tactical destination
+# Current assessment — decisions that become completed work
 
-Clean `4725d75` matches fetched main. Read instructions, state/registry/seed,
-recent decisions/history, actual P01 agents/native workflow and P10 morning
-scenes/rules. Source inventory has no P05 game package; P10's archive is separate.
+Clean `3cac6b9` matches fetched main. Read current records/history, actual P11
+store/server/browser/backup, P01 rivals and P04 opening prose. Recent substantive
+work spans native games, literature, music and recovery; the latest cycles leaned
+toward games. Select by the product gap, not mandatory rotation or installed SDKs.
 
 | Opportunity | Evidence and decision |
 |---|---|
-| P05 usable destination | Historical AGI/rows/states seed has no executable consumer. A new three-role rescue campaign can connect tactical choices, consequences and progression now; selected. |
-| P01 strategy | Native economy and heuristic rivals exist. Broader strategy/progression is valuable; player decisions would guide it better than another speculative mechanism. |
-| P10 progression | Actual morning scenes/relief outcomes already connect two days. Another chapter needs a distinct dramatic purpose and player response. |
-| P03/P04 feedback | Real songs/stories exist; independent listening/play/reading is a larger remaining gap than automatic new content. |
-| P06/P11 | Recent motion and full recovery milestones are complete. Actual play/recovery use should guide further work. |
+| P11 execution handoff | Saved notes/decisions and recovery exist, but no assigned action, blocker/outcome or concurrent editing workflow. Connect a complete auditable handoff; selected. |
+| P01 rival strategy | Actual agents score one immediate action and route toward fixed goals. Longer planning and opponent reactions are a strong separate gameplay milestone. |
+| P04 readers/content | Complete prose/editions exist. No independent reader evidence; assess connected scenes before speculative expansion. |
+| P05/P06 native play | Recent campaign/motion milestones work. Unassisted choices and feedback should guide another native content pass. |
+| P03/P10 | Songs and two-day narrative exist. Listening/player response and a distinct dramatic purpose outrank automatic stage/chapter accumulation. |
 
-C# gives a pure domain; Godot .NET directly presents a native turn-based game.
-Both compiled and executed; Unity was not found. This fits the intended game
-without migrating another working product or copying P10 combat. Compare the
-new usable campaign against the absent P05 runtime, not against an invented
-historical game. See [execution](../evidence/cinderwatch/RUN.json) for bounded
-strategy comparisons and implementer review. No independent enjoyment evidence.
+Node 24/SQLite/Socket.IO suit P11's real-time data workflow; native tools are
+available for the game alternatives. No service/framework migration. Preserve
+trusted-room semantics, old data/backups, prior exercise and P02 context. The
+new owner/status/history view makes the improvement visible without a changelog.
+[Execution](../evidence/realtime-chat/ACTIONS_RUN.json) bounds technical checks
+and implementer visual judgment; it does not prove team adoption or demand.
 
 # Previous assessment — a usable native economy board
 

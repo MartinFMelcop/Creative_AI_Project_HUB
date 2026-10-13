@@ -3,29 +3,31 @@ const { DatabaseSync, backup } = require('node:sqlite');
 const { createHash } = require('node:crypto');
 const fs = require('node:fs');
 const path = require('node:path');
-const { RoomsStore } = require('./rooms-store.cjs');
+const {initialize}=require('./rooms-schema.cjs');
+const {validateActionData}=require('./rooms-actions.cjs');
 const VERSION = require('./package.json').version;
 const FORMAT = 'p11-workspace-backup';
 const IMAGE = 'workspace.sqlite';
 const MANIFEST = 'manifest.json';
 const hex = /^[a-f0-9]{64}$/;
 const uuid = /^[a-f0-9]{8}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{12}$/;
-let expectedSchema;
+const expectedSchemas=new Map();
 
 function schema(db) {
   return db.prepare('SELECT type,name,tbl_name,sql FROM sqlite_schema ORDER BY name').all()
     .map(row => ({ ...row, sql: row.sql?.replace(/\s+/g,' ').trim() ?? null }));
 }
-function validateDatabase(filename) {
+function validateDatabase(filename,expectedVersion) {
   const db = new DatabaseSync(filename, { readOnly:true, allowExtension:false });
   try {
     db.exec('PRAGMA query_only=ON; PRAGMA trusted_schema=OFF; PRAGMA busy_timeout=5000;');
-    if (db.prepare('PRAGMA user_version').get().user_version !== 1) throw new Error('Unsupported workspace schema; use the matching Project Rooms version.');
-    if (!expectedSchema) {
-      const reference = new RoomsStore(':memory:');
-      try { expectedSchema = schema(reference.db); } finally { reference.close(); }
+    const version=db.prepare('PRAGMA user_version').get().user_version;
+    if (![1,2].includes(version)||(expectedVersion!==undefined&&version!==expectedVersion)) throw new Error('Unsupported workspace schema; use the matching Project Rooms version.');
+    if (!expectedSchemas.has(version)) {
+      const reference = new DatabaseSync(':memory:');
+      try { initialize(reference,version);expectedSchemas.set(version,schema(reference)); } finally { reference.close(); }
     }
-    if (JSON.stringify(schema(db)) !== JSON.stringify(expectedSchema)) throw new Error('Database is not the supported Project Rooms schema.');
+    if (JSON.stringify(schema(db)) !== JSON.stringify(expectedSchemas.get(version))) throw new Error('Database is not the supported Project Rooms schema.');
     if (db.prepare('PRAGMA integrity_check').all().some(row => row.integrity_check !== 'ok')) throw new Error('SQLite integrity check failed.');
     if (db.prepare('PRAGMA foreign_key_check').all().length) throw new Error('Workspace contains broken authorship or project references.');
     const validText = (value,max) => typeof value === 'string' && !!value.trim() && value === value.trim() && value.length <= max;
@@ -43,13 +45,17 @@ function validateDatabase(filename) {
     const totals = db.prepare(`SELECT (SELECT count(*) FROM sessions) AS participants,
       (SELECT count(*) FROM rooms) AS projects, count(*) AS entries,
       coalesce(sum(kind='decision'),0) AS decisions, coalesce(max(id),0) AS latest_id FROM entries`).get();
+    if(version===2)Object.assign(totals,validateActionData(db));
     const projects = db.prepare(`SELECT r.id,r.name,count(e.id) AS entries,
       coalesce(sum(e.kind='decision'),0) AS decisions, max(e.created_at) AS latest_entry_at
       FROM rooms r LEFT JOIN entries e ON e.room_id=r.id GROUP BY r.id ORDER BY r.id`).all();
     if (totals.participants > 5000 || totals.projects > 100 || projects.some(row => row.entries > 10000)) throw new Error('Workspace exceeds the supported capacity.');
     const sequence = db.prepare('SELECT name,seq FROM sqlite_sequence').all();
-    if (sequence.length > 1 || sequence.some(row => row.name !== 'entries' || !Number.isSafeInteger(row.seq) || row.seq < totals.latest_id || row.seq >= Number.MAX_SAFE_INTEGER) ||
-        (totals.entries && !sequence.length)) throw new Error('Invalid saved entry sequence.');
+    const sequences={entries:totals.latest_id,...(version===2?{action_events:totals.latest_action_event_id}:{})};
+    if(sequence.some(row=>!Object.hasOwn(sequences,row.name)||!Number.isSafeInteger(row.seq)||row.seq<sequences[row.name]||row.seq>=Number.MAX_SAFE_INTEGER)||
+       Object.entries(sequences).some(([name,last])=>last&&!sequence.some(row=>row.name===name)))throw new Error('Invalid saved entry/action sequence.');
+    if(version===2&&db.prepare('SELECT room_id FROM actions GROUP BY room_id HAVING count(*)>500').all().length)throw new Error('Workspace exceeds action capacity.');
+    if(version===2&&db.prepare('SELECT room_id FROM action_events GROUP BY room_id HAVING count(*)>10000').all().length)throw new Error('Workspace exceeds action history capacity.');
     return { ...totals, rooms:projects };
   } finally { db.close(); }
 }
@@ -87,11 +93,11 @@ async function createBackup(dbPath,out) {
     await backup(source,image);
     source.close(); source = null;
     fs.chmodSync(image,0o600);
-    const standalone = new DatabaseSync(image,{allowExtension:false});
-    try { standalone.exec('PRAGMA journal_mode=DELETE;'); } finally { standalone.close(); }
+    const standalone = new DatabaseSync(image,{allowExtension:false});let schemaVersion;
+    try { standalone.exec('PRAGMA journal_mode=DELETE;');schemaVersion=standalone.prepare('PRAGMA user_version').get().user_version; } finally { standalone.close(); }
     const summary = validateDatabase(image);
     const manifest = { format:FORMAT, version:1, created_at:new Date().toISOString(),
-      application_version:VERSION, schema:1, database:{file:IMAGE,...await fingerprint(image)}, summary };
+      application_version:VERSION, schema:schemaVersion, database:{file:IMAGE,...await fingerprint(image)}, summary };
     flush(image);
     fs.writeFileSync(path.join(out,MANIFEST),JSON.stringify(manifest,null,2)+'\n',{flag:'wx',mode:0o600});
     flush(path.join(out,MANIFEST)); flush(out);
@@ -114,7 +120,7 @@ async function inspectBackup(from) {
   if (!manifest || Array.isArray(manifest) || Object.keys(manifest).sort().join('|') !== fields.sort().join('|') ||
       Object.keys(manifest.database ?? {}).sort().join('|') !== 'bytes|file|sha256' ||
       typeof manifest.application_version !== 'string' || !/^\d+\.\d+\.\d+$/.test(manifest.application_version)) throw new Error('Unsupported backup manifest fields.');
-  if (manifest?.format !== FORMAT || manifest.version !== 1 || manifest.schema !== 1 ||
+  if (manifest?.format !== FORMAT || manifest.version !== 1 || ![1,2].includes(manifest.schema) ||
       manifest.database?.file !== IMAGE || !hex.test(manifest.database.sha256) ||
       !Number.isSafeInteger(manifest.database.bytes) || manifest.database.bytes <= 0 ||
       typeof manifest.created_at !== 'string' || !Number.isFinite(Date.parse(manifest.created_at))) throw new Error('Unsupported or invalid backup manifest.');
@@ -122,7 +128,7 @@ async function inspectBackup(from) {
   regularFile(image);
   const actual = await fingerprint(image);
   if (actual.bytes !== manifest.database.bytes || actual.sha256 !== manifest.database.sha256) throw new Error('Backup checksum/size mismatch. No recovery was performed.');
-  const summary = validateDatabase(image);
+  const summary = validateDatabase(image,manifest.schema);
   if (JSON.stringify(summary) !== JSON.stringify(manifest.summary)) throw new Error('Backup inventory does not match the database.');
   return { operation:'inspect', bundle:from, ...manifest };
 }
@@ -141,7 +147,7 @@ async function restoreBackup(from,dbPath,expectedHash) {
     // Check the actual staged bytes as well: never publish a changed source after inspection.
     const actual = await fingerprint(image);
     if (actual.sha256 !== inspected.database.sha256 || actual.bytes !== inspected.database.bytes) throw new Error('Backup changed during recovery.');
-    const summary = validateDatabase(image);
+    const summary = validateDatabase(image,inspected.schema);
     flush(image); checkDestination();
     // Exclusive hard-link publication is atomic and cannot replace an existing main file.
     fs.linkSync(image,dbPath); flush(path.dirname(dbPath));

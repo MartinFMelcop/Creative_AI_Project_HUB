@@ -1,42 +1,40 @@
 # Lab state
 
-**Updated:** 2026-10-12 (America/Sao_Paulo). **Seed:** 0.18.0.
-**Current milestone:** P05 Cinderwatch 0.1.0.
+**Updated:** 2026-10-13 (UTC). **Seed:** 0.19.0.
+**Current milestone:** P11 Project Rooms 0.4.0.
 
-[Run the native campaign](../projects/cinderwatch/README.md). P05 previously had
-only historical context. A new three-encounter rescue now connects Rook's cover,
-Vale's screened-target attacks/interrupts and Neri's limited treatment to fixed
-initiative, front/rear formation and visible enemy intentions. Injuries/supplies
-carry forward; two one-time salvage choices and a conditional ending complete it.
-The repair drone and alternating Governor require different tactical responses.
+[Run Project Rooms](../projects/realtime-integration-lab/README.md). The former
+conversation/decision workspace now carries decisions into assigned actions,
+progress, blockers, completion and reopening with a new reason. Sources remain
+immutable; every change records its author/revision. Separate views, owner filters,
+history and complete export make the handoff inspectable.
 
-C#/.NET 10 owns the rules; Godot .NET 4.6.3 directly consumes them. The native UI
-offers real forked previews, confirmation, deliberate enemy pacing, keyboard,
-rules/logs, accepted-action autosave/replay, error feedback and restart. A compiled
-owned-assembly ZIP runs with the engine/runtime; no browser bridge or OS export.
+SQLite commits each revision and event atomically. Stale edits keep their draft
+and require explicit comparison/reapplication. Immutable attempts and receipts
+recover uncertain committed/uncommitted sends without duplication or reverting
+newer work. Offline changes require explicit saves. Updates preserve the current
+reading view; drafts are scoped to participant/room and protected from replacement.
 
-[Execution](../evidence/cinderwatch/RUN.json) records domain/engine checks, four
-complete native salvage routes, save failure/invalid replay, deadline loss, and
-the delivered consumer outside source with runtime-only .NET/no SDK. Actual
-OpenGL frames were reviewed. Strike-only loses the bounded campaign comparison;
-Brace-only reaches the deadline. Early supplies, clipped labels and down-hero
-ending continuity were revised. These are Codex fixtures/review, not human play.
+Schema 2 upgrades schema 1 transactionally; failed upgrades roll back. Backup
+format 1 inspects/restores both database versions, including audit/attempt state.
+An actual 0.3.0 savepoint was restored and migrated with identity/records intact.
+Keep an old savepoint before upgrade; older applications cannot open schema 2.
 
-Started clean at `4725d75`, matching fetched main. Compared P01 strategy and P10
-progression plus P03/P04 feedback and completed P11/P06 work. Selected P05's
-missing usable destination over automatic expansion of another existing product.
-Unity was not located; actual .NET/Godot .NET compiled and ran. Historical archive
-and other project implementations/media remain preserved; no transfer promoted.
-GitHub main is authorized; no Sites deployment.
+[Execution](../evidence/realtime-chat/ACTIONS_RUN.json): full P11 suite 73 passes;
+final 13 workflow checks pass after reopening/late-script review. Two Chromium
+contexts exercise the complete handoff; declared fixtures cover lost confirmation,
+newer peer writes, restore, corruption and failed migration. Desktop/narrow frames
+reviewed by Codex. These are synthetic tests, not independent collaborator approval.
 
-Technical M4 is bounded to this destination, not the historical RPG. Functional
-geometric UI has no soundtrack/character animation. Native pack requires Godot
-.NET 4.6.3 and .NET 10; no independent balance/art/accessibility/platform or market
-approval. Next compare unassisted P05 tactics with P01 strategy, P10's dramatic
-purpose, P03 physical listening/play, P04 readers and P11 recovery use.
+Started clean at `3cac6b9`, matching fetched main. Compared actual P01 one-step
+rivals, P04 prose/feedback and completed native/game/music work. P11's missing
+execution handoff offered a concrete product workflow. Retain Node/SQLite/Socket.IO;
+dependency graph, legacy protocol, P02 snapshot, other projects/media and archive
+remain preserved. GitHub main is authorized; no service hosting deployment.
 
-Closeout CI found P03's existing touch test assumed a perfect head despite CDP
-latency. A real 49.7 ms Good input correctly scored 700. The test now observes
-actual head timing and verifies the exact tail award/zero early score/combo; three
-local Chromium runs pass. P03 product rules/music remain unchanged. See the
-execution followup and final-head GitHub workflow for the full result.
+Trusted local prototype: all participants can open/edit rooms; chosen names and
+ownership are not verified accounts/permissions. Outcomes are recorded text,
+not artifact certification. Browser storage is separate from backups. Independent
+team usability, large workspace performance, public accounts and market demand
+remain unverified. Next compare real handoff needs with P01 rival strategy, P10
+dramatic progression and unassisted native/music/reader feedback.

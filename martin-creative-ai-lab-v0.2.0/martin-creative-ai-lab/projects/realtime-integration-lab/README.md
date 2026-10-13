@@ -1,11 +1,11 @@
 # P11 — Project Rooms / Live exchange
 
-**Version:** 0.3.0. A local project workspace with remembered participants,
-separate conversations, saved notes/decisions, recoverable history, JSON export
-and an operator workflow for consistent live backups and full workspace recovery.
+**Version:** 0.4.0. A local project workspace with remembered participants,
+separate conversations, saved notes/decisions, recoverable history, JSON export,
+assigned actions, blockers/outcomes, change history and consistent workspace recovery.
 The original ephemeral exercise remains available with its unchanged protocol.
 
-![Actual Chromium workspace with fictional test participants](../../evidence/realtime-chat/rooms-preview.png)
+![Actual action workflow with fictional Chromium participants](../../evidence/realtime-chat/actions-preview.png)
 
 ## Run Project Rooms
 
@@ -17,7 +17,7 @@ npm ci
 npm run rooms
 # Open http://127.0.0.1:3000/studio/ in two browsers or tabs.
 npm test
-# New workflow only:
+# Room discussion/reconnection checks:
 npm run test:rooms
 ```
 
@@ -25,10 +25,14 @@ npm run test:rooms
 2. Share its browser address or Copy project link. Another participant chooses
    their own name; the address selects the same room.
 3. Send a discussion note or record a decision. Both are saved before broadcast;
-   decisions also appear in a separate project record.
+   decisions also appear in a separate project record. Use **Create action** to
+   turn one into work, or open Actions to create an independent action.
 4. Switch projects without losing drafts, reload, reconnect or restart the server.
    Your remembered local identity reopens the saved room and its latest entries.
-5. Load earlier entries or Export record to download every note/decision as JSON.
+5. Assign a participant who has joined the room. Move work through To do, In
+   progress, Blocked and Done; blockers/completion require a recorded update.
+6. Load earlier entries or Export record for all notes, decisions, actions and
+   action history. `Assigned to me` and `Unassigned` filter the action board.
 
 `ROOMS_DB` selects the SQLite file; default `data/rooms.sqlite` is ignored by Git.
 `HOST`/`PORT` default to `127.0.0.1:3000`. CLI assets/database paths work outside
@@ -40,7 +44,8 @@ the rooms entry explicitly requires Node 24. No dependencies were added or upgra
 
 ## Persistence and delivery contract
 
-SQLite schema 1 has sessions, unique project names and ordered entries with
+SQLite schema 2 adds room participants, actions and action events to the original
+sessions, unique project names and ordered entries with
 foreign keys/indexes. Session tokens are random, stored as hashes in the database
 and remembered by this browser. Display names are chosen, not verified accounts.
 All participants in this trusted workspace can open every room; stream separation
@@ -65,14 +70,59 @@ project. Export is a consumable record, not a database restore/import tool.
 Use the workspace recovery workflow below to preserve full continuation.
 Do not copy a running WAL database as though its main file alone were complete.
 
+## Assigned work and concurrent changes
+
+A decision source stays immutable; several actions can implement one decision.
+Every action records title, optional owner, status, update/outcome and revision.
+Ownership communicates responsibility; it is not an access-control role. All
+trusted collaborators can update work. Done is the participant's stated outcome,
+not automatic verification of an artifact. Reopening requires a new reason and moves
+work to To do or In progress. The history shows who changed each revision.
+
+A save checks its expected revision and commits the action plus its event in one
+transaction. A stale draft keeps its fields and displays the current version;
+**Use latest version** replaces it explicitly. **Reapply my draft for review**
+keeps edits against the new revision, then requires another Save. Other people's
+updates keep the current view and closed editor intact. Each room/participant
+keeps one active action draft: close/resume it, or discard it explicitly before
+starting another. Room switches and reloads preserve that draft.
+
+Lost confirmation retains a locked, immutable attempt. On reconnect/reload, an
+accepted-attempt receipt resolves it, even if others subsequently changed the
+work. An uncommitted attempt requires **Retry same action attempt**; reconnecting
+never sends offline changes automatically. A replay returns the original accepted
+snapshot; the board retains the highest revision. Browser storage is separate
+from the SQLite backup, including action drafts and pending attempts.
+
+The UI shows the latest 50 events for an action; export includes its complete
+history. Schema-1 JSON keeps its original project/entries fields and adds an
+`actions` array with histories. Capacity: 500 actions and 10,000 action events per
+project. Actions are retained for audit.
+
+```sh
+npm run test:actions
+```
+
+[Action workflow execution](../../evidence/realtime-chat/ACTIONS_RUN.json) records
+real two-context Chromium cooperation, uncertain committed/uncommitted saves,
+revision conflicts, narrow layout, restart/recovery, literal text and declared
+fixtures. Codex inspection is not independent collaborator/accessibility approval.
+
 ## Back up, inspect and recover a workspace
 
-The Node 24 operator CLI runs locally; there is no backup HTTP endpoint. It can
+The Node 24 operator CLI runs locally; there is no backup HTTP endpoint.
+The backup format remains version 1; database schemas 1 and 2 are supported.
+**Before upgrading an existing workspace, retain a 0.3.0 savepoint.** Opening with
+0.4.0 migrates schema 1 to 2 transactionally; failed migration rolls back. Older
+schema-1 bundles remain inspectable/restorable and upgrade on application open.
+The 0.3.0 application cannot open schema 2; downgrade by selecting a retained old
+backup in a new file, not by rewriting the version header. The current CLI can
 snapshot a **running** Project Rooms database using SQLite's online backup API,
 including committed WAL pages. It produces a new private directory containing
 `workspace.sqlite` and `manifest.json`: date, application/schema versions,
 SHA-256/size and per-project inventory. The database also retains participant
-token hashes, authorship, immutable attempt IDs and entry sequence. The report
+token hashes, authorship, immutable attempt IDs and sequences, plus action
+assignments, complete change history and accepted-action retry receipts. The report
 does not print credentials or entry bodies. Keep the entire bundle private;
 `data/` and `backups/` are ignored by Git, and **no sample live backup is shipped**.
 
@@ -97,7 +147,9 @@ files, links and SQLite journal/sidecar paths are refused; there is no force or
 overwrite option. An interrupted backup with no completed manifest is refused.
 
 Inspection checks checksum/size, exact schema, SQLite integrity, foreign keys,
-data contracts, capacity, entry sequence and matching inventory. Recovery checks
+data contracts, capacity, entry/action sequences and matching inventory. Schema 2
+also verifies contiguous action revisions, canonical commands, snapshots and their
+links/owners before publishing a restored file. Recovery checks
 the staged bytes again before exclusive, atomic file publication. It never opens
 the destination as a live workspace or replaces a running database. POSIX
 bundles are created with directory mode 0700 and files 0600; files/directories

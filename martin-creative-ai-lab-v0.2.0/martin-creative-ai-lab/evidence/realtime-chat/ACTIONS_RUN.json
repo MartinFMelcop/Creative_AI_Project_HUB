@@ -1,0 +1,109 @@
+{
+  "project_id": "P11",
+  "version": "0.4.0",
+  "date_utc": "2026-10-13",
+  "baseline_commit": "3cac6b99dfe5ea802ee3f69d44ed0a1dc1c47f0f",
+  "before": "Persistent conversations and decisions, complete export and live recovery; no assigned execution workflow.",
+  "after": "Decision-linked/independent actions, joined-room owners, four states, stated outcomes, reopening reasons, complete audit, browser drafts/conflicts/receipts and schema-compatible recovery.",
+  "environment": {
+    "node": "24.19.0",
+    "sqlite": "3.53.3",
+    "chromium": "154.0.8037.57",
+    "os": "Debian Linux x86_64",
+    "viewports": [
+      "1440x1000",
+      "390x844"
+    ],
+    "dependency_graph_changed": false
+  },
+  "executed": [
+    {
+      "command": "CHROMIUM_PATH=/usr/bin/chromium npm test",
+      "passed": 73,
+      "failed": 0,
+      "scope": "Final code: retained legacy/room/recovery suites and new action workflows, 73 passed; 61.7 seconds."
+    },
+    {
+      "command": "CHROMIUM_PATH=/usr/bin/chromium npm run test:actions",
+      "passed": 13,
+      "failed": 0,
+      "scope": "Final code: nine storage/socket/migration/recovery checks and four Chromium journeys."
+    },
+    {
+      "command": "Execute actual rooms-store/rooms-backup/package from baseline commit; old live backup -> new inspect/restore/open/action/backup",
+      "exit_code": 0,
+      "result": {
+        "original_commit": "3cac6b99dfe5ea802ee3f69d44ed0a1dc1c47f0f",
+        "original_application": "0.3.0",
+        "old_schema": 1,
+        "new_schema": 2,
+        "identity_preserved": true,
+        "entries_preserved": true,
+        "decision_link": true,
+        "summary": {
+          "participants": 1,
+          "projects": 1,
+          "entries": 1,
+          "decisions": 1,
+          "latest_id": 1,
+          "actions": 1,
+          "action_updates": 1,
+          "latest_action_event_id": 1,
+          "rooms": [
+            {
+              "id": "7be1a219-e621-461f-8409-8dbf5644466b",
+              "name": "Prior workspace",
+              "entries": 1,
+              "decisions": 1,
+              "latest_entry_at": "2026-10-13T00:25:47.952Z"
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "browser_journeys": [
+    "Two distinct contexts: decision -> Neri assignment -> concurrent review/reapply -> blocker -> outcome -> history/export -> reopen",
+    "Committed unknown delivery: older receipt preserves a declared newer peer write; reload/offline draft/backup/restore and continuation",
+    "Uncommitted unknown delivery: explicit identical retry after reload; no automatic send, then recover/continue",
+    "390px: literal text, server-side conflict, latest-version review, close/resume draft, project switching and deliberately delayed action script"
+  ],
+  "data_contracts": [
+    "Action+event transaction and expected revision",
+    "Participant-scoped canonical attempt dedupe before revision rejection",
+    "Immutable decision source in the same room, joined-room owner",
+    "Blocker/outcome required; new reason on reopening",
+    "Schema-1 data and backup retained; schema-2 audit semantics validated",
+    "Failed migration rolls back; corrupt audit and future schemas refused",
+    "Export includes complete history and original entries; no credential material"
+  ],
+  "implementer_review": {
+    "verified": "Actual engines are Node/SQLite/server/Chromium; fictional participant inputs and declared loss/corruption fixtures. Final desktop/narrow frames inspected by Codex.",
+    "reasoned": "Assigned work and outcome history complete a useful handoff; explicit comparison avoids hidden overwrites. Peer updates initially reopened editors; corrected. Close/resume/discard protects the one active draft.",
+    "unverified": [
+      "Independent collaborator usability/accessibility",
+      "Large-workspace performance and other browsers/platforms",
+      "Verified accounts/access roles or public operation",
+      "Truth of user-entered completion outcomes and market interest"
+    ]
+  },
+  "compatibility": "Legacy exercise and P02 pinned task/dependency graph retained; SQL schema 2 needs the new app, old schema-1 savepoints remain restorable. JSON schema 1 adds actions. Browser storage/later writes remain separate from backup.",
+  "hashes": {
+    "projects/realtime-integration-lab/rooms-store.cjs": "6276cb4d9a00785d9110da85ef7cc9e3ef1fa1f8893e7486578a7f08c6288e85",
+    "projects/realtime-integration-lab/rooms-server.cjs": "16a85417f001ab7574cf446bcd487f0012c3cd39dd2e5c27f5c95e2ffdaf6418",
+    "projects/realtime-integration-lab/rooms-schema.cjs": "f66e2e3a350f0b00684dfbd5e9a6b08c45fb389b0a7212ae8a7113357aa14673",
+    "projects/realtime-integration-lab/rooms-actions.cjs": "8c33b5975546027184955ac74eebafc6b96324ed80d2dc1be7c7b4f4cbb00504",
+    "projects/realtime-integration-lab/rooms-backup.cjs": "b323743946f24dd688e888476898cd174f190cdb437fdc84454d71f926503b7f",
+    "projects/realtime-integration-lab/public/studio/client.js": "a7c32c43aeabc162cde569cc5b01a98e9ace6a8b367e56205dce8dfd43a66e66",
+    "projects/realtime-integration-lab/public/studio/actions.js": "24cd8d8e6a46f614c94f7c071f9b370237e63911fcd0875bbc3882dc374e52d6",
+    "projects/realtime-integration-lab/public/studio/index.html": "91f396128b50740ba2718420ec6d4496132b213c7193a7b134e3cbf08aa6369a",
+    "projects/realtime-integration-lab/public/studio/style.css": "eeea7affae47d22bdc5f8740d6d931d4be0c3fc9777fb786f9916766fe5370c6",
+    "projects/realtime-integration-lab/package.json": "2f3f9184c1a8edc76593d12cb0828d73f64cb090a12da3b68b0e955ce4fdaa66",
+    "projects/realtime-integration-lab/package-lock.json": "4fa4381c4fe44163480b33a56cbd0079352b97fd7986568886e76fd5ed822767",
+    "projects/realtime-integration-lab/tests/actions.test.cjs": "41b436ede178caad6c6de0d6cc3c462e31b8bc74839b15fae66f9633255b4072",
+    "projects/realtime-integration-lab/tests/actions-browser.test.cjs": "e59281ddb1cdb29cbe43e39897d07a43cfdf154de470614b0b9dc6b9459583ac",
+    "evidence/realtime-chat/actions-preview.png": "d9e44b8846a42793353c97beab51f4b11f5ae8a96ce2c89563841c783474e223",
+    "evidence/realtime-chat/actions-mobile.png": "ff89d63a2f0686f9644990d4e76e457b697c0edaf4686d8b66d55504435b8a90"
+  },
+  "verification_followup": "One workflow run timed out during test-server replacement. The fixture now closes HTTP keep-alive connections as well as Socket.IO; final 13 workflow checks and the full 73-test suite passed."
+}

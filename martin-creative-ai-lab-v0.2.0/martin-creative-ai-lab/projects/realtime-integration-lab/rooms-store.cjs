@@ -3,6 +3,8 @@ const { DatabaseSync } = require('node:sqlite');
 const { randomUUID, randomBytes, createHash } = require('node:crypto');
 const { mkdirSync } = require('node:fs');
 const { dirname } = require('node:path');
+const {initialize}=require('./rooms-schema.cjs');
+const {Actions}=require('./rooms-actions.cjs');
 
 const digest = (token) => createHash('sha256').update(token).digest('hex');
 function text(value, max, label) {
@@ -16,28 +18,11 @@ class RoomsStore {
   constructor(filename) {
     if (filename !== ':memory:') mkdirSync(dirname(filename), { recursive: true });
     this.db = new DatabaseSync(filename);
-    if (this.db.prepare('PRAGMA user_version').get().user_version > 1) {
-      this.db.close();
-      throw new Error('This database requires a newer Project Rooms version.');
-    }
-    this.db.exec(`PRAGMA foreign_keys=ON; PRAGMA journal_mode=WAL; PRAGMA busy_timeout=3000;
-      CREATE TABLE IF NOT EXISTS sessions (
-        id TEXT PRIMARY KEY, name TEXT NOT NULL, token_hash TEXT NOT NULL UNIQUE
-      );
-      CREATE TABLE IF NOT EXISTS rooms (
-        id TEXT PRIMARY KEY, name TEXT NOT NULL COLLATE NOCASE UNIQUE,
-        created_at TEXT NOT NULL
-      );
-      CREATE TABLE IF NOT EXISTS entries (
-        id INTEGER PRIMARY KEY AUTOINCREMENT,
-        room_id TEXT NOT NULL REFERENCES rooms(id),
-        session_id TEXT NOT NULL REFERENCES sessions(id),
-        client_id TEXT NOT NULL, kind TEXT NOT NULL CHECK(kind IN ('note','decision')),
-        body TEXT NOT NULL, created_at TEXT NOT NULL,
-        UNIQUE(session_id,client_id)
-      );
-      CREATE INDEX IF NOT EXISTS entries_room ON entries(room_id,id);
-      PRAGMA user_version=1;`);
+    try {
+      if(this.db.prepare('PRAGMA user_version').get().user_version>2)throw new Error('This database requires a newer Project Rooms version.');
+      this.db.exec('PRAGMA foreign_keys=ON; PRAGMA journal_mode=WAL; PRAGMA busy_timeout=3000;');
+      initialize(this.db);this.work=new Actions(this);
+    } catch(error) {this.db.close();throw error;}
   }
   session(name) {
     name = text(name, 40, 'Display name');
@@ -109,7 +94,7 @@ class RoomsStore {
     const room = this.room(roomId);
     const entries = this.db.prepare(`SELECT e.id,e.kind,e.body,e.created_at,s.name AS author
       FROM entries e JOIN sessions s ON s.id=e.session_id WHERE room_id=? ORDER BY e.id`).all(roomId);
-    return { schema:1, exported_at:new Date().toISOString(), project:room, entries };
+    return { schema:1, exported_at:new Date().toISOString(), project:room, entries, actions:this.work.export(roomId) };
   }
   close() { this.db.close(); }
 }
