@@ -1,0 +1,176 @@
+{
+  "project": "P06 / Veilbreak",
+  "version": "0.4.0",
+  "executed_at": "2026-10-13T19:13:13.450540+00:00",
+  "baseline_commit": "a9af690b4dfe08a2c4be78f215cc303ecd6fb8a9",
+  "environment": {
+    "platform": "Debian GNU/Linux 13 / Linux x86_64",
+    "engine": "4.6.3.stable.official.7d41c59c4",
+    "renderer": "OpenGL 4.5 core / Compatibility, Mesa 25.0.7-2+deb13u1, llvmpipe LLVM19.1.7 / Xorg dummy1280x800",
+    "physical_gamepad": false,
+    "audio_output": "No physical ALSA output; fallback Dummy. Real AudioServer samples captured in resource checks."
+  },
+  "verified": {
+    "before": {
+      "game_version": "0.3.0",
+      "input": "same native device-0 joypad events; fight positioning/stage declared",
+      "south_begins": false,
+      "stick_movement_px": 0.0
+    },
+    "after": {
+      "game_version": "0.4.0",
+      "input": "same native device-0 joypad events; fight positioning/stage declared",
+      "south_begins": true,
+      "stick_movement_px": 45.8335571289062
+    },
+    "export": {
+      "archive": "Official Godot_v4.6.3-stable_export_templates.tpz",
+      "published_sha256": "3fbe2c0e2dec9d537ab9ec97bcf8da91dcf23357fc51f67092dd068d839290a8",
+      "archive_bytes": 1255918323,
+      "release_template_sha256": "2c78919325d7f29fa7607287c7c1eeac367ea4c94e7b8b6f5f4c6b20492f73d0",
+      "method": "Full digest verified; fresh staged project import and actual --export-release Linux using the official standard release template; no editor binary renamed as the game.",
+      "package": "projects/veil-arena/dist/veilbreak-linux-0.4.0.zip",
+      "bytes": 32568885,
+      "entries": 6,
+      "player_requirements": "Linux x86_64 system/display/audio libraries and OpenGL3.3; no editor/SDK/.NET/Python/Node/source checkout for normal play."
+    },
+    "native_source": {
+      "checks": 30,
+      "failures": [],
+      "game_version": "0.4.0",
+      "physical_gamepad": false
+    },
+    "exported_resource_checks": {
+      "controls": {
+        "checks": 30,
+        "failures": [],
+        "game_version": "0.4.0",
+        "physical_gamepad": false
+      },
+      "encounter": {
+        "checks": 24,
+        "failures": []
+      },
+      "presentation": {
+        "audio_frames": 233472,
+        "checks": 26,
+        "display": "headless",
+        "failures": [],
+        "measured_peak": 0.841408967971802
+      },
+      "motion": {
+        "checks": 36,
+        "failures": []
+      }
+    },
+    "pad_full_fight": {
+      "hp": 1,
+      "mode": "victory",
+      "stats": {
+        "breaks": 1,
+        "damage_taken": 5,
+        "dodges": 6,
+        "hits": 26,
+        "patterns": [
+          "sweep",
+          "charge",
+          "wave"
+        ],
+        "phase_changes": 1,
+        "seals": 15,
+        "strikes": 11
+      },
+      "time": 55.5833333333315
+    },
+    "unchanged_keyboard_outcome": {
+      "boss_hp": 0.0,
+      "hp": 1,
+      "mode": "victory",
+      "stats": {
+        "breaks": 1,
+        "damage_taken": 5,
+        "dodges": 6,
+        "hits": 26,
+        "patterns": [
+          "sweep",
+          "charge",
+          "wave"
+        ],
+        "phase_changes": 1,
+        "seals": 15,
+        "strikes": 11
+      },
+      "time": 55.5833333333315
+    },
+    "release_window": {
+      "proof": {
+        "process": "actual distributed Linux release ELF",
+        "window": "Veilbreak — The Bell Warden",
+        "input": "XTest keyboard events on the release window",
+        "frames": 6,
+        "idle_wait_seconds": 32,
+        "editor_or_sdk_in_path": false,
+        "physical_gamepad": false
+      },
+      "workflow": "Actual final ZIP extracted outside checkout, ELF launched with PATH=/usr/bin:/bin. XTest keyboard events: begin, movement/blade/seal/dodge, pause, tactics, resume, actual idle defeat, restart. Exact raw1280x800 root framebuffer captures reviewed. Release process was terminated only for test cleanup.",
+      "boundary": "The release template lacks --script. It was not claimed to run test scripts or a full scripted victory. Exact released PCK ran those under the editor; direct ELF window proved actual runtime play with OS input."
+    },
+    "producer_failure": "A copied project with a real broken GDScript import returned engine output errors. Producer detected them despite Godot zero exit and wrote no invalid-output.zip; maintained sources remained intact.",
+    "package_checks": "Exact six entries, ZIP CRC, x86_64 ELF header, executable bit, PCK marker, correct Godot notices/provenance and separate SHA-256.",
+    "media_check": "16 WAV / 2 Ogg / 5 PNG / 32 atlas poses; all original hashes/formats/peaks/metadata pass.",
+    "preserved_files": {
+      "other_projects_evaluations_archive": 161,
+      "p06_media": 49,
+      "result": "All bytes equal inspected baseline; no new art/audio or historical recovery."
+    },
+    "documentary_checks": "11 projects/14 transfers/6 assets/2 sources, 262 local links and 11 + 11 validator/manifest failure regressions pass."
+  },
+  "reasoned_assessment": {
+    "reviewer": "Implementing Codex agent, not independent humans.",
+    "assessment": "A ready-to-run Linux player removes an editor-install barrier. Analog/digital pad input and current hints support a conventional desktop flow without changing combat incentives. Source/controller and actual release frames are readable; full hardware/usability and commercial evaluation remain separate.",
+    "refinements": [
+      "Rejected direct --script use on the release template; separated resource tests and actual executable-window verification.",
+      "Kept controller state separate from keyboard; inactive-pad disconnection now clears it without pausing an active keyboard player.",
+      "Caught real script import errors instead of trusting Godot zero exit; excluded test tools, source caches and unneeded masters from the player."
+    ]
+  },
+  "screenshots": {
+    "controller-title.png": {
+      "path": "evidence/veil-arena/controller-title.png",
+      "sha256": "209c7b47849a74666d71a1e6be90cc97cbab0eab3a77e4ea2352dc02e3863a3c",
+      "context": "Final source / standard editor, native synthetic joypad event; title hints.",
+      "editing": "None; actual framebuffer bytes encoded as PNG."
+    },
+    "release-tactics.png": {
+      "path": "evidence/veil-arena/release-tactics.png",
+      "sha256": "c86ac4164f97910b89e314224d72fdd2ac8e425691e5520cd48b7f5ecbe1657f",
+      "context": "Final distributed release ELF / X11 keyboard input, tactics/pause.",
+      "editing": "None; actual framebuffer bytes encoded as PNG."
+    },
+    "release-idle-result.png": {
+      "path": "evidence/veil-arena/release-idle-result.png",
+      "sha256": "98389078ac0f2948b59f41192263c920fdea262ca9aa8fcc1860eddfda362d26",
+      "context": "Final distributed release ELF / real idle defeat after keyboard start/combat.",
+      "editing": "None; actual framebuffer bytes encoded as PNG."
+    }
+  },
+  "source_and_distribution_sha256": {
+    "projects/veil-arena/arena.gd": "a2ed7e6fff1ed62f42152ea25b2564db4161ca753476993701df8f0dc6a062d2",
+    "projects/veil-arena/controls.gd": "116e931c9254e165ff6538a2119b96aab056e43555317da0adb896db8fa25081",
+    "projects/veil-arena/project.godot": "4e524b65f9b51a4172688d8eda9fed489b023aa3dfe6225fd4dead640d4ff718",
+    "projects/veil-arena/tests/controls.gd": "bd027b5d4f0200d80a325a027330681e395b230244b2068ed194c276f4b6d962",
+    "projects/veil-arena/tools/export_linux.py": "fce11982235980fd08f3d406a5320a2954eadd6f63e2f717a2463e811d9a6765",
+    "projects/veil-arena/tools/check_linux.py": "62421867e7b362310c8225b7d5b3d6b943d5ad2c588074c6a169ef9a7d45d9b2",
+    "projects/veil-arena/dist/veilbreak.pck": "f50a57ce45ac0e2ac7bf4ac99aa102e7c63591d7a72da364135dc4ea7fe5a60e",
+    "projects/veil-arena/dist/veilbreak-linux-0.4.0.zip": "8433318647a4426c5545fe723dc1a58a34fb6eb1676c66ab1cd20abf334b578c",
+    "projects/veil-arena/dist/veilbreak-linux-0.4.0.zip.sha256": "6210bb9940a12810f4e1d39a1058abdd2d492e4e401450fec6564f75fddc86f0",
+    "projects/veil-arena/third-party/GODOT-LICENSE.txt": "b0435e3b3e4e55238f05f4b306f30524a1b2e20147810d436eaa554fa6855c80",
+    "projects/veil-arena/third-party/GODOT-COPYRIGHT.txt": "b3330849267d56ddd3d62a513817506606c2195034411fe05859f0140bff9d8a"
+  },
+  "unverified": [
+    "Physical pad models/SDL mappings, simultaneous multiple controllers, physical sound output and natural user reconnection.",
+    "Independent understanding/enjoyment/balance/accessibility, low-end hardware and other OS distributions.",
+    "Commercial readiness/demand or exclusive rights/clearance for the generated assets. No new project license grant."
+  ],
+  "publication_scope": "Authorized normal main commit, including player ZIP and source; record precedes commit/CI. No hosting or audience change."
+}

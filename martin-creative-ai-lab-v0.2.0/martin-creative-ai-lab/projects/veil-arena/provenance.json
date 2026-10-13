@@ -1,6 +1,6 @@
 {
   "project_id": "P06",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "historical_title": "Véu Partido",
   "working_title": "Veilbreak — The Bell Warden",
   "origin": "New Codex-authored native encounter under Martin's portfolio direction, using the seed's small two-phase arena objective.",
@@ -10,11 +10,22 @@
   "accepted_differences": [
     "New 2D desktop trial with original Bell Warden, painted courtyard/runner and blade/seal/resolve/ward interactions; not restored historical 3D gameplay or franchise characters.",
     "One enemy with three locked patterns, phase-two echo, pressure/opening tradeoffs and actual victory/defeat. No 20-boss catalogue, damage taxonomy, crafting or campaign claim.",
-    "Native source and built PCK are delivered. PCK requires Godot; no standalone platform executable, Unity editor or .NET compilation is claimed.",
-    "Two actual motion atlases and delayed locked-aim blade/cast contact, recoveries and cancellation. New action commitment changes timing; baseline damage, resource costs/cooldowns, boss patterns and audio assets are retained."
+    "Native source, current PCK and a standalone Linux x86_64 player are delivered. The ZIP bundles the verified Godot release runtime; the separate PCK still requires an engine. No restored Unity code, .NET compilation or other OS export is claimed.",
+    "Two actual motion atlases and delayed locked-aim blade/cast contact, recoveries and cancellation. New action commitment changes timing; baseline damage, resource costs/cooldowns, boss patterns and audio assets are retained.",
+    "0.4.0 adds standard mapped-pad analog/D-pad movement, fresh-button combat/menu actions, automatic prompts and loss/focus handling with keyboard continuity. Original combat costs, contact clocks, opponent rules and media stay unchanged."
   ],
   "media_origin": "New P07 image_gen paintings and P08 original synthesized score/cues, integrated through native textures, semantic sound events and aligned music transports. See media/provenance.json. Prior 0.1.0 geometry/evidence remains historical.",
-  "engine_license": "Godot is MIT-licensed: https://godotengine.org/license/ . No engine binary is redistributed in the repository.",
+  "engine_license": "The distributed official Godot 4.6.3 Linux release runtime is MIT-licensed. Its pinned license and third-party copyright notices accompany the executable; this does not grant a new license or commercial clearance for the game/assets.",
   "quality_boundary": "Engine execution and implementing-agent visual/strategy review, not human input, audience approval or commercial validation.",
-  "evidence": "evidence/veil-arena/MOTION_RUN.json"
+  "evidence": "evidence/veil-arena/RELEASE_RUN.json",
+  "distribution": {
+    "version": "0.4.0",
+    "platform": "Linux x86_64",
+    "artifact": "dist/veilbreak-linux-0.4.0.zip",
+    "producer": "tools/export_linux.py",
+    "runtime": "Official standard Godot 4.6.3 release template, verified from published TPZ digest",
+    "input": "New native mapped-pad adapter, analog deadzone, controller/keyboard prompt switching, explicit loss/focus resume and keyboard continuity",
+    "verification": "evidence/veil-arena/RELEASE_RUN.json",
+    "limits": "No physical gamepad, independent play/accessibility, other OS export or commercial clearance. Existing generated paintings and synthesized audio are unchanged; engine notices and asset provenance accompany the player."
+  }
 }

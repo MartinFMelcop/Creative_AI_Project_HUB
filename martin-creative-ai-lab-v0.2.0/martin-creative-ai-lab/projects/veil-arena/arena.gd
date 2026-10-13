@@ -14,6 +14,8 @@ const RUNNER = preload("res://media/art/veil-runner.png")
 const WARDEN = preload("res://media/art/bell-warden.png")
 const SoundDirector = preload("res://sound.gd")
 const Motion = preload("res://motion.gd")
+const Controls = preload("res://controls.gd")
+var controls = Controls.new()
 const STRIKE_CONTACT := 0.10
 const SEAL_CONTACT := 0.075
 var player_action := ""
@@ -72,6 +74,7 @@ var audio_button: Button
 func _ready() -> void:
 	font = ThemeDB.fallback_font
 	_setup_input()
+	Input.joy_connection_changed.connect(_controller_connection)
 	_build_world()
 	_build_ui()
 	sound = SoundDirector.new()
@@ -81,13 +84,17 @@ func _ready() -> void:
 	_sync_ui()
 
 func _setup_input() -> void:
-	var keys := {"left":[KEY_A,KEY_LEFT],"right":[KEY_D,KEY_RIGHT],"up":[KEY_W,KEY_UP],"down":[KEY_S,KEY_DOWN],"strike":[KEY_J],"seal":[KEY_K],"dash":[KEY_SPACE],"begin":[KEY_ENTER],"pause":[KEY_ESCAPE],"help":[KEY_F1],"mute":[KEY_M]}
-	for action in keys:
-		if not InputMap.has_action(action): InputMap.add_action(action)
-		for key in keys[action]:
-			var event := InputEventKey.new()
-			event.physical_keycode = key
-			InputMap.action_add_event(action, event)
+	controls.setup()
+
+func _input(event: InputEvent) -> void:
+	if controls.observe(event) and is_node_ready(): _sync_ui()
+
+func _controller_connection(device: int, connected: bool) -> void:
+	if not connected and controls.disconnected(device):
+		pause_game()
+		feedback = "Controller lost. Enter or reconnect + A resumes."
+		feedback_time = 4.0
+		_sync_ui()
 
 func _body(radius: float, layer: int, mask: int) -> CharacterBody2D:
 	var body := CharacterBody2D.new()
@@ -158,7 +165,7 @@ func _build_ui() -> void:
 	style.content_margin_bottom = 18
 	help_panel.add_theme_stylebox_override("panel",style)
 	var label := Label.new()
-	label.text = "MOVE   WASD / arrows\nBLADE   J — 12 resolve; aim locks, then 100ms preparation.\nContact: guarded 4 / open 24. Finish recovery before another attack.\nSEAL   K — 34 resolve; gather, then 8 damage + 36 ward pressure.\nDODGE   Space — 25 resolve; can cancel preparation, without refund.\nBrief invulnerability, then vulnerable. Columns still stop movement.\nPAUSE   Esc — focus loss also pauses. Enter resumes.\nSOUND   M / Sound button — mute or restore music and cues.\n\nStone columns stop charges and block seals. Amber warnings lock.\nLeave a sweep; cross a wave with a well-timed dodge.\nPunish recovery or break the ward with three close seal impacts.\nAt half health attacks accelerate and charges leave a violet echo.\nLeave the echo circle even when the core is open."
+	label.text = "MOVE   WASD / arrows · left stick / D-pad\nBLADE   J / X (west) — 12 resolve; locks aim, 100ms preparation.\nContact: guarded 4 / open 24. Finish recovery before attacking again.\nSEAL   K / Y (north) — 34 resolve; 8 damage + 36 ward pressure.\nDODGE   Space / B (east) — 25 resolve; cancels without refund.\nBrief invulnerability, then vulnerable. Columns stop movement.\nPAUSE   Esc / Start · Enter / A (south) begins, resumes, restarts.\nTACTICS   F1 / Back · SOUND   M / RB toggles music and cues.\n\nStone columns stop charges and block seals. Amber warnings lock.\nLeave a sweep; cross a wave with a well-timed dodge.\nPunish recovery or break the ward with three close seal impacts.\nAt half health attacks accelerate and charges leave a violet echo.\nLeave the echo circle even when the core is open."
 	label.add_theme_font_size_override("font_size",17)
 	help_panel.add_child(label)
 	add_child(help_panel)
@@ -221,15 +228,17 @@ func pause_game() -> void:
 		_sync_ui()
 
 func _notification(what: int) -> void:
-	if what == NOTIFICATION_WM_WINDOW_FOCUS_OUT and is_node_ready(): pause_game()
+	if what == NOTIFICATION_WM_WINDOW_FOCUS_OUT and is_node_ready():
+		controls.clear_pad()
+		pause_game()
 
 func _sync_ui() -> void:
 	if is_instance_valid(sound):
 		sound.set_suspended(mode == "paused")
-		audio_button.text = "Sound off [M]" if sound.muted else "Sound on [M]"
+		audio_button.text = ("Sound off" if sound.muted else "Sound on")+(" [RB]" if controls.using_gamepad else " [M]")
 	start_button.visible = mode != "fight" and not help_panel.visible
-	help_button.text = "Close tactics [F1]" if help_panel.visible else "Tactics [F1]"
-	start_button.text = "Resume  [Enter]" if mode == "paused" else ("Begin trial  [Enter]" if mode == "title" else "Try again  [Enter]")
+	help_button.text = ("Close tactics" if help_panel.visible else "Tactics")+(" [Back]" if controls.using_gamepad else " [F1]")
+	start_button.text = ("Resume" if mode == "paused" else "Begin trial" if mode == "title" else "Try again")+(" [A / south]" if controls.using_gamepad else " [Enter]")
 	queue_redraw()
 
 func toggle_tactics() -> void:
@@ -242,14 +251,14 @@ func toggle_audio() -> void:
 	_sync_ui()
 
 func _physics_process(delta: float) -> void:
-	if Input.is_action_just_pressed("mute"): toggle_audio()
-	if Input.is_action_just_pressed("help"): toggle_tactics()
-	if Input.is_action_just_pressed("pause"):
+	if controls.pressed("mute"): toggle_audio()
+	if controls.pressed("help"): toggle_tactics()
+	if controls.pressed("pause"):
 		if mode == "fight": pause_game()
 		elif mode == "paused": _begin_or_resume()
-	if Input.is_action_just_pressed("begin") and mode != "fight": _begin_or_resume()
+	if controls.pressed("begin") and mode != "fight": _begin_or_resume()
 	if mode == "fight":
-		step_fight(delta, Input.get_vector("left","right","up","down"), Input.is_action_just_pressed("strike"), Input.is_action_just_pressed("seal"), Input.is_action_just_pressed("dash"))
+		step_fight(delta, controls.movement(), controls.pressed("strike"), controls.pressed("seal"), controls.pressed("dash"))
 	queue_redraw()
 
 func step_fight(delta: float, move: Vector2, strike: bool, cast_seal: bool, dodge: bool) -> void:
@@ -582,7 +591,7 @@ func _draw_hud() -> void:
 	_bar(Vector2(315,125),255,stamina,100,TEAL)
 	var state_label := "Approaching" if boss_stage=="approach" else ("Open for a counter" if boss_stage=="recover" else "Veil fracture" if boss_stage=="transition" else pattern.to_upper()+" / "+boss_stage.to_upper())
 	_text(Vector2(80,706),state_label,20,AMBER)
-	_text(Vector2(80,742),"WASD move    J commit blade    K seal    Space dodge / cancel    Esc pause",16,Color("aab6cb"))
+	_text(Vector2(80,742),"Left stick / D-pad move    X blade    Y seal    B dodge / cancel    Start pause" if controls.using_gamepad else "WASD move    J commit blade    K seal    Space dodge / cancel    Esc pause",16,Color("aab6cb"))
 	if feedback_time > 0: _text(Vector2(420,706),feedback,17,TEAL)
 
 func _draw_overlay() -> void:

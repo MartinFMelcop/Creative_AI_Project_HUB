@@ -936,3 +936,28 @@ Execute actual baseline/current comparisons, complete browser journeys and the
 six-history reachable graph; inspect prose/frames. Same-agent creative judgment
 is not independent player approval. GitHub source publication only; preserve the
 historical archive/other projects and the private demo's audience/deployment.
+
+## ADR-045 — distribute the native trial and its mapped-pad flow
+
+**Date:** 2026-10-13 (UTC). **Status:** P06 0.4.0.
+
+Choose the verified editor/input access barrier over automatic continuation of
+P10/P01 or more service rules. P05 has a valuable .NET delivery opportunity;
+P06's standard runtime and complete media support a smaller coherent first player.
+Retain Godot/GDScript and combat rules. No new web consumer or shared framework.
+
+Keep pad actions separate from keyboard actions. Native mapping supports analog
+strength/deadzone, D-pad and fresh combat/menu presses; meaningful events switch
+hints. Active-pad loss clears only pad input and pauses audio/gameplay. Keyboard
+continuation and explicit reconnection/focus resume remain deliberate.
+
+Verify official TPZ/template digests and import a fresh staging project. Catch
+GDScript errors even when Godot exits zero; publish no failed build. Package the
+actual release ELF/PCK with permissions, checksums, Godot/third-party notices and
+existing asset provenance. No new license grant or commercial clearance is inferred.
+
+Release templates omit the script executor. Test the actual exported resources
+with the editor and operate the final release window through X11 separately;
+never present those as a physical controller or independent human playtest.
+Preserve historical sources/other products. GitHub source/player publication is
+authorized; physical output, other OS, accessibility and demand need later evidence.

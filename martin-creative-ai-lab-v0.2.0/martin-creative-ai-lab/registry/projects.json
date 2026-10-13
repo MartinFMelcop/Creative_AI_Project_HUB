@@ -142,9 +142,9 @@
       "slug": "veu-partido",
       "status": "active",
       "maturity": "M4",
-      "phase": "native-animated-contact-trial-validated",
+      "phase": "linux-player-and-gamepad-validated",
       "origin": "new_seed_implementation",
-      "next_action": "Observe unassisted native blade commitment, cancellation, cast timing and boss poses; assess pacing/visibility before a new encounter or platform release.",
+      "next_action": "Observe actual Linux/controller setup and unassisted timing, prompts and reconnection; compare P01 strategy, P10 scenes, P03 listening and P11 handoffs before selecting another milestone.",
       "related_projects": [
         "P02",
         "P04",
@@ -157,12 +157,13 @@
         "projects/veil-arena/media/provenance.json",
         "evidence/veil-arena/PRESENTATION_RUN.json",
         "evidence/veil-arena/MOTION_RUN.json",
-        "evidence/veil-arena/AUDIO_CLOCK_RUN.json"
+        "evidence/veil-arena/AUDIO_CLOCK_RUN.json",
+        "evidence/veil-arena/RELEASE_RUN.json"
       ],
       "historical_name": "V\u00e9u Partido",
       "working_path": "projects/veil-arena",
-      "working_version": "0.3.0",
-      "maturity_scope": "Native Godot 4.6.3 trial 0.3.0 adds two actual 16-pose atlases, foot-aligned motion, state-driven enemy anticipation/contact/recovery and displacement-driven walking. Blade locks aim and lands at 100ms; seals gather 75ms; one action, visible recovery, dodge/hurt cancellation without refund. Actual source and shipped/rebuilt PCK execute complete fights, audio and motion contracts; OpenGL frames and a 7.2s engine-rendered fixture demonstration reviewed by Codex. Prior portraits/floor/audio and boss rules retained. Four-keyframe clips/two mirrored orientations; no human timing/balance/artist approval, standalone OS build or commercial claim."
+      "working_version": "0.4.0",
+      "maturity_scope": "Native Godot 4.6.3 trial 0.4.0 adds verified official-template Linux x86_64 player ZIP, exact resources, checksum and engine/asset notices; no editor/SDK needed to play. Mapped-pad analog/D-pad movement, fresh combat/menu actions, dynamic hints and disconnect/focus handling preserve keyboard continuity and combat/media. 30 native pad checks and 116 on the final exported PCK; pad/keyboard synthetic controllers complete both phases. Actual release ELF window outside source executes X11 keyboard start/combat/pause/tactics/idle defeat/restart; frames inspected. Release has no test-script executor, so resource and executable proofs are separate. Physical controller/audio output, independent enjoyment/accessibility, other OS and commercial clearance remain unverified."
     },
     {
       "id": "P07",

@@ -1,18 +1,18 @@
-# Current milestone — the noon receipt
+# Current milestone — a playable Linux distribution
 
-Complete P10's consequence-driven handover after the existing two-day campaign.
-Hear present characters, use actual delivery facts, accept Iven's voluntary offer
-or lend the ready ferry, and make the local cost and return obligation visible.
-Preserve night/morning rules and schema-1/2 saves; schema 3 replays new decisions.
-No new relief timer, morality score, shared engine or unobserved upstream success.
+Deliver the existing P06 trial as a verified official-template Linux player,
+with standard mapped-pad input, readable prompts and safe explicit resume.
+Preserve keyboard controls, combat clocks/rules/media and source/PCK workflows.
+Package real ELF/PCK, checksum, engine notices and asset provenance only.
 
-Acceptance executed: actual old 0.4.0 artifact versus current same-work comparison,
-conditional witnesses/consent, all reachable handovers from six specified night
-histories, full Chromium journeys, capacity contrasts, reload/files/old saves,
-blocked storage, invalid import, touch/keyboard and desktop/mobile frame review.
-Retain Python parity, validate records/manifest and publish normally to main.
-[Execution](../evidence/waystone-dialogue/HANDOVER_RUN.json) separates checks,
-Codex creative assessment and independent reader/player evidence still needed.
+Acceptance executed: official archive/template digest, import-error rejection,
+exact bundle/permissions, native pad/keyboard comparison and complete fights,
+exported PCK combat/audio/motion/input, real release window keyboard workflow
+and final frames outside source with no editor/SDK in PATH. CI boots delivered
+and rebuilt players and runs real source/resource checks. Validate records and
+manifest, then normal main publication. [Execution](../evidence/veil-arena/RELEASE_RUN.json).
+Physical pad/listening, independent play and other OS remain future evidence;
+compare those with other portfolio opportunities before choosing more content.
 
 # Previous milestone — native Eclipse Fair board
 

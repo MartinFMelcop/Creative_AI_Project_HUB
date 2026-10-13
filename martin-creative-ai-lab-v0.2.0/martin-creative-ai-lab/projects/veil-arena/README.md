@@ -1,6 +1,6 @@
 # P06 — Veilbreak: The Bell Warden
 
-Version **0.3.0**, a complete native Godot 2D boss encounter. Move, strike,
+Version **0.4.0**, a complete native Godot 2D boss encounter. Move, strike,
 cast seals, dodge locked warnings, exploit an open core and survive two phases.
 The trial has title/controls, victory/defeat, actual results, pause and restart.
 Painted characters/courtyard, distinct attack sounds and phase-responsive music
@@ -19,20 +19,33 @@ or a real-time hardware performance measurement. Download if GitHub cannot play 
 
 ## Play
 
-Install **Godot 4.6.3 standard**. No .NET, addon, browser, package manager or
-third-party asset is required. From this directory:
+[Download the standalone Linux x86_64 player](dist/veilbreak-linux-0.4.0.zip)
+([SHA-256](dist/veilbreak-linux-0.4.0.zip.sha256)). Extract the entire `Veilbreak/`
+folder, then run `./veilbreak.x86_64` or open it in your file manager. Keep its
+`veilbreak.pck` beside the executable. No Godot, .NET, SDK or source checkout is
+needed to play. If your archive tool drops its executable permission, use
+`chmod +x veilbreak.x86_64`. A Linux desktop/display stack and OpenGL 3.3 remain
+system requirements. Close the window to exit; progress is session-only.
+
+The actual 4.6.3 Linux **release export template**, six-file bundle and checksums
+are verified. This is an OS executable, not the editor renamed as a player.
+The final ELF ran outside checkout via actual X11 keyboard events: title, combat,
+pause, tactics, idle defeat and restart. Its exported PCK passed native combat,
+controller, audio and motion checks under the editor's test-script executor.
+Release templates do not include that executor; those two kinds of evidence are
+explicitly separated in [the execution record](../../evidence/veil-arena/RELEASE_RUN.json).
+
+Source development and the separate current resource pack remain available with
+**Godot 4.6.3 standard** (no .NET):
 
 ```bash
 godot --path .
-# Or launch the delivered compiled resource pack without importing the editor project:
 godot --main-pack dist/veilbreak.pck
 ```
 
-The PCK is an actual built game resource package, **not a standalone executable**.
-It requires the matching Godot runtime. Linux x86_64/OpenGL was executed; other
-platforms and standalone binary exports are unverified. The standard editor can
-also open `project.godot` and run `arena.tscn`. Source import and scene execution
-were verified; no claim is made that a human opened the graphical editor.
+The separate PCK needs the matching engine; the ZIP includes its own release
+runtime. Linux x86_64/OpenGL was executed. Windows/macOS exports and physical
+controller models are unverified; no commercial readiness is claimed.
 
 | Input | Action |
 |---|---|
@@ -44,6 +57,23 @@ were verified; no claim is made that a human opened the graphical editor.
 | Esc | Pause/resume; focus loss also requests pause |
 | F1 / Tactics button | Keyboard or native mouse help; freezes the encounter until explicit resume |
 | M / Sound button | Mute or restore music and cues; the choice survives encounter restart |
+
+Gamepad uses Godot's standard mapped layout: left stick or D-pad moves;
+**west/X** blade, **north/Y** seal, **east/B** dodge and **south/A** begin/resume/
+restart. **Start** pauses, **Back** opens/closes tactics and **RB** toggles sound.
+An analog circular deadzone of 0.22 prevents drift while retaining partial speed.
+Diagonal and combined keyboard/pad input cannot exceed normal movement speed.
+Meaningful input switches hints; tiny stick drift does not. One local player is
+supported. Simultaneous multiple controllers and model-specific physical mapping
+need hardware validation.
+
+Active-pad disconnect pauses game/audio and clears pad state. Reconnection alone
+does not resume; use Enter or a fresh south/A press. Keyboard state remains intact;
+disconnecting a pad after switching to keyboard does not pause keyboard play.
+Focus loss also pauses and clears held pad state; move/press again after resume.
+Combat buttons require a fresh press and preserve actual preparation/cancellation.
+The 30 native input checks and complete pad-event fight use declared synthetic
+Godot events, not a physical controller or independent playtest.
 
 Resolve regenerates at 25/s. Seals travel through the arena and collide with
 stone; three sufficiently close impacts break the ward for 2.4s. Pressure decays
@@ -67,7 +97,7 @@ can make an apparent counter unsafe. No random hit/crit roll conceals the outcom
 
 Six health units and one continuous 160-health boss fight keep the trial bounded.
 Restart clears positions, projectiles, phases, hazards, cooldowns, pressure and
-results. Progress is session-only. Controller/touch, campaign and saves are
+results. Progress is session-only. Touch, campaign and saves are
 not implemented. Pause/result screens freeze pose clocks alongside gameplay;
 restart clears action, walk, facing and contact state.
 
@@ -120,26 +150,41 @@ godot --headless --path . --script tests/encounter.gd --fixed-fps 60
 python3 tools/check_media.py
 godot --headless --path . --script tests/presentation.gd
 godot --headless --path . --script tests/motion.gd
+godot --headless --path . --script tests/controls.gd --fixed-fps 60
 godot --headless --path . --export-pack Linux dist/veilbreak.pck
 # Only after accepting new source PNGs; does not modify their pixels:
 godot --headless --path . --script tools/build_motion_catalog.gd
 ```
 
 The export preset excludes tests/tools/documentation/distribution and PCM music
-masters. Runtime textures and sound assets are included. PCK export does not
-need platform templates. A standalone Linux executable needs Godot's matching
-export templates, which were not installed or used here. Do not call the PCK an
-OS executable. CI downloads the pinned official engine ZIP, verifies its published
-SHA-256, runs source gameplay, executes the shipped pack and builds/tests a fresh
-pack. The same media/lifecycle checks execute outside the source directory against
-the delivered and rebuilt PCK. Cache folders are ignored; import/UID metadata is retained.
+masters. Runtime textures and sound assets are included. PCK export does not need platform templates. For a player export, download the
+standard `Godot_v4.6.3-stable_export_templates.tpz` from the official release and
+run:
+
+```bash
+python3 tools/export_linux.py --templates /path/to/templates.tpz
+python3 tools/check_linux.py
+```
+
+The exporter/checker use Python 3.11+; normal play needs none of those tools.
+The producer checks the full archive and Linux-template digests, imports a fresh
+staged project, runs the real release exporter and packages only ELF/PCK,
+instructions, Godot/third-party notices and existing asset provenance. It catches
+script-import errors even if Godot exits zero. Imported caches/templates remain
+outside source; no distribution is written when import fails. Archive metadata
+is normalized; byte-identical re-exports are not claimed. `--template` accepts an
+already extracted template with its exact digest for repeated development.
+
+CI exercises source/shipped/rebuilt PCK, verifies and boots the shipped Linux
+player, rebuilds from the pinned official archive and checks that fresh player.
+Cache folders are ignored; import/UID metadata is retained.
 
 Twenty-four scene/PhysicsServer checks exercise actual movement/columns, guarded/open
 damage, resolve, real projectile impacts, ward break, transition, idle defeat,
 native Viewport GUI input, focus-notification handling, pause/restart and complete
 scripted victory, delayed contact and held-key behavior. Fixed-fps automation is synthetic input, not hardware timing
 or human playtesting. Historical 0.1.0 experiments recorded a passive ranged loss;
-the current reactive counter/seal controller completes 0.3.0 in 55.58 simulated seconds,
+the reactive counter/seal controller completes 0.3.0 and current 0.4.0 in 55.58 simulated seconds,
 1 health/26 hits/one phase change; the executed 0.2.0 pack completes in 51.87s,
 2 health/26 hits. This bounded comparison shows increased commitment risk,
 not human balance or difficulty suitability. One comparison does
@@ -161,7 +206,9 @@ bounds at wall limits, delayed once-only contacts, locked orientation/whiffs,
 dodge/hurt cancellation, action priority, pause/resume/restart and walk frames.
 Source, delivered PCK and fresh rebuilt PCK execute outside-source workflows.
 
-[Current execution](../../evidence/veil-arena/MOTION_RUN.json) records production,
+[Current release execution](../../evidence/veil-arena/RELEASE_RUN.json) records
+standalone window input, 30 pad checks, exact exported resources and comparison.
+[Motion execution](../../evidence/veil-arena/MOTION_RUN.json) records 0.3.0 production,
 combat comparison, actual OpenGL frames/movie and source/pack checks.
 [Prior presentation execution](../../evidence/veil-arena/PRESENTATION_RUN.json) separates
 0.2.0 media production, import, mix and rendering.

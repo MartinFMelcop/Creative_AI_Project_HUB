@@ -1,4 +1,30 @@
-# Current assessment — a consequence that people can answer
+# Current assessment — put a native trial in the player's hands
+
+Clean `a9af690` matches fetched main; root/lab instructions, current registry/seed,
+recent decisions/evolution and twelve commits inspected. Actual P05/P06 build,
+input/media/export sources and P03 gameplay are available. Recent work spans
+native games, collaboration, music and P10 narrative; no automatic continuation.
+
+| Opportunity | Evidence and decision |
+|---|---|
+| P06 player access | Existing art/audio/animated encounter requires an external engine and has keyboard-only input. Verified standalone Linux delivery plus mapped-pad flow makes it easier to demonstrate and evaluate; selected. |
+| P05 distribution | Real C# campaign exists but requires Godot .NET/runtime. Shipping it is valuable; additional runtime/export validation costs exceed the standard P06 trial's coherent first delivery. |
+| P01 / P10 | Strategic rivals and dramatic handover just shipped. Independent choices/comprehension should guide more rules or scenes. |
+| P03 / P04 / P11 | Actual music/prose/workflows exist. Listening/readers/team use should inform content and service needs; no external feedback is invented. |
+| P02 / P09 | Independent candidate context and real professional sources remain missing. Avoid another calibration loop or fictional cases. |
+
+Use existing Godot/GDScript. Standard 4.6.3 executes; official release templates
+are available and verified. No browser substitute, .NET rewrite or technology quota.
+The actual standard Linux release runtime has lower setup burden than an editor
+project. Known GL/system libraries remain requirements; other OS need execution.
+
+Before: old 0.3.0 native events cannot begin/move; PCK needs an engine. After:
+same events begin/move, the controller completes both phases and a real release
+window works outside source. Packaging/no install and input are verified; physical
+hardware, unassisted quality and commercial usefulness need independent evidence.
+[Execution](../evidence/veil-arena/RELEASE_RUN.json) separates those boundaries.
+
+# Previous assessment — a consequence that people can answer
 
 Clean `04e1864` matches fetched main; working tree clean and GitHub push permitted.
 Inspected instructions, seed/state/registry/recent decisions and twelve commits,

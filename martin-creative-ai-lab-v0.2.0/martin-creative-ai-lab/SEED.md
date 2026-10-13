@@ -1,10 +1,10 @@
 # SEED — Martin Creative AI Lab
 
-**Version:** 0.21.0
+**Version:** 0.22.0
 **Data-base:** 10 de outubro de 2026  
 **Autor e responsável pelo portfólio:** Martin Melcop Neto  
 **Working language:** English for new documentation, plans, code comments, UI, and reports. Preserve original creative titles and historical source languages.
-**Current state:** P10 Flood Crossing 0.5.0 connects real two-day outcomes to a voiced noon handover, voluntary help, local loan costs and return terms. Old saves continue; real browser journeys and comparative execution verify the workflow. Independent creative/play/commercial validation remains open.
+**Current state:** P06 Veilbreak 0.4.0 delivers a verified standalone Linux player and mapped-pad workflow. Real export, exact resource tests and release-window execution remove the external-editor barrier. Physical hardware, independent play and commercial validation remain open.
 
 > Construir um laboratório autoral em Git que transforma ideias, obras e experimentos em produtos pequenos, sistemas reutilizáveis e evidências técnicas verificáveis. A IA participa da criação e execução; Martin desenvolve sua capacidade de especificar, compreender, selecionar, corrigir, validar e explicar os resultados.
 
@@ -46,14 +46,14 @@ Se apenas este arquivo estiver disponível, ele é suficiente para iniciar a Fas
 |---|---|
 | Repository | MartinFMelcop/Creative_AI_Project_HUB; actual Git root `/workspace/Creative_AI_Project_HUB`; lab remains nested in its original package directory |
 | Preserved sources | 175 Rave Master texts and 3 WebSocket files; unchanged ZIP and inventory; not a complete RMXP backup |
-| Primary workstream | P10 consequence-driven noon handover after the complete rescue/morning |
-| Runtime execution | Existing static JavaScript/browser consumer and deterministic replay; no new engine/dependency |
-| Current verification | 35 P10 checks, actual 0.4.0 comparison, four new Chromium journeys and six-history handover graph; `evidence/waystone-dialogue/HANDOVER_RUN.json` |
+| Primary workstream | P06 standalone Linux delivery and mapped-pad native workflow |
+| Runtime execution | Standard Godot 4.6.3 official release template / GDScript; actual ELF window and exported PCK outside source |
+| Current verification | Official digests, 30 pad checks, 116 exported-PCK checks, real release X11 workflow and frames; `evidence/veil-arena/RELEASE_RUN.json` |
 | Historical verification | Prior native/music/story/workspace evidence retained; no inherited human approval |
-| Next action | Compare unassisted P10 choices/voices with P01 strategy, P03/P04 audience feedback and real P11 handoffs |
-| Other seeds | P01 0.3.0, P03 0.2.0, P04 0.1.0, P05 0.1.0, P06 0.3.0, P07 0.2.0, P08 0.3.0, P11 0.4.0 and P02 0.2.1 preserved |
+| Next action | Compare physical Linux/controller use with P01 strategy, P10 reader/player choices, P03 listening and P11 handoffs |
+| Other seeds | P01 0.3.0, P03 0.2.0, P04 0.1.0, P05 0.1.0, P07 0.2.0, P08 0.3.0, P10 0.5.0, P11 0.4.0 and P02 0.2.1 preserved |
 | Transfer / shared status | No cross-project framework or transfer promoted; historical archive unchanged |
-| Portfolio / attribution | Clean `04e1864` matched fetched main; push permission verified. Martin authorizes implementation/main; Codex development/review and declared synthetic inputs. No human approval or Sites redeployment |
+| Portfolio / attribution | Clean `a9af690` matched fetched main; push permission verified. Martin authorizes implementation/main; Codex development/review and synthetic native/X11 input. No independent human approval or Sites deployment |
 
 Registry evidence paths must resolve to existing files inside the lab; working
 paths must be directories and legacy-source IDs must exist. This documentary
@@ -397,7 +397,7 @@ plans and the breadcrumb `VeuPartido_UnityStarter_v0.0.47.zip`. The starter is n
 present, and plans are not executable evidence. No restored Unity code or franchise
 characters enter the new destination.
 
-[Veilbreak: The Bell Warden](projects/veil-arena/README.md) 0.3.0 is a new native
+[Veilbreak: The Bell Warden](projects/veil-arena/README.md) 0.4.0 is a new native
 Godot 2D trial with painted characters/courtyard, fourteen semantic cues and two
 aligned phase-responsive music loops. P07/P08 assets are actually imported, mixed
 and packed; M/mouse mute and pause/resume/restart govern their lifecycle. One opponent has locked sweep/charge/wave warnings, a faster second
@@ -409,7 +409,10 @@ preparation/contact/recovery. Blade locks aim and lands after 100ms; cast gather
 actual contact, not an unrelated wall clock. Four-keyframe clips and horizontal
 mirroring are bounded production, not a complete directional/hand-animated set.
 The actual engine and resource pack were executed. This is a bounded native
-prototype; no standalone platform build, human balance or commercial claim.
+prototype. A verified Linux release-template ZIP now plays without an editor;
+mapped-pad movement, combat/menu actions and explicit input-loss resume preserve
+keyboard continuity. Exact resources and real release window execution are
+separate proofs. No physical-controller, human balance or commercial claim.
 
 Godot/GDScript suits the small physics/presentation loop and available standard
 editor. Unity/editor/starter remain absent; .NET is now installed for P01, but

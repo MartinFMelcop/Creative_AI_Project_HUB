@@ -1,37 +1,36 @@
 # Lab state
 
-**Updated:** 2026-10-13 (UTC). **Seed:** 0.21.0.
-**Current milestone:** P10 Flood Crossing 0.5.0 — the noon receipt.
+**Updated:** 2026-10-13 (UTC). **Seed:** 0.22.0.
+**Current milestone:** P06 Veilbreak 0.4.0 — Linux player and mapped gamepad.
 
-[Play locally](../projects/waystone-dialogue/browser/README.md). After either
-morning ending, meet Dain at the clinic table. Hear only people actually present,
-read the real deliveries, and decide whether to retain local resources, lend a
-ready ferry or accept Iven's own offer to guide. Write a dusk return or an open
-loan; refusing and asking for later review are separate commitments.
+[Download/play](../projects/veil-arena/README.md). A six-file Linux x86_64 ZIP
+includes the verified official Godot release runtime, actual exported resources,
+checksums, instructions and engine/asset notices. Extract and run; no editor,
+SDK, .NET or source checkout is required. Desktop/system OpenGL libraries remain
+requirements. Existing source and the current engine-dependent PCK are retained.
 
-The same ferry morning now yields observable alternatives: retain 2 crates/shift;
-lend the boat and keep a ridge trail at 1 crate/2 shifts; send Iven and keep the
-ferry at 2 crates/2 shifts. A permanent road can retain its capacity while lending
-the backup. No afternoon deliveries, return or upstream rescue is simulated.
-A new public withdrawal does not erase the old lie or summon a Keeper signature.
-Night/morning rules and facts remain byte-preserved. Schema 1/2 saves continue;
-schema 3 replays the handover, including consent and pending terms.
+Left stick/D-pad, three combat buttons and begin/pause/tactics/sound/restart now
+use native input. Deadzone/partial speed, bounded diagonal movement, fresh presses,
+automatic hints and active-pad loss handling preserve keyboard continuity.
+Reconnection never auto-resumes. A keyboard player is not paused by an old pad's
+loss. Costs/contact clocks, opponent rules and existing media remain unchanged.
 
-[Execution](../evidence/waystone-dialogue/HANDOVER_RUN.json): all 35 P10 checks,
-including four new real Chromium journeys and six domain checks. Explore 330
-morning endings / 50,640 canonical handover states from six specified night
-histories, retaining Python night parity (20,124 transitions). Desktop/mobile
-frames and actual prose reviewed by the implementing Codex agent. Independent
-reader/player approval, physical touch, assistive technology and demand are open.
+[Execution](../evidence/veil-arena/RELEASE_RUN.json): 30 native controller checks,
+116 checks on the exact exported PCK, complete two-phase synthetic pad/keyboard
+victories, package/digest checks and a rejected real GDScript import failure.
+The final release ELF window was operated by X11 keyboard events outside checkout:
+title/combat/pause/tactics, actual idle defeat and restart. Real OpenGL frames
+reviewed. Release templates lack the test-script executor: PCK checks use the
+editor, while release-window input is separate evidence. Physical controller and
+audio output, independent enjoyment/accessibility, other OS and demand are open.
 
-Started clean at `04e1864`, matching fetched main; GitHub push permission verified.
-Compared P01's completed planning, P11's assigned workflows, P04 actual prose and
-P10's list-only finale. The P10 dramatic gap outranked automatic native/service
-continuation. JavaScript retains its existing static conversation consumer; no
-engine migration or new dependency is needed. Native tools remain real options
-for other milestones. Historical archive, other products and Python versions
-are preserved. Main publication is authorized; the old private Sites demo is
-not redeployed by this source session.
+Started clean at `a9af690`, matching fetched main; push permission verified.
+Compared completed P10/P01/P11 work, P03 feedback needs, P05's .NET packaging and
+P06's required external engine. Native delivery with input removes a demonstrable
+access barrier; standard Godot/GDScript fits its existing physics/audio consumer.
+Official templates were available, downloaded and verified; Unity was not located.
+No new art/audio, shared framework, legacy recovery or Sites deployment. Archive
+and other product bytes remain preserved. Main publication is authorized.
 
-Next compare unassisted P10 choice/voice feedback with P01 Planning/Classic play,
-P03/P04 listening/readers and real P11 collaborator handoffs before choosing work.
+Next compare real Linux/controller use with P01 strategy, P10 reader/player
+choices, P03 listening and P11 team handoffs before selecting another milestone.
