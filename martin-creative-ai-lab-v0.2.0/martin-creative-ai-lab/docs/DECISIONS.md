@@ -984,3 +984,28 @@ Preserve full runs and historical scores. No new shared framework or media asset
 Real source-node/clock and old-artifact checks, full regressions and same-agent
 frames establish integration, not physical listening, independent usability,
 learning benefit or commercial demand. GitHub publication only; Sites unchanged.
+
+## ADR-047 — attach original media to accepted native transactions
+
+**Date:** 2026-10-13 (UTC). **Status:** P05 0.2.0.
+
+Choose the verified text-only/silent P05 campaign gap over continuing completed
+P03/P06 systems or expanding prose/services without audience sources. Keep C#/
+Godot .NET and exact Core/save rules. No historic source/art restoration.
+
+One original 4×2 image_gen PNG supplies eight static portraits; native regions
+leave the source pixels unchanged. Seven deterministic PCM cues provide action
+feedback. Before/after accepted states drive HP/shield/row/Pin/scorch markers;
+selection and effects spend no turn. Restore keyboard focus after acceptance.
+No animation queue, invented damage, soundtrack or full actor clips.
+
+Reuse cards/actions and instance-owned styles; dispose media/material wrappers.
+Load raw PNG/WAV so the compiled project needs no import cache/SDK. Stop playback
+and drain the mixer before test/OS window shutdown. Inspect actual visible lines,
+not only line-height arithmetic. Preserve old ZIP and Core/save identities.
+
+Real native/mixer/window execution and original-version comparison prove bounded
+integration; Codex frames are same-agent creative judgment. Original unsafe C#
+binding abort was not reproduced: clean runs do not prove every GC/platform case.
+Physical listening, independent play/accessibility and commercial rights/demand
+remain separate. GitHub source/package publication is authorized; no Sites update.

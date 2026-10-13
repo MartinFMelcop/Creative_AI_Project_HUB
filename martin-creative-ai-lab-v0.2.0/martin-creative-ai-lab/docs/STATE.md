@@ -1,33 +1,34 @@
 # Lab state
 
-**Updated:** 2026-10-13 (UTC). **Seed:** 0.23.0.
-**Current milestone:** P03 Tokyo 80s 0.3.0 — targeted musical rehearsal.
+**Updated:** 2026-10-13 (UTC). **Seed:** 0.24.0.
+**Current milestone:** P05 Cinderwatch 0.2.0 — illustrated native action feedback.
 
-[Play locally](../projects/tokyo80s/README.md). Both original songs/charts now
-support eight four-bar phrases, 75/90/100% playback and a four-click entrance.
-Performance seconds preserve real judgment/offset/release/re-hold windows;
-cross-boundary tails remain complete. Rehearsal supports keyboard/touch,
-pause/restart/cancel, per-take export and same-setup comparison. Full results
-link actual missed-note/lost-hold summaries to rehearsal. Full runs retain
-original tempo/charts and best keys; rehearsals never update those bests.
+[Play the compiled project](../projects/cinderwatch/README.md). Eight newly
+generated portraits distinguish the three rescuers/five machine types; seven
+original PCM cues and fading accepted-state markers make actions observable.
+HP/shield/row/Pin/scorch feedback, selected/active outlines and down-state dimming
+preserve rule/turn/save behavior. Keyboard focus follows the next legal control.
+Cards/buttons and twelve styles are reused rather than rebuilt on selection.
+Mute, focus/tactics/reset stop and actual window-close mixer drain accompany
+explicit owned-resource cleanup. No queued turn or full actor animation.
 
-[Execution](../evidence/tokyo80s/REHEARSAL_RUN.json) records real Chromium/Web Audio
-and synthetic inputs: all 36 checks pass, including both full songs. Original-
-version comparison, media contracts, repository checks and rendered review pass.
-Slower
-backing lowers pitch; no pitch-preserving stretch is claimed. Independent
-learning/enjoyment, physical listening/latency, other browsers and commercial
-interest remain unverified. Same-agent screenshots are not human approval.
+[Execution](../evidence/cinderwatch/PRESENTATION_RUN.json) separates compilation,
+real native campaigns, AudioServer capture, original-artifact control comparison,
+OpenGL frames and OS keyboard/WM_DELETE_WINDOW. All four synthetic routes retain
+original HP/actions; rules/save schema and Core sources are unchanged. The new
+0.2.0 ZIP loads raw PNG/WAV outside source with runtime-only .NET and no imported
+media cache/SDK. Original 0.1.0 ZIP and other products/archive stay intact.
 
-Started clean at `493a311`, matching fetched main; GitHub push permitted.
-Compared P05 distribution, P01/P10 completed systems, P04 reader needs and P11
-handoffs. A verified P03 whole-song/original-tempo retry limitation makes a bounded
-learning workflow stronger than repeating native packaging or adding speculative
-story/service scope. Existing JavaScript/Web Audio directly serves this musical
-consumer; standard Godot/.NET remain available but do not resolve that gap.
+Started clean at `41c21c6`, matching fetched main; push authorized/permitted.
+Compared P03's completed rehearsal, P04 readers, P11 handoffs and P05's absent
+creative feedback. A bounded native identity integrates real assets into an
+existing complete campaign; C#/Godot .NET fits its actual consumer, Python/NumPy
+fits deterministic sound production. Unity was not located; no web substitute.
 
-Original scores/masters/Vorbis, P08 records, other products and historical sources
-remain unchanged. No shared framework, new music, external users, Sites deployment
-or commercial clearance. Main publication is authorized. Next compare real phrase
-practice with native play, independent readers and collaborative handoffs before
-selecting the next workstream.
+Pixel review corrected hidden scorch lines and damage colour; input checks
+corrected lost focus. Real playback warnings led to mixer drain/clean window
+shutdown. Prior CI's unsafe C# binding abort was inspected but not reproduced;
+bounded clean runs do not prove every platform/GC schedule repaired. Independent
+readability/enjoyment/accessibility, physical listening, OS export and commercial
+clearance remain open. Next compare native play/listening with P03 practice,
+P04/P10 readers and P11 team handoffs before selecting another workstream.

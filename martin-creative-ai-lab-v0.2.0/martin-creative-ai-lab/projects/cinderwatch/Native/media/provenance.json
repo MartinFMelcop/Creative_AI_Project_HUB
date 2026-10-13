@@ -1,0 +1,39 @@
+{
+  "project_id": "P05",
+  "version": "0.2.0",
+  "visual_source_project": "P07",
+  "audio_source_project": "P08",
+  "contribution": "New Codex art direction/image_gen generation and algorithmic audio synthesis under Martin portfolio direction. No historical artwork, external samples or independent artist/listener approval.",
+  "visual": {
+    "request_count": 1,
+    "source": "image_gen output exec-39264af5-d87f-4dce-abc9-afb2b482dd60.png; original PNG copied unchanged",
+    "path": "portraits.png",
+    "size": [
+      1774,
+      887
+    ],
+    "mode": "RGB, opaque",
+    "grid": [
+      4,
+      2
+    ],
+    "roles": [
+      "Rook",
+      "Vale",
+      "Neri",
+      "Ash hound",
+      "Riveter",
+      "Bulwark",
+      "Patch drone",
+      "Governor"
+    ],
+    "integration": "Eight native AtlasTexture regions, 12-pixel cell inset; raw Image/ImageTexture loading needs no imported cache. Portraits are static, with state dimming and transaction labels, not full actor animation.",
+    "sha256": "fc0047682ddde11ef4e4339e965164e361432287759a7c12223c7ef55027a1cb"
+  },
+  "audio": {
+    "producer": "../../tools/render_feedback.py",
+    "catalog": "audio/catalog.json",
+    "format": "Seven original mono PCM16 WAV cues at 44100 Hz. Native raw WAV loading; one reusable player at -8 dB, mute, focus/modal/reset stop and mixer drain on close. No music bed or physical listening approval."
+  },
+  "rights": "No external creative references/samples imported. Generated art/synthesis is not evidence of exclusive copyright, human authorship, market demand or commercial clearance."
+}

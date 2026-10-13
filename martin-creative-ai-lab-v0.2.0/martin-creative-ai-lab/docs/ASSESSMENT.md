@@ -1,29 +1,29 @@
-# Current assessment — rehearse the passage that needs work
+# Current assessment — give the tactical campaign a native identity
 
-Clean `493a311` matches fetched main; local branch `work`, push permitted.
-Instructions, state/registry/seed, recent decisions and twelve commits inspected.
-Recent development spans P06/P10/P01/P11/P05; repeated native work makes a distinct
-musical opportunity worth investigation, without requiring rotation.
+Clean `41c21c6` matches fetched main; branch `work`, push permitted. Inspected
+instructions/state/registry/seed, decisions/evolution, twelve commits and actual
+P05 UI/domain/package, P04 reading edition and P11 workflow. Recent work spans
+P03/P06/P10/P01/P11; P03 completion does not choose this session's workstream.
 
 | Opportunity | Evidence and decision |
 |---|---|
-| P03 targeted rehearsal | Actual Practice only reduces density; audio still runs the entire song at original speed. Phrase selection, slow backing and result-to-retry close a verified learning-workflow gap; selected. |
-| P05 distribution | C# native campaign exists but needs engine/runtime. Valuable access milestone, though P06 just delivered that category; compare with deeper tactical/art work after play. |
-| P01 / P10 / P11 | Rival planning, dramatic handover and assigned work are functional. Unassisted strategy/reading/team handoffs would guide the next substantial capability. |
-| P04 / P07 / P08 | Actual story/art/music exist. Reader/artist/listener response is more useful than automatic content expansion; no outside feedback is invented. |
-| P02 / P09 | Independent evaluation context and real case sources remain absent. Avoid calibration repetition or fictional professional facts. |
+| P05 creative feedback | Three complete native encounters have text-only cards and silence. Integrate original portraits, real transaction markers/cues and stable UI ownership; selected for an observable campaign improvement. |
+| P05 shutdown alone | Prior hosted unsafe-binding abort occurred after 667 checks; retry/local execution passed. Investigate lifetime within the presentation work, without claiming a standalone root-cause repair. |
+| P03 / P06 / P01 | Rehearsal, Linux/controller delivery and rival planning just shipped. Unassisted timing/setup/strategy evidence is stronger than another automatic nearby feature. |
+| P04 / P10 / P11 | Actual prose, conversation and assigned workflows exist. Readers/team use should guide expansion; no external approval is fabricated. |
+| P02 / P09 | Independent candidate context and real professional case sources remain absent. |
 
-Retain JavaScript/Web Audio for the existing static rhythm consumer. Rate-adjusted
-performance time preserves physical judgment windows; actual buffer offsets give
-musical context, complete tails and four scheduled entrance clicks. No new player,
-engine migration, source regeneration, npm dependency or generic timing framework.
+Keep C#/Godot .NET 4.6.3 and the exact Core/save model. Use one new image_gen
+atlas and deterministic Python/NumPy PCM production; no reused historical art,
+engine migration, browser implementation, music bed or shared framework.
 
-Before: actual 0.2.0 Practice still plays 84.5s at rate 1, with no phrase/rate controls.
-After: the chosen Rain Circuit passage begins after one bar and plays a bounded
-take at 75/90/100%, with actual errors, repeat comparison and a return to original
-full-run scoring. Lower pitch is disclosed. Learning/appeal remain hypotheses;
-[execution](../evidence/tokyo80s/REHEARSAL_RUN.json) separates technical evidence,
-implementing-agent rendered judgment and missing human/commercial validation.
+Before: old 0.1.0 text cards, no media feedback, replaced control identities.
+After: actual portraits/cues and accepted-state markers accompany the same
+campaign. In identical 300-selection engine probes, old retains 39/76 initial
+child nodes; new retains 88/88. Counts themselves are not memory/performance
+measurements. Native/mixer/window execution establishes integration; visual
+judgment is Codex's assessment and human/commercial benefit remains unverified.
+[Execution](../evidence/cinderwatch/PRESENTATION_RUN.json) records the boundaries.
 
 # Previous assessment — a consequence that people can answer
 

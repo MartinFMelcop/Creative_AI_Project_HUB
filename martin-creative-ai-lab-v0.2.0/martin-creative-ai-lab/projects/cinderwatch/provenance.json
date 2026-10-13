@@ -1,16 +1,24 @@
 {
   "project_id": "P05",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "name": "Cinderwatch",
   "origin": "new_seed_implementation",
   "baseline_commit": "4725d7582cf56115ca2b8d59948d6f25fb601cd3",
   "source": "SEED.md P05: one action per turn, AGI, rows, states",
   "historical_executable_or_editable_source_recovered": false,
-  "changes": "New bounded world, three roles and encounters, two salvage choices, native C# workflow; no 21-class or 180-level claim",
+  "changes": "Original portrait/action-cue integration and accepted-state feedback, persistent UI/resource ownership and keyboard/window cleanup. Exact Core/save schema preserved.",
   "other_project_code_or_media_transferred": false,
   "external_creative_assets": [],
-  "external_runtime": ["Godot .NET 4.6.3", ".NET 10"],
+  "external_runtime": [
+    "Godot .NET 4.6.3",
+    ".NET 10"
+  ],
   "technical_reference": "Inspected P01's directly referenced core and owned-assembly packaging; new independent domain and interface",
-  "review": "Codex implementation, synthetic journeys and native visual review; no independent human or market approval",
-  "publication": "GitHub main authorized; no Sites deployment"
+  "review": "Codex media direction/code, actual synthetic native/mixer/window checks and rendered review. No independent human or commercial approval.",
+  "publication": "GitHub main authorized; no Sites deployment",
+  "latest_baseline_commit": "41c21c6c80b37587a6950b8131294c5eee69c053",
+  "produced_creative_assets": [
+    "Native/media/portraits.png",
+    "Native/media/audio"
+  ]
 }

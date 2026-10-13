@@ -1,10 +1,10 @@
 # SEED — Martin Creative AI Lab
 
-**Version:** 0.23.0
+**Version:** 0.24.0
 **Data-base:** 10 de outubro de 2026  
 **Autor e responsável pelo portfólio:** Martin Melcop Neto  
 **Working language:** English for new documentation, plans, code comments, UI, and reports. Preserve original creative titles and historical source languages.
-**Current state:** P03 Tokyo 80s 0.3.0 connects full-run errors to targeted four-bar musical rehearsal at 75/90/100%. Real Web Audio, complete tails and separate bests support a bounded learning workflow; independent learning/listening and commercial validation remain open.
+**Current state:** P05 Cinderwatch 0.2.0 integrates original portraits, action cues and actual transaction feedback with persistent native controls and explicit cleanup. Core/save behavior is preserved; physical listening, independent play and commercial validation remain open.
 
 > Construir um laboratório autoral em Git que transforma ideias, obras e experimentos em produtos pequenos, sistemas reutilizáveis e evidências técnicas verificáveis. A IA participa da criação e execução; Martin desenvolve sua capacidade de especificar, compreender, selecionar, corrigir, validar e explicar os resultados.
 
@@ -44,16 +44,16 @@ Se apenas este arquivo estiver disponível, ele é suficiente para iniciar a Fas
 
 | Field | Current evidence |
 |---|---|
-| Repository | MartinFMelcop/Creative_AI_Project_HUB; Git root `/workspace/Creative_AI_Project_HUB`; lab retains original wrapper |
-| Preserved sources | 175 Rave Master texts and 3 WebSocket files; unchanged ZIP/inventory; not a full RMXP backup |
-| Current workstream | P03 targeted musical rehearsal; eight four-bar phrases in both original songs/charts |
-| Runtime execution | Existing JavaScript/Web Audio; real decoded buffer offsets/rates/clicks and Chromium input |
-| Current verification | Original-artifact comparison, rehearsal and full-run regressions, source/media contracts and rendered review; `evidence/tokyo80s/REHEARSAL_RUN.json` |
-| Limitations | Slower backing lowers pitch; no independent learning/listening, hardware latency, other-browser or commercial validation |
-| Next action | Compare unassisted musical rehearsal with native play, independent readers and trusted team handoffs |
-| Other versions | P01 0.3.0, P04 0.1.0, P05 0.1.0, P06 0.4.0, P07 0.2.0, P08 0.3.0, P10 0.5.0, P11 0.4.0 and P02 0.2.1 preserved |
-| Transfer / assets | No shared framework/transfer/asset promotion; original scores/masters/Vorbis and archive unchanged |
-| Attribution / publication | Clean `493a311` matched fetched main; push permission verified. Martin authorizes implementation/main; Codex development and synthetic execution; no human approval or Sites redeployment |
+| Repository | MartinFMelcop/Creative_AI_Project_HUB; actual Git root `/workspace/Creative_AI_Project_HUB`; original wrapper retained |
+| Preserved sources | 175 Rave Master texts / 3 WebSocket files; unchanged ZIP/inventory; not full RMXP recovery |
+| Current workstream | P05 illustrated native action feedback 0.2.0; P07 portrait atlas and P08 PCM cues integrated |
+| Runtime | C#/Godot .NET 4.6.3; raw media and compiled owned assemblies outside source with runtime-only .NET |
+| Evidence | Campaign parity, native/mixer/visible-line checks, original control comparison, OpenGL frames and OS close; `evidence/cinderwatch/PRESENTATION_RUN.json` |
+| Limits | Static portraits, no OS executable, physical listening or independent creative/commercial approval; prior unsafe-binding failure not universally resolved |
+| Next action | Compare native play/listening with P03 practice, P04/P10 readers and P11 handoffs |
+| Other products | P01 0.3.0, P03 0.3.0, P04 0.1.0, P06 0.4.0, P10 0.5.0, P11 0.4.0, P02 0.2.1 preserved; P05 original 0.1.0 ZIP retained |
+| Media / transfer | P07 0.3.0 / P08 0.4.0; two actual new assets, no historical transfer or shared framework promotion |
+| Attribution | Clean `41c21c6` matched fetched main; push permitted and Martin authorizes main. Codex media/code/review and synthetic inputs; no independent human approval or Sites update |
 
 Registry evidence paths must resolve to existing files inside the lab; working
 paths must be directories and legacy-source IDs must exist. This documentary
@@ -371,7 +371,7 @@ Plans mentioned 21 classes, five races, levels 1–180, seven item tiers and Spr
 100 core/audio packages. Those packages/runtime are not present in this checkout;
 the Rave archive belongs to P10 and does not establish P05 provenance.
 
-Current destination **Cinderwatch 0.1.0** is a new bounded adaptation, not a
+Current destination **Cinderwatch 0.2.0** is a new bounded adaptation, not a
 restoration. Pure C#/.NET 10 owns three roles, row screening, fixed initiative,
 announced enemy targets, one action, shield/cover expiry, limited interrupts and
 treatment, timed scorch, three encounters and two salvage choices. Dead locked
@@ -384,6 +384,14 @@ confirmation, paced enemy resolution, keyboard, rules/logs, accepted-action save
 and validated replay/failure feedback. Source and a compiled owned-assembly ZIP
 are executed outside source with runtime-only .NET; this is not an OS executable.
 [Play/build](projects/cinderwatch/README.md), [execution](evidence/cinderwatch/RUN.json).
+
+Presentation 0.2.0 adds eight original portraits/seven PCM cues, actual transaction
+markers and target/active/down feedback. Native cards/actions/styles are reused,
+keyboard focus follows accepted turns and window/test shutdown releases mixer
+playback and owned resources. Raw media works in the compiled project without
+an import cache/SDK. Core/save schema 0.1.0 and original ZIP remain unchanged.
+[Media/consumer execution](evidence/cinderwatch/PRESENTATION_RUN.json) is separate
+from physical listening, independent play and commercial readiness.
 
 Four implementing-agent routes win; Strike-only and Brace-only comparisons lose.
 Technical contracts and rendered review do not prove optimal balance, creative
@@ -423,6 +431,12 @@ not an automatic migration or language quota.
 
 ### P07 — Visual Generation & Asset Lab
 
+**New consumer:** P05 0.2.0 adds one original eight-cell RGB portrait atlas, copied
+unchanged from one image_gen request. Three rescuers/five industrial machine types
+are consumed as native inset regions with state feedback; actual OpenGL frames
+reviewed by Codex. These are static portraits, not full actor motion or independent
+artist/player approval. See [P05 media](projects/cinderwatch/Native/media/provenance.json).
+
 **Current destination:** [P06 media](projects/veil-arena/media/provenance.json)
 contains the preserved three PNG paintings and two actual reference-edited RGBA
 motion atlases with 16 poses each. Crowded first sheets were rejected and spacing
@@ -447,7 +461,10 @@ artist/player approval or full directional/hand-animated coverage.
 
 ### P08 — Audio, Poetry & Music Lab
 
-Current 0.3.0 also delivers [Rain Circuit](projects/tokyo80s/media/rain-provenance.json):
+Current 0.4.0 adds seven original P05 PCM action cues with native playback/mute/
+stop, mixer capture and producer/hash/endpoint checks; no soundtrack or physical
+listening claim. [P05 media](projects/cinderwatch/Native/media/provenance.json).
+Preserved 0.3.0 also delivers [Rain Circuit](projects/tokyo80s/media/rain-provenance.json):
 actual master/Vorbis, original score/producer, played durations consumed by P03
 holds and measured decoded loudness/peak. Prior P03/P06 media stays intact.
 

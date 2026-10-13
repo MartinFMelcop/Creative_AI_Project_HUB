@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-10-12",
+  "updated_at": "2026-10-13",
   "assets": [
     {
       "id": "AUD-001",
@@ -124,6 +124,46 @@
       "evidence": [
         "projects/veil-arena/media/provenance.json",
         "evidence/veil-arena/MOTION_RUN.json"
+      ]
+    },
+    {
+      "id": "VIS-003",
+      "name": "Cinderwatch crew and sentry portrait atlas",
+      "type": "visual-pack",
+      "status": "integrated",
+      "source_project": "P07",
+      "consumer_projects": [
+        "P05"
+      ],
+      "runtime_paths": [
+        "projects/cinderwatch/Native/media/portraits.png"
+      ],
+      "provenance": "One original image_gen request; unchanged 1774x887 opaque RGB sheet, eight portraits in 4x2 native inset regions. New production, no historical/imported artwork.",
+      "rights": "Generated art; no exclusive copyright, human artwork authorship or commercial clearance claim.",
+      "evidence": [
+        "projects/cinderwatch/Native/media/provenance.json",
+        "evidence/cinderwatch/PRESENTATION_RUN.json"
+      ]
+    },
+    {
+      "id": "AUD-004",
+      "name": "Cinderwatch native action cues",
+      "type": "audio-pack",
+      "status": "integrated",
+      "source_project": "P08",
+      "consumer_projects": [
+        "P05"
+      ],
+      "master_path": "projects/cinderwatch/Native/media/audio",
+      "runtime_path": "projects/cinderwatch/Native/media/audio",
+      "sample_rate": 44100,
+      "channels": 1,
+      "provenance": "Seven original deterministic PCM16 cues/producer/catalog. Native action/mute/focus/reset/close and actual mixer capture; no samples/MIDI/voice or historical recovery.",
+      "rights": "No external audio imported; no physical listening, exclusive copyright or commercial clearance claim.",
+      "evidence": [
+        "projects/cinderwatch/Native/media/provenance.json",
+        "projects/cinderwatch/Native/media/audio/catalog.json",
+        "evidence/cinderwatch/PRESENTATION_RUN.json"
       ]
     }
   ]

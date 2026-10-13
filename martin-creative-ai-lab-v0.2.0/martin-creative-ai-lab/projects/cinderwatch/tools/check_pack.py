@@ -11,10 +11,13 @@ parser.add_argument("--assemblies", action="store_true", help="also require byte
 args = parser.parse_args()
 
 ROOT = Path(__file__).resolve().parents[1]
-PACK = ROOT / "dist/cinderwatch-0.1.0.zip"
+PACK = ROOT / "dist/cinderwatch-0.2.0.zip"
 with ZipFile(PACK) as archive:
     names = archive.namelist()
     assert len(names) == len(set(names))
+    media = {"cinderwatch/" + p.relative_to(ROOT).as_posix() for p in (ROOT / "Native/media").rglob("*") if p.is_file() and p.suffix in {".png", ".wav", ".json"}}
+    assert media <= set(names), "Missing delivered media"
+    assert {"cinderwatch/Native/Presentation.cs", "cinderwatch/tools/render_feedback.py", "cinderwatch/tools/check_media.py"} <= set(names)
     assert len([n for n in names if n.endswith(".dll")]) == 2
     assert {Path(n).name for n in names if n.endswith(".dll")} == {"Cinder.Core.dll", "Cinder.Native.dll"}
     for name in names:

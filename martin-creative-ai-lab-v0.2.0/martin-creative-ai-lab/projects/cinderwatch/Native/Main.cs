@@ -23,6 +23,8 @@ public partial class Main : Control
 
     public override void _Ready()
     {
+        GetTree().AutoAcceptQuit=false;
+        GetTree().Root.CloseRequested+=WindowClose;
         savePath=ProjectSettings.GlobalizePath("user://cinderwatch-save.json");
         var args=OS.GetCmdlineUserArgs();
         for(var i=0;i<args.Length;i++)
@@ -32,15 +34,16 @@ public partial class Main : Control
             if(args[i]=="--capture-dir" && i+1<args.Length)captureDirectory=args[++i];
         }
         if(verifying && !args.Contains("--save-path"))savePath=ProjectSettings.GlobalizePath("user://cinderwatch-check-save.json");
-        Build(); Refresh();
+        LoadPresentation();Build(); Refresh();
         if(verifying)_=Verify();
     }
-    private static StyleBoxFlat Style(Color color,Color? border=null,int radius=10)
+    private StyleBoxFlat Style(Color color,Color? border=null,int radius=10)
     {
+        if(styles.TryGetValue((color,border,radius),out var existing))return existing;
         var s=new StyleBoxFlat {BgColor=color,CornerRadiusTopLeft=radius,CornerRadiusTopRight=radius,CornerRadiusBottomLeft=radius,CornerRadiusBottomRight=radius,
             ContentMarginLeft=12,ContentMarginRight=12,ContentMarginTop=8,ContentMarginBottom=8};
         if(border is {} c) {s.BorderColor=c;s.BorderWidthLeft=1;s.BorderWidthRight=1;s.BorderWidthTop=1;s.BorderWidthBottom=1;}
-        return s;
+        styles.Add((color,border,radius),s);return s;
     }
     private static T Place<T>(T node,Node parent,float x,float y,float w,float h) where T:Control
     {parent.AddChild(node);node.Position=new(x,y);node.Size=new(w,h);return node;}
@@ -49,7 +52,7 @@ public partial class Main : Control
         var l=Place(new Label {Text=text,ClipText=true,AutowrapMode=TextServer.AutowrapMode.WordSmart},parent,x,y,w,h);
         l.AddThemeFontSizeOverride("font_size",size);l.AddThemeColorOverride("font_color",color??Paper);return l;
     }
-    private static Button Button(Node parent,string text,float x,float y,float w,float h,Action action)
+    private Button Button(Node parent,string text,float x,float y,float w,float h,Action action)
     {
         var b=Place(new Button {Text=text,FocusMode=FocusModeEnum.All},parent,x,y,w,h);
         b.AddThemeFontSizeOverride("font_size",16); b.AddThemeColorOverride("font_color",Paper);
@@ -59,7 +62,7 @@ public partial class Main : Control
         b.AddThemeStyleboxOverride("focus",Style(new Color(0,0,0,0),Teal));
         b.Pressed+=action;return b;
     }
-    private static Panel Panel(Node parent,float x,float y,float w,float h,Color? border=null)
+    private Panel Panel(Node parent,float x,float y,float w,float h,Color? border=null)
     {
         var p=Place(new Panel(),parent,x,y,w,h);p.AddThemeStyleboxOverride("panel",Style(new("#10242c"),border));return p;
     }
@@ -67,6 +70,7 @@ public partial class Main : Control
     {
         Text(this,"CINDERWATCH",24,8,490,48,32);
         Text(this,"A three-encounter tactical rescue",26,58,480,25,16,Muted);
+        sound=Button(this,"Sound: on",625,24,125,40,ToggleSound);
         restart=Button(this,"New run",760,24,110,40,NewRun);
         resume=Button(this,"Resume",878,24,105,40,Load);
         save=Button(this,"Save",991,24,98,40,Save);
@@ -109,21 +113,8 @@ public partial class Main : Control
         heading.Text=$"{game.Stage+1}/3 · {game.Place}   /   Round {game.Round} of 12";
         resources.Text=$"{game.Sparks} sparks    {game.Kits} kits    {(game.Edge>0?"sharpened tools":game.Plates>0?"reinforced cover":"field tools")}";
         queue.Text=game.Phase==Phase.Combat?"NEXT  "+string.Join("  →  ",game.Order.Skip(game.Cursor).Where(id=>game.Find(id).Alive).Select(id=>game.Find(id).Name)):"Encounter complete · salvage and results do not spend combat turns";
-        foreach(var card in cards.Values)card.Free();cards.Clear();
-        foreach(var u in game.Units)
-        {
-            var index=u.Hero?u.Id:u.Id-3;var p=Panel(board,index*260,u.Hero?34:230,250,u.Hero?158:170,game.Actor?.Id==u.Id?Teal:u.Hero?new Color("#38525a"):new Color("#62483a"));cards[u.Id]=p;
-            p.Modulate=u.Alive?Colors.White:new Color(.55f,.55f,.55f);
-            Text(p,u.Name.ToUpperInvariant(),14,4,218,34,20,u.Hero?Teal:Ember);
-            Text(p,$"{(u.Front?"FRONT":"REAR")} · AGI {u.Speed}{(u.Armor>0?$" · Armour {u.Armor}":"")}",14,38,224,22,14,Muted);
-            var bar=Place(new ProgressBar {MinValue=0,MaxValue=u.MaxHp,Value=u.Hp,ShowPercentage=false},p,14,66,221,12);
-            bar.AddThemeStyleboxOverride("background",Style(Ink));bar.AddThemeStyleboxOverride("fill",Style(u.Hero?Teal:Ember));
-            Text(p,$"{u.Hp}/{u.MaxHp} HP{(u.Shield>0?$"   +{u.Shield} shield":"")}",14,81,222,24,15);
-            var detail=u.Hero?(u.Covers>=0?$"Covering {game.Find(u.Covers).Name}":u.Alive?u.Role:"DOWN · recover at salvage"):game.Intent(u.Id);
-            if(u.Hero&&u.Scorch>0)detail+=$"\nScorch {u.Scorch} · 2 HP / turn";
-            Text(p,detail,14,110,221,u.Hero?44:53,u.Hero?14:15,u.Hero?Muted:Ember);
-        }
-        foreach(Node n in actionList.GetChildren()) {actionList.RemoveChild(n);n.QueueFree();}choices.Clear();salvage.Clear();
+        RefreshCards();
+        foreach(var button in actionPool.Values.Concat(campPool.Values))button.Hide();choices.Clear();salvage.Clear();
         confirm.Visible=game.Phase==Phase.Combat && game.Actor!.Hero;
         resolve.Visible=game.Phase==Phase.Combat && !game.Actor!.Hero;
         if(game.Phase==Phase.Combat)
@@ -135,7 +126,9 @@ public partial class Main : Control
                 var legal=game.Legal();
                 for(var i=0;i<legal.Count;i++)
                 {
-                    var c=legal[i];var button=Button(actionList,game.Label(c),0,0,375,34,()=>Select(c));button.CustomMinimumSize=new(375,34);choices[c]=button;
+                    var c=legal[i];
+                    if(!actionPool.TryGetValue(c,out var button)){button=Button(actionList,"",0,0,375,34,()=>Select(c));button.CustomMinimumSize=new(375,34);actionPool.Add(c,button);}
+                    button.Show();button.Text=game.Label(c);actionList.MoveChild(button,i);choices[c]=button;
                     button.TooltipText=game.Preview(c);
                 }
             }
@@ -151,7 +144,9 @@ public partial class Main : Control
             forecast.Text=game.Phase==Phase.Camp?"Injuries and supplies carry forward. Each option enters the next encounter immediately.":game.Phase==Phase.Victory?$"Crew rescued. {game.Units.Count(u=>u.Hero&&u.Alive)}/3 rescuers standing.\nInspect the log, save, or start a new run.":"The line burst or every rescuer fell.\nStart a new run and change your plan.";
             var i=0;foreach(var c in game.CampChoices)
             {
-                var name=c;var b=Button(actionList,Content.CampLabel(c),0,i++*74,375,68,()=>Camp(name));b.CustomMinimumSize=new(375,68);b.AutowrapMode=TextServer.AutowrapMode.WordSmart;salvage[c]=b;
+                var name=c;
+                if(!campPool.TryGetValue(c,out var b)){b=Button(actionList,Content.CampLabel(c),0,0,375,68,()=>Camp(name));b.CustomMinimumSize=new(375,68);b.AutowrapMode=TextServer.AutowrapMode.WordSmart;campPool.Add(c,b);}
+                b.Show();actionList.MoveChild(b,i++);salvage[c]=b;
             }
         }
         story.Text=game.Phase==Phase.Combat?Content.Arrival[game.Stage]:game.Phase==Phase.Defeat?game.Log.Last():Content.After[game.Stage];
@@ -166,13 +161,20 @@ public partial class Main : Control
         if(modal.Visible)begin.GrabFocus();
     }
     private void Select(Command c) {selected=c;Refresh();confirm.GrabFocus();}
-    private void Accepted() {selected=null;showEnding=game.Phase==Phase.Victory;Save();Refresh();}
-    private void Confirm() {if(intro||showingRules||selected==null)return;if(game.Act(selected))Accepted();}
-    private void Enemy() {if(intro||showingRules)return;if(game.ResolveEnemy())Accepted();}
-    private void Camp(string c) {if(intro||showingRules)return;if(game.Camp(c))Accepted();}
+    private void Accepted()
+    {
+        selected=null;showEnding=game.Phase==Phase.Victory;Save();Refresh();
+        if(modal.Visible)return;
+        if(choices.Count>0)choices.Values.First().GrabFocus();
+        else if(resolve.Visible)resolve.GrabFocus();
+        else if(salvage.Count>0)salvage.Values.First().GrabFocus();
+    }
+    private void Confirm() {if(intro||showingRules||selected==null)return;var before=game.Fork();var cue=selected.Kind switch{Kind.Guard or Kind.Cover=>"brace",Kind.Pin=>"pin",Kind.Mend=>"mend",Kind.Shift=>"shift",_=>"strike"};if(game.Act(selected)){Accepted();Feedback(before,cue);}}
+    private void Enemy() {if(intro||showingRules||game.Actor is not {Hero:false} actor)return;var before=game.Fork();var threat=game.Threats[actor.Id];var cue=actor.Pinned?"pin":threat.Attack==Attack.Gout?"steam":threat.Attack==Attack.Repair?"mend":threat.Attack==Attack.Charge?"brace":"strike";if(game.ResolveEnemy()){if(threat.Attack==Attack.Repair&&!game.Units.Any(u=>u.Hp>before.Find(u.Id).Hp))cue="strike";Accepted();Feedback(before,cue);}}
+    private void Camp(string c) {if(intro||showingRules)return;var before=game.Fork();if(game.Camp(c)){Accepted();Feedback(before,"stage");}}
     private void CloseModal() {intro=false;showingRules=false;showEnding=false;Refresh();if(choices.Count>0)choices.Values.First().GrabFocus();}
-    private void ToggleRules() {showingRules=!showingRules;Refresh();}
-    private void NewRun() {game=new();selected=null;intro=true;showingRules=false;showEnding=false;notice.Text="New run is in memory. Enter and accept a turn to replace the previous save.";Refresh();}
+    private void ToggleRules() {showingRules=!showingRules;if(showingRules)speaker.Stop();Refresh();}
+    private void NewRun() {ResetFeedback();game=new();selected=null;intro=true;showingRules=false;showEnding=false;notice.Text="New run is in memory. Enter and accept a turn to replace the previous save.";Refresh();}
     private void Save()
     {
         try {Journal.Store(game,savePath);notice.Text="Saved accepted actions. Resume restores the exact next turn.";}
@@ -181,7 +183,7 @@ public partial class Main : Control
     }
     private void Load()
     {
-        try {var loaded=Journal.Load(savePath);game=loaded;selected=null;intro=false;showingRules=false;showEnding=game.Phase==Phase.Victory;notice.Text="Resumed the exact next turn and supplies.";Refresh();}
+        try {var loaded=Journal.Load(savePath);ResetFeedback();game=loaded;selected=null;intro=false;showingRules=false;showEnding=game.Phase==Phase.Victory;notice.Text="Resumed the exact next turn and supplies.";Refresh();}
         catch(Exception e)when(e is IOException or UnauthorizedAccessException or System.Text.Json.JsonException or InvalidDataException) {notice.Text="Resume rejected; current run preserved. "+e.Message;}
         notice.TooltipText=notice.Text;
     }

@@ -119,9 +119,9 @@
       "slug": "dark-knight",
       "status": "active",
       "maturity": "M4",
-      "phase": "native-tactical-campaign-validated",
+      "phase": "illustrated-native-feedback-validated",
       "origin": "new_seed_implementation",
-      "next_action": "Observe unassisted native tactical play and compare screening, resource use, Cover versus damage and salvage pacing; reassess P01 strategy, P10 dramatic progression and P03/P04 feedback before choosing the next milestone.",
+      "next_action": "Observe unassisted portrait/threat interpretation, actual action cues and keyboard/close behavior on physical hardware; compare P03 practice, P04/P10 readers and P11 team handoffs before the next milestone.",
       "related_projects": [
         "P02",
         "P06"
@@ -130,12 +130,13 @@
         "projects/cinderwatch/README.md",
         "projects/cinderwatch/Native/README.md",
         "projects/cinderwatch/provenance.json",
-        "evidence/cinderwatch/RUN.json"
+        "evidence/cinderwatch/RUN.json",
+        "evidence/cinderwatch/PRESENTATION_RUN.json"
       ],
       "historical_name": "The Dark Knight",
       "working_path": "projects/cinderwatch",
-      "working_version": "0.1.0",
-      "maturity_scope": "Bounded technical M4: new pure C#/.NET 10 domain and real Godot .NET 4.6.3 consumer; three roles/encounters, announced initiative/row screening, finite interrupts/treatment, cover/scorch, two one-time salvage decisions and conditional rescue ending. Native forecasts/confirmation, keyboard, explicit enemy pacing, accepted-action autosave/replay and failure handling. Compiled owned-assembly ZIP executed outside source with runtime-only .NET and OpenGL frames. Four synthetic routes win; Strike-only and Brace-only comparisons lose. No historical RMXP recovery, standalone OS export, artwork/audio production, independent human balance/accessibility or commercial validation."
+      "working_version": "0.2.0",
+      "maturity_scope": "Native presentation 0.2.0 integrates eight original generated portraits, seven original PCM cues, accepted-state HP/shield/row/Pin/scorch markers, persistent controls/styles, next-control keyboard focus and clean mixer/window shutdown. Exact Core/save schema and four original route outcomes preserved; original 0.1.0 package retained. Real native/mixer/OpenGL/OS keyboard-close and compiled project outside source with runtime-only .NET; no import cache/SDK. Prior unsafe-binding abort was not reproduced; clean bounded runs are not a universal fix. No full actor animation, soundtrack, OS executable, physical listening, independent enjoyment/accessibility or commercial validation."
     },
     {
       "id": "P06",
@@ -172,22 +173,30 @@
       "slug": "visual-asset-lab",
       "status": "active",
       "maturity": "M4",
-      "phase": "native-character-motion-integrated",
+      "phase": "multiple-native-portrait-and-motion-consumers",
       "origin": "new_seed_implementation",
-      "next_action": "Review generated proportions, small-scale pose transitions and horizontal mirroring with actual native players before adding directions or independent asset products.",
+      "next_action": "Compare actual P05 portrait/state readability and preserved P06 motion with unassisted players before further visual production.",
       "related_projects": [
         "P03",
         "P04",
-        "P10"
+        "P10",
+        "P05",
+        "P06"
       ],
       "evidence": [
         "projects/veil-arena/media/provenance.json",
         "evidence/veil-arena/PRESENTATION_RUN.json",
-        "evidence/veil-arena/MOTION_RUN.json"
+        "evidence/veil-arena/MOTION_RUN.json",
+        "projects/cinderwatch/Native/media/provenance.json",
+        "evidence/cinderwatch/PRESENTATION_RUN.json"
       ],
       "working_path": "projects/veil-arena/media/art",
-      "working_version": "0.2.0",
-      "maturity_scope": "Prior three PNG paintings plus two real reference-edited RGBA atlases (16 poses per character) consumed by P06 0.3.0. Four new generation/edit requests; crowded first sheets rejected and spacing corrected. PNG bytes unchanged; native metadata producer derives regions/foot pivots/scale. Actual texture alpha/pack/render and body-state integration checked, OpenGL frames/movie reviewed by Codex. No hand-animated interpolation, eight-direction set, independent artist/audience approval or exclusive-rights/commercial clearance."
+      "working_version": "0.3.0",
+      "maturity_scope": "Preserved P06 paintings/16-pose RGBA atlases plus one original image_gen 4x2 RGB portrait sheet consumed by P05 0.2.0. Eight distinct crew/machine portraits, native inset regions, raw pixel identity and actual OpenGL frames inspected by Codex. Static portraits/state feedback are not full actor animation; no independent artist/player approval or exclusive commercial clearance.",
+      "working_paths": [
+        "projects/veil-arena/media/art",
+        "projects/cinderwatch/Native/media"
+      ]
     },
     {
       "id": "P08",
@@ -195,13 +204,15 @@
       "slug": "audio-poetry-music-lab",
       "status": "active",
       "maturity": "M4",
-      "phase": "two-rhythm-stages-and-native-audio-integrated",
+      "phase": "rhythm-and-two-native-audio-consumers",
       "origin": "user_directive",
-      "next_action": "Listen to both rhythm stages and Veilbreak on real output hardware; compare arrangement, dynamics and cue distinction before catalogue expansion.",
+      "next_action": "Listen to original rhythm tracks and P05/P06 cues on physical output; compare action distinction, dynamics and musical quality before more catalogue work.",
       "related_projects": [
         "P03",
         "P04",
-        "P10"
+        "P10",
+        "P05",
+        "P06"
       ],
       "evidence": [
         "projects/tokyo80s/media/provenance.json",
@@ -211,14 +222,18 @@
         "projects/veil-arena/media/provenance.json",
         "evidence/veil-arena/PRESENTATION_RUN.json",
         "projects/tokyo80s/media/rain-provenance.json",
-        "evidence/tokyo80s/SETLIST_RUN.json"
+        "evidence/tokyo80s/SETLIST_RUN.json",
+        "projects/cinderwatch/Native/media/provenance.json",
+        "projects/cinderwatch/Native/media/audio/catalog.json",
+        "evidence/cinderwatch/PRESENTATION_RUN.json"
       ],
       "working_path": "projects/tokyo80s/media",
-      "working_version": "0.3.0",
-      "maturity_scope": "Original Midnight Signal and Rain Circuit masters/Vorbis/scores consumed by P03; preserved P06 fourteen cues/two loops. Rain Circuit 96 BPM with swung hats/FM-like keys/sustained call-answer, real chart tails and measured -14.3 LUFS/-2.9 dBFS decoded export. No external samples/MIDI/voices, historical recovery, human listening/album or exclusive-rights/commercial approval.",
+      "working_version": "0.4.0",
+      "maturity_scope": "Preserved P03 original masters/Vorbis/scores and P06 fourteen cues/two loops. P05 0.2.0 adds seven original deterministic mono PCM16 action cues, native playback/mute/stop and actual AudioServer capture. Source/catalog/hash/duration/endpoint/non-clipping checks and bounded consumer execution. No external samples/MIDI/voices, historical recovery, physical listening/album or exclusive commercial approval.",
       "working_paths": [
         "projects/tokyo80s/media",
-        "projects/veil-arena/media/audio"
+        "projects/veil-arena/media/audio",
+        "projects/cinderwatch/Native/media/audio"
       ]
     },
     {

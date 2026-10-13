@@ -30,7 +30,7 @@ public partial class Main
     {
         try
         {
-            await Frame();await Capture("brief");
+            await Frame();await PresentationChecks();await Capture("brief");
             Require(intro && confirm.Disabled && rules.Disabled,"Opening modal must disable underlying input");
             confirm.EmitSignal(BaseButton.SignalName.Pressed);Require(game.Journal.Count==0,"Modal accepted a hidden turn");
             begin.GrabFocus();await KeyboardEnter();
@@ -45,6 +45,9 @@ public partial class Main
             Require(selected==first && !confirm.Disabled,"Keyboard selection failed");await Capture("preview");
             confirm.GrabFocus();await KeyboardEnter();
             Require(game.Journal.Count==1 && game.Sparks==2 && game.Actor!.Id==0,"Keyboard confirmation must spend exactly one turn and spark");
+            Require(lastCue=="pin" && unitCards[3].Effect.Text=="-4 HP" && unitCards[3].Detail.Text.Contains("PINNED"),"Pin feedback does not describe actual damage/cancellation");
+            Require(GetViewport().GuiGetFocusOwner()==choices.Values.First(),"Accepted turn loses keyboard focus");
+            await Capture("pin-feedback");
             Require(Probe.State(Journal.Load(savePath))==Probe.State(game),"Accepted native action did not autosave exact state");
             before=Probe.State(game);rules.EmitSignal(BaseButton.SignalName.Pressed);await Capture("tactics");
             resolve.EmitSignal(BaseButton.SignalName.Pressed);confirm.EmitSignal(BaseButton.SignalName.Pressed);await Frame();
@@ -109,6 +112,12 @@ public partial class Main
             Require(game.Units.Count(u=>u.Hero&&u.Scorch>0)==3,"Native Gout did not apply three actual scorch states");
             choices[new(Kind.Guard)].EmitSignal(BaseButton.SignalName.Pressed);confirm.EmitSignal(BaseButton.SignalName.Pressed);await Frame();
             Require(game.Find(2).Shield==7 && game.Find(2).Scorch==1,"Shield and timed scorch are not both visible");
+            foreach(var hero in game.Units.Where(u=>u.Hero))
+            {
+                var label=unitCards[hero.Id].Detail;
+                GD.Print(JsonSerializer.Serialize(new{status=label.Text,height=label.Size.Y,lineHeight=label.GetLineHeight(),lines=label.GetLineCount(),visible=label.GetVisibleLineCount()},Journal.Json));
+                Require(label.GetVisibleLineCount()==label.GetLineCount(),"Scorch status is clipped despite its stored text");
+            }
             await Capture("scorch");
             restart.EmitSignal(BaseButton.SignalName.Pressed);begin.EmitSignal(BaseButton.SignalName.Pressed);
             for(var step=0;step<512 && game.Phase==Phase.Combat;step++)
@@ -118,9 +127,31 @@ public partial class Main
                 await Frame();
             }
             Require(game.Phase==Phase.Defeat && !confirm.Visible && !resolve.Visible,"Deadline loss cannot be inspected/restarted");await Capture("defeat");
-            GD.Print(JsonSerializer.Serialize(new{nativeChecks=checks,journeys,deadline=game.Round,display=DisplayServer.GetName(),assessment="Scripted controls and implementing-agent visual review; not a human playtest"},Journal.Json));
-            GetTree().Quit();
+            Require(unitCards.Count==6 && actionPool.Count<=32 && campPool.Count==4 && styles.Count<=20,"Presentation resources grow with campaign length");
+            GD.Print(JsonSerializer.Serialize(new{nativeChecks=checks,journeys,deadline=game.Round,presentation=new{portraits=portraits.Count,cards=unitCards.Count,actions=actionPool.Count,camps=campPool.Count,styles=styles.Count,cuePlays},display=DisplayServer.GetName(),assessment="Scripted controls and implementing-agent visual review; not a human playtest"},Journal.Json));
+            await QuitCleanly();
         }
-        catch(Exception e) {GD.PrintErr(e.ToString());GetTree().Quit(1);}
+        catch(Exception e) {GD.PrintErr(e.ToString());await QuitCleanly(1);}
+    }
+    private async Task PresentationChecks()
+    {
+        Require(portraits.Count==8 && portraitSheet.GetWidth()==1774 && portraitSheet.GetHeight()==887,"Actual eight-cell atlas did not load");
+        for(var i=0;i<8;i++)Require(portraits[i].Region.End.X<=1774 && portraits[i].Region.End.Y<=887 && portraits[i].Atlas==portraitSheet,"Portrait region escapes the original sheet");
+        Require(cues.Count==7 && cues.Values.All(c=>c.GetLength()>.1 && c.MixRate==44100),"Real action PCM streams are absent");
+        var frozen=Probe.State(game);var cardsBefore=unitCards.Values.Select(c=>c.Panel.GetInstanceId()).ToArray();
+        var buttonsBefore=actionPool.Values.Select(b=>b.GetInstanceId()).ToArray();var styleCount=styles.Count;
+        for(var i=0;i<100;i++){selected=new(Kind.Guard);Refresh();await Frame();}
+        Require(Probe.State(game)==frozen && unitCards.Values.Select(c=>c.Panel.GetInstanceId()).SequenceEqual(cardsBefore),"Selection rebuilds actor nodes or changes the campaign");
+        Require(actionPool.Values.Select(b=>b.GetInstanceId()).SequenceEqual(buttonsBefore) && styles.Count==styleCount,"Selection rebuilds buttons/materials");selected=null;Refresh();
+        var bus=AudioServer.BusCount;AudioServer.AddBus();AudioServer.SetBusName(bus,"CinderCapture");
+        using var capture=new AudioEffectCapture();AudioServer.AddBusEffect(bus,capture);speaker.Bus="CinderCapture";
+        PlayCue("steam");await ToSignal(GetTree().CreateTimer(.3),SceneTreeTimer.SignalName.Timeout);
+        var samples=capture.GetBuffer(capture.GetFramesAvailable());var peak=samples.Select(v=>Math.Max(Math.Abs(v.X),Math.Abs(v.Y))).DefaultIfEmpty().Max();
+        Require(samples.Length>4000 && peak>.01f && peak<1,"Actual AudioServer action capture is silent/clipped/incomplete");
+        GD.Print(JsonSerializer.Serialize(new{audioCaptureFrames=samples.Length,peak},Journal.Json));
+        sound.EmitSignal(BaseButton.SignalName.Pressed);var played=cuePlays;PlayCue("strike");
+        Require(muted && !speaker.Playing && cuePlays==played,"Mute leaves an action sound active");
+        sound.EmitSignal(BaseButton.SignalName.Pressed);Require(!muted && sound.Text=="Sound: on","Sound does not re-arm explicitly");
+        speaker.Bus="Master";AudioServer.RemoveBus(bus);ResetFeedback();
     }
 }

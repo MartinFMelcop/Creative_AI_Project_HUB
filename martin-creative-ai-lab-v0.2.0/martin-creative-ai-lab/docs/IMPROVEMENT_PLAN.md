@@ -1,22 +1,22 @@
-# Current milestone — targeted musical rehearsal
+# Current milestone — illustrated tactical feedback
 
-P03 0.3.0 connects full-run phrase summaries to a playable four-bar rehearsal.
-Select either original song/chart and 75/90/100% backing, hear a scheduled
-four-click entrance, carry complete tails, pause/re-hold, repeat/restart or return
-to the full track. Review actual missed heads/holds, compare identical setups
-and export source/performance identity. Rehearsals never update full-run bests.
+P05 0.2.0 integrates one original eight-cell portrait sheet, seven PCM cues and
+fading actual transaction effects. Preserve Core/rules/save schema, four salvage
+routes, explicit enemy turns and original package. Reuse controls/styles with
+owned-resource disposal, keep keyboard focus and close through the real window
+signal after releasing mixer playback. Deliver a current compiled native project.
 
-Acceptance: execute original 0.2.0 comparison and real Chromium decoded audio,
-source offsets/rates/count-in, keyboard/touch, pause/resume, bounded attempts,
-repeat comparison, export and cancellation. Run both full original performances
-and existing timing/calibration/failure regressions; inspect desktop/390px frames.
-Verify all source heads partition without tail truncation across both charts/rates;
-check original media contracts, repository/manifest and normal main publication.
-[Execution](../evidence/tokyo80s/REHEARSAL_RUN.json) records actual results.
+Acceptance: build C#, run 74 domain checks and all native campaigns/media/labels,
+capture actual AudioServer samples, compare old/new control identities, inspect
+OpenGL portraits/Pin/scorch/ending, operate OS keyboard/close and execute the final
+package outside source with runtime-only .NET. Check media/source ownership,
+repository/manifest and hosted source/delivered/rebuilt consumers; normal main
+publication. [Execution](../evidence/cinderwatch/PRESENTATION_RUN.json).
 
-Slower playback lowers pitch. Human learning/quality, physical listening/latency,
-other browsers and commercial interest require later evidence. Reassess these
-against native play, readers and trusted team handoffs before another milestone.
+No physical listening/hardware accessibility, independent creative/play approval,
+OS executable or commercial clearance. Prior unsafe-binding failure remains a
+bounded lifetime concern, not a universally proven engine fix. Reassess play and
+listening against P03 practice, readers and actual team handoffs next session.
 
 # Previous milestone — native Eclipse Fair board
 

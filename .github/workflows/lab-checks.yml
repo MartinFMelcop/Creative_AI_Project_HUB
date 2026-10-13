@@ -65,12 +65,13 @@ jobs:
           dotnet build Native/Cinder.Native.csproj -c Debug
           "$cinder_engine" --headless --path Native --editor --import --quit
           "$cinder_engine" --headless --path Native -- --verify --save-path "$RUNNER_TEMP/cinder-source/save.json"
+          python3 tools/check_media.py
           python3 tools/check_pack.py
-          unzip -q dist/cinderwatch-0.1.0.zip -d "$RUNNER_TEMP/cinder-delivered"
+          unzip -q dist/cinderwatch-0.2.0.zip -d "$RUNNER_TEMP/cinder-delivered"
           "$cinder_engine" --headless --path "$RUNNER_TEMP/cinder-delivered/cinderwatch/Native" -- --verify --save-path "$RUNNER_TEMP/cinder-delivered-check/save.json"
           python3 tools/pack.py
           python3 tools/check_pack.py --assemblies
-          unzip -q dist/cinderwatch-0.1.0.zip -d "$RUNNER_TEMP/cinder-rebuilt"
+          unzip -q dist/cinderwatch-0.2.0.zip -d "$RUNNER_TEMP/cinder-rebuilt"
           "$cinder_engine" --headless --path "$RUNNER_TEMP/cinder-rebuilt/cinderwatch/Native" -- --verify --save-path "$RUNNER_TEMP/cinder-rebuilt-check/save.json"
 
   native-arena:

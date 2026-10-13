@@ -1,0 +1,284 @@
+{
+  "project_id": "P05",
+  "version": "0.2.0",
+  "seed_version": "0.24.0",
+  "recorded_at": "2026-10-13T21:17:26.779515+00:00",
+  "baseline_commit": "41c21c6c80b37587a6950b8131294c5eee69c053",
+  "contribution": "Martin direction/main authorization; Codex media/code and same-agent rendered review. Declared synthetic native/X11 inputs, no human play/listening or independent commercial approval.",
+  "portfolio_decision": "Compare eleven project lines/recent twelve commits. Choose P05 text-only/silent complete campaign over continuing completed P03 rehearsal/P06 distribution or expanding prose/services without audience sources. Include lifetime inspection prompted by actual prior Cinderwatch CI shutdown abort.",
+  "technology_decision": "Existing C#/Godot .NET 4.6.3 consumer and exact Core/save rules; one original image_gen atlas, Python/NumPy deterministic PCM. Raw native PNG/WAV loading needs no import cache. No web migration, shared framework or historical creative media transfer.",
+  "environment": {
+    "system": "Linux-6.18.44-x86_64-with-glibc2.41",
+    "machine": "x86_64",
+    "sdk": "10.0.401",
+    "godot": "4.6.3.stable.mono.official.7d41c59c4",
+    "runtime_only": "10.0.12",
+    "renderer": "OpenGL 4.5 Compatibility / Mesa 25.0.7-2+deb13u1 / llvmpipe LLVM 19.1.7",
+    "display": "Xorg dummy 1280x800",
+    "audio": "Actual AudioServer mixer; Dummy output, no physical listening"
+  },
+  "before": "Actual 0.1.0 compiled project has text-only actor cards, no portrait/cue/transaction marker; selecting replaces controls. Original package remains intact.",
+  "after": "Eight original portraits, seven original PCM cues, accepted-state fading feedback, target/active/down state, persistent controls/styles, keyboard continuation and window/test mixer teardown. No queued turn; full routes/saves retain original rules.",
+  "executed": [
+    {
+      "command": "dotnet build Native/Cinder.Native.csproj -c Debug",
+      "result": "Success; zero warnings/errors with pinned Godot SDK."
+    },
+    {
+      "command": "dotnet run --project Checks -c Release",
+      "result": "74/74 checks; four synthetic victories retain HP/actions, naive policy loses."
+    },
+    {
+      "command": "Godot .NET --headless --path Native -- --verify --save-path <scratch>",
+      "result": "Final source: 779 native checks; complete four routes, deadline, autosave/failure/replay, media/mute, persistent IDs, focus and visible scorch lines."
+    },
+    {
+      "command": "Godot .NET --headless --path <delivered>/Native -- --verify --save-path <scratch>",
+      "result": "Final delivered compiled consumer: 779 checks outside source, runtime-only .NET, fresh data and no imported media cache."
+    },
+    {
+      "command": "DISPLAY=:98 Godot .NET --audio-driver Dummy --path <delivered>/Native -- --verify --save-path <scratch> --capture-dir <scratch>",
+      "result": "790 actual OpenGL checks, complete campaigns, native raw frames and clean exit; extra count comes from frame-save assertions."
+    },
+    {
+      "command": "resource_probe.gd through old and new compiled engine projects",
+      "result": "Same 300 control selections; no committed turn. Old retains 39/76 initial child IDs, current retains 88/88. Node count stable in both; not a memory or speed benchmark."
+    },
+    {
+      "command": "python3 window_probe.py",
+      "result": "Real delivered window: XTest Enter/Tab/Pin/Brace, two actual accepted actions saved, WM_DELETE_WINDOW exit 0. No SDK in PATH; close log has no leaked-instance/error markers."
+    },
+    {
+      "command": "python3 tools/check_media.py; python3 tools/pack.py; python3 tools/check_pack.py --assemblies",
+      "result": "PNG identity/CRC, seven PCM hashes/duration/endpoint/non-clipping and actual 33-entry owned package/source/assembly/media checks pass."
+    },
+    {
+      "command": "python3 tools/validate_repo.py",
+      "result": "Pass: 11 projects, 14 transfers, 8 assets, 2 legacy sources and 270 local file links. Documentary checks only."
+    },
+    {
+      "command": "python3 tools/test_validate_repo.py; python3 tools/test_check_manifest.py",
+      "result": "11/11 and 11/11 regressions pass."
+    }
+  ],
+  "native_result": {
+    "nativeChecks": 779,
+    "journeys": [
+      {
+        "first": "coolant",
+        "second": "plates",
+        "actions": 65,
+        "hp": [
+          6,
+          6,
+          28
+        ],
+        "kits": 0,
+        "sparks": 0
+      },
+      {
+        "first": "coolant",
+        "second": "edge",
+        "actions": 59,
+        "hp": [
+          6,
+          13,
+          28
+        ],
+        "kits": 0,
+        "sparks": 0
+      },
+      {
+        "first": "sparks",
+        "second": "plates",
+        "actions": 71,
+        "hp": [
+          7,
+          16,
+          28
+        ],
+        "kits": 0,
+        "sparks": 0
+      },
+      {
+        "first": "sparks",
+        "second": "edge",
+        "actions": 65,
+        "hp": [
+          7,
+          23,
+          28
+        ],
+        "kits": 0,
+        "sparks": 0
+      }
+    ],
+    "deadline": 13,
+    "presentation": {
+      "portraits": 8,
+      "cards": 6,
+      "actions": 15,
+      "camps": 4,
+      "styles": 12,
+      "cuePlays": 374
+    },
+    "display": "headless",
+    "assessment": "Scripted controls and implementing-agent visual review; not a human playtest"
+  },
+  "visual_result_checks": 790,
+  "actual_audio_capture": {
+    "audioCaptureFrames": 7680,
+    "peak": 0.23886187
+  },
+  "actual_visible_status": [
+    {
+      "status": "shieldwright\nScorch 2 \u00b7 2 HP / turn",
+      "height": 42,
+      "lineHeight": 18,
+      "lines": 2,
+      "visible": 2
+    },
+    {
+      "status": "line scout\nScorch 2 \u00b7 2 HP / turn",
+      "height": 42,
+      "lineHeight": 18,
+      "lines": 2,
+      "visible": 2
+    },
+    {
+      "status": "field medic\nScorch 1 \u00b7 2 HP / turn",
+      "height": 42,
+      "lineHeight": 18,
+      "lines": 2,
+      "visible": 2
+    }
+  ],
+  "original_control_probe": {
+    "initial_child_nodes": 76,
+    "probe": "native control selection without committing turns",
+    "retained_child_nodes": 39,
+    "samples": [
+      {
+        "nodes": 78.0,
+        "orphans": 0.0,
+        "resources": 2.0,
+        "selections": 0
+      },
+      {
+        "nodes": 78.0,
+        "orphans": 0.0,
+        "resources": 2.0,
+        "selections": 100
+      },
+      {
+        "nodes": 78.0,
+        "orphans": 0.0,
+        "resources": 2.0,
+        "selections": 200
+      },
+      {
+        "nodes": 78.0,
+        "orphans": 0.0,
+        "resources": 2.0,
+        "selections": 300
+      }
+    ]
+  },
+  "current_control_probe": {
+    "initial_child_nodes": 88,
+    "probe": "native control selection without committing turns",
+    "retained_child_nodes": 88,
+    "samples": [
+      {
+        "nodes": 90.0,
+        "orphans": 0.0,
+        "resources": 2.0,
+        "selections": 0
+      },
+      {
+        "nodes": 90.0,
+        "orphans": 0.0,
+        "resources": 2.0,
+        "selections": 100
+      },
+      {
+        "nodes": 90.0,
+        "orphans": 0.0,
+        "resources": 2.0,
+        "selections": 200
+      },
+      {
+        "nodes": 90.0,
+        "orphans": 0.0,
+        "resources": 2.0,
+        "selections": 300
+      }
+    ]
+  },
+  "OS_window": {
+    "process": "actual delivered Godot .NET player outside checkout",
+    "window": "Cinderwatch (DEBUG)",
+    "inputs": "XTest enter/select/confirm Pin and Brace; WM_DELETE_WINDOW client message",
+    "accepted_actions": [
+      {
+        "op": "act",
+        "command": {
+          "kind": "Pin",
+          "target": 3
+        },
+        "choice": null
+      },
+      {
+        "op": "act",
+        "command": {
+          "kind": "Guard",
+          "target": -1
+        },
+        "choice": null
+      }
+    ],
+    "exit_code": 0,
+    "runtime_only": true,
+    "SDK_in_PATH": false,
+    "physical_audio": false
+  },
+  "preservation": {
+    "baseline": "41c21c6c80b37587a6950b8131294c5eee69c053",
+    "files_compared": 228,
+    "all_equal": true,
+    "old_pack_sha256": "f463d4d21239a1af8cb964ac5190e4b3a04896e5077f33638b5c61c91543c597",
+    "core_sources_unchanged": true,
+    "compiled_core_byte_identity": false,
+    "scope": "Core sources/rule/save behavior preserved; assemblies rebuilt. DLL byte identity was checked and differs; no identity claim."
+  },
+  "lifetime_scope": "Prior CI 38461088150 attempt 1 aborted after 667 checks with unsafe C# style bindings; retry/local baseline passed. New instance-owned caches/resources and mixer drain yield bounded clean source/headless/OpenGL/window exits. The original abort was not reproduced and is not claimed universally repaired. Initial new builds had an audio playback leak; final successful logs have none.",
+  "review": {
+    "classification": "Reasoned assessment by implementing agent",
+    "scope": "Source atlas and native 1280x800 frames inspected. Crew/machine silhouettes share industrial teal/copper identity; names/threats/resources remain explicit. Pixel review corrected damage tint and missing scorch rows despite earlier height arithmetic; actual visible-line checks now verify both lines. OS keyboard review corrected focus after acceptance. No independent aesthetic/accessibility approval."
+  },
+  "limits": [
+    "Static portraits and fading state labels, not full character animation, music soundtrack or recovered historical assets.",
+    "External Godot .NET/.NET runtime required; this is a compiled project, not an OS executable.",
+    "No physical listening/input latency, independent readability/enjoyment/accessibility, other platforms or commercial rights/demand approval.",
+    "No universal GC/driver shutdown repair claim from bounded clean tests.",
+    "Core sources/rules/save schema remain 0.1.0; compiled assemblies rebuilt and Core DLL bytes differ. No binary identity or bit-reproducible release claim.",
+    "GitHub publication only; Sites unchanged."
+  ],
+  "sha256": {
+    "projects/cinderwatch/Native/Main.cs": "c6df7348009deb3e512424e7386984a126edd8e12a90f91a83e430b45e0cfe57",
+    "projects/cinderwatch/Native/Presentation.cs": "a43cf36c8dba9e011fb313b0227be491ddfb58e0bc7ffde0c7e60a715cba6ed4",
+    "projects/cinderwatch/Native/NativeChecks.cs": "2c8ddddc3a86a156b2047cd4f8c4b6a7523122a602e7df72eae49e7209cef2d7",
+    "projects/cinderwatch/Native/Cinder.Native.csproj": "350ffd5b47dc52a291fbd94b93bd1daa17d71693763bd0cbff43a7f31cd916a0",
+    "projects/cinderwatch/Native/project.godot": "fc5b04e926222f8cb0b36b4da77e0d4c159714dda11258cfa9017b20296cb919",
+    "projects/cinderwatch/Native/media/portraits.png": "fc0047682ddde11ef4e4339e965164e361432287759a7c12223c7ef55027a1cb",
+    "projects/cinderwatch/Native/media/provenance.json": "3da2db2db95ce113ecfb2a4a6656c291f8f8601fc14f0833688db87c123bac4c",
+    "projects/cinderwatch/Native/media/audio/catalog.json": "dbeae5b6d249657d1432c56cac5abde1b1ea52f9f5c1780284f2d2c2288104da",
+    "projects/cinderwatch/Core/Game.cs": "53dd7148e63dd57ae0796943b810d0652398d72fd75e46bdd76a8f322d2674d7",
+    "projects/cinderwatch/Core/Journal.cs": "46bae735fc58e58dce317234c418775f410e58ad8bea728df2d41c8f098f38e4",
+    "projects/cinderwatch/Core/Content.cs": "d37035eab4aa09802511dd3b5806ae8d295156824a18962a9ed14d19184fb3bb",
+    "projects/cinderwatch/dist/cinderwatch-0.2.0.zip": "e2a94f4ff14448c672762cf548a4e610b62ee689acce5797830c025e4d2202b8",
+    "evidence/cinderwatch/presentation-governor.png": "b5078251e8eb5fcaf3b8276a695d403c24275b862a739c6d8874423137866005",
+    "evidence/cinderwatch/presentation-pin.png": "dfcf1a08e051d120f08b269b7acdd4f4c9f9121d4997c47715d111c4bfd1031f",
+    "evidence/cinderwatch/presentation-scorch.png": "3230656494f40ed4b522661ae26ccc6878151130a8364299d732b59fb3fc09a2"
+  }
+}
