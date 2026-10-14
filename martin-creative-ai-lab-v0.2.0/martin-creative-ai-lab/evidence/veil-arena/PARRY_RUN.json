@@ -1,0 +1,309 @@
+{
+  "project": "P06",
+  "version": "0.5.0",
+  "date": "2026-10-14 (UTC)",
+  "baseline_commit": "e5715d9ff8a05635762b47fe13215ecb1b57a539",
+  "environment": {
+    "engine": "Godot 4.6.3.stable.official.7d41c59c4 standard",
+    "OS": "managed Linux x86_64",
+    "display": "isolated Xvfb :96, Mesa 25.0.7 llvmpipe OpenGL 4.5 compatibility",
+    "audio": "native AudioServer capture with dummy driver, no physical output",
+    "input": "scripted native events/actions and separate XTest release-window keyboard events; no physical controller"
+  },
+  "rules": {
+    "cost": 20,
+    "success_refund": 8,
+    "cooldown_seconds": 0.9,
+    "startup_seconds": 0.06,
+    "live_end_exclusive_seconds": 0.18,
+    "missed_recovery_seconds": 0.38,
+    "range_pixels": 110,
+    "facing_sector_degrees": 120,
+    "opening_seconds": 1.2,
+    "damage_on_parry": 0,
+    "general_invulnerability": false,
+    "guardable": "actual sweep collision only; charge, wave and echo bypass guard"
+  },
+  "checks": {
+    "source": {
+      "encounter": {
+        "checks": 24,
+        "failures": []
+      },
+      "presentation": {
+        "audio_frames": 231424,
+        "checks": 26,
+        "display": "headless",
+        "failures": [],
+        "measured_peak": 0.841408967971802
+      },
+      "motion": {
+        "checks": 36,
+        "failures": []
+      },
+      "controls": {
+        "checks": 30,
+        "failures": [],
+        "game_version": "0.5.0",
+        "physical_gamepad": false
+      },
+      "parry": {
+        "checks": 36,
+        "failures": []
+      }
+    },
+    "shipped": {
+      "encounter": {
+        "checks": 24,
+        "failures": []
+      },
+      "presentation": {
+        "audio_frames": 233472,
+        "checks": 26,
+        "display": "headless",
+        "failures": [],
+        "measured_peak": 0.841408967971802
+      },
+      "motion": {
+        "checks": 36,
+        "failures": []
+      },
+      "controls": {
+        "checks": 30,
+        "failures": [],
+        "game_version": "0.5.0",
+        "physical_gamepad": false
+      },
+      "parry": {
+        "checks": 36,
+        "failures": []
+      }
+    },
+    "rebuilt": {
+      "encounter": {
+        "checks": 24,
+        "failures": []
+      },
+      "presentation": {
+        "audio_frames": 233472,
+        "checks": 26,
+        "display": "headless",
+        "failures": [],
+        "measured_peak": 0.841408967971802
+      },
+      "motion": {
+        "checks": 36,
+        "failures": []
+      },
+      "controls": {
+        "checks": 30,
+        "failures": [],
+        "game_version": "0.5.0",
+        "physical_gamepad": false
+      },
+      "parry": {
+        "checks": 36,
+        "failures": []
+      }
+    },
+    "player": {
+      "encounter": {
+        "checks": 24,
+        "failures": []
+      },
+      "presentation": {
+        "audio_frames": 233472,
+        "checks": 26,
+        "display": "headless",
+        "failures": [],
+        "measured_peak": 0.841408967971802
+      },
+      "motion": {
+        "checks": 36,
+        "failures": []
+      },
+      "controls": {
+        "checks": 30,
+        "failures": [],
+        "game_version": "0.5.0",
+        "physical_gamepad": false
+      },
+      "parry": {
+        "checks": 36,
+        "failures": []
+      }
+    }
+  },
+  "opengl": {
+    "parry": {
+      "checks": 36,
+      "failures": []
+    },
+    "fight": {
+      "hp": 6,
+      "input": "scripted native actions; no physical controller",
+      "mode": "victory",
+      "parry_phases": [
+        1,
+        2
+      ],
+      "stats": {
+        "breaks": 0,
+        "damage_taken": 0,
+        "dodges": 2,
+        "hits": 7,
+        "parries": 2,
+        "parry_attempts": 2,
+        "patterns": [
+          "sweep",
+          "charge",
+          "wave"
+        ],
+        "phase_changes": 1,
+        "seals": 0,
+        "strikes": 7
+      },
+      "time": 23.7166666666666
+    },
+    "review": "Codex inspected actual ready/counter/tactics/result frames; rules fit the native viewport and guard has explicit state text. Implementing-agent review only."
+  },
+  "comparison": {
+    "same_fixture_before": {
+      "boss_hp": 160.0,
+      "hp": 5,
+      "scenario": "Native L press 150ms before the same 85px locked sweep",
+      "stage": "active",
+      "stats": {
+        "breaks": 0,
+        "damage_taken": 1,
+        "dodges": 0,
+        "hits": 0,
+        "patterns": [],
+        "phase_changes": 0,
+        "seals": 0,
+        "strikes": 0
+      },
+      "version": "0.4.0"
+    },
+    "same_fixture_after": {
+      "boss_hp": 160.0,
+      "hp": 6,
+      "scenario": "Native L press 150ms before the same 85px locked sweep",
+      "stage": "recover",
+      "stats": {
+        "breaks": 0,
+        "damage_taken": 0,
+        "dodges": 0,
+        "hits": 0,
+        "parries": 1,
+        "parry_attempts": 1,
+        "patterns": [],
+        "phase_changes": 0,
+        "seals": 0,
+        "strikes": 0
+      },
+      "version": "0.5.0"
+    },
+    "retained_route": {
+      "boss_hp": 0.0,
+      "hp": 1,
+      "mode": "victory",
+      "stats": {
+        "breaks": 1,
+        "damage_taken": 5,
+        "dodges": 6,
+        "hits": 26,
+        "parries": 0,
+        "parry_attempts": 0,
+        "patterns": [
+          "sweep",
+          "charge",
+          "wave"
+        ],
+        "phase_changes": 1,
+        "seals": 15,
+        "strikes": 11
+      },
+      "time": 55.5833333333315
+    },
+    "new_route": {
+      "hp": 6,
+      "input": "scripted native actions; no physical controller",
+      "mode": "victory",
+      "parry_phases": [
+        1,
+        2
+      ],
+      "stats": {
+        "breaks": 0,
+        "damage_taken": 0,
+        "dodges": 2,
+        "hits": 7,
+        "parries": 2,
+        "parry_attempts": 2,
+        "patterns": [
+          "sweep",
+          "charge",
+          "wave"
+        ],
+        "phase_changes": 1,
+        "seals": 0,
+        "strikes": 7
+      },
+      "time": 23.7166666666666
+    },
+    "interpretation": "Same 85px native L/sweep fixture now preserves health and opens recovery instead of taking damage. The older legal-input route retains its 55.58s/1-health victory. The new scripted route deliberately waits for a parry in each phase, using perfect state knowledge; different policies do not establish human difficulty, optimality or absence of dominant strategies."
+  },
+  "distribution": {
+    "artifact": "projects/veil-arena/dist/veilbreak-linux-0.5.0.zip",
+    "sha256": "8590358965fcc03874d3e703f1e485aa8c13fec1e4a7b42716e4e14678e110e1",
+    "bytes": 32570992,
+    "bundle_entries": 6,
+    "runtime_template_sha256": "2c78919325d7f29fa7607287c7c1eeac367ea4c94e7b8b6f5f4c6b20492f73d0",
+    "official_templates_sha256": "3fbe2c0e2dec9d537ab9ec97bcf8da91dcf23357fc51f67092dd068d839290a8",
+    "pck_sha256": "f4cc7ba8ed1dfab5c07cfbaa534c43db01e09ccd819ef18e1ea0900f9225fb44",
+    "standalone_resource_pck_sha256": "79e995e07cd9e60f6b44730cd1968b0f2d8044f33fcb2bed1745365f38928574",
+    "rebuilt_resource_pck_sha256": "79e995e07cd9e60f6b44730cd1968b0f2d8044f33fcb2bed1745365f38928574",
+    "release_boot": "Actual delivered ELF started headless outside checkout for ten frames",
+    "window": {
+      "process": "actual distributed Linux release ELF",
+      "window": "Veilbreak — The Bell Warden",
+      "input": "XTest keyboard events on the release window",
+      "frames": 7,
+      "idle_wait_seconds": 32,
+      "editor_or_sdk_in_path": false,
+      "physical_gamepad": false
+    },
+    "window_observation": "Codex inspected actual L/PARRY READY and idle-defeat frames; start, combat, pause, tactics, restart also captured. Actual ELF needs no editor/SDK; external script execution uses the editor against its exported PCK, not the release template. No complete ELF victory claim."
+  },
+  "preserved": {
+    "media_files_byte_identical_to_baseline": 26,
+    "old_linux_zip_sha256": "8433318647a4426c5545fe723dc1a58a34fb6eb1676c66ab1cd20abf334b578c",
+    "historical_sources": "175 Rave texts / 3 WebSocket files and archive unchanged",
+    "new_media": false,
+    "reuse": "Existing held blade pose and counter cue; no new art/audio production or transfer promotion"
+  },
+  "source_sha256": {
+    "arena.gd": "11c5da8f535190737ff9b84e8eedddeff6c93e78898f45479730ee3294de5c68",
+    "controls.gd": "fd8120937256cd1e28cb49a9229edcb9901610a7cdd878a96ecf9e9d7caf1dac",
+    "motion.gd": "c45f43ade6ac5adac3d57dd4e79281208e1ed2adb312fa8cc82bbf3cacbe47a8",
+    "project.godot": "7854d5ad28c5c6fd25dc03be3f377193185d3fa814a54bc363e703af2367508d",
+    "tests/parry.gd": "d15c6dbedec124be2e50871eadafc438faf39cf8202b3903c2ab34fadfccf773"
+  },
+  "frames": {
+    "parry-ready.png": "6eb442fbf86674057543daa736652c920bdf3f9ada8aca145d2b1998b85b0d69",
+    "parry-tactics.png": "1e3e7c02e27077067a02e221f1a5b2750fa74dba9cf66c7b76719f8ad97f7c5e",
+    "parry-victory.png": "1615ad8d10896252a72921adc363ac1519e6af1ba30c39e2ad01db61d0dbf6e5",
+    "release-guard.png": "9b2d74a3e4b2f4c11b5de3a966e242fb9e8d0e01782e5b3d3707d2d99f6ec7ba"
+  },
+  "execution_corrections": [
+    "An initial audio invocation forced fixed-fps and produced zero captured mixer frames; rerunning the existing audio suite without fixed-fps passed all 26 checks.",
+    "The initial synthetic policy renewed input timestamps before dispatch and killed the boss before demonstrating both guard tempos. Corrected held-input delivery and deliberate per-phase waiting; final 36 checks pass in headless and OpenGL.",
+    "The first graphical invocation attempted unavailable ALSA hardware; final rendering uses the explicit dummy driver. No physical listening claim."
+  ],
+  "limits": [
+    "No physical controller, unassisted human timing/playtest, accessibility assessment, natural OS-focus trial or physical listening.",
+    "120ms timing window and perfect-information automation require player evaluation; no balance/optimality claim.",
+    "No Windows/macOS builds, independent artistic approval, audience demand, exclusive asset rights or commercial readiness."
+  ]
+}

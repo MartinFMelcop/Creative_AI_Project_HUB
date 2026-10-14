@@ -18,6 +18,10 @@ const Controls = preload("res://controls.gd")
 var controls = Controls.new()
 const STRIKE_CONTACT := 0.10
 const SEAL_CONTACT := 0.075
+const PARRY_START := 0.06
+const PARRY_END := 0.18
+const PARRY_RECOVERY := 0.38
+const PARRY_RANGE := 110.0
 var player_action := ""
 var action_time := 0.0
 var action_emitted := false
@@ -55,6 +59,7 @@ var invulnerable := 0.0
 var strike_cooldown := 0.0
 var seal_cooldown := 0.0
 var dash_cooldown := 0.0
+var parry_cooldown := 0.0
 var swing := 0.0
 var damage_flash := 0.0
 var boss_flash := 0.0
@@ -153,8 +158,8 @@ func _build_ui() -> void:
 	audio_button.pressed.connect(toggle_audio)
 	add_child(audio_button)
 	help_panel = PanelContainer.new()
-	help_panel.position = Vector2(275,215)
-	help_panel.size = Vector2(730,370)
+	help_panel.position = Vector2(235,175)
+	help_panel.size = Vector2(810,485)
 	var style := StyleBoxFlat.new()
 	style.bg_color = INK
 	style.border_color = Color("50617b")
@@ -165,8 +170,8 @@ func _build_ui() -> void:
 	style.content_margin_bottom = 18
 	help_panel.add_theme_stylebox_override("panel",style)
 	var label := Label.new()
-	label.text = "MOVE   WASD / arrows · left stick / D-pad\nBLADE   J / X (west) — 12 resolve; locks aim, 100ms preparation.\nContact: guarded 4 / open 24. Finish recovery before attacking again.\nSEAL   K / Y (north) — 34 resolve; 8 damage + 36 ward pressure.\nDODGE   Space / B (east) — 25 resolve; cancels without refund.\nBrief invulnerability, then vulnerable. Columns stop movement.\nPAUSE   Esc / Start · Enter / A (south) begins, resumes, restarts.\nTACTICS   F1 / Back · SOUND   M / RB toggles music and cues.\n\nStone columns stop charges and block seals. Amber warnings lock.\nLeave a sweep; cross a wave with a well-timed dodge.\nPunish recovery or break the ward with three close seal impacts.\nAt half health attacks accelerate and charges leave a violet echo.\nLeave the echo circle even when the core is open."
-	label.add_theme_font_size_override("font_size",17)
+	label.text = "MOVE   WASD / arrows · left stick / D-pad\nBLADE   J / X (west) — 12 resolve; locks aim, 100ms preparation.\nContact: guarded 4 / open 24. Finish recovery before attacking again.\nSEAL   K / Y (north) — 34 resolve; 8 damage + 36 ward pressure.\nPARRY   L / LB — 20 resolve; close sweeps only, locked facing.\nGuard is live 60–180ms after pressing; recover until 380ms.\nSuccess: no sweep hit, +8 resolve, 1.2s opening. Cooldown: 0.9s.\nCharge, wave and violet echo cannot be parried. Late guard is vulnerable.\nDODGE   Space / B (east) — 25 resolve; cancels without refund.\nBrief invulnerability, then vulnerable. Columns stop movement.\nPAUSE   Esc / Start · Enter / A (south) begins, resumes, restarts.\nTACTICS   F1 / Back · SOUND   M / RB toggles music and cues.\n\nStone columns stop charges and block seals. Amber warnings lock.\nParry within 110px, facing the Warden, or leave the sweep.\nPunish recovery or break the ward with three close seal impacts.\nAt half health attacks accelerate and charges leave a violet echo.\nLeave the echo circle even when the core is open."
+	label.add_theme_font_size_override("font_size",16)
 	help_panel.add_child(label)
 	add_child(help_panel)
 	help_panel.hide()
@@ -195,6 +200,7 @@ func reset_encounter() -> void:
 	strike_cooldown = 0.0
 	seal_cooldown = 0.0
 	dash_cooldown = 0.0
+	parry_cooldown = 0.0
 	swing = 0.0
 	_clear_player_action()
 	runner_walk_clock = 0.0
@@ -210,7 +216,7 @@ func reset_encounter() -> void:
 	effects.clear()
 	feedback = "Read the amber warning. Counter when the Warden opens."
 	feedback_time = 3.0
-	stats = {"strikes":0,"seals":0,"hits":0,"dodges":0,"breaks":0,"damage_taken":0,"phase_changes":0,"patterns":[]}
+	stats = {"strikes":0,"seals":0,"hits":0,"dodges":0,"breaks":0,"parry_attempts":0,"parries":0,"damage_taken":0,"phase_changes":0,"patterns":[]}
 
 func _begin_or_resume() -> void:
 	if mode == "paused":
@@ -258,10 +264,10 @@ func _physics_process(delta: float) -> void:
 		elif mode == "paused": _begin_or_resume()
 	if controls.pressed("begin") and mode != "fight": _begin_or_resume()
 	if mode == "fight":
-		step_fight(delta, controls.movement(), controls.pressed("strike"), controls.pressed("seal"), controls.pressed("dash"))
+		step_fight(delta, controls.movement(), controls.pressed("strike"), controls.pressed("seal"), controls.pressed("dash"), controls.pressed("parry"))
 	queue_redraw()
 
-func step_fight(delta: float, move: Vector2, strike: bool, cast_seal: bool, dodge: bool) -> void:
+func step_fight(delta: float, move: Vector2, strike: bool, cast_seal: bool, dodge: bool, parry: bool = false) -> void:
 	if mode != "fight": return
 	elapsed += delta
 	stamina = minf(100, stamina + delta * 25)
@@ -270,6 +276,7 @@ func step_fight(delta: float, move: Vector2, strike: bool, cast_seal: bool, dodg
 	strike_cooldown = maxf(0, strike_cooldown-delta)
 	seal_cooldown = maxf(0, seal_cooldown-delta)
 	dash_cooldown = maxf(0, dash_cooldown-delta)
+	parry_cooldown = maxf(0, parry_cooldown-delta)
 	damage_flash = maxf(0,damage_flash-delta)
 	boss_flash = maxf(0,boss_flash-delta)
 	swing = maxf(0,swing-delta)
@@ -296,7 +303,12 @@ func step_fight(delta: float, move: Vector2, strike: bool, cast_seal: bool, dodg
 		runner_walk_clock += player.position.distance_to(old_player_position)/PLAYER_SPEED
 		if player_action.is_empty() and swing<=0 and absf(player.velocity.x)>1: runner_flipped = player.velocity.x<0
 	_advance_player_action(delta)
-	if strike and strike_cooldown <= 0 and stamina >= 12 and dash_time <= 0 and player_action.is_empty():
+	if parry and parry_cooldown <= 0 and stamina >= 20 and dash_time <= 0 and player_action.is_empty():
+		stamina -= 20
+		parry_cooldown = 0.9
+		stats.parry_attempts += 1
+		_start_player_action("parry")
+	elif strike and strike_cooldown <= 0 and stamina >= 12 and dash_time <= 0 and player_action.is_empty():
 		stamina -= 12
 		strike_cooldown = 0.40
 		stats.strikes += 1
@@ -337,6 +349,12 @@ func _start_player_action(kind: String) -> void:
 func _advance_player_action(delta: float) -> void:
 	if player_action.is_empty(): return
 	action_time += delta
+	if player_action == "parry":
+		if action_time >= PARRY_RECOVERY:
+			_clear_player_action()
+			feedback = "Guard spent. Time the next close sweep or dodge."
+			feedback_time = 1.5
+		return
 	var contact := STRIKE_CONTACT if player_action=="strike" else SEAL_CONTACT
 	if not action_emitted and action_time+0.000001 >= contact:
 		action_emitted = true
@@ -421,6 +439,27 @@ func _take_hit() -> void:
 	feedback = "Hit. Regroup outside the next warning."
 	feedback_time = 1.5
 
+func _parry_live() -> bool:
+	return player_action == "parry" and action_time + 0.000001 >= PARRY_START and action_time < PARRY_END
+
+func _try_parry_sweep() -> bool:
+	# Called only for a real sweep collision. It grants no general invulnerability.
+	var offset := boss.position-player.position
+	if invulnerable > 0 or not _parry_live() or offset.length() > PARRY_RANGE:
+		return false
+	if not offset.is_zero_approx() and action_aim.dot(offset.normalized()) < cos(PI/3):
+		return false
+	_clear_player_action()
+	stamina = minf(100,stamina+8)
+	stats.parries += 1
+	boss_stage = "recover"
+	stage_time = 0
+	stage_duration = 1.2
+	attack_hit = true
+	sound.cue("counter",player.position)
+	_feedback("PARRY — sweep turned aside. Counter now!",TEAL)
+	return true
+
 func _start_pattern() -> void:
 	var patterns := ["sweep","charge","wave"]
 	pattern = patterns[cycle%3]
@@ -459,7 +498,7 @@ func _update_boss(delta: float) -> void:
 		elif pattern == "sweep":
 			var to_player := boss.position.direction_to(player.position)
 			if player.position.distance_to(boss.position) < 165 and aim.dot(to_player) > cos(PI/3) and not attack_hit:
-				_take_hit()
+				if not _try_parry_sweep(): _take_hit()
 				attack_hit = true
 		else:
 			var radius := 30+190*stage_time/stage_duration
@@ -517,6 +556,11 @@ func _draw() -> void:
 	if swing > 0:
 		var angle := action_aim.angle()
 		draw_arc(player.position,90,angle-PI/3,angle+PI/3,24,TEAL,5)
+	if player_action == "parry":
+		var angle := action_aim.angle()
+		var color := TEAL if _parry_live() else AMBER
+		draw_arc(player.position,35,angle-PI/3,angle+PI/3,24,color,5 if _parry_live() else 2)
+		_text(player.position+Vector2(-45,-75),"PARRY READY" if _parry_live() else "SETTING GUARD" if action_time<PARRY_START else "GUARD SPENT",12,color)
 	_draw_hud()
 	if mode != "fight": _draw_overlay()
 
@@ -528,6 +572,7 @@ func _draw_warnings() -> void:
 			for i in range(25): points.append(boss.position+Vector2.from_angle(aim.angle()-PI/3+i*PI/36)*165)
 			draw_colored_polygon(points,danger)
 			draw_arc(boss.position,165,aim.angle()-PI/3,aim.angle()+PI/3,32,AMBER,3)
+			draw_arc(boss.position,PARRY_RANGE,aim.angle()-PI/3,aim.angle()+PI/3,24,Color(TEAL,0.7),2)
 		elif pattern == "charge":
 			draw_line(attack_origin,attack_origin+aim*315,danger,92)
 			draw_line(attack_origin,attack_origin+aim*315,AMBER,2)
@@ -590,8 +635,9 @@ func _draw_hud() -> void:
 	_text(Vector2(315,112),"Resolve  %d / 100"%stamina,18,TEAL)
 	_bar(Vector2(315,125),255,stamina,100,TEAL)
 	var state_label := "Approaching" if boss_stage=="approach" else ("Open for a counter" if boss_stage=="recover" else "Veil fracture" if boss_stage=="transition" else pattern.to_upper()+" / "+boss_stage.to_upper())
+	if pattern=="sweep" and boss_stage in ["windup","active"]: state_label = "SWEEP / close parry or dodge"
 	_text(Vector2(80,706),state_label,20,AMBER)
-	_text(Vector2(80,742),"Left stick / D-pad move    X blade    Y seal    B dodge / cancel    Start pause" if controls.using_gamepad else "WASD move    J commit blade    K seal    Space dodge / cancel    Esc pause",16,Color("aab6cb"))
+	_text(Vector2(80,742),"Stick / D-pad move   X blade   Y seal   LB parry   B dodge   Start pause" if controls.using_gamepad else "WASD move   J blade   K seal   L parry   Space dodge / cancel   Esc pause",16,Color("aab6cb"))
 	if feedback_time > 0: _text(Vector2(420,706),feedback,17,TEAL)
 
 func _draw_overlay() -> void:
@@ -603,7 +649,7 @@ func _draw_overlay() -> void:
 	if mode=="title":
 		draw_texture_rect(WARDEN,Rect2(260,315,155,190),false)
 		_text(Vector2(450,325),"Break the guard. Cross the Veil gate.",22,AMBER)
-		_text(Vector2(450,365),"Move beyond locked amber warnings.",20)
+		_text(Vector2(450,365),"Dodge warnings; L / LB parries close sweeps.",20)
 		_text(Vector2(450,401),"Counter an open core; seals build ward pressure.",20)
 		_text(Vector2(450,445),"Phase two adds echoes. Leave the violet circle.",20)
 	elif mode=="paused":
@@ -611,4 +657,5 @@ func _draw_overlay() -> void:
 	else:
 		_text(Vector2(290,335),"Time %.1fs   |   Hits %s   |   Ward breaks %s   |   Dodges %s"%[elapsed,stats.hits,stats.breaks,stats.dodges],20,TEAL)
 		_text(Vector2(290,380),"Damage taken %s / 6   |   Both phases share the same fight."%stats.damage_taken,20)
-		_text(Vector2(290,425),"The Veil gate opens. The courtyard falls quiet." if mode=="victory" else "Regroup at the arch. Read the next warning before committing.",18,Color("aab6cb"))
+		_text(Vector2(290,420),"Timed guards: %s / %s successful · close sweeps only"%[stats.parries,stats.parry_attempts],18,TEAL)
+		_text(Vector2(290,460),"The Veil gate opens. The courtyard falls quiet." if mode=="victory" else "Regroup at the arch. Read the next warning before committing.",18,Color("aab6cb"))

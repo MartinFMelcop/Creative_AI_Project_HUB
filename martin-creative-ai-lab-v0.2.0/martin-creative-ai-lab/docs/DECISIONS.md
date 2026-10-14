@@ -1173,3 +1173,32 @@ loopback loads identical bytes, closes the static server and disables network
 before interaction. CI defaults to actual file URLs. Do not count loopback as file
 execution or scripted fixtures as real collaboration. Revisit import or public
 operation only after concrete handover, identity and deployment requirements.
+
+## ADR-054 — add a committed close-sweep counter to Veilbreak
+
+**Date:** 2026-10-14 (UTC). **Status:** P06 0.5.0.
+
+A fresh review found recent product work across P01/P03/P04/P05/P06/P10/P11,
+including several native packaging/presentation milestones. Compare P05 tactical
+content, P01 player delivery, P04/P10 reading and P11 handover needs. Select P06's
+missing close defensive decision: a bounded gameplay advance with real source,
+engine, assets and a deliverable runtime. Missing Unity starter remains history.
+Keep Godot/GDScript and native physics/input/animation; no migration or new media.
+
+L / mapped LB commits 20 resolve, 60ms startup, a 60–180ms live interval,
+380ms missed recovery and 0.9s cooldown. Only an actual sweep within 110px and
+locked facing can reward the guard. Success cancels that sweep, returns eight
+resolve and creates 1.2s recovery. The player must land a real blade for damage.
+No general invulnerability; charge/wave/echo still require movement/dodge.
+Existing hurt protection cannot farm rewards. Dodge cancels without refund;
+paused clocks/results/restart and fresh-input requirements remain connected.
+Reuse a held blade pose and existing counter cue; expose readiness and close range.
+
+152 checks pass each on source/shipped/fresh/player resources. Identical old/new
+L/sweep execution changes damage to recovery; the earlier route retains its
+result. OpenGL full fight parries both tempos. Actual release-window L guard and
+menus run outside source, separately from editor-on-PCK script checks. Preserve
+0.4.0 ZIP/media. Synthetic perfect-information policies and Codex review do not
+establish optimality, enjoyment or human balance. Revisit the narrow timing and
+hazard distinction after unassisted keyboard/controller play; compare other
+portfolio opportunities before further expansion.

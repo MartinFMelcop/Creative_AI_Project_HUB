@@ -1,10 +1,10 @@
 # SEED — Martin Creative AI Lab
 
-**Version:** 0.30.0
+**Version:** 0.31.0
 **Data-base:** 10 de outubro de 2026  
 **Autor e responsável pelo portfólio:** Martin Melcop Neto  
 **Working language:** English for new documentation, plans, code comments, UI, and reports. Preserve original creative titles and historical source languages.
-**Current state:** P11 0.6.0 exports portable HTML reading copies with complete search, decision context and historical/current-at-export work comparison. JSON conversion and a fictional standalone demo preserve existing storage/recovery. Scripted browser checks and Codex review are separate from real handover, accessibility and commercial evidence.
+**Current state:** P06 0.5.0 adds paid L/LB close-sweep parry and real blade counter openings to the native two-phase encounter. Source/resources pass native checks and the official Linux player executes outside checkout. Existing P11 portable handovers, other products and historical sources remain intact; human balance/accessibility/commercial evidence is separate.
 
 > Construir um laboratório autoral em Git que transforma ideias, obras e experimentos em produtos pequenos, sistemas reutilizáveis e evidências técnicas verificáveis. A IA participa da criação e execução; Martin desenvolve sua capacidade de especificar, compreender, selecionar, corrigir, validar e explicar os resultados.
 
@@ -46,14 +46,14 @@ Se apenas este arquivo estiver disponível, ele é suficiente para iniciar a Fas
 |---|---|
 | Repository | MartinFMelcop/Creative_AI_Project_HUB; actual Git root `/workspace/Creative_AI_Project_HUB`; wrapper retained |
 | Preserved sources | 175 Rave Master texts / 3 WebSocket files; unchanged historical ZIP/inventory |
-| Current milestone | P11 portable reading copies 0.6.0 |
-| Runtime | Existing Node/SQLite workspace; dependency-free converter; self-contained HTML/CSS/JavaScript reader |
-| Evidence | Complete 94-case suite, final affected regressions, actual old/current HTTP comparison and bounded-capacity reader; `evidence/realtime-chat/PORTABLE_RUN.json` |
-| Limits | Managed local Chromium blocks file URLs; identical bytes tested over loopback with network/server disabled. Real team, assistive/other-browser and commercial use unverified |
-| Next action | Compare real handover/comprehension with physical P03 practice, native tactics/installation and independent P04/P10 reading |
-| Other products | P01 0.4.0, P03 0.4.0, P04 0.2.0, P05 0.3.0, P06 0.4.0, P08/P10 0.5.0, P02 0.2.1 retained |
-| Rules / assets | JSON schema 1, SQLite schema 2, backup format 1, dependency graph and historical sources preserved; demo records explicitly fictional |
-| Attribution | Clean `5034d8e` matched fetched main; main authorized/permitted. Codex implementation, synthetic input and frame review |
+| Current milestone | P06 timed sweep counters 0.5.0 |
+| Runtime | Godot 4.6.3 standard / GDScript; native physics, animation, input and AudioServer |
+| Evidence | 152 checks each on source/shipped/fresh/player PCK, full two-phase OpenGL guard/counter policy, identical old/new sweep fixture and actual ELF window; `evidence/veil-arena/PARRY_RUN.json` |
+| Limits | Scripted state-aware policies and Codex frame review; physical pad/listening, human balance/accessibility, other OS and commercial approval absent |
+| Next action | Compare unassisted parry/dodge/seal choices with P05 content, P01 delivery, P03 practice and P04/P10 reading |
+| Other products | P01/P03 0.4.0, P04 0.2.0, P05 0.3.0, P08/P10 0.5.0, P11 0.6.0 and P02 0.2.1 retained |
+| Rules / assets | Prior combat route, media, 0.4.0 Linux ZIP, other products and historical sources preserved; no new art/audio or transfer promotion |
+| Attribution | Clean `e5715d9` matched fetched main; main authorized/permitted. Codex implementation, synthetic native/window input and frame review |
 
 Registry evidence paths must resolve to existing files inside the lab; working
 paths must be directories and legacy-source IDs must exist. This documentary
@@ -226,7 +226,7 @@ Identificadores persistem mesmo quando nomes mudam. Um projeto arquivado pode co
 | P03 | Tokyo 80s | Original music, timing and sustained interaction | Midnight Signal and Rain Circuit with track selection/transition | P03 0.4.0 / P08 0.5.0 original-pitch backing; human play/listening pending |
 | P04 | O Lich mais velho da tumba mais antiga / Darsen reading editions | Narrative, translation and reader production | Complete Portuguese story and English EPUB/PDF | New standalone adaptation 0.2.0; Portuguese 0.1.0 preserved, no historical manuscript restoration |
 | P05 | The Dark Knight / Cinderwatch | Turn-based seed, AGI, rows and states | Native three-encounter tactical rescue campaign | Native 0.3.0 self-contained Linux player; historical RMXP packages absent |
-| P06 | Véu Partido / Veilbreak | Native combat trial; historical 3D RPG seed | Animated two-phase arena with committed contact, source and executed PCK | New 0.3.0 destination; missing Unity starter remains historical |
+| P06 | Véu Partido / Veilbreak | Native combat trial; historical 3D RPG seed | Animated two-phase arena with committed contact, source and executed PCK | New 0.5.0 timed counter trial and Linux player; missing Unity starter remains historical |
 | P07 | Visual Generation & Asset Lab | Native visual production | Three paintings plus two real motion atlases consumed by P06 | 0.2.0 production/integration; independent artist approval absent |
 | P08 | Audio, Poetry & Music Lab | Original musical production and integration | Two P03 stages and P06 native soundscape | Real masters/exports/scores; no album or human listening approval |
 | P09 | AI Delivery & Operations Cases | Carreira real e avaliação simulada | Case de entrega, análise de workflow e rubricas | Base profissional lida; cases anteriores pendentes |
@@ -411,7 +411,7 @@ plans and the breadcrumb `VeuPartido_UnityStarter_v0.0.47.zip`. The starter is n
 present, and plans are not executable evidence. No restored Unity code or franchise
 characters enter the new destination.
 
-[Veilbreak: The Bell Warden](projects/veil-arena/README.md) 0.4.0 is a new native
+[Veilbreak: The Bell Warden](projects/veil-arena/README.md) 0.5.0 is a new native
 Godot 2D trial with painted characters/courtyard, fourteen semantic cues and two
 aligned phase-responsive music loops. P07/P08 assets are actually imported, mixed
 and packed; M/mouse mute and pause/resume/restart govern their lifecycle. One opponent has locked sweep/charge/wave warnings, a faster second
@@ -426,7 +426,14 @@ The actual engine and resource pack were executed. This is a bounded native
 prototype. A verified Linux release-template ZIP now plays without an editor;
 mapped-pad movement, combat/menu actions and explicit input-loss resume preserve
 keyboard continuity. Exact resources and real release window execution are
-separate proofs. No physical-controller, human balance or commercial claim.
+separate proofs. Timed L/LB guard now pays startup/recovery/resolve for a close
+sweep counter: live 60–180ms, 110px reach, +8 resolve and 1.2s recovery on success,
+no automatic damage or invulnerability. Charge/wave/echo bypass it. Guard pose,
+range/state feedback, tactics and result counts reuse existing media. Source,
+shipped/rebuilt/current Linux resources pass 152 checks each; a declared policy
+parries both phases and lands actual blade counters. The identical executed
+0.4.0/0.5.0 close-sweep fixture verifies the new capability; the prior completion
+route retains its result. No physical-controller, human balance or commercial claim.
 
 Godot/GDScript suits the small physics/presentation loop and available standard
 editor. Unity/editor/starter remain absent; .NET is now installed for P01, but

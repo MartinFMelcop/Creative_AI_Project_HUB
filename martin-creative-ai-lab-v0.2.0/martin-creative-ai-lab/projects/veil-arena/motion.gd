@@ -17,6 +17,9 @@ static func runner_frame(arena) -> int:
 		if arena.action_time < 0.13: return 13
 		if arena.action_time < 0.21: return 14
 		return 15
+	if arena.player_action == "parry":
+		# Reuse the held blade pose with a guard arc; no new animation asset.
+		return 4 if arena.action_time < arena.PARRY_END else 7
 	if arena.damage_flash > 0: return 8
 	return int(arena.runner_walk_clock*10)%4 if arena.runner_moving else 3
 
