@@ -1,15 +1,15 @@
 {
   "project_id": "P01",
-  "version": "0.2.0",
+  "version": "0.4.0",
   "historical_title": "Artemyra / ArtemiZ4",
   "working_title": "Eclipse Fair / Feira do Eclipse",
   "source": "Maintained SEED P01: four participants, obols, sigils, curse, rites, raven protection, theft, short board and bounded match. No P01 runtime or historical package exists in the checkout/archive.",
   "authorship": "New Codex implementation and design under Martin Melcop Neto's portfolio direction. No recovered code or independent human playtest.",
-  "accepted_differences": "New eight-venue deterministic C# domain, 20 rounds, one human/three agents, terminal presentation and economic comparison. The historical 48 tiles/15 turns/roster/minigames/LAN are candidate plans, not obligations or restored features.",
-  "technology": "Core/CLI remain C#/.NET 10 0.1.0 with SDK 10.0.401. Native 0.2.0 consumes Core and the unchanged journal through Godot .NET 4.6.3 / Godot.NET.Sdk 4.6.3. Official engine digest verified, actual source/compiled project pack executed. The pack redistributes owned assemblies and source/config only; installed engine supplies its own APIs.",
+  "accepted_differences": "New eight-venue deterministic C# economy, 20 rounds, any-seat solo and shared-device play for two to four local participants, with optional Planning/Classic rivals. Historical 48 tiles/15 turns/minigames/LAN remain candidate plans, not recovered functionality.",
+  "technology": "C#/.NET 10 Core/CLI economy 0.1.0 and Godot .NET 4.6.3 native 0.4.0. SDK 10.0.401 compiles the existing typed rules. Journal Snapshot/Replay helpers reuse its unchanged schema-1 validation. Native controls use a boardSchema-1 envelope; exported economy journals omit those controls. Only owned assemblies/source/config are packaged; engine and runtime remain external.",
   "media": "No external art, sound, characters from franchises or SDK/runtime binary redistributed. Vaelis/Madra/Nira/Morrak names come from the seed; venues, rules, policies and feedback are new.",
   "evidence": "evidence/eclipse-fair/RUN.json",
-  "quality_boundary": "Technical engine execution and implementing-agent rendered/gameplay review; synthetic inputs, not independent human balance/accessibility/commercial approval. Runtime-dependent project pack, not OS export; Linux x86_64 only verified.",
-  "native": "New vector board/control presentation; venue inspection and actual fork-based previews, separate confirmation, visible paced rival turns, focus-out stop, actionable objective and Gate/deadline results, atomic autosave and replay resume. No new economy rules or historical art/code import.",
-  "native_evidence": "evidence/eclipse-fair/BOARD_RUN.json"
+  "quality_boundary": "Actual compilation, native controls/keyboard/OpenGL and outside-source runtime-only project execution, plus implementing-agent visual/gameplay judgment. Scripted inputs are not independent human playtests; no accessibility, other-platform, physical controller, standalone executable, commercial demand or historical restoration claim.",
+  "native": "Any-seat solo and all nonempty local-seat sets; explicit turn handoff, actor-correct map/objective/previews/results, bounded rival forecasts up to the next human choice, local-seat save/replay and original-format export. No economic rules, historical art, network game or unknown human plans are added.",
+  "native_evidence": "evidence/eclipse-fair/LOCAL_RUN.json"
 }

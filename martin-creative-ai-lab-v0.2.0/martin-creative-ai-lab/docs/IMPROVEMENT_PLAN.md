@@ -1,4 +1,23 @@
-# Current milestone — complete English Darsen reading edition
+# Current milestone — native local participants
+
+Deliver any-seat solo and two-to-four participant shared-device P01 play: native
+configuration, explicit handoff, actor-correct map/preview/goals/results, optional
+rivals and forecasts that stop before unknown human choices. Retain economic
+rules and previous packages; native saves preserve controls, old journals load
+and economy exports stay replayable under their consumer's supported profiles.
+
+Acceptance: compile/execute actual source and delivered Godot .NET project;
+original C#/CLI regressions, all fifteen seat sets, complete Gate/deadline journeys,
+explicit four-local choices, keyboard/automatic handoff boundaries, save faults,
+legacy/export replay, old/current compiled comparison and actual viewport review.
+Use runtime-only .NET outside source. Verify package ownership/source and lab
+integrity, then publish normally to main. [Execution](../evidence/eclipse-fair/LOCAL_RUN.json).
+
+No network multiplayer, hardware/human playtest, historical recovery, independent
+balance/accessibility or market claims. Compare independent local play with P05
+OS delivery, musical hardware practice, reader evidence and real collaboration.
+
+# Previous milestone — complete English Darsen reading edition
 
 Translate/review all five actual P04 scenes, including mechanical causality,
 character voices, constrained permission and continuing accountability. Deliver

@@ -54,7 +54,7 @@ jobs:
           "$eclipse_engine" --headless --path Native --editor --import --quit
           "$eclipse_engine" --headless --path Native -- --verify --save-path "$RUNNER_TEMP/eclipse-source-check/match.json"
           python3 tools/check_board_pack.py
-          unzip -q dist/eclipse-board-0.3.0.zip -d "$RUNNER_TEMP/eclipse-board-pack"
+          unzip -q dist/eclipse-board-0.4.0.zip -d "$RUNNER_TEMP/eclipse-board-pack"
           "$eclipse_engine" --headless --path "$RUNNER_TEMP/eclipse-board-pack/eclipse-board/Native" -- --verify --save-path "$RUNNER_TEMP/eclipse-pack-check/match.json"
       - name: Compile and play Cinderwatch source, delivered and rebuilt consumers
         working-directory: martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/projects/cinderwatch

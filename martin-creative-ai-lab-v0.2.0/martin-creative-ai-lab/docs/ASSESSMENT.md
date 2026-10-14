@@ -1,4 +1,38 @@
-# Current assessment — translate an actual complete literary work
+# Current assessment — make a native strategy game locally social
+
+Clean `30cd956` matches fetched main; branch work, publication explicitly
+allowed and GitHub push permitted. Read instructions/state/registry/seed/recent
+decisions and twelve commits. Inspected real P01 session/map/UI/journal/planning,
+P05 content and P10 handover/P11 persistence/retrieval contracts. Recent work
+spans narrative, collaboration, native games and music; no forced rotation.
+
+| Opportunity | Evidence and choice |
+|---|---|
+| P01 any-seat/local play | Complete native rules and rivals exist; controls/maps/forecasts assume Vaelis. Any-seat solo and coherent shared-device turns create a new demonstrable experience; selected. |
+| P05 distribution | Actual illustrated compiled project remains engine/runtime dependent. A standalone export is a credible separate delivery milestone, with platform/asset/runtime packaging costs. |
+| P03 music/practice | Two stages and slowed rehearsal work; pitch/listening/timing and player learning need actual observation before more automated content. |
+| P04/P10 writing | Complete bilingual editions and voiced consequences exist. Independent reader/translator evidence better guides further content than automatic expansion. |
+| P11/P02/P09 | Retrieval/recovery work; real team use, independently sourced candidate context and professional facts remain absent. |
+
+Keep C#/.NET 10 with Godot .NET 4.6.3: native tools execute and the typed existing
+economy accepts every actor. Standard Godot and the Mono editor/SDK are available;
+Unity was not found in PATH. A browser rewrite or engine migration would add cost
+without improving local board interaction. No additional dependency/framework.
+
+Before: compiled session accepts local action only at seat zero. After: all four
+seats accept configured solo control; fifteen shared-device configurations play
+complete journeys. A handoff waits without game time, clears previous intent and
+prevents auto rivals spending a human turn. Forecasts stop before unknown input.
+Save envelopes preserve controls while reusing economy replay validation; export
+keeps the original journal format. Actual viewport review caught configuration
+controls that pure logic checks missed, and drove layout corrections.
+
+[Execution](../evidence/eclipse-fair/LOCAL_RUN.json) separates technical proofs,
+scripted comparisons and Codex judgment. A usable local prototype broadens the
+demonstration; it does not prove enjoyment, commercial readiness or adoption.
+Independent shared-device play/forecast understanding is the next relevant evidence.
+
+# Previous assessment — translate an actual complete literary work
 
 Clean `9029a2e` matches fetched main; branch `work`, publish permitted. Read
 instructions/state/registry/seed, recent decisions/evolution and twelve commits.

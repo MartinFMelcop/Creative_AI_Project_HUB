@@ -67,7 +67,7 @@ public partial class Main
             Require(!accepted && Fingerprint(session.Game) == saveState, "Human acted during a rival turn");
             next.EmitSignal(BaseButton.SignalName.Pressed);
             // Use the same saved file in both consumers, then restore it for UI loading.
-            Require(Fingerprint(Journal.Load(session.SavePath).Game) == Fingerprint(session.Game), "CLI-compatible journal diverged");
+            Require(Fingerprint(BoardJournal.Load(session.SavePath).Game) == Fingerprint(session.Game), "CLI-compatible journal diverged");
             File.WriteAllText(session.SavePath, saved); load.EmitSignal(BaseButton.SignalName.Pressed);
             Require(Fingerprint(session.Game) == saveState, "Resume changed the exact next turn");
             File.WriteAllText(session.SavePath, "{\"schema\":99}"); load.EmitSignal(BaseButton.SignalName.Pressed);
@@ -101,7 +101,7 @@ public partial class Main
             while(session.Game.Result == null && session.Game.Current != 0) { next.EmitSignal(BaseButton.SignalName.Pressed); await Frame(); }
             Require(Fingerprint(session.Game) == Fingerprint(forecast.After), "Native rival turns diverged from the displayed forecast");
             NewDialog(); var newWindow = GetChildren().OfType<ConfirmationDialog>().Single();
-            newWindow.GetChildren().OfType<OptionButton>().Single().Select(1); newWindow.EmitSignal(ConfirmationDialog.SignalName.Confirmed); await Frame();
+            newWindow.FindChildren("*", "OptionButton", true, false).OfType<OptionButton>().Single().Select(1); newWindow.EmitSignal(ConfirmationDialog.SignalName.Confirmed); await Frame();
             Require(session.Policies.SequenceEqual(new[]{"collector","keeper","opportunist","collector"}), "Classic mode changed original profiles");
             session.Save(); var classicPolicies = session.Policies.ToArray(); session.New(4); load.EmitSignal(BaseButton.SignalName.Pressed);
             Require(session.Policies.SequenceEqual(classicPolicies), "Loading an old-policy save silently upgraded its rivals");
@@ -123,7 +123,7 @@ public partial class Main
                 var expected = Agents.Finish(new Game(seed), session.Policies);
                 Require(Fingerprint(session.Game) == Fingerprint(expected), "Native turns differ from the unchanged C# rules/agents");
                 Require(commit.Disabled && next.Disabled && actions.GetChildCount() == 4, "End screen still allows turns or omits ranks");
-                Require(Fingerprint(Journal.Load(session.SavePath).Game) == Fingerprint(session.Game), "Finished save does not replay");
+                Require(Fingerprint(BoardJournal.Load(session.SavePath).Game) == Fingerprint(session.Game), "Finished save does not replay");
             }
             Require(seen.Contains(ActionKind.Buy) && seen.Contains(ActionKind.Rite) && seen.Contains(ActionKind.Claim), "Full journeys missed the objective loop");
             Require(actions.GetChild<Label>(0).Text.StartsWith("WINNER"), "Gate winner must be presented first");
@@ -157,7 +157,8 @@ public partial class Main
             var afterFocus = Fingerprint(session.Game); verification = false;
             await ToSignal(GetTree().CreateTimer(1.1), SceneTreeTimer.SignalName.Timeout); verification = true;
             Require(Fingerprint(session.Game) == afterFocus, "Auto rivals advanced after focus-out");
-            GD.Print(JsonSerializer.Serialize(new { native_board = "pass", assertions, complete_gate_or_deadline_matches = 10,
+            await VerifyLocalSeats();
+            GD.Print(JsonSerializer.Serialize(new { native_board = "pass", assertions, complete_gate_or_deadline_matches = 26, local_seat_sets = 15,
                 source_rule_parity = true, journal_replay = true, keyboard_venue_input = true,
                 strategic_profiles = true, conditional_forecast = true, classic_mode = true,
                 auto_rival_clock = true, controlled_focus_out = true,

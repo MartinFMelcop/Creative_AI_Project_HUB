@@ -19,7 +19,7 @@ public static class Journal
         var temporary=path+"."+Guid.NewGuid().ToString("N")+".tmp";
         try
         {
-            var data=new SaveData(1,Game.Version,game.Seed,game.Rules,policies,game.Journal.Select(t=>t.Intent).ToArray());
+            var data=Snapshot(game,policies);
             File.WriteAllText(temporary,JsonSerializer.Serialize(data,Json));File.Move(temporary,path,true);
         }
         finally {if(File.Exists(temporary))File.Delete(temporary);}
@@ -29,6 +29,15 @@ public static class Journal
         var file=new FileInfo(filename);
         if(!file.Exists || file.Length>200_000)throw new ArgumentException("Journal is missing or exceeds 200 KB.");
         var data=JsonSerializer.Deserialize<SaveData>(File.ReadAllText(filename),Json)??throw new ArgumentException("Invalid journal.");
+        return Replay(data);
+    }
+    public static SaveData Snapshot(Game game,string[] policies)
+    {
+        Agents.ValidatePolicies(policies);
+        return new(1,Game.Version,game.Seed,game.Rules,policies,game.Journal.Select(t=>t.Intent).ToArray());
+    }
+    public static (Game Game,string[] Policies) Replay(SaveData data)
+    {
         if(data.Schema!=1 || data.Version!=Game.Version || data.Rules==null || data.Actions==null || data.Policies==null)
             throw new ArgumentException("Unsupported or incomplete journal.");
         Agents.ValidatePolicies(data.Policies);var game=new Game(data.Seed,data.Rules);

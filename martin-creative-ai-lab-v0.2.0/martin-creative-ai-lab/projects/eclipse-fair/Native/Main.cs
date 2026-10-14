@@ -12,7 +12,7 @@ public partial class Main : Control
     private readonly Label[,] roster = new Label[4, 3];
     private VBoxContainer actions = null!;
     private RichTextLabel log = null!;
-    private Button commit = null!, next = null!, hint = null!, save = null!, load = null!, response = null!;
+    private Button commit = null!, next = null!, hint = null!, save = null!, load = null!, response = null!, begin = null!, replay = null!;
     private CheckButton automatic = null!;
     private readonly Dictionary<Intent, Button> planButtons = [];
     private Intent? selected;
@@ -32,6 +32,8 @@ public partial class Main : Control
         var path = Option("--save-path") ?? ProjectSettings.GlobalizePath("user://match.json");
         if (verification && Option("--save-path") == null) throw new ArgumentException("Verification requires an isolated --save-path.");
         session = new(path); Build();
+        GetTree().AutoAcceptQuit = false;
+        GetWindow().CloseRequested += () => GetTree().Quit();
         if (!verification && File.Exists(path)) session.Load();
         ResetSelection(); Refresh();
         if (verification) _ = Verify();
@@ -67,6 +69,7 @@ public partial class Main : Control
         header.AddChild(Button("New fair", NewDialog));
         save = Button("Save", () => { session.Save(); Refresh(); }); header.AddChild(save);
         load = Button("Resume save", () => { automatic.ButtonPressed = false; session.Load(); ResetSelection(); Refresh(); }); header.AddChild(load);
+        replay = Button("Export replay", () => { session.ExportReplay(); Refresh(); }); header.AddChild(replay);
         header.AddChild(Button("How to play", Help));
         clock = Text("", 16, Muted); stack.AddChild(clock);
         objective = Text("", 17, Mint); stack.AddChild(objective);
@@ -90,6 +93,7 @@ public partial class Main : Control
         map = new MapView(); board.AddChild(map);
         map.VenueSelected += id => { destination = id; selected = null; Refresh(); };
         var controls = new HBoxContainer(); board.AddChild(controls);
+        begin = Button("Begin local turn", () => { session.BeginTurn(); ResetSelection(); Refresh(); map.Venues[destination].GrabFocus(); }); controls.AddChild(begin);
         next = Button("Watch next rival", RivalTurn); controls.AddChild(next);
         automatic = new CheckButton { Text = "Auto rivals", ButtonPressed = !verification }; controls.AddChild(automatic);
         automatic.Toggled += _ => rivalClock = 0;
@@ -102,30 +106,38 @@ public partial class Main : Control
         var confirm = new HBoxContainer(); sidebar.AddChild(confirm);
         commit = Button("Commit this plan", CommitTurn); commit.SizeFlagsHorizontal = SizeFlags.ExpandFill; confirm.AddChild(commit);
         hint = Button("Suggest plan", Suggest); confirm.AddChild(hint);
-        response = Button("Rival response", ForecastDialog); confirm.AddChild(response);
-        response.TooltipText = "Compare the next rival turns if you commit the selected plan.";
+        response = Button("Next turns", ForecastDialog); confirm.AddChild(response);
+        response.TooltipText = "Compare rival turns until the next local player; their decision is never predicted.";
         notice = Text("", 14, Gold); notice.CustomMinimumSize = new(0, 40); stack.AddChild(notice);
         log = new RichTextLabel { BbcodeEnabled = false, ScrollFollowing = true, CustomMinimumSize = new(0, 95), SelectionEnabled = true };
         log.AddThemeFontSizeOverride("normal_font_size", 14); log.AddThemeStyleboxOverride("normal", Box(Ink, Edge)); stack.AddChild(log);
     }
-    private void ResetSelection() { destination = session.Game.People[0].Position; selected = null; rivalClock = 0; }
+    private void ResetSelection() { destination = session.Game.People[session.ViewSeat].Position; selected = null; rivalClock = 0; }
     private void Refresh()
     {
-        var game = session.Game; var p = game.People[0]; var human = game.Current == 0 && game.Result == null;
+        var game = session.Game; var p = game.People[session.ViewSeat]; var human = session.IsHumanTurn && !session.AwaitingPlayer;
         clock.Text = $"Round {game.Round}/{game.Rules.RoundLimit} · Seed {game.Seed}   |   NOW: {game.Forecast(game.Round)}   |   NEXT: {game.Forecast(game.Round + 1)}";
         var goal = p.Sigils < game.Rules.Goal ? $"Buy {game.Rules.Goal - p.Sigils} more sigils; each adds curse." :
             p.Curse > 0 ? "Cleanse at the Chapel, then reach the Gate." : "Reach the Gate and choose Claim.";
-        objective.Text = game.Result == null ? $"YOU: Vaelis   ·   {p.Sigils}/{game.Rules.Goal} sigils · {p.Curse} curse   |   {goal}" :
-            (game.Result.Winners.Contains(0) ? "YOU WON" : "THE FAIR HAS ENDED") + "   ·   " + game.Result.Reason;
+        objective.Text = game.Result == null ? $"LOCAL: {p.Name}   ·   {p.Sigils}/{game.Rules.Goal} sigils · {p.Curse} curse   |   {goal}" :
+            "WINNER(S): " + string.Join(", ", game.Result.Winners.Select(i => game.People[i].Name)) + "   ·   " + game.Result.Reason;
         for (var i = 0; i < 4; i++)
         {
-            var who = game.People[i]; roster[i, 0].Text = (game.Current == i && game.Result == null ? "▶ " : "") + who.Name + (i == 0 ? " · YOU" : " · " + session.Policies[i]);
+            var who = game.People[i]; roster[i, 0].Text = (game.Current == i && game.Result == null ? "▶ " : "") + who.Name + (session.HumanSeats.Contains(i) ? " · LOCAL" : " · " + session.Policies[i]);
+            roster[i, 0].AddThemeColorOverride("font_color", session.HumanSeats.Contains(i) ? Mint : new Color("f4ecdf"));
+            roster[i, 0].TooltipText = session.HumanSeats.Contains(i) ? "Local control. Suggestion profile: " + session.Policies[i] + ". Other local choices are unknown."
+                : "Automatic rival profile: " + session.Policies[i];
             roster[i, 1].Text = $"{who.Gold} obols · {who.Sigils}/{game.Rules.Goal} sigils";
             roster[i, 2].Text = $"Curse {who.Curse} · Ward {who.Ward} · {Game.Board[who.Position].Name}";
         }
-        next.Disabled = human || game.Result != null; hint.Disabled = !human;
+        begin.Visible = session.AwaitingPlayer; begin.Text = "Begin " + game.People[game.Current].Name + "’s turn";
+        if (session.AwaitingPlayer) begin.GrabFocus();
+        next.Disabled = session.IsHumanTurn || game.Result != null; hint.Disabled = !human;
+        automatic.Disabled = session.HumanSeats.Length == 4;
+        if (automatic.Disabled) automatic.SetPressedNoSignal(false);
+        hint.TooltipText = "Advice models all seats using the listed profiles; other local players may choose differently.";
         response.Disabled = !human || selected == null;
-        turn.Text = game.Result != null ? "Start a new fair to play again." : human ? "Your turn — compare before committing." : game.People[game.Current].Name + " is next.";
+        turn.Text = game.Result != null ? "Start a new fair to play again." : session.AwaitingPlayer ? "Pass control to " + p.Name + "." : human ? p.Name + "’s turn — compare before committing." : game.People[game.Current].Name + " is next.";
         venue.Text = Game.Board[destination].Name; venueInfo.Text = functions[destination];
         if (destination == 0 || destination == 4)
             venueInfo.Text += p.Sigils >= game.Rules.Goal ? " All your sigils are secured." : $" Next sigil: {game.Price(p)} obols (plus travel).";
@@ -146,7 +158,7 @@ public partial class Main : Control
             if (selected != null && !plans.Contains(selected)) selected = null;
             foreach (var intent in plans)
             {
-                var after = session.Preview(intent).People[0];
+                var after = session.Preview(intent).People[session.ViewSeat];
                 var title = ActionName(intent) + $"   |   {Signed(after.Gold - p.Gold)} obols";
                 var b = Button(title, () => { selected = intent; Refresh(); });
                 if (intent == selected) b.AddThemeStyleboxOverride("normal", Box(Gold.Darkened(.65f), Gold));
@@ -156,15 +168,22 @@ public partial class Main : Control
             if (selected == null) preview.Text = $"Work here: {game.Wage(destination, p)} now / {game.Wage(destination, p, game.Round + 1)} next round.\nChoose an action to see its full result.";
             else
             {
-                var after = session.Preview(selected).People[0];
+                var after = session.Preview(selected).People[session.ViewSeat];
                 var travel = destination == p.Position ? 0 : game.Rules.MoveCost;
-                preview.Text = $"After {ActionName(selected)}: {after.Gold} obols · {after.Sigils} sigils\n{after.Curse} curse · {after.Ward} ward   |   Travel cost: {travel}\nOne turn; rivals may act before your next turn.";
+                preview.Text = $"After {ActionName(selected)}: {after.Gold} obols · {after.Sigils} sigils\n{after.Curse} curse · {after.Ward} ward   |   Travel cost: {travel}\nOne turn; initiative determines the next participant.";
                 if (selected.Action == ActionKind.Steal)
                 {
                     var victim = session.Preview(selected).People[selected.Target];
                     preview.Text += $"\n{victim.Name} after: {victim.Gold} obols · {victim.Ward} ward.";
                 }
             }
+        }
+        else if (session.AwaitingPlayer)
+        {
+            selected = null;
+            actions.AddChild(Text("Pass control to " + p.Name, 22, Gold));
+            actions.AddChild(Text("The board and all resources are public. Begin the named turn before selecting a plan. No time passes while waiting.", 17));
+            preview.Text = "Beginning a local turn changes no resources or accepted actions.";
         }
         else
         {
@@ -176,9 +195,11 @@ public partial class Main : Control
             preview.Text = "Plans are reconsidered after each accepted action. Watch the next turn or enable Auto rivals.";
         }
         commit.Disabled = !human || selected == null;
-        notice.Text = session.Notice; save.TooltipText = "Save/replay file: " + session.SavePath; load.TooltipText = "Loading replaces only after every saved action has been validated.";
+        notice.Text = session.Notice; save.TooltipText = "Local controls and accepted-action save: " + session.SavePath;
+        replay.TooltipText = "Economy replay without local controls: " + session.ReplayPath;
+        load.TooltipText = "Loading replaces only after every saved action and local seat has been validated.";
         log.Text = string.Join("\n", game.Journal.TakeLast(40).Select(e => e.Description));
-        map.Match = game; map.Selected = destination; map.Plan = selected; map.Refresh();
+        map.Match = game; map.ViewSeat = session.ViewSeat; map.CanPlan = human; map.Selected = destination; map.Plan = selected; map.Refresh();
     }
     private string ActionName(Intent i) => i.Action switch { ActionKind.Work => "Work", ActionKind.Buy => "Buy a sigil", ActionKind.Rite => "Perform a rite",
         ActionKind.Guard => "Raise a raven ward", ActionKind.Steal => "Steal from " + session.Game.People[i.Target].Name, _ => "Claim the Gate" };
@@ -187,32 +208,34 @@ public partial class Main : Control
     private void RivalTurn() { if (session.Rival()) ResetSelection(); Refresh(); }
     private void Suggest()
     {
-        if (session.Game.Result != null || session.Game.Current != 0) return;
+        if (!session.IsHumanTurn || session.AwaitingPlayer) return;
         var advice = session.Advice(); selected = advice.First; destination = selected.Destination; Refresh();
-        notice.Text = "Suggestion: " + advice.Purpose + ". Inspect the plan and compare rival replies before committing.";
+        notice.Text = "Suggestion: " + advice.Purpose + ". Other local choices are modelled, not known; inspect before committing.";
     }
     private string PlanName(Intent intent) => ActionName(intent) + " at " + Game.Board[intent.Destination].Name;
     private string ForecastText(ReplyForecast forecast)
     {
-        var after = forecast.After; var p = after.People[0];
-        var replies = forecast.Replies.Length == 0 ? (after.Result != null ? "Your plan ends the fair before another turn." : "Your next turn follows immediately; no rival acts.")
+        var after = forecast.After; var p = after.People[session.Game.Current];
+        var replies = forecast.Replies.Length == 0 ? "No rival acts before the next local decision or ending."
             : string.Join("\n", forecast.Replies.Select(r => r.Description));
-        var end = after.Result == null ? $"Your next turn: round {after.Round}; {p.Gold} obols, {p.Sigils} sigils, {p.Curse} curse, {p.Ward} ward."
+        var end = after.Result == null ? $"Next local decision: {after.People[after.Current].Name}, round {after.Round}."
             : "The fair ends: " + after.Result.Reason + ". Winner(s): " + string.Join(", ", after.Result.Winners.Select(i => after.People[i].Name));
-        return "If you commit " + PlanName(selected!) + ":\n\n" + replies + "\n\n" + end +
-            "\n\nConditional forecast: these public profiles respond to this plan. Compare another plan to see different replies. Your live match is unchanged.";
+        return "If " + p.Name + " commits " + PlanName(selected!) + ":\n\n" + replies + "\n\n" + end +
+            $"\n{p.Name} after these turns: {p.Gold} obols, {p.Sigils} sigils, {p.Curse} curse, {p.Ward} ward." +
+            "\n\nConditional forecast: only configured rivals are executed. It stops before the next local player chooses. Your live match is unchanged.";
     }
+
     private void ForecastDialog()
     {
-        if (selected == null || session.Game.Current != 0 || session.Game.Result != null) return;
+        if (selected == null || !session.IsHumanTurn || session.AwaitingPlayer) return;
         automatic.ButtonPressed = false;
-        var dialog = new AcceptDialog { Title = "Compare the next rival turns", MinSize = new(840, 560), DialogText = ForecastText(session.Forecast(selected)) };
+        var dialog = new AcceptDialog { Title = "Compare until the next local decision", MinSize = new(840, 560), DialogText = ForecastText(session.Forecast(selected)) };
         dialog.GetLabel().AutowrapMode = TextServer.AutowrapMode.WordSmart;
         AddChild(dialog); dialog.Confirmed += () => dialog.QueueFree(); dialog.PopupCentered();
     }
     public override void _Process(double delta)
     {
-        if (verification || !automatic.ButtonPressed || session.Game.Result != null || session.Game.Current == 0) return;
+        if (verification || !automatic.ButtonPressed || session.Game.Result != null || session.IsHumanTurn) return;
         rivalClock += delta; if (rivalClock >= 1) { rivalClock = 0; RivalTurn(); }
     }
     public override void _Notification(int what)
@@ -222,26 +245,47 @@ public partial class Main : Control
     private void NewDialog()
     {
         automatic.ButtonPressed = false;
-        var dialog = new ConfirmationDialog { Title = "Start a new fair", DialogText = "Choose a seed and rivals. Accepted turns or Save replace the current save.", MinSize = new(660, 245) };
-        var seed = new SpinBox { MinValue = 0, MaxValue = 1000000, Value = session.Game.Seed + 1, Position = new(20, 78), Size = new(180, 36) };
-        var profiles = new OptionButton { Position = new(220, 78), Size = new(410, 36) };
+        var dialog = new ConfirmationDialog { Title = "Start a new fair", MinSize = new(700, 365) };
+        var layout = new VBoxContainer(); layout.AddThemeConstantOverride("separation", 12);
+        var instructions = Text("Choose 1–4 LOCAL participants; unchecked seats are rivals.\nPass control and Begin each named turn. All resources are public.\nAccepted turns or Save replace the current save.", 15, Muted);
+        instructions.AutowrapMode = TextServer.AutowrapMode.Off; layout.AddChild(instructions);
+        var settings = new HBoxContainer(); settings.AddThemeConstantOverride("separation", 12); layout.AddChild(settings);
+        var seedLabel = Text("Seed", 15, Muted); seedLabel.AutowrapMode = TextServer.AutowrapMode.Off; settings.AddChild(seedLabel);
+        var seed = new SpinBox { MinValue = 0, MaxValue = 1000000, Value = session.Game.Seed + 1, CustomMinimumSize = new(140, 36) };
+        var profiles = new OptionButton { SizeFlagsHorizontal = SizeFlags.ExpandFill, CustomMinimumSize = new(390, 36) };
         profiles.AddItem("Planning rivals — forecast and adapt"); profiles.AddItem("Classic rivals — original one-turn decisions");
-        var detail = Text("Planning rivals consider wages, curse and nearby competition.\nClassic preserves the previous fair; the rules are identical.", 14, Muted);
-        detail.Position = new(20, 125); detail.Size = new(610, 60);
-        dialog.AddChild(seed); dialog.AddChild(profiles); dialog.AddChild(detail); AddChild(dialog);
-        dialog.Confirmed += () => { session.New((int)seed.Value, profiles.Selected == 0); ResetSelection(); Refresh(); dialog.QueueFree(); };
+        settings.AddChild(seed); settings.AddChild(profiles);
+        var grid = new GridContainer { Columns = 2, SizeFlagsHorizontal = SizeFlags.ExpandFill };
+        grid.AddThemeConstantOverride("h_separation", 16); grid.AddThemeConstantOverride("v_separation", 8); layout.AddChild(grid);
+        var local = new CheckButton[4];
+        for (int i = 0; i < 4; i++)
+        {
+            local[i] = new CheckButton { Text = session.Game.People[i].Name + " · LOCAL", ButtonPressed = session.HumanSeats.Contains(i),
+                SizeFlagsHorizontal = SizeFlags.ExpandFill, CustomMinimumSize = new(300, 36) };
+            local[i].Toggled += _ => dialog.GetOkButton().Disabled = !local.Any(b => b != null && b.ButtonPressed);
+            grid.AddChild(local[i]);
+        }
+        var boundary = Text("Forecasts stop before the next local choice.\nSuggestions use policy models; other local players may choose differently.", 14, Muted);
+        boundary.AutowrapMode = TextServer.AutowrapMode.Off; layout.AddChild(boundary);
+        dialog.AddChild(layout); AddChild(dialog);
+        dialog.Confirmed += () => {
+            var seats = Enumerable.Range(0, 4).Where(i => local[i].ButtonPressed).ToArray();
+            if (seats.Length == 0) return;
+            session.New((int)seed.Value, profiles.Selected == 0, seats); ResetSelection(); Refresh(); dialog.QueueFree();
+        };
         dialog.Canceled += () => dialog.QueueFree(); dialog.PopupCentered();
     }
+
     private void Help()
     {
         automatic.ButtonPressed = false;
         var dialog = new AcceptDialog { Title = "Win the Eclipse Fair", MinSize = new(670, 410), DialogText =
-            "1. You control Vaelis. Inspect a venue; choose an action and commit.\nMove at most one edge (one obol), then act. Staying is free.\n\n" +
+            "1. New fair selects 1–4 local seats. Begin the named turn when passing\ncontrol. Inspect a venue; choose an action and commit.\nMove at most one edge (one obol), then act. Staying is free.\n\n" +
             "2. Earn obols; buy three sigils at Market or Bazaar. Prices rise with\nyour sigils and again after round 10. Each purchase adds curse.\n\n" +
             "3. Visit the Chapel for rites: remove two curse for two obols,\nor free during a procession. Curse also reduces your work income.\n\n" +
             "4. Reach the Gate with three sigils and zero curse; CLAIM it.\nA raven ward costs two obols and blocks one co-located theft.\nTheft adds curse if successful. Forecasts and rival resources are public.\n\n" +
-            "Planning rivals project races and replan after changes.\nRival response forecasts the next cycle for your selected plan.\nNew fair also offers Classic rivals. Saved profiles are preserved.\n\n" +
-            "Initiative rotates. At round 20, rank by sigils, least curse, obols.\nAccepted turns autosave. Resume replays them; no hidden time passes.\nTab/arrow keys navigate controls; Enter/Space activates a focused button." };
+            "Planning rivals project races and replan after changes.\nNext turns stops BEFORE another local player chooses.\nAdvice uses policy models for human seats, not known human decisions.\nNew fair also offers Classic rivals. Saved seats/profiles are preserved.\n\n" +
+            "Initiative rotates. At round 20, rank by sigils, least curse, obols.\nAccepted turns autosave. Resume replays them and requires local handoff.\nExport replay omits local controls for the economy/CLI journal.\nTab/arrow keys navigate controls; Enter/Space activates a focused button." };
         AddChild(dialog); dialog.Confirmed += () => dialog.QueueFree(); dialog.PopupCentered();
     }
 }

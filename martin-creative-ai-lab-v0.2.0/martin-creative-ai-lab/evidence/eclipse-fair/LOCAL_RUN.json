@@ -1,0 +1,177 @@
+{
+  "schema_version": 1,
+  "project_id": "P01",
+  "version": "0.4.0",
+  "executed_at": "2026-10-14 UTC",
+  "baseline_commit": "30cd9569b6be64b8fbb5a76fb0421513460bf5b8",
+  "scope": "Any-seat solo and 2–4 local participants in the existing native board; no new economy, engine migration, LAN or historical restoration.",
+  "environment": {
+    "platform": "Linux x86_64",
+    "engine": "Godot .NET 4.6.3 official 7d41c59c4",
+    "sdk": "10.0.401",
+    "runtime_only": "10.0.12; no SDK in player PATH",
+    "rendering": "X11 / Mesa llvmpipe OpenGL 4.5, GL Compatibility; virtual display",
+    "audio": "Dummy; no audio feature or physical output claim",
+    "input": "Implementing-agent control signals, Godot input events and XTest keyboard/mouse"
+  },
+  "verified": {
+    "compilation": "Final native Debug build succeeded with zero warnings/errors; project configured and imported with the actual Mono editor.",
+    "economy": "13 original C# checks passed, including replay, conservation, planning and forecasts. Core sources and rules 0.1.0 unchanged.",
+    "cli": "Actual compiled CLI play/hint/save/resume/replay/invalid input/common-seed CSV workflows passed. Shared Snapshot/Replay retains economy schema 1.",
+    "compiled_comparison": {
+      "old_pack": "0.3.0, preserved archive extracted without modifications",
+      "new_pack": "Final 0.4.0 owned assemblies",
+      "old_results": [
+        {
+          "seat": 0,
+          "configured_local_seat": false,
+          "accepted_local_work": true,
+          "accepted_turns": 1
+        },
+        {
+          "seat": 1,
+          "configured_local_seat": false,
+          "accepted_local_work": false,
+          "accepted_turns": 0
+        },
+        {
+          "seat": 2,
+          "configured_local_seat": false,
+          "accepted_local_work": false,
+          "accepted_turns": 0
+        },
+        {
+          "seat": 3,
+          "configured_local_seat": false,
+          "accepted_local_work": false,
+          "accepted_turns": 0
+        }
+      ],
+      "new_results": [
+        {
+          "seat": 0,
+          "configured_local_seat": true,
+          "accepted_local_work": true,
+          "accepted_turns": 1
+        },
+        {
+          "seat": 1,
+          "configured_local_seat": true,
+          "accepted_local_work": true,
+          "accepted_turns": 1
+        },
+        {
+          "seat": 2,
+          "configured_local_seat": true,
+          "accepted_local_work": true,
+          "accepted_turns": 1
+        },
+        {
+          "seat": 3,
+          "configured_local_seat": true,
+          "accepted_local_work": true,
+          "accepted_turns": 1
+        }
+      ],
+      "boundary": "Direct BoardSession execution through reflection; separate from full native UI proofs."
+    },
+    "native_final_pack": {
+      "native_board": "pass",
+      "assertions": 1586,
+      "complete_gate_or_deadline_matches": 26,
+      "local_seat_sets": 15,
+      "source_rule_parity": true,
+      "journal_replay": true,
+      "keyboard_venue_input": true,
+      "strategic_profiles": true,
+      "conditional_forecast": true,
+      "classic_mode": true,
+      "auto_rival_clock": true,
+      "controlled_focus_out": true,
+      "rendered": true
+    },
+    "native_scope": [
+      "All 15 nonempty local-seat sets complete policy-fixture journeys with actual board controls; alternating Planning/Classic, seeds 0–3.",
+      "10 retained complete journeys plus 15 local-seat journeys and one four-local Work-only deadline: 26 complete matches.",
+      "Explicit four-local Work choices yield 80 accepted turns, real deadline and Vaelis/Nira tie; suggestions are not secretly accepted.",
+      "Named Begin spends no turn. Manual/auto rivals cannot act for a local seat; previous intent clears.",
+      "Nira solo preview/venue income/result, native keyboard Begin, six visible non-overlapping setup controls and whole dialog within viewport.",
+      "Consecutive-local forecast has zero invented replies; mixed [0,2] executes only seat 1; claim ends before any reply. Fork remains isolated.",
+      "Resume restores seats/exact next actor and handoff. Empty/duplicate/negative/out-of-range/null controls, invalid envelope/unknown field/nested action preserve live play.",
+      "Old plain journal restores Vaelis and stored Classic profiles; exported original-format replay omits native controls."
+    ],
+    "legacy_export": "Final any-seat Nira session with Classic profiles exports an economy replay accepted by the shipped original terminal 0.1.0: R1 Nira -> Raven Spire, earned 1 obol.",
+    "actual_os_window": {
+      "process": "actual delivered Godot .NET board outside checkout",
+      "window": "Eclipse Fair — Native Board (DEBUG)",
+      "inputs": "XTest mouse configures Nira/Morrak; keyboard Begin; explicit Work/Commit; WM_DELETE_WINDOW",
+      "seed": 2,
+      "human_seats": [
+        2,
+        3
+      ],
+      "actions": [
+        {
+          "destination": 6,
+          "action": "Work",
+          "target": -1
+        },
+        {
+          "destination": 0,
+          "action": "Work",
+          "target": -1
+        }
+      ],
+      "expected_actors": [
+        2,
+        3
+      ],
+      "exit_code": 0,
+      "runtime_only": true,
+      "sdk_in_path": false,
+      "physical_player": false
+    },
+    "os_saved_replay": "Current CLI replays the saved nested economy journal: R1 Nira at Raven Spire earned 1; R1 Morrak at Eclipse Market earned 2. Exactly two actions, seed 2.",
+    "package": {
+      "path": "projects/eclipse-fair/dist/eclipse-board-0.4.0.zip",
+      "bytes": 97567,
+      "sha256": "bd1c81c0b1cb9ac3356b172756c45833ca74ac061580f5a6b145a555d7434a0e",
+      "entries": 27,
+      "native_assembly_sha256": "b1c21b6b3d8de20c146e41b61b8f86a4df7c41aae69899026578e04db880190c",
+      "check": "Current source/configuration and only owned compiled assemblies; no redistributed engine/API/runtime/import cache. Exact final ZIP extracted and run outside source with runtime-only .NET."
+    },
+    "preservation": {
+      "byte_equal_original_files_outside_explicit_edit_allowlist": 367,
+      "protected_sources_and_packs_sha256": {
+        "Core/Game.cs": "59c4e50b13d0189c88b0a7cc11310f001bed0c687640b9a68b052a16fa2bea94",
+        "Core/Agents.cs": "026f77026f4bad7839f3f6f70ff350246e6d6d661aa3a97e6138b292c25dfb05",
+        "Core/Planning.cs": "f7dfef9127a59def7b6c862d5293574232c7dac202a84f528c6c9c5a4b849829",
+        "dist/eclipse-fair-0.1.0.zip": "1d931daa1d630fe9201be3af07999d8969447c1cad6e685d1f6f5e34814f1422",
+        "dist/eclipse-board-0.2.0.zip": "faadb4309cd0f7003d8ce3d23646dde455beecab0fe18245db292c94af303c6b",
+        "dist/eclipse-board-0.3.0.zip": "a77f3be31829f5f0fb6ba3d1b798a88e8b0525d917860850f81b1c0e5aeee569"
+      },
+      "all_other_products_and_historical_sources": "Compared actual original Git blobs with checkout bytes; unchanged."
+    },
+    "raw_frames_sha256": {
+      "local-setup.png": "c40f2d84194a7a05f99a8b5fc6f59cbf2e06d239b2a5f5bdf76067462cb31ca4",
+      "local-handoff.png": "7ba71c6a67a8423d2ff7d4df06692a8a3a10ea97f86bce372124f83881abd24a",
+      "local-forecast.png": "bfea10e3ba5519b66de6f205483af8350b3dc88c31e429d5698669cc47198e95",
+      "local-os-handoff.png": "c30154fa69a276d61421db15ce15cbc25a8a4dd74f4bedb37616205f4e40abad"
+    }
+  },
+  "reasoned_assessment": "Codex inspected real configuration, Nira choices, handoff, mixed forecast and four-local deadline frames. Public resources and named actor make the new interaction inspectable; technical execution does not establish unassisted usability or stronger strategies.",
+  "resolved_execution_findings": [
+    "Direct dialog children overlapped; replaced by native layout containers.",
+    "Wrapped labels initially enlarged the dialog past the viewport; short explicit lines and geometry checks corrected it.",
+    "Actual WM_DELETE_WINDOW initially left the player running; explicit native CloseRequested handling now exits 0 after two accepted turns.",
+    "First OS input probe used the wrong Work-button coordinate; inspected frame and corrected only the harness. A later stale X11 window enumeration raised BadWindow; ignore that specific destroyed-window race in the scratch probe. Neither failed attempt counts as a pass.",
+    "First rendered run fell back from absent physical ALSA to Dummy; final execution explicitly selects Dummy."
+  ],
+  "unverified": [
+    "Independent human handoff/strategy/balance or enjoyment",
+    "Physical input/audio, accessibility and other platforms",
+    "LAN multiplayer, standalone OS export and public audience adoption",
+    "Historical RPG runtime recovery or commercial readiness/demand"
+  ],
+  "publication": "Normal main publication is authorized; remote SHA and hosted checks are confirmed at task closure, not self-referenced in this evidence."
+}

@@ -1,26 +1,32 @@
 # P01 — Eclipse Fair
 
-**0.3.0** adds planning rivals and conditional response comparison to the
+**0.4.0** adds any-seat solo and two-to-four participant local play to the
 [native Godot .NET board](Native/README.md), alongside the
 existing **0.1.0** C#/.NET economy workbench and playable terminal match from
-Artemyra's Feira do Eclipse seed. One participant faces three agents on eight
-connected venues. Earn obols, buy three sigils, cleanse curse and claim the Gate.
+Artemyra's Feira do Eclipse seed. One to four local participants share eight
+connected venues with optional rivals. Earn obols, buy three sigils, cleanse curse and claim the Gate.
 Compare rule variants across common seeds and all four policy/seat rotations.
 This is new gameplay, not recovered RPG Maker code. The native consumer uses
 the existing Core and journal without duplicating transactions or changing rules.
-Download [the compiled native project pack](dist/eclipse-board-0.3.0.zip); it requires
+Download [the compiled native project pack](dist/eclipse-board-0.4.0.zip); it requires
 Godot .NET 4.6.3 and .NET 10 runtime, not an SDK. It is not a standalone executable.
-[Planning execution](../../evidence/eclipse-fair/PLANNING_RUN.json) records actual engine
+[Local-play execution](../../evidence/eclipse-fair/LOCAL_RUN.json) records actual engine
 journeys, runtime-only consumption, comparative fixtures and implementing-agent review.
 
-![Executed planning rival](../../evidence/eclipse-fair/planning-rival.png)
+New fair selects LOCAL seats. Multi-participant turns require an explicit named
+handoff; previews/maps/results follow the actual actor. **Next turns** forecasts
+only rivals up to the next local decision. Native saves retain local controls;
+old journals resume with Vaelis, and **Export replay** preserves the economy-only
+format. No LAN or unknown human action is simulated as a forecast.
+
+![Executed local turn handoff](../../evidence/eclipse-fair/local-handoff.png)
 
 Planning mode adds Planner, Warden and Raider. Each compares legal first moves by
 projecting a race to the actual Gate/deadline using public classic policy models,
-then replans after accepted actions. **Rival response** executes the configured
-profiles in a fork through your next turn; compare another legal plan to see
+then replans after accepted actions. **Next turns** executes configured rival
+profiles in a fork up to the next local decision; compare another legal plan to see
 different replies and budgets. New fair also offers **Classic**. Saved classic
-profiles stay classic; the previous 0.2.0 native pack is retained.
+profiles stay classic; previous 0.2.0/0.3.0 native packs are retained.
 
 The bounded comparison uses 12 common seeds and four seat rotations, with an
 unchanged Collector proxy: win credit falls from 10.5/48 to 2/48 against the new

@@ -1,34 +1,35 @@
 # Lab state
 
-**Updated:** 2026-10-14 (UTC). **Seed:** 0.26.0.
-**Current milestone:** P04 bilingual reading editions 0.2.0.
+**Updated:** 2026-10-14 (UTC). **Seed:** 0.27.0.
+**Current milestone:** P01 native local participants 0.4.0.
 
-[Read The Water Beneath Darsen](../projects/lich-cistern/README.md): complete
-English translation, editable manuscript, EPUB3 and 27-page A5 PDF. All five
-scenes retain the incident, physical mechanism, limited corpse contact, Sava’s
-constrained choice and unfinished accountability. Both languages can be rebuilt
-with the same small Python/Pandoc/ReportLab producer and explicit edition selector.
-Original Portuguese source/metadata/EPUB/PDF, fonts and stylesheet remain intact.
+[Eclipse Fair](../projects/eclipse-fair/README.md) now supports any-seat solo and
+shared-device play with two to four local participants. New fair selects seats;
+unselected seats retain Planning/Classic rivals. A named Begin acknowledges
+handoff without spending a turn. Maps/budgets/goals/results follow the actual
+actor. Next turns executes only rivals until the next human choice or ending.
 
-[Execution](../evidence/lich-cistern/ENGLISH_RUN.json) distinguishes exact text/
-format checks, official EPUBCheck, isolated bilingual rebuilds, controlled damaged
-English packages, PDF rasters and actual packaged XHTML/CSS at 360/900px. English
-source has 240 paragraphs/4,736 words; correspondence and name counts support
-omission review, not semantic fidelity or literary quality. No hardware ebook
-reader, assistive technology or independent translator/audience was executed.
+Native saves retain controls plus the original replay-validated economy journal.
+Old plain journals resume with Vaelis; Export replay produces the original format
+without local controls, subject to consumer policy support. Core/rules and all
+previous shipped packs remain intact. The new compiled project needs Godot .NET
+4.6.3 and .NET 10 runtime, not an SDK or a standalone OS executable.
 
-Started clean at `9029a2e`, matching fetched main; normal main publication is
-explicitly authorized and permitted. Compared P01 local human-seat play, P11
-retrieval, P03/native experience and an English P04 edition. The existing complete
-Portuguese source supports a new readable sample; recent games/services already
-have connected milestones. Native tools are available, not rejected by convenience.
-Markdown/Pandoc/Python fit reader files; no browser product, engine migration,
-sequel, unavailable manuscript restoration or outside prose was introduced.
+[Execution](../evidence/eclipse-fair/LOCAL_RUN.json) records compilation, original
+C#/CLI regressions, all 15 seat combinations, 26 complete native journeys,
+explicit four-local Work choices, unknown-human forecast boundaries, save faults,
+keyboard/layout checks, compiled old/current comparison and outside-source pack
+execution. Actual X11 config/Begin/Work/Commit produces two local turns; the
+normal window close signal exits cleanly. Raw frames are inspected by Codex. Initial overlapping configuration
+controls and an oversized wrapped dialog were corrected before delivery.
 
-Codex reviewed the full pair and pages. Glossary choices distinguish grille/screen,
-valve/ledger, inlet/outlet/drain and brake/counterweight. An awkward guard/beam line
-is interpreted explicitly; shrouding is inferred from body preparation. Keep
-these as translator judgments, not author ratification. Independent English/PT
-response, canon fit, device/accessibility and market demand remain open. Next
-compare those with native local play/strategy, hardware practice and real team
-retrieval before selecting another workstream.
+Started clean at `30cd956`, matching fetched main, with authorized normal main
+publication and push permission. Reassessed registry/seed/history and actual P01,
+P05, P10/P11 sources: local play adds a new audience workflow to complete rules;
+recent translated reading/retrieval/media milestones do not force continuation.
+C#/Godot tooling executes; no web substitute, new engine or historical recovery.
+
+All input/review is by the implementing agent. Independent handoff/strategy,
+physical controls/accessibility, other platforms and demand remain unverified.
+Compare those with P05 OS delivery, P03 listening/practice, independent P04/P10
+reading and actual P11 use before selecting the next workstream.

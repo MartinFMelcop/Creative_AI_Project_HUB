@@ -8,6 +8,8 @@ public partial class MapView : Control
     public readonly Button[] Venues = new Button[8];
     public Game? Match;
     public int Selected;
+    public int ViewSeat;
+    public bool CanPlan;
     public Intent? Plan;
     public event Action<int>? VenueSelected;
     private static readonly Vector2[] Places = [new(.23f,.19f),new(.5f,.10f),new(.77f,.19f),new(.86f,.5f),
@@ -28,7 +30,7 @@ public partial class MapView : Control
     public void Refresh()
     {
         if (Match == null || Venues[0] == null) return;
-        var human = Match.People[0];
+        var human = Match.People[ViewSeat];
         for (var i = 0; i < 8; i++)
         {
             var b = Venues[i]; b.Position = Places[i] * Size - b.Size / 2;
@@ -47,9 +49,9 @@ public partial class MapView : Control
         if (Match == null) return;
         foreach (var v in Game.Board)
             foreach (var dest in v.Neighbors.Where(d => d > v.Id)) DrawLine(Places[v.Id] * Size, Places[dest] * Size, Main.Edge, 3, true);
-        if (Plan != null && Match.Result == null && Match.Current == 0)
+        if (Plan != null && Match.Result == null && CanPlan)
         {
-            var start = Places[Match.People[0].Position] * Size; var finish = Places[Plan.Destination] * Size;
+            var start = Places[Match.People[ViewSeat].Position] * Size; var finish = Places[Plan.Destination] * Size;
             DrawLine(start, finish, Main.Gold, 6, true); DrawCircle(finish, 49, new Color(1,.8f,.35f,.12f));
         }
         DrawString(ThemeDB.FallbackFont, new Vector2(Size.X / 2 - 65, Size.Y / 2 - 5), "FEIRA DO ECLIPSE", HorizontalAlignment.Left, -1, 14, Main.Gold);

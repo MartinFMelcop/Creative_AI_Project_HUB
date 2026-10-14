@@ -1057,3 +1057,31 @@ format integrity. Full paired source and raster/reflow review are by Codex;
 paragraph/name correspondence is not semantic proof. Seek independent linguistic/
 literary and device/accessibility evidence before calling this a release-quality
 translation or deciding further expansion.
+
+## ADR-050 — separate local controls from replayable economy rules
+
+**Date:** 2026-10-14 (UTC). **Status:** P01 native 0.4.0.
+
+Choose any-seat/shared-device play from the current portfolio over automatically
+extending recent English prose or retrieval. Reuse C#/Godot and unchanged economic
+transactions; human seats are native-consumer controls, not new rules/policies.
+Require one to four distinct seats and a named multi-participant handoff without
+spending time. Every map/preview/result uses the actual actor. Auto rivals cannot
+spend a human turn; a forecast ends at the next human choice or actual ending.
+Full-race suggestions still use disclosed policy assumptions, never known input.
+
+Store native boardSchema-1 controls plus the existing schema-1 economy journal.
+Expose Snapshot/Replay on the original journal instead of duplicating its rule
+validation. Validate every action/control before replacing a match. Plain legacy
+journals restore Vaelis; explicit exports omit controls for compatible consumers.
+Older consumers cannot load the envelope; stored Planning profiles still require
+a consumer that recognizes those names. Preserve all old shipped packages.
+
+Use native containers for configuration. Initial direct children overlapped;
+initial wrapped-label sizing made a container dialog exceed the viewport. Explicit
+short lines and checks on control/whole-dialog geometry accompany rendered review.
+An actual X11 close request initially left the player running; handle the native
+CloseRequested signal explicitly and verify clean exit after two local saves.
+Compiled source/pack and scripted journeys prove bounded behavior. Independent
+shared-device usability, strategy, accessibility, other platforms and paid demand
+remain open; no LAN, standalone export or historical restoration is claimed.

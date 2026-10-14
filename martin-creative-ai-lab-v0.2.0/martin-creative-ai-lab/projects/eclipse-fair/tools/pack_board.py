@@ -6,7 +6,7 @@ from zipfile import ZipFile, ZIP_DEFLATED
 ROOT = Path(__file__).resolve().parents[1]
 NATIVE = ROOT / "Native"
 ASSEMBLIES = NATIVE / ".godot/mono/temp/bin/Debug"
-OUT = ROOT / "dist/eclipse-board-0.3.0.zip"
+OUT = ROOT / "dist/eclipse-board-0.4.0.zip"
 
 
 def main():

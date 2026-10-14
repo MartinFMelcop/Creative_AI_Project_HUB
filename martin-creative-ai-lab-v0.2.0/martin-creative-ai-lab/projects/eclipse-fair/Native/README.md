@@ -1,102 +1,102 @@
-# Eclipse Fair — native board 0.3.0
+# Eclipse Fair — native board 0.4.0
 
-A complete desktop board consumer of the existing P01 C# economy. Eight connected
-venues, one human and three visible rivals, forecasts, concrete action previews,
-bounded theft/wards, rites, Gate/deadline results and automatic replayable saving.
-Planning rivals now project races and adapt to public positions/budgets. Compare
-their responses to a selected plan before committing. Classic mode retains the
-original rivals; rules, transaction effects and old-policy journals are preserved.
+Play one local participant in **any seat**, or two to four participants sharing
+the native board. Unchecked seats use Planning or Classic rivals. Eight connected
+venues, real budget/action previews, theft/wards, rites and Gate/deadline results
+consume the same C# economy. All positions/resources are public.
 
 ## Play the delivered package
 
-Install **Godot .NET 4.6.3** (the standard GDScript engine cannot load C#) and the
-**.NET 10 runtime**. Unzip `eclipse-board-0.3.0.zip`, then from its `eclipse-board`
-directory:
+Install **Godot .NET 4.6.3** and the **.NET 10 runtime**; standard Godot cannot load
+C#. Unzip `eclipse-board-0.4.0.zip`, then from `eclipse-board`:
 
-```bash
+```sh
 /path/to/Godot_mono --path Native
 ```
 
-The package includes the actual compiled game assemblies and editable sources.
-It uses the installed engine's GodotSharp API; engine/runtime binaries, external
-art and third-party managed assemblies are not redistributed. No SDK or NuGet
-restore is required to play it. This is a runtime-dependent native project pack,
-**not a standalone OS executable or an engine export**. Linux x86_64 is the tested
-platform. Other systems/controllers remain unverified.
+Owned compiled assemblies and editable sources are included. The installed
+engine supplies GodotSharp; no engine/API/runtime binary is redistributed. No SDK
+or NuGet restore is needed to play. This is a runtime-dependent native project
+pack, not a standalone OS executable. Linux x86_64 was executed.
 
-## Play
+## Local play and decisions
 
-You control **Vaelis**. Click a venue, select an action, inspect the actual budget
-and consequences, then **Commit this plan**. Travel costs one obol and crosses
-at most one edge; staying is free. The gold line shows the proposed route.
-Faded venues remain inspectable but are too far to act at now.
+**New fair** selects a seed, Planning/Classic mode and one to four LOCAL seats:
+Vaelis, Madra, Nira or Morrak. At least one must remain selected. One participant
+plays immediately on their turn. With several, **Begin <name>’s turn** acknowledges
+handoff before plans or suggestions become available. Waiting/beginning spends no
+turn. The previous plan is cleared; auto/manual rivals cannot spend a local turn.
+The board, income, objective, preview and response use the actual local actor.
+Four local seats disable Auto rivals. This is shared-device play, without LAN,
+hidden information, account identity or a privacy curtain.
 
-Buy three sigils at Market/Bazaar. Each purchase adds curse and raises the next
-price; prices rise again after round 10. Rites at the Chapel remove two curse,
-for two obols or free during a procession. Curse reduces work income. Reach the
-Gate with three sigils and zero curse, then choose **Claim the Gate**.
+Inspect a venue, select an action, compare its actual consequences, then **Commit
+this plan**. Travel crosses at most one edge for one obol; staying is free. Buy
+three sigils at Market/Bazaar; each adds curse and raises the next price. Prices
+rise again after round ten. Chapel rites remove two curse for two obols, or free
+during a procession. Curse reduces wages. Reach the Gate with three sigils and
+zero curse, then **Claim**. A raven ward blocks one co-located theft; successful
+theft transfers obols and adds curse. At round twenty, rank by sigils, least curse,
+then obols; exact ties share victory. Results name actual winners in every seat.
 
-Raven wards block one co-located theft. Stealing transfers existing obols and
-adds curse if successful. Forecasts, current/next work income and rival resources
-are public. **Suggest plan** selects advice for your saved profile without
-committing. **Rival response** projects the configured replies through your next
-turn, including rotating initiative, theft/wards and an intervening ending.
-Compare another plan to see different replies and resources. The dialog stops
-auto rivals; its forecast is a fork, never accepted progress. Round 20 ends by sigils, least curse,
-then obols; exact ties share the win. A Gate claim wins immediately.
+**Next turns** executes the selected action in a fork, then only configured rivals
+until the next local player or an ending. It never predicts another human's
+choice, even if that player has a suggestion profile. With consecutive local
+turns, no rival reply is invented. Compare another plan without spending a turn.
+The dialog names the next local decision and the initiating actor's actual budget.
 
-Planning compares every legal first action by finishing its projection with
-public classic response models. Planner uses Collector continuations, Warden
-Keeper and Raider Opportunist. Ranking follows actual win credit, finish time
-and deadline standings; there is no arbitrary protection bonus. It replans after
-each accepted action and shows up to three considered own moves. Those later
-moves are assumptions, not commitments or knowledge of future human choices.
-The response dialog instead executes the actual configured profiles for one cycle.
+**Suggest plan** uses the stored profile. Planning compares legal first actions
+by projecting a complete race with public classic models, then replans. Later
+moves and other local decisions are assumptions. Hover a LOCAL roster label to
+see its suggestion profile. Rival response/route models do not establish optimal
+human play. [Prior planning comparison](https://github.com/MartinFMelcop/Creative_AI_Project_HUB/blob/main/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/evidence/eclipse-fair/PLANNING_RUN.json)
+retains its original synthetic scope.
 
-**New fair** offers Planning or Classic rivals. To inspect the opening defensive
-choice, start Planning with seed 1, watch the opening rivals, then compare the
-suggested ward at Foundry with Work there. Responses differ before you commit.
-For the exact bounded comparative results and limits, see
-[planning execution](https://github.com/MartinFMelcop/Creative_AI_Project_HUB/blob/main/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/evidence/eclipse-fair/PLANNING_RUN.json).
+Watch rivals individually or enable Auto rivals, paced at one turn per second.
+Window focus loss stops auto turns; resume explicitly. Tab/arrows navigate native
+controls; Enter/Space activate the focused control. No audio/controller is added.
 
-Watch rivals one at a time or enable **Auto rivals** (one turn per second).
-Losing window focus disables auto turns; resume explicitly. Tab/arrow keys
-navigate native controls; Enter/Space activate the focused control. This is a
-desktop prototype without audio or controller support.
+## Save and replay
 
-Accepted turns autosave to Godot's per-user data directory as `match.json`.
-**Save** retries a failed write; **Resume save** validates/replays every action
-before replacing play. A valid save also resumes at startup; no wall time passes.
-Malformed/incompatible saves leave the current match intact. A failed write
-keeps accepted progress in memory, with visible feedback. **New fair** confirms
-a seed and rival mode with baseline rules. Its first accepted turn or an explicit
-**Save** replaces the saved match. No undo or
-automatic backup is provided. Save files retain schema/rules version 0.1.0.
-Loading preserves the stored profiles: classic saves stay classic. New planning
-names require current source/0.3.0 native consumer; the original 0.1.0 terminal
-and 0.2.0 native packs reject those names. Both previous packs remain retained.
+Accepted turns autosave to `user://match.json`; **Save** retries a failed write.
+**Resume save** and startup loading replay every action and validate local seats
+before replacing play. Multi-participant loading requires handoff again. No wall
+time passes; malformed saves preserve the current match. Failed writes leave
+accepted progress in memory with a visible notice. New fair replaces the saved
+match only on an accepted turn or explicit Save. No undo/automatic backup.
 
-## Build and check
+Native saves use a **boardSchema 1 envelope**, with `humanSeats` and the original
+schema-1/rules-0.1.0 economy journal under `match`. Earlier plain journals load
+with Vaelis as the sole local seat and their stored profiles. Older consumers
+cannot load the new envelope. **Export replay** writes `match.replay.json` beside
+the save: the original economy format without local controls. The current CLI or
+0.3.0 board can replay Planning profiles; original terminal 0.1.0/board 0.2.0 accept
+only Classic profiles. Replays are records, not recordings of hidden human plans.
+Earlier shipped packages are preserved.
 
-Use SDK **10.0.401** and Godot .NET **4.6.3**. From the parent `eclipse-fair` directory:
+## Build and verification
 
-```bash
+From the parent project, with SDK **10.0.401** and Godot .NET **4.6.3**:
+
+```sh
+dotnet run --project Checks -c Release
 dotnet build Native/Eclipse.Board.csproj -c Debug
 Godot_mono --headless --path Native --editor --import --quit
-# Always use an isolated check directory, not your normal save:
 Godot_mono --headless --path Native -- --verify --save-path /tmp/eclipse-check/match.json
 python3 tools/pack_board.py
+python3 tools/check_board_pack.py
 ```
 
-Verification drives the actual Godot scene, focused keyboard input and control
-signals through plans, optional theft/protection, journal failures/resume, Gate
-and deadline matches, response comparison, planning/Classic selection and saved
-profiles. Result/action parity uses the same Core/Agents, not duplicated engine
-rules. These are synthetic workflows, **not human playtests**.
-With a display, `--verify --save-path <scratch>/match.json --capture <scratch>/frames`
-also captures real rendered frames for implementing-agent inspection.
+Use an isolated save. With a display, add `--capture <scratch>/frames` to inspect
+raw engine frames. Checks drive actual controls/keyboard, configuration geometry,
+all fifteen local-seat sets, mixed forecasts, invalid-save preservation, legacy
+journals/export and twenty-six complete Gate/deadline matches. A four-local
+Work-only sequence exercises choices independent of suggestions. Compiled
+old/current session comparison shows seat-zero-only versus any-seat acceptance.
+The final pack is executed outside source with runtime-only .NET and no SDK.
 
-The compiled package is additionally exercised outside source; packaging includes
-only owned assemblies/config/source, no caches or engine libraries. Technical
-execution and visual review do not prove unassisted strategy, enjoyment,
-accessibility, hardware performance, cross-platform support or commercial demand.
+[Local-play execution](https://github.com/MartinFMelcop/Creative_AI_Project_HUB/blob/main/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/evidence/eclipse-fair/LOCAL_RUN.json)
+separates technical results, scripted inputs and Codex visual/gameplay judgment.
+These are not human playtests. Unassisted handoff/strategy, accessibility,
+physical controllers, other platforms, commercial demand and native OS export
+remain unverified. No historical RPG runtime restoration is claimed.

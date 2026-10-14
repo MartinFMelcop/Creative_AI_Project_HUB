@@ -1,6 +1,6 @@
 # SEED — Martin Creative AI Lab
 
-**Version:** 0.26.0
+**Version:** 0.27.0
 **Data-base:** 10 de outubro de 2026  
 **Autor e responsável pelo portfólio:** Martin Melcop Neto  
 **Working language:** English for new documentation, plans, code comments, UI, and reports. Preserve original creative titles and historical source languages.
@@ -44,16 +44,16 @@ Se apenas este arquivo estiver disponível, ele é suficiente para iniciar a Fas
 
 | Field | Current evidence |
 |---|---|
-| Repository | MartinFMelcop/Creative_AI_Project_HUB; actual Git root `/workspace/Creative_AI_Project_HUB`; original wrapper retained |
-| Preserved sources | 175 Rave Master texts / 3 WebSocket files; unchanged ZIP/inventory; not full RMXP recovery |
-| Current workstream | P04 complete English reading edition 0.2.0 |
-| Runtime | Markdown / Pandoc / Python / ReportLab; real EPUB3 and 27-page A5 PDF, no website |
-| Evidence | Full pair review, exact artifact text/language/navigation/fonts, official EPUBCheck, PT/EN rebuilds, damaged-package rejection and PDF/XHTML inspection; `evidence/lich-cistern/ENGLISH_RUN.json` |
-| Limits | Codex translation/review; no historical manuscript/canon, independent literary approval, hardware/assistive or market validation |
-| Next action | Compare independent English/PT reading with native local play/strategy, P03 hardware practice and real P11 handoffs |
-| Other products | P01 0.3.0, P03 0.3.0, P05 0.2.0, P06 0.4.0, P10/P11 0.5.0, P02 0.2.1 preserved |
-| Media / transfer | Existing licensed font files now also embedded in the English PDF; assets/transfer counts unchanged |
-| Attribution | Clean `9029a2e` matched fetched main; main authorized/permitted. Codex translation/code/review; no independent translator approval or Sites update |
+| Repository | MartinFMelcop/Creative_AI_Project_HUB; actual Git root `/workspace/Creative_AI_Project_HUB`; wrapper retained |
+| Preserved sources | 175 Rave Master texts / 3 WebSocket files; unchanged historical ZIP/inventory |
+| Current milestone | P01 native local participants 0.4.0 |
+| Runtime | C#/.NET 10 and Godot .NET 4.6.3; compiled runtime-dependent project, no OS export |
+| Evidence | All 15 local-seat sets, 26 complete journeys, direct four-local deadline, handoff/forecast/save/keyboard/layout checks and old/current compiled comparison; `evidence/eclipse-fair/LOCAL_RUN.json` |
+| Limits | Scripted input/Codex review; no independent players, hardware/accessibility, LAN, market or historical restoration |
+| Next action | Compare independent local play with P05 OS delivery, P03 physical practice, P04/P10 readers and real P11 use |
+| Other products | P03 0.3.0, P04/P05 0.2.0, P06 0.4.0, P10/P11 0.5.0, P02 0.2.1 retained |
+| Rules / saves | Economy/rules/journal schema 1 retained; native envelope stores local seats, old journals load with Vaelis, exports omit controls |
+| Attribution | Clean `30cd956` matched fetched main; main authorized/permitted. Codex implementation/input/review |
 
 Registry evidence paths must resolve to existing files inside the lab; working
 paths must be directories and legacy-source IDs must exist. This documentary
@@ -221,7 +221,7 @@ Identificadores persistem mesmo quando nomes mudam. Um projeto arquivado pode co
 
 | ID | Seed | Matéria-prima principal | Destinos possíveis | Estado nesta fundação |
 |---|---|---|---|---|
-| P01 | Artemyra / Eclipse Fair | Typed economy and native C# presentation | Godot .NET board, terminal workbench, replay and comparison | Native 0.2.0; core/CLI 0.1.0 retained, no historical restoration |
+| P01 | Artemyra / Eclipse Fair | Typed economy and native C# presentation | Godot .NET board, terminal workbench, replay and comparison | Native 0.4.0 local participants; core/CLI rules 0.1.0 retained, no historical restoration |
 | P02 | AI Evaluation & QA Lab (historical Unity proposal) | Requirements, reproduced bugs, artifact checks | Bounded practice tasks and later independent evaluation | EVAL-001 runner 0.2.0 uses pinned snapshots, starter 0.1.0; M4 harness scope, no model candidate |
 | P03 | Tokyo 80s | Original music, timing and sustained interaction | Midnight Signal and Rain Circuit with track selection/transition | P03 0.2.0 / P08 0.3.0 real media; human play/listening pending |
 | P04 | O Lich mais velho da tumba mais antiga / Darsen reading editions | Narrative, translation and reader production | Complete Portuguese story and English EPUB/PDF | New standalone adaptation 0.2.0; Portuguese 0.1.0 preserved, no historical manuscript restoration |
@@ -237,23 +237,21 @@ P02 agrupa evaluation e QA porque podem compartilhar a mesma aplicação pequena
 
 ### P01 — Artemyra / ArtemiZ4
 
-[Eclipse Fair](projects/eclipse-fair/README.md) **0.3.0** adds native planning
-rivals and conditional response comparison. Planner, Warden and Raider evaluate
-legal first actions by projecting actual Gate/deadline outcomes with public
-classic response models, then replan. The board shows considered routes; Rival
-response executes configured profiles in a fork through the human's next turn.
-Compare another action without spending a turn. Rotating initiative, theft,
-wards and intervening endings remain part of the forecast.
+[Eclipse Fair](projects/eclipse-fair/README.md) **0.4.0** supports solo control of
+any seat or two-to-four local participants sharing the native board. Named handoff
+spends no turn; map/budgets/objective/results follow the actual actor. Optional
+Planning/Classic rivals retain their behavior. Next turns executes only rivals
+up to the next human choice or an ending; suggestions disclose policy assumptions.
 
-Classic mode preserves all four original profiles. Old journals keep their stored
-profiles; new planning names need the current consumer. Rules/schema remain
-0.1.0, previous terminal/native packs are retained. Source and the compiled 0.3.0
-project pack execute in Godot .NET, including outside source with runtime-only
-.NET/no SDK. [Execution](evidence/eclipse-fair/PLANNING_RUN.json) distinguishes
-technical/native review from synthetic comparative observations. The short-beam
-prototype was rejected after worse matched outcomes; final projections score
-real endings. No hidden human input, optimality, independent enjoyment, historical
-RPG restoration, standalone OS export or commercial approval is claimed.
+Native saves wrap validated local seats around the original accepted-action
+journal. Old plain journals resume with Vaelis; explicit economy exports omit
+controls for compatible policy consumers. Core/rules remain 0.1.0 and all earlier
+packages are retained. Godot .NET source and the compiled 0.4.0 project execute,
+including outside source with runtime-only .NET/no SDK. [Execution](evidence/eclipse-fair/LOCAL_RUN.json)
+records fifteen seat sets, twenty-six complete journeys, keyboard/configuration,
+forecast/save boundaries, compiled baseline comparison and raw viewport review.
+Codex scripted play is not independent human usability/balance. No LAN, standalone
+OS export, historical RPG restoration or commercial readiness is claimed.
 The historical context below remains direction, not current runtime.
 
 **Núcleo histórico:** party RPG competitivo originado em RPG Maker XP/RGSS. Quatro jogadores, MVP com um humano contra três IAs, tabuleiro, minigames e recursos temporários. O histórico inclui formatos FFA e propostas de 2v2, sem campanha e com LAN como expansão.
