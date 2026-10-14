@@ -1144,3 +1144,32 @@ Encoded synthetic probes and actual music/OfflineAudioContext samples establish
 bounded technical behavior, not every onset, timbral naturalness, hardware latency,
 learning or market benefit. Review original/slow mixes on physical output and
 observe unassisted phrase use before claiming higher musical or teaching quality.
+
+## ADR-053 — hand over a read-only record before defining room imports
+
+**Date:** 2026-10-14 (UTC). **Status:** P11 0.6.0.
+
+Select portable review after inspecting the portfolio, varied recent history,
+actual P11 exports and completed P04/P10/native consumers. JSON already preserves
+the full record but requires raw-file inspection outside the workspace. Selective
+import would first need participant identity, collision and merge semantics;
+a reader provides a concrete handover without rebinding authors or live work.
+
+Use existing Node exports and a plain self-contained HTML/CSS/JavaScript document.
+The local CLI has no SQLite/server dependency. Keep JSON schema 1 (including
+earlier exports without actions), SQLite schema 2, backup format 1 and the locked
+dependency graph. Validate complete revision/source consistency; do not repair
+contradictions. Embed source as inert JSON, use DOM text nodes and hash-based
+script/style policy. The source digest identifies bytes, not origin authenticity.
+
+Every current work label means at export, never live or independently certified.
+Bound all lists to twenty rows and retain complete data/search; move focus and
+scroll after context has been rendered. A failing viewport assertion confirmed
+that scrolling an empty context was insufficient. Downloads capture room/person/
+generation; later responses cannot cross navigation or disable a newer export.
+
+Managed Chromium prohibits file navigation. Preserve that policy: explicit test
+loopback loads identical bytes, closes the static server and disables network
+before interaction. CI defaults to actual file URLs. Do not count loopback as file
+execution or scripted fixtures as real collaboration. Revisit import or public
+operation only after concrete handover, identity and deployment requirements.

@@ -2,6 +2,7 @@ const express = require('express');
 const path = require('node:path');
 const { createChatServer } = require('./server.cjs');
 const { RoomsStore } = require('./rooms-store.cjs');
+const { renderRecord } = require('./record-export.cjs');
 
 function createRoomsServer({ dbPath = ':memory:' } = {}) {
   const store = new RoomsStore(dbPath);
@@ -33,6 +34,10 @@ function createRoomsServer({ dbPath = ':memory:' } = {}) {
   app.get('/api/studio/rooms/:id/actions/:action/history',route((req,res)=>res.json(store.work.history(req.params.action,req.params.id))));
   app.get('/api/studio/rooms/:id/export',route((req,res) => {
     res.set('Content-Disposition','attachment; filename="project-conversation.json"').json(store.export(req.params.id));
+  }));
+  app.get('/api/studio/rooms/:id/reading',route((req,res) => {
+    const record=store.export(req.params.id);
+    res.attachment(`project-${record.project.id}-reading.html`).type('html').send(renderRecord(record));
   }));
   app.use('/api/studio', (error,_req,res,_next) => res.status(400).json({ error:'Invalid JSON request.' }));
 

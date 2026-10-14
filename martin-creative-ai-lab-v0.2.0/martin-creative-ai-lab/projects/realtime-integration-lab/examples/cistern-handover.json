@@ -1,0 +1,194 @@
+{
+  "schema": 1,
+  "exported_at": "2026-10-14T11:10:00.000Z",
+  "project": {
+    "id": "10000000-0000-0000-0000-000000000001",
+    "name": "Fictional cistern handover · Demo",
+    "created_at": "2026-10-14T08:50:00.000Z"
+  },
+  "entries": [
+    {
+      "id": 1,
+      "kind": "note",
+      "body": "Fictional demonstration written for this reader. Rook and Neri are sample labels; no real team activity or verified delivery is represented.",
+      "created_at": "2026-10-14T09:00:00.000Z",
+      "author": "Demo Rook"
+    },
+    {
+      "id": 2,
+      "kind": "note",
+      "body": "The pump is on loan until Friday. A leak appeared during the last inspection; returning it unrepaired would transfer the problem to the lender.",
+      "created_at": "2026-10-14T09:02:00.000Z",
+      "author": "Demo Neri"
+    },
+    {
+      "id": 3,
+      "kind": "decision",
+      "body": "Replace the western valve before returning the borrowed pump. Keep the damaged part for inspection and record the lender’s receipt.",
+      "created_at": "2026-10-14T09:05:00.000Z",
+      "author": "Demo Rook"
+    },
+    {
+      "id": 4,
+      "kind": "note",
+      "body": "A replacement arrived, but its seal is narrower. Compare it with the old part before fitting it.",
+      "created_at": "2026-10-14T10:00:00.000Z",
+      "author": "Demo Neri"
+    },
+    {
+      "id": 5,
+      "kind": "decision",
+      "body": "Keep the cistern closed until the separate water-sample check is recorded. Pump repair alone does not authorize reopening.",
+      "created_at": "2026-10-14T11:00:00.000Z",
+      "author": "Demo Rook"
+    }
+  ],
+  "actions": [
+    {
+      "id": "30000000-0000-0000-0000-000000000002",
+      "room_id": "10000000-0000-0000-0000-000000000001",
+      "source_id": 5,
+      "creator_id": "20000000-0000-0000-0000-000000000001",
+      "title": "Record the separate water-sample check",
+      "owner_id": null,
+      "status": "todo",
+      "note": "Find an available participant and keep the gate closed until a result is recorded.",
+      "revision": 1,
+      "created_at": "2026-10-14T11:05:00.000Z",
+      "updated_at": "2026-10-14T11:05:00.000Z",
+      "owner_name": null,
+      "creator_name": "Demo Rook",
+      "decision_body": "Keep the cistern closed until the separate water-sample check is recorded. Pump repair alone does not authorize reopening.",
+      "history": [
+        {
+          "id": 5,
+          "revision": 1,
+          "created_at": "2026-10-14T11:05:00.000Z",
+          "author": "Demo Rook",
+          "action": {
+            "id": "30000000-0000-0000-0000-000000000002",
+            "room_id": "10000000-0000-0000-0000-000000000001",
+            "source_id": 5,
+            "creator_id": "20000000-0000-0000-0000-000000000001",
+            "title": "Record the separate water-sample check",
+            "owner_id": null,
+            "status": "todo",
+            "note": "Find an available participant and keep the gate closed until a result is recorded.",
+            "revision": 1,
+            "created_at": "2026-10-14T11:05:00.000Z",
+            "updated_at": "2026-10-14T11:05:00.000Z",
+            "owner_name": null,
+            "creator_name": "Demo Rook",
+            "decision_body": "Keep the cistern closed until the separate water-sample check is recorded. Pump repair alone does not authorize reopening."
+          }
+        }
+      ]
+    },
+    {
+      "id": "30000000-0000-0000-0000-000000000001",
+      "room_id": "10000000-0000-0000-0000-000000000001",
+      "source_id": 3,
+      "creator_id": "20000000-0000-0000-0000-000000000001",
+      "title": "Return completed pump",
+      "owner_id": "20000000-0000-0000-0000-000000000002",
+      "status": "done",
+      "note": "Participant reports a dry joint and a recorded return receipt. Demonstration claim only.",
+      "revision": 4,
+      "created_at": "2026-10-14T09:10:00.000Z",
+      "updated_at": "2026-10-14T10:50:00.000Z",
+      "owner_name": "Demo Neri",
+      "creator_name": "Demo Rook",
+      "decision_body": "Replace the western valve before returning the borrowed pump. Keep the damaged part for inspection and record the lender’s receipt.",
+      "history": [
+        {
+          "id": 1,
+          "revision": 1,
+          "created_at": "2026-10-14T09:10:00.000Z",
+          "author": "Demo Rook",
+          "action": {
+            "id": "30000000-0000-0000-0000-000000000001",
+            "room_id": "10000000-0000-0000-0000-000000000001",
+            "source_id": 3,
+            "creator_id": "20000000-0000-0000-0000-000000000001",
+            "title": "Repair and return the borrowed pump",
+            "owner_id": "20000000-0000-0000-0000-000000000002",
+            "status": "todo",
+            "note": "",
+            "revision": 1,
+            "created_at": "2026-10-14T09:10:00.000Z",
+            "updated_at": "2026-10-14T09:10:00.000Z",
+            "owner_name": "Demo Neri",
+            "creator_name": "Demo Rook",
+            "decision_body": "Replace the western valve before returning the borrowed pump. Keep the damaged part for inspection and record the lender’s receipt."
+          }
+        },
+        {
+          "id": 2,
+          "revision": 2,
+          "created_at": "2026-10-14T09:30:00.000Z",
+          "author": "Demo Neri",
+          "action": {
+            "id": "30000000-0000-0000-0000-000000000001",
+            "room_id": "10000000-0000-0000-0000-000000000001",
+            "source_id": 3,
+            "creator_id": "20000000-0000-0000-0000-000000000001",
+            "title": "Repair and return the borrowed pump",
+            "owner_id": "20000000-0000-0000-0000-000000000002",
+            "status": "blocked",
+            "note": "Válvula presa no depósito. Waiting for a compatible seal.",
+            "revision": 2,
+            "created_at": "2026-10-14T09:10:00.000Z",
+            "updated_at": "2026-10-14T09:30:00.000Z",
+            "owner_name": "Demo Neri",
+            "creator_name": "Demo Rook",
+            "decision_body": "Replace the western valve before returning the borrowed pump. Keep the damaged part for inspection and record the lender’s receipt."
+          }
+        },
+        {
+          "id": 3,
+          "revision": 3,
+          "created_at": "2026-10-14T10:20:00.000Z",
+          "author": "Demo Neri",
+          "action": {
+            "id": "30000000-0000-0000-0000-000000000001",
+            "room_id": "10000000-0000-0000-0000-000000000001",
+            "source_id": 3,
+            "creator_id": "20000000-0000-0000-0000-000000000001",
+            "title": "Repair and return the borrowed pump",
+            "owner_id": "20000000-0000-0000-0000-000000000002",
+            "status": "doing",
+            "note": "Compatible seal fitted; checking the joint for leaks.",
+            "revision": 3,
+            "created_at": "2026-10-14T09:10:00.000Z",
+            "updated_at": "2026-10-14T10:20:00.000Z",
+            "owner_name": "Demo Neri",
+            "creator_name": "Demo Rook",
+            "decision_body": "Replace the western valve before returning the borrowed pump. Keep the damaged part for inspection and record the lender’s receipt."
+          }
+        },
+        {
+          "id": 4,
+          "revision": 4,
+          "created_at": "2026-10-14T10:50:00.000Z",
+          "author": "Demo Neri",
+          "action": {
+            "id": "30000000-0000-0000-0000-000000000001",
+            "room_id": "10000000-0000-0000-0000-000000000001",
+            "source_id": 3,
+            "creator_id": "20000000-0000-0000-0000-000000000001",
+            "title": "Return completed pump",
+            "owner_id": "20000000-0000-0000-0000-000000000002",
+            "status": "done",
+            "note": "Participant reports a dry joint and a recorded return receipt. Demonstration claim only.",
+            "revision": 4,
+            "created_at": "2026-10-14T09:10:00.000Z",
+            "updated_at": "2026-10-14T10:50:00.000Z",
+            "owner_name": "Demo Neri",
+            "creator_name": "Demo Rook",
+            "decision_body": "Replace the western valve before returning the borrowed pump. Keep the damaged part for inspection and record the lender’s receipt."
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -4,6 +4,7 @@ const notice = (text) => { byId('feedback').textContent = text; };
 let identity = null, socket = null, room = null, online = false, joining = false;
 let rooms = [], entries = [], decisions = [], before = null, hasMore = false, unread = 0;
 let drafts = {}, joinGeneration = 0, queued = [];
+let readingRequest = null;
 function read(key,fallback) { try { return JSON.parse(localStorage.getItem(key)) ?? fallback; } catch { return fallback; } }
 function save(key,value) { try { localStorage.setItem(key,JSON.stringify(value)); } catch { byId('storage').hidden=false; } }
 function draft() { return drafts[room.id] ||= { body:'', kind:'note', attempt:null }; }
@@ -32,6 +33,7 @@ function controls() {
   byId('send').disabled = !ready || !!(room && draft().attempt);
   byId('retry').disabled = !ready;
   byId('export').disabled = !room;
+  byId('reading-export').disabled = !room || joining || !!readingRequest;
   byId('link').disabled = !room;
   byId('older').hidden = !hasMore || entries.length >= 300;
   if(room) byId('room-hint').textContent = entries.length>=300 && hasMore
@@ -98,7 +100,7 @@ function drawRooms() {
 async function refreshRooms() { rooms=await api('/rooms');drawRooms(); }
 async function openRoom(id) {
   if (!online) throw new Error('Reconnect before changing project.');
-  const generation=++joinGeneration;joining=true;window.RecordSearch?.reset();controls();
+  const generation=++joinGeneration;joining=true;readingRequest=null;window.RecordSearch?.reset();controls();
   try {
     const result=await request('join project',id);
     if (generation!==joinGeneration) return;
@@ -145,7 +147,7 @@ async function sendAttempt(attempt) {
   pendingView();
 }
 byId('identity-form').onsubmit=async e=>{e.preventDefault();try { const saved=await api('/sessions',{method:'POST',body:JSON.stringify({name:byId('name').value})});await enter(saved);notice(''); }catch(e){notice(e.message);} };
-byId('change').onclick=()=>{window.RecordSearch?.reset();window.WorkBoard?.reset();socket?.disconnect();identity=null;room=null;online=false;drafts={};entries=[];decisions=[];byId('entries').replaceChildren();byId('decisions').replaceChildren();save('p11-room-identity',null);byId('workspace').hidden=true;byId('welcome').hidden=false;byId('change').hidden=true;byId('participant').textContent='';byId('name').focus();};
+byId('change').onclick=()=>{window.RecordSearch?.reset();window.WorkBoard?.reset();socket?.disconnect();identity=null;room=null;readingRequest=null;online=false;drafts={};entries=[];decisions=[];byId('entries').replaceChildren();byId('decisions').replaceChildren();save('p11-room-identity',null);byId('workspace').hidden=true;byId('welcome').hidden=false;byId('change').hidden=true;byId('participant').textContent='';byId('name').focus();};
 byId('room-form').onsubmit=async e=>{e.preventDefault();try {const created=await api('/rooms',{method:'POST',body:JSON.stringify({name:byId('room-name').value})});await refreshRooms();await openRoom(created.id);byId('room-name').value='';notice('Project created.');}catch(e){notice(e.message);} };
 for (const id of ['body','kind']) byId(id).addEventListener('input',()=>{if(room){draft().body=byId('body').value;draft().kind=byId('kind').value;saveDrafts();controls();}});
 byId('compose').onsubmit=async e=>{e.preventDefault();if(!room||!online||joining||draft().attempt)return;
@@ -161,6 +163,20 @@ byId('older').onclick=async()=>{
 };
 byId('latest').onclick=()=>{byId('entries').scrollTop=byId('entries').scrollHeight;unread=0;byId('latest').hidden=true;byId('entries').focus();};
 byId('export').onclick=async()=>{try {const value=await api(`/rooms/${room.id}/export`);const url=URL.createObjectURL(new Blob([JSON.stringify(value,null,2)],{type:'application/json'}));const a=document.createElement('a');a.href=url;a.download='project-conversation.json';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);notice('Complete project record exported.');}catch(e){notice(e.message);}};
+byId('reading-export').onclick=async()=>{
+  if(!room||joining||readingRequest)return;
+  const request={roomId:room.id,person:identity.id,generation:joinGeneration};readingRequest=request;controls();
+  const stillHere=()=>room?.id===request.roomId&&identity?.id===request.person&&joinGeneration===request.generation;
+  try {
+    const response=await fetch(`/api/studio/rooms/${request.roomId}/reading`,{headers:{Authorization:`Bearer ${identity.token}`}});
+    if(!response.ok){const error=await response.json();throw new Error(error.error||'Reading copy could not be exported.');}
+    const html=await response.text();if(!stillHere())return;
+    const url=URL.createObjectURL(new Blob([html],{type:'text/html;charset=utf-8'})),anchor=document.createElement('a');
+    anchor.href=url;anchor.download=`project-${request.roomId}-reading.html`;anchor.click();setTimeout(()=>URL.revokeObjectURL(url),1000);
+    notice('Reading copy exported with the complete saved record. Review its contents before sharing; later changes will not appear.');
+  } catch(error) {if(stillHere())notice(error.message);}
+  finally {if(readingRequest===request)readingRequest=null;controls();}
+};
 byId('link').onclick=async()=>{try {await navigator.clipboard.writeText(location.href);notice('Project link copied. Participants choose their own local identity.');}catch{notice('Copy the current browser address to share this project.');}};
 addEventListener('hashchange',()=>{const id=location.hash.slice(1);if(online&&id&&id!==room?.id)openRoom(id).catch(e=>notice(e.message));});
 const saved=read('p11-room-identity',null);

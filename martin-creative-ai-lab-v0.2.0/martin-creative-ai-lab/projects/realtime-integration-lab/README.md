@@ -1,11 +1,12 @@
 # P11 — Project Rooms / Live exchange
 
-**Version:** 0.5.0. A local project workspace with remembered participants,
+**Version:** 0.6.0. A local project workspace with remembered participants,
 separate conversations, saved notes/decisions, recoverable history, JSON export,
-assigned actions, blockers/outcomes, change history, complete-record search and consistent workspace recovery.
+assigned actions, blockers/outcomes, change history, complete-record search,
+portable offline reading copies and consistent workspace recovery.
 The original ephemeral exercise remains available with its unchanged protocol.
 
-![Actual historical context and current work with fictional Chromium records](../../evidence/realtime-chat/search-context.png)
+![Actual portable handover reader with explicitly fictional Chromium records](../../evidence/realtime-chat/portable-demo.png)
 
 ## Run Project Rooms
 
@@ -34,6 +35,8 @@ npm run test:rooms
 6. Use **Search record** to find earlier text, decisions or historical action revisions. Open saved context to inspect nearby records, the source decision and current linked work.
 7. Load earlier entries or Export record for all notes, decisions, actions and
    action history. `Assigned to me` and `Unassigned` filter the action board.
+8. **Export reading copy** creates a self-contained HTML handover. Open it in a
+   browser without running this workspace; it retains the full record at export.
 
 `ROOMS_DB` selects the SQLite file; default `data/rooms.sqlite` is ignored by Git.
 `HOST`/`PORT` default to `127.0.0.1:3000`. CLI assets/database paths work outside
@@ -103,6 +106,63 @@ access control. [Execution](../../evidence/realtime-chat/SEARCH_RUN.json) record
 old/new retrieval, actual Chromium journeys and a bounded 20,000-record sample;
 this is not independent team usability or production-load validation.
 
+## Carry the record outside the workspace
+
+Download **Export reading copy** and open the `.html` in a browser with JavaScript
+enabled. The recipient needs no server, Node installation, account or connection.
+Try the delivered [fictional handover](examples/cistern-handover.html) first;
+[its JSON source](examples/cistern-handover.json) explicitly describes invented
+participants and outcomes. Download the HTML before opening it; GitHub's source
+page is not the reader. This demo is not a record of real team activity.
+
+**Work at export** filters current actions by status and chosen owner label.
+**Complete saved record** searches all notes, decisions and every action revision,
+including records omitted from the live recent panels. Search uses the same
+literal word/case/accent semantics as the workspace; empty search browses all
+records. Twenty-item pages bound displayed work, results, linked actions and
+revision histories. Duplicate display names share a label filter, not an account.
+
+Open a match to see nearby discussion, its immutable source decision, and the
+selected revision alongside **Current at export**. The complete revision history
+starts on the selected revision's page; keyboard Back restores the original
+button. This snapshot never receives later writes or changes live drafts. It
+neither imports nor restores a workspace. Done is still a participant's recorded
+outcome, not independently verified delivery. Printing includes only displayed
+pages; the HTML and embedded JSON retain the complete record.
+
+Already have a schema-1 JSON export? Convert it locally to a **new** output file:
+
+```sh
+npm run rooms:record -- project-conversation.json handover.html
+# The supplied fictional source can also be converted to a new destination:
+npm run rooms:record -- examples/cistern-handover.json /tmp/cistern-review.html
+npm run test:record
+```
+
+The dependency-free converter also runs as `node /path/to/rooms-record.cjs
+INPUT.json NEW-OUTPUT.html` outside this directory. It accepts earlier exports
+without `actions`, clearly disclosing unavailable action data. Unsupported fields,
+inconsistent source/revision data and records exceeding workspace limits are
+rejected rather than repaired. Input is limited to a regular file of 64 MiB;
+existing outputs/symlinks are refused. SQLite backups are not JSON records.
+
+**Save embedded JSON record** recovers the exact compact source represented by
+the reader. Its SHA-256 identifies those JSON bytes, not their author or origin.
+All record text is literal; inert JSON encoding, DOM text rendering and a hash
+based content policy restrict executable content to the bundled reader. No
+external scripts, fonts, network requests, storage or workspace tokens are needed.
+Text may itself contain sensitive information: inspect the entire record before
+sharing. Authentication for the live export uses the existing trusted-workspace
+rules; this does not create private-room permissions.
+
+[Execution](../../evidence/realtime-chat/PORTABLE_RUN.json) distinguishes local
+HTTP/CLI/Chromium verification from direct file navigation. Managed Chromium here
+blocks `file://`; `ROOMS_RECORD_READER_TRANSPORT=loopback npm run test:record`
+loads identical bytes from a temporary static server, then closes it and disables
+network before interactions. Tests default to direct `file://` navigation in CI.
+No policy is overridden. Other browsers, real collaborator handovers, assistive
+technology and commercial interest still require external evidence.
+
 ## Assigned work and concurrent changes
 
 A decision source stays immutable; several actions can implement one decision.
@@ -147,7 +207,7 @@ The Node 24 operator CLI runs locally; there is no backup HTTP endpoint.
 The backup format remains version 1; database schemas 1 and 2 are supported.
 **Before opening a schema-1 workspace, retain a 0.3.0 savepoint.** Opening with
 0.4.0 or later migrates schema 1 to 2 transactionally; failed migration rolls back.
-Existing 0.4.0/schema-2 workspaces open in 0.5.0 without a schema migration. Older
+Existing 0.4.0/schema-2 workspaces open in 0.6.0 without a schema migration. Older
 schema-1 bundles remain inspectable/restorable and upgrade on application open.
 The 0.3.0 application cannot open schema 2; downgrade by selecting a retained old
 backup in a new file, not by rewriting the version header. The current CLI can

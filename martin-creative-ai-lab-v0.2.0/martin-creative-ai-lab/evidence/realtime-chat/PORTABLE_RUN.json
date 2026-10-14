@@ -1,0 +1,137 @@
+{
+  "project": "P11",
+  "version": "0.6.0",
+  "date_utc": "2026-10-14",
+  "implementer": "Codex under Martin portfolio direction; fictional data and scripted input, no independent collaborator review",
+  "baseline": {
+    "commit": "5034d8e992bb5ab1b6e0917f1692f6727690a38f",
+    "branch": "work",
+    "tree": "clean",
+    "fetched_main_matched": true,
+    "github_push_permission": true,
+    "publication": "Normal main publication explicitly authorized; transport fetch succeeded. Remote SHA and CI verified at task closure."
+  },
+  "portfolio_decision": {
+    "selected": "P11 complete-record handover outside the running workspace; raw JSON already existed, portable interactive inspection did not.",
+    "alternatives": "Recent history spans native games, prose and audio. Inspected P04 bilingual/P10 playable editions, P01 native delivery and actual P11 export/search/identity contracts. Hardware practice/native use and independent reading remain credible; selective room import requires identity/collision/merge decisions. P09 real case and P02 independent candidate inputs remain unavailable.",
+    "technology": "Existing Node/SQLite export plus a dependency-free Node converter and plain standalone HTML/CSS/JavaScript. Godot 4.6.3 and .NET SDK 10.0.401 available; Unity not found in PATH. No engine/language migration or new package justified for a document reader."
+  },
+  "verified": {
+    "comparison": {
+      "baseline_commit": "5034d8e992bb5ab1b6e0917f1692f6727690a38f",
+      "fixture": "Identical fictional input commands in actual baseline/current server versions; no real team.",
+      "before": {
+        "version": "0.5.0",
+        "json_status": 200,
+        "entries": 388,
+        "actions": 2,
+        "action_revisions": 64,
+        "reading_status": 404,
+        "reading_bytes": null,
+        "source_preserved": false
+      },
+      "after": {
+        "version": "0.6.0",
+        "json_status": 200,
+        "entries": 388,
+        "actions": 2,
+        "action_revisions": 64,
+        "reading_status": 200,
+        "reading_bytes": 112925,
+        "source_preserved": true
+      }
+    },
+    "full_suite": {
+      "command": "ROOMS_RECORD_READER_TRANSPORT=loopback npm test",
+      "exit_code": 0,
+      "tests": 94,
+      "pass": 94,
+      "fail": 0,
+      "cancelled": 0,
+      "skipped": 0,
+      "duration_ms": 75638.246678,
+      "scope": "81 retained checks plus 13 new checks. Final context scrolling/pending-export release then rechecked below."
+    },
+    "final_affected": {
+      "command": "ROOMS_RECORD_READER_TRANSPORT=loopback node --test --test-concurrency=2 --test-reporter=tap tests/record.test.cjs tests/record-browser.test.cjs tests/rooms-browser.test.cjs tests/actions-browser.test.cjs tests/search-browser.test.cjs",
+      "exit_code": 0,
+      "tests": 28,
+      "pass": 28,
+      "fail": 0,
+      "cancelled": 0,
+      "skipped": 0,
+      "duration_ms": 31048.189267
+    },
+    "final_reader": {
+      "command": "ROOMS_RECORD_READER_TRANSPORT=loopback node --test --test-reporter=tap tests/record-browser.test.cjs",
+      "exit_code": 0,
+      "tests": 6,
+      "pass": 6,
+      "fail": 0,
+      "cancelled": 0,
+      "skipped": 0,
+      "duration_ms": 9653.871997,
+      "scope": "Adds a mobile stacked-comparison geometry assertion to the same six cases; no product code changed after final affected checks."
+    },
+    "browser": "Chromium 154.0.8037.57 / Playwright 1.64.0 at 1280x900 and 390x844. Actual live download, draft retention, original JSON recovery/fingerprint, superseded blocker/current outcome, complete 63-revision history, nearby/source/linked work, literal hostile markup, filters/pagination, keyboard focus/viewport, legacy empty records, HTTP rejection/retry and delayed project/identity responses.",
+    "file_navigation": {
+      "local_direct_file": false,
+      "error": "ERR_BLOCKED_BY_ADMINISTRATOR; managed URLBlocklist * allows HTTP/HTTPS, not file.",
+      "local_executed": "Identical exported HTML loaded through a temporary static loopback server. Server closed and network disabled before reader interactions. Zero page errors or external requests in successful cases; no policy/proxy override.",
+      "ci_contract": "Without the explicit local transport environment variable, these tests use file URLs with network offline before opening. Post-publication results are checked separately."
+    },
+    "capacity_sample": {
+      "node": "24.19.0",
+      "sqlite": "3.53.3",
+      "chromium": "154.0.8037.57",
+      "storage": "In-memory SQLite, one process, actual bounded store commands; not concurrent production load",
+      "entries": 10000,
+      "actions": 500,
+      "action_revisions": 10000,
+      "json_bytes": 21790586,
+      "html_bytes": 21808221,
+      "json_sha256": "c4d8fe541fe7a58a6d82f2d8fe05511dffb2cc424ad7fc8e47f389546831f7be",
+      "seed_ms": 6711.25,
+      "render_ms": 156.48,
+      "loopback_load_to_visible_ms": 663.17,
+      "rendered_work_rows": 20,
+      "rendered_record_rows": 20,
+      "first_decision_matches": 1,
+      "linked_actions_page_rows": 20,
+      "last_action_history_matches": 20,
+      "page_errors": [],
+      "external_requests": [],
+      "offline_after_initial_static_load": true,
+      "direct_file_navigation": false
+    },
+    "p02": {
+      "runner_tests": 25,
+      "result": "pass",
+      "calibration_baseline": "rejected, 15/17; expected match true",
+      "calibration_reference": "accepted, 17/17; expected match true"
+    },
+    "context_scroll": "An actual failing viewport assertion exposed scrolling before the context had height. Scroll after rendering now passes without weakening the assertion.",
+    "delivered_demo": "Five explicitly fictional entries, two actions and five revisions; delivered HTML equals current renderer output from inspectable JSON."
+  },
+  "reasoned_assessment": "The current/historical distinction and self-contained handover offer a concrete professional review workflow. Codex inspected actual desktop/mobile frames; no real collaborator efficiency, enjoyment or demand result follows.",
+  "unverified": [
+    "Independent team handover and comprehension",
+    "Assistive technology, other browsers/platforms and physical device use",
+    "Concurrent production load or public-service security",
+    "Commercial adoption or willingness to pay"
+  ],
+  "preserved": "JSON schema 1 (legacy actions omission supported), SQLite schema 2, backup format 1, original action/source identity, dependency graph, legacy/P02 pinned sources, other projects and historical archives. No tokens, live workspace/backup, imported identities or external hosted service shipped.",
+  "artifact_sha256": {
+    "record-export.cjs": "9ceb7d9054ae231280371d7210410f0914f669ec4b49b15bef467ee681952c0e",
+    "record-view.js": "65822a4342bbe882f161a04cf7d1e2842141fa7a5c53e9a0179e0f6751e511d1",
+    "record-view.css": "4f92112b9a5e45cccf21f7b64a11c210ca24a4cda929de5cffdfc7bc6b703ae0",
+    "rooms-record.cjs": "89f53e3007820596875ea3a6a6ecba4c06056741c16c75e1fe315d6b1a203a09",
+    "examples/cistern-handover.json": "e1fa93693d5104c8cee705a7bedb1a11f08ffe23f97c6ff94701127333862a30",
+    "examples/cistern-handover.html": "c7974e23a00e8bd02f947a2ca06d09bb092f3a7bb49696fd4df8a8c48d771264"
+  },
+  "frames": [
+    "portable-demo.png",
+    "portable-comparison.png",
+    "portable-mobile.png"
+  ]
+}

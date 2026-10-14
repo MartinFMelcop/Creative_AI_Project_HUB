@@ -1,10 +1,10 @@
 # SEED — Martin Creative AI Lab
 
-**Version:** 0.29.0
+**Version:** 0.30.0
 **Data-base:** 10 de outubro de 2026  
 **Autor e responsável pelo portfólio:** Martin Melcop Neto  
 **Working language:** English for new documentation, plans, code comments, UI, and reports. Preserve original creative titles and historical source languages.
-**Current state:** P03 0.4.0 / P08 0.5.0 delivers original-pitch slower rehearsal from preserved masters, unit-rate browser playback and explicit loading cancellation. Actual signal/browser checks and Codex review remain separate from physical listening, human learning and commercial evidence.
+**Current state:** P11 0.6.0 exports portable HTML reading copies with complete search, decision context and historical/current-at-export work comparison. JSON conversion and a fictional standalone demo preserve existing storage/recovery. Scripted browser checks and Codex review are separate from real handover, accessibility and commercial evidence.
 
 > Construir um laboratório autoral em Git que transforma ideias, obras e experimentos em produtos pequenos, sistemas reutilizáveis e evidências técnicas verificáveis. A IA participa da criação e execução; Martin desenvolve sua capacidade de especificar, compreender, selecionar, corrigir, validar e explicar os resultados.
 
@@ -46,14 +46,14 @@ Se apenas este arquivo estiver disponível, ele é suficiente para iniciar a Fas
 |---|---|
 | Repository | MartinFMelcop/Creative_AI_Project_HUB; actual Git root `/workspace/Creative_AI_Project_HUB`; wrapper retained |
 | Preserved sources | 175 Rave Master texts / 3 WebSocket files; unchanged historical ZIP/inventory |
-| Current milestone | P03 original-pitch rehearsal 0.4.0 / P08 derivatives 0.5.0 |
-| Runtime | Existing Web Audio consumer; four offline FFmpeg/Rubber Band Vorbis assets; no player build-tool dependency |
-| Evidence | 24 logic / 16 browser cases, original full runs, decoded assets, encoded probes and actual old/current playback; `evidence/tokyo80s/PITCH_RUN.json` |
-| Limits | Scripted input/Codex frame review; physical listening, timbre/accessibility, learning and commercial benefit unverified |
-| Next action | Compare physical original/slow listening and unassisted practice with native installation/tactics, P04/P10 readers and actual P11 use |
-| Other products | P01 0.4.0, P04 0.2.0, P05 0.3.0, P06 0.4.0, P10/P11 0.5.0, P02 0.2.1 retained |
-| Rules / assets | Original PCM/OGG/scores/producers and scoring/best keys preserved; four tempo derivatives, no new composition |
-| Attribution | Clean `45ea179` matched fetched main; main authorized/permitted. Codex implementation/input/signal/frame review |
+| Current milestone | P11 portable reading copies 0.6.0 |
+| Runtime | Existing Node/SQLite workspace; dependency-free converter; self-contained HTML/CSS/JavaScript reader |
+| Evidence | Complete 94-case suite, final affected regressions, actual old/current HTTP comparison and bounded-capacity reader; `evidence/realtime-chat/PORTABLE_RUN.json` |
+| Limits | Managed local Chromium blocks file URLs; identical bytes tested over loopback with network/server disabled. Real team, assistive/other-browser and commercial use unverified |
+| Next action | Compare real handover/comprehension with physical P03 practice, native tactics/installation and independent P04/P10 reading |
+| Other products | P01 0.4.0, P03 0.4.0, P04 0.2.0, P05 0.3.0, P06 0.4.0, P08/P10 0.5.0, P02 0.2.1 retained |
+| Rules / assets | JSON schema 1, SQLite schema 2, backup format 1, dependency graph and historical sources preserved; demo records explicitly fictional |
+| Attribution | Clean `5034d8e` matched fetched main; main authorized/permitted. Codex implementation, synthetic input and frame review |
 
 Registry evidence paths must resolve to existing files inside the lab; working
 paths must be directories and legacy-source IDs must exist. This documentary
@@ -231,7 +231,7 @@ Identificadores persistem mesmo quando nomes mudam. Um projeto arquivado pode co
 | P08 | Audio, Poetry & Music Lab | Original musical production and integration | Two P03 stages and P06 native soundscape | Real masters/exports/scores; no album or human listening approval |
 | P09 | AI Delivery & Operations Cases | Carreira real e avaliação simulada | Case de entrega, análise de workflow e rubricas | Base profissional lida; cases anteriores pendentes |
 | P10 | Adventures Unleashed / Rave Master | Narrative, NPCs and recovered systems | Two-day browser rescue/relief campaign with local resume and portable saves | Campaign 0.4.0; Python adventure 0.2.0 / standalone 0.1.3; bounded evidence in registry |
-| P11 | Real-time Integration Lab / Project Rooms | Node/Socket.IO/SQLite | Trusted local project conversations, decisions, export and workspace recovery | Workspace 0.5.0 with actions/search/recovery; original protocol and P02 snapshot preserved; no public service |
+| P11 | Real-time Integration Lab / Project Rooms | Node/Socket.IO/SQLite | Trusted local project conversations, decisions, portable records and recovery | Workspace 0.6.0 with offline reading copies, actions/search/recovery; original protocol and P02 snapshot preserved; no public service |
 
 P02 agrupa evaluation e QA porque podem compartilhar a mesma aplicação pequena. Não criar dois projetos Unity idênticos apenas para apresentar títulos diferentes. P01 pode abrigar produção, economia e analytics como cases distintos de uma fonte comum.
 
@@ -533,7 +533,7 @@ private demo is not redeployed in this GitHub source session.
 
 ### P11 — Real-time Integration Lab / Project Rooms
 
-The historical Socket.IO snapshot only logs messages. Current **0.5.0**
+The historical Socket.IO snapshot only logs messages. Current **0.6.0**
 [Project Rooms](projects/realtime-integration-lab/README.md) connects notes and
 decisions to assigned actions: To do, In progress, Blocked and Done. Immutable
 source decisions and action histories record who changed each revision; completion
@@ -565,6 +565,16 @@ work are explicitly separate; navigation keeps both drafts and latest revisions.
 No durable index or schema change. [Retrieval execution](evidence/realtime-chat/SEARCH_RUN.json)
 compares actual old/current servers, 81 regressions and a bounded local capacity
 sample; real team use and concurrent production load remain unverified.
+
+Version 0.6.0 adds a portable HTML reading copy and a dependency-free schema-1
+JSON converter. Work/status/owner-label filters, full literal search and complete
+revision pages distinguish historical changes from current work at export.
+Nearby/source decisions, original JSON download and a fictional standalone demo
+make the record inspectable without a workspace. Exact source validation and
+inert text rendering preserve the existing storage/recovery contracts. Local
+managed Chromium blocks file URLs: identical bytes were tested through loopback,
+then offline, without overriding policy. [Portable execution](evidence/realtime-chat/PORTABLE_RUN.json)
+records the comparative result and limits; actual team use remains unverified.
 
 ## 6. Arquitetura do laboratório
 
