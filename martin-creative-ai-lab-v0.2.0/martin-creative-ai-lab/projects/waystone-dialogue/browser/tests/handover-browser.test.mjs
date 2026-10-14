@@ -77,6 +77,13 @@ test('touch fallback keeps absent witnesses absent and corrections local; files 
   await page.locator('[data-action="keep-crossing"]').focus();await page.keyboard.press('Enter');
   await page.locator('[data-action="review-later"]').tap();assert.match(await page.locator('#outcome').textContent(),/Later review requested/);
   assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth));assert.match(await page.locator('#save-status').textContent(),/unavailable/);
-  const saved=await save(page);const {page:other}=await fixture();await upload(other,saved);assert.match(await other.locator('#outcome').textContent(),/Crossing crew’s request/);
-  assert.deepEqual(errors,[]);
+  const saved=await save(page);const {page:other,errors:otherErrors}=await fixture();
+  // setInputFiles dispatches change; it does not await the async File.text read.
+  // Gate that real read to cover slow completion without a timing-dependent sleep.
+  await other.evaluate(()=>{const read=File.prototype.text;File.prototype.text=function(){const file=this;return new Promise(resolve=>{globalThis.finishFileRead=()=>resolve(read.call(file));});};});
+  await upload(other,saved);assert.equal(await other.locator('#outcome').textContent(),'');
+  await other.evaluate(()=>globalThis.finishFileRead());
+  await other.locator('#outcome').filter({hasText:'Crossing crew’s request'}).waitFor();
+  assert.match(await other.locator('#outcome').textContent(),/Crossing crew’s request/);
+  assert.deepEqual([...errors,...otherErrors],[]);
 });

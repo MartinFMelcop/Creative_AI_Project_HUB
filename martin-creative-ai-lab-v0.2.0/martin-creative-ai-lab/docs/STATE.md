@@ -33,6 +33,12 @@ delivery; portable review removes a concrete gap without identity merge rules.
 Existing Node/SQLite plus a plain document reader fit this workflow. Available
 Godot/.NET does not justify an engine or language migration for record handover.
 
-Other products and archived sources are preserved. Compare real handover and
+The first publication CI verified all 94 P11 cases, including direct file URLs,
+but exposed a premature P10 import assertion. Its existing mobile check now gates
+the real file read and waits for the receipt; all 35 P10 checks passed locally.
+Gameplay, saves and assets are unchanged. Corrective publication/CI is confirmed
+at task closure.
+
+Other product implementations and archived sources are preserved. Compare real handover and
 snapshot comprehension with physical P03 practice, unassisted native tactics/
 installation and independent P04/P10 reading before choosing the next milestone.

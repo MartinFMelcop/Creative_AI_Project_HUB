@@ -111,7 +111,50 @@
       "calibration_reference": "accepted, 17/17; expected match true"
     },
     "context_scroll": "An actual failing viewport assertion exposed scrolling before the context had height. Scroll after rendering now passes without weakening the assertion.",
-    "delivered_demo": "Five explicitly fictional entries, two actions and five revisions; delivered HTML equals current renderer output from inspectable JSON."
+    "delivered_demo": "Five explicitly fictional entries, two actions and five revisions; delivered HTML equals current renderer output from inspectable JSON.",
+    "first_publication_ci": {
+      "run_id": 38636188710,
+      "commit": "849f70facbcd1790132d1a6cdb98a659d7873fa5",
+      "p11_tests": 94,
+      "p11_passed": 94,
+      "direct_file_reader_cases": 6,
+      "p11_protocol_browser_step": "success",
+      "other_successful_jobs": [
+        "integrity-and-dialogue",
+        "eclipse-economy",
+        "native-arena"
+      ],
+      "overall": "failure in unchanged P10 browser test: outcome read before asynchronous file import completed; later evaluator CI steps skipped"
+    },
+    "ci_followup": {
+      "controlled_import_proof": {
+        "scenario": "Real P10 mobile/blocked-storage journey; a fresh profile imports its actual exported file with a controlled File.text completion gate.",
+        "before_file_read_outcome": "",
+        "premature_assertion_rejected": true,
+        "after_completion_receipt": "Sent upstreamNo local boat or guideReceiptLater review requestedLocal afternoon routeridge trailLocal grain capacity1 crate(s) / 2 shift(s)Council recordCrossing crew’s request",
+        "save_preserved": true,
+        "gameplay_or_save_code_changed": false
+      },
+      "change": "Gate actual File.text completion and wait for the same expected receipt before asserting it; no sleep, skipped check or weakened outcome. Also check the receiving profile for page errors.",
+      "handover_browser": {
+        "tests": 4,
+        "pass": 4,
+        "fail": 0,
+        "cancelled": 0,
+        "skipped": 0,
+        "duration_ms": 9980.227902
+      },
+      "full_waystone": {
+        "tests": 35,
+        "pass": 35,
+        "fail": 0,
+        "cancelled": 0,
+        "skipped": 0,
+        "duration_ms": 76051.889126
+      },
+      "gameplay_save_and_asset_code_unchanged": true,
+      "final_publication_ci": "Checked at task closure after this corrective commit; no claimed result before execution."
+    }
   },
   "reasoned_assessment": "The current/historical distinction and self-contained handover offer a concrete professional review workflow. Codex inspected actual desktop/mobile frames; no real collaborator efficiency, enjoyment or demand result follows.",
   "unverified": [
@@ -120,7 +163,7 @@
     "Concurrent production load or public-service security",
     "Commercial adoption or willingness to pay"
   ],
-  "preserved": "JSON schema 1 (legacy actions omission supported), SQLite schema 2, backup format 1, original action/source identity, dependency graph, legacy/P02 pinned sources, other projects and historical archives. No tokens, live workspace/backup, imported identities or external hosted service shipped.",
+  "preserved": "JSON schema 1 (legacy actions omission supported), SQLite schema 2, backup format 1, original action/source identity, dependency graph, legacy/P02 pinned sources, other product implementations/assets and historical archives. No tokens, live workspace/backup, imported identities or external hosted service shipped.",
   "artifact_sha256": {
     "record-export.cjs": "9ceb7d9054ae231280371d7210410f0914f669ec4b49b15bef467ee681952c0e",
     "record-view.js": "65822a4342bbe882f161a04cf7d1e2842141fa7a5c53e9a0179e0f6751e511d1",
