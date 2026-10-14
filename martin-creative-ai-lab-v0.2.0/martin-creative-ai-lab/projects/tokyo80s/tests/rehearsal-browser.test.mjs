@@ -124,6 +124,8 @@ test('narrow touch rehearsal carries a slowed hold; cancellation stops sound and
   await page.locator('#restart').click();await mode(page,'playing');assert.equal(Number(await page.locator('#score').textContent()),0);
   assert.ok(Number(await page.locator('#stage').getAttribute('data-position'))<1);
   await page.locator('#full-run').click();await mode(page,'ready');
+  // Mode changes in the handler; the previous playing position lasts until RAF.
+  await page.waitForFunction(()=>Number(document.querySelector('#stage').dataset.position)===0,null,{polling:'raf'});
   const frozen=Number(await page.locator('#stage').getAttribute('data-position'));
   await page.waitForTimeout(250);assert.equal(Number(await page.locator('#stage').getAttribute('data-position')),frozen);
   assert.deepEqual(errors,[]);await context.close();

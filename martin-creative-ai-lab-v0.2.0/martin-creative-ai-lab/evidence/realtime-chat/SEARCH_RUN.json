@@ -107,14 +107,36 @@
     },
     "preservation": {
       "baseline_commit": "d56c97151fab0bd76b7209b30a32097489b88405",
-      "unchanged_tracked_files_outside_product_and_continuity": 336,
+      "unchanged_tracked_files_outside_product_and_continuity": 335,
       "all_byte_equal": true,
-      "scope": "Every tracked repository file outside P11 and the eight explicitly affected continuity/manifest files. Includes other products, evaluations, assets, transfers and historical sources."
+      "scope": "Every tracked repository file outside P11, eight explicitly affected continuity/manifest files and the two-line P03 rehearsal test synchronization. Includes other product runtime/media, evaluations, assets, transfers and historical sources.",
+      "unchanged_at_feature_commit": 336
     },
     "repository_checks": {
       "validator": "11 projects, 14 transfers, 8 assets, 2 legacy sources; 272 local file links",
       "regressions": "11 document-ownership tests and 11 manifest tests passed; a first module-mode invocation failed import resolution and was replaced by the documented direct-script commands.",
       "manifest": "Full maintained coverage is regenerated and checked after the evidence is final."
+    },
+    "hosted_validation_followup": {
+      "feature_commit": "ded6a5f5cfcb6ca56bd75582f61f65b403363c12",
+      "run_id": 38520055608,
+      "url": "https://github.com/MartinFMelcop/Creative_AI_Project_HUB/actions/runs/38520055608",
+      "initial_result": "Three jobs success; chat-and-evaluation failed in unchanged P03 rehearsal cancellation after all 81 P11 checks passed.",
+      "failure": "Rehearsal test line 128 sampled rendered playing time 0.009659863945579161 immediately after ready mode; next frame returned intended zero.",
+      "reproduction": {
+        "fixture": "Actual original audio/browser; DOM button activation, no replaced clock/frame or forced result",
+        "before": 0.05029478458049888,
+        "immediately": {
+          "mode": "ready",
+          "renderedPosition": 0.05029478458049888
+        },
+        "nextFrame": {
+          "mode": "ready",
+          "renderedPosition": 0
+        }
+      },
+      "correction": "Wait for rendered position zero via RAF, then retain the exact 250 ms stability assertion. Only P03 test changes; runtime/media/chart/audio production untouched.",
+      "checks": "Focused touch cancellation 1/1; full rehearsal domain/browser 7/7, exit 0, 61644.499728 ms."
     }
   },
   "reasoned_assessment": "Raw final desktop/mobile/context captures reviewed by Codex: matched historical blocker is labelled and separate from the completed current revision; controls wrap at 390px and the tested document has no horizontal overflow. Local samples support direct matching at present bounds. Neither statement is independent user review.",
@@ -139,6 +161,7 @@
     "projects/realtime-integration-lab/package-lock.json": "002ffce13e3dcf30381095dfbb4dbd175ef59e190ed89cbb40fd737eec68921f",
     "evidence/realtime-chat/search-history.png": "8c46e72958489fee6ab553fd069e5505a0f8eb1a9d9e0e7da40218210343d3bd",
     "evidence/realtime-chat/search-mobile.png": "bd317f9fe89dc40a8b1f053488b7e863898f19af861efb29675b1fa1d190b9c3",
-    "evidence/realtime-chat/search-context.png": "4958133f0ccd53edf9cb16897a7b28fd4b163e2c1e21ac5af2f7efe1c21604ce"
+    "evidence/realtime-chat/search-context.png": "4958133f0ccd53edf9cb16897a7b28fd4b163e2c1e21ac5af2f7efe1c21604ce",
+    "projects/tokyo80s/tests/rehearsal-browser.test.mjs": "bc2e5cba935f5e22a422c224d311d2df4697c627c4b70171327f7b82132d8c00"
   }
 }

@@ -29,5 +29,11 @@ immutable records; no engine rewrite or search service is warranted.
 Technical checks are verified; UI judgment is Codex's assessment. Fictional
 fixtures are not team feedback. Public accounts/privacy, concurrent production
 load, independent usability/retention and commercial demand remain unverified.
+Hosted P11 passed all 81 checks; a P03 cancellation test then blocked CI by
+sampling the previous playing frame just after ready mode. An actual Chromium
+probe reproduced that ordering. The supporting test now waits for rendered zero
+before the same stability assertion; all seven rehearsal checks pass. P03
+runtime/media remain untouched.
+
 Next compare real handoff retrieval with independent P04/P10 reading, musical
 practice and native strategy/combat use before selecting another workstream.
