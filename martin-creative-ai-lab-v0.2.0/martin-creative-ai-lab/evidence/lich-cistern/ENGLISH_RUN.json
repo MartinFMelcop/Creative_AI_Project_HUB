@@ -1,0 +1,105 @@
+{
+  "project": "P04",
+  "version": "0.2.0",
+  "date_utc": "2026-10-14",
+  "baseline": {
+    "commit": "9029a2ed2d679ca6cdb304eb18caaa922e04f517",
+    "branch": "work",
+    "tree": "clean before work",
+    "matched_fetched_main": true,
+    "github_permission": "push permitted; normal main explicitly authorized; fetch/ls-remote executed"
+  },
+  "portfolio_decision": "Translate the actual complete P04 story into new readable English artifacts. Compare native P01 human-seat assumptions, recent P03/P05/P06 releases and current P10/P11 workflows; no automatic continuation, engine avoidance or audience claim. Native Godot/.NET binaries are available; Unity not found in PATH.",
+  "technology": "Markdown/Pandoc 3.1.11.1/Python 3.12.14/ReportLab 4.4.9; same small producer/checker, two concrete edition profiles, no new dependency or website.",
+  "verified": {
+    "narrative": "All five source chapters/240 paragraph positions translated; 4,736 English words versus 4,466 Portuguese by recorded tokenizer. Eight personal/place-name occurrence counts agree. Structural correspondence is not semantic fidelity proof.",
+    "delivered_formats": "English EPUB3: title/language/creator, spine XHTML lang/xml:lang, navigation, distinct URN identity, exact narrative. PDF: 27 A5 pages, exact narrative, correct title, en-US catalog, two embedded Unicode serif faces, complete retained font notices, no JavaScript/encryption. Portuguese delivered formats: 5/240/28 pages still pass.",
+    "official_epubcheck": {
+      "version": "5.4.0",
+      "original_zip_sha256": "33350c61038e71dfb3d45a76aed04bf5481e6d5500cb780f6e98db8bbd15a28c",
+      "extracted_jar_equals_zip": true,
+      "jar_sha256": "2146665a124998dc6c908010ffe0d09dc4f4c8014f2c8fd6a1aa11f64c40ac93",
+      "delivered_english": "0 fatals / 0 errors / 0 warnings / 0 infos",
+      "rebuilt_english": "0 fatals / 0 errors / 0 warnings / 0 infos"
+    },
+    "rebuild": "--edition all --out <scratch>/rebuilt; both isolated outputs pass matching narrative/metadata/navigation/font checks. Container IDs/timestamps are not a byte-reproducible contract.",
+    "controlled_probes": [
+      {
+        "controlled_fixture": "wrong-language",
+        "exit_code": 1,
+        "assertion": "AssertionError"
+      },
+      {
+        "controlled_fixture": "missing-paragraph",
+        "exit_code": 1,
+        "assertion": "AssertionError: EPUB text/order differs from the current manuscript"
+      }
+    ],
+    "pdf_review": "Actual Poppler 1/2/3/19/25 page rasters inspected: title, contents, opening, injury/operation and ending. Three representative raw frames retained; no image editing.",
+    "reflow": {
+      "scope": "Actual packaged XHTML/CSS viewed in Chromium; not a hardware ebook-reader or assistive-technology test",
+      "checks": [
+        {
+          "width": 360,
+          "language": "en-US",
+          "paragraphs": 35,
+          "horizontalOverflow": false,
+          "first": "The caretaker lost two fingers in the wheel, and I had to find them before I could clean the floor.",
+          "css": true,
+          "errors": []
+        },
+        {
+          "width": 900,
+          "language": "en-US",
+          "paragraphs": 35,
+          "horizontalOverflow": false,
+          "first": "The caretaker lost two fingers in the wheel, and I had to find them before I could clean the floor.",
+          "css": true,
+          "errors": []
+        }
+      ]
+    },
+    "repository_tools": "11 document-ownership and 11 manifest regression tests passed; py_compile on the two producers/checks.",
+    "preservation": {
+      "baseline": "9029a2ed2d679ca6cdb304eb18caaa922e04f517",
+      "unchanged_tracked_files": 365,
+      "all_byte_equal": true,
+      "original_portuguese_and_font_sha256": {
+        "story.md": "a61ac74cea523e7882607a0b33586792e9dae8f35752ec21527f1a1097b1ad79",
+        "metadata.yaml": "63b5d46e6434c691db17b57752104cc604515ea131e7af7f969e2a0206c39f82",
+        "book.css": "aed5b245fab8a7e1385b89d6269323233311120d144dec061a8b8be112865ca2",
+        "fonts/DejaVuSerif.ttf": "8cb29f7db250ebb2551a6ce2c1e0bfd5a0eb520e9e233370db0493e82e1f36f7",
+        "fonts/DejaVuSerif-Bold.ttf": "aac3f559445d23f0f567a243f91f3f6ad6cb4b5cafa1521a3479fffe0637f0bd",
+        "fonts/LICENSE.txt": "219373cc2f7aaeadca19772736a40700a5be8cfdadc7b7e2e04931d34d1c81b5",
+        "dist/a-agua-sob-darsen-0.1.0.epub": "f22ccce92b6c96b7622cadebc088e045bd9181a6c87b2983865e075cb20c7460",
+        "dist/a-agua-sob-darsen-0.1.0.pdf": "456b0dc894c76abd5e556ea5e52e00cb4a09e477a3d480d94fab17c84fa0e588"
+      },
+      "scope": "Every baseline tracked file except the explicit continuity/registry/workflow and P04 producer/checker/readme/provenance updates. Includes all other products, evaluations, original PT creative files and historical sources."
+    }
+  },
+  "reasoned_assessment": {
+    "reviewer": "Codex is the implementing translator; no independent review. Entire source/translation read and compared, with selected action/dialogue passages re-read alongside their pair.",
+    "voices": "Baldino keeps defensive admissions, Aevren terse practical/possessive speech, Sava expertise/grief with limited permission, Nera concrete public-water decisions. No heroic absolution, generic moral ending, new resurrection or remote command introduced.",
+    "choices": "Explicit glossary distinguishes wash valve/ledger, grille/screen, intake/inlet/outlet/drain, brake/beam/loop/counterweight and wrench/key. Resolve me largou pelo casaco against beam re-grasp/no-blow context; shrouding inferred from body preparation. Portuguese remains unchanged; these are translator interpretations, not author ratification.",
+    "layout": "Inspected serif dialogue/prose, long title/heading fit, linked contents and closing passage; no clipping in sampled PDF pages or horizontal overflow at checked XHTML widths. Not a whole-device usability claim."
+  },
+  "unverified": [
+    "Independent translation fidelity, English/PT reader response and literary quality",
+    "Unavailable historical manuscript/canon fit and author ratification",
+    "Kindle/Apple Books/Kobo, other ebook devices and assistive technology; PDF remains untagged",
+    "Audience reach, exclusive authorship rights, demand or commercial readiness"
+  ],
+  "execution_limits": "Initial wrong working directory and checker filename shadowing were corrected before successful checks. Browser file:// was blocked; only the extracted owned EPUB was served through a narrow local HTTP preview with policies intact. No independent human or hardware reader was simulated.",
+  "sha256": {
+    "projects/lich-cistern/story.en.md": "08fd481d1aed00421b578a714b1cdb4c150e84b54d7bf1b0ad51fbe39641bf47",
+    "projects/lich-cistern/metadata.en.yaml": "9a0818e35d4fbdf0a58ad8e1ca87b540b1d9fa5989d84eefbdd8056bb257a2f0",
+    "projects/lich-cistern/editions.json": "0a61414b459f01833754bb3ec8ab8fc039d26af72d003fccc4011f673fdbf5e8",
+    "projects/lich-cistern/tools/build.py": "28e2dfba86e63039e1c10ab83be37efc9c13dc1fc6cdf5f2f35e235eebc77158",
+    "projects/lich-cistern/tools/check_editions.py": "b692fa2b1333ad5e1f2dcfb21ee5bf05a1522e60b6b32ea716c6fff03eab54dc",
+    "projects/lich-cistern/dist/the-water-beneath-darsen-0.2.0.epub": "6368915c30d4b75aa71a668e2023fd590bf4db4f2ce47ebf938246fed2e32a1c",
+    "projects/lich-cistern/dist/the-water-beneath-darsen-0.2.0.pdf": "99b2d5b1eb2e0ed8cb4cd18010d34e368cf1f89f57b53a3f7b18ed4c488950b6",
+    "evidence/lich-cistern/english-opening.png": "5b534943282bed1b63736f4fe6a123c72400ac55e62cb6a0945677de97b4b66d",
+    "evidence/lich-cistern/english-reflow-360.png": "7980032efff1fe47c8606fbc65ddb36cc66acefb8dfe29521002e85170da57ba",
+    "evidence/lich-cistern/english-ending.png": "64122a6edfb8e6079d9e6c56a4720aba183d43d8e890ed58e199b2ed2760c177"
+  }
+}

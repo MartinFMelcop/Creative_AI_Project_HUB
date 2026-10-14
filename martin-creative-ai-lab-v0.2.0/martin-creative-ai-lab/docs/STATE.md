@@ -1,39 +1,34 @@
 # Lab state
 
-**Updated:** 2026-10-14 (UTC). **Seed:** 0.25.0.
-**Current milestone:** P11 Project Rooms 0.5.0 — complete-record retrieval.
+**Updated:** 2026-10-14 (UTC). **Seed:** 0.26.0.
+**Current milestone:** P04 bilingual reading editions 0.2.0.
 
-[Run Project Rooms](../projects/realtime-integration-lab/README.md) and open
-Search record. Literal Unicode case/accent-insensitive words find every saved
-note/decision and historical action title/update. Twenty-match snapshot pages
-remain stable during new writes; refresh is explicit. Context distinguishes the
-matched revision, nearby records, original decision and current linked work.
-Return to the matching control or board without replacing either draft.
+[Read The Water Beneath Darsen](../projects/lich-cistern/README.md): complete
+English translation, editable manuscript, EPUB3 and 27-page A5 PDF. All five
+scenes retain the incident, physical mechanism, limited corpse contact, Sava’s
+constrained choice and unfinished accountability. Both languages can be rebuilt
+with the same small Python/Pandoc/ReportLab producer and explicit edition selector.
+Original Portuguese source/metadata/EPUB/PDF, fonts and stylesheet remain intact.
 
-[Execution](../evidence/realtime-chat/SEARCH_RUN.json): actual 0.4.0 and 0.5.0
-servers receive identical fictional records. The old search endpoint returns
-404; the new one finds a revision-2 blocker, its decision and the revision-63
-completed action, all beyond recent panels. The complete suite passes 81 tests;
-real Chromium covers desktop/mobile, keyboard return, pages, drafts and delayed
-responses. A bounded local 10,000-entry/10,000-event sample preserves export data.
-SQLite schema 2, backup format 1, dependencies, legacy/P02 sources and other
-products remain intact. No private live database is shipped.
+[Execution](../evidence/lich-cistern/ENGLISH_RUN.json) distinguishes exact text/
+format checks, official EPUBCheck, isolated bilingual rebuilds, controlled damaged
+English packages, PDF rasters and actual packaged XHTML/CSS at 360/900px. English
+source has 240 paragraphs/4,736 words; correspondence and name counts support
+omission review, not semantic fidelity or literary quality. No hardware ebook
+reader, assistive technology or independent translator/audience was executed.
 
-Started clean on `work` at `d56c971`, matching fetched main; transport works and
-main publication is explicitly authorized. Compared actual P11 limits with P04's
-complete edition and completed P01/P03/P05/P06/P10 milestones. Retrieval closes a
-measurable workflow gap; more nearby game/media or prose expansion needs stronger
-external experience evidence. Node/SQLite fit the existing service and bounded
-immutable records; no engine rewrite or search service is warranted.
+Started clean at `9029a2e`, matching fetched main; normal main publication is
+explicitly authorized and permitted. Compared P01 local human-seat play, P11
+retrieval, P03/native experience and an English P04 edition. The existing complete
+Portuguese source supports a new readable sample; recent games/services already
+have connected milestones. Native tools are available, not rejected by convenience.
+Markdown/Pandoc/Python fit reader files; no browser product, engine migration,
+sequel, unavailable manuscript restoration or outside prose was introduced.
 
-Technical checks are verified; UI judgment is Codex's assessment. Fictional
-fixtures are not team feedback. Public accounts/privacy, concurrent production
-load, independent usability/retention and commercial demand remain unverified.
-Hosted P11 passed all 81 checks; a P03 cancellation test then blocked CI by
-sampling the previous playing frame just after ready mode. An actual Chromium
-probe reproduced that ordering. The supporting test now waits for rendered zero
-before the same stability assertion; all seven rehearsal checks pass. P03
-runtime/media remain untouched.
-
-Next compare real handoff retrieval with independent P04/P10 reading, musical
-practice and native strategy/combat use before selecting another workstream.
+Codex reviewed the full pair and pages. Glossary choices distinguish grille/screen,
+valve/ledger, inlet/outlet/drain and brake/counterweight. An awkward guard/beam line
+is interpreted explicitly; shrouding is inferred from body preparation. Keep
+these as translator judgments, not author ratification. Independent English/PT
+response, canon fit, device/accessibility and market demand remain open. Next
+compare those with native local play/strategy, hardware practice and real team
+retrieval before selecting another workstream.

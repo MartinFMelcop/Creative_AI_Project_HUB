@@ -18,13 +18,12 @@ from reportlab.platypus import (BaseDocTemplate, Frame, PageBreak, PageTemplate,
 from reportlab.platypus.tableofcontents import TableOfContents
 
 ROOT = Path(__file__).resolve().parents[1]
-TITLE = 'A água sob Darsen'
-AUTHOR = 'Codex, sob direção de Martin Melcop Neto'
+EDITIONS = json.loads((ROOT/'editions.json').read_text())
 
 
-def chapters():
+def chapters(edition='pt'):
     sections = []
-    for block in (ROOT/'story.md').read_text().strip().split('\n\n'):
+    for block in (ROOT/EDITIONS[edition]['source']).read_text().strip().split('\n\n'):
         if block.startswith('# '):
             sections.append((block[2:], []))
         else:
@@ -43,7 +42,9 @@ class Edition(BaseDocTemplate):
             self.notify('TOCEntry',(0,title,self.page,key))
 
 
-def pdf(path):
+def pdf(path, edition='pt'):
+    spec=EDITIONS[edition]
+    title_text,author=spec['title'],spec['author']
     for name,file in [('DejaVuSerif','DejaVuSerif.ttf'),('DejaVuSerif-Bold','DejaVuSerif-Bold.ttf')]:
         pdfmetrics.registerFont(TTFont(name,str(ROOT/'fonts'/file)))
     ink=colors.HexColor('#17283a')
@@ -59,49 +60,45 @@ def pdf(path):
     small=ParagraphStyle('Small',fontName='DejaVuSerif',fontSize=9,leading=13,
                          spaceAfter=12)
     width,height=A5
-    doc=Edition(str(path),pagesize=A5,title=TITLE,author=AUTHOR,
-                subject='P04 — Independent Portuguese seed adaptation',
+    doc=Edition(str(path),pagesize=A5,title=title_text,author=author,
+                subject=spec['pdf_subject'],
                 leftMargin=18*mm,rightMargin=18*mm,topMargin=21*mm,bottomMargin=19*mm)
 
     def running(canvas, document):
+        if edition=='en':
+            from reportlab.pdfbase.pdfdoc import PDFString
+            canvas._doc.Catalog.Lang=PDFString(spec['language'])
         if document.page>1:
             canvas.saveState()
             canvas.setFont('DejaVuSerif',8)
             canvas.setFillColor(colors.HexColor('#4e5963'))
-            canvas.drawString(18*mm,height-13*mm,TITLE)
+            canvas.drawString(18*mm,height-13*mm,title_text)
             canvas.drawRightString(width-18*mm,11*mm,str(document.page))
             canvas.restoreState()
     doc.addPageTemplates(PageTemplate(id='Reading',
         frames=Frame(doc.leftMargin,doc.bottomMargin,doc.width,doc.height,id='Body',
                      leftPadding=0,rightPadding=0,topPadding=0,bottomPadding=0),
         onPage=running))
-    flow=[Spacer(1,34*mm),Paragraph(TITLE,title),
-          Paragraph('Uma narrativa de<br/>O Lich mais velho da tumba mais antiga',center),
-          Spacer(1,25*mm),Paragraph(AUTHOR,center),
+    flow=[Spacer(1,34*mm),Paragraph(escape(title_text),title),
+          Paragraph(spec['subtitle'],center),
+          Spacer(1,25*mm),Paragraph(escape(author),center),
           Paragraph('Martin Creative AI Lab · 2026',center),PageBreak(),
-          Paragraph('Sobre esta edição',front),
-          Paragraph('Narrativa independente, desenvolvida a partir da seed P04 do laboratório. '
-                    'Não incorpora nem substitui os manuscritos históricos do romance. '
-                    'Baldino, Aevren e Darsen vêm dessa seed; os acontecimentos, os demais '
-                    'personagens e as regras locais desta história são uma nova adaptação.',small),
-          Paragraph('Texto e revisão por Codex, sob direção de Martin Melcop Neto. '
-                    'Edição 0.1.0 · Português brasileiro · 12 de outubro de 2026.',small),
-          Spacer(1,8*mm),Paragraph('Sumário',front)]
+          Paragraph(spec['about_heading'],front),
+          *[Paragraph(escape(part),small) for part in spec['about']],
+          Spacer(1,8*mm),Paragraph(spec['contents_heading'],front)]
     toc=TableOfContents()
     toc.levelStyles=[ParagraphStyle('Contents',fontName='DejaVuSerif',fontSize=10.5,
                                      leading=17,spaceBefore=8,leftIndent=0)]
     flow.append(toc)
-    sections=chapters()
+    sections=chapters(edition)
     for index,(name,paras) in enumerate(sections):
         flow.extend([PageBreak(),Paragraph(escape(name),heading)])
         if index==len(sections)-1:
             flow.extend(Paragraph(escape(text),body) for text in paras[:-3])
             flow.append(KeepTogether([Paragraph(escape(text),body) for text in paras[-3:]]))
         else: flow.extend(Paragraph(escape(text),body) for text in paras)
-    flow.extend([PageBreak(),Paragraph('Fontes tipográficas',front),
-                 Paragraph('DejaVu Serif. As fontes incorporadas abaixo preservam '
-                           'o texto e os caracteres portugueses entre leitores de PDF. '
-                           'Os arquivos originais não foram alterados. Avisos e licença:',small)])
+    flow.extend([PageBreak(),Paragraph(spec['font_heading'],front),
+                 Paragraph(escape(spec['font_note']),small)])
     license_style=ParagraphStyle('License',parent=small,fontSize=7.5,leading=10)
     for part in (ROOT/'fonts/LICENSE.txt').read_text().strip().split('\n\n'):
         flow.append(Paragraph(escape(part).replace('\n','<br/>'),license_style))
@@ -111,17 +108,19 @@ def pdf(path):
 def main():
     parser=argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--out',type=Path,default=ROOT/'dist')
+    parser.add_argument('--edition',choices=['pt','en','all'],default='pt')
     args=parser.parse_args()
     out=args.out.resolve();out.mkdir(parents=True,exist_ok=True)
-    name='a-agua-sob-darsen-0.1.0'
-    subprocess.run(['pandoc',str(ROOT/'story.md'),'--from=markdown','--to=epub3',
-                    '--metadata-file',str(ROOT/'metadata.yaml'),'--css',str(ROOT/'book.css'),
-                    '--toc','--toc-depth=1','--split-level=1',
-                    '--output',str(out/(name+'.epub'))],check=True)
-    pdf(out/(name+'.pdf'))
-    words=len(re.findall(r"\b[\w]+(?:[-’'][\w]+)*\b",(ROOT/'story.md').read_text()))
-    print(json.dumps({'epub':str(out/(name+'.epub')),'pdf':str(out/(name+'.pdf')),
-                      'chapters':len(chapters()),'words':words}))
+    for edition in EDITIONS if args.edition=='all' else [args.edition]:
+        spec=EDITIONS[edition];name=spec['name']
+        subprocess.run(['pandoc',str(ROOT/spec['source']),'--from=markdown','--to=epub3',
+                        '--metadata-file',str(ROOT/spec['metadata']),'--css',str(ROOT/'book.css'),
+                        '--toc','--toc-depth=1','--split-level=1',
+                        '--output',str(out/(name+'.epub'))],check=True)
+        pdf(out/(name+'.pdf'),edition)
+        words=len(re.findall(r"\b[\w]+(?:[-’'][\w]+)*\b",(ROOT/spec['source']).read_text()))
+        print(json.dumps({'edition':edition,'epub':str(out/(name+'.epub')),'pdf':str(out/(name+'.pdf')),
+                          'chapters':len(chapters(edition)),'words':words}))
 
 
 if __name__=='__main__':main()

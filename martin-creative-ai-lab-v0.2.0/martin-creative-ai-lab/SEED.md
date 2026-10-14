@@ -1,10 +1,10 @@
 # SEED — Martin Creative AI Lab
 
-**Version:** 0.25.0
+**Version:** 0.26.0
 **Data-base:** 10 de outubro de 2026  
 **Autor e responsável pelo portfólio:** Martin Melcop Neto  
 **Working language:** English for new documentation, plans, code comments, UI, and reports. Preserve original creative titles and historical source languages.
-**Current state:** P11 Project Rooms 0.5.0 retrieves old decisions and action revisions with stable pages, original context and current linked work. Schema/recovery and drafts are preserved; real team use, public accounts and commercial demand remain open.
+**Current state:** P04 0.2.0 adds a complete English translation and EPUB/PDF reading editions to the preserved Portuguese story. Technical formats and implementer review are verified separately; independent translation/readers, devices and commercial demand remain open.
 
 > Construir um laboratório autoral em Git que transforma ideias, obras e experimentos em produtos pequenos, sistemas reutilizáveis e evidências técnicas verificáveis. A IA participa da criação e execução; Martin desenvolve sua capacidade de especificar, compreender, selecionar, corrigir, validar e explicar os resultados.
 
@@ -46,14 +46,14 @@ Se apenas este arquivo estiver disponível, ele é suficiente para iniciar a Fas
 |---|---|
 | Repository | MartinFMelcop/Creative_AI_Project_HUB; actual Git root `/workspace/Creative_AI_Project_HUB`; original wrapper retained |
 | Preserved sources | 175 Rave Master texts / 3 WebSocket files; unchanged ZIP/inventory; not full RMXP recovery |
-| Current workstream | P11 complete-record retrieval 0.5.0 |
-| Runtime | Node 24 / SQLite / Socket.IO / existing browser client; no new service or dependency |
-| Evidence | Old/current HTTP comparison, 81 checks, real desktop/mobile context/draft/page/race journeys and bounded 20,000-record sample; `evidence/realtime-chat/SEARCH_RUN.json` |
-| Limits | Literal retrieval; no private-room accounts, real team approval, concurrent production-load or market validation |
-| Next action | Compare actual handoff retrieval with independent P04/P10 reading, P03 hardware practice and native strategy/combat use |
-| Other products | P01 0.3.0, P03 0.3.0, P04 0.1.0, P05 0.2.0, P06 0.4.0, P10 0.5.0, P02 0.2.1 preserved |
-| Media / transfer | P07 0.3.0 / P08 0.4.0; assets/transfers unchanged |
-| Attribution | Clean `d56c971` matched fetched main; main authorized/permitted. Codex code/review and declared fictional fixtures; no independent team approval or Sites update |
+| Current workstream | P04 complete English reading edition 0.2.0 |
+| Runtime | Markdown / Pandoc / Python / ReportLab; real EPUB3 and 27-page A5 PDF, no website |
+| Evidence | Full pair review, exact artifact text/language/navigation/fonts, official EPUBCheck, PT/EN rebuilds, damaged-package rejection and PDF/XHTML inspection; `evidence/lich-cistern/ENGLISH_RUN.json` |
+| Limits | Codex translation/review; no historical manuscript/canon, independent literary approval, hardware/assistive or market validation |
+| Next action | Compare independent English/PT reading with native local play/strategy, P03 hardware practice and real P11 handoffs |
+| Other products | P01 0.3.0, P03 0.3.0, P05 0.2.0, P06 0.4.0, P10/P11 0.5.0, P02 0.2.1 preserved |
+| Media / transfer | Existing licensed font files now also embedded in the English PDF; assets/transfer counts unchanged |
+| Attribution | Clean `9029a2e` matched fetched main; main authorized/permitted. Codex translation/code/review; no independent translator approval or Sites update |
 
 Registry evidence paths must resolve to existing files inside the lab; working
 paths must be directories and legacy-source IDs must exist. This documentary
@@ -224,7 +224,7 @@ Identificadores persistem mesmo quando nomes mudam. Um projeto arquivado pode co
 | P01 | Artemyra / Eclipse Fair | Typed economy and native C# presentation | Godot .NET board, terminal workbench, replay and comparison | Native 0.2.0; core/CLI 0.1.0 retained, no historical restoration |
 | P02 | AI Evaluation & QA Lab (historical Unity proposal) | Requirements, reproduced bugs, artifact checks | Bounded practice tasks and later independent evaluation | EVAL-001 runner 0.2.0 uses pinned snapshots, starter 0.1.0; M4 harness scope, no model candidate |
 | P03 | Tokyo 80s | Original music, timing and sustained interaction | Midnight Signal and Rain Circuit with track selection/transition | P03 0.2.0 / P08 0.3.0 real media; human play/listening pending |
-| P04 | O Lich mais velho da tumba mais antiga | Romance, mundo, personagens, arte e continuidade | Narrativa interativa, amostra editorial, jogo, animatic | Historical summary only here; new standalone story/EPUB/PDF 0.1.0 delivered |
+| P04 | O Lich mais velho da tumba mais antiga / Darsen reading editions | Narrative, translation and reader production | Complete Portuguese story and English EPUB/PDF | New standalone adaptation 0.2.0; Portuguese 0.1.0 preserved, no historical manuscript restoration |
 | P05 | The Dark Knight / Cinderwatch | Turn-based seed, AGI, rows and states | Native three-encounter tactical rescue campaign | New 0.1.0 destination; historical RMXP packages remain absent |
 | P06 | Véu Partido / Veilbreak | Native combat trial; historical 3D RPG seed | Animated two-phase arena with committed contact, source and executed PCK | New 0.3.0 destination; missing Unity starter remains historical |
 | P07 | Visual Generation & Asset Lab | Native visual production | Three paintings plus two real motion atlases consumed by P06 | 0.2.0 production/integration; independent artist approval absent |
@@ -339,6 +339,13 @@ this summary: the historical ZIP/manuscript is not available in this checkout.
 Baldino/Aevren/Darsen remain; new characters/waterworks/rules are scoped adaptation
 choices. Narrative continuity and reader formats were reviewed by Codex, not an
 independent audience or author canon approval.
+
+Current **0.2.0** also contains the complete English translation, *The Water
+Beneath Darsen*, with distinct EPUB language/identity and a 27-page A5 PDF. Actual
+PT source/metadata/old editions/fonts/styles stay unchanged. A two-profile producer
+and checks support both. [English evidence](evidence/lich-cistern/ENGLISH_RUN.json)
+records whole-pair translator review, artifact integrity and rendered pages;
+structural correspondence is not independent semantic/literary validation.
 
 **Origem histórica:** light novel de dark fantasy em vasto universo; referência de estrutura e ambição associada a Overlord, múltiplas linhas narrativas e passado extenso. Baldino como narrador; Aevren/Garran em rascunhos, Dorian, Elira, Maelis e Orvek entre personagens recorrentes.
 

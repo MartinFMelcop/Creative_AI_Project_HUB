@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-10-13",
+  "updated_at": "2026-10-14",
   "assets": [
     {
       "id": "AUD-001",
@@ -67,7 +67,7 @@
     },
     {
       "id": "FNT-001",
-      "name": "DejaVu Serif regular/bold for the Darsen PDF",
+      "name": "DejaVu Serif regular/bold for the Darsen reading PDFs",
       "type": "font",
       "status": "integrated",
       "source_project": "P04",
@@ -76,12 +76,13 @@
       ],
       "origin": "Third-party installed DejaVu font distribution; not original P04 lettering",
       "master_path": "projects/lich-cistern/fonts",
-      "runtime_path": "projects/lich-cistern/dist/a-agua-sob-darsen-0.1.0.pdf",
+      "runtime_path": "projects/lich-cistern/dist/the-water-beneath-darsen-0.2.0.pdf",
       "rights": "Bitstream Vera permission/copyright/trademark notice inspected and retained in source and PDF; DejaVu changes public domain. TTF files copied unchanged and subset embedded with Unicode mapping.",
       "evidence": [
         "projects/lich-cistern/fonts/LICENSE.txt",
         "projects/lich-cistern/provenance.json",
-        "evidence/lich-cistern/RUN.json"
+        "evidence/lich-cistern/RUN.json",
+        "evidence/lich-cistern/ENGLISH_RUN.json"
       ]
     },
     {

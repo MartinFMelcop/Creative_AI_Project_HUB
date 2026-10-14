@@ -1,20 +1,19 @@
-# Current milestone — complete project-record retrieval
+# Current milestone — complete English Darsen reading edition
 
-P11 0.5.0 connects literal full-record search, type filters, immutable-stream
-pagination and saved context to the existing action board. Find decisions and
-superseded blockers beyond loaded panels; distinguish history from current work.
-Keep both drafts, current revision ordering, retries, schema and recovery intact.
+Translate/review all five actual P04 scenes, including mechanical causality,
+character voices, constrained permission and continuing accountability. Deliver
+editable English, EPUB3 and A5 PDF; add explicit PT/EN production profiles while
+preserving every Portuguese narrative/metadata/shipped edition/style/font byte.
 
-Acceptance: execute old/current servers against the same records, run full P11
-regressions, operate real Chromium desktop/mobile and keyboard return, test late
-responses across room/identity changes, inspect raw frames and sample both record
-streams at current capacity. Verify unchanged non-consumer/archive/evaluation
-files, registry/manifest and normal main publication. The acceptance evidence is
-[SEARCH_RUN.json](../evidence/realtime-chat/SEARCH_RUN.json).
+Acceptance: whole paired editorial review, manuscript/EPUB/PDF text identity,
+language/navigation/metadata/fonts, official EPUBCheck, isolated bilingual
+rebuilds, controlled damaged English packages, raw PDF/reflow inspection and
+repository/source preservation. Publish normally to main with hosted bilingual
+format validation. [Execution](../evidence/lich-cistern/ENGLISH_RUN.json).
 
-Real team retrieval, privacy/accounts, concurrent production load and market
-retention remain open. Compare those opportunities with independent P04/P10
-reading and native/music experience before the next portfolio decision.
+No historical manuscript restoration, human translator/reader approval, hardware
+ebook/accessibility or commercial claim. Compare independent English/PT reading
+with native local seats/strategy, hardware practice and real team retrieval next.
 
 # Previous milestone — native Eclipse Fair board
 

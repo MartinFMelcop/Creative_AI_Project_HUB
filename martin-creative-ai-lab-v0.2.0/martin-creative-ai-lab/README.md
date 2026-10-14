@@ -4,10 +4,10 @@ An evolving laboratory of games, narrative, images, audio, data, and AI
 evaluation by **Martin Melcop Neto**. Projects are adaptable seeds: build small
 slices, verify behavior, record decisions, and test reuse in actual destinations.
 
-**Current seed: v0.25.0.** The lab includes eleven project lines, 178 preserved
+**Current seed: v0.26.0.** The lab includes eleven project lines, 178 preserved
 historical texts, a working local project-conversation workspace, a calibrated
 practice-task harness, a complete rescue adventure with browser/terminal editions,
-two original browser rhythm stages with rendered soundtracks, sustained notes and targeted phrase rehearsal, a native C# economy board with preserved terminal workbench, a complete Portuguese story with EPUB/PDF, and a native
+two original browser rhythm stages with rendered soundtracks, sustained notes and targeted phrase rehearsal, a native C# economy board with preserved terminal workbench, a complete Portuguese story and English translation with EPUB/PDF, and a native
 Godot boss arena with painted art, adaptive audio and an executed PCK. Private
 Sites demos support the browser games. No full RPG migration, model benchmark,
 finished music catalogue or public-audience deployment is claimed.
@@ -17,7 +17,7 @@ project versions and execution boundaries are in the state and registry.
 ## Start here
 
 - [P05 — Cinderwatch](projects/cinderwatch/README.md): native C# rescue with original portraits/cues, actual action feedback, persistent supplies and replayable resume.
-- [P04 — A água sob Darsen](projects/lich-cistern/README.md): complete standalone story, EPUB and A5 PDF.
+- [P04 — A água sob Darsen](projects/lich-cistern/README.md): complete Portuguese story and English translation, EPUB and A5 PDFs.
 - [Reading edition execution](evidence/lich-cistern/RUN.json): conformance, text identity and implementer editorial review.
 
 - [P01 — Eclipse Fair](projects/eclipse-fair/README.md): Godot .NET board with adaptive planning rivals, conditional response comparison, Classic mode and replayable resume.

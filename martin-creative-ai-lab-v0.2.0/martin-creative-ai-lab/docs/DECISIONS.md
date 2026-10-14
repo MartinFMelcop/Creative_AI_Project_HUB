@@ -1032,3 +1032,28 @@ Actual old/current HTTP comparison and 81 tests prove bounded behavior. A local
 Reconsider indexing from real latency/usage evidence with a concrete migration
 and recovery contract. Trusted identities/ownership remain chosen names rather
 than private-room roles; real team benefit and commercial demand are unverified.
+
+## ADR-049 — translate the complete source into distinct reading editions
+
+**Date:** 2026-10-14 (UTC). **Status:** P04 0.2.0.
+
+Choose a full English translation of the inspected Portuguese story over another
+nearby game/service feature. This creates actual creative content for reader
+assessment; it does not establish an audience or commercial rights/demand.
+Keep original PT text/metadata/editions/styles/fonts unchanged. A two-profile
+catalogue drives the existing Python/Pandoc/ReportLab producer/checker; default PT
+and old filenames remain, English has distinct language/identity/front matter.
+No browser product, new engine, sequel or unavailable manuscript restoration.
+
+Translate descriptive Salt Street, retain personal/Darsen/saelir names, and
+separate wash valve from ledger, corridor grille from outlet screen, drain from
+inlet/outlet. Preserve contact/intact joints, limited permission, book loss,
+injury, daughter ignorance and pending consequences. Interpret the awkward guard/
+beam line against the following order; record that choice and inferred shrouding.
+Do not promote either to author-approved canon or an independent translator result.
+
+Exact artifact text, metadata/navigation/fonts and official EPUBCheck establish
+format integrity. Full paired source and raster/reflow review are by Codex;
+paragraph/name correspondence is not semantic proof. Seek independent linguistic/
+literary and device/accessibility evidence before calling this a release-quality
+translation or deciding further expansion.

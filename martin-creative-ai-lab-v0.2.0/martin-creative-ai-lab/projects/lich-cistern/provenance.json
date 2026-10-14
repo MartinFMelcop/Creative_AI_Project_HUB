@@ -1,6 +1,6 @@
 {
   "project_id": "P04",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "working_title": "A água sob Darsen",
   "language": "pt-BR",
   "origin": "New complete seed adaptation, written and edited by Codex under Martin Melcop Neto portfolio direction. Not restored, rewritten or canon-approved historical B01.",
@@ -28,6 +28,14 @@
       "upstream": "https://dejavu-fonts.github.io/",
       "license": "fonts/LICENSE.txt",
       "rights": "Read installed copyright/permission notice before copying; retained copyright/trademark/permission in source and PDF. No Debian packaging code is redistributed."
+    },
+    "edition_catalogue": "editions.json",
+    "english": {
+      "source": "story.en.md",
+      "metadata": "metadata.en.yaml",
+      "epub": "Pandoc EPUB3 with en-US metadata/document language, distinct identifier and navigation",
+      "pdf": "27-page A5, embedded licensed serif fonts, English catalog language and complete notices",
+      "default": "Portuguese remains the default; --edition en/all selects actual new consumers."
     }
   },
   "review": "Implementing-agent source/continuity and rendered-page review. No independent reader, Martin canon review or commercial-interest claim.",
@@ -45,7 +53,42 @@
     "fonts/DejaVuSerif.ttf": "8cb29f7db250ebb2551a6ce2c1e0bfd5a0eb520e9e233370db0493e82e1f36f7",
     "fonts/LICENSE.txt": "219373cc2f7aaeadca19772736a40700a5be8cfdadc7b7e2e04931d34d1c81b5",
     "metadata.yaml": "63b5d46e6434c691db17b57752104cc604515ea131e7af7f969e2a0206c39f82",
-    "story.md": "a61ac74cea523e7882607a0b33586792e9dae8f35752ec21527f1a1097b1ad79"
+    "story.md": "a61ac74cea523e7882607a0b33586792e9dae8f35752ec21527f1a1097b1ad79",
+    "story.en.md": "08fd481d1aed00421b578a714b1cdb4c150e84b54d7bf1b0ad51fbe39641bf47",
+    "metadata.en.yaml": "9a0818e35d4fbdf0a58ad8e1ca87b540b1d9fa5989d84eefbdd8056bb257a2f0",
+    "editions.json": "0a61414b459f01833754bb3ec8ab8fc039d26af72d003fccc4011f673fdbf5e8",
+    "dist/the-water-beneath-darsen-0.2.0.epub": "6368915c30d4b75aa71a668e2023fd590bf4db4f2ce47ebf938246fed2e32a1c",
+    "dist/the-water-beneath-darsen-0.2.0.pdf": "99b2d5b1eb2e0ed8cb4cd18010d34e368cf1f89f57b53a3f7b18ed4c488950b6",
+    "tools/build.py": "28e2dfba86e63039e1c10ab83be37efc9c13dc1fc6cdf5f2f35e235eebc77158",
+    "tools/check_editions.py": "b692fa2b1333ad5e1f2dcfb21ee5bf05a1522e60b6b32ea716c6fff03eab54dc"
   },
-  "evidence": "evidence/lich-cistern/RUN.json"
+  "evidence": "evidence/lich-cistern/RUN.json",
+  "languages": [
+    "pt-BR",
+    "en-US"
+  ],
+  "english_title": "The Water Beneath Darsen",
+  "translation": {
+    "source": "story.md",
+    "source_sha256": "a61ac74cea523e7882607a0b33586792e9dae8f35752ec21527f1a1097b1ad79",
+    "translator": "Codex, under Martin Melcop Neto portfolio direction; no independent translator or author ratification",
+    "scope": "All five connected scenes. Original Portuguese source, metadata, EPUB/PDF, stylesheet and fonts unchanged. No sequel, recovered historical manuscript, new cosmology or outside prose.",
+    "glossary": {
+      "Rua do Sal": "Salt Street; translate this descriptive street name, retain Darsen and personal names.",
+      "registro": "wash valve in the pipe passage; maintenance ledger/entry for signed records.",
+      "grade / grelha": "hanging grille / outlet screen; distinguish the fatal corridor barrier from the blocked water outlet.",
+      "tomada / entrada / saída / descarga": "intake / inlet / outlet / drain; the drain opens to the river and leaks back through the cracked wall.",
+      "comporta / freio / contrapeso": "sluice gate / brake / counterweight; keep the order of fitting the beam, releasing the chain and lifting the gate.",
+      "viga / alça": "beam / loop; specify the spare brace separately from the operating beam.",
+      "cabo": "cable for the grille; handle in the wheel/brake context.",
+      "chave": "wrench for Sava; house key for Tila; service key for Lesto.",
+      "saelir": "retain source name/lowercase without inventing a species glossary.",
+      "intimação": "summons; punishment and payment remain undecided.",
+      "cobrir Lesto": "shroud Lesto, inferred from the final body-preparation scene; no burial place or additional rite introduced."
+    },
+    "editorial_interpretation": "The source passage says me largou pelo casaco. Let go of the beam and seized my coat resolves the awkward wording against the following order to hold the beam again and the explicit no-blow clause. This is a reasoned translator choice; the Portuguese source stays intact.",
+    "voice_and_continuity": "Baldino remains self-excusing, observant and accountable; Aevren practical/possessive, Sava technically decisive with constrained permission and grief, Nera terse about public water. Contact/intact joints remain necessary; no resurrection/remote command. Retain book loss, damaged hands/shoulder, daughter ignorance, delayed summons and demanded testimony.",
+    "review": "Whole source/translation compared paragraph by paragraph by the implementing translator. Five headings and 240 paragraph positions align; eight personal/place-name occurrence counts agree. These structural checks are not a semantic or independent literary assessment."
+  },
+  "evidence_english": "evidence/lich-cistern/ENGLISH_RUN.json"
 }

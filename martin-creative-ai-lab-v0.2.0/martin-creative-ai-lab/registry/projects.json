@@ -95,9 +95,9 @@
       "slug": "lich",
       "status": "active",
       "maturity": "M4",
-      "phase": "standalone-reading-editions-validated",
+      "phase": "bilingual-reading-editions-validated",
       "origin": "new_seed_implementation",
-      "next_action": "Read the complete story with independent Portuguese readers and compare against the actual manuscript if it becomes available; assess the climax, constrained permission and accountability before expansion.",
+      "next_action": "Seek independent Portuguese/English reader and translator feedback on voices, mechanisms, consent and denouement; compare device reading with native strategy/play, P03 hardware practice and real P11 handoff retrieval before another milestone.",
       "related_projects": [
         "P06",
         "P07",
@@ -106,12 +106,13 @@
       "evidence": [
         "projects/lich-cistern/README.md",
         "projects/lich-cistern/provenance.json",
-        "evidence/lich-cistern/RUN.json"
+        "evidence/lich-cistern/RUN.json",
+        "evidence/lich-cistern/ENGLISH_RUN.json"
       ],
       "historical_name": "O Lich mais velho da tumba mais antiga",
       "working_path": "projects/lich-cistern",
-      "working_version": "0.1.0",
-      "maturity_scope": "A new complete five-scene Portuguese story, 4,466 words, narrated by Baldino around a Darsen cistern failure, Sava/Nera agency, bounded corpse movement and consequences. Editable source, EPUB3 navigation and 28-page A5 PDF with licensed embedded Unicode fonts; source/EPUB/PDF sequence and official EPUBCheck 5.4.0 pass. Source and rendered-page review by implementing agent only. Historical manuscript absent; no B01 restoration, canon ratification, independent literary approval, hardware-reader/assistive technology or commercial-demand validation."
+      "working_version": "0.2.0",
+      "maturity_scope": "Complete five-scene Portuguese adaptation and its new complete English translation, The Water Beneath Darsen. English 4,736 words/240 paragraphs, EPUB3 with language/navigation/distinct identity and 27-page A5 PDF with embedded licensed fonts; actual format/text checks, isolated PT/EN rebuilds, official EPUBCheck and rendered PDF/XHTML review. Portuguese source, metadata, original 28-page PDF/EPUB, styles/fonts unchanged. Editor/translator are Codex under Martin direction; a source ambiguity is explicitly interpreted, not silently ratified. Structural correspondence is not semantic or independent literary proof. Historical manuscript, canon approval, hardware-reader/assistive technology, audience demand and commercial readiness remain unverified."
     },
     {
       "id": "P05",

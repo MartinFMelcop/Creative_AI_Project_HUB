@@ -1,29 +1,30 @@
-# Current assessment — retrieve work beyond the recent panels
+# Current assessment — translate an actual complete literary work
 
-Clean `d56c971` matches fetched main; branch `work`, publishing permitted. Read
-instructions, state/registry/seed, evolution/decisions and twelve actual commits.
-Inspected P11 store/server/schema/UI/recovery, P04 prose/editions and P01 planning.
-Recent work spans P01/P03/P05/P06/P10/P11, with the last two in musical rehearsal
-and native presentation. Native Godot is available; Unity was not located in PATH.
+Clean `9029a2e` matches fetched main; branch `work`, publish permitted. Read
+instructions/state/registry/seed, recent decisions/evolution and twelve commits.
+Inspected all five P04 scenes, edition metadata/provenance/producer/checks, P01
+native human-seat assumptions and current P11 retrieval. Recent work spans games,
+music, narrative and collaboration; the latest P03 test fix does not select work.
 
 | Opportunity | Evidence and decision |
 |---|---|
-| P11 complete-record retrieval | Timeline caps at 300, decisions at 100 and action history at 50; export is the only complete read path. Search old decisions/blockers, exact context and current linked work; selected. |
-| P04 substantive editorial work | A full five-scene story and usable editions exist. The inspected opening establishes Baldino's concrete fault. Historical manuscript and independent reader response are absent; expanding/revising automatically has a weaker basis. |
-| P01 / P05 / P06 native milestones | Real planning, tactical presentation and Linux/controller delivery exist. Player strategy/feedback and platform validation are credible alternatives; another automatic nearby feature does not close a clearer present gap. |
-| P03 / P10 | Targeted musical practice and consequential handover just shipped; hardware listening and independent narrative use should guide further content. |
-| P02 / P09 | Independent candidate context and real professional case sources remain missing. |
+| P04 complete English edition | Actual Portuguese source is complete and only readable in Portuguese. Translate the whole conflict/voices and deliver EPUB/PDF with preserved PT files; selected as new creative content and a sample for English reader evaluation. |
+| P01 local human seats | Core can represent different actors, but native UI/reset/forecast/timing hardcodes seat zero. A worthwhile native interaction milestone needs configuration, handoff, save and strategy verification; not automatically chosen after recent native releases. |
+| P03 / P05 / P06 | Musical rehearsal, tactical feedback and Linux/controller delivery exist. Hardware/listening/player evidence should guide further content and distribution. |
+| P10 / P11 | Consequential handover and complete-record retrieval are functional. Independent reading/real team use can better identify the next missing interaction. |
+| P02 / P09 | Independent candidate context and professional case sources remain absent. |
 
-Use existing Node 24/SQLite, indexed room streams and bounded literal Unicode
-matching; avoid a durable FTS index that would enlarge the backup/migration
-contract at 20,000 records. No stack migration, external retrieval service or
-shared framework. Current work improves recoverability of recorded decisions,
-not account security, factual verification or an invented market result.
+Keep Markdown/Pandoc/Python/ReportLab for real reader files; .NET/Godot executables
+are available and Unity was not found in PATH. A website or engine contributes
+little to this text/ebook milestone. English voices preserve terse work/grief and
+Baldino’s defensive admissions. Resolve lexical ambiguity against action context;
+record interpretations without modifying the Portuguese source or inventing canon.
 
-Before/after actual servers: search 404 becomes 200; a superseded revision-2
-blocker reconnects to its original decision and current revision-63 outcome.
-[Execution](../evidence/realtime-chat/SEARCH_RUN.json) separates technical checks,
-implementer UI review, local capacity sampling and unverified real-team value.
+Before: complete Portuguese-only editable story/EPUB/PDF. After: complete English
+story/EPUB/PDF, bilingual production/checking, preserved Portuguese artifacts.
+The translation broadens the usable reading sample, not verified audience reach,
+quality or demand. [Evidence](../evidence/lich-cistern/ENGLISH_RUN.json) separates
+technical checks, translator judgment and missing independent validation.
 
 # Previous assessment — a consequence that people can answer
 
