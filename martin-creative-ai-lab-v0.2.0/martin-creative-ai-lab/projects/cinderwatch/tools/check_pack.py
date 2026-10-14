@@ -11,7 +11,7 @@ parser.add_argument("--assemblies", action="store_true", help="also require byte
 args = parser.parse_args()
 
 ROOT = Path(__file__).resolve().parents[1]
-PACK = ROOT / "dist/cinderwatch-0.2.0.zip"
+PACK = ROOT / "dist/cinderwatch-0.3.0.zip"
 with ZipFile(PACK) as archive:
     names = archive.namelist()
     assert len(names) == len(set(names))

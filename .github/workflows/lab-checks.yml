@@ -67,12 +67,37 @@ jobs:
           "$cinder_engine" --headless --path Native -- --verify --save-path "$RUNNER_TEMP/cinder-source/save.json"
           python3 tools/check_media.py
           python3 tools/check_pack.py
-          unzip -q dist/cinderwatch-0.2.0.zip -d "$RUNNER_TEMP/cinder-delivered"
+          unzip -q dist/cinderwatch-0.3.0.zip -d "$RUNNER_TEMP/cinder-delivered"
           "$cinder_engine" --headless --path "$RUNNER_TEMP/cinder-delivered/cinderwatch/Native" -- --verify --save-path "$RUNNER_TEMP/cinder-delivered-check/save.json"
           python3 tools/pack.py
           python3 tools/check_pack.py --assemblies
-          unzip -q dist/cinderwatch-0.2.0.zip -d "$RUNNER_TEMP/cinder-rebuilt"
+          unzip -q dist/cinderwatch-0.3.0.zip -d "$RUNNER_TEMP/cinder-rebuilt"
           "$cinder_engine" --headless --path "$RUNNER_TEMP/cinder-rebuilt/cinderwatch/Native" -- --verify --save-path "$RUNNER_TEMP/cinder-rebuilt-check/save.json"
+
+      - name: Cache the verified Mono Linux release template
+        uses: actions/cache@0057852bfaa89a56745cba8c7296529d2fc39830 # v4
+        with:
+          path: ${{ runner.temp }}/cinder-template/linux_release.x86_64
+          key: godot-mono-4.6.3-linux-release-dde8bd2f5b6b8666
+      - name: Execute delivered and freshly rebuilt Cinderwatch Linux players
+        working-directory: martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/projects/cinderwatch
+        run: |
+          cinder_engine="$RUNNER_TEMP/eclipse-godot/Godot_v4.6.3-stable_mono_linux_x86_64/Godot_v4.6.3-stable_mono_linux.x86_64"
+          cinder_template="$RUNNER_TEMP/cinder-template/linux_release.x86_64"
+          mkdir -p "$RUNNER_TEMP/cinder-template" "$RUNNER_TEMP/cinder-linux-delivered" "$RUNNER_TEMP/cinder-linux-rebuilt"
+          if [ ! -f "$cinder_template" ]; then
+            curl --fail --location --output "$RUNNER_TEMP/cinder-template/templates.tpz" https://github.com/godotengine/godot/releases/download/4.6.3-stable/Godot_v4.6.3-stable_mono_export_templates.tpz
+            printf '%s  %s\n' 6436f474ee085fb0a94d3d296b9821736bdd663b6e91b2228fdf77066f1d1400 "$RUNNER_TEMP/cinder-template/templates.tpz" | sha256sum --check
+            unzip -p "$RUNNER_TEMP/cinder-template/templates.tpz" templates/linux_release.x86_64 > "$cinder_template"
+          fi
+          printf '%s  %s\n' dde8bd2f5b6b8666c3656a57900f8c4163b3fc9799cc723746ca88468333b320 "$cinder_template" | sha256sum --check
+          python3 tools/check_linux.py
+          unzip -q dist/cinderwatch-linux-0.3.0.zip -d "$RUNNER_TEMP/cinder-linux-delivered"
+          env -u DOTNET_ROOT -u DOTNET_ROOT_X64 PATH=/usr/bin:/bin DOTNET_MULTILEVEL_LOOKUP=0 "$RUNNER_TEMP/cinder-linux-delivered/Cinderwatch/cinderwatch.x86_64" --headless -- --verify --save-path "$RUNNER_TEMP/cinder-linux-check/save.json"
+          python3 tools/export_linux.py --godot "$cinder_engine" --template "$cinder_template" --output "$RUNNER_TEMP/cinder-rebuilt-linux.zip"
+          python3 tools/check_linux.py "$RUNNER_TEMP/cinder-rebuilt-linux.zip"
+          unzip -q "$RUNNER_TEMP/cinder-rebuilt-linux.zip" -d "$RUNNER_TEMP/cinder-linux-rebuilt"
+          env -u DOTNET_ROOT -u DOTNET_ROOT_X64 PATH=/usr/bin:/bin DOTNET_MULTILEVEL_LOOKUP=0 "$RUNNER_TEMP/cinder-linux-rebuilt/Cinderwatch/cinderwatch.x86_64" --headless -- --verify --save-path "$RUNNER_TEMP/cinder-linux-rebuilt-check/save.json"
 
   native-arena:
     runs-on: ubuntu-24.04

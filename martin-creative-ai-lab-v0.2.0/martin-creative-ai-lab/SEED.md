@@ -1,10 +1,10 @@
 # SEED — Martin Creative AI Lab
 
-**Version:** 0.27.0
+**Version:** 0.28.0
 **Data-base:** 10 de outubro de 2026  
 **Autor e responsável pelo portfólio:** Martin Melcop Neto  
 **Working language:** English for new documentation, plans, code comments, UI, and reports. Preserve original creative titles and historical source languages.
-**Current state:** P04 0.2.0 adds a complete English translation and EPUB/PDF reading editions to the preserved Portuguese story. Technical formats and implementer review are verified separately; independent translation/readers, devices and commercial demand remain open.
+**Current state:** P05 0.3.0 supplies an actual self-contained Linux C#/Godot player with original media, save continuity and runtime/engine notices. Technical release execution and Codex review are distinct from independent players, hardware/accessibility and commercial evidence.
 
 > Construir um laboratório autoral em Git que transforma ideias, obras e experimentos em produtos pequenos, sistemas reutilizáveis e evidências técnicas verificáveis. A IA participa da criação e execução; Martin desenvolve sua capacidade de especificar, compreender, selecionar, corrigir, validar e explicar os resultados.
 
@@ -46,14 +46,14 @@ Se apenas este arquivo estiver disponível, ele é suficiente para iniciar a Fas
 |---|---|
 | Repository | MartinFMelcop/Creative_AI_Project_HUB; actual Git root `/workspace/Creative_AI_Project_HUB`; wrapper retained |
 | Preserved sources | 175 Rave Master texts / 3 WebSocket files; unchanged historical ZIP/inventory |
-| Current milestone | P01 native local participants 0.4.0 |
-| Runtime | C#/.NET 10 and Godot .NET 4.6.3; compiled runtime-dependent project, no OS export |
-| Evidence | All 15 local-seat sets, 26 complete journeys, direct four-local deadline, handoff/forecast/save/keyboard/layout checks and old/current compiled comparison; `evidence/eclipse-fair/LOCAL_RUN.json` |
-| Limits | Scripted input/Codex review; no independent players, hardware/accessibility, LAN, market or historical restoration |
-| Next action | Compare independent local play with P05 OS delivery, P03 physical practice, P04/P10 readers and real P11 use |
-| Other products | P03 0.3.0, P04/P05 0.2.0, P06 0.4.0, P10/P11 0.5.0, P02 0.2.1 retained |
-| Rules / saves | Economy/rules/journal schema 1 retained; native envelope stores local seats, old journals load with Vaelis, exports omit controls |
-| Attribution | Clean `30cd956` matched fetched main; main authorized/permitted. Codex implementation/input/review |
+| Current milestone | P05 self-contained Linux player 0.3.0 |
+| Runtime | Godot .NET 4.6.3 / .NET 10.0.12 included; actual Linux x86_64 ELF/PCK, editable project alternative |
+| Evidence | 74 C# checks, source/project and actual release journeys/mixer/OpenGL/X11, bundled runtime maps and legacy save; `evidence/cinderwatch/RELEASE_RUN.json` |
+| Limits | Scripted input/Codex review; no independent players, hardware/accessibility, other platforms or market evidence |
+| Next action | Compare unassisted installation/tactics with P03 pitch/practice, P04/P10 readers and P11 record portability |
+| Other products | P01 0.4.0, P03 0.3.0, P04 0.2.0, P06 0.4.0, P10/P11 0.5.0, P02 0.2.1 retained |
+| Rules / assets | P05 Core/save 0.1.0 and original portraits/cues retained; runtime/engine notices included, no new creative asset |
+| Attribution | Clean `3703f0b` matched fetched main; main authorized/permitted. Codex implementation/input/review |
 
 Registry evidence paths must resolve to existing files inside the lab; working
 paths must be directories and legacy-source IDs must exist. This documentary
@@ -225,7 +225,7 @@ Identificadores persistem mesmo quando nomes mudam. Um projeto arquivado pode co
 | P02 | AI Evaluation & QA Lab (historical Unity proposal) | Requirements, reproduced bugs, artifact checks | Bounded practice tasks and later independent evaluation | EVAL-001 runner 0.2.0 uses pinned snapshots, starter 0.1.0; M4 harness scope, no model candidate |
 | P03 | Tokyo 80s | Original music, timing and sustained interaction | Midnight Signal and Rain Circuit with track selection/transition | P03 0.2.0 / P08 0.3.0 real media; human play/listening pending |
 | P04 | O Lich mais velho da tumba mais antiga / Darsen reading editions | Narrative, translation and reader production | Complete Portuguese story and English EPUB/PDF | New standalone adaptation 0.2.0; Portuguese 0.1.0 preserved, no historical manuscript restoration |
-| P05 | The Dark Knight / Cinderwatch | Turn-based seed, AGI, rows and states | Native three-encounter tactical rescue campaign | New 0.1.0 destination; historical RMXP packages remain absent |
+| P05 | The Dark Knight / Cinderwatch | Turn-based seed, AGI, rows and states | Native three-encounter tactical rescue campaign | Native 0.3.0 self-contained Linux player; historical RMXP packages absent |
 | P06 | Véu Partido / Veilbreak | Native combat trial; historical 3D RPG seed | Animated two-phase arena with committed contact, source and executed PCK | New 0.3.0 destination; missing Unity starter remains historical |
 | P07 | Visual Generation & Asset Lab | Native visual production | Three paintings plus two real motion atlases consumed by P06 | 0.2.0 production/integration; independent artist approval absent |
 | P08 | Audio, Poetry & Music Lab | Original musical production and integration | Two P03 stages and P06 native soundscape | Real masters/exports/scores; no album or human listening approval |
@@ -376,27 +376,27 @@ Plans mentioned 21 classes, five races, levels 1–180, seven item tiers and Spr
 100 core/audio packages. Those packages/runtime are not present in this checkout;
 the Rave archive belongs to P10 and does not establish P05 provenance.
 
-Current destination **Cinderwatch 0.2.0** is a new bounded adaptation, not a
-restoration. Pure C#/.NET 10 owns three roles, row screening, fixed initiative,
-announced enemy targets, one action, shield/cover expiry, limited interrupts and
-treatment, timed scorch, three encounters and two salvage choices. Dead locked
-targets waste attacks; initiative is snapshotted each round and ties use stable ID.
-The Governor's party-wide attack bypasses Cover. Injuries/resources carry forward;
-the final rescue scene recognizes incapacitated heroes. No XP/class catalogue.
+Current destination **Cinderwatch 0.3.0** is a new bounded adaptation, not a
+restoration. Pure C#/.NET 10 owns the unchanged three-role/encounter economy:
+rows, fixed initiative, announced locked intentions, one action, Cover/Pin,
+finite treatment, scorch and two salvage choices. Core/save schema 0.1.0 remains.
 
-Godot .NET 4.6.3 directly consumes the core for selection, computed previews,
-confirmation, paced enemy resolution, keyboard, rules/logs, accepted-action save
-and validated replay/failure feedback. Source and a compiled owned-assembly ZIP
-are executed outside source with runtime-only .NET; this is not an OS executable.
-[Play/build](projects/cinderwatch/README.md), [execution](evidence/cinderwatch/RUN.json).
+The actual Linux x86_64 release bundles Godot .NET 4.6.3 and .NET 10.0.12. Extract
+the whole folder and run the ELF; SDK/editor/installed runtime are unnecessary.
+The existing generated portraits and seven original PCM cues load from media
+beside the executable, independently of working directory. Source/project play
+still uses res://. Stable solution/UID/preset, clean-stage producer, strict template/
+runtime/source checks and engine/runtime notices accompany the delivery. Previous
+owned-assembly packs remain retained; current editable project is an alternative.
+[Play/rebuild](projects/cinderwatch/README.md), [release execution](evidence/cinderwatch/RELEASE_RUN.json).
 
-Presentation 0.2.0 adds eight original portraits/seven PCM cues, actual transaction
-markers and target/active/down feedback. Native cards/actions/styles are reused,
-keyboard focus follows accepted turns and window/test shutdown releases mixer
-playback and owned resources. Raw media works in the compiled project without
-an import cache/SDK. Core/save schema 0.1.0 and original ZIP remain unchanged.
-[Media/consumer execution](evidence/cinderwatch/PRESENTATION_RUN.json) is separate
-from physical listening, independent play and commercial readiness.
+Actual source/project/release checks distinguish builds from campaign execution:
+four release victories, deadline loss, 779 headless/790 rendered checks, real
+mixer capture, X11 input/close and original 0.2.0 save replay. Loaded CLR modules
+are inside the bundle. Prior [presentation evidence](evidence/cinderwatch/PRESENTATION_RUN.json)
+records original media production; no new creative asset or historical recovery.
+Independent players, physical listening/accessibility, other platforms and
+commercial validation remain separate.
 
 Four implementing-agent routes win; Strike-only and Brace-only comparisons lose.
 Technical contracts and rendered review do not prove optimal balance, creative

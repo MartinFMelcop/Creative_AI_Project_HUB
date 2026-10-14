@@ -1085,3 +1085,32 @@ CloseRequested signal explicitly and verify clean exit after two local saves.
 Compiled source/pack and scripted journeys prove bounded behavior. Independent
 shared-device usability, strategy, accessibility, other platforms and paid demand
 remain open; no LAN, standalone export or historical restoration is claimed.
+
+## ADR-051 — ship the native rescue with its engine and CLR
+
+**Date:** 2026-10-14 (UTC). **Status:** P05 0.3.0.
+
+Choose P05 delivery over automatically extending P01, prose or retrieval. Reuse
+C#/Godot and the full existing campaign. Official Mono Linux templates and .NET
+SDK execute; no engine rewrite or web substitute. Publish a Linux player with
+Godot/.NET plus notices, alongside the maintained owned-assembly project pack.
+
+A real export requires the native solution. Stage only actual source/config/UID
+inputs, build/import/export with pinned identities and reject explicit errors even
+when Godot returns zero. Source import revealed a missing Presentation script UID;
+track it. Ignore unused media import sidecars. Runtime/source/payload identities
+support inspection; unsigned manifests do not authenticate origin or prove that
+arbitrary assemblies derive from declared source.
+
+Image/AudioStreamWav.LoadFromFile consumes raw bytes that export importers omit.
+Ship original PNG/WAV/JSON in media beside the ELF; prefer existing res:// paths
+for source/project play and otherwise resolve from the executable directory.
+Do not depend on caller working directory. Missing media exits diagnostically
+without a save. Preserve Core, original audio/atlas and save schema 0.1.0.
+
+Runtime configuration includes .NET 10.0.12; actual loaded hostfxr/CLR/CoreLib
+paths are inside the bundle. Whole campaign/mixer/OpenGL/X11 and legacy replay
+checks execute the real release, not editor tests substituted for a player.
+The small template cache is checksum-validated on every use; fresh rebuilds also
+execute. No physical player/listening, independent accessibility/balance, other
+platform or paid demand is inferred from this technical delivery.

@@ -1,0 +1,249 @@
+{
+  "schema_version": 1,
+  "project_id": "P05",
+  "version": "0.3.0",
+  "executed_at": "2026-10-14 UTC",
+  "baseline_commit": "3703f0be29d9875110044a3680efba4737ed2313",
+  "scope": "Actual self-contained Linux distribution of the existing C# campaign; no new rules, media, game engine or historical restoration.",
+  "environment": {
+    "platform": "Debian 13 Linux x86_64",
+    "engine": "4.6.3.stable.mono.official.7d41c59c4",
+    "sdk": "10.0.401",
+    "bundled_runtime": "10.0.12",
+    "rendering": "X11 virtual display, GL Compatibility, Mesa llvmpipe OpenGL 4.5",
+    "audio": "Dummy output; actual AudioServer mixer capture, no physical listening",
+    "actor": "Codex implementing agent; synthetic Godot/control/XTest inputs"
+  },
+  "verified": {
+    "build": "Actual source Debug build: 0 warnings/errors. Official Mono TPZ full SHA256 and extracted release template checked; exporter builds fresh source/config/UID stage, imports and exports ExportRelease with bundled CLR/API. Source/package checks are separate from runtime proof.",
+    "source_checks": {
+      "csharp_domain": 74,
+      "source_native": 779,
+      "compiled_project_outside_source": 779,
+      "original_media_check": "Raw 4x2 PNG/CRC and seven mono PCM16 cue hashes/durations/endpoints/non-clipping pass."
+    },
+    "release_headless_before_uid_stabilization": {
+      "checks": 779,
+      "boundary": "Initial complete release flow; final exact package OpenGL execution below includes the tracked Presentation UID."
+    },
+    "final_exact_release": {
+      "nativeChecks": 790,
+      "journeys": [
+        {
+          "first": "coolant",
+          "second": "plates",
+          "actions": 65,
+          "hp": [
+            6,
+            6,
+            28
+          ],
+          "kits": 0,
+          "sparks": 0
+        },
+        {
+          "first": "coolant",
+          "second": "edge",
+          "actions": 59,
+          "hp": [
+            6,
+            13,
+            28
+          ],
+          "kits": 0,
+          "sparks": 0
+        },
+        {
+          "first": "sparks",
+          "second": "plates",
+          "actions": 71,
+          "hp": [
+            7,
+            16,
+            28
+          ],
+          "kits": 0,
+          "sparks": 0
+        },
+        {
+          "first": "sparks",
+          "second": "edge",
+          "actions": 65,
+          "hp": [
+            7,
+            23,
+            28
+          ],
+          "kits": 0,
+          "sparks": 0
+        }
+      ],
+      "deadline": 13,
+      "presentation": {
+        "portraits": 8,
+        "cards": 6,
+        "actions": 15,
+        "camps": 4,
+        "styles": 12,
+        "cuePlays": 374
+      },
+      "display": "X11",
+      "assessment": "Scripted controls and implementing-agent visual review; not a human playtest"
+    },
+    "audio_mixer": {
+      "audioCaptureFrames": 7680,
+      "peak": 0.23886187
+    },
+    "package": {
+      "player": "projects/cinderwatch/dist/cinderwatch-linux-0.3.0.zip",
+      "bytes": 67267069,
+      "files": 210,
+      "sha256": "f2dede5ea90f11a50d14ce2b308b3f66e33d43f5e8663243b7904b69a789bcbd",
+      "editable_project": "projects/cinderwatch/dist/cinderwatch-0.3.0.zip",
+      "editable_bytes": 2813096,
+      "editable_sha256": "ec37ec4ed4f3c20270f639d36fb6b5b2466a57f0a484b42622a7064f3a5184ac",
+      "engine_sha256": "dde8bd2f5b6b8666c3656a57900f8c4163b3fc9799cc723746ca88468333b320",
+      "template_archive_sha256": "6436f474ee085fb0a94d3d296b9821736bdd663b6e91b2228fdf77066f1d1400",
+      "framework": {
+        "tfm": "net10.0",
+        "includedFrameworks": [
+          {
+            "name": "Microsoft.NETCore.App",
+            "version": "10.0.12"
+          }
+        ]
+      },
+      "payload_contract": "Whole ELF/PCK/data_Cinder.Native_linuxbsd_x86_64/media folder; host OS still supplies desktop/audio/ICU/OpenGL libraries. Godot/.NET licenses and complete third-party notices included. Static current-source/resource/payload check passed; unsigned hashes are not authenticity or arbitrary binary-derivation proof."
+    },
+    "runtime_independence": {
+      "actual_release_windows": [
+        {
+          "phase": "fresh",
+          "window": "Cinderwatch",
+          "actions": [
+            {
+              "op": "act",
+              "command": {
+                "kind": "Pin",
+                "target": 3
+              },
+              "choice": null
+            },
+            {
+              "op": "act",
+              "command": {
+                "kind": "Guard",
+                "target": -1
+              },
+              "choice": null
+            }
+          ],
+          "bundled_runtime_modules": [
+            "/workspace/work/cinder-release/final-delivered/Cinderwatch/data_Cinder.Native_linuxbsd_x86_64/System.Private.CoreLib.dll",
+            "/workspace/work/cinder-release/final-delivered/Cinderwatch/data_Cinder.Native_linuxbsd_x86_64/libcoreclr.so",
+            "/workspace/work/cinder-release/final-delivered/Cinderwatch/data_Cinder.Native_linuxbsd_x86_64/libhostfxr.so"
+          ],
+          "exit_code": 0
+        },
+        {
+          "phase": "legacy",
+          "window": "Cinderwatch",
+          "actions": [
+            {
+              "op": "act",
+              "command": {
+                "kind": "Pin",
+                "target": 3
+              },
+              "choice": null
+            },
+            {
+              "op": "act",
+              "command": {
+                "kind": "Guard",
+                "target": -1
+              },
+              "choice": null
+            }
+          ],
+          "bundled_runtime_modules": [
+            "/workspace/work/cinder-release/final-delivered/Cinderwatch/data_Cinder.Native_linuxbsd_x86_64/System.Private.CoreLib.dll",
+            "/workspace/work/cinder-release/final-delivered/Cinderwatch/data_Cinder.Native_linuxbsd_x86_64/libcoreclr.so",
+            "/workspace/work/cinder-release/final-delivered/Cinderwatch/data_Cinder.Native_linuxbsd_x86_64/libhostfxr.so"
+          ],
+          "exit_code": 0
+        }
+      ],
+      "input": "XTest keyboard selects/confirms Pin then Brace; mouse Resume/Save; WM_DELETE_WINDOW",
+      "cwd": "/tmp",
+      "external_runtime_discovery": "DOTNET_ROOT/ROOT_X64 removed, multilevel lookup off, system-only PATH",
+      "legacy_source": "Retained 0.2.0 native-window save; byte-identical current serialization after native replay",
+      "physical_player_or_audio": false
+    },
+    "controlled_before_after": {
+      "before": "Preserved 0.2.0 compiled project contains owned assemblies/source, no OS player or runtime. Same system-only PATH and removed DOTNET_ROOT/ROOT_X64 fail to locate dotnet/hostfxr, return -6 before campaign. This is a deliberately unsupported missing-prerequisite condition, not a claim the old package fails with its prerequisites.",
+      "after": "Exact new player completes all four campaigns/defeat and OS keyboard/window/save flow from /tmp. Loaded hostfxr/CLR/CoreLib are mapped from its own data directory; no SDK/editor command is invoked."
+    },
+    "fault_probes": {
+      "missing_runtime_file": {
+        "exit": 1,
+        "rejected": true
+      },
+      "invalid_template": {
+        "exit": 2,
+        "rejected": true,
+        "existing_artifact_preserved": true
+      }
+    },
+    "missing_media": {
+      "missing_media_exit": 1,
+      "diagnostic": "Cinderwatch could not start. Extract the complete Cinderwatch folder and keep media beside the player. Missing: portraits.png",
+      "save_created": false
+    },
+    "preservation": {
+      "original_files_byte_equal_outside_explicit_edit_allowlist": 378,
+      "protected_core_media_and_prior_pack_sha256": {
+        "Core/AssemblyInfo.cs": "a14dad30ab9e586a7ae0ae9d9dbf20d2a0d0accc9b79207903ecc729cd1a21f8",
+        "Core/Cinder.Core.csproj": "8d654c44b7bebb6b31a9f2f606927f45b5072193adc4eef8cce3f3cf3b278df3",
+        "Core/Content.cs": "d37035eab4aa09802511dd3b5806ae8d295156824a18962a9ed14d19184fb3bb",
+        "Core/Game.cs": "53dd7148e63dd57ae0796943b810d0652398d72fd75e46bdd76a8f322d2674d7",
+        "Core/Journal.cs": "46bae735fc58e58dce317234c418775f410e58ad8bea728df2d41c8f098f38e4",
+        "Native/media/audio/brace.wav": "bf98fa669e786cc6cf5b76c44b4df870929a23804bbf7c3a3e3df97090a79407",
+        "Native/media/audio/catalog.json": "dbeae5b6d249657d1432c56cac5abde1b1ea52f9f5c1780284f2d2c2288104da",
+        "Native/media/audio/mend.wav": "933192a5f0973c41cfca809aceccc4edbdea370801a6fbe87476cc332faab52e",
+        "Native/media/audio/pin.wav": "2190a15776202f4971726bd8117c87435cc7b3a0ce6601ff6950d5016773e522",
+        "Native/media/audio/shift.wav": "494e41f8350eb79069a81ed81dc23e6a70b52c61ace8f16415bc2a2fd7582d8b",
+        "Native/media/audio/stage.wav": "53a3d9502696285b4cccb4de9def9fc182994c10994390ef82813dc91530fc07",
+        "Native/media/audio/steam.wav": "790a80a76cde6fa915623272a6bfe886d811bdd9878091fe754adcd94c7f21b6",
+        "Native/media/audio/strike.wav": "7306cb944788b6707ede07363a9ef72ef650560f58ccfccc97457c597df3c61b",
+        "Native/media/portraits.png": "fc0047682ddde11ef4e4339e965164e361432287759a7c12223c7ef55027a1cb",
+        "Native/media/provenance.json": "3da2db2db95ce113ecfb2a4a6656c291f8f8601fc14f0833688db87c123bac4c",
+        "dist/cinderwatch-0.1.0.zip": "f463d4d21239a1af8cb964ac5190e4b3a04896e5077f33638b5c61c91543c597",
+        "dist/cinderwatch-0.2.0.zip": "e2a94f4ff14448c672762cf548a4e610b62ee689acce5797830c025e4d2202b8"
+      },
+      "other_projects_history_and_archive": "Original Git blobs compared with actual checkout bytes; unchanged."
+    },
+    "raw_frame_sha256": {
+      "release-governor.png": "b5078251e8eb5fcaf3b8276a695d403c24275b862a739c6d8874423137866005",
+      "release-ending.png": "c3406176c429621b0dc94dbc72ef35678e26379990cf59c2f7b33df59654a9e3",
+      "release-legacy-resume.png": "3d42f6a419a1e8b960e43adc253d25e3ab5c0083c3aef662ee3ce81ca2540ed9"
+    },
+    "hosted_workflow": "Configured four existing jobs; current project/delivered/rebuilt consumers plus actual Linux delivered/fresh rebuild. Verified pinned cache action SHA and full checksum on every template use. Actual final CI status is reported at task closure."
+  },
+  "reasoned_assessment": "Codex inspected actual release Governor/ending/Pin/legacy-resume frames. Original tactics, portrait/cue identity and announced threats remain readable in this software-rendered sample. Self-contained execution removes a concrete setup step; no stronger gameplay, human installation success or commercial appeal is inferred.",
+  "resolved_execution_findings": [
+    "First isolated export lacked a solution, reported .NET errors despite exit 0; maintained solution and strict error gate correct this.",
+    "Godot importer omits raw PNG/WAV even with broad include filters. Sidecar original media and executable-relative loading make the actual player work.",
+    "Source import generated a previously absent Presentation UID. Track it and rebuild source identity; unused media import sidecars are ignored.",
+    "The first damaged-ZIP fixture mutated its original ZipInfo before reading; corrected only the scratch harness with copied metadata. That failed attempt is not a product failure/pass.",
+    "V-Sync is unsupported on the virtual display; actual OpenGL/AudioServer checks still complete.",
+    "Environment restart preserved final hashes and complete logs/proofs; no abandoned pending command is counted as a pass."
+  ],
+  "unverified": [
+    "Independent human installation, tactics/balance, enjoyment and accessibility",
+    "Physical controller/audio/display performance",
+    "Other OS/distribution compatibility",
+    "Commercial rights beyond included third-party notices, demand, customers or revenue"
+  ],
+  "publication": "Normal main publication explicitly authorized; remote SHA/stored message/CI confirmed at closure rather than self-referenced in this evidence."
+}

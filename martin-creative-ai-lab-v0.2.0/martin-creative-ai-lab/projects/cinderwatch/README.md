@@ -1,10 +1,19 @@
-# Cinderwatch — P05 0.2.0
+# Cinderwatch — P05 0.3.0
 
 A complete small tactical rescue campaign, newly adapted from P05's turn-based
-seed. [Download the compiled native project](dist/cinderwatch-0.2.0.zip) and
-[run it with Godot .NET](Native/README.md). This replaces the absence of a P05
-runtime with an actual three-encounter destination; it does not restore an RMXP
-game or import P10's historical rules.
+seed. [Download the Linux player](dist/cinderwatch-linux-0.3.0.zip), extract the
+whole folder and run `./cinderwatch.x86_64`: Godot and .NET are included. The
+[editable compiled project](dist/cinderwatch-0.3.0.zip) is also maintained.
+[Play/rebuild](Native/README.md) explains both distributions, controls and saves.
+This is an actual three-encounter destination, not recovered RMXP/P10 code.
+
+Release 0.3.0 integrates a self-contained Godot .NET export, an explicit solution,
+raw-media delivery independent of working directory, complete runtime/notices and
+source/payload checks. Original Core/rules/save schema and media remain intact;
+prior packages are preserved. [Execution](../../evidence/cinderwatch/RELEASE_RUN.json)
+records the actual release campaign/mixer/OpenGL/window workflow, runtime isolation,
+legacy save compatibility and rebuild. Native distribution broadens the testable
+sample; unassisted gameplay, hardware accessibility and commercial demand remain open.
 
 Rook shields, Vale reaches screened targets or pins an upcoming enemy action,
 and Neri treats injuries and scorch with finite kits. Front/rear screening,
@@ -46,7 +55,8 @@ Godot/.NET shutdown abort motivated lifetime inspection; bounded clean runs do
 not prove every platform/GC schedule is repaired. Physical audio, unassisted
 readability, enjoyment/accessibility and commercial clearance remain unverified.
 The original 0.1.0 ZIP is retained; rules/save schema 0.1.0 and Core sources remain
-unchanged. This increment is native presentation 0.2.0, not an OS executable.
+unchanged. The earlier presentation increment was 0.2.0. Release 0.3.0 now adds the separate
+Linux executable distribution without producing new creative media.
 
 ## Build and verify
 
@@ -63,10 +73,13 @@ godot-dotnet --headless --path Native -- --verify --save-path /tmp/cinder-source
 python3 tools/check_media.py
 python3 tools/pack.py
 python3 tools/check_pack.py
+python3 tools/export_linux.py --godot /path/to/Godot_mono --templates /path/to/official-mono-templates.tpz
+python3 tools/check_linux.py
 ```
 
-The pack contains only owned assemblies, configuration and editable sources.
-Godot's engine/API assemblies and .NET runtime are external. Rebuilding consumes
+The editable project pack contains owned assemblies/configuration/source; its
+engine/API/runtime are external. The Linux player includes the verified engine,
+.NET runtime/API, original media and their notices. Rebuilding consumes
 the pinned Godot NuGet SDK; playing the compiled pack needs the engine/runtime.
 
 [Execution evidence](../../evidence/cinderwatch/RUN.json) distinguishes compilation,

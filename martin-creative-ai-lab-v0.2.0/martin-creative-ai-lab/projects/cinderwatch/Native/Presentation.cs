@@ -21,16 +21,24 @@ public partial class Main
     private double effectTime;
     private bool closing;
 
+    private static string MediaPath(string relative)
+    {
+        var source = "res://media/" + relative;
+        if (Godot.FileAccess.FileExists(source)) return source;
+        var delivered = Path.Combine(Path.GetDirectoryName(OS.GetExecutablePath())!, "media", relative);
+        if (File.Exists(delivered)) return delivered;
+        throw new FileNotFoundException("Extract the complete Cinderwatch folder and keep media beside the player. Missing: " + relative);
+    }
     private void LoadPresentation()
     {
-        using var image=Image.LoadFromFile("res://media/portraits.png");
+        using var image=Image.LoadFromFile(MediaPath("portraits.png"));
         if(image==null||image.IsEmpty())throw new InvalidDataException("Portrait sheet could not load.");
         portraitSheet=ImageTexture.CreateFromImage(image);
         var w=image.GetWidth()/4f;var h=image.GetHeight()/2f;
         for(var i=0;i<8;i++)portraits.Add(new AtlasTexture {Atlas=portraitSheet,
             Region=new Rect2(i%4*w+12,i/4*h+12,w-24,h-24),FilterClip=true});
         foreach(var name in new[]{"strike","brace","pin","mend","shift","steam","stage"})
-            cues.Add(name,AudioStreamWav.LoadFromFile($"res://media/audio/{name}.wav")
+            cues.Add(name,AudioStreamWav.LoadFromFile(MediaPath($"audio/{name}.wav"))
                 ??throw new InvalidDataException("Action cue could not load: "+name));
         speaker=new AudioStreamPlayer {VolumeDb=-8};AddChild(speaker);
     }

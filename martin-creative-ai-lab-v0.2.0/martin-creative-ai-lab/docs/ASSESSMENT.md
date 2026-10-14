@@ -1,4 +1,43 @@
-# Current assessment — make a native strategy game locally social
+# Current assessment — make the existing native rescue directly runnable
+
+Clean `3703f0b` matches fetched main; branch work, publication authorized and
+GitHub push permitted. Read instructions/state/registry/seed/recent decisions and
+twelve commits. Inspected real P05 source/pack/media, P03 audio/rehearsal scheduling
+and P11 export/recovery. Recent work spans native interaction, literature, service
+retrieval and music. The latest P01 milestone does not select this workstream.
+
+| Opportunity | Evidence and choice |
+|---|---|
+| P05 self-contained player | Complete illustrated campaign requires separately installed Godot .NET/runtime. Official Mono templates/SDK are available; an actual release removes a concrete evaluation barrier. Selected. |
+| P03 pitch-preserving practice | Current playback-rate rehearsal detunes music; actual FFmpeg rubberband filter and original masters are available. Strong creative/DSP alternative, with transient/timing/listening risks requiring its own integrated milestone. |
+| P11 portable records | Room exports are readable records; full-workspace recovery exists. Selective import is a credible workflow, but authorship/identity/merge semantics and real team needs need a concrete contract. |
+| P04/P10 narrative | Complete bilingual story and voiced handover exist. Independent reading better guides expansion than automatic new chapters. |
+| P01/P06/P07/P08/P02/P09 | Local play/Linux delivery/media already exist. Hardware/player evidence, independent candidate context and professional facts remain separate gaps. |
+
+Keep C#/.NET 10 and Godot .NET 4.6.3: they execute the existing native campaign.
+Native templates and SDK are verified; Unity was not found in PATH. Source
+migration or a browser product would add cost without addressing installation.
+Use existing Python packaging conventions; no shared export framework or new
+creative asset is justified. Retain previous project packs and exact Core/media.
+
+Before: compiled project has no OS player and requires external engine/runtime;
+controlled missing-runtime launch aborts before campaign loading. After: a real
+self-contained ELF plus resource/runtime/media folder plays all three encounters,
+resumes an old save and closes outside source with system-only PATH. /proc maps
+confirm bundled CLR modules. Official engine/managed notices accompany the ZIP.
+
+The first export lacked a solution and still returned zero with errors. The
+second converted away raw PNG/WAV files needed by the loader. Actual execution
+drove the solution, strict error gate and sidecar-media integration. Source import
+then generated a missing script UID; preserve it and ignore unused media import
+sidecars, rather than declaring a stale package current.
+
+[Execution](../evidence/cinderwatch/RELEASE_RUN.json) separates technical proof,
+scripted input and Codex frame judgment. A usable evaluation distribution does
+not prove human enjoyment/accessibility or commercial readiness. Unassisted
+installation and tactical decisions are the next relevant evidence.
+
+# Previous assessment — make a native strategy game locally social
 
 Clean `30cd956` matches fetched main; branch work, publication explicitly
 allowed and GitHub push permitted. Read instructions/state/registry/seed/recent

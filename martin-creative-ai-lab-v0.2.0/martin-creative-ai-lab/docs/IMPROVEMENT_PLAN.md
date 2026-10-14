@@ -1,4 +1,24 @@
-# Current milestone — native local participants
+# Current milestone — self-contained Cinderwatch Linux player
+
+Complete the P05 delivery workflow with a verified Mono template, proper native
+solution/export preset, ExportRelease self-contained .NET, raw media relative to
+the executable, original-format save continuity, notices and an inspectable ZIP.
+Retain the editable compiled consumer, earlier packages and original rules/media.
+Build from a fresh source stage; never accept a nominal zero exit with export errors.
+
+Acceptance: compile source/domain, run actual source and compiled project, play
+the release's four salvage routes/deadline, capture real mixer/OpenGL, exercise
+OS keyboard/window and original-save resume, inspect bundled runtime mappings,
+compare old missing-runtime launch, reject bad template/incomplete payload/media,
+check package source/ownership/integrity and preserve unrelated/history bytes.
+Execute delivered/freshly rebuilt releases in hosted checks and publish normally.
+[Execution](../evidence/cinderwatch/RELEASE_RUN.json).
+
+No new game rules, creative assets, framework, browser deployment or independent
+human review. Compare external installation/tactics with P03 pitch/practice,
+independent reading and actual project-record portability before another session.
+
+# Previous milestone — native local participants
 
 Deliver any-seat solo and two-to-four participant shared-device P01 play: native
 configuration, explicit handoff, actor-correct map/preview/goals/results, optional

@@ -34,7 +34,8 @@ public partial class Main : Control
             if(args[i]=="--capture-dir" && i+1<args.Length)captureDirectory=args[++i];
         }
         if(verifying && !args.Contains("--save-path"))savePath=ProjectSettings.GlobalizePath("user://cinderwatch-check-save.json");
-        LoadPresentation();Build(); Refresh();
+        try { LoadPresentation();Build(); Refresh(); }
+        catch(IOException error) { GD.PrintErr("Cinderwatch could not start. " + error.Message);GetTree().Quit(1);return; }
         if(verifying)_=Verify();
     }
     private StyleBoxFlat Style(Color color,Color? border=null,int radius=10)

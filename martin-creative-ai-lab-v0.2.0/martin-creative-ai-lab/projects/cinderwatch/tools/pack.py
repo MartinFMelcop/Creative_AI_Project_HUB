@@ -5,12 +5,12 @@ from zipfile import ZipFile, ZipInfo, ZIP_DEFLATED
 
 ROOT = Path(__file__).resolve().parents[1]
 BIN = ROOT / "Native/.godot/mono/temp/bin/Debug"
-OUT = ROOT / "dist/cinderwatch-0.2.0.zip"
+OUT = ROOT / "dist/cinderwatch-0.3.0.zip"
 
 
 def main():
     files = [ROOT / name for name in ("global.json", "Directory.Build.props", "Native/project.godot",
-             "Native/Main.tscn", "Native/Cinder.Native.csproj", "Native/README.md", "Checks/Probe.cs")]
+             "Native/Main.tscn", "Native/Cinder.Native.csproj", "Native/Cinder.Native.sln", "Native/export_presets.cfg", "Native/README.md", "Checks/Probe.cs")]
     files += sorted((ROOT / "Core").glob("*.cs")) + [ROOT / "Core/Cinder.Core.csproj"]
     files += sorted((ROOT / "Native").glob("*.cs")) + sorted((ROOT / "Native").glob("*.uid"))
     files += sorted(p for p in (ROOT / "Native/media").rglob("*") if p.is_file() and p.suffix in {".png", ".wav", ".json"})
