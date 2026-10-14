@@ -1,10 +1,10 @@
 # SEED — Martin Creative AI Lab
 
-**Version:** 0.24.0
+**Version:** 0.25.0
 **Data-base:** 10 de outubro de 2026  
 **Autor e responsável pelo portfólio:** Martin Melcop Neto  
 **Working language:** English for new documentation, plans, code comments, UI, and reports. Preserve original creative titles and historical source languages.
-**Current state:** P05 Cinderwatch 0.2.0 integrates original portraits, action cues and actual transaction feedback with persistent native controls and explicit cleanup. Core/save behavior is preserved; physical listening, independent play and commercial validation remain open.
+**Current state:** P11 Project Rooms 0.5.0 retrieves old decisions and action revisions with stable pages, original context and current linked work. Schema/recovery and drafts are preserved; real team use, public accounts and commercial demand remain open.
 
 > Construir um laboratório autoral em Git que transforma ideias, obras e experimentos em produtos pequenos, sistemas reutilizáveis e evidências técnicas verificáveis. A IA participa da criação e execução; Martin desenvolve sua capacidade de especificar, compreender, selecionar, corrigir, validar e explicar os resultados.
 
@@ -46,14 +46,14 @@ Se apenas este arquivo estiver disponível, ele é suficiente para iniciar a Fas
 |---|---|
 | Repository | MartinFMelcop/Creative_AI_Project_HUB; actual Git root `/workspace/Creative_AI_Project_HUB`; original wrapper retained |
 | Preserved sources | 175 Rave Master texts / 3 WebSocket files; unchanged ZIP/inventory; not full RMXP recovery |
-| Current workstream | P05 illustrated native action feedback 0.2.0; P07 portrait atlas and P08 PCM cues integrated |
-| Runtime | C#/Godot .NET 4.6.3; raw media and compiled owned assemblies outside source with runtime-only .NET |
-| Evidence | Campaign parity, native/mixer/visible-line checks, original control comparison, OpenGL frames and OS close; `evidence/cinderwatch/PRESENTATION_RUN.json` |
-| Limits | Static portraits, no OS executable, physical listening or independent creative/commercial approval; prior unsafe-binding failure not universally resolved |
-| Next action | Compare native play/listening with P03 practice, P04/P10 readers and P11 handoffs |
-| Other products | P01 0.3.0, P03 0.3.0, P04 0.1.0, P06 0.4.0, P10 0.5.0, P11 0.4.0, P02 0.2.1 preserved; P05 original 0.1.0 ZIP retained |
-| Media / transfer | P07 0.3.0 / P08 0.4.0; two actual new assets, no historical transfer or shared framework promotion |
-| Attribution | Clean `41c21c6` matched fetched main; push permitted and Martin authorizes main. Codex media/code/review and synthetic inputs; no independent human approval or Sites update |
+| Current workstream | P11 complete-record retrieval 0.5.0 |
+| Runtime | Node 24 / SQLite / Socket.IO / existing browser client; no new service or dependency |
+| Evidence | Old/current HTTP comparison, 81 checks, real desktop/mobile context/draft/page/race journeys and bounded 20,000-record sample; `evidence/realtime-chat/SEARCH_RUN.json` |
+| Limits | Literal retrieval; no private-room accounts, real team approval, concurrent production-load or market validation |
+| Next action | Compare actual handoff retrieval with independent P04/P10 reading, P03 hardware practice and native strategy/combat use |
+| Other products | P01 0.3.0, P03 0.3.0, P04 0.1.0, P05 0.2.0, P06 0.4.0, P10 0.5.0, P02 0.2.1 preserved |
+| Media / transfer | P07 0.3.0 / P08 0.4.0; assets/transfers unchanged |
+| Attribution | Clean `d56c971` matched fetched main; main authorized/permitted. Codex code/review and declared fictional fixtures; no independent team approval or Sites update |
 
 Registry evidence paths must resolve to existing files inside the lab; working
 paths must be directories and legacy-source IDs must exist. This documentary
@@ -231,7 +231,7 @@ Identificadores persistem mesmo quando nomes mudam. Um projeto arquivado pode co
 | P08 | Audio, Poetry & Music Lab | Original musical production and integration | Two P03 stages and P06 native soundscape | Real masters/exports/scores; no album or human listening approval |
 | P09 | AI Delivery & Operations Cases | Carreira real e avaliação simulada | Case de entrega, análise de workflow e rubricas | Base profissional lida; cases anteriores pendentes |
 | P10 | Adventures Unleashed / Rave Master | Narrative, NPCs and recovered systems | Two-day browser rescue/relief campaign with local resume and portable saves | Campaign 0.4.0; Python adventure 0.2.0 / standalone 0.1.3; bounded evidence in registry |
-| P11 | Real-time Integration Lab / Project Rooms | Node/Socket.IO/SQLite | Trusted local project conversations, decisions, export and workspace recovery | Workspace 0.3.0; original protocol and P02 snapshot preserved; no public service |
+| P11 | Real-time Integration Lab / Project Rooms | Node/Socket.IO/SQLite | Trusted local project conversations, decisions, export and workspace recovery | Workspace 0.5.0 with actions/search/recovery; original protocol and P02 snapshot preserved; no public service |
 
 P02 agrupa evaluation e QA porque podem compartilhar a mesma aplicação pequena. Não criar dois projetos Unity idênticos apenas para apresentar títulos diferentes. P01 pode abrigar produção, economia e analytics como cases distintos de uma fonte comum.
 
@@ -523,7 +523,7 @@ private demo is not redeployed in this GitHub source session.
 
 ### P11 — Real-time Integration Lab / Project Rooms
 
-The historical Socket.IO snapshot only logs messages. Current **0.4.0**
+The historical Socket.IO snapshot only logs messages. Current **0.5.0**
 [Project Rooms](projects/realtime-integration-lab/README.md) connects notes and
 decisions to assigned actions: To do, In progress, Blocked and Done. Immutable
 source decisions and action histories record who changed each revision; completion
@@ -547,6 +547,14 @@ checks from Codex usability judgment. All trusted participants can open all room
 chosen names are not accounts. Legacy exercise, P02 pinned snapshot/calibration
 and dependency graph are retained. Independent team use, public operation, scale
 and commercial interest remain unverified.
+
+Complete-record search now finds notes/decisions and superseded action revisions
+outside loaded panels. Literal Unicode words, type filters and pinned twenty-hit
+pages retain history during new writes. Original/nearby context and current linked
+work are explicitly separate; navigation keeps both drafts and latest revisions.
+No durable index or schema change. [Retrieval execution](evidence/realtime-chat/SEARCH_RUN.json)
+compares actual old/current servers, 81 regressions and a bounded local capacity
+sample; real team use and concurrent production load remain unverified.
 
 ## 6. Arquitetura do laboratório
 

@@ -10,6 +10,7 @@ window.WorkBoard=(()=>{
   }
   function persist() {saveDrafts();}
   function view(work) {
+    window.RecordSearch?.hide();
     byId('action-panel').hidden=!work;byId('discussion').hidden=work;
     byId('actions-tab').setAttribute('aria-pressed',String(work));byId('conversation-tab').setAttribute('aria-pressed',String(!work));
   }
@@ -99,7 +100,7 @@ window.WorkBoard=(()=>{
     }
     draw();
   }
-  function receive(result) {if(joining){queued.push(result);return;}settle(result);}
+  function receive(result) {if(result.action?.room_id===room?.id)window.RecordSearch?.arrived();if(joining){queued.push(result);return;}settle(result);}
   function flush() {const events=queued;queued=[];for(const e of events)settle(e);}
   async function load(result) {
     byId('action-history').hidden=true;
@@ -161,5 +162,5 @@ window.WorkBoard=(()=>{
     const initial=room.id;
     api(`/rooms/${initial}/actions`).then(result=>{if(room?.id===initial)return load(result);}).then(controls).catch(e=>notice(e.message));
   }
-  return {load,receive,flush,controls,newAction,reset,members(result){if(room?.id===result.roomId){members=result.members;ownerOptions();}}};
+  return {load,receive,flush,controls,newAction,reset,openCurrent(a){merge(a);byId('action-filter').value='all';draw();view(true);const card=[...byId('action-board').querySelectorAll('.action-card')].find(c=>c.dataset.id===a.id);if(card){card.tabIndex=-1;card.focus();card.scrollIntoView({block:'nearest'});}},members(result){if(room?.id===result.roomId){members=result.members;ownerOptions();}}};
 })();

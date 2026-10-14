@@ -1,22 +1,20 @@
-# Current milestone — illustrated tactical feedback
+# Current milestone — complete project-record retrieval
 
-P05 0.2.0 integrates one original eight-cell portrait sheet, seven PCM cues and
-fading actual transaction effects. Preserve Core/rules/save schema, four salvage
-routes, explicit enemy turns and original package. Reuse controls/styles with
-owned-resource disposal, keep keyboard focus and close through the real window
-signal after releasing mixer playback. Deliver a current compiled native project.
+P11 0.5.0 connects literal full-record search, type filters, immutable-stream
+pagination and saved context to the existing action board. Find decisions and
+superseded blockers beyond loaded panels; distinguish history from current work.
+Keep both drafts, current revision ordering, retries, schema and recovery intact.
 
-Acceptance: build C#, run 74 domain checks and all native campaigns/media/labels,
-capture actual AudioServer samples, compare old/new control identities, inspect
-OpenGL portraits/Pin/scorch/ending, operate OS keyboard/close and execute the final
-package outside source with runtime-only .NET. Check media/source ownership,
-repository/manifest and hosted source/delivered/rebuilt consumers; normal main
-publication. [Execution](../evidence/cinderwatch/PRESENTATION_RUN.json).
+Acceptance: execute old/current servers against the same records, run full P11
+regressions, operate real Chromium desktop/mobile and keyboard return, test late
+responses across room/identity changes, inspect raw frames and sample both record
+streams at current capacity. Verify unchanged non-consumer/archive/evaluation
+files, registry/manifest and normal main publication. The acceptance evidence is
+[SEARCH_RUN.json](../evidence/realtime-chat/SEARCH_RUN.json).
 
-No physical listening/hardware accessibility, independent creative/play approval,
-OS executable or commercial clearance. Prior unsafe-binding failure remains a
-bounded lifetime concern, not a universally proven engine fix. Reassess play and
-listening against P03 practice, readers and actual team handoffs next session.
+Real team retrieval, privacy/accounts, concurrent production load and market
+retention remain open. Compare those opportunities with independent P04/P10
+reading and native/music experience before the next portfolio decision.
 
 # Previous milestone — native Eclipse Fair board
 

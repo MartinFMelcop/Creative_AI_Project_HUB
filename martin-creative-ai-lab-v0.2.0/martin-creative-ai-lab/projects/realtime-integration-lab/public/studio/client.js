@@ -35,11 +35,12 @@ function controls() {
   byId('link').disabled = !room;
   byId('older').hidden = !hasMore || entries.length >= 300;
   if(room) byId('room-hint').textContent = entries.length>=300 && hasMore
-    ? 'Showing the latest 300 loaded entries. Export the complete record for older history.'
-    : 'Discussion and decisions share one saved timeline. Load earlier entries or export the complete record.';
+    ? 'Showing the latest 300 loaded entries. Search record to find older history.'
+    : 'Discussion and decisions share one saved timeline. Load earlier entries, search the saved record or export it.';
   byId('older').disabled = joining;
   byId('send').textContent = byId('kind').value === 'decision' ? 'Record decision' : 'Send note';
   window.WorkBoard?.controls();
+  window.RecordSearch?.controls();
   byId('connection').textContent = joining ? 'Opening project…' : online ? 'Connected · entries saved' : 'Offline · drafts kept';
 }
 function meta(message) {
@@ -72,6 +73,7 @@ function receive(message) {
   if (joining) { queued.push(message);return; }
   if (!room || message.room_id!==room.id) return;
   accepted(message);
+  window.RecordSearch?.arrived();
   if (entries.some(e=>e.id===message.id)) return;
   const summary=rooms.find(r=>r.id===room.id);if(summary){summary.entries++;summary.latest_id=message.id;drawRooms();}
   const list=byId('entries'), follow=list.scrollHeight-list.clientHeight-list.scrollTop<24;
@@ -96,13 +98,13 @@ function drawRooms() {
 async function refreshRooms() { rooms=await api('/rooms');drawRooms(); }
 async function openRoom(id) {
   if (!online) throw new Error('Reconnect before changing project.');
-  const generation=++joinGeneration;joining=true;controls();
+  const generation=++joinGeneration;joining=true;window.RecordSearch?.reset();controls();
   try {
     const result=await request('join project',id);
     if (generation!==joinGeneration) return;
     room=result.room;entries=result.messages;decisions=result.decisions;before=result.before;hasMore=result.hasMore;
     location.hash=room.id;byId('room-title').textContent=room.name;
-    byId('room-hint').textContent='Discussion and decisions share one saved timeline. Load earlier entries or export the complete record.';
+    byId('room-hint').textContent='Discussion and decisions share one saved timeline. Load earlier entries, search the saved record or export it.';
     const d=draft();byId('body').value=d.body;byId('kind').value=d.kind;
     for (const message of entries) accepted(message);
     byId('entries').replaceChildren(...entries.map(entryElement));byId('entries').scrollTop=byId('entries').scrollHeight;
@@ -143,7 +145,7 @@ async function sendAttempt(attempt) {
   pendingView();
 }
 byId('identity-form').onsubmit=async e=>{e.preventDefault();try { const saved=await api('/sessions',{method:'POST',body:JSON.stringify({name:byId('name').value})});await enter(saved);notice(''); }catch(e){notice(e.message);} };
-byId('change').onclick=()=>{window.WorkBoard?.reset();socket?.disconnect();identity=null;room=null;online=false;drafts={};entries=[];decisions=[];byId('entries').replaceChildren();byId('decisions').replaceChildren();save('p11-room-identity',null);byId('workspace').hidden=true;byId('welcome').hidden=false;byId('change').hidden=true;byId('participant').textContent='';byId('name').focus();};
+byId('change').onclick=()=>{window.RecordSearch?.reset();window.WorkBoard?.reset();socket?.disconnect();identity=null;room=null;online=false;drafts={};entries=[];decisions=[];byId('entries').replaceChildren();byId('decisions').replaceChildren();save('p11-room-identity',null);byId('workspace').hidden=true;byId('welcome').hidden=false;byId('change').hidden=true;byId('participant').textContent='';byId('name').focus();};
 byId('room-form').onsubmit=async e=>{e.preventDefault();try {const created=await api('/rooms',{method:'POST',body:JSON.stringify({name:byId('room-name').value})});await refreshRooms();await openRoom(created.id);byId('room-name').value='';notice('Project created.');}catch(e){notice(e.message);} };
 for (const id of ['body','kind']) byId(id).addEventListener('input',()=>{if(room){draft().body=byId('body').value;draft().kind=byId('kind').value;saveDrafts();controls();}});
 byId('compose').onsubmit=async e=>{e.preventDefault();if(!room||!online||joining||draft().attempt)return;

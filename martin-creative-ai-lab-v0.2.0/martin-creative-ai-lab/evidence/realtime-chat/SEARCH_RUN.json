@@ -1,0 +1,144 @@
+{
+  "project": "P11",
+  "version": "0.5.0",
+  "date_utc": "2026-10-14",
+  "implementer": "Codex under Martin portfolio direction; fictional records/automated inputs, no independent team reviewer",
+  "baseline": {
+    "commit": "d56c97151fab0bd76b7209b30a32097489b88405",
+    "branch": "work",
+    "tree": "clean before work",
+    "fetched_main_matched": true,
+    "github_push_permission": true,
+    "git_transport_fetch_and_ls_remote": "executed successfully; normal main publication explicitly authorized"
+  },
+  "portfolio_decision": {
+    "selected": "P11 full-record retrieval reconnects old decisions and superseded blockers to source/current work beyond recent panels.",
+    "alternatives": "Actual P04 opening/full editions, P01 planning and completed P03/P05/P06/P10 milestones; independent readers, hardware practice/native play and real team handoffs remain credible opportunities.",
+    "technology": "Existing Node 24/SQLite/Socket.IO client. Indexed room streams and bounded literal matching avoid a derived FTS index, migration or external service. Native Godot available; Unity not found in PATH; no engine claim or web replacement."
+  },
+  "verified": {
+    "comparison": {
+      "fixture": "Identical fictional records through both actual server/store versions; no human team or playtest.",
+      "baseline_commit": "d56c97151fab0bd76b7209b30a32097489b88405",
+      "before": {
+        "version": "0.4.0",
+        "entries": 361,
+        "action_revisions": 63,
+        "decision_in_latest_history": false,
+        "decision_in_latest_decisions": false,
+        "blocker_in_latest_action_history": false,
+        "search_http_status": 404
+      },
+      "after": {
+        "version": "0.5.0",
+        "entries": 361,
+        "action_revisions": 63,
+        "decision_in_latest_history": false,
+        "decision_in_latest_decisions": false,
+        "blocker_in_latest_action_history": false,
+        "search_http_status": 200,
+        "match_count": 1,
+        "matched_revision": 2,
+        "matched_status": "blocked",
+        "current_revision": 63,
+        "current_status": "done",
+        "source_decision_preserved": true
+      }
+    },
+    "final_checks": {
+      "command": "npm test",
+      "exit_code": 0,
+      "tests": 81,
+      "passed": 81,
+      "failed": 0,
+      "skipped": 0,
+      "duration_ms": 65011.533579,
+      "new_checks": "Five store/HTTP/recovery tests plus three actual Chromium journeys; all pre-existing 73 checks retained. Final Unicode compatibility-expansion cursor pagination also passes."
+    },
+    "browser": "Chromium 154.0.8037.57 via locked Playwright 1.64.0; 1280×900 and 390×844. Literal markup, case/accents, source/current distinction, draft retention, pinned Previous/Next during broadcast, explicit refresh, keyboard focus return, empty results and delayed responses across project/identity changes; zero page errors/unhandled route activity in final run.",
+    "data_contract": "SQLite schema 2 and backup format 1 unchanged. Live backup/restore remains searchable with original identity. Queries export no credentials and preserve record content; no private workspace shipped. Room scoping does not add authorization.",
+    "capacity_sample": {
+      "node": "24.19.0",
+      "sqlite": "3.53.3",
+      "storage": "in-memory SQLite, single process; bounded local sample, not concurrent production load",
+      "entries": 10000,
+      "actions": 500,
+      "action_events": 10000,
+      "read_preserved_export_hash": true,
+      "schema": 2,
+      "samples": [
+        {
+          "query": "pressure valve",
+          "total": 20000,
+          "page_matches": 20,
+          "milliseconds": [
+            233.588,
+            231.394,
+            208.46,
+            208.267,
+            207.816
+          ]
+        },
+        {
+          "query": "missing needle",
+          "total": 0,
+          "page_matches": 0,
+          "milliseconds": [
+            88.171,
+            90.047,
+            89.495,
+            86.05,
+            85.569
+          ]
+        },
+        {
+          "query": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+          "total": 20000,
+          "page_matches": 20,
+          "milliseconds": [
+            200.628,
+            203.266,
+            201.462,
+            203.29,
+            200.606
+          ]
+        }
+      ]
+    },
+    "preservation": {
+      "baseline_commit": "d56c97151fab0bd76b7209b30a32097489b88405",
+      "unchanged_tracked_files_outside_product_and_continuity": 336,
+      "all_byte_equal": true,
+      "scope": "Every tracked repository file outside P11 and the eight explicitly affected continuity/manifest files. Includes other products, evaluations, assets, transfers and historical sources."
+    },
+    "repository_checks": {
+      "validator": "11 projects, 14 transfers, 8 assets, 2 legacy sources; 272 local file links",
+      "regressions": "11 document-ownership tests and 11 manifest tests passed; a first module-mode invocation failed import resolution and was replaced by the documented direct-script commands.",
+      "manifest": "Full maintained coverage is regenerated and checked after the evidence is final."
+    }
+  },
+  "reasoned_assessment": "Raw final desktop/mobile/context captures reviewed by Codex: matched historical blocker is labelled and separate from the completed current revision; controls wrap at 390px and the tested document has no horizontal overflow. Local samples support direct matching at present bounds. Neither statement is independent user review.",
+  "unverified": [
+    "Real team retrieval/retention benefit or customer demand",
+    "Concurrent production-load latency and other browsers/platforms/assistive technologies",
+    "Public authenticated accounts, private-room roles, hosting and commercial readiness"
+  ],
+  "review_corrections": "Pin the first-page cursor for Previous; keep refresh notice across pinned pages and detect newer records via API. Add keyboard return from context. Early test-fixture backup-call, hash-only login and delayed-route cleanup errors were corrected; failed runs are not counted as passes. Bound the cursor for UTF-8 compatibility expansion, verified with a valid 100-character Japanese query and multiple pages.",
+  "sha256": {
+    "projects/realtime-integration-lab/rooms-search.cjs": "5912967ae1069dd866fa6fc6046101b24fb029665292fb00830db6e9fb26a09a",
+    "projects/realtime-integration-lab/rooms-store.cjs": "efa9dfe0c637b3a125faad8e17563be30c6f806e542d0328925031c2a151b413",
+    "projects/realtime-integration-lab/rooms-server.cjs": "0a8724fac68dc5b0036c4f5083e1839931bb0eeaf58870d2bc482c24beda3fc3",
+    "projects/realtime-integration-lab/public/studio/search.js": "52f74e5ae92fb97ad2dfe09264246abcb5ae945c223005e7969e979b0e307f88",
+    "projects/realtime-integration-lab/public/studio/client.js": "25e798b3a7361c2e234b379111f24b5b45099b349e22ddf95cc16da80485844e",
+    "projects/realtime-integration-lab/public/studio/actions.js": "2d3e67d0875e63482286a355c48ba5226232030df1cde2bcf44dd7a949665ee6",
+    "projects/realtime-integration-lab/public/studio/index.html": "b15fc8a0c447b545c10cd8d30dcfdaf5261276d54ac5fb2178ac62608c81a88f",
+    "projects/realtime-integration-lab/public/studio/style.css": "5d8bb5691f271a3f6cf23164d1e9d488bc79302784551d90ddb10d5e683c4beb",
+    "projects/realtime-integration-lab/tests/search.test.cjs": "4382aa17904bab4afe05a55dba3cb791b8391fe1dddc5c770475476186bc759b",
+    "projects/realtime-integration-lab/tests/search-browser.test.cjs": "217c7211f94d60ccdb2708810eb215d61ceb5136baf8202cd0c8deec51d5f520",
+    "projects/realtime-integration-lab/package.json": "68b952e69f989267eec5d55666a22ef32792630aa3f63e5578e707b703c52daf",
+    "projects/realtime-integration-lab/package-lock.json": "002ffce13e3dcf30381095dfbb4dbd175ef59e190ed89cbb40fd737eec68921f",
+    "evidence/realtime-chat/search-history.png": "8c46e72958489fee6ab553fd069e5505a0f8eb1a9d9e0e7da40218210343d3bd",
+    "evidence/realtime-chat/search-mobile.png": "bd317f9fe89dc40a8b1f053488b7e863898f19af861efb29675b1fa1d190b9c3",
+    "evidence/realtime-chat/search-context.png": "4958133f0ccd53edf9cb16897a7b28fd4b163e2c1e21ac5af2f7efe1c21604ce"
+  }
+}

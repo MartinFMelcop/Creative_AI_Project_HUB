@@ -1009,3 +1009,26 @@ integration; Codex frames are same-agent creative judgment. Original unsafe C#
 binding abort was not reproduced: clean runs do not prove every GC/platform case.
 Physical listening, independent play/accessibility and commercial rights/demand
 remain separate. GitHub source/package publication is authorized; no Sites update.
+
+## ADR-048 — retrieve immutable project records without a derived index
+
+**Date:** 2026-10-14 (UTC). **Status:** P11 0.5.0.
+
+Choose the verified P11 retrieval gap over another completed game/media subsystem
+or prose expansion without reader evidence. Keep Node 24/SQLite and schema 2;
+room/capacity bounds support direct literal matching without an FTS index,
+search service or backup-format migration. Unicode compatibility/case/diacritic
+normalization applies to 1–8 words; punctuation has no operator semantics.
+
+Search notes/decisions and immutable action-event snapshots, not only current
+actions. Order by saved time, stream and ID; cursors bind room/query/type, pin both
+ceilings and retain the first page. Concurrent writes flag explicit refresh.
+Context labels the actual revision and separately reads its source/current work;
+board navigation keeps the highest known revision and does not replace drafts.
+Late HTTP responses cannot cross room/identity/query generations. No auto-save.
+
+Actual old/current HTTP comparison and 81 tests prove bounded behavior. A local
+20,000-record sample justifies this cost here, not concurrent service scale.
+Reconsider indexing from real latency/usage evidence with a concrete migration
+and recovery contract. Trusted identities/ownership remain chosen names rather
+than private-room roles; real team benefit and commercial demand are unverified.

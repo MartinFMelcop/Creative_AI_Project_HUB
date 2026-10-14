@@ -4,7 +4,7 @@
   <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Project Rooms · Creative AI Lab</title>
   <link rel="stylesheet" href="/studio/style.css">
-  <script src="/socket.io/socket.io.js" defer></script><script src="/studio/client.js" defer></script><script src="/studio/actions.js" defer></script>
+  <script src="/socket.io/socket.io.js" defer></script><script src="/studio/client.js" defer></script><script src="/studio/actions.js" defer></script><script src="/studio/search.js" defer></script>
 </head>
 <body>
   <header class="mast"><div><p class="eyebrow">Creative AI Lab / P11</p><h1>Project Rooms</h1></div>
@@ -25,7 +25,19 @@
       <div class="room-head"><div><p class="eyebrow" id="connection" role="status">Connecting…</p><h2 id="room-title">Choose a project</h2></div>
         <div class="tools"><button id="export" disabled>Export record</button><button id="link" disabled>Copy project link</button></div></div>
       <p id="room-hint" class="muted">Open an existing room or create a project to begin.</p>
-      <nav class="workspace-tabs" aria-label="Project view"><button id="conversation-tab" aria-pressed="true">Conversation</button><button id="actions-tab" aria-pressed="false" disabled>Actions</button></nav>
+      <nav class="workspace-tabs" aria-label="Project view"><button id="conversation-tab" aria-pressed="true">Conversation</button><button id="actions-tab" aria-pressed="false" disabled>Actions</button><button id="search-tab" aria-pressed="false" disabled>Search record</button></nav>
+      <section id="search-panel" hidden aria-labelledby="search-title">
+        <h2 id="search-title">Find the earlier decision</h2>
+        <p class="muted" id="search-help">Search all saved text in this project, including old action revisions. All words must match; case and accents are ignored. Punctuation is literal.</p>
+        <form id="search-form"><label for="search-query">Words to find</label><input id="search-query" type="search" maxlength="160" required aria-describedby="search-help" placeholder="e.g. coolant return">
+          <div class="search-tools"><label for="search-kind">Record type<select id="search-kind"><option value="all">All records</option><option value="note">Discussion notes</option><option value="decision">Decisions</option><option value="action">Action revisions</option></select></label><button id="search-submit">Search</button></div>
+        </form>
+        <p id="search-status" role="status">Start a search to find records beyond the loaded timeline.</p>
+        <p id="search-stale" hidden class="storage">New records arrived. These results keep their original snapshot. <button id="search-refresh" type="button">Refresh results</button></p>
+        <ol id="search-results" aria-label="Search results"></ol>
+        <nav class="search-pages" aria-label="Search pages"><button id="search-prev" type="button" disabled>Previous matches</button><button id="search-next" type="button" disabled>Next matches</button></nav>
+        <section id="search-context" hidden aria-labelledby="search-context-title"><h3 id="search-context-title" tabindex="-1">Saved context</h3><button id="search-context-back" type="button">Back to matched result</button><p class="muted">Nearby saved records, followed by linked work as it stood when opened. Search does not change your drafts.</p><div id="search-context-body"></div></section>
+      </section>
       <div id="discussion">
       <button id="older" hidden>Load earlier entries</button>
       <ol id="entries" tabindex="0" aria-label="Project conversation"></ol>

@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-10-13",
+  "updated_at": "2026-10-14",
   "projects": [
     {
       "id": "P01",
@@ -296,9 +296,9 @@
       "slug": "realtime-integration-lab",
       "status": "active",
       "maturity": "M4",
-      "phase": "assigned-workflow-validated",
+      "phase": "complete-record-search-validated",
       "origin": "github_snapshot_inspected",
-      "next_action": "Observe trusted collaborators carrying decisions into assigned work, conflict review and recorded outcomes; assess real workflow/retention needs alongside P01 rival strategy, P10 narrative progression and native play feedback before selecting another milestone.",
+      "next_action": "Observe real handoff retrieval, history/current-state understanding and draft continuity; compare independent P04/P10 readers, P03 hardware practice and native strategy/combat use before the next portfolio decision.",
       "related_projects": [
         "P01",
         "P02",
@@ -318,12 +318,13 @@
         "evidence/realtime-chat/DRAFT_RECOVERY_RUN.json",
         "evidence/realtime-chat/ROOMS_RUN.json",
         "evidence/realtime-chat/RECOVERY_RUN.json",
-        "evidence/realtime-chat/ACTIONS_RUN.json"
+        "evidence/realtime-chat/ACTIONS_RUN.json",
+        "evidence/realtime-chat/SEARCH_RUN.json"
       ],
       "source_id": "LEGACY-002",
-      "maturity_scope": "Project Rooms 0.4.0 adds decision-linked/independent assigned actions, four states, recorded blockers/outcomes, new reasons for reopening and immutable revision history. Transactional optimistic updates and attempt receipts preserve retries; native browser UI retains drafts, explicit conflict review and reading position across collaboration/reconnect. SQL schema 2 migrates schema 1 atomically; backup format 1 validates/restores both, including action audit/dedupe and identities. Actual old 0.3.0 code created the successfully migrated savepoint. Full P11 suite 73 plus final 13 workflow checks; real Chromium contexts and declared fixtures. Legacy/P02 dependency graph retained. Technical M4 for trusted local use; chosen names/ownership are not verified accounts/access roles, outcome text is not artifact certification. Independent usability, scale, public accounts and commercial validation remain open.",
+      "maturity_scope": "Project Rooms 0.5.0 retrieves all notes/decisions and immutable action revisions beyond recent panels. Literal Unicode matching, twenty-match pinned pages, explicit refresh and exact nearby/source/current-work context preserve drafts and highest known board revisions. Actual old/current servers demonstrate the retrieval gap; 81 full-suite checks include real Chromium desktop/mobile, keyboard return and delayed responses. A single-process 20,000-record sample preserves export data; not production-load proof. SQLite schema 2, backup format 1, dependencies, legacy/P02 and other projects are retained. Technical M4 for trusted local use; chosen identities are not verified private-room accounts, outcomes are not artifact certification. Independent team use, public operation and commercial validation remain open.",
       "working_path": "projects/realtime-integration-lab",
-      "working_version": "0.4.0"
+      "working_version": "0.5.0"
     }
   ]
 }

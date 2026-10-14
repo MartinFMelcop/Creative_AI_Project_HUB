@@ -1,11 +1,11 @@
 # P11 — Project Rooms / Live exchange
 
-**Version:** 0.4.0. A local project workspace with remembered participants,
+**Version:** 0.5.0. A local project workspace with remembered participants,
 separate conversations, saved notes/decisions, recoverable history, JSON export,
-assigned actions, blockers/outcomes, change history and consistent workspace recovery.
+assigned actions, blockers/outcomes, change history, complete-record search and consistent workspace recovery.
 The original ephemeral exercise remains available with its unchanged protocol.
 
-![Actual action workflow with fictional Chromium participants](../../evidence/realtime-chat/actions-preview.png)
+![Actual historical context and current work with fictional Chromium records](../../evidence/realtime-chat/search-context.png)
 
 ## Run Project Rooms
 
@@ -31,7 +31,8 @@ npm run test:rooms
    Your remembered local identity reopens the saved room and its latest entries.
 5. Assign a participant who has joined the room. Move work through To do, In
    progress, Blocked and Done; blockers/completion require a recorded update.
-6. Load earlier entries or Export record for all notes, decisions, actions and
+6. Use **Search record** to find earlier text, decisions or historical action revisions. Open saved context to inspect nearby records, the source decision and current linked work.
+7. Load earlier entries or Export record for all notes, decisions, actions and
    action history. `Assigned to me` and `Unassigned` filter the action board.
 
 `ROOMS_DB` selects the SQLite file; default `data/rooms.sqlite` is ignored by Git.
@@ -69,6 +70,38 @@ without credentials. Limits: 500 characters per entry, 40 per participant name,
 project. Export is a consumable record, not a database restore/import tool.
 Use the workspace recovery workflow below to preserve full continuation.
 Do not copy a running WAL database as though its main file alone were complete.
+
+## Search the complete project record
+
+Search record covers every saved note/decision and every action revision, including
+records outside the loaded timeline and recent decision/history panels. Enter
+1–8 literal words (at most 160 characters) and optionally choose a record type.
+Every word must occur in the entry body or the revision's title/update; order
+and case/accents do not matter. Punctuation, quotes, `%` and `_` are literal.
+There are no query operators, wildcard expansion, ranking or semantic answers.
+
+Twenty newest matches appear per page with author/time and exact revision/status.
+Several revisions of one action can match. Pagination pins both immutable record
+streams, so later writes cannot reorder Previous/Next. New records trigger
+**Refresh results**; pages also detect newer server records when no socket arrival
+was observed. Refresh explicitly starts a new snapshot. A new search, room change,
+reconnect or identity change resets the search view; queries are not persisted.
+
+**Open saved context** shows two nearby records/revisions on either side of the
+match, the original linked decision and current linked actions. The matched item
+is labelled. Current work is a separate snapshot taken when context opens; it is
+not the historical revision's status or a live-updating view. **Open current
+action** returns to the board and retains its highest known revision. Search and
+navigation preserve conversation/action drafts and spend no action attempt.
+**Back to matched result** restores keyboard focus without reloading that page.
+
+Search reads SQLite directly under the existing room/capacity bounds; no durable
+index, schema migration, new dependency or external service is added. It does not
+search other projects, participant names, attachments or deleted/off-site records.
+All trusted identities can already open all projects: scoping is not private-room
+access control. [Execution](../../evidence/realtime-chat/SEARCH_RUN.json) records
+old/new retrieval, actual Chromium journeys and a bounded 20,000-record sample;
+this is not independent team usability or production-load validation.
 
 ## Assigned work and concurrent changes
 
@@ -112,8 +145,9 @@ fixtures. Codex inspection is not independent collaborator/accessibility approva
 
 The Node 24 operator CLI runs locally; there is no backup HTTP endpoint.
 The backup format remains version 1; database schemas 1 and 2 are supported.
-**Before upgrading an existing workspace, retain a 0.3.0 savepoint.** Opening with
-0.4.0 migrates schema 1 to 2 transactionally; failed migration rolls back. Older
+**Before opening a schema-1 workspace, retain a 0.3.0 savepoint.** Opening with
+0.4.0 or later migrates schema 1 to 2 transactionally; failed migration rolls back.
+Existing 0.4.0/schema-2 workspaces open in 0.5.0 without a schema migration. Older
 schema-1 bundles remain inspectable/restorable and upgrade on application open.
 The 0.3.0 application cannot open schema 2; downgrade by selecting a retained old
 backup in a new file, not by rewriting the version header. The current CLI can

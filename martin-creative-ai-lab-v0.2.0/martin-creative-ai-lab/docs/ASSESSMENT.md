@@ -1,29 +1,29 @@
-# Current assessment — give the tactical campaign a native identity
+# Current assessment — retrieve work beyond the recent panels
 
-Clean `41c21c6` matches fetched main; branch `work`, push permitted. Inspected
-instructions/state/registry/seed, decisions/evolution, twelve commits and actual
-P05 UI/domain/package, P04 reading edition and P11 workflow. Recent work spans
-P03/P06/P10/P01/P11; P03 completion does not choose this session's workstream.
+Clean `d56c971` matches fetched main; branch `work`, publishing permitted. Read
+instructions, state/registry/seed, evolution/decisions and twelve actual commits.
+Inspected P11 store/server/schema/UI/recovery, P04 prose/editions and P01 planning.
+Recent work spans P01/P03/P05/P06/P10/P11, with the last two in musical rehearsal
+and native presentation. Native Godot is available; Unity was not located in PATH.
 
 | Opportunity | Evidence and decision |
 |---|---|
-| P05 creative feedback | Three complete native encounters have text-only cards and silence. Integrate original portraits, real transaction markers/cues and stable UI ownership; selected for an observable campaign improvement. |
-| P05 shutdown alone | Prior hosted unsafe-binding abort occurred after 667 checks; retry/local execution passed. Investigate lifetime within the presentation work, without claiming a standalone root-cause repair. |
-| P03 / P06 / P01 | Rehearsal, Linux/controller delivery and rival planning just shipped. Unassisted timing/setup/strategy evidence is stronger than another automatic nearby feature. |
-| P04 / P10 / P11 | Actual prose, conversation and assigned workflows exist. Readers/team use should guide expansion; no external approval is fabricated. |
-| P02 / P09 | Independent candidate context and real professional case sources remain absent. |
+| P11 complete-record retrieval | Timeline caps at 300, decisions at 100 and action history at 50; export is the only complete read path. Search old decisions/blockers, exact context and current linked work; selected. |
+| P04 substantive editorial work | A full five-scene story and usable editions exist. The inspected opening establishes Baldino's concrete fault. Historical manuscript and independent reader response are absent; expanding/revising automatically has a weaker basis. |
+| P01 / P05 / P06 native milestones | Real planning, tactical presentation and Linux/controller delivery exist. Player strategy/feedback and platform validation are credible alternatives; another automatic nearby feature does not close a clearer present gap. |
+| P03 / P10 | Targeted musical practice and consequential handover just shipped; hardware listening and independent narrative use should guide further content. |
+| P02 / P09 | Independent candidate context and real professional case sources remain missing. |
 
-Keep C#/Godot .NET 4.6.3 and the exact Core/save model. Use one new image_gen
-atlas and deterministic Python/NumPy PCM production; no reused historical art,
-engine migration, browser implementation, music bed or shared framework.
+Use existing Node 24/SQLite, indexed room streams and bounded literal Unicode
+matching; avoid a durable FTS index that would enlarge the backup/migration
+contract at 20,000 records. No stack migration, external retrieval service or
+shared framework. Current work improves recoverability of recorded decisions,
+not account security, factual verification or an invented market result.
 
-Before: old 0.1.0 text cards, no media feedback, replaced control identities.
-After: actual portraits/cues and accepted-state markers accompany the same
-campaign. In identical 300-selection engine probes, old retains 39/76 initial
-child nodes; new retains 88/88. Counts themselves are not memory/performance
-measurements. Native/mixer/window execution establishes integration; visual
-judgment is Codex's assessment and human/commercial benefit remains unverified.
-[Execution](../evidence/cinderwatch/PRESENTATION_RUN.json) records the boundaries.
+Before/after actual servers: search 404 becomes 200; a superseded revision-2
+blocker reconnects to its original decision and current revision-63 outcome.
+[Execution](../evidence/realtime-chat/SEARCH_RUN.json) separates technical checks,
+implementer UI review, local capacity sampling and unverified real-team value.
 
 # Previous assessment — a consequence that people can answer
 

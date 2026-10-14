@@ -26,6 +26,8 @@ function createRoomsServer({ dbPath = ':memory:' } = {}) {
     res.status(201).json(room);
   }));
   app.get('/api/studio/rooms/:id/history',route((req,res) => res.json(store.history(req.params.id,req.query.before === undefined ? undefined : Number(req.query.before)))));
+  app.get('/api/studio/rooms/:id/search',route((req,res) => res.json(store.records.search(req.params.id,req.query))));
+  app.get('/api/studio/rooms/:id/context/:kind/:record',route((req,res) => res.json(store.records.context(req.params.id,req.params.kind,Number(req.params.record)))));
   app.get('/api/studio/rooms/:id/actions',route((req,res)=>res.json(store.work.snapshot(req.params.id))));
   app.get('/api/studio/rooms/:id/action-attempts/:attempt',route((req,res)=>res.json(store.work.receipt(req.participant,req.params.id,req.params.attempt))));
   app.get('/api/studio/rooms/:id/actions/:action/history',route((req,res)=>res.json(store.work.history(req.params.action,req.params.id))));

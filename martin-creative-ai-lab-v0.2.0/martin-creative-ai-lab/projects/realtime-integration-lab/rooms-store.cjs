@@ -5,6 +5,7 @@ const { mkdirSync } = require('node:fs');
 const { dirname } = require('node:path');
 const {initialize}=require('./rooms-schema.cjs');
 const {Actions}=require('./rooms-actions.cjs');
+const {RecordSearch}=require('./rooms-search.cjs');
 
 const digest = (token) => createHash('sha256').update(token).digest('hex');
 function text(value, max, label) {
@@ -21,7 +22,7 @@ class RoomsStore {
     try {
       if(this.db.prepare('PRAGMA user_version').get().user_version>2)throw new Error('This database requires a newer Project Rooms version.');
       this.db.exec('PRAGMA foreign_keys=ON; PRAGMA journal_mode=WAL; PRAGMA busy_timeout=3000;');
-      initialize(this.db);this.work=new Actions(this);
+      initialize(this.db);this.work=new Actions(this);this.records=new RecordSearch(this);
     } catch(error) {this.db.close();throw error;}
   }
   session(name) {

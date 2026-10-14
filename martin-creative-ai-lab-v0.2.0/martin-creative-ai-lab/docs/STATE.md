@@ -1,34 +1,33 @@
 # Lab state
 
-**Updated:** 2026-10-13 (UTC). **Seed:** 0.24.0.
-**Current milestone:** P05 Cinderwatch 0.2.0 — illustrated native action feedback.
+**Updated:** 2026-10-14 (UTC). **Seed:** 0.25.0.
+**Current milestone:** P11 Project Rooms 0.5.0 — complete-record retrieval.
 
-[Play the compiled project](../projects/cinderwatch/README.md). Eight newly
-generated portraits distinguish the three rescuers/five machine types; seven
-original PCM cues and fading accepted-state markers make actions observable.
-HP/shield/row/Pin/scorch feedback, selected/active outlines and down-state dimming
-preserve rule/turn/save behavior. Keyboard focus follows the next legal control.
-Cards/buttons and twelve styles are reused rather than rebuilt on selection.
-Mute, focus/tactics/reset stop and actual window-close mixer drain accompany
-explicit owned-resource cleanup. No queued turn or full actor animation.
+[Run Project Rooms](../projects/realtime-integration-lab/README.md) and open
+Search record. Literal Unicode case/accent-insensitive words find every saved
+note/decision and historical action title/update. Twenty-match snapshot pages
+remain stable during new writes; refresh is explicit. Context distinguishes the
+matched revision, nearby records, original decision and current linked work.
+Return to the matching control or board without replacing either draft.
 
-[Execution](../evidence/cinderwatch/PRESENTATION_RUN.json) separates compilation,
-real native campaigns, AudioServer capture, original-artifact control comparison,
-OpenGL frames and OS keyboard/WM_DELETE_WINDOW. All four synthetic routes retain
-original HP/actions; rules/save schema and Core sources are unchanged. The new
-0.2.0 ZIP loads raw PNG/WAV outside source with runtime-only .NET and no imported
-media cache/SDK. Original 0.1.0 ZIP and other products/archive stay intact.
+[Execution](../evidence/realtime-chat/SEARCH_RUN.json): actual 0.4.0 and 0.5.0
+servers receive identical fictional records. The old search endpoint returns
+404; the new one finds a revision-2 blocker, its decision and the revision-63
+completed action, all beyond recent panels. The complete suite passes 81 tests;
+real Chromium covers desktop/mobile, keyboard return, pages, drafts and delayed
+responses. A bounded local 10,000-entry/10,000-event sample preserves export data.
+SQLite schema 2, backup format 1, dependencies, legacy/P02 sources and other
+products remain intact. No private live database is shipped.
 
-Started clean at `41c21c6`, matching fetched main; push authorized/permitted.
-Compared P03's completed rehearsal, P04 readers, P11 handoffs and P05's absent
-creative feedback. A bounded native identity integrates real assets into an
-existing complete campaign; C#/Godot .NET fits its actual consumer, Python/NumPy
-fits deterministic sound production. Unity was not located; no web substitute.
+Started clean on `work` at `d56c971`, matching fetched main; transport works and
+main publication is explicitly authorized. Compared actual P11 limits with P04's
+complete edition and completed P01/P03/P05/P06/P10 milestones. Retrieval closes a
+measurable workflow gap; more nearby game/media or prose expansion needs stronger
+external experience evidence. Node/SQLite fit the existing service and bounded
+immutable records; no engine rewrite or search service is warranted.
 
-Pixel review corrected hidden scorch lines and damage colour; input checks
-corrected lost focus. Real playback warnings led to mixer drain/clean window
-shutdown. Prior CI's unsafe C# binding abort was inspected but not reproduced;
-bounded clean runs do not prove every platform/GC schedule repaired. Independent
-readability/enjoyment/accessibility, physical listening, OS export and commercial
-clearance remain open. Next compare native play/listening with P03 practice,
-P04/P10 readers and P11 team handoffs before selecting another workstream.
+Technical checks are verified; UI judgment is Codex's assessment. Fictional
+fixtures are not team feedback. Public accounts/privacy, concurrent production
+load, independent usability/retention and commercial demand remain unverified.
+Next compare real handoff retrieval with independent P04/P10 reading, musical
+practice and native strategy/combat use before selecting another workstream.
