@@ -1,4 +1,22 @@
 [
-  {"id":"midnight-signal","score":"track.json","side":"SIDE A · 001","intro":"The last train is leaving. Keep the city moving."},
-  {"id":"rain-circuit","score":"rain-circuit.json","side":"SIDE B · 002","intro":"Rain slows the avenue. Carry the long phrases through the lights."}
+  {
+    "id": "midnight-signal",
+    "score": "track.json",
+    "side": "SIDE A \u00b7 001",
+    "intro": "The last train is leaving. Keep the city moving.",
+    "rehearsalAudio": {
+      "0.75": "assets/rehearsal/midnight-signal-75.ogg",
+      "0.9": "assets/rehearsal/midnight-signal-90.ogg"
+    }
+  },
+  {
+    "id": "rain-circuit",
+    "score": "rain-circuit.json",
+    "side": "SIDE B \u00b7 002",
+    "intro": "Rain slows the avenue. Carry the long phrases through the lights.",
+    "rehearsalAudio": {
+      "0.75": "assets/rehearsal/rain-circuit-75.ogg",
+      "0.9": "assets/rehearsal/rain-circuit-90.ogg"
+    }
+  }
 ]

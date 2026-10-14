@@ -70,9 +70,9 @@
       "slug": "tokyo80s",
       "status": "active",
       "maturity": "M4",
-      "phase": "targeted-musical-rehearsal-validated",
+      "phase": "original-pitch-rehearsal-validated",
       "origin": "new_seed_implementation",
-      "next_action": "Observe unassisted phrase selection, slowed backing, repeated takes and return to full runs on real hardware; compare native play, independent readers and trusted team handoffs before selecting the next milestone.",
+      "next_action": "Compare original/slow backing on physical output and unassisted phrase practice, including timbre/attack feel and loading cancellation; weigh native hardware/tactics, independent readers and real project-record use next.",
       "related_projects": [
         "P01",
         "P02",
@@ -84,11 +84,12 @@
         "projects/tokyo80s/media/provenance.json",
         "evidence/tokyo80s/RUN.json",
         "evidence/tokyo80s/SETLIST_RUN.json",
-        "evidence/tokyo80s/REHEARSAL_RUN.json"
+        "evidence/tokyo80s/REHEARSAL_RUN.json",
+        "evidence/tokyo80s/PITCH_RUN.json"
       ],
       "working_path": "projects/tokyo80s",
-      "working_version": "0.3.0",
-      "maturity_scope": "Two original rhythm stages retained; 0.3.0 adds eight four-bar phrases per song/chart, 75/90/100% real Web Audio playback, four-click entrance and complete boundary tails. Performance-time judgments/offset/release/re-hold keep real windows. Full results link actual phrase misses/lost holds to rehearsal; same-setup take comparison and source/performance export never update full-run bests. Real Chromium keyboard/touch/pause/repeat/cancel and original full-run regressions, baseline comparison and Codex frames. Slower backing lowers pitch. No physical listening, independent learning/appeal, other-browser/accessibility or market validation."
+      "working_version": "0.4.0",
+      "maturity_scope": "Two original browser rhythm stages retain full OGG/PCM/scores, calibration, scoring and bests. P03 0.4.0 integrates four original-pitch offline tempo derivatives, mapped unit-rate playback, loading interruption/stale response isolation and explicit backing exports. Actual logic/browser/full-song, decoded/encoded signal and sampled musical/output checks; scripted input/Codex frame review, no physical listening, independent learning/accessibility or market validation."
     },
     {
       "id": "P04",
@@ -207,9 +208,9 @@
       "slug": "audio-poetry-music-lab",
       "status": "active",
       "maturity": "M4",
-      "phase": "rhythm-and-two-native-audio-consumers",
+      "phase": "rhythm-tempo-and-two-native-audio-consumers",
       "origin": "user_directive",
-      "next_action": "Listen to original rhythm tracks and P05/P06 cues on physical output; compare action distinction, dynamics and musical quality before more catalogue work.",
+      "next_action": "Compare physical original/slow P03 listening, timbre and attack feel alongside P05/P06 cue distinction before further audio production.",
       "related_projects": [
         "P03",
         "P04",
@@ -228,11 +229,13 @@
         "evidence/tokyo80s/SETLIST_RUN.json",
         "projects/cinderwatch/Native/media/provenance.json",
         "projects/cinderwatch/Native/media/audio/catalog.json",
-        "evidence/cinderwatch/PRESENTATION_RUN.json"
+        "evidence/cinderwatch/PRESENTATION_RUN.json",
+        "projects/tokyo80s/media/rehearsal-provenance.json",
+        "evidence/tokyo80s/PITCH_RUN.json"
       ],
       "working_path": "projects/tokyo80s/media",
-      "working_version": "0.4.0",
-      "maturity_scope": "Preserved P03 original masters/Vorbis/scores and P06 fourteen cues/two loops. P05 0.2.0 adds seven original deterministic mono PCM16 action cues, native playback/mute/stop and actual AudioServer capture. Source/catalog/hash/duration/endpoint/non-clipping checks and bounded consumer execution. No external samples/MIDI/voices, historical recovery, physical listening/album or exclusive commercial approval.",
+      "working_version": "0.5.0",
+      "maturity_scope": "Preserved P03 original masters/Vorbis/scores and P06 fourteen cues/two loops. P05 0.2.0 adds seven original deterministic mono PCM16 action cues, native playback/mute/stop and actual AudioServer capture. Source/catalog/hash/duration/endpoint/non-clipping checks and bounded consumer execution. No external samples/MIDI/voices, historical recovery, physical listening/album or exclusive commercial approval. P08 0.5.0 adds four tempo derivatives from preserved P03 PCM, actual encoded/decoded signal probes and unit-rate browser integration; no new composition or physical listening claim.",
       "working_paths": [
         "projects/tokyo80s/media",
         "projects/veil-arena/media/audio",

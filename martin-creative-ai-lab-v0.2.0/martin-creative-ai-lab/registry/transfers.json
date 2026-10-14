@@ -135,10 +135,12 @@
         "projects/tokyo80s/README.md",
         "evidence/tokyo80s/RUN.json",
         "projects/tokyo80s/media/rain-provenance.json",
-        "evidence/tokyo80s/SETLIST_RUN.json"
+        "evidence/tokyo80s/SETLIST_RUN.json",
+        "projects/tokyo80s/media/rehearsal-provenance.json",
+        "evidence/tokyo80s/PITCH_RUN.json"
       ],
-      "verification_scope": "Preserved Midnight Signal 69s plus Rain Circuit 84.5s decoded/playback and full real-clock consumer runs; onset/duration-aligned charts and musical holds. Production/consumer integration only; no independent listening, model learning or shared-engine claim.",
-      "next_action": "Compare physical play/listening, especially sustained phrases and pause/re-hold, before further musical expansion."
+      "verification_scope": "Preserved Midnight Signal 69s plus Rain Circuit 84.5s decoded/playback and full real-clock consumer runs; onset/duration-aligned charts and musical holds. Production/consumer integration only; no independent listening, model learning or shared-engine claim. Four 75/90% original-pitch derivatives are decoded/checked and consumed in actual rehearsal with mapped offsets; encoded probes/OfflineAudioContext samples are not physical listening or learning evidence.",
+      "next_action": "Compare original/slow backing and attack/timbre on physical hardware during unassisted practice before extending musical claims."
     },
     {
       "id": "TR-013",

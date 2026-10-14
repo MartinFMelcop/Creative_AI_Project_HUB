@@ -1,5 +1,5 @@
 import { RhythmRun, adjustedTime, calibrationOffset } from './core.js';
-import { phrases, makeSession, phraseResults } from './rehearsal.js';
+import { phrases, makeSession, phraseResults, backingFor } from './rehearsal.js';
 const $=id=>document.getElementById(id);
 const canvas=$('board'), context=canvas.getContext('2d');
 const pads=[...document.querySelectorAll('[data-lane]')];
@@ -79,7 +79,7 @@ function rehearsalInfo() {
   $('rate').disabled=!chosen;
   $('full-run').hidden=!chosen;
   $('start').firstChild.textContent=chosen?'Start rehearsal ':'Start run ';
-  $('rehearsal-info').textContent=chosen?`${chosen.label} · ${Math.round(track.bpm*rate*10)/10} BPM · four-click entrance · no full-run best.`:'Full track · original tempo.';
+  $('rehearsal-info').textContent=chosen?`${chosen.label} · ${Math.round(track.bpm*rate*10)/10} BPM · original pitch · four-click entrance · no full-run best.`:'Full track · original tempo.';
   if(!run) {
     session=makeSession(track,$('difficulty').value,$('phrase').value,rate);
     $('progress').max=session.duration;
@@ -96,13 +96,14 @@ async function ensureAudio() {
   }
   await audioContext.resume();
 }
-async function loadTrackAudio() {
-  if(buffer) return buffer;
-  const response=await fetch(track.audio);
-  if(!response.ok) throw new Error('The track could not load. Check the connection and try again.');
-  buffer=await audioContext.decodeAudioData(await response.arrayBuffer());
-  if(Math.abs(buffer.duration-track.duration)>.1) throw new Error('Track duration does not match the chart.');
-  return buffer;
+async function loadTrackAudio(backing, token) {
+  if(buffer?.url===backing.url) return buffer.data;
+  const response=await fetch(backing.url);
+  if(!response.ok) throw new Error('The backing could not load. Check the connection and try again.');
+  const data=await audioContext.decodeAudioData(await response.arrayBuffer());
+  if(Math.abs(data.duration-backing.bufferDuration)>.1) throw new Error('Backing duration does not match this speed.');
+  if(token===epoch)buffer={url:backing.url,data};
+  return data;
 }
 function clearHeld() { held.clear();pads.forEach(p=>p.classList.remove('down')); }
 function stopSource() {
@@ -132,16 +133,18 @@ async function startRun() {
   $('results').hidden=true;lastExport=null;
   $('progress').max=session.duration;
   $('stage').dataset.session=session.mode;$('stage').dataset.rate=String(session.rate);
-  setMode('loading');updateStats();$('stage').dataset.position='0';$('progress').value=0;$('timer').textContent=`00:00 / ${stamp(track.duration)}`;center('Tuning in…','Loading the original soundtrack.');message('Preparing sound.');
+  setMode('loading');updateStats();$('stage').dataset.position='0';$('progress').value=0;$('timer').textContent=`00:00 / ${stamp(track.duration)}`;center('Tuning in…','Preparing the backing for this speed.');message('Preparing sound.');
   try {
     await ensureAudio();
-    const decoded=await loadTrackAudio();
+    if(token!==epoch)return;
+    session.backing=backingFor(track,session);
+    const decoded=await loadTrackAudio(session.backing,token);
     if(token!==epoch) return;
     source=audioContext.createBufferSource();source.buffer=decoded;source.connect(gain);
-    source.playbackRate.value=session.rate;
+    source.playbackRate.value=session.backing.playbackRate;
     started=audioContext.currentTime+.06;
     source.onended=()=>{ if(token===epoch&&mode==='playing') completeRun(); };
-    source.start(started,session.cueStart,session.audioEnd-session.cueStart);
+    source.start(started,session.backing.offset,session.backing.duration);
     countIn();
     setMode('playing');
     $('center').hidden=true;
@@ -149,6 +152,7 @@ async function startRun() {
     message(session.mode==='rehearsal'?`${session.phrase.label} at ${session.rate*100}% · follow four clicks, carry every tail. Each take stops for review.`:'D F J K / touch pads · P or Escape to pause · Space for Pulse.');
   } catch(error) {
     if(token!==epoch)return;
+    stopSource();
     setMode('error');center('Signal lost.',error.message);message(error.message);
   }
 }
@@ -225,8 +229,8 @@ function completeRun() {
     $('best').textContent=storeOK?`${newBest?'New best. ':''}${selected==='practice'?'Practice':'Arcade'} best in this browser: ${best.toLocaleString()}.`:'Browser storage is unavailable; this run still counts and can be exported.';
   }
   const breakdown=phraseResults(track,run.notes);
-  lastExport={game:'Tokyo 80s',version:'0.3.0',track:track.id,chart:selected,offsetMs:offset,...stats,
-    mode:session.mode,playbackRate:session.rate,
+  lastExport={game:'Tokyo 80s',version:'0.4.0',track:track.id,chart:selected,offsetMs:offset,...stats,
+    mode:session.mode,playbackRate:session.rate,backing:session.backing,
     ...(rehearsal?{phrase:session.phrase,cueStart:session.cueStart,audioEnd:session.audioEnd}:{}),
     timeUnit:'performance-seconds',phrases:breakdown,
     notes:run.notes.map(({id,time,lane,state,error,duration,sourceTime,sourceDuration,protected:shield})=>({id,time,lane,state,duration:duration||0,
@@ -270,8 +274,16 @@ document.addEventListener('keydown',e=>{
   if(['Escape','KeyP'].includes(e.code)&&['playing','paused'].includes(mode)){e.preventDefault();togglePause();}
 });
 document.addEventListener('keyup',e=>{if(e.code in keys)release(keys[e.code],`${e.code}:${keys[e.code]}`);});
-window.addEventListener('blur',()=>{clearHeld();if(mode==='playing')togglePause('Paused after leaving this window. Resume when you return.');});
-document.addEventListener('visibilitychange',()=>{if(document.hidden&&mode==='playing')togglePause('Paused while the page was hidden. Resume when you return.');});
+function interruptPlayback(reason) {
+  clearHeld();
+  if(mode==='loading') {
+    epoch++;stopSource();run=null;session=null;frozen=0;
+    setMode('ready');rehearsalInfo();
+    message('Loading interrupted. Press Start when you are ready; no playback was started.');
+  } else if(mode==='playing')togglePause(reason);
+}
+window.addEventListener('blur',()=>interruptPlayback('Paused after leaving this window. Resume when you return.'));
+document.addEventListener('visibilitychange',()=>{if(document.hidden)interruptPlayback('Paused while the page was hidden. Resume when you return.');});
 $('start').addEventListener('click',startRun);$('restart').addEventListener('click',startRun);$('replay').addEventListener('click',startRun);
 $('pause').addEventListener('click',()=>togglePause());$('pulse').addEventListener('click',pulse);
 $('song').addEventListener('change',()=>chooseTrack($('song').value));

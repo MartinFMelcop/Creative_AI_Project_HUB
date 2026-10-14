@@ -1,10 +1,10 @@
 # SEED — Martin Creative AI Lab
 
-**Version:** 0.28.0
+**Version:** 0.29.0
 **Data-base:** 10 de outubro de 2026  
 **Autor e responsável pelo portfólio:** Martin Melcop Neto  
 **Working language:** English for new documentation, plans, code comments, UI, and reports. Preserve original creative titles and historical source languages.
-**Current state:** P05 0.3.0 supplies an actual self-contained Linux C#/Godot player with original media, save continuity and runtime/engine notices. Technical release execution and Codex review are distinct from independent players, hardware/accessibility and commercial evidence.
+**Current state:** P03 0.4.0 / P08 0.5.0 delivers original-pitch slower rehearsal from preserved masters, unit-rate browser playback and explicit loading cancellation. Actual signal/browser checks and Codex review remain separate from physical listening, human learning and commercial evidence.
 
 > Construir um laboratório autoral em Git que transforma ideias, obras e experimentos em produtos pequenos, sistemas reutilizáveis e evidências técnicas verificáveis. A IA participa da criação e execução; Martin desenvolve sua capacidade de especificar, compreender, selecionar, corrigir, validar e explicar os resultados.
 
@@ -46,14 +46,14 @@ Se apenas este arquivo estiver disponível, ele é suficiente para iniciar a Fas
 |---|---|
 | Repository | MartinFMelcop/Creative_AI_Project_HUB; actual Git root `/workspace/Creative_AI_Project_HUB`; wrapper retained |
 | Preserved sources | 175 Rave Master texts / 3 WebSocket files; unchanged historical ZIP/inventory |
-| Current milestone | P05 self-contained Linux player 0.3.0 |
-| Runtime | Godot .NET 4.6.3 / .NET 10.0.12 included; actual Linux x86_64 ELF/PCK, editable project alternative |
-| Evidence | 74 C# checks, source/project and actual release journeys/mixer/OpenGL/X11, bundled runtime maps and legacy save; `evidence/cinderwatch/RELEASE_RUN.json` |
-| Limits | Scripted input/Codex review; no independent players, hardware/accessibility, other platforms or market evidence |
-| Next action | Compare unassisted installation/tactics with P03 pitch/practice, P04/P10 readers and P11 record portability |
-| Other products | P01 0.4.0, P03 0.3.0, P04 0.2.0, P06 0.4.0, P10/P11 0.5.0, P02 0.2.1 retained |
-| Rules / assets | P05 Core/save 0.1.0 and original portraits/cues retained; runtime/engine notices included, no new creative asset |
-| Attribution | Clean `3703f0b` matched fetched main; main authorized/permitted. Codex implementation/input/review |
+| Current milestone | P03 original-pitch rehearsal 0.4.0 / P08 derivatives 0.5.0 |
+| Runtime | Existing Web Audio consumer; four offline FFmpeg/Rubber Band Vorbis assets; no player build-tool dependency |
+| Evidence | 24 logic / 16 browser cases, original full runs, decoded assets, encoded probes and actual old/current playback; `evidence/tokyo80s/PITCH_RUN.json` |
+| Limits | Scripted input/Codex frame review; physical listening, timbre/accessibility, learning and commercial benefit unverified |
+| Next action | Compare physical original/slow listening and unassisted practice with native installation/tactics, P04/P10 readers and actual P11 use |
+| Other products | P01 0.4.0, P04 0.2.0, P05 0.3.0, P06 0.4.0, P10/P11 0.5.0, P02 0.2.1 retained |
+| Rules / assets | Original PCM/OGG/scores/producers and scoring/best keys preserved; four tempo derivatives, no new composition |
+| Attribution | Clean `45ea179` matched fetched main; main authorized/permitted. Codex implementation/input/signal/frame review |
 
 Registry evidence paths must resolve to existing files inside the lab; working
 paths must be directories and legacy-source IDs must exist. This documentary
@@ -223,7 +223,7 @@ Identificadores persistem mesmo quando nomes mudam. Um projeto arquivado pode co
 |---|---|---|---|---|
 | P01 | Artemyra / Eclipse Fair | Typed economy and native C# presentation | Godot .NET board, terminal workbench, replay and comparison | Native 0.4.0 local participants; core/CLI rules 0.1.0 retained, no historical restoration |
 | P02 | AI Evaluation & QA Lab (historical Unity proposal) | Requirements, reproduced bugs, artifact checks | Bounded practice tasks and later independent evaluation | EVAL-001 runner 0.2.0 uses pinned snapshots, starter 0.1.0; M4 harness scope, no model candidate |
-| P03 | Tokyo 80s | Original music, timing and sustained interaction | Midnight Signal and Rain Circuit with track selection/transition | P03 0.2.0 / P08 0.3.0 real media; human play/listening pending |
+| P03 | Tokyo 80s | Original music, timing and sustained interaction | Midnight Signal and Rain Circuit with track selection/transition | P03 0.4.0 / P08 0.5.0 original-pitch backing; human play/listening pending |
 | P04 | O Lich mais velho da tumba mais antiga / Darsen reading editions | Narrative, translation and reader production | Complete Portuguese story and English EPUB/PDF | New standalone adaptation 0.2.0; Portuguese 0.1.0 preserved, no historical manuscript restoration |
 | P05 | The Dark Knight / Cinderwatch | Turn-based seed, AGI, rows and states | Native three-encounter tactical rescue campaign | Native 0.3.0 self-contained Linux player; historical RMXP packages absent |
 | P06 | Véu Partido / Veilbreak | Native combat trial; historical 3D RPG seed | Animated two-phase arena with committed contact, source and executed PCK | New 0.3.0 destination; missing Unity starter remains historical |
@@ -307,13 +307,14 @@ cleanup is not isolation; escaped sessions remain outside its tested contract.
 
 ### P03 — Tokyo 80s
 
-[Tokyo 80s Night Shift](projects/tokyo80s/README.md) 0.3.0 keeps Midnight Signal
-and Rain Circuit, their original scores/masters, full runs and bests. It adds
-four-bar musical rehearsal with 75/90/100% backing and a four-click entrance.
-Actual result phrases link to playable retries; complete tails, real-time
-judgment/offset/pause windows, separate exports and identical-setup comparison
-support focused practice. Slower backing lowers pitch; no time stretching,
-engine migration, recovered ZIP or human learning/play approval is claimed.
+[Tokyo 80s Night Shift](projects/tokyo80s/README.md) 0.4.0 retains original scores,
+masters/full OGG/bests and four-bar rehearsal. Four offline tempo derivatives now
+keep original pitch at 75/90%, with unit-rate Web Audio, mapped offsets, complete
+tails and real-time judgment/pause/offset semantics. Missing/wrong-duration assets
+cannot detune silently; tab loss while loading cancels and requires Start. Exports
+identify tempo and actual backing. [Execution](evidence/tokyo80s/PITCH_RUN.json)
+compares real old/current playback, encoded probes and complete-song regressions.
+No new composition, engine migration, historical recovery or human learning claim.
 
 **Núcleo histórico:** Tóquio dos anos 1980, city pop/wave, arcade, dança como luta, aura e poderes evocando stands/personas. Protagonista associado a top score e topete azul-noite. O projeto anterior recebeu o nome `TOKYO80s_RhythmGame_v0.0.1.zip`; seu runtime não foi inspecionado aqui.
 
@@ -466,7 +467,11 @@ artist/player approval or full directional/hand-animated coverage.
 
 ### P08 — Audio, Poetry & Music Lab
 
-Current 0.4.0 adds seven original P05 PCM action cues with native playback/mute/
+Current 0.5.0 adds four original-pitch 75%/90% P03 tempo derivatives from preserved
+masters. Actual encoded frequency/transient/decoded checks and real browser
+consumption support integration; physical sound quality remains unverified.
+[Derivative provenance](projects/tokyo80s/media/rehearsal-provenance.json).
+Preserved 0.4.0 adds seven original P05 PCM action cues with native playback/mute/
 stop, mixer capture and producer/hash/endpoint checks; no soundtrack or physical
 listening claim. [P05 media](projects/cinderwatch/Native/media/provenance.json).
 Preserved 0.3.0 also delivers [Rain Circuit](projects/tokyo80s/media/rain-provenance.json):

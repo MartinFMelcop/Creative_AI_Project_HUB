@@ -1,6 +1,13 @@
 // Rehearsal uses performance seconds, so judgment windows and input offset keep
 // their real-time meaning at every playback rate. Source score/media stay intact.
 export const RATES = Object.freeze([.75, .9, 1]);
+export function backingFor(track, session) {
+  const rate = session.rate;
+  const url = rate === 1 ? track.audio : track.rehearsalAudio?.[String(rate)];
+  if (!url) throw new TypeError('The original-pitch backing for this speed is unavailable.');
+  return {url, offset: session.cueStart / rate, duration: (session.audioEnd - session.cueStart) / rate,
+    bufferDuration: track.duration / rate, playbackRate: 1, tempoRate: rate, pitch: 'original'};
+}
 export function phrases(track) {
   const bar = 240 / track.bpm;
   const result = [];

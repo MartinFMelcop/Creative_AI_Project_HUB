@@ -194,6 +194,13 @@ jobs:
           python3 projects/waystone-dialogue/test_adventure.py
       - name: Verify rendered Tokyo 80s audio and score contracts
         run: python3 projects/tokyo80s/tools/check_audio.py
+      - name: Verify original-pitch rehearsal assets and encoded signal probes
+        run: |
+          if ! command -v ffmpeg >/dev/null; then
+            sudo apt-get update
+            sudo apt-get install -y ffmpeg
+          fi
+          python3 projects/tokyo80s/tools/check_rehearsal_audio.py --signal
       - name: Require complete maintained lab coverage and matching hashes
         run: python3 tools/check_manifest.py
 

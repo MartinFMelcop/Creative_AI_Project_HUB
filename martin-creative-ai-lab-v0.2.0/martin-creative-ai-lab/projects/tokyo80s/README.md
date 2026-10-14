@@ -1,6 +1,6 @@
 # P03 — Tokyo 80s: Night Shift
 
-Version **0.3.0**. Two complete original stages with a selectable setlist.
+Version **0.4.0**. Two complete original stages with a selectable setlist.
 Midnight Signal preserves its original audio/charts and best-score keys; Rain
 Circuit introduces musical sustain interaction. The original 0.1.0 stage is an
 original 69-second
@@ -16,15 +16,20 @@ implementation from the Tokyo 80s seed; the historical ZIP was not recovered.
 Choose a four-bar phrase in **PLAY**, choose **75%, 90% or 100% SPEED**, then
 **Start rehearsal**. Both songs/charts have eight phrases. One bar of the actual
 preceding soundtrack and four scheduled clicks lead into the selected notes.
-The original backing uses Web Audio playback rate: slower speed also lowers
-pitch; pitch-preserving time stretching is not implemented. The stage identifies
-bars/speed. Each take stops for review rather than starting an unattended loop.
+75% and 90% backing now keeps the original pitch: four offline Vorbis derivatives
+come from the unchanged stereo PCM masters using FFmpeg/Rubber Band. The browser
+plays each prepared buffer at 1× and uses its stretched offset/duration. 100% and
+full runs use the unchanged original OGG. Only one decoded backing is cached;
+build tools are unnecessary to play. The stage identifies bars/speed/pitch. Each take stops for review rather than starting an unattended loop.
 
 Performance-time conversion keeps the ±45/95/145 ms judgments, personal offset,
 release grace and pause/re-hold behavior in real seconds. Note heads belong to
 one phrase; sustained tails crossing its boundary finish without truncation.
 Keyboard/touch, pause, restart and **Return to full run** work within rehearsal.
 Aborting stops source/click nodes and requires an explicit start for more sound.
+Leaving the tab/window during loading cancels startup; returning requires Start.
+Late downloads cannot replace a subsequently selected track. Missing or wrong-
+duration derivatives show an error before any backing/click plays; no detuned fallback.
 
 Full-run results show actual note accuracy, missed notes and lost holds for each
 phrase, with **Rehearse** shortcuts. Phrase note accuracy excludes off-beat inputs;
@@ -36,10 +41,25 @@ person's learning. Different setups are not compared.
 Rehearsals never write full-track bests. Returning to a full run restores original
 tempo/charts and the existing best keys. **Save run JSON** identifies mode/rate,
 phrase bounds, source audio offset and note source times/durations alongside
-performance seconds. Full-run exports retain their previous note times/durations
+performance seconds. The retained `playbackRate` field means performance tempo;
+the additive `backing` identifies the actual URL, unit node rate and stretched
+buffer offset/duration. Full-run exports retain their previous note times/durations
 at rate 1, with additive mode and phrase summaries. No run importer is added.
 [Execution](../../evidence/tokyo80s/REHEARSAL_RUN.json) separates real playback,
 synthetic input, original-version comparison and implementing-agent visual review.
+
+[Pitch execution](../../evidence/tokyo80s/PITCH_RUN.json) records actual old/current
+Web Audio playback, decoded artifacts, encoded tone/transient probes and sampled
+musical envelopes. Actual OfflineAudioContext output of Midnight Signal's ending
+shows the prior lowered harmonies and current original-pitch backing. These are
+bounded signal/integration checks, not physical listening or improved learning.
+
+Rebuild only the derivatives with `python3 tools/render_rehearsal.py` from this
+project. FFmpeg must include Rubber Band and libvorbis. The producer verifies
+original master hashes, measures float peaks, leaves encoding headroom, checks
+duration drift and publishes four complete assets plus their provenance/catalogue.
+It never regenerates the original masters/scores. Encoder stream identities can
+differ between runs/tool versions; byte-identical rebuilding is not promised.
 
 ## Rain Circuit
 
@@ -112,7 +132,7 @@ Apply between runs. This is a personal calibration, not a measured device latenc
 Closing the dialog cancels remaining sound nodes. Volume stays adjustable in play.
 
 A private Sites identity is retained in [.openai/hosting.json](.openai/hosting.json).
-This 0.3.0 execution updates GitHub only; the retained Site was not redeployed.
+This 0.4.0 execution updates GitHub only; the retained Site was not redeployed.
 Its deployment status is reported separately; an ID is not publication
 proof. GitHub remains the maintained source. The Site publishes only `dist/`
 and its hosting manifest, with owner-only access and no accounts/connector data.
@@ -150,6 +170,9 @@ Timing/scoring and audio contracts need Node/Python, without game dependencies:
 ```bash
 node --test projects/tokyo80s/tests/core.test.mjs projects/tokyo80s/tests/holds.test.mjs projects/tokyo80s/tests/rehearsal.test.mjs
 python3 projects/tokyo80s/tools/check_audio.py
+python3 projects/tokyo80s/tools/check_rehearsal_audio.py
+# With FFmpeg/Rubber Band, also decode assets and run encoded signal probes:
+python3 projects/tokyo80s/tools/check_rehearsal_audio.py --signal
 ```
 
 Browser checks reuse the already-pinned Playwright QA dependency from P11; this
@@ -179,6 +202,6 @@ Rain Circuit rebuilding uses `python3 projects/tokyo80s/tools/render_rain.py`; t
 remains unchanged. Decoded Vorbis measures -14.3 LUFS and -2.9 dBFS true peak.
 The new stage's PCM master has no clipped samples and approaches silence at its
 ending. These are executed signal measurements, not listening approval.
-Next compare unassisted phrase selection, slowed backing and repeat/return behavior
-on real hardware alongside both original arrangements. Independent musical
+Next compare original/slow backing on physical output, attack feel and unassisted
+phrase practice alongside both arrangements; time stretching can change timbre. Independent musical
 quality, learning benefit, other browsers and commercial interest remain open.

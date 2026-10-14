@@ -1,40 +1,39 @@
 # Lab state
 
-**Updated:** 2026-10-14 (UTC). **Seed:** 0.28.0.
-**Current milestone:** P05 self-contained Linux player 0.3.0.
+**Updated:** 2026-10-14 (UTC). **Seed:** 0.29.0.
+**Current milestone:** P03 original-pitch rehearsal 0.4.0 / P08 derivatives 0.5.0.
 
-[Cinderwatch](../projects/cinderwatch/README.md) now delivers an actual Linux x86_64
-player: extract the whole folder and run the ELF, with Godot .NET 4.6.3 and .NET
-10.0.12 bundled. The editable compiled project remains available; prior packages,
-Core/rules/save schema 0.1.0 and original portraits/cues remain intact.
+[Tokyo 80s](../projects/tokyo80s/README.md) now supplies four 75%/90% Vorbis
+backings derived from its preserved PCM masters. FFmpeg/Rubber Band performs
+offline stretching; Web Audio plays them at 1× with mapped offsets/durations.
+100%/full-run OGG, charts, scoring, calibration and best keys stay unchanged.
+Exports distinguish performance tempo from actual backing identity/node rate.
+Missing/wrong-duration assets cannot silently detune; one decoded buffer is cached.
 
-The maintained solution/preset and small Python exporter build from a fresh
-stage, validate official template identities, reject reported export failures,
-include raw media beside the executable and retain runtime/license notices.
-The loader uses the executable directory in the player and res:// in source.
-Incomplete media exits with an extraction diagnostic without creating a save.
-Build information identifies source/runtime/payload bytes; a static checker is
-separate from execution and is not an origin signature or source-to-binary proof.
+Actual tab departure during a delayed load exposed an existing startup gap.
+Loading now cancels on focus/visibility loss; Start is required after return.
+Late responses cannot replace a newly selected track. The controlled failing
+case passes after the fix, alongside existing playing/pause/error regressions.
 
-[Execution](../evidence/cinderwatch/RELEASE_RUN.json) records 74 C# checks, source/
-compiled-project execution, four actual release victories and deadline loss,
-779 headless/790 rendered native checks, AudioServer capture, X11 Pin/Brace,
-byte-identical replay/Save of an earlier 0.2.0 save and clean window close.
-Loaded CLR/hostfxr/CoreLib paths are inside the bundle. Actual Debian 13 software
-OpenGL/mixer input is scripted; no physical audio/player was observed.
-The previous consumer fails to locate its runtime under the same controlled
-runtime-discovery isolation; the new ELF completes the campaign outside source.
+[Execution](../evidence/tokyo80s/PITCH_RUN.json) records 24 logic cases, 16 browser
+cases across source/rehearsal/full-song workflows, final affected regressions,
+four decoded artifacts, encoded 440Hz/transient probes and real old/current
+playback/OfflineAudioContext samples. Both complete 69s/84.5s stages ran.
+Sampled eight phrase boundaries per asset show envelope offsets −10…0ms;
+this is not proof of every attack or hardware latency. Codex reviewed frames.
+Physical listening, unassisted practice/accessibility, timbral quality, other
+browsers and learning/commercial benefit remain unverified.
 
-Started clean at `3703f0b`, matching fetched main, with authorized normal main
-publication and push permission. Reassessed actual P03 rehearsal, P05 source/
-packaging and P11 recovery, plus registry/seed/history. Selected removing P05's
-installation barrier over pitch-preserving practice or record portability.
-Keep C#/Godot for the existing native game; Python handles packaging. Native
-SDK/editor/templates are available; no browser substitute or engine migration.
+Started clean at `45ea179`, matching fetched main; normal main publication is
+authorized and push permitted. Reassessed portfolio/history and actual P03,
+P11 and P10 sources. Recent native deliveries do not dictate this selection.
+Pitch-preserving practice removes a concrete musical limitation; selective room
+import needs authorship/merge semantics, while complete literature needs readers.
+Standard/Mono Godot 4.6.3 and SDK 10.0.401 exist; preserve the established browser
+consumer rather than migrate engines for an offline audio-processing milestone.
 
-Hosted checks execute delivered/rebuilt players; a checksum-validated template
-cache reduces repeat download cost. Actual CI/publication result is confirmed at
-task closure. An environment restart retained all artifact/evidence hashes.
-Next compare unassisted installation/tactics with P03 pitch/practice, P04/P10
-readers and actual P11 portability needs. Hardware/accessibility, other platforms,
-independent balance/appeal and commercial demand remain unverified.
+Original media/producers/charts, other products and archived sources are preserved.
+The environment restart retained artifacts/logs. Existing CI now checks rendered
+derivatives and encoded probes plus real playback; publication/CI status is
+confirmed at task closure. Compare physical listening/practice with native
+installation/tactics, independent P04/P10 reading and real P11 use next.

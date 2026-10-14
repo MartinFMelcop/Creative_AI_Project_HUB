@@ -1,0 +1,309 @@
+{
+  "schema_version": 1,
+  "project_id": "P03",
+  "version": "0.4.0",
+  "source_project": "P08",
+  "source_version": "0.5.0",
+  "executed_at": "2026-10-14 UTC",
+  "baseline_commit": "45ea179f1f04a1cbbf00c81f0b8f3627c92b6c35",
+  "scope": "Four original-pitch tempo derivatives and their existing browser rehearsal consumer; no new composition, native rewrite or hosted redeployment.",
+  "environment": {
+    "platform": "Debian 13 Linux x86_64",
+    "node": "24.19.0",
+    "browser": "Chromium 154.0.8037.57 built on Debian GNU/Linux 13 (trixie)",
+    "processor": "ffmpeg version 7.1.5-0+deb13u1 Copyright (c) 2000-2026 the FFmpeg developers",
+    "sample_rate": 44100,
+    "channels": 2,
+    "actor": "Codex implementing agent; scripted input and frame/signal review",
+    "audio": "Actual Web Audio decode/playback/OfflineAudioContext; no physical output listening"
+  },
+  "verified": {
+    "checks": {
+      "logic": 24,
+      "browser_cases": 16,
+      "scope": "10 original full-song workflow cases and six final rehearsal cases; four affected full-song playback/error/tab cases rerun after startup fix.",
+      "full_songs_seconds": [
+        69,
+        84.5
+      ],
+      "registered_test_runner": "Controlled failing assertion produced failure before counting actual registered cases."
+    },
+    "derivatives": [
+      {
+        "track": "midnight-signal",
+        "rate": 0.75,
+        "audio": "dist/assets/rehearsal/midnight-signal-75.ogg",
+        "sha256": "cad22e01268a0a235b690978caa32a19fc5312d82fa2ce085eabb3845db07e5b",
+        "bytes": 1100021,
+        "duration_seconds": 92.0,
+        "decoded_frames": 4057200,
+        "peak": 0.7622445821762085,
+        "rms": 0.1278583782096873,
+        "gain": 1.0
+      },
+      {
+        "track": "midnight-signal",
+        "rate": 0.9,
+        "audio": "dist/assets/rehearsal/midnight-signal-90.ogg",
+        "sha256": "2b96df4e129db766774b3303633b5126df7ddb6eaf166a65410142f425b3566f",
+        "bytes": 944821,
+        "duration_seconds": 76.66666666666667,
+        "decoded_frames": 3381000,
+        "peak": 0.870538055896759,
+        "rms": 0.13922558115160868,
+        "gain": 0.9925221939056994
+      },
+      {
+        "track": "rain-circuit",
+        "rate": 0.75,
+        "audio": "dist/assets/rehearsal/rain-circuit-75.ogg",
+        "sha256": "9e1633f3e1b41e3142a02181add2d66a3c2aeb8e760f2d475994de44283d5f32",
+        "bytes": 1305440,
+        "duration_seconds": 112.66666666666667,
+        "decoded_frames": 4968600,
+        "peak": 0.6588294506072998,
+        "rms": 0.1336090771668757,
+        "gain": 1.0
+      },
+      {
+        "track": "rain-circuit",
+        "rate": 0.9,
+        "audio": "dist/assets/rehearsal/rain-circuit-90.ogg",
+        "sha256": "6b2bf656d4ea4ca8bf946b8cc4d7345ba5709db18cd7ebe5b209d1bc56fced90",
+        "bytes": 1092419,
+        "duration_seconds": 93.88888888888889,
+        "decoded_frames": 4140500,
+        "peak": 0.7281739115715027,
+        "rms": 0.14400111184268444,
+        "gain": 1.0
+      }
+    ],
+    "encoded_signal_probes": [
+      {
+        "rate": 0.75,
+        "tone_hz": [
+          439.99963136477226,
+          439.99679796416086,
+          439.99810255934784,
+          439.99866566754815,
+          440.00528471040275
+        ],
+        "pulse_peak_offset_ms": [
+          -10.18140589569161,
+          -7.936507936507936,
+          -9.1156462585034,
+          -9.682539682539684,
+          -9.637188208616779
+        ]
+      },
+      {
+        "rate": 0.9,
+        "tone_hz": [
+          439.9981663843416,
+          440.0008011412456,
+          439.99820324682673,
+          440.00537402428,
+          439.99991110344797
+        ],
+        "pulse_peak_offset_ms": [
+          -3.6734693877551017,
+          -2.1768707482993195,
+          -3.1746031746031744,
+          -2.675736961451247,
+          -3.378684807256236
+        ]
+      }
+    ],
+    "probe_method": "Own stereo fixture: five isolated 440Hz tones and five deterministic noise pulses at two speeds, processed then Vorbis-encoded/decoded. Interpolated positive crossings estimate pitch; pulse peaks are measured against expected onset. Not a music/hardware test.",
+    "musical_envelope_samples": [
+      {
+        "track": "midnight-signal",
+        "rate": 0.75,
+        "audio_sha256": "cad22e01268a0a235b690978caa32a19fc5312d82fa2ce085eabb3845db07e5b",
+        "four_bar_starts_sampled": 8,
+        "offset_ms_range": [
+          -10.0,
+          -5.0
+        ],
+        "correlation_min": 0.9554
+      },
+      {
+        "track": "midnight-signal",
+        "rate": 0.9,
+        "audio_sha256": "2b96df4e129db766774b3303633b5126df7ddb6eaf166a65410142f425b3566f",
+        "four_bar_starts_sampled": 8,
+        "offset_ms_range": [
+          -5.0,
+          0.0
+        ],
+        "correlation_min": 0.9582
+      },
+      {
+        "track": "rain-circuit",
+        "rate": 0.75,
+        "audio_sha256": "9e1633f3e1b41e3142a02181add2d66a3c2aeb8e760f2d475994de44283d5f32",
+        "four_bar_starts_sampled": 8,
+        "offset_ms_range": [
+          -10.0,
+          -5.0
+        ],
+        "correlation_min": 0.9618
+      },
+      {
+        "track": "rain-circuit",
+        "rate": 0.9,
+        "audio_sha256": "6b2bf656d4ea4ca8bf946b8cc4d7345ba5709db18cd7ebe5b209d1bc56fced90",
+        "four_bar_starts_sampled": 8,
+        "offset_ms_range": [
+          -5.0,
+          0.0
+        ],
+        "correlation_min": 0.9534
+      }
+    ],
+    "envelope_method": "Original/master versus final decoded derivative, mean stereo, 3\u201314kHz third-order bandpass, 220-frame RMS envelope. Eight four-bar starts per asset, source window \u2212120\u2026+300ms warped by tempo; normalized correlation searches \u00b1100ms at 5ms resolution. Bounded sample, not every note or perceptual latency.",
+    "actual_before_after": [
+      {
+        "phase": "before",
+        "request": "/assets/rain-circuit.ogg",
+        "buffer_duration": 84.5,
+        "node_rate": 0.75,
+        "buffer_offset": 30,
+        "buffer_segment_seconds": 12.725000000000001,
+        "performed_hold_score": 1000,
+        "scheduled_clicks": 4
+      },
+      {
+        "phase": "after",
+        "request": "/assets/rehearsal/rain-circuit-75.ogg",
+        "buffer_duration": 112.66666666666667,
+        "node_rate": 1,
+        "buffer_offset": 40,
+        "buffer_segment_seconds": 16.96666666666667,
+        "performed_hold_score": 1000,
+        "scheduled_clicks": 4
+      }
+    ],
+    "actual_browser_output_spectra": [
+      {
+        "phase": "reference",
+        "tempo_rate": 1,
+        "actual_output_frames": 44100,
+        "strongest_spectral_peaks_hz": [
+          220.0,
+          330.0,
+          392.0,
+          262.0,
+          440.0,
+          523.0
+        ]
+      },
+      {
+        "phase": "before",
+        "tempo_rate": 0.75,
+        "actual_output_frames": 44100,
+        "strongest_spectral_peaks_hz": [
+          247.0,
+          294.0,
+          330.0,
+          392.0,
+          494.0,
+          588.0
+        ]
+      },
+      {
+        "phase": "before",
+        "tempo_rate": 0.9,
+        "actual_output_frames": 44100,
+        "strongest_spectral_peaks_hz": [
+          235.0,
+          353.0,
+          297.0,
+          396.0,
+          471.0,
+          593.0
+        ]
+      },
+      {
+        "phase": "after",
+        "tempo_rate": 0.75,
+        "actual_output_frames": 44100,
+        "strongest_spectral_peaks_hz": [
+          392.0,
+          329.0,
+          219.0,
+          263.0,
+          259.0,
+          251.0
+        ]
+      },
+      {
+        "phase": "after",
+        "tempo_rate": 0.9,
+        "actual_output_frames": 44100,
+        "strongest_spectral_peaks_hz": [
+          392.0,
+          261.0,
+          220.0,
+          329.0,
+          257.0,
+          440.0
+        ]
+      }
+    ],
+    "spectral_method": "One-second real Midnight Signal ending excerpt rendered by Chromium OfflineAudioContext. Original buffer at old 0.75/0.9 node rates versus actual derivative at unit rate; sample Hann FFT local maxima above 3% prominence, 200\u20131000Hz. Peak order/sidebands can change with stretch; this is not physical listening or identical timbre.",
+    "media_failure": "404 and original/wrong-duration asset rejected before source/click creation; explicit retry plays valid derivative. No detuned fallback.",
+    "loading_interruption": {
+      "before": "Actual foreground-tab departure during a gated download failed to return loading to ready (3s controlled timeout).",
+      "after": "Same case resets to ready with zero backing/click starts, requires explicit Start, and a late Rain response cannot replace a new Midnight 90% run. Six final rehearsal cases and four affected full-run cases pass."
+    },
+    "preservation": {
+      "tracked_files_byte_equal_outside_reviewed_modifications": 392,
+      "original_media_chart_producer_scoring_and_hosting_sha256": {
+        "media/midnight-signal.wav": "b49e3df218287dd39eb3e3260f6f9ac62f776e29a0c22f639d77128e87022eab",
+        "media/rain-circuit.wav": "1256e5d5de17570c19d746175fa261571c4b1848b0c8a519b48737233466f190",
+        "media/provenance.json": "9a63d986d9909bb13d31eca84bbc96630f0c02bfc00d48674d501d1218000935",
+        "media/rain-provenance.json": "5d1775e99319a8cb49aea9d1ab1b1376fa708931e0ad81cb89f0dce057b21893",
+        "dist/assets/midnight-signal.ogg": "6feda179da6a5b454cd697a58527c83bf754f144069b975bfe2cb2f07a0bc166",
+        "dist/assets/rain-circuit.ogg": "cebdec6cee49e56b8f890a912f96387ed5680410965aeb79973fff1eda4d8c49",
+        "dist/track.json": "f73646df2b7d6601f1f654d855aaecd114b7172f2ef5c55852dfd898ec0b59b4",
+        "dist/rain-circuit.json": "c19f7d819ef3dda530b33b06199cf7c374e243c253112d7104943d73348d6771",
+        "tools/render_track.py": "d84eb89d5cf3f46ff063ee631ca16864800a8a23935fe767a97537315b2b1875",
+        "tools/render_rain.py": "eeb409f750de1ef0cba4d9ee710f66cd689d9d0055624a33ec1c5930cb64b7e7",
+        "dist/core.js": "153e9427a6948b727f797c5766cdcba4559f9821fffcaa7c79516c75bc766184",
+        ".openai/hosting.json": "ae53d4f869bb803cfe72164228bf635c3db3eea90ad70bd62dca16ffac905965"
+      },
+      "unrelated_registry_rows": "All existing assets, other project rows and other transfers remain semantically identical; only AUD-005 is added."
+    },
+    "source_sha256": {
+      "dist/app.js": "57453754fe3665f880fea4625b9667fbee1f417d4e7f334e0c51263f3b2f1471",
+      "dist/index.html": "bd6a8d316fc500ee09bbea805a6d3bf177a686d10a42d09fa42cd4db34f4e606",
+      "dist/rehearsal.js": "f3e5f662b4c3b126647cb4c4d42db10b6e8c002e670e7e514f954b7d83a1a29d",
+      "dist/setlist.json": "1171b532ab1d53d66413fa4a1710f12bdb5b590862f7c45a8f9f629ec90a39e4",
+      "package.json": "3bf2d92fea8884f6e45230d223ecb10293797e8b53d87bcfd29a909faf9ea182",
+      "tools/render_rehearsal.py": "a4f90b6fea852a4fe042ca57c9dcc5d42e9d3e791470548fb16a12248fba88b9",
+      "tools/check_rehearsal_audio.py": "c9632ac1a31c7b1bed222b52d8d343af346326c196561fcc0ba96d0ca23938a6",
+      "tests/rehearsal.test.mjs": "8325f78e9b111e702c82b3e29b5c6b35ce44797537e54bb1db6b96c098070811",
+      "tests/rehearsal-browser.test.mjs": "43b90bf056b16bf509b2d72d8a4c43b395375fbdba328338fed38590227e6b88"
+    },
+    "raw_frames": {
+      "pitch-backing.png": "eafd51f620cb3b92ff210bf0b7f20cb07cee8b4aec50d5a5a0392a358980ff39",
+      "pitch-mobile.png": "d31e67f504cc90b97179bc1563b5c4445dfd755d86d4e041ffae3e362a784243"
+    },
+    "hosted_checks": "Existing four jobs retained; rendered derivatives/encoded probes added and existing browser suite consumes them. Actual final status is confirmed at task closure."
+  },
+  "reasoned_assessment": "Codex reviewed actual paused/hold and narrow configuration frames: original-pitch/BPM labels and controls remain readable in these samples. Signals support removal of the prior pitch shift; broader timbre/attack naturalness or improved learning are not inferred. Offline preparation suits fixed speeds and avoids a new realtime DSP/engine dependency.",
+  "resolved_findings": [
+    "Cross-filesystem staged replace failed before assets were published; copy to a same-directory temporary output before replacement.",
+    "Initial restricted Node output counted files; counts here come from actual registered assertions with a controlled failure check.",
+    "Loading-time tab loss exposed an existing startup gap; epoch cancellation and post-resume/decode guards isolate stale responses.",
+    "Environment restart preserved source/media identities and completed logs; pending failures were read before continuing."
+  ],
+  "unverified": [
+    "Physical listening, complete transient/timbre quality and hardware audio latency",
+    "Independent phrase practice, learning, enjoyment and accessibility",
+    "Other browsers/platforms and mobile memory/network behavior beyond this Chromium sample",
+    "Commercial demand, adoption, exclusive rights or revenue"
+  ],
+  "publication": "Normal main publication explicitly authorized; final remote SHA/stored message/CI reported at closure, not self-referenced."
+}

@@ -1,9 +1,23 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
-import {phrases, makeSession, phraseResults, RATES} from '../dist/rehearsal.js';
+import {phrases, makeSession, phraseResults, RATES, backingFor} from '../dist/rehearsal.js';
 import {RhythmRun, adjustedTime} from '../dist/core.js';
 const tracks=['track','rain-circuit'].map(name=>JSON.parse(fs.readFileSync(new URL(`../dist/${name}.json`,import.meta.url))));
+test('stretched backing covers the same phrase/tails with one-to-one performance playback; missing variants cannot detune',()=>{
+  const catalogue=JSON.parse(fs.readFileSync(new URL('../dist/setlist.json',import.meta.url)));
+  for(const score of tracks)for(const rate of RATES) {
+    const track={...score,...catalogue.find(t=>t.id===score.id)};
+    const session=makeSession(track,'arcade','3',rate),backing=backingFor(track,session);
+    assert.equal(backing.playbackRate,1);
+    assert.ok(Math.abs(backing.offset*rate-session.cueStart)<1e-8);
+    assert.ok(Math.abs(backing.duration-session.duration)<1e-8);
+    assert.ok(backing.offset+backing.duration<=backing.bufferDuration);
+    const full=backingFor(track,makeSession(track,'arcade','full',rate));
+    assert.equal(full.url,score.audio);assert.equal(full.offset,0);assert.equal(full.duration,score.duration);
+  }
+  assert.throws(()=>backingFor(tracks[0],makeSession(tracks[0],'practice','0',.75)),/unavailable/);
+});
 test('every source head belongs to exactly one four-bar rehearsal, across both charts and all rates',()=>{
   for(const track of tracks)for(const chart of ['practice','arcade'])for(const rate of RATES) {
     const all=phrases(track).flatMap(p=>{

@@ -166,6 +166,31 @@
         "projects/cinderwatch/Native/media/audio/catalog.json",
         "evidence/cinderwatch/PRESENTATION_RUN.json"
       ]
+    },
+    {
+      "id": "AUD-005",
+      "name": "Tokyo 80s original-pitch rehearsal backing",
+      "type": "audio-pack",
+      "status": "integrated",
+      "source_project": "P08",
+      "consumer_projects": [
+        "P03"
+      ],
+      "master_path": "projects/tokyo80s/media",
+      "runtime_paths": [
+        "projects/tokyo80s/dist/assets/rehearsal/midnight-signal-75.ogg",
+        "projects/tokyo80s/dist/assets/rehearsal/midnight-signal-90.ogg",
+        "projects/tokyo80s/dist/assets/rehearsal/rain-circuit-75.ogg",
+        "projects/tokyo80s/dist/assets/rehearsal/rain-circuit-90.ogg"
+      ],
+      "sample_rate": 44100,
+      "channels": 2,
+      "provenance": "Four offline tempo derivatives from preserved original PCM, FFmpeg/Rubber Band pitch=1 and Vorbis export; no new composition, sample or recording.",
+      "rights": "Original creative provenance remains; build tools are not distributed. No exclusive copyright, physical listening or commercial-clearance claim.",
+      "evidence": [
+        "projects/tokyo80s/media/rehearsal-provenance.json",
+        "evidence/tokyo80s/PITCH_RUN.json"
+      ]
     }
   ]
 }

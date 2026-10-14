@@ -1,4 +1,22 @@
-# Current milestone — self-contained Cinderwatch Linux player
+# Current milestone — original-pitch musical rehearsal
+
+Deliver 75%/90% backing for both original stages from preserved PCM, explicit
+provenance, unit-rate browser playback and correct source/performance mapping.
+Retain 100%/full media, charts, bests, scoring and calibration. Export actual
+backing identity; reject missing/wrong-duration media and require Start after
+loading interruption. Stale downloads cannot replace a later selection.
+
+Acceptance: build/decode four assets; encoded frequency/transient probes,
+sample actual music envelopes/spectra, compare old/current playback, run logic
+and real-clock browser phrase/whole-song/pause/touch/repeat/export/error checks,
+reproduce/correct loading interruption, review frames and preserve source/history.
+Update existing CI and publish normally. [Execution](../evidence/tokyo80s/PITCH_RUN.json).
+
+No new composition, realtime DSP framework, engine migration, hosted redeployment
+or human learning claim. Compare physical listening/practice with native
+hardware/tactics, independent readers and trusted project-record use next.
+
+# Previous milestone — self-contained Cinderwatch Linux player
 
 Complete the P05 delivery workflow with a verified Mono template, proper native
 solution/export preset, ExportRelease self-contained .NET, raw media relative to

@@ -1,4 +1,34 @@
-# Current assessment — make the existing native rescue directly runnable
+# Current assessment — preserve musical identity during slower practice
+
+Clean `45ea179` matches fetched main, branch work, push permitted and main
+publication explicitly authorized. Read instructions/seed/state/registry,
+twelve commits, actual P03 playback/masters, P11 export/recovery and P10 content.
+Recent iterations span narrative/service/music but two latest increments are
+native play/delivery. Investigate another concrete product capability; no quota.
+
+| Opportunity | Evidence and choice |
+|---|---|
+| P03 original-pitch practice | Actual playback rate lowers pitch at 75/90%; original PCM and FFmpeg/Rubber Band exist. An integrated four-asset workflow removes this limitation. Selected after controlled DSP timing comparison. |
+| P11 selective portability | Full recovery and readable exports work; selective merging still needs an authorship/identity/conflict contract and real team context. |
+| P04/P10 creative development | Complete translated story and consequential operation exist. Independent readers better identify useful revision than automatic expansion. |
+| P01/P05/P06 native products | Current local play/Linux distributions work; unassisted hardware/player evidence is a stronger next gap than another routine package increment. |
+| Historical seeds/P02/P09 | Preserved P10/P11 material remains available; unavailable manuscripts/starter or independently produced professional/candidate facts cannot be fabricated. |
+
+Keep the existing browser/real Web Audio interaction; professional Python/FFmpeg
+provides offline DSP assets without a runtime dependency or engine rewrite.
+Both Godot editors and .NET SDK are present; Unity is not in PATH. Native options
+are available, but migrating the game does not address this bounded audio gap.
+Rubber Band retained exact probe duration and smaller pulse offsets than atempo
+in the controlled comparison. Complete-song signals require further listening.
+
+Before: one original buffer slowed by the node, changing pitch. After: original-
+pitch backings played at unit rate, mapped to existing performance/chart time.
+Actual old/current nodes and OfflineAudioContext output distinguish the change.
+Delayed loading also exposed hidden-tab startup; cancellation and stale-response
+isolation are connected reliability fixes. [Execution](../evidence/tokyo80s/PITCH_RUN.json)
+separates verified signals, Codex frame judgment and missing human/market evidence.
+
+# Previous assessment — make the existing native rescue directly runnable
 
 Clean `3703f0b` matches fetched main; branch work, publication authorized and
 GitHub push permitted. Read instructions/state/registry/seed/recent decisions and

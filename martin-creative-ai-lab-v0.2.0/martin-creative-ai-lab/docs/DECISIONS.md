@@ -1114,3 +1114,33 @@ checks execute the real release, not editor tests substituted for a player.
 The small template cache is checksum-validated on every use; fresh rebuilds also
 execute. No physical player/listening, independent accessibility/balance, other
 platform or paid demand is inferred from this technical delivery.
+
+## ADR-052 — prepare original-pitch backing instead of stretching at runtime
+
+**Date:** 2026-10-14 (UTC). **Status:** P03 0.4.0 / P08 0.5.0.
+
+Select a concrete musical limitation across the portfolio, after inspecting real
+P03/P11/P10 sources and recent native deliveries. Existing PCM and FFmpeg provide
+credible offline DSP. Keep browser/Web Audio, original charts/full media and best
+keys; available Godot/.NET does not justify migrating this established consumer.
+Rubber Band gave exact controlled duration and smaller pulse offsets than atempo.
+
+Build four stereo Vorbis derivatives with pitch=1, crisp transients and linked
+channels. Verify original master identities, duration drift and floating peaks,
+then leave encoding headroom. Keep only derived OGG and provenance; tool binaries
+are not redistributed. Encoder identities may differ; no bit-identical rebuild claim.
+Play at unit node rate with cueStart/rate and segment duration/rate. Keep judgments
+in performance seconds and source-note identities. The existing export playbackRate
+continues to mean performance tempo; backing identifies actual media/node mapping.
+One cache entry bounds retained decoded media. Never fall back to detuned playback.
+
+Actual delayed-load tab loss exposed startup despite interruption. Cancel the
+loading epoch, reset to ready and require explicit Start. Recheck after AudioContext
+resume and decoding so late media cannot alter a subsequent track. Actual failure/
+fixed tab tests complement playing/pause checks. The first cross-filesystem output
+move failed before publication; copy via a same-directory temporary replacement.
+
+Encoded synthetic probes and actual music/OfflineAudioContext samples establish
+bounded technical behavior, not every onset, timbral naturalness, hardware latency,
+learning or market benefit. Review original/slow mixes on physical output and
+observe unassisted phrase use before claiming higher musical or teaching quality.

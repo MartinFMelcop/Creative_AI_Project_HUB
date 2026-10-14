@@ -61,13 +61,13 @@ async function perform(page,{skipHold=false}={}) {
     return {noteIds:notes.map(n=>n.id),omittedHold:omit,events:index};
   },{skipHold});
 }
-test('75% audio uses the selected source offset and four clicks; pause preserves a real carried tail',{timeout:20000},async()=>{
+test('75% original-pitch backing uses its stretched offset and four clicks; pause preserves a real carried tail',{timeout:20000},async()=>{
   const {context,page,errors}=await fixture();await setup(page);
   assert.equal(await page.locator('#phrase option').count(),9);assert.match(await page.locator('#rehearsal-info').textContent(),/72 BPM/);
   await page.locator('#start').click();await mode(page,'playing');
   const probe=await page.evaluate(()=>({audio:audioStarts[0],clicks:clickStarts}));
-  assert.equal(probe.audio.rate,.75);assert.equal(probe.audio.args[1],30);assert.ok(Math.abs(probe.audio.bufferDuration-84.5)<.05);
-  assert.ok(Math.abs(probe.audio.args[2]-12.725)<1e-8);
+  assert.equal(probe.audio.rate,1);assert.equal(probe.audio.args[1],40);assert.ok(Math.abs(probe.audio.bufferDuration-84.5/.75)<.05);
+  assert.ok(Math.abs(probe.audio.args[2]-12.725/.75)<1e-8);
   assert.equal(probe.clicks.length,4);assert.ok(Math.abs(probe.clicks[1]-probe.clicks[0]-60/96/.75)<1e-6);
   assert.equal(await page.locator('#phrase').isDisabled(),true);assert.equal(await page.locator('#rate').isDisabled(),true);
   await page.evaluate(()=>new Promise(resolve=>{const tick=()=>{
@@ -95,6 +95,9 @@ test('actual phrase attempts report errors, repeat with comparison, export sourc
   assert.equal(first.data.mode,'rehearsal');assert.equal(first.data.playbackRate,.75);assert.equal(first.data.phrases.length,1);
   assert.equal(first.data.counts.miss,1);assert.equal(first.data.phrases[0].lostHolds,1);assert.equal(first.data.counts.pending,0);
   assert.equal(first.data.timeUnit,'performance-seconds');assert.equal(first.data.cueStart,30);
+  assert.equal(first.data.backing.url,'assets/rehearsal/rain-circuit-75.ogg');
+  assert.equal(first.data.backing.playbackRate,1);assert.equal(first.data.backing.tempoRate,.75);
+  assert.equal(first.data.backing.pitch,'original');assert.equal(first.data.backing.offset,40);
   for(const n of first.data.notes)assert.ok(Math.abs(n.time*.75+30-n.sourceTime)<1e-8);
   assert.equal(await page.evaluate(()=>localStorage.getItem('tokyo80s-best-v2-rain-circuit-arcade')),'54321');
   await page.locator('#replay').click();await mode(page,'playing');await perform(page);await mode(page,'results');
@@ -109,6 +112,62 @@ test('actual phrase attempts report errors, repeat with comparison, export sourc
   assert.doesNotMatch(await page.locator('#best').textContent(),/Previous identical setup:/);
   assert.equal((await exported(page)).data.playbackRate,.9);
   assert.deepEqual(errors,[]);await context.close();
+});
+test('both songs load each delivered tempo variant at native pitch and return to the unchanged full backing',{timeout:20000},async()=>{
+  for(const track of ['midnight-signal','rain-circuit'])for(const rate of ['0.75','0.9']) {
+    const {context,page,errors}=await fixture();const requested=[];
+    page.on('request',request=>{if(request.url().endsWith('.ogg'))requested.push(new URL(request.url()).pathname);});
+    await setup(page,{track,rate,phrase:'0'});
+    await page.locator('#start').click();await mode(page,'playing');
+    const probe=await page.evaluate(()=>audioStarts.at(-1));
+    const duration=track==='midnight-signal'?69:84.5;
+    assert.equal(probe.rate,1);assert.ok(Math.abs(probe.bufferDuration-duration/Number(rate))<.05);
+    assert.equal(requested.at(-1),`/assets/rehearsal/${track}-${Math.round(Number(rate)*100)}.ogg`);
+    await page.locator('#full-run').click();await mode(page,'ready');
+    await page.locator('#start').click();await mode(page,'playing');
+    const full=await page.evaluate(()=>audioStarts.at(-1));assert.equal(full.rate,1);
+    assert.equal(full.args[1],0);assert.ok(Math.abs(full.bufferDuration-duration)<.05);
+    assert.equal(requested.at(-1),`/assets/${track}.ogg`);
+    assert.deepEqual(errors,[]);await context.close();
+  }
+});
+test('missing or wrong-duration slow backing stops before any source/click; explicit retry uses the valid derivative',{timeout:20000},async()=>{
+  const {context,page,errors}=await fixture();await setup(page,{phrase:'0'});
+  const pattern='**/assets/rehearsal/rain-circuit-75.ogg';
+  await page.route(pattern,route=>route.fulfill({status:404,body:'Not found'}));
+  await page.locator('#start').click();await mode(page,'error');
+  assert.match(await page.locator('#status').textContent(),/backing could not load/);
+  assert.equal(await page.evaluate(()=>audioStarts.length+clickStarts.length),0);
+  await page.unroute(pattern);
+  await page.route(pattern,async route=>route.fulfill({contentType:'audio/ogg',body:await fs.readFile(new URL('../dist/assets/rain-circuit.ogg',import.meta.url))}));
+  await page.locator('#start').click();await mode(page,'error');
+  assert.match(await page.locator('#status').textContent(),/duration does not match/);
+  assert.equal(await page.evaluate(()=>audioStarts.length+clickStarts.length),0);
+  await page.unroute(pattern);await page.locator('#start').click();await mode(page,'playing');
+  assert.equal((await page.evaluate(()=>audioStarts[0])).rate,1);
+  assert.equal(await page.evaluate(()=>clickStarts.length),4);
+  assert.deepEqual(errors,[]);await context.close();
+});
+test('tab interruption while backing loads cancels startup; returning requires an explicit new start',{timeout:20000},async()=>{
+  const {context,page,errors}=await fixture();let release;
+  const gate=new Promise(resolve=>{release=resolve;});
+  const pattern='**/assets/rehearsal/rain-circuit-75.ogg';
+  await page.route(pattern,async route=>{await gate;if(!page.isClosed())await route.continue();});
+  try {
+    const cdp=await context.newCDPSession(page);await cdp.send('Emulation.setFocusEmulationEnabled',{enabled:false});
+    await page.bringToFront();await setup(page,{phrase:'0'});await page.locator('#start').click();await mode(page,'loading');
+    const peer=await context.newPage();await peer.goto('about:blank');await peer.bringToFront();
+    await page.waitForFunction(()=>document.querySelector('#stage').dataset.mode==='ready',null,{timeout:3000});
+    assert.equal(await page.evaluate(()=>audioStarts.length+clickStarts.length),0);
+    await page.bringToFront();assert.equal(await page.locator('#stage').getAttribute('data-mode'),'ready');
+    await setup(page,{track:'midnight-signal',rate:'0.9',phrase:'0'});
+    await page.locator('#start').click();await mode(page,'playing');
+    release();await page.waitForTimeout(300);
+    assert.equal(await page.evaluate(()=>audioStarts.length),1);assert.equal(await page.evaluate(()=>clickStarts.length),4);
+    assert.ok(Math.abs((await page.evaluate(()=>audioStarts[0])).bufferDuration-69/.9)<.05);
+    assert.equal(await page.locator('#stage').getAttribute('data-track'),'midnight-signal');
+    assert.deepEqual(errors,[]);
+  } finally {release();await context.close();}
 });
 test('narrow touch rehearsal carries a slowed hold; cancellation stops sound and restart enters a fresh take',{timeout:20000},async()=>{
   const {context,page,errors}=await fixture({viewport:{width:390,height:844},hasTouch:true,isMobile:true});
