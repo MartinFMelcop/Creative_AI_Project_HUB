@@ -1,0 +1,3 @@
+# Immutable source payloads retain original CRLF/trailing whitespace byte-for-byte.
+# Current code/navigation keep the repository's normal whitespace checks.
+rave-master/snapshots/*/source/** -text whitespace=cr-at-eol,-blank-at-eol,-blank-at-eof,-space-before-tab

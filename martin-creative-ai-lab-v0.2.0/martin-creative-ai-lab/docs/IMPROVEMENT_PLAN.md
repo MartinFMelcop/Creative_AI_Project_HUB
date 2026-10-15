@@ -1,4 +1,25 @@
-# Current milestone — original-pitch musical rehearsal
+# Current foundation — legacy references and North Star
+
+Deliver a locally readable pinned Rave reference snapshot, accurate exclusions,
+unchanged selected-archive integrity and practical source discovery. Distinguish
+unavailable literary attachment from earlier reports and P04 adaptation. Establish
+North Star as a long-term MMORPG program with selective origin evidence, separate
+contribution states, independent products and a bounded research direction.
+No unrelated gameplay/engine migration, invented literary canon or running MMORPG.
+
+Acceptance: reconcile original paths/hashes and prior 175 payloads; prove query
+results open locally; validate negative cases for missing/tampered/invalid sources
+and false integration; retain product/transfer/media/release bytes. Update established
+entry points/governance, run integrity regressions and publish normally.
+[Execution](../evidence/reference-integration/RUN.json) separates completed reference
+work from attachment/rights/history limitations.
+
+Next opportunities are independent: accessible literary recovery with authority/
+rights audit; P05 tactical content; P01 standalone delivery; P03 physical practice;
+P04/P10 independent reading; P11 real handover; the first North Star shared-state
+experiment. Select by evidence and realized value, not mandatory MMORPG priority.
+
+# Previous milestone — original-pitch musical rehearsal
 
 Deliver 75%/90% backing for both original stages from preserved PCM, explicit
 provenance, unit-rate browser playback and correct source/performance mapping.

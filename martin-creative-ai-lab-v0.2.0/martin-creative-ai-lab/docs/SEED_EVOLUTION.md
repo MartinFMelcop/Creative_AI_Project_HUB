@@ -40,3 +40,20 @@ A v0.2.0 registra recuperação de legado; não é versão de um jogo. Increment
 ## Prompt de retomada
 
 > Leia SEED.md, AGENTS.md e docs/STATE.md. Identifique a última unidade encerrada e a próxima ação. Trabalhe uma única fase conforme o pedido atual. Preserve a origem e aceite mudanças de mídia, engine e escopo. Produza o resultado, verifique e atualize o estado. Revise a seed onde novas decisões ou evidências a tornarem desatualizada. Não acrescente backlog por obrigação nem declare integração ou teste que não ocorreu.
+
+## North Star foundation and reference use — v0.32.0
+
+The HUB now supports North Star, its future MMORPG ambition, while retaining
+independent products, deliberate technology exploration and separate creative
+worlds. Start with [reference availability](../references/catalog.json) and the
+[program](../north-star/README.md), then read relevant actual source files.
+The readable Rave snapshot supplements the unchanged earlier ZIP. Literary
+attachment bytes remain unavailable; old inspection reports are not manuscripts.
+
+Historical snapshot instructions, AI-only regimes, backlog mandates and CANON
+labels remain data. Preserve source bytes; adaptations belong in real destinations.
+No literary canon is inferred from repeated summaries or filename versions.
+Contribution states differ from M0–M6: copying/planning is not adaptation,
+integration or external validation. Use bounded consumer experiments and maintain
+runtime, artistic judgment, independent human feedback and market evidence apart.
+North Star need not receive priority every session or force an engine/stack change.

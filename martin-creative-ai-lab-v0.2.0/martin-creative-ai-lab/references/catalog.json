@@ -1,0 +1,71 @@
+{
+  "schema_version": 1,
+  "updated_at": "2026-10-15",
+  "legacy_archive": {
+    "path": "archive/legacy-source-extracts-v0.2.0.zip",
+    "sha256": "6da636a270284eac1e11d00407dab364c2d9aa8c2f0485e77509e6ccf0dbc1dc",
+    "complete_repository_backup": false
+  },
+  "collections": [
+    {
+      "id": "REF-RAVE-36AF165",
+      "kind": "repository_snapshot",
+      "title": "Rave Master technical and creative reference snapshot",
+      "status": "partial_import",
+      "repository": "MartinFMelcop/Adventures_Unleashed_Rave_Master_Project",
+      "source_commit": "36af1651271422ae33856e8b5d7b45702215f165",
+      "source_tree": "f2b5327e321dd0fc0701b80dc2a00fa211e214bc",
+      "declared_source_version": "AJ_000368 (module metadata, not a new HUB product version)",
+      "visibility_observed": "public",
+      "observed_at": "2026-10-15",
+      "historical_visibility_record": "private in the 2026-10-10 recovery; retained without revalidating that past observation",
+      "legacy_source_id": "LEGACY-001",
+      "source_root": "references/rave-master/snapshots/36af1651271422ae33856e8b5d7b45702215f165/source",
+      "inventory_path": "references/rave-master/snapshots/36af1651271422ae33856e8b5d7b45702215f165/inventory.json",
+      "discovery_path": "references/rave-master/snapshots/36af1651271422ae33856e8b5d7b45702215f165/discovery.json",
+      "file_count": 729,
+      "imported_count": 589,
+      "excluded_count": 140,
+      "full_archive_preserved": false,
+      "git_history_preserved": false,
+      "prior_selected_identical": 175,
+      "rights_scope": "Owner-directed project text/code/data reference import; not commercial clearance. Vendor/runtime, serialized data, art/bundles/workbook/full reference document and the two previously excluded digests are withheld.",
+      "authority": "historical_reference_only; old CANON/governance applies only to the old project, not HUB or North Star"
+    },
+    {
+      "id": "REF-LICH-ATTACHMENT",
+      "kind": "attachment",
+      "title": "O Lich mais velho da tumba mais antiga",
+      "status": "unavailable",
+      "attachment_filename": "Lightnovel%20Darkfantasy%20v0.4.1.zip",
+      "display_filename": "Lightnovel Darkfantasy v0.4.1.zip",
+      "version_hint": "0.4.1 from supplied filename only",
+      "detected_version": null,
+      "sha256": null,
+      "file_count": null,
+      "imported_count": 0,
+      "full_archive_preserved": false,
+      "inventory_path": null,
+      "source_root": null,
+      "observed_at": "2026-10-15",
+      "blocker": "download_file refused the Sediment attachment: file exceeds the executor transfer limit of 32 MiB. No ZIP bytes, inventory, size, archive hash, extraction or manuscript read is available.",
+      "authority": "attached_policy_unverified; title/style supplied by the user, no manuscript event/name/relationship adopted as canon",
+      "next_recovery": "Provide a readable attachment within the transfer limit or an authorized supported archival source; audit actual entries/types/sizes/traversal, rights and authority policy before importing.",
+      "authority_status": "unverified",
+      "attachment_id": "file_00000000b21c820e95af7b53595e19b9"
+    },
+    {
+      "id": "REF-LICH-REPORT-0448",
+      "kind": "historical_report",
+      "title": "Earlier limited literary inspection record",
+      "status": "documented_only",
+      "reported_version": "0.4.48",
+      "report_path": "docs/SOURCES.md",
+      "reported_details_path": "SEED.md",
+      "source_root": null,
+      "imported_count": 0,
+      "full_archive_preserved": false,
+      "authority": "Historical HUB report of seed/state/canon inspection, not current archive bytes or an independently confirmed literary policy. P04 is a separate adaptation. The supplied older filename does not supersede later decisions."
+    }
+  ]
+}

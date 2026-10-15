@@ -14,6 +14,8 @@ from pathlib import Path
 from urllib.parse import unquote, urlparse
 from zipfile import ZipFile, BadZipFile
 
+from reference_library import validate_library
+
 ROOT = Path(__file__).resolve().parents[1]
 ERRORS = []
 STATUSES = {"seed", "triage", "active", "paused", "archived", "retired"}
@@ -106,6 +108,13 @@ def main():
     sources = read_registry("legacy_sources.json", "sources")
     ids = {r["id"] for r in projects if isinstance(r.get("id"), str)}
     source_ids = {r["id"] for r in sources if isinstance(r.get("id"), str)}
+    reference_ids, historical_roots = set(), set()
+    try:
+        library = validate_library(ROOT, ids)
+        reference_ids = library["collection_ids"]
+        historical_roots = set(library["source_roots"])
+    except (OSError, ValueError, KeyError, TypeError, BadZipFile) as exc:
+        fail(f"reference library: {exc}")
     slugs = set()
     for row in projects:
         label = str(row.get("id", "<missing-id>"))
@@ -131,6 +140,10 @@ def main():
             if not isinstance(source_id, str) or source_id not in source_ids:
                 fail(f"{label}: unknown source_id: {source_id!r}")
         list_refs(row, "related_projects", ids, label)
+        if "reference_collection_ids" in row:
+            references = row["reference_collection_ids"]
+            if not isinstance(references, list) or not all(isinstance(v, str) and v in reference_ids for v in references):
+                fail(f"{label}: unknown reference_collection_ids")
     for row in transfers:
         label = str(row.get("id", "<missing-id>"))
         evidence_refs(row, label)
@@ -172,10 +185,12 @@ def main():
     except (OSError, ValueError, KeyError, TypeError, BadZipFile) as exc:
         fail(f"legacy source validation: {exc}")
 
-    # npm dependencies contain upstream documentation outside this lab's ownership.
+    # Dependencies and validated raw snapshots are source data, not current navigation.
+    # Owned reference READMEs/AGENTS/program docs remain checked as before.
     documents = []
     for directory, subdirectories, files in os.walk(ROOT):
-        subdirectories[:] = sorted(name for name in subdirectories if name not in {".git", "node_modules"})
+        subdirectories[:] = sorted(name for name in subdirectories if name not in {".git", "node_modules"}
+                                   and Path(directory) / name not in historical_roots)
         documents.extend(Path(directory) / name for name in files if name.endswith(".md"))
     documents.sort()
     checked_links = 0

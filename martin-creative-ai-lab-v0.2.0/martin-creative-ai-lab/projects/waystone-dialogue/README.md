@@ -123,3 +123,11 @@ python3 projects/waystone-dialogue/scene.py --trace
 Next: observe readers playing both days without the example sequences; refine
 work-order comprehension, dramatic pacing and character scenes before expanding. No independent playtest has been
 performed. A paid narrative game is a possibility, not validated demand.
+
+## Expanded historical sources
+
+[Rave Master reference library](../../references/rave-master/README.md) provides
+589 locally readable historical code/data/text files at the original pinned
+commit, beyond the earlier selected ZIP. P10 gameplay, provenance and old
+consumers remain unchanged; copying more sources establishes no new transfer
+or North Star fictional/technical integration.

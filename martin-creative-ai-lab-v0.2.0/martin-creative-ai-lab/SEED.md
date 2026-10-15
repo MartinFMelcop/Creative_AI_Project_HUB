@@ -1,12 +1,36 @@
 # SEED — Martin Creative AI Lab
 
-**Version:** 0.31.0
+**Version:** 0.32.0
 **Data-base:** 10 de outubro de 2026  
 **Autor e responsável pelo portfólio:** Martin Melcop Neto  
 **Working language:** English for new documentation, plans, code comments, UI, and reports. Preserve original creative titles and historical source languages.
-**Current state:** P06 0.5.0 adds paid L/LB close-sweep parry and real blade counter openings to the native two-phase encounter. Source/resources pass native checks and the official Linux player executes outside checkout. Existing P11 portable handovers, other products and historical sources remain intact; human balance/accessibility/commercial evidence is separate.
+**Current state:** North Star is the future MMORPG ambition and long-term convergence program, while existing products remain independent. A pinned Rave library now supplies 589 readable sources with 140 explicit exclusions and unchanged earlier archive integrity. The literary attachment exceeds the available 32 MiB transfer limit; no manuscript or policy bytes were imported. Source discovery, contribution boundaries and executable integrity checks establish a foundation, not a running MMORPG.
 
 > Construir um laboratório autoral em Git que transforma ideias, obras e experimentos em produtos pequenos, sistemas reutilizáveis e evidências técnicas verificáveis. A IA participa da criação e execução; Martin desenvolve sua capacidade de especificar, compreender, selecionar, corrigir, validar e explicar os resultados.
+
+## Long-term convergence — North Star
+
+[North Star](north-star/README.md) is the future MMORPG project and long-term
+ambition of this research, learning and production ecosystem. Its aspiration
+is one of the greatest MMORPG experiences ever created, not an achieved ranking
+or this session's deliverable. Independent products retain value, technology,
+creative identity and possible commercial paths. Select technologies by product
+requirements, not quotas or compulsory engine migration.
+
+[Vision](north-star/VISION.md), [capabilities](north-star/capabilities.json) and
+[research gates](north-star/RESEARCH.md) require implemented destination benefit
+before convergence claims. Candidate/origin-verified/adapted/integrated/external
+states are separate from project M0–M6. No current North Star consumer exists.
+Technical, artistic/literary, independent human and market evidence are distinct.
+Sharing methods does not merge fictional universes or adopt historic CANON.
+
+The [reference library](references/README.md) separates preserved original bytes,
+readable source copies, normalized discovery and current adaptations. Its
+[Rave snapshot](references/rave-master/README.md) preserves eligible texts;
+[literary recovery](references/literature/lich/README.md) records unavailable
+attachment and earlier report boundaries. Historical instructions are data,
+not current governance. Preserve independent commercial opportunities and rights
+limits; use small verified experiments before expensive MMORPG infrastructure.
 
 ### Navegação
 
@@ -45,15 +69,15 @@ Se apenas este arquivo estiver disponível, ele é suficiente para iniciar a Fas
 | Field | Current evidence |
 |---|---|
 | Repository | MartinFMelcop/Creative_AI_Project_HUB; actual Git root `/workspace/Creative_AI_Project_HUB`; wrapper retained |
-| Preserved sources | 175 Rave Master texts / 3 WebSocket files; unchanged historical ZIP/inventory |
-| Current milestone | P06 timed sweep counters 0.5.0 |
-| Runtime | Godot 4.6.3 standard / GDScript; native physics, animation, input and AudioServer |
-| Evidence | 152 checks each on source/shipped/fresh/player PCK, full two-phase OpenGL guard/counter policy, identical old/new sweep fixture and actual ELF window; `evidence/veil-arena/PARRY_RUN.json` |
-| Limits | Scripted state-aware policies and Codex frame review; physical pad/listening, human balance/accessibility, other OS and commercial approval absent |
-| Next action | Compare unassisted parry/dodge/seal choices with P05 content, P01 delivery, P03 practice and P04/P10 reading |
-| Other products | P01/P03 0.4.0, P04 0.2.0, P05 0.3.0, P08/P10 0.5.0, P11 0.6.0 and P02 0.2.1 retained |
-| Rules / assets | Prior combat route, media, 0.4.0 Linux ZIP, other products and historical sources preserved; no new art/audio or transfer promotion |
-| Attribution | Clean `e5715d9` matched fetched main; main authorized/permitted. Codex implementation, synthetic native/window input and frame review |
+| Preserved sources | Old ZIP: 175 Rave / 3 WebSocket texts unchanged. New Rave library: 589 readable / 140 excluded from 729; literary attachment unavailable |
+| Current milestone | One-time legacy reference and North Star foundation |
+| Runtime | Python stdlib integrity/discovery and JSON metadata; no new game engine, server or MMORPG consumer |
+| Evidence | Pinned source/history inspection, original SHA-256/Git blob checks, 175 identical prior payloads, reference/validator failure tests; `evidence/reference-integration/RUN.json` |
+| Limits | Full Git history/binary assets not preserved; attachment exceeds transfer limit; literary authority and payload unverified; no new runtime/integration/human/market claim |
+| Next action | Recover accessible literary bytes with rights/authority audit; independently compare product opportunities and the first bounded shared-state experiment |
+| Other products | P01/P03 0.4.0, P04 0.2.0, P05 0.3.0, P06/P08/P10 0.5.0, P11 0.6.0 and P02 0.2.1 retained |
+| Rules / assets | Existing maturity, runtime/save schemas, validated transfers, media and releases retained; source preservation is not system integration |
+| Attribution | Clean `1bc1ae9` matched fetched main; normal main publication authorized/permitted. Codex source audit and implementation; no historical script execution |
 
 Registry evidence paths must resolve to existing files inside the lab; working
 paths must be directories and legacy-source IDs must exist. This documentary
@@ -332,6 +356,8 @@ No new composition, engine migration, historical recovery or human learning clai
 
 ### P04 — O Lich mais velho da tumba mais antiga
 
+[Version-aware literary reference boundary](references/literature/lich/README.md) records the inaccessible newly supplied attachment. The older v0.4.48 descriptions below are earlier inspection reports, not freshly recovered manuscripts, current primary-source confirmation or North Star canon. P04 remains a separate adaptation.
+
 **Current destination:** [A água sob Darsen](projects/lich-cistern/README.md) 0.1.0
 is a complete five-scene Portuguese story with EPUB/PDF. It is newly written from
 this summary: the historical ZIP/manuscript is not available in this checkout.
@@ -521,6 +547,11 @@ actual AudioServer/compiled-pack consumption. No physical listening/album claim.
 **Gate:** caso autossuficiente, origem declarada e afirmações sustentadas. Martin deve conseguir defender o raciocínio sem depender do texto gerado.
 
 ### P10 — Adventures Unleashed / Rave Master
+
+[Expanded Rave reference snapshot](references/rave-master/README.md) makes original
+eligible modules browseable without replacing P10. Historical tables/Ruby are
+references; current Python/browser execution evidence and maturity remain separate.
+
 
 Reservatório recuperado de RPG Maker XP/RGSS: narrativa, personalidade e diálogo de NPCs, combate, progressão, crafting, reputação, planejamento de arte/áudio e QA. A extração completa, os estados e limites estão na seção 28.2. Não é um novo compromisso de terminar um RPG extenso nem uma fusão automática com os outros RPGs do inventário.
 

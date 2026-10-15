@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-10-14",
+  "updated_at": "2026-10-15",
   "projects": [
     {
       "id": "P01",
@@ -109,12 +109,17 @@
         "projects/lich-cistern/README.md",
         "projects/lich-cistern/provenance.json",
         "evidence/lich-cistern/RUN.json",
-        "evidence/lich-cistern/ENGLISH_RUN.json"
+        "evidence/lich-cistern/ENGLISH_RUN.json",
+        "references/literature/lich/README.md"
       ],
       "historical_name": "O Lich mais velho da tumba mais antiga",
       "working_path": "projects/lich-cistern",
       "working_version": "0.2.0",
-      "maturity_scope": "Complete five-scene Portuguese adaptation and its new complete English translation, The Water Beneath Darsen. English 4,736 words/240 paragraphs, EPUB3 with language/navigation/distinct identity and 27-page A5 PDF with embedded licensed fonts; actual format/text checks, isolated PT/EN rebuilds, official EPUBCheck and rendered PDF/XHTML review. Portuguese source, metadata, original 28-page PDF/EPUB, styles/fonts unchanged. Editor/translator are Codex under Martin direction; a source ambiguity is explicitly interpreted, not silently ratified. Structural correspondence is not semantic or independent literary proof. Historical manuscript, canon approval, hardware-reader/assistive technology, audience demand and commercial readiness remain unverified."
+      "maturity_scope": "Complete five-scene Portuguese adaptation and its new complete English translation, The Water Beneath Darsen. English 4,736 words/240 paragraphs, EPUB3 with language/navigation/distinct identity and 27-page A5 PDF with embedded licensed fonts; actual format/text checks, isolated PT/EN rebuilds, official EPUBCheck and rendered PDF/XHTML review. Portuguese source, metadata, original 28-page PDF/EPUB, styles/fonts unchanged. Editor/translator are Codex under Martin direction; a source ambiguity is explicitly interpreted, not silently ratified. Structural correspondence is not semantic or independent literary proof. Historical manuscript, canon approval, hardware-reader/assistive technology, audience demand and commercial readiness remain unverified.",
+      "reference_collection_ids": [
+        "REF-LICH-ATTACHMENT",
+        "REF-LICH-REPORT-0448"
+      ]
     },
     {
       "id": "P05",
@@ -290,12 +295,16 @@
         "projects/waystone-dialogue/browser/README.md",
         "evidence/waystone-dialogue/BROWSER_RUN.json",
         "evidence/waystone-dialogue/CAMPAIGN_RUN.json",
-        "evidence/waystone-dialogue/HANDOVER_RUN.json"
+        "evidence/waystone-dialogue/HANDOVER_RUN.json",
+        "references/rave-master/README.md"
       ],
       "source_id": "LEGACY-001",
       "working_path": "projects/waystone-dialogue",
       "working_version": "0.5.0",
-      "maturity_scope": "Browser 0.5.0 preserves the two-day rescue/morning and adds a complete noon handover: present witnesses, exact deliveries, public order withdrawal, Iven consent, ferry/guide/refusal, separate return terms and local capacity consequences. Schema 1/2 saves continue; schema 3 replays the scene. All 35 checks pass (25 retained, 6 new domain, 4 new Chromium); 330 morning endings / 50,640 canonical handover states / 65,140 transitions from six specified night histories, retained 20,124 Python night transitions. Actual 0.4.0 artifact comparison and desktop/mobile frames reviewed by the implementing agent. No upstream deliveries/returns, independent literary/enjoyment approval, physical touch/assistive validation, new native game, Sites redeployment or commercial readiness claimed."
+      "maturity_scope": "Browser 0.5.0 preserves the two-day rescue/morning and adds a complete noon handover: present witnesses, exact deliveries, public order withdrawal, Iven consent, ferry/guide/refusal, separate return terms and local capacity consequences. Schema 1/2 saves continue; schema 3 replays the scene. All 35 checks pass (25 retained, 6 new domain, 4 new Chromium); 330 morning endings / 50,640 canonical handover states / 65,140 transitions from six specified night histories, retained 20,124 Python night transitions. Actual 0.4.0 artifact comparison and desktop/mobile frames reviewed by the implementing agent. No upstream deliveries/returns, independent literary/enjoyment approval, physical touch/assistive validation, new native game, Sites redeployment or commercial readiness claimed.",
+      "reference_collection_ids": [
+        "REF-RAVE-36AF165"
+      ]
     },
     {
       "id": "P11",

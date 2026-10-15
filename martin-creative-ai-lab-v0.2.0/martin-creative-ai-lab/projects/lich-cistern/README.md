@@ -112,3 +112,10 @@ specific testimony/grief interaction rather than a moral speech. Reader response
 canon fit against the unavailable manuscript and commercial interest remain open.
 
 Next compare independent Portuguese/English reader and translator reactions to the physical climax, voices and constrained permission; assess device reading alongside native play, musical practice and real P11 handoffs before choosing further work.
+
+## Historical reference availability
+
+[Version-aware literary library](../../references/literature/lich/README.md) records
+the supplied older archive's blocked transfer and earlier v0.4.48 inspection
+report. No historical manuscript/policy is imported. This PT/EN story remains
+a separate adaptation; its choices are not automatically North Star canon.

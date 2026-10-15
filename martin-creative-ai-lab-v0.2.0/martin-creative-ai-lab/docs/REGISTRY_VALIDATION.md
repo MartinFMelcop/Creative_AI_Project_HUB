@@ -56,3 +56,33 @@ The new gate rejects that same omission and accepts the complete list.
 [Actual execution](../evidence/continuous-integration/MANIFEST_RUN.json) records
 the comparison and real nested-Git fixtures. Matching hashes establish file
 integrity against this list, not authenticity or product runtime behavior.
+
+## Reference library and North Star foundation — v0.32.0
+
+`validate_repo.py` now calls the stdlib `reference_library.py` gate. Its independent
+`check` / `find` commands validate and discover the same catalog, without executing
+historical scripts or downloading sources. Project `reference_collection_ids`
+are optional known catalog IDs; existing source/transfer/maturity schemas remain.
+The old source archive metadata/hash and selected per-file checks are retained.
+
+Require unique collection/source/topic/capability IDs; canonical local paths;
+no symlink substitution; exact imported inventory coverage/counts; SHA-256/size/
+Git blob agreement; UTF-8 text-only payloads; inert control-file mappings; explicit
+excluded payload reasons and prior withheld digests. Discovery targets must name
+actual imported sources. Unavailable attachments cannot invent a hash, inventory,
+version, imported count or ratified authority. Historical reports are not payload.
+
+Raw source documents below **validated catalog snapshot roots** are historical
+data: their old links are not current HUB navigation. Their original bytes remain
+checked against inventories and the global manifest. Maintained reference/library/
+program documents and existing working-project links are still checked. Negative
+tests demonstrate this distinction, source omission/tampering/escapes, duplicate
+records, bad discovery, unsafe imports, old archive corruption and invented claims.
+
+The North Star stage is `foundation_only`, with no chosen engine or consumer.
+Only candidate/origin-verified contribution states are valid; adapted/integrated/
+external claims fail. A later real consumer needs an intentional contract/stage
+update and destination evidence. Origin report paths establish structured
+traceability, not independent verification of every reported result, rights,
+fictional authority, player experience or market demand. These checks do not
+prove source authenticity beyond the recorded Git/hash provenance.

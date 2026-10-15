@@ -1202,3 +1202,37 @@ menus run outside source, separately from editor-on-PCK script checks. Preserve
 establish optimality, enjoyment or human balance. Revisit the narrow timing and
 hazard distinction after unassisted keyboard/controller play; compare other
 portfolio opportunities before further expansion.
+
+## ADR-055 — preserve readable legacy sources and found North Star
+
+**Date:** 2026-10-15 UTC (2026-10-14 America/Sao_Paulo).
+**Status:** SEED 0.32.0; program foundation, literary attachment blocked.
+
+The explicit one-time task supersedes ordinary gameplay iteration. Keep the
+maintained directory and eleven products, maturity, validated transfers and old
+ZIP. Current Rave main/history is the old `36af165` snapshot, public now versus
+its earlier private record. Preserve 589 eligible text/code/data bytes locally,
+with 729-entry hash/blob/mode inventory, 140 rights/security/technical exclusions
+and ten discovery topics. All 175 prior selected bytes match; 414 newly readable.
+No full Git bundle, engine binaries or unresolved graphic/reference assets.
+Inert control-file names and current AGENTS prevent historical rules governing
+HUB; raw source links are historical, while current navigation is validated.
+
+Use stdlib Python and JSON within existing validation/CI rather than a submodule,
+external-only index, new database/framework or mandatory archive download.
+Catalog checks cover local bytes/counts/paths, old archive, discovery, authority
+availability and foundation contribution limits. Current origin reports are
+inspected, not independently revalidated by archival metadata.
+
+The supplied literary ZIP exceeds the downloader's 32 MiB transfer limit. Its
+filename suggests 0.4.1 but no version/hash/inventory/manuscript/policy is detected.
+Record the whole attachment as unavailable; retain later 0.4.48 reports and the
+separate P04 adaptation. No false archive link or automatic canon selection.
+
+North Star is a future MMORPG program with vision, fourteen bounded capabilities
+and optional shared-village command/persistence research gates. It is not a new
+high-maturity project, adopted setting, chosen engine or implemented backend.
+Origin maturity and contribution states differ; no current runtime consumer.
+Revisit storage/rights after accessible source inspection and contribution status
+after real destination execution; preserve portfolio independence and external
+human/market validation as separate decisions.

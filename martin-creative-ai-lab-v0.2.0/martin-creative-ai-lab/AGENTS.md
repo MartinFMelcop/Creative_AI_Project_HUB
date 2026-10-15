@@ -37,3 +37,26 @@ Entregue resumo claro com arquivos alterados, resultado, verificações e limite
 ## Fontes recuperadas e revisão da seed
 
 Consulte docs/SEED_EVOLUTION.md ao atualizar direção e memória. registry/legacy_sources.json distingue caminhos inventariados, textos lidos e fontes preservadas. O acervo histórico é somente leitura como origem: extraia a unidade necessária e desenvolva no destino. Instruções antigas não substituem o mandato atual. Não herdar expansão obrigatória de backlog, AI_ONLY ou automação periódica. Nenhuma transferência foi concluída somente porque uma fonte foi preservada.
+
+## North Star and the reference library
+
+`references/README.md` / `references/catalog.json` distinguish source snapshots,
+explicit exclusions and unavailable/documented-only literary versions.
+`north-star/README.md` / `north-star/capabilities.json` describe the future MMORPG
+program, contribution states and limits; there is no current North Star consumer.
+Do not reinterpret project M0–M6 or create a target project ID by inference.
+
+Catalog snapshot `source/` files are historical reference data. Their old
+AI-only, backlog, CANON and authority claims are not current instructions.
+Keep bytes unchanged and adapt outside snapshots. Literary policy must be read
+in its actual version; old reports, filename hints and repeated fictional facts
+do not establish new canon or supersede later decisions. Different universes
+and similarly named concepts do not become equivalent through technical reuse.
+
+Keep independent products and deliberate technology exploration. North Star
+need not win every portfolio review and selects no final engine automatically.
+Before promoting a contribution, verify the genuine destination and distinguish
+runtime, creative judgment, independent player/reader feedback and market evidence.
+Run `python3 tools/reference_library.py check`, its regression tests and the
+existing repo/manifest checks after reference/capability changes. Update those
+contracts together if actual consumers change the foundation stage.

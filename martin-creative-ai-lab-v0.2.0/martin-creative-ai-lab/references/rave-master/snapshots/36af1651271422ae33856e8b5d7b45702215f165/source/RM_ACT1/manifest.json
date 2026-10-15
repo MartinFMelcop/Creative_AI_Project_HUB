@@ -1,0 +1,628 @@
+{
+  "module": "RM_ACT1",
+  "version_aj": "AJ_000331",
+  "manifest_version": 1,
+  "generated_utc": "2026-01-05T01:42:58Z",
+  "files": [
+    {
+      "relpath": "DATA/.keep",
+      "bytes": 68,
+      "sha256": "0463d2fe6887cc5d8598365b9a33759913c09567de4a083f340cf6ff37185fc9"
+    },
+    {
+      "relpath": "DATA/CORE/00_INDEX.csv",
+      "bytes": 5407,
+      "sha256": "77af01539c95fa43412981ab0476e811d5f5be2361564a7297b5ed2fefe464d6"
+    },
+    {
+      "relpath": "DATA/CORE/00_META.csv",
+      "bytes": 591,
+      "sha256": "05dcec64f4e35e3d0bfdf9125f3cf9c1ef7ff55673b867f937f49f9d807d088e"
+    },
+    {
+      "relpath": "DATA/CORE/ACT1_ANTECEDENTES_CANON.csv",
+      "bytes": 968,
+      "sha256": "666e7ae5445b60a5c6c2030f581dc1851e6d2f33519214d32c1b50b311ae4dd9"
+    },
+    {
+      "relpath": "DATA/CORE/ACT1_AUDIO_PLAN_CANON.csv",
+      "bytes": 1238,
+      "sha256": "88cd524c6345b888f97b657315b7492a18e08e3a4f34c13e237c9f9a60d2b4ae"
+    },
+    {
+      "relpath": "DATA/CORE/ACT1_CLASSES_CANON.csv",
+      "bytes": 704,
+      "sha256": "f1f8921bbc5141389afbbb22c26be25bad227337308a8a712f86a474f349d294"
+    },
+    {
+      "relpath": "DATA/CORE/ACT1_COMBAT_SKILLS_CANON.csv",
+      "bytes": 61955,
+      "sha256": "9b320f2243e335dbf0ad5fe2fa12f4deafedb51e1e1f22e6b38f1bc981e73931"
+    },
+    {
+      "relpath": "DATA/CORE/ACT1_ENCOUNTERS_BY_CHUNK_OVERRIDE.csv",
+      "bytes": 405,
+      "sha256": "57b722774568c3c5d7247d4d2d94ad3710ab13cf73058f09c32c02cffc6e0667"
+    },
+    {
+      "relpath": "DATA/CORE/ACT1_ENCOUNTERS_BY_MAPTYPE_CANON.csv",
+      "bytes": 716,
+      "sha256": "2b870397848a8f41d6402610752b7137f5c53bd2cf16fb0ebc95d94ee8ef9b6a"
+    },
+    {
+      "relpath": "DATA/CORE/ACT1_GATES_CANON.csv",
+      "bytes": 32055,
+      "sha256": "6287d1219e570f55a4473c9b1bc227a840319af7d327498fba6a3abc4940293f"
+    },
+    {
+      "relpath": "DATA/CORE/ACT1_INTEGRATION_CHECKLIST.csv",
+      "bytes": 764,
+      "sha256": "d475c3209969782d366a6478d2b2fac75c859ddc7aa91bd820f3a97c1a10c8ea"
+    },
+    {
+      "relpath": "DATA/CORE/ACT1_LOOT_BY_CHUNK_CANON.csv",
+      "bytes": 648,
+      "sha256": "76fa2b030031abcb6ca40d0315752a015b1bc663d2d442a85cb21bf8a80919dd"
+    },
+    {
+      "relpath": "DATA/CORE/ACT1_MILESTONES_CANON.csv",
+      "bytes": 935,
+      "sha256": "4883b0ecdaf80d7201b723c4d0637f9c72a1af6479319c143e4e00d790e345f7"
+    },
+    {
+      "relpath": "DATA/CORE/ACT1_MONSTROS_CANON.csv",
+      "bytes": 30085,
+      "sha256": "eb79de3085179b314fae51de6fa0136780167f1b1291151d53d15c096953695d"
+    },
+    {
+      "relpath": "DATA/CORE/ACT1_PASSIVES_CANON.csv",
+      "bytes": 21351,
+      "sha256": "0a767068176249d0e2fcde5bf069f0244bee594f8e12e330ddd6ba2311215b5a"
+    },
+    {
+      "relpath": "DATA/CORE/ACT1_REL_CLASS_ANTECEDENTE_CANON.csv",
+      "bytes": 1729,
+      "sha256": "fc2be2b26a15130d5ac5730866bcb8caf8006b6058c67787fe6bbe4a8aa50498"
+    },
+    {
+      "relpath": "DATA/CORE/ACT1_REPUTATION_LINKS_CANON.csv",
+      "bytes": 8977,
+      "sha256": "1d4691e871f1c4898bb778ec2d6105b5c161aab80de9f278ac3560ed50844a25"
+    },
+    {
+      "relpath": "DATA/CORE/ACT1_REP_SEED_ANTECEDENTE_CANON.csv",
+      "bytes": 1167,
+      "sha256": "42b72739c68a783f7e3b452986b072b0051d9ecd5b4e6687da81277b9ee64642"
+    },
+    {
+      "relpath": "DATA/CORE/ACT1_SCOPE_FREEZE_CANON.csv",
+      "bytes": 3786,
+      "sha256": "4a8e65ca5c7fbd50c6275a67de9d7f1a356387560bd01534d41b8a297b723166"
+    },
+    {
+      "relpath": "DATA/CORE/ACT1_SCOPE_FREEZE_CANON.md",
+      "bytes": 1355,
+      "sha256": "099f15caab29f97d47ed88a28907f0a1dd28a681a7b218319c9fdad6488bd4e1"
+    },
+    {
+      "relpath": "DATA/CORE/ACT1_STORY_CANON.csv",
+      "bytes": 18897,
+      "sha256": "c1f5e62f78ce6584aaa78d5111d3a579347baf775bc3bcebd0279f3fe2404196"
+    },
+    {
+      "relpath": "DATA/DATA_INDEX.csv",
+      "bytes": 25487,
+      "sha256": "63d79a40599bca47d381d12c881a9b101afaeda8bccea124330801f3719bee90"
+    },
+    {
+      "relpath": "DATA/DEV/00_INDEX.csv",
+      "bytes": 17753,
+      "sha256": "534a2c3262e7da4bed729b1ed6cda9b5abd4aaf7b62fce3084ec2bbae56f47a8"
+    },
+    {
+      "relpath": "DATA/DEV/00_META.csv",
+      "bytes": 2541,
+      "sha256": "8bfcd0a3ab98f439dea85f5b1cbab3fac2d462fa2edb2eae915dc2d68fb353ad"
+    },
+    {
+      "relpath": "DATA/DEV/ACT_ENTITY_TAGS.csv",
+      "bytes": 44060,
+      "sha256": "822543267d7f97eb366219f8dc5a77fbce20ed3ef8401415d5a387c0cd52fce4"
+    },
+    {
+      "relpath": "DATA/DEV/ALCHEMIST_BACKLOG.csv",
+      "bytes": 8613,
+      "sha256": "9c6be0a369605af8a4c5b9f178cde75fe71c0a01958b286aa45f1af1745d18c4"
+    },
+    {
+      "relpath": "DATA/DEV/BARD_BACKLOG_ATO_3.csv",
+      "bytes": 9349,
+      "sha256": "c7cfeb82859dd374a99dd1543d1a69592c17e455c8f41a55cb5a3772fbd23f11"
+    },
+    {
+      "relpath": "DATA/DEV/BATTLEMAGE_BACKLOG_ATO_2.csv",
+      "bytes": 12643,
+      "sha256": "2c3d00f5cef729212ea18ac28b68b0edb2ba0f61264940641a2febc798e380ed"
+    },
+    {
+      "relpath": "DATA/DEV/BERSERKER_EM_CONSTRUCAO.csv",
+      "bytes": 15733,
+      "sha256": "cfe15b63a65e52366205a8988e84fd733893577cd0bc687cb0671e2cf015b93e"
+    },
+    {
+      "relpath": "DATA/DEV/CALAMIDADES_BACKLOG_ATO_4.csv",
+      "bytes": 13204,
+      "sha256": "bd36467d6459f8745a56345fc073e16a60149858a532d3d7f8a7311006849858"
+    },
+    {
+      "relpath": "DATA/DEV/CALAMITY_EVENT_RULES.csv",
+      "bytes": 2587,
+      "sha256": "eacb66a512aa92cf622c6ea9e598b6917e19e75ab8c8c90510db109203a9a236"
+    },
+    {
+      "relpath": "DATA/DEV/CAVE_LIGHTING_CONFIG.csv",
+      "bytes": 461,
+      "sha256": "abeb4a503918e958fefb2b0d00ad0af8c087e2374f4e3d129e728af3e880c085"
+    },
+    {
+      "relpath": "DATA/DEV/CHAPTER_THREAD_MAP_VIEW.csv",
+      "bytes": 2705,
+      "sha256": "cb99289092973b552820f862a04a9976e7c484c0414f426e5a2d7fef6f7f699f"
+    },
+    {
+      "relpath": "DATA/DEV/CHUNK_TIME_OVERRIDES.csv",
+      "bytes": 2724,
+      "sha256": "7fd629534951f938979a3dc3daa257a4eb8ea8578b891fbbfb822c94164a93da"
+    },
+    {
+      "relpath": "DATA/DEV/CLASS_PASSIVES_MASTER.csv",
+      "bytes": 31072,
+      "sha256": "ad1afc1b372b918df936c0da3d985056d5398cf581d3dcba172e60adf18c2fc0"
+    },
+    {
+      "relpath": "DATA/DEV/CLASS_PERICIAS_MASTER.csv",
+      "bytes": 27763,
+      "sha256": "e2f9df8609a225fe6bc850a2e765cc0aa881a8d8f964123816bd21eb64ac9a6a"
+    },
+    {
+      "relpath": "DATA/DEV/CLASS_SKILLS_MASTER.csv",
+      "bytes": 115766,
+      "sha256": "d335e8b36dceb52f457434d453f678f4c6ec2ec99138fd85361f44a5fd62bee2"
+    },
+    {
+      "relpath": "DATA/DEV/CLERIC_EM_CONSTRUCAO.csv",
+      "bytes": 7109,
+      "sha256": "c9c71f303428ebd53a979df238de9853046738d17319a560f7fc3f9c3df1bb27"
+    },
+    {
+      "relpath": "DATA/DEV/COMMON_PASSIVES_EM_CONSTRUCAO.csv",
+      "bytes": 3704,
+      "sha256": "967b4d879e143aae17ecb464f6772e6e8945f4f8b18445bb0c9a08abb8670837"
+    },
+    {
+      "relpath": "DATA/DEV/CRYOMANCER_EM_CONSTRUCAO.csv",
+      "bytes": 8442,
+      "sha256": "77d8210c1521babd9181890b579e419f9158fd5cd8807e6b429045443a316f51"
+    },
+    {
+      "relpath": "DATA/DEV/DARKMAGE_BACKLOG_ATO_2.csv",
+      "bytes": 6218,
+      "sha256": "5268275c9d573cb4df76c9e6c36dd95328f6e23d75bd92c795db8eb026febb49"
+    },
+    {
+      "relpath": "DATA/DEV/DIALOGUE_VARIANTS.csv",
+      "bytes": 7951,
+      "sha256": "7434223aa7fe25a8449796d1648b04257efa355bced6d62a0224e3b3f2606787"
+    },
+    {
+      "relpath": "DATA/DEV/DIC_CAPITULOS_EM_CONSTRUCAO.csv",
+      "bytes": 12178,
+      "sha256": "79a1ad54c3d9e8bf3549d7e1eaf20b7f05e6c4f68edc246e75d48e20d0f441f7"
+    },
+    {
+      "relpath": "DATA/DEV/DIC_CHUNKS_BACKUP_20251222.csv",
+      "bytes": 28171,
+      "sha256": "116cbbb9d75658487afd3d78cbf80096ef72fe1b35b667bfa53a0935246757d8"
+    },
+    {
+      "relpath": "DATA/DEV/DIC_CHUNKS_EM_CONSTRUCAO.csv",
+      "bytes": 36649,
+      "sha256": "59fd5aac565cc4901b51d6eea08bd79b81d9dac93b0058d60ffed7e710379676"
+    },
+    {
+      "relpath": "DATA/DEV/DIC_DUNGEON_EM_CONSTRUCAO.csv",
+      "bytes": 1670,
+      "sha256": "119ef920aae640f9aad5e5f811ac1bbeff56876961e6e3ecb8e04dbe5c55c892"
+    },
+    {
+      "relpath": "DATA/DEV/DIC_INNERS_EM_CONSTRUCAO.csv",
+      "bytes": 6961,
+      "sha256": "c3cea0101cac60219c91abf2a408fa8a972e765d8e29a99a178c1b07fea5503c"
+    },
+    {
+      "relpath": "DATA/DEV/DIC_MAPTYPE_EM_CONSTRUCAO.csv",
+      "bytes": 9093,
+      "sha256": "b59cc01397ed09cb9eb6a6260803a3fe83b5015e53960803fb1ed84466327e7c"
+    },
+    {
+      "relpath": "DATA/DEV/DIC_MINIDUNGEON_EM_CONSTRUCAO.csv",
+      "bytes": 4106,
+      "sha256": "ca4e93a3620c8b8f43ad57f795214d9ad30158c3573845e2b766896c1920ab20"
+    },
+    {
+      "relpath": "DATA/DEV/DIC_MONSTROS_EM_CONSTRUCAO.csv",
+      "bytes": 29419,
+      "sha256": "ea8941fb3b0ae0fe025d19c4b11f7762df7f35eb408da46f69d91e02e7c3cc92"
+    },
+    {
+      "relpath": "DATA/DEV/DIC_NPCS_EM_CONSTRUCAO.csv",
+      "bytes": 15898,
+      "sha256": "18d3fd51231f701d14ce50bd3916e539b92435e9f2edbbc78eebe375e27d0878"
+    },
+    {
+      "relpath": "DATA/DEV/DIC_PUZZLES_EM_CONSTRUCAO.csv",
+      "bytes": 2689,
+      "sha256": "994d1843b67cdb48abedda69ff0265e82247e8d7b0b03a37f5b64fcd87448e70"
+    },
+    {
+      "relpath": "DATA/DEV/DRAGON_SLAYER_BACKLOG_ATO_4.csv",
+      "bytes": 14433,
+      "sha256": "b8d1884bce8fc5e9c3ac443832891305ecccbe0549ddf9c7272c6e23728facdc"
+    },
+    {
+      "relpath": "DATA/DEV/DRUID_EM_CONSTRUCAO.csv",
+      "bytes": 6221,
+      "sha256": "a2b6865f995958a50154220eae7497730cfbd24fca088b1a9f8e7658eeecedc1"
+    },
+    {
+      "relpath": "DATA/DEV/ESPER_BACKLOG.csv",
+      "bytes": 9258,
+      "sha256": "0e22b4358d4f1ae1c1f951abd4f11e3de864b4a04816c3ef3c60ae2541291e31"
+    },
+    {
+      "relpath": "DATA/DEV/EXPORT_TAGS.csv",
+      "bytes": 594,
+      "sha256": "a88ba36f01e8cac5bcc0f4f1a451a59f19b084325160ee396a8ebcc0fcd7a929"
+    },
+    {
+      "relpath": "DATA/DEV/FAE_TAGS_DICTIONARY.csv",
+      "bytes": 1950,
+      "sha256": "247229cd1dd3d57237b635e78b3a1956cfcea059c33f3e80e1f66b05339965c9"
+    },
+    {
+      "relpath": "DATA/DEV/FAE_TAG_ASSIGNMENTS.csv",
+      "bytes": 14190,
+      "sha256": "45f8030dd08889218d0ef753b91291882acff590a4efe699cf2d2852c27b5abf"
+    },
+    {
+      "relpath": "DATA/DEV/HOUSE_LIGHTS_PLAN.csv",
+      "bytes": 2078,
+      "sha256": "bef3369b7a20fa6df3104bf24e46cb765a2a5b82e6a4d9ee95d2b5d33cc3306f"
+    },
+    {
+      "relpath": "DATA/DEV/ITENS_EM_CONSTRUCAO.csv",
+      "bytes": 69815,
+      "sha256": "b62b7288dd83d6d8ad22f25440cfd9eadfa0cb060376ceffada62444a44c1c9a"
+    },
+    {
+      "relpath": "DATA/DEV/KNIGHT_EM_CONSTRUCAO.csv",
+      "bytes": 13456,
+      "sha256": "be0cdd7e0d295915f54e2ac7a1a00a0397322abef2158d5b164aad0304a7681d"
+    },
+    {
+      "relpath": "DATA/DEV/MAPA_WORLDMAP_EM_CONSTRUCAO.csv",
+      "bytes": 132787,
+      "sha256": "02e6d7cd5ff7dd246ad43191bd1edf5a6f57154cae6aa9f6b2e1a955de39620c"
+    },
+    {
+      "relpath": "DATA/DEV/MEMORY_FLAGS.csv",
+      "bytes": 1041,
+      "sha256": "fbe336d8dc4224a38a76800730ef94aae59d6a00075654066aec1d4ca4d9946c"
+    },
+    {
+      "relpath": "DATA/DEV/MENTORSHIP_MASTER.csv",
+      "bytes": 3912,
+      "sha256": "f9a5e18008f089eb22c76239975ffcf46fe5598d5325c7d56295b03d273060cf"
+    },
+    {
+      "relpath": "DATA/DEV/MONK_BACKLOG.csv",
+      "bytes": 5811,
+      "sha256": "08333cbb58fa8398c376b7deb74f5255dbad4cfb68d0a66db14fd0955e525712"
+    },
+    {
+      "relpath": "DATA/DEV/NECROMANCER_BACKLOG.csv",
+      "bytes": 9348,
+      "sha256": "5e021e410546c1251fcc6e047f3a45104d36d2c8391c68595de413e684639b0a"
+    },
+    {
+      "relpath": "DATA/DEV/NPC_IDENTITY_PROFILE.csv",
+      "bytes": 841,
+      "sha256": "ee683e740ef0b1b6a7651e84f2984119b1fff1e0dd1b415cfe37e4d7f3ef1348"
+    },
+    {
+      "relpath": "DATA/DEV/NPC_PROFILE.csv",
+      "bytes": 3769,
+      "sha256": "cc804653f0939ce6d18682f0c8171325e9b1ed9abfe712b981f591a741bef158"
+    },
+    {
+      "relpath": "DATA/DEV/NPC_RELATIONS.csv",
+      "bytes": 1357,
+      "sha256": "be7135b8c9fdfdfc36cad00122b27ba30eb7d30ba2c2a49cda6c5e304d98abbe"
+    },
+    {
+      "relpath": "DATA/DEV/NPC_SCHEDULE_RULES.csv",
+      "bytes": 4579,
+      "sha256": "4e3c559e6c0f07c015fe7e24104e31c5f6980f9b5538933e4cb9582e9603b7ef"
+    },
+    {
+      "relpath": "DATA/DEV/NPC_STATE.csv",
+      "bytes": 1065,
+      "sha256": "79fd03294259329dd23e328bc037e34a405dc1819ae999cb80eeb3bb1282fe3c"
+    },
+    {
+      "relpath": "DATA/DEV/PATCH_LOG_DIC_CHUNKS.csv",
+      "bytes": 13044,
+      "sha256": "51d2a4ce91c2d8ca9796dd2d72365451f416479bc15cdde71b08d6e03b7aec62"
+    },
+    {
+      "relpath": "DATA/DEV/PYROMANCER_EM_CONSTRUCAO.csv",
+      "bytes": 7105,
+      "sha256": "725bbb7fd7db3c0740d17831ec0710e11b3d70a87a4f044430de3f78de4be206"
+    },
+    {
+      "relpath": "DATA/DEV/QUESTS_EM_CONSTRUCAO.csv",
+      "bytes": 46267,
+      "sha256": "2e51ce4994c5b6f850bf43fbbfe3234f3aaa52a66f9a7f1a7ec2e7e61953b88d"
+    },
+    {
+      "relpath": "DATA/DEV/QUEST_JOURNAL_VIEW.csv",
+      "bytes": 23174,
+      "sha256": "a4a6e0d99c58c91779c0d24d383acad9e00f06c42aa36c5c23ea5c20ed1ea3e5"
+    },
+    {
+      "relpath": "DATA/DEV/QUEST_STEPS.csv",
+      "bytes": 7972,
+      "sha256": "25206c7f5aae4d3bf84693521b29954277bca6c22f8fd12041bc2909074e7a8b"
+    },
+    {
+      "relpath": "DATA/DEV/RACAS_EM_CONSTRUCAO.csv",
+      "bytes": 65613,
+      "sha256": "dc4f2bff5988846c510375824d98ffe5f250db4d29548b4fa18631f9f807d1b7"
+    },
+    {
+      "relpath": "DATA/DEV/RANGER_EM_CONSTRUCAO.csv",
+      "bytes": 15435,
+      "sha256": "94176db84c4d5037cd39a023824394587c734df8aef690f49f1b948f5a82184d"
+    },
+    {
+      "relpath": "DATA/DEV/RECENT_EVENTS.csv",
+      "bytes": 902,
+      "sha256": "fdaea1fb4b2522e0c86d5f77e4a36632f56dd34732705f9ea5a4f7e2d55b385f"
+    },
+    {
+      "relpath": "DATA/DEV/RGSS/RGSS_PACK_MANIFEST.json",
+      "bytes": 4111,
+      "sha256": "f370f6f5a3aa5d8dc4e6a3ec01131dcd838a1ede7878c762c51988c9af86577e"
+    },
+    {
+      "relpath": "DATA/DEV/RGSS/RGSS_PACK_ORDER.csv",
+      "bytes": 2564,
+      "sha256": "288454400a416e349cdf7d72e93026d50a2dc786bd14cde212140acafad26004"
+    },
+    {
+      "relpath": "DATA/DEV/RGSS/RM_CHARACTER_CREATE_RUNTIME.rb",
+      "bytes": 15022,
+      "sha256": "5f24a3ad9daaa230b039ce15b43a8780aa0b73e0c499e28cd90146eae613c7d0"
+    },
+    {
+      "relpath": "DATA/DEV/RGSS/RM_COMBAT_RUNTIME.rb",
+      "bytes": 4221,
+      "sha256": "60f1489f5dcfc3f92a112a369b6cefe66b5fb52be3ee2086c6cbe1e7f9ea87a6"
+    },
+    {
+      "relpath": "DATA/DEV/RGSS/RM_DAYNIGHT_TONE_RUNTIME.rb",
+      "bytes": 1184,
+      "sha256": "d77d6c9f9ac148af80b52d1a8fe8164b8510533f65beaab623f5bc612dc33289"
+    },
+    {
+      "relpath": "DATA/DEV/RGSS/RM_DEBUG_HOTKEYS_RUNTIME.rb",
+      "bytes": 810,
+      "sha256": "bc87691b826b56564fd1f47369449f952b033d3581c403651099083eabfce490"
+    },
+    {
+      "relpath": "DATA/DEV/RGSS/RM_DIALOGUE_SCORING_RUNTIME.rb",
+      "bytes": 41365,
+      "sha256": "07682a3205ea2850d748e4f3ffeef7febe51df1ddb10d5e8689bef7d26d1a735"
+    },
+    {
+      "relpath": "DATA/DEV/RGSS/RM_ENCOUNTERS_RUNTIME.rb",
+      "bytes": 363,
+      "sha256": "287989ce94369c187e80b6504881451f77cd0aa01f7f3e8599c6a789fefe3c80"
+    },
+    {
+      "relpath": "DATA/DEV/RGSS/RM_FLAGS_EVENTS_RUNTIME.rb",
+      "bytes": 9839,
+      "sha256": "e10b541388fe9d2a1f1aa1aefcb054241ffb58ecf4a4815c5e833f3501366525"
+    },
+    {
+      "relpath": "DATA/DEV/RGSS/RM_LIGHTING_RUNTIME.rb",
+      "bytes": 7141,
+      "sha256": "ce268660731d357c0d24848e1e26ec7c967b493582ee436d7397df85dcfbbbb2"
+    },
+    {
+      "relpath": "DATA/DEV/RGSS/RM_LOOT_RUNTIME.rb",
+      "bytes": 660,
+      "sha256": "c23c49ae28dcd9019502e40a025d8fe490c96cdce1de9cb3682482f75eb3c9e0"
+    },
+    {
+      "relpath": "DATA/DEV/RGSS/RM_MOVEMENT_RUN_RUNTIME.rb",
+      "bytes": 7899,
+      "sha256": "a0425279ed807a106d72a88ae01b03c690dbbe92d4a806848cd93ecc0f679e82"
+    },
+    {
+      "relpath": "DATA/DEV/RGSS/RM_PERICIA_XP_RUNTIME.rb",
+      "bytes": 9515,
+      "sha256": "7056f9462e8da5b365236ac81f3930eaa28e5aa9396f35740604c9b246a6b866"
+    },
+    {
+      "relpath": "DATA/DEV/RGSS/RM_PLAYER_LEVEL_HOOKS.rb",
+      "bytes": 19489,
+      "sha256": "4e5c8b305faa25f92edbde1021900539e67c5e0d46523a25ae245fc0d9232037"
+    },
+    {
+      "relpath": "DATA/DEV/RGSS/RM_PLAYER_LEVEL_RUNTIME.rb",
+      "bytes": 9092,
+      "sha256": "4a4876721a614a535b015a2688aafc587101b2cc71ddeb2c808efa3c121f62ed"
+    },
+    {
+      "relpath": "DATA/DEV/RGSS/RM_PROLOGUE_SLIDESHOW_RUNTIME.rb",
+      "bytes": 1407,
+      "sha256": "746797ec493c1d980b6046bb714d501beba32c033a97b994eb4eebb5ea7b0529"
+    },
+    {
+      "relpath": "DATA/DEV/RGSS/RM_QA_SAVE_VALIDATION.rb",
+      "bytes": 2025,
+      "sha256": "08b4ea347106e94e18038ca0518a70e359b03b51030334834a88e41c16187313"
+    },
+    {
+      "relpath": "DATA/DEV/RGSS/RM_REPUTATION_RUNTIME.rb",
+      "bytes": 3135,
+      "sha256": "fe9d3c65b77e1d9812cf555cbca12d794a7f52e8d63743e7d8bed49cf5213c45"
+    },
+    {
+      "relpath": "DATA/DEV/RGSS/RM_SAVE_MIGRATION_RUNTIME.rb",
+      "bytes": 2574,
+      "sha256": "2ef3ce9bfe8fce52321b3da429e5cb12e3a703f48bfc0510ccc2b3bbea9f802a"
+    },
+    {
+      "relpath": "DATA/DEV/RGSS/RM_TIME_RUNTIME.rb",
+      "bytes": 6372,
+      "sha256": "bbe214583205bf6d83228b7425db25c376457108924387beca9315e0a0b39b1f"
+    },
+    {
+      "relpath": "DATA/DEV/RGSS/RM_UI_PASSIVE_EQUIP_RUNTIME.rb",
+      "bytes": 3549,
+      "sha256": "3fade011d1b905d7eaf3cdf2158f67fffa7a4df69ad3d81e72b47eb30ec515b2"
+    },
+    {
+      "relpath": "DATA/DEV/RGSS/RM_UI_QUEST_JOURNAL_RUNTIME.rb",
+      "bytes": 7790,
+      "sha256": "b755126c90555b4b97725749aaa5ce7d9683c1b5385f6967c807d45786487ea4"
+    },
+    {
+      "relpath": "DATA/DEV/RGSS/RM_UI_SKILL_EQUIP_RUNTIME.rb",
+      "bytes": 2905,
+      "sha256": "d8ef41857dea51f435a0693aac2c689e769c5e39be1ce874ae515e472f241fe1"
+    },
+    {
+      "relpath": "DATA/DEV/RGSS/RM_WORLD_CONTEXT_RUNTIME.rb",
+      "bytes": 1847,
+      "sha256": "514baf060712dc0f9938643a95a8d465166781adad30f3bac09964cfd174705c"
+    },
+    {
+      "relpath": "DATA/DEV/ROGUE_FEMALE_BACKLOG.csv",
+      "bytes": 23279,
+      "sha256": "14c2c28df7443b1af710bd840735b148c9f4218a832316317118504f10e29b4b"
+    },
+    {
+      "relpath": "DATA/DEV/ROGUE_MALE_EM_CONSTRUCAO.csv",
+      "bytes": 16313,
+      "sha256": "db9c6f016e016fb6c2277b65914350eb3d3e16ca843e916b58a3578b75aa6ada"
+    },
+    {
+      "relpath": "DATA/DEV/ROSE_ARC_MASTER.csv",
+      "bytes": 1801,
+      "sha256": "9366ff644202a140b00695bd0cdf1ec9f64cf9b40fb0c122e2b19efbf9cf5465"
+    },
+    {
+      "relpath": "DATA/DEV/RPT_T6_1_MENTORES_MAPA.csv",
+      "bytes": 1814,
+      "sha256": "d92c6703406f948a78354c6c3cf7a3742e7cde8dbe49203df58db6e50827a288"
+    },
+    {
+      "relpath": "DATA/DEV/RPT_T6_1_ROSE_ARCO.csv",
+      "bytes": 1219,
+      "sha256": "006208f22ab37cbdeb6e6b774b5efb773def03e3bb528bac204106b6c5921562"
+    },
+    {
+      "relpath": "DATA/DEV/SENTINEL_BACKLOG_ATO_2.csv",
+      "bytes": 5931,
+      "sha256": "97008f60a7731504e10f7b3c31626140f3ad9011a4e72b6ba14264791c455649"
+    },
+    {
+      "relpath": "DATA/DEV/SETTINGS/SETTINGS_MOVEMENT.csv",
+      "bytes": 576,
+      "sha256": "cce7e34eaee856b70301bec6038f1993042ab9b2fa3e14648fc17230a15a8f3d"
+    },
+    {
+      "relpath": "DATA/DEV/SHAMAN_EM_CONSTRUCAO.csv",
+      "bytes": 9304,
+      "sha256": "9dfa29d656a3a310c9c477b898195795565cf16a1ac381a2a4b3755667bf2f19"
+    },
+    {
+      "relpath": "DATA/DEV/SHOP_MERCADOR_TIERS_EM_CONSTRUCAO.csv",
+      "bytes": 4510,
+      "sha256": "d284dddd35e06976055262da84ce86b50efb6bd32b6ddc69b3bc485a71b4c40e"
+    },
+    {
+      "relpath": "DATA/DEV/SIDEQUESTS_EM_CONSTRUCAO.csv",
+      "bytes": 63779,
+      "sha256": "8dab504bb9e8ad0ffaa44acea685a02e43c315947f5828b366844ac5e3f91806"
+    },
+    {
+      "relpath": "DATA/DEV/SKILL_SUMMON_LINK.csv",
+      "bytes": 1302,
+      "sha256": "224827ba742f72af6a96c7e86e86ed2e315cb8488648a1c6b7450f3cdbbe6c84"
+    },
+    {
+      "relpath": "DATA/DEV/SOLDIER_BACKLOG_ATO_4.csv",
+      "bytes": 18366,
+      "sha256": "90fba3e79ac14219402db0b167590f17fbc0480eccceec53aa6a0d61c0ec1ab7"
+    },
+    {
+      "relpath": "DATA/DEV/STORY_BEATS_ACT1.csv",
+      "bytes": 960,
+      "sha256": "6a930f23e7840002f87be05ace80ab876de969a25659b15da34658596e52d34e"
+    },
+    {
+      "relpath": "DATA/DEV/STORY_THREADS_MASTER.csv",
+      "bytes": 1228,
+      "sha256": "b38a06240fc7f41d6aadffd59754ef0079aafc0f3cf1ff42311332cc0aa5522f"
+    },
+    {
+      "relpath": "DATA/DEV/SUMMON_ENTITY_MASTER.csv",
+      "bytes": 2641,
+      "sha256": "1f39c34d96f11a046d8ee320e4bcca80b162c8a65250723b68e90ffdf46b47e7"
+    },
+    {
+      "relpath": "DATA/DEV/THREAD_MILESTONES_MASTER.csv",
+      "bytes": 1689,
+      "sha256": "21750541795020d90749c494cef2bc03ad0eefb5a41a336ac3c7d7eb55180ee4"
+    },
+    {
+      "relpath": "DATA/DEV/TOOLS/build_modules.py",
+      "bytes": 4329,
+      "sha256": "3741254b04558c2ace8c36228c8970d5ce9bca098e58c2705f4260dfb4749d5e"
+    },
+    {
+      "relpath": "DATA/DEV/WARRIOR_EM_CONSTRUCAO.csv",
+      "bytes": 6301,
+      "sha256": "86454f597412735daa751473e1fb4174b97b2e1f84cff3e2a50251deccf8c3bc"
+    },
+    {
+      "relpath": "DATA/sheet_name_map.json",
+      "bytes": 6019,
+      "sha256": "c8ef440047d7ebf91d889cf25407956ebe572dee8109f32775a91ef6cb8ba05f"
+    },
+    {
+      "relpath": "MODULE_INFO.json",
+      "bytes": 715,
+      "sha256": "39b0add569a29d394ddb14118ab085ec00d5b5000ab213d5503d75ea8ac5748d"
+    },
+    {
+      "relpath": "checksums.sha256",
+      "bytes": 12462,
+      "sha256": "0b210d64d771b07f1cf352197880a6fdeae95f51ce613e7d81311245f68cca73"
+    }
+  ]
+}

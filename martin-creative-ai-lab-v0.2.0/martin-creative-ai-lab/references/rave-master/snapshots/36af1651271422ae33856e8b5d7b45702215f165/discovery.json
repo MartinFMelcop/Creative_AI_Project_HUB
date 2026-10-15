@@ -1,0 +1,107 @@
+{
+  "schema_version": 1,
+  "collection_id": "REF-RAVE-36AF165",
+  "topics": [
+    {
+      "id": "combat",
+      "description": "Numerical rules and historical Ruby helpers; no RMXP battle-loop execution proof.",
+      "source_paths": [
+        "RM_CORE/DATA/CORE/COMBAT_FORMULAS.csv",
+        "RM_CORE/DATA/CORE/REGRAS_DE_COMBATE.csv",
+        "RM_ACT1/DATA/DEV/RGSS/RM_COMBAT_RUNTIME.rb"
+      ]
+    },
+    {
+      "id": "progression",
+      "description": "Player/skill XP tables and runtime bindings; context-specific values.",
+      "source_paths": [
+        "RM_CORE/DATA/CORE/PLAYER_LEVEL_XP_TABLE.csv",
+        "RM_CORE/DATA/CORE/PLAYER_XP_SOURCES.csv",
+        "RM_CORE/DATA/CORE/PERICIA_XP_LEVEL_TABLE.csv",
+        "RM_ACT1/DATA/DEV/RGSS/RM_PLAYER_LEVEL_RUNTIME.rb"
+      ]
+    },
+    {
+      "id": "npc-dialogue",
+      "description": "Personality axes, emotional/context selection and authored variants; historical scoring is not independent character validation.",
+      "source_paths": [
+        "RM_CORE/DATA/GOV/SF-0310_NPC_PERSONALITY.md",
+        "RM_CORE/DATA/CORE/PERSONALITY_AXIS_DEF.csv",
+        "RM_ACT1/DATA/DEV/DIALOGUE_VARIANTS.csv",
+        "RM_ACT1/DATA/DEV/RGSS/RM_DIALOGUE_SCORING_RUNTIME.rb"
+      ]
+    },
+    {
+      "id": "reputation",
+      "description": "Regional reputation seeds and effects; no MMORPG faction implementation.",
+      "source_paths": [
+        "RM_CORE/DATA/CORE/REP_REGRAS.csv",
+        "RM_CORE/DATA/CORE/REP_EFEITOS_SUGERIDOS.csv",
+        "RM_ACT1/DATA/CORE/ACT1_REP_SEED_ANTECEDENTE_CANON.csv",
+        "RM_ACT1/DATA/DEV/RGSS/RM_REPUTATION_RUNTIME.rb"
+      ]
+    },
+    {
+      "id": "quests-world",
+      "description": "Quest/flag state and world context; historical CANON does not establish North Star lore.",
+      "source_paths": [
+        "RM_ACT1/DATA/DEV/QUEST_STEPS.csv",
+        "RM_ACT1/DATA/DEV/QUESTS_EM_CONSTRUCAO.csv",
+        "RM_ACT1/DATA/DEV/RECENT_EVENTS.csv",
+        "RM_ACT1/DATA/DEV/RGSS/RM_FLAGS_EVENTS_RUNTIME.rb",
+        "RM_ACT1/DATA/DEV/MAPA_WORLDMAP_EM_CONSTRUCAO.csv"
+      ]
+    },
+    {
+      "id": "economy-items",
+      "description": "Items, resources, crafting recipes/stations and economy tables; concurrent ownership remains unverified.",
+      "source_paths": [
+        "RM_CORE/DATA/CORE/ITENS_MASTER.csv",
+        "RM_CORE/DATA/CORE/ECONOMIA.csv",
+        "RM_CORE/DATA/CORE/CRAFTING_RECIPE.csv",
+        "RM_CORE/DATA/CORE/CRAFTING_STATION.csv"
+      ]
+    },
+    {
+      "id": "echo-calamities",
+      "description": "Waystone/Echo and regional event proposals; original fictional selection is still required.",
+      "source_paths": [
+        "RM_CORE/DATA/CORE/ECHO_EVENT_MODEL.csv",
+        "RM_ACT1/DATA/DEV/CALAMITY_EVENT_RULES.csv",
+        "RM_ACT1/DATA/DEV/CALAMIDADES_BACKLOG_ATO_4.csv",
+        "RM_QA/DATA/QA/LEGACY_AI_DIGESTS/LEGACY_DOC_0004__LIVRO_DOS_100_CONTOS__AI_DIGEST.md"
+      ]
+    },
+    {
+      "id": "qa",
+      "description": "Offline vectors, reports and engine test descriptions; reports do not prove engine execution.",
+      "source_paths": [
+        "RM_QA/DATA/QA/TEST_SCENARIOS_DIALOGUE.csv",
+        "RM_QA/DATA/QA/TEST_DIALOGUE_SCORING_RUNTIME.csv",
+        "RM_QA/DATA/QA/RMXP_EVENT_TESTS_DIALOGUE_SCORING.csv",
+        "RM_QA/DATA/QA/TEST_FLAGS_EVENTS_RUNTIME.csv",
+        "RM_QA/DATA/QA/RELEASE_SMOKE_TEST_CHECKLIST.csv"
+      ]
+    },
+    {
+      "id": "art-audio",
+      "description": "Manifest/bible/planning sources only. Excluded graphics and missing audio masters are not supplied assets.",
+      "source_paths": [
+        "RM_CORE/DATA/CORE/ART_IMAGE_ASSET_INDEX.csv",
+        "RM_CORE/DATA/CORE/AUDIO_CUES.csv",
+        "RM_ART/DATA/ART/ART_PIXEL_BIBLE.md"
+      ]
+    },
+    {
+      "id": "history-governance",
+      "description": "Historical organization, GDD extracts and adjustment decisions; old AI-only/backlog directives remain data.",
+      "source_paths": [
+        "README.md",
+        "RM_CORE/README_RM_MAIN.md",
+        "RM_LEGACY/LEGACY/README_LEGACY.md",
+        "RM_QA/DATA/QA/GDD_LEGACY_SECTIONS.jsonl",
+        "RM_QA/DATA/QA/LOG_AJUSTES.csv"
+      ]
+    }
+  ]
+}

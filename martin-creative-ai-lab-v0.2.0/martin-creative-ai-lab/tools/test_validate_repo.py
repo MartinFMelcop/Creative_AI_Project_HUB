@@ -8,6 +8,8 @@ import tempfile
 import unittest
 from pathlib import Path
 
+from test_reference_library import make_fixture
+
 ROOT = Path(__file__).resolve().parents[1]
 
 
@@ -18,6 +20,7 @@ class DocumentOwnershipTests(unittest.TestCase):
         self.fixture = Path(self.temporary.name)
         (self.fixture / "tools").mkdir()
         shutil.copy2(ROOT / "tools/validate_repo.py", self.fixture / "tools/validate_repo.py")
+        shutil.copy2(ROOT / "tools/reference_library.py", self.fixture / "tools/reference_library.py")
         shutil.copytree(ROOT / "registry", self.fixture / "registry")
         shutil.copytree(ROOT / "archive", self.fixture / "archive")
         # Supply the registry's referenced files without copying runtime dependencies.
@@ -34,6 +37,7 @@ class DocumentOwnershipTests(unittest.TestCase):
         project = self.fixture / "projects/example"
         project.mkdir(parents=True)
         (project / "README.md").write_text("[Registry](../../registry/projects.json)\n")
+        make_fixture(self.fixture)
 
     def run_validator(self):
         return subprocess.run(
@@ -123,6 +127,14 @@ class DocumentOwnershipTests(unittest.TestCase):
         result = self.run_validator()
         self.assertEqual(result.returncode, 1)
         self.assertIn("projects/example/README.md: missing target: missing.md", result.stderr)
+
+    def test_historical_links_are_data_but_maintained_reference_links_still_fail(self):
+        result = self.run_validator()
+        self.assertEqual(result.returncode, 0, result.stderr)
+        (self.fixture / "references/README.md").write_text("[Missing](missing.md)\n")
+        result = self.run_validator()
+        self.assertEqual(result.returncode, 1)
+        self.assertIn("references/README.md: missing target: missing.md", result.stderr)
 
     def test_archive_integrity_is_still_required(self):
         archive = self.fixture / "archive/legacy-source-extracts-v0.2.0.zip"

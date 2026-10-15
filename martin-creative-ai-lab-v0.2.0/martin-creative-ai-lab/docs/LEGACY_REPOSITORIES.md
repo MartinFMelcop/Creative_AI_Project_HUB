@@ -1,6 +1,6 @@
 # Repositórios antigos recuperados — v0.2.0
 
-Consulta em 2026-10-10. Síntese completa de sistemas, limites e propostas: [SEED, seção 28](../SEED.md#28-recuperação-dos-repositórios-antigos--v020).
+Historical consultation in 2026-10-10; the private/public labels in this original table describe that record. Current observations and expanded recovery are below. Síntese completa de sistemas, limites e propostas: [SEED, seção 28](../SEED.md#28-recuperação-dos-repositórios-antigos--v020).
 
 | Fonte | Snapshot | Alcance |
 |---|---|---|
@@ -43,3 +43,20 @@ historical v0.2.0 recovery, not execution of the new destination or current P11.
 [Execuções](../evidence/legacy-audit/RUNS.json), [combate](../evidence/legacy-audit/RECHECK_COMBAT_20261010.csv) e [diálogo](../evidence/legacy-audit/RECHECK_DIALOGUE_20261010.csv). Combate: 49 checks, zero falhas. Diálogo: 19 etapas em 10 cenários, zero cenários falhos. Sintaxe Node: exit 0.
 
 O runner de diálogo seleciona por prioridade e BaseScore; não valida o scoring completo de personalidade. Não houve execução de Ruby/RGSS, Game.exe, servidor, browser, áudio, imagens ou candidatos de IA. Nenhuma funcionalidade foi corrigida nesta recuperação. Remotes somente consultados.
+
+## Expanded readable references — 2026-10-15 UTC
+
+[Rave source library](../references/rave-master/README.md) and its complete
+inventory preserve the original six-module organization at the same pinned commit.
+589 text/code/data files are locally readable; 140 payloads have explicit original
+paths/hashes/exclusion reasons. These counters describe the new reference snapshot,
+not the old ZIP's selected recovery. All 729 original path/blob/size records
+reconcile and all 175 selected payloads match; 414 additional files are readable.
+The source is public now; the historical private metadata remains unchanged.
+No full Git history, excluded assets or actual RMXP engine execution is claimed.
+
+[Library governance](../references/AGENTS.md) keeps old directives and CANON inert;
+[North Star](../north-star/README.md) is a new strategic program, not an automatic
+Rave renaming, fictional merger or implementation transfer. The earlier consumers
+and QA report limitations above are retained. The [literary collection](../references/literature/lich/README.md)
+records an inaccessible attachment rather than fabricated manuscript preservation.

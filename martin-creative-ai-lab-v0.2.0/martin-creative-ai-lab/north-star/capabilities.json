@@ -1,0 +1,293 @@
+{
+  "schema_version": 1,
+  "name": "North Star",
+  "kind": "program",
+  "stage": "foundation_only",
+  "engine_selection": "undecided",
+  "consumer_paths": [],
+  "contribution_model": {
+    "candidate": "Identified hypothesis; no transfer proof.",
+    "verified_in_origin": "An inspected execution record supports bounded origin behavior; applicability remains a hypothesis.",
+    "adapted": "A real implementation exists in a new context, beyond planning.",
+    "integrated_into_north_star": "A genuine North Star consumer uses the capability with destination verification.",
+    "externally_validated": "Relevant destination behavior/experience has independent evaluation; specify what and by whom."
+  },
+  "evidence_boundary": "This task inspects origin sources/records; it does not rerun their product tests or establish independent review. The foundation has no runtime consumer. Last three statuses are invalid while stage remains foundation_only. Project M0–M6 maturity is unchanged.",
+  "capabilities": [
+    {
+      "id": "NS-C01",
+      "title": "Resource transactions and economy",
+      "origin_projects": [
+        "P01"
+      ],
+      "reference_collections": [],
+      "contribution_status": "verified_in_origin",
+      "origin_validation": "execution_record_inspected",
+      "scope": "C# local-match resource budgets, legal actions, replay and any-seat shared-device presentation.",
+      "origin_evidence": [
+        "projects/eclipse-fair/Core/Game.cs",
+        "evidence/eclipse-fair/LOCAL_RUN.json"
+      ],
+      "applicability_hypothesis": "Research whether resource transactions and economy serves a bounded North Star experiment; no consumer or reusable contract exists yet.",
+      "limits": "Four-seat deterministic match rules, not shared-world ownership, concurrent spending, general balance or a market economy.",
+      "next_validation": "Specify resource ownership and costs, then test one authoritative command contract under retries and simultaneous requests."
+    },
+    {
+      "id": "NS-C02",
+      "title": "RPG domain and durable session recovery",
+      "origin_projects": [
+        "P05"
+      ],
+      "reference_collections": [
+        "REF-RAVE-36AF165"
+      ],
+      "contribution_status": "verified_in_origin",
+      "origin_validation": "execution_record_inspected",
+      "scope": "Pure C# turn-based rescue domain, supply consequences, replay-validated saves and native Linux delivery.",
+      "origin_evidence": [
+        "projects/cinderwatch/Core/Game.cs",
+        "projects/cinderwatch/Core/Journal.cs",
+        "evidence/cinderwatch/RELEASE_RUN.json"
+      ],
+      "applicability_hypothesis": "Research whether rpg domain and durable session recovery serves a bounded North Star experiment; no consumer or reusable contract exists yet.",
+      "limits": "New Cinderwatch implementation; not recovered RGSS code. Local session saves do not establish account persistence or server trust.",
+      "next_validation": "Test a separately owned inventory/progression slice and crash recovery without trusting client-written state."
+    },
+    {
+      "id": "NS-C03",
+      "title": "Movement and action combat feedback",
+      "origin_projects": [
+        "P06"
+      ],
+      "reference_collections": [],
+      "contribution_status": "verified_in_origin",
+      "origin_validation": "execution_record_inspected",
+      "scope": "Native physics, committed locked contact, paid close-sweep guard, phase hazards, animation and scripted engine checks.",
+      "origin_evidence": [
+        "projects/veil-arena/arena.gd",
+        "evidence/veil-arena/PARRY_RUN.json"
+      ],
+      "applicability_hypothesis": "Research whether movement and action combat feedback serves a bounded North Star experiment; no consumer or reusable contract exists yet.",
+      "limits": "Single-player desktop timing; not lag compensation, networked combat, human balance or multiplayer prediction.",
+      "next_validation": "Define authoritative input/time boundaries and test latency effects in a separate small encounter before proposing transfer."
+    },
+    {
+      "id": "NS-C04",
+      "title": "Dialogue, quests and consequential narrative",
+      "origin_projects": [
+        "P10"
+      ],
+      "reference_collections": [
+        "REF-RAVE-36AF165"
+      ],
+      "contribution_status": "verified_in_origin",
+      "origin_validation": "execution_record_inspected",
+      "scope": "Actual Python rescue rules and browser night/morning/noon consequences; dialogue decisions affect local resources and voluntary help.",
+      "origin_evidence": [
+        "projects/waystone-dialogue/adventure.py",
+        "evidence/waystone-dialogue/HANDOVER_RUN.json"
+      ],
+      "applicability_hypothesis": "Research whether dialogue, quests and consequential narrative serves a bounded North Star experiment; no consumer or reusable contract exists yet.",
+      "limits": "Current adaptation is distinct from historical tables; local branching is not persistent social simulation. Old CANON names/settings are not North Star lore.",
+      "next_validation": "Select an original short quest and verify consequence ownership, repeated participation and continuity in a genuine destination."
+    },
+    {
+      "id": "NS-C05",
+      "title": "Literary editing and localization",
+      "origin_projects": [
+        "P04"
+      ],
+      "reference_collections": [
+        "REF-LICH-ATTACHMENT",
+        "REF-LICH-REPORT-0448"
+      ],
+      "contribution_status": "verified_in_origin",
+      "origin_validation": "execution_record_inspected",
+      "scope": "Complete separate PT/EN adaptation, paired reader-format production and implementing-translator continuity review.",
+      "origin_evidence": [
+        "projects/lich-cistern/story.md",
+        "projects/lich-cistern/story.en.md",
+        "evidence/lich-cistern/ENGLISH_RUN.json"
+      ],
+      "applicability_hypothesis": "Research whether literary editing and localization serves a bounded North Star experiment; no consumer or reusable contract exists yet.",
+      "limits": "Attached historical manuscripts/policy remain unreadable; old v0.4.48 inspection is a report. Format checks are not author canon approval or independent literary validation.",
+      "next_validation": "Recover and audit literary sources, then have independent readers evaluate agency, voice, causal continuity and localization before lore selection."
+    },
+    {
+      "id": "NS-C06",
+      "title": "Visual production, animation and interface readability",
+      "origin_projects": [
+        "P07"
+      ],
+      "reference_collections": [],
+      "contribution_status": "verified_in_origin",
+      "origin_validation": "execution_record_inspected",
+      "scope": "Original generated portrait/atlas production with provenance, alpha-bound catalogs and actual native consumers.",
+      "origin_evidence": [
+        "projects/veil-arena/media/provenance.json",
+        "projects/cinderwatch/Native/media/provenance.json",
+        "evidence/veil-arena/MOTION_RUN.json"
+      ],
+      "applicability_hypothesis": "Research whether visual production, animation and interface readability serves a bounded North Star experiment; no consumer or reusable contract exists yet.",
+      "limits": "Static portraits/four-keyframe poses; no full production pipeline, independent artist approval, exclusive rights or commercial clearance.",
+      "next_validation": "Choose a consuming scene and acceptance frames; test identity, movement readability, rights and asset import in that destination."
+    },
+    {
+      "id": "NS-C07",
+      "title": "Rhythm timing and adaptive sound",
+      "origin_projects": [
+        "P03",
+        "P08"
+      ],
+      "reference_collections": [],
+      "contribution_status": "verified_in_origin",
+      "origin_validation": "execution_record_inspected",
+      "scope": "Real timing/calibration/rehearsal workflow, rendered original audio, original-pitch tempo derivatives and native phase-responsive mixing.",
+      "origin_evidence": [
+        "evidence/tokyo80s/PITCH_RUN.json",
+        "evidence/veil-arena/PRESENTATION_RUN.json",
+        "projects/tokyo80s/media/rehearsal-provenance.json"
+      ],
+      "applicability_hypothesis": "Research whether rhythm timing and adaptive sound serves a bounded North Star experiment; no consumer or reusable contract exists yet.",
+      "limits": "Scripted signal/clock samples and bounded mixer execution, not physical listening, universal timbre/latency, player learning or multiplayer synchronization.",
+      "next_validation": "Measure input/audio timing on physical output and evaluate one native environmental cue/music transition before reuse."
+    },
+    {
+      "id": "NS-C08",
+      "title": "Messaging, durable records and recovery",
+      "origin_projects": [
+        "P11"
+      ],
+      "reference_collections": [],
+      "contribution_status": "verified_in_origin",
+      "origin_validation": "execution_record_inspected",
+      "scope": "Trusted local rooms with SQLite persistence, idempotent send retry, revision/source context, backups and portable read-only copies.",
+      "origin_evidence": [
+        "projects/realtime-integration-lab/README.md",
+        "evidence/realtime-chat/ROOMS_RUN.json",
+        "evidence/realtime-chat/PORTABLE_RUN.json"
+      ],
+      "applicability_hypothesis": "Research whether messaging, durable records and recovery serves a bounded North Star experiment; no consumer or reusable contract exists yet.",
+      "limits": "Chosen labels are not authenticated identities. Chat receipts/SQLite schemas are not authoritative world commands, MMORPG backend, moderation or production-load evidence.",
+      "next_validation": "Define actor identity, command authorization and conflict semantics; test domain-specific persistence/recovery separately from chat."
+    },
+    {
+      "id": "NS-C09",
+      "title": "Evaluation boundaries and automated QA",
+      "origin_projects": [
+        "P02"
+      ],
+      "reference_collections": [],
+      "contribution_status": "verified_in_origin",
+      "origin_validation": "execution_record_inspected",
+      "scope": "Pinned starter/evaluator, environment attribution and known baseline/reference calibration.",
+      "origin_evidence": [
+        "evaluations/chat-send-buffering/run.py",
+        "evidence/evaluation-task/DEPENDENCY_RUN.json"
+      ],
+      "applicability_hypothesis": "Research whether evaluation boundaries and automated qa serves a bounded North Star experiment; no consumer or reusable contract exists yet.",
+      "limits": "No independent candidate/model was evaluated; protocol acceptance is not player enjoyment or generalized benchmark performance.",
+      "next_validation": "Design a concrete destination defect with isolated candidate context and require conclusive failure/acceptance evidence."
+    },
+    {
+      "id": "NS-C10",
+      "title": "World simulation and regional events",
+      "origin_projects": [
+        "P01",
+        "P10"
+      ],
+      "reference_collections": [
+        "REF-RAVE-36AF165"
+      ],
+      "contribution_status": "candidate",
+      "origin_validation": "source_inspected",
+      "scope": "Local economy/rescue consequences and historical flags, reputation, quest, Echo and calamity reference tables.",
+      "origin_evidence": [
+        "projects/waystone-dialogue/adventure.py",
+        "projects/eclipse-fair/Core/Game.cs"
+      ],
+      "applicability_hypothesis": "Research whether world simulation and regional events serves a bounded North Star experiment; no consumer or reusable contract exists yet.",
+      "limits": "Historical source only for region events; no continuously running shared village, account state, concurrency or adopted fictional geography.",
+      "next_validation": "Model one village supply/repair consequence, then verify resource conservation and visible outcomes across two actors."
+    },
+    {
+      "id": "NS-C11",
+      "title": "Server authority and state synchronization",
+      "origin_projects": [
+        "P11",
+        "P01"
+      ],
+      "reference_collections": [],
+      "contribution_status": "candidate",
+      "origin_validation": "source_inspected",
+      "scope": "Messaging/retry and local command/state patterns are inputs to a new research question, not existing world-server functionality.",
+      "origin_evidence": [
+        "projects/realtime-integration-lab/README.md",
+        "projects/eclipse-fair/Core/Game.cs"
+      ],
+      "applicability_hypothesis": "Research whether server authority and state synchronization serves a bounded North Star experiment; no consumer or reusable contract exists yet.",
+      "limits": "Authority, trust boundaries, simultaneous interaction and anti-exploit semantics have not been implemented for North Star.",
+      "next_validation": "Run the bounded shared-world experiment in RESEARCH.md: conflicting commands, idempotency, crash recovery and two-client resynchronization."
+    },
+    {
+      "id": "NS-C12",
+      "title": "Group activities and social consequences",
+      "origin_projects": [
+        "P01",
+        "P10"
+      ],
+      "reference_collections": [],
+      "contribution_status": "candidate",
+      "origin_validation": "source_inspected",
+      "scope": "Actual local participant handoff and voluntary narrative cooperation suggest experiments in shared goals.",
+      "origin_evidence": [
+        "evidence/eclipse-fair/LOCAL_RUN.json",
+        "evidence/waystone-dialogue/HANDOVER_RUN.json"
+      ],
+      "applicability_hypothesis": "Research whether group activities and social consequences serves a bounded North Star experiment; no consumer or reusable contract exists yet.",
+      "limits": "Shared-device seats and authored dialogue do not establish network parties, group consent, guilds or emergent social behavior.",
+      "next_validation": "Test a small cooperative objective with independent participants and observe communication, consent and failure recovery."
+    },
+    {
+      "id": "NS-C13",
+      "title": "Accessibility, moderation and operational security",
+      "origin_projects": [
+        "P09",
+        "P11",
+        "P03"
+      ],
+      "reference_collections": [],
+      "contribution_status": "candidate",
+      "origin_validation": "source_inspected",
+      "scope": "Known local-use, input/timing and identity limits establish concrete areas requiring future investigation.",
+      "origin_evidence": [
+        "projects/realtime-integration-lab/README.md",
+        "projects/tokyo80s/README.md"
+      ],
+      "applicability_hypothesis": "Research whether accessibility, moderation and operational security serves a bounded North Star experiment; no consumer or reusable contract exists yet.",
+      "limits": "P09 has no recovered real delivery case. No independent assistive-technology, public moderation, incident response, professional outcome or market evidence.",
+      "next_validation": "Recover actual cases with consent; assess unassisted/assistive input, authorization, abuse reporting and operational ownership before public use."
+    },
+    {
+      "id": "NS-C14",
+      "title": "Reproducible delivery and observability",
+      "origin_projects": [
+        "P02",
+        "P05",
+        "P06"
+      ],
+      "reference_collections": [],
+      "contribution_status": "verified_in_origin",
+      "origin_validation": "execution_record_inspected",
+      "scope": "Pinned dependency/template verification, source/resource checks, CI and separately executed native delivery artifacts.",
+      "origin_evidence": [
+        "evidence/cinderwatch/RELEASE_RUN.json",
+        "evidence/veil-arena/PARRY_RUN.json",
+        "evidence/continuous-integration/MANIFEST_RUN.json"
+      ],
+      "applicability_hypothesis": "Research whether reproducible delivery and observability serves a bounded North Star experiment; no consumer or reusable contract exists yet.",
+      "limits": "Local/Linux CI workflows are not online production telemetry, fleet deployment, service reliability or commercial sustainability.",
+      "next_validation": "For the first real experiment, record commands, state transitions, recovery receipts and repeatable builds; define failure gates before deployment."
+    }
+  ]
+}

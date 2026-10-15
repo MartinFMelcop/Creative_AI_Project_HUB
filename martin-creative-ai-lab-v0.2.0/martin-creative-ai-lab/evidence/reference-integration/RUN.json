@@ -1,0 +1,188 @@
+{
+  "milestone": "One-time legacy references and North Star foundation",
+  "seed_version": "0.32.0",
+  "observed_date_utc": "2026-10-15",
+  "client_date": "2026-10-14 America/Sao_Paulo",
+  "baseline": {
+    "repository": "MartinFMelcop/Creative_AI_Project_HUB",
+    "branch": "work",
+    "commit": "1bc1ae93f6e12a0c31cec7e5468f1b7034c78fa1",
+    "working_tree": "clean before migration",
+    "fetched_main": "same commit",
+    "hub_visibility": "public",
+    "publishing": "normal non-force main explicitly authorized; repository push permission true and authenticated fetch executed",
+    "readme_mismatch": "Root and lab README claimed 0.29.0; actual SEED/state 0.31.0. Updated to the implemented foundation version."
+  },
+  "literature": {
+    "provided_filename": "Lightnovel%20Darkfantasy%20v0.4.1.zip",
+    "display_filename": "Lightnovel Darkfantasy v0.4.1.zip",
+    "attachment_id": "file_00000000b21c820e95af7b53595e19b9",
+    "attempt": "download_file({file_id: file_00000000b21c820e95af7b53595e19b9})",
+    "result": "refused: file exceeds the executor transfer limit of 32 MiB",
+    "detected_version": null,
+    "archive_sha256": null,
+    "size_bytes": null,
+    "archive_file_count": null,
+    "manuscripts_preserved": 0,
+    "authority_policy_read": false,
+    "full_archive_preserved": false,
+    "boundary": "No attachment bytes/inventory/extraction, ten-source/eight-OVA count or policy confirmation. 0.4.1 is only a supplied filename hint. Earlier 0.4.48 inspection reports retained, not re-read primary files; P04 adaptation and its creative decisions unchanged. No invented archive link/LFS pointer."
+  },
+  "rave": {
+    "repository": "MartinFMelcop/Adventures_Unleashed_Rave_Master_Project",
+    "branch": "main",
+    "selected_commit": "36af1651271422ae33856e8b5d7b45702215f165",
+    "selected_tree": "f2b5327e321dd0fc0701b80dc2a00fa211e214bc",
+    "module_declared_version": "AJ_000368",
+    "current_visibility": "public from current GitHub repository metadata",
+    "past_visibility": "private as recorded at recovery in 2026-10-10; retained as historical metadata",
+    "acquisition": "git clone into /workspace/work/north-star-integration/rave-upstream; inspected HEAD and five recent commits; no upstream script executed",
+    "coverage": {
+      "files": 729,
+      "imported": 589,
+      "excluded": 140,
+      "imported_bytes": 5686421,
+      "modules": {
+        ".github": 1,
+        "(root)": 2,
+        "RM_ACT1": 125,
+        "RM_ART": 32,
+        "RM_CORE": 149,
+        "RM_DIST": 285,
+        "RM_LEGACY": 8,
+        "RM_QA": 122,
+        "docs": 3,
+        "scripts": 2
+      },
+      "previous_selected_identical": 175,
+      "newly_browseable_beyond_previous_selection": 414,
+      "changed": 0,
+      "missing": 0,
+      "full_git_history_preserved": false,
+      "history_commits_inspected": [
+        "36af1651271422ae33856e8b5d7b45702215f165",
+        "b950716f1054a5530a20fc9f9c1013c19c3560c5",
+        "3d65252f170883ecd7a2324f5f6fb1ab64f09c7f",
+        "7c4bb287fa15a7f00b148440b5efb5e2cc0039bd",
+        "e616f5a180da47397dcdcab37c3b4555af39f6fb"
+      ]
+    },
+    "exclusion_counts_by_reason": {
+      "Bundled external/historical archive; contents and embedded rights not audited; original upstream recovery only.": 3,
+      "Historical/placeholder graphics, including RTP or bundled art; provenance and redistribution not cleared.": 66,
+      "Serialized RMXP database/map/save/script payload; embedded content and rights not reviewed.": 64,
+      "Proprietary engine launcher; redistribution rights not established.": 1,
+      "Proprietary RGSS runtime; redistribution rights not established.": 1,
+      "Human workbook; sensitivity and embedded content not reviewed.": 1,
+      "Full lore/reference document; authorship and redistribution not reviewed.": 1,
+      "Third-party reference digest excluded by the earlier recovery; keep exclusion and do not republish.": 2,
+      "Generated Python bytecode; original textual source is the useful reference.": 1
+    },
+    "inventory_path": "references/rave-master/snapshots/36af1651271422ae33856e8b5d7b45702215f165/inventory.json",
+    "all_observed_file_hashes": "SHA-256 and actual Git blob hash/size/mode captured for all 729 files; regular-file tree, UTF-8/NUL and bounded sensitive-pattern scan for textual candidates; focused module/rights/manual/runtime content inspection, not independent full rights audit",
+    "original_path_exception": ".gitignore copied byte-for-byte as .gitignore.reference to keep historical ignore rules inert. No upstream AGENTS.md at this commit. Checker requires agent/Git control names to remain inert.",
+    "duplication": "Original module and ScriptsCustom/data-export relationships retained; identical payloads not collapsed or rewritten.",
+    "rights": "Original owner-directed technical/creative reference text is distinct from commercial clearance; withheld vendor/serialized/graphic/bundled/full reference/workbook payloads remain unavailable locally."
+  },
+  "preservation": {
+    "project_files_checked": 296,
+    "allowed_readme_changes": [
+      "projects/lich-cistern/README.md",
+      "projects/waystone-dialogue/README.md"
+    ],
+    "transfers_assets_archive_identical": true
+  },
+  "north_star": {
+    "kind": "strategic program",
+    "vision": "Future MMORPG ambition; independent products, original IP and evidence-driven convergence",
+    "capabilities": 14,
+    "contribution_status_counts": {
+      "verified_in_origin": 10,
+      "candidate": 4
+    },
+    "runtime_consumers": 0,
+    "final_engine": "undecided",
+    "origin_evidence": "Actual origin source/report paths inspected; this task does not rerun or independently certify product execution/creative approval. Foundation rejects adapted/integrated/external statuses.",
+    "first_direction": "Optional bounded authoritative shared-village commands, conservation, idempotency/conflicts, durable receipts/crash recovery and two-client resynchronization; research gates, not implementation."
+  },
+  "validation": {
+    "reference_tests": {
+      "command": "python3 tools/test_reference_library.py",
+      "tests": 18,
+      "result": "OK",
+      "log_sha256": "94f0fd8e524375e02c8cd50de0e5ffec2c00df75ece2d6c0027776c9f62887a4"
+    },
+    "repo_regressions": {
+      "command": "python3 tools/test_validate_repo.py",
+      "tests": 12,
+      "result": "OK",
+      "log_sha256": "0a3659d26a0e118894d5c3432db0ebcef33c89fab38f9474e6b0ffeada95c6e8"
+    },
+    "manifest_regressions": {
+      "command": "python3 tools/test_check_manifest.py",
+      "tests": 11,
+      "result": "OK; real nested Git fixtures, executed earlier in this task; unchanged tool"
+    },
+    "reference_check": {
+      "command": "python3 tools/reference_library.py check",
+      "result": "PASS: 3 reference records; 589 local files; 140 explicit exclusions; 14 capabilities"
+    },
+    "discovery": {
+      "commands": [
+        "python3 tools/reference_library.py find --topic combat",
+        "python3 tools/reference_library.py find --collection REF-LICH-ATTACHMENT"
+      ],
+      "observed": "Three combat source paths open locally with expected headers/hashes. Literary query reports unavailable and zero files. No reference script run."
+    },
+    "failure_conditions": [
+      "missing/tampered local source",
+      "Git blob mismatch with matching SHA-256",
+      "unlisted payload and duplicate collection/source entries",
+      "invalid/missing topic reference",
+      "canonical traversal and symlink substitution",
+      "count or full-preservation inflation",
+      "excluded payload with no reason or local bytes",
+      "inert control-file mapping and binary import",
+      "previously withheld digest reintroduction",
+      "invented unavailable-attachment hash or ratified authority",
+      "unknown origin project/reference",
+      "false adapted/North Star integrated/external status",
+      "origin verification without recorded execution",
+      "old archive corruption",
+      "malformed schema/unknown topic",
+      "historical raw links ignored as data while maintained reference and project broken links still fail"
+    ],
+    "final_repo_and_manifest": {
+      "commands": [
+        "python3 tools/validate_repo.py",
+        "python3 tools/check_manifest.py",
+        "root README/AGENTS local-link check",
+        "git diff --check"
+      ],
+      "repo": "PASS: 11 projects, 14 transfers, 9 assets, 2 legacy sources; 359 local file links",
+      "manifest": "1042 maintained lab files; final hash coverage rerun after this evidence update",
+      "root_navigation": "PASS: 15 root file links resolve",
+      "raw_source_formatting": "Initial diff check flagged original CRLF/trailing whitespace. Scoped references/.gitattributes preserves exact source bytes without EOL conversion; only immutable Rave snapshot style is exempt. Current code/docs retain normal checks; all 589 staged blobs were checked against original IDs."
+    },
+    "staged_payloads": {
+      "checked": 589,
+      "result": "PASS: every staged source Git blob equals its pinned original blob; all copied files are mode 100644 so historical executability remains inert."
+    }
+  },
+  "metadata_sha256": {
+    "tools/reference_library.py": "1640d6e360a487b6628460f0ad8ed3ae91153345d9922ade8f7e0a54634a8cc6",
+    "tools/test_reference_library.py": "7e7bcd12b99d8668efd3f57129e44803a81b5e469c1502f56a743af8373a43a9",
+    "tools/validate_repo.py": "0a0e16f4e0d35a4f14a0313fb963ca8358a1b42142b182ddcf5b5b0962350b5a",
+    "tools/test_validate_repo.py": "0411fee7df506c9d2e56a6150e0f64aaeac548a805bde1e1a0c978db9d13af18",
+    "references/catalog.json": "5c79ea443944cbae1cf8bddc7db38da0b7237fec8fe66eed74985e007a031b7d",
+    "references/rave-master/snapshots/36af1651271422ae33856e8b5d7b45702215f165/inventory.json": "695517bdd2eb3b6a4d91b53536e2edc325f9420f83978895ff99b09b2af5e6fd",
+    "references/rave-master/snapshots/36af1651271422ae33856e8b5d7b45702215f165/discovery.json": "4d44d9fd488568b8e49c2ef75f1979bc64b9abb7b80e49b93df2b93976bcf4be",
+    "north-star/capabilities.json": "aeaa94910cfc012577eacc517ba46b2b9faad56a345c2d0a848abbb569986745"
+  },
+  "remaining": [
+    "Literary attachment transfer unavailable; no primary archive/hash/manuscript/authority preservation.",
+    "140 listed Rave payloads excluded; complete original repository/history and game runtime not preserved.",
+    "Historical names/settings and third-party references have no automatic North Star canon or commercial clearance.",
+    "No North Star consumer, MMORPG backend, independent human validation, production-scale or commercial-demand evidence."
+  ]
+}

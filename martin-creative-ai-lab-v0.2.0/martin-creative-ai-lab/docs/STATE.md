@@ -1,40 +1,42 @@
 # Lab state
 
-**Updated:** 2026-10-14 (UTC). **Seed:** 0.31.0.
-**Current milestone:** P06 timed sweep counters 0.5.0.
+**Updated:** 2026-10-15 UTC (2026-10-14 America/Sao_Paulo). **Seed:** 0.32.0.
+**Milestone:** one-time legacy reference integration and North Star foundation.
 
-[Veilbreak](../projects/veil-arena/README.md) now gives keyboard L / mapped LB a
-paid, timed close-sweep parry. Startup and missed recovery remain vulnerable;
-success restores eight resolve and creates a 1.2s opening for an actual blade
-counter. Charge, wave and violet echo bypass guard. Pose, range/state feedback,
-existing sound cue, tactics and successful/attempted result counts are integrated.
-Prior combat and all media remain intact; Linux player/PCK deliver the new rules.
+Started clean on `work` at `1bc1ae93f6e12a0c31cec7e5468f1b7034c78fa1`, matching
+fetched main, with normal publication explicitly authorized and push permissions
+verified. This task replaces the ordinary development-loop objective; no product
+runtime, save schema, media, release or historical ZIP was changed.
 
-[Execution](../evidence/veil-arena/PARRY_RUN.json) records 152 passing checks each
-on source, shipped PCK, fresh PCK and actual Linux bundle resources. A complete
-OpenGL policy parries in both phases and wins through seven blade hits. An
-identical L/close-sweep fixture takes damage in executed 0.4.0 and opens recovery
-in 0.5.0. The older counter/seal route retains its result. Different scripted
-policies with perfect state knowledge establish capability, not human balance.
+[Reference library](../references/README.md) now supplies a local pinned Rave tree:
+current main/history `36af1651271422ae33856e8b5d7b45702215f165`, 729 observed files,
+589 readable text/code/data payloads, 140 per-file exclusions. All six modules
+retain source relationships; all 175 older selected bytes match, with zero
+changed/missing and 414 additional readable files. The earlier archive/counts
+remain intact. Current public visibility is separate from its earlier private
+record. No full Git history, proprietary runtime, serialized data, graphics,
+unreviewed bundles/workbook/full reference document or withheld digests supplied.
 
-The official release-template ELF ran outside checkout through X11 keyboard
-start, L guard, combat, pause, tactics, idle defeat and restart. Release templates
-have no external-script executor; full fight checks use the editor on exported
-resources. Codex reviewed actual frames. Twenty-six media/source files and the
-prior 0.4.0 ZIP are byte-identical. Human timing, physical pad/audio, accessibility,
-other OS and commercial evidence remain unavailable. Publication/CI are confirmed
-at task closure, not inferred from a local build.
+[Literary boundary](../references/literature/lich/README.md): supplied filename
+Lightnovel Darkfantasy v0.4.1.zip, transfer refused above the downloader's 32 MiB
+limit. No detected version, size, archive hash, inventory, manuscript or policy
+read/preservation. Earlier v0.4.48 reports and P04's PT/EN adaptation remain
+separate. No new literary canon or fictional-universe merger is declared.
 
-Started clean at `e5715d9`, matching fetched main, with main publication authorized
-and repository push permission verified. Recent work spans P01/P03/P04/P05/P06/
-P10/P11; it is not a single-project loop. Compared P05 tactical content, P01 native
-delivery, P04/P10 reading and P11 handover needs. P06's new combat choice offered
-a bounded experiential improvement after recent packaging/presentation work.
-Godot/GDScript fits the existing physics/animation/input architecture. Standard
-Godot 4.6.3 and a .NET SDK were available; Unity commands were not in PATH. No
-engine migration or restoration of the missing historical starter is claimed.
+[North Star](../north-star/README.md) is the future MMORPG ambition, represented
+as a program with vision, fourteen selective capability candidates/origin records
+and bounded shared-village research gates. No final engine, runtime consumer,
+MMORPG backend, new transfer or independent approval. Product M0–M6 is unchanged.
+Future sessions compare independent portfolio value before selecting work.
 
-Next compare unassisted parry/dodge/seal decisions with P05 opponent/content
-variation, P01 player distribution, P03 physical practice and P04/P10 reader
-feedback. P02 still needs an independent candidate; P09 needs real case evidence.
-Reassess the portfolio before committing to any next workstream.
+[Execution](../evidence/reference-integration/RUN.json) records acquisition,
+exclusions, hash reconciliation, local discovery, preservation and negative
+validation tests. The stdlib reference gate is integrated into existing checks;
+raw snapshot documents are historical data, while maintained navigation remains
+validated. Publication/CI are confirmed at task closure.
+
+Next: recover accessible literary bytes and audit authority/rights before import;
+review withheld assets only with supported provenance. Compare P05 content,
+P01 distribution, P03 practice, P04/P10 readers, P11 handovers and a small North
+Star authoritative shared-state experiment. Human/market evidence remains open;
+do not automatically continue only North Star.

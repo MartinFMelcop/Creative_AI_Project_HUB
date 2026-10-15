@@ -45,3 +45,22 @@ both the committed baseline client and tested correction. The pinned installed
 Socket.IO 4.8.4 source and exported `sendBuffer` declaration were inspected to
 distinguish live Engine.IO writes from reconnect buffering. Dependency versions,
 checksums, and trust configuration remain unchanged.
+
+## One-time integration — 2026-10-15 UTC
+
+Current source inspection and the new [reference catalog](../references/catalog.json)
+are distinct from the original 2026-10-10 survey. Rave current public main/history
+still selects `36af1651271422ae33856e8b5d7b45702215f165`: 729 paths observed,
+589 original readable text/code/data files imported, 140 individually excluded.
+All 175 earlier selected bytes match; the original ZIP and preservation counters
+are unchanged. Current visibility does not rewrite the prior private observation.
+See [source discovery/rights limits](../references/rave-master/README.md).
+
+Supplied attachment filename `Lightnovel%20Darkfantasy%20v0.4.1.zip` (display name
+Lightnovel Darkfantasy v0.4.1.zip) was refused by `download_file`: above its 32 MiB
+transfer limit. No attachment bytes were available; detected version, SHA-256,
+file count, manuscript/OVA paths and authority are unknown, not imported. Earlier
+v0.4.48 records remain historical and are not superseded by a filename hint.
+[Literary recovery](../references/literature/lich/README.md) gives the exact boundary;
+P04's separate adaptation/source/editions remain intact. No full original ZIP
+host or fictitious download link was created. No historical script was executed.

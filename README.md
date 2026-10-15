@@ -2,13 +2,19 @@
 
 An evolving creative and technical portfolio by Martin Melcop Neto, combining
 AI-assisted game development, storytelling, generative art, audio, and software
-experiments with documented evidence and reusable learning.
+experiments with documented evidence and reusable learning. **North Star**, our
+future MMORPG, is its long-term convergence ambition. Independent projects retain
+their own value and creative identity; this foundation is not an existing MMORPG.
 
 The working lab is nested under
 [martin-creative-ai-lab](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/README.md).
 The directory retains its original package name; its maintained seed is now
-v0.29.0. Historical source snapshots remain unchanged.
+v0.32.0. Historical source snapshots remain unchanged.
 
+- [North Star program](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/README.md): vision, selective capabilities and first research gates; no final engine or runtime consumer.
+- [Historical library](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/references/README.md): preserved bytes and explicit source-availability boundaries.
+- [Rave Master reference tree](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/references/rave-master/README.md): 589 readable files from pinned main, 140 documented exclusions; earlier archive retained.
+- [Literary recovery](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/references/literature/lich/README.md): attachment transfer blocked above 32 MiB; historical manuscripts/policy are not imported or inferred from P04.
 - [Current state](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/docs/STATE.md)
 - [Assessment and priorities](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/docs/IMPROVEMENT_PLAN.md)
 - [P05 — Cinderwatch](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/projects/cinderwatch/README.md): self-contained Linux C# rescue with original portraits/cues, persistent supplies and replayable resume; editable native project retained.

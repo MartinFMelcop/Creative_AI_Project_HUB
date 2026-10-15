@@ -3,18 +3,26 @@
 An evolving laboratory of games, narrative, images, audio, data, and AI
 evaluation by **Martin Melcop Neto**. Projects are adaptable seeds: build small
 slices, verify behavior, record decisions, and test reuse in actual destinations.
+**North Star**, our future MMORPG, guides long-term convergence while independent
+projects retain their own goals, technology, fiction and commercial possibilities.
 
-**Current seed: v0.29.0.** The lab includes eleven project lines, 178 preserved
-historical texts, a working local project-conversation workspace, a calibrated
+**Current seed: v0.32.0.** The lab includes eleven project lines, the unchanged 178-text selected archive,
+a 589-file readable Rave snapshot, a working local project-conversation workspace, a calibrated
 practice-task harness, a complete rescue adventure with browser/terminal editions,
 two original browser rhythm stages with rendered soundtracks, sustained notes and targeted phrase rehearsal, a native C# economy board with preserved terminal workbench, a complete Portuguese story and English translation with EPUB/PDF, and a native
-Godot boss arena with painted art, adaptive audio and an executed PCK. Private
+Godot boss arena with painted art, adaptive audio, timed sweep counters and Linux player. Private
 Sites demos support the browser games. No full RPG migration, model benchmark,
 finished music catalogue or public-audience deployment is claimed.
 The containing directory keeps its original v0.2.0 package name. Latest verified
 project versions and execution boundaries are in the state and registry.
 
 ## Start here
+
+- [North Star](north-star/README.md): vision, capability catalog and bounded shared-state research gates; no runtime consumer or chosen final engine.
+- [Historical library](references/README.md): source copies, discovery and current governance boundaries.
+- [Rave Master](references/rave-master/README.md): 589 readable code/data/text files from 729 observed; 140 per-file exclusions; unchanged 175-file selection reconciled.
+- [Literary recovery](references/literature/lich/README.md): actual attachment transfer failed above 32 MiB; no manuscript or authority-policy import claimed.
+
 
 - [P05 — Cinderwatch](projects/cinderwatch/README.md): self-contained Linux C# rescue with original portraits/cues, persistent supplies and replayable resume; editable native project retained.
 - [P04 — A água sob Darsen](projects/lich-cistern/README.md): complete Portuguese story and English translation, EPUB and A5 PDFs.
@@ -54,8 +62,7 @@ project versions and execution boundaries are in the state and registry.
 Original creative titles include Artemyra / ArtemiZ4, Tokyo 80s,
 O Lich mais velho da tumba mais antiga, The Dark Knight, and Véu Partido.
 Their historical full runtime baselines are not present here. Tokyo 80s now
-has a new original browser destination, distinct from its unavailable old ZIP. Rave Master supplies
-selected narrative, combat, and production material; planned art/audio indices
+has a new original browser destination, distinct from its unavailable old ZIP. Rave Master now supplies a browseable pinned text/code/data reference snapshot; planned art/audio indices
 do not establish available masters. [The assessment](docs/ASSESSMENT.md) states
 what was actually inspected or executed.
 
@@ -66,6 +73,8 @@ From this lab directory, with Python 3.10+ (CI uses 3.12):
 ```bash
 python3 tools/validate_repo.py
 python3 tools/test_validate_repo.py
+python3 tools/reference_library.py check
+python3 tools/test_reference_library.py
 python3 tools/test_check_manifest.py
 python3 projects/waystone-dialogue/test_scene.py
 python3 projects/waystone-dialogue/test_adventure.py
@@ -76,7 +85,7 @@ python3 tools/check_manifest.py
 ```
 
 The first check validates registries, local Markdown file links, and preserved
-source hashes, excluding dependency documentation under `node_modules`. The
+source hashes, excluding dependency documentation under `node_modules` and catalog-validated raw historical source roots. Maintained reference navigation and North Star documentation remain checked; raw-source integrity has its own inventory gate. The
 regression suite checks that maintained broken links and archive corruption still
 fail. The manifest checker requires every Git-tracked or nonignored untracked
 file inside this lab exactly once, excluding the manifest itself. Ignored
