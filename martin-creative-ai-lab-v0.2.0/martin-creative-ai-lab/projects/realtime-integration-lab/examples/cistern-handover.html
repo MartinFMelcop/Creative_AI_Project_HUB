@@ -1,17 +1,28 @@
 <!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'sha256-ZYIqQ0K76ILxYaBM99HihCFB+npcU+mgF54PZ1HlEdE='; style-src 'sha256-T5IRK5peRczPIfe2ShHCEMokpM2pKd5c/9/HvGtwOuA='; base-uri 'none'; form-action 'none'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'sha256-cGjJfwOvHZNLca5ceLVszNyN7czAKHnPuhalz9ELD9k='; style-src 'sha256-XgKiBraZKXKPPRTQGuA6H0IaAu97WHbukrcNWAXIt8w='; base-uri 'none'; form-action 'none'">
 <title>Project Rooms · Reading copy</title><style>:root{color-scheme:light;--ink:#152e39;--muted:#51656e;--line:#cad5d9;--paper:#f7faf9;--accent:#075b63}
 *{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.6 system-ui,sans-serif}header,main,footer{max-width:1050px;margin:auto;padding:24px}header{padding-top:42px;border-bottom:1px solid var(--line)}h1{font-size:clamp(2rem,6vw,3.3rem);line-height:1.15;margin:12px 0}h2{line-height:1.3}p{margin:10px 0}.eyebrow{text-transform:uppercase;letter-spacing:.12em;font-size:.8rem;font-weight:700}.scope,.muted,.meta{color:var(--muted)}.meta{font-size:.9rem}.scope{max-width:800px}
 section{margin-bottom:30px}button,input,select{font:inherit;max-width:100%}button{border:1px solid var(--accent);color:var(--accent);background:white;padding:8px 13px;border-radius:6px;cursor:pointer}button:hover{background:#e6f1ee}button:disabled{opacity:.5;cursor:default}button:focus-visible,input:focus-visible,select:focus-visible,summary:focus-visible{outline:3px solid #c7771a;outline-offset:3px}label{display:block;font-weight:600}input,select{display:block;width:100%;padding:9px;border:1px solid var(--line);border-radius:5px;background:white;color:var(--ink)}.filters{display:flex;gap:16px;flex-wrap:wrap;align-items:end;margin:14px 0}.filters label{flex:1;min-width:160px}nav{display:flex;gap:10px;flex-wrap:wrap}ol{list-style:none;padding:0;display:grid;gap:12px}li,.card{background:white;border:1px solid var(--line);padding:16px;border-radius:8px}li h3,.card h3{margin:0 0 6px;line-height:1.4}li button,.card button{margin-top:10px}li[data-selected=true]{border:2px solid var(--accent);background:#edf7f4}.body{white-space:pre-wrap;overflow-wrap:anywhere}.badge{font-size:.82rem;display:inline-block;padding:2px 9px;background:#e7efed;border-radius:12px}.blocked{background:#fce8ca;color:#643b00}.done{background:#dcefdc;color:#28522a}.doing{background:#dfeafb;color:#27496a}.comparison{display:grid;grid-template-columns:1fr 1fr;gap:16px}.comparison .card{min-width:0}.comparison .card h3{font-size:1rem}#detail{border-top:3px solid var(--accent);padding-top:18px}footer{border-top:1px solid var(--line);font-size:.9rem;color:var(--muted)}code{display:block;overflow-wrap:anywhere;margin:12px 0}summary{cursor:pointer}#work-count,#result-count{color:var(--muted)}[hidden]{display:none!important}
 @media(max-width:600px){header,main,footer{padding:20px 16px}.comparison{grid-template-columns:1fr}.filters{gap:10px}.filters label{min-width:130px}button{min-height:44px}h2{font-size:1.35rem}}
-@media print{button,form,.filters,nav{display:none}header,main,footer{max-width:none;padding:12px}body{background:white}li,.card{break-inside:avoid}header:after{content:'Print includes only the currently displayed pages. The HTML and embedded JSON retain the complete record.';display:block;font-size:.85rem}}
+#complete-report{display:none;max-width:1050px;margin:auto;padding:24px}#report-controls{max-width:1050px;margin:auto;padding:20px 24px}.report-mode #complete-report{display:block}.report-mode #prepare-report{display:none}#complete-report .card{margin-bottom:12px}#complete-report h4{margin:0 0 6px}
+@media(max-width:600px){#complete-report,#report-controls{padding:20px 16px}}
+@media print{
+  @page{margin:16mm}
+  button,form,.filters,nav,#reader,#report-controls{display:none!important}
+  #complete-report{display:block!important;max-width:none;padding:0}
+  header,footer{max-width:none;padding:12px 0}body{background:white;font-size:10pt}
+  h2,h3,h4{break-after:avoid}li,.card{break-inside:avoid;box-decoration-break:clone}
+  .body,.meta,code{overflow-wrap:anywhere}footer details{display:none}
+  footer:after{content:'Source SHA-256: ' attr(data-source-hash);display:block;overflow-wrap:anywhere}
+}
 </style></head><body>
 <header><p class="eyebrow">Creative AI Lab / Project Rooms</p><h1 id="project-name">Project record</h1>
 <p id="snapshot-time"></p><p class="scope">Immutable reading copy. Names are chosen display labels. “Done” records a participant's outcome; it does not independently verify delivery.</p>
-<p id="summary"></p><button id="download-json" type="button">Save embedded JSON record</button></header>
+<p id="summary"></p><button id="download-json" type="button">Save embedded JSON record</button> <button id="prepare-report" type="button">Prepare complete print report</button></header>
 <noscript><p>This interactive reading copy requires JavaScript. Ask the sender for the companion JSON export if scripts are unavailable.</p></noscript>
-<main>
+<section id="report-controls" hidden aria-label="Complete report controls"><p>Complete snapshot report: all filters and page selections are ignored. Review before sharing.</p><nav><button id="print-report" type="button">Print / Save as PDF</button><button id="close-report" type="button">Back to reading copy</button></nav></section>
+<main id="reader">
 <section aria-labelledby="work-heading"><h2 id="work-heading">Work at export</h2><p id="work-help">Filter current actions, then open their decision source and complete revision history.</p>
 <div class="filters"><label>Status<select id="work-status"><option value="all">All statuses</option><option value="todo">To do</option><option value="doing">In progress</option><option value="blocked">Blocked</option><option value="done">Done</option></select></label>
 <label>Owner label<select id="work-owner"><option value="all">All labels</option><option value="null">Unassigned</option></select></label></div>
@@ -24,7 +35,7 @@ section{margin-bottom:30px}button,input,select{font:inherit;max-width:100%}butto
 <p id="result-count" role="status"></p><ol id="results" aria-label="Saved records"></ol>
 <nav aria-label="Record pages"><button id="result-prev" type="button">Previous records</button><button id="result-next" type="button">Next records</button></nav></section>
 <section id="detail" hidden aria-labelledby="detail-heading"><h2 id="detail-heading" tabindex="-1">Saved context</h2><button id="back" type="button">Back to opened record</button><div id="detail-body"></div></section>
-</main><footer><p>This file contains the entire exported project, including earlier text and chosen names. Review its contents before sharing. It cannot update or restore a workspace.</p>
+</main><section id="complete-report" aria-labelledby="report-heading"></section><footer><p>This file contains the entire exported project, including earlier text and chosen names. Review its contents before sharing. It cannot update or restore a workspace.</p>
 <details><summary>Source integrity identifier</summary><p>SHA-256 of the embedded compact JSON; this identifies the source bytes, not their author or authenticity.</p><code>b4a08b44a9bf9b8810ea95367e0e650b31b3814a5caba68f0c757d14603d21c4</code></details></footer>
 <script id="record-data" type="application/json">{"schema":1,"exported_at":"2026-10-14T11:10:00.000Z","project":{"id":"10000000-0000-0000-0000-000000000001","name":"Fictional cistern handover · Demo","created_at":"2026-10-14T08:50:00.000Z"},"entries":[{"id":1,"kind":"note","body":"Fictional demonstration written for this reader. Rook and Neri are sample labels; no real team activity or verified delivery is represented.","created_at":"2026-10-14T09:00:00.000Z","author":"Demo Rook"},{"id":2,"kind":"note","body":"The pump is on loan until Friday. A leak appeared during the last inspection; returning it unrepaired would transfer the problem to the lender.","created_at":"2026-10-14T09:02:00.000Z","author":"Demo Neri"},{"id":3,"kind":"decision","body":"Replace the western valve before returning the borrowed pump. Keep the damaged part for inspection and record the lender’s receipt.","created_at":"2026-10-14T09:05:00.000Z","author":"Demo Rook"},{"id":4,"kind":"note","body":"A replacement arrived, but its seal is narrower. Compare it with the old part before fitting it.","created_at":"2026-10-14T10:00:00.000Z","author":"Demo Neri"},{"id":5,"kind":"decision","body":"Keep the cistern closed until the separate water-sample check is recorded. Pump repair alone does not authorize reopening.","created_at":"2026-10-14T11:00:00.000Z","author":"Demo Rook"}],"actions":[{"id":"30000000-0000-0000-0000-000000000002","room_id":"10000000-0000-0000-0000-000000000001","source_id":5,"creator_id":"20000000-0000-0000-0000-000000000001","title":"Record the separate water-sample check","owner_id":null,"status":"todo","note":"Find an available participant and keep the gate closed until a result is recorded.","revision":1,"created_at":"2026-10-14T11:05:00.000Z","updated_at":"2026-10-14T11:05:00.000Z","owner_name":null,"creator_name":"Demo Rook","decision_body":"Keep the cistern closed until the separate water-sample check is recorded. Pump repair alone does not authorize reopening.","history":[{"id":5,"revision":1,"created_at":"2026-10-14T11:05:00.000Z","author":"Demo Rook","action":{"id":"30000000-0000-0000-0000-000000000002","room_id":"10000000-0000-0000-0000-000000000001","source_id":5,"creator_id":"20000000-0000-0000-0000-000000000001","title":"Record the separate water-sample check","owner_id":null,"status":"todo","note":"Find an available participant and keep the gate closed until a result is recorded.","revision":1,"created_at":"2026-10-14T11:05:00.000Z","updated_at":"2026-10-14T11:05:00.000Z","owner_name":null,"creator_name":"Demo Rook","decision_body":"Keep the cistern closed until the separate water-sample check is recorded. Pump repair alone does not authorize reopening."}}]},{"id":"30000000-0000-0000-0000-000000000001","room_id":"10000000-0000-0000-0000-000000000001","source_id":3,"creator_id":"20000000-0000-0000-0000-000000000001","title":"Return completed pump","owner_id":"20000000-0000-0000-0000-000000000002","status":"done","note":"Participant reports a dry joint and a recorded return receipt. Demonstration claim only.","revision":4,"created_at":"2026-10-14T09:10:00.000Z","updated_at":"2026-10-14T10:50:00.000Z","owner_name":"Demo Neri","creator_name":"Demo Rook","decision_body":"Replace the western valve before returning the borrowed pump. Keep the damaged part for inspection and record the lender’s receipt.","history":[{"id":1,"revision":1,"created_at":"2026-10-14T09:10:00.000Z","author":"Demo Rook","action":{"id":"30000000-0000-0000-0000-000000000001","room_id":"10000000-0000-0000-0000-000000000001","source_id":3,"creator_id":"20000000-0000-0000-0000-000000000001","title":"Repair and return the borrowed pump","owner_id":"20000000-0000-0000-0000-000000000002","status":"todo","note":"","revision":1,"created_at":"2026-10-14T09:10:00.000Z","updated_at":"2026-10-14T09:10:00.000Z","owner_name":"Demo Neri","creator_name":"Demo Rook","decision_body":"Replace the western valve before returning the borrowed pump. Keep the damaged part for inspection and record the lender’s receipt."}},{"id":2,"revision":2,"created_at":"2026-10-14T09:30:00.000Z","author":"Demo Neri","action":{"id":"30000000-0000-0000-0000-000000000001","room_id":"10000000-0000-0000-0000-000000000001","source_id":3,"creator_id":"20000000-0000-0000-0000-000000000001","title":"Repair and return the borrowed pump","owner_id":"20000000-0000-0000-0000-000000000002","status":"blocked","note":"Válvula presa no depósito. Waiting for a compatible seal.","revision":2,"created_at":"2026-10-14T09:10:00.000Z","updated_at":"2026-10-14T09:30:00.000Z","owner_name":"Demo Neri","creator_name":"Demo Rook","decision_body":"Replace the western valve before returning the borrowed pump. Keep the damaged part for inspection and record the lender’s receipt."}},{"id":3,"revision":3,"created_at":"2026-10-14T10:20:00.000Z","author":"Demo Neri","action":{"id":"30000000-0000-0000-0000-000000000001","room_id":"10000000-0000-0000-0000-000000000001","source_id":3,"creator_id":"20000000-0000-0000-0000-000000000001","title":"Repair and return the borrowed pump","owner_id":"20000000-0000-0000-0000-000000000002","status":"doing","note":"Compatible seal fitted; checking the joint for leaks.","revision":3,"created_at":"2026-10-14T09:10:00.000Z","updated_at":"2026-10-14T10:20:00.000Z","owner_name":"Demo Neri","creator_name":"Demo Rook","decision_body":"Replace the western valve before returning the borrowed pump. Keep the damaged part for inspection and record the lender’s receipt."}},{"id":4,"revision":4,"created_at":"2026-10-14T10:50:00.000Z","author":"Demo Neri","action":{"id":"30000000-0000-0000-0000-000000000001","room_id":"10000000-0000-0000-0000-000000000001","source_id":3,"creator_id":"20000000-0000-0000-0000-000000000001","title":"Return completed pump","owner_id":"20000000-0000-0000-0000-000000000002","status":"done","note":"Participant reports a dry joint and a recorded return receipt. Demonstration claim only.","revision":4,"created_at":"2026-10-14T09:10:00.000Z","updated_at":"2026-10-14T10:50:00.000Z","owner_name":"Demo Neri","creator_name":"Demo Rook","decision_body":"Replace the western valve before returning the borrowed pump. Keep the damaged part for inspection and record the lender’s receipt."}}]}]}</script><script>(() => {
   'use strict';
@@ -44,6 +55,7 @@ section{margin-bottom:30px}button,input,select{font:inherit;max-width:100%}butto
   // the recorded revision numbers, not the machine's wall clock.
   records.sort((a,b)=>b.time.localeCompare(a.time)||a.kind.localeCompare(b.kind)||b.id-a.id);
   let workPage=0,resultPage=0,matches=records,openedFrom=null;
+  document.querySelector('footer').dataset.sourceHash=document.querySelector('footer code').textContent;
   document.title=`${record.project.name} · Reading copy`;
   byId('project-name').textContent=record.project.name;
   byId('snapshot-time').textContent=`Snapshot exported ${date(record.exported_at)}. This file does not receive later changes.`;
@@ -156,6 +168,61 @@ section{margin-bottom:30px}button,input,select{font:inherit;max-width:100%}butto
     }
     draw();byId('detail-heading').scrollIntoView({block:'start'});
   }
+  // Build only on demand: normal browsing remains bounded to twenty cards.
+  // The immutable source, not the active filters or visible pages, is authoritative.
+  let reportReady=false;
+  function prepareReport() {
+    if(reportReady)return;
+    const report=document.createDocumentFragment();
+    const heading=node('h2','Complete snapshot report');heading.id='report-heading';heading.tabIndex=-1;
+    report.append(heading,node('p','All saved entries, current actions and every action revision are included. Reading filters and page selections do not restrict this report.','scope'));
+    report.append(node('p',byId('summary').textContent,'meta'));
+    const work=node('section');work.append(node('h2','Current work at export'));
+    if(!Object.hasOwn(record,'actions'))work.append(node('p','Action data is unavailable in this earlier export. This does not establish whether actions existed.'));
+    else if(!actions.length)work.append(node('p','No actions in this export.'));
+    for(const action of actions) {
+      const card=actionCard(action);card.dataset.reportAction=action.id;
+      card.append(node('p',`Action ID: ${action.id} · Created by ${action.creator_name} · ${date(action.created_at)}`,'meta'));
+      card.append(node('p',action.source_id===null?'No linked decision.':`Source decision #${action.source_id}: ${action.decision_body}`,'body'));
+      work.append(card);
+    }
+    report.append(work);
+    const discussion=node('section'),entries=node('ol');discussion.append(node('h2','Complete discussion and decisions'),node('p','Original saved entry order. Entry numbers identify linked decision sources.','meta'));
+    if(!record.entries.length)discussion.append(node('p','No discussion or decisions in this export.'));
+    for(const entry of record.entries) {
+      const card=entryCard(entry);card.dataset.reportEntry=entry.id;
+      card.prepend(node('h3',`Entry #${entry.id}`));entries.append(card);
+    }
+    discussion.append(entries);report.append(discussion);
+    const history=node('section');history.append(node('h2','Complete action revision history'),node('p','Grouped by action; revisions retain their recorded sequence. Historical ownership and status may differ from current work at export.','meta'));
+    if(!Object.hasOwn(record,'actions'))history.append(node('p','Action history is unavailable in this earlier export.'));
+    else if(!actions.length)history.append(node('p','No action revisions in this export.'));
+    for(const action of actions) {
+      const group=node('section');group.append(node('h3',action.title),node('p',`Action ID: ${action.id} · ${action.history.length} revisions`,'meta'));
+      const revisions=node('ol');
+      for(const event of action.history) {
+        const item=node('li');item.dataset.reportEvent=event.id;
+        item.append(node('h4',`Revision ${event.revision} · ${event.revision===action.revision?'Current at export':'Historical'}`),
+          node('p',`Recorded by ${event.author} · ${date(event.created_at)}`,'meta'),
+          node('p',event.action.title,'body'),badge(event.action.status),
+          node('p',`Owner label: ${owner(event.action)}`,'meta'),node('p',event.action.note||'No update note recorded.','body'));
+        revisions.append(item);
+      }
+      group.append(revisions);history.append(group);
+    }
+    report.append(history);byId('complete-report').replaceChildren(report);reportReady=true;
+  }
+  byId('prepare-report').onclick=()=>{
+    prepareReport();document.body.classList.add('report-mode');byId('report-controls').hidden=false;byId('reader').hidden=true;
+    byId('report-heading').focus();byId('report-heading').scrollIntoView({block:'start'});
+  };
+  byId('close-report').onclick=()=>{
+    document.body.classList.remove('report-mode');byId('report-controls').hidden=true;byId('reader').hidden=false;byId('prepare-report').focus();
+  };
+  byId('print-report').onclick=()=>window.print();
+  // Ctrl/Cmd+P and the browser menu receive the same complete report. Cancelling
+  // the dialog leaves the reading state untouched, including its selected pages.
+  window.addEventListener('beforeprint',prepareReport);
   byId('back').onclick=()=>{byId('detail').hidden=true;if(openedFrom?.isConnected)openedFrom.focus();else{byId('record-heading').tabIndex=-1;byId('record-heading').focus();}};
   for(const id of ['work-status','work-owner'])byId(id).onchange=()=>{workPage=0;drawWork();};
   byId('work-prev').onclick=()=>{workPage--;drawWork();};byId('work-next').onclick=()=>{workPage++;drawWork();};

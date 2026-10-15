@@ -89,9 +89,10 @@ function renderRecord(record) {
 <title>Project Rooms · Reading copy</title><style>${css}</style></head><body>
 <header><p class="eyebrow">Creative AI Lab / Project Rooms</p><h1 id="project-name">Project record</h1>
 <p id="snapshot-time"></p><p class="scope">Immutable reading copy. Names are chosen display labels. “Done” records a participant's outcome; it does not independently verify delivery.</p>
-<p id="summary"></p><button id="download-json" type="button">Save embedded JSON record</button></header>
+<p id="summary"></p><button id="download-json" type="button">Save embedded JSON record</button> <button id="prepare-report" type="button">Prepare complete print report</button></header>
 <noscript><p>This interactive reading copy requires JavaScript. Ask the sender for the companion JSON export if scripts are unavailable.</p></noscript>
-<main>
+<section id="report-controls" hidden aria-label="Complete report controls"><p>Complete snapshot report: all filters and page selections are ignored. Review before sharing.</p><nav><button id="print-report" type="button">Print / Save as PDF</button><button id="close-report" type="button">Back to reading copy</button></nav></section>
+<main id="reader">
 <section aria-labelledby="work-heading"><h2 id="work-heading">Work at export</h2><p id="work-help">Filter current actions, then open their decision source and complete revision history.</p>
 <div class="filters"><label>Status<select id="work-status"><option value="all">All statuses</option><option value="todo">To do</option><option value="doing">In progress</option><option value="blocked">Blocked</option><option value="done">Done</option></select></label>
 <label>Owner label<select id="work-owner"><option value="all">All labels</option><option value="null">Unassigned</option></select></label></div>
@@ -104,7 +105,7 @@ function renderRecord(record) {
 <p id="result-count" role="status"></p><ol id="results" aria-label="Saved records"></ol>
 <nav aria-label="Record pages"><button id="result-prev" type="button">Previous records</button><button id="result-next" type="button">Next records</button></nav></section>
 <section id="detail" hidden aria-labelledby="detail-heading"><h2 id="detail-heading" tabindex="-1">Saved context</h2><button id="back" type="button">Back to opened record</button><div id="detail-body"></div></section>
-</main><footer><p>This file contains the entire exported project, including earlier text and chosen names. Review its contents before sharing. It cannot update or restore a workspace.</p>
+</main><section id="complete-report" aria-labelledby="report-heading"></section><footer><p>This file contains the entire exported project, including earlier text and chosen names. Review its contents before sharing. It cannot update or restore a workspace.</p>
 <details><summary>Source integrity identifier</summary><p>SHA-256 of the embedded compact JSON; this identifies the source bytes, not their author or authenticity.</p><code>${fingerprint}</code></details></footer>
 <script id="record-data" type="application/json">${payload}</script><script>${script}</script></body></html>\n`;
 }

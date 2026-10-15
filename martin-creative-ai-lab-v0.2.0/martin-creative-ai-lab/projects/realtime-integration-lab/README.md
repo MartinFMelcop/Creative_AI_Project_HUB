@@ -1,6 +1,6 @@
 # P11 — Project Rooms / Live exchange
 
-**Version:** 0.6.0. A local project workspace with remembered participants,
+**Version:** 0.7.0. A local project workspace with remembered participants,
 separate conversations, saved notes/decisions, recoverable history, JSON export,
 assigned actions, blockers/outcomes, change history, complete-record search,
 portable offline reading copies and consistent workspace recovery.
@@ -127,8 +127,29 @@ selected revision alongside **Current at export**. The complete revision history
 starts on the selected revision's page; keyboard Back restores the original
 button. This snapshot never receives later writes or changes live drafts. It
 neither imports nor restores a workspace. Done is still a participant's recorded
-outcome, not independently verified delivery. Printing includes only displayed
-pages; the HTML and embedded JSON retain the complete record.
+outcome, not independently verified delivery.
+
+Choose **Prepare complete print report** to review every saved entry, current
+action and historical revision in one report, then **Print / Save as PDF**.
+Browser Print (Ctrl/Cmd+P) produces the same complete snapshot automatically.
+Filters, search terms and selected pages do not restrict the report; it may be
+long and includes earlier text and chosen names. Review it before sharing.
+**Back to reading copy** restores the selected pages, filters and keyboard focus.
+Cancelling browser printing leaves the reading state intact.
+
+Current work includes owner labels, creation/update times, action IDs and source
+decision references. Discussion retains saved entry order; revision histories are
+grouped by action in recorded revision order, with Historical/Current at export
+labels. Earlier exports without actions explicitly disclose missing data. The
+source SHA-256 identifies embedded JSON bytes, not authorship or authenticity.
+The report is built locally on demand, uses inert text and makes no network
+requests. Existing exported HTML files keep their old renderer: reconvert their
+original JSON with the current converter to obtain complete printing.
+
+[Print execution](../../evidence/realtime-chat/PRINT_RUN.json) distinguishes actual
+Chromium PDF/text checks and implementing-agent visual review from independent
+team, assistive-technology and other-browser evaluation. Browser Save as PDF is
+not a validated PDF/UA or archival PDF/A production workflow.
 
 Already have a schema-1 JSON export? Convert it locally to a **new** output file:
 

@@ -1,0 +1,89 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-15",
+  "project": "P11",
+  "version": "0.7.0",
+  "baseline_commit": "039205177ccbdd5b708ff2bfed73002aa121e87c",
+  "environment": {
+    "os": "Linux x86_64 managed cloud",
+    "node": "24.19.0",
+    "chromium": "154.0.0.0",
+    "pdf": "Chromium Skia A4; Poppler text extraction"
+  },
+  "design": {
+    "objective": "Carry a complete inspectable project handover to print/PDF without manually traversing paginated reading panels.",
+    "baseline_verified": "Inspected baseline print CSS and twenty-item reader pagination: only currently displayed work/results/context print, with an explicit incomplete-print notice.",
+    "alternatives": [
+      "P01 standalone native distribution",
+      "P05/P06 encounter depth",
+      "P04 source-based editorial comparison",
+      "P11 handover completeness"
+    ],
+    "selection_reason": "A reproducible omission directly prevents an existing portable record workflow from reaching paper/PDF in full.",
+    "result": "On-demand complete preview and beforeprint report ignore reading filters/pages, preserve source decision references and ordered historical revisions, and return to unchanged reading state."
+  },
+  "checks": [
+    {
+      "command": "ROOMS_RECORD_READER_TRANSPORT=loopback npm test",
+      "result": "PASS",
+      "tests": 97,
+      "failures": 0,
+      "skipped": 0
+    },
+    {
+      "command": "ROOMS_RECORD_READER_TRANSPORT=loopback ROOMS_RECORD_CAPTURE_DIR=/workspace/work/p11-print node --test tests/record.test.cjs tests/record-browser.test.cjs",
+      "result": "PASS",
+      "tests": 16
+    },
+    {
+      "probe": "Mobile report with filtered current work and second-page search results",
+      "result": "26 actions, 388 entries, 88 revisions; IDs/order equal source; inert hostile markup; no horizontal overflow at 390x844; unchanged search/page/filter/focus after Back; repeated preview does not duplicate records."
+    },
+    {
+      "probe": "Real page.pdf from filtered paginated reader without preparing screen report",
+      "result": "75 A4 pages; Poppler extraction finds all 388 entry headings and 64 revision headings, oldest/latest discussion, revision 63 and source SHA-256. Reader filter/results remain unchanged after PDF generation."
+    },
+    {
+      "probe": "Legacy/empty record",
+      "result": "Missing action data/history explicitly disclosed; return controls work."
+    },
+    {
+      "probe": "Codex visual inspection",
+      "result": "Reviewed mobile complete report and PDF pages 1 and 65; current work, metadata and historical revision cards are readable. This is implementing-agent judgment."
+    }
+  ],
+  "transport_limit": "Direct file navigation attempted and rejected by managed Chromium ERR_BLOCKED_BY_ADMINISTRATOR. Supported existing loopback fixture loads identical bytes, closes its server and sets the browser offline before interactions. This does not prove file navigation on this managed browser.",
+  "preserved": [
+    "JSON schema 1",
+    "SQLite schema 2",
+    "backup format 1",
+    "dependency versions",
+    "legacy ephemeral protocol",
+    "P02 pinned task",
+    "fictional demo JSON bytes",
+    "North Star foundation without runtime consumer"
+  ],
+  "limitations": [
+    "No independent team or assistive-technology evaluation",
+    "No physical printing or other-browser validation",
+    "No PDF/UA or PDF/A conformance claim",
+    "Full-capacity 10000-entry/500-action/10000-revision PDF not exercised; complete reports can be long",
+    "Existing HTML files need reconversion to acquire the new renderer",
+    "PDF/screenshot fixtures are synthetic, not real work delivery"
+  ],
+  "tested_source_sha256": {
+    "projects/realtime-integration-lab/record-view.js": "7068c97f03af1d934b71ae5c78b56cccdc8dedccc02879cfba16a5cfd10b0fd9",
+    "projects/realtime-integration-lab/record-view.css": "5e02a206b69929728f3d14d01ae03a1f421a02ef7b5876ee92b70d5805c8b7cc",
+    "projects/realtime-integration-lab/record-export.cjs": "f273ab01de278fc71ff91f6a53443eab649fdac5f730de1554b8e60910e8aae4",
+    "projects/realtime-integration-lab/tests/record-browser.test.cjs": "4010919ecfc23dee59d85c547bd76252a8fdabeee3ceff7facc10310c7ea9611",
+    "projects/realtime-integration-lab/examples/cistern-handover.html": "de159d6b236c08d620feaa2421e0dbd2cd2818fef2bc60b81fac17258f3a4956",
+    "projects/realtime-integration-lab/examples/cistern-handover.json": "e1fa93693d5104c8cee705a7bedb1a11f08ffe23f97c6ff94701127333862a30"
+  },
+  "repository_checks": {
+    "validator": "PASS: 11 projects, 14 transfers, 9 assets, 2 legacy sources; 450 local file links",
+    "validator_regressions": 13,
+    "manifest_regressions": 11,
+    "reference_library": "PASS: 607 preserved sources, 18 derived texts, 140 exclusions, 14 North Star capabilities",
+    "diff_check": "PASS"
+  }
+}

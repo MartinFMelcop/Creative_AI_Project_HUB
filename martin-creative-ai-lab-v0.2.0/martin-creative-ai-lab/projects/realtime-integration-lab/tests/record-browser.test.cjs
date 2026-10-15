@@ -144,3 +144,51 @@ test('HTTP export errors preserve discussion drafts and allow a successful retry
   assert.equal(await f.page.locator('#body').inputValue(),'Draft before rejected export');assert.equal(await f.page.locator('#reading-export').isEnabled(),true);
   await f.page.unroute('**/api/studio/rooms/*/reading');const pending=f.page.waitForEvent('download');await f.page.locator('#reading-export').click();await pending;
 });
+
+test('complete report ignores filters/pages and preserves every source entry/revision without executing text',async t=>{
+  const f=await fixture(t);
+  for(let i=0;i<24;i++)f.runtime.store.work.apply(f.person,{op:'create',roomId:f.room.id,clientId:require('node:crypto').randomUUID(),title:`Additional report action ${i}`});
+  const record=f.runtime.store.export(f.room.id),file=join(f.dir,'report.html');fs.writeFileSync(file,renderRecord(record));await f.stop();
+  const {page}=await offline(t,file,{width:390,height:844});
+  assert.equal(await page.locator('#complete-report').textContent(),'');
+  await search(page,'cable_%');await page.locator('#result-next').click();await page.locator('#work-status').selectOption('done');
+  const before=await page.locator('#results').textContent(),payload=await page.locator('#record-data').textContent();
+  await page.locator('#prepare-report').click();
+  assert.equal(await page.locator('#report-heading').evaluate(el=>el===document.activeElement),true);
+  assert.equal(await page.locator('#reader').isVisible(),false);
+  assert.equal(await page.locator('[data-report-action]').count(),26);
+  assert.deepEqual(await page.locator('[data-report-entry]').evaluateAll(els=>els.map(el=>Number(el.dataset.reportEntry))),record.entries.map(e=>e.id));
+  assert.deepEqual(await page.locator('[data-report-event]').evaluateAll(els=>els.map(el=>Number(el.dataset.reportEvent))),record.actions.flatMap(a=>a.history.map(e=>e.id)));
+  assert.match(await page.locator('#complete-report').textContent(),/Source decision #.*western valve/s);
+  assert.match(await page.locator('#complete-report').textContent(),/Revision 2 · Historical.*Blocked.*Válvula presa/s);
+  assert.equal(await page.locator('#complete-report img,#complete-report b').count(),0);
+  assert.equal(await page.evaluate(()=>globalThis.leaked),undefined);
+  assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),true);
+  await capture(page,'complete-report-mobile.png');await page.locator('#close-report').click();
+  assert.equal(await page.locator('#results').textContent(),before);
+  assert.equal(await page.locator('#query').inputValue(),'cable_%');assert.equal(await page.locator('#work-status').inputValue(),'done');
+  assert.equal(await page.locator('#prepare-report').evaluate(el=>el===document.activeElement),true);
+  await page.locator('#prepare-report').click();assert.equal(await page.locator('[data-report-event]').count(),88);
+  assert.equal(await page.locator('#record-data').textContent(),payload);
+});
+
+test('browser print creates a complete PDF while retaining the filtered reading state',async t=>{
+  const f=await fixture(t),record=f.runtime.store.export(f.room.id),file=join(f.dir,'print.html');fs.writeFileSync(file,renderRecord(record));await f.stop();
+  const {page}=await offline(t,file);await search(page,'western','decision');
+  const before=await page.locator('#results').textContent(),pdf=await page.pdf({format:'A4',printBackground:true});
+  assert.ok(pdf.length>10000);assert.equal(await page.locator('[data-report-entry]').count(),record.entries.length);
+  assert.equal(await page.locator('[data-report-event]').count(),64);
+  assert.equal(await page.locator('#results').textContent(),before);assert.equal(await page.locator('#reader').isVisible(),true);
+  assert.equal(await page.locator('#complete-report').isVisible(),false);
+  await page.emulateMedia({media:'print'});assert.equal(await page.locator('#reader').isVisible(),false);
+  assert.equal(await page.locator('#complete-report').isVisible(),true);
+  if(process.env.ROOMS_RECORD_CAPTURE_DIR){fs.mkdirSync(process.env.ROOMS_RECORD_CAPTURE_DIR,{recursive:true});fs.writeFileSync(join(process.env.ROOMS_RECORD_CAPTURE_DIR,'complete-report.pdf'),pdf);}
+});
+
+test('legacy/empty reports disclose unavailable action history and return to reading',async t=>{
+  const f=await fixture(t),record=f.runtime.store.export(f.room.id);delete record.actions;record.entries=[];
+  const file=join(f.dir,'legacy-report.html');fs.writeFileSync(file,renderRecord(record));await f.stop();
+  const {page}=await offline(t,file);await page.locator('#prepare-report').click();
+  assert.match(await page.locator('#complete-report').textContent(),/Action data is unavailable.*does not establish.*No discussion.*history is unavailable/s);
+  await page.locator('#close-report').press('Enter');assert.equal(await page.locator('#reader').isVisible(),true);
+});
