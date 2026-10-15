@@ -45,6 +45,30 @@ class DocumentOwnershipTests(unittest.TestCase):
             cwd=self.fixture, capture_output=True, text=True, check=False,
         )
 
+    def test_wrapped_hub_entry_links_and_backlinks_are_owned(self):
+        hub = self.fixture / "wrapped-hub"
+        lab = hub / "martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab"
+        # Copy only prepared fixture files; the destination is inside the temp
+        # fixture, so create it after copytree's source inventory is captured.
+        staging = self.fixture.parent / (self.fixture.name + "-wrapped-lab")
+        self.addCleanup(lambda: shutil.rmtree(staging, ignore_errors=True))
+        shutil.copytree(self.fixture, staging)
+        shutil.copytree(staging, lab)
+        readme = hub / "README.md"
+        readme.write_text("[Project](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/projects/example/README.md)\n")
+        (lab / "README.md").write_text("[HUB](../../README.md)\n")
+        command = [sys.executable, "tools/validate_repo.py"]
+        result = subprocess.run(command, cwd=lab, capture_output=True, text=True)
+        self.assertEqual(result.returncode, 0, result.stderr)
+        for target, message in [("missing.md", "README.md: missing target: missing.md"),
+                                ("../outside.md", "README.md: target leaves repository: ../outside.md")]:
+            with self.subTest(target=target):
+                readme.write_text(f"[Bad]({target})\n")
+                result = subprocess.run(command, cwd=lab, capture_output=True, text=True)
+                self.assertEqual(result.returncode, 1, result.stdout)
+                self.assertIn(message, result.stderr)
+                self.assertNotIn("Traceback", result.stderr)
+
     def edit_row(self, filename, key, **changes):
         path = self.fixture / "registry" / filename
         data = json.loads(path.read_text())

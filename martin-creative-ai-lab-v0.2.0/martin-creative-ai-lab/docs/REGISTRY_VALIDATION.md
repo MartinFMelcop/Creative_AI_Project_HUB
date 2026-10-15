@@ -18,15 +18,29 @@ Markdown checks still exclude dependency documentation, and preserved archive
 integrity remains mandatory. Evidence path checks do not parse the referenced
 report, prove its claims, impose a maturity threshold, or execute its project.
 
-The recorded validator passed malformed references that the new eight regression
-methods reject. Together with the existing three methods, the suite has 11 tests.
+The original recorded validator passed malformed references rejected by eight
+regressions added alongside the three original methods.
 [Execution evidence](../evidence/registry-validation/RUN.json) records the base,
 source hashes, raw baseline/current output and existing project regression runs.
 The baseline failure is intentional defect reproduction, not a current failure.
 
-No project maturity, task contract, chat version, dependency, transfer status or
-historical source changes in this iteration. Human P11 review and an independent
-EVAL-001 artifact remain the next product/evaluation gates.
+That registry-validation increment did not change project maturity, task contracts,
+dependencies, transfer status or historical sources.
+
+## HUB entry navigation — v0.32.3
+
+In the maintained `martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/` wrapper,
+the Markdown gate also scans the repository root's `README.md` and `AGENTS.md`.
+Lab documentation can link back to those HUB entry files; resolved Markdown targets
+must stay within the repository. Standalone lab checkouts/fixtures retain their
+lab-only boundary. Registry evidence and working paths remain strictly lab-local.
+
+The validator suite now has 13 test methods. Its wrapped-HUB regression verifies
+a valid entry link and lab backlink, and rejects missing targets and repository
+escapes. Historical snapshot links and dependency documentation remain excluded;
+their existing integrity rules still apply. The gate checks file/directory targets,
+not fragments, external URLs, rendering or claims in reports. Review changed anchors
+and presentation separately; the existing root workflow runs this gate in CI.
 
 ## Complete manifest coverage
 

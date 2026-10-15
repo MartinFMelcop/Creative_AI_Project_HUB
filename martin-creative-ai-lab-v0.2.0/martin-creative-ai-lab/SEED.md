@@ -1,6 +1,6 @@
 # SEED — Martin Creative AI Lab
 
-**Version:** 0.32.2
+**Version:** 0.32.3
 **Data-base:** 10 de outubro de 2026  
 **Autor e responsável pelo portfólio:** Martin Melcop Neto  
 **Working language:** English for new documentation, plans, code comments, UI, and reports. Preserve original creative titles and historical source languages.
@@ -70,14 +70,14 @@ Se apenas este arquivo estiver disponível, ele é suficiente para iniciar a Fas
 |---|---|
 | Repository | MartinFMelcop/Creative_AI_Project_HUB; actual Git root `/workspace/Creative_AI_Project_HUB`; wrapper retained |
 | Preserved sources | Old ZIP: 175 Rave / 3 WebSocket texts unchanged. New Rave library: 589 readable / 140 excluded from 729; ten main and eight OVA PDFs (2,407 pages) plus derived text; ZIP/policy unavailable |
-| Current milestone | Individual OVA recovery in a separate searchable collection; main-book snapshots retained |
-| Runtime | Python stdlib integrity/search and JSON metadata; Poppler used for PDF text extraction; no new product runtime |
-| Evidence | Per-OVA bytes/hashes/metadata and derived text; `evidence/reference-integration/LICH_OVA_PDFS.json`; prior main PDF and Rave evidence retained |
-| Limits | ZIP/editable sources/policy absent; PDF version observations conflict; no new canon, full editorial review or independent rights/human/market validation |
-| Next action | Recover editable sources and editorial files when supplied; verify actual authority policy and compare version-specific passages before editorial adaptation |
+| Current milestone | Portfolio-first HUB README, focused lab guide and current project index with runnable/readable entry points |
+| Runtime | Markdown navigation; existing Python stdlib validator now covers root HUB links and lab backlinks; product runtimes unchanged |
+| Evidence | Existing project guides/releases/evidence inspected; local GFM desktop/mobile preview, link/anchor review and shared repository checks; see `docs/STATE.md` |
+| Limits | Presentation update does not revalidate product behavior, human reception or commercial readiness; original source/authority limits remain |
+| Next action | Use the new entry routes for independent reader/player/reviewer feedback; compare product opportunities before selecting further development |
 | Other products | P01/P03 0.4.0, P04 0.2.0, P05 0.3.0, P06/P08/P10 0.5.0, P11 0.6.0 and P02 0.2.1 retained |
 | Rules / assets | Existing maturity, runtime/save schemas, validated transfers, media and releases retained; source preservation is not system integration |
-| Attribution | Clean `e122dbb` matched remote main; user supplied eight OVAs to continue the authorized import/publication. Codex preservation/search checks; no historical instructions executed |
+| Attribution | Clean `1e920e5` matched remote main; user requested HUB README organization, hyperlinks and useful portfolio information; Codex documentary/rendering review |
 
 Registry evidence paths must resolve to existing files inside the lab; working
 paths must be directories and legacy-source IDs must exist. This documentary

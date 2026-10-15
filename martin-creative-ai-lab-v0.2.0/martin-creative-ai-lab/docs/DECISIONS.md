@@ -1268,3 +1268,26 @@ prefix extends the existing validator without rewriting old inventory metadata.
 Same title-page v0.2.87/metadata v0.2.88 observations are recorded, not reconciled
 into an archive version or new canon. The ZIP/policy/editable sources remain absent;
 P04 prose/editions and later historical decisions retain their prior boundaries.
+
+## ADR-058 — present the portfolio through verified visitor entry points
+
+**Date:** 2026-10-15 UTC. **Status:** SEED 0.32.3; HUB navigation update.
+
+The user's explicit README task takes priority over another product iteration.
+Use the root README for project experiences, technology, actual delivery formats,
+reading editions, selected existing screenshots and inspectable skill evidence.
+Keep the lab README focused on development/navigation and the project index on
+current versions and requirements. Replace obsolete delivery claims and historical
+session lists rather than adding another showcase or duplicating product guides.
+
+Retain GitHub Markdown and relative links: no new framework, hosted site, media
+generation or runtime dependency is needed. Distinguish standalone Linux players,
+the engine-dependent Eclipse Fair pack, static browser games, the Node 24 local
+workspace and reading files. Label fictional demonstrations and separate source
+availability, North Star plans, controlled evaluation and human/market evidence.
+
+Extend the existing stdlib Markdown gate to root README/AGENTS and lab backlinks
+inside the retained wrapper. Keep registry paths lab-bounded and old fixtures
+standalone. Manual anchor review and local GFM desktop/mobile rendering complement
+file checks; they are not a fresh game/service run or actual GitHub rendering.
+Revisit presentation after independent visitor feedback or real product changes.

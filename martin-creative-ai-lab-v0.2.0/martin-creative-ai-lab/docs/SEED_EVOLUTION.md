@@ -72,3 +72,11 @@ Eight OVA PDFs extend the [literary library](../references/literature/lich/READM
 to eighteen readable originals. A separate collection preserves main-book hashes
 and search behavior. Availability now covers the eighteen supplied PDFs, while
 editable manuscripts, ZIP membership/version and actual authority remain unverified.
+
+## Portfolio entry points — v0.32.3
+
+The [HUB README](../../../README.md) presents experiences, delivery requirements,
+reading editions and evidence; the [lab guide](../README.md) supports development.
+The current project index replaces obsolete delivery claims. Root entry links and
+lab backlinks join the existing documentary gate. Presentation changes do not
+advance project maturity, revalidate runtimes or promote sources into canon.

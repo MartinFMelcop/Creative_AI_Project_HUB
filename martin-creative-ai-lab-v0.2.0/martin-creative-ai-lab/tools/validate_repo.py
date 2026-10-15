@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Validate this lab's registries and local Markdown file targets; stdlib only.
+"""Validate lab registries and maintained HUB/lab Markdown targets; stdlib only.
 
 This checks documentary structure, not runtime, creative quality or link anchors.
 """
@@ -17,6 +17,10 @@ from zipfile import ZipFile, BadZipFile
 from reference_library import validate_library
 
 ROOT = Path(__file__).resolve().parents[1]
+# The original wrapper is maintained. Standalone validator fixtures stay bounded
+# to their lab; a wrapped HUB also owns its root README/AGENTS and backlinks.
+WRAPPED_HUB = ROOT.name == "martin-creative-ai-lab" and ROOT.parent.name == "martin-creative-ai-lab-v0.2.0"
+DOCUMENT_ROOT = ROOT.parent.parent if WRAPPED_HUB else ROOT
 ERRORS = []
 STATUSES = {"seed", "triage", "active", "paused", "archived", "retired"}
 MATURITIES = {f"M{i}" for i in range(7)}
@@ -188,6 +192,9 @@ def main():
     # Dependencies and validated raw snapshots are source data, not current navigation.
     # Owned reference READMEs/AGENTS/program docs remain checked as before.
     documents = []
+    if WRAPPED_HUB:
+        documents.extend(DOCUMENT_ROOT / name for name in ("README.md", "AGENTS.md")
+                         if (DOCUMENT_ROOT / name).is_file())
     for directory, subdirectories, files in os.walk(ROOT):
         subdirectories[:] = sorted(name for name in subdirectories if name not in {".git", "node_modules"}
                                    and Path(directory) / name not in historical_roots)
@@ -209,10 +216,11 @@ def main():
             if not relative:
                 continue
             destination = (path.parent / relative).resolve()
-            if not destination.is_relative_to(ROOT):
-                fail(f"{path.relative_to(ROOT)}: target leaves repository: {target}")
+            label = path.relative_to(DOCUMENT_ROOT)
+            if not destination.is_relative_to(DOCUMENT_ROOT):
+                fail(f"{label}: target leaves repository: {target}")
             elif not destination.exists():
-                fail(f"{path.relative_to(ROOT)}: missing target: {target}")
+                fail(f"{label}: missing target: {target}")
             checked_links += 1
 
     if ERRORS:
