@@ -206,13 +206,13 @@ Sava stopped scraping.
 
 “The grille’s bracket,” I added.
 
-The guard at the far end of the beam let go of it and seized my coat. He didn’t hit me. Nera called him by name, Eno, and told him to take hold of the beam again.
+The guard let go of the beam and seized my coat. He didn’t hit me. Nera called him by name, Eno, and told him to take hold of the timber again.
 
 “Later,” she told me. “If we get out, you’ll explain every signature.”
 
 Something cracked inside the tank. The caretaker tipped forward, tearing the straps out of the bench. Aevren kept his hand on the arm, but the elbow bent the wrong way. The hand closed without moving the lever.
 
-The beam swung toward Eno. Sava pulled him aside by his belt. The iron struck the stair’s edge, broke off a chip, and lodged across it. The black wheel spun freely, one full turn.
+The beam swung toward Eno. Sava pulled him aside by his belt. The timber struck the stair’s edge, chipped the stone, and lodged across it. The black wheel spun freely, one full turn.
 
 Water poured from the inlet into the tank with a force that made us shout.
 
@@ -242,7 +242,7 @@ She lifted her bag clear of the shelves.
 
 The lich moved toward a table. The water arrived first, slipping beneath the gallery door and lifting the bottom sheets. A lead weight slid. Aevren caught a corner of paper, but it tore off in his hand.
 
-Beyond the door were a short staircase and a maintenance shaft. The beam that worked the drain lay across the shaft, supported by a hanging counterweight. Someone had to pull the beam into its socket and hold it there while another person released the brake. After that, the counterweight would lift the sluice gate.
+Beyond the door were a short staircase and a maintenance shaft. An iron lever spanned the shaft. Pulled into the socket at the edge, it lined up the sluice gate’s chain with the counterweight pulley. Only then could someone release the brake and let the weight fall. Out of the socket, the chain caught against the side.
 
 The cracked side of the wall was the side with the chain.
 
@@ -250,11 +250,11 @@ The cracked side of the wall was the side with the chain.
 
 I stood still. The stone beneath my foot had moved.
 
-Nera braced the spare beam between two walls. Sava looped a rope around it and another around the official’s waist. Nera climbed down to the mechanism. From the doorway I could see her head, her outstretched hand, and the water rising over the tiles.
+Nera braced the second beam between two walls above the shaft. That wooden brace would support the ropes; the iron lever was below it. Sava tied the official to the timber. Nera climbed down to the brake beside the chain. From the doorway I could see her head, her outstretched hand, and the water rising over the tiles.
 
 She reached the brake. The chain went taut. The sluice gate didn’t move.
 
-“The beam!” she shouted.
+“Pull the lever!” she shouted.
 
 Sava and I pulled. We stopped a handspan short of the socket. We pulled again. I felt something give beneath the floor each time we strained.
 
@@ -262,7 +262,7 @@ Nera tried to hold the brake open with her shoulder. Water filled the place wher
 
 Nera climbed out without letting go of the chain with her other hand. Sava made her release it. The chain ran, the brake closed, and the counterweight struck its support.
 
-“I need someone down there while you fit the beam,” Nera said.
+“I need someone down there while you fit the lever,” Nera said.
 
 “The floor’s going to go,” Sava said.
 
@@ -284,9 +284,31 @@ She held the clasp of her bag.
 
 “No.”
 
-Nera opened her mouth.
+Nera looked toward the landing where we had left Lesto. Sava stepped between her and the door.
 
-“If the brake closes again,” Aevren cut in, “I take my hand away, and the body stops. I can’t tell it to keep going from up here.”
+“Eno, get the men off the stairs,” Nera said. “I’ll ask for a chain and a crew to shut it off at the spring. No one else comes down here.”
+
+Eno picked up the lamp. Aevren stepped back from the shaft and began stacking sheets in a box. He handed it to the guard, who went upstairs with it on his shoulder.
+
+Sava untied the rope around Nera’s waist. The official made no attempt to stop her.
+
+“Until they shut it off up there, it’ll keep coming in,” I said.
+
+“I can see that,” Nera said.
+
+The water covered the table’s feet. Aevren put two books in the next box; when he tried to lift it, the wet bottom gave way. He knelt to gather them up.
+
+Sava held the rope, its knot undone.
+
+“And Salt Street?”
+
+“They’ll get water by cart,” Nera said. “I still have to find the carts.”
+
+Sava looked at the lever, then at the stairs. She passed the rope over the brace again, this time at the middle.
+
+“With Lesto, would you have to stay down there?” she asked Aevren.
+
+“Close enough to reach his arm. If I take my hand away, the body stops. I can’t tell it to keep going from up here.”
 
 He held the caretaker’s arm by the shoulder to show us. The dead hand hung loose. The exposed tendon no longer connected the wrist to the elbow.
 
@@ -302,7 +324,9 @@ Aevren looked at the narrow ledge beside the chain.
 
 “He breaks.”
 
-The water reached the feet of the book table. Aevren turned his head. Then he looked back at Sava.
+“When I tell you to stop, you stop,” she said. “And he comes up before any box.”
+
+Aevren left the two books on the table. He opened his empty hands for her to see.
 
 She closed her bag, leaving out the rope and the largest wrench.
 
@@ -310,7 +334,7 @@ She closed her bag, leaving out the rope and the largest wrench.
 
 She passed me in the doorway. I wanted to follow.
 
-“You stay at the beam, Baldino.”
+“You stay at the lever, Baldino.”
 
 She did not raise her voice. I stayed.
 
@@ -348,15 +372,15 @@ From above, I could see Lesto’s sleeve, the skeletal hand beneath it, and part
 
 The body swung. The hand closed again and caught the brake this time.
 
-Nera took one end of the beam. I stood at the other. The water reached our ankles and hid the floor from sight. Sava put a pale strip of cloth beside the socket so we would know how far to pull.
+Nera took one end of the iron lever. I stood at the other. Above us, the ropes passed over the wooden brace. The water reached our ankles and hid the floor from sight. Sava put a pale strip of cloth beside the socket so we would know how far to pull.
 
-We pulled. The beam moved the width of a palm.
+We pulled. The lever moved the width of a palm.
 
-Aevren raised the dead arm. The chain came free of the brake with a sound that made Eno step back.
+Aevren raised the dead arm. The brake opened, but the chain scraped against the side of the pulley and caught. The counterweight gave a jolt that made Eno step back.
 
 “More,” Sava told me.
 
-I pulled again. The counterweight sank a little, and the end of the beam passed over the socket without dropping in. Nera tried to push it sideways. Her injured hand struck the wall, and she cried out.
+I pulled again. The end of the lever passed over the socket without dropping in. Nera tried to push it sideways. Her injured hand struck the wall, and she cried out.
 
 Sava couldn’t let go of the rope. If the body turned, Aevren would lose contact.
 
@@ -364,25 +388,25 @@ Sava couldn’t let go of the rope. If the body turned, Aevren would lose contac
 
 I knew the loop. I had cleaned that part many times without looking inside it. I bent down, put my arm through, and found the iron under the water. I pushed upward with my shoulder.
 
-The beam settled into its socket. For an instant I felt I was holding it.
+The lever settled into its socket. For an instant I felt I was holding it.
 
 Then the weight came. Something shifted inside my shoulder, and my arm stuck in a position where I could neither use it nor pull it out. The floor gave way beneath my knee. I tried to call Nera, but the air went out before her name.
 
-She caught my collar with her good hand. I was sliding, and the loop was taking my arm with it. Sava passed a turn of the body’s rope to Eno, set her foot against the wall, and held the beam above me.
+She caught my collar with her good hand. I was sliding, and the loop was taking my arm with it. Sava passed a turn of the body’s rope to Eno, set her foot against the wall, and held the lever above me.
 
 “Let go of the loop!”
 
 I couldn’t open my fingers anymore. She struck my wrist with the butt of the wrench. My hand let go. Nera dragged me back, and my arm came with me, though I could no longer feel where it ended.
 
-The beam was in place, but the chain was still caught. Lesto had doubled over in the water. His hand still closed; it was the body turning that pulled the brake the wrong way.
+The lever was in place, but the brake had bitten into the chain again. Lesto had doubled over in the water; his body was turning, lowering the hand that needed to keep the brake open.
 
-Sava tightened the rope. Eno tried to do the same.
+Sava tightened the rope. Eno tried to do the same. Lesto came back into position, and Aevren managed to lift the brake. The chain advanced one link.
 
 From the shaft, Aevren called my name.
 
-A crack opened beneath the lowest shelf. Water swept through the storeroom and carried the first box of sheets toward the stairs. Aevren looked at it. I was lying beside the door; I saw the neck of bone turn and the arm start to pull away from Lesto’s.
+A crack opened beneath the lowest shelf. Water swept through the storeroom and carried one of the boxes of sheets toward the stairs. Aevren looked at it. I was lying beside the door; I saw the neck of bone turn and the arm start to pull away from Lesto’s.
 
-“Hold!” Sava shouted.
+“His arm!” Sava shouted.
 
 The dead hand opened. The brake dropped halfway, catching the chain again. Aevren put his fingers back on the arm, but Lesto was no longer in the right position.
 
@@ -398,7 +422,7 @@ She shifted her grip on the rope.
 
 “Hold him.”
 
-Aevren reached his own hand down to Lesto’s and closed both around the brake. Sava kept her brother tilted. Nera pushed the beam with the toe of her boot.
+Aevren reached his own hand down to Lesto’s and closed both around the brake. Sava kept her brother tilted. Nera held the lever firm in its socket with the toe of her boot. The chain ran over the pulley.
 
 The counterweight fell.
 
@@ -458,11 +482,11 @@ Nera took the ledger before noon. I asked her to leave the last week’s sheet, 
 
 Nera gave him the names of the workers who would return. Sava was among them.
 
-Three days later they removed the pipe from Tila’s house. Only then did I receive the first summons. No one had yet decided what I would pay, or where the money would come from. My work in the tomb was over. Tila put the kitchen tools in a box so I wouldn’t try to go back to work before I could move my arm.
+Nera left written instructions that I was to report as soon as I could go out. No one had yet decided what I would pay, or where the money would come from. Tila asked whether she should fetch my things from the tomb. I told her where they were. She put the kitchen tools in a box; my arm wouldn’t even let me lift the lid.
 
-When the water returned to Salt Street, instructions came with it: boil what you meant to drink. The cistern had been cleaned, but the neighborhood’s pipes still brought up sludge. From the window I saw a woman covering the buckets she carried. She was furious with someone; I couldn’t hear who.
+The first water cart arrived that afternoon. From the window I saw a woman covering the buckets she carried. They had been told to boil what they meant to drink. The pipe behind the house was still fixed to the wall, shut off with a clamp fitted by Nera’s men. Tila put a bucket beside the others in the queue.
 
-Sava came that first afternoon, while the man tending my shoulder was still preparing the bandage.
+Sava came before dark, while the man tending my shoulder was changing the bandage.
 
 She knocked before she came in. Tila was in the kitchen and offered her boiled water. Sava drank standing up, in two swallows. She gave the glass back and stayed by the table.
 
@@ -480,7 +504,13 @@ The next day Tila came with me to the place where Sava’s family was waiting. T
 
 Tila stayed near the door. I approached the body. The grille’s pressure mark was still on his neck. The hand we had used was clean, lying beside the other.
 
-I told them where the mark had been made. A man from the family asked me to show him how the brake moved. I used my good hand. He looked at Lesto’s wrist and called a woman I didn’t know. They began to make a splint to protect it when they shrouded him.
+“The grille’s bracket wasn’t replaced,” I said. “I signed it off as replaced.”
+
+A man from the family looked at me. I had begun to raise the arm in the sling; I lowered it.
+
+“And his hand?” he asked.
+
+I told them how we had used it to open the brake. He asked me to show him the movement. I used my good hand. The man looked at Lesto’s wrist and called a woman I didn’t know. They began to make a splint to protect it when they shrouded him.
 
 I was about to step back, but Sava made room beside the body.
 

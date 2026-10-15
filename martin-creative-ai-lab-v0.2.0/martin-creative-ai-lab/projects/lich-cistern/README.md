@@ -1,124 +1,96 @@
 # P04 — A água sob Darsen
 
-**0.2.0**. A complete dark-fantasy story in Portuguese and English, in five connected scenes.
+**0.3.0.** A complete five-scene dark-fantasy story in Portuguese and English.
 Baldino has diverted water to his daughter and falsified maintenance records.
-A dead inspector, a failing cistern and a forced visit to Aevren's tomb expose
-the cost. Sava's grief/expertise and Nera's public-water duty change the response.
-The physical operation ends; the death, injury and accountability remain.
+A dead inspector, a failing cistern and an emergency use of the body expose
+the cost. The operation ends; grief, injury and accountability remain.
 
 ## Read
 
-**English — The Water Beneath Darsen**
+| Language | Reading files | Editable manuscript |
+|---|---|---|
+| Portuguese — *A água sob Darsen* | [EPUB 3](dist/a-agua-sob-darsen-0.3.0.epub) · [A5 PDF](dist/a-agua-sob-darsen-0.3.0.pdf) | [story.md](story.md) |
+| English — *The Water Beneath Darsen* | [EPUB 3](dist/the-water-beneath-darsen-0.3.0.epub) · [A5 PDF](dist/the-water-beneath-darsen-0.3.0.pdf) | [story.en.md](story.en.md) |
 
-- [EPUB 3](dist/the-water-beneath-darsen-0.2.0.epub): complete English translation, `en-US` metadata/document language, distinct identifier and chapter navigation.
-- [A5 PDF](dist/the-water-beneath-darsen-0.2.0.pdf): 27 pages, linked contents/bookmarks, embedded licensed serif fonts and full notices.
-- [English manuscript](story.en.md): all five scenes, aligned with the Portuguese paragraph sequence for comparison.
+Download EPUB/PDF files before opening them in a reader; GitHub's source page is
+not an ebook reader. The downloaded books need no repository, account or service.
+EPUBs provide chapter navigation and language metadata. PDFs provide linked
+contents, chapter bookmarks and embedded licensed DejaVu Serif fonts. Each PDF
+scene keeps its final three paragraphs together.
 
-The English edition translates the actual current story, including Baldino’s
-falsification, Sava’s constrained permission, the contact/joint limits, physical
-operation and remaining consequences. Codex translated and reviewed it under
-Martin’s direction; there is no independent translator/reader or canon approval.
-[Translation choices](provenance.json) record waterworks terminology, the source’s
-awkward guard/beam wording and the inferred shrouding term. Structural alignment
-and text identity do not certify semantic fidelity or literary quality.
+The revision makes Sava's initial refusal change the rescue plan before she
+proposes limited use of her brother's body. It distinguishes the iron operating
+lever from the wooden rope support, keeps the aftermath in chronological order
+and makes Baldino acknowledge the falsified repair to Lesto's family. Both
+languages carry the complete revised story.
 
-**Portuguese — A água sob Darsen, preserved 0.1.0**
+Earlier reading editions remain available: Portuguese 0.1.0
+[EPUB](dist/a-agua-sob-darsen-0.1.0.epub) / [PDF](dist/a-agua-sob-darsen-0.1.0.pdf),
+and English 0.2.0 [EPUB](dist/the-water-beneath-darsen-0.2.0.epub) /
+[PDF](dist/the-water-beneath-darsen-0.2.0.pdf). They contain the earlier text;
+the current producer builds 0.3.0 from the maintained manuscripts.
 
-- [Reflowable EPUB](dist/a-agua-sob-darsen-0.1.0.epub): EPUB 3, Portuguese language
-  metadata and chapter navigation; use an EPUB reader that accepts local files.
-- [A5 PDF](dist/a-agua-sob-darsen-0.1.0.pdf): 28 pages, chapter bookmarks, linked
-  contents, embedded Unicode serif faces and complete font-license notices.
-- [Editable manuscript](story.md): the same full narrative in Markdown.
+## Creative scope and sources
 
-Download the binary file from GitHub before opening it; the blob page is not an
-ebook reader. Neither edition needs this repository, Python, an account or an
-online service for reading. This is a standalone seed adaptation, **not B01
-restoration or ratified canon**. Historical manuscripts were unavailable when
-this adaptation was written. Ten original main-book PDFs are now available in the
-[separate reference library](../../references/literature/lich/README.md), with
-searchable text and conflicting version labels. Their recovery does not establish
-a retrospective source comparison, restore B01 or approve this story.
+This is a standalone adaptation, **not restored B01 or ratified canon**. Codex
+wrote the original story from the maintained P04 seed under Martin Melcop Neto's
+portfolio direction, before historical manuscripts were available. Codex also
+translated and revised it; no independent reader, translator or authorial canon
+approval is claimed.
 
-## Creative scope and provenance
+The recovered [literary library](../../references/literature/lich/README.md) now
+contains ten main-book and eight OVA PDFs. Revision 0.3.0 compares selected actual
+Book I passages, with source hashes and physical pages in
+[Source comparison](SOURCE_COMPARISON.md). This is a bounded craft comparison,
+not a review of the whole collection. Conflicting historical version labels and
+the unavailable authority policy remain unresolved.
 
-The maintained P04 seed supplies Baldino's narration, Aevren's reconstruction of
-old knowledge and cosmopolitan Darsen. Sava/Nera/Lesto/Eno/Tila, local waterworks,
-the incident and corpse-binding limits are newly written for this story. No year
-or broader cosmology is asserted. Baldino survives and recounts witnessed events;
-post-death narration or ghosts are not needed in this adaptation.
+Baldino remains alive and responsible for his choices in this adaptation.
+Sava, Nera, Lesto, Eno, Tila, the waterworks and their incident are new. Movement
+of a corpse requires contact and intact tissue; it supplies no answer from Lesto,
+resurrection or repair of broken joints. Sava's permission remains constrained
+by the emergency. Archive recovery does not replace these adaptation decisions
+or make the story North Star canon.
 
-Corpse movement requires contact and intact tissue; broken joints remain broken.
-It produces no answer from Lesto and supplies no resurrection. Sava allows limited
-use under emergency pressure and insists on returning the body. That constrained
-permission is part of the conflict, not a claim of uncomplicated consent.
-
-Text and editorial review are by Codex under Martin's portfolio direction. Martin
-has not supplied a reader review or canon approval for this story. [Provenance](provenance.json)
-identifies source boundaries, new decisions and the real production files.
-DejaVu Serif fonts are copied unchanged from the installed distribution under
-their [license](fonts/LICENSE.txt); the PDF also includes its notices. The EPUB
-uses the reader's fonts. No external story, illustration or audio was imported.
+[Provenance](provenance.json) records origins, translation decisions and artifact
+identity. No external story, illustration or audio was imported. Included font
+files retain their [license](fonts/LICENSE.txt); the PDF includes its notices.
 
 ## Build and verify
 
-Use Pandoc **3.1.11.1**, Python 3.12 and ReportLab **4.4.9** for the tested build;
-Poppler supplies `pdftotext`, `pdfinfo` and `pdffonts` for checks. Font sources are
-included. Install ReportLab in a suitable virtual environment if needed.
+The tested production stack is Python 3.12, Pandoc **3.1.11.1** and ReportLab
+**4.4.9**. Poppler provides `pdftotext`, `pdfinfo` and `pdffonts`. Font sources
+are included. From this directory:
 
-```bash
-python3 tools/build.py
-python3 tools/check_editions.py
-# Produce or check the English edition explicitly:
-python3 tools/build.py --edition en
+```sh
+python3 tools/build.py --edition all
 python3 tools/check_editions.py --edition all
-# Rebuild both languages without overwriting the delivered editions:
+# Rebuild without replacing delivered files:
 python3 tools/build.py --edition all --out /tmp/darsen-editions
 python3 tools/check_editions.py --edition all --dist /tmp/darsen-editions
 ```
 
-Official EPUBCheck **5.4.0** was downloaded to scratch and its GitHub asset digest
-verified before execution. With its extracted package and Java:
+The checker compares every narrative heading/paragraph in the manuscripts,
+EPUB spine and extracted PDF, plus metadata, navigation and font properties.
+These are format/content checks, not semantic translation or literary proof.
+Container timestamps/IDs are not a byte-reproducible build contract.
 
-```bash
-java -jar /path/to/epubcheck.jar dist/a-agua-sob-darsen-0.1.0.epub
-java -jar /path/to/epubcheck.jar dist/the-water-beneath-darsen-0.2.0.epub
-```
+[Revision execution](../../evidence/lich-cistern/REVISION_RUN.json) identifies the
+baseline, actual revised artifacts, executed checks and review limits. Official
+EPUBCheck 5.4.0 is configured in CI; the local download proxy was unavailable for
+this revision. Consult the associated commit’s CI for its official conformance result.
+Earlier [Portuguese](../../evidence/lich-cistern/RUN.json) and
+[English](../../evidence/lich-cistern/ENGLISH_RUN.json) records concern their
+original editions, including their recorded official EPUBCheck runs.
 
-Both delivered EPUBs report zero fatals/errors/warnings in recorded checks. Checks compare every
-narrative heading and paragraph in source, EPUB spine and extracted PDF; inspect
-navigation/language, font embedding/Unicode and PDF metadata. Rebuilds also pass
-the same content checks. Container timestamps/IDs are not a byte-reproducible
-artifact contract. Normal integrity checks do not regenerate the editions.
+## Review limits
 
-## Review boundaries
+The source comparison and before/after reading assessment are Codex judgments.
+Text identity and valid formats do not establish literary quality or independent
+semantic approval. PDFs remain untagged; assistive technology, hardware ebook
+readers, reader response and commercial demand remain unverified. No North Star
+runtime consumer exists.
 
-[English execution/editorial review](../../evidence/lich-cistern/ENGLISH_RUN.json)
-records exact manuscript/EPUB/PDF identity, language/navigation/font checks, official
-EPUBCheck, isolated rebuilds, controlled language/omission rejection, actual PDF
-rasters and packaged XHTML/CSS at 360/900px via a local HTTP preview. This is not
-a tested ebook-device or assistive-technology workflow. The English PDF identifies
-its language but is still untagged. The Portuguese source, metadata, two shipped
-editions, stylesheet and font files remain byte-for-byte unchanged.
-
-
-[Execution/editorial evidence](../../evidence/lich-cistern/RUN.json) records
-format checks, PDF raster inspection and first-chapter XHTML layout at 360/900px.
-That Chromium view is an EPUB content inspection, not a tested Kindle/Apple
-Books/Kobo workflow. Source and rendered-page review are by the implementing agent.
-Format validity, word/page counts and matching text do not prove literary quality.
-The PDF is untagged; assistive technology and hardware readers remain unverified.
-
-Editorial passes corrected the water shortage's cause, demonstrated why Aevren
-cannot pull the brake himself, kept corpse/witness/injury knowledge consistent,
-and removed a contrived object-return ending. The narrative now ends with a
-specific testimony/grief interaction rather than a moral speech. Reader response,
-canon fit against the unavailable manuscript and commercial interest remain open.
-
-Next compare independent Portuguese/English reader and translator reactions to the physical climax, voices and constrained permission; assess device reading alongside native play, musical practice and real P11 handoffs before choosing further work.
-
-## Historical reference availability
-
-[Version-aware literary library](../../references/literature/lich/README.md) records
-the supplied older archive's blocked transfer and earlier v0.4.48 inspection
-report. No historical manuscript/policy is imported. This PT/EN story remains
-a separate adaptation; its choices are not automatically North Star canon.
+Next observe independent Portuguese/English readers following the mechanism,
+Sava's changed decision and Baldino's final testimony. Compare those findings
+with other portfolio needs before choosing another milestone.

@@ -225,6 +225,8 @@ jobs:
           unzip -q "$RUNNER_TEMP/darsen-epubcheck/tool.zip" -d "$RUNNER_TEMP/darsen-epubcheck"
           java -jar "$RUNNER_TEMP/darsen-epubcheck/epubcheck-5.4.0/epubcheck.jar" projects/lich-cistern/dist/a-agua-sob-darsen-0.1.0.epub
           java -jar "$RUNNER_TEMP/darsen-epubcheck/epubcheck-5.4.0/epubcheck.jar" projects/lich-cistern/dist/the-water-beneath-darsen-0.2.0.epub
+          java -jar "$RUNNER_TEMP/darsen-epubcheck/epubcheck-5.4.0/epubcheck.jar" projects/lich-cistern/dist/a-agua-sob-darsen-0.3.0.epub
+          java -jar "$RUNNER_TEMP/darsen-epubcheck/epubcheck-5.4.0/epubcheck.jar" projects/lich-cistern/dist/the-water-beneath-darsen-0.3.0.epub
       - name: Exercise Waystone scenes, rescue routes, CLI and provenance
         run: |
           python3 projects/waystone-dialogue/test_scene.py

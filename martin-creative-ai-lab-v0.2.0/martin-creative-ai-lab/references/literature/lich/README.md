@@ -103,7 +103,7 @@ them or infer membership in `Lightnovel Darkfantasy v0.4.1.zip`.
 | Individual OVA PDFs I–VIII | Original PDFs, embedded covers, derived text, per-file hashes and metadata | Editable sources, current authority policy and chronological/continuity review |
 | `Lightnovel Darkfantasy v0.4.1.zip` | Filename/ID and failed transfer record | ZIP bytes, detected version, size, SHA-256, inventory and relationship to these PDFs |
 | Earlier `Lightnovel Darkfantasy v0.4.48.zip` | [HUB inspection report](../../../docs/SOURCES.md) and [P04 seed section](../../../SEED.md#p04--o-lich-mais-velho-da-tumba-mais-antiga) | Original archive/policy bytes; this report is not superseded by the new PDFs |
-| P04 0.2.0 | [Separate adaptation](../../../projects/lich-cistern/README.md), editable PT/EN story and EPUB/PDF editions | Independent literary approval and historical-canon equivalence |
+| P04 0.3.0 | [Separate adaptation](../../../projects/lich-cistern/README.md), editable PT/EN story and EPUB/PDF editions | Independent literary approval and historical-canon equivalence |
 
 The original ZIP transfer exceeded the available 32 MiB limit; it remains an
 unavailable catalog record with null archive hash/version/count and zero ZIP

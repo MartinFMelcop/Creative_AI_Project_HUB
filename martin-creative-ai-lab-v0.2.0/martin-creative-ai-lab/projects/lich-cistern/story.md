@@ -206,13 +206,13 @@ Sava parou de raspar.
 
 — O suporte da grade — completei.
 
-O guarda que segurava a outra ponta da viga me largou pelo casaco. Não chegou a bater. Nera o chamou pelo nome, Eno, e mandou que segurasse de novo.
+O guarda largou a ponta da viga e me agarrou pelo casaco. Não chegou a bater. Nera o chamou pelo nome, Eno, e mandou que segurasse a madeira de novo.
 
 — Depois — ela disse a mim. — Se sairmos, você vai explicar cada assinatura.
 
 Houve um estalo dentro do tanque. O zelador se inclinou, arrancando as correias do banco. Aevren manteve o contato com o braço, mas o cotovelo virou para o lado errado. A mão se fechou sem mover a alavanca.
 
-A viga veio na direção de Eno. Sava o puxou pelo cinto. O ferro bateu na borda da escada, abriu uma lasca e ficou atravessado. A roda negra rodou livre, uma volta inteira.
+A viga veio na direção de Eno. Sava o puxou pelo cinto. A madeira bateu na borda da escada, arrancou uma lasca da pedra e ficou atravessada. A roda negra rodou livre, uma volta inteira.
 
 A água da entrada caiu sobre o tanque com uma força que nos obrigou a gritar.
 
@@ -242,7 +242,7 @@ Ela levantou a bolsa para não arrastar nas prateleiras.
 
 O lich fez um movimento em direção a uma mesa. A água chegou primeiro, sob a porta da galeria, e levantou as folhas de baixo. Um peso de chumbo deslizou. Aevren segurou uma ponta do papel, mas ela se separou na sua mão.
 
-Do outro lado da porta havia uma escada curta e um poço de manutenção. A viga que operava a descarga atravessava o poço, sustentada por um contrapeso suspenso. Era preciso puxar a viga para o encaixe e mantê-la ali enquanto outra pessoa soltava o freio. Depois, o próprio contrapeso levantaria a comporta.
+Do outro lado da porta havia uma escada curta e um poço de manutenção. Uma alavanca de ferro atravessava o poço. Puxada até o encaixe na borda, ela alinhava a corrente da comporta com a roldana do contrapeso. Só então se podia soltar o freio e deixar o peso descer. Fora do encaixe, a corrente prendia de lado.
 
 O lado rachado da parede era justamente o da corrente.
 
@@ -250,11 +250,11 @@ O lado rachado da parede era justamente o da corrente.
 
 Fiquei parado. A pedra sob meu pé se mexera.
 
-Nera apoiou a viga nova entre duas paredes. Sava fez uma volta de corda nela e outra na cintura da oficial. Nera desceu até o mecanismo. Da porta, eu via sua cabeça, a mão estendida e a água subindo sobre os ladrilhos.
+Nera apoiou a segunda viga entre duas paredes, acima do poço. Aquela escora sustentaria as cordas; a alavanca de ferro ficava abaixo dela. Sava amarrou a oficial à madeira. Nera desceu até o freio, junto da corrente. Da porta, eu via sua cabeça, a mão estendida e a água subindo sobre os ladrilhos.
 
 Ela alcançou o freio. A corrente se esticou. A comporta não se moveu.
 
-— A viga! — gritou.
+— Puxem a alavanca! — gritou.
 
 Sava e eu puxamos. O encaixe ficou a um palmo do ponto. Puxamos de novo. Eu sentia alguma coisa ceder debaixo do piso a cada esforço.
 
@@ -284,9 +284,31 @@ Ela segurou o fecho da bolsa.
 
 — Não.
 
-Nera abriu a boca.
+Nera olhou para o patamar onde deixáramos Lesto. Sava se pôs entre ela e a porta.
 
-— Se o freio voltar a fechar — Aevren interrompeu —, eu retiro a mão, e o corpo para. Não consigo mandar que continue de lá de cima.
+— Eno, tire os homens da escada — Nera disse. — Vou pedir uma corrente e gente para fechar na nascente. Ninguém mais desce aqui.
+
+Eno apanhou a lâmpada. Aevren recuou do poço e começou a empilhar folhas numa caixa. Entregou-a ao guarda, que subiu com ela apoiada no ombro.
+
+Sava soltou a corda da cintura de Nera. A oficial não tentou impedi-la.
+
+— Até fecharem lá em cima, vai continuar entrando — falei.
+
+— Eu vi — Nera respondeu.
+
+A água cobria os pés da mesa. Aevren pôs dois livros na caixa seguinte; quando foi levantá-la, o fundo molhado abriu. Ajoelhou-se para recolhê-los.
+
+Sava segurava a corda já sem nó.
+
+— E a Rua do Sal?
+
+— Vai receber água em carroça — Nera disse. — Ainda tenho de conseguir as carroças.
+
+Sava olhou para a alavanca e depois para a escada. Passou a corda de novo sobre a escora, desta vez pelo meio.
+
+— Com Lesto, você teria de ficar lá embaixo? — perguntou a Aevren.
+
+— Ao alcance do braço dele. Se eu retirar a mão, o corpo para. Não consigo mandar que continue de lá de cima.
 
 Mostrou o braço do zelador, segurando-o pelo ombro. A mão morta pendia. O tendão exposto não ligava mais o pulso ao cotovelo.
 
@@ -302,7 +324,9 @@ Aevren olhou o apoio estreito junto à corrente.
 
 — Quebra.
 
-A água chegou aos pés da mesa dos livros. Aevren virou a cabeça. Voltou a olhar para Sava.
+— Quando eu mandar parar, você para — ela disse. — E ele sobe antes de qualquer caixa.
+
+Aevren deixou os dois livros sobre a mesa. Abriu as mãos vazias para ela.
 
 Ela fechou a bolsa, deixando de fora a corda e a chave maior.
 
@@ -310,7 +334,7 @@ Ela fechou a bolsa, deixando de fora a corda e a chave maior.
 
 Passou por mim na porta. Eu quis segui-la.
 
-— Você fica na viga, Baldino.
+— Você fica na alavanca, Baldino.
 
 Ela não levantou a voz. Eu fiquei.
 
@@ -348,15 +372,15 @@ Do alto, eu via a manga de Lesto, a mão de osso por baixo dela e uma parte do c
 
 O corpo balançou. A mão fechou de novo e desta vez pegou o freio.
 
-Nera tomou posição na ponta da viga. Eu estava na outra. A água nos alcançava os tornozelos e tornava o piso impossível de enxergar. Sava colocou uma tira clara de pano junto ao encaixe para que soubéssemos até onde puxar.
+Nera tomou uma ponta da alavanca de ferro. Eu estava na outra. Acima de nós, as cordas passavam pela escora de madeira. A água nos alcançava os tornozelos e tornava o piso impossível de enxergar. Sava colocou uma tira clara de pano junto ao encaixe para que soubéssemos até onde puxar.
 
-Puxamos. A viga veio uma palma.
+Puxamos. A alavanca veio uma palma.
 
-Aevren ergueu o braço morto. A corrente se soltou do freio com um ruído que fez Eno recuar.
+Aevren ergueu o braço morto. O freio abriu, mas a corrente raspou de lado na roldana e ficou presa. O contrapeso deu um tranco que fez Eno recuar.
 
 — Mais — Sava falou para mim.
 
-Puxei de novo. O contrapeso desceu um pouco, e a ponta da viga passou sobre o encaixe sem entrar. Nera tentou empurrá-la de lado. Sua mão machucada bateu na parede, e ela deixou escapar um grito.
+Puxei de novo. A ponta da alavanca passou sobre o encaixe sem entrar. Nera tentou empurrá-la de lado. Sua mão machucada bateu na parede, e ela deixou escapar um grito.
 
 Sava não podia largar a corda. Se o corpo girasse, Aevren perderia o contato.
 
@@ -364,25 +388,25 @@ Sava não podia largar a corda. Se o corpo girasse, Aevren perderia o contato.
 
 Eu conhecia a alça. Havia limpado aquela peça muitas vezes sem olhar dentro dela. Inclinei-me, enfiei o braço e encontrei o ferro debaixo da água. Empurrei para cima com o ombro.
 
-A viga entrou no encaixe. Por um instante senti que a segurava.
+A alavanca entrou no encaixe. Por um instante senti que a segurava.
 
 O peso veio depois. Alguma coisa se moveu dentro do meu ombro, e o braço ficou preso numa posição em que eu não conseguia usá-lo nem tirá-lo. O piso cedeu sob meu joelho. Tentei chamar Nera, mas o ar saiu antes do nome.
 
-Ela me agarrou pela gola com a mão boa. Eu escorregava, e a alça levava meu braço junto. Sava passou uma volta da corda do corpo para Eno, apoiou o pé contra a parede e segurou a viga acima de mim.
+Ela me agarrou pela gola com a mão boa. Eu escorregava, e a alça levava meu braço junto. Sava passou uma volta da corda do corpo para Eno, apoiou o pé contra a parede e segurou a alavanca acima de mim.
 
 — Solte a alça!
 
 Eu já não conseguia abrir os dedos. Ela bateu no meu pulso com a base da chave. A mão soltou. Nera me arrastou para trás, e meu braço veio sem que eu sentisse onde terminava.
 
-A viga estava encaixada, mas a corrente continuava presa. Lesto se dobrara na água. Sua mão ainda fechava; era o corpo que girava, levando o freio para a direção errada.
+A alavanca estava encaixada, mas o freio voltara a morder a corrente. Lesto se dobrara na água; o corpo girava, baixando a mão que precisava manter o freio aberto.
 
-Sava esticou a corda. Eno tentou fazer o mesmo.
+Sava esticou a corda. Eno tentou fazer o mesmo. Lesto voltou à posição, e Aevren conseguiu erguer o freio. A corrente avançou um elo.
 
 Do poço, Aevren chamou meu nome.
 
-Uma fenda se abriu sob a prateleira mais baixa. A água atravessou o depósito e carregou a primeira caixa de folhas para a escada. Aevren olhou para ela. Eu estava deitado junto da porta; vi o pescoço de osso se voltar e o braço começar a deixar o de Lesto.
+Uma fenda se abriu sob a prateleira mais baixa. A água atravessou o depósito e carregou uma das caixas de folhas para a escada. Aevren olhou para ela. Eu estava deitado junto da porta; vi o pescoço de osso se voltar e o braço começar a deixar o de Lesto.
 
-— Segure! — Sava gritou.
+— O braço! — Sava gritou.
 
 A mão morta se abriu. O freio desceu pela metade, prendendo outra vez a corrente. Aevren tornou a encostar os dedos no braço, mas Lesto já não estava na posição certa.
 
@@ -398,7 +422,7 @@ Ela mudou o apoio da corda.
 
 — Segure.
 
-Aevren levou a própria mão até a de Lesto e as fechou juntas sobre o freio. Sava manteve o irmão inclinado. Nera empurrou a viga com a ponta da bota.
+Aevren levou a própria mão até a de Lesto e as fechou juntas sobre o freio. Sava manteve o irmão inclinado. Nera firmou a alavanca no encaixe com a ponta da bota. A corrente correu pela roldana.
 
 O contrapeso caiu.
 
@@ -458,11 +482,11 @@ Nera levou o registro antes do meio-dia. Pedi que deixasse a folha da última se
 
 Nera lhe deu os nomes dos trabalhadores que voltariam. Sava estava entre eles.
 
-Três dias depois retiraram o tubo da casa de Tila. Só então recebi a primeira intimação. Ninguém decidira ainda o que eu pagaria, nem de onde sairia o dinheiro. Meu trabalho na tumba havia acabado. Tila guardou as ferramentas da cozinha numa caixa para que eu não tentasse voltar ao serviço antes de conseguir mexer o braço.
+Nera deixou por escrito que eu devia me apresentar assim que pudesse sair. Ninguém decidira ainda o que eu pagaria, nem de onde sairia o dinheiro. Tila perguntou se devia buscar minhas coisas na tumba. Eu lhe disse onde estavam. Ela guardou as ferramentas da cozinha numa caixa; meu braço não me deixava sequer erguer a tampa.
 
-Quando a água voltou à Rua do Sal, vieram também instruções para ferver o que fosse beber. A cisterna fora limpa, mas os canos do bairro ainda devolviam lodo. Vi, da janela, uma mulher cobrindo os baldes que levava. Ela estava furiosa com alguém; não consegui escutar com quem.
+Naquela tarde chegou a primeira carroça de água. Da janela, vi uma mulher cobrindo os baldes que levava. Tinham mandado ferver o que fosse beber. O tubo nos fundos da casa continuava preso à parede, fechado por uma abraçadeira dos homens de Nera. Tila pôs um balde junto dos outros na fila.
 
-Sava veio naquela primeira tarde, enquanto o homem que cuidava do meu ombro ainda preparava a faixa.
+Sava veio antes de escurecer, enquanto o homem que cuidava do meu ombro trocava a faixa.
 
 Ela bateu antes de entrar. Tila estava na cozinha e lhe ofereceu água fervida. Sava bebeu de pé, em dois goles. Devolveu o copo e ficou junto da mesa.
 
@@ -480,7 +504,13 @@ No dia seguinte Tila me acompanhou até o lugar onde a família de Sava esperava
 
 Tila ficou perto da porta. Eu me aproximei do corpo. A pressão da grade continuava marcada no pescoço. A mão que usáramos estava limpa, pousada junto à outra.
 
-Contei onde a marca se fizera. Um homem da família pediu que eu mostrasse o movimento do freio. Usei a mão boa. Ele olhou o pulso de Lesto e chamou uma mulher que eu não conhecia. Os dois começaram a preparar uma tala para protegê-lo quando o cobrissem.
+— O suporte da grade não foi trocado — eu disse. — Eu assinei que tinha sido.
+
+Um homem da família olhou para mim. Eu começara a erguer o braço preso à faixa; baixei-o.
+
+— E a mão? — ele perguntou.
+
+Contei como a usáramos para abrir o freio. Ele pediu que eu mostrasse o movimento. Usei a mão boa. O homem olhou o pulso de Lesto e chamou uma mulher que eu não conhecia. Os dois começaram a preparar uma tala para protegê-lo quando o cobrissem.
 
 Eu ia recuar, mas Sava abriu espaço ao lado do corpo.
 

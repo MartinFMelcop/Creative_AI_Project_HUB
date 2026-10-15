@@ -1447,3 +1447,44 @@ original creative assets. Technical equality and Codex frame review do not prove
 human learning, balance or accessibility. North Star remains foundation-only,
 with no consumer or destination integration. Retain the authoritative prompt
 unchanged: current discovery, artifact review and evidence boundaries suffice.
+
+## ADR-064 — revise the existing rescue rather than align it to a source canon
+
+**Date:** 2026-10-15 (America/Sao_Paulo). **Status:** P04 0.3.0; M4 retained.
+
+Compare native tactics/practice/distribution, musical practice, actual handovers
+and literary source use. P04's newly available Book I passages permit a bounded
+craft comparison; actual complete PT/EN reading exposes weak refusal agency,
+ambiguous moving parts and an unmarked chronology jump. Select a coherent
+rescue/aftermath revision for short-fiction readers rather than another format,
+a lore expansion or an attempt to prove human learning through scripted play.
+
+Read physical PDF pages 4–7, 116–119 and 137–141 with exact source identity.
+Keep the historical undead narrator distinct from this living Baldino/Tila story.
+Borrow no dialogue, cast or broad cosmology; practical expertise and refusal are
+craft questions, not newly ratified canon. Record scope and decisions in the
+project's source comparison, outside unchanged reference snapshots.
+
+Make refusal initiate withdrawal and outside assistance before Sava reopens the
+plan with limited terms. Preserve emergency pressure, her stop/resume instruction,
+Aevren's dangerous paper distraction and bodily consequences. Distinguish the
+wooden rope support from the iron operating lever and show brake recovery before
+its next closure. Keep the aftermath chronological and let Baldino name his false
+repair before describing the body's later injury. Retain the final shared account
+without adding forgiveness or a moral speech. Revise/translate both complete
+manuscripts and produce current 0.3.0 EPUB/PDF profiles; preserve older editions.
+
+Use the existing Markdown/Pandoc/ReportLab stack. Actual raster review found split
+scene endings, so extend the existing final-paragraph grouping to every scene.
+Compare exact content, new identities, language/navigation/fonts and isolated
+rebuilds; reject stale, omitted and wrong-language EPUBs. Inspect actual packaged
+XHTML at two widths and rendered PDF pages. The official local EPUBCheck download
+is blocked by the proxy; retain it in CI for all four delivered EPUBs and report
+its actual remote result separately. Do not weaken the format checks.
+
+Codex reading/translation and technical delivery are not independent literary,
+accessibility, market or canon validation. North Star has no runtime consumer.
+Retain the authoritative prompt unchanged; existing evidence and artifact-review
+guidance served the actual issues. Git transport is unavailable in this session;
+use the authorized authenticated integration, preserve the expected parent/tree,
+and distinguish local and remote commit identities at closeout.

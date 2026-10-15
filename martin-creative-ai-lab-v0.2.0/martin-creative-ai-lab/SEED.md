@@ -1,6 +1,6 @@
 # SEED — Martin Creative AI Lab
 
-**Version:** 0.32.3
+**Version:** 0.32.4
 **Data-base:** 10 de outubro de 2026  
 **Autor e responsável pelo portfólio:** Martin Melcop Neto  
 **Working language:** English for new documentation, plans, code comments, UI, and reports. Preserve original creative titles and historical source languages.
@@ -70,14 +70,14 @@ Se apenas este arquivo estiver disponível, ele é suficiente para iniciar a Fas
 |---|---|
 | Repository | MartinFMelcop/Creative_AI_Project_HUB; actual Git root `/workspace/Creative_AI_Project_HUB`; wrapper retained |
 | Preserved sources | Old ZIP: 175 Rave / 3 WebSocket texts unchanged. New Rave library: 589 readable / 140 excluded from 729; ten main and eight OVA PDFs (2,407 pages) plus derived text; ZIP/policy unavailable |
-| Current milestone | P05 Cinderwatch 0.4.0 bounded native response inspection |
-| Runtime | Selected action plus consecutive announced enemy replies to the next crew decision; same C# rules/save schema 0.1.0 |
-| Evidence | 906 legal branch comparisons; 3,711 domain / 908 headless / 922 rendered checks; actual Linux input and unchanged journals; see `docs/STATE.md` |
-| Limits | Scripted native/interface proof; no independent player learning, physical accessibility, other-OS or commercial validation |
-| Next action | Compare opportunities afresh; observe unassisted tactics and forecast-boundary understanding alongside independent readers and actual handovers |
-| Other products | P01 0.5.0, P03 0.4.0, P04 0.2.0, P06/P10 0.6.0, P08 0.5.0, P11 0.7.0 and P02 0.2.1 retained |
-| Rules / assets | Existing maturity, references and media retained; P05-to-P01 release production now has a real second consumer; North Star has none |
-| Attribution | Clean baseline `7c290ca` matched remote main; previous CI passed all four jobs; Codex native feedback and scripted execution |
+| Current milestone | P04 Darsen 0.3.0 bilingual literary revision |
+| Delivery | Complete current PT/EN EPUB 3 and A5 PDF; original 0.1.0/0.2.0 editions preserved |
+| Evidence | Exact source/EPUB/PDF checks, isolated rebuild, sampled Book I comparison and actual rendered review; see `docs/STATE.md` |
+| Limits | Codex editorial/translation judgment; no independent readers, canon approval, device/assistive or commercial validation |
+| Next action | Compare portfolio opportunities afresh, including independent literary comprehension, unassisted native play/learning and actual handovers |
+| Other products | P01 0.5.0, P03/P05 0.4.0, P06/P10 0.6.0, P08 0.5.0, P11 0.7.0 and P02 0.2.1 retained |
+| Rules / assets | Existing reference bytes, games and media retained; North Star has no consumer |
+| Attribution | Clean baseline `d626a592` matched remote main via GitHub integration; previous CI passed; Codex revised and produced editions |
 
 Registry evidence paths must resolve to existing files inside the lab; working
 paths must be directories and legacy-source IDs must exist. This documentary
@@ -248,7 +248,7 @@ Identificadores persistem mesmo quando nomes mudam. Um projeto arquivado pode co
 | P01 | Artemyra / Eclipse Fair | Typed economy and native C# presentation | Godot .NET board, terminal workbench, replay and comparison | Native 0.4.0 local participants; core/CLI rules 0.1.0 retained, no historical restoration |
 | P02 | AI Evaluation & QA Lab (historical Unity proposal) | Requirements, reproduced bugs, artifact checks | Bounded practice tasks and later independent evaluation | EVAL-001 runner 0.2.0 uses pinned snapshots, starter 0.1.0; M4 harness scope, no model candidate |
 | P03 | Tokyo 80s | Original music, timing and sustained interaction | Midnight Signal and Rain Circuit with track selection/transition | P03 0.4.0 / P08 0.5.0 original-pitch backing; human play/listening pending |
-| P04 | O Lich mais velho da tumba mais antiga / Darsen reading editions | Narrative, translation and reader production | Complete Portuguese story and English EPUB/PDF | New standalone adaptation 0.2.0; Portuguese 0.1.0 preserved, no historical manuscript restoration |
+| P04 | O Lich mais velho da tumba mais antiga / Darsen reading editions | Narrative, translation and reader production | Complete Portuguese story and English EPUB/PDF | Revised standalone adaptation 0.3.0 in both languages; old editions preserved, no historical manuscript restoration |
 | P05 | The Dark Knight / Cinderwatch | Turn-based seed, AGI, rows and states | Native three-encounter tactical rescue campaign | Native 0.3.0 self-contained Linux player; historical RMXP packages absent |
 | P06 | Véu Partido / Veilbreak | Native combat trial; historical 3D RPG seed | Animated two-phase arena with committed contact, source and executed PCK | New 0.6.0 timed counter trial, sweep practice and Linux player; missing Unity starter remains historical |
 | P07 | Visual Generation & Asset Lab | Native visual production | Three paintings plus two real motion atlases consumed by P06 | 0.2.0 production/integration; independent artist approval absent |
@@ -366,19 +366,19 @@ No new composition, engine migration, historical recovery or human learning clai
 
 [Version-aware literary reference library](references/literature/lich/README.md) now preserves ten individually supplied main PDFs and eight OVA PDFs with searchable text and physical page references. Title pages declare v0.2.87 while metadata declares v0.2.88 and noncanonical drafts; the ZIP and policy remain unavailable. The older v0.4.48 descriptions below are earlier inspection reports, not freshly recovered manuscripts, current primary-source confirmation or North Star canon. P04 remains a separate adaptation.
 
-**Current destination:** [A água sob Darsen](projects/lich-cistern/README.md) 0.1.0
-is a complete five-scene Portuguese story with EPUB/PDF. It is newly written from
-this summary: historical manuscripts were unavailable when it was written. Newly recovered main PDFs are references, not retrospective adaptation validation.
-Baldino/Aevren/Darsen remain; new characters/waterworks/rules are scoped adaptation
-choices. Narrative continuity and reader formats were reviewed by Codex, not an
-independent audience or author canon approval.
+**Current destination:** [A água sob Darsen](projects/lich-cistern/README.md)
+**0.3.0** and its complete English translation, *The Water Beneath Darsen*, deliver
+five scenes in EPUB/PDF. Sava's refusal now initiates withdrawal before she reopens
+the plan with conditions; the wooden brace/iron lever, brake sequence and first-day
+aftermath are clearer, and Baldino states the fraudulent repair before the family.
+The original Portuguese 0.1.0 and English 0.2.0 reading artifacts remain unchanged.
 
-Current **0.2.0** also contains the complete English translation, *The Water
-Beneath Darsen*, with distinct EPUB language/identity and a 27-page A5 PDF. Actual
-PT source/metadata/old editions/fonts/styles stay unchanged. A two-profile producer
-and checks support both. [English evidence](evidence/lich-cistern/ENGLISH_RUN.json)
-records whole-pair translator review, artifact integrity and rendered pages;
-structural correspondence is not independent semantic/literary validation.
+A [bounded Book I comparison](projects/lich-cistern/SOURCE_COMPARISON.md) uses actual
+physical PDF pages, not the older summaries below. Living Baldino/Tila, the new
+cast and contact rules remain intentional adaptation choices. This is neither
+restoration nor collection-wide continuity/canon approval. [Revision evidence](evidence/lich-cistern/REVISION_RUN.json)
+separates artifact checks and Codex editorial/translation review from pending
+independent readers, translator, devices, accessibility and commercial evidence.
 
 **Origem histórica:** light novel de dark fantasy em vasto universo; referência de estrutura e ambição associada a Overlord, múltiplas linhas narrativas e passado extenso. Baldino como narrador; Aevren/Garran em rascunhos, Dorian, Elira, Maelis e Orvek entre personagens recorrentes.
 

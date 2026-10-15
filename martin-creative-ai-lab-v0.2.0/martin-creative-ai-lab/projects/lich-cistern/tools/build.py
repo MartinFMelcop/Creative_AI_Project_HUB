@@ -91,12 +91,11 @@ def pdf(path, edition='pt'):
                                      leading=17,spaceBefore=8,leftIndent=0)]
     flow.append(toc)
     sections=chapters(edition)
-    for index,(name,paras) in enumerate(sections):
+    for name,paras in sections:
         flow.extend([PageBreak(),Paragraph(escape(name),heading)])
-        if index==len(sections)-1:
-            flow.extend(Paragraph(escape(text),body) for text in paras[:-3])
-            flow.append(KeepTogether([Paragraph(escape(text),body) for text in paras[-3:]]))
-        else: flow.extend(Paragraph(escape(text),body) for text in paras)
+        # Keep each scene's closing exchange together across a page boundary.
+        flow.extend(Paragraph(escape(text),body) for text in paras[:-3])
+        flow.append(KeepTogether([Paragraph(escape(text),body) for text in paras[-3:]]))
     flow.extend([PageBreak(),Paragraph(spec['font_heading'],front),
                  Paragraph(escape(spec['font_note']),small)])
     license_style=ParagraphStyle('License',parent=small,fontSize=7.5,leading=10)

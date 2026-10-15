@@ -1,0 +1,594 @@
+{
+  "schema_version": 1,
+  "project_id": "P04",
+  "version": "0.3.0",
+  "date": "2026-10-15",
+  "timezone": "America/Sao_Paulo",
+  "baseline": {
+    "commit": "d626a59219a81dc8e16e3b36d7f4ffe2bae6499e",
+    "branch": "work",
+    "working_tree": "clean before edits; no unrelated changes",
+    "remote": "GitHub main matched baseline; checkout had no remote-tracking refs, so not-remotes history alone did not indicate unpublished work",
+    "previous_ci": {
+      "run": 38754586239,
+      "result": "success"
+    },
+    "execution": "Both delivered and isolated rebuilt baseline PT/EN passed exact narrative/navigation/language/font checks",
+    "pt": {
+      "scenes": 5,
+      "paragraphs": 240,
+      "words": 4466,
+      "pdf_pages": 28
+    },
+    "en": {
+      "scenes": 5,
+      "paragraphs": 240,
+      "words": 4736,
+      "pdf_pages": 27
+    },
+    "original_project_hashes": {
+      "README.md": "3c12ed4966f67e87ec5ff6289390ede8bb878d0ea26eadf20b02501f61980e4e",
+      "book.css": "aed5b245fab8a7e1385b89d6269323233311120d144dec061a8b8be112865ca2",
+      "editions.json": "0a61414b459f01833754bb3ec8ab8fc039d26af72d003fccc4011f673fdbf5e8",
+      "metadata.en.yaml": "9a0818e35d4fbdf0a58ad8e1ca87b540b1d9fa5989d84eefbdd8056bb257a2f0",
+      "metadata.yaml": "63b5d46e6434c691db17b57752104cc604515ea131e7af7f969e2a0206c39f82",
+      "provenance.json": "d4ffa2b07ab4f0c6a68314952b01ccb9807e0303296008f53a2762642c709063",
+      "requirements-build.txt": "054e7483ed0899a13425d3ff89d0ae162290c88989825c77d22174ceb36f33f1",
+      "story.en.md": "08fd481d1aed00421b578a714b1cdb4c150e84b54d7bf1b0ad51fbe39641bf47",
+      "story.md": "a61ac74cea523e7882607a0b33586792e9dae8f35752ec21527f1a1097b1ad79",
+      "dist/a-agua-sob-darsen-0.1.0.epub": "f22ccce92b6c96b7622cadebc088e045bd9181a6c87b2983865e075cb20c7460",
+      "dist/a-agua-sob-darsen-0.1.0.pdf": "456b0dc894c76abd5e556ea5e52e00cb4a09e477a3d480d94fab17c84fa0e588",
+      "dist/the-water-beneath-darsen-0.2.0.epub": "6368915c30d4b75aa71a668e2023fd590bf4db4f2ce47ebf938246fed2e32a1c",
+      "dist/the-water-beneath-darsen-0.2.0.pdf": "99b2d5b1eb2e0ed8cb4cd18010d34e368cf1f89f57b53a3f7b18ed4c488950b6",
+      "fonts/DejaVuSerif-Bold.ttf": "aac3f559445d23f0f567a243f91f3f6ad6cb4b5cafa1521a3479fffe0637f0bd",
+      "fonts/DejaVuSerif.ttf": "8cb29f7db250ebb2551a6ce2c1e0bfd5a0eb520e9e233370db0493e82e1f36f7",
+      "fonts/LICENSE.txt": "219373cc2f7aaeadca19772736a40700a5be8cfdadc7b7e2e04931d34d1c81b5",
+      "tools/build.py": "28e2dfba86e63039e1c10ab83be37efc9c13dc1fc6cdf5f2f35e235eebc77158",
+      "tools/check_editions.py": "b692fa2b1333ad5e1f2dcfb21ee5bf05a1522e60b6b32ea716c6fff03eab54dc"
+    }
+  },
+  "selection": {
+    "audience": "Readers of a complete bilingual short dark-fantasy story",
+    "goal": "Follow the physical rescue, see refusal change conduct, understand Baldino’s responsibility without an unmarked time jump",
+    "alternatives": "P06 existing practice needs independent human transfer evidence; P05 just delivered bounded forecasts; P01 native delivery exists; P03 physical listening and P11 actual handovers need external use. Source-conformity rewrite/lore expansion would weaken this adaptation’s focused conflict."
+  },
+  "source_comparison": {
+    "scope": "Selected Book I passages only; exact PDF/text identity and physical pages in projects/lich-cistern/SOURCE_COMPARISON.md",
+    "original_pdf_sha256": "5a5e9ca5c259fed8a2c8431d73ee8224e87c52aa99ac8a26ff82a8d78f40afb1",
+    "physical_page_ranges": [
+      [
+        4,
+        7
+      ],
+      [
+        116,
+        119
+      ],
+      [
+        137,
+        141
+      ]
+    ],
+    "verification": {
+      "source_pdf": "references/literature/lich/snapshots/main-pdfs-2ccc075083f1/source/01_O_Mundo_Depois_da_Tumba.pdf",
+      "source_pdf_sha256": "5a5e9ca5c259fed8a2c8431d73ee8224e87c52aa99ac8a26ff82a8d78f40afb1",
+      "text_sha256": "99dffb3dfce7072c8c1f7faf2a7becbaba4101908836b8151591f9c187d51784",
+      "samples": [
+        {
+          "physical_pages": [
+            4,
+            7
+          ],
+          "tool": "pdftotext -f FIRST -l LAST -enc UTF-8 -eol unix",
+          "exit": 0,
+          "matches_preserved_text_exactly": true,
+          "extracted_sample_sha256": "11df61bbd7006a46505b846dac1f2373c4a1fadf845ba78f32603dec07aa6252"
+        },
+        {
+          "physical_pages": [
+            116,
+            119
+          ],
+          "tool": "pdftotext -f FIRST -l LAST -enc UTF-8 -eol unix",
+          "exit": 0,
+          "matches_preserved_text_exactly": true,
+          "extracted_sample_sha256": "9c1ffdfb0dd04739085c3d78e8a38976f23e0e3a41ee33573869db8c10365a70"
+        },
+        {
+          "physical_pages": [
+            137,
+            141
+          ],
+          "tool": "pdftotext -f FIRST -l LAST -enc UTF-8 -eol unix",
+          "exit": 0,
+          "matches_preserved_text_exactly": true,
+          "extracted_sample_sha256": "7726abd9a768dc86c4c1f37c414fd44cc8451b1dd7afbd71fa0d5b195aab4e09"
+        }
+      ],
+      "recording_scope": "Hashes, physical pages and executed outcomes only. Extracted prose and machine-specific scratch paths stay out of the published record."
+    },
+    "boundaries": "Title page v0.2.87, metadata v0.2.88/noncanonical; source differences remain explicit adaptation choices. No current canon/collection-wide review."
+  },
+  "environment": {
+    "python": "3.12.14",
+    "pandoc": "3.1.11.1",
+    "reportlab": "4.4.9",
+    "pdftotext": "25.03.0",
+    "pdfinfo": "26.05.0",
+    "java": "21.0.12.1",
+    "node": "24.19.0",
+    "chromium": "154.0.8037.57",
+    "network": "Enforced restricted proxy; Git fetch and EPUBCheck curl each failed once connecting to proxy:8080. No direct-network bypass or repeated Git retry.",
+    "platform": "Linux x86_64 managed cloud container"
+  },
+  "current": {
+    "pt": {
+      "scenes": 5,
+      "paragraphs": 255,
+      "words": 4735,
+      "pdf_pages": 30
+    },
+    "en": {
+      "scenes": 5,
+      "paragraphs": 255,
+      "words": 5048,
+      "pdf_pages": 29
+    },
+    "artifact_path_scope": "Hashes relative to projects/lich-cistern",
+    "artifact_sha256": {
+      "story.md": "5cafc06deda0086e370bc862e27bec7890d75daa1206959da64756bed580acc8",
+      "story.en.md": "f21966ae873293c7f88b1e82aa997db2559aff776539ba5d7dc2351b4111055e",
+      "metadata.yaml": "3ea73bdc80b87ce83adb0e79f1234b529cfb941a2fd20ae229522e49c4ac8463",
+      "metadata.en.yaml": "be1dfb6318d1d082caf74d075fd04a07ff9b1cc08b14196fc807e57df390cec3",
+      "editions.json": "a0962d917d55df94fd4699bf79540dfa934c23e873c203a120991bed2f585285",
+      "SOURCE_COMPARISON.md": "150d1c28abd6d57baea8928a1800586b543de72902ddc9b9907919bcccae69e1",
+      "tools/build.py": "2b2e98947504a2e59a16b7c693417ffb1963d70517d002456f60aad2f8fd3faa",
+      "tools/check_editions.py": "b692fa2b1333ad5e1f2dcfb21ee5bf05a1522e60b6b32ea716c6fff03eab54dc",
+      "dist/a-agua-sob-darsen-0.3.0.epub": "4e41a6f9d908266b772bb37045e3a5ba0264f814a759de1a276a44da8561665a",
+      "dist/a-agua-sob-darsen-0.3.0.pdf": "ec3794b2f1634da2692e81e0ee9bfc204a1fa643e965401a62108e2d649a50af",
+      "dist/the-water-beneath-darsen-0.3.0.epub": "ad3672ab1bfe7097b7ddfe9f13e4b540fa31c02e9ca1db50406ea4d8bbc3fa95",
+      "dist/the-water-beneath-darsen-0.3.0.pdf": "33b28444970fa156ff515e5392a894354b6f4b234dc2b012e8a61a8887f13954"
+    }
+  },
+  "executed": [
+    {
+      "command": "python3 projects/lich-cistern/tools/build.py --edition all",
+      "result": "exit 0; four new current artifacts produced"
+    },
+    {
+      "command": "python3 projects/lich-cistern/tools/check_editions.py --edition all",
+      "result": "exit 0; every narrative heading/paragraph, EPUB navigation/language/metadata and PDF text/font notices/embedding checked"
+    },
+    {
+      "command": "python3 projects/lich-cistern/tools/build.py --edition all --out <scratch>/rebuild; check_editions.py --edition all --dist <scratch>/rebuild",
+      "result": "both exit 0; isolated artifacts retain complete current text and format contract; timestamps/IDs are not byte-reproducibility proof"
+    }
+  ],
+  "integrity_and_failure_probes": {
+    "retained_files": [
+      "book.css",
+      "requirements-build.txt",
+      "dist/a-agua-sob-darsen-0.1.0.epub",
+      "dist/a-agua-sob-darsen-0.1.0.pdf",
+      "dist/the-water-beneath-darsen-0.2.0.epub",
+      "dist/the-water-beneath-darsen-0.2.0.pdf",
+      "fonts/DejaVuSerif-Bold.ttf",
+      "fonts/DejaVuSerif.ttf",
+      "fonts/LICENSE.txt",
+      "tools/check_editions.py"
+    ],
+    "retained_count": 10,
+    "ids": {
+      "pt-BR": "urn:uuid:291fc1bd-fc57-51cf-b422-8946071e3bbd",
+      "en-US": "urn:uuid:f7442155-1082-503f-a8e4-e129be052738"
+    },
+    "paragraphs_per_language": 255,
+    "chapter_count": 5,
+    "name_occurrences": {
+      "Baldino": [
+        5,
+        5
+      ],
+      "Aevren": [
+        46,
+        46
+      ],
+      "Sava": [
+        49,
+        49
+      ],
+      "Nera": [
+        40,
+        40
+      ],
+      "Lesto": [
+        24,
+        24
+      ],
+      "Eno": [
+        16,
+        16
+      ],
+      "Tila": [
+        10,
+        10
+      ],
+      "Darsen": [
+        1,
+        1
+      ]
+    },
+    "negative_probes": [
+      {
+        "case": "stale-edition",
+        "exit": 1,
+        "detected": "EPUB text/order differs",
+        "stderr_tail": "AssertionError: EPUB text/order differs from the current manuscript"
+      },
+      {
+        "case": "omitted-paragraph",
+        "exit": 1,
+        "detected": "EPUB text/order differs",
+        "stderr_tail": "AssertionError: EPUB text/order differs from the current manuscript"
+      },
+      {
+        "case": "wrong-language",
+        "exit": 1,
+        "detected": "language mismatch assertion",
+        "stderr_tail": "AssertionError"
+      }
+    ]
+  },
+  "pdf_closing_paragraph_pages": {
+    "baseline": {
+      "pt": [
+        6,
+        11,
+        16,
+        null,
+        26
+      ],
+      "en": [
+        6,
+        11,
+        16,
+        21,
+        25
+      ]
+    },
+    "current": {
+      "pt": [
+        6,
+        11,
+        18,
+        24,
+        28
+      ],
+      "en": [
+        6,
+        11,
+        17,
+        23,
+        27
+      ]
+    }
+  },
+  "rendered_review": {
+    "pdf": "All 59 final PDF pages rasterized; contact-sheet composition and selected actual mechanism/refusal/final pages inspected by Codex. Both editions keep each scene’s last three paragraphs together. Sparse scene-ending pages remain deliberate chapter breaks, not missing text.",
+    "epub": {
+      "chromium": "154.0.8037.57",
+      "checks": [
+        {
+          "lang": "pt",
+          "width": 360,
+          "chapter": 1,
+          "scroll": 360,
+          "paragraphs": 35,
+          "height": 3063,
+          "language": "pt-BR"
+        },
+        {
+          "lang": "pt",
+          "width": 360,
+          "chapter": 2,
+          "scroll": 360,
+          "paragraphs": 56,
+          "height": 3657,
+          "language": "pt-BR"
+        },
+        {
+          "lang": "pt",
+          "width": 360,
+          "chapter": 3,
+          "scroll": 360,
+          "paragraphs": 76,
+          "height": 4961,
+          "language": "pt-BR"
+        },
+        {
+          "lang": "pt",
+          "width": 360,
+          "chapter": 4,
+          "scroll": 360,
+          "paragraphs": 51,
+          "height": 4178,
+          "language": "pt-BR"
+        },
+        {
+          "lang": "pt",
+          "width": 360,
+          "chapter": 5,
+          "scroll": 360,
+          "paragraphs": 37,
+          "height": 2893,
+          "language": "pt-BR"
+        },
+        {
+          "lang": "pt",
+          "width": 900,
+          "chapter": 1,
+          "scroll": 900,
+          "paragraphs": 35,
+          "height": 1815,
+          "language": "pt-BR"
+        },
+        {
+          "lang": "pt",
+          "width": 900,
+          "chapter": 2,
+          "scroll": 900,
+          "paragraphs": 56,
+          "height": 2409,
+          "language": "pt-BR"
+        },
+        {
+          "lang": "pt",
+          "width": 900,
+          "chapter": 3,
+          "scroll": 900,
+          "paragraphs": 76,
+          "height": 3233,
+          "language": "pt-BR"
+        },
+        {
+          "lang": "pt",
+          "width": 900,
+          "chapter": 4,
+          "scroll": 900,
+          "paragraphs": 51,
+          "height": 2570,
+          "language": "pt-BR"
+        },
+        {
+          "lang": "pt",
+          "width": 900,
+          "chapter": 5,
+          "scroll": 900,
+          "paragraphs": 37,
+          "height": 1789,
+          "language": "pt-BR"
+        },
+        {
+          "lang": "en",
+          "width": 360,
+          "chapter": 1,
+          "scroll": 360,
+          "paragraphs": 35,
+          "height": 2967,
+          "language": "en-US"
+        },
+        {
+          "lang": "en",
+          "width": 360,
+          "chapter": 2,
+          "scroll": 360,
+          "paragraphs": 56,
+          "height": 3561,
+          "language": "en-US"
+        },
+        {
+          "lang": "en",
+          "width": 360,
+          "chapter": 3,
+          "scroll": 360,
+          "paragraphs": 76,
+          "height": 4961,
+          "language": "en-US"
+        },
+        {
+          "lang": "en",
+          "width": 360,
+          "chapter": 4,
+          "scroll": 360,
+          "paragraphs": 51,
+          "height": 4154,
+          "language": "en-US"
+        },
+        {
+          "lang": "en",
+          "width": 360,
+          "chapter": 5,
+          "scroll": 360,
+          "paragraphs": 37,
+          "height": 2821,
+          "language": "en-US"
+        },
+        {
+          "lang": "en",
+          "width": 900,
+          "chapter": 1,
+          "scroll": 900,
+          "paragraphs": 35,
+          "height": 1743,
+          "language": "en-US"
+        },
+        {
+          "lang": "en",
+          "width": 900,
+          "chapter": 2,
+          "scroll": 900,
+          "paragraphs": 56,
+          "height": 2433,
+          "language": "en-US"
+        },
+        {
+          "lang": "en",
+          "width": 900,
+          "chapter": 3,
+          "scroll": 900,
+          "paragraphs": 76,
+          "height": 3281,
+          "language": "en-US"
+        },
+        {
+          "lang": "en",
+          "width": 900,
+          "chapter": 4,
+          "scroll": 900,
+          "paragraphs": 51,
+          "height": 2522,
+          "language": "en-US"
+        },
+        {
+          "lang": "en",
+          "width": 900,
+          "chapter": 5,
+          "scroll": 900,
+          "paragraphs": 37,
+          "height": 1765,
+          "language": "en-US"
+        }
+      ],
+      "external_requests": [],
+      "scope": "Packaged EPUB XHTML/CSS via loopback; not an ebook-device or assistive-technology workflow"
+    },
+    "final_epub_document_style_hashes": [
+      {
+        "edition": "pt",
+        "entry": "EPUB/nav.xhtml",
+        "sha256": "befe6b3b63fb6e090f7a3089a0938b8ce2940fd59a78ad5430de16f9f3f16b35"
+      },
+      {
+        "edition": "pt",
+        "entry": "EPUB/text/title_page.xhtml",
+        "sha256": "8ff83e20a4b3aa23116627bc6d9dc6db4c7e71e44c768f8d614e1e182cab7d69"
+      },
+      {
+        "edition": "pt",
+        "entry": "EPUB/styles/stylesheet1.css",
+        "sha256": "aed5b245fab8a7e1385b89d6269323233311120d144dec061a8b8be112865ca2"
+      },
+      {
+        "edition": "pt",
+        "entry": "EPUB/text/ch001.xhtml",
+        "sha256": "00a5b9bdf965cee0892f669566aac8095395218d68f560e57009ede06028a28b"
+      },
+      {
+        "edition": "pt",
+        "entry": "EPUB/text/ch002.xhtml",
+        "sha256": "63ba5d7795d20b5e506119058858799c41413c8eb535d220debd6141f5dc76f2"
+      },
+      {
+        "edition": "pt",
+        "entry": "EPUB/text/ch003.xhtml",
+        "sha256": "6dbef2e2c5463a43ed2fb4ea6d1a75666c6911854e2370173c3ab0b057efb9e1"
+      },
+      {
+        "edition": "pt",
+        "entry": "EPUB/text/ch004.xhtml",
+        "sha256": "d441e7c4b1e2da133626bc6056b0c14def3a077a0c8e2d47a1435372adf634bc"
+      },
+      {
+        "edition": "pt",
+        "entry": "EPUB/text/ch005.xhtml",
+        "sha256": "ddf5d6733b487b19a193be8ac07c794bf1dd165e22cde8542d47407a871364d5"
+      },
+      {
+        "edition": "en",
+        "entry": "EPUB/nav.xhtml",
+        "sha256": "341bcbe60e2869ee6e3a186a4edc3cd7b20ffcf390e43931171c4cb3478043eb"
+      },
+      {
+        "edition": "en",
+        "entry": "EPUB/text/title_page.xhtml",
+        "sha256": "040b6867da4d378bd508b27a912d7447a33a913ccff89aae366698ee430d8990"
+      },
+      {
+        "edition": "en",
+        "entry": "EPUB/styles/stylesheet1.css",
+        "sha256": "aed5b245fab8a7e1385b89d6269323233311120d144dec061a8b8be112865ca2"
+      },
+      {
+        "edition": "en",
+        "entry": "EPUB/text/ch001.xhtml",
+        "sha256": "ea40c83d0fbaa45eff9e9b9553b50c8a76f675bf4b2443a914787e90cb40b8e6"
+      },
+      {
+        "edition": "en",
+        "entry": "EPUB/text/ch002.xhtml",
+        "sha256": "a33ca7c2888a17091c9c969a738f1e2f7fd5910d6e3e9747a2e8f4c956637ebd"
+      },
+      {
+        "edition": "en",
+        "entry": "EPUB/text/ch003.xhtml",
+        "sha256": "9e564f8528c9fede4e2acb471b92c13650e67b19f8baff3ada79b947082f1fe4"
+      },
+      {
+        "edition": "en",
+        "entry": "EPUB/text/ch004.xhtml",
+        "sha256": "7c8d4e70b14b323be9cb02d56559dfce8d163adc11a439044471cee725f2953b"
+      },
+      {
+        "edition": "en",
+        "entry": "EPUB/text/ch005.xhtml",
+        "sha256": "512d72e680368f5584bd900fba8c03692532599e643f3e1a5483e51c15428c67"
+      }
+    ],
+    "socket_diagnosis": "Default sandbox loopback returned EPERM for revised inspector and baseline control; supported additional socket/network permission allowed the unchanged inspector to execute. No product code or assertion was weakened."
+  },
+  "official_epubcheck": {
+    "local": "not run for current editions",
+    "reason": "Pinned 5.4.0 archive download failed with curl exit 7 connecting to environment proxy; no cached JAR found",
+    "ci": "Workflow preserves old EPUB checks and adds both current EPUBs, with the existing pinned tool digest. Consult published commit’s run for actual remote result."
+  },
+  "creative_assessment": {
+    "attribution": "Codex implementer/editor/translator review and second Codex passes; not independent human validation",
+    "before": "Refusal had no operational effect, moving parts shared a noun, ending silently returned from day three to first afternoon, family account could omit the fraudulent repair.",
+    "after": "Withdrawal actually begins, Sava reopens under terms, distinct brace/lever and partial brake recovery clarify causes, aftermath is chronological and Baldino names the false repair. Existing stop/resume, bodily consequences, paper distraction and unfinished final testimony remain.",
+    "refinements": "Paired review corrected the repeated brake closure and first-box reference; raster review extended final-paragraph grouping to every scene.",
+    "remaining_questions": "Reader comprehension of spatial action and constrained choice; translated voice/fidelity, emotional force and pacing need independent readers. Permission remains pressured; invitation is not forgiveness."
+  },
+  "north_star": "Foundation only, zero consumers; no adaptation/integration promotion or shared universe.",
+  "prompt": {
+    "path": "docs/prompts/CONTINUOUS_DEVELOPMENT.md",
+    "changed": false,
+    "sha256": "cfe891f209ec94b63cfb674adb5300e6d253acf61fcb2576352235e72e45a1f0",
+    "reason": "Existing real-state/source/artifact/evidence guidance exposed and handled the actual issues; no general rule change justified."
+  },
+  "publication": {
+    "method": "Authorized authenticated GitHub Git-data integration with expected main head, unchanged ancestry and exact tree verification; actual local/remote identities and CI are reported at closeout",
+    "git_transport": "git fetch origin main attempted once, failed exit 128 connecting to proxy:8080; no merge/push/ls-remote commands claimed",
+    "authority_confirmation": "Martin explicitly confirmed authority over P04 texts and authorized the two manuscripts and four current EPUB/PDF editions on main after automatic review requested payload-specific confirmation."
+  },
+  "limits": [
+    "No independent human reader/translator or author canon approval",
+    "No hardware ebook-reader or assistive-technology validation; PDFs remain untagged",
+    "No exclusive-rights, demand, revenue or commercial-readiness evidence"
+  ],
+  "repository_checks": {
+    "validate_repo": {
+      "projects": 11,
+      "transfers": 15,
+      "assets": 9,
+      "legacy_sources": 2,
+      "local_links": 476,
+      "result": "pass"
+    },
+    "validator_regressions": 13,
+    "reference_regressions": 30,
+    "manifest_regressions": 11,
+    "reference_integrity": "5 records, 607 preserved sources, 18 derived PDF texts, 140 exclusions, 14 foundation capabilities; pass",
+    "workflow": "YAML and 25 bash run blocks parse",
+    "diff_check": "pass"
+  }
+}
