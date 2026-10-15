@@ -1291,3 +1291,30 @@ inside the retained wrapper. Keep registry paths lab-bounded and old fixtures
 standalone. Manual anchor review and local GFM desktop/mobile rendering complement
 file checks; they are not a fresh game/service run or actual GitHub rendering.
 Revisit presentation after independent visitor feedback or real product changes.
+
+## ADR-059 — print complete immutable handovers independently of reader pages
+
+**Date:** 2026-10-15 UTC. **Status:** P11 0.7.0; technical M4 retained.
+
+Compared P01 standalone distribution, P05/P06 encounter depth, P04 source-based
+editorial work and P11 handover reliability. Choose the observable P11 omission:
+the portable record contains all data but previous printing includes only visible
+pages. New recipients should be able to review/share a complete snapshot without
+running a workspace or manually printing every search/revision page.
+
+Use on-demand DOM generation from the validated immutable source, a complete
+screen preview and native beforeprint handling. Print all current work with
+source decisions, entries in saved order and revisions grouped by action; ignore
+reading filters and disclose that scope. Retain all reading state and inert text.
+A filtered report risks concealing relevant earlier decisions; a separate PDF
+library/service would add dependencies and fragment the offline workflow.
+
+Keep existing JSON/storage/backup schemas, dependencies and P02 contract. Old HTML
+is immutable; reconvert its original JSON to acquire the new renderer. Browser
+PDF is not PDF/UA/PDF-A certification. Review full-capacity output and independent
+handover/assistive use before claiming those qualities. North Star has no consumer.
+
+Initialize docs/prompts/CONTINUOUS_DEVELOPMENT.md: no authoritative adaptive file
+existed. Consolidate the supplied request into a complete reusable prompt while
+retaining stable rules, commit/publication and recursive prompt delivery. Record
+actual transport fallback rather than adding environment-specific workaround rules.

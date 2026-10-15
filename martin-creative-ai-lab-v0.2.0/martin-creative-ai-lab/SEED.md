@@ -70,14 +70,14 @@ Se apenas este arquivo estiver disponível, ele é suficiente para iniciar a Fas
 |---|---|
 | Repository | MartinFMelcop/Creative_AI_Project_HUB; actual Git root `/workspace/Creative_AI_Project_HUB`; wrapper retained |
 | Preserved sources | Old ZIP: 175 Rave / 3 WebSocket texts unchanged. New Rave library: 589 readable / 140 excluded from 729; ten main and eight OVA PDFs (2,407 pages) plus derived text; ZIP/policy unavailable |
-| Current milestone | Portfolio-first HUB README, focused lab guide and current project index with runnable/readable entry points |
-| Runtime | Markdown navigation; existing Python stdlib validator now covers root HUB links and lab backlinks; product runtimes unchanged |
-| Evidence | Existing project guides/releases/evidence inspected; local GFM desktop/mobile preview, link/anchor review and shared repository checks; see `docs/STATE.md` |
-| Limits | Presentation update does not revalidate product behavior, human reception or commercial readiness; original source/authority limits remain |
-| Next action | Use the new entry routes for independent reader/player/reviewer feedback; compare product opportunities before selecting further development |
-| Other products | P01/P03 0.4.0, P04 0.2.0, P05 0.3.0, P06/P08/P10 0.5.0, P11 0.6.0 and P02 0.2.1 retained |
-| Rules / assets | Existing maturity, runtime/save schemas, validated transfers, media and releases retained; source preservation is not system integration |
-| Attribution | Clean `1e920e5` matched remote main; user requested HUB README organization, hyperlinks and useful portfolio information; Codex documentary/rendering review |
+| Current milestone | P11 0.7.0 complete snapshot print/PDF reports; all entries, actions and revisions independent of reader pagination |
+| Runtime | Existing Node 24/SQLite/Socket.IO workspace and self-contained HTML; no dependency or storage-schema change |
+| Evidence | Chromium offline interaction/PDF and complete extracted-text counts; see `docs/STATE.md` and `evidence/realtime-chat/PRINT_RUN.json` |
+| Limits | Implementing-agent review; no independent team, other-browser, physical printing, PDF/UA or full-capacity PDF validation |
+| Next action | Compare independent product opportunities afresh; seek actual handover, native player and literary feedback |
+| Other products | P01/P03 0.4.0, P04 0.2.0, P05 0.3.0, P06/P08/P10 0.5.0 and P02 0.2.1 retained |
+| Rules / assets | Existing maturity, schemas, transfers, sources/media/releases retained; North Star has no runtime consumer |
+| Attribution | Clean baseline `0392051`; Codex implementation and scripted/visual review, not human validation |
 
 Registry evidence paths must resolve to existing files inside the lab; working
 paths must be directories and legacy-source IDs must exist. This documentary
@@ -255,7 +255,7 @@ Identificadores persistem mesmo quando nomes mudam. Um projeto arquivado pode co
 | P08 | Audio, Poetry & Music Lab | Original musical production and integration | Two P03 stages and P06 native soundscape | Real masters/exports/scores; no album or human listening approval |
 | P09 | AI Delivery & Operations Cases | Carreira real e avaliação simulada | Case de entrega, análise de workflow e rubricas | Base profissional lida; cases anteriores pendentes |
 | P10 | Adventures Unleashed / Rave Master | Narrative, NPCs and recovered systems | Two-day browser rescue/relief campaign with local resume and portable saves | Campaign 0.4.0; Python adventure 0.2.0 / standalone 0.1.3; bounded evidence in registry |
-| P11 | Real-time Integration Lab / Project Rooms | Node/Socket.IO/SQLite | Trusted local project conversations, decisions, portable records and recovery | Workspace 0.6.0 with offline reading copies, actions/search/recovery; original protocol and P02 snapshot preserved; no public service |
+| P11 | Real-time Integration Lab / Project Rooms | Node/Socket.IO/SQLite | Trusted local project conversations, decisions, portable records and recovery | Workspace 0.7.0 with complete print reports and offline reading copies, actions/search/recovery; original protocol and P02 snapshot preserved; no public service |
 
 P02 agrupa evaluation e QA porque podem compartilhar a mesma aplicação pequena. Não criar dois projetos Unity idênticos apenas para apresentar títulos diferentes. P01 pode abrigar produção, economia e analytics como cases distintos de uma fonte comum.
 
@@ -571,7 +571,7 @@ private demo is not redeployed in this GitHub source session.
 
 ### P11 — Real-time Integration Lab / Project Rooms
 
-The historical Socket.IO snapshot only logs messages. Current **0.6.0**
+The historical Socket.IO snapshot only logs messages. Current **0.7.0**
 [Project Rooms](projects/realtime-integration-lab/README.md) connects notes and
 decisions to assigned actions: To do, In progress, Blocked and Done. Immutable
 source decisions and action histories record who changed each revision; completion
@@ -613,6 +613,14 @@ inert text rendering preserve the existing storage/recovery contracts. Local
 managed Chromium blocks file URLs: identical bytes were tested through loopback,
 then offline, without overriding policy. [Portable execution](evidence/realtime-chat/PORTABLE_RUN.json)
 records the comparative result and limits; actual team use remains unverified.
+
+Version 0.7.0 adds complete snapshot print reports independent of the reader's
+filters/pages. Current work, source decisions, all entries and all revisions
+remain explicit and safely rendered. On-demand preview/browser Print preserve
+reading state; existing HTML needs reconversion to acquire the new renderer.
+[Print evidence](evidence/realtime-chat/PRINT_RUN.json) records PDF completeness,
+mobile review and the managed browser transport limit. M4 and North Star's
+foundation stage are unchanged; no independent team or PDF accessibility claim.
 
 ## 6. Arquitetura do laboratório
 

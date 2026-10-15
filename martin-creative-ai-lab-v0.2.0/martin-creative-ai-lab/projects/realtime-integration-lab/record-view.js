@@ -16,6 +16,7 @@
   // the recorded revision numbers, not the machine's wall clock.
   records.sort((a,b)=>b.time.localeCompare(a.time)||a.kind.localeCompare(b.kind)||b.id-a.id);
   let workPage=0,resultPage=0,matches=records,openedFrom=null;
+  document.querySelector('footer').dataset.sourceHash=document.querySelector('footer code').textContent;
   document.title=`${record.project.name} · Reading copy`;
   byId('project-name').textContent=record.project.name;
   byId('snapshot-time').textContent=`Snapshot exported ${date(record.exported_at)}. This file does not receive later changes.`;
@@ -128,6 +129,61 @@
     }
     draw();byId('detail-heading').scrollIntoView({block:'start'});
   }
+  // Build only on demand: normal browsing remains bounded to twenty cards.
+  // The immutable source, not the active filters or visible pages, is authoritative.
+  let reportReady=false;
+  function prepareReport() {
+    if(reportReady)return;
+    const report=document.createDocumentFragment();
+    const heading=node('h2','Complete snapshot report');heading.id='report-heading';heading.tabIndex=-1;
+    report.append(heading,node('p','All saved entries, current actions and every action revision are included. Reading filters and page selections do not restrict this report.','scope'));
+    report.append(node('p',byId('summary').textContent,'meta'));
+    const work=node('section');work.append(node('h2','Current work at export'));
+    if(!Object.hasOwn(record,'actions'))work.append(node('p','Action data is unavailable in this earlier export. This does not establish whether actions existed.'));
+    else if(!actions.length)work.append(node('p','No actions in this export.'));
+    for(const action of actions) {
+      const card=actionCard(action);card.dataset.reportAction=action.id;
+      card.append(node('p',`Action ID: ${action.id} · Created by ${action.creator_name} · ${date(action.created_at)}`,'meta'));
+      card.append(node('p',action.source_id===null?'No linked decision.':`Source decision #${action.source_id}: ${action.decision_body}`,'body'));
+      work.append(card);
+    }
+    report.append(work);
+    const discussion=node('section'),entries=node('ol');discussion.append(node('h2','Complete discussion and decisions'),node('p','Original saved entry order. Entry numbers identify linked decision sources.','meta'));
+    if(!record.entries.length)discussion.append(node('p','No discussion or decisions in this export.'));
+    for(const entry of record.entries) {
+      const card=entryCard(entry);card.dataset.reportEntry=entry.id;
+      card.prepend(node('h3',`Entry #${entry.id}`));entries.append(card);
+    }
+    discussion.append(entries);report.append(discussion);
+    const history=node('section');history.append(node('h2','Complete action revision history'),node('p','Grouped by action; revisions retain their recorded sequence. Historical ownership and status may differ from current work at export.','meta'));
+    if(!Object.hasOwn(record,'actions'))history.append(node('p','Action history is unavailable in this earlier export.'));
+    else if(!actions.length)history.append(node('p','No action revisions in this export.'));
+    for(const action of actions) {
+      const group=node('section');group.append(node('h3',action.title),node('p',`Action ID: ${action.id} · ${action.history.length} revisions`,'meta'));
+      const revisions=node('ol');
+      for(const event of action.history) {
+        const item=node('li');item.dataset.reportEvent=event.id;
+        item.append(node('h4',`Revision ${event.revision} · ${event.revision===action.revision?'Current at export':'Historical'}`),
+          node('p',`Recorded by ${event.author} · ${date(event.created_at)}`,'meta'),
+          node('p',event.action.title,'body'),badge(event.action.status),
+          node('p',`Owner label: ${owner(event.action)}`,'meta'),node('p',event.action.note||'No update note recorded.','body'));
+        revisions.append(item);
+      }
+      group.append(revisions);history.append(group);
+    }
+    report.append(history);byId('complete-report').replaceChildren(report);reportReady=true;
+  }
+  byId('prepare-report').onclick=()=>{
+    prepareReport();document.body.classList.add('report-mode');byId('report-controls').hidden=false;byId('reader').hidden=true;
+    byId('report-heading').focus();byId('report-heading').scrollIntoView({block:'start'});
+  };
+  byId('close-report').onclick=()=>{
+    document.body.classList.remove('report-mode');byId('report-controls').hidden=true;byId('reader').hidden=false;byId('prepare-report').focus();
+  };
+  byId('print-report').onclick=()=>window.print();
+  // Ctrl/Cmd+P and the browser menu receive the same complete report. Cancelling
+  // the dialog leaves the reading state untouched, including its selected pages.
+  window.addEventListener('beforeprint',prepareReport);
   byId('back').onclick=()=>{byId('detail').hidden=true;if(openedFrom?.isConnected)openedFrom.focus();else{byId('record-heading').tabIndex=-1;byId('record-heading').focus();}};
   for(const id of ['work-status','work-owner'])byId(id).onchange=()=>{workPage=0;drawWork();};
   byId('work-prev').onclick=()=>{workPage--;drawWork();};byId('work-next').onclick=()=>{workPage++;drawWork();};
