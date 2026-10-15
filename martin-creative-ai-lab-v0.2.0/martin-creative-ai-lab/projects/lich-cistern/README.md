@@ -33,8 +33,11 @@ and text identity do not certify semantic fidelity or literary quality.
 Download the binary file from GitHub before opening it; the blob page is not an
 ebook reader. Neither edition needs this repository, Python, an account or an
 online service for reading. This is a standalone seed adaptation, **not B01
-restoration or ratified canon**. No historical manuscript appears in the current
-checkout/archive; its absence prevents comparison or revision of that manuscript.
+restoration or ratified canon**. Historical manuscripts were unavailable when
+this adaptation was written. Ten original main-book PDFs are now available in the
+[separate reference library](../../references/literature/lich/README.md), with
+searchable text and conflicting version labels. Their recovery does not establish
+a retrospective source comparison, restore B01 or approve this story.
 
 ## Creative scope and provenance
 

@@ -64,3 +64,17 @@ v0.4.48 records remain historical and are not superseded by a filename hint.
 [Literary recovery](../references/literature/lich/README.md) gives the exact boundary;
 P04's separate adaptation/source/editions remain intact. No full original ZIP
 host or fictitious download link was created. No historical script was executed.
+
+## Individual main literary PDFs — 2026-10-15 UTC
+
+Martin supplied ten separate PDF attachments after the ZIP transfer failure.
+[Library and per-book links](../references/literature/lich/README.md) preserve
+all ten original PDFs, 1,646 physical pages and embedded covers, with per-file
+hashes and ten Poppler text derivatives. These are actual readable sources,
+distinct from the unavailable ZIP and the older v0.4.48 inspection report.
+Title pages say v0.2.87; Producer/Subject fields say v0.2.88/noncanonical drafts.
+No package-version reconciliation, ZIP-membership proof or canon approval.
+`_project/AUTHORITY_POLICY.md`, editable manuscripts and OVAs were not supplied.
+[Evidence](../evidence/reference-integration/LICH_MAIN_PDFS.json) distinguishes
+full extraction/byte preservation from limited opening/ending/visual inspection,
+which is not a complete literary audit or independent rights validation.

@@ -19,6 +19,43 @@ def write_json(path, data):
     path.write_text(json.dumps(data))
 
 
+def add_pdf_fixture(root, catalog):
+    # Inert envelope for hash/claim tests, not evidence of PDF parsing or extraction.
+    raw = b"%PDF-1.4\nfixture PDF bytes\n%%EOF\n"
+    text = "\fEdição de revisão - v0.2.87\n\fMaelis abriu a\nPorta Leste. Não avançou.\n\f".encode()
+    source = {"order": 1, "source_path": "01_Fixture.pdf", "size_bytes": len(raw),
+              "sha256": hashlib.sha256(raw).hexdigest()}
+    bundle = hashlib.sha256(json.dumps([source], sort_keys=True, ensure_ascii=False,
+                                     separators=(",", ":")).encode()).hexdigest()
+    base = "references/literature/lich/snapshots/main-pdfs-" + bundle[:12]
+    (root / base / "source").mkdir(parents=True)
+    (root / base / "text").mkdir()
+    (root / base / "source/01_Fixture.pdf").write_bytes(raw)
+    (root / base / "text/01_Fixture.txt").write_bytes(text)
+    item = {**source, "title": "Fixture", "attachment_id": "fixture-pdf-1", "encrypted": False,
+            "classification": "historical_reference", "status": "imported",
+            "local_path": base + "/source/01_Fixture.pdf", "page_count": 3,
+            "git_blob_sha": hashlib.sha1(b"blob " + str(len(raw)).encode() + b"\0" + raw).hexdigest(),
+            "metadata": {"Producer": "pipeline v0.2.88", "Subject": "Rascunho não canônico"},
+            "version_observations": {"title_page_pdf_page": 2, "title_page_label": "v0.2.87", "producer_label": "v0.2.88"},
+            "text": {"local_path": base + "/text/01_Fixture.txt", "derived_from_sha256": source["sha256"],
+                     "size_bytes": len(text), "sha256": hashlib.sha256(text).hexdigest(),
+                     "page_count": 3, "nonempty_page_count": 2, "character_count": len(text.decode())}}
+    write_json(root / base / "inventory.json", {"schema_version": 1, "collection_id": "REF-LICH-MAIN-PDFS",
+               "bundle_sha256": bundle, "extraction": {"tool": "pdftotext", "version": "fixture-only",
+               "arguments": ["-enc", "UTF-8", "-eol", "unix"]}, "files": [item]})
+    write_json(root / base / "discovery.json", {"schema_version": 1, "collection_id": "REF-LICH-MAIN-PDFS",
+               "topics": [{"id": "main-books", "source_paths": ["01_Fixture.pdf"]}]})
+    catalog["collections"].append({"id": "REF-LICH-MAIN-PDFS", "kind": "document_bundle", "status": "imported",
+        "bundle_sha256": bundle, "source_root": base + "/source", "text_root": base + "/text",
+        "inventory_path": base + "/inventory.json", "discovery_path": base + "/discovery.json",
+        "file_count": 1, "imported_count": 1, "derived_text_count": 1, "page_count": 3,
+        "full_archive_preserved": False, "archive_membership": "unverified", "package_version": None,
+        "authority": "historical_reference_only", "authority_status": "policy_not_supplied",
+        "editorial_status": "declared_noncanonical_drafts"})
+    return base
+
+
 def make_fixture(root):
     """Also used by the existing repo-validator fixtures; no product dependencies."""
     registry = root / "registry"
@@ -56,6 +93,7 @@ def make_fixture(root):
          "full_archive_preserved": False, "blocker": "fixture transfer unavailable", "authority_status": "unverified"},
         {"id": "REF-LICH-REPORT-0448", "kind": "historical_report", "status": "documented_only", "imported_count": 0,
          "full_archive_preserved": False, "report_path": "docs/report.md", "reported_details_path": "docs/report.md"}]}
+    add_pdf_fixture(root, catalog)
     write_json(root / "references/catalog.json", catalog)
     write_json(root / "north-star/capabilities.json", {"schema_version": 1, "name": "North Star", "kind": "program",
                "stage": "foundation_only", "engine_selection": "undecided", "consumer_paths": [], "capabilities": [
@@ -71,6 +109,7 @@ class ReferenceLibraryTests(unittest.TestCase):
         self.addCleanup(temp.cleanup)
         self.root = Path(temp.name)
         self.snapshot = make_fixture(self.root)
+        self.pdf_snapshot = json.loads((self.root / "references/catalog.json").read_text())["collections"][3]["source_root"].removesuffix("/source")
 
     def edit(self, name, mutate):
         path = self.root / name
@@ -90,7 +129,7 @@ class ReferenceLibraryTests(unittest.TestCase):
 
     def test_complete_library_and_topic_query_open_actual_bytes(self):
         result = validate_library(self.root)
-        self.assertEqual((result["imported"], result["excluded"]), (1, 0))
+        self.assertEqual((result["imported"], result["excluded"], result["derived"]), (2, 0, 1))
         output = self.run_cli("find", "--topic", "combat")
         self.assertEqual(output.returncode, 0, output.stderr)
         data = json.loads(output.stdout)
@@ -118,7 +157,7 @@ class ReferenceLibraryTests(unittest.TestCase):
         self.edit(self.snapshot + "/inventory.json", lambda d: d["files"][0].update(
             source_path="AGENTS.md", local_path=self.snapshot + "/source/AGENTS.md.reference"))
         self.edit(self.snapshot + "/discovery.json", lambda d: d["topics"][0].update(source_paths=["AGENTS.md"]))
-        self.assertEqual(validate_library(self.root)["imported"], 1)
+        self.assertEqual(validate_library(self.root)["imported"], 2)
         self.edit(self.snapshot + "/inventory.json", lambda d: d["files"][0].update(
             local_path=self.snapshot + "/source/AGENTS.md"))
         self.assert_invalid("original/local path mapping differs")
@@ -223,6 +262,99 @@ class ReferenceLibraryTests(unittest.TestCase):
         self.assertIn("Unknown discovery topic", result.stderr)
         self.edit("references/catalog.json", lambda d: d.update(schema_version=2))
         self.assert_invalid("Invalid reference schema")
+
+    def test_pdf_search_keeps_page_numbers_accents_and_wrapped_phrases(self):
+        for query, count in [("porta leste", 1), ("NÃO", 1), ("Porta.*", 0),
+                             ("v0.2.87 Maelis", 0), ("", None)]:
+            with self.subTest(query=query):
+                result = self.run_cli("search", query)
+                if count is None:
+                    self.assertEqual(result.returncode, 1)
+                    self.assertIn("must not be empty", result.stderr)
+                    continue
+                self.assertEqual(result.returncode, 0, result.stderr)
+                output = json.loads(result.stdout)
+                self.assertEqual(output["matches"], count)
+                if count:
+                    row = output["results"][0]
+                    self.assertEqual((row["book"], row["pdf_page"]), (1, 3))
+                    self.assertEqual(hashlib.sha256((self.root / row["pdf_path"]).read_bytes()).hexdigest(), row["pdf_sha256"])
+
+    def test_search_limits_and_invalid_collection_or_book(self):
+        result = self.run_cli("search", "a", "--book", "1", "--limit", "1")
+        self.assertEqual(result.returncode, 0, result.stderr)
+        output = json.loads(result.stdout)
+        self.assertGreater(output["matches"], 1)
+        self.assertEqual(len(output["results"]), 1)
+        for args, message in [(("--book", "2"), "Unknown book"),
+                              (("--collection", "REF-LICH-ATTACHMENT"), "no imported PDF text"),
+                              (("--limit", "0"), "Limit must be")]:
+            result = self.run_cli("search", "a", *args)
+            self.assertEqual(result.returncode, 1)
+            self.assertIn(message, result.stderr)
+
+    def test_pdf_source_and_derived_text_tampering_fail(self):
+        for name in ["source/01_Fixture.pdf", "text/01_Fixture.txt"]:
+            with self.subTest(name=name):
+                path = self.root / self.pdf_snapshot / name
+                original = path.read_bytes()
+                path.write_bytes(original + b"tampered")
+                self.assert_invalid("source hash or size differs")
+                path.write_bytes(original)
+
+    def test_pdf_text_cannot_bind_to_a_different_original(self):
+        self.edit(self.pdf_snapshot + "/inventory.json", lambda d: d["files"][0]["text"].update(derived_from_sha256="0" * 64))
+        self.assert_invalid("PDF text provenance differs")
+
+    def test_pdf_count_and_version_observations_cannot_be_invented(self):
+        path = self.root / self.pdf_snapshot / "inventory.json"
+        original = path.read_bytes()
+        for changes, message in [({"page_count": 4}, "PDF page/text counts differ"),
+                                 ({"order": 2}, "invalid book order"),
+                                 ({"version_observations": {"title_page_pdf_page": 2, "title_page_label": "v0.4.1", "producer_label": "v0.2.88"}}, "not supported")]:
+            with self.subTest(changes=changes):
+                self.edit(self.pdf_snapshot + "/inventory.json", lambda d: d["files"][0].update(changes))
+                self.assert_invalid(message)
+                path.write_bytes(original)
+
+    def test_pdf_text_page_boundaries_fail_even_with_updated_text_hash(self):
+        path = self.root / self.pdf_snapshot / "text/01_Fixture.txt"
+        raw = path.read_bytes().replace(b"\f", b"\n")
+        path.write_bytes(raw)
+        self.edit(self.pdf_snapshot + "/inventory.json", lambda d: d["files"][0]["text"].update(
+            sha256=hashlib.sha256(raw).hexdigest(), size_bytes=len(raw)))
+        self.assert_invalid("lacks final page separator")
+
+    def test_pdf_missing_unlisted_or_linked_payload_fails(self):
+        target = self.root / self.pdf_snapshot / "text/extra.txt"
+        target.write_text("not inventoried")
+        self.assert_invalid("unlisted or missing document payload")
+        target.unlink()
+        target = self.root / self.pdf_snapshot / "source/01_Fixture.pdf"
+        outside = self.root / "outside.pdf"
+        outside.write_bytes(target.read_bytes())
+        target.unlink()
+        self.assert_invalid("Missing reference")
+        target.symlink_to(outside)
+        self.assert_invalid("Linked reference")
+
+    def test_pdf_cannot_claim_archive_recovery_or_ratified_canon(self):
+        path = self.root / "references/catalog.json"
+        original = path.read_bytes()
+        for changes in [{"package_version": "0.4.1"}, {"archive_membership": "verified"},
+                        {"full_archive_preserved": True}, {"authority_status": "ratified"},
+                        {"editorial_status": "canonical"}]:
+            with self.subTest(changes=changes):
+                self.edit("references/catalog.json", lambda d: d["collections"][3].update(changes))
+                self.assert_invalid("unsupported document authority or archive claim")
+                path.write_bytes(original)
+
+    def test_pdf_inventory_identity_and_discovery_mapping_fail(self):
+        self.edit(self.pdf_snapshot + "/discovery.json", lambda d: d["topics"][0].update(source_paths=["not-supplied.pdf"]))
+        self.assert_invalid("invalid discovery reference")
+        self.edit(self.pdf_snapshot + "/discovery.json", lambda d: d["topics"][0].update(source_paths=["01_Fixture.pdf"]))
+        self.edit(self.pdf_snapshot + "/inventory.json", lambda d: d.update(bundle_sha256="0" * 64))
+        self.assert_invalid("document provenance differs")
 
 
 if __name__ == "__main__":

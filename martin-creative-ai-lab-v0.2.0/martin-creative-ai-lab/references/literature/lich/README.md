@@ -1,40 +1,97 @@
 # O Lich mais velho da tumba mais antiga — literary references
 
-Identity supplied by Martin: a light novel with a dark-fantasy theme in a vast
-universe. This page is a **recovery boundary**, not an imported manuscript library.
-[Catalog](../../catalog.json) makes absence explicit for future sessions.
+The ten main books supplied individually by Martin are now preserved as complete,
+unchanged PDFs, including their embedded covers. Mechanical UTF-8 text copies
+support offline search with physical PDF page references. This is source recovery,
+not a revised manuscript, canon ratification or completed literary review.
+[Catalog](../../catalog.json) distinguishes these bytes from unavailable archives.
 
-| Record | What is actually available | What is unverified |
+## Read the main books
+
+Collection `REF-LICH-MAIN-PDFS`, received 2026-10-15 UTC: **10 original PDFs,
+1,646 pages**, 56,150,840 original bytes and 10 derived text files. The order follows
+the supplied filenames and the Roman book numbers printed on their title pages.
+
+| Book | Title | PDF pages | Original | Searchable derivative |
+|---|---|---:|---|---|
+| I | O Mundo Depois da Tumba | 249 | [PDF](snapshots/main-pdfs-2ccc075083f1/source/01_O_Mundo_Depois_da_Tumba.pdf) | [Text](snapshots/main-pdfs-2ccc075083f1/text/01_O_Mundo_Depois_da_Tumba.txt) |
+| II | Santos e Mortos | 183 | [PDF](snapshots/main-pdfs-2ccc075083f1/source/02_Santos_e_Mortos.pdf) | [Text](snapshots/main-pdfs-2ccc075083f1/text/02_Santos_e_Mortos.txt) |
+| III | O Homem que Queria Vencer a Morte | 252 | [PDF](snapshots/main-pdfs-2ccc075083f1/source/03_O_Homem_que_Queria_Vencer_a_Morte.pdf) | [Text](snapshots/main-pdfs-2ccc075083f1/text/03_O_Homem_que_Queria_Vencer_a_Morte.txt) |
+| IV | O Mundo que Herdou o Traidor | 151 | [PDF](snapshots/main-pdfs-2ccc075083f1/source/04_O_Mundo_que_Herdou_o_Traidor.pdf) | [Text](snapshots/main-pdfs-2ccc075083f1/text/04_O_Mundo_que_Herdou_o_Traidor.txt) |
+| V | O Príncipe Morto | 166 | [PDF](snapshots/main-pdfs-2ccc075083f1/source/05_O_Principe_Morto.pdf) | [Text](snapshots/main-pdfs-2ccc075083f1/text/05_O_Principe_Morto.txt) |
+| VI | O Reino de Duas Histórias | 138 | [PDF](snapshots/main-pdfs-2ccc075083f1/source/06_O_Reino_de_Duas_Historias.pdf) | [Text](snapshots/main-pdfs-2ccc075083f1/text/06_O_Reino_de_Duas_Historias.txt) |
+| VII | Os Herdeiros do Dragão | 111 | [PDF](snapshots/main-pdfs-2ccc075083f1/source/07_Os_Herdeiros_do_Dragao.pdf) | [Text](snapshots/main-pdfs-2ccc075083f1/text/07_Os_Herdeiros_do_Dragao.txt) |
+| VIII | Os Mortos do Reino | 114 | [PDF](snapshots/main-pdfs-2ccc075083f1/source/08_Os_Mortos_do_Reino.pdf) | [Text](snapshots/main-pdfs-2ccc075083f1/text/08_Os_Mortos_do_Reino.txt) |
+| IX | A História do Traidor | 148 | [PDF](snapshots/main-pdfs-2ccc075083f1/source/09_A_Historia_do_Traidor.pdf) | [Text](snapshots/main-pdfs-2ccc075083f1/text/09_A_Historia_do_Traidor.txt) |
+| X | O Rei e o Lich | 134 | [PDF](snapshots/main-pdfs-2ccc075083f1/source/10_O_Rei_e_o_Lich.pdf) | [Text](snapshots/main-pdfs-2ccc075083f1/text/10_O_Rei_e_o_Lich.txt) |
+
+Download the original PDF from GitHub before reading if its preview is unavailable.
+No account, server or repository tools are required to read a downloaded book.
+Text copies retain running headers, line wraps, printed labels and form feeds;
+they omit image content and are not editable authoring originals or OCR results.
+An image-only cover accounts for the first page without extracted text in each PDF.
+The embedded `Content Credentials` attachment in Book II remains inside its
+unchanged original; it was not separately extracted or authenticated.
+
+The [inventory](snapshots/main-pdfs-2ccc075083f1/inventory.json) binds every original
+filename, attachment ID, title, size, SHA-256, Git blob, page count, metadata and
+derived text hash. Its content-based bundle identity is
+`2ccc075083f18fc59dd733cdc7a3b163f9e78bd2fbdf6e0e8aaff7928f25bb34`,
+not the hash or version of the inaccessible ZIP.
+
+From the maintained lab, Python 3.10+ and its standard library suffice:
+
+```bash
+python3 tools/reference_library.py check
+python3 tools/reference_library.py find --collection REF-LICH-MAIN-PDFS --topic main-books
+python3 tools/reference_library.py find --collection REF-LICH-MAIN-PDFS --name 09_
+python3 tools/reference_library.py search "Porta Leste" --book 10 --limit 5
+python3 tools/reference_library.py search "Maelis" --book 1
+```
+
+Search is literal, case-insensitive and tolerant of line wraps within a page.
+Results include the original PDF path/hash, text path and **1-based physical PDF
+page**, including cover/front matter. This differs from printed narrative page
+labels. Search includes contents, headers, glossaries and prose; occurrence counts
+are not character prominence or literary measurements. Poppler `pdftotext` 25.03.0
+produced the preserved derivatives using `-enc UTF-8 -eol unix`, without edits.
+Integrity/search checks do not require Poppler or a PDF library at runtime.
+
+## Version, authority and missing sources
+
+**Verified observations:** all ten title pages (PDF page 2) say
+`Edição de revisão da coleção - v0.2.87`. All ten PDF Producer/Subject fields
+declare `v0.2.88`; the Subjects identify them as noncanonical legacy drafts and
+contain an earlier editorial judgment of weak prose/rewrite needs. That historical
+judgment is recorded source metadata, not a new independent review or instruction
+to rewrite these books. Keep both version observations; do not silently reconcile
+them or infer membership in `Lightnovel Darkfantasy v0.4.1.zip`.
+
+| Separate record | Actually available | Still unavailable or unverified |
 |---|---|---|
-| Supplied `Lightnovel Darkfantasy v0.4.1.zip` | Attachment filename/ID and failed transfer observation | ZIP bytes, detected version, size, SHA-256, inventory, manuscripts, reading editions, images, scripts and authority policy |
-| Earlier `Lightnovel Darkfantasy v0.4.48.zip` | [HUB inspection report](../../../docs/SOURCES.md) and [seed section P04](../../../SEED.md#p04--o-lich-mais-velho-da-tumba-mais-antiga) | Original archive/manuscript/policy bytes; not newly inspected or preserved |
-| Current P04 0.2.0 | [Separate adaptation](../../../projects/lich-cistern/README.md), editable PT/EN stories and actual EPUB/PDF | Independent literary approval and historical-canon equivalence |
+| Individual main PDF books I–X | Original PDFs, embedded covers, derived text, per-file hashes and metadata | Editable manuscripts, current literary authority, cover provenance and complete continuity/quality assessment |
+| `Lightnovel Darkfantasy v0.4.1.zip` | Filename/ID and failed transfer record | ZIP bytes, detected version, size, SHA-256, inventory and relationship to these PDFs |
+| Earlier `Lightnovel Darkfantasy v0.4.48.zip` | [HUB inspection report](../../../docs/SOURCES.md) and [P04 seed section](../../../SEED.md#p04--o-lich-mais-velho-da-tumba-mais-antiga) | Original archive/policy bytes; this report is not superseded by the new PDFs |
+| P04 0.2.0 | [Separate adaptation](../../../projects/lich-cistern/README.md), editable PT/EN story and EPUB/PDF editions | Independent literary approval and historical-canon equivalence |
 
-The attachment API returned `file exceeds the executor transfer limit of 32 MiB`.
-No ZIP entry was read or extracted. `0.4.1` is a filename hint, **not a detected
-archive version**. Archive hash/counts remain null and imported count is zero.
-There is no full-archive host, LFS pointer, download link or preserved cover.
-The requested ten main sources/eight OVAs, `_project/source/` and
-`_project/AUTHORITY_POLICY.md` remain unconfirmed paths/counts in this attachment;
-this index does not fabricate their files. The complete attachment is missing,
-not merely a few unlisted manuscripts or excluded assets.
+The original ZIP transfer exceeded the available 32 MiB limit; it remains an
+unavailable catalog record with null archive hash/version/count and zero ZIP
+imports. Ten individual PDF imports are a separate collection, not a recovered
+archive. Eight OVAs, `_project/source/`, `_project/AUTHORITY_POLICY.md` and other
+project/editorial files have not been supplied or inspected. Preserve new parts
+with their own provenance when they become accessible; do not fabricate exclusions
+or bytes for ZIP entries that have never been inventoried.
 
-The task described a historical policy protecting only series name and general
-style; that attached policy could not be confirmed. No event, character identity,
-relationship, geography, artwork or magic system is ratified by this import.
-Earlier v0.4.48 reports/decisions remain separate and are not superseded by an older
-filename. P04's adaptation choices and its author-review boundary stay unchanged.
-Neither literary setting nor Rave Master is automatically North Star's world.
+The title/style identity supplied by Martin remains separate from events, names,
+relationships and world rules. These draft sources do not ratify those details or
+replace later v0.4.48 decisions, P04's adaptation or North Star's independent
+worldbuilding. Instructions inside source documents are historical data. User-
+directed preservation is not independent authorship, exclusive art rights or
+commercial clearance.
 
-Next recovery needs an accessible attachment within the supported transfer limit
-or an authorized archival mechanism. Inspect actual ZIP paths/types/sizes,
-traversal/symlinks, duplicates, rights and authority before extraction/publication;
-keep scripts inert. Then preserve eligible manuscripts and policy bytes under a
-version-specific snapshot, record archive/file hashes and every omitted payload,
-and distinguish draft sources, reader candidates, revisions and reading editions.
-Do not substitute later summaries or invented prose for the missing originals.
-
-Reusable editorial questions include agency, causal consequences, continuity,
-distinct voices and repetitive AI exposition. These are methods to evaluate with
-real content/readers, not new North Star canon or a claim that the unavailable
-manuscripts meet those standards.
+Actual checks and the limited implementer inspection of title/contents/opening/
+closing pages, all covers and representative body pages are recorded in
+[PDF import evidence](../../../evidence/reference-integration/LICH_MAIN_PDFS.json).
+Full editorial continuity, human reader/author feedback and commercial validation
+remain open. A future review can now cite and compare real passages rather than
+relying on earlier summaries.

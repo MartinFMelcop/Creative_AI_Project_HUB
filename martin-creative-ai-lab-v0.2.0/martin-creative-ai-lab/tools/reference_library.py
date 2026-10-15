@@ -69,6 +69,121 @@ def digest(path):
     return hashlib.sha256(path.read_bytes()).hexdigest()
 
 
+def checked_bytes(root, item, label):
+    raw = local(root, item.get("local_path")).read_bytes()
+    require(type(item.get("size_bytes")) is int and len(raw) == item["size_bytes"]
+            and hashlib.sha256(raw).hexdigest() == item.get("sha256"),
+            f"{label}: source hash or size differs")
+    return raw
+
+
+def text_pages(raw):
+    require(b"\0" not in raw, "PDF text contains NUL")
+    text = raw.decode("utf-8")
+    require(text.endswith("\f"), "PDF text lacks final page separator")
+    return text, text.split("\f")[:-1]
+
+
+def validate_document_bundle(root, collection):
+    """Check preserved PDFs and page-addressable derivatives without a PDF dependency.
+
+    Hashes bind these records to documents parsed during import. This is not a
+    fresh PDF parser, OCR, literary review or authority-policy verification.
+    """
+    cid = collection["id"]
+    bundle = collection.get("bundle_sha256")
+    require(isinstance(bundle, str) and re.fullmatch(r"[0-9a-f]{64}", bundle),
+            f"{cid}: invalid bundle identity")
+    source_name = relative(collection.get("source_root"))
+    require(source_name.parts[0] == "references" and len(source_name.parts) >= 5
+            and source_name.parts[-3:] == ("snapshots", "main-pdfs-" + bundle[:12], "source"),
+            f"{cid}: invalid document snapshot root")
+    source_root = local(root, str(source_name), directory=True)
+    base = source_root.parent
+    require(local(root, collection.get("inventory_path")) == base / "inventory.json"
+            and local(root, collection.get("text_root"), directory=True) == base / "text",
+            f"{cid}: document inventory or text location differs")
+    inventory = obj(base / "inventory.json")
+    require(inventory.get("collection_id") == cid and inventory.get("bundle_sha256") == bundle,
+            f"{cid}: document provenance differs")
+    extraction = inventory.get("extraction")
+    require(isinstance(extraction, dict) and extraction.get("tool") == "pdftotext"
+            and extraction.get("arguments") == ["-enc", "UTF-8", "-eol", "unix"]
+            and isinstance(extraction.get("version"), str) and bool(extraction["version"]),
+            f"{cid}: missing extraction provenance")
+    files = rows(inventory, "files", cid)
+    require(bool(files), f"{cid}: empty document bundle")
+    unique(files, "source_path", cid)
+    unique(files, "attachment_id", cid)
+    require([f.get("order") for f in files] == list(range(1, len(files) + 1))
+            and all(type(f.get("order")) is int for f in files), f"{cid}: invalid book order")
+    sources, texts, identity = set(), set(), []
+    page_total = 0
+    for item in files:
+        name = relative(item["source_path"])
+        label = f"{cid}: {name}"
+        require(len(name.parts) == 1 and name.suffix == ".pdf"
+                and item.get("classification") == "historical_reference"
+                and item.get("status") == "imported" and item.get("encrypted") is False
+                and isinstance(item.get("title"), str) and bool(item["title"]),
+                f"{label}: invalid PDF reference")
+        require(item.get("local_path") == (source_name / name).as_posix(),
+                f"{label}: original/local path mapping differs")
+        raw = checked_bytes(root, item, label)
+        require(raw.startswith(b"%PDF-") and b"%%EOF" in raw[-1024:], f"{label}: invalid PDF envelope")
+        blob = hashlib.sha1(b"blob " + str(len(raw)).encode() + b"\0" + raw).hexdigest()
+        require(blob == item.get("git_blob_sha"), f"{label}: Git blob differs")
+        identity.append({k: item[k] for k in ["order", "source_path", "size_bytes", "sha256"]})
+        sources.add(root / item["local_path"])
+        derivative = item.get("text")
+        require(isinstance(derivative, dict), f"{label}: missing PDF text")
+        text_path = base / "text" / (name.stem + ".txt")
+        require(derivative.get("local_path") == text_path.relative_to(root).as_posix()
+                and derivative.get("derived_from_sha256") == item["sha256"],
+                f"{label}: PDF text provenance differs")
+        text, pages = text_pages(checked_bytes(root, derivative, label + " text"))
+        require(type(item.get("page_count")) is int and item["page_count"] > 0
+                and len(pages) == item["page_count"] == derivative.get("page_count")
+                and len(text) == derivative.get("character_count")
+                and sum(bool(p.strip()) for p in pages) == derivative.get("nonempty_page_count")
+                and any(p.strip() for p in pages), f"{label}: PDF page/text counts differ")
+        observed = item.get("version_observations")
+        metadata = item.get("metadata")
+        require(isinstance(observed, dict) and isinstance(metadata, dict),
+                f"{label}: missing version observations")
+        title_page = observed.get("title_page_pdf_page")
+        require(type(title_page) is int and 1 <= title_page <= len(pages)
+                and isinstance(observed.get("title_page_label"), str)
+                and bool(observed["title_page_label"])
+                and observed["title_page_label"] in pages[title_page - 1]
+                and isinstance(observed.get("producer_label"), str)
+                and bool(observed["producer_label"])
+                and observed["producer_label"] in str(metadata.get("Producer", "")),
+                f"{label}: version observation is not supported by recorded text/metadata")
+        require("não canônico" in str(metadata.get("Subject", "")).casefold(),
+                f"{label}: draft status differs from recorded metadata")
+        texts.add(text_path)
+        page_total += len(pages)
+    actual_identity = hashlib.sha256(json.dumps(identity, sort_keys=True, ensure_ascii=False,
+                                               separators=(",", ":")).encode()).hexdigest()
+    require(actual_identity == bundle, f"{cid}: bundle identity differs")
+    for directory, expected in [(source_root, sources), (base / "text", texts)]:
+        on_disk = {p for p in directory.rglob("*") if p.is_file() or p.is_symlink()}
+        require(on_disk == expected, f"{cid}: unlisted or missing document payload")
+    for key, count in [("file_count", len(files)), ("imported_count", len(files)),
+                       ("derived_text_count", len(texts)), ("page_count", page_total)]:
+        require(type(collection.get(key)) is int and collection[key] == count, f"{cid}: {key} differs")
+    require(collection.get("status") == "imported" and collection.get("full_archive_preserved") is False
+            and collection.get("archive_membership") == "unverified" and collection.get("package_version") is None
+            and collection.get("authority") == "historical_reference_only"
+            and collection.get("authority_status") == "policy_not_supplied"
+            and collection.get("editorial_status") == "declared_noncanonical_drafts",
+            f"{cid}: unsupported document authority or archive claim")
+    require(local(root, collection.get("discovery_path")) == base / "discovery.json",
+            f"{cid}: document discovery location differs")
+    return source_root, files
+
+
 def validate_library(root=ROOT, project_ids=None):
     root = Path(root).resolve()
     if project_ids is None:
@@ -85,7 +200,7 @@ def validate_library(root=ROOT, project_ids=None):
     require(digest(old_archive) == old["source_archive"]["sha256"],
             "Previous legacy archive hash differs")
     source_roots, inventories, topics = [], {}, {}
-    imported_total = excluded_total = 0
+    imported_total = excluded_total = derived_total = 0
     for collection in collections:
         cid = collection["id"]
         kind = collection.get("kind")
@@ -107,6 +222,24 @@ def validate_library(root=ROOT, project_ids=None):
                     f"{cid}: historical report claims imported payload")
             local(root, collection.get("report_path"))
             local(root, collection.get("reported_details_path"))
+            continue
+        if kind == "document_bundle":
+            source_root, files = validate_document_bundle(root, collection)
+            require(source_root not in source_roots, f"{cid}: duplicate source root")
+            source_roots.append(source_root)
+            discovery = obj(local(root, collection.get("discovery_path")))
+            require(discovery.get("collection_id") == cid, f"{cid}: discovery collection differs")
+            entries = rows(discovery, "topics", cid)
+            unique(entries, "id", cid)
+            available = {f["source_path"] for f in files}
+            for topic in entries:
+                paths = topic.get("source_paths")
+                require(isinstance(paths, list) and paths and all(isinstance(p, str) for p in paths)
+                        and len(paths) == len(set(paths)) and set(paths) <= available,
+                        f"{cid}: invalid discovery reference: {topic['id']}")
+            inventories[cid], topics[cid] = files, entries
+            imported_total += len(files)
+            derived_total += len(files)
             continue
         require(kind == "repository_snapshot", f"{cid}: unknown collection kind")
         commit = collection.get("source_commit")
@@ -234,7 +367,29 @@ def validate_library(root=ROOT, project_ids=None):
                 f"{label}: origin verification needs a recorded execution, not source discovery")
     return {"catalog": catalog, "collection_ids": collection_ids, "source_roots": source_roots,
             "inventories": inventories, "topics": topics, "imported": imported_total,
-            "excluded": excluded_total, "capabilities": len(capabilities)}
+            "excluded": excluded_total, "derived": derived_total, "capabilities": len(capabilities)}
+
+
+def search_text(root, files, query, book=None, limit=12):
+    """Find literal phrases across PDF line wraps, retaining physical page numbers."""
+    require(bool(query.strip()), "Search query must not be empty")
+    require(book is None or any(f["order"] == book for f in files), "Unknown book number")
+    pattern = re.compile(r"\s+".join(re.escape(w) for w in query.split()), re.IGNORECASE)
+    count, results = 0, []
+    for item in files:
+        if book is not None and item["order"] != book:
+            continue
+        _, pages = text_pages(local(root, item["text"]["local_path"]).read_bytes())
+        for page_number, page in enumerate(pages, 1):
+            for match in pattern.finditer(page):
+                count += 1
+                if len(results) < limit:
+                    snippet = page[max(0, match.start() - 100):match.end() + 140]
+                    results.append({"book": item["order"], "title": item["title"],
+                                    "pdf_page": page_number, "pdf_path": item["local_path"],
+                                    "pdf_sha256": item["sha256"], "text_path": item["text"]["local_path"],
+                                    "snippet": " ".join(snippet.split())})
+    return {"query": query, "matches": count, "results": results}
 
 
 def main():
@@ -249,17 +404,29 @@ def main():
     find.add_argument("--name", default="")
     find.add_argument("--include-excluded", action="store_true")
     find.add_argument("--limit", type=int, default=12)
+    search = sub.add_parser("search", help="Search imported PDF text with physical page references")
+    search.add_argument("query", help="Literal phrase; case-insensitive and tolerant of line wraps")
+    search.add_argument("--collection", default="REF-LICH-MAIN-PDFS")
+    search.add_argument("--book", type=int)
+    search.add_argument("--limit", type=int, default=12)
     args = parser.parse_args()
     try:
         library = validate_library(args.root)
         if args.command == "check":
-            print(f"PASS: {len(library['collection_ids'])} reference records; {library['imported']} local files, "
+            print(f"PASS: {len(library['collection_ids'])} reference records; {library['imported']} preserved sources, "
+                  f"{library['derived']} derived PDF texts, "
                   f"{library['excluded']} explicit exclusions; {library['capabilities']} North Star capabilities.")
             print("Integrity and structured evidence boundaries only; no legacy scripts, engine or rights review executed.")
         else:
             require(1 <= args.limit <= 100, "Limit must be 1–100")
             require(args.collection in library["collection_ids"], "Unknown reference collection")
             files = library["inventories"].get(args.collection, [])
+            collection = next(c for c in library["catalog"]["collections"] if c["id"] == args.collection)
+            if args.command == "search":
+                require(collection["kind"] == "document_bundle", "Collection has no imported PDF text")
+                result = search_text(args.root, files, args.query, args.book, args.limit)
+                print(json.dumps({"collection": args.collection, **result}, indent=2, ensure_ascii=False))
+                return 0
             if args.topic:
                 topic = next((t for t in library["topics"].get(args.collection, []) if t["id"] == args.topic), None)
                 require(topic is not None, "Unknown discovery topic")
@@ -267,7 +434,6 @@ def main():
             files = [f for f in files if (args.include_excluded or f["status"] == "imported")
                      and (not args.module or f["source_path"].split("/")[0] == args.module)
                      and args.name.casefold() in f["source_path"].casefold()]
-            collection = next(c for c in library["catalog"]["collections"] if c["id"] == args.collection)
             print(json.dumps({"collection": args.collection, "status": collection["status"],
                               "matches": len(files), "files": files[:args.limit]}, indent=2, ensure_ascii=False))
     except (OSError, ValueError, KeyError, TypeError, BadZipFile) as e:

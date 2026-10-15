@@ -1,0 +1,221 @@
+{
+  "schema_version": 1,
+  "milestone": "Individual main literary PDF preservation and page-addressable search",
+  "date_utc": "2026-10-15",
+  "baseline_commit": "1fd775b56a21390beefc5e1d8fcb81eb0f671120",
+  "user_scope": "Continue the literary recovery by importing the ten individually supplied main books; preserve source data and publish verified work to main.",
+  "collection_id": "REF-LICH-MAIN-PDFS",
+  "inventory_path": "references/literature/lich/snapshots/main-pdfs-2ccc075083f1/inventory.json",
+  "bundle_sha256": "2ccc075083f18fc59dd733cdc7a3b163f9e78bd2fbdf6e0e8aaff7928f25bb34",
+  "preservation": {
+    "original_count": 10,
+    "original_size_bytes": 56150840,
+    "derived_count": 10,
+    "derived_size_bytes": 2247441,
+    "page_count": 1646
+  },
+  "environment": {
+    "python": "3.12.14",
+    "pypdf": "6.10.0",
+    "pymupdf": "1.26.6",
+    "pdftotext": "Poppler 25.03.0",
+    "runtime_integrity_search": "Python standard library only"
+  },
+  "executed_per_book": [
+    {
+      "book": 1,
+      "attachment_bytes_identical": true,
+      "pypdf_mupdf_page_counts_match": true,
+      "reextracted_text_identical": true,
+      "version_labels_checked": true
+    },
+    {
+      "book": 2,
+      "attachment_bytes_identical": true,
+      "pypdf_mupdf_page_counts_match": true,
+      "reextracted_text_identical": true,
+      "version_labels_checked": true
+    },
+    {
+      "book": 3,
+      "attachment_bytes_identical": true,
+      "pypdf_mupdf_page_counts_match": true,
+      "reextracted_text_identical": true,
+      "version_labels_checked": true
+    },
+    {
+      "book": 4,
+      "attachment_bytes_identical": true,
+      "pypdf_mupdf_page_counts_match": true,
+      "reextracted_text_identical": true,
+      "version_labels_checked": true
+    },
+    {
+      "book": 5,
+      "attachment_bytes_identical": true,
+      "pypdf_mupdf_page_counts_match": true,
+      "reextracted_text_identical": true,
+      "version_labels_checked": true
+    },
+    {
+      "book": 6,
+      "attachment_bytes_identical": true,
+      "pypdf_mupdf_page_counts_match": true,
+      "reextracted_text_identical": true,
+      "version_labels_checked": true
+    },
+    {
+      "book": 7,
+      "attachment_bytes_identical": true,
+      "pypdf_mupdf_page_counts_match": true,
+      "reextracted_text_identical": true,
+      "version_labels_checked": true
+    },
+    {
+      "book": 8,
+      "attachment_bytes_identical": true,
+      "pypdf_mupdf_page_counts_match": true,
+      "reextracted_text_identical": true,
+      "version_labels_checked": true
+    },
+    {
+      "book": 9,
+      "attachment_bytes_identical": true,
+      "pypdf_mupdf_page_counts_match": true,
+      "reextracted_text_identical": true,
+      "version_labels_checked": true
+    },
+    {
+      "book": 10,
+      "attachment_bytes_identical": true,
+      "pypdf_mupdf_page_counts_match": true,
+      "reextracted_text_identical": true,
+      "version_labels_checked": true
+    }
+  ],
+  "executed_discovery": [
+    {
+      "command": [
+        "python3",
+        "tools/reference_library.py",
+        "search",
+        "Maelis",
+        "--book",
+        "1",
+        "--limit",
+        "2"
+      ],
+      "exit_code": 0,
+      "matches": 116
+    },
+    {
+      "command": [
+        "python3",
+        "tools/reference_library.py",
+        "search",
+        "Não toca",
+        "--book",
+        "10",
+        "--limit",
+        "2"
+      ],
+      "exit_code": 0,
+      "matches": 1
+    },
+    {
+      "command": [
+        "python3",
+        "tools/reference_library.py",
+        "find",
+        "--collection",
+        "REF-LICH-MAIN-PDFS",
+        "--topic",
+        "main-books"
+      ],
+      "exit_code": 0,
+      "matches": 10
+    },
+    {
+      "command": [
+        "python3",
+        "tools/reference_library.py",
+        "find",
+        "--collection",
+        "REF-LICH-ATTACHMENT"
+      ],
+      "exit_code": 0,
+      "matches": 0
+    }
+  ],
+  "source_observations": {
+    "title_pages": "All ten PDF page 2 title pages declare review edition v0.2.87.",
+    "pdf_metadata": "All ten Producer/Subject fields declare v0.2.88 and noncanonical legacy drafts. Earlier negative editorial judgments are source claims, not fresh assessment.",
+    "embedded_attachments": "Content Credentials in Book II retained inside unchanged PDF, not extracted/authenticated; no embedded files reported in other nine."
+  },
+  "inspection_scope": {
+    "verified": "Full original byte equality, structural opening/page counts with pypdf and MuPDF, complete Poppler extraction/reproduction, PDF metadata/title labels; all ten cover images and four representative title/body/end page renders inspected by Codex. Contents/opening/closing text sampled from each book.",
+    "reasoned_assessment": "The separate source bundle now permits passage-level comparison and editorial recovery without guessing from summaries. This is preservation and discovery, not a newly revised or independently approved literary work.",
+    "unverified": "ZIP bytes/hash/version/inventory/membership, eight OVAs, editable manuscripts, actual authority policy, complete continuity/quality audit, cover authorship/exclusive rights, independent reader/author and commercial validation."
+  },
+  "retained_boundaries": [
+    "REF-LICH-ATTACHMENT remains unavailable with zero ZIP imports and null archive fields.",
+    "Earlier v0.4.48 reports/decisions remain intact.",
+    "P04 adaptation story/editions and current maturity/version are retained.",
+    "Rave snapshots, earlier archive, North Star catalog, transfers and assets are retained."
+  ],
+  "executed_repository_checks": [
+    {
+      "command": "python3 tools/test_reference_library.py",
+      "exit_code": 0,
+      "tests": 27
+    },
+    {
+      "command": "python3 tools/validate_repo.py",
+      "exit_code": 0,
+      "projects": 11,
+      "transfers": 14,
+      "assets": 9,
+      "legacy_sources": 2,
+      "local_file_links": 383
+    },
+    {
+      "command": "python3 tools/test_validate_repo.py",
+      "exit_code": 0,
+      "tests": 12
+    },
+    {
+      "command": "python3 tools/test_check_manifest.py",
+      "exit_code": 0,
+      "tests": 11
+    },
+    {
+      "command": "python3 tools/reference_library.py check",
+      "exit_code": 0,
+      "reference_records": 4,
+      "preserved_sources": 599,
+      "derived_pdf_texts": 10,
+      "explicit_exclusions": 140
+    },
+    {
+      "command": "python3 tools/check_manifest.py",
+      "exit_code": 0,
+      "maintained_file_count": 1065
+    },
+    {
+      "command": "git diff --check",
+      "exit_code": 0
+    }
+  ],
+  "preserved_baseline_files": {
+    "total_verified_unchanged": 897,
+    "product_payloads_and_other_project_documents": 297,
+    "scope": "Every existing projects/ file except the updated P04 README navigation, plus Rave references, North Star files, archive and legacy/transfer/asset registries; compared against baseline Git blobs."
+  },
+  "staged_preservation": {
+    "checked_payloads": 20,
+    "original_pdfs": 10,
+    "derived_texts": 10,
+    "actual_index_blobs_match_unfiltered_source_bytes": true,
+    "staged_file_count": 39
+  }
+}

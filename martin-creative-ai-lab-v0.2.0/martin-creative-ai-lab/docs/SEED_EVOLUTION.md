@@ -57,3 +57,11 @@ Contribution states differ from M0–M6: copying/planning is not adaptation,
 integration or external validation. Use bounded consumer experiments and maintain
 runtime, artistic judgment, independent human feedback and market evidence apart.
 North Star need not receive priority every session or force an engine/stack change.
+
+## Individually recovered literary PDFs — v0.32.1
+
+Ten supplied main PDFs now have preserved bytes and searchable, page-addressable
+text in the [literary library](../references/literature/lich/README.md). This fixes
+source availability for those books only. Keep conflicting title/metadata version
+labels, unavailable ZIP/policy and later historical reports separate. P04's prior
+adaptation is not retroactively approved or compared by this archival milestone.

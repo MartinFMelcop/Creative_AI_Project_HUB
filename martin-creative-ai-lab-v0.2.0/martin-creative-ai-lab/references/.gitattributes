@@ -1,3 +1,6 @@
 # Immutable source payloads retain original CRLF/trailing whitespace byte-for-byte.
 # Current code/navigation keep the repository's normal whitespace checks.
 rave-master/snapshots/*/source/** -text whitespace=cr-at-eol,-blank-at-eol,-blank-at-eof,-space-before-tab
+# Preserve exact mechanically extracted PDF text, including original page breaks.
+literature/lich/snapshots/*/source/*.pdf binary
+literature/lich/snapshots/*/text/*.txt -text whitespace=-blank-at-eol,-blank-at-eof

@@ -1,0 +1,425 @@
+{
+  "schema_version": 1,
+  "collection_id": "REF-LICH-MAIN-PDFS",
+  "bundle_sha256": "2ccc075083f18fc59dd733cdc7a3b163f9e78bd2fbdf6e0e8aaff7928f25bb34",
+  "identity_algorithm": "SHA-256 of ordered order/source_path/size_bytes/sha256 JSON; UTF-8, sorted keys, compact separators",
+  "received_at": "2026-10-15",
+  "provenance": "Ten individual user-supplied PDF attachments; membership in the inaccessible ZIP is unverified.",
+  "extraction": {
+    "tool": "pdftotext",
+    "implementation": "Poppler",
+    "version": "25.03.0",
+    "arguments": [
+      "-enc",
+      "UTF-8",
+      "-eol",
+      "unix"
+    ],
+    "page_separator": "U+000C, one trailing form feed per physical PDF page",
+    "limitations": "Mechanical derivative, not editable manuscript source or OCR. Covers/images and embedded attachments remain inside unchanged PDFs; running headers, page labels, line wraps and extraction order remain. PDF page numbers include cover/front matter, not printed narrative labels."
+  },
+  "files": [
+    {
+      "order": 1,
+      "title": "O Mundo Depois da Tumba",
+      "source_path": "01_O_Mundo_Depois_da_Tumba.pdf",
+      "local_path": "references/literature/lich/snapshots/main-pdfs-2ccc075083f1/source/01_O_Mundo_Depois_da_Tumba.pdf",
+      "classification": "historical_reference",
+      "status": "imported",
+      "attachment_id": "file_00000000da30820ebc344198f9a6d376",
+      "size_bytes": 14540596,
+      "sha256": "5a5e9ca5c259fed8a2c8431d73ee8224e87c52aa99ac8a26ff82a8d78f40afb1",
+      "git_blob_sha": "038ecb59b5f0cb914edce3c45a3e3ff0f757bbd4",
+      "page_count": 249,
+      "metadata": {
+        "Author": "Projeto O Lich Mais Velho da Tumba Mais Antiga",
+        "CreationDate": "D:20260905193040+00'00'",
+        "Creator": "(unspecified)",
+        "Keywords": "light novel, dark fantasy, noncanonical, weak draft, rewrite required, review snapshot",
+        "ModDate": "D:20260905193040+00'00'",
+        "Producer": "Lightnovel Darkfantasy v0.2.88 rebaseline pipeline",
+        "Subject": "Rascunho legado não canônico; prosa fraca/mal desenvolvida; revisão e reconstrução obrigatórias; pacote v0.2.88",
+        "Title": "O Mundo Depois da Tumba",
+        "Trapped": null
+      },
+      "encrypted": false,
+      "embedded_file_names": [],
+      "version_observations": {
+        "title_page_label": "v0.2.87",
+        "title_page_pdf_page": 2,
+        "producer_label": "v0.2.88"
+      },
+      "text": {
+        "local_path": "references/literature/lich/snapshots/main-pdfs-2ccc075083f1/text/01_O_Mundo_Depois_da_Tumba.txt",
+        "derived_from_sha256": "5a5e9ca5c259fed8a2c8431d73ee8224e87c52aa99ac8a26ff82a8d78f40afb1",
+        "sha256": "99dffb3dfce7072c8c1f7faf2a7becbaba4101908836b8151591f9c187d51784",
+        "size_bytes": 397549,
+        "page_count": 249,
+        "nonempty_page_count": 248,
+        "character_count": 382592
+      }
+    },
+    {
+      "order": 2,
+      "title": "Santos e Mortos",
+      "source_path": "02_Santos_e_Mortos.pdf",
+      "local_path": "references/literature/lich/snapshots/main-pdfs-2ccc075083f1/source/02_Santos_e_Mortos.pdf",
+      "classification": "historical_reference",
+      "status": "imported",
+      "attachment_id": "file_00000000d838820eb2803167bb89f3cf",
+      "size_bytes": 5716851,
+      "sha256": "698169daab6d66bca2d8bec56a8cffc054760380b3f96f0b6384308ef68c512c",
+      "git_blob_sha": "bca9c0f1b1b3d96fe979ba3e828e0f7b9e71a3f5",
+      "page_count": 183,
+      "metadata": {
+        "Author": "Projeto O Lich Mais Velho da Tumba Mais Antiga",
+        "CreationDate": "D:20260905193044+00'00'",
+        "Creator": "(unspecified)",
+        "Keywords": "light novel, dark fantasy, noncanonical, weak draft, rewrite required, review snapshot",
+        "ModDate": "D:20260905193044+00'00'",
+        "Producer": "Lightnovel Darkfantasy v0.2.88 rebaseline pipeline",
+        "Subject": "Rascunho legado não canônico; prosa fraca/mal desenvolvida; revisão e reconstrução obrigatórias; pacote v0.2.88",
+        "Title": "Santos e Mortos",
+        "Trapped": null
+      },
+      "encrypted": false,
+      "embedded_file_names": [
+        "Content Credentials"
+      ],
+      "version_observations": {
+        "title_page_label": "v0.2.87",
+        "title_page_pdf_page": 2,
+        "producer_label": "v0.2.88"
+      },
+      "text": {
+        "local_path": "references/literature/lich/snapshots/main-pdfs-2ccc075083f1/text/02_Santos_e_Mortos.txt",
+        "derived_from_sha256": "698169daab6d66bca2d8bec56a8cffc054760380b3f96f0b6384308ef68c512c",
+        "sha256": "f16b49c9e1b69d0484fe316cc746fc21b76b90db4e8b9a9dcb4d3642f45b648b",
+        "size_bytes": 248999,
+        "page_count": 183,
+        "nonempty_page_count": 182,
+        "character_count": 239119
+      }
+    },
+    {
+      "order": 3,
+      "title": "O Homem que Queria Vencer a Morte",
+      "source_path": "03_O_Homem_que_Queria_Vencer_a_Morte.pdf",
+      "local_path": "references/literature/lich/snapshots/main-pdfs-2ccc075083f1/source/03_O_Homem_que_Queria_Vencer_a_Morte.pdf",
+      "classification": "historical_reference",
+      "status": "imported",
+      "attachment_id": "file_000000001f70820eadd6ee0e36b92ad8",
+      "size_bytes": 4727165,
+      "sha256": "1d7bd330ceb70fce6e5e314d7999502b2e01f3cf33734d874e4ddc753d7d03e2",
+      "git_blob_sha": "3f3f5eb76521af2da1670e37859ce093e118d191",
+      "page_count": 252,
+      "metadata": {
+        "Title": "O Homem que Queria Vencer a Morte",
+        "Author": "Projeto O Lich Mais Velho da Tumba Mais Antiga",
+        "Subject": "Rascunho legado não canônico; prosa fraca/mal desenvolvida; revisão e reconstrução obrigatórias; pacote v0.2.88",
+        "Keywords": "light novel, dark fantasy, noncanonical, weak draft, rewrite required, review snapshot",
+        "Creator": null,
+        "Producer": "Lightnovel Darkfantasy v0.2.88 rebaseline pipeline",
+        "CreationDate": null,
+        "ModDate": null,
+        "Trapped": null
+      },
+      "encrypted": false,
+      "embedded_file_names": [],
+      "version_observations": {
+        "title_page_label": "v0.2.87",
+        "title_page_pdf_page": 2,
+        "producer_label": "v0.2.88"
+      },
+      "text": {
+        "local_path": "references/literature/lich/snapshots/main-pdfs-2ccc075083f1/text/03_O_Homem_que_Queria_Vencer_a_Morte.txt",
+        "derived_from_sha256": "1d7bd330ceb70fce6e5e314d7999502b2e01f3cf33734d874e4ddc753d7d03e2",
+        "sha256": "8199197d90d24e2f90908f85ea0d065896c820afe73dd177704e151808e4fe74",
+        "size_bytes": 322912,
+        "page_count": 252,
+        "nonempty_page_count": 251,
+        "character_count": 309460
+      }
+    },
+    {
+      "order": 4,
+      "title": "O Mundo que Herdou o Traidor",
+      "source_path": "04_O_Mundo_que_Herdou_o_Traidor.pdf",
+      "local_path": "references/literature/lich/snapshots/main-pdfs-2ccc075083f1/source/04_O_Mundo_que_Herdou_o_Traidor.pdf",
+      "classification": "historical_reference",
+      "status": "imported",
+      "attachment_id": "file_00000000c324820e9ad324d691302702",
+      "size_bytes": 4414193,
+      "sha256": "e1d2955aa204d43c7597d8f9b4449eeb328ec32a380f462a6a47b680365a8434",
+      "git_blob_sha": "05bb3055752145330ea2c849f44263705c8bf614",
+      "page_count": 151,
+      "metadata": {
+        "Title": "O Mundo que Herdou o Traidor",
+        "Author": "Projeto O Lich Mais Velho da Tumba Mais Antiga",
+        "Subject": "Rascunho legado não canônico; prosa fraca/mal desenvolvida; revisão e reconstrução obrigatórias; pacote v0.2.88",
+        "Keywords": "light novel, dark fantasy, noncanonical, weak draft, rewrite required, review snapshot",
+        "Creator": null,
+        "Producer": "Lightnovel Darkfantasy v0.2.88 rebaseline pipeline",
+        "CreationDate": null,
+        "ModDate": null,
+        "Trapped": null
+      },
+      "encrypted": false,
+      "embedded_file_names": [],
+      "version_observations": {
+        "title_page_label": "v0.2.87",
+        "title_page_pdf_page": 2,
+        "producer_label": "v0.2.88"
+      },
+      "text": {
+        "local_path": "references/literature/lich/snapshots/main-pdfs-2ccc075083f1/text/04_O_Mundo_que_Herdou_o_Traidor.txt",
+        "derived_from_sha256": "e1d2955aa204d43c7597d8f9b4449eeb328ec32a380f462a6a47b680365a8434",
+        "sha256": "31287fade5fdbdc6d86c651d92ed0148e1ee0b79a36f2b0155784f70b712694e",
+        "size_bytes": 206837,
+        "page_count": 151,
+        "nonempty_page_count": 150,
+        "character_count": 198761
+      }
+    },
+    {
+      "order": 5,
+      "title": "O Príncipe Morto",
+      "source_path": "05_O_Principe_Morto.pdf",
+      "local_path": "references/literature/lich/snapshots/main-pdfs-2ccc075083f1/source/05_O_Principe_Morto.pdf",
+      "classification": "historical_reference",
+      "status": "imported",
+      "attachment_id": "file_00000000abf0820e8d7aa9387537afa7",
+      "size_bytes": 4623071,
+      "sha256": "263f8c6b6e67ba792e0b3826012bc228460e35eb7662162ab3a21f13fe35cef9",
+      "git_blob_sha": "07c6309dc70a068bd32a1f7a78af47571f1c3ff4",
+      "page_count": 166,
+      "metadata": {
+        "Title": "O Príncipe Morto",
+        "Author": "Projeto O Lich Mais Velho da Tumba Mais Antiga",
+        "Subject": "Rascunho legado não canônico; prosa fraca/mal desenvolvida; revisão e reconstrução obrigatórias; pacote v0.2.88",
+        "Keywords": "light novel, dark fantasy, noncanonical, weak draft, rewrite required, review snapshot",
+        "Creator": null,
+        "Producer": "Lightnovel Darkfantasy v0.2.88 rebaseline pipeline",
+        "CreationDate": null,
+        "ModDate": null,
+        "Trapped": null
+      },
+      "encrypted": false,
+      "embedded_file_names": [],
+      "version_observations": {
+        "title_page_label": "v0.2.87",
+        "title_page_pdf_page": 2,
+        "producer_label": "v0.2.88"
+      },
+      "text": {
+        "local_path": "references/literature/lich/snapshots/main-pdfs-2ccc075083f1/text/05_O_Principe_Morto.txt",
+        "derived_from_sha256": "263f8c6b6e67ba792e0b3826012bc228460e35eb7662162ab3a21f13fe35cef9",
+        "sha256": "4a0130c1a1503f2073cdfef3d77cc27ac4e2861abdb845a47bc3ef18134d53b2",
+        "size_bytes": 224181,
+        "page_count": 166,
+        "nonempty_page_count": 165,
+        "character_count": 215264
+      }
+    },
+    {
+      "order": 6,
+      "title": "O Reino de Duas Histórias",
+      "source_path": "06_O_Reino_de_Duas_Historias.pdf",
+      "local_path": "references/literature/lich/snapshots/main-pdfs-2ccc075083f1/source/06_O_Reino_de_Duas_Historias.pdf",
+      "classification": "historical_reference",
+      "status": "imported",
+      "attachment_id": "file_000000003748820ea41c17618f0bcaa8",
+      "size_bytes": 4584262,
+      "sha256": "a34c37abe3909ced1096ad5458a6b59f71da3fdda9ba823c1b4413ca098b74a7",
+      "git_blob_sha": "c609ca17da65bc4aabb6178655a8867ceefa0a9c",
+      "page_count": 138,
+      "metadata": {
+        "Title": "O Reino de Duas Histórias",
+        "Author": "Projeto O Lich Mais Velho da Tumba Mais Antiga",
+        "Subject": "Rascunho legado não canônico; prosa fraca/mal desenvolvida; revisão e reconstrução obrigatórias; pacote v0.2.88",
+        "Keywords": "light novel, dark fantasy, noncanonical, weak draft, rewrite required, review snapshot",
+        "Creator": null,
+        "Producer": "Lightnovel Darkfantasy v0.2.88 rebaseline pipeline",
+        "CreationDate": null,
+        "ModDate": null,
+        "Trapped": null
+      },
+      "encrypted": false,
+      "embedded_file_names": [],
+      "version_observations": {
+        "title_page_label": "v0.2.87",
+        "title_page_pdf_page": 2,
+        "producer_label": "v0.2.88"
+      },
+      "text": {
+        "local_path": "references/literature/lich/snapshots/main-pdfs-2ccc075083f1/text/06_O_Reino_de_Duas_Historias.txt",
+        "derived_from_sha256": "a34c37abe3909ced1096ad5458a6b59f71da3fdda9ba823c1b4413ca098b74a7",
+        "sha256": "9cdfe0f3dde5202ea5ea403050f826e8a854c9aec05f396739a6ddd2d3445255",
+        "size_bytes": 185027,
+        "page_count": 138,
+        "nonempty_page_count": 137,
+        "character_count": 177425
+      }
+    },
+    {
+      "order": 7,
+      "title": "Os Herdeiros do Dragão",
+      "source_path": "07_Os_Herdeiros_do_Dragao.pdf",
+      "local_path": "references/literature/lich/snapshots/main-pdfs-2ccc075083f1/source/07_Os_Herdeiros_do_Dragao.pdf",
+      "classification": "historical_reference",
+      "status": "imported",
+      "attachment_id": "file_000000003818820e94d858d42009b26d",
+      "size_bytes": 4480689,
+      "sha256": "d73c67bcf7e1bb657562247d051e0acc64ff43c33c687f91cde0c72929b50b5e",
+      "git_blob_sha": "6cbacace7372e291fc3bac36e70de4f0c7cc4dbf",
+      "page_count": 111,
+      "metadata": {
+        "Title": "Os Herdeiros do Dragão",
+        "Author": "Projeto O Lich Mais Velho da Tumba Mais Antiga",
+        "Subject": "Rascunho legado não canônico; prosa fraca/mal desenvolvida; revisão e reconstrução obrigatórias; pacote v0.2.88",
+        "Keywords": "light novel, dark fantasy, noncanonical, weak draft, rewrite required, review snapshot",
+        "Creator": null,
+        "Producer": "Lightnovel Darkfantasy v0.2.88 rebaseline pipeline",
+        "CreationDate": null,
+        "ModDate": null,
+        "Trapped": null
+      },
+      "encrypted": false,
+      "embedded_file_names": [],
+      "version_observations": {
+        "title_page_label": "v0.2.87",
+        "title_page_pdf_page": 2,
+        "producer_label": "v0.2.88"
+      },
+      "text": {
+        "local_path": "references/literature/lich/snapshots/main-pdfs-2ccc075083f1/text/07_Os_Herdeiros_do_Dragao.txt",
+        "derived_from_sha256": "d73c67bcf7e1bb657562247d051e0acc64ff43c33c687f91cde0c72929b50b5e",
+        "sha256": "3617bd687277733af4d980d83d42bb2e7268db8e3667b81ec74a12ac9672c402",
+        "size_bytes": 154304,
+        "page_count": 111,
+        "nonempty_page_count": 110,
+        "character_count": 148728
+      }
+    },
+    {
+      "order": 8,
+      "title": "Os Mortos do Reino",
+      "source_path": "08_Os_Mortos_do_Reino.pdf",
+      "local_path": "references/literature/lich/snapshots/main-pdfs-2ccc075083f1/source/08_Os_Mortos_do_Reino.pdf",
+      "classification": "historical_reference",
+      "status": "imported",
+      "attachment_id": "file_00000000dca4820e9670b148d35bb52e",
+      "size_bytes": 4191003,
+      "sha256": "15c0ebaf980c668437f169eff7f23fa85e91900bac5d47d08635c269516addcf",
+      "git_blob_sha": "ca469821a81b032e6de494dea45817d0a4684324",
+      "page_count": 114,
+      "metadata": {
+        "Title": "Os Mortos do Reino",
+        "Author": "Projeto O Lich Mais Velho da Tumba Mais Antiga",
+        "Subject": "Rascunho legado não canônico; prosa fraca/mal desenvolvida; revisão e reconstrução obrigatórias; pacote v0.2.88",
+        "Keywords": "light novel, dark fantasy, noncanonical, weak draft, rewrite required, review snapshot",
+        "Creator": null,
+        "Producer": "Lightnovel Darkfantasy v0.2.88 rebaseline pipeline",
+        "CreationDate": null,
+        "ModDate": null,
+        "Trapped": null
+      },
+      "encrypted": false,
+      "embedded_file_names": [],
+      "version_observations": {
+        "title_page_label": "v0.2.87",
+        "title_page_pdf_page": 2,
+        "producer_label": "v0.2.88"
+      },
+      "text": {
+        "local_path": "references/literature/lich/snapshots/main-pdfs-2ccc075083f1/text/08_Os_Mortos_do_Reino.txt",
+        "derived_from_sha256": "15c0ebaf980c668437f169eff7f23fa85e91900bac5d47d08635c269516addcf",
+        "sha256": "561f21c3e5e7d2458d175adf1e327aaac90dba97387d51acc73efdb187005a18",
+        "size_bytes": 152752,
+        "page_count": 114,
+        "nonempty_page_count": 113,
+        "character_count": 147233
+      }
+    },
+    {
+      "order": 9,
+      "title": "A História do Traidor",
+      "source_path": "09_A_Historia_do_Traidor.pdf",
+      "local_path": "references/literature/lich/snapshots/main-pdfs-2ccc075083f1/source/09_A_Historia_do_Traidor.pdf",
+      "classification": "historical_reference",
+      "status": "imported",
+      "attachment_id": "file_0000000003e8820ea2828b3936ebfc5a",
+      "size_bytes": 4281583,
+      "sha256": "19e00082bca337c61f854475deafa2949db18317e141af7f5a02d225280b323d",
+      "git_blob_sha": "e4ef9c44600ef7b40c32213ef696db57bb43feed",
+      "page_count": 148,
+      "metadata": {
+        "Title": "A História do Traidor",
+        "Author": "Projeto O Lich Mais Velho da Tumba Mais Antiga",
+        "Subject": "Rascunho legado não canônico; prosa fraca/mal desenvolvida; revisão e reconstrução obrigatórias; pacote v0.2.88",
+        "Keywords": "light novel, dark fantasy, noncanonical, weak draft, rewrite required, review snapshot",
+        "Creator": null,
+        "Producer": "Lightnovel Darkfantasy v0.2.88 rebaseline pipeline",
+        "CreationDate": null,
+        "ModDate": null,
+        "Trapped": null
+      },
+      "encrypted": false,
+      "embedded_file_names": [],
+      "version_observations": {
+        "title_page_label": "v0.2.87",
+        "title_page_pdf_page": 2,
+        "producer_label": "v0.2.88"
+      },
+      "text": {
+        "local_path": "references/literature/lich/snapshots/main-pdfs-2ccc075083f1/text/09_A_Historia_do_Traidor.txt",
+        "derived_from_sha256": "19e00082bca337c61f854475deafa2949db18317e141af7f5a02d225280b323d",
+        "sha256": "13db1537f049c5426897e35cd884347b70c0659d68b31e6539ccb217a2aba474",
+        "size_bytes": 186318,
+        "page_count": 148,
+        "nonempty_page_count": 147,
+        "character_count": 179630
+      }
+    },
+    {
+      "order": 10,
+      "title": "O Rei e o Lich",
+      "source_path": "10_O_Rei_e_o_Lich.pdf",
+      "local_path": "references/literature/lich/snapshots/main-pdfs-2ccc075083f1/source/10_O_Rei_e_o_Lich.pdf",
+      "classification": "historical_reference",
+      "status": "imported",
+      "attachment_id": "file_0000000052d0820ea4176c3d30a446a8",
+      "size_bytes": 4591427,
+      "sha256": "ea1e72bc5b699fc156c8f379ff3e2cd8376dc7807ce5c3de345c1c26dfe5f0b3",
+      "git_blob_sha": "2f7824711a59e7f25fa08f19eb5bf239a0448884",
+      "page_count": 134,
+      "metadata": {
+        "Title": "O Rei e o Lich",
+        "Author": "Projeto O Lich Mais Velho da Tumba Mais Antiga",
+        "Subject": "Rascunho legado não canônico; prosa fraca/mal desenvolvida; revisão e reconstrução obrigatórias; pacote v0.2.88",
+        "Keywords": "light novel, dark fantasy, noncanonical, weak draft, rewrite required, review snapshot",
+        "Creator": null,
+        "Producer": "Lightnovel Darkfantasy v0.2.88 rebaseline pipeline",
+        "CreationDate": null,
+        "ModDate": null,
+        "Trapped": null
+      },
+      "encrypted": false,
+      "embedded_file_names": [],
+      "version_observations": {
+        "title_page_label": "v0.2.87",
+        "title_page_pdf_page": 2,
+        "producer_label": "v0.2.88"
+      },
+      "text": {
+        "local_path": "references/literature/lich/snapshots/main-pdfs-2ccc075083f1/text/10_O_Rei_e_o_Lich.txt",
+        "derived_from_sha256": "ea1e72bc5b699fc156c8f379ff3e2cd8376dc7807ce5c3de345c1c26dfe5f0b3",
+        "sha256": "81668afac76199a2853c3d00b092a214fa17387396390288501e20bae9fe12d8",
+        "size_bytes": 168562,
+        "page_count": 134,
+        "nonempty_page_count": 133,
+        "character_count": 162348
+      }
+    }
+  ]
+}

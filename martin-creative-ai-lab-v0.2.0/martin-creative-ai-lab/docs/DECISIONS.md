@@ -1236,3 +1236,22 @@ Origin maturity and contribution states differ; no current runtime consumer.
 Revisit storage/rights after accessible source inspection and contribution status
 after real destination execution; preserve portfolio independence and external
 human/market validation as separate decisions.
+
+## ADR-056 — preserve supplied literary PDFs as a separate source bundle
+
+**Date:** 2026-10-15 UTC. **Status:** SEED 0.32.1; main books I–X imported.
+
+The user supplied ten main PDFs to continue the blocked ZIP recovery. Keep each
+original byte-identical, including embedded covers, in a content-identified bundle.
+Use Poppler for mechanical UTF-8 extraction and the existing stdlib reference
+tool for integrity, discovery and literal page-addressable search. This avoids
+a new application/engine or runtime PDF dependency for a source-library task.
+
+Record title-page v0.2.87 and metadata v0.2.88/noncanonical draft status separately.
+Neither confirms the v0.4.1-named ZIP's membership, package version or authority
+policy. Keep the unavailable ZIP and earlier v0.4.48 records, P04's prose/editions
+and North Star contribution states intact. Text derivatives retain physical page
+breaks and headers; they are not authoring manuscripts or fresh literary approval.
+Complete source hashes and extraction do not establish full editorial continuity,
+embedded-art rights or human/commercial validation. Import further supplied parts
+with their own provenance; inspect the real policy before any canon claim.
