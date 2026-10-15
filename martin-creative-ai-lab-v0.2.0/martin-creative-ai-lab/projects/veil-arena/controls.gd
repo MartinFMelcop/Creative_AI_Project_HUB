@@ -2,8 +2,8 @@ extends RefCounted
 ## Native InputMap adapter. Pad actions are separate so disconnect cannot release keyboard input.
 
 const DEADZONE := 0.22
-const KEYS := {"left":[KEY_A,KEY_LEFT],"right":[KEY_D,KEY_RIGHT],"up":[KEY_W,KEY_UP],"down":[KEY_S,KEY_DOWN],"strike":[KEY_J],"seal":[KEY_K],"dash":[KEY_SPACE],"parry":[KEY_L],"begin":[KEY_ENTER],"pause":[KEY_ESCAPE],"help":[KEY_F1],"mute":[KEY_M]}
-const BUTTONS := {"left":JOY_BUTTON_DPAD_LEFT,"right":JOY_BUTTON_DPAD_RIGHT,"up":JOY_BUTTON_DPAD_UP,"down":JOY_BUTTON_DPAD_DOWN,"strike":JOY_BUTTON_X,"seal":JOY_BUTTON_Y,"dash":JOY_BUTTON_B,"parry":JOY_BUTTON_LEFT_SHOULDER,"begin":JOY_BUTTON_A,"pause":JOY_BUTTON_START,"help":JOY_BUTTON_BACK,"mute":JOY_BUTTON_RIGHT_SHOULDER}
+const KEYS := {"left":[KEY_A,KEY_LEFT],"right":[KEY_D,KEY_RIGHT],"up":[KEY_W,KEY_UP],"down":[KEY_S,KEY_DOWN],"strike":[KEY_J],"seal":[KEY_K],"dash":[KEY_SPACE],"parry":[KEY_L],"begin":[KEY_ENTER],"pause":[KEY_ESCAPE],"help":[KEY_F1],"mute":[KEY_M],"practice":[KEY_P]}
+const BUTTONS := {"left":JOY_BUTTON_DPAD_LEFT,"right":JOY_BUTTON_DPAD_RIGHT,"up":JOY_BUTTON_DPAD_UP,"down":JOY_BUTTON_DPAD_DOWN,"strike":JOY_BUTTON_X,"seal":JOY_BUTTON_Y,"dash":JOY_BUTTON_B,"parry":JOY_BUTTON_LEFT_SHOULDER,"begin":JOY_BUTTON_A,"pause":JOY_BUTTON_START,"help":JOY_BUTTON_BACK,"mute":JOY_BUTTON_RIGHT_SHOULDER,"practice":JOY_BUTTON_RIGHT_STICK}
 var using_gamepad := false
 var last_device := -1
 

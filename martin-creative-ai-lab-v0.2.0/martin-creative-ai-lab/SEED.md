@@ -70,14 +70,14 @@ Se apenas este arquivo estiver disponível, ele é suficiente para iniciar a Fas
 |---|---|
 | Repository | MartinFMelcop/Creative_AI_Project_HUB; actual Git root `/workspace/Creative_AI_Project_HUB`; wrapper retained |
 | Preserved sources | Old ZIP: 175 Rave / 3 WebSocket texts unchanged. New Rave library: 589 readable / 140 excluded from 729; ten main and eight OVA PDFs (2,407 pages) plus derived text; ZIP/policy unavailable |
-| Current milestone | P11 0.7.0 complete snapshot print/PDF reports; all entries, actions and revisions independent of reader pagination |
-| Runtime | Existing Node 24/SQLite/Socket.IO workspace and self-contained HTML; no dependency or storage-schema change |
-| Evidence | Chromium offline interaction/PDF and complete extracted-text counts; see `docs/STATE.md` and `evidence/realtime-chat/PRINT_RUN.json` |
-| Limits | Implementing-agent review; no independent team, other-browser, physical printing, PDF/UA or full-capacity PDF validation |
-| Next action | Compare independent product opportunities afresh; seek actual handover, native player and literary feedback |
-| Other products | P01/P03 0.4.0, P04 0.2.0, P05 0.3.0, P06/P08/P10 0.5.0 and P02 0.2.1 retained |
-| Rules / assets | Existing maturity, schemas, transfers, sources/media/releases retained; North Star has no runtime consumer |
-| Attribution | Clean baseline `0392051`; Codex implementation and scripted/visual review, not human validation |
+| Current milestone | P06 Veilbreak 0.6.0 native sweep-practice/review loop and verified standalone Linux player |
+| Runtime | Godot 4.6.3 standard; shared real combat with native keyboard/mapped-pad practice controls; no new media |
+| Evidence | 188 checks each on source/final ZIP resources; OpenGL and old/new release X11 journeys; see `docs/STATE.md` and `evidence/veil-arena/PRACTICE_RUN.json` |
+| Limits | Scripted/system input and Codex review; no independent learning, physical controller/listening, accessibility, other-OS or commercial validation |
+| Next action | Compare portfolio opportunities afresh; observe unassisted practice-to-trial transfer alongside independent readers/native delivery/real handovers |
+| Other products | P01/P03 0.4.0, P04 0.2.0, P05 0.3.0, P08/P10 0.5.0, P11 0.7.0 and P02 0.2.1 retained |
+| Rules / assets | Existing maturity, references, transfers and media retained; North Star still has no runtime consumer |
+| Attribution | Clean local `b976b0b` and remote `3320ef7` had identical trees; normal fetch/merge reconciled ancestry; Codex implementation and bounded execution |
 
 Registry evidence paths must resolve to existing files inside the lab; working
 paths must be directories and legacy-source IDs must exist. This documentary
@@ -250,7 +250,7 @@ Identificadores persistem mesmo quando nomes mudam. Um projeto arquivado pode co
 | P03 | Tokyo 80s | Original music, timing and sustained interaction | Midnight Signal and Rain Circuit with track selection/transition | P03 0.4.0 / P08 0.5.0 original-pitch backing; human play/listening pending |
 | P04 | O Lich mais velho da tumba mais antiga / Darsen reading editions | Narrative, translation and reader production | Complete Portuguese story and English EPUB/PDF | New standalone adaptation 0.2.0; Portuguese 0.1.0 preserved, no historical manuscript restoration |
 | P05 | The Dark Knight / Cinderwatch | Turn-based seed, AGI, rows and states | Native three-encounter tactical rescue campaign | Native 0.3.0 self-contained Linux player; historical RMXP packages absent |
-| P06 | Véu Partido / Veilbreak | Native combat trial; historical 3D RPG seed | Animated two-phase arena with committed contact, source and executed PCK | New 0.5.0 timed counter trial and Linux player; missing Unity starter remains historical |
+| P06 | Véu Partido / Veilbreak | Native combat trial; historical 3D RPG seed | Animated two-phase arena with committed contact, source and executed PCK | New 0.6.0 timed counter trial, sweep practice and Linux player; missing Unity starter remains historical |
 | P07 | Visual Generation & Asset Lab | Native visual production | Three paintings plus two real motion atlases consumed by P06 | 0.2.0 production/integration; independent artist approval absent |
 | P08 | Audio, Poetry & Music Lab | Original musical production and integration | Two P03 stages and P06 native soundscape | Real masters/exports/scores; no album or human listening approval |
 | P09 | AI Delivery & Operations Cases | Carreira real e avaliação simulada | Case de entrega, análise de workflow e rubricas | Base profissional lida; cases anteriores pendentes |
@@ -437,7 +437,7 @@ plans and the breadcrumb `VeuPartido_UnityStarter_v0.0.47.zip`. The starter is n
 present, and plans are not executable evidence. No restored Unity code or franchise
 characters enter the new destination.
 
-[Veilbreak: The Bell Warden](projects/veil-arena/README.md) 0.5.0 is a new native
+[Veilbreak: The Bell Warden](projects/veil-arena/README.md) 0.6.0 is a new native
 Godot 2D trial with painted characters/courtyard, fourteen semantic cues and two
 aligned phase-responsive music loops. P07/P08 assets are actually imported, mixed
 and packed; M/mouse mute and pause/resume/restart govern their lifecycle. One opponent has locked sweep/charge/wave warnings, a faster second
@@ -460,6 +460,14 @@ shipped/rebuilt/current Linux resources pass 152 checks each; a declared policy
 parries both phases and lands actual blade counters. The identical executed
 0.4.0/0.5.0 close-sweep fixture verifies the new capability; the prior completion
 route retains its result. No physical-controller, human balance or commercial claim.
+
+Version 0.6.0 adds optional phase-one sweep practice with the real guard/collision,
+resource costs and blade counter. Explicit outcome review/retry/exit supports
+repetition without another full encounter; practice never grants a trial victory.
+Source and final Linux resources each pass 188 native checks; baseline/current
+full-trial policy results match. Actual release keyboard and OpenGL execution
+are separate from physical input/listening and independent learning evidence.
+[Practice execution](evidence/veil-arena/PRACTICE_RUN.json) records scope and limits.
 
 Godot/GDScript suits the small physics/presentation loop and available standard
 editor. Unity/editor/starter remain absent; .NET is now installed for P01, but

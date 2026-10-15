@@ -34,7 +34,7 @@ def main():
     group.add_argument('--templates', type=Path, help='Official 4.6.3 standard TPZ; full published digest is checked.')
     group.add_argument('--template', type=Path, help='Already extracted official linux_release.x86_64; exact digest is checked.')
     p.add_argument('--godot', default='godot')
-    p.add_argument('--output', type=Path, default=ROOT/'dist/veilbreak-linux-0.5.0.zip')
+    p.add_argument('--output', type=Path, default=ROOT/'dist/veilbreak-linux-0.6.0.zip')
     args = p.parse_args()
     engine = shutil.which(args.godot)
     if not engine:
@@ -78,7 +78,7 @@ def main():
         for name in ['GODOT-LICENSE.txt','GODOT-COPYRIGHT.txt']:
             shutil.copyfile(ROOT/'third-party'/name, bundle/name)
         shutil.copyfile(ROOT/'media/provenance.json', bundle/'ASSET-PROVENANCE.json')
-        (bundle/'README.txt').write_text('''Veilbreak 0.5.0 — The Bell Warden
+        (bundle/'README.txt').write_text('''Veilbreak 0.6.0 — The Bell Warden
 
 Linux x86_64 desktop prototype. Extract the entire Veilbreak folder, then run
 ./veilbreak.x86_64 (or open it from your file manager). Keep veilbreak.pck beside it.
@@ -87,14 +87,21 @@ Your operating system still needs a display/audio stack and OpenGL 3.3 support.
 If an archive tool drops the executable permission: chmod +x veilbreak.x86_64
 
 Keyboard: WASD/arrows move; J blade; K seal; L parry; Space dodge; Enter begin/resume/restart;
-Escape pause; F1 tactics; M sound. Close the window to exit.
+Escape pause; F1 tactics; M sound. P opens practice from menus or leaves a drill.
+Close the window to exit.
 Mapped gamepad: left stick/D-pad move; west (X) blade; north (Y) seal; LB parry; east (B) dodge;
-south (A) begin/resume/restart; Start pause; Back tactics; RB sound.
+south (A) begin/resume/next take/restart; Start pause; Back tactics; RB sound; R3 practice.
 The blade/seal aim toward the Warden when preparation begins. Press per action;
 holding a combat button does not repeat. Controller loss pauses; resume explicitly.
 Parry close sweeps within 110px: guard is live 60-180ms after pressing L/LB.
 It costs 20 resolve; success recovers 8 and opens the Warden for a 1.2s counter.
 A missed guard recovers until 380ms. Charge, wave and violet echo bypass guard.
+
+Sweep practice repeats the actual phase-one close sweep, stopping for review.
+Time L/LB then land J/X during the real opening; costs and collision are unchanged.
+Early/late/out-of-range guards and dodging do not count as a clean parry + counter.
+Enter/A starts another take; P/R3 leaves practice for the title/full trial.
+Practice is not a trial victory or evidence of human learning.
 
 This is an evaluation prototype. Physical controller models, other platforms,
 independent enjoyment/accessibility and commercial readiness remain unverified.

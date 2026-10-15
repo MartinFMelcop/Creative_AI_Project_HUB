@@ -1,6 +1,6 @@
 # P06 — Veilbreak: The Bell Warden
 
-Version **0.5.0**, a complete native Godot 2D boss encounter. Move, strike,
+Version **0.6.0**, a complete native Godot 2D boss encounter. Move, strike,
 cast seals, parry close sweeps, dodge locked warnings, exploit an open core and survive two phases.
 The trial has title/controls, victory/defeat, actual results, pause and restart.
 Painted characters/courtyard, distinct attack sounds and phase-responsive music
@@ -22,10 +22,36 @@ separate scripted engine input, release-window keyboard input and Codex review.
 The [prior motion demonstration](../../evidence/veil-arena/motion-preview.mp4)
 remains a declared-fixture pose/timing video from 0.3.0, not human gameplay.
 
+## Rehearse a close sweep
+
+Choose **Sweep practice** on the title/result menu, or press **P / right-stick
+click (R3)** there. Each take begins 85px from the Warden and repeats the actual
+phase-one 850ms sweep warning. The countdown helps you locate the timing; the
+full trial retains its existing cues. Press **L / LB** shortly before contact,
+then **J / X** during the real opening. Movement, facing, costs, startup,
+collision, damage and cancellation still apply. There is no automatic counter.
+
+The review distinguishes no guard, too early, too late, outside the 110px guard
+range, avoiding the sweep and parrying without a blade counter. A clean take
+requires a real parry and blade contact without damage. **Enter / A** or **Next
+sweep** starts another take with fresh health/resources and a separate round
+count. Nothing repeats while reviewing. **P / R3** leaves practice for the title;
+**Enter / A** there begins a fresh full trial. Pause, tactics and controller-loss
+handling work during a drill. Normal trial combat, including a paused trial, cannot switch into practice.
+
+![Actual standalone 0.6.0 review after an unguarded sweep, driven by X11 keys](../../evidence/veil-arena/practice-review.png)
+
+Practice covers one phase-one sweep, not phase-two tempo, charge, wave or echo.
+Its reviewed takes/clean counters are session observations, not trial victories
+or evidence that a human learned. The complete two-phase trial remains intact.
+[Execution and baseline comparison](../../evidence/veil-arena/PRACTICE_RUN.json)
+separate native scripted combat, system-keyboard release execution and Codex
+visual judgment. All earlier Linux ZIPs remain available as historical releases.
+
 ## Play
 
-[Download the standalone Linux x86_64 player](dist/veilbreak-linux-0.5.0.zip)
-([SHA-256](dist/veilbreak-linux-0.5.0.zip.sha256)). Extract the entire `Veilbreak/`
+[Download the standalone Linux x86_64 player](dist/veilbreak-linux-0.6.0.zip)
+([SHA-256](dist/veilbreak-linux-0.6.0.zip.sha256)). Extract the entire `Veilbreak/`
 folder, then run `./veilbreak.x86_64` or open it in your file manager. Keep its
 `veilbreak.pck` beside the executable. No Godot, .NET, SDK or source checkout is
 needed to play. If your archive tool drops its executable permission, use
@@ -34,11 +60,13 @@ system requirements. Close the window to exit; progress is session-only.
 
 The actual 4.6.3 Linux **release export template**, six-file bundle and checksums
 are verified. This is an OS executable, not the editor renamed as a player.
-The final ELF ran outside checkout via actual X11 keyboard events: title, combat,
-L guard, pause, tactics, idle defeat and restart. Its exported PCK passed native combat,
-controller, audio, motion and parry checks under the editor's test-script executor.
-Release templates do not include that executor; those two kinds of evidence are
-explicitly separated in [the execution record](../../evidence/veil-arena/PARRY_RUN.json).
+The 0.6.0 ELF ran outside checkout through X11 keys: title, practice, review,
+retry, pause, leave practice and begin/pause the full trial. Its exact exported
+PCK passed 188 checks under the editor's test-script executor. Release templates
+do not include that executor; those two kinds of evidence remain separate in
+[the practice record](../../evidence/veil-arena/PRACTICE_RUN.json). The prior
+[0.5.0 record](../../evidence/veil-arena/PARRY_RUN.json) retains its actual release
+L-guard, tactics, defeat and restart journey.
 
 Source development and the separate current resource pack remain available with
 **Godot 4.6.3 standard** (no .NET):
@@ -59,14 +87,15 @@ controller models are unverified; no commercial readiness is claimed.
 | K | Seal, 34 resolve, 1.1s cooldown; gather for 75ms, then release; 8 damage and 36 ward pressure on impact |
 | L | Timed close-sweep guard, 20 resolve, 0.9s cooldown; success restores 8 resolve and opens a 1.2s counter window |
 | Space | Directional dodge, 25 resolve, 0.65s cooldown; cancels a pending action; first 0.16s invulnerable, 0.20s movement |
-| Enter | Begin, resume or restart after a result |
+| Enter | Begin, resume, next practice take or restart after a result |
+| P | Enter practice from a menu; leave a practice take/review for the title |
 | Esc | Pause/resume; focus loss also requests pause |
 | F1 / Tactics button | Keyboard or native mouse help; freezes the encounter until explicit resume |
 | M / Sound button | Mute or restore music and cues; the choice survives encounter restart |
 
 Gamepad uses Godot's standard mapped layout: left stick or D-pad moves;
 **west/X** blade, **north/Y** seal, **east/B** dodge and **south/A** begin/resume/
-restart. **LB** parries, **Start** pauses, **Back** opens/closes tactics and **RB** toggles sound.
+restart. **LB** parries, **R3** enters/leaves practice, **Start** pauses, **Back** opens/closes tactics and **RB** toggles sound.
 An analog circular deadzone of 0.22 prevents drift while retaining partial speed.
 Diagonal and combined keyboard/pad input cannot exceed normal movement speed.
 Meaningful input switches hints; tiny stick drift does not. One local player is
@@ -172,6 +201,8 @@ godot --headless --path . --script tests/presentation.gd
 godot --headless --path . --script tests/motion.gd
 godot --headless --path . --script tests/controls.gd --fixed-fps 60
 godot --headless --path . --script tests/parry.gd --fixed-fps 60
+godot --headless --path . --script tests/practice.gd --fixed-fps 60
+godot --headless --path . --script tests/audio_reset.gd
 godot --headless --path . --export-pack Linux dist/veilbreak.pck
 # Only after accepting new source PNGs; does not modify their pixels:
 godot --headless --path . --script tools/build_motion_catalog.gd
@@ -234,10 +265,10 @@ combat comparison, actual OpenGL frames/movie and source/pack checks.
 [Prior presentation execution](../../evidence/veil-arena/PRESENTATION_RUN.json) separates
 0.2.0 media production, import, mix and rendering.
 [Initial encounter execution](../../evidence/veil-arena/RUN.json) remains historical.
-The new 36 parry checks use real collision paths, clock/range/facing boundaries,
+The 0.5.0 addition of 36 parry checks uses real collision paths, clock/range/facing boundaries,
 actual L and mapped-LB events, cost/recovery/cancel/pause/reset and simultaneous
-hazards. Source, current PCK, a fresh PCK export and final Linux bundle resources
-pass **152 checks each** (24 encounter, 26 audio, 36 motion, 30 pad, 36 parry).
+hazards. That version's source, PCK, fresh PCK export and Linux resources
+passed **152 checks each** (24 encounter, 26 audio, 36 motion, 30 pad, 36 parry).
 The scripted close policy deliberately waits for a parry in each phase and wins
 in 23.72 simulated seconds with 6 health, two parries and seven actual blade hits.
 Its perfect state knowledge and different strategy prevent a human difficulty or
@@ -257,3 +288,26 @@ does not establish exclusive rights or commercial clearance for the whole portfo
 Next: unassisted keyboard/controller trials comparing parry, dodge and ranged
 pressure; assess timing readability and hazard distinction before changing balance. A Unity/C# or 3D destination remains a
 separate decision, requiring its real starter/tools and a product reason.
+
+## Practice verification — 0.6.0
+
+The source and exact PCK extracted from the final Linux ZIP each pass 188 native
+checks: encounter 24, presentation/audio 26, motion 36, controls 30, parry 36 and
+practice 33, repeated audio resets 3. Presentation/audio uses ordinary wall-time execution, not accelerated
+`--fixed-fps`. OpenGL practice/presentation and actual standalone X11 keyboard
+journeys also executed. The old and new full parry policy both win at the same
+23.7167 simulated seconds, with six health, two parries and seven blade hits.
+That is controlled regression evidence, not a human balance/enjoyment finding.
+
+The 0.6.0 producer reuses the exact official release template recovered from the
+preserved 0.5.0 ZIP, matching its pinned SHA-256 before exporting fresh resources.
+No engine download or alternate runtime is implied. ALSA null was unsuitable for
+clocked audio tests on both baseline/current; the paced Godot Dummy driver passes
+actual AudioServer mixing checks. Physical listening remains unverified.
+
+Repeated take resets also exposed a pre-existing race between starting the two
+music streams: the baseline's 64-reset probe observed up to 81.27ms skew. Starts
+and resets now group both transports under one AudioServer lock. The same final
+probe records zero skew across 64 resets and still detects an actual shifted
+stream. Existing 15ms presentation assertions remain unchanged. CI runs both new
+audits against source, current/rebuilt packs and delivered/rebuilt players.

@@ -1,0 +1,273 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-15",
+  "project": "P06",
+  "version": "0.6.0",
+  "baseline": {
+    "local_commit": "b976b0b54a6ac7f63264b641f5748775c7b816a7",
+    "remote_main": "3320ef74e9fa8e2912c784df34636a022ec0597a",
+    "identical_tree": "5cea9e4c43ce6a9db153dd8d0ace8e08433c3773",
+    "synchronization": "Normal Git fetch then non-force merge reconciled the prior integration-created commit; working changes were preserved."
+  },
+  "environment": {
+    "os": "Linux x86_64 managed cloud",
+    "engine": "Godot 4.6.3.stable.official.7d41c59c4 standard",
+    "display": "Xorg 1.21.1.16 dummy 1280x800; OpenGL 4.5 Mesa 25.0.7 llvmpipe",
+    "audio": "Godot Dummy paced virtual output; actual AudioServer capture, no physical listening",
+    "input": "Godot synthetic events and X11 XTest system keyboard injection; no physical controller or independent player"
+  },
+  "portfolio_decision": {
+    "alternatives": [
+      "P01 standalone distribution",
+      "P11 actual handover usefulness",
+      "P04 source-based literary revision",
+      "P06 close-guard mastery barrier"
+    ],
+    "selected": "Optional native practice of the actual phase-one close sweep and blade counter.",
+    "baseline_limitation": "Only the complete fight repeats the 120ms live guard opportunity; the old shipped player ignores P on its title.",
+    "design": "Real timing/range/facing/costs, explicit error review/retry/exit, no automatic counter and no trial victory from a drill.",
+    "assessment": "Controlled repetition and early/late/range/no-counter feedback make the committed action inspectable. Human learning/feel remain unverified."
+  },
+  "source_checks": [
+    {
+      "test": "encounter",
+      "exit": 0,
+      "clean": true,
+      "summary": [
+        "ENCOUNTER_CHECKS {\"checks\":24,\"failures\":[]}"
+      ]
+    },
+    {
+      "test": "motion",
+      "exit": 0,
+      "clean": true,
+      "summary": [
+        "MOTION_CHECKS {\"checks\":36,\"failures\":[]}"
+      ]
+    },
+    {
+      "test": "controls",
+      "exit": 0,
+      "clean": true,
+      "summary": [
+        "CONTROL_CHECKS {\"checks\":30,\"failures\":[],\"game_version\":\"0.6.0\",\"physical_gamepad\":false}"
+      ]
+    },
+    {
+      "test": "parry",
+      "exit": 0,
+      "clean": true,
+      "summary": [
+        "PARRY_CHECKS {\"checks\":36,\"failures\":[]}"
+      ]
+    },
+    {
+      "test": "practice",
+      "exit": 0,
+      "clean": true,
+      "summary": [
+        "PRACTICE_CHECKS {\"checks\":33,\"failures\":[],\"scope\":\"native shared combat and synthetic input; not human learning\"}"
+      ]
+    },
+    {
+      "test": "presentation",
+      "exit": 0,
+      "clean": true,
+      "summary": [
+        "PRESENTATION_CHECKS {\"audio_frames\":233472,\"checks\":26,\"display\":\"headless\",\"failures\":[],\"measured_peak\":0.841408967971802}"
+      ]
+    },
+    {
+      "test": "audio_reset",
+      "exit": 0,
+      "clean": true,
+      "summary": [
+        "AUDIO_RESET_CHECKS {\"checks\":3,\"failures\":[],\"resets\":64,\"samples\":[0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0],\"worst_skew\":0.0}"
+      ]
+    }
+  ],
+  "final_zip_pack_checks": [
+    {
+      "test": "encounter",
+      "exit": 0,
+      "clean": true,
+      "summary": [
+        "ENCOUNTER_CHECKS {\"checks\":24,\"failures\":[]}"
+      ]
+    },
+    {
+      "test": "motion",
+      "exit": 0,
+      "clean": true,
+      "summary": [
+        "MOTION_CHECKS {\"checks\":36,\"failures\":[]}"
+      ]
+    },
+    {
+      "test": "controls",
+      "exit": 0,
+      "clean": true,
+      "summary": [
+        "CONTROL_CHECKS {\"checks\":30,\"failures\":[],\"game_version\":\"0.6.0\",\"physical_gamepad\":false}"
+      ]
+    },
+    {
+      "test": "parry",
+      "exit": 0,
+      "clean": true,
+      "summary": [
+        "PARRY_CHECKS {\"checks\":36,\"failures\":[]}"
+      ]
+    },
+    {
+      "test": "practice",
+      "exit": 0,
+      "clean": true,
+      "summary": [
+        "PRACTICE_CHECKS {\"checks\":33,\"failures\":[],\"scope\":\"native shared combat and synthetic input; not human learning\"}"
+      ]
+    },
+    {
+      "test": "presentation",
+      "exit": 0,
+      "clean": true,
+      "summary": [
+        "PRESENTATION_CHECKS {\"audio_frames\":229376,\"checks\":26,\"display\":\"headless\",\"failures\":[],\"measured_peak\":0.841408967971802}"
+      ]
+    },
+    {
+      "test": "audio_reset",
+      "exit": 0,
+      "clean": true,
+      "summary": [
+        "AUDIO_RESET_CHECKS {\"checks\":3,\"failures\":[],\"resets\":64,\"samples\":[0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0],\"worst_skew\":0.0}"
+      ]
+    }
+  ],
+  "commands": {
+    "combat_and_practice": "godot --headless --path . --script tests/NAME.gd --fixed-fps 60 (encounter, motion, controls, parry, practice)",
+    "presentation": "godot --headless --audio-driver Dummy --path . --script tests/presentation.gd (ordinary wall time); tests/audio_reset.gd also uses ordinary wall time",
+    "pack": "godot --headless --audio-driver Dummy --main-pack dist/veilbreak.pck --script ABSOLUTE_TEST_PATH; fixed-fps 60 for combat tests only",
+    "producer": "python3 tools/export_linux.py --template /workspace/work/veil-practice/linux-player.x86_64",
+    "package": "python3 tools/check_linux.py",
+    "media": "python3 tools/check_media.py"
+  },
+  "before_after": {
+    "full_trial": "Old/current native parry policies both win at 23.7166666666666 simulated seconds with hp 6, two parries, seven blade hits and no damage.",
+    "release_window": "Both old/new standalone ZIPs extracted and launched outside checkout. XTest P leaves 0.5.0 at title; 0.6.0 reaches genuine unguarded-sweep review with hp 5, then Enter retries, Escape pauses, P exits, Enter begins full trial, Escape pauses it. Native windows remained running until explicitly terminated. Screenshots inspected by Codex.",
+    "practice": "33 assertions verify initial shared 850ms sweep at 85px, genuine damage, early/late/out-of-range guard failure, parry without automatic damage, real 24-damage counter, explicit review, preserved counts/reset combat state, pause/resume/tactics, clean full-trial entry and P/R3/controller-loss events; a paused trial cannot be discarded by the practice shortcut."
+  },
+  "opengl": {
+    "practice": {
+      "checks": 33,
+      "failures": []
+    },
+    "presentation": {
+      "audio_frames": 229376,
+      "checks": 26,
+      "display": "X11",
+      "failures": [],
+      "measured_peak": 0.841408967971802
+    },
+    "visual_review": "Codex inspected actual windup, failed/clean review, baseline title and final release review; no independent usability finding."
+  },
+  "distribution": {
+    "archive": "projects/veil-arena/dist/veilbreak-linux-0.6.0.zip",
+    "bytes": 32574700,
+    "entries": 6,
+    "template_sha256": "2c78919325d7f29fa7607287c7c1eeac367ea4c94e7b8b6f5f4c6b20492f73d0",
+    "template_origin": "Byte-identical official release runtime recovered from retained 0.5.0 ZIP; producer verified the pinned digest before fresh export.",
+    "current_pack_equals_final_zip_pack": true,
+    "historical_releases": "0.4.0 and 0.5.0 ZIPs unchanged; original art/audio/provenance assets unchanged."
+  },
+  "diagnosed_failures": [
+    {
+      "issue": "Fresh source test before Godot import could not load imported textures",
+      "resolution": "Imported assets, then executed untouched baseline successfully before comparing current behavior."
+    },
+    {
+      "issue": "One extra tactics line exceeded native viewport",
+      "resolution": "Compacted the real help copy; original motion/parry viewport assertions now pass unchanged."
+    },
+    {
+      "issue": "Unpaced ALSA null fails four transport/silence assertions",
+      "baseline": "The same four failures reproduced on untouched 0.5.0 source.",
+      "resolution": "Use paced Godot Dummy output, which passes all existing mixer assertions in source, final pack and OpenGL. No assertion relaxation; a separate real reset race was reproduced and fixed."
+    },
+    {
+      "issue": "Accelerated fixed-FPS invocation gave presentation too little wall time for mixing",
+      "resolution": "Run presentation with its documented ordinary-time command; final pack passes all 26 checks."
+    },
+    {
+      "issue": "Sandbox socket restriction initially resembled unavailable Git proxy",
+      "resolution": "Authorized execution outside that restriction fetched origin successfully; use normal Git publication."
+    },
+    {
+      "issue": "Paced Dummy presentation intermittently failed alignment after reset",
+      "baseline": "New 64-reset audit reproduced 81.2698439694941ms worst skew on unchanged baseline source.",
+      "resolution": "Atomically start/reset both stems in one mixer instant. The same 64-reset audit observes zero skew in source and final pack, while real shifted-stream detection and original presentation checks still pass."
+    }
+  ],
+  "limitations": [
+    "One phase-one sweep drill only; no phase-two, charge, wave or echo curriculum",
+    "Session counters are not persistent progression or human learning evidence",
+    "No physical input/listening, independent enjoyment/accessibility, other OS or commercial validation",
+    "Release window keyboard execution and editor test-script execution of packaged resources are separate proofs"
+  ],
+  "artifact_sha256": {
+    "projects/veil-arena/arena.gd": "a09d5398015f00214f5cc16ace994b46034e2b2997098be6cac72f71a664cf7e",
+    "projects/veil-arena/controls.gd": "5c7b4885b8e4caea1ede7e997d5a149da3b121aa69550de90643bd9e53de0da3",
+    "projects/veil-arena/project.godot": "4c00630791c4673f47d9528fb44df56e164eb2af28dfd53a8f3514d44c0ce714",
+    "projects/veil-arena/tests/practice.gd": "8649801311a103d5cb0127c94434df9341f08053d91d880ac31e30f60710f99f",
+    "projects/veil-arena/tools/export_linux.py": "0e074da6a985425c9b6f0fa91271d8ced8a1018dc78c8001d730b54596d4f1d9",
+    "projects/veil-arena/dist/veilbreak.pck": "81d345dc74510a75363b065112521d0c6c3aab3e11a9d789eba53d1ebd93d27b",
+    "projects/veil-arena/dist/veilbreak-linux-0.6.0.zip": "2cd5af925bf487e17f1f77df7965a1824943ebf4ed443e22f86f9237e9d8f19d",
+    "evidence/veil-arena/practice-review.png": "38caf2edc511d92b4821fa5ba695c5018f1ea8441eaa132274977ea0228446a8",
+    "evidence/veil-arena/practice-counter.png": "5cbbad1fcf5d9cbbd0409129d086741fcc2dee92d82711c1cba01cab5e420e47",
+    "projects/veil-arena/sound.gd": "9c8159e676f713bd1bf60ca4caf967689c8628b4f9a9ba78b30527b92e550cf5",
+    "projects/veil-arena/tests/audio_reset.gd": "5225f0928b98acb1afba42819eab81ad5e40c2e252a3f44ec40477bede371267",
+    "../../.github/workflows/lab-checks.yml": "8e58403ef2c00106ac4d868ef8899e86d4342c2f5d2f5736ae2c1d35e01be45a"
+  },
+  "repository_checks": {
+    "validator": "11 projects, 14 transfers, 9 assets, 2 legacy sources; 455 local file links PASS",
+    "validator_regressions": 13,
+    "manifest_regressions": 11,
+    "reference_library": "607 preserved sources, 18 derived PDF texts, 140 exclusions, 14 North Star capabilities PASS",
+    "diff": "git diff --check PASS",
+    "workflow": "YAML parsing and bash -n PASS; practice/reset audits added to source, current/rebuilt packs and delivered/rebuilt players, selecting the current ZIP. Remote CI status reported after publication."
+  },
+  "audio_reset_comparison": {
+    "baseline": {
+      "checks": 3,
+      "failures": [
+        "Repeated take resets keep both real transports aligned within 15ms"
+      ],
+      "resets": 64,
+      "worst_skew": 0.0812698439694941,
+      "samples_recorded": 64,
+      "nonzero_samples": [
+        {
+          "reset_index": 32,
+          "skew_seconds": 0.0812698439694941
+        }
+      ]
+    },
+    "source": {
+      "checks": 3,
+      "failures": [],
+      "resets": 64,
+      "worst_skew": 0.0,
+      "samples_recorded": 64,
+      "nonzero_samples": []
+    },
+    "final_pack": {
+      "checks": 3,
+      "failures": [],
+      "resets": 64,
+      "worst_skew": 0.0,
+      "samples_recorded": 64,
+      "nonzero_samples": []
+    },
+    "implementation": "Pair both music starts/resets under AudioServer.lock/unlock. Original media, gain, 15ms skew limit and deliberate 100ms seek detection remain unchanged."
+  }
+}

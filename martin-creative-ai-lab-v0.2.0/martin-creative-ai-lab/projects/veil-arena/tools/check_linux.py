@@ -31,7 +31,7 @@ def check(path):
 
 if __name__ == '__main__':
     p = argparse.ArgumentParser(description=__doc__)
-    p.add_argument('archive', nargs='?', type=Path, default=ROOT/'dist/veilbreak-linux-0.5.0.zip')
+    p.add_argument('archive', nargs='?', type=Path, default=ROOT/'dist/veilbreak-linux-0.6.0.zip')
     try:
         print('LINUX_PACKAGE',json.dumps(check(p.parse_args().archive)))
     except (AssertionError,OSError,ValueError,zipfile.BadZipFile) as e:

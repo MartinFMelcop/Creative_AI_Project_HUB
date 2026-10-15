@@ -1318,3 +1318,43 @@ Initialize docs/prompts/CONTINUOUS_DEVELOPMENT.md: no authoritative adaptive fil
 existed. Consolidate the supplied request into a complete reusable prompt while
 retaining stable rules, commit/publication and recursive prompt delivery. Record
 actual transport fallback rather than adding environment-specific workaround rules.
+
+## ADR-060 — rehearse the real sweep instead of weakening the trial
+
+**Date:** 2026-10-15 UTC. **Status:** P06 0.6.0; M4 retained.
+
+Compare P01 native distribution, P11 real handover needs, P04 source-based
+editorial work and P06 guard mastery. The existing 120ms live guard window offers
+a useful counter choice but requires waiting through a complete encounter to
+repeat deliberately. Implement an optional phase-one sweep drill through the
+same combat functions rather than adding another boss, duplicating simulation,
+changing trial timings or giving an automatic counter reward.
+
+Start at 85px, retain the actual warning/costs/facing/collision and stop after
+recovery for outcome-specific review. Only actual clean parry plus blade contact
+counts as that take's success. Explicit retry restores combat resources; exit
+returns to a clean title. Native keyboard P/mapped R3 and menu buttons choose
+practice; Enter/A starts the next take. Pause/tactics/controller loss remain
+usable. The full trial cannot silently switch into practice or inherit rewards.
+
+Reuse the pinned official runtime already in the previous ZIP after verifying
+its exact template hash; export new resources/player, preserve old releases and
+run the final pack plus actual release window outside checkout. No new art/audio,
+browser port, engine migration or platform assumption is needed. Reassess the
+drill after independent player timing/feedback/skill-transfer observation; scripted
+completion and take counters are not learning or enjoyment evidence.
+
+Keep environment failures distinct: sandbox sockets initially hid working Git;
+unpaced ALSA null fails baseline/current audio clocks while paced Dummy passes.
+An accelerated presentation invocation also lacked real mixing time. Correct the
+execution method, reproduce baseline limits, and retain assertions. Add that
+observed diagnosis guidance and bounded current context to the maintained prompt;
+do not add engine-specific mandates or change its stable operating contracts.
+
+Repeated take resets exposed an actual pre-existing music-start race: one of 64
+baseline resets produced 81.27ms stem skew. Lock AudioServer around both music
+starts/resets, preserving stems, gain and rules. The new three-check ordinary-time
+audit samples 64 resets, detects a real shifted stream and verifies recovery;
+final samples show zero skew. Keep original 15ms presentation assertions intact.
+Extend CI to practice/reset audits on source, current/rebuilt PCK and delivered/
+rebuilt players, and select the new 0.6.0 ZIP explicitly.

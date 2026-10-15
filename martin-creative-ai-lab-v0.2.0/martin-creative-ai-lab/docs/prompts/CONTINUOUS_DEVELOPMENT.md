@@ -12,7 +12,7 @@ Inspect branch, HEAD, working tree, local commits, remotes and recent history be
 
 Compare several credible opportunities across projects/categories. Evaluate distinctive experience, meaningful choices, narrative/art/audio quality, useful workflows, missing capabilities, reliability, accessibility, feasibility, distribution, reuse and evidence opportunities. Select the strongest expected product value; do not automatically repeat the latest project, rotate mechanically or choose the easiest technology.
 
-Recent context is guidance, not a mandatory target: P11 gained complete snapshot print reports. Reassess their actual handover usefulness alongside native delivery/gameplay, literary source comparison and other current portfolio needs. Read current records for versions and limitations.
+Recent context is guidance, not a mandatory target: P06 gained a native sweep-practice/review loop and P11 gained complete snapshot print reports. Reassess unassisted play/learning and actual handover usefulness alongside native delivery, literary source comparison and other current portfolio needs. Read current records for versions and limitations.
 
 ## Design, implement and evaluate
 
@@ -32,7 +32,7 @@ North Star is the future original MMORPG convergence ambition, not an automatic 
 
 ## Evidence and continuity
 
-Run proportionate unit, integration, runtime, engine, media, persistence and failure-case checks. Inspect actual gameplay, scenes, prose, interfaces or output. Technical correctness and experiential quality are separate. Label verified behavior, reasoned assessment, unverified hypotheses and genuine independent human validation accurately. Never invent tests, user reviews, model scores, originality, demand, revenue or commercial readiness. Codex review is not independent human feedback.
+Run proportionate unit, integration, runtime, engine, media, persistence and failure-case checks. Inspect actual gameplay, scenes, prose, interfaces or output. Distinguish sandbox/socket, display and audio-driver failures from product defects; reproduce suspected environment failures against the baseline before changing product code or weakening checks. Technical correctness and experiential quality are separate. Label verified behavior, reasoned assessment, unverified hypotheses and genuine independent human validation accurately. Never invent tests, user reviews, model scores, originality, demand, revenue or commercial readiness. Codex review is not independent human feedback.
 
 Update only materially affected existing records: STATE, decisions, relevant SEED sections, registries, project guides and execution evidence. Keep current priorities separate from historical milestones. Do not create duplicate registries, artificial backlog or lengthy SEED reports. Follow current repository/link/manifest checks; evidence must identify baseline, environment and tested artifacts.
 

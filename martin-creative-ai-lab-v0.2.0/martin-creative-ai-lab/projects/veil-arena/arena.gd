@@ -75,6 +75,15 @@ var start_button: Button
 var help_button: Button
 var help_panel: PanelContainer
 var audio_button: Button
+var practice_button: Button
+var practice_active := false
+var practice_round := 0
+var practice_completed := 0
+var practice_clean_counters := 0
+var practice_parried := false
+var practice_counter := false
+var practice_guard_at := -1.0
+var practice_result := ""
 
 func _ready() -> void:
 	font = ThemeDB.fallback_font
@@ -144,6 +153,13 @@ func _build_ui() -> void:
 	start_button.add_theme_font_size_override("font_size",20)
 	start_button.pressed.connect(_begin_or_resume)
 	add_child(start_button)
+	practice_button = Button.new()
+	practice_button.focus_mode = Control.FOCUS_NONE
+	practice_button.position = Vector2(500,590)
+	practice_button.size = Vector2(280,42)
+	practice_button.add_theme_font_size_override("font_size",18)
+	practice_button.pressed.connect(toggle_practice)
+	add_child(practice_button)
 	help_button = Button.new()
 	help_button.focus_mode = Control.FOCUS_NONE
 	help_button.text = "Controls / tactics"
@@ -170,13 +186,21 @@ func _build_ui() -> void:
 	style.content_margin_bottom = 18
 	help_panel.add_theme_stylebox_override("panel",style)
 	var label := Label.new()
-	label.text = "MOVE   WASD / arrows · left stick / D-pad\nBLADE   J / X (west) — 12 resolve; locks aim, 100ms preparation.\nContact: guarded 4 / open 24. Finish recovery before attacking again.\nSEAL   K / Y (north) — 34 resolve; 8 damage + 36 ward pressure.\nPARRY   L / LB — 20 resolve; close sweeps only, locked facing.\nGuard is live 60–180ms after pressing; recover until 380ms.\nSuccess: no sweep hit, +8 resolve, 1.2s opening. Cooldown: 0.9s.\nCharge, wave and violet echo cannot be parried. Late guard is vulnerable.\nDODGE   Space / B (east) — 25 resolve; cancels without refund.\nBrief invulnerability, then vulnerable. Columns stop movement.\nPAUSE   Esc / Start · Enter / A (south) begins, resumes, restarts.\nTACTICS   F1 / Back · SOUND   M / RB toggles music and cues.\n\nStone columns stop charges and block seals. Amber warnings lock.\nParry within 110px, facing the Warden, or leave the sweep.\nPunish recovery or break the ward with three close seal impacts.\nAt half health attacks accelerate and charges leave a violet echo.\nLeave the echo circle even when the core is open."
+	label.text = "MOVE   WASD / arrows · left stick / D-pad\nBLADE   J / X (west) — 12 resolve; locks aim, 100ms preparation.\nContact: guarded 4 / open 24. Finish recovery before attacking again.\nSEAL   K / Y (north) — 34 resolve; 8 damage + 36 ward pressure.\nPARRY   L / LB — 20 resolve; close sweeps only, locked facing.\nGuard is live 60–180ms after pressing; recover until 380ms.\nSuccess: no sweep hit, +8 resolve, 1.2s opening. Cooldown: 0.9s.\nCharge, wave and violet echo cannot be parried. Late guard is vulnerable.\nDODGE   Space / B (east) — 25 resolve; cancels without refund.\nBrief invulnerability, then vulnerable. Columns stop movement.\nPAUSE   Esc / Start · Enter / A (south) begins, resumes or retries.\nTACTICS   F1 / Back · SOUND   M / RB · PRACTICE   P / R3 (menus / exit).\n\nStone columns stop charges and block seals. Amber warnings lock.\nParry within 110px, facing the Warden, or leave the sweep.\nPunish recovery or break the ward with three close seal impacts.\nAt half health attacks accelerate and charges leave a violet echo.\nLeave the echo circle even when the core is open."
 	label.add_theme_font_size_override("font_size",16)
 	help_panel.add_child(label)
 	add_child(help_panel)
 	help_panel.hide()
 
 func reset_encounter() -> void:
+	practice_active = false
+	practice_round = 0
+	practice_completed = 0
+	practice_clean_counters = 0
+	practice_parried = false
+	practice_counter = false
+	practice_guard_at = -1
+	practice_result = ""
 	if is_instance_valid(sound): sound.reset()
 	player.position = Vector2(300,490)
 	boss.position = Vector2(955,345)
@@ -219,12 +243,66 @@ func reset_encounter() -> void:
 	stats = {"strikes":0,"seals":0,"hits":0,"dodges":0,"breaks":0,"parry_attempts":0,"parries":0,"damage_taken":0,"phase_changes":0,"patterns":[]}
 
 func _begin_or_resume() -> void:
+	if mode == "practice_review":
+		_next_practice_round()
+		return
 	if mode == "paused":
 		mode = paused_from
 	else:
 		reset_encounter()
 		mode = "fight"
 	help_panel.hide()
+	_sync_ui()
+
+func toggle_practice() -> void:
+	if practice_active:
+		reset_encounter()
+		mode = "title"
+		help_panel.hide()
+		_sync_ui()
+	elif mode in ["title","victory","defeat"]:
+		reset_encounter()
+		_next_practice_round()
+
+func _next_practice_round() -> void:
+	var previous_round := practice_round
+	var previous_completed := practice_completed
+	var previous_clean := practice_clean_counters
+	reset_encounter()
+	practice_active = true
+	practice_round = previous_round+1
+	practice_completed = previous_completed
+	practice_clean_counters = previous_clean
+	player.position = Vector2(565,400)
+	boss.position = Vector2(650,400)
+	mode = "fight"
+	_start_pattern() # The same phase-one sweep, collision, guard and recovery clocks.
+	feedback = "Practice: L / LB just before contact, then J / X."
+	feedback_time = 3
+	help_panel.hide()
+	_sync_ui()
+
+func _practice_miss_reason() -> String:
+	if invulnerable > 0: return "Dodged. Try a close guard instead, then a blade counter."
+	if boss.position.distance_to(player.position) > PARRY_RANGE:
+		return "Too far to parry. Stay inside the inner 110px arc."
+	if practice_guard_at < 0: return "No guard at contact. Press L / LB just before the sweep."
+	var age := elapsed-practice_guard_at
+	if age < PARRY_START: return "Guard too late. Press earlier, before sweep contact."
+	if age >= PARRY_END: return "Guard too early. Wait longer into the amber warning."
+	if player_action != "parry": return "Guard cancelled. Keep it through sweep contact."
+	return "Guard faced away. Face the Warden when pressing L / LB."
+
+func _finish_practice_round() -> void:
+	practice_completed += 1
+	if practice_parried and practice_counter and stats.damage_taken == 0:
+		practice_clean_counters += 1
+		practice_result = "Clean parry + blade counter. Repeat when ready."
+	elif practice_parried:
+		practice_result = "Parried, no blade counter. Press J / X while the core is teal."
+	elif practice_result.is_empty():
+		practice_result = "Sweep avoided. Stay close to rehearse the guard timing."
+	mode = "practice_review" # Explicit next take; never a trial victory or auto-loop.
 	_sync_ui()
 
 func pause_game() -> void:
@@ -244,7 +322,9 @@ func _sync_ui() -> void:
 		audio_button.text = ("Sound off" if sound.muted else "Sound on")+(" [RB]" if controls.using_gamepad else " [M]")
 	start_button.visible = mode != "fight" and not help_panel.visible
 	help_button.text = ("Close tactics" if help_panel.visible else "Tactics")+(" [Back]" if controls.using_gamepad else " [F1]")
-	start_button.text = ("Resume" if mode == "paused" else "Begin trial" if mode == "title" else "Try again")+(" [A / south]" if controls.using_gamepad else " [Enter]")
+	practice_button.visible = (practice_active or mode in ["title","victory","defeat"]) and mode != "fight" and not help_panel.visible
+	practice_button.text = ("Leave practice" if practice_active else "Sweep practice")+(" [R3]" if controls.using_gamepad else " [P]")
+	start_button.text = ("Next sweep" if mode == "practice_review" else "Resume" if mode == "paused" else "Begin trial" if mode == "title" else "Try again")+(" [A / south]" if controls.using_gamepad else " [Enter]")
 	queue_redraw()
 
 func toggle_tactics() -> void:
@@ -257,6 +337,9 @@ func toggle_audio() -> void:
 	_sync_ui()
 
 func _physics_process(delta: float) -> void:
+	if controls.pressed("practice") and (practice_active or mode in ["title","victory","defeat"]):
+		toggle_practice()
+		return
 	if controls.pressed("mute"): toggle_audio()
 	if controls.pressed("help"): toggle_tactics()
 	if controls.pressed("pause"):
@@ -308,6 +391,7 @@ func step_fight(delta: float, move: Vector2, strike: bool, cast_seal: bool, dodg
 		parry_cooldown = 0.9
 		stats.parry_attempts += 1
 		_start_player_action("parry")
+		if practice_active: practice_guard_at = elapsed
 	elif strike and strike_cooldown <= 0 and stamina >= 12 and dash_time <= 0 and player_action.is_empty():
 		stamina -= 12
 		strike_cooldown = 0.40
@@ -326,9 +410,10 @@ func step_fight(delta: float, move: Vector2, strike: bool, cast_seal: bool, dodg
 	_update_echo(delta)
 	for effect in effects: effect.life -= delta
 	effects = effects.filter(func(e): return e.life > 0)
-	if hp <= 0: mode = "defeat"
-	elif boss_hp <= 0: mode = "victory"
-	if mode != "fight":
+	if not practice_active:
+		if hp <= 0: mode = "defeat"
+		elif boss_hp <= 0: mode = "victory"
+	if mode in ["victory","defeat"]:
 		sound.cue(mode)
 		sound.set_phase(false)
 		_sync_ui()
@@ -365,6 +450,7 @@ func _advance_player_action(delta: float) -> void:
 			if offset.length() <= 103 and (offset.is_zero_approx() or action_aim.dot(offset.normalized()) >= cos(PI/3)):
 				var was_open := _boss_open()
 				var applied := _damage_boss(24 if was_open else 4)
+				if practice_active and practice_parried and was_open and applied > 0: practice_counter = true
 				if applied > 0: sound.cue("counter" if was_open else "guard",boss.position)
 				_feedback(("COUNTER  +%d"%applied if was_open else "GUARDED  +%d — wait for an opening"%applied) if applied > 0 else "The fracturing ward repels the strike. Regroup.", TEAL)
 			else:
@@ -383,7 +469,7 @@ func _damage_boss(amount: float) -> float:
 	boss_hp = maxf(0,boss_hp-amount)
 	boss_flash = 0.15
 	stats.hits += 1
-	if boss_hp <= 80 and phase == 1 and boss_hp > 0:
+	if boss_hp <= 80 and phase == 1 and boss_hp > 0 and not practice_active:
 		phase = 2
 		boss_stage = "transition"
 		stage_time = 0
@@ -452,6 +538,7 @@ func _try_parry_sweep() -> bool:
 	_clear_player_action()
 	stamina = minf(100,stamina+8)
 	stats.parries += 1
+	if practice_active: practice_parried = true
 	boss_stage = "recover"
 	stage_time = 0
 	stage_duration = 1.2
@@ -462,7 +549,7 @@ func _try_parry_sweep() -> bool:
 
 func _start_pattern() -> void:
 	var patterns := ["sweep","charge","wave"]
-	pattern = patterns[cycle%3]
+	pattern = "sweep" if practice_active else patterns[cycle%3]
 	cycle += 1
 	if not stats.patterns.has(pattern): stats.patterns.append(pattern)
 	boss_stage = "windup"
@@ -498,7 +585,9 @@ func _update_boss(delta: float) -> void:
 		elif pattern == "sweep":
 			var to_player := boss.position.direction_to(player.position)
 			if player.position.distance_to(boss.position) < 165 and aim.dot(to_player) > cos(PI/3) and not attack_hit:
-				if not _try_parry_sweep(): _take_hit()
+				if not _try_parry_sweep():
+					if practice_active: practice_result = _practice_miss_reason()
+					_take_hit()
 				attack_hit = true
 		else:
 			var radius := 30+190*stage_time/stage_duration
@@ -516,6 +605,9 @@ func _update_boss(delta: float) -> void:
 			stage_duration = 0.90 if phase == 1 else 0.70
 	elif boss_stage == "recover" or boss_stage == "transition":
 		if stage_time >= stage_duration:
+			if practice_active:
+				_finish_practice_round()
+				return
 			boss_stage = "approach"
 			stage_time = 0
 			stage_duration = 0.80 if phase == 1 else 0.55
@@ -625,7 +717,7 @@ func _draw_hud() -> void:
 	draw_rect(Rect2(1250,140,30,550),INK)
 	draw_rect(FIELD,Color("56637b"),false,2)
 	_text(Vector2(80,47),"VEILBREAK",30,WHITE)
-	_text(Vector2(80,74),"THE BELL WARDEN  /  COURTYARD TRIAL",13,AMBER)
+	_text(Vector2(80,74),"SWEEP PRACTICE  /  NOT A TRIAL RESULT" if practice_active else "THE BELL WARDEN  /  COURTYARD TRIAL",13,AMBER)
 	_text(Vector2(650,47),"WARDEN  /  PHASE %s"%phase,20,AMBER)
 	_bar(Vector2(650,62),550,boss_hp,BOSS_MAX,AMBER if phase==1 else RED)
 	_bar(Vector2(650,88),550,ward,100,TEAL)
@@ -636,15 +728,16 @@ func _draw_hud() -> void:
 	_bar(Vector2(315,125),255,stamina,100,TEAL)
 	var state_label := "Approaching" if boss_stage=="approach" else ("Open for a counter" if boss_stage=="recover" else "Veil fracture" if boss_stage=="transition" else pattern.to_upper()+" / "+boss_stage.to_upper())
 	if pattern=="sweep" and boss_stage in ["windup","active"]: state_label = "SWEEP / close parry or dodge"
+	if practice_active and boss_stage == "windup": state_label = "Sweep in %.2fs"%maxf(0,stage_duration-stage_time)
 	_text(Vector2(80,706),state_label,20,AMBER)
 	_text(Vector2(80,742),"Stick / D-pad move   X blade   Y seal   LB parry   B dodge   Start pause" if controls.using_gamepad else "WASD move   J blade   K seal   L parry   Space dodge / cancel   Esc pause",16,Color("aab6cb"))
 	if feedback_time > 0: _text(Vector2(420,706),feedback,17,TEAL)
 
 func _draw_overlay() -> void:
 	if help_panel.visible: return
-	draw_rect(Rect2(220,210,840,385),Color(INK,0.94))
-	draw_rect(Rect2(220,210,840,385),Color("50617b"),false,2)
-	var title := "The bell has stopped." if mode=="victory" else "The Warden holds the gate." if mode=="defeat" else "Trial paused." if mode=="paused" else "The Bell Warden."
+	draw_rect(Rect2(220,210,840,450),Color(INK,0.94))
+	draw_rect(Rect2(220,210,840,450),Color("50617b"),false,2)
+	var title := "Sweep practice: review." if mode=="practice_review" else "Practice paused." if mode=="paused" and practice_active else "The bell has stopped." if mode=="victory" else "The Warden holds the gate." if mode=="defeat" else "Trial paused." if mode=="paused" else "The Bell Warden."
 	_text(Vector2(290,279),title,36,WHITE)
 	if mode=="title":
 		draw_texture_rect(WARDEN,Rect2(260,315,155,190),false)
@@ -652,6 +745,11 @@ func _draw_overlay() -> void:
 		_text(Vector2(450,365),"Dodge warnings; L / LB parries close sweeps.",20)
 		_text(Vector2(450,401),"Counter an open core; seals build ward pressure.",20)
 		_text(Vector2(450,445),"Phase two adds echoes. Leave the violet circle.",20)
+	elif mode=="practice_review":
+		_text(Vector2(290,335),practice_result,19,TEAL)
+		_text(Vector2(290,380),"Round %d  |  Reviewed %d  |  Clean parry + counter %d"%[practice_round,practice_completed,practice_clean_counters],20)
+		_text(Vector2(290,420),"This drill repeats one phase-one sweep at real speed and range.",18)
+		_text(Vector2(290,460),"No trial victory. P / R3 returns to the title for the full encounter.",18,Color("aab6cb"))
 	elif mode=="paused":
 		_text(Vector2(290,335),"The encounter is frozen. Resume when you are ready.",22)
 	else:

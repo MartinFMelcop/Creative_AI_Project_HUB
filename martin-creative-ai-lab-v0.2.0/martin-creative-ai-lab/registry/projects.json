@@ -157,9 +157,9 @@
       "slug": "veu-partido",
       "status": "active",
       "maturity": "M4",
-      "phase": "timed-sweep-counter-validated",
+      "phase": "native-sweep-practice-validated",
       "origin": "new_seed_implementation",
-      "next_action": "Observe unassisted parry/dodge/seal choices and timing readability on the actual player; compare P05 content, P01 delivery, P03 practice and P04/P10 reading before selecting the next milestone.",
+      "next_action": "Observe unassisted guard timing, error-feedback comprehension and transfer from practice to the complete trial; compare native delivery, independent readers and actual Project Rooms handovers before another milestone.",
       "related_projects": [
         "P02",
         "P04",
@@ -174,12 +174,13 @@
         "evidence/veil-arena/MOTION_RUN.json",
         "evidence/veil-arena/AUDIO_CLOCK_RUN.json",
         "evidence/veil-arena/RELEASE_RUN.json",
-        "evidence/veil-arena/PARRY_RUN.json"
+        "evidence/veil-arena/PARRY_RUN.json",
+        "evidence/veil-arena/PRACTICE_RUN.json"
       ],
       "historical_name": "V\u00e9u Partido",
       "working_path": "projects/veil-arena",
-      "working_version": "0.5.0",
-      "maturity_scope": "Native Godot 4.6.3 encounter 0.5.0 adds L/LB close-sweep parry: 60\u2013180ms live guard, paid 20 resolve/startup/recovery, +8 on success, real 1.2s blade opening; charge/wave/echo bypass guard. Explicit pose/range/state/cue/result integration reuses unchanged media. Source, shipped/rebuilt PCK and final Linux resources pass 152 checks each. Actual OpenGL two-phase guard/counter policy wins; identical 0.4.0/0.5.0 sweep fixture changes hit to parry. Earlier completion route is unchanged. Verified official Linux runtime/ZIP executes L guard, menus, idle defeat and restart through X11 outside source; PCK full-fight proof is separate from release-window proof. Old 0.4.0 ZIP retained. Physical input/listening, human balance/accessibility, other OS and commercial approval remain unverified."
+      "working_version": "0.6.0",
+      "maturity_scope": "Native Godot 4.6.3 encounter 0.6.0 adds optional phase-one close-sweep practice with real guard/collision/costs, actual 24-damage blade counter and explicit review/retry/exit. Error feedback distinguishes early/late/range/no guard/avoidance/no counter; practice never counts as trial victory. Repeated take resets also fix a reproduced baseline music-start race through atomic AudioServer start/reset; 64 final reset samples show zero skew and a real shifted stream remains detectable. Source and exact final Linux PCK each pass 188 checks; OpenGL practice/presentation and X11 old/new standalone menu/drill/review/pause/exit/trial journeys execute. The old/new complete two-phase parry policy is unchanged at 23.7167 simulated seconds. Shipped ZIP includes verified official release runtime; prior ZIPs/media remain intact. Scripted input, virtual mixer and Codex visual review do not establish human learning, physical controller/listening, independent balance/accessibility, other-OS or commercial validation."
     },
     {
       "id": "P07",

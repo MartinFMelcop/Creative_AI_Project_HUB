@@ -37,7 +37,9 @@ func _ready() -> void:
 		voices.append(voice)
 	_apply_levels()
 	# Start both on the same AudioServer block; do not restart at the phase change.
+	AudioServer.lock()
 	for track in tracks: track.play()
+	AudioServer.unlock()
 
 func _process(delta: float) -> void:
 	if suspended: return
@@ -81,9 +83,12 @@ func reset() -> void:
 	target_mix = 0
 	events.clear()
 	for voice in voices: voice.stop()
+	# Reset both stems in one mixer instant, even during repeated practice takes.
+	AudioServer.lock()
 	for track in tracks:
 		track.stop()
 		track.play()
+	AudioServer.unlock()
 	_apply_levels()
 
 func stop() -> void:
