@@ -1,0 +1,183 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-15",
+  "project": "P01",
+  "version": "0.5.0",
+  "baseline_commit": "be467858350d55e3b59f40c1c6851b2968358271",
+  "previous_ci": "Lab checks run 38741845968 completed success in all four jobs before this milestone.",
+  "portfolio_decision": {
+    "alternatives": [
+      "P05/P06 encounter depth",
+      "P04 source-based literary revision",
+      "P11 actual handovers",
+      "P01 native installation barrier"
+    ],
+    "selected": "Standalone Linux distribution of the existing Eclipse Fair local strategy board.",
+    "objective": "Recipient extracts and plays without installing Godot, .NET runtime or SDK. Keep existing rules, shared-device handoff, forecasts and save continuity.",
+    "assessment": "Installation prerequisites are observably reduced; unassisted installation, enjoyment and market demand remain unverified."
+  },
+  "environment": {
+    "os": "Linux x86_64 managed cloud",
+    "engine": "Godot .NET 4.6.3.stable.mono.official.7d41c59c4",
+    "editor_archive_sha256": "702a8a6785060203fd46373adf864586ecf0c377ac685d7107dde66b1eba0a9e",
+    "sdk": "10.0.401",
+    "sdk_archive_sha512": "51c8b999af9e8dd9998c9edc5944e19a90788862068acd38694e098889054ce8c23d4f0c5cccfa16bf187d044562359e5ee69a9f8ad0bbe913ba90311fbce25b",
+    "runtime": "10.0.12",
+    "display": "Xorg dummy 1280x800, Mesa llvmpipe OpenGL 4.5; no physical GPU/player"
+  },
+  "implementation": {
+    "producer": "Fresh staging adapts P05 producer to P01 Core/Journal/Board assembly graph, stable solution and release preset. Pin checks before build/export; complete notices and hash inventory; atomic ZIP replacement and download checksum.",
+    "runtime_template": "Recovered official Mono release template from retained Cinderwatch ZIP; exact pinned SHA-256 verified.",
+    "gameplay_source": "Every maintained Core/*.cs, Native/*.cs and Cli/Journal.cs is byte-identical to baseline. Only native version/build configuration/delivery changed.",
+    "preserved_contracts": [
+      "Economy rules/version 0.1.0",
+      "Economy journal schema 1",
+      "boardSchema 1 envelope and local seats",
+      "Application name/user-data location",
+      "All historical ZIPs",
+      "Independent product identities and historical references"
+    ]
+  },
+  "baseline_native": {
+    "native_board": "pass",
+    "assertions": 1570,
+    "complete_gate_or_deadline_matches": 26,
+    "local_seat_sets": 15,
+    "source_rule_parity": true,
+    "journal_replay": true,
+    "keyboard_venue_input": true,
+    "strategic_profiles": true,
+    "conditional_forecast": true,
+    "classic_mode": true,
+    "auto_rival_clock": true,
+    "controlled_focus_out": true,
+    "rendered": false
+  },
+  "standalone_native": {
+    "native_board": "pass",
+    "assertions": 1570,
+    "complete_gate_or_deadline_matches": 26,
+    "local_seat_sets": 15,
+    "source_rule_parity": true,
+    "journal_replay": true,
+    "keyboard_venue_input": true,
+    "strategic_profiles": true,
+    "conditional_forecast": true,
+    "classic_mode": true,
+    "auto_rival_clock": true,
+    "controlled_focus_out": true,
+    "rendered": false
+  },
+  "core_checks": {
+    "checks": 13,
+    "failures": []
+  },
+  "package_rejection_tests": {
+    "tests": 5,
+    "failures": [],
+    "cases": [
+      "Real delivered bundle",
+      "Removed libcoreclr with rewritten inventory",
+      "Stale source identity",
+      "Lost executable permission",
+      "Unsafe archive path before payload reads"
+    ]
+  },
+  "save_comparison": {
+    "final_verification_journals_byte_identical": true,
+    "sha256": "163604a89d120f289e5cc1833e7c59937f33ed9cbb4cfdf4e820e7092fb740f9",
+    "window_restart": "Four accepted turns preserved as a prefix after reopening; configured automatic rivals appended two legal turns. X11 mouse selected Work, committed, autosaved and displayed resume notice. The first window was terminated by the harness; no independent desktop close/focus behavior claim."
+  },
+  "runtime_isolation": {
+    "cwd": "/workspace/work/eclipse-release (outside checkout)",
+    "PATH": "/usr/bin:/bin",
+    "DOTNET_ROOT": "/nonexistent",
+    "DOTNET_ROOT_X64": "/nonexistent",
+    "mapped_runtime": [
+      "/workspace/work/eclipse-release/player/EclipseFair/data_Eclipse.Board_linuxbsd_x86_64/libcoreclr.so",
+      "/workspace/work/eclipse-release/player/EclipseFair/data_Eclipse.Board_linuxbsd_x86_64/libhostfxr.so"
+    ],
+    "player_exit": 0
+  },
+  "distribution": {
+    "archive": "projects/eclipse-fair/dist/eclipse-fair-linux-0.5.0.zip",
+    "bytes": 64547335,
+    "files": 200,
+    "sha256": "9d7b105f04e9ad045f6192889af38f9a7d60345947dc32c718bc0c185ce78062",
+    "self_contained": true,
+    "optional_project_archive": "projects/eclipse-fair/dist/eclipse-board-0.5.0.zip",
+    "build_info_identity": {
+      "schema": 1,
+      "project": "P01",
+      "version": "0.5.0",
+      "engine": "4.6.3.stable.mono.official.7d41c59c4",
+      "template_sha256": "dde8bd2f5b6b8666c3656a57900f8c4163b3fc9799cc723746ca88468333b320",
+      "sdk": "10.0.401",
+      "runtime": "10.0.12",
+      "self_contained": true
+    },
+    "payload_inventory": "Complete files_sha256/source_sha256 inventory lives in EclipseFair/BUILD-INFO.json inside the hash-identified ZIP and was checked against all delivered bytes/current inputs.",
+    "optional_project_sha256": "f2edfe275f515df8dc1fb94589b3a726fcc1f5c528891b8a8d5d675d742bb6c7"
+  },
+  "commands": [
+    "python3 tools/export_linux.py --godot PINNED_MONO_EDITOR --dotnet PINNED_SDK --template VERIFIED_MONO_TEMPLATE",
+    "python3 tools/check_linux.py",
+    "python3 tools/test_check_linux.py",
+    "dotnet run --project Checks -c Release",
+    "dotnet build Native/Eclipse.Board.csproj -c Debug",
+    "python3 tools/pack_board.py",
+    "python3 tools/check_board_pack.py",
+    "Extracted player --headless -- --verify --save-path ISOLATED_PATH, with SDK/runtime excluded",
+    "Actual X11 selection/commit and reopening with isolated save"
+  ],
+  "ci": "YAML and bash syntax validated; delivered/newly rebuilt player verification added to eclipse-economy using the verified cached extracted template. Actual remote CI is reported after publication.",
+  "transfer": "TR-015 P05-to-P01 distribution adaptation has a real executed destination; no shared rules or North Star consumer.",
+  "prompt": "Retained the complete maintained prompt unchanged; current state/registry carry this delivery change.",
+  "limitations": [
+    "Implementing-agent scripted and visual review, not independent installation or play",
+    "No physical hardware/accessibility, controller, audio, other-OS, LAN or commercial validation",
+    "ZIP timestamps normalized; byte-identical full re-exports are not claimed",
+    "Runtime/source manifests identify bytes, not independent authorship or authenticity"
+  ],
+  "source_sha256": {
+    "projects/eclipse-fair/Core/Agents.cs": "026f77026f4bad7839f3f6f70ff350246e6d6d661aa3a97e6138b292c25dfb05",
+    "projects/eclipse-fair/Core/Game.cs": "59c4e50b13d0189c88b0a7cc11310f001bed0c687640b9a68b052a16fa2bea94",
+    "projects/eclipse-fair/Core/Planning.cs": "f7dfef9127a59def7b6c862d5293574232c7dac202a84f528c6c9c5a4b849829",
+    "projects/eclipse-fair/Native/BoardChecks.cs": "c148d916b153b797f0f2824a452d4be7704ac263311f6ec08643360059b2a4a3",
+    "projects/eclipse-fair/Native/BoardJournal.cs": "88a2c62e8965e773256bbb0376bf1496d5bab4d10cd73b328a91dda82fee3926",
+    "projects/eclipse-fair/Native/BoardSession.cs": "e704d8bd2aa86d96b2aab9a3ac51453637ac9eef0c4c49f1ee58f9f7f0dfbe51",
+    "projects/eclipse-fair/Native/LocalChecks.cs": "26b6809a83c12da57dbec894a06a50954e24b8cd0badcec890ab1d824b414708",
+    "projects/eclipse-fair/Native/Main.cs": "6e5b08fb5f610bfaaae8d5f137ca77e1553a1d9ad045eb9887ead2548a1695dd",
+    "projects/eclipse-fair/Native/MapView.cs": "e5e7f7f70e55abfa014da0fb05899e18f87125e3a2bb1eb26cc5f07bbb6a9aec",
+    "projects/eclipse-fair/Cli/Journal.cs": "64db61d7599aa852dfa9815b9f3d58e1126cacc116357388319c791c0d9d6a76"
+  },
+  "optional_project_native": {
+    "native_board": "pass",
+    "assertions": 1570,
+    "complete_gate_or_deadline_matches": 26,
+    "local_seat_sets": 15,
+    "source_rule_parity": true,
+    "journal_replay": true,
+    "keyboard_venue_input": true,
+    "strategic_profiles": true,
+    "conditional_forecast": true,
+    "classic_mode": true,
+    "auto_rival_clock": true,
+    "controlled_focus_out": true,
+    "rendered": false
+  },
+  "repository_checks": {
+    "validator": "11 projects, 15 transfers, 9 assets, 2 legacy sources; 463 local file links PASS",
+    "validator_regressions": 13,
+    "manifest_regressions": 11,
+    "reference_library": "607 preserved sources, 18 derived texts, 140 exclusions, 14 North Star capabilities PASS",
+    "workflow": "YAML parse and eclipse-economy bash syntax PASS",
+    "diff": "git diff --check PASS"
+  },
+  "window_manager_close": {
+    "initial_probe": "WM_DELETE_WINDOW injection without a WM did not terminate the initial virtual window; harness used SIGINT.",
+    "resolved_probe": "Started the installed xfwm4 under an isolated D-Bus/XDG session, reopened the same player/save and sent actual Alt+F4 keyboard events.",
+    "player_exit": 0,
+    "scope": "Managed virtual desktop close verified; physical desktop/hardware/focus acceptance remains unverified."
+  }
+}

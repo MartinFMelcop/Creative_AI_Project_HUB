@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-10-12",
+  "updated_at": "2026-10-15",
   "transfers": [
     {
       "id": "TR-001",
@@ -170,6 +170,21 @@
       ],
       "verification_scope": "Actual Vorbis/WAV resource playback, AudioServer samples, legal-input cues, aligned phase crossfade, mute/pause/restart and limiter stress; no human listening or reuse of the P03 track.",
       "next_action": "Use unassisted play and physical listening/visual review before extending the production claims."
+    },
+    {
+      "id": "TR-015",
+      "source_project": "P05",
+      "target_project": "P01",
+      "status": "validated",
+      "unit": "Pinned self-contained Godot .NET Linux release production and payload/source verification",
+      "source_reference": "projects/cinderwatch/tools/export_linux.py",
+      "evidence": [
+        "projects/eclipse-fair/tools/export_linux.py",
+        "projects/eclipse-fair/tools/check_linux.py",
+        "evidence/eclipse-fair/RELEASE_RUN.json"
+      ],
+      "verification_scope": "Adapted producer/checker actually build and execute Eclipse Fair with bundled Godot/.NET, complete notices, identity inventory and save compatibility. Build/distribution reuse only; no shared gameplay framework, North Star integration or independent player acceptance.",
+      "next_action": "Observe unassisted Linux installation and keep pinned runtime/security updates coordinated with each independent product."
     }
   ]
 }

@@ -18,7 +18,7 @@ setup, source and verification; versions identify prototypes or reading editions
 
 | Project | Experience or workflow | Implementation | Available delivery |
 |---|---|---|---|
-| **P01 · [Eclipse Fair](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/projects/eclipse-fair/README.md)** · 0.4.0 | A market race with rival planning, any-seat solo play and 2–4 local participants | C# / .NET 10, Godot .NET | Native project pack; Godot .NET 4.6.3 and .NET runtime required |
+| **P01 · [Eclipse Fair](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/projects/eclipse-fair/README.md)** · 0.5.0 | A market race with rival planning, any-seat solo play and 2–4 local participants | C# / .NET 10, Godot .NET | Standalone Linux x86_64 player and optional compiled project |
 | **P03 · [Tokyo 80s: Night Shift](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/projects/tokyo80s/README.md)** · 0.4.0 | Two original rhythm stages, sustained notes, timing calibration and phrase rehearsal | JavaScript / Web Audio | Browser game served locally over HTTP |
 | **P04 · [A água sob Darsen](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/projects/lich-cistern/README.md)** · 0.2.0 | A complete five-scene dark-fantasy story and English translation | Markdown, EPUB 3, PDF; Pandoc / Python production tools | Portuguese and English reading editions, with editable story sources |
 | **P05 · [Cinderwatch](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/projects/cinderwatch/README.md)** · 0.3.0 | Three tactical rescue encounters with announced intentions, finite supplies and persistent consequences | C# / Godot .NET | Standalone Linux x86_64 player; editable project retained |
@@ -47,7 +47,7 @@ controls, permissions and exact requirements.
 
 - **[Cinderwatch player](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/projects/cinderwatch/dist/cinderwatch-linux-0.3.0.zip):** run `./cinderwatch.x86_64` inside the extracted `Cinderwatch/` folder. [Launch guide](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/projects/cinderwatch/Native/README.md#play-the-linux-distribution).
 - **[Veilbreak player](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/projects/veil-arena/dist/veilbreak-linux-0.6.0.zip):** run `./veilbreak.x86_64` inside `Veilbreak/`. [Launch guide](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/projects/veil-arena/README.md#play).
-- **[Eclipse Fair project pack](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/projects/eclipse-fair/dist/eclipse-board-0.4.0.zip):** open with the required Godot .NET editor/runtime. [Package instructions](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/projects/eclipse-fair/Native/README.md#play-the-delivered-package).
+- **[Eclipse Fair player](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/projects/eclipse-fair/dist/eclipse-fair-linux-0.5.0.zip):** run `./eclipse-fair.x86_64` inside `EclipseFair/`. [Launch guide](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/projects/eclipse-fair/Native/README.md#play-the-linux-distribution).
 
 ### Browser games
 

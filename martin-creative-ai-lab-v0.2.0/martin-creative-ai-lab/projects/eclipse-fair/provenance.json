@@ -1,15 +1,22 @@
 {
   "project_id": "P01",
-  "version": "0.4.0",
+  "version": "0.5.0",
   "historical_title": "Artemyra / ArtemiZ4",
   "working_title": "Eclipse Fair / Feira do Eclipse",
-  "source": "Maintained SEED P01: four participants, obols, sigils, curse, rites, raven protection, theft, short board and bounded match. No P01 runtime or historical package exists in the checkout/archive.",
+  "source": "Maintained SEED P01: four participants, obols, sigils, curse, rites, raven protection, theft, short board and bounded match. No historical P01 executable/package was recovered; current implementations are new.",
   "authorship": "New Codex implementation and design under Martin Melcop Neto's portfolio direction. No recovered code or independent human playtest.",
   "accepted_differences": "New eight-venue deterministic C# economy, 20 rounds, any-seat solo and shared-device play for two to four local participants, with optional Planning/Classic rivals. Historical 48 tiles/15 turns/minigames/LAN remain candidate plans, not recovered functionality.",
-  "technology": "C#/.NET 10 Core/CLI economy 0.1.0 and Godot .NET 4.6.3 native 0.4.0. SDK 10.0.401 compiles the existing typed rules. Journal Snapshot/Replay helpers reuse its unchanged schema-1 validation. Native controls use a boardSchema-1 envelope; exported economy journals omit those controls. Only owned assemblies/source/config are packaged; engine and runtime remain external.",
-  "media": "No external art, sound, characters from franchises or SDK/runtime binary redistributed. Vaelis/Madra/Nira/Morrak names come from the seed; venues, rules, policies and feedback are new.",
+  "technology": "C#/.NET 10 Core/CLI economy 0.1.0 and Godot .NET 4.6.3 native 0.5.0. SDK 10.0.401 compiles the existing typed rules. Journal Snapshot/Replay helpers reuse its unchanged schema-1 validation. Native controls use a boardSchema-1 envelope; exported economy journals omit those controls. The Linux distribution includes the verified official release engine and self-contained .NET 10.0.12; the optional project pack retains its external-engine/runtime contract.",
+  "media": "No external art/audio or franchise characters. Official Godot/.NET binaries are redistributed with their licenses and third-party notices; no SDK or editor assemblies are included.",
   "evidence": "evidence/eclipse-fair/RUN.json",
-  "quality_boundary": "Actual compilation, native controls/keyboard/OpenGL and outside-source runtime-only project execution, plus implementing-agent visual/gameplay judgment. Scripted inputs are not independent human playtests; no accessibility, other-platform, physical controller, standalone executable, commercial demand or historical restoration claim.",
+  "quality_boundary": "Actual standalone native execution, package integrity, scripted system input and implementing-agent review. No independent human play, physical hardware/accessibility, other OS, commercial demand or historical restoration is claimed.",
   "native": "Any-seat solo and all nonempty local-seat sets; explicit turn handoff, actor-correct map/objective/previews/results, bounded rival forecasts up to the next human choice, local-seat save/replay and original-format export. No economic rules, historical art, network game or unknown human plans are added.",
-  "native_evidence": "evidence/eclipse-fair/LOCAL_RUN.json"
+  "native_evidence": "evidence/eclipse-fair/RELEASE_RUN.json",
+  "distribution": {
+    "version": "0.5.0",
+    "artifact": "dist/eclipse-fair-linux-0.5.0.zip",
+    "producer": "tools/export_linux.py",
+    "adapted_from": "P05 projects/cinderwatch/tools/export_linux.py and check_linux.py",
+    "rules_and_saves": "Unchanged economy 0.1.0, journal schema 1 and boardSchema 1; historical ZIPs preserved."
+  }
 }

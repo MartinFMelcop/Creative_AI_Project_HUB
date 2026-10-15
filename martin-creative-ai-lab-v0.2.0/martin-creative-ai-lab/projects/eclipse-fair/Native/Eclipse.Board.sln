@@ -1,0 +1,27 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Eclipse.Board", "Eclipse.Board.csproj", "{771446B8-35AA-40E4-A73A-CC4662E050D1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Eclipse.Core", "..\Core\Eclipse.Core.csproj", "{FB9A38B8-87C2-4275-955B-4A27CFF21D77}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		ExportRelease|Any CPU = ExportRelease|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{771446B8-35AA-40E4-A73A-CC4662E050D1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{771446B8-35AA-40E4-A73A-CC4662E050D1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{771446B8-35AA-40E4-A73A-CC4662E050D1}.ExportRelease|Any CPU.ActiveCfg = ExportRelease|Any CPU
+		{771446B8-35AA-40E4-A73A-CC4662E050D1}.ExportRelease|Any CPU.Build.0 = ExportRelease|Any CPU
+		{FB9A38B8-87C2-4275-955B-4A27CFF21D77}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FB9A38B8-87C2-4275-955B-4A27CFF21D77}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FB9A38B8-87C2-4275-955B-4A27CFF21D77}.ExportRelease|Any CPU.ActiveCfg = ExportRelease|Any CPU
+		{FB9A38B8-87C2-4275-955B-4A27CFF21D77}.ExportRelease|Any CPU.Build.0 = ExportRelease|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

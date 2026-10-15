@@ -10,7 +10,7 @@ them to references and shared capabilities.
 
 | Project and current version | Experience | Technology and delivery |
 |---|---|---|
-| [P01 — Eclipse Fair](eclipse-fair/README.md), native **0.4.0** | Eight-venue economy race, solo in any seat or 2–4 participants sharing one device; planning rivals and replay saves. | C#/.NET 10 and Godot .NET 4.6.3. The [compiled native project](eclipse-fair/dist/eclipse-board-0.4.0.zip) requires the matching engine and .NET runtime; [setup](eclipse-fair/Native/README.md#play-the-delivered-package). The terminal workbench **0.1.0** remains available. |
+| [P01 — Eclipse Fair](eclipse-fair/README.md), native **0.5.0** | Eight-venue economy race, solo in any seat or 2–4 participants sharing one device; planning rivals and replay saves. | C#/.NET 10 and Godot .NET 4.6.3. The [standalone Linux player](eclipse-fair/dist/eclipse-fair-linux-0.5.0.zip) includes engine and .NET runtime; [setup](eclipse-fair/Native/README.md#play-the-linux-distribution). An optional compiled project remains available. The terminal workbench **0.1.0** remains available. |
 | [P03 — Tokyo 80s: Night Shift](tokyo80s/README.md), **0.4.0** | Two original rhythm stages, sustained notes, timing calibration and four-bar rehearsal at 75/90/100% with original-pitch backing. | HTML/JavaScript and Web Audio; [run locally](tokyo80s/README.md#play-locally) with Node 22+ or a static HTTP server. Gameplay needs no npm installation or remote service. |
 | [P04 — A água sob Darsen / The Water Beneath Darsen](lich-cistern/README.md), **0.2.0** | Complete five-scene dark-fantasy story in Portuguese and English. | [Read Markdown, EPUB 3 or A5 PDF](lich-cistern/README.md#read) without a build environment. English **0.2.0** and preserved Portuguese **0.1.0** editions; production uses Python/ReportLab and Pandoc. |
 | [P05 — Cinderwatch](cinderwatch/README.md), **0.3.0** | Three-encounter tactical rescue with announced enemy intentions, persistent supplies, salvage choices and replayable resume. | C#/.NET 10 and Godot .NET 4.6.3. [Standalone Linux x86_64 player](cinderwatch/dist/cinderwatch-linux-0.3.0.zip) includes engine/runtime; [system requirements and launch](cinderwatch/Native/README.md#play-the-linux-distribution). Editable source/project also available. |
@@ -19,8 +19,8 @@ them to references and shared capabilities.
 | [P11 — Project Rooms](realtime-integration-lab/README.md), **0.7.0** | Persistent conversations/decisions, assigned actions, revision history, complete-record search, workspace recovery and portable HTML reading copies with complete print reports. | Node 24+, SQLite and Socket.IO; [install/run](realtime-integration-lab/README.md#run-project-rooms) with `npm ci` and `npm run rooms`. The [offline handover example](realtime-integration-lab/examples/cistern-handover.html) is explicitly fictional. The original ephemeral chat exercise remains available. |
 
 Download ZIPs, ebooks and the HTML handover before opening them. GitHub source
-pages do not launch these products. P05/P06 include standalone Linux runtimes;
-P01's native pack needs an installed Godot .NET engine and .NET runtime. Browser
+pages do not launch these products. P01/P05/P06 include standalone Linux runtimes;
+P01's optional project pack requires the matching Godot .NET engine/runtime. Browser
 games need HTTP rather than direct file navigation. The retained private Sites
 demos are separate deployments and do not represent the latest Git versions.
 

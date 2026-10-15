@@ -1358,3 +1358,34 @@ audit samples 64 resets, detects a real shifted stream and verifies recovery;
 final samples show zero skew. Keep original 15ms presentation assertions intact.
 Extend CI to practice/reset audits on source, current/rebuilt PCK and delivered/
 rebuilt players, and select the new 0.6.0 ZIP explicitly.
+
+## ADR-061 — distribute Eclipse Fair without requiring development tools
+
+**Date:** 2026-10-15 UTC. **Status:** P01 native 0.5.0; M4 retained.
+
+Compare P05/P06 encounter changes, literary source-based revision, P11 handover
+use and P01 installation. The existing native board is playable but requires
+Godot .NET plus a separately installed runtime. Deliver a self-contained Linux
+player so a recipient can extract and play existing any-seat/shared-device rules.
+Do not change gameplay merely to accompany a packaging milestone.
+
+Adapt the verified P05 fresh-staging export/checker pattern to P01's actual
+Core/Journal/Board assembly graph, solution and preset. Reuse the exact pinned
+Mono template from the existing P05 player after digest verification. Include
+self-contained .NET 10.0.12, Godot/.NET licenses and third-party notices, complete
+payload/source hashes, permissions and a download checksum. Keep the optional
+compiled project and all earlier ZIPs. A new shared build framework or engine
+migration would add scope without improving recipient installation.
+
+Execute the actual release with external SDK/runtime excluded, inspect mapped
+host/core libraries and compare baseline/final full verification journals. Exercise
+native selection, confirmation, autosave and restart with isolated files; retain
+human/hardware/other-OS/commercial limits. Add package rejection regressions and
+CI verification/rebuilding of both delivered formats. Use the extracted cached
+Mono template in CI, since a cache hit need not retain its TPZ archive.
+
+TR-015 records actual P05-to-P01 build/distribution adaptation, not shared rules
+or North Star integration. North Star remains foundation-only with no consumer.
+Retain the complete continuous-development prompt unchanged: dynamic records
+capture this milestone and no new operating rule is justified. Existing baseline,
+permission, validation and publication guidance already serves this workflow.

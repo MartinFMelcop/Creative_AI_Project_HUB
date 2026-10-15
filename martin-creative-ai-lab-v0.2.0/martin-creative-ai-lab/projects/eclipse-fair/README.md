@@ -1,6 +1,6 @@
 # P01 — Eclipse Fair
 
-**0.4.0** adds any-seat solo and two-to-four participant local play to the
+**Native 0.5.0** delivers the existing any-seat solo and two-to-four participant local play in the
 [native Godot .NET board](Native/README.md), alongside the
 existing **0.1.0** C#/.NET economy workbench and playable terminal match from
 Artemyra's Feira do Eclipse seed. One to four local participants share eight
@@ -8,10 +8,16 @@ connected venues with optional rivals. Earn obols, buy three sigils, cleanse cur
 Compare rule variants across common seeds and all four policy/seat rotations.
 This is new gameplay, not recovered RPG Maker code. The native consumer uses
 the existing Core and journal without duplicating transactions or changing rules.
-Download [the compiled native project pack](dist/eclipse-board-0.4.0.zip); it requires
-Godot .NET 4.6.3 and .NET 10 runtime, not an SDK. It is not a standalone executable.
-[Local-play execution](../../evidence/eclipse-fair/LOCAL_RUN.json) records actual engine
-journeys, runtime-only consumption, comparative fixtures and implementing-agent review.
+Native **0.5.0** packages those existing rules as a
+[standalone Linux x86_64 player](dist/eclipse-fair-linux-0.5.0.zip), including
+Godot .NET and .NET runtime. Extract `EclipseFair/` and run `./eclipse-fair.x86_64`;
+[requirements and launch](Native/README.md#play-the-linux-distribution).
+The optional [compiled project pack](dist/eclipse-board-0.5.0.zip) still supports
+engine users. All earlier releases are preserved.
+[Release execution](../../evidence/eclipse-fair/RELEASE_RUN.json) distinguishes
+actual standalone operation, unchanged rules/save compatibility and scripted review.
+[Prior local-play execution](../../evidence/eclipse-fair/LOCAL_RUN.json) retains
+its original source/runtime-dependent scope.
 
 New fair selects LOCAL seats. Multi-participant turns require an explicit named
 handoff; previews/maps/results follow the actual actor. **Next turns** forecasts
@@ -131,7 +137,7 @@ replay and comparison/CSV. CI compiles source and executes the shipped package.
 [Execution](../../evidence/eclipse-fair/RUN.json) distinguishes compilation,
 terminal input, package consumption, synthetic comparisons and implementing-agent
 design review. [Provenance](provenance.json) records the seed adaptation. The original evidence is for the terminal 0.1.0 workbench; native 0.2.0 execution
-is recorded separately, with 0.3.0 planning in PLANNING_RUN.json. No historical runtime restoration, standalone export,
+is recorded separately, with 0.3.0 planning in PLANNING_RUN.json. No historical runtime restoration, other-OS standalone export,
 physical controller, human enjoyment, commercial adoption or exclusive rights is
 claimed. This net10.0 domain is not a drop-in Unity DLL.
 

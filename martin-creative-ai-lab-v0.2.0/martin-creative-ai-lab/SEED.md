@@ -70,14 +70,14 @@ Se apenas este arquivo estiver disponível, ele é suficiente para iniciar a Fas
 |---|---|
 | Repository | MartinFMelcop/Creative_AI_Project_HUB; actual Git root `/workspace/Creative_AI_Project_HUB`; wrapper retained |
 | Preserved sources | Old ZIP: 175 Rave / 3 WebSocket texts unchanged. New Rave library: 589 readable / 140 excluded from 729; ten main and eight OVA PDFs (2,407 pages) plus derived text; ZIP/policy unavailable |
-| Current milestone | P06 Veilbreak 0.6.0 native sweep-practice/review loop and verified standalone Linux player |
-| Runtime | Godot 4.6.3 standard; shared real combat with native keyboard/mapped-pad practice controls; no new media |
-| Evidence | 188 checks each on source/final ZIP resources; OpenGL and old/new release X11 journeys; see `docs/STATE.md` and `evidence/veil-arena/PRACTICE_RUN.json` |
-| Limits | Scripted/system input and Codex review; no independent learning, physical controller/listening, accessibility, other-OS or commercial validation |
-| Next action | Compare portfolio opportunities afresh; observe unassisted practice-to-trial transfer alongside independent readers/native delivery/real handovers |
-| Other products | P01/P03 0.4.0, P04 0.2.0, P05 0.3.0, P08/P10 0.5.0, P11 0.7.0 and P02 0.2.1 retained |
-| Rules / assets | Existing maturity, references, transfers and media retained; North Star still has no runtime consumer |
-| Attribution | Clean local `b976b0b` and remote `3320ef7` had identical trees; normal fetch/merge reconciled ancestry; Codex implementation and bounded execution |
+| Current milestone | P01 Eclipse Fair 0.5.0 standalone Linux player with bundled Godot .NET and .NET runtime |
+| Runtime | Existing C# economy 0.1.0, any-seat/shared-device board and boardSchema 1; new verified distribution, no rule or save-schema change |
+| Evidence | Baseline/final player: 1,570 assertions, 26 complete matches, 15 local-seat sets; identical final journal; runtime mappings and X11 autosave/restart; see `docs/STATE.md` |
+| Limits | Technical/scripted delivery proof; no independent player, physical hardware/accessibility, other-OS, LAN or commercial validation |
+| Next action | Compare opportunities afresh; observe unassisted Linux extraction, shared-device handoff and strategic play alongside independent readers and actual handovers |
+| Other products | P03 0.4.0, P04 0.2.0, P05 0.3.0, P06 0.6.0, P08/P10 0.5.0, P11 0.7.0 and P02 0.2.1 retained |
+| Rules / assets | Existing maturity, references and media retained; P05-to-P01 release production now has a real second consumer; North Star has none |
+| Attribution | Clean baseline `be46785` matched remote main; previous CI passed all jobs; Codex packaging adaptation and bounded native execution |
 
 Registry evidence paths must resolve to existing files inside the lab; working
 paths must be directories and legacy-source IDs must exist. This documentary
@@ -299,6 +299,14 @@ The historical context below remains direction, not current runtime.
 **Extrações candidatas:** state machine de partida; grafo de tabuleiro; transação de compra; fontes/sumidouros; perfis de agentes; progressão curta; catálogo de minigames; instrumentação.
 
 **Gate de continuação:** regras básicas compreendidas, importação selecionada, estado real registrado e uma hipótese de case definida. Se a migração integral for cara, extrair a regra e construir um protótipo novo menor.
+
+P01 native 0.5.0 now distributes a standalone Linux x86_64 player, including
+verified Godot .NET 4.6.3 and .NET 10.0.12 with notices. The optional compiled
+project remains available; all earlier ZIPs are retained. The adapted P05 release
+producer has a genuine second consumer, source/payload identity checks and actual
+outside-checkout execution. Rules, human seats, forecasts and save schemas remain
+unchanged. [Release evidence](evidence/eclipse-fair/RELEASE_RUN.json) separates
+technical delivery, scripted UI/save continuity and independent user acceptance.
 
 ### P02 — AI Evaluation & QA Lab
 
