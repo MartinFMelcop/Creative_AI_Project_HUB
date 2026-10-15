@@ -70,14 +70,14 @@ Se apenas este arquivo estiver disponível, ele é suficiente para iniciar a Fas
 |---|---|
 | Repository | MartinFMelcop/Creative_AI_Project_HUB; actual Git root `/workspace/Creative_AI_Project_HUB`; wrapper retained |
 | Preserved sources | Old ZIP: 175 Rave / 3 WebSocket texts unchanged. New Rave library: 589 readable / 140 excluded from 729; ten main and eight OVA PDFs (2,407 pages) plus derived text; ZIP/policy unavailable |
-| Current milestone | P10 Flood Crossing 0.6.0 playable afternoon with inherited loan costs |
-| Runtime | Four afternoon shifts, clinic recall and dusk closure; prior night/morning/noon rules retained; schema 4 added |
-| Evidence | 42 game/browser/oracle checks plus focused final clock regression; desktop/mobile controls, save replay and failure handling; see `docs/STATE.md` |
-| Limits | Scripted gameplay/interface proof; no independent player, physical accessibility, upstream rescue/return or commercial validation |
-| Next action | Compare opportunities afresh; observe unassisted priorities and loan cost understanding alongside independent readers, native gameplay and actual handovers |
-| Other products | P01 0.5.0, P03 0.4.0, P04 0.2.0, P05 0.3.0, P06 0.6.0, P08 0.5.0, P11 0.7.0 and P02 0.2.1 retained |
+| Current milestone | P05 Cinderwatch 0.4.0 bounded native response inspection |
+| Runtime | Selected action plus consecutive announced enemy replies to the next crew decision; same C# rules/save schema 0.1.0 |
+| Evidence | 906 legal branch comparisons; 3,711 domain / 908 headless / 922 rendered checks; actual Linux input and unchanged journals; see `docs/STATE.md` |
+| Limits | Scripted native/interface proof; no independent player learning, physical accessibility, other-OS or commercial validation |
+| Next action | Compare opportunities afresh; observe unassisted tactics and forecast-boundary understanding alongside independent readers and actual handovers |
+| Other products | P01 0.5.0, P03 0.4.0, P04 0.2.0, P06/P10 0.6.0, P08 0.5.0, P11 0.7.0 and P02 0.2.1 retained |
 | Rules / assets | Existing maturity, references and media retained; P05-to-P01 release production now has a real second consumer; North Star has none |
-| Attribution | Clean baseline `f45c1e8` matched remote main; previous CI passed all four jobs; Codex adaptation fiction and scripted execution |
+| Attribution | Clean baseline `7c290ca` matched remote main; previous CI passed all four jobs; Codex native feedback and scripted execution |
 
 Registry evidence paths must resolve to existing files inside the lab; working
 paths must be directories and legacy-source IDs must exist. This documentary
@@ -411,7 +411,7 @@ Plans mentioned 21 classes, five races, levels 1–180, seven item tiers and Spr
 100 core/audio packages. Those packages/runtime are not present in this checkout;
 the Rave archive belongs to P10 and does not establish P05 provenance.
 
-Current destination **Cinderwatch 0.3.0** is a new bounded adaptation, not a
+Current destination **Cinderwatch 0.4.0** is a new bounded adaptation, not a
 restoration. Pure C#/.NET 10 owns the unchanged three-role/encounter economy:
 rows, fixed initiative, announced locked intentions, one action, Cover/Pin,
 finite treatment, scorch and two salvage choices. Core/save schema 0.1.0 remains.
@@ -425,18 +425,25 @@ runtime/source checks and engine/runtime notices accompany the delivery. Previou
 owned-assembly packs remain retained; current editable project is an alternative.
 [Play/rebuild](projects/cinderwatch/README.md), [release execution](evidence/cinderwatch/RELEASE_RUN.json).
 
-Actual source/project/release checks distinguish builds from campaign execution:
-four release victories, deadline loss, 779 headless/790 rendered checks, real
-mixer capture, X11 input/close and original 0.2.0 save replay. Loaded CLR modules
-are inside the bundle. Prior [presentation evidence](evidence/cinderwatch/PRESENTATION_RUN.json)
-records original media production; no new creative asset or historical recovery.
-Independent players, physical listening/accessibility, other platforms and
-commercial validation remain separate.
+Version 0.4.0 adds optional selected-action **Inspect response**: calculate the
+same Core through consecutive announced enemies, stopping before the next crew
+choice, salvage or result. Projected HP/status/supplies and the full event chain
+make defensive opportunity costs visible without choosing a later hero move.
+The keyboard/scrollable report spends nothing, preserves selection and save bytes,
+and returns focus before confirmation. Enemy turns still resolve manually.
 
-Four implementing-agent routes win; Strike-only and Brace-only comparisons lose.
-Technical contracts and rendered review do not prove optimal balance, creative
-appeal or commercial demand. Next seek unassisted tactical choices, especially
-screening, Cover/resource use and salvage trade-offs. No historical media reused.
+[Response execution](evidence/cinderwatch/RESPONSE_RUN.json) compares 906 legal
+branches with actual resolution across four synthetic campaign policies; 3,711
+domain checks, 908 headless project/player checks and 922 rendered source checks
+pass. Actual X11 delivery inspection/confirmation/resolution matches the report;
+baseline/final campaign outcomes and final journals agree. Historical Game,
+Content/Journal rules, original media and all prior ZIPs remain intact. This is
+native feedback, not a human learning finding. Independent play, physical
+listening/accessibility, other platforms and commercial validation remain separate.
+
+Next observe unassisted attack/Brace/Cover/Pin comparisons and understanding of
+the forecast boundary. Compare portfolio opportunities afresh; no North Star
+consumer or integration follows from this independent game's helper.
 
 ### P06 — Véu Partido / Veilbreak
 

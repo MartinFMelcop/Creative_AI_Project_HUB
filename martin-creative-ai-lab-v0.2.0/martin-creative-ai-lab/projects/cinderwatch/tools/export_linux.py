@@ -11,7 +11,7 @@ import tempfile
 from zipfile import ZipFile, ZipInfo, ZIP_DEFLATED
 
 ROOT = Path(__file__).resolve().parents[1]
-VERSION = "0.3.0"
+VERSION = "0.4.0"
 ENGINE_VERSION = "4.6.3.stable.mono.official.7d41c59c4"
 ARCHIVE_SHA = "6436f474ee085fb0a94d3d296b9821736bdd663b6e91b2228fdf77066f1d1400"
 TEMPLATE_SHA = "dde8bd2f5b6b8666c3656a57900f8c4163b3fc9799cc723746ca88468333b320"
@@ -115,7 +115,7 @@ def main():
         runtime = cache / "microsoft.netcore.app.runtime.linux-x64" / RUNTIME_VERSION
         shutil.copyfile(runtime / "LICENSE.TXT", bundle / "DOTNET-LICENSE.txt")
         shutil.copyfile(runtime / "THIRD-PARTY-NOTICES.TXT", bundle / "DOTNET-THIRD-PARTY-NOTICES.txt")
-        (bundle / "README.txt").write_text("""Cinderwatch 0.3.0 — Linux x86_64 tactical rescue prototype
+        (bundle / "README.txt").write_text("""Cinderwatch 0.4.0 — Linux x86_64 tactical rescue prototype
 
 Extract the ENTIRE Cinderwatch folder, then run ./cinderwatch.x86_64.
 Keep cinderwatch.pck, data_Cinder.Native_linuxbsd_x86_64 and media beside it.

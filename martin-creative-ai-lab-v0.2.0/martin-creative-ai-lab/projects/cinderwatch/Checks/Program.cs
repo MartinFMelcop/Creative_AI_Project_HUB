@@ -3,6 +3,7 @@ using Cinder.Checks;
 
 var count=0;
 void Check(bool value,string message) { count++; if(!value)throw new Exception(message); }
+ResponseChecks.Run(Check);
 var game=new Game();
 Check(game.Actor!.Name=="Vale" && game.Order.SequenceEqual(new[]{1,0,3,2,4}),"Opening initiative");
 Check(!game.Legal().Contains(new(Kind.Strike,4)) && game.Legal().Contains(new(Kind.Pierce,4)),"Enemy front screens Strike, not Pierce");

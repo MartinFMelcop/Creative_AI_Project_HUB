@@ -1,7 +1,7 @@
 <Project Sdk="Godot.NET.Sdk/4.6.3">
   <PropertyGroup>
     <EnableDynamicLoading>true</EnableDynamicLoading>
-    <Version>0.3.0</Version>
+    <Version>0.4.0</Version>
     <TargetFramework>net10.0</TargetFramework>
     <RuntimeFrameworkVersion Condition="'$(Configuration)' == 'ExportRelease'">10.0.12</RuntimeFrameworkVersion>
   </PropertyGroup>

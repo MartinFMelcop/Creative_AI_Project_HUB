@@ -41,6 +41,15 @@ public partial class Main
                 Require(choices.ContainsKey(c),"UI omitted a legal action");choices[c].EmitSignal(BaseButton.SignalName.Pressed);
                 Require(Probe.State(game)==before && forecast.Text==game.Preview(c),"Native selection changed state or invented forecast");
             }
+            Require(inspect.Disabled==false,"Selected action should enable response inspection");
+            var savedBefore=File.Exists(savePath)?File.ReadAllText(savePath):null;
+            inspect.GrabFocus();await KeyboardEnter();
+            Require(showResponse&&modal.Visible&&confirm.Disabled&&resolve.Disabled&&inspect.Disabled,"Response inspection is a keyboard input boundary");
+            Require(modalText.Text==ResponseForecast.Calculate(game,selected!).Describe(),"Native report differs from real domain projection");
+            confirm.EmitSignal(BaseButton.SignalName.Pressed);resolve.EmitSignal(BaseButton.SignalName.Pressed);
+            Require(Probe.State(game)==before&&(File.Exists(savePath)?File.ReadAllText(savePath):null)==savedBefore,"Response inspection spent a turn or overwrote a save");
+            await Capture("response-opening");begin.GrabFocus();await KeyboardEnter();
+            Require(!showResponse&&selected!=null&&GetViewport().GuiGetFocusOwner()==inspect,"Response close lost selection or keyboard return focus");
             var first=new Command(Kind.Pin,3);choices[first].GrabFocus();await KeyboardEnter();
             Require(selected==first && !confirm.Disabled,"Keyboard selection failed");await Capture("preview");
             confirm.GrabFocus();await KeyboardEnter();
@@ -58,6 +67,24 @@ public partial class Main
             Require(Probe.State(game)==before && !intro,"Valid resume changed the next actor");
             var realPath=savePath;savePath=Path.GetDirectoryName(realPath)!;var chosen=game.Legal().First();choices[chosen].EmitSignal(BaseButton.SignalName.Pressed);confirm.EmitSignal(BaseButton.SignalName.Pressed);
             Require(game.Journal.Count==2 && notice.Text.Contains("failed"),"Failed save should preserve accepted memory progress");savePath=realPath;Save();
+            restart.EmitSignal(BaseButton.SignalName.Pressed);begin.EmitSignal(BaseButton.SignalName.Pressed);
+            choices[new(Kind.Guard)].EmitSignal(BaseButton.SignalName.Pressed);confirm.EmitSignal(BaseButton.SignalName.Pressed);
+            foreach(var command in new[]{new Command(Kind.Guard),new Command(Kind.Strike,3)})
+            {
+                before=Probe.State(game);choices[command].EmitSignal(BaseButton.SignalName.Pressed);inspect.EmitSignal(BaseButton.SignalName.Pressed);
+                Require(modalText.Text.Contains("Stop BEFORE Neri")&&modalText.Text.Contains(command.Kind==Kind.Guard?"38 → 36 HP":"38 → 29 HP"),"Rook comparison omits the actual bite cost");
+                await Frame();
+                var scroll=modalText.GetVScrollBar();
+                if(scroll.MaxValue>scroll.Page)
+                {
+                    modalText.GrabFocus();Input.ParseInputEvent(new InputEventKey {Keycode=Key.Pagedown,Pressed=true});await Frame();
+                    Input.ParseInputEvent(new InputEventKey {Keycode=Key.Pagedown,Pressed=false});await Frame();
+                    Require(scroll.Value>0,"Response report cannot scroll from its keyboard focus");
+                    modalText.ScrollToLine(0);await Frame();
+                }
+                await Capture(command.Kind==Kind.Guard?"response-brace":"response-strike");
+                begin.EmitSignal(BaseButton.SignalName.Pressed);Require(Probe.State(game)==before&&selected==command,"Comparing responses advanced the turn");
+            }
             var journeys=new List<object>();
             foreach(var a in new[]{"coolant","sparks"})foreach(var b in new[]{"plates","edge"})
             {

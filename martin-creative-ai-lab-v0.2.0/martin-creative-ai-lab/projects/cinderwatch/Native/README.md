@@ -1,8 +1,8 @@
-# Cinderwatch native player 0.3.0
+# Cinderwatch native player 0.4.0
 
 ## Play the Linux distribution
 
-Download/extract the entire [Linux player](../dist/cinderwatch-linux-0.3.0.zip).
+Download/extract the entire [Linux player](../dist/cinderwatch-linux-0.4.0.zip).
 From its `Cinderwatch` directory:
 
 ```sh
@@ -14,7 +14,7 @@ source checkout is required. Keep `cinderwatch.pck`, `data_Cinder.Native_linuxbs
 and `media` beside the executable. If your extractor drops the permission, use
 `chmod +x cinderwatch.x86_64`. The OS needs a desktop/audio stack, ICU and compatible
 OpenGL support. This is a Linux x86_64 prototype; tested systems and limits are
-recorded in [release execution](../../../evidence/cinderwatch/RELEASE_RUN.json).
+recorded in [response execution](../../../evidence/cinderwatch/RESPONSE_RUN.json).
 
 Read the brief, enter the yard, inspect enemy intentions and the `NEXT` queue.
 Choose an action, inspect its computed forecast, then **Confirm action**.
@@ -30,6 +30,29 @@ but cannot act or receive combat Mend. Tactics explains screening, Cover, Pin
 and scorch. The ending acknowledges incapacitated rescuers. Portraits and seven
 original cues show actual state changes; no queued turn, invented damage or full
 actor animation. Sound toggles above the brief; focus loss/Tactics/reset stop it.
+
+## Compare the next response
+
+Select any legal crew action, then **Inspect response**. The scrollable report
+calculates that action and all consecutive announced enemy actions, stopping
+**before the next crew decision**, salvage or result. It names the stopping
+actor/round and lists projected crew HP, rows, shields, scorch and supplies,
+followed by the complete event chain. No later hero action or salvage is assumed.
+This is an exact deterministic branch of the same Core, not a recommended move
+or a prediction of an unchosen round. The short immediate preview remains visible.
+
+In the opening, have Vale Brace. On Rook's turn compare Brace with Strike:
+Brace leaves Rook at 36 HP after the screened Bite; Strike leaves 29 HP while
+hurting the hound. Pin, Cover interception, repair, shield expiry, incapacitated
+turn skips and the next actor's start-turn scorch follow actual rules.
+A Vale inspection may stop immediately at Rook, with no intervening enemy.
+
+Inspection pauses at a keyboard modal, stops active cues and spends no action,
+supplies or save writes. The return button preserves selection and returns focus
+to Inspect response; confirm only when ready. Scroll the report with the mouse
+wheel or keyboard. Enemy turns still require their own explicit Resolve after
+confirmation. [Response execution](../../../evidence/cinderwatch/RESPONSE_RUN.json)
+separates scripted checks and implementing-agent frame review from human learning.
 
 ## Save and resume
 
@@ -49,7 +72,7 @@ in `media/provenance.json`. Hashes are integrity records, not origin signatures.
 
 ## Editable compiled project
 
-The [compiled project pack](../dist/cinderwatch-0.3.0.zip) remains available for
+The [compiled project pack](../dist/cinderwatch-0.4.0.zip) remains available for
 editor/runtime use. It requires Godot **4.6.3 .NET** and .NET **10 runtime**:
 
 ```sh
@@ -58,7 +81,7 @@ godot-dotnet --path Native
 
 No SDK/NuGet restore is needed to play that alternate pack. The standard Godot
 editor cannot execute C#. It contains owned assemblies/source/configuration;
-its engine/API/runtime are external. Earlier 0.1.0/0.2.0 packs are preserved.
+its engine/API/runtime are external. Earlier 0.1.0/0.2.0/0.3.0 packs are preserved.
 
 ## Build and verify
 

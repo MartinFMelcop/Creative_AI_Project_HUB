@@ -1,0 +1,445 @@
+{
+  "project": "P05",
+  "version": "0.4.0",
+  "date_utc": "2026-10-15",
+  "baseline": {
+    "commit": "7c290caff985b94b8920bcaf4212c1c9d057b84c",
+    "tree": "clean, matching remote main; prior Lab checks run 38750689709 succeeded in all four jobs",
+    "artifact": "projects/cinderwatch/dist/cinderwatch-linux-0.3.0.zip",
+    "sha256": "f2dede5ea90f11a50d14ce2b308b3f66e33d43f5e8663243b7904b69a789bcbd",
+    "verified": {
+      "nativeChecks": 779,
+      "journeys": [
+        {
+          "first": "coolant",
+          "second": "plates",
+          "actions": 65,
+          "hp": [
+            6,
+            6,
+            28
+          ],
+          "kits": 0,
+          "sparks": 0
+        },
+        {
+          "first": "coolant",
+          "second": "edge",
+          "actions": 59,
+          "hp": [
+            6,
+            13,
+            28
+          ],
+          "kits": 0,
+          "sparks": 0
+        },
+        {
+          "first": "sparks",
+          "second": "plates",
+          "actions": 71,
+          "hp": [
+            7,
+            16,
+            28
+          ],
+          "kits": 0,
+          "sparks": 0
+        },
+        {
+          "first": "sparks",
+          "second": "edge",
+          "actions": 65,
+          "hp": [
+            7,
+            23,
+            28
+          ],
+          "kits": 0,
+          "sparks": 0
+        }
+      ],
+      "deadline": 13,
+      "presentation": {
+        "portraits": 8,
+        "cards": 6,
+        "actions": 15,
+        "camps": 4,
+        "styles": 12,
+        "cuePlays": 374
+      },
+      "display": "headless",
+      "assessment": "Scripted controls and implementing-agent visual review; not a human playtest"
+    },
+    "rendered_native_checks": 790,
+    "observed_gap": "Immediate preview reports selected action effects; following enemy/expiry/start-turn sequence must be inferred. No bounded response inspection."
+  },
+  "environment": {
+    "os": "Linux x86_64 managed cloud",
+    "sdk": "10.0.401",
+    "engine": "Godot .NET 4.6.3 official; standard Godot cannot run this C# game",
+    "bundled_runtime": "Microsoft.NETCore.App 10.0.12",
+    "display": "Real Xorg dummy display :99, 1280x800; OpenGL Mesa llvmpipe; actual native readback and separate XTest controls",
+    "audio": "Dummy virtual mixer; captured PCM and existing cues, no physical listening",
+    "publication_capability": "Authorized normal authenticated Git transport; no force or history rewrite."
+  },
+  "design": {
+    "audience": "Players learning a deterministic three-encounter tactical rescue, comparing attack, protection and interruption before confirmation.",
+    "alternatives": [
+      "P04 source-based editorial work: the independent bilingual story already resolves its physical operation; primary-source adaptation comparison still needs focused version-specific reading.",
+      "P03 new musical interaction: original tracks and original-pitch rehearsal already function; learning and timbre judgments need hardware/people.",
+      "P11 field handover utility: printing completeness addressed; next usefulness evidence depends on real team observation.",
+      "P10 further afternoon expansion: just delivered; extension offers less immediate evidence than P05 feedback.",
+      "P05 new encounter vs full-round solver vs bounded inspection: select feedback that exposes the next consequences without guessing later crew actions."
+    ],
+    "implementation": "An additive ResponseForecast branches the same Game, applies the selected legal action and resolves consecutive enemy actors through preparation of the next crew turn. Stops at that decision, salvage or result. Report names boundary, projected crew HP/status/supplies and event chain. Optional scrollable keyboard modal spends nothing, preserves selection/save bytes, stops active sound and returns focus. Immediate previews and manual enemy turns remain.",
+    "platform_choice": "Keep functioning C# Core/Godot .NET native player and existing distribution producer; no browser migration, new framework, media generation or rule rebalance."
+  },
+  "before_after": [
+    {
+      "setup": "Opening Vale Brace accepted; Rook is next. Select candidate without confirmation.",
+      "brace": "Report stops before Neri after one Ash hound Bite: Rook 38 to 36 HP; hound unchanged.",
+      "strike": "Same interval: Rook 38 to 29 HP; hound 23 to 15 HP.",
+      "actual_shipped_input": "X11 inspection left save bytes unchanged; selected Strike was explicitly confirmed, enemy explicitly resolved, resulting board shows Rook 29 and hound 15. Three accepted journal entries, not an automatic simulation commit."
+    }
+  ],
+  "checks": [
+    {
+      "command": "dotnet run --project Checks/Cinder.Checks.csproj",
+      "result": {
+        "checks": 3711,
+        "journeys": [
+          {
+            "first": "coolant",
+            "second": "plates",
+            "phase": "Victory",
+            "sparks": 0,
+            "kits": 0,
+            "hp": [
+              6,
+              6,
+              28
+            ],
+            "actions": 65
+          },
+          {
+            "first": "coolant",
+            "second": "edge",
+            "phase": "Victory",
+            "sparks": 0,
+            "kits": 0,
+            "hp": [
+              6,
+              13,
+              28
+            ],
+            "actions": 59
+          },
+          {
+            "first": "sparks",
+            "second": "plates",
+            "phase": "Victory",
+            "sparks": 0,
+            "kits": 0,
+            "hp": [
+              7,
+              16,
+              28
+            ],
+            "actions": 71
+          },
+          {
+            "first": "sparks",
+            "second": "edge",
+            "phase": "Victory",
+            "sparks": 0,
+            "kits": 0,
+            "hp": [
+              7,
+              23,
+              28
+            ],
+            "actions": 65
+          }
+        ],
+        "naive": {
+          "phase": "Defeat",
+          "actions": 37
+        },
+        "assessment": "Synthetic implementing-agent policies; no human balance evidence"
+      },
+      "scope": "3711 assertions total; 906 legal branches from four declared campaign policies compare projected unit/status/resources/events/boundary against actual journal replay and action/enemy execution. Explicit Pin/no-enemy, screening, Cover, scorch skip, salvage and pressure-deadline cases. Bounded policy coverage, not all possible states."
+    },
+    {
+      "command": "Godot .NET source --verify on X11 with --capture-dir",
+      "result": {
+        "nativeChecks": 922,
+        "journeys": [
+          {
+            "first": "coolant",
+            "second": "plates",
+            "actions": 65,
+            "hp": [
+              6,
+              6,
+              28
+            ],
+            "kits": 0,
+            "sparks": 0
+          },
+          {
+            "first": "coolant",
+            "second": "edge",
+            "actions": 59,
+            "hp": [
+              6,
+              13,
+              28
+            ],
+            "kits": 0,
+            "sparks": 0
+          },
+          {
+            "first": "sparks",
+            "second": "plates",
+            "actions": 71,
+            "hp": [
+              7,
+              16,
+              28
+            ],
+            "kits": 0,
+            "sparks": 0
+          },
+          {
+            "first": "sparks",
+            "second": "edge",
+            "actions": 65,
+            "hp": [
+              7,
+              23,
+              28
+            ],
+            "kits": 0,
+            "sparks": 0
+          }
+        ],
+        "deadline": 13,
+        "presentation": {
+          "portraits": 8,
+          "cards": 6,
+          "actions": 15,
+          "camps": 4,
+          "styles": 12,
+          "cuePlays": 375
+        },
+        "display": "X11",
+        "assessment": "Scripted controls and implementing-agent visual review; not a human playtest"
+      },
+      "scope": "922 assertions, four full campaigns, modal input blocking, no inspection save/state writes, selection/focus return, real keyboard scroll, prior persistence/failure/media/deadline checks."
+    },
+    {
+      "command": "Exact compiled-project ZIP --headless --verify",
+      "result": {
+        "nativeChecks": 908,
+        "journeys": [
+          {
+            "first": "coolant",
+            "second": "plates",
+            "actions": 65,
+            "hp": [
+              6,
+              6,
+              28
+            ],
+            "kits": 0,
+            "sparks": 0
+          },
+          {
+            "first": "coolant",
+            "second": "edge",
+            "actions": 59,
+            "hp": [
+              6,
+              13,
+              28
+            ],
+            "kits": 0,
+            "sparks": 0
+          },
+          {
+            "first": "sparks",
+            "second": "plates",
+            "actions": 71,
+            "hp": [
+              7,
+              16,
+              28
+            ],
+            "kits": 0,
+            "sparks": 0
+          },
+          {
+            "first": "sparks",
+            "second": "edge",
+            "actions": 65,
+            "hp": [
+              7,
+              23,
+              28
+            ],
+            "kits": 0,
+            "sparks": 0
+          }
+        ],
+        "deadline": 13,
+        "presentation": {
+          "portraits": 8,
+          "cards": 6,
+          "actions": 15,
+          "camps": 4,
+          "styles": 12,
+          "cuePlays": 375
+        },
+        "display": "headless",
+        "assessment": "Scripted controls and implementing-agent visual review; not a human playtest"
+      }
+    },
+    {
+      "command": "Exact Linux ZIP --headless --verify with PATH=/usr/bin:/bin and external DOTNET_ROOT variables invalid",
+      "result": {
+        "nativeChecks": 908,
+        "journeys": [
+          {
+            "first": "coolant",
+            "second": "plates",
+            "actions": 65,
+            "hp": [
+              6,
+              6,
+              28
+            ],
+            "kits": 0,
+            "sparks": 0
+          },
+          {
+            "first": "coolant",
+            "second": "edge",
+            "actions": 59,
+            "hp": [
+              6,
+              13,
+              28
+            ],
+            "kits": 0,
+            "sparks": 0
+          },
+          {
+            "first": "sparks",
+            "second": "plates",
+            "actions": 71,
+            "hp": [
+              7,
+              16,
+              28
+            ],
+            "kits": 0,
+            "sparks": 0
+          },
+          {
+            "first": "sparks",
+            "second": "edge",
+            "actions": 65,
+            "hp": [
+              7,
+              23,
+              28
+            ],
+            "kits": 0,
+            "sparks": 0
+          }
+        ],
+        "deadline": 13,
+        "presentation": {
+          "portraits": 8,
+          "cards": 6,
+          "actions": 15,
+          "camps": 4,
+          "styles": 12,
+          "cuePlays": 375
+        },
+        "display": "headless",
+        "assessment": "Scripted controls and implementing-agent visual review; not a human playtest"
+      }
+    },
+    {
+      "command": "Actual shipped Linux window via XTest; inspect/compare/confirm/resolve/Alt+F4",
+      "result": {
+        "controls": "Actual X11 mouse controls; actual managed Alt+F4 while inspecting",
+        "accepted_actions": 3,
+        "inspection_save_bytes_unchanged": true,
+        "runtime_libraries": [
+          "/workspace/work/cinder-response/player/Cinderwatch/data_Cinder.Native_linuxbsd_x86_64/libcoreclr.so",
+          "/workspace/work/cinder-response/player/Cinderwatch/data_Cinder.Native_linuxbsd_x86_64/libhostfxr.so"
+        ],
+        "exit_code": 0,
+        "journal_sha256": "2c124df057fa50ea73e122dbccaa96f456f1a8bf6aafaa0e2cf42df5d1eb03ba"
+      }
+    },
+    {
+      "command": "python3 tools/check_pack.py --assemblies; python3 tools/check_linux.py; python3 tools/check_media.py",
+      "result": {
+        "project_files": 37,
+        "linux": {
+          "player": "cinderwatch-linux-0.4.0.zip",
+          "files": 210,
+          "bytes": 67272026,
+          "sha256": "7975b11e2be060fe488b2cf329070d7750fca726a55228aeaa72fd863801ff3a",
+          "source_and_resource_identity": true,
+          "runtime_included": true,
+          "boundary": "Static package check; actual execution is separate."
+        },
+        "media": "Original 4x2 portrait image and seven PCM cue hashes/durations/endpoints unchanged."
+      }
+    },
+    {
+      "command": "python3 tools/validate_repo.py; unittest test_validate_repo.py; unittest test_check_manifest.py; reference_library.py check; check_manifest.py; CI YAML/bash syntax",
+      "result": "Final repository gate plus 13 validator and 11 manifest regressions; reference integrity: 607 source / 18 derived texts / 140 exclusions / 14 North Star capabilities. These are structural/integrity checks, not game or rights validation."
+    }
+  ],
+  "regression_comparison": {
+    "baseline_and_final_campaigns": "Four identical victory outcomes, HP and accepted-action counts (65,59,71,65); same deadline failure. Original Game.cs/Content.cs/Journal.cs and media unchanged.",
+    "final_journals": "Baseline 0.3.0, final compiled project and final Linux verification journals byte-identical.",
+    "final_journal_sha256": "b2eb4d111f7320faa9f5bd58e0acb7bd1005dc931a9997d4890971d6d693d60a",
+    "rules_save_schema": "0.1.0 / schema 1 retained; original 0.2.0 compatibility source remains in existing release evidence; this milestone directly re-executes 0.3.0 journals."
+  },
+  "artifacts_sha256": {
+    "projects/cinderwatch/Core/ResponseForecast.cs": "ba3f73572055f57ee7e125045c1ed68d9582e89c2090b5baca31c68d5c4a5c37",
+    "projects/cinderwatch/Native/Main.cs": "6f0686e76f613d2587774583dd0a360660c4f5d6c5863002101c150ab123d12f",
+    "projects/cinderwatch/Native/NativeChecks.cs": "f82a3db756c0b7c200152fb115b4da534cafef415d7137236686031b63c90559",
+    "projects/cinderwatch/Checks/ResponseChecks.cs": "16592010df910bee5d6545ada3b6cec2c7587594a5d52b43199386c94b5e1df2",
+    "projects/cinderwatch/dist/cinderwatch-0.4.0.zip": "ff9be1eef5e45d65c362f972e383ac4bfc1a73da7bb3bccbbeffa6d76262501d",
+    "projects/cinderwatch/dist/cinderwatch-linux-0.4.0.zip": "7975b11e2be060fe488b2cf329070d7750fca726a55228aeaa72fd863801ff3a"
+  },
+  "screens": [
+    "evidence/cinderwatch/response-before.png",
+    "evidence/cinderwatch/response-brace.png",
+    "evidence/cinderwatch/response-strike.png",
+    "evidence/cinderwatch/response-resolved.png"
+  ],
+  "assessment": {
+    "technical": "Implemented, compiled, packaged, executed in Godot and actual Linux window; existing campaign outcomes unchanged. Native checks first caught a clipped helper label; shortened it and retained the check. Fixture assumptions about dead locked targets and Gout shields were corrected to the actual baseline rules, not product changes.",
+    "creative": "Implementing-agent review of real reports and board: contrasting visible damage/cost at a named next decision supports deliberate comparison. Full event chain explains why a protective choice changes the outcome. Optional report may still impose reading burden; unassisted value remains a hypothesis. No new prose, art or audio is claimed.",
+    "independent_human_validation": false,
+    "limits": [
+      "No claim of improved learning, optimal balance or independent enjoyment.",
+      "No physical controller/audio, screen reader/assistive hardware, other OS or commercial validation.",
+      "Projection ends before another crew choice; it is not a full-round plan or automatic policy.",
+      "North Star remains foundation-only with no real consumer or destination integration."
+    ]
+  },
+  "prompt_review": {
+    "changed": false,
+    "reason": "Existing portfolio/baseline/actual-artifact/evidence guidance served this task. Current priorities stay in STATE/registry; no new operating rule justified."
+  }
+}

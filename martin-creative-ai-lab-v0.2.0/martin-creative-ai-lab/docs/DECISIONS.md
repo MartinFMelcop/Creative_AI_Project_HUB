@@ -1414,3 +1414,36 @@ storage failure; compare identical morning states across all three loan choices.
 Codex narrative/UI review and scripted Chromium inputs are bounded evidence,
 not independent play or physical accessibility. The authoritative prompt remains
 unchanged; discovery and execution guidance already covers this iteration.
+
+## ADR-063 — inspect Cinderwatch responses to the next crew decision
+
+**Date:** 2026-10-15 UTC. **Status:** P05 native 0.4.0; M4 retained.
+
+Compare tactical depth, P04 literary source revision, P03 musical interaction,
+P11 field handovers and P10's just-delivered afternoon. Inspect P05's immediate
+preview: it reports action damage but leaves the following enemy/shield/scorch
+sequence to mental calculation. For players learning this deterministic campaign,
+select a bounded response report before extending encounters or adding an undo.
+
+Fork the actual Game, apply the legal selected command, resolve consecutive
+announced enemy actors and stop before another crew decision, salvage or result.
+Include next-turn preparation, including scorch incapacity and shield expiry.
+Name the stopping actor/round; never simulate an unchosen hero move or label this
+an optimal/full-round plan. Keep existing immediate previews and manual enemy
+resolution. A scrollable keyboard modal preserves selection, live state, supplies
+and save bytes; returning restores inspection focus for deliberate comparison.
+No engine migration, new media or gameplay rebalance is needed.
+
+Compare 906 legal branches from four declared campaign policies with real journal
+replay/action/enemy execution; add explicit no-enemy, screening, Cover, Pin,
+scorch skip, pressure deadline and salvage boundaries. Execute source and exact
+shipped formats, inspect OpenGL frames and actual standalone X11 input. The
+comparison corrects test-fixture assumptions about locked dead targets and Brace
+shielding through Gout; assertions must describe the existing rules. Shorten a
+clipped help label found by native layout checks; retain the checks.
+
+Preserve Game/Content/Journal, schema 0.1.0, campaign outcomes, prior ZIPs and
+original creative assets. Technical equality and Codex frame review do not prove
+human learning, balance or accessibility. North Star remains foundation-only,
+with no consumer or destination integration. Retain the authoritative prompt
+unchanged: current discovery, artifact review and evidence boundaries suffice.

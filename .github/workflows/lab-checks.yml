@@ -67,11 +67,11 @@ jobs:
           "$cinder_engine" --headless --path Native -- --verify --save-path "$RUNNER_TEMP/cinder-source/save.json"
           python3 tools/check_media.py
           python3 tools/check_pack.py
-          unzip -q dist/cinderwatch-0.3.0.zip -d "$RUNNER_TEMP/cinder-delivered"
+          unzip -q dist/cinderwatch-0.4.0.zip -d "$RUNNER_TEMP/cinder-delivered"
           "$cinder_engine" --headless --path "$RUNNER_TEMP/cinder-delivered/cinderwatch/Native" -- --verify --save-path "$RUNNER_TEMP/cinder-delivered-check/save.json"
           python3 tools/pack.py
           python3 tools/check_pack.py --assemblies
-          unzip -q dist/cinderwatch-0.3.0.zip -d "$RUNNER_TEMP/cinder-rebuilt"
+          unzip -q dist/cinderwatch-0.4.0.zip -d "$RUNNER_TEMP/cinder-rebuilt"
           "$cinder_engine" --headless --path "$RUNNER_TEMP/cinder-rebuilt/cinderwatch/Native" -- --verify --save-path "$RUNNER_TEMP/cinder-rebuilt-check/save.json"
 
       - name: Cache the verified Mono Linux release template
@@ -92,7 +92,7 @@ jobs:
           fi
           printf '%s  %s\n' dde8bd2f5b6b8666c3656a57900f8c4163b3fc9799cc723746ca88468333b320 "$cinder_template" | sha256sum --check
           python3 tools/check_linux.py
-          unzip -q dist/cinderwatch-linux-0.3.0.zip -d "$RUNNER_TEMP/cinder-linux-delivered"
+          unzip -q dist/cinderwatch-linux-0.4.0.zip -d "$RUNNER_TEMP/cinder-linux-delivered"
           env -u DOTNET_ROOT -u DOTNET_ROOT_X64 PATH=/usr/bin:/bin DOTNET_MULTILEVEL_LOOKUP=0 "$RUNNER_TEMP/cinder-linux-delivered/Cinderwatch/cinderwatch.x86_64" --headless -- --verify --save-path "$RUNNER_TEMP/cinder-linux-check/save.json"
           python3 tools/export_linux.py --godot "$cinder_engine" --template "$cinder_template" --output "$RUNNER_TEMP/cinder-rebuilt-linux.zip"
           python3 tools/check_linux.py "$RUNNER_TEMP/cinder-rebuilt-linux.zip"

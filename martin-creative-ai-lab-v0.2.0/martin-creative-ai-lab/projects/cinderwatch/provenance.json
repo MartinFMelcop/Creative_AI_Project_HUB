@@ -1,12 +1,12 @@
 {
   "project_id": "P05",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "name": "Cinderwatch",
   "origin": "new_seed_implementation",
   "baseline_commit": "4725d7582cf56115ca2b8d59948d6f25fb601cd3",
   "source": "SEED.md P05: one action per turn, AGI, rows, states",
   "historical_executable_or_editable_source_recovered": false,
-  "changes": "Self-contained Linux x86_64 Godot .NET export, explicit solution/preset, raw original media loaded relative to the executable, validated runtime/source/payload identity and actual release/legacy-save/window execution. Core, rules, save schema and original creative media unchanged; earlier packs retained.",
+  "changes": "Optional deterministic response inspection branches selected action through announced enemies to next crew choice, salvage or result. Scrollable keyboard report exposes health/status/resources and event chain without state/save mutation. New Core helper leaves Game/Content/Journal rules unchanged; native 0.4.0 Linux and compiled packs retain old formats/media and prior ZIPs.",
   "other_project_code_or_media_transferred": false,
   "external_creative_assets": [],
   "external_runtime": [
@@ -14,23 +14,24 @@
     ".NET 10"
   ],
   "technical_reference": "Inspected P01's directly referenced core and owned-assembly packaging; new independent domain and interface",
-  "review": "Codex media direction/code, actual synthetic native/mixer/window checks and rendered review. No independent human or commercial approval.",
+  "review": "Codex implemented/reviewed native feedback; 906 legal branches compared with action/enemy execution, actual engine/modal/keyboard/persistence and OpenGL frames. No independent player or learning/accessibility/commercial validation.",
   "publication": "GitHub main authorized; no Sites deployment",
-  "latest_baseline_commit": "3703f0be29d9875110044a3680efba4737ed2313",
+  "latest_baseline_commit": "7c290caff985b94b8920bcaf4212c1c9d057b84c",
   "produced_creative_assets": [
     "Native/media/portraits.png",
     "Native/media/audio"
   ],
   "external_runtime_scope": "These external prerequisites apply to the editable compiled project. The separate Linux player bundles the official Godot .NET template/API and .NET 10.0.12 runtime; OS/display/audio/ICU libraries remain platform prerequisites.",
   "distribution": {
-    "linux": "dist/cinderwatch-linux-0.3.0.zip",
-    "compiled_project": "dist/cinderwatch-0.3.0.zip",
-    "evidence": "evidence/cinderwatch/RELEASE_RUN.json",
+    "linux": "dist/cinderwatch-linux-0.4.0.zip",
+    "compiled_project": "dist/cinderwatch-0.4.0.zip",
+    "evidence": "evidence/cinderwatch/RESPONSE_RUN.json",
     "engine_notices": [
       "third-party/GODOT-LICENSE.txt",
       "third-party/GODOT-COPYRIGHT.txt"
     ],
     "runtime_notices": "Copied from the pinned Microsoft.NETCore.App.Runtime.linux-x64 10.0.12 package into the player.",
     "authorship_boundary": "Original project/creative provenance retained. Runtime redistribution is not a new project license or exclusive commercial approval."
-  }
+  },
+  "response_evidence": "evidence/cinderwatch/RESPONSE_RUN.json"
 }

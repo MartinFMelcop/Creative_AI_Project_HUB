@@ -5,7 +5,7 @@ from zipfile import ZipFile, ZipInfo, ZIP_DEFLATED
 
 ROOT = Path(__file__).resolve().parents[1]
 BIN = ROOT / "Native/.godot/mono/temp/bin/Debug"
-OUT = ROOT / "dist/cinderwatch-0.3.0.zip"
+OUT = ROOT / "dist/cinderwatch-0.4.0.zip"
 
 
 def main():
