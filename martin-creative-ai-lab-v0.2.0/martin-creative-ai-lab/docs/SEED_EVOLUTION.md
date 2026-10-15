@@ -65,3 +65,10 @@ text in the [literary library](../references/literature/lich/README.md). This fi
 source availability for those books only. Keep conflicting title/metadata version
 labels, unavailable ZIP/policy and later historical reports separate. P04's prior
 adaptation is not retroactively approved or compared by this archival milestone.
+
+## OVA source recovery — v0.32.2
+
+Eight OVA PDFs extend the [literary library](../references/literature/lich/README.md)
+to eighteen readable originals. A separate collection preserves main-book hashes
+and search behavior. Availability now covers the eighteen supplied PDFs, while
+editable manuscripts, ZIP membership/version and actual authority remain unverified.

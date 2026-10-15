@@ -90,7 +90,33 @@
       "authority_status": "policy_not_supplied",
       "editorial_status": "declared_noncanonical_drafts",
       "rights_scope": "User-directed preservation of supplied complete PDFs, including embedded covers/credentials. No independent authorship, image provenance, exclusive rights or commercial redistribution clearance verified.",
-      "limits": "Title pages declare v0.2.87; PDF Producer/Subject declare v0.2.88 and noncanonical draft status. These observations establish neither ZIP v0.4.1 membership nor a current canon/authority policy. OVAs, editable manuscripts and project/editorial files were not supplied."
+      "limits": "Title pages declare v0.2.87; PDF Producer/Subject declare v0.2.88 and noncanonical draft status. These observations establish neither ZIP v0.4.1 membership nor a current canon/authority policy. This main-book bundle contains no OVAs; subsequent OVA imports are separate collections. Editable manuscripts and project/editorial files remain unsupplied."
+    },
+    {
+      "id": "REF-LICH-OVA-PDFS",
+      "kind": "document_bundle",
+      "title": "O Lich mais velho da tumba mais antiga — supplied OVA PDFs I–VIII",
+      "status": "imported",
+      "observed_at": "2026-10-15",
+      "snapshot_prefix": "ova-pdfs",
+      "bundle_sha256": "6e04bdcc6e5ec9baf0bfabd246708c20fcd275777103d1f1e006a969a9ba7cf2",
+      "source_root": "references/literature/lich/snapshots/ova-pdfs-6e04bdcc6e5e/source",
+      "text_root": "references/literature/lich/snapshots/ova-pdfs-6e04bdcc6e5e/text",
+      "inventory_path": "references/literature/lich/snapshots/ova-pdfs-6e04bdcc6e5e/inventory.json",
+      "discovery_path": "references/literature/lich/snapshots/ova-pdfs-6e04bdcc6e5e/discovery.json",
+      "file_count": 8,
+      "imported_count": 8,
+      "derived_text_count": 8,
+      "page_count": 761,
+      "full_archive_preserved": false,
+      "archive_membership": "unverified",
+      "package_version": null,
+      "related_unavailable_collection": "REF-LICH-ATTACHMENT",
+      "authority": "historical_reference_only",
+      "authority_status": "policy_not_supplied",
+      "editorial_status": "declared_noncanonical_drafts",
+      "rights_scope": "User-directed preservation of supplied complete OVA PDFs, including embedded covers. No independent authorship, image provenance, exclusive rights or commercial redistribution clearance verified.",
+      "limits": "Title pages declare OVA I–VIII and v0.2.87; Producer/Subject declare v0.2.88 and noncanonical draft status. These observations establish neither ZIP v0.4.1 membership nor a current canon/authority policy. Editable manuscripts and project/editorial files were not supplied."
     }
   ]
 }

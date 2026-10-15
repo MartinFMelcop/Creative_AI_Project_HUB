@@ -78,3 +78,14 @@ No package-version reconciliation, ZIP-membership proof or canon approval.
 [Evidence](../evidence/reference-integration/LICH_MAIN_PDFS.json) distinguishes
 full extraction/byte preservation from limited opening/ending/visual inspection,
 which is not a complete literary audit or independent rights validation.
+
+## Individual OVA PDFs — 2026-10-15 UTC
+
+Martin supplied OVA I–VIII as eight separate PDFs. [Per-OVA source/text links](../references/literature/lich/README.md#read-the-ovas)
+preserve all originals and embedded covers: 761 physical pages with per-file hashes,
+metadata and eight complete text derivatives. Main-book snapshot bytes/inventories
+are unchanged. All OVA title pages declare v0.2.87; metadata declares v0.2.88 and
+noncanonical drafts. Similar labels/series titles do not prove ZIP membership,
+chronological continuity or current canon. [Execution](../evidence/reference-integration/LICH_OVA_PDFS.json)
+distinguishes full technical extraction from limited text/visual inspection.
+Editable manuscripts and the actual editorial policy remain unsupplied.

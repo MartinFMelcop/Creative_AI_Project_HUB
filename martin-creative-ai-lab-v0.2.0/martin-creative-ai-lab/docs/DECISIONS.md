@@ -1255,3 +1255,16 @@ breaks and headers; they are not authoring manuscripts or fresh literary approva
 Complete source hashes and extraction do not establish full editorial continuity,
 embedded-art rights or human/commercial validation. Import further supplied parts
 with their own provenance; inspect the real policy before any canon claim.
+
+## ADR-057 — keep OVA and main-book recovery independently traceable
+
+**Date:** 2026-10-15 UTC. **Status:** SEED 0.32.2; eight OVA PDFs preserved.
+
+Reuse the established PDF/hash/text/search contract for the user's next eight
+attachments. Give OVA I–VIII a separate `ova-pdfs` bundle and collection; preserve
+the existing main snapshot and default search. An OVA number is local to its
+collection and is not an inferred chronological reading order. A bounded snapshot
+prefix extends the existing validator without rewriting old inventory metadata.
+Same title-page v0.2.87/metadata v0.2.88 observations are recorded, not reconciled
+into an archive version or new canon. The ZIP/policy/editable sources remain absent;
+P04 prose/editions and later historical decisions retain their prior boundaries.

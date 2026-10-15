@@ -1,0 +1,343 @@
+{
+  "schema_version": 1,
+  "collection_id": "REF-LICH-OVA-PDFS",
+  "bundle_sha256": "6e04bdcc6e5ec9baf0bfabd246708c20fcd275777103d1f1e006a969a9ba7cf2",
+  "identity_algorithm": "SHA-256 of ordered order/source_path/size_bytes/sha256 JSON; UTF-8, sorted keys, compact separators",
+  "received_at": "2026-10-15",
+  "provenance": "Eight individual user-supplied OVA PDF attachments, ordered by filenames and title pages. Membership in the inaccessible ZIP is unverified.",
+  "extraction": {
+    "tool": "pdftotext",
+    "implementation": "Poppler",
+    "version": "25.03.0",
+    "arguments": [
+      "-enc",
+      "UTF-8",
+      "-eol",
+      "unix"
+    ],
+    "page_separator": "U+000C, one trailing form feed per physical PDF page",
+    "limitations": "Mechanical derivative, not editable manuscript source or OCR. Covers/images remain inside unchanged PDFs; running headers, page labels, line wraps and extraction order remain. PDF page numbers include cover/front matter, not printed narrative labels."
+  },
+  "files": [
+    {
+      "order": 1,
+      "title": "A Sacerdotisa que Dizia Não",
+      "source_path": "OVA01_A_Sacerdotisa_que_Dizia_Nao.pdf",
+      "local_path": "references/literature/lich/snapshots/ova-pdfs-6e04bdcc6e5e/source/OVA01_A_Sacerdotisa_que_Dizia_Nao.pdf",
+      "classification": "historical_reference",
+      "status": "imported",
+      "attachment_id": "file_00000000076c820ea7f8912e3f52ded6",
+      "size_bytes": 4562261,
+      "sha256": "728ae2fd14e6e7766e1d05b048261ce9289aedef8258094ab8516e2b010da6a9",
+      "git_blob_sha": "da6dd644171424a16c7eb2ee7a41d1c67e423240",
+      "page_count": 119,
+      "metadata": {
+        "Title": "A Sacerdotisa que Dizia Não",
+        "Author": "Projeto O Lich Mais Velho da Tumba Mais Antiga",
+        "Subject": "Rascunho legado não canônico; prosa fraca/mal desenvolvida; revisão e reconstrução obrigatórias; pacote v0.2.88",
+        "Keywords": "light novel, dark fantasy, noncanonical, weak draft, rewrite required, review snapshot",
+        "Creator": null,
+        "Producer": "Lightnovel Darkfantasy v0.2.88 rebaseline pipeline",
+        "CreationDate": null,
+        "ModDate": null,
+        "Trapped": null
+      },
+      "encrypted": false,
+      "embedded_file_names": [],
+      "version_observations": {
+        "title_page_label": "v0.2.87",
+        "title_page_pdf_page": 2,
+        "producer_label": "v0.2.88"
+      },
+      "text": {
+        "local_path": "references/literature/lich/snapshots/ova-pdfs-6e04bdcc6e5e/text/OVA01_A_Sacerdotisa_que_Dizia_Nao.txt",
+        "derived_from_sha256": "728ae2fd14e6e7766e1d05b048261ce9289aedef8258094ab8516e2b010da6a9",
+        "sha256": "48d9510cdda385fc36acfaa181046811cf5e98d6008f54af80c18be9c1916bd2",
+        "size_bytes": 161027,
+        "page_count": 119,
+        "nonempty_page_count": 118,
+        "character_count": 153505
+      }
+    },
+    {
+      "order": 2,
+      "title": "A Cidade Sob a Colina",
+      "source_path": "OVA02_A_Cidade_Sob_a_Colina.pdf",
+      "local_path": "references/literature/lich/snapshots/ova-pdfs-6e04bdcc6e5e/source/OVA02_A_Cidade_Sob_a_Colina.pdf",
+      "classification": "historical_reference",
+      "status": "imported",
+      "attachment_id": "file_00000000131c820e8fd24d9b4a906587",
+      "size_bytes": 4446570,
+      "sha256": "07fe6de69604160bba495601521348351a83e91c9d87caa478490e5ec0e1878d",
+      "git_blob_sha": "c913bba5cca6be230da9f625ba98421d5559bfa3",
+      "page_count": 94,
+      "metadata": {
+        "Title": "A Cidade Sob a Colina",
+        "Author": "Projeto O Lich Mais Velho da Tumba Mais Antiga",
+        "Subject": "Rascunho legado não canônico; prosa fraca/mal desenvolvida; revisão e reconstrução obrigatórias; pacote v0.2.88",
+        "Keywords": "light novel, dark fantasy, noncanonical, weak draft, rewrite required, review snapshot",
+        "Creator": null,
+        "Producer": "Lightnovel Darkfantasy v0.2.88 rebaseline pipeline",
+        "CreationDate": null,
+        "ModDate": null,
+        "Trapped": null
+      },
+      "encrypted": false,
+      "embedded_file_names": [],
+      "version_observations": {
+        "title_page_label": "v0.2.87",
+        "title_page_pdf_page": 2,
+        "producer_label": "v0.2.88"
+      },
+      "text": {
+        "local_path": "references/literature/lich/snapshots/ova-pdfs-6e04bdcc6e5e/text/OVA02_A_Cidade_Sob_a_Colina.txt",
+        "derived_from_sha256": "07fe6de69604160bba495601521348351a83e91c9d87caa478490e5ec0e1878d",
+        "sha256": "72a3da695c0ddc9552c98d98809f2f3cfe089a54fea7fb41d615f61b756c6e19",
+        "size_bytes": 124965,
+        "page_count": 94,
+        "nonempty_page_count": 93,
+        "character_count": 120047
+      }
+    },
+    {
+      "order": 3,
+      "title": "O Herdeiro e o Dragão",
+      "source_path": "OVA03_O_Herdeiro_e_o_Dragao.pdf",
+      "local_path": "references/literature/lich/snapshots/ova-pdfs-6e04bdcc6e5e/source/OVA03_O_Herdeiro_e_o_Dragao.pdf",
+      "classification": "historical_reference",
+      "status": "imported",
+      "attachment_id": "file_00000000f648820ea407d96b4d97d540",
+      "size_bytes": 4202628,
+      "sha256": "b416b40244591ad84016d1041687bc7921d643dfdc21b9f7d538948bae68ee15",
+      "git_blob_sha": "9eeb37824de6a5185d27a710078f2daeaae491c0",
+      "page_count": 111,
+      "metadata": {
+        "Title": "O Herdeiro e o Dragão",
+        "Author": "Projeto O Lich Mais Velho da Tumba Mais Antiga",
+        "Subject": "Rascunho legado não canônico; prosa fraca/mal desenvolvida; revisão e reconstrução obrigatórias; pacote v0.2.88",
+        "Keywords": "light novel, dark fantasy, noncanonical, weak draft, rewrite required, review snapshot",
+        "Creator": null,
+        "Producer": "Lightnovel Darkfantasy v0.2.88 rebaseline pipeline",
+        "CreationDate": null,
+        "ModDate": null,
+        "Trapped": null
+      },
+      "encrypted": false,
+      "embedded_file_names": [],
+      "version_observations": {
+        "title_page_label": "v0.2.87",
+        "title_page_pdf_page": 2,
+        "producer_label": "v0.2.88"
+      },
+      "text": {
+        "local_path": "references/literature/lich/snapshots/ova-pdfs-6e04bdcc6e5e/text/OVA03_O_Herdeiro_e_o_Dragao.txt",
+        "derived_from_sha256": "b416b40244591ad84016d1041687bc7921d643dfdc21b9f7d538948bae68ee15",
+        "sha256": "5ba01e8554868ede5d1f201d677be667fc28cb1a674c963ff6217725c3ae5721",
+        "size_bytes": 146097,
+        "page_count": 111,
+        "nonempty_page_count": 110,
+        "character_count": 140497
+      }
+    },
+    {
+      "order": 4,
+      "title": "O Mapa que Terminava na Pedra",
+      "source_path": "OVA04_O_Mapa_que_Terminava_na_Pedra.pdf",
+      "local_path": "references/literature/lich/snapshots/ova-pdfs-6e04bdcc6e5e/source/OVA04_O_Mapa_que_Terminava_na_Pedra.pdf",
+      "classification": "historical_reference",
+      "status": "imported",
+      "attachment_id": "file_00000000cb94820eae0c1147bcb08d45",
+      "size_bytes": 4523551,
+      "sha256": "7e8e759da725fb7f2d9b9e468110c48d004eb3f58a7d3abed7392a52a63a9c4e",
+      "git_blob_sha": "08ab2eba938ff30ed3ff50f2e02ea6f60f62b79e",
+      "page_count": 94,
+      "metadata": {
+        "Title": "O Mapa que Terminava na Pedra",
+        "Author": "Projeto O Lich Mais Velho da Tumba Mais Antiga",
+        "Subject": "Rascunho legado não canônico; prosa fraca/mal desenvolvida; revisão e reconstrução obrigatórias; pacote v0.2.88",
+        "Keywords": "light novel, dark fantasy, noncanonical, weak draft, rewrite required, review snapshot",
+        "Creator": null,
+        "Producer": "Lightnovel Darkfantasy v0.2.88 rebaseline pipeline",
+        "CreationDate": null,
+        "ModDate": null,
+        "Trapped": null
+      },
+      "encrypted": false,
+      "embedded_file_names": [],
+      "version_observations": {
+        "title_page_label": "v0.2.87",
+        "title_page_pdf_page": 2,
+        "producer_label": "v0.2.88"
+      },
+      "text": {
+        "local_path": "references/literature/lich/snapshots/ova-pdfs-6e04bdcc6e5e/text/OVA04_O_Mapa_que_Terminava_na_Pedra.txt",
+        "derived_from_sha256": "7e8e759da725fb7f2d9b9e468110c48d004eb3f58a7d3abed7392a52a63a9c4e",
+        "sha256": "22f85ed8b258abefdd8d689bb9d7a89d577218f249950abf06a6208230c4c7c5",
+        "size_bytes": 129680,
+        "page_count": 94,
+        "nonempty_page_count": 93,
+        "character_count": 125487
+      }
+    },
+    {
+      "order": 5,
+      "title": "Os Mortos Não Assinam Tratados",
+      "source_path": "OVA05_Os_Mortos_Nao_Assinam_Tratados.pdf",
+      "local_path": "references/literature/lich/snapshots/ova-pdfs-6e04bdcc6e5e/source/OVA05_Os_Mortos_Nao_Assinam_Tratados.pdf",
+      "classification": "historical_reference",
+      "status": "imported",
+      "attachment_id": "file_000000003638820ea457a1fdb20b28ba",
+      "size_bytes": 4236905,
+      "sha256": "7d1f1cdc48b55dcfc382e62f0f857e7781ee6d19adbecc08e72089bca026eb81",
+      "git_blob_sha": "18ffcedb5b86121530dfbf2414d231a4b855ee20",
+      "page_count": 90,
+      "metadata": {
+        "Title": "Os Mortos Não Assinam Tratados",
+        "Author": "Projeto O Lich Mais Velho da Tumba Mais Antiga",
+        "Subject": "Rascunho legado não canônico; prosa fraca/mal desenvolvida; revisão e reconstrução obrigatórias; pacote v0.2.88",
+        "Keywords": "light novel, dark fantasy, noncanonical, weak draft, rewrite required, review snapshot",
+        "Creator": null,
+        "Producer": "Lightnovel Darkfantasy v0.2.88 rebaseline pipeline",
+        "CreationDate": null,
+        "ModDate": null,
+        "Trapped": null
+      },
+      "encrypted": false,
+      "embedded_file_names": [],
+      "version_observations": {
+        "title_page_label": "v0.2.87",
+        "title_page_pdf_page": 2,
+        "producer_label": "v0.2.88"
+      },
+      "text": {
+        "local_path": "references/literature/lich/snapshots/ova-pdfs-6e04bdcc6e5e/text/OVA05_Os_Mortos_Nao_Assinam_Tratados.txt",
+        "derived_from_sha256": "7d1f1cdc48b55dcfc382e62f0f857e7781ee6d19adbecc08e72089bca026eb81",
+        "sha256": "46972fc0a78ae75bf2c314dbbf958eea248cd8adadabc0f70937a60fd8392af0",
+        "size_bytes": 125030,
+        "page_count": 90,
+        "nonempty_page_count": 89,
+        "character_count": 120652
+      }
+    },
+    {
+      "order": 6,
+      "title": "Projeto Regente Zero",
+      "source_path": "OVA06_Projeto_Regente_Zero.pdf",
+      "local_path": "references/literature/lich/snapshots/ova-pdfs-6e04bdcc6e5e/source/OVA06_Projeto_Regente_Zero.pdf",
+      "classification": "historical_reference",
+      "status": "imported",
+      "attachment_id": "file_00000000bd50820ebf8a0c80b1031edb",
+      "size_bytes": 4360764,
+      "sha256": "a2ae180dd7bb5a4f6ccf0c956bb56637b80f8db97b1e314c7f61c5d37b28197d",
+      "git_blob_sha": "63392601d9cb235f5fbc66be6b948c59e2a90507",
+      "page_count": 86,
+      "metadata": {
+        "Title": "Projeto Regente Zero",
+        "Author": "Projeto O Lich Mais Velho da Tumba Mais Antiga",
+        "Subject": "Rascunho legado não canônico; prosa fraca/mal desenvolvida; revisão e reconstrução obrigatórias; pacote v0.2.88",
+        "Keywords": "light novel, dark fantasy, noncanonical, weak draft, rewrite required, review snapshot",
+        "Creator": null,
+        "Producer": "Lightnovel Darkfantasy v0.2.88 rebaseline pipeline",
+        "CreationDate": null,
+        "ModDate": null,
+        "Trapped": null
+      },
+      "encrypted": false,
+      "embedded_file_names": [],
+      "version_observations": {
+        "title_page_label": "v0.2.87",
+        "title_page_pdf_page": 2,
+        "producer_label": "v0.2.88"
+      },
+      "text": {
+        "local_path": "references/literature/lich/snapshots/ova-pdfs-6e04bdcc6e5e/text/OVA06_Projeto_Regente_Zero.txt",
+        "derived_from_sha256": "a2ae180dd7bb5a4f6ccf0c956bb56637b80f8db97b1e314c7f61c5d37b28197d",
+        "sha256": "daf95ab05dad7639a1bc72fa17ac90a9647c41738de490558e50b696794fc6a6",
+        "size_bytes": 120052,
+        "page_count": 86,
+        "nonempty_page_count": 85,
+        "character_count": 115710
+      }
+    },
+    {
+      "order": 7,
+      "title": "A Guerra Sem o Príncipe",
+      "source_path": "OVA07_A_Guerra_Sem_o_Principe.pdf",
+      "local_path": "references/literature/lich/snapshots/ova-pdfs-6e04bdcc6e5e/source/OVA07_A_Guerra_Sem_o_Principe.pdf",
+      "classification": "historical_reference",
+      "status": "imported",
+      "attachment_id": "file_000000005774820e86eae3437e21ef28",
+      "size_bytes": 3990258,
+      "sha256": "c87a5c607546f4fd69c9ac4bd5c2ef7d3d0901be90e0f8fb00519d67d6da05e9",
+      "git_blob_sha": "f0c4e336f40f3cf82c526bfd19f62769685ae2ce",
+      "page_count": 78,
+      "metadata": {
+        "Title": "A Guerra Sem o Príncipe",
+        "Author": "Projeto O Lich Mais Velho da Tumba Mais Antiga",
+        "Subject": "Rascunho legado não canônico; prosa fraca/mal desenvolvida; revisão e reconstrução obrigatórias; pacote v0.2.88",
+        "Keywords": "light novel, dark fantasy, noncanonical, weak draft, rewrite required, review snapshot",
+        "Creator": null,
+        "Producer": "Lightnovel Darkfantasy v0.2.88 rebaseline pipeline",
+        "CreationDate": null,
+        "ModDate": null,
+        "Trapped": null
+      },
+      "encrypted": false,
+      "embedded_file_names": [],
+      "version_observations": {
+        "title_page_label": "v0.2.87",
+        "title_page_pdf_page": 2,
+        "producer_label": "v0.2.88"
+      },
+      "text": {
+        "local_path": "references/literature/lich/snapshots/ova-pdfs-6e04bdcc6e5e/text/OVA07_A_Guerra_Sem_o_Principe.txt",
+        "derived_from_sha256": "c87a5c607546f4fd69c9ac4bd5c2ef7d3d0901be90e0f8fb00519d67d6da05e9",
+        "sha256": "684062f2dc7261d9c12f844fc354936aba848a331e6721fb074d292740536431",
+        "size_bytes": 108998,
+        "page_count": 78,
+        "nonempty_page_count": 77,
+        "character_count": 104754
+      }
+    },
+    {
+      "order": 8,
+      "title": "Depois da Cisão",
+      "source_path": "OVA08_Depois_da_Cisao.pdf",
+      "local_path": "references/literature/lich/snapshots/ova-pdfs-6e04bdcc6e5e/source/OVA08_Depois_da_Cisao.pdf",
+      "classification": "historical_reference",
+      "status": "imported",
+      "attachment_id": "file_0000000016a8820e8a66f8c12e3808f0",
+      "size_bytes": 4277456,
+      "sha256": "3a4669d570e53138615880d0cb11904a3548d9a066df5049430a6ca8fdf392fe",
+      "git_blob_sha": "beed6eff4f3a0b61e8b5735cbb8919bbfb2499e4",
+      "page_count": 89,
+      "metadata": {
+        "Title": "Depois da Cisão",
+        "Author": "Projeto O Lich Mais Velho da Tumba Mais Antiga",
+        "Subject": "Rascunho legado não canônico; prosa fraca/mal desenvolvida; revisão e reconstrução obrigatórias; pacote v0.2.88",
+        "Keywords": "light novel, dark fantasy, noncanonical, weak draft, rewrite required, review snapshot",
+        "Creator": null,
+        "Producer": "Lightnovel Darkfantasy v0.2.88 rebaseline pipeline",
+        "CreationDate": null,
+        "ModDate": null,
+        "Trapped": null
+      },
+      "encrypted": false,
+      "embedded_file_names": [],
+      "version_observations": {
+        "title_page_label": "v0.2.87",
+        "title_page_pdf_page": 2,
+        "producer_label": "v0.2.88"
+      },
+      "text": {
+        "local_path": "references/literature/lich/snapshots/ova-pdfs-6e04bdcc6e5e/text/OVA08_Depois_da_Cisao.txt",
+        "derived_from_sha256": "3a4669d570e53138615880d0cb11904a3548d9a066df5049430a6ca8fdf392fe",
+        "sha256": "d0433c8faed6ef752d0fee74df5c0797096424981273cde58f1f17ed393d7577",
+        "size_bytes": 117423,
+        "page_count": 89,
+        "nonempty_page_count": 88,
+        "character_count": 112827
+      }
+    }
+  ]
+}

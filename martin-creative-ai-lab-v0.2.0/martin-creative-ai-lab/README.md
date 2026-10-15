@@ -6,8 +6,8 @@ slices, verify behavior, record decisions, and test reuse in actual destinations
 **North Star**, our future MMORPG, guides long-term convergence while independent
 projects retain their own goals, technology, fiction and commercial possibilities.
 
-**Current seed: v0.32.1.** The lab includes eleven project lines, the unchanged 178-text selected archive,
-a 589-file readable Rave snapshot, ten preserved main literary PDFs with searchable text, a working local project-conversation workspace, a calibrated
+**Current seed: v0.32.2.** The lab includes eleven project lines, the unchanged 178-text selected archive,
+a 589-file readable Rave snapshot, ten preserved main literary PDFs and eight OVAs with searchable text, a working local project-conversation workspace, a calibrated
 practice-task harness, a complete rescue adventure with browser/terminal editions,
 two original browser rhythm stages with rendered soundtracks, sustained notes and targeted phrase rehearsal, a native C# economy board with preserved terminal workbench, a complete Portuguese story and English translation with EPUB/PDF, and a native
 Godot boss arena with painted art, adaptive audio, timed sweep counters and Linux player. Private
@@ -21,7 +21,7 @@ project versions and execution boundaries are in the state and registry.
 - [North Star](north-star/README.md): vision, capability catalog and bounded shared-state research gates; no runtime consumer or chosen final engine.
 - [Historical library](references/README.md): source copies, discovery and current governance boundaries.
 - [Rave Master](references/rave-master/README.md): 589 readable code/data/text files from 729 observed; 140 per-file exclusions; unchanged 175-file selection reconciled.
-- [Literary recovery](references/literature/lich/README.md): ten supplied main-book PDFs with per-file hashes and page-addressable text; title/metadata version conflict recorded, ZIP/policy still unavailable.
+- [Literary recovery](references/literature/lich/README.md): ten main-book and eight OVA PDFs with per-file hashes and page-addressable text; title/metadata version conflict recorded, ZIP/policy still unavailable.
 
 
 - [P05 — Cinderwatch](projects/cinderwatch/README.md): self-contained Linux C# rescue with original portraits/cues, persistent supplies and replayable resume; editable native project retained.

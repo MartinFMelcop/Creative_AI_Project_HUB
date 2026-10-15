@@ -94,9 +94,11 @@ def validate_document_bundle(root, collection):
     bundle = collection.get("bundle_sha256")
     require(isinstance(bundle, str) and re.fullmatch(r"[0-9a-f]{64}", bundle),
             f"{cid}: invalid bundle identity")
+    prefix = collection.get("snapshot_prefix", "main-pdfs")
+    require(prefix in {"main-pdfs", "ova-pdfs"}, f"{cid}: unsupported document snapshot prefix")
     source_name = relative(collection.get("source_root"))
     require(source_name.parts[0] == "references" and len(source_name.parts) >= 5
-            and source_name.parts[-3:] == ("snapshots", "main-pdfs-" + bundle[:12], "source"),
+            and source_name.parts[-3:] == ("snapshots", prefix + "-" + bundle[:12], "source"),
             f"{cid}: invalid document snapshot root")
     source_root = local(root, str(source_name), directory=True)
     base = source_root.parent
@@ -407,7 +409,7 @@ def main():
     search = sub.add_parser("search", help="Search imported PDF text with physical page references")
     search.add_argument("query", help="Literal phrase; case-insensitive and tolerant of line wraps")
     search.add_argument("--collection", default="REF-LICH-MAIN-PDFS")
-    search.add_argument("--book", type=int)
+    search.add_argument("--book", type=int, help="Book/OVA number within the selected collection")
     search.add_argument("--limit", type=int, default=12)
     args = parser.parse_args()
     try:

@@ -19,40 +19,45 @@ def write_json(path, data):
     path.write_text(json.dumps(data))
 
 
-def add_pdf_fixture(root, catalog):
+def add_pdf_fixture(root, catalog, prefix="main-pdfs", cid="REF-LICH-MAIN-PDFS"):
     # Inert envelope for hash/claim tests, not evidence of PDF parsing or extraction.
     raw = b"%PDF-1.4\nfixture PDF bytes\n%%EOF\n"
-    text = "\fEdição de revisão - v0.2.87\n\fMaelis abriu a\nPorta Leste. Não avançou.\n\f".encode()
-    source = {"order": 1, "source_path": "01_Fixture.pdf", "size_bytes": len(raw),
+    narrative = "Ivera fechou o portão." if prefix == "ova-pdfs" else "Maelis abriu a\nPorta Leste. Não avançou."
+    text = ("\fEdição de revisão - v0.2.87\n\f" + narrative + "\n\f").encode()
+    filename = "OVA01_Fixture.pdf" if prefix == "ova-pdfs" else "01_Fixture.pdf"
+    source = {"order": 1, "source_path": filename, "size_bytes": len(raw),
               "sha256": hashlib.sha256(raw).hexdigest()}
     bundle = hashlib.sha256(json.dumps([source], sort_keys=True, ensure_ascii=False,
                                      separators=(",", ":")).encode()).hexdigest()
-    base = "references/literature/lich/snapshots/main-pdfs-" + bundle[:12]
+    base = "references/literature/lich/snapshots/" + prefix + "-" + bundle[:12]
     (root / base / "source").mkdir(parents=True)
     (root / base / "text").mkdir()
-    (root / base / "source/01_Fixture.pdf").write_bytes(raw)
-    (root / base / "text/01_Fixture.txt").write_bytes(text)
-    item = {**source, "title": "Fixture", "attachment_id": "fixture-pdf-1", "encrypted": False,
+    (root / base / "source" / filename).write_bytes(raw)
+    text_name = Path(filename).stem + ".txt"
+    (root / base / "text" / text_name).write_bytes(text)
+    item = {**source, "title": "Fixture", "attachment_id": cid + "-fixture-1", "encrypted": False,
             "classification": "historical_reference", "status": "imported",
-            "local_path": base + "/source/01_Fixture.pdf", "page_count": 3,
+            "local_path": base + "/source/" + filename, "page_count": 3,
             "git_blob_sha": hashlib.sha1(b"blob " + str(len(raw)).encode() + b"\0" + raw).hexdigest(),
             "metadata": {"Producer": "pipeline v0.2.88", "Subject": "Rascunho não canônico"},
             "version_observations": {"title_page_pdf_page": 2, "title_page_label": "v0.2.87", "producer_label": "v0.2.88"},
-            "text": {"local_path": base + "/text/01_Fixture.txt", "derived_from_sha256": source["sha256"],
+            "text": {"local_path": base + "/text/" + text_name, "derived_from_sha256": source["sha256"],
                      "size_bytes": len(text), "sha256": hashlib.sha256(text).hexdigest(),
                      "page_count": 3, "nonempty_page_count": 2, "character_count": len(text.decode())}}
-    write_json(root / base / "inventory.json", {"schema_version": 1, "collection_id": "REF-LICH-MAIN-PDFS",
+    write_json(root / base / "inventory.json", {"schema_version": 1, "collection_id": cid,
                "bundle_sha256": bundle, "extraction": {"tool": "pdftotext", "version": "fixture-only",
                "arguments": ["-enc", "UTF-8", "-eol", "unix"]}, "files": [item]})
-    write_json(root / base / "discovery.json", {"schema_version": 1, "collection_id": "REF-LICH-MAIN-PDFS",
-               "topics": [{"id": "main-books", "source_paths": ["01_Fixture.pdf"]}]})
-    catalog["collections"].append({"id": "REF-LICH-MAIN-PDFS", "kind": "document_bundle", "status": "imported",
+    write_json(root / base / "discovery.json", {"schema_version": 1, "collection_id": cid,
+               "topics": [{"id": "ovas" if prefix == "ova-pdfs" else "main-books", "source_paths": [filename]}]})
+    catalog["collections"].append({"id": cid, "kind": "document_bundle", "status": "imported",
         "bundle_sha256": bundle, "source_root": base + "/source", "text_root": base + "/text",
         "inventory_path": base + "/inventory.json", "discovery_path": base + "/discovery.json",
         "file_count": 1, "imported_count": 1, "derived_text_count": 1, "page_count": 3,
         "full_archive_preserved": False, "archive_membership": "unverified", "package_version": None,
         "authority": "historical_reference_only", "authority_status": "policy_not_supplied",
         "editorial_status": "declared_noncanonical_drafts"})
+    if prefix != "main-pdfs":
+        catalog["collections"][-1]["snapshot_prefix"] = prefix
     return base
 
 
@@ -94,6 +99,7 @@ def make_fixture(root):
         {"id": "REF-LICH-REPORT-0448", "kind": "historical_report", "status": "documented_only", "imported_count": 0,
          "full_archive_preserved": False, "report_path": "docs/report.md", "reported_details_path": "docs/report.md"}]}
     add_pdf_fixture(root, catalog)
+    add_pdf_fixture(root, catalog, "ova-pdfs", "REF-LICH-OVA-PDFS")
     write_json(root / "references/catalog.json", catalog)
     write_json(root / "north-star/capabilities.json", {"schema_version": 1, "name": "North Star", "kind": "program",
                "stage": "foundation_only", "engine_selection": "undecided", "consumer_paths": [], "capabilities": [
@@ -110,6 +116,7 @@ class ReferenceLibraryTests(unittest.TestCase):
         self.root = Path(temp.name)
         self.snapshot = make_fixture(self.root)
         self.pdf_snapshot = json.loads((self.root / "references/catalog.json").read_text())["collections"][3]["source_root"].removesuffix("/source")
+        self.ova_snapshot = json.loads((self.root / "references/catalog.json").read_text())["collections"][4]["source_root"].removesuffix("/source")
 
     def edit(self, name, mutate):
         path = self.root / name
@@ -129,7 +136,7 @@ class ReferenceLibraryTests(unittest.TestCase):
 
     def test_complete_library_and_topic_query_open_actual_bytes(self):
         result = validate_library(self.root)
-        self.assertEqual((result["imported"], result["excluded"], result["derived"]), (2, 0, 1))
+        self.assertEqual((result["imported"], result["excluded"], result["derived"]), (3, 0, 2))
         output = self.run_cli("find", "--topic", "combat")
         self.assertEqual(output.returncode, 0, output.stderr)
         data = json.loads(output.stdout)
@@ -157,7 +164,7 @@ class ReferenceLibraryTests(unittest.TestCase):
         self.edit(self.snapshot + "/inventory.json", lambda d: d["files"][0].update(
             source_path="AGENTS.md", local_path=self.snapshot + "/source/AGENTS.md.reference"))
         self.edit(self.snapshot + "/discovery.json", lambda d: d["topics"][0].update(source_paths=["AGENTS.md"]))
-        self.assertEqual(validate_library(self.root)["imported"], 2)
+        self.assertEqual(validate_library(self.root)["imported"], 3)
         self.edit(self.snapshot + "/inventory.json", lambda d: d["files"][0].update(
             local_path=self.snapshot + "/source/AGENTS.md"))
         self.assert_invalid("original/local path mapping differs")
@@ -355,6 +362,38 @@ class ReferenceLibraryTests(unittest.TestCase):
         self.edit(self.pdf_snapshot + "/discovery.json", lambda d: d["topics"][0].update(source_paths=["01_Fixture.pdf"]))
         self.edit(self.pdf_snapshot + "/inventory.json", lambda d: d.update(bundle_sha256="0" * 64))
         self.assert_invalid("document provenance differs")
+
+    def test_ova_discovery_returns_ova_original_and_derivative(self):
+        result = self.run_cli("find", "--collection", "REF-LICH-OVA-PDFS", "--topic", "ovas")
+        self.assertEqual(result.returncode, 0, result.stderr)
+        data = json.loads(result.stdout)
+        self.assertEqual(data["matches"], 1)
+        row = data["files"][0]
+        self.assertEqual(row["source_path"], "OVA01_Fixture.pdf")
+        for item in [row, row["text"]]:
+            self.assertTrue(item["local_path"].startswith(self.ova_snapshot + "/"))
+            self.assertEqual(hashlib.sha256((self.root / item["local_path"]).read_bytes()).hexdigest(), item["sha256"])
+
+    def test_ova_search_keeps_number_one_separate_from_main_book_one(self):
+        main = self.run_cli("search", "Ivera", "--book", "1")
+        ova = self.run_cli("search", "Ivera", "--collection", "REF-LICH-OVA-PDFS", "--book", "1")
+        self.assertEqual(main.returncode, 0, main.stderr)
+        self.assertEqual(ova.returncode, 0, ova.stderr)
+        self.assertEqual(json.loads(main.stdout)["matches"], 0)
+        data = json.loads(ova.stdout)
+        self.assertEqual((data["matches"], data["results"][0]["book"], data["results"][0]["pdf_page"]), (1, 1, 3))
+        self.assertEqual(data["results"][0]["pdf_path"], self.ova_snapshot + "/source/OVA01_Fixture.pdf")
+
+    def test_ova_snapshot_prefix_is_bounded_and_bound_to_its_root(self):
+        path = self.root / "references/catalog.json"
+        original = path.read_bytes()
+        for prefix, message in [("main-pdfs", "invalid document snapshot root"),
+                                ("../escape", "unsupported document snapshot prefix"),
+                                ("other-pdfs", "unsupported document snapshot prefix")]:
+            with self.subTest(prefix=prefix):
+                self.edit("references/catalog.json", lambda d: d["collections"][4].update(snapshot_prefix=prefix))
+                self.assert_invalid(message)
+                path.write_bytes(original)
 
 
 if __name__ == "__main__":

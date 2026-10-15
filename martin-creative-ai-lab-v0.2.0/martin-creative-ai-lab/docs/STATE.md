@@ -1,35 +1,33 @@
 # Lab state
 
-**Updated:** 2026-10-15 UTC. **Seed:** 0.32.1.
-**Milestone:** import the ten individually supplied main literary PDF books.
+**Updated:** 2026-10-15 UTC. **Seed:** 0.32.2.
+**Milestone:** preserve and index the eight individually supplied OVA PDFs.
 
-Started clean on `work` at `1fd775b56a21390beefc5e1d8fcb81eb0f671120`, matching
-remote main. Martin supplied the main books after the oversized ZIP transfer
-failed. This is the requested source-recovery continuation; no product expansion.
+Started clean on `work` at `e122dbb0fa455ed1cc528d90484d37d340c9a68c`, matching
+remote main. Martin supplied OVA I–VIII to continue the requested literary recovery.
+The [literary library](../references/literature/lich/README.md) now holds eighteen
+unchanged PDFs: ten main books (1,646 pages) and eight OVAs (761 pages), totaling
+2,407 physical pages. Each original has attachment provenance, SHA-256/Git blob,
+metadata/page counts and a mechanically extracted, hash-bound UTF-8 text copy.
 
-[Literary library](../references/literature/lich/README.md) now preserves Books
-I–X: ten unchanged PDFs, 1,646 pages, embedded covers and ten mechanical UTF-8
-text derivatives. Each file has attachment provenance, SHA-256/Git blob, PDF
-metadata, page counts and a linked derivative hash. A content-identified snapshot
-and offline literal search return exact source paths and physical PDF pages.
-Title/contents/opening/closing text, all covers and representative body pages were
-inspected; the complete corpus has not undergone editorial continuity review.
+The OVAs have their own content-identified bundle and discovery topic. Offline
+search selects `REF-LICH-OVA-PDFS`; its `--book 1` denotes OVA I, while the existing
+default search remains Main Book I–X. Import order follows filename/title-page
+numbers, not a verified chronological or canonical reading order.
 
-All title pages say v0.2.87; PDF Producer/Subject declare v0.2.88 and noncanonical
-legacy drafts. Preserve both observations without selecting a package version or
-ratifying events/names/rules. The original v0.4.1-named ZIP remains unavailable:
-no archive hash/inventory/membership proof, OVAs, editable manuscript source or
-authority-policy bytes. Earlier v0.4.48 reports/decisions remain distinct.
+All eighteen title pages declare v0.2.87; metadata declares v0.2.88/noncanonical
+drafts. Preserve both observations. ZIP bytes/hash/version/membership, editable
+sources and authority policy remain unavailable. Earlier v0.4.48 reports/decisions,
+the main-book snapshots and P04's 0.2.0 story/editions remain intact; no canon change.
+North Star, existing runtimes, transfers/assets and Rave recovery are retained.
 
-[Import evidence](../evidence/reference-integration/LICH_MAIN_PDFS.json) records
-actual preservation, extraction/search and validation. Existing reference/repo/
-manifest gates cover the new sources without adding runtime PDF dependencies.
-P04 remains the separate 0.2.0 bilingual adaptation; its story and editions,
-all other product content, Rave sources, older archive, transfers/assets and
-North Star's foundation-only contribution states remain intact.
+[OVA execution](../evidence/reference-integration/LICH_OVA_PDFS.json) records actual
+PDF parsing, complete extraction/reproduction, source/staged hashes, search samples
+and repository checks. Contents/opening/closing text, all OVA covers and sample
+body pages were inspected by Codex; this is not a full editorial continuity audit,
+independent author/reader approval or cover-rights/commercial validation.
 
-Next: import further parts when supplied, verify the actual editorial policy and
-compare version-specific passages before selecting a literary revision. Independent
-reader/author feedback and art/commercial rights remain unverified. Future ordinary
-development still compares P01/P03/P05/P06/P10/P11 and bounded North Star work;
-this source import does not commit future sessions to literature or MMORPG work.
+Next: recover accessible editable sources and actual editorial policy, then compare
+version-specific passages before deciding on a revision or adaptation. Ordinary
+portfolio development still compares independent product opportunities; this
+requested import does not prioritize further literature or North Star expansion.

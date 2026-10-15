@@ -7,7 +7,7 @@ metadata and active adaptations. [Catalog](catalog.json) records availability;
 - [Rave Master](rave-master/README.md): pinned source tree; 589 readable original
   text/code/data files, 140 explicit exclusions from 729 observed files.
 - [Literary collection](literature/lich/README.md): ten individually supplied main
-  PDF books, preserved with embedded covers, per-file hashes and page-addressable
+  PDF books and eight OVA PDFs (2,407 pages), preserved with embedded covers, per-file hashes and page-addressable
   text derivatives. The oversized ZIP, editable manuscripts and authority policy
   remain unavailable; earlier inspection reports stay separate.
 - [Earlier selected archive](../archive/legacy-source-extracts-v0.2.0.zip): unchanged
@@ -24,6 +24,8 @@ python3 tools/reference_library.py find --name Game.exe --include-excluded
 python3 tools/reference_library.py find --collection REF-LICH-ATTACHMENT
 python3 tools/reference_library.py find --collection REF-LICH-MAIN-PDFS --topic main-books
 python3 tools/reference_library.py search "Porta Leste" --book 10 --limit 5
+python3 tools/reference_library.py find --collection REF-LICH-OVA-PDFS --topic ovas
+python3 tools/reference_library.py search "Ivera" --collection REF-LICH-OVA-PDFS --book 5
 ```
 
 Queries return exact original/local paths, status and hashes; an unavailable
