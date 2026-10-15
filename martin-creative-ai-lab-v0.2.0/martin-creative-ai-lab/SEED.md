@@ -70,14 +70,14 @@ Se apenas este arquivo estiver disponível, ele é suficiente para iniciar a Fas
 |---|---|
 | Repository | MartinFMelcop/Creative_AI_Project_HUB; actual Git root `/workspace/Creative_AI_Project_HUB`; wrapper retained |
 | Preserved sources | Old ZIP: 175 Rave / 3 WebSocket texts unchanged. New Rave library: 589 readable / 140 excluded from 729; ten main and eight OVA PDFs (2,407 pages) plus derived text; ZIP/policy unavailable |
-| Current milestone | P01 Eclipse Fair 0.5.0 standalone Linux player with bundled Godot .NET and .NET runtime |
-| Runtime | Existing C# economy 0.1.0, any-seat/shared-device board and boardSchema 1; new verified distribution, no rule or save-schema change |
-| Evidence | Baseline/final player: 1,570 assertions, 26 complete matches, 15 local-seat sets; identical final journal; runtime mappings and X11 autosave/restart; see `docs/STATE.md` |
-| Limits | Technical/scripted delivery proof; no independent player, physical hardware/accessibility, other-OS, LAN or commercial validation |
-| Next action | Compare opportunities afresh; observe unassisted Linux extraction, shared-device handoff and strategic play alongside independent readers and actual handovers |
-| Other products | P03 0.4.0, P04 0.2.0, P05 0.3.0, P06 0.6.0, P08/P10 0.5.0, P11 0.7.0 and P02 0.2.1 retained |
+| Current milestone | P10 Flood Crossing 0.6.0 playable afternoon with inherited loan costs |
+| Runtime | Four afternoon shifts, clinic recall and dusk closure; prior night/morning/noon rules retained; schema 4 added |
+| Evidence | 42 game/browser/oracle checks plus focused final clock regression; desktop/mobile controls, save replay and failure handling; see `docs/STATE.md` |
+| Limits | Scripted gameplay/interface proof; no independent player, physical accessibility, upstream rescue/return or commercial validation |
+| Next action | Compare opportunities afresh; observe unassisted priorities and loan cost understanding alongside independent readers, native gameplay and actual handovers |
+| Other products | P01 0.5.0, P03 0.4.0, P04 0.2.0, P05 0.3.0, P06 0.6.0, P08 0.5.0, P11 0.7.0 and P02 0.2.1 retained |
 | Rules / assets | Existing maturity, references and media retained; P05-to-P01 release production now has a real second consumer; North Star has none |
-| Attribution | Clean baseline `be46785` matched remote main; previous CI passed all jobs; Codex packaging adaptation and bounded native execution |
+| Attribution | Clean baseline `f45c1e8` matched remote main; previous CI passed all four jobs; Codex adaptation fiction and scripted execution |
 
 Registry evidence paths must resolve to existing files inside the lab; working
 paths must be directories and legacy-source IDs must exist. This documentary
@@ -254,7 +254,7 @@ Identificadores persistem mesmo quando nomes mudam. Um projeto arquivado pode co
 | P07 | Visual Generation & Asset Lab | Native visual production | Three paintings plus two real motion atlases consumed by P06 | 0.2.0 production/integration; independent artist approval absent |
 | P08 | Audio, Poetry & Music Lab | Original musical production and integration | Two P03 stages and P06 native soundscape | Real masters/exports/scores; no album or human listening approval |
 | P09 | AI Delivery & Operations Cases | Carreira real e avaliação simulada | Case de entrega, análise de workflow e rubricas | Base profissional lida; cases anteriores pendentes |
-| P10 | Adventures Unleashed / Rave Master | Narrative, NPCs and recovered systems | Two-day browser rescue/relief campaign with local resume and portable saves | Campaign 0.4.0; Python adventure 0.2.0 / standalone 0.1.3; bounded evidence in registry |
+| P10 | Adventures Unleashed / Rave Master | Narrative, NPCs and recovered systems | Two-day browser rescue/relief campaign with local resume and portable saves | Campaign 0.6.0; Python adventure 0.2.0 / standalone 0.1.3; bounded evidence in registry |
 | P11 | Real-time Integration Lab / Project Rooms | Node/Socket.IO/SQLite | Trusted local project conversations, decisions, portable records and recovery | Workspace 0.7.0 with complete print reports and offline reading copies, actions/search/recovery; original protocol and P02 snapshot preserved; no public service |
 
 P02 agrupa evaluation e QA porque podem compartilhar a mesma aplicação pequena. Não criar dois projetos Unity idênticos apenas para apresentar títulos diferentes. P01 pode abrigar produção, economia e analytics como cases distintos de uma fonte comum.
@@ -572,18 +572,19 @@ references; current Python/browser execution evidence and maturity remain separa
 Reservatório recuperado de RPG Maker XP/RGSS: narrativa, personalidade e diálogo de NPCs, combate, progressão, crafting, reputação, planejamento de arte/áudio e QA. A extração completa, os estados e limites estão na seção 28.2. Não é um novo compromisso de terminar um RPG extenso nem uma fusão automática com os outros RPGs do inventário.
 
 [The Last Waystone](projects/waystone-dialogue/browser/README.md) preserves the
-complete night rescue and six-shift relief morning. Browser 0.5.0 adds a noon
-request with Mara, Iven, Senn and the Keeper only when present. Actual deliveries,
-clinical timing, seed and council record shape their scenes. Keep resources,
-lend a ready ferry or accept Iven's own guide offer; write dusk or open return
-terms. The local cost is observable without simulating upstream success.
+complete night rescue, six-shift morning and noon receipt. Browser 0.6.0 makes
+local loan costs playable in four afternoon shifts: carry food, recover people,
+supply the clinic and contact late callers, preserve seed or plant. Retained
+transport and Iven determine actual work costs; an upstream volunteer cannot be
+recalled by local rescue. Waiting spends remaining light until dusk. A due return
+is an obligation, not an observed arrival; no upstream success is simulated.
 
-Schema 1/2 saves retain their formats; schema 3 replays new scene decisions.
-Python adventure 0.2.0/scene 0.1.3 and browser night/morning rules stay unchanged.
-Actual 0.4.0 comparison, 35 checks and desktop/mobile frames verify this bounded
-milestone. Implementer narrative review is not independent audience approval,
-full RPG equivalence, native gameplay or commercial validation. The previously
-private demo is not redeployed in this GitHub source session.
+Schemas 1–3 retain their versions; schema 4 replays the new chapter. Python
+adventure 0.2.0/scene 0.1.3 and browser night/morning/noon rules stay unchanged.
+The 42-check suite, old save continuation and actual desktop/mobile Chromium
+execution verify this bounded milestone. M4 remains technical; no independent
+reader/player, physical accessibility or commercial validation. The private demo
+has not been redeployed. See the current STATE and afternoon execution record.
 
 ### P11 — Real-time Integration Lab / Project Rooms
 

@@ -1389,3 +1389,28 @@ or North Star integration. North Star remains foundation-only with no consumer.
 Retain the complete continuous-development prompt unchanged: dynamic records
 capture this milestone and no new operating rule is justified. Existing baseline,
 permission, validation and publication guidance already serves this workflow.
+
+## ADR-062 — execute Flood Crossing's local loan consequences
+
+**Date:** 2026-10-15 UTC. **Status:** P10 browser 0.6.0; M4 retained.
+
+Compare Cinderwatch tactical depth, Tokyo musical interactions, source-based
+literary revision, real Project Rooms handovers and the noon receipt. Select
+P10's gap between reported local capacity and experienced cost: four afternoon
+shifts let players allocate what the loan left locally. A longer upstream rescue
+would obscure this cost and invent unobserved outcomes; a prettier receipt would
+still leave it unplayed. Preserve the functioning static JavaScript platform.
+
+Inherit exact road/ferry/guide availability, people, clinic timing, food and seed.
+Use a separate state/snapshot; keep earlier records and save versions unchanged.
+A recovered stranded guide may speed a retained ferry, but local rescue never
+recalls a volunteer sent upstream. Separate late clinical supplies from caller
+recall; keep seed/planting distinct from harvest. Stop-work waits consume the
+remaining light before showing dusk. Return due means obligation, not arrival.
+
+Schema 4 replays the accepted action journal, rejecting unavailable actions and
+old-version stage forgery. Exercise actual controls, reload, export/import and
+storage failure; compare identical morning states across all three loan choices.
+Codex narrative/UI review and scripted Chromium inputs are bounded evidence,
+not independent play or physical accessibility. The authoritative prompt remains
+unchanged; discovery and execution guidance already covers this iteration.

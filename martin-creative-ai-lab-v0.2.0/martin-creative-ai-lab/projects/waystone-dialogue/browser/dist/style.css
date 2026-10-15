@@ -784,3 +784,6 @@ dialog .eyebrow {
 #continue-morning { margin: 0 12px 12px 0; }
 #continue-handover { margin: 0 12px 12px 0; }
 .layout.handover .clock { grid-template-columns: repeat(3, 1fr); }
+
+.layout.afternoon .clock { grid-template-columns: repeat(4, 1fr); }
+#continue-afternoon { margin: 0 12px 12px 0; }

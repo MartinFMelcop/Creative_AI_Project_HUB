@@ -1,4 +1,4 @@
-# Flood Crossing — the noon receipt 0.5.0
+# Flood Crossing — the afternoon crew 0.6.0
 
 A complete playable two-day adaptation of [P10's terminal adventure](../README.md).
 Pack two items, talk to the Keeper, choose a river route, rescue the mill party
@@ -7,7 +7,7 @@ clock, residents/cargo, current forecast and action risks stay connected to
 actual game state. All five endings have their own consequences and replay.
 
 [Previously deployed owner-private demo](https://the-last-waystone.sturdyspice.chatgpt.site).
-This session publishes 0.5.0 to GitHub; the private demo was not redeployed.
+This session publishes 0.6.0 to GitHub; the private demo was not redeployed.
 Use the local commands below to play the current scene.
 GitHub remains the maintained source. Site identity is retained in
 `.openai/hosting.json`; deployment does not change its audience.
@@ -59,6 +59,37 @@ review are separate. The final receipt records what departed, local capacity,
 actual deliveries and outstanding work; it claims no upstream rescue or future
 harvest. A still-disputed council order can be publicly withdrawn here, without
 rewriting the workshop lie, morning record or an absent Keeper's signature.
+
+## The afternoon crew
+
+After signing the receipt, choose **Take the afternoon list**. Four shifts until
+dusk execute the local consequences of the loan. Carry the remaining grain,
+recover stranded people, retrieve or unpack medicine, contact callers who left
+the late clinic, save seed or drain and plant with the whole mill party.
+Actions show load, route and shift costs; unavailable tasks cannot be committed.
+**Stop work and wait for dusk** spends the remaining light, keeping unfinished
+work visible. There is no aggregate morality or completion score.
+
+The same ferry-only morning and zero delivered grain can now play three ways:
+keeping ferry/Iven delivers four crates in two shifts; sending Iven takes four
+shifts; lending the ferry leaves the ridge and delivers two crates in four
+shifts. Remaining light can compete for seed or clinical work. A retained
+causeway keeps its four-crate capacity even when its backup boat leaves.
+Rescuing stranded Iven can speed a retained ferry; it never retrieves a guide
+who volunteered upstream, nor conjures a boat or road.
+
+Supplying a late clinic and contacting its morning callers are separate tasks.
+Afternoon delivery never rewrites the morning deadline. Seed in the ground is
+not a harvest. At dusk an agreed return becomes due, **not verified**: the game
+has observed only local work. Upstream rescue and boat/guide returns are outside
+this chapter. All night, morning and noon snapshots remain unchanged.
+
+Schema **4**, engine **0.6.0**, replays afternoon actions from the actual prior
+journal; schemas 1–3 retain their versions and continue into the chapter. Reload,
+export/import, rejected files and unavailable browser storage follow the same
+recovery workflow. [Execution](../../../evidence/waystone-dialogue/AFTERNOON_RUN.json)
+and the [actual mobile dusk screen](../../../evidence/waystone-dialogue/afternoon-boat-mobile.png)
+record scripted technical proof and implementing-agent review, not independent play.
 
 ## Play locally
 

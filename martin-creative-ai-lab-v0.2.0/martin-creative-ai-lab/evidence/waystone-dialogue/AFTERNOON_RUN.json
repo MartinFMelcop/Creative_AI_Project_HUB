@@ -1,0 +1,95 @@
+{
+  "project": "P10",
+  "version": "0.6.0",
+  "date_utc": "2026-10-15",
+  "baseline": {
+    "commit": "f45c1e8b3599609d558fd34902bd482c891379c1",
+    "working_tree": "clean, matching origin/main",
+    "behavior": "Browser 0.5.0 ends at the noon receipt; local loan capacity is reported but no afternoon task can be played.",
+    "execution": "Pre-edit Node engine/campaign/handover test files passed (3 runner file results). Previous CI run 38747319104 succeeded in all four jobs."
+  },
+  "environment": {
+    "os": "Linux x86_64 managed cloud",
+    "node": "24.19.0",
+    "python": "3.12.14",
+    "chromium": "154.0.8037.57",
+    "browser": "Actual headless Chromium with localhost HTTP; 1440x1050 desktop and 390x844 mobile/touch emulation. No physical touchscreen or screen reader.",
+    "constraints": "Sandbox Node subprocess execution required escalation for detailed tests; no product assertions weakened. No external research/assets needed."
+  },
+  "design": {
+    "audience": "Players of a short narrative relief strategy game, choosing how local work competes with upstream assistance.",
+    "alternatives": [
+      "P05 tactical encounter depth: strong native opportunity, but current loop already completes a campaign.",
+      "P03 musical interaction: two original stages and rehearsal already work; listening/learning evidence needs people/hardware.",
+      "P04 source-based literary revision: valuable, but manuscripts/policy gaps require careful version-specific comparison.",
+      "P11 real handover use: print completeness addressed; field usefulness requires real team observation.",
+      "P10 richer receipt vs local afternoon vs upstream operation: local afternoon makes an existing consequential choice playable without inventing upstream success."
+    ],
+    "implemented": "Four work shifts inherit exact noon route/guide availability. Recover stranded crew, retrieve/supply medicine, recall late callers, carry food, preserve/plant seed, or wait until dusk. Separate immutable prior snapshots and schema-4 action replay."
+  },
+  "comparisons": [
+    {
+      "setup": "Same wet ferry night, morning depot/supply-clinic/close; no grain delivered. Hear Iven; sign chosen noon decision; start afternoon.",
+      "keep_ferry_and_iven": "grain twice => 4 crates in 2 shifts, 2 shifts remain. Seed can be saved before waiting for dusk.",
+      "lend_ferry": "grain twice via ridge => 2 crates in 4 shifts. 2 remain at mill; return due at dusk is unobserved.",
+      "send_guide": "grain twice via retained ferry => 4 crates in 4 shifts. Iven stays upstream."
+    },
+    {
+      "setup": "Same wet night; morning grain/grain/depot/supply-clinic/seed. Keep crossing.",
+      "before": "Medicine supplied late; saved seed; callers have left.",
+      "after": "Recall then plant then wait => afternoon callers contacted and seed sown. Morning late timestamp unchanged; harvest unknown."
+    }
+  ],
+  "checks": [
+    {
+      "command": "npm test (browser directory)",
+      "result": "42 passed, 0 failed. Full game/domain/Python oracle/Chromium suite before final wait-to-dusk and clock-layout refinements. Retained handover graph: 330 morning endings, 50640 canonical states, 65140 transitions, 25280 receipts."
+    },
+    {
+      "command": "node --test tests/afternoon.test.mjs tests/afternoon-browser.test.mjs",
+      "result": "7 passed after wait-to-dusk refinement; 50 canonical afternoon states / 54 transitions from three loan variants plus sheltered-night fallback. Bounded graph, not all campaign histories."
+    },
+    {
+      "command": "node --test projects/waystone-dialogue/browser/tests/afternoon-browser.test.mjs",
+      "result": "2 passed after final four-column clock styling; actual keyboard/touch emulation, reload, import/export, invalid journal, blocked storage and restart."
+    },
+    {
+      "command": "node --test projects/waystone-dialogue/browser/tests/afternoon.test.mjs",
+      "result": "5 passed after final recovery-cost alignment with retained local ferry crew; 50 states / 54 transitions."
+    },
+    {
+      "command": "python3 projects/waystone-dialogue/browser/tools/export_dialogue.py --check",
+      "result": "Dialogue source export matches."
+    },
+    {
+      "command": "python3 tools/validate_repo.py; unittest test_validate_repo.py; unittest test_check_manifest.py; python3 tools/reference_library.py check; python3 tools/check_manifest.py",
+      "result": "See committed continuity and final verification: structure/links, 13 validator and 11 manifest regressions, reference integrity, maintained file hashes."
+    }
+  ],
+  "artifacts": {
+    "projects/waystone-dialogue/browser/dist/afternoon.js": "da7d4aadf9c6dbc3595098d8aec05578fc0992ea09e108a80d461007fd0a4eda",
+    "projects/waystone-dialogue/browser/dist/afternoon-ui.js": "88cf068765a36ad051316e83a38d78675f14537207f561bb2da1eb75a72d5ce6",
+    "projects/waystone-dialogue/browser/dist/campaign.js": "89072267c17b4a6c71b2fd8022b83857e4cab5b717f67d8f5d6e0a200f92ce27",
+    "projects/waystone-dialogue/browser/dist/app.js": "a2bfc997243f9a41cca8261697f7b5085cc43df62d2d4fe06180eb5ddb12ff7f",
+    "projects/waystone-dialogue/browser/dist/index.html": "d7e82038ae37233f69821e63be488c44901209189112929c52caf9cd49dc59ee",
+    "projects/waystone-dialogue/browser/dist/style.css": "316b3811df8ccbe1d95e65bf0aa923399f48db1e22595c38c205d79c39fdad17"
+  },
+  "screens": [
+    "evidence/waystone-dialogue/afternoon-boat-mobile.png",
+    "evidence/waystone-dialogue/afternoon-recall.png"
+  ],
+  "assessment": {
+    "verified": "Actual browser control path, schema-1/2/3 continuation retained in complete suite, schema-4 replay and failure safety; immutable earlier records; resources/time bounded; concrete local loan opportunity cost.",
+    "creative_review": "Implementing agent inspected actual mobile dusk and desktop late-recall scenes. Concrete domestic actions and unfinished work convey consequence without a morality score; waiting correction aligns pacing and displayed dusk. This is reasoned authoring judgment, not audience approval.",
+    "limits": [
+      "No independent human play/learning/balance/enjoyment validation.",
+      "No physical touch, assistive technology, audio or native engine execution for this browser milestone.",
+      "No upstream rescue/return simulation, new media, historical canon changes or private Sites redeployment.",
+      "North Star remains foundation-only; no consumer or destination integration."
+    ]
+  },
+  "prompt_review": {
+    "changed": false,
+    "reason": "Current discovery, baseline, environmental diagnosis and actual artifact review guidance served the task. Dynamic state is maintained separately; no new general rule justified."
+  }
+}

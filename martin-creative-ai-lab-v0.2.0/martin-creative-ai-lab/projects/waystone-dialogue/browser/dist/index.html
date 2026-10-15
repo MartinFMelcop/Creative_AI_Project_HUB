@@ -82,11 +82,11 @@
     <div id="narrative" class="narrative"></div>
     <div id="context" class="context"></div>
     <div id="choices-area"><div class="choice-heading"><h2 id="decision-title">What will you do?</h2><span id="decision-note"></span></div><div id="choices"></div></div>
-    <section id="ending" hidden aria-label="Crossing outcome"><dl id="outcome" class="outcome"></dl><div id="epilogue" class="narrative"></div><button id="continue-morning" class="primary" hidden>Meet the morning crew <span aria-hidden="true">↗</span></button><button id="continue-handover" class="primary" hidden>Meet the noon courier <span aria-hidden="true">↗</span></button><button id="replay" class="primary">Try another crossing <span aria-hidden="true">↗</span></button><p id="ending-note" class="ending-note">There is no single score. People, medicine and tomorrow's route have separate outcomes.</p></section>
+    <section id="ending" hidden aria-label="Crossing outcome"><dl id="outcome" class="outcome"></dl><div id="epilogue" class="narrative"></div><button id="continue-morning" class="primary" hidden>Meet the morning crew <span aria-hidden="true">↗</span></button><button id="continue-handover" class="primary" hidden>Meet the noon courier <span aria-hidden="true">↗</span></button><button id="continue-afternoon" class="primary" hidden>Take the afternoon list <span aria-hidden="true">↗</span></button><button id="replay" class="primary">Try another crossing <span aria-hidden="true">↗</span></button><p id="ending-note" class="ending-note">There is no single score. People, medicine and tomorrow's route have separate outcomes.</p></section>
     <details id="journal"><summary>Crossing journal <span id="journal-count"></span></summary><ol id="journal-entries"></ol></details>
   </section>
   <p id="notice" role="status" class="notice"></p>
-  <footer><span id="save-status">Progress stays in this browser; Save file lets you carry it elsewhere.</span><span>A Martin Creative AI Lab prototype · 0.5.0</span></footer>
+  <footer><span id="save-status">Progress stays in this browser; Save file lets you carry it elsewhere.</span><span>A Martin Creative AI Lab prototype · 0.6.0</span></footer>
 </div>
 </main>
 <dialog id="instructions" aria-labelledby="help-title"><button class="dialog-close" data-close="instructions" aria-label="Close instructions">×</button><p class="eyebrow">KEEP THE FLOOD IN VIEW</p><h2 id="help-title">Before you set out</h2>
@@ -96,6 +96,7 @@
   <p>On the ferry, people and medicine share cargo slots. Iven steers faster with more capacity. The current repeats <strong>slack → pull → surge</strong>: pull damages hull; surge damages it more and spoils exposed medicine. A guide line protects both; timber protects only the hull.</p>
   <p><strong>The morning follows your night ending.</strong> Six work shifts compete for clinic supplies, isolated people, grain and sowing seed. Dry medicine is needed by shift 3; the wagon leaves at shift 6. A repaired road, retained ferry and Iven change load capacity and work costs. The ridge trail always offers a slow fallback.</p>
   <p><strong>The noon courier follows the morning.</strong> Hear the people actually present, then keep local resources, lend a ready ferry or accept Iven’s own offer to guide. A loan changes the local route or its pace; a return deadline stays an obligation to check. Speaking takes no work shifts.</p>
+  <p><strong>Work until dusk.</strong> Four afternoon shifts use the transport and crew left locally. Finish deliveries, contact late clinic callers or plant with Senn. A promised return is still unverified at dusk.</p>
   <p>Your last accepted choice is saved locally. <strong>Save file</strong> exports the journey; <strong>Load file</strong> restores it on another browser. If storage is unavailable, file saves still work. No account or network is needed after the page loads.</p>
   <button class="primary" data-close="instructions">Back to the crossing</button>
 </dialog>
