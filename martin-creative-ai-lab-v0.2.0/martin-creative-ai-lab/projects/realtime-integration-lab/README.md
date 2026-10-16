@@ -93,7 +93,9 @@ While reading earlier rows, paging or using Actions/Search, new notes and decisi
 stay saved and update their record panels without displacing the conversation.
 A newer-entry signal offers explicit navigation. It is an availability signal,
 not an exact unread count. Your own confirmed send resolves its pending attempt
-even when that row belongs beyond the current window. Later typing stays intact.
+even when that row belongs beyond the current window. Fetching a saved page also
+confirms a matching uncertain own attempt, without another send. Later typing
+stays intact.
 At the visible current end, arrivals continue to follow normally.
 
 Failed requests retain the window and allow retry. Room, identity and reconnect

@@ -1508,7 +1508,9 @@ adds cost without giving better control. No schema or dependency change.
 
 Freeze historical/paging/hidden windows during arrivals; update record panels
 and announce newer availability without an exact unread-count claim. Resolve
-own attempts before deferring rendering. Keep drafts, action work and search.
+own attempts before deferring rendering, including matching saved rows recovered
+by HTTP history when broadcast/acknowledgement were lost. Keep drafts, action
+work and search.
 Preserve retained visible/focused rows; guard delayed success/error/finally by
 room/identity/generation/request. Retain the window on failure. Do not reclaim
 focus from an editor used during a request. Reconnect still opens latest.

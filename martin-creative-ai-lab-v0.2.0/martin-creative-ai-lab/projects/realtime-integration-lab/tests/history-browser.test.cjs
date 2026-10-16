@@ -8,6 +8,7 @@ const { chromium } = require('playwright-core');
 const { createRoomsServer } = require('../rooms-server.cjs');
 
 const baselineClient = process.env.ROOMS_HISTORY_BASELINE_CLIENT;
+const runtimeClient = baselineClient || process.env.ROOMS_HISTORY_TEST_CLIENT;
 const captureDirectory = process.env.ROOMS_HISTORY_CAPTURE_DIR;
 const historyURL = /\/api\/studio\/rooms\/[^/]+\/history(?:\?|$)/;
 let browser;
@@ -46,9 +47,9 @@ async function fixture(t, viewport = { width: 1280, height: 900 }) {
     contexts.push(context);
     const page = await context.newPage();
     page.on('pageerror', error => errors.push(error.message));
-    if (baselineClient) {
+    if (runtimeClient) {
       await page.route('**/studio/client.js', route => route.fulfill({
-        contentType: 'application/javascript', body: readFileSync(baselineClient, 'utf8')
+        contentType: 'application/javascript', body: readFileSync(runtimeClient, 'utf8')
       }));
     }
     await page.goto(url);
@@ -289,6 +290,49 @@ test('a delayed own-send acknowledgement resolves its attempt without discarding
     await latest(f);
     assert.equal((await visibleIds(f.page)).filter(id => id === held.result.message.id).length, 1);
     assert.equal(await f.page.locator('#body').inputValue(), 'Newer typing must remain');
+  });
+
+test('fresh history confirms an uncertain saved attempt without replacing later typing',
+  { skip: !!baselineClient, timeout: 60000 }, async t => {
+    const f = await fixture(t);
+    await older(f);
+    for(let count=0;count<5;count++)await older(f);
+    const serverSocket = [...f.runtime.io.of('/studio').sockets.values()]
+      .find(socket => socket.data.session.id === f.person.id);
+    serverSocket.removeAllListeners('project entry');
+    serverSocket.on('project entry', payload => {
+      f.runtime.store.append(serverSocket.data.session, payload);
+    });
+    await f.page.locator('#body').fill('Saved without a broadcast or acknowledgement');
+    await f.page.locator('#send').click();
+    await f.page.locator('#body').fill('Later typing survives the fresh saved snapshot');
+    await f.page.waitForFunction(() => document.querySelector('#feedback').textContent.includes('could not be confirmed'));
+    assert.equal(await f.page.locator('#pending').isVisible(), true);
+    await latest(f);
+    assert.equal(await f.page.locator('#pending').isVisible(), false);
+    assert.equal(await f.page.locator('#send').isEnabled(), true);
+    assert.equal(await f.page.locator('#body').inputValue(), 'Later typing survives the fresh saved snapshot');
+    assert.equal(f.runtime.store.export(f.room.id).entries.filter(entry => entry.body === 'Saved without a broadcast or acknowledgement').length, 1);
+
+    let saved;
+    const stored = new Promise(resolve => { saved = resolve; });
+    serverSocket.removeAllListeners('project entry');
+    serverSocket.on('project entry', payload => { f.runtime.store.append(serverSocket.data.session, payload);saved(); });
+    await f.page.evaluate(() => {
+      const original = sendAttempt;
+      sendAttempt = async attempt => { try { await original(attempt); } finally { window.snapshotAttemptFinished = true; } };
+    });
+    for(let count=0;count<6;count++)await older(f);
+    await f.page.locator('#body').fill('Saved before the acknowledgement timeout');
+    await f.page.locator('#send').click();await stored;
+    await f.page.locator('#body').fill('Keep typing after early snapshot confirmation');
+    await latest(f);
+    assert.equal(await f.page.evaluate(() => !!window.snapshotAttemptFinished), false, 'Snapshot must precede the actual four-second timeout.');
+    assert.equal(await f.page.locator('#pending').isVisible(), false);
+    await f.page.waitForFunction(() => window.snapshotAttemptFinished);
+    assert.equal(await f.page.locator('#feedback').textContent(), 'Latest saved entries loaded.');
+    assert.equal(await f.page.locator('#body').inputValue(), 'Keep typing after early snapshot confirmation');
+    assert.equal(f.runtime.store.export(f.room.id).entries.filter(entry => entry.body === 'Saved before the acknowledgement timeout').length, 1);
   });
 
 test('failed paging preserves the current window and cursor, and a delayed page cannot cross a project switch',

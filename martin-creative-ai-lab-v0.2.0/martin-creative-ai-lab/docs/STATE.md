@@ -23,7 +23,8 @@ now traverses earlier/newer saved pages while retaining at most 300 rows.
 Directional eviction keeps a contiguous window; Return to latest fetches a fresh
 page. Historical, pending or hidden discussion views defer live insertion and
 signal newer records. Decisions/search still receive arrival updates. Own-send
-confirmation resolves outside the window without replacing later typing.
+confirmation resolves outside the window without replacing later typing. Fresh
+saved history also resolves matching uncertain attempts, without a retry insert.
 Delayed requests respect room, participant and reconnect boundaries; failed reads
 retain the window. Focus stays with an editor used during a pending request.
 
@@ -47,9 +48,12 @@ not persisted. North Star remains foundation-only with zero consumers.
 Keep the single [continuous-development prompt](prompts/CONTINUOUS_DEVELOPMENT.md)
 unchanged. Portfolio/source inspection exposed the real cap; a fixture above the
 previous 123-entry tests exposed its consequence. Artifact review and explicit
-race checks improved focus/reading behavior. Executor recovery made the prepared
-CI-only fallback unnecessary. Existing adaptive guidance already covers these
-decisions; no new operating rule is justified.
+race checks improved focus/reading behavior. The initial acknowledgement checks
+missed confirmation by fetched history; a failing-before/passing-after lost-response
+regression closed that gap before publication. The first broad run repeated a
+documented file-URL restriction; using the documented loopback mode sooner would
+have saved that failed run. Executor recovery removed the provisional CI-only
+need. Existing guidance already covers these issues; no new rule is justified.
 
 Next: compare fresh opportunities, including actual chronological handover use,
 unassisted native play/learning, physical rhythm controls and independent PT/EN

@@ -2,7 +2,7 @@
   "schema_version": 1,
   "project": "P11",
   "version": "0.8.0",
-  "executed_at_utc": "2026-10-16T02:39:23.160794+00:00",
+  "executed_at_utc": "2026-10-16T02:53:31.576962+00:00",
   "client_date": "2026-10-15 (America/Sao_Paulo)",
   "baseline": {
     "remote_main": "2e18f506e6c61b489bef740ef533866962b13d77",
@@ -44,32 +44,32 @@
     {
       "command": "ROOMS_HISTORY_BASELINE_CLIENT=<unchanged 0.7.0 client> node --test tests/history-browser.test.cjs",
       "result": {
-        "tests": 9,
+        "tests": 10,
         "pass": 1,
         "fail": 0,
-        "skipped": 8
+        "skipped": 9
       },
       "observed": "650 saved entries, latest 300 rendered, Earlier hidden; a real second-client arrival evicts the oldest visible anchor. Baseline-only mode deliberately omits candidate assertions."
     },
     {
       "command": "node --test tests/history.test.cjs tests/history-browser.test.cjs",
       "result": {
-        "tests": 13,
-        "pass": 12,
+        "tests": 14,
+        "pass": 13,
         "fail": 0,
         "skipped": 1
       },
-      "observed": "Both complete directions with interleaved room IDs and <=300 DOM rows; anchors, Enter/Space and focus boundaries; discussion/action/search drafts; historical and hidden-current-end arrivals; own saved attempt/newer typing; failure/retry and delayed room/participant/reconnect/latest snapshots. Final focused run includes the last focus and hidden-panel refinements."
+      "observed": "Final exact code: all 13 history checks, including own saved-row recovery before/after acknowledgement timeout, with later typing preserved and late timeout unable to reverse confirmation. Both complete directions use interleaved room IDs and <=300 DOM rows; anchors, keyboard/focus, discussion/action/search drafts, historical/hidden arrivals and delayed room/participant/reconnect/latest snapshots remain covered."
     },
     {
       "command": "ROOMS_RECORD_READER_TRANSPORT=loopback npm test",
       "result": {
-        "tests": 110,
-        "pass": 109,
+        "tests": 111,
+        "pass": 110,
         "fail": 0,
         "skipped": 1
       },
-      "observed": "Complete existing P11 protocol/browser, SQLite recovery, actions, search and portable print/report suite. Baseline-only probe is intentionally omitted; no product prerequisite skipped."
+      "observed": "Complete existing P11 protocol/browser, SQLite recovery, actions, search and portable print/report suite. Baseline-only probe is intentionally omitted; no product prerequisite skipped. This complete run includes saved-page confirmation after timeout. It precedes the final late-timeout warning guard; the final focused history and existing receipt checks cover the exact artifact hashes below. Published CI status is reported separately."
     },
     {
       "command": "python3 tools/reference_library.py check",
@@ -106,6 +106,37 @@
     {
       "command": "git diff --check",
       "result": "pass"
+    },
+    {
+      "command": "ROOMS_HISTORY_TEST_CLIENT=<client from 9ba0c7f> node --test --test-name-pattern=\"fresh history confirms\" tests/history-browser.test.cjs",
+      "result": {
+        "tests": 1,
+        "pass": 0,
+        "fail": 1,
+        "skipped": 0
+      },
+      "expected_failure": true,
+      "observed": "Real SQLite commit with both broadcast and acknowledgement withheld. After the four-second timeout, fetched latest history shows the saved row but the prior client leaves Previous attempt visible."
+    },
+    {
+      "command": "node --test --test-name-pattern=\"fresh history confirms\" tests/history-browser.test.cjs",
+      "result": {
+        "tests": 1,
+        "pass": 1,
+        "fail": 0,
+        "skipped": 0
+      },
+      "observed": "Fetched authoritative history resolves the matching own attempt, keeps newer typing, restores Send and contains one saved row without another insert. The complete run repeats this after-timeout case; final focused checks additionally cover confirmation before timeout."
+    },
+    {
+      "command": "node --test --test-name-pattern=\"uncertain|explicit rejection|two browser identities\" tests/rooms-browser.test.cjs",
+      "result": {
+        "tests": 4,
+        "pass": 4,
+        "fail": 0,
+        "skipped": 0
+      },
+      "observed": "Final code retains committed/uncommitted uncertain sends across reload, editable rejection, two real identities and per-room drafts."
     }
   ],
   "environment_diagnosis": [
@@ -122,7 +153,7 @@
       "baseline_sha256": "88ca345d58d0d1c748862a6fa5b98ee5540c689f8dbd61bb7563a7c1ae1c258f"
     },
     "projects/realtime-integration-lab/public/studio/client.js": {
-      "current_sha256": "235c9e54a81938dea3e761aa00521cf924c0e160bdd6725c824f1cf109979fd4",
+      "current_sha256": "d7df529166e9dfc62c4c74792c9fa275237d1f65b5fdf20433911ee8da0dee17",
       "baseline_sha256": "783912f6ae8fbd38132b17daea27238386e9f4a0db7605abfcda675833047386"
     },
     "projects/realtime-integration-lab/public/studio/index.html": {
@@ -145,13 +176,14 @@
       "current_sha256": "1fd6e026a0b20d71fd4463de4c57d911d6cbc3e69f5c50cc10bee30fafe9ea72"
     },
     "projects/realtime-integration-lab/tests/history-browser.test.cjs": {
-      "current_sha256": "537c73b5f4ad038dfe8cdc2c0f07f82cfac6c9359ccd305885e844c6a8316927"
+      "current_sha256": "79747e33a373c35a7c8b6cd8ca5358231422637158fca25cdf78acc5d51fb5c9"
     }
   },
   "capture": {
     "path": "evidence/realtime-chat/history-reading.png",
-    "sha256": "561cbf384c59bbb99dfa82ec6c582a66cc5b9ffcb4dce74b3f5731b2ac0a26bd",
-    "scope": "Actual Chromium 1280x900 frame at earliest saved entry; all records and participants are explicitly fictional. Additional 390x844 layout and real socket journey checked locally."
+    "sha256": "7ce4b020fd52eb8d4fb4cd07ce0eb80bc4b1d96b5cca3075413597c8c6744765",
+    "scope": "Actual Chromium 1280x900 frame at earliest saved entry; all records and participants are explicitly fictional. Additional 390x844 layout and real socket journey checked locally. Frame regenerated during the final exact history run.",
+    "source_client_sha256": "d7df529166e9dfc62c4c74792c9fa275237d1f65b5fdf20433911ee8da0dee17"
   },
   "creative_assessment": {
     "kind": "Reasoned Codex interface judgment, not independent validation",
@@ -174,5 +206,12 @@
     "changed": false,
     "sha256": "cfe891f209ec94b63cfb674adb5300e6d253acf61fcb2576352235e72e45a1f0",
     "reason": "Existing discovery, baseline environment diagnosis, real artifact review and honest evidence guidance served the observed issues. Executor recovery removed the provisional CI-only need; no new rule justified."
-  }
+  },
+  "initial_implementation_commit": "9ba0c7fdc5052723b1020c52f05bd1c11aa4ac13",
+  "retrospective": [
+    "Source comparison and a fixture above 300 exposed a real workflow limit that the earlier 123-entry tests did not reach.",
+    "Initial acknowledgement checks covered late delivery but missed confirmation through fetched history; a failing-before/passing-after lost-response check closed it before publication.",
+    "The first broad run repeated the documented managed file-URL restriction. Reading and selecting the existing loopback mode earlier would have avoided seven environment failures; no product/test weakening was needed.",
+    "Existing adaptive guidance covers discovery, actual artifact review and failure recovery; keep the authoritative prompt unchanged."
+  ]
 }

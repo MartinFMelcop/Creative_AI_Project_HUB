@@ -164,6 +164,8 @@ async function sendAttempt(attempt) {
     if(room?.id===target) accepted(result.message);
     notice('Entry saved.');refreshRooms().catch(()=>{});
   } catch(e) {
+    // A saved snapshot or broadcast may already have confirmed this attempt.
+    if(!e.rejected && drafts[target]?.attempt?.clientId!==attempt.clientId)return;
     if(e.rejected && drafts[target]?.attempt?.clientId===attempt.clientId) { drafts[target].attempt=null;saveDrafts(); }
     notice(e.message);
   }
@@ -188,6 +190,7 @@ async function loadHistory(direction) {
   try {
     const result=await api(`/rooms/${request.roomId}/history${query}`);
     if(!stillHere())return;
+    for(const message of result.messages)accepted(message);
     const active=document.activeElement;
     if(direction==='latest') {
       entries=result.messages;hasMore=result.hasMore;hasNewer=result.hasNewer;
