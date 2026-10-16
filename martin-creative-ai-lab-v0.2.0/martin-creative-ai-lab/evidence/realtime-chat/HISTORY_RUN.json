@@ -1,0 +1,178 @@
+{
+  "schema_version": 1,
+  "project": "P11",
+  "version": "0.8.0",
+  "executed_at_utc": "2026-10-16T02:39:23.160794+00:00",
+  "client_date": "2026-10-15 (America/Sao_Paulo)",
+  "baseline": {
+    "remote_main": "2e18f506e6c61b489bef740ef533866962b13d77",
+    "version": "0.7.0",
+    "initial_local_head": "1b76340b0f3abe037ec0fa63ee4fde849338ec71",
+    "local_and_remote_tree": "eb4a576182c43bc21404817ea902ced0a6c5b489",
+    "working_tree": "Prior untracked scratch preserved; new branch starts at fetched remote main."
+  },
+  "audience_and_goal": "Trusted collaborators reading an unknown earlier discussion without a search phrase or leaving the live workspace.",
+  "selection": [
+    {
+      "opportunity": "P11 chronological reading",
+      "assessment": "Selected: source and real baseline expose the 300-row stop and arrival anchor eviction."
+    },
+    {
+      "opportunity": "P03 configurable lane controls",
+      "assessment": "Useful accessibility/control option; no observed physical-layout preference yet."
+    },
+    {
+      "opportunity": "P01/P05 save recovery",
+      "assessment": "Single-slot recovery remains valuable; native distribution already exists."
+    },
+    {
+      "opportunity": "P05/P06 learning and P04 comprehension",
+      "assessment": "Independent player/reader observation remains missing; another scripted feature cannot supply it."
+    }
+  ],
+  "design_choice": "Bidirectional 50-entry pages and a contiguous 300-row window; larger cap only postpones the limit, search needs words and export interrupts live review.",
+  "environment": {
+    "os": "Debian GNU/Linux 13",
+    "node": "24.19.0",
+    "sqlite": "3.53.3",
+    "chromium": "154.0.8037.57",
+    "playwright_core": "1.64.0",
+    "available_cpus": 2,
+    "runtime": "Actual local headless Chromium, SQLite, HTTP and Socket.IO after cloud executor recovery; no human-use claim."
+  },
+  "verified_checks": [
+    {
+      "command": "ROOMS_HISTORY_BASELINE_CLIENT=<unchanged 0.7.0 client> node --test tests/history-browser.test.cjs",
+      "result": {
+        "tests": 9,
+        "pass": 1,
+        "fail": 0,
+        "skipped": 8
+      },
+      "observed": "650 saved entries, latest 300 rendered, Earlier hidden; a real second-client arrival evicts the oldest visible anchor. Baseline-only mode deliberately omits candidate assertions."
+    },
+    {
+      "command": "node --test tests/history.test.cjs tests/history-browser.test.cjs",
+      "result": {
+        "tests": 13,
+        "pass": 12,
+        "fail": 0,
+        "skipped": 1
+      },
+      "observed": "Both complete directions with interleaved room IDs and <=300 DOM rows; anchors, Enter/Space and focus boundaries; discussion/action/search drafts; historical and hidden-current-end arrivals; own saved attempt/newer typing; failure/retry and delayed room/participant/reconnect/latest snapshots. Final focused run includes the last focus and hidden-panel refinements."
+    },
+    {
+      "command": "ROOMS_RECORD_READER_TRANSPORT=loopback npm test",
+      "result": {
+        "tests": 110,
+        "pass": 109,
+        "fail": 0,
+        "skipped": 1
+      },
+      "observed": "Complete existing P11 protocol/browser, SQLite recovery, actions, search and portable print/report suite. Baseline-only probe is intentionally omitted; no product prerequisite skipped."
+    },
+    {
+      "command": "python3 tools/reference_library.py check",
+      "result": "pass: 5 records, 607 preserved sources, 18 derived PDF texts, 140 explicit exclusions, 14 North Star capabilities"
+    },
+    {
+      "command": "python3 tools/test_reference_library.py",
+      "result": "30 pass"
+    },
+    {
+      "command": "python3 tools/test_check_manifest.py",
+      "result": "11 pass"
+    },
+    {
+      "command": "python3 tools/test_validate_repo.py",
+      "result": "13 pass"
+    },
+    {
+      "command": "Workflow YAML parse and bash -n for every run block",
+      "result": "26 shell blocks pass"
+    },
+    {
+      "command": "npm ls --depth=0",
+      "result": "Exact existing Express 4.22.3, Socket.IO/client 4.8.4 and Playwright Core 1.64.0; no dependency changes"
+    },
+    {
+      "command": "python3 tools/validate_repo.py",
+      "result": "pass: 11 projects, 15 transfers, 9 assets, 2 legacy sources, 478 local links; documentary structure only"
+    },
+    {
+      "command": "python3 tools/check_manifest.py",
+      "result": "pass: 1134 maintained files covered exactly once with matching SHA-256 hashes"
+    },
+    {
+      "command": "git diff --check",
+      "result": "pass"
+    }
+  ],
+  "environment_diagnosis": [
+    "Default sandbox listen EPERM reproduced by unchanged rooms.test.cjs as well as candidate tests. Supported additional network permission enables actual sockets and Git transport without bypassing proxy policy.",
+    "An initial complete run has 98 pass, 7 fail and 1 baseline-only skip: all seven failures are managed file navigation ERR_BLOCKED_BY_ADMINISTRATOR. The original 0.7.0 exported project reproduces it in the delivered-demo test. The existing loopback transport serves identical HTML, then closes the static server and disables network before interactions; the complete rerun passes. No reader code or check was weakened."
+  ],
+  "artifact_hashes": {
+    "projects/realtime-integration-lab/rooms-store.cjs": {
+      "current_sha256": "1dc491de2527b9575556d7224c9cd0c7b419948e0fd9666a5687969642be101c",
+      "baseline_sha256": "efa9dfe0c637b3a125faad8e17563be30c6f806e542d0328925031c2a151b413"
+    },
+    "projects/realtime-integration-lab/rooms-server.cjs": {
+      "current_sha256": "1f0f50898e728d2d38568614fecfcb7dcc237e9fca76863963ae6bd04f00e353",
+      "baseline_sha256": "88ca345d58d0d1c748862a6fa5b98ee5540c689f8dbd61bb7563a7c1ae1c258f"
+    },
+    "projects/realtime-integration-lab/public/studio/client.js": {
+      "current_sha256": "235c9e54a81938dea3e761aa00521cf924c0e160bdd6725c824f1cf109979fd4",
+      "baseline_sha256": "783912f6ae8fbd38132b17daea27238386e9f4a0db7605abfcda675833047386"
+    },
+    "projects/realtime-integration-lab/public/studio/index.html": {
+      "current_sha256": "56e615cb3c548e92f4794c162d8555be6abf1ad594e521d0af3de6421dcea66f",
+      "baseline_sha256": "29cac4b18e269c7de6af698407835ce4756446e2cc61c69a7b0a29a810aa7e13"
+    },
+    "projects/realtime-integration-lab/public/studio/style.css": {
+      "current_sha256": "62635ea34584ef16283e7cbd2bbe1309c821558ca55f60878389fa7ab8bceaf0",
+      "baseline_sha256": "5d8bb5691f271a3f6cf23164d1e9d488bc79302784551d90ddb10d5e683c4beb"
+    },
+    "projects/realtime-integration-lab/package.json": {
+      "current_sha256": "42e3cc9633e522dd6d9a5c11023418331129632881a8bf0b95e3717247d57ebe",
+      "baseline_sha256": "e477a03ec1caf33da05ebf7c2d8d41cb53935ee6b9c94ec8d4dc180c155613e2"
+    },
+    "projects/realtime-integration-lab/package-lock.json": {
+      "current_sha256": "aa191ef2158e6cc6f770bf4b3ee44dca17175ef1a3cd572b98115246bf46aea7",
+      "baseline_sha256": "d751dab76dcbeb0c6c0e095ce909d9027e8b45412afe46bb6c5f29002246d009"
+    },
+    "projects/realtime-integration-lab/tests/history.test.cjs": {
+      "current_sha256": "1fd6e026a0b20d71fd4463de4c57d911d6cbc3e69f5c50cc10bee30fafe9ea72"
+    },
+    "projects/realtime-integration-lab/tests/history-browser.test.cjs": {
+      "current_sha256": "537c73b5f4ad038dfe8cdc2c0f07f82cfac6c9359ccd305885e844c6a8316927"
+    }
+  },
+  "capture": {
+    "path": "evidence/realtime-chat/history-reading.png",
+    "sha256": "561cbf384c59bbb99dfa82ec6c582a66cc5b9ffcb4dce74b3f5731b2ac0a26bd",
+    "scope": "Actual Chromium 1280x900 frame at earliest saved entry; all records and participants are explicitly fictional. Additional 390x844 layout and real socket journey checked locally."
+  },
+  "creative_assessment": {
+    "kind": "Reasoned Codex interface judgment, not independent validation",
+    "assessment": "The start/end and newer-availability wording makes the loaded window explicit; separate newer/latest controls preserve deliberate reading. Inspecting actual frames and request races improved focus retention and hidden-panel behavior. No new art, prose, music or game content was needed for this application workflow."
+  },
+  "preserved_contracts": [
+    "SQLite schema 2",
+    "export schema 1",
+    "backup format 1",
+    "ephemeral exercise and P02 snapshot",
+    "historical sources and prior creative editions"
+  ],
+  "limits": [
+    "Trusted single-server workspace, not private-room access control or exact unread receipts.",
+    "Reload/reconnect opens latest; reading position is not persisted.",
+    "No independent team, screen-reader, other-browser, full-capacity performance or commercial validation.",
+    "North Star remains foundation_only with no consumer; no destination integration."
+  ],
+  "prompt_review": {
+    "changed": false,
+    "sha256": "cfe891f209ec94b63cfb674adb5300e6d253acf61fcb2576352235e72e45a1f0",
+    "reason": "Existing discovery, baseline environment diagnosis, real artifact review and honest evidence guidance served the observed issues. Executor recovery removed the provisional CI-only need; no new rule justified."
+  }
+}

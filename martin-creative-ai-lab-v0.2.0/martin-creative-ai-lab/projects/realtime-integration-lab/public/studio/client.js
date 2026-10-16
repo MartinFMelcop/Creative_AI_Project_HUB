@@ -5,6 +5,7 @@ let identity = null, socket = null, room = null, online = false, joining = false
 let rooms = [], entries = [], decisions = [], before = null, hasMore = false, unread = 0;
 let drafts = {}, joinGeneration = 0, queued = [];
 let readingRequest = null;
+let hasNewer = false, latestKnown = 0, historyRequest = null;
 function read(key,fallback) { try { return JSON.parse(localStorage.getItem(key)) ?? fallback; } catch { return fallback; } }
 function save(key,value) { try { localStorage.setItem(key,JSON.stringify(value)); } catch { byId('storage').hidden=false; } }
 function draft() { return drafts[room.id] ||= { body:'', kind:'note', attempt:null }; }
@@ -35,11 +36,16 @@ function controls() {
   byId('export').disabled = !room;
   byId('reading-export').disabled = !room || joining || !!readingRequest;
   byId('link').disabled = !room;
-  byId('older').hidden = !hasMore || entries.length >= 300;
-  if(room) byId('room-hint').textContent = entries.length>=300 && hasMore
-    ? 'Showing the latest 300 loaded entries. Search record to find older history.'
-    : 'Discussion and decisions share one saved timeline. Load earlier entries, search the saved record or export it.';
-  byId('older').disabled = joining;
+  byId('older').hidden = !hasMore;
+  byId('newer').hidden = !hasNewer;
+  for (const id of ['older','newer','latest']) byId(id).disabled = !ready || !!historyRequest;
+  byId('latest').hidden = !hasNewer && !unread;
+  byId('latest').textContent = unread ? 'Return to latest · new entries saved' : 'Return to latest';
+  if(room) {
+    byId('room-hint').textContent = 'Read the saved discussion in either direction. Up to 300 entries stay loaded; your drafts stay here.';
+    byId('history-status').textContent = historyRequest ? 'Loading saved entries…' :
+      `${entries.length} loaded entries. ${hasMore?'Earlier entries available.':'Start of saved discussion.'} ${hasNewer?'Newer entries available.':'Current end of saved discussion.'}`;
+  }
   byId('send').textContent = byId('kind').value === 'decision' ? 'Record decision' : 'Send note';
   window.WorkBoard?.controls();
   window.RecordSearch?.controls();
@@ -71,23 +77,40 @@ function accepted(message) {
     d.attempt=null;saveDrafts();pendingView();
   }
 }
+// Preserve the actual visible row, even when wrapping gives rows different heights.
+function drawTimeline(direction='keep') {
+  const list=byId('entries'),top=list.getBoundingClientRect().top;
+  const anchor=[...list.children].find(e=>e.getBoundingClientRect().bottom>top);
+  const offset=anchor ? anchor.getBoundingClientRect().top-top : 0;
+  const focused=list.contains(document.activeElement) ? document.activeElement.closest('li')?.dataset.id : null;
+  list.replaceChildren(...entries.map(entryElement));
+  const replacement=anchor && list.querySelector(`[data-id="${anchor.dataset.id}"]`);
+  if(direction==='latest') list.scrollTop=list.scrollHeight;
+  else if(replacement) list.scrollTop+=replacement.getBoundingClientRect().top-list.getBoundingClientRect().top-offset;
+  else list.scrollTop=0;
+  if(focused) (list.querySelector(`[data-id="${focused}"] button`) || list).focus({preventScroll:true});
+}
 function receive(message) {
   if (joining) { queued.push(message);return; }
   if (!room || message.room_id!==room.id) return;
   accepted(message);
+  // Broadcast and acknowledgement can deliver the same saved entry. A high-water
+  // mark deduplicates signals without retaining an unbounded historical queue.
+  if (message.id<=latestKnown) return;
+  latestKnown=message.id;
   window.RecordSearch?.arrived();
-  if (entries.some(e=>e.id===message.id)) return;
   const summary=rooms.find(r=>r.id===room.id);if(summary){summary.entries++;summary.latest_id=message.id;drawRooms();}
-  const list=byId('entries'), follow=list.scrollHeight-list.clientHeight-list.scrollTop<24;
-  const anchor=[...list.children].find(e=>e.getBoundingClientRect().bottom>list.getBoundingClientRect().top);
-  const offset=anchor?.getBoundingClientRect().top;
-  entries.push(message);entries.sort((a,b)=>a.id-b.id);
-  if (entries.length>300) entries.shift();
-  list.replaceChildren(...entries.map(entryElement));
-  if (follow) list.scrollTop=list.scrollHeight;
-  else if (anchor) { const replacement=list.querySelector(`[data-id="${anchor.dataset.id}"]`); if(replacement) list.scrollTop+=replacement.getBoundingClientRect().top-offset; }
-  if (!follow || !document.hasFocus()) { unread++;byId('latest').hidden=false;byId('latest').textContent=`Jump to latest (${unread})`; }
   if (message.kind==='decision') { decisions.unshift(message);decisions=decisions.slice(0,100);drawDecisions(); }
+  const list=byId('entries'),follow=list.scrollHeight-list.clientHeight-list.scrollTop<24;
+  if (hasNewer || historyRequest || !follow || byId('discussion').hidden) {
+    // Do not splice a distant live row into a contiguous historical window.
+    hasNewer=true;unread=1;
+  } else {
+    if(entries.length===300) hasMore=true;
+    entries=[...entries,message].slice(-300);
+    drawTimeline('latest');
+    if(!document.hasFocus()) unread=1;
+  }
   controls();
 }
 function drawRooms() {
@@ -100,11 +123,11 @@ function drawRooms() {
 async function refreshRooms() { rooms=await api('/rooms');drawRooms(); }
 async function openRoom(id) {
   if (!online) throw new Error('Reconnect before changing project.');
-  const generation=++joinGeneration;joining=true;readingRequest=null;window.RecordSearch?.reset();controls();
+  const generation=++joinGeneration;joining=true;readingRequest=null;historyRequest=null;window.RecordSearch?.reset();controls();
   try {
     const result=await request('join project',id);
     if (generation!==joinGeneration) return;
-    room=result.room;entries=result.messages;decisions=result.decisions;before=result.before;hasMore=result.hasMore;
+    room=result.room;entries=result.messages;decisions=result.decisions;before=result.before;hasMore=result.hasMore;hasNewer=result.hasNewer;latestKnown=result.messages.at(-1)?.id || 0;
     location.hash=room.id;byId('room-title').textContent=room.name;
     byId('room-hint').textContent='Discussion and decisions share one saved timeline. Load earlier entries, search the saved record or export it.';
     const d=draft();byId('body').value=d.body;byId('kind').value=d.kind;
@@ -129,7 +152,7 @@ async function enter(saved) {
     try { await refreshRooms();const id=room?.id || location.hash.slice(1);if(id) await openRoom(id); }
     catch(e) { notice(e.message); }
   });
-  socket.on('disconnect',()=>{online=false;controls();});
+  socket.on('disconnect',()=>{online=false;historyRequest=null;controls();});
   socket.on('connect_error',e=>{online=false;controls();notice(e.message);});
 }
 async function sendAttempt(attempt) {
@@ -147,7 +170,7 @@ async function sendAttempt(attempt) {
   pendingView();
 }
 byId('identity-form').onsubmit=async e=>{e.preventDefault();try { const saved=await api('/sessions',{method:'POST',body:JSON.stringify({name:byId('name').value})});await enter(saved);notice(''); }catch(e){notice(e.message);} };
-byId('change').onclick=()=>{window.RecordSearch?.reset();window.WorkBoard?.reset();socket?.disconnect();identity=null;room=null;readingRequest=null;online=false;drafts={};entries=[];decisions=[];byId('entries').replaceChildren();byId('decisions').replaceChildren();save('p11-room-identity',null);byId('workspace').hidden=true;byId('welcome').hidden=false;byId('change').hidden=true;byId('participant').textContent='';byId('name').focus();};
+byId('change').onclick=()=>{window.RecordSearch?.reset();window.WorkBoard?.reset();socket?.disconnect();identity=null;room=null;readingRequest=null;historyRequest=null;joinGeneration++;queued=[];online=false;drafts={};entries=[];decisions=[];byId('entries').replaceChildren();byId('decisions').replaceChildren();save('p11-room-identity',null);byId('workspace').hidden=true;byId('welcome').hidden=false;byId('change').hidden=true;byId('participant').textContent='';byId('name').focus();};
 byId('room-form').onsubmit=async e=>{e.preventDefault();try {const created=await api('/rooms',{method:'POST',body:JSON.stringify({name:byId('room-name').value})});await refreshRooms();await openRoom(created.id);byId('room-name').value='';notice('Project created.');}catch(e){notice(e.message);} };
 for (const id of ['body','kind']) byId(id).addEventListener('input',()=>{if(room){draft().body=byId('body').value;draft().kind=byId('kind').value;saveDrafts();controls();}});
 byId('compose').onsubmit=async e=>{e.preventDefault();if(!room||!online||joining||draft().attempt)return;
@@ -155,13 +178,54 @@ byId('compose').onsubmit=async e=>{e.preventDefault();if(!room||!online||joining
   const d=draft();d.body=body;d.kind=byId('kind').value;d.attempt={roomId:room.id,clientId:crypto.randomUUID(),body,kind:d.kind};saveDrafts();pendingView();await sendAttempt(d.attempt);
 };
 byId('retry').onclick=()=>{if(room&&draft().attempt)sendAttempt(draft().attempt);};
-byId('older').onclick=async()=>{
-  if(!room||joining)return;const target=room.id,generation=joinGeneration;const list=byId('entries'),height=list.scrollHeight;byId('older').disabled=true;
-  try {const result=await api(`/rooms/${target}/history?before=${before}`);if(generation!==joinGeneration||room?.id!==target)return;
-    entries=[...result.messages,...entries].slice(-300);before=result.before;hasMore=result.hasMore;list.replaceChildren(...entries.map(entryElement));list.scrollTop+=list.scrollHeight-height;controls();
-  }catch(e){notice(e.message);controls();}
-};
-byId('latest').onclick=()=>{byId('entries').scrollTop=byId('entries').scrollHeight;unread=0;byId('latest').hidden=true;byId('entries').focus();};
+async function loadHistory(direction) {
+  if(!room||joining||!online||historyRequest)return;
+  const request={roomId:room.id,person:identity.id,generation:joinGeneration,focus:document.activeElement};
+  historyRequest=request;controls();
+  const stillHere=()=>historyRequest===request&&room?.id===request.roomId&&identity?.id===request.person&&joinGeneration===request.generation&&online;
+  const query=direction==='older' ? `?before=${entries[0]?.id}` :
+    direction==='newer' ? `?after=${entries.at(-1)?.id}` : '';
+  try {
+    const result=await api(`/rooms/${request.roomId}/history${query}`);
+    if(!stillHere())return;
+    const active=document.activeElement;
+    if(direction==='latest') {
+      entries=result.messages;hasMore=result.hasMore;hasNewer=result.hasNewer;
+      unread=0;
+    } else if(direction==='older') {
+      const combined=[...result.messages,...entries];
+      hasMore=result.hasMore;hasNewer=hasNewer || combined.length>300;
+      entries=combined.slice(0,300);
+    } else {
+      const combined=[...entries,...result.messages];
+      hasMore=hasMore || combined.length>300;hasNewer=result.hasNewer;
+      entries=combined.slice(-300);
+    }
+    // Arrivals during the request may be newer than its SQLite snapshot.
+    hasNewer=hasNewer || latestKnown>(entries.at(-1)?.id || 0);
+    latestKnown=Math.max(latestKnown,entries.at(-1)?.id || 0);
+    if(!hasNewer)unread=0;
+    before=entries[0]?.id ?? null;
+    drawTimeline(direction==='latest'?'latest':'keep');
+    notice(direction==='latest' ? 'Latest saved entries loaded.' :
+      `Loaded ${result.messages.length} ${direction==='older'?'earlier':'newer'} entries.`);
+    historyRequest=null;controls();
+    const navigationFocus=['older','newer','latest'].some(id=>byId(id)===request.focus);
+    if(navigationFocus && (active===request.focus || active===document.body))
+      (direction==='latest'||request.focus.hidden ? byId('entries') : request.focus).focus({preventScroll:true});
+  } catch(error) {
+    if(stillHere()) {
+      notice(`Could not load saved entries. ${error.message} Try again; your reading window is unchanged.`);
+      historyRequest=null;controls();
+      if(['older','newer','latest'].includes(request.focus?.id) && document.activeElement===document.body && !request.focus.hidden)
+        request.focus.focus({preventScroll:true});
+    }
+  }
+  finally {if(historyRequest===request){historyRequest=null;controls();}}
+}
+byId('older').onclick=()=>loadHistory('older');
+byId('newer').onclick=()=>loadHistory('newer');
+byId('latest').onclick=()=>loadHistory('latest');
 byId('export').onclick=async()=>{try {const value=await api(`/rooms/${room.id}/export`);const url=URL.createObjectURL(new Blob([JSON.stringify(value,null,2)],{type:'application/json'}));const a=document.createElement('a');a.href=url;a.download='project-conversation.json';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);notice('Complete project record exported.');}catch(e){notice(e.message);}};
 byId('reading-export').onclick=async()=>{
   if(!room||joining||readingRequest)return;

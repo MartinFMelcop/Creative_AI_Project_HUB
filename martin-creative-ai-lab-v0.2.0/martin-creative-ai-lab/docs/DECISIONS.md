@@ -1488,3 +1488,40 @@ Retain the authoritative prompt unchanged; existing evidence and artifact-review
 guidance served the actual issues. Git transport is unavailable in this session;
 use the authorized authenticated integration, preserve the expected parent/tree,
 and distinguish local and remote commit identities at closeout.
+
+## ADR-065 — read complete discussions through a bounded live window
+
+**Date:** 2026-10-15 (America/Sao_Paulo). **Status:** P11 0.8.0; technical M4 retained.
+
+Compare configurable rhythm controls, single-slot native recovery, delivered
+native players/practice, independent literary comprehension and Project Rooms
+handover use. The client deliberately stops chronological browsing at 300 loaded
+rows; complete search needs known words and portable export leaves the workspace.
+Baseline Chromium also evicts the oldest visible anchor on a new socket arrival.
+Select complete reading for collaborators discovering an earlier discussion.
+
+Keep 50-entry room-scoped before/after pages and at most 300 rendered rows.
+Earlier navigation evicts the newer end, newer navigation evicts the older end;
+strict immutable cursors handle IDs interleaved with other rooms. Return to latest
+fetches fresh saved data. A larger cap only delays the limit; an unbounded DOM
+adds cost without giving better control. No schema or dependency change.
+
+Freeze historical/paging/hidden windows during arrivals; update record panels
+and announce newer availability without an exact unread-count claim. Resolve
+own attempts before deferring rendering. Keep drafts, action work and search.
+Preserve retained visible/focused rows; guard delayed success/error/finally by
+room/identity/generation/request. Retain the window on failure. Do not reclaim
+focus from an editor used during a request. Reconnect still opens latest.
+
+Use the same 650-entry SQLite baseline/current Chromium fixture, real second-
+client writes, both directions, explicit latest, anchors, keyboard, narrow layout,
+drafts and controlled failures/races. Prior 123-entry fixtures miss the cap.
+Keep baseline probing and existing suites in CI. Reproduce sandbox EPERM against
+unchanged tests, then use supported network permission; recovered Git transport
+allows normal publication. Keep the existing portable-reader loopback fallback
+for managed file navigation restrictions, without weakening its offline checks.
+
+Codex review is not independent team/assistive validation. No full-capacity,
+other-browser or production-load claim. Preserve historical sources and P02's
+contract. North Star has no consumer. Retain the complete adaptive prompt:
+existing discovery, artifact review and honest evidence guidance already apply.

@@ -1,6 +1,6 @@
 # SEED — Martin Creative AI Lab
 
-**Version:** 0.32.4
+**Version:** 0.32.5
 **Data-base:** 10 de outubro de 2026  
 **Autor e responsável pelo portfólio:** Martin Melcop Neto  
 **Working language:** English for new documentation, plans, code comments, UI, and reports. Preserve original creative titles and historical source languages.
@@ -70,14 +70,14 @@ Se apenas este arquivo estiver disponível, ele é suficiente para iniciar a Fas
 |---|---|
 | Repository | MartinFMelcop/Creative_AI_Project_HUB; actual Git root `/workspace/Creative_AI_Project_HUB`; wrapper retained |
 | Preserved sources | Old ZIP: 175 Rave / 3 WebSocket texts unchanged. New Rave library: 589 readable / 140 excluded from 729; ten main and eight OVA PDFs (2,407 pages) plus derived text; ZIP/policy unavailable |
-| Current milestone | P04 Darsen 0.3.0 bilingual literary revision |
-| Delivery | Complete current PT/EN EPUB 3 and A5 PDF; original 0.1.0/0.2.0 editions preserved |
-| Evidence | Exact source/EPUB/PDF checks, isolated rebuild, sampled Book I comparison and actual rendered review; see `docs/STATE.md` |
-| Limits | Codex editorial/translation judgment; no independent readers, canon approval, device/assistive or commercial validation |
-| Next action | Compare portfolio opportunities afresh, including independent literary comprehension, unassisted native play/learning and actual handovers |
-| Other products | P01 0.5.0, P03/P05 0.4.0, P06/P10 0.6.0, P08 0.5.0, P11 0.7.0 and P02 0.2.1 retained |
+| Current milestone | P11 Project Rooms 0.8.0 bounded chronological reading |
+| Delivery | Earlier/newer discussion pages and fresh return to latest, retaining at most 300 rows |
+| Evidence | Same 650-entry SQLite/Chromium baseline/current fixture, socket arrivals, drafts and failure/race checks; see `docs/STATE.md` |
+| Limits | Controlled technical execution and Codex interface review; no independent team, assistive, other-browser or commercial validation |
+| Next action | Compare fresh opportunities, including actual history/handover use, unassisted native play, physical musical practice and independent literary comprehension |
+| Other products | P01 0.5.0, P03/P05 0.4.0, P06/P10 0.6.0, P08 0.5.0, P04 0.3.0 and P02 0.2.1 retained |
 | Rules / assets | Existing reference bytes, games and media retained; North Star has no consumer |
-| Attribution | Clean baseline `d626a592` matched remote main via GitHub integration; previous CI passed; Codex revised and produced editions |
+| Attribution | Remote baseline `2e18f506`; local prior P04 tree matched it. Codex implemented and executed controlled checks after the cloud executor recovered |
 
 Registry evidence paths must resolve to existing files inside the lab; working
 paths must be directories and legacy-source IDs must exist. This documentary
@@ -595,7 +595,7 @@ has not been redeployed. See the current STATE and afternoon execution record.
 
 ### P11 — Real-time Integration Lab / Project Rooms
 
-The historical Socket.IO snapshot only logs messages. Current **0.7.0**
+The historical Socket.IO snapshot only logs messages. Current **0.8.0**
 [Project Rooms](projects/realtime-integration-lab/README.md) connects notes and
 decisions to assigned actions: To do, In progress, Blocked and Done. Immutable
 source decisions and action histories record who changed each revision; completion
@@ -645,6 +645,15 @@ reading state; existing HTML needs reconversion to acquire the new renderer.
 [Print evidence](evidence/realtime-chat/PRINT_RUN.json) records PDF completeness,
 mobile review and the managed browser transport limit. M4 and North Star's
 foundation stage are unchanged; no independent team or PDF accessibility claim.
+
+Version 0.8.0 removes the chronological browsing stop at 300 loaded rows without
+increasing the DOM cap. Earlier/newer room-scoped pages retain a contiguous window;
+Return to latest fetches current saved data. New arrivals signal availability
+without replacing historical rows or drafts. Delayed/failing requests respect
+room, participant and reconnect boundaries; confirmed sends resolve outside the
+visible window. [History evidence](evidence/realtime-chat/HISTORY_RUN.json) records
+the same 650-entry baseline/current journeys. No schema/dependency change,
+independent team validation or North Star integration is inferred.
 
 ## 6. Arquitetura do laboratório
 

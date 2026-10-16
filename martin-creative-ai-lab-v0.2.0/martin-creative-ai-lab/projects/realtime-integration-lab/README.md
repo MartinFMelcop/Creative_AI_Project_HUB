@@ -1,8 +1,8 @@
 # P11 — Project Rooms / Live exchange
 
-**Version:** 0.7.0. A local project workspace with remembered participants,
+**Version:** 0.8.0. A local project workspace with remembered participants,
 separate conversations, saved notes/decisions, recoverable history, JSON export,
-assigned actions, blockers/outcomes, change history, complete-record search,
+assigned actions, blockers/outcomes, change history, bidirectional discussion reading, complete-record search,
 portable offline reading copies and consistent workspace recovery.
 The original ephemeral exercise remains available with its unchanged protocol.
 
@@ -33,7 +33,7 @@ npm run test:rooms
 5. Assign a participant who has joined the room. Move work through To do, In
    progress, Blocked and Done; blockers/completion require a recorded update.
 6. Use **Search record** to find earlier text, decisions or historical action revisions. Open saved context to inspect nearby records, the source decision and current linked work.
-7. Load earlier entries or Export record for all notes, decisions, actions and
+7. Load earlier/newer entries, Return to latest, or Export record for all notes, decisions, actions and
    action history. `Assigned to me` and `Unassigned` filter the action board.
 8. **Export reading copy** creates a self-contained HTML handover. Open it in a
    browser without running this workspace; it retains the full record at export.
@@ -73,6 +73,40 @@ without credentials. Limits: 500 characters per entry, 40 per participant name,
 project. Export is a consumable record, not a database restore/import tool.
 Use the workspace recovery workflow below to preserve full continuation.
 Do not copy a running WAL database as though its main file alone were complete.
+
+## Read an earlier discussion without losing your place
+
+**Load earlier entries** and **Load newer entries** traverse the entire saved
+conversation in 50-entry pages. At most 300 rows stay loaded: loading earlier
+removes rows from the newer end; loading newer removes rows from the older end.
+The visible row and its position remain when retained. If that row leaves the
+window, reading falls back to its earliest retained row. A removed focused control
+returns focus to the conversation; earlier data stays on the server.
+Boundary text identifies whether earlier/newer entries are available.
+
+**Return to latest** fetches the latest saved page, rather than only scrolling
+already loaded text. It keeps discussion/action drafts and search results.
+The 0.7.0 UI intentionally stopped chronological browsing at 300 loaded entries
+and suggested search; search still helps when you know words to find.
+
+While reading earlier rows, paging or using Actions/Search, new notes and decisions
+stay saved and update their record panels without displacing the conversation.
+A newer-entry signal offers explicit navigation. It is an availability signal,
+not an exact unread count. Your own confirmed send resolves its pending attempt
+even when that row belongs beyond the current window. Later typing stays intact.
+At the visible current end, arrivals continue to follow normally.
+
+Failed requests retain the window and allow retry. Room, identity and reconnect
+boundaries invalidate delayed responses. Navigation does not reclaim focus from
+an editor used while waiting. Reconnect/reload still opens the latest page;
+reading position is not persisted. This is a trusted single-server workspace,
+not synchronized read receipts or private-room authorization.
+
+Run `npm run test:history` for SQLite/API and real Chromium regression journeys.
+[Execution evidence](../../evidence/realtime-chat/HISTORY_RUN.json) compares the
+same 650-entry fixture against 0.7.0 and 0.8.0. The records/participants shown in
+[the captured view](../../evidence/realtime-chat/history-reading.png) are fictional.
+Independent handover, screen-reader and other-browser use remain unverified.
 
 ## Search the complete project record
 

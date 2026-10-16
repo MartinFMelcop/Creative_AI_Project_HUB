@@ -57,15 +57,25 @@ class RoomsStore {
     if (!row) throw new Error('Project not found.');
     return row;
   }
-  history(roomId, before) {
+  history(roomId, before, after) {
     this.room(roomId);
-    if (before !== undefined && (!Number.isSafeInteger(before) || before <= 0)) throw new Error('Invalid history cursor.');
+    if (before !== undefined && after !== undefined) throw new Error('Choose one history direction.');
+    for (const cursor of [before,after]) {
+      if (cursor !== undefined && (!Number.isSafeInteger(cursor) || cursor <= 0)) throw new Error('Invalid history cursor.');
+    }
+    const forward = after !== undefined;
     const rows = this.db.prepare(`SELECT e.*,s.name AS author FROM entries e
-      JOIN sessions s ON s.id=e.session_id WHERE room_id=? AND e.id<? ORDER BY e.id DESC LIMIT 51`)
-      .all(roomId,before ?? Number.MAX_SAFE_INTEGER);
-    const hasMore = rows.length > 50;
-    const messages = rows.slice(0,50).reverse();
-    return { messages, hasMore, before: messages[0]?.id ?? null };
+      JOIN sessions s ON s.id=e.session_id WHERE room_id=? AND e.id${forward?'>':'<'}?
+      ORDER BY e.id ${forward?'ASC':'DESC'} LIMIT 50`)
+      .all(roomId,forward ? after : before ?? Number.MAX_SAFE_INTEGER);
+    const messages = forward ? rows : rows.reverse();
+    const first = messages[0]?.id, last = messages.at(-1)?.id;
+    const exists = (operator,id) => !!this.db.prepare(`SELECT 1 FROM entries WHERE room_id=? AND id${operator}? LIMIT 1`).get(roomId,id);
+    return {
+      messages, before:first ?? null, after:last ?? null,
+      hasMore:exists('<',first ?? before ?? after ?? 0),
+      hasNewer:exists('>',last ?? after ?? before ?? Number.MAX_SAFE_INTEGER)
+    };
   }
   decisions(roomId) {
     this.room(roomId);

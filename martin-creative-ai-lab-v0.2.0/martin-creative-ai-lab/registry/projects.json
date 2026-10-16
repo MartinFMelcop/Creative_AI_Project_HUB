@@ -322,9 +322,9 @@
       "slug": "realtime-integration-lab",
       "status": "active",
       "maturity": "M4",
-      "phase": "complete-print-report-validated",
+      "phase": "bounded-history-reading-validated",
       "origin": "github_snapshot_inspected",
-      "next_action": "Observe actual handover/report use and full-record sharing comprehension; compare native distribution, encounter design and independent literary feedback before selecting the next milestone.",
+      "next_action": "Observe actual chronological discussion and handover use; compare physical musical controls, native recovery and independent literary comprehension before selecting the next milestone.",
       "related_projects": [
         "P01",
         "P02",
@@ -347,12 +347,13 @@
         "evidence/realtime-chat/ACTIONS_RUN.json",
         "evidence/realtime-chat/SEARCH_RUN.json",
         "evidence/realtime-chat/PORTABLE_RUN.json",
-        "evidence/realtime-chat/PRINT_RUN.json"
+        "evidence/realtime-chat/PRINT_RUN.json",
+        "evidence/realtime-chat/HISTORY_RUN.json"
       ],
       "source_id": "LEGACY-002",
-      "maturity_scope": "Project Rooms 0.7.0 adds complete snapshot print/PDF reports: all entries, current actions, source decisions and every historical revision, independent of reading filters/pages. On-demand preview and native browser print preserve reading state and inert text. Actual Chromium PDF contains 388 entries and 64 revisions across 75 A4 pages; a separate mobile fixture preserves 26 actions/88 revisions. Existing JSON schema 1, SQLite schema 2, backup format 1 and dependency graph remain unchanged. Managed Chromium file URLs are blocked; identical HTML was exercised over loopback with server/network then disabled. Technical M4 for trusted local use; chosen labels/outcomes are not verified accounts or delivery. No independent team, assistive-technology, PDF/UA/PDF-A, other-browser, full-capacity PDF or commercial validation.",
+      "maturity_scope": "Project Rooms 0.8.0 traverses all saved discussion through before/after pages while retaining at most 300 rows. Fresh return to latest, deferred live insertion, reading/focus anchors and guarded requests preserve drafts, action work and search. Same 650-entry SQLite/API/Chromium baseline/current fixture verifies the old stop and bounded bidirectional reading, real arrivals, own attempts, failures and delayed room/identity/reconnect responses. Existing complete print/export, SQLite schema 2, JSON schema 1, backup format 1 and dependencies remain. Technical M4 for trusted local use; no independent team, assistive-technology, other-browser, full-capacity performance, commercial or North Star integration validation.",
       "working_path": "projects/realtime-integration-lab",
-      "working_version": "0.7.0"
+      "working_version": "0.8.0"
     }
   ]
 }

@@ -39,9 +39,10 @@
         <section id="search-context" hidden aria-labelledby="search-context-title"><h3 id="search-context-title" tabindex="-1">Saved context</h3><button id="search-context-back" type="button">Back to matched result</button><p class="muted">Nearby saved records, followed by linked work as it stood when opened. Search does not change your drafts.</p><div id="search-context-body"></div></section>
       </section>
       <div id="discussion">
-      <button id="older" hidden>Load earlier entries</button>
+      <p id="history-status" class="muted" role="status" aria-live="polite"></p>
+      <button id="older" hidden aria-controls="entries">Load earlier entries</button>
       <ol id="entries" tabindex="0" aria-label="Project conversation"></ol>
-      <button id="latest" hidden>Jump to latest</button>
+      <nav class="history-navigation" aria-label="Conversation history"><button id="newer" hidden aria-controls="entries">Load newer entries</button><button id="latest" hidden aria-controls="entries">Return to latest</button></nav>
       <form id="compose"><label for="body">Your contribution</label>
         <textarea id="body" maxlength="500" rows="3" required disabled aria-describedby="compose-hint"></textarea>
         <div class="compose-actions"><select id="kind" aria-label="Entry type"><option value="note">Discussion note</option><option value="decision">Recorded decision</option></select><button id="send" disabled>Send note</button></div>

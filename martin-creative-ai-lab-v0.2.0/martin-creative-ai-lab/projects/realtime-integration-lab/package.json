@@ -1,6 +1,6 @@
 {
   "name": "creative-ai-realtime-chat",
-  "version": "0.7.0",
+  "version": "0.8.0",
   "private": true,
   "description": "P11 local collaborative rooms with decisions, assigned actions and workspace recovery",
   "engines": {
@@ -13,7 +13,8 @@
     "test:browser": "node --test tests/browser.test.cjs tests/reading.test.cjs",
     "test:reading": "node --test tests/reading.test.cjs",
     "rooms": "node rooms-server.cjs",
-    "test:rooms": "node --test tests/rooms.test.cjs tests/rooms-browser.test.cjs",
+    "test:rooms": "node --test tests/rooms.test.cjs tests/rooms-browser.test.cjs tests/history.test.cjs tests/history-browser.test.cjs",
+    "test:history": "node --test tests/history.test.cjs tests/history-browser.test.cjs",
     "rooms:backup": "node rooms-backup.cjs backup",
     "rooms:inspect": "node rooms-backup.cjs inspect",
     "rooms:restore": "node rooms-backup.cjs restore",

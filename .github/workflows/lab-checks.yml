@@ -275,6 +275,11 @@ jobs:
           test -x "$browser_path"
           "$browser_path" --version
           printf 'CHROMIUM_PATH=%s\n' "$browser_path" >> "$GITHUB_ENV"
+      - name: Reproduce the historical conversation window limitation
+        working-directory: martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/projects/realtime-integration-lab
+        run: |
+          git show 2e18f506e6c61b489bef740ef533866962b13d77:martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/projects/realtime-integration-lab/public/studio/client.js > "$RUNNER_TEMP/rooms-history-baseline.js"
+          ROOMS_HISTORY_BASELINE_CLIENT="$RUNNER_TEMP/rooms-history-baseline.js" node --test tests/history-browser.test.cjs
       - name: Exercise real protocol and browser behavior
         timeout-minutes: 5
         working-directory: martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/projects/realtime-integration-lab
