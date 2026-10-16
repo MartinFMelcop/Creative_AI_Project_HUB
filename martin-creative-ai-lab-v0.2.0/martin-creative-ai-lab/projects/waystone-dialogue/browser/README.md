@@ -1,4 +1,4 @@
-# Flood Crossing — the afternoon crew 0.6.0
+# Flood Crossing — the deferred request 0.7.0
 
 A complete playable two-day adaptation of [P10's terminal adventure](../README.md).
 Pack two items, talk to the Keeper, choose a river route, rescue the mill party
@@ -7,7 +7,7 @@ clock, residents/cargo, current forecast and action risks stay connected to
 actual game state. All five endings have their own consequences and replay.
 
 [Previously deployed owner-private demo](https://the-last-waystone.sturdyspice.chatgpt.site).
-This session publishes 0.6.0 to GitHub; the private demo was not redeployed.
+The maintained repository campaign is 0.7.0; the private demo was not redeployed.
 Use the local commands below to play the current scene.
 GitHub remains the maintained source. Site identity is retained in
 `.openai/hosting.json`; deployment does not change its audience.
@@ -84,12 +84,41 @@ not a harvest. At dusk an agreed return becomes due, **not verified**: the game
 has observed only local work. Upstream rescue and boat/guide returns are outside
 this chapter. All night, morning and noon snapshots remain unchanged.
 
-Schema **4**, engine **0.6.0**, replays afternoon actions from the actual prior
-journal; schemas 1–3 retain their versions and continue into the chapter. Reload,
-export/import, rejected files and unavailable browser storage follow the same
-recovery workflow. [Execution](../../../evidence/waystone-dialogue/AFTERNOON_RUN.json)
-and the [actual mobile dusk screen](../../../evidence/waystone-dialogue/afternoon-boat-mobile.png)
-record scripted technical proof and implementing-agent review, not independent play.
+## Revisit a deferred request
+
+If the noon receipt says **ask the afternoon crew again**, choose **Revisit the
+deferred upstream request** while light remains. A returning boat hand asks for
+an answer against the current afternoon list: completed grain loads, people
+present, clinic work, seed and remaining shifts. Discussion spends no work shifts.
+Noon refusals and signed loans remain settled; dusk cannot reopen the request.
+
+Iven must be present and make a fresh voluntary offer in this consultation.
+Hearing him at noon does not supply later consent. A tentative boat or guide
+offer leaves the assets here until return terms are signed. Reconsidering spends
+nothing; setting the request aside returns to local work. Reopening then uses
+the new work list and requires a fresh offer from Iven again.
+
+A signed afternoon loan changes only future local work. Lending the only ferry
+leaves the ridge at one crate per two shifts; sending Iven retains the ferry but
+loaded trips take two shifts. A causeway keeps its capacity when a backup ferry
+leaves. Recovering stranded villagers never recalls an upstream volunteer.
+Refusal, a return due at dusk and a loan without a return time remain distinct.
+The noon receipt and earlier deliveries stay unchanged; no upstream rescue or
+boat/guide return is observed. This consultation is new adaptation fiction,
+without additional historical-source or canon authority.
+
+Schema **4**, engine **0.6.0**, remains the format for afternoon journals that
+never open this consultation. Opening it selects schema **5**, engine **0.7.0**,
+including a request later set aside. Schemas 1–4 retain their versions and load
+into the current campaign; older consumers reject schema 5. Replay rebuilds the
+current facts, consent, terms and capacity from decisions. Reload, export/import,
+rejected files and unavailable browser storage retain the existing recovery
+workflow. See the [deferred-request execution record](../../../evidence/waystone-dialogue/DEFERRED_REQUEST_RUN.json)
+for the current checks and their limits. Inspect the [unsigned terms](../../../evidence/waystone-dialogue/request-terms-desktop.png)
+and [mobile dusk list](../../../evidence/waystone-dialogue/request-dusk-mobile.png). The [prior afternoon execution](../../../evidence/waystone-dialogue/AFTERNOON_RUN.json)
+and [mobile dusk screen](../../../evidence/waystone-dialogue/afternoon-boat-mobile.png)
+remain evidence for 0.6.0. M4 remains technical; independent player understanding,
+literary quality, physical accessibility and commercial demand are unverified.
 
 ## Play locally
 
@@ -182,14 +211,15 @@ the actual run and limits.
 Automated inputs and same-agent design review do not establish unassisted player
 understanding, literary quality, accessibility or commercial demand. Screen-reader
 behavior, physical touch hardware, Safari/Firefox and reader enjoyment remain
-unverified. This is a two-day prototype with a closing conversation, not a finished paid game.
+unverified. This is a two-day prototype with a local afternoon consultation, not a finished paid game.
 
 
 [Campaign execution](../../../evidence/waystone-dialogue/CAMPAIGN_RUN.json)
 records 0.4.0. The morning is new Codex-authored fiction/rules under Martin's
 direction, implemented in JavaScript; Python parity applies to the preserved
 night, not to an invented Python morning reference. The 0.5.0 [handover execution](../../../evidence/waystone-dialogue/HANDOVER_RUN.json)
-adds six domain checks and four Chromium journeys: all **35** current tests pass.
+added six domain checks and four Chromium journeys: all **35** tests passed at
+that historical milestone.
 The six specified night histories yield 330 morning endings and 50,640 canonical
 handover states (heard-name order normalized), with 65,140 accepted transitions.
 This is bounded coverage, not every possible workshop history. Actual 0.4.0 code

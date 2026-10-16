@@ -3,7 +3,7 @@
 The maintained workspace for **Creative AI Project HUB**. This directory contains
 the current products, reusable media, preserved references and development records.
 The outer `martin-creative-ai-lab-v0.2.0/` folder retains its original package name;
-the maintained **SEED is 0.32.7**. Product versions are tracked separately.
+the maintained **SEED is 0.32.8**. Product versions are tracked separately.
 
 [Portfolio overview](../../README.md) · [Working project index](projects/README.md) ·
 [Current state](docs/STATE.md) · [Project registry](registry/projects.json)

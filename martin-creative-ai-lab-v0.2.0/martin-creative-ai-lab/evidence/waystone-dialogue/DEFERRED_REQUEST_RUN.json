@@ -1,0 +1,408 @@
+{
+  "project": "P10",
+  "version": "0.7.0",
+  "date_utc": "2026-10-16",
+  "baseline": {
+    "commit": "f22b83cb959fd828bff6a0b90bbf324dc7cc48ba",
+    "branch": "codex/p10-deferred-request-20261016",
+    "initial_state": "HEAD and fetched main at f22b83c; no local outgoing commits or tracked changes. Earlier branches and untracked work/ preserved.",
+    "artifact": "Exact committed P10 project extracted by git archive; unchanged 0.6.0 browser executed.",
+    "behavior": "Noon review-later asks the afternoon crew again; actual afternoon cannot reopen it. Revisit rejected without mutation.",
+    "full_suite": "42 passed, 0 failed; 351858 ms including actual Chromium, Python oracle, old saves and bounded graphs."
+  },
+  "environment": {
+    "os": "Managed Linux x86_64",
+    "node": "24.19.0",
+    "python": "3.12.14",
+    "chromium": "154.0.8037.57 (Debian 13)",
+    "execution": "Actual headless Chromium via localhost HTTP; 1440x1050 desktop and 390x844 mobile/touch emulation. Supported additional network permission and inherited proxy. Bounded owned test processes; contexts/server closed in teardown.",
+    "tools_choice": "Existing ES-module browser product; locked P11 Playwright tooling. No migration, new dependency/service, external research or third-party asset."
+  },
+  "design": {
+    "audience": "Narrative strategy players deciding when help can leave after actual local work, with consent and unfinished obligations visible.",
+    "portfolio_comparison": [
+      "P05 native failed-save recovery: NewRun/Resume can abandon accepted in-memory progress after a failed write. Credible workflow opportunity, requiring actual baseline proof; no edit here.",
+      "P03 physical practice and P06 unassisted sweep learning: practice/review loops execute. Physical timing and learning evidence need hardware/people, not more synthetic mechanics.",
+      "P11 actual handover/reconnect: selects latest rather than preserving earlier reading position. Documented policy, not a reproduced regression; existing reports/history work.",
+      "P04 comprehension/source work: current 0.3.0 already repairs demonstrated agency/mechanism issues; further quality needs actual passage/reader evidence.",
+      "P10 deferred request: directly executed gap, meaningful timing/transport/consent choice within local rules and a bounded before/after comparison."
+    ],
+    "approaches": [
+      "Wording-only correction removes the invitation without adding agency.",
+      "An upstream/return chapter needs new outcomes beyond what this game has observed.",
+      "Selected: reopen during remaining afternoon light; actual work and people determine offers and future capacity."
+    ],
+    "implementation": "Returning boat hand, optional current list/Mara/fresh Iven offer, final refusal or tentative boat/guide followed by terms. Pause returns to work; reopening refreshes facts and consent. No transfer before signing. Earlier snapshots stay unchanged; recovery never recalls a departed guide.",
+    "creative_refinements": [
+      "Shift-zero opening no longer claims work was done. After pause, the waiting boat hand gets down from the wall rather than arriving again.",
+      "Review corrected stranded Iven described as upstream, afternoon supply called a morning delivery and an offer promising completion of unfinished work.",
+      "Terms title asks to agree the terms while assets remain here.",
+      "Actual screenshots exposed a retained ferry jumping banks on reload because its transform inherited the previous screen. Afternoon rendering now fixes the local-landing transform; the actual browser reload checks it."
+    ],
+    "maturity": "Technical M4 retained. New adaptation fiction, not historical canon authority. North Star foundation_only, zero consumers; no destination integration."
+  },
+  "comparison": {
+    "baseline_commit": "f22b83cb959fd828bff6a0b90bbf324dc7cc48ba",
+    "old_version": "0.6.0",
+    "new_version": "0.7.0",
+    "compatibility": {
+      "declared_traces": [
+        {
+          "name": "wet_keep",
+          "actions": [
+            "timber",
+            "oil",
+            "ready",
+            "leave",
+            "ferry",
+            "iven",
+            "roof",
+            "board",
+            "row",
+            "row",
+            "load",
+            "board",
+            "row",
+            "morning",
+            "depot",
+            "supply-clinic",
+            "close",
+            "handover",
+            "hear-iven",
+            "settle",
+            "keep-crossing",
+            "decline",
+            "afternoon",
+            "grain",
+            "grain",
+            "seed",
+            "close"
+          ],
+          "final_schema": 4
+        },
+        {
+          "name": "wet_noon_boat",
+          "actions": [
+            "timber",
+            "oil",
+            "ready",
+            "leave",
+            "ferry",
+            "iven",
+            "roof",
+            "board",
+            "row",
+            "row",
+            "load",
+            "board",
+            "row",
+            "morning",
+            "depot",
+            "supply-clinic",
+            "close",
+            "handover",
+            "hear-iven",
+            "settle",
+            "lend-ferry",
+            "return-at-dusk",
+            "afternoon",
+            "grain",
+            "grain"
+          ],
+          "final_schema": 4
+        },
+        {
+          "name": "wet_noon_guide",
+          "actions": [
+            "timber",
+            "oil",
+            "ready",
+            "leave",
+            "ferry",
+            "iven",
+            "roof",
+            "board",
+            "row",
+            "row",
+            "load",
+            "board",
+            "row",
+            "morning",
+            "depot",
+            "supply-clinic",
+            "close",
+            "handover",
+            "hear-iven",
+            "settle",
+            "send-guide",
+            "open-return",
+            "afternoon",
+            "grain",
+            "grain"
+          ],
+          "final_schema": 4
+        },
+        {
+          "name": "wet_deferred",
+          "actions": [
+            "timber",
+            "oil",
+            "ready",
+            "leave",
+            "ferry",
+            "iven",
+            "roof",
+            "board",
+            "row",
+            "row",
+            "load",
+            "board",
+            "row",
+            "morning",
+            "depot",
+            "supply-clinic",
+            "close",
+            "handover",
+            "hear-iven",
+            "settle",
+            "keep-crossing",
+            "review-later",
+            "afternoon",
+            "grain",
+            "grain",
+            "seed",
+            "close"
+          ],
+          "final_schema": 4
+        },
+        {
+          "name": "stranded",
+          "actions": [
+            "rope",
+            "oil",
+            "ready",
+            "leave",
+            "ferry",
+            "board",
+            "row",
+            "finish",
+            "morning",
+            "ready-ferry",
+            "close",
+            "handover",
+            "settle",
+            "keep-crossing",
+            "review-later",
+            "afternoon",
+            "recover-crew",
+            "grain",
+            "close"
+          ],
+          "final_schema": 4
+        },
+        {
+          "name": "road_backup",
+          "actions": [
+            "rope",
+            "timber",
+            "ready",
+            "herbs",
+            "bargain",
+            "causeway",
+            "iven",
+            "roof",
+            "span",
+            "convoy",
+            "morning",
+            "grain",
+            "seed",
+            "plant",
+            "ready-ferry",
+            "handover",
+            "hear-iven",
+            "settle",
+            "lend-ferry",
+            "open-return",
+            "afternoon",
+            "close"
+          ],
+          "final_schema": 4
+        },
+        {
+          "name": "ridge_fallback",
+          "actions": [
+            "rope",
+            "oil",
+            "ready",
+            "leave",
+            "retreat",
+            "morning",
+            "close",
+            "handover",
+            "settle",
+            "keep-crossing",
+            "decline",
+            "afternoon",
+            "retrieve-chest",
+            "supply-clinic",
+            "recall"
+          ],
+          "final_schema": 4
+        },
+        {
+          "name": "late_clinic",
+          "actions": [
+            "timber",
+            "oil",
+            "ready",
+            "leave",
+            "ferry",
+            "iven",
+            "roof",
+            "board",
+            "row",
+            "row",
+            "load",
+            "board",
+            "row",
+            "morning",
+            "grain",
+            "grain",
+            "depot",
+            "supply-clinic",
+            "seed",
+            "handover",
+            "hear-iven",
+            "settle",
+            "keep-crossing",
+            "review-later",
+            "afternoon",
+            "recall",
+            "plant",
+            "close"
+          ],
+          "final_schema": 4
+        }
+      ],
+      "action_checkpoints": 188,
+      "equal": "Night/morning/noon/afternoon snapshots, journals serialized to schemas 1–4, every action result text except the declared correction, completed epilogues.",
+      "intentional_text_corrections": 1,
+      "correction": "A retained ferry with stranded Iven now says still across the channel, not gone upstream."
+    },
+    "before_after": {
+      "prefix": [
+        "timber",
+        "oil",
+        "ready",
+        "leave",
+        "ferry",
+        "iven",
+        "roof",
+        "board",
+        "row",
+        "row",
+        "load",
+        "board",
+        "row",
+        "morning",
+        "depot",
+        "supply-clinic",
+        "close",
+        "handover",
+        "hear-iven",
+        "settle",
+        "keep-crossing",
+        "review-later",
+        "afternoon",
+        "grain"
+      ],
+      "baseline_choices": [
+        "grain",
+        "seed",
+        "close"
+      ],
+      "current_choices": [
+        "grain",
+        "seed",
+        "revisit-request",
+        "close"
+      ],
+      "baseline_revisit_rejected_without_mutation": true,
+      "noon_loan_grain": 2,
+      "loan_after_first_local_trip_grain": 3,
+      "current_dusk": "All four mill villagers are home.\n\nThe clinic was supplied on time this morning.\n\n3 of 4 grain crates received; 1 remain at the mill.\n\nThe sowing seed is still in the loft.\n\nThe depot reserve needs replacing.\n\nThe ferry left after 1 afternoon shift(s), with 3 shift(s) of local light remaining. The noon receipt still records a deferred request. The new agreed return is due now. No return or upstream rescue has been observed."
+    }
+  },
+  "checks": [
+    {
+      "command": "node tests/deferred-request.test.mjs",
+      "result": "9 passed; 266 canonical states / 390 transitions from three declared local states. Consultation/close graph, not all work orders or workshop histories."
+    },
+    {
+      "command": "node --test tests/deferred-request-browser.test.mjs (before final terms-title polish)",
+      "result": "2 passed; actual keyboard/touch emulation, tentative-term reload, route/status, blocked storage, export/import gated at asynchronous File.text, downgrade rejection preserving active journey, no page errors/mobile overflow."
+    },
+    {
+      "command": "node work/p10-consultation/compare.mjs",
+      "result": "8 old traces / 188 accepted-action checkpoints. Snapshots, schemas 1–4 serialized journals, action text and completed epilogues match except the declared stranded-Iven opening correction. Exact traces are included above."
+    },
+    {
+      "command": "python3 tools/export_dialogue.py --check",
+      "result": "Dialogue source export matches; preserved Python night is the oracle, not a reference for new afternoon fiction."
+    },
+    {
+      "command": "python3 tools/reference_library.py check; unittest test_reference_library.py, test_check_manifest.py, test_validate_repo.py",
+      "result": "Integrity passed: 5 records, 607 preserved sources, 18 derived PDF texts, 140 exclusions, 14 capabilities. 30 reference, 11 manifest and 13 validator regressions passed."
+    },
+    {
+      "command": "CHROMIUM_PATH=/usr/bin/chromium WAYSTONE_SCREENSHOT_DIR=<scratch> timeout 660s npm test",
+      "result": "53 passed, 0 failed/cancelled; 431688.635 ms. Complete final source after diagram fix, including real browser, Python night oracle, old schemas and all declared graphs. Run without competing preview/test applications."
+    },
+    {
+      "command": "timeout 90s node --test tests/deferred-request-browser.test.mjs (after final diagram continuity fix)",
+      "result": "2 passed, 0 failed; 56716 ms. Actual retained ferry marker stays at the local landing before/after tentative-term reload. All schema/recovery/keyboard/touch assertions retained."
+    },
+    {
+      "command": "timeout 480s npm test (earlier bounded run)",
+      "result": "Exit 124: 47 tests passed, no assertion failures; handover file cancelled at outer 8-minute limit (479503 ms), before its six results. Concurrent focused browser runs added contention. Preserved checks unchanged; reran the complete final suite alone with a measured 11-minute bound, as reported above. Not counted as a full pass."
+    },
+    {
+      "command": "python3 tools/validate_repo.py; python3 tools/check_manifest.py",
+      "result": "Repository structure/492 local links and exact maintained-file SHA-256 manifest verified before commit; independent validator/manifest/reference regression counts above."
+    }
+  ],
+  "artifacts": {
+    "projects/waystone-dialogue/browser/dist/deferred-request.js": "3e0cfd18d9f273e0229f5ab61b394fa819c53cad54b2f7a1860aed9acadeb00b",
+    "projects/waystone-dialogue/browser/dist/afternoon.js": "573525118ea61d270f3115200488434068d6d67c1372f29277ec818cf635b5f9",
+    "projects/waystone-dialogue/browser/dist/afternoon-ui.js": "b68083954413bdcdcf4d634376bf2cabee997a4a3e4582a831310125589ba4a0",
+    "projects/waystone-dialogue/browser/dist/campaign.js": "c749f7bf0e94a6318bff168cc1fba94a2ef473756c513de7a43219fc47e2c63b",
+    "projects/waystone-dialogue/browser/dist/index.html": "ebaf0bd2a53779ec1f07bdc7538c52014ef0ae5e0f77b6e0cfd5f21aaa368b76",
+    "projects/waystone-dialogue/browser/tests/deferred-request.test.mjs": "358c20068c29a53b4dd8dde9ab084eecb36c428fac5437ce757b58058c782ca2",
+    "projects/waystone-dialogue/browser/tests/deferred-request-browser.test.mjs": "0de7cad9092a83e6785355021a0ffcc8a131c80de4d1549840dcd4d798eab969",
+    "projects/waystone-dialogue/browser/package.json": "07fa928f756ce9ee5267e731e2eceae50345b3939e030c0242cc95f53e265709",
+    "evidence/waystone-dialogue/request-table-desktop.png": "0157b82609aafcf755226038b78dc85db5aec43a4466c0ec2533a119cd45a698",
+    "evidence/waystone-dialogue/request-terms-desktop.png": "ecc37f042a1712a25241a9196b04b20e3e7f50fb8d920c7051815148416c6efb",
+    "evidence/waystone-dialogue/request-dusk-mobile.png": "946785b0f89ce2d633f352174f8e1ffbe0e310294a82dfd0308fe02871eb799d"
+  },
+  "screens": [
+    "evidence/waystone-dialogue/request-table-desktop.png",
+    "evidence/waystone-dialogue/request-terms-desktop.png",
+    "evidence/waystone-dialogue/request-dusk-mobile.png"
+  ],
+  "assessment": {
+    "creative_review": "Codex implementer and read-only Codex reviewers inspected actual desktop/mobile scenes and prose. Tally, line, hook and signed slip support distinct voices and let changed decisions follow work. Current capacity stays visible through tentative terms. Mobile dusk repeats facts but remains scannable; no clipping observed. Reasoned authoring/visual assessment, not audience evidence.",
+    "limits": [
+      "No independent human play, unassisted comprehension, literary enjoyment, accessibility or market validation.",
+      "Headless keyboard/touch emulation is not physical hardware/screen-reader testing. Firefox/Safari unverified.",
+      "No audio addition, upstream rescue/return simulation, native edition, service or private demo redeployment.",
+      "Discussion has no work-shift cost. Bounded local chapter, not a travel/upstream urgency simulation.",
+      "One active journey/tab, no undo/sync; existing 64 KiB/1024-decision portable-save limits."
+    ],
+    "provisional_failures": "Initial new test fixture expected two home villagers but the declared partial rescue had zero; corrected the expectation, then verified actual recovery and non-recall. A temporary edit syntax error was fixed before focused/final checks. Redundant diagnostic runs consumed time without adding independent evidence; no assertion was weakened to bypass an environment failure."
+  },
+  "prompt_review": {
+    "changed": false,
+    "sha256": "8212e510d1ab7b3c8526b14120a41391ed81cf17c8a56b9c49c0de9dd4009d1a",
+    "reason": "Existing real-artifact comparison, narrative consequences, environment diagnosis and bounded lifecycle guidance served the task. Dynamic priorities belong in STATE. Source/browser review caught weak prose; no new general rule justified."
+  }
+}

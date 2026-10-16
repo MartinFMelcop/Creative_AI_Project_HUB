@@ -1618,3 +1618,40 @@ to bound owned runtime processes and stop previews after verification/interrupti
 An interrupted session left an unbounded graphics process alive for over seven
 hours. This changes process lifecycle guidance, not portfolio priorities or the
 underlying model; all other discovery/evidence/publication contracts remain.
+
+
+## ADR-068 — let completed local work change a deferred request
+
+**Date:** 2026-10-16 (UTC). **Status:** P10 browser 0.7.0; technical M4 retained.
+
+Compare P05 failed-save continuity, P03 physical practice, P06 unassisted learning,
+P11 actual handover/reconnect reading and P04 source/reader comprehension. Select
+P10's directly executed gap: review-later writes “ask the afternoon crew again”,
+but 0.6.0 offers only local work and dusk. A wording-only correction adds no agency;
+a whole upstream chapter would require unsupported rescue/return outcomes. Keep
+the existing dependency-free browser product and author the bounded consultation.
+
+A boat hand from Dain's noon wagon returns by the high road. Read current work,
+hear Mara and require a fresh voluntary Iven offer from the crew present now.
+Noon consent cannot authorize later departure. Refusal ends the request; a boat
+or guide proposal keeps resources local until terms are signed. Back spends
+nothing; pause permits work and reopening refreshes facts/consent. Signed loans
+change future transport costs, not past deliveries. A guide leaving later remains
+upstream when other villagers are recovered. Dusk observes local work and an
+outstanding obligation; no return, upstream rescue or harvest is inferred.
+
+Preserve prior snapshots and action-only replay. Opening this consultation selects
+schema 5/engine 0.7.0, even if paused; otherwise old schemas and versions remain.
+Reject downgraded journals and reconstruct state from decisions, not supplied
+snapshots. Existing browser save/reload/file failure controls remain the consumer.
+No new narrative framework, external dependency, engine or shared fiction.
+
+Actual baseline/current traces expose the new timing choice: the same ferry can
+carry two grain crates before leaving, then the ridge carries a third by dusk;
+a noon loan carries only two. Read-only review corrected current-fact/consent
+wording, not rules to force a moral outcome. Baseline and declared old-trace
+parity, consultation graph, real keyboard/touch-emulated browser recovery and
+artifact inspection are separate evidence. Codex review is not independent
+human feedback. North Star remains foundation-only with no consumer. Keep the
+complete authoritative prompt unchanged; existing discovery, authoring and
+bounded verification guidance already covers the observed weaknesses.

@@ -1,6 +1,6 @@
 # SEED — Martin Creative AI Lab
 
-**Version:** 0.32.7
+**Version:** 0.32.8
 **Data-base:** 10 de outubro de 2026  
 **Autor e responsável pelo portfólio:** Martin Melcop Neto  
 **Working language:** English for new documentation, plans, code comments, UI, and reports. Preserve original creative titles and historical source languages.
@@ -70,14 +70,14 @@ Se apenas este arquivo estiver disponível, ele é suficiente para iniciar a Fas
 |---|---|
 | Repository | MartinFMelcop/Creative_AI_Project_HUB; actual Git root `/workspace/Creative_AI_Project_HUB`; wrapper retained |
 | Preserved sources | Old ZIP: 175 Rave / 3 WebSocket texts unchanged. New Rave library: 589 readable / 140 excluded from 729; ten main and eight OVA PDFs (2,407 pages) plus derived text; ZIP/policy unavailable |
-| Current milestone | P01 Eclipse Fair native 0.6.0 independent fair continuations |
-| Delivery | Three replay-validated fair slots, immediate creation, explicit replacement and failed-save switch protection; standalone Linux player |
-| Evidence | Shipped baseline single-slot replacement, independent histories/replays, engine keyboard/modal/save-failure journeys and current packages; see `docs/STATE.md` |
-| Limits | Technical execution and Codex interface review; three fixed slots, Fair 1 startup, no multi-process/cloud/undo or independent human validation |
-| Next action | Compare unassisted native continuity/play, the actual deferred Waystone request, physical rhythm practice, handover use and literary comprehension afresh |
-| Other products | P03/P08 0.5.0, P05 0.4.0, P06/P10 0.6.0, P04 0.3.0, P11 0.8.0 and P02 0.2.1 retained |
+| Current milestone | P10 Flood Crossing browser 0.7.0 playable deferred request |
+| Delivery | Reopen the noon request against actual afternoon work and light; fresh Iven consent, tentative offers, signed terms and future local capacity |
+| Evidence | Baseline/current consultation and recovery checks linked in [the execution record](evidence/waystone-dialogue/DEFERRED_REQUEST_RUN.json); see `docs/STATE.md` for results and limits |
+| Limits | Technical M4 and Codex review; no independent reader/player, physical accessibility or commercial validation; upstream rescue and returns remain unobserved |
+| Next action | Observe unassisted consultation and local-work choices; compare native recovery/play, physical rhythm practice, handovers and literary comprehension afresh |
+| Other products | P01/P06 0.6.0, P03/P08 0.5.0, P05 0.4.0, P04 0.3.0, P11 0.8.0 and P02 0.2.1 retained |
 | Rules / assets | Existing reference bytes, games and media retained; North Star has no consumer |
-| Attribution | Remote baseline `67e68cd`; Codex implementation, engine input and artifact review; independent human feedback remains pending |
+| Attribution | Baseline `f22b83c`; Codex implementation and interface review; independent human feedback remains pending |
 
 Registry evidence paths must resolve to existing files inside the lab; working
 paths must be directories and legacy-source IDs must exist. This documentary
@@ -254,7 +254,7 @@ Identificadores persistem mesmo quando nomes mudam. Um projeto arquivado pode co
 | P07 | Visual Generation & Asset Lab | Native visual production | Three paintings plus two real motion atlases consumed by P06 | 0.2.0 production/integration; independent artist approval absent |
 | P08 | Audio, Poetry & Music Lab | Original musical production and integration | Two P03 stages and P06 native soundscape | Real masters/exports/scores; no album or human listening approval |
 | P09 | AI Delivery & Operations Cases | Carreira real e avaliação simulada | Case de entrega, análise de workflow e rubricas | Base profissional lida; cases anteriores pendentes |
-| P10 | Adventures Unleashed / Rave Master | Narrative, NPCs and recovered systems | Two-day browser rescue/relief campaign with local resume and portable saves | Campaign 0.6.0; Python adventure 0.2.0 / standalone 0.1.3; bounded evidence in registry |
+| P10 | Adventures Unleashed / Rave Master | Narrative, NPCs and recovered systems | Two-day browser rescue/relief campaign with local resume and portable saves | Campaign 0.7.0 playable deferred request; Python adventure 0.2.0 / standalone 0.1.3 retained; bounded evidence in registry |
 | P11 | Real-time Integration Lab / Project Rooms | Node/Socket.IO/SQLite | Trusted local project conversations, decisions, portable records and recovery | Workspace 0.7.0 with complete print reports and offline reading copies, actions/search/recovery; original protocol and P02 snapshot preserved; no public service |
 
 P02 agrupa evaluation e QA porque podem compartilhar a mesma aplicação pequena. Não criar dois projetos Unity idênticos apenas para apresentar títulos diferentes. P01 pode abrigar produção, economia e analytics como cases distintos de uma fonte comum.
@@ -592,19 +592,27 @@ references; current Python/browser execution evidence and maturity remain separa
 Reservatório recuperado de RPG Maker XP/RGSS: narrativa, personalidade e diálogo de NPCs, combate, progressão, crafting, reputação, planejamento de arte/áudio e QA. A extração completa, os estados e limites estão na seção 28.2. Não é um novo compromisso de terminar um RPG extenso nem uma fusão automática com os outros RPGs do inventário.
 
 [The Last Waystone](projects/waystone-dialogue/browser/README.md) preserves the
-complete night rescue, six-shift morning and noon receipt. Browser 0.6.0 makes
-local loan costs playable in four afternoon shifts: carry food, recover people,
-supply the clinic and contact late callers, preserve seed or plant. Retained
-transport and Iven determine actual work costs; an upstream volunteer cannot be
-recalled by local rescue. Waiting spends remaining light until dusk. A due return
-is an obligation, not an observed arrival; no upstream success is simulated.
+complete night rescue, six-shift morning and noon receipt. Browser 0.7.0 makes
+the deferred request playable during the four-shift afternoon. A returning boat
+hand asks against the current work list, people and light remaining. Iven must
+make a fresh voluntary offer; noon consent cannot send him later. Tentative
+offers retain boat and guide until terms are signed. Back or pause spends no
+work shifts; reopening after local work uses fresh facts and consent.
 
-Schemas 1–3 retain their versions; schema 4 replays the new chapter. Python
-adventure 0.2.0/scene 0.1.3 and browser night/morning/noon rules stay unchanged.
-The 42-check suite, old save continuation and actual desktop/mobile Chromium
-execution verify this bounded milestone. M4 remains technical; no independent
-reader/player, physical accessibility or commercial validation. The private demo
-has not been redeployed. See the current STATE and afternoon execution record.
+A later loan changes future local capacity, not completed grain, clinic or seed
+work. A retained causeway stays usable; an upstream guide cannot be recalled by
+local rescue. Refusal, return due at dusk and an open loan remain distinct.
+The noon receipt and earlier snapshots stay unchanged. No upstream rescue,
+boat/guide return or harvest is invented; this is new adaptation fiction without
+additional historical-source authority.
+
+Schemas 1–4 retain their versions. Only opening the consultation selects schema 5
+and engine 0.7.0, including a request later paused. Python adventure 0.2.0/scene
+0.1.3 and browser night/morning/noon rules stay unchanged. Current checks and
+limits are linked in [the deferred-request execution record](evidence/waystone-dialogue/DEFERRED_REQUEST_RUN.json).
+M4 remains technical; no independent reader/player, physical accessibility or
+commercial validation. The private demo has not been redeployed. Compare actual
+player comprehension and fresh portfolio opportunities before extending the chapter.
 
 ### P11 — Real-time Integration Lab / Project Rooms
 

@@ -1,70 +1,65 @@
 # Lab state
 
-**Updated:** 2026-10-16 (America/Sao_Paulo). **Seed:** 0.32.7.
-**Milestone:** P01 Eclipse Fair native 0.6.0 independent fair continuations.
+**Updated:** 2026-10-16 (UTC). **Seed:** 0.32.8.
+**Milestone:** P10 Flood Crossing browser 0.7.0 playable deferred request.
 
-Remote main/HEAD began at `67e68cda3840ebb473d5122afb370dbc8a86c154`.
-Inspected branches, local/outgoing history, remotes, untracked work and current
-instructions before editing. Preserved earlier branches and work/. Authenticated
-Git works with supported network permission; remote remained at that baseline
-when the interrupted session resumed.
+Baseline HEAD and fetched main were `f22b83cb959fd828bff6a0b90bbf324dc7cc48ba`.
+Inspected branch, local/outgoing history, remotes, current instructions and actual
+products before editing; preserved earlier branches and untracked work/.
+Authenticated Git transport works with supported network permission.
 
-Compared native P01/P05 recovery, P06 unassisted learning, physical P03 practice,
-P04 comprehension and actual P11 handovers. P10 has a credible narrative gap:
-review-later promises consultation that afternoon cannot reopen. It needs authored
-consequences, not fabricated upstream success. P04's current revision already
-repairs the demonstrated agency/mechanism problems. Select P01 for solo players
-and different groups on one device: exact shipped 0.5.0 session execution shows
-B's first accepted turn replacing A's only continuation. Writes were already
-atomic; a stronger warning cannot preserve both fairs, and hidden archives make
-the destination harder to choose.
+Compared P05 native failed-save recovery, P03 physical practice, P06 unassisted
+learning, P11 actual handover/reconnect reading and P04 comprehension/source work.
+Choose P10 for narrative-strategy players: the noon receipt asks the afternoon
+crew again, but executed 0.6.0 cannot reopen the request. Wording-only repair
+removes the promise without agency; a whole upstream/return chapter would invent
+outcomes beyond the current game. Keep the working dependency-free browser product.
 
-[Native 0.6.0](../projects/eclipse-fair/Native/README.md#keep-and-resume-three-fairs)
-keeps three explicit fair slots. Cards derive seed/round/turns/local players/next
-actor or winners by validated replay. New fair saves its configuration immediately;
-occupied or invalid destinations need explicit replacement. Pending accepted
-progress is saved before switching; failure blocks the switch and retains memory.
-An unavailable initial save opens no fallback gameplay and explains recovery.
-Fair 1 keeps match.json and startup preference; added slots/replays stay distinct,
-including extensionless bases. No index, schema/rule/profile change or cloud service.
-Earlier packages and original source/reference bytes remain intact.
+[Campaign 0.7.0](../projects/waystone-dialogue/browser/README.md#revisit-a-deferred-request)
+lets a returning boat hand ask against actual afternoon work, current crew and
+remaining light. Read the updated list, hear Mara and obtain a fresh voluntary
+Iven offer. Noon consent is insufficient. Refuse, propose a boat/guide, reconsider
+or pause for local work; reopening refreshes facts and consent. Assets stay here
+until return terms are signed. A later loan changes only future carrying capacity;
+rescuing remaining villagers never recalls a departed volunteer. The immutable
+noon receipt remains deferred, with a separate afternoon decision and dusk record.
+No upstream rescue, boat/guide return or harvest is claimed.
 
-[Execution](../evidence/eclipse-fair/SLOT_RUN.json) identifies the baseline,
-environment, tested sources, exact packages and limits. The final source executes
-1,747 native X11 assertions, 26 complete Gate/deadline matches and all 15 local-seat
-sets. Focused exact shipped Linux execution passes 154 assertions with external
-SDK/runtime paths excluded; the optional compiled project executes outside source
-with 148 headless assertions. Real separate player processes open A, Continue B,
-close/relaunch and recover A's Nira handoff with both saved files byte-identical.
-Those records and inputs are declared fixtures, not independent human play.
-The unchanged Core passes 13 checks. Package source/payload/runtime/notices and
-five boundary regressions pass. Shared structural/hash checks run before commit;
-actual remote SHA and final hosted status are reported at task closure.
+[Execution](../evidence/waystone-dialogue/DEFERRED_REQUEST_RUN.json) identifies exact
+baseline, environment, declared action traces, tested sources and evidence limits.
+Unchanged baseline passes 42 tests. Eight old traces compare 188 action checkpoints:
+snapshots, schemas 1–4 journals and completed epilogues match; one incorrect old
+opening now distinguishes stranded Iven from a guide actually sent upstream.
+Final complete suite passes all 53 tests, including nine new domain checks and
+two real-browser journeys. The consultation graph explores 266 states / 390
+transitions from three declared local states. Opening the consultation
+selects schema 5/engine 0.7.0; unused new behavior retains schemas 1–4 and versions.
 
-Native execution exposed a popup height feedback loop and competing exclusive
-windows: fix wrapping width and parent replacement to setup, then exercise actual
-engine Escape/Enter. Read-only review found fallback overwrite and extensionless
-replay collisions; concrete failure cases now cover both. The Linux regression
-fixture follows the current player. Initial default XDG writes fail on the old
-baseline too; scratch paths enable actual execution without changing product code.
-A duplicate baseline check and provisional source run were stopped, not counted
-as passes. A provisional assertion pass with engine errors is not the final result.
+Concrete executed tradeoff: from the same wet ferry night and supplied clinic,
+lending at noon carries two of four grain crates by dusk. Carry two first, then
+lend the ferry: the ridge brings one more; three arrive, one stays at the mill.
+Keeping the ferry or sending Iven has different future costs. This is a controlled
+comparison, not evidence that one policy is best for players or upstream residents.
 
-Keep technical M4. Three fixed slots, Fair 1 startup, no undo/automatic backup,
-simultaneous-process coordination, physical controller/display/audio, other-OS,
-independent shared-device/accessibility or commercial validation. No Site
-redeployment or North Star consumer; foundation_only and project independence stay.
+Review corrected false work at shift zero, a second arrival after pause, the
+stranded-Iven opening, afternoon medicine called a morning delivery and an offer
+that promised unfinished work could be completed. Actual desktop/mobile scenes
+keep light, capacity, tentative status and unverified returns legible. A retained
+ferry marker now stays at the local landing across reload; actual browser controls
+verify it after the final diagram fix. These are Codex source/visual judgments;
+independent human feedback remains pending.
 
-Refine one existing verification sentence in the complete authoritative
-[prompt](prompts/CONTINUOUS_DEVELOPMENT.md): bound runtime processes and stop owned
-previews/test applications after verification or interruption. An interrupted
-session left a software-rendered preview active for over seven hours. Final
-normal processes were closed; --max-fps 60 bounded rendering. This is an observed
-process-lifecycle correction, not a new project priority or model improvement.
-Baseline probing, native screenshots and negative cases served the design;
-repeated provisional runs wasted time and are not additional validation claims.
+Technical M4 retained. No independent unassisted play, literary enjoyment,
+physical touch/assistive testing, native edition, commercial validation or Site
+redeployment. Existing sources, Python reference, media and other products remain
+intact. North Star stays foundation_only with 14 capabilities and zero consumers;
+this is origin product development, not destination integration.
 
-Next: compare fresh opportunities across actual play/learning, the deferred
-Waystone request, physical musical practice, handovers and literary comprehension.
-Observe unassisted continuation/replacement/recovery before claiming this workflow
-is understood by players. Do not mechanically repeat this project.
+The complete authoritative [prompt](prompts/CONTINUOUS_DEVELOPMENT.md) is unchanged.
+Its current artifact comparison, narrative consequence and bounded-process checks
+served the design. An earlier eight-minute bound cancelled the old handover graph after 47 passing
+tests. Concurrent focused browsers added contention; the final full suite ran
+alone under an eleven-minute bound, with no assertions removed. Provisional
+fixture mistakes and repeated diagnostic runs were not extra evidence. No observed need justifies another general rule or a fixed
+next project. Next: compare unassisted consultation/local-work understanding with
+native recovery/play, physical practice, actual handover and literary needs afresh.
