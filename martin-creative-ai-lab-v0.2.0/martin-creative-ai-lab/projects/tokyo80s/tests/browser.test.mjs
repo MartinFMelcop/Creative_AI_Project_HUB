@@ -89,17 +89,35 @@ test('calibration uses scheduled real audio clicks, persists offset and stops wh
   await page.reload();await page.locator('#start:not([disabled])').waitFor();
   await page.locator('#calibrate').click();await page.locator('#clicks').click();
   await page.waitForFunction(()=>window.probeClicks?.length===12);
-  await page.evaluate(()=>new Promise(resolve=>{
-    let i=2;
+  const deliveries=await page.evaluate(()=>new Promise(resolve=>{
+    let i=2;const deliveries=[];
     const check=()=>{
       if(window.probeAudio.currentTime>=window.probeClicks[i]+.08){
-        document.dispatchEvent(new KeyboardEvent('keydown',{code:'KeyF',bubbles:true}));i++;
-        if(i===12){resolve();return;}
+        // Do not deliver an overdue fixture tap to the next click. At least six
+        // valid taps still have to reach the unchanged calibration workflow.
+        const error=window.probeAudio.currentTime-window.probeClicks[i];
+        if(error<.2){
+          deliveries.push(error);
+          document.dispatchEvent(new KeyboardEvent('keydown',{code:'KeyF',bubbles:true}));
+        }
+        i++;
+        if(i===12){resolve(deliveries);return;}
       }requestAnimationFrame(check);
     };check();
   }));
   await page.waitForFunction(()=>document.querySelector('#cal-status').textContent.includes('Suggested offset'));
-  const learned=Number(await page.locator('#offset').inputValue());assert.ok(learned>=75&&learned<=110,`Actual scheduled taps learned ${learned} ms`);
+  assert.ok(deliveries.length>=6,'fixture must deliver at least six valid taps');
+  assert.ok((await page.locator('#cal-status').textContent()).includes(`from ${deliveries.length} taps`));
+  assert.ok(deliveries.every(error=>error>=.08-1e-9&&error<.2),'fixture taps must match their scheduled beat');
+  const observed=deliveries.sort((a,b)=>a-b);
+  const middle=Math.floor(observed.length/2);
+  const median=observed.length%2?observed[middle]:(observed[middle-1]+observed[middle])/2;
+  const expected=Math.min(150,Math.max(-150,Math.round(median*1000/5)*5));
+  const learned=Number(await page.locator('#offset').inputValue());
+  // One 5ms setting step covers an audio-clock quantum between observation and
+  // synchronous dispatch. This checks received taps rather than RAF punctuality.
+  assert.ok(Math.abs(learned-expected)<=5,`Observed taps expect ${expected}ms; calibration returned ${learned}ms`);
+  assert.equal(learned%5,0);assert.ok(learned>=-150&&learned<=150);
   await page.locator('#apply').click();await page.reload();await page.locator('#start:not([disabled])').waitFor();
   await page.locator('#calibrate').click();assert.equal(Number(await page.locator('#offset').inputValue()),learned);
   await page.locator('#clicks').click();await page.keyboard.press('Escape');

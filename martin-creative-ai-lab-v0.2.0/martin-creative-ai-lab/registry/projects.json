@@ -71,9 +71,9 @@
       "slug": "tokyo80s",
       "status": "active",
       "maturity": "M4",
-      "phase": "original-pitch-rehearsal-validated",
+      "phase": "take-review-validated",
       "origin": "new_seed_implementation",
-      "next_action": "Compare original/slow backing on physical output and unassisted phrase practice, including timbre/attack feel and loading cancellation; weigh native hardware/tactics, independent readers and real project-record use next.",
+      "next_action": "Observe independent unassisted phrase selection and practice on physical keyboard/touch/audio, including whether head distance and tail causes are understood; compare other portfolio needs before extending diagnostics.",
       "related_projects": [
         "P01",
         "P02",
@@ -86,11 +86,12 @@
         "evidence/tokyo80s/RUN.json",
         "evidence/tokyo80s/SETLIST_RUN.json",
         "evidence/tokyo80s/REHEARSAL_RUN.json",
-        "evidence/tokyo80s/PITCH_RUN.json"
+        "evidence/tokyo80s/PITCH_RUN.json",
+        "evidence/tokyo80s/REVIEW_RUN.json"
       ],
       "working_path": "projects/tokyo80s",
-      "working_version": "0.4.0",
-      "maturity_scope": "Two original browser rhythm stages retain full OGG/PCM/scores, calibration, scoring and bests. P03 0.4.0 integrates four original-pitch offline tempo derivatives, mapped unit-rate playback, loading interruption/stale response isolation and explicit backing exports. Actual logic/browser/full-song, decoded/encoded signal and sampled musical/output checks; scripted input/Codex frame review, no physical listening, independent learning/accessibility or market validation."
+      "working_version": "0.5.0",
+      "maturity_scope": "Two original browser rhythm stages retain charts, media, score/rank/bests, calibration and original-pitch rehearsal. P03 0.5.0 distinguishes received head timing/distance by lane/passage and explicit hold failures, with additive exports and volume-focused keyboard control. Controlled logic, real-audio Chromium and original full-song execution; Codex interface review, no physical listening, independent learning/accessibility or market validation."
     },
     {
       "id": "P04",

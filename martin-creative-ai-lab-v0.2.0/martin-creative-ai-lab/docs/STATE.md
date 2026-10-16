@@ -1,60 +1,65 @@
 # Lab state
 
-**Updated:** 2026-10-15 (America/Sao_Paulo). **Seed:** 0.32.5.
-**Milestone:** P11 Project Rooms 0.8.0 bounded chronological reading.
+**Updated:** 2026-10-16 (America/Sao_Paulo). **Seed:** 0.32.6.
+**Milestone:** P03 Tokyo 80s 0.5.0 completed-take review.
 
-Remote main began at `2e18f506e6c61b489bef740ef533866962b13d77`. Local `work`
-held the prior P04 commit with the identical published tree and untracked scratch
-work, which was preserved. After the failed cloud executor recovered, inspected
-Git state and created a branch from fetched remote main. Default sandbox sockets
-and Git failed; the unchanged room suite reproduced EPERM. Supported network
-permission enabled real SQLite/HTTP/Socket.IO/Chromium checks and authenticated
-Git transport. No proxy bypass or product workaround was used.
+Remote main/HEAD began at `238207487ea2d5436b6d5efe0be5ffb37078fc9d`.
+Inspected branches, local-only history, remotes and untracked work before editing;
+preserved prior branches and scratch. Created a feature branch from that baseline.
+Supported network permission enables authenticated Git and real browser sockets;
+default sandbox EPERM was reproduced without changing product checks.
 
-Compared P03 configurable lane controls, P01/P05 single-slot recovery, existing
-native delivery/practice, independent P04 comprehension and P11 handover reading.
-Selected the observed P11 limit: chronological browsing deliberately stopped at
-300 loaded rows; a live arrival could evict the oldest visible reading anchor.
-Search needs known words; export leaves the live workspace. Increasing the cap
-would postpone the same limit and enlarge the DOM.
+Compared native P01 fair slots (existing writes are already atomic), configurable
+rhythm controls/lane focus, current P05/P06 practice, independent PT/EN reading and
+actual P11 handovers. Selected a demonstrated P03 weakness for players deciding
+what passage/lane to rehearse: signed timing cancels opposite errors; a missed
+hold head and an early release both hide useful timing behind the same lost-hold
+count. More charts, calibration advice or controls do not resolve this feedback.
 
-[Project Rooms](../projects/realtime-integration-lab/README.md#read-an-earlier-discussion-without-losing-your-place)
-now traverses earlier/newer saved pages while retaining at most 300 rows.
-Directional eviction keeps a contiguous window; Return to latest fetches a fresh
-page. Historical, pending or hidden discussion views defer live insertion and
-signal newer records. Decisions/search still receive arrival updates. Own-send
-confirmation resolves outside the window without replacing later typing. Fresh
-saved history also resolves matching uncertain attempts, without a retry insert.
-Delayed requests respect room, participant and reconnect boundaries; failed reads
-retain the window. Focus stays with an editor used during a pending request.
+[Tokyo 80s](../projects/tokyo80s/README.md#review-a-completed-take) now reviews
+whole takes and selected full-run passages by lane. Signed offset appears beside
+absolute distance and early/within-window/late counts. Received heads survive in
+the review after failed tails; carried holds and explicit failure causes remain
+separate from score. Inspection is silent and does not rescore; Rehearse is an
+explicit next action. Additive JSON records review/cause/performance time. DFJK,
+Pulse and pause now work on focused volume; arrows still edit the range. Existing
+Repeat/Save controls precede the longer review on narrow displays.
 
-[Execution](../evidence/realtime-chat/HISTORY_RUN.json) identifies the baseline,
-environment, source hashes and actual checks. The same 650-entry, room-interleaved
-fixture demonstrates the old stop/anchor loss and complete bounded traversal in
-both directions. Real second-client arrivals, draft/search/action preservation,
-explicit return, invalid cursors, failures and delayed responses are exercised.
-Captures contain declared fictional records. Codex review found the delayed-focus
-race and hidden-panel reading risk before release. Managed file navigation remains
-blocked; the existing identical-HTML loopback fallback tests portable reports
-with the static server and network disabled before interactions.
+[Execution](../evidence/tokyo80s/REVIEW_RUN.json) identifies baseline, environment,
+tested sources and boundaries. Baseline same-score examples and twelve action
+traces isolate diagnostic improvement from unchanged legacy score/state behavior.
+New logic and declared controlled-chart browser checks use actual delivered Web
+Audio backing; existing full-song checks retain the original charts. Compare
+heads missed with received heads/failed tails, cancelling errors with absolute
+distance, and explicit passage inspection with a sound-starting action.
 
-No database/export/backup schema or dependency change. The ephemeral exercise,
-P02 evaluator snapshot, historic sources, P04 editions and other product versions
-are retained. P11 remains technical M4 for trusted local collaboration. Independent
-team use, screen readers, other browsers, full-capacity performance and commercial
-readiness are unverified. Reload/reconnect returns to latest; reading position is
-not persisted. North Star remains foundation-only with zero consumers.
+All 33 logic and 19 browser cases pass across broad/focused executions; the
+initial complete local run was 49 pass, two fail, one cancelled. Its inherited
+calibration assumption also fails on the unchanged baseline. Measured deliveries
+show scheduler delay; the revised harness compares actual valid taps within one
+5 ms setting step, and rejects a forced wrong suggestion. The Rain timing case
+passes unchanged in isolated baseline/current runs. A 45-second whole-case budget
+closes the export timeout without changing score/windows. No successful complete
+local 52-case run is claimed; hosted execution is reported separately at closure.
+
+No charts, audio, producer, dependency, best/storage identity or scoring change.
+Private Sites hosting was not redeployed. P03 retains technical M4; neither
+synthetic input nor Codex frame review establishes independent learning, musical
+taste, physical latency, assistive support, other-browser or commercial quality.
+Other products/reference bytes remain retained. North Star stays foundation-only
+with no real destination consumer or integration claim.
 
 Keep the single [continuous-development prompt](prompts/CONTINUOUS_DEVELOPMENT.md)
-unchanged. Portfolio/source inspection exposed the real cap; a fixture above the
-previous 123-entry tests exposed its consequence. Artifact review and explicit
-race checks improved focus/reading behavior. The initial acknowledgement checks
-missed confirmation by fetched history; a failing-before/passing-after lost-response
-regression closed that gap before publication. The first broad run repeated a
-documented file-URL restriction; using the documented loopback mode sooner would
-have saved that failed run. Executor recovery removed the provisional CI-only
-need. Existing guidance already covers these issues; no new rule is justified.
+unchanged. Actual artifacts exposed information loss that earlier passing tests
+had not asked about; baseline comparison and meaningful fixtures served design.
+Read-only review caught misleading pressed/not-pressed wording. Rehearsal scope
+initially duplicated the only phrase in a test plan; a single scope plus a real
+full-run selection check is clearer. The first browser run found stale test copy
+after a wording refinement. Clock observations exposed a separate test-driver
+assumption; a wrong-suggestion negative control verifies the corrected oracle.
+These observations fit existing discovery, review and honest-evidence guidance.
 
-Next: compare fresh opportunities, including actual chronological handover use,
-unassisted native play/learning, physical rhythm controls and independent PT/EN
-comprehension. Controlled browser journeys are not independent human validation.
+Next: compare fresh product opportunities, including independent unassisted
+phrase selection/practice on real hardware, native fair slots/play, chronological
+handover use and literary comprehension. Do not infer a new priority from the
+last implementation or equate technical diagnostics with proven learning.

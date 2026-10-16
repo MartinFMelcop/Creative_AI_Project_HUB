@@ -1,5 +1,6 @@
 // Rehearsal uses performance seconds, so judgment windows and input offset keep
 // their real-time meaning at every playback rate. Source score/media stay intact.
+import { reviewNotes } from './review.js';
 export const RATES = Object.freeze([.75, .9, 1]);
 export function backingFor(track, session) {
   const rate = session.rate;
@@ -42,6 +43,7 @@ export function phraseResults(track, notes) {
     for (const n of group) if (n.state in counts) counts[n.state]++;
     const accuracy = group.length ? 100 * (counts.perfect + .7 * counts.good + .4 * counts.ok) / group.length : null;
     return {...phrase, notes: group.length, counts, accuracy: accuracy === null ? null : Math.round(accuracy * 100) / 100,
-      lostHolds: group.filter(n => n.duration && n.state === 'miss').length};
+      lostHolds: group.filter(n => n.duration && n.state === 'miss').length,
+      review:reviewNotes(group)};
   }).filter(p => p.notes);
 }

@@ -1527,3 +1527,49 @@ Codex review is not independent team/assistive validation. No full-capacity,
 other-browser or production-load claim. Preserve historical sources and P02's
 contract. North Star has no consumer. Retain the complete adaptive prompt:
 existing discovery, artifact review and honest evidence guidance already apply.
+
+
+## ADR-066 — separate head timing from tail success in completed rhythm takes
+
+**Date:** 2026-10-16 (America/Sao_Paulo). **Status:** P03 0.5.0; technical M4 retained.
+
+Compare P01 local fair slots, P03 key configuration/lane focus, native practice,
+independent literary comprehension and actual Project Rooms handovers. P01 already
+writes atomically and warns about its single slot; multiple slots remain useful.
+P03 has an observed feedback defect: opposing lane biases and alternating errors
+produce identical scores/phrase metrics and zero mean; a missed hold head and a
+perfect head followed by early release both show no scored timing/lost hold one.
+Choose useful completed-take diagnosis for players deciding what to rehearse.
+A global calibration recommendation cannot resolve opposing errors. Chart/lane
+simplification changes the musical session; key remapping addresses another need.
+
+Retain scoring and successful-note meanErrorMs. Add received-head observations,
+including failed tails, with signed mean, mean absolute distance, actual judgment
+bins and lane/passage scope. Keep performance milliseconds at every rehearsal
+rate. Record missed-head, early-release, regrab-timeout and forced unheld-ending
+causes at the existing resolution time/order. Unknown historical causes remain
+unknown. Full-run inspection changes no score or sound; an explicit Rehearse
+starts a passage. A single-phrase take needs no duplicate scope option.
+
+Use additive JSON fields and a small pure review module in the existing browser
+product. Preserve chart/audio identities, storage keys and best eligibility.
+Correct the observed volume-focus input guard: DFJK/Pulse/pause remain available,
+arrows edit the slider, and Ctrl/Alt/Meta retain browser shortcuts. Use heads
+hit/missed rather than claiming a player did not physically press a key.
+
+Compare the actual baseline outputs and twelve action traces; test meaningful
+head/tail/tempo/boundary/Pulse/empty cases, real AudioContext browser journeys,
+exports, silent passage selection, focus and original full-song regressions.
+The old calibration assertion also fails on the unchanged baseline: a nominal
+80 ms tap is not its actual browser delivery time. Record actual valid deliveries
+against oscillator schedules, require the received count and compare the suggestion
+within one 5 ms step; retain persistence/cancellation. A scratch-only wrong 90 ms
+suggestion is rejected for observed 145 ms taps. Change no calibration product code.
+The older Rain score mismatch passes unchanged in baseline/current isolation;
+retain its assertions and report the transient. Give the volume/export case a
+45-second whole-case budget, preserving every score/timing check.
+
+Controlled fixtures are declared; synthetic input and Codex artifact review do
+not establish independent learning, enjoyment or physical latency. Retain M4 and
+North Star foundation-only with no destination consumer. Keep the authoritative
+prompt unchanged: existing artifact, environment and evidence guidance suffices.

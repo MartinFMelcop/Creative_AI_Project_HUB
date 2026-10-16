@@ -1,5 +1,6 @@
 import { RhythmRun, adjustedTime, calibrationOffset } from './core.js';
 import { phrases, makeSession, phraseResults, backingFor } from './rehearsal.js';
+import { reviewNotes } from './review.js';
 const $=id=>document.getElementById(id);
 const canvas=$('board'), context=canvas.getContext('2d');
 const pads=[...document.querySelectorAll('[data-lane]')];
@@ -13,6 +14,7 @@ let lastExport;
 let calibrationNodes=[];
 let storeOK=true;
 let session, countNodes=[], previousTake;
+let reviewPassages=[];
 try {
   const remembered=JSON.parse(localStorage.getItem('tokyo80s-settings')||'{}');
   if(Number.isFinite(remembered.offset)&&Math.abs(remembered.offset)<=150) offset=Math.round(remembered.offset/5)*5;
@@ -201,6 +203,39 @@ function updateStats() {
   const left=Math.max(0,run.shieldUntil-adjustedTime(position(),offset));
   $('shield').textContent=left>0&&run.shields?`Pulse: ${run.shields} combo protection(s) · ${left.toFixed(1)}s remaining`:run.aura===100?'Aura full. Choose when to protect your next difficult phrase.':'Build a combo. Protect your next difficult phrase.';
 }
+function timingText(review) {
+  if(!review.receivedHeads)return 'No heads hit. Timing is unavailable.';
+  const signed=review.meanHeadErrorMs;
+  return `Average offset ${signed>0?'+':''}${signed.toFixed(1)} ms · average distance ${review.meanAbsoluteHeadErrorMs.toFixed(1)} ms.`;
+}
+function holdText(holds) {
+  if(!holds.total)return 'No long notes in this passage.';
+  const causes=[['missedHead',holds.missedHead===1?'missed head':'missed heads'],['earlyRelease','released early'],
+    ['regrabTimeout','not re-held after pause'],['unheldAtFinish','unheld when the take ended'],['unknown','with no recorded cause']]
+    .filter(([key])=>holds[key]).map(([key,label])=>`${holds[key]} ${label}`);
+  return `Long notes: ${holds.carried}/${holds.total} carried${causes.length?`; ${causes.join('; ')}`:''}.`;
+}
+function drawReview() {
+  if(!lastExport)return;
+  const passage=reviewPassages.find(p=>p.id===$('review-phrase').value);
+  const review=passage?.review || lastExport.review;
+  $('head-review-summary').textContent=`${review.receivedHeads}/${review.noteCount} heads hit · missed: ${review.missedHeads}. ${timingText(review)}`;
+  $('lane-review').replaceChildren(...review.lanes.map(lane=>{
+    const card=document.createElement('article');card.dataset.reviewLane=lane.lane;
+    const heading=document.createElement('h4');heading.textContent=`${pads[lane.lane].querySelector('span').textContent} · ${pads[lane.lane].querySelector('small').textContent}`;
+    const heads=document.createElement('p');heads.textContent=lane.noteCount?`${lane.receivedHeads}/${lane.noteCount} heads hit · ${lane.missedHeads} missed.`:'No notes in this passage.';
+    card.append(heading,heads);
+    if(lane.noteCount) {
+      const bins=document.createElement('p');bins.textContent=`${lane.early} early · ${lane.withinPerfect} within ±45 ms · ${lane.late} late`;
+      const timing=document.createElement('p');timing.textContent=timingText(lane);card.append(bins,timing);
+      if(lane.holds.total){const holds=document.createElement('p');holds.className='hold-cause';holds.textContent=holdText(lane.holds);card.append(holds);}
+    }
+    return card;
+  }));
+  $('hold-review').textContent=holdText(review.holds);
+  $('review-rehearse').hidden=!passage;
+  $('review-rehearse').textContent=passage?`Rehearse ${passage.label}`:'Rehearse this passage';
+}
 function completeRun() {
   if(!run||mode!=='playing')return;
   frozen=session.duration;
@@ -212,7 +247,7 @@ function completeRun() {
   $('rank').textContent=stats.rank;
   for(const name of ['perfect','good','ok','miss'])$(name).textContent=String(stats.counts[name]);
   $('result-summary').textContent=`${stats.score.toLocaleString()} points · best combo ${stats.maxCombo} · ${stats.strays} off-beat inputs · ${stats.pulses} Pulse use(s).`;
-  $('timing-result').textContent=stats.meanErrorMs===null?'No scored hits yet. Try Practice and tap with the drum.':`Average timing: ${stats.meanErrorMs>0?'+':''}${stats.meanErrorMs.toFixed(1)} ms (${stats.meanErrorMs>15?'late':stats.meanErrorMs< -15?'early':'close to the beat'}). Input offset used: ${offset} ms. Adjust timing between runs if hits consistently feel displaced.`;
+  $('timing-result').textContent=`A long note's head stays in this review even when its tail was lost. Input offset used: ${offset} ms. Off-beat inputs remain separate.`;
   if(rehearsal) {
     const key=`${track.id}/${selected}/${session.phrase.id}/${session.rate}/${offset}`;
     const comparison=previousTake?.key===key?` Previous identical setup: ${previousTake.accuracy.toFixed(1)}%. Change: ${(stats.accuracy-previousTake.accuracy).toFixed(1)} percentage points.`:'';
@@ -229,12 +264,17 @@ function completeRun() {
     $('best').textContent=storeOK?`${newBest?'New best. ':''}${selected==='practice'?'Practice':'Arcade'} best in this browser: ${best.toLocaleString()}.`:'Browser storage is unavailable; this run still counts and can be exported.';
   }
   const breakdown=phraseResults(track,run.notes);
-  lastExport={game:'Tokyo 80s',version:'0.4.0',track:track.id,chart:selected,offsetMs:offset,...stats,
+  lastExport={game:'Tokyo 80s',version:'0.5.0',track:track.id,chart:selected,offsetMs:offset,...stats,review:reviewNotes(run.notes),
     mode:session.mode,playbackRate:session.rate,backing:session.backing,
     ...(rehearsal?{phrase:session.phrase,cueStart:session.cueStart,audioEnd:session.audioEnd}:{}),
     timeUnit:'performance-seconds',phrases:breakdown,
-    notes:run.notes.map(({id,time,lane,state,error,duration,sourceTime,sourceDuration,protected:shield})=>({id,time,lane,state,duration:duration||0,
-      ...(rehearsal?{sourceTime,sourceDuration}:{}),errorMs:error===null?null:Math.round(error*10000)/10,comboProtected:shield}))};
+    notes:run.notes.map(({id,time,lane,state,error,duration,sourceTime,sourceDuration,protected:shield,failureReason,failureTime})=>({id,time,lane,state,duration:duration||0,
+      ...(rehearsal?{sourceTime,sourceDuration}:{}),errorMs:error===null?null:Math.round(error*10000)/10,comboProtected:shield,failureReason,failureTime}))};
+  reviewPassages=breakdown;
+  $('review-phrase').replaceChildren(...[{id:'take',label:rehearsal?`${session.phrase.label} · completed take`:'Whole completed take'},...(!rehearsal?breakdown:[])].map(p=>{
+    const option=document.createElement('option');option.value=p.id;option.textContent=p.label;return option;
+  }));
+  $('review-phrase').disabled=rehearsal;drawReview();
   $('phrase-results').replaceChildren(...breakdown.map(p=>{
     const row=document.createElement('div');row.className='phrase-row';
     const info=document.createElement('p');info.textContent=`${p.label}\n${p.accuracy}% note accuracy · ${p.counts.miss}/${p.notes} missed · ${p.lostHolds} lost holds`;
@@ -264,12 +304,14 @@ pads.forEach((pad,lane)=>{
 });
 const keys={KeyD:0,KeyF:1,KeyJ:2,KeyK:3,ArrowLeft:0,ArrowDown:1,ArrowUp:2,ArrowRight:3};
 document.addEventListener('keydown',e=>{
-  if(/INPUT|SELECT|TEXTAREA/.test(e.target.tagName))return;
+  const volumeFocus=e.target===$('volume');
+  if(e.ctrlKey||e.metaKey||e.altKey)return;
+  if(/INPUT|SELECT|TEXTAREA/.test(e.target.tagName)&&!volumeFocus)return;
   if($('calibration').open) {
     if(e.code==='KeyF'&&!e.repeat){e.preventDefault();tapCalibration();}return;
   }
   if(e.repeat)return;
-  if(e.code in keys){e.preventDefault();press(keys[e.code],`${e.code}:${keys[e.code]}`);}
+  if(e.code in keys&&!(volumeFocus&&e.code.startsWith('Arrow'))){e.preventDefault();press(keys[e.code],`${e.code}:${keys[e.code]}`);}
   if(e.code==='Space'&&mode==='playing'){e.preventDefault();pulse();}
   if(['Escape','KeyP'].includes(e.code)&&['playing','paused'].includes(mode)){e.preventDefault();togglePause();}
 });
@@ -298,6 +340,11 @@ $('full-run').addEventListener('click',()=>{
 });
 $('next-stage').addEventListener('click',()=>{const next=tracks[(tracks.indexOf(track)+1)%tracks.length];$('song').value=next.id;chooseTrack(next.id);startRun();});
 $('volume').addEventListener('input',()=>{if(gain)gain.gain.setTargetAtTime(Number($('volume').value)/100,audioContext.currentTime,.02);});
+$('review-phrase').addEventListener('change',drawReview);
+$('review-rehearse').addEventListener('click',()=>{
+  const passage=reviewPassages.find(p=>p.id===$('review-phrase').value);if(!passage)return;
+  $('phrase').value=passage.id;rehearsalInfo();startRun();
+});
 $('export').addEventListener('click',()=>{
   if(!lastExport)return;
   const url=URL.createObjectURL(new Blob([JSON.stringify(lastExport,null,2)+'\n'],{type:'application/json'}));

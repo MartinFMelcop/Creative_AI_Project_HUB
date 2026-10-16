@@ -1,12 +1,12 @@
 {
   "name": "tokyo80s-midnight-signal",
-  "version": "0.4.0",
+  "version": "0.5.0",
   "private": true,
   "type": "module",
-  "description": "Two original rhythm stages with targeted musical rehearsal and scored sustains",
+  "description": "Two original rhythm stages with phrase rehearsal and head/tail take review",
   "scripts": {
-    "test": "node --test tests/core.test.mjs tests/holds.test.mjs tests/rehearsal.test.mjs",
-    "test:browser": "node --test tests/browser.test.mjs tests/setlist.test.mjs tests/rehearsal-browser.test.mjs",
+    "test": "node --test tests/core.test.mjs tests/holds.test.mjs tests/rehearsal.test.mjs tests/review.test.mjs",
+    "test:browser": "node --test tests/browser.test.mjs tests/setlist.test.mjs tests/rehearsal-browser.test.mjs tests/review-browser.test.mjs",
     "serve": "node server.mjs"
   }
 }

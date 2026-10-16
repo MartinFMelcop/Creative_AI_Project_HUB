@@ -1,0 +1,611 @@
+{
+  "schema_version": 1,
+  "project_id": "P03",
+  "version": "0.5.0",
+  "executed_at": "2026-10-16 UTC",
+  "baseline_commit": "238207487ea2d5436b6d5efe0be5ffb37078fc9d",
+  "audience_and_objective": "Players choosing a passage/lane to rehearse: distinguish opposing head timing errors and failed-tail causes without changing score or recommending automatic calibration.",
+  "environment": {
+    "platform": "Debian 13 Linux x86_64",
+    "node": "24.19.0",
+    "python": "3.12.14",
+    "browser": "Chromium 154.0.8037.57",
+    "actor": "Codex implementing/review agents; synthetic browser input, no independent human participant",
+    "audio": "Actual delivered OGGs decoded and played by Web Audio; no physical listening",
+    "permissions": "Default sandbox Chromium/socket EPERM reproduced; supported additional network permission, no proxy bypass"
+  },
+  "opportunity_comparison": {
+    "selected": "Observed P03 signed-mean/hold-feedback collapse, plus real volume-focus key suppression.",
+    "alternatives": [
+      "P01 multiple local fair slots: existing writes are atomic and replacement is disclosed; useful separate workflow milestone.",
+      "P03 configurable keys or lane-focused charts: different input/music scope; not required to resolve the actual feedback loss.",
+      "P05/P06 unassisted native learning, independent PT/EN comprehension and P11 handover use: important evidence gaps, not proven by additional scripted cases."
+    ]
+  },
+  "verified": {
+    "baseline_logic": {
+      "method": "Baseline modules imported from isolated source strings. Actual baseline RhythmRun and phraseResults outputs serialized byte-for-byte; head input patterns deliberately differ. Current telemetry compared with baseline summary and all legacy note fields after each action.",
+      "source_sha256": {
+        "core": "153e9427a6948b727f797c5766cdcba4559f9821fffcaa7c79516c75bc766184",
+        "rehearsal": "f3e5f662b4c3b126647cb4c4d42db10b6e8c002e670e7e514f954b7d83a1a29d"
+      },
+      "identical_timing_summary_and_phrase_metrics": true,
+      "common_timing_result": {
+        "score": 2800,
+        "accuracy": 70,
+        "meanErrorMs": 0,
+        "rank": "B",
+        "phraseLostHolds": 0
+      },
+      "timing_inputs": {
+        "laneBias": [
+          "lane0:-80ms",
+          "lane3:80ms",
+          "lane0:-80ms",
+          "lane3:80ms"
+        ],
+        "alternating": [
+          "lane0:-80ms",
+          "lane3:80ms",
+          "lane0:80ms",
+          "lane3:-80ms"
+        ]
+      },
+      "hold_cases": {
+        "neverHitHead": {
+          "score": 0,
+          "misses": 1,
+          "meanErrorMs": null,
+          "lostHolds": 1
+        },
+        "releasedTailEarly": {
+          "score": 0,
+          "misses": 1,
+          "meanErrorMs": null,
+          "lostHolds": 1
+        }
+      }
+    },
+    "legacy_behavior_comparison": {
+      "traces": 12,
+      "all_legacy_fields_and_summaries_equal_after_every_action": true,
+      "cases": [
+        {
+          "name": "carried",
+          "actions": [
+            "hit(0,1)",
+            "advance(2)",
+            "finish(3)"
+          ],
+          "finalScore": 1000,
+          "failures": []
+        },
+        {
+          "name": "missed-head",
+          "actions": [
+            "finish(3)"
+          ],
+          "finalScore": 0,
+          "failures": [
+            "id0:missed-head@1.145s; head not received"
+          ]
+        },
+        {
+          "name": "early-release",
+          "actions": [
+            "hit(0,1.08)",
+            "release(0,1.4)",
+            "finish(3)"
+          ],
+          "finalScore": 0,
+          "failures": [
+            "id0:early-release@1.4s; head error 0.08000000000000007s"
+          ]
+        },
+        {
+          "name": "release-grace-boundary",
+          "actions": [
+            "hit(0,1)",
+            "release(0,1.905)",
+            "finish(3)"
+          ],
+          "finalScore": 1000,
+          "failures": []
+        },
+        {
+          "name": "paused-preheld",
+          "actions": [
+            "hit(0,1)",
+            "pause(1.2)",
+            "resume(1.2,[0])",
+            "advance(2)",
+            "finish(3)"
+          ],
+          "finalScore": 1000,
+          "failures": []
+        },
+        {
+          "name": "regrab-boundary",
+          "actions": [
+            "hit(0,1)",
+            "pause(1.2)",
+            "resume(1.2)",
+            "hit(0,1.4)",
+            "advance(2)",
+            "finish(3)"
+          ],
+          "finalScore": 1000,
+          "failures": []
+        },
+        {
+          "name": "regrab-timeout",
+          "actions": [
+            "hit(0,1)",
+            "pause(1.2)",
+            "resume(1.2)",
+            "advance(1.40001)",
+            "finish(3)"
+          ],
+          "finalScore": 0,
+          "failures": [
+            "id0:regrab-timeout@1.4s; head error 0s"
+          ]
+        },
+        {
+          "name": "unheld-finish-inside-grace",
+          "actions": [
+            "hit(0,1)",
+            "pause(1.2)",
+            "resume(1.2)",
+            "finish(1.3)"
+          ],
+          "finalScore": 0,
+          "failures": [
+            "id0:unheld-at-finish@1.3s; head error 0s"
+          ]
+        },
+        {
+          "name": "unheld-finish-at-grace",
+          "actions": [
+            "hit(0,1)",
+            "pause(1.2)",
+            "resume(1.2)",
+            "finish(1.4)"
+          ],
+          "finalScore": 0,
+          "failures": [
+            "id0:unheld-at-finish@1.4s; head error 0s"
+          ]
+        },
+        {
+          "name": "finish-after-grace",
+          "actions": [
+            "hit(0,1)",
+            "pause(1.2)",
+            "resume(1.2)",
+            "finish(1.40001)"
+          ],
+          "finalScore": 0,
+          "failures": [
+            "id0:regrab-timeout@1.4s; head error 0s"
+          ]
+        },
+        {
+          "name": "paused-finish",
+          "actions": [
+            "hit(0,1)",
+            "pause(1.2)",
+            "finish(3)"
+          ],
+          "finalScore": 0,
+          "failures": [
+            "id0:unheld-at-finish@3s; head error 0s"
+          ]
+        },
+        {
+          "name": "mixed-delayed-events",
+          "actions": [
+            "hit(0,1)",
+            "advance(2.6)",
+            "finish(4)"
+          ],
+          "finalScore": 1000,
+          "failures": [
+            "id1:missed-head@1.645s; head not received",
+            "id2:missed-head@2.445s; head not received"
+          ]
+        }
+      ]
+    },
+    "baseline_browser": {
+      "command": "RHYTHM_REVIEW_BASELINE_ROOT=<isolated baseline index.html/style.css/app.js/core.js/rehearsal.js> CHROMIUM_PATH=/usr/bin/chromium node --test projects/tokyo80s/tests/review-browser.test.mjs",
+      "passed": 3,
+      "failed": 0,
+      "scope": "Original baseline HTML/CSS/modules; explicitly controlled notes over unchanged real backing. Two .75 phrase takes, full 69s/two-passage run and actual browser keyboard focused on volume.",
+      "mixed_take_timing": "Average timing: +11.5 ms (close to the beat). Input offset used: 0 ms. Adjust timing between runs if hits consistently feel displaced.",
+      "near_time_take_timing": "Average timing: +7.7 ms (close to the beat). Input offset used: 0 ms. Adjust timing between runs if hits consistently feel displaced.",
+      "both_lost_hold_counts": [
+        1,
+        1
+      ],
+      "volume": {
+        "focusedVolume": {
+          "target": "INPUT",
+          "type": "range",
+          "laneDown": false,
+          "pauseKeyResult": "playing"
+        },
+        "bodyFocused": {
+          "target": "BODY",
+          "laneDown": true,
+          "pauseKeyResult": "paused"
+        },
+        "method": "Actual unchanged Chromium app/assets fulfilled from disk by Playwright route, real AudioContext startup; actual page.keyboard P and bubbled mapped lane input from focused range versus BODY."
+      }
+    },
+    "logic": {
+      "command": "node --test tests/core.test.mjs tests/holds.test.mjs tests/rehearsal.test.mjs tests/review.test.mjs",
+      "passed": 33,
+      "failed": 0,
+      "scope": "12 original core, seven hold, five rehearsal and nine new review cases; no test window/boundary relaxation.",
+      "package_script": "npm test also executes the same 33 cases successfully."
+    },
+    "audio": {
+      "commands": [
+        "python3 tools/check_audio.py",
+        "python3 tools/check_rehearsal_audio.py --signal"
+      ],
+      "result": "Both original PCM/OGG/chart contracts pass; four tempo assets decode with original-source/duration identities and encoded tone/transient probes. Media are unchanged, not regenerated."
+    },
+    "preservation": {
+      "byte_equal_baseline_paths": {
+        ".openai/hosting.json": "ae53d4f869bb803cfe72164228bf635c3db3eea90ad70bd62dca16ffac905965",
+        "dist/assets/midnight-signal.ogg": "6feda179da6a5b454cd697a58527c83bf754f144069b975bfe2cb2f07a0bc166",
+        "dist/assets/rain-circuit.ogg": "cebdec6cee49e56b8f890a912f96387ed5680410965aeb79973fff1eda4d8c49",
+        "dist/assets/rehearsal/midnight-signal-75.ogg": "cad22e01268a0a235b690978caa32a19fc5312d82fa2ce085eabb3845db07e5b",
+        "dist/assets/rehearsal/midnight-signal-90.ogg": "2b96df4e129db766774b3303633b5126df7ddb6eaf166a65410142f425b3566f",
+        "dist/assets/rehearsal/rain-circuit-75.ogg": "9e1633f3e1b41e3142a02181add2d66a3c2aeb8e760f2d475994de44283d5f32",
+        "dist/assets/rehearsal/rain-circuit-90.ogg": "6b2bf656d4ea4ca8bf946b8cc4d7345ba5709db18cd7ebe5b209d1bc56fced90",
+        "dist/rain-circuit.json": "c19f7d819ef3dda530b33b06199cf7c374e243c253112d7104943d73348d6771",
+        "dist/setlist.json": "1171b532ab1d53d66413fa4a1710f12bdb5b590862f7c45a8f9f629ec90a39e4",
+        "dist/track.json": "f73646df2b7d6601f1f654d855aaecd114b7172f2ef5c55852dfd898ec0b59b4",
+        "media/midnight-signal.wav": "b49e3df218287dd39eb3e3260f6f9ac62f776e29a0c22f639d77128e87022eab",
+        "media/provenance.json": "9a63d986d9909bb13d31eca84bbc96630f0c02bfc00d48674d501d1218000935",
+        "media/rain-circuit.wav": "1256e5d5de17570c19d746175fa261571c4b1848b0c8a519b48737233466f190",
+        "media/rain-provenance.json": "5d1775e99319a8cb49aea9d1ab1b1376fa708931e0ad81cb89f0dce057b21893",
+        "media/rehearsal-provenance.json": "97951e63204b447dffc441c0f25ff2cbdee9e88f76d70bbb54e3d12baa2af8db",
+        "tools/render_rain.py": "eeb409f750de1ef0cba4d9ee710f66cd689d9d0055624a33ec1c5930cb64b7e7",
+        "tools/render_rehearsal.py": "a4f90b6fea852a4fe042ca57c9dcc5d42e9d3e791470548fb16a12248fba88b9",
+        "tools/render_track.py": "d84eb89d5cf3f46ff063ee631ca16864800a8a23935fe767a97537315b2b1875"
+      },
+      "score": "No scoring, rank, judgment-window, release/regrab deadline or legacy summary definition changed. Review and failure metadata are additive.",
+      "other_projects": "Only P03 registry row changed; no other project implementation, transfer, North Star or historical reference edited."
+    },
+    "source_sha256": {
+      "dist/app.js": "492f24a5fd5b13100dc224488f546df00f07ac91feed51205b5422737f1c6e18",
+      "dist/core.js": "ef9d3b181b15c1cd2d2ee5df1634c7e02a56b37995a41ab160bca8f6aba96cd4",
+      "dist/rehearsal.js": "2321ac9be8a8fb79b9f18a912d06c64615ef21bf3f2085681c3fc0586951be67",
+      "dist/review.js": "7fa388d7e1580797876265c5bfa758e87e90383e4e598b1e6396688cd772f0f8",
+      "tests/browser.test.mjs": "9a329ddd27f21f58742b701b740f6909046e0d8d325b67f8e4dd26d254bfa236",
+      "tests/core.test.mjs": "df9b2d2db0413fcaa3df0e5a7b564dc69e22d9d3ab3b027095f7e4921d0d2961",
+      "tests/holds.test.mjs": "4a7a294b3252eb2f239ba6ebd57f4b47a0e088044a9f6c7478d783a90dfb9fca",
+      "tests/rehearsal-browser.test.mjs": "43b90bf056b16bf509b2d72d8a4c43b395375fbdba328338fed38590227e6b88",
+      "tests/rehearsal.test.mjs": "8325f78e9b111e702c82b3e29b5c6b35ce44797537e54bb1db6b96c098070811",
+      "tests/review-browser.test.mjs": "7f137113473e413b7c6cca200ddf8a1acbf8fee7adbc5d7babbe34ab1bda3f69",
+      "tests/review.test.mjs": "cb0ea7837deaf824178ac3890400d4b6cce2eb5f95f014324390103a66e068a2",
+      "tests/setlist.test.mjs": "340ce957950b98299da412b22c015db43eb2742ae1327ff21b2ce1af83b4632c",
+      "dist/index.html": "caa1f811403462d967b224e03ae831e530c1d63b075b37797370e7be50c9bad2",
+      "dist/style.css": "5f706f7de7f1f7642cf8a1cefb752866248558401931607adf1ff8ce2f037521",
+      "package.json": "c21fb366923229b931fc2a32213d292bde80fee76485dbf71ad47737a5e73a2c"
+    },
+    "current_browser": {
+      "command": "CHROMIUM_PATH=/usr/bin/chromium RHYTHM_SCREENSHOT_DIR=<scratch> node --test projects/tokyo80s/tests/review-browser.test.mjs",
+      "passed": 3,
+      "failed": 0,
+      "cancelled": 0,
+      "scope": "Declared controlled charts over unchanged delivered real audio; no fake clock. Original unmodified charts are exercised by the existing full-song cases separately.",
+      "takes": [
+        {
+          "input": "cancelling head errors and missed hold head",
+          "review": {
+            "noteCount": 7,
+            "receivedHeads": 6,
+            "missedHeads": 1,
+            "meanHeadErrorMs": 9.6,
+            "meanAbsoluteHeadErrorMs": 59.5,
+            "early": 2,
+            "withinPerfect": 2,
+            "late": 2,
+            "holds": {
+              "total": 3,
+              "carried": 2,
+              "missedHead": 1,
+              "earlyRelease": 0,
+              "regrabTimeout": 0,
+              "unheldAtFinish": 0,
+              "unknown": 0
+            }
+          },
+          "firstTwoLanes": [
+            {
+              "lane": 0,
+              "meanHeadErrorMs": 11.8,
+              "meanAbsoluteHeadErrorMs": 82,
+              "early": 1,
+              "withinPerfect": 0,
+              "late": 1
+            },
+            {
+              "lane": 1,
+              "meanHeadErrorMs": 8.2,
+              "meanAbsoluteHeadErrorMs": 87.8,
+              "early": 1,
+              "withinPerfect": 0,
+              "late": 1
+            }
+          ]
+        },
+        {
+          "input": "near-time heads and deliberate early release",
+          "review": {
+            "noteCount": 7,
+            "receivedHeads": 7,
+            "missedHeads": 0,
+            "meanHeadErrorMs": 18.2,
+            "meanAbsoluteHeadErrorMs": 18.2,
+            "early": 0,
+            "withinPerfect": 7,
+            "late": 0,
+            "holds": {
+              "total": 3,
+              "carried": 2,
+              "missedHead": 0,
+              "earlyRelease": 1,
+              "regrabTimeout": 0,
+              "unheldAtFinish": 0,
+              "unknown": 0
+            }
+          },
+          "firstTwoLanes": [
+            {
+              "lane": 0,
+              "meanHeadErrorMs": 16.2,
+              "meanAbsoluteHeadErrorMs": 16.2,
+              "early": 0,
+              "withinPerfect": 2,
+              "late": 0
+            },
+            {
+              "lane": 1,
+              "meanHeadErrorMs": 18.4,
+              "meanAbsoluteHeadErrorMs": 18.4,
+              "early": 0,
+              "withinPerfect": 2,
+              "late": 0
+            }
+          ]
+        }
+      ],
+      "full_run": {
+        "actual_backing_seconds": 69,
+        "source_start_args": [
+          1.0120181405895692,
+          0,
+          69
+        ],
+        "controlled_notes": 7,
+        "passages": 2,
+        "verified": "Keyboard inspection both scopes retains score/export, starts no source; explicit selected Rehearse starts correct passage backing offset 9s."
+      },
+      "focused_volume": {
+        "input": "Actual Playwright keyboard on the focused native range, not physical hardware",
+        "score": 15100,
+        "initialVolume": 70,
+        "heads": 17,
+        "pulses": 1,
+        "regrabTimeout": 1,
+        "verified": "Native ArrowRight changes range by 1 without lane score; DFJK, Space, P/Escape, frozen pause and missed regrab pass."
+      },
+      "layout": "Desktop 1280x900 and narrow 390x844; no horizontal overflow; actual section captures inspected by Codex."
+    },
+    "execution_failures_and_followup": {
+      "initial_complete_command": "CHROMIUM_PATH=/usr/bin/chromium RHYTHM_SCREENSHOT_DIR=<scratch> node --test projects/tokyo80s/tests/*.test.mjs",
+      "initial_complete_result": {
+        "tests": 52,
+        "passed": 49,
+        "failed": 2,
+        "cancelled": 1
+      },
+      "calibration": {
+        "old_assertion": "Nominal +80ms input was assumed to produce 75–110ms suggestion. Current broad learned 115ms; unchanged isolated baseline failed 135ms.",
+        "measured_baseline": {
+          "scheduledClicks": 12,
+          "taps": [
+            {
+              "index": 2,
+              "scheduled": 1.8,
+              "delivered": 1.9301587301587302
+            },
+            {
+              "index": 3,
+              "scheduled": 2.3,
+              "delivered": 2.380045351473923
+            },
+            {
+              "index": 4,
+              "scheduled": 2.8,
+              "delivered": 2.8821768707482995
+            },
+            {
+              "index": 5,
+              "scheduled": 3.3,
+              "delivered": 3.3814058956916098
+            },
+            {
+              "index": 6,
+              "scheduled": 3.8,
+              "delivered": 3.912562358276644
+            },
+            {
+              "index": 7,
+              "scheduled": 4.3,
+              "delivered": 4.391473922902494
+            },
+            {
+              "index": 8,
+              "scheduled": 4.8,
+              "delivered": 4.881995464852608
+            },
+            {
+              "index": 9,
+              "scheduled": 5.3,
+              "delivered": 5.392834467120181
+            },
+            {
+              "index": 10,
+              "scheduled": 5.8,
+              "delivered": 5.9123809523809525
+            },
+            {
+              "index": 11,
+              "scheduled": 6.3,
+              "delivered": 6.382585034013606
+            }
+          ],
+          "status": "Suggested offset: 85 ms from 10 taps. Apply it, or adjust manually.",
+          "learned": 85,
+          "observedMedianMs": 87.0294784580503,
+          "nominalTargetMs": 80,
+          "observedErrorsMs": [
+            80.045351473923,
+            81.40589569160994,
+            81.995464852608,
+            82.1768707482997,
+            82.58503401360606,
+            91.47392290249456,
+            92.8344671201815,
+            112.38095238095269,
+            112.56235827664396,
+            130.15873015873015
+          ],
+          "baseline": true
+        },
+        "measured_current": {
+          "scheduledClicks": 12,
+          "taps": [
+            {
+              "index": 2,
+              "scheduled": 1.8,
+              "delivered": 1.9127437641723355
+            },
+            {
+              "index": 3,
+              "scheduled": 2.3,
+              "delivered": 2.440997732426304
+            },
+            {
+              "index": 4,
+              "scheduled": 2.8,
+              "delivered": 2.8908843537414968
+            },
+            {
+              "index": 5,
+              "scheduled": 3.3,
+              "delivered": 3.5816780045351475
+            },
+            {
+              "index": 6,
+              "scheduled": 3.8,
+              "delivered": 3.912562358276644
+            },
+            {
+              "index": 7,
+              "scheduled": 4.3,
+              "delivered": 4.400181405895691
+            },
+            {
+              "index": 8,
+              "scheduled": 4.8,
+              "delivered": 4.881995464852608
+            },
+            {
+              "index": 9,
+              "scheduled": 5.3,
+              "delivered": 5.430566893424036
+            },
+            {
+              "index": 10,
+              "scheduled": 5.8,
+              "delivered": 5.921088435374149
+            },
+            {
+              "index": 11,
+              "scheduled": 6.3,
+              "delivered": 6.4406349206349205
+            }
+          ],
+          "status": "Suggested offset: 115 ms from 9 taps. Apply it, or adjust manually.",
+          "learned": 115,
+          "observedMedianMs": 116.91609977324246,
+          "nominalTargetMs": 80,
+          "observedErrorsMs": [
+            81.995464852608,
+            90.88435374149695,
+            100.18140589569136,
+            112.56235827664396,
+            112.74376417233545,
+            121.08843537414948,
+            130.56689342403604,
+            140.63492063492066,
+            140.99773242630408,
+            281.6780045351477
+          ],
+          "baseline": false,
+          "observedMedianDefinition": "Median of all ten driver deliveries, not the nine samples accepted by the product; one delivery crossed into another beat."
+        },
+        "change": "Observe delivered valid taps against actual oscillator times, skip overdue fixture input before another beat, require at least six and exact received count, compare the quantized suggestion within one 5ms step, then retain persistence/close checks. No calibration product code or game timing window changed.",
+        "positive_control": "Revised single integration case passes both current and unchanged baseline.",
+        "negative_control": "Scratch-only app response forced 90ms; nominal 130ms fixture observes expected 145ms. Maintained assertion rejects 90ms (expected nonzero exit)."
+      },
+      "setlist": "Old first-case 700 != 1000 was not reproduced in isolated unchanged baseline or current (each 1/1 passes). No assertion/window/source change; it remains a timing-sensitive synthetic input check.",
+      "volume_timeout": "25s whole-case deadline expired waiting for export after results, without a prior keyboard assertion failure. 45s case budget retains all score/timing checks. Focused rerun and final three-case file pass.",
+      "coverage": "33 logic and 19 browser cases passed across broad/focused executions; no claim of one successful complete local 52-case run. Full hosted result is checked separately at closure."
+    },
+    "repository_gates": {
+      "commands": [
+        "python3 tools/validate_repo.py",
+        "python3 tools/test_validate_repo.py",
+        "python3 tools/reference_library.py check",
+        "python3 tools/test_reference_library.py",
+        "python3 tools/test_check_manifest.py",
+        "python3 tools/check_manifest.py"
+      ],
+      "results": "PASS: 11 projects, 15 transfers, 9 assets, 2 legacy sources and 481 local file links; 13 validator, 30 reference and 11 manifest regression tests; 1141 maintained files covered exactly once with matching SHA-256."
+    },
+    "frames_sha256": {
+      "review-baseline.png": "e9c9285d4f2bbf9e40408a4145e4fcc7665106eda939e2c87901bc7eeefdb23a",
+      "review-desktop.png": "93ddfad123797c24d888a490a5025e2c4773f6b9ab2a26bf36c0b637ee36094c",
+      "review-narrow.png": "d70ec44eb0d6e39ac6836501d2f77954f537cc85e4197cfd5d76f349884f6249"
+    }
+  },
+  "reasoned_assessment": "Codex reviewed actual old/current, full-passage and narrow frames. Signed offset beside absolute distance exposes cancellation; instrument/key labels, explicit tail causes and silent passage selection support a concrete next rehearsal choice. Repeat/Save remain before the longer cards. This is an interface judgment, not demonstrated learning; music/charts and their creative identity are unchanged.",
+  "resolved_findings": [
+    "Use heads hit/missed rather than asserting a physical key was never pressed.",
+    "A rehearsal has one scope; full-run passage inspection receives its own actual full-duration browser check.",
+    "Preserve original baseline HTML/CSS as well as modules when comparing the prior interface.",
+    "The inherited calibration harness assumed delivery time. Actual clock observations and a wrong-suggestion negative control replace that assumption without changing game windows.",
+    "A whole-case export timeout needs a realistic wall-clock budget; score/timing assertions remain intact."
+  ],
+  "unverified": [
+    "Physical keyboard/touch/audio and device latency",
+    "Independent unassisted comprehension, learning, enjoyment and accessibility",
+    "Other browsers/platforms, broad musical quality, adoption or commercial readiness"
+  ],
+  "portfolio": "P03 remains technical M4. North Star remains foundation_only, with no destination consumer or integration promotion. Private Sites hosting is unchanged and was not redeployed.",
+  "prompt_review": {
+    "changed": false,
+    "sha256": "cfe891f209ec94b63cfb674adb5300e6d253acf61fcb2576352235e72e45a1f0",
+    "reason": "Actual source/artifact comparison, environment reproduction and existing evidence guidance served this milestone; no new general rule justified."
+  },
+  "publication": "Normal non-force main publication authorized; final actual commit/remote/CI identities are reported at closure, without self-reference."
+}

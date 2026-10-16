@@ -9,7 +9,8 @@ export class RhythmRun {
       if (!Number.isFinite(n.time) || n.time < 0 || !Number.isInteger(n.lane) || n.lane < 0 || n.lane > 3 || ids.has(n.id)) throw new TypeError('Invalid chart note.');
       ids.add(n.id);
       if(n.duration!==undefined && (!Number.isFinite(n.duration)||n.duration<.2||n.duration>4)) throw new TypeError('Invalid sustain duration.');
-      return { ...n, state: 'pending', error: null, protected: false, engaged:false };
+      return { ...n, state: 'pending', error: null, protected: false, engaged:false,
+        failureReason:null, failureTime:null };
     }).sort((a,b) => a.time-b.time || a.lane-b.lane);
     for(let lane=0;lane<4;lane++) {
       const notes=this.notes.filter(n=>n.lane===lane);
@@ -33,18 +34,20 @@ export class RhythmRun {
     const misses = [];
     // Resolve due events in song order, including tails, independently of frame gaps.
     const due=this.notes.flatMap(n=>{
-      if(n.state==='pending' && this.lastTime>n.time+WINDOWS.ok+EPS) return [{n,deadline:n.time+WINDOWS.ok,success:false}];
+      if(n.state==='pending' && this.lastTime>n.time+WINDOWS.ok+EPS) return [{n,deadline:n.time+WINDOWS.ok,success:false,reason:'missed-head'}];
       if(n.state==='holding' && n.engaged && this.lastTime>=n.time+n.duration-EPS) return [{n,deadline:n.time+n.duration,success:true}];
-      if(n.state==='holding' && !n.engaged && this.lastTime>n.regrabUntil+EPS) return [{n,deadline:n.regrabUntil,success:false}];
+      if(n.state==='holding' && !n.engaged && this.lastTime>n.regrabUntil+EPS) return [{n,deadline:n.regrabUntil,success:false,
+        reason:n.unheldAtFinish?'unheld-at-finish':'regrab-timeout'}];
       return [];
     }).sort((a,b)=>a.deadline-b.deadline||a.n.id-b.n.id);
     for(const event of due) {
       if(event.success) this.award(event.n,event.n.startJudgment);
-      else {this.fail(event.n,event.deadline);misses.push(event.n);}
+      else {this.fail(event.n,event.deadline,event.reason);misses.push(event.n);}
     }
     return misses;
   }
-  fail(n,deadline) {
+  fail(n,deadline,reason) {
+    n.failureReason=reason;n.failureTime=deadline;
     n.state='miss';n.engaged=false;
     if(this.shields>0&&deadline<=this.shieldUntil+EPS){n.protected=true;this.shields--;}else this.combo=0;
     this.aura=Math.max(0,this.aura-16);
@@ -83,7 +86,7 @@ export class RhythmRun {
     const n=this.notes.find(n=>n.state==='holding'&&n.engaged&&n.lane===lane);
     if(!n)return null;
     if(time>=n.time+n.duration-WINDOWS.good-EPS)this.award(n,n.startJudgment);
-    else this.fail(n,time);
+    else this.fail(n,time,'early-release');
     return n;
   }
   pause(time) {
@@ -109,7 +112,12 @@ export class RhythmRun {
   finish(time) {
     if (!Number.isFinite(time)) throw new TypeError('Time must be finite.');
     if(this.finished)return this.summary();
-    for(const n of this.notes)if(n.state==='holding'&&!n.engaged)n.regrabUntil=Math.min(n.regrabUntil,time);
+    for(const n of this.notes)if(n.state==='holding'&&!n.engaged) {
+      // Preserve the existing resolution order/deadline; identify an abandoned
+      // finish separately from a re-hold window that already elapsed.
+      n.unheldAtFinish=n.regrabUntil>=time-EPS;
+      n.regrabUntil=Math.min(n.regrabUntil,time);
+    }
     this.advance(Math.max(time+1,...this.notes.map(n=>n.time+(n.duration||0)+WINDOWS.ok+1)));
     this.finished=true;
     return this.summary();

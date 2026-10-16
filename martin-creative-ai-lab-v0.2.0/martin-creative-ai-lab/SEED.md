@@ -1,6 +1,6 @@
 # SEED — Martin Creative AI Lab
 
-**Version:** 0.32.5
+**Version:** 0.32.6
 **Data-base:** 10 de outubro de 2026  
 **Autor e responsável pelo portfólio:** Martin Melcop Neto  
 **Working language:** English for new documentation, plans, code comments, UI, and reports. Preserve original creative titles and historical source languages.
@@ -70,14 +70,14 @@ Se apenas este arquivo estiver disponível, ele é suficiente para iniciar a Fas
 |---|---|
 | Repository | MartinFMelcop/Creative_AI_Project_HUB; actual Git root `/workspace/Creative_AI_Project_HUB`; wrapper retained |
 | Preserved sources | Old ZIP: 175 Rave / 3 WebSocket texts unchanged. New Rave library: 589 readable / 140 excluded from 729; ten main and eight OVA PDFs (2,407 pages) plus derived text; ZIP/policy unavailable |
-| Current milestone | P11 Project Rooms 0.8.0 bounded chronological reading |
-| Delivery | Earlier/newer discussion pages and fresh return to latest, retaining at most 300 rows |
-| Evidence | Same 650-entry SQLite/Chromium baseline/current fixture, socket arrivals, drafts and failure/race checks; see `docs/STATE.md` |
-| Limits | Controlled technical execution and Codex interface review; no independent team, assistive, other-browser or commercial validation |
-| Next action | Compare fresh opportunities, including actual history/handover use, unassisted native play, physical musical practice and independent literary comprehension |
-| Other products | P01 0.5.0, P03/P05 0.4.0, P06/P10 0.6.0, P08 0.5.0, P04 0.3.0 and P02 0.2.1 retained |
+| Current milestone | P03 Tokyo 80s 0.5.0 completed-take review |
+| Delivery | Whole-take/passage lane timing and distance, explicit hold causes, additive JSON and usable keyboard on focused volume |
+| Evidence | Same-score baseline collapse, 12 legacy-state comparison traces, head/tail logic and real-audio browser journeys; see `docs/STATE.md` |
+| Limits | Controlled technical execution and Codex interface review; no physical/independent player, learning, assistive or commercial validation |
+| Next action | Compare fresh opportunities, including physical/unassisted rhythm practice, native fair slots/play, actual handover use and independent literary comprehension |
+| Other products | P01 0.5.0, P05 0.4.0, P06/P10 0.6.0, P08 0.5.0, P04 0.3.0, P11 0.8.0 and P02 0.2.1 retained |
 | Rules / assets | Existing reference bytes, games and media retained; North Star has no consumer |
-| Attribution | Remote baseline `2e18f506`; local prior P04 tree matched it. Codex implemented and executed controlled checks after the cloud executor recovered |
+| Attribution | Remote baseline `2382074`; Codex implementation, controlled synthetic input and artifact review; independent human feedback remains pending |
 
 Registry evidence paths must resolve to existing files inside the lab; working
 paths must be directories and legacy-source IDs must exist. This documentary
@@ -247,7 +247,7 @@ Identificadores persistem mesmo quando nomes mudam. Um projeto arquivado pode co
 |---|---|---|---|---|
 | P01 | Artemyra / Eclipse Fair | Typed economy and native C# presentation | Godot .NET board, terminal workbench, replay and comparison | Native 0.4.0 local participants; core/CLI rules 0.1.0 retained, no historical restoration |
 | P02 | AI Evaluation & QA Lab (historical Unity proposal) | Requirements, reproduced bugs, artifact checks | Bounded practice tasks and later independent evaluation | EVAL-001 runner 0.2.0 uses pinned snapshots, starter 0.1.0; M4 harness scope, no model candidate |
-| P03 | Tokyo 80s | Original music, timing and sustained interaction | Midnight Signal and Rain Circuit with track selection/transition | P03 0.4.0 / P08 0.5.0 original-pitch backing; human play/listening pending |
+| P03 | Tokyo 80s | Original music, timing and sustained interaction | Midnight Signal and Rain Circuit with track selection/transition | P03 0.5.0 head/tail review / P08 0.5.0 backing; human play/listening pending |
 | P04 | O Lich mais velho da tumba mais antiga / Darsen reading editions | Narrative, translation and reader production | Complete Portuguese story and English EPUB/PDF | Revised standalone adaptation 0.3.0 in both languages; old editions preserved, no historical manuscript restoration |
 | P05 | The Dark Knight / Cinderwatch | Turn-based seed, AGI, rows and states | Native three-encounter tactical rescue campaign | Native 0.3.0 self-contained Linux player; historical RMXP packages absent |
 | P06 | Véu Partido / Veilbreak | Native combat trial; historical 3D RPG seed | Animated two-phase arena with committed contact, source and executed PCK | New 0.6.0 timed counter trial, sweep practice and Linux player; missing Unity starter remains historical |
@@ -339,14 +339,19 @@ cleanup is not isolation; escaped sessions remain outside its tested contract.
 
 ### P03 — Tokyo 80s
 
-[Tokyo 80s Night Shift](projects/tokyo80s/README.md) 0.4.0 retains original scores,
-masters/full OGG/bests and four-bar rehearsal. Four offline tempo derivatives now
-keep original pitch at 75/90%, with unit-rate Web Audio, mapped offsets, complete
-tails and real-time judgment/pause/offset semantics. Missing/wrong-duration assets
-cannot detune silently; tab loss while loading cancels and requires Start. Exports
-identify tempo and actual backing. [Execution](evidence/tokyo80s/PITCH_RUN.json)
-compares real old/current playback, encoded probes and complete-song regressions.
-No new composition, engine migration, historical recovery or human learning claim.
+[Tokyo 80s Night Shift](projects/tokyo80s/README.md) **0.5.0** retains original
+charts, music, scores/bests and original-pitch phrase rehearsal. Completed takes
+now separate received heads from carried tails, show signed offset plus absolute
+distance and early/within-window/late counts per lane and selected full-run
+passage, and identify actual hold failures. Explicit Rehearse starts the chosen
+passage; inspection is silent and does not rescore. JSON adds review/cause/time
+without changing existing score fields. Keyboard play/Pulse/pause also works on
+the focused volume range while arrows keep their native editing role.
+
+[Execution](evidence/tokyo80s/REVIEW_RUN.json) distinguishes same-score baseline
+collapse, legacy behavior comparisons and actual audio/browser execution from
+Codex interface judgment. No new music, historical recovery, North Star consumer,
+physical listening or independent learning validation is claimed.
 
 **Núcleo histórico:** Tóquio dos anos 1980, city pop/wave, arcade, dança como luta, aura e poderes evocando stands/personas. Protagonista associado a top score e topete azul-noite. O projeto anterior recebeu o nome `TOKYO80s_RhythmGame_v0.0.1.zip`; seu runtime não foi inspecionado aqui.
 

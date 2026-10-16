@@ -1,6 +1,6 @@
 # P03 — Tokyo 80s: Night Shift
 
-Version **0.4.0**. Two complete original stages with a selectable setlist.
+Version **0.5.0**. Two complete original stages with a selectable setlist.
 Midnight Signal preserves its original audio/charts and best-score keys; Rain
 Circuit introduces musical sustain interaction. The original 0.1.0 stage is an
 original 69-second
@@ -8,6 +8,42 @@ instrumental, four lanes, two score-aligned charts, judgments, combo/aura, perso
 timing calibration, pause, results, local best and replay. P08 supplies the real
 rendered soundtrack, not a planned cue or external recording. This is a new
 implementation from the Tokyo 80s seed; the historical ZIP was not recovered.
+
+## Review a completed take
+
+![Actual take review on a declared controlled chart](../../evidence/tokyo80s/review-desktop.png)
+
+For players choosing what to rehearse, **Review the heads and tails** separates
+head timing from the scored result. A head hit inside the judgment window is a
+timing observation even when its long tail later fails. Off-beat inputs stay in
+the existing score summary; a missed head does not mean no key was pressed.
+
+Each lane shows heads hit/missed, early/within ±45 ms/late counts, signed average
+offset and **average distance** from the target. Opposite errors can cancel in
+the signed mean; their absolute distances remain visible. These are performance
+milliseconds after the personal offset at every tempo, not source-song time or
+automatic calibration advice. Empty lanes have no timing estimate.
+
+Long notes report carried tails, missed heads, early releases, missing re-holds
+after pause and an unheld ending. Older or unfamiliar failure causes stay unknown.
+A failed tail still earns no points; scoring, ranks and judgment windows retain
+their previous meaning. In a full-run result, select a passage to inspect its
+lanes without changing the score or starting sound, then choose **Rehearse**.
+A rehearsal reviews its one completed phrase; **Repeat phrase** and its existing
+Rehearse shortcut start another take explicitly.
+
+**Save run JSON** 0.5.0 adds whole-take `review`, `phrases[].review` and per-note
+`failureReason`/`failureTime`. Failure time is the actual resolution deadline in
+performance seconds; successful notes have null cause/time. Existing score fields,
+including the successful-note `meanErrorMs`, retain their previous definitions.
+No importer, global calibration recommendation or learning claim is added.
+
+DFJK, P/Escape and Space also work while **VOLUME** has keyboard focus. Arrow
+keys then adjust the range normally; move focus away to use arrows as lanes.
+Ctrl/Alt/Meta shortcuts remain available to the browser.
+[Execution](../../evidence/tokyo80s/REVIEW_RUN.json) distinguishes controlled
+charts over real backing, original full-song checks and Codex interface judgment
+from physical or independent player evidence.
 
 ## Musical rehearsal
 
@@ -121,7 +157,7 @@ Protection uses the note deadline, so a delayed rendering frame cannot change it
 
 **Pause**, **P** or **Escape** freezes the actual audio clock. Leaving the tab
 pauses; returning never automatically resumes. **Restart** clears the session.
-Results include all judgments, score, best combo, timing bias and Pulse use.
+Results include all judgments, score, best combo, head timing/distance, tail causes and Pulse use.
 **Save run JSON** exports actual scored notes. Best scores and input offset stay
 in this browser when storage is available; gameplay/export still work without it.
 
@@ -132,7 +168,7 @@ Apply between runs. This is a personal calibration, not a measured device latenc
 Closing the dialog cancels remaining sound nodes. Volume stays adjustable in play.
 
 A private Sites identity is retained in [.openai/hosting.json](.openai/hosting.json).
-This 0.4.0 execution updates GitHub only; the retained Site was not redeployed.
+This 0.5.0 execution updates GitHub only; the retained Site was not redeployed.
 Its deployment status is reported separately; an ID is not publication
 proof. GitHub remains the maintained source. The Site publishes only `dist/`
 and its hosting manifest, with owner-only access and no accounts/connector data.
@@ -168,7 +204,7 @@ Do not regenerate assets as part of normal gameplay or QA.
 Timing/scoring and audio contracts need Node/Python, without game dependencies:
 
 ```bash
-node --test projects/tokyo80s/tests/core.test.mjs projects/tokyo80s/tests/holds.test.mjs projects/tokyo80s/tests/rehearsal.test.mjs
+node --test projects/tokyo80s/tests/core.test.mjs projects/tokyo80s/tests/holds.test.mjs projects/tokyo80s/tests/rehearsal.test.mjs projects/tokyo80s/tests/review.test.mjs
 python3 projects/tokyo80s/tools/check_audio.py
 python3 projects/tokyo80s/tools/check_rehearsal_audio.py
 # With FFmpeg/Rubber Band, also decode assets and run encoded signal probes:
@@ -180,15 +216,21 @@ is a test dependency, not a shared gameplay module or P11 runtime change:
 
 ```bash
 npm ci --prefix projects/realtime-integration-lab
-CHROMIUM_PATH=/usr/bin/chromium node --test projects/tokyo80s/tests/browser.test.mjs projects/tokyo80s/tests/setlist.test.mjs projects/tokyo80s/tests/rehearsal-browser.test.mjs
+CHROMIUM_PATH=/usr/bin/chromium node --test projects/tokyo80s/tests/browser.test.mjs projects/tokyo80s/tests/setlist.test.mjs projects/tokyo80s/tests/rehearsal-browser.test.mjs projects/tokyo80s/tests/review-browser.test.mjs
 ```
 
 Choose an installed matching Chromium path. The browser suite executes the real
 AudioContext/decoded OGG, keyboard and touch, native tab-focus pause, calibration,
 retry, mobile/desktop layouts, a complete 69-second Arcade run, JSON export and
-replay. Synthetic inputs establish integration, not human rhythmic skill.
-[Milestone evidence](../../evidence/tokyo80s/RUN.json) records current execution,
-actual outcomes and boundaries. Existing CI includes these checks.
+replay. Synthetic inputs establish integration, not human rhythmic skill. The review suite
+uses declared controlled charts over the unchanged delivered backing; the existing
+full-song suites exercise the original charts. Calibration checks observed valid
+taps against actual oscillator times, rather than assuming timely RAF delivery.
+[Review execution](../../evidence/tokyo80s/REVIEW_RUN.json) retains initial failures,
+baseline reproduction, focused reruns and a wrong-suggestion negative control.
+[Original-stage evidence](../../evidence/tokyo80s/RUN.json) remains a historical
+result; the review record above identifies the 0.5.0 checks. Existing CI includes
+the current suites.
 
 ## Quality boundaries and next milestone
 
@@ -202,6 +244,8 @@ Rain Circuit rebuilding uses `python3 projects/tokyo80s/tools/render_rain.py`; t
 remains unchanged. Decoded Vorbis measures -14.3 LUFS and -2.9 dBFS true peak.
 The new stage's PCM master has no clipped samples and approaches silence at its
 ending. These are executed signal measurements, not listening approval.
-Next compare original/slow backing on physical output, attack feel and unassisted
-phrase practice alongside both arrangements; time stretching can change timbre. Independent musical
-quality, learning benefit, other browsers and commercial interest remain open.
+Next observe unassisted passage selection and practice on physical keyboard/touch
+and audio: whether players understand head timing versus tail loss and can choose
+a useful next take. Original/slow backing timbre and attack feel, independent
+musical quality, accessibility, other browsers and commercial interest remain
+open. Compare fresh portfolio needs before extending the diagnostics.
