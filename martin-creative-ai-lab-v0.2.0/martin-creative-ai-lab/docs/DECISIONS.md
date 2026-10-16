@@ -1655,3 +1655,36 @@ artifact inspection are separate evidence. Codex review is not independent
 human feedback. North Star remains foundation-only with no consumer. Keep the
 complete authoritative prompt unchanged; existing discovery, authoring and
 bounded verification guidance already covers the observed weaknesses.
+
+
+## ADR-069 — recover accepted tactical progress before leaving a failed autosave
+
+**Date:** 2026-10-16 (America/Sao_Paulo). **Status:** P05 native 0.5.0; technical M4 retained.
+
+Compare P02's 0.2.1 evaluator and its missing independent candidate, P04's already
+repaired 0.3.0 agency, P03/P06 physical or unassisted learning and P11 0.8.0 handovers.
+The P11 stale-session guard is an unexecuted hypothesis, not a demonstrated defect.
+Select solo tactical players' accepted progress: unchanged P05 0.4.0 callbacks
+really replace two live actions with zero on New run or one on Resume when disk
+contains one and a later write failed. The old error message alone cannot retain
+those decisions after navigation. A hard block would trap a failed destination.
+
+Keep the native Godot .NET/C# player and add Run files: write a recovery journal
+elsewhere, then read/replay it before success; validate Open run before replacing
+live memory and again after the leave decision. The opened source stays unchanged;
+continued turns use the primary autosave. New run, Resume, Open and window close
+ask before leaving unpreserved accepted progress. Keep, retry autosave, recovery
+copy and explicit discard are distinct. Successful retry/copy returns to the same
+run; navigation must be requested again. Cancelling or failing a copy retains it.
+Do not introduce slots, cloud sync, another schema or shared framework. Preserve
+Core Game/Content/Journal, rules/save 0.1.0, media and historical packages.
+
+[Recovery execution](../evidence/cinderwatch/RECOVERY_RUN.json) separates the
+instrumented unchanged baseline, engine controls, readback/replay, persistence
+failures and source/package journeys. Compilation and scripted native controls
+are not independent recovery usability, physical accessibility or human play.
+No power-loss, simultaneous-process or other-platform guarantee is established.
+North Star remains foundation-only with no consumer; no capability promotion.
+Keep the authoritative prompt unchanged: existing artifact comparison, failure
+reproduction and bounded owned-process guidance serve this milestone. Reassess
+portfolio needs after observing whether players can preserve and reopen a run.

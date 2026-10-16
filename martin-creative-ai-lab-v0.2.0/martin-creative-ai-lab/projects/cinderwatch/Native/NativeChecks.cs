@@ -67,6 +67,7 @@ public partial class Main
             Require(Probe.State(game)==before && !intro,"Valid resume changed the next actor");
             var realPath=savePath;savePath=Path.GetDirectoryName(realPath)!;var chosen=game.Legal().First();choices[chosen].EmitSignal(BaseButton.SignalName.Pressed);confirm.EmitSignal(BaseButton.SignalName.Pressed);
             Require(game.Journal.Count==2 && notice.Text.Contains("failed"),"Failed save should preserve accepted memory progress");savePath=realPath;Save();
+            await RecoveryChecks();
             restart.EmitSignal(BaseButton.SignalName.Pressed);begin.EmitSignal(BaseButton.SignalName.Pressed);
             choices[new(Kind.Guard)].EmitSignal(BaseButton.SignalName.Pressed);confirm.EmitSignal(BaseButton.SignalName.Pressed);
             foreach(var command in new[]{new Command(Kind.Guard),new Command(Kind.Strike,3)})

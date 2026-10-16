@@ -127,7 +127,7 @@ public partial class Main
     {
         if(what==NotificationApplicationFocusOut && speaker!=null)speaker.Stop();
     }
-    private void WindowClose()=>_=QuitCleanly();
+    private void WindowClose()=>RequestQuit();
     private async Task QuitCleanly(int code=0)
     {
         if(closing)return;closing=true;ResetFeedback();

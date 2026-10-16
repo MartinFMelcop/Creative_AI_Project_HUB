@@ -23,7 +23,7 @@ def check(path):
             assert stat.S_ISREG(entry.external_attr >> 16), "Unexpected directory/link/device entry"
             assert not relative.suffix == ".pdb", "Unwanted debug symbols"
         info = json.loads(z.read("Cinderwatch/BUILD-INFO.json"))
-        assert (info["schema"], info["project"], info["version"], info["platform"]) == (1, "P05", "0.4.0", "linux-x86_64")
+        assert (info["schema"], info["project"], info["version"], info["platform"]) == (1, "P05", "0.5.0", "linux-x86_64")
         assert info["engine"] == export_linux.ENGINE_VERSION and info["self_contained"] is True
         assert info["template_sha256"] == export_linux.TEMPLATE_SHA and info["template_archive_sha256"] == export_linux.ARCHIVE_SHA
         assert info["runtime"] == export_linux.RUNTIME_VERSION and info["sdk"] == "10.0.401"
@@ -58,6 +58,6 @@ def check(path):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("package", type=Path, nargs="?", default=ROOT / "dist/cinderwatch-linux-0.4.0.zip")
+    parser.add_argument("package", type=Path, nargs="?", default=ROOT / "dist/cinderwatch-linux-0.5.0.zip")
     args = parser.parse_args()
     print(json.dumps(check(args.package)))

@@ -36,7 +36,7 @@ public partial class Main : Control
             if(args[i]=="--capture-dir" && i+1<args.Length)captureDirectory=args[++i];
         }
         if(verifying && !args.Contains("--save-path"))savePath=ProjectSettings.GlobalizePath("user://cinderwatch-check-save.json");
-        try { LoadPresentation();Build(); Refresh(); }
+        try { LoadPresentation();Build();BuildRunFiles(); Refresh(); }
         catch(IOException error) { GD.PrintErr("Cinderwatch could not start. " + error.Message);GetTree().Quit(1);return; }
         if(verifying)_=Verify();
     }
@@ -73,11 +73,11 @@ public partial class Main : Control
     {
         Text(this,"CINDERWATCH",24,8,490,48,32);
         Text(this,"A three-encounter tactical rescue",26,58,480,25,16,Muted);
-        sound=Button(this,"Sound: on",625,24,125,40,ToggleSound);
-        restart=Button(this,"New run",760,24,110,40,NewRun);
-        resume=Button(this,"Resume",878,24,105,40,Load);
-        save=Button(this,"Save",991,24,98,40,Save);
-        rules=Button(this,"Tactics",1097,24,158,40,ToggleRules);
+        sound=Button(this,"Sound: on",535,24,120,40,ToggleSound);
+        restart=Button(this,"New run",663,24,105,40,NewRun);
+        resume=Button(this,"Resume",776,24,105,40,Load);
+        save=Button(this,"Save",889,24,80,40,Save);
+        rules=Button(this,"Tactics",1110,24,145,40,ToggleRules);
         heading=Text(this,"",24,96,700,34,24);
         resources=Text(this,"",750,99,505,28,19,Ember);
         board=Place(new Control(),this,24,142,780,412);
@@ -159,43 +159,31 @@ public partial class Main : Control
         else history.Text=string.Join("\n",game.Log);
         modal.Visible=intro||showingRules||showEnding||showResponse;
         modalTitle.Text=showResponse?"IF CONFIRMED / NEXT RESPONSE":"CINDERWATCH / FIELD BRIEF";
-        modalText.Text=showResponse&&selected!=null?ResponseForecast.Calculate(game,selected).Describe():showingRules?Content.Rules:showEnding?Content.Ending(game)+$"\n\n{game.Units.Count(u=>u.Hero&&u.Alive)}/3 rescuers standing · {game.Kits} kits · {game.Sparks} sparks left.":Content.Intro;
+        modalText.Text=showResponse&&selected!=null?ResponseForecast.Calculate(game,selected).Describe():showingRules?Content.Rules:showEnding?Content.Ending(game)+$"\n\n{game.Units.Count(u=>u.Hero&&u.Alive)}/3 rescuers standing · {game.Kits} kits · {game.Sparks} sparks left.":Content.Intro+"\n\nResume opens the autosave. Run files can open a recovery copy before you begin.";
         modalText.AddThemeFontSizeOverride("normal_font_size",showResponse?19:showingRules?17:22);
         begin.Text=showResponse?"Return to selected action":showingRules?"Return to the current turn":showEnding?"Inspect the final board":"Enter the loading yard";
         // A modal is also an input boundary for keyboard focus, not only an overlay.
         foreach(var b in choices.Values.Concat(salvage.Values).Concat(new[]{confirm,resolve,restart,resume,save,rules,inspect}))b.Disabled=(intro||showingRules||showEnding||showResponse)||((b==confirm||b==inspect)&&(selected==null||game.Actor is not {Hero:true}));
-        if(modal.Visible)begin.GrabFocus();
+        RefreshRunFiles();
+        if(modal.Visible&&!ContinuityBlocked)begin.GrabFocus();
     }
-    private void Select(Command c) {selected=c;Refresh();confirm.GrabFocus();}
+    private void Select(Command c) {if(ContinuityBlocked||intro||showingRules||showEnding||showResponse)return;selected=c;Refresh();confirm.GrabFocus();}
     private void Accepted()
     {
-        selected=null;showEnding=game.Phase==Phase.Victory;Save();Refresh();
+        selected=null;showEnding=game.Phase==Phase.Victory;PersistRun(savePath,false);Refresh();
         if(modal.Visible)return;
         if(choices.Count>0)choices.Values.First().GrabFocus();
         else if(resolve.Visible)resolve.GrabFocus();
         else if(salvage.Count>0)salvage.Values.First().GrabFocus();
     }
-    private void Confirm() {if(intro||showingRules||showResponse||selected==null)return;var before=game.Fork();var cue=selected.Kind switch{Kind.Guard or Kind.Cover=>"brace",Kind.Pin=>"pin",Kind.Mend=>"mend",Kind.Shift=>"shift",_=>"strike"};if(game.Act(selected)){Accepted();Feedback(before,cue);}}
-    private void Enemy() {if(intro||showingRules||showResponse||game.Actor is not {Hero:false} actor)return;var before=game.Fork();var threat=game.Threats[actor.Id];var cue=actor.Pinned?"pin":threat.Attack==Attack.Gout?"steam":threat.Attack==Attack.Repair?"mend":threat.Attack==Attack.Charge?"brace":"strike";if(game.ResolveEnemy()){if(threat.Attack==Attack.Repair&&!game.Units.Any(u=>u.Hp>before.Find(u.Id).Hp))cue="strike";Accepted();Feedback(before,cue);}}
-    private void Camp(string c) {if(intro||showingRules||showResponse)return;var before=game.Fork();if(game.Camp(c)){Accepted();Feedback(before,"stage");}}
+    private void Confirm() {if(ContinuityBlocked||intro||showingRules||showResponse||selected==null)return;var before=game.Fork();var cue=selected.Kind switch{Kind.Guard or Kind.Cover=>"brace",Kind.Pin=>"pin",Kind.Mend=>"mend",Kind.Shift=>"shift",_=>"strike"};if(game.Act(selected)){Accepted();Feedback(before,cue);}}
+    private void Enemy() {if(ContinuityBlocked||intro||showingRules||showResponse||game.Actor is not {Hero:false} actor)return;var before=game.Fork();var threat=game.Threats[actor.Id];var cue=actor.Pinned?"pin":threat.Attack==Attack.Gout?"steam":threat.Attack==Attack.Repair?"mend":threat.Attack==Attack.Charge?"brace":"strike";if(game.ResolveEnemy()){if(threat.Attack==Attack.Repair&&!game.Units.Any(u=>u.Hp>before.Find(u.Id).Hp))cue="strike";Accepted();Feedback(before,cue);}}
+    private void Camp(string c) {if(ContinuityBlocked||intro||showingRules||showResponse)return;var before=game.Fork();if(game.Camp(c)){Accepted();Feedback(before,"stage");}}
     private void InspectResponse()
     {
-        if(intro||showingRules||showEnding||showResponse||selected==null||!game.Legal().Contains(selected))return;
+        if(ContinuityBlocked||intro||showingRules||showEnding||showResponse||selected==null||!game.Legal().Contains(selected))return;
         showResponse=true;speaker.Stop();modalText.ScrollToLine(0);Refresh();
     }
-    private void CloseModal() {var response=showResponse;intro=false;showingRules=false;showEnding=false;showResponse=false;Refresh();if(response)inspect.GrabFocus();else if(choices.Count>0)choices.Values.First().GrabFocus();}
-    private void ToggleRules() {showingRules=!showingRules;if(showingRules)speaker.Stop();Refresh();}
-    private void NewRun() {ResetFeedback();game=new();selected=null;intro=true;showingRules=false;showEnding=false;showResponse=false;notice.Text="New run is in memory. Enter and accept a turn to replace the previous save.";Refresh();}
-    private void Save()
-    {
-        try {Journal.Store(game,savePath);notice.Text="Saved accepted actions. Resume restores the exact next turn.";}
-        catch(Exception e)when(e is IOException or UnauthorizedAccessException) {notice.Text="Save failed; current progress remains in memory. "+e.Message;}
-        notice.TooltipText=notice.Text;
-    }
-    private void Load()
-    {
-        try {var loaded=Journal.Load(savePath);ResetFeedback();game=loaded;selected=null;intro=false;showingRules=false;showResponse=false;showEnding=game.Phase==Phase.Victory;notice.Text="Resumed the exact next turn and supplies.";Refresh();}
-        catch(Exception e)when(e is IOException or UnauthorizedAccessException or System.Text.Json.JsonException or InvalidDataException) {notice.Text="Resume rejected; current run preserved. "+e.Message;}
-        notice.TooltipText=notice.Text;
-    }
+    private void CloseModal() {if(ContinuityBlocked)return;var response=showResponse;intro=false;showingRules=false;showEnding=false;showResponse=false;Refresh();if(response)inspect.GrabFocus();else if(choices.Count>0)choices.Values.First().GrabFocus();}
+    private void ToggleRules() {if(ContinuityBlocked)return;showingRules=!showingRules;if(showingRules)speaker.Stop();Refresh();}
 }

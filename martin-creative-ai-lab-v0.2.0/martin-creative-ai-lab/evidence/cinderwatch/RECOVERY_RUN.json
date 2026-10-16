@@ -1,0 +1,506 @@
+{
+  "project": "P05",
+  "version": "0.5.0",
+  "date_utc": "2026-10-16",
+  "baseline": {
+    "commit": "e183e31435e392f4ef8f5b8a95263c18c8473c64",
+    "tree": "Initially clean tracked feature-branch checkout; prior branches and untracked work/ preserved. Fetched main and remote integration read agree.",
+    "artifact": "projects/cinderwatch/dist/cinderwatch-linux-0.4.0.zip",
+    "sha256": "7975b11e2be060fe488b2cf329070d7750fca726a55228aeaa72fd863801ff3a",
+    "instrumented_callbacks": {
+      "assessment": "Instrumented baseline source, unchanged NewRun/Load/Save callbacks invoked through actual Godot signals; not an exact shipped binary test or human playtest",
+      "original_main_sha256": "6f0686e76f613d2587774583dd0a360660c4f5d6c5863002101c150ab123d12f",
+      "original_native_checks_sha256": "f82a3db756c0b7c200152fb115b4da534cafef415d7137236686031b63c90559",
+      "scratch_probe_sha256": "9554b2e5930c74b7830b4eee755bff1b658c37d4b4deea2b55803f532652972f",
+      "injection": "savePath temporarily names the existing scratch parent directory, causing file replacement to fail while the old realPath remains intact",
+      "facts": [
+        {
+          "name": "one accepted action saved",
+          "memoryActions": 1,
+          "diskActions": 1,
+          "actor": "Rook",
+          "phase": "Combat",
+          "intro": false,
+          "state_sha256": "00d74c14843c7b85e966f46060b7ff1d6bbea1802c6592d7c2e03ffd166d22e0"
+        },
+        {
+          "name": "second accepted action has failed autosave",
+          "memoryActions": 2,
+          "diskActions": 1,
+          "actor": "Ash hound",
+          "phase": "Combat",
+          "intro": false,
+          "state_sha256": "0aa64802aea4bf4dc3cb09b695378d0ffa8f706aacf3f88dcbd9ce0362d35a99"
+        },
+        {
+          "name": "NewRun discarded accepted memory without a recovery guard",
+          "memoryActions": 0,
+          "diskActions": 1,
+          "actor": "Vale",
+          "phase": "Combat",
+          "intro": true,
+          "state_sha256": "b95b92d7faa5ea325369b404a7b46fa425ceabf5bd265900d4afb2f32abffaf2"
+        },
+        {
+          "name": "two memory/one disk actions before Resume",
+          "memoryActions": 2,
+          "diskActions": 1,
+          "actor": "Ash hound",
+          "phase": "Combat",
+          "intro": false,
+          "state_sha256": "0aa64802aea4bf4dc3cb09b695378d0ffa8f706aacf3f88dcbd9ce0362d35a99"
+        },
+        {
+          "name": "Resume discarded accepted memory and restored older prefix",
+          "memoryActions": 1,
+          "diskActions": 1,
+          "actor": "Rook",
+          "phase": "Combat",
+          "intro": false,
+          "state_sha256": "00d74c14843c7b85e966f46060b7ff1d6bbea1802c6592d7c2e03ffd166d22e0"
+        }
+      ]
+    },
+    "exact_shipped_player": {
+      "status": "passed actual X11 clicks and implementing-agent frame inspection",
+      "failure_injection": "chmod 550 only on the owned scratch primary directory after its first accepted Guard; restored 750 by cleanup trap. No product files or checks weakened.",
+      "inputs": [
+        "Begin; Vale Guard; Confirm; chmod scratch directory; Rook Guard; Confirm; New run; Begin; Resume; Rook Guard; Confirm; Resume"
+      ],
+      "observed": "Two braced heroes and Ash hound next before New; fresh unbraced Vale turn after New; Rook alone next after Resume. Both accepted-memory replacements match old callbacks; no recovery decision or copy control.",
+      "saved_prefix_unchanged_sha256": "5046b3bee7f459e2f8095d6abe01d64cb8d88254dc4a998ec9f02411771f2e8b"
+    }
+  },
+  "environment": {
+    "os": "Managed Linux x86_64 cloud",
+    "sdk": "10.0.401",
+    "engine": "Godot .NET 4.6.3.stable.mono.official.7d41c59c4",
+    "bundled_runtime": "Microsoft.NETCore.App 10.0.12",
+    "display": "Owned bounded Xorg :98 dummy 1280x800; Mesa 25.0.7 llvmpipe OpenGL 4.5 compatibility",
+    "audio": "Dummy virtual driver / PCM mixer capture; no physical listening",
+    "processes": "Timeout supervisors and cleanup traps stop only owned app/display processes; isolated work/ saves and XDG/CLI paths."
+  },
+  "design": {
+    "audience": "Solo tactical players who need to preserve already accepted decisions and knowingly choose whether to resume an older journal, start over or quit.",
+    "portfolio_comparison": [
+      "P02 0.2.1 already pins evaluator source; independent candidate/context evidence remains absent.",
+      "P04 0.3.0 already revises demonstrated agency/mechanism issues; further reader/source work needs a concrete weakness.",
+      "P03/P06 physical practice and unassisted learning remain credible needs, but another synthetic feature cannot establish those outcomes.",
+      "P11 0.8.0 handovers remain valuable; JSON export session-guard concern is source-supported, not an executed defect.",
+      "P05 failed-save navigation has directly reproducible accepted-progress loss and an available native consumer."
+    ],
+    "alternatives": [
+      "Warning only explains a loss without preserving it.",
+      "Blocking every departure traps a permanently unavailable save path.",
+      "Selected: verified portable journal copies, explicit Open run and keep/retry/copy/discard decisions; retain the working native product."
+    ],
+    "implementation": "Preservation token tracks the exact accepted journal last written/read back/replayed or loaded from a valid source. A new action becomes unpreserved after write failure. Navigation validates candidates before and after the leave decision; successful recovery cancels queued navigation. Dialogs block hidden turn/selection controls. A copy cannot target the normalized primary path. Future actions keep the primary destination and leave source copies intact.",
+    "creative_assessment": "Codex assessment: protects consequences already chosen across a three-encounter rescue while retaining optional tactical response feedback and manually paced enemies. Recovery UI makes deliberate loss explicit. No rule, balance, literary, art or musical improvement is claimed."
+  },
+  "checks": {
+    "core_command": "dotnet run --project Checks -c Release",
+    "core_baseline_and_final_identical": {
+      "checks": 3711,
+      "journeys": [
+        {
+          "first": "coolant",
+          "second": "plates",
+          "phase": "Victory",
+          "sparks": 0,
+          "kits": 0,
+          "hp": [
+            6,
+            6,
+            28
+          ],
+          "actions": 65
+        },
+        {
+          "first": "coolant",
+          "second": "edge",
+          "phase": "Victory",
+          "sparks": 0,
+          "kits": 0,
+          "hp": [
+            6,
+            13,
+            28
+          ],
+          "actions": 59
+        },
+        {
+          "first": "sparks",
+          "second": "plates",
+          "phase": "Victory",
+          "sparks": 0,
+          "kits": 0,
+          "hp": [
+            7,
+            16,
+            28
+          ],
+          "actions": 71
+        },
+        {
+          "first": "sparks",
+          "second": "edge",
+          "phase": "Victory",
+          "sparks": 0,
+          "kits": 0,
+          "hp": [
+            7,
+            23,
+            28
+          ],
+          "actions": 65
+        }
+      ],
+      "naive": {
+        "phase": "Defeat",
+        "actions": 37
+      },
+      "assessment": "Synthetic implementing-agent policies; no human balance evidence"
+    },
+    "debug_build": "dotnet build Native/Cinder.Native.csproj -c Debug: zero warnings and errors; audit/warnings-as-errors unchanged.",
+    "native_commands": [
+      "Godot.NET --path Native --max-fps 60 --rendering-method gl_compatibility --audio-driver Dummy -- --verify --save-path <isolated> --capture-dir <isolated>",
+      "Godot.NET --headless --path <freshly extracted project>/Native -- --verify --save-path <isolated>",
+      "env -u DOTNET_ROOT -u DOTNET_ROOT_X64 PATH=/usr/bin:/bin DOTNET_MULTILEVEL_LOOKUP=0 <extracted player>/cinderwatch.x86_64 --headless -- --verify --save-path <isolated>"
+    ],
+    "native": {
+      "rendered_source": {
+        "nativeChecks": 1060,
+        "journeys": [
+          {
+            "first": "coolant",
+            "second": "plates",
+            "actions": 65,
+            "hp": [
+              6,
+              6,
+              28
+            ],
+            "kits": 0,
+            "sparks": 0
+          },
+          {
+            "first": "coolant",
+            "second": "edge",
+            "actions": 59,
+            "hp": [
+              6,
+              13,
+              28
+            ],
+            "kits": 0,
+            "sparks": 0
+          },
+          {
+            "first": "sparks",
+            "second": "plates",
+            "actions": 71,
+            "hp": [
+              7,
+              16,
+              28
+            ],
+            "kits": 0,
+            "sparks": 0
+          },
+          {
+            "first": "sparks",
+            "second": "edge",
+            "actions": 65,
+            "hp": [
+              7,
+              23,
+              28
+            ],
+            "kits": 0,
+            "sparks": 0
+          }
+        ],
+        "deadline": 13,
+        "presentation": {
+          "portraits": 8,
+          "cards": 6,
+          "actions": 15,
+          "camps": 4,
+          "styles": 12,
+          "cuePlays": 380
+        },
+        "display": "X11",
+        "assessment": "Scripted controls and implementing-agent visual review; not a human playtest"
+      },
+      "delivered_project": {
+        "nativeChecks": 1044,
+        "journeys": [
+          {
+            "first": "coolant",
+            "second": "plates",
+            "actions": 65,
+            "hp": [
+              6,
+              6,
+              28
+            ],
+            "kits": 0,
+            "sparks": 0
+          },
+          {
+            "first": "coolant",
+            "second": "edge",
+            "actions": 59,
+            "hp": [
+              6,
+              13,
+              28
+            ],
+            "kits": 0,
+            "sparks": 0
+          },
+          {
+            "first": "sparks",
+            "second": "plates",
+            "actions": 71,
+            "hp": [
+              7,
+              16,
+              28
+            ],
+            "kits": 0,
+            "sparks": 0
+          },
+          {
+            "first": "sparks",
+            "second": "edge",
+            "actions": 65,
+            "hp": [
+              7,
+              23,
+              28
+            ],
+            "kits": 0,
+            "sparks": 0
+          }
+        ],
+        "deadline": 13,
+        "presentation": {
+          "portraits": 8,
+          "cards": 6,
+          "actions": 15,
+          "camps": 4,
+          "styles": 12,
+          "cuePlays": 380
+        },
+        "display": "headless",
+        "assessment": "Scripted controls and implementing-agent visual review; not a human playtest"
+      },
+      "self_contained_player": {
+        "nativeChecks": 1044,
+        "journeys": [
+          {
+            "first": "coolant",
+            "second": "plates",
+            "actions": 65,
+            "hp": [
+              6,
+              6,
+              28
+            ],
+            "kits": 0,
+            "sparks": 0
+          },
+          {
+            "first": "coolant",
+            "second": "edge",
+            "actions": 59,
+            "hp": [
+              6,
+              13,
+              28
+            ],
+            "kits": 0,
+            "sparks": 0
+          },
+          {
+            "first": "sparks",
+            "second": "plates",
+            "actions": 71,
+            "hp": [
+              7,
+              16,
+              28
+            ],
+            "kits": 0,
+            "sparks": 0
+          },
+          {
+            "first": "sparks",
+            "second": "edge",
+            "actions": 65,
+            "hp": [
+              7,
+              23,
+              28
+            ],
+            "kits": 0,
+            "sparks": 0
+          }
+        ],
+        "deadline": 13,
+        "presentation": {
+          "portraits": 8,
+          "cards": 6,
+          "actions": 15,
+          "camps": 4,
+          "styles": 12,
+          "cuePlays": 380
+        },
+        "display": "headless",
+        "assessment": "Scripted controls and implementing-agent visual review; not a human playtest"
+      }
+    },
+    "recovery": {
+      "rendered_source": {
+        "recoveryChecks": 137,
+        "savedActions": 1,
+        "failedAcceptedActions": 2,
+        "copyActions": 2,
+        "reloadedNextAutosaveActions": 3,
+        "quitProtectedActions": 4,
+        "sourceCopyUnchanged": true,
+        "assessment": "Native signals and keyboard execution; not independent player feedback"
+      },
+      "delivered_project": {
+        "recoveryChecks": 135,
+        "savedActions": 1,
+        "failedAcceptedActions": 2,
+        "copyActions": 2,
+        "reloadedNextAutosaveActions": 3,
+        "quitProtectedActions": 4,
+        "sourceCopyUnchanged": true,
+        "assessment": "Native signals and keyboard execution; not independent player feedback"
+      },
+      "self_contained_player": {
+        "recoveryChecks": 135,
+        "savedActions": 1,
+        "failedAcceptedActions": 2,
+        "copyActions": 2,
+        "reloadedNextAutosaveActions": 3,
+        "quitProtectedActions": 4,
+        "sourceCopyUnchanged": true,
+        "assessment": "Native signals and keyboard execution; not independent player feedback"
+      }
+    },
+    "project_package": {
+      "files": 41,
+      "bytes": 2838889,
+      "sha256": "40feb41bfe21f9e7e9399b472af24b9830cea8ff2c199bbe389739c4e1f4ecf0"
+    },
+    "linux_package": {
+      "player": "cinderwatch-linux-0.5.0.zip",
+      "files": 210,
+      "bytes": 67281674,
+      "sha256": "6930386b285c3812ed665040bad425437ee65152e4975a2048df186efc70afc4",
+      "source_and_resource_identity": true,
+      "runtime_included": true,
+      "boundary": "Static package check; actual execution is separate."
+    },
+    "media": "check_media.py passes unchanged portrait PNG/CRC and seven PCM cue hashes, durations, endpoints and non-clipping.",
+    "linux_build": "Clean staging Debug build, engine import and actual release export; official template and included runtime identities validated. BUILD-INFO records 24 source/configuration identities and all bundled payload hashes.",
+    "standalone_ui": {
+      "status": "passed",
+      "input": "Actual separate Linux player processes; XTest clicks/keys on Xorg, not in-process signals or human play.",
+      "trace": [
+        "Enter brief; accept Vale Guard: primary journal 1.",
+        "Make only the owned primary directory unwritable; accept Rook Guard: memory 2 / primary 1.",
+        "New run opens leave guard; choose Save recovery copy and type a separate absolute path into the actual file chooser.",
+        "Copy journal 2 / primary 1; same Ash hound turn remains open. Restore primary directory permission; the fixture stops only its owned preview process.",
+        "Start a separate player process; Open run from the brief selects the copy. Source stays at 2, primary at 1.",
+        "Resolve the announced enemy turn: primary 3, copied source remains 2 with identical SHA-256. Stop the owned preview for cleanup."
+      ],
+      "source_copy_sha256": "23ce18cf7fbcfede85a7f5a3782c27099935d056e6e76fe65e5af62d33ee2f17",
+      "primary_actions": 3,
+      "shutdown_boundary": "Processes are stopped by the fixture to test restart persistence. Normal WM shutdown is not established; baseline/current synthetic close limitation is recorded separately."
+    }
+  },
+  "refinements_and_failures": [
+    "Long path success/error messages initially failed the existing clipping assertion; concise status text retains full detail in tooltips. Assertions were preserved.",
+    "Wrapped native dialog labels grew excessively in actual frames, even after an explicit popup height. A bounded scrolling RichTextLabel removes the height feedback.",
+    "Two earlier project extractions failed the combined changed-source guard assertion. Instrumented source and a clean diagnostic extraction passed without gameplay changes; that result alone did not establish a product or environment cause. Fixtures now wait a frame and require a visible chooser before selection, retaining all state-loss assertions. Final fresh project/player checks pass.",
+    "Full-screen OCR readiness polling wasted time, and fixed startup delays sent input to black/splash screens during concurrent work. Cropped opening-button readiness and direct PNG/file inspection distinguish startup from product behavior.",
+    "Restricted-network baseline and current NuGet restores both failed NU1900. Normal supported network permission restored audited builds, without disabling audit or warnings. Missing writable CLI/XDG paths and a transient exec-server disconnect were environmental, recovered without product workarounds."
+  ],
+  "preservation": {
+    "core_game_content_journal_media_unchanged_from_baseline": true,
+    "rules_and_journal_schema": "0.1.0",
+    "historical_distributions": "All earlier ZIPs remain byte-preserved; only new 0.5.0 distributions added.",
+    "source_sha256": {
+      "Checks/Probe.cs": "e119d4ff44256cb3d2ce9acbdc045f5842373baccf4e5ca38f57c60f233f5193",
+      "Core/AssemblyInfo.cs": "a14dad30ab9e586a7ae0ae9d9dbf20d2a0d0accc9b79207903ecc729cd1a21f8",
+      "Core/Cinder.Core.csproj": "8d654c44b7bebb6b31a9f2f606927f45b5072193adc4eef8cce3f3cf3b278df3",
+      "Core/Content.cs": "d37035eab4aa09802511dd3b5806ae8d295156824a18962a9ed14d19184fb3bb",
+      "Core/Game.cs": "53dd7148e63dd57ae0796943b810d0652398d72fd75e46bdd76a8f322d2674d7",
+      "Core/Journal.cs": "46bae735fc58e58dce317234c418775f410e58ad8bea728df2d41c8f098f38e4",
+      "Core/ResponseForecast.cs": "ba3f73572055f57ee7e125045c1ed68d9582e89c2090b5baca31c68d5c4a5c37",
+      "Directory.Build.props": "62720f290d07a9d7f4899af16ff649dec8969a0b825aacdf1f5df943bea3668d",
+      "Native/Cinder.Native.csproj": "4e2f9d769fc4b053f357934d43f0c155845c8df60848464a254a45cd1ec80c1c",
+      "Native/Cinder.Native.sln": "4303bffe8e3156e9bbfffc9e2af349df1a36aed1556e004a140d5f6b17491ebb",
+      "Native/Main.cs": "2952df2da498deef238b2a96615a9be61adeab58ea7bcb87500559fbd8562973",
+      "Native/Main.cs.uid": "9ca15a31819bc6106a0b8b8558ad359bb5c7375771ce878dd1116761a30f0332",
+      "Native/Main.tscn": "52aae82a6bf29106fc618e2725ed49f260f9c35cbbdfabc280b95f3ace9637f3",
+      "Native/NativeChecks.cs": "9ddf2bfc486b93da87348b8af70e1915adbf60634431c2edc4b462c149e41175",
+      "Native/NativeChecks.cs.uid": "1b3206ed34bacca10f02301fd2e7766cf55365d1e47e04fa14cd9a03c79525f8",
+      "Native/Presentation.cs": "7c658779c3c3f1864e1da358d52fc2282341f9738a0049dc921d1a744d70e790",
+      "Native/Presentation.cs.uid": "370074ebf441ccfc14452d5859313b0191304be5a5d481253eb3957b46c5016d",
+      "Native/Recovery.cs": "bd349e5f8ee86a5b5712879bcc754ccd38c67303cea988fc59ef38469bcb986a",
+      "Native/Recovery.cs.uid": "17974145d7375f86e703c09acbdaa58b1ad583b4f17a7ea00ed00d6eaa77cfd3",
+      "Native/RecoveryChecks.cs": "34c7a8a89030d35f592727946ac95b3c69a3b9defb3fbdfe532efc7413901528",
+      "Native/RecoveryChecks.cs.uid": "9d5e27a546fb558b07cf1749d8b8a2dcbbd17ea080a7ceed4307bc9bf9bf236a",
+      "Native/export_presets.cfg": "19a329fc509fa7dfc6aa747ba95c7d3c9d0452c9a4859ae5ccfeb23653538c5f",
+      "Native/project.godot": "5c80aa3081c595c9eec679202fad3288239f13f8d74b7d4aab5fa55ba583585b",
+      "global.json": "a0dcc4ee0c1b8044f9498734741bd764d5c2585f4d0d8e31e27e26e9662f751f"
+    }
+  },
+  "frames": {
+    "recovery-baseline-failed-save.png": "ac58d4e26f7de4d3a705ace11c70c514296392bbb7bd1af8d406cfde9cf87ef3",
+    "recovery-baseline-new-loss.png": "a05aa8b9f9725676c121f91c5f459cad9408e3107495646615d19de2f9aee613",
+    "recovery-baseline-resume-loss.png": "7b9b862ba3f7b4d736543bacd2119b9d341368c7f0b004c779924aa0be367ffa",
+    "recovery-guard.png": "7db7edf166ff34f40a68a6d66f2ed5f7c2b5e357d2814eef29ee380400801d4b",
+    "recovery-copy.png": "f8d686a8748f90e5b3643f17a3498bcf432c8bc9cb683f9f3db3b1b457804bf1",
+    "recovery-file-picker.png": "782fb94887a775f4e8522ce691a6313791861dad136b5db18079c887badae1ad",
+    "recovery-reopened.png": "486f3f65fa5bbdfc7cfa0be8bd162eb4c56de23ec6a4ef2d6edb571a539435b8",
+    "recovery-next-turn.png": "ff389061c7edb9ad4fb3e551f049a32e86897d6dbcbf7b684e221a8513608ede"
+  },
+  "x11_close_boundary": {
+    "baseline_ready_probe": {
+      "baseline": "exact shipped 0.4.0",
+      "display": ":97",
+      "readyVisual": true,
+      "helperCloseExited": false,
+      "waitSeconds": 10,
+      "assessment": "Synthetic close request did not close unchanged shipped baseline; do not attribute to new recovery code"
+    },
+    "current_observed": "After verified copy, an initialized actual player ignored two synthetic WM_DELETE_WINDOW requests; fresh tree confirmed main window 0x200003. WM_PROTOCOLS advertised WM_STATE. Owned timeout supervisor eventually stopped the preview.",
+    "assessment": "Ready exact 0.4.0 baseline reproduces the unhandled request under the same Xorg setup. Cause is not established; no recovery-product change or assertion weakening was made. Native CloseRequested/keep guards and QuitCleanly execute in engine checks; normal desktop WM close remains unverified."
+  },
+  "limits": [
+    "Synthetic implementing-agent control, technical comparison and visual judgment; no independent human recovery, learning, enjoyment or demand evidence.",
+    "One primary autosave with manually chosen recovery files; no multi-slot index, cloud sync, undo or automatic archive.",
+    "Preservation is verified at that moment; later external deletion, simultaneous process writes and power-loss durability are not guaranteed.",
+    "Linux x86_64 execution only; physical audio, assistive technology and other operating systems unverified."
+  ],
+  "north_star": {
+    "stage": "foundation_only",
+    "capabilities": 14,
+    "destination_consumers": 0,
+    "claim": "Independent origin-product development; no adaptation/integration or capability promotion."
+  },
+  "prompt_review": {
+    "path": "docs/prompts/CONTINUOUS_DEVELOPMENT.md",
+    "changed": false,
+    "sha256": "8212e510d1ab7b3c8526b14120a41391ed81cf17c8a56b9c49c0de9dd4009d1a",
+    "reason": "Current artifact comparison, failure/baseline distinction and bounded process guidance served the design; no new general rule or fixed project priority is justified."
+  }
+}

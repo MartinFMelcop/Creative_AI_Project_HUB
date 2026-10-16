@@ -5,7 +5,7 @@ from zipfile import ZipFile, ZipInfo, ZIP_DEFLATED
 
 ROOT = Path(__file__).resolve().parents[1]
 BIN = ROOT / "Native/.godot/mono/temp/bin/Debug"
-OUT = ROOT / "dist/cinderwatch-0.4.0.zip"
+OUT = ROOT / "dist/cinderwatch-0.5.0.zip"
 
 
 def main():
@@ -13,6 +13,9 @@ def main():
              "Native/Main.tscn", "Native/Cinder.Native.csproj", "Native/Cinder.Native.sln", "Native/export_presets.cfg", "Native/README.md", "Checks/Probe.cs")]
     files += sorted((ROOT / "Core").glob("*.cs")) + [ROOT / "Core/Cinder.Core.csproj"]
     files += sorted((ROOT / "Native").glob("*.cs")) + sorted((ROOT / "Native").glob("*.uid"))
+    required_recovery = {ROOT / "Native/Recovery.cs", ROOT / "Native/RecoveryChecks.cs"}
+    if not required_recovery <= set(files):
+        raise SystemExit("Missing recovery consumer/check sources")
     files += sorted(p for p in (ROOT / "Native/media").rglob("*") if p.is_file() and p.suffix in {".png", ".wav", ".json"})
     files += [ROOT / "tools/render_feedback.py", ROOT / "tools/check_media.py"]
     files += [BIN / name for name in ("Cinder.Native.dll", "Cinder.Core.dll", "Cinder.Native.deps.json", "Cinder.Native.runtimeconfig.json")]

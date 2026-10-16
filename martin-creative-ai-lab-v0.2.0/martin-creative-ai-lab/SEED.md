@@ -1,6 +1,6 @@
 # SEED — Martin Creative AI Lab
 
-**Version:** 0.32.8
+**Version:** 0.32.9
 **Data-base:** 10 de outubro de 2026  
 **Autor e responsável pelo portfólio:** Martin Melcop Neto  
 **Working language:** English for new documentation, plans, code comments, UI, and reports. Preserve original creative titles and historical source languages.
@@ -70,14 +70,14 @@ Se apenas este arquivo estiver disponível, ele é suficiente para iniciar a Fas
 |---|---|
 | Repository | MartinFMelcop/Creative_AI_Project_HUB; actual Git root `/workspace/Creative_AI_Project_HUB`; wrapper retained |
 | Preserved sources | Old ZIP: 175 Rave / 3 WebSocket texts unchanged. New Rave library: 589 readable / 140 excluded from 729; ten main and eight OVA PDFs (2,407 pages) plus derived text; ZIP/policy unavailable |
-| Current milestone | P10 Flood Crossing browser 0.7.0 playable deferred request |
-| Delivery | Reopen the noon request against actual afternoon work and light; fresh Iven consent, tentative offers, signed terms and future local capacity |
-| Evidence | Baseline/current consultation and recovery checks linked in [the execution record](evidence/waystone-dialogue/DEFERRED_REQUEST_RUN.json); see `docs/STATE.md` for results and limits |
-| Limits | Technical M4 and Codex review; no independent reader/player, physical accessibility or commercial validation; upstream rescue and returns remain unobserved |
-| Next action | Observe unassisted consultation and local-work choices; compare native recovery/play, physical rhythm practice, handovers and literary comprehension afresh |
-| Other products | P01/P06 0.6.0, P03/P08 0.5.0, P05 0.4.0, P04 0.3.0, P11 0.8.0 and P02 0.2.1 retained |
-| Rules / assets | Existing reference bytes, games and media retained; North Star has no consumer |
-| Attribution | Baseline `f22b83c`; Codex implementation and interface review; independent human feedback remains pending |
+| Current milestone | P05 Cinderwatch native 0.5.0 accepted-progress recovery |
+| Delivery | Native Save recovery copy/Open run and an explicit leave decision for accepted actions after a failed save; single primary autosave retained |
+| Evidence | Baseline/current native, failure, package and runtime checks in [the execution record](evidence/cinderwatch/RECOVERY_RUN.json); see `docs/STATE.md` for results and limits |
+| Limits | Technical M4 and Codex review; no independent unassisted play, physical audio/accessibility or commercial validation; no cloud or concurrent-process coordination |
+| Next action | Observe whether unassisted players can preserve and resume after a failed write; compare physical practice, actual handovers and literary comprehension afresh |
+| Other products | P01/P06 0.6.0, P03/P08 0.5.0, P04 0.3.0, P10 0.7.0, P11 0.8.0 and P02 0.2.1 retained |
+| Rules / assets | Existing reference bytes, rules, save schema and media retained; North Star has no consumer |
+| Attribution | Baseline `e183e31`; Codex implementation and interface review; independent human feedback remains pending |
 
 Registry evidence paths must resolve to existing files inside the lab; working
 paths must be directories and legacy-source IDs must exist. This documentary
@@ -249,7 +249,7 @@ Identificadores persistem mesmo quando nomes mudam. Um projeto arquivado pode co
 | P02 | AI Evaluation & QA Lab (historical Unity proposal) | Requirements, reproduced bugs, artifact checks | Bounded practice tasks and later independent evaluation | EVAL-001 runner 0.2.0 uses pinned snapshots, starter 0.1.0; M4 harness scope, no model candidate |
 | P03 | Tokyo 80s | Original music, timing and sustained interaction | Midnight Signal and Rain Circuit with track selection/transition | P03 0.5.0 head/tail review / P08 0.5.0 backing; human play/listening pending |
 | P04 | O Lich mais velho da tumba mais antiga / Darsen reading editions | Narrative, translation and reader production | Complete Portuguese story and English EPUB/PDF | Revised standalone adaptation 0.3.0 in both languages; old editions preserved, no historical manuscript restoration |
-| P05 | The Dark Knight / Cinderwatch | Turn-based seed, AGI, rows and states | Native three-encounter tactical rescue campaign | Native 0.3.0 self-contained Linux player; historical RMXP packages absent |
+| P05 | The Dark Knight / Cinderwatch | Turn-based seed, AGI, rows and states | Native three-encounter tactical rescue campaign | Native 0.5.0 recovery copies and guarded navigation; self-contained Linux player; historical RMXP packages absent |
 | P06 | Véu Partido / Veilbreak | Native combat trial; historical 3D RPG seed | Animated two-phase arena with committed contact, source and executed PCK | New 0.6.0 timed counter trial, sweep practice and Linux player; missing Unity starter remains historical |
 | P07 | Visual Generation & Asset Lab | Native visual production | Three paintings plus two real motion atlases consumed by P06 | 0.2.0 production/integration; independent artist approval absent |
 | P08 | Audio, Poetry & Music Lab | Original musical production and integration | Two P03 stages and P06 native soundscape | Real masters/exports/scores; no album or human listening approval |
@@ -424,7 +424,7 @@ Plans mentioned 21 classes, five races, levels 1–180, seven item tiers and Spr
 100 core/audio packages. Those packages/runtime are not present in this checkout;
 the Rave archive belongs to P10 and does not establish P05 provenance.
 
-Current destination **Cinderwatch 0.4.0** is a new bounded adaptation, not a
+Current destination **Cinderwatch 0.5.0** is a new bounded adaptation, not a
 restoration. Pure C#/.NET 10 owns the unchanged three-role/encounter economy:
 rows, fixed initiative, announced locked intentions, one action, Cover/Pin,
 finite treatment, scorch and two salvage choices. Core/save schema 0.1.0 remains.
@@ -438,6 +438,24 @@ runtime/source checks and engine/runtime notices accompany the delivery. Previou
 owned-assembly packs remain retained; current editable project is an alternative.
 [Play/rebuild](projects/cinderwatch/README.md), [release execution](evidence/cinderwatch/RELEASE_RUN.json).
 
+Version 0.5.0 adds native **Run files** recovery: save the current action journal
+to another file, verify it by readback/replay, and open a validated run without
+modifying its source. Future turns still use the primary autosave. New run,
+Resume, Open run and window close ask before leaving unpreserved accepted actions.
+Keep the run, retry, save a recovery copy or explicitly leave without saving.
+Successful retry/copy returns to the current run. Warning alone loses progress;
+blocking all navigation traps a player at a failed destination. This provides
+an alternate path while keeping deliberate discard available.
+
+[Recovery execution](evidence/cinderwatch/RECOVERY_RUN.json) records the actual
+baseline callbacks and native recovery/failure journeys. The unchanged baseline
+can replace two live actions with zero on New run or one on Resume after a failed
+write. Recovery preserves the accepted journal, not an invented snapshot/schema.
+Core Game/Content/Journal, rules/save 0.1.0 and all earlier media/packages remain.
+This is one primary slot with portable files, not multiple slots, cloud sync or
+power-loss durability. Technical M4 remains separate from independent player,
+physical accessibility and commercial validation.
+
 Version 0.4.0 adds optional selected-action **Inspect response**: calculate the
 same Core through consecutive announced enemies, stopping before the next crew
 choice, salvage or result. Projected HP/status/supplies and the full event chain
@@ -445,7 +463,7 @@ make defensive opportunity costs visible without choosing a later hero move.
 The keyboard/scrollable report spends nothing, preserves selection and save bytes,
 and returns focus before confirmation. Enemy turns still resolve manually.
 
-[Response execution](evidence/cinderwatch/RESPONSE_RUN.json) compares 906 legal
+Earlier [0.4.0 response execution](evidence/cinderwatch/RESPONSE_RUN.json) compares 906 legal
 branches with actual resolution across four synthetic campaign policies; 3,711
 domain checks, 908 headless project/player checks and 922 rendered source checks
 pass. Actual X11 delivery inspection/confirmation/resolution matches the report;
@@ -454,9 +472,10 @@ Content/Journal rules, original media and all prior ZIPs remain intact. This is
 native feedback, not a human learning finding. Independent play, physical
 listening/accessibility, other platforms and commercial validation remain separate.
 
-Next observe unassisted attack/Brace/Cover/Pin comparisons and understanding of
-the forecast boundary. Compare portfolio opportunities afresh; no North Star
-consumer or integration follows from this independent game's helper.
+Next observe unassisted recovery-file selection and understanding of preserved
+versus pending progress alongside attack/Brace/Cover/Pin comparisons. Compare
+portfolio opportunities afresh; no North Star consumer or integration follows
+from this independent game's recovery controls.
 
 ### P06 — Véu Partido / Veilbreak
 

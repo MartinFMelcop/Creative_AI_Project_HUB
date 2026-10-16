@@ -1,65 +1,73 @@
 # Lab state
 
-**Updated:** 2026-10-16 (UTC). **Seed:** 0.32.8.
-**Milestone:** P10 Flood Crossing browser 0.7.0 playable deferred request.
+**Updated:** 2026-10-16 (UTC). **Seed:** 0.32.9.
+**Milestone:** P05 Cinderwatch native 0.5.0 accepted-progress recovery.
 
-Baseline HEAD and fetched main were `f22b83cb959fd828bff6a0b90bbf324dc7cc48ba`.
-Inspected branch, local/outgoing history, remotes, current instructions and actual
-products before editing; preserved earlier branches and untracked work/.
-Authenticated Git transport works with supported network permission.
+Baseline HEAD and fetched main were `e183e31435e392f4ef8f5b8a95263c18c8473c64`.
+Inspected branch, working tree, local/outgoing history, remotes, instructions,
+current sources and deliveries; preserved earlier branches and untracked work/.
+Authenticated normal Git transport is available with supported network permission.
 
-Compared P05 native failed-save recovery, P03 physical practice, P06 unassisted
-learning, P11 actual handover/reconnect reading and P04 comprehension/source work.
-Choose P10 for narrative-strategy players: the noon receipt asks the afternoon
-crew again, but executed 0.6.0 cannot reopen the request. Wording-only repair
-removes the promise without agency; a whole upstream/return chapter would invent
-outcomes beyond the current game. Keep the working dependency-free browser product.
+Compared P02's already pinned evaluator (independent candidate evidence remains
+missing), P03/P06 unassisted physical learning, P04's revised bilingual story and
+source/reader comprehension, P11 actual handovers and P05 native continuity.
+P11 JSON export has a source-supported stale-session guard concern, not a
+reproduced runtime finding. Select P05 for solo tactical players: accepted turns
+survive a failed write only in memory, and old New/Resume immediately replace it.
+Warning-only leaves the loss unresolved; unconditional blocking traps a broken
+save destination. Keep C#/Godot and add a deliberate recovery route.
 
-[Campaign 0.7.0](../projects/waystone-dialogue/browser/README.md#revisit-a-deferred-request)
-lets a returning boat hand ask against actual afternoon work, current crew and
-remaining light. Read the updated list, hear Mara and obtain a fresh voluntary
-Iven offer. Noon consent is insufficient. Refuse, propose a boat/guide, reconsider
-or pause for local work; reopening refreshes facts and consent. Assets stay here
-until return terms are signed. A later loan changes only future carrying capacity;
-rescuing remaining villagers never recalls a departed volunteer. The immutable
-noon receipt remains deferred, with a separate afternoon decision and dusk record.
-No upstream rescue, boat/guide return or harvest is claimed.
+[Cinderwatch 0.5.0](../projects/cinderwatch/README.md) offers native Run files:
+Save recovery copy and Open run. A copy is read back and replayed before the
+current journal is considered preserved. Opening validates before navigation and
+again before replacement; source copies stay unchanged and future accepted turns
+use the original autosave. Failed writes retain live progress. New/Resume/Open/
+window close ask whether to keep it, retry, copy elsewhere or deliberately leave.
+A successful retry/copy cancels the queued departure and returns to the current
+run. Underlying turn/selection controls stay blocked during either native dialog.
+No new slot index, schema, rules, engine migration or cloud service.
 
-[Execution](../evidence/waystone-dialogue/DEFERRED_REQUEST_RUN.json) identifies exact
-baseline, environment, declared action traces, tested sources and evidence limits.
-Unchanged baseline passes 42 tests. Eight old traces compare 188 action checkpoints:
-snapshots, schemas 1–4 journals and completed epilogues match; one incorrect old
-opening now distinguishes stranded Iven from a guide actually sent upstream.
-Final complete suite passes all 53 tests, including nine new domain checks and
-two real-browser journeys. The consultation graph explores 266 states / 390
-transitions from three declared local states. Opening the consultation
-selects schema 5/engine 0.7.0; unused new behavior retains schemas 1–4 and versions.
+[Execution](../evidence/cinderwatch/RECOVERY_RUN.json) identifies the exact baseline,
+environment, tested source/package identities, declared inputs, actual frames,
+counts and limitations. Core baseline/final outcomes match across 3,711 checks;
+final project/player each pass 1,044 native checks and rendered source passes
+1,060, including 135 recovery checks (137 with PNG readback). These are control
+checks, not a usability score. Instrumented old callbacks prove memory two/disk one
+becomes zero on New and one on Resume. Actual old shipped-player clicks reproduce
+both losses while the saved prefix stays byte-identical. New native failure cases
+exercise primary/copy errors, cancellation, retry, explicit discard, invalid/
+oversized/changed candidates and closing. Full deterministic campaign outcomes
+match the baseline; package execution is separate from compilation and integrity.
+The actual two-process chooser journey preserves two accepted Guards, reopens
+them before the announced hound turn, then writes action three to the primary
+while the independent two-action copy stays byte-identical.
 
-Concrete executed tradeoff: from the same wet ferry night and supplied clinic,
-lending at noon carries two of four grain crates by dusk. Carry two first, then
-lend the ferry: the ridge brings one more; three arrive, one stays at the mill.
-Keeping the ferry or sending Iven has different future costs. This is a controlled
-comparison, not evidence that one policy is best for players or upstream residents.
+The Linux x86_64 player includes the pinned Godot .NET 4.6.3 engine, .NET 10.0.12,
+raw original media and notices. An editable compiled project remains available;
+all historical ZIPs and source/media bytes are retained. Interface inspection
+found clipped full-path statuses and an unnecessarily tall confirmation: compact
+messages retain full details in tooltips, and the confirmation uses a bounded, scrollable
+body. The Open run chooser remembers the last verified copy during this process.
+These are Codex technical and visual assessments, not independent player feedback.
 
-Review corrected false work at shift zero, a second arrival after pause, the
-stranded-Iven opening, afternoon medicine called a morning delivery and an offer
-that promised unfinished work could be completed. Actual desktop/mobile scenes
-keep light, capacity, tentative status and unverified returns legible. A retained
-ferry marker now stays at the local landing across reload; actual browser controls
-verify it after the final diagram fix. These are Codex source/visual judgments;
-independent human feedback remains pending.
-
-Technical M4 retained. No independent unassisted play, literary enjoyment,
-physical touch/assistive testing, native edition, commercial validation or Site
-redeployment. Existing sources, Python reference, media and other products remain
-intact. North Star stays foundation_only with 14 capabilities and zero consumers;
-this is origin product development, not destination integration.
+Technical M4 retained. Physical listening/accessibility, unassisted recovery and
+learning, other operating systems and commercial validation remain unverified.
+Preservation is verified at save time, without monitoring later external deletion,
+coordinating simultaneous processes or guaranteeing power-loss durability. The
+single primary slot still replaces a deliberately abandoned older run on play.
+The initialized old and new shipped players both ignore the synthetic X11 WM
+close request in this setup; normal desktop close is unverified. The persistence
+journey stops only owned previews before reopening; engine CloseRequested guards
+and normal verifier shutdown pass separately.
+North Star remains foundation_only: 14 capabilities, zero destination consumers.
+This improves an independent origin product, not MMORPG integration.
 
 The complete authoritative [prompt](prompts/CONTINUOUS_DEVELOPMENT.md) is unchanged.
-Its current artifact comparison, narrative consequence and bounded-process checks
-served the design. An earlier eight-minute bound cancelled the old handover graph after 47 passing
-tests. Concurrent focused browsers added contention; the final full suite ran
-alone under an eleven-minute bound, with no assertions removed. Provisional
-fixture mistakes and repeated diagnostic runs were not extra evidence. No observed need justifies another general rule or a fixed
-next project. Next: compare unassisted consultation/local-work understanding with
-native recovery/play, physical practice, actual handover and literary needs afresh.
+Existing real-artifact, failure/baseline and bounded-process guidance served the
+design. Repeated OCR readiness polling wasted time; actual frames plus file/state
+checks resolved it. Baseline/current NuGet audit failures under restricted network
+were environmental; normal supported permission restored builds without weakening
+audit or assertions. Missing writable CLI/XDG paths also required an owned-work
+environment. No observed issue warrants another general rule or fixed next target.
+Next compare unassisted recovery/play, physical practice, actual handovers and
+literary comprehension afresh; no independent experience result has been invented.

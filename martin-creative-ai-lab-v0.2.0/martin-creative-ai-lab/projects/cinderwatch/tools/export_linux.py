@@ -11,7 +11,7 @@ import tempfile
 from zipfile import ZipFile, ZipInfo, ZIP_DEFLATED
 
 ROOT = Path(__file__).resolve().parents[1]
-VERSION = "0.4.0"
+VERSION = "0.5.0"
 ENGINE_VERSION = "4.6.3.stable.mono.official.7d41c59c4"
 ARCHIVE_SHA = "6436f474ee085fb0a94d3d296b9821736bdd663b6e91b2228fdf77066f1d1400"
 TEMPLATE_SHA = "dde8bd2f5b6b8666c3656a57900f8c4163b3fc9799cc723746ca88468333b320"
@@ -115,7 +115,7 @@ def main():
         runtime = cache / "microsoft.netcore.app.runtime.linux-x64" / RUNTIME_VERSION
         shutil.copyfile(runtime / "LICENSE.TXT", bundle / "DOTNET-LICENSE.txt")
         shutil.copyfile(runtime / "THIRD-PARTY-NOTICES.TXT", bundle / "DOTNET-THIRD-PARTY-NOTICES.txt")
-        (bundle / "README.txt").write_text("""Cinderwatch 0.4.0 — Linux x86_64 tactical rescue prototype
+        (bundle / "README.txt").write_text("""Cinderwatch 0.5.0 — Linux x86_64 tactical rescue prototype
 
 Extract the ENTIRE Cinderwatch folder, then run ./cinderwatch.x86_64.
 Keep cinderwatch.pck, data_Cinder.Native_linuxbsd_x86_64 and media beside it.
@@ -131,9 +131,12 @@ Pin, scorch and supplies. Choose salvage between the three encounters; damage an
 resources carry forward. Sound toggles above the brief. Close the window to exit.
 
 Accepted actions autosave to Godot's per-user Cinderwatch directory, shared with
-the previous native project. Resume validates/replays them; New run starts fresh
-memory and replaces the slot only after a turn or explicit Save. No undo/cloud save.
-The original rules/save version remains 0.1.0. Keep a private copy of your save.
+the previous native project. Run files saves a verified recovery copy or opens
+a valid journal. Opening a copy leaves its source intact; future accepted turns
+use the primary autosave. Failed writes keep live progress: New run, Resume, Open
+and quit ask whether to keep it, retry, copy elsewhere or explicitly discard.
+A successful retry/copy returns to the current run. Save paths/errors are in the
+status tooltip. No undo/cloud save. Rules and save schema remain 0.1.0.
 
 For technical verification only (all input is scripted, not a human playtest):
 ./cinderwatch.x86_64 --headless -- --verify --save-path /tmp/cinder-check/save.json

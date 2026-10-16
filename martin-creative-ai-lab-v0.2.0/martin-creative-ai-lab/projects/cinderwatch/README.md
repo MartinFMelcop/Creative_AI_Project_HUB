@@ -1,11 +1,26 @@
-# Cinderwatch — P05 0.4.0
+# Cinderwatch — P05 0.5.0
 
 A complete small tactical rescue campaign, newly adapted from P05's turn-based
-seed. [Download the Linux player](dist/cinderwatch-linux-0.4.0.zip), extract the
+seed. [Download the Linux player](dist/cinderwatch-linux-0.5.0.zip), extract the
 whole folder and run `./cinderwatch.x86_64`: Godot and .NET are included. The
-[editable compiled project](dist/cinderwatch-0.4.0.zip) is also maintained.
+[editable compiled project](dist/cinderwatch-0.5.0.zip) is also maintained.
 [Play/rebuild](Native/README.md) explains both distributions, controls and saves.
 This is an actual three-encounter destination, not recovered RMXP/P10 code.
+
+Release **0.5.0** preserves accepted progress when the autosave cannot be written.
+**Run files → Save recovery copy…** writes the current action journal elsewhere,
+then reads and replays it before reporting success. **Open run…** validates a
+chosen journal without modifying that source; continued turns still use the
+primary autosave. New run, Resume, Open run and window close ask before leaving
+accepted progress that has not been preserved. Keep the run, retry the autosave,
+save a recovery copy, or explicitly leave without saving. A successful retry or
+copy returns to the current run; request navigation again when ready.
+
+[Recovery execution](../../evidence/cinderwatch/RECOVERY_RUN.json) distinguishes
+scripted native controls, failure/replay checks and Codex review from independent
+unassisted validation. This is portable recovery for one primary slot, with the
+same rules and journal schema; no cloud sync, multi-slot campaign manager or
+power-loss durability guarantee is introduced. Earlier ZIPs and evidence remain.
 
 Release **0.4.0** adds an optional **Inspect response** report after selecting an
 action. It branches the same deterministic Core through consecutive announced
@@ -24,7 +39,7 @@ validation. Existing campaign rules, save schema, art/audio and old ZIPs remain.
 
 Release 0.3.0 established the self-contained Godot .NET/Linux distribution with
 verified source/runtime/payload identity and original raw media. That delivery
-pattern is retained for 0.4.0; the earlier package and execution record remain.
+pattern is retained for 0.5.0; earlier packages and execution records remain.
 
 Rook shields, Vale reaches screened targets or pins an upcoming enemy action,
 and Neri treats injuries and scorch with finite kits. Front/rear screening,
@@ -37,7 +52,7 @@ scene reacts to which rescuers remain standing.
 
 The interface previews by forking the **same C# domain** that commits actions.
 It provides confirmation, manually paced enemy turns, a persistent chronological
-log, rules, accepted-action autosave/replay, failure feedback and restart.
+log, rules, accepted-action autosave/replay, verified recovery copies and guarded restart.
 No browser bridge, duplicate rules, cloud service or RNG dependency.
 
 ## Native identity and action feedback

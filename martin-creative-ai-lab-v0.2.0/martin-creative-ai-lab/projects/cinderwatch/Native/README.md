@@ -1,8 +1,8 @@
-# Cinderwatch native player 0.4.0
+# Cinderwatch native player 0.5.0
 
 ## Play the Linux distribution
 
-Download/extract the entire [Linux player](../dist/cinderwatch-linux-0.4.0.zip).
+Download/extract the entire [Linux player](../dist/cinderwatch-linux-0.5.0.zip).
 From its `Cinderwatch` directory:
 
 ```sh
@@ -14,15 +14,16 @@ source checkout is required. Keep `cinderwatch.pck`, `data_Cinder.Native_linuxbs
 and `media` beside the executable. If your extractor drops the permission, use
 `chmod +x cinderwatch.x86_64`. The OS needs a desktop/audio stack, ICU and compatible
 OpenGL support. This is a Linux x86_64 prototype; tested systems and limits are
-recorded in [response execution](../../../evidence/cinderwatch/RESPONSE_RUN.json).
+recorded in [recovery execution](../../../evidence/cinderwatch/RECOVERY_RUN.json);
+the earlier [response checks](../../../evidence/cinderwatch/RESPONSE_RUN.json) remain.
 
 Read the brief, enter the yard, inspect enemy intentions and the `NEXT` queue.
 Choose an action, inspect its computed forecast, then **Confirm action**.
 Enemy turns advance with **Resolve announced enemy action**. Tactics, selection
 and inspection spend nothing. Scroll the action list, or use Tab/Shift+Tab and
 Enter. After acceptance, focus follows the next legal action/resolution/salvage.
-The scene scales proportionally from 1280 × 800. Closing stops/drains playback
-before releasing owned resources.
+The scene scales proportionally from 1280 × 800. Closing asks before leaving
+unpreserved accepted progress, then stops/drains playback before releasing owned resources.
 
 Three fights, two one-time salvage choices and an ending; each fight has a
 12-round pressure deadline. HP/supplies persist. Fallen allies recover at salvage,
@@ -56,12 +57,38 @@ separates scripted checks and implementing-agent frame review from human learnin
 
 ## Save and resume
 
-Accepted turns autosave to `user://cinderwatch-save.json`. The app name and original
-schema/rules 0.1.0 remain compatible with previous native saves. **Resume** replays
-validated actions to the exact next turn. Malformed saves preserve live play;
-write failures keep memory progress and show an error. **New run** creates fresh
-memory; its first accepted turn or an explicit Save replaces the slot.
-One slot, no undo, cloud save or power-loss durability guarantee.
+Accepted actions autosave to `user://cinderwatch-save.json`. The app name and
+original schema/rules 0.1.0 remain compatible with previous native saves.
+**Resume** validates and replays the primary autosave to the exact next turn.
+**Save** retries that location. A successful write is read back and replayed
+before the app reports that the current accepted actions have been preserved.
+Write failures keep current progress in memory and show an error.
+
+After at least one accepted action, choose **Run files → Save recovery copy…**
+to select another JSON file. The copy contains the same action journal, not a
+screenshot or a new save format. It is also read back and replayed before success.
+The current run stays open; future accepted actions continue to use the primary
+autosave, rather than replacing the recovery copy. Choose a different path from
+the primary autosave; use **Save** to retry the primary location.
+
+**Run files → Open run…** selects an existing journal, including a recovery copy.
+The candidate must validate before replacing live play and is checked again when
+opened. Invalid files leave the current run intact. Opening does not modify the
+selected source file; subsequent accepted actions use the primary autosave.
+Resume opens that primary slot, while Open run lets you choose a recovery file.
+
+If accepted progress has not been preserved, **New run**, **Resume**, **Open run**
+and window close show **Keep this run before leaving**. Choose **Keep this run**,
+**Retry autosave**, **Save recovery copy…**, or the explicit **Leave without saving**.
+A successful retry or copy returns to the current run; request the navigation
+again when ready. Cancelling a copy returns to this choice. Failed recovery does
+not discard the run. **New run** starts fresh memory only after this guard; its
+first accepted action or explicit Save replaces the primary slot.
+
+This is one primary slot with portable recovery files, not a multi-slot manager.
+No undo, cloud sync or power-loss durability guarantee. [Recovery execution](../../../evidence/cinderwatch/RECOVERY_RUN.json)
+records technical failure/control checks; these do not establish unassisted
+player recovery, physical accessibility or independent approval.
 
 The player loads raw original PNG/WAV files beside its executable, independently
 of the shell's working directory. Source/compiled-project play still loads them
@@ -72,7 +99,7 @@ in `media/provenance.json`. Hashes are integrity records, not origin signatures.
 
 ## Editable compiled project
 
-The [compiled project pack](../dist/cinderwatch-0.4.0.zip) remains available for
+The [compiled project pack](../dist/cinderwatch-0.5.0.zip) remains available for
 editor/runtime use. It requires Godot **4.6.3 .NET** and .NET **10 runtime**:
 
 ```sh
@@ -81,7 +108,7 @@ godot-dotnet --path Native
 
 No SDK/NuGet restore is needed to play that alternate pack. The standard Godot
 editor cannot execute C#. It contains owned assemblies/source/configuration;
-its engine/API/runtime are external. Earlier 0.1.0/0.2.0/0.3.0 packs are preserved.
+its engine/API/runtime are external. Earlier 0.1.0/0.2.0/0.3.0/0.4.0 packs are preserved.
 
 ## Build and verify
 
