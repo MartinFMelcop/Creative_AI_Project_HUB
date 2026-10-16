@@ -25,6 +25,9 @@ public partial class Main
         var error = GetViewport().GetTexture().GetImage().SavePng(Path.Combine(captureDirectory, name + ".png"));
         Require(error == Error.Ok, "Could not capture the actual native viewport");
     }
+    // Legacy journal fixtures intentionally test direct reload, including discarding
+    // a fresh in-memory setup. The slot UI preservation contract has separate checks.
+    private void ReloadJournalForChecks() { session.Load(); ResetSelection(); Refresh(); }
     private async Task Verify()
     {
         try
@@ -68,11 +71,11 @@ public partial class Main
             next.EmitSignal(BaseButton.SignalName.Pressed);
             // Use the same saved file in both consumers, then restore it for UI loading.
             Require(Fingerprint(BoardJournal.Load(session.SavePath).Game) == Fingerprint(session.Game), "CLI-compatible journal diverged");
-            File.WriteAllText(session.SavePath, saved); load.EmitSignal(BaseButton.SignalName.Pressed);
+            File.WriteAllText(session.SavePath, saved); ReloadJournalForChecks();
             Require(Fingerprint(session.Game) == saveState, "Resume changed the exact next turn");
-            File.WriteAllText(session.SavePath, "{\"schema\":99}"); load.EmitSignal(BaseButton.SignalName.Pressed);
+            File.WriteAllText(session.SavePath, "{\"schema\":99}"); ReloadJournalForChecks();
             Require(Fingerprint(session.Game) == saveState && notice.Text.Contains("rejected"), "Invalid load destroyed the current match");
-            File.WriteAllText(session.SavePath, saved); load.EmitSignal(BaseButton.SignalName.Pressed);
+            File.WriteAllText(session.SavePath, saved); ReloadJournalForChecks();
             // A legal shared-location fixture exercises blocked theft, successful theft and protection through the UI.
             var fixture = new Game(0, new Rules(StartingGold: 30));
             Intent[] setup = [new(0,ActionKind.Work),new(1,ActionKind.Guard),new(3,ActionKind.Work),new(7,ActionKind.Work),
@@ -80,7 +83,7 @@ public partial class Main
             foreach (var intent in setup) Require(fixture.Apply(intent, out _), "Invalid shared-location fixture");
             foreach (var intent in new Intent[] { new(0,ActionKind.Steal,1), new(0,ActionKind.Steal,3), new(0,ActionKind.Guard) })
             {
-                Journal.Save(fixture, session.Policies, session.SavePath); load.EmitSignal(BaseButton.SignalName.Pressed);
+                Journal.Save(fixture, session.Policies, session.SavePath); ReloadJournalForChecks();
                 var expected = fixture.Fork(); Require(expected.Apply(intent, out _), "Fixture action unavailable");
                 planButtons[intent].EmitSignal(BaseButton.SignalName.Pressed); commit.EmitSignal(BaseButton.SignalName.Pressed);
                 Require(Fingerprint(session.Game) == Fingerprint(expected), "Theft/ward UI changed transaction effects");
@@ -101,9 +104,9 @@ public partial class Main
             while(session.Game.Result == null && session.Game.Current != 0) { next.EmitSignal(BaseButton.SignalName.Pressed); await Frame(); }
             Require(Fingerprint(session.Game) == Fingerprint(forecast.After), "Native rival turns diverged from the displayed forecast");
             NewDialog(); var newWindow = GetChildren().OfType<ConfirmationDialog>().Single();
-            newWindow.FindChildren("*", "OptionButton", true, false).OfType<OptionButton>().Single().Select(1); newWindow.EmitSignal(ConfirmationDialog.SignalName.Confirmed); await Frame();
+            ((OptionButton)newWindow.FindChild("RivalProfiles", true, false)).Select(1); newWindow.EmitSignal(ConfirmationDialog.SignalName.Confirmed); await Frame();
             Require(session.Policies.SequenceEqual(new[]{"collector","keeper","opportunist","collector"}), "Classic mode changed original profiles");
-            session.Save(); var classicPolicies = session.Policies.ToArray(); session.New(4); load.EmitSignal(BaseButton.SignalName.Pressed);
+            session.Save(); var classicPolicies = session.Policies.ToArray(); session.New(4); ReloadJournalForChecks();
             Require(session.Policies.SequenceEqual(classicPolicies), "Loading an old-policy save silently upgraded its rivals");
             var seen = new HashSet<ActionKind>();
             foreach (var seed in new[] { 0, 1, 2, 3, 4, 5, 6, 7, 18 })
@@ -130,7 +133,7 @@ public partial class Main
             await Capture("result");
             // Income-only policies exercise a genuine deadline, distinct from Gate victory.
             Journal.Save(new Game(1), ["worker", "worker", "worker", "worker"], session.SavePath);
-            load.EmitSignal(BaseButton.SignalName.Pressed);
+            ReloadJournalForChecks();
             while (session.Game.Result == null)
             {
                 if (session.Game.Current == 0)
@@ -158,6 +161,7 @@ public partial class Main
             await ToSignal(GetTree().CreateTimer(1.1), SceneTreeTimer.SignalName.Timeout); verification = true;
             Require(Fingerprint(session.Game) == afterFocus, "Auto rivals advanced after focus-out");
             await VerifyLocalSeats();
+            VerifySlots(); await VerifySlotInterface();
             GD.Print(JsonSerializer.Serialize(new { native_board = "pass", assertions, complete_gate_or_deadline_matches = 26, local_seat_sets = 15,
                 source_rule_parity = true, journal_replay = true, keyboard_venue_input = true,
                 strategic_profiles = true, conditional_forecast = true, classic_mode = true,

@@ -1,0 +1,337 @@
+{
+  "schema": 1,
+  "date": "2026-10-16",
+  "project": "P01",
+  "version": "0.6.0",
+  "baseline": {
+    "commit": "67e68cda3840ebb473d5122afb370dbc8a86c154",
+    "native_version": "0.5.0",
+    "transport": "Authenticated normal Git; remote main matched at discovery and resumed inspection.",
+    "working_tree": "No tracked user edits; existing untracked work/ and branches preserved.",
+    "shipped_session_probe": {
+      "baseline_version": "0.5.0",
+      "board_assembly_sha256": "922f8f53c6e3f8d5c5be6958e0ece540da1909a297b6153801f9d697c112b651",
+      "core_assembly_sha256": "20745399586a5582624f2795814ee5f0dc205ae6153c2077f5f1bb9306979dab",
+      "first_fair": {
+        "seed": 0,
+        "round": 1,
+        "next_actor": 1,
+        "accepted_turns": 1,
+        "local_seats": [
+          0,
+          2
+        ],
+        "policies": [
+          "collector",
+          "keeper",
+          "opportunist",
+          "collector"
+        ],
+        "save_sha256": "80e2904d47321d70418d099e2f21d18d2d50edd16b96132090967dcbfbc2bd23"
+      },
+      "second_fair": {
+        "seed": 3,
+        "round": 1,
+        "next_actor": 0,
+        "accepted_turns": 1,
+        "local_seats": [
+          3
+        ],
+        "policies": [
+          "collector",
+          "keeper",
+          "opportunist",
+          "collector"
+        ],
+        "save_sha256": "cb18322961fd8c6e51340e4e15e0054b537a02d8116da3b60238a3861d9b356c"
+      },
+      "restarted_fair": {
+        "seed": 3,
+        "round": 1,
+        "next_actor": 0,
+        "accepted_turns": 1,
+        "local_seats": [
+          3
+        ],
+        "policies": [
+          "collector",
+          "keeper",
+          "opportunist",
+          "collector"
+        ],
+        "save_sha256": "cb18322961fd8c6e51340e4e15e0054b537a02d8116da3b60238a3861d9b356c"
+      },
+      "old_save_stayed_until_acceptance": true,
+      "second_accepted_turn_replaced_same_file": true,
+      "continuation_files": [
+        "match.json"
+      ],
+      "limit": "Console execution of exact shipped BoardSession/Core bytes with isolated disk writes; no native UI, human play or power-loss durability validation."
+    },
+    "full_native_x11": {
+      "assertions": 1586,
+      "complete_matches": 26,
+      "local_seat_sets": 15,
+      "exit_code": 0,
+      "limits": "Scripted engine controls on virtual X11, not human play."
+    }
+  },
+  "audience_and_goal": "Solo players and different groups sharing a device should choose and resume their own fair without a second fair erasing the first.",
+  "selection": {
+    "compared": [
+      "P01 independent continuations",
+      "P05 recovery and response inspection",
+      "P06 unassisted learning",
+      "P03 physical practice/controls",
+      "P04 independent bilingual comprehension",
+      "P11 actual handovers",
+      "P10 deferred noon request, currently not reopened in afternoon"
+    ],
+    "alternatives_rejected": [
+      "A stronger replacement warning still cannot retain both fairs.",
+      "Automatic hidden archives obscure the destination.",
+      "A metadata index duplicates facts already verified by journal replay."
+    ],
+    "reason": "Actual shipped BoardSession execution demonstrates one continuation being overwritten; a useful workflow and preservation boundary can be executed here without inventing human acceptance."
+  },
+  "implementation": {
+    "slots": 3,
+    "legacy_path": "Fair 1 retains match.json; added slots match.slot2.json and match.slot3.json.",
+    "summary": "Replay-derived seed/round/accepted turns/local names/next actor or winners; unavailable data is never presented as a valid fair.",
+    "creation": "Validate and atomically save a zero-turn configuration before opening it; explicit occupied/invalid destination confirmation.",
+    "switching": "Save pending accepted progress before switching, block on failure; same-slot recovery reads only after the recovered write.",
+    "startup": "Occupied initial path has no active fallback until a valid load or deliberate creation succeeds; failed restore disables play/save/export and explains rejection.",
+    "replay": "Separate paths, including extensionless custom bases.",
+    "bounds": [
+      "Three fixed slots; no custom names or last-slot preference.",
+      "Startup uses Fair 1; other saved fairs require explicit choice.",
+      "No undo, cloud synchronization or concurrent-process coordination."
+    ]
+  },
+  "environment": {
+    "os": "Debian 13 Linux x86_64",
+    "sdk": "10.0.401 in scratch",
+    "engine": "Godot .NET 4.6.3 stable official 7d41c59c4",
+    "editor_archive_sha256": "702a8a6785060203fd46373adf864586ecf0c377ac685d7107dde66b1eba0a9e",
+    "bundled_runtime": "10.0.12",
+    "display": "Xorg 1.21.1.16 dummy 1280x800; Mesa 25.0.7 llvmpipe OpenGL 4.5",
+    "audio": "Dummy; no audio feature or physical playback claim.",
+    "permissions": "Supported additional network permission for local X11 sockets and downloads/Git; scratch XDG data/config/cache paths, proxy retained."
+  },
+  "execution": [
+    {
+      "artifact": "Maintained source, X11 full --verify",
+      "assertions": 1747,
+      "complete_matches": 26,
+      "local_seat_sets": 15,
+      "exit_code": 0,
+      "commands": [
+        "dotnet build Native/Eclipse.Board.csproj -c Debug",
+        "Godot_mono --headless --path Native --editor --import --quit",
+        "Godot_mono --display-driver x11 --rendering-method gl_compatibility --audio-driver Dummy --path Native -- --verify --save-path <fresh>/match.json --capture <frames>"
+      ],
+      "covers": "Unchanged rule/forecast/turn parity, all local seat sets, full Gate/deadline play, legacy loads plus independent slots, cancelled/confirmed replacement, keyboard Continue/Escape/Enter, invalid startup, write failure and recovery."
+    },
+    {
+      "artifact": "Compiled project pack outside source",
+      "entries": 35,
+      "assertions": 148,
+      "exit_code": 0,
+      "command": "Godot_mono --headless --path <extracted>/eclipse-board/Native -- --verify-slots --save-path <fresh>/match.json",
+      "limits": "External matching engine/.NET available; no new runtime-only claim for this optional pack."
+    },
+    {
+      "artifact": "Exact delivered Linux player, X11 --verify-slots",
+      "assertions": 154,
+      "exit_code": 0,
+      "command": "env PATH=/usr/bin:/bin DOTNET_ROOT=/nonexistent DOTNET_ROOT_X64=/nonexistent <extracted>/EclipseFair/eclipse-fair.x86_64 --display-driver x11 --rendering-method gl_compatibility --audio-driver Dummy -- --verify-slots --save-path <fresh>/match.json --capture <frames>",
+      "external_sdk_runtime_excluded": true,
+      "runtime_errors": 0
+    },
+    {
+      "artifact": "Exact delivered Linux player, separate normal processes",
+      "fixture": {
+        "fixture": "Declared saves created by exact shipped domain assemblies; setup uses SDK, player processes below do not",
+        "board_sha256": "4b56543033056586c7ebf708af8cee5effdd0b63d9f613bbe4dbfea155a7976b",
+        "core_sha256": "20745399586a5582624f2795814ee5f0dc205ae6153c2077f5f1bb9306979dab",
+        "summaries": [
+          {
+            "Slot": 1,
+            "Status": 1,
+            "IsOccupied": true,
+            "Seed": 0,
+            "Round": 1,
+            "AcceptedTurns": 2,
+            "LocalPlayers": [
+              "Vaelis",
+              "Nira"
+            ],
+            "NextParticipant": "Nira",
+            "Winners": [],
+            "Detail": "Seed 0 · Round 1 · 2 accepted turns\nLocal: Vaelis, Nira\nNext: Nira"
+          },
+          {
+            "Slot": 2,
+            "Status": 1,
+            "IsOccupied": true,
+            "Seed": 3,
+            "Round": 1,
+            "AcceptedTurns": 1,
+            "LocalPlayers": [
+              "Morrak"
+            ],
+            "NextParticipant": "Vaelis",
+            "Winners": [],
+            "Detail": "Seed 3 · Round 1 · 1 accepted turns\nLocal: Morrak\nNext: Vaelis"
+          },
+          {
+            "Slot": 3,
+            "Status": 0,
+            "IsOccupied": false,
+            "Seed": null,
+            "Round": null,
+            "AcceptedTurns": null,
+            "LocalPlayers": [],
+            "NextParticipant": null,
+            "Winners": [],
+            "Detail": "Empty slot."
+          }
+        ],
+        "files": [
+          {
+            "name": "match.json",
+            "sha256": "df6c337c4e0ecd118d084bf1bb038433fef4eafd54d5caae9b98a028c8e5aba2",
+            "bytes": 626
+          },
+          {
+            "name": "match.slot2.json",
+            "sha256": "cb18322961fd8c6e51340e4e15e0054b537a02d8116da3b60238a3861d9b356c",
+            "bytes": 529
+          }
+        ]
+      },
+      "actual_saved_file_sha256_after_restart": {
+        "match.json": "df6c337c4e0ecd118d084bf1bb038433fef4eafd54d5caae9b98a028c8e5aba2",
+        "match.slot2.json": "cb18322961fd8c6e51340e4e15e0054b537a02d8116da3b60238a3861d9b356c"
+      },
+      "observed": "Declared A loaded with Nira handoff, explicit Continue Fair 2 showed seed 3 / Morrak local / next Vaelis; WM close, fresh process loaded A with Nira handoff again. Both files byte-identical.",
+      "input": "External libXtst synthetic pointer/keyboard and WM protocol; actual viewport captures inspected by Codex.",
+      "limits": "Initial old preview interaction was inconclusive; fresh focused process and delayed capture resolved observation. No product fix or human-input claim. --max-fps 60 bounds software rendering; normal windows closed."
+    },
+    {
+      "artifact": "Unchanged C# core",
+      "checks": 13,
+      "failures": 0,
+      "command": "dotnet run --project Checks -c Release"
+    },
+    {
+      "artifact": "Linux producer/package",
+      "entries": 200,
+      "boundary_regressions": 5,
+      "command": "python3 tools/export_linux.py --godot <pinned-editor> --template <verified-baseline-release-binary>; python3 tools/check_linux.py; python3 tools/test_check_linux.py",
+      "result": "Pass; complete source/payload/runtime/notices identities and download checksum."
+    }
+  ],
+  "refinements_and_nonpasses": [
+    "Baseline default user-data/cache paths were unwritable and segfaulted before usable execution. The unchanged baseline succeeds with scratch XDG paths; no product workaround.",
+    "A duplicate baseline headless run and provisional source verification were terminated before completion; neither is a pass. Completed baseline X11 and final source runs are reported above.",
+    "First slot UI run rejected popup size 800x6565. Fixed real wrap width; final selector and configuration fit the viewport without relaxing the geometry checks.",
+    "A provisional 154-assertion pass logged competing exclusive windows; it is not a clean pass. Parent replacement to setup and exercise Escape/Enter; final run has no ERROR.",
+    "Read-only review found hidden initial-load rejection/overwrite and extensionless replay collisions; add HasCurrent guards and real failure/export cases.",
+    "Read-only packaging review found stale 0.5.0 regression fixture; update it to the actual 0.6.0 player.",
+    "Interrupted session left an unbounded software-rendered preview alive for over seven hours. Stop it, use --max-fps 60 and close final normal processes; refine prompt process-lifecycle guidance."
+  ],
+  "preservation": {
+    "verified_against_baseline": {
+      "projects/eclipse-fair/Core/Agents.cs": "026f77026f4bad7839f3f6f70ff350246e6d6d661aa3a97e6138b292c25dfb05",
+      "projects/eclipse-fair/Core/Game.cs": "59c4e50b13d0189c88b0a7cc11310f001bed0c687640b9a68b052a16fa2bea94",
+      "projects/eclipse-fair/Core/Planning.cs": "f7dfef9127a59def7b6c862d5293574232c7dac202a84f528c6c9c5a4b849829",
+      "projects/eclipse-fair/Cli/Journal.cs": "64db61d7599aa852dfa9815b9f3d58e1126cacc116357388319c791c0d9d6a76",
+      "projects/eclipse-fair/Native/BoardJournal.cs": "88a2c62e8965e773256bbb0376bf1496d5bab4d10cd73b328a91dda82fee3926",
+      "projects/eclipse-fair/rules/baseline.json": "6b3a508e9417492f7d3a7c1e5d722c16c182620d7e1936371a42abc0f93991cf",
+      "projects/eclipse-fair/rules/expensive-seals.json": "a2684765b223ec2786b6b1627d7ff9b02ffd774d63efe0416aae6eb7e089ea7b",
+      "projects/eclipse-fair/dist/eclipse-board-0.2.0.zip": "faadb4309cd0f7003d8ce3d23646dde455beecab0fe18245db292c94af303c6b",
+      "projects/eclipse-fair/dist/eclipse-board-0.3.0.zip": "a77f3be31829f5f0fb6ba3d1b798a88e8b0525d917860850f81b1c0e5aeee569",
+      "projects/eclipse-fair/dist/eclipse-board-0.4.0.zip": "bd1c81c0b1cb9ac3356b172756c45833ca74ac061580f5a6b145a555d7434a0e",
+      "projects/eclipse-fair/dist/eclipse-board-0.5.0.zip": "f2edfe275f515df8dc1fb94589b3a726fcc1f5c528891b8a8d5d675d742bb6c7",
+      "projects/eclipse-fair/dist/eclipse-fair-0.1.0.zip": "1d931daa1d630fe9201be3af07999d8969447c1cad6e685d1f6f5e34814f1422",
+      "projects/eclipse-fair/dist/eclipse-fair-linux-0.5.0.zip": "9d7b105f04e9ad045f6192889af38f9a7d60345947dc32c718bc0c185ce78062",
+      "projects/eclipse-fair/dist/eclipse-fair-linux-0.5.0.zip.sha256": "5421b0782d746464a3fbac949de72bdf17dcb5d19515cbcf09c3c6f8a9b7615b"
+    },
+    "unchanged_schemas": "boardSchema 1, economy schema 1 / rules 0.1.0",
+    "core_assembly_sha256": "20745399586a5582624f2795814ee5f0dc205ae6153c2077f5f1bb9306979dab",
+    "other_products_and_references": "No source/assets/reference/catalog changes. No North Star consumer or integration added."
+  },
+  "artifacts": {
+    "projects/eclipse-fair/dist/eclipse-board-0.6.0.zip": {
+      "sha256": "9f38c343725930bac8608a97e52635f42f1bd8baa6428f257ca77c9e5563763e",
+      "bytes": 125244
+    },
+    "projects/eclipse-fair/dist/eclipse-fair-linux-0.6.0.zip": {
+      "sha256": "51fd0ea6ca0163b4e9e940fcd0c75c2b5b83f48fa7e3c59aef132c6d9ba49d03",
+      "bytes": 64561315
+    },
+    "projects/eclipse-fair/dist/eclipse-fair-linux-0.6.0.zip.sha256": {
+      "sha256": "90006007676d5ffaf589105f7049c9c0a478919f7445501dbb93a78918cc802b",
+      "bytes": 95
+    },
+    "evidence/eclipse-fair/slots.png": {
+      "sha256": "bed67dcfd22b74902b429e73ffdb093daca0f3f40470c75add40e7321bd7dd4d",
+      "bytes": 127413
+    },
+    "evidence/eclipse-fair/slots-replacement.png": {
+      "sha256": "85cc9c02b8ec7331d807b4882686a989b464eedae987b75124a5feba61d31674",
+      "bytes": 154436
+    },
+    "evidence/eclipse-fair/slots-unavailable.png": {
+      "sha256": "e3bef79f10b3a95f40395a0737fcce6e36cb554fbff7691649c844701789909c",
+      "bytes": 117248
+    }
+  },
+  "creative_assessment": {
+    "kind": "Implementing-agent Codex judgment after actual native viewport inspection",
+    "finding": "Destination cards distinguish a shared Nira handoff from a solo Morrak fair; focused replacement names the exact saved group and irreversible effect. Clear empty/unavailable states and visible unsaved progress support deliberate continuation. This is workflow judgment, not demonstrated human usability.",
+    "limits": [
+      "No independent human shared-device play/strategy/learning/accessibility validation.",
+      "No physical keyboard/controller/display or listening validation.",
+      "No other OS, power-loss durability, demand, originality, revenue or commercial-readiness claim.",
+      "No Site redeployment. Technical M4 retained; North Star foundation_only / zero consumers."
+    ]
+  },
+  "prompt_lifecycle": {
+    "file": "docs/prompts/CONTINUOUS_DEVELOPMENT.md",
+    "change": "Replace the existing first verification sentence with bounded runtime/owned-process cleanup guidance; all other text retained.",
+    "reason": "Observed unattended preview after interruption, not the selected project or an underlying model improvement.",
+    "sha256": "8212e510d1ab7b3c8526b14120a41391ed81cf17c8a56b9c49c0de9dd4009d1a"
+  },
+  "publication": "Actual commit, remote main and final CI status reported separately at task closure; package creation and local verification are not publication.",
+  "shared_checks": {
+    "repository_validation": {
+      "projects": 11,
+      "transfers": 15,
+      "assets": 9,
+      "legacy_sources": 2,
+      "local_links": 487
+    },
+    "validator_regressions": 13,
+    "manifest_regressions": 11,
+    "reference_regressions": 30,
+    "reference_integrity": {
+      "preserved_sources": 607,
+      "derived_pdf_texts": 18,
+      "explicit_exclusions": 140,
+      "capabilities": 14,
+      "north_star_consumers": 0
+    },
+    "maintained_file_count": 1154,
+    "commands": [
+      "python3 tools/validate_repo.py",
+      "python3 tools/test_validate_repo.py",
+      "python3 tools/test_check_manifest.py",
+      "python3 tools/reference_library.py check",
+      "python3 tools/test_reference_library.py",
+      "python3 tools/check_manifest.py"
+    ],
+    "scope": "Structure, regression and preserved-byte identity; no additional product or human execution claims."
+  }
+}

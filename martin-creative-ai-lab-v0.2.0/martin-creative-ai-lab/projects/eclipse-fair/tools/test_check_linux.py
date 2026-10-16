@@ -8,7 +8,7 @@ import unittest
 from zipfile import ZipFile
 import check_linux
 
-PACKAGE = check_linux.ROOT / 'dist/eclipse-fair-linux-0.5.0.zip'
+PACKAGE = check_linux.ROOT / 'dist/eclipse-fair-linux-0.6.0.zip'
 
 class PackageChecks(unittest.TestCase):
     def setUp(self):

@@ -1573,3 +1573,48 @@ Controlled fixtures are declared; synthetic input and Codex artifact review do
 not establish independent learning, enjoyment or physical latency. Retain M4 and
 North Star foundation-only with no destination consumer. Keep the authoritative
 prompt unchanged: existing artifact, environment and evidence guidance suffices.
+
+
+## ADR-067 — preserve independent local fairs without a second save index
+
+**Date:** 2026-10-16 (America/Sao_Paulo). **Status:** P01 native 0.6.0; technical M4 retained.
+
+Compare native P01/P05 recovery, P06 learning, P03 physical practice, P04 reader
+comprehension, actual P11 handovers and P10's deferred noon request. The latter
+promises another consultation that the afternoon currently cannot reopen; it is
+a credible narrative candidate, not permission to fabricate upstream success.
+P04's existing revision already addresses the demonstrated agency/mechanism issues.
+Choose separate P01 continuations for solo and different groups sharing a device:
+the shipped 0.5.0 session really replaces A's only file on B's first accepted turn.
+Existing journal writes are already atomic. A stronger warning alone cannot keep
+both fairs; invisible automatic archives make the continuation harder to choose.
+
+Offer three explicit slots, with seed/round/accepted-turn/local-seat/next-actor or
+winner summaries derived by validated replay. Keep the original match.json as
+Fair 1 and startup default. Extra slots and economy-only replays have separate
+paths, including extensionless custom bases. No metadata/index, schema migration,
+rule/profile change, cloud service or shared game framework. Preserve old ZIPs.
+Create a validated initial save before opening a new fair; require explicit
+replacement for occupied or invalid destinations. Save pending accepted progress
+before switching, block on failure and read the recovered file before resuming
+the same slot. Failed candidates retain the current in-memory fair. An unavailable
+initial save opens no fallback fair: explain rejection and require a valid choice
+or deliberate new destination before gameplay/save/export can occur.
+
+Native execution exposed popup minimum-height feedback and competing exclusive
+windows. Give wrapping labels a real width and parent replacement to its setup;
+exercise actual engine keyboard cancellation/confirmation rather than only signals.
+Read-only review found initial-save overwrite and extensionless replay collisions;
+add concrete failure/recovery cases. The Linux package fixture must follow 0.6.0.
+Use the existing pinned Godot .NET/C# producer, runtime and notices; compilation,
+source execution, package integrity and shipped execution remain separate evidence.
+
+Three fixed slots, startup Fair 1, no undo/automatic backup and no coordination
+between simultaneous app processes are deliberate bounds. Engine/X11 synthetic
+input and Codex visual assessment do not establish independent shared-device,
+accessibility, enjoyment or market validation. North Star remains foundation-only
+with zero consumers. Refine the existing verification sentence in the complete authoritative prompt
+to bound owned runtime processes and stop previews after verification/interruption.
+An interrupted session left an unbounded graphics process alive for over seven
+hours. This changes process lifecycle guidance, not portfolio priorities or the
+underlying model; all other discovery/evidence/publication contracts remain.

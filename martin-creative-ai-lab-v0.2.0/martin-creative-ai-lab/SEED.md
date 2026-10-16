@@ -1,6 +1,6 @@
 # SEED — Martin Creative AI Lab
 
-**Version:** 0.32.6
+**Version:** 0.32.7
 **Data-base:** 10 de outubro de 2026  
 **Autor e responsável pelo portfólio:** Martin Melcop Neto  
 **Working language:** English for new documentation, plans, code comments, UI, and reports. Preserve original creative titles and historical source languages.
@@ -70,14 +70,14 @@ Se apenas este arquivo estiver disponível, ele é suficiente para iniciar a Fas
 |---|---|
 | Repository | MartinFMelcop/Creative_AI_Project_HUB; actual Git root `/workspace/Creative_AI_Project_HUB`; wrapper retained |
 | Preserved sources | Old ZIP: 175 Rave / 3 WebSocket texts unchanged. New Rave library: 589 readable / 140 excluded from 729; ten main and eight OVA PDFs (2,407 pages) plus derived text; ZIP/policy unavailable |
-| Current milestone | P03 Tokyo 80s 0.5.0 completed-take review |
-| Delivery | Whole-take/passage lane timing and distance, explicit hold causes, additive JSON and usable keyboard on focused volume |
-| Evidence | Same-score baseline collapse, 12 legacy-state comparison traces, head/tail logic and real-audio browser journeys; see `docs/STATE.md` |
-| Limits | Controlled technical execution and Codex interface review; no physical/independent player, learning, assistive or commercial validation |
-| Next action | Compare fresh opportunities, including physical/unassisted rhythm practice, native fair slots/play, actual handover use and independent literary comprehension |
-| Other products | P01 0.5.0, P05 0.4.0, P06/P10 0.6.0, P08 0.5.0, P04 0.3.0, P11 0.8.0 and P02 0.2.1 retained |
+| Current milestone | P01 Eclipse Fair native 0.6.0 independent fair continuations |
+| Delivery | Three replay-validated fair slots, immediate creation, explicit replacement and failed-save switch protection; standalone Linux player |
+| Evidence | Shipped baseline single-slot replacement, independent histories/replays, engine keyboard/modal/save-failure journeys and current packages; see `docs/STATE.md` |
+| Limits | Technical execution and Codex interface review; three fixed slots, Fair 1 startup, no multi-process/cloud/undo or independent human validation |
+| Next action | Compare unassisted native continuity/play, the actual deferred Waystone request, physical rhythm practice, handover use and literary comprehension afresh |
+| Other products | P03/P08 0.5.0, P05 0.4.0, P06/P10 0.6.0, P04 0.3.0, P11 0.8.0 and P02 0.2.1 retained |
 | Rules / assets | Existing reference bytes, games and media retained; North Star has no consumer |
-| Attribution | Remote baseline `2382074`; Codex implementation, controlled synthetic input and artifact review; independent human feedback remains pending |
+| Attribution | Remote baseline `67e68cd`; Codex implementation, engine input and artifact review; independent human feedback remains pending |
 
 Registry evidence paths must resolve to existing files inside the lab; working
 paths must be directories and legacy-source IDs must exist. This documentary
@@ -245,7 +245,7 @@ Identificadores persistem mesmo quando nomes mudam. Um projeto arquivado pode co
 
 | ID | Seed | Matéria-prima principal | Destinos possíveis | Estado nesta fundação |
 |---|---|---|---|---|
-| P01 | Artemyra / Eclipse Fair | Typed economy and native C# presentation | Godot .NET board, terminal workbench, replay and comparison | Native 0.4.0 local participants; core/CLI rules 0.1.0 retained, no historical restoration |
+| P01 | Artemyra / Eclipse Fair | Typed economy and native C# presentation | Godot .NET board, terminal workbench, replay and comparison | Native 0.6.0 local fair slots and standalone Linux; core/CLI rules 0.1.0 retained |
 | P02 | AI Evaluation & QA Lab (historical Unity proposal) | Requirements, reproduced bugs, artifact checks | Bounded practice tasks and later independent evaluation | EVAL-001 runner 0.2.0 uses pinned snapshots, starter 0.1.0; M4 harness scope, no model candidate |
 | P03 | Tokyo 80s | Original music, timing and sustained interaction | Midnight Signal and Rain Circuit with track selection/transition | P03 0.5.0 head/tail review / P08 0.5.0 backing; human play/listening pending |
 | P04 | O Lich mais velho da tumba mais antiga / Darsen reading editions | Narrative, translation and reader production | Complete Portuguese story and English EPUB/PDF | Revised standalone adaptation 0.3.0 in both languages; old editions preserved, no historical manuscript restoration |
@@ -261,7 +261,7 @@ P02 agrupa evaluation e QA porque podem compartilhar a mesma aplicação pequena
 
 ### P01 — Artemyra / ArtemiZ4
 
-[Eclipse Fair](projects/eclipse-fair/README.md) **0.4.0** supports solo control of
+[Eclipse Fair](projects/eclipse-fair/README.md) native **0.6.0** supports solo control of
 any seat or two-to-four local participants sharing the native board. Named handoff
 spends no turn; map/budgets/objective/results follow the actual actor. Optional
 Planning/Classic rivals retain their behavior. Next turns executes only rivals
@@ -270,12 +270,11 @@ up to the next human choice or an ending; suggestions disclose policy assumption
 Native saves wrap validated local seats around the original accepted-action
 journal. Old plain journals resume with Vaelis; explicit economy exports omit
 controls for compatible policy consumers. Core/rules remain 0.1.0 and all earlier
-packages are retained. Godot .NET source and the compiled 0.4.0 project execute,
-including outside source with runtime-only .NET/no SDK. [Execution](evidence/eclipse-fair/LOCAL_RUN.json)
-records fifteen seat sets, twenty-six complete journeys, keyboard/configuration,
-forecast/save boundaries, compiled baseline comparison and raw viewport review.
-Codex scripted play is not independent human usability/balance. No LAN, standalone
-OS export, historical RPG restoration or commercial readiness is claimed.
+packages are retained. The [0.4.0 local-play execution](evidence/eclipse-fair/LOCAL_RUN.json) records
+fifteen seat sets, twenty-six journeys and forecast/save boundaries at that
+version. Current native delivery is described below. Codex scripted play is not
+independent human usability/balance. No LAN, historical RPG restoration or
+commercial readiness is claimed.
 The historical context below remains direction, not current runtime.
 
 **Núcleo histórico:** party RPG competitivo originado em RPG Maker XP/RGSS. Quatro jogadores, MVP com um humano contra três IAs, tabuleiro, minigames e recursos temporários. O histórico inclui formatos FFA e propostas de 2v2, sem campanha e com LAN como expansão.
@@ -300,7 +299,16 @@ The historical context below remains direction, not current runtime.
 
 **Gate de continuação:** regras básicas compreendidas, importação selecionada, estado real registrado e uma hipótese de case definida. Se a migração integral for cara, extrair a regra e construir um protótipo novo menor.
 
-P01 native 0.5.0 now distributes a standalone Linux x86_64 player, including
+Native 0.6.0 keeps three independent local fairs with summaries derived by
+validated journal replay. New fair selects a slot and saves immediately; occupied
+or invalid destinations need explicit replacement. Switching first preserves
+pending accepted progress and blocks on write failure. An unavailable startup
+save disables fallback play until a fair is deliberately opened/created. Slot 1
+keeps the existing path, extra slots/replays are distinct, and schema/rules stay
+unchanged. The [slot execution](evidence/eclipse-fair/SLOT_RUN.json) separates real
+engine/packaged checks from Codex judgment. No cloud, undo or independent play.
+
+P01 native 0.5.0 introduced a standalone Linux x86_64 player, including
 verified Godot .NET 4.6.3 and .NET 10.0.12 with notices. The optional compiled
 project remains available; all earlier ZIPs are retained. The adapted P05 release
 producer has a genuine second consumer, source/payload identity checks and actual

@@ -18,7 +18,7 @@ setup, source and verification; versions identify prototypes or reading editions
 
 | Project | Experience or workflow | Implementation | Available delivery |
 |---|---|---|---|
-| **P01 · [Eclipse Fair](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/projects/eclipse-fair/README.md)** · 0.5.0 | A market race with rival planning, any-seat solo play and 2–4 local participants | C# / .NET 10, Godot .NET | Standalone Linux x86_64 player and optional compiled project |
+| **P01 · [Eclipse Fair](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/projects/eclipse-fair/README.md)** · 0.6.0 | A market race with rival planning, local participants and independent saved fairs | C# / .NET 10, Godot .NET | Standalone Linux x86_64 player and optional compiled project |
 | **P03 · [Tokyo 80s: Night Shift](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/projects/tokyo80s/README.md)** · 0.5.0 | Two original rhythm stages, phrase rehearsal and lane timing/tail review | JavaScript / Web Audio | Browser game served locally over HTTP |
 | **P04 · [A água sob Darsen](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/projects/lich-cistern/README.md)** · 0.3.0 | A revised five-scene dark-fantasy story and English translation | Markdown, EPUB 3, PDF; Pandoc / Python production tools | Portuguese and English reading editions, with editable story sources |
 | **P05 · [Cinderwatch](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/projects/cinderwatch/README.md)** · 0.4.0 | Three tactical rescue encounters with announced intentions, finite supplies and persistent consequences and optional response inspection | C# / Godot .NET | Standalone Linux x86_64 player; editable project retained |
@@ -47,7 +47,7 @@ controls, permissions and exact requirements.
 
 - **[Cinderwatch player](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/projects/cinderwatch/dist/cinderwatch-linux-0.3.0.zip):** run `./cinderwatch.x86_64` inside the extracted `Cinderwatch/` folder. [Launch guide](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/projects/cinderwatch/Native/README.md#play-the-linux-distribution).
 - **[Veilbreak player](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/projects/veil-arena/dist/veilbreak-linux-0.6.0.zip):** run `./veilbreak.x86_64` inside `Veilbreak/`. [Launch guide](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/projects/veil-arena/README.md#play).
-- **[Eclipse Fair player](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/projects/eclipse-fair/dist/eclipse-fair-linux-0.5.0.zip):** run `./eclipse-fair.x86_64` inside `EclipseFair/`. [Launch guide](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/projects/eclipse-fair/Native/README.md#play-the-linux-distribution).
+- **[Eclipse Fair player](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/projects/eclipse-fair/dist/eclipse-fair-linux-0.6.0.zip):** run `./eclipse-fair.x86_64` inside `EclipseFair/`. [Launch guide](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/projects/eclipse-fair/Native/README.md#play-the-linux-distribution).
 
 ### Browser games
 
@@ -107,7 +107,7 @@ The portfolio demonstrates inspectable engineering and creative production work:
 
 | Capability | Where to inspect it |
 |---|---|
-| Domain rules, opponent planning, local turn handoff and replayable saves | [Eclipse Fair execution](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/evidence/eclipse-fair/LOCAL_RUN.json) |
+| Domain rules, local turn handoff and independent saved fairs | [Eclipse Fair execution](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/evidence/eclipse-fair/SLOT_RUN.json) |
 | Native packaging, state feedback, animation and combat timing | [Cinderwatch release](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/evidence/cinderwatch/RELEASE_RUN.json) · [Veilbreak counter route](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/evidence/veil-arena/PARRY_RUN.json) |
 | Persistent records, idempotent delivery and portable retrieval | [Project Rooms](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/projects/realtime-integration-lab/README.md) · [HTML export evidence](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/evidence/realtime-chat/PORTABLE_RUN.json) |
 | Audio timing, DSP-assisted rehearsal and reproducible creative assets | [Tokyo 80s pitch checks](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/evidence/tokyo80s/PITCH_RUN.json) |

@@ -1,75 +1,70 @@
 # Lab state
 
-**Updated:** 2026-10-16 (America/Sao_Paulo). **Seed:** 0.32.6.
-**Milestone:** P03 Tokyo 80s 0.5.0 completed-take review.
+**Updated:** 2026-10-16 (America/Sao_Paulo). **Seed:** 0.32.7.
+**Milestone:** P01 Eclipse Fair native 0.6.0 independent fair continuations.
 
-Remote main/HEAD began at `238207487ea2d5436b6d5efe0be5ffb37078fc9d`.
-Inspected branches, local-only history, remotes and untracked work before editing;
-preserved prior branches and scratch. Created a feature branch from that baseline.
-Supported network permission enables authenticated Git and real browser sockets;
-default sandbox EPERM was reproduced without changing product checks.
+Remote main/HEAD began at `67e68cda3840ebb473d5122afb370dbc8a86c154`.
+Inspected branches, local/outgoing history, remotes, untracked work and current
+instructions before editing. Preserved earlier branches and work/. Authenticated
+Git works with supported network permission; remote remained at that baseline
+when the interrupted session resumed.
 
-Compared native P01 fair slots (existing writes are already atomic), configurable
-rhythm controls/lane focus, current P05/P06 practice, independent PT/EN reading and
-actual P11 handovers. Selected a demonstrated P03 weakness for players deciding
-what passage/lane to rehearse: signed timing cancels opposite errors; a missed
-hold head and an early release both hide useful timing behind the same lost-hold
-count. More charts, calibration advice or controls do not resolve this feedback.
+Compared native P01/P05 recovery, P06 unassisted learning, physical P03 practice,
+P04 comprehension and actual P11 handovers. P10 has a credible narrative gap:
+review-later promises consultation that afternoon cannot reopen. It needs authored
+consequences, not fabricated upstream success. P04's current revision already
+repairs the demonstrated agency/mechanism problems. Select P01 for solo players
+and different groups on one device: exact shipped 0.5.0 session execution shows
+B's first accepted turn replacing A's only continuation. Writes were already
+atomic; a stronger warning cannot preserve both fairs, and hidden archives make
+the destination harder to choose.
 
-[Tokyo 80s](../projects/tokyo80s/README.md#review-a-completed-take) now reviews
-whole takes and selected full-run passages by lane. Signed offset appears beside
-absolute distance and early/within-window/late counts. Received heads survive in
-the review after failed tails; carried holds and explicit failure causes remain
-separate from score. Inspection is silent and does not rescore; Rehearse is an
-explicit next action. Additive JSON records review/cause/performance time. DFJK,
-Pulse and pause now work on focused volume; arrows still edit the range. Existing
-Repeat/Save controls precede the longer review on narrow displays.
+[Native 0.6.0](../projects/eclipse-fair/Native/README.md#keep-and-resume-three-fairs)
+keeps three explicit fair slots. Cards derive seed/round/turns/local players/next
+actor or winners by validated replay. New fair saves its configuration immediately;
+occupied or invalid destinations need explicit replacement. Pending accepted
+progress is saved before switching; failure blocks the switch and retains memory.
+An unavailable initial save opens no fallback gameplay and explains recovery.
+Fair 1 keeps match.json and startup preference; added slots/replays stay distinct,
+including extensionless bases. No index, schema/rule/profile change or cloud service.
+Earlier packages and original source/reference bytes remain intact.
 
-[Execution](../evidence/tokyo80s/REVIEW_RUN.json) identifies baseline, environment,
-tested sources and boundaries. Baseline same-score examples and twelve action
-traces isolate diagnostic improvement from unchanged legacy score/state behavior.
-New logic and declared controlled-chart browser checks use actual delivered Web
-Audio backing; existing full-song checks retain the original charts. Compare
-heads missed with received heads/failed tails, cancelling errors with absolute
-distance, and explicit passage inspection with a sound-starting action.
+[Execution](../evidence/eclipse-fair/SLOT_RUN.json) identifies the baseline,
+environment, tested sources, exact packages and limits. The final source executes
+1,747 native X11 assertions, 26 complete Gate/deadline matches and all 15 local-seat
+sets. Focused exact shipped Linux execution passes 154 assertions with external
+SDK/runtime paths excluded; the optional compiled project executes outside source
+with 148 headless assertions. Real separate player processes open A, Continue B,
+close/relaunch and recover A's Nira handoff with both saved files byte-identical.
+Those records and inputs are declared fixtures, not independent human play.
+The unchanged Core passes 13 checks. Package source/payload/runtime/notices and
+five boundary regressions pass. Shared structural/hash checks run before commit;
+actual remote SHA and final hosted status are reported at task closure.
 
-All 33 logic and 19 browser cases pass across broad/focused executions; the
-initial complete local run was 49 pass, two fail, one cancelled. Its inherited
-calibration assumption also fails on the unchanged baseline. Measured deliveries
-show scheduler delay; the revised harness compares actual valid taps within one
-5 ms setting step, and rejects a forced wrong suggestion. The Rain timing case
-passes unchanged in isolated baseline/current runs. A 45-second whole-case budget
-closes the export timeout without changing score/windows. No successful complete
-local 52-case run is claimed; hosted execution is reported separately at closure.
+Native execution exposed a popup height feedback loop and competing exclusive
+windows: fix wrapping width and parent replacement to setup, then exercise actual
+engine Escape/Enter. Read-only review found fallback overwrite and extensionless
+replay collisions; concrete failure cases now cover both. The Linux regression
+fixture follows the current player. Initial default XDG writes fail on the old
+baseline too; scratch paths enable actual execution without changing product code.
+A duplicate baseline check and provisional source run were stopped, not counted
+as passes. A provisional assertion pass with engine errors is not the final result.
 
-Initial hosted run `38875016223` at `608eab9` passes all 52 P03 cases and three
-other jobs, then fails an unchanged P10 import assertion before `File.text`
-finishes. A gated read reproduces the empty epilogue against identical baseline
-P10 bytes. The QA followup waits for restored views, retains content assertions
-and tests delayed completion; all 42 Waystone cases pass locally. Its runtime,
-creative content, schema and version remain unchanged. The execution record
-preserves the first failure; final hosted status is reported at task closure.
+Keep technical M4. Three fixed slots, Fair 1 startup, no undo/automatic backup,
+simultaneous-process coordination, physical controller/display/audio, other-OS,
+independent shared-device/accessibility or commercial validation. No Site
+redeployment or North Star consumer; foundation_only and project independence stay.
 
-No charts, audio, producer, dependency, best/storage identity or scoring change.
-Private Sites hosting was not redeployed. P03 retains technical M4; neither
-synthetic input nor Codex frame review establishes independent learning, musical
-taste, physical latency, assistive support, other-browser or commercial quality.
-Other products/reference bytes remain retained. North Star stays foundation-only
-with no real destination consumer or integration claim.
+Refine one existing verification sentence in the complete authoritative
+[prompt](prompts/CONTINUOUS_DEVELOPMENT.md): bound runtime processes and stop owned
+previews/test applications after verification or interruption. An interrupted
+session left a software-rendered preview active for over seven hours. Final
+normal processes were closed; --max-fps 60 bounded rendering. This is an observed
+process-lifecycle correction, not a new project priority or model improvement.
+Baseline probing, native screenshots and negative cases served the design;
+repeated provisional runs wasted time and are not additional validation claims.
 
-Keep the single [continuous-development prompt](prompts/CONTINUOUS_DEVELOPMENT.md)
-unchanged. Actual artifacts exposed information loss that earlier passing tests
-had not asked about; baseline comparison and meaningful fixtures served design.
-Read-only review caught misleading pressed/not-pressed wording. Rehearsal scope
-initially duplicated the only phrase in a test plan; a single scope plus a real
-full-run selection check is clearer. The first browser run found stale test copy
-after a wording refinement. Clock observations exposed a separate test-driver
-assumption; a wrong-suggestion negative control verifies the corrected oracle.
-Hosted execution also exposed an asynchronous import assertion; a gated actual
-read corrected the QA sequence without changing the product.
-These observations fit existing discovery, review and honest-evidence guidance.
-
-Next: compare fresh product opportunities, including independent unassisted
-phrase selection/practice on real hardware, native fair slots/play, chronological
-handover use and literary comprehension. Do not infer a new priority from the
-last implementation or equate technical diagnostics with proven learning.
+Next: compare fresh opportunities across actual play/learning, the deferred
+Waystone request, physical musical practice, handovers and literary comprehension.
+Observe unassisted continuation/replacement/recovery before claiming this workflow
+is understood by players. Do not mechanically repeat this project.

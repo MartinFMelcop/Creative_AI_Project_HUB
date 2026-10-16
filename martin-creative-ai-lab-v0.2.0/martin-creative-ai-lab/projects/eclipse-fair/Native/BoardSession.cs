@@ -18,6 +18,7 @@ public sealed class BoardSession
     private int adviceTurns = -1;
     private PlanAdvice? advice;
     public string SavePath { get; }
+    public bool HasUnsavedChanges { get; private set; }
     public string Notice { get; private set; } = "Choose a venue, compare an action, then commit your turn.";
 
     public BoardSession(string savePath, int seed = 1) { SavePath = savePath; Game = new(seed); }
@@ -26,6 +27,7 @@ public sealed class BoardSession
         var seats = BoardJournal.Seats(humanSeats ?? [0]); var game = new Game(seed);
         Game = game; HumanSeats = seats; readySeat = -1; viewSeat = seats[0];
         Policies = strategic ? Planning.NativePolicies.ToArray() : ["collector", "keeper", "opportunist", "collector"];
+        HasUnsavedChanges = true;
         Notice = "New fair. Previous save stays until an accepted turn or explicit Save.";
     }
     public bool Act(Intent intent)
@@ -67,15 +69,16 @@ public sealed class BoardSession
         if (!Game.Apply(intent, out var description)) { Notice = description; return false; }
         if (HumanSeats.Contains(actor)) viewSeat = actor;
         readySeat = -1;
+        HasUnsavedChanges = true;
         if (Save()) Notice = description + " · Saved.";
         else Notice = description + " Progress is in memory; saving failed. " + Notice;
         return true;
     }
     public bool Save()
     {
-        try { BoardJournal.Save(Game, Policies, HumanSeats, SavePath); Notice = "Saved local seats and all accepted turns."; return true; }
+        try { BoardJournal.Save(Game, Policies, HumanSeats, SavePath); HasUnsavedChanges = false; Notice = "Saved local seats and all accepted turns."; return true; }
         catch (Exception e) when (e is IOException or UnauthorizedAccessException or ArgumentException)
-        { Notice = "Save unavailable: " + e.Message; return false; }
+        { HasUnsavedChanges = true; Notice = "Save unavailable: " + e.Message; return false; }
     }
     public bool Load()
     {
@@ -84,6 +87,7 @@ public sealed class BoardSession
             var loaded = BoardJournal.Load(SavePath);
             Game = loaded.Game; Policies = loaded.Policies; HumanSeats = loaded.Seats;
             readySeat = -1; viewSeat = IsHumanTurn ? Game.Current : HumanSeats[0];
+            HasUnsavedChanges = false;
             Notice = "Saved turns replayed. Continue from the exact next participant."; return true;
         }
         catch (Exception e) when (e is IOException or UnauthorizedAccessException or ArgumentException or System.Text.Json.JsonException)

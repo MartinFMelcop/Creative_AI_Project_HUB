@@ -11,7 +11,7 @@ import tempfile
 from zipfile import ZipFile, ZipInfo, ZIP_DEFLATED
 
 ROOT = Path(__file__).resolve().parents[1]
-VERSION = "0.5.0"
+VERSION = "0.6.0"
 ENGINE_VERSION = "4.6.3.stable.mono.official.7d41c59c4"
 ARCHIVE_SHA = "6436f474ee085fb0a94d3d296b9821736bdd663b6e91b2228fdf77066f1d1400"
 TEMPLATE_SHA = "dde8bd2f5b6b8666c3656a57900f8c4163b3fc9799cc723746ca88468333b320"
@@ -112,7 +112,7 @@ def main():
         runtime = cache / "microsoft.netcore.app.runtime.linux-x64" / RUNTIME_VERSION
         shutil.copyfile(runtime / "LICENSE.TXT", bundle / "DOTNET-LICENSE.txt")
         shutil.copyfile(runtime / "THIRD-PARTY-NOTICES.TXT", bundle / "DOTNET-THIRD-PARTY-NOTICES.txt")
-        (bundle / "README.txt").write_text("""Eclipse Fair 0.5.0 — Linux x86_64 native board
+        (bundle / "README.txt").write_text("""Eclipse Fair 0.6.0 — Linux x86_64 native board
 
 Extract the ENTIRE EclipseFair folder, then run ./eclipse-fair.x86_64.
 Keep eclipse-fair.pck and data_Eclipse.Board_linuxbsd_x86_64 beside it.
@@ -128,9 +128,11 @@ Next turns stops before the next human decision and is a model, not a guarantee.
 Tab/arrows and Enter/Space navigate controls. How to play explains the rules.
 No audio, gamepad, LAN or account identity is added. Close the window to exit.
 
-Accepted turns autosave to the existing per-user Eclipse Fair native-board slot.
-Resume validates/replays it. New fair changes memory first; a turn or Save replaces
-that slot. Export replay writes the original economy-only journal beside it.
+Accepted turns autosave to the current one of three independent local fair slots.
+Saved fairs shows validated summaries and Continue replays the chosen fair. New fair
+saves immediately; replacing an occupied slot needs confirmation. Slot one keeps
+the original match.json path. Export replay writes a separate economy-only journal
+beside each slot. A failed save blocks switching until progress can be saved.
 Board schema 1/rules 0.1.0 remain unchanged; earlier plain journals load as Vaelis.
 Keep private copies of important saves. No undo/cloud save or automatic backup.
 

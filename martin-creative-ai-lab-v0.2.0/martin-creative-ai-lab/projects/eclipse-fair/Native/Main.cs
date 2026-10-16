@@ -6,7 +6,8 @@ namespace Eclipse.Board;
 public partial class Main : Control
 {
     public static readonly Color Ink = new("171426"), Edge = new("494054"), Gold = new("edc573"), Mint = new("8dd6c3"), Muted = new("b5aebf");
-    private BoardSession session = null!;
+    private BoardSlots saves = null!;
+    private BoardSession session => saves.Current;
     private MapView map = null!;
     private Label clock = null!, objective = null!, venue = null!, venueInfo = null!, notice = null!, preview = null!, turn = null!;
     private readonly Label[,] roster = new Label[4, 3];
@@ -28,15 +29,16 @@ public partial class Main : Control
     {
         var args = OS.GetCmdlineUserArgs();
         string? Option(string name) { var at = Array.IndexOf(args, name); return at >= 0 && at + 1 < args.Length ? args[at + 1] : null; }
-        verification = args.Contains("--verify"); captureDirectory = Option("--capture");
+        verification = args.Contains("--verify") || args.Contains("--verify-slots"); captureDirectory = Option("--capture");
         var path = Option("--save-path") ?? ProjectSettings.GlobalizePath("user://match.json");
         if (verification && Option("--save-path") == null) throw new ArgumentException("Verification requires an isolated --save-path.");
-        session = new(path); Build();
+        saves = new(path); Build();
         GetTree().AutoAcceptQuit = false;
         GetWindow().CloseRequested += () => GetTree().Quit();
-        if (!verification && File.Exists(path)) session.Load();
+        if (!verification && File.Exists(path)) saves.TryLoad(1);
         ResetSelection(); Refresh();
-        if (verification) _ = Verify();
+        if (!verification && !saves.HasCurrent) Callable.From(SavedFairsDialog).CallDeferred();
+        if (verification) _ = args.Contains("--verify-slots") ? VerifySlotOnly() : Verify();
     }
     public static StyleBoxFlat Box(Color fill, Color border)
     {
@@ -68,7 +70,7 @@ public partial class Main : Control
         header.AddChild(Text("ECLIPSE FAIR", 29, Gold));
         header.AddChild(Button("New fair", NewDialog));
         save = Button("Save", () => { session.Save(); Refresh(); }); header.AddChild(save);
-        load = Button("Resume save", () => { automatic.ButtonPressed = false; session.Load(); ResetSelection(); Refresh(); }); header.AddChild(load);
+        load = Button("Saved fairs", SavedFairsDialog); header.AddChild(load);
         replay = Button("Export replay", () => { session.ExportReplay(); Refresh(); }); header.AddChild(replay);
         header.AddChild(Button("How to play", Help));
         clock = Text("", 16, Muted); stack.AddChild(clock);
@@ -115,8 +117,8 @@ public partial class Main : Control
     private void ResetSelection() { destination = session.Game.People[session.ViewSeat].Position; selected = null; rivalClock = 0; }
     private void Refresh()
     {
-        var game = session.Game; var p = game.People[session.ViewSeat]; var human = session.IsHumanTurn && !session.AwaitingPlayer;
-        clock.Text = $"Round {game.Round}/{game.Rules.RoundLimit} · Seed {game.Seed}   |   NOW: {game.Forecast(game.Round)}   |   NEXT: {game.Forecast(game.Round + 1)}";
+        var game = session.Game; var p = game.People[session.ViewSeat]; var human = saves.HasCurrent && session.IsHumanTurn && !session.AwaitingPlayer;
+        clock.Text = $"FAIR {saves.CurrentSlot} · {(session.HasUnsavedChanges ? "Not saved" : "Autosave ready")}   |   Round {game.Round}/{game.Rules.RoundLimit} · Seed {game.Seed}   |   NOW: {game.Forecast(game.Round)}   |   NEXT: {game.Forecast(game.Round + 1)}";
         var goal = p.Sigils < game.Rules.Goal ? $"Buy {game.Rules.Goal - p.Sigils} more sigils; each adds curse." :
             p.Curse > 0 ? "Cleanse at the Chapel, then reach the Gate." : "Reach the Gate and choose Claim.";
         objective.Text = game.Result == null ? $"LOCAL: {p.Name}   ·   {p.Sigils}/{game.Rules.Goal} sigils · {p.Curse} curse   |   {goal}" :
@@ -130,10 +132,10 @@ public partial class Main : Control
             roster[i, 1].Text = $"{who.Gold} obols · {who.Sigils}/{game.Rules.Goal} sigils";
             roster[i, 2].Text = $"Curse {who.Curse} · Ward {who.Ward} · {Game.Board[who.Position].Name}";
         }
-        begin.Visible = session.AwaitingPlayer; begin.Text = "Begin " + game.People[game.Current].Name + "’s turn";
-        if (session.AwaitingPlayer) begin.GrabFocus();
-        next.Disabled = session.IsHumanTurn || game.Result != null; hint.Disabled = !human;
-        automatic.Disabled = session.HumanSeats.Length == 4;
+        begin.Visible = saves.HasCurrent && session.AwaitingPlayer; begin.Text = "Begin " + game.People[game.Current].Name + "’s turn";
+        if (begin.Visible) begin.GrabFocus();
+        next.Disabled = !saves.HasCurrent || session.IsHumanTurn || game.Result != null; hint.Disabled = !human;
+        automatic.Disabled = !saves.HasCurrent || session.HumanSeats.Length == 4;
         if (automatic.Disabled) automatic.SetPressedNoSignal(false);
         hint.TooltipText = "Advice models all seats using the listed profiles; other local players may choose differently.";
         response.Disabled = !human || selected == null;
@@ -144,7 +146,14 @@ public partial class Main : Control
         if (destination == 2) venueInfo.Text += p.Curse == 0 ? " You have no curse to remove." :
             $" Rite now: {(game.Forecast(game.Round) == Game.Events[2] ? 0 : game.Rules.RiteCost)} obols (plus travel).";
         foreach (var child in actions.GetChildren()) { actions.RemoveChild(child); child.QueueFree(); } planButtons.Clear();
-        if (game.Result != null)
+        if (!saves.HasCurrent)
+        {
+            selected = null; clock.Text = "NO FAIR OPEN"; objective.Text = "The existing Fair 1 could not be opened.";
+            turn.Text = "Open Saved fairs to choose a continuation.";
+            actions.AddChild(Text("Choose a fair", 22, Gold));
+            preview.Text = "Continue a valid save or create a fair in an empty slot. Replacing an occupied slot needs confirmation.";
+        }
+        else if (game.Result != null)
         {
             selected = null;
             foreach (var rank in game.Result.Standings.OrderByDescending(r => game.Result.Winners.Contains(r.Id)))
@@ -195,17 +204,17 @@ public partial class Main : Control
             preview.Text = "Plans are reconsidered after each accepted action. Watch the next turn or enable Auto rivals.";
         }
         commit.Disabled = !human || selected == null;
-        notice.Text = session.Notice; save.TooltipText = "Local controls and accepted-action save: " + session.SavePath;
+        notice.Text = saves.HasCurrent ? session.Notice : saves.Notice; save.Disabled = replay.Disabled = !saves.HasCurrent; save.TooltipText = "Local controls and accepted-action save: " + session.SavePath;
         replay.TooltipText = "Economy replay without local controls: " + session.ReplayPath;
-        load.TooltipText = "Loading replaces only after every saved action and local seat has been validated.";
+        load.TooltipText = "Inspect three independent fairs. Continue only after every saved action and local seat validates.";
         log.Text = string.Join("\n", game.Journal.TakeLast(40).Select(e => e.Description));
         map.Match = game; map.ViewSeat = session.ViewSeat; map.CanPlan = human; map.Selected = destination; map.Plan = selected; map.Refresh();
     }
     private string ActionName(Intent i) => i.Action switch { ActionKind.Work => "Work", ActionKind.Buy => "Buy a sigil", ActionKind.Rite => "Perform a rite",
         ActionKind.Guard => "Raise a raven ward", ActionKind.Steal => "Steal from " + session.Game.People[i.Target].Name, _ => "Claim the Gate" };
     private static string Signed(int value) => value > 0 ? "+" + value : value.ToString();
-    private void CommitTurn() { if (selected != null && session.Act(selected)) ResetSelection(); Refresh(); }
-    private void RivalTurn() { if (session.Rival()) ResetSelection(); Refresh(); }
+    private void CommitTurn() { if (saves.HasCurrent && selected != null && session.Act(selected)) ResetSelection(); Refresh(); }
+    private void RivalTurn() { if (saves.HasCurrent && session.Rival()) ResetSelection(); Refresh(); }
     private void Suggest()
     {
         if (!session.IsHumanTurn || session.AwaitingPlayer) return;
@@ -235,24 +244,71 @@ public partial class Main : Control
     }
     public override void _Process(double delta)
     {
-        if (verification || !automatic.ButtonPressed || session.Game.Result != null || session.IsHumanTurn) return;
+        if (verification || !saves.HasCurrent || !automatic.ButtonPressed || session.Game.Result != null || session.IsHumanTurn) return;
         rivalClock += delta; if (rivalClock >= 1) { rivalClock = 0; RivalTurn(); }
     }
     public override void _Notification(int what)
     {
         if (what == NotificationWMWindowFocusOut && automatic != null) automatic.ButtonPressed = false;
     }
-    private void NewDialog()
+    private static Label DialogLabel(string text, int size = 16, Color? color = null)
+    {
+        var label = Text(text, size, color);
+        // A real wrapping width prevents minimum-height feedback while a popup lays out.
+        label.CustomMinimumSize = new(680, 0); return label;
+    }
+    private static string SlotText(BoardSlotSummary slot)
+    {
+        if (slot.Status == BoardSlotStatus.Empty) return "Empty — ready for a new fair.";
+        if (slot.Status == BoardSlotStatus.Unavailable) return "Unavailable — " + slot.Detail;
+        var ending = slot.Winners.Length > 0 ? "Finished · " + string.Join(", ", slot.Winners) : "Next: " + slot.NextParticipant;
+        return $"Seed {slot.Seed} · Round {slot.Round} · {slot.AcceptedTurns} accepted turns\nLOCAL: {string.Join(", ", slot.LocalPlayers)} · {ending}";
+    }
+    private void SavedFairsDialog()
     {
         automatic.ButtonPressed = false;
-        var dialog = new ConfirmationDialog { Title = "Start a new fair", MinSize = new(700, 365) };
+        var dialog = new AcceptDialog { Name = "SavedFairs", Title = "Saved fairs", MinSize = new(800, 540) };
+        dialog.GetOkButton().Text = "Back to fair";
+        var layout = new VBoxContainer(); layout.AddThemeConstantOverride("separation", 14);
+        layout.AddChild(DialogLabel((saves.HasCurrent ? $"Playing Fair {saves.CurrentSlot}. " : "No fair is open. ") + "Each fair keeps its own turns, local seats and replay.\nSwitching first saves any accepted progress still in memory.", 16, Muted));
+        var error = DialogLabel("", 15, Gold);
+        foreach (var slot in saves.Inspect())
+        {
+            var panel = new PanelContainer(); panel.AddThemeStyleboxOverride("panel", Box(Ink, Edge));
+            var card = new VBoxContainer(); panel.AddChild(card); layout.AddChild(panel);
+            card.AddChild(DialogLabel($"FAIR {slot.Slot}" + (saves.HasCurrent && slot.Slot == saves.CurrentSlot ? " · CURRENT" : ""), 18, Gold));
+            card.AddChild(DialogLabel(SlotText(slot), 15));
+            var buttons = new HBoxContainer(); card.AddChild(buttons);
+            var resume = Button("Continue Fair " + slot.Slot, () => {
+                if (!saves.TryLoad(slot.Slot)) { error.Text = saves.Notice; notice.Text = saves.Notice; return; }
+                ResetSelection(); Refresh(); dialog.Hide(); dialog.QueueFree();
+            });
+            resume.Name = "ContinueSlot" + slot.Slot; resume.Disabled = slot.Status != BoardSlotStatus.Ready; buttons.AddChild(resume);
+            var create = Button("New fair here…", () => { dialog.Hide(); dialog.QueueFree(); NewDialogForSlot(slot.Slot); });
+            create.Name = "NewSlot" + slot.Slot; buttons.AddChild(create);
+        }
+        layout.AddChild(error); dialog.AddChild(layout); AddChild(dialog);
+        dialog.Confirmed += () => dialog.QueueFree(); dialog.Canceled += () => dialog.QueueFree(); dialog.PopupCentered();
+    }
+    private void NewDialog() => NewDialogForSlot(null);
+    private void NewDialogForSlot(int? requestedSlot)
+    {
+        automatic.ButtonPressed = false;
+        var dialog = new ConfirmationDialog { Name = "NewFair", Title = "Start a new fair", MinSize = new(760, 500), DialogHideOnOk = false };
         var layout = new VBoxContainer(); layout.AddThemeConstantOverride("separation", 12);
-        var instructions = Text("Choose 1–4 LOCAL participants; unchecked seats are rivals.\nPass control and Begin each named turn. All resources are public.\nAccepted turns or Save replace the current save.", 15, Muted);
-        instructions.AutowrapMode = TextServer.AutowrapMode.Off; layout.AddChild(instructions);
+        layout.AddChild(DialogLabel("Choose a slot and 1–4 LOCAL participants. Unchecked seats are rivals.\nThe new fair is saved immediately; other slots keep their own progress.", 15, Muted));
+        var slots = saves.Inspect();
+        var slotChoice = new OptionButton { Name = "SlotChoice", CustomMinimumSize = new(0, 36) };
+        foreach (var slot in slots) slotChoice.AddItem($"Fair {slot.Slot} · {slot.Status}" + (slot.Slot == saves.CurrentSlot ? " · current" : ""));
+        var preferred = requestedSlot ?? slots.FirstOrDefault(slot => slot.Status == BoardSlotStatus.Empty)?.Slot ?? saves.CurrentSlot;
+        slotChoice.Select(preferred - 1); layout.AddChild(slotChoice);
+        var slotDescription = DialogLabel("", 15); layout.AddChild(slotDescription);
+        void DescribeSlot() { var slot = saves.Inspect()[slotChoice.Selected]; slotDescription.Text = SlotText(slot); dialog.GetOkButton().Text = slot.IsOccupied ? "Review replacement…" : "Create fair"; }
+        slotChoice.ItemSelected += _ => DescribeSlot();
         var settings = new HBoxContainer(); settings.AddThemeConstantOverride("separation", 12); layout.AddChild(settings);
         var seedLabel = Text("Seed", 15, Muted); seedLabel.AutowrapMode = TextServer.AutowrapMode.Off; settings.AddChild(seedLabel);
         var seed = new SpinBox { MinValue = 0, MaxValue = 1000000, Value = session.Game.Seed + 1, CustomMinimumSize = new(140, 36) };
-        var profiles = new OptionButton { SizeFlagsHorizontal = SizeFlags.ExpandFill, CustomMinimumSize = new(390, 36) };
+        var profiles = new OptionButton { Name = "RivalProfiles", SizeFlagsHorizontal = SizeFlags.ExpandFill, CustomMinimumSize = new(390, 36) };
         profiles.AddItem("Planning rivals — forecast and adapt"); profiles.AddItem("Classic rivals — original one-turn decisions");
         settings.AddChild(seed); settings.AddChild(profiles);
         var grid = new GridContainer { Columns = 2, SizeFlagsHorizontal = SizeFlags.ExpandFill };
@@ -265,13 +321,28 @@ public partial class Main : Control
             local[i].Toggled += _ => dialog.GetOkButton().Disabled = !local.Any(b => b != null && b.ButtonPressed);
             grid.AddChild(local[i]);
         }
-        var boundary = Text("Forecasts stop before the next local choice.\nSuggestions use policy models; other local players may choose differently.", 14, Muted);
-        boundary.AutowrapMode = TextServer.AutowrapMode.Off; layout.AddChild(boundary);
-        dialog.AddChild(layout); AddChild(dialog);
-        dialog.Confirmed += () => {
+        layout.AddChild(DialogLabel("Pass control and Begin each named turn. All resources are public.\nForecasts stop before the next local choice; suggestions use policy models.", 14, Muted));
+        var error = DialogLabel("", 15, Gold); layout.AddChild(error);
+        dialog.AddChild(layout); AddChild(dialog); DescribeSlot();
+        bool Create(bool replace)
+        {
             var seats = Enumerable.Range(0, 4).Where(i => local[i].ButtonPressed).ToArray();
-            if (seats.Length == 0) return;
-            session.New((int)seed.Value, profiles.Selected == 0, seats); ResetSelection(); Refresh(); dialog.QueueFree();
+            if (seats.Length == 0) return false;
+            if (!saves.TryNew(slotChoice.Selected + 1, (int)seed.Value, profiles.Selected == 0, seats, replace))
+            { error.Text = saves.Notice; notice.Text = saves.Notice; DescribeSlot(); return false; }
+            ResetSelection(); Refresh(); dialog.Hide(); dialog.QueueFree(); return true;
+        }
+        dialog.Confirmed += () => {
+            var slot = saves.Inspect()[slotChoice.Selected];
+            if (!slot.IsOccupied) { Create(false); return; }
+            var replacement = new ConfirmationDialog { Name = "ReplaceFair", Title = "Replace Fair " + slot.Slot + "?", MinSize = new(670, 280), DialogHideOnOk = false,
+                DialogText = SlotText(slot) + $"\n\nReplace only Fair {slot.Slot} with seed {(int)seed.Value}?\nIts saved progress will be replaced immediately. The other fairs stay saved." };
+            replacement.GetLabel().AutowrapMode = TextServer.AutowrapMode.WordSmart;
+            replacement.GetLabel().CustomMinimumSize = new(620, 0);
+            replacement.GetOkButton().Text = "Replace Fair " + slot.Slot;
+            dialog.AddChild(replacement);
+            replacement.Confirmed += () => { Create(true); replacement.Hide(); replacement.QueueFree(); };
+            replacement.Canceled += () => replacement.QueueFree(); replacement.PopupCentered();
         };
         dialog.Canceled += () => dialog.QueueFree(); dialog.PopupCentered();
     }
@@ -285,7 +356,7 @@ public partial class Main : Control
             "3. Visit the Chapel for rites: remove two curse for two obols,\nor free during a procession. Curse also reduces your work income.\n\n" +
             "4. Reach the Gate with three sigils and zero curse; CLAIM it.\nA raven ward costs two obols and blocks one co-located theft.\nTheft adds curse if successful. Forecasts and rival resources are public.\n\n" +
             "Planning rivals project races and replan after changes.\nNext turns stops BEFORE another local player chooses.\nAdvice uses policy models for human seats, not known human decisions.\nNew fair also offers Classic rivals. Saved seats/profiles are preserved.\n\n" +
-            "Initiative rotates. At round 20, rank by sigils, least curse, obols.\nAccepted turns autosave. Resume replays them and requires local handoff.\nExport replay omits local controls for the economy/CLI journal.\nTab/arrow keys navigate controls; Enter/Space activates a focused button." };
+            "Initiative rotates. At round 20, rank by sigils, least curse, obols.\nAccepted turns autosave to the current fair. Saved fairs offers three slots.\nContinue replays the chosen fair and requires local handoff. New fair saves\nimmediately; replacing an occupied slot needs confirmation.\nExport replay omits local controls for the economy/CLI journal.\nTab/arrow keys navigate controls; Enter/Space activates a focused button." };
         AddChild(dialog); dialog.Confirmed += () => dialog.QueueFree(); dialog.PopupCentered();
     }
 }

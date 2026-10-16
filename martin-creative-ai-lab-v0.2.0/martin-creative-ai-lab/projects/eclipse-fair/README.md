@@ -1,6 +1,6 @@
 # P01 — Eclipse Fair
 
-**Native 0.5.0** delivers the existing any-seat solo and two-to-four participant local play in the
+**Native 0.6.0** keeps three independent fairs for any-seat solo and two-to-four participant local play in the
 [native Godot .NET board](Native/README.md), alongside the
 existing **0.1.0** C#/.NET economy workbench and playable terminal match from
 Artemyra's Feira do Eclipse seed. One to four local participants share eight
@@ -8,16 +8,31 @@ connected venues with optional rivals. Earn obols, buy three sigils, cleanse cur
 Compare rule variants across common seeds and all four policy/seat rotations.
 This is new gameplay, not recovered RPG Maker code. The native consumer uses
 the existing Core and journal without duplicating transactions or changing rules.
-Native **0.5.0** packages those existing rules as a
-[standalone Linux x86_64 player](dist/eclipse-fair-linux-0.5.0.zip), including
+Native **0.6.0** packages those existing rules as a
+[standalone Linux x86_64 player](dist/eclipse-fair-linux-0.6.0.zip), including
 Godot .NET and .NET runtime. Extract `EclipseFair/` and run `./eclipse-fair.x86_64`;
 [requirements and launch](Native/README.md#play-the-linux-distribution).
-The optional [compiled project pack](dist/eclipse-board-0.5.0.zip) still supports
+The optional [compiled project pack](dist/eclipse-board-0.6.0.zip) still supports
 engine users. All earlier releases are preserved.
-[Release execution](../../evidence/eclipse-fair/RELEASE_RUN.json) distinguishes
-actual standalone operation, unchanged rules/save compatibility and scripted review.
+[Slot execution](../../evidence/eclipse-fair/SLOT_RUN.json) records the baseline,
+current source/packages, persistence checks and scripted interface review.
+[0.5.0 release execution](../../evidence/eclipse-fair/RELEASE_RUN.json) retains
+its original standalone-runtime and compatibility scope.
 [Prior local-play execution](../../evidence/eclipse-fair/LOCAL_RUN.json) retains
 its original source/runtime-dependent scope.
+
+![Actual native selector with declared scripted saves](../../evidence/eclipse-fair/slots.png)
+
+**Saved fairs** shows three fixed slots with replay-validated seed, round,
+accepted turns, local participants and next participant or finished winners.
+New fair defaults to an empty slot and saves immediately; replacing an occupied
+or invalid slot requires explicit confirmation. Continue restores the selected
+history and local controls. Switching preserves pending accepted progress and
+blocks on a failed save, so a storage failure cannot silently discard it.
+Fair 1 keeps the existing `match.json`; Fair 2/3 use `match.slot2.json` and
+`match.slot3.json`, with separate replay exports. Startup opens Fair 1; choose
+other slots through Saved fairs. There are no custom names, cloud sync or undo.
+[Save and recovery instructions](Native/README.md#keep-and-resume-three-fairs).
 
 New fair selects LOCAL seats. Multi-participant turns require an explicit named
 handoff; previews/maps/results follow the actual actor. **Next turns** forecasts
