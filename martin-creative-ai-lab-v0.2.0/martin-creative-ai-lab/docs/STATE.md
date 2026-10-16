@@ -42,6 +42,14 @@ passes unchanged in isolated baseline/current runs. A 45-second whole-case budge
 closes the export timeout without changing score/windows. No successful complete
 local 52-case run is claimed; hosted execution is reported separately at closure.
 
+Initial hosted run `38875016223` at `608eab9` passes all 52 P03 cases and three
+other jobs, then fails an unchanged P10 import assertion before `File.text`
+finishes. A gated read reproduces the empty epilogue against identical baseline
+P10 bytes. The QA followup waits for restored views, retains content assertions
+and tests delayed completion; all 42 Waystone cases pass locally. Its runtime,
+creative content, schema and version remain unchanged. The execution record
+preserves the first failure; final hosted status is reported at task closure.
+
 No charts, audio, producer, dependency, best/storage identity or scoring change.
 Private Sites hosting was not redeployed. P03 retains technical M4; neither
 synthetic input nor Codex frame review establishes independent learning, musical
@@ -57,6 +65,8 @@ initially duplicated the only phrase in a test plan; a single scope plus a real
 full-run selection check is clearer. The first browser run found stale test copy
 after a wording refinement. Clock observations exposed a separate test-driver
 assumption; a wrong-suggestion negative control verifies the corrected oracle.
+Hosted execution also exposed an asynchronous import assertion; a gated actual
+read corrected the QA sequence without changing the product.
 These observations fit existing discovery, review and honest-evidence guidance.
 
 Next: compare fresh product opportunities, including independent unassisted

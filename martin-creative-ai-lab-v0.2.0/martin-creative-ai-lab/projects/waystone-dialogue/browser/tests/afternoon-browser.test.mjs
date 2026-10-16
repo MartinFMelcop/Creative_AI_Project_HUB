@@ -43,7 +43,9 @@ test('afternoon controls expose loan cost, persist work and keep the receipt imm
     await page.locator('#journal summary').click();assert.equal(await page.locator('#journal-entries>li').count(),data.actions.length);
     assert.doesNotMatch(await page.locator('#journal-entries').textContent(),/undefined/);await page.locator('#journal summary').click();
     if(decision==='lend-ferry'){assert.match(await page.locator('#epilogue').textContent(),/return is due now/);await shot(page,'afternoon-boat-mobile');}
-    const {page:other}=await fixture();await upload(other,data);assert.match(await other.locator('#scene-title').textContent(),/light is going/);
+    const {page:other}=await fixture();await upload(other,data);
+    await other.locator('#scene-title').filter({hasText:'light is going'}).waitFor();
+    assert.match(await other.locator('#scene-title').textContent(),/light is going/);
     await upload(other,{...data,actions:[...data.actions,'grain']});await other.locator('#notice').filter({hasText:'could not be restored'}).waitFor();assert.deepEqual(await save(other),data);
     await other.locator('#replay').click();await other.locator('#confirm-replacement').click();assert.equal(await other.locator('#continue-afternoon').isVisible(),false);
     assert.deepEqual(errors,[]);
@@ -56,6 +58,13 @@ test('blocked browser storage still permits late-care workflow and portable reco
   await click(page,['recall']);assert.match(await page.locator('#narrative').textContent(),/mending a shutter/);
   await shot(page,'afternoon-recall');await click(page,['plant','close']);
   assert.match(await page.locator('#outcome').textContent(),/Contacted for afternoon care/);assert.match(await page.locator('#save-status').textContent(),/unavailable/);
-  const saved=await save(page),{page:other}=await fixture();await upload(other,saved);
-  assert.match(await other.locator('#epilogue').textContent(),/original late supply time remains/);assert.deepEqual(errors,[]);
+  const saved=await save(page),{page:other,errors:otherErrors}=await fixture();
+  // setInputFiles does not await the real File.text promise. Exercise a delayed
+  // read explicitly and wait for the restored view before checking its content.
+  await other.evaluate(()=>{const read=File.prototype.text;File.prototype.text=function(){const file=this;return new Promise(resolve=>{globalThis.finishFileRead=()=>resolve(read.call(file));});};});
+  await upload(other,saved);assert.equal(await other.locator('#epilogue').textContent(),'');
+  await other.evaluate(()=>globalThis.finishFileRead());
+  await other.locator('#epilogue').filter({hasText:'original late supply time remains'}).waitFor();
+  assert.match(await other.locator('#epilogue').textContent(),/original late supply time remains/);
+  assert.deepEqual([...errors,...otherErrors],[]);
 });

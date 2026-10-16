@@ -605,7 +605,71 @@
   "prompt_review": {
     "changed": false,
     "sha256": "cfe891f209ec94b63cfb674adb5300e6d253acf61fcb2576352235e72e45a1f0",
-    "reason": "Actual source/artifact comparison, environment reproduction and existing evidence guidance served this milestone; no new general rule justified."
+    "reason": "Source/artifact comparison, baseline reproduction, actual clock measurements and gated async imports fit the existing prompt guidance; no new general rule is justified."
   },
-  "publication": "Normal non-force main publication authorized; final actual commit/remote/CI identities are reported at closure, without self-reference."
+  "publication": "Normal non-force main publication authorized; final actual commit/remote/CI identities are reported at closure, without self-reference.",
+  "hosted_ci_recovery": {
+    "initial_run": {
+      "url": "https://github.com/MartinFMelcop/Creative_AI_Project_HUB/actions/runs/38875016223",
+      "head": "608eab9f02db4406c59f1eaa818359eafe204e34",
+      "conclusion": "failure",
+      "jobs": {
+        "integrity-and-dialogue": "success",
+        "native-arena": "success",
+        "eclipse-economy": "success",
+        "chat-and-evaluation": "failure"
+      },
+      "P03": {
+        "tests": 52,
+        "passed": 52,
+        "failed": 0,
+        "skipped": 0
+      },
+      "P11": {
+        "passed": 110,
+        "skipped": 1,
+        "skip_scope": "historical-baseline-only branch"
+      },
+      "P10": {
+        "passed": 41,
+        "failed": 1,
+        "target": "afternoon-browser.test.mjs:60, empty #epilogue before File.text completed"
+      },
+      "evaluator": "Not executed after the Waystone failure."
+    },
+    "baseline_proof": {
+      "baseline": "238207487ea2d5436b6d5efe0be5ffb37078fc9d",
+      "P10_tree_before_fix": "f7fd41524bb343a13727cd8512f9cc3bd0df07d9",
+      "same_P10_tree_at_implementation": true,
+      "old_test_sha256": "cc286573ac186db918505275495619add8d5b082f882e4147ee4bd82639ca22a",
+      "app_sha256": "a2bfc997243f9a41cca8261697f7b5085cc43df62d2d4fe06180eb5ddb12ff7f",
+      "method": "Scratch baseline test only changes import paths and gates the real File.text read on the fresh recovery page. Retain the original immediate assertion before releasing the read.",
+      "result": {
+        "expected_exit": 1,
+        "actual_exit": 1,
+        "pending_read": true,
+        "release_available": true,
+        "epilogue": "",
+        "old_assertion_failed": true
+      }
+    },
+    "qa_fix": {
+      "path": "projects/waystone-dialogue/browser/tests/afternoon-browser.test.mjs",
+      "sha256": "4c4fc24d92f6cf0e564c2c0dc6c4e87c75da94ef23eb9ae9482605ddaaf40c7d",
+      "change": "Wait for imported afternoon views before retaining the exact existing content assertions. Explicitly gate/release the real read for blocked-storage recovery and check errors from both pages. No sleep, retry or assertion removal.",
+      "existing_pattern": "The maintained handover-browser test already uses the same real-file gate.",
+      "unchanged_runtime_git_tree": "532a95f915ba3f27dd3734a7ff6d94a927c80d47",
+      "runtime_files_byte_equal_baseline": 13,
+      "product_version": "P10 remains 0.6.0; no product source, creative content, schema or maturity change."
+    },
+    "after_checks": {
+      "command": "CHROMIUM_PATH=/usr/bin/chromium npm test --prefix projects/waystone-dialogue/browser",
+      "passed": 42,
+      "failed": 0,
+      "cancelled": 0,
+      "scope": "Complete domain/graph/Python oracle/actual Chromium suite, including gated file recovery.",
+      "dialogue_export": "python3 projects/waystone-dialogue/browser/tools/export_dialogue.py --check passes."
+    },
+    "publication": "A separate normal Git QA followup preserves the P03 implementation commit and first failed CI result. Final remote SHA and subsequent full CI conclusion are verified at closure."
+  }
 }
