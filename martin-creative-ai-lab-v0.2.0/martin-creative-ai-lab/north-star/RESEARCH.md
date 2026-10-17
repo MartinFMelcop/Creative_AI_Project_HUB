@@ -5,7 +5,7 @@
 [Crossing Drill](prototype/README.md) is the first local executable consumer, selected
 in DEVELOPMENT mode before further standalone research. It makes finite-resource
 frontal protection and threat redirection/mobility playable under one courier objective.
-[Design](DESIGN.md) and [execution](../evidence/north-star-rehearsal/RUN.json) separate
+[Design](DESIGN.md) and [execution](../evidence/north-star-keepsakes/RUN.json) separate
 mechanical feasibility, rendered review and still-missing human experience evidence.
 Its optional rehearsal now isolates real protection/redirection, floor avoidance and
 reachable counters, with retained causal feedback. Scripted success validates that

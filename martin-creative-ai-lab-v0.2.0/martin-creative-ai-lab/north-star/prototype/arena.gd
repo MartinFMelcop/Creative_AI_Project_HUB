@@ -1,6 +1,13 @@
 extends Node2D
 const Combat = preload("res://combat.gd")
 const Rehearsal = preload("res://rehearsal.gd")
+const Keepsakes = preload("res://keepsakes.gd")
+const KEEPSAKE_NAMES := {"":"None", "held_line":"Held the Line", "drew_danger":"Drew the Danger"}
+var keepsakes = Keepsakes.new()
+var profile_path := ""
+var normal_run := false
+var reward_checked := false
+var reward_message := ""
 var rehearsal = Rehearsal.new()
 var game = Combat.new()
 var selected := "Guardian"
@@ -13,15 +20,24 @@ const AMBER := Color("ffc474")
 const RED := Color("ff796f")
 
 func _ready() -> void:
+	if profile_path.is_empty(): profile_path=OS.get_environment("CROSSING_PROFILE")
+	if profile_path.is_empty(): profile_path="user://crossing-keepsakes.json"
+	keepsakes.load_profile(profile_path)
 	queue_redraw()
 
 func abandon() -> void:
+	normal_run=false
+	reward_checked=false
+	reward_message=""
 	rehearsal = Rehearsal.new()
 	game = Combat.new()
 	game.role = selected
 	taps.clear()
 
 func begin_crossing() -> void:
+	normal_run=true
+	reward_checked=false
+	reward_message=""
 	rehearsal.active = false
 	game = Combat.new()
 	game.reset(selected)
@@ -38,6 +54,9 @@ func _unhandled_key_input(event: InputEvent) -> void:
 	if not event is InputEventKey or not event.pressed or event.echo: return
 	var key: int = event.physical_keycode
 	if key==KEY_F12: capture()
+	if not rehearsal.active and game.mode!="play":
+		if key==KEY_C: keepsakes.cycle_equipped()
+		elif key==KEY_F5: keepsakes.retry_save()
 	if rehearsal.active:
 		if key==KEY_ESCAPE: rehearsal.toggle_pause(); taps.clear()
 		elif key==KEY_R and (rehearsal.paused or rehearsal.state!="live"): abandon()
@@ -79,9 +98,40 @@ func _physics_process(dt: float) -> void:
 	command.aim=vector_keys(KEY_LEFT,KEY_RIGHT,KEY_UP,KEY_DOWN,false)
 	command.skill=Input.is_physical_key_pressed(KEY_K)
 	if rehearsal.active: rehearsal.step(dt,command)
-	else: game.step(dt,command)
+	else: advance_crossing(dt,command)
 	taps.clear()
 	queue_redraw()
+
+func advance_crossing(dt: float, command: Dictionary) -> void:
+	var previous: String=game.mode
+	game.step(dt,command)
+	if previous=="play" and game.mode=="won": settle_crossing()
+
+func settle_crossing() -> void:
+	if not normal_run or rehearsal.active or reward_checked or game.mode!="won": return
+	reward_checked=true
+	if game.courier.x<Combat.FINISH or game.hp<=0 or game.cargo<=0: return
+	var signature: bool=game.counters.blocks>0 if game.role=="Guardian" else game.counters.redirects>0
+	var id: String="held_line" if game.role=="Guardian" else "drew_danger"
+	if not signature:
+		reward_message="To earn "+KEEPSAKE_NAMES[id]+", cross with at least one "+("block." if game.role=="Guardian" else "drawn bolt.")
+		return
+	var fresh: bool=keepsakes.earn(game.role)
+	reward_message=("Earned: " if fresh else "Already earned: ")+KEEPSAKE_NAMES[id]+". C to wear / put away."
+
+func draw_keepsake(at: Vector2, id: String, scale_factor: float=1.0) -> void:
+	if id.is_empty(): return
+	var points: PackedVector2Array
+	if id=="held_line":
+		points=PackedVector2Array([Vector2(-10,-9),Vector2(10,-9),Vector2(8,5),Vector2(0,12),Vector2(-8,5)])
+	else:
+		points=PackedVector2Array([Vector2(-12,7),Vector2(-3,-10),Vector2(0,-3),Vector2(10,-12),Vector2(8,2),Vector2(1,10),Vector2(0,3)])
+	for i in points.size(): points[i]=at+points[i]*scale_factor
+	draw_colored_polygon(points,INK)
+	var outline=points.duplicate();outline.append(points[0])
+	draw_polyline(outline,PAPER,2*scale_factor)
+	if id=="held_line": draw_line(at+Vector2(0,-5)*scale_factor,at+Vector2(0,6)*scale_factor,TEAL,3*scale_factor)
+	else: draw_line(at+Vector2(-5,5)*scale_factor,at+Vector2(5,-5)*scale_factor,AMBER,3*scale_factor)
 
 func text(at: Vector2, value: String, size: int=18, color: Color=PAPER) -> void:
 	draw_string(font,at,value,HORIZONTAL_ALIGNMENT_LEFT,-1,size,color)
@@ -136,7 +186,9 @@ func _draw() -> void:
 		draw_colored_polygon(PackedVector2Array([game.player+Vector2(-18,-20),game.player+Vector2(18,-20),game.player+Vector2(24,14),game.player+Vector2(0,25),game.player+Vector2(-24,14)]),c)
 	else:
 		draw_colored_polygon(PackedVector2Array([game.player+Vector2(0,-25),game.player+Vector2(17,17),game.player+Vector2(0,9),game.player+Vector2(-17,17)]),c)
-	draw_line(game.player,game.player+game.facing*38,PAPER,3)
+	draw_keepsake(game.player,keepsakes.equipped)
+	# Keep the facing cue outside the body so it cannot obscure a worn mark.
+	draw_line(game.player+game.facing*26,game.player+game.facing*42,PAPER,3)
 	if game.guard:
 		var angle: float=game.locked_face.angle()
 		draw_arc(game.player,37,angle-0.9,angle+0.9,24,TEAL if game.guards_from(Combat.ENEMY) else AMBER,7)
@@ -162,6 +214,9 @@ func draw_header() -> void:
 	draw_rect(Rect2(750,130,350,12),Color("32475a"))
 	draw_rect(Rect2(750,130,350*((rehearsal.stage+int(rehearsal.passed))/3.0 if rehearsal.active else progress),12),AMBER)
 
+	text(Vector2(40,164),"WORN  /  "+KEEPSAKE_NAMES[keepsakes.equipped]+"  •  cosmetic only",14)
+	text(Vector2(750,164),"LOCAL SAVE PENDING" if keepsakes.dirty or keepsakes.blocked else "THIS DEVICE'S KEEPSAKES",14,AMBER)
+
 func overlay() -> void:
 	draw_rect(Rect2(40,176,1072,473),Color(0.03,0.07,0.12,0.90))
 	if game.mode=="title":
@@ -173,15 +228,16 @@ func overlay() -> void:
 		text(Vector2(205,370),"Stand between bolt and courier.",19)
 		text(Vector2(205,400),"Aim at sentinel, hold K to block.",19)
 		text(Vector2(205,430),"Guard drains posture; release to recover.",17)
-		text(Vector2(205,467),"Slow protection • reachable counters",17,TEAL)
+		text(Vector2(205,467),"Cross + block: Held the Line",17,TEAL)
 		text(Vector2(615,330),"2  DUELIST",26,AMBER)
 		text(Vector2(615,370),"K during a bolt warning draws its aim.",18)
 		text(Vector2(615,400),"Move or step away from the locked line.",18)
 		text(Vector2(615,430),"Feint within the ring; steps cost resolve.",17)
-		text(Vector2(615,467),"Risky redirection • faster movement step",17,AMBER)
+		text(Vector2(615,467),"Cross + draw: Drew the Danger",17,AMBER)
 		text(Vector2(210,543),"Both: leave red ground pulses. Strike only when OPEN and close.",19)
 		text(Vector2(210,580),"T  Rehearse as "+selected+"     •     ENTER  Skip to crossing",21,TEAL)
-		text(Vector2(210,615),"Experimental approaches, not final classes. Rehearsal results are separate.",17)
+		text(Vector2(210,615),"C  Keepsake: "+KEEPSAKE_NAMES[keepsakes.equipped]+"     /     experimental, cosmetic only",17)
+		draw_keepsake(Vector2(1015,602),keepsakes.equipped,1.4)
 	elif game.mode=="paused":
 		text(Vector2(280,330),"Crossing paused",36)
 		text(Vector2(280,385),"ENTER / ESC resume     •     R abandon and choose",22)
@@ -194,14 +250,17 @@ func overlay() -> void:
 		text(Vector2(250,390),"Health %d / 5    Courier %d / 3    Crossing %d%%"%[game.hp,game.cargo,roundi((game.courier.x-160)/840*100)],21)
 		draw_impact(Vector2(150,435))
 		text(Vector2(250,510),"ENTER retry this approach     •     R choose approach",22)
-		text(Vector2(250,552),"Result lasts for this session.",18)
-		if game.mode=="won": text(Vector2(250,585),"Crossing token: "+("Held the line" if game.role=="Guardian" else "Drew the danger"),18,TEAL)
+		text(Vector2(150,552),reward_message if game.mode=="won" else "No keepsake earned. Complete a crossing with a block or drawn bolt.",18,TEAL if game.mode=="won" else AMBER)
+		text(Vector2(150,585),"C  Wear / put away     •     F5  Retry local save     /     cosmetic only",18)
 
 func footer() -> String:
 	if rehearsal.active:
 		if rehearsal.paused: return "ENTER / ESC resume  •  R abandon rehearsal"
 		if rehearsal.state=="ready": return "ENTER send this trial  •  R choose approach  /  No time passes while you read."
 		if rehearsal.state=="review": return ("ENTER "+("start the crossing" if rehearsal.stage==2 else "next exercise") if rehearsal.passed else "ENTER retry this exercise")+"  •  T repeat  •  R choose approach"
+	if game.mode!="play" and (keepsakes.dirty or keepsakes.blocked): return keepsakes.status
+	if game.mode=="title": return "Win with a block or drawn bolt to earn a keepsake. C chooses what you wear."
+	if game.mode=="won": return keepsakes.status
 	return game.message
 
 func draw_impact(at: Vector2) -> void:
@@ -237,4 +296,5 @@ func capture() -> void:
 	var report=game.snapshot()
 	report.last_impact=game.last_impact.duplicate(true)
 	report.rehearsal=rehearsal.snapshot()
+	report.keepsakes=keepsakes.snapshot()
 	file.store_string(JSON.stringify(report,"  ")+"\n")

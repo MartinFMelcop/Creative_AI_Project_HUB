@@ -20,6 +20,27 @@ def invoke(command, env, timeout=60):
     return log
 
 
+def continuity(executable, scratch, env, packed):
+    label = "pack" if packed else "source"
+    profile = scratch / (label + "-profile.json")
+    observations = []
+    base = [executable, "--headless"]
+    base += ["--main-pack", str(ROOT / "dist/crossing-drill.pck")] if packed else ["--path", str(ROOT)]
+    for index, operation in enumerate(("earn", "read", "remove", "read")):
+        output = scratch / f"{label}-restart-{index}.json"
+        invoke(base + ["--script", "res://tests/keepsake_restart.gd", "--", operation, str(profile), str(output)], env)
+        report = json.loads(output.read_text())
+        expected = "drew_danger" if index < 2 else ""
+        state = report["profile"]
+        if (state["earned"] != ["held_line", "drew_danger"] or state["equipped"] != expected
+                or state["dirty"] or state["blocked"]):
+            raise ValueError("Restart failed to retain earned marks or explicit equipment choice")
+        if operation != "earn" and (report["game"]["mode"] != "title" or report["game"]["tick"] != 0):
+            raise ValueError("A profile restart must not restore a combat session")
+        observations.append(report)
+    return observations
+
+
 def verify(godot, output, compare=None):
     executable = shutil.which(godot)
     if not executable:
@@ -27,6 +48,8 @@ def verify(godot, output, compare=None):
     with tempfile.TemporaryDirectory(prefix="north-star-check-") as folder:
         scratch = Path(folder)
         env = os.environ.copy()
+        env.pop("CROSSING_PROFILE", None)
+        env.pop("CROSSING_CAPTURE", None)
         env.update({key: str(scratch / key) for key in ("XDG_DATA_HOME", "XDG_CONFIG_HOME", "XDG_CACHE_HOME")})
         version = invoke([executable, "--version"], env).strip()
         if not version.startswith("4.6.3."):
@@ -40,7 +63,7 @@ def verify(godot, output, compare=None):
         result = json.loads(source.read_text())
         if result != json.loads(packed.read_text()):
             raise ValueError("Delivered PCK differs from current source observations or embedded source hashes")
-        if result.get("checks", {}).get("failed") != 0 or result.get("checks", {}).get("passed", 0) != 69:
+        if result.get("checks", {}).get("failed") != 0 or result.get("checks", {}).get("passed", 0) != 110:
             raise ValueError("Native checks failed or incomplete")
         if [r["mode"] for r in result["outcomes"]] != ["won", "lost", "won", "lost"]:
             raise ValueError("Completion and neutral controls are incomplete")
@@ -51,12 +74,15 @@ def verify(godot, output, compare=None):
         for name, digest in result["consumer_hashes"].items():
             if hashlib.sha256((ROOT / name).read_bytes()).hexdigest() != digest:
                 raise ValueError("Native execution source identity differs: " + name)
+        result["continuity"] = continuity(executable, scratch, env, False)
+        if result["continuity"] != continuity(executable, scratch, env, True):
+            raise ValueError("Source/PCK restart observations differ")
         if compare and result != json.loads(Path(compare).read_text()):
             raise ValueError("Native observations differ from the recorded comparison")
         output = Path(output)
         output.parent.mkdir(parents=True, exist_ok=True)
         output.write_text(json.dumps(result, ensure_ascii=False, indent=2, sort_keys=True) + "\n")
-        print(f"PASS: {result['checks']['passed']} native checks; two approaches complete; neutral controls fail; source/PCK identical.")
+        print(f"PASS: {result['checks']['passed']} native checks; two approaches complete; neutral controls fail; source/PCK identical; eight restart processes retain explicit keepsake choices.")
         return result
 
 

@@ -43,7 +43,8 @@ courier health loses the attempt. Both approaches can complete the goal.
 - **Red ground pulse:** leave the marked circle. A shield cannot block the floor.
 - **Esc:** pause/resume. Focus loss pauses. **R** while paused abandons the attempt
   for approach selection; at the result screen it returns to selection. **Enter**
-  retries from a clean state. Results and the success token are session-only.
+  retries from a clean state. The current attempt's result is session-only; earned
+  cosmetic keepsakes use the separate local profile described below.
 
 Pause and result screens retain the last contact's explanation and an actionable
 tip, even after transient warnings or the final loss message replace the live
@@ -75,16 +76,54 @@ defense or successful input is supplied for the player. Rehearsal grants no cros
 reward or carried advantage. These controlled tasks do not establish sustained
 resource management, learning transfer, unassisted comprehension or human accessibility.
 
+## Keepsakes on this device
+
+A full normal crossing can earn one experimental cosmetic mark for its approach:
+
+| Mark | Required action during the successful crossing |
+|---|---|
+| **Held the Line** | Guardian: at least one frontal block. |
+| **Drew the Danger** | Duelist: at least one drawn bolt. |
+
+The courier must reach the gate with both courier and player alive. Rehearsal, defeat and
+abandonment award nothing. Repeat wins do not duplicate marks or increase power.
+Earning never equips automatically. **C** on title, result or normal pause cycles
+**None → owned Held the Line → owned Drew the Danger → None**. Missing marks are
+skipped. The chosen mark is drawn on the character and named in the HUD; it changes
+no combat values, collision, threat timing or reward odds. These marks are experimental
+identity proposals, not final item names or canon commitments.
+
+The JSON profile defaults to **`user://crossing-keepsakes.json`**, resolved by Godot
+inside this application's per-user data directory. **`CROSSING_PROFILE`** overrides
+the file path for an isolated device-local profile; its parent directory must exist
+and permit writing. The profile has schema version 1, owned mark IDs and the worn ID;
+it contains no account, player identity or remote service credentials.
+
+If saving fails, the mark and appearance remain usable for the current session.
+**F5** on title/result/normal pause retries; closing before a successful save can lose
+pending changes. A malformed, unsupported, oversized or unreadable existing profile
+is preserved and blocks writes. Restore a valid file, or deliberately move/remove the
+unavailable one, then press F5. Retry combines all currently known marks with that
+accepted profile, retaining its chosen appearance unless C explicitly changed yours.
+Writes use a same-directory temporary, flush/readback and final replacement. This
+does not guarantee power-loss durability or concurrent-writer safety. The editable
+local save is cosmetic continuity, not secure achievement proof, account progression
+or MMORPG persistence.
+
 ## Execute checks and reproduce delivery
 
 ```bash
-python3 north-star/prototype/tools/verify.py --godot godot --output /tmp/crossing-check.json --compare evidence/north-star-rehearsal/results.json
+python3 north-star/prototype/tools/verify.py --godot godot --output /tmp/crossing-check.json --compare evidence/north-star-keepsakes/results.json
 ```
 
 The stdlib runner bounds owned engine processes, uses writable temporary XDG paths,
 loads the source project, executes positive/negative controls, both rehearsal sequences
-and two complete repeatable crossing policies, then executes the **delivered PCK** and
-requires exact source/PCK outcomes.
+and two complete repeatable crossing policies, plus keepsake eligibility and local
+profile controls, then executes the **delivered PCK** and requires exact source/PCK
+outcomes.
+The current suite has 110 native controls. Eight further engine invocations (earn,
+read, put away, read for each source/PCK) demonstrate actual process reentry with
+the same local profile. New crossings remain fresh; only earned/equipped marks return.
 It rejects script errors, missing reports, failed checks or changed packaged behavior.
 It records hashes separately from gameplay observations. Native checks do not prove
 perceived class identity, reaction fairness or accessibility.
@@ -95,10 +134,11 @@ The source pack is reproducible with the matching engine:
 godot --headless --path north-star/prototype --script tools/pack.gd -- /absolute/path/crossing-drill.pck
 ```
 
-[Current execution evidence](../../evidence/north-star-rehearsal/RUN.json) identifies
+[Current execution evidence](../../evidence/north-star-keepsakes/RUN.json) identifies
 baseline, source/result hashes, commands, refinements and limitations. The preserved
 [first-consumer record](../../evidence/north-star-crossing/RUN.json) documents the
-original crossing delivery. The actual playable scene and rehearsal use `combat.gd`;
+original crossing delivery; the [rehearsal record](../../evidence/north-star-rehearsal/RUN.json)
+preserves that feedback increment. The actual playable scene and rehearsal use `combat.gd`;
 checks use that same implementation rather than a copied simulation. Optional rendered
 journeys use controlled inputs, not human decisions.
 
@@ -108,10 +148,11 @@ New original vector geometry, interface and test fiction; no third-party media c
 P06's paid commitment, timed contact and facing methodology informed the adaptation.
 Its original arena, art, music, source and distributions remain unchanged. This is
 **adaptation in a real destination**, not a shared-code import or fictional-universe
-merger. See [provenance](provenance.json) and the unchanged laboratory
+merger. See [provenance](provenance.json) and the laboratory
 [finding](../../knowledge/combat-response.md).
 
 Simple geometric beam/contact and bounded positions, no PhysicsServer body simulation,
 networking or authoritative multiplayer. No audio or controller hardware validation,
-player study, persistent progression, production scale or commercial claim. Candidate
+player study, account/MMORPG progression, production scale or commercial claim. Only
+editable device-local cosmetic continuity is stored. Candidate
 character names/mechanics are experimental; Creative Brain source bytes stay untouched.

@@ -2,6 +2,7 @@ extends SceneTree
 const Combat = preload("res://combat.gd")
 const Policy = preload("res://tests/policy.gd")
 const RehearsalChecks = preload("res://tests/rehearsal_checks.gd")
+const KeepsakeChecks = preload("res://tests/keepsake_checks.gd")
 var passed := 0
 var failed := 0
 
@@ -105,10 +106,11 @@ func run() -> void:
 	event.physical_keycode=KEY_J;scene._unhandled_key_input(event);scene._physics_process(1.0/60.0)
 	check(scene.game.counters.counters==1,"Actual blade input adapter reaches shared consumer")
 	var rehearsals: Array[Dictionary]=RehearsalChecks.run(self,scene)
+	var keepsakes: Dictionary=KeepsakeChecks.run(self)
 	var identities={}
-	for name in ["combat.gd","arena.gd","arena.tscn","project.godot","tests/run_checks.gd","tests/policy.gd","rehearsal.gd","tests/rehearsal_checks.gd"]:
+	for name in ["combat.gd","arena.gd","arena.tscn","project.godot","tests/run_checks.gd","tests/policy.gd","rehearsal.gd","tests/rehearsal_checks.gd","keepsakes.gd","tests/keepsake_checks.gd","tests/keepsake_restart.gd"]:
 		identities[name]=FileAccess.get_sha256("res://"+name)
-	var report={"consumer_hashes":identities,"schema_version":1,"checks":{"passed":passed,"failed":failed},"runtime":Engine.get_version_info().string,"outcomes":results,"rehearsals":rehearsals}
+	var report={"consumer_hashes":identities,"schema_version":1,"checks":{"passed":passed,"failed":failed},"runtime":Engine.get_version_info().string,"outcomes":results,"rehearsals":rehearsals,"keepsakes":keepsakes}
 	var args=OS.get_cmdline_user_args()
 	if args.size()==1:
 		var file=FileAccess.open(args[0],FileAccess.WRITE)

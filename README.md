@@ -26,13 +26,15 @@ investigate what can actually serve that experience.
 lets two experimental approaches protect the same courier: finite frontal interception
 or redirection with directional movement. Both can complete the crossing, lose, pause
 and retry. Optional rehearsal isolates each response, freezes causal feedback and
-starts a clean crossing; OPEN now shows range and remaining time. The small engine-dependent PCK and editable Godot project are executed
-consumers. [Native evidence](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/evidence/north-star-rehearsal/RUN.json)
+starts a clean crossing; OPEN shows range and remaining time. Completing a normal
+crossing with a block or drawn bolt now earns an optional visible keepsake. C chooses
+what to wear; that explicit choice survives a local restart without changing combat. The small engine-dependent PCK and editable Godot project are executed
+consumers. [Native evidence](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/evidence/north-star-keepsakes/RUN.json)
 and the [living design record](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/DESIGN.md)
 show scope and limitations; automated completion does not establish perceived identity
 or player enjoyment.
 
-![Wrong-facing protection reviewed in the actual consumer](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/evidence/north-star-rehearsal/guardian-facing-review.png)
+![Earned Held the Line mark worn in the next actual crossing](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/evidence/north-star-keepsakes/guardian-worn.png)
 
 ## Technology demonstrations
 

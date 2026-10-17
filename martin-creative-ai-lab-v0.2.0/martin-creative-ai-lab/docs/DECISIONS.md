@@ -1819,3 +1819,53 @@ recovery, task-versus-participant validity, candidate authority and contextual f
 Creative hypotheses remain experimental in DESIGN; brains/historical sources unchanged.
 No new lab or origin migration/status promotion. Keep NS-C03 adapted/local_prototype.
 Existing prompt guidance served selection/verification; retain its exact text.
+
+## ADR-073 — carry an earned act into optional visible local identity
+
+**Date:** 2026-10-17 UTC. **Status:** SEED 0.33.3; DEVELOPMENT, priority category 1.
+
+Baseline `ca432cc` has executable approaches, rehearsal and causal review, but its crossing
+token is only result text: neither a worn appearance nor an accomplishment survives
+reentry. Compare deeper encounter/adventure decisions, control remapping and lower-
+priority laboratory expansion. Select the existing consumer's action-to-memory gap.
+New encounter content remains useful but needs a specific choice/pacing contract;
+remapping remains useful without an observed device requirement in this increment.
+Another standalone instrument would not improve this missing character continuity.
+
+A normal completed Guardian crossing with a block unlocks Held the Line; a completed
+Duelist crossing with a drawn bolt unlocks Drew the Danger. Require player and courier
+survival, reject rehearsal/loss/abandonment, award each mark once and never auto-equip.
+C explicitly cycles none and owned marks on title/result/normal pause; a worn geometric
+mark appears on the actual character with a HUD name. No combat rule/statistic changes,
+farming requirement, rarity promise or final class/item taxonomy is introduced.
+
+Use a small strict versioned JSON profile on this device, not a general inventory,
+account service or production persistence architecture. Malformed/unsupported/oversized
+existing bytes block replacement while the session continues. Keep pending marks usable;
+F5 retries after path repair or explicit external restoration/removal. Merge all known
+marks with repaired data; preserve restored selection unless the player explicitly
+changed local equipment. Same-directory temporary write, flush/readback and replacement
+preserve prior bytes on the tested ordinary failures. No power-loss, concurrent-writer
+or secure-achievement guarantee is claimed; editable local state has no server authority.
+
+The 110 native source/PCK checks and eight separate engine restart processes cover eligibility,
+real completion, explicit wear/put-away, profile recovery and unchanged combat observations.
+Rendered actual scenes and synthetic OS-keyboard C/F5 journeys inspect visible states and
+recovery. Review caught pending-save text hiding live action feedback; retain live feedback
+and expose save recovery outside play. Move the facing line outside the body after visual
+inspection showed it crossing the mark. Paused C/F5 controls preserve Combat exactly;
+verification clears inherited profile/capture overrides to keep inputs scratch-bound.
+
+All brain domains high: ENG-010 informs failure/recovery, SCI-017 informs positive/negative
+controls, CRE-001 anchors the direct author identity decision and CRE-004/030/062 inform
+candidate reward, memory and voluntary recognition. Specific marks/rules remain experimental,
+not author-approved canon or independent player validation. Source volumes/pins, origin
+code/assets and historical evidence remain unchanged. One destination has four consumer
+code paths; fourteen capabilities retain NS-C03 adapted and thirteen unchanged states.
+No new laboratory, origin migration promotion or production integration is asserted.
+
+The evidence in [keepsake execution](../evidence/north-star-keepsakes/RUN.json) establishes
+bounded local behavior, not pride, enjoyment, learning, accessibility, social recognition,
+MMORPG progression or commercial demand. The earlier full-policy real-time render limit
+remains unresolved. Retain the single operational prompt: its priority/activation/evidence
+guidance served this consumer increment; no durable instruction change is justified.

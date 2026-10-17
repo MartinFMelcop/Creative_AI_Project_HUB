@@ -1,73 +1,83 @@
 # Lab state
 
-**Updated:** 2026-10-17 UTC. **SEED:** 0.33.2.
+**Updated:** 2026-10-17 UTC. **SEED:** 0.33.3.
 **Primary mode:** DEVELOPMENT. **Priority:** category 1, improve the existing executable
 Virgo Diamond consumer. Baseline local/fetched main:
-`88327a7f2206442488f46e87c5dcd12940d44bd3`; tracked tree clean, pre-existing untracked
-work/ preserved. Branch `codex/north-star-rehearsal-20261017`; authorized Git transport works.
+`ca432cc395e7dfebf989d8077f0280baff2dd1ca`; tracked tree clean, pre-existing untracked
+work/ preserved. Branch `codex/north-star-keepsakes-20261017`; authorized Git transport works.
 
 ## Observable product change
 
-[Crossing Drill](../north-star/prototype/README.md) now offers optional **T** rehearsal
-before the normal crossing. Three isolated responses per approach use the same Combat
-model: frontal protection or draw-and-leave, floor avoidance, reachable counter.
-Enter starts a prepared trial; its actual outcome freezes review. Failure cannot advance;
-Enter prepares a retry or the next successful exercise, T repeats and R abandons outside
-live play. Pause/focus loss freeze simulation. Completion starts a fresh normal crossing,
-without resource, progress or training advantage. Prepared positions/full resources and
-a supplied final opening isolate responses, not sustained resource management.
+[Crossing Drill](../north-star/prototype/README.md) now connects an accomplished act
+to an optional appearance that survives local reentry. A completed normal Guardian
+crossing with at least one frontal block earns **Held the Line**; a completed normal
+Duelist crossing with at least one drawn bolt earns **Drew the Danger**. Both require
+player and courier survival. Rehearsal, defeat and abandonment grant nothing. Repeat
+wins do not duplicate marks, and earning never equips automatically.
 
-Last-contact explanation and role-specific recovery advice survive transient messages
-and terminal loss. OPEN shows actual counter reach and remaining seconds. Review retains
-last line/pulse geometry and moves its panel away from the character's vertical region.
-Original temporary fiction/approaches remain experimental in [DESIGN](../north-star/DESIGN.md).
+**C** on title/result/normal pause cycles none and owned marks in stable order. The
+chosen geometric mark appears on the character and is named in the HUD. It changes
+no combat rule, resource or timing. The original four full-crossing active/neutral
+outcomes remain unchanged; optional rehearsal and retained causal review still use
+the same Combat model. The local JSON stores only earned IDs and chosen appearance,
+not a combat session. **F5** retries a pending save; invalid existing bytes are
+preserved while session-only earnings remain usable. Restoring/removing the unavailable
+profile permits recovery without discarding known marks or an explicit wear choice.
 
-Stage remains **local_prototype**, one consumer with three actual code paths, fourteen
-capabilities, **NS-C03 adapted**; thirteen other states unchanged. Native source and the
-engine-dependent PCK execute. Godot4.6.3 is still a prototype tool, not the final MMO
-engine decision. No shared kernel, production integration or external validation claim.
+Stage remains **local_prototype**, one consumer with four actual code paths, fourteen
+capabilities, **NS-C03 adapted**; thirteen other states unchanged. Godot4.6.3 remains
+a prototype tool, not a final MMO engine decision. The new store is editable device-
+local cosmetic continuity, not account progression, server authority or MMORPG storage.
+Specific marks/eligibility remain experimental in [DESIGN](../north-star/DESIGN.md).
 
 ## Execution and assessment
 
-[Current execution](../evidence/north-star-rehearsal/RUN.json) binds baseline, source/PCK
-hashes, commands and limits. Native69 controls include real successful responses for both
-approaches, wrong-facing defense, ignored courier, feint without escape, pulse guard,
-out-of-range counter, frozen review, retry, focus pause, unbuffered discrete commands and
-clean crossing handoff. The original four full-crossing active/neutral outcomes remain
-exactly equal to the preserved initial [record](../evidence/north-star-crossing/results.json).
-Source/PCK complete observations and embedded hashes match. Actual synthetic OS keyboard
-and rendered scene evidence have their own scope in the record; they are not human play.
+[Current execution](../evidence/north-star-keepsakes/RUN.json) binds baseline, source/PCK
+identities, commands and limits. **110 native checks** cover the original encounter and
+rehearsal, real completion eligibility, no automatic equipment, duplicate rejection,
+live control restrictions, invalid/oversized/unknown profiles, actual open failure,
+injected replacement failure and recovery. **Eight separate engine restart processes**
+(four source, four PCK) earn, reopen, put away and reopen the marks. Native source/PCK
+observations match, including the recorded unchanged crossing outcomes.
 
-Visual inspection found a review panel hiding the escaped Duelist; panel placement and
-last-contact outlines were corrected. A separate agent checked state/acceptance paths and
-found role-inappropriate advice; text now refers to actions available to that approach.
-This is agent assessment, not independent player feedback. Scripted exercise success does
-not establish learning transfer, enjoyment, perceived character identity or accessibility.
+Actual rendered scenes show earned, worn and put-away states. Synthetic OS-keyboard
+journeys exercise C, reentry, corrupt-file preservation and F5 recovery. These are
+scoped engine/input/presentation observations, not independent human play or proof of
+perceived identity, pride, motivation, accessibility, fun or balance. The local save
+does not establish power-loss durability, concurrent-writer safety or secure achievement.
 
-Actual XTest input exposed navigation arrows queried as physical keys: the baseline
-reported logical LEFT pressed while physical LEFT stayed false and facing stayed right.
-The adapter now queries logical navigation keys, retaining physical WASD. A native logical-
-only input control and the repeated OS-keyboard failure/success journey verify correction.
+Review found that pending-save status hid live action feedback; live messages now retain
+priority while pause/results expose recovery. Native controls check the rejected-action
+message and exact paused Combat preservation during C/F5. Visual review found the facing
+line crossing the mark; it now starts outside the body. The runner clears inherited
+profile/capture overrides and uses scratch data, keeping verification away from a
+caller's profile. Agent review remains distinct from independent player validation.
 
-Initial display execution failed to bind local sockets; the same baseline rendering
-failed under that sandbox. The permitted runtime rendered the actual scene with dummy
-Xorg/OpenGL llvmpipe. No rule/gate was weakened. Writable temporary XDG locations are used;
-no physical audio or real-time full-policy performance conclusion is added. Owned previews
-are bounded and stopped. Detailed harness failures and refinements remain in RUN.
+No networking, audio or controller-hardware validation was added. The earlier full-policy
+real-time rendering timeout remains unresolved; this increment does not diagnose its
+cause or establish real-time performance. Owned previews are bounded and stopped.
 
 ## Portfolio, knowledge and migration
 
-Compared additional encounter/adventure content, input remapping and audio/timing work.
-The selected existing-consumer improvement resolves an inspected recovery/feedback gap
-before expanding content. All domains high: indices and ENG-022, SCI-061,
-CRE-004/075/081 informed cognitive load, task/participant evidence, immediate playable
-consequence, contextual HUD and optional practice. Brain bytes/pins unchanged.
+Compared deeper adventure/encounter choices, input remapping and lower-priority standalone
+laboratory expansion. The selected existing-consumer work closes an inspected gap: the
+baseline displayed a temporary token but carried no visible accomplishment into the
+next crossing. It adds a playable action-to-memory loop without a generic inventory,
+account system, new laboratory or speculative infrastructure.
 
-[Derived combat knowledge](../knowledge/combat-response.md) now records retained causal
-feedback and isolated-response validity limits. Portfolio entry points show the current
-executable source/PCK and inspected review. No new lab, origin obligation or migration
-promotion; all P01–P11 code/media/distributions/tests and historical evidence are retained.
+All domains high: indices and **ENG-010**, **SCI-017**, **CRE-001/004/030/062** informed
+failure containment, controls, direct author identity and candidate reward/memory design.
+CRE-001 is a direct author decision; CRE-004/030/062 are hypotheses, not newly approved
+canon. Brain source bytes/pins and historical sources remain unchanged. Relevant
+[combat-response knowledge](../knowledge/combat-response.md) retains its limits.
+The new [keepsake finding](../knowledge/character-keepsakes.md) records local recovery
+and live-feedback boundaries; technical persistence is not human reward validation.
 
-The single complete operational prompt remains byte-identical: its existing priority,
-activation, bounded execution and evidence guidance served this increment. No durable
-instruction change is justified. Publication and CI are verified separately at closeout.
+The portfolio demonstrates executed source/PCK, opt-in visual identity, local continuity
+and failure recovery. All P01–P11 source/media/distributions/tests and origin transition
+states remain preserved. No new migration promotion or capability integration is claimed.
+
+The single operational prompt remains byte-identical: existing-consumer priority,
+selective activation, bounded execution and honest evidence guidance served this
+increment. No durable instruction change is justified. Publication and CI are verified
+separately at closeout.

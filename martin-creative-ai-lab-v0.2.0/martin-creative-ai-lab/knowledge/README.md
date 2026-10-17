@@ -14,6 +14,10 @@ may revise a derived lesson; ordinary work must not rewrite the brain sources.
 
 ## Existing lessons and consumers
 
+[Character keepsakes](character-keepsakes.md) records the executed destination's optional
+earned appearance, local restart/recovery controls and a negative finding: save diagnostics
+must not displace live action feedback. Human recognition/value remains unverified.
+
 | Question / kind | Derived record and evidence | Demonstrated consumer | Remaining boundary |
 |---|---|---|---|
 | Where can an accepted message disappear or interrupt reading? Technical observations and interface decisions. | [Trace the complete delivery path](realtime-delivery.md), with baseline/correction, queue and reading-position records. | P11's recorded adaptations; P02 EVAL-001 consumes the two send-buffering defects through TR-009. | P01 event ownership is a candidate. Neither origin demonstrates authoritative multiplayer or North Star integration. |
