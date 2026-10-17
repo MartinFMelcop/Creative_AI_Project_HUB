@@ -1,0 +1,522 @@
+{
+  "schema_version": 1,
+  "kind": "destination_execution",
+  "recorded_at_utc": "2026-10-17T16:05:40.284255+00:00",
+  "baseline_commit": "8c51b2f1d9d315a5dc0ef991a07968799da9f124",
+  "branch": "codex/north-star-crossing-choice-20261017",
+  "mode": "DEVELOPMENT",
+  "priority_category": 1,
+  "priority_reason": "Direct existing-consumer improvement: baseline only offers defensive reactions along an automatic courier timeline; the optional world action makes attention, position and actual handoff matter without new infrastructure.",
+  "capability_ids": [
+    "NS-C03"
+  ],
+  "consumer_paths": [
+    "north-star/prototype/arena.gd",
+    "north-star/prototype/combat.gd",
+    "north-star/prototype/rehearsal.gd",
+    "north-star/prototype/keepsakes.gd",
+    "north-star/prototype/errand.gd"
+  ],
+  "runtime": "Godot4.6.3.stable.official.7d41c59c4 standard; Linux x86_64; Python3.12.14; Xorg dummy/OpenGL Mesa llvmpipe LLVM19.1.7, Dummy audio",
+  "scope": "Optional normal-crossing medicine recovery and handoff under continued movement/threats; actual source/PCK alternatives, controls, rendered scenes, prepared OS interaction and one full rendered Guardian recovery. No new persistent loot, gameplay stats, account or production-MMORPG claim.",
+  "checks": {
+    "failed": 0,
+    "passed": 141
+  },
+  "commands": [
+    {
+      "command": [
+        "godot",
+        "--headless",
+        "--path",
+        "north-star/prototype",
+        "--script",
+        "tools/pack.gd",
+        "--",
+        "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/prototype/dist/crossing-drill.pck"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "python3",
+        "north-star/prototype/tools/verify.py",
+        "--output",
+        "evidence/north-star-medicine/results.json"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "python3",
+        "north-star/prototype/tools/test_verify.py"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "python3",
+        "work/north-star-crossing-choice/render.py"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "python3",
+        "work/north-star-crossing-choice/keyboard.py"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "python3",
+        "work/north-star-crossing-choice/runtime/run.py"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "python3",
+        "work/north-star-crossing-choice/runtime/run_final.py"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "godot",
+        "--headless",
+        "--main-pack",
+        "north-star/prototype/dist/crossing-drill.pck",
+        "--quit-after",
+        "5"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "python3",
+        "tools/test_brain_query.py"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "python3",
+        "tools/test_validate_repo.py"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "python3",
+        "tools/test_reference_library.py"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "python3",
+        "tools/test_check_manifest.py"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "python3",
+        "tools/brain_query.py",
+        "check"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "python3",
+        "tools/validate_repo.py"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "python3",
+        "tools/reference_library.py",
+        "check"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "python3",
+        "north-star/prototype/tools/verify.py",
+        "--output",
+        "/tmp/ns-medicine-final.json",
+        "--compare",
+        "evidence/north-star-medicine/results.json"
+      ],
+      "exit_code": 0
+    }
+  ],
+  "command_context": "Source/package/check commands run from lab with isolated writable XDG. Scratch render/keyboard/runtime drivers run from Git root with permitted local display sockets, child deadlines and cleanup. Real-time drivers execute preserved source copies; current nine consumed files match maintained source, baseline matches8c51b2f. Exact underlying Godot scenarios are preserved alongside results; driver paths are local environment-specific harnesses, not promised portable product tools.",
+  "source_artifacts": [
+    {
+      "local_path": "north-star/prototype/.gitignore",
+      "sha256": "531d0d253cec1addb97b2cb2d144b6589ff934513eb9c9b8cf882cb49e4c0c32",
+      "size_bytes": 8
+    },
+    {
+      "local_path": "north-star/prototype/README.md",
+      "sha256": "7d8c03b244a44256b3fb751e789bf8a8279dab889554bd80008a2fef2a2f8062",
+      "size_bytes": 10906
+    },
+    {
+      "local_path": "north-star/prototype/arena.gd",
+      "sha256": "202c5d6a02e102956af4bc1e9d376eaa098644e4d71b9fb75ebc2e980eeeee02",
+      "size_bytes": 17937
+    },
+    {
+      "local_path": "north-star/prototype/arena.gd.uid",
+      "sha256": "1cd2fa44a912d470ad3de79f672223ff85436c4d1ab34701debf2e10a1a14fe2",
+      "size_bytes": 20
+    },
+    {
+      "local_path": "north-star/prototype/arena.tscn",
+      "sha256": "f794c485663f0ed318ddce6bb7a62bc9b2dbd3af02be4f166cca962c29382591",
+      "size_bytes": 154
+    },
+    {
+      "local_path": "north-star/prototype/combat.gd",
+      "sha256": "22b257c59ad3c6f183aac416122ce8ed36d9af38ba7f70a0f8b09bba0f6217c4",
+      "size_bytes": 9868
+    },
+    {
+      "local_path": "north-star/prototype/combat.gd.uid",
+      "sha256": "8f28f645ef4d4bba1021b27bc39fed04c438124fd819cc32c3586f92b3c58f9f",
+      "size_bytes": 20
+    },
+    {
+      "local_path": "north-star/prototype/dist/crossing-drill.pck",
+      "sha256": "5ccdd2e46d35287d81a06a0fb6cd7649a40999611f9c9eceff9eef6a7be0d3a4",
+      "size_bytes": 73676
+    },
+    {
+      "local_path": "north-star/prototype/errand.gd",
+      "sha256": "2a2392fa86bd12544eba5f60ad74d35592c7d6fa207373ec11a1928a9e33e601",
+      "size_bytes": 3831
+    },
+    {
+      "local_path": "north-star/prototype/keepsakes.gd",
+      "sha256": "d7790dddbd25904069b0c1a6d5edb2f7d01bc02a375d608a4ec5a25262ddb6c9",
+      "size_bytes": 5848
+    },
+    {
+      "local_path": "north-star/prototype/project.godot",
+      "sha256": "8d4755b58f1179a9b5ec431579177371e784bca9703a17c88f4c7a6d4ee9385c",
+      "size_bytes": 414
+    },
+    {
+      "local_path": "north-star/prototype/provenance.json",
+      "sha256": "49c3f69a8902e06ffeb00da93109613338da78c7e467c3c5e8edfc2ded760615",
+      "size_bytes": 1045
+    },
+    {
+      "local_path": "north-star/prototype/rehearsal.gd",
+      "sha256": "55a1a348dd37a2552074a8ecc48dbe01b3fbef9211750f2110093a1ccc6eaeb6",
+      "size_bytes": 2919
+    },
+    {
+      "local_path": "north-star/prototype/tests/errand_checks.gd",
+      "sha256": "2f04534e200e82f08e01127a3b31c5dafacb5151c9635038bf6c14d33ac89094",
+      "size_bytes": 6353
+    },
+    {
+      "local_path": "north-star/prototype/tests/errand_policy.gd",
+      "sha256": "74f4d20501771d8697e79629aaa6e86cb5056211eae0ab860aa593cb5190cb9e",
+      "size_bytes": 655
+    },
+    {
+      "local_path": "north-star/prototype/tests/keepsake_checks.gd",
+      "sha256": "a8614cb0592ff8c403185b82f702c289abd42b78c783f4bc8f06d2ecaf211fcf",
+      "size_bytes": 9709
+    },
+    {
+      "local_path": "north-star/prototype/tests/keepsake_restart.gd",
+      "sha256": "8e9f107c310836324c51b1cbe1b2db618feadbd98b0cebbef12f75f39ab112c2",
+      "size_bytes": 1097
+    },
+    {
+      "local_path": "north-star/prototype/tests/policy.gd",
+      "sha256": "646f0758a211e84ffbfd4632460c7d1fc549cbb3b552801ee2508774a5a63e29",
+      "size_bytes": 979
+    },
+    {
+      "local_path": "north-star/prototype/tests/rehearsal_checks.gd",
+      "sha256": "0286d8997fdf1bd7ebad0b72a7283651678cfa30f85b2bd55e98e995c3f9b1f5",
+      "size_bytes": 6003
+    },
+    {
+      "local_path": "north-star/prototype/tests/render_journey.gd",
+      "sha256": "b0de7bc7cdd8795d55c0fdb8248c277c38ead3299714e7290c70df1a2c114e49",
+      "size_bytes": 992
+    },
+    {
+      "local_path": "north-star/prototype/tests/render_keepsakes.gd",
+      "sha256": "eafb1a071de871af521712b32f095a2d6c46f3424e85590c9e43c52310850359",
+      "size_bytes": 1502
+    },
+    {
+      "local_path": "north-star/prototype/tests/render_medicine.gd",
+      "sha256": "0716b982847fbd47dc596954c2f7a98f72e30e0fd6356aacc371e139be8455f1",
+      "size_bytes": 2215
+    },
+    {
+      "local_path": "north-star/prototype/tests/render_rehearsal.gd",
+      "sha256": "fc268d9764cfdd52874c8ea9f2f96aaeaa6f98ebede22dcbf412fe4692c6de42",
+      "size_bytes": 2254
+    },
+    {
+      "local_path": "north-star/prototype/tests/run_checks.gd",
+      "sha256": "1ce573149ef85c4d41951ea088c690ebbe06f9746f4dfab481114c79887f17c8",
+      "size_bytes": 6756
+    },
+    {
+      "local_path": "north-star/prototype/tools/pack.gd",
+      "sha256": "c64099aa23e981b58ff966a45dfe1eb7a621d7f62a555a07cab94aeb2c6478ed",
+      "size_bytes": 667
+    },
+    {
+      "local_path": "north-star/prototype/tools/test_verify.py",
+      "sha256": "08898e09aba0e8ce07d37cab94d9b045904d5665b724864d5ef04fbce66c36e5",
+      "size_bytes": 1778
+    },
+    {
+      "local_path": "north-star/prototype/tools/verify.py",
+      "sha256": "c7557dfd67b82be92687059e1de7b199f5fccf80631f9ab606c9be6bd5a62beb",
+      "size_bytes": 5962
+    }
+  ],
+  "result_artifacts": [
+    {
+      "local_path": "evidence/north-star-medicine/baseline-realtime.png",
+      "sha256": "e852ace7ac446124e03cef0186e11ed3715769b3d6462431d5d35ad565333d66",
+      "size_bytes": 101904
+    },
+    {
+      "local_path": "evidence/north-star-medicine/direct-escort.png",
+      "sha256": "e7ad0b60aded3f1d85a0b2044088f16c9940f352f5fb41438d1afe583221780f",
+      "size_bytes": 109269
+    },
+    {
+      "local_path": "evidence/north-star-medicine/dropped.png",
+      "sha256": "d00eb80c7d75bf2de0eaa4356ce09e409b485ad78b6a79d3271419e6858bdb0c",
+      "size_bytes": 66902
+    },
+    {
+      "local_path": "evidence/north-star-medicine/duelist-delivered.png",
+      "sha256": "21f51a5d0adfd263ca89adc98ae29fd38b72daebc8e61d20a060ab82f6ac8cb2",
+      "size_bytes": 106950
+    },
+    {
+      "local_path": "evidence/north-star-medicine/guardian-delivered.png",
+      "sha256": "619bcb1221c7479c39290f3f72f848c923c18e4700e037cf953718710a8f683d",
+      "size_bytes": 104742
+    },
+    {
+      "local_path": "evidence/north-star-medicine/guardian-realtime.png",
+      "sha256": "619bcb1221c7479c39290f3f72f848c923c18e4700e037cf953718710a8f683d",
+      "size_bytes": 104742
+    },
+    {
+      "local_path": "evidence/north-star-medicine/handoff.png",
+      "sha256": "b6dbf04f4ac3ee744173addbd9b2391422849169453fa4bfbd18f8e596cf58c9",
+      "size_bytes": 59376
+    },
+    {
+      "local_path": "evidence/north-star-medicine/keyboard-carried.png",
+      "sha256": "317012487d36ccfecfdcfb8cc9c040ae8b3714ceaf05094ba13e208c3d9c51df",
+      "size_bytes": 62855
+    },
+    {
+      "local_path": "evidence/north-star-medicine/keyboard-handed-over.png",
+      "sha256": "720f22555a84af4c02c2dc751a46f0c3576cd25a6e16ef98fdc04ca9d4ef7ff1",
+      "size_bytes": 55409
+    },
+    {
+      "local_path": "evidence/north-star-medicine/keyboard.json",
+      "sha256": "d79f153f297237538ae360442033a0ebdd1cac701d08f55baadf1703061d39fb",
+      "size_bytes": 5558
+    },
+    {
+      "local_path": "evidence/north-star-medicine/realtime-baseline.gd",
+      "sha256": "d55e4e31defe439848eeb9d3681910f3b2932bd8fdf3c9ecc42bd91680db4fe8",
+      "size_bytes": 1726
+    },
+    {
+      "local_path": "evidence/north-star-medicine/realtime-current.gd",
+      "sha256": "14592c35f1a456619de333db7bb4b2e375627383550de18b2bee73903a8b6dd0",
+      "size_bytes": 1765
+    },
+    {
+      "local_path": "evidence/north-star-medicine/realtime.json",
+      "sha256": "f603281a9413b6537b79a17df0a5cc6947fc8c15116833d6ad0796912f74152f",
+      "size_bytes": 10178
+    },
+    {
+      "local_path": "evidence/north-star-medicine/recovering.png",
+      "sha256": "f5144a245862306f93bcd7590224c79f471adcdb1ce393294887b08ea40778b5",
+      "size_bytes": 63760
+    },
+    {
+      "local_path": "evidence/north-star-medicine/render.json",
+      "sha256": "69cca98884eaa6c579ba11f19149114134b17e96bca0420c84a275df1a7d668e",
+      "size_bytes": 15814
+    },
+    {
+      "local_path": "evidence/north-star-medicine/results.json",
+      "sha256": "b1c8288509aba766a18067c4856781e1bcd5a0a8028a717b215342047019c005",
+      "size_bytes": 53539
+    },
+    {
+      "local_path": "evidence/north-star-medicine/route-refinement.json",
+      "sha256": "5d6524aaf0f06e9995c5e9e5e0e2ad8b2bc2cec2af2f3a816293b25357b60729",
+      "size_bytes": 14492
+    },
+    {
+      "local_path": "evidence/north-star-medicine/selection.png",
+      "sha256": "10ab825c42e41ddd7e7a3a71c7847244b7935b458bfda2da31b4c6b2952be10e",
+      "size_bytes": 132713
+    }
+  ],
+  "brain_activation": {
+    "indices": "All three complete indices read; searches escolhas/aventura/consequências; complete pertinent chapters read. Original bytes and integrity pins unchanged.",
+    "engineering": "High: ENG-004/005 distinguish need, acceptance boundaries and state ownership; ENG-023 requires actual consequences and separate aesthetic assessment.",
+    "science": "High: SCI-017 positive/negative and baseline controls; SCI-062 separates route feasibility/telemetry from observed human agency and fun.",
+    "creative": "High: CRE-001 direct author identity and CRE-005 documented agency direction; CRE-047/058/086 hypothetical legible costs, short solo adventure and enacted consequences. Specific case/courier fiction remains experimental, not canon."
+  },
+  "alternatives": [
+    {
+      "candidate": "Optional off-road recovery and actual handoff in the current escort",
+      "category": 1,
+      "selected": true,
+      "reason": "Adds a voluntary world action competing for existing position/attention; preserves both direct success and real approach-specific defenses."
+    },
+    {
+      "candidate": "Courier wait/resume",
+      "category": 1,
+      "selected": false,
+      "reason": "Current finite beam target predicts28px/s movement. Stopping without new contact design can make it miss for free, undermining approach distinction; bounded costs need separate design."
+    },
+    {
+      "candidate": "Branching physical routes",
+      "category": 1,
+      "selected": false,
+      "reason": "Requires distinct traversed hazards/costs, not two labels. Greater geometry/pacing scope than one real request inside existing route."
+    },
+    {
+      "candidate": "Input remapping/controller clarity",
+      "category": 1,
+      "selected": false,
+      "reason": "Useful fixed-key limitation; no currently observed hardware case outranks missing in-encounter agency. New E affordance is checked in the selected workflow."
+    },
+    {
+      "candidate": "Real-time execution envelope investigation",
+      "category": 3,
+      "selected": false,
+      "reason": "Concrete prior timeout uncertainty. Bounded baseline/current rendered Guardian execution accompanies the functional increment rather than substituting a standalone report."
+    },
+    {
+      "candidate": "Additional origin/laboratory extraction",
+      "category": 4,
+      "selected": false,
+      "reason": "Valuable portfolio methods remain preserved; no consumer need outranks this direct playable consequence."
+    }
+  ],
+  "before_after": {
+    "before": "Two approaches and optional rehearsal/keepsakes; courier advances to gate, no additional world request or recover/handoff action.",
+    "after": "First-marker case can be left, recovered but unhanded, or handed back through actual held proximity; threats/courier continue and result text distinguishes outcomes. No persistent new reward.",
+    "baseline_record": "evidence/north-star-keepsakes/results.json",
+    "original_four_outcomes_identical": true,
+    "rehearsals_keepsakes_restart_observations_identical": true,
+    "actual_direct_scene_snapshots_equal_original_combat": true,
+    "fixed_route_observations": [
+      {
+        "role": "Guardian",
+        "direct_courier": 3,
+        "recovery_courier": 2,
+        "recovery_hp": 5,
+        "recovery_events": [
+          {
+            "action": "dropped",
+            "tick": 515
+          },
+          {
+            "action": "recovered",
+            "tick": 633
+          },
+          {
+            "action": "delivered",
+            "tick": 701
+          },
+          {
+            "action": "crossing_won",
+            "tick": 1800
+          }
+        ]
+      },
+      {
+        "role": "Duelist",
+        "direct_courier": 3,
+        "recovery_courier": 3,
+        "recovery_hp": 5,
+        "recovery_events": [
+          {
+            "action": "dropped",
+            "tick": 515
+          },
+          {
+            "action": "recovered",
+            "tick": 645
+          },
+          {
+            "action": "delivered",
+            "tick": 714
+          },
+          {
+            "action": "crossing_won",
+            "tick": 1800
+          }
+        ]
+      }
+    ],
+    "interpretation_limit": "Route-specific feasible outcomes, not unavoidable recovery tax, optimal strategies, class balance, player comprehension or preference."
+  },
+  "keyboard_protocol": [
+    "Prepared scene starts paused with courier at first marker and character at case; this is an interaction fixture, not a full-route keyboard journey.",
+    "Return resumes actual simulation. Held E partially recovers; releasing resets progress. A later uninterrupted hold recovers the case.",
+    "W then D move toward the actually advancing courier. Held E completes handoff; ordinary threat impacts and courier motion remain visible.",
+    "Captured states and screenshots identify prepared setup, partial/cancelled/carried/delivered; events are synthetic XTest input, not a human participant."
+  ],
+  "presentation": "Inspected actual selection, dropped case, recovery commitment/progress, handoff ring/progress, both recovered results and direct escort. Controlled screenshot scenario advances model ticks between frames. Handoff radius is drawn; prompt moves above courier and hides during commitment to avoid competing labels. Small original vector case, no imported external media.",
+  "realtime_scope": "One Guardian baseline direct and current recovery use exactly one step per physics signal. Baseline30model seconds/32.335activewall/47.561total; final30model/30.896activewall/44.838total. Both complete before55s process timeout and owned Godot/Xorg are reaped. Source pins and scenario code preserved in realtime.json and .gd files. Timing differences are not a causal FPS benchmark or universal old-timeout diagnosis; no real-time Duelist/human/hardware validation.",
+  "failures_and_refinements": [
+    "First integration exposed API mismatch between bool channel/missing outcome method and scene drawing; harmonized contracts before accepted execution.",
+    "Initial fixed recovery policy collected but chased after25px, canceling handoff inside actual54px range. Both lost; route-refinement.json retains outcomes. Corrected policy holds E continuously while in range, without changing Combat or durations.",
+    "An already committed movement step could otherwise coexist with recovery progress; added explicit step completion requirement and negative control.",
+    "Initial input control reused one event object in the same frame, causing engine warning. Release now uses a distinct duplicated event.",
+    "Review found loss could coincide with courier gate arrival; loss text now says no safe delivery confirmed, rather than inventing physical case location.",
+    "Dummy llvmpipe reports unsupported V-Sync; rendering succeeds. No product workaround, physical timing or audio claim."
+  ],
+  "continuity": {
+    "north_star": "Existing local_prototype consumer gains real optional world action and distinguishable outcome. Five actual consumer code paths,14 capabilities,only NS-C03 adapted; other states unchanged.",
+    "knowledge": "Extended existing combat-response finding with position/attention, handoff ownership, fixed-policy limits and bounded rendering evidence; no new laboratory.",
+    "portfolio": "Root/lab/showcase demonstrate current executable voluntary choice alongside retained origin technologies.",
+    "origin_migration": "P01-P05/P07/P08/P10/P11 preserved_pending_extraction; P06 pilot_instrumented; P09 seed_only. All original source/media/distributions/tests preserved. No P10 code import or origin promotion.",
+    "prompt": "Unchanged. Existing guidance already prioritizes actual consumer, matched validation, selective activation and honest evidence; no new durable rule justified."
+  },
+  "limitations": [
+    "A single optional medicine request and geometric encounter are experimental, not a complete adventure/class/build/profession system or canon approval.",
+    "Fixed scripted routes are not optimality/balance proof, independent participants, comprehension, identity, enjoyment, retention or commercial evidence.",
+    "Prepared OS-key interaction proves the adapter in its setup, not unassisted full-route navigation. Full real-time rendered coverage is one Guardian policy per version under dummy software output.",
+    "No new persistent item/reward/schema, P10 code integration, account/server authority, multiplayer, MMORPG scale, physical controller/audio or universal accessibility claim.",
+    "Godot4.6.3 remains the prototype tool; the PCK requires the matching engine and does not choose final MMO technology."
+  ],
+  "repository_validation": "All100 Python controls passed (17 brain,27 repository,42 references,11 manifest,3 native wrapper); brain/source/reference/link gates passed. Manifest regeneration and exact check follow final content; publication/CI verified separately."
+}

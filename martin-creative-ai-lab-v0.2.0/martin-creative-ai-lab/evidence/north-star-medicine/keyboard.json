@@ -1,0 +1,278 @@
+{
+  "cancelled": {
+    "cargo": 3,
+    "counters": {
+      "blocks": 0,
+      "counters": 0,
+      "courier_hits": 0,
+      "dodges": 0,
+      "player_hits": 0,
+      "redirects": 0,
+      "rejected": 0
+    },
+    "courier_x": 428.934,
+    "energy": 100.0,
+    "errand": {
+      "channel": false,
+      "events": [
+        {
+          "action": "dropped",
+          "tick": 516
+        }
+      ],
+      "finished": false,
+      "progress": 0.0,
+      "state": "available"
+    },
+    "events": [],
+    "hp": 5,
+    "keepsakes": {
+      "blocked": false,
+      "dirty": false,
+      "earned": [
+        "held_line",
+        "drew_danger"
+      ],
+      "equipped": "",
+      "status": "Saved locally."
+    },
+    "last_impact": {},
+    "mode": "play",
+    "rehearsal": {
+      "active": false,
+      "attempts": 0,
+      "passed": false,
+      "paused": false,
+      "results": [],
+      "stage": 0,
+      "state": "ready"
+    },
+    "role": "Guardian",
+    "tick": 578
+  },
+  "carried": {
+    "cargo": 3,
+    "counters": {
+      "blocks": 0,
+      "counters": 0,
+      "courier_hits": 0,
+      "dodges": 0,
+      "player_hits": 0,
+      "redirects": 0,
+      "rejected": 0
+    },
+    "courier_x": 462.534,
+    "energy": 100.0,
+    "errand": {
+      "channel": false,
+      "events": [
+        {
+          "action": "dropped",
+          "tick": 516
+        },
+        {
+          "action": "recovered",
+          "tick": 633
+        }
+      ],
+      "finished": false,
+      "progress": 0.0,
+      "state": "carried"
+    },
+    "events": [],
+    "hp": 5,
+    "keepsakes": {
+      "blocked": false,
+      "dirty": false,
+      "earned": [
+        "held_line",
+        "drew_danger"
+      ],
+      "equipped": "",
+      "status": "Saved locally."
+    },
+    "last_impact": {},
+    "mode": "play",
+    "rehearsal": {
+      "active": false,
+      "attempts": 0,
+      "passed": false,
+      "paused": false,
+      "results": [],
+      "stage": 0,
+      "state": "ready"
+    },
+    "role": "Guardian",
+    "tick": 650
+  },
+  "delivered": {
+    "cargo": 2,
+    "counters": {
+      "blocks": 0,
+      "counters": 0,
+      "courier_hits": 1,
+      "dodges": 0,
+      "player_hits": 0,
+      "redirects": 0,
+      "rejected": 0
+    },
+    "courier_x": 516.669,
+    "energy": 100.0,
+    "errand": {
+      "channel": false,
+      "events": [
+        {
+          "action": "dropped",
+          "tick": 516
+        },
+        {
+          "action": "recovered",
+          "tick": 633
+        },
+        {
+          "action": "delivered",
+          "tick": 749
+        }
+      ],
+      "finished": false,
+      "progress": 0.0,
+      "state": "delivered"
+    },
+    "events": [
+      {
+        "cargo": 2,
+        "energy": 100.0,
+        "hp": 5,
+        "kind": "courier_hit",
+        "tick": 685
+      }
+    ],
+    "hp": 5,
+    "keepsakes": {
+      "blocked": false,
+      "dirty": false,
+      "earned": [
+        "held_line",
+        "drew_danger"
+      ],
+      "equipped": "",
+      "status": "Saved locally."
+    },
+    "last_impact": {
+      "code": "courier_first_contact",
+      "explanation": "The courier was the first body on the locked bolt line.",
+      "tip": "Move between sentinel and courier. Face the sentinel and hold K."
+    },
+    "mode": "play",
+    "rehearsal": {
+      "active": false,
+      "attempts": 0,
+      "passed": false,
+      "paused": false,
+      "results": [],
+      "stage": 0,
+      "state": "ready"
+    },
+    "role": "Guardian",
+    "tick": 766
+  },
+  "fixture": {
+    "cargo": 3,
+    "counters": {
+      "blocks": 0,
+      "counters": 0,
+      "courier_hits": 0,
+      "dodges": 0,
+      "player_hits": 0,
+      "redirects": 0,
+      "rejected": 0
+    },
+    "courier_x": 400.0,
+    "energy": 100.0,
+    "errand": {
+      "channel": false,
+      "events": [],
+      "finished": false,
+      "progress": 0.0,
+      "state": "waiting"
+    },
+    "events": [],
+    "hp": 5,
+    "keepsakes": {
+      "blocked": false,
+      "dirty": false,
+      "earned": [
+        "held_line",
+        "drew_danger"
+      ],
+      "equipped": "",
+      "status": "Saved locally."
+    },
+    "last_impact": {},
+    "mode": "paused",
+    "rehearsal": {
+      "active": false,
+      "attempts": 0,
+      "passed": false,
+      "paused": false,
+      "results": [],
+      "stage": 0,
+      "state": "ready"
+    },
+    "role": "Guardian",
+    "tick": 516
+  },
+  "kind": "synthetic_os_keyboard_prepared_interaction",
+  "partial": {
+    "cargo": 3,
+    "counters": {
+      "blocks": 0,
+      "counters": 0,
+      "courier_hits": 0,
+      "dodges": 0,
+      "player_hits": 0,
+      "redirects": 0,
+      "rejected": 0
+    },
+    "courier_x": 417.267,
+    "energy": 100.0,
+    "errand": {
+      "channel": true,
+      "events": [
+        {
+          "action": "dropped",
+          "tick": 516
+        }
+      ],
+      "finished": false,
+      "progress": 0.416667,
+      "state": "available"
+    },
+    "events": [],
+    "hp": 5,
+    "keepsakes": {
+      "blocked": false,
+      "dirty": false,
+      "earned": [
+        "held_line",
+        "drew_danger"
+      ],
+      "equipped": "",
+      "status": "Saved locally."
+    },
+    "last_impact": {},
+    "mode": "play",
+    "rehearsal": {
+      "active": false,
+      "attempts": 0,
+      "passed": false,
+      "paused": false,
+      "results": [],
+      "stage": 0,
+      "state": "ready"
+    },
+    "role": "Guardian",
+    "tick": 553
+  },
+  "scope": "Actual E/movement events in prepared nearby-case fixture; not full-route navigation or human gameplay. Courier and threats run normally after Return."
+}

@@ -14,6 +14,9 @@ may revise a derived lesson; ordinary work must not rewrite the brain sources.
 
 ## Existing lessons and consumers
 
+The [combat-response lesson](combat-response.md) now also records an optional recovery/
+handoff competing for escort position, with fixed-policy costs and human-evidence limits.
+
 [Character keepsakes](character-keepsakes.md) records the executed destination's optional
 earned appearance, local restart/recovery controls and a negative finding: save diagnostics
 must not displace live action feedback. Human recognition/value remains unverified.

@@ -76,6 +76,28 @@ defense or successful input is supplied for the player. Rehearsal grants no cros
 reward or carried advantage. These controlled tasks do not establish sustained
 resource management, learning transfer, unassisted comprehension or human accessibility.
 
+## Optional medicine recovery
+
+At the first marker (courier x=400), a loose medicine case falls south of the road.
+The main goal remains getting the courier to the far gate. You may keep escorting;
+leaving the case does not prevent victory or the existing approach keepsake.
+
+- Approach the case's visible **36px** ring and hold **E for 0.8 seconds** to recover it.
+- Carry it back inside the moving courier's visible **54px** ring and hold **E for
+  0.6 seconds** to hand it over. Recovering alone is not delivery.
+- An eligible hold commits your attention: no guard, feint, step or blade. Movement
+  or releasing E cancels partial progress; an already active step must finish first.
+  Pausing freezes progress. Out-of-range E does not suppress combat.
+- The courier and threat clock **continue**. Interacting grants no immunity. Watch
+  the warning and choose whether/when leaving your defensive position is worthwhile.
+
+Results distinguish successful handoff, a case still carried, direct escort and defeat.
+The short courier responses are original experimental test fiction, not accepted lore.
+The errand resets each attempt and creates no persistent item, power or extra mark.
+In the recorded feasible policies Guardian completes recovery with courier 2/3 versus
+3/3 direct; Duelist completes both with 3/3. These are outcomes of those fixed routes,
+not unavoidable costs, optimality, balance or human preference evidence.
+
 ## Keepsakes on this device
 
 A full normal crossing can earn one experimental cosmetic mark for its approach:
@@ -113,7 +135,7 @@ or MMORPG persistence.
 ## Execute checks and reproduce delivery
 
 ```bash
-python3 north-star/prototype/tools/verify.py --godot godot --output /tmp/crossing-check.json --compare evidence/north-star-keepsakes/results.json
+python3 north-star/prototype/tools/verify.py --godot godot --output /tmp/crossing-check.json --compare evidence/north-star-medicine/results.json
 ```
 
 The stdlib runner bounds owned engine processes, uses writable temporary XDG paths,
@@ -121,7 +143,8 @@ loads the source project, executes positive/negative controls, both rehearsal se
 and two complete repeatable crossing policies, plus keepsake eligibility and local
 profile controls, then executes the **delivered PCK** and requires exact source/PCK
 outcomes.
-The current suite has 110 native controls. Eight further engine invocations (earn,
+The current suite has 141 native controls, including full direct/recovery routes for
+both approaches. Eight further engine invocations (earn,
 read, put away, read for each source/PCK) demonstrate actual process reentry with
 the same local profile. New crossings remain fresh; only earned/equipped marks return.
 It rejects script errors, missing reports, failed checks or changed packaged behavior.
@@ -134,11 +157,12 @@ The source pack is reproducible with the matching engine:
 godot --headless --path north-star/prototype --script tools/pack.gd -- /absolute/path/crossing-drill.pck
 ```
 
-[Current execution evidence](../../evidence/north-star-keepsakes/RUN.json) identifies
+[Current execution evidence](../../evidence/north-star-medicine/RUN.json) identifies
 baseline, source/result hashes, commands, refinements and limitations. The preserved
 [first-consumer record](../../evidence/north-star-crossing/RUN.json) documents the
 original crossing delivery; the [rehearsal record](../../evidence/north-star-rehearsal/RUN.json)
-preserves that feedback increment. The actual playable scene and rehearsal use `combat.gd`;
+preserves that feedback increment. The [keepsake record](../../evidence/north-star-keepsakes/RUN.json)
+preserves the earlier cosmetic-continuity increment. The actual playable scene and rehearsal use `combat.gd`;
 checks use that same implementation rather than a copied simulation. Optional rendered
 journeys use controlled inputs, not human decisions.
 

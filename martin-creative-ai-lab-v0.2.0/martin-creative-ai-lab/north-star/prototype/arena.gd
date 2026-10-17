@@ -2,12 +2,14 @@ extends Node2D
 const Combat = preload("res://combat.gd")
 const Rehearsal = preload("res://rehearsal.gd")
 const Keepsakes = preload("res://keepsakes.gd")
+const Errand = preload("res://errand.gd")
 const KEEPSAKE_NAMES := {"":"None", "held_line":"Held the Line", "drew_danger":"Drew the Danger"}
 var keepsakes = Keepsakes.new()
 var profile_path := ""
 var normal_run := false
 var reward_checked := false
 var reward_message := ""
+var errand = Errand.new()
 var rehearsal = Rehearsal.new()
 var game = Combat.new()
 var selected := "Guardian"
@@ -26,6 +28,7 @@ func _ready() -> void:
 	queue_redraw()
 
 func abandon() -> void:
+	errand=Errand.new()
 	normal_run=false
 	reward_checked=false
 	reward_message=""
@@ -35,6 +38,7 @@ func abandon() -> void:
 	taps.clear()
 
 func begin_crossing() -> void:
+	errand.reset()
 	normal_run=true
 	reward_checked=false
 	reward_message=""
@@ -97,6 +101,7 @@ func _physics_process(dt: float) -> void:
 	# Navigation keys carry logical identity; WASD keeps physical keyboard positions.
 	command.aim=vector_keys(KEY_LEFT,KEY_RIGHT,KEY_UP,KEY_DOWN,false)
 	command.skill=Input.is_physical_key_pressed(KEY_K)
+	command.interact=Input.is_physical_key_pressed(KEY_E)
 	if rehearsal.active: rehearsal.step(dt,command)
 	else: advance_crossing(dt,command)
 	taps.clear()
@@ -104,7 +109,9 @@ func _physics_process(dt: float) -> void:
 
 func advance_crossing(dt: float, command: Dictionary) -> void:
 	var previous: String=game.mode
-	game.step(dt,command)
+	var effective: Dictionary=errand.prepare(game,dt,command) if normal_run else command
+	game.step(dt,effective)
+	if normal_run: errand.settle(game)
 	if previous=="play" and game.mode=="won": settle_crossing()
 
 func settle_crossing() -> void:
@@ -155,6 +162,7 @@ func _draw() -> void:
 	for y in range(200,650,55): draw_line(Vector2(50,y),Vector2(1102,y),Color("203e49"),1)
 	draw_rect(Rect2(50,355,1052,70),Color("35454a"))
 	draw_line(Vector2(70,390),Vector2(1080,390),Color("718282"),2)
+	if errand.active and not rehearsal.active: draw_errand()
 	for x in [400,700,1000]:
 		draw_line(Vector2(x,350),Vector2(x,430),AMBER if game.courier.x>=x else Color("6c777b"),4)
 		text(Vector2(x-35,458),"GATE" if x==1000 else "MARK",14)
@@ -204,7 +212,7 @@ func _draw() -> void:
 func draw_header() -> void:
 	draw_rect(Rect2(0,0,1152,174),INK)
 	text(Vector2(40,42),"VIRGO DIAMOND / "+("REHEARSAL" if rehearsal.active else "CROSSING DRILL"),25)
-	text(Vector2(40,70),("%d / 3  %s  •  "%[rehearsal.stage+1,rehearsal.heading()]+rehearsal.instruction()) if rehearsal.active else "LOCAL EXPERIMENT  •  Keep the courier alive to the far gate",16,AMBER)
+	text(Vector2(40,70),("%d / 3  %s  •  "%[rehearsal.stage+1,rehearsal.heading()]+rehearsal.instruction()) if rehearsal.active else (errand.hint() if errand.active else "LOCAL EXPERIMENT  •  Keep the courier alive to the far gate"),16,AMBER)
 	text(Vector2(40,110),game.role.to_upper()+"  /  HEALTH "+str(game.hp)+"   COURIER "+str(game.cargo),19)
 	draw_rect(Rect2(40,130,300,12),Color("32475a"))
 	draw_rect(Rect2(40,130,300*game.energy/100,12),TEAL if game.role=="Guardian" else AMBER)
@@ -221,7 +229,7 @@ func overlay() -> void:
 	draw_rect(Rect2(40,176,1072,473),Color(0.03,0.07,0.12,0.90))
 	if game.mode=="title":
 		text(Vector2(210,231),"One crossing. Two ways to hold the line.",30)
-		text(Vector2(210,266),"The courier keeps moving. Three impacts lose the crossing.",19)
+		text(Vector2(140,266),"Courier keeps moving. At MARK 1, optional medicine falls south of the road.",19)
 		panel(Rect2(180,292,380,212),Color("244a50") if selected=="Guardian" else Color("1b2d40"))
 		panel(Rect2(590,292,380,212),Color("594730") if selected=="Duelist" else Color("1b2d40"))
 		text(Vector2(205,330),"1  GUARDIAN",26,TEAL)
@@ -244,6 +252,7 @@ func overlay() -> void:
 		text(Vector2(280,430),("Guard faces the direction locked when K was first held." if game.role=="Guardian" else "K draws an amber bolt only inside the sentinel's ring."),19)
 		text(Vector2(280,465),("Release K before turning. Steps move; they grant no immunity." if game.role=="Guardian" else "Leave the drawn line. Steps move; they grant no immunity."),19)
 		draw_impact(Vector2(130,530))
+		text(Vector2(130,617),"Optional case: hold E nearby to recover, then E near courier to hand over. Neither waits.",17,AMBER)
 	else:
 		text(Vector2(250,290),"THE COURIER CROSSED" if game.mode=="won" else "THE LINE BROKE",36,TEAL if game.mode=="won" else RED)
 		text(Vector2(250,345),game.role+"  /  blocks %d   drawn bolts %d   counters %d"%[game.counters.blocks,game.counters.redirects,game.counters.counters],22)
@@ -252,6 +261,30 @@ func overlay() -> void:
 		text(Vector2(250,510),"ENTER retry this approach     •     R choose approach",22)
 		text(Vector2(150,552),reward_message if game.mode=="won" else "No keepsake earned. Complete a crossing with a block or drawn bolt.",18,TEAL if game.mode=="won" else AMBER)
 		text(Vector2(150,585),"C  Wear / put away     •     F5  Retry local save     /     cosmetic only",18)
+		text(Vector2(150,622),errand.outcome(),17,AMBER)
+
+func draw_errand() -> void:
+	if errand.state=="waiting": return
+	if errand.state=="available":
+		draw_case(Errand.CASE)
+		draw_arc(Errand.CASE,Errand.RADIUS,0,TAU,32,Color(1,0.77,0.45,0.4),1)
+		text(Errand.CASE+Vector2(-72,47),"MEDICINE CASE",15,AMBER)
+		text(Errand.CASE+Vector2(-74,70),"Hold E  /  optional",15)
+	elif errand.state=="carried":
+		draw_case(game.player+Vector2(-25,15),0.55)
+		draw_arc(game.courier,Errand.HANDOFF_RADIUS,0,TAU,40,Color(0.35,0.88,0.81,0.65),2)
+		if not errand.channel: text(game.courier+Vector2(-75,-80),"Hold E to hand over",15,AMBER)
+	elif errand.state=="delivered": draw_case(game.courier+Vector2(0,-27),0.55)
+	if errand.channel:
+		var duration: float=Errand.RECOVER_TIME if errand.state=="available" else Errand.HANDOFF_TIME
+		draw_arc(game.player,32,-PI/2,-PI/2+TAU*errand.progress/duration,32,TEAL,4)
+		text(game.player+Vector2(-50,-58),"RECOVERING" if errand.state=="available" else "HANDING OVER",14,TEAL)
+
+func draw_case(at: Vector2, scale_factor: float=1.0) -> void:
+	draw_rect(Rect2(at-Vector2(15,11)*scale_factor,Vector2(30,22)*scale_factor),INK)
+	draw_rect(Rect2(at-Vector2(15,11)*scale_factor,Vector2(30,22)*scale_factor),AMBER,false,2)
+	for x in [-8,0,8]:
+		draw_line(at+Vector2(x,-6)*scale_factor,at+Vector2(x,6)*scale_factor,TEAL,3*scale_factor)
 
 func footer() -> String:
 	if rehearsal.active:
@@ -297,4 +330,5 @@ func capture() -> void:
 	report.last_impact=game.last_impact.duplicate(true)
 	report.rehearsal=rehearsal.snapshot()
 	report.keepsakes=keepsakes.snapshot()
+	report.errand=errand.snapshot()
 	file.store_string(JSON.stringify(report,"  ")+"\n")

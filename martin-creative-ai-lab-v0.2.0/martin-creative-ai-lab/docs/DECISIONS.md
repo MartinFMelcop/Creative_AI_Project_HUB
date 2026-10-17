@@ -1869,3 +1869,54 @@ bounded local behavior, not pride, enjoyment, learning, accessibility, social re
 MMORPG progression or commercial demand. The earlier full-policy real-time render limit
 remains unresolved. Retain the single operational prompt: its priority/activation/evidence
 guidance served this consumer increment; no durable instruction change is justified.
+
+## ADR-074 — make a voluntary recovery change the current escort
+
+**Date:** 2026-10-17 UTC. **Status:** SEED 0.33.4; DEVELOPMENT, priority category 1.
+
+Baseline `8c51b2f` carries an earned appearance across reentry, but its escort always
+advances on one timeline and offers no additional world request. Compare an optional
+in-encounter action, input clarity/remapping and the unresolved rendered execution limit.
+Within adventure design, compare a real route fork, courier wait/resume and recovery of
+one dropped medicine case. A fork needs distinct traversed hazards/costs, not route names;
+waiting risks undermining finite locked-beam geometry and the existing role differences.
+Select recovery and a real handoff, keeping the current movement/threat consumer intact.
+
+After the courier reaches x=400, place one case south of the road. E held within 36px
+for 0.8s recovers; E within 54px of the moving courier for 0.6s hands it back. Movement,
+releasing E or leaving reach cancels partial progress. A valid hold prevents guard/step/strike and cannot start during
+an already committed step; courier movement and attacks continue. Pausing freezes partial
+work. A distinct terminal state records delivered, merely carried or left behind, with
+escort defeat taking precedence over a claim of successful delivery. Arrival and player
+death can share a tick, so failure text must not invent the case's physical location.
+
+Keep the request voluntary: both direct escort and recovery can win, and neither changes
+main success or keepsake eligibility. Do not add a persistent item, reward tier, new save
+schema, generic quest framework, named encyclopedia NPC or imported P10 code. The request
+is a small original experimental scene, not canonization of the Creative Brain's candidate
+opening mission. All original Combat rules remain in their existing model.
+
+All 141 native checks passed with exact source/PCK observations, unchanged direct
+snapshots and full repeatable routes for both approaches. Under the tested feasible
+policies, Guardian recovery ends with courier health 2/3 versus direct 3/3; Duelist retains 3/3
+in both. The difference belongs to those traces and their changed movement/counters;
+it does not prove an inevitable cost or an optimal policy. A real pulse during interaction
+shows continued exposure. Negative controls reject remote, pre-marker, interrupted,
+stepping and terminal completion. The initial route driver chased after 25px and reset an
+otherwise valid 54px handoff; retain E inside the real radius rather than loosening rules.
+
+A separately bounded real-physics-signal Guardian baseline renders 30 simulated seconds
+in 32.335 active wall seconds (47.56 total); final recovery renders 30 in 30.896 (44.84
+total). This narrows the earlier execution uncertainty for the tested software environment.
+It is not a frame-rate comparison, universal old-timeout diagnosis, a real-time rendered
+Duelist journey or independent human play. Controlled presentation and prepared OS-keyboard
+interaction checks retain actual artifact scope in the [execution record](../evidence/north-star-medicine/RUN.json).
+
+All domains high: ENG-004/005/023 inform requirements, state ownership and causal
+experience; SCI-017/062 inform controls and experience limits; CRE-001/005 anchor
+author identity/editorial agency while CRE-047/058/086 supply candidate meaningful-cost
+and short-adventure ideas. Preserve source statuses, immutable brains and historical
+evidence. No laboratory or origin obligation is added. One local consumer now has five
+code paths; fourteen capabilities retain NS-C03 adapted and thirteen unchanged states.
+Origin code/assets/tests/states remain preserved. Existing prompt guidance supports the
+selected product work and bounded verification; retain the prompt unchanged.

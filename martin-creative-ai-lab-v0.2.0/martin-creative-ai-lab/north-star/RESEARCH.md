@@ -5,12 +5,14 @@
 [Crossing Drill](prototype/README.md) is the first local executable consumer, selected
 in DEVELOPMENT mode before further standalone research. It makes finite-resource
 frontal protection and threat redirection/mobility playable under one courier objective.
-[Design](DESIGN.md) and [execution](../evidence/north-star-keepsakes/RUN.json) separate
+[Design](DESIGN.md) and [execution](../evidence/north-star-medicine/RUN.json) separate
 mechanical feasibility, rendered review and still-missing human experience evidence.
 Its optional rehearsal now isolates real protection/redirection, floor avoidance and
 reachable counters, with retained causal feedback. Scripted success validates that
-workflow, not player learning transfer. Reassess observed weaknesses before creating
-unrelated instruments.
+workflow, not player learning transfer. The optional medicine recovery/handoff now
+competes for position and attention while escort/threat simulation continues. Fixed
+complete routes show feasibility and their own costs, not optimal play or player values.
+Reassess observed weaknesses before creating unrelated instruments.
 
 ## Preserved executed instrument
 

@@ -17,6 +17,7 @@ author decisions prevail. Status here describes scope, not independent player ap
 | Revised after actual keyboard execution | Navigation arrows use logical identity; WASD retains physical positions | Baseline XTest LEFT reached logical input but not physical polling. Corrected adapter passes native logical-only input and real wrong/right-facing journeys. |
 | Revised after visual inspection | Review panel follows a safe vertical region; last line/pulse remains visible | Early review hid the Duelist near the upper boundary. The panel moves away; frozen contact geometry, OPEN range and remaining time expose position and timing. |
 | Experimental | Earned, voluntarily worn local keepsakes; current author convergence direction and CRE-001 direct identity decision, informed by CRE-004/030/062 hypotheses | A completed normal crossing with a role-specific action unlocks one cosmetic mark. The player chooses whether to wear it; no combat advantage, repeated-farming requirement, account or secure/MMO persistence. Specific marks and acquisition rules remain proposals, not author-approved canon or player validation. |
+| Experimental | Optional medicine recovery and real handoff; current author agency direction, CRE-005 documented direction and CRE-047/058/086 hypotheses | First-marker fall creates a spatial/temporal choice inside the existing escort. Stationary nearby E commits attention while courier/threats continue; moving/releasing cancels. Direct escort remains successful; carried is not delivered. No new persistent loot, mandatory profession, class exclusivity or canon approval. |
 | Rejected for this increment | Renaming P06 parry/dash as classes; expanding another timing matrix; trees/inventory/networking | These do not close the missing executable character experience. P01 economy and P10 narrative remain credible later consumers, requiring their own design contracts. |
 
 ## Current product contract
@@ -50,6 +51,13 @@ is preserved and blocks replacement while the current session remains playable.
 After external restoration or removal, retry combines known marks with the accepted
 profile and respects an explicitly changed appearance. This is bounded local cosmetic
 continuity, not a selected account, server-authority or MMORPG persistence design.
+
+A case falls south of the first marker once the courier reaches it. Optional recovery
+requires 0.8s within 36px, followed by an actual 0.6s handoff within 54px of the moving
+courier. Nearby eligible E suppresses combat actions, not simulation. Movement/release
+cancel partial work; pause freezes it. The handoff ring and progress arc expose actual
+acceptance boundaries. Only a won crossing with a completed handoff confirms safe delivery;
+a carried case or defeat receives different text. No new persistent state is recorded.
 
 ## Evidence boundary and next selection
 

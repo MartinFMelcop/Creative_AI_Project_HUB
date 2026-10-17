@@ -81,3 +81,40 @@ The corrected adapter uses logical identity for navigation arrows, physical posi
 for WASD; native logical-only input plus actual wrong/right-facing trials pass. Core
 combat outcomes remain unchanged. This is scoped Linux/Godot input evidence, not all
 keyboard layouts or hardware accessibility.
+
+## Destination agency — an optional task competes with escort position
+
+**Question/context:** At baseline8c51b2f, choosing an approach changes defense, but the
+only world objective remains an automatically advancing courier. Can a voluntary
+recovery/handoff add observable action and consequence within that same encounter?
+See [medicine execution](../evidence/north-star-medicine/RUN.json), its exact sources,
+full route observations and controlled negative cases. ENG-004/005/023, SCI-017/062,
+CRE-001/005 and CRE-047/058/086 informed requirements, ownership, controls and agency;
+specific medicine fiction remains experimental, not adopted encyclopedia canon.
+
+**Observation:** the first marker makes a case available off the road. Actual nearby
+held recovery followed by a second held handoff can complete alongside the escort for
+both approaches. Direct escort keeps the complete original Combat snapshot. Recovery
+commits attention while threats/courier continue; a controlled pulse still damages the
+interacting player. Moving/releasing cancels progress, pause freezes it and a carried
+case at gate is never automatically reported delivered.
+
+The fixed feasible Guardian route ends with courier2/3 versus3/3 direct; Duelist ends
+both with3/3 and different counter histories. These are policy-specific outcomes, not
+an unavoidable recovery tax, optimal strategies or comparative class balance. The first
+route script repeatedly chased the moving courier, canceling handoff until both roles
+lost. Sustaining E within actual handoff range corrected the script, not the combat
+model. Presentation now draws that true range and distinguishes carrying from delivery.
+
+**Interpretation/consequence:** a short world choice can use existing positional and
+temporal commitments without requiring branches of an MMO world or a new reward ledger.
+Expose the action's acceptance boundary, preserve main-objective success when declined
+and describe the outcome actually executed; loss cannot imply a location never reached.
+
+**Validity:** source/PCK routes, prepared OS-keyboard interaction and agent image review
+are distinct evidence. One rendered Guardian baseline and recovery route also execute
+one step per physics tick to completion in a bounded software-rendered environment;
+this narrows the earlier timeout uncertainty without diagnosing its cause or establishing
+all-device real-time performance. No human comprehension, identity, preference, ethical
+judgment or fun is established. No P10 code, account progression or shared-world state
+has been integrated. Revisit after independent player observation or new route policies.

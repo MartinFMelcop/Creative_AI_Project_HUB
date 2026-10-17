@@ -13,7 +13,7 @@ records dependencies, existing consumers, risks and extraction work.
 
 | Inspectable sample | What it demonstrates | Evidence boundary |
 |---|---|---|
-| [North Star crossing](../north-star/prototype/README.md) | Real local character consumer, response rehearsal, causal review, earned optional appearance and local reentry in source/PCK | [Evidence](../evidence/north-star-keepsakes/RUN.json); experimental design, no independent player or production-MMO validation |
+| [North Star crossing](../north-star/prototype/README.md) | Real local character consumer, voluntary off-road recovery/handoff, response rehearsal, causal review and local cosmetic continuity in source/PCK | [Evidence](../evidence/north-star-medicine/RUN.json); experimental design, no independent player or production-MMO validation |
 | [Combat-response pilot](../labs/combat-response/README.md) | Controlled inputs into P06's actual Godot encounter, contact outcomes and timing traces | [28 cases × two repetitions](../evidence/combat-response/results.json); no implemented Virgo classes, destination integration or human playtest |
 | [EVAL-001](../evaluations/chat-send-buffering/README.md) | Task packaging, reproducible evaluator snapshots and known-input calibration | [Calibration](../evidence/evaluation-task/CALIBRATION.json) checks the harness, not independent model performance |
 | [Project Rooms](../projects/realtime-integration-lab/README.md) | Persistence, idempotent delivery, full-history reading, recovery and portable reports | [Print execution](../evidence/realtime-chat/PRINT_RUN.json); trusted local use, explicitly fictional demo records |

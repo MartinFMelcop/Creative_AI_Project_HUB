@@ -1,0 +1,373 @@
+{
+  "kind": "bounded_rendered_engine_execution",
+  "runtime": "Godot4.6.3 standard, Xorg dummy, OpenGL Mesa llvmpipe LLVM19.1.7, dummy audio",
+  "baseline": {
+    "result": {
+      "baseline": "8c51b2f1d9d315a5dc0ef991a07968799da9f124",
+      "engine_fps": 10.0,
+      "limitation": "Synthetic scene policy on one dummy-Xorg/software-rendered environment, not human gameplay or general performance validation.",
+      "physics_delta": 0.0166666666666667,
+      "presented_frames": 642,
+      "snapshot": {
+        "cargo": 3,
+        "counters": {
+          "blocks": 6,
+          "counters": 4,
+          "courier_hits": 0,
+          "dodges": 0,
+          "player_hits": 0,
+          "redirects": 0,
+          "rejected": 0
+        },
+        "courier_x": 1000.0,
+        "energy": 100.0,
+        "events": [
+          {
+            "cargo": 3,
+            "energy": 67.6,
+            "hp": 5,
+            "kind": "protected",
+            "tick": 169
+          },
+          {
+            "cargo": 3,
+            "energy": 67.8,
+            "hp": 5,
+            "kind": "protected",
+            "tick": 338
+          },
+          {
+            "cargo": 3,
+            "energy": 100.0,
+            "hp": 5,
+            "kind": "pulse_avoided",
+            "tick": 507
+          },
+          {
+            "cargo": 3,
+            "energy": 72.6,
+            "hp": 5,
+            "kind": "protected",
+            "tick": 676
+          },
+          {
+            "cargo": 3,
+            "energy": 67.8,
+            "hp": 5,
+            "kind": "protected",
+            "tick": 845
+          },
+          {
+            "cargo": 3,
+            "energy": 56.1,
+            "hp": 5,
+            "kind": "counter",
+            "tick": 846
+          },
+          {
+            "cargo": 3,
+            "energy": 100.0,
+            "hp": 5,
+            "kind": "pulse_avoided",
+            "tick": 1086
+          },
+          {
+            "cargo": 3,
+            "energy": 73.0,
+            "hp": 5,
+            "kind": "protected",
+            "tick": 1255
+          },
+          {
+            "cargo": 3,
+            "energy": 61.3,
+            "hp": 5,
+            "kind": "counter",
+            "tick": 1256
+          },
+          {
+            "cargo": 3,
+            "energy": 68.8,
+            "hp": 5,
+            "kind": "protected",
+            "tick": 1496
+          },
+          {
+            "cargo": 3,
+            "energy": 57.1,
+            "hp": 5,
+            "kind": "counter",
+            "tick": 1497
+          },
+          {
+            "cargo": 3,
+            "energy": 100.0,
+            "hp": 5,
+            "kind": "pulse_avoided",
+            "tick": 1737
+          },
+          {
+            "cargo": 3,
+            "energy": 88.0,
+            "hp": 5,
+            "kind": "counter",
+            "tick": 1738
+          }
+        ],
+        "hp": 5,
+        "mode": "won",
+        "role": "Guardian",
+        "tick": 1800
+      },
+      "ticks": 1800,
+      "wall_seconds": 32.33526
+    },
+    "process": {
+      "baseline": "8c51b2f1d9d315a5dc0ef991a07968799da9f124",
+      "timeout_seconds": 55,
+      "returncode": 0,
+      "timed_out": false,
+      "wall_seconds": 47.56130288800159,
+      "owned_processes_reaped": true
+    },
+    "source_hashes": {
+      "arena.gd": {
+        "sha256": "0e006ced2a48e2ed1a1cd3cb565b32424a87d4bdca619f1ca9ee772ab631632a",
+        "size": 16034,
+        "matches_baseline": true
+      },
+      "combat.gd": {
+        "sha256": "22b257c59ad3c6f183aac416122ce8ed36d9af38ba7f70a0f8b09bba0f6217c4",
+        "size": 9868,
+        "matches_baseline": true
+      },
+      "keepsakes.gd": {
+        "sha256": "d7790dddbd25904069b0c1a6d5edb2f7d01bc02a375d608a4ec5a25262ddb6c9",
+        "size": 5848,
+        "matches_baseline": true
+      },
+      "project.godot": {
+        "sha256": "8d4755b58f1179a9b5ec431579177371e784bca9703a17c88f4c7a6d4ee9385c",
+        "size": 414,
+        "matches_baseline": true
+      },
+      "arena.tscn": {
+        "sha256": "f794c485663f0ed318ddce6bb7a62bc9b2dbd3af02be4f166cca962c29382591",
+        "size": 154,
+        "matches_baseline": true
+      },
+      "tests/policy.gd": {
+        "sha256": "646f0758a211e84ffbfd4632460c7d1fc549cbb3b552801ee2508774a5a63e29",
+        "size": 979,
+        "matches_baseline": true
+      }
+    }
+  },
+  "current": {
+    "result": {
+      "baseline": "8c51b2f1d9d315a5dc0ef991a07968799da9f124",
+      "engine_fps": 13.0,
+      "errand": {
+        "channel": false,
+        "events": [
+          {
+            "action": "dropped",
+            "tick": 515
+          },
+          {
+            "action": "recovered",
+            "tick": 633
+          },
+          {
+            "action": "delivered",
+            "tick": 701
+          },
+          {
+            "action": "crossing_won",
+            "tick": 1800
+          }
+        ],
+        "finished": true,
+        "progress": 0.0,
+        "state": "delivered"
+      },
+      "limitation": "Synthetic scene policy on one dummy-Xorg/software-rendered environment, not human gameplay or general performance validation.",
+      "physics_delta": 0.0166666666666667,
+      "presented_frames": 518,
+      "snapshot": {
+        "cargo": 2,
+        "counters": {
+          "blocks": 5,
+          "counters": 4,
+          "courier_hits": 1,
+          "dodges": 0,
+          "player_hits": 0,
+          "redirects": 0,
+          "rejected": 0
+        },
+        "courier_x": 1000.0,
+        "energy": 100.0,
+        "events": [
+          {
+            "cargo": 3,
+            "energy": 67.6,
+            "hp": 5,
+            "kind": "protected",
+            "tick": 169
+          },
+          {
+            "cargo": 3,
+            "energy": 67.8,
+            "hp": 5,
+            "kind": "protected",
+            "tick": 338
+          },
+          {
+            "cargo": 3,
+            "energy": 100.0,
+            "hp": 5,
+            "kind": "pulse_avoided",
+            "tick": 507
+          },
+          {
+            "cargo": 2,
+            "energy": 100.0,
+            "hp": 5,
+            "kind": "courier_hit",
+            "tick": 676
+          },
+          {
+            "cargo": 2,
+            "energy": 75.8,
+            "hp": 5,
+            "kind": "protected",
+            "tick": 845
+          },
+          {
+            "cargo": 2,
+            "energy": 64.1,
+            "hp": 5,
+            "kind": "counter",
+            "tick": 846
+          },
+          {
+            "cargo": 2,
+            "energy": 100.0,
+            "hp": 5,
+            "kind": "pulse_avoided",
+            "tick": 1086
+          },
+          {
+            "cargo": 2,
+            "energy": 73.2,
+            "hp": 5,
+            "kind": "protected",
+            "tick": 1255
+          },
+          {
+            "cargo": 2,
+            "energy": 61.5,
+            "hp": 5,
+            "kind": "counter",
+            "tick": 1256
+          },
+          {
+            "cargo": 2,
+            "energy": 68.6,
+            "hp": 5,
+            "kind": "protected",
+            "tick": 1496
+          },
+          {
+            "cargo": 2,
+            "energy": 56.9,
+            "hp": 5,
+            "kind": "counter",
+            "tick": 1497
+          },
+          {
+            "cargo": 2,
+            "energy": 100.0,
+            "hp": 5,
+            "kind": "pulse_avoided",
+            "tick": 1737
+          },
+          {
+            "cargo": 2,
+            "energy": 88.0,
+            "hp": 5,
+            "kind": "counter",
+            "tick": 1738
+          }
+        ],
+        "hp": 5,
+        "mode": "won",
+        "role": "Guardian",
+        "tick": 1800
+      },
+      "ticks": 1800,
+      "wall_seconds": 30.896034
+    },
+    "process": {
+      "baseline": "8c51b2f1d9d315a5dc0ef991a07968799da9f124",
+      "timeout_seconds": 55,
+      "returncode": 0,
+      "timed_out": false,
+      "wall_seconds": 44.83772945799865,
+      "owned_processes_reaped": true
+    },
+    "source_hashes": {
+      "arena.gd": {
+        "sha256": "202c5d6a02e102956af4bc1e9d376eaa098644e4d71b9fb75ebc2e980eeeee02",
+        "size": 17937
+      },
+      "combat.gd": {
+        "sha256": "22b257c59ad3c6f183aac416122ce8ed36d9af38ba7f70a0f8b09bba0f6217c4",
+        "size": 9868
+      },
+      "keepsakes.gd": {
+        "sha256": "d7790dddbd25904069b0c1a6d5edb2f7d01bc02a375d608a4ec5a25262ddb6c9",
+        "size": 5848
+      },
+      "errand.gd": {
+        "sha256": "2a2392fa86bd12544eba5f60ad74d35592c7d6fa207373ec11a1928a9e33e601",
+        "size": 3831
+      },
+      "rehearsal.gd": {
+        "sha256": "55a1a348dd37a2552074a8ecc48dbe01b3fbef9211750f2110093a1ccc6eaeb6",
+        "size": 2919
+      },
+      "arena.tscn": {
+        "sha256": "f794c485663f0ed318ddce6bb7a62bc9b2dbd3af02be4f166cca962c29382591",
+        "size": 154
+      },
+      "project.godot": {
+        "sha256": "8d4755b58f1179a9b5ec431579177371e784bca9703a17c88f4c7a6d4ee9385c",
+        "size": 414
+      },
+      "tests/policy.gd": {
+        "sha256": "646f0758a211e84ffbfd4632460c7d1fc549cbb3b552801ee2508774a5a63e29",
+        "size": 979
+      },
+      "tests/errand_policy.gd": {
+        "sha256": "74f4d20501771d8697e79629aaa6e86cb5056211eae0ab860aa593cb5190cb9e",
+        "size": 655
+      }
+    },
+    "summary": {
+      "model_seconds": 30.0,
+      "active_wall_seconds": 30.896034,
+      "total_process_wall_seconds": 44.83772945799865,
+      "presented_frames": 518,
+      "presented_frame_mean": 16.765905941196205,
+      "fps_samples_min": 5.0,
+      "fps_samples_max": 27.0,
+      "source_changes_after_copy": [],
+      "tested_copy_pins_match": true,
+      "same_combat_and_errand_outcome_as_pre_refinement": true,
+      "screenshot_sha256": "619bcb1221c7479c39290f3f72f848c923c18e4700e037cf953718710a8f683d",
+      "scope": "One final Guardian real-physics rendered policy, fresh local profile. Source-only refinements replaced prior final attempt; timing variation has no causal performance interpretation."
+    }
+  },
+  "limits": "One Guardian direct/recovery policy in separate runs;30model seconds, one step per physics signal. No FPS comparison, old-timeout root cause, real-time Duelist, human gameplay or hardware-general performance claim."
+}

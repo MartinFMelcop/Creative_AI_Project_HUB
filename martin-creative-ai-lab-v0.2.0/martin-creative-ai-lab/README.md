@@ -12,11 +12,13 @@ merits. The outer `martin-creative-ai-lab-v0.2.0/` name is historical packaging;
 
 Play the [North Star crossing prototype](north-star/prototype/README.md), or
 inspect its [living design](north-star/DESIGN.md) and
-[executed evidence](evidence/north-star-keepsakes/RUN.json). Origin demonstrations and
+[executed evidence](evidence/north-star-medicine/RUN.json). Origin demonstrations and
 the preserved lab remain distinct from this actual local consumer. Optional rehearsal
 uses its real rules with retained contact explanations and clean retries. Normal
 completion with an approach-specific response earns an optional visible keepsake;
 explicit wear/put-away choices persist locally, with session-safe save recovery.
+The current encounter also offers a real optional recovery/handoff away from the road,
+competing with protection of the moving courier; direct escort remains successful.
 
 ## Find the right material
 

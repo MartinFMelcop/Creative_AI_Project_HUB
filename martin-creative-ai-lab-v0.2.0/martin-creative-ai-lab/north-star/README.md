@@ -10,7 +10,7 @@ without being eleven independently obligated products.
 ## Actual stage and creative authority
 
 The catalog now records **local_prototype**: one executable
-[crossing encounter](prototype/README.md), four actual consumer code paths and fourteen
+[crossing encounter](prototype/README.md), five actual consumer code paths and fourteen
 capabilities. **NS-C03 is adapted** in this destination; the other thirteen contribution
 states remain unchanged. Godot 4.6.3 is the prototype tool; no final MMO engine or
 running multiplayer service is selected. The earlier combat-response lab remains an
@@ -22,12 +22,16 @@ experimental mechanics, revisions and rejected alternatives. Current primary mod
 DEVELOPMENT, priority category 1: improve this existing consumer. Optional rehearsal
 uses the same combat rules, preserves causal review and starts a clean normal crossing.
 The three prepared exercises do not demonstrate human learning or sustained resource
-management. [Current execution](../evidence/north-star-keepsakes/RUN.json) retains the
+management. [Current execution](../evidence/north-star-medicine/RUN.json) retains the
 unchanged full-crossing outcomes alongside these controls. Completed normal crossings
 with a signature response can earn its approach’s mark, one of two experimental cosmetics. Explicit C selection
 is visible on the next crossing and restored after restart. Malformed/unknown profiles
 are preserved; pending session marks can be saved with F5 after path repair. This is
 editable device-local cosmetic continuity, not character/account or MMO persistence.
+At the first marker a medicine case falls off the road. Recover it and hand it back
+through nearby held interaction, or keep escorting. The courier and threats continue;
+movement/release cancel commitment. Distinct session outcomes require actual handoff,
+and neither choice changes the existing keepsake rules or adds persistent loot.
 Future selection should first inspect and improve this real consumer.
 
 The [Creative Brain](../brains/README.md) is the central creative knowledge base.

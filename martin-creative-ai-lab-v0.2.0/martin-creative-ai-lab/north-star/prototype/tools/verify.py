@@ -63,7 +63,7 @@ def verify(godot, output, compare=None):
         result = json.loads(source.read_text())
         if result != json.loads(packed.read_text()):
             raise ValueError("Delivered PCK differs from current source observations or embedded source hashes")
-        if result.get("checks", {}).get("failed") != 0 or result.get("checks", {}).get("passed", 0) != 110:
+        if result.get("checks", {}).get("failed") != 0 or result.get("checks", {}).get("passed", 0) != 141:
             raise ValueError("Native checks failed or incomplete")
         if [r["mode"] for r in result["outcomes"]] != ["won", "lost", "won", "lost"]:
             raise ValueError("Completion and neutral controls are incomplete")
@@ -71,6 +71,11 @@ def verify(godot, output, compare=None):
                 len(r["results"]) != 3 or [v["stage"] for v in r["results"]] != [0, 1, 2]
                 or not all(v["passed"] for v in r["results"]) for r in result["rehearsals"]):
             raise ValueError("Rehearsal responses are incomplete")
+        if [r["role"] for r in result["errands"]] != ["Guardian", "Duelist"] or any(
+                r["direct"]["combat"]["mode"] != "won" or r["recovered"]["combat"]["mode"] != "won"
+                or r["direct"]["errand"]["state"] != "available"
+                or r["recovered"]["errand"]["state"] != "delivered" for r in result["errands"]):
+            raise ValueError("Actual escort/recovery alternatives are incomplete")
         for name, digest in result["consumer_hashes"].items():
             if hashlib.sha256((ROOT / name).read_bytes()).hexdigest() != digest:
                 raise ValueError("Native execution source identity differs: " + name)
@@ -82,7 +87,7 @@ def verify(godot, output, compare=None):
         output = Path(output)
         output.parent.mkdir(parents=True, exist_ok=True)
         output.write_text(json.dumps(result, ensure_ascii=False, indent=2, sort_keys=True) + "\n")
-        print(f"PASS: {result['checks']['passed']} native checks; two approaches complete; neutral controls fail; source/PCK identical; eight restart processes retain explicit keepsake choices.")
+        print(f"PASS: {result['checks']['passed']} native checks; both approaches complete direct/recovery routes; neutral controls fail; source/PCK identical; eight restart processes retain explicit keepsake choices.")
         return result
 
 

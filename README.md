@@ -23,18 +23,20 @@ investigate what can actually serve that experience.
 ## Playable North Star increment
 
 [Crossing Drill](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/prototype/README.md)
-lets two experimental approaches protect the same courier: finite frontal interception
-or redirection with directional movement. Both can complete the crossing, lose, pause
-and retry. Optional rehearsal isolates each response, freezes causal feedback and
-starts a clean crossing; OPEN shows range and remaining time. Completing a normal
-crossing with a block or drawn bolt now earns an optional visible keepsake. C chooses
-what to wear; that explicit choice survives a local restart without changing combat. The small engine-dependent PCK and editable Godot project are executed
-consumers. [Native evidence](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/evidence/north-star-keepsakes/RUN.json)
-and the [living design record](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/DESIGN.md)
-show scope and limitations; automated completion does not establish perceived identity
-or player enjoyment.
+lets two experimental approaches protect the same moving courier: frontal interception
+or redirection/mobility. At the first marker, a medicine case falls south of the road.
+Keep escorting, or leave the line to recover it and hand it to the courier. Held nearby
+interaction takes time and prevents combat actions; the courier and threats keep moving.
+The two choices have distinct inspectable outcomes. Optional rehearsal, causal review,
+OPEN range/time and earned cosmetic keepsakes remain available.
 
-![Earned Held the Line mark worn in the next actual crossing](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/evidence/north-star-keepsakes/guardian-worn.png)
+The editable Godot project and small engine-dependent PCK execute the same consumer.
+[Native/rendered evidence](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/evidence/north-star-medicine/RUN.json)
+and the [living design record](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/DESIGN.md)
+separate fixed-policy feasibility and agent visual assessment from still-missing human
+understanding, identity and enjoyment evidence.
+
+![Recovering the optional case while the courier continues](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/evidence/north-star-medicine/recovering.png)
 
 ## Technology demonstrations
 

@@ -1,6 +1,6 @@
 # SEED — Martin Creative AI Lab
 
-**Version:** 0.33.3
+**Version:** 0.33.4
 **Data-base:** 10 de outubro de 2026  
 **Autor e responsável pelo portfólio:** Martin Melcop Neto  
 **Working language:** English for new technical documentation, plans, code comments and Git messages; respond in the requested language (Brazilian Portuguese for continuous closeout). Preserve appropriate creative/source languages.
@@ -71,8 +71,8 @@ for continuous development and its full successor requirement.
 
 | Field | Current evidence |
 |---|---|
-| Baseline | `ca432cc395e7dfebf989d8077f0280baff2dd1ca`; wrapper retained |
-| Current milestone | DEVELOPMENT/category 1: earned, explicitly worn cosmetic keepsakes with device-local reentry and recoverable save failures in the existing crossing |
+| Baseline | `8c51b2f1d9d315a5dc0ef991a07968799da9f124`; wrapper retained |
+| Current milestone | DEVELOPMENT/category 1: optional medicine-case recovery and actual courier handoff under continuing threats, with distinct inspected escort outcomes |
 | Sources | Five byte-preserved supplied brain files; historical reference inventories unchanged |
 | Operational state | [STATE](docs/STATE.md), [origins](labs/origins.json), [brain integrity](brains/integrity.json) |
 | Portfolio | Technology capabilities, inspectable source/demonstrations and bounded execution evidence |
