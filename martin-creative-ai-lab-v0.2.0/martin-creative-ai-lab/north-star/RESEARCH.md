@@ -1,6 +1,15 @@
 # North Star research direction
 
-## Current executed instrument
+## Current playable destination
+
+[Crossing Drill](prototype/README.md) is the first local executable consumer, selected
+in DEVELOPMENT mode before further standalone research. It makes finite-resource
+frontal protection and threat redirection/mobility playable under one courier objective.
+[Design](DESIGN.md) and [execution](../evidence/north-star-crossing/RUN.json) separate
+mechanical feasibility, rendered review and still-missing human experience evidence.
+Reassess this consumer's observed weaknesses before creating unrelated instruments.
+
+## Preserved executed instrument
 
 The [combat-response pilot](../labs/combat-response/README.md) instruments the unchanged
 P06 encounter with repeatable inputs and baseline/response controls. Its question is

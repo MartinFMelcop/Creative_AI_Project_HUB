@@ -1,6 +1,6 @@
 # SEED — Martin Creative AI Lab
 
-**Version:** 0.33.0
+**Version:** 0.33.1
 **Data-base:** 10 de outubro de 2026  
 **Autor e responsável pelo portfólio:** Martin Melcop Neto  
 **Working language:** English for new technical documentation, plans, code comments and Git messages; respond in the requested language (Brazilian Portuguese for continuous closeout). Preserve appropriate creative/source languages.
@@ -31,8 +31,9 @@ and technologies, not a mandatory one-to-one mapping. The first operational pilo
 encounter. It is not a North Star consumer, new class implementation or human study.
 Keep useful demonstrations and tests available while migrating real consumers.
 
-[North Star](north-star/README.md) retains fourteen capability records and
-`foundation_only` with zero destination consumers. Origin verification, laboratory
+[North Star](north-star/README.md) retains fourteen capability records and now has one
+local playable [crossing consumer](north-star/prototype/README.md), stage `local_prototype`.
+NS-C03 is adapted into this destination; no shared-kernel or production integration is claimed. Origin verification, laboratory
 instrumentation, adaptation, integration and external validation remain distinct.
 Select engines/languages by requirements, not forced diversity or a predetermined stack.
 The portfolio continues to demonstrate real technologies; this transition is not its
@@ -70,12 +71,12 @@ for continuous development and its full successor requirement.
 
 | Field | Current evidence |
 |---|---|
-| Baseline | `c360f68e2be933d55f082a414663d28ab24eac8d`; wrapper retained |
-| Current milestone | Three-brain consultation, controlled origin transition and one executed combat-response pilot |
+| Baseline | `870c7207a79bde6c7fe5dad7c910810425c0e6ce`; wrapper retained |
+| Current milestone | DEVELOPMENT: playable Guardian/Duelist crossing with an actual destination consumer and source/PCK checks |
 | Sources | Five byte-preserved supplied brain files; historical reference inventories unchanged |
 | Operational state | [STATE](docs/STATE.md), [origins](labs/origins.json), [brain integrity](brains/integrity.json) |
 | Portfolio | Technology capabilities, inspectable source/demonstrations and bounded execution evidence |
-| North Star | Main product direction; fourteen catalog entries, foundation only, no destination consumer |
+| North Star | One local prototype; fourteen entries, NS-C03 adapted, other thirteen statuses unchanged; no final engine/MMO service |
 | Next selection | Reassess actual character-experience questions, laboratory instruments and portfolio value from new evidence |
 
 Registry and source gates establish structure/integrity, not gameplay quality or truth
@@ -797,6 +798,15 @@ Divisão é útil quando um componente resolve problema independente e outro usu
 Encerramento é sucesso quando elimina uma hipótese fraca e preserva aprendizado. Registrar motivo, o que reaproveitar e o que deixa de ser mantido. Um projeto extinto não precisa manter um backlog artificial.
 
 ## 8. Decidir em que trabalhar
+
+Current author priority: improve an existing executable Virgo Diamond consumer; create
+missing next-playable capability; resolve a concrete blocking uncertainty; then justify
+portfolio work by relevance/cost. Before a destination exists, prioritize its smallest
+meaningful playable experience. Choose one primary mode: RESEARCH, DEVELOPMENT or
+CREATIVE PRODUCTION, with matching validation and all three brains available. Maintain
+accepted/revised/experimental/rejected design in [the living record](north-star/DESIGN.md).
+Checks/commits/reports safeguard meaningful product progress; they do not replace it.
+
 
 Compare materially different opportunities using actual weaknesses, audience needs,
 creative agency, technical risk, feasibility, reuse and evidence value. Most new

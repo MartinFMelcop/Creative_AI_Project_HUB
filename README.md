@@ -10,7 +10,8 @@ records behind the demonstrations.
 **[Virgo Diamond: The North Star](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/README.md)** is the principal
 product: an original MMORPG in which character identity becomes visible through
 choices, builds, classes, professions and achievements. Its current stage is
-`foundation_only`: 14 cataloged capabilities and no destination runtime consumer.
+`local_prototype`: one playable destination consumer, 14 cataloged capabilities and
+NS-C03 adapted. Godot is the prototype tool; the production engine remains undecided.
 The portfolio makes existing technology inspectable while applied laboratories
 investigate what can actually serve that experience.
 
@@ -18,6 +19,19 @@ investigate what can actually serve that experience.
 [Research instrument](#applied-research) ·
 [Preserved origins](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/projects/README.md) ·
 [Develop and verify](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/README.md#develop-and-verify)
+
+## Playable North Star increment
+
+[Crossing Drill](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/prototype/README.md)
+lets two experimental approaches protect the same courier: finite frontal interception
+or redirection with directional movement. Both can complete the crossing, lose, pause
+and retry. The small engine-dependent PCK and editable Godot project are executed
+consumers. [Native evidence](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/evidence/north-star-crossing/RUN.json)
+and the [living design record](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/DESIGN.md)
+show scope and limitations; automated completion does not establish perceived identity
+or player enjoyment.
+
+![Guardian response in the actual rendered consumer](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/evidence/north-star-crossing/guardian-threat.png)
 
 ## Technology demonstrations
 

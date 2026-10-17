@@ -1,0 +1,12 @@
+; Local experimental consumer; this does not select the production MMO engine.
+config_version=5
+[application]
+config/name="Virgo Diamond — Crossing Drill"
+run/main_scene="res://arena.tscn"
+[display]
+window/size/viewport_width=1152
+window/size/viewport_height=768
+window/stretch/mode="canvas_items"
+[rendering]
+renderer/rendering_method="gl_compatibility"
+textures/default_filters/use_nearest_mipmap_filter=false

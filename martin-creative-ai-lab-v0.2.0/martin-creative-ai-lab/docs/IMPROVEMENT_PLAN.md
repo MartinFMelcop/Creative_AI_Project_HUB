@@ -1,4 +1,10 @@
-# Current scope — three-brain operation and one executed pilot
+# Current completed scope — crossing consumer
+
+Deliver and execute a real scene/model and source-equivalent PCK, two distinct approaches under the same courier objective, positive/negative complete policies, actual input and presentation inspection, and honest destination contracts. No origin rewrite, engine commitment, unrelated lab, multiplayer or human-experience claim.
+
+[Actual state](STATE.md) and [living design](../north-star/DESIGN.md) carry current evidence. Earlier assessments below are historical scopes.
+
+# Previous scope — three-brain operation and one executed pilot
 
 Preserve exact five supplied files in brains/, implement deterministic selective
 consultation, coordinate agents and the one prompt through mandatory activation,

@@ -1,94 +1,80 @@
 # Lab state
 
-**Updated:** 2026-10-17 UTC. **SEED:** 0.33.0.
-**Milestone:** immutable three-brain consultation and one executed combat-response pilot.
+**Updated:** 2026-10-17 UTC. **SEED:** 0.33.1.
+**Primary mode:** DEVELOPMENT. **Priority:** category 2, missing playable milestone
+capability; baseline had no executable Virgo Diamond destination.
 
-Baseline local/fetched main: `c360f68e2be933d55f082a414663d28ab24eac8d`.
-Started on `codex/p05-run-recovery-20261016`, then created
-`codex/three-brain-labs-20261017`. Tracked tree was clean; existing untracked work/
-and earlier branches are preserved. Normal authenticated Git transport is available
-with supported network permission. A local commit/push is not inferred from this record;
-closeout verifies actual remote main and CI separately.
+Baseline local/fetched main: `870c7207a79bde6c7fe5dad7c910810425c0e6ce`.
+Initial tracked tree clean, existing untracked work/ preserved. Feature branch
+`codex/north-star-crossing-20261017`; authorized normal Git transport works.
+Current author convergence guidance prioritizes real product capability over repeated
+standalone research. [The living design record](../north-star/DESIGN.md) separates
+accepted author direction, experimental mechanics, revisions and rejected alternatives.
 
-## Direction and functional result
+## Observable product change
 
-The HUB **remains a public Design-Driven technology portfolio developed with generative
-AI**. Virgo Diamond: The North Star is the principal definitive product, with most
-investment directed toward recognizable character choices and meaningful adventures.
-P01–P11 become preserved technology origins in controlled transition, without independent
-product/release obligations. No source directory, old delivery, media or runtime test
-was removed. The capability/evidence-first README/showcase retains usable demonstrations.
+[Crossing Drill](../north-star/prototype/README.md) is the first actual local executable
+Virgo Diamond consumer. Same short courier objective, two experimental approaches:
+Guardian locks a finite-cost frontal interception; Duelist redirects an eligible warning
+then leaves its line through movement/paid step. Guard slows movement and drains posture;
+step grants no immunity. Both can walk, strike within a reachable opening, protect or
+lose the courier, pause/focus-pause, abandon explicitly, retry and select an approach.
+Success shows a session-only result. No account/progression/network stack was added.
 
-The [five supplied brain files](../brains/README.md) are exact UTF-8 originals with
-[SHA-256/size pins](../brains/integrity.json), separate from references and knowledge.
-The [stdlib query](../tools/brain_query.py) implements indexes/get/search/check, returning
-full unchanged chapter text, path, section, lines and fragments. It checks all 234
-chapters and 422 local links; 44 inherited fragment occurrences across 26 em-dash
-headings are explicitly warned, not silently repaired. Original updates require specific
-author authorization. Sources are knowledge, not agents or model training.
+The editable native Godot project and small delivered engine-dependent PCK both execute
+the actual scene/model. Godot 4.6.3 is the current prototype tool, not the production MMO
+engine decision. Geometric contact rules are new; they adapt P06 commitment/facing/timing
+methodology without importing its complete kernel, PhysicsServer or fictional setting.
 
-Root/lab AGENTS and the one complete prompt now require preflight before every
-improvement: all indices/current state, engineering/scientific/creative relevance,
-selective complete chapters, practical application and a concise record. This task
-used ENG-004/015/027, SCI-005/017/050/051 and CRE-001/008/012/084 (all three domains high);
-CRE-014/015 was additionally read without promoting candidate classes. D/A/H/E/V and
-current author priority keep the Creative Brain central without inventing canon.
+The catalog now records **local_prototype**, one consumer with two code paths, fourteen
+capabilities, **NS-C03 adapted**, thirteen other states unchanged. This is not shared-code
+integration or a production MMORPG. Destination metadata binds actual code, successful
+native checks and source/result hashes. Foundation-only guards remain; docs, stale bytes,
+failed/misbound evidence and local external-validation claims are rejected.
 
-[knowledge/](../knowledge/README.md) preserves both earlier lesson filenames and full
-bodies, adding question/context/outcome/validity/consumer guidance. The new
-[combat-response finding](../knowledge/combat-response.md) derives a bounded observation
-about avoidance versus reachable rewards, not a brain summary or validated class design.
+## Evidence and assessment
 
-## One real pilot, other destinations still candidates
+[Execution](../evidence/north-star-crossing/RUN.json) identifies baseline, complete source/
+PCK identities, commands, controls, corrections and limits. Native 35 checks pass; two
+repeatable completion policies each finish in 1,800 simulated ticks with five player and
+three courier health. Guardian uses six blocks/four counters; Duelist five redirects/
+steps and seven counters. Neutral controls lose, and surviving personally while ignoring
+the courier still fails the task. Corrected first-contact collision prevents a redirected
+beam from magically passing through the courier. A controlled endpoint-only mutation
+is rejected by the new negative check; it is not the historical Git baseline.
 
-Compared actual P06 combat, P01 deterministic economy/policy instruments, P10 replayable
-narrative consequences and P11 persistence. Select P06's bounded response question for
-its direct relevance to character agency and available native tools, preserving its
-working scene rather than copying a second combat approximation or selecting a final
-MMORPG engine.
+Three actual wrapper failure tests cover missing engine, bounded process timeout and
+changed source with stale PCK. Source/PCK complete observations and embedded code hashes
+match, including a separate comparison to recorded results. Reference suite42 passes.
+Actual XTest keyboard journeys exercised selection/start/guard and feint/movement/step/
+pause with feedback captures. Final rendered accelerated complete policies and their
+threat/result frames were inspected. Range/hazard effects now sit under an opaque HUD;
+the upper-boundary player label remains visible. These are Codex assessments and
+synthetic inputs, not independent human play or validation of perceived class identity.
 
-[The instrument](../labs/combat-response/README.md) uses real unchanged Veilbreak 0.6.0
-`step_fight` and native physics at 60 Hz, with 28 fixed cases repeated twice. Calibration
-observes sweep contact tick52. Close parry at lead5/8 prevents damage and enables the
-fixed early blade counter (24); outward dodge also avoids damage but ends outside blade
-range; single seal does not interrupt the sweep. Parry at110px succeeds while the blade
-misses; at111px guard fails. Empty resolve rejects defenses; imposed echo still hurts
-after parry. All outcomes, including failures, are retained. See
-[results](../evidence/combat-response/results.json) and
-[execution](../evidence/combat-response/RUN.json) for environment, hashes and exact commands.
+The first full rendered-policy attempt exceeded its 100-second deadline; its cause was
+not diagnosed. Accelerated diagnostic rendering completed; real-time full-policy
+performance remains unverified. Missing physical ALSA output fell back to dummy audio;
+this prototype has no audio. Owned runtime/display processes were stopped/reaped.
 
-The common early counter is deliberately fixed, not each response's best policy.
-Reporting was refined after an exploratory run; no external preregistration is claimed.
-These are mechanical response envelopes, not learning, fun, perceived class identity,
-readability, listening, physical input, general balance or independent human validation.
-Default unwritable engine user paths and missing imports were reproduced against the
-unchanged origin, then resolved with owned XDG paths/import, without product edits.
+## Portfolio, knowledge and migration
 
-[The eleven-origin inventory](../labs/origins.json) records capabilities, existing
-consumers/dependencies, loss risks and extraction needs. P06 is pilot-instrumented;
-P01–P05/P07/P08/P10/P11 are preserved pending extraction; P09 is seed-only. Five other
-question-led destinations are candidates. Existing transfers/assets remain integrated
-only in their named origin consumers. Historical M4 is not lab/MMORPG readiness.
+Compared the playable character consumer with P10 quest adaptation, P01 crafting/economy
+and expanding P06 traces. Only the selected increment closes the current absent product
+experience directly; the alternatives remain credible under different concrete needs.
+ENG-004/015, SCI-017/062 and CRE-004/005/014/015/084 were read after all three indices;
+all domains high. Central identity retains author authority; candidate details remain
+experimental. Five brain source bytes/pins and historical reference bytes are unchanged.
 
-## Validation, limitations and continuation
+Existing laboratory knowledge about safe defense versus reachable reward now has an
+actual destination application, plus a first-contact consequence control. No unrelated
+lab was created. The portfolio offers an executable native source/PCK and inspected
+frames. P06 method adaptation is recorded; all origin source/media/distributions/tests
+and other transition states remain preserved. No new independent release obligation.
 
-[Execution evidence](../evidence/three-brains/RUN.json) records consultation demos,
-source identity, affected checks and scope. Query17, registry27, reference30,
-manifest11 and instrument12 regression tests pass; actual native pilot reproduction
-and the unchanged origin's parry checks are separate from these structural suites.
-Repository/source integrity and exact manifest checks are required after final edits.
-CI preserves all old origin gates and adds brain checks and native pilot reproduction.
-
-North Star remains **foundation_only**, fourteen capabilities, zero destination
-consumers and no selected final engine. Its name/product direction and creative
-authority changed; no class/gameplay destination was invented. No external participant,
-market result or underlying model improvement is claimed.
-
-The [complete operational prompt](prompts/CONTINUOUS_DEVELOPMENT.md) was replaced to
-implement the author's changed production mandate, selective brain activation and
-future successor loop. Existing bounded-process/environment-baseline guidance remains.
-Indexes/pins and real native traces served the design; source fragment warnings and
-fixed-policy limits remain visible. Most migration work is operational, not experience
-validation. Next compare actual character-agency increments, credible laboratory
-questions and portfolio value afresh; do not fix the next target to combat or expand
-candidate labs without a working question/instrument/consumer.
+The complete prompt changed for explicit current author instruction: convergence priority,
+primary modes, living design and four observable progress categories. It remains one
+self-contained successor prompt; no source brains were edited or model improvement
+claimed. Next inspect the actual consumer's largest experience weakness before adding
+lower-category research; user comprehension, timing fairness, accessibility, sound and
+other hardware remain unverified. Publication/CI are verified separately at closeout.

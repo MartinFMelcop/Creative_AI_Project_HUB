@@ -12,7 +12,7 @@ metadata and active adaptations. [Catalog](catalog.json) records availability;
   remain unavailable; earlier inspection reports stay separate.
 - [Earlier selected archive](../archive/legacy-source-extracts-v0.2.0.zip): unchanged
   175 Rave and three WebSocket texts, with its original registry/hash contract.
-- [North Star](../north-star/README.md): strategic program; no runtime integration.
+- [North Star](../north-star/README.md): principal product with a local character prototype; no MMO service or automatic source-fiction integration.
 
 From the maintained lab directory, Python 3.10+ and its standard library suffice:
 

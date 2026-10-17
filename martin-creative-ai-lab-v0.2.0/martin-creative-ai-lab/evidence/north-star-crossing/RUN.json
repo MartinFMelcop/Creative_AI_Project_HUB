@@ -1,0 +1,326 @@
+{
+  "schema_version": 1,
+  "kind": "destination_execution",
+  "recorded_at_utc": "2026-10-17T05:51:31.066955+00:00",
+  "baseline_commit": "870c7207a79bde6c7fe5dad7c910810425c0e6ce",
+  "branch": "codex/north-star-crossing-20261017",
+  "mode": "DEVELOPMENT",
+  "priority_category": 2,
+  "priority_reason": "Baseline had zero executable destination consumers. This creates the missing smallest playable character capability before standalone research expansion. Current author explicitly reinforced this convergence priority.",
+  "capability_ids": [
+    "NS-C03"
+  ],
+  "consumer_paths": [
+    "north-star/prototype/arena.gd",
+    "north-star/prototype/combat.gd"
+  ],
+  "runtime": "Godot 4.6.3.stable.official.7d41c59c4 standard, Linux x86_64; Python3.12.14",
+  "scope": "One local courier encounter, two experimental approaches, real scene/model, engine-dependent source PCK and actual input/controlled policies. NS-C03 method adaptation, not shared-code import or production MMO integration.",
+  "checks": {
+    "failed": 0,
+    "passed": 35
+  },
+  "commands": [
+    {
+      "command": [
+        "python3",
+        "north-star/prototype/tools/verify.py",
+        "--output",
+        "evidence/north-star-crossing/results.json"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "python3",
+        "north-star/prototype/tools/test_verify.py"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "godot",
+        "--headless",
+        "--path",
+        "north-star/prototype",
+        "--script",
+        "tools/pack.gd",
+        "--",
+        "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/prototype/dist/crossing-drill.pck"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "godot",
+        "--headless",
+        "--main-pack",
+        "north-star/prototype/dist/crossing-drill.pck",
+        "--quit-after",
+        "5"
+      ],
+      "exit_code": 0
+    }
+  ],
+  "source_artifacts": [
+    {
+      "local_path": "north-star/prototype/arena.gd",
+      "sha256": "ff0961f38efadf19ca505ffcf3dc5fb115f522e27c9fbd16b79760c326ef1fbd",
+      "size_bytes": 8803
+    },
+    {
+      "local_path": "north-star/prototype/combat.gd",
+      "sha256": "44b6e922040942e058b04329c76fe33d5cbb044090c702f0fe9b8fc415e651af",
+      "size_bytes": 7713
+    },
+    {
+      "local_path": "north-star/prototype/project.godot",
+      "sha256": "8d4755b58f1179a9b5ec431579177371e784bca9703a17c88f4c7a6d4ee9385c",
+      "size_bytes": 414
+    },
+    {
+      "local_path": "north-star/prototype/arena.tscn",
+      "sha256": "f794c485663f0ed318ddce6bb7a62bc9b2dbd3af02be4f166cca962c29382591",
+      "size_bytes": 154
+    },
+    {
+      "local_path": "north-star/prototype/tests/run_checks.gd",
+      "sha256": "21955d1531bfd29caf703faee043959d3b8f37554c298527f8c8e976be869cfd",
+      "size_bytes": 6150
+    },
+    {
+      "local_path": "north-star/prototype/tests/policy.gd",
+      "sha256": "646f0758a211e84ffbfd4632460c7d1fc549cbb3b552801ee2508774a5a63e29",
+      "size_bytes": 979
+    },
+    {
+      "local_path": "north-star/prototype/tests/render_journey.gd",
+      "sha256": "b0de7bc7cdd8795d55c0fdb8248c277c38ead3299714e7290c70df1a2c114e49",
+      "size_bytes": 992
+    },
+    {
+      "local_path": "north-star/prototype/tools/verify.py",
+      "sha256": "3496e2420dc64e7f985d6d10673ac9cb044403dd3a9a1428a27047e5fd782cd9",
+      "size_bytes": 3607
+    },
+    {
+      "local_path": "north-star/prototype/tools/pack.gd",
+      "sha256": "0a1819e0f0a3c78598cc7ec2880f863ba977942059d5029145d43266aed342ef",
+      "size_bytes": 492
+    },
+    {
+      "local_path": "north-star/prototype/tools/test_verify.py",
+      "sha256": "08898e09aba0e8ce07d37cab94d9b045904d5665b724864d5ef04fbce66c36e5",
+      "size_bytes": 1778
+    },
+    {
+      "local_path": "north-star/prototype/dist/crossing-drill.pck",
+      "sha256": "ee90f1e0a100a026882c56a66ecb44a685678150888acee29a58a4a9ddb07e11",
+      "size_bytes": 24776
+    },
+    {
+      "local_path": "north-star/prototype/provenance.json",
+      "sha256": "49c3f69a8902e06ffeb00da93109613338da78c7e467c3c5e8edfc2ded760615",
+      "size_bytes": 1045
+    }
+  ],
+  "result_artifacts": [
+    {
+      "local_path": "evidence/north-star-crossing/results.json",
+      "sha256": "7b2529dde789ecfca13ca34217d639c38fc2f67f6232c0a8a477da3bdbf7a672",
+      "size_bytes": 9142
+    },
+    {
+      "local_path": "evidence/north-star-crossing/endpoint-mutation.json",
+      "sha256": "12aa64c6b35dbe1240d8e168f47328e6292b8c671525f2d3614f8a677e05b7be",
+      "size_bytes": 9340
+    },
+    {
+      "local_path": "evidence/north-star-crossing/duelist-complete.png",
+      "sha256": "12c5ea9c4ad5ea034713d5a6db48a385484ec42744f4d0bcb3b06b609d399760",
+      "size_bytes": 83227
+    },
+    {
+      "local_path": "evidence/north-star-crossing/duelist-input.png",
+      "sha256": "256287d603dbcd56e4dbe8b49a4c11f4cb50fb1ad959f04d6148ac2c041624f2",
+      "size_bytes": 80476
+    },
+    {
+      "local_path": "evidence/north-star-crossing/duelist-threat.png",
+      "sha256": "c860e2b8e0003376d7b97e7883997033f3c79fd87d3558f762891a537208d55a",
+      "size_bytes": 53175
+    },
+    {
+      "local_path": "evidence/north-star-crossing/guardian-complete.png",
+      "sha256": "07d38d33493215ab4df051c5518cebcfb17c737b9851f2c3b1ff0aa793b0ff85",
+      "size_bytes": 80149
+    },
+    {
+      "local_path": "evidence/north-star-crossing/guardian-input.png",
+      "sha256": "01f431e87023d45b26c666899a38a6c361efa4809e19c79ab3e98dbe3be95595",
+      "size_bytes": 78089
+    },
+    {
+      "local_path": "evidence/north-star-crossing/guardian-threat.png",
+      "sha256": "4b199f4b7ef78c75e2a9abc54b0088b5fc47666e8da6dae527cad62236f62182",
+      "size_bytes": 53263
+    },
+    {
+      "local_path": "evidence/north-star-crossing/selection.png",
+      "sha256": "dc4a08afaed99eb842752abd5d957e5c020928611f51903c2d178dfd310644b1",
+      "size_bytes": 118907
+    }
+  ],
+  "brain_activation": {
+    "indices": "All three complete indices read with brain_query indexes. Five source files unchanged.",
+    "engineering": "High: ENG-004/015 for observable acceptance and a small real model/scene consumer rather than premature extraction.",
+    "scientific": "High: SCI-017/062 for controlled completion/failure and avoiding human-experience claims from traces.",
+    "creative": "High: CRE-004/005/014/015/084 for playable agency, distinct protection/redirection and candidate status. Central character identity remains CRE-001 author direction."
+  },
+  "alternatives": [
+    {
+      "candidate": "North Star playable character encounter",
+      "selected": true,
+      "reason": "Directly closes absent destination experience; consumes methods supported by origin evidence and creates a testable player task."
+    },
+    {
+      "candidate": "P10 narrative quest adaptation",
+      "selected": false,
+      "reason": "Real consequence/replay source exists, but setting/timeline are coupled; narrative adaptation is separate scope."
+    },
+    {
+      "candidate": "P01 crafting/economy adaptation",
+      "selected": false,
+      "reason": "Transactional board economy exists; professions/owned inventory/recipes are absent, so a currency transfer alone would not establish character experience."
+    },
+    {
+      "candidate": "Expand P06 timing matrix only",
+      "selected": false,
+      "reason": "Would add mechanical evidence while leaving the missing executable destination unresolved."
+    }
+  ],
+  "before_after": {
+    "before": "No executable destination files or consumer; only origin and lab evidence.",
+    "after": "Configured native scene plus delivered PCK: class selection, responsive movement/aim, locked bolt, floor pulse, finite guard/feint/step, reachable counters, courier consequence, win/loss, pause/focus loss, retry and approach selection.",
+    "positive_policies": [
+      [
+        "Guardian",
+        "won",
+        5,
+        3,
+        {
+          "blocks": 6,
+          "counters": 4,
+          "courier_hits": 0,
+          "dodges": 0,
+          "player_hits": 0,
+          "redirects": 0,
+          "rejected": 0
+        }
+      ],
+      [
+        "Duelist",
+        "won",
+        5,
+        3,
+        {
+          "blocks": 0,
+          "counters": 7,
+          "courier_hits": 0,
+          "dodges": 5,
+          "player_hits": 0,
+          "redirects": 5,
+          "rejected": 0
+        }
+      ]
+    ],
+    "neutral_controls": "Both neutral policies lose before finish. Additional control survives personally while courier reaches zero; wrong facing/startup/empty posture and unsafe redirection fail."
+  },
+  "execution_details": {
+    "native": "35 checks; each complete role policy repeats exactly; source and delivered PCK produce exact observations and embedded code hashes.",
+    "keyboard": "Actual XTest focus and key events selected approaches; Guardian Return+heldK protected first bolt; Duelist R/2/Return/K/W/Space redirected then left line; Escape paused and F12 captured feedback. Synthetic input, not human playtest.",
+    "rendered": "OpenGL/Mesa llvmpipe, Xorg dummy; final frames of both complete controlled policies inspected, plus both threat frames. Final render driver advances ten model ticks per native physics signal; accelerated diagnostics, not real-time performance evidence.",
+    "process_cleanup": "Owned game and Xorg processes terminated/reaped or exited under deadlines. No persistent preview left.",
+    "source_preservation": "All P01-P11 runtime code, old media/distributions, historical snapshots and the five brain sources unchanged."
+  },
+  "refinements": [
+    {
+      "finding": "Endpoint-only redirected collision ignored a nearer courier.",
+      "change": "Resolve nearest eligible contact on beam; added actual unsafe-redirection and courier-only-loss controls."
+    },
+    {
+      "finding": "Range ring could cross HUD; YOU label could disappear at upper boundary.",
+      "change": "Opaque HUD renders after world, player label moves below the upper-boundary silhouette."
+    },
+    {
+      "finding": "Approach selection after an abandoned attempt retained prior state.",
+      "change": "R explicitly abandons and resets the selection state; paused UI says abandon."
+    }
+  ],
+  "failures": [
+    {
+      "event": "Default editor import emitted sandbox TCP listener errors but completed.",
+      "classification": "Known editor environment limitation, already reproduced on unchanged P06 in prior pilot; no product code/gate workaround."
+    },
+    {
+      "event": "First full rendered policy exceeded a 100-second owned-process deadline before both completions.",
+      "classification": "Cause not diagnosed as a product or environment defect. Stopped owned processes. Accelerated render diagnostics cover final presentation; real-time full-policy performance remains unverified."
+    },
+    {
+      "event": "Rendered Godot reported missing ALSA output and used dummy audio.",
+      "classification": "No prototype audio is implemented or evaluated. Physical listening is unverified; display execution succeeded."
+    }
+  ],
+  "observable_progress": {
+    "product": "First local executable character objective; same goal, different actions and real failure costs.",
+    "laboratory_knowledge": "Existing safe-defense-versus-reachable-counter finding now informs a destination. New first-contact collision control guards real courier consequences.",
+    "portfolio": "Native inspectable source/PCK and actual screenshots; no additional unrelated lab structure.",
+    "origin_migration": "P06 method adaptation documented; original source/pilot/consumers/tests preserved. Other origin transition states unchanged."
+  },
+  "creative_assessment": "Codex inspection finds readable silhouettes/labels, directional shield, redirected warning and clear goal/result. Candidate classes remain experimental; no independent player comprehension, identity, balance, fun or accessibility claim.",
+  "limitations": [
+    "One short local geometric model; no PhysicsServer body simulation or production MMO engine commitment.",
+    "No account, networking, multiplayer, persistent progression or cross-platform/hardware claim.",
+    "No independent human playtest, player learning/identity/enjoyment, scientific review or market evidence.",
+    "Rendered full journeys are accelerated diagnostics; real-time full-policy performance unverified.",
+    "No audio or controller implementation/validation."
+  ],
+  "prompt_review": "Updated only for explicit current user convergence hierarchy, primary modes, living design and observable product/knowledge/portfolio/origin closeout. No source-brain edits or model-improvement claim.",
+  "mutation_control": {
+    "artifact": "evidence/north-star-crossing/endpoint-mutation.json",
+    "checks": {
+      "failed": 1,
+      "passed": 34
+    },
+    "interpretation": "Intentional endpoint-only mutation rejected by one negative control. Not the historical baseline or accepted destination execution."
+  },
+  "other_checks": [
+    {
+      "command": "python3 tools/test_reference_library.py",
+      "result": "42 tests passed, including genuine destination bindings and false/stale claim rejection."
+    },
+    {
+      "command": "python3 tools/test_validate_repo.py",
+      "result": "27 tests passed."
+    },
+    {
+      "command": "python3 tools/test_brain_query.py",
+      "result": "17 tests passed; five source bytes/pins unchanged."
+    },
+    {
+      "command": "python3 tools/test_check_manifest.py",
+      "result": "11 tests passed."
+    },
+    {
+      "command": "python3 north-star/prototype/tools/test_verify.py",
+      "result": "3 failure tests passed (including an actual stale-PCK execution)."
+    }
+  ],
+  "prompt_sha256": "e119496dc5f2a7e1b8a97c9dc092471f898f8a772f1c782da5ce56bb4ad83423",
+  "presentation_scope": "Selection and real-keyboard captures document the earlier live input journeys before HUD/player-label refinement. Four controlled threat/completion frames were regenerated against final arena/combat source. Full rendered policies use accelerated ticks, not real-time performance evidence.",
+  "repository_checks": {
+    "validate_repo": "passed:565 local file links, 11 origins, 15 transfers, 9 assets",
+    "manifest": "1225 maintained lab files; exact coverage/hashes",
+    "reference_library": "5 records,607 sources,18 derived PDF texts,140 exclusions,14 capabilities; passed"
+  }
+}

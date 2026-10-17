@@ -1744,3 +1744,43 @@ Initial writable-XDG/import failures are environmental and reproduced against un
 origin; they do not justify product changes. Full evidence is in STATE and the linked
 brain-operation/pilot execution records. Future selection must reassess actual needs,
 not automatically repeat combat or create speculative large-scale infrastructure.
+
+## ADR-071 — make the first character objective executable in Virgo Diamond
+
+**Date:** 2026-10-17 UTC. **Status:** SEED 0.33.1; DEVELOPMENT, priority category 2.
+
+Baseline870c720 has exact brain consultation and a real origin instrument, but no
+executable destination. Current author guidance explicitly prioritizes the smallest
+meaningful playable experience and then existing-consumer improvements over unrelated
+research. Compare a bounded character encounter, P10 quest adaptation, P01 profession/
+economy and further P06 timings. Select a native courier crossing: it directly closes
+missing character agency without inventing a generic quest/crafting engine.
+
+Use existing Godot4.6.3, stdlib tooling and original vector geometry; no final MMO engine
+selection. Actual scene and checks consume a small new geometric model. Guardian
+intercepts with locked direction/finite posture; Duelist redirects and relocates under
+finite costs. Ground pulses, reachable counters, courier/player failure, result, retry
+and explicit abandonment produce consequences. Avoid renamed parry/dash, extra class
+trees, inventory and networking. Temporary character/quest details remain experimental,
+not canon. Maintain accepted/revised/experimental/rejected decisions in the new living
+design record, separately from immutable Creative Brain sources.
+
+Destination evidence supports local_prototype and NS-C03 adapted, not a shared import or
+production integration. Preserve foundation-only zero-consumer gates; require real code,
+command/check metadata and exact source/result hashes for local claims. Metadata gates
+cannot independently prove semantic execution, so CI executes native source and PCK.
+Other thirteen contribution states and all origin code/assets remain unchanged.
+
+Inspection corrected endpoint-only redirection: a nearer courier still owns impact.
+The controlled old-method mutation fails the new negative check. Opaque HUD draw order
+and an upper-boundary label correction improve inspected presentation. Real keyboard
+journeys verify bindings; accelerated rendered complete policies inspect outcome states.
+A full-policy render timed out; no cause/real-time performance claim is inferred.
+Synthetic policies, agent review and native checks do not establish human identity
+perception, fun, fairness, accessibility, audio or market evidence.
+
+Brain activation: all indices; ENG-004/015 acceptance/contracts, SCI-017/062 controls
+versus experience, CRE-004/005/014/015/084 meaningful action and candidate authority;
+all domains high. Update the single operational prompt for explicit author convergence,
+primary modes, living design and observable product/knowledge/portfolio/origin closeout.
+Do not automatically repeat combat next; inspect the real consumer's largest weakness.

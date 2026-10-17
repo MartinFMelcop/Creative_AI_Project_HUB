@@ -25,6 +25,12 @@ ecology, auxiliary interfaces or a cosmetic demo for that experience. Compare us
 portfolio/laboratory work honestly; engine, server and monetization remain decisions
 requiring evidence, not defaults.
 
+Until Virgo Diamond has an actual executable destination consumer, prioritize its
+smallest meaningful playable experience over unrelated laboratory/report expansion.
+A candidate early proof is two distinguishable approaches, responsive movement,
+a readable threat, meaningful trade-offs and observable consequences; evaluate this
+direction without treating it as final classes, engine or production scope.
+
 P01–P11 are historical technology origins in controlled transition, with useful code,
 assets, methods, tests, demonstrations and provenance retained. They no longer require
 independent playable/commercial products or release schedules. Labs are organized by
@@ -88,11 +94,26 @@ creative authority. Agent review is not independent human feedback.
 
 ## Select, design, implement and execute
 
+Select one primary mode: RESEARCH, DEVELOPMENT or CREATIVE PRODUCTION. All three
+brains remain available. Match validation to the mode: controlled evidence for research,
+executed consumer behavior for development, inspectable experience and appropriate
+creative evaluation for production.
+
+Before selecting, classify opportunities in this priority order:
+1. Direct improvement to an existing executable Virgo Diamond consumer.
+2. A missing capability required by the next playable product milestone.
+3. Concrete scientific, technical or creative uncertainty blocking that milestone.
+4. Valuable portfolio technology whose relevance and costs justify the work.
+Prefer the highest applicable category subject to feasibility, evidence and current
+user direction; explain exceptions briefly. Do not repeatedly choose standalone
+research because automation or verification is easier.
+
 Compare several credible opportunities across actual laboratory questions, technology
 demonstrations and North Star development. Assess distinctive character experience,
 meaningful choices, narrative/art/audio quality, workflow usefulness, reliability,
 accessibility, feasibility, distribution, reuse and evidence value. Do not rotate
-mechanically, repeat the last origin or choose the easiest technology by default.
+mechanically or select an origin, consumer or technology by inertia. Returning to the
+same consumer is appropriate when it resolves the highest-priority observed need.
 Read current records for versions and limitations; no old priority is a mandatory target.
 
 Define audience, intended experience/accomplishment, inspected weakness, verified
@@ -129,6 +150,13 @@ presentation and execution evidence. Evidence identifies baseline, environment,
 input/source versions or hashes, tested artifacts, actual commands/results and limits.
 Keep current priorities separate from historical milestones. Do not create duplicate
 registries or artificial backlog. Preserve irreplaceable sources and unrelated changes.
+
+Maintain the living Virgo Diamond design record in `north-star/DESIGN.md`, separate
+from immutable brains. Record accepted, revised, experimental and rejected creative
+decisions with provenance and current author authority. Do not silently promote
+encyclopedia proposals to canon. Periodically close or consolidate obsolete origin
+obligations after preserving code, evidence, licenses and actual consumers; do not
+accumulate laboratory structures without an instrument or concrete research question.
 
 Maintain honest North Star capability states. Code/tests/assets/docs from an origin,
 a laboratory instrument and a proposed consumer do not equal integration. Promote only
@@ -190,6 +218,10 @@ Respond in Brazilian Portuguese. Report baseline/branch, selected opportunity an
 alternatives, brain chapters used, design objective, implemented artifact and before/
 after evidence, creative assessment, laboratory/portfolio/origin transitions, derived
 knowledge changes, North Star relevance/real consumers, actual tests and limitations.
+Report observable changes in North Star product capability, relevant laboratory
+knowledge, portfolio demonstration and origin migration, distinguishing functioning
+progress from documentation-only activity. Passing checks, commits and documentation
+are safeguards, not substitutes for a more complete meaningful product experience.
 Attribute human contributions only when observed. Give actual commit subject and
 stored body, implementation SHA, confirmed remote SHA, branch, GitHub URL, publication
 and relevant CI status; distinguish identities if an integration created a new commit.

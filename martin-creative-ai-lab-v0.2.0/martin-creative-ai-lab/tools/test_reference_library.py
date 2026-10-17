@@ -396,5 +396,92 @@ class ReferenceLibraryTests(unittest.TestCase):
                 path.write_bytes(original)
 
 
+class DestinationContractTests(unittest.TestCase):
+    setUp = ReferenceLibraryTests.setUp
+    edit = ReferenceLibraryTests.edit
+    run_cli = ReferenceLibraryTests.run_cli
+    assert_invalid = ReferenceLibraryTests.assert_invalid
+
+    def destination(self):
+        path = "north-star/prototype/combat.gd"
+        code = self.root / path
+        code.parent.mkdir(parents=True)
+        code.write_text("extends RefCounted\n# Inert contract fixture, not a game.\n")
+        result = self.root / "evidence/result.json"
+        result.parent.mkdir()
+        result.write_text('{"fixture_only":true}\n')
+        def artifact(p):
+            return {"local_path":p.relative_to(self.root).as_posix(),
+                    "size_bytes":p.stat().st_size,"sha256":hashlib.sha256(p.read_bytes()).hexdigest()}
+        write_json(self.root / "evidence/run.json", {"schema_version":1,"kind":"destination_execution",
+            "baseline_commit":"a"*40,"capability_ids":["NS-TEST"],"consumer_paths":[path],
+            "runtime":"Inert structural fixture only", "scope":"Metadata validation, never actual execution",
+            "limitations":["No runtime or product assertion"],"checks":{"passed":1,"failed":0},
+            "commands":[{"command":["fixture-only-not-executed"],"exit_code":0}],
+            "source_artifacts":[artifact(code)],"result_artifacts":[artifact(result)]})
+        self.edit("north-star/capabilities.json",lambda d:d.update(stage="local_prototype",consumer_paths=[path]))
+        self.edit("north-star/capabilities.json",lambda d:d["capabilities"][0].update(
+            contribution_status="adapted",destination_scope="Fixture scope",destination_consumer_paths=[path],
+            destination_evidence="evidence/run.json"))
+        return code
+
+    def test_bound_local_prototype_metadata_is_valid(self):
+        self.destination()
+        self.assertEqual(self.run_cli("check").returncode,0)
+
+    def test_foundation_cannot_claim_a_consumer(self):
+        self.edit("north-star/capabilities.json",lambda d:d.update(consumer_paths=["north-star/README.md"]))
+        self.assert_invalid("Invalid North Star foundation state")
+
+    def test_unknown_stage_is_rejected(self):
+        self.edit("north-star/capabilities.json",lambda d:d.update(stage="production_ready"))
+        self.assert_invalid("Invalid North Star foundation state")
+
+    def test_local_prototype_requires_code_not_docs(self):
+        self.destination()
+        self.edit("north-star/capabilities.json",lambda d:d.update(consumer_paths=["docs/report.md"]))
+        self.assert_invalid("actual destination code")
+
+    def test_missing_and_linked_consumers_fail(self):
+        code=self.destination();raw=code.read_bytes();code.unlink()
+        self.assert_invalid("Missing reference")
+        source=self.root/"original.gd";source.write_bytes(raw);code.symlink_to(source)
+        self.assert_invalid("Linked reference")
+
+    def test_destination_sources_must_match_recorded_bytes(self):
+        code=self.destination();code.write_text("# Changed after recorded execution\n")
+        self.assert_invalid("source hash or size differs")
+
+    def test_destination_result_must_match_recorded_bytes(self):
+        self.destination();(self.root/"evidence/result.json").write_text("{}")
+        self.assert_invalid("source hash or size differs")
+
+    def test_capability_binding_is_not_inferred_from_path(self):
+        self.destination()
+        self.edit("evidence/run.json",lambda d:d.update(capability_ids=["NS-OTHER"]))
+        self.assert_invalid("misbound destination execution")
+
+    def test_failed_or_missing_checks_cannot_promote(self):
+        self.destination()
+        for checks in ({"passed":4,"failed":1}, None, [], {"passed":True,"failed":0}):
+            self.edit("evidence/run.json",lambda d:d.update(checks=checks))
+            self.assert_invalid("destination checks failed or absent")
+
+    def test_successful_command_metadata_required(self):
+        self.destination()
+        self.edit("evidence/run.json",lambda d:d["commands"][0].update(exit_code=1))
+        self.assert_invalid("successful executed command required")
+
+    def test_local_prototype_is_not_external_validation(self):
+        self.destination()
+        self.edit("north-star/capabilities.json",lambda d:d["capabilities"][0].update(contribution_status="externally_validated"))
+        self.assert_invalid("does not establish external validation")
+
+    def test_unbound_consumer_is_rejected(self):
+        self.destination()
+        self.edit("north-star/capabilities.json",lambda d:d["capabilities"][0].update(destination_consumer_paths=["north-star/prototype/missing.gd"]))
+        self.assert_invalid("must bind the real program consumer")
+
+
 if __name__ == "__main__":
     unittest.main()

@@ -2,9 +2,12 @@
   "schema_version": 1,
   "name": "North Star",
   "kind": "program",
-  "stage": "foundation_only",
+  "stage": "local_prototype",
   "engine_selection": "undecided",
-  "consumer_paths": [],
+  "consumer_paths": [
+    "north-star/prototype/arena.gd",
+    "north-star/prototype/combat.gd"
+  ],
   "contribution_model": {
     "candidate": "Identified hypothesis; no transfer proof.",
     "verified_in_origin": "An inspected execution record supports bounded origin behavior; applicability remains a hypothesis.",
@@ -12,7 +15,7 @@
     "integrated_into_north_star": "A genuine North Star consumer uses the capability with destination verification.",
     "externally_validated": "Relevant destination behavior/experience has independent evaluation; specify what and by whom."
   },
-  "evidence_boundary": "Fourteen existing capability records retain their bounded origin evidence. The combat-response pilot drives unchanged P06 code, not a North Star consumer. Stage remains foundation_only with consumer_paths empty; no destination adaptation/integration/external validation is claimed. Historical origin maturity is unchanged.",
+  "evidence_boundary": "One local executable character consumer exists. NS-C03 is adapted into the prototype, not imported as a shared kernel or production MMORPG integration. Thirteen other contribution states retain origin/candidate scope. Native checks and Codex visual review are not independent human validation; final engine remains undecided.",
   "capabilities": [
     {
       "id": "NS-C01",
@@ -60,16 +63,22 @@
         "P06"
       ],
       "reference_collections": [],
-      "contribution_status": "verified_in_origin",
+      "contribution_status": "adapted",
       "origin_validation": "execution_record_inspected",
       "scope": "Native physics, committed locked contact, paid close-sweep guard, phase hazards, animation and scripted engine checks.",
       "origin_evidence": [
         "projects/veil-arena/arena.gd",
         "evidence/veil-arena/PARRY_RUN.json"
       ],
-      "applicability_hypothesis": "Research whether movement and action combat feedback serves a bounded North Star experiment; no consumer or reusable contract exists yet.",
+      "applicability_hypothesis": "The local crossing demonstrates distinct finite-resource protection/redirection paths; perceived character identity and broader combat applicability remain hypotheses requiring player observation.",
       "limits": "Single-player desktop timing; not lag compensation, networked combat, human balance or multiplayer prediction.",
-      "next_validation": "Define authoritative input/time boundaries and test latency effects in a separate small encounter before proposing transfer."
+      "next_validation": "Observe actual unassisted players explaining direction, interception, feint and reachable counters before judging identity, fairness or balance.",
+      "destination_consumer_paths": [
+        "north-star/prototype/arena.gd",
+        "north-star/prototype/combat.gd"
+      ],
+      "destination_scope": "Local crossing scene consumes a new finite-resource directional interception/redirection model informed by P06 contact/commitment evidence. Both approaches complete one courier objective; this is method adaptation, not shared-code import.",
+      "destination_evidence": "evidence/north-star-crossing/RUN.json"
     },
     {
       "id": "NS-C04",

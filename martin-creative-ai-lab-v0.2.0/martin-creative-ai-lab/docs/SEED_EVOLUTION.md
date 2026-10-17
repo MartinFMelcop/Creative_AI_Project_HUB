@@ -28,9 +28,9 @@ preserve provenance without establishing a competing creative authority.
 
 Update only affected records. Preserve negative/inconclusive results and distinguish
 source, origin execution, lab instrumentation, adaptation, destination integration,
-agent judgment, independent humans and market evidence. No North Star consumer exists;
-its fourteen capabilities remain foundation-only. Change stage/schema only with real
-destination execution. Keep source licenses, right limits and unavailable attachments
+agent judgment, independent humans and market evidence. One local character consumer now exists; NS-C03 is adapted among fourteen capabilities.
+Its local_prototype schema binds code and executed source/result identities. Change
+stage/schema only with real destination execution. Keep source licenses, right limits and unavailable attachments
 explicit. Old plans and snapshot instructions do not govern the current session.
 
 Most of this migration is operational, not creative validation. Exact library/query
@@ -68,3 +68,12 @@ reading editions and evidence; the [lab guide](../README.md) supports developmen
 The current project index replaces obsolete delivery claims. Root entry links and
 lab backlinks join the existing documentary gate. Presentation changes do not
 advance project maturity, revalidate runtimes or promote sources into canon.
+
+## Product convergence — v0.33.1
+
+The current author explicitly prioritizes an executable destination before unrelated
+research, and subsequent consumer improvements before lower-category work. Choose
+RESEARCH, DEVELOPMENT or CREATIVE PRODUCTION; validate according to its actual goal.
+The first crossing closes missing playable capability in DEVELOPMENT mode. Keep living
+design separate from immutable volumes; report observable product, knowledge, portfolio
+and origin-migration effects. The one prompt was updated for this durable instruction.

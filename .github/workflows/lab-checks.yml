@@ -195,6 +195,14 @@ jobs:
           python3 -m unittest discover -s labs/combat-response -p 'test_*.py'
           python3 labs/combat-response/run.py --godot "$veil_engine" --output "$RUNNER_TEMP/combat-response.json" --compare evidence/combat-response/results.json
 
+      - name: Execute the North Star source and delivered character consumer
+        working-directory: martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab
+        run: |
+          veil_engine="$RUNNER_TEMP/veil-godot/Godot_v4.6.3-stable_linux.x86_64"
+          CROSSING_GODOT="$veil_engine" python3 north-star/prototype/tools/test_verify.py
+          python3 north-star/prototype/tools/verify.py --godot "$veil_engine" --output "$RUNNER_TEMP/crossing-check.json" --compare evidence/north-star-crossing/results.json
+
+
   integrity-and-dialogue:
     runs-on: ubuntu-24.04
     timeout-minutes: 10

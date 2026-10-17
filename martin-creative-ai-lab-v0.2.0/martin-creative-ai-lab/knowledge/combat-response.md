@@ -30,9 +30,21 @@ or adding attributes to indistinguishable actions.
 response or a full timing sweep. It excludes player perception, delayed counter choice,
 other attacks/phases, networking, physical input, readability and listening. Repeated
 traces are not independent participants. Class identity/fun/learning remain untested;
-Virgo Diamond has no destination consumer. CRE-001/012/084 motivates the question,
+The later [crossing consumer](../north-star/prototype/README.md) applies this question
+in a new geometric model; it does not retroactively extend this origin experiment. CRE-001/012/084 motivates the question,
 not its empirical proof; ENG-004/015 and SCI-005/017/051 bound the inference.
 
 **Revisit when:** a real character consumer, other threat, timing rate, movement policy
 or external observation changes the envelope. Preserve the current trace as a scoped
 reference, not a universal combat rule or automatically approved creative decision.
+
+## Destination application — local crossing prototype
+
+The new [consumer](../north-star/prototype/README.md) demonstrates distinct feasible
+protection/redirection paths under one courier goal. Source inspection found that an
+endpoint-only redirected beam could ignore an ally earlier on the segment. The actual
+model now resolves the nearer eligible contact; the new negative case rejects a
+controlled endpoint-only mutation. This is a destination control, not retroactive
+proof of a defect in P06. Practical consequence: measure who owns an impact and who
+bears the cost, rather than treating a changed target label as successful protection.
+Scripted completion does not demonstrate human understanding or final class identity.

@@ -1,4 +1,10 @@
-# Current assessment — three-brain Design-Driven operation
+# Current assessment — first playable destination
+
+Selected a bounded character consumer after comparing actual P06 methods, P10 narrative, P01 economy and further lab instrumentation. Baseline has no executable destination; DEVELOPMENT closes missing playable capability. Read STATE, DESIGN and actual destination evidence before selecting the next consumer improvement.
+
+[Actual state](STATE.md) and [living design](../north-star/DESIGN.md) carry current evidence. Earlier assessments below are historical scopes.
+
+# Previous assessment — three-brain Design-Driven operation
 
 Baseline `c360f68e2be933d55f082a414663d28ab24eac8d` matches inspected/fetched remote main.
 Current author instructions change production direction while retaining the HUB as a

@@ -342,16 +342,33 @@ def validate_library(root=ROOT, project_ids=None):
         excluded_total += len(excluded)
 
     program = obj(root / "north-star/capabilities.json")
+    stage = program.get("stage")
+    consumers = program.get("consumer_paths")
     require(program.get("name") == "North Star" and program.get("kind") == "program"
-            and program.get("stage") == "foundation_only" and program.get("consumer_paths") == []
+            and stage in {"foundation_only", "local_prototype"}
             and program.get("engine_selection") == "undecided", "Invalid North Star foundation state")
+    require(isinstance(consumers, list) and all(isinstance(v, str) for v in consumers)
+            and len(set(consumers)) == len(consumers), "Invalid North Star consumer paths")
+    if stage == "foundation_only":
+        require(consumers == [], "Invalid North Star foundation state")
+    else:
+        require(consumers, "Local prototype requires a real consumer")
+        for value in consumers:
+            require(value.startswith("north-star/prototype/") and Path(value).suffix in {".gd", ".py", ".cs"},
+                    "Local prototype requires actual destination code, not documentation")
+            local(root, value)
     capabilities = rows(program, "capabilities", "North Star")
     unique(capabilities, "id", "North Star")
     for cap in capabilities:
         label = cap["id"]
         state = cap.get("contribution_status")
         require(isinstance(state, str) and state in CONTRIBUTION_STATES, f"{label}: invalid contribution status")
-        require(state in {"candidate", "verified_in_origin"}, f"{label}: foundation has no implemented North Star consumer")
+        if stage == "foundation_only":
+            require(state in {"candidate", "verified_in_origin"}, f"{label}: foundation has no implemented North Star consumer")
+        else:
+            require(state != "externally_validated", f"{label}: local prototype does not establish external validation")
+            if state in {"adapted", "integrated_into_north_star"}:
+                validate_destination(root, program, cap)
         origins = cap.get("origin_projects")
         require(isinstance(origins, list) and all(isinstance(p, str) for p in origins)
                 and len(origins) == len(set(origins)) and set(origins) <= project_ids,
@@ -367,9 +384,57 @@ def validate_library(root=ROOT, project_ids=None):
             local(root, name)
         require(state != "verified_in_origin" or (evidence and cap.get("origin_validation") == "execution_record_inspected"),
                 f"{label}: origin verification needs a recorded execution, not source discovery")
+    if stage == "local_prototype":
+        require(any(c["contribution_status"] in {"adapted", "integrated_into_north_star"} for c in capabilities),
+                "Local prototype requires a demonstrated destination capability")
     return {"catalog": catalog, "collection_ids": collection_ids, "source_roots": source_roots,
             "inventories": inventories, "topics": topics, "imported": imported_total,
             "excluded": excluded_total, "derived": derived_total, "capabilities": len(capabilities)}
+
+
+def validate_destination(root, program, cap):
+    """Bind a local prototype claim to code, executed-check metadata and exact bytes.
+
+    Structure is not independent proof of semantic execution; CI runs the consumer.
+    """
+    label = cap["id"]
+    consumers = cap.get("destination_consumer_paths")
+    require(isinstance(consumers, list) and consumers
+            and all(isinstance(v, str) and v in program["consumer_paths"] for v in consumers)
+            and len(set(consumers)) == len(consumers),
+            f"{label}: destination consumers must bind the real program consumer")
+    require(isinstance(cap.get("destination_scope"), str) and cap["destination_scope"].strip(),
+            f"{label}: missing destination scope")
+    record = obj(local(root, cap.get("destination_evidence")))
+    require(record.get("kind") == "destination_execution" and
+            isinstance(record.get("baseline_commit"), str) and
+            re.fullmatch(r"[0-9a-f]{40}", record["baseline_commit"]), f"{label}: invalid destination execution")
+    require(isinstance(record.get("capability_ids"), list) and
+            all(isinstance(v, str) for v in record["capability_ids"]) and
+            isinstance(record.get("consumer_paths"), list) and
+            all(isinstance(v, str) for v in record["consumer_paths"]) and
+            label in record["capability_ids"] and set(consumers) <= set(record["consumer_paths"]), f"{label}: misbound destination execution")
+    require(isinstance(record.get("runtime"), str) and record["runtime"] and
+            isinstance(record.get("scope"), str) and record["scope"] and
+            isinstance(record.get("limitations"), list) and record["limitations"] and
+            all(isinstance(v, str) and v for v in record["limitations"]), f"{label}: missing runtime/scope/limits")
+    checks = record.get("checks", {})
+    require(isinstance(checks, dict) and type(checks.get("passed")) is int and checks["passed"] > 0 and
+            type(checks.get("failed")) is int and checks["failed"] == 0, f"{label}: destination checks failed or absent")
+    commands = record.get("commands")
+    require(isinstance(commands, list) and commands and all(isinstance(c, dict) and
+            isinstance(c.get("command"), list) and c["command"] and
+            all(isinstance(v, str) and v for v in c["command"]) and
+            type(c.get("exit_code")) is int and c["exit_code"] == 0 for c in commands),
+            f"{label}: successful executed command required")
+    sources = rows(record, "source_artifacts", label)
+    results = rows(record, "result_artifacts", label)
+    require(sources and results, f"{label}: source and result artifacts required")
+    paths = unique(sources, "local_path", label)
+    unique(results, "local_path", label)
+    require(set(consumers) <= paths, f"{label}: unbound destination source hash")
+    for item in sources + results:
+        checked_bytes(root, item, label + " destination")
 
 
 def search_text(root, files, query, book=None, limit=12):

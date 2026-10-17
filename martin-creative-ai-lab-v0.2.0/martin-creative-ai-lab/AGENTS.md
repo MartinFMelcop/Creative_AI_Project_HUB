@@ -54,8 +54,20 @@ infrastructure/ecology. Select languages/engines by requirements and available t
 Do not migrate software for quotas or default to browser demos. Share abstractions
 only for actual consumers. The North Star catalog separately tracks candidates,
 origin verification, adaptations, actual integration and external validation. Its
-foundation-only stage currently has zero destination consumers. A lab instrument
-that drives origin code is not North Star integration.
+local prototype currently has one executable character consumer; NS-C03 is adapted,
+not a shared-kernel import or production integration. A lab instrument that drives
+origin code alone is not a North Star game consumer.
+
+## Product selection and living design
+
+Prefer existing Virgo Diamond consumer improvements, missing next-playable capability,
+blocking uncertainty, then portfolio work with justified relevance/cost. Choose one
+primary mode (RESEARCH, DEVELOPMENT or CREATIVE PRODUCTION); all three brains remain
+available, while evidence matches the mode. Until a destination consumer exists,
+prioritize its smallest meaningful playable experience. Do not repeatedly select
+standalone research for ease of automation. Keep accepted/revised/experimental/rejected
+decisions in `north-star/DESIGN.md`; current author authority and source status persist.
+Report observable product, lab knowledge, portfolio and origin migration changes.
 
 ## Verify and close
 

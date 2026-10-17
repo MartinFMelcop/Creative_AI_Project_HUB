@@ -29,8 +29,9 @@ design hypotheses, executed behavior and independent participant evidence.
 
 [Combat response](combat-response.md) separates observed avoidance from commitment,
 position and reachable counter opportunity in the executed P06 pilot. The instrument
-is its actual laboratory consumer; a future Virgo Diamond character study is a
-candidate, not destination integration or an externally validated creative decision.
+is its actual laboratory consumer; the [crossing prototype](../north-star/prototype/README.md) now applies the method in
+a real local destination. Mechanical feasibility is distinct from an externally
+validated creative decision.
 
 ## Record only what changes a decision
 

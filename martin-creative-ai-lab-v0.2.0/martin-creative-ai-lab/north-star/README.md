@@ -9,11 +9,18 @@ without being eleven independently obligated products.
 
 ## Actual stage and creative authority
 
-The catalog remains **foundation_only**, with fourteen traceable capability records,
-**zero destination consumers**, no selected final engine and no running MMORPG.
-Priorities changed by explicit author instruction; implementation maturity did not.
-The [combat-response pilot](../labs/combat-response/README.md) is an executed laboratory
-instrument using P06, not a North Star game consumer or validated class system.
+The catalog now records **local_prototype**: one executable
+[crossing encounter](prototype/README.md), two actual consumer code paths and fourteen
+capabilities. **NS-C03 is adapted** in this destination; the other thirteen contribution
+states remain unchanged. Godot 4.6.3 is the prototype tool; no final MMO engine or
+running multiplayer service is selected. The earlier combat-response lab remains an
+origin instrument, separately preserved.
+
+The player chooses frontal interception or redirection/mobility and protects the same
+courier to the far gate. [Living design](DESIGN.md) distinguishes author decisions,
+experimental mechanics, revisions and rejected alternatives. Current primary mode is
+DEVELOPMENT, priority category 2: baseline lacked an executable destination consumer.
+Future selection should first inspect and improve this real consumer.
 
 The [Creative Brain](../brains/README.md) is the central creative knowledge base.
 Current direct author decisions take precedence; D/A/H/E/V source categories distinguish
@@ -39,8 +46,10 @@ authority or automatically shared fictional universes.
 | Integrated into North Star | Genuine destination consumer uses it with destination execution proof |
 | Externally validated | Relevant destination behavior/experience independently evaluated within stated scope |
 
-The current schema intentionally rejects the last three states while foundation-only.
-A useful lab instrument does not itself change that stage. Evolve the stage/validator
-with real consumer evidence when justified. Technical correctness, agent creative
+The schema preserves foundation-only zero-consumer guards and adds local-prototype
+claims bound to actual code, successful execution metadata and matching source/result
+hashes. Structural checks do not independently prove report semantics. Local prototype
+metadata cannot establish external validation. A lab instrument alone does not change
+the stage; actual destination execution is required. Technical correctness, agent creative
 assessment, human experience and market evidence remain separate. A local prototype
 would not demonstrate multiplayer, MMORPG scale, enjoyment, retention or demand.

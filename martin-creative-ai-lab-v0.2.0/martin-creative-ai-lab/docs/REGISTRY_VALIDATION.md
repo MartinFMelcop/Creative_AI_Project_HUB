@@ -122,3 +122,12 @@ a claim that report contents prove scientific validity or human experience.
 Run `python3 tools/test_brain_query.py`, `python3 tools/test_validate_repo.py` and the
 actual lab's tests/runtime alongside existing source/manifest suites. CI retains all
 previous origin gates and adds immutable consultation and native pilot reproduction.
+
+## Local destination — v0.33.1
+
+The foundation-only guards remain. `local_prototype` requires actual code consumers,
+with promoted capabilities bound to an execution record, successful checks/commands,
+source hashes and result hashes. Readable docs, stale bytes, missing/misbound evidence
+and failed checks cannot establish adaptation. The gate does not independently prove
+semantic execution; CI actually executes source/PCK. External validation remains
+unsupported by this local-prototype contract. Regression suite now has 42 methods.
