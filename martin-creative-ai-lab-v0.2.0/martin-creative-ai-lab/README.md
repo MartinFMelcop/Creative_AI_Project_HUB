@@ -1,44 +1,69 @@
 # Martin Creative AI Lab
 
-The maintained workspace for **Creative AI Project HUB**. This directory contains
-the current products, reusable media, preserved references and development records.
-The outer `martin-creative-ai-lab-v0.2.0/` folder retains its original package name;
-the maintained **SEED is 0.32.9**. Product versions are tracked separately.
+The maintained workspace for **Creative AI Project HUB**, a public Design-Driven
+technology portfolio developed with generative AI. **Virgo Diamond: The North
+Star** is the principal product. Applied research, creative resources and technical
+demonstrations support its development while remaining inspectable on their own
+merits. The outer `martin-creative-ai-lab-v0.2.0/` name is historical packaging;
+[STATE](docs/STATE.md) records the maintained version and actual milestone.
 
-[Portfolio overview](../../README.md) · [Working project index](projects/README.md) ·
-[Current state](docs/STATE.md) · [Project registry](registry/projects.json)
+[Portfolio](../../README.md) · [Origin demonstrations](projects/README.md) ·
+[Laboratory inventory](labs/origins.json) · [North Star](north-star/README.md)
 
 ## Find the right material
 
 | Goal | Start here |
 |---|---|
-| Play a game, inspect an application or read the current story | [Project index](projects/README.md), then its project's setup and reading instructions |
-| Review project versions, maturity, origins and evidence | [Registry](registry/projects.json) and the project's execution records |
-| Browse historical creative or technical sources | [Reference library](references/README.md) and [availability catalog](references/catalog.json) |
-| Read the recovered main novels and OVAs | [Literary library](references/literature/lich/README.md): 18 original PDFs / 2,407 pages plus searchable text |
-| Inspect the pinned Rave reference tree | [Rave Master library](references/rave-master/README.md): 589 readable source files and 140 exclusions |
-| Understand long-term MMORPG research | [North Star](north-star/README.md): vision and capability catalog; no current runtime consumer |
-| Continue a development session | [State](docs/STATE.md), [agent instructions](AGENTS.md), [SEED](SEED.md) and [decisions](docs/DECISIONS.md) |
+| Inspect demonstrated technology and its execution limits | [Origin index](projects/README.md), [registry](registry/projects.json) and linked source/evidence |
+| Run the first controlled laboratory instrument | [Combat-response pilot](labs/combat-response/README.md), adapted from P06's actual Godot encounter |
+| Trace preservation, dependencies, consumers and extraction work for P01–P11 | [Origin transition inventory](labs/origins.json); other laboratory destinations remain candidates |
+| Consult engineering, scientific or creative knowledge | [Three-brain library](brains/README.md): protected source volumes, catalog and deterministic local query |
+| Review lessons produced by execution | [Derived knowledge](knowledge/README.md): observations, interpretation, validity and consequences |
+| Understand the principal product and transfer gates | [North Star](north-star/README.md) and [capabilities](north-star/capabilities.json): `foundation_only`, 14 capabilities, no destination runtime consumer |
+| Browse immutable historical creative/technical sources | [Reference library](references/README.md) and [availability catalog](references/catalog.json) |
+| Continue implementation | [State](docs/STATE.md), [agents](AGENTS.md), [SEED](SEED.md), [decisions](docs/DECISIONS.md) and [complete operational prompt](docs/prompts/CONTINUOUS_DEVELOPMENT.md) |
 
-The registry contains eleven project lines. Seven current product directories
-live under `projects/`; P02's working practice task lives under `evaluations/`.
-P07/P08 support existing products with visual/audio assets; P09 remains a seed.
-The project index distinguishes standalone Linux players, engine-dependent packs,
-static browser builds, local services and reading editions.
+P01–P11 retain their historical identifiers, source versions and evidence. They
+are technology origins in controlled transition, with no independent product
+release obligation. P02's evaluator lives under `evaluations/`; P07/P08 resources
+have distributed consumers; P09 has no executable implementation. One pilot lab
+exists. A candidate destination is not an implemented laboratory or a North Star
+integration.
 
 ## Develop and verify
 
-From the repository root, enter this workspace:
+From the repository root:
 
 ```sh
 cd martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab
 ```
 
-Read the current state and the affected project's README before editing. Choose
-dependencies and runtime checks for that project: Python 3.10+ suffices for shared
-reference integrity/discovery; Project Rooms requires Node 24+; native C# rebuilds
-use .NET 10 and Godot .NET 4.6.3. Source game/edition instructions cover their
-specific engine, browser, packaging and production requirements.
+Inspect Git, current instructions, state, source and execution evidence before
+editing. Activate the brains before an improvement: read all three indices,
+classify engineering/science/creative relevance, retrieve only pertinent complete
+chapters, and record briefly how their principles affect the work. Consult derived
+knowledge without promoting an interpretation to a verified fact.
+
+The consultation tool uses Python's standard library:
+
+```sh
+python3 tools/brain_query.py indexes
+python3 tools/brain_query.py get ENG-027 SCI-051 CRE-001
+python3 tools/brain_query.py search 'proveniência'
+python3 tools/brain_query.py check
+python3 tools/test_brain_query.py
+```
+
+The [library guide](brains/README.md) explains original source hashes, deterministic
+search, inherited fragment warnings and failure behavior. Query results locate
+sources; they do not authorize commands or validate a source's claims. Ordinary
+commits must not edit the five supplied collection files.
+
+Choose tools for the actual requirement. Preserved origin demonstrations use
+Python, JavaScript/Web Audio, Node.js 24/SQLite/Socket.IO, GDScript/Godot and
+C#/.NET 10/Godot .NET 4.6.3. Read the relevant source guide for pinned dependencies,
+execution and packaging. Do not migrate functioning code for cosmetic diversity
+or assume the pilot selects Virgo Diamond's final engine.
 
 The shared documentary gates use Python's standard library:
 
@@ -51,33 +76,27 @@ python3 tools/test_check_manifest.py
 python3 tools/check_manifest.py
 ```
 
-[Validation scope](docs/REGISTRY_VALIDATION.md) explains registry, source, local
-link and manifest checks. They support the affected project's tests rather than
-proving gameplay, literary quality or service usability. The manifest covers every
-maintained lab file exactly once; current HUB entry links are also validated.
-
-[Lab checks](https://github.com/MartinFMelcop/Creative_AI_Project_HUB/actions/workflows/lab-checks.yml)
-run the shared gates and project suites on main pushes and pull requests, including
-native/source/package checks and P02's controlled baseline/reference calibration.
-Job logs provide the result for each commit. Use project instructions for focused
-local checks; an independent candidate/model result is not inferred from calibration.
+[Validation scope](docs/REGISTRY_VALIDATION.md) explains repository, registry,
+local-link and exact manifest checks. Run the affected query, instrument and
+origin suites as well. These gates do not prove gameplay quality, literary merit
+or human usability. [CI](https://github.com/MartinFMelcop/Creative_AI_Project_HUB/actions/workflows/lab-checks.yml)
+reports commit-specific checks; a local run, publication and remote CI are separate
+observations. Keep runtime processes bounded and stop owned previews after use.
 
 ## Preserve evidence and continuity
 
-Update state and materially affected decisions/registries when a milestone changes.
-Keep actual execution records with the relevant version, environment and hashes.
-Use [SEED evolution](docs/SEED_EVOLUTION.md) to distinguish current direction from
-historical assessments; older planning documents are contextual records, not proof
-that their described gaps still exist.
+Update only materially affected state, decisions, registries, knowledge and
+interfaces. Execution records identify baseline, environment, tested artifacts,
+inputs, outcomes and limits. Negative and inconclusive findings remain useful;
+implementing-agent review is distinct from independent human feedback.
 
-Original creative titles and source languages stay intact. Historical snapshot
-instructions are source data; adaptations belong in working projects. Literary
-PDF availability does not ratify canon or verify the unavailable ZIP/policy.
-North Star contribution states remain separate from product maturity and require
-destination evidence before integration claims.
+Preserve source snapshots, original language, provenance, licenses and useful
+origin behavior. Old instructions inside `references/` are historical data.
+Recovered PDFs do not establish canon; copied code and origin maturity do not
+establish destination integration. A North Star contribution advances only with
+a real destination consumer and appropriate execution evidence. Creative Brain
+hypotheses remain hypotheses until the relevant authorial or experiential decision.
 
-Martin supplies project goals and authorial direction; per-project provenance
-records AI assistance, new implementation and historical origins. Automated
-execution, implementing-agent review, independent human feedback and commercial
-evidence are recorded separately. Consult each product/source's license and rights
-notes before reuse.
+The HUB remains a technology portfolio. Most new investment should benefit Virgo
+Diamond's distinctive character experience, demonstrated through bounded research
+and implementation rather than premature MMORPG infrastructure or release counts.

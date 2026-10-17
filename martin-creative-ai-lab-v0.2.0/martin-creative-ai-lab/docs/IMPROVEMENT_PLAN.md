@@ -1,4 +1,28 @@
-# Current foundation — legacy references and North Star
+# Current scope — three-brain operation and one executed pilot
+
+Preserve exact five supplied files in brains/, implement deterministic selective
+consultation, coordinate agents and the one prompt through mandatory activation,
+contextualize existing derived knowledge, inventory all eleven origins without loss,
+and keep a capability/evidence-first public technology portfolio. Virgo Diamond is
+the principal product; the current destination stage remains foundation-only.
+
+The functional first increment instruments unchanged P06 native responses with fixed
+scenarios, neutral/action controls, repeat runs and actual outcomes. It investigates
+response envelopes and trade-offs, not completed classes, human preference or fun.
+No source/media/release/test removal or predetermined technology migration.
+
+Acceptance: exact source hashes/UTF-8/catalog/chapter retrieval, positive/negative/
+Unicode/stability/error query cases, complete transition inventory with explicit
+candidate versus implemented states, actual engine results and repeatability, preserved
+historical hashes and origin consumers, affected regression/CI contracts, exact manifest,
+reviewed complete/staged diff and real non-force publication with remote verification.
+
+Future selection must compare actual character-experience needs, research questions
+and portfolio value afresh. The records below are historical scopes, not a backlog or
+independent-product commitments. Use [STATE](STATE.md) and
+[the complete prompt](prompts/CONTINUOUS_DEVELOPMENT.md) for current operation.
+
+# Historical foundation — legacy references and North Star
 
 Deliver a locally readable pinned Rave reference snapshot, accurate exclusions,
 unchanged selected-archive integrity and practical source discovery. Distinguish

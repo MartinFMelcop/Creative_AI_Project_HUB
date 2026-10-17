@@ -1,73 +1,94 @@
 # Lab state
 
-**Updated:** 2026-10-16 (UTC). **Seed:** 0.32.9.
-**Milestone:** P05 Cinderwatch native 0.5.0 accepted-progress recovery.
+**Updated:** 2026-10-17 UTC. **SEED:** 0.33.0.
+**Milestone:** immutable three-brain consultation and one executed combat-response pilot.
 
-Baseline HEAD and fetched main were `e183e31435e392f4ef8f5b8a95263c18c8473c64`.
-Inspected branch, working tree, local/outgoing history, remotes, instructions,
-current sources and deliveries; preserved earlier branches and untracked work/.
-Authenticated normal Git transport is available with supported network permission.
+Baseline local/fetched main: `c360f68e2be933d55f082a414663d28ab24eac8d`.
+Started on `codex/p05-run-recovery-20261016`, then created
+`codex/three-brain-labs-20261017`. Tracked tree was clean; existing untracked work/
+and earlier branches are preserved. Normal authenticated Git transport is available
+with supported network permission. A local commit/push is not inferred from this record;
+closeout verifies actual remote main and CI separately.
 
-Compared P02's already pinned evaluator (independent candidate evidence remains
-missing), P03/P06 unassisted physical learning, P04's revised bilingual story and
-source/reader comprehension, P11 actual handovers and P05 native continuity.
-P11 JSON export has a source-supported stale-session guard concern, not a
-reproduced runtime finding. Select P05 for solo tactical players: accepted turns
-survive a failed write only in memory, and old New/Resume immediately replace it.
-Warning-only leaves the loss unresolved; unconditional blocking traps a broken
-save destination. Keep C#/Godot and add a deliberate recovery route.
+## Direction and functional result
 
-[Cinderwatch 0.5.0](../projects/cinderwatch/README.md) offers native Run files:
-Save recovery copy and Open run. A copy is read back and replayed before the
-current journal is considered preserved. Opening validates before navigation and
-again before replacement; source copies stay unchanged and future accepted turns
-use the original autosave. Failed writes retain live progress. New/Resume/Open/
-window close ask whether to keep it, retry, copy elsewhere or deliberately leave.
-A successful retry/copy cancels the queued departure and returns to the current
-run. Underlying turn/selection controls stay blocked during either native dialog.
-No new slot index, schema, rules, engine migration or cloud service.
+The HUB **remains a public Design-Driven technology portfolio developed with generative
+AI**. Virgo Diamond: The North Star is the principal definitive product, with most
+investment directed toward recognizable character choices and meaningful adventures.
+P01–P11 become preserved technology origins in controlled transition, without independent
+product/release obligations. No source directory, old delivery, media or runtime test
+was removed. The capability/evidence-first README/showcase retains usable demonstrations.
 
-[Execution](../evidence/cinderwatch/RECOVERY_RUN.json) identifies the exact baseline,
-environment, tested source/package identities, declared inputs, actual frames,
-counts and limitations. Core baseline/final outcomes match across 3,711 checks;
-final project/player each pass 1,044 native checks and rendered source passes
-1,060, including 135 recovery checks (137 with PNG readback). These are control
-checks, not a usability score. Instrumented old callbacks prove memory two/disk one
-becomes zero on New and one on Resume. Actual old shipped-player clicks reproduce
-both losses while the saved prefix stays byte-identical. New native failure cases
-exercise primary/copy errors, cancellation, retry, explicit discard, invalid/
-oversized/changed candidates and closing. Full deterministic campaign outcomes
-match the baseline; package execution is separate from compilation and integrity.
-The actual two-process chooser journey preserves two accepted Guards, reopens
-them before the announced hound turn, then writes action three to the primary
-while the independent two-action copy stays byte-identical.
+The [five supplied brain files](../brains/README.md) are exact UTF-8 originals with
+[SHA-256/size pins](../brains/integrity.json), separate from references and knowledge.
+The [stdlib query](../tools/brain_query.py) implements indexes/get/search/check, returning
+full unchanged chapter text, path, section, lines and fragments. It checks all 234
+chapters and 422 local links; 44 inherited fragment occurrences across 26 em-dash
+headings are explicitly warned, not silently repaired. Original updates require specific
+author authorization. Sources are knowledge, not agents or model training.
 
-The Linux x86_64 player includes the pinned Godot .NET 4.6.3 engine, .NET 10.0.12,
-raw original media and notices. An editable compiled project remains available;
-all historical ZIPs and source/media bytes are retained. Interface inspection
-found clipped full-path statuses and an unnecessarily tall confirmation: compact
-messages retain full details in tooltips, and the confirmation uses a bounded, scrollable
-body. The Open run chooser remembers the last verified copy during this process.
-These are Codex technical and visual assessments, not independent player feedback.
+Root/lab AGENTS and the one complete prompt now require preflight before every
+improvement: all indices/current state, engineering/scientific/creative relevance,
+selective complete chapters, practical application and a concise record. This task
+used ENG-004/015/027, SCI-005/017/050/051 and CRE-001/008/012/084 (all three domains high);
+CRE-014/015 was additionally read without promoting candidate classes. D/A/H/E/V and
+current author priority keep the Creative Brain central without inventing canon.
 
-Technical M4 retained. Physical listening/accessibility, unassisted recovery and
-learning, other operating systems and commercial validation remain unverified.
-Preservation is verified at save time, without monitoring later external deletion,
-coordinating simultaneous processes or guaranteeing power-loss durability. The
-single primary slot still replaces a deliberately abandoned older run on play.
-The initialized old and new shipped players both ignore the synthetic X11 WM
-close request in this setup; normal desktop close is unverified. The persistence
-journey stops only owned previews before reopening; engine CloseRequested guards
-and normal verifier shutdown pass separately.
-North Star remains foundation_only: 14 capabilities, zero destination consumers.
-This improves an independent origin product, not MMORPG integration.
+[knowledge/](../knowledge/README.md) preserves both earlier lesson filenames and full
+bodies, adding question/context/outcome/validity/consumer guidance. The new
+[combat-response finding](../knowledge/combat-response.md) derives a bounded observation
+about avoidance versus reachable rewards, not a brain summary or validated class design.
 
-The complete authoritative [prompt](prompts/CONTINUOUS_DEVELOPMENT.md) is unchanged.
-Existing real-artifact, failure/baseline and bounded-process guidance served the
-design. Repeated OCR readiness polling wasted time; actual frames plus file/state
-checks resolved it. Baseline/current NuGet audit failures under restricted network
-were environmental; normal supported permission restored builds without weakening
-audit or assertions. Missing writable CLI/XDG paths also required an owned-work
-environment. No observed issue warrants another general rule or fixed next target.
-Next compare unassisted recovery/play, physical practice, actual handovers and
-literary comprehension afresh; no independent experience result has been invented.
+## One real pilot, other destinations still candidates
+
+Compared actual P06 combat, P01 deterministic economy/policy instruments, P10 replayable
+narrative consequences and P11 persistence. Select P06's bounded response question for
+its direct relevance to character agency and available native tools, preserving its
+working scene rather than copying a second combat approximation or selecting a final
+MMORPG engine.
+
+[The instrument](../labs/combat-response/README.md) uses real unchanged Veilbreak 0.6.0
+`step_fight` and native physics at 60 Hz, with 28 fixed cases repeated twice. Calibration
+observes sweep contact tick52. Close parry at lead5/8 prevents damage and enables the
+fixed early blade counter (24); outward dodge also avoids damage but ends outside blade
+range; single seal does not interrupt the sweep. Parry at110px succeeds while the blade
+misses; at111px guard fails. Empty resolve rejects defenses; imposed echo still hurts
+after parry. All outcomes, including failures, are retained. See
+[results](../evidence/combat-response/results.json) and
+[execution](../evidence/combat-response/RUN.json) for environment, hashes and exact commands.
+
+The common early counter is deliberately fixed, not each response's best policy.
+Reporting was refined after an exploratory run; no external preregistration is claimed.
+These are mechanical response envelopes, not learning, fun, perceived class identity,
+readability, listening, physical input, general balance or independent human validation.
+Default unwritable engine user paths and missing imports were reproduced against the
+unchanged origin, then resolved with owned XDG paths/import, without product edits.
+
+[The eleven-origin inventory](../labs/origins.json) records capabilities, existing
+consumers/dependencies, loss risks and extraction needs. P06 is pilot-instrumented;
+P01–P05/P07/P08/P10/P11 are preserved pending extraction; P09 is seed-only. Five other
+question-led destinations are candidates. Existing transfers/assets remain integrated
+only in their named origin consumers. Historical M4 is not lab/MMORPG readiness.
+
+## Validation, limitations and continuation
+
+[Execution evidence](../evidence/three-brains/RUN.json) records consultation demos,
+source identity, affected checks and scope. Query17, registry27, reference30,
+manifest11 and instrument12 regression tests pass; actual native pilot reproduction
+and the unchanged origin's parry checks are separate from these structural suites.
+Repository/source integrity and exact manifest checks are required after final edits.
+CI preserves all old origin gates and adds brain checks and native pilot reproduction.
+
+North Star remains **foundation_only**, fourteen capabilities, zero destination
+consumers and no selected final engine. Its name/product direction and creative
+authority changed; no class/gameplay destination was invented. No external participant,
+market result or underlying model improvement is claimed.
+
+The [complete operational prompt](prompts/CONTINUOUS_DEVELOPMENT.md) was replaced to
+implement the author's changed production mandate, selective brain activation and
+future successor loop. Existing bounded-process/environment-baseline guidance remains.
+Indexes/pins and real native traces served the design; source fragment warnings and
+fixed-policy limits remain visible. Most migration work is operational, not experience
+validation. Next compare actual character-agency increments, credible laboratory
+questions and portfolio value afresh; do not fix the next target to combat or expand
+candidate labs without a working question/instrument/consumer.

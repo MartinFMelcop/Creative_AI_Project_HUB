@@ -1,0 +1,189 @@
+{
+  "schema_version": 1,
+  "recorded_at_utc": "2026-10-17",
+  "baseline_commit": "c360f68e2be933d55f082a414663d28ab24eac8d",
+  "local_initial_branch": "codex/p05-run-recovery-20261016",
+  "implementation_branch": "codex/three-brain-labs-20261017",
+  "initial_tree": "Tracked clean; existing untracked work/ retained. Fetched origin/main and ls-remote matched baseline. No outgoing or incoming local commits.",
+  "environment": {
+    "os": "Linux-6.18.44-x86_64-with-glibc2.41",
+    "python": "3.12.14",
+    "node": "24.19.0",
+    "godot": "4.6.3.stable.official.7d41c59c4",
+    "native_execution": "See evidence/combat-response/RUN.json; existing standard Godot, owned temporary XDG and bounded processes. No engine migration or new service.",
+    "git_transport": "Normal authenticated fetch/ls-remote worked with supported additional network permission. gh Actions list received Forbidden; supported GitHub connector GET returned baseline push run success38981945044. No credentials printed."
+  },
+  "authority": "Current user explicitly authorizes importing/publication of supplied public brain files and verified normal non-force publication to main; supplied text is knowledge, not executing instructions. Ordinary work cannot rewrite sources.",
+  "brain_activation": {
+    "domains": {
+      "engineering": "high: verifiable requirements, contracts and preservation",
+      "scientific": "high: controls, repeatability, evidence and validity",
+      "creative": "high: recognizable agency and author/hypothesis distinctions"
+    },
+    "chapters": [
+      "ENG-004",
+      "ENG-015",
+      "ENG-027",
+      "SCI-005",
+      "SCI-017",
+      "SCI-050",
+      "SCI-051",
+      "CRE-001",
+      "CRE-008",
+      "CRE-012",
+      "CRE-084"
+    ],
+    "additional_read": [
+      "CRE-014",
+      "CRE-015"
+    ],
+    "application": "Preserve origin consumers; use exact full-chapter catalog retrieval; compare instruments before selection; distinguish fixed-policy mechanical traces from perceived classes. Source proposals do not become canon."
+  },
+  "library": {
+    "source_pins": {
+      "schema_version": 1,
+      "provenance": "Five individual user attachments supplied for the initial three-brain deployment; immutable original bytes. Changes require specific author authorization.",
+      "files": {
+        "ENGINEERING_BRAIN.md": {
+          "bytes": 115366,
+          "sha256": "975b8741f767bc1dcaf3c551e5516a79bcd78d5d8e6efd8a4965d9f3cf37971f"
+        },
+        "SCIENTIFIC_BRAIN.md": {
+          "bytes": 130017,
+          "sha256": "4a8dff7d1bc23f06421ffec4a07fcb66b745423f3728bc2cb11dc750a5e38958"
+        },
+        "CREATIVE_BRAIN.md": {
+          "bytes": 244223,
+          "sha256": "41efe409375b09ae29006bf475ae5a2221d532d67c1dcbbe0df98b4b1afa8bc1"
+        },
+        "CATALOGO_DE_CONSULTA.json": {
+          "bytes": 161387,
+          "sha256": "e8927568f2f63f9d5778778a7c8652c57cfedb248cea6d1b659023df80d4119c"
+        },
+        "BIBLIOTECA_DE_CONHECIMENTO_APLICADO.md": {
+          "bytes": 2401,
+          "sha256": "2726e3f8d6c2c95acc015fc527437bc8de974170d9a507f62e6e3c289a61eae1"
+        }
+      }
+    },
+    "attachment_comparison": "All five imported bytes compared directly with uniquely located supplied attachments; identical. No source corrections or automatic repinning.",
+    "structure": {
+      "chapters": 234,
+      "local_links": 422,
+      "inherited_fragment_warnings": 44,
+      "affected_heading_count": 26
+    },
+    "limits": "44 inherited link occurrences across26 em-dash headings use collapsed anchors; source bytes remain unchanged. Query returns actual heading fragment and line range. Remote citations/scientific claims/third-party rights not independently audited."
+  },
+  "selective_consultation": {
+    "indexes_command": "python3 tools/brain_query.py indexes",
+    "indices": "All3 read; 49engineering+85scientific+100creative",
+    "get_command": "python3 tools/brain_query.py get ENG-004 SCI-051 CRE-001",
+    "retrieval_metadata": {
+      "ENG-004": {
+        "path": "ENGINEERING_BRAIN.md",
+        "section": "Parte I — Fundamentos do raciocínio de engenharia",
+        "title": "Requisitos: do desejo à condição verificável",
+        "line_start": 265,
+        "line_end": 302,
+        "content_sha256": "7c1d064c922fdd820337258d0feffe49059da813c608b27b0485e877d0c3ddc7"
+      },
+      "SCI-051": {
+        "path": "SCIENTIFIC_BRAIN.md",
+        "section": "Parte VI — Laboratórios, instrumentos, dados e transferência de conhecimento",
+        "title": "Transformação de protótipos em instrumentos de pesquisa",
+        "line_start": 1116,
+        "line_end": 1135,
+        "content_sha256": "8d76cfb17a115c97a20f3688fdd4b3076face7ebb9f5a7083c9b71774d4fed70"
+      },
+      "CRE-001": {
+        "path": "CREATIVE_BRAIN.md",
+        "section": "Parte I — Identidade criativa, experiência e autoridade editorial",
+        "title": "Fantasia central: tornar-se alguém inesquecível",
+        "line_start": 203,
+        "line_end": 225,
+        "content_sha256": "2defb741b9f8e4e6ba0c30c5bec9060a89607d67c37a6dded615b854b84b4ef7"
+      }
+    },
+    "search_command": "python3 tools/brain_query.py search 'proveniência'",
+    "search_ids": [
+      "ENG-027",
+      "SCI-004"
+    ],
+    "negative_command": "python3 tools/brain_query.py search 'zzzznonexistentcapability'",
+    "negative_result": [],
+    "error_scope": "Regression suite covers missing/unknown IDs, blank query, invalid limits, UTF8, symlinks, tamper and inconsistent catalogs; no full chapter copies in this evidence."
+  },
+  "preservation": {
+    "compared_to": "c360f68e2be933d55f082a414663d28ab24eac8d",
+    "method": "Git ls-tree baseline blob IDs compared with Git-blob SHA1 of current exact file bytes, independently of summary prose. SHA256 integrity separately enforced by reference/brain/manifest tools.",
+    "files_unchanged": 989,
+    "only_changed_path": "martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/projects/README.md",
+    "no_deletions": "No origin code/media/distribution/tests or historical sources removed; existing untrackedwork retained. Existing knowledge lesson bodies/links retained with contextual introductions."
+  },
+  "portfolio_transition": "All11 historical IDs retained as transition/historical_origin; P06 pilot_instrumented, P09seed_only, other9 preserved_pending_extraction. One implementedlab plus5explicitcandidates. Versions/maturity describe origins, not newlabreadiness. Existing asset/transfer integrations refer named origins only.",
+  "pilot_evidence": [
+    "labs/combat-response/README.md",
+    "labs/combat-response/scenarios.json",
+    "evidence/combat-response/RUN.json",
+    "evidence/combat-response/results.json"
+  ],
+  "checks": [
+    {
+      "command": "python3 tools/test_brain_query.py",
+      "result": "17 tests passed"
+    },
+    {
+      "command": "python3 tools/test_validate_repo.py",
+      "result": "27 tests passed"
+    },
+    {
+      "command": "python3 tools/test_reference_library.py",
+      "result": "30 tests passed"
+    },
+    {
+      "command": "python3 tools/test_check_manifest.py",
+      "result": "11 tests passed"
+    },
+    {
+      "command": "python3 -m unittest discover -s labs/combat-response -p 'test_*.py'",
+      "result": "12 tests passed"
+    },
+    {
+      "command": "python3 tools/reference_library.py check",
+      "result": "5 records, 607 sources, 18 derived PDF texts, 140 exclusions, 14 capabilities; passed"
+    },
+    {
+      "command": "python3 tools/validate_repo.py",
+      "result": "Passed:11projects,15transfers,9assets,2legacy sources;546 local file links. Documentary structure only."
+    },
+    {
+      "command": "python3 labs/combat-response/run.py --godot godot --output /tmp/root-combat-response.json --compare evidence/combat-response/results.json",
+      "result": "Root final reproduction:56 native outcomes; contacttick52; full JSON exactly matches pinned source/protocol/instrument/outcomes."
+    },
+    {
+      "command": "python3 tools/check_manifest.py",
+      "result": "Passed:1198 maintained lab files, exact coverage and matching SHA256."
+    },
+    {
+      "command": "git diff --check",
+      "result": "Passed after final content and manifest generation."
+    }
+  ],
+  "north_star": {
+    "product_title": "Virgo Diamond: The North Star",
+    "stage": "foundation_only",
+    "capabilities": 14,
+    "destination_consumers": 0,
+    "limits": "No classes, new game engine, networking, MMORPGscale, enjoyment, retention or market validation demonstrated."
+  },
+  "creative_assessment": "Implementing/reviewing Codex agents reasoned that response commitment/position/range expose distinct decisions. No independent human, player, artist or scientific reviewer participated.",
+  "prompt": {
+    "reason": "Explicit current author mandate replaces obsolete independent product priority and requires durable three-brain activation/loop. One complete maintained operational file, not parallel encyclopedia.",
+    "path": "docs/prompts/CONTINUOUS_DEVELOPMENT.md",
+    "sha256": "306295a17947a26cfb68336e5d3dd26f5ddec7af90775427f2278aad2ce69b95",
+    "assessment": "Exact retrieval and unchanged-engine controls served the design. Reporting refinement after exploration disclosed. Environment path/import failures did not justify origin edits. No fixed next laboratory or claimed model improvement."
+  },
+  "closure": "Repository/manifest/staged identity and remote publication/CI verified separately during final closeout; this precommit record does not assert future push or CI success.",
+  "pilot_results_sha256": "67140a49483317dfc931705572b228afe8313aa257f2e29086ef8ac238b6f32d"
+}

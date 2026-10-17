@@ -1,0 +1,124 @@
+{
+  "schema_version": 1,
+  "instrument": "combat-response",
+  "recorded_at_utc": "2026-10-17T00:27:59.069969+00:00",
+  "baseline": {
+    "commit": "c360f68e2be933d55f082a414663d28ab24eac8d",
+    "branch": "codex/three-brain-labs-20261017",
+    "origin": "P06 / projects/veil-arena / 0.6.0",
+    "condition": "Unchanged origin source/media/distributions; no North Star consumer. Existing source supplies play, practice and targeted regressions, without this controlled cross-response matrix.",
+    "origin_source_diff": "git diff --exit-code -- projects/veil-arena: exit 0"
+  },
+  "brain_activation": {
+    "engineering": "High: ENG-004 requirements vs solutions, ENG-015 preserve actual contracts rather than premature extraction.",
+    "scientific": "High: SCI-005 falsifiable bounded prediction, SCI-017 controls, SCI-050 laboratory scope, SCI-051 prototype-to-instrument preservation.",
+    "creative": "High: CRE-001 direct character-identity objective; CRE-008 distinguishes authorial decision from hypothesis; CRE-012/084 candidate response/identity concerns.",
+    "retrieval": "All three catalog indices and complete listed chapters read from exact supplied volumes before code. No source brain edits or model-training claim."
+  },
+  "selection": [
+    {
+      "opportunity": "P06 native response instrument",
+      "decision": "Selected: a direct, measurable precursor to recognizable character agency, actual scene/physics available, contrasting timing/range/commitment paths."
+    },
+    {
+      "opportunity": "P01 economy laboratory",
+      "decision": "Credible controls/seeded comparisons already exist in C# Core/CLI; useful for later economy questions but less direct new evidence on present character experience."
+    },
+    {
+      "opportunity": "P10 narrative agency instrument",
+      "decision": "Deterministic Python/JS consequence graphs and replay exist; useful for choice/continuity research, but adapting fictional authority or interpreting reader agency requires a different bounded question."
+    },
+    {
+      "opportunity": "P11 persistence/distributed-system instrument",
+      "decision": "SQLite/Socket.IO, recovery and history contracts are proven in the origin; less immediate than action identity for this first North Star-oriented pilot. No MMO scalability inference."
+    }
+  ],
+  "design": {
+    "question": "Do actual P06 parry, directional dodge and one seal produce distinct defensive/offensive opportunities under an identical phase-one sweep trace?",
+    "hypothesis": "Close/live parry prevents sweep damage and opens an early blade counter; dodge trades position and commitment for avoidance; a single seal applies pressure without interrupting this sweep.",
+    "rival_or_failure": "Responses might yield equivalent safe timings/positions/early counter outcomes, or controls may fail to detect damage/rejected inputs. Distinction in this matrix does not establish perceived class identity.",
+    "preregistration": "Not pre-registered. Hypothesis and fixed inputs were chosen during design; first exploratory run informed added contact/resource/stage reporting. Input cases were unchanged.",
+    "unit": "One controlled native take. Two repetitions are consistency checks, not people or independent statistical samples.",
+    "inputs": "28 explicit cases, 60 Hz, 100 ticks, same early blade request at tick 53. No random seed because source sweep and inputs are deterministic.",
+    "controls": "Neutral near/far; early/late; 110/111/150px; zero resolve at request; imposed echo using actual native path. Origin parry regression separately retained.",
+    "instrumentation": "External GDScript loads unchanged arena.tscn, calls actual step_fight once per native physics frame; original PhysicsServer, contact, resources, projectile and damage rules execute. No copied Python combat model."
+  },
+  "environment": {
+    "os": "Managed Linux x86_64",
+    "python": "3.12.14",
+    "godot": "4.6.3.stable.official.7d41c59c4 standard",
+    "engine_sha256": "f64d4ed19fc9df9440321653fcc80df8c6e365ba7b6de0a29e2cfa9fa71bfeb3",
+    "display": "Headless. No visual-readability assessment.",
+    "audio": "Origin audio nodes/resources load; no physical listening or timing study claimed.",
+    "processes": "Runner imports/probes with owned temporary XDG paths and 120-second subprocess deadlines; normal completion waits/reaps processes. Interrupted unimported probe was stopped.",
+    "dependencies": "Python standard library and existing Godot; no new runtime package/service/engine migration."
+  },
+  "checks": [
+    {
+      "command": "python3 -m unittest discover -s labs/combat-response -p 'test_*.py'",
+      "result": "12 passed: bounds/types/unknown fields/duplicate ids/Unicode; complete stable outcome contract; nondeterminism/calibration failures; missing/wrong engine; actual owned Python subprocess timeout."
+    },
+    {
+      "command": "python3 labs/combat-response/run.py --godot godot --output evidence/combat-response/results.json",
+      "result": "56 outcomes, all 28 inputs twice; exact within-run observations; neutral contact tick 52. Source/protocol/runner/probe hashes recorded."
+    },
+    {
+      "command": "python3 labs/combat-response/run.py --godot godot --output /tmp/combat-response-verified.json --compare evidence/combat-response/results.json",
+      "result": "56 outcomes in a separate engine process; complete JSON observations and protocol/source/instrument hashes exactly match the committed artifact. Exit0."
+    },
+    {
+      "command": "env XDG_DATA_HOME=/tmp/pilot-compare-data XDG_CONFIG_HOME=/tmp/pilot-compare-config XDG_CACHE_HOME=/tmp/pilot-compare-cache timeout 55s godot --headless --path projects/veil-arena --script tests/parry.gd --fixed-fps 60",
+      "result": "36 checks, zero failures. Real scripted two-phase victory: 23.7166666666666 simulated seconds, six health, two parries, seven actual blade hits. Synthetic events/policy, not human gameplay."
+    }
+  ],
+  "observations": {
+    "contact_tick": 52,
+    "ordinary_open_tick": 62,
+    "parry_open_tick": 52,
+    "earlier_opportunity_ticks": 10,
+    "guard": "At 85px, leads 5/8 ticks: six health, one parry, 24 early blade damage; leads 2/12/18: five health, no parry, 4 guarded damage.",
+    "movement": "All five outward dodges avoid damage but finish 219.333313px from boss and early three blade requests are rejected during movement. Inward leads 2/5/8 avoid damage; leads 12/18 lose one health after protection expires.",
+    "pressure": "All single-seal cases lose one health; latest request is interrupted before release. Other releases cause eight damage and 36 ward pressure without cancelling sweep; common blade adds four guarded damage.",
+    "range": "110px parry succeeds but blade at >103px misses. Same guard at111/150px loses one health.",
+    "failure_controls": "Zero-resolve guard/dodge rejected. Overlap parries the sweep but real echo still damages. Neutral near hit; neutral outside165px safe.",
+    "all_outcomes": "results.json retains every repetition and event; no selective exclusion of failed cases."
+  },
+  "assessment": {
+    "technical": "Executed same-engine origin mechanisms show distinct bounded response envelopes and early opportunity, with repeatability and negative controls.",
+    "creative": "Codex reasoning: timing alone does not capture identity; position, range and commitment meaningfully change the same early counter choice. Guard-at110px demonstrates why safe defense and reachable offense differ. This is a candidate design insight, not a player finding.",
+    "destination": "Laboratory actually consumes P06. No North Star destination code or class consumer exists; no catalog promotion to adapted/integrated for North Star.",
+    "external_validation": "None. No independent player/artist/scientist review, physical control/listening, demand, retention or commercial evidence."
+  },
+  "failures_and_corrections": [
+    {
+      "condition": "Unchanged P06 run without owned XDG",
+      "result": "Exit134: unwritable /home/agent Godot user-data path and engine crash. Reproduced on baseline before changing any product code; runner supplies owned temporary XDG."
+    },
+    {
+      "condition": "Unchanged P06 fresh checkout before import",
+      "result": "Missing .godot imported textures caused parse/load errors; owned process interrupted/stopped. Normal Godot import builds caches; runner requires it before probe. No source workaround."
+    },
+    {
+      "condition": "Sandbox editor import",
+      "result": "Import exited0 but reported unavailable TCP editor-listener sockets. Resources imported and real probe/regression executed. This is separate from product behavior; no socket permission or test weakened."
+    },
+    {
+      "condition": "Initial new probe",
+      "result": "GDScript inference could not infer dynamic arena.stats duplicate type. Fixed probe with explicit Dictionary type; final script executes. This was an instrument defect, not an origin defect."
+    }
+  ],
+  "limits": [
+    "One stationary phase-one sweep at60Hz; no complete combat-policy balance or optimized later counters.",
+    "Controlled schedules and same-machine repetitions are not human reaction, learning, class identity or accessibility evidence.",
+    "Headless import/execution does not assess animation readability, composition, physical audio or controller hardware.",
+    "No multiplayer, network/scale, final-engine choice, canon promotion, copied fictional universe or North Star integration."
+  ],
+  "artifact_sha256": {
+    "labs/combat-response/scenarios.json": "a8b228f6832ee0c28c18837755aff8a4a3805099be70607f8aaa28bb8dbf759c",
+    "labs/combat-response/probe.gd": "3cec362d61c5046dbe286149fe12c78bfaf8d30c71b4d127bb44d08f82a9e3e8",
+    "labs/combat-response/run.py": "3759031cc9d92f7385a8f0b78780693efae30b005a4406222aa196401f01fb29",
+    "labs/combat-response/test_instrument.py": "ec9e5b848a1d1ba4a735bdbf965cd8702635754afa5bf0bc8fb93ded43acbf54",
+    "evidence/combat-response/results.json": "67140a49483317dfc931705572b228afe8313aa257f2e29086ef8ac238b6f32d",
+    "projects/veil-arena/tests/parry.gd": "d15c6dbedec124be2e50871eadafc438faf39cf8202b3903c2ab34fadfccf773"
+  }
+}

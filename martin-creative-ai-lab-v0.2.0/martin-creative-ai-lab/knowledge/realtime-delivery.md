@@ -1,5 +1,27 @@
 # Trace the complete delivery path
 
+## Context and use
+
+**Question:** Which boundary loses a message or disturbs the reader even when
+the server has accepted it? **Origin:** P11's recorded early chat adaptations;
+the linked records identify exact source hashes, versions and environments.
+Later P11 releases retain this provenance, rather than extending these findings
+automatically to their current code or to another destination.
+
+| Observation / outcome | Interpretation and practical consequence | Validity boundary |
+|---|---|---|
+| Negative: the preserved source logged receipt while neither browser rendered the message. Positive: the recorded adaptation passes the same browser check. | Assert the sender-to-peer-to-render path, including sender duplication, rather than accepting a server log as delivery. | The recorded source/dependency setup and automated Chromium checks; not guaranteed delivery. |
+| Negative: connected volatile emission dropped a polling write; a controlled stale-connection predicate allowed reconnect replay. Positive: the recorded correction passes both probes. | Distinguish live transport queues from reconnect buffers; recheck queue lifetime when dependencies change. | Socket.IO 4.8.4 and the declared real-polling/controlled-heartbeat boundaries; not all network failures. |
+| Negative: unconditional scrolling and uncorrected fractional geometry disturbed the recorded reading anchor. Positive: bounded anchoring, unread navigation and activity checks pass. | Keep reading position, focus and page activity as separate conditions. | Recorded browser geometry and controlled visibility; no independent human or assistive-technology evaluation. |
+| Unresolved: acknowledgement timeout can follow successful rendering. | Preserve the draft and report uncertain delivery; adding retries requires an identity/idempotency contract. | No exactly-once, durable or authoritative multiplayer claim. |
+
+**Consumers:** P11 implements the recorded corrections. P02 EVAL-001 adapts only
+the two send-buffering regressions through validated TR-009. P01 event ownership
+(TR-010), broader laboratory reuse and Virgo Diamond remain candidate uses.
+The following sections preserve the original explanations and evidence links.
+
+## Receipt is only one boundary
+
 Context: P11's original form emitted a message and its server logged it, but
 neither browser displayed it. The same browser delivery check failed against
 the preserved source and passed against the working adaptation. See

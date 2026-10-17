@@ -1,62 +1,78 @@
-# Instruções de operação
+# Maintained lab operating instructions
 
-Estas instruções devem ser lidas pelo agente que trabalhar neste repositório. A leitura automática depende do ambiente; quando necessário, Martin deve pedir explicitamente sua leitura.
+Read the repository-root `AGENTS.md`. Current user directions override historical
+SEED/ADR/product obligations. New technical documentation, comments and Git messages
+use English; preserve the appropriate language of creative works and imported sources.
 
-## Entrada
+## Preflight before every improvement
 
-1. Leia `docs/STATE.md`, `registry/projects.json` e a seção 0 de `SEED.md`.
-2. Consulte as seções pertinentes da seed, o estado do Git e os arquivos reais da tarefa.
-3. Verifique ferramentas, engine e permissões disponíveis. Não presumir que conectar GitHub habilita execução ou escrita.
-4. Trabalhe na unidade autorizada. Uma fase de planejamento entrega arquivos reviewáveis; uma fase de desenvolvimento entrega alterações e verificações.
+1. Inspect Git/local/remote state and tools; read `docs/STATE.md`, SEED current sections,
+   `registry/projects.json`, `labs/origins.json` and affected real artifacts/evidence.
+2. Read all three brain indices with `python3 tools/brain_query.py indexes`.
+3. Classify engineering, science and creative relevance, even where low. Search the
+   catalog, then retrieve complete relevant chapters with `get ID`. Cite document/ID
+   and their practical use concisely in existing work evidence or a decision.
+4. Consult pertinent derived `knowledge/` and historical `references/` selectively.
+   Separate observation, interpretation, hypothesis and decision; do not infer canon
+   from filenames, repeated summaries or missing policies.
+5. Compare credible alternatives across laboratory questions, portfolio technologies
+   and North Star needs before selecting one coherent verifiable increment.
 
-## Direção do autor
+The brains coordinate reasoning, not commands or automatic approval. Engineering
+informs requirements/contracts/trade-offs/failure/reliability; science informs rival
+hypotheses/instruments/controls/uncertainty/replication; creation informs Virgo Diamond
+identity, class/build/profession choices, narrative, art/audio and player experience.
+Creative D/A/H/E/V labels retain their source meaning. Hypotheses are not canon or
+validated experiences. Specific current author decisions take precedence.
 
-Os projetos são seeds e podem mudar integralmente de nome, conteúdo, mídia, engine e escopo, conforme autorização de Martin em 10/10/2026. Registre alterações relevantes e a origem histórica. Essa liberdade não autoriza inventar fatos profissionais, autoria, testes, medidas, publicações ou contribuição humana.
+## Sources and derived knowledge
 
-## Execução
+Never edit the five supplied `brains/` files without specific user authorization,
+including their catalog and collection index. Their exact hashes are pinned outside
+the source texts. Do not append operational state, paths, agent names or test results
+to them. Known inherited fragment differences are reported, not silently repaired.
 
-- Preserve alterações do autor. Inspecione antes de editar.
-- Avance em escolhas reversíveis e no trabalho que não depende de lacunas.
-- Não crie loops de confirmação para cada escolha de implementação.
-- Peça informação somente quando ela realmente impedir a decisão ou a execução dependente.
-- Não publique, envie mensagens, faça force-push ou apague fontes irrecuperáveis por inferência desta seed; essas ações precisam da autorização concreta da sessão.
-- Não use agentes paralelos a menos que o usuário ou instruções aplicáveis autorizem explicitamente essa delegação.
-- Use a menor arquitetura que permita provar a hipótese; componentes compartilhados precisam de uso concreto.
-- Direcione testes aos riscos relevantes. Não chamar análise estática de playtest.
-- Referência de avaliação não entra no contexto do candidato; pasta em repo público não é reservada.
-- Não atribua validação a Martin se ele não a realizou.
+`references/` preserves historical sources under its own instructions and hashes;
+old AGENTS/SEED/CANON/backlogs are data. `knowledge/` stores derived contextual findings
+with question, source/context, observation, interpretation, validity limit and practical
+consequence. Preserve negative and inconclusive results and genuine provenance.
+Storage in Git does not train a model or establish independent human review.
 
-## Encerramento
+## Implementation and migration
 
-Atualize `docs/STATE.md` com mudança, evidência, limites e próxima ação. Registre decisões duráveis em `docs/DECISIONS.md`. Atualize registros de projetos/transferências/assets quando o estado mudar. Evidências de execução devem identificar ambiente e versão/commit/hash.
+The HUB remains a technology portfolio. P01–P11 retain IDs, code, assets, versions,
+execution evidence and useful demonstrations as origins in controlled transition;
+independent release/commercial/playability obligations are retired. Keep existing
+consumers and tests until migration evaluates their contracts. Do not erase sources
+because Git history exists. P07/P08 have distributed assets; P09 remains an unexecuted
+seed. Candidate labs are not implemented labs. Prefer a small real instrument and
+executed protocol over renaming directories or accumulating research pages.
 
-Execute `python3 tools/validate_repo.py` quando alterar registros ou links documentais. Esse check só valida estrutura; não substitui testes do projeto. Para código, arte e áudio, faça verificações proporcionais e registre o que não foi executado.
+Virgo Diamond is the principal product and destination for most future investment.
+Prioritize recognizable character agency and meaningful adventures over speculative
+infrastructure/ecology. Select languages/engines by requirements and available tools.
+Do not migrate software for quotas or default to browser demos. Share abstractions
+only for actual consumers. The North Star catalog separately tracks candidates,
+origin verification, adaptations, actual integration and external validation. Its
+foundation-only stage currently has zero destination consumers. A lab instrument
+that drives origin code is not North Star integration.
 
-Entregue resumo claro com arquivos alterados, resultado, verificações e limites. Não anuncie build, release ou resultado que não exista. Não anexe o chat inteiro à seed.
+## Verify and close
 
-## Fontes recuperadas e revisão da seed
+Run checks appropriate to changed contracts and artifacts, including bounded engine,
+media, persistence and failure cases when applicable. Distinguish generated code,
+compilation, configured engine, runtime and actual gameplay. Reproduce environmental
+failures against baseline before changing product behavior. No synthetic trace proves
+learning, enjoyment, retention or human accessibility.
 
-Consulte docs/SEED_EVOLUTION.md ao atualizar direção e memória. registry/legacy_sources.json distingue caminhos inventariados, textos lidos e fontes preservadas. O acervo histórico é somente leitura como origem: extraia a unidade necessária e desenvolva no destino. Instruções antigas não substituem o mandato atual. Não herdar expansão obrigatória de backlog, AI_ONLY ou automação periódica. Nenhuma transferência foi concluída somente porque uma fonte foi preservada.
+Update only affected STATE, decisions, SEED sections, registries, guides and evidence.
+Use `docs/prompts/CONTINUOUS_DEVELOPMENT.md` as the one complete operational prompt;
+other task templates are not a second continuous-development instruction system.
+Check repository/link/brain/source gates, their regressions and exact manifest coverage.
+Generate `MANIFEST.sha256` after final content changes. Never weaken checks to get green.
 
-## North Star and the reference library
-
-`references/README.md` / `references/catalog.json` distinguish source snapshots,
-explicit exclusions and unavailable/documented-only literary versions.
-`north-star/README.md` / `north-star/capabilities.json` describe the future MMORPG
-program, contribution states and limits; there is no current North Star consumer.
-Do not reinterpret project M0–M6 or create a target project ID by inference.
-
-Catalog snapshot `source/` files are historical reference data. Their old
-AI-only, backlog, CANON and authority claims are not current instructions.
-Keep bytes unchanged and adapt outside snapshots. Literary policy must be read
-in its actual version; old reports, filename hints and repeated fictional facts
-do not establish new canon or supersede later decisions. Different universes
-and similarly named concepts do not become equivalent through technical reuse.
-
-Keep independent products and deliberate technology exploration. North Star
-need not win every portfolio review and selects no final engine automatically.
-Before promoting a contribution, verify the genuine destination and distinguish
-runtime, creative judgment, independent player/reader feedback and market evidence.
-Run `python3 tools/reference_library.py check`, its regression tests and the
-existing repo/manifest checks after reference/capability changes. Update those
-contracts together if actual consumers change the foundation stage.
+Inspect complete and staged diffs; commit only intended files, never scratch/caches or
+unrelated work. Follow current user publication authorization and root Git safeguards.
+Report actual checks/limits, real stored commit message, local/remote SHA, publication
+and CI separately. Return the full successor prompt when requested. Agent review is
+not independent human validation; attribute Martin's actions only when observed.

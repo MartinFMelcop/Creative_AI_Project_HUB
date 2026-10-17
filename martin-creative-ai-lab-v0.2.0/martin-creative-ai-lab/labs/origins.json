@@ -1,0 +1,498 @@
+{
+  "schema_version": 1,
+  "updated_at": "2026-10-17",
+  "baseline_commit": "c360f68e2be933d55f082a414663d28ab24eac8d",
+  "scope": "Controlled transition inventory, based on source and execution-record inspection. Existing origin results are not rerun by this inventory. Historical maturity and versions remain in registry/projects.json; they are not laboratory readiness scores.",
+  "north_star_consumer_demonstrated": false,
+  "existing_transfer_scope": "Validated transfers and integrated assets in the existing registries describe their named origin consumers, not Virgo Diamond integration.",
+  "origins": [
+    {
+      "id": "P01",
+      "transition_status": "preserved_pending_extraction",
+      "source_paths": [
+        "projects/eclipse-fair/Core",
+        "projects/eclipse-fair/Cli/Journal.cs",
+        "projects/eclipse-fair/Native",
+        "projects/eclipse-fair/rules",
+        "projects/eclipse-fair/tools",
+        "projects/eclipse-fair/provenance.json"
+      ],
+      "reusable_capabilities": [
+        "Deterministic resource transactions and configurable economy",
+        "Common-seed policy comparison and bounded reply forecasting",
+        "Replay validation, local participant ownership and three saved fair slots",
+        "Pinned native Linux production adapted from P05"
+      ],
+      "execution_evidence": [
+        "evidence/eclipse-fair/PLANNING_RUN.json",
+        "evidence/eclipse-fair/RELEASE_RUN.json",
+        "evidence/eclipse-fair/SLOT_RUN.json"
+      ],
+      "existing_consumers": [
+        "P01"
+      ],
+      "candidate_destinations": [
+        "Economy and simulation research",
+        "Local persistence and distribution research"
+      ],
+      "dependencies": [
+        "C#/.NET 10; SDK 10.0.401 for builds",
+        "Godot .NET 4.6.3 for native board; pinned runtime and notices",
+        "Core, rule profiles and both journal formats remain coupled to existing consumers"
+      ],
+      "preservation_risks": [
+        "Do not replace accepted journal formats or remove rule/profile fixtures before extracting their contracts",
+        "Keep historical runtime ZIPs, notices and original provenance; this is a new seed implementation, not recovered RPG Maker code"
+      ],
+      "extraction_next": "Select a resource-ownership question, then expose the existing Core to a bounded batch experiment with common seeds; no MMO economy or concurrent spending is established."
+    },
+    {
+      "id": "P02",
+      "transition_status": "preserved_pending_extraction",
+      "source_paths": [
+        "evaluations/chat-send-buffering/run.py",
+        "evaluations/chat-send-buffering/test_runner.py",
+        "evaluations/chat-send-buffering/BRIEF.md"
+      ],
+      "reusable_capabilities": [
+        "Allowlisted candidate workspace export and evaluator-owned checks",
+        "Pinned evaluator snapshots, bounded timeout evidence and inconclusive environment classification",
+        "Known-defect/control calibration for one client-repair task"
+      ],
+      "execution_evidence": [
+        "evidence/evaluation-task/CALIBRATION.json",
+        "evidence/evaluation-task/TIMEOUT_RUN.json",
+        "evidence/evaluation-task/DEPENDENCY_RUN.json"
+      ],
+      "existing_consumers": [
+        "P02"
+      ],
+      "candidate_destinations": [
+        "AI evaluation and experimental methodology"
+      ],
+      "dependencies": [
+        "Python standard library and actual pinned Git history",
+        "Node/Socket.IO, Playwright and Chromium from the P11 task environment",
+        "Original 17-check task contract and exported candidate/evaluator context boundary"
+      ],
+      "preservation_risks": [
+        "A source-only copy without pinned historical commits breaks task reconstruction",
+        "Public evaluator files are not confidential; calibration is not an independent candidate or model score"
+      ],
+      "extraction_next": "Retain the runner and its negative controls; use a separately produced candidate only when the research question and candidate context are recorded."
+    },
+    {
+      "id": "P03",
+      "transition_status": "preserved_pending_extraction",
+      "source_paths": [
+        "projects/tokyo80s/dist/core.js",
+        "projects/tokyo80s/dist/rehearsal.js",
+        "projects/tokyo80s/dist/review.js",
+        "projects/tokyo80s/dist/app.js",
+        "projects/tokyo80s/tests",
+        "projects/tokyo80s/media"
+      ],
+      "reusable_capabilities": [
+        "Web Audio clock/chart alignment, calibration and long-note semantics",
+        "Original-pitch phrase rehearsal with mapped track offsets",
+        "Head/tail timing diagnostics and repeatable recorded take review"
+      ],
+      "execution_evidence": [
+        "evidence/tokyo80s/REHEARSAL_RUN.json",
+        "evidence/tokyo80s/PITCH_RUN.json",
+        "evidence/tokyo80s/REVIEW_RUN.json"
+      ],
+      "existing_consumers": [
+        "P03"
+      ],
+      "candidate_destinations": [
+        "Audiovisual timing and feedback research",
+        "Input/accessibility and motor-learning research"
+      ],
+      "dependencies": [
+        "JavaScript ES modules, static HTTP and Web Audio browser runtime",
+        "Original PCM/Vorbis tracks, charts and P08 tempo derivatives",
+        "Chromium and existing Playwright tooling for browser checks"
+      ],
+      "preservation_risks": [
+        "Keep chart/audio offset relationships and original masters; replacing encoded media alone can invalidate timing comparisons",
+        "Synthetic input and virtual playback do not demonstrate physical listening, accessibility or learning"
+      ],
+      "extraction_next": "Extract a timing/feedback instrument only for a concrete player-action question; retain original songs and source fixtures as controls."
+    },
+    {
+      "id": "P04",
+      "transition_status": "preserved_pending_extraction",
+      "source_paths": [
+        "projects/lich-cistern/story.md",
+        "projects/lich-cistern/story.en.md",
+        "projects/lich-cistern/SOURCE_COMPARISON.md",
+        "projects/lich-cistern/tools",
+        "projects/lich-cistern/fonts",
+        "projects/lich-cistern/provenance.json",
+        "references/literature/lich/README.md"
+      ],
+      "reusable_capabilities": [
+        "Source-informed bilingual scene revision and causal continuity comparison",
+        "Reproducible Markdown-to-EPUB/PDF production and edition identity checks",
+        "Rights-aware font embedding and inspected reflow/raster artifacts"
+      ],
+      "execution_evidence": [
+        "evidence/lich-cistern/REVISION_RUN.json",
+        "evidence/reference-integration/LICH_MAIN_PDFS.json",
+        "evidence/reference-integration/LICH_OVA_PDFS.json"
+      ],
+      "existing_consumers": [
+        "P04"
+      ],
+      "candidate_destinations": [
+        "Narrative agency, voice and comprehension research",
+        "Accessible creative-artifact production"
+      ],
+      "dependencies": [
+        "Python/ReportLab, Pandoc and preserved DejaVu font notices for edition builds",
+        "Portuguese and English source texts, edition manifest and historical releases",
+        "Read-only historical manuscripts/PDFs with explicit missing-source and authority limits"
+      ],
+      "preservation_risks": [
+        "Do not rewrite imported historical sources or erase their unavailable/editable-source limitations",
+        "Neither the Darsen adaptation nor repeated historical fictional details establish Virgo Diamond canon; preserve source rights and font attribution"
+      ],
+      "extraction_next": "Choose a bounded narrative decision/comprehension question and preserve source-to-scene comparisons; require actual readers before claiming reception evidence."
+    },
+    {
+      "id": "P05",
+      "transition_status": "preserved_pending_extraction",
+      "source_paths": [
+        "projects/cinderwatch/Core",
+        "projects/cinderwatch/Checks",
+        "projects/cinderwatch/Native/Recovery.cs",
+        "projects/cinderwatch/Native/Main.cs",
+        "projects/cinderwatch/Native/media",
+        "projects/cinderwatch/tools",
+        "projects/cinderwatch/provenance.json"
+      ],
+      "reusable_capabilities": [
+        "Pure C# tactical transition model with announced intentions and resource consequences",
+        "Non-mutating response forecast ending before the next player decision",
+        "Replay-validated autosave, recovery copies and explicit pending-progress control",
+        "Self-contained Godot .NET Linux packaging used by P01"
+      ],
+      "execution_evidence": [
+        "evidence/cinderwatch/RELEASE_RUN.json",
+        "evidence/cinderwatch/RESPONSE_RUN.json",
+        "evidence/cinderwatch/RECOVERY_RUN.json"
+      ],
+      "existing_consumers": [
+        "P05",
+        "P01"
+      ],
+      "candidate_destinations": [
+        "Combat choice and consequence research",
+        "Persistence, failure recovery and native distribution research"
+      ],
+      "dependencies": [
+        "C#/.NET 10 and Godot .NET 4.6.3",
+        "Existing Content/Game/Journal contracts and native recovery dialogs",
+        "P07 portraits/P08 cues, official runtime inventory and third-party notices"
+      ],
+      "preservation_risks": [
+        "Keep recovery/save schema and failure fixtures together; accepted memory and saved disk prefix are distinct states",
+        "Native local replay does not establish authoritative account persistence, simultaneous writers or power-loss durability"
+      ],
+      "extraction_next": "Reuse the pure transition/forecast or recovery contract for a named experiment before extracting a shared framework; retain original native consumers and historical archives."
+    },
+    {
+      "id": "P06",
+      "transition_status": "pilot_instrumented",
+      "source_paths": [
+        "projects/veil-arena/arena.gd",
+        "projects/veil-arena/controls.gd",
+        "projects/veil-arena/motion.gd",
+        "projects/veil-arena/sound.gd",
+        "projects/veil-arena/tests",
+        "projects/veil-arena/media",
+        "projects/veil-arena/provenance.json"
+      ],
+      "reusable_capabilities": [
+        "Native locked telegraphs, committed action contact, dodge and paid close-sweep parry",
+        "Repeatable phase-one practice and causal error classification",
+        "Physics-driven encounter, motion regions and adaptive audio reset checks"
+      ],
+      "execution_evidence": [
+        "evidence/veil-arena/PARRY_RUN.json",
+        "evidence/veil-arena/PRACTICE_RUN.json",
+        "evidence/veil-arena/AUDIO_CLOCK_RUN.json",
+        "evidence/combat-response/results.json",
+        "evidence/combat-response/RUN.json"
+      ],
+      "existing_consumers": [
+        "P06"
+      ],
+      "candidate_destinations": [
+        "Combat response timing and tradeoff research",
+        "Class identity and audiovisual legibility research"
+      ],
+      "dependencies": [
+        "Godot 4.6.3 standard/GDScript and native physics timing",
+        "Arena contact implementation, P07 atlases and P08 audio",
+        "Existing encounter/practice/control tests and bounded native runtime"
+      ],
+      "preservation_risks": [
+        "Timing thresholds are contact-time/geometry rules, not interchangeable class statistics",
+        "The missing historical Unity starter remains missing; current source is a new 2D implementation, not a recovered migration"
+      ],
+      "extraction_next": "Use the measured timing/range/resource/commitment envelopes to design a bounded character-choice experiment; the actual laboratory consumer runs unchanged P06, with no North Star class, engine or integration claim."
+    },
+    {
+      "id": "P07",
+      "transition_status": "preserved_pending_extraction",
+      "source_paths": [
+        "projects/veil-arena/media/art",
+        "projects/veil-arena/media/motion-catalog.json",
+        "projects/veil-arena/tools/build_motion_catalog.gd",
+        "projects/veil-arena/media/provenance.json",
+        "projects/cinderwatch/Native/media/portraits.png",
+        "projects/cinderwatch/Native/media/provenance.json"
+      ],
+      "reusable_capabilities": [
+        "Original generated painted environments/actors and reference-edited RGBA motion sheets",
+        "Native atlas regions, foot pivots and state-driven presentation",
+        "Original portrait-sheet production with raw-pixel identity and retained generation provenance"
+      ],
+      "execution_evidence": [
+        "evidence/veil-arena/PRESENTATION_RUN.json",
+        "evidence/veil-arena/MOTION_RUN.json",
+        "evidence/cinderwatch/PRESENTATION_RUN.json"
+      ],
+      "existing_consumers": [
+        "P06",
+        "P05"
+      ],
+      "candidate_destinations": [
+        "Audiovisual silhouette, motion and combat-legibility research"
+      ],
+      "dependencies": [
+        "Distributed P06/P05 assets and consumer rendering code; no separate P07 application exists",
+        "Godot import/atlas layout and catalog producer",
+        "Original image_gen outputs and generation/selection provenance"
+      ],
+      "preservation_risks": [
+        "Exact original generated pixels cannot be recreated by repeating a prompt; preserve PNG bytes, pivots and accepted/rejected-production records",
+        "Generated media and Codex visual review do not grant exclusive copyright or independent artist/player approval"
+      ],
+      "extraction_next": "Start with one measured silhouette/motion/readability question using existing native consumers; extract catalog tooling only when a second real consumer needs its contract."
+    },
+    {
+      "id": "P08",
+      "transition_status": "preserved_pending_extraction",
+      "source_paths": [
+        "projects/tokyo80s/media",
+        "projects/tokyo80s/tools/render_track.py",
+        "projects/tokyo80s/tools/render_rain.py",
+        "projects/tokyo80s/tools/render_rehearsal.py",
+        "projects/veil-arena/media/masters",
+        "projects/veil-arena/media/audio",
+        "projects/veil-arena/tools/render_audio.py",
+        "projects/cinderwatch/Native/media/audio",
+        "projects/cinderwatch/tools/render_feedback.py"
+      ],
+      "reusable_capabilities": [
+        "Deterministic original synthesis/score and PCM/Vorbis production",
+        "Semantic native cues, aligned adaptive loops and measured AudioServer playback",
+        "Original-pitch tempo derivatives and browser offset integration"
+      ],
+      "execution_evidence": [
+        "evidence/tokyo80s/SETLIST_RUN.json",
+        "evidence/tokyo80s/PITCH_RUN.json",
+        "evidence/veil-arena/PRESENTATION_RUN.json",
+        "evidence/cinderwatch/PRESENTATION_RUN.json"
+      ],
+      "existing_consumers": [
+        "P03",
+        "P06",
+        "P05"
+      ],
+      "candidate_destinations": [
+        "Audiovisual timing, cue identity and accessible feedback research"
+      ],
+      "dependencies": [
+        "Distributed original PCM masters, scores, producer seeds and consumer catalogs",
+        "Python synthesis; FFmpeg/Rubber Band/Vorbis for tempo derivatives",
+        "Web Audio/Godot playback and existing clock/capture probes"
+      ],
+      "preservation_risks": [
+        "Retain original masters and source scores alongside compressed derivatives; no separate P08 game or recovered historical recording exists",
+        "Signal/mixer checks do not establish physical listening, musical preference, exclusive rights or an album release"
+      ],
+      "extraction_next": "Use controlled cue/timing contrasts for a concrete player decision; record hardware/listening conditions before making perceptual claims."
+    },
+    {
+      "id": "P09",
+      "transition_status": "seed_only",
+      "source_paths": [],
+      "reusable_capabilities": [],
+      "execution_evidence": [],
+      "existing_consumers": [],
+      "candidate_destinations": [
+        "Evidence-backed delivery and experimental-method case studies"
+      ],
+      "dependencies": [],
+      "preservation_risks": [
+        "Do not turn reported professional history, an absent attachment or a simulation into verified employment/customer results",
+        "Do not publish private case data or infer rights from the public portfolio mandate"
+      ],
+      "extraction_next": "Recover one authorized source and distinguish professional facts from simulation before creating a case or instrument."
+    },
+    {
+      "id": "P10",
+      "transition_status": "preserved_pending_extraction",
+      "source_paths": [
+        "projects/waystone-dialogue/scene.py",
+        "projects/waystone-dialogue/adventure.py",
+        "projects/waystone-dialogue/browser/dist",
+        "projects/waystone-dialogue/browser/tests",
+        "projects/waystone-dialogue/browser/tools",
+        "projects/waystone-dialogue/provenance.json",
+        "references/rave-master/README.md"
+      ],
+      "reusable_capabilities": [
+        "Deterministic NPC trust/stress and consequential resource/time decisions",
+        "Connected rescue/relief/afternoon transitions with voluntary consent and fresh deferred-request facts",
+        "Versioned portable replay, browser/Python differential checks and bounded transition graphs"
+      ],
+      "execution_evidence": [
+        "evidence/waystone-dialogue/ADVENTURE_RUN.json",
+        "evidence/waystone-dialogue/AFTERNOON_RUN.json",
+        "evidence/waystone-dialogue/DEFERRED_REQUEST_RUN.json"
+      ],
+      "existing_consumers": [
+        "P10"
+      ],
+      "candidate_destinations": [
+        "Narrative agency and NPC behavior research",
+        "Quest continuity, consequence and consent research"
+      ],
+      "dependencies": [
+        "Python standard library for preserved scene/adventure oracle",
+        "JavaScript ES modules and static HTTP for current browser consumer",
+        "Pinned LEGACY-001 sources, provenance mapping and versioned save fixtures"
+      ],
+      "preservation_risks": [
+        "Keep original Python dialogue, source rule records and old-schema replay fixtures; the browser campaign has additional new fiction/rules",
+        "Technical reuse does not import Rave Master/Waystone fiction as Virgo Diamond canon or prove upstream rescue outcomes"
+      ],
+      "extraction_next": "Instrument one meaningful dialogue/quest decision using controlled histories; preserve authored choice consequences before extracting a generic behavior layer."
+    },
+    {
+      "id": "P11",
+      "transition_status": "preserved_pending_extraction",
+      "source_paths": [
+        "projects/realtime-integration-lab/server.cjs",
+        "projects/realtime-integration-lab/rooms-server.cjs",
+        "projects/realtime-integration-lab/rooms-store.cjs",
+        "projects/realtime-integration-lab/rooms-backup.cjs",
+        "projects/realtime-integration-lab/rooms-search.cjs",
+        "projects/realtime-integration-lab/record-export.cjs",
+        "projects/realtime-integration-lab/public",
+        "projects/realtime-integration-lab/tests",
+        "projects/realtime-integration-lab/package-lock.json"
+      ],
+      "reusable_capabilities": [
+        "Idempotent commit-before-broadcast delivery and explicit retry lifetimes",
+        "SQLite-backed rooms, revisions, bounded history navigation and complete-record search",
+        "Verified workspace backup/recovery and portable offline/print reports",
+        "Known client defects adapted into P02 evaluator calibration"
+      ],
+      "execution_evidence": [
+        "evidence/realtime-chat/POLLING_SEND_RUN.json",
+        "evidence/realtime-chat/RECOVERY_RUN.json",
+        "evidence/realtime-chat/PRINT_RUN.json",
+        "evidence/realtime-chat/HISTORY_RUN.json",
+        "evidence/evaluation-task/CALIBRATION.json"
+      ],
+      "existing_consumers": [
+        "P11",
+        "P02"
+      ],
+      "candidate_destinations": [
+        "Persistence and distributed-delivery research",
+        "Experimental evidence capture and handover tooling"
+      ],
+      "dependencies": [
+        "Node 24+ built-in SQLite for rooms; original ephemeral mode retains its own runtime contract",
+        "Pinned Express 4.22.3/Socket.IO 4.8.4 and existing browser tooling",
+        "Separate legacy/rooms event namespaces, SQLite schema and backup/export contracts"
+      ],
+      "preservation_risks": [
+        "Do not publish local SQLite databases, identity tokens or real discussion data; fictional fixtures are distinct from user records",
+        "Trusted single-server recovery/idempotency is not private-room authorization, distributed exactly-once delivery or an MMO service"
+      ],
+      "extraction_next": "Choose a concrete authoritative command or evidence-capture consumer before adapting protocols; retain legacy evaluator snapshots and current recovery fixtures."
+    }
+  ],
+  "labs": [
+    {
+      "id": "combat-response",
+      "status": "implemented",
+      "origin_projects": [
+        "P06"
+      ],
+      "question": "Do unchanged native guard, directional dodge and seal responses have distinct timing, range, resource and early-counter envelopes under the same phase-one sweep trace?",
+      "path": "labs/combat-response",
+      "instrument": "labs/combat-response/run.py",
+      "evidence": [
+        "evidence/combat-response/results.json",
+        "evidence/combat-response/RUN.json"
+      ]
+    },
+    {
+      "id": "evaluation-methodology",
+      "status": "candidate",
+      "origin_projects": [
+        "P02",
+        "P11"
+      ],
+      "question": "Can controlled defective and reference artifacts detect the intended behavior without leaking evaluator context or inventing model-performance claims?"
+    },
+    {
+      "id": "economy-simulation",
+      "status": "candidate",
+      "origin_projects": [
+        "P01",
+        "P05"
+      ],
+      "question": "Which bounded resource ownership and expenditure rules produce distinct viable choices under matched scenarios?"
+    },
+    {
+      "id": "narrative-agency",
+      "status": "candidate",
+      "origin_projects": [
+        "P04",
+        "P10"
+      ],
+      "question": "Can a player understand the costs of a consequential choice while characters retain distinct motives and continuity?"
+    },
+    {
+      "id": "audiovisual-perception",
+      "status": "candidate",
+      "origin_projects": [
+        "P03",
+        "P06",
+        "P07",
+        "P08"
+      ],
+      "question": "Which visual and audio cues expose contact, commitment and recovery without obscuring the character or threat?"
+    },
+    {
+      "id": "persistence-delivery",
+      "status": "candidate",
+      "origin_projects": [
+        "P01",
+        "P05",
+        "P11"
+      ],
+      "question": "Which command, retry and recovery contracts preserve accepted progress under bounded failures without trusting client state?"
+    }
+  ]
+}

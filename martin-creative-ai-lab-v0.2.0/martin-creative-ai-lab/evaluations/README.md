@@ -1,4 +1,4 @@
-# AI evaluation and QA
+# AI evaluation and QA — preserved P02 origin
 
 [P02 — EVAL-001: chat send buffering](chat-send-buffering/README.md) is the first
 working task. It exports a candidate starter and checks submitted client artifacts
@@ -11,7 +11,7 @@ and [seed protocol](../SEED.md) for later tasks, without mandatory expansion.
 Copy only the exported workspace into a separate candidate context. Public
 repository folders are not confidential; packaging does not establish secrecy.
 
-Runner 0.1.2 preserves timeout/launch attempts and partial output, and terminates
+The retained runner is **0.2.1**. Since 0.1.2 it preserves timeout/launch attempts and partial output, and terminates
 inherited POSIX process groups with bounded capture. Starter contract 0.1.0 is
 unchanged. [Previous timeout evidence](../evidence/evaluation-task/TIMEOUT_RUN.json)
 records executed cleanup limits; no sandbox or independent model score is claimed.

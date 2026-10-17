@@ -15,6 +15,7 @@ from urllib.parse import unquote, urlparse
 from zipfile import ZipFile, BadZipFile
 
 from reference_library import validate_library
+from brain_query import Collection, SOURCES
 
 ROOT = Path(__file__).resolve().parents[1]
 # The original wrapper is maintained. Standalone validator fixtures stay bounded
@@ -22,7 +23,7 @@ ROOT = Path(__file__).resolve().parents[1]
 WRAPPED_HUB = ROOT.name == "martin-creative-ai-lab" and ROOT.parent.name == "martin-creative-ai-lab-v0.2.0"
 DOCUMENT_ROOT = ROOT.parent.parent if WRAPPED_HUB else ROOT
 ERRORS = []
-STATUSES = {"seed", "triage", "active", "paused", "archived", "retired"}
+STATUSES = {"seed", "triage", "active", "paused", "archived", "retired", "transition"}
 MATURITIES = {f"M{i}" for i in range(7)}
 
 
@@ -91,8 +92,9 @@ def local_reference(value, label, *, directory=False):
         return
     if not destination.is_relative_to(ROOT):
         fail(f"{label}: target leaves repository: {value}")
-    elif not (destination.is_dir() if directory else destination.is_file()):
-        kind = "directory" if directory else "file"
+    elif not ((destination.is_file() or destination.is_dir()) if directory is None else
+              destination.is_dir() if directory else destination.is_file()):
+        kind = "file or directory" if directory is None else "directory" if directory else "file"
         fail(f"{label}: missing {kind}: {value}")
 
 
@@ -105,6 +107,127 @@ def evidence_refs(row, label):
         local_reference(ref, f"{label}: evidence[{index}]")
 
 
+def string_list(row, field, label, *, nonempty=False):
+    values = row.get(field)
+    if (not isinstance(values, list) or (nonempty and not values)
+            or any(not isinstance(value, str) or not value.strip() for value in values)):
+        fail(f"{label}: {field} must be a {'nonempty ' if nonempty else ''}list of nonempty strings")
+        return []
+    if len(values) != len(set(values)):
+        fail(f"{label}: duplicate {field}")
+    return values
+
+
+def validate_origin_transition(projects, ids):
+    """An origin inventory is not a list of eleven implemented laboratories."""
+    path = ROOT / "labs/origins.json"
+    try:
+        data = json.loads(path.read_text(encoding="utf-8"))
+    except (OSError, ValueError) as exc:
+        fail(f"origin transition: {exc}")
+        return
+    if not isinstance(data, dict) or data.get("schema_version") != 1:
+        fail("origin transition: expected object with schema_version 1")
+        return
+    try:
+        date.fromisoformat(data.get("updated_at", ""))
+    except (TypeError, ValueError):
+        fail("origin transition: invalid updated_at")
+    if not isinstance(data.get("baseline_commit"), str) or not re.fullmatch(r"[0-9a-f]{40}", data["baseline_commit"]):
+        fail("origin transition: baseline_commit must identify the inspected Git baseline")
+    if not isinstance(data.get("scope"), str) or not data["scope"].strip():
+        fail("origin transition: missing scope")
+    origins, labs = data.get("origins"), data.get("labs")
+    if not isinstance(origins, list) or not isinstance(labs, list):
+        fail("origin transition: origins and labs must be lists")
+        return
+    expected_ids = {f"P{index:02d}" for index in range(1, 12)}
+    if ids != expected_ids:
+        fail("origin transition: the preserved registry must contain exactly P01–P11")
+    origin_ids, instrumented = set(), set()
+    project_by_id = {row.get("id"): row for row in projects if isinstance(row.get("id"), str)}
+    for row in origins:
+        if not isinstance(row, dict):
+            fail("origin transition: origin must be an object")
+            continue
+        item_id = row.get("id")
+        label = f"origin transition {item_id}"
+        if not isinstance(item_id, str) or item_id not in ids:
+            fail(f"{label}: unknown origin")
+        elif item_id in origin_ids:
+            fail(f"{label}: duplicate origin")
+        else:
+            origin_ids.add(item_id)
+        status = row.get("transition_status")
+        if status not in ("preserved_pending_extraction", "pilot_instrumented", "seed_only"):
+            fail(f"{label}: invalid transition_status")
+        if status == "pilot_instrumented" and isinstance(item_id, str):
+            instrumented.add(item_id)
+        if status == "seed_only" and (not isinstance(item_id, str)
+                or project_by_id.get(item_id, {}).get("maturity") != "M0"):
+            fail(f"{label}: seed_only requires an M0 origin")
+        for field in ("candidate_destinations", "preservation_risks"):
+            string_list(row, field, label, nonempty=True)
+        string_list(row, "reusable_capabilities", label, nonempty=status != "seed_only")
+        string_list(row, "dependencies", label)
+        for value in string_list(row, "source_paths", label, nonempty=status != "seed_only"):
+            local_reference(value, f"{label}: source_paths", directory=None)
+        for value in string_list(row, "execution_evidence", label, nonempty=status != "seed_only"):
+            local_reference(value, f"{label}: execution_evidence")
+        for consumer in string_list(row, "existing_consumers", label):
+            if consumer not in ids:
+                fail(f"{label}: unknown existing_consumer {consumer}")
+        if not isinstance(row.get("extraction_next"), str) or not row["extraction_next"].strip():
+            fail(f"{label}: missing extraction_next")
+    if origin_ids != expected_ids or len(origins) != 11:
+        fail("origin transition: inventory must contain exactly one row for each P01–P11")
+
+    lab_ids, implemented_origins, implemented_count = set(), set(), 0
+    for row in labs:
+        if not isinstance(row, dict):
+            fail("origin transition: lab must be an object")
+            continue
+        item_id = row.get("id")
+        label = f"origin transition lab {item_id}"
+        if not isinstance(item_id, str) or not re.fullmatch(r"[a-z0-9]+(?:-[a-z0-9]+)*", item_id):
+            fail(f"{label}: invalid lab id")
+        elif item_id in lab_ids:
+            fail(f"{label}: duplicate lab")
+        else:
+            lab_ids.add(item_id)
+        origin_projects = string_list(row, "origin_projects", label, nonempty=True)
+        if any(value not in ids for value in origin_projects):
+            fail(f"{label}: unknown origin_projects")
+        if not isinstance(row.get("question"), str) or not row["question"].strip():
+            fail(f"{label}: missing question")
+        if row.get("status") == "implemented":
+            implemented_count += 1
+            implemented_origins.update(origin_projects)
+            local_reference(row.get("path"), f"{label}: path", directory=True)
+            local_reference(row.get("instrument"), f"{label}: instrument")
+            refs = string_list(row, "evidence", label, nonempty=True)
+            for value in refs:
+                local_reference(value, f"{label}: evidence")
+            if isinstance(row.get("path"), str) and isinstance(row.get("instrument"), str):
+                try:
+                    lab_path = (ROOT / row["path"]).resolve()
+                    if not lab_path.is_relative_to(ROOT / "labs"):
+                        fail(f"{label}: implemented path must be inside labs/")
+                    if not (ROOT / row["instrument"]).resolve().is_relative_to(lab_path):
+                        fail(f"{label}: instrument must belong to its lab path")
+                except (OSError, ValueError, RuntimeError) as exc:
+                    fail(f"{label}: invalid lab path: {exc}")
+        elif row.get("status") == "candidate":
+            if any(field in row for field in ("path", "instrument", "evidence")):
+                fail(f"{label}: a candidate cannot claim implemented path, instrument or evidence")
+        else:
+            fail(f"{label}: invalid lab status")
+    if not implemented_count:
+        fail("origin transition: at least one implemented pilot with instrument and evidence is required")
+    if not instrumented.issubset(implemented_origins):
+        fail("origin transition: pilot_instrumented origins require an implemented lab consumer")
+
+
 def main():
     projects = read_registry("projects.json", "projects")
     transfers = read_registry("transfers.json", "transfers")
@@ -113,6 +236,11 @@ def main():
     ids = {r["id"] for r in projects if isinstance(r.get("id"), str)}
     source_ids = {r["id"] for r in sources if isinstance(r.get("id"), str)}
     reference_ids, historical_roots = set(), set()
+    brain_sources = {ROOT / "brains" / name for name in SOURCES}
+    try:
+        Collection(ROOT / "brains")
+    except (OSError, ValueError, KeyError, TypeError) as exc:
+        fail(f"brain collection: {exc}")
     try:
         library = validate_library(ROOT, ids)
         reference_ids = library["collection_ids"]
@@ -134,6 +262,8 @@ def main():
             slugs.add(slug)
         if not isinstance(row.get("status"), str) or row["status"] not in STATUSES:
             fail(f"{label}: invalid status")
+        if row.get("role") != "historical_origin":
+            fail(f"{label}: role must be historical_origin")
         if not isinstance(row.get("maturity"), str) or row["maturity"] not in MATURITIES:
             fail(f"{label}: invalid maturity")
         evidence_refs(row, label)
@@ -160,6 +290,7 @@ def main():
         if "evidence" in row:
             evidence_refs(row, str(row.get("id")))
         list_refs(row, "consumer_projects", ids, str(row.get("id")))
+    validate_origin_transition(projects, ids)
 
     try:
         source_data = json.loads((ROOT / "registry/legacy_sources.json").read_text())
@@ -189,8 +320,8 @@ def main():
     except (OSError, ValueError, KeyError, TypeError, BadZipFile) as exc:
         fail(f"legacy source validation: {exc}")
 
-    # Dependencies and validated raw snapshots are source data, not current navigation.
-    # Owned reference READMEs/AGENTS/program docs remain checked as before.
+    # Dependencies, validated snapshots and exact supplied brain sources are data,
+    # not maintained navigation. Owned READMEs/AGENTS/program docs stay checked.
     documents = []
     if WRAPPED_HUB:
         documents.extend(DOCUMENT_ROOT / name for name in ("README.md", "AGENTS.md")
@@ -198,7 +329,8 @@ def main():
     for directory, subdirectories, files in os.walk(ROOT):
         subdirectories[:] = sorted(name for name in subdirectories if name not in {".git", "node_modules"}
                                    and Path(directory) / name not in historical_roots)
-        documents.extend(Path(directory) / name for name in files if name.endswith(".md"))
+        documents.extend(Path(directory) / name for name in files
+                         if name.endswith(".md") and Path(directory) / name not in brain_sources)
     documents.sort()
     checked_links = 0
     for path in documents:

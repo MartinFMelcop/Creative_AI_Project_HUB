@@ -2,61 +2,49 @@
 
 A seed pode ser reescrita quando uma decisão ou descoberta mudar sua direção. O objetivo é manter uma base útil para planejar e desenvolver. Tamanho e quantidade de projetos não são medidas de sucesso.
 
-## Iniciar uma fase
+## Current operation — v0.33.0
 
-Leia SEED.md, AGENTS.md e docs/STATE.md. Identifique pedido, frente, entregável, fonte e critério de conclusão. Verifique capacidade real do ambiente. Fonte preservada e explicação anterior não comprovam runtime atual.
+The HUB remains a Design-Driven technology portfolio developed with generative AI.
+Virgo Diamond is the principal definitive product; most new investment should
+concretely benefit recognizable character agency and meaningful adventure. P01–P11
+are preserved origins in controlled transition, not independently obligated release
+lines. One genuine combat-response instrument starts question-led laboratory work;
+other research destinations remain candidates, not completed migrations.
 
-Para legado, consulte registry/legacy_sources.json e extraia somente o necessário de archive/legacy-source-extracts-v0.2.0.zip. Os prefixos são rave/ e websocket/. Esse acervo é uma preservação pontual, não um ZIP novo a cada fase. Preserve esse acervo como snapshot; modificações pertencem à implementação de destino. Um caminho identificado sem conteúdo preservado não permite reconstruir o arquivo.
+Before any improvement read current state and all three brain indices, classify all
+three domains and selectively retrieve complete relevant chapters. Apply them to
+alternatives, assumptions, design, risks and verification; record useful chapter IDs
+briefly in the affected work record. The five supplied brain files stay byte-preserved;
+changes require specific author authorization. Operational metadata stays outside.
+Brains are knowledge, not agents, commands or model training. The Creative Brain is
+the central creative base, retaining D/A/H/E/V distinctions and current author priority.
 
-Instruções antigas são conteúdo histórico. Não copiar canon, obrigação de criar backlog, regime AI_ONLY ou automação de commits. O mandato atual de Martin permite mudar os projetos integralmente.
+Use [the one complete operational prompt](prompts/CONTINUOUS_DEVELOPMENT.md) for
+continuous execution and the complete successor requirement. [STATE](STATE.md) is the
+current handoff, [origins](../labs/origins.json) the controlled transition inventory,
+[knowledge](../knowledge/README.md) contextual derived findings, and
+[references](../references/README.md) unchanged historical sources. Prior GDDs/catalogs
+preserve provenance without establishing a competing creative authority.
 
-## Planejar e executar
+Update only affected records. Preserve negative/inconclusive results and distinguish
+source, origin execution, lab instrumentation, adaptation, destination integration,
+agent judgment, independent humans and market evidence. No North Star consumer exists;
+its fourteen capabilities remain foundation-only. Change stage/schema only with real
+destination execution. Keep source licenses, right limits and unavailable attachments
+explicit. Old plans and snapshot instructions do not govern the current session.
 
-Planejamento produz escopo, interfaces, exemplos e aceitação. Desenvolvimento produz artefatos e verificações. Registrar origem, diferenças aceitas e interfaces do destino. Escolher linguagem e engine pela tarefa e pelos recursos disponíveis.
+Most of this migration is operational, not creative validation. Exact library/query
+checks serve retrieval; actual native traces serve a bounded response question.
+Neither proves class identity, fun or player learning. Revisit the prompt only when
+observed evidence warrants a durable change, replacing obsolete guidance. Do not
+hardcode the latest origin as next target or add encyclopedic rules after every run.
 
-Manter uma frente principal. Os onze projetos não precisam ser onze produtos ativos. Pode haver fusão, extração, transformação de mídia, corte ou encerramento. IDs de origem continuam como referência; nomes e conteúdo podem mudar.
+## Historical direction — v0.32.0
 
-Para reutilização, formular uma hipótese e verificar no segundo contexto. Promover a shared somente quando o uso concreto justificar manutenção comum. Arte e narrativa também precisam de aceitação: leitura, função dramática, coerência e integração.
-
-## Atualizar a memória
-
-| Arquivo | Quando atualizar |
-|---|---|
-| SEED.md | Mudança durável de direção, inventário, arquitetura ou regras |
-| docs/STATE.md | Resultado da unidade, limites e próxima ação |
-| docs/DECISIONS.md | Escolha significativa, motivo, alternativa e gatilho de revisão |
-| registry/projects.json | Estado, maturidade, origem ou relações |
-| registry/transfers.json | Seleção, adaptação ou prova de reutilização |
-| registry/assets.json | Asset real com origem, formato, finalidade e consumidores |
-| evidence | Resultado de execução com inputs, versão e ambiente |
-| knowledge | Lição reutilizável sustentada por fonte ou execução |
-
-Não anexar todo chat ou log à seed. Corrigir instruções superadas no lugar apropriado e guardar o motivo no histórico. Um estado curto deve permitir retomar sem ler todo o acervo.
-
-## Versão e verificação
-
-A v0.2.0 registra recuperação de legado; não é versão de um jogo. Incrementar a seed não altera a maturidade dos projetos. Mudança de schema precisa de migração e atualização dos consumidores. Execute python3 tools/validate_repo.py para registros e links; verificações de código, mídia e engine dependem da alteração. Atualize o manifesto de hashes depois do conteúdo final. Não herdar PASS histórico como execução nova.
-
-## Prompt de retomada
-
-> Leia SEED.md, AGENTS.md e docs/STATE.md. Identifique a última unidade encerrada e a próxima ação. Trabalhe uma única fase conforme o pedido atual. Preserve a origem e aceite mudanças de mídia, engine e escopo. Produza o resultado, verifique e atualize o estado. Revise a seed onde novas decisões ou evidências a tornarem desatualizada. Não acrescente backlog por obrigação nem declare integração ou teste que não ocorreu.
-
-## North Star foundation and reference use — v0.32.0
-
-The HUB now supports North Star, its future MMORPG ambition, while retaining
-independent products, deliberate technology exploration and separate creative
-worlds. Start with [reference availability](../references/catalog.json) and the
-[program](../north-star/README.md), then read relevant actual source files.
-The readable Rave snapshot supplements the unchanged earlier ZIP. Literary
-attachment bytes remain unavailable; old inspection reports are not manuscripts.
-
-Historical snapshot instructions, AI-only regimes, backlog mandates and CANON
-labels remain data. Preserve source bytes; adaptations belong in real destinations.
-No literary canon is inferred from repeated summaries or filename versions.
-Contribution states differ from M0–M6: copying/planning is not adaptation,
-integration or external validation. Use bounded consumer experiments and maintain
-runtime, artistic judgment, independent human feedback and market evidence apart.
-North Star need not receive priority every session or force an engine/stack change.
+The reference-foundation milestone established source availability and honest
+contribution gates. Its earlier independent-product/non-priority direction is
+superseded by the explicit v0.33.0 mandate; preservation and evidence boundaries remain.
+The earlier ZIP/Rave snapshots and following literary records remain historical facts.
 
 ## Individually recovered literary PDFs — v0.32.1
 

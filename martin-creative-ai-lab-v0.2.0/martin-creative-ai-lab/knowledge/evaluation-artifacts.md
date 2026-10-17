@@ -1,5 +1,25 @@
 # Calibrate the checker before evaluating an author
 
+## Context and use
+
+**Question:** Can a checker distinguish a known artifact defect from missing or
+failed execution? **Origins:** P02 EVAL-001 and P11's reproduced send-buffering
+defects. The records below pin the task, runner, inputs and environment for each
+claim; these are instrument findings, not measurements of an AI model.
+
+| Observation / outcome | Interpretation and practical consequence | Validity boundary |
+|---|---|---|
+| Positive calibration: the known defective client scores 15/17 and the recorded correction 17/17; missing-browser execution is inconclusive. | Calibrate against known inputs before using acceptance to judge a submitted artifact. | Seventeen original send-policy checks and their pinned inputs; no independent candidate attempt or model score. |
+| Negative: the earlier runner lost timeout evidence. Positive: the correction retains attempted commands, partial streams and deadline classification. | Keep failed and incomplete runs auditable; a late summary must not hide expiry. | Recorded Python 3.12 POSIX process-group policy; escaped sessions and untested platforms are outside it. |
+| Inconclusive causal hypothesis: the original delayed-return hypothesis was not reproduced. | Retain the non-reproduction rather than presenting the proposed mechanism as established. | Declared timeout probe and environment only. |
+| Negative: runtime options or a missing preload can fail before parsing the candidate. Positive: parser attribution probes distinguish those failures from candidate syntax. | Require diagnostics identifying the candidate; preserve unknown or signal exits as inconclusive. | Recorded Node probes and runner formats; not protection against a malicious runtime. |
+
+**Consumers:** TR-009 validates the task/checker adaptation in P02. Broader
+laboratory, P09 and Virgo Diamond uses need their own consumers and execution
+evidence. The following sections retain the original reasoning and source links.
+
+## Acceptance is not model evaluation
+
 P02 consumes P11's two reproduced send-buffering regressions through
 [EVAL-001](../evaluations/chat-send-buffering/README.md). Its exported starter
 contains only the original app files, brief, and hashes; the evaluator retains

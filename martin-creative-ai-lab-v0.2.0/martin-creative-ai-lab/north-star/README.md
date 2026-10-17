@@ -1,42 +1,46 @@
-# North Star
+# Virgo Diamond: The North Star
 
-**North Star is the future MMORPG ambition and long-term convergence objective
-of Creative AI Project HUB.** This directory is a foundation, not an implemented
-MMORPG, chosen engine or deployed service. Current independent products retain
-their own goals, platforms, universes, maturity and commercial possibilities.
+The HUB's **principal definitive product** is an original MMORPG centered on becoming
+a distinct, recognizable character through choices, builds, classes, specializations,
+professions and accomplishments within meaningful adventures. Most new investment
+should demonstrate benefit to that experience. The HUB remains a public Design-Driven
+technology portfolio; its origin demonstrations and research instruments have value
+without being eleven independently obligated products.
 
-- [Vision](VISION.md): player experience, original IP, independence and evidence.
-- [Capability catalog](capabilities.json): fourteen selective, traceable research
-  areas covering current projects and historical references. Origin evidence is
-  separated from destination contribution; there are **zero North Star consumers**.
-- [First research gates](RESEARCH.md): small shared-state experiment and criteria
-  for deciding whether further infrastructure is justified.
-- [Historical library](../references/README.md): actual source bytes and explicit
-  exclusions/unavailable literature, separate from active adaptations.
-- [Current portfolio](../registry/projects.json), [transfers](../registry/transfers.json)
-  and [state](../docs/STATE.md): project maturity and previous evidence are retained.
+## Actual stage and creative authority
 
-## Contribution states
+The catalog remains **foundation_only**, with fourteen traceable capability records,
+**zero destination consumers**, no selected final engine and no running MMORPG.
+Priorities changed by explicit author instruction; implementation maturity did not.
+The [combat-response pilot](../labs/combat-response/README.md) is an executed laboratory
+instrument using P06, not a North Star game consumer or validated class system.
+
+The [Creative Brain](../brains/README.md) is the central creative knowledge base.
+Current direct author decisions take precedence; D/A/H/E/V source categories distinguish
+intent, documented directions, proposals, precedents and actual validation. A class,
+name, chronology or quest is not canon because it is detailed or repeatedly mentioned.
+Prior GDDs, Rave and literary sources remain provenance, without competing creative
+authority or automatically shared fictional universes.
+
+- [Vision](VISION.md): intended character experience and product boundaries.
+- [Research](RESEARCH.md): bounded questions and actual versus proposed instruments.
+- [Capability catalog](capabilities.json): retained origin evidence and contribution gates.
+- [Origin transitions](../labs/origins.json): all P01–P11 capabilities, dependencies,
+  preservation risks and candidate research destinations.
+- [References](../references/README.md): historical bytes, rights and availability.
+
+## Evidence gates
 
 | State | Required meaning |
 |---|---|
-| Candidate | Useful hypothesis identified; no destination proof |
-| Verified in origin | Recorded bounded behavior in its original context; applicability still uncertain |
-| Adapted | Actual implementation exists in a new context |
-| Integrated into North Star | A genuine North Star consumer uses it with destination execution evidence |
-| Externally validated | Relevant destination behavior/experience evaluated independently, with scope and evaluator identified |
+| Candidate | Identified hypothesis; no transfer proof |
+| Verified in origin | Scoped execution record supports behavior in its original context |
+| Adapted | Real implementation in a new context, beyond planning or copied sources |
+| Integrated into North Star | Genuine destination consumer uses it with destination execution proof |
+| Externally validated | Relevant destination behavior/experience independently evaluated within stated scope |
 
-These states are separate from project M0–M6. Current origin execution records
-were inspected, not rerun as part of this archival task. A report path can be
-validated structurally without independently proving every claim inside it.
-No current item is adapted/integrated/externally validated for North Star.
-`reference_library.py check` rejects such states while the program remains
-`foundation_only`; advancing that stage requires actual consumer evidence and
-an intentional validation-contract update. A copied source, renamed class,
-planning document or implementing-agent assessment is insufficient.
-
-Future sessions should start with HUB AGENTS/SEED/state, compare portfolio
-opportunities, then inspect only relevant catalog sources and actual artifacts.
-North Star is not a forced priority, technology quota, project merger or request
-for every session to build MMORPG infrastructure. Historical governance/fiction
-stays historical; current user selection and destination requirements govern reuse.
+The current schema intentionally rejects the last three states while foundation-only.
+A useful lab instrument does not itself change that stage. Evolve the stage/validator
+with real consumer evidence when justified. Technical correctness, agent creative
+assessment, human experience and market evidence remain separate. A local prototype
+would not demonstrate multiplayer, MMORPG scale, enjoyment, retention or demand.

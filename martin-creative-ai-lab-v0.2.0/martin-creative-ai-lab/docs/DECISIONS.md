@@ -1688,3 +1688,59 @@ North Star remains foundation-only with no consumer; no capability promotion.
 Keep the authoritative prompt unchanged: existing artifact comparison, failure
 reproduction and bounded owned-process guidance serve this milestone. Reassess
 portfolio needs after observing whether players can preserve and reopen a run.
+
+## ADR-070 — coordinate immutable brains and preserve origins as research inputs
+
+**Date:** 2026-10-17 UTC. **Status:** SEED 0.33.0; explicit author production mandate.
+
+The HUB remains an authorial Design-Driven technology portfolio developed with
+generative AI. Virgo Diamond becomes the principal definitive product, with most
+investment directed toward observable character agency and meaningful adventures.
+This supersedes the independent-product/non-priority direction in ADR-055 and older
+current plans, without rewriting historical sources or invalidating origin evidence.
+P01–P11 retain IDs, source, media, versions, technical maturity and useful demonstrations;
+all enter controlled transition, not eleven completed laboratories or release obligations.
+The origin inventory records existing consumers, dependencies, loss risks and extraction.
+
+Import all five supplied brain files byte-for-byte into a separate brains/ area.
+Use stdlib deterministic catalog lookup, full chapter retrieval and external integrity
+pins rather than embeddings, summaries replacing sources or services. Mandatory agent
+activation reads all indices, classifies three domains, retrieves pertinent complete
+chapters and records practical use briefly. Sources require specific author permission
+to change. Current instructions/safety govern; brains inform judgment, not execution or
+model training. Creative D/A/H/E/V distinctions and current author decisions preserve
+one creative base without automatically canonizing hypotheses or earlier GDDs.
+
+Keep the existing knowledge lesson paths/bodies and add context/outcome/validity metadata;
+knowledge stores derived results, not a fourth brain. The first new finding distinguishes
+avoidance from a reachable counter opportunity. Presentation now leads with capabilities,
+inspectable artifacts and bounded evidence rather than old release obligations.
+
+Compared P06 contact/commitment instrumentation with P01 economy controls, P10 narrative
+agency and P11 persistence. Select P06 for the direct bounded character-action question
+and available native execution. Drive its unchanged real scene/PhysicsServer with fixed
+traces instead of porting rules into a second simulator or declaring candidate classes
+implemented. The 28-case, twice-repeated sweep pilot exposes timing/range/resource/
+position trade-offs, rejected commands and an imposed echo failure case. The common
+early counter is a controlled probe, not an optimal policy comparison. Exploratory
+reporting refinement is disclosed; no preregistration, human test or enjoyment claim.
+
+All three domains are high: ENG-004/015/027 informs requirements/contracts/provenance;
+SCI-005/017/050/051 informs predictions/controls/instrument boundaries; CRE-001/008/012/084
+informs recognizable action and hypothesis/authority distinctions. CRE-014/015 remains
+candidate class detail, not an implemented destination or canon promotion.
+
+Retain North Star foundation_only, fourteen capabilities and zero destination consumers.
+A lab driving origin code is useful without constituting game integration. Schema/CI
+adds explicit transition, immutable library and genuine implemented-instrument gates;
+existing origin gates remain. Revisit contribution stage only with a real destination
+consumer and execution. Independent player/readability/audio/accessibility evidence,
+networking, scale and commercial validation remain absent.
+
+Replace the single complete operational prompt because the author changed direction;
+remove obsolete independent-release priorities instead of adding a parallel instruction
+system. The source/query controls and actual native experiment serve this design.
+Initial writable-XDG/import failures are environmental and reproduced against unchanged
+origin; they do not justify product changes. Full evidence is in STATE and the linked
+brain-operation/pilot execution records. Future selection must reassess actual needs,
+not automatically repeat combat or create speculative large-scale infrastructure.

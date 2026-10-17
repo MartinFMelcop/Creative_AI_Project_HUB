@@ -1,4 +1,29 @@
-# Current assessment — preserve musical identity during slower practice
+# Current assessment — three-brain Design-Driven operation
+
+Baseline `c360f68e2be933d55f082a414663d28ab24eac8d` matches inspected/fetched remote main.
+Current author instructions change production direction while retaining the HUB as a
+technology portfolio. Existing origin versions, technical maturity and demonstrations
+remain valuable; they are not independent release obligations or implemented labs.
+
+| Compared opportunity | Assessment grounded in inspected artifacts |
+|---|---|
+| P06 combat-response instrument | Selected: actual native contact/timing kernel and checks permit controlled response/resource/range comparisons directly relevant to recognizable action. Preserve the unchanged encounter rather than rewrite it as a new class system. |
+| P01 economy experiment | Deterministic configurable C# model, seeds/policy comparison and transactions already exist; useful future instrument, less direct first evidence for character action. |
+| P10 narrative agency | Replayable Python/browser consequences provide a credible narrative research source; adaptation and reader context needed before new North Star quest claims. |
+| P11 persistence/handover | Executed local SQLite/Socket.IO recovery remains strong technical provenance; public/shared-world authority and actual player experience require distinct consumers and validation. |
+| P02/P07/P08/P09 | Calibrated evaluation and actual distributed media support research; no independent model result, human listening/artist approval or P09 delivery case is invented. |
+
+Brain activation: indices for all three; ENG-004/015/027 (verifiable requirements,
+contracts and provenance), SCI-005/017/050/051 (rival hypotheses, controls and transforming
+an existing prototype into an instrument), CRE-001/008/012/084 (character agency,
+authority/hypothesis boundaries and defense differentiation). All three domains high.
+
+The source-exact query and actual pilot, not the amount of new documentation, establish
+the first vertical operation. [STATE](STATE.md) and [pilot evidence](../labs/combat-response/README.md)
+record execution and limits. No North Star consumer or human study is established.
+The assessments below retain previous baseline-specific decisions, not current orders.
+
+# Historical assessment — preserve musical identity during slower practice
 
 Clean `45ea179` matches fetched main, branch work, push permitted and main
 publication explicitly authorized. Read instructions/seed/state/registry,

@@ -1,159 +1,113 @@
 # Creative AI Project HUB
 
-Native games, interactive fiction, literary editions and developer tools by
-**[Martin Melcop Neto](https://github.com/MartinFMelcop)**. This portfolio brings
-together working prototypes, creative source material and reproducible evidence
-from AI-assisted development.
+A **Design-Driven technology portfolio developed with generative AI**, directed by
+**[Martin Melcop Neto](https://github.com/MartinFMelcop)**. Inspect the code,
+creative resources, design decisions, experimental instruments and execution
+records behind the demonstrations.
 
 [![Lab checks](https://github.com/MartinFMelcop/Creative_AI_Project_HUB/actions/workflows/lab-checks.yml/badge.svg)](https://github.com/MartinFMelcop/Creative_AI_Project_HUB/actions/workflows/lab-checks.yml)
 
-**Start here:** [Explore projects](#portfolio) · [Play or run](#try-a-project) ·
-[Read fiction](#read-fiction) · [Review evidence](#engineering-evidence) ·
-[Develop](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/README.md#develop-and-verify)
+**[Virgo Diamond: The North Star](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/README.md)** is the principal
+product: an original MMORPG in which character identity becomes visible through
+choices, builds, classes, professions and achievements. Its current stage is
+`foundation_only`: 14 cataloged capabilities and no destination runtime consumer.
+The portfolio makes existing technology inspectable while applied laboratories
+investigate what can actually serve that experience.
 
-## Portfolio
+[Technology demonstrations](#technology-demonstrations) ·
+[Research instrument](#applied-research) ·
+[Preserved origins](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/projects/README.md) ·
+[Develop and verify](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/README.md#develop-and-verify)
 
-These are the current working samples. Each project page explains its scope,
-setup, source and verification; versions identify prototypes or reading editions.
+## Technology demonstrations
 
-| Project | Experience or workflow | Implementation | Available delivery |
-|---|---|---|---|
-| **P01 · [Eclipse Fair](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/projects/eclipse-fair/README.md)** · 0.6.0 | A market race with rival planning, local participants and independent saved fairs | C# / .NET 10, Godot .NET | Standalone Linux x86_64 player and optional compiled project |
-| **P03 · [Tokyo 80s: Night Shift](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/projects/tokyo80s/README.md)** · 0.5.0 | Two original rhythm stages, phrase rehearsal and lane timing/tail review | JavaScript / Web Audio | Browser game served locally over HTTP |
-| **P04 · [A água sob Darsen](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/projects/lich-cistern/README.md)** · 0.3.0 | A revised five-scene dark-fantasy story and English translation | Markdown, EPUB 3, PDF; Pandoc / Python production tools | Portuguese and English reading editions, with editable story sources |
-| **P05 · [Cinderwatch](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/projects/cinderwatch/README.md)** · 0.5.0 | Three tactical rescue encounters with response inspection, finite supplies and native recovery copies | C# / Godot .NET | Standalone Linux x86_64 player; editable project retained |
-| **P06 · [Veilbreak: The Bell Warden](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/projects/veil-arena/README.md)** · 0.6.0 | A two-phase boss trial with committed attacks, timed parries, optional sweep practice, animated art and adaptive audio | GDScript / Godot | Standalone Linux x86_64 player and native source |
-| **P10 · [Flood Crossing](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/projects/waystone-dialogue/browser/README.md)** · 0.7.0 | A two-day rescue campaign with cargo tradeoffs, relief priorities and a deferred request reconsidered against actual afternoon work | JavaScript browser game; Python reference | Browser game with portable replay saves |
-| **P11 · [Project Rooms](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/projects/realtime-integration-lab/README.md)** · 0.8.0 | Saved discussions, decisions and actions; full chronological reading, search, recovery and portable handovers with complete print reports | Node.js 24 / SQLite / Socket.IO | Local workspace and standalone HTML reading copies |
-| **P02 · [EVAL-001](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/evaluations/chat-send-buffering/README.md)** · runner 0.2.1 | Export a client-repair task and check returned artifacts against calibrated behavior | Python / Git / Node.js / Chromium | Executable practice-task exporter and checker |
+These are demonstrated **origin capabilities**, not claims of integration into
+Virgo Diamond. Follow each artifact to its setup, provenance, tested version and
+limits. Execution records describe their recorded runs; they do not establish
+independent human validation or commercial readiness.
 
-The [project index](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/projects/README.md)
-and [registry](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/registry/projects.json)
-also track supporting media work, historical origins and project maturity.
+| Capability and design purpose | Inspectable artifact | Execution evidence |
+|---|---|---|
+| Resource rules, rival planning and recoverable local sessions — P01 | [C# economy and native Eclipse Fair](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/projects/eclipse-fair/README.md) | [Independent saved-fair journeys](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/evidence/eclipse-fair/SLOT_RUN.json) |
+| Calibrated AI artifact evaluation — P02 | [EVAL-001 task exporter and checker](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/evaluations/chat-send-buffering/README.md) | [Known baseline/reference calibration](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/evidence/evaluation-task/CALIBRATION.json); no model ranking |
+| Audio timing, original-pitch practice and passage diagnostics — P03/P08 | [Tokyo 80s Web Audio implementation](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/projects/tokyo80s/README.md) | [Take-review execution](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/evidence/tokyo80s/REVIEW_RUN.json) |
+| Bilingual narrative production and reader formats — P04 | [A água sob Darsen / The Water Beneath Darsen](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/projects/lich-cistern/README.md) — Markdown, EPUB and PDF | [Editorial and format checks](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/evidence/lich-cistern/REVISION_RUN.json); separate creative source, not Virgo canon |
+| Tactical transitions, response forecasts and replay-validated recovery — P05 | [Cinderwatch C#/Godot implementation](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/projects/cinderwatch/README.md) | [Accepted-progress recovery and native delivery](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/evidence/cinderwatch/RECOVERY_RUN.json) |
+| Contact timing, committed actions, visual motion and adaptive audio — P06/P07/P08 | [Veilbreak Godot implementation](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/projects/veil-arena/README.md) | [Parry collision checks](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/evidence/veil-arena/PARRY_RUN.json) · [Practice journeys](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/evidence/veil-arena/PRACTICE_RUN.json) |
+| Consequential dialogue, consent and replay — P10 | [Flood Crossing JavaScript/Python implementations](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/projects/waystone-dialogue/README.md) | [Deferred request and changed circumstances](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/evidence/waystone-dialogue/DEFERRED_REQUEST_RUN.json) |
+| Durable records, idempotent delivery and portable handovers — P11 | [Project Rooms Node.js/SQLite/Socket.IO implementation](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/projects/realtime-integration-lab/README.md) | [Complete snapshot print reports](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/evidence/realtime-chat/PRINT_RUN.json) |
 
-| Native gameplay | Portable project records |
+P07's generated original paintings, portraits and motion atlases have recorded
+consumers in [Cinderwatch](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/projects/cinderwatch/Native/media/provenance.json)
+and [Veilbreak](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/projects/veil-arena/media/provenance.json). P08's synthesized
+music, adaptive cues and rehearsal derivatives have recorded consumers in those
+origins and [Tokyo 80s](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/projects/tokyo80s/media/rehearsal-provenance.json).
+P09 remains a seed with no executable professional case; a label is not evidence.
+
+| Native visual feedback | Portable information workflow |
 |---|---|
-| ![Recorded Veilbreak close-sweep guard in the native game](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/evidence/veil-arena/parry-ready.png) | ![Project Rooms portable reading copy using explicitly fictional demo records](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/evidence/realtime-chat/portable-demo.png) |
-| Veilbreak: recorded combat viewport. | Project Rooms: fictional handover demonstration. |
+| ![Recorded Veilbreak close-sweep guard in the native viewport](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/evidence/veil-arena/parry-ready.png) | ![Project Rooms portable reading copy with explicitly fictional records](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/evidence/realtime-chat/portable-demo.png) |
+| Preserved P06 origin demonstration. | Preserved P11 fictional handover demonstration. |
 
-## Try a project
+## Applied research
 
-### Native games
+The [combat-response pilot](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/labs/combat-response/README.md) uses P06's actual
+Godot encounter as a controlled timing/response instrument. It investigates
+whether guard, dodge and no response have distinct contact and recovery
+consequences under repeatable inputs. It supplies bounded technical evidence for
+future character-action research; it does not implement Guardian/Duelist classes,
+multiplayer, MMORPG scale or independent player evaluation.
 
-Download the ZIP from its GitHub file page, extract the complete folder and launch
-the executable. These players include their engine/runtime; a Linux x86_64 desktop
-and compatible graphics/system libraries are required. Project instructions cover
-controls, permissions and exact requirements.
-
-- **[Cinderwatch player](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/projects/cinderwatch/dist/cinderwatch-linux-0.5.0.zip):** run `./cinderwatch.x86_64` inside the extracted `Cinderwatch/` folder. [Launch guide](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/projects/cinderwatch/Native/README.md#play-the-linux-distribution).
-- **[Veilbreak player](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/projects/veil-arena/dist/veilbreak-linux-0.6.0.zip):** run `./veilbreak.x86_64` inside `Veilbreak/`. [Launch guide](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/projects/veil-arena/README.md#play).
-- **[Eclipse Fair player](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/projects/eclipse-fair/dist/eclipse-fair-linux-0.6.0.zip):** run `./eclipse-fair.x86_64` inside `EclipseFair/`. [Launch guide](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/projects/eclipse-fair/Native/README.md#play-the-linux-distribution).
-
-### Browser games
-
-Clone or download this repository. From its root, enter the maintained lab:
-
-```sh
-cd martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab
-```
-
-With Python 3, serve either delivered browser build. Run one command in a terminal,
-open its local address, and stop the server with Ctrl+C when finished.
+The [recorded 28-case matrix](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/evidence/combat-response/results.json),
+repeated twice, distinguishes a close parry's early counter from a dodge's
+positional escape. Early/late guards, inward dodges, range, exhausted resources
+and an overlapping hazard expose different failure cases. These fixed traces
+do not compare each response's best possible policy. From the maintained lab,
+with Python 3.11+ and Godot 4.6.3, reproduce and compare them:
 
 ```sh
-# Tokyo 80s — http://127.0.0.1:4173
-python3 -m http.server 4173 --bind 127.0.0.1 --directory projects/tokyo80s/dist
-
-# Flood Crossing — http://127.0.0.1:4174
-python3 -m http.server 4174 --bind 127.0.0.1 --directory projects/waystone-dialogue/browser/dist
+python3 labs/combat-response/run.py --godot godot --output /tmp/combat-response.json --compare evidence/combat-response/results.json
 ```
 
-Both games run in a modern browser from these static builds. Retained hosted demos
-are private and may lag the repository; the project instructions describe current
-local play.
+The [origin inventory](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/labs/origins.json) records all eleven origins,
+dependencies, existing consumers, preservation risks and extraction work.
+**One pilot is implemented.** Other laboratory destinations are candidates.
+P01–P11 are retained technology resources in controlled transition, with no
+requirement to keep releasing eleven independent products. Their useful code,
+media, tests, reading editions and executable demonstrations remain available
+through the [origin index](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/projects/README.md).
 
-### Project Rooms
+## Knowledge and authorial direction
 
-For a quick inspection, download the [fictional HTML handover](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/projects/realtime-integration-lab/examples/cistern-handover.html)
-and open it in a browser with JavaScript enabled. It contains its own reading UI
-and data, so it works offline. GitHub's source view does not execute the reader.
+The [three-brain library](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/brains/README.md) contains the exact supplied
+Engineering, Scientific and Creative volumes: **234 chapters**, a consultation
+catalog and collection index. A deterministic local Python query retrieves
+selected complete chapters. The brains inform engineering, experimental and
+creative decisions; they are not agents, executable commands or model training.
+Their source texts require specific authorization to change.
 
-For the live workspace, use **Node.js 24+** and run from the lab directory:
+[Derived knowledge](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/knowledge/README.md) stores contextual observations,
+interpretations and limits from executed work. It is distinct from the durable
+brain volumes and the [preserved historical source library](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/references/README.md).
+The Creative Brain guides Virgo Diamond; author decisions, editorial directions,
+hypotheses and verified behavior retain different status. Reusing a technique
+from an origin does not merge its fiction into the MMORPG.
 
-```sh
-cd projects/realtime-integration-lab
-npm ci
-npm run rooms
-```
+## Inspect and continue
 
-Open `http://127.0.0.1:3000/studio/`. The [workspace guide](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/projects/realtime-integration-lab/README.md#run-project-rooms)
-explains persistence, recovery and the trusted local deployment scope.
+Start with the [maintained lab guide](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/README.md), [current state](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/docs/STATE.md)
+and [capability catalog](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/capabilities.json). The
+[continuous-development prompt](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/docs/prompts/CONTINUOUS_DEVELOPMENT.md) requires
+brain activation, comparison of opportunities, a functioning increment,
+proportionate verification and authorized publication with remote checks.
+The old version embedded in the outer folder name is a preserved package name.
 
-## Read fiction
-
-**A água sob Darsen / The Water Beneath Darsen** follows a falsified maintenance
-record, a failing cistern and the consequences of emergency corpse-binding.
-Both languages contain the complete five-scene story.
-
-- **Portuguese:** [EPUB](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/projects/lich-cistern/dist/a-agua-sob-darsen-0.3.0.epub) · [A5 PDF](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/projects/lich-cistern/dist/a-agua-sob-darsen-0.3.0.pdf) · [Read the source](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/projects/lich-cistern/story.md).
-- **English:** [EPUB](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/projects/lich-cistern/dist/the-water-beneath-darsen-0.3.0.epub) · [A5 PDF](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/projects/lich-cistern/dist/the-water-beneath-darsen-0.3.0.pdf) · [Read the source](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/projects/lich-cistern/story.en.md).
-
-Download EPUB/PDF files before opening them in a reader. P04 is a separate working
-adaptation; the recovered main-book and OVA PDFs are in the [source library](#source-library).
-
-## Engineering evidence
-
-The portfolio demonstrates inspectable engineering and creative production work:
-
-| Capability | Where to inspect it |
-|---|---|
-| Domain rules, local turn handoff and independent saved fairs | [Eclipse Fair execution](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/evidence/eclipse-fair/SLOT_RUN.json) |
-| Native packaging, state feedback, animation and combat timing | [Cinderwatch release](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/evidence/cinderwatch/RELEASE_RUN.json) · [Veilbreak counter route](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/evidence/veil-arena/PARRY_RUN.json) |
-| Persistent records, idempotent delivery and portable retrieval | [Project Rooms](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/projects/realtime-integration-lab/README.md) · [HTML export evidence](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/evidence/realtime-chat/PORTABLE_RUN.json) |
-| Audio timing, DSP-assisted rehearsal and reproducible creative assets | [Tokyo 80s pitch checks](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/evidence/tokyo80s/PITCH_RUN.json) |
-| Bilingual editorial production and reader-format conformance | [Darsen edition evidence](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/evidence/lich-cistern/REVISION_RUN.json) |
-| Controlled evaluation, artifact separation and failure attribution | [EVAL-001 practice workflow](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/evaluations/chat-send-buffering/README.md) |
-
-The [automated lab checks](https://github.com/MartinFMelcop/Creative_AI_Project_HUB/actions/workflows/lab-checks.yml)
-run on main pushes and pull requests. Project evidence distinguishes executed
-checks, simulated inputs and implementing-agent judgments from independent human
-feedback. EVAL-001 calibration is a practice-task check, not a model ranking.
-
-## Creative capabilities and source library
-
-**P07 — Visual Generation & Asset Lab** supplies paintings, portrait sheets and
-motion atlases already consumed by [Cinderwatch](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/projects/cinderwatch/Native/media/provenance.json)
-and [Veilbreak](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/projects/veil-arena/media/provenance.json).
-**P08 — Audio, Poetry & Music Lab** supplies original soundtracks, cues and tempo
-derivatives for [Tokyo 80s](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/projects/tokyo80s/media/rehearsal-provenance.json)
-and the native games. **P09 — AI Delivery & Operations Cases** remains a seed;
-its [registry entry](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/registry/projects.json)
-has no delivered professional case yet.
-
-### Source library
-
-- **[O Lich literary collection](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/references/literature/lich/README.md):** ten main books and eight OVAs, 18 unchanged PDFs / 2,407 pages, with per-file hashes and searchable text. Title-page `v0.2.87` and metadata `v0.2.88/noncanonical` labels remain distinct; original ZIP, editable sources and current authority policy are unavailable.
-- **[Rave Master reference tree](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/references/rave-master/README.md):** 589 readable files from a pinned source snapshot; 140 explicit exclusions. The earlier selected archive remains preserved.
-- **[Reference catalog and boundaries](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/references/README.md):** distinguish preserved sources, current adaptations and unavailable material. Consult individual provenance and rights records before reuse; this repository has no blanket license for all code, fiction and assets.
-
-## North Star and continuing development
-
-**[North Star](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/README.md)**
-is the long-term MMORPG ambition. Its current deliverables are a vision,
-capability catalog and bounded research gates; engine selection is open and no
-North Star runtime consumer exists. Independent projects retain their own goals,
-technology and creative identity.
-
-For development, start with the [lab guide](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/README.md),
-[current state](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/docs/STATE.md)
-and [decisions](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/docs/DECISIONS.md).
-The maintained lab keeps its original `martin-creative-ai-lab-v0.2.0/` wrapper;
-that folder name is not the current product version.
-
-Martin provides project goals and authorial direction. AI assistance, source
-origins and implementation choices are recorded per project. The [professional
-background](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/SEED.md#3-base-profissional-de-martin)
-is author-reported; these prototypes do not claim client delivery, audience
-validation or commercial readiness. [Martin's GitHub profile](https://github.com/MartinFMelcop)
-links his public work. For product feedback, use [repository issues](https://github.com/MartinFMelcop/Creative_AI_Project_HUB/issues)
-and include the project/version, platform, steps and expected/observed result.
+[Automated checks](https://github.com/MartinFMelcop/Creative_AI_Project_HUB/actions/workflows/lab-checks.yml)
+provide commit-specific results. A passing workflow does not validate player
+experience, hardware accessibility, market demand or commercial readiness.
+Martin supplies authorial direction; provenance records distinguish generated
+assistance, implementation and source origins. Professional background is
+author-reported; these artifacts do not imply client delivery or human approval.
+Consult individual provenance and rights records before reuse: no blanket license
+covers all code, fiction and media. Report reproducible findings through
+[repository issues](https://github.com/MartinFMelcop/Creative_AI_Project_HUB/issues).

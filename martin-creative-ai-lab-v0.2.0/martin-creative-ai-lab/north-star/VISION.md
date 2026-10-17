@@ -1,37 +1,33 @@
-# North Star vision
+# Virgo Diamond vision
 
-North Star is the name of our future MMORPG and the long-term ambition of the
-Creative AI Project HUB. The aspiration is **one of the greatest MMORPG
-experiences ever created**. That is a creative direction, not a verified ranking,
-an existing product, a budget commitment or the deliverable of this foundation.
+**Virgo Diamond: The North Star** is the principal definitive product: an original
+MMORPG where a character's choices become recognizable in action, expression, builds,
+classes, specializations, professions and accomplishments. Adventures should give
+those differences consequences a player can understand and retell. The aspiration to
+create an outstanding MMORPG is a direction, not an achieved ranking or market claim.
 
-Seek a world where meaningful player choices produce understandable consequences,
-cooperation has purpose, characters have agency and social interaction is supported
-by reliable systems. Responsiveness, continuity, recovery, accessibility and
-moderation matter alongside visual/audio identity and challenge. These aims need
-small demonstrations and independent player evidence before claims of success.
+The Creative Brain is the central creative base. Its direct author decisions and
+current instructions carry authority; documented directions and creative hypotheses
+retain their status rather than becoming canon through detail. Initial class
+comparisons, regions, names and quests need bounded implementation and editorial
+judgment. Earlier GDDs and historical collections preserve provenance, not a second
+creative authority. Technical reuse does not merge their universes into Virgo Diamond.
 
-The HUB supports this ambition through research, professional learning, creative
-production and software development. Each project must also have independent
-value: a useful game, tool, publication, asset pipeline or portfolio demonstration.
-Smaller products may support commercial sustainability; no demand, revenue or
-customer outcome is assumed. Maintenance/production cost and licensing belong in
-technology and scope decisions, not speculative monetization claims.
+Make identity playable: anticipation, positioning, defense, exploration, craftsmanship
+and meaningful cooperation should offer intelligible alternatives and costs. Do not
+replace those experiences with ecology maintenance, infrastructure expansion, cosmetic
+variety or a list of attributes. Accessibility, recovery, readable danger and user
+control support that fantasy. Human play and creative evaluation remain necessary;
+passing an automated combat trace does not demonstrate perceived class identity.
 
-Converge only when an actual destination benefits. Keep appropriate languages,
-engines and practices; no framework, cloud vendor, database, final engine or
-microservices architecture is selected here. Preserve historical materials and
-traceable provenance even when their assumptions become obsolete. Source copies
-and origin maturity are not proof of integration. Technical checks, creative
-judgment, independent feedback and commercial evidence remain distinct.
+The HUB remains a public Design-Driven technology portfolio developed with generative
+AI. Eleven historical origins supply code, media, techniques, evidence and useful
+demonstrations without independent release obligations. Question-led labs can combine
+those capabilities. Most investment should benefit Virgo Diamond concretely while
+preserving the portfolio's professional communication and technological diversity
+when justified by requirements, not quotas.
 
-North Star is a new identity. Rave Master and the literary series are references,
-not mandatory names, settings or canon. Shared technical knowledge does not merge
-fictional universes. Characters, religions, locations, classes, magic systems and
-relationships require deliberate creative selection and rights review. Similar
-names do not establish equivalence. The future world may be new original IP or
-use approved original ideas; this foundation makes neither decision implicitly.
-
-Progress through bounded experiments that expose real risks. Reassess North Star
-against other portfolio opportunities every session, pursue observable value and
-retain user-facing products instead of substituting an ever-growing strategy file.
+No final engine, server, database, monetization or large-scale architecture is selected.
+Use bounded instruments and playable increments with real consumers before expensive
+convergence. Preserve rights and irreplaceable sources. Origin verification, adaptation,
+destination integration, external player evidence and commercial signals remain distinct.

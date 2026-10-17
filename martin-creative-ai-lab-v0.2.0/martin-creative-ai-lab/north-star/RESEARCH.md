@@ -1,43 +1,42 @@
-# First technical research direction
+# North Star research direction
 
-No experiment is implemented by this foundation. A promising candidate is a
-small persistent **shared village state** whose supply or repair changes through
-player actions. Start with one clear player interaction and consequence, not a
-world renderer, account system, shard fleet or complete MMORPG skeleton.
+## Current executed instrument
 
-## Gate 1 — specify a bounded command contract
+The [combat-response pilot](../labs/combat-response/README.md) instruments the unchanged
+P06 encounter with repeatable inputs and baseline/response controls. Its question is
+whether existing timing, position and response actions have distinguishable technical
+outcomes and trade-offs worth investigating for character agency. It does not implement
+Guardião/Duelista, establish class balance, or consume a capability in Virgo Diamond.
+Read its actual protocol and recorded results before transferring any parameter.
 
-Decide who owns resources, who may act, how costs/quantities are validated and
-which action changes the village. Define receipts and idempotency keys scoped
-to actor/command; reject key reuse with different payloads. Define observable
-client state and conflicts before choosing transport, engine or database.
-P01/P05 local transactions and P11 messaging/recovery are inspected candidates;
-their schemas and chosen labels are not already authoritative game contracts.
+The first comparison favored combat response over existing P01 economy controls,
+P10 narrative consequence research and P11 persistence instrumentation because its
+bounded question directly concerns recognizable action. This is not a fixed work order.
 
-## Gate 2 — implement and execute a real consumer
+## Candidate next questions, not implemented commitments
 
-Choose language/storage/transport from actual consistency, latency, persistence,
-deployment, license and tool requirements. A minimal process-level implementation
-may precede an engine client. Verify two actors competing for the last resource,
-repeated delivery, invalid/negative/unauthorized commands and no double spend.
-Crash before/after acceptance: acknowledged costs/consequences survive exactly
-once; incomplete writes cannot create resources. Reopening and reconnecting
-clients must converge to accepted state with explicit conflict/receipt handling.
+- Can two bounded character identities produce different intelligible decisions under
+  the same threat, with meaningful costs and at least two eligible responses?
+- Can players explain a quest consequence without exposition and distinguish voluntary
+  commitments from presumed consent? P10 supplies replayable narrative provenance.
+- Can a profession create a recognizable contribution without compulsory repetition?
+  P01 offers deterministic resource transactions, not proof of player motivation.
+- Can accepted shared actions survive retries/conflicts without double spending?
+  P05/P11 offer local recovery evidence, not shared-world authority or production scale.
 
-Only then record adaptation/integration against actual code, consumer and
-execution evidence; evolve the catalog/validator together. A simulated fixture
-checks specified behavior, not real player trust or production concurrency/load.
-Keep deterministic replay/diagnostics useful without collecting unnecessary
-personal data. A failure or unavailable dependency remains a failed/incomplete gate.
+Choose among these and newly observed weaknesses using current brain activation,
+actual tools, portfolio value and expected North Star benefit. Do not choose massive
+infrastructure simply because source code exists.
 
-## Gate 3 — assess experience and continuation cost
+## Research and destination gates
 
-Give independent participants a small shared goal and observe whether consequences,
-cooperation and recovery are understandable. Assess abuse/authorization boundaries,
-accessibility, moderation/operations ownership and production cost before public
-use. Social benefit, enjoyment, infrastructure scale and commercial demand need
-separate evidence. Expand only if the experiment supports it; compare current
-independent products and creative opportunities before investing further.
+State question, refutable hypothesis/rivals, unit of observation, repeatable inputs,
+controls, measurements, limits and stopping/decision criteria. Calibrate instruments
+with positive/negative controls, preserve relevant outcomes and test failure cases.
+Synthetic traces demonstrate specified behavior, not real participants or enjoyment.
 
-Literary/Rave concepts remain optional. No village name, species, magic, historical
-quest or class enters North Star canon through a technical transfer.
+A genuine destination increment needs an actual consumer, observable consequence and
+executed evidence. Only then evolve the foundation stage and capability contracts.
+Local gameplay does not prove multiplayer, scale, retention or demand. External
+participants can later assess whether choices, costs, feedback and identity are
+understandable; disclose sample/context and do not treat agent review as human evidence.

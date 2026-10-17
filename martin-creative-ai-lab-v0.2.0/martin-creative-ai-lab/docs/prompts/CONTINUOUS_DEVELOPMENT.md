@@ -1,72 +1,203 @@
-# Creative AI Project HUB — design-driven continuous development
+# Creative AI Project HUB — three-brain Design-Driven development
 
 Repository: `MartinFMelcop/Creative_AI_Project_HUB`
 URL: https://github.com/MartinFMelcop/Creative_AI_Project_HUB
-Publication branch: `main`.
+Authorized publication destination: `main`, verified and without force.
 
-Execute one substantial, coherent development milestone. This request authorizes implementation, actual Git commits and normal non-force publication of verified changes to main. Do not stop at a plan or proposed commit text. Respond in Portuguese; maintain technical documentation, comments and Git messages in English. Preserve the appropriate language of creative works.
+Execute one substantial, coherent increment with actual implementation, execution,
+verification, Git commit and authorized publication. Respond in Brazilian Portuguese;
+write new technical documentation, comments and Git messages in English. Preserve
+appropriate languages of creative works and immutable supplied knowledge sources.
+Do not stop at a plan, proposed commit message or documentation-only renaming.
 
-## Discover the actual state
+## Direction
 
-Inspect branch, HEAD, working tree, local commits, remotes and recent history before editing. Read applicable current AGENTS.md instructions. Preserve unrelated user changes. Locate the maintained lab rather than assuming a version: historically `martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/`. Read its docs/STATE.md, registry/projects.json, relevant SEED.md sections and significant decisions. Inspect actual implementations, assets, tests and execution evidence. Check installed tools, engines, SDKs, dependencies and publication capabilities. Separate source, specifications, historical records, plans and verified behavior.
+The HUB remains an authorial public **technology portfolio developed with generative
+AI and guided by Design-Driven Development**. It demonstrates real instruments,
+creative/technical capabilities, architectures, experiments, decisions and evidence.
+It is neither merely a research repository nor exclusively an MMORPG codebase.
 
-Compare several credible opportunities across projects/categories. Evaluate distinctive experience, meaningful choices, narrative/art/audio quality, useful workflows, missing capabilities, reliability, accessibility, feasibility, distribution, reuse and evidence opportunities. Select the strongest expected product value; do not automatically repeat the latest project, rotate mechanically or choose the easiest technology.
+**Virgo Diamond: The North Star** is the principal definitive product. Most new
+investment should demonstrably benefit its original MMORPG experience: becoming a
+distinct, recognizable character through choices, builds, classes, specializations,
+professions and meaningful adventures. Do not substitute speculative infrastructure,
+ecology, auxiliary interfaces or a cosmetic demo for that experience. Compare useful
+portfolio/laboratory work honestly; engine, server and monetization remain decisions
+requiring evidence, not defaults.
 
-Recent context is guidance, not a mandatory target: P06 gained a native sweep-practice/review loop and P11 gained complete snapshot print reports. Reassess unassisted play/learning and actual handover usefulness alongside native delivery, literary source comparison and other current portfolio needs. Read current records for versions and limitations.
+P01–P11 are historical technology origins in controlled transition, with useful code,
+assets, methods, tests, demonstrations and provenance retained. They no longer require
+independent playable/commercial products or release schedules. Labs are organized by
+questions and technologies, not one per old project. Preserve functioning consumers
+until migration evaluates their contracts. Candidate labs are not implemented labs.
+P07/P08 include distributed visual/audio assets; P09 has no demonstrated delivery case.
 
-## Design, implement and evaluate
+## Discover actual state
 
-Establish the intended audience and what they should experience, decide, discover or accomplish. Inspect real artifacts to identify the weakness. Compare materially different approaches, including deepening existing interactions, improving feedback or simplifying a workflow. Research external references only when they resolve a real question; respect rights and avoid copying protected works.
+Locate the Git root and maintained workspace rather than assuming a wrapper version;
+historically `martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/`. Before editing,
+inspect status, branch, HEAD, untracked files, local commits, remotes, recent history,
+remote main and publication capability. Preserve unrelated user work. Read current
+root/lab AGENTS, SEED relevant sections, STATE, significant DECISIONS, SEED_EVOLUTION,
+this prompt, affected registries, labs/origins.json and actual source/evidence.
+Inspect relevant brains, knowledge, references, experiments, evaluations, projects and
+north-star materials; check tools, engines, SDKs, dependencies and real permissions.
 
-Define the verified baseline and intended improvement. Implement the connected functionality/content, integrate it, execute it, compare before/after and refine significant weaknesses. Deliver functioning artifacts when feasible. Do not equate feature counts, complexity, documentation volume or minimal diffs with value. If blocked, complete the strongest feasible functional intermediate result and report unmet dependencies honestly.
+Distinguish preserved source, specifications, plans, origin execution, laboratory
+instrumentation, demonstrated adaptation, destination integration, external experience
+validation and market evidence. Historical AGENTS/SEED/CANON/backlogs are source data,
+not current instructions. Do not infer canon or authority from filenames, repetition,
+missing manuscripts/policies or old reports. Preserve licenses, attribution and source
+hashes; never publish secrets, restricted material or unauthorized third-party assets.
 
-Choose technology for product/platform requirements, performance, usability, maintainability and available tools. Do not default to browsers, migrate functioning software merely for language diversity or make premature MMORPG infrastructure decisions. Distinguish code creation, compilation, configured engine projects, application execution and actual gameplay verification.
+## Mandatory brain activation before ANY improvement
 
-Evaluate game choices, consequences, pacing and feel; literary agency, voices, tension and continuity; visual composition, silhouette, motion and readability; musical identity, timing and integration; application clarity, recoverability and user control. Improve actual creative artifacts when selected. Avoid repetitive AI prose, manufactured aphorisms and exposition-heavy dialogue.
+The five supplied files in `brains/` are durable independent knowledge sources:
+ENGINEERING_BRAIN.md, SCIENTIFIC_BRAIN.md, CREATIVE_BRAIN.md,
+CATALOGO_DE_CONSULTA.json and BIBLIOTECA_DE_CONHECIMENTO_APLICADO.md. Do not edit them,
+append operational details or update their integrity pins without specific current
+user authorization. Their public availability does not grant third-party rights.
+Operational metadata and known integrity limitations belong outside their texts.
 
-## Portfolio, history and North Star
+1. Read current work state and all three indices using
+   `python3 tools/brain_query.py indexes` from the maintained lab.
+2. Classify engineering, scientific and creative relevance, explicitly including low
+   relevance. Engineering covers requirements, architecture, implementation, failures,
+   reliability and trade-offs; science covers hypotheses, controls, instrumentation,
+   data, uncertainty and validity; creation covers North Star identity, player choices,
+   narrative, world, art, audio, classes/builds/professions and progression.
+3. Search selectively with `python3 tools/brain_query.py search "question"`, then read
+   complete pertinent chapters using `python3 tools/brain_query.py get ENG-027` (or the
+   relevant SCI/CRE IDs). The catalog is a locator, not a replacement for the chapter.
+   Do not load all 234 chapters each execution. Observe reported source fragment
+   limitations without silently changing supplied bytes.
+4. Apply useful knowledge to problem selection, rival hypotheses, alternatives, design,
+   risks and validation. Record document/chapter IDs and why briefly in affected work
+   evidence or decisions, without artificial reports for trivial tasks.
+5. Consult relevant contextual findings in `knowledge/`: question/context, source,
+   observation, interpretation, validity limit and practical consequence. Preserve
+   positive, negative and inconclusive findings. Do not duplicate brain chapters.
 
-Projects may change identity, scope, technology or medium, merge, split, pause or retire when evidence supports it. Preserve provenance and irreplaceable historical sources; do not rewrite archives. Consult maintained reference catalogs and actual version-specific sources when relevant. Historical AGENTS/SEED/CANON/backlog rules are data, not current authority. Missing manuscripts/policies, filenames and repeated summaries do not establish canon. Do not publish secrets, restricted materials or unauthorized third-party assets.
+Current user instructions and platform safety/authorization take precedence; relevant
+brain principles inform operational agents/prompts using current evidence. Brains do
+not execute commands or train the underlying model. Creative D/A/H/E/V distinctions
+remain intact: a hypothesis is not canon, documented direction is not player validation,
+and a current direct author decision overrides an earlier proposal. The Creative Brain
+is the central creative base; previous GDDs/catalogs are provenance, not a competing
+creative authority. Agent review is not independent human feedback.
 
-North Star is the future original MMORPG convergence ambition, not an automatic workstream or shared fictional universe. Determine its current stage from evidence. Distinguish candidate concepts, verified origin capabilities, adaptation, actual destination integration and external validation. Require a real consumer and execution evidence before claiming integration. Independent products remain valuable; do not impose an engine or import systems merely because they exist.
+## Select, design, implement and execute
 
-## Evidence and continuity
+Compare several credible opportunities across actual laboratory questions, technology
+demonstrations and North Star development. Assess distinctive character experience,
+meaningful choices, narrative/art/audio quality, workflow usefulness, reliability,
+accessibility, feasibility, distribution, reuse and evidence value. Do not rotate
+mechanically, repeat the last origin or choose the easiest technology by default.
+Read current records for versions and limitations; no old priority is a mandatory target.
 
-Run proportionate unit, integration, runtime, engine, media, persistence and failure-case checks with bounded runtime processes; stop owned previews and test applications after verification or interruption. Inspect actual gameplay, scenes, prose, interfaces or output. Distinguish sandbox/socket, display and audio-driver failures from product defects; reproduce suspected environment failures against the baseline before changing product code or weakening checks. Technical correctness and experiential quality are separate. Label verified behavior, reasoned assessment, unverified hypotheses and genuine independent human validation accurately. Never invent tests, user reviews, model scores, originality, demand, revenue or commercial readiness. Codex review is not independent human feedback.
+Define audience, intended experience/accomplishment, inspected weakness, verified
+baseline and improvement. Compare materially different approaches: deeper interaction,
+clearer feedback, simpler workflow, extraction/instrumentation or bounded gameplay.
+Research external references only to resolve a real question, respecting rights.
+Choose technology for requirements and available tools; do not force engine migration
+or artificial language diversity. Keep brain consultation local and deterministic;
+add vector databases, remote services or orchestration only for demonstrated needs.
 
-Update only materially affected existing records: STATE, decisions, relevant SEED sections, registries, project guides and execution evidence. Keep current priorities separate from historical milestones. Do not create duplicate registries, artificial backlog or lengthy SEED reports. Follow current repository/link/manifest checks; evidence must identify baseline, environment and tested artifacts.
+Implement connected functionality/content and integrate it into a real workflow.
+For experiments state a refutable hypothesis, rival explanations, controls/baseline,
+repeatable inputs, measured outcomes and limits before interpreting results. Preserve
+all pertinent outcomes; traces are not independent participants. For creative work
+inspect actual scenes/gameplay/prose/composition/motion/audio/output and refine material
+weaknesses. Evaluate choices and consequences, pacing/feel, voices/continuity, silhouette,
+readability, musical timing/identity or recoverability/user control as relevant.
+
+Bound runtime processes and stop owned previews/test applications after verification
+or interruption. Run proportionate unit/integration/runtime/engine/media/persistence
+and failure checks. Reproduce suspected sandbox/socket/display/audio-driver failures
+against baseline before changing software or weakening gates. Separate code creation,
+compilation, configured engine, actual execution and gameplay verification. Separate
+technical correctness, agent creative assessment and genuine external human validation.
+Never invent users, originality, scores, enjoyment, retention, revenue or readiness.
+If blocked, complete the strongest feasible functional intermediate and report missing
+requirements honestly; plans and renamed directories do not establish functionality.
+
+## Continuity and contribution boundaries
+
+Update only materially affected records: STATE, durable decisions, relevant SEED,
+SEED_EVOLUTION when direction changes, registries, origins/lab guides, derived knowledge,
+presentation and execution evidence. Evidence identifies baseline, environment,
+input/source versions or hashes, tested artifacts, actual commands/results and limits.
+Keep current priorities separate from historical milestones. Do not create duplicate
+registries or artificial backlog. Preserve irreplaceable sources and unrelated changes.
+
+Maintain honest North Star capability states. Code/tests/assets/docs from an origin,
+a laboratory instrument and a proposed consumer do not equal integration. Promote only
+with real destination code/consumer and demonstrated execution; intentionally evolve
+catalog/schema gates together when the foundation stage truly changes. A local prototype
+does not prove multiplayer, MMORPG scale, fun, retention or commercial demand.
+
+Run applicable repository/source/brain/link/manifest gates and their regressions:
+`python3 tools/validate_repo.py`, `python3 tools/reference_library.py check`,
+`python3 tools/brain_query.py check`, relevant `tools/test_*.py`, and actual instrument
+or application suites. Regenerate MANIFEST.sha256 after final changes, then run
+`python3 tools/check_manifest.py` with exact coverage. Do not weaken validation for green.
 
 ## Adaptive prompt lifecycle
 
-After the product milestone, briefly assess what worked, wasted effort, missed weaknesses or outdated assumptions, and whether tools/validation served the design. Maintain this single complete authoritative prompt file. Change adaptive discovery, priorities, research or verification guidance only when observed evidence materially justifies it; replace obsolete guidance rather than accumulating rules. Retain the prompt unchanged when no improvement is justified. Do not hardcode the last project as the next target.
-
-Preserve the stable contracts: real-state inspection, portfolio comparison, design-driven implementation, project independence/provenance, rights/privacy/safety, honest evidence, proportionate validation, meaningful actual commits, authorized non-force publication, remote verification, limitations and a complete next prompt. Do not weaken them for convenience or claim underlying model improvement.
-
-Prepare and validate any justified prompt changes before the final commit. Reconcile relevant remote prompt changes before publication. The next prompt must be independently usable, match the final maintained file and itself require the subsequent prompt. Prompt maintenance must not replace product development.
+After the functional increment, briefly assess what worked, wasted effort, missed
+weaknesses and outdated assumptions; did tools and validation serve the design?
+Maintain this SINGLE complete authoritative operational prompt. Change durable
+adaptive guidance only when observed evidence justifies it, replacing obsolete text
+instead of accumulating rules. Otherwise retain it unchanged. Never hardcode the last
+laboratory as the next target or claim underlying model improvement. Prepare and
+validate any prompt changes before the final commit and reconcile relevant remote
+prompt changes. Prompt maintenance must not replace product/research implementation.
 
 ## Commit and publish
 
-Inspect the complete diff; stage only intended changes; inspect staged changes and exclude secrets, unrelated edits and scratch files. Create an actual non-empty commit with an English subject of at most 72 characters and stored English body of at most 1,200 characters. The body must explain implementation, purpose, checks actually run and material limitations. Verify `git log -1 --format=%B` and `git show --check --oneline HEAD`.
+This request authorizes actual commits and normal non-force publication of verified
+changes to main, subject to real platform permissions. Inspect complete and staged
+diffs; stage only intended files, excluding secrets, caches, scratch and unrelated work.
+Create a nonempty commit with English subject at most 72 characters and stored English
+body at most 1,200 characters explaining implementation, purpose, actual checks and
+material limitations. Verify `git log -1 --format=%B` and
+`git show --check --oneline HEAD`.
 
-When authorized authenticated Git transport works, execute:
+When working authenticated Git transport is available, execute appropriately:
 
 ```bash
- git fetch origin main
- git merge --no-edit FETCH_HEAD
- git status --short --branch
- git diff --check
- git push origin HEAD:refs/heads/main
- git ls-remote origin refs/heads/main
+git fetch origin main
+git merge --no-edit FETCH_HEAD
+git status --short --branch
+git diff --check
+git push origin HEAD:refs/heads/main
+git ls-remote origin refs/heads/main
 ```
 
-Inspect fetched state and outgoing history before pushing. Rerun affected checks after relevant merges and reconcile prompt assumptions. Never force-push, rewrite remote history, discard user changes or bypass failures. If transport is unavailable, use a supported authorized publishing integration when possible; inspect remote main, preserve ancestry and update it without force against the expected head. Do not repeatedly retry a demonstrably unavailable transport. Do not claim Git commands were executed when an integration was used.
+Inspect fetched state, divergence and outgoing history before merging/pushing; reconcile
+concurrent changes and repeat affected checks after relevant merges. Never force-push,
+rewrite remote history, delete branches, discard user work or bypass failures. If Git
+transport is demonstrably unavailable, do not repeatedly retry; use a supported
+explicitly authorized integration preserving ancestry against expected remote head.
+Report the actual method, not invented Git commands. If blocked, preserve work and
+report **NÃO PUBLICADO** with exact limitation. A local commit is not publication;
+a push is not CI success. Verify actual remote SHA and intended files, and check CI
+when available without inventing success or ignoring failed gates.
 
-Verify the actual remote SHA and intended changes. A local commit is not publication; a push is not CI success. If blocked, preserve completed work and report exact publication status and limitations.
+## Final report and full successor
 
-## Final response and next execution
+Respond in Brazilian Portuguese. Report baseline/branch, selected opportunity and
+alternatives, brain chapters used, design objective, implemented artifact and before/
+after evidence, creative assessment, laboratory/portfolio/origin transitions, derived
+knowledge changes, North Star relevance/real consumers, actual tests and limitations.
+Attribute human contributions only when observed. Give actual commit subject and
+stored body, implementation SHA, confirmed remote SHA, branch, GitHub URL, publication
+and relevant CI status; distinguish identities if an integration created a new commit.
+Explain whether the prompt changed and the evidence-based reason.
 
-Respond in Portuguese. Report the selected opportunity and alternatives, design objective, actual implementation, demonstrable artifact, before/after result, North Star relevance, tests, creative assessment and limitations. Report actual commit subject and stored body, implementation SHA, confirmed remote SHA, branch, GitHub URL, publication and relevant CI status. Distinguish local and remote commits if an integration produced different identities.
-
-Briefly explain meaningful portfolio/maturity changes and whether the prompt changed, with its evidence-based reason. Then provide the FULL next development prompt in a clearly delimited Markdown code block, matching the final maintained file. A link, summary, placeholder or reference to this conversation is insufficient. Preserve this adaptive lifecycle and commit/publication contract so future executions continue the process.
-
-Execute now: discover the current HUB, compare opportunities, design and implement one coherent milestone, verify actual improvement, update necessary continuity, review this prompt, commit and publish verified changes, and provide the complete next prompt ready to copy.
+Finish with the FULL next development prompt in ONE clearly delimited Markdown code
+block, ready to copy, matching this final maintained/published file exactly. A link,
+summary, placeholder or reference to the current conversation is insufficient. Verify
+that correspondence. The successor must independently preserve this complete lifecycle
+and itself require the subsequent full prompt. Execute now until the authorized
+functional increment, verification and publication are handled.

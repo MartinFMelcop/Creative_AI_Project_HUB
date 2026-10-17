@@ -1,36 +1,48 @@
 # SEED — Martin Creative AI Lab
 
-**Version:** 0.32.9
+**Version:** 0.33.0
 **Data-base:** 10 de outubro de 2026  
 **Autor e responsável pelo portfólio:** Martin Melcop Neto  
-**Working language:** English for new documentation, plans, code comments, UI, and reports. Preserve original creative titles and historical source languages.
-**Current state:** North Star is the future MMORPG ambition and long-term convergence program, while existing products remain independent. A pinned Rave library now supplies 589 readable sources with 140 explicit exclusions and unchanged earlier archive integrity. Ten individually supplied main-book PDFs, eight OVA PDFs and their searchable text are preserved; title pages say v0.2.87, metadata says v0.2.88/noncanonical drafts. The oversized ZIP and authority policy remain unavailable. Source discovery, contribution boundaries and executable integrity checks establish a foundation, not a running MMORPG.
+**Working language:** English for new technical documentation, plans, code comments and Git messages; respond in the requested language (Brazilian Portuguese for continuous closeout). Preserve appropriate creative/source languages.
+**Current state:** The HUB remains an authorial Design-Driven technology portfolio developed with generative AI. Virgo Diamond: The North Star is the principal definitive product; most new investment should demonstrably benefit its character identity and meaningful adventures. P01–P11 are preserved technology origins in controlled transition, without independent product/release obligations. Their versions and technical evidence are retained, not reclassified as laboratory or MMORPG maturity.
 
-> Construir um laboratório autoral em Git que transforma ideias, obras e experimentos em produtos pequenos, sistemas reutilizáveis e evidências técnicas verificáveis. A IA participa da criação e execução; Martin desenvolve sua capacidade de especificar, compreender, selecionar, corrigir, validar e explicar os resultados.
+## Production direction — Virgo Diamond and the three brains
 
-## Long-term convergence — North Star
+The five exact supplied sources in [brains/](brains/README.md) are durable knowledge
+bases, separate from historical [references](references/README.md) and derived
+[knowledge](knowledge/README.md). Before any improvement, activate all three indices,
+classify engineering/scientific/creative relevance, selectively retrieve complete
+pertinent chapters and record their practical use briefly. Current user instructions
+and platform authorization/safety prevail; relevant brain principles inform operational
+agents using current evidence. Brains do not execute, authorize commands or train models.
+Their source texts/catalog/index require specific authorization to change.
 
-[North Star](north-star/README.md) is the future MMORPG project and long-term
-ambition of this research, learning and production ecosystem. Its aspiration
-is one of the greatest MMORPG experiences ever created, not an achieved ranking
-or this session's deliverable. Independent products retain value, technology,
-creative identity and possible commercial paths. Select technologies by product
-requirements, not quotas or compulsory engine migration.
+The Creative Brain is the central creative base for Virgo Diamond. Its direct author
+decisions, documented directions and hypotheses retain different status. Previous GDDs
+and source catalogs are provenance, not a competing canon. Distinct recognizable
+characters through choices, builds, classes, specializations, professions and
+accomplishments are the central fantasy; ecology or speculative infrastructure must
+not displace meaningful adventure. Current author decisions supersede earlier proposals.
 
-[Vision](north-star/VISION.md), [capabilities](north-star/capabilities.json) and
-[research gates](north-star/RESEARCH.md) require implemented destination benefit
-before convergence claims. Candidate/origin-verified/adapted/integrated/external
-states are separate from project M0–M6. No current North Star consumer exists.
-Technical, artistic/literary, independent human and market evidence are distinct.
-Sharing methods does not merge fictional universes or adopt historic CANON.
+[labs/origins.json](labs/origins.json) inventories all eleven origins, dependencies,
+existing consumers, extraction needs, risks and transition state. Labs follow questions
+and technologies, not a mandatory one-to-one mapping. The first operational pilot is
+[combat-response](labs/combat-response/README.md), which instruments the unchanged P06
+encounter. It is not a North Star consumer, new class implementation or human study.
+Keep useful demonstrations and tests available while migrating real consumers.
 
-The [reference library](references/README.md) separates preserved original bytes,
-readable source copies, normalized discovery and current adaptations. Its
-[Rave snapshot](references/rave-master/README.md) preserves eligible texts;
-[literary recovery](references/literature/lich/README.md) records unavailable
-ZIP and earlier report boundaries alongside individually imported main and OVA PDFs. Historical instructions are data,
-not current governance. Preserve independent commercial opportunities and rights
-limits; use small verified experiments before expensive MMORPG infrastructure.
+[North Star](north-star/README.md) retains fourteen capability records and
+`foundation_only` with zero destination consumers. Origin verification, laboratory
+instrumentation, adaptation, integration and external validation remain distinct.
+Select engines/languages by requirements, not forced diversity or a predetermined stack.
+The portfolio continues to demonstrate real technologies; this transition is not its
+replacement by research pages or an MMORPG-only repository.
+
+Historical reference bytes, the earlier source ZIP and eighteen literary PDFs remain
+preserved under their existing hashes/rights/availability boundaries. Technical reuse
+does not merge fictional universes. Source details below are historical provenance or
+retained origin behavior; current operation is defined by this direction, AGENTS,
+STATE and the single [continuous prompt](docs/prompts/CONTINUOUS_DEVELOPMENT.md).
 
 ### Navegação
 
@@ -47,47 +59,28 @@ limits; use small verified experiments before expensive MMORPG infrastructure.
 
 ## 0. Como começar uma sessão
 
-Leia esta seção, `docs/STATE.md`, `registry/projects.json` e as instruções de `AGENTS.md`. Depois consulte somente os capítulos desta seed e os arquivos do projeto necessários à tarefa. Não carregue todos os manuscritos, imagens e logs em toda sessão.
-
-Se apenas este arquivo estiver disponível, ele é suficiente para iniciar a Fase 0 descrita na seção 19. Os arquivos auxiliares são uma estrutura recomendada, não uma dependência para compreender a proposta.
-
-### Contrato inicial com o agente
-
-1. Identifique a fase solicitada, o projeto e o entregável verificável.
-2. Inspecione o estado real dos arquivos e a capacidade do ambiente antes de prometer execução.
-3. Diferencie fatos profissionais, legado recuperado, artefatos inspecionados, hipóteses e trabalho proposto.
-4. Escolha uma unidade de trabalho que consiga encerrar com evidência ou uma limitação documentada.
-5. Produza ou altere os arquivos necessários; explicação no chat não substitui entregável solicitado.
-6. Execute as verificações proporcionais ao que mudou. Registre o que não conseguiu executar.
-7. Atualize o estado, as decisões relevantes e a próxima ação concreta.
-8. Resuma o resultado em linguagem simples: mudança, motivo, evidência, limites e próximo passo.
-
-**Nunca declarar como realizado o que foi apenas planejado, gerado em texto, compilado parcialmente ou descrito por um agente anterior.**
-
-### Current state for the next session
+Read current root/lab AGENTS, STATE, the affected registries and real artifacts.
+Inspect local/remote Git state and tools before editing. Run the mandatory three-brain
+activation described above with `python3 tools/brain_query.py indexes`, selective
+`search` and complete `get ID` retrieval. Consult relevant derived knowledge.
+Compare alternatives across research questions, portfolio capabilities and North Star
+benefit; choose one verifiable increment and implement/execute it. Use the single
+[operational prompt](docs/prompts/CONTINUOUS_DEVELOPMENT.md), not obsolete phases below,
+for continuous development and its full successor requirement.
 
 | Field | Current evidence |
 |---|---|
-| Repository | MartinFMelcop/Creative_AI_Project_HUB; actual Git root `/workspace/Creative_AI_Project_HUB`; wrapper retained |
-| Preserved sources | Old ZIP: 175 Rave / 3 WebSocket texts unchanged. New Rave library: 589 readable / 140 excluded from 729; ten main and eight OVA PDFs (2,407 pages) plus derived text; ZIP/policy unavailable |
-| Current milestone | P05 Cinderwatch native 0.5.0 accepted-progress recovery |
-| Delivery | Native Save recovery copy/Open run and an explicit leave decision for accepted actions after a failed save; single primary autosave retained |
-| Evidence | Baseline/current native, failure, package and runtime checks in [the execution record](evidence/cinderwatch/RECOVERY_RUN.json); see `docs/STATE.md` for results and limits |
-| Limits | Technical M4 and Codex review; no independent unassisted play, physical audio/accessibility or commercial validation; no cloud or concurrent-process coordination |
-| Next action | Observe whether unassisted players can preserve and resume after a failed write; compare physical practice, actual handovers and literary comprehension afresh |
-| Other products | P01/P06 0.6.0, P03/P08 0.5.0, P04 0.3.0, P10 0.7.0, P11 0.8.0 and P02 0.2.1 retained |
-| Rules / assets | Existing reference bytes, rules, save schema and media retained; North Star has no consumer |
-| Attribution | Baseline `e183e31`; Codex implementation and interface review; independent human feedback remains pending |
+| Baseline | `c360f68e2be933d55f082a414663d28ab24eac8d`; wrapper retained |
+| Current milestone | Three-brain consultation, controlled origin transition and one executed combat-response pilot |
+| Sources | Five byte-preserved supplied brain files; historical reference inventories unchanged |
+| Operational state | [STATE](docs/STATE.md), [origins](labs/origins.json), [brain integrity](brains/integrity.json) |
+| Portfolio | Technology capabilities, inspectable source/demonstrations and bounded execution evidence |
+| North Star | Main product direction; fourteen catalog entries, foundation only, no destination consumer |
+| Next selection | Reassess actual character-experience questions, laboratory instruments and portfolio value from new evidence |
 
-Registry evidence paths must resolve to existing files inside the lab; working
-paths must be directories and legacy-source IDs must exist. This documentary
-gate does not validate report contents or promote project maturity. See
-[the QA contract](docs/REGISTRY_VALIDATION.md) for checks and limits.
-
-Maintained [assessment](docs/ASSESSMENT.md) and [plan](docs/IMPROVEMENT_PLAN.md)
-continue the recovery. Preserve the historical source archive; adaptations and
-translations belong in working projects. Read [state](docs/STATE.md) for the
-current unit and evidence, rather than assuming the v0.2.0 recovery is current.
+Registry and source gates establish structure/integrity, not gameplay quality or truth
+of every report. Never promote planned/generated/compiled artifacts to executed or
+human-validated behavior. Update only affected records and preserve unrelated changes.
 
 ## 1. Mandato do autor: tudo pode evoluir
 
@@ -241,12 +234,18 @@ A v0.2.0 acrescenta os snapshots de Rave Master e WebSocket: 180 arquivos textua
 
 ## 5. Inventário de projetos como matéria-prima
 
+**Current classification:** all P01–P11 are technology origins in controlled transition.
+The descriptions below preserve origin accomplishments and provenance, not independent
+product obligations. [The transition inventory](labs/origins.json) records current
+capabilities, dependencies, risks and candidate research destinations. Versioned origin
+artifacts remain inspectable; they are not eleven implemented research laboratories.
+
 Identificadores persistem mesmo quando nomes mudam. Um projeto arquivado pode continuar como fonte de dados, arte, narrativa ou conhecimento.
 
 | ID | Seed | Matéria-prima principal | Destinos possíveis | Estado nesta fundação |
 |---|---|---|---|---|
 | P01 | Artemyra / Eclipse Fair | Typed economy and native C# presentation | Godot .NET board, terminal workbench, replay and comparison | Native 0.6.0 local fair slots and standalone Linux; core/CLI rules 0.1.0 retained |
-| P02 | AI Evaluation & QA Lab (historical Unity proposal) | Requirements, reproduced bugs, artifact checks | Bounded practice tasks and later independent evaluation | EVAL-001 runner 0.2.0 uses pinned snapshots, starter 0.1.0; M4 harness scope, no model candidate |
+| P02 | AI Evaluation & QA Lab (historical Unity proposal) | Requirements, reproduced bugs, artifact checks | Bounded practice tasks and later independent evaluation | EVAL-001 runner 0.2.1 uses pinned snapshots, starter 0.1.0; M4 harness scope, no model candidate |
 | P03 | Tokyo 80s | Original music, timing and sustained interaction | Midnight Signal and Rain Circuit with track selection/transition | P03 0.5.0 head/tail review / P08 0.5.0 backing; human play/listening pending |
 | P04 | O Lich mais velho da tumba mais antiga / Darsen reading editions | Narrative, translation and reader production | Complete Portuguese story and English EPUB/PDF | Revised standalone adaptation 0.3.0 in both languages; old editions preserved, no historical manuscript restoration |
 | P05 | The Dark Knight / Cinderwatch | Turn-based seed, AGI, rows and states | Native three-encounter tactical rescue campaign | Native 0.5.0 recovery copies and guarded navigation; self-contained Linux player; historical RMXP packages absent |
@@ -255,7 +254,7 @@ Identificadores persistem mesmo quando nomes mudam. Um projeto arquivado pode co
 | P08 | Audio, Poetry & Music Lab | Original musical production and integration | Two P03 stages and P06 native soundscape | Real masters/exports/scores; no album or human listening approval |
 | P09 | AI Delivery & Operations Cases | Carreira real e avaliação simulada | Case de entrega, análise de workflow e rubricas | Base profissional lida; cases anteriores pendentes |
 | P10 | Adventures Unleashed / Rave Master | Narrative, NPCs and recovered systems | Two-day browser rescue/relief campaign with local resume and portable saves | Campaign 0.7.0 playable deferred request; Python adventure 0.2.0 / standalone 0.1.3 retained; bounded evidence in registry |
-| P11 | Real-time Integration Lab / Project Rooms | Node/Socket.IO/SQLite | Trusted local project conversations, decisions, portable records and recovery | Workspace 0.7.0 with complete print reports and offline reading copies, actions/search/recovery; original protocol and P02 snapshot preserved; no public service |
+| P11 | Real-time Integration Lab / Project Rooms | Node/Socket.IO/SQLite | Trusted local project conversations, decisions, portable records and recovery | Workspace 0.8.0 with complete history reading and print reports and offline reading copies, actions/search/recovery; original protocol and P02 snapshot preserved; no public service |
 
 P02 agrupa evaluation e QA porque podem compartilhar a mesma aplicação pequena. Não criar dois projetos Unity idênticos apenas para apresentar títulos diferentes. P01 pode abrigar produção, economia e analytics como cases distintos de uma fonte comum.
 
@@ -719,7 +718,10 @@ Um monorepositório permite descoberta e troca de conhecimento. Cada projeto man
 | `registry/assets.json` | Metadados de imagens, áudio e outros ativos |
 | `projects/<slug>/` | Fonte e documentos locais de cada projeto |
 | `shared/` | Componentes promovidos após reutilização comprovada |
-| `knowledge/` | Lições aplicáveis com evidências e limites |
+| `brains/` | Exact durable knowledge volumes, index/catalog and external integrity pins |
+| `labs/` | Question-led pilot instruments and controlled origin-transition inventory |
+| `north-star/` | Virgo Diamond principal product direction and honest contribution catalog |
+| `knowledge/` | Contextual derived findings with provenance, interpretation and validity limits |
 | `experiments/` | Hipóteses, protocolos e registros de execução |
 | `evaluations/` | Tasks, candidatos e avaliações de IA |
 | `showcase/` | Cases selecionados para apresentação |
@@ -796,53 +798,30 @@ Encerramento é sucesso quando elimina uma hipótese fraca e preserva aprendizad
 
 ## 8. Decidir em que trabalhar
 
-### Critério de seleção
+Compare materially different opportunities using actual weaknesses, audience needs,
+creative agency, technical risk, feasibility, reuse and evidence value. Most new
+investment should benefit Virgo Diamond demonstrably while preserving the HUB's
+professional technology portfolio. North Star is the principal product, not permission
+to invent consumers or rush a final engine/server. A useful portfolio instrument can
+be valuable before destination integration, provided its boundary is explicit.
 
-Avaliar candidatos com notas internas de 0 a 5:
+One coherent increment should change a functioning artifact or research capability.
+Choose controlled experiments, bounded gameplay or useful workflows over extra feature
+counts and documentation volume. Do not mechanically rotate origins, repeat the last
+one or migrate languages for diversity. Investigate contradictory/negative results.
+Retain current source evidence and tests until dependencies are evaluated. Candidate
+labs are proposals until instruments and execution exist.
 
-| Fator | Peso sugerido | Pergunta |
-|---|---:|---|
-| Alinhamento profissional | 25 | Demonstra habilidade exigida pela direção escolhida? |
-| Evidência possível | 25 | Pode terminar com algo inspecionável/reproduzível? |
-| Viabilidade | 20 | Cabe em ambiente, autonomia e tempo reais? |
-| Reaproveitamento | 15 | Serve a outro problema concreto? |
-| Motivação autoral | 15 | Martin quer sustentar o trabalho até o fim? |
-
-Score interno = soma de peso × nota/5, total de 0–100. Este modelo serve para explicitar tradeoffs, não para fingir precisão de mercado. Não atribuir notas de candidatos ausentes nem publicar essa nota como qualidade técnica do produto.
-
-Antes do score, verificar bloqueios: fontes inacessíveis; execução impossível; trabalho dependente de dado não disponível; requisito sem finalidade; custo fora de orçamento. Um score alto não remove bloqueio.
-
-### Recomendação inicial, com razão
-
-**Historical order:** v0.1.0 recommended P01 discovery; v0.2.0 recovered concrete P10/P11 sources. Under the current request to select and implement an increment, Codex prioritized P11 because its defect and full local interaction can be verified here. ADR-008 records the choice; the assessment and plan preserve alternatives without activating them. This is not a claim that Martin individually selected or tested P11.
-
-**Current work order:** reassess the portfolio every session. P06 now has a native
-trial, P01 a native economy board, P11 a recoverable persistent workspace, P10 two playable days and P03 two original rhythm stages.
-Compare unassisted native/play/listening evidence, P11's account/retention/off-site needs,
-independent P02 context and recovered-source opportunities before choosing again.
-Recent browser concentration is a reason to investigate alternatives, not a quota.
-
-The former P01/P03-first order is historical planning, not a current mandate.
-Reassess actual portfolio opportunities and technologies; P06 now has its own
-native destination. Related projects should contribute only to a concrete result.
-
-Se Martin escolher arte e música como prioridade principal, reorganizar a rota: uma peça criativa final + processo de geração/seleção + integração pequena. A estrutura não obriga todos os interesses a servirem a uma única carreira de games.
-
-### Regras contra dispersão
-
-- Uma frente principal ativa; no máximo uma auxiliar com resultado limitado.
-- Uma unidade encerrada antes de iniciar outra de escopo semelhante.
-- Separar ideias desejáveis de compromissos da fase.
-- Não transformar toda lição em biblioteca, todo poema em álbum ou todo personagem em jogo.
-- Não expandir roster/conteúdo para compensar core loop fraco.
-- Não aumentar número de documentos quando a lacuna é execução.
-- Replanejar quando a evidência contradizer a hipótese, não só quando surgir uma ideia nova.
+The first selection compared P06 combat-response instrumentation, P01 economy controls,
+P10 narrative consequence research and P11 persistence. P06 offers a direct bounded
+question about action/response trade-offs relevant to recognizable character agency.
+This is not a mandatory next target or validation of candidate North Star classes.
 
 ## 9. Modelo de estados e evidências
 
 ### Estado de atividade
 
-`seed`, `triage`, `active`, `paused`, `archived` ou `retired`. No registro, `phase` explica a fase atual e `next_action` descreve o próximo trabalho. Estado de atividade não é qualidade nem maturidade.
+`seed`, `triage`, `active`, `paused`, `archived`, `retired` and `transition` are schema states. All eleven current records use `transition` with role `historical_origin`; `labs/origins.json` separates preserved pending extraction, pilot instrumentation and seed-only origins. Versions/M0–M6 retain origin evidence, not laboratory readiness. `phase` and `next_action` describe current transition work, not independent release commitments.
 
 ### Maturidade do artefato
 
@@ -891,7 +870,7 @@ Exemplo de forma: “A compra com saldo insuficiente não altera saldo, sigilos 
 | Avaliador | Aplicar protocolo de aceitação | Resultado e evidência |
 | Martin | Definir intenção, acompanhar decisões, validar de fato e desenvolver autonomia | Julgamento atribuído corretamente |
 
-Um mesmo agente pode exercer papéis em etapas distintas, mas isso não constitui independência. Usar agentes distintos somente se o pedido e as ferramentas autorizarem; não presumir orquestração paralela. Separação de papéis também pode acontecer com sessões isoladas e revisão humana.
+Agents remain responsible for observing, reasoning, implementing and reporting. Relevant knowledge from all three brains informs those roles; the volumes are not extra agents. One or several implementing/reviewing agents do not constitute independent human validation. Delegate only within actual task/platform authorization; do not introduce an orchestration system without a concrete need.
 
 ### Contexto por tarefa
 
@@ -1247,6 +1226,11 @@ Dados do trabalho real devem ser anonimizados sem inventar resultados. Cases sim
 
 ## 19. Roadmap por gates
 
+**Historical planning:** the phases below preserve the initial production proposal;
+they are not the current work order or independent-product obligations. Current gates
+are source/brain activation, verifiable laboratory or North Star increments, real
+consumer evidence, and proportionate technical/creative/external validation.
+
 Fases não são promessa de semanas. O calendário será construído após diagnóstico de disponibilidade, ambiente e esforço. Cada fase encerra com artefato e um gate; continuar significa escolher a próxima unidade, não crescer todas as frentes juntas.
 
 ### Fase 0 — descoberta e baseline
@@ -1470,39 +1454,18 @@ Problema → contexto → evidência → decisão → resultado → limites → 
 
 ## 23. Prompts de continuidade
 
-### Iniciar o repositório a partir desta seed
-
-> Leia SEED.md, AGENTS.md e docs/STATE.md. Execute a Fase 0 dentro das capacidades reais do ambiente. Inspecione os arquivos disponíveis, diferencie origem histórica de evidência atual e atualize o inventário. Selecione uma frente principal com base na proposta e nos materiais acessíveis. Produza o diagnóstico e uma fase de execução pequena com entregáveis e critérios. Não invente fontes, builds, métricas ou resultados. Registre lacunas e avance no trabalho que não depende delas.
-
-### Planejar uma fase específica
-
-> Planeje a próxima fase de [projeto/objetivo]. Leia o estado e os documentos pertinentes; não reconstrua decisões já registradas sem motivo. Defina problema, fatia, dependências, artefatos, aceitação, riscos e cortes. Diferencie opções de compromissos. Prepare uma tarefa que possa ser executada e verificada no ambiente disponível.
-
-### Desenvolver e verificar
-
-> Execute a fase aprovada de [projeto]. Inspecione a fonte real, implemente a menor solução coerente, verifique riscos relevantes e registre os resultados. Preserve as alterações anteriores do autor. Atualize estado e decisões importantes. Entregue artefatos, evidências e limites, sem substituir execução por explicação.
-
-### Fazer os projetos aprenderem entre si
-
-> Examine as lições e os componentes de [origem] e o problema atual de [destino]. Escolha no máximo uma transferência útil. Registre diferenças, adapte e valide no destino. Promova para shared apenas se houver necessidade real e contrato claro. Relate também transferências descartadas e por quê.
-
-### Avaliar um candidato de IA
-
-> Use o protocolo da task [ID]. Verifique baseline, ambiente, contexto e ausência de vazamento. Execute os checks disponíveis, examine o diff e aplique gates e rubrica com evidências. Se faltar condição essencial, marque a avaliação como inconclusiva. Não conceda score ou aceite a comportamento não observado.
-
-### Curar um case público
-
-> Transforme [trabalho encerrado] em case curto para [público/função]. Use somente afirmações sustentadas. Mostre problema, decisão, contribuição real da IA e de Martin, validação, resultado, amostra e limites. Remova material interno sem função para o público. Verifique os links e não apresente simulação como experiência comercial.
-
-### Retomar em outra sessão
-
-> Leia o estado atual e o handoff. Identifique a última unidade concluída, bloqueios e próxima ação. Verifique os arquivos necessários antes de agir. Continue a unidade definida; se a fonte ou o ambiente mudou, registre a diferença e ajuste a execução.
-
-### Revisar a própria seed
-
-> Revise SEED.md à luz das decisões e evidências novas. Atualize inventário, direção ou regras que estejam superadas; preserve a origem e explique mudanças relevantes. Não acrescente todo histórico de execução. Reduza redundância e mantenha o arquivo útil para iniciar trabalho.
+The only maintained complete operational prompt is
+[docs/prompts/CONTINUOUS_DEVELOPMENT.md](docs/prompts/CONTINUOUS_DEVELOPMENT.md).
+It requires actual state inspection, mandatory selective three-brain activation,
+contextual knowledge, alternatives, one implemented/executed increment, honest evidence,
+continuity, evidence-based prompt adaptation, authorized non-force publication and its
+own complete successor. Do not maintain parallel continuous-development instructions.
+Task-specific evaluation/templates remain scoped instruments, not alternative authority.
 
 ## 24. Primeiras tarefas propostas
+
+**Historical bootstrap proposal, not the current backlog.** Consult STATE and the
+current operational prompt; no automatic expansion or repeated recovery is required.
 
 | ID | Trabalho | Saída concreta | Dependência |
 |---|---|---|---|

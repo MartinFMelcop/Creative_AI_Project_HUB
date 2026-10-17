@@ -100,3 +100,25 @@ update and destination evidence. Origin report paths establish structured
 traceability, not independent verification of every reported result, rights,
 fictional authority, player experience or market demand. These checks do not
 prove source authenticity beyond the recorded Git/hash provenance.
+
+## Three-brain operation and origin transition — v0.33.0
+
+The validator now constructs `brain_query.Collection`: all five imported source bytes,
+UTF-8, supplied catalog and chapter/local-link structure must pass their separate pins.
+Only those five immutable documents are excluded from maintained-navigation scanning;
+brains/README and operational material remain checked. Inherited source fragment
+differences are explicit query warnings, not repaired or silently accepted unknown links.
+
+P01–P11 retain schema-1 IDs, origin maturity, versions, paths and execution evidence,
+with role `historical_origin` and activity `transition`. The exact eleven-origin
+`labs/origins.json` inventory requires typed capabilities/source/evidence/consumer/
+dependency/extraction/risk fields. P09's seed-only state cannot invent executed artifacts.
+An implemented lab requires an actual lab directory, contained instrument and evidence;
+a candidate cannot claim those. `pilot_instrumented` requires an implemented lab consumer,
+which is distinct from the still-empty North Star consumer list. The catalog's existing
+foundation-only destination gates remain unchanged. These are structural guards, not
+a claim that report contents prove scientific validity or human experience.
+
+Run `python3 tools/test_brain_query.py`, `python3 tools/test_validate_repo.py` and the
+actual lab's tests/runtime alongside existing source/manifest suites. CI retains all
+previous origin gates and adds immutable consultation and native pilot reproduction.

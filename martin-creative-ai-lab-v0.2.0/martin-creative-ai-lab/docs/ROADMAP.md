@@ -1,4 +1,18 @@
-# Roadmap por gates
+# Current research and product gates
+
+1. Inspect actual state and activate all three brains selectively.
+2. Compare opportunities for Virgo Diamond and the Design-Driven technology portfolio.
+3. Implement and execute a bounded instrument or meaningful gameplay/workflow increment.
+4. Preserve provenance, relevant failure/negative outcomes and contextual derived findings.
+5. Advance destination contribution state only with a real consumer and execution proof.
+6. Assess creative experience, independent human validity and market signals separately.
+
+No calendar, eleven-lab checklist, independent release schedule or speculative MMORPG
+infrastructure milestone is imposed. [STATE](STATE.md), [labs](../labs/README.md) and
+[the complete operational prompt](prompts/CONTINUOUS_DEVELOPMENT.md) carry current work.
+The phase roadmap below is historical planning, not an applicable work order.
+
+# Historical roadmap by gates
 
 Detalhamento: [SEED, seção 19](../SEED.md).
 

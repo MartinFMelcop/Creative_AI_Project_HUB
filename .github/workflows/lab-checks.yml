@@ -188,6 +188,13 @@ jobs:
           "$veil_engine" --headless --main-pack "$RUNNER_TEMP/veil-rebuilt-player/Veilbreak/veilbreak.pck" --script "$RUNNER_TEMP/veil-godot/practice.gd" --fixed-fps 60
           "$veil_engine" --headless --main-pack "$RUNNER_TEMP/veil-rebuilt-player/Veilbreak/veilbreak.pck" --script "$RUNNER_TEMP/veil-godot/audio_reset.gd"
 
+      - name: Reproduce the combat-response laboratory against the preserved origin
+        working-directory: martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab
+        run: |
+          veil_engine="$RUNNER_TEMP/veil-godot/Godot_v4.6.3-stable_linux.x86_64"
+          python3 -m unittest discover -s labs/combat-response -p 'test_*.py'
+          python3 labs/combat-response/run.py --godot "$veil_engine" --output "$RUNNER_TEMP/combat-response.json" --compare evidence/combat-response/results.json
+
   integrity-and-dialogue:
     runs-on: ubuntu-24.04
     timeout-minutes: 10
@@ -206,6 +213,10 @@ jobs:
         run: python3 tools/validate_repo.py
       - name: Exercise validator failure detection
         run: python3 tools/test_validate_repo.py
+      - name: Verify immutable brain sources and deterministic selective consultation
+        run: |
+          python3 tools/brain_query.py check
+          python3 tools/test_brain_query.py
       - name: Verify reference discovery and historical contribution boundaries
         run: |
           python3 tools/reference_library.py check

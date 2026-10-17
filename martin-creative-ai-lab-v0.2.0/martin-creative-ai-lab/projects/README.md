@@ -1,58 +1,73 @@
-# Working projects
+# Preserved technology origins and demonstrations
 
-Seven working directories contain the current games, reading editions and local
-workspace. Each project README provides controls, setup, provenance and execution
-evidence. The [project registry](../registry/projects.json) records all eleven
-portfolio lines and their current scope; the [lab overview](../README.md) connects
-them to references and shared capabilities.
+P01–P11 now provide source capabilities, creative resources, evidence and potential
+research instruments for the Design-Driven technology portfolio and **Virgo
+Diamond: The North Star**, the principal product. They have no continuing obligation
+to be eleven independent games or commercial products. Their historical identity,
+source versions, useful behavior and provenance remain discoverable.
 
-## Games, literature and software
+The [transition inventory](../labs/origins.json) records each origin's dependencies,
+existing consumers, extraction work and preservation risks. The
+[project registry](../registry/projects.json) retains origin maturity; M4 describes
+bounded origin evidence, not laboratory readiness or North Star integration.
+[Current state](../docs/STATE.md) distinguishes the new operation from older releases.
 
-| Project and current version | Experience | Technology and delivery |
+## Source capabilities and transition
+
+| Origin | Reusable technology and retained demonstration | Transition and real destination |
 |---|---|---|
-| [P01 — Eclipse Fair](eclipse-fair/README.md), native **0.6.0** | Eight-venue economy race, solo in any seat or 2–4 participants sharing one device; planning rivals and three independent saved fairs. | C#/.NET 10 and Godot .NET 4.6.3. The [standalone Linux player](eclipse-fair/dist/eclipse-fair-linux-0.6.0.zip) includes engine and .NET runtime; [setup](eclipse-fair/Native/README.md#play-the-linux-distribution). An optional compiled project remains available. The terminal workbench **0.1.0** remains available. |
-| [P03 — Tokyo 80s: Night Shift](tokyo80s/README.md), **0.5.0** | Two original rhythm stages, original-pitch phrase rehearsal and lane timing/tail review to choose the next passage. | HTML/JavaScript and Web Audio; [run locally](tokyo80s/README.md#play-locally) with Node 22+ or a static HTTP server. Gameplay needs no npm installation or remote service. |
-| [P04 — A água sob Darsen / The Water Beneath Darsen](lich-cistern/README.md), **0.3.0** | Revised five-scene dark-fantasy story in Portuguese and English. | [Read Markdown, EPUB 3 or A5 PDF](lich-cistern/README.md#read) without a build environment. Both languages have current **0.3.0** EPUB/PDF editions; prior editions remain available. Production uses Python/ReportLab and Pandoc. |
-| [P05 — Cinderwatch](cinderwatch/README.md), **0.5.0** | Three-encounter tactical rescue with announced intentions, supplies, salvage, response inspection and verified recovery copies. | C#/.NET 10 and Godot .NET 4.6.3. [Standalone Linux x86_64 player](cinderwatch/dist/cinderwatch-linux-0.5.0.zip) includes engine/runtime; [system requirements and launch](cinderwatch/Native/README.md#play-the-linux-distribution). Editable source/project also available. |
-| [P06 — Veilbreak: The Bell Warden](veil-arena/README.md), **0.6.0** | Native two-phase boss trial with painted art, animation, adaptive audio, blade/seal/dodge decisions and timed sweep counters and an optional real-speed sweep practice/review loop. | GDScript and Godot 4.6.3 standard. [Standalone Linux x86_64 player](veil-arena/dist/veilbreak-linux-0.6.0.zip) includes its runtime; [requirements and controls](veil-arena/README.md#play). Source and a separate engine-dependent PCK remain available. |
-| [P10 — Flood Crossing](waystone-dialogue/browser/README.md), browser **0.7.0** | Two-day rescue campaign: cargo, relief priorities, noon handover and four afternoon shifts; reconsider a deferred request with current work, fresh consent and future transport costs. Portable replay saves. | HTML/JavaScript browser game; [Node 22+ or static HTTP server](waystone-dialogue/browser/README.md#play-locally). The [Python reference](waystone-dialogue/README.md) retains adventure **0.2.0** and dialogue **0.1.3**. |
-| [P11 — Project Rooms](realtime-integration-lab/README.md), **0.8.0** | Persistent conversations/decisions with bounded full-history reading, assigned actions, revision history, complete-record search, workspace recovery and portable HTML reading copies with complete print reports. | Node 24+, SQLite and Socket.IO; [install/run](realtime-integration-lab/README.md#run-project-rooms) with `npm ci` and `npm run rooms`. The [offline handover example](realtime-integration-lab/examples/cistern-handover.html) is explicitly fictional. The original ephemeral chat exercise remains available. |
+| **P01 — [Eclipse Fair](eclipse-fair/README.md)** · native 0.6.0 | C# resource rules, rival planning, replay, local turn handoff and three saved fairs; standalone Linux player and editable Godot .NET project. | Preserved pending extraction; economy/simulation and persistence research are candidate uses. |
+| **P02 — [AI evaluation / EVAL-001](../evaluations/chat-send-buffering/README.md)** · runner 0.2.1 | Python/Git artifact export and calibration with Node/Socket.IO/Chromium checks. Known baseline/reference results verify the instrument, not model performance. | Preserved pending extraction; evaluation methodology is a candidate laboratory. Existing P11-derived evaluator consumer remains. |
+| **P03 — [Tokyo 80s](tokyo80s/README.md)** · 0.5.0 | JavaScript/Web Audio timing, original-pitch phrase rehearsal, per-lane diagnostics and two original stages; static browser demonstration. | Preserved pending extraction; perception, audio timing and learning research are candidates. |
+| **P04 — [A água sob Darsen / The Water Beneath Darsen](lich-cistern/README.md)** · 0.3.0 | Five-scene bilingual literary sources, EPUB/PDF production and format verification. | Preserved pending extraction; narrative/source comparison is a candidate. This adaptation is not Virgo Diamond canon. |
+| **P05 — [Cinderwatch](cinderwatch/README.md)** · native 0.5.0 | C# tactical transitions, response forecasts, finite supplies, replay-validated recovery copies and native packaging. | Preserved pending extraction; combat decisions and durable-state research are candidates. Its P07/P08 asset consumers remain. |
+| **P06 — [Veilbreak](veil-arena/README.md)** · 0.6.0 | Actual Godot collision, telegraphs, committed actions, timed parry, dodge, practice/review, animation and adaptive audio. | **Pilot instrumented:** [combat-response](../labs/combat-response/README.md) uses the actual encounter under controlled inputs. The retained origin game remains a reference; no North Star runtime consumer. |
+| **P07 — Visual Generation & Asset Lab** | Generated original portraits, paintings and motion atlases with provenance in [P05](cinderwatch/Native/media/provenance.json) and [P06](veil-arena/media/provenance.json). No separate game directory. | Preserved pending extraction; actual origin asset consumers remain. Perception/visual readability research is a candidate. |
+| **P08 — Audio, Poetry & Music Lab** | Deterministic synthesis, adaptive cues and rehearsal derivatives used by [P03](tokyo80s/media/rehearsal-provenance.json), [P05](cinderwatch/Native/media/audio/catalog.json) and [P06](veil-arena/media/provenance.json). | Preserved pending extraction; audio identity/timing research is a candidate. A finished poetry/music catalogue is not established. |
+| **P09 — AI Delivery & Operations Cases** · M0 | Reported seed only; no executable case or delivered professional evidence. | Seed only. Source a real case and obtain appropriate disclosure rights before making portfolio claims. |
+| **P10 — [Flood Crossing / Waystone](waystone-dialogue/README.md)** · browser 0.7.0 | Python reference and JavaScript consequential narrative, consent, resource tradeoffs and portable replay. | Preserved pending extraction; narrative/behavior research is a candidate. Existing reference/browser consumers remain. |
+| **P11 — [Project Rooms](realtime-integration-lab/README.md)** · 0.8.0 | Node.js 24/SQLite/Socket.IO idempotent delivery, revision history, recovery and portable HTML/print handovers. | Preserved pending extraction; persistence/distributed-systems research is a candidate. Existing evaluator/knowledge consumers remain; trusted local deployment only. |
 
-Download ZIPs, ebooks and the HTML handover before opening them. GitHub source
-pages do not launch these products. P01/P05/P06 include standalone Linux runtimes;
-P01's optional project pack requires the matching Godot .NET engine/runtime. Browser
-games need HTTP rather than direct file navigation. The retained private Sites
-demos are separate deployments and do not represent the latest Git versions.
+Only the combat-response pilot is implemented as a new laboratory. Candidate
+questions do not create laboratories, completed transfers or a shared runtime.
+Existing [transfer records](../registry/transfers.json) retain the scope of their
+actual origin consumers. All 14 [North Star capabilities](../north-star/capabilities.json)
+remain at origin/candidate stages with no destination runtime integration.
 
-## Evaluation and supporting lines
+## Run a retained demonstration
 
-- [P02 — EVAL-001](../evaluations/chat-send-buffering/README.md), runner **0.2.1**,
-  lives under `evaluations/`. Python/Git orchestration and Node/Socket.IO/Chromium
-  checks package and evaluate a client-repair practice task. Controlled calibration
-  verifies the harness; it is not an independent model benchmark.
-- **P07 — Visual Generation & Asset Lab:** original portraits, paintings and motion
-  atlases have actual consumers in [Cinderwatch](cinderwatch/Native/media/provenance.json)
-  and [Veilbreak](veil-arena/media/provenance.json). This is a supporting production
-  line, not a separate game directory; see [its seed](../SEED.md#p07--visual-generation--asset-lab).
-- **P08 — Audio, Poetry & Music Lab:** [Tokyo 80s soundtracks](tokyo80s/media/provenance.json),
-  [rehearsal derivatives](tokyo80s/media/rehearsal-provenance.json),
-  [Veilbreak audio](veil-arena/media/provenance.json) and
-  [Cinderwatch cues](cinderwatch/Native/media/audio/catalog.json) are integrated
-  assets. A finished music/poetry catalogue is not established; see
-  [its seed](../SEED.md#p08--audio-poetry--music-lab).
-- **P09 — AI Delivery & Operations Cases:** a seed awaiting sourced professional
-  cases, with no delivered case evidence in the current
-  [registry](../registry/projects.json); see
-  [its seed](../SEED.md#p09--ai-delivery--operations-cases).
+Use the source guide for exact versions, controls, requirements and evidence:
 
-## Evidence and source boundaries
+- **Native Linux:** [Eclipse Fair](eclipse-fair/Native/README.md#play-the-linux-distribution),
+  [Cinderwatch](cinderwatch/Native/README.md#play-the-linux-distribution) and
+  [Veilbreak](veil-arena/README.md#play) retain standalone x86_64 players.
+  Editable Godot projects and earlier packages remain available; optional project
+  packs have separate engine/SDK requirements.
+- **Static browser:** [Tokyo 80s](tokyo80s/README.md#play-locally) and
+  [Flood Crossing](waystone-dialogue/browser/README.md#play-locally) can be served
+  locally over HTTP. Retained private hosted deployments may lag Git.
+- **Literature:** [Darsen reading editions](lich-cistern/README.md#read) retain
+  Portuguese/English Markdown, EPUB and PDF. Download reader files before opening.
+- **Local information workflow:** [Project Rooms](realtime-integration-lab/README.md#run-project-rooms)
+  uses Node.js 24+, `npm ci` and `npm run rooms`.
+  Its [offline handover](realtime-integration-lab/examples/cistern-handover.html)
+  contains explicitly fictional demonstration records.
+- **Artifact evaluation:** [EVAL-001](../evaluations/chat-send-buffering/README.md)
+  exposes the task exporter, evaluator and calibration instructions.
 
-Project records distinguish source, builds, actual bounded execution and
-implementing-agent review. Human play/reading/listening, hardware accessibility,
-other-platform support and commercial demand require their own evidence. Project
-Rooms is a trusted local workspace, not a public service with verified accounts.
+GitHub source pages do not launch these artifacts. Historical delivery versions
+identify preserved references; their presence is not a promise of new independent
+releases or ongoing support across platforms.
 
-Current adaptations are separate from [historical references](../references/README.md).
-Recovered literary PDFs do not ratify P04's story as canon; copied historical
-code does not establish a restored RPG or a [North Star](../north-star/README.md)
-runtime. Existing source snapshots and earlier delivered packages remain preserved.
+## Evidence and rights
+
+Source files, compiled packages, actual bounded execution, implementing-agent
+assessment, independent human evaluation and market evidence are different things.
+Read the linked execution records for exact tested versions and limits. No general
+claim is made for unassisted learning, hardware accessibility, commercial demand or
+MMORPG scale.
+
+[Historical references](../references/README.md) remain separate and immutable.
+The [Creative Brain](../brains/README.md) guides Virgo Diamond; source reuse does not
+merge fictional worlds or ratify old canon. Consult provenance, licenses and rights
+before reuse. Useful tests and source media remain intact during the transition.

@@ -1,0 +1,2366 @@
+{
+  "purpose": "Índice derivado dos capítulos, perguntas-chave e estatutos dos três volumes. Consulte os documentos para o conteúdo completo; o índice não constitui prova independente.",
+  "volumes": [
+    {
+      "file": "ENGINEERING_BRAIN.md",
+      "title": "ENGINEERING BRAIN",
+      "scope": "Enciclopédia de Engenharia Aplicada",
+      "chapters": [
+        {
+          "id": "ENG-001",
+          "chapter": 1,
+          "title": "O que é engenharia aplicada",
+          "section": "Parte I — Fundamentos do raciocínio de engenharia",
+          "question": "Como transformar uma necessidade e suas restrições em uma solução verificável?",
+          "anchor": "1-o-que-é-engenharia-aplicada",
+          "editorial_status": null,
+          "preview": "Engenharia aplicada combina ciência, matemática, observação, projeto, implementação e julgamento sob restrições. Seu objeto não é somente uma máquina ou um programa: pode ser um serviço, circuito, processo químico, infraestrutura, obra civi"
+        },
+        {
+          "id": "ENG-002",
+          "chapter": 2,
+          "title": "Sistemas, fronteiras e comportamento emergente",
+          "section": "Parte I — Fundamentos do raciocínio de engenharia",
+          "question": "Onde estão as fronteiras, interações e efeitos emergentes de um sistema?",
+          "anchor": "2-sistemas-fronteiras-e-comportamento-emergente",
+          "editorial_status": null,
+          "preview": "Um **sistema** é um conjunto de elementos e relações organizados em torno de alguma finalidade ou comportamento. Uma **fronteira** decide o que está dentro do objeto estudado; tudo que cruza essa fronteira merece atenção: energia, matéria,"
+        },
+        {
+          "id": "ENG-003",
+          "chapter": 3,
+          "title": "Grandezas, unidades, conservação e limites físicos",
+          "section": "Parte I — Fundamentos do raciocínio de engenharia",
+          "question": "Quais grandezas físicas, unidades e leis de conservação limitam o modelo?",
+          "anchor": "3-grandezas-unidades-conservação-e-limites-físicos",
+          "editorial_status": null,
+          "preview": "Todo modelo quantitativo deve declarar **grandezas, unidades, tolerâncias, condições e método de medição**. A análise dimensional detecta equações incoerentes mesmo antes da experimentação."
+        },
+        {
+          "id": "ENG-004",
+          "chapter": 4,
+          "title": "Requisitos: do desejo à condição verificável",
+          "section": "Parte I — Fundamentos do raciocínio de engenharia",
+          "question": "Como separar necessidades, requisitos e soluções candidatas?",
+          "anchor": "4-requisitos-do-desejo-à-condição-verificável",
+          "editorial_status": null,
+          "preview": "Um requisito deve expressar uma necessidade, capacidade, restrição ou característica que importa para um interessado. Uma solução escolhida cedo demais costuma se disfarçar de requisito."
+        },
+        {
+          "id": "ENG-005",
+          "chapter": 5,
+          "title": "Modelagem: estados, eventos, grafos e invariantes",
+          "section": "Parte I — Fundamentos do raciocínio de engenharia",
+          "question": "Como representar estados, eventos, relações e propriedades que não podem ser violadas?",
+          "anchor": "5-modelagem-estados-eventos-grafos-e-invariantes",
+          "editorial_status": null,
+          "preview": "Um modelo útil simplifica a realidade para responder a uma pergunta específica. Ele não precisa reproduzir todos os detalhes, mas deve preservar os mecanismos relevantes ao fenômeno."
+        },
+        {
+          "id": "ENG-006",
+          "chapter": 6,
+          "title": "Dinâmica, realimentação e controle",
+          "section": "Parte I — Fundamentos do raciocínio de engenharia",
+          "question": "Como prever o comportamento dinâmico e os efeitos da realimentação?",
+          "anchor": "6-dinâmica-realimentação-e-controle",
+          "editorial_status": null,
+          "preview": "Sistemas dinâmicos têm estado que evolui no tempo. Uma intervenção pode produzir efeitos atrasados, amplificados ou contrários ao esperado."
+        },
+        {
+          "id": "ENG-007",
+          "chapter": 7,
+          "title": "Metrologia e qualidade da observação",
+          "section": "Parte II — Medição, confiabilidade e diagnóstico",
+          "question": "A medição é rastreável, suficiente e livre de distorções relevantes?",
+          "anchor": "7-metrologia-e-qualidade-da-observação",
+          "editorial_status": null,
+          "preview": "**Medir** é atribuir valores a grandezas por um procedimento definido. Toda medida depende de instrumento, calibração, resolução, ambiente, amostragem e interpretação."
+        },
+        {
+          "id": "ENG-008",
+          "chapter": 8,
+          "title": "Denominadores, agregação e métricas enganosas",
+          "section": "Parte II — Medição, confiabilidade e diagnóstico",
+          "question": "O indicador tem o denominador certo e preserva diferenças importantes?",
+          "anchor": "8-denominadores-agregação-e-métricas-enganosas",
+          "editorial_status": null,
+          "preview": "Uma taxa não existe sem um denominador: sucesso **por tentativa**, **por sessão**, **por pessoa**, **por transação** e **por intenção** descrevem realidades diferentes."
+        },
+        {
+          "id": "ENG-009",
+          "chapter": 9,
+          "title": "Confiabilidade, disponibilidade e manutenção",
+          "section": "Parte II — Medição, confiabilidade e diagnóstico",
+          "question": "Quão confiável e disponível é o sistema nas condições definidas?",
+          "anchor": "9-confiabilidade-disponibilidade-e-manutenção",
+          "editorial_status": null,
+          "preview": "**Confiabilidade** é a probabilidade de executar a função especificada durante um intervalo e condições definidas. **Disponibilidade** refere-se à capacidade de estar em condição operacional em determinado instante ou período. Não são equiv"
+        },
+        {
+          "id": "ENG-010",
+          "chapter": 10,
+          "title": "Falhas, propagação, segurança e recuperação",
+          "section": "Parte II — Medição, confiabilidade e diagnóstico",
+          "question": "Como falhas se propagam, são contidas e permitem recuperação?",
+          "anchor": "10-falhas-propagação-segurança-e-recuperação",
+          "editorial_status": null,
+          "preview": "Falhas raramente respeitam fronteiras administrativas. Um erro local pode propagar-se por dependências, dados, máquinas e pessoas."
+        },
+        {
+          "id": "ENG-011",
+          "chapter": 11,
+          "title": "Diagnóstico causal e análise de causa-raiz",
+          "section": "Parte II — Medição, confiabilidade e diagnóstico",
+          "question": "Como distinguir hipóteses causais antes de escolher uma intervenção?",
+          "anchor": "11-diagnóstico-causal-e-análise-de-causa-raiz",
+          "editorial_status": null,
+          "preview": "**Sintoma** é o efeito observado. **Causa** é um fator que contribui para produzi-lo. **Causa-raiz** é uma categoria útil de intervenção, não necessariamente uma única origem metafísica: acidentes e falhas complexas frequentemente possuem m"
+        },
+        {
+          "id": "ENG-012",
+          "chapter": 12,
+          "title": "Probabilidade, base rates e incerteza quantitativa",
+          "section": "Parte II — Medição, confiabilidade e diagnóstico",
+          "question": "Como quantificar incerteza sem ignorar taxas de base ou condicionamento?",
+          "anchor": "12-probabilidade-base-rates-e-incerteza-quantitativa",
+          "editorial_status": null,
+          "preview": "Probabilidade representa incerteza sob um modelo explícito. Não é sinônimo de frequência universal nem uma licença para criar números sem observações."
+        },
+        {
+          "id": "ENG-013",
+          "chapter": 13,
+          "title": "Engenharia de experimentos e falsificabilidade",
+          "section": "Parte II — Medição, confiabilidade e diagnóstico",
+          "question": "Que experimento produzirá evidência capaz de refutar uma hipótese?",
+          "anchor": "13-engenharia-de-experimentos-e-falsificabilidade",
+          "editorial_status": null,
+          "preview": "Um experimento útil diferencia explicações e informa uma decisão. Testar apenas se uma solução funciona num cenário conveniente é insuficiente quando existem alternativas plausíveis."
+        },
+        {
+          "id": "ENG-014",
+          "chapter": 14,
+          "title": "Desempenho, filas, gargalos e capacidade",
+          "section": "Parte II — Medição, confiabilidade e diagnóstico",
+          "question": "Onde se encontram as restrições de capacidade, vazão e latência?",
+          "anchor": "14-desempenho-filas-gargalos-e-capacidade",
+          "editorial_status": null,
+          "preview": "Desempenho não é um único número. Vazão, latência, tempo de resposta, utilização, capacidade, estabilidade e experiência variam com carga e distribuição dos pedidos."
+        },
+        {
+          "id": "ENG-015",
+          "chapter": 15,
+          "title": "Arquitetura: modularidade, contratos e mudança",
+          "section": "Parte III — Arquitetura, projeto, operação e proteção",
+          "question": "Que responsabilidades, contratos e dependências devem orientar a arquitetura?",
+          "anchor": "15-arquitetura-modularidade-contratos-e-mudança",
+          "editorial_status": null,
+          "preview": "Arquitetura organiza responsabilidades, dependências e decisões difíceis de alterar. Não é sinônimo de diagramas elegantes, número de serviços, preferência por uma linguagem ou adoção de uma ferramenta popular."
+        },
+        {
+          "id": "ENG-016",
+          "chapter": 16,
+          "title": "Consistência, concorrência e sistemas distribuídos",
+          "section": "Parte III — Arquitetura, projeto, operação e proteção",
+          "question": "Como preservar invariantes quando ocorrem concorrência, repetição e falhas de rede?",
+          "anchor": "16-consistência-concorrência-e-sistemas-distribuídos",
+          "editorial_status": null,
+          "preview": "Sistemas distribuídos precisam operar sem assumir que toda mensagem chegará, que todos os relógios concordarão ou que uma resposta perdida indica ausência de efeito."
+        },
+        {
+          "id": "ENG-017",
+          "chapter": 17,
+          "title": "Engenharia de software baseada em evidência",
+          "section": "Parte III — Arquitetura, projeto, operação e proteção",
+          "question": "O que testes e execuções realmente demonstram sobre um produto de software?",
+          "anchor": "17-engenharia-de-software-baseada-em-evidência",
+          "editorial_status": null,
+          "preview": "Software transforma especificações e eventos em estados observáveis. A existência do código não prova execução, e a compilação não prova uma jornada completa."
+        },
+        {
+          "id": "ENG-018",
+          "chapter": 18,
+          "title": "Segurança funcional, riscos e responsabilidade",
+          "section": "Parte III — Arquitetura, projeto, operação e proteção",
+          "question": "Como identificar perigos e reduzir riscos antes de danos?",
+          "anchor": "18-segurança-funcional-riscos-e-responsabilidade",
+          "editorial_status": null,
+          "preview": "**Perigo** é uma fonte ou situação com potencial de dano. **Risco** combina incerteza e consequências para objetivos; em segurança costuma considerar severidade, exposição e probabilidade, segundo modelos apropriados."
+        },
+        {
+          "id": "ENG-019",
+          "chapter": 19,
+          "title": "Engenharia de segurança digital e privacidade",
+          "section": "Parte III — Arquitetura, projeto, operação e proteção",
+          "question": "Como proteger confidencialidade, integridade, disponibilidade e privacidade?",
+          "anchor": "19-engenharia-de-segurança-digital-e-privacidade",
+          "editorial_status": null,
+          "preview": "Segurança digital depende de ativos, fronteiras de confiança, atores, incentivos e ameaças concretas, não somente de criptografia."
+        },
+        {
+          "id": "ENG-020",
+          "chapter": 20,
+          "title": "Engenharia de sistemas físicos: energia, estrutura e matéria",
+          "section": "Parte III — Arquitetura, projeto, operação e proteção",
+          "question": "Como aplicar modelos físicos a energia, estruturas, materiais e fluidos?",
+          "anchor": "20-engenharia-de-sistemas-físicos-energia-estrutura-e-matéria",
+          "editorial_status": null,
+          "preview": "Embora software seja importante, engenharia aplicada também exige raciocínio material."
+        },
+        {
+          "id": "ENG-021",
+          "chapter": 21,
+          "title": "Prototipagem, verificação no mundo real e fabricação",
+          "section": "Parte III — Arquitetura, projeto, operação e proteção",
+          "question": "Como reduzir incerteza por protótipos e ensaios em condições representativas?",
+          "anchor": "21-prototipagem-verificação-no-mundo-real-e-fabricação",
+          "editorial_status": null,
+          "preview": "**Protótipo** é um artefato de aprendizagem. Pode ser conceitual, funcional, estrutural, ergonômico ou de produção. Cada tipo responde a perguntas diferentes."
+        },
+        {
+          "id": "ENG-022",
+          "chapter": 22,
+          "title": "Engenharia de fatores humanos e ergonomia",
+          "section": "Parte III — Arquitetura, projeto, operação e proteção",
+          "question": "Como considerar capacidades, limitações e comportamentos humanos no projeto?",
+          "anchor": "22-engenharia-de-fatores-humanos-e-ergonomia",
+          "editorial_status": null,
+          "preview": "Uma solução tecnicamente perfeita pode falhar quando exige atenção, memória, precisão motora ou interpretação incompatível com o contexto humano real."
+        },
+        {
+          "id": "ENG-023",
+          "chapter": 23,
+          "title": "Engenharia de experiência, jogos, narrativa e criação",
+          "section": "Parte III — Arquitetura, projeto, operação e proteção",
+          "question": "Como avaliar sistemas de experiência e criação sem reduzir arte a conformidade técnica?",
+          "anchor": "23-engenharia-de-experiência-jogos-narrativa-e-criação",
+          "editorial_status": null,
+          "preview": "Produtos criativos combinam mecanismo verificável com julgamento estético e cultural. A engenharia pode eliminar fricção desnecessária, testar a coerência de consequências e apoiar a expressão, mas não existe fórmula universal para produzir"
+        },
+        {
+          "id": "ENG-024",
+          "chapter": 24,
+          "title": "Economia de engenharia e custo do ciclo de vida",
+          "section": "Parte III — Arquitetura, projeto, operação e proteção",
+          "question": "Como comparar alternativas pelos custos e benefícios de seu ciclo de vida?",
+          "anchor": "24-economia-de-engenharia-e-custo-do-ciclo-de-vida",
+          "editorial_status": null,
+          "preview": "A melhor solução técnica não é sempre a mais eficiente economicamente. O custo real inclui concepção, construção, licenças, operação, reparo, treinamento, segurança, oportunidade, migração, descarte e efeitos externos."
+        },
+        {
+          "id": "ENG-025",
+          "chapter": 25,
+          "title": "Decisão multicritério, reversibilidade e opções reais",
+          "section": "Parte III — Arquitetura, projeto, operação e proteção",
+          "question": "Como decidir com múltiplos objetivos, incertezas e escolhas reversíveis?",
+          "anchor": "25-decisão-multicritério-reversibilidade-e-opções-reais",
+          "editorial_status": null,
+          "preview": "Decidir sob incerteza não é escolher a alternativa com aparência mais sofisticada. É explicitar objetivos, restrições, riscos e informações que poderiam mudar a escolha."
+        },
+        {
+          "id": "ENG-026",
+          "chapter": 26,
+          "title": "Sustentabilidade, ciclo de vida e efeitos externos",
+          "section": "Parte III — Arquitetura, projeto, operação e proteção",
+          "question": "Quais impactos ambientais e efeitos externos ficam fora da análise local?",
+          "anchor": "26-sustentabilidade-ciclo-de-vida-e-efeitos-externos",
+          "editorial_status": null,
+          "preview": "Uma solução não termina na entrega. Matéria-prima, energia, transporte, manutenção, descarte, impactos comunitários e substituição de equipamentos fazem parte do seu efeito no mundo."
+        },
+        {
+          "id": "ENG-027",
+          "chapter": 27,
+          "title": "Conhecimento técnico: proveniência e memória confiável",
+          "section": "Parte III — Arquitetura, projeto, operação e proteção",
+          "question": "Como preservar origem, contexto, limitações e revisabilidade do conhecimento?",
+          "anchor": "27-conhecimento-técnico-proveniência-e-memória-confiável",
+          "editorial_status": null,
+          "preview": "Informação armazenada não é automaticamente conhecimento validado. Repetição de uma hipótese em muitos documentos pode dar a impressão de confirmação sem acrescentar evidência independente."
+        },
+        {
+          "id": "ENG-028",
+          "chapter": 28,
+          "title": "Engenharia de sistemas com inteligência artificial",
+          "section": "Parte III — Arquitetura, projeto, operação e proteção",
+          "question": "Quais responsabilidades, falhas e controles surgem ao integrar inteligência artificial?",
+          "anchor": "28-engenharia-de-sistemas-com-inteligência-artificial",
+          "editorial_status": null,
+          "preview": "Sistemas de IA introduzem variabilidade, dados de treinamento difíceis de inspecionar, comportamentos inesperados, dependência de contexto e risco de produzir respostas persuasivas incorretas. Utilidade e segurança dependem de avaliação ade"
+        },
+        {
+          "id": "ENG-029",
+          "chapter": 29,
+          "title": "Operações, incidentes e aprendizado pós-falha",
+          "section": "Parte III — Arquitetura, projeto, operação e proteção",
+          "question": "Como responder a incidentes e aprender com os modos de falha observados?",
+          "anchor": "29-operações-incidentes-e-aprendizado-pós-falha",
+          "editorial_status": null,
+          "preview": "A operação real revela modos de falha ausentes do laboratório. Engenharia operacional combina detecção, resposta, contenção, recuperação, comunicação e prevenção proporcional."
+        },
+        {
+          "id": "ENG-030",
+          "chapter": 30,
+          "title": "Ética, responsabilidade e limites da otimização",
+          "section": "Parte III — Arquitetura, projeto, operação e proteção",
+          "question": "Quais danos, direitos e responsabilidades não podem ser reduzidos a uma otimização?",
+          "anchor": "30-ética-responsabilidade-e-limites-da-otimização",
+          "editorial_status": null,
+          "preview": "Toda engenharia materializa prioridades. O fato de algo ser tecnicamente possível não demonstra que seja desejável, legítimo ou socialmente aceitável."
+        },
+        {
+          "id": "ENG-031",
+          "chapter": 31,
+          "title": "Comunicação, sinais e teoria da informação",
+          "section": "Parte IV — Domínios transversais",
+          "question": "Como sinais, canais e codificação limitam a transmissão de informação?",
+          "anchor": "31-comunicação-sinais-e-teoria-da-informação",
+          "editorial_status": null,
+          "preview": "Comunicação é transferência de informação entre emissores e destinatários, por um meio sujeito a ruído, atraso, perda, distorção, capacidade limitada e interpretações divergentes."
+        },
+        {
+          "id": "ENG-032",
+          "chapter": 32,
+          "title": "Qualidade, variabilidade e engenharia de processos",
+          "section": "Parte IV — Domínios transversais",
+          "question": "Como distinguir variação comum de mudança especial em processos?",
+          "anchor": "32-qualidade-variabilidade-e-engenharia-de-processos",
+          "editorial_status": null,
+          "preview": "**Qualidade** é adequação aos requisitos e necessidades relevantes, em condições determinadas. Não corresponde apenas à ausência de defeitos visíveis."
+        },
+        {
+          "id": "ENG-033",
+          "chapter": 33,
+          "title": "Comunicação técnica, abstração e ensino de engenharia",
+          "section": "Parte IV — Domínios transversais",
+          "question": "Como explicar, registrar e transmitir conhecimentos técnicos sem produzir falsas certezas?",
+          "anchor": "33-comunicação-técnica-abstração-e-ensino-de-engenharia",
+          "editorial_status": null,
+          "preview": "Conhecimento de engenharia precisa sobreviver à passagem entre disciplinas, pessoas, fornecedores e tempo. A documentação deve tornar decisões revisáveis sem exigir que um novo leitor reconstruia todas as conversas anteriores."
+        },
+        {
+          "id": "ENG-034",
+          "chapter": 34,
+          "title": "Estudo de caso A — Um serviço com alta taxa de repetição",
+          "section": "Parte V — Estudos de caso orientados à decisão",
+          "question": "Como distinguir as causas de repetições e congestionamento em um serviço?",
+          "anchor": "34-estudo-de-caso-a-um-serviço-com-alta-taxa-de-repetição",
+          "editorial_status": null,
+          "preview": "**Contexto:** clientes tentam confirmar uma reserva. Alguns recebem resposta lenta e repetem a operação. A operação original talvez já tenha sido concluída, mesmo sem resposta visível."
+        },
+        {
+          "id": "ENG-035",
+          "chapter": 35,
+          "title": "Estudo de caso B — Linha de produção com gargalo escondido",
+          "section": "Parte V — Estudos de caso orientados à decisão",
+          "question": "Como localizar um gargalo que métricas locais não revelam?",
+          "anchor": "35-estudo-de-caso-b-linha-de-produção-com-gargalo-escondido",
+          "editorial_status": null,
+          "preview": "**Contexto:** três estações trabalham em sequência. Suas capacidades máximas hipotéticas são 80, 50 e 75 unidades por hora, com demanda superior a 50 e sem outras restrições relevantes."
+        },
+        {
+          "id": "ENG-036",
+          "chapter": 36,
+          "title": "Estudo de caso C — Um produto passa nos testes, mas ninguém consegue utilizá-lo",
+          "section": "Parte V — Estudos de caso orientados à decisão",
+          "question": "Como corrigir um produto tecnicamente conforme, mas inutilizável?",
+          "anchor": "36-estudo-de-caso-c-um-produto-passa-nos-testes-mas-ninguém-consegue-utilizá-lo",
+          "editorial_status": null,
+          "preview": "**Contexto:** um aplicativo conclui todos os testes de lógica. Entretanto, novos usuários não encontram a função principal e abandonam a tarefa."
+        },
+        {
+          "id": "ENG-037",
+          "chapter": 37,
+          "title": "Estudo de caso D — Uma melhoria energética produz mais consumo total",
+          "section": "Parte V — Estudos de caso orientados à decisão",
+          "question": "Como avaliar consumo total quando eficiência unitária melhora?",
+          "anchor": "37-estudo-de-caso-d-uma-melhoria-energética-produz-mais-consumo-total",
+          "editorial_status": null,
+          "preview": "**Contexto:** um aparelho passa a consumir 30% menos energia por utilização. Seu custo de operação cai e a frequência de uso aumenta."
+        },
+        {
+          "id": "ENG-038",
+          "chapter": 38,
+          "title": "Estudo de caso E — O avaliador aprova a resposta errada",
+          "section": "Parte V — Estudos de caso orientados à decisão",
+          "question": "Como reconhecer que um avaliador automatizado está reforçando uma conclusão errada?",
+          "anchor": "38-estudo-de-caso-e-o-avaliador-aprova-a-resposta-errada",
+          "editorial_status": null,
+          "preview": "**Contexto:** um sistema de IA produz código e outro processo verifica se os testes passam. O conjunto de testes cobre o formato de saída, mas não casos adversos relevantes."
+        },
+        {
+          "id": "ENG-039",
+          "chapter": 39,
+          "title": "Estudo de caso F — Protótipo estrutural validado fora de escala",
+          "section": "Parte V — Estudos de caso orientados à decisão",
+          "question": "Por que um protótipo bem-sucedido pode falhar ao mudar de escala?",
+          "anchor": "39-estudo-de-caso-f-protótipo-estrutural-validado-fora-de-escala",
+          "editorial_status": null,
+          "preview": "**Contexto:** uma peça em escala reduzida suporta carga de bancada e a equipe conclui que uma estrutura maior será segura."
+        },
+        {
+          "id": "ENG-040",
+          "chapter": 40,
+          "title": "Estudo de caso G — Duas decisões corretas criam um resultado social ruim",
+          "section": "Parte V — Estudos de caso orientados à decisão",
+          "question": "Como decisões localmente corretas podem gerar consequências coletivas ruins?",
+          "anchor": "40-estudo-de-caso-g-duas-decisões-corretas-criam-um-resultado-social-ruim",
+          "editorial_status": null,
+          "preview": "**Contexto:** dois participantes compartilham um recurso limitado. Cada um pode retirar unidades legalmente; a regra isolada não viola conservação nem autenticação."
+        },
+        {
+          "id": "ENG-041",
+          "chapter": 41,
+          "title": "Estudo de caso H — Um processo melhora no relatório, piora na realidade",
+          "section": "Parte V — Estudos de caso orientados à decisão",
+          "question": "Como impedir que indicadores incentivem piora do resultado real?",
+          "anchor": "41-estudo-de-caso-h-um-processo-melhora-no-relatório-piora-na-realidade",
+          "editorial_status": null,
+          "preview": "**Contexto:** uma equipe mede tempo médio por tarefa concluída e passa a privilegiar casos simples. Tarefas difíceis acumulam-se sem fechamento."
+        },
+        {
+          "id": "ENG-042",
+          "chapter": 42,
+          "title": "Qual técnica usar para qual pergunta?",
+          "section": "Parte VI — Catálogo de métodos para consulta rápida",
+          "question": "Qual ferramenta de engenharia combina com a pergunta e a incerteza existentes?",
+          "anchor": "42-qual-técnica-usar-para-qual-pergunta",
+          "editorial_status": null,
+          "preview": ""
+        },
+        {
+          "id": "ENG-043",
+          "chapter": 43,
+          "title": "Os doze anti-padrões mais importantes",
+          "section": "Parte VI — Catálogo de métodos para consulta rápida",
+          "question": "Quais erros de raciocínio e projeto se repetem em diferentes disciplinas?",
+          "anchor": "43-os-doze-anti-padrões-mais-importantes",
+          "editorial_status": null,
+          "preview": "1. **Confundir atividade com resultado:** contabilizar produção sem avaliar benefício. 2. **Otimizar o gargalo errado:** melhorar um componente que não restringe o sistema. 3. **Aceitar métricas sem denominador:** apresentar percentuais sem"
+        },
+        {
+          "id": "ENG-044",
+          "chapter": 44,
+          "title": "Perguntas universais de revisão técnica",
+          "section": "Parte VI — Catálogo de métodos para consulta rápida",
+          "question": "Que perguntas orientam revisão antes, durante e depois de uma intervenção?",
+          "anchor": "44-perguntas-universais-de-revisão-técnica",
+          "editorial_status": null,
+          "preview": "**Antes de agir:** o que sabemos? O que supomos? Qual é a unidade de análise? Qual é a fronteira do sistema? Quais alternativas existem? Que dano é possível?"
+        },
+        {
+          "id": "ENG-045",
+          "chapter": 45,
+          "title": "Glossário essencial de engenharia aplicada",
+          "section": "Parte VII — Vocabulário, referências e limites",
+          "question": "O que significam os principais termos técnicos e quais ressalvas os acompanham?",
+          "anchor": "45-glossário-essencial-de-engenharia-aplicada",
+          "editorial_status": null,
+          "preview": ""
+        },
+        {
+          "id": "ENG-046",
+          "chapter": 46,
+          "title": "Equações essenciais — índice de hipóteses",
+          "section": "Parte VII — Vocabulário, referências e limites",
+          "question": "Sob quais pressupostos as equações principais podem ser aplicadas?",
+          "anchor": "46-equações-essenciais-índice-de-hipóteses",
+          "editorial_status": null,
+          "preview": "A identificação de **hipóteses de validade** é parte do significado de cada equação. Aplicar uma fórmula fora de seu regime pode ser pior do que não calcular."
+        },
+        {
+          "id": "ENG-047",
+          "chapter": 47,
+          "title": "Trilhas de leitura por problema",
+          "section": "Parte VII — Vocabulário, referências e limites",
+          "question": "Que sequência de capítulos é útil para uma determinada classe de problema?",
+          "anchor": "47-trilhas-de-leitura-por-problema",
+          "editorial_status": null,
+          "preview": "**Problema de integração entre tecnologias:** 2 → 4 → 5 → 15 → 16 → 31 → 33."
+        },
+        {
+          "id": "ENG-048",
+          "chapter": 48,
+          "title": "Bibliografia externa de aprofundamento",
+          "section": "Parte VII — Vocabulário, referências e limites",
+          "question": "Onde verificar conceitos e aprofundar conhecimentos em fontes externas?",
+          "anchor": "48-bibliografia-externa-de-aprofundamento",
+          "editorial_status": null,
+          "preview": "Esta enciclopédia é uma **síntese didática original**. As referências abaixo são fontes de estudo e verificação conceitual, não alegações de reprodução integral de normas. Normas técnicas podem ter conteúdo pago, versões posteriores e requi"
+        },
+        {
+          "id": "ENG-049",
+          "chapter": 49,
+          "title": "Qualidade de uma análise técnica",
+          "section": "Parte VII — Vocabulário, referências e limites",
+          "question": "Como avaliar se uma análise técnica é clara, fundamentada e proporcional ao risco?",
+          "anchor": "49-qualidade-de-uma-análise-técnica",
+          "editorial_status": null,
+          "preview": "Uma análise de engenharia é útil quando permite a outra pessoa reconstruir a pergunta, conferir as evidências, entender as hipóteses e julgar se a conclusão realmente se segue dos dados. Organização textual não substitui demonstração."
+        }
+      ]
+    },
+    {
+      "file": "SCIENTIFIC_BRAIN.md",
+      "title": "SCIENTIFIC BRAIN",
+      "scope": "Enciclopédia de Conhecimento Científico e Pesquisa Aplicada",
+      "chapters": [
+        {
+          "id": "SCI-001",
+          "chapter": 1,
+          "title": "Ciência, investigação e conhecimento confiável",
+          "section": "Parte I — Fundamentos do conhecimento científico",
+          "question": "O que diferencia uma investigação científica de uma opinião bem argumentada?",
+          "anchor": "1-ciência-investigação-e-conhecimento-confiável",
+          "editorial_status": null,
+          "preview": "**Definição.** Ciência é um conjunto de práticas para formular explicações e previsões, confrontá-las com observações e atualizar o conhecimento de maneira pública e criticável. Não existe um único ritual universal: astronomia observacional"
+        },
+        {
+          "id": "SCI-002",
+          "chapter": 2,
+          "title": "Tipos de pesquisa e suas finalidades",
+          "section": "Parte I — Fundamentos do conhecimento científico",
+          "question": "Que tipo de investigação corresponde ao conhecimento procurado?",
+          "anchor": "2-tipos-de-pesquisa-e-suas-finalidades",
+          "editorial_status": null,
+          "preview": "**Pesquisa exploratória:** identifica fenômenos, categorias e perguntas ainda mal definidas. Pode empregar entrevistas, observação aberta, prototipagem e análise preliminar de dados. Suas descobertas sugerem hipóteses; não devem ser relatad"
+        },
+        {
+          "id": "SCI-003",
+          "chapter": 3,
+          "title": "Ontologia, epistemologia e modelos",
+          "section": "Parte I — Fundamentos do conhecimento científico",
+          "question": "O que se presume existir e como podemos conhecê-lo?",
+          "anchor": "3-ontologia-epistemologia-e-modelos",
+          "editorial_status": null,
+          "preview": "**Ontologia** explicita quais entidades, processos e relações integram o fenômeno estudado: pessoas, organismos, estados, eventos, mensagens, recursos, decisões e interações. **Epistemologia** examina como alegações sobre essas entidades po"
+        },
+        {
+          "id": "SCI-004",
+          "chapter": 4,
+          "title": "Alegações, evidências e proveniência",
+          "section": "Parte I — Fundamentos do conhecimento científico",
+          "question": "Qual é o menor conjunto de observações que sustenta uma afirmação?",
+          "anchor": "4-alegações-evidências-e-proveniência",
+          "editorial_status": null,
+          "preview": "Uma alegação deve identificar o objeto, a propriedade, as condições e a população relevante. “O sistema funciona” é indeterminado; “cem execuções com entradas válidas produziram estados finais consistentes no ambiente X” é auditável."
+        },
+        {
+          "id": "SCI-005",
+          "chapter": 5,
+          "title": "Hipóteses, mecanismos e previsões",
+          "section": "Parte I — Fundamentos do conhecimento científico",
+          "question": "Como converter uma explicação plausível em algo investigável?",
+          "anchor": "5-hipóteses-mecanismos-e-previsões",
+          "editorial_status": null,
+          "preview": "**Hipótese** é uma proposição específica que pode ser confrontada com observações; **mecanismo** é a explicação proposta para o efeito; **previsão** especifica o resultado esperado em condições definidas. Uma mesma previsão pode derivar de"
+        },
+        {
+          "id": "SCI-006",
+          "chapter": 6,
+          "title": "Indução, dedução, abdução e atualização",
+          "section": "Parte I — Fundamentos do conhecimento científico",
+          "question": "Que forma de raciocínio está sendo utilizada?",
+          "anchor": "6-indução-dedução-abdução-e-atualização",
+          "editorial_status": null,
+          "preview": "**Dedução:** uma conclusão segue de premissas e regras formais; se as premissas forem verdadeiras e o argumento válido, a conclusão acompanha. Isso não garante que as premissas descrevam o mundo."
+        },
+        {
+          "id": "SCI-007",
+          "chapter": 7,
+          "title": "Incerteza, erro e limites da generalização",
+          "section": "Parte I — Fundamentos do conhecimento científico",
+          "question": "Que parte da conclusão depende da variabilidade, do modelo ou do contexto?",
+          "anchor": "7-incerteza-erro-e-limites-da-generalização",
+          "editorial_status": null,
+          "preview": "Separe **incerteza aleatória** (variação de amostras, ruído), **incerteza sistemática** (calibração, seleção, confundimento), **incerteza de modelo** (representação inadequada) e **incerteza contextual** (mudança de população ou ambiente)."
+        },
+        {
+          "id": "SCI-008",
+          "chapter": 8,
+          "title": "Ceticismo produtivo e ética intelectual",
+          "section": "Parte I — Fundamentos do conhecimento científico",
+          "question": "Como duvidar de maneira que produza conhecimento em vez de paralisar a pesquisa?",
+          "anchor": "8-ceticismo-produtivo-e-ética-intelectual",
+          "editorial_status": null,
+          "preview": "O ceticismo produtivo procura *testes discriminantes*: observações que fariam hipóteses alternativas prever resultados diferentes. Não consiste em negar tudo nem em exigir certeza impossível antes de agir."
+        },
+        {
+          "id": "SCI-009",
+          "chapter": 9,
+          "title": "Definir problemas investigáveis",
+          "section": "Parte II — Descoberta, revisão de literatura e formulação de estudos",
+          "question": "Como reconhecer uma pergunta clara, relevante e passível de investigação?",
+          "anchor": "9-definir-problemas-investigáveis",
+          "editorial_status": null,
+          "preview": "Uma pergunta científica estabelece o fenômeno, a população ou sistema, a propriedade a observar, o contexto e o tipo de conhecimento buscado. A formulação deve ser específica sem predeterminar a resposta. Perguntas amplas podem ser dividida"
+        },
+        {
+          "id": "SCI-010",
+          "chapter": 10,
+          "title": "Busca bibliográfica sistemática e rastreável",
+          "section": "Parte II — Descoberta, revisão de literatura e formulação de estudos",
+          "question": "Como encontrar conhecimento acumulado sem selecionar apenas estudos favoráveis?",
+          "anchor": "10-busca-bibliográfica-sistemática-e-rastreável",
+          "editorial_status": null,
+          "preview": "Comece por vocabulário principal, sinônimos, termos históricos e campos adjacentes. Combine estratégias por conceito, use bases pertinentes à área e registre datas, consultas, critérios de elegibilidade e decisões de inclusão. Complemente a"
+        },
+        {
+          "id": "SCI-011",
+          "chapter": 11,
+          "title": "Hierarquia contextual de fontes e risco de viés",
+          "section": "Parte II — Descoberta, revisão de literatura e formulação de estudos",
+          "question": "Que evidência merece peso para uma pergunta específica?",
+          "anchor": "11-hierarquia-contextual-de-fontes-e-risco-de-viés",
+          "editorial_status": null,
+          "preview": "Não existe uma pirâmide universal de qualidade que dispense leitura crítica. Para efeito causal de uma intervenção, um ensaio bem desenhado pode superar uma comparação observacional vulnerável a confundidores. Para fenômenos raros ou danos"
+        },
+        {
+          "id": "SCI-012",
+          "chapter": 12,
+          "title": "Síntese crítica e lacunas de conhecimento",
+          "section": "Parte II — Descoberta, revisão de literatura e formulação de estudos",
+          "question": "Como sintetizar estudos discordantes sem produzir consenso artificial?",
+          "anchor": "12-síntese-crítica-e-lacunas-de-conhecimento",
+          "editorial_status": null,
+          "preview": "Compare explicitamente o que cada estudo mede, seus estimandos, população, desenho, efeitos e incertezas. Diferencie “não detectou efeito” de “demonstrou equivalência”. A heterogeneidade pode ser importante: um método pode ajudar iniciantes"
+        },
+        {
+          "id": "SCI-013",
+          "chapter": 13,
+          "title": "Construção de teorias e hipóteses rivais",
+          "section": "Parte II — Descoberta, revisão de literatura e formulação de estudos",
+          "question": "Como evitar que a primeira explicação plausible controle todo o estudo?",
+          "anchor": "13-construção-de-teorias-e-hipóteses-rivais",
+          "editorial_status": null,
+          "preview": "Construa um mapa explícito com hipóteses principais, alternativas e mecanismos. Para cada hipótese, formule uma previsão distintiva e pergunte que observação seria provável sob outra explicação. Evite explicações que se tornam verdadeiras q"
+        },
+        {
+          "id": "SCI-014",
+          "chapter": 14,
+          "title": "Construtos, operacionalização e validade",
+          "section": "Parte II — Descoberta, revisão de literatura e formulação de estudos",
+          "question": "Como transformar ideias abstratas em observações sem perder seu significado?",
+          "anchor": "14-construtos-operacionalização-e-validade",
+          "editorial_status": null,
+          "preview": "**Construto** é uma propriedade não observável diretamente, como interesse, compreensão, confiança ou criatividade. **Operacionalização** é a escolha de medidas ou procedimentos que forneçam indicadores relacionados a esse construto."
+        },
+        {
+          "id": "SCI-015",
+          "chapter": 15,
+          "title": "Pré-registro, protocolo e análise planejada",
+          "section": "Parte II — Descoberta, revisão de literatura e formulação de estudos",
+          "question": "Como diferenciar previsões anteriores aos dados de interpretações feitas depois?",
+          "anchor": "15-pré-registro-protocolo-e-análise-planejada",
+          "editorial_status": null,
+          "preview": "Um protocolo define pergunta, população, critérios de inclusão, variáveis, desfecho principal, comparadores, alocação, tratamento de exclusões e estratégia analítica. **Pré-registro** fixa um plano datado antes da coleta ou análise confirma"
+        },
+        {
+          "id": "SCI-016",
+          "chapter": 16,
+          "title": "Programas de pesquisa e decisão por aprendizagem",
+          "section": "Parte II — Descoberta, revisão de literatura e formulação de estudos",
+          "question": "Como organizar estudos sucessivos sem criar uma coleção de experimentos desconectados?",
+          "anchor": "16-programas-de-pesquisa-e-decisão-por-aprendizagem",
+          "editorial_status": null,
+          "preview": "Um programa de pesquisa explicita problema durável, hipóteses concorrentes, instrumentos, resultados anteriores e decisões que dependem de novas observações. Cada experimento deve reduzir alguma incerteza significativa ou melhorar uma capac"
+        },
+        {
+          "id": "SCI-017",
+          "chapter": 17,
+          "title": "Experimentos, intervenções e controles",
+          "section": "Parte III — Desenho experimental e pesquisa empírica",
+          "question": "O que significa variar um fator para inferir seu efeito?",
+          "anchor": "17-experimentos-intervenções-e-controles",
+          "editorial_status": null,
+          "preview": "Um experimento manipula ou atribui uma intervenção e observa o resultado sob condições definidas. O objetivo é distinguir mudanças causadas pela intervenção de mudanças por contexto, composição dos grupos, ordem de exposição ou acaso."
+        },
+        {
+          "id": "SCI-018",
+          "chapter": 18,
+          "title": "Confundimento, viés e variáveis de contexto",
+          "section": "Parte III — Desenho experimental e pesquisa empírica",
+          "question": "O que poderia gerar a mesma diferença observada sem a intervenção produzir o efeito?",
+          "anchor": "18-confundimento-viés-e-variáveis-de-contexto",
+          "editorial_status": null,
+          "preview": "Um **confundidor** influencia a exposição e o resultado. **Viés de seleção** surge quando os participantes observados não representam adequadamente a população de interesse ou quando a inclusão depende de consequências da intervenção. **Vié"
+        },
+        {
+          "id": "SCI-019",
+          "chapter": 19,
+          "title": "Amostragem, representatividade e cobertura",
+          "section": "Parte III — Desenho experimental e pesquisa empírica",
+          "question": "Quem está representado nos dados e quem ficou de fora?",
+          "anchor": "19-amostragem-representatividade-e-cobertura",
+          "editorial_status": null,
+          "preview": "Defina **população-alvo**, **quadro amostral**, critérios de elegibilidade, recrutamento e taxa de participação. Amostra de conveniência pode ser adequada para descoberta de problemas, mas não sustenta estimativas populacionais sem pressupo"
+        },
+        {
+          "id": "SCI-020",
+          "chapter": 20,
+          "title": "Randomização, bloqueio e contrabalanceamento",
+          "section": "Parte III — Desenho experimental e pesquisa empírica",
+          "question": "Como separar tratamento de diferenças pré-existentes e efeitos de ordem?",
+          "anchor": "20-randomização-bloqueio-e-contrabalanceamento",
+          "editorial_status": null,
+          "preview": "**Randomização** atribui intervenções com probabilidades conhecidas e pode equilibrar fatores observados e não observados *em expectativa*, não necessariamente em cada pequena amostra. **Bloqueio** agrupa participantes ou execuções semelhan"
+        },
+        {
+          "id": "SCI-021",
+          "chapter": 21,
+          "title": "Desenhos fatoriais e interações",
+          "section": "Parte III — Desenho experimental e pesquisa empírica",
+          "question": "Como investigar fatores simultâneos sem confundir seus efeitos?",
+          "anchor": "21-desenhos-fatoriais-e-interações",
+          "editorial_status": null,
+          "preview": "Um desenho fatorial varia fatores em combinações definidas. Em um arranjo 2×2, dois fatores A e B produzem quatro condições: A0B0, A1B0, A0B1 e A1B1. O **efeito principal** de A é a diferença média atribuída a A através dos níveis de B; **i"
+        },
+        {
+          "id": "SCI-022",
+          "chapter": 22,
+          "title": "Estudos longitudinais e séries de exposição",
+          "section": "Parte III — Desenho experimental e pesquisa empírica",
+          "question": "Como medir mudança ao longo do tempo sem confundi-la com história, maturação ou fadiga?",
+          "anchor": "22-estudos-longitudinais-e-séries-de-exposição",
+          "editorial_status": null,
+          "preview": "Registros repetidos podem investigar aprendizagem, retenção, desgaste, ciclos sazonais ou efeitos tardios. Defina intervalos, método de identificação longitudinal, regras de faltas e mudanças de instrumento. Observe tendências anteriores, n"
+        },
+        {
+          "id": "SCI-023",
+          "chapter": 23,
+          "title": "Testes A/B e experimentos em sistemas digitais",
+          "section": "Parte III — Desenho experimental e pesquisa empírica",
+          "question": "Como avaliar alterações implantadas quando existe tráfego ou uso contínuo?",
+          "anchor": "23-testes-ab-e-experimentos-em-sistemas-digitais",
+          "editorial_status": null,
+          "preview": "Um teste A/B compara variantes atribuídas a unidades elegíveis. Defina a unidade de randomização, estabilidade de exposição, métricas primárias, métricas de proteção, duração e critérios de interrupção. Métricas de proteção detectam ganhos"
+        },
+        {
+          "id": "SCI-024",
+          "chapter": 24,
+          "title": "Pesquisa qualitativa e observação de campo",
+          "section": "Parte III — Desenho experimental e pesquisa empírica",
+          "question": "Como investigar significados, estratégias e problemas que métricas fechadas não capturam?",
+          "anchor": "24-pesquisa-qualitativa-e-observação-de-campo",
+          "editorial_status": null,
+          "preview": "Entrevistas, observação contextual, análise documental e protocolos de verbalização podem revelar mecanismos, motivações e categorias inesperadas. A amostragem pode priorizar diversidade de perspectivas, casos extremos e situações de contra"
+        },
+        {
+          "id": "SCI-025",
+          "chapter": 25,
+          "title": "Métodos mistos e triangulação",
+          "section": "Parte III — Desenho experimental e pesquisa empírica",
+          "question": "Como combinar dados quantitativos e qualitativos sem utilizar um método apenas como decoração?",
+          "anchor": "25-métodos-mistos-e-triangulação",
+          "editorial_status": null,
+          "preview": "Métodos mistos conectam inferências diferentes. Estudos quantitativos estimam frequência, magnitude e associações; estudos qualitativos investigam significado, processo e contexto. Integração pode ser **sequencial exploratória** (qualitativ"
+        },
+        {
+          "id": "SCI-026",
+          "chapter": 26,
+          "title": "Pesquisa com participantes humanos: ética e segurança",
+          "section": "Parte III — Desenho experimental e pesquisa empírica",
+          "question": "Quais salvaguardas são necessárias antes de envolver pessoas reais?",
+          "anchor": "26-pesquisa-com-participantes-humanos-ética-e-segurança",
+          "editorial_status": null,
+          "preview": "Avalie riscos físicos, psicológicos, reputacionais, financeiros e de privacidade; explique a finalidade e o caráter voluntário da participação; procure consentimento informado apropriado e respeite retirada e limites de coleta. Quando houve"
+        },
+        {
+          "id": "SCI-027",
+          "chapter": 27,
+          "title": "Probabilidade, eventos e dependência",
+          "section": "Parte IV — Matemática, estatística e inferência",
+          "question": "Como representar incerteza sem tratar toda possibilidade como igualmente provável?",
+          "anchor": "27-probabilidade-eventos-e-dependência",
+          "editorial_status": null,
+          "preview": "Uma probabilidade pertence ao intervalo [0,1] e se refere a um evento definido sob condições específicas. Para eventos independentes, `P(A ∩ B) = P(A)P(B)`; sem independência, `P(A ∩ B) = P(A)P(B|A)`. A suposição de independência não deve s"
+        },
+        {
+          "id": "SCI-028",
+          "chapter": 28,
+          "title": "Teorema de Bayes e atualização de crenças",
+          "section": "Parte IV — Matemática, estatística e inferência",
+          "question": "Como atualizar a plausibilidade de uma hipótese quando chega nova evidência?",
+          "anchor": "28-teorema-de-bayes-e-atualização-de-crenças",
+          "editorial_status": null,
+          "preview": "`P(H|E) = P(E|H)P(H)/P(E)`. A evidência é interpretada pela verossimilhança sob hipóteses diferentes, não apenas por parecer surpreendente. A forma em chances é `odds(H|E) = odds(H) × LR`, em que `LR = P(E|H)/P(E|não H)`."
+        },
+        {
+          "id": "SCI-029",
+          "chapter": 29,
+          "title": "Distribuições e estatística descritiva",
+          "section": "Parte IV — Matemática, estatística e inferência",
+          "question": "Como resumir observações sem apagar sua estrutura?",
+          "anchor": "29-distribuições-e-estatística-descritiva",
+          "editorial_status": null,
+          "preview": "Diferencie variáveis categóricas, ordinais, discretas e contínuas. Examine contagem, denominador, distribuição, mediana, média, quantis, dispersão, valores ausentes e unidades. Um resumo adequado depende da pergunta: média pode ser útil par"
+        },
+        {
+          "id": "SCI-030",
+          "chapter": 30,
+          "title": "Estimandos e medidas de efeito",
+          "section": "Parte IV — Matemática, estatística e inferência",
+          "question": "O que, exatamente, estamos tentando estimar?",
+          "anchor": "30-estimandos-e-medidas-de-efeito",
+          "editorial_status": null,
+          "preview": "**Estimando** é a quantidade alvo antes de observar os dados: diferença de médias, razão de riscos, efeito mediano, taxa de eventos por unidade de exposição, tempo até falha ou efeito causal médio em uma população. Um estimador é o procedim"
+        },
+        {
+          "id": "SCI-031",
+          "chapter": 31,
+          "title": "Intervalos de confiança e incerteza de estimativas",
+          "section": "Parte IV — Matemática, estatística e inferência",
+          "question": "Como comunicar a precisão de uma estimativa sem prometer certeza indevida?",
+          "anchor": "31-intervalos-de-confiança-e-incerteza-de-estimativas",
+          "editorial_status": null,
+          "preview": "Um intervalo de confiança frequentista de 95%, sob o procedimento e pressupostos do modelo, possui cobertura de 95% em repetições hipotéticas do processo amostral. Depois de observado, não significa literalmente 95% de probabilidade do parâ"
+        },
+        {
+          "id": "SCI-032",
+          "chapter": 32,
+          "title": "Testes de hipótese e significância",
+          "section": "Parte IV — Matemática, estatística e inferência",
+          "question": "Que conclusão um teste estatístico permite, e qual conclusão ele não permite?",
+          "anchor": "32-testes-de-hipótese-e-significância",
+          "editorial_status": null,
+          "preview": "Em testes frequentistas, uma hipótese nula especifica um modelo ou condição de referência; o valor `p` é a probabilidade, sob esse modelo e pressupostos, de observar estatística tão ou mais extrema. `p` **não** é a probabilidade de a hipóte"
+        },
+        {
+          "id": "SCI-033",
+          "chapter": 33,
+          "title": "Poder estatístico, amostra e efeitos mínimos relevantes",
+          "section": "Parte IV — Matemática, estatística e inferência",
+          "question": "Quantas observações são necessárias para responder de maneira útil?",
+          "anchor": "33-poder-estatístico-amostra-e-efeitos-mínimos-relevantes",
+          "editorial_status": null,
+          "preview": "**Poder estatístico** é `P(rejeitar H0 | efeito especificado e pressupostos alternativos)`. Escolher tamanho amostral exige efeito mínimo relevante, variabilidade esperada, taxa de eventos, erro tolerado, desenho e possíveis perdas."
+        },
+        {
+          "id": "SCI-034",
+          "chapter": 34,
+          "title": "Múltiplas comparações e seleção pós-hoc",
+          "section": "Parte IV — Matemática, estatística e inferência",
+          "question": "Por que experimentar dezenas de métricas aumenta a chance de falsas descobertas?",
+          "anchor": "34-múltiplas-comparações-e-seleção-pós-hoc",
+          "editorial_status": null,
+          "preview": "Se vinte testes independentes de hipóteses nulas verdadeiras usam limiar `α=0,05`, a probabilidade de ao menos um falso positivo é `1−(0,95)^20 ≈ 64,2%`. Independência é apenas hipótese ilustrativa; com testes correlacionados o resultado mu"
+        },
+        {
+          "id": "SCI-035",
+          "chapter": 35,
+          "title": "Regressão, hierarquias e dependência",
+          "section": "Parte IV — Matemática, estatística e inferência",
+          "question": "Como estimar associações ou efeitos condicionais quando variáveis coexistem?",
+          "anchor": "35-regressão-hierarquias-e-dependência",
+          "editorial_status": null,
+          "preview": "Modelos de regressão descrevem a relação entre um desfecho e covariáveis. Uma regressão linear `Y=β0+β1X+ε` requer atenção a forma funcional, resíduos, heterocedasticidade, observações influentes, colinearidade e dependência entre amostras."
+        },
+        {
+          "id": "SCI-036",
+          "chapter": 36,
+          "title": "Inferência causal e experimentos naturais",
+          "section": "Parte IV — Matemática, estatística e inferência",
+          "question": "Como distinguir associação de efeitos de intervenções?",
+          "anchor": "36-inferência-causal-e-experimentos-naturais",
+          "editorial_status": null,
+          "preview": "Um estimando causal compara resultados potenciais da mesma unidade sob alternativas incompatíveis. Como não observamos ambos simultaneamente, precisamos de um desenho que torne comparadores informativos. Randomização é poderosa, mas nem sem"
+        },
+        {
+          "id": "SCI-037",
+          "chapter": 37,
+          "title": "Séries temporais, autocorrelação e mudanças de regime",
+          "section": "Parte IV — Matemática, estatística e inferência",
+          "question": "Como analisar dados ordenados no tempo sem fingir independência entre observações?",
+          "anchor": "37-séries-temporais-autocorrelação-e-mudanças-de-regime",
+          "editorial_status": null,
+          "preview": "Dados temporais podem conter tendência, sazonalidade, autocorrelação, eventos extremos, alterações estruturais e atrasos de efeito. Um gráfico com pontos sucessivos não representa amostra independente. Compare janelas equivalentes e verifiq"
+        },
+        {
+          "id": "SCI-038",
+          "chapter": 38,
+          "title": "Dados faltantes, censura e sobrevivência",
+          "section": "Parte IV — Matemática, estatística e inferência",
+          "question": "O que se perde quando parte das observações não chega ao resultado final?",
+          "anchor": "38-dados-faltantes-censura-e-sobrevivência",
+          "editorial_status": null,
+          "preview": "Dados podem faltar por processos aproximadamente aleatórios, dependentes de variáveis observadas ou dependentes do próprio valor não observado. **Análise somente de casos completos** pode ser enviesada quando quem abandona difere sistematic"
+        },
+        {
+          "id": "SCI-039",
+          "chapter": 39,
+          "title": "Robustez, replicação e metanálise",
+          "section": "Parte IV — Matemática, estatística e inferência",
+          "question": "Um resultado resiste a escolhas analíticas e contextos diferentes?",
+          "anchor": "39-robustez-replicação-e-metanálise",
+          "editorial_status": null,
+          "preview": "**Robustez:** a conclusão não depende excessivamente de uma decisão analítica defensável. **Repetibilidade:** mesmas condições, instrumentos e equipe; **reprodutibilidade computacional:** dados e código permitem recomputar análises; **repli"
+        },
+        {
+          "id": "SCI-040",
+          "chapter": 40,
+          "title": "Modelos computacionais e credibilidade de simulação",
+          "section": "Parte V — Modelagem computacional, simulação e avaliação de inteligência artificial",
+          "question": "Quando uma simulação ensina algo sobre o mundo e quando apenas reproduz seus próprios pressupostos?",
+          "anchor": "40-modelos-computacionais-e-credibilidade-de-simulação",
+          "editorial_status": null,
+          "preview": "Um modelo computacional representa entidades, estados, regras de transição, entradas e saídas. Uma simulação explora o comportamento desse modelo sob condições definidas. **Verificação** pergunta se a implementação corresponde às regras esp"
+        },
+        {
+          "id": "SCI-041",
+          "chapter": 41,
+          "title": "Métodos numéricos e análise de erro",
+          "section": "Parte V — Modelagem computacional, simulação e avaliação de inteligência artificial",
+          "question": "Um resultado de computação representa o sistema modelado ou um artefato do algoritmo?",
+          "anchor": "41-métodos-numéricos-e-análise-de-erro",
+          "editorial_status": null,
+          "preview": "Soluções numéricas aproximam integrais, equações diferenciais, otimização e processos estocásticos. Erros podem vir de discretização, arredondamento, truncamento, condições iniciais, instabilidade e má formulação do modelo."
+        },
+        {
+          "id": "SCI-042",
+          "chapter": 42,
+          "title": "Monte Carlo e propagação de incerteza",
+          "section": "Parte V — Modelagem computacional, simulação e avaliação de inteligência artificial",
+          "question": "Como estimar resultados quando entradas possuem distribuições incertas?",
+          "anchor": "42-monte-carlo-e-propagação-de-incerteza",
+          "editorial_status": null,
+          "preview": "A simulação Monte Carlo amostra combinações de variáveis a partir de distribuições e propaga cada combinação pelo modelo. Estima médias, quantis, probabilidades de exceder limites e sensibilidade a hipóteses."
+        },
+        {
+          "id": "SCI-043",
+          "chapter": 43,
+          "title": "Simulação baseada em agentes e comportamento emergente",
+          "section": "Parte V — Modelagem computacional, simulação e avaliação de inteligência artificial",
+          "question": "Como investigar consequências coletivas de regras individuais?",
+          "anchor": "43-simulação-baseada-em-agentes-e-comportamento-emergente",
+          "editorial_status": null,
+          "preview": "Modelos baseados em agentes especificam agentes, estados, objetivos, informação disponível, regras de decisão, ambiente e interações. Podem gerar padrões emergentes que não estão diretamente codificados como resultados globais."
+        },
+        {
+          "id": "SCI-044",
+          "chapter": 44,
+          "title": "Simulação de eventos discretos, filas e capacidade",
+          "section": "Parte V — Modelagem computacional, simulação e avaliação de inteligência artificial",
+          "question": "Como compreender gargalos, espera e concorrência em processos?",
+          "anchor": "44-simulação-de-eventos-discretos-filas-e-capacidade",
+          "editorial_status": null,
+          "preview": "Simulação de eventos discretos atualiza o estado nos instantes de chegadas, partidas, falhas ou conclusões. Defina distribuição de chegadas, tempos de serviço, número de servidores, política de fila, abandonos e prioridade."
+        },
+        {
+          "id": "SCI-045",
+          "chapter": 45,
+          "title": "Sensibilidade, calibração e identificabilidade",
+          "section": "Parte V — Modelagem computacional, simulação e avaliação de inteligência artificial",
+          "question": "Quais parâmetros realmente controlam resultados e quais não podemos estimar com os dados disponíveis?",
+          "anchor": "45-sensibilidade-calibração-e-identificabilidade",
+          "editorial_status": null,
+          "preview": "**Análise de sensibilidade local** varia parâmetros nas proximidades de uma configuração. **Global** examina uma região de hipóteses, incluindo interações. **Calibração** ajusta parâmetros para aproximar dados; **validação** deve utilizar r"
+        },
+        {
+          "id": "SCI-046",
+          "chapter": 46,
+          "title": "Otimização, busca e decisão robusta",
+          "section": "Parte V — Modelagem computacional, simulação e avaliação de inteligência artificial",
+          "question": "Como distinguir uma configuração ótima para o modelo de uma escolha boa no mundo real?",
+          "anchor": "46-otimização-busca-e-decisão-robusta",
+          "editorial_status": null,
+          "preview": "Otimização encontra parâmetros que minimizam custo ou maximizam função objetivo sob restrições. O resultado depende criticamente da função escolhida. **Otimização multiobjetivo** produz compromissos, frequentemente representados por frontei"
+        },
+        {
+          "id": "SCI-047",
+          "chapter": 47,
+          "title": "Redes, interação estratégica e sistemas socioeconômicos",
+          "section": "Parte V — Modelagem computacional, simulação e avaliação de inteligência artificial",
+          "question": "Como relações entre entidades alteram incentivos e resultados coletivos?",
+          "anchor": "47-redes-interação-estratégica-e-sistemas-socioeconômicos",
+          "editorial_status": null,
+          "preview": "Grafos representam vértices e arestas; métricas de grau, centralidade e componentes descrevem propriedades estruturais, mas não equivalem automaticamente a poder social, confiança ou influência causal. Jogos estratégicos investigam decisões"
+        },
+        {
+          "id": "SCI-048",
+          "chapter": 48,
+          "title": "Avaliação científica de algoritmos e modelos de IA",
+          "section": "Parte V — Modelagem computacional, simulação e avaliação de inteligência artificial",
+          "question": "Como demonstrar capacidade de um modelo sem avaliar o mesmo conhecimento usado em seu desenvolvimento?",
+          "anchor": "48-avaliação-científica-de-algoritmos-e-modelos-de-ia",
+          "editorial_status": null,
+          "preview": "Defina tarefa, população de casos, entradas permitidas, saída esperada, rubrica, ferramentas, contexto, orçamento, tempo, regras de repetição e baseline. Separe treinamento, desenvolvimento, seleção de configurações e avaliação final. Evite"
+        },
+        {
+          "id": "SCI-049",
+          "chapter": 49,
+          "title": "Avaliação de sistemas generativos, multimodais e interativos",
+          "section": "Parte V — Modelagem computacional, simulação e avaliação de inteligência artificial",
+          "question": "Como avaliar resultados cujo valor não se resume a certo ou errado?",
+          "anchor": "49-avaliação-de-sistemas-generativos-multimodais-e-interativos",
+          "editorial_status": null,
+          "preview": "Saídas generativas exigem dimensões diferentes: **fidelidade factual**, **coerência interna**, **utilidade para uma tarefa**, **originalidade pertinente**, **qualidade estética**, **segurança**, **respeito a direitos** e **consistência temp"
+        },
+        {
+          "id": "SCI-050",
+          "chapter": 50,
+          "title": "Anatomia de um laboratório científico",
+          "section": "Parte VI — Laboratórios, instrumentos, dados e transferência de conhecimento",
+          "question": "O que torna um conjunto de equipamentos e programas um laboratório de pesquisa?",
+          "anchor": "50-anatomia-de-um-laboratório-científico",
+          "editorial_status": null,
+          "preview": "Um laboratório combina **perguntas investigáveis**, **instrumentos adequados**, **procedimentos**, **competências**, **controle de condições**, **registros de evidência** e **governança de riscos**. Pode ser físico, computacional, de campo,"
+        },
+        {
+          "id": "SCI-051",
+          "chapter": 51,
+          "title": "Transformação de protótipos em instrumentos de pesquisa",
+          "section": "Parte VI — Laboratórios, instrumentos, dados e transferência de conhecimento",
+          "question": "Como reaproveitar software ou equipamentos existentes sem destruir seu valor original?",
+          "anchor": "51-transformação-de-protótipos-em-instrumentos-de-pesquisa",
+          "editorial_status": null,
+          "preview": "Primeiro identifique a função atual, interfaces, dependências, propriedade intelectual, testes, fontes e usuários. Em seguida, formule uma pergunta concreta que exige nova capacidade instrumental. Só então escolha a menor intervenção: extra"
+        },
+        {
+          "id": "SCI-052",
+          "chapter": 52,
+          "title": "Calibração, metrologia e qualidade dos instrumentos",
+          "section": "Parte VI — Laboratórios, instrumentos, dados e transferência de conhecimento",
+          "question": "Como saber se o instrumento mede a propriedade correta?",
+          "anchor": "52-calibração-metrologia-e-qualidade-dos-instrumentos",
+          "editorial_status": null,
+          "preview": "**Calibração** estabelece relação entre indicação e referências conhecidas sob condições definidas. **Exatidão** se refere à proximidade de um valor de referência; **precisão**, à dispersão das medições; **resolução**, ao menor incremento d"
+        },
+        {
+          "id": "SCI-053",
+          "chapter": 53,
+          "title": "Engenharia de dados científicos e FAIR",
+          "section": "Parte VI — Laboratórios, instrumentos, dados e transferência de conhecimento",
+          "question": "Como preservar dados de modo que possam ser localizados, compreendidos e reutilizados?",
+          "anchor": "53-engenharia-de-dados-científicos-e-fair",
+          "editorial_status": null,
+          "preview": "Princípios FAIR: dados e objetos de pesquisa devem ser **localizáveis**, **acessíveis conforme permissões adequadas**, **interoperáveis** e **reutilizáveis**. Acessibilidade não significa publicação irrestrita: informações pessoais, dados s"
+        },
+        {
+          "id": "SCI-054",
+          "chapter": 54,
+          "title": "Privacidade, segurança e integridade científica",
+          "section": "Parte VI — Laboratórios, instrumentos, dados e transferência de conhecimento",
+          "question": "Como proteger dados, participantes e resultados contra exposição ou adulteração?",
+          "anchor": "54-privacidade-segurança-e-integridade-científica",
+          "editorial_status": null,
+          "preview": "Defina classificação dos dados, acesso por finalidade, retenção mínima, segregação de ambientes, proteção de credenciais, registros de transformação e cópias de recuperação. Em dados de pessoas, documente consentimento e base legal pertinen"
+        },
+        {
+          "id": "SCI-055",
+          "chapter": 55,
+          "title": "Automação experimental e controle de ambientes",
+          "section": "Parte VI — Laboratórios, instrumentos, dados e transferência de conhecimento",
+          "question": "Como automatizar estudos sem automatizar também seus erros?",
+          "anchor": "55-automação-experimental-e-controle-de-ambientes",
+          "editorial_status": null,
+          "preview": "Instrumentos automáticos precisam de contratos de entrada, versões efetivas, condições de ambiente, seeds e logs de eventos. Diferencie falha do sistema estudado, falha de instrumentação, timeout, cancelamento e ausência de resultado. Uma e"
+        },
+        {
+          "id": "SCI-056",
+          "chapter": 56,
+          "title": "Replicação, revisão independente e gestão de qualidade",
+          "section": "Parte VI — Laboratórios, instrumentos, dados e transferência de conhecimento",
+          "question": "Como verificar resultados sem exigir que toda pesquisa repita um processo burocrático gigantesco?",
+          "anchor": "56-replicação-revisão-independente-e-gestão-de-qualidade",
+          "editorial_status": null,
+          "preview": "A revisão deve ser proporcional a risco e finalidade. Em uma investigação exploratória de baixo risco, um colega pode auditar dados e pressupostos. Para recomendações de segurança, saúde ou consequências financeiras importantes, são necessá"
+        },
+        {
+          "id": "SCI-057",
+          "chapter": 57,
+          "title": "Comunicação científica e transferência responsável",
+          "section": "Parte VI — Laboratórios, instrumentos, dados e transferência de conhecimento",
+          "question": "Como transmitir descobertas sem perder condições e limites de validade?",
+          "anchor": "57-comunicação-científica-e-transferência-responsável",
+          "editorial_status": null,
+          "preview": "Um resultado comunicável inclui pergunta, contexto, procedimento, estimando, tamanho amostral, efeito, incerteza, qualidade do instrumento, alternativas, limitações e implicações. Separe **resultado observado**, **inferência causal**, **pre"
+        },
+        {
+          "id": "SCI-058",
+          "chapter": 58,
+          "title": "Ciências de sistemas complexos e comportamento emergente",
+          "section": "Parte VII — Domínios de pesquisa aplicada",
+          "question": "Como investigar sistemas nos quais relações locais produzem efeitos coletivos inesperados?",
+          "anchor": "58-ciências-de-sistemas-complexos-e-comportamento-emergente",
+          "editorial_status": null,
+          "preview": "Sistemas complexos podem apresentar realimentação, não linearidade, redes, adaptação, dependência histórica e regimes múltiplos. Um modelo de média pode falhar quando eventos raros ou interações locais definem o comportamento global."
+        },
+        {
+          "id": "SCI-059",
+          "chapter": 59,
+          "title": "Economia experimental e incentivos",
+          "section": "Parte VII — Domínios de pesquisa aplicada",
+          "question": "Como avaliar consequências de regras que afetam escolhas e distribuição de recursos?",
+          "anchor": "59-economia-experimental-e-incentivos",
+          "editorial_status": null,
+          "preview": "Modelos econômicos simplificam preferências, informação, risco, aprendizado e restrições. Experimentos podem investigar leilões, trocas, cooperação, competição, assimetria de informação e bens comuns. Defina incentivos reais ou simulados e"
+        },
+        {
+          "id": "SCI-060",
+          "chapter": 60,
+          "title": "Psicologia, aprendizagem e comportamento",
+          "section": "Parte VII — Domínios de pesquisa aplicada",
+          "question": "Como distinguir melhora momentânea, retenção e transferência de habilidade?",
+          "anchor": "60-psicologia-aprendizagem-e-comportamento",
+          "editorial_status": null,
+          "preview": "Medidas de aprendizagem podem incluir pré-teste, pós-teste, retenção tardia, tarefa nova e processo de resolução. Repetir exatamente as mesmas questões pode medir familiaridade com o teste. Controle motivação, fadiga, prática prévia, caract"
+        },
+        {
+          "id": "SCI-061",
+          "chapter": 61,
+          "title": "Pesquisa de usabilidade, ergonomia e acessibilidade",
+          "section": "Parte VII — Domínios de pesquisa aplicada",
+          "question": "Uma interface permite que pessoas reais alcancem objetivos no contexto pretendido?",
+          "anchor": "61-pesquisa-de-usabilidade-ergonomia-e-acessibilidade",
+          "editorial_status": null,
+          "preview": "Defina tarefas, perfil de participantes, dispositivo, ambiente e critérios de conclusão. Observe sucesso, erros, tempo, recuperação, necessidade de ajuda e experiência relatada. Não reduza qualidade a um tempo menor: uma interface pode ser"
+        },
+        {
+          "id": "SCI-062",
+          "chapter": 62,
+          "title": "Pesquisa de jogos e sistemas interativos",
+          "section": "Parte VII — Domínios de pesquisa aplicada",
+          "question": "Como examinar diversão, desafio, agência e consequências sem reduzi-los a telemetria superficial?",
+          "anchor": "62-pesquisa-de-jogos-e-sistemas-interativos",
+          "editorial_status": null,
+          "preview": "Defina o **objetivo experiencial**: tensão, domínio, cooperação, exploração, estratégia, expressão ou narrativa. Escolha observações correspondentes: padrões de decisão, compreensão do feedback, repetição voluntária, progressão de habilidad"
+        },
+        {
+          "id": "SCI-063",
+          "chapter": 63,
+          "title": "Pesquisa narrativa, linguagem e recepção",
+          "section": "Parte VII — Domínios de pesquisa aplicada",
+          "question": "Como investigar compreensão e impacto narrativo sem transformar literatura em pontuação mecânica?",
+          "anchor": "63-pesquisa-narrativa-linguagem-e-recepção",
+          "editorial_status": null,
+          "preview": "Estudos podem examinar compreensão causal, coerência de personagens, memória de acontecimentos, engajamento, interpretação de ambiguidades, voz, ritmo e tradução. O método depende da pergunta: entrevistas para interpretação, tarefas de reco"
+        },
+        {
+          "id": "SCI-064",
+          "chapter": 64,
+          "title": "Pesquisa sonora, visual e multimodal",
+          "section": "Parte VII — Domínios de pesquisa aplicada",
+          "question": "Como distinguir integridade do arquivo, propriedades do sinal e qualidade perceptiva?",
+          "anchor": "64-pesquisa-sonora-visual-e-multimodal",
+          "editorial_status": null,
+          "preview": "Em áudio, meça taxa de amostragem, níveis, distorção, atraso, dinâmica e sincronização; teste também percepção de timbre, ataques, espacialidade e integração com a tarefa. Em imagem e vídeo, examine legibilidade, contraste, continuidade, mo"
+        },
+        {
+          "id": "SCI-065",
+          "chapter": 65,
+          "title": "Pesquisa de confiabilidade, operações e segurança",
+          "section": "Parte VII — Domínios de pesquisa aplicada",
+          "question": "Como estudar sistemas sob falha, concorrência e ameaças sem declarar robustez universal?",
+          "anchor": "65-pesquisa-de-confiabilidade-operações-e-segurança",
+          "editorial_status": null,
+          "preview": "Experimentos de confiabilidade exigem modelos de falha pertinentes, cargas representativas, instrumentação e critérios de recuperação. Distingua defeitos de produto, erro de teste, indisponibilidade do ambiente e falhas induzidas. Compare t"
+        },
+        {
+          "id": "SCI-066",
+          "chapter": 66,
+          "title": "Pesquisa ecológica, material e sustentabilidade",
+          "section": "Parte VII — Domínios de pesquisa aplicada",
+          "question": "Como estudar impactos sistêmicos que ultrapassam a intervenção imediata?",
+          "anchor": "66-pesquisa-ecológica-material-e-sustentabilidade",
+          "editorial_status": null,
+          "preview": "Investigações ambientais podem usar ciclos de vida, consumo energético, fluxo de materiais, emissões, regeneração e indicadores de biodiversidade. Defina fronteiras: produção, uso, transporte, manutenção e descarte. Uma melhoria local pode"
+        },
+        {
+          "id": "SCI-067",
+          "chapter": 67,
+          "title": "Caso A — Um diagnóstico que parece melhorar a aprendizagem",
+          "section": "Parte VIII — Estudos de caso com raciocínio completo",
+          "question": "Como investigar se mais informação realmente melhora a habilidade?",
+          "anchor": "67-caso-a-um-diagnóstico-que-parece-melhorar-a-aprendizagem",
+          "editorial_status": null,
+          "preview": "Uma atividade de precisão apresenta feedback global de pontuação. Propõe-se um relatório separado por tipo de erro. Desenvolvedores conseguem provar que o novo relatório calcula valores corretos, mas desejam afirmar que ensina melhor."
+        },
+        {
+          "id": "SCI-068",
+          "chapter": 68,
+          "title": "Caso B — Um avaliador de IA aprova sua própria solução",
+          "section": "Parte VIII — Estudos de caso com raciocínio completo",
+          "question": "Como descobrir contaminação e complacência em avaliações automatizadas?",
+          "anchor": "68-caso-b-um-avaliador-de-ia-aprova-sua-própria-solução",
+          "editorial_status": null,
+          "preview": "Um modelo produz correção de software. O mesmo processo gera casos de teste, compara a saída com a solução criada e atribui 100% de aprovação."
+        },
+        {
+          "id": "SCI-069",
+          "chapter": 69,
+          "title": "Caso C — Uma economia simulada entra em colapso",
+          "section": "Parte VIII — Estudos de caso com raciocínio completo",
+          "question": "Uma regra econômica falha ou o modelo de agentes impõe o resultado?",
+          "anchor": "69-caso-c-uma-economia-simulada-entra-em-colapso",
+          "editorial_status": null,
+          "preview": "Uma economia de recursos permite acumulação ilimitada. Em simulações, poucos agentes monopolizam o mercado e novos participantes não conseguem adquirir ferramentas."
+        },
+        {
+          "id": "SCI-070",
+          "chapter": 70,
+          "title": "Caso D — Uma nova configuração de áudio parece superior",
+          "section": "Parte VIII — Estudos de caso com raciocínio completo",
+          "question": "Medidas de sinal podem substituir percepção auditiva?",
+          "anchor": "70-caso-d-uma-nova-configuração-de-áudio-parece-superior",
+          "editorial_status": null,
+          "preview": "Duas técnicas de mudança de tempo preservam duração-alvo e evitam mudança grande de tom. Uma exibe menor erro matemático em pulsos, mas apresenta artefatos de ataque."
+        },
+        {
+          "id": "SCI-071",
+          "chapter": 71,
+          "title": "Caso E — Uma aplicação perde respostas após reconectar",
+          "section": "Parte VIII — Estudos de caso com raciocínio completo",
+          "question": "Como separar bug de produto, falha de teste e ruído de ambiente?",
+          "anchor": "71-caso-e-uma-aplicação-perde-respostas-após-reconectar",
+          "editorial_status": null,
+          "preview": "Um cliente envia uma operação, perde a confirmação e tenta novamente. Em parte das execuções, o teste informa que o resultado não foi salvo."
+        },
+        {
+          "id": "SCI-072",
+          "chapter": 72,
+          "title": "Caso F — Uma simulação ganha precisão e perde validade",
+          "section": "Parte VIII — Estudos de caso com raciocínio completo",
+          "question": "Mais parâmetros tornam um modelo mais científico?",
+          "anchor": "72-caso-f-uma-simulação-ganha-precisão-e-perde-validade",
+          "editorial_status": null,
+          "preview": "Um simulador simples aproxima dados de comportamento. Um modelo muito maior, calibrado nos mesmos dados, atinge erro quase zero. Em cenários novos, suas previsões pioram."
+        },
+        {
+          "id": "SCI-073",
+          "chapter": 73,
+          "title": "Caso G — Resultados de usuários desaparecem da análise",
+          "section": "Parte VIII — Estudos de caso com raciocínio completo",
+          "question": "O que acontece quando desistências são excluídas da estatística?",
+          "anchor": "73-caso-g-resultados-de-usuários-desaparecem-da-análise",
+          "editorial_status": null,
+          "preview": "Um procedimento de treinamento possui taxa de conclusão de 60%. O relatório calcula evolução apenas entre os concluintes e anuncia melhora expressiva."
+        },
+        {
+          "id": "SCI-074",
+          "chapter": 74,
+          "title": "Caso H — Uma intervenção aumenta eficiência e desigualdade",
+          "section": "Parte VIII — Estudos de caso com raciocínio completo",
+          "question": "Como decidir quando uma intervenção melhora uma métrica, mas piora outras?",
+          "anchor": "74-caso-h-uma-intervenção-aumenta-eficiência-e-desigualdade",
+          "editorial_status": null,
+          "preview": "Um algoritmo de alocação aumenta produção total e reduz custo médio. No entanto, uma parcela pequena dos participantes recebe quase todos os recursos de alta qualidade."
+        },
+        {
+          "id": "SCI-075",
+          "chapter": 75,
+          "title": "Caso I — Um laboratório parece pronto, mas seu instrumento não é válido",
+          "section": "Parte VIII — Estudos de caso com raciocínio completo",
+          "question": "Quando a infraestrutura experimental pode produzir resultados enganadores?",
+          "anchor": "75-caso-i-um-laboratório-parece-pronto-mas-seu-instrumento-não-é-válido",
+          "editorial_status": null,
+          "preview": "Um simulador passou em centenas de testes. A equipe o utiliza para estudar concorrência entre operações. Todos os cenários usam a mesma seed, um único relógio e nenhuma execução realmente simultânea."
+        },
+        {
+          "id": "SCI-076",
+          "chapter": 76,
+          "title": "Seleção de métodos por pergunta",
+          "section": "Parte IX — Atlas de métodos, vocabulário e fontes",
+          "question": "Qual abordagem oferece evidência pertinente ao problema formulado?",
+          "anchor": "76-seleção-de-métodos-por-pergunta",
+          "editorial_status": null,
+          "preview": "O método deve ser escolhido em função da **afirmação desejada**, não da facilidade de executá-lo. Mais sofisticação estatística não corrige uma pergunta mal formulada."
+        },
+        {
+          "id": "SCI-077",
+          "chapter": 77,
+          "title": "Anti-padrões de pesquisa e sinais de alerta",
+          "section": "Parte IX — Atlas de métodos, vocabulário e fontes",
+          "question": "Quais práticas produzem aparência de rigor sem aumentar a confiabilidade?",
+          "anchor": "77-anti-padrões-de-pesquisa-e-sinais-de-alerta",
+          "editorial_status": null,
+          "preview": "1. **Confundir compilação com experiência:** software executável não prova utilidade humana. 2. **Usar média sem denominador:** resultados escondem perdas, retries e subgrupos. 3. **Trocar variável após observar dados:** a métrica vencedora"
+        },
+        {
+          "id": "SCI-078",
+          "chapter": 78,
+          "title": "Estrutura mínima de um protocolo científico",
+          "section": "Parte IX — Atlas de métodos, vocabulário e fontes",
+          "question": "Que informação um estudo precisa ter antes de começar?",
+          "anchor": "78-estrutura-mínima-de-um-protocolo-científico",
+          "editorial_status": null,
+          "preview": "O esquema a seguir é uma referência, não um formulário obrigatório para todo estudo."
+        },
+        {
+          "id": "SCI-079",
+          "chapter": 79,
+          "title": "Estrutura de um relatório de resultados",
+          "section": "Parte IX — Atlas de métodos, vocabulário e fontes",
+          "question": "O que o leitor precisa saber para julgar um achado sem confiar cegamente no autor?",
+          "anchor": "79-estrutura-de-um-relatório-de-resultados",
+          "editorial_status": null,
+          "preview": "Um relatório útil descreve:"
+        },
+        {
+          "id": "SCI-080",
+          "chapter": 80,
+          "title": "Maturidade das investigações e decisões de continuidade",
+          "section": "Parte IX — Atlas de métodos, vocabulário e fontes",
+          "question": "Como distinguir ideia, protocolo, resultado controlado e conhecimento transferível?",
+          "anchor": "80-maturidade-das-investigações-e-decisões-de-continuidade",
+          "editorial_status": null,
+          "preview": "Esses estados não são degraus obrigatórios nem garantias de qualidade. Estudos podem retroceder quando surgem falhas metodológicas. Uma hipótese refutada ou um resultado inconclusivo deve continuar recuperável."
+        },
+        {
+          "id": "SCI-081",
+          "chapter": 81,
+          "title": "Equações essenciais e pressupostos",
+          "section": "Parte IX — Atlas de métodos, vocabulário e fontes",
+          "question": "Qual equação usar e sob quais condições ela pode induzir erro?",
+          "anchor": "81-equações-essenciais-e-pressupostos",
+          "editorial_status": null,
+          "preview": "**Regra geral:** toda equação tem variáveis, unidades, domínio, hipóteses e possíveis efeitos de agregação. Não aplicar apenas porque ela produz um número."
+        },
+        {
+          "id": "SCI-082",
+          "chapter": 82,
+          "title": "Glossário de conceitos fundamentais",
+          "section": "Parte IX — Atlas de métodos, vocabulário e fontes",
+          "question": "O que significam os termos usados em pesquisas científicas?",
+          "anchor": "82-glossário-de-conceitos-fundamentais",
+          "editorial_status": null,
+          "preview": "**Ablação:** remoção controlada de componente de modelo para examinar sua contribuição."
+        },
+        {
+          "id": "SCI-083",
+          "chapter": 83,
+          "title": "Trilhas de estudo por necessidade",
+          "section": "Parte IX — Atlas de métodos, vocabulário e fontes",
+          "question": "Que capítulos consultar primeiro para resolver uma questão científica específica?",
+          "anchor": "83-trilhas-de-estudo-por-necessidade",
+          "editorial_status": null,
+          "preview": "As trilhas são índices de consulta, não fluxos obrigatórios. Uma análise pode saltar diretamente ao capítulo que responde à pergunta presente."
+        },
+        {
+          "id": "SCI-084",
+          "chapter": 84,
+          "title": "Bibliografia e referências confiáveis de aprofundamento",
+          "section": "Parte IX — Atlas de métodos, vocabulário e fontes",
+          "question": "Onde encontrar métodos primários e orientações revisáveis?",
+          "anchor": "84-bibliografia-e-referências-confiáveis-de-aprofundamento",
+          "editorial_status": null,
+          "preview": "**Metodologia geral e pesquisa aplicada**"
+        },
+        {
+          "id": "SCI-085",
+          "chapter": 85,
+          "title": "Como avaliar uma análise científica",
+          "section": "Parte IX — Atlas de métodos, vocabulário e fontes",
+          "question": "A investigação realmente aumentou conhecimento confiável sobre a pergunta?",
+          "anchor": "85-como-avaliar-uma-análise-científica",
+          "editorial_status": null,
+          "preview": "Uma revisão crítica procura respostas proporcionais ao caso:"
+        }
+      ]
+    },
+    {
+      "file": "CREATIVE_BRAIN.md",
+      "title": "CREATIVE BRAIN",
+      "scope": "Enciclopédia Criativa de Virgo Diamond: The North Star",
+      "chapters": [
+        {
+          "id": "CRE-001",
+          "chapter": 1,
+          "title": "Fantasia central: tornar-se alguém inesquecível",
+          "section": "Parte I — Identidade criativa, experiência e autoridade editorial",
+          "question": "Que decisões permitem ao jogador tornar-se reconhecivelmente diferente sem obrigá-lo a competir por fama?",
+          "anchor": "1-fantasia-central-tornar-se-alguém-inesquecível",
+          "editorial_status": "D",
+          "preview": "A promessa central de **Virgo Diamond: The North Star** é permitir que cada jogador desenvolva uma identidade própria em um universo de fantasia persistente. Isso inclui aparência, corpo, vestimenta, voz ou gestual quando disponíveis, estil"
+        },
+        {
+          "id": "CRE-002",
+          "chapter": 2,
+          "title": "Promessas de experiência e antipromessas",
+          "section": "Parte I — Identidade criativa, experiência e autoridade editorial",
+          "question": "O que uma experiência precisa oferecer para merecer seu lugar na fantasia central?",
+          "anchor": "2-promessas-de-experiência-e-antipromessas",
+          "editorial_status": "A",
+          "preview": "A experiência é uma aventura de RPG em terceira pessoa, com ação, exploração, encontros cooperativos, personalização e continuidade de conquistas. Os principais compromissos editoriais são: personagem próprio, builds com escolhas significat"
+        },
+        {
+          "id": "CRE-003",
+          "chapter": 3,
+          "title": "Perfis de fantasia e motivações para retornar",
+          "section": "Parte I — Identidade criativa, experiência e autoridade editorial",
+          "question": "Quais diferentes tipos de orgulho, curiosidade e especialização podem sustentar uma jornada?",
+          "anchor": "3-perfis-de-fantasia-e-motivações-para-retornar",
+          "editorial_status": "A",
+          "preview": "Os perfis documentados incluem **A Muralha** (proteção ativa), **A Viajante Descalça** (risco e mobilidade), **O Ferreiro de Nome** (obras com autoria e utilidade), **A Caçadora de Ecos** (conhecimento que transforma a caça) e **A Coleciona"
+        },
+        {
+          "id": "CRE-004",
+          "chapter": 4,
+          "title": "Primeira hora: promessa imediatamente jogável",
+          "section": "Parte I — Identidade criativa, experiência e autoridade editorial",
+          "question": "Como comunicar identidade, aventura e recompensa antes de expor a cosmologia inteira?",
+          "anchor": "4-primeira-hora-promessa-imediatamente-jogável",
+          "editorial_status": "H",
+          "preview": "A sequência introdutória candidata começa pela criação de aparência e estilo, seguida por uma entrega urgente em **Pontevel**, onde a ponte está sob risco. A interação com **Mara** introduz pessoas, necessidades e consequências; a investiga"
+        },
+        {
+          "id": "CRE-005",
+          "chapter": 5,
+          "title": "Agência: escolher muda o modo de agir",
+          "section": "Parte I — Identidade criativa, experiência e autoridade editorial",
+          "question": "Quando uma decisão possui consequência real, e quando representa apenas uma opção decorativa?",
+          "anchor": "5-agência-escolher-muda-o-modo-de-agir",
+          "editorial_status": "A",
+          "preview": "Uma escolha significativa altera ação disponível, custo, risco, informação, vínculo, percurso, recurso ou forma de resolver um problema. Não precisa ramificar permanentemente o mundo compartilhado. Uma conversa pode mudar a cooperação de um"
+        },
+        {
+          "id": "CRE-006",
+          "chapter": 6,
+          "title": "Personalidade emergente, domínio e contrapartidas",
+          "section": "Parte I — Identidade criativa, experiência e autoridade editorial",
+          "question": "Como uma build se transforma em persona reconhecível?",
+          "anchor": "6-personalidade-emergente-domínio-e-contrapartidas",
+          "editorial_status": "A",
+          "preview": "A identidade de gameplay nasce de uma combinação: classe, especialização, arma, talentos, equipamento, trajetória e domínio do jogador. Contrapartidas fazem parte da personalidade. Um personagem que aguenta muito pode comprometer mobilidade"
+        },
+        {
+          "id": "CRE-007",
+          "chapter": 7,
+          "title": "Escopo criativo e expansão proporcional",
+          "section": "Parte I — Identidade criativa, experiência e autoridade editorial",
+          "question": "O que precisa ser demonstrado antes de multiplicar classes, regiões e conteúdo?",
+          "anchor": "7-escopo-criativo-e-expansão-proporcional",
+          "editorial_status": "A",
+          "preview": "A visão abrange seis classes candidatas, doze especializações, dez ofícios, cinco regiões, criaturas, uma dungeon principal, possíveis raids e outros sistemas. Isso **não** significa que todo esse conteúdo esteja comprometido para uma prime"
+        },
+        {
+          "id": "CRE-008",
+          "chapter": 8,
+          "title": "Decisão autoral, proposta e evidência: o estatuto das ideias",
+          "section": "Parte I — Identidade criativa, experiência e autoridade editorial",
+          "question": "Como impedir que uma enciclopédia transforme automaticamente material exploratório em cânone?",
+          "anchor": "8-decisão-autoral-proposta-e-evidência-o-estatuto-das-ideias",
+          "editorial_status": "A",
+          "preview": "Nesta obra, o estatuto editorial acompanha cada capítulo. **D** indica decisão direta do autor; **A** indica direção aprovada para a edição documental, ainda sem comprovação de experiência; **H** indica hipótese ou proposta; **E** correspon"
+        },
+        {
+          "id": "CRE-009",
+          "chapter": 9,
+          "title": "Criação de personagem: corpo, rosto, gestual e origem",
+          "section": "Parte II — Personagens, classes, especializações e combate",
+          "question": "Quais elementos precisam ser manipuláveis para expressar identidade sem vantagens injustas?",
+          "anchor": "9-criação-de-personagem-corpo-rosto-gestual-e-origem",
+          "editorial_status": "H",
+          "preview": "O editor deve distinguir quatro decisões: **forma corporal**, **apresentação visual**, **origem social/cultural** e **primeira orientação de combate**. O usuário deve poder visualizar o personagem parado, caminhando, atacando, usando armadu"
+        },
+        {
+          "id": "CRE-010",
+          "chapter": 10,
+          "title": "As seis classes e as doze especializações candidatas",
+          "section": "Parte II — Personagens, classes, especializações e combate",
+          "question": "O que distingue cada classe em escolhas observáveis e riscos reais?",
+          "anchor": "10-as-seis-classes-e-as-doze-especializações-candidatas",
+          "editorial_status": "H",
+          "preview": "**Papéis são inclinações, não prisões.** Guardião inclina-se a proteger; Juramentado a recuperar; outros podem contribuir com defesa e utilidade. Para conteúdo cooperativo pequeno, testar combinações flexíveis que não exigem rigidamente tan"
+        },
+        {
+          "id": "CRE-011",
+          "chapter": 11,
+          "title": "Anatomia de uma build e atributos funcionais",
+          "section": "Parte II — Personagens, classes, especializações e combate",
+          "question": "Como construir estilos diferentes sem esconder decisões em percentuais?",
+          "anchor": "11-anatomia-de-uma-build-e-atributos-funcionais",
+          "editorial_status": "H",
+          "preview": "A função de build é `B = (classe, especialização, talentos, arma, equipamento, maestrias, contexto)`. A aparência constitui um preset separado; profissão é trajetória distinta. Essa decomposição permite distinguir mudança de dano de mudança"
+        },
+        {
+          "id": "CRE-012",
+          "chapter": 12,
+          "title": "Combate em ação: movimento, contato e oportunidade",
+          "section": "Parte II — Personagens, classes, especializações e combate",
+          "question": "Como movimento, defesa, ataque e recuperação produzem agência reconhecível?",
+          "anchor": "12-combate-em-ação-movimento-contato-e-oportunidade",
+          "editorial_status": "H",
+          "preview": "**Modelo exploratório:** ataque básico; defesa/esquiva contextual; quatro habilidades selecionáveis; habilidade de especialização; habilidade de grande impacto ou momento decisivo; interação; consumível de uso situacional. Esse orçamento é"
+        },
+        {
+          "id": "CRE-013",
+          "chapter": 13,
+          "title": "Talentos, exclusões e escolhas irreversíveis apenas quando justificadas",
+          "section": "Parte II — Personagens, classes, especializações e combate",
+          "question": "Quando um talento muda o comportamento em vez de apenas aumentar números?",
+          "anchor": "13-talentos-exclusões-e-escolhas-irreversíveis-apenas-quando-justificadas",
+          "editorial_status": "H",
+          "preview": "O jogador aprende naturalmente os fundamentos da classe; tem **escolhas de classe** que moldam utilidade e defesa; e **escolhas de especialização** que alteram ritmo, ações e assinatura. Para testar, cada especialização usa três horizontes"
+        },
+        {
+          "id": "CRE-014",
+          "chapter": 14,
+          "title": "Guardião: Bastião e Retaliador",
+          "section": "Parte II — Personagens, classes, especializações e combate",
+          "question": "Como contrastar defesa de posição com aparo e contragolpe?",
+          "anchor": "14-guardião-bastião-e-retaliador",
+          "editorial_status": "H",
+          "preview": "**Recurso:** Postura, acumulada por posicionamento e defesa intencional; cai com bloqueios sucessivos, ações mal preparadas e pressão de chefes. **Base ativa:** Guarda de Âncora (bloqueio frontal), Passo de Interposição (auxílio limitado),"
+        },
+        {
+          "id": "CRE-015",
+          "chapter": 15,
+          "title": "Duelista: Lâmina Livre e Esgrimista",
+          "section": "Parte II — Personagens, classes, especializações e combate",
+          "question": "Como oferecer mobilidade e precisão com riscos explícitos?",
+          "anchor": "15-duelista-lâmina-livre-e-esgrimista",
+          "editorial_status": "H",
+          "preview": "**Recurso:** Ímpeto obtido ao alternar aproximação, esquiva precisa e golpe dirigido; decai fora de ritmo, evitando velocidade infinita. **Base:** Corte Passante, Finta, Passo de Agulha, Provocação de Duelo contra NPC elegível. A **Viajante"
+        },
+        {
+          "id": "CRE-016",
+          "chapter": 16,
+          "title": "Rastreador: Caçador e Domador",
+          "section": "Parte II — Personagens, classes, especializações e combate",
+          "question": "Como conhecimento, pistas e companheiros produzem alternativas de combate?",
+          "anchor": "16-rastreador-caçador-e-domador",
+          "editorial_status": "H",
+          "preview": "**Recurso:** Leitura, adquirida por observação, rastros e ações de precisão, sem minijogo burocrático obrigatório. **Base:** Traço de Sinal, Disparo Preparado, Laço de Campo, Retirada Calculada. A investigação aumenta opções de aproximação,"
+        },
+        {
+          "id": "CRE-017",
+          "chapter": 17,
+          "title": "Tecelão: Conjurador e Vinculador",
+          "section": "Parte II — Personagens, classes, especializações e combate",
+          "question": "Como magia combinatória gera decisões sem combinações ilimitadas?",
+          "anchor": "17-tecelão-conjurador-e-vinculador",
+          "editorial_status": "H",
+          "preview": "**Recurso:** Fios, limite explícito de conexões ou transformações simultâneas. **Base:** Fio de Ancoragem, Desvio, Rasgo Breve, Pulso de Trama. Operações válidas possuem alvos autorizados, duração, cooldown e custo. Nenhuma combinação cria"
+        },
+        {
+          "id": "CRE-018",
+          "chapter": 18,
+          "title": "Juramentado: Restaurador e Protetor",
+          "section": "Parte II — Personagens, classes, especializações e combate",
+          "question": "Como apoiar aliados sem transformar suporte em papel obrigatório ou passivo?",
+          "anchor": "18-juramentado-restaurador-e-protetor",
+          "editorial_status": "H",
+          "preview": "**Recurso:** Voto, recuperado por assistência ativa, acertos elegíveis e decisões de risco. **Base:** Cuidado Imediato, Selo de Fôlego, Chamada de Regresso, Golpe de Vigília. Curar alvo com vida cheia não gera Voto infinito; sacrificar vida"
+        },
+        {
+          "id": "CRE-019",
+          "chapter": 19,
+          "title": "Artífice: Engenheiro e Alquimista de Campo",
+          "section": "Parte II — Personagens, classes, especializações e combate",
+          "question": "Como preparação e dispositivos produzem improviso real sem abuso de consumíveis?",
+          "anchor": "19-artífice-engenheiro-e-alquimista-de-campo",
+          "editorial_status": "H",
+          "preview": "**Recurso:** Carga, unidades preparadas ou regeneradas por condições claras dentro do encontro, sem pagamento externo. **Base:** Dispositivo de Gancho, Carga de Impacto, Kit de Reparo, Troca Rápida. Dispositivos possuem limite de unidades,"
+        },
+        {
+          "id": "CRE-020",
+          "chapter": 20,
+          "title": "Dez personas jogáveis de teste",
+          "section": "Parte II — Personagens, classes, especializações e combate",
+          "question": "Quais personagens fictícios revelam se o design sustenta identidades realmente diversas?",
+          "anchor": "20-dez-personas-jogáveis-de-teste",
+          "editorial_status": "H",
+          "preview": "As fichas abaixo são **personagens-jogador fictícios para design/teste**, não NPCs obrigatórios, personagens oficiais do cânone, nem builds pré-balanceadas. Sua função é testar a promessa de que pessoas com preferências diferentes encontram"
+        },
+        {
+          "id": "CRE-021",
+          "chapter": 21,
+          "title": "Equilíbrio, justiça e diversidade sem uniformização",
+          "section": "Parte II — Personagens, classes, especializações e combate",
+          "question": "Como sustentar várias fantasias de poder sem apagar suas diferenças?",
+          "anchor": "21-equilíbrio-justiça-e-diversidade-sem-uniformização",
+          "editorial_status": "A",
+          "preview": "**Equilíbrio não significa igualdade absoluta de dano.** Uma proteção deve ser avaliada pelo risco absorvido e pela oportunidade criada; a mobilidade pela qualidade de reposicionamento; a exploração pelo que permite descobrir; a recuperação"
+        },
+        {
+          "id": "CRE-022",
+          "chapter": 22,
+          "title": "Profissões como vidas possíveis",
+          "section": "Parte III — Profissões, equipamentos, coleções e prestígio",
+          "question": "Como permitir que um artesão, cartógrafo ou treinador tenha uma trajetória interessante por mérito próprio?",
+          "anchor": "22-profissões-como-vidas-possíveis",
+          "editorial_status": "H",
+          "preview": "Toda profissão candidata deve ter **cinco experiências separáveis**: descobrir uma atividade; executar uma escolha com impacto discernível; dominar uma técnica; realizar um trabalho que outro jogador ou NPC valorize; e construir um portfóli"
+        },
+        {
+          "id": "CRE-023",
+          "chapter": 23,
+          "title": "Quatro formas de atividade artesanal interativa",
+          "section": "Parte III — Profissões, equipamentos, coleções e prestígio",
+          "question": "Como tornar produção de itens uma escolha sem transformá-la em obrigação repetitiva?",
+          "anchor": "23-quatro-formas-de-atividade-artesanal-interativa",
+          "editorial_status": "H",
+          "preview": "A profissão não precisa de um minigame cheio de cliques para parecer profunda. Ela precisa de **um ou dois trade-offs recorrentes e de objetivos variáveis**. As estruturas abaixo são alternativas sob avaliação, não quatro sistemas mandatóri"
+        },
+        {
+          "id": "CRE-024",
+          "chapter": 24,
+          "title": "Equipamentos: função, qualidade, raridade e história",
+          "section": "Parte III — Profissões, equipamentos, coleções e prestígio",
+          "question": "Quais características de um objeto devem ser independentes para evitar inflação de poder?",
+          "anchor": "24-equipamentos-função-qualidade-raridade-e-história",
+          "editorial_status": "H",
+          "preview": "Um item pode ser comum e excelente para determinada build; outra peça pode ser lendária por sua jornada, aparência e utilidade flexível. **Lendário não significa automaticamente +50% de dano**. Na etapa inicial, raridades terão nomes e core"
+        },
+        {
+          "id": "CRE-025",
+          "chapter": 25,
+          "title": "Doze objetos exemplares com identidade",
+          "section": "Parte III — Profissões, equipamentos, coleções e prestígio",
+          "question": "Como um equipamento revela uma história ou uma decisão de build?",
+          "anchor": "25-doze-objetos-exemplares-com-identidade",
+          "editorial_status": "H",
+          "preview": "Os exemplos são candidatos de direção criativa; descrições funcionais são qualitativas até o protótipo de combate."
+        },
+        {
+          "id": "CRE-026",
+          "chapter": 26,
+          "title": "Recompensas e loot sem dependência predatória",
+          "section": "Parte III — Profissões, equipamentos, coleções e prestígio",
+          "question": "Quando uma recompensa aumenta orgulho e curiosidade em vez de ansiedade?",
+          "anchor": "26-recompensas-e-loot-sem-dependência-predatória",
+          "editorial_status": "H",
+          "preview": "*Encontros* podem recompensar materiais e cosméticos de criaturas. *Histórias e exploração* concedem ferramentas, montarias ou visuais de descoberta. *Profissões* criam objetos especializados e encomendas. *Desafios pessoais* concedem marco"
+        },
+        {
+          "id": "CRE-027",
+          "chapter": 27,
+          "title": "A Coroa do Último Passo: item como jornada",
+          "section": "Parte III — Profissões, equipamentos, coleções e prestígio",
+          "question": "Como produzir uma recompensa lendária por meio de história e escolhas?",
+          "anchor": "27-a-coroa-do-último-passo-item-como-jornada",
+          "editorial_status": "H",
+          "preview": "A **Coroa do Último Passo** é um adorno/capuz visual cujo valor se baseia em três atos e uma escolha do jogador. Pode ser usada por vários Caminhos elegíveis e não aumenta dano acima do teto de itens equivalentes. Possui marca visual reconh"
+        },
+        {
+          "id": "CRE-028",
+          "chapter": 28,
+          "title": "Montarias: aparência, domínio e origem",
+          "section": "Parte III — Profissões, equipamentos, coleções e prestígio",
+          "question": "Como uma montaria expressa identidade sem conceder superioridade injusta?",
+          "anchor": "28-montarias-aparência-domínio-e-origem",
+          "editorial_status": "H",
+          "preview": "Cada montaria possui espécie ou família de rig, escala/cápsula de colisão compatível, locomotion set, perfil de viagem validado, regras de invocação, compatibilidade ambiental, arreios cosméticos, histórico de desbloqueio e opções de compor"
+        },
+        {
+          "id": "CRE-029",
+          "chapter": 29,
+          "title": "Guarda-roupa, tinturas, cosméticos e privacidade",
+          "section": "Parte III — Profissões, equipamentos, coleções e prestígio",
+          "question": "Como o jogador controla a apresentação visual de sua personagem?",
+          "anchor": "29-guarda-roupa-tinturas-cosméticos-e-privacidade",
+          "editorial_status": "H",
+          "preview": "Uma instância de espada possui estatísticas e dono. Uma aparência desbloqueada possui ID e elegibilidade. Um conjunto salvo aponta para um conjunto de aparências e tinturas. Aplicar o conjunto **não recria a espada**, não muda atributos e n"
+        },
+        {
+          "id": "CRE-030",
+          "chapter": 30,
+          "title": "Coleções como memórias de aventura",
+          "section": "Parte III — Profissões, equipamentos, coleções e prestígio",
+          "question": "Como registrar conquistas sem transformar a fantasia em lista compulsória?",
+          "anchor": "30-coleções-como-memórias-de-aventura",
+          "editorial_status": "H",
+          "preview": "Cada coleção deve responder a uma pergunta fantasiosa concreta: *quais criaturas investiguei? quais armas criei? quais caminhos percorri? quais montarias conquistei? quais trajes construí?*. Cinco categorias candidatas: **Arsenal**, **Besti"
+        },
+        {
+          "id": "CRE-031",
+          "chapter": 31,
+          "title": "Comércio, encomendas e reconhecimento do artesão",
+          "section": "Parte III — Profissões, equipamentos, coleções e prestígio",
+          "question": "Como reputação e riqueza criam oportunidades sem expor dados privados ou gerar monopólios?",
+          "anchor": "31-comércio-encomendas-e-reconhecimento-do-artesão",
+          "editorial_status": "H",
+          "preview": "A fantasia mercantil exige preço, escassez compreensível, distribuição de recursos, encomendas, capacidade de negociação e motivos para gastar. Sem isso, 'o mais rico' vira apenas a pessoa que repetiu a mesma atividade por mais tempo — ou a"
+        },
+        {
+          "id": "CRE-032",
+          "chapter": 32,
+          "title": "Ofícios e combate: fronteiras sem hierarquia de importância",
+          "section": "Parte III — Profissões, equipamentos, coleções e prestígio",
+          "question": "Como separar vocação cotidiana e especialização de combate sem criar duplicações artificiais?",
+          "anchor": "32-ofícios-e-combate-fronteiras-sem-hierarquia-de-importância",
+          "editorial_status": "A",
+          "preview": "Uma profissão é uma identidade social e produtiva; uma especialização é uma forma de atuar em encontros e desafios. A mesma palavra — como Alquimia ou Rastreamento — pode nomear atividades distintas. É necessário definir o que pertence a ca"
+        },
+        {
+          "id": "CRE-033",
+          "chapter": 33,
+          "title": "Aventura e conflito humano antes da cosmologia",
+          "section": "Parte IV — Universo, mitologia, culturas, personagens e narrativa",
+          "question": "Como ligar acontecimentos extraordinários a necessidades e relações pessoais?",
+          "anchor": "33-aventura-e-conflito-humano-antes-da-cosmologia",
+          "editorial_status": "H",
+          "preview": "**Pergunta-motriz:** *quem tem o direito de garantir a segurança de uma cidade quando essa garantia transfere o perigo para outra comunidade ou para uma espécie migratória?* Em Virgo Diamond, a luta pelo mundo não é contra uma força de trev"
+        },
+        {
+          "id": "CRE-034",
+          "chapter": 34,
+          "title": "A Trama: poder, estrutura e limites ficcionais",
+          "section": "Parte IV — Universo, mitologia, culturas, personagens e narrativa",
+          "question": "Que operações são possíveis e que restrições impedem soluções arbitrárias?",
+          "anchor": "34-a-trama-poder-estrutura-e-limites-ficcionais",
+          "editorial_status": "H",
+          "preview": "A **Trama** é uma rede de fluxos e pontos de acoplamento entre territórios, parcialmente natural e parcialmente modificada por estruturas antigas. Alguns pontos controlam passagem de energia; outros interferem na direção de ventos, água, se"
+        },
+        {
+          "id": "CRE-035",
+          "chapter": 35,
+          "title": "História relativa e interpretações conflitantes",
+          "section": "Parte IV — Universo, mitologia, culturas, personagens e narrativa",
+          "question": "Como criar um passado que produza mistérios, vestígios e versões divergentes?",
+          "anchor": "35-história-relativa-e-interpretações-conflitantes",
+          "editorial_status": "H",
+          "preview": "A cronologia abaixo é **hipótese de worldbuilding**, sem datas em anos definitivos, para permitir reescrita literária. Separar fatos observáveis de narrativas políticas."
+        },
+        {
+          "id": "CRE-036",
+          "chapter": 36,
+          "title": "Vida cotidiana, tradições e custos humanos",
+          "section": "Parte IV — Universo, mitologia, culturas, personagens e narrativa",
+          "question": "Como culturas aparecem em trabalho, comida, memória, fé e desigualdades concretas?",
+          "anchor": "36-vida-cotidiana-tradições-e-custos-humanos",
+          "editorial_status": "H",
+          "preview": "A cultura deve aparecer em **coisas que alguém faz**. Em Pontevel, os moradores amarram tábuas antes de abrir o mercado; famílias dos dois lados da margem divergem sobre quem paga o reparo; embarcações só atracam durante janelas previsíveis"
+        },
+        {
+          "id": "CRE-037",
+          "chapter": 37,
+          "title": "Valenos, Iril e Sarrin: diversidade cultural e corporal",
+          "section": "Parte IV — Universo, mitologia, culturas, personagens e narrativa",
+          "question": "Como criar povos sem determinar classe, caráter ou destino por origem?",
+          "anchor": "37-valenos-iril-e-sarrin-diversidade-cultural-e-corporal",
+          "editorial_status": "H",
+          "preview": "**Princípios de criação de personagem:** origem comunitária determina contatos e pequenas cenas opcionais, não resistência numérica racial obrigatória; aparência não determina moralidade ou classe; conteúdo principal admite qualquer origem;"
+        },
+        {
+          "id": "CRE-038",
+          "chapter": 38,
+          "title": "Facções e instituições com divergências internas",
+          "section": "Parte IV — Universo, mitologia, culturas, personagens e narrativa",
+          "question": "Como apresentar interesses legítimos e custos que as organizações preferem ocultar?",
+          "anchor": "38-facções-e-instituições-com-divergências-internas",
+          "editorial_status": "H",
+          "preview": "**Governança do mundo:** organizações não devem representar lados morais fixos. Um jogador pode discordar de decisões da Liga sem perder todas as oportunidades de agricultura; reputação deve refletir ações específicas e ser recuperável. No"
+        },
+        {
+          "id": "CRE-039",
+          "chapter": 39,
+          "title": "Personagens âncora com desejo, falha e iniciativa",
+          "section": "Parte IV — Universo, mitologia, culturas, personagens e narrativa",
+          "question": "Como personagens não controlados pelo jogador alteram a história por ação própria?",
+          "anchor": "39-personagens-âncora-com-desejo-falha-e-iniciativa",
+          "editorial_status": "H",
+          "preview": "**Contraste de vozes:** Mara fala em prazo e pessoas à espera; Iven fala em evidências observáveis e incerteza; Tarek usa linguagem de oficina e evita determinada informação; Orena pede caminhos executáveis; Nália nomeia pessoas, empregos e"
+        },
+        {
+          "id": "CRE-040",
+          "chapter": 40,
+          "title": "Ada Serret e a Linha Fixa: antagonismo com lógica",
+          "section": "Parte IV — Universo, mitologia, culturas, personagens e narrativa",
+          "question": "Como criar oposição moralmente complexa sem reduzir toda crise a uma vilã onisciente?",
+          "anchor": "40-ada-serret-e-a-linha-fixa-antagonismo-com-lógica",
+          "editorial_status": "H",
+          "preview": "**Adversária estrutural candidata — Engenheira Ada Serret**, conselheira da Concordata das Passagens. Ela defende um plano chamado **Linha Fixa**: reforçar os corredores principais de comércio e suprimir mudanças perigosas de rota, mesmo qu"
+        },
+        {
+          "id": "CRE-041",
+          "chapter": 41,
+          "title": "Campanha em três atos e consequências duráveis",
+          "section": "Parte IV — Universo, mitologia, culturas, personagens e narrativa",
+          "question": "Como estruturar uma aventura com progressão dramática e desfechos compatíveis com mundo compartilhado?",
+          "anchor": "41-campanha-em-três-atos-e-consequências-duráveis",
+          "editorial_status": "H",
+          "preview": "**Retorno de personagens:** Mara pode reaparecer como representante de um assentamento; Iven pode ter descobertas contestadas; Tarek pode ter perdido o direito de operar um dispositivo; Nália pode organizar uma aliança de produtores. Suas s"
+        },
+        {
+          "id": "CRE-042",
+          "chapter": 42,
+          "title": "Culturas regionais, ofícios e paisagens",
+          "section": "Parte IV — Universo, mitologia, culturas, personagens e narrativa",
+          "question": "Como evitar regiões monotemáticas e conectar cotidiano, exploração e história?",
+          "anchor": "42-culturas-regionais-ofícios-e-paisagens",
+          "editorial_status": "H",
+          "preview": ""
+        },
+        {
+          "id": "CRE-043",
+          "chapter": 43,
+          "title": "Mistérios com pistas interpretáveis",
+          "section": "Parte IV — Universo, mitologia, culturas, personagens e narrativa",
+          "question": "Como tornar descoberta e investigação atividades jogáveis, não páginas obrigatórias de exposição?",
+          "anchor": "43-mistérios-com-pistas-interpretáveis",
+          "editorial_status": "H",
+          "preview": "**M-01 — A ferida do Velário:** pista inicial: marcas de contato metálico na carapaça; interpretação falsa plausível: ataque de caçadores; verificação: material compatível com uma peça da estação; resposta local: a máquina tentou estabiliza"
+        },
+        {
+          "id": "CRE-044",
+          "chapter": 44,
+          "title": "Pendências narrativas e compromissos autorais",
+          "section": "Parte IV — Universo, mitologia, culturas, personagens e narrativa",
+          "question": "Quais elementos do mundo ainda precisam ser decididos explicitamente?",
+          "anchor": "44-pendências-narrativas-e-compromissos-autorais",
+          "editorial_status": "H",
+          "preview": "**Dado autoral ratificado:** nome *Virgo Diamond: The North Star*, um único MMORPG e integração seletiva dos cinco conceitos. **Propostas consistentes, ainda revisáveis:** Trama, quatro Faróis, Desafinação, regiões, povos, facções, protagon"
+        },
+        {
+          "id": "CRE-045",
+          "chapter": 45,
+          "title": "Narrativa pessoal, eventos públicos e história coletiva",
+          "section": "Parte IV — Universo, mitologia, culturas, personagens e narrativa",
+          "question": "Como permitir histórias próprias sem multiplicar infinitamente estados públicos contraditórios?",
+          "anchor": "45-narrativa-pessoal-eventos-públicos-e-história-coletiva",
+          "editorial_status": "H",
+          "preview": "Inspirado em relatos da ArenaNet sobre narrativas do *Guild Wars 2*, separaremos **o estado público da região** e **a trajetória narrativa pessoal ou de um pequeno grupo**. Eventos públicos apresentam riscos compartilhados; cenas controlada"
+        },
+        {
+          "id": "CRE-046",
+          "chapter": 46,
+          "title": "O Peso da Ponte: a missão de abertura",
+          "section": "Parte IV — Universo, mitologia, culturas, personagens e narrativa",
+          "question": "Como a travessia revela pessoas, escolhas e consequências por meio de ações?",
+          "anchor": "46-o-peso-da-ponte-a-missão-de-abertura",
+          "editorial_status": "H",
+          "preview": "**Logline:** com remédios presos na outra margem, Mara pretende reabrir uma ponte parcialmente danificada. Iven descobre sinais de uma criatura ferida sob a travessia, Tarek teme a inspeção de uma estação antiga e Nália alerta que desviar a"
+        },
+        {
+          "id": "CRE-047",
+          "chapter": 47,
+          "title": "Alternativas com custos compreensíveis",
+          "section": "Parte IV — Universo, mitologia, culturas, personagens e narrativa",
+          "question": "Como permitir decisões éticas que mudam o desfecho sem criar solução mágica perfeita?",
+          "anchor": "47-alternativas-com-custos-compreensíveis",
+          "editorial_status": "H",
+          "preview": "A missionária *O Peso da Ponte* apresenta **três planos candidatos**. As opções não são “bom, mau, neutro”; cada uma possui ganhadores, perdedores e riscos. Os valores de recurso ainda são dados de balanceamento a testar."
+        },
+        {
+          "id": "CRE-048",
+          "chapter": 48,
+          "title": "Falha, recuperação e reentrada na história",
+          "section": "Parte IV — Universo, mitologia, culturas, personagens e narrativa",
+          "question": "Como lidar com abandono, derrotas e cooperação sem quebrar continuidade narrativa?",
+          "anchor": "48-falha-recuperação-e-reentrada-na-história",
+          "editorial_status": "H",
+          "preview": "**Falha narrativa não é falha técnica:** se o grupo perder o encontro da Oficina, personagens podem se retirar para o checkpoint e tentar novamente sem apagar relações ou provocar uma catástrofe permanente. Se os jogadores demorarem, um eve"
+        },
+        {
+          "id": "CRE-049",
+          "chapter": 49,
+          "title": "Diálogos e vozes particulares",
+          "section": "Parte IV — Universo, mitologia, culturas, personagens e narrativa",
+          "question": "Como evitar que personagens falem como porta-vozes de uma tese?",
+          "anchor": "49-diálogos-e-vozes-particulares",
+          "editorial_status": "H",
+          "preview": "*Exemplo funcional, não roteiro definitivo.* O objetivo é identificar conflito específico e poder de cada pessoa em fala curta; vozes não precisam explicar os cinco sistemas de gameplay."
+        },
+        {
+          "id": "CRE-050",
+          "chapter": 50,
+          "title": "A Maré Cortada: evento público derivado de uma quest",
+          "section": "Parte IV — Universo, mitologia, culturas, personagens e narrativa",
+          "question": "Como um acontecimento regional pode reunir pessoas e terminar de forma clara?",
+          "anchor": "50-a-maré-cortada-evento-público-derivado-de-uma-quest",
+          "editorial_status": "H",
+          "preview": "**Disparo:** o ciclo regional indica fechamento de passagem e uma zona registra falta de suprimentos. **Fases candidatas:** observar aviso → reunir/proteger carga → reparar segmento ou abrir desvio → entregar/retirar-se. A dificuldade escal"
+        },
+        {
+          "id": "CRE-051",
+          "chapter": 51,
+          "title": "Quests regionais: sementes dramáticas",
+          "section": "Parte IV — Universo, mitologia, culturas, personagens e narrativa",
+          "question": "Como preservar oportunidades de histórias sem gerar backlog infinito por obrigação?",
+          "anchor": "51-quests-regionais-sementes-dramáticas",
+          "editorial_status": "H",
+          "preview": "Essas quatro histórias são **conceitos** para o futuro aprofundamento de regiões (catálogo exploratório); não são quatro quests completas prometidas para lançamento."
+        },
+        {
+          "id": "CRE-052",
+          "chapter": 52,
+          "title": "Repetibilidade, escrita e recompensas narrativas",
+          "section": "Parte IV — Universo, mitologia, culturas, personagens e narrativa",
+          "question": "Como manter a qualidade de replays e diferenças pessoais em mundos compartilhados?",
+          "anchor": "52-repetibilidade-escrita-e-recompensas-narrativas",
+          "editorial_status": "H",
+          "preview": "**Padrão de qualidade:** cada quest precisa de personagem com objetivo, mudança de situação, ação do jogador, resistência, virada legível, conclusão parcial e rastro no mundo. Quests de coleta devem alterar algo concreto ou revelar uma rela"
+        },
+        {
+          "id": "CRE-053",
+          "chapter": 53,
+          "title": "Cinco regiões candidatas e suas promessas de aventura",
+          "section": "Parte V — Regiões, criaturas, exploração, dungeons e endgame",
+          "question": "Como distinguir lugares por atividades, sensações e conflitos, não só cores?",
+          "anchor": "53-cinco-regiões-candidatas-e-suas-promessas-de-aventura",
+          "editorial_status": "H",
+          "preview": "**Não** transformar essas identidades em um mapa de cinco 'mundos' autônomos, cinco elementos mágicos nem cinco exclusividades de classe. Cada região deverá acomodar ao menos dois estilos de aventura e uma profissão. Vau de Aster será o **ú"
+        },
+        {
+          "id": "CRE-054",
+          "chapter": 54,
+          "title": "Bestiário: seis famílias e comportamentos legíveis",
+          "section": "Parte V — Regiões, criaturas, exploração, dungeons e endgame",
+          "question": "Como uma criatura oferece observação, enfrentamento e recompensa sem exigir simulação biológica completa?",
+          "anchor": "54-bestiário-seis-famílias-e-comportamentos-legíveis",
+          "editorial_status": "H",
+          "preview": "Toda espécie possui **silhueta, habitat, deslocamento, dieta/ameaça ficcional, telegráficos de ataque, propriedades mecânicas limitadas, interação opcional de profissão, recompensa e estado de persistência**. A ecologia oferece coerência, n"
+        },
+        {
+          "id": "CRE-055",
+          "chapter": 55,
+          "title": "Escalas de ameaça e aprendizado gradual",
+          "section": "Parte V — Regiões, criaturas, exploração, dungeons e endgame",
+          "question": "Como ensinar padrões antes de exigir coordenação extrema?",
+          "anchor": "55-escalas-de-ameaça-e-aprendizado-gradual",
+          "editorial_status": "H",
+          "preview": "Aumentar apenas vida e dano não cria encontro novo. Cada chefe relevante deverá introduzir uma decisão de posicionamento, tempo, recurso ou colaboração ainda não testada naquele arco."
+        },
+        {
+          "id": "CRE-056",
+          "chapter": 56,
+          "title": "O Velário do Vau: boss e criatura ferida",
+          "section": "Parte V — Regiões, criaturas, exploração, dungeons e endgame",
+          "question": "Como um encontro de chefe combina caça, defesa, movimento e consequências ficcionais?",
+          "anchor": "56-o-velário-do-vau-boss-e-criatura-ferida",
+          "editorial_status": "H",
+          "preview": "O Velário é uma criatura ferida por uma peça da Oficina Submersa; perturba travessias. Não se trata de uma besta 'malvada' nem de uma divindade que precisa morrer. O jogador descobre marcas do ferimento antes do confronto. Três objetivos co"
+        },
+        {
+          "id": "CRE-057",
+          "chapter": 57,
+          "title": "A Oficina Submersa: dungeon de decisões",
+          "section": "Parte V — Regiões, criaturas, exploração, dungeons e endgame",
+          "question": "Como o ambiente e os obstáculos valorizam investigação, trabalho de equipe e contrapartidas?",
+          "anchor": "57-a-oficina-submersa-dungeon-de-decisões",
+          "editorial_status": "H",
+          "preview": "A estrutura é **uma instância com bifurcação pequena**, não três dungeons inteiramente diferentes. A primeira sessão deve terminar independentemente da profissão escolhida, com diferenças de descoberta, atalho e tratamento dado ao NPC."
+        },
+        {
+          "id": "CRE-058",
+          "chapter": 58,
+          "title": "Aventuras curtas e autonomia solo",
+          "section": "Parte V — Regiões, criaturas, exploração, dungeons e endgame",
+          "question": "Como criar desafios memoráveis para quem não dispõe de grupo permanente?",
+          "anchor": "58-aventuras-curtas-e-autonomia-solo",
+          "editorial_status": "H",
+          "preview": "Trilha de subida com três pontos de decisão: caminho longo e seguro, corda curta com risco de queda não letal, passagem pelo ninho com criatura avisada por grito. A personagem sem armadura pode destacar-se pela mobilidade, mas não recebe re"
+        },
+        {
+          "id": "CRE-059",
+          "chapter": 59,
+          "title": "O Farol Partido: hipótese de raid futura",
+          "section": "Parte V — Regiões, criaturas, exploração, dungeons e endgame",
+          "question": "Como projetar cooperação marcante sem assumir compromisso prematuro de produção?",
+          "anchor": "59-o-farol-partido-hipótese-de-raid-futura",
+          "editorial_status": "H",
+          "preview": "Somente justificar a raid se trouxer experiência que um grupo pequeno não pode reproduzir: **divisão temporária de responsabilidades, coordenação de informações e leitura coletiva de ameaças**. Não fazer raid apenas por haver tradição de gr"
+        },
+        {
+          "id": "CRE-060",
+          "chapter": 60,
+          "title": "Eventos públicos de duração finita",
+          "section": "Parte V — Regiões, criaturas, exploração, dungeons e endgame",
+          "question": "Como produzir atividades coletivas com início, clímax e encerramento acessível?",
+          "anchor": "60-eventos-públicos-de-duração-finita",
+          "editorial_status": "H",
+          "preview": "**Preparação:** comerciantes alertam para uma rota que se fechará; o mapa mostra estimativa e alternativas. **Acontecimento:** uma criatura desloca estrutura; grupo pode resgatar carga, proteger passarela ou abrir caminho. **Resolução:** re"
+        },
+        {
+          "id": "CRE-061",
+          "chapter": 61,
+          "title": "Quests, memória social e reputação",
+          "section": "Parte V — Regiões, criaturas, exploração, dungeons e endgame",
+          "question": "Quando o mundo deveria reconhecer uma decisão do jogador?",
+          "anchor": "61-quests-memória-social-e-reputação",
+          "editorial_status": "H",
+          "preview": "Toda quest candidata especifica: **pedido humano explícito; obstáculo; ação que exige atenção; alternativa plausível; consequência curta visível; recompensa compatível; registro persistente mínimo**. Exposição fica subordinada à atuação dos"
+        },
+        {
+          "id": "CRE-062",
+          "chapter": 62,
+          "title": "Recompensas associadas à atividade e ao orgulho",
+          "section": "Parte V — Regiões, criaturas, exploração, dungeons e endgame",
+          "question": "Como manter transparência entre conquista, esforço e seu reconhecimento?",
+          "anchor": "62-recompensas-associadas-à-atividade-e-ao-orgulho",
+          "editorial_status": "H",
+          "preview": "**Três regras:** (1) raridade ≠ poder absoluto; (2) tempo investido ≠ direito automático ao prestígio excepcional, que deve corresponder a um feito; (3) a repetição necessária para uma meta cosmética precisa ser exposta de maneira transpare"
+        },
+        {
+          "id": "CRE-063",
+          "chapter": 63,
+          "title": "Endgame horizontal com múltiplas formas de excelência",
+          "section": "Parte V — Regiões, criaturas, exploração, dungeons e endgame",
+          "question": "Como permitir continuar jogando sem obrigar todo mundo a perseguir dano ou raids?",
+          "anchor": "63-endgame-horizontal-com-múltiplas-formas-de-excelência",
+          "editorial_status": "H",
+          "preview": "Não obrigar o jogador a fazer todas as modalidades para manter sua eficácia básica. A existência de um catálogo enorme de coleções não substitui direção artística ou recompensas emocionantes. **Não há endgame pré-aprovado até que ao menos u"
+        },
+        {
+          "id": "CRE-064",
+          "chapter": 64,
+          "title": "PvP voluntário e integridade econômica",
+          "section": "Parte V — Regiões, criaturas, exploração, dungeons e endgame",
+          "question": "Como permitir rivalidade sem destruir a identidade e a progressão de quem prefere PvE?",
+          "anchor": "64-pvp-voluntário-e-integridade-econômica",
+          "editorial_status": "H",
+          "preview": "**Duelo consentido:** jogadores concordam com as regras e podem cancelar antes do início; não há saque do derrotado. **Arena de testes:** equivalência de equipamento ou normalização parcial a investigar, com teto de controle contínuo e barr"
+        },
+        {
+          "id": "CRE-065",
+          "chapter": 65,
+          "title": "Bíblia visual: fantasia cósmica artesanal",
+          "section": "Parte VI — Direção visual, som, animação e interfaces",
+          "question": "Quais materiais, formas e atmosferas tornam o mundo reconhecível?",
+          "anchor": "65-bíblia-visual-fantasia-cósmica-artesanal",
+          "editorial_status": "H",
+          "preview": "Três camadas compõem a gramática do mundo: **estrutura** (linhas de tensão, contrapesos, arcos e juntas), **matéria** (madeira tratada, pedra talhada, metal remendado, fibras e cerâmicas), e **anomalia** (filamentos da Trama, reflexos inter"
+        },
+        {
+          "id": "CRE-066",
+          "chapter": 66,
+          "title": "Corpos, rostos e expressividade do jogador",
+          "section": "Parte VI — Direção visual, som, animação e interfaces",
+          "question": "Como variar aparência sem perder animação, leitura de classe e equipamento?",
+          "anchor": "66-corpos-rostos-e-expressividade-do-jogador",
+          "editorial_status": "H",
+          "preview": "A proposta de editor permanece válido: origem cultural, forma corporal, rosto, voz, gestual, roupas e classe são escolhas distintas. Uma Duelista pode vestir roupas pesadas de aparência, desde que a aparência de sua arma, a animação da esqu"
+        },
+        {
+          "id": "CRE-067",
+          "chapter": 67,
+          "title": "Assinaturas de classe: silhueta, gesto e áudio",
+          "section": "Parte VI — Direção visual, som, animação e interfaces",
+          "question": "Que sinais fazem uma ação ser reconhecida antes de ler o HUD?",
+          "anchor": "67-assinaturas-de-classe-silhueta-gesto-e-áudio",
+          "editorial_status": "H",
+          "preview": "A coluna de especialização expressa possibilidades dentro de cada classe, não diferentes personagens obrigatórios. A assinatura deve permanecer legível com combinações de roupas comuns, raras e improvisadas."
+        },
+        {
+          "id": "CRE-068",
+          "chapter": 68,
+          "title": "Movimento e animação: preparação, contato e recuperação",
+          "section": "Parte VI — Direção visual, som, animação e interfaces",
+          "question": "Como tornar ações legíveis e comprometidas, sem sacrificar resposta do controle?",
+          "anchor": "68-movimento-e-animação-preparação-contato-e-recuperação",
+          "editorial_status": "H",
+          "preview": "Toda ação prioritária registra **preparação, compromisso, contato e recuperação**. Esses intervalos variam por arma e habilidade; não se fixa um valor universal em milissegundos apenas para parecer técnico. A janela de reação humana será te"
+        },
+        {
+          "id": "CRE-069",
+          "chapter": 69,
+          "title": "Criaturas visíveis: anatomia e ameaça compreensível",
+          "section": "Parte VI — Direção visual, som, animação e interfaces",
+          "question": "Como características visuais informam comportamento e risco?",
+          "anchor": "69-criaturas-visíveis-anatomia-e-ameaça-compreensível",
+          "editorial_status": "H",
+          "preview": "Os rótulos de família precisam conciliar nomenclatura com as seis famílias especificadas em uma avaliação posterior; qualquer renomeação exige revisão das descrições de criaturas e encontros, não clonagem de criaturas novas por acidente. Es"
+        },
+        {
+          "id": "CRE-070",
+          "chapter": 70,
+          "title": "Arquitetura regional e identidade sonora",
+          "section": "Parte VI — Direção visual, som, animação e interfaces",
+          "question": "Como cultura material e música distinguem lugares sem repetição mecânica?",
+          "anchor": "70-arquitetura-regional-e-identidade-sonora",
+          "editorial_status": "H",
+          "preview": "Uma nova região não se qualifica apenas por nova cor e materiais. Deve produzir uma composição de horizonte, escala, arquitetura social e som que o jogador reconheça mesmo sem HUD. Cultura é demonstrada por trabalho, manutenção, comércio, h"
+        },
+        {
+          "id": "CRE-071",
+          "chapter": 71,
+          "title": "Equipamento, roupa e raridade representáveis",
+          "section": "Parte VI — Direção visual, som, animação e interfaces",
+          "question": "Como objetos comunicam história, uso e acabamento, em vez de apenas poder?",
+          "anchor": "71-equipamento-roupa-e-raridade-representáveis",
+          "editorial_status": "H",
+          "preview": "Estabelecer camadas: geometria base define o tipo e o alcance; materiais e desgaste contam sua origem; gravuras e componentes representam ofício; acabamentos e cores expressam o dono; efeitos raros traduzem conquistas específicas. A variant"
+        },
+        {
+          "id": "CRE-072",
+          "chapter": 72,
+          "title": "Música temática, música adaptativa e silêncio",
+          "section": "Parte VI — Direção visual, som, animação e interfaces",
+          "question": "Como construir identidade musical sem preencher cada momento com som?",
+          "anchor": "72-música-temática-música-adaptativa-e-silêncio",
+          "editorial_status": "H",
+          "preview": "Proposta inicial: **Motivo da Travessia**, uma figura melódica curta associada à identidade do viajante, e **Motivo da Tensão**, um desenho rítmico/harmônico relacionado à Trama e às consequências das escolhas. As notas, intervalos, instrum"
+        },
+        {
+          "id": "CRE-073",
+          "chapter": 73,
+          "title": "Áudio espacial e interface auditiva acessível",
+          "section": "Parte VI — Direção visual, som, animação e interfaces",
+          "question": "Como sinais sonoros auxiliam a ação sem substituir alternativas visuais?",
+          "anchor": "73-áudio-espacial-e-interface-auditiva-acessível",
+          "editorial_status": "H",
+          "preview": "A distância e a obstrução alteram presença sonora; não são desculpa para esconder perigos essenciais. Uma ameaça fora de tela pode exigir um indicador auditivo e visual alternativo. Não usar áudio direcional como único meio de localizar um"
+        },
+        {
+          "id": "CRE-074",
+          "chapter": 74,
+          "title": "Efeitos visuais que não escondem o perigo",
+          "section": "Parte VI — Direção visual, som, animação e interfaces",
+          "question": "Como apresentar magia impressionante mantendo leitura de combate?",
+          "anchor": "74-efeitos-visuais-que-não-escondem-o-perigo",
+          "editorial_status": "H",
+          "preview": "**Essencial:** forma de área perigosa, janela de reação, origem e direção de projétil, estado de cura/escudo, alvo do efeito. Não ocultável por preset de redução de VFX. **Expressivo:** cores, trilhas, fragmentos, mudança material, assinatu"
+        },
+        {
+          "id": "CRE-075",
+          "chapter": 75,
+          "title": "HUD e apresentação centrados no personagem",
+          "section": "Parte VI — Direção visual, som, animação e interfaces",
+          "question": "Quando a interface deve informar e quando deve sair do caminho?",
+          "anchor": "75-hud-e-apresentação-centrados-no-personagem",
+          "editorial_status": "H",
+          "preview": "O usuário deve criar personagem, ver seu corpo/rosto sob diferentes luzes, testar uma animação de classe, selecionar aparência sem alterar o item funcional, visualizar o perfil, desbloquear uma peça e usá-la em poucos passos compreensíveis."
+        },
+        {
+          "id": "CRE-076",
+          "chapter": 76,
+          "title": "Produção audiovisual com curadoria e procedência",
+          "section": "Parte VI — Direção visual, som, animação e interfaces",
+          "question": "Como manter identidade artística ao utilizar processos e ferramentas diferentes?",
+          "anchor": "76-produção-audiovisual-com-curadoria-e-procedência",
+          "editorial_status": "H",
+          "preview": "Um recurso passa por `conceito → referência aprovada → fonte editável → implementação → avaliação visual/sonora → aprovação de uso`. O processo preserva referências de autoria, versão, ferramentas, termos de licença, transformações humanas,"
+        },
+        {
+          "id": "CRE-077",
+          "chapter": 77,
+          "title": "Prestígio social como consequência escolhida",
+          "section": "Parte VII — Relações sociais, acessibilidade e coerência do universo",
+          "question": "Como permitir que o jogador seja reconhecido sem obrigá-lo à exposição pública?",
+          "anchor": "77-prestígio-social-como-consequência-escolhida",
+          "editorial_status": "A",
+          "preview": "Prestígio deve nascer de ações e resultados verificáveis: criar uma arma assinada, concluir desafio de defesa, descobrir um trajeto, reunir uma coleção, proteger um grupo ou organizar uma atividade. Reconhecimento pode aparecer em emblemas,"
+        },
+        {
+          "id": "CRE-078",
+          "chapter": 78,
+          "title": "Cooperação sem composições obrigatórias em toda atividade",
+          "section": "Parte VII — Relações sociais, acessibilidade e coerência do universo",
+          "question": "Como a presença de outra pessoa modifica a decisão e não apenas a barra de vida do inimigo?",
+          "anchor": "78-cooperação-sem-composições-obrigatórias-em-toda-atividade",
+          "editorial_status": "A",
+          "preview": "Cooperação deve criar momentos de iniciativa: proteger alguém em uma abertura, combinar um deslocamento com controle de terreno, recuperar um parceiro sob risco, distribuir ferramentas ou interpretar pistas juntos. Um encontro cooperativo p"
+        },
+        {
+          "id": "CRE-079",
+          "chapter": 79,
+          "title": "Comunidades, guildas e proteção contra monopolização",
+          "section": "Parte VII — Relações sociais, acessibilidade e coerência do universo",
+          "question": "Como criar atividades coletivas sem tornar populações pequenas reféns de grandes organizações?",
+          "anchor": "79-comunidades-guildas-e-proteção-contra-monopolização",
+          "editorial_status": "H",
+          "preview": "Guildas, cartógrafos, artesãos e expedições podem construir pertencimento, promover eventos e especializações. Instituições devem possuir conflitos e limitações compreensíveis. Em decisões coletivas, definir prazos, direitos e meios de repa"
+        },
+        {
+          "id": "CRE-080",
+          "chapter": 80,
+          "title": "Privacidade, segurança social e perfis do personagem",
+          "section": "Parte VII — Relações sociais, acessibilidade e coerência do universo",
+          "question": "O que outras pessoas precisam saber para interagir e o que pertence ao titular da identidade?",
+          "anchor": "80-privacidade-segurança-social-e-perfis-do-personagem",
+          "editorial_status": "A",
+          "preview": "Aparência e decisões publicamente exercidas podem ser percebidas no mundo, mas a inspeção detalhada da build, do saldo de moedas, da trajetória e de objetos privados requer limites e permissões. Informações essenciais à integridade competit"
+        },
+        {
+          "id": "CRE-081",
+          "chapter": 81,
+          "title": "Acessibilidade como expansão da fantasia de personagem",
+          "section": "Parte VII — Relações sociais, acessibilidade e coerência do universo",
+          "question": "Como remover barreiras de acesso mantendo desafios e escolhas legíveis?",
+          "anchor": "81-acessibilidade-como-expansão-da-fantasia-de-personagem",
+          "editorial_status": "A",
+          "preview": "O projeto considera remapeamento de comandos, textos legíveis, escalonamento de interface, legendas, redução de efeitos, ajustes de câmera e alternativas quando informações dependem de cor ou som. Desafios de tempo precisam de feedback visí"
+        },
+        {
+          "id": "CRE-082",
+          "chapter": 82,
+          "title": "Mundo vivo sem tarefas de manutenção compulsória",
+          "section": "Parte VII — Relações sociais, acessibilidade e coerência do universo",
+          "question": "Quando uma simulação ecológica ou regional cria aventura, em vez de trabalho sem recompensa?",
+          "anchor": "82-mundo-vivo-sem-tarefas-de-manutenção-compulsória",
+          "editorial_status": "A",
+          "preview": "Variáveis locais de água, vegetação, fauna, materiais e disponibilidade de rotas podem originar oportunidades de exploração, caça e comércio. A escala da simulação deve corresponder às consequências perceptíveis. Rotas podem ser representad"
+        },
+        {
+          "id": "CRE-083",
+          "chapter": 83,
+          "title": "Ética de recompensa, tempo e monetização",
+          "section": "Parte VII — Relações sociais, acessibilidade e coerência do universo",
+          "question": "Como manter o prestígio de uma conquista sem transformar escassez em coerção?",
+          "anchor": "83-ética-de-recompensa-tempo-e-monetização",
+          "editorial_status": "A",
+          "preview": "Separar poder funcional, qualidade de fabricação, raridade, aparência e procedência. A obtenção de um item extraordinário pode exigir maestria, descoberta, profissão ou uma história singular, mas seu prestígio não precisa resultar de um bôn"
+        },
+        {
+          "id": "CRE-084",
+          "chapter": 84,
+          "title": "Caso A — Duas classes que parecem a mesma classe",
+          "section": "Parte VIII — Estudos de caso criativos: decisões, riscos e contrapartidas",
+          "question": "O que mudar quando dois personagens têm ícones distintos, mas tomam as mesmas decisões?",
+          "anchor": "84-caso-a-duas-classes-que-parecem-a-mesma-classe",
+          "editorial_status": "H",
+          "preview": "**Situação didática:** Guardião e Duelista possuem modelos e habilidades diferentes, mas derrotam o primeiro inimigo pressionando o mesmo ataque e esquiva. O aparo não cria oportunidade e o bloqueio apenas reduz dano passivamente."
+        },
+        {
+          "id": "CRE-085",
+          "chapter": 85,
+          "title": "Caso B — O artesão produz cem itens e ninguém se importa",
+          "section": "Parte VIII — Estudos de caso criativos: decisões, riscos e contrapartidas",
+          "question": "Como diferenciar abundância de fabricação de uma profissão memorável?",
+          "anchor": "85-caso-b-o-artesão-produz-cem-itens-e-ninguém-se-importa",
+          "editorial_status": "H",
+          "preview": "**Situação didática:** um sistema de ferraria oferece centenas de receitas, mas cada operação exige esperar uma barra de tempo; a origem da peça é irrelevante e os compradores veem apenas atributos."
+        },
+        {
+          "id": "CRE-086",
+          "chapter": 86,
+          "title": "Caso C — Uma missão moral não permite escolhas reais",
+          "section": "Parte VIII — Estudos de caso criativos: decisões, riscos e contrapartidas",
+          "question": "Como transformar um debate temático em aventura que obriga personagens a agir?",
+          "anchor": "86-caso-c-uma-missão-moral-não-permite-escolhas-reais",
+          "editorial_status": "H",
+          "preview": "**Situação:** a ponte deve ser reaberta para passagem de remédios, mas a obra pode prejudicar viveiros na margem oposta. Todos os NPCs apenas repetem argumentos e aguardam o protagonista decidir."
+        },
+        {
+          "id": "CRE-087",
+          "chapter": 87,
+          "title": "Caso D — Um chefe memorável vira apenas uma barra de vida",
+          "section": "Parte VIII — Estudos de caso criativos: decisões, riscos e contrapartidas",
+          "question": "O que permite a um boss expressar criatura, lugar e história além de números?",
+          "anchor": "87-caso-d-um-chefe-memorável-vira-apenas-uma-barra-de-vida",
+          "editorial_status": "H",
+          "preview": "**Situação:** o Velário possui grande quantidade de vida e ataques visualmente bonitos, mas a vitória depende apenas de repetição de dano."
+        },
+        {
+          "id": "CRE-088",
+          "chapter": 88,
+          "title": "Caso E — Um mundo vivo pede manutenção diária",
+          "section": "Parte VIII — Estudos de caso criativos: decisões, riscos e contrapartidas",
+          "question": "Como salvar uma ideia de simulação que se tornou rotina compulsória?",
+          "anchor": "88-caso-e-um-mundo-vivo-pede-manutenção-diária",
+          "editorial_status": "H",
+          "preview": "**Situação:** eventos ambientais exigem visitas diárias para impedir perda de recursos; jogadores passam a cuidar de indicadores globais em vez de explorar, caçar ou desenvolver seus personagens."
+        },
+        {
+          "id": "CRE-089",
+          "chapter": 89,
+          "title": "Caso F — A montaria rara torna-se pay-to-win",
+          "section": "Parte VIII — Estudos de caso criativos: decisões, riscos e contrapartidas",
+          "question": "Como diferenciar fantasia de colecionismo de vantagem física inadequada?",
+          "anchor": "89-caso-f-a-montaria-rara-torna-se-pay-to-win",
+          "editorial_status": "H",
+          "preview": "**Situação:** uma montaria cosmética possui animação ou proporção que reduz sua área atingível, ou sua velocidade competitiva cresce indefinidamente conforme raridade."
+        },
+        {
+          "id": "CRE-090",
+          "chapter": 90,
+          "title": "Caso G — Todo jogador vê um mundo contraditório",
+          "section": "Parte VIII — Estudos de caso criativos: decisões, riscos e contrapartidas",
+          "question": "Como oferecer escolhas pessoais sem quebrar a realidade compartilhada?",
+          "anchor": "90-caso-g-todo-jogador-vê-um-mundo-contraditório",
+          "editorial_status": "H",
+          "preview": "**Situação:** uma missão oferece duas decisões que deveriam alterar toda a região. Em uma instância, a ponte fica destruída; em outra, aparece reconstruída; jogadores voltam a encontrar os mesmos NPCs em estados incompatíveis."
+        },
+        {
+          "id": "CRE-091",
+          "chapter": 91,
+          "title": "Caso H — Um visual impressionante destrói a legibilidade",
+          "section": "Parte VIII — Estudos de caso criativos: decisões, riscos e contrapartidas",
+          "question": "Como preservar a fantasia de poder quando efeitos, roupas e armas ocultam o perigo?",
+          "anchor": "91-caso-h-um-visual-impressionante-destrói-a-legibilidade",
+          "editorial_status": "H",
+          "preview": "**Situação:** partículas volumétricas, auras de raridade e múltiplos personagens tornam impossível ler um ataque de chefe. Uma ação bonita no trailer se torna frustrante no jogo real."
+        },
+        {
+          "id": "CRE-092",
+          "chapter": 92,
+          "title": "Mapa de criação: da fantasia à cena jogável",
+          "section": "Parte IX — Ferramentas de consulta, glossário, decisões e revisão criativa",
+          "question": "Como transformar uma ideia interessante em uma sequência de ações observáveis?",
+          "anchor": "92-mapa-de-criação-da-fantasia-à-cena-jogável",
+          "editorial_status": "A",
+          "preview": "**Fantasia:** escrever a experiência desejada em uma frase: “quero ser a pessoa que resiste ao ataque impossível”. **Condição:** estabelecer o que ameaça a identidade e o que custa exercer seu poder. **Ação:** definir entrada, postura, timi"
+        },
+        {
+          "id": "CRE-093",
+          "chapter": 93,
+          "title": "Perguntas universais de revisão narrativa",
+          "section": "Parte IX — Ferramentas de consulta, glossário, decisões e revisão criativa",
+          "question": "Que sinais demonstram que uma cena tem pessoas, tensão e consequências próprias?",
+          "anchor": "93-perguntas-universais-de-revisão-narrativa",
+          "editorial_status": "A",
+          "preview": "**Personagem:** o que deseja hoje, do que tem medo, o que sabe e o que ignora? **Ação:** que decisão toma sem esperar autorização do protagonista? **Oposição:** quem tem um interesse legítimo incompatível? **Custo:** que consequência concre"
+        },
+        {
+          "id": "CRE-094",
+          "chapter": 94,
+          "title": "Perguntas universais de revisão de classe e build",
+          "section": "Parte IX — Ferramentas de consulta, glossário, decisões e revisão criativa",
+          "question": "Como avaliar se uma classe merece existir além de seu nome?",
+          "anchor": "94-perguntas-universais-de-revisão-de-classe-e-build",
+          "editorial_status": "A",
+          "preview": "A classe tem fantasia compreensível e silhueta distinta? A ação de assinatura modifica decisões? Seu recurso é perceptível? O jogador consegue explicar quando usá-la? Existe contrapartida justa? A classe contribui fora de uma rotação de dan"
+        },
+        {
+          "id": "CRE-095",
+          "chapter": 95,
+          "title": "Vocabulário do universo e limites de interpretação",
+          "section": "Parte IX — Ferramentas de consulta, glossário, decisões e revisão criativa",
+          "question": "Quais termos carregam identidade própria e quais dependem de confirmação autoral?",
+          "anchor": "95-vocabulário-do-universo-e-limites-de-interpretação",
+          "editorial_status": "H",
+          "preview": "Os termos acima, exceto a identidade geral do produto, integram propostas de worldbuilding e não devem ser tratados como cânone final apenas por constarem do glossário."
+        },
+        {
+          "id": "CRE-096",
+          "chapter": 96,
+          "title": "Vocabulário do jogador: classe, especialização, ofício e conquista",
+          "section": "Parte IX — Ferramentas de consulta, glossário, decisões e revisão criativa",
+          "question": "Como manter inequívocos os termos que descrevem a identidade jogável?",
+          "anchor": "96-vocabulário-do-jogador-classe-especialização-ofício-e-conquista",
+          "editorial_status": "A",
+          "preview": "**Classe:** fantasia principal de ações, riscos e recursos em combate. **Especialização:** inclinação que altera decisões da classe. **Build:** combinação de classe, especialização, arma, atributos, talentos, habilidades e equipamento. **Of"
+        },
+        {
+          "id": "CRE-097",
+          "chapter": 97,
+          "title": "Como separar cânone, hipótese e alternativa descartada",
+          "section": "Parte IX — Ferramentas de consulta, glossário, decisões e revisão criativa",
+          "question": "Que perguntas impedem a promoção silenciosa de uma proposta ao estatuto de verdade do mundo?",
+          "anchor": "97-como-separar-cânone-hipótese-e-alternativa-descartada",
+          "editorial_status": "A",
+          "preview": "Uma decisão direta do autor possui prioridade; uma direção aprovada para documentação define a interpretação vigente do planejamento; uma hipótese é material sujeito a teste e revisão. Nenhum texto de estudo, catálogo de ideias ou repetição"
+        },
+        {
+          "id": "CRE-098",
+          "chapter": 98,
+          "title": "Trilhas de consulta por objetivo criativo",
+          "section": "Parte IX — Ferramentas de consulta, glossário, decisões e revisão criativa",
+          "question": "Por onde começar quando é necessário resolver um problema específico de design?",
+          "anchor": "98-trilhas-de-consulta-por-objetivo-criativo",
+          "editorial_status": "A",
+          "preview": "**Personagem memorável:** fantasia central → criação → build → assinatura de classe → reconhecimento. **Combate sem identidade:** comparação de duas classes → ações legíveis → talentos → encontro de prova. **Profissão sem interesse:** ofíci"
+        },
+        {
+          "id": "CRE-099",
+          "chapter": 99,
+          "title": "Limites, controvérsias e propostas não concluídas",
+          "section": "Parte IX — Ferramentas de consulta, glossário, decisões e revisão criativa",
+          "question": "Quais decisões futuras não devem ser resolvidas silenciosamente por uma enciclopédia?",
+          "anchor": "99-limites-controvérsias-e-propostas-não-concluídas",
+          "editorial_status": "H",
+          "preview": "A taxonomia de seis classes e doze especializações é candidata. Também são candidatos nomes e cálculos de atributos, recursos de classe, quantidade de habilidades, proficiências, classes e povos da estreia. As cinco regiões e dez ofícios nã"
+        },
+        {
+          "id": "CRE-100",
+          "chapter": 100,
+          "title": "Critérios para avaliar uma análise criativa",
+          "section": "Parte IX — Ferramentas de consulta, glossário, decisões e revisão criativa",
+          "question": "Como reconhecer uma recomendação realmente útil em vez de uma sugestão vistosa?",
+          "anchor": "100-critérios-para-avaliar-uma-análise-criativa",
+          "editorial_status": "A",
+          "preview": "Uma boa análise identifica o objetivo expressivo, localiza a fraqueza observável, compara abordagens e respeita o que a fonte realmente aprovou. Deve demonstrar como a solução altera cenas, decisões, personagens, encontros, interface ou exp"
+        }
+      ]
+    }
+  ]
+}
