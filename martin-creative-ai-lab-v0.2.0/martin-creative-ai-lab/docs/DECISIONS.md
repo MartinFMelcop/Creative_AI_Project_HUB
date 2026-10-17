@@ -1955,3 +1955,40 @@ readable reversible panel and matching hints; no independent human validation ex
 One local consumer has six code paths; fourteen capability states remain unchanged,
 only NS-C03 adapted. No new lab, origin migration promotion or NS-C13 promotion.
 The existing prompt already covers actual consumers and matched validation; retain it.
+
+## ADR-076 — make existing threats and character responses audible
+
+**Date:** 2026-10-17 UTC. **Status:** SEED 0.33.6; CREATIVE PRODUCTION, category 1.
+
+Baseline `446ecd4` has actual character choices but no sound nodes/assets. Compare
+build variation, another encounter, hold/toggle controls and audiovisual identity.
+Choose the observed silent action loop in the existing consumer; speculative builds
+or another report would not improve the already executed choices as directly.
+
+Author eight short original procedural cues: high rising bolt taps, low rough pulse
+pair, resonant block, airy draw, dry counter, damage and win/loss cadences. Read actual
+model transitions/events; never infer success from an input request. Keep two bounded
+voices, no music bed, explicit mute in F1/F5, full visual alternatives and immediate
+pause/focus/settings/reset silence. Session mute does not alter saved controls or
+reserve another gameplay key. The observer never changes combat or progression.
+
+ENG-005/023 inform temporal ownership and separate mechanism/experience; SCI-064
+separates PCM/mixer integrity from perception; CRE-001 is direct author identity,
+CRE-067/073 are signature/interface hypotheses. All domains high. No source brain edit.
+The P08/P06 cue/lifecycle method informs a new implementation, not copied media/kernel.
+NS-C07 becomes adapted only with actual consumer code and [execution](../evidence/north-star-sound/RUN.json).
+Fourteen capabilities remain, NS-C03/07 adapted; twelve other states unchanged.
+
+208 native checks and exact source/PCK behavior preserve all baseline gameplay groups.
+Actual AudioServer capture compares the silent historical PCK, warnings/responses,
+normal consequences and silent mute/pause controls. PCM identity and adverse evidence
+mutations gate the tool. The first observer could replay old model history; consume
+history on attachment and explicitly seed new attempts. A startup fixture initially
+expected guard before its real 60ms live window; correct the fixture, not the rules.
+Rapid synthetic terminal playback required explicit cleanup and a bounded 0.8s mixer
+retirement period before test-process exit; normal rendered captures close cleanly.
+
+Agent visual/signal review is not listening or recognition by people. No physical
+latency, spatial audio, accessibility, learning, enjoyment or commercial claim.
+No new lab or origin extraction/promotion; source/media/consumers/tests are preserved.
+The unchanged operational prompt already served this production/validation scope.

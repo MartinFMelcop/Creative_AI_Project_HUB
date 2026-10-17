@@ -31,6 +31,18 @@ choices. Fixed management keys keep recovery reachable. Toggle-hold modes are de
 they change commitment semantics and need separate design/evaluation. Synthetic/native
 checks establish execution, not independent player understanding or accessibility.
 
+## Sound-signature decision — experimental
+
+CRE-001 supplies direct author character-agency direction. CRE-067/073 are hypotheses,
+not approved class art or accessibility results. The previously silent encounter now
+has three high bolt taps, a low rough floor pair, resonant block and airy draw; a dry
+counter, damage thud and terminal cadences close the action loop. No ambient music or
+footstep layer competes with warnings. Sound follows accepted events, not button presses.
+Two voices bound overlap; terminal response has priority. Visual geometry/text remain
+available, and F1/F5 mutes immediately for the session. No spatial or physical-device
+claim follows. Recognition, mix comfort and experiential value require listening and
+player observation; signal integrity alone cannot establish them.
+
 ## Current product contract
 
 The player chooses one experimental approach, escorts the courier to the far gate,

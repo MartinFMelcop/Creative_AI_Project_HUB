@@ -3,8 +3,10 @@ const Combat = preload("res://combat.gd")
 const Rehearsal = preload("res://rehearsal.gd")
 const Keepsakes = preload("res://keepsakes.gd")
 const Errand = preload("res://errand.gd")
+const Sound = preload("res://sound.gd")
 const Controls = preload("res://controls.gd")
 const KEEPSAKE_NAMES := {"":"None", "held_line":"Held the Line", "drew_danger":"Drew the Danger"}
+var sound = Sound.new()
 var keepsakes = Keepsakes.new()
 var profile_path := ""
 var normal_run := false
@@ -31,6 +33,7 @@ const AMBER := Color("ffc474")
 const RED := Color("ff796f")
 
 func _ready() -> void:
+	add_child(sound)
 	if profile_path.is_empty(): profile_path=OS.get_environment("CROSSING_PROFILE")
 	if profile_path.is_empty(): profile_path="user://crossing-keepsakes.json"
 	keepsakes.load_profile(profile_path)
@@ -57,6 +60,7 @@ func begin_crossing() -> void:
 	rehearsal.active = false
 	game = Combat.new()
 	game.reset(selected)
+	sound.observe(game,true)
 	taps.clear()
 
 func _notification(what: int) -> void:
@@ -64,7 +68,7 @@ func _notification(what: int) -> void:
 		if rehearsal.active:
 			if rehearsal.state=="live" and not rehearsal.paused: rehearsal.toggle_pause()
 		elif game.mode=="play": game.mode="paused"
-		taps.clear();bindings.quarantine()
+		taps.clear();bindings.quarantine();sound.silence()
 
 func _unhandled_key_input(event: InputEvent) -> void:
 	if not event is InputEventKey:return
@@ -106,6 +110,7 @@ func _unhandled_key_input(event: InputEvent) -> void:
 		if bindings.matches(event,"strike"): taps.strike=true
 		if bindings.matches(event,"skill"): taps.skill_pressed=true
 		if bindings.matches(event,"step"): taps.dodge=true
+	sync_sound()
 	queue_redraw()
 
 func open_controls() -> void:
@@ -114,7 +119,7 @@ func open_controls() -> void:
 	elif game.mode=="play":game.mode="paused"
 	controls_open=true;controls_listening=false;controls_row=0
 	controls_draft=bindings.keys.duplicate();controls_message=""
-	taps.clear();bindings.quarantine()
+	taps.clear();bindings.quarantine();sound.silence()
 
 func controls_input(event: InputEventKey,key: int) -> void:
 	if controls_listening:
@@ -132,11 +137,12 @@ func controls_input(event: InputEventKey,key: int) -> void:
 	elif key==KEY_DOWN:controls_row=(controls_row+1)%Controls.ACTIONS.size()
 	elif key==KEY_ENTER:controls_listening=true;controls_message="Press a new key. Esc cancels capture."
 	elif key==KEY_DELETE:controls_draft=Controls.DEFAULTS.duplicate();controls_message="Defaults in draft. S applies; Esc discards."
+	elif key==KEY_F5:sound.set_muted(not sound.muted)
 	elif key==KEY_S:
 		bindings.apply(controls_draft);controls_message=bindings.status;taps.clear();bindings.quarantine()
 
 func _physics_process(dt: float) -> void:
-	if controls_open:taps.clear();queue_redraw();return
+	if controls_open:taps.clear();sound.silence();queue_redraw();return
 	var command: Dictionary=taps.duplicate()
 	command.move=bindings.vector("move")
 	command.aim=bindings.vector("aim")
@@ -145,7 +151,12 @@ func _physics_process(dt: float) -> void:
 	if rehearsal.active: rehearsal.step(dt,command)
 	else: advance_crossing(dt,command)
 	taps.clear()
+	sync_sound()
 	queue_redraw()
+
+func sync_sound() -> void:
+	var suspended: bool=controls_open or (rehearsal.paused or rehearsal.state=="ready" if rehearsal.active else game.mode in ["title","paused"])
+	sound.observe(game,suspended)
 
 func advance_crossing(dt: float, command: Dictionary) -> void:
 	var previous: String=game.mode
@@ -255,7 +266,7 @@ func _draw() -> void:
 func draw_header() -> void:
 	draw_rect(Rect2(0,0,1152,174),INK)
 	text(Vector2(40,42),"VIRGO DIAMOND / "+("REHEARSAL" if rehearsal.active else "CROSSING DRILL"),25)
-	text(Vector2(950,41),"F1  Controls",16,AMBER)
+	text(Vector2(950,41),"F1 Keys / sound",16,AMBER)
 	text(Vector2(40,70),("%d / 3  %s  •  "%[rehearsal.stage+1,rehearsal.heading()]+rehearsal.instruction()) if rehearsal.active else (errand.hint() if errand.active else "LOCAL EXPERIMENT  •  Keep the courier alive to the far gate"),16,AMBER)
 	text(Vector2(40,110),game.role.to_upper()+"  /  HEALTH "+str(game.hp)+"   COURIER "+str(game.cargo),19)
 	draw_rect(Rect2(40,130,300,12),Color("32475a"))
@@ -290,6 +301,7 @@ func overlay() -> void:
 		text(Vector2(210,580),"T  Rehearse as "+selected+"     •     ENTER  Skip to crossing",21,TEAL)
 		text(Vector2(210,615),"C  Keepsake: "+KEEPSAKE_NAMES[keepsakes.equipped]+"     /     experimental, cosmetic only",17)
 		draw_keepsake(Vector2(1015,602),keepsakes.equipped,1.4)
+		text(Vector2(150,642),"Sound: high taps = bolt; low pair = floor. F1 opens sound / key controls.",16,AMBER)
 	elif game.mode=="paused":
 		text(Vector2(280,330),"Crossing paused",36)
 		text(Vector2(280,385),"ENTER / ESC resume     •     R abandon and choose",22)
@@ -334,7 +346,7 @@ func draw_controls() -> void:
 	draw_rect(Rect2(40,90,1072,560),INK)
 	text(Vector2(85,131),"KEYBOARD CONTROLS  /  "+("CAPTURE KEY" if controls_listening else "DRAFT"),27,TEAL)
 	text(Vector2(85,162),"UP / DOWN select  •  ENTER change  •  S apply  •  DELETE defaults  •  ESC close / cancel",18)
-	text(Vector2(85,190),"Physical key positions; navigation arrows use logical identity. No modifier combinations.",16,AMBER)
+	text(Vector2(85,190),"Physical positions / logical arrows. No combos. F5 sound: "+("OFF" if sound.muted else "ON")+" (session)",16,AMBER)
 	for index in Controls.ACTIONS.size():
 		var y: float=228+index*28
 		if index==controls_row:panel(Rect2(75,y-22,1000,28),Color("35505a"))
@@ -376,7 +388,7 @@ func rehearsal_overlay() -> void:
 			text(Vector2(100,top+95),game.last_impact.tip,18)
 	else:
 		text(Vector2(100,top+65),rehearsal.instruction(),19)
-		text(Vector2(100,top+95),"One real response at a time. Attempts can be repeated; no crossing reward is earned.",18)
+		text(Vector2(100,top+95),("Sound: three high taps warn of a bolt. Watch its locked line." if rehearsal.stage==0 else ("Sound: a low rough pair warns of the floor pulse. Leave the marked circle." if rehearsal.stage==1 else "A dry contact sounds only when a close counter lands. No crossing reward here.")),18)
 
 func capture() -> void:
 	var path := OS.get_environment("CROSSING_CAPTURE")
@@ -389,5 +401,6 @@ func capture() -> void:
 	report.rehearsal=rehearsal.snapshot()
 	report.keepsakes=keepsakes.snapshot()
 	report.errand=errand.snapshot()
+	report.sound=sound.snapshot()
 	report.controls={"profile":bindings.snapshot(),"open":controls_open,"draft":controls_draft.duplicate(),"row":controls_row,"listening":controls_listening,"message":controls_message}
 	file.store_string(JSON.stringify(report,"  ")+"\n")

@@ -192,7 +192,27 @@
         "projects/tokyo80s/media/rehearsal-provenance.json",
         "evidence/tokyo80s/PITCH_RUN.json"
       ]
+    },
+    {
+      "id": "AUD-006",
+      "name": "Crossing threat and character-response cues",
+      "type": "procedural-audio-pack",
+      "status": "integrated",
+      "consumer_projects": [],
+      "destination_consumer_paths": [
+        "north-star/prototype/arena.gd",
+        "north-star/prototype/sound.gd"
+      ],
+      "runtime_path": "north-star/prototype/sound.gd",
+      "sample_rate": 22050,
+      "channels": 1,
+      "provenance": "New North Star procedural production, informed by P08/P06 semantic-cue methods; no origin master, kernel, sample, MIDI or voice imported. PCM exports in evidence are inspection outputs, not separate runtime dependencies.",
+      "rights": "No third-party media imported; no exclusive-rights, independent listening or commercial-clearance claim.",
+      "evidence": [
+        "north-star/prototype/provenance.json",
+        "evidence/north-star-sound/RUN.json"
+      ]
     }
   ],
-  "scope": "Asset integration states describe only named existing origin consumers. No asset is claimed integrated into Virgo Diamond; source rights/provenance and actual paths are retained."
+  "scope": "Asset integration describes named origin consumers and, for AUD-006, explicit local North Star consumer code paths. It is not production-MMORPG integration or independent validation. Source rights/provenance and origin paths remain preserved."
 }

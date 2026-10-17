@@ -1,0 +1,653 @@
+{
+  "schema_version": 1,
+  "kind": "destination_execution",
+  "recorded_at_utc": "2026-10-17T22:14:21.615883+00:00",
+  "baseline_commit": "446ecd46b7750efc9a7a8b780d3fd75566f5b9ed",
+  "branch": "codex/north-star-sound-20261017",
+  "mode": "CREATIVE PRODUCTION",
+  "priority_category": 1,
+  "priority_reason": "The real character consumer was entirely silent. Give its existing readable threats and accepted responses distinct optional sound rather than add speculative builds, another unrelated lab or cosmetic settings alone.",
+  "capability_ids": [
+    "NS-C03",
+    "NS-C07"
+  ],
+  "consumer_paths": [
+    "north-star/prototype/arena.gd",
+    "north-star/prototype/combat.gd",
+    "north-star/prototype/rehearsal.gd",
+    "north-star/prototype/keepsakes.gd",
+    "north-star/prototype/errand.gd",
+    "north-star/prototype/controls.gd",
+    "north-star/prototype/sound.gd"
+  ],
+  "runtime": "Godot4.6.3.stable.official.7d41c59c4 standard; Linux x86_64; Python3.12; Xorg dummy/OpenGL Mesa25.0.7 llvmpipe LLVM19.1.7; Dummy AudioServer/44100 Hz mixer.",
+  "scope": "Eight new original deterministic mono cues in the real crossing/rehearsal; semantic warnings, actual role/contact/terminal responses and explicit session mute. Actual software output, not physical listening or independent player validation.",
+  "checks": {
+    "failed": 0,
+    "passed": 208
+  },
+  "commands": [
+    {
+      "command": [
+        "python3",
+        "north-star/prototype/tools/verify.py",
+        "--output",
+        "/tmp/ns-sound-baseline.json",
+        "--compare",
+        "evidence/north-star-controls/results.json"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "godot",
+        "--headless",
+        "--path",
+        "north-star/prototype",
+        "--script",
+        "tools/pack.gd",
+        "--",
+        "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/prototype/dist/crossing-drill.pck"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "python3",
+        "north-star/prototype/tools/verify.py",
+        "--output",
+        "evidence/north-star-sound/results.json"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "python3",
+        "work/north-star-sound/render.py"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "python3",
+        "north-star/prototype/tools/verify_sound.py",
+        "--output",
+        "evidence/north-star-sound/media.json",
+        "--baseline-pack",
+        "/workspace/Creative_AI_Project_HUB/work/north-star-sound/baseline.pck"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "python3",
+        "tools/test_brain_query.py"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "python3",
+        "tools/test_validate_repo.py"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "python3",
+        "tools/test_reference_library.py"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "python3",
+        "tools/test_check_manifest.py"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "python3",
+        "north-star/prototype/tools/test_verify.py"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "python3",
+        "north-star/prototype/tools/test_verify_sound.py"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "python3",
+        "tools/validate_repo.py"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "python3",
+        "tools/reference_library.py",
+        "check"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "python3",
+        "tools/brain_query.py",
+        "check"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "python3",
+        "north-star/prototype/tools/verify.py",
+        "--output",
+        "/tmp/ns-sound-final.json",
+        "--compare",
+        "evidence/north-star-sound/results.json"
+      ],
+      "exit_code": 0
+    }
+  ],
+  "source_artifacts": [
+    {
+      "local_path": "north-star/prototype/.gitignore",
+      "size_bytes": 8,
+      "sha256": "531d0d253cec1addb97b2cb2d144b6589ff934513eb9c9b8cf882cb49e4c0c32"
+    },
+    {
+      "local_path": "north-star/prototype/README.md",
+      "size_bytes": 15090,
+      "sha256": "843a9fb72fa9bbc4751a37efc7092b5538102b0df8abe377a128d55e7263791d"
+    },
+    {
+      "local_path": "north-star/prototype/arena.gd",
+      "size_bytes": 22082,
+      "sha256": "a286e7643b32731311514110e51ebdbaa6c95bf3313c8bd365b68c4a507e674a"
+    },
+    {
+      "local_path": "north-star/prototype/arena.gd.uid",
+      "size_bytes": 20,
+      "sha256": "1cd2fa44a912d470ad3de79f672223ff85436c4d1ab34701debf2e10a1a14fe2"
+    },
+    {
+      "local_path": "north-star/prototype/arena.tscn",
+      "size_bytes": 154,
+      "sha256": "f794c485663f0ed318ddce6bb7a62bc9b2dbd3af02be4f166cca962c29382591"
+    },
+    {
+      "local_path": "north-star/prototype/combat.gd",
+      "size_bytes": 9868,
+      "sha256": "22b257c59ad3c6f183aac416122ce8ed36d9af38ba7f70a0f8b09bba0f6217c4"
+    },
+    {
+      "local_path": "north-star/prototype/combat.gd.uid",
+      "size_bytes": 20,
+      "sha256": "8f28f645ef4d4bba1021b27bc39fed04c438124fd819cc32c3586f92b3c58f9f"
+    },
+    {
+      "local_path": "north-star/prototype/controls.gd",
+      "size_bytes": 7458,
+      "sha256": "4c88d0a49d2f64fab275cfc2e62b8956ea17019aaf26445f99ce1a21a58b4fb0"
+    },
+    {
+      "local_path": "north-star/prototype/dist/crossing-drill.pck",
+      "size_bytes": 111508,
+      "sha256": "83be6d8cb675006718464462562eaa1a5e5ec973f2be92eca17bfbc90ab3d6b3"
+    },
+    {
+      "local_path": "north-star/prototype/errand.gd",
+      "size_bytes": 3831,
+      "sha256": "2a2392fa86bd12544eba5f60ad74d35592c7d6fa207373ec11a1928a9e33e601"
+    },
+    {
+      "local_path": "north-star/prototype/keepsakes.gd",
+      "size_bytes": 5848,
+      "sha256": "d7790dddbd25904069b0c1a6d5edb2f7d01bc02a375d608a4ec5a25262ddb6c9"
+    },
+    {
+      "local_path": "north-star/prototype/project.godot",
+      "size_bytes": 414,
+      "sha256": "8d4755b58f1179a9b5ec431579177371e784bca9703a17c88f4c7a6d4ee9385c"
+    },
+    {
+      "local_path": "north-star/prototype/provenance.json",
+      "size_bytes": 1930,
+      "sha256": "eac7489c589ccd2b0e2f24554287840cb7b44015bee435fd0b1dfdb06b499742"
+    },
+    {
+      "local_path": "north-star/prototype/rehearsal.gd",
+      "size_bytes": 2919,
+      "sha256": "55a1a348dd37a2552074a8ecc48dbe01b3fbef9211750f2110093a1ccc6eaeb6"
+    },
+    {
+      "local_path": "north-star/prototype/sound.gd",
+      "size_bytes": 4070,
+      "sha256": "affb962c882921b9d59e4461b36517487cdaf09b5e08e3a413449d242ccc1cd9"
+    },
+    {
+      "local_path": "north-star/prototype/tests/controls_checks.gd",
+      "size_bytes": 9525,
+      "sha256": "aec1a8a26e262a3830714f9fa748923d8b27b9e51d2e93fa6b3b74c2ee3acf0c"
+    },
+    {
+      "local_path": "north-star/prototype/tests/controls_restart.gd",
+      "size_bytes": 1134,
+      "sha256": "066f641273c045a97ea1ee6bd2ddd9469e452d6edab80bc36a426927da431b61"
+    },
+    {
+      "local_path": "north-star/prototype/tests/errand_checks.gd",
+      "size_bytes": 6353,
+      "sha256": "2f04534e200e82f08e01127a3b31c5dafacb5151c9635038bf6c14d33ac89094"
+    },
+    {
+      "local_path": "north-star/prototype/tests/errand_policy.gd",
+      "size_bytes": 655,
+      "sha256": "74f4d20501771d8697e79629aaa6e86cb5056211eae0ab860aa593cb5190cb9e"
+    },
+    {
+      "local_path": "north-star/prototype/tests/keepsake_checks.gd",
+      "size_bytes": 9709,
+      "sha256": "a8614cb0592ff8c403185b82f702c289abd42b78c783f4bc8f06d2ecaf211fcf"
+    },
+    {
+      "local_path": "north-star/prototype/tests/keepsake_restart.gd",
+      "size_bytes": 1097,
+      "sha256": "8e9f107c310836324c51b1cbe1b2db618feadbd98b0cebbef12f75f39ab112c2"
+    },
+    {
+      "local_path": "north-star/prototype/tests/policy.gd",
+      "size_bytes": 979,
+      "sha256": "646f0758a211e84ffbfd4632460c7d1fc549cbb3b552801ee2508774a5a63e29"
+    },
+    {
+      "local_path": "north-star/prototype/tests/rehearsal_checks.gd",
+      "size_bytes": 6003,
+      "sha256": "0286d8997fdf1bd7ebad0b72a7283651678cfa30f85b2bd55e98e995c3f9b1f5"
+    },
+    {
+      "local_path": "north-star/prototype/tests/render_journey.gd",
+      "size_bytes": 992,
+      "sha256": "b0de7bc7cdd8795d55c0fdb8248c277c38ead3299714e7290c70df1a2c114e49"
+    },
+    {
+      "local_path": "north-star/prototype/tests/render_keepsakes.gd",
+      "size_bytes": 1502,
+      "sha256": "eafb1a071de871af521712b32f095a2d6c46f3424e85590c9e43c52310850359"
+    },
+    {
+      "local_path": "north-star/prototype/tests/render_medicine.gd",
+      "size_bytes": 2215,
+      "sha256": "0716b982847fbd47dc596954c2f7a98f72e30e0fd6356aacc371e139be8455f1"
+    },
+    {
+      "local_path": "north-star/prototype/tests/render_rehearsal.gd",
+      "size_bytes": 2254,
+      "sha256": "fc268d9764cfdd52874c8ea9f2f96aaeaa6f98ebede22dcbf412fe4692c6de42"
+    },
+    {
+      "local_path": "north-star/prototype/tests/run_checks.gd",
+      "size_bytes": 7279,
+      "sha256": "23c32191dec13434fe2a86b7b7edf16518d2614ea09d69355477d05bfa46ed10"
+    },
+    {
+      "local_path": "north-star/prototype/tests/sound_capture.gd",
+      "size_bytes": 4868,
+      "sha256": "ec239c963c277e1894f5783d39a880f9758128333c2989d3e576bf06efc4fb55"
+    },
+    {
+      "local_path": "north-star/prototype/tests/sound_checks.gd",
+      "size_bytes": 5627,
+      "sha256": "c5c3496c2e5ef796399d3884b34b7547c55c4af9438a19220e484977dd2d0569"
+    },
+    {
+      "local_path": "north-star/prototype/tools/pack.gd",
+      "size_bytes": 796,
+      "sha256": "18d2cfeb6a68754346523e4175921eb53e4bf522bfa83c9fcfd1c72a8699368a"
+    },
+    {
+      "local_path": "north-star/prototype/tools/test_verify.py",
+      "size_bytes": 1778,
+      "sha256": "08898e09aba0e8ce07d37cab94d9b045904d5665b724864d5ef04fbce66c36e5"
+    },
+    {
+      "local_path": "north-star/prototype/tools/test_verify_sound.py",
+      "size_bytes": 2559,
+      "sha256": "9cdf20a488d7a52d1e2cadb332123fb03e3ba6e628d8a2eb488bbf3487ae0604"
+    },
+    {
+      "local_path": "north-star/prototype/tools/verify.py",
+      "size_bytes": 7514,
+      "sha256": "a44d2634be817f07eba6a91635183d1405065e4d4f495d2322fe4ae04a75165f"
+    },
+    {
+      "local_path": "north-star/prototype/tools/verify_sound.py",
+      "size_bytes": 6087,
+      "sha256": "eddf1b3d2b7615ae4a91255d98da05528daeaff34d5e356521cbc3a3a55abde1"
+    }
+  ],
+  "result_artifacts": [
+    {
+      "local_path": "evidence/north-star-sound/baseline-guardian-block.wav",
+      "size_bytes": 311340,
+      "sha256": "4a13ee08b16fd4053862b50fdbf6fa31a4c9ef277f757d670dbdbb2e4e21c831"
+    },
+    {
+      "local_path": "evidence/north-star-sound/capture.json",
+      "size_bytes": 8660,
+      "sha256": "31fd56d6b106269350973a71ed9e34b58182fc2639204f1a7422231e022bab6e"
+    },
+    {
+      "local_path": "evidence/north-star-sound/counter-contact.wav",
+      "size_bytes": 131116,
+      "sha256": "0b178d242c04084851cc60dcf244a2e5f19f085ac9c61879171591600b4c4586"
+    },
+    {
+      "local_path": "evidence/north-star-sound/crossing-lost.wav",
+      "size_bytes": 131116,
+      "sha256": "3c0c6b08a392f6498c8eb38d04820761405f5b80946a7af48a1c894cdfd07ae5"
+    },
+    {
+      "local_path": "evidence/north-star-sound/crossing-won.wav",
+      "size_bytes": 131116,
+      "sha256": "ff9ee4672ab06be8f28b410ffc1091cfe7ba44bbac3395dee678d02baac2f00d"
+    },
+    {
+      "local_path": "evidence/north-star-sound/cue-block.wav",
+      "size_bytes": 12392,
+      "sha256": "4564555ba29f88900bf1fec664038a3a1e00fa4d8399be375c05284e605d6a4e"
+    },
+    {
+      "local_path": "evidence/north-star-sound/cue-bolt.wav",
+      "size_bytes": 13274,
+      "sha256": "91ac69c75b8a6ab721d982fbb7a627e1e562d88da7037929b0711c81f0abe0a3"
+    },
+    {
+      "local_path": "evidence/north-star-sound/cue-counter.wav",
+      "size_bytes": 7100,
+      "sha256": "33612fa9f4e0588e03451004a4b3de9df54a95de5530a0a1d3f787d243ae4c7b"
+    },
+    {
+      "local_path": "evidence/north-star-sound/cue-draw.wav",
+      "size_bytes": 10628,
+      "sha256": "4931e62a9d114907fbed727d885f718e7483a2a8b27bae5b4e3bafa09b2c1bbf"
+    },
+    {
+      "local_path": "evidence/north-star-sound/cue-hurt.wav",
+      "size_bytes": 10628,
+      "sha256": "9b772d2e998b549576ddb198c74ef4de80a9f1b7f41f017c64cafe9df4aa1835"
+    },
+    {
+      "local_path": "evidence/north-star-sound/cue-lost.wav",
+      "size_bytes": 24740,
+      "sha256": "c8622d0f6209f7ef73eb7b7fcabd1c4c3d31413ed187790fcc0a0012e47d070b"
+    },
+    {
+      "local_path": "evidence/north-star-sound/cue-pulse.wav",
+      "size_bytes": 16802,
+      "sha256": "ce190b2a6676fea6477ecebcf74216d3ec48e6a8e4dc59116ae595fbdfbf7284"
+    },
+    {
+      "local_path": "evidence/north-star-sound/cue-won.wav",
+      "size_bytes": 26504,
+      "sha256": "0afce8c5a1178a4f25518d272a6931974e9d68d761319226464ff5dc60c85cd9"
+    },
+    {
+      "local_path": "evidence/north-star-sound/duelist-draw.wav",
+      "size_bytes": 327724,
+      "sha256": "855c0146957a5a62838510772768137e0b921f1fd01e500f49a42101bcf68292"
+    },
+    {
+      "local_path": "evidence/north-star-sound/duelist-review.png",
+      "size_bytes": 82407,
+      "sha256": "2e8156d1c1e1bf3d2dd164824e4d4f3919f24f0eed58add5371b630543bfdb58"
+    },
+    {
+      "local_path": "evidence/north-star-sound/guardian-block.wav",
+      "size_bytes": 327724,
+      "sha256": "2e230969f13e5fe414b203e6653dc0e7bc64b3ed4e7e0792af1d5f2223428e0a"
+    },
+    {
+      "local_path": "evidence/north-star-sound/guardian-review.png",
+      "size_bytes": 83461,
+      "sha256": "de7ce43d3dfa64abe6cd2ac529f4f2df2d20a60bcc40e1063870f1d79259d7b4"
+    },
+    {
+      "local_path": "evidence/north-star-sound/guardian-warning.png",
+      "size_bytes": 59978,
+      "sha256": "d520c2d0592047660c166c0af3d2a7443fbaa219c81c01d0de52741af596a237"
+    },
+    {
+      "local_path": "evidence/north-star-sound/media.json",
+      "size_bytes": 34470,
+      "sha256": "4964c99782e297359ae3791095d84f36fab0c1e3539479ddbeec3feba89e159d"
+    },
+    {
+      "local_path": "evidence/north-star-sound/muted-block.wav",
+      "size_bytes": 294956,
+      "sha256": "e481d4452ea637744101756206f231ce31ecbd32e005d27d4574d862d845c966"
+    },
+    {
+      "local_path": "evidence/north-star-sound/paused-silence.wav",
+      "size_bytes": 196652,
+      "sha256": "c0e30e4da7c5b1887ed666dd7772696682bd31eb55c9dd081539de579ed0d38a"
+    },
+    {
+      "local_path": "evidence/north-star-sound/pulse-avoided.wav",
+      "size_bytes": 311340,
+      "sha256": "9a7e11b8fd6791ccf2fb72350c4d7349006ef84d55df54c7807d901f2c56a8fb"
+    },
+    {
+      "local_path": "evidence/north-star-sound/pulse-damage.wav",
+      "size_bytes": 131116,
+      "sha256": "f503de439452c3f84aacabad566edeb566cfaf13a245055d6e0a89cc85ae3183"
+    },
+    {
+      "local_path": "evidence/north-star-sound/pulse-warning.png",
+      "size_bytes": 63490,
+      "sha256": "0d2049d5138c2f7390e9c412f2aa2ffffc52adcff9dcc0626fd0e6c769cada5b"
+    },
+    {
+      "local_path": "evidence/north-star-sound/results.json",
+      "size_bytes": 60218,
+      "sha256": "085b89b617e1cea98b087be8c894fdadac033c5bce57de82a225e90ed00ce74b"
+    },
+    {
+      "local_path": "evidence/north-star-sound/sound-off.png",
+      "size_bytes": 107201,
+      "sha256": "53c33df69a0f3abaefaa2745d7967055c363afaa131c5da786f1cc8d2930fe4d"
+    },
+    {
+      "local_path": "evidence/north-star-sound/title-silence.wav",
+      "size_bytes": 131116,
+      "sha256": "f32249829e6669e6212fe4bfa666495e0ea778e8e0811c54aa774af6e627bce4"
+    }
+  ],
+  "brain_activation": {
+    "domains": {
+      "engineering": "high",
+      "scientific": "high",
+      "creative": "high"
+    },
+    "method": "Read all three indices and current state; selectively searched audio/combat and retrieved complete chapters; consulted combat-response and source P08/P06 sound implementation/provenance.",
+    "chapters": {
+      "ENG-005": "Observer states, event ownership and causal boundaries.",
+      "ENG-023": "Mechanism correctness and creative experience need different evidence.",
+      "SCI-064": "Signal/file/mixer integrity does not establish perceptual quality.",
+      "CRE-001": "Direct author character identity through understandable actions.",
+      "CRE-067": "Hypothesis: class signature through gesture/timbre, not adopted class canon.",
+      "CRE-073": "Hypothesis: meaningful optional auditory information, visual alternatives and bounded voices."
+    }
+  },
+  "alternatives": [
+    "Build variation: central product value, but no inspected specific build weakness justifies adding a class taxonomy before improving current action feedback.",
+    "Another encounter: credible content expansion; would leave current role feedback silent and broaden threat scope.",
+    "Hold/toggle input modes: potential usability value, but change commitment semantics and need separate evaluation.",
+    "Selected original threat/response production, with no music bed or repeated footsteps to compete with warnings.",
+    "Unrelated laboratory/extraction: lower priority than the actual consumer."
+  ],
+  "production_design": {
+    "intent": "Bright three-tap rising bolt versus low rough falling pulse pair; resonant Guardian block versus airy Duelist draw, dry counter, low damage and rising/falling terminal cadences.",
+    "implementation": "Deterministic PCM16 mono/22050Hz, 8ms attacks and bounded release envelopes, two -6dB players: threat and response. No Master mutation, random sample dependency, imported media, remote service or spatial localization claim.",
+    "control": "F1/F5 toggles sound immediately for session only; existing visual warnings remain. Muted history is consumed, not queued. Pausing/focus/settings/model replacement stop active voices; new attempts are seeded before stepping.",
+    "creative_assessment": "Agent inspection verifies readable actual mute/phase presentation and signal properties supporting intended register/rhythm/timbre differences. Critical physical listening, recognition, comfort and preference are unverified; distinct bytes do not prove perceptual distinctness."
+  },
+  "before_after": {
+    "baseline_checks": 179,
+    "final_checks": 208,
+    "original_observations_exactly_unchanged": [
+      "outcomes",
+      "rehearsals",
+      "keepsakes",
+      "errands",
+      "controls",
+      "continuity",
+      "control_continuity"
+    ],
+    "baseline_pcm": "All four same-instrument historical-PCK captures have digital peak0/RMS0; inspect baseline-guardian-block.wav.",
+    "current_pcm": {
+      "baseline": {
+        "duelist-draw": {
+          "peak": 0,
+          "rms": 0.0
+        },
+        "guardian-block": {
+          "peak": 0,
+          "rms": 0.0
+        },
+        "pulse-avoided": {
+          "peak": 0,
+          "rms": 0.0
+        },
+        "title-silence": {
+          "peak": 0,
+          "rms": 0.0
+        }
+      },
+      "pack": {
+        "counter-contact": {
+          "peak": 4950,
+          "rms": 398.315
+        },
+        "crossing-lost": {
+          "peak": 4771,
+          "rms": 1234.53
+        },
+        "crossing-won": {
+          "peak": 4781,
+          "rms": 1208.023
+        },
+        "duelist-draw": {
+          "peak": 3933,
+          "rms": 451.396
+        },
+        "guardian-block": {
+          "peak": 5572,
+          "rms": 543.853
+        },
+        "muted-block": {
+          "peak": 0,
+          "rms": 0.0
+        },
+        "paused-silence": {
+          "peak": 0,
+          "rms": 0.0
+        },
+        "pulse-avoided": {
+          "peak": 4882,
+          "rms": 457.535
+        },
+        "pulse-damage": {
+          "peak": 4672,
+          "rms": 497.528
+        },
+        "title-silence": {
+          "peak": 0,
+          "rms": 0.0
+        }
+      },
+      "source": {
+        "counter-contact": {
+          "peak": 4950,
+          "rms": 398.315
+        },
+        "crossing-lost": {
+          "peak": 4771,
+          "rms": 1234.53
+        },
+        "crossing-won": {
+          "peak": 4781,
+          "rms": 1281.302
+        },
+        "duelist-draw": {
+          "peak": 3933,
+          "rms": 439.356
+        },
+        "guardian-block": {
+          "peak": 5572,
+          "rms": 529.348
+        },
+        "muted-block": {
+          "peak": 0,
+          "rms": 0.0
+        },
+        "paused-silence": {
+          "peak": 0,
+          "rms": 0.0
+        },
+        "pulse-avoided": {
+          "peak": 4882,
+          "rms": 434.056
+        },
+        "pulse-damage": {
+          "peak": 4672,
+          "rms": 497.528
+        },
+        "title-silence": {
+          "peak": 0,
+          "rms": 0.0
+        }
+      }
+    },
+    "restart": "Existing sixteen independent keepsake/control continuity operations retained; no new persistent audio preference."
+  },
+  "execution_protocol": [
+    "Run source and delivered PCK with tests/sound_capture.gd through real Dummy AudioServer; initial title is silent.",
+    "Prepared Guardian exercise, actual held K/right-facing input: bolt tick0 and accepted block tick60, with preserved player/courier health.",
+    "Prepared Duelist exercise, actual K then held W: bolt then accepted draw; prepared floor exercise emits the low pulse warning while walking clear.",
+    "Actual F1/F5 mutes; same accepted block produces no output. Pausing midwarning stops it; after draining old audio blocks the paused capture is digital silence.",
+    "Prepared normal consumer verifies reachable counter, damaging pulse, gate victory and terminal defeat; model outcomes own cues, and terminal cadence takes response priority.",
+    "Export exact runtime-synthesis WAVs; verify their PCM hashes against native metadata. Adverse private copies test silent warning, mute leakage, wrong ownership, changed synthesis and false baseline.",
+    "Historical baseline PCK is from git show at446ecd4, not reconstructed current code. Capture script runs externally against it.",
+    "Rendered process uses prepared exercises/synthetic InputEventKey commands and bounded Xorg/Godot with cleanup; not full-route OS-key navigation or a participant."
+  ],
+  "failures_and_refinements": [
+    "First native build used unsupported Dictionary.fromkeys in the new test helper; replace with an ordinary key set. Interrupted the owned failed application and bounded subsequent direct runs.",
+    "A guard test fixture initially crossed impact before the existing60ms startup; correct the test timing, not Combat rules.",
+    "Observer attachment could turn past events into present feedback. Consume old history on attachment, seed new attempts explicitly, retain a late-attachment negative control.",
+    "Accelerated synthetic terminal cue churn exposed shutdown AudioStreamPlaybackWAV references. Explicit stop/stream cleanup and a bounded0.8s mixer retirement interval remove the final native exit warning. Rendered capture closes cleanly.",
+    "Same-directory signal capture timing varies with mixer buffers; compare deterministic model/cue ownership and actual signal bounds, not whole runtime WAV equality.",
+    "Xorg llvmpipe cannot change V-Sync; rendering/capture succeeds. No product workaround or hardware timing claim."
+  ],
+  "continuity": {
+    "north_star": "One actual local_prototype consumer, seven code paths, fourteen capabilities. NS-C03 stays adapted; NS-C07 bounded semantic sound method becomes adapted with code and source/PCK mixer execution. Twelve other states unchanged. No shared-kernel or production-MMORPG integration.",
+    "knowledge": "Appended temporal event ownership and signal-versus-perception limits to existing combat-response finding; no new laboratory.",
+    "portfolio": "Reactive procedural audio and inspection WAVs in the actual destination; AUD-006 identifies direct destination code, not a relabeled origin master.",
+    "origins": "P01-P05/P07/P08/P10/P11 preserved_pending_extraction; P06 pilot_instrumented; P09 seed_only. All original code/media/tests/consumers preserved; no extraction or migration promotion.",
+    "prompt": "Unchanged. Existing three-brain activation, primary production mode, real consumer priority and matched evidence boundaries served this increment. Repeated ad-hoc mixer diagnosis cost time; the maintained capture/adverse-check tool now makes future validation direct without adding another lab or prompt rule."
+  },
+  "limitations": [
+    "Actual software AudioServer capture is not physical speaker/headphone listening, device latency, human recognition, preference, learning, fun or accessibility validation.",
+    "Short procedural mono cues, no ambient score, voice, spatial audio, production class signatures, final engine selection, exclusive rights or commercial clearance.",
+    "Prepared exercises and short normal-consumer setups are not full-route OS-key navigation; existing deterministic full routes remain separate evidence.",
+    "Session-only mute is intentionally not a new profile/account/sync contract. Combat, errand, cosmetic and input-profile semantics are preserved.",
+    "No multiplayer, MMORPG scale, market/retention evidence, source-brain edits or historical universe/canon merger."
+  ],
+  "repository_validation": "106 Python regressions passed:17 brain,27 repository,42 references,11 manifest,3 native wrapper,6 media-evidence. Source/brain/reference/link gates passed; exact manifest check follows final content. Publication/CI separate."
+}

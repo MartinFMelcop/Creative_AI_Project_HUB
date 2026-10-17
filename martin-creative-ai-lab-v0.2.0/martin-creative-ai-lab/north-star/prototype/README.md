@@ -1,7 +1,7 @@
 # Crossing Drill — local character prototype
 
 The first executable **Virgo Diamond** destination consumer: a short original courier
-crossing with two experimental approaches. This is a local DEVELOPMENT increment,
+crossing with two experimental approaches. The current increment is local CREATIVE PRODUCTION,
 not a production MMORPG, final class system or final engine selection. See the
 [living design record](../DESIGN.md) for author direction, experimental decisions,
 revisions and rejected alternatives.
@@ -78,6 +78,40 @@ Writes use same-directory temporary/readback/rename; no power-loss durability,
 concurrent-writer, synchronization or universal accessibility guarantee is claimed.
 
 ![Applied controls and matching live hint](../../evidence/north-star-controls/keyboard-applied.png)
+
+## Sound and silence
+
+Eight original, short mono PCM cues are synthesized locally by `sound.gd`; no samples,
+voice, music bed or remote generation are required. Three rising high taps announce
+a locked bolt; a low rough pair announces a floor pulse. A resonant contact confirms
+an actual Guardian block; an airy sweep confirms an accepted Duelist draw. A dry
+contact marks a reachable counter, a low thud marks damage, and distinct cadences
+follow actual victory/defeat. These are experimental signatures, not final class art.
+
+Open **F1**, then **F5** to toggle sound immediately. This is a session setting,
+independent of the keyboard draft/save; F5 elsewhere still retries keepsake saving.
+All information remains visible. No direction, location, invulnerability or successful
+defense should be inferred from sound alone. Only one threat and one response voice
+can overlap; terminal feedback replaces the response. Pausing, focus loss, settings
+and model replacement stop old voices. Unmute/resume do not replay historical events.
+
+Production uses deterministic mono PCM16 at 22,050 Hz, soft attacks/releases and -6 dB
+player gain. It does not change Master or another consumer's buses. This provides
+bounded software headroom, not measured physical loudness, latency, spatial audio or
+accessibility certification. Inspect [actual Guardian mixer output](../../evidence/north-star-sound/guardian-block.wav)
+and [Duelist output](../../evidence/north-star-sound/duelist-draw.wav).
+
+```bash
+python3 north-star/prototype/tools/test_verify_sound.py
+python3 north-star/prototype/tools/verify_sound.py --output /tmp/crossing-sound.json
+```
+
+The second command executes prepared exercises in source and delivered PCK, records
+AudioServer output, and rejects missing/silent expected signals, mute/pause leakage,
+wrong ownership or changed cue PCM. Captured buffer lengths may vary; deterministic
+model/cue observations must agree. `--baseline-pack /path/to/previous.pck` additionally
+executes the prior silent consumer with the same external capture instrument.
+Physical speaker/headphone listening, recognition and enjoyment remain unverified.
 
 ## Optional rehearsal
 
@@ -163,7 +197,7 @@ or MMORPG persistence.
 ## Execute checks and reproduce delivery
 
 ```bash
-python3 north-star/prototype/tools/verify.py --godot godot --output /tmp/crossing-check.json --compare evidence/north-star-controls/results.json
+python3 north-star/prototype/tools/verify.py --godot godot --output /tmp/crossing-check.json --compare evidence/north-star-sound/results.json
 ```
 
 The stdlib runner bounds owned engine processes, uses writable temporary XDG paths,
@@ -171,7 +205,7 @@ loads the source project, executes positive/negative controls, both rehearsal se
 and two complete repeatable crossing policies, plus keepsake eligibility and local
 profile controls, then executes the **delivered PCK** and requires exact source/PCK
 outcomes.
-The current suite has 179 native controls, including full direct/recovery routes for
+The current suite has 208 native controls, including full direct/recovery routes for
 both approaches. Eight further engine invocations (earn,
 read, put away, read for each source/PCK) demonstrate actual process reentry with
 the same local profile. Eight additional apply/read/restore/read processes verify the separate keyboard profile
@@ -187,7 +221,7 @@ The source pack is reproducible with the matching engine:
 godot --headless --path north-star/prototype --script tools/pack.gd -- /absolute/path/crossing-drill.pck
 ```
 
-[Current execution evidence](../../evidence/north-star-controls/RUN.json) identifies
+[Current execution evidence](../../evidence/north-star-sound/RUN.json) identifies
 baseline, source/result hashes, commands, refinements and limitations. The preserved
 [first-consumer record](../../evidence/north-star-crossing/RUN.json) documents the
 original crossing delivery; the [rehearsal record](../../evidence/north-star-rehearsal/RUN.json)

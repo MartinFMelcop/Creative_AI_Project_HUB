@@ -11,7 +11,7 @@ records behind the demonstrations.
 product: an original MMORPG in which character identity becomes visible through
 choices, builds, classes, professions and achievements. Its current stage is
 `local_prototype`: one playable destination consumer, 14 cataloged capabilities and
-NS-C03 adapted. Godot is the prototype tool; the production engine remains undecided.
+NS-C03/NS-C07 adapted. Godot is the prototype tool; the production engine remains undecided.
 The portfolio makes existing technology inspectable while applied laboratories
 investigate what can actually serve that experience.
 
@@ -30,9 +30,11 @@ interaction takes time and prevents combat actions; the courier and threats keep
 The two choices have distinct inspectable outcomes. Optional rehearsal, causal review,
 OPEN range/time and earned cosmetic keepsakes remain available. F1 now remaps all twelve
 gameplay keys with explicit apply/discard, matching hints and recoverable local preferences.
+The previously silent encounter now has distinct threat and character-response cues,
+with optional mute and retained visual warnings.
 
 The editable Godot project and small engine-dependent PCK execute the same consumer.
-[Native/rendered evidence](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/evidence/north-star-controls/RUN.json)
+[Native/rendered evidence](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/evidence/north-star-sound/RUN.json)
 and the [living design record](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/DESIGN.md)
 separate fixed-policy feasibility and agent visual assessment from still-missing human
 understanding, identity and enjoyment evidence.

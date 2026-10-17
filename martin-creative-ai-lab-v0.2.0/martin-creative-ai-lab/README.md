@@ -12,7 +12,7 @@ merits. The outer `martin-creative-ai-lab-v0.2.0/` name is historical packaging;
 
 Play the [North Star crossing prototype](north-star/prototype/README.md), or
 inspect its [living design](north-star/DESIGN.md) and
-[executed evidence](evidence/north-star-controls/RUN.json). Origin demonstrations and
+[executed evidence](evidence/north-star-sound/RUN.json). Origin demonstrations and
 the preserved lab remain distinct from this actual local consumer. Optional rehearsal
 uses its real rules with retained contact explanations and clean retries. Normal
 completion with an approach-specific response earns an optional visible keepsake;
@@ -32,7 +32,7 @@ explicit draft/apply/discard/default restoration; settings remain device-local.
 | Trace preservation, dependencies, consumers and extraction work for P01–P11 | [Origin transition inventory](labs/origins.json); other laboratory destinations remain candidates |
 | Consult engineering, scientific or creative knowledge | [Three-brain library](brains/README.md): protected source volumes, catalog and deterministic local query |
 | Review lessons produced by execution | [Derived knowledge](knowledge/README.md): observations, interpretation, validity and consequences |
-| Understand the principal product and transfer gates | [North Star](north-star/README.md) and [capabilities](north-star/capabilities.json): `local_prototype`, one playable consumer; NS-C03 adapted among 14 capabilities |
+| Understand the principal product and transfer gates | [North Star](north-star/README.md) and [capabilities](north-star/capabilities.json): `local_prototype`, one playable consumer; NS-C03/NS-C07 adapted among 14 capabilities |
 | Browse immutable historical creative/technical sources | [Reference library](references/README.md) and [availability catalog](references/catalog.json) |
 | Continue implementation | [State](docs/STATE.md), [agents](AGENTS.md), [SEED](SEED.md), [decisions](docs/DECISIONS.md) and [complete operational prompt](docs/prompts/CONTINUOUS_DEVELOPMENT.md) |
 

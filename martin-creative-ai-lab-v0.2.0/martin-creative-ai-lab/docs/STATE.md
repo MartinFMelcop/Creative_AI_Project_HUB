@@ -1,57 +1,56 @@
 # Lab state
 
-**Updated:** 2026-10-17 UTC. **SEED:** 0.33.5.
-**Primary mode:** DEVELOPMENT. **Priority:** category 1, existing executable consumer.
-Baseline local/fetched main `3b1eafc1d76d0c7f596af4e7ed55a52ba1781abe`;
+**Updated:** 2026-10-17 UTC. **SEED:** 0.33.6.
+**Primary mode:** CREATIVE PRODUCTION. **Priority:** category 1, existing consumer.
+Baseline local/fetched main `446ecd46b7750efc9a7a8b780d3fd75566f5b9ed`;
 tracked tree clean, unrelated untracked work/ preserved. Branch
-`codex/north-star-controls-20261017`; authenticated Git transport available.
+`codex/north-star-sound-20261017`; authenticated Git publication available.
 
 ## Observable product change
 
-[Crossing Drill](../north-star/prototype/README.md) now lets a desktop player remap
-all twelve gameplay keyboard actions through F1. Drafts do not alter active controls;
-conflicts identify the owner, S applies/saves, Esc discards unapplied edits, and Delete
-restores defaults in a cancellable draft. Gameplay hints match the applied map. Opening
-freezes live crossing/rehearsal, closing never resumes, and held keys require release.
-A separate editable local profile survives process restart; invalid bytes are preserved,
-save failures leave session controls usable, and explicit retry works after repair.
+[Crossing Drill](../north-star/prototype/README.md) was silent. It now consumes eight
+original procedural cues: distinct bolt/floor warnings, block/draw signatures,
+counter/damage and terminal cadences. Sound follows actual accepted events, not button
+presses. F1/F5 toggles session mute; fixed F5 outside settings keeps its save-retry role.
+Visual geometry/text remain sufficient. Pause, focus loss, settings and model replacement
+stop voices; unmute/resume do not replay history. Only two voices can overlap.
 
-The original movement costs, role differences, medicine commitment, rehearsal results
-and keepsake contracts remain intact. Stage remains **local_prototype**, one consumer
-with six code paths, fourteen capabilities, **NS-C03 adapted** and thirteen unchanged
-states. Godot4.6.3 remains a prototype tool, not a production MMO engine decision.
+Combat, rehearsal, medicine, keepsakes and keyboard-profile contracts remain intact.
+Stage remains **local_prototype**, one consumer/seven code paths, fourteen capabilities,
+**NS-C03 and bounded NS-C07 adapted**, twelve states unchanged. This is not shared-kernel,
+production MMORPG, physical audio or final engine validation. No new lab or class canon.
 
-## Execution and assessment
+## Execution and creative assessment
 
-[Execution](../evidence/north-star-controls/RUN.json) binds source/PCK identities,
-baseline, environment, commands and limits. **179 native checks pass** with exact
-source/PCK observations and sixteen fresh-process continuity operations. Actual OS
-keyboard input verifies conflict, apply, H guard instead of K, reloaded F interaction
-instead of E, blocked-save preservation and retry. The interaction scene is a prepared
-fixture, not unassisted full-route navigation. Inspected panel screenshots show clear
-selection, save status and matching hints. No independent human usability/accessibility,
-physical audio/controller, multiplayer, enjoyment, scale or commercial evidence.
+[Execution](../evidence/north-star-sound/RUN.json) binds source/PCK, baseline, actual
+commands and output. 208 native checks pass with exact observations and sixteen restart
+processes. Existing gameplay groups match baseline exactly. AudioServer captures both
+source/PCK, the historical silent PCK, accepted responses and normal consequences;
+title/mute/pause controls are digitally silent. Eight PCM exports match runtime synthesis.
+Six adverse evidence checks reject silence, leakage, wrong ownership and changed PCM.
+Prepared exercises/counter/damage/endings are explicit setups, not independent players
+or full-route OS-key navigation. Owned applications/preview processes are bounded.
 
-Initial persistence failed on a dictionary field/method collision, then JSON float/int
-identity; strict normalization corrected both before accepted execution. Native X11
-input exposed a panel arrow-identity fault missed by same-code synthetic events; logical
-arrows now drive navigation and a differing-code regression protects it. These failures
-were corrected without weakening gates or changing Combat rules.
+The intended register/rhythm contrast and role signatures are inspectable in actual WAV
+output, and the cue legend/mute presentation is visually inspected. No physical headphone/
+speaker listening, player recognition, mix comfort, learning, accessibility, enjoyment,
+latency, multiplayer, scale or commercial evidence is claimed. Signal correctness is not
+creative validation. Attaching to an old model initially risked replay; cursor ownership
+now rejects it. A guard fixture expected contact before the real 60ms startup and was
+corrected. Accelerated tests wait for stopped playback retirement before process exit.
 
-## Selection, portfolio, knowledge and migration
+## Selection, knowledge, portfolio and migration
 
-Compared another encounter fork, audiovisual identity, configurable controls and
-hold/toggle modes. The concrete hardcoded-key barrier in the real consumer outranks
-unspecified encounter expansion; toggles need separate commitment evaluation. All brain
-domains high: **ENG-022**, **SCI-061**, **CRE-001/075/081** inform human factors,
-validation limits, direct author agency, contextual feedback and remapping direction.
-Brain bytes/pins and historical sources remain unchanged.
+Compared build variation, another encounter, hold/toggle controls and the observed
+silent action loop. Selected sound production improves current choices without new
+infrastructure. ENG-005/023, SCI-064 and CRE-001/067/073 guide event invariants, experience
+limits, direct author identity and candidate signatures. All domains high. Brain bytes,
+pins and historical references remain unchanged.
 
-Existing [combat knowledge](../knowledge/combat-response.md) gains a contextual finding;
-no new lab is created. Portfolio presentation demonstrates actual device-local user
-control and recovery, retaining all origin technologies. P01–P05/P07/P08/P10/P11 remain
-preserved_pending_extraction, P06 pilot_instrumented, P09 seed_only. All source, media,
-distributions and tests are preserved; no origin migration or integration is promoted.
-The single complete operational prompt remains unchanged: current guidance served the
-increment, including selective activation and real input verification. Publication and
-CI are verified separately at closeout.
+Existing combat-response knowledge gains a temporal-ownership/mixer finding. The portfolio
+now demonstrates reactive procedural audio in a real destination, with AUD-006 naming its
+actual code consumer; no old audio asset is relabeled as imported. P01–P05/P07/P08/P10/P11
+remain preserved_pending_extraction, P06 pilot_instrumented, P09 seed_only. All origins,
+media, existing consumers and tests are preserved; no extraction completed by renaming.
+The single operational prompt remains unchanged because present production, selective
+activation and evidence guidance served the increment. Publication/CI verified separately.

@@ -10,7 +10,8 @@
     "north-star/prototype/rehearsal.gd",
     "north-star/prototype/keepsakes.gd",
     "north-star/prototype/errand.gd",
-    "north-star/prototype/controls.gd"
+    "north-star/prototype/controls.gd",
+    "north-star/prototype/sound.gd"
   ],
   "contribution_model": {
     "candidate": "Identified hypothesis; no transfer proof.",
@@ -19,7 +20,7 @@
     "integrated_into_north_star": "A genuine North Star consumer uses the capability with destination verification.",
     "externally_validated": "Relevant destination behavior/experience has independent evaluation; specify what and by whom."
   },
-  "evidence_boundary": "One local executable character consumer exists. NS-C03 is adapted into the prototype, not imported as a shared kernel or production MMORPG integration. Thirteen other contribution states retain origin/candidate scope. Native checks and Codex visual review are not independent human validation; final engine remains undecided.",
+  "evidence_boundary": "One local executable character consumer exists. NS-C03 combat and NS-C07 bounded sound methods are adapted into the prototype, not shared-kernel imports or production MMORPG integration. Twelve other states retain origin/candidate scope. Native/mixer checks and agent review are not independent human validation; final engine remains undecided.",
   "capabilities": [
     {
       "id": "NS-C01",
@@ -83,10 +84,11 @@
         "north-star/prototype/rehearsal.gd",
         "north-star/prototype/keepsakes.gd",
         "north-star/prototype/errand.gd",
-        "north-star/prototype/controls.gd"
+        "north-star/prototype/controls.gd",
+        "north-star/prototype/sound.gd"
       ],
       "destination_scope": "The local crossing consumes a finite-resource directional interception/redirection model informed by P06. Optional isolated rehearsal uses that same model, gates advancement on actual responses, freezes causal review and starts a clean crossing. This remains method adaptation, not shared-code import or human learning validation. Earned optional cosmetic marks now carry a completed signature response into later local crossings; source/PCK restart and recovery controls verify only editable device-local continuity, not RPG-domain/account or server integration. The same encounter now consumes an optional spatial recovery/handoff with held commitment while courier/threats continue; both direct/recovery routes execute. This original session quest does not import P10 dialogue code or promote its origin capability. The same destination now consumes twelve configurable keyboard actions with matching gameplay hints, cancellable drafts and recoverable local preference persistence. This establishes adapter execution, not independent accessibility validation or an NS-C13 promotion.",
-      "destination_evidence": "evidence/north-star-controls/RUN.json"
+      "destination_evidence": "evidence/north-star-sound/RUN.json"
     },
     {
       "id": "NS-C04",
@@ -157,7 +159,7 @@
         "P08"
       ],
       "reference_collections": [],
-      "contribution_status": "verified_in_origin",
+      "contribution_status": "adapted",
       "origin_validation": "execution_record_inspected",
       "scope": "Real timing/calibration/rehearsal workflow, rendered original audio, original-pitch tempo derivatives and native phase-responsive mixing.",
       "origin_evidence": [
@@ -165,9 +167,15 @@
         "evidence/veil-arena/PRESENTATION_RUN.json",
         "projects/tokyo80s/media/rehearsal-provenance.json"
       ],
-      "applicability_hypothesis": "Research whether rhythm timing and adaptive sound serves a bounded North Star experiment; no consumer or reusable contract exists yet.",
+      "applicability_hypothesis": "Event-driven warning and role-response cues now execute in the local destination; recognition, mix comfort and physical timing remain hypotheses.",
       "limits": "Scripted signal/clock samples and bounded mixer execution, not physical listening, universal timbre/latency, player learning or multiplayer synchronization.",
-      "next_validation": "Measure input/audio timing on physical output and evaluate one native environmental cue/music transition before reuse."
+      "next_validation": "Evaluate warning/response recognition and mix comfort with relevant people and physical devices; measure end-to-end latency before claims about real output timing.",
+      "destination_consumer_paths": [
+        "north-star/prototype/arena.gd",
+        "north-star/prototype/sound.gd"
+      ],
+      "destination_scope": "New deterministic procedural mono cues adapt the P08/P06 semantic-event, bounded-voice and mute/pause method in the actual crossing and rehearsal. Source/PCK AudioServer capture verifies warnings and consequences, including actual block/draw, counter/damage and terminal outcomes. No old cue/music file or sound kernel is imported. Rhythm calibration, tempo derivatives and MMO/spatial mixing are not transferred.",
+      "destination_evidence": "evidence/north-star-sound/RUN.json"
     },
     {
       "id": "NS-C08",

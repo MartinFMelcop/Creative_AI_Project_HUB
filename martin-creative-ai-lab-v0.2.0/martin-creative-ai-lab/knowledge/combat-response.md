@@ -135,3 +135,20 @@ medicine positions; no disability cohort, ergonomic preference or comprehension 
 **Consequence:** keep management recovery reachable, drafts explicit, hints tied to the
 applied map, and ability semantics independent of key selection. Hold/toggle alternatives
 remain unresolved rather than implied accessible by remapping alone.
+
+## Event sound needs temporal ownership, not historical replay
+
+**Question/context:** Baseline `446ecd4` is silent despite actual defense and draw
+choices. **Source:** [sound execution](../evidence/north-star-sound/RUN.json), original
+P08/P06 bounded-cue method, ENG-005/023, SCI-064, CRE-001/067/073.
+**Observation:** source/PCK produce distinct warning/response PCM through AudioServer;
+historical PCK is silent in the same prepared exercises. Mute/pause probes are digitally
+silent, accepted block/draw/counter and terminal events own their feedback. Attaching
+to an advanced model initially replayed history; consuming its cursor and seeding new
+attempts prevents it. A live guard still needs the original 60ms, regardless of sound.
+**Interpretation/consequence:** observer attachment, pause, unmute and model replacement
+are causal boundaries; do not turn a retrospective event log into present feedback.
+Two bounded voices and silence leave warnings room without an unrelated music system.
+**Validity:** software mixer output and signal properties, not physical listening,
+recognition, comfort, accessibility or enjoyment. Mixer sample counts vary across runs;
+compare deterministic event ownership and signal bounds, not whole capture hashes.

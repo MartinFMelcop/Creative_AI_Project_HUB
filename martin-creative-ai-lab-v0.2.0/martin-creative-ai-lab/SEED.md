@@ -1,6 +1,6 @@
 # SEED — Martin Creative AI Lab
 
-**Version:** 0.33.5
+**Version:** 0.33.6
 **Data-base:** 10 de outubro de 2026  
 **Autor e responsável pelo portfólio:** Martin Melcop Neto  
 **Working language:** English for new technical documentation, plans, code comments and Git messages; respond in the requested language (Brazilian Portuguese for continuous closeout). Preserve appropriate creative/source languages.
@@ -45,15 +45,15 @@ does not merge fictional universes. Source details below are historical provenan
 retained origin behavior; current operation is defined by this direction, AGENTS,
 STATE and the single [continuous prompt](docs/prompts/CONTINUOUS_DEVELOPMENT.md).
 
-### Current consumer increment — v0.33.5
+### Current consumer increment — v0.33.6
 
-The existing crossing now supports recoverable remapping of all twelve gameplay
-keyboard actions through F1, with explicit draft/apply/discard/default restoration,
-matching live hints and a separate editable device-local controls profile.
-[Execution](evidence/north-star-controls/RUN.json) distinguishes native source/PCK
-checks, process restarts and synthetic OS keyboard operation from human usability.
-Combat, rehearsal, medicine and keepsake rules remain intact. No new laboratory,
-origin migration promotion, final class decision or accessibility certification.
+The actual crossing/rehearsal now consumes eight original procedural sound cues:
+distinct bolt/floor warnings, block/draw signatures, counter/damage and terminal
+cadences. Visual warnings remain sufficient; F1/F5 silences sound for the session.
+[Execution](evidence/north-star-sound/RUN.json) separates source/PCK behavior and
+actual AudioServer output from still-unverified physical listening and recognition.
+No combat, quest or progression rules change. NS-C03 and the bounded NS-C07 sound
+method are adapted in one local consumer; twelve other capability states are unchanged.
 
 ### Navegação
 

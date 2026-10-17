@@ -14,7 +14,7 @@ explicit draft/apply/discard/default restoration; settings remain device-local.
 
 The catalog now records **local_prototype**: one executable
 [crossing encounter](prototype/README.md), five actual consumer code paths and fourteen
-capabilities. **NS-C03 is adapted** in this destination; the other thirteen contribution
+capabilities. **NS-C03 combat and NS-C07 sound are adapted** in this destination; the other twelve contribution
 states remain unchanged. Godot 4.6.3 is the prototype tool; no final MMO engine or
 running multiplayer service is selected. The earlier combat-response lab remains an
 origin instrument, separately preserved.
@@ -22,10 +22,10 @@ origin instrument, separately preserved.
 The player chooses frontal interception or redirection/mobility and protects the same
 courier to the far gate. [Living design](DESIGN.md) distinguishes author decisions,
 experimental mechanics, revisions and rejected alternatives. Current primary mode is
-DEVELOPMENT, priority category 1: improve this existing consumer. Optional rehearsal
+CREATIVE PRODUCTION, priority category 1: improve this existing consumer. Optional rehearsal
 uses the same combat rules, preserves causal review and starts a clean normal crossing.
 The three prepared exercises do not demonstrate human learning or sustained resource
-management. [Current execution](../evidence/north-star-controls/RUN.json) retains the
+management. [Current execution](../evidence/north-star-sound/RUN.json) retains the
 unchanged full-crossing outcomes alongside these controls. Completed normal crossings
 with a signature response can earn its approach’s mark, one of two experimental cosmetics. Explicit C selection
 is visible on the next crossing and restored after restart. Malformed/unknown profiles
@@ -50,6 +50,10 @@ authority or automatically shared fictional universes.
 - [Origin transitions](../labs/origins.json): all P01–P11 capabilities, dependencies,
   preservation risks and candidate research destinations.
 - [References](../references/README.md): historical bytes, rights and availability.
+
+The previously silent crossing now consumes short procedural threat/response cues.
+F1/F5 mutes them immediately for the session; visual warnings remain available.
+Actual software-mixer output is recorded, without physical listening or recognition claims.
 
 ## Evidence gates
 
