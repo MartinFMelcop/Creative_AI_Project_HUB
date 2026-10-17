@@ -1,8 +1,19 @@
-# Current assessment — first playable destination
+# Current assessment — rehearse and understand the existing consumer
 
-Selected a bounded character consumer after comparing actual P06 methods, P10 narrative, P01 economy and further lab instrumentation. Baseline has no executable destination; DEVELOPMENT closes missing playable capability. Read STATE, DESIGN and actual destination evidence before selecting the next consumer improvement.
+Baseline `88327a7` has a real executable crossing, but its result replaces the impact
+message it tells the player to review. A title introduces several controls before a
+one-second threat; OPEN lacks visible reach/time. DEVELOPMENT/category 1 improves
+this existing consumer through optional isolated responses and retained causal review.
 
-[Actual state](STATE.md) and [living design](../north-star/DESIGN.md) carry current evidence. Earlier assessments below are historical scopes.
+Compared deeper threat/adventure phases, remapping/input comfort and standalone audio/
+timing work. New content would compound the observed feedback gap; representative
+human/device evidence is still needed before broader learning/accessibility claims.
+All domains high: ENG-022 cognitive load/recovery, SCI-061 task execution versus human
+usability, CRE-004/075/081 immediately playable consequence, contextual HUD and practice.
+
+[State](STATE.md), [living design](../north-star/DESIGN.md) and
+[execution](../evidence/north-star-rehearsal/RUN.json) distinguish functional workflow,
+unchanged full-crossing outcomes, inspected presentation and missing human validation.
 
 # Previous assessment — three-brain Design-Driven operation
 

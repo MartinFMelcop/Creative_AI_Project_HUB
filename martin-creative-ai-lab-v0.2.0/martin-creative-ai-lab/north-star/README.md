@@ -10,7 +10,7 @@ without being eleven independently obligated products.
 ## Actual stage and creative authority
 
 The catalog now records **local_prototype**: one executable
-[crossing encounter](prototype/README.md), two actual consumer code paths and fourteen
+[crossing encounter](prototype/README.md), three actual consumer code paths and fourteen
 capabilities. **NS-C03 is adapted** in this destination; the other thirteen contribution
 states remain unchanged. Godot 4.6.3 is the prototype tool; no final MMO engine or
 running multiplayer service is selected. The earlier combat-response lab remains an
@@ -19,7 +19,11 @@ origin instrument, separately preserved.
 The player chooses frontal interception or redirection/mobility and protects the same
 courier to the far gate. [Living design](DESIGN.md) distinguishes author decisions,
 experimental mechanics, revisions and rejected alternatives. Current primary mode is
-DEVELOPMENT, priority category 2: baseline lacked an executable destination consumer.
+DEVELOPMENT, priority category 1: improve this existing consumer. Optional rehearsal
+uses the same combat rules, preserves causal review and starts a clean normal crossing.
+The three prepared exercises do not demonstrate human learning or sustained resource
+management. [Current execution](../evidence/north-star-rehearsal/RUN.json) retains the
+unchanged full-crossing outcomes alongside these new controls.
 Future selection should first inspect and improve this real consumer.
 
 The [Creative Brain](../brains/README.md) is the central creative knowledge base.

@@ -1,0 +1,350 @@
+{
+  "duelist": {
+    "cargo": 3,
+    "counters": {
+      "blocks": 0,
+      "counters": 0,
+      "courier_hits": 0,
+      "dodges": 0,
+      "player_hits": 0,
+      "redirects": 1,
+      "rejected": 0
+    },
+    "courier_x": 338.0,
+    "energy": 96.9,
+    "events": [
+      {
+        "cargo": 3,
+        "energy": 84.0,
+        "hp": 5,
+        "kind": "redirect",
+        "tick": 17
+      },
+      {
+        "cargo": 3,
+        "energy": 96.9,
+        "hp": 5,
+        "kind": "bolt_missed",
+        "tick": 60
+      }
+    ],
+    "hp": 5,
+    "last_impact": {
+      "code": "bolt_missed",
+      "explanation": "The locked bolt hit neither you nor the courier.",
+      "tip": "An OPEN window follows. Close the distance before a blade counter."
+    },
+    "mode": "paused",
+    "rehearsal": {
+      "active": true,
+      "attempts": 1,
+      "passed": true,
+      "paused": false,
+      "results": [
+        {
+          "attempt": 1,
+          "impact": {
+            "code": "bolt_missed",
+            "explanation": "The locked bolt hit neither you nor the courier.",
+            "tip": "An OPEN window follows. Close the distance before a blade counter."
+          },
+          "passed": true,
+          "snapshot": {
+            "cargo": 3,
+            "counters": {
+              "blocks": 0,
+              "counters": 0,
+              "courier_hits": 0,
+              "dodges": 0,
+              "player_hits": 0,
+              "redirects": 1,
+              "rejected": 0
+            },
+            "courier_x": 338.0,
+            "energy": 96.9,
+            "events": [
+              {
+                "cargo": 3,
+                "energy": 84.0,
+                "hp": 5,
+                "kind": "redirect",
+                "tick": 17
+              },
+              {
+                "cargo": 3,
+                "energy": 96.9,
+                "hp": 5,
+                "kind": "bolt_missed",
+                "tick": 60
+              }
+            ],
+            "hp": 5,
+            "mode": "paused",
+            "role": "Duelist",
+            "tick": 60
+          },
+          "stage": 0
+        }
+      ],
+      "stage": 0,
+      "state": "review"
+    },
+    "role": "Duelist",
+    "tick": 60
+  },
+  "fresh_crossing": {
+    "cargo": 3,
+    "counters": {
+      "blocks": 0,
+      "counters": 0,
+      "courier_hits": 0,
+      "dodges": 0,
+      "player_hits": 0,
+      "redirects": 0,
+      "rejected": 0
+    },
+    "courier_x": 165.6,
+    "energy": 100.0,
+    "events": [],
+    "hp": 5,
+    "last_impact": {},
+    "mode": "paused",
+    "rehearsal": {
+      "active": false,
+      "attempts": 0,
+      "passed": false,
+      "paused": false,
+      "results": [],
+      "stage": 0,
+      "state": "ready"
+    },
+    "role": "Duelist",
+    "tick": 12
+  },
+  "guardian": {
+    "cargo": 3,
+    "counters": {
+      "blocks": 1,
+      "counters": 0,
+      "courier_hits": 0,
+      "dodges": 0,
+      "player_hits": 0,
+      "redirects": 0,
+      "rejected": 0
+    },
+    "courier_x": 338.0,
+    "energy": 71.2,
+    "events": [
+      {
+        "cargo": 3,
+        "energy": 71.2,
+        "hp": 5,
+        "kind": "protected",
+        "tick": 60
+      }
+    ],
+    "hp": 5,
+    "last_impact": {
+      "code": "bolt_blocked",
+      "explanation": "Your live frontal guard intercepted the bolt before the courier.",
+      "tip": "Release guard to recover posture. Strike only when OPEN and close."
+    },
+    "mode": "paused",
+    "rehearsal": {
+      "active": true,
+      "attempts": 2,
+      "passed": true,
+      "paused": false,
+      "results": [
+        {
+          "attempt": 1,
+          "impact": {
+            "code": "guard_wrong_facing",
+            "explanation": "Your guard faced away from the incoming bolt.",
+            "tip": "Release K, aim toward the sentinel, then hold K to lock that direction."
+          },
+          "passed": false,
+          "snapshot": {
+            "cargo": 3,
+            "counters": {
+              "blocks": 0,
+              "counters": 0,
+              "courier_hits": 0,
+              "dodges": 0,
+              "player_hits": 1,
+              "redirects": 0,
+              "rejected": 0
+            },
+            "courier_x": 338.0,
+            "energy": 92.4,
+            "events": [
+              {
+                "cargo": 3,
+                "energy": 92.4,
+                "hp": 4,
+                "kind": "bolt_hit",
+                "tick": 60
+              }
+            ],
+            "hp": 4,
+            "mode": "paused",
+            "role": "Guardian",
+            "tick": 60
+          },
+          "stage": 0
+        },
+        {
+          "attempt": 2,
+          "impact": {
+            "code": "bolt_blocked",
+            "explanation": "Your live frontal guard intercepted the bolt before the courier.",
+            "tip": "Release guard to recover posture. Strike only when OPEN and close."
+          },
+          "passed": true,
+          "snapshot": {
+            "cargo": 3,
+            "counters": {
+              "blocks": 1,
+              "counters": 0,
+              "courier_hits": 0,
+              "dodges": 0,
+              "player_hits": 0,
+              "redirects": 0,
+              "rejected": 0
+            },
+            "courier_x": 338.0,
+            "energy": 71.2,
+            "events": [
+              {
+                "cargo": 3,
+                "energy": 71.2,
+                "hp": 5,
+                "kind": "protected",
+                "tick": 60
+              }
+            ],
+            "hp": 5,
+            "mode": "paused",
+            "role": "Guardian",
+            "tick": 60
+          },
+          "stage": 0
+        }
+      ],
+      "stage": 0,
+      "state": "review"
+    },
+    "role": "Guardian",
+    "tick": 60
+  },
+  "kind": "synthetic_os_keyboard_journey",
+  "ready": {
+    "cargo": 3,
+    "counters": {
+      "blocks": 0,
+      "counters": 0,
+      "courier_hits": 0,
+      "dodges": 0,
+      "player_hits": 0,
+      "redirects": 0,
+      "rejected": 0
+    },
+    "courier_x": 310.0,
+    "energy": 100.0,
+    "events": [],
+    "hp": 5,
+    "last_impact": {},
+    "mode": "paused",
+    "rehearsal": {
+      "active": true,
+      "attempts": 0,
+      "passed": false,
+      "paused": false,
+      "results": [],
+      "stage": 0,
+      "state": "ready"
+    },
+    "role": "Guardian",
+    "tick": 0
+  },
+  "runtime": "Godot 4.6.3 / Xorg dummy / XTest / OpenGL llvmpipe; actual key events, not a human playtest",
+  "wrong_facing": {
+    "cargo": 3,
+    "counters": {
+      "blocks": 0,
+      "counters": 0,
+      "courier_hits": 0,
+      "dodges": 0,
+      "player_hits": 1,
+      "redirects": 0,
+      "rejected": 0
+    },
+    "courier_x": 338.0,
+    "energy": 92.4,
+    "events": [
+      {
+        "cargo": 3,
+        "energy": 92.4,
+        "hp": 4,
+        "kind": "bolt_hit",
+        "tick": 60
+      }
+    ],
+    "hp": 4,
+    "last_impact": {
+      "code": "guard_wrong_facing",
+      "explanation": "Your guard faced away from the incoming bolt.",
+      "tip": "Release K, aim toward the sentinel, then hold K to lock that direction."
+    },
+    "mode": "paused",
+    "rehearsal": {
+      "active": true,
+      "attempts": 1,
+      "passed": false,
+      "paused": false,
+      "results": [
+        {
+          "attempt": 1,
+          "impact": {
+            "code": "guard_wrong_facing",
+            "explanation": "Your guard faced away from the incoming bolt.",
+            "tip": "Release K, aim toward the sentinel, then hold K to lock that direction."
+          },
+          "passed": false,
+          "snapshot": {
+            "cargo": 3,
+            "counters": {
+              "blocks": 0,
+              "counters": 0,
+              "courier_hits": 0,
+              "dodges": 0,
+              "player_hits": 1,
+              "redirects": 0,
+              "rejected": 0
+            },
+            "courier_x": 338.0,
+            "energy": 92.4,
+            "events": [
+              {
+                "cargo": 3,
+                "energy": 92.4,
+                "hp": 4,
+                "kind": "bolt_hit",
+                "tick": 60
+              }
+            ],
+            "hp": 4,
+            "mode": "paused",
+            "role": "Guardian",
+            "tick": 60
+          },
+          "stage": 0
+        }
+      ],
+      "stage": 0,
+      "state": "review"
+    },
+    "role": "Guardian",
+    "tick": 60
+  }
+}

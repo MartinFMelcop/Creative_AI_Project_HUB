@@ -30,6 +30,7 @@ var opening := 0.0
 var redirected := false
 var message := "Choose an approach."
 var message_left := 0.0
+var last_impact: Dictionary = {}
 var events: Array[Dictionary] = []
 var counters := {"blocks":0,"redirects":0,"dodges":0,"counters":0,"courier_hits":0,"player_hits":0,"rejected":0}
 
@@ -55,6 +56,7 @@ func reset(kind: String) -> void:
 	strike_cooldown = 0
 	opening = 0
 	redirected = false
+	last_impact.clear()
 	events.clear()
 	for key in counters: counters[key]=0
 	note("Keep the courier alive until the far gate. Read the first amber line.")
@@ -65,6 +67,9 @@ func note(text: String) -> void:
 
 func record(kind: String) -> void:
 	events.append({"tick":roundi(elapsed*60),"kind":kind,"energy":snappedf(energy,0.001),"hp":hp,"cargo":cargo})
+
+func retain_impact(code: String, explanation: String, tip: String) -> void:
+	last_impact={"code":code,"explanation":explanation,"tip":tip}
 
 static func live_window(age: float, start: float, finish: float) -> bool:
 	return age >= start and age <= finish
@@ -186,9 +191,11 @@ func resolve_threat() -> void:
 			counters.player_hits+=1
 			record("pulse_hit")
 			note("Ground pulse hit. Guard protects a direction, not the floor.")
+			retain_impact("pulse_hit","You were inside the ground pulse when it landed.","Walk or step beyond the circle. Guard cannot protect the floor.")
 		else:
 			opening=0.8
 			record("pulse_avoided")
+			retain_impact("pulse_avoided","You left the ground pulse before it landed.","An OPEN window follows. Close the distance before a blade counter.")
 		return
 	# Finite beam extends only as far as its locked target; nearest interception owns impact.
 	var intercepted := segment_distance(player,ENEMY,target)<24 and (player-ENEMY).dot(target-ENEMY)>0 and player.distance_to(ENEMY)<target.distance_to(ENEMY)+24
@@ -198,6 +205,7 @@ func resolve_threat() -> void:
 		counters.courier_hits+=1
 		record("courier_hit")
 		note("The line reached the courier first. Draw danger away from the road.")
+		retain_impact("courier_first_contact","The courier was the first body on the locked bolt line.","Move between sentinel and courier. Face the sentinel and hold K." if role=="Guardian" else "Press K inside the ring, then leave the locked line away from the courier.")
 		return
 	if intercepted:
 		if guards_from(ENEMY):
@@ -206,15 +214,27 @@ func resolve_threat() -> void:
 			counters.blocks+=1
 			record("protected")
 			note("Frontal block: courier safe. Release guard; counter if you can reach.")
+			retain_impact("bolt_blocked","Your live frontal guard intercepted the bolt before the courier.","Release guard to recover posture. Strike only when OPEN and close.")
 		else:
 			hp-=1
 			counters.player_hits+=1
 			record("bolt_hit")
 			note("You intercepted the bolt without a live frontal guard.")
+			if not guard:
+				retain_impact("guard_not_held",("The bolt hit you without an active guard." if role=="Guardian" else "The locked bolt caught you before you left its line."),"Face the sentinel and hold K before impact." if role=="Guardian" else "After drawing a bolt, leave its locked line. A step grants no immunity.")
+			elif guard_age<0.06:
+				retain_impact("guard_startup","The bolt landed before your guard became live.","Begin holding K earlier. Guard needs 60ms to become live.")
+			elif energy<22:
+				retain_impact("guard_insufficient_posture","Your guard had less than the 22 posture needed for impact.","Release K between bolts to recover. Holding guard also spends posture.")
+			elif locked_face.dot((ENEMY-player).normalized())<0.6:
+				retain_impact("guard_wrong_facing","Your guard faced away from the incoming bolt.","Release K, aim toward the sentinel, then hold K to lock that direction.")
+			else:
+				retain_impact("guard_not_live","Your guard was outside its live protection window.","Release K and raise a fresh frontal guard before the next bolt.")
 	else:
 		opening=1.0 if redirected else 0.5
 		record("bolt_missed")
 		note("The drawn bolt missed. Close the distance for an optional counter.")
+		retain_impact("bolt_missed","The locked bolt hit neither you nor the courier.","An OPEN window follows. Close the distance before a blade counter.")
 
 func snapshot() -> Dictionary:
 	return {"role":role,"mode":mode,"tick":roundi(elapsed*60),"hp":hp,"cargo":cargo,"energy":snappedf(energy,0.001),"courier_x":snappedf(courier.x,0.001),"counters":counters.duplicate(),"events":events.duplicate(true)}

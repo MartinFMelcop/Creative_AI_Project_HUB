@@ -40,10 +40,14 @@ def verify(godot, output, compare=None):
         result = json.loads(source.read_text())
         if result != json.loads(packed.read_text()):
             raise ValueError("Delivered PCK differs from current source observations or embedded source hashes")
-        if result.get("checks", {}).get("failed") != 0 or result.get("checks", {}).get("passed", 0) != 35:
+        if result.get("checks", {}).get("failed") != 0 or result.get("checks", {}).get("passed", 0) != 69:
             raise ValueError("Native checks failed or incomplete")
         if [r["mode"] for r in result["outcomes"]] != ["won", "lost", "won", "lost"]:
             raise ValueError("Completion and neutral controls are incomplete")
+        if [r["role"] for r in result["rehearsals"]] != ["Guardian", "Duelist"] or any(
+                len(r["results"]) != 3 or [v["stage"] for v in r["results"]] != [0, 1, 2]
+                or not all(v["passed"] for v in r["results"]) for r in result["rehearsals"]):
+            raise ValueError("Rehearsal responses are incomplete")
         for name, digest in result["consumer_hashes"].items():
             if hashlib.sha256((ROOT / name).read_bytes()).hexdigest() != digest:
                 raise ValueError("Native execution source identity differs: " + name)

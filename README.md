@@ -25,13 +25,14 @@ investigate what can actually serve that experience.
 [Crossing Drill](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/prototype/README.md)
 lets two experimental approaches protect the same courier: finite frontal interception
 or redirection with directional movement. Both can complete the crossing, lose, pause
-and retry. The small engine-dependent PCK and editable Godot project are executed
-consumers. [Native evidence](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/evidence/north-star-crossing/RUN.json)
+and retry. Optional rehearsal isolates each response, freezes causal feedback and
+starts a clean crossing; OPEN now shows range and remaining time. The small engine-dependent PCK and editable Godot project are executed
+consumers. [Native evidence](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/evidence/north-star-rehearsal/RUN.json)
 and the [living design record](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/DESIGN.md)
 show scope and limitations; automated completion does not establish perceived identity
 or player enjoyment.
 
-![Guardian response in the actual rendered consumer](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/evidence/north-star-crossing/guardian-threat.png)
+![Wrong-facing protection reviewed in the actual consumer](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/evidence/north-star-rehearsal/guardian-facing-review.png)
 
 ## Technology demonstrations
 

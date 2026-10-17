@@ -10,10 +10,11 @@ merits. The outer `martin-creative-ai-lab-v0.2.0/` name is historical packaging;
 [Portfolio](../../README.md) · [Origin demonstrations](projects/README.md) ·
 [Laboratory inventory](labs/origins.json) · [North Star](north-star/README.md)
 
-Play the first [North Star crossing prototype](north-star/prototype/README.md), or
+Play the [North Star crossing prototype](north-star/prototype/README.md), or
 inspect its [living design](north-star/DESIGN.md) and
-[executed evidence](evidence/north-star-crossing/RUN.json). Origin demonstrations and
-the preserved lab remain distinct from this actual local consumer.
+[executed evidence](evidence/north-star-rehearsal/RUN.json). Origin demonstrations and
+the preserved lab remain distinct from this actual local consumer. Optional rehearsal
+uses its real rules with retained contact explanations and clean retries.
 
 ## Find the right material
 

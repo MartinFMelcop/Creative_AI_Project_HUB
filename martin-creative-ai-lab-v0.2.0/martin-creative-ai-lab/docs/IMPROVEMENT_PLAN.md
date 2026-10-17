@@ -1,8 +1,20 @@
-# Current completed scope — crossing consumer
+# Current completed scope — response rehearsal and causal review
 
-Deliver and execute a real scene/model and source-equivalent PCK, two distinct approaches under the same courier objective, positive/negative complete policies, actual input and presentation inspection, and honest destination contracts. No origin rewrite, engine commitment, unrelated lab, multiplayer or human-experience claim.
+Improve the existing crossing rather than add another lab. Optional player-paced
+trials require actual protection/redirection, floor avoidance and a reachable counter;
+failure freezes a specific cause, repetition resets the exercise, and completion starts
+a clean crossing. Retain contact diagnosis through transient warnings and final loss.
+Show OPEN range/time, inspect the actual scene and execute source plus delivered PCK.
 
-[Actual state](STATE.md) and [living design](../north-star/DESIGN.md) carry current evidence. Earlier assessments below are historical scopes.
+Prepared/full-resource scenarios and a supplied opening isolate responses; successful
+scripts do not demonstrate learning transfer or sustained resource management. Preserve
+original crossing outcomes, origin consumers and historical evidence. No engine, canon,
+multiplayer or external validation promotion. Prompt remains unchanged because existing
+guidance already covers the observed needs.
+
+[State](STATE.md), [design](../north-star/DESIGN.md) and
+[execution](../evidence/north-star-rehearsal/RUN.json) identify current facts and limits.
+Earlier scopes below are historical, not new obligations.
 
 # Previous scope — three-brain operation and one executed pilot
 

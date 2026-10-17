@@ -1784,3 +1784,38 @@ versus experience, CRE-004/005/014/015/084 meaningful action and candidate autho
 all domains high. Update the single operational prompt for explicit author convergence,
 primary modes, living design and observable product/knowledge/portfolio/origin closeout.
 Do not automatically repeat combat next; inspect the real consumer's largest weakness.
+
+
+## ADR-072 — rehearse real responses and retain their causes
+
+**Date:** 2026-10-17 UTC. **Status:** SEED 0.33.2; DEVELOPMENT, priority category 1.
+
+Baseline88327a7 already has a real destination. Inspecting it found that terminal text
+replaced the impact it asked the player to review, and OPEN gave no reach/time signal.
+Compare additional encounter phases, control remapping and audio/timing instrumentation.
+Select optional rehearsal and causal review: improve the existing character experience
+before compounding an observed comprehension gap with more content or unrelated work.
+
+Use three prepared exercises for each approach, the same Combat rules/costs/one-second
+threats and outcome-based acceptance. Ready/review freeze; failure retries the same
+exercise; success advances explicitly. The supplied third-exercise opening isolates a
+counter, not sustained resource management. Complete/abandon transitions reset state;
+no resource, progress or training advantage enters the normal crossing. Retain contact
+cause/tip separately from transient messages; make advice role-appropriate.
+
+Visual review caught a panel hiding the Duelist after a valid escape. Move it away from
+the final player position and preserve the last line/pulse. OPEN now shows radius and
+remaining seconds. Native source/PCK, failure controls, actual synthetic OS keyboard
+journeys and rendered frames verify scoped behavior. Original four crossing outcomes
+are unchanged. No observation proves human learning, fun or accessibility.
+
+Actual XTest arrows exposed a baseline adapter defect: logical LEFT was pressed while
+physical LEFT was absent, so aiming stayed right. Reproduced with the baseline scene
+before changing code. Poll logical navigation identity and keep physical WASD; a native
+logical-only event and actual wrong/right-facing keyboard journeys cover the correction.
+
+All indices and selective ENG-022, SCI-061, CRE-004/075/081 informed cognitive load,
+recovery, task-versus-participant validity, candidate authority and contextual feedback.
+Creative hypotheses remain experimental in DESIGN; brains/historical sources unchanged.
+No new lab or origin migration/status promotion. Keep NS-C03 adapted/local_prototype.
+Existing prompt guidance served selection/verification; retain its exact text.

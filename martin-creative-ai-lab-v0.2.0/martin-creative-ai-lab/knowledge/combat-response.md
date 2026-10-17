@@ -48,3 +48,36 @@ controlled endpoint-only mutation. This is a destination control, not retroactiv
 proof of a defect in P06. Practical consequence: measure who owns an impact and who
 bears the cost, rather than treating a changed target label as successful protection.
 Scripted completion does not demonstrate human understanding or final class identity.
+
+
+## Destination feedback — isolated rehearsal is not learning evidence
+
+**Question/context:** Can a player inspect why a real response failed and retry it
+without the next threat replacing the explanation? At crossing baseline88327a7, the
+single transient message and terminal loss text erased that stated review target.
+See [current execution](../evidence/north-star-rehearsal/RUN.json) and its retained
+historical full-crossing comparison.
+
+**Observation:** the same Combat consumer now supplies structured last-contact cause
+and recovery advice. Native and actual synthetic-keyboard controls show explicit ready,
+failed response, frozen review, clean retry and clean crossing handoff. Wrong facing,
+feint without escape, ignored courier, pulse guard and distant counter cannot advance.
+All four original crossing policy outcomes remain unchanged. Visual review found an
+initial panel hiding the escaped character; the revised panel and last-contact outline
+preserve the position needed to interpret the result.
+
+**Interpretation/consequence:** keep causal feedback available at the moment of retry;
+a global success counter or overwritten message cannot serve that recovery workflow.
+Use role-appropriate advice and visible counter range/time in this consumer.
+
+**Validity:** exercises reset resources/positions and supply the final opening. This
+positive workflow result does not show sustained resource management, learning transfer,
+unassisted comprehension or accessibility. Those remain inconclusive without relevant
+people/devices. Revisit when such observation or encounter changes expose new failures.
+
+**Input observation:** an actual XTest LEFT event was visible to logical key polling but
+not physical-key polling in both baseline and new scene. The baseline kept facing right.
+The corrected adapter uses logical identity for navigation arrows, physical positions
+for WASD; native logical-only input plus actual wrong/right-facing trials pass. Core
+combat outcomes remain unchanged. This is scoped Linux/Godot input evidence, not all
+keyboard layouts or hardware accessibility.

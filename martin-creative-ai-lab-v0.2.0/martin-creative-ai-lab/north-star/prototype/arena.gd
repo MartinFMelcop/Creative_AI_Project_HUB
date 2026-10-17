@@ -1,5 +1,7 @@
 extends Node2D
 const Combat = preload("res://combat.gd")
+const Rehearsal = preload("res://rehearsal.gd")
+var rehearsal = Rehearsal.new()
 var game = Combat.new()
 var selected := "Guardian"
 var taps := {}
@@ -13,42 +15,71 @@ const RED := Color("ff796f")
 func _ready() -> void:
 	queue_redraw()
 
+func abandon() -> void:
+	rehearsal = Rehearsal.new()
+	game = Combat.new()
+	game.role = selected
+	taps.clear()
+
+func begin_crossing() -> void:
+	rehearsal.active = false
+	game = Combat.new()
+	game.reset(selected)
+	taps.clear()
+
 func _notification(what: int) -> void:
-	if what==NOTIFICATION_APPLICATION_FOCUS_OUT and game.mode=="play":
-		game.mode="paused"
+	if what==NOTIFICATION_APPLICATION_FOCUS_OUT:
+		if rehearsal.active:
+			if rehearsal.state=="live" and not rehearsal.paused: rehearsal.toggle_pause()
+		elif game.mode=="play": game.mode="paused"
 		taps.clear()
 
 func _unhandled_key_input(event: InputEvent) -> void:
 	if not event is InputEventKey or not event.pressed or event.echo: return
-	if event.physical_keycode==KEY_F12:
-		capture()
-	if event.physical_keycode==KEY_ENTER:
-		if game.mode in ["title","lost","won"]: game.reset(selected)
-		elif game.mode=="paused": game.mode="play"
-	if event.physical_keycode==KEY_ESCAPE:
-		if game.mode=="play": game.mode="paused"
-		elif game.mode=="paused": game.mode="play"
-	if event.physical_keycode==KEY_R and game.mode!="play":
-		game=Combat.new()
-		game.role=selected
-		taps.clear()
-	if game.mode=="title":
-		if event.physical_keycode==KEY_1: selected="Guardian";game.role=selected
-		if event.physical_keycode==KEY_2: selected="Duelist";game.role=selected
-	if event.physical_keycode==KEY_J: taps.strike=true
-	if event.physical_keycode==KEY_K: taps.skill_pressed=true
-	if event.physical_keycode==KEY_SPACE: taps.dodge=true
+	var key: int = event.physical_keycode
+	if key==KEY_F12: capture()
+	if rehearsal.active:
+		if key==KEY_ESCAPE: rehearsal.toggle_pause(); taps.clear()
+		elif key==KEY_R and (rehearsal.paused or rehearsal.state!="live"): abandon()
+		elif key==KEY_ENTER:
+			if rehearsal.paused: rehearsal.toggle_pause()
+			elif rehearsal.confirm(): begin_crossing()
+			if rehearsal.active: game=rehearsal.game
+			taps.clear()
+		elif key==KEY_T and rehearsal.state!="live": rehearsal.repeat(); game=rehearsal.game; taps.clear()
+	else:
+		if key==KEY_ENTER:
+			if game.mode in ["title","lost","won"]: begin_crossing()
+			elif game.mode=="paused": game.mode="play"; taps.clear()
+		elif key==KEY_ESCAPE:
+			if game.mode=="play": game.mode="paused"
+			elif game.mode=="paused": game.mode="play"
+			taps.clear()
+		elif key==KEY_R and game.mode!="play": abandon()
+		elif game.mode=="title":
+			if key==KEY_1: selected="Guardian"; game.role=selected
+			elif key==KEY_2: selected="Duelist"; game.role=selected
+			elif key==KEY_T: rehearsal.start(selected); game=rehearsal.game; taps.clear()
+	if game.mode=="play":
+		if key==KEY_J: taps.strike=true
+		if key==KEY_K: taps.skill_pressed=true
+		if key==KEY_SPACE: taps.dodge=true
 	queue_redraw()
 
-func vector_keys(left: int, right: int, up: int, down: int) -> Vector2:
-	return Vector2(float(Input.is_physical_key_pressed(right))-float(Input.is_physical_key_pressed(left)),float(Input.is_physical_key_pressed(down))-float(Input.is_physical_key_pressed(up)))
+func key_down(code: int, physical: bool) -> bool:
+	return Input.is_physical_key_pressed(code) if physical else Input.is_key_pressed(code)
+
+func vector_keys(left: int, right: int, up: int, down: int, physical: bool=true) -> Vector2:
+	return Vector2(float(key_down(right,physical))-float(key_down(left,physical)),float(key_down(down,physical))-float(key_down(up,physical)))
 
 func _physics_process(dt: float) -> void:
 	var command: Dictionary=taps.duplicate()
 	command.move=vector_keys(KEY_A,KEY_D,KEY_W,KEY_S)
-	command.aim=vector_keys(KEY_LEFT,KEY_RIGHT,KEY_UP,KEY_DOWN)
+	# Navigation keys carry logical identity; WASD keeps physical keyboard positions.
+	command.aim=vector_keys(KEY_LEFT,KEY_RIGHT,KEY_UP,KEY_DOWN,false)
 	command.skill=Input.is_physical_key_pressed(KEY_K)
-	game.step(dt,command)
+	if rehearsal.active: rehearsal.step(dt,command)
+	else: game.step(dt,command)
 	taps.clear()
 	queue_redraw()
 
@@ -77,20 +108,25 @@ func _draw() -> void:
 	for x in [400,700,1000]:
 		draw_line(Vector2(x,350),Vector2(x,430),AMBER if game.courier.x>=x else Color("6c777b"),4)
 		text(Vector2(x-35,458),"GATE" if x==1000 else "MARK",14)
-	if game.phase=="bolt":
+	var reviewing: bool=rehearsal.active and rehearsal.state=="review"
+	if game.phase=="bolt" or (reviewing and rehearsal.stage==0):
 		var width: float=3+game.clock*8
 		draw_line(Combat.ENEMY,game.target,Color(1,0.75,0.4,0.25+game.clock*0.5),width)
 		draw_arc(game.target,26,0,TAU,24,AMBER,2)
-		text(game.target+Vector2(-50,-38),"LOCKED BOLT",14,AMBER)
-	if game.phase=="pulse":
+		var label=game.target+Vector2(-50,-76 if game.target.distance_to(game.player)<80 else -38)
+		label.y=maxf(200,label.y)
+		text(label,"LAST LOCKED LINE" if reviewing else "LOCKED BOLT",14,AMBER)
+	if game.phase=="pulse" or (reviewing and rehearsal.stage==1):
 		draw_circle(game.pulse,90,Color(1,0.3,0.3,0.18+game.clock*0.22))
 		draw_arc(game.pulse,90,0,TAU,48,RED,3)
-		text(game.pulse+Vector2(-55,-106),"GROUND PULSE",15,RED)
+		text(game.pulse+Vector2(-55,-106),"LAST PULSE" if reviewing else "GROUND PULSE",15,RED)
 	# The sentinel's silhouette and name stay separate from the courier's parcel.
 	draw_colored_polygon(PackedVector2Array([Combat.ENEMY+Vector2(0,-36),Combat.ENEMY+Vector2(31,5),Combat.ENEMY+Vector2(0,32),Combat.ENEMY+Vector2(-31,5)]),RED)
 	text(Combat.ENEMY+Vector2(-42,-50),"SENTINEL",15,RED)
 	if game.role=="Duelist": draw_arc(Combat.ENEMY,340,0,TAU,80,Color(1,0.77,0.45,0.18),1)
-	if game.opening>0: text(Combat.ENEMY+Vector2(-27,60),"OPEN",19,TEAL)
+	if game.opening>0:
+		draw_arc(Combat.ENEMY,130,0,TAU,64,TEAL,2)
+		text(Combat.ENEMY+Vector2(-53,60),"OPEN %.1fs"%game.opening,19,TEAL)
 	draw_circle(game.courier,14,AMBER)
 	draw_rect(Rect2(game.courier+Vector2(-11,-10),Vector2(22,18)),Color("756347"),false,2)
 	text(game.courier+Vector2(-35,40),"COURIER",14,AMBER)
@@ -109,21 +145,22 @@ func _draw() -> void:
 	draw_header()
 	panel(Rect2(30,662,1092,86))
 	text(Vector2(48,686),"WASD move   •   ARROWS aim   •   J blade   •   K "+("hold guard" if game.role=="Guardian" else "feint bolt")+"   •   SPACE step   •   ESC pause",17)
-	text(Vector2(48,718),game.message,17,AMBER if game.message_left>0 else PAPER)
-	if game.mode!="play": overlay()
+	text(Vector2(48,718),footer(),17,AMBER)
+	if rehearsal.active: rehearsal_overlay()
+	elif game.mode!="play": overlay()
 
 func draw_header() -> void:
 	draw_rect(Rect2(0,0,1152,174),INK)
-	text(Vector2(40,42),"VIRGO DIAMOND / CROSSING DRILL",25)
-	text(Vector2(40,70),"LOCAL EXPERIMENT  •  Keep the courier alive to the far gate",16,AMBER)
+	text(Vector2(40,42),"VIRGO DIAMOND / "+("REHEARSAL" if rehearsal.active else "CROSSING DRILL"),25)
+	text(Vector2(40,70),("%d / 3  %s  •  "%[rehearsal.stage+1,rehearsal.heading()]+rehearsal.instruction()) if rehearsal.active else "LOCAL EXPERIMENT  •  Keep the courier alive to the far gate",16,AMBER)
 	text(Vector2(40,110),game.role.to_upper()+"  /  HEALTH "+str(game.hp)+"   COURIER "+str(game.cargo),19)
 	draw_rect(Rect2(40,130,300,12),Color("32475a"))
 	draw_rect(Rect2(40,130,300*game.energy/100,12),TEAL if game.role=="Guardian" else AMBER)
 	text(Vector2(355,142),"POSTURE" if game.role=="Guardian" else "RESOLVE",15)
 	var progress: float=(game.courier.x-160)/(1000-160)
-	text(Vector2(750,111),"CROSSING  %d%%"%roundi(progress*100),19)
+	text(Vector2(750,111),("PAUSED" if rehearsal.paused else ("RESPONSE VERIFIED" if rehearsal.passed else rehearsal.state.to_upper())) if rehearsal.active else "CROSSING  %d%%"%roundi(progress*100),19)
 	draw_rect(Rect2(750,130,350,12),Color("32475a"))
-	draw_rect(Rect2(750,130,350*progress,12),AMBER)
+	draw_rect(Rect2(750,130,350*((rehearsal.stage+int(rehearsal.passed))/3.0 if rehearsal.active else progress),12),AMBER)
 
 func overlay() -> void:
 	draw_rect(Rect2(40,176,1072,473),Color(0.03,0.07,0.12,0.90))
@@ -143,19 +180,53 @@ func overlay() -> void:
 		text(Vector2(615,430),"Feint within the ring; steps cost resolve.",17)
 		text(Vector2(615,467),"Risky redirection • faster movement step",17,AMBER)
 		text(Vector2(210,543),"Both: leave red ground pulses. Strike only when OPEN and close.",19)
-		text(Vector2(210,585),"ENTER  Begin as "+selected+"     /     experimental approaches, not final classes",19,TEAL)
+		text(Vector2(210,580),"T  Rehearse as "+selected+"     •     ENTER  Skip to crossing",21,TEAL)
+		text(Vector2(210,615),"Experimental approaches, not final classes. Rehearsal results are separate.",17)
 	elif game.mode=="paused":
 		text(Vector2(280,330),"Crossing paused",36)
 		text(Vector2(280,385),"ENTER / ESC resume     •     R abandon and choose",22)
-		text(Vector2(280,430),"Guard faces the direction locked when K was first held.",19)
-		text(Vector2(280,465),"Release K before turning. Steps move; they grant no immunity.",19)
+		text(Vector2(280,430),("Guard faces the direction locked when K was first held." if game.role=="Guardian" else "K draws an amber bolt only inside the sentinel's ring."),19)
+		text(Vector2(280,465),("Release K before turning. Steps move; they grant no immunity." if game.role=="Guardian" else "Leave the drawn line. Steps move; they grant no immunity."),19)
+		draw_impact(Vector2(130,530))
 	else:
 		text(Vector2(250,290),"THE COURIER CROSSED" if game.mode=="won" else "THE LINE BROKE",36,TEAL if game.mode=="won" else RED)
 		text(Vector2(250,345),game.role+"  /  blocks %d   drawn bolts %d   counters %d"%[game.counters.blocks,game.counters.redirects,game.counters.counters],22)
 		text(Vector2(250,390),"Health %d / 5    Courier %d / 3    Crossing %d%%"%[game.hp,game.cargo,roundi((game.courier.x-160)/840*100)],21)
-		text(Vector2(250,440),"Crossing token: "+("Held the line" if game.role=="Guardian" else "Drew the danger") if game.mode=="won" else "Review the impact feedback and try the other approach.",20,AMBER)
+		draw_impact(Vector2(150,435))
 		text(Vector2(250,510),"ENTER retry this approach     •     R choose approach",22)
 		text(Vector2(250,552),"Result lasts for this session.",18)
+		if game.mode=="won": text(Vector2(250,585),"Crossing token: "+("Held the line" if game.role=="Guardian" else "Drew the danger"),18,TEAL)
+
+func footer() -> String:
+	if rehearsal.active:
+		if rehearsal.paused: return "ENTER / ESC resume  •  R abandon rehearsal"
+		if rehearsal.state=="ready": return "ENTER send this trial  •  R choose approach  /  No time passes while you read."
+		if rehearsal.state=="review": return ("ENTER "+("start the crossing" if rehearsal.stage==2 else "next exercise") if rehearsal.passed else "ENTER retry this exercise")+"  •  T repeat  •  R choose approach"
+	return game.message
+
+func draw_impact(at: Vector2) -> void:
+	if game.last_impact.is_empty(): return
+	text(at,"LAST CONTACT  /  "+game.last_impact.explanation,18,AMBER)
+	text(at+Vector2(0,32),game.last_impact.tip,18)
+
+func rehearsal_overlay() -> void:
+	if rehearsal.state=="live" and not rehearsal.paused: return
+	var top: float=500 if game.player.y<350 else 195
+	panel(Rect2(80,top,992,116),Color("203548"))
+	var label := "READY  /  "+rehearsal.heading()
+	if rehearsal.paused: label="REHEARSAL PAUSED"
+	elif rehearsal.state=="review": label="RESPONSE VERIFIED" if rehearsal.passed else "TRY THIS RESPONSE AGAIN"
+	text(Vector2(100,top+31),label,23,TEAL if rehearsal.passed else AMBER)
+	if rehearsal.state=="review":
+		if rehearsal.stage==2:
+			text(Vector2(100,top+65),"Counter landed inside the opening." if rehearsal.passed else "The opening closed before a close counter landed.",19)
+			text(Vector2(100,top+95),"The normal crossing uses the same range, costs and timing." if rehearsal.passed else "Walk into the OPEN ring, release guard, then press J before it closes.",18)
+		else:
+			text(Vector2(100,top+65),game.last_impact.explanation,19)
+			text(Vector2(100,top+95),game.last_impact.tip,18)
+	else:
+		text(Vector2(100,top+65),rehearsal.instruction(),19)
+		text(Vector2(100,top+95),"One real response at a time. Attempts can be repeated; no crossing reward is earned.",18)
 
 func capture() -> void:
 	var path := OS.get_environment("CROSSING_CAPTURE")
@@ -163,4 +234,7 @@ func capture() -> void:
 	await RenderingServer.frame_post_draw
 	get_viewport().get_texture().get_image().save_png(path)
 	var file=FileAccess.open(path+".json",FileAccess.WRITE)
-	file.store_string(JSON.stringify(game.snapshot(),"  ")+"\n")
+	var report=game.snapshot()
+	report.last_impact=game.last_impact.duplicate(true)
+	report.rehearsal=rehearsal.snapshot()
+	file.store_string(JSON.stringify(report,"  ")+"\n")

@@ -1,0 +1,20 @@
+{
+  "baseline_arena_sha256": "ff0961f38efadf19ca505ffcf3dc5fb115f522e27c9fbd16b79760c326ef1fbd",
+  "baseline_commit": "88327a7f2206442488f46e87c5dcd12940d44bd3",
+  "columns": [
+    "physical_left",
+    "logical_left",
+    "physical_k",
+    "facing",
+    "guard",
+    "mode"
+  ],
+  "interpretation": "LEFT reached logical polling but not physical polling; baseline facing stayed right before and during held guard. Adapter now uses logical navigation keys and retains physical WASD; native logical-only and actual XTest wrong/right-facing journeys pass. Scoped Linux/Godot observation, not all keyboard layouts.",
+  "kind": "baseline_input_observation",
+  "observations": [
+    "[false, false, false, (1.0, 0.0), false, \"title\"]",
+    "[false, false, false, (1.0, 0.0), false, \"play\"]",
+    "[false, true, false, (1.0, 0.0), false, \"play\"]",
+    "[false, true, true, (1.0, 0.0), true, \"play\"]"
+  ]
+}

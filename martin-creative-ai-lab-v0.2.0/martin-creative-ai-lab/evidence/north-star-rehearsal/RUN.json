@@ -1,0 +1,364 @@
+{
+  "schema_version": 1,
+  "kind": "destination_execution",
+  "recorded_at_utc": "2026-10-17T06:25:30.057912+00:00",
+  "baseline_commit": "88327a7f2206442488f46e87c5dcd12940d44bd3",
+  "branch": "codex/north-star-rehearsal-20261017",
+  "mode": "DEVELOPMENT",
+  "priority_category": 1,
+  "priority_reason": "Improve an existing executable North Star consumer: baseline result overwrote its stated impact review, no isolated rehearsal existed, and OPEN had no range/time display. Actual keyboard execution then reproduced a baseline aiming-adapter defect.",
+  "capability_ids": [
+    "NS-C03"
+  ],
+  "consumer_paths": [
+    "north-star/prototype/arena.gd",
+    "north-star/prototype/combat.gd",
+    "north-star/prototype/rehearsal.gd"
+  ],
+  "runtime": "4.6.3.stable.official.7d41c59c4 standard; Linux x86_64; Python 3.12.14; rendered Xorg dummy/OpenGL Mesa llvmpipe, dummy audio",
+  "scope": "Optional player-paced rehearsal in the actual crossing consumer, retained causal review, OPEN range/time and corrected logical navigation input. Prepared exercises use the real Combat model/costs/threat duration; no class/canon/engine or production integration promotion.",
+  "checks": {
+    "failed": 0,
+    "passed": 69
+  },
+  "commands": [
+    {
+      "command": [
+        "godot",
+        "--headless",
+        "--path",
+        "north-star/prototype",
+        "--script",
+        "tools/pack.gd",
+        "--",
+        "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/prototype/dist/crossing-drill.pck"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "python3",
+        "north-star/prototype/tools/verify.py",
+        "--output",
+        "evidence/north-star-rehearsal/results.json"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "python3",
+        "north-star/prototype/tools/test_verify.py"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "python3",
+        "work/north-star-rehearsal/render.py"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "python3",
+        "work/north-star-rehearsal/keyboard.py"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "godot",
+        "--headless",
+        "--main-pack",
+        "north-star/prototype/dist/crossing-drill.pck",
+        "--quit-after",
+        "5"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "python3",
+        "north-star/prototype/tools/verify.py",
+        "--output",
+        "/tmp/ns-rehearsal-final.json",
+        "--compare",
+        "evidence/north-star-rehearsal/results.json"
+      ],
+      "exit_code": 0
+    }
+  ],
+  "command_context": "First three commands run from lab root; packaging uses temporary writable XDG directories. Last two are local environment-specific scratch harnesses from Git root with permitted local display sockets and child deadlines. Rendered scenario itself is preserved in prototype/tests/render_rehearsal.gd; exact OS key protocol and captured states are below. Scratch harnesses are not promised portable tools.",
+  "source_artifacts": [
+    {
+      "local_path": "north-star/prototype/.gitignore",
+      "sha256": "531d0d253cec1addb97b2cb2d144b6589ff934513eb9c9b8cf882cb49e4c0c32",
+      "size_bytes": 8
+    },
+    {
+      "local_path": "north-star/prototype/README.md",
+      "sha256": "3a76b230a6ade78a56bfd0e9c783080b9dfdaabcebd39e8425e7e0a8c514a826",
+      "size_bytes": 6695
+    },
+    {
+      "local_path": "north-star/prototype/arena.gd",
+      "sha256": "e2e24ed4c6b41a137abab41138086eca3f59804916b20ae623b9136f10caf466",
+      "size_bytes": 12852
+    },
+    {
+      "local_path": "north-star/prototype/arena.gd.uid",
+      "sha256": "1cd2fa44a912d470ad3de79f672223ff85436c4d1ab34701debf2e10a1a14fe2",
+      "size_bytes": 20
+    },
+    {
+      "local_path": "north-star/prototype/arena.tscn",
+      "sha256": "f794c485663f0ed318ddce6bb7a62bc9b2dbd3af02be4f166cca962c29382591",
+      "size_bytes": 154
+    },
+    {
+      "local_path": "north-star/prototype/combat.gd",
+      "sha256": "22b257c59ad3c6f183aac416122ce8ed36d9af38ba7f70a0f8b09bba0f6217c4",
+      "size_bytes": 9868
+    },
+    {
+      "local_path": "north-star/prototype/combat.gd.uid",
+      "sha256": "8f28f645ef4d4bba1021b27bc39fed04c438124fd819cc32c3586f92b3c58f9f",
+      "size_bytes": 20
+    },
+    {
+      "local_path": "north-star/prototype/dist/crossing-drill.pck",
+      "sha256": "29a9784daa7a9d183aa4f4acbad0884bc5de698a546ec55ab106ee374e0c05a3",
+      "size_bytes": 40224
+    },
+    {
+      "local_path": "north-star/prototype/project.godot",
+      "sha256": "8d4755b58f1179a9b5ec431579177371e784bca9703a17c88f4c7a6d4ee9385c",
+      "size_bytes": 414
+    },
+    {
+      "local_path": "north-star/prototype/provenance.json",
+      "sha256": "49c3f69a8902e06ffeb00da93109613338da78c7e467c3c5e8edfc2ded760615",
+      "size_bytes": 1045
+    },
+    {
+      "local_path": "north-star/prototype/rehearsal.gd",
+      "sha256": "55a1a348dd37a2552074a8ecc48dbe01b3fbef9211750f2110093a1ccc6eaeb6",
+      "size_bytes": 2919
+    },
+    {
+      "local_path": "north-star/prototype/tests/policy.gd",
+      "sha256": "646f0758a211e84ffbfd4632460c7d1fc549cbb3b552801ee2508774a5a63e29",
+      "size_bytes": 979
+    },
+    {
+      "local_path": "north-star/prototype/tests/rehearsal_checks.gd",
+      "sha256": "0286d8997fdf1bd7ebad0b72a7283651678cfa30f85b2bd55e98e995c3f9b1f5",
+      "size_bytes": 6003
+    },
+    {
+      "local_path": "north-star/prototype/tests/render_journey.gd",
+      "sha256": "b0de7bc7cdd8795d55c0fdb8248c277c38ead3299714e7290c70df1a2c114e49",
+      "size_bytes": 992
+    },
+    {
+      "local_path": "north-star/prototype/tests/render_rehearsal.gd",
+      "sha256": "fc268d9764cfdd52874c8ea9f2f96aaeaa6f98ebede22dcbf412fe4692c6de42",
+      "size_bytes": 2254
+    },
+    {
+      "local_path": "north-star/prototype/tests/run_checks.gd",
+      "sha256": "b2a10a98f3657c53c93cbe8fa9a02cabe9b1f49ca7f6f1c0bc90b880204ad486",
+      "size_bytes": 6351
+    },
+    {
+      "local_path": "north-star/prototype/tools/pack.gd",
+      "sha256": "169367e14e87e27459499ce5ce8b21987f52e4a1c992802737a65d239bc337c9",
+      "size_bytes": 535
+    },
+    {
+      "local_path": "north-star/prototype/tools/test_verify.py",
+      "sha256": "08898e09aba0e8ce07d37cab94d9b045904d5665b724864d5ef04fbce66c36e5",
+      "size_bytes": 1778
+    },
+    {
+      "local_path": "north-star/prototype/tools/verify.py",
+      "sha256": "de16cbc1cea1cc4c97d06b2385eb74a122e11abe0211e8e4a74da5b12d3ad9c6",
+      "size_bytes": 3946
+    }
+  ],
+  "result_artifacts": [
+    {
+      "local_path": "evidence/north-star-rehearsal/counter-range.png",
+      "sha256": "d53dff04b0ae6b67e62efce5e6059175731eb0afd48a33bb7164afdcfdf91ead",
+      "size_bytes": 53743
+    },
+    {
+      "local_path": "evidence/north-star-rehearsal/counter-verified.png",
+      "sha256": "1651276844fcca8da904f03babd6fa08e57dd0e26e9f4829f79bbd486a465757",
+      "size_bytes": 64889
+    },
+    {
+      "local_path": "evidence/north-star-rehearsal/crossing-loss-review.png",
+      "sha256": "cfe575308c4b4005f8946b26c19127ca26083f12138ca85054610385bf7a5f23",
+      "size_bytes": 91066
+    },
+    {
+      "local_path": "evidence/north-star-rehearsal/crossing-win-review.png",
+      "sha256": "5b98dbb1088c5e818de0d983970e2ed95af42bffdecddd6f4fc42a38cc4cd16e",
+      "size_bytes": 95132
+    },
+    {
+      "local_path": "evidence/north-star-rehearsal/duelist-drawn-line.png",
+      "sha256": "ae57fe2aa2538daba79d9b72cea0578280a12365e81fa26de0616a701eb2236a",
+      "size_bytes": 51724
+    },
+    {
+      "local_path": "evidence/north-star-rehearsal/duelist-safe-review.png",
+      "sha256": "84d1806cc16c029c014f3a32934ea79b0a14a2c9ec863a415f01c6acbf835894",
+      "size_bytes": 72698
+    },
+    {
+      "local_path": "evidence/north-star-rehearsal/guardian-facing-review.png",
+      "sha256": "797e6f96e4913bd470dff6384c47f4c876ee95c022befe03e296253e77d66da8",
+      "size_bytes": 70769
+    },
+    {
+      "local_path": "evidence/north-star-rehearsal/input-mapping.json",
+      "sha256": "f8456e0ccb840b65268ef10496271dcd143faa10fe4aa66674f95117c9774b6c",
+      "size_bytes": 907
+    },
+    {
+      "local_path": "evidence/north-star-rehearsal/keyboard-duelist-review.png",
+      "sha256": "effb4a754fab6616d38c2d776195dd368fda53c7f07d83021f2f8dd7996af302",
+      "size_bytes": 72696
+    },
+    {
+      "local_path": "evidence/north-star-rehearsal/keyboard-guardian-review.png",
+      "sha256": "d54c1b36d77aaec041e5b26adaf4a20f7b892cad9ca689206ae9e70bad696c9a",
+      "size_bytes": 75314
+    },
+    {
+      "local_path": "evidence/north-star-rehearsal/keyboard.json",
+      "sha256": "2230a14ac2478512a2eab4750340837d4e065cddfa0b27585bb369b9212e2943",
+      "size_bytes": 8337
+    },
+    {
+      "local_path": "evidence/north-star-rehearsal/pulse-impact-review.png",
+      "sha256": "e899825f82953a17c643bace0e73d744ae77dea0802813a98c50410348c8a69e",
+      "size_bytes": 69275
+    },
+    {
+      "local_path": "evidence/north-star-rehearsal/results.json",
+      "sha256": "5b0c88345e7214b2710ea075f83b2797e8e1698765dcf2fa72b8fdd81266e030",
+      "size_bytes": 15398
+    },
+    {
+      "local_path": "evidence/north-star-rehearsal/selection.png",
+      "sha256": "2525c5531a2eda8f9df2d2a55b1059e705bcd194f6bbda4098fd2fcfc5fbdff3",
+      "size_bytes": 122833
+    }
+  ],
+  "brain_activation": {
+    "indices": "All three complete indices read; search feedback learning accessibility returned no match, Portuguese acessibilidade located CRE-081/SCI-061; relevant complete chapters retrieved. Supplied bytes/pins unchanged.",
+    "engineering": "High: ENG-022 mental models, cognitive load, feedback and recoverable errors.",
+    "science": "High: SCI-061 distinguishes actual task execution from representative human usability/accessibility evidence.",
+    "creative": "High: CRE-004/075/081 support immediate playable consequence, contextual HUD and optional practice; CRE-001 direct author identity anchors agency. Candidate details remain experimental."
+  },
+  "alternatives": [
+    {
+      "candidate": "Optional actual-model rehearsal and causal review",
+      "selected": true,
+      "category": 1,
+      "reason": "Directly addresses inspected information loss, simultaneous first-contact demands and invisible counter reach in the existing character task."
+    },
+    {
+      "candidate": "Additional encounter/adventure phases or persistent reward",
+      "selected": false,
+      "category": 1,
+      "reason": "Meaningful future product scope, but would compound the observed recovery/feedback gap before learning transfer is understood."
+    },
+    {
+      "candidate": "Input remapping and controller comfort",
+      "selected": false,
+      "category": 1,
+      "reason": "Valuable control/accessibility direction; cross-device validation and a mapping design are separate scope. Actual navigation polling defect was corrected within the selected workflow."
+    },
+    {
+      "candidate": "Standalone audiovisual/timing instrument or P01/P10 extraction",
+      "selected": false,
+      "category": 4,
+      "reason": "Origins offer real technology, but no such consumer requirement presently outranks this observed destination weakness."
+    }
+  ],
+  "before_after": {
+    "before": "One executable crossing and 35 native controls; title introduced many controls, transient contact could disappear at loss, OPEN lacked range/time; physical arrow polling failed in the observed XTest environment.",
+    "after": "Optional ready/live/review exercises require actual successful responses, retain causal contact/geometry, support clean repetition and crossing handoff; normal pause/result retain cause/tip; OPEN shows range/time; logical arrow aiming works in scoped tests.",
+    "baseline_record": "evidence/north-star-crossing/results.json",
+    "all_four_original_crossing_outcomes_identical": true,
+    "rehearsal_outcomes": "Three positive response exercises per approach; failures do not advance. Prepared positions/full resources and supplied counter opening do not prove sustained management or transfer learning."
+  },
+  "keyboard_protocol": [
+    "Find actual native window rather than assume an X11 ID; focus it.",
+    "T then Return starts Guardian trial; hold LEFT, then K: wrong-facing failure. Return prepares retry.",
+    "Return starts retry; hold RIGHT, then K: actual frontal protection; reading wait leaves complete captured state unchanged.",
+    "R,2,T,Return selects Duelist rehearsal; K draws warning then held W leaves its line; courier/player remain healthy.",
+    "R,Return,Escape enters a fresh normal crossing and pauses; no rehearsal active or retained impact, full health and courier."
+  ],
+  "presentation": "Inspected actual rendered selection, wrong-facing result, drawn line, safe response, pulse result, counter reach/success and normal crossing loss. Controlled model ticks advance between capture frames; keyboard captures use actual XTest events. Neither establishes human learning or real-time full-policy performance.",
+  "refinements": [
+    "Retain structured contact diagnosis separately from message slot; role-specific tips avoid advising unavailable actions.",
+    "Move review panel away from the escaped character; retain last line/pulse; separate target label from YOU.",
+    "Correct logical navigation polling after baseline input reproduction; keep physical WASD."
+  ],
+  "failures": [
+    {
+      "event": "Sandbox Xorg could not bind local listening sockets; unchanged baseline renderer failed the same way.",
+      "resolution": "Permitted local runtime rendered the scene without product/gate changes."
+    },
+    {
+      "event": "Bare engine data paths were unwritable; the read-only review reproduced the same crash on baseline.",
+      "resolution": "Use temporary writable XDG paths, as existing verifier already does; no product workaround."
+    },
+    {
+      "event": "Initial XTest harness assumed window ID0x200003 and exited with BadWindow.",
+      "resolution": "Terminate owned applications; resolve actual window by title and wrap child processes in deadlines. Subsequent native keyboard journey passed."
+    },
+    {
+      "event": "Both pre-held and ordered LEFT+K trials initially blocked instead of failing facing.",
+      "resolution": "Instrumented input: logical LEFT true, physical LEFT false, baseline facing right. Reproduced on baseline before adapter correction; final wrong/right-facing journeys pass."
+    },
+    {
+      "event": "First native logical-key regression parsed a buffered event without flushing, so its assertion failed; reusing one event also warned.",
+      "resolution": "Flush real buffered events and release with a distinct event. Keep the logical-only assertion; final 69/0 passes."
+    }
+  ],
+  "observable_progress": {
+    "product": "Existing character consumer gains optional real-response rehearsal, readable retained causes, counter reach/time and working scoped arrow aim.",
+    "laboratory_knowledge": "Contextual finding distinguishes retained recovery feedback and prepared response feasibility from unverified learning transfer. No new research lab.",
+    "portfolio": "Current source/PCK, native positive/negative checks and inspected rendered/actual-keyboard artifacts demonstrate a connected workflow.",
+    "origin_migration": "No new migration/status change; P06 methodology remains adapted, all P01-P11 code/media/distributions/tests retained."
+  },
+  "creative_assessment": "Agent inspection finds failure cause, frozen geometry and next action readable; panel/label collisions were refined. This supports a more inspectable practice workflow, not independent class identity, fairness, fun or accessibility validation.",
+  "limitations": [
+    "Local experimental geometric consumer, not final classes, canon, MMO engine selection or production integration.",
+    "Prepared/full-resource trials and supplied counter opening do not establish learning transfer or sustained resource management.",
+    "No independent human participation, usability/accessibility study, physical keyboard-layout breadth, listening or commercial signal.",
+    "Controlled rendered frames and synthetic OS input do not establish real-time full-policy performance; prior full-render timeout remains unresolved.",
+    "No multiplayer, account, network authority, persistent progression, audio or controller implementation/validation."
+  ],
+  "other_checks": {
+    "python_regressions": "100 passed: reference42, repository27, brain17, manifest11, wrapper3; these are validator/delivery checks, not human experience.",
+    "repository": "572 local links; 11 origins,15 transfers,9 assets,2 legacy sources.",
+    "reference_library": "5 records,607 preserved sources,18 derived PDF texts,140 exclusions,14 capabilities; passed."
+  },
+  "presentation_diagnostic": "Suspected header clipping in tool display was not reproduced in raw pixels: RGB first50rows of Guardian/Duelist keyboard captures are identical, as are their common 1/3 instruction prefix. No product correction based on that display suspicion. Keyboard frames precede restoration of the original success-token label; input/rehearsal paths unchanged. Final controlled render includes actual loss and full-policy win.",
+  "prompt_review": "Retained byte-identical: current guidance already prioritizes this real consumer, brain activation, executed behavior, honest evidence and bounded runtime cleanup. Implementation/harness corrections do not justify another durable instruction.",
+  "prompt_sha256": "e119496dc5f2a7e1b8a97c9dc092471f898f8a772f1c782da5ce56bb4ad83423",
+  "repository_checks": {
+    "manifest": "1243 maintained files; exact coverage and SHA-256 check passed",
+    "local_links": 572,
+    "origin_records": 11,
+    "transfers": 15,
+    "assets": 9
+  }
+}
