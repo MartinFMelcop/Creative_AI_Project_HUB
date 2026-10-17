@@ -5,6 +5,7 @@ const FIELD := Rect2(50, 185, 1052, 460)
 const ENEMY := Vector2(790, 390)
 const FINISH := 1000.0
 var role := "Guardian"
+var guard_style := "Steady"
 var mode := "title"
 var player := Vector2(550, 390)
 var courier := Vector2(160, 390)
@@ -34,8 +35,9 @@ var last_impact: Dictionary = {}
 var events: Array[Dictionary] = []
 var counters := {"blocks":0,"redirects":0,"dodges":0,"counters":0,"courier_hits":0,"player_hits":0,"rejected":0}
 
-func reset(kind: String) -> void:
+func reset(kind: String, style: String="Steady") -> void:
 	role = kind
+	guard_style = "Riposte" if kind=="Guardian" and style=="Riposte" else ("Steady" if kind=="Guardian" else "none")
 	mode = "play"
 	player = Vector2(550,390)
 	courier = Vector2(160,390)
@@ -79,8 +81,17 @@ static func segment_distance(point: Vector2, a: Vector2, b: Vector2) -> float:
 	if ab.length_squared()<0.001: return point.distance_to(a)
 	return point.distance_to(a+ab*clampf((point-a).dot(ab)/ab.length_squared(),0,1))
 
+func guard_limit() -> float:
+	return 0.30 if guard_style=="Riposte" else 10000.0
+
+func guard_state() -> String:
+	if not guard:return "DOWN"
+	if guard_age<0.06:return "STARTUP"
+	if guard_age>guard_limit():return "STALE"
+	return "LIVE"
+
 func guards_from(origin: Vector2) -> bool:
-	return guard and live_window(guard_age,0.06,10000) and energy>=22 and locked_face.dot((origin-player).normalized())>=0.6
+	return guard and live_window(guard_age,0.06,guard_limit()) and energy>=22 and locked_face.dot((origin-player).normalized())>=0.6
 
 func reject(text: String) -> void:
 	counters.rejected += 1
@@ -210,11 +221,11 @@ func resolve_threat() -> void:
 	if intercepted:
 		if guards_from(ENEMY):
 			energy-=22
-			opening=1.0
+			opening=1.6 if guard_style=="Riposte" else 1.0
 			counters.blocks+=1
 			record("protected")
-			note("Frontal block: courier safe. Release guard; counter if you can reach.")
-			retain_impact("bolt_blocked","Your live frontal guard intercepted the bolt before the courier.","Release guard to recover posture. Strike only when OPEN and close.")
+			note("Timed guard: courier safe. Release K; reach the longer OPEN window." if guard_style=="Riposte" else "Frontal block: courier safe. Release guard; counter if you can reach.")
+			retain_impact("riposte_blocked" if guard_style=="Riposte" else "bolt_blocked","Your timed frontal guard intercepted the bolt." if guard_style=="Riposte" else "Your live frontal guard intercepted the bolt before the courier.","Release K; reach within 130px and press J during the 1.6s opening." if guard_style=="Riposte" else "Release guard to recover posture. Strike only when OPEN and close.")
 		else:
 			hp-=1
 			counters.player_hits+=1
@@ -224,6 +235,8 @@ func resolve_threat() -> void:
 				retain_impact("guard_not_held",("The bolt hit you without an active guard." if role=="Guardian" else "The locked bolt caught you before you left its line."),"Face the sentinel and hold K before impact." if role=="Guardian" else "After drawing a bolt, leave its locked line. A step grants no immunity.")
 			elif guard_age<0.06:
 				retain_impact("guard_startup","The bolt landed before your guard became live.","Begin holding K earlier. Guard needs 60ms to become live.")
+			elif guard_age>guard_limit():
+				retain_impact("guard_stale","Your Riposte guard expired before the bolt landed.","Release K, wait for RAISE K, then raise it again. Live age is 60-300ms.")
 			elif energy<22:
 				retain_impact("guard_insufficient_posture","Your guard had less than the 22 posture needed for impact.","Release K between bolts to recover. Holding guard also spends posture.")
 			elif locked_face.dot((ENEMY-player).normalized())<0.6:
@@ -237,4 +250,4 @@ func resolve_threat() -> void:
 		retain_impact("bolt_missed","The locked bolt hit neither you nor the courier.","An OPEN window follows. Close the distance before a blade counter.")
 
 func snapshot() -> Dictionary:
-	return {"role":role,"mode":mode,"tick":roundi(elapsed*60),"hp":hp,"cargo":cargo,"energy":snappedf(energy,0.001),"courier_x":snappedf(courier.x,0.001),"counters":counters.duplicate(),"events":events.duplicate(true)}
+	return {"role":role,"guard_style":guard_style,"mode":mode,"tick":roundi(elapsed*60),"hp":hp,"cargo":cargo,"energy":snappedf(energy,0.001),"courier_x":snappedf(courier.x,0.001),"counters":counters.duplicate(),"events":events.duplicate(true)}

@@ -42,22 +42,24 @@ def inspect(folder, baseline=False):
         for name in ('title-silence', 'muted-block', 'paused-silence'):
             if name not in metrics or metrics[name]['peak'] != 0:
                 raise ValueError(f'Silence control failed: {name}')
-        for name in ('guardian-block', 'duelist-draw', 'pulse-avoided', 'counter-contact', 'pulse-damage', 'crossing-won', 'crossing-lost'):
+        for name in ('guardian-block', 'duelist-draw', 'pulse-avoided', 'counter-contact', 'pulse-damage', 'crossing-won', 'crossing-lost', 'riposte-block'):
             if not 100 < metrics[name]['peak'] < 16384 or metrics[name]['rms'] < 20:
                 raise ValueError(f'Expected bounded audible mixer signal: {name}')
         rows = {row['name']: row for row in record['records']}
         for name, cues in [('guardian-block', ['bolt', 'block']),
                            ('duelist-draw', ['bolt', 'draw']),
-                           ('pulse-avoided', ['pulse'])]:
+                           ('pulse-avoided', ['pulse']), ('riposte-block', ['bolt', 'block'])]:
             if [e['cue'] for e in rows[name]['sound']['events']] != cues:
                 raise ValueError(f'Wrong model-to-cue ownership: {name}')
             if rows[name]['combat']['hp'] != 5 or rows[name]['combat']['cargo'] != 3:
                 raise ValueError('Prepared successful exercise changed its actual outcome')
+        if rows["riposte-block"]["combat"]["guard_style"] != "Riposte":
+            raise ValueError("Mixer probe did not consume the selected Guardian technique")
         for name, cues in [('counter-contact', ['counter']), ('pulse-damage', ['hurt']),
                            ('crossing-won', ['won']), ('crossing-lost', ['hurt', 'lost'])]:
             if [e['cue'] for e in rows[name]['sound']['events']] != cues:
                 raise ValueError(f'Wrong actual consequence sound: {name}')
-        native = json.loads((ROOT.parents[1] / 'evidence/north-star-sound/results.json').read_text())
+        native = json.loads((ROOT.parents[1] / 'evidence/north-star-guard-techniques/results.json').read_text())
         for name, cue in native['sound']['cues'].items():
             observed = metrics['cue-' + name]
             if observed['pcm_sha256'] != cue['pcm_sha256'] or observed['frames'] != cue['frames']:
@@ -96,7 +98,7 @@ def verify(godot, output, baseline_pack=None):
                         raise ValueError('Source/PCK audio workflow behavior differs')
         Path(output).write_text(json.dumps({"schema_version": 1, "captures": reports,
             "limit": "Actual software AudioServer output, not hardware latency, listening quality, recognition or accessibility validation."}, indent=2, sort_keys=True)+'\n')
-    print('PASS: source/PCK actual mixer, cue ownership, PCM identity, mute/pause and baseline controls')
+    print('PASS: source/PCK actual mixer, cue ownership, PCM identity and mute/pause controls' + ('; historical silent baseline' if baseline_pack else ''))
 
 
 if __name__ == '__main__':

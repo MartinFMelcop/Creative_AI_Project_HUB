@@ -1,56 +1,57 @@
 # Lab state
 
-**Updated:** 2026-10-17 UTC. **SEED:** 0.33.6.
-**Primary mode:** CREATIVE PRODUCTION. **Priority:** category 1, existing consumer.
-Baseline local/fetched main `446ecd46b7750efc9a7a8b780d3fd75566f5b9ed`;
+**Updated:** 2026-10-17 UTC. **SEED:** 0.33.7.
+**Primary mode:** DEVELOPMENT. **Priority:** category 1, existing consumer.
+Baseline local/fetched main `e86b596f539b258c951fdd59d130e55a7b58d1c9`;
 tracked tree clean, unrelated untracked work/ preserved. Branch
-`codex/north-star-sound-20261017`; authenticated Git publication available.
+`codex/north-star-guard-techniques-20261017`; authenticated Git transport available.
 
 ## Observable product change
 
-[Crossing Drill](../north-star/prototype/README.md) was silent. It now consumes eight
-original procedural cues: distinct bolt/floor warnings, block/draw signatures,
-counter/damage and terminal cadences. Sound follows actual accepted events, not button
-presses. F1/F5 toggles session mute; fixed F5 outside settings keeps its save-retry role.
-Visual geometry/text remain sufficient. Pause, focus loss, settings and model replacement
-stop voices; unmute/resume do not replay history. Only two voices can overlap.
+[Crossing Drill](../north-star/prototype/README.md) now offers a real within-Guardian
+choice before an attempt. Title-only Tab selects default Steady or Riposte. Steady
+retains sustained frontal guard and 1.0s OPEN. Riposte only protects at guard age 60–300ms;
+holding early expires and exposes the player, while success grants 1.6s OPEN. The extra
+opening accepts a real counter at 1.2s that Steady cannot. Posture costs, facing, counter
+reach and floor vulnerability are unchanged. Duelist keeps its existing behavior.
 
-Combat, rehearsal, medicine, keepsakes and keyboard-profile contracts remain intact.
-Stage remains **local_prototype**, one consumer/seven code paths, fourteen capabilities,
-**NS-C03 and bounded NS-C07 adapted**, twelve states unchanged. This is not shared-kernel,
-production MMORPG, physical audio or final engine validation. No new lab or class canon.
+Choice is locked in crossing, pause and rehearsal. R abandons for selection; a fresh
+process defaults Steady. Actual rehearsal/retry/clean crossing retain the choice while
+resetting committed state. No talent framework, stat tier, new reward, profile schema,
+final specialization or canon approval. The timing cue, shield state/expiry and retained
+failure tip make the trade-off inspectable; text follows remapped ability input.
 
-## Execution and creative assessment
+## Execution and assessment
 
-[Execution](../evidence/north-star-sound/RUN.json) binds source/PCK, baseline, actual
-commands and output. 208 native checks pass with exact observations and sixteen restart
-processes. Existing gameplay groups match baseline exactly. AudioServer captures both
-source/PCK, the historical silent PCK, accepted responses and normal consequences;
-title/mute/pause controls are digitally silent. Eight PCM exports match runtime synthesis.
-Six adverse evidence checks reject silence, leakage, wrong ownership and changed PCM.
-Prepared exercises/counter/damage/endings are explicit setups, not independent players
-or full-route OS-key navigation. Owned applications/preview processes are bounded.
+[Execution](../evidence/north-star-guard-techniques/RUN.json) binds final source/PCK,
+baseline, native checks, whole routes, actual OS input, presentation and mixer output.
+242 native checks pass in both delivery forms; sixteen independent keepsake/control
+restart processes remain. Default observation groups preserve all prior values after
+removing only newly recorded guard_style context. Riposte's appropriate full route wins;
+reusing sustained early holding loses. Timed medicine handoff/escort also succeeds.
+These are deterministic policies, not optimality, comparative balance or human play.
 
-The intended register/rhythm contrast and role signatures are inspectable in actual WAV
-output, and the cue legend/mute presentation is visually inspected. No physical headphone/
-speaker listening, player recognition, mix comfort, learning, accessibility, enjoyment,
-latency, multiplayer, scale or commercial evidence is claimed. Signal correctness is not
-creative validation. Attaching to an old model initially risked replay; cursor ownership
-now rejects it. A guard fixture expected contact before the real 60ms startup and was
-corrected. Accelerated tests wait for stopped playback retirement before process exit.
+Actual XTest input selects the technique, fails early holding, then retries with input
+received at tick 45 and confirms the timed block. Intrusive PNG polling with tap waits read tick 51 but
+K reached baseline tick 59/current tick 60; both failed. Lightweight consumer probing
+corrected the driver without changing the rule. The prompt now adds one conditional
+instrumentation/receipt check for timing-sensitive interaction, justified by this result.
 
-## Selection, knowledge, portfolio and migration
+Rendered selection, ready, stale/timed guard and review are inspected. Actual source/PCK
+AudioServer output confirms that the selected technique still produces its accepted
+block cue; mute/pause and original audio remain controlled. No independent participants,
+unassisted learning, balance, enjoyment, physical latency/audio, accessibility, multiplayer,
+scale or commercial evidence. Owned previews and test processes are bounded and stopped.
 
-Compared build variation, another encounter, hold/toggle controls and the observed
-silent action loop. Selected sound production improves current choices without new
-infrastructure. ENG-005/023, SCI-064 and CRE-001/067/073 guide event invariants, experience
-limits, direct author identity and candidate signatures. All domains high. Brain bytes,
-pins and historical references remain unchanged.
+## Brains, knowledge, portfolio and migration
 
-Existing combat-response knowledge gains a temporal-ownership/mixer finding. The portfolio
-now demonstrates reactive procedural audio in a real destination, with AUD-006 naming its
-actual code consumer; no old audio asset is relabeled as imported. P01–P05/P07/P08/P10/P11
-remain preserved_pending_extraction, P06 pilot_instrumented, P09 seed_only. All origins,
-media, existing consumers and tests are preserved; no extraction completed by renaming.
-The single operational prompt remains unchanged because present production, selective
-activation and evidence guidance served the increment. Publication/CI verified separately.
+All brain domains high: ENG-005 for exclusive states; SCI-017 for matched/negative
+controls; CRE-001 direct author identity and CRE-011/013/014 candidate build/Guardian
+ideas. Brains/pins and historical sources remain unchanged. Existing combat-response
+knowledge gains the executed trade-off and instrumentation finding, with validity limits.
+The portfolio demonstrates actual character-choice consequences in the maintained native
+consumer, not another renamed origin or laboratory. Stage remains local_prototype,
+one consumer/seven code paths, fourteen capabilities; NS-C03/07 adapted, twelve unchanged.
+P01–P05/P07/P08/P10/P11 remain preserved_pending_extraction, P06 pilot_instrumented,
+P09 seed_only. All original code/media/tests/consumers are preserved; no new lab or origin
+migration promotion. Publication and CI are verified separately at closeout.

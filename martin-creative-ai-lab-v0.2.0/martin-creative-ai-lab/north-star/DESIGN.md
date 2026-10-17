@@ -43,6 +43,23 @@ available, and F1/F5 mutes immediately for the session. No spatial or physical-d
 claim follows. Recognition, mix comfort and experiential value require listening and
 player observation; signal integrity alone cannot establish them.
 
+## Guardian technique choice — experimental
+
+CRE-001 is direct author identity direction. CRE-011/013/014 are build, exclusion and
+Guardian hypotheses; implementation does not adopt their candidate trees or class canon.
+Steady retains baseline sustained frontal guard and 1.0s OPEN. Title-only Tab selects
+Riposte: guard age 60–300ms, then expiry while held, with 1.6s OPEN on a confirmed block.
+The player trades sustained safety for timing commitment and extra counter opportunity;
+there is no added stat tier, persistent power, special loot or default difficulty change.
+Both keep posture, facing, floor vulnerability and actual 130px counter reach.
+
+The selected technique is fixed through crossing, pause and rehearsal. Reentry through
+R permits an explicit choice; a fresh process uses Steady. Rehearsal repeats retain choice
+but reset commitment/resources. Its final prepared opening stays 1.0s and grants no buff.
+Visible warning timing, guard state/expiry and retained failure cause make the trade-off
+inspectable. A1.2s late counter is accepted only after the longer opening. Full routes
+and synthetic OS input show execution, not balance, comprehension, preference or fun.
+
 ## Current product contract
 
 The player chooses one experimental approach, escorts the courier to the far gate,

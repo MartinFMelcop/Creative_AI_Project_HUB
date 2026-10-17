@@ -135,7 +135,9 @@ readability, musical timing/identity or recoverability/user control as relevant.
 Bound runtime processes and stop owned previews/test applications after verification
 or interruption. Run proportionate unit/integration/runtime/engine/media/persistence
 and failure checks. Reproduce suspected sandbox/socket/display/audio-driver failures
-against baseline before changing software or weakening gates. Separate code creation,
+against baseline before changing software or weakening gates. For timing-sensitive
+interaction, verify input receipt in the consumer and whether instrumentation changes
+observed timing before attributing a failure to the product. Separate code creation,
 compilation, configured engine, actual execution and gameplay verification. Separate
 technical correctness, agent creative assessment and genuine external human validation.
 Never invent users, originality, scores, enjoyment, retention, revenue or readiness.

@@ -2,6 +2,13 @@
 
 A seed pode ser reescrita quando uma decisão ou descoberta mudar sua direção. O objetivo é manter uma base útil para planejar e desenvolver. Tamanho e quantidade de projetos não são medidas de sucesso.
 
+## Verification refinement — v0.33.7
+
+Actual keyboard trials exposed screenshot-driven input arriving too late in both
+baseline and current consumer. The continuous prompt now requires checking consumer-side
+receipt and instrumentation interference when timing matters; see ADR-077 and current
+STATE. No production direction, immutable brain or publication safeguard changes.
+
 ## Current operation — v0.33.0
 
 The HUB remains a Design-Driven technology portfolio developed with generative AI.

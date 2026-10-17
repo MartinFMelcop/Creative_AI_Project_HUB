@@ -1,0 +1,460 @@
+{
+  "observations": {
+    "choice": {
+      "game": {
+        "cargo": 3,
+        "counters": {
+          "blocks": 0,
+          "counters": 0,
+          "courier_hits": 0,
+          "dodges": 0,
+          "player_hits": 0,
+          "redirects": 0,
+          "rejected": 0
+        },
+        "courier_x": 160.0,
+        "energy": 100.0,
+        "events": [],
+        "guard_style": "Riposte",
+        "hp": 5,
+        "mode": "title",
+        "role": "Guardian",
+        "tick": 0
+      },
+      "guard_age": 0.0,
+      "guard_state": "DOWN",
+      "impact": {
+
+      },
+      "opening": 0.0,
+      "rehearsal": {
+        "active": false,
+        "attempts": 0,
+        "passed": false,
+        "paused": false,
+        "results": [],
+        "stage": 0,
+        "state": "ready"
+      },
+      "sound": {
+        "events": [],
+        "muted": false,
+        "voice_limit": 2
+      }
+    },
+    "early-review": {
+      "game": {
+        "cargo": 3,
+        "counters": {
+          "blocks": 0,
+          "counters": 0,
+          "courier_hits": 0,
+          "dodges": 0,
+          "player_hits": 1,
+          "redirects": 0,
+          "rejected": 0
+        },
+        "courier_x": 338.0,
+        "energy": 88.0,
+        "events": [
+          {
+            "cargo": 3,
+            "energy": 88.0,
+            "hp": 4,
+            "kind": "bolt_hit",
+            "tick": 60
+          }
+        ],
+        "guard_style": "Riposte",
+        "hp": 4,
+        "mode": "paused",
+        "role": "Guardian",
+        "tick": 60
+      },
+      "guard_age": 1.0,
+      "guard_state": "STALE",
+      "impact": {
+        "code": "guard_stale",
+        "explanation": "Your Riposte guard expired before the bolt landed.",
+        "tip": "Release K, wait for RAISE K, then raise it again. Live age is 60-300ms."
+      },
+      "opening": 0.0,
+      "rehearsal": {
+        "active": true,
+        "attempts": 1,
+        "passed": false,
+        "paused": false,
+        "results": [
+          {
+            "attempt": 1,
+            "impact": {
+              "code": "guard_stale",
+              "explanation": "Your Riposte guard expired before the bolt landed.",
+              "tip": "Release K, wait for RAISE K, then raise it again. Live age is 60-300ms."
+            },
+            "passed": false,
+            "snapshot": {
+              "cargo": 3,
+              "counters": {
+                "blocks": 0,
+                "counters": 0,
+                "courier_hits": 0,
+                "dodges": 0,
+                "player_hits": 1,
+                "redirects": 0,
+                "rejected": 0
+              },
+              "courier_x": 338.0,
+              "energy": 88.0,
+              "events": [
+                {
+                  "cargo": 3,
+                  "energy": 88.0,
+                  "hp": 4,
+                  "kind": "bolt_hit",
+                  "tick": 60
+                }
+              ],
+              "guard_style": "Riposte",
+              "hp": 4,
+              "mode": "paused",
+              "role": "Guardian",
+              "tick": 60
+            },
+            "stage": 0
+          }
+        ],
+        "stage": 0,
+        "state": "review"
+      },
+      "sound": {
+        "events": [
+          {
+            "cue": "bolt",
+            "tick": 0
+          },
+          {
+            "cue": "hurt",
+            "tick": 60
+          }
+        ],
+        "muted": false,
+        "voice_limit": 2
+      }
+    },
+    "raise-now": {
+      "game": {
+        "cargo": 3,
+        "counters": {
+          "blocks": 0,
+          "counters": 0,
+          "courier_hits": 0,
+          "dodges": 0,
+          "player_hits": 0,
+          "redirects": 0,
+          "rejected": 0
+        },
+        "courier_x": 331.0,
+        "energy": 100.0,
+        "events": [],
+        "guard_style": "Riposte",
+        "hp": 5,
+        "mode": "play",
+        "role": "Guardian",
+        "tick": 45
+      },
+      "guard_age": 0.0,
+      "guard_state": "DOWN",
+      "impact": {
+
+      },
+      "opening": 0.0,
+      "rehearsal": {
+        "active": true,
+        "attempts": 2,
+        "passed": false,
+        "paused": false,
+        "results": [
+          {
+            "attempt": 1,
+            "impact": {
+              "code": "guard_stale",
+              "explanation": "Your Riposte guard expired before the bolt landed.",
+              "tip": "Release K, wait for RAISE K, then raise it again. Live age is 60-300ms."
+            },
+            "passed": false,
+            "snapshot": {
+              "cargo": 3,
+              "counters": {
+                "blocks": 0,
+                "counters": 0,
+                "courier_hits": 0,
+                "dodges": 0,
+                "player_hits": 1,
+                "redirects": 0,
+                "rejected": 0
+              },
+              "courier_x": 338.0,
+              "energy": 88.0,
+              "events": [
+                {
+                  "cargo": 3,
+                  "energy": 88.0,
+                  "hp": 4,
+                  "kind": "bolt_hit",
+                  "tick": 60
+                }
+              ],
+              "guard_style": "Riposte",
+              "hp": 4,
+              "mode": "paused",
+              "role": "Guardian",
+              "tick": 60
+            },
+            "stage": 0
+          }
+        ],
+        "stage": 0,
+        "state": "live"
+      },
+      "sound": {
+        "events": [
+          {
+            "cue": "bolt",
+            "tick": 0
+          }
+        ],
+        "muted": false,
+        "voice_limit": 2
+      }
+    },
+    "ready": {
+      "game": {
+        "cargo": 3,
+        "counters": {
+          "blocks": 0,
+          "counters": 0,
+          "courier_hits": 0,
+          "dodges": 0,
+          "player_hits": 0,
+          "redirects": 0,
+          "rejected": 0
+        },
+        "courier_x": 310.0,
+        "energy": 100.0,
+        "events": [],
+        "guard_style": "Riposte",
+        "hp": 5,
+        "mode": "paused",
+        "role": "Guardian",
+        "tick": 0
+      },
+      "guard_age": 0.0,
+      "guard_state": "DOWN",
+      "impact": {
+
+      },
+      "opening": 0.0,
+      "rehearsal": {
+        "active": true,
+        "attempts": 0,
+        "passed": false,
+        "paused": false,
+        "results": [],
+        "stage": 0,
+        "state": "ready"
+      },
+      "sound": {
+        "events": [],
+        "muted": false,
+        "voice_limit": 2
+      }
+    },
+    "stale-guard": {
+      "game": {
+        "cargo": 3,
+        "counters": {
+          "blocks": 0,
+          "counters": 0,
+          "courier_hits": 0,
+          "dodges": 0,
+          "player_hits": 0,
+          "redirects": 0,
+          "rejected": 0
+        },
+        "courier_x": 331.0,
+        "energy": 91.0,
+        "events": [],
+        "guard_style": "Riposte",
+        "hp": 5,
+        "mode": "play",
+        "role": "Guardian",
+        "tick": 45
+      },
+      "guard_age": 0.750000000000001,
+      "guard_state": "STALE",
+      "impact": {
+
+      },
+      "opening": 0.0,
+      "rehearsal": {
+        "active": true,
+        "attempts": 1,
+        "passed": false,
+        "paused": false,
+        "results": [],
+        "stage": 0,
+        "state": "live"
+      },
+      "sound": {
+        "events": [
+          {
+            "cue": "bolt",
+            "tick": 0
+          }
+        ],
+        "muted": false,
+        "voice_limit": 2
+      }
+    },
+    "timed-review": {
+      "game": {
+        "cargo": 3,
+        "counters": {
+          "blocks": 1,
+          "counters": 0,
+          "courier_hits": 0,
+          "dodges": 0,
+          "player_hits": 0,
+          "redirects": 0,
+          "rejected": 0
+        },
+        "courier_x": 338.0,
+        "energy": 75.0,
+        "events": [
+          {
+            "cargo": 3,
+            "energy": 75.0,
+            "hp": 5,
+            "kind": "protected",
+            "tick": 60
+          }
+        ],
+        "guard_style": "Riposte",
+        "hp": 5,
+        "mode": "paused",
+        "role": "Guardian",
+        "tick": 60
+      },
+      "guard_age": 0.25,
+      "guard_state": "LIVE",
+      "impact": {
+        "code": "riposte_blocked",
+        "explanation": "Your timed frontal guard intercepted the bolt.",
+        "tip": "Release K; reach within 130px and press J during the 1.6s opening."
+      },
+      "opening": 1.6,
+      "rehearsal": {
+        "active": true,
+        "attempts": 2,
+        "passed": true,
+        "paused": false,
+        "results": [
+          {
+            "attempt": 1,
+            "impact": {
+              "code": "guard_stale",
+              "explanation": "Your Riposte guard expired before the bolt landed.",
+              "tip": "Release K, wait for RAISE K, then raise it again. Live age is 60-300ms."
+            },
+            "passed": false,
+            "snapshot": {
+              "cargo": 3,
+              "counters": {
+                "blocks": 0,
+                "counters": 0,
+                "courier_hits": 0,
+                "dodges": 0,
+                "player_hits": 1,
+                "redirects": 0,
+                "rejected": 0
+              },
+              "courier_x": 338.0,
+              "energy": 88.0,
+              "events": [
+                {
+                  "cargo": 3,
+                  "energy": 88.0,
+                  "hp": 4,
+                  "kind": "bolt_hit",
+                  "tick": 60
+                }
+              ],
+              "guard_style": "Riposte",
+              "hp": 4,
+              "mode": "paused",
+              "role": "Guardian",
+              "tick": 60
+            },
+            "stage": 0
+          },
+          {
+            "attempt": 2,
+            "impact": {
+              "code": "riposte_blocked",
+              "explanation": "Your timed frontal guard intercepted the bolt.",
+              "tip": "Release K; reach within 130px and press J during the 1.6s opening."
+            },
+            "passed": true,
+            "snapshot": {
+              "cargo": 3,
+              "counters": {
+                "blocks": 1,
+                "counters": 0,
+                "courier_hits": 0,
+                "dodges": 0,
+                "player_hits": 0,
+                "redirects": 0,
+                "rejected": 0
+              },
+              "courier_x": 338.0,
+              "energy": 75.0,
+              "events": [
+                {
+                  "cargo": 3,
+                  "energy": 75.0,
+                  "hp": 5,
+                  "kind": "protected",
+                  "tick": 60
+                }
+              ],
+              "guard_style": "Riposte",
+              "hp": 5,
+              "mode": "paused",
+              "role": "Guardian",
+              "tick": 60
+            },
+            "stage": 0
+          }
+        ],
+        "stage": 0,
+        "state": "review"
+      },
+      "sound": {
+        "events": [
+          {
+            "cue": "bolt",
+            "tick": 0
+          },
+          {
+            "cue": "block",
+            "tick": 60
+          }
+        ],
+        "muted": false,
+        "voice_limit": 2
+      }
+    }
+  },
+  "scope": "Prepared actual rehearsal with synthetic input and controlled model ticks between rendered frames; not real-time performance or a human participant."
+}

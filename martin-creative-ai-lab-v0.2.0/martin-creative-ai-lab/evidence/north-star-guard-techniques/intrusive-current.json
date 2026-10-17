@@ -1,0 +1,370 @@
+{
+  "label": "current",
+  "observed_raise_tick": 51,
+  "outcome": {
+    "cargo": 3,
+    "controls": {
+      "draft": {},
+      "listening": false,
+      "message": "",
+      "open": false,
+      "profile": {
+        "blocked": false,
+        "dirty": false,
+        "keys": {
+          "aim_down": 4194322,
+          "aim_left": 4194319,
+          "aim_right": 4194321,
+          "aim_up": 4194320,
+          "interact": 69,
+          "move_down": 83,
+          "move_left": 65,
+          "move_right": 68,
+          "move_up": 87,
+          "skill": 75,
+          "step": 32,
+          "strike": 74
+        },
+        "status": "Defaults. Apply to save on this device."
+      },
+      "row": 0
+    },
+    "counters": {
+      "blocks": 0,
+      "counters": 0,
+      "courier_hits": 0,
+      "dodges": 0,
+      "player_hits": 1,
+      "redirects": 0,
+      "rejected": 0
+    },
+    "courier_x": 338.0,
+    "energy": 100.0,
+    "errand": {
+      "channel": false,
+      "events": [],
+      "finished": false,
+      "progress": 0.0,
+      "state": "waiting"
+    },
+    "events": [
+      {
+        "cargo": 3,
+        "energy": 100.0,
+        "hp": 4,
+        "kind": "bolt_hit",
+        "tick": 60
+      }
+    ],
+    "guard_style": "Riposte",
+    "hp": 4,
+    "keepsakes": {
+      "blocked": false,
+      "dirty": false,
+      "earned": [],
+      "equipped": "",
+      "status": "Session only. Earn a crossing mark to save."
+    },
+    "last_impact": {
+      "code": "guard_not_held",
+      "explanation": "The bolt hit you without an active guard.",
+      "tip": "Face the sentinel and hold K before impact."
+    },
+    "mode": "paused",
+    "rehearsal": {
+      "active": true,
+      "attempts": 1,
+      "passed": false,
+      "paused": false,
+      "results": [
+        {
+          "attempt": 1,
+          "impact": {
+            "code": "guard_not_held",
+            "explanation": "The bolt hit you without an active guard.",
+            "tip": "Face the sentinel and hold K before impact."
+          },
+          "passed": false,
+          "snapshot": {
+            "cargo": 3,
+            "counters": {
+              "blocks": 0,
+              "counters": 0,
+              "courier_hits": 0,
+              "dodges": 0,
+              "player_hits": 1,
+              "redirects": 0,
+              "rejected": 0
+            },
+            "courier_x": 338.0,
+            "energy": 100.0,
+            "events": [
+              {
+                "cargo": 3,
+                "energy": 100.0,
+                "hp": 4,
+                "kind": "bolt_hit",
+                "tick": 60
+              }
+            ],
+            "guard_style": "Riposte",
+            "hp": 4,
+            "mode": "paused",
+            "role": "Guardian",
+            "tick": 60
+          },
+          "stage": 0
+        }
+      ],
+      "stage": 0,
+      "state": "review"
+    },
+    "role": "Guardian",
+    "sound": {
+      "events": [
+        {
+          "cue": "bolt",
+          "tick": 0
+        },
+        {
+          "cue": "hurt",
+          "tick": 60
+        }
+      ],
+      "muted": false,
+      "voice_limit": 2
+    },
+    "tick": 60
+  },
+  "probe": {
+    "cargo": 3,
+    "counters": {
+      "blocks": 0,
+      "counters": 0,
+      "courier_hits": 0,
+      "dodges": 0,
+      "player_hits": 1,
+      "redirects": 0,
+      "rejected": 0
+    },
+    "courier_x": 338.0,
+    "energy": 100.0,
+    "events": [
+      {
+        "cargo": 3,
+        "energy": 100.0,
+        "hp": 4,
+        "kind": "bolt_hit",
+        "tick": 60
+      }
+    ],
+    "guard_style": "Riposte",
+    "hp": 4,
+    "inputs": [
+      {
+        "logical": 4194343,
+        "mode": "title",
+        "physical": 4194343,
+        "pressed": true,
+        "tick": 0
+      },
+      {
+        "logical": 4194343,
+        "mode": "title",
+        "physical": 4194343,
+        "pressed": false,
+        "tick": 0
+      },
+      {
+        "logical": 4194306,
+        "mode": "title",
+        "physical": 4194306,
+        "pressed": true,
+        "tick": 0
+      },
+      {
+        "logical": 4194306,
+        "mode": "title",
+        "physical": 4194306,
+        "pressed": false,
+        "tick": 0
+      },
+      {
+        "logical": 84,
+        "mode": "title",
+        "physical": 84,
+        "pressed": true,
+        "tick": 0
+      },
+      {
+        "logical": 84,
+        "mode": "paused",
+        "physical": 84,
+        "pressed": false,
+        "tick": 0
+      },
+      {
+        "logical": 4194309,
+        "mode": "paused",
+        "physical": 4194309,
+        "pressed": true,
+        "tick": 0
+      },
+      {
+        "logical": 4194309,
+        "mode": "play",
+        "physical": 4194309,
+        "pressed": false,
+        "tick": 4
+      },
+      {
+        "logical": 4194343,
+        "mode": "play",
+        "physical": 4194343,
+        "pressed": true,
+        "tick": 9
+      },
+      {
+        "logical": 4194343,
+        "mode": "play",
+        "physical": 4194343,
+        "pressed": false,
+        "tick": 11
+      },
+      {
+        "logical": 4194343,
+        "mode": "play",
+        "physical": 4194343,
+        "pressed": true,
+        "tick": 20
+      },
+      {
+        "logical": 4194343,
+        "mode": "play",
+        "physical": 4194343,
+        "pressed": false,
+        "tick": 22
+      },
+      {
+        "logical": 4194343,
+        "mode": "play",
+        "physical": 4194343,
+        "pressed": true,
+        "tick": 29
+      },
+      {
+        "logical": 4194343,
+        "mode": "play",
+        "physical": 4194343,
+        "pressed": false,
+        "tick": 31
+      },
+      {
+        "logical": 4194343,
+        "mode": "play",
+        "physical": 4194343,
+        "pressed": true,
+        "tick": 39
+      },
+      {
+        "logical": 4194343,
+        "mode": "play",
+        "physical": 4194343,
+        "pressed": false,
+        "tick": 41
+      },
+      {
+        "logical": 4194343,
+        "mode": "play",
+        "physical": 4194343,
+        "pressed": true,
+        "tick": 49
+      },
+      {
+        "logical": 4194343,
+        "mode": "play",
+        "physical": 4194343,
+        "pressed": false,
+        "tick": 51
+      },
+      {
+        "logical": 75,
+        "mode": "paused",
+        "physical": 75,
+        "pressed": true,
+        "tick": 60
+      },
+      {
+        "logical": 4194343,
+        "mode": "paused",
+        "physical": 4194343,
+        "pressed": true,
+        "tick": 60
+      },
+      {
+        "logical": 4194343,
+        "mode": "paused",
+        "physical": 4194343,
+        "pressed": false,
+        "tick": 60
+      }
+    ],
+    "last_impact": {
+      "code": "guard_not_held",
+      "explanation": "The bolt hit you without an active guard.",
+      "tip": "Face the sentinel and hold K before impact."
+    },
+    "mode": "paused",
+    "rehearsal": {
+      "active": true,
+      "attempts": 1,
+      "passed": false,
+      "paused": false,
+      "results": [
+        {
+          "attempt": 1,
+          "impact": {
+            "code": "guard_not_held",
+            "explanation": "The bolt hit you without an active guard.",
+            "tip": "Face the sentinel and hold K before impact."
+          },
+          "passed": false,
+          "snapshot": {
+            "cargo": 3,
+            "counters": {
+              "blocks": 0,
+              "counters": 0,
+              "courier_hits": 0,
+              "dodges": 0,
+              "player_hits": 1,
+              "redirects": 0,
+              "rejected": 0
+            },
+            "courier_x": 338.0,
+            "energy": 100.0,
+            "events": [
+              {
+                "cargo": 3,
+                "energy": 100.0,
+                "hp": 4,
+                "kind": "bolt_hit",
+                "tick": 60
+              }
+            ],
+            "guard_style": "Riposte",
+            "hp": 4,
+            "mode": "paused",
+            "role": "Guardian",
+            "tick": 60
+          },
+          "stage": 0
+        }
+      ],
+      "stage": 0,
+      "state": "review"
+    },
+    "role": "Guardian",
+    "tick": 60
+  },
+  "scope": "Intrusive mid-trial PNG polling followed by actual K. Diagnostic only, not human/performance evaluation. Model timings and key receipt are observed, not forced."
+}

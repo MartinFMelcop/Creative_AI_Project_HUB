@@ -24,6 +24,7 @@ var drawing_controls := false
 var rehearsal = Rehearsal.new()
 var game = Combat.new()
 var selected := "Guardian"
+var guardian_style := "Steady"
 var taps := {}
 var font = ThemeDB.fallback_font
 const INK := Color("101b2b")
@@ -50,6 +51,7 @@ func abandon() -> void:
 	rehearsal = Rehearsal.new()
 	game = Combat.new()
 	game.role = selected
+	game.guard_style=guardian_style if selected=="Guardian" else "none"
 	taps.clear()
 
 func begin_crossing() -> void:
@@ -59,7 +61,7 @@ func begin_crossing() -> void:
 	reward_message=""
 	rehearsal.active = false
 	game = Combat.new()
-	game.reset(selected)
+	game.reset(selected,guardian_style)
 	sound.observe(game,true)
 	taps.clear()
 
@@ -103,9 +105,12 @@ func _unhandled_key_input(event: InputEvent) -> void:
 			taps.clear()
 		elif key==KEY_R and game.mode!="play": abandon()
 		elif game.mode=="title":
-			if key==KEY_1: selected="Guardian"; game.role=selected
-			elif key==KEY_2: selected="Duelist"; game.role=selected
-			elif key==KEY_T: rehearsal.start(selected); game=rehearsal.game; taps.clear()
+			if key==KEY_1: selected="Guardian"; game.role=selected;game.guard_style=guardian_style
+			elif key==KEY_2: selected="Duelist"; game.role=selected;game.guard_style="none"
+			elif key==KEY_TAB and selected=="Guardian":
+				guardian_style="Riposte" if guardian_style=="Steady" else "Steady"
+				game.guard_style=guardian_style
+			elif key==KEY_T: rehearsal.start(selected,guardian_style); game=rehearsal.game; taps.clear()
 	if game.mode=="play":
 		if bindings.matches(event,"strike"): taps.strike=true
 		if bindings.matches(event,"skill"): taps.skill_pressed=true
@@ -223,6 +228,7 @@ func _draw() -> void:
 		var width: float=3+game.clock*8
 		draw_line(Combat.ENEMY,game.target,Color(1,0.75,0.4,0.25+game.clock*0.5),width)
 		draw_arc(game.target,26,0,TAU,24,AMBER,2)
+		if game.role=="Guardian" and game.guard_style=="Riposte" and not reviewing:draw_guard_timing()
 		var label=game.target+Vector2(-50,-76 if game.target.distance_to(game.player)<80 else -38)
 		label.y=maxf(200,label.y)
 		text(label,"LAST LOCKED LINE" if reviewing else "LOCKED BOLT",14,AMBER)
@@ -251,27 +257,35 @@ func _draw() -> void:
 	draw_line(game.player+game.facing*26,game.player+game.facing*42,PAPER,3)
 	if game.guard:
 		var angle: float=game.locked_face.angle()
-		draw_arc(game.player,37,angle-0.9,angle+0.9,24,TEAL if game.guards_from(Combat.ENEMY) else AMBER,7)
+		draw_arc(game.player,37,angle-0.9,angle+0.9,24,TEAL if game.guards_from(Combat.ENEMY) else (RED if game.guard_state()=="STALE" else AMBER),7)
 	if game.step_left>0: draw_line(game.player-game.step_dir*70,game.player,c,8)
 	text(game.player+Vector2(-20,47 if game.player.y<245 else -38),"YOU",14,c)
 	draw_header()
 	panel(Rect2(30,662,1092,86))
-	text(Vector2(48,686),"WASD move   •   ARROWS aim   •   J blade   •   K "+("hold guard" if game.role=="Guardian" else "feint bolt")+"   •   SPACE step   •   ESC pause",17)
+	text(Vector2(48,686),"WASD move   •   ARROWS aim   •   J blade   •   K "+(("timed guard" if game.guard_style=="Riposte" else "hold guard") if game.role=="Guardian" else "feint bolt")+"   •   SPACE step   •   ESC pause",17)
 	text(Vector2(48,718),footer(),17,AMBER)
 	if rehearsal.active: rehearsal_overlay()
 	elif game.mode!="play": overlay()
 	if controls_open:
 		drawing_controls=true;draw_controls();drawing_controls=false
 
+func draw_guard_timing() -> void:
+	var cue: String="RAISE K NOW" if game.clock>=0.74 and game.clock<=0.90 else ("WAIT TO RAISE" if game.clock<0.74 else "CONTACT NEAR")
+	if game.guard_state()=="STALE":cue="STALE / RELEASE K"
+	var color: Color=TEAL if cue=="RAISE K NOW" else (RED if game.guard_state()=="STALE" else AMBER)
+	draw_arc(Combat.ENEMY,47,-PI/2,-PI/2+TAU*clampf(game.clock,0,1),40,color,3)
+	text(Combat.ENEMY+Vector2(-72,-84),cue,15,color)
+
 func draw_header() -> void:
 	draw_rect(Rect2(0,0,1152,174),INK)
 	text(Vector2(40,42),"VIRGO DIAMOND / "+("REHEARSAL" if rehearsal.active else "CROSSING DRILL"),25)
 	text(Vector2(950,41),"F1 Keys / sound",16,AMBER)
 	text(Vector2(40,70),("%d / 3  %s  •  "%[rehearsal.stage+1,rehearsal.heading()]+rehearsal.instruction()) if rehearsal.active else (errand.hint() if errand.active else "LOCAL EXPERIMENT  •  Keep the courier alive to the far gate"),16,AMBER)
-	text(Vector2(40,110),game.role.to_upper()+"  /  HEALTH "+str(game.hp)+"   COURIER "+str(game.cargo),19)
+	text(Vector2(40,110),game.role.to_upper()+(" / "+game.guard_style.to_upper() if game.role=="Guardian" else "")+"  /  HEALTH "+str(game.hp)+"   COURIER "+str(game.cargo),19)
 	draw_rect(Rect2(40,130,300,12),Color("32475a"))
 	draw_rect(Rect2(40,130,300*game.energy/100,12),TEAL if game.role=="Guardian" else AMBER)
 	text(Vector2(355,142),"POSTURE" if game.role=="Guardian" else "RESOLVE",15)
+	if game.role=="Guardian":text(Vector2(460,142),"GUARD "+game.guard_state(),14,RED if game.guard_state()=="STALE" else PAPER)
 	var progress: float=(game.courier.x-160)/(1000-160)
 	text(Vector2(750,111),("PAUSED" if rehearsal.paused else ("RESPONSE VERIFIED" if rehearsal.passed else rehearsal.state.to_upper())) if rehearsal.active else "CROSSING  %d%%"%roundi(progress*100),19)
 	draw_rect(Rect2(750,130,350,12),Color("32475a"))
@@ -288,9 +302,9 @@ func overlay() -> void:
 		panel(Rect2(180,292,380,212),Color("244a50") if selected=="Guardian" else Color("1b2d40"))
 		panel(Rect2(590,292,380,212),Color("594730") if selected=="Duelist" else Color("1b2d40"))
 		text(Vector2(205,330),"1  GUARDIAN",26,TEAL)
-		text(Vector2(205,370),"Stand between bolt and courier.",19)
-		text(Vector2(205,400),"Aim at sentinel, hold K to block.",19)
-		text(Vector2(205,430),"Guard drains posture; release to recover.",17)
+		text(Vector2(205,365),"TAB  "+guardian_style+" guard",20,TEAL)
+		text(Vector2(205,400),"Raise late; early guard expires." if guardian_style=="Riposte" else "Aim at sentinel, hold K to block.",19)
+		text(Vector2(205,430),"60-300ms guard; OPEN lasts 1.6s." if guardian_style=="Riposte" else "Sustained guard; OPEN lasts 1.0s.",17)
 		text(Vector2(205,467),"Cross + block: Held the Line",17,TEAL)
 		text(Vector2(615,330),"2  DUELIST",26,AMBER)
 		text(Vector2(615,370),"K during a bolt warning draws its aim.",18)
@@ -311,7 +325,7 @@ func overlay() -> void:
 		text(Vector2(130,617),"Optional case: hold E nearby to recover, then E near courier to hand over. Neither waits.",17,AMBER)
 	else:
 		text(Vector2(250,290),"THE COURIER CROSSED" if game.mode=="won" else "THE LINE BROKE",36,TEAL if game.mode=="won" else RED)
-		text(Vector2(250,345),game.role+"  /  blocks %d   drawn bolts %d   counters %d"%[game.counters.blocks,game.counters.redirects,game.counters.counters],22)
+		text(Vector2(250,345),game.role+(" / "+game.guard_style if game.role=="Guardian" else "")+"  /  blocks %d   drawn bolts %d   counters %d"%[game.counters.blocks,game.counters.redirects,game.counters.counters],22)
 		text(Vector2(250,390),"Health %d / 5    Courier %d / 3    Crossing %d%%"%[game.hp,game.cargo,roundi((game.courier.x-160)/840*100)],21)
 		draw_impact(Vector2(150,435))
 		text(Vector2(250,510),"ENTER retry this approach     •     R choose approach",22)

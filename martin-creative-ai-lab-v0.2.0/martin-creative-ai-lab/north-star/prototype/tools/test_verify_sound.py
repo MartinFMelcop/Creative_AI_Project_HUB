@@ -10,7 +10,7 @@ import wave
 sys.path.insert(0, str(Path(__file__).parent))
 from verify_sound import ROOT, inspect
 
-FIXTURE = ROOT.parents[1] / 'evidence/north-star-sound'
+FIXTURE = ROOT.parents[1] / 'evidence/north-star-guard-techniques'
 
 
 class MixerEvidenceChecks(unittest.TestCase):

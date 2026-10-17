@@ -1,7 +1,7 @@
 # Crossing Drill — local character prototype
 
 The first executable **Virgo Diamond** destination consumer: a short original courier
-crossing with two experimental approaches. The current increment is local CREATIVE PRODUCTION,
+crossing with two experimental approaches. The current increment is local DEVELOPMENT,
 not a production MMORPG, final class system or final engine selection. See the
 [living design record](../DESIGN.md) for author direction, experimental decisions,
 revisions and rejected alternatives.
@@ -50,6 +50,37 @@ Pause and result screens retain the last contact's explanation and an actionable
 tip, even after transient warnings or the final loss message replace the live
 feedback. Diagnosis distinguishes facing, guard startup, insufficient posture,
 unguarded contact, courier first contact, and pulse/bolt outcomes.
+
+## Guardian technique choice
+
+On selection, choose **1 Guardian**, then **Tab** to switch between **Steady**
+(default) and **Riposte**. This changes the selected technique, not a cosmetic mark.
+The choice carries through **T** rehearsal, retry and clean crossing. It is locked
+during a crossing, pause or rehearsal; **R** abandons the attempt for selection.
+It remains a session choice and resets to Steady on a new process. Tab can still be
+remapped to a gameplay action; its selection function exists only on the title.
+Duelist keeps its existing draw/mobility behavior and never inherits a guard technique.
+
+| Technique | Actual defense | Counter opportunity | Cost / exposure |
+|---|---|---|---|
+| Steady | Frontal held guard becomes live after 60ms and remains eligible while held with posture | 1.0s OPEN after a block | Holding drains posture, locks facing and slows movement. |
+| Riposte | Frontal guard is eligible only at age 60–300ms after raising | 1.6s OPEN after a timed block | Raising early expires before impact; raising late still fails startup. Release before raising again. |
+
+Both retain 22 posture per impact,12 posture/second holding, the same facing cone,
+130px counter reach and 12 resolve/posture strike cost. Neither protects the floor or
+grants step immunity. Riposte is an opt-in timing trade-off, not a superior stat tier.
+Its warning ring and **RAISE K NOW** cue expose the incoming timing; **GUARD STARTUP /
+LIVE / STALE** and the shield arc show the actual guard state. Text follows remapped
+ability keys. A failed exercise retains the cause and recovery tip. The third exercise
+still supplies its ordinary 1.0s opening; rehearsal never grants a carried buff.
+
+This is one bounded experimental choice within Guardian, not approval of the Creative
+Brain's candidate specialization trees, a full talent/build system or balance proof.
+Keepsake eligibility and the optional medicine request are unchanged. A recorded late
+counter at 1.2s succeeds after Riposte and fails after Steady, demonstrating the actual
+opportunity difference. Fixed routes show feasibility, not optimal play or preference.
+
+![Timed guard cue in the actual consumer](../../evidence/north-star-guard-techniques/raise-now.png)
 
 ## Keyboard preferences
 
@@ -197,7 +228,7 @@ or MMORPG persistence.
 ## Execute checks and reproduce delivery
 
 ```bash
-python3 north-star/prototype/tools/verify.py --godot godot --output /tmp/crossing-check.json --compare evidence/north-star-sound/results.json
+python3 north-star/prototype/tools/verify.py --godot godot --output /tmp/crossing-check.json --compare evidence/north-star-guard-techniques/results.json
 ```
 
 The stdlib runner bounds owned engine processes, uses writable temporary XDG paths,
@@ -205,7 +236,7 @@ loads the source project, executes positive/negative controls, both rehearsal se
 and two complete repeatable crossing policies, plus keepsake eligibility and local
 profile controls, then executes the **delivered PCK** and requires exact source/PCK
 outcomes.
-The current suite has 208 native controls, including full direct/recovery routes for
+The current suite has 242 native controls, including full direct/recovery routes for
 both approaches. Eight further engine invocations (earn,
 read, put away, read for each source/PCK) demonstrate actual process reentry with
 the same local profile. Eight additional apply/read/restore/read processes verify the separate keyboard profile
@@ -221,7 +252,7 @@ The source pack is reproducible with the matching engine:
 godot --headless --path north-star/prototype --script tools/pack.gd -- /absolute/path/crossing-drill.pck
 ```
 
-[Current execution evidence](../../evidence/north-star-sound/RUN.json) identifies
+[Current execution evidence](../../evidence/north-star-guard-techniques/RUN.json) identifies
 baseline, source/result hashes, commands, refinements and limitations. The preserved
 [first-consumer record](../../evidence/north-star-crossing/RUN.json) documents the
 original crossing delivery; the [rehearsal record](../../evidence/north-star-rehearsal/RUN.json)

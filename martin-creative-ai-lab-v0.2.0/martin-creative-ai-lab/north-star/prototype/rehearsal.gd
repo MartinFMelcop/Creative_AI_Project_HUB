@@ -2,6 +2,7 @@ extends RefCounted
 ## Player-paced exercises use the same Combat model, costs and one-second threats.
 ## Setup is controlled; no command, defense or success is supplied for the player.
 const Combat = preload("res://combat.gd")
+var guard_style := "Steady"
 var active := false
 var stage := 0
 var state := "ready"
@@ -11,7 +12,8 @@ var attempts := 0
 var results: Array[Dictionary] = []
 var game = Combat.new()
 
-func start(role: String) -> void:
+func start(role: String, style: String="Steady") -> void:
+	guard_style=style
 	active = true
 	stage = 0
 	attempts = 0
@@ -20,7 +22,7 @@ func start(role: String) -> void:
 
 func prepare(role: String) -> void:
 	game = Combat.new()
-	game.reset(role)
+	game.reset(role,guard_style)
 	game.courier = Vector2(310,390)
 	game.player = Vector2(550,330) if role=="Duelist" and stage==0 else Vector2(550,390)
 	game.phase = "bolt" if stage==0 else ("pulse" if stage==1 else "rest")
@@ -36,11 +38,12 @@ func prepare(role: String) -> void:
 	game.note(instruction())
 
 func heading() -> String:
-	if stage==0: return "FRONTAL PROTECTION" if game.role=="Guardian" else "DRAW AND LEAVE"
+	if stage==0: return ("TIMED PROTECTION" if game.guard_style=="Riposte" else "FRONTAL PROTECTION") if game.role=="Guardian" else "DRAW AND LEAVE"
 	return "LEAVE THE FLOOR" if stage==1 else "REACH THE OPENING"
 
 func instruction() -> String:
 	if stage==0:
+		if game.role=="Guardian" and game.guard_style=="Riposte":return "RIGHT arrow to face. Wait for RAISE K; then hold K briefly."
 		return "RIGHT arrow to face the sentinel + hold K through contact." if game.role=="Guardian" else "Press K to draw the bolt, then W to leave its locked line."
 	if stage==1: return "WASD out of the marked circle. Guard cannot block the floor."
 	return "D toward the sentinel, then J within the OPEN ring."+(" Release K first." if game.role=="Guardian" else "")

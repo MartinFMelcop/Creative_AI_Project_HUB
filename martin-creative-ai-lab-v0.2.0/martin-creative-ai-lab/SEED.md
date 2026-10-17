@@ -1,6 +1,6 @@
 # SEED — Martin Creative AI Lab
 
-**Version:** 0.33.6
+**Version:** 0.33.7
 **Data-base:** 10 de outubro de 2026  
 **Autor e responsável pelo portfólio:** Martin Melcop Neto  
 **Working language:** English for new technical documentation, plans, code comments and Git messages; respond in the requested language (Brazilian Portuguese for continuous closeout). Preserve appropriate creative/source languages.
@@ -45,15 +45,16 @@ does not merge fictional universes. Source details below are historical provenan
 retained origin behavior; current operation is defined by this direction, AGENTS,
 STATE and the single [continuous prompt](docs/prompts/CONTINUOUS_DEVELOPMENT.md).
 
-### Current consumer increment — v0.33.6
+### Current consumer increment — v0.33.7
 
-The actual crossing/rehearsal now consumes eight original procedural sound cues:
-distinct bolt/floor warnings, block/draw signatures, counter/damage and terminal
-cadences. Visual warnings remain sufficient; F1/F5 silences sound for the session.
-[Execution](evidence/north-star-sound/RUN.json) separates source/PCK behavior and
-actual AudioServer output from still-unverified physical listening and recognition.
-No combat, quest or progression rules change. NS-C03 and the bounded NS-C07 sound
-method are adapted in one local consumer; twelve other capability states are unchanged.
+The existing Guardian now chooses Steady or Riposte guard before an attempt. Steady
+retains sustained protection; Riposte protects only at guard age 60–300ms and grants
+an actual 1.6s counter opening instead of 1.0s. Early holding expires and takes damage.
+The chosen technique carries through rehearsal and clean crossing, cannot change
+in play/pause/rehearsal, and adds no persistent reward, stat or canonical subclass.
+[Execution](evidence/north-star-guard-techniques/RUN.json) binds native source/PCK,
+whole routes, actual keyboard timing, presentation and mixer evidence. Fourteen
+capability states remain unchanged; one local consumer, NS-C03/07 adapted.
 
 ### Navegação
 

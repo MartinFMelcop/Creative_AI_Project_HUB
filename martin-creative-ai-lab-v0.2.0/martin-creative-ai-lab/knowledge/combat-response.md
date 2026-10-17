@@ -152,3 +152,23 @@ Two bounded voices and silence leave warnings room without an unrelated music sy
 **Validity:** software mixer output and signal properties, not physical listening,
 recognition, comfort, accessibility or enjoyment. Mixer sample counts vary across runs;
 compare deterministic event ownership and signal bounds, not whole capture hashes.
+
+## An internal technique needs an executed exclusion and a real opportunity
+
+**Question/context:** Can Guardian change defensive rhythm without an attribute tree?
+**Source:** baseline e86b596, [technique execution](../evidence/north-star-guard-techniques/RUN.json),
+ENG-005, SCI-017 and CRE-001/011/013/014. **Observation:** Steady held guard remains safe;
+Riposte held too early expires and takes damage. Correct timing grants 1.6s instead of
+1.0s OPEN, accepting an actual counter at 1.2s that Steady rejects. Whole normal and
+medicine routes execute; naive early holding loses under the timed technique. Choice
+is locked in attempts/rehearsal; retry preserves it but clears committed state.
+**Interpretation:** an exclusion plus an observable response opportunity can express a
+bounded build choice without a skill-tree framework, permanent stats or reward farming.
+**Validity:** fixed policies and synthetic input, not player preference, balance or fun.
+
+**Negative measurement finding:** PNG polling with per-tap waits during the critical interval observed
+tick 51, then K reached baseline tick 59/current tick 60; both failed. A lightweight
+consumer probe observed/received tick 45 and the intended response passed. The capture
+method perturbed the timing under observation. **Consequence:** measure receipt in the
+consumer and bound instrumentation overhead before blaming a new timing rule. This
+comparison does not measure hardware latency or prove all rendered frame performance.

@@ -73,6 +73,10 @@ func run() -> void:
 		await create_timer(.15).timeout
 		recorder.set_recording_active(false) # Drain pre-pause blocks before the silence probe.
 		await begin();await frames(24);await finish("paused-silence")
+		scene.rehearsal.start("Guardian","Riposte");scene.game=scene.rehearsal.game
+		await begin();Trial.key(scene,KEY_ENTER);await frames(45);held(KEY_K,true);await frames(19);held(KEY_K,false)
+		await finish("riposte-block")
+
 		# Real normal-consumer consequences from explicitly prepared short setups.
 		scene.begin_crossing();scene.game.player=Vector2(690,390);scene.game.opening=1
 		await begin();Trial.key(scene,KEY_J);await frames(1);await finish("counter-contact")

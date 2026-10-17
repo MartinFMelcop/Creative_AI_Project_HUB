@@ -1992,3 +1992,38 @@ Agent visual/signal review is not listening or recognition by people. No physica
 latency, spatial audio, accessibility, learning, enjoyment or commercial claim.
 No new lab or origin extraction/promotion; source/media/consumers/tests are preserved.
 The unchanged operational prompt already served this production/validation scope.
+
+## ADR-077 — choose a defensive rhythm before the attempt
+
+**Date:** 2026-10-17 UTC. **Status:** SEED 0.33.7; DEVELOPMENT, category 1.
+
+Baseline `e86b596` gives every Guardian the same sustained guard. Compare an internal
+technique choice, permanently breaking the sentinel through offense, another adventure
+and further presentation/research. Choose one bounded within-character trade-off over
+an encounter rewrite or speculative talent framework. Character agency should change
+how the player acts, not merely a percentage or a new name on the same command.
+
+Title-only Tab selects Steady or Riposte. Keep default Steady's 60ms startup, held frontal
+protection and 1.0s opening. Riposte only protects at guard age 60–300ms and grants a real
+1.6s opening; early holding expires, late input still suffers startup. Posture costs,
+facing cone, floor vulnerability and counter reach/cost stay unchanged. Lock choice in
+play, pause and rehearsal; abandoning permits revision, a new process defaults Steady.
+Carry choice through actual rehearsal/retry/clean crossing, without a new profile schema,
+power reward, final specialization or canonical talent tree.
+
+ENG-005 informs states/invariants; SCI-017 matched/negative controls; CRE-001 is direct
+author identity, CRE-011/013/014 are candidate build/exclusion/Guardian ideas. All domains
+high. Brain/source pins remain unchanged. 242 native checks, source/PCK equality, full
+feasible technique/recovery routes, actual OS input and actual mixer capture are bound
+in [execution](../evidence/north-star-guard-techniques/RUN.json). Baseline/default values
+match after removing only new guard_style metadata; do not call the raw JSON identical.
+The timed technique's naive early-hold route loses while its appropriate route wins;
+these are policies, not a class-balance or player-learning study.
+
+Intrusive mid-trial PNG polling with tap waits observed tick 51 but delivered K at tick 59 in baseline
+(startup failure) and tick 60/current (already paused). A lightweight consumer-side probe
+delivered at tick 45 and passed. Keep the rule; fix timing measurement rather than expand
+the window or weaken a check. The prompt now conditionally requires consumer-side input
+receipt/instrumentation-overhead checks for timing-sensitive work. This durable evidence
+lesson does not prescribe the next project or add a laboratory. No other prompt contract
+changes. Stage/capability/origin states remain unchanged; no external player validation.
