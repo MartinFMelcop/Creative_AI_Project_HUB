@@ -41,6 +41,28 @@ def continuity(executable, scratch, env, packed):
     return observations
 
 
+def control_continuity(executable, scratch, env, packed, defaults):
+    label = "controls-pack" if packed else "controls-source"
+    profile = scratch / (label + ".json")
+    observations = []
+    base = [executable, "--headless"]
+    base += ["--main-pack", str(ROOT / "dist/crossing-drill.pck")] if packed else ["--path", str(ROOT)]
+    for index, operation in enumerate(("apply", "read", "restore", "read")):
+        output = scratch / f"{label}-{index}.json"
+        invoke(base + ["--script", "res://tests/controls_restart.gd", "--", operation, str(profile), str(output)], env)
+        report = json.loads(output.read_text())
+        expected = dict(defaults)
+        if index < 2:
+            expected.update(strike=71, skill=72, step=66, interact=70, move_up=73)
+        state = report["profile"]
+        if state["keys"] != expected or state["dirty"] or state["blocked"]:
+            raise ValueError("Control restart failed to retain applied/restored bindings")
+        if report["game"]["mode"] != "title" or report["game"]["tick"] != 0:
+            raise ValueError("Editing controls must not start or advance a crossing")
+        observations.append(report)
+    return observations
+
+
 def verify(godot, output, compare=None):
     executable = shutil.which(godot)
     if not executable:
@@ -50,6 +72,7 @@ def verify(godot, output, compare=None):
         env = os.environ.copy()
         env.pop("CROSSING_PROFILE", None)
         env.pop("CROSSING_CAPTURE", None)
+        env.pop("CROSSING_CONTROLS", None)
         env.update({key: str(scratch / key) for key in ("XDG_DATA_HOME", "XDG_CONFIG_HOME", "XDG_CACHE_HOME")})
         version = invoke([executable, "--version"], env).strip()
         if not version.startswith("4.6.3."):
@@ -63,7 +86,7 @@ def verify(godot, output, compare=None):
         result = json.loads(source.read_text())
         if result != json.loads(packed.read_text()):
             raise ValueError("Delivered PCK differs from current source observations or embedded source hashes")
-        if result.get("checks", {}).get("failed") != 0 or result.get("checks", {}).get("passed", 0) != 141:
+        if result.get("checks", {}).get("failed") != 0 or result.get("checks", {}).get("passed", 0) != 179:
             raise ValueError("Native checks failed or incomplete")
         if [r["mode"] for r in result["outcomes"]] != ["won", "lost", "won", "lost"]:
             raise ValueError("Completion and neutral controls are incomplete")
@@ -82,12 +105,16 @@ def verify(godot, output, compare=None):
         result["continuity"] = continuity(executable, scratch, env, False)
         if result["continuity"] != continuity(executable, scratch, env, True):
             raise ValueError("Source/PCK restart observations differ")
+        defaults = result["controls"]["restored_profile"]["keys"]
+        result["control_continuity"] = control_continuity(executable, scratch, env, False, defaults)
+        if result["control_continuity"] != control_continuity(executable, scratch, env, True, defaults):
+            raise ValueError("Source/PCK control restart observations differ")
         if compare and result != json.loads(Path(compare).read_text()):
             raise ValueError("Native observations differ from the recorded comparison")
         output = Path(output)
         output.parent.mkdir(parents=True, exist_ok=True)
         output.write_text(json.dumps(result, ensure_ascii=False, indent=2, sort_keys=True) + "\n")
-        print(f"PASS: {result['checks']['passed']} native checks; both approaches complete direct/recovery routes; neutral controls fail; source/PCK identical; eight restart processes retain explicit keepsake choices.")
+        print(f"PASS: {result['checks']['passed']} native checks; source/PCK identical; both approach routes complete; sixteen restart processes preserve keepsake/control choices.")
         return result
 
 

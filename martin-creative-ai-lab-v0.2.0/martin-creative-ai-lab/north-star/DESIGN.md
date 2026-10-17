@@ -20,6 +20,17 @@ author decisions prevail. Status here describes scope, not independent player ap
 | Experimental | Optional medicine recovery and real handoff; current author agency direction, CRE-005 documented direction and CRE-047/058/086 hypotheses | First-marker fall creates a spatial/temporal choice inside the existing escort. Stationary nearby E commits attention while courier/threats continue; moving/releasing cancels. Direct escort remains successful; carried is not delivered. No new persistent loot, mandatory profession, class exclusivity or canon approval. |
 | Rejected for this increment | Renaming P06 parry/dash as classes; expanding another timing matrix; trees/inventory/networking | These do not close the missing executable character experience. P01 economy and P10 narrative remain credible later consumers, requiring their own design contracts. |
 
+## Keyboard-control decision — experimental
+
+CRE-001 supplies direct author agency direction; CRE-081 documents remapping and
+accessibility direction, while CRE-075 is a contextual-HUD hypothesis. The accepted
+operational scope is a reversible local keyboard preference, not a change to final
+classes, lore or combat balance. Twelve unique gameplay bindings, matching live hints,
+explicit draft/apply/discard/default recovery and paused entry preserve deliberate
+choices. Fixed management keys keep recovery reachable. Toggle-hold modes are deferred:
+they change commitment semantics and need separate design/evaluation. Synthetic/native
+checks establish execution, not independent player understanding or accessibility.
+
 ## Current product contract
 
 The player chooses one experimental approach, escorts the courier to the far gate,

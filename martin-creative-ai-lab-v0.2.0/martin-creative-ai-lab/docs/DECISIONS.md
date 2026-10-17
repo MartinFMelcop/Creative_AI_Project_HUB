@@ -1920,3 +1920,38 @@ evidence. No laboratory or origin obligation is added. One local consumer now ha
 code paths; fourteen capabilities retain NS-C03 adapted and thirteen unchanged states.
 Origin code/assets/tests/states remain preserved. Existing prompt guidance supports the
 selected product work and bounded verification; retain the prompt unchanged.
+
+## ADR-075 — make the existing character controls recoverably configurable
+
+**Date:** 2026-10-17 UTC. **Status:** SEED 0.33.5; DEVELOPMENT, priority category 1.
+
+Baseline `3b1eafc` has a voluntary medicine request but hardcodes movement, aim,
+ability, step, strike and interaction. Compare a new encounter fork, audiovisual
+identity and adaptable controls. Prefer the inspected fixed-key barrier in the actual
+consumer over another laboratory or an unspecified new quest. Hold/toggle modes could
+help some players but alter commitment semantics; defer them rather than change costs.
+
+F1 opens a paused keyboard panel. Twelve unique action bindings use draft/capture,
+conflict rejection, explicit S apply/save, Esc discard and cancellable default restore.
+Applied keys drive actual movement, guard/feint, interaction and gameplay hints. Keep
+management keys reserved and held input quarantined until release. Local preferences
+have a separate strict schema and path; invalid bytes remain untouched, write failure
+leaves session controls usable, and retry after repair saves explicitly. No account,
+concurrent-write, power-loss or disability-outcome claim follows.
+
+ENG-022 informs predictable operation and recovery; SCI-061 separates device/task
+execution from representative usability; CRE-001 anchors author agency, CRE-081 is
+documented remapping direction, CRE-075 supplies a contextual-feedback hypothesis.
+All domains high. Source volumes and pins remain unchanged. JSON field/method collision
+and float/int identity initially broke persistence; normalize validated numeric codes
+before exact readback. Actual X11 input additionally exposed physical/logical arrow
+identity in panel navigation; use logical arrows and retain a regression control.
+
+[Execution](../evidence/north-star-controls/RUN.json) records 179 native checks in both
+source/PCK, exact original gameplay observations, sixteen restart processes and an OS
+keyboard conflict/apply/guard/reload/recovery/save-repair journey. Its medicine positions
+are a prepared fixture, not full-route keyboard navigation. Agent inspection finds a
+readable reversible panel and matching hints; no independent human validation exists.
+One local consumer has six code paths; fourteen capability states remain unchanged,
+only NS-C03 adapted. No new lab, origin migration promotion or NS-C13 promotion.
+The existing prompt already covers actual consumers and matched validation; retain it.

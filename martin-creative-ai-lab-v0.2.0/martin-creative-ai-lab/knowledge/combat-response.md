@@ -118,3 +118,20 @@ this narrows the earlier timeout uncertainty without diagnosing its cause or est
 all-device real-time performance. No human comprehension, identity, preference, ethical
 judgment or fun is established. No P10 code, account progression or shared-world state
 has been integrated. Revisit after independent player observation or new route policies.
+
+## Recoverable keyboard preferences in the destination
+
+**Question/context:** Can a player use alternate keyboard positions without changing
+character-action commitment? **Source:** baseline `3b1eafc`,
+[controls execution](../evidence/north-star-controls/RUN.json); ENG-022, SCI-061,
+CRE-001/075/081. **Observation:** native source/PCK and separate-process controls pass;
+actual X11 input confirms H guard and F medicine recovery, old-key rejection, conflict
+recovery and preserved invalid profile bytes. Same-code synthetic events initially
+missed physical/logical arrow divergence; an actual window exposed it, and a dedicated
+negative control now covers it. **Interpretation:** adapter correctness needs device
+input plus model checks; persistence needs validated numeric identity before readback.
+**Validity limit:** one software-display keyboard setup, synthetic input and prepared
+medicine positions; no disability cohort, ergonomic preference or comprehension result.
+**Consequence:** keep management recovery reachable, drafts explicit, hints tied to the
+applied map, and ability semantics independent of key selection. Hold/toggle alternatives
+remain unresolved rather than implied accessible by remapping alone.

@@ -7,6 +7,9 @@ should demonstrate benefit to that experience. The HUB remains a public Design-D
 technology portfolio; its origin demonstrations and research instruments have value
 without being eleven independently obligated products.
 
+F1 offers recoverable twelve-action keyboard remapping with matching live hints and
+explicit draft/apply/discard/default restoration; settings remain device-local.
+
 ## Actual stage and creative authority
 
 The catalog now records **local_prototype**: one executable
@@ -22,7 +25,7 @@ experimental mechanics, revisions and rejected alternatives. Current primary mod
 DEVELOPMENT, priority category 1: improve this existing consumer. Optional rehearsal
 uses the same combat rules, preserves causal review and starts a clean normal crossing.
 The three prepared exercises do not demonstrate human learning or sustained resource
-management. [Current execution](../evidence/north-star-medicine/RUN.json) retains the
+management. [Current execution](../evidence/north-star-controls/RUN.json) retains the
 unchanged full-crossing outcomes alongside these controls. Completed normal crossings
 with a signature response can earn its approach’s mark, one of two experimental cosmetics. Explicit C selection
 is visible on the next crossing and restored after restart. Malformed/unknown profiles

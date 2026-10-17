@@ -1,0 +1,2511 @@
+{
+  "checks": {
+    "failed": 0,
+    "passed": 179
+  },
+  "consumer_hashes": {
+    "arena.gd": "3986d3000d88d8242be84bc89efa1c8874fa0c3f7f95a15339bcfae51ebeb5b8",
+    "arena.tscn": "f794c485663f0ed318ddce6bb7a62bc9b2dbd3af02be4f166cca962c29382591",
+    "combat.gd": "22b257c59ad3c6f183aac416122ce8ed36d9af38ba7f70a0f8b09bba0f6217c4",
+    "controls.gd": "4c88d0a49d2f64fab275cfc2e62b8956ea17019aaf26445f99ce1a21a58b4fb0",
+    "errand.gd": "2a2392fa86bd12544eba5f60ad74d35592c7d6fa207373ec11a1928a9e33e601",
+    "keepsakes.gd": "d7790dddbd25904069b0c1a6d5edb2f7d01bc02a375d608a4ec5a25262ddb6c9",
+    "project.godot": "8d4755b58f1179a9b5ec431579177371e784bca9703a17c88f4c7a6d4ee9385c",
+    "rehearsal.gd": "55a1a348dd37a2552074a8ecc48dbe01b3fbef9211750f2110093a1ccc6eaeb6",
+    "tests/controls_checks.gd": "aec1a8a26e262a3830714f9fa748923d8b27b9e51d2e93fa6b3b74c2ee3acf0c",
+    "tests/controls_restart.gd": "066f641273c045a97ea1ee6bd2ddd9469e452d6edab80bc36a426927da431b61",
+    "tests/errand_checks.gd": "2f04534e200e82f08e01127a3b31c5dafacb5151c9635038bf6c14d33ac89094",
+    "tests/errand_policy.gd": "74f4d20501771d8697e79629aaa6e86cb5056211eae0ab860aa593cb5190cb9e",
+    "tests/keepsake_checks.gd": "a8614cb0592ff8c403185b82f702c289abd42b78c783f4bc8f06d2ecaf211fcf",
+    "tests/keepsake_restart.gd": "8e9f107c310836324c51b1cbe1b2db618feadbd98b0cebbef12f75f39ab112c2",
+    "tests/policy.gd": "646f0758a211e84ffbfd4632460c7d1fc549cbb3b552801ee2508774a5a63e29",
+    "tests/rehearsal_checks.gd": "0286d8997fdf1bd7ebad0b72a7283651678cfa30f85b2bd55e98e995c3f9b1f5",
+    "tests/run_checks.gd": "5b6cebee8b2b6120e8b5620044630ab7099f59dd19472582e899fe1df8f58f3b"
+  },
+  "continuity": [
+    {
+      "game": {
+        "cargo": 3,
+        "counters": {
+          "blocks": 0,
+          "counters": 7,
+          "courier_hits": 0,
+          "dodges": 5,
+          "player_hits": 0,
+          "redirects": 5,
+          "rejected": 0
+        },
+        "courier_x": 1000.0,
+        "energy": 76.4,
+        "events": [
+          {
+            "cargo": 3,
+            "energy": 84.0,
+            "hp": 5,
+            "kind": "redirect",
+            "tick": 110
+          },
+          {
+            "cargo": 3,
+            "energy": 59.0,
+            "hp": 5,
+            "kind": "step",
+            "tick": 110
+          },
+          {
+            "cargo": 3,
+            "energy": 76.7,
+            "hp": 5,
+            "kind": "bolt_missed",
+            "tick": 169
+          },
+          {
+            "cargo": 3,
+            "energy": 72.5,
+            "hp": 5,
+            "kind": "counter",
+            "tick": 195
+          },
+          {
+            "cargo": 3,
+            "energy": 84.0,
+            "hp": 5,
+            "kind": "redirect",
+            "tick": 376
+          },
+          {
+            "cargo": 3,
+            "energy": 59.0,
+            "hp": 5,
+            "kind": "step",
+            "tick": 376
+          },
+          {
+            "cargo": 3,
+            "energy": 76.7,
+            "hp": 5,
+            "kind": "bolt_missed",
+            "tick": 435
+          },
+          {
+            "cargo": 3,
+            "energy": 72.5,
+            "hp": 5,
+            "kind": "counter",
+            "tick": 461
+          },
+          {
+            "cargo": 3,
+            "energy": 100.0,
+            "hp": 5,
+            "kind": "pulse_avoided",
+            "tick": 701
+          },
+          {
+            "cargo": 3,
+            "energy": 88.0,
+            "hp": 5,
+            "kind": "counter",
+            "tick": 725
+          },
+          {
+            "cargo": 3,
+            "energy": 84.0,
+            "hp": 5,
+            "kind": "redirect",
+            "tick": 906
+          },
+          {
+            "cargo": 3,
+            "energy": 59.0,
+            "hp": 5,
+            "kind": "step",
+            "tick": 906
+          },
+          {
+            "cargo": 3,
+            "energy": 76.7,
+            "hp": 5,
+            "kind": "bolt_missed",
+            "tick": 965
+          },
+          {
+            "cargo": 3,
+            "energy": 72.5,
+            "hp": 5,
+            "kind": "counter",
+            "tick": 991
+          },
+          {
+            "cargo": 3,
+            "energy": 84.0,
+            "hp": 5,
+            "kind": "redirect",
+            "tick": 1172
+          },
+          {
+            "cargo": 3,
+            "energy": 59.0,
+            "hp": 5,
+            "kind": "step",
+            "tick": 1172
+          },
+          {
+            "cargo": 3,
+            "energy": 76.7,
+            "hp": 5,
+            "kind": "bolt_missed",
+            "tick": 1231
+          },
+          {
+            "cargo": 3,
+            "energy": 72.5,
+            "hp": 5,
+            "kind": "counter",
+            "tick": 1257
+          },
+          {
+            "cargo": 3,
+            "energy": 100.0,
+            "hp": 5,
+            "kind": "pulse_avoided",
+            "tick": 1497
+          },
+          {
+            "cargo": 3,
+            "energy": 88.0,
+            "hp": 5,
+            "kind": "counter",
+            "tick": 1521
+          },
+          {
+            "cargo": 3,
+            "energy": 84.0,
+            "hp": 5,
+            "kind": "redirect",
+            "tick": 1702
+          },
+          {
+            "cargo": 3,
+            "energy": 59.0,
+            "hp": 5,
+            "kind": "step",
+            "tick": 1702
+          },
+          {
+            "cargo": 3,
+            "energy": 76.7,
+            "hp": 5,
+            "kind": "bolt_missed",
+            "tick": 1761
+          },
+          {
+            "cargo": 3,
+            "energy": 72.5,
+            "hp": 5,
+            "kind": "counter",
+            "tick": 1787
+          }
+        ],
+        "hp": 5,
+        "mode": "won",
+        "role": "Duelist",
+        "tick": 1800
+      },
+      "outcomes": [
+        {
+          "cargo": 3,
+          "counters": {
+            "blocks": 6,
+            "counters": 4,
+            "courier_hits": 0,
+            "dodges": 0,
+            "player_hits": 0,
+            "redirects": 0,
+            "rejected": 0
+          },
+          "courier_x": 1000.0,
+          "energy": 100.0,
+          "events": [
+            {
+              "cargo": 3,
+              "energy": 67.6,
+              "hp": 5,
+              "kind": "protected",
+              "tick": 169
+            },
+            {
+              "cargo": 3,
+              "energy": 67.8,
+              "hp": 5,
+              "kind": "protected",
+              "tick": 338
+            },
+            {
+              "cargo": 3,
+              "energy": 100.0,
+              "hp": 5,
+              "kind": "pulse_avoided",
+              "tick": 507
+            },
+            {
+              "cargo": 3,
+              "energy": 72.6,
+              "hp": 5,
+              "kind": "protected",
+              "tick": 676
+            },
+            {
+              "cargo": 3,
+              "energy": 67.8,
+              "hp": 5,
+              "kind": "protected",
+              "tick": 845
+            },
+            {
+              "cargo": 3,
+              "energy": 56.1,
+              "hp": 5,
+              "kind": "counter",
+              "tick": 846
+            },
+            {
+              "cargo": 3,
+              "energy": 100.0,
+              "hp": 5,
+              "kind": "pulse_avoided",
+              "tick": 1086
+            },
+            {
+              "cargo": 3,
+              "energy": 73.0,
+              "hp": 5,
+              "kind": "protected",
+              "tick": 1255
+            },
+            {
+              "cargo": 3,
+              "energy": 61.3,
+              "hp": 5,
+              "kind": "counter",
+              "tick": 1256
+            },
+            {
+              "cargo": 3,
+              "energy": 68.8,
+              "hp": 5,
+              "kind": "protected",
+              "tick": 1496
+            },
+            {
+              "cargo": 3,
+              "energy": 57.1,
+              "hp": 5,
+              "kind": "counter",
+              "tick": 1497
+            },
+            {
+              "cargo": 3,
+              "energy": 100.0,
+              "hp": 5,
+              "kind": "pulse_avoided",
+              "tick": 1737
+            },
+            {
+              "cargo": 3,
+              "energy": 88.0,
+              "hp": 5,
+              "kind": "counter",
+              "tick": 1738
+            }
+          ],
+          "hp": 5,
+          "mode": "won",
+          "role": "Guardian",
+          "tick": 1800
+        },
+        {
+          "cargo": 3,
+          "counters": {
+            "blocks": 0,
+            "counters": 7,
+            "courier_hits": 0,
+            "dodges": 5,
+            "player_hits": 0,
+            "redirects": 5,
+            "rejected": 0
+          },
+          "courier_x": 1000.0,
+          "energy": 76.4,
+          "events": [
+            {
+              "cargo": 3,
+              "energy": 84.0,
+              "hp": 5,
+              "kind": "redirect",
+              "tick": 110
+            },
+            {
+              "cargo": 3,
+              "energy": 59.0,
+              "hp": 5,
+              "kind": "step",
+              "tick": 110
+            },
+            {
+              "cargo": 3,
+              "energy": 76.7,
+              "hp": 5,
+              "kind": "bolt_missed",
+              "tick": 169
+            },
+            {
+              "cargo": 3,
+              "energy": 72.5,
+              "hp": 5,
+              "kind": "counter",
+              "tick": 195
+            },
+            {
+              "cargo": 3,
+              "energy": 84.0,
+              "hp": 5,
+              "kind": "redirect",
+              "tick": 376
+            },
+            {
+              "cargo": 3,
+              "energy": 59.0,
+              "hp": 5,
+              "kind": "step",
+              "tick": 376
+            },
+            {
+              "cargo": 3,
+              "energy": 76.7,
+              "hp": 5,
+              "kind": "bolt_missed",
+              "tick": 435
+            },
+            {
+              "cargo": 3,
+              "energy": 72.5,
+              "hp": 5,
+              "kind": "counter",
+              "tick": 461
+            },
+            {
+              "cargo": 3,
+              "energy": 100.0,
+              "hp": 5,
+              "kind": "pulse_avoided",
+              "tick": 701
+            },
+            {
+              "cargo": 3,
+              "energy": 88.0,
+              "hp": 5,
+              "kind": "counter",
+              "tick": 725
+            },
+            {
+              "cargo": 3,
+              "energy": 84.0,
+              "hp": 5,
+              "kind": "redirect",
+              "tick": 906
+            },
+            {
+              "cargo": 3,
+              "energy": 59.0,
+              "hp": 5,
+              "kind": "step",
+              "tick": 906
+            },
+            {
+              "cargo": 3,
+              "energy": 76.7,
+              "hp": 5,
+              "kind": "bolt_missed",
+              "tick": 965
+            },
+            {
+              "cargo": 3,
+              "energy": 72.5,
+              "hp": 5,
+              "kind": "counter",
+              "tick": 991
+            },
+            {
+              "cargo": 3,
+              "energy": 84.0,
+              "hp": 5,
+              "kind": "redirect",
+              "tick": 1172
+            },
+            {
+              "cargo": 3,
+              "energy": 59.0,
+              "hp": 5,
+              "kind": "step",
+              "tick": 1172
+            },
+            {
+              "cargo": 3,
+              "energy": 76.7,
+              "hp": 5,
+              "kind": "bolt_missed",
+              "tick": 1231
+            },
+            {
+              "cargo": 3,
+              "energy": 72.5,
+              "hp": 5,
+              "kind": "counter",
+              "tick": 1257
+            },
+            {
+              "cargo": 3,
+              "energy": 100.0,
+              "hp": 5,
+              "kind": "pulse_avoided",
+              "tick": 1497
+            },
+            {
+              "cargo": 3,
+              "energy": 88.0,
+              "hp": 5,
+              "kind": "counter",
+              "tick": 1521
+            },
+            {
+              "cargo": 3,
+              "energy": 84.0,
+              "hp": 5,
+              "kind": "redirect",
+              "tick": 1702
+            },
+            {
+              "cargo": 3,
+              "energy": 59.0,
+              "hp": 5,
+              "kind": "step",
+              "tick": 1702
+            },
+            {
+              "cargo": 3,
+              "energy": 76.7,
+              "hp": 5,
+              "kind": "bolt_missed",
+              "tick": 1761
+            },
+            {
+              "cargo": 3,
+              "energy": 72.5,
+              "hp": 5,
+              "kind": "counter",
+              "tick": 1787
+            }
+          ],
+          "hp": 5,
+          "mode": "won",
+          "role": "Duelist",
+          "tick": 1800
+        }
+      ],
+      "profile": {
+        "blocked": false,
+        "dirty": false,
+        "earned": [
+          "held_line",
+          "drew_danger"
+        ],
+        "equipped": "drew_danger",
+        "status": "Saved locally."
+      }
+    },
+    {
+      "game": {
+        "cargo": 3,
+        "counters": {
+          "blocks": 0,
+          "counters": 0,
+          "courier_hits": 0,
+          "dodges": 0,
+          "player_hits": 0,
+          "redirects": 0,
+          "rejected": 0
+        },
+        "courier_x": 160.0,
+        "energy": 100.0,
+        "events": [],
+        "hp": 5,
+        "mode": "title",
+        "role": "Guardian",
+        "tick": 0
+      },
+      "outcomes": [],
+      "profile": {
+        "blocked": false,
+        "dirty": false,
+        "earned": [
+          "held_line",
+          "drew_danger"
+        ],
+        "equipped": "drew_danger",
+        "status": "Saved locally."
+      }
+    },
+    {
+      "game": {
+        "cargo": 3,
+        "counters": {
+          "blocks": 0,
+          "counters": 0,
+          "courier_hits": 0,
+          "dodges": 0,
+          "player_hits": 0,
+          "redirects": 0,
+          "rejected": 0
+        },
+        "courier_x": 160.0,
+        "energy": 100.0,
+        "events": [],
+        "hp": 5,
+        "mode": "title",
+        "role": "Guardian",
+        "tick": 0
+      },
+      "outcomes": [],
+      "profile": {
+        "blocked": false,
+        "dirty": false,
+        "earned": [
+          "held_line",
+          "drew_danger"
+        ],
+        "equipped": "",
+        "status": "Saved locally."
+      }
+    },
+    {
+      "game": {
+        "cargo": 3,
+        "counters": {
+          "blocks": 0,
+          "counters": 0,
+          "courier_hits": 0,
+          "dodges": 0,
+          "player_hits": 0,
+          "redirects": 0,
+          "rejected": 0
+        },
+        "courier_x": 160.0,
+        "energy": 100.0,
+        "events": [],
+        "hp": 5,
+        "mode": "title",
+        "role": "Guardian",
+        "tick": 0
+      },
+      "outcomes": [],
+      "profile": {
+        "blocked": false,
+        "dirty": false,
+        "earned": [
+          "held_line",
+          "drew_danger"
+        ],
+        "equipped": "",
+        "status": "Saved locally."
+      }
+    }
+  ],
+  "control_continuity": [
+    {
+      "game": {
+        "cargo": 3,
+        "counters": {
+          "blocks": 0,
+          "counters": 0,
+          "courier_hits": 0,
+          "dodges": 0,
+          "player_hits": 0,
+          "redirects": 0,
+          "rejected": 0
+        },
+        "courier_x": 160.0,
+        "energy": 100.0,
+        "events": [],
+        "hp": 5,
+        "mode": "title",
+        "role": "Guardian",
+        "tick": 0
+      },
+      "hint": "A/D/I/S move / H ability / G blade / F interact / B step",
+      "profile": {
+        "blocked": false,
+        "dirty": false,
+        "keys": {
+          "aim_down": 4194322,
+          "aim_left": 4194319,
+          "aim_right": 4194321,
+          "aim_up": 4194320,
+          "interact": 70,
+          "move_down": 83,
+          "move_left": 65,
+          "move_right": 68,
+          "move_up": 73,
+          "skill": 72,
+          "step": 66,
+          "strike": 71
+        },
+        "status": "Applied and saved on this device."
+      }
+    },
+    {
+      "game": {
+        "cargo": 3,
+        "counters": {
+          "blocks": 0,
+          "counters": 0,
+          "courier_hits": 0,
+          "dodges": 0,
+          "player_hits": 0,
+          "redirects": 0,
+          "rejected": 0
+        },
+        "courier_x": 160.0,
+        "energy": 100.0,
+        "events": [],
+        "hp": 5,
+        "mode": "title",
+        "role": "Guardian",
+        "tick": 0
+      },
+      "hint": "A/D/I/S move / H ability / G blade / F interact / B step",
+      "profile": {
+        "blocked": false,
+        "dirty": false,
+        "keys": {
+          "aim_down": 4194322,
+          "aim_left": 4194319,
+          "aim_right": 4194321,
+          "aim_up": 4194320,
+          "interact": 70,
+          "move_down": 83,
+          "move_left": 65,
+          "move_right": 68,
+          "move_up": 73,
+          "skill": 72,
+          "step": 66,
+          "strike": 71
+        },
+        "status": "Saved on this device."
+      }
+    },
+    {
+      "game": {
+        "cargo": 3,
+        "counters": {
+          "blocks": 0,
+          "counters": 0,
+          "courier_hits": 0,
+          "dodges": 0,
+          "player_hits": 0,
+          "redirects": 0,
+          "rejected": 0
+        },
+        "courier_x": 160.0,
+        "energy": 100.0,
+        "events": [],
+        "hp": 5,
+        "mode": "title",
+        "role": "Guardian",
+        "tick": 0
+      },
+      "hint": "A/D/W/S move / K ability / J blade / E interact / Space step",
+      "profile": {
+        "blocked": false,
+        "dirty": false,
+        "keys": {
+          "aim_down": 4194322,
+          "aim_left": 4194319,
+          "aim_right": 4194321,
+          "aim_up": 4194320,
+          "interact": 69,
+          "move_down": 83,
+          "move_left": 65,
+          "move_right": 68,
+          "move_up": 87,
+          "skill": 75,
+          "step": 32,
+          "strike": 74
+        },
+        "status": "Applied and saved on this device."
+      }
+    },
+    {
+      "game": {
+        "cargo": 3,
+        "counters": {
+          "blocks": 0,
+          "counters": 0,
+          "courier_hits": 0,
+          "dodges": 0,
+          "player_hits": 0,
+          "redirects": 0,
+          "rejected": 0
+        },
+        "courier_x": 160.0,
+        "energy": 100.0,
+        "events": [],
+        "hp": 5,
+        "mode": "title",
+        "role": "Guardian",
+        "tick": 0
+      },
+      "hint": "A/D/W/S move / K ability / J blade / E interact / Space step",
+      "profile": {
+        "blocked": false,
+        "dirty": false,
+        "keys": {
+          "aim_down": 4194322,
+          "aim_left": 4194319,
+          "aim_right": 4194321,
+          "aim_up": 4194320,
+          "interact": 69,
+          "move_down": 83,
+          "move_left": 65,
+          "move_right": 68,
+          "move_up": 87,
+          "skill": 75,
+          "step": 32,
+          "strike": 74
+        },
+        "status": "Saved on this device."
+      }
+    }
+  ],
+  "controls": {
+    "model_rules_unchanged": true,
+    "rebound_ability": "H",
+    "rebound_interaction": "F",
+    "restored_profile": {
+      "blocked": false,
+      "dirty": false,
+      "keys": {
+        "aim_down": 4194322,
+        "aim_left": 4194319,
+        "aim_right": 4194321,
+        "aim_up": 4194320,
+        "interact": 69,
+        "move_down": 83,
+        "move_left": 65,
+        "move_right": 68,
+        "move_up": 87,
+        "skill": 75,
+        "step": 32,
+        "strike": 74
+      },
+      "status": "Applied and saved on this device."
+    }
+  },
+  "errands": [
+    {
+      "direct": {
+        "combat": {
+          "cargo": 3,
+          "counters": {
+            "blocks": 6,
+            "counters": 4,
+            "courier_hits": 0,
+            "dodges": 0,
+            "player_hits": 0,
+            "redirects": 0,
+            "rejected": 0
+          },
+          "courier_x": 1000.0,
+          "energy": 100.0,
+          "events": [
+            {
+              "cargo": 3,
+              "energy": 67.6,
+              "hp": 5,
+              "kind": "protected",
+              "tick": 169
+            },
+            {
+              "cargo": 3,
+              "energy": 67.8,
+              "hp": 5,
+              "kind": "protected",
+              "tick": 338
+            },
+            {
+              "cargo": 3,
+              "energy": 100.0,
+              "hp": 5,
+              "kind": "pulse_avoided",
+              "tick": 507
+            },
+            {
+              "cargo": 3,
+              "energy": 72.6,
+              "hp": 5,
+              "kind": "protected",
+              "tick": 676
+            },
+            {
+              "cargo": 3,
+              "energy": 67.8,
+              "hp": 5,
+              "kind": "protected",
+              "tick": 845
+            },
+            {
+              "cargo": 3,
+              "energy": 56.1,
+              "hp": 5,
+              "kind": "counter",
+              "tick": 846
+            },
+            {
+              "cargo": 3,
+              "energy": 100.0,
+              "hp": 5,
+              "kind": "pulse_avoided",
+              "tick": 1086
+            },
+            {
+              "cargo": 3,
+              "energy": 73.0,
+              "hp": 5,
+              "kind": "protected",
+              "tick": 1255
+            },
+            {
+              "cargo": 3,
+              "energy": 61.3,
+              "hp": 5,
+              "kind": "counter",
+              "tick": 1256
+            },
+            {
+              "cargo": 3,
+              "energy": 68.8,
+              "hp": 5,
+              "kind": "protected",
+              "tick": 1496
+            },
+            {
+              "cargo": 3,
+              "energy": 57.1,
+              "hp": 5,
+              "kind": "counter",
+              "tick": 1497
+            },
+            {
+              "cargo": 3,
+              "energy": 100.0,
+              "hp": 5,
+              "kind": "pulse_avoided",
+              "tick": 1737
+            },
+            {
+              "cargo": 3,
+              "energy": 88.0,
+              "hp": 5,
+              "kind": "counter",
+              "tick": 1738
+            }
+          ],
+          "hp": 5,
+          "mode": "won",
+          "role": "Guardian",
+          "tick": 1800
+        },
+        "errand": {
+          "channel": false,
+          "events": [
+            {
+              "action": "dropped",
+              "tick": 515
+            },
+            {
+              "action": "crossing_won",
+              "tick": 1800
+            }
+          ],
+          "finished": true,
+          "progress": 0.0,
+          "state": "available"
+        },
+        "marks": {
+          "blocked": false,
+          "dirty": false,
+          "earned": [
+            "held_line"
+          ],
+          "equipped": "",
+          "status": "Saved locally."
+        }
+      },
+      "recovered": {
+        "combat": {
+          "cargo": 2,
+          "counters": {
+            "blocks": 5,
+            "counters": 4,
+            "courier_hits": 1,
+            "dodges": 0,
+            "player_hits": 0,
+            "redirects": 0,
+            "rejected": 0
+          },
+          "courier_x": 1000.0,
+          "energy": 100.0,
+          "events": [
+            {
+              "cargo": 3,
+              "energy": 67.6,
+              "hp": 5,
+              "kind": "protected",
+              "tick": 169
+            },
+            {
+              "cargo": 3,
+              "energy": 67.8,
+              "hp": 5,
+              "kind": "protected",
+              "tick": 338
+            },
+            {
+              "cargo": 3,
+              "energy": 100.0,
+              "hp": 5,
+              "kind": "pulse_avoided",
+              "tick": 507
+            },
+            {
+              "cargo": 2,
+              "energy": 100.0,
+              "hp": 5,
+              "kind": "courier_hit",
+              "tick": 676
+            },
+            {
+              "cargo": 2,
+              "energy": 75.8,
+              "hp": 5,
+              "kind": "protected",
+              "tick": 845
+            },
+            {
+              "cargo": 2,
+              "energy": 64.1,
+              "hp": 5,
+              "kind": "counter",
+              "tick": 846
+            },
+            {
+              "cargo": 2,
+              "energy": 100.0,
+              "hp": 5,
+              "kind": "pulse_avoided",
+              "tick": 1086
+            },
+            {
+              "cargo": 2,
+              "energy": 73.2,
+              "hp": 5,
+              "kind": "protected",
+              "tick": 1255
+            },
+            {
+              "cargo": 2,
+              "energy": 61.5,
+              "hp": 5,
+              "kind": "counter",
+              "tick": 1256
+            },
+            {
+              "cargo": 2,
+              "energy": 68.6,
+              "hp": 5,
+              "kind": "protected",
+              "tick": 1496
+            },
+            {
+              "cargo": 2,
+              "energy": 56.9,
+              "hp": 5,
+              "kind": "counter",
+              "tick": 1497
+            },
+            {
+              "cargo": 2,
+              "energy": 100.0,
+              "hp": 5,
+              "kind": "pulse_avoided",
+              "tick": 1737
+            },
+            {
+              "cargo": 2,
+              "energy": 88.0,
+              "hp": 5,
+              "kind": "counter",
+              "tick": 1738
+            }
+          ],
+          "hp": 5,
+          "mode": "won",
+          "role": "Guardian",
+          "tick": 1800
+        },
+        "errand": {
+          "channel": false,
+          "events": [
+            {
+              "action": "dropped",
+              "tick": 515
+            },
+            {
+              "action": "recovered",
+              "tick": 633
+            },
+            {
+              "action": "delivered",
+              "tick": 701
+            },
+            {
+              "action": "crossing_won",
+              "tick": 1800
+            }
+          ],
+          "finished": true,
+          "progress": 0.0,
+          "state": "delivered"
+        },
+        "marks": {
+          "blocked": false,
+          "dirty": false,
+          "earned": [
+            "held_line"
+          ],
+          "equipped": "",
+          "status": "Saved locally."
+        }
+      },
+      "role": "Guardian"
+    },
+    {
+      "direct": {
+        "combat": {
+          "cargo": 3,
+          "counters": {
+            "blocks": 0,
+            "counters": 7,
+            "courier_hits": 0,
+            "dodges": 5,
+            "player_hits": 0,
+            "redirects": 5,
+            "rejected": 0
+          },
+          "courier_x": 1000.0,
+          "energy": 76.4,
+          "events": [
+            {
+              "cargo": 3,
+              "energy": 84.0,
+              "hp": 5,
+              "kind": "redirect",
+              "tick": 110
+            },
+            {
+              "cargo": 3,
+              "energy": 59.0,
+              "hp": 5,
+              "kind": "step",
+              "tick": 110
+            },
+            {
+              "cargo": 3,
+              "energy": 76.7,
+              "hp": 5,
+              "kind": "bolt_missed",
+              "tick": 169
+            },
+            {
+              "cargo": 3,
+              "energy": 72.5,
+              "hp": 5,
+              "kind": "counter",
+              "tick": 195
+            },
+            {
+              "cargo": 3,
+              "energy": 84.0,
+              "hp": 5,
+              "kind": "redirect",
+              "tick": 376
+            },
+            {
+              "cargo": 3,
+              "energy": 59.0,
+              "hp": 5,
+              "kind": "step",
+              "tick": 376
+            },
+            {
+              "cargo": 3,
+              "energy": 76.7,
+              "hp": 5,
+              "kind": "bolt_missed",
+              "tick": 435
+            },
+            {
+              "cargo": 3,
+              "energy": 72.5,
+              "hp": 5,
+              "kind": "counter",
+              "tick": 461
+            },
+            {
+              "cargo": 3,
+              "energy": 100.0,
+              "hp": 5,
+              "kind": "pulse_avoided",
+              "tick": 701
+            },
+            {
+              "cargo": 3,
+              "energy": 88.0,
+              "hp": 5,
+              "kind": "counter",
+              "tick": 725
+            },
+            {
+              "cargo": 3,
+              "energy": 84.0,
+              "hp": 5,
+              "kind": "redirect",
+              "tick": 906
+            },
+            {
+              "cargo": 3,
+              "energy": 59.0,
+              "hp": 5,
+              "kind": "step",
+              "tick": 906
+            },
+            {
+              "cargo": 3,
+              "energy": 76.7,
+              "hp": 5,
+              "kind": "bolt_missed",
+              "tick": 965
+            },
+            {
+              "cargo": 3,
+              "energy": 72.5,
+              "hp": 5,
+              "kind": "counter",
+              "tick": 991
+            },
+            {
+              "cargo": 3,
+              "energy": 84.0,
+              "hp": 5,
+              "kind": "redirect",
+              "tick": 1172
+            },
+            {
+              "cargo": 3,
+              "energy": 59.0,
+              "hp": 5,
+              "kind": "step",
+              "tick": 1172
+            },
+            {
+              "cargo": 3,
+              "energy": 76.7,
+              "hp": 5,
+              "kind": "bolt_missed",
+              "tick": 1231
+            },
+            {
+              "cargo": 3,
+              "energy": 72.5,
+              "hp": 5,
+              "kind": "counter",
+              "tick": 1257
+            },
+            {
+              "cargo": 3,
+              "energy": 100.0,
+              "hp": 5,
+              "kind": "pulse_avoided",
+              "tick": 1497
+            },
+            {
+              "cargo": 3,
+              "energy": 88.0,
+              "hp": 5,
+              "kind": "counter",
+              "tick": 1521
+            },
+            {
+              "cargo": 3,
+              "energy": 84.0,
+              "hp": 5,
+              "kind": "redirect",
+              "tick": 1702
+            },
+            {
+              "cargo": 3,
+              "energy": 59.0,
+              "hp": 5,
+              "kind": "step",
+              "tick": 1702
+            },
+            {
+              "cargo": 3,
+              "energy": 76.7,
+              "hp": 5,
+              "kind": "bolt_missed",
+              "tick": 1761
+            },
+            {
+              "cargo": 3,
+              "energy": 72.5,
+              "hp": 5,
+              "kind": "counter",
+              "tick": 1787
+            }
+          ],
+          "hp": 5,
+          "mode": "won",
+          "role": "Duelist",
+          "tick": 1800
+        },
+        "errand": {
+          "channel": false,
+          "events": [
+            {
+              "action": "dropped",
+              "tick": 515
+            },
+            {
+              "action": "crossing_won",
+              "tick": 1800
+            }
+          ],
+          "finished": true,
+          "progress": 0.0,
+          "state": "available"
+        },
+        "marks": {
+          "blocked": false,
+          "dirty": false,
+          "earned": [
+            "drew_danger"
+          ],
+          "equipped": "",
+          "status": "Saved locally."
+        }
+      },
+      "recovered": {
+        "combat": {
+          "cargo": 3,
+          "counters": {
+            "blocks": 0,
+            "counters": 6,
+            "courier_hits": 0,
+            "dodges": 5,
+            "player_hits": 0,
+            "redirects": 5,
+            "rejected": 0
+          },
+          "courier_x": 1000.0,
+          "energy": 100.0,
+          "events": [
+            {
+              "cargo": 3,
+              "energy": 84.0,
+              "hp": 5,
+              "kind": "redirect",
+              "tick": 110
+            },
+            {
+              "cargo": 3,
+              "energy": 59.0,
+              "hp": 5,
+              "kind": "step",
+              "tick": 110
+            },
+            {
+              "cargo": 3,
+              "energy": 76.7,
+              "hp": 5,
+              "kind": "bolt_missed",
+              "tick": 169
+            },
+            {
+              "cargo": 3,
+              "energy": 72.5,
+              "hp": 5,
+              "kind": "counter",
+              "tick": 195
+            },
+            {
+              "cargo": 3,
+              "energy": 84.0,
+              "hp": 5,
+              "kind": "redirect",
+              "tick": 376
+            },
+            {
+              "cargo": 3,
+              "energy": 59.0,
+              "hp": 5,
+              "kind": "step",
+              "tick": 376
+            },
+            {
+              "cargo": 3,
+              "energy": 76.7,
+              "hp": 5,
+              "kind": "bolt_missed",
+              "tick": 435
+            },
+            {
+              "cargo": 3,
+              "energy": 72.5,
+              "hp": 5,
+              "kind": "counter",
+              "tick": 461
+            },
+            {
+              "cargo": 3,
+              "energy": 100.0,
+              "hp": 5,
+              "kind": "pulse_avoided",
+              "tick": 701
+            },
+            {
+              "cargo": 3,
+              "energy": 84.0,
+              "hp": 5,
+              "kind": "redirect",
+              "tick": 811
+            },
+            {
+              "cargo": 3,
+              "energy": 59.0,
+              "hp": 5,
+              "kind": "step",
+              "tick": 811
+            },
+            {
+              "cargo": 3,
+              "energy": 76.7,
+              "hp": 5,
+              "kind": "bolt_missed",
+              "tick": 870
+            },
+            {
+              "cargo": 3,
+              "energy": 72.5,
+              "hp": 5,
+              "kind": "counter",
+              "tick": 896
+            },
+            {
+              "cargo": 3,
+              "energy": 84.0,
+              "hp": 5,
+              "kind": "redirect",
+              "tick": 1077
+            },
+            {
+              "cargo": 3,
+              "energy": 59.0,
+              "hp": 5,
+              "kind": "step",
+              "tick": 1077
+            },
+            {
+              "cargo": 3,
+              "energy": 76.7,
+              "hp": 5,
+              "kind": "bolt_missed",
+              "tick": 1136
+            },
+            {
+              "cargo": 3,
+              "energy": 72.5,
+              "hp": 5,
+              "kind": "counter",
+              "tick": 1162
+            },
+            {
+              "cargo": 3,
+              "energy": 100.0,
+              "hp": 5,
+              "kind": "pulse_avoided",
+              "tick": 1402
+            },
+            {
+              "cargo": 3,
+              "energy": 88.0,
+              "hp": 5,
+              "kind": "counter",
+              "tick": 1426
+            },
+            {
+              "cargo": 3,
+              "energy": 84.0,
+              "hp": 5,
+              "kind": "redirect",
+              "tick": 1607
+            },
+            {
+              "cargo": 3,
+              "energy": 59.0,
+              "hp": 5,
+              "kind": "step",
+              "tick": 1607
+            },
+            {
+              "cargo": 3,
+              "energy": 76.7,
+              "hp": 5,
+              "kind": "bolt_missed",
+              "tick": 1666
+            },
+            {
+              "cargo": 3,
+              "energy": 72.5,
+              "hp": 5,
+              "kind": "counter",
+              "tick": 1692
+            }
+          ],
+          "hp": 5,
+          "mode": "won",
+          "role": "Duelist",
+          "tick": 1800
+        },
+        "errand": {
+          "channel": false,
+          "events": [
+            {
+              "action": "dropped",
+              "tick": 515
+            },
+            {
+              "action": "recovered",
+              "tick": 645
+            },
+            {
+              "action": "delivered",
+              "tick": 714
+            },
+            {
+              "action": "crossing_won",
+              "tick": 1800
+            }
+          ],
+          "finished": true,
+          "progress": 0.0,
+          "state": "delivered"
+        },
+        "marks": {
+          "blocked": false,
+          "dirty": false,
+          "earned": [
+            "drew_danger"
+          ],
+          "equipped": "",
+          "status": "Saved locally."
+        }
+      },
+      "role": "Duelist"
+    }
+  ],
+  "keepsakes": {
+    "completion_outcomes": [
+      {
+        "cargo": 3,
+        "counters": {
+          "blocks": 6,
+          "counters": 4,
+          "courier_hits": 0,
+          "dodges": 0,
+          "player_hits": 0,
+          "redirects": 0,
+          "rejected": 0
+        },
+        "courier_x": 1000.0,
+        "energy": 100.0,
+        "events": [
+          {
+            "cargo": 3,
+            "energy": 67.6,
+            "hp": 5,
+            "kind": "protected",
+            "tick": 169
+          },
+          {
+            "cargo": 3,
+            "energy": 67.8,
+            "hp": 5,
+            "kind": "protected",
+            "tick": 338
+          },
+          {
+            "cargo": 3,
+            "energy": 100.0,
+            "hp": 5,
+            "kind": "pulse_avoided",
+            "tick": 507
+          },
+          {
+            "cargo": 3,
+            "energy": 72.6,
+            "hp": 5,
+            "kind": "protected",
+            "tick": 676
+          },
+          {
+            "cargo": 3,
+            "energy": 67.8,
+            "hp": 5,
+            "kind": "protected",
+            "tick": 845
+          },
+          {
+            "cargo": 3,
+            "energy": 56.1,
+            "hp": 5,
+            "kind": "counter",
+            "tick": 846
+          },
+          {
+            "cargo": 3,
+            "energy": 100.0,
+            "hp": 5,
+            "kind": "pulse_avoided",
+            "tick": 1086
+          },
+          {
+            "cargo": 3,
+            "energy": 73.0,
+            "hp": 5,
+            "kind": "protected",
+            "tick": 1255
+          },
+          {
+            "cargo": 3,
+            "energy": 61.3,
+            "hp": 5,
+            "kind": "counter",
+            "tick": 1256
+          },
+          {
+            "cargo": 3,
+            "energy": 68.8,
+            "hp": 5,
+            "kind": "protected",
+            "tick": 1496
+          },
+          {
+            "cargo": 3,
+            "energy": 57.1,
+            "hp": 5,
+            "kind": "counter",
+            "tick": 1497
+          },
+          {
+            "cargo": 3,
+            "energy": 100.0,
+            "hp": 5,
+            "kind": "pulse_avoided",
+            "tick": 1737
+          },
+          {
+            "cargo": 3,
+            "energy": 88.0,
+            "hp": 5,
+            "kind": "counter",
+            "tick": 1738
+          }
+        ],
+        "hp": 5,
+        "mode": "won",
+        "role": "Guardian",
+        "tick": 1800
+      },
+      {
+        "cargo": 3,
+        "counters": {
+          "blocks": 0,
+          "counters": 7,
+          "courier_hits": 0,
+          "dodges": 5,
+          "player_hits": 0,
+          "redirects": 5,
+          "rejected": 0
+        },
+        "courier_x": 1000.0,
+        "energy": 76.4,
+        "events": [
+          {
+            "cargo": 3,
+            "energy": 84.0,
+            "hp": 5,
+            "kind": "redirect",
+            "tick": 110
+          },
+          {
+            "cargo": 3,
+            "energy": 59.0,
+            "hp": 5,
+            "kind": "step",
+            "tick": 110
+          },
+          {
+            "cargo": 3,
+            "energy": 76.7,
+            "hp": 5,
+            "kind": "bolt_missed",
+            "tick": 169
+          },
+          {
+            "cargo": 3,
+            "energy": 72.5,
+            "hp": 5,
+            "kind": "counter",
+            "tick": 195
+          },
+          {
+            "cargo": 3,
+            "energy": 84.0,
+            "hp": 5,
+            "kind": "redirect",
+            "tick": 376
+          },
+          {
+            "cargo": 3,
+            "energy": 59.0,
+            "hp": 5,
+            "kind": "step",
+            "tick": 376
+          },
+          {
+            "cargo": 3,
+            "energy": 76.7,
+            "hp": 5,
+            "kind": "bolt_missed",
+            "tick": 435
+          },
+          {
+            "cargo": 3,
+            "energy": 72.5,
+            "hp": 5,
+            "kind": "counter",
+            "tick": 461
+          },
+          {
+            "cargo": 3,
+            "energy": 100.0,
+            "hp": 5,
+            "kind": "pulse_avoided",
+            "tick": 701
+          },
+          {
+            "cargo": 3,
+            "energy": 88.0,
+            "hp": 5,
+            "kind": "counter",
+            "tick": 725
+          },
+          {
+            "cargo": 3,
+            "energy": 84.0,
+            "hp": 5,
+            "kind": "redirect",
+            "tick": 906
+          },
+          {
+            "cargo": 3,
+            "energy": 59.0,
+            "hp": 5,
+            "kind": "step",
+            "tick": 906
+          },
+          {
+            "cargo": 3,
+            "energy": 76.7,
+            "hp": 5,
+            "kind": "bolt_missed",
+            "tick": 965
+          },
+          {
+            "cargo": 3,
+            "energy": 72.5,
+            "hp": 5,
+            "kind": "counter",
+            "tick": 991
+          },
+          {
+            "cargo": 3,
+            "energy": 84.0,
+            "hp": 5,
+            "kind": "redirect",
+            "tick": 1172
+          },
+          {
+            "cargo": 3,
+            "energy": 59.0,
+            "hp": 5,
+            "kind": "step",
+            "tick": 1172
+          },
+          {
+            "cargo": 3,
+            "energy": 76.7,
+            "hp": 5,
+            "kind": "bolt_missed",
+            "tick": 1231
+          },
+          {
+            "cargo": 3,
+            "energy": 72.5,
+            "hp": 5,
+            "kind": "counter",
+            "tick": 1257
+          },
+          {
+            "cargo": 3,
+            "energy": 100.0,
+            "hp": 5,
+            "kind": "pulse_avoided",
+            "tick": 1497
+          },
+          {
+            "cargo": 3,
+            "energy": 88.0,
+            "hp": 5,
+            "kind": "counter",
+            "tick": 1521
+          },
+          {
+            "cargo": 3,
+            "energy": 84.0,
+            "hp": 5,
+            "kind": "redirect",
+            "tick": 1702
+          },
+          {
+            "cargo": 3,
+            "energy": 59.0,
+            "hp": 5,
+            "kind": "step",
+            "tick": 1702
+          },
+          {
+            "cargo": 3,
+            "energy": 76.7,
+            "hp": 5,
+            "kind": "bolt_missed",
+            "tick": 1761
+          },
+          {
+            "cargo": 3,
+            "energy": 72.5,
+            "hp": 5,
+            "kind": "counter",
+            "tick": 1787
+          }
+        ],
+        "hp": 5,
+        "mode": "won",
+        "role": "Duelist",
+        "tick": 1800
+      }
+    ],
+    "earned_and_worn": {
+      "blocked": false,
+      "dirty": false,
+      "earned": [
+        "held_line",
+        "drew_danger"
+      ],
+      "equipped": "held_line",
+      "status": "Saved locally."
+    },
+    "no_combat_stat_change": true
+  },
+  "outcomes": [
+    {
+      "cargo": 3,
+      "counters": {
+        "blocks": 6,
+        "counters": 4,
+        "courier_hits": 0,
+        "dodges": 0,
+        "player_hits": 0,
+        "redirects": 0,
+        "rejected": 0
+      },
+      "courier_x": 1000.0,
+      "energy": 100.0,
+      "events": [
+        {
+          "cargo": 3,
+          "energy": 67.6,
+          "hp": 5,
+          "kind": "protected",
+          "tick": 169
+        },
+        {
+          "cargo": 3,
+          "energy": 67.8,
+          "hp": 5,
+          "kind": "protected",
+          "tick": 338
+        },
+        {
+          "cargo": 3,
+          "energy": 100.0,
+          "hp": 5,
+          "kind": "pulse_avoided",
+          "tick": 507
+        },
+        {
+          "cargo": 3,
+          "energy": 72.6,
+          "hp": 5,
+          "kind": "protected",
+          "tick": 676
+        },
+        {
+          "cargo": 3,
+          "energy": 67.8,
+          "hp": 5,
+          "kind": "protected",
+          "tick": 845
+        },
+        {
+          "cargo": 3,
+          "energy": 56.1,
+          "hp": 5,
+          "kind": "counter",
+          "tick": 846
+        },
+        {
+          "cargo": 3,
+          "energy": 100.0,
+          "hp": 5,
+          "kind": "pulse_avoided",
+          "tick": 1086
+        },
+        {
+          "cargo": 3,
+          "energy": 73.0,
+          "hp": 5,
+          "kind": "protected",
+          "tick": 1255
+        },
+        {
+          "cargo": 3,
+          "energy": 61.3,
+          "hp": 5,
+          "kind": "counter",
+          "tick": 1256
+        },
+        {
+          "cargo": 3,
+          "energy": 68.8,
+          "hp": 5,
+          "kind": "protected",
+          "tick": 1496
+        },
+        {
+          "cargo": 3,
+          "energy": 57.1,
+          "hp": 5,
+          "kind": "counter",
+          "tick": 1497
+        },
+        {
+          "cargo": 3,
+          "energy": 100.0,
+          "hp": 5,
+          "kind": "pulse_avoided",
+          "tick": 1737
+        },
+        {
+          "cargo": 3,
+          "energy": 88.0,
+          "hp": 5,
+          "kind": "counter",
+          "tick": 1738
+        }
+      ],
+      "hp": 5,
+      "mode": "won",
+      "role": "Guardian",
+      "tick": 1800
+    },
+    {
+      "cargo": 2,
+      "counters": {
+        "blocks": 0,
+        "counters": 0,
+        "courier_hits": 1,
+        "dodges": 0,
+        "player_hits": 5,
+        "redirects": 0,
+        "rejected": 0
+      },
+      "courier_x": 633.205,
+      "energy": 100.0,
+      "events": [
+        {
+          "cargo": 3,
+          "energy": 100.0,
+          "hp": 4,
+          "kind": "bolt_hit",
+          "tick": 169
+        },
+        {
+          "cargo": 3,
+          "energy": 100.0,
+          "hp": 3,
+          "kind": "bolt_hit",
+          "tick": 338
+        },
+        {
+          "cargo": 3,
+          "energy": 100.0,
+          "hp": 2,
+          "kind": "pulse_hit",
+          "tick": 507
+        },
+        {
+          "cargo": 3,
+          "energy": 100.0,
+          "hp": 1,
+          "kind": "bolt_hit",
+          "tick": 676
+        },
+        {
+          "cargo": 2,
+          "energy": 100.0,
+          "hp": 1,
+          "kind": "courier_hit",
+          "tick": 845
+        },
+        {
+          "cargo": 2,
+          "energy": 100.0,
+          "hp": 0,
+          "kind": "pulse_hit",
+          "tick": 1014
+        }
+      ],
+      "hp": 0,
+      "mode": "lost",
+      "role": "Guardian",
+      "tick": 1014
+    },
+    {
+      "cargo": 3,
+      "counters": {
+        "blocks": 0,
+        "counters": 7,
+        "courier_hits": 0,
+        "dodges": 5,
+        "player_hits": 0,
+        "redirects": 5,
+        "rejected": 0
+      },
+      "courier_x": 1000.0,
+      "energy": 76.4,
+      "events": [
+        {
+          "cargo": 3,
+          "energy": 84.0,
+          "hp": 5,
+          "kind": "redirect",
+          "tick": 110
+        },
+        {
+          "cargo": 3,
+          "energy": 59.0,
+          "hp": 5,
+          "kind": "step",
+          "tick": 110
+        },
+        {
+          "cargo": 3,
+          "energy": 76.7,
+          "hp": 5,
+          "kind": "bolt_missed",
+          "tick": 169
+        },
+        {
+          "cargo": 3,
+          "energy": 72.5,
+          "hp": 5,
+          "kind": "counter",
+          "tick": 195
+        },
+        {
+          "cargo": 3,
+          "energy": 84.0,
+          "hp": 5,
+          "kind": "redirect",
+          "tick": 376
+        },
+        {
+          "cargo": 3,
+          "energy": 59.0,
+          "hp": 5,
+          "kind": "step",
+          "tick": 376
+        },
+        {
+          "cargo": 3,
+          "energy": 76.7,
+          "hp": 5,
+          "kind": "bolt_missed",
+          "tick": 435
+        },
+        {
+          "cargo": 3,
+          "energy": 72.5,
+          "hp": 5,
+          "kind": "counter",
+          "tick": 461
+        },
+        {
+          "cargo": 3,
+          "energy": 100.0,
+          "hp": 5,
+          "kind": "pulse_avoided",
+          "tick": 701
+        },
+        {
+          "cargo": 3,
+          "energy": 88.0,
+          "hp": 5,
+          "kind": "counter",
+          "tick": 725
+        },
+        {
+          "cargo": 3,
+          "energy": 84.0,
+          "hp": 5,
+          "kind": "redirect",
+          "tick": 906
+        },
+        {
+          "cargo": 3,
+          "energy": 59.0,
+          "hp": 5,
+          "kind": "step",
+          "tick": 906
+        },
+        {
+          "cargo": 3,
+          "energy": 76.7,
+          "hp": 5,
+          "kind": "bolt_missed",
+          "tick": 965
+        },
+        {
+          "cargo": 3,
+          "energy": 72.5,
+          "hp": 5,
+          "kind": "counter",
+          "tick": 991
+        },
+        {
+          "cargo": 3,
+          "energy": 84.0,
+          "hp": 5,
+          "kind": "redirect",
+          "tick": 1172
+        },
+        {
+          "cargo": 3,
+          "energy": 59.0,
+          "hp": 5,
+          "kind": "step",
+          "tick": 1172
+        },
+        {
+          "cargo": 3,
+          "energy": 76.7,
+          "hp": 5,
+          "kind": "bolt_missed",
+          "tick": 1231
+        },
+        {
+          "cargo": 3,
+          "energy": 72.5,
+          "hp": 5,
+          "kind": "counter",
+          "tick": 1257
+        },
+        {
+          "cargo": 3,
+          "energy": 100.0,
+          "hp": 5,
+          "kind": "pulse_avoided",
+          "tick": 1497
+        },
+        {
+          "cargo": 3,
+          "energy": 88.0,
+          "hp": 5,
+          "kind": "counter",
+          "tick": 1521
+        },
+        {
+          "cargo": 3,
+          "energy": 84.0,
+          "hp": 5,
+          "kind": "redirect",
+          "tick": 1702
+        },
+        {
+          "cargo": 3,
+          "energy": 59.0,
+          "hp": 5,
+          "kind": "step",
+          "tick": 1702
+        },
+        {
+          "cargo": 3,
+          "energy": 76.7,
+          "hp": 5,
+          "kind": "bolt_missed",
+          "tick": 1761
+        },
+        {
+          "cargo": 3,
+          "energy": 72.5,
+          "hp": 5,
+          "kind": "counter",
+          "tick": 1787
+        }
+      ],
+      "hp": 5,
+      "mode": "won",
+      "role": "Duelist",
+      "tick": 1800
+    },
+    {
+      "cargo": 2,
+      "counters": {
+        "blocks": 0,
+        "counters": 0,
+        "courier_hits": 1,
+        "dodges": 0,
+        "player_hits": 5,
+        "redirects": 0,
+        "rejected": 0
+      },
+      "courier_x": 633.205,
+      "energy": 100.0,
+      "events": [
+        {
+          "cargo": 3,
+          "energy": 100.0,
+          "hp": 4,
+          "kind": "bolt_hit",
+          "tick": 169
+        },
+        {
+          "cargo": 3,
+          "energy": 100.0,
+          "hp": 3,
+          "kind": "bolt_hit",
+          "tick": 338
+        },
+        {
+          "cargo": 3,
+          "energy": 100.0,
+          "hp": 2,
+          "kind": "pulse_hit",
+          "tick": 507
+        },
+        {
+          "cargo": 3,
+          "energy": 100.0,
+          "hp": 1,
+          "kind": "bolt_hit",
+          "tick": 676
+        },
+        {
+          "cargo": 2,
+          "energy": 100.0,
+          "hp": 1,
+          "kind": "courier_hit",
+          "tick": 845
+        },
+        {
+          "cargo": 2,
+          "energy": 100.0,
+          "hp": 0,
+          "kind": "pulse_hit",
+          "tick": 1014
+        }
+      ],
+      "hp": 0,
+      "mode": "lost",
+      "role": "Duelist",
+      "tick": 1014
+    }
+  ],
+  "rehearsals": [
+    {
+      "results": [
+        {
+          "attempt": 1,
+          "impact": {
+            "code": "bolt_blocked",
+            "explanation": "Your live frontal guard intercepted the bolt before the courier.",
+            "tip": "Release guard to recover posture. Strike only when OPEN and close."
+          },
+          "passed": true,
+          "snapshot": {
+            "cargo": 3,
+            "counters": {
+              "blocks": 1,
+              "counters": 0,
+              "courier_hits": 0,
+              "dodges": 0,
+              "player_hits": 0,
+              "redirects": 0,
+              "rejected": 0
+            },
+            "courier_x": 338.0,
+            "energy": 66.0,
+            "events": [
+              {
+                "cargo": 3,
+                "energy": 66.0,
+                "hp": 5,
+                "kind": "protected",
+                "tick": 60
+              }
+            ],
+            "hp": 5,
+            "mode": "paused",
+            "role": "Guardian",
+            "tick": 60
+          },
+          "stage": 0
+        },
+        {
+          "attempt": 2,
+          "impact": {
+            "code": "pulse_avoided",
+            "explanation": "You left the ground pulse before it landed.",
+            "tip": "An OPEN window follows. Close the distance before a blade counter."
+          },
+          "passed": true,
+          "snapshot": {
+            "cargo": 3,
+            "counters": {
+              "blocks": 0,
+              "counters": 0,
+              "courier_hits": 0,
+              "dodges": 0,
+              "player_hits": 0,
+              "redirects": 0,
+              "rejected": 0
+            },
+            "courier_x": 338.0,
+            "energy": 100.0,
+            "events": [
+              {
+                "cargo": 3,
+                "energy": 100.0,
+                "hp": 5,
+                "kind": "pulse_avoided",
+                "tick": 60
+              }
+            ],
+            "hp": 5,
+            "mode": "paused",
+            "role": "Guardian",
+            "tick": 60
+          },
+          "stage": 1
+        },
+        {
+          "attempt": 3,
+          "impact": {},
+          "passed": true,
+          "snapshot": {
+            "cargo": 3,
+            "counters": {
+              "blocks": 0,
+              "counters": 1,
+              "courier_hits": 0,
+              "dodges": 0,
+              "player_hits": 0,
+              "redirects": 0,
+              "rejected": 0
+            },
+            "courier_x": 317.933,
+            "energy": 88.0,
+            "events": [
+              {
+                "cargo": 3,
+                "energy": 88.0,
+                "hp": 5,
+                "kind": "counter",
+                "tick": 17
+              }
+            ],
+            "hp": 5,
+            "mode": "paused",
+            "role": "Guardian",
+            "tick": 17
+          },
+          "stage": 2
+        }
+      ],
+      "role": "Guardian"
+    },
+    {
+      "results": [
+        {
+          "attempt": 1,
+          "impact": {
+            "code": "bolt_missed",
+            "explanation": "The locked bolt hit neither you nor the courier.",
+            "tip": "An OPEN window follows. Close the distance before a blade counter."
+          },
+          "passed": true,
+          "snapshot": {
+            "cargo": 3,
+            "counters": {
+              "blocks": 0,
+              "counters": 0,
+              "courier_hits": 0,
+              "dodges": 0,
+              "player_hits": 0,
+              "redirects": 1,
+              "rejected": 0
+            },
+            "courier_x": 338.0,
+            "energy": 100.0,
+            "events": [
+              {
+                "cargo": 3,
+                "energy": 84.0,
+                "hp": 5,
+                "kind": "redirect",
+                "tick": 1
+              },
+              {
+                "cargo": 3,
+                "energy": 100.0,
+                "hp": 5,
+                "kind": "bolt_missed",
+                "tick": 60
+              }
+            ],
+            "hp": 5,
+            "mode": "paused",
+            "role": "Duelist",
+            "tick": 60
+          },
+          "stage": 0
+        },
+        {
+          "attempt": 2,
+          "impact": {
+            "code": "pulse_avoided",
+            "explanation": "You left the ground pulse before it landed.",
+            "tip": "An OPEN window follows. Close the distance before a blade counter."
+          },
+          "passed": true,
+          "snapshot": {
+            "cargo": 3,
+            "counters": {
+              "blocks": 0,
+              "counters": 0,
+              "courier_hits": 0,
+              "dodges": 0,
+              "player_hits": 0,
+              "redirects": 0,
+              "rejected": 0
+            },
+            "courier_x": 338.0,
+            "energy": 100.0,
+            "events": [
+              {
+                "cargo": 3,
+                "energy": 100.0,
+                "hp": 5,
+                "kind": "pulse_avoided",
+                "tick": 60
+              }
+            ],
+            "hp": 5,
+            "mode": "paused",
+            "role": "Duelist",
+            "tick": 60
+          },
+          "stage": 1
+        },
+        {
+          "attempt": 3,
+          "impact": {},
+          "passed": true,
+          "snapshot": {
+            "cargo": 3,
+            "counters": {
+              "blocks": 0,
+              "counters": 1,
+              "courier_hits": 0,
+              "dodges": 0,
+              "player_hits": 0,
+              "redirects": 0,
+              "rejected": 0
+            },
+            "courier_x": 317.933,
+            "energy": 88.0,
+            "events": [
+              {
+                "cargo": 3,
+                "energy": 88.0,
+                "hp": 5,
+                "kind": "counter",
+                "tick": 17
+              }
+            ],
+            "hp": 5,
+            "mode": "paused",
+            "role": "Duelist",
+            "tick": 17
+          },
+          "stage": 2
+        }
+      ],
+      "role": "Duelist"
+    }
+  ],
+  "runtime": "4.6.3-stable (official)",
+  "schema_version": 1
+}

@@ -51,6 +51,34 @@ tip, even after transient warnings or the final loss message replace the live
 feedback. Diagnosis distinguishes facing, guard startup, insufficient posture,
 unguarded contact, courier first contact, and pulse/bolt outcomes.
 
+## Keyboard preferences
+
+The keys above are defaults. **F1** opens controls from selection, play, rehearsal,
+pause or results. Opening freezes a live attempt; closing never starts/resumes it.
+Use **Up/Down** to select an action, **Enter** to capture a new bare keyboard key,
+**S** to apply/save, **Delete** to put defaults in the draft, and **Esc** to cancel
+capture or close/discard unapplied changes. A conflict names the action already
+using that key. All twelve gameplay actions are configurable; simultaneous actions
+must have distinct keys. Gameplay hints show the applied map, not an uncommitted draft.
+Input held through settings/focus loss must be released before deliberate reuse.
+
+Letters use physical positions; navigation arrows use logical identity. Fixed
+management keys (Esc, Enter/keypad Enter, 1, 2, R, T, C, F1, F5, F12) are reserved.
+Mouse, gamepad, modifier combinations and hold/toggle alternatives are unsupported;
+remapping does not change guard/feint/interaction commitment or combat costs.
+
+Preferences live separately from keepsakes at `user://crossing-controls.json`;
+`CROSSING_CONTROLS` can select an isolated path. The version-1 JSON contains twelve
+unique allowlisted integer key codes, is limited to 4096 bytes, and is editable local
+preference data, not account or secure state. Missing files use defaults without
+writing. Applying explicitly changes the session even if saving fails. Invalid or
+unknown primary bytes are preserved: restore/remove that file, then S retries.
+Write/replace failure keeps the previous profile and offers retry after path repair.
+Writes use same-directory temporary/readback/rename; no power-loss durability,
+concurrent-writer, synchronization or universal accessibility guarantee is claimed.
+
+![Applied controls and matching live hint](../../evidence/north-star-controls/keyboard-applied.png)
+
 ## Optional rehearsal
 
 Three isolated exercises use the same `Combat` model as the normal crossing:
@@ -135,7 +163,7 @@ or MMORPG persistence.
 ## Execute checks and reproduce delivery
 
 ```bash
-python3 north-star/prototype/tools/verify.py --godot godot --output /tmp/crossing-check.json --compare evidence/north-star-medicine/results.json
+python3 north-star/prototype/tools/verify.py --godot godot --output /tmp/crossing-check.json --compare evidence/north-star-controls/results.json
 ```
 
 The stdlib runner bounds owned engine processes, uses writable temporary XDG paths,
@@ -143,10 +171,12 @@ loads the source project, executes positive/negative controls, both rehearsal se
 and two complete repeatable crossing policies, plus keepsake eligibility and local
 profile controls, then executes the **delivered PCK** and requires exact source/PCK
 outcomes.
-The current suite has 141 native controls, including full direct/recovery routes for
+The current suite has 179 native controls, including full direct/recovery routes for
 both approaches. Eight further engine invocations (earn,
 read, put away, read for each source/PCK) demonstrate actual process reentry with
-the same local profile. New crossings remain fresh; only earned/equipped marks return.
+the same local profile. Eight additional apply/read/restore/read processes verify the separate keyboard profile
+in both source/PCK, for sixteen continuity processes total. New crossings remain fresh;
+only earned/equipped marks and explicitly applied controls return.
 It rejects script errors, missing reports, failed checks or changed packaged behavior.
 It records hashes separately from gameplay observations. Native checks do not prove
 perceived class identity, reaction fairness or accessibility.
@@ -157,7 +187,7 @@ The source pack is reproducible with the matching engine:
 godot --headless --path north-star/prototype --script tools/pack.gd -- /absolute/path/crossing-drill.pck
 ```
 
-[Current execution evidence](../../evidence/north-star-medicine/RUN.json) identifies
+[Current execution evidence](../../evidence/north-star-controls/RUN.json) identifies
 baseline, source/result hashes, commands, refinements and limitations. The preserved
 [first-consumer record](../../evidence/north-star-crossing/RUN.json) documents the
 original crossing delivery; the [rehearsal record](../../evidence/north-star-rehearsal/RUN.json)

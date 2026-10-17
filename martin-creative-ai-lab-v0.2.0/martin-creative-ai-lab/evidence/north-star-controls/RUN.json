@@ -1,0 +1,398 @@
+{
+  "schema_version": 1,
+  "kind": "destination_execution",
+  "recorded_at_utc": "2026-10-17T20:58:29.352681+00:00",
+  "baseline_commit": "3b1eafc1d76d0c7f596af4e7ed55a52ba1781abe",
+  "branch": "codex/north-star-controls-20261017",
+  "mode": "DEVELOPMENT",
+  "priority_category": 1,
+  "priority_reason": "Existing playable consumer hardcodes twelve gameplay actions; reversible remapping gives players actual control without changing commitment or expanding unrelated labs.",
+  "capability_ids": [
+    "NS-C03"
+  ],
+  "consumer_paths": [
+    "north-star/prototype/arena.gd",
+    "north-star/prototype/combat.gd",
+    "north-star/prototype/rehearsal.gd",
+    "north-star/prototype/keepsakes.gd",
+    "north-star/prototype/errand.gd",
+    "north-star/prototype/controls.gd"
+  ],
+  "runtime": "Godot4.6.3.stable.official.7d41c59c4 standard; Python3.12; Linux x86_64; Xorg dummy/OpenGL Mesa25.0.7 llvmpipe LLVM19.1.7; Dummy audio",
+  "scope": "Twelve keyboard actions in the actual native crossing/rehearsal, cancellable settings, matching hints and separate recoverable device-local preferences. No new combat rules, classes, account state or accessibility certification.",
+  "checks": {
+    "failed": 0,
+    "passed": 179
+  },
+  "commands": [
+    {
+      "command": [
+        "python3",
+        "north-star/prototype/tools/verify.py",
+        "--output",
+        "/tmp/ns-controls-baseline.json",
+        "--compare",
+        "evidence/north-star-medicine/results.json"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "godot",
+        "--headless",
+        "--path",
+        "north-star/prototype",
+        "--script",
+        "tools/pack.gd",
+        "--",
+        "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/prototype/dist/crossing-drill.pck"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "python3",
+        "north-star/prototype/tools/verify.py",
+        "--output",
+        "evidence/north-star-controls/results.json"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "python3",
+        "work/north-star-controls/keyboard.py"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "python3",
+        "tools/test_brain_query.py"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "python3",
+        "tools/test_validate_repo.py"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "python3",
+        "tools/test_reference_library.py"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "python3",
+        "tools/test_check_manifest.py"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "python3",
+        "north-star/prototype/tools/test_verify.py"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "python3",
+        "tools/brain_query.py",
+        "check"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "python3",
+        "tools/reference_library.py",
+        "check"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "python3",
+        "tools/validate_repo.py"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "python3",
+        "north-star/prototype/tools/verify.py",
+        "--output",
+        "/tmp/ns-controls-final.json",
+        "--compare",
+        "evidence/north-star-controls/results.json"
+      ],
+      "exit_code": 0
+    }
+  ],
+  "source_artifacts": [
+    {
+      "local_path": "north-star/prototype/.gitignore",
+      "sha256": "531d0d253cec1addb97b2cb2d144b6589ff934513eb9c9b8cf882cb49e4c0c32",
+      "size_bytes": 8
+    },
+    {
+      "local_path": "north-star/prototype/README.md",
+      "sha256": "e280d2c74c3be846f28fec2cedf55ed90cd85066f1976d1ccd7be0d9eecac6bb",
+      "size_bytes": 12944
+    },
+    {
+      "local_path": "north-star/prototype/arena.gd",
+      "sha256": "3986d3000d88d8242be84bc89efa1c8874fa0c3f7f95a15339bcfae51ebeb5b8",
+      "size_bytes": 21294
+    },
+    {
+      "local_path": "north-star/prototype/arena.gd.uid",
+      "sha256": "1cd2fa44a912d470ad3de79f672223ff85436c4d1ab34701debf2e10a1a14fe2",
+      "size_bytes": 20
+    },
+    {
+      "local_path": "north-star/prototype/arena.tscn",
+      "sha256": "f794c485663f0ed318ddce6bb7a62bc9b2dbd3af02be4f166cca962c29382591",
+      "size_bytes": 154
+    },
+    {
+      "local_path": "north-star/prototype/combat.gd",
+      "sha256": "22b257c59ad3c6f183aac416122ce8ed36d9af38ba7f70a0f8b09bba0f6217c4",
+      "size_bytes": 9868
+    },
+    {
+      "local_path": "north-star/prototype/combat.gd.uid",
+      "sha256": "8f28f645ef4d4bba1021b27bc39fed04c438124fd819cc32c3586f92b3c58f9f",
+      "size_bytes": 20
+    },
+    {
+      "local_path": "north-star/prototype/controls.gd",
+      "sha256": "4c88d0a49d2f64fab275cfc2e62b8956ea17019aaf26445f99ce1a21a58b4fb0",
+      "size_bytes": 7458
+    },
+    {
+      "local_path": "north-star/prototype/dist/crossing-drill.pck",
+      "sha256": "c297dfb5085b06771711d10b4b4f187b11037f99da3884dd46601f2043cdaede",
+      "size_bytes": 95588
+    },
+    {
+      "local_path": "north-star/prototype/errand.gd",
+      "sha256": "2a2392fa86bd12544eba5f60ad74d35592c7d6fa207373ec11a1928a9e33e601",
+      "size_bytes": 3831
+    },
+    {
+      "local_path": "north-star/prototype/keepsakes.gd",
+      "sha256": "d7790dddbd25904069b0c1a6d5edb2f7d01bc02a375d608a4ec5a25262ddb6c9",
+      "size_bytes": 5848
+    },
+    {
+      "local_path": "north-star/prototype/project.godot",
+      "sha256": "8d4755b58f1179a9b5ec431579177371e784bca9703a17c88f4c7a6d4ee9385c",
+      "size_bytes": 414
+    },
+    {
+      "local_path": "north-star/prototype/provenance.json",
+      "sha256": "49c3f69a8902e06ffeb00da93109613338da78c7e467c3c5e8edfc2ded760615",
+      "size_bytes": 1045
+    },
+    {
+      "local_path": "north-star/prototype/rehearsal.gd",
+      "sha256": "55a1a348dd37a2552074a8ecc48dbe01b3fbef9211750f2110093a1ccc6eaeb6",
+      "size_bytes": 2919
+    },
+    {
+      "local_path": "north-star/prototype/tests/controls_checks.gd",
+      "sha256": "aec1a8a26e262a3830714f9fa748923d8b27b9e51d2e93fa6b3b74c2ee3acf0c",
+      "size_bytes": 9525
+    },
+    {
+      "local_path": "north-star/prototype/tests/controls_restart.gd",
+      "sha256": "066f641273c045a97ea1ee6bd2ddd9469e452d6edab80bc36a426927da431b61",
+      "size_bytes": 1134
+    },
+    {
+      "local_path": "north-star/prototype/tests/errand_checks.gd",
+      "sha256": "2f04534e200e82f08e01127a3b31c5dafacb5151c9635038bf6c14d33ac89094",
+      "size_bytes": 6353
+    },
+    {
+      "local_path": "north-star/prototype/tests/errand_policy.gd",
+      "sha256": "74f4d20501771d8697e79629aaa6e86cb5056211eae0ab860aa593cb5190cb9e",
+      "size_bytes": 655
+    },
+    {
+      "local_path": "north-star/prototype/tests/keepsake_checks.gd",
+      "sha256": "a8614cb0592ff8c403185b82f702c289abd42b78c783f4bc8f06d2ecaf211fcf",
+      "size_bytes": 9709
+    },
+    {
+      "local_path": "north-star/prototype/tests/keepsake_restart.gd",
+      "sha256": "8e9f107c310836324c51b1cbe1b2db618feadbd98b0cebbef12f75f39ab112c2",
+      "size_bytes": 1097
+    },
+    {
+      "local_path": "north-star/prototype/tests/policy.gd",
+      "sha256": "646f0758a211e84ffbfd4632460c7d1fc549cbb3b552801ee2508774a5a63e29",
+      "size_bytes": 979
+    },
+    {
+      "local_path": "north-star/prototype/tests/rehearsal_checks.gd",
+      "sha256": "0286d8997fdf1bd7ebad0b72a7283651678cfa30f85b2bd55e98e995c3f9b1f5",
+      "size_bytes": 6003
+    },
+    {
+      "local_path": "north-star/prototype/tests/render_journey.gd",
+      "sha256": "b0de7bc7cdd8795d55c0fdb8248c277c38ead3299714e7290c70df1a2c114e49",
+      "size_bytes": 992
+    },
+    {
+      "local_path": "north-star/prototype/tests/render_keepsakes.gd",
+      "sha256": "eafb1a071de871af521712b32f095a2d6c46f3424e85590c9e43c52310850359",
+      "size_bytes": 1502
+    },
+    {
+      "local_path": "north-star/prototype/tests/render_medicine.gd",
+      "sha256": "0716b982847fbd47dc596954c2f7a98f72e30e0fd6356aacc371e139be8455f1",
+      "size_bytes": 2215
+    },
+    {
+      "local_path": "north-star/prototype/tests/render_rehearsal.gd",
+      "sha256": "fc268d9764cfdd52874c8ea9f2f96aaeaa6f98ebede22dcbf412fe4692c6de42",
+      "size_bytes": 2254
+    },
+    {
+      "local_path": "north-star/prototype/tests/run_checks.gd",
+      "sha256": "5b6cebee8b2b6120e8b5620044630ab7099f59dd19472582e899fe1df8f58f3b",
+      "size_bytes": 6961
+    },
+    {
+      "local_path": "north-star/prototype/tools/pack.gd",
+      "sha256": "59bf6ccc3569d16a951eca021ef49e7bff487fb79c1de65afd7da7cd8b409157",
+      "size_bytes": 736
+    },
+    {
+      "local_path": "north-star/prototype/tools/test_verify.py",
+      "sha256": "08898e09aba0e8ce07d37cab94d9b045904d5665b724864d5ef04fbce66c36e5",
+      "size_bytes": 1778
+    },
+    {
+      "local_path": "north-star/prototype/tools/verify.py",
+      "sha256": "ddbdf7fb69480905b945d4452d97b563f586645a67f5aba61436979a9c3930ef",
+      "size_bytes": 7514
+    }
+  ],
+  "result_artifacts": [
+    {
+      "local_path": "evidence/north-star-controls/keyboard-applied.png",
+      "sha256": "2b6de9e8cac13be6ffbfd1add841fa48caacd835277281024feec38761912123",
+      "size_bytes": 104587
+    },
+    {
+      "local_path": "evidence/north-star-controls/keyboard-conflict.png",
+      "sha256": "6d62c13f98e340b18320265864280abf66cfd205a7907e7d079f975994956cda",
+      "size_bytes": 110284
+    },
+    {
+      "local_path": "evidence/north-star-controls/keyboard-fixture.gd",
+      "sha256": "6569d3e7962a4df0a4970b2290977646d35c9637f8867180445ee467ccffee1f",
+      "size_bytes": 418
+    },
+    {
+      "local_path": "evidence/north-star-controls/keyboard-rebound-guard.png",
+      "sha256": "26a6ea14eb552904ebca25bb2ffbd625e33cfc938ccff1e48a5ad84504e2b852",
+      "size_bytes": 82438
+    },
+    {
+      "local_path": "evidence/north-star-controls/keyboard-rebound-recovery.png",
+      "sha256": "aa3bf579401b743d4552f36725f08f5eb421f3193e36cee57eb435e619de0d4a",
+      "size_bytes": 65286
+    },
+    {
+      "local_path": "evidence/north-star-controls/keyboard-save-blocked.png",
+      "sha256": "1b7316f0e96aff6f4fb8809f94665d96c47fb9d0798f5423f555da5ab35207f4",
+      "size_bytes": 109649
+    },
+    {
+      "local_path": "evidence/north-star-controls/keyboard.json",
+      "sha256": "99632a8111c9822c303c4bd2d186e3986bfda3960ecc0f67b7c6e9ffa56079ae",
+      "size_bytes": 17317
+    },
+    {
+      "local_path": "evidence/north-star-controls/results.json",
+      "sha256": "8c00248ec4cd42082d71d2a04e989742bc1229f570c05ed7f193d0b9317d05a2",
+      "size_bytes": 58372
+    }
+  ],
+  "brain_activation": {
+    "domains": {
+      "engineering": "high",
+      "scientific": "high",
+      "creative": "high"
+    },
+    "chapters": {
+      "ENG-022": "Human factors, predictable recovery and cognitive load.",
+      "SCI-061": "Actual task/device usability controls and representative-human validity limits.",
+      "CRE-001": "Direct author character-agency objective.",
+      "CRE-075": "Contextual HUD/readability hypothesis; hints follow applied bindings.",
+      "CRE-081": "Documented remapping/accessibility direction, not independent accessibility validation."
+    },
+    "method": "Read all three indices, searched accessibility, retrieved complete pertinent chapters before improvements; consulted existing combat-response/character-keepsake findings. Sources and pins unchanged."
+  },
+  "alternatives": [
+    "New encounter fork: valuable but no specific new fork outranks the inspected fixed-input gap after medicine recovery.",
+    "Audiovisual threat identity: potential value; no diagnosed fault or physical perceptual validation setup this cycle.",
+    "Selected reversible keyboard remapping in the actual consumer, preserving all character mechanics.",
+    "Hold/toggle modes: deferred because commitment semantics require separate design and evaluation.",
+    "Standalone origin extraction/research: lower priority than an existing-consumer barrier."
+  ],
+  "before_after": {
+    "baseline_checks": 141,
+    "final_checks": 179,
+    "original_observations_exactly_unchanged": [
+      "outcomes",
+      "rehearsals",
+      "keepsakes",
+      "errands",
+      "continuity"
+    ],
+    "baseline": "Hardcoded gameplay keys; no preference workflow or persistence.",
+    "final": "All twelve gameplay bindings drive input and hints; draft/apply/discard/default recovery; new process retains explicit map; invalid/write/replace failures preserve prior bytes and permit repair/retry.",
+    "continuity": "Eight existing keepsake plus eight control apply/read/restore/read fresh processes, source/PCK observations identical."
+  },
+  "keyboard_protocol": [
+    "Start actual native title, F1, select interaction, capture conflicting K; keep draft active and name conflict.",
+    "Cancel capture, assign F, S apply; reopen and assign H to guard/feint. Saved status and live hint show actual keys.",
+    "Start Guardian rehearsal and hold Right/H; actual frontal block passes.",
+    "Start a fresh process with preserved controls and the included prepared medicine fixture; Return resumes. Old E cannot recover, held F does.",
+    "Open settings, replace only the isolated fixture controls profile with malformed bytes; S preserves them and reports blocked. Remove fixture file, retry S; profile saved.",
+    "Synthetic XTest input into Xorg, bounded owned Godot/Xorg processes reaped. Fixture positions are explicit, not full-route navigation or a participant."
+  ],
+  "presentation": "Inspected applied and save-blocked native screenshots: readable selection, draft/active identity, explicit recovery status and matching applied hints. This is implementing-agent assessment, not independent human feedback.",
+  "failures_and_refinements": [
+    "Initial seven persistence controls failed: Dictionary.keys field/method collision, then float/int JSON identity broke exact readback; bracket lookup plus strict integer normalization corrected both.",
+    "Actual X11 Down carried differing physical/logical codes, leaving row0 despite synthetic same-code checks. Use logical arrow navigation; added dedicated regression with differing physical code.",
+    "Initial repository/source checks ran before RUN existed and reported missing links/cascading reference errors; final complete record is checked again, without weakened gates.",
+    "Dummy software driver reports unsupported V-Sync, but rendering/input/capture complete. No performance or physical display/audio claim."
+  ],
+  "continuity": {
+    "north_star": "Existing local_prototype gains actual recoverable player keyboard control; one consumer/six paths,14 capabilities,only NS-C03 adapted. NS-C13 not promoted.",
+    "knowledge": "Existing combat-response finding extended with adapter/device identity and persistence evidence limits. No new lab.",
+    "portfolio": "Actual native user-control/recovery demonstration alongside preserved origins and earlier medicine evidence.",
+    "origin_migration": "P01-P05/P07/P08/P10/P11 preserved_pending_extraction; P06 pilot_instrumented; P09 seed_only. Source/media/distributions/tests unchanged.",
+    "prompt": "Unchanged; present guidance served consumer selection, selective brain activation and actual device-input validation."
+  },
+  "limitations": [
+    "No gamepad/mouse/modifier combinations, hold/toggle mode or remappable fixed management keys. Physical letters/logical arrows are intentional; one Linux software keyboard/display setup tested.",
+    "Native/synthetic execution and agent inspection do not establish representative usability, disability outcomes, enjoyment, comprehension or accessibility certification.",
+    "Prepared medicine positions do not establish full-route OS-key navigation; complete routes remain deterministic model policies.",
+    "Editable device-local preference data, no account/sync/concurrent-writer/power-loss durability/security contract. Invalid profile repair/removal is external and explicit.",
+    "No multiplayer/MMORPG scale, commercial claim, new origin integration or final production engine decision."
+  ],
+  "repository_validation": "100 Python regressions passed (17 brain,27 repository,42 references,11 manifest,3 wrapper). Brain/source/reference/link gates passed; exact manifest check follows final content. Publication/CI separate."
+}

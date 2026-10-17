@@ -3,6 +3,7 @@ const Combat = preload("res://combat.gd")
 const Rehearsal = preload("res://rehearsal.gd")
 const Keepsakes = preload("res://keepsakes.gd")
 const Errand = preload("res://errand.gd")
+const Controls = preload("res://controls.gd")
 const KEEPSAKE_NAMES := {"":"None", "held_line":"Held the Line", "drew_danger":"Drew the Danger"}
 var keepsakes = Keepsakes.new()
 var profile_path := ""
@@ -10,6 +11,14 @@ var normal_run := false
 var reward_checked := false
 var reward_message := ""
 var errand = Errand.new()
+var bindings = Controls.new()
+var controls_path := ""
+var controls_open := false
+var controls_draft := {}
+var controls_row := 0
+var controls_listening := false
+var controls_message := ""
+var drawing_controls := false
 var rehearsal = Rehearsal.new()
 var game = Combat.new()
 var selected := "Guardian"
@@ -25,6 +34,9 @@ func _ready() -> void:
 	if profile_path.is_empty(): profile_path=OS.get_environment("CROSSING_PROFILE")
 	if profile_path.is_empty(): profile_path="user://crossing-keepsakes.json"
 	keepsakes.load_profile(profile_path)
+	if controls_path.is_empty():controls_path=OS.get_environment("CROSSING_CONTROLS")
+	if controls_path.is_empty():controls_path="user://crossing-controls.json"
+	bindings.load_profile(controls_path)
 	queue_redraw()
 
 func abandon() -> void:
@@ -52,12 +64,19 @@ func _notification(what: int) -> void:
 		if rehearsal.active:
 			if rehearsal.state=="live" and not rehearsal.paused: rehearsal.toggle_pause()
 		elif game.mode=="play": game.mode="paused"
-		taps.clear()
+		taps.clear();bindings.quarantine()
 
 func _unhandled_key_input(event: InputEvent) -> void:
-	if not event is InputEventKey or not event.pressed or event.echo: return
+	if not event is InputEventKey:return
+	if not event.pressed:bindings.release(event);return
+	if event.echo:return
 	var key: int = event.physical_keycode
-	if key==KEY_F12: capture()
+	if key==0 or event.keycode in Controls.NAV:key=event.keycode
+	if key==KEY_F12:capture();return
+	if controls_open:
+		controls_input(event,key);queue_redraw();return
+	if key==KEY_F1:
+		open_controls();queue_redraw();return
 	if not rehearsal.active and game.mode!="play":
 		if key==KEY_C: keepsakes.cycle_equipped()
 		elif key==KEY_F5: keepsakes.retry_save()
@@ -84,24 +103,45 @@ func _unhandled_key_input(event: InputEvent) -> void:
 			elif key==KEY_2: selected="Duelist"; game.role=selected
 			elif key==KEY_T: rehearsal.start(selected); game=rehearsal.game; taps.clear()
 	if game.mode=="play":
-		if key==KEY_J: taps.strike=true
-		if key==KEY_K: taps.skill_pressed=true
-		if key==KEY_SPACE: taps.dodge=true
+		if bindings.matches(event,"strike"): taps.strike=true
+		if bindings.matches(event,"skill"): taps.skill_pressed=true
+		if bindings.matches(event,"step"): taps.dodge=true
 	queue_redraw()
 
-func key_down(code: int, physical: bool) -> bool:
-	return Input.is_physical_key_pressed(code) if physical else Input.is_key_pressed(code)
+func open_controls() -> void:
+	if rehearsal.active:
+		if rehearsal.state=="live" and not rehearsal.paused:rehearsal.toggle_pause()
+	elif game.mode=="play":game.mode="paused"
+	controls_open=true;controls_listening=false;controls_row=0
+	controls_draft=bindings.keys.duplicate();controls_message=""
+	taps.clear();bindings.quarantine()
 
-func vector_keys(left: int, right: int, up: int, down: int, physical: bool=true) -> Vector2:
-	return Vector2(float(key_down(right,physical))-float(key_down(left,physical)),float(key_down(down,physical))-float(key_down(up,physical)))
+func controls_input(event: InputEventKey,key: int) -> void:
+	if controls_listening:
+		if key==KEY_ESCAPE:
+			controls_listening=false;controls_message="Capture cancelled. Draft unchanged.";return
+		if event.alt_pressed or event.ctrl_pressed or event.meta_pressed or event.shift_pressed:
+			controls_message="Use an unmodified key; combinations are not supported.";return
+		var error: String=Controls.assign(controls_draft,Controls.ACTIONS[controls_row],Controls.event_code(event))
+		controls_message=error if not error.is_empty() else "Draft changed. S applies; Esc discards unapplied changes."
+		if error.is_empty():controls_listening=false
+		return
+	if key in [KEY_ESCAPE,KEY_F1]:
+		controls_open=false;controls_listening=false;taps.clear();bindings.quarantine()
+	elif key==KEY_UP:controls_row=posmod(controls_row-1,Controls.ACTIONS.size())
+	elif key==KEY_DOWN:controls_row=(controls_row+1)%Controls.ACTIONS.size()
+	elif key==KEY_ENTER:controls_listening=true;controls_message="Press a new key. Esc cancels capture."
+	elif key==KEY_DELETE:controls_draft=Controls.DEFAULTS.duplicate();controls_message="Defaults in draft. S applies; Esc discards."
+	elif key==KEY_S:
+		bindings.apply(controls_draft);controls_message=bindings.status;taps.clear();bindings.quarantine()
 
 func _physics_process(dt: float) -> void:
+	if controls_open:taps.clear();queue_redraw();return
 	var command: Dictionary=taps.duplicate()
-	command.move=vector_keys(KEY_A,KEY_D,KEY_W,KEY_S)
-	# Navigation keys carry logical identity; WASD keeps physical keyboard positions.
-	command.aim=vector_keys(KEY_LEFT,KEY_RIGHT,KEY_UP,KEY_DOWN,false)
-	command.skill=Input.is_physical_key_pressed(KEY_K)
-	command.interact=Input.is_physical_key_pressed(KEY_E)
+	command.move=bindings.vector("move")
+	command.aim=bindings.vector("aim")
+	command.skill=bindings.down("skill")
+	command.interact=bindings.down("interact")
 	if rehearsal.active: rehearsal.step(dt,command)
 	else: advance_crossing(dt,command)
 	taps.clear()
@@ -141,6 +181,7 @@ func draw_keepsake(at: Vector2, id: String, scale_factor: float=1.0) -> void:
 	else: draw_line(at+Vector2(-5,5)*scale_factor,at+Vector2(5,-5)*scale_factor,AMBER,3*scale_factor)
 
 func text(at: Vector2, value: String, size: int=18, color: Color=PAPER) -> void:
+	if not drawing_controls:value=bindings.describe(value)
 	draw_string(font,at,value,HORIZONTAL_ALIGNMENT_LEFT,-1,size,color)
 
 func panel(rect: Rect2, color: Color=Color("1b2d40")) -> void:
@@ -208,10 +249,13 @@ func _draw() -> void:
 	text(Vector2(48,718),footer(),17,AMBER)
 	if rehearsal.active: rehearsal_overlay()
 	elif game.mode!="play": overlay()
+	if controls_open:
+		drawing_controls=true;draw_controls();drawing_controls=false
 
 func draw_header() -> void:
 	draw_rect(Rect2(0,0,1152,174),INK)
 	text(Vector2(40,42),"VIRGO DIAMOND / "+("REHEARSAL" if rehearsal.active else "CROSSING DRILL"),25)
+	text(Vector2(950,41),"F1  Controls",16,AMBER)
 	text(Vector2(40,70),("%d / 3  %s  •  "%[rehearsal.stage+1,rehearsal.heading()]+rehearsal.instruction()) if rehearsal.active else (errand.hint() if errand.active else "LOCAL EXPERIMENT  •  Keep the courier alive to the far gate"),16,AMBER)
 	text(Vector2(40,110),game.role.to_upper()+"  /  HEALTH "+str(game.hp)+"   COURIER "+str(game.cargo),19)
 	draw_rect(Rect2(40,130,300,12),Color("32475a"))
@@ -286,6 +330,20 @@ func draw_case(at: Vector2, scale_factor: float=1.0) -> void:
 	for x in [-8,0,8]:
 		draw_line(at+Vector2(x,-6)*scale_factor,at+Vector2(x,6)*scale_factor,TEAL,3*scale_factor)
 
+func draw_controls() -> void:
+	draw_rect(Rect2(40,90,1072,560),INK)
+	text(Vector2(85,131),"KEYBOARD CONTROLS  /  "+("CAPTURE KEY" if controls_listening else "DRAFT"),27,TEAL)
+	text(Vector2(85,162),"UP / DOWN select  •  ENTER change  •  S apply  •  DELETE defaults  •  ESC close / cancel",18)
+	text(Vector2(85,190),"Physical key positions; navigation arrows use logical identity. No modifier combinations.",16,AMBER)
+	for index in Controls.ACTIONS.size():
+		var y: float=228+index*28
+		if index==controls_row:panel(Rect2(75,y-22,1000,28),Color("35505a"))
+		text(Vector2(95,y),Controls.LABELS[index],18)
+		text(Vector2(650,y),("Press key..." if index==controls_row and controls_listening else bindings.name_for(Controls.ACTIONS[index],controls_draft)),18,TEAL)
+	text(Vector2(85,586),"Unapplied changes" if controls_draft!=bindings.keys else "Draft matches active controls",17,AMBER)
+	text(Vector2(85,614),controls_message if not controls_message.is_empty() else bindings.status,16)
+	text(Vector2(85,640),"Closing does not start or resume play. Resume the attempt explicitly.",16)
+
 func footer() -> String:
 	if rehearsal.active:
 		if rehearsal.paused: return "ENTER / ESC resume  •  R abandon rehearsal"
@@ -331,4 +389,5 @@ func capture() -> void:
 	report.rehearsal=rehearsal.snapshot()
 	report.keepsakes=keepsakes.snapshot()
 	report.errand=errand.snapshot()
+	report.controls={"profile":bindings.snapshot(),"open":controls_open,"draft":controls_draft.duplicate(),"row":controls_row,"listening":controls_listening,"message":controls_message}
 	file.store_string(JSON.stringify(report,"  ")+"\n")

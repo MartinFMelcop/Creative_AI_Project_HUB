@@ -1,0 +1,772 @@
+{
+  "applied": {
+    "cargo": 3,
+    "controls": {
+      "draft": {
+        "aim_down": 4194322,
+        "aim_left": 4194319,
+        "aim_right": 4194321,
+        "aim_up": 4194320,
+        "interact": 70,
+        "move_down": 83,
+        "move_left": 65,
+        "move_right": 68,
+        "move_up": 87,
+        "skill": 72,
+        "step": 32,
+        "strike": 74
+      },
+      "listening": false,
+      "message": "Applied and saved on this device.",
+      "open": true,
+      "profile": {
+        "blocked": false,
+        "dirty": false,
+        "keys": {
+          "aim_down": 4194322,
+          "aim_left": 4194319,
+          "aim_right": 4194321,
+          "aim_up": 4194320,
+          "interact": 70,
+          "move_down": 83,
+          "move_left": 65,
+          "move_right": 68,
+          "move_up": 87,
+          "skill": 72,
+          "step": 32,
+          "strike": 74
+        },
+        "status": "Applied and saved on this device."
+      },
+      "row": 9
+    },
+    "counters": {
+      "blocks": 0,
+      "counters": 0,
+      "courier_hits": 0,
+      "dodges": 0,
+      "player_hits": 0,
+      "redirects": 0,
+      "rejected": 0
+    },
+    "courier_x": 160.0,
+    "energy": 100.0,
+    "errand": {
+      "channel": false,
+      "events": [],
+      "finished": false,
+      "progress": 0.0,
+      "state": "waiting"
+    },
+    "events": [],
+    "hp": 5,
+    "keepsakes": {
+      "blocked": false,
+      "dirty": false,
+      "earned": [],
+      "equipped": "",
+      "status": "Session only. Earn a crossing mark to save."
+    },
+    "last_impact": {},
+    "mode": "title",
+    "rehearsal": {
+      "active": false,
+      "attempts": 0,
+      "passed": false,
+      "paused": false,
+      "results": [],
+      "stage": 0,
+      "state": "ready"
+    },
+    "role": "Guardian",
+    "tick": 0
+  },
+  "blocked": {
+    "cargo": 3,
+    "controls": {
+      "draft": {
+        "aim_down": 4194322,
+        "aim_left": 4194319,
+        "aim_right": 4194321,
+        "aim_up": 4194320,
+        "interact": 70,
+        "move_down": 83,
+        "move_left": 65,
+        "move_right": 68,
+        "move_up": 87,
+        "skill": 72,
+        "step": 32,
+        "strike": 74
+      },
+      "listening": false,
+      "message": "Profile unavailable. Restore or remove it, then apply again. Session controls remain usable.",
+      "open": true,
+      "profile": {
+        "blocked": true,
+        "dirty": true,
+        "keys": {
+          "aim_down": 4194322,
+          "aim_left": 4194319,
+          "aim_right": 4194321,
+          "aim_up": 4194320,
+          "interact": 70,
+          "move_down": 83,
+          "move_left": 65,
+          "move_right": 68,
+          "move_up": 87,
+          "skill": 72,
+          "step": 32,
+          "strike": 74
+        },
+        "status": "Profile unavailable. Restore or remove it, then apply again. Session controls remain usable."
+      },
+      "row": 0
+    },
+    "counters": {
+      "blocks": 0,
+      "counters": 0,
+      "courier_hits": 0,
+      "dodges": 0,
+      "player_hits": 0,
+      "redirects": 0,
+      "rejected": 0
+    },
+    "courier_x": 464.868,
+    "energy": 100.0,
+    "errand": {
+      "channel": false,
+      "events": [
+        {
+          "action": "dropped",
+          "tick": 516
+        },
+        {
+          "action": "recovered",
+          "tick": 633
+        }
+      ],
+      "finished": false,
+      "progress": 0.0,
+      "state": "carried"
+    },
+    "events": [],
+    "hp": 5,
+    "keepsakes": {
+      "blocked": false,
+      "dirty": false,
+      "earned": [],
+      "equipped": "",
+      "status": "Session only. Earn a crossing mark to save."
+    },
+    "last_impact": {},
+    "mode": "paused",
+    "rehearsal": {
+      "active": false,
+      "attempts": 0,
+      "passed": false,
+      "paused": false,
+      "results": [],
+      "stage": 0,
+      "state": "ready"
+    },
+    "role": "Guardian",
+    "tick": 655
+  },
+  "conflict": {
+    "cargo": 3,
+    "controls": {
+      "draft": {
+        "aim_down": 4194322,
+        "aim_left": 4194319,
+        "aim_right": 4194321,
+        "aim_up": 4194320,
+        "interact": 69,
+        "move_down": 83,
+        "move_left": 65,
+        "move_right": 68,
+        "move_up": 87,
+        "skill": 75,
+        "step": 32,
+        "strike": 74
+      },
+      "listening": true,
+      "message": "Already used by Guard / feint. Change that action first.",
+      "open": true,
+      "profile": {
+        "blocked": false,
+        "dirty": false,
+        "keys": {
+          "aim_down": 4194322,
+          "aim_left": 4194319,
+          "aim_right": 4194321,
+          "aim_up": 4194320,
+          "interact": 69,
+          "move_down": 83,
+          "move_left": 65,
+          "move_right": 68,
+          "move_up": 87,
+          "skill": 75,
+          "step": 32,
+          "strike": 74
+        },
+        "status": "Defaults. Apply to save on this device."
+      },
+      "row": 11
+    },
+    "counters": {
+      "blocks": 0,
+      "counters": 0,
+      "courier_hits": 0,
+      "dodges": 0,
+      "player_hits": 0,
+      "redirects": 0,
+      "rejected": 0
+    },
+    "courier_x": 160.0,
+    "energy": 100.0,
+    "errand": {
+      "channel": false,
+      "events": [],
+      "finished": false,
+      "progress": 0.0,
+      "state": "waiting"
+    },
+    "events": [],
+    "hp": 5,
+    "keepsakes": {
+      "blocked": false,
+      "dirty": false,
+      "earned": [],
+      "equipped": "",
+      "status": "Session only. Earn a crossing mark to save."
+    },
+    "last_impact": {},
+    "mode": "title",
+    "rehearsal": {
+      "active": false,
+      "attempts": 0,
+      "passed": false,
+      "paused": false,
+      "results": [],
+      "stage": 0,
+      "state": "ready"
+    },
+    "role": "Guardian",
+    "tick": 0
+  },
+  "initial": {
+    "cargo": 3,
+    "controls": {
+      "draft": {},
+      "listening": false,
+      "message": "",
+      "open": false,
+      "profile": {
+        "blocked": false,
+        "dirty": false,
+        "keys": {
+          "aim_down": 4194322,
+          "aim_left": 4194319,
+          "aim_right": 4194321,
+          "aim_up": 4194320,
+          "interact": 69,
+          "move_down": 83,
+          "move_left": 65,
+          "move_right": 68,
+          "move_up": 87,
+          "skill": 75,
+          "step": 32,
+          "strike": 74
+        },
+        "status": "Defaults. Apply to save on this device."
+      },
+      "row": 0
+    },
+    "counters": {
+      "blocks": 0,
+      "counters": 0,
+      "courier_hits": 0,
+      "dodges": 0,
+      "player_hits": 0,
+      "redirects": 0,
+      "rejected": 0
+    },
+    "courier_x": 160.0,
+    "energy": 100.0,
+    "errand": {
+      "channel": false,
+      "events": [],
+      "finished": false,
+      "progress": 0.0,
+      "state": "waiting"
+    },
+    "events": [],
+    "hp": 5,
+    "keepsakes": {
+      "blocked": false,
+      "dirty": false,
+      "earned": [],
+      "equipped": "",
+      "status": "Session only. Earn a crossing mark to save."
+    },
+    "last_impact": {},
+    "mode": "title",
+    "rehearsal": {
+      "active": false,
+      "attempts": 0,
+      "passed": false,
+      "paused": false,
+      "results": [],
+      "stage": 0,
+      "state": "ready"
+    },
+    "role": "Guardian",
+    "tick": 0
+  },
+  "kind": "synthetic_os_keyboard_control_workflow",
+  "old_interaction": {
+    "cargo": 3,
+    "controls": {
+      "draft": {},
+      "listening": false,
+      "message": "",
+      "open": false,
+      "profile": {
+        "blocked": false,
+        "dirty": false,
+        "keys": {
+          "aim_down": 4194322,
+          "aim_left": 4194319,
+          "aim_right": 4194321,
+          "aim_up": 4194320,
+          "interact": 70,
+          "move_down": 83,
+          "move_left": 65,
+          "move_right": 68,
+          "move_up": 87,
+          "skill": 72,
+          "step": 32,
+          "strike": 74
+        },
+        "status": "Saved on this device."
+      },
+      "row": 0
+    },
+    "counters": {
+      "blocks": 0,
+      "counters": 0,
+      "courier_hits": 0,
+      "dodges": 0,
+      "player_hits": 0,
+      "redirects": 0,
+      "rejected": 0
+    },
+    "courier_x": 428.934,
+    "energy": 100.0,
+    "errand": {
+      "channel": false,
+      "events": [
+        {
+          "action": "dropped",
+          "tick": 516
+        }
+      ],
+      "finished": false,
+      "progress": 0.0,
+      "state": "available"
+    },
+    "events": [],
+    "hp": 5,
+    "keepsakes": {
+      "blocked": false,
+      "dirty": false,
+      "earned": [],
+      "equipped": "",
+      "status": "Session only. Earn a crossing mark to save."
+    },
+    "last_impact": {},
+    "mode": "play",
+    "rehearsal": {
+      "active": false,
+      "attempts": 0,
+      "passed": false,
+      "paused": false,
+      "results": [],
+      "stage": 0,
+      "state": "ready"
+    },
+    "role": "Guardian",
+    "tick": 578
+  },
+  "rehearsal_guard": {
+    "cargo": 3,
+    "controls": {
+      "draft": {
+        "aim_down": 4194322,
+        "aim_left": 4194319,
+        "aim_right": 4194321,
+        "aim_up": 4194320,
+        "interact": 70,
+        "move_down": 83,
+        "move_left": 65,
+        "move_right": 68,
+        "move_up": 87,
+        "skill": 72,
+        "step": 32,
+        "strike": 74
+      },
+      "listening": false,
+      "message": "Applied and saved on this device.",
+      "open": false,
+      "profile": {
+        "blocked": false,
+        "dirty": false,
+        "keys": {
+          "aim_down": 4194322,
+          "aim_left": 4194319,
+          "aim_right": 4194321,
+          "aim_up": 4194320,
+          "interact": 70,
+          "move_down": 83,
+          "move_left": 65,
+          "move_right": 68,
+          "move_up": 87,
+          "skill": 72,
+          "step": 32,
+          "strike": 74
+        },
+        "status": "Applied and saved on this device."
+      },
+      "row": 9
+    },
+    "counters": {
+      "blocks": 1,
+      "counters": 0,
+      "courier_hits": 0,
+      "dodges": 0,
+      "player_hits": 0,
+      "redirects": 0,
+      "rejected": 0
+    },
+    "courier_x": 338.0,
+    "energy": 70.4,
+    "errand": {
+      "channel": false,
+      "events": [],
+      "finished": false,
+      "progress": 0.0,
+      "state": "waiting"
+    },
+    "events": [
+      {
+        "cargo": 3,
+        "energy": 70.4,
+        "hp": 5,
+        "kind": "protected",
+        "tick": 60
+      }
+    ],
+    "hp": 5,
+    "keepsakes": {
+      "blocked": false,
+      "dirty": false,
+      "earned": [],
+      "equipped": "",
+      "status": "Session only. Earn a crossing mark to save."
+    },
+    "last_impact": {
+      "code": "bolt_blocked",
+      "explanation": "Your live frontal guard intercepted the bolt before the courier.",
+      "tip": "Release guard to recover posture. Strike only when OPEN and close."
+    },
+    "mode": "paused",
+    "rehearsal": {
+      "active": true,
+      "attempts": 1,
+      "passed": true,
+      "paused": false,
+      "results": [
+        {
+          "attempt": 1,
+          "impact": {
+            "code": "bolt_blocked",
+            "explanation": "Your live frontal guard intercepted the bolt before the courier.",
+            "tip": "Release guard to recover posture. Strike only when OPEN and close."
+          },
+          "passed": true,
+          "snapshot": {
+            "cargo": 3,
+            "counters": {
+              "blocks": 1,
+              "counters": 0,
+              "courier_hits": 0,
+              "dodges": 0,
+              "player_hits": 0,
+              "redirects": 0,
+              "rejected": 0
+            },
+            "courier_x": 338.0,
+            "energy": 70.4,
+            "events": [
+              {
+                "cargo": 3,
+                "energy": 70.4,
+                "hp": 5,
+                "kind": "protected",
+                "tick": 60
+              }
+            ],
+            "hp": 5,
+            "mode": "paused",
+            "role": "Guardian",
+            "tick": 60
+          },
+          "stage": 0
+        }
+      ],
+      "stage": 0,
+      "state": "review"
+    },
+    "role": "Guardian",
+    "tick": 60
+  },
+  "remapped_recovery": {
+    "cargo": 3,
+    "controls": {
+      "draft": {},
+      "listening": false,
+      "message": "",
+      "open": false,
+      "profile": {
+        "blocked": false,
+        "dirty": false,
+        "keys": {
+          "aim_down": 4194322,
+          "aim_left": 4194319,
+          "aim_right": 4194321,
+          "aim_up": 4194320,
+          "interact": 70,
+          "move_down": 83,
+          "move_left": 65,
+          "move_right": 68,
+          "move_up": 87,
+          "skill": 72,
+          "step": 32,
+          "strike": 74
+        },
+        "status": "Saved on this device."
+      },
+      "row": 0
+    },
+    "counters": {
+      "blocks": 0,
+      "counters": 0,
+      "courier_hits": 0,
+      "dodges": 0,
+      "player_hits": 0,
+      "redirects": 0,
+      "rejected": 0
+    },
+    "courier_x": 462.534,
+    "energy": 100.0,
+    "errand": {
+      "channel": false,
+      "events": [
+        {
+          "action": "dropped",
+          "tick": 516
+        },
+        {
+          "action": "recovered",
+          "tick": 633
+        }
+      ],
+      "finished": false,
+      "progress": 0.0,
+      "state": "carried"
+    },
+    "events": [],
+    "hp": 5,
+    "keepsakes": {
+      "blocked": false,
+      "dirty": false,
+      "earned": [],
+      "equipped": "",
+      "status": "Session only. Earn a crossing mark to save."
+    },
+    "last_impact": {},
+    "mode": "play",
+    "rehearsal": {
+      "active": false,
+      "attempts": 0,
+      "passed": false,
+      "paused": false,
+      "results": [],
+      "stage": 0,
+      "state": "ready"
+    },
+    "role": "Guardian",
+    "tick": 650
+  },
+  "repaired": {
+    "cargo": 3,
+    "controls": {
+      "draft": {
+        "aim_down": 4194322,
+        "aim_left": 4194319,
+        "aim_right": 4194321,
+        "aim_up": 4194320,
+        "interact": 70,
+        "move_down": 83,
+        "move_left": 65,
+        "move_right": 68,
+        "move_up": 87,
+        "skill": 72,
+        "step": 32,
+        "strike": 74
+      },
+      "listening": false,
+      "message": "Applied and saved on this device.",
+      "open": true,
+      "profile": {
+        "blocked": false,
+        "dirty": false,
+        "keys": {
+          "aim_down": 4194322,
+          "aim_left": 4194319,
+          "aim_right": 4194321,
+          "aim_up": 4194320,
+          "interact": 70,
+          "move_down": 83,
+          "move_left": 65,
+          "move_right": 68,
+          "move_up": 87,
+          "skill": 72,
+          "step": 32,
+          "strike": 74
+        },
+        "status": "Applied and saved on this device."
+      },
+      "row": 0
+    },
+    "counters": {
+      "blocks": 0,
+      "counters": 0,
+      "courier_hits": 0,
+      "dodges": 0,
+      "player_hits": 0,
+      "redirects": 0,
+      "rejected": 0
+    },
+    "courier_x": 464.868,
+    "energy": 100.0,
+    "errand": {
+      "channel": false,
+      "events": [
+        {
+          "action": "dropped",
+          "tick": 516
+        },
+        {
+          "action": "recovered",
+          "tick": 633
+        }
+      ],
+      "finished": false,
+      "progress": 0.0,
+      "state": "carried"
+    },
+    "events": [],
+    "hp": 5,
+    "keepsakes": {
+      "blocked": false,
+      "dirty": false,
+      "earned": [],
+      "equipped": "",
+      "status": "Session only. Earn a crossing mark to save."
+    },
+    "last_impact": {},
+    "mode": "paused",
+    "rehearsal": {
+      "active": false,
+      "attempts": 0,
+      "passed": false,
+      "paused": false,
+      "results": [],
+      "stage": 0,
+      "state": "ready"
+    },
+    "role": "Guardian",
+    "tick": 655
+  },
+  "restored": {
+    "cargo": 3,
+    "controls": {
+      "draft": {},
+      "listening": false,
+      "message": "",
+      "open": false,
+      "profile": {
+        "blocked": false,
+        "dirty": false,
+        "keys": {
+          "aim_down": 4194322,
+          "aim_left": 4194319,
+          "aim_right": 4194321,
+          "aim_up": 4194320,
+          "interact": 70,
+          "move_down": 83,
+          "move_left": 65,
+          "move_right": 68,
+          "move_up": 87,
+          "skill": 72,
+          "step": 32,
+          "strike": 74
+        },
+        "status": "Saved on this device."
+      },
+      "row": 0
+    },
+    "counters": {
+      "blocks": 0,
+      "counters": 0,
+      "courier_hits": 0,
+      "dodges": 0,
+      "player_hits": 0,
+      "redirects": 0,
+      "rejected": 0
+    },
+    "courier_x": 400.0,
+    "energy": 100.0,
+    "errand": {
+      "channel": false,
+      "events": [],
+      "finished": false,
+      "progress": 0.0,
+      "state": "waiting"
+    },
+    "events": [],
+    "hp": 5,
+    "keepsakes": {
+      "blocked": false,
+      "dirty": false,
+      "earned": [],
+      "equipped": "",
+      "status": "Session only. Earn a crossing mark to save."
+    },
+    "last_impact": {},
+    "mode": "paused",
+    "rehearsal": {
+      "active": false,
+      "attempts": 0,
+      "passed": false,
+      "paused": false,
+      "results": [],
+      "stage": 0,
+      "state": "ready"
+    },
+    "role": "Guardian",
+    "tick": 516
+  },
+  "scope": "Actual settings draft/conflict/apply, remapped Guardian rehearsal and fresh-process prepared medicine fixture; not independent human accessibility or full-route keyboard navigation."
+}

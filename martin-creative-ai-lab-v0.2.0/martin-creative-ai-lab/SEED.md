@@ -1,6 +1,6 @@
 # SEED — Martin Creative AI Lab
 
-**Version:** 0.33.4
+**Version:** 0.33.5
 **Data-base:** 10 de outubro de 2026  
 **Autor e responsável pelo portfólio:** Martin Melcop Neto  
 **Working language:** English for new technical documentation, plans, code comments and Git messages; respond in the requested language (Brazilian Portuguese for continuous closeout). Preserve appropriate creative/source languages.
@@ -44,6 +44,16 @@ preserved under their existing hashes/rights/availability boundaries. Technical 
 does not merge fictional universes. Source details below are historical provenance or
 retained origin behavior; current operation is defined by this direction, AGENTS,
 STATE and the single [continuous prompt](docs/prompts/CONTINUOUS_DEVELOPMENT.md).
+
+### Current consumer increment — v0.33.5
+
+The existing crossing now supports recoverable remapping of all twelve gameplay
+keyboard actions through F1, with explicit draft/apply/discard/default restoration,
+matching live hints and a separate editable device-local controls profile.
+[Execution](evidence/north-star-controls/RUN.json) distinguishes native source/PCK
+checks, process restarts and synthetic OS keyboard operation from human usability.
+Combat, rehearsal, medicine and keepsake rules remain intact. No new laboratory,
+origin migration promotion, final class decision or accessibility certification.
 
 ### Navegação
 

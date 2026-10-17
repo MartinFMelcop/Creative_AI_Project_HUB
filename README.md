@@ -28,10 +28,11 @@ or redirection/mobility. At the first marker, a medicine case falls south of the
 Keep escorting, or leave the line to recover it and hand it to the courier. Held nearby
 interaction takes time and prevents combat actions; the courier and threats keep moving.
 The two choices have distinct inspectable outcomes. Optional rehearsal, causal review,
-OPEN range/time and earned cosmetic keepsakes remain available.
+OPEN range/time and earned cosmetic keepsakes remain available. F1 now remaps all twelve
+gameplay keys with explicit apply/discard, matching hints and recoverable local preferences.
 
 The editable Godot project and small engine-dependent PCK execute the same consumer.
-[Native/rendered evidence](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/evidence/north-star-medicine/RUN.json)
+[Native/rendered evidence](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/evidence/north-star-controls/RUN.json)
 and the [living design record](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/DESIGN.md)
 separate fixed-policy feasibility and agent visual assessment from still-missing human
 understanding, identity and enjoyment evidence.
