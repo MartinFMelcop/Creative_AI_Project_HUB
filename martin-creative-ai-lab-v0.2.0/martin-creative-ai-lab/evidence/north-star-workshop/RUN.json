@@ -1,0 +1,445 @@
+{
+  "schema_version": 1,
+  "kind": "destination_execution",
+  "recorded_at_utc": "2026-10-18",
+  "baseline_commit": "93dfc8927b4bf172ec6926c00d2d1ab4310914a3",
+  "branch": "codex/north-star-workshop-20261018",
+  "mode": "DEVELOPMENT",
+  "priority_category": 1,
+  "capability_ids": [
+    "NS-C03",
+    "NS-C07"
+  ],
+  "consumer_paths": [
+    "north-star/prototype/arena.gd",
+    "north-star/prototype/combat.gd",
+    "north-star/prototype/rehearsal.gd",
+    "north-star/prototype/keepsakes.gd",
+    "north-star/prototype/errand.gd",
+    "north-star/prototype/controls.gd",
+    "north-star/prototype/sound.gd",
+    "north-star/prototype/actors.gd",
+    "north-star/prototype/workshop.gd"
+  ],
+  "runtime": "Godot 4.6.3.stable.official.7d41c59c4 standard; Python 3.12.14; Linux; Xorg dummy, Mesa llvmpipe, libX11/libXtst.",
+  "scope": "One native consumer gains optional reversible timed making and a visible locked health/mobility fitting. Existing combat/sound adaptation states remain; no economy import, new class/profession approval, account system or additional lab.",
+  "checks": {
+    "passed": 456,
+    "failed": 0
+  },
+  "source_artifacts": [
+    {
+      "local_path": "north-star/prototype/arena.gd",
+      "sha256": "1fdff7f9d931ae480a7d3fd39423677b6cc2125e2b73b436e1eb333e25cb2b3a",
+      "size_bytes": 28090
+    },
+    {
+      "local_path": "north-star/prototype/combat.gd",
+      "sha256": "b9566dc7dc15f51b1c7c1354b956bc78beafd851c5126e94aa430b39fdeac232",
+      "size_bytes": 12740
+    },
+    {
+      "local_path": "north-star/prototype/rehearsal.gd",
+      "sha256": "507a27b7832cfc79522396132a0a5f3f32fec34dd443a8a35fc21102080252c9",
+      "size_bytes": 3187
+    },
+    {
+      "local_path": "north-star/prototype/keepsakes.gd",
+      "sha256": "d7790dddbd25904069b0c1a6d5edb2f7d01bc02a375d608a4ec5a25262ddb6c9",
+      "size_bytes": 5848
+    },
+    {
+      "local_path": "north-star/prototype/errand.gd",
+      "sha256": "2a2392fa86bd12544eba5f60ad74d35592c7d6fa207373ec11a1928a9e33e601",
+      "size_bytes": 3831
+    },
+    {
+      "local_path": "north-star/prototype/controls.gd",
+      "sha256": "151bb8867ba735c3b0b2a0048d312472dfe32359d2409825fa4817cbd0a9e9b8",
+      "size_bytes": 9867
+    },
+    {
+      "local_path": "north-star/prototype/sound.gd",
+      "sha256": "4404169ebb2d1711f20e6023292712bb2051f4075c4039d9e2db725b4b8fa80a",
+      "size_bytes": 4116
+    },
+    {
+      "local_path": "north-star/prototype/actors.gd",
+      "sha256": "491c5b7b4c5546a2d03b94eeefcc8ab51fc55243cb6620a114dd6960a535454e",
+      "size_bytes": 10337
+    },
+    {
+      "local_path": "north-star/prototype/workshop.gd",
+      "sha256": "5fcba9578edf0c44db9336cb36d6b7783ff1da175e200f9c422392e4eebcc56b",
+      "size_bytes": 2239
+    },
+    {
+      "local_path": "north-star/prototype/project.godot",
+      "sha256": "8d4755b58f1179a9b5ec431579177371e784bca9703a17c88f4c7a6d4ee9385c",
+      "size_bytes": 414
+    },
+    {
+      "local_path": "north-star/prototype/arena.tscn",
+      "sha256": "f794c485663f0ed318ddce6bb7a62bc9b2dbd3af02be4f166cca962c29382591",
+      "size_bytes": 154
+    },
+    {
+      "local_path": "north-star/prototype/provenance.json",
+      "sha256": "0eb048c7456075f059288789d9f8b77ccd98faad6df8cc1b85c0e2f14b953a88",
+      "size_bytes": 3716
+    },
+    {
+      "local_path": "north-star/prototype/tools/pack.gd",
+      "sha256": "1dd3a788378e74cb9f1e749e3aa0e6cf790eedce3a6f3b2041f97e2f70e9277a",
+      "size_bytes": 1056
+    },
+    {
+      "local_path": "north-star/prototype/tools/verify.py",
+      "sha256": "8ef11bf0384230d7d16e53fb7c0bb883182242b931bc6200ccad140b4f37aad7",
+      "size_bytes": 7514
+    },
+    {
+      "local_path": "north-star/prototype/tools/verify_workshop.py",
+      "sha256": "9480bf10e81f5a220a094b841a009647f91f70b51131ce7258b9b9d211e247aa",
+      "size_bytes": 3474
+    },
+    {
+      "local_path": "north-star/prototype/tools/verify_workshop_input.py",
+      "sha256": "a6f92222505215fe1911a4004c6e69ae1fff9e557ddca8b3e51c2ba14ed539ba",
+      "size_bytes": 7587
+    },
+    {
+      "local_path": "north-star/prototype/tests/workshop_checks.gd",
+      "sha256": "947d19ce8993d35e2e19e954da906b94211eb3165c4c61544f23f4ee80b71383",
+      "size_bytes": 6130
+    },
+    {
+      "local_path": "north-star/prototype/tests/run_checks.gd",
+      "sha256": "f134d11b45e46d79bf339b2d00deb594a9295dfa81481d19a537d9a1b3bfffec",
+      "size_bytes": 8103
+    },
+    {
+      "local_path": "north-star/prototype/tests/policy.gd",
+      "sha256": "646f0758a211e84ffbfd4632460c7d1fc549cbb3b552801ee2508774a5a63e29",
+      "size_bytes": 979
+    },
+    {
+      "local_path": "north-star/prototype/dist/crossing-drill.pck",
+      "sha256": "faf1a44ba224200342342c2219b64684c6e8266e2745633e4da8599d67d83451",
+      "size_bytes": 187012
+    }
+  ],
+  "result_artifacts": [
+    {
+      "local_path": "evidence/north-star-workshop/keyboard.json",
+      "sha256": "866da746942bd09676f597fc86bb6b1821cc67694d0aad72a70ac945e1bd47b1",
+      "size_bytes": 9549
+    },
+    {
+      "local_path": "evidence/north-star-workshop/regressions.json",
+      "sha256": "929da0424704d607977cb55a02bb20867c6e9761cebf6e39c7fea6ced5a792bd",
+      "size_bytes": 105610
+    },
+    {
+      "local_path": "evidence/north-star-workshop/rendered/duelist-wrap.png",
+      "sha256": "b8577d0e9f6d78d80c3e9638af6e9fbe40f5349e109dd7eff39e0209745ce646",
+      "size_bytes": 68469
+    },
+    {
+      "local_path": "evidence/north-star-workshop/rendered/guardian-coat.png",
+      "sha256": "73386dc05a328cf507c3b69e611e6ddff22697ec049ddda12b9ef458f297cdea",
+      "size_bytes": 69356
+    },
+    {
+      "local_path": "evidence/north-star-workshop/rendered/workshop-coat.png",
+      "sha256": "c6496bb0ff4511c3362c1a8536a2f236f4f36f615d71b966b9492d4f50f5c429",
+      "size_bytes": 93436
+    },
+    {
+      "local_path": "evidence/north-star-workshop/rendered/workshop-wrap.png",
+      "sha256": "008395891018f70cc70049e292d11d1f1bd4c92639ce8b805449b9125025d51d",
+      "size_bytes": 92963
+    },
+    {
+      "local_path": "evidence/north-star-workshop/results.json",
+      "sha256": "0b3c705bfcf6de38869c0c60c8077743c28322da555c40eaf582c881480176df",
+      "size_bytes": 1701
+    }
+  ],
+  "baseline_artifact": {
+    "path_at_revision": "north-star/prototype/dist/crossing-drill.pck",
+    "sha256": "22f82fa9d2516eaa0da1c5c2c3d85112041a9f63845b7ba1fe822ee5e779a27c",
+    "size_bytes": 173904,
+    "scope": "Preserved before edits, old verification passed exactly; new workshop probe rejects the old PCK."
+  },
+  "brain_activation": {
+    "engineering": {
+      "relevance": "high",
+      "chapters": [
+        "ENG-005"
+      ],
+      "application": "Separate workshop state and combat deployment; spend/refund once, no live equipment healing."
+    },
+    "scientific": {
+      "relevance": "medium",
+      "chapters": [
+        "SCI-017"
+      ],
+      "application": "Verified old PCK/control; identical standard mechanical observations, fixed inputs and distinct health/motion controls."
+    },
+    "creative": {
+      "relevance": "high",
+      "chapters": [
+        "CRE-022",
+        "CRE-023"
+      ],
+      "application": "H-status profession/interaction proposals inform one explicit reversible trade-off. No candidate item becomes canon."
+    }
+  },
+  "design": {
+    "audience": "A prototype player trying a functional preparation choice on the same character approach.",
+    "weakness": "Only cosmetic local expression and combat technique choices; no executed craft-to-build workflow.",
+    "alternatives": [
+      "More defense-timing refinement repeats established capability without adding preparation.",
+      "Participant comprehension research remains valuable but independent participants are unavailable here.",
+      "Persistent profession progression would add inventory/storage/economy before evaluating a small choice."
+    ],
+    "portfolio_cross_check": "P06 pilot already instruments response differences; P10 has implemented consequential logistics/narrative and P11 has durable handover. Preserve those independent demonstrations rather than importing their universes or expanding unrelated work.",
+    "contract": "One nearby continuous second makes and wears one fitting. Standard=5 health/250 walk, coat=6/200, wrap=4/300; guard walk and paid steps scale by the same 0.8/1.2. Undo refunds only in workshop. No courier/resource price/guard timing/invulnerability bonus; no persistent power."
+  },
+  "before_after": {
+    "baseline_native_controls": 358,
+    "new_workshop_controls": 98,
+    "source_pack_equal": true,
+    "standard_mechanical_projection_identical": true,
+    "standard_projection_sha256": "0ee78ea2c31c032d863d232964687478fe58d7685d9247b067a163d576c5477c",
+    "projection_definition": "Sorted JSON of verified core report after removing consumer_hashes only. Both actual complete reports compared, including controls, sound, outcomes and sixteen restart processes.",
+    "complete_routes": [
+      {
+        "cargo": 3,
+        "hp": 5,
+        "mode": "won",
+        "outfit": "standard",
+        "role": "Guardian",
+        "tick": 1648
+      },
+      {
+        "cargo": 3,
+        "hp": 6,
+        "mode": "won",
+        "outfit": "riveted",
+        "role": "Guardian",
+        "tick": 1648
+      },
+      {
+        "cargo": 3,
+        "hp": 4,
+        "mode": "won",
+        "outfit": "trail",
+        "role": "Guardian",
+        "tick": 1648
+      },
+      {
+        "cargo": 3,
+        "hp": 5,
+        "mode": "won",
+        "outfit": "standard",
+        "role": "Duelist",
+        "tick": 1262
+      },
+      {
+        "cargo": 3,
+        "hp": 6,
+        "mode": "won",
+        "outfit": "riveted",
+        "role": "Duelist",
+        "tick": 1271
+      },
+      {
+        "cargo": 3,
+        "hp": 4,
+        "mode": "won",
+        "outfit": "trail",
+        "role": "Duelist",
+        "tick": 1256
+      }
+    ],
+    "comparison_limits": "Six fixed routes: Guardian Steady and Duelist, each standard/coat/wrap. Not optimum routes or general balance; no complete geared Riposte policy claimed."
+  },
+  "creative_assessment": {
+    "observed": "Native OS navigation reaches actual station range; both pieces visibly carry into normal play. Explicit make costs and standard comparison are readable. Guard and blade silhouettes remain distinct.",
+    "refinements": [
+      "Move comparison text above the actual interaction ring.",
+      "Retain successful making feedback until release; require release after recycling before new work.",
+      "Title header identifies pending fitting as NEXT, separate from live gear."
+    ],
+    "validation": "Implementing-agent image inspection and synthetic OS keys only, not independent human recognition, preference, profession identity, accessibility or fun."
+  },
+  "commands": [
+    {
+      "command": [
+        "python3",
+        "north-star/prototype/tools/verify.py",
+        "--output",
+        "../../work/north-star-workshop/baseline-results.json",
+        "--compare",
+        "evidence/north-star-toggle-input/results.json"
+      ],
+      "exit_code": 0,
+      "result": "Before edits: 358 native controls, source/PCK equality and sixteen restart processes.",
+      "cwd": "maintained lab"
+    },
+    {
+      "command": [
+        "godot",
+        "--headless",
+        "--path",
+        "martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/prototype",
+        "--script",
+        "tools/pack.gd",
+        "--",
+        "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/prototype/dist/crossing-drill.pck"
+      ],
+      "exit_code": 0,
+      "result": "Rebuilt actual delivered source PCK with matching engine.",
+      "cwd": "repository root"
+    },
+    {
+      "command": [
+        "python3",
+        "martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/prototype/tools/verify.py",
+        "--output",
+        "work/north-star-workshop/regressions.json"
+      ],
+      "exit_code": 0,
+      "result": "358 retained controls; source/PCK equality and sixteen restart processes.",
+      "cwd": "repository root"
+    },
+    {
+      "command": [
+        "python3",
+        "martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/prototype/tools/verify_workshop.py",
+        "--output",
+        "work/north-star-workshop/results.json"
+      ],
+      "exit_code": 0,
+      "result": "98 controls, six complete routes, exact source/PCK native observations.",
+      "cwd": "repository root"
+    },
+    {
+      "command": [
+        "python3",
+        "martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/prototype/tools/verify_workshop_input.py",
+        "--output",
+        "work/north-star-workshop/rendered-published"
+      ],
+      "exit_code": 0,
+      "result": "Actual source/PCK XTest navigation, range rejection, both makes, undo and geared crossings; all owned processes stopped.",
+      "cwd": "repository root"
+    },
+    {
+      "command": [
+        "python3",
+        "north-star/prototype/tools/test_verify.py"
+      ],
+      "exit_code": 0,
+      "result": "3 engine absence, actual timeout and stale-pack rejection tests.",
+      "cwd": "maintained lab"
+    },
+    {
+      "command": [
+        "python3",
+        "tools/test_validate_repo.py"
+      ],
+      "exit_code": 0,
+      "result": "27 passing regression tests",
+      "cwd": "maintained lab"
+    },
+    {
+      "command": [
+        "python3",
+        "tools/test_reference_library.py"
+      ],
+      "exit_code": 0,
+      "result": "42 passing regression tests",
+      "cwd": "maintained lab"
+    },
+    {
+      "command": [
+        "python3",
+        "tools/test_check_manifest.py"
+      ],
+      "exit_code": 0,
+      "result": "11 passing regression tests",
+      "cwd": "maintained lab"
+    },
+    {
+      "command": [
+        "python3",
+        "tools/test_brain_query.py"
+      ],
+      "exit_code": 0,
+      "result": "31 passing regression tests",
+      "cwd": "maintained lab"
+    }
+  ],
+  "failure_controls": [
+    "New workshop verifier rejects the preserved prior PCK (missing workshop probe) and writes no result.",
+    "Native controls reject duplicate making/refunds, live swaps, invalid recipe, insufficient work, range exit, movement, pause and focus/settings interruption.",
+    "Paid steps and real pulse hit budgets remain distinct and can still lead to defeat."
+  ],
+  "failed_commands": [
+    {
+      "command": "verify_workshop_input.py under default sandbox",
+      "exit_code": 1,
+      "reason": "Owned Xorg could not create local sockets before game execution. Reproduced using unchanged prior Xorg configuration alone; allowed local-network permissions resolve it. No product behavior or gate weakened."
+    }
+  ],
+  "continuity": {
+    "north_star": "Still local_prototype, one consumer; nine actual code paths, fourteen unchanged contribution states, NS-C03/07 adapted.",
+    "origins": "P01-P05/P07/P08/P10/P11 preserved_pending_extraction; P06 pilot_instrumented; P09 seed_only. No migration/import or new lab.",
+    "portfolio": "Playable native timed crafting and reversible fitting demonstration plus reproducible source/PCK/input evidence.",
+    "knowledge": "Existing character-keepsakes lesson gains fitting/functional-price context.",
+    "protected_sources": "Five supplied Brain files and integrity.json match baseline; references unchanged.",
+    "prompt": "Unchanged: existing prompt already requires this selection, execution, creative status and full successor lifecycle.",
+    "prompt_sha256": "61c8e68cac1faf5e07ffd6463b867154fb9cee40ea78b793087d89a7b82c53f9"
+  },
+  "limitations": [
+    "Only two experimental recipes, one session blank and reversible preparation; no career, harvesting, inventory market or persistent power.",
+    "Guardian Steady/Duelist fixed completion routes do not establish geared Riposte balance, optimality, player preference or human identity recognition.",
+    "Synthetic keyboard input and software rendering are not physical input latency, hardware/audio accessibility or independent player research.",
+    "No new sound production; unchanged PCM and all standard sound observations carry forward through executed core checks.",
+    "No multiplayer, server, production engine/item/class/canon approval, participant validation or commercial signal."
+  ],
+  "repository_validation": {
+    "commands": [
+      {
+        "command": [
+          "python3",
+          "tools/validate_repo.py"
+        ],
+        "exit_code": 0,
+        "result": "11 projects, 15 transfers, 11 assets, 2 legacy sources, 610 local file links"
+      },
+      {
+        "command": [
+          "python3",
+          "tools/reference_library.py",
+          "check"
+        ],
+        "exit_code": 0,
+        "result": "5 records, 607 preserved sources, 18 PDF texts, 140 exclusions, 14 capabilities"
+      },
+      {
+        "command": [
+          "python3",
+          "tools/brain_query.py",
+          "check"
+        ],
+        "exit_code": 0,
+        "result": "234 chapters, 44 inherited warnings unchanged"
+      }
+    ],
+    "prompt_sha256": "61c8e68cac1faf5e07ffd6463b867154fb9cee40ea78b793087d89a7b82c53f9"
+  }
+}

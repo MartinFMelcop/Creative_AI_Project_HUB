@@ -2147,3 +2147,21 @@ changes. Stage/capability/origin states remain unchanged; no external player val
 - **Adoption:** compact activation/selective complete reading replaces routine full-index
   emission. Review every intended file; validate large evidence without dumping it.
   Preserve the full successor-prompt/publication contract and reassess product value next.
+
+
+## ADR-082 — A reversible craft-to-build step in the existing consumer
+
+- **Baseline/mode:** `93dfc8927b4bf172ec6926c00d2d1ab4310914a3`; DEVELOPMENT/category 1.
+- **Selection:** actual character consumer lacks functional preparation. Compare more
+  timing refinement, participant comprehension research and persistent crafting. A
+  bounded native craft-to-build workflow adds the strongest feasible product capability.
+- **Decision:** one blank, two explicit health/mobility trades for either approach;
+  real nearby timed work, reversible pre-deployment undo and visible worn consequence.
+  Standard gear and isolated practice remain. Lock fitting at clean normal start; no
+  live healing, account economy, saved power, origin import or new capability promotion.
+- **Knowledge:** CRE-022/023 remain H, ENG-005 state/conservation, SCI-017 matched controls.
+- **Refinement/evidence:** retain completion confirmation until release and separate
+  range geometry from comparison text. See `evidence/north-star-workshop/RUN.json` for
+  actual source/PCK checks, complete routes, keyboard input, environment failure and limits.
+- **Lifecycle:** current prompt already requires these design/execution distinctions;
+  retain it unchanged and reassess future product value rather than fixing the next task.

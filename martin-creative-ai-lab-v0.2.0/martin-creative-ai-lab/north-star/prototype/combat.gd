@@ -7,6 +7,10 @@ const FINISH := 1000.0
 const SENTINEL_FOCUS := 3
 var enemy_focus := SENTINEL_FOCUS
 var role := "Guardian"
+var outfit := "standard"
+var outfit_fitted := false
+var health_limit := 5
+var movement_scale := 1.0
 var guard_style := "Steady"
 var mode := "title"
 var player := Vector2(550, 390)
@@ -45,6 +49,7 @@ func reset(kind: String, style: String="Steady") -> void:
 	courier = Vector2(160,390)
 	facing = Vector2.RIGHT
 	locked_face = facing
+	outfit="standard";outfit_fitted=false;health_limit=5;movement_scale=1.0
 	hp = 5
 	cargo = 3
 	enemy_focus = SENTINEL_FOCUS
@@ -65,6 +70,15 @@ func reset(kind: String, style: String="Steady") -> void:
 	events.clear()
 	for key in counters: counters[key]=0
 	note("Keep the courier alive until the far gate. Read the first amber line.")
+
+func fit_outfit(id: String) -> bool:
+	# Only a clean normal start can accept equipment; never heal or swap during play.
+	if outfit_fitted or mode!="play" or elapsed!=0.0 or id not in ["standard","riveted","trail"]:return false
+	outfit=id;outfit_fitted=true
+	health_limit=6 if id=="riveted" else (4 if id=="trail" else 5)
+	movement_scale=0.8 if id=="riveted" else (1.2 if id=="trail" else 1.0)
+	hp=health_limit
+	return true
 
 func note(text: String) -> void:
 	message = text
@@ -165,9 +179,9 @@ func step(delta: float, input: Dictionary) -> void:
 			record("step")
 		else: reject("Step needs 25 resolve and its recovery to finish.")
 	if step_left>0:
-		player+=step_dir*dt*(620 if role=="Duelist" else 470)
+		player+=step_dir*dt*(620 if role=="Duelist" else 470)*movement_scale
 		step_left=maxf(0,step_left-dt)
-	else: player+=move.limit_length()*dt*(250 if not guard else 85)
+	else: player+=move.limit_length()*dt*(250 if not guard else 85)*movement_scale
 	player=player.clamp(FIELD.position+Vector2(20,20),FIELD.end-Vector2(20,20))
 	if bool(input.get("strike",false)):
 		if sentinel_disabled():
@@ -273,4 +287,6 @@ func resolve_threat() -> void:
 		retain_impact("bolt_missed","The locked bolt hit neither you nor the courier.","An OPEN window follows. Close the distance before a blade counter.")
 
 func snapshot() -> Dictionary:
-	return {"role":role,"guard_style":guard_style,"enemy_focus":enemy_focus,"courier_speed":courier_speed(),"mode":mode,"tick":roundi(elapsed*60),"hp":hp,"cargo":cargo,"energy":snappedf(energy,0.001),"courier_x":snappedf(courier.x,0.001),"counters":counters.duplicate(),"events":events.duplicate(true)}
+	var result={"role":role,"guard_style":guard_style,"enemy_focus":enemy_focus,"courier_speed":courier_speed(),"mode":mode,"tick":roundi(elapsed*60),"hp":hp,"cargo":cargo,"energy":snappedf(energy,0.001),"courier_x":snappedf(courier.x,0.001),"counters":counters.duplicate(),"events":events.duplicate(true)}
+	if outfit!="standard":result.outfit={"id":outfit,"health_limit":health_limit,"movement_scale":movement_scale}
+	return result

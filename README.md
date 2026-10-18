@@ -42,12 +42,17 @@ single-press guard and medicine interaction; costs/commitment stay live and inte
 disarms active intentions. Hold remains the default.
 
 The editable Godot project and small engine-dependent PCK execute the same consumer.
-[Native/input evidence](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/evidence/north-star-toggle-input/RUN.json)
+[Native/input evidence](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/evidence/north-star-workshop/RUN.json)
 and the [living design record](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/DESIGN.md)
 separate fixed-policy feasibility and agent visual assessment from still-missing human
 understanding, identity and enjoyment evidence.
 
 ![Sentinel disabled while the courier still has to reach the gate](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/evidence/north-star-sentinel-resolution/rendered/source-sentinel-disabled.png)
+
+An optional **F2 roadside workshop** now connects crafting to the crossing: walk to a
+bench, make and wear a slower six-health coat or faster four-health wrap. Recycle
+before deployment or keep standard clothing. Both approaches use the real fitting;
+no permanent profession, economy or saved power is implied.
 
 ## Technology demonstrations
 

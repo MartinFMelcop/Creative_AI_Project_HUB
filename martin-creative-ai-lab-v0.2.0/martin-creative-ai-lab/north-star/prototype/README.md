@@ -82,6 +82,51 @@ benefit or unavoidable class disadvantage follows from this one policy compariso
 
 ![Shutdown during a real normal-consumer route, before escort completion](../../evidence/north-star-sentinel-resolution/rendered/source-sentinel-disabled.png)
 
+## Optional roadside workshop
+
+From approach selection, **F2** opens a safe native preparation space. Walk to a
+bench with the current movement bindings and hold the interaction key (**E** by
+default) for one continuous second inside its **46px** ring. The labeled action
+**MAKE & WEAR** spends one fitting blank exactly once and equips the result:
+
+| Clothing | Player health | Walk / guarded walk | Step distance |
+|---|---:|---:|---:|
+| Standard, including skipping the workshop | 5 | 250 / 85 px/s | Baseline |
+| Riveted coat | 6 | 200 / 68 px/s | 20% less |
+| Trail wrap | 4 | 300 / 102 px/s | 20% more |
+
+Both approaches can make either piece. Shoulder plates versus split cloth strips
+remain visible in the actual crossing. Neither changes courier health/speed, threat
+schedule, guard windows, energy costs, invulnerability, keepsakes or reward eligibility.
+Move or release interaction to cancel unfinished work without spending the blank.
+After completion, release before another action; holding does not replace confirmation.
+**C** in the workshop recycles the fitting, restores standard clothing and returns the
+single blank. It is an explicit reversible choice, not material duplication.
+
+**Enter** leaves for a fresh normal crossing with the worn piece. **R** returns to
+selection. **Esc** pauses/resumes workshop work; focus loss or settings cancels partial
+work and pauses. Enter from pause resumes without departing. Resuming/settings never
+supplies a held interaction. The courier/threat clock has not started in this space.
+F2 cannot open it during play, crossing pause or rehearsal; abandon with R from pause
+or result before changing gear. Retry keeps the fitting, but there is no live swap or
+healing through re-equipping. Isolated rehearsal remains standard clothing.
+
+Crafting state is session-only. A new process starts standard with one blank; no
+keepsake/control schema or disk save changes. This is an experimental two-recipe
+craft-to-build consumer, not a profession career, economy, inventory, persistent power,
+final item/class approval or independently validated player preference.
+
+```bash
+python3 north-star/prototype/tools/verify_workshop.py --output /tmp/workshop.json --compare evidence/north-star-workshop/results.json
+# Optional actual Linux XTest window navigation; requires Xorg/dummy and local sockets:
+python3 north-star/prototype/tools/verify_workshop_input.py --output /tmp/workshop-input
+```
+
+[Executed source/PCK controls and native images](../../evidence/north-star-workshop/RUN.json)
+include all six standard/coat/wrap approach routes, health/movement/step consequences,
+undo, duplicate rejection and interruption. Fixed policies are not balance evidence;
+synthetic OS input and agent image inspection are not independent human experience.
+
 ## Guardian technique choice
 
 On selection, choose **1 Guardian**, then **Tab** to switch between **Steady**
@@ -350,7 +395,7 @@ or MMORPG persistence.
 ## Execute checks and reproduce delivery
 
 ```bash
-python3 north-star/prototype/tools/verify.py --godot godot --output /tmp/crossing-check.json --compare evidence/north-star-toggle-input/results.json
+python3 north-star/prototype/tools/verify.py --godot godot --output /tmp/crossing-check.json --compare evidence/north-star-workshop/regressions.json
 ```
 
 The stdlib runner bounds owned engine processes, uses writable temporary XDG paths,
@@ -358,7 +403,7 @@ loads the source project, executes positive/negative controls, both rehearsal se
 and two complete repeatable crossing policies, plus keepsake eligibility and local
 profile controls, then executes the **delivered PCK** and requires exact source/PCK
 outcomes.
-The current suite has 242 native controls, including full direct/recovery routes for
+The retained suite has 358 native controls, including full direct/recovery routes for
 both approaches. Eight further engine invocations (earn,
 read, put away, read for each source/PCK) demonstrate actual process reentry with
 the same local profile. Eight additional apply/read/restore/read processes verify the separate keyboard profile
@@ -374,7 +419,7 @@ The source pack is reproducible with the matching engine:
 godot --headless --path north-star/prototype --script tools/pack.gd -- /absolute/path/crossing-drill.pck
 ```
 
-[Current execution evidence](../../evidence/north-star-guard-techniques/RUN.json) identifies
+[Current execution evidence](../../evidence/north-star-workshop/RUN.json) identifies
 baseline, source/result hashes, commands, refinements and limitations. The preserved
 [first-consumer record](../../evidence/north-star-crossing/RUN.json) documents the
 original crossing delivery; the [rehearsal record](../../evidence/north-star-rehearsal/RUN.json)

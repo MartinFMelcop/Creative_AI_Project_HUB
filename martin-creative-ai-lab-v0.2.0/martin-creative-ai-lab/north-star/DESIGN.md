@@ -113,6 +113,34 @@ widened defense windows or silent profile-schema changes. These would change cha
 or introduce unintended actions beyond the input alternative. Actual native state,
 source/PCK OS input and image inspection establish execution, not human validation.
 
+## Roadside fitting — experimental
+
+Primary DEVELOPMENT, category 1. CRE-022/023 are creative hypotheses: a small
+profession activity needs a discernible trade-off, not repeated XP or a mandatory
+minigame. The current author identity direction informs this bounded craft-to-build
+consumer; neither candidate recipes nor profession taxonomy become canon.
+
+One reusable blank can become a Riveted coat (6 health, 20% less walk/guard/step
+mobility) or Trail wrap (4 health, 20% more mobility), for either approach. Standard
+clothing stays 5 health at baseline speed. Walk to a real bench; hold interaction
+for one uninterrupted second. Making spends once and visibly wears the piece. C
+recycles only in preparation; partial work, settings/focus interruption and pause
+cannot spend or produce an item. Held completion keeps its positive confirmation.
+
+The fitting is locked into a clean normal crossing, including retry, and never
+heals through a live swap. No courier bonus, new guard immunity or changed resource
+price is granted. Practice remains isolated standard equipment. One process owns
+this reversible choice; no inventory economy, profession progression or saved power.
+ENG-005 informs conservation/state guards; SCI-017 informs unchanged-standard controls,
+six complete policies and damage/movement checks. These are execution observations,
+not class balance, professional identity, social recognition or player enjoyment.
+
+Alternatives deferred: more timing refinement repeats established origin capability;
+independent comprehension research needs actual participants; a persistent crafting
+career would add storage/economy before testing whether this choice matters in play.
+Review after observers can explain and choose the actual trade-off. No participant
+study or current author acceptance of either item has occurred.
+
 ## Current product contract
 
 The player chooses one experimental approach, escorts the courier to the far gate,

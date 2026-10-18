@@ -15,7 +15,7 @@ settings, focus loss and completed work disarm active intentions. Hold stays def
 ## Actual stage and creative authority
 
 The catalog now records **local_prototype**: one executable
-[crossing encounter](prototype/README.md), eight actual consumer code paths and fourteen
+[crossing encounter](prototype/README.md), nine actual consumer code paths and fourteen
 capabilities. **NS-C03 combat and NS-C07 sound are adapted** in this destination; the other twelve contribution
 states remain unchanged. Godot 4.6.3 is the prototype tool; no final MMO engine or
 running multiplayer service is selected. The earlier combat-response lab remains an
@@ -92,3 +92,9 @@ the sentinel and let the courier run. Protective completion remains valid; shutd
 alone awards nothing and does not replace reaching the gate alive. Matched prior-PCK
 routes separate this actual pacing change from synthetic-policy and human-experience
 limits. No origin or capability status is promoted by this increment.
+
+Before a normal crossing, F2 opens an optional native workshop. One reversible fitting
+blank becomes a slower six-health coat or faster four-health wrap, visible on either
+approach; standard gear remains available. Real crafting, undo and locked crossing
+consumption are [executed here](../evidence/north-star-workshop/RUN.json). This adds a
+bounded craft-to-build choice, not a profession career, economy or saved power.

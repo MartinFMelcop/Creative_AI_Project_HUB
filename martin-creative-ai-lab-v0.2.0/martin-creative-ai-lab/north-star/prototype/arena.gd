@@ -1,4 +1,6 @@
 extends Node2D
+const Workshop = preload("res://workshop.gd")
+var workshop = Workshop.new()
 const Combat = preload("res://combat.gd")
 const Rehearsal = preload("res://rehearsal.gd")
 const Keepsakes = preload("res://keepsakes.gd")
@@ -68,12 +70,15 @@ func begin_crossing() -> void:
 	rehearsal.active = false
 	game = Combat.new()
 	game.reset(selected,guardian_style)
+	game.fit_outfit(workshop.outfit)
+	if workshop.active:workshop.leave();bindings.quarantine()
 	sound.observe(game,true)
 	actors.attach(game)
 	taps.clear()
 
 func _notification(what: int) -> void:
 	if what==NOTIFICATION_APPLICATION_FOCUS_OUT:
+		if workshop.active:workshop.suspend()
 		if rehearsal.active:
 			if rehearsal.state=="live" and not rehearsal.paused: rehearsal.toggle_pause()
 		elif game.mode=="play": game.mode="paused"
@@ -91,6 +96,10 @@ func _unhandled_key_input(event: InputEvent) -> void:
 		controls_input(event,key);queue_redraw();return
 	if key==KEY_F1:
 		open_controls();queue_redraw();return
+	if workshop.active:
+		workshop_input(key);queue_redraw();return
+	if not rehearsal.active and game.mode=="title" and key==KEY_F2:
+		workshop.enter();taps.clear();bindings.quarantine();queue_redraw();return
 	if not rehearsal.active and game.mode!="play":
 		if key==KEY_C: keepsakes.cycle_equipped()
 		elif key==KEY_F5: keepsakes.retry_save()
@@ -128,7 +137,20 @@ func _unhandled_key_input(event: InputEvent) -> void:
 	sync_sound()
 	queue_redraw()
 
+func workshop_input(key: int) -> void:
+	if key==KEY_ESCAPE:
+		if workshop.paused:workshop.paused=false
+		else:workshop.suspend()
+		bindings.quarantine()
+	elif key==KEY_ENTER:
+		if workshop.paused:workshop.paused=false;bindings.quarantine()
+		else:begin_crossing()
+	elif key==KEY_R:workshop.leave();bindings.quarantine()
+	elif key==KEY_C:workshop.recycle();bindings.quarantine()
+	taps.clear()
+
 func open_controls() -> void:
+	if workshop.active:workshop.suspend()
 	if rehearsal.active:
 		if rehearsal.state=="live" and not rehearsal.paused:rehearsal.toggle_pause()
 	elif game.mode=="play":game.mode="paused"
@@ -164,6 +186,9 @@ func controls_input(event: InputEventKey,key: int) -> void:
 
 func _physics_process(dt: float) -> void:
 	if controls_open:taps.clear();sound.silence();queue_redraw();return
+	if workshop.active:
+		workshop.step(dt,bindings.vector("move"),bindings.down("interact"))
+		taps.clear();queue_redraw();return
 	var command: Dictionary=taps.duplicate()
 	command.move=bindings.vector("move")
 	command.aim=bindings.vector("aim")
@@ -232,6 +257,10 @@ func style(color: Color) -> StyleBoxFlat:
 	return box
 
 func _draw() -> void:
+	if workshop.active:
+		draw_workshop()
+		if controls_open:drawing_controls=true;draw_controls();drawing_controls=false
+		return
 	draw_rect(Rect2(0,0,1152,768),INK)
 	draw_rect(Combat.FIELD,Color("172f3b"))
 	for x in range(80,1100,55): draw_line(Vector2(x,185),Vector2(x,645),Color("203e49"),1)
@@ -296,7 +325,7 @@ func draw_header() -> void:
 	text(Vector2(40,42),"VIRGO DIAMOND / "+("REHEARSAL" if rehearsal.active else "CROSSING DRILL"),25)
 	text(Vector2(950,41),"F1 Keys / sound",16,AMBER)
 	text(Vector2(40,70),("%d / 3  %s  •  "%[rehearsal.stage+1,rehearsal.heading()]+rehearsal.instruction()) if rehearsal.active else (errand.hint() if errand.active else "LOCAL EXPERIMENT  •  Keep the courier alive to the far gate"),16,AMBER)
-	text(Vector2(40,110),game.role.to_upper()+(" / "+game.guard_style.to_upper() if game.role=="Guardian" else "")+"  /  HEALTH "+str(game.hp)+"   COURIER "+str(game.cargo),19)
+	text(Vector2(40,110),game.role.to_upper()+(" / "+game.guard_style.to_upper() if game.role=="Guardian" else "")+"  /  HEALTH "+str(game.hp)+" / "+str(game.health_limit)+"   COURIER "+str(game.cargo),19)
 	draw_rect(Rect2(40,130,300,12),Color("32475a"))
 	draw_rect(Rect2(40,130,300*game.energy/100,12),TEAL if game.role=="Guardian" else AMBER)
 	text(Vector2(355,142),"POSTURE" if game.role=="Guardian" else "RESOLVE",15)
@@ -307,6 +336,8 @@ func draw_header() -> void:
 	draw_rect(Rect2(750,130,350*((rehearsal.stage+int(rehearsal.passed))/3.0 if rehearsal.active else progress),12),AMBER)
 
 	text(Vector2(40,164),"WORN  /  "+KEEPSAKE_NAMES[keepsakes.equipped]+"  •  cosmetic only",14)
+	var shown_outfit: String=workshop.outfit if game.mode=="title" else game.outfit
+	text(Vector2(505,164),("NEXT / " if game.mode=="title" else "GEAR / ")+("COAT" if shown_outfit=="riveted" else ("WRAP" if shown_outfit=="trail" else "STANDARD")),14,AMBER)
 	text(Vector2(750,164),"LOCAL SAVE PENDING" if keepsakes.dirty or keepsakes.blocked else "THIS DEVICE'S KEEPSAKES",14,AMBER)
 
 func overlay() -> void:
@@ -327,7 +358,7 @@ func overlay() -> void:
 		text(Vector2(615,430),"Feint within the ring; steps cost resolve.",17)
 		text(Vector2(615,467),"Cross + draw: Drew the Danger",17,AMBER)
 		text(Vector2(210,543),"Leave ground pulses. Three close counters disable the sentinel.",19)
-		text(Vector2(210,580),"T  Rehearse as "+selected+"     •     ENTER  Skip to crossing",21,TEAL)
+		text(Vector2(210,580),"T  Rehearse   •   F2  Workshop   •   ENTER  Crossing",21,TEAL)
 		text(Vector2(210,615),"C  Keepsake: "+KEEPSAKE_NAMES[keepsakes.equipped]+"     /     experimental, cosmetic only",17)
 		draw_keepsake(Vector2(1015,602),keepsakes.equipped,1.4)
 		text(Vector2(150,642),"Sound: high taps = bolt; low pair = floor. F1 opens sound / key controls.",16,AMBER)
@@ -341,7 +372,7 @@ func overlay() -> void:
 	else:
 		text(Vector2(250,290),"THE COURIER CROSSED" if game.mode=="won" else "THE LINE BROKE",36,TEAL if game.mode=="won" else RED)
 		text(Vector2(250,345),game.role+(" / "+game.guard_style if game.role=="Guardian" else "")+"  /  blocks %d   drawn bolts %d   counters %d"%[game.counters.blocks,game.counters.redirects,game.counters.counters],22)
-		text(Vector2(250,390),"Health %d / 5    Courier %d / 3    Crossing %d%%"%[game.hp,game.cargo,roundi((game.courier.x-160)/840*100)],21)
+		text(Vector2(250,390),"Health %d / %d    Courier %d / 3    Crossing %d%%"%[game.hp,game.health_limit,game.cargo,roundi((game.courier.x-160)/840*100)],21)
 		draw_impact(Vector2(150,435))
 		text(Vector2(250,490),game.sentinel_status(),16,TEAL if game.sentinel_disabled() else AMBER)
 		text(Vector2(250,518),"ENTER retry this approach     •     R choose approach",22)
@@ -394,7 +425,7 @@ func footer() -> String:
 		if rehearsal.state=="ready": return "ENTER send this trial  •  R choose approach  /  No time passes while you read."
 		if rehearsal.state=="review": return ("ENTER "+("start the crossing" if rehearsal.stage==2 else "next exercise") if rehearsal.passed else "ENTER retry this exercise")+"  •  T repeat  •  R choose approach"
 	if game.mode!="play" and (keepsakes.dirty or keepsakes.blocked): return keepsakes.status
-	if game.mode=="title": return "Win with a block or drawn bolt to earn a keepsake. C chooses what you wear."
+	if game.mode=="title": return "F2: make gear with a trade-off. Current: "+Workshop.NAMES[workshop.outfit]+". C cycles cosmetic marks."
 	if game.mode=="won": return keepsakes.status
 	return game.message
 
@@ -429,6 +460,7 @@ func capture() -> void:
 	get_viewport().get_texture().get_image().save_png(path)
 	var file=FileAccess.open(path+".json",FileAccess.WRITE)
 	var report=game.snapshot()
+	report.workshop=workshop.snapshot()
 	report.actors=actors.snapshot(game)
 	report.last_impact=game.last_impact.duplicate(true)
 	report.rehearsal=rehearsal.snapshot()
@@ -437,3 +469,33 @@ func capture() -> void:
 	report.sound=sound.snapshot()
 	report.controls={"profile":bindings.snapshot(),"open":controls_open,"draft":controls_draft.duplicate(),"row":controls_row,"listening":controls_listening,"message":controls_message}
 	file.store_string(JSON.stringify(report,"  ")+"\n")
+
+func draw_workshop() -> void:
+	draw_rect(Rect2(0,0,1152,768),INK)
+	text(Vector2(45,48),"VIRGO DIAMOND / ROADSIDE WORKSHOP",28)
+	text(Vector2(45,87),"An experimental fitting, not a permanent profession choice. Both approaches can wear either piece.",18,AMBER)
+	text(Vector2(45,128),"ONE BLANK  /  %d available     WORN  /  %s"%[workshop.blank,Workshop.NAMES[workshop.outfit]],21,TEAL)
+	for id in Workshop.STATIONS:
+		var at: Vector2=Workshop.STATIONS[id]
+		var heavy: bool=id=="riveted"
+		var tint: Color=AMBER if heavy else TEAL
+		panel(Rect2(at-Vector2(200,180),Vector2(400,290)),Color("203548"))
+		text(at+Vector2(-175,-145),Workshop.NAMES[id].to_upper(),26,tint)
+		text(at+Vector2(-175,-113),"6 health  /  200px/s walk" if heavy else "4 health  /  300px/s walk",20)
+		text(at+Vector2(-175,-85),"+1 hit; 20% slower movement / step." if heavy else "-1 hit; 20% faster movement / step.",17,tint)
+		text(at+Vector2(-175,-61),"Standard: 5 health / 250px/s. No courier bonus.",15)
+		draw_rect(Rect2(at-Vector2(46,18),Vector2(92,36)),Color("617986"))
+		draw_line(at+Vector2(-30,-20),at+Vector2(25,-20),tint,6)
+		draw_arc(at,Workshop.RADIUS,0,TAU,48,tint,2)
+		text(at+Vector2(-175,82),"Stand in ring. Hold E 1s: MAKE & WEAR.",17,tint)
+		if workshop.target==id:draw_arc(at,54,-PI/2,-PI/2+TAU*workshop.progress/Workshop.MAKE_TIME,48,PAPER,5)
+	# The same native actor carries its selected appearance into the actual crossing.
+	var preview=Combat.new();preview.role=selected;preview.player=workshop.player
+	preview.outfit=workshop.outfit
+	actors.draw_player(self,preview)
+	draw_keepsake(workshop.player,keepsakes.equipped)
+	text(workshop.player+Vector2(-20,48),"YOU",15)
+	panel(Rect2(30,650,1092,96))
+	text(Vector2(48,679),"WASD move  /  E hold to make  /  C recycle & recover blank  /  R back  /  F1 keys",17)
+	text(Vector2(48,710),"PAUSED / ENTER or ESC resumes" if workshop.paused else "ENTER crosses with worn gear. Crafting never starts the threat clock.",19,TEAL)
+	text(Vector2(45,620),workshop.message,17,AMBER)

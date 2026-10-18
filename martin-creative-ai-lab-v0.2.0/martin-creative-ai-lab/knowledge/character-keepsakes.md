@@ -39,3 +39,21 @@ Pending changes are lost if the application closes before a successful retry.
 **Practical consequence:** Keep explicit reversible expression separate from combat state;
 test both failure messaging and later live play when adding persistence. Judge whether
 players notice/value these marks through actual observation before enlarging collections.
+
+
+## A visible fitting must expose its functional price
+
+**Question/context:** can preparation add a reversible character build choice without
+turning cosmetic keepsakes into power? **Source:** [workshop execution](../evidence/north-star-workshop/RUN.json),
+CRE-022/023 hypotheses, ENG-005 and SCI-017. **Observation:** one native timed make
+spends a single blank; undo refunds it only before deployment. The coat/wrap changes
+actual health, walk/guard/step motion and remains visible in the same consumer.
+All standard-equipment mechanical observations equal the prior verified consumer.
+
+**Refinement:** held interaction initially replaced success with a duplicate-action
+message; release-to-rearm preserves confirmation. Image inspection separated station
+range geometry from comparison text. **Interpretation/consequence:** show the functional
+price beside the make action and keep cosmetic memory separate from fitting stats.
+**Validity:** fixed routes and synthetic OS input, not perceived identity, general
+balance, profession demand or human preference. One session blank and reversible undo
+are not an economy, inventory or persistent progression system.

@@ -1,6 +1,6 @@
 # SEED — Martin Creative AI Lab
 
-**Version:** 0.33.11
+**Version:** 0.33.12
 **Data-base:** 10 de outubro de 2026  
 **Autor e responsável pelo portfólio:** Martin Melcop Neto  
 **Working language:** English for new technical documentation, plans, code comments and Git messages; respond in the requested language (Brazilian Portuguese for continuous closeout). Preserve appropriate creative/source languages.
@@ -45,18 +45,20 @@ does not merge fictional universes. Source details below are historical provenan
 retained origin behavior; current operation is defined by this direction, AGENTS,
 STATE and the single [continuous prompt](docs/prompts/CONTINUOUS_DEVELOPMENT.md).
 
-### Current development increment — v0.33.11
+### Current consumer increment — v0.33.12
 
-The current author explicitly selects shared knowledge-retrieval infrastructure.
-Compact overview and metadata discovery now precede selective complete reading;
-known IDs go directly to retrieval. Strict defaults remain compatible. Explained
-exploratory vocabulary/source fallback is opt-in, bounded and never creative authority.
-[Measured evidence](evidence/brain-retrieval/RUN.json) compares the preserved Git tool,
-UTF-8 output and declared source targets, not Codex tokens, money or human validation.
-No direct gameplay, laboratory, capability or origin-migration promotion is implied;
-reassess product/creative value before continuing infrastructure work.
+DEVELOPMENT/category 1: a native optional roadside workshop connects one reversible
+fitting blank to a visibly worn health/mobility choice in the actual crossing. Both
+approaches may craft a slower six-health coat or faster four-health wrap; standard
+remains available. One-second nearby work, interruption, undo, locked deployment and
+session-only reset are executed in source/PCK, with six complete routes and native
+keyboard navigation. [Evidence](evidence/north-star-workshop/RUN.json) separates scoped
+execution from player identity/balance and final profession/item approval. One consumer,
+nine code paths, unchanged fourteen capability states; no new origin extraction or lab.
+Compact brain retrieval remains available; the continuous prompt already serves this
+product work and stays unchanged.
 
-### Last consumer increment — v0.33.10
+### Prior consumer increment — v0.33.10
 
 Primary DEVELOPMENT, priority category 1. The existing crossing offers independent
 session-only single-press alternatives to sustained Guardian guard and medicine
@@ -87,7 +89,7 @@ accessibility/comfort/learning validation. The prior optional threat resolution 
 
 Read current root/lab AGENTS, STATE, the affected registries and real artifacts.
 Inspect local/remote Git state and tools before editing. Run the mandatory three-brain
-activation described above with `python3 tools/brain_query.py indexes`, selective
+activation described above with compact `overview` when needed, metadata-only
 `search` and complete `get ID` retrieval. Consult relevant derived knowledge.
 Compare alternatives across research questions, portfolio capabilities and North Star
 benefit; choose one verifiable increment and implement/execute it. Use the single
