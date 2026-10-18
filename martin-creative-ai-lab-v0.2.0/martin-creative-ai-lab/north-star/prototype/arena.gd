@@ -5,6 +5,8 @@ const Keepsakes = preload("res://keepsakes.gd")
 const Errand = preload("res://errand.gd")
 const Sound = preload("res://sound.gd")
 const Controls = preload("res://controls.gd")
+const Actors = preload("res://actors.gd")
+var actors = Actors.new()
 const KEEPSAKE_NAMES := {"":"None", "held_line":"Held the Line", "drew_danger":"Drew the Danger"}
 var sound = Sound.new()
 var keepsakes = Keepsakes.new()
@@ -41,6 +43,7 @@ func _ready() -> void:
 	if controls_path.is_empty():controls_path=OS.get_environment("CROSSING_CONTROLS")
 	if controls_path.is_empty():controls_path="user://crossing-controls.json"
 	bindings.load_profile(controls_path)
+	actors.attach(game)
 	queue_redraw()
 
 func abandon() -> void:
@@ -52,6 +55,7 @@ func abandon() -> void:
 	game = Combat.new()
 	game.role = selected
 	game.guard_style=guardian_style if selected=="Guardian" else "none"
+	actors.attach(game)
 	taps.clear()
 
 func begin_crossing() -> void:
@@ -63,6 +67,7 @@ func begin_crossing() -> void:
 	game = Combat.new()
 	game.reset(selected,guardian_style)
 	sound.observe(game,true)
+	actors.attach(game)
 	taps.clear()
 
 func _notification(what: int) -> void:
@@ -162,6 +167,7 @@ func _physics_process(dt: float) -> void:
 func sync_sound() -> void:
 	var suspended: bool=controls_open or (rehearsal.paused or rehearsal.state=="ready" if rehearsal.active else game.mode in ["title","paused"])
 	sound.observe(game,suspended)
+	actors.observe(game)
 
 func advance_crossing(dt: float, command: Dictionary) -> void:
 	var previous: String=game.mode
@@ -229,37 +235,32 @@ func _draw() -> void:
 		draw_line(Combat.ENEMY,game.target,Color(1,0.75,0.4,0.25+game.clock*0.5),width)
 		draw_arc(game.target,26,0,TAU,24,AMBER,2)
 		if game.role=="Guardian" and game.guard_style=="Riposte" and not reviewing:draw_guard_timing()
-		var label=game.target+Vector2(-50,-76 if game.target.distance_to(game.player)<80 else -38)
+		var label=game.target+(Vector2(34,-36) if game.target.distance_to(game.player)<80 else Vector2(-50,-38))
+		label.x=clampf(label.x,65,940)
 		label.y=maxf(200,label.y)
 		text(label,"LAST LOCKED LINE" if reviewing else "LOCKED BOLT",14,AMBER)
 	if game.phase=="pulse" or (reviewing and rehearsal.stage==1):
 		draw_circle(game.pulse,90,Color(1,0.3,0.3,0.18+game.clock*0.22))
 		draw_arc(game.pulse,90,0,TAU,48,RED,3)
 		text(game.pulse+Vector2(-55,-106),"LAST PULSE" if reviewing else "GROUND PULSE",15,RED)
-	# The sentinel's silhouette and name stay separate from the courier's parcel.
-	draw_colored_polygon(PackedVector2Array([Combat.ENEMY+Vector2(0,-36),Combat.ENEMY+Vector2(31,5),Combat.ENEMY+Vector2(0,32),Combat.ENEMY+Vector2(-31,5)]),RED)
+	actors.draw_sentinel(self,game)
 	text(Combat.ENEMY+Vector2(-42,-50),"SENTINEL",15,RED)
 	if game.role=="Duelist": draw_arc(Combat.ENEMY,340,0,TAU,80,Color(1,0.77,0.45,0.18),1)
 	if game.opening>0:
 		draw_arc(Combat.ENEMY,130,0,TAU,64,TEAL,2)
 		text(Combat.ENEMY+Vector2(-53,60),"OPEN %.1fs"%game.opening,19,TEAL)
-	draw_circle(game.courier,14,AMBER)
-	draw_rect(Rect2(game.courier+Vector2(-11,-10),Vector2(22,18)),Color("756347"),false,2)
+	actors.draw_courier(self,game)
 	text(game.courier+Vector2(-35,40),"COURIER",14,AMBER)
 	var c: Color=TEAL if game.role=="Guardian" else AMBER
-	draw_circle(game.player+Vector2(0,7),22,Color(0,0,0,0.35))
-	if game.role=="Guardian":
-		draw_colored_polygon(PackedVector2Array([game.player+Vector2(-18,-20),game.player+Vector2(18,-20),game.player+Vector2(24,14),game.player+Vector2(0,25),game.player+Vector2(-24,14)]),c)
-	else:
-		draw_colored_polygon(PackedVector2Array([game.player+Vector2(0,-25),game.player+Vector2(17,17),game.player+Vector2(0,9),game.player+Vector2(-17,17)]),c)
+	actors.draw_player(self,game)
 	draw_keepsake(game.player,keepsakes.equipped)
 	# Keep the facing cue outside the body so it cannot obscure a worn mark.
-	draw_line(game.player+game.facing*26,game.player+game.facing*42,PAPER,3)
+	draw_colored_polygon(PackedVector2Array([game.player+game.facing*43,game.player+game.facing*35+game.facing.orthogonal()*4,game.player+game.facing*35-game.facing.orthogonal()*4]),PAPER)
 	if game.guard:
 		var angle: float=game.locked_face.angle()
 		draw_arc(game.player,37,angle-0.9,angle+0.9,24,TEAL if game.guards_from(Combat.ENEMY) else (RED if game.guard_state()=="STALE" else AMBER),7)
-	if game.step_left>0: draw_line(game.player-game.step_dir*70,game.player,c,8)
-	text(game.player+Vector2(-20,47 if game.player.y<245 else -38),"YOU",14,c)
+	actors.draw_contact(self)
+	text(game.player+Vector2(30 if game.player.x<140 else -65,47 if game.player.y<245 else -38),"YOU",14,c)
 	draw_header()
 	panel(Rect2(30,662,1092,86))
 	text(Vector2(48,686),"WASD move   •   ARROWS aim   •   J blade   •   K "+(("timed guard" if game.guard_style=="Riposte" else "hold guard") if game.role=="Guardian" else "feint bolt")+"   •   SPACE step   •   ESC pause",17)
@@ -411,6 +412,7 @@ func capture() -> void:
 	get_viewport().get_texture().get_image().save_png(path)
 	var file=FileAccess.open(path+".json",FileAccess.WRITE)
 	var report=game.snapshot()
+	report.actors=actors.snapshot(game)
 	report.last_impact=game.last_impact.duplicate(true)
 	report.rehearsal=rehearsal.snapshot()
 	report.keepsakes=keepsakes.snapshot()

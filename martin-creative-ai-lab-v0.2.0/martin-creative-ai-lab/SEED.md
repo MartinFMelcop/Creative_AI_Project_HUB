@@ -1,6 +1,6 @@
 # SEED — Martin Creative AI Lab
 
-**Version:** 0.33.7
+**Version:** 0.33.8
 **Data-base:** 10 de outubro de 2026  
 **Autor e responsável pelo portfólio:** Martin Melcop Neto  
 **Working language:** English for new technical documentation, plans, code comments and Git messages; respond in the requested language (Brazilian Portuguese for continuous closeout). Preserve appropriate creative/source languages.
@@ -45,16 +45,18 @@ does not merge fictional universes. Source details below are historical provenan
 retained origin behavior; current operation is defined by this direction, AGENTS,
 STATE and the single [continuous prompt](docs/prompts/CONTINUOUS_DEVELOPMENT.md).
 
-### Current consumer increment — v0.33.7
+### Current consumer increment — v0.33.8
 
-The existing Guardian now chooses Steady or Riposte guard before an attempt. Steady
-retains sustained protection; Riposte protects only at guard age 60–300ms and grants
-an actual 1.6s counter opening instead of 1.0s. Early holding expires and takes damage.
-The chosen technique carries through rehearsal and clean crossing, cannot change
-in play/pause/rehearsal, and adds no persistent reward, stat or canonical subclass.
-[Execution](evidence/north-star-guard-techniques/RUN.json) binds native source/PCK,
-whole routes, actual keyboard timing, presentation and mixer evidence. Fourteen
-capability states remain unchanged; one local consumer, NS-C03/07 adapted.
+Primary mode CREATIVE PRODUCTION, priority category 1: give the existing character
+choices visible gestures and consequences. Original native vector actors replace
+static polygons with a broad shield stance, open Duelist blade, actual-displacement
+gait, accepted draw/step/strike gestures, and event-owned local impact/recovery.
+Sentinel shutters expose the actual OPEN state; expired/underfunded defense never
+receives successful-block feedback. Animation uses simulation time and freezes with
+pause/review. No collision, cost, class, profile or reward changes. [Execution](evidence/north-star-action-poses/RUN.json)
+binds source/PCK behavior and rendered pixels, version-matched combat controls, motion
+clips and creative assessment. One local consumer/eight code paths, fourteen capability
+states unchanged; NS-C03/07 adapted. No independent player-recognition validation.
 
 ### Navegação
 

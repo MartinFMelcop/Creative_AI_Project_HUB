@@ -172,3 +172,24 @@ consumer probe observed/received tick 45 and the intended response passed. The c
 method perturbed the timing under observation. **Consequence:** measure receipt in the
 consumer and bound instrumentation overhead before blaming a new timing rule. This
 comparison does not measure hardware latency or prove all rendered frame performance.
+
+## Visible contact needs the same owner and clock as the action
+
+**Question/context:** At baseline `2d32a61`, actual actions mostly retain static body
+shapes, and a paid armor strike has no body gesture. **Source:**
+[actor production](../evidence/north-star-action-poses/RUN.json), ENG-023, SCI-014,
+CRE-067/068/074. **Observation:** new native actors use actual displacement and accepted
+cooldown/event transitions. A spent armor strike animates without a contact mark; a
+confirmed counter alone moves the sentinel. Courier damage belongs to its body, and
+west-facing protection keeps its incoming-side mark. Simulation-time effects freeze
+with pause/review; attaching to an advanced/replaced model cannot replay old contacts.
+Matched rendered samples preserve combat values and source/PCK pixels in one renderer.
+
+**Interpretation/consequence:** let model ownership determine what art may claim, while
+keeping drawing read-only. Separate an accepted attempt from its successful contact.
+Immediate model contact needs a contact/recovery gesture, not a newly invented windup.
+Inspect at the actual viewport: labels/direction markers crossed the blade in the first
+pass and were moved/shaped separately. **Validity:** these are scoped implementation
+and agent creative observations, not player recognition, class identity, comfort,
+accessibility, balance or real-time performance evidence. No reusable origin atlas was
+extracted, no new lab created, and no source/reference rights were altered.

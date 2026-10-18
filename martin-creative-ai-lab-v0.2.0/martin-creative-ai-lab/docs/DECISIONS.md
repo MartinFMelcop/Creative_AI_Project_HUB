@@ -2027,3 +2027,34 @@ the window or weaken a check. The prompt now conditionally requires consumer-sid
 receipt/instrumentation-overhead checks for timing-sensitive work. This durable evidence
 lesson does not prescribe the next project or add a laboratory. No other prompt contract
 changes. Stage/capability/origin states remain unchanged; no external player validation.
+
+
+## ADR-078 — Make existing character actions visible without changing their rules
+
+- **Status:** Accepted implementation scope; experimental visual direction.
+- **Date:** 2026-10-18 UTC.
+- **Baseline:** `2d32a61702669dc503d0ca646d911d36d460eac6`; clean tracked tree,
+  preserved unrelated work/, current/fetched main equal. Primary CREATIVE PRODUCTION,
+  category 1: improve the existing executable destination.
+- **Problem/audience:** players trying the two approaches see mostly static body
+  polygons; accepted strikes and their actual contact need distinct visual outcomes.
+- **Alternatives:** another adventure broadens content before action readability;
+  further builds expand rules before existing choices are visible; an imported painted
+  atlas adds production/dependency cost and does not by itself own action timing.
+- **Decision:** original native vector actors, distinct shield/blade silhouettes,
+  displacement-driven feet, accepted-event/cooldown gestures and local contact marks.
+  Real OPEN shutters and damage/recovery expose existing consequences. Simulation time
+  freezes all motion in pause/review. Keep the observer read-only, do not replay history
+  when attaching, and never infer hit success from a key press or a paid miss.
+- **Brain use:** engineering high (ENG-023, mechanism versus experience), science medium
+  (SCI-014, validity of recognition claims), creation high (CRE-067/068/074 hypotheses
+  on signatures, preparation/contact/recovery and essential versus expressive signals).
+- **Refinement/evidence:** actual images exposed label/blade overlap and a facing line
+  resembling a second weapon; labels moved aside and the cue became a small triangle.
+  Block feedback follows incoming direction. A controlled courier probe initially used
+  the future target with an almost-complete warning, causing a genuine miss; the setup
+  now targets the courier's actual position. The model was not changed to pass it.
+- **Limits:** local Godot prototype, no final art/class/canon, human recognition or
+  accessibility validation, multiplayer, production-engine or commercial claim.
+  No origin migration; fourteen capability states unchanged. The operational prompt
+  already covers this production/verification contract and remains unchanged.

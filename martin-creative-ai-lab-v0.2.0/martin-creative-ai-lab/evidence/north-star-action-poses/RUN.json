@@ -1,0 +1,627 @@
+{
+  "schema_version": 1,
+  "kind": "destination_execution",
+  "recorded_at_utc": "2026-10-18T16:44:35.589583+00:00",
+  "baseline_commit": "2d32a61702669dc503d0ca646d911d36d460eac6",
+  "branch": "codex/north-star-action-poses-20261017",
+  "mode": "CREATIVE PRODUCTION",
+  "priority_category": 1,
+  "capability_ids": [
+    "NS-C03",
+    "NS-C07"
+  ],
+  "consumer_paths": [
+    "north-star/prototype/arena.gd",
+    "north-star/prototype/combat.gd",
+    "north-star/prototype/rehearsal.gd",
+    "north-star/prototype/keepsakes.gd",
+    "north-star/prototype/errand.gd",
+    "north-star/prototype/controls.gd",
+    "north-star/prototype/sound.gd",
+    "north-star/prototype/actors.gd"
+  ],
+  "runtime": "4.6.3.stable.official.7d41c59c4; Python 3.12; Linux x86_64; Xorg dummy display; Mesa llvmpipe OpenGL compatibility; FFmpeg VP9",
+  "scope": "Original native vector character production and real event-owned motion in the existing local Virgo Diamond consumer. No gameplay rule or origin-media import.",
+  "checks": {
+    "failed": 0,
+    "passed": 270
+  },
+  "commands": [
+    {
+      "command": [
+        "python3",
+        "north-star/prototype/tools/verify.py",
+        "--output",
+        "/tmp/ns-poses-baseline.json",
+        "--compare",
+        "evidence/north-star-guard-techniques/results.json"
+      ],
+      "exit_code": 0,
+      "source_revision": "2d32a61702669dc503d0ca646d911d36d460eac6",
+      "result": "242 prior native checks, source/PCK equality, sixteen restart processes"
+    },
+    {
+      "command": [
+        "godot",
+        "--headless",
+        "--path",
+        "north-star/prototype",
+        "--script",
+        "tools/pack.gd",
+        "--",
+        "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/prototype/dist/crossing-drill.pck"
+      ],
+      "exit_code": 0,
+      "environment": "isolated writable temporary XDG data/config/cache",
+      "result": "Actual delivered PCK rebuilt with the current consumer, actor checks and capture script"
+    },
+    {
+      "command": [
+        "python3",
+        "north-star/prototype/tools/verify.py",
+        "--output",
+        "evidence/north-star-action-poses/results.json"
+      ],
+      "exit_code": 0,
+      "result": "270 checks, source/PCK exact observations/source identities and sixteen restart processes"
+    },
+    {
+      "command": [
+        "python3",
+        "north-star/prototype/tools/verify_actors.py",
+        "--output",
+        "evidence/north-star-action-poses",
+        "--baseline-pack",
+        "../../work/north-star-action-poses/baseline.pck"
+      ],
+      "exit_code": 0,
+      "result": "41 prepared scene samples in each of source/pack/baseline. Source/PCK observations and PNG pixels identical. All matched baseline combat/contact/guard/opening fields unchanged. Four VP9 clips encoded at 6fps."
+    },
+    {
+      "command": [
+        "python3",
+        "north-star/prototype/tools/verify_sound.py",
+        "--output",
+        "evidence/north-star-action-poses/media.json"
+      ],
+      "exit_code": 0,
+      "result": "Actual source/PCK AudioServer capture, unchanged native cue PCM, mute/pause and outcome ownership"
+    },
+    {
+      "command": [
+        "python3",
+        "tools/test_brain_query.py"
+      ],
+      "exit_code": 0,
+      "result": "17 Python regression tests passed; 106 total across these six suites"
+    },
+    {
+      "command": [
+        "python3",
+        "tools/test_validate_repo.py"
+      ],
+      "exit_code": 0,
+      "result": "27 Python regression tests passed; 106 total across these six suites"
+    },
+    {
+      "command": [
+        "python3",
+        "tools/test_reference_library.py"
+      ],
+      "exit_code": 0,
+      "result": "42 Python regression tests passed; 106 total across these six suites"
+    },
+    {
+      "command": [
+        "python3",
+        "tools/test_check_manifest.py"
+      ],
+      "exit_code": 0,
+      "result": "11 Python regression tests passed; 106 total across these six suites"
+    },
+    {
+      "command": [
+        "python3",
+        "north-star/prototype/tools/test_verify.py"
+      ],
+      "exit_code": 0,
+      "result": "3 Python regression tests passed; 106 total across these six suites"
+    },
+    {
+      "command": [
+        "python3",
+        "north-star/prototype/tools/test_verify_sound.py"
+      ],
+      "exit_code": 0,
+      "result": "6 Python regression tests passed; 106 total across these six suites"
+    },
+    {
+      "command": [
+        "python3",
+        "tools/validate_repo.py"
+      ],
+      "exit_code": 0,
+      "result": "11 projects, 15 transfers, 11 assets, 595 links"
+    },
+    {
+      "command": [
+        "python3",
+        "tools/reference_library.py",
+        "check"
+      ],
+      "exit_code": 0,
+      "result": "607 preserved sources, 18 derived PDF texts, 140 exclusions, 14 capabilities"
+    },
+    {
+      "command": [
+        "python3",
+        "tools/brain_query.py",
+        "check"
+      ],
+      "exit_code": 0,
+      "result": "234 chapters; supplied bytes/pins unchanged"
+    },
+    {
+      "command": [
+        "python3",
+        "tools/check_manifest.py"
+      ],
+      "exit_code": 0,
+      "result": "1,390 files; exact coverage and hashes"
+    },
+    {
+      "command": [
+        "python3",
+        "north-star/prototype/tools/verify.py",
+        "--output",
+        "/tmp/ns-action-final.json",
+        "--compare",
+        "evidence/north-star-action-poses/results.json"
+      ],
+      "exit_code": 0,
+      "result": "270 native checks and delivery/restart observations exactly match final evidence"
+    }
+  ],
+  "source_artifacts": [
+    {
+      "local_path": "north-star/prototype/.gitignore",
+      "sha256": "531d0d253cec1addb97b2cb2d144b6589ff934513eb9c9b8cf882cb49e4c0c32",
+      "size_bytes": 8
+    },
+    {
+      "local_path": "north-star/prototype/README.md",
+      "sha256": "82798f300af9a3f6e616f179661249ea79d9191f28accfc8195acfdc4e561085",
+      "size_bytes": 20234
+    },
+    {
+      "local_path": "north-star/prototype/actors.gd",
+      "sha256": "77a625f3141c61fa0d3540eeb52f0f92e84b09e8e9591a4afb051dd857c2e570",
+      "size_bytes": 9420
+    },
+    {
+      "local_path": "north-star/prototype/arena.gd",
+      "sha256": "af9904cfc3257284f61024715ab48b9be76a4a4aca756e34f2e3d2afb3032a72",
+      "size_bytes": 23075
+    },
+    {
+      "local_path": "north-star/prototype/arena.gd.uid",
+      "sha256": "1cd2fa44a912d470ad3de79f672223ff85436c4d1ab34701debf2e10a1a14fe2",
+      "size_bytes": 20
+    },
+    {
+      "local_path": "north-star/prototype/arena.tscn",
+      "sha256": "f794c485663f0ed318ddce6bb7a62bc9b2dbd3af02be4f166cca962c29382591",
+      "size_bytes": 154
+    },
+    {
+      "local_path": "north-star/prototype/combat.gd",
+      "sha256": "a6287908bb7f5d12a10efd84b7b6706f3e6ab11cf01cef004d014cac9c237a70",
+      "size_bytes": 10861
+    },
+    {
+      "local_path": "north-star/prototype/combat.gd.uid",
+      "sha256": "8f28f645ef4d4bba1021b27bc39fed04c438124fd819cc32c3586f92b3c58f9f",
+      "size_bytes": 20
+    },
+    {
+      "local_path": "north-star/prototype/controls.gd",
+      "sha256": "4c88d0a49d2f64fab275cfc2e62b8956ea17019aaf26445f99ce1a21a58b4fb0",
+      "size_bytes": 7458
+    },
+    {
+      "local_path": "north-star/prototype/dist/crossing-drill.pck",
+      "sha256": "60e02cd01aa0e0140c900fc057a354db153ee5f905f5ad9197b2d89016e5dfb3",
+      "size_bytes": 145704
+    },
+    {
+      "local_path": "north-star/prototype/errand.gd",
+      "sha256": "2a2392fa86bd12544eba5f60ad74d35592c7d6fa207373ec11a1928a9e33e601",
+      "size_bytes": 3831
+    },
+    {
+      "local_path": "north-star/prototype/keepsakes.gd",
+      "sha256": "d7790dddbd25904069b0c1a6d5edb2f7d01bc02a375d608a4ec5a25262ddb6c9",
+      "size_bytes": 5848
+    },
+    {
+      "local_path": "north-star/prototype/project.godot",
+      "sha256": "8d4755b58f1179a9b5ec431579177371e784bca9703a17c88f4c7a6d4ee9385c",
+      "size_bytes": 414
+    },
+    {
+      "local_path": "north-star/prototype/provenance.json",
+      "sha256": "7191a959b9ef526dd200f8f7a28c263453a8f73812f536e0482dd5a5606cb66e",
+      "size_bytes": 2619
+    },
+    {
+      "local_path": "north-star/prototype/rehearsal.gd",
+      "sha256": "507a27b7832cfc79522396132a0a5f3f32fec34dd443a8a35fc21102080252c9",
+      "size_bytes": 3187
+    },
+    {
+      "local_path": "north-star/prototype/sound.gd",
+      "sha256": "affb962c882921b9d59e4461b36517487cdaf09b5e08e3a413449d242ccc1cd9",
+      "size_bytes": 4070
+    },
+    {
+      "local_path": "north-star/prototype/tests/actor_capture.gd",
+      "sha256": "d63097d6ad033edf1beebd447ff85dd4f8d44948cf137d2a35d2b661d7906a84",
+      "size_bytes": 3675
+    },
+    {
+      "local_path": "north-star/prototype/tests/actor_checks.gd",
+      "sha256": "52f503ff8f98f5dfab8e44603887c38cb6c3a65b01a77d378e84437d4d9987e9",
+      "size_bytes": 6228
+    },
+    {
+      "local_path": "north-star/prototype/tests/controls_checks.gd",
+      "sha256": "aec1a8a26e262a3830714f9fa748923d8b27b9e51d2e93fa6b3b74c2ee3acf0c",
+      "size_bytes": 9525
+    },
+    {
+      "local_path": "north-star/prototype/tests/controls_restart.gd",
+      "sha256": "066f641273c045a97ea1ee6bd2ddd9469e452d6edab80bc36a426927da431b61",
+      "size_bytes": 1134
+    },
+    {
+      "local_path": "north-star/prototype/tests/dummy-display.conf",
+      "sha256": "6e29b633a631d42a995053cc0b2f9eb0274340c8118e7354e59d52cbfa70fb33",
+      "size_bytes": 676
+    },
+    {
+      "local_path": "north-star/prototype/tests/errand_checks.gd",
+      "sha256": "2f04534e200e82f08e01127a3b31c5dafacb5151c9635038bf6c14d33ac89094",
+      "size_bytes": 6353
+    },
+    {
+      "local_path": "north-star/prototype/tests/errand_policy.gd",
+      "sha256": "74f4d20501771d8697e79629aaa6e86cb5056211eae0ab860aa593cb5190cb9e",
+      "size_bytes": 655
+    },
+    {
+      "local_path": "north-star/prototype/tests/guard_capture.gd",
+      "sha256": "e6c60d8811c8e704dbfa20826202f645f576b3c9f78f1fb6fc90642a0604b519",
+      "size_bytes": 2903
+    },
+    {
+      "local_path": "north-star/prototype/tests/guard_checks.gd",
+      "sha256": "cf2a8103bb4aa7fc8b61714ad36b43fbdd69d1a133f10b4530e863806ef3ed9b",
+      "size_bytes": 8738
+    },
+    {
+      "local_path": "north-star/prototype/tests/keepsake_checks.gd",
+      "sha256": "a8614cb0592ff8c403185b82f702c289abd42b78c783f4bc8f06d2ecaf211fcf",
+      "size_bytes": 9709
+    },
+    {
+      "local_path": "north-star/prototype/tests/keepsake_restart.gd",
+      "sha256": "8e9f107c310836324c51b1cbe1b2db618feadbd98b0cebbef12f75f39ab112c2",
+      "size_bytes": 1097
+    },
+    {
+      "local_path": "north-star/prototype/tests/policy.gd",
+      "sha256": "646f0758a211e84ffbfd4632460c7d1fc549cbb3b552801ee2508774a5a63e29",
+      "size_bytes": 979
+    },
+    {
+      "local_path": "north-star/prototype/tests/rehearsal_checks.gd",
+      "sha256": "0286d8997fdf1bd7ebad0b72a7283651678cfa30f85b2bd55e98e995c3f9b1f5",
+      "size_bytes": 6003
+    },
+    {
+      "local_path": "north-star/prototype/tests/render_journey.gd",
+      "sha256": "b0de7bc7cdd8795d55c0fdb8248c277c38ead3299714e7290c70df1a2c114e49",
+      "size_bytes": 992
+    },
+    {
+      "local_path": "north-star/prototype/tests/render_keepsakes.gd",
+      "sha256": "eafb1a071de871af521712b32f095a2d6c46f3424e85590c9e43c52310850359",
+      "size_bytes": 1502
+    },
+    {
+      "local_path": "north-star/prototype/tests/render_medicine.gd",
+      "sha256": "0716b982847fbd47dc596954c2f7a98f72e30e0fd6356aacc371e139be8455f1",
+      "size_bytes": 2215
+    },
+    {
+      "local_path": "north-star/prototype/tests/render_rehearsal.gd",
+      "sha256": "fc268d9764cfdd52874c8ea9f2f96aaeaa6f98ebede22dcbf412fe4692c6de42",
+      "size_bytes": 2254
+    },
+    {
+      "local_path": "north-star/prototype/tests/run_checks.gd",
+      "sha256": "45e2d770beb6bec588c9cba09dde3509a9f2efc137f9234a580b0221f176ee3d",
+      "size_bytes": 7664
+    },
+    {
+      "local_path": "north-star/prototype/tests/sound_capture.gd",
+      "sha256": "1a0df88986619fbee9eb48c078726217409acb853e8821f2fcc3c660ceb07ad1",
+      "size_bytes": 5091
+    },
+    {
+      "local_path": "north-star/prototype/tests/sound_checks.gd",
+      "sha256": "c5c3496c2e5ef796399d3884b34b7547c55c4af9438a19220e484977dd2d0569",
+      "size_bytes": 5627
+    },
+    {
+      "local_path": "north-star/prototype/tools/pack.gd",
+      "sha256": "e4749551e1e00976f95604dd51c9d2dbb12e6ba2e990eefc5fd943e1498779d3",
+      "size_bytes": 906
+    },
+    {
+      "local_path": "north-star/prototype/tools/test_verify.py",
+      "sha256": "08898e09aba0e8ce07d37cab94d9b045904d5665b724864d5ef04fbce66c36e5",
+      "size_bytes": 1778
+    },
+    {
+      "local_path": "north-star/prototype/tools/test_verify_sound.py",
+      "sha256": "d798752840c070a9673040d6debf1c1d07288c068c5c6d181cb44c777bbba5e7",
+      "size_bytes": 2570
+    },
+    {
+      "local_path": "north-star/prototype/tools/verify.py",
+      "sha256": "5b53b3db27b83faee1b9de572e51870a2836144ea2b28a07ccd9b3c9fbc7c662",
+      "size_bytes": 7514
+    },
+    {
+      "local_path": "north-star/prototype/tools/verify_actors.py",
+      "sha256": "94d0c5987f738111c23579f9b3824b7d0d7653a80f7077b2f6e9b24a0a6eee9b",
+      "size_bytes": 8259
+    },
+    {
+      "local_path": "north-star/prototype/tools/verify_sound.py",
+      "sha256": "dd9f417a9e49803068da737a230031d44ae218b170904c06ebe024da4d92049e",
+      "size_bytes": 6367
+    }
+  ],
+  "result_artifacts": [
+    {
+      "local_path": "evidence/north-star-action-poses/baseline-counter-00.png",
+      "sha256": "f111da641029d5a34f1a35e4122d1f8bf260747d0023938aa4f38b2f2cf3e0da",
+      "size_bytes": 60184
+    },
+    {
+      "local_path": "evidence/north-star-action-poses/baseline-counter.webm",
+      "sha256": "706ef333491ab36dbf916f3802affa4c2ac7adadfc14d99963bf1afb689d4259",
+      "size_bytes": 47325
+    },
+    {
+      "local_path": "evidence/north-star-action-poses/baseline-draw.webm",
+      "sha256": "2ad6842539724a2b6fae6f715e9130a4b1c231510e5476d8a0a50a36fa802e8f",
+      "size_bytes": 56695
+    },
+    {
+      "local_path": "evidence/north-star-action-poses/baseline-guardian-block.png",
+      "sha256": "bedfb8bc838e27c0a6adba09dd1fec250d767c82cbf4b2c36b5eeace6c7e4d22",
+      "size_bytes": 64272
+    },
+    {
+      "local_path": "evidence/north-star-action-poses/baseline-presentation.json",
+      "sha256": "1702dd45c1fb40ae11711d7ba0b903710e607a4a8acd87c9c0d64f0d6dbfc261",
+      "size_bytes": 37089
+    },
+    {
+      "local_path": "evidence/north-star-action-poses/media.json",
+      "sha256": "aa92254a6b7096e18b8a59ba045950022e9e042bb91d807609623664dc267d8a",
+      "size_bytes": 33358
+    },
+    {
+      "local_path": "evidence/north-star-action-poses/pack-presentation.json",
+      "sha256": "bbad03912096618a7a00dee58ce70a3b5733a0aec1135cdd83c13e1a0eb0ebe4",
+      "size_bytes": 48159
+    },
+    {
+      "local_path": "evidence/north-star-action-poses/rendering.json",
+      "sha256": "0960ee09decfb56fb02fd6b3600e6e0c09be77c1af258a4ff0cdcac13db38531",
+      "size_bytes": 12657
+    },
+    {
+      "local_path": "evidence/north-star-action-poses/results.json",
+      "sha256": "4b9789f51ff6e081eed15d052e885a0942cd0e53ce82994be1ba6c175edef7b4",
+      "size_bytes": 77747
+    },
+    {
+      "local_path": "evidence/north-star-action-poses/source-counter-00.png",
+      "sha256": "cae757e5cc7becd3f93d0c05ed12f3d55c2ae698a2c2751374e1be22c0d6d22d",
+      "size_bytes": 65493
+    },
+    {
+      "local_path": "evidence/north-star-action-poses/source-counter.webm",
+      "sha256": "b3a486afa07e919092b4c7dbd382698ecdfdcc430a43fad2c69622d1007b13ef",
+      "size_bytes": 53071
+    },
+    {
+      "local_path": "evidence/north-star-action-poses/source-courier-hit.png",
+      "sha256": "523610c9b87a610ac68639c3fced5b7b47c714fa8f02a8e9ad597db881c63e53",
+      "size_bytes": 67357
+    },
+    {
+      "local_path": "evidence/north-star-action-poses/source-draw.webm",
+      "sha256": "d036e5649b68130ba08d0583021ab45bdf50642663d218b2cff30ff37c9d6020",
+      "size_bytes": 59019
+    },
+    {
+      "local_path": "evidence/north-star-action-poses/source-duelist-step.png",
+      "sha256": "50af28def044d556e7edd99b3ec584bec8a3e1fe401c0799cbdf3b21aaf7a661",
+      "size_bytes": 66612
+    },
+    {
+      "local_path": "evidence/north-star-action-poses/source-guardian-block.png",
+      "sha256": "fba93212913d41785253ef97aa1e76361d3840bbb95cd800b387c3c7a36dee15",
+      "size_bytes": 69187
+    },
+    {
+      "local_path": "evidence/north-star-action-poses/source-guardian-stale.png",
+      "sha256": "a797b434757c586cad194d0bd9431513084dc49b49095ba141c98e57ebf52e4a",
+      "size_bytes": 65670
+    },
+    {
+      "local_path": "evidence/north-star-action-poses/source-guardian-west-block.png",
+      "sha256": "10a966bc1cd9a92e2a200affb77f10462a936c569f8d2dd2146fb18e0ac34b9a",
+      "size_bytes": 75276
+    },
+    {
+      "local_path": "evidence/north-star-action-poses/source-presentation.json",
+      "sha256": "bbad03912096618a7a00dee58ce70a3b5733a0aec1135cdd83c13e1a0eb0ebe4",
+      "size_bytes": 48159
+    },
+    {
+      "local_path": "evidence/north-star-action-poses/source-worn-mark.png",
+      "sha256": "e3897fc43d3db564e645ca0307220ca35cebd6f2cccf6f544cd703d8aa18a977",
+      "size_bytes": 75793
+    }
+  ],
+  "brain_activation": {
+    "indices": "Read compact titles from all three complete indices, searched catalog and retrieved full pertinent chapters before improvements.",
+    "domains": {
+      "engineering": "high",
+      "scientific": "medium",
+      "creative": "high"
+    },
+    "chapters": {
+      "ENG-023": "Separate executed mechanism and artistic experience; inspect real composition and gestures.",
+      "SCI-014": "Pixel/state identity does not operationalize human recognition or comfort.",
+      "CRE-067": "H: distinguish broad shield stance and open blade silhouette without relying only on hue.",
+      "CRE-068": "H: gesture follows real accepted action/contact/recovery, never delays or owns collision.",
+      "CRE-074": "H: preserve essential danger geometry and use restrained local marks, no full-screen flash or camera shake."
+    }
+  },
+  "design": {
+    "audience": "Players trying the two local character approaches and reviewing why an action succeeded or failed.",
+    "baseline_weakness": "Static player polygons, courier circle and sentinel diamond show little accepted-action or contact motion; a paid failed strike has no body gesture.",
+    "intention": "Make existing commitment, action attempts, contact ownership and recovery visibly inspectable while keeping combat rules exact.",
+    "alternatives": [
+      {
+        "option": "New adventure or second encounter",
+        "assessment": "Adds content and encounter design without addressing the existing action feedback weakness."
+      },
+      {
+        "option": "More build/technique options",
+        "assessment": "Broadens choices before their current gestures are visible."
+      },
+      {
+        "option": "Imported painted/animated atlas",
+        "assessment": "Could raise art detail, but needs asset production/curation and still requires the action/contact timing contract."
+      },
+      {
+        "option": "Original native articulated silhouettes and event-owned gestures",
+        "assessment": "Selected: bounded direct consumer production, original editable geometry, existing tools and exact unchanged-model controls."
+      }
+    ],
+    "contracts": [
+      "Read-only observer; source combat.gd, errand.gd, rehearsal.gd, sound.gd, controls.gd and keepsakes.gd unchanged.",
+      "Actual displacement drives gait; accepted cooldown edge animates a paid strike, but only counter event produces sentinel contact/recoil.",
+      "Model events own player/courier hurt and directional block. Guard eligibility still requires timing, facing and posture.",
+      "Simulation elapsed time owns animation; repeated observation, pause and frozen review cannot advance it. Replacement consumes history without replay.",
+      "Existing warning lines, pulse/range geometry and sound remain; no new full-screen flashes, shake, random particles, damage areas or immunity.",
+      "Counter is instantaneous in the model, so its gesture begins toward the actual target then recovers, rather than adding a new windup.",
+      "Worn-mark render is a prepared owned-mark fixture, not evidence of newly earned progression; existing real reward/restart controls remain unchanged."
+    ]
+  },
+  "before_after": {
+    "prior_native_observations": "All prior groups exact, excluding changed check totals/source hashes; only new actor_poses group added. No guard_style normalization required this cycle.",
+    "rendered_samples_per_delivery": 41,
+    "delivery_forms": [
+      "source",
+      "current PCK",
+      "baseline PCK"
+    ],
+    "source_pack_pixels_identical": true,
+    "baseline_combat_identical": true,
+    "baseline_pack_sha256": "b95a5715500d5a78a7d8d58ef1fa17c80fdf762c1518062f3b6146a82dbcdc75",
+    "native_check_count": [
+      242,
+      270
+    ],
+    "new_native_controls": 28,
+    "profile_restart_processes": 16,
+    "python_regressions": 106
+  },
+  "creative_assessment": {
+    "author": "Implementing Codex agent, not independent human feedback",
+    "inspected": [
+      "Actual viewport shield/block, open blade/step, counter contact/recovery frames, stale shield, separate courier/player damage, west-facing block and worn-mark views.",
+      "Counter and draw sequences: 13 actual model ticks per clip, encoded at 6fps for 10x slowed silent inspection. No real-time FPS or physical latency inference."
+    ],
+    "observations": [
+      "Shield and blade silhouettes have different width/equipment and feet; they are no longer just a flat role polygon.",
+      "Sentinel shutters expose the existing opening, while confirmed counter alone produces localized recoil/contact.",
+      "Player damage, courier damage and failed armor strike do not receive successful block/counter signals."
+    ],
+    "refinements": [
+      "Moved nearby locked-line and YOU labels away from blade travel.",
+      "Replaced the old facing line with a small triangle so it does not read as another sword.",
+      "Block contact arc rotates toward the actual incoming side; added west-contact control.",
+      "Instant counter starts directed at the contacted sentinel, then recovers rather than visually preparing after the already-authoritative contact."
+    ],
+    "unverified": [
+      "Recognition without HUD, perceived weight/identity, comfort, preference and accessibility with actual participants.",
+      "Final art direction, species, class taxonomy, balance and real-time all-device performance."
+    ]
+  },
+  "failures_and_environment": [
+    {
+      "observation": "Unconfigured direct Godot could not create user data outside writable roots and aborted. The prior PCK failed with the same setup.",
+      "response": "Use the existing runner pattern: isolated writable temporary XDG paths. No product change or gate weakening."
+    },
+    {
+      "observation": "Restricted default socket execution prevented Xorg from binding a local display before rendering.",
+      "response": "Use authorized socket-capable execution for the owned display; no external service or policy bypass."
+    },
+    {
+      "observation": "Capture fixture assigned an untyped Array to earned:Array[String], raising a runtime error and reaching the 28-second process bound.",
+      "response": "Fix fixture with typed-array append; no product/profile schema change. Final maintained runner completes with source/PCK parity."
+    },
+    {
+      "observation": "A near-impact courier control targeted the future position from the start of a warning and genuinely missed.",
+      "response": "Prepare the actual current courier endpoint and retain the unchanged finite-beam model. Native and rendered courier-first contact now execute."
+    }
+  ],
+  "continuity": {
+    "seed": "0.33.8",
+    "stage": "local_prototype",
+    "consumer_count": 1,
+    "consumer_code_paths": 8,
+    "capability_states": "All fourteen statuses unchanged; NS-C03/07 adapted, twelve unchanged.",
+    "asset": "VIS-004 is original destination visual production, not P07 migration or imported media.",
+    "knowledge": "Existing combat-response lesson extended with read-only owner/clock observation and validity limits.",
+    "origin_migration": "No new laboratory/extraction. P01-P05/P07/P08/P10/P11 preserved_pending_extraction; P06 pilot_instrumented; P09 seed_only.",
+    "prompt": "Unchanged: current guidance already covers creative production, actual output inspection and measurement/environment boundaries.",
+    "prompt_sha256": "4c82aef691f606f2cd9bfe0192deeeaaabbd35bd489e4f006f633580045557b0"
+  },
+  "limitations": [
+    "Agent creative assessment, native checks and controlled synthetic commands are not independent human recognition, learning, preference, comfort, fun, balance or accessibility validation.",
+    "Prepared scene positions and explicit model ticks are controlled cases, not unassisted gameplay or real-time/hardware performance. Motion clips are silent and 10x slowed.",
+    "Identical pixels apply only within the same tested renderer/environment and delivery forms, not cross-driver golden-image guarantees.",
+    "No new playable rule, build system, progression, canon/final art approval, multiplayer, server, account, production engine selection or commercial signal.",
+    "No third-party art/model/atlas imported; no exclusive-rights or commercial-clearance claim. Brains, integrity pins and historical sources untouched."
+  ],
+  "repository_validation": {
+    "python_regressions": 106,
+    "registry_gate": "11 projects, 15 transfers, 11 assets, two legacy sources, 595 maintained local file links.",
+    "reference_gate": "Five records, 607 preserved sources, 18 derived PDF texts, 140 exclusions and fourteen capabilities.",
+    "brain_gate": "234 chapters; source integrity checked, inherited source-fragment warnings retained.",
+    "manifest": "1,390 maintained files covered exactly once; SHA-256 hashes checked after final content.",
+    "ci_scope": "Native CI repeats the 270 source/PCK checks and audio controls. Xorg pixel comparison is the separately recorded local execution, not claimed as a CI job."
+  }
+}

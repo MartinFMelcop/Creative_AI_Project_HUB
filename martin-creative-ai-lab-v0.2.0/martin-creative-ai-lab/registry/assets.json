@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-10-17",
+  "updated_at": "2026-10-18",
   "assets": [
     {
       "id": "AUD-001",
@@ -212,7 +212,25 @@
         "north-star/prototype/provenance.json",
         "evidence/north-star-sound/RUN.json"
       ]
+    },
+    {
+      "id": "VIS-004",
+      "name": "Crossing articulated actors and contact gestures",
+      "type": "procedural-visual-pack",
+      "status": "integrated",
+      "consumer_projects": [],
+      "destination_consumer_paths": [
+        "north-star/prototype/arena.gd",
+        "north-star/prototype/actors.gd"
+      ],
+      "runtime_path": "north-star/prototype/actors.gd",
+      "provenance": "New North Star code-drawn production under current author direction, informed by CRE-067/068/074 hypotheses; no P07 atlas, historical image or third-party model imported. Rendered images/clips are inspection outputs, not runtime dependencies.",
+      "rights": "No third-party art imported; no final canon, exclusive-rights or commercial-clearance claim.",
+      "evidence": [
+        "north-star/prototype/provenance.json",
+        "evidence/north-star-action-poses/RUN.json"
+      ]
     }
   ],
-  "scope": "Asset integration describes named origin consumers and, for AUD-006, explicit local North Star consumer code paths. It is not production-MMORPG integration or independent validation. Source rights/provenance and origin paths remain preserved."
+  "scope": "Asset integration describes named origin consumers and explicit local North Star consumer code paths for AUD-006/VIS-004. It is not production-MMORPG integration or independent validation. Source rights/provenance and origin paths remain preserved."
 }

@@ -33,15 +33,17 @@ gameplay keys with explicit apply/discard, matching hints and recoverable local 
 The previously silent encounter now has distinct threat and character-response cues,
 with optional mute and retained visual warnings. Guardian now chooses sustained Steady
 guard or short-window Riposte before the attempt; the latter risks expiry for a longer
-real counter opening. Rehearsal uses the chosen technique.
+real counter opening. Rehearsal uses the chosen technique. Original shield/blade actors
+now show accepted actions and local contact/recovery; the sentinel opens with its real
+vulnerability window. Combat rules are unchanged.
 
 The editable Godot project and small engine-dependent PCK execute the same consumer.
-[Native/rendered evidence](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/evidence/north-star-guard-techniques/RUN.json)
+[Native/rendered evidence](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/evidence/north-star-action-poses/RUN.json)
 and the [living design record](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/DESIGN.md)
 separate fixed-policy feasibility and agent visual assessment from still-missing human
 understanding, identity and enjoyment evidence.
 
-![Recovering the optional case while the courier continues](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/evidence/north-star-medicine/recovering.png)
+![Guardian block and the actual sentinel opening](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/evidence/north-star-action-poses/source-guardian-block.png)
 
 ## Technology demonstrations
 

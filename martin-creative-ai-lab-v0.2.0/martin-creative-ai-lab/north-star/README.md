@@ -13,7 +13,7 @@ explicit draft/apply/discard/default restoration; settings remain device-local.
 ## Actual stage and creative authority
 
 The catalog now records **local_prototype**: one executable
-[crossing encounter](prototype/README.md), five actual consumer code paths and fourteen
+[crossing encounter](prototype/README.md), eight actual consumer code paths and fourteen
 capabilities. **NS-C03 combat and NS-C07 sound are adapted** in this destination; the other twelve contribution
 states remain unchanged. Godot 4.6.3 is the prototype tool; no final MMO engine or
 running multiplayer service is selected. The earlier combat-response lab remains an
@@ -22,10 +22,10 @@ origin instrument, separately preserved.
 The player chooses frontal interception or redirection/mobility and protects the same
 courier to the far gate. [Living design](DESIGN.md) distinguishes author decisions,
 experimental mechanics, revisions and rejected alternatives. Current primary mode is
-DEVELOPMENT, priority category 1: improve this existing consumer. Optional rehearsal
+CREATIVE PRODUCTION, priority category 1: improve this existing consumer. Optional rehearsal
 uses the same combat rules, preserves causal review and starts a clean normal crossing.
 The three prepared exercises do not demonstrate human learning or sustained resource
-management. [Current execution](../evidence/north-star-guard-techniques/RUN.json) retains the
+management. [Current execution](../evidence/north-star-action-poses/RUN.json) retains the
 unchanged full-crossing outcomes alongside these controls. Completed normal crossings
 with a signature response can earn its approach’s mark, one of two experimental cosmetics. Explicit C selection
 is visible on the next crossing and restored after restart. Malformed/unknown profiles
@@ -76,3 +76,9 @@ metadata cannot establish external validation. A lab instrument alone does not c
 the stage; actual destination execution is required. Technical correctness, agent creative
 assessment, human experience and market evidence remain separate. A local prototype
 would not demonstrate multiplayer, MMORPG scale, enjoyment, retention or demand.
+
+Original code-drawn actors now show planted shield defense, an open Duelist blade,
+accepted draw/step gestures, local hit ownership and counter recovery. Sentinel shutters
+expose the existing OPEN state. Simulation time freezes motion during pause and review;
+no artwork changes combat reach, costs, collision or warnings. See the prototype's
+[visual-production guide](prototype/README.md#character-gestures-and-contact-feedback).

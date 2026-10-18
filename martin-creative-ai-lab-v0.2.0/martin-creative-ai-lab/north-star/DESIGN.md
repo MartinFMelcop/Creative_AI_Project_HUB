@@ -60,6 +60,22 @@ Visible warning timing, guard state/expiry and retained failure cause make the t
 inspectable. A1.2s late counter is accepted only after the longer opening. Full routes
 and synthetic OS input show execution, not balance, comprehension, preference or fun.
 
+## Character gesture direction — experimental
+
+Primary mode CREATIVE PRODUCTION. ENG-023 distinguishes technical execution from
+artistic value; SCI-014 prevents equating pixel/state checks with player recognition.
+CRE-067/068/074 are hypotheses informing silhouette, contact/recovery and restrained
+VFX, not author approval of final class art. Broad shield versus open blade now have
+original native silhouettes, actual-displacement gait and event-owned gestures.
+The existing instant counter begins directed at the contacted sentinel, then recovers;
+no artificial preparation delays its input. Accepted armor strikes lack success sparks.
+OPEN shutters, directional block, separate player/courier hurt and frozen review expose
+existing consequences. No balance, reach, collision, action costs or profiles change.
+Revision after image inspection: move locked-line/YOU labels beside the blade and use
+a small facing triangle, so the direction marker no longer reads as a second weapon.
+Revisit after independent observers assess recognition in actual play; agent inspection
+and source/PCK rendering are not that validation.
+
 ## Current product contract
 
 The player chooses one experimental approach, escorts the courier to the far gate,

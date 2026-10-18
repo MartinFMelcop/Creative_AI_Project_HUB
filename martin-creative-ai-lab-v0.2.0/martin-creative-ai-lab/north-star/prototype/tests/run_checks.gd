@@ -4,6 +4,7 @@ const Policy = preload("res://tests/policy.gd")
 const RehearsalChecks = preload("res://tests/rehearsal_checks.gd")
 const KeepsakeChecks = preload("res://tests/keepsake_checks.gd")
 const ErrandChecks = preload("res://tests/errand_checks.gd")
+const ActorChecks = preload("res://tests/actor_checks.gd")
 const GuardChecks = preload("res://tests/guard_checks.gd")
 const SoundChecks = preload("res://tests/sound_checks.gd")
 const ControlsChecks = preload("res://tests/controls_checks.gd")
@@ -115,10 +116,11 @@ func run() -> void:
 	var controls: Dictionary=ControlsChecks.run(self)
 	var sound: Dictionary=SoundChecks.run(self)
 	var techniques: Dictionary=GuardChecks.run(self)
+	var actor_poses: Dictionary=ActorChecks.run(self)
 	var identities={}
-	for name in ["combat.gd","arena.gd","arena.tscn","project.godot","tests/run_checks.gd","tests/policy.gd","rehearsal.gd","tests/rehearsal_checks.gd","keepsakes.gd","tests/keepsake_checks.gd","tests/keepsake_restart.gd","errand.gd","tests/errand_checks.gd","tests/errand_policy.gd","controls.gd","tests/controls_checks.gd","tests/controls_restart.gd","sound.gd","tests/sound_checks.gd","tests/sound_capture.gd","tests/guard_checks.gd","tests/guard_capture.gd"]:
+	for name in ["combat.gd","arena.gd","arena.tscn","project.godot","tests/run_checks.gd","tests/policy.gd","rehearsal.gd","tests/rehearsal_checks.gd","keepsakes.gd","tests/keepsake_checks.gd","tests/keepsake_restart.gd","errand.gd","tests/errand_checks.gd","tests/errand_policy.gd","controls.gd","tests/controls_checks.gd","tests/controls_restart.gd","sound.gd","tests/sound_checks.gd","tests/sound_capture.gd","tests/guard_checks.gd","tests/guard_capture.gd","actors.gd","tests/actor_checks.gd","tests/actor_capture.gd"]:
 		identities[name]=FileAccess.get_sha256("res://"+name)
-	var report={"consumer_hashes":identities,"schema_version":1,"checks":{"passed":passed,"failed":failed},"runtime":Engine.get_version_info().string,"outcomes":results,"rehearsals":rehearsals,"keepsakes":keepsakes,"errands":errands,"controls":controls,"sound":sound,"guard_techniques":techniques}
+	var report={"consumer_hashes":identities,"schema_version":1,"checks":{"passed":passed,"failed":failed},"runtime":Engine.get_version_info().string,"outcomes":results,"rehearsals":rehearsals,"keepsakes":keepsakes,"errands":errands,"controls":controls,"sound":sound,"guard_techniques":techniques,"actor_poses":actor_poses}
 	var args=OS.get_cmdline_user_args()
 	if args.size()==1:
 		var file=FileAccess.open(args[0],FileAccess.WRITE)

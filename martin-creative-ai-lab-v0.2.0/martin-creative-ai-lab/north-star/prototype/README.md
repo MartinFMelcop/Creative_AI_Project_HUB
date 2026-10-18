@@ -82,6 +82,51 @@ opportunity difference. Fixed routes show feasibility, not optimal play or prefe
 
 ![Timed guard cue in the actual consumer](../../evidence/north-star-guard-techniques/raise-now.png)
 
+## Character gestures and contact feedback
+
+The current production replaces the static abstract actors with original code-drawn
+silhouettes in [actors.gd](actors.gd): a broad, planted shield carrier; a narrow
+split-coat blade user; a parcel-bearing courier; and a three-footed shuttered sentinel.
+These are experimental visual directions, not final class art, species or canon.
+No third-party image, atlas or model was imported; this is native vector production.
+
+The shield changes position with actual guard commitment. Riposte expiry changes its
+state; wrong-facing/underfunded defense is not shown as successful protection. Actual
+movement drives separate feet, a paid step has a short directional gesture, and an
+accepted draw opens the blade. A paid armor strike still swings, but only a real
+counter creates the sentinel contact/recoil. Counter contact is immediate in this model:
+the gesture starts toward its actual target and recovers, without adding input delay.
+Player and courier damage have separate local marks; no full-screen flash, camera shake,
+random particles, invulnerability or new damage area is introduced. Shield/contact
+marks preserve the incoming direction, including a block from the west.
+
+OPEN separates the sentinel shutters; warning/core shapes retain bolt versus floor
+identity. Existing locked lines, pulse radii, range rings, text and audio remain.
+The facing cue is a small triangle, separate from the blade. Nearby labels move aside.
+Worn cosmetic marks remain on the torso. Pause and frozen rehearsal review preserve
+the exact animation/contact state; restart/replacement clears old effects.
+
+[Execution and assessment](../../evidence/north-star-action-poses/RUN.json) includes
+41 matched rendered samples in source/PCK and the prior static PCK. All prior combat
+observations remain exact. [Counter motion](../../evidence/north-star-action-poses/source-counter.webm)
+and [Duelist draw](../../evidence/north-star-action-poses/source-draw.webm) are silent
+13-tick sequences encoded at 6fps (10× slowed), not real-time performance footage.
+The agent inspected composition, silhouette, motion and ownership; no independent
+participant has demonstrated recognition, comfort, accessibility or preference.
+
+Reproduce on Linux with Godot 4.6.3, Xorg/dummy-driver and FFmpeg installed:
+
+```bash
+python3 north-star/prototype/tools/verify_actors.py --output /tmp/crossing-art
+# Optional: --baseline-pack /path/to/prior-crossing-drill.pck
+```
+
+The runner uses an owned local display, isolated profiles and bounded engine processes,
+compares actual rendered source/PCK pixels, and stops its display on failure or success.
+A sandbox that forbids display sockets needs the corresponding execution permission;
+headless model checks alone do not execute drawing. Pixel identity is scoped to one
+renderer/environment, not a cross-driver golden-image requirement or human study.
+
 ## Keyboard preferences
 
 The keys above are defaults. **F1** opens controls from selection, play, rehearsal,
