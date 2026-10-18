@@ -10,6 +10,7 @@ import subprocess
 import sys
 import tempfile
 import unittest
+from unittest import mock
 
 import brain_query as query
 
@@ -194,6 +195,151 @@ class BrainQueryTests(unittest.TestCase):
         path.write_text(json.dumps(pins))
         with self.assertRaisesRegex(query.BrainError, "exactly the five"):
             query.Collection(directory)
+
+
+    def test_overview_uses_only_supplied_names_counts_and_parts(self):
+        rows = self.collection.overview()
+        self.assertEqual([c["domain"] for c in rows], ["ENG", "SCI", "CRE"])
+        self.assertEqual(sum(c["chapter_count"] for c in rows), 234)
+        for row, volume in zip(rows, self.collection.catalog["volumes"]):
+            self.assertEqual(row["title"], volume["title"])
+            self.assertEqual(row["scope"], volume["scope"])
+            self.assertEqual(row["sections"], list(dict.fromkeys(c["section"] for c in volume["chapters"])))
+            self.assertNotIn("chapters", row)
+        render = lambda data: json.dumps(data, ensure_ascii=False, indent=2).encode()
+        self.assertLess(len(render(rows)), len(render(self.collection.indexes())) / 10)
+
+    def test_strict_metadata_is_a_projection_not_a_new_search(self):
+        for text in ("classes especializações", "identidade de personagem", "proveniência", "CRE-010", "combat", "zzz"):
+            full = self.collection.search(text)
+            compact = self.collection.search(text, metadata_only=True)
+            self.assertEqual([c["id"] for c in compact], [c["id"] for c in full])
+            for a, b in zip(full, compact):
+                self.assertNotIn("content", b)
+                self.assertNotIn("preview", b)
+                self.assertEqual(a["question"], b["question"])
+                self.assertEqual(a["source_fragment"], b["source_fragment"])
+                self.assertEqual(a["editorial_status"], b["editorial_status"])
+                self.assertEqual(a.get("search_score"), b["search_score"])
+
+    def test_known_id_bypasses_vocabulary_and_preserves_full_get(self):
+        with mock.patch.object(query, "vocabulary", side_effect=AssertionError("unnecessary vocabulary")):
+            self.assertEqual(self.collection.search("CRE-010", relaxed=True), [self.collection.get("CRE-010")])
+            row = self.collection.search("cre-010", metadata_only=True, relaxed=True)[0]
+            self.assertEqual(row["match"]["kind"], "exact_id")
+            self.assertEqual(row["editorial_status"], "H")
+
+    def test_bilingual_queries_retrieve_declared_inspected_targets(self):
+        cases = json.loads(Path(query.__file__).with_name("brain_retrieval_cases.json").read_text())
+        for case in cases["cases"]:
+            if case["kind"] not in ("primary", "extension"):
+                continue
+            with self.subTest(query=case["query"]):
+                hits = self.collection.search(case["query"], metadata_only=True, relaxed=True)
+                self.assertTrue(set(case["targets"]) & {c["id"] for c in hits})
+                self.assertLessEqual(len(hits), 5)
+
+    def test_translated_related_and_literal_matches_remain_distinct(self):
+        literal = self.collection.search("classes especializações", metadata_only=True)[0]
+        self.assertEqual(literal["match"]["kind"], "literal_all")
+        translated = self.collection.search("combat", metadata_only=True, relaxed=True)
+        self.assertTrue(any(c["match"]["kind"] == "expanded_all" for c in translated))
+        related = self.collection.search("avatar customization", metadata_only=True, relaxed=True)
+        self.assertEqual(related[0]["id"], "CRE-009")
+        self.assertEqual(related[0]["match"]["kind"], "related")
+        self.assertEqual(related[0]["editorial_status"], "H")
+
+    def test_source_only_fallback_is_explicit_and_not_emitted(self):
+        results = self.collection.search("personas escudo", metadata_only=True, relaxed=True)
+        target = next(c for c in results if c["id"] == "CRE-020")
+        self.assertTrue(any(t["field"] == "content" for t in target["match"]["terms"]))
+        self.assertNotIn("content", target)
+        self.assertIn("escudo", query.fold(self.collection.get(target["id"])["content"]))
+
+    def test_unknown_words_and_typos_are_not_silently_dropped(self):
+        for text in ("insurance mortgage", "combat quantumflux", "classes especializações quantumflux", "characterr"):
+            self.assertEqual(self.collection.search(text, relaxed=True), [], text)
+        row = self.collection.search("jogador que só usa defesa", metadata_only=True, relaxed=True)[0]
+        self.assertIn("so", row["match"]["uninterpreted_qualifiers"])
+        self.assertIn("usa", row["match"]["ignored"])
+        self.assertIn("jogador", row["match"]["context"])
+        self.assertNotIn("CRE-029", [c["id"] for c in self.collection.search("defesa", relaxed=True)])
+
+    def test_broad_and_partial_candidates_cannot_claim_full_coverage(self):
+        broad = self.collection.search("identidade", metadata_only=True, relaxed=True)
+        self.assertTrue(broad and all(c["match"]["broad"] for c in broad))
+        rows = self.collection.search("defesa montarias classes", 234, metadata_only=True, relaxed=True)
+        partial = [c for c in rows if c["match"]["kind"] == "partial"]
+        self.assertTrue(partial)
+        self.assertTrue(all(c["match"]["unmatched"] for c in partial))
+        self.assertTrue(all(len(c["match"]["terms"]) >= 2 for c in rows))
+
+    def test_relaxed_ranking_is_stable_across_hash_seeds_and_unicode(self):
+        import os
+        values = []
+        for seed in ("13", "31"):
+            result = subprocess.run([sys.executable, query.__file__, "search", "defesa montarias classes",
+                    "--metadata-only", "--relaxed"], env=dict(os.environ, PYTHONHASHSEED=seed),
+                    capture_output=True, timeout=15)
+            self.assertEqual(result.returncode, 0, result.stderr)
+            values.append(result.stdout)
+        self.assertEqual(*values)
+        self.assertEqual(self.collection.search("PROFISSÕES ARTESANATO", relaxed=True),
+                         self.collection.search("profissoes artesanato", relaxed=True))
+
+    def test_compact_cli_corruption_blocks_all_new_paths(self):
+        for name in query.SOURCES:
+            directory = self.fixture()
+            with (directory / name).open("ab") as file:
+                file.write(b"\n")
+            for args in (["overview"], ["search", "avatar customization", "--relaxed", "--metadata-only"]):
+                out, err = io.StringIO(), io.StringIO()
+                with contextlib.redirect_stdout(out), contextlib.redirect_stderr(err):
+                    code = query.main(["--brains-dir", str(directory), *args])
+                self.assertEqual(code, 2)
+                self.assertEqual(out.getvalue(), "")
+                self.assertIn("integrity mismatch", err.getvalue())
+
+    def test_invalid_vocabulary_is_clear_and_does_not_change_strict_commands(self):
+        for content in ('{', '{"schema_version":2}', json.dumps({"schema_version":1,
+                "groups":[{"name":"bad","equivalents":[{}],"related":[]}],
+                "context_terms":[],"stop_words":[],"qualifiers":[]})):
+            with tempfile.TemporaryDirectory() as folder:
+                path = Path(folder) / "vocabulary.json"
+                path.write_text(content)
+                with mock.patch.object(query, "DEFAULT_VOCABULARY", path):
+                    with self.assertRaises(query.BrainError):
+                        self.collection.search("combat", relaxed=True)
+                    self.assertEqual(len(self.collection.indexes()), 3)
+                    self.assertTrue(self.collection.search("proveniência"))
+
+    def test_new_search_input_errors_remain_output_free(self):
+        for args in (["search", "", "--relaxed"], ["search", "combat", "--relaxed", "--limit", "0"],
+                     ["search", "a e de", "--metadata-only"], ["get", "CRE-010", "ENG-999"]):
+            out, err = io.StringIO(), io.StringIO()
+            with contextlib.redirect_stdout(out), contextlib.redirect_stderr(err):
+                code = query.main(args)
+            self.assertEqual(code, 2)
+            self.assertFalse(out.getvalue())
+            self.assertTrue(err.getvalue())
+
+
+    def test_exploratory_query_work_is_bounded(self):
+        for text in ("x" * 4097, " ".join("word" + str(i) for i in range(65))):
+            with self.assertRaisesRegex(query.BrainError, "Relaxed query"):
+                self.collection.search(text, relaxed=True)
+
+
+    def test_benchmark_missing_revision_preserves_output(self):
+        with tempfile.TemporaryDirectory() as folder:
+            output = Path(folder) / "result.json"
+            output.write_text("preserved")
+            result = subprocess.run([sys.executable, str(Path(query.__file__).with_name("benchmark_brain_query.py")),
+                    "--baseline-ref", "no-such-brain-baseline", "--output", str(output)],
+                    capture_output=True, text=True, timeout=15)
+            self.assertEqual(result.returncode, 1)
+            self.assertIn("Baseline revision unavailable", result.stderr)
+            self.assertEqual(output.read_text(), "preserved")
 
 
 if __name__ == "__main__":

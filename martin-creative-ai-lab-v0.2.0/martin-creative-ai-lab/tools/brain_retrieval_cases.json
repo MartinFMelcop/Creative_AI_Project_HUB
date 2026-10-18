@@ -1,0 +1,113 @@
+{
+  "schema_version": 1,
+  "baseline_ref": "fd84899505f09390eac31872a0126091d4c7e7d0",
+  "judgment_scope": "Small implementing-agent curated, non-exhaustive source targets, not independent relevance judgments or a population sample. Extensions test source-only and additional wording; do not infer general precision.",
+  "cases": [
+    {
+      "query": "classes especializações",
+      "targets": [
+        "CRE-010"
+      ],
+      "kind": "primary"
+    },
+    {
+      "query": "identidade de personagem",
+      "targets": [
+        "CRE-009"
+      ],
+      "kind": "primary"
+    },
+    {
+      "query": "jogador que só usa defesa",
+      "targets": [
+        "CRE-014"
+      ],
+      "kind": "primary"
+    },
+    {
+      "query": "profissões artesanato",
+      "targets": [
+        "CRE-022",
+        "CRE-023"
+      ],
+      "kind": "primary"
+    },
+    {
+      "query": "personagem com montaria",
+      "targets": [
+        "CRE-028"
+      ],
+      "kind": "primary"
+    },
+    {
+      "query": "avatar customization",
+      "targets": [
+        "CRE-009"
+      ],
+      "kind": "primary"
+    },
+    {
+      "query": "character builds",
+      "targets": [
+        "CRE-011"
+      ],
+      "kind": "primary"
+    },
+    {
+      "query": "combat",
+      "targets": [
+        "CRE-012"
+      ],
+      "kind": "primary"
+    },
+    {
+      "query": "CRE-010",
+      "targets": [
+        "CRE-010"
+      ],
+      "kind": "primary"
+    },
+    {
+      "query": "mounts",
+      "targets": [
+        "CRE-028"
+      ],
+      "kind": "extension"
+    },
+    {
+      "query": "combat movement",
+      "targets": [
+        "CRE-012"
+      ],
+      "kind": "extension"
+    },
+    {
+      "query": "defensive builds",
+      "targets": [
+        "CRE-011",
+        "CRE-020"
+      ],
+      "kind": "extension"
+    },
+    {
+      "query": "zzzznonexistentcapability",
+      "targets": [],
+      "kind": "negative"
+    },
+    {
+      "query": "combat quantumflux",
+      "targets": [],
+      "kind": "negative"
+    },
+    {
+      "query": "insurance mortgage",
+      "targets": [],
+      "kind": "negative"
+    },
+    {
+      "query": "identidade",
+      "targets": [],
+      "kind": "ambiguous"
+    }
+  ]
+}

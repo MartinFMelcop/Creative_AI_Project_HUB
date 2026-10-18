@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
-"""Consult the immutable brain collection using only its supplied catalog.
+"""Consult immutable brains with exact retrieval and opt-in local discovery.
 
 The catalog locates text; it does not establish truth or authorize execution.
+Opt-in discovery uses operational vocabulary outside the protected sources.
 No network, generated summaries, embeddings or source-file writes are involved.
 """
 from __future__ import annotations
@@ -16,6 +17,7 @@ import unicodedata
 from urllib.parse import unquote
 
 
+DEFAULT_VOCABULARY = Path(__file__).with_name("brain_vocabulary.json")
 DEFAULT_BRAINS = Path(__file__).resolve().parents[1] / "brains"
 VOLUMES = {"ENGINEERING_BRAIN.md": ("ENG", 49),
            "SCIENTIFIC_BRAIN.md": ("SCI", 85),
@@ -37,6 +39,40 @@ def fold(text: str) -> str:
     """Case- and accent-insensitive matching; source text is never normalized."""
     return "".join(c for c in unicodedata.normalize("NFKD", text.casefold())
                    if not unicodedata.combining(c))
+
+
+def vocabulary(path=None):
+    """Read an explicit, small operational lexicon; never alter source text/pins."""
+    path = Path(path) if path is not None else DEFAULT_VOCABULARY
+    try:
+        data = read_json(path.read_text(encoding="utf-8"), path.name)
+    except (OSError, UnicodeError) as exc:
+        raise BrainError(f"Cannot read retrieval vocabulary: {exc}") from exc
+    if (not isinstance(data, dict) or data.get("schema_version") != 1
+            or not isinstance(data.get("groups"), list)):
+        raise BrainError("Invalid retrieval vocabulary schema")
+    for name in ("context_terms", "stop_words", "qualifiers"):
+        if (not isinstance(data.get(name), list) or not all(isinstance(t, str)
+                and re.fullmatch(r"[a-z]+", t) for t in data[name])):
+            raise BrainError(f"Invalid vocabulary {name}")
+    seen, names = set(), set()
+    for group in data["groups"]:
+        if (not isinstance(group, dict) or set(group) != {"name", "equivalents", "related"}
+                or not isinstance(group["name"], str) or group["name"] in names):
+            raise BrainError("Invalid or duplicate vocabulary group")
+        names.add(group["name"])
+        for key in ("equivalents", "related"):
+            terms = group[key]
+            if (not isinstance(terms, list) or (key == "equivalents" and not terms)
+                    or not all(isinstance(t, str) and re.fullmatch(r"[a-z]+", t) for t in terms)
+                    or len(terms) != len(set(terms))):
+                raise BrainError(f"Invalid vocabulary terms: {group['name']}")
+        if seen.intersection(group["equivalents"]):
+            raise BrainError("Duplicate vocabulary equivalent")
+        if set(group["equivalents"]).intersection(group["related"]):
+            raise BrainError("Vocabulary equivalent cannot also be related")
+        seen.update(group["equivalents"])
+    return data
 
 
 def heading_anchor(heading: str, *, collapsed: bool = False) -> str:
@@ -218,7 +254,7 @@ class Collection:
             raise BrainError(f"Unknown chapter ID: {chapter_id}; use indexes or search")
         return self.chapters[key].copy()
 
-    def search(self, query: str, limit: int = 5):
+    def _literal_search(self, query: str, limit: int = 5):
         if not query.strip():
             raise BrainError("Search query must not be empty")
         if not 1 <= limit <= 234:
@@ -242,6 +278,108 @@ class Collection:
             ranked.append((-score, ordinal, chapter))
         return [dict(chapter, search_score=-score) for score, _, chapter in sorted(ranked)[:limit]]
 
+    def overview(self):
+        """Only supplied volume/part names and counts, never generated summaries."""
+        return [{"domain": VOLUMES[v["file"]][0], "file": v["file"],
+                 "title": v["title"], "scope": v["scope"],
+                 "chapter_count": len(v["chapters"]),
+                 "sections": list(dict.fromkeys(c["section"] for c in v["chapters"]))}
+                for v in self.catalog["volumes"]]
+
+    @staticmethod
+    def metadata(chapter, match):
+        keys = ("id", "title", "question", "path", "section", "editorial_status",
+                "anchor", "source_fragment", "line_start", "line_end")
+        return {**{k: chapter[k] for k in keys}, "domain": chapter["id"][:3],
+                "search_score": chapter.get("search_score"), "match": match}
+
+    def search(self, query: str, limit: int = 5, *, metadata_only=False, relaxed=False):
+        # Preserve the legacy result shape, weighting, token rules and order by default.
+        if not relaxed:
+            results = self._literal_search(query, limit)
+            if not metadata_only:
+                return results
+            kind = "exact_id" if fold(query).upper() in self.chapters else "literal_all"
+            return [self.metadata(c, {"kind": kind}) for c in results]
+        if not query.strip():
+            raise BrainError("Search query must not be empty")
+        if not 1 <= limit <= 234:
+            raise BrainError("Search limit must be between 1 and 234")
+        if len(query) > 4096:
+            raise BrainError("Relaxed query must be at most 4096 characters")
+        normalized = fold(query)
+        if normalized.upper() in self.chapters:
+            chapter = self.get(normalized)
+            match = {"kind": "exact_id"}
+            return [self.metadata(chapter, match) if metadata_only else chapter]
+        lexicon = vocabulary()
+        raw = list(dict.fromkeys(re.findall(r"\w+", normalized)))
+        if len(raw) > 64:
+            raise BrainError("Relaxed query must contain at most 64 distinct terms")
+        ignored = [t for t in raw if t in STOP_WORDS or t in lexicon["stop_words"]]
+        qualifiers = [t for t in raw if t in lexicon["qualifiers"]]
+        terms = [t for t in raw if t not in ignored and t not in qualifiers]
+        if not terms:
+            raise BrainError("Search query needs an ID or a meaningful title/question/keyword")
+        context = [t for t in terms if t in lexicon["context_terms"]] if len(terms) > 1 else []
+        anchors = [t for t in terms if t not in context]
+        if not anchors:
+            anchors, context = terms, []
+        groups = {t: g for g in lexicon["groups"] for t in g["equivalents"]}
+        weights = {"title": 10, "question": 5, "preview": 1}
+        ranked = []
+        for ordinal, chapter in enumerate(self.chapters.values()):
+            tokens = {k: set(re.findall(r"\w+", fold(chapter[k]))) for k in weights}
+            body = None
+            def best(term):
+                nonlocal body
+                group = groups.get(term, {})
+                options = [(term, "literal", 100)]
+                options += [(t, "equivalent", 80) for t in group.get("equivalents", []) if t != term]
+                options += [(t, "related", 30) for t in group.get("related", [])]
+                hits = [(strength * weight, strength, field, source, kind)
+                        for source, kind, strength in options for field, weight in weights.items()
+                        if source in tokens[field]]
+                if not hits:
+                    # Source-only evidence is a low-weight fallback, not an invented keyword.
+                    if body is None:
+                        body = set(re.findall(r"\w+", fold(chapter["content"])))
+                    hits = [(strength, strength, "content", source, kind)
+                            for source, kind, strength in options if source in body]
+                if not hits:
+                    return None
+                strongest = max(hits)
+                field_scores = {field: max(h[0] for h in hits if h[2] == field)
+                                for field in {h[2] for h in hits}}
+                return (sum(field_scores.values()), *strongest[1:])
+            matches = {t: best(t) for t in anchors}
+            # Unknown terms remain mandatory literal constraints. No arbitrary typo/fuzzy fallback.
+            if any(hit is None and term not in groups for term, hit in matches.items()):
+                continue
+            found = {t: hit for t, hit in matches.items() if hit is not None}
+            # Short queries need every anchor; longer known-vocabulary queries need >= 2/3.
+            if not found or len(found) * 3 < len(anchors) * 2:
+                continue
+            missing = [t for t in anchors if t not in found]
+            context_hits = [best(t) for t in context]
+            score = sum(h[0] for h in found.values()) + sum(h[0] // 2 for h in context_hits if h)
+            strengths = sum(h[1] for h in found.values())
+            kind = ("partial" if missing else "related" if any(h[4] == "related" for h in found.values())
+                    else "expanded_all" if any(h[4] == "equivalent" for h in found.values()) else "literal_all")
+            match = {"mode": "relaxed", "kind": kind, "terms": [{"query": t, "source": h[3], "field": h[2], "via": h[4]}
+                                             for t, h in found.items()],
+                     "unmatched": missing, "context": context, "ignored": ignored,
+                     "uninterpreted_qualifiers": qualifiers}
+            ranked.append((-len(found) / len(anchors), -score, -strengths / len(anchors),
+                           ordinal, chapter, match))
+        broad = len(ranked) >= 12
+        result = []
+        for _, negative_score, _, _, chapter, match in sorted(ranked)[:limit]:
+            match["broad"] = broad
+            item = dict(chapter, search_score=-negative_score)
+            result.append(self.metadata(item, match) if metadata_only else dict(item, match=match))
+        return result
+
 
 def parser():
     command = argparse.ArgumentParser(description=__doc__)
@@ -250,11 +388,14 @@ def parser():
     sub = command.add_subparsers(dest="command", required=True)
     sub.add_parser("check", help="Verify supplied bytes, UTF-8, catalog, chapters and local links")
     sub.add_parser("indexes", help="Read all three supplied catalog indices")
+    sub.add_parser("overview", help="Compact supplied volume/part names and counts")
     get = sub.add_parser("get", help="Retrieve exact complete source chapters by ID")
     get.add_argument("ids", nargs="+")
     search = sub.add_parser("search", help="Stable accent-insensitive catalog search; returns full chapters")
     search.add_argument("query")
     search.add_argument("--limit", type=int, default=5)
+    search.add_argument("--metadata-only", action="store_true", help="Omit full source content and preview")
+    search.add_argument("--relaxed", action="store_true", help="Opt into explained bilingual/related and bounded partial matching")
     return command
 
 
@@ -263,8 +404,10 @@ def main(argv=None):
     try:
         collection = Collection(args.brains_dir)
         result = (collection.report() if args.command == "check" else collection.indexes()
-                  if args.command == "indexes" else [collection.get(key) for key in args.ids]
-                  if args.command == "get" else collection.search(args.query, args.limit))
+                  if args.command == "indexes" else collection.overview() if args.command == "overview"
+                  else [collection.get(key) for key in args.ids]
+                  if args.command == "get" else collection.search(args.query, args.limit,
+                       metadata_only=args.metadata_only, relaxed=args.relaxed))
         print(json.dumps(result, ensure_ascii=False, indent=2))
         return 0
     except BrainError as exc:

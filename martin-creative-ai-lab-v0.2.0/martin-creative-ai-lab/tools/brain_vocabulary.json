@@ -1,0 +1,287 @@
+{
+  "schema_version": 1,
+  "purpose": "Operational retrieval vocabulary, not source definitions, creative authority or a generated catalog. Equivalents include explicit inflections/translations; related terms are weaker exploratory links. No chapter IDs or arbitrary stemming.",
+  "context_terms": [
+    "personagem",
+    "personagens",
+    "character",
+    "characters",
+    "avatar",
+    "avatars",
+    "jogador",
+    "jogadores",
+    "player",
+    "players"
+  ],
+  "stop_words": [
+    "usa",
+    "usar",
+    "uses",
+    "use",
+    "about",
+    "sobre",
+    "quais"
+  ],
+  "qualifiers": [
+    "so",
+    "only",
+    "apenas"
+  ],
+  "groups": [
+    {
+      "name": "class",
+      "equivalents": [
+        "classe",
+        "classes",
+        "class"
+      ],
+      "related": []
+    },
+    {
+      "name": "specialization",
+      "equivalents": [
+        "especializacao",
+        "especializacoes",
+        "specialization",
+        "specializations"
+      ],
+      "related": []
+    },
+    {
+      "name": "character",
+      "equivalents": [
+        "personagem",
+        "personagens",
+        "character",
+        "characters",
+        "avatar",
+        "avatars"
+      ],
+      "related": []
+    },
+    {
+      "name": "identity",
+      "equivalents": [
+        "identidade",
+        "identidades",
+        "identity"
+      ],
+      "related": [
+        "reconhecimento",
+        "reconhecivel"
+      ]
+    },
+    {
+      "name": "customization",
+      "equivalents": [
+        "personalizacao",
+        "customizacao",
+        "customization"
+      ],
+      "related": [
+        "criacao",
+        "aparencia",
+        "appearance",
+        "cosmetico",
+        "cosmeticos",
+        "corpo",
+        "corpos",
+        "rosto",
+        "rostos",
+        "gestual",
+        "expressividade"
+      ]
+    },
+    {
+      "name": "build",
+      "equivalents": [
+        "build",
+        "builds"
+      ],
+      "related": [
+        "talento",
+        "talentos",
+        "atributos"
+      ]
+    },
+    {
+      "name": "profession",
+      "equivalents": [
+        "profissao",
+        "profissoes",
+        "oficio",
+        "oficios",
+        "profession",
+        "professions"
+      ],
+      "related": [
+        "artesao",
+        "artesaos"
+      ]
+    },
+    {
+      "name": "craft",
+      "equivalents": [
+        "artesanato",
+        "artesanal",
+        "artesanais",
+        "craft",
+        "crafting",
+        "craftsmanship"
+      ],
+      "related": [
+        "artesao",
+        "artesaos"
+      ]
+    },
+    {
+      "name": "mount",
+      "equivalents": [
+        "montaria",
+        "montarias",
+        "mount",
+        "mounts"
+      ],
+      "related": [
+        "arreios",
+        "treinador"
+      ]
+    },
+    {
+      "name": "defense",
+      "equivalents": [
+        "defesa",
+        "defesas",
+        "defense",
+        "defence",
+        "defensive",
+        "defensivo",
+        "defensiva"
+      ],
+      "related": [
+        "guardiao",
+        "guardioes",
+        "bastiao",
+        "bloqueio",
+        "aparo"
+      ]
+    },
+    {
+      "name": "combat",
+      "equivalents": [
+        "combate",
+        "combat"
+      ],
+      "related": [
+        "luta",
+        "batalha"
+      ]
+    },
+    {
+      "name": "movement",
+      "equivalents": [
+        "movimento",
+        "movimentos",
+        "movement"
+      ],
+      "related": [
+        "mobilidade",
+        "locomocao"
+      ]
+    },
+    {
+      "name": "provenance",
+      "equivalents": [
+        "proveniencia",
+        "provenance"
+      ],
+      "related": [
+        "fonte",
+        "fontes",
+        "origem"
+      ]
+    },
+    {
+      "name": "integrity",
+      "equivalents": [
+        "integridade",
+        "integrity"
+      ],
+      "related": []
+    },
+    {
+      "name": "hypothesis",
+      "equivalents": [
+        "hipotese",
+        "hipoteses",
+        "hypothesis",
+        "hypotheses"
+      ],
+      "related": []
+    },
+    {
+      "name": "reliability",
+      "equivalents": [
+        "confiabilidade",
+        "reliability"
+      ],
+      "related": []
+    },
+    {
+      "name": "measurement",
+      "equivalents": [
+        "medicao",
+        "medicoes",
+        "measurement",
+        "measurements"
+      ],
+      "related": [
+        "medida",
+        "medidas",
+        "metrologia"
+      ]
+    },
+    {
+      "name": "uncertainty",
+      "equivalents": [
+        "incerteza",
+        "incertezas",
+        "uncertainty"
+      ],
+      "related": []
+    },
+    {
+      "name": "accessibility",
+      "equivalents": [
+        "acessibilidade",
+        "accessibility"
+      ],
+      "related": []
+    },
+    {
+      "name": "narrative",
+      "equivalents": [
+        "narrativa",
+        "narrativas",
+        "narrative"
+      ],
+      "related": [
+        "dialogo",
+        "dialogos"
+      ]
+    },
+    {
+      "name": "appearance",
+      "equivalents": [
+        "aparencia",
+        "aparencias",
+        "appearance",
+        "appearances"
+      ],
+      "related": [
+        "cosmetico",
+        "cosmeticos"
+      ]
+    }
+  ]
+}
