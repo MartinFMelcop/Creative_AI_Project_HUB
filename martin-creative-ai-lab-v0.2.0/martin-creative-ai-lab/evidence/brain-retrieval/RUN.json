@@ -1,0 +1,214 @@
+{
+  "schema_version": 1,
+  "kind": "tool_evaluation",
+  "mode": "DEVELOPMENT",
+  "date_utc": "2026-10-18",
+  "objective": "Explicit author-selected shared consultation infrastructure, an exception to ordinary North Star consumer priority; not a next-cycle commitment.",
+  "baseline_revision": "fd84899505f09390eac31872a0126091d4c7e7d0",
+  "implementation_revision": "cc471656d5edc052d8206d58cf93fd38be22b330",
+  "branch": "codex/brain-retrieval-20261018",
+  "environment": {
+    "python": "3.12.14",
+    "dependencies": "Python standard library and Git; local deterministic execution",
+    "timing": "No latency study or comparable Codex usage/billing telemetry collected."
+  },
+  "brain_activation": {
+    "engineering": {
+      "relevance": "high",
+      "chapters": [
+        "ENG-027"
+      ],
+      "use": "Preserve trustworthy source identity and minimize records without weakening provenance."
+    },
+    "scientific": {
+      "relevance": "high",
+      "chapters": [
+        "SCI-014",
+        "SCI-017"
+      ],
+      "use": "Separate stdout bytes from token/cost constructs; pair preserved executable controls with repeatable queries."
+    },
+    "creative": {
+      "relevance": "medium",
+      "chapters": [
+        "CRE-008"
+      ],
+      "use": "Preserve D/A/H/E/V and current author authority; retrieval is not canon."
+    },
+    "complete_candidate_chapters_inspected": [
+      "CRE-009",
+      "CRE-010",
+      "CRE-011",
+      "CRE-014",
+      "CRE-020",
+      "CRE-022",
+      "CRE-023",
+      "CRE-028"
+    ]
+  },
+  "alternatives": {
+    "selected": "Preserve literal defaults, add compact projection and explicit local exploratory retrieval to the existing tool.",
+    "rejected": [
+      "Changing default output/ranking would break existing consumers.",
+      "Metadata-only lexical expansion misses relevant source-only terms.",
+      "Vector/remote indexing has no demonstrated need for this corpus."
+    ]
+  },
+  "artifacts": [
+    {
+      "path": "tools/brain_query.py",
+      "bytes": 22812,
+      "sha256": "c9ca883cf6e7107fcf40f2ba376279fd0ce50a7a1c9a29b6dd3d5cc29d2e7910"
+    },
+    {
+      "path": "tools/brain_vocabulary.json",
+      "bytes": 5061,
+      "sha256": "806d90b524228cdb49ee3ed0003ede7a83e84eedd832c7decb1c74fd800c7822"
+    },
+    {
+      "path": "tools/brain_retrieval_cases.json",
+      "bytes": 2195,
+      "sha256": "a849ad0f48a3ebb48bcdf2edc67d578a1064be8c55370f366f759e8019deb6bd"
+    },
+    {
+      "path": "tools/benchmark_brain_query.py",
+      "bytes": 9783,
+      "sha256": "51666525c7ed19ddba43572860348052cfab3adc39547ad9441719c10be0d312"
+    },
+    {
+      "path": "tools/test_brain_query.py",
+      "bytes": 18782,
+      "sha256": "f6b8c3681e51c1e1ff02218c00715a61c4908fec9d3db40b69ffbb16b67b0405"
+    },
+    {
+      "path": "brains/README.md",
+      "bytes": 8115,
+      "sha256": "4432207daf5221920f0e2f0c3f5c3e7e61ae6bcb68df29ab62c7251dac9387cf"
+    },
+    {
+      "path": "evidence/brain-retrieval/benchmark.json",
+      "bytes": 17715,
+      "sha256": "e52c3bd8081188469b0b65d484644f377b29564eb7c1079e4f5288ec98692a9d"
+    }
+  ],
+  "protected_sources": [
+    {
+      "path": "brains/ENGINEERING_BRAIN.md",
+      "bytes": 115366,
+      "sha256": "975b8741f767bc1dcaf3c551e5516a79bcd78d5d8e6efd8a4965d9f3cf37971f"
+    },
+    {
+      "path": "brains/SCIENTIFIC_BRAIN.md",
+      "bytes": 130017,
+      "sha256": "4a8dff7d1bc23f06421ffec4a07fcb66b745423f3728bc2cb11dc750a5e38958"
+    },
+    {
+      "path": "brains/CREATIVE_BRAIN.md",
+      "bytes": 244223,
+      "sha256": "41efe409375b09ae29006bf475ae5a2221d532d67c1dcbbe0df98b4b1afa8bc1"
+    },
+    {
+      "path": "brains/CATALOGO_DE_CONSULTA.json",
+      "bytes": 161387,
+      "sha256": "e8927568f2f63f9d5778778a7c8652c57cfedb248cea6d1b659023df80d4119c"
+    },
+    {
+      "path": "brains/BIBLIOTECA_DE_CONHECIMENTO_APLICADO.md",
+      "bytes": 2401,
+      "sha256": "2726e3f8d6c2c95acc015fc527437bc8de974170d9a507f62e6e3c289a61eae1"
+    },
+    {
+      "path": "brains/integrity.json",
+      "bytes": 949,
+      "sha256": "1afe93d07e7bd784b6521264e823833ed7e692a052d2e667a6d47456ce99a0cb"
+    }
+  ],
+  "protected_source_comparison": "All five supplied files and integrity.json are byte-identical to the baseline; no repinning, normalization or historical reference changes.",
+  "measurements": {
+    "details": "evidence/brain-retrieval/benchmark.json",
+    "discovery_stdout_utf8_bytes": {
+      "indexes": 63008,
+      "overview": 2414
+    },
+    "same_strict_query_stdout_utf8_bytes": {
+      "query": "classes especializações",
+      "full": 28272,
+      "metadata": 3113
+    },
+    "primary_target_hit_at_5": {
+      "baseline": 3,
+      "exploratory": 9,
+      "queries": 9
+    },
+    "scope": "16 queries total: 9 primary, 3 extension, 3 negative, 1 ambiguous. Targets are implementing-agent-curated, non-exhaustive and not independent human judgments. Empty baseline results grow when useful candidates are found."
+  },
+  "verification": {
+    "regressions": [
+      {
+        "command": "python3 tools/test_brain_query.py",
+        "tests": 31,
+        "result": "pass"
+      },
+      {
+        "command": "python3 tools/test_validate_repo.py",
+        "tests": 27,
+        "result": "pass"
+      },
+      {
+        "command": "python3 tools/test_reference_library.py",
+        "tests": 42,
+        "result": "pass"
+      },
+      {
+        "command": "python3 tools/test_check_manifest.py",
+        "tests": 11,
+        "result": "pass"
+      }
+    ],
+    "regression_total": 111,
+    "benchmark_command": "python3 tools/benchmark_brain_query.py --output /tmp/brain-retrieval.json --compare evidence/brain-retrieval/benchmark.json",
+    "legacy_compatibility": "check, indexes, all 234 complete get results and default search for all 16 cases remain byte-identical to the preserved Git executable.",
+    "controls": [
+      "Three unrelated/unknown-word negative cases remain empty; ambiguous identity query reports broad candidates.",
+      "Malformed legacy inputs still exit 2 without stdout; empty/stopword queries reject.",
+      "All five independently corrupted source copies block compact consultation; live sources remain untouched.",
+      "Vocabulary corruption does not affect known IDs or strict retrieval; explicit exploration rejects it.",
+      "Unicode/accents, distinct hash seeds, literal/expanded/related/partial reasons and bounded queries are exercised.",
+      "Missing baseline/stale comparison fail clearly without overwriting a previous output."
+    ],
+    "source_warnings": "44 inherited fragment occurrences remain visible, not repaired.",
+    "final_gates": [
+      {
+        "command": "python3 tools/brain_query.py check",
+        "result": "pass: 234 chapters, 422 local links; 44 inherited warnings unchanged"
+      },
+      {
+        "command": "python3 tools/validate_repo.py",
+        "result": "pass: 11 projects, 15 transfers, 11 assets, 2 legacy sources, 607 local file links"
+      },
+      {
+        "command": "python3 tools/reference_library.py check",
+        "result": "pass: 5 reference records, 607 preserved sources, 18 derived PDF texts, 140 exclusions, 14 North Star capabilities"
+      }
+    ]
+  },
+  "refinements": [
+    "Initial exploratory ranking overvalued alias strength ahead of metadata field relevance; weighted field evidence now ranks first.",
+    "Removed the defense relation guarda after its wardrobe homonym produced a distractor."
+  ],
+  "operational_adoption": "Root/lab agents, brain guide and the single continuous prompt use compact orientation as needed, metadata discovery and direct complete retrieval of known IDs. All three domains remain considered. Full indices remain available; large evidence is checked on disk rather than ignored.",
+  "outcomes": {
+    "north_star": "No direct gameplay, consumer, capability-state or creative-canon change.",
+    "laboratories": "No new laboratory or experimental technology transfer.",
+    "portfolio": "Inspectable local retrieval instrument with reproducible output/compatibility controls.",
+    "origins": "No P01-P11 code, evidence, assets, consumers or migration state changed.",
+    "derived_knowledge": "Existing evaluation-artifacts lesson now distinguishes output volume, source-target relevance and actual agent decision quality."
+  },
+  "limits": [
+    "Explicit, incomplete vocabulary and source co-occurrence can return irrelevant candidates; there is no semantic intent or negation inference.",
+    "Ranking scores and broad warnings are heuristics, not probabilities, truth or approved creative decisions.",
+    "Small target-hit controls are not exhaustive precision, downstream productivity or external human validation.",
+    "No actual token usage, financial savings, model training or execution latency improvement is claimed.",
+    "Future cycles must reassess meaningful product/creative work instead of automatically extending this subsystem."
+  ]
+}

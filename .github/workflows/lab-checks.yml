@@ -228,6 +228,7 @@ jobs:
         run: |
           python3 tools/brain_query.py check
           python3 tools/test_brain_query.py
+          python3 tools/benchmark_brain_query.py --output "$RUNNER_TEMP/brain-retrieval.json" --compare evidence/brain-retrieval/benchmark.json
       - name: Verify reference discovery and historical contribution boundaries
         run: |
           python3 tools/reference_library.py check

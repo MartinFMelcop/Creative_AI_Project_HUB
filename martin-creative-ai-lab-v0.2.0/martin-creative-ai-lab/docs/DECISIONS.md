@@ -2122,3 +2122,28 @@ changes. Stage/capability/origin states remain unchanged; no external player val
   migration, new lab, source/brain edit, schema change, MMO integration or canon approval.
   Existing prompt already requires consumer execution and timing/instrument controls;
   no durable change is justified.
+
+
+## ADR-081 — Selective consultation with preserved literal interfaces
+
+- **Baseline/objective:** `fd84899505f09390eac31872a0126091d4c7e7d0`, 2026-10-18 UTC.
+  Explicit current author infrastructure objective; DEVELOPMENT. No direct gameplay change.
+- **Confirmed weakness:** 63,008-byte full index; full search content and all-term
+  metadata matching. Six of nine declared primary queries initially return nothing.
+- **Alternatives:** changing search defaults breaks consumers; metadata-only vocabulary
+  misses source-only knowledge; embeddings/services add unjustified operational costs.
+  Preserve defaults and add compact/explicit exploratory modes in the existing tool.
+- **Decision:** overview uses supplied names/counts. Metadata projects results. Opt-in
+  exploration uses auditable vocabulary, weighted metadata, low-weight source fallback,
+  mandatory unknown terms, two-thirds anchor coverage and explicit reasons/warnings.
+  Full source retrieval/pins/categories remain unchanged; results do not create canon.
+- **Controls/refinement:** preserved Git executable, exact legacy output/all 234 chapters,
+  source corruption, malformed/unknown/ambiguous queries and hash-seed stability. Initial
+  ranking overvalued alias type above field relevance; weight evidence first. Remove
+  "guarda" as a defense relation after the wardrobe homonym produced a distractor.
+- **Brain use/limits:** ENG-027, SCI-014/017, CRE-008; creative candidate chapters inform
+  small target judgments. Output bytes and curated target hits are not token savings,
+  costs, general precision, independent review or downstream decision-quality evidence.
+- **Adoption:** compact activation/selective complete reading replaces routine full-index
+  emission. Review every intended file; validate large evidence without dumping it.
+  Preserve the full successor-prompt/publication contract and reassess product value next.

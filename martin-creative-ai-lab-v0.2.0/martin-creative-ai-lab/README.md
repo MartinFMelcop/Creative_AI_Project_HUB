@@ -64,9 +64,9 @@ knowledge without promoting an interpretation to a verified fact.
 The consultation tool uses Python's standard library:
 
 ```sh
-python3 tools/brain_query.py indexes
+python3 tools/brain_query.py overview
 python3 tools/brain_query.py get ENG-027 SCI-051 CRE-001
-python3 tools/brain_query.py search 'proveniência'
+python3 tools/brain_query.py search 'proveniência' --metadata-only
 python3 tools/brain_query.py check
 python3 tools/test_brain_query.py
 ```

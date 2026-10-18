@@ -65,17 +65,22 @@ append operational details or update their integrity pins without specific curre
 user authorization. Their public availability does not grant third-party rights.
 Operational metadata and known integrity limitations belong outside their texts.
 
-1. Read current work state and all three indices using
-   `python3 tools/brain_query.py indexes` from the maintained lab.
+1. Read current work state and consider all three knowledge domains. For orientation,
+   use `python3 tools/brain_query.py overview` from the maintained lab; reuse current
+   orientation while source identity is unchanged. Known IDs go directly to `get`.
+   Full `indexes` remains available for deliberate catalog inspection.
 2. Classify engineering, scientific and creative relevance, explicitly including low
    relevance. Engineering covers requirements, architecture, implementation, failures,
    reliability and trade-offs; science covers hypotheses, controls, instrumentation,
    data, uncertainty and validity; creation covers North Star identity, player choices,
    narrative, world, art, audio, classes/builds/professions and progression.
-3. Search selectively with `python3 tools/brain_query.py search "question"`, then read
-   complete pertinent chapters using `python3 tools/brain_query.py get ENG-027` (or the
-   relevant SCI/CRE IDs). The catalog is a locator, not a replacement for the chapter.
-   Do not load all 234 chapters each execution. Observe reported source fragment
+3. Discover with `python3 tools/brain_query.py search "question" --metadata-only`.
+   Opt into `--relaxed` for bilingual/related or partial candidates;
+   inspect match reasons, source-only fallback, unmatched terms, broad-query warnings
+   and uninterpreted qualifiers. These are lexical candidates, not semantic truth or
+   approved canon. Read complete pertinent chapters with
+   `python3 tools/brain_query.py get ENG-027` (or relevant SCI/CRE IDs). Discovery never
+   replaces full reading. Do not emit all 234 records routinely. Observe source fragment
    limitations without silently changing supplied bytes.
 4. Apply useful knowledge to problem selection, rival hypotheses, alternatives, design,
    risks and validation. Record document/chapter IDs and why briefly in affected work
@@ -179,15 +184,21 @@ weaknesses and outdated assumptions; did tools and validation serve the design?
 Maintain this SINGLE complete authoritative operational prompt. Change durable
 adaptive guidance only when observed evidence justifies it, replacing obsolete text
 instead of accumulating rules. Otherwise retain it unchanged. Never hardcode the last
-laboratory as the next target or claim underlying model improvement. Prepare and
+laboratory, origin or subsystem as the next target; reassess product and creative value
+alongside infrastructure. Do not claim underlying model improvement. Prepare and
 validate any prompt changes before the final commit and reconcile relevant remote
 prompt changes. Prompt maintenance must not replace product/research implementation.
 
 ## Commit and publish
 
 This request authorizes actual commits and normal non-force publication of verified
-changes to main, subject to real platform permissions. Inspect complete and staged
-diffs; stage only intended files, excluding secrets, caches, scratch and unrelated work.
+changes to main, subject to real platform permissions. Discover the complete change
+inventory with status, name lists and statistics. Review every intended code/contract
+and behavioral change semantically. For large structured evidence, validate identities,
+schemas, outcomes and failure controls with full data retained on disk; summarize large
+successful logs and inspect detailed failure traces when needed. Never ignore a file
+because it is large or replace execution with a generated summary. Inspect staged
+changes and stage only intended files, excluding secrets, caches, scratch and unrelated work.
 Create a nonempty commit with English subject at most 72 characters and stored English
 body at most 1,200 characters explaining implementation, purpose, actual checks and
 material limitations. Verify `git log -1 --format=%B` and

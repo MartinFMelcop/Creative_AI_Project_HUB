@@ -1,0 +1,812 @@
+{
+  "schema_version": 1,
+  "baseline_revision": "fd84899505f09390eac31872a0126091d4c7e7d0",
+  "baseline_tool_sha256": "72b0b2117ebd609426d6b78f95186288c118b669e6e03329b3e60c88b500aae4",
+  "implementation": {
+    "revision": "cc471656d5edc052d8206d58cf93fd38be22b330",
+    "benchmark_sha256": "51666525c7ed19ddba43572860348052cfab3adc39547ad9441719c10be0d312",
+    "tool_sha256": "c9ca883cf6e7107fcf40f2ba376279fd0ce50a7a1c9a29b6dd3d5cc29d2e7910",
+    "vocabulary_sha256": "806d90b524228cdb49ee3ed0003ede7a83e84eedd832c7decb1c74fd800c7822",
+    "cases_sha256": "a849ad0f48a3ebb48bcdf2edc67d578a1064be8c55370f366f759e8019deb6bd"
+  },
+  "units": "UTF-8 stdout bytes, including JSON formatting/newline; no token, billing or latency measurement.",
+  "judgment_scope": "Small implementing-agent curated, non-exhaustive source targets, not independent relevance judgments or a population sample. Extensions test source-only and additional wording; do not infer general precision.",
+  "discovery": {
+    "indexes_bytes": 63008,
+    "overview_bytes": 2414
+  },
+  "compatibility": {
+    "check": {
+      "identical": true,
+      "bytes": 13818,
+      "sha256": "6dc8ad4e76f43417dad19a51632c0b1ecee8a1bb0d5acc97326d888e13e9acfb"
+    },
+    "indexes": {
+      "identical": true,
+      "bytes": 63008,
+      "sha256": "44ef398480cfa0266b1181b94004d9d74e3e5f62db2a36930a0657c77e2c8975"
+    },
+    "get_all": {
+      "identical": true,
+      "bytes": 623177,
+      "sha256": "08419047a8b03d3b85cbce7854c288d44794fe046846a233c10e15959be2d4e4"
+    }
+  },
+  "malformed_inputs": [
+    {
+      "args": [
+        "get",
+        "ENG-999"
+      ],
+      "baseline_exit": 2,
+      "current_exit": 2
+    },
+    {
+      "args": [
+        "search",
+        ""
+      ],
+      "baseline_exit": 2,
+      "current_exit": 2
+    },
+    {
+      "args": [
+        "search",
+        "a e de"
+      ],
+      "baseline_exit": 2,
+      "current_exit": 2
+    },
+    {
+      "args": [
+        "search",
+        "combat",
+        "--limit",
+        "0"
+      ],
+      "baseline_exit": 2,
+      "current_exit": 2
+    },
+    {
+      "args": [
+        "search",
+        "combat",
+        "--limit",
+        "abc"
+      ],
+      "baseline_exit": 2,
+      "current_exit": 2
+    }
+  ],
+  "integrity_controls": "Three new/direct CLI paths reject disposable corruption with no stdout; live pins untouched.",
+  "primary_target_hit_at_5": {
+    "baseline": 3,
+    "relaxed": 9,
+    "cases": 9
+  },
+  "queries": [
+    {
+      "query": "classes especializações",
+      "targets": [
+        "CRE-010"
+      ],
+      "kind": "primary",
+      "baseline_ids": [
+        "CRE-010",
+        "CRE-007",
+        "CRE-009",
+        "CRE-011",
+        "CRE-012"
+      ],
+      "relaxed_ids": [
+        "CRE-010",
+        "CRE-096",
+        "CRE-094",
+        "CRE-067",
+        "CRE-007"
+      ],
+      "bytes": {
+        "legacy_full": 28272,
+        "strict_metadata": 3113,
+        "relaxed_full": 22471,
+        "relaxed_metadata": 5507
+      },
+      "matches": [
+        {
+          "id": "CRE-010",
+          "kind": "literal_all",
+          "score": 2400,
+          "source_only": false
+        },
+        {
+          "id": "CRE-096",
+          "kind": "expanded_all",
+          "score": 1760,
+          "source_only": false
+        },
+        {
+          "id": "CRE-094",
+          "kind": "expanded_all",
+          "score": 1360,
+          "source_only": true
+        },
+        {
+          "id": "CRE-067",
+          "kind": "expanded_all",
+          "score": 960,
+          "source_only": false
+        },
+        {
+          "id": "CRE-007",
+          "kind": "literal_all",
+          "score": 700,
+          "source_only": false
+        }
+      ]
+    },
+    {
+      "query": "identidade de personagem",
+      "targets": [
+        "CRE-009"
+      ],
+      "kind": "primary",
+      "baseline_ids": [
+        "CRE-009",
+        "CRE-080",
+        "CRE-006",
+        "CRE-002",
+        "CRE-098"
+      ],
+      "relaxed_ids": [
+        "CRE-009",
+        "CRE-025",
+        "CRE-070",
+        "CRE-080",
+        "CRE-072"
+      ],
+      "bytes": {
+        "legacy_full": 13766,
+        "strict_metadata": 3148,
+        "relaxed_full": 20311,
+        "relaxed_metadata": 4946
+      },
+      "matches": [
+        {
+          "id": "CRE-009",
+          "kind": "literal_all",
+          "score": 1050,
+          "source_only": false
+        },
+        {
+          "id": "CRE-025",
+          "kind": "literal_all",
+          "score": 1040,
+          "source_only": false
+        },
+        {
+          "id": "CRE-070",
+          "kind": "literal_all",
+          "score": 1040,
+          "source_only": false
+        },
+        {
+          "id": "CRE-080",
+          "kind": "literal_all",
+          "score": 1000,
+          "source_only": false
+        },
+        {
+          "id": "CRE-072",
+          "kind": "literal_all",
+          "score": 650,
+          "source_only": false
+        }
+      ]
+    },
+    {
+      "query": "jogador que só usa defesa",
+      "targets": [
+        "CRE-014"
+      ],
+      "kind": "primary",
+      "baseline_ids": [],
+      "relaxed_ids": [
+        "CRE-014",
+        "CRE-012",
+        "CRE-056",
+        "CRE-077",
+        "SCI-020"
+      ],
+      "bytes": {
+        "legacy_full": 3,
+        "strict_metadata": 3,
+        "relaxed_full": 18954,
+        "relaxed_metadata": 5001
+      },
+      "matches": [
+        {
+          "id": "CRE-014",
+          "kind": "literal_all",
+          "score": 900,
+          "source_only": false
+        },
+        {
+          "id": "CRE-012",
+          "kind": "literal_all",
+          "score": 650,
+          "source_only": false
+        },
+        {
+          "id": "CRE-056",
+          "kind": "literal_all",
+          "score": 550,
+          "source_only": false
+        },
+        {
+          "id": "CRE-077",
+          "kind": "literal_all",
+          "score": 350,
+          "source_only": false
+        },
+        {
+          "id": "SCI-020",
+          "kind": "related",
+          "score": 330,
+          "source_only": false
+        }
+      ]
+    },
+    {
+      "query": "profissões artesanato",
+      "targets": [
+        "CRE-022",
+        "CRE-023"
+      ],
+      "kind": "primary",
+      "baseline_ids": [],
+      "relaxed_ids": [
+        "CRE-022",
+        "CRE-085",
+        "CRE-023",
+        "CRE-031",
+        "CRE-026"
+      ],
+      "bytes": {
+        "legacy_full": 3,
+        "strict_metadata": 3,
+        "relaxed_full": 22415,
+        "relaxed_metadata": 5473
+      },
+      "matches": [
+        {
+          "id": "CRE-022",
+          "kind": "related",
+          "score": 1380,
+          "source_only": false
+        },
+        {
+          "id": "CRE-085",
+          "kind": "related",
+          "score": 1000,
+          "source_only": false
+        },
+        {
+          "id": "CRE-023",
+          "kind": "expanded_all",
+          "score": 880,
+          "source_only": false
+        },
+        {
+          "id": "CRE-031",
+          "kind": "related",
+          "score": 600,
+          "source_only": false
+        },
+        {
+          "id": "CRE-026",
+          "kind": "related",
+          "score": 130,
+          "source_only": true
+        }
+      ]
+    },
+    {
+      "query": "personagem com montaria",
+      "targets": [
+        "CRE-028"
+      ],
+      "kind": "primary",
+      "baseline_ids": [],
+      "relaxed_ids": [
+        "CRE-028",
+        "CRE-089",
+        "CRE-075",
+        "CRE-009",
+        "CRE-081"
+      ],
+      "bytes": {
+        "legacy_full": 3,
+        "strict_metadata": 3,
+        "relaxed_full": 18898,
+        "relaxed_metadata": 4942
+      },
+      "matches": [
+        {
+          "id": "CRE-028",
+          "kind": "expanded_all",
+          "score": 1450,
+          "source_only": false
+        },
+        {
+          "id": "CRE-089",
+          "kind": "literal_all",
+          "score": 1100,
+          "source_only": false
+        },
+        {
+          "id": "CRE-075",
+          "kind": "literal_all",
+          "score": 650,
+          "source_only": true
+        },
+        {
+          "id": "CRE-009",
+          "kind": "expanded_all",
+          "score": 630,
+          "source_only": true
+        },
+        {
+          "id": "CRE-081",
+          "kind": "expanded_all",
+          "score": 580,
+          "source_only": true
+        }
+      ]
+    },
+    {
+      "query": "avatar customization",
+      "targets": [
+        "CRE-009"
+      ],
+      "kind": "primary",
+      "baseline_ids": [],
+      "relaxed_ids": [
+        "CRE-009",
+        "CRE-039",
+        "CRE-029",
+        "CRE-066",
+        "ENG-023"
+      ],
+      "bytes": {
+        "legacy_full": 3,
+        "strict_metadata": 3,
+        "relaxed_full": 21666,
+        "relaxed_metadata": 4852
+      },
+      "matches": [
+        {
+          "id": "CRE-009",
+          "kind": "related",
+          "score": 740,
+          "source_only": false
+        },
+        {
+          "id": "CRE-039",
+          "kind": "related",
+          "score": 630,
+          "source_only": true
+        },
+        {
+          "id": "CRE-029",
+          "kind": "related",
+          "score": 530,
+          "source_only": false
+        },
+        {
+          "id": "CRE-066",
+          "kind": "related",
+          "score": 520,
+          "source_only": false
+        },
+        {
+          "id": "ENG-023",
+          "kind": "related",
+          "score": 490,
+          "source_only": false
+        }
+      ]
+    },
+    {
+      "query": "character builds",
+      "targets": [
+        "CRE-011"
+      ],
+      "kind": "primary",
+      "baseline_ids": [],
+      "relaxed_ids": [
+        "CRE-011",
+        "CRE-094",
+        "CRE-080",
+        "CRE-006",
+        "CRE-009"
+      ],
+      "bytes": {
+        "legacy_full": 3,
+        "strict_metadata": 3,
+        "relaxed_full": 19317,
+        "relaxed_metadata": 4852
+      },
+      "matches": [
+        {
+          "id": "CRE-011",
+          "kind": "expanded_all",
+          "score": 880,
+          "source_only": false
+        },
+        {
+          "id": "CRE-094",
+          "kind": "expanded_all",
+          "score": 800,
+          "source_only": false
+        },
+        {
+          "id": "CRE-080",
+          "kind": "expanded_all",
+          "score": 480,
+          "source_only": false
+        },
+        {
+          "id": "CRE-006",
+          "kind": "expanded_all",
+          "score": 470,
+          "source_only": false
+        },
+        {
+          "id": "CRE-009",
+          "kind": "related",
+          "score": 470,
+          "source_only": true
+        }
+      ]
+    },
+    {
+      "query": "combat",
+      "targets": [
+        "CRE-012"
+      ],
+      "kind": "primary",
+      "baseline_ids": [],
+      "relaxed_ids": [
+        "CRE-032",
+        "CRE-012",
+        "CRE-016",
+        "CRE-074",
+        "CRE-001"
+      ],
+      "bytes": {
+        "legacy_full": 3,
+        "strict_metadata": 3,
+        "relaxed_full": 18261,
+        "relaxed_metadata": 4704
+      },
+      "matches": [
+        {
+          "id": "CRE-032",
+          "kind": "expanded_all",
+          "score": 1200,
+          "source_only": false
+        },
+        {
+          "id": "CRE-012",
+          "kind": "expanded_all",
+          "score": 800,
+          "source_only": false
+        },
+        {
+          "id": "CRE-016",
+          "kind": "expanded_all",
+          "score": 400,
+          "source_only": false
+        },
+        {
+          "id": "CRE-074",
+          "kind": "expanded_all",
+          "score": 400,
+          "source_only": false
+        },
+        {
+          "id": "CRE-001",
+          "kind": "expanded_all",
+          "score": 80,
+          "source_only": true
+        }
+      ]
+    },
+    {
+      "query": "CRE-010",
+      "targets": [
+        "CRE-010"
+      ],
+      "kind": "primary",
+      "baseline_ids": [
+        "CRE-010"
+      ],
+      "relaxed_ids": [
+        "CRE-010"
+      ],
+      "bytes": {
+        "legacy_full": 9447,
+        "strict_metadata": 631,
+        "relaxed_full": 9447,
+        "relaxed_metadata": 631
+      },
+      "matches": [
+        {
+          "id": "CRE-010",
+          "kind": "exact_id",
+          "score": null,
+          "source_only": false
+        }
+      ]
+    },
+    {
+      "query": "mounts",
+      "targets": [
+        "CRE-028"
+      ],
+      "kind": "extension",
+      "baseline_ids": [],
+      "relaxed_ids": [
+        "CRE-028",
+        "CRE-089",
+        "CRE-022",
+        "CRE-003",
+        "CRE-009"
+      ],
+      "bytes": {
+        "legacy_full": 3,
+        "strict_metadata": 3,
+        "relaxed_full": 22129,
+        "relaxed_metadata": 4696
+      },
+      "matches": [
+        {
+          "id": "CRE-028",
+          "kind": "expanded_all",
+          "score": 1280,
+          "source_only": false
+        },
+        {
+          "id": "CRE-089",
+          "kind": "expanded_all",
+          "score": 880,
+          "source_only": false
+        },
+        {
+          "id": "CRE-022",
+          "kind": "related",
+          "score": 150,
+          "source_only": false
+        },
+        {
+          "id": "CRE-003",
+          "kind": "expanded_all",
+          "score": 80,
+          "source_only": true
+        },
+        {
+          "id": "CRE-009",
+          "kind": "expanded_all",
+          "score": 80,
+          "source_only": true
+        }
+      ]
+    },
+    {
+      "query": "combat movement",
+      "targets": [
+        "CRE-012"
+      ],
+      "kind": "extension",
+      "baseline_ids": [],
+      "relaxed_ids": [
+        "CRE-012",
+        "CRE-068",
+        "CRE-074",
+        "CRE-001",
+        "CRE-009"
+      ],
+      "bytes": {
+        "legacy_full": 3,
+        "strict_metadata": 3,
+        "relaxed_full": 21821,
+        "relaxed_metadata": 5491
+      },
+      "matches": [
+        {
+          "id": "CRE-012",
+          "kind": "expanded_all",
+          "score": 2000,
+          "source_only": false
+        },
+        {
+          "id": "CRE-068",
+          "kind": "expanded_all",
+          "score": 880,
+          "source_only": true
+        },
+        {
+          "id": "CRE-074",
+          "kind": "expanded_all",
+          "score": 480,
+          "source_only": true
+        },
+        {
+          "id": "CRE-001",
+          "kind": "expanded_all",
+          "score": 160,
+          "source_only": true
+        },
+        {
+          "id": "CRE-009",
+          "kind": "expanded_all",
+          "score": 160,
+          "source_only": true
+        }
+      ]
+    },
+    {
+      "query": "defensive builds",
+      "targets": [
+        "CRE-011",
+        "CRE-020"
+      ],
+      "kind": "extension",
+      "baseline_ids": [],
+      "relaxed_ids": [
+        "CRE-011",
+        "CRE-013",
+        "CRE-012",
+        "CRE-025",
+        "CRE-020"
+      ],
+      "bytes": {
+        "legacy_full": 3,
+        "strict_metadata": 3,
+        "relaxed_full": 30714,
+        "relaxed_metadata": 5360
+      },
+      "matches": [
+        {
+          "id": "CRE-011",
+          "kind": "expanded_all",
+          "score": 960,
+          "source_only": true
+        },
+        {
+          "id": "CRE-013",
+          "kind": "related",
+          "score": 530,
+          "source_only": false
+        },
+        {
+          "id": "CRE-012",
+          "kind": "related",
+          "score": 510,
+          "source_only": true
+        },
+        {
+          "id": "CRE-025",
+          "kind": "related",
+          "score": 430,
+          "source_only": true
+        },
+        {
+          "id": "CRE-020",
+          "kind": "expanded_all",
+          "score": 180,
+          "source_only": true
+        }
+      ]
+    },
+    {
+      "query": "zzzznonexistentcapability",
+      "targets": [],
+      "kind": "negative",
+      "baseline_ids": [],
+      "relaxed_ids": [],
+      "bytes": {
+        "legacy_full": 3,
+        "strict_metadata": 3,
+        "relaxed_full": 3,
+        "relaxed_metadata": 3
+      },
+      "matches": []
+    },
+    {
+      "query": "combat quantumflux",
+      "targets": [],
+      "kind": "negative",
+      "baseline_ids": [],
+      "relaxed_ids": [],
+      "bytes": {
+        "legacy_full": 3,
+        "strict_metadata": 3,
+        "relaxed_full": 3,
+        "relaxed_metadata": 3
+      },
+      "matches": []
+    },
+    {
+      "query": "insurance mortgage",
+      "targets": [],
+      "kind": "negative",
+      "baseline_ids": [],
+      "relaxed_ids": [],
+      "bytes": {
+        "legacy_full": 3,
+        "strict_metadata": 3,
+        "relaxed_full": 3,
+        "relaxed_metadata": 3
+      },
+      "matches": []
+    },
+    {
+      "query": "identidade",
+      "targets": [],
+      "kind": "ambiguous",
+      "baseline_ids": [
+        "CRE-025",
+        "CRE-070",
+        "CRE-004",
+        "CRE-072",
+        "CRE-095"
+      ],
+      "relaxed_ids": [
+        "CRE-025",
+        "CRE-070",
+        "CRE-072",
+        "CRE-095",
+        "CRE-004"
+      ],
+      "bytes": {
+        "legacy_full": 15690,
+        "strict_metadata": 3075,
+        "relaxed_full": 17544,
+        "relaxed_metadata": 4679
+      },
+      "matches": [
+        {
+          "id": "CRE-025",
+          "kind": "literal_all",
+          "score": 1000,
+          "source_only": false
+        },
+        {
+          "id": "CRE-070",
+          "kind": "literal_all",
+          "score": 1000,
+          "source_only": false
+        },
+        {
+          "id": "CRE-072",
+          "kind": "literal_all",
+          "score": 600,
+          "source_only": false
+        },
+        {
+          "id": "CRE-095",
+          "kind": "literal_all",
+          "score": 600,
+          "source_only": false
+        },
+        {
+          "id": "CRE-004",
+          "kind": "literal_all",
+          "score": 500,
+          "source_only": false
+        }
+      ]
+    }
+  ]
+}

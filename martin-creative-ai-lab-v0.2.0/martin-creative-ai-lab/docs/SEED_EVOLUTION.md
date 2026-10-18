@@ -84,3 +84,12 @@ RESEARCH, DEVELOPMENT or CREATIVE PRODUCTION; validate according to its actual g
 The first crossing closes missing playable capability in DEVELOPMENT mode. Keep living
 design separate from immutable volumes; report observable product, knowledge, portfolio
 and origin-migration effects. The one prompt was updated for this durable instruction.
+
+
+## Selective consultation — v0.33.11
+
+Replace routine detailed-index emission with compact orientation, metadata discovery
+and direct complete retrieval of known IDs. Keep all three domains, immutable source
+integrity and strict compatibility. Exploration is explicitly approximate; measured
+stdout bytes are not Codex tokens/costs. The full successor remains mandatory, and
+this author-selected infrastructure increment does not set the next product priority.

@@ -8,9 +8,13 @@ use English; preserve the appropriate language of creative works and imported so
 
 1. Inspect Git/local/remote state and tools; read `docs/STATE.md`, SEED current sections,
    `registry/projects.json`, `labs/origins.json` and affected real artifacts/evidence.
-2. Read all three brain indices with `python3 tools/brain_query.py indexes`.
-3. Classify engineering, science and creative relevance, even where low. Search the
-   catalog, then retrieve complete relevant chapters with `get ID`. Cite document/ID
+2. Use compact `python3 tools/brain_query.py overview` when orientation is needed;
+   reuse current orientation while source identity is unchanged. Known IDs go directly
+   to `get`. Full `indexes` is optional deliberate catalog inspection.
+3. Classify engineering, science and creative relevance, even where low. Discover with
+   `search "question" --metadata-only`; opt into `--relaxed` for explained exploratory
+   matching. Follow `brains/README.md` boundaries and retrieve complete relevant chapters
+   with `get ID`. Cite document/ID
    and their practical use concisely in existing work evidence or a decision.
 4. Consult pertinent derived `knowledge/` and historical `references/` selectively.
    Separate observation, interpretation, hypothesis and decision; do not infer canon

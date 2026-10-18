@@ -72,3 +72,22 @@ client, rather than treating any nonzero exit as invalid candidate syntax. A
 preload SyntaxError identifies a different file; signal exits and unknown formats
 remain inconclusive. This is a candidate lesson for other consumers, not a new
 validated transfer or defense against a malicious runtime.
+
+
+## Retrieval output is not model cost or relevance validation
+
+**Question/context:** the original brain tool exposes full indices/chapters and misses
+some natural bilingual requests. **Source:** [retrieval execution](../evidence/brain-retrieval/RUN.json),
+ENG-027, SCI-014/017 and CRE-008. **Observation:** the preserved Git tool establishes
+byte-identical legacy controls; compact output reduces emitted UTF-8 bytes, while an
+explicit exploratory mode retrieves declared source targets for previously empty queries.
+Corruption, unknown-word and ambiguous-query controls retain their distinct outcomes.
+
+**Interpretation/consequence:** separate output volume, source-target retrieval and
+actual agent decision quality. Large source outputs can be fully checked on disk without
+serializing them into context. **Validity:** a small implementing-agent-curated set,
+not exhaustive precision, independent human judgment, Codex tokens, financial savings
+or a downstream productivity study. Vocabulary/partial/source co-occurrence can yield
+irrelevant candidates. Known IDs should skip discovery; complete source reading and
+current author authority still determine use. No origin transfer or gameplay integration
+is established by this tool evaluation.

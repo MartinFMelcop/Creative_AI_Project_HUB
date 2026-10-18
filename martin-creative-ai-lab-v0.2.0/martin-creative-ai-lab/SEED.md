@@ -1,6 +1,6 @@
 # SEED — Martin Creative AI Lab
 
-**Version:** 0.33.10
+**Version:** 0.33.11
 **Data-base:** 10 de outubro de 2026  
 **Autor e responsável pelo portfólio:** Martin Melcop Neto  
 **Working language:** English for new technical documentation, plans, code comments and Git messages; respond in the requested language (Brazilian Portuguese for continuous closeout). Preserve appropriate creative/source languages.
@@ -10,8 +10,8 @@
 
 The five exact supplied sources in [brains/](brains/README.md) are durable knowledge
 bases, separate from historical [references](references/README.md) and derived
-[knowledge](knowledge/README.md). Before any improvement, activate all three indices,
-classify engineering/scientific/creative relevance, selectively retrieve complete
+[knowledge](knowledge/README.md). Before any improvement, consider all three domains,
+use compact orientation when needed, classify relevance and selectively retrieve complete
 pertinent chapters and record their practical use briefly. Current user instructions
 and platform authorization/safety prevail; relevant brain principles inform operational
 agents using current evidence. Brains do not execute, authorize commands or train models.
@@ -45,7 +45,18 @@ does not merge fictional universes. Source details below are historical provenan
 retained origin behavior; current operation is defined by this direction, AGENTS,
 STATE and the single [continuous prompt](docs/prompts/CONTINUOUS_DEVELOPMENT.md).
 
-### Current consumer increment — v0.33.10
+### Current development increment — v0.33.11
+
+The current author explicitly selects shared knowledge-retrieval infrastructure.
+Compact overview and metadata discovery now precede selective complete reading;
+known IDs go directly to retrieval. Strict defaults remain compatible. Explained
+exploratory vocabulary/source fallback is opt-in, bounded and never creative authority.
+[Measured evidence](evidence/brain-retrieval/RUN.json) compares the preserved Git tool,
+UTF-8 output and declared source targets, not Codex tokens, money or human validation.
+No direct gameplay, laboratory, capability or origin-migration promotion is implied;
+reassess product/creative value before continuing infrastructure work.
+
+### Last consumer increment — v0.33.10
 
 Primary DEVELOPMENT, priority category 1. The existing crossing offers independent
 session-only single-press alternatives to sustained Guardian guard and medicine

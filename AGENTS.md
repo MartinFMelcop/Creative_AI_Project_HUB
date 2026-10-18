@@ -38,12 +38,13 @@ product, laboratory knowledge, portfolio and origin-migration changes each cycle
 
 ## Mandatory brain activation
 
-Before any improvement, read the three indices and current state, classify
-engineering/scientific/creative relevance (including low relevance), retrieve complete
-pertinent chapters selectively, and apply them to alternatives, design, risks and
-validation. Record document/chapter IDs and why they matter, briefly in the affected
-work record. Do not load all 234 chapters or create ceremonial reports for trivial work.
-Use the lab's `tools/brain_query.py`; the catalog locates, not substitutes for, chapters.
+Before any improvement, consider engineering/scientific/creative relevance, including
+low relevance, and read current work state. Use compact `tools/brain_query.py overview`
+when orientation is needed; reuse current orientation while source identity is unchanged.
+Known IDs go directly to `get`. Select discovery metadata, then read complete pertinent
+chapters and apply them to alternatives, risks and verification. Record IDs and practical
+use briefly. The lab's `brains/README.md` defines strict versus exploratory retrieval;
+full `indexes` remains available for deliberate catalog inspection.
 
 The five supplied files under `brains/` are immutable source volumes/index/catalog.
 Their updates require specific user authorization; ordinary implementation commits
@@ -71,6 +72,12 @@ or a supported integration; never expose credentials. Inspect incoming/outgoing
 history and reconcile remote changes before publishing. Never force-push, rewrite
 remote history, delete branches or discard user work. Verify the actual remote SHA;
 a local commit is not publication and a push is not CI success. Report exact blockers.
+
+Start reviews with Git status, name lists and statistics, then inspect all intended
+code/contracts/behavior. Validate large structured evidence through deterministic
+identity, schema and outcome checks with full data retained on disk. Summarize successful
+large logs; read detailed failure traces when investigating. Size never exempts a file
+from review, and a generated summary never substitutes for actual verification.
 
 Maintain affected continuity and the single complete successor prompt at
 `docs/prompts/CONTINUOUS_DEVELOPMENT.md`. When requested, return its entire text,

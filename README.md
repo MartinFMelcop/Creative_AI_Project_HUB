@@ -112,7 +112,9 @@ through the [origin index](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/
 The [three-brain library](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/brains/README.md) contains the exact supplied
 Engineering, Scientific and Creative volumes: **234 chapters**, a consultation
 catalog and collection index. A deterministic local Python query retrieves
-selected complete chapters. The brains inform engineering, experimental and
+selected complete chapters. Compact discovery and explained bilingual exploration now
+have [reproducible retrieval evidence](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/evidence/brain-retrieval/RUN.json),
+with strict defaults and original source bytes preserved. The brains inform engineering, experimental and
 creative decisions; they are not agents, executable commands or model training.
 Their source texts require specific authorization to change.
 

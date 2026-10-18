@@ -20,7 +20,9 @@ records dependencies, existing consumers, risks and extraction work.
 | [Native origin demonstrations](../projects/README.md#run-a-retained-demonstration) | State rules, tactical feedback, actual collision, animation, media integration and Linux packaging | Inspect each recorded version and runtime environment; other-platform support and physical user experience remain separate |
 | [Bilingual literary production](../projects/lich-cistern/README.md) | Editable prose, translation and reader-format production | [Revision record](../evidence/lich-cistern/REVISION_RUN.json); implementing-agent editorial assessment, no independent reader study or Virgo canon claim |
 
-The [three-brain library](../brains/README.md) supports selective consultation.
+The [three-brain library](../brains/README.md) supports selective complete consultation,
+compact discovery and explained local bilingual retrieval. [Measured controls](../evidence/brain-retrieval/RUN.json)
+retain literal compatibility and source integrity; output bytes are not token/cost claims.
 [Derived knowledge](../knowledge/README.md) preserves what execution actually
 showed and where it applies. Neither storing documents in Git nor generating a
 polished demonstration trains a model or establishes external validation.

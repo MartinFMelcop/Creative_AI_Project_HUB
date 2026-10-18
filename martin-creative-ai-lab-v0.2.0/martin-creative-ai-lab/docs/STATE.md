@@ -1,60 +1,54 @@
 # Lab state
 
-**Updated:** 2026-10-18 UTC. **SEED:** 0.33.10.
-**Primary mode:** DEVELOPMENT. **Priority:** category 1, existing consumer.
-Baseline local/fetched main `1ee52e14e202b5f796d1aaa458b859300e988416`;
-tracked tree clean, unrelated work/ preserved. Branch
-`codex/north-star-toggle-input-20261018`; authenticated Git transport available.
+**Updated:** 2026-10-18 UTC. **SEED:** 0.33.11.
+**Primary mode:** DEVELOPMENT. Current author objective: shared consultation tooling,
+an explicit exception to the normal product priority, not an automatic next workstream.
+Inspected/fetched baseline `fd84899505f09390eac31872a0126091d4c7e7d0`, initially on
+`codex/north-star-toggle-input-20261018`; no divergence or tracked changes, unrelated
+work/ preserved. Current branch `codex/brain-retrieval-20261018`; Git transport works.
 
-## Observable product change
+## Observable workflow change
 
-[Crossing Drill](../north-star/prototype/README.md) can now perform Guardian defense
-and optional medicine recovery/handoff with released single presses. F1/H and F1/I
-independently switch session input modes. Hold remains the default; saved key remaps
-and both profile schemas remain unchanged. Duelist draw stays a discrete action.
-Posture drain, locked facing, startup, Riposte expiry, costs and interaction ranges/
-durations remain. The world never freezes for recovery; protection/offense and the
-courier gate/survival objective remain available.
+[Consultation guide](../brains/README.md) documents compact `overview`, metadata-only
+search and opt-in explained bilingual/related/partial retrieval. Known IDs go directly
+to complete `get`. All original defaults, complete source text, pins and editorial
+categories remain. Full indices are available for deliberate broad inspection.
+Operational vocabulary is separate from the protected five supplied files.
 
-Out-of-range presses cannot arm future work. Movement, range exit or a second press
-cancels; completion disarms and handoff requires another deliberate press. Recovery
-clears toggle guard and guard requested during work cannot queue a later raise.
-Pause/focus/settings/terminal/replacement clear intentions; explicit resume needs a
-new press. Chosen modes survive this process's retries, never a fresh process.
+[Execution](../evidence/brain-retrieval/RUN.json) binds a real implementation commit
+and a reproducible Git-baseline benchmark. Full index output is 63,008 UTF-8 bytes;
+compact discovery is 2,414. Declared primary targets appear in the top five for 3/9
+baseline queries and 9/9 exploratory queries. These are small implementing-agent-curated,
+non-exhaustive targets, not general precision or human relevance. Empty old searches
+can become larger useful results; compare size and relevance separately.
 
-## Execution and assessment
+All 17 prior query tests remain; 14 new tests bring the suite to 31. Relevant Python
+regressions total 111. The benchmark covers 16 queries, unchanged legacy output,
+all 234 complete chapters, negative/ambiguous/malformed inputs and corruption rejection.
+No comparable Codex token/billing telemetry or latency study was collected. Entire
+source validation still runs even when output is compact. Original five files and
+integrity pins remain byte-identical; 44 inherited fragment warnings remain.
 
-[Execution](../evidence/north-star-toggle-input/RUN.json) binds final source/PCK,
-358 native checks (all 313 prior assertions retained), sixteen profile/key restart
-processes, 109 Python regressions and actual XTest source/PCK journeys. A 100-frame
-held/edge schedule preserves exact model snapshots through Riposte expiry/release.
-Three no-held-command fixed routes finish with actual medicine delivery; these are
-scripted feasibility, not class balance or optimality. Existing baseline outcome
-records remain equal in the explicitly compared sections.
+## Preserved product and portfolio boundaries
 
-XTest reaches actual settings, released single-press rehearsal block, fresh-process
-hold defaults and prepared-case recovery in both deliveries. The case fixture is not
-OS-keyboard navigation of a full crossing. Actual images prompted a larger opaque
-settings panel and corrected input-mode wording. Instrumentation initially missed an X11 helper and used a short window-discovery
-bound. A later capture was not acknowledged, and a wall-clock recovery wait caught
-confirmed input with incomplete model progress under concurrent engine load. The
-runner now reports invariant failures clearly, waits for actual progress within a
-bound and reaps old windows. An audio run also hit its unchanged timeout under that
-load and reproduced against the intact prior PCK. A separate bounded mixer diagnostic
-passed; the original unchanged 30-second verifier subsequently passed source/PCK. No product rule or gate was weakened. Processes are bounded
-and stopped. No independent humans, accessibility/comfort/comprehension/learning,
-hardware latency, multiplayer, scale or commercial evidence.
+Crossing Drill remains the prior executed local consumer, with session input options,
+distinct guard/redirection, real medicine handoff, optional sentinel shutdown and
+cosmetic continuity. No gameplay, class/build/profession/mount implementation or new
+creative canon was added this cycle. Stage local_prototype, one consumer/eight code
+paths, fourteen capabilities; NS-C03/07 adapted. P01–P05/P07/P08/P10/P11 remain
+preserved_pending_extraction, P06 pilot_instrumented, P09 seed_only. No new lab,
+resource family, source migration or transfer. The portfolio now demonstrates a
+local consultation instrument and measured retrieval controls in addition to its
+existing technological/creative demonstrations.
 
-## Continuity and contribution boundaries
+## Reasoning and continuity
 
-Engineering high ENG-022; science medium SCI-061; creation high CRE-081/005 (documented
-directions, not specific final input/canon approval). Exact brains/pins and historical
-sources unchanged. Combat-response knowledge records intention versus preference and
-interruption controls. The one complete prompt remains unchanged: its existing execution,
-timing and honest-evidence requirements served this increment.
-
-Portfolio now demonstrates actual native input alternatives and recoverability.
-No new lab/resource family; stage local_prototype, one consumer/eight paths, fourteen
-capability states, NS-C03/07 adapted. P01–P05/P07/P08/P10/P11 remain
-preserved_pending_extraction, P06 pilot_instrumented, P09 seed_only. Origin sources,
-consumers/tests remain; no migration promotion. Publication and CI verified at closeout.
+Engineering high ENG-027 (small trustworthy records/provenance), science high
+SCI-014/017 (output bytes versus unmeasured constructs; controls), creation medium
+CRE-008 (D/A/H/E/V and non-canon retrieval). Inspected CRE-009/010/011/014/020/022/023/028
+inform limited source targets, not hardcoded answers. Derived evaluation knowledge
+records retrieval-output and relevance limits. Root/lab instructions and the one
+complete prompt replace mandatory full-index emission with selective activation.
+Structured evidence stays on disk with deterministic checks; detailed failures remain
+inspectable. Future work must reassess product/creative opportunities instead of
+continuing retrieval optimization by inertia. Publication/CI are verified at closeout.
