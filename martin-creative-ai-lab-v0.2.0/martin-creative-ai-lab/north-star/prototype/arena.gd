@@ -244,8 +244,9 @@ func _draw() -> void:
 		draw_arc(game.pulse,90,0,TAU,48,RED,3)
 		text(game.pulse+Vector2(-55,-106),"LAST PULSE" if reviewing else "GROUND PULSE",15,RED)
 	actors.draw_sentinel(self,game)
-	text(Combat.ENEMY+Vector2(-42,-50),"SENTINEL",15,RED)
-	if game.role=="Duelist": draw_arc(Combat.ENEMY,340,0,TAU,80,Color(1,0.77,0.45,0.18),1)
+	text(Combat.ENEMY+Vector2(-42,-50),"SENTINEL",15,TEAL if game.sentinel_disabled() else RED)
+	text(Combat.ENEMY+Vector2(-70,84),game.sentinel_status(),14,TEAL if game.sentinel_disabled() else AMBER)
+	if game.role=="Duelist" and not game.sentinel_disabled(): draw_arc(Combat.ENEMY,340,0,TAU,80,Color(1,0.77,0.45,0.18),1)
 	if game.opening>0:
 		draw_arc(Combat.ENEMY,130,0,TAU,64,TEAL,2)
 		text(Combat.ENEMY+Vector2(-53,60),"OPEN %.1fs"%game.opening,19,TEAL)
@@ -298,7 +299,7 @@ func draw_header() -> void:
 func overlay() -> void:
 	draw_rect(Rect2(40,176,1072,473),Color(0.03,0.07,0.12,0.90))
 	if game.mode=="title":
-		text(Vector2(210,231),"One crossing. Two ways to hold the line.",30)
+		text(Vector2(210,231),"One crossing. Hold the line or break its source.",30)
 		text(Vector2(140,266),"Courier keeps moving. At MARK 1, optional medicine falls south of the road.",19)
 		panel(Rect2(180,292,380,212),Color("244a50") if selected=="Guardian" else Color("1b2d40"))
 		panel(Rect2(590,292,380,212),Color("594730") if selected=="Duelist" else Color("1b2d40"))
@@ -312,7 +313,7 @@ func overlay() -> void:
 		text(Vector2(615,400),"Move or step away from the locked line.",18)
 		text(Vector2(615,430),"Feint within the ring; steps cost resolve.",17)
 		text(Vector2(615,467),"Cross + draw: Drew the Danger",17,AMBER)
-		text(Vector2(210,543),"Both: leave red ground pulses. Strike only when OPEN and close.",19)
+		text(Vector2(210,543),"Leave ground pulses. Three close counters disable the sentinel.",19)
 		text(Vector2(210,580),"T  Rehearse as "+selected+"     •     ENTER  Skip to crossing",21,TEAL)
 		text(Vector2(210,615),"C  Keepsake: "+KEEPSAKE_NAMES[keepsakes.equipped]+"     /     experimental, cosmetic only",17)
 		draw_keepsake(Vector2(1015,602),keepsakes.equipped,1.4)
@@ -329,7 +330,8 @@ func overlay() -> void:
 		text(Vector2(250,345),game.role+(" / "+game.guard_style if game.role=="Guardian" else "")+"  /  blocks %d   drawn bolts %d   counters %d"%[game.counters.blocks,game.counters.redirects,game.counters.counters],22)
 		text(Vector2(250,390),"Health %d / 5    Courier %d / 3    Crossing %d%%"%[game.hp,game.cargo,roundi((game.courier.x-160)/840*100)],21)
 		draw_impact(Vector2(150,435))
-		text(Vector2(250,510),"ENTER retry this approach     •     R choose approach",22)
+		text(Vector2(250,490),game.sentinel_status(),16,TEAL if game.sentinel_disabled() else AMBER)
+		text(Vector2(250,518),"ENTER retry this approach     •     R choose approach",22)
 		text(Vector2(150,552),reward_message if game.mode=="won" else "No keepsake earned. Complete a crossing with a block or drawn bolt.",18,TEAL if game.mode=="won" else AMBER)
 		text(Vector2(150,585),"C  Wear / put away     •     F5  Retry local save     /     cosmetic only",18)
 		text(Vector2(150,622),errand.outcome(),17,AMBER)
@@ -396,7 +398,7 @@ func rehearsal_overlay() -> void:
 	text(Vector2(100,top+31),label,23,TEAL if rehearsal.passed else AMBER)
 	if rehearsal.state=="review":
 		if rehearsal.stage==2:
-			text(Vector2(100,top+65),"Counter landed inside the opening." if rehearsal.passed else "The opening closed before a close counter landed.",19)
+			text(Vector2(100,top+65),"Counter landed. Three clean counters disable the sentinel." if rehearsal.passed else "The opening closed before a close counter landed.",19)
 			text(Vector2(100,top+95),"The normal crossing uses the same range, costs and timing." if rehearsal.passed else "Walk into the OPEN ring, release guard, then press J before it closes.",18)
 		else:
 			text(Vector2(100,top+65),game.last_impact.explanation,19)

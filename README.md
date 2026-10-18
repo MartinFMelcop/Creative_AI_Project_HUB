@@ -35,15 +35,17 @@ with optional mute and retained visual warnings. Guardian now chooses sustained 
 guard or short-window Riposte before the attempt; the latter risks expiry for a longer
 real counter opening. Rehearsal uses the chosen technique. Original shield/blade actors
 now show accepted actions and local contact/recovery; the sentinel opens with its real
-vulnerability window. Combat rules are unchanged.
+vulnerability window. Three real close counters can now disable it: threats stop and
+the courier runs. Defending without counters remains a complete route; the gate still
+requires a living courier and player.
 
 The editable Godot project and small engine-dependent PCK execute the same consumer.
-[Native/rendered evidence](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/evidence/north-star-action-poses/RUN.json)
+[Native/rendered evidence](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/evidence/north-star-sentinel-resolution/RUN.json)
 and the [living design record](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/DESIGN.md)
 separate fixed-policy feasibility and agent visual assessment from still-missing human
 understanding, identity and enjoyment evidence.
 
-![Guardian block and the actual sentinel opening](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/evidence/north-star-action-poses/source-guardian-block.png)
+![Sentinel disabled while the courier still has to reach the gate](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/evidence/north-star-sentinel-resolution/rendered/source-sentinel-disabled.png)
 
 ## Technology demonstrations
 

@@ -86,7 +86,7 @@ def verify(godot, output, compare=None):
         result = json.loads(source.read_text())
         if result != json.loads(packed.read_text()):
             raise ValueError("Delivered PCK differs from current source observations or embedded source hashes")
-        if result.get("checks", {}).get("failed") != 0 or result.get("checks", {}).get("passed", 0) != 270:
+        if result.get("checks", {}).get("failed") != 0 or result.get("checks", {}).get("passed", 0) != 313:
             raise ValueError("Native checks failed or incomplete")
         if [r["mode"] for r in result["outcomes"]] != ["won", "lost", "won", "lost"]:
             raise ValueError("Completion and neutral controls are incomplete")

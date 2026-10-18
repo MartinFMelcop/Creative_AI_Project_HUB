@@ -1,62 +1,68 @@
 # Lab state
 
-**Updated:** 2026-10-18 UTC. **SEED:** 0.33.8.
-**Primary mode:** CREATIVE PRODUCTION. **Priority:** category 1, existing consumer.
-Baseline local/fetched main `2d32a61702669dc503d0ca646d911d36d460eac6`;
+**Updated:** 2026-10-18 UTC. **SEED:** 0.33.9.
+**Primary mode:** DEVELOPMENT. **Priority:** category 1, existing consumer.
+Baseline local/fetched main `43fb743f231691d5b7b28dfd382b257cb95def30`;
 tracked tree clean, unrelated work/ preserved. Branch
-`codex/north-star-action-poses-20261017`; authenticated Git transport available.
+`codex/north-star-sentinel-resolution-20261018`; authenticated Git transport available.
 
 ## Observable product change
 
-[Crossing Drill](../north-star/prototype/README.md) replaces static abstract actors
-with original code-drawn shield/blade characters, a parcel-bearing courier and a
-shuttered sentinel. Actual displacement drives feet; accepted draw/step/strike changes
-the pose, while only real block/counter/hurt events receive local contact marks.
-A paid armor strike swings without claiming a successful contact. OPEN separates the
-sentinel shutters; a counter alone adds recoil. West-facing block feedback follows
-the incoming side. Player/courier damage have separate ownership. Existing guard
-state, worn cosmetics, warning/range geometry, hints and sound remain available.
+[Crossing Drill](../north-star/prototype/README.md) can resolve its threat source.
+Three real close OPEN counters remove three focus plates. Armor misses, range/resource
+failures and guard/step commitment cannot remove plates. Shutdown clears the opening,
+cancels queued threats, stops subsequent bolts/pulses and the actual threat voice,
+while keeping the accepted counter response. The courier runs at 56 instead of 28px/s.
 
-Simulation time owns motion and contact recovery. Pause/review cannot age effects,
-model replacement does not replay old contacts, and drawing cannot change combat.
-Facing is a small triangle rather than a second blade-like line; labels move beside
-nearby weapons. No input delay, collision, costs, reach, reward, profile, class/canon
-or balance change. The existing Steady/Riposte choice and medicine routes remain.
+Gate arrival and player/courier survival still own completion; shutdown alone awards
+nothing. Protective routes with zero counters remain complete. The case/handoff is
+still optional and real: faster travel also reduces time left for unfinished work.
+No new class, stat, reward, profile, shared-world or final boss/canon approval.
+Reset/abandon/rehearsal repeat restore the source; no practice core damage carries out.
 
-## Execution and creative assessment
+Focus plates/count, collapsed core and retained shutdown explanation expose the state.
+The unavailable feint range is hidden after image inspection. Original action visuals,
+warning geometry and response ownership remain; the timer/survival feedback is retained.
 
-[Execution](../evidence/north-star-action-poses/RUN.json) binds exact source/PCK,
-version baseline, native checks, rendered images, motion clips and mixer output.
-270 native checks pass with source/PCK equality and sixteen independent restart
-processes. All prior native observation groups remain exact, excluding only changed
-check totals/source identities and the newly added presentation group.
+## Execution and assessment
 
-41 prepared real-consumer render samples match source/PCK observations and pixels in
-one software renderer. The prior static PCK produces the same combat/contact/guard/
-opening values. Counter/draw WebM clips are 13 model ticks encoded at 6fps (10× slowed),
-silent inspection exports, not real-time gameplay/performance evidence. Agent review
-inspected silhouettes, contact ownership, worn marks, labels and direction. No human
-recognition, learning, comfort, accessibility, preference, balance or fun validation.
+[Execution](../evidence/north-star-sentinel-resolution/RUN.json) binds final source/PCK,
+the untouched prior PCK, native checks, matched routes, rendering and mixer controls.
+313 native checks pass; all 270 earlier assertions remain, with 43 added controls.
+Source/PCK reports and sixteen independent profile/keyboard restart processes match.
+109 Python regressions include three new verifier failure controls: unavailable inputs
+and a current-feature PCK falsely proposed as the earlier control must reject.
 
-The first unconfigured engine failed to write its user data; the prior PCK failed
-identically. Isolated temporary XDG paths execute normally. Default socket restrictions
-prevented Xorg from opening its display; authorized socket-capable execution succeeded.
-A capture fixture's typed-array assignment failed and timed out; corrected fixture
-append and a properly positioned courier control pass without changing product rules.
-Owned display/engine processes are bounded and stopped; failures remain documented.
+Six matched policies per delivery form compare source, current PCK and prior PCK.
+Protect-only crossings retain the complete common mechanical trace. Counter routes
+match before the third hit, then intentionally diverge: tested Guardian variants finish
+at tick 1648 (~27.47s), Duelist at 1262 (~21.03s), versus 1800 (30s) protective. Tested
+Guardian protective courier health is 2/3 versus 3/3 offensive; Duelist is 3/3 for both.
+These are fixed policies, not optimality or class balance; the Guardian policy does not
+actively chase early openings. A shutdown-first Duelist route recovers at tick 852,
+hands over at 957 and reaches the gate at 1262. No class-exclusive solution is inferred.
+
+42 prepared rendered samples match current source/PCK observations and pixels in one
+software renderer. Shutdown is captured during an actual normal-consumer route while
+the escort is still incomplete. Separate model/version controls establish intentional
+pacing changes; no claim of unchanged baseline offense or equivalent-model art control.
+Actual mixer controls and original PCM remain verified. Owned processes are bounded
+and stopped. No independent players, fun, learning, preference, physical latency/audio,
+accessibility, all-device performance, multiplayer, scale or commercial evidence.
 
 ## Brains, knowledge, portfolio and migration
 
-Engineering high: ENG-023 separates mechanism and creative judgment. Science medium:
-SCI-014 limits recognition claims. Creation high: CRE-067/068/074 hypotheses inform
-signatures, contact/recovery and restrained effects. Exact brains/pins and historical
-sources remain untouched. Existing combat-response knowledge gains the read-only
-owner/clock finding. The operational prompt already covers this mode and stays unchanged.
+Engineering high: ENG-004/005, requirements and state invariants. Science medium:
+SCI-017, prior-PCK controls and rival explanations. Creation high: CRE-005 documented
+agency, CRE-012/055/087 hypotheses on opportunity, threat behavior and resolution.
+Exact brains/pins and historical sources remain untouched. Combat-response knowledge
+gains the optional-offense/main-goal ownership finding and its fixed-policy limits.
+The operational prompt already covers functional deltas/controls and stays unchanged.
 
-The portfolio now demonstrates original native vector production with reproducible
-rendering and a rebuilt delivered PCK. VIS-004 records this destination resource;
-no P07 atlas or historical media was imported. Stage remains local_prototype,
-one consumer/eight code paths, fourteen capabilities; NS-C03/07 adapted, twelve unchanged.
+The portfolio demonstrates executed optional encounter resolution and current native
+visual/audio consequences. No new resource family/laboratory: AUD-006/VIS-004 retain
+provenance and gain current evidence. Stage remains local_prototype, one consumer/eight
+code paths, fourteen capability states; NS-C03/07 adapted, twelve unchanged.
 P01–P05/P07/P08/P10/P11 remain preserved_pending_extraction, P06 pilot_instrumented,
-P09 seed_only. All original code/media/tests/consumers are preserved; no new laboratory
-or origin-migration promotion. Publication and CI are verified separately at closeout.
+P09 seed_only. Sources/consumers/tests are preserved; no origin-migration promotion.
+Publication and CI are verified separately at closeout.

@@ -22,11 +22,11 @@ origin instrument, separately preserved.
 The player chooses frontal interception or redirection/mobility and protects the same
 courier to the far gate. [Living design](DESIGN.md) distinguishes author decisions,
 experimental mechanics, revisions and rejected alternatives. Current primary mode is
-CREATIVE PRODUCTION, priority category 1: improve this existing consumer. Optional rehearsal
+DEVELOPMENT, priority category 1: improve this existing consumer. Optional rehearsal
 uses the same combat rules, preserves causal review and starts a clean normal crossing.
 The three prepared exercises do not demonstrate human learning or sustained resource
-management. [Current execution](../evidence/north-star-action-poses/RUN.json) retains the
-unchanged full-crossing outcomes alongside these controls. Completed normal crossings
+management. [Current execution](../evidence/north-star-sentinel-resolution/RUN.json) records protective completion, optional
+offensive shutdown and the causal controls. Completed normal crossings
 with a signature response can earn its approach’s mark, one of two experimental cosmetics. Explicit C selection
 is visible on the next crossing and restored after restart. Malformed/unknown profiles
 are preserved; pending session marks can be saved with F5 after path repair. This is
@@ -82,3 +82,9 @@ accepted draw/step gestures, local hit ownership and counter recovery. Sentinel 
 expose the existing OPEN state. Simulation time freezes motion during pause and review;
 no artwork changes combat reach, costs, collision or warnings. See the prototype's
 [visual-production guide](prototype/README.md#character-gestures-and-contact-feedback).
+
+The current crossing can also resolve its threat: three eligible close counters disable
+the sentinel and let the courier run. Protective completion remains valid; shutdown
+alone awards nothing and does not replace reaching the gate alive. Matched prior-PCK
+routes separate this actual pacing change from synthetic-policy and human-experience
+limits. No origin or capability status is promoted by this increment.

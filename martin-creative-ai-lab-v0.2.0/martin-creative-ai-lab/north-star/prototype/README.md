@@ -23,7 +23,7 @@ executed. The project can also be opened in the matching editor.
 
 Choose **1 Guardian** or **2 Duelist**. Press **T** for optional rehearsal, or
 **Enter** to skip directly to the crossing. Keep the courier alive until it reaches
-the far gate (30 simulated seconds). Losing all five player health or all three
+the far gate (30 simulated seconds at walking pace, shorter after shutdown). Losing all five player health or all three
 courier health loses the attempt. Both approaches can complete the goal.
 
 - **WASD:** move. **Arrow keys:** aim by logical navigation key; WASD uses physical positions.
@@ -36,8 +36,8 @@ courier health loses the attempt. Both approaches can complete the goal.
   across the courier can still hit it first.
 - **Space:** directional paid step (25 resolve), with recovery. It grants **no
   invulnerability**. Walking is also a valid way out of a locked threat.
-- **J:** a close blade counter during OPEN, within 130px, buys time before the
-  next threat. Armor/short range gives no counter. Guard/step commitment can
+- **J:** a close blade counter during OPEN, within 130px, removes one focus plate
+  and buys time before the next threat. Armor/short range gives no counter. Guard/step commitment can
   reject the request; it still needs 12 resolve. The OPEN ring shows the actual
   counter range, and its label shows the remaining window in seconds.
 - **Red ground pulse:** leave the marked circle. A shield cannot block the floor.
@@ -50,6 +50,37 @@ Pause and result screens retain the last contact's explanation and an actionable
 tip, even after transient warnings or the final loss message replace the live
 feedback. Diagnosis distinguishes facing, guard startup, insufficient posture,
 unguarded contact, courier first contact, and pulse/bolt outcomes.
+
+## Hold the line or disable its source
+
+Protection remains a complete route: keep responding until the courier reaches the
+gate, without requiring a blade counter. Optionally approach during OPEN and land
+**three valid J counters** to break the sentinel's three focus plates. The existing
+130px reach, 12 resolve/posture cost, guard/step commitment and blade recovery still
+apply. Closed armor and rejected/out-of-range requests cannot remove a plate.
+
+The world shows remaining focus as three small plates and **FOCUS n / 3**. The third
+counter collapses the core, clears OPEN/queued attacks and permanently stops this
+attempt's bolts and floor pulses. The feint range disappears with its unavailable
+source. The courier then **runs at 56px/s**, twice the normal 28px/s. Shutdown is not
+completion: the courier and player must still be alive at the gate. No new kill loot,
+keepsake, profile format, stat tier, approved boss lore or final class system exists.
+
+This makes timing/position an optional offensive investment. The medicine case remains
+available; an executed Duelist route disables first, then recovers and hands it back.
+The courier never waits, and faster travel also leaves less time for unfinished tasks.
+Carrying is still not delivery. Retry/abandon restores three plates and normal pace;
+practice supplies only its original isolated opening, never carried core damage.
+
+[Matched execution](../../evidence/north-star-sentinel-resolution/RUN.json) retains
+actual source/PCK and prior unmodified-PCK controls. The fixed protective routes finish
+at tick 1800 (30s); tested offensive routes finish at tick 1648 (~27.47s) for both
+Guardian techniques and 1262 (~21.03s) for Duelist. These policies are not optimal play,
+class-balance evidence, preference or human comprehension. Guardian's tested protective
+route ends with courier 2/3 versus 3/3 offensive; Duelist has 3/3 in both. No universal
+benefit or unavoidable class disadvantage follows from this one policy comparison.
+
+![Shutdown during a real normal-consumer route, before escort completion](../../evidence/north-star-sentinel-resolution/rendered/source-sentinel-disabled.png)
 
 ## Guardian technique choice
 
@@ -106,19 +137,22 @@ The facing cue is a small triangle, separate from the blade. Nearby labels move 
 Worn cosmetic marks remain on the torso. Pause and frozen rehearsal review preserve
 the exact animation/contact state; restart/replacement clears old effects.
 
-[Execution and assessment](../../evidence/north-star-action-poses/RUN.json) includes
-41 matched rendered samples in source/PCK and the prior static PCK. All prior combat
-observations remain exact. [Counter motion](../../evidence/north-star-action-poses/source-counter.webm)
-and [Duelist draw](../../evidence/north-star-action-poses/source-draw.webm) are silent
-13-tick sequences encoded at 6fps (10× slowed), not real-time performance footage.
-The agent inspected composition, silhouette, motion and ownership; no independent
-participant has demonstrated recognition, comfort, accessibility or preference.
+The [prior actor-production record](../../evidence/north-star-action-poses/RUN.json)
+retains its version-specific 41-sample static-art control. Current [rendered execution](../../evidence/north-star-sentinel-resolution/rendered/rendering.json)
+compares 42 source/PCK samples, including shutdown after a normal-consumer route.
+Its pixel checks verify current delivery parity. The separate functional version
+comparison intentionally accepts changed pacing after the third counter; do not use an
+older different-rules PCK as an equivalent-model artwork control.
+The agent inspected composition, silhouette, state feedback and local contact; no
+independent participant has demonstrated recognition, comfort, accessibility or preference.
 
 Reproduce on Linux with Godot 4.6.3, Xorg/dummy-driver and FFmpeg installed:
 
 ```bash
 python3 north-star/prototype/tools/verify_actors.py --output /tmp/crossing-art
-# Optional: --baseline-pack /path/to/prior-crossing-drill.pck
+# Optional equivalent-model art baseline: --baseline-pack /path/to/prior.pck
+# Functional baseline for this increment (the unmodified prior PCK):
+python3 north-star/prototype/tools/verify_resolution.py --baseline-pack /path/to/prior.pck --output /tmp/resolution.json
 ```
 
 The runner uses an owned local display, isolated profiles and bounded engine processes,

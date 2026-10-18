@@ -16,7 +16,7 @@ import time
 
 ROOT = Path(__file__).resolve().parents[1]
 SELECTED = ('guardian-block', 'guardian-stale', 'counter-00', 'duelist-step',
-            'courier-hit', 'guardian-west-block', 'worn-mark')
+            'courier-hit', 'guardian-west-block', 'worn-mark', 'sentinel-disabled')
 
 
 def digest(path):
@@ -92,10 +92,12 @@ def verify(output, baseline=None, godot='godot'):
                     server.wait()
         if records['source'] != records['pack'] or hashes['source'] != hashes['pack']:
             raise ValueError('Actual source/PCK rendered observations or pixels differ')
-        if len(hashes['source']) != 41:
+        if len(hashes['source']) != 42:
             raise ValueError('Rendered action sequence incomplete')
         samples = records['source']['observations']
-        if (samples['guardian-block']['actors']['contact'] != 'protected'
+        if (samples['sentinel-disabled']['game'].get('enemy_focus') != 0
+                or samples['sentinel-disabled']['game']['mode'] != 'play'
+                or samples['guardian-block']['actors']['contact'] != 'protected'
                 or samples['counter-00']['actors']['contact'] != 'counter'
                 or samples['armor-strike']['actors']['contact']
                 or samples['courier-hit']['actors']['contact'] != 'courier_hit'
@@ -122,14 +124,14 @@ def verify(output, baseline=None, godot='godot'):
                         str(scratch / mode / (sequence + '-%02d.png')), '-c:v', 'libvpx-vp9',
                         '-pix_fmt', 'yuv420p', '-crf', '28', '-b:v', '0', '-an',
                         str(output / f'{mode}-{sequence}.webm')], env)
-        result = {'runtime': version, 'rendered_samples': 41, 'source_pack_observations_identical': True,
+        result = {'runtime': version, 'rendered_samples': 42, 'source_pack_observations_identical': True,
                   'source_pack_pixels_identical': True, 'baseline_combat_identical': True if baseline else None,
                   'baseline_pack_sha256': digest(baseline) if baseline else None, 'png_sha256': hashes,
                   'motion_scope': '13 real 60Hz model ticks encoded at 6fps for 10x slowed inspection; silent, not real-time performance.',
                   'limits': 'Controlled scene setups and synthetic commands; no human recognition, comfort or accessibility validation.',
                   'driver_logs': logs}
         (output / 'rendering.json').write_text(json.dumps(result, indent=2, sort_keys=True) + '\n')
-        print('PASS: 41 actual scene samples, source/PCK observations and pixels identical; '
+        print('PASS: 42 actual scene samples, source/PCK observations and pixels identical; '
               + ('baseline combat unchanged.' if baseline else 'no version baseline requested.'))
         return result
 

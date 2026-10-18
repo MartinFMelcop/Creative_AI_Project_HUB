@@ -2058,3 +2058,36 @@ changes. Stage/capability/origin states remain unchanged; no external player val
   accessibility validation, multiplayer, production-engine or commercial claim.
   No origin migration; fourteen capability states unchanged. The operational prompt
   already covers this production/verification contract and remains unchanged.
+
+
+## ADR-079 — Resolve the sentinel without making offense mandatory
+
+- **Status:** Accepted bounded implementation; experimental encounter tuning/fiction.
+- **Date/baseline:** 2026-10-18 UTC, `43fb743f231691d5b7b28dfd382b257cb95def30`.
+  Initial/fetched main equal, tracked tree clean, unrelated work/ preserved.
+- **Mode/priority:** DEVELOPMENT, category 1: improve the existing executable consumer.
+- **Audience/weakness:** players can counter but cannot resolve the threat source;
+  a successful blade only delays the same pattern until the escort timer expires.
+- **Alternatives:** another adventure increases content before encounter closure;
+  another build expands rules before giving current offense a lasting consequence;
+  another laboratory timing matrix does not improve this playable goal; a new generic
+  health/loot framework adds obligations beyond this bounded sentinel.
+- **Decision:** three eligible existing OPEN counters remove focus plates. Closed
+  armor, range, resource and commitment rejection do not. Shutdown cancels queued
+  threats, stays disabled and lets the courier run at 56 versus 28px/s. It neither
+  completes a dead/unarrived escort nor grants a new reward. Keep protective routes,
+  real medicine handoff, clean retries and original defense/contact/resource contracts.
+- **Brain use:** engineering high (ENG-004/005, observable requirements and invariants),
+  science medium (SCI-017, version control and rival explanations), creation high
+  (CRE-005 documented agency; CRE-012/055/087 hypotheses on opportunity, encounter
+  consequences and alternatives to an HP-only boss). No candidate MMO system/canon adopted.
+- **Evidence:** source/PCK native checks, actual key adapter and sound ownership,
+  six matched route policies per version, complete protective state traces and common
+  pre-third-counter prefixes against the prior untouched PCK. Normal-route rendered
+  shutdown shows a still-incomplete escort; remaining focus/core state is visible.
+- **Assessment/limits:** fixed policies, not participants or optimal strategies. The
+  faster route changes unfinished-task time as well as threat exposure. Threshold/speed
+  remain experimental; no fun, balance, learning, accessibility or retention claim.
+  Hide the now-unavailable feint range after inspecting the actual shutdown image.
+  No new lab, asset family, origin migration or capability-state promotion. Current
+  prompt already covers functional deltas/controls and remains unchanged.

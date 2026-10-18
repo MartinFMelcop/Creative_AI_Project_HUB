@@ -76,6 +76,22 @@ a small facing triangle, so the direction marker no longer reads as a second wea
 Revisit after independent observers assess recognition in actual play; agent inspection
 and source/PCK rendering are not that validation.
 
+## Optional threat resolution — experimental
+
+Primary DEVELOPMENT, category 1. Current author agency direction and CRE-005 (A)
+inform a real optional way to resolve the encounter. CRE-012/055/087 remain hypotheses,
+not adopted MMO boss/stability systems or canon. Instead of adding another arena, class
+or HP-only boss, three eligible existing close counters break this sentinel's focus.
+The third closes queued threats; the courier runs at twice walking pace. It is still
+an escort, not an instant victory or a new kill-reward requirement. Protect-only routes
+remain complete. Unfinished medicine delivery still needs the actual moving handoff.
+
+ENG-004/005 supply requirements/state invariants; SCI-017 supplies a prior-PCK control
+and matching mechanical prefixes. Fixed policy timing is not balance, fun, risk
+preference or unassisted human understanding. The threshold and speed are prototype
+choices, not author-approved production tuning. Revisit after player observation and
+materially different route policies. No permanent account progression or origin transfer.
+
 ## Current product contract
 
 The player chooses one experimental approach, escorts the courier to the far gate,
@@ -83,7 +99,9 @@ responds to a locked bolt and a ground pulse, and sees success or loss. Guard dr
 posture, locks facing and slows movement; impact consumes more. Feint redirects an
 eligible warning within range and spends resolve; movement/step must then leave its
 locked line. A step changes position without invulnerability. Both can walk, strike,
-pause, retry and change approach. A reachable OPEN counter delays the next threat.
+pause, retry and change approach. A reachable OPEN counter delays the next threat and removes one of three focus plates.
+The third disables this attempt's sentinel, cancels its pending attack and makes the
+courier run at 56px/s rather than 28px/s. Survival and gate arrival still own success.
 
 Optional **T** rehearsal precedes or can be skipped for the same crossing. Enter arms
 one trial; contact or missed opening freezes a review. Enter retries failure or advances

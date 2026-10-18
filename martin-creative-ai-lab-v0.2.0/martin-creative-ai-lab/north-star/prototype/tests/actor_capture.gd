@@ -1,5 +1,6 @@
 extends SceneTree
 ## Controlled real-consumer action sequence. No participant or real-time claim.
+const Policy=preload("res://tests/policy.gd")
 const Combat=preload("res://combat.gd")
 var scene
 var folder := ""
@@ -51,6 +52,12 @@ func run():
 	start("Guardian");scene.game.player=Vector2(900,390);scene.game.courier=Vector2(960,390);scene.game.target=scene.game.courier;scene.game.phase="bolt";scene.game.clock=.89
 	advance({"skill":true,"aim":Vector2.LEFT},8);await capture("guardian-west-block")
 	scene.keepsakes.earned.clear();scene.keepsakes.earned.append("held_line");scene.keepsakes.equipped="held_line";await capture("worn-mark")
+	scene.keepsakes.equipped="";scene.keepsakes.earned.clear()
+	start("Duelist")
+	for i in 2400:
+		advance(Policy.command(scene.game))
+		if scene.game.get("enemy_focus")==0:break
+	await capture("sentinel-disabled")
 	var file=FileAccess.open(folder.path_join("presentation.json"),FileAccess.WRITE)
 	file.store_string(JSON.stringify({"scope":"Prepared actual scene with controlled model ticks between rendered frames. Original code-drawn art; no external source images. Not real-time performance or a participant.","observations":observations},"  ")+"\n");file.close()
 	scene.queue_free();await create_timer(.8).timeout;quit(0)

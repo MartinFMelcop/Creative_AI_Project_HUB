@@ -1,0 +1,811 @@
+{
+  "schema_version": 1,
+  "kind": "destination_execution",
+  "recorded_at_utc": "2026-10-18T19:42:15.734239+00:00",
+  "baseline_commit": "43fb743f231691d5b7b28dfd382b257cb95def30",
+  "branch": "codex/north-star-sentinel-resolution-20261018",
+  "mode": "DEVELOPMENT",
+  "priority_category": 1,
+  "capability_ids": [
+    "NS-C03",
+    "NS-C07"
+  ],
+  "consumer_paths": [
+    "north-star/prototype/arena.gd",
+    "north-star/prototype/combat.gd",
+    "north-star/prototype/rehearsal.gd",
+    "north-star/prototype/keepsakes.gd",
+    "north-star/prototype/errand.gd",
+    "north-star/prototype/controls.gd",
+    "north-star/prototype/sound.gd",
+    "north-star/prototype/actors.gd"
+  ],
+  "runtime": "Godot 4.6.3-stable (official); Python 3.12.14; Linux x86_64; Xorg dummy display, Mesa llvmpipe compatibility rendering; FFmpeg VP9.",
+  "scope": "Optional sentinel shutdown and consequential safe-road pace in the actual local Virgo Diamond crossing. Gate/survival remain necessary and protective completion remains valid.",
+  "checks": {
+    "failed": 0,
+    "passed": 313
+  },
+  "commands": [
+    {
+      "command": [
+        "python3",
+        "north-star/prototype/tools/verify.py",
+        "--output",
+        "/tmp/ns-resolution-baseline.json",
+        "--compare",
+        "evidence/north-star-action-poses/results.json"
+      ],
+      "exit_code": 0,
+      "source_revision": "43fb743f231691d5b7b28dfd382b257cb95def30",
+      "result": "270 prior assertions, source/PCK parity and sixteen restarts."
+    },
+    {
+      "command": [
+        "godot",
+        "--headless",
+        "--path",
+        "north-star/prototype",
+        "--script",
+        "tools/pack.gd",
+        "--",
+        "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/prototype/dist/crossing-drill.pck"
+      ],
+      "exit_code": 0,
+      "environment": "Isolated temporary XDG data/config/cache",
+      "result": "Current consumer and native checks packed; Godot 4.6.3 still required."
+    },
+    {
+      "command": [
+        "python3",
+        "north-star/prototype/tools/verify.py",
+        "--output",
+        "evidence/north-star-sentinel-resolution/results.json"
+      ],
+      "exit_code": 0,
+      "result": "313 native assertions, exact source/PCK observations and code identity, sixteen restart processes."
+    },
+    {
+      "command": [
+        "python3",
+        "north-star/prototype/tools/verify_resolution.py",
+        "--baseline-pack",
+        "../../work/north-star-sentinel-resolution/baseline.pck",
+        "--output",
+        "evidence/north-star-sentinel-resolution/comparison.json"
+      ],
+      "exit_code": 0,
+      "result": "Six matched policies per form; source/PCK exact, complete protective common traces and pre-third-counter prefixes match the unchanged prior PCK."
+    },
+    {
+      "command": [
+        "python3",
+        "north-star/prototype/tools/verify_actors.py",
+        "--output",
+        "evidence/north-star-sentinel-resolution/rendered"
+      ],
+      "exit_code": 0,
+      "result": "42 current source/PCK rendered samples, identical observations/pixels. No equivalent-model artwork baseline requested because mechanics intentionally changed."
+    },
+    {
+      "command": [
+        "python3",
+        "north-star/prototype/tools/verify_sound.py",
+        "--output",
+        "evidence/north-star-sentinel-resolution/media.json"
+      ],
+      "exit_code": 0,
+      "result": "Actual source/PCK AudioServer, PCM/ownership/mute/pause controls. Native shutdown check also verifies stopping the real threat voice and retaining counter response."
+    },
+    {
+      "command": [
+        "python3",
+        "tools/test_brain_query.py"
+      ],
+      "exit_code": 0,
+      "result": "17 Python regressions passed; 109 total across seven suites."
+    },
+    {
+      "command": [
+        "python3",
+        "tools/test_validate_repo.py"
+      ],
+      "exit_code": 0,
+      "result": "27 Python regressions passed; 109 total across seven suites."
+    },
+    {
+      "command": [
+        "python3",
+        "tools/test_reference_library.py"
+      ],
+      "exit_code": 0,
+      "result": "42 Python regressions passed; 109 total across seven suites."
+    },
+    {
+      "command": [
+        "python3",
+        "tools/test_check_manifest.py"
+      ],
+      "exit_code": 0,
+      "result": "11 Python regressions passed; 109 total across seven suites."
+    },
+    {
+      "command": [
+        "python3",
+        "north-star/prototype/tools/test_verify.py"
+      ],
+      "exit_code": 0,
+      "result": "3 Python regressions passed; 109 total across seven suites."
+    },
+    {
+      "command": [
+        "python3",
+        "north-star/prototype/tools/test_verify_sound.py"
+      ],
+      "exit_code": 0,
+      "result": "6 Python regressions passed; 109 total across seven suites."
+    },
+    {
+      "command": [
+        "python3",
+        "north-star/prototype/tools/test_verify_resolution.py"
+      ],
+      "exit_code": 0,
+      "result": "3 Python regressions passed; 109 total across seven suites."
+    },
+    {
+      "command": [
+        "python3",
+        "tools/validate_repo.py"
+      ],
+      "exit_code": 0,
+      "result": "11 projects, 15 transfers, 11 assets, 597 links"
+    },
+    {
+      "command": [
+        "python3",
+        "tools/reference_library.py",
+        "check"
+      ],
+      "exit_code": 0,
+      "result": "607 preserved sources, 18 derived PDF texts, 140 exclusions, 14 capabilities"
+    },
+    {
+      "command": [
+        "python3",
+        "tools/brain_query.py",
+        "check"
+      ],
+      "exit_code": 0,
+      "result": "234 chapters; supplied sources and integrity pins unchanged"
+    },
+    {
+      "command": [
+        "python3",
+        "tools/check_manifest.py"
+      ],
+      "exit_code": 0,
+      "result": "1,411 files; exact maintained coverage and matching hashes."
+    }
+  ],
+  "source_artifacts": [
+    {
+      "local_path": "north-star/prototype/.gitignore",
+      "sha256": "531d0d253cec1addb97b2cb2d144b6589ff934513eb9c9b8cf882cb49e4c0c32",
+      "size_bytes": 8
+    },
+    {
+      "local_path": "north-star/prototype/README.md",
+      "sha256": "eea29d4214b240e8c9017eef1cb459155582ebda21b6d50e5bb09a4621c3a0e1",
+      "size_bytes": 22786
+    },
+    {
+      "local_path": "north-star/prototype/actors.gd",
+      "sha256": "126de4b48172828af63c32847001a6956d77df7460e420d242c94c1ee8bc9218",
+      "size_bytes": 10024
+    },
+    {
+      "local_path": "north-star/prototype/arena.gd",
+      "sha256": "d47aea9a81ab01910fde470e3ce941880567d779ca22fa60cef8c8ef6fb1cdcf",
+      "size_bytes": 23379
+    },
+    {
+      "local_path": "north-star/prototype/arena.gd.uid",
+      "sha256": "1cd2fa44a912d470ad3de79f672223ff85436c4d1ab34701debf2e10a1a14fe2",
+      "size_bytes": 20
+    },
+    {
+      "local_path": "north-star/prototype/arena.tscn",
+      "sha256": "f794c485663f0ed318ddce6bb7a62bc9b2dbd3af02be4f166cca962c29382591",
+      "size_bytes": 154
+    },
+    {
+      "local_path": "north-star/prototype/combat.gd",
+      "sha256": "fa740028e771ff06993edffbfdd82051e281d068cbadcc5656c1af009930d045",
+      "size_bytes": 11983
+    },
+    {
+      "local_path": "north-star/prototype/combat.gd.uid",
+      "sha256": "8f28f645ef4d4bba1021b27bc39fed04c438124fd819cc32c3586f92b3c58f9f",
+      "size_bytes": 20
+    },
+    {
+      "local_path": "north-star/prototype/controls.gd",
+      "sha256": "4c88d0a49d2f64fab275cfc2e62b8956ea17019aaf26445f99ce1a21a58b4fb0",
+      "size_bytes": 7458
+    },
+    {
+      "local_path": "north-star/prototype/dist/crossing-drill.pck",
+      "sha256": "7c0be49d0992c07582c6372d166bc1977a510f3db262f2b44c3a5677a39e5a14",
+      "size_bytes": 158672
+    },
+    {
+      "local_path": "north-star/prototype/errand.gd",
+      "sha256": "2a2392fa86bd12544eba5f60ad74d35592c7d6fa207373ec11a1928a9e33e601",
+      "size_bytes": 3831
+    },
+    {
+      "local_path": "north-star/prototype/keepsakes.gd",
+      "sha256": "d7790dddbd25904069b0c1a6d5edb2f7d01bc02a375d608a4ec5a25262ddb6c9",
+      "size_bytes": 5848
+    },
+    {
+      "local_path": "north-star/prototype/project.godot",
+      "sha256": "8d4755b58f1179a9b5ec431579177371e784bca9703a17c88f4c7a6d4ee9385c",
+      "size_bytes": 414
+    },
+    {
+      "local_path": "north-star/prototype/provenance.json",
+      "sha256": "8365be0d5aee363b957bf8c2835ae8345f4bdbfb9a8e80bb8c92a47d63500453",
+      "size_bytes": 3106
+    },
+    {
+      "local_path": "north-star/prototype/rehearsal.gd",
+      "sha256": "507a27b7832cfc79522396132a0a5f3f32fec34dd443a8a35fc21102080252c9",
+      "size_bytes": 3187
+    },
+    {
+      "local_path": "north-star/prototype/sound.gd",
+      "sha256": "4404169ebb2d1711f20e6023292712bb2051f4075c4039d9e2db725b4b8fa80a",
+      "size_bytes": 4116
+    },
+    {
+      "local_path": "north-star/prototype/tests/actor_capture.gd",
+      "sha256": "762c21bc79f9b56664525273470e93b005b6a995f0594f4e8e6f9ad447933e96",
+      "size_bytes": 3933
+    },
+    {
+      "local_path": "north-star/prototype/tests/actor_checks.gd",
+      "sha256": "52f503ff8f98f5dfab8e44603887c38cb6c3a65b01a77d378e84437d4d9987e9",
+      "size_bytes": 6228
+    },
+    {
+      "local_path": "north-star/prototype/tests/controls_checks.gd",
+      "sha256": "aec1a8a26e262a3830714f9fa748923d8b27b9e51d2e93fa6b3b74c2ee3acf0c",
+      "size_bytes": 9525
+    },
+    {
+      "local_path": "north-star/prototype/tests/controls_restart.gd",
+      "sha256": "066f641273c045a97ea1ee6bd2ddd9469e452d6edab80bc36a426927da431b61",
+      "size_bytes": 1134
+    },
+    {
+      "local_path": "north-star/prototype/tests/dummy-display.conf",
+      "sha256": "6e29b633a631d42a995053cc0b2f9eb0274340c8118e7354e59d52cbfa70fb33",
+      "size_bytes": 676
+    },
+    {
+      "local_path": "north-star/prototype/tests/errand_checks.gd",
+      "sha256": "2f04534e200e82f08e01127a3b31c5dafacb5151c9635038bf6c14d33ac89094",
+      "size_bytes": 6353
+    },
+    {
+      "local_path": "north-star/prototype/tests/errand_policy.gd",
+      "sha256": "74f4d20501771d8697e79629aaa6e86cb5056211eae0ab860aa593cb5190cb9e",
+      "size_bytes": 655
+    },
+    {
+      "local_path": "north-star/prototype/tests/guard_capture.gd",
+      "sha256": "e6c60d8811c8e704dbfa20826202f645f576b3c9f78f1fb6fc90642a0604b519",
+      "size_bytes": 2903
+    },
+    {
+      "local_path": "north-star/prototype/tests/guard_checks.gd",
+      "sha256": "cf2a8103bb4aa7fc8b61714ad36b43fbdd69d1a133f10b4530e863806ef3ed9b",
+      "size_bytes": 8738
+    },
+    {
+      "local_path": "north-star/prototype/tests/keepsake_checks.gd",
+      "sha256": "a8614cb0592ff8c403185b82f702c289abd42b78c783f4bc8f06d2ecaf211fcf",
+      "size_bytes": 9709
+    },
+    {
+      "local_path": "north-star/prototype/tests/keepsake_restart.gd",
+      "sha256": "8e9f107c310836324c51b1cbe1b2db618feadbd98b0cebbef12f75f39ab112c2",
+      "size_bytes": 1097
+    },
+    {
+      "local_path": "north-star/prototype/tests/policy.gd",
+      "sha256": "646f0758a211e84ffbfd4632460c7d1fc549cbb3b552801ee2508774a5a63e29",
+      "size_bytes": 979
+    },
+    {
+      "local_path": "north-star/prototype/tests/rehearsal_checks.gd",
+      "sha256": "0286d8997fdf1bd7ebad0b72a7283651678cfa30f85b2bd55e98e995c3f9b1f5",
+      "size_bytes": 6003
+    },
+    {
+      "local_path": "north-star/prototype/tests/render_journey.gd",
+      "sha256": "b0de7bc7cdd8795d55c0fdb8248c277c38ead3299714e7290c70df1a2c114e49",
+      "size_bytes": 992
+    },
+    {
+      "local_path": "north-star/prototype/tests/render_keepsakes.gd",
+      "sha256": "eafb1a071de871af521712b32f095a2d6c46f3424e85590c9e43c52310850359",
+      "size_bytes": 1502
+    },
+    {
+      "local_path": "north-star/prototype/tests/render_medicine.gd",
+      "sha256": "0716b982847fbd47dc596954c2f7a98f72e30e0fd6356aacc371e139be8455f1",
+      "size_bytes": 2215
+    },
+    {
+      "local_path": "north-star/prototype/tests/render_rehearsal.gd",
+      "sha256": "fc268d9764cfdd52874c8ea9f2f96aaeaa6f98ebede22dcbf412fe4692c6de42",
+      "size_bytes": 2254
+    },
+    {
+      "local_path": "north-star/prototype/tests/resolution_checks.gd",
+      "sha256": "15f40a5ff8b2d9350b78c6c3e064ffdab89fead0f761456fec75a1326edce8a0",
+      "size_bytes": 7842
+    },
+    {
+      "local_path": "north-star/prototype/tests/resolution_routes.gd",
+      "sha256": "fa5cfbd5f42c6ef59fc18fb85d61c2bcca2cd290395760a695bb6cc1575029e5",
+      "size_bytes": 2411
+    },
+    {
+      "local_path": "north-star/prototype/tests/run_checks.gd",
+      "sha256": "cc0fc1c161ab7278f905c760ff650f063cb9d659d7bb34df355d05831548fab8",
+      "size_bytes": 7879
+    },
+    {
+      "local_path": "north-star/prototype/tests/sound_capture.gd",
+      "sha256": "1a0df88986619fbee9eb48c078726217409acb853e8821f2fcc3c660ceb07ad1",
+      "size_bytes": 5091
+    },
+    {
+      "local_path": "north-star/prototype/tests/sound_checks.gd",
+      "sha256": "c5c3496c2e5ef796399d3884b34b7547c55c4af9438a19220e484977dd2d0569",
+      "size_bytes": 5627
+    },
+    {
+      "local_path": "north-star/prototype/tools/pack.gd",
+      "sha256": "80c2355ea58b8664afc428b22619577d6880f5be0157349ad18bb136523ced52",
+      "size_bytes": 964
+    },
+    {
+      "local_path": "north-star/prototype/tools/test_verify.py",
+      "sha256": "08898e09aba0e8ce07d37cab94d9b045904d5665b724864d5ef04fbce66c36e5",
+      "size_bytes": 1778
+    },
+    {
+      "local_path": "north-star/prototype/tools/test_verify_resolution.py",
+      "sha256": "67f382027a2dc81b320b2dbb5603e6ba26da8548bef00f5fc5b194cff81c5b00",
+      "size_bytes": 1830
+    },
+    {
+      "local_path": "north-star/prototype/tools/test_verify_sound.py",
+      "sha256": "d798752840c070a9673040d6debf1c1d07288c068c5c6d181cb44c777bbba5e7",
+      "size_bytes": 2570
+    },
+    {
+      "local_path": "north-star/prototype/tools/verify.py",
+      "sha256": "2b448e49bafb1d02f82d8f4c4db0c3783e698a1abeecde5a9889246ad1e94f74",
+      "size_bytes": 7514
+    },
+    {
+      "local_path": "north-star/prototype/tools/verify_actors.py",
+      "sha256": "fba45b699051831fd0ffd149d107e4e2ac0d0a3b3ba698840ecd4129491c2d49",
+      "size_bytes": 8434
+    },
+    {
+      "local_path": "north-star/prototype/tools/verify_resolution.py",
+      "sha256": "a66615936f81b8f92ecac7ea7f977d0b2e4bebed9e8685f5204197be314c350e",
+      "size_bytes": 4385
+    },
+    {
+      "local_path": "north-star/prototype/tools/verify_sound.py",
+      "sha256": "dd9f417a9e49803068da737a230031d44ae218b170904c06ebe024da4d92049e",
+      "size_bytes": 6367
+    }
+  ],
+  "result_artifacts": [
+    {
+      "local_path": "evidence/north-star-sentinel-resolution/comparison.json",
+      "sha256": "bfa579d1880c9fd413525cb66040b06f5fe84a1010a8178f6e3026df29c1f77b",
+      "size_bytes": 62810
+    },
+    {
+      "local_path": "evidence/north-star-sentinel-resolution/media.json",
+      "sha256": "e24a202f07dc97cfb92b930d4a79ec3100b2ccd2b6b3cc26978a5cf6399370a4",
+      "size_bytes": 34789
+    },
+    {
+      "local_path": "evidence/north-star-sentinel-resolution/rendered/pack-presentation.json",
+      "sha256": "bc1360b00ee364f2026e2cad7011c6f1904f5b65c2ad4ba4fd9ecc0832899813",
+      "size_bytes": 53391
+    },
+    {
+      "local_path": "evidence/north-star-sentinel-resolution/rendered/rendering.json",
+      "sha256": "fc69d3d5cb2b296d94d2a96105bce3a752ff23632f0a229e62ee5380191353f2",
+      "size_bytes": 8757
+    },
+    {
+      "local_path": "evidence/north-star-sentinel-resolution/rendered/source-counter-00.png",
+      "sha256": "7938817bef7351c256b17d71ccefb8ff41330ea7d0dcd5b58cca945ab444c722",
+      "size_bytes": 67472
+    },
+    {
+      "local_path": "evidence/north-star-sentinel-resolution/rendered/source-counter.webm",
+      "sha256": "26f06c39c251e6d731754bccea86ce8801031a87b0270d18e3a4054526cea664",
+      "size_bytes": 54444
+    },
+    {
+      "local_path": "evidence/north-star-sentinel-resolution/rendered/source-courier-hit.png",
+      "sha256": "747114c8aed8a7b79e45850ee743aee78c36bc88dc10666724cbdd9df06c145c",
+      "size_bytes": 69025
+    },
+    {
+      "local_path": "evidence/north-star-sentinel-resolution/rendered/source-draw.webm",
+      "sha256": "31684c60021a82493938a290a207c696dc327629921cb5cc0e4cf63208dafc9e",
+      "size_bytes": 59965
+    },
+    {
+      "local_path": "evidence/north-star-sentinel-resolution/rendered/source-duelist-step.png",
+      "sha256": "e2f705f8865ee28a28687997125bf554e9514c732c7bd5d9d8578a8c554d623f",
+      "size_bytes": 68381
+    },
+    {
+      "local_path": "evidence/north-star-sentinel-resolution/rendered/source-guardian-block.png",
+      "sha256": "629ff75aa17d474435e0f9d91ec8dac947ee8c7cc2adfce6d81b334832dbc22b",
+      "size_bytes": 70990
+    },
+    {
+      "local_path": "evidence/north-star-sentinel-resolution/rendered/source-guardian-stale.png",
+      "sha256": "84994ee8b7023d0be27265fdfdd5c83efd27ca395c723792fc837d457dc703c8",
+      "size_bytes": 67430
+    },
+    {
+      "local_path": "evidence/north-star-sentinel-resolution/rendered/source-guardian-west-block.png",
+      "sha256": "0a5686c865e47bc0821e0d5099e81b3922f10dede8a59145f3d20928b9e4cb57",
+      "size_bytes": 76897
+    },
+    {
+      "local_path": "evidence/north-star-sentinel-resolution/rendered/source-presentation.json",
+      "sha256": "bc1360b00ee364f2026e2cad7011c6f1904f5b65c2ad4ba4fd9ecc0832899813",
+      "size_bytes": 53391
+    },
+    {
+      "local_path": "evidence/north-star-sentinel-resolution/rendered/source-sentinel-disabled.png",
+      "sha256": "d9e5cde9768cc8a0d1d5417b1051f0227ae3490bd8489e3045100b8eb14c9e2b",
+      "size_bytes": 72817
+    },
+    {
+      "local_path": "evidence/north-star-sentinel-resolution/rendered/source-worn-mark.png",
+      "sha256": "0e379e948c6510bb77827932e7772eb615da52197444772dedbe9df4b879623c",
+      "size_bytes": 77386
+    },
+    {
+      "local_path": "evidence/north-star-sentinel-resolution/results.json",
+      "sha256": "62a4074fa9fdab4580415cf04194a70cc2dbd9e2c1f461d5e9e117e1364384a3",
+      "size_bytes": 94318
+    }
+  ],
+  "baseline_artifact": {
+    "git_commit": "43fb743f231691d5b7b28dfd382b257cb95def30",
+    "git_path": "martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/prototype/dist/crossing-drill.pck",
+    "sha256": "60e02cd01aa0e0140c900fc057a354db153ee5f905f5ad9197b2d89016e5dfb3",
+    "size_bytes": 145704,
+    "method": "Exact git-show extraction; never edited or repacked."
+  },
+  "brain_activation": {
+    "method": "Read current root/lab AGENTS, STATE/SEED/decisions/evolution/prompt, all three chapter indices, searched the catalog and retrieved full pertinent chapters. Inspected actual model/consumer/policies, origin/capability/asset registries and derived combat observations.",
+    "domains": {
+      "engineering": "high",
+      "scientific": "medium",
+      "creative": "high"
+    },
+    "chapters": {
+      "ENG-004": "Distinguish encounter-resolution need from an arbitrary generic HP/loot framework; specify observable acceptance.",
+      "ENG-005": "Single focus-state authority, terminal threat cancellation, survival ownership and clean reset.",
+      "SCI-017": "Unmodified prior version, same policies, complete protective traces and matched pre-transition mechanical fields; no participant inference.",
+      "CRE-005": "A: agency changes action/consequence while preserving meaningful alternatives.",
+      "CRE-012": "H: resource/position/opening commitments; do not adopt a candidate MMO stability framework.",
+      "CRE-055": "H: threats require legible alternatives rather than mandatory class compositions.",
+      "CRE-087": "H: encounter resolution and consequences beyond a decorative health bar; no borrowed boss/lore adopted."
+    }
+  },
+  "design": {
+    "audience": "Players trying protective versus mobile/offensive approaches in the existing crossing.",
+    "inspected_weakness": "Successful counters only reset threat delay; the source remains inexhaustible until the escort clock ends.",
+    "intention": "A bounded optional offensive route with visible causal closure, retaining the complete protective objective.",
+    "alternatives": [
+      {
+        "option": "Another adventure/arena",
+        "assessment": "More content before resolving the existing offense/encounter-closure weakness."
+      },
+      {
+        "option": "Additional build choice",
+        "assessment": "More rules before current close counters have a lasting encounter consequence."
+      },
+      {
+        "option": "Another standalone timing instrument",
+        "assessment": "Lower priority than direct executable agency; no blocking uncertainty requires a new lab."
+      },
+      {
+        "option": "Generic health, loot or boss framework",
+        "assessment": "Unnecessary obligations. Three current paid close counters and a real courier response suffice for this bounded test."
+      }
+    ],
+    "contracts": [
+      "Three valid close OPEN counters remove exactly three focus plates. Closed armor, range, resource, guard/step and cooldown failures do not.",
+      "Third counter alone makes phase disabled, clears opening/queued threats and stops subsequent threat production. Focus cannot underflow or farm further counters.",
+      "The courier actually runs at 56 rather than 28px/s after shutdown; main victory still requires gate arrival with both survivors. Dead courier cannot win and shutdown alone awards nothing.",
+      "Protect-only full routes remain successful. The optional case must still be recovered and actually handed back to the moving courier.",
+      "Reset/abandon/rehearsal repeat restores three plates and normal walking pace. No profile, persistent reward, class/canon or production-engine change.",
+      "Remaining plates/core state, hidden unavailable feint range and retained shutdown cause/tip reflect actual model; threat voice stops without suppressing accepted counter audio."
+    ]
+  },
+  "before_after": {
+    "prior_native_assertions": 270,
+    "current_native_assertions": 313,
+    "new_controls": 43,
+    "profiles_restart_processes": 16,
+    "python_regressions": 109,
+    "routes": {
+      "Duelist-Steady": {
+        "counter": {
+          "tick": 1262,
+          "seconds": 21.033333,
+          "hp": 5,
+          "cargo": 3,
+          "focus": 0,
+          "counters": 3,
+          "common_prefix_ticks": 724
+        },
+        "protect": {
+          "tick": 1800,
+          "seconds": 30.0,
+          "hp": 5,
+          "cargo": 3,
+          "focus": 3,
+          "counters": 0,
+          "common_prefix_ticks": 1800
+        }
+      },
+      "Guardian-Riposte": {
+        "counter": {
+          "tick": 1648,
+          "seconds": 27.466667,
+          "hp": 5,
+          "cargo": 3,
+          "focus": 0,
+          "counters": 3,
+          "common_prefix_ticks": 1496
+        },
+        "protect": {
+          "tick": 1800,
+          "seconds": 30.0,
+          "hp": 5,
+          "cargo": 2,
+          "focus": 3,
+          "counters": 0,
+          "common_prefix_ticks": 1800
+        }
+      },
+      "Guardian-Steady": {
+        "counter": {
+          "tick": 1648,
+          "seconds": 27.466667,
+          "hp": 5,
+          "cargo": 3,
+          "focus": 0,
+          "counters": 3,
+          "common_prefix_ticks": 1496
+        },
+        "protect": {
+          "tick": 1800,
+          "seconds": 30.0,
+          "hp": 5,
+          "cargo": 2,
+          "focus": 3,
+          "counters": 0,
+          "common_prefix_ticks": 1800
+        }
+      }
+    },
+    "version_control": "Comparison hashes every selected common mechanical state before the third counter (1496 Guardian / 724 Duelist frames) and all 1800 frames of each protective route. New focus/pace metadata and progress-message text are not old mechanical fields. Intended post-transition speed/phase/counter histories differ.",
+    "common_fields": "Legacy combat snapshots/events plus player position, phase/clock/cycle, facing/locked facing, guard age/state, opening, step state/direction, cooldowns, redirect and locked targets/pulse.",
+    "baseline_offensive_ticks": {
+      "Duelist-Steady": 1800,
+      "Guardian-Riposte": 1800,
+      "Guardian-Steady": 1800
+    },
+    "secure_then_recover": {
+      "combat": {
+        "cargo": 3,
+        "counters": {
+          "blocks": 0,
+          "counters": 3,
+          "courier_hits": 0,
+          "dodges": 2,
+          "player_hits": 0,
+          "redirects": 2,
+          "rejected": 0
+        },
+        "courier_speed": 56.0,
+        "courier_x": 1000.0,
+        "enemy_focus": 0,
+        "energy": 100.0,
+        "events": [
+          {
+            "cargo": 3,
+            "energy": 84.0,
+            "hp": 5,
+            "kind": "redirect",
+            "tick": 110
+          },
+          {
+            "cargo": 3,
+            "energy": 59.0,
+            "hp": 5,
+            "kind": "step",
+            "tick": 110
+          },
+          {
+            "cargo": 3,
+            "energy": 76.7,
+            "hp": 5,
+            "kind": "bolt_missed",
+            "tick": 169
+          },
+          {
+            "cargo": 3,
+            "energy": 72.5,
+            "hp": 5,
+            "kind": "counter",
+            "tick": 195
+          },
+          {
+            "cargo": 3,
+            "energy": 84.0,
+            "hp": 5,
+            "kind": "redirect",
+            "tick": 376
+          },
+          {
+            "cargo": 3,
+            "energy": 59.0,
+            "hp": 5,
+            "kind": "step",
+            "tick": 376
+          },
+          {
+            "cargo": 3,
+            "energy": 76.7,
+            "hp": 5,
+            "kind": "bolt_missed",
+            "tick": 435
+          },
+          {
+            "cargo": 3,
+            "energy": 72.5,
+            "hp": 5,
+            "kind": "counter",
+            "tick": 461
+          },
+          {
+            "cargo": 3,
+            "energy": 100.0,
+            "hp": 5,
+            "kind": "pulse_avoided",
+            "tick": 701
+          },
+          {
+            "cargo": 3,
+            "energy": 88.0,
+            "hp": 5,
+            "kind": "counter",
+            "tick": 725
+          },
+          {
+            "cargo": 3,
+            "energy": 88.0,
+            "hp": 5,
+            "kind": "sentinel_disabled",
+            "tick": 725
+          }
+        ],
+        "guard_style": "none",
+        "hp": 5,
+        "mode": "won",
+        "role": "Duelist",
+        "tick": 1262
+      },
+      "disabled_tick": 725,
+      "errand": {
+        "channel": false,
+        "events": [
+          {
+            "action": "dropped",
+            "tick": 515
+          },
+          {
+            "action": "recovered",
+            "tick": 852
+          },
+          {
+            "action": "delivered",
+            "tick": 957
+          },
+          {
+            "action": "crossing_won",
+            "tick": 1262
+          }
+        ],
+        "finished": true,
+        "progress": 0.0,
+        "state": "delivered"
+      },
+      "marks": {
+        "blocked": false,
+        "dirty": false,
+        "earned": [
+          "drew_danger"
+        ],
+        "equipped": "",
+        "status": "Saved locally."
+      }
+    }
+  },
+  "creative_assessment": {
+    "reviewer": "Implementing Codex agent, not independent human feedback.",
+    "inspected": "Actual viewport: focus plates after a counter, collapsed/dark core with ROAD CLEAR during a still-incomplete normal Duelist crossing, retained consequence text and case still available. Title/result/rehearsal explain the optional three-counter route.",
+    "refinement": "The first shutdown image retained a feint-range ring around an unavailable source. Hide it after inspecting that real output, rebuild the PCK and rerun the 42-sample source/PCK rendering check.",
+    "boundaries": "No claim that people recognize shutdown, enjoy the pace or prefer offense. Existing Guardian policy does not actively chase early openings, so its later completion is not a class limitation or comparative balance result."
+  },
+  "failure_controls": {
+    "missing_engine_or_baseline": "New verifier tests/CLI reject missing inputs without writing fabricated output.",
+    "false_before_control": "Actual current-feature PCK used as alleged prior control must reject rather than claim a speed improvement.",
+    "model_failures": "Armor/range/posture/commitment/cooldown, queued/stale threats, pause, reset, dead-courier priority and premature rewards covered in native checks.",
+    "environment": "Use the already established isolated-XDG and authorized local-display pattern. No environment failure was used to weaken a product gate."
+  },
+  "continuity": {
+    "seed": "0.33.9",
+    "stage": "local_prototype",
+    "consumer_count": 1,
+    "consumer_code_paths": 8,
+    "capabilities": "Fourteen statuses unchanged; NS-C03/07 adapted, twelve unchanged.",
+    "assets": "AUD-006 and VIS-004 gain current state evidence; eleven resources total, no new family or P07/P08 media import.",
+    "knowledge": "Existing combat-response lesson extended with optional offense, main-goal ownership and fixed-policy limits.",
+    "origins": "No new lab or extraction. P01-P05/P07/P08/P10/P11 preserved_pending_extraction; P06 pilot_instrumented; P09 seed_only.",
+    "prompt": "Unchanged: existing functional-delta, controlled-baseline, actual-output and honest-validation instructions already apply.",
+    "prompt_sha256": "4c82aef691f606f2cd9bfe0192deeeaaabbd35bd489e4f006f633580045557b0"
+  },
+  "limitations": [
+    "Deterministic policies and synthetic/native input, not independent people, optimal strategies, class balance, learning, preference, fun or accessibility validation.",
+    "Shutdown timing and two-times pace are experimental local encounter choices, not approved production combat/boss systems, canon or commercial signals.",
+    "Prepared rendering and 10x slowed silent clips are not real-time/hardware latency, physical listening or all-device performance measurements. Pixel equality is scoped to one renderer/environment.",
+    "No multiplayer, server/account persistence, shared-world consequence, production-engine selection, new reward tier, origin migration or new laboratory.",
+    "Immutable brain/source bytes and rights/provenance remain unchanged; no third-party media imported or exclusive-rights claim."
+  ],
+  "repository_validation": {
+    "python_regressions": 109,
+    "registry_gate": "11 projects, 15 transfers, 11 assets, two legacy sources and 597 local links.",
+    "references_gate": "Five records, 607 preserved sources, 18 derived PDF texts, 140 exclusions, fourteen capabilities.",
+    "brain_gate": "234 chapters, unchanged supplied bytes/pins; inherited fragment warnings retained.",
+    "manifest": "1,411 maintained files covered exactly once; all SHA-256 hashes pass.",
+    "ci_scope": "Native CI executes 313 source/PCK checks, actual mixer controls and new verifier failure tests. Current source/PCK pixel comparison is the separately recorded local run."
+  }
+}

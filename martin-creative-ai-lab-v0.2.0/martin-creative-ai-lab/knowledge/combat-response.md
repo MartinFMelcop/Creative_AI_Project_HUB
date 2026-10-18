@@ -193,3 +193,24 @@ pass and were moved/shaped separately. **Validity:** these are scoped implementa
 and agent creative observations, not player recognition, class identity, comfort,
 accessibility, balance or real-time performance evidence. No reusable origin atlas was
 extracted, no new lab created, and no source/reference rights were altered.
+
+## Optional offense must change the encounter without owning its only victory
+
+**Question/context:** At `43fb743`, a counter only delays an inexhaustible threat until
+the courier finishes. Can optional close responses resolve the source while protection
+still completes? **Source:** [shutdown execution](../evidence/north-star-sentinel-resolution/RUN.json),
+ENG-004/005, SCI-017, CRE-005 and CRE-012/055/087. **Observation:** three valid counters
+stop threat production; the courier actually doubles its pace, while gate/survival
+remain necessary. Armor misses and rejected attempts cannot remove focus or farm a
+post-shutdown counter. Prior-PCK controls preserve entire protective routes and common
+position/resource/threat/commitment state prefixes before the third counter.
+
+The tested offensive routes finish at ticks 1648 (Guardian variants) and 1262 (Duelist),
+versus 1800 protective. A Duelist shutdown-first route recovers at tick 852 and hands
+over at 957 before reaching the gate at 1262. These are observed fixed-policy schedules,
+not optimality, comparative class balance, participant preference or a general medicine
+strategy. **Interpretation/consequence:** expose a bounded offensive consequence while
+keeping support/protection a complete goal path. Cancel stale callbacks on terminal
+threat state, retain main-objective ownership and show why the courier's pace changes.
+**Validity:** one deterministic local encounter, scripted/native and rendered execution;
+no human judgment, multiplayer, canonical boss system, commercial signal or origin migration.

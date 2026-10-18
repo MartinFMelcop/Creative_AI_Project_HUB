@@ -4,6 +4,8 @@ extends RefCounted
 const FIELD := Rect2(50, 185, 1052, 460)
 const ENEMY := Vector2(790, 390)
 const FINISH := 1000.0
+const SENTINEL_FOCUS := 3
+var enemy_focus := SENTINEL_FOCUS
 var role := "Guardian"
 var guard_style := "Steady"
 var mode := "title"
@@ -45,6 +47,7 @@ func reset(kind: String, style: String="Steady") -> void:
 	locked_face = facing
 	hp = 5
 	cargo = 3
+	enemy_focus = SENTINEL_FOCUS
 	energy = 100
 	elapsed = 0
 	phase = "rest"
@@ -80,6 +83,15 @@ static func segment_distance(point: Vector2, a: Vector2, b: Vector2) -> float:
 	var ab := b-a
 	if ab.length_squared()<0.001: return point.distance_to(a)
 	return point.distance_to(a+ab*clampf((point-a).dot(ab)/ab.length_squared(),0,1))
+
+func sentinel_disabled() -> bool:
+	return enemy_focus==0
+
+func courier_speed() -> float:
+	return 56.0 if sentinel_disabled() else 28.0
+
+func sentinel_status() -> String:
+	return "DISABLED / ROAD CLEAR" if sentinel_disabled() else "FOCUS %d / 3"%enemy_focus
 
 func guard_limit() -> float:
 	return 0.30 if guard_style=="Riposte" else 10000.0
@@ -136,7 +148,8 @@ func step(delta: float, input: Dictionary) -> void:
 			record("redirect")
 			note("You drew the bolt. Leave the locked amber line.")
 		else:
-			if phase!="bolt": reject("Feint waits for an amber bolt warning.")
+			if sentinel_disabled(): reject("Sentinel disabled. The courier runs; medicine is still optional.")
+			elif phase!="bolt": reject("Feint waits for an amber bolt warning.")
 			elif redirected: reject("This bolt is already drawn. Leave its locked line.")
 			elif player.distance_to(ENEMY)>340: reject("Outside feint range. Move inside the sentinel's ring.")
 			elif energy<16: reject("Feint needs 16 resolve. Keep moving while it recovers.")
@@ -157,7 +170,9 @@ func step(delta: float, input: Dictionary) -> void:
 	else: player+=move.limit_length()*dt*(250 if not guard else 85)
 	player=player.clamp(FIELD.position+Vector2(20,20),FIELD.end-Vector2(20,20))
 	if bool(input.get("strike",false)):
-		if strike_cooldown<=0 and energy>=12 and step_left<=0 and not guard:
+		if sentinel_disabled():
+			reject("Sentinel disabled. Keep the courier alive to the gate.")
+		elif strike_cooldown<=0 and energy>=12 and step_left<=0 and not guard:
 			energy-=12
 			strike_cooldown=0.45
 			if player.distance_to(ENEMY)<=130 and opening>0:
@@ -165,29 +180,36 @@ func step(delta: float, input: Dictionary) -> void:
 				opening=0
 				clock=-1.2 # A reachable counter buys a real interval for the courier.
 				record("counter")
-				note("Clean counter. The courier gains breathing room.")
+				enemy_focus=maxi(0,enemy_focus-1)
+				if sentinel_disabled():
+					phase="disabled";clock=0;redirected=false
+					record("sentinel_disabled")
+					note("Sentinel disabled. The courier runs along the cleared road.")
+					retain_impact("sentinel_disabled","Three close counters broke the sentinel's focus.","The courier runs at twice its walking speed. Reach the gate; medicine remains optional.")
+				else:note("Clean counter. Sentinel focus %d / 3; courier gains time."%enemy_focus)
 			else:
 				if player.distance_to(ENEMY)>130: note("Blade fell short. Close within 130px during OPEN.")
 				else: note("Armor held. Wait for an OPEN response window.")
 		else: reject("Finish guard / step recovery and keep 12 resolve to strike.")
-	courier.x=minf(FINISH,courier.x+dt*28)
-	clock+=dt
-	if phase=="rest" and clock>=1.8:
-		cycle+=1
-		clock=0
-		redirected=false
-		if cycle%3==0:
-			phase="pulse"
-			pulse=player
-			note("PULSE: walk or step out of the red circle. Shield cannot stop the ground.")
-		else:
-			phase="bolt"
-			target=courier+Vector2(28,0)
-			note("BOLT: intercept facing the sentinel, or draw its aim with a feint.")
-	elif phase in ["bolt","pulse"] and clock>=1.0:
-		resolve_threat()
-		phase="rest"
-		clock=0
+	courier.x=minf(FINISH,courier.x+dt*courier_speed())
+	if not sentinel_disabled():
+		clock+=dt
+		if phase=="rest" and clock>=1.8:
+			cycle+=1
+			clock=0
+			redirected=false
+			if cycle%3==0:
+				phase="pulse"
+				pulse=player
+				note("PULSE: walk or step out of the red circle. Shield cannot stop the ground.")
+			else:
+				phase="bolt"
+				target=courier+Vector2(28,0)
+				note("BOLT: intercept facing the sentinel, or draw its aim with a feint.")
+		elif phase in ["bolt","pulse"] and clock>=1.0:
+			resolve_threat()
+			phase="rest"
+			clock=0
 	if cargo<=0 or hp<=0:
 		mode="lost"
 		note("The crossing failed. Read the last impact, then try a different response.")
@@ -196,6 +218,7 @@ func step(delta: float, input: Dictionary) -> void:
 		note("The courier reached the gate. Your approach changed how the line was held.")
 
 func resolve_threat() -> void:
+	if sentinel_disabled():return
 	if phase=="pulse":
 		if player.distance_to(pulse)<90:
 			hp-=1
@@ -250,4 +273,4 @@ func resolve_threat() -> void:
 		retain_impact("bolt_missed","The locked bolt hit neither you nor the courier.","An OPEN window follows. Close the distance before a blade counter.")
 
 func snapshot() -> Dictionary:
-	return {"role":role,"guard_style":guard_style,"mode":mode,"tick":roundi(elapsed*60),"hp":hp,"cargo":cargo,"energy":snappedf(energy,0.001),"courier_x":snappedf(courier.x,0.001),"counters":counters.duplicate(),"events":events.duplicate(true)}
+	return {"role":role,"guard_style":guard_style,"enemy_focus":enemy_focus,"courier_speed":courier_speed(),"mode":mode,"tick":roundi(elapsed*60),"hp":hp,"cargo":cargo,"energy":snappedf(energy,0.001),"courier_x":snappedf(courier.x,0.001),"counters":counters.duplicate(),"events":events.duplicate(true)}

@@ -144,6 +144,15 @@ func draw_courier(canvas, game) -> void:
 func draw_sentinel(canvas, game) -> void:
 	var at: Vector2=Combat.ENEMY
 	if sentinel_left>0:at+=(Combat.ENEMY-game.player).normalized()*5*sentinel_left/0.24
+	if game.sentinel_disabled():
+		# Collapsed shutters and a dark core are actual state, not a transient victory effect.
+		polygon(canvas,[at+Vector2(-32,12),at+Vector2(-12,2),at+Vector2(-5,23),at+Vector2(-27,27)],Color("47555c"))
+		polygon(canvas,[at+Vector2(32,12),at+Vector2(12,2),at+Vector2(5,23),at+Vector2(27,27)],Color("47555c"))
+		canvas.draw_line(at+Vector2(-7,6),at+Vector2(7,20),PAPER,3,true)
+		canvas.draw_line(at+Vector2(7,6),at+Vector2(-7,20),PAPER,3,true)
+		return
+	for i in 3:
+		canvas.draw_rect(Rect2(at+Vector2(-18+i*14,35),Vector2(9,5)),PAPER if i<game.enemy_focus else Color("34424a"))
 	var opened: bool=game.opening>0
 	var charging: bool=game.phase in ["bolt","pulse"]
 	var color: Color=TEAL if opened else RED

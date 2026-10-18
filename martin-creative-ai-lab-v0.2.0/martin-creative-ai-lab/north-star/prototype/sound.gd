@@ -77,6 +77,7 @@ func observe(game, suspended: bool=false) -> void:
 		silence();model=game;phase="rest" if game.elapsed==0 else game.phase;mode=game.mode;cursor=game.events.size();history.clear()
 	if suspended:
 		silence();phase="rest" if game.elapsed==0 else game.phase;mode=game.mode;cursor=game.events.size();return
+	if game.sentinel_disabled():voices[0].stop()
 	# Consume event history even while muted: unmute never replays stale threats/hits.
 	if game.phase!=phase and game.phase in ["bolt","pulse"] and game.mode=="play":cue(game.phase,roundi(game.elapsed*60))
 	for i in range(cursor,game.events.size()):
