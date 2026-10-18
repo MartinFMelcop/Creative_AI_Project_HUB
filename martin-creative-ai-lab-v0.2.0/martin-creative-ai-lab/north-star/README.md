@@ -9,6 +9,8 @@ without being eleven independently obligated products.
 
 F1 offers recoverable twelve-action keyboard remapping with matching live hints and
 explicit draft/apply/discard/default restoration; settings remain device-local.
+F1/H and F1/I independently offer session-only single-press guard/interaction; pause,
+settings, focus loss and completed work disarm active intentions. Hold stays default.
 
 ## Actual stage and creative authority
 
@@ -25,7 +27,7 @@ experimental mechanics, revisions and rejected alternatives. Current primary mod
 DEVELOPMENT, priority category 1: improve this existing consumer. Optional rehearsal
 uses the same combat rules, preserves causal review and starts a clean normal crossing.
 The three prepared exercises do not demonstrate human learning or sustained resource
-management. [Current execution](../evidence/north-star-sentinel-resolution/RUN.json) records protective completion, optional
+management. [Prior threat-resolution execution](../evidence/north-star-sentinel-resolution/RUN.json) records protective completion, optional
 offensive shutdown and the causal controls. Completed normal crossings
 with a signature response can earn its approach’s mark, one of two experimental cosmetics. Explicit C selection
 is visible on the next crossing and restored after restart. Malformed/unknown profiles
@@ -35,6 +37,8 @@ At the first marker a medicine case falls off the road. Recover it and hand it b
 through nearby held interaction, or keep escorting. The courier and threats continue;
 movement/release cancel commitment. Distinct session outcomes require actual handoff,
 and neither choice changes the existing keepsake rules or adds persistent loot.
+[Current input execution](../evidence/north-star-toggle-input/RUN.json) demonstrates
+released presses and recoverable interruption, without human accessibility claims.
 Future selection should first inspect and improve this real consumer.
 
 The [Creative Brain](../brains/README.md) is the central creative knowledge base.

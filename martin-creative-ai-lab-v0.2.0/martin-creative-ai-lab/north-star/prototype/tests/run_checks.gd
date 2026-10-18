@@ -9,6 +9,7 @@ const ActorChecks = preload("res://tests/actor_checks.gd")
 const GuardChecks = preload("res://tests/guard_checks.gd")
 const SoundChecks = preload("res://tests/sound_checks.gd")
 const ControlsChecks = preload("res://tests/controls_checks.gd")
+const ToggleChecks = preload("res://tests/toggle_checks.gd")
 var passed := 0
 var failed := 0
 
@@ -115,14 +116,15 @@ func run() -> void:
 	var keepsakes: Dictionary=KeepsakeChecks.run(self)
 	var errands: Array[Dictionary]=ErrandChecks.run(self)
 	var controls: Dictionary=ControlsChecks.run(self)
+	var toggles: Dictionary=ToggleChecks.run(self)
 	var sound: Dictionary=SoundChecks.run(self)
 	var techniques: Dictionary=GuardChecks.run(self)
 	var actor_poses: Dictionary=ActorChecks.run(self)
 	var resolution: Dictionary=ResolutionChecks.run(self)
 	var identities={}
-	for name in ["combat.gd","arena.gd","arena.tscn","project.godot","tests/run_checks.gd","tests/policy.gd","rehearsal.gd","tests/rehearsal_checks.gd","keepsakes.gd","tests/keepsake_checks.gd","tests/keepsake_restart.gd","errand.gd","tests/errand_checks.gd","tests/errand_policy.gd","controls.gd","tests/controls_checks.gd","tests/controls_restart.gd","sound.gd","tests/sound_checks.gd","tests/sound_capture.gd","tests/guard_checks.gd","tests/guard_capture.gd","actors.gd","tests/actor_checks.gd","tests/actor_capture.gd","tests/resolution_checks.gd","tests/resolution_routes.gd"]:
+	for name in ["combat.gd","arena.gd","arena.tscn","project.godot","tests/run_checks.gd","tests/policy.gd","rehearsal.gd","tests/rehearsal_checks.gd","keepsakes.gd","tests/keepsake_checks.gd","tests/keepsake_restart.gd","errand.gd","tests/errand_checks.gd","tests/errand_policy.gd","controls.gd","tests/controls_checks.gd","tests/controls_restart.gd","sound.gd","tests/sound_checks.gd","tests/sound_capture.gd","tests/guard_checks.gd","tests/guard_capture.gd","actors.gd","tests/actor_checks.gd","tests/actor_capture.gd","tests/resolution_checks.gd","tests/resolution_routes.gd","tests/toggle_checks.gd","tests/toggle_fixture.gd"]:
 		identities[name]=FileAccess.get_sha256("res://"+name)
-	var report={"consumer_hashes":identities,"schema_version":1,"checks":{"passed":passed,"failed":failed},"runtime":Engine.get_version_info().string,"outcomes":results,"rehearsals":rehearsals,"keepsakes":keepsakes,"errands":errands,"controls":controls,"sound":sound,"guard_techniques":techniques,"actor_poses":actor_poses,"sentinel_resolution":resolution}
+	var report={"consumer_hashes":identities,"schema_version":1,"checks":{"passed":passed,"failed":failed},"runtime":Engine.get_version_info().string,"outcomes":results,"rehearsals":rehearsals,"keepsakes":keepsakes,"errands":errands,"controls":controls,"sound":sound,"guard_techniques":techniques,"actor_poses":actor_poses,"sentinel_resolution":resolution,"toggle_input":toggles}
 	var args=OS.get_cmdline_user_args()
 	if args.size()==1:
 		var file=FileAccess.open(args[0],FileAccess.WRITE)

@@ -47,6 +47,7 @@ func _ready() -> void:
 	queue_redraw()
 
 func abandon() -> void:
+	bindings.clear_intents()
 	errand=Errand.new()
 	normal_run=false
 	reward_checked=false
@@ -59,6 +60,7 @@ func abandon() -> void:
 	taps.clear()
 
 func begin_crossing() -> void:
+	bindings.clear_intents()
 	errand.reset()
 	normal_run=true
 	reward_checked=false
@@ -83,6 +85,7 @@ func _unhandled_key_input(event: InputEvent) -> void:
 	if event.echo:return
 	var key: int = event.physical_keycode
 	if key==0 or event.keycode in Controls.NAV:key=event.keycode
+	if key==KEY_ESCAPE:bindings.clear_intents()
 	if key==KEY_F12:capture();return
 	if controls_open:
 		controls_input(event,key);queue_redraw();return
@@ -95,11 +98,12 @@ func _unhandled_key_input(event: InputEvent) -> void:
 		if key==KEY_ESCAPE: rehearsal.toggle_pause(); taps.clear()
 		elif key==KEY_R and (rehearsal.paused or rehearsal.state!="live"): abandon()
 		elif key==KEY_ENTER:
+			if rehearsal.paused or rehearsal.state!="live":bindings.clear_intents()
 			if rehearsal.paused: rehearsal.toggle_pause()
 			elif rehearsal.confirm(): begin_crossing()
 			if rehearsal.active: game=rehearsal.game
 			taps.clear()
-		elif key==KEY_T and rehearsal.state!="live": rehearsal.repeat(); game=rehearsal.game; taps.clear()
+		elif key==KEY_T and rehearsal.state!="live": bindings.clear_intents();rehearsal.repeat(); game=rehearsal.game; taps.clear()
 	else:
 		if key==KEY_ENTER:
 			if game.mode in ["title","lost","won"]: begin_crossing()
@@ -120,6 +124,7 @@ func _unhandled_key_input(event: InputEvent) -> void:
 		if bindings.matches(event,"strike"): taps.strike=true
 		if bindings.matches(event,"skill"): taps.skill_pressed=true
 		if bindings.matches(event,"step"): taps.dodge=true
+		if bindings.matches(event,"interact"): taps.interact_pressed=true
 	sync_sound()
 	queue_redraw()
 
@@ -148,6 +153,12 @@ func controls_input(event: InputEventKey,key: int) -> void:
 	elif key==KEY_ENTER:controls_listening=true;controls_message="Press a new key. Esc cancels capture."
 	elif key==KEY_DELETE:controls_draft=Controls.DEFAULTS.duplicate();controls_message="Defaults in draft. S applies; Esc discards."
 	elif key==KEY_F5:sound.set_muted(not sound.muted)
+	elif key==KEY_H:
+		bindings.toggle_guard=not bindings.toggle_guard;bindings.clear_intents()
+		controls_message="Guard input changed for this session; combat timing and costs are unchanged."
+	elif key==KEY_I:
+		bindings.toggle_interact=not bindings.toggle_interact;bindings.clear_intents()
+		controls_message="Interaction input changed for this session; move or press again to cancel."
 	elif key==KEY_S:
 		bindings.apply(controls_draft);controls_message=bindings.status;taps.clear();bindings.quarantine()
 
@@ -158,8 +169,10 @@ func _physics_process(dt: float) -> void:
 	command.aim=bindings.vector("aim")
 	command.skill=bindings.down("skill")
 	command.interact=bindings.down("interact")
+	command=bindings.translate(command,game,errand if normal_run and not rehearsal.active else null)
 	if rehearsal.active: rehearsal.step(dt,command)
 	else: advance_crossing(dt,command)
+	bindings.settle_intents(game,errand if normal_run and not rehearsal.active else null)
 	taps.clear()
 	sync_sound()
 	queue_redraw()
@@ -264,7 +277,7 @@ func _draw() -> void:
 	text(game.player+Vector2(30 if game.player.x<140 else -65,47 if game.player.y<245 else -38),"YOU",14,c)
 	draw_header()
 	panel(Rect2(30,662,1092,86))
-	text(Vector2(48,686),"WASD move   •   ARROWS aim   •   J blade   •   K "+(("timed guard" if game.guard_style=="Riposte" else "hold guard") if game.role=="Guardian" else "feint bolt")+"   •   SPACE step   •   ESC pause",17)
+	text(Vector2(48,686),"WASD move   •   ARROWS aim   •   J blade   •   K "+(("timed guard" if game.guard_style=="Riposte" else ("toggle guard" if bindings.toggle_guard else "hold guard")) if game.role=="Guardian" else "feint bolt")+"   •   SPACE step   •   ESC pause",17)
 	text(Vector2(48,718),footer(),17,AMBER)
 	if rehearsal.active: rehearsal_overlay()
 	elif game.mode!="play": overlay()
@@ -287,7 +300,7 @@ func draw_header() -> void:
 	draw_rect(Rect2(40,130,300,12),Color("32475a"))
 	draw_rect(Rect2(40,130,300*game.energy/100,12),TEAL if game.role=="Guardian" else AMBER)
 	text(Vector2(355,142),"POSTURE" if game.role=="Guardian" else "RESOLVE",15)
-	if game.role=="Guardian":text(Vector2(460,142),"GUARD "+game.guard_state(),14,RED if game.guard_state()=="STALE" else PAPER)
+	if game.role=="Guardian":text(Vector2(460,142),"GUARD "+game.guard_state()+(" / TOGGLE" if bindings.toggle_guard else ""),14,RED if game.guard_state()=="STALE" else PAPER)
 	var progress: float=(game.courier.x-160)/(1000-160)
 	text(Vector2(750,111),("PAUSED" if rehearsal.paused else ("RESPONSE VERIFIED" if rehearsal.passed else rehearsal.state.to_upper())) if rehearsal.active else "CROSSING  %d%%"%roundi(progress*100),19)
 	draw_rect(Rect2(750,130,350,12),Color("32475a"))
@@ -321,7 +334,7 @@ func overlay() -> void:
 	elif game.mode=="paused":
 		text(Vector2(280,330),"Crossing paused",36)
 		text(Vector2(280,385),"ENTER / ESC resume     •     R abandon and choose",22)
-		text(Vector2(280,430),("Guard faces the direction locked when K was first held." if game.role=="Guardian" else "K draws an amber bolt only inside the sentinel's ring."),19)
+		text(Vector2(280,430),("Guard faces the direction locked when K was raised." if game.role=="Guardian" else "K draws an amber bolt only inside the sentinel's ring."),19)
 		text(Vector2(280,465),("Release K before turning. Steps move; they grant no immunity." if game.role=="Guardian" else "Leave the drawn line. Steps move; they grant no immunity."),19)
 		draw_impact(Vector2(130,530))
 		text(Vector2(130,617),"Optional case: hold E nearby to recover, then E near courier to hand over. Neither waits.",17,AMBER)
@@ -360,7 +373,7 @@ func draw_case(at: Vector2, scale_factor: float=1.0) -> void:
 		draw_line(at+Vector2(x,-6)*scale_factor,at+Vector2(x,6)*scale_factor,TEAL,3*scale_factor)
 
 func draw_controls() -> void:
-	draw_rect(Rect2(40,90,1072,560),INK)
+	draw_rect(Rect2(40,90,1072,660),INK)
 	text(Vector2(85,131),"KEYBOARD CONTROLS  /  "+("CAPTURE KEY" if controls_listening else "DRAFT"),27,TEAL)
 	text(Vector2(85,162),"UP / DOWN select  •  ENTER change  •  S apply  •  DELETE defaults  •  ESC close / cancel",18)
 	text(Vector2(85,190),"Physical positions / logical arrows. No combos. F5 sound: "+("OFF" if sound.muted else "ON")+" (session)",16,AMBER)
@@ -369,9 +382,11 @@ func draw_controls() -> void:
 		if index==controls_row:panel(Rect2(75,y-22,1000,28),Color("35505a"))
 		text(Vector2(95,y),Controls.LABELS[index],18)
 		text(Vector2(650,y),("Press key..." if index==controls_row and controls_listening else bindings.name_for(Controls.ACTIONS[index],controls_draft)),18,TEAL)
-	text(Vector2(85,586),"Unapplied changes" if controls_draft!=bindings.keys else "Draft matches active controls",17,AMBER)
-	text(Vector2(85,614),controls_message if not controls_message.is_empty() else bindings.status,16)
-	text(Vector2(85,640),"Closing does not start or resume play. Resume the attempt explicitly.",16)
+	text(Vector2(85,570),"H  Guardian input: "+("PRESS TO TOGGLE" if bindings.toggle_guard else "HOLD")+"   /   I  Interaction: "+("PRESS TO TOGGLE" if bindings.toggle_interact else "HOLD"),17,TEAL)
+	text(Vector2(85,596),"Session only. Pause / settings clear active toggles. Duelist K remains one press.",16,AMBER)
+	text(Vector2(85,622),"Unapplied changes" if controls_draft!=bindings.keys else "Draft matches active controls",17,AMBER)
+	text(Vector2(85,648),controls_message if not controls_message.is_empty() else bindings.status,16)
+	text(Vector2(85,682),"Closing does not start or resume play. Resume the attempt explicitly.",16)
 
 func footer() -> String:
 	if rehearsal.active:

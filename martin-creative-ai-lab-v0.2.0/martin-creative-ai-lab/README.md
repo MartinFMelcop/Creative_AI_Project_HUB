@@ -12,7 +12,8 @@ merits. The outer `martin-creative-ai-lab-v0.2.0/` name is historical packaging;
 
 Play the [North Star crossing prototype](north-star/prototype/README.md), or
 inspect its [living design](north-star/DESIGN.md) and
-[executed evidence](evidence/north-star-sentinel-resolution/RUN.json). Origin demonstrations and
+[executed evidence](evidence/north-star-toggle-input/RUN.json). Session-only single-press guard/interaction now remove sustained-key requirements
+without changing combat costs or saving active intentions. Origin demonstrations and
 the preserved lab remain distinct from this actual local consumer. Optional rehearsal
 uses its real rules with retained contact explanations and clean retries. Normal
 completion with an approach-specific response earns an optional visible keepsake;

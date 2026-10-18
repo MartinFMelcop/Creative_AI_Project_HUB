@@ -1,0 +1,1458 @@
+{
+  "deliveries": {
+    "pack": {
+      "block": {
+        "actors": {
+          "action": "idle",
+          "action_left": 0.0,
+          "contact": "protected",
+          "contact_angle": 0.0,
+          "contact_left": 0.24,
+          "courier_hurt_left": 0.0,
+          "cursor": 1,
+          "hurt_left": 0.0,
+          "pose": "guard_live",
+          "sentinel_left": 0.0,
+          "stride": 0.0
+        },
+        "cargo": 3,
+        "controls": {
+          "draft": {
+            "aim_down": 4194322,
+            "aim_left": 4194319,
+            "aim_right": 4194321,
+            "aim_up": 4194320,
+            "interact": 69,
+            "move_down": 83,
+            "move_left": 65,
+            "move_right": 68,
+            "move_up": 87,
+            "skill": 75,
+            "step": 32,
+            "strike": 74
+          },
+          "listening": false,
+          "message": "Interaction input changed for this session; move or press again to cancel.",
+          "open": false,
+          "profile": {
+            "blocked": false,
+            "dirty": false,
+            "guard_latched": false,
+            "interact_latched": false,
+            "keys": {
+              "aim_down": 4194322,
+              "aim_left": 4194319,
+              "aim_right": 4194321,
+              "aim_up": 4194320,
+              "interact": 69,
+              "move_down": 83,
+              "move_left": 65,
+              "move_right": 68,
+              "move_up": 87,
+              "skill": 75,
+              "step": 32,
+              "strike": 74
+            },
+            "status": "Defaults. Apply to save on this device.",
+            "toggle_guard": true,
+            "toggle_interact": true
+          },
+          "row": 0
+        },
+        "counters": {
+          "blocks": 1,
+          "counters": 0,
+          "courier_hits": 0,
+          "dodges": 0,
+          "player_hits": 0,
+          "redirects": 0,
+          "rejected": 0
+        },
+        "courier_speed": 28.0,
+        "courier_x": 338.0,
+        "enemy_focus": 3,
+        "energy": 68.2,
+        "errand": {
+          "channel": false,
+          "events": [],
+          "finished": false,
+          "progress": 0.0,
+          "state": "waiting"
+        },
+        "events": [
+          {
+            "cargo": 3,
+            "energy": 68.2,
+            "hp": 5,
+            "kind": "protected",
+            "tick": 60
+          }
+        ],
+        "guard_style": "Steady",
+        "hp": 5,
+        "keepsakes": {
+          "blocked": false,
+          "dirty": false,
+          "earned": [],
+          "equipped": "",
+          "status": "Session only. Earn a crossing mark to save."
+        },
+        "last_impact": {
+          "code": "bolt_blocked",
+          "explanation": "Your live frontal guard intercepted the bolt before the courier.",
+          "tip": "Release guard to recover posture. Strike only when OPEN and close."
+        },
+        "mode": "paused",
+        "rehearsal": {
+          "active": true,
+          "attempts": 1,
+          "passed": true,
+          "paused": false,
+          "results": [
+            {
+              "attempt": 1,
+              "impact": {
+                "code": "bolt_blocked",
+                "explanation": "Your live frontal guard intercepted the bolt before the courier.",
+                "tip": "Release guard to recover posture. Strike only when OPEN and close."
+              },
+              "passed": true,
+              "snapshot": {
+                "cargo": 3,
+                "counters": {
+                  "blocks": 1,
+                  "counters": 0,
+                  "courier_hits": 0,
+                  "dodges": 0,
+                  "player_hits": 0,
+                  "redirects": 0,
+                  "rejected": 0
+                },
+                "courier_speed": 28.0,
+                "courier_x": 338.0,
+                "enemy_focus": 3,
+                "energy": 68.2,
+                "events": [
+                  {
+                    "cargo": 3,
+                    "energy": 68.2,
+                    "hp": 5,
+                    "kind": "protected",
+                    "tick": 60
+                  }
+                ],
+                "guard_style": "Steady",
+                "hp": 5,
+                "mode": "paused",
+                "role": "Guardian",
+                "tick": 60
+              },
+              "stage": 0
+            }
+          ],
+          "stage": 0,
+          "state": "review"
+        },
+        "role": "Guardian",
+        "sound": {
+          "events": [
+            {
+              "cue": "bolt",
+              "tick": 0
+            },
+            {
+              "cue": "block",
+              "tick": 60
+            }
+          ],
+          "muted": false,
+          "voice_limit": 2
+        },
+        "tick": 60
+      },
+      "fresh": {
+        "actors": {
+          "action": "idle",
+          "action_left": 0.0,
+          "contact": "",
+          "contact_angle": 0.0,
+          "contact_left": 0.0,
+          "courier_hurt_left": 0.0,
+          "cursor": 0,
+          "hurt_left": 0.0,
+          "pose": "idle",
+          "sentinel_left": 0.0,
+          "stride": 0.0
+        },
+        "cargo": 3,
+        "controls": {
+          "draft": {},
+          "listening": false,
+          "message": "",
+          "open": false,
+          "profile": {
+            "blocked": false,
+            "dirty": false,
+            "guard_latched": false,
+            "interact_latched": false,
+            "keys": {
+              "aim_down": 4194322,
+              "aim_left": 4194319,
+              "aim_right": 4194321,
+              "aim_up": 4194320,
+              "interact": 69,
+              "move_down": 83,
+              "move_left": 65,
+              "move_right": 68,
+              "move_up": 87,
+              "skill": 75,
+              "step": 32,
+              "strike": 74
+            },
+            "status": "Defaults. Apply to save on this device.",
+            "toggle_guard": false,
+            "toggle_interact": false
+          },
+          "row": 0
+        },
+        "counters": {
+          "blocks": 0,
+          "counters": 0,
+          "courier_hits": 0,
+          "dodges": 0,
+          "player_hits": 0,
+          "redirects": 0,
+          "rejected": 0
+        },
+        "courier_speed": 28.0,
+        "courier_x": 400.0,
+        "enemy_focus": 3,
+        "energy": 100.0,
+        "errand": {
+          "channel": false,
+          "events": [],
+          "finished": false,
+          "progress": 0.0,
+          "state": "available"
+        },
+        "events": [],
+        "guard_style": "Steady",
+        "hp": 5,
+        "keepsakes": {
+          "blocked": false,
+          "dirty": false,
+          "earned": [],
+          "equipped": "",
+          "status": "Session only. Earn a crossing mark to save."
+        },
+        "last_impact": {},
+        "mode": "paused",
+        "rehearsal": {
+          "active": false,
+          "attempts": 0,
+          "passed": false,
+          "paused": false,
+          "results": [],
+          "stage": 0,
+          "state": "ready"
+        },
+        "role": "Guardian",
+        "sound": {
+          "events": [],
+          "muted": false,
+          "voice_limit": 2
+        },
+        "tick": 0
+      },
+      "paused": {
+        "actors": {
+          "action": "idle",
+          "action_left": 0.0,
+          "contact": "",
+          "contact_angle": 0.0,
+          "contact_left": 0.0,
+          "courier_hurt_left": 0.0,
+          "cursor": 0,
+          "hurt_left": 0.0,
+          "pose": "idle",
+          "sentinel_left": 0.0,
+          "stride": 0.0
+        },
+        "cargo": 3,
+        "controls": {
+          "draft": {
+            "aim_down": 4194322,
+            "aim_left": 4194319,
+            "aim_right": 4194321,
+            "aim_up": 4194320,
+            "interact": 69,
+            "move_down": 83,
+            "move_left": 65,
+            "move_right": 68,
+            "move_up": 87,
+            "skill": 75,
+            "step": 32,
+            "strike": 74
+          },
+          "listening": false,
+          "message": "Interaction input changed for this session; move or press again to cancel.",
+          "open": false,
+          "profile": {
+            "blocked": false,
+            "dirty": false,
+            "guard_latched": false,
+            "interact_latched": false,
+            "keys": {
+              "aim_down": 4194322,
+              "aim_left": 4194319,
+              "aim_right": 4194321,
+              "aim_up": 4194320,
+              "interact": 69,
+              "move_down": 83,
+              "move_left": 65,
+              "move_right": 68,
+              "move_up": 87,
+              "skill": 75,
+              "step": 32,
+              "strike": 74
+            },
+            "status": "Defaults. Apply to save on this device.",
+            "toggle_guard": false,
+            "toggle_interact": true
+          },
+          "row": 0
+        },
+        "counters": {
+          "blocks": 0,
+          "counters": 0,
+          "courier_hits": 0,
+          "dodges": 0,
+          "player_hits": 0,
+          "redirects": 0,
+          "rejected": 0
+        },
+        "courier_speed": 28.0,
+        "courier_x": 435.001,
+        "enemy_focus": 3,
+        "energy": 100.0,
+        "errand": {
+          "channel": false,
+          "events": [
+            {
+              "action": "recovered",
+              "tick": 57
+            }
+          ],
+          "finished": false,
+          "progress": 0.0,
+          "state": "carried"
+        },
+        "events": [],
+        "guard_style": "Steady",
+        "hp": 5,
+        "keepsakes": {
+          "blocked": false,
+          "dirty": false,
+          "earned": [],
+          "equipped": "",
+          "status": "Session only. Earn a crossing mark to save."
+        },
+        "last_impact": {},
+        "mode": "paused",
+        "rehearsal": {
+          "active": false,
+          "attempts": 0,
+          "passed": false,
+          "paused": false,
+          "results": [],
+          "stage": 0,
+          "state": "ready"
+        },
+        "role": "Guardian",
+        "sound": {
+          "events": [],
+          "muted": false,
+          "voice_limit": 2
+        },
+        "tick": 75
+      },
+      "raised": {
+        "actors": {
+          "action": "idle",
+          "action_left": 0.0,
+          "contact": "",
+          "contact_angle": 0.0,
+          "contact_left": 0.0,
+          "courier_hurt_left": 0.0,
+          "cursor": 0,
+          "hurt_left": 0.0,
+          "pose": "guard_live",
+          "sentinel_left": 0.0,
+          "stride": 0.0
+        },
+        "cargo": 3,
+        "controls": {
+          "draft": {
+            "aim_down": 4194322,
+            "aim_left": 4194319,
+            "aim_right": 4194321,
+            "aim_up": 4194320,
+            "interact": 69,
+            "move_down": 83,
+            "move_left": 65,
+            "move_right": 68,
+            "move_up": 87,
+            "skill": 75,
+            "step": 32,
+            "strike": 74
+          },
+          "listening": false,
+          "message": "Interaction input changed for this session; move or press again to cancel.",
+          "open": false,
+          "profile": {
+            "blocked": false,
+            "dirty": false,
+            "guard_latched": true,
+            "interact_latched": false,
+            "keys": {
+              "aim_down": 4194322,
+              "aim_left": 4194319,
+              "aim_right": 4194321,
+              "aim_up": 4194320,
+              "interact": 69,
+              "move_down": 83,
+              "move_left": 65,
+              "move_right": 68,
+              "move_up": 87,
+              "skill": 75,
+              "step": 32,
+              "strike": 74
+            },
+            "status": "Defaults. Apply to save on this device.",
+            "toggle_guard": true,
+            "toggle_interact": true
+          },
+          "row": 0
+        },
+        "counters": {
+          "blocks": 0,
+          "counters": 0,
+          "courier_hits": 0,
+          "dodges": 0,
+          "player_hits": 0,
+          "redirects": 0,
+          "rejected": 0
+        },
+        "courier_speed": 28.0,
+        "courier_x": 322.6,
+        "enemy_focus": 3,
+        "energy": 96.8,
+        "errand": {
+          "channel": false,
+          "events": [],
+          "finished": false,
+          "progress": 0.0,
+          "state": "waiting"
+        },
+        "events": [],
+        "guard_style": "Steady",
+        "hp": 5,
+        "keepsakes": {
+          "blocked": false,
+          "dirty": false,
+          "earned": [],
+          "equipped": "",
+          "status": "Session only. Earn a crossing mark to save."
+        },
+        "last_impact": {},
+        "mode": "play",
+        "rehearsal": {
+          "active": true,
+          "attempts": 1,
+          "passed": false,
+          "paused": false,
+          "results": [],
+          "stage": 0,
+          "state": "live"
+        },
+        "role": "Guardian",
+        "sound": {
+          "events": [
+            {
+              "cue": "bolt",
+              "tick": 0
+            }
+          ],
+          "muted": false,
+          "voice_limit": 2
+        },
+        "tick": 27
+      },
+      "recovered": {
+        "actors": {
+          "action": "idle",
+          "action_left": 0.0,
+          "contact": "",
+          "contact_angle": 0.0,
+          "contact_left": 0.0,
+          "courier_hurt_left": 0.0,
+          "cursor": 0,
+          "hurt_left": 0.0,
+          "pose": "idle",
+          "sentinel_left": 0.0,
+          "stride": 0.0
+        },
+        "cargo": 3,
+        "controls": {
+          "draft": {
+            "aim_down": 4194322,
+            "aim_left": 4194319,
+            "aim_right": 4194321,
+            "aim_up": 4194320,
+            "interact": 69,
+            "move_down": 83,
+            "move_left": 65,
+            "move_right": 68,
+            "move_up": 87,
+            "skill": 75,
+            "step": 32,
+            "strike": 74
+          },
+          "listening": false,
+          "message": "Interaction input changed for this session; move or press again to cancel.",
+          "open": false,
+          "profile": {
+            "blocked": false,
+            "dirty": false,
+            "guard_latched": false,
+            "interact_latched": false,
+            "keys": {
+              "aim_down": 4194322,
+              "aim_left": 4194319,
+              "aim_right": 4194321,
+              "aim_up": 4194320,
+              "interact": 69,
+              "move_down": 83,
+              "move_left": 65,
+              "move_right": 68,
+              "move_up": 87,
+              "skill": 75,
+              "step": 32,
+              "strike": 74
+            },
+            "status": "Defaults. Apply to save on this device.",
+            "toggle_guard": false,
+            "toggle_interact": true
+          },
+          "row": 0
+        },
+        "counters": {
+          "blocks": 0,
+          "counters": 0,
+          "courier_hits": 0,
+          "dodges": 0,
+          "player_hits": 0,
+          "redirects": 0,
+          "rejected": 0
+        },
+        "courier_speed": 28.0,
+        "courier_x": 433.134,
+        "enemy_focus": 3,
+        "energy": 100.0,
+        "errand": {
+          "channel": false,
+          "events": [
+            {
+              "action": "recovered",
+              "tick": 57
+            }
+          ],
+          "finished": false,
+          "progress": 0.0,
+          "state": "carried"
+        },
+        "events": [],
+        "guard_style": "Steady",
+        "hp": 5,
+        "keepsakes": {
+          "blocked": false,
+          "dirty": false,
+          "earned": [],
+          "equipped": "",
+          "status": "Session only. Earn a crossing mark to save."
+        },
+        "last_impact": {},
+        "mode": "play",
+        "rehearsal": {
+          "active": false,
+          "attempts": 0,
+          "passed": false,
+          "paused": false,
+          "results": [],
+          "stage": 0,
+          "state": "ready"
+        },
+        "role": "Guardian",
+        "sound": {
+          "events": [],
+          "muted": false,
+          "voice_limit": 2
+        },
+        "tick": 71
+      },
+      "recovery_samples": [
+        {
+          "errand": {
+            "channel": false,
+            "events": [
+              {
+                "action": "recovered",
+                "tick": 57
+              }
+            ],
+            "finished": false,
+            "progress": 0.0,
+            "state": "carried"
+          },
+          "intent": false,
+          "tick": 71
+        }
+      ],
+      "settings": {
+        "actors": {
+          "action": "idle",
+          "action_left": 0.0,
+          "contact": "",
+          "contact_angle": 0.0,
+          "contact_left": 0.0,
+          "courier_hurt_left": 0.0,
+          "cursor": 0,
+          "hurt_left": 0.0,
+          "pose": "idle",
+          "sentinel_left": 0.0,
+          "stride": 0.0
+        },
+        "cargo": 3,
+        "controls": {
+          "draft": {
+            "aim_down": 4194322,
+            "aim_left": 4194319,
+            "aim_right": 4194321,
+            "aim_up": 4194320,
+            "interact": 69,
+            "move_down": 83,
+            "move_left": 65,
+            "move_right": 68,
+            "move_up": 87,
+            "skill": 75,
+            "step": 32,
+            "strike": 74
+          },
+          "listening": false,
+          "message": "Interaction input changed for this session; move or press again to cancel.",
+          "open": true,
+          "profile": {
+            "blocked": false,
+            "dirty": false,
+            "guard_latched": false,
+            "interact_latched": false,
+            "keys": {
+              "aim_down": 4194322,
+              "aim_left": 4194319,
+              "aim_right": 4194321,
+              "aim_up": 4194320,
+              "interact": 69,
+              "move_down": 83,
+              "move_left": 65,
+              "move_right": 68,
+              "move_up": 87,
+              "skill": 75,
+              "step": 32,
+              "strike": 74
+            },
+            "status": "Defaults. Apply to save on this device.",
+            "toggle_guard": true,
+            "toggle_interact": true
+          },
+          "row": 0
+        },
+        "counters": {
+          "blocks": 0,
+          "counters": 0,
+          "courier_hits": 0,
+          "dodges": 0,
+          "player_hits": 0,
+          "redirects": 0,
+          "rejected": 0
+        },
+        "courier_speed": 28.0,
+        "courier_x": 160.0,
+        "enemy_focus": 3,
+        "energy": 100.0,
+        "errand": {
+          "channel": false,
+          "events": [],
+          "finished": false,
+          "progress": 0.0,
+          "state": "waiting"
+        },
+        "events": [],
+        "guard_style": "Steady",
+        "hp": 5,
+        "keepsakes": {
+          "blocked": false,
+          "dirty": false,
+          "earned": [],
+          "equipped": "",
+          "status": "Session only. Earn a crossing mark to save."
+        },
+        "last_impact": {},
+        "mode": "title",
+        "rehearsal": {
+          "active": false,
+          "attempts": 0,
+          "passed": false,
+          "paused": false,
+          "results": [],
+          "stage": 0,
+          "state": "ready"
+        },
+        "role": "Guardian",
+        "sound": {
+          "events": [],
+          "muted": false,
+          "voice_limit": 2
+        },
+        "tick": 0
+      }
+    },
+    "source": {
+      "block": {
+        "actors": {
+          "action": "idle",
+          "action_left": 0.0,
+          "contact": "protected",
+          "contact_angle": 0.0,
+          "contact_left": 0.24,
+          "courier_hurt_left": 0.0,
+          "cursor": 1,
+          "hurt_left": 0.0,
+          "pose": "guard_live",
+          "sentinel_left": 0.0,
+          "stride": 0.0
+        },
+        "cargo": 3,
+        "controls": {
+          "draft": {
+            "aim_down": 4194322,
+            "aim_left": 4194319,
+            "aim_right": 4194321,
+            "aim_up": 4194320,
+            "interact": 69,
+            "move_down": 83,
+            "move_left": 65,
+            "move_right": 68,
+            "move_up": 87,
+            "skill": 75,
+            "step": 32,
+            "strike": 74
+          },
+          "listening": false,
+          "message": "Interaction input changed for this session; move or press again to cancel.",
+          "open": false,
+          "profile": {
+            "blocked": false,
+            "dirty": false,
+            "guard_latched": false,
+            "interact_latched": false,
+            "keys": {
+              "aim_down": 4194322,
+              "aim_left": 4194319,
+              "aim_right": 4194321,
+              "aim_up": 4194320,
+              "interact": 69,
+              "move_down": 83,
+              "move_left": 65,
+              "move_right": 68,
+              "move_up": 87,
+              "skill": 75,
+              "step": 32,
+              "strike": 74
+            },
+            "status": "Defaults. Apply to save on this device.",
+            "toggle_guard": true,
+            "toggle_interact": true
+          },
+          "row": 0
+        },
+        "counters": {
+          "blocks": 1,
+          "counters": 0,
+          "courier_hits": 0,
+          "dodges": 0,
+          "player_hits": 0,
+          "redirects": 0,
+          "rejected": 0
+        },
+        "courier_speed": 28.0,
+        "courier_x": 338.0,
+        "enemy_focus": 3,
+        "energy": 67.6,
+        "errand": {
+          "channel": false,
+          "events": [],
+          "finished": false,
+          "progress": 0.0,
+          "state": "waiting"
+        },
+        "events": [
+          {
+            "cargo": 3,
+            "energy": 67.6,
+            "hp": 5,
+            "kind": "protected",
+            "tick": 60
+          }
+        ],
+        "guard_style": "Steady",
+        "hp": 5,
+        "keepsakes": {
+          "blocked": false,
+          "dirty": false,
+          "earned": [],
+          "equipped": "",
+          "status": "Session only. Earn a crossing mark to save."
+        },
+        "last_impact": {
+          "code": "bolt_blocked",
+          "explanation": "Your live frontal guard intercepted the bolt before the courier.",
+          "tip": "Release guard to recover posture. Strike only when OPEN and close."
+        },
+        "mode": "paused",
+        "rehearsal": {
+          "active": true,
+          "attempts": 1,
+          "passed": true,
+          "paused": false,
+          "results": [
+            {
+              "attempt": 1,
+              "impact": {
+                "code": "bolt_blocked",
+                "explanation": "Your live frontal guard intercepted the bolt before the courier.",
+                "tip": "Release guard to recover posture. Strike only when OPEN and close."
+              },
+              "passed": true,
+              "snapshot": {
+                "cargo": 3,
+                "counters": {
+                  "blocks": 1,
+                  "counters": 0,
+                  "courier_hits": 0,
+                  "dodges": 0,
+                  "player_hits": 0,
+                  "redirects": 0,
+                  "rejected": 0
+                },
+                "courier_speed": 28.0,
+                "courier_x": 338.0,
+                "enemy_focus": 3,
+                "energy": 67.6,
+                "events": [
+                  {
+                    "cargo": 3,
+                    "energy": 67.6,
+                    "hp": 5,
+                    "kind": "protected",
+                    "tick": 60
+                  }
+                ],
+                "guard_style": "Steady",
+                "hp": 5,
+                "mode": "paused",
+                "role": "Guardian",
+                "tick": 60
+              },
+              "stage": 0
+            }
+          ],
+          "stage": 0,
+          "state": "review"
+        },
+        "role": "Guardian",
+        "sound": {
+          "events": [
+            {
+              "cue": "bolt",
+              "tick": 0
+            },
+            {
+              "cue": "block",
+              "tick": 60
+            }
+          ],
+          "muted": false,
+          "voice_limit": 2
+        },
+        "tick": 60
+      },
+      "fresh": {
+        "actors": {
+          "action": "idle",
+          "action_left": 0.0,
+          "contact": "",
+          "contact_angle": 0.0,
+          "contact_left": 0.0,
+          "courier_hurt_left": 0.0,
+          "cursor": 0,
+          "hurt_left": 0.0,
+          "pose": "idle",
+          "sentinel_left": 0.0,
+          "stride": 0.0
+        },
+        "cargo": 3,
+        "controls": {
+          "draft": {},
+          "listening": false,
+          "message": "",
+          "open": false,
+          "profile": {
+            "blocked": false,
+            "dirty": false,
+            "guard_latched": false,
+            "interact_latched": false,
+            "keys": {
+              "aim_down": 4194322,
+              "aim_left": 4194319,
+              "aim_right": 4194321,
+              "aim_up": 4194320,
+              "interact": 69,
+              "move_down": 83,
+              "move_left": 65,
+              "move_right": 68,
+              "move_up": 87,
+              "skill": 75,
+              "step": 32,
+              "strike": 74
+            },
+            "status": "Defaults. Apply to save on this device.",
+            "toggle_guard": false,
+            "toggle_interact": false
+          },
+          "row": 0
+        },
+        "counters": {
+          "blocks": 0,
+          "counters": 0,
+          "courier_hits": 0,
+          "dodges": 0,
+          "player_hits": 0,
+          "redirects": 0,
+          "rejected": 0
+        },
+        "courier_speed": 28.0,
+        "courier_x": 400.0,
+        "enemy_focus": 3,
+        "energy": 100.0,
+        "errand": {
+          "channel": false,
+          "events": [],
+          "finished": false,
+          "progress": 0.0,
+          "state": "available"
+        },
+        "events": [],
+        "guard_style": "Steady",
+        "hp": 5,
+        "keepsakes": {
+          "blocked": false,
+          "dirty": false,
+          "earned": [],
+          "equipped": "",
+          "status": "Session only. Earn a crossing mark to save."
+        },
+        "last_impact": {},
+        "mode": "paused",
+        "rehearsal": {
+          "active": false,
+          "attempts": 0,
+          "passed": false,
+          "paused": false,
+          "results": [],
+          "stage": 0,
+          "state": "ready"
+        },
+        "role": "Guardian",
+        "sound": {
+          "events": [],
+          "muted": false,
+          "voice_limit": 2
+        },
+        "tick": 0
+      },
+      "paused": {
+        "actors": {
+          "action": "idle",
+          "action_left": 0.0,
+          "contact": "",
+          "contact_angle": 0.0,
+          "contact_left": 0.0,
+          "courier_hurt_left": 0.0,
+          "cursor": 0,
+          "hurt_left": 0.0,
+          "pose": "idle",
+          "sentinel_left": 0.0,
+          "stride": 0.0
+        },
+        "cargo": 3,
+        "controls": {
+          "draft": {
+            "aim_down": 4194322,
+            "aim_left": 4194319,
+            "aim_right": 4194321,
+            "aim_up": 4194320,
+            "interact": 69,
+            "move_down": 83,
+            "move_left": 65,
+            "move_right": 68,
+            "move_up": 87,
+            "skill": 75,
+            "step": 32,
+            "strike": 74
+          },
+          "listening": false,
+          "message": "Interaction input changed for this session; move or press again to cancel.",
+          "open": false,
+          "profile": {
+            "blocked": false,
+            "dirty": false,
+            "guard_latched": false,
+            "interact_latched": false,
+            "keys": {
+              "aim_down": 4194322,
+              "aim_left": 4194319,
+              "aim_right": 4194321,
+              "aim_up": 4194320,
+              "interact": 69,
+              "move_down": 83,
+              "move_left": 65,
+              "move_right": 68,
+              "move_up": 87,
+              "skill": 75,
+              "step": 32,
+              "strike": 74
+            },
+            "status": "Defaults. Apply to save on this device.",
+            "toggle_guard": false,
+            "toggle_interact": true
+          },
+          "row": 0
+        },
+        "counters": {
+          "blocks": 0,
+          "counters": 0,
+          "courier_hits": 0,
+          "dodges": 0,
+          "player_hits": 0,
+          "redirects": 0,
+          "rejected": 0
+        },
+        "courier_speed": 28.0,
+        "courier_x": 436.401,
+        "enemy_focus": 3,
+        "energy": 100.0,
+        "errand": {
+          "channel": false,
+          "events": [
+            {
+              "action": "recovered",
+              "tick": 56
+            }
+          ],
+          "finished": false,
+          "progress": 0.0,
+          "state": "carried"
+        },
+        "events": [],
+        "guard_style": "Steady",
+        "hp": 5,
+        "keepsakes": {
+          "blocked": false,
+          "dirty": false,
+          "earned": [],
+          "equipped": "",
+          "status": "Session only. Earn a crossing mark to save."
+        },
+        "last_impact": {},
+        "mode": "paused",
+        "rehearsal": {
+          "active": false,
+          "attempts": 0,
+          "passed": false,
+          "paused": false,
+          "results": [],
+          "stage": 0,
+          "state": "ready"
+        },
+        "role": "Guardian",
+        "sound": {
+          "events": [],
+          "muted": false,
+          "voice_limit": 2
+        },
+        "tick": 78
+      },
+      "raised": {
+        "actors": {
+          "action": "idle",
+          "action_left": 0.0,
+          "contact": "",
+          "contact_angle": 0.0,
+          "contact_left": 0.0,
+          "courier_hurt_left": 0.0,
+          "cursor": 0,
+          "hurt_left": 0.0,
+          "pose": "guard_live",
+          "sentinel_left": 0.0,
+          "stride": 0.0
+        },
+        "cargo": 3,
+        "controls": {
+          "draft": {
+            "aim_down": 4194322,
+            "aim_left": 4194319,
+            "aim_right": 4194321,
+            "aim_up": 4194320,
+            "interact": 69,
+            "move_down": 83,
+            "move_left": 65,
+            "move_right": 68,
+            "move_up": 87,
+            "skill": 75,
+            "step": 32,
+            "strike": 74
+          },
+          "listening": false,
+          "message": "Interaction input changed for this session; move or press again to cancel.",
+          "open": false,
+          "profile": {
+            "blocked": false,
+            "dirty": false,
+            "guard_latched": true,
+            "interact_latched": false,
+            "keys": {
+              "aim_down": 4194322,
+              "aim_left": 4194319,
+              "aim_right": 4194321,
+              "aim_up": 4194320,
+              "interact": 69,
+              "move_down": 83,
+              "move_left": 65,
+              "move_right": 68,
+              "move_up": 87,
+              "skill": 75,
+              "step": 32,
+              "strike": 74
+            },
+            "status": "Defaults. Apply to save on this device.",
+            "toggle_guard": true,
+            "toggle_interact": true
+          },
+          "row": 0
+        },
+        "counters": {
+          "blocks": 0,
+          "counters": 0,
+          "courier_hits": 0,
+          "dodges": 0,
+          "player_hits": 0,
+          "redirects": 0,
+          "rejected": 0
+        },
+        "courier_speed": 28.0,
+        "courier_x": 318.4,
+        "enemy_focus": 3,
+        "energy": 98.0,
+        "errand": {
+          "channel": false,
+          "events": [],
+          "finished": false,
+          "progress": 0.0,
+          "state": "waiting"
+        },
+        "events": [],
+        "guard_style": "Steady",
+        "hp": 5,
+        "keepsakes": {
+          "blocked": false,
+          "dirty": false,
+          "earned": [],
+          "equipped": "",
+          "status": "Session only. Earn a crossing mark to save."
+        },
+        "last_impact": {},
+        "mode": "play",
+        "rehearsal": {
+          "active": true,
+          "attempts": 1,
+          "passed": false,
+          "paused": false,
+          "results": [],
+          "stage": 0,
+          "state": "live"
+        },
+        "role": "Guardian",
+        "sound": {
+          "events": [
+            {
+              "cue": "bolt",
+              "tick": 0
+            }
+          ],
+          "muted": false,
+          "voice_limit": 2
+        },
+        "tick": 18
+      },
+      "recovered": {
+        "actors": {
+          "action": "idle",
+          "action_left": 0.0,
+          "contact": "",
+          "contact_angle": 0.0,
+          "contact_left": 0.0,
+          "courier_hurt_left": 0.0,
+          "cursor": 0,
+          "hurt_left": 0.0,
+          "pose": "idle",
+          "sentinel_left": 0.0,
+          "stride": 0.0
+        },
+        "cargo": 3,
+        "controls": {
+          "draft": {
+            "aim_down": 4194322,
+            "aim_left": 4194319,
+            "aim_right": 4194321,
+            "aim_up": 4194320,
+            "interact": 69,
+            "move_down": 83,
+            "move_left": 65,
+            "move_right": 68,
+            "move_up": 87,
+            "skill": 75,
+            "step": 32,
+            "strike": 74
+          },
+          "listening": false,
+          "message": "Interaction input changed for this session; move or press again to cancel.",
+          "open": false,
+          "profile": {
+            "blocked": false,
+            "dirty": false,
+            "guard_latched": false,
+            "interact_latched": false,
+            "keys": {
+              "aim_down": 4194322,
+              "aim_left": 4194319,
+              "aim_right": 4194321,
+              "aim_up": 4194320,
+              "interact": 69,
+              "move_down": 83,
+              "move_left": 65,
+              "move_right": 68,
+              "move_up": 87,
+              "skill": 75,
+              "step": 32,
+              "strike": 74
+            },
+            "status": "Defaults. Apply to save on this device.",
+            "toggle_guard": false,
+            "toggle_interact": true
+          },
+          "row": 0
+        },
+        "counters": {
+          "blocks": 0,
+          "counters": 0,
+          "courier_hits": 0,
+          "dodges": 0,
+          "player_hits": 0,
+          "redirects": 0,
+          "rejected": 0
+        },
+        "courier_speed": 28.0,
+        "courier_x": 433.601,
+        "enemy_focus": 3,
+        "energy": 100.0,
+        "errand": {
+          "channel": false,
+          "events": [
+            {
+              "action": "recovered",
+              "tick": 56
+            }
+          ],
+          "finished": false,
+          "progress": 0.0,
+          "state": "carried"
+        },
+        "events": [],
+        "guard_style": "Steady",
+        "hp": 5,
+        "keepsakes": {
+          "blocked": false,
+          "dirty": false,
+          "earned": [],
+          "equipped": "",
+          "status": "Session only. Earn a crossing mark to save."
+        },
+        "last_impact": {},
+        "mode": "play",
+        "rehearsal": {
+          "active": false,
+          "attempts": 0,
+          "passed": false,
+          "paused": false,
+          "results": [],
+          "stage": 0,
+          "state": "ready"
+        },
+        "role": "Guardian",
+        "sound": {
+          "events": [],
+          "muted": false,
+          "voice_limit": 2
+        },
+        "tick": 72
+      },
+      "recovery_samples": [
+        {
+          "errand": {
+            "channel": false,
+            "events": [
+              {
+                "action": "recovered",
+                "tick": 56
+              }
+            ],
+            "finished": false,
+            "progress": 0.0,
+            "state": "carried"
+          },
+          "intent": false,
+          "tick": 72
+        }
+      ],
+      "settings": {
+        "actors": {
+          "action": "idle",
+          "action_left": 0.0,
+          "contact": "",
+          "contact_angle": 0.0,
+          "contact_left": 0.0,
+          "courier_hurt_left": 0.0,
+          "cursor": 0,
+          "hurt_left": 0.0,
+          "pose": "idle",
+          "sentinel_left": 0.0,
+          "stride": 0.0
+        },
+        "cargo": 3,
+        "controls": {
+          "draft": {
+            "aim_down": 4194322,
+            "aim_left": 4194319,
+            "aim_right": 4194321,
+            "aim_up": 4194320,
+            "interact": 69,
+            "move_down": 83,
+            "move_left": 65,
+            "move_right": 68,
+            "move_up": 87,
+            "skill": 75,
+            "step": 32,
+            "strike": 74
+          },
+          "listening": false,
+          "message": "Interaction input changed for this session; move or press again to cancel.",
+          "open": true,
+          "profile": {
+            "blocked": false,
+            "dirty": false,
+            "guard_latched": false,
+            "interact_latched": false,
+            "keys": {
+              "aim_down": 4194322,
+              "aim_left": 4194319,
+              "aim_right": 4194321,
+              "aim_up": 4194320,
+              "interact": 69,
+              "move_down": 83,
+              "move_left": 65,
+              "move_right": 68,
+              "move_up": 87,
+              "skill": 75,
+              "step": 32,
+              "strike": 74
+            },
+            "status": "Defaults. Apply to save on this device.",
+            "toggle_guard": true,
+            "toggle_interact": true
+          },
+          "row": 0
+        },
+        "counters": {
+          "blocks": 0,
+          "counters": 0,
+          "courier_hits": 0,
+          "dodges": 0,
+          "player_hits": 0,
+          "redirects": 0,
+          "rejected": 0
+        },
+        "courier_speed": 28.0,
+        "courier_x": 160.0,
+        "enemy_focus": 3,
+        "energy": 100.0,
+        "errand": {
+          "channel": false,
+          "events": [],
+          "finished": false,
+          "progress": 0.0,
+          "state": "waiting"
+        },
+        "events": [],
+        "guard_style": "Steady",
+        "hp": 5,
+        "keepsakes": {
+          "blocked": false,
+          "dirty": false,
+          "earned": [],
+          "equipped": "",
+          "status": "Session only. Earn a crossing mark to save."
+        },
+        "last_impact": {},
+        "mode": "title",
+        "rehearsal": {
+          "active": false,
+          "attempts": 0,
+          "passed": false,
+          "paused": false,
+          "results": [],
+          "stage": 0,
+          "state": "ready"
+        },
+        "role": "Guardian",
+        "sound": {
+          "events": [],
+          "muted": false,
+          "voice_limit": 2
+        },
+        "tick": 0
+      }
+    }
+  },
+  "kind": "synthetic_os_input",
+  "scope": "Actual source/PCK settings, released single-press rehearsal block, fresh-session reset and prepared case recovery. Wall-clock ticks may differ. No participant, navigated case route or hardware latency claim."
+}

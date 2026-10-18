@@ -1,6 +1,6 @@
 # SEED — Martin Creative AI Lab
 
-**Version:** 0.33.9
+**Version:** 0.33.10
 **Data-base:** 10 de outubro de 2026  
 **Autor e responsável pelo portfólio:** Martin Melcop Neto  
 **Working language:** English for new technical documentation, plans, code comments and Git messages; respond in the requested language (Brazilian Portuguese for continuous closeout). Preserve appropriate creative/source languages.
@@ -45,18 +45,19 @@ does not merge fictional universes. Source details below are historical provenan
 retained origin behavior; current operation is defined by this direction, AGENTS,
 STATE and the single [continuous prompt](docs/prompts/CONTINUOUS_DEVELOPMENT.md).
 
-### Current consumer increment — v0.33.9
+### Current consumer increment — v0.33.10
 
-Primary DEVELOPMENT, priority category 1: the existing crossing now allows an optional
-combat resolution. Three real close OPEN counters remove the sentinel's focus plates;
-armor misses, range failures, unfunded requests and commitment never do. Shutdown stops
-bolt/floor production and the courier runs at 56px/s instead of 28px/s, but reaching
-the gate alive remains necessary. Pure protection can still complete the crossing.
-No new class, reward tier, profile schema or mandatory kill. [Execution](evidence/north-star-sentinel-resolution/RUN.json)
-binds native source/PCK, matched prior-version controls, full protective/offensive/
-medicine routes, rendered shutdown and actual mixer controls. Scene state and per-route
-common mechanical prefixes, not independent players, establish this bounded behavior.
-One consumer/eight code paths, fourteen capability states unchanged; NS-C03/07 adapted.
+Primary DEVELOPMENT, priority category 1. The existing crossing offers independent
+session-only single-press alternatives to sustained Guardian guard and medicine
+interaction through F1/H and F1/I. Defaults/saved remaps, resource drain, facing,
+startup, Riposte expiry, actual recovery/handoff time and world progression remain.
+Completion, movement/range exit, pause/focus/settings/replacement disarm intentions;
+out-of-range requests cannot queue recovery or automatically hand over a carried case.
+[Execution](evidence/north-star-toggle-input/RUN.json) binds source/PCK, native controls,
+complete routes, actual OS-input journeys and inspected settings/guard/recovery frames.
+One consumer/eight code paths and fourteen capability states remain; NS-C03/07 adapted.
+No origin migration, new lab, profile schema, final class/engine approval or human
+accessibility/comfort/learning validation. The prior optional threat resolution remains.
 
 ### Navegação
 

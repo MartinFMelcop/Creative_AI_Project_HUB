@@ -5,6 +5,12 @@ const LABELS := ["Move left","Move right","Move up","Move down","Aim left","Aim 
 const DEFAULTS := {"move_left":KEY_A,"move_right":KEY_D,"move_up":KEY_W,"move_down":KEY_S,"aim_left":KEY_LEFT,"aim_right":KEY_RIGHT,"aim_up":KEY_UP,"aim_down":KEY_DOWN,"strike":KEY_J,"skill":KEY_K,"step":KEY_SPACE,"interact":KEY_E}
 const NAV := [KEY_LEFT,KEY_RIGHT,KEY_UP,KEY_DOWN]
 const RESERVED := [KEY_ESCAPE,KEY_ENTER,KEY_KP_ENTER,KEY_1,KEY_2,KEY_R,KEY_T,KEY_C,KEY_F1,KEY_F5,KEY_F12]
+# Session-only alternatives. Preferences never imply a carried active action.
+var toggle_guard := false
+var toggle_interact := false
+var guard_latched := false
+var interact_latched := false
+var interaction_state := ""
 var keys: Dictionary=DEFAULTS.duplicate()
 var path := ""
 var dirty := false
@@ -69,6 +75,7 @@ func release(event: InputEventKey) -> void:
 	suppressed.erase(event_code(event))
 
 func quarantine() -> void:
+	clear_intents()
 	for action in ACTIONS:
 		var code: int=int(keys[action])
 		if (Input.is_key_pressed(code) if code in NAV else Input.is_physical_key_pressed(code)):suppressed[code]=true
@@ -82,7 +89,41 @@ func name_for(action: String, mapping: Dictionary={}) -> String:
 func refresh_labels() -> void:
 	replacements={"WASD":name_for("move_left")+"/"+name_for("move_right")+"/"+name_for("move_up")+"/"+name_for("move_down"),"ARROWS":name_for("aim_left")+"/"+name_for("aim_right")+"/"+name_for("aim_up")+"/"+name_for("aim_down"),"RIGHT arrow":name_for("aim_right"),"K":name_for("skill"),"J":name_for("strike"),"E":name_for("interact"),"SPACE":name_for("step"),"W":name_for("move_up"),"D":name_for("move_right")}
 
+func clear_intents() -> void:
+	guard_latched=false;interact_latched=false;interaction_state=""
+
+func translate(command: Dictionary, game, errand=null) -> Dictionary:
+	var result=command.duplicate()
+	if game.mode!="play":clear_intents();return result
+	if toggle_guard and game.role=="Guardian":
+		if command.get("skill_pressed",false):guard_latched=not guard_latched
+		result.skill=guard_latched
+	if (toggle_interact or toggle_guard) and errand!=null and errand.active:
+		var eligible: bool=errand.state in ["available","carried"] and not errand.finished
+		if eligible:
+			var destination: Vector2=errand.CASE if errand.state=="available" else game.courier
+			var radius: float=errand.RADIUS if errand.state=="available" else errand.HANDOFF_RADIUS
+			eligible=game.player.distance_to(destination)<=radius and game.step_left<=0 and command.get("move",Vector2.ZERO)==Vector2.ZERO
+		if toggle_interact:
+			if not eligible:interact_latched=false
+			if command.get("interact_pressed",false) and eligible:
+				interact_latched=not interact_latched
+				interaction_state=errand.state
+			result.interact=interact_latched
+		if eligible and result.get("interact",false) and toggle_guard:
+			guard_latched=false;result.skill=false
+	return result
+
+func settle_intents(game, errand=null) -> void:
+	if game.mode!="play":clear_intents()
+	elif errand!=null and (errand.state!=interaction_state or not errand.channel):
+		interact_latched=false;interaction_state=""
+
 func describe(value: String) -> String:
+	if toggle_guard:
+		value=value.replace("hold K through contact","press K once before contact").replace("hold K","toggle K").replace("Hold K","Toggle K").replace("Release K","Toggle K off").replace("release guard","toggle K off").replace("RELEASE K","TOGGLE K OFF")
+	if toggle_interact:
+		value=value.replace("hold E for 0.8s","press E; recovery takes 0.8s").replace("hold E for 0.6s to hand it back","press E; handoff takes 0.6s").replace("hold E","press E").replace("Hold E","Press E").replace("release E","press E again").replace("Move or release to cancel.","Move or press E again to cancel.")
 	var result := "";var previous := 0
 	for match in pattern.search_all(value):
 		result+=value.substr(previous,match.get_start()-previous)+replacements[match.get_string()]
@@ -141,4 +182,4 @@ func write_failed() -> bool:
 	return false
 
 func snapshot() -> Dictionary:
-	return {"keys":keys.duplicate(),"dirty":dirty,"blocked":blocked,"status":status}
+	return {"keys":keys.duplicate(),"dirty":dirty,"blocked":blocked,"status":status,"toggle_guard":toggle_guard,"toggle_interact":toggle_interact,"guard_latched":guard_latched,"interact_latched":interact_latched}

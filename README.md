@@ -37,10 +37,12 @@ real counter opening. Rehearsal uses the chosen technique. Original shield/blade
 now show accepted actions and local contact/recovery; the sentinel opens with its real
 vulnerability window. Three real close counters can now disable it: threats stop and
 the courier runs. Defending without counters remains a complete route; the gate still
-requires a living courier and player.
+requires a living courier and player. F1/H and F1/I now offer independent session-only
+single-press guard and medicine interaction; costs/commitment stay live and interruption
+disarms active intentions. Hold remains the default.
 
 The editable Godot project and small engine-dependent PCK execute the same consumer.
-[Native/rendered evidence](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/evidence/north-star-sentinel-resolution/RUN.json)
+[Native/input evidence](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/evidence/north-star-toggle-input/RUN.json)
 and the [living design record](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/DESIGN.md)
 separate fixed-policy feasibility and agent visual assessment from still-missing human
 understanding, identity and enjoyment evidence.

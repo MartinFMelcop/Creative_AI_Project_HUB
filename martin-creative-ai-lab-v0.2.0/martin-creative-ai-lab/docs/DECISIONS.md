@@ -2091,3 +2091,34 @@ changes. Stage/capability/origin states remain unchanged; no external player val
   Hide the now-unavailable feint range after inspecting the actual shutdown image.
   No new lab, asset family, origin migration or capability-state promotion. Current
   prompt already covers functional deltas/controls and remains unchanged.
+
+
+## ADR-080 — Offer single-press input without changing combat commitment
+
+- **Date/baseline:** 2026-10-18 UTC, `1ee52e14e202b5f796d1aaa458b859300e988416`.
+  Local/fetched main equal, tracked tree clean; unrelated work/ preserved.
+- **Mode/priority/audience:** DEVELOPMENT, category 1. Existing consumer users who
+  prefer avoiding prolonged key sustains; no representative accessibility sample.
+- **Alternatives:** expand the adventure (valuable but increases content before reducing
+  an observed input barrier); add another build (more rules, same barrier); add another
+  research matrix (does not change play); extend the current input adapter (selected).
+- **Brain use:** engineering high ENG-022 (predictable/cancellable state); science
+  medium SCI-061 (actual workflow and limits of accessibility inference); creation
+  high CRE-081/005 documented directions (input alternatives, retained choices/costs).
+- **Decision:** F1/H and F1/I select independent session-only toggle guard/interaction.
+  Keep hold defaults, saved remaps, Duelist draw and actual model contracts. Disarm
+  at completion and management transitions. Require eligible nearby work, separate
+  handoff and a new press after interruption; never queue a future raise/recovery.
+- **Refinement:** prevent guard pressed during recovery from queuing a later raise.
+  Actual settings image exposed a partially visible underlying footer; enlarge its
+  opaque panel. Remove a duplicated world cancellation label and update guard/footer,
+  rehearsal and interaction wording for the selected mode. Confirmed partial recovery
+  under concurrent load showed that a wall-clock wait is not model completion; observe
+  actual progress with a bounded runner instead of changing gameplay.
+- **Evidence/limits:** native edge/hold equivalence, complete no-held-command routes,
+  existing regressions and actual source/PCK XTest settings/rehearsal/medicine fixture.
+  Synthetic input and agent image review are not independent human accessibility,
+  comfort, learning, unassisted comprehension or hardware latency evidence. No origin
+  migration, new lab, source/brain edit, schema change, MMO integration or canon approval.
+  Existing prompt already requires consumer execution and timing/instrument controls;
+  no durable change is justified.

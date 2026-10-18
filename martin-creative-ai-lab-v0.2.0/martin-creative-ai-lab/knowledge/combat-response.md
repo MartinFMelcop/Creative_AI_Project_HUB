@@ -214,3 +214,25 @@ keeping support/protection a complete goal path. Cancel stale callbacks on termi
 threat state, retain main-objective ownership and show why the courier's pace changes.
 **Validity:** one deterministic local encounter, scripted/native and rendered execution;
 no human judgment, multiplayer, canonical boss system, commercial signal or origin migration.
+
+
+## Input alternatives must not carry hidden intentions through interruption
+
+**Question/context:** `1ee52e1` supports remapping but guard and medicine work require
+sustained keys. **Source:** [single-press execution](../evidence/north-star-toggle-input/RUN.json),
+ENG-022, SCI-061 and CRE-081/005. **Observation:** independent session toggles drive
+actual model guard/recovery without held input. Costs, expiry and work durations stay
+in the model; completed work disarms, handoff needs another press, and pause/settings/
+focus/replacement clear intentions. A guard request during recovery is discarded,
+rather than queued to raise after it. Default outcome records and same-frame hold/
+edge state comparison provide bounded controls; complete fixed routes still deliver.
+A concurrent-engine run captured received interaction with incomplete model progress
+after its fixed wall-clock wait. Bounded observation of actual progress replaces that
+instrument assumption; this is not evidence of changed recovery duration.
+
+**Interpretation/consequence:** distinguish an input preference from active intent.
+Keep the preference across session retries, but require deliberate reentry after an
+interruption and discard impossible future requests. **Validity:** native scripted
+routes, synthetic OS input and agent inspection, not human comfort/accessibility,
+optimal play or reception. Modes are session-only; do not infer durable preferences,
+account persistence or a fourth knowledge brain from this contextual finding.

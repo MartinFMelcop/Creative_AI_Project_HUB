@@ -189,6 +189,49 @@ concurrent-writer, synchronization or universal accessibility guarantee is claim
 
 ![Applied controls and matching live hint](../../evidence/north-star-controls/keyboard-applied.png)
 
+## Single-press alternatives
+
+Open **F1** outside key capture. **H** switches Guardian guard between hold (default)
+and press-to-toggle; **I** independently switches medicine recovery/handoff. These
+options apply immediately **for this process only**, like sound mute. They do not
+change or save the keyboard draft. A fresh process restores hold modes; saved key
+bindings remain. H/I still work as gameplay bindings outside this modal menu, and
+can be captured normally while it is listening for a new binding.
+
+With toggle guard, press the applied K key once to raise, again to lower. Posture
+still drains, facing still locks, startup still applies and Riposte still expires;
+it never automatically re-raises. Duelist's discrete draw remains unchanged. Guard
+state/mode and remapped prompts are visible. Lower before attempting a committed blade
+or step; selecting an input alternative grants no immunity or wider timing window.
+
+With toggle interaction, stand inside the actual case/courier radius and press the
+applied E key. The same 0.8s recovery/0.6s moving handoff runs while the world continues.
+Press again or move to cancel; leaving range also cancels. An out-of-range press does
+not arm a future action. Completion disarms: carrying the case into courier range
+requires another deliberate press. Recovery clears toggle guard, and guard requests
+during the commitment cannot queue a later raise. Neither mode changes rewards.
+
+Pause, focus loss, settings, terminal review and consumer replacement clear active
+toggle intentions. Resume requires a new press; resuming without a new interaction press cancels
+partial work. The chosen modes survive retries in this session,
+while activity never carries. Hold remains the original default behavior.
+
+[Execution](../../evidence/north-star-toggle-input/RUN.json) records native equivalence,
+complete no-held-command routes, actual source/PCK XTest journeys and inspected frames.
+These remove a sustained-key requirement; they do not establish human accessibility,
+comfort, comprehension, balance, learning or hardware latency.
+
+![Actual session input options](../../evidence/north-star-toggle-input/keyboard/source-settings.png)
+
+```bash
+python3 north-star/prototype/tools/verify_toggle_input.py --output /tmp/crossing-input
+```
+
+This optional Linux rendering/input check needs Xorg/dummy, libX11/libXtst and matching
+Godot on PATH. It owns a bounded display and four native processes, stops them on exit,
+and uses isolated local profiles. Medicine geometry is a declared setup fixture, not
+a complete OS-keyboard navigation route; complete routes are separately native-driven.
+
 ## Sound and silence
 
 Eight original, short mono PCM cues are synthesized locally by `sound.gd`; no samples,
@@ -307,7 +350,7 @@ or MMORPG persistence.
 ## Execute checks and reproduce delivery
 
 ```bash
-python3 north-star/prototype/tools/verify.py --godot godot --output /tmp/crossing-check.json --compare evidence/north-star-guard-techniques/results.json
+python3 north-star/prototype/tools/verify.py --godot godot --output /tmp/crossing-check.json --compare evidence/north-star-toggle-input/results.json
 ```
 
 The stdlib runner bounds owned engine processes, uses writable temporary XDG paths,

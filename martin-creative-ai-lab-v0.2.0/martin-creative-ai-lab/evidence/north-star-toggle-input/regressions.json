@@ -1,0 +1,68 @@
+{
+  "total": 109,
+  "suites": [
+    {
+      "command": [
+        "python3",
+        "tools/test_brain_query.py"
+      ],
+      "exit_code": 0,
+      "tests": 17,
+      "result": "OK"
+    },
+    {
+      "command": [
+        "python3",
+        "tools/test_validate_repo.py"
+      ],
+      "exit_code": 0,
+      "tests": 27,
+      "result": "OK"
+    },
+    {
+      "command": [
+        "python3",
+        "tools/test_reference_library.py"
+      ],
+      "exit_code": 0,
+      "tests": 42,
+      "result": "OK"
+    },
+    {
+      "command": [
+        "python3",
+        "tools/test_check_manifest.py"
+      ],
+      "exit_code": 0,
+      "tests": 11,
+      "result": "OK"
+    },
+    {
+      "command": [
+        "python3",
+        "north-star/prototype/tools/test_verify.py"
+      ],
+      "exit_code": 0,
+      "tests": 3,
+      "result": "OK"
+    },
+    {
+      "command": [
+        "python3",
+        "north-star/prototype/tools/test_verify_sound.py"
+      ],
+      "exit_code": 0,
+      "tests": 6,
+      "result": "OK"
+    },
+    {
+      "command": [
+        "python3",
+        "north-star/prototype/tools/test_verify_resolution.py"
+      ],
+      "exit_code": 0,
+      "tests": 3,
+      "result": "OK"
+    }
+  ]
+}

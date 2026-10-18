@@ -1,0 +1,442 @@
+{
+  "baseline_commit": "1ee52e14e202b5f796d1aaa458b859300e988416",
+  "baseline_record": "evidence/north-star-sentinel-resolution/results.json",
+  "baseline_result_sha256": "62a4074fa9fdab4580415cf04194a70cc2dbd9e2c1f461d5e9e117e1364384a3",
+  "compared_sections_equal": [
+    "outcomes",
+    "rehearsals",
+    "keepsakes",
+    "errands",
+    "sound",
+    "guard_techniques",
+    "actor_poses",
+    "sentinel_resolution",
+    "continuity"
+  ],
+  "excluded": "Expected new check count, consumer hashes and session-mode fields in controls/profile snapshots. No assertion that input alternatives or UI exist in the prior PCK.",
+  "held_edge_exact_frames": 100,
+  "no_held_command_routes": [
+    {
+      "combat": {
+        "cargo": 2,
+        "counters": {
+          "blocks": 5,
+          "counters": 3,
+          "courier_hits": 1,
+          "dodges": 0,
+          "player_hits": 0,
+          "redirects": 0,
+          "rejected": 0
+        },
+        "courier_speed": 56.0,
+        "courier_x": 1000.0,
+        "enemy_focus": 0,
+        "energy": 100.0,
+        "events": [
+          {
+            "cargo": 3,
+            "energy": 67.6,
+            "hp": 5,
+            "kind": "protected",
+            "tick": 169
+          },
+          {
+            "cargo": 3,
+            "energy": 67.8,
+            "hp": 5,
+            "kind": "protected",
+            "tick": 338
+          },
+          {
+            "cargo": 3,
+            "energy": 100.0,
+            "hp": 5,
+            "kind": "pulse_avoided",
+            "tick": 507
+          },
+          {
+            "cargo": 2,
+            "energy": 100.0,
+            "hp": 5,
+            "kind": "courier_hit",
+            "tick": 676
+          },
+          {
+            "cargo": 2,
+            "energy": 75.8,
+            "hp": 5,
+            "kind": "protected",
+            "tick": 845
+          },
+          {
+            "cargo": 2,
+            "energy": 64.1,
+            "hp": 5,
+            "kind": "counter",
+            "tick": 846
+          },
+          {
+            "cargo": 2,
+            "energy": 100.0,
+            "hp": 5,
+            "kind": "pulse_avoided",
+            "tick": 1086
+          },
+          {
+            "cargo": 2,
+            "energy": 73.2,
+            "hp": 5,
+            "kind": "protected",
+            "tick": 1255
+          },
+          {
+            "cargo": 2,
+            "energy": 61.5,
+            "hp": 5,
+            "kind": "counter",
+            "tick": 1256
+          },
+          {
+            "cargo": 2,
+            "energy": 68.6,
+            "hp": 5,
+            "kind": "protected",
+            "tick": 1496
+          },
+          {
+            "cargo": 2,
+            "energy": 56.9,
+            "hp": 5,
+            "kind": "counter",
+            "tick": 1497
+          },
+          {
+            "cargo": 2,
+            "energy": 56.9,
+            "hp": 5,
+            "kind": "sentinel_disabled",
+            "tick": 1497
+          }
+        ],
+        "guard_style": "Steady",
+        "hp": 5,
+        "mode": "won",
+        "role": "Guardian",
+        "tick": 1648
+      },
+      "errand": {
+        "channel": false,
+        "events": [
+          {
+            "action": "dropped",
+            "tick": 515
+          },
+          {
+            "action": "recovered",
+            "tick": 633
+          },
+          {
+            "action": "delivered",
+            "tick": 701
+          },
+          {
+            "action": "crossing_won",
+            "tick": 1648
+          }
+        ],
+        "finished": true,
+        "progress": 0.0,
+        "state": "delivered"
+      },
+      "guard_presses": 10,
+      "interaction_presses": 2,
+      "style": "Steady"
+    },
+    {
+      "combat": {
+        "cargo": 2,
+        "counters": {
+          "blocks": 5,
+          "counters": 3,
+          "courier_hits": 1,
+          "dodges": 0,
+          "player_hits": 0,
+          "redirects": 0,
+          "rejected": 0
+        },
+        "courier_speed": 56.0,
+        "courier_x": 1000.0,
+        "enemy_focus": 0,
+        "energy": 100.0,
+        "events": [
+          {
+            "cargo": 3,
+            "energy": 75.2,
+            "hp": 5,
+            "kind": "protected",
+            "tick": 169
+          },
+          {
+            "cargo": 3,
+            "energy": 75.2,
+            "hp": 5,
+            "kind": "protected",
+            "tick": 338
+          },
+          {
+            "cargo": 3,
+            "energy": 100.0,
+            "hp": 5,
+            "kind": "pulse_avoided",
+            "tick": 507
+          },
+          {
+            "cargo": 2,
+            "energy": 100.0,
+            "hp": 5,
+            "kind": "courier_hit",
+            "tick": 676
+          },
+          {
+            "cargo": 2,
+            "energy": 75.8,
+            "hp": 5,
+            "kind": "protected",
+            "tick": 845
+          },
+          {
+            "cargo": 2,
+            "energy": 64.1,
+            "hp": 5,
+            "kind": "counter",
+            "tick": 846
+          },
+          {
+            "cargo": 2,
+            "energy": 100.0,
+            "hp": 5,
+            "kind": "pulse_avoided",
+            "tick": 1086
+          },
+          {
+            "cargo": 2,
+            "energy": 75.2,
+            "hp": 5,
+            "kind": "protected",
+            "tick": 1255
+          },
+          {
+            "cargo": 2,
+            "energy": 63.5,
+            "hp": 5,
+            "kind": "counter",
+            "tick": 1256
+          },
+          {
+            "cargo": 2,
+            "energy": 75.2,
+            "hp": 5,
+            "kind": "protected",
+            "tick": 1496
+          },
+          {
+            "cargo": 2,
+            "energy": 63.5,
+            "hp": 5,
+            "kind": "counter",
+            "tick": 1497
+          },
+          {
+            "cargo": 2,
+            "energy": 63.5,
+            "hp": 5,
+            "kind": "sentinel_disabled",
+            "tick": 1497
+          }
+        ],
+        "guard_style": "Riposte",
+        "hp": 5,
+        "mode": "won",
+        "role": "Guardian",
+        "tick": 1648
+      },
+      "errand": {
+        "channel": false,
+        "events": [
+          {
+            "action": "dropped",
+            "tick": 515
+          },
+          {
+            "action": "recovered",
+            "tick": 633
+          },
+          {
+            "action": "delivered",
+            "tick": 701
+          },
+          {
+            "action": "crossing_won",
+            "tick": 1648
+          }
+        ],
+        "finished": true,
+        "progress": 0.0,
+        "state": "delivered"
+      },
+      "guard_presses": 10,
+      "interaction_presses": 2,
+      "style": "Riposte"
+    },
+    {
+      "combat": {
+        "cargo": 3,
+        "counters": {
+          "blocks": 0,
+          "counters": 3,
+          "courier_hits": 0,
+          "dodges": 3,
+          "player_hits": 0,
+          "redirects": 3,
+          "rejected": 0
+        },
+        "courier_speed": 56.0,
+        "courier_x": 1000.0,
+        "enemy_focus": 0,
+        "energy": 100.0,
+        "events": [
+          {
+            "cargo": 3,
+            "energy": 84.0,
+            "hp": 5,
+            "kind": "redirect",
+            "tick": 110
+          },
+          {
+            "cargo": 3,
+            "energy": 59.0,
+            "hp": 5,
+            "kind": "step",
+            "tick": 110
+          },
+          {
+            "cargo": 3,
+            "energy": 76.7,
+            "hp": 5,
+            "kind": "bolt_missed",
+            "tick": 169
+          },
+          {
+            "cargo": 3,
+            "energy": 72.5,
+            "hp": 5,
+            "kind": "counter",
+            "tick": 195
+          },
+          {
+            "cargo": 3,
+            "energy": 84.0,
+            "hp": 5,
+            "kind": "redirect",
+            "tick": 376
+          },
+          {
+            "cargo": 3,
+            "energy": 59.0,
+            "hp": 5,
+            "kind": "step",
+            "tick": 376
+          },
+          {
+            "cargo": 3,
+            "energy": 76.7,
+            "hp": 5,
+            "kind": "bolt_missed",
+            "tick": 435
+          },
+          {
+            "cargo": 3,
+            "energy": 72.5,
+            "hp": 5,
+            "kind": "counter",
+            "tick": 461
+          },
+          {
+            "cargo": 3,
+            "energy": 100.0,
+            "hp": 5,
+            "kind": "pulse_avoided",
+            "tick": 701
+          },
+          {
+            "cargo": 3,
+            "energy": 84.0,
+            "hp": 5,
+            "kind": "redirect",
+            "tick": 811
+          },
+          {
+            "cargo": 3,
+            "energy": 59.0,
+            "hp": 5,
+            "kind": "step",
+            "tick": 811
+          },
+          {
+            "cargo": 3,
+            "energy": 76.7,
+            "hp": 5,
+            "kind": "bolt_missed",
+            "tick": 870
+          },
+          {
+            "cargo": 3,
+            "energy": 72.5,
+            "hp": 5,
+            "kind": "counter",
+            "tick": 896
+          },
+          {
+            "cargo": 3,
+            "energy": 72.5,
+            "hp": 5,
+            "kind": "sentinel_disabled",
+            "tick": 896
+          }
+        ],
+        "guard_style": "none",
+        "hp": 5,
+        "mode": "won",
+        "role": "Duelist",
+        "tick": 1348
+      },
+      "errand": {
+        "channel": false,
+        "events": [
+          {
+            "action": "dropped",
+            "tick": 515
+          },
+          {
+            "action": "recovered",
+            "tick": 645
+          },
+          {
+            "action": "delivered",
+            "tick": 714
+          },
+          {
+            "action": "crossing_won",
+            "tick": 1348
+          }
+        ],
+        "finished": true,
+        "progress": 0.0,
+        "state": "delivered"
+      },
+      "guard_presses": 0,
+      "interaction_presses": 2,
+      "style": "Duelist"
+    }
+  ]
+}

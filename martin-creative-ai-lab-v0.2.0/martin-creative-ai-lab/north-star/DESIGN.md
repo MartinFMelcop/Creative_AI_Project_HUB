@@ -27,8 +27,8 @@ accessibility direction, while CRE-075 is a contextual-HUD hypothesis. The accep
 operational scope is a reversible local keyboard preference, not a change to final
 classes, lore or combat balance. Twelve unique gameplay bindings, matching live hints,
 explicit draft/apply/discard/default recovery and paused entry preserve deliberate
-choices. Fixed management keys keep recovery reachable. Toggle-hold modes are deferred:
-they change commitment semantics and need separate design/evaluation. Synthetic/native
+choices. Fixed management keys keep recovery reachable. The former toggle-hold deferral is superseded by the separately evaluated session
+input alternatives below; it was not permission to change combat commitment. Synthetic/native
 checks establish execution, not independent player understanding or accessibility.
 
 ## Sound-signature decision — experimental
@@ -91,6 +91,27 @@ and matching mechanical prefixes. Fixed policy timing is not balance, fun, risk
 preference or unassisted human understanding. The threshold and speed are prototype
 choices, not author-approved production tuning. Revisit after player observation and
 materially different route policies. No permanent account progression or origin transfer.
+
+## Single-press input alternatives — experimental
+
+Primary DEVELOPMENT, category 1. ENG-022 supplies predictable state and recoverability;
+SCI-061 bounds accessibility claims to the actual population/context tested; CRE-081
+(A) supports removing input barriers without hiding challenge, and CRE-005 (A) preserves
+real choice/cost. These principles do not approve specific final control design.
+
+F1/H and F1/I opt into session-only guard/interaction toggles independently. Default
+hold and saved remaps remain. Guard toggles preserve drain, facing, startup and Riposte
+expiry; Duelist draw stays discrete. Nearby stationary interaction preserves time,
+range and no-defense commitment, disarms after completion and needs a separate handoff
+press. Movement, range exit or another press cancels. Out-of-range presses cannot queue
+future actions; guard pressed during recovery cannot queue a later raise.
+
+Pause/focus/settings/terminal transitions and replacement clear active intentions;
+resuming/retrying never re-arms them. Chosen modes persist only in this process.
+Rejected: automatic re-raise after Riposte expiry, automatic handoff on proximity,
+widened defense windows or silent profile-schema changes. These would change challenge
+or introduce unintended actions beyond the input alternative. Actual native state,
+source/PCK OS input and image inspection establish execution, not human validation.
 
 ## Current product contract
 

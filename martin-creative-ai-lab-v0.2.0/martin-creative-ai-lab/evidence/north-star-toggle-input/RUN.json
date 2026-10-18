@@ -1,0 +1,1056 @@
+{
+  "schema_version": 1,
+  "kind": "destination_execution",
+  "recorded_at_utc": "2026-10-18T20:42:41.687438+00:00",
+  "baseline_commit": "1ee52e14e202b5f796d1aaa458b859300e988416",
+  "branch": "codex/north-star-toggle-input-20261018",
+  "mode": "DEVELOPMENT",
+  "priority_category": 1,
+  "capability_ids": [
+    "NS-C03",
+    "NS-C07"
+  ],
+  "consumer_paths": [
+    "north-star/prototype/arena.gd",
+    "north-star/prototype/combat.gd",
+    "north-star/prototype/rehearsal.gd",
+    "north-star/prototype/keepsakes.gd",
+    "north-star/prototype/errand.gd",
+    "north-star/prototype/controls.gd",
+    "north-star/prototype/sound.gd",
+    "north-star/prototype/actors.gd"
+  ],
+  "runtime": "Godot 4.6.3.stable.official.7d41c59c4 standard; Python 3.12.14; Linux x86_64; Xorg dummy, Mesa llvmpipe, libX11/libXtst.",
+  "scope": "Independent session-only alternatives to held Guardian guard and medicine interaction in the actual local destination. Defaults, saved remaps and combat/errand model source bytes retained.",
+  "checks": {
+    "failed": 0,
+    "passed": 358
+  },
+  "source_artifacts": [
+    {
+      "local_path": "north-star/prototype/.gitignore",
+      "sha256": "531d0d253cec1addb97b2cb2d144b6589ff934513eb9c9b8cf882cb49e4c0c32",
+      "size_bytes": 8
+    },
+    {
+      "local_path": "north-star/prototype/README.md",
+      "sha256": "5a9605ac3873788f9b60a71680bb170d8273ad47eff3d4fb266335b73bc6a08c",
+      "size_bytes": 25415
+    },
+    {
+      "local_path": "north-star/prototype/actors.gd",
+      "sha256": "126de4b48172828af63c32847001a6956d77df7460e420d242c94c1ee8bc9218",
+      "size_bytes": 10024
+    },
+    {
+      "local_path": "north-star/prototype/arena.gd",
+      "sha256": "91e5730a30d4f10ea0f37e60c02fad24540c996276331f66ae2202420189cc45",
+      "size_bytes": 24617
+    },
+    {
+      "local_path": "north-star/prototype/arena.gd.uid",
+      "sha256": "1cd2fa44a912d470ad3de79f672223ff85436c4d1ab34701debf2e10a1a14fe2",
+      "size_bytes": 20
+    },
+    {
+      "local_path": "north-star/prototype/arena.tscn",
+      "sha256": "f794c485663f0ed318ddce6bb7a62bc9b2dbd3af02be4f166cca962c29382591",
+      "size_bytes": 154
+    },
+    {
+      "local_path": "north-star/prototype/combat.gd",
+      "sha256": "fa740028e771ff06993edffbfdd82051e281d068cbadcc5656c1af009930d045",
+      "size_bytes": 11983
+    },
+    {
+      "local_path": "north-star/prototype/combat.gd.uid",
+      "sha256": "8f28f645ef4d4bba1021b27bc39fed04c438124fd819cc32c3586f92b3c58f9f",
+      "size_bytes": 20
+    },
+    {
+      "local_path": "north-star/prototype/controls.gd",
+      "sha256": "151bb8867ba735c3b0b2a0048d312472dfe32359d2409825fa4817cbd0a9e9b8",
+      "size_bytes": 9867
+    },
+    {
+      "local_path": "north-star/prototype/dist/crossing-drill.pck",
+      "sha256": "22f82fa9d2516eaa0da1c5c2c3d85112041a9f63845b7ba1fe822ee5e779a27c",
+      "size_bytes": 173904
+    },
+    {
+      "local_path": "north-star/prototype/errand.gd",
+      "sha256": "2a2392fa86bd12544eba5f60ad74d35592c7d6fa207373ec11a1928a9e33e601",
+      "size_bytes": 3831
+    },
+    {
+      "local_path": "north-star/prototype/keepsakes.gd",
+      "sha256": "d7790dddbd25904069b0c1a6d5edb2f7d01bc02a375d608a4ec5a25262ddb6c9",
+      "size_bytes": 5848
+    },
+    {
+      "local_path": "north-star/prototype/project.godot",
+      "sha256": "8d4755b58f1179a9b5ec431579177371e784bca9703a17c88f4c7a6d4ee9385c",
+      "size_bytes": 414
+    },
+    {
+      "local_path": "north-star/prototype/provenance.json",
+      "sha256": "8365be0d5aee363b957bf8c2835ae8345f4bdbfb9a8e80bb8c92a47d63500453",
+      "size_bytes": 3106
+    },
+    {
+      "local_path": "north-star/prototype/rehearsal.gd",
+      "sha256": "507a27b7832cfc79522396132a0a5f3f32fec34dd443a8a35fc21102080252c9",
+      "size_bytes": 3187
+    },
+    {
+      "local_path": "north-star/prototype/sound.gd",
+      "sha256": "4404169ebb2d1711f20e6023292712bb2051f4075c4039d9e2db725b4b8fa80a",
+      "size_bytes": 4116
+    },
+    {
+      "local_path": "north-star/prototype/tests/actor_capture.gd",
+      "sha256": "762c21bc79f9b56664525273470e93b005b6a995f0594f4e8e6f9ad447933e96",
+      "size_bytes": 3933
+    },
+    {
+      "local_path": "north-star/prototype/tests/actor_checks.gd",
+      "sha256": "52f503ff8f98f5dfab8e44603887c38cb6c3a65b01a77d378e84437d4d9987e9",
+      "size_bytes": 6228
+    },
+    {
+      "local_path": "north-star/prototype/tests/controls_checks.gd",
+      "sha256": "aec1a8a26e262a3830714f9fa748923d8b27b9e51d2e93fa6b3b74c2ee3acf0c",
+      "size_bytes": 9525
+    },
+    {
+      "local_path": "north-star/prototype/tests/controls_restart.gd",
+      "sha256": "066f641273c045a97ea1ee6bd2ddd9469e452d6edab80bc36a426927da431b61",
+      "size_bytes": 1134
+    },
+    {
+      "local_path": "north-star/prototype/tests/dummy-display.conf",
+      "sha256": "6e29b633a631d42a995053cc0b2f9eb0274340c8118e7354e59d52cbfa70fb33",
+      "size_bytes": 676
+    },
+    {
+      "local_path": "north-star/prototype/tests/errand_checks.gd",
+      "sha256": "2f04534e200e82f08e01127a3b31c5dafacb5151c9635038bf6c14d33ac89094",
+      "size_bytes": 6353
+    },
+    {
+      "local_path": "north-star/prototype/tests/errand_policy.gd",
+      "sha256": "74f4d20501771d8697e79629aaa6e86cb5056211eae0ab860aa593cb5190cb9e",
+      "size_bytes": 655
+    },
+    {
+      "local_path": "north-star/prototype/tests/guard_capture.gd",
+      "sha256": "e6c60d8811c8e704dbfa20826202f645f576b3c9f78f1fb6fc90642a0604b519",
+      "size_bytes": 2903
+    },
+    {
+      "local_path": "north-star/prototype/tests/guard_checks.gd",
+      "sha256": "cf2a8103bb4aa7fc8b61714ad36b43fbdd69d1a133f10b4530e863806ef3ed9b",
+      "size_bytes": 8738
+    },
+    {
+      "local_path": "north-star/prototype/tests/keepsake_checks.gd",
+      "sha256": "a8614cb0592ff8c403185b82f702c289abd42b78c783f4bc8f06d2ecaf211fcf",
+      "size_bytes": 9709
+    },
+    {
+      "local_path": "north-star/prototype/tests/keepsake_restart.gd",
+      "sha256": "8e9f107c310836324c51b1cbe1b2db618feadbd98b0cebbef12f75f39ab112c2",
+      "size_bytes": 1097
+    },
+    {
+      "local_path": "north-star/prototype/tests/policy.gd",
+      "sha256": "646f0758a211e84ffbfd4632460c7d1fc549cbb3b552801ee2508774a5a63e29",
+      "size_bytes": 979
+    },
+    {
+      "local_path": "north-star/prototype/tests/rehearsal_checks.gd",
+      "sha256": "0286d8997fdf1bd7ebad0b72a7283651678cfa30f85b2bd55e98e995c3f9b1f5",
+      "size_bytes": 6003
+    },
+    {
+      "local_path": "north-star/prototype/tests/render_journey.gd",
+      "sha256": "b0de7bc7cdd8795d55c0fdb8248c277c38ead3299714e7290c70df1a2c114e49",
+      "size_bytes": 992
+    },
+    {
+      "local_path": "north-star/prototype/tests/render_keepsakes.gd",
+      "sha256": "eafb1a071de871af521712b32f095a2d6c46f3424e85590c9e43c52310850359",
+      "size_bytes": 1502
+    },
+    {
+      "local_path": "north-star/prototype/tests/render_medicine.gd",
+      "sha256": "0716b982847fbd47dc596954c2f7a98f72e30e0fd6356aacc371e139be8455f1",
+      "size_bytes": 2215
+    },
+    {
+      "local_path": "north-star/prototype/tests/render_rehearsal.gd",
+      "sha256": "fc268d9764cfdd52874c8ea9f2f96aaeaa6f98ebede22dcbf412fe4692c6de42",
+      "size_bytes": 2254
+    },
+    {
+      "local_path": "north-star/prototype/tests/resolution_checks.gd",
+      "sha256": "15f40a5ff8b2d9350b78c6c3e064ffdab89fead0f761456fec75a1326edce8a0",
+      "size_bytes": 7842
+    },
+    {
+      "local_path": "north-star/prototype/tests/resolution_routes.gd",
+      "sha256": "fa5cfbd5f42c6ef59fc18fb85d61c2bcca2cd290395760a695bb6cc1575029e5",
+      "size_bytes": 2411
+    },
+    {
+      "local_path": "north-star/prototype/tests/run_checks.gd",
+      "sha256": "81821ed0cb23c9d4cd656034f864fc33a9b99f372822c331ac483c23df88d973",
+      "size_bytes": 8062
+    },
+    {
+      "local_path": "north-star/prototype/tests/sound_capture.gd",
+      "sha256": "1a0df88986619fbee9eb48c078726217409acb853e8821f2fcc3c660ceb07ad1",
+      "size_bytes": 5091
+    },
+    {
+      "local_path": "north-star/prototype/tests/sound_checks.gd",
+      "sha256": "c5c3496c2e5ef796399d3884b34b7547c55c4af9438a19220e484977dd2d0569",
+      "size_bytes": 5627
+    },
+    {
+      "local_path": "north-star/prototype/tests/toggle_checks.gd",
+      "sha256": "39d373fdfbb80fa24d90578eed7e7c3b525edd865cc8fd6d8f884e35d1ec6bc7",
+      "size_bytes": 10905
+    },
+    {
+      "local_path": "north-star/prototype/tests/toggle_fixture.gd",
+      "sha256": "c18cb92f89c7a21c70c6708b868153a60f712c65d50e077aaca4e4b1d1ad92a3",
+      "size_bytes": 375
+    },
+    {
+      "local_path": "north-star/prototype/tools/pack.gd",
+      "sha256": "770af6c3d99d3463afff2e214c6dc841055ce7cfb8379413bae56f3d09e8e015",
+      "size_bytes": 1015
+    },
+    {
+      "local_path": "north-star/prototype/tools/test_verify.py",
+      "sha256": "08898e09aba0e8ce07d37cab94d9b045904d5665b724864d5ef04fbce66c36e5",
+      "size_bytes": 1778
+    },
+    {
+      "local_path": "north-star/prototype/tools/test_verify_resolution.py",
+      "sha256": "67f382027a2dc81b320b2dbb5603e6ba26da8548bef00f5fc5b194cff81c5b00",
+      "size_bytes": 1830
+    },
+    {
+      "local_path": "north-star/prototype/tools/test_verify_sound.py",
+      "sha256": "d798752840c070a9673040d6debf1c1d07288c068c5c6d181cb44c777bbba5e7",
+      "size_bytes": 2570
+    },
+    {
+      "local_path": "north-star/prototype/tools/verify.py",
+      "sha256": "8ef11bf0384230d7d16e53fb7c0bb883182242b931bc6200ccad140b4f37aad7",
+      "size_bytes": 7514
+    },
+    {
+      "local_path": "north-star/prototype/tools/verify_actors.py",
+      "sha256": "fba45b699051831fd0ffd149d107e4e2ac0d0a3b3ba698840ecd4129491c2d49",
+      "size_bytes": 8434
+    },
+    {
+      "local_path": "north-star/prototype/tools/verify_resolution.py",
+      "sha256": "a66615936f81b8f92ecac7ea7f977d0b2e4bebed9e8685f5204197be314c350e",
+      "size_bytes": 4385
+    },
+    {
+      "local_path": "north-star/prototype/tools/verify_sound.py",
+      "sha256": "dd9f417a9e49803068da737a230031d44ae218b170904c06ebe024da4d92049e",
+      "size_bytes": 6367
+    },
+    {
+      "local_path": "north-star/prototype/tools/verify_toggle_input.py",
+      "sha256": "07bece3b8a4d40a2e98eac2862cfa8500416e4ce1c46a33c5440ada15313fb43",
+      "size_bytes": 8294
+    }
+  ],
+  "result_artifacts": [
+    {
+      "local_path": "evidence/north-star-toggle-input/audio-control.json",
+      "sha256": "4f33904bf019d7035dd3a677cec58b6746ed72b88523646658dd3e6884963428",
+      "size_bytes": 128
+    },
+    {
+      "local_path": "evidence/north-star-toggle-input/comparison.json",
+      "sha256": "37c04a478a251b23ec1fb07735f8c9ed287bcd63b83a4efcf66ad53f73a15098",
+      "size_bytes": 9971
+    },
+    {
+      "local_path": "evidence/north-star-toggle-input/keyboard/keyboard.json",
+      "sha256": "896f47af77b30ced3b6c81ab19b9952b2cfb714431fd7a583164334711194bcf",
+      "size_bytes": 39185
+    },
+    {
+      "local_path": "evidence/north-star-toggle-input/keyboard/pack-block.png",
+      "sha256": "cf32265d6ca00d721992eff87c4f047910e7114b4f745c7db6c78ad9f7def5c1",
+      "size_bytes": 93415
+    },
+    {
+      "local_path": "evidence/north-star-toggle-input/keyboard/pack-fresh-session.png",
+      "sha256": "ab638c43669f769f356d01ba75647281646665c51fa39f65b4d1a172e4cca7d5",
+      "size_bytes": 104994
+    },
+    {
+      "local_path": "evidence/north-star-toggle-input/keyboard/pack-paused.png",
+      "sha256": "3318d1940e3273890e8875220f4ac1d21e015c992e1e5fac8b88595e9e5732ab",
+      "size_bytes": 104024
+    },
+    {
+      "local_path": "evidence/north-star-toggle-input/keyboard/pack-raised.png",
+      "sha256": "e921ccdb21197f6f9b598c4647b2187a2e399b76f3bb056a67db60167f865334",
+      "size_bytes": 70348
+    },
+    {
+      "local_path": "evidence/north-star-toggle-input/keyboard/pack-recovered.png",
+      "sha256": "de3c8b1539f98452483e324c3764f3ae1d3f17a9986aa92a856477f022014a1d",
+      "size_bytes": 71777
+    },
+    {
+      "local_path": "evidence/north-star-toggle-input/keyboard/pack-settings.png",
+      "sha256": "82a5f2e7c98127371841ab033d6f438ab4c08a10716b800512d44b7a7e6f0b17",
+      "size_bytes": 107125
+    },
+    {
+      "local_path": "evidence/north-star-toggle-input/keyboard/source-block.png",
+      "sha256": "e78011e6c8356c994579560891e25a1701a5a310525523247c639840c81d452c",
+      "size_bytes": 93415
+    },
+    {
+      "local_path": "evidence/north-star-toggle-input/keyboard/source-fresh-session.png",
+      "sha256": "ab638c43669f769f356d01ba75647281646665c51fa39f65b4d1a172e4cca7d5",
+      "size_bytes": 104994
+    },
+    {
+      "local_path": "evidence/north-star-toggle-input/keyboard/source-paused.png",
+      "sha256": "9b2995545dd5ae164cab26049405fe1d84b3cea0cf8a98f69d486ac0a8ae88c8",
+      "size_bytes": 104018
+    },
+    {
+      "local_path": "evidence/north-star-toggle-input/keyboard/source-raised.png",
+      "sha256": "65c312c7b88faef93204f4e4a2d4594c605b3444da7681554a724a30f0b75d91",
+      "size_bytes": 70379
+    },
+    {
+      "local_path": "evidence/north-star-toggle-input/keyboard/source-recovered.png",
+      "sha256": "c6feecb334d53affc29389bf94946c462af7e23714d7d06240f3d2f611bbf385",
+      "size_bytes": 71916
+    },
+    {
+      "local_path": "evidence/north-star-toggle-input/keyboard/source-settings.png",
+      "sha256": "82a5f2e7c98127371841ab033d6f438ab4c08a10716b800512d44b7a7e6f0b17",
+      "size_bytes": 107125
+    },
+    {
+      "local_path": "evidence/north-star-toggle-input/media.json",
+      "sha256": "87f69b5eeacfe8d0d8da3497c1d336217c1fe5d369813b12924e224dbf0966e2",
+      "size_bytes": 34790
+    },
+    {
+      "local_path": "evidence/north-star-toggle-input/mixer-diagnostic.json",
+      "sha256": "93f7088c3f6c696c6f9a29127d50ff017d3a82201d128a0f7815d5ae9b534046",
+      "size_bytes": 35196
+    },
+    {
+      "local_path": "evidence/north-star-toggle-input/regressions.json",
+      "sha256": "be6efa200dac0dc78d75cdda59b8954b9caf1ac97973b04a2f872f2ac7fd9a8d",
+      "size_bytes": 1216
+    },
+    {
+      "local_path": "evidence/north-star-toggle-input/results.json",
+      "sha256": "c07d61c7a90359386d553a960004453ea57f8e3ec1887fe9f72cd9843867417a",
+      "size_bytes": 105423
+    }
+  ],
+  "baseline_artifact": {
+    "path": "evidence/north-star-sentinel-resolution/results.json",
+    "sha256": "62a4074fa9fdab4580415cf04194a70cc2dbd9e2c1f461d5e9e117e1364384a3"
+  },
+  "brain_activation": {
+    "indices": "All three read using tools/brain_query.py indexes before edits.",
+    "searches": [
+      "acessibilidade",
+      "feedback"
+    ],
+    "engineering": {
+      "relevance": "high",
+      "chapters": [
+        "ENG-022"
+      ],
+      "use": "Predictable state, explicit cancellation and recoverable input."
+    },
+    "science": {
+      "relevance": "medium",
+      "chapters": [
+        "SCI-061"
+      ],
+      "use": "Execute complete workflows; do not equate synthetic input or native feasibility with representative human accessibility."
+    },
+    "creation": {
+      "relevance": "high",
+      "chapters": [
+        "CRE-081",
+        "CRE-005"
+      ],
+      "use": "Documented accessibility and agency directions, not final control/canon approval; retain challenge and meaningful costs."
+    }
+  },
+  "design": {
+    "audience": "Existing local consumer users preferring to avoid prolonged keyboard sustains.",
+    "alternatives": "Another adventure, build or laboratory timing matrix have value but leave this observed input barrier; extend the existing adapter instead.",
+    "decision": "Independent session input alternatives, not an auto-defense or automation of future interaction. Completion, interruption, range/movement and explicit press own cancellation."
+  },
+  "before_after": {
+    "baseline_commit": "1ee52e14e202b5f796d1aaa458b859300e988416",
+    "baseline_result_sha256": "62a4074fa9fdab4580415cf04194a70cc2dbd9e2c1f461d5e9e117e1364384a3",
+    "baseline_record": "evidence/north-star-sentinel-resolution/results.json",
+    "compared_sections_equal": [
+      "outcomes",
+      "rehearsals",
+      "keepsakes",
+      "errands",
+      "sound",
+      "guard_techniques",
+      "actor_poses",
+      "sentinel_resolution",
+      "continuity"
+    ],
+    "excluded": "Expected new check count, consumer hashes and session-mode fields in controls/profile snapshots. No assertion that input alternatives or UI exist in the prior PCK.",
+    "held_edge_exact_frames": 100,
+    "no_held_command_routes": [
+      {
+        "combat": {
+          "cargo": 2,
+          "counters": {
+            "blocks": 5,
+            "counters": 3,
+            "courier_hits": 1,
+            "dodges": 0,
+            "player_hits": 0,
+            "redirects": 0,
+            "rejected": 0
+          },
+          "courier_speed": 56.0,
+          "courier_x": 1000.0,
+          "enemy_focus": 0,
+          "energy": 100.0,
+          "events": [
+            {
+              "cargo": 3,
+              "energy": 67.6,
+              "hp": 5,
+              "kind": "protected",
+              "tick": 169
+            },
+            {
+              "cargo": 3,
+              "energy": 67.8,
+              "hp": 5,
+              "kind": "protected",
+              "tick": 338
+            },
+            {
+              "cargo": 3,
+              "energy": 100.0,
+              "hp": 5,
+              "kind": "pulse_avoided",
+              "tick": 507
+            },
+            {
+              "cargo": 2,
+              "energy": 100.0,
+              "hp": 5,
+              "kind": "courier_hit",
+              "tick": 676
+            },
+            {
+              "cargo": 2,
+              "energy": 75.8,
+              "hp": 5,
+              "kind": "protected",
+              "tick": 845
+            },
+            {
+              "cargo": 2,
+              "energy": 64.1,
+              "hp": 5,
+              "kind": "counter",
+              "tick": 846
+            },
+            {
+              "cargo": 2,
+              "energy": 100.0,
+              "hp": 5,
+              "kind": "pulse_avoided",
+              "tick": 1086
+            },
+            {
+              "cargo": 2,
+              "energy": 73.2,
+              "hp": 5,
+              "kind": "protected",
+              "tick": 1255
+            },
+            {
+              "cargo": 2,
+              "energy": 61.5,
+              "hp": 5,
+              "kind": "counter",
+              "tick": 1256
+            },
+            {
+              "cargo": 2,
+              "energy": 68.6,
+              "hp": 5,
+              "kind": "protected",
+              "tick": 1496
+            },
+            {
+              "cargo": 2,
+              "energy": 56.9,
+              "hp": 5,
+              "kind": "counter",
+              "tick": 1497
+            },
+            {
+              "cargo": 2,
+              "energy": 56.9,
+              "hp": 5,
+              "kind": "sentinel_disabled",
+              "tick": 1497
+            }
+          ],
+          "guard_style": "Steady",
+          "hp": 5,
+          "mode": "won",
+          "role": "Guardian",
+          "tick": 1648
+        },
+        "errand": {
+          "channel": false,
+          "events": [
+            {
+              "action": "dropped",
+              "tick": 515
+            },
+            {
+              "action": "recovered",
+              "tick": 633
+            },
+            {
+              "action": "delivered",
+              "tick": 701
+            },
+            {
+              "action": "crossing_won",
+              "tick": 1648
+            }
+          ],
+          "finished": true,
+          "progress": 0.0,
+          "state": "delivered"
+        },
+        "guard_presses": 10,
+        "interaction_presses": 2,
+        "style": "Steady"
+      },
+      {
+        "combat": {
+          "cargo": 2,
+          "counters": {
+            "blocks": 5,
+            "counters": 3,
+            "courier_hits": 1,
+            "dodges": 0,
+            "player_hits": 0,
+            "redirects": 0,
+            "rejected": 0
+          },
+          "courier_speed": 56.0,
+          "courier_x": 1000.0,
+          "enemy_focus": 0,
+          "energy": 100.0,
+          "events": [
+            {
+              "cargo": 3,
+              "energy": 75.2,
+              "hp": 5,
+              "kind": "protected",
+              "tick": 169
+            },
+            {
+              "cargo": 3,
+              "energy": 75.2,
+              "hp": 5,
+              "kind": "protected",
+              "tick": 338
+            },
+            {
+              "cargo": 3,
+              "energy": 100.0,
+              "hp": 5,
+              "kind": "pulse_avoided",
+              "tick": 507
+            },
+            {
+              "cargo": 2,
+              "energy": 100.0,
+              "hp": 5,
+              "kind": "courier_hit",
+              "tick": 676
+            },
+            {
+              "cargo": 2,
+              "energy": 75.8,
+              "hp": 5,
+              "kind": "protected",
+              "tick": 845
+            },
+            {
+              "cargo": 2,
+              "energy": 64.1,
+              "hp": 5,
+              "kind": "counter",
+              "tick": 846
+            },
+            {
+              "cargo": 2,
+              "energy": 100.0,
+              "hp": 5,
+              "kind": "pulse_avoided",
+              "tick": 1086
+            },
+            {
+              "cargo": 2,
+              "energy": 75.2,
+              "hp": 5,
+              "kind": "protected",
+              "tick": 1255
+            },
+            {
+              "cargo": 2,
+              "energy": 63.5,
+              "hp": 5,
+              "kind": "counter",
+              "tick": 1256
+            },
+            {
+              "cargo": 2,
+              "energy": 75.2,
+              "hp": 5,
+              "kind": "protected",
+              "tick": 1496
+            },
+            {
+              "cargo": 2,
+              "energy": 63.5,
+              "hp": 5,
+              "kind": "counter",
+              "tick": 1497
+            },
+            {
+              "cargo": 2,
+              "energy": 63.5,
+              "hp": 5,
+              "kind": "sentinel_disabled",
+              "tick": 1497
+            }
+          ],
+          "guard_style": "Riposte",
+          "hp": 5,
+          "mode": "won",
+          "role": "Guardian",
+          "tick": 1648
+        },
+        "errand": {
+          "channel": false,
+          "events": [
+            {
+              "action": "dropped",
+              "tick": 515
+            },
+            {
+              "action": "recovered",
+              "tick": 633
+            },
+            {
+              "action": "delivered",
+              "tick": 701
+            },
+            {
+              "action": "crossing_won",
+              "tick": 1648
+            }
+          ],
+          "finished": true,
+          "progress": 0.0,
+          "state": "delivered"
+        },
+        "guard_presses": 10,
+        "interaction_presses": 2,
+        "style": "Riposte"
+      },
+      {
+        "combat": {
+          "cargo": 3,
+          "counters": {
+            "blocks": 0,
+            "counters": 3,
+            "courier_hits": 0,
+            "dodges": 3,
+            "player_hits": 0,
+            "redirects": 3,
+            "rejected": 0
+          },
+          "courier_speed": 56.0,
+          "courier_x": 1000.0,
+          "enemy_focus": 0,
+          "energy": 100.0,
+          "events": [
+            {
+              "cargo": 3,
+              "energy": 84.0,
+              "hp": 5,
+              "kind": "redirect",
+              "tick": 110
+            },
+            {
+              "cargo": 3,
+              "energy": 59.0,
+              "hp": 5,
+              "kind": "step",
+              "tick": 110
+            },
+            {
+              "cargo": 3,
+              "energy": 76.7,
+              "hp": 5,
+              "kind": "bolt_missed",
+              "tick": 169
+            },
+            {
+              "cargo": 3,
+              "energy": 72.5,
+              "hp": 5,
+              "kind": "counter",
+              "tick": 195
+            },
+            {
+              "cargo": 3,
+              "energy": 84.0,
+              "hp": 5,
+              "kind": "redirect",
+              "tick": 376
+            },
+            {
+              "cargo": 3,
+              "energy": 59.0,
+              "hp": 5,
+              "kind": "step",
+              "tick": 376
+            },
+            {
+              "cargo": 3,
+              "energy": 76.7,
+              "hp": 5,
+              "kind": "bolt_missed",
+              "tick": 435
+            },
+            {
+              "cargo": 3,
+              "energy": 72.5,
+              "hp": 5,
+              "kind": "counter",
+              "tick": 461
+            },
+            {
+              "cargo": 3,
+              "energy": 100.0,
+              "hp": 5,
+              "kind": "pulse_avoided",
+              "tick": 701
+            },
+            {
+              "cargo": 3,
+              "energy": 84.0,
+              "hp": 5,
+              "kind": "redirect",
+              "tick": 811
+            },
+            {
+              "cargo": 3,
+              "energy": 59.0,
+              "hp": 5,
+              "kind": "step",
+              "tick": 811
+            },
+            {
+              "cargo": 3,
+              "energy": 76.7,
+              "hp": 5,
+              "kind": "bolt_missed",
+              "tick": 870
+            },
+            {
+              "cargo": 3,
+              "energy": 72.5,
+              "hp": 5,
+              "kind": "counter",
+              "tick": 896
+            },
+            {
+              "cargo": 3,
+              "energy": 72.5,
+              "hp": 5,
+              "kind": "sentinel_disabled",
+              "tick": 896
+            }
+          ],
+          "guard_style": "none",
+          "hp": 5,
+          "mode": "won",
+          "role": "Duelist",
+          "tick": 1348
+        },
+        "errand": {
+          "channel": false,
+          "events": [
+            {
+              "action": "dropped",
+              "tick": 515
+            },
+            {
+              "action": "recovered",
+              "tick": 645
+            },
+            {
+              "action": "delivered",
+              "tick": 714
+            },
+            {
+              "action": "crossing_won",
+              "tick": 1348
+            }
+          ],
+          "finished": true,
+          "progress": 0.0,
+          "state": "delivered"
+        },
+        "guard_presses": 0,
+        "interaction_presses": 2,
+        "style": "Duelist"
+      }
+    ]
+  },
+  "creative_assessment": {
+    "reviewer": "Implementing Codex agent; not independent human feedback.",
+    "inspection": "Actual settings, raised guard, block, fresh session, prepared recovery and paused frames in source/PCK. Modes and guard state remain visible; no camera/VFX intrusion.",
+    "refinements": [
+      "Suppress guard queue while recovery owns commitment.",
+      "Increase opaque settings panel after seeing an underlying footer fragment.",
+      "Correct guard footer/rehearsal wording for active input mode.",
+      "Ignored live R/T/Enter keys cannot silently lower guard.",
+      "Held interaction with toggle guard also discards queued guard.",
+      "Remove overlapping world cancellation text; keep the visible header cause.",
+      "Distinguish pressing to start from the 0.8/0.6s work duration."
+    ],
+    "limits": "No independent recognition, comfort, preference, accessibility, fun, learning or optimality evidence."
+  },
+  "failure_controls": {
+    "native": "Startup/expiry/drain, echo rejection, explicit cancellation, pause/focus/settings/reset/terminal disarm, out-of-range no queue, no automatic handoff, remapped keys, clean session and default controls.",
+    "instrumentation": [
+      "Initial runner generation omitted its X11 helper and failed with NameError; fixed runner, not product.",
+      "Initial five-second native window discovery was too short; bounded fifteen-second discovery succeeded.",
+      "No product mechanics or gates weakened for either instrument failure.",
+      "A later capture lacked acknowledgement; wait for a fresh observation and report its delivery/stage clearly.",
+      "Actual received interaction was still in progress after a fixed wall-clock wait under concurrent engine load. Runner now waits for model completion within bounded observations; it never repeats the action to fabricate success.",
+      "Current source and PCK mixer invocations hit the unchanged 30-second bound; the intact previous PCK reproduced that timeout. A separate 60-second diagnostic passed exact signal assertions in about 15.5/15.6 seconds, then the original unmodified 30-second verifier passed sequentially. Transient load/timing is an interpretation, not a measured product-performance finding."
+    ]
+  },
+  "commands": [
+    {
+      "command": [
+        "python3",
+        "martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/prototype/tools/verify.py",
+        "--output",
+        "martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/evidence/north-star-toggle-input/results.json"
+      ],
+      "result": "PASS 358 native checks, exact source/PCK code/observations, sixteen restart processes.",
+      "exit_code": 0,
+      "cwd": "Repository root"
+    },
+    {
+      "command": [
+        "python3",
+        "north-star/prototype/tools/verify_toggle_input.py",
+        "--output",
+        "evidence/north-star-toggle-input/keyboard"
+      ],
+      "result": "PASS actual XTest source/PCK journeys, four native processes, owned Xorg cleaned.",
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "python3",
+        "martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/prototype/tools/verify.py",
+        "--output",
+        "work/north-star-toggle-input/baseline.json",
+        "--compare",
+        "martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/evidence/north-star-sentinel-resolution/results.json"
+      ],
+      "result": "PASS 313, recorded baseline hash and sections above.",
+      "exit_code": 0,
+      "cwd": "Repository root, before edits"
+    },
+    {
+      "command": [
+        "godot",
+        "--headless",
+        "--path",
+        "north-star/prototype",
+        "--script",
+        "tools/pack.gd",
+        "--",
+        "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/prototype/dist/crossing-drill.pck"
+      ],
+      "exit_code": 0,
+      "environment": "Isolated temporary XDG data/config/cache.",
+      "result": "Rebuilt actual source consumer/native tests PCK."
+    },
+    {
+      "command": [
+        "python3",
+        "north-star/prototype/tools/verify_sound.py",
+        "--output",
+        "evidence/north-star-toggle-input/media.json"
+      ],
+      "exit_code": 0,
+      "result": "PASS actual source/PCK mixer, cue ownership, exact PCM and mute/pause with the original unchanged 30-second per-capture bound."
+    },
+    {
+      "command": [
+        "python3",
+        "tools/test_brain_query.py"
+      ],
+      "exit_code": 0,
+      "tests": 17,
+      "result": "OK"
+    },
+    {
+      "command": [
+        "python3",
+        "tools/test_validate_repo.py"
+      ],
+      "exit_code": 0,
+      "tests": 27,
+      "result": "OK"
+    },
+    {
+      "command": [
+        "python3",
+        "tools/test_reference_library.py"
+      ],
+      "exit_code": 0,
+      "tests": 42,
+      "result": "OK"
+    },
+    {
+      "command": [
+        "python3",
+        "tools/test_check_manifest.py"
+      ],
+      "exit_code": 0,
+      "tests": 11,
+      "result": "OK"
+    },
+    {
+      "command": [
+        "python3",
+        "north-star/prototype/tools/test_verify.py"
+      ],
+      "exit_code": 0,
+      "tests": 3,
+      "result": "OK"
+    },
+    {
+      "command": [
+        "python3",
+        "north-star/prototype/tools/test_verify_sound.py"
+      ],
+      "exit_code": 0,
+      "tests": 6,
+      "result": "OK"
+    },
+    {
+      "command": [
+        "python3",
+        "north-star/prototype/tools/test_verify_resolution.py"
+      ],
+      "exit_code": 0,
+      "tests": 3,
+      "result": "OK"
+    }
+  ],
+  "continuity": {
+    "seed": "0.33.10",
+    "stage": "local_prototype",
+    "consumer_count": 1,
+    "consumer_code_paths": 8,
+    "capabilities": "14 states unchanged; NS-C03/07 adapted. No new laboratory or origin migration.",
+    "knowledge": "Existing combat-response contextual lesson extended.",
+    "origins": "P01-P05/P07/P08/P10/P11 preserved_pending_extraction; P06 pilot_instrumented; P09 seed_only.",
+    "prompt": "Unchanged; existing execution, timing/instrumentation and evidence requirements applied.",
+    "prompt_sha256": "4c82aef691f606f2cd9bfe0192deeeaaabbd35bd489e4f006f633580045557b0"
+  },
+  "limitations": [
+    "Session-only input modes, not saved preferences or production account state.",
+    "Prepared medicine OS fixture is not full-route keyboard navigation. Native fixed routes demonstrate complete feasibility separately.",
+    "Wall-clock source/PCK OS ticks may differ; no physical input latency or cross-device performance measurement.",
+    "No human validation, multiplayer, server, production engine/class approval, canon promotion, new origin extraction or commercial signal."
+  ],
+  "repository_validation": {
+    "python_regressions": 109,
+    "registry_gate": "11 projects, 15 transfers, 11 assets, 2 legacy sources, 601 local file links.",
+    "reference_gate": "5 records, 607 preserved sources, 18 derived PDF texts, 140 exclusions, 14 capabilities.",
+    "brain_gate": "234 chapters; unchanged supplied bytes/pins and 44 inherited fragment warnings.",
+    "manifest": "Exact coverage of 1,434 maintained files; SHA-256 check must pass after generation.",
+    "ci_scope": "Headless 358-check source/PCK gate plus existing mixer gate and regressions. XTest is separately executed local evidence."
+  },
+  "failed_commands": [
+    {
+      "command": [
+        "python3",
+        "north-star/prototype/tools/verify_sound.py",
+        "--output",
+        "evidence/north-star-toggle-input/media.json"
+      ],
+      "exit_code": 1,
+      "failure": "30-second native source/pack capture timeouts, before the final successful unchanged gate."
+    },
+    {
+      "command": [
+        "godot",
+        "--headless",
+        "--audio-driver",
+        "Dummy",
+        "--main-pack",
+        "/workspace/Creative_AI_Project_HUB/work/north-star-toggle-input/baseline.pck",
+        "--script",
+        "res://tests/sound_capture.gd",
+        "--",
+        "/workspace/Creative_AI_Project_HUB/work/north-star-toggle-input/audio-baseline"
+      ],
+      "timeout_seconds": 30,
+      "baseline_commit": "1ee52e14e202b5f796d1aaa458b859300e988416",
+      "result": "Same timeout reproduced; see audio-control.json."
+    }
+  ]
+}
