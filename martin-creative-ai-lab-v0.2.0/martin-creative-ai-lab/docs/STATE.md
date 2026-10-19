@@ -57,3 +57,15 @@ Five supplied brains/pins remain byte-identical. The single prompt stays unchang
 existing selective consultation, comparison and execution requirements served this
 increment. Reassess product and creative needs next; this is not a mandate for more
 Crossing Drill refinement. Remote publication and CI are verified separately at closeout.
+
+
+## Publication follow-up — pinned CI SDK
+
+Implementation commit `2604ed0` passed remote North Star and integrity jobs. The
+unchanged Cinderwatch exporter rejected the SDK selected in the hosted shared install,
+despite setup installing 10.0.401. [CI evidence](../evidence/north-star-route-choice/CI.json)
+compares baseline source bytes and records the unresolved selected-version detail.
+Isolate installation in runner temporary storage and assert the exact version before
+compiling; no origin source/package or export guard changes. No local .NET execution
+claim: ensuing remote CI must demonstrate the actual export. Product behavior and
+the single successor prompt are unchanged by this publication repair.

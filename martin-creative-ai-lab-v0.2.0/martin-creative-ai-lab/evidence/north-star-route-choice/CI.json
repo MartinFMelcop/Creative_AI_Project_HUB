@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "kind": "publication_followup",
+  "implementation_commit": "2604ed08a44f446d5da591e848b280eb0cfb0369",
+  "failed_workflow_run": 39298989032,
+  "failed_job": 118218877700,
+  "failed_step": "Execute delivered and freshly rebuilt Cinderwatch Linux players",
+  "observed": "setup-dotnet installs 10.0.401; delivered player passes 1044 native checks; export_linux.py rejects the selected SDK against its exact 10.0.401 guard. North Star and integrity jobs pass.",
+  "baseline_control": {
+    "commit": "219a8c586147c6378dce04c18d03aa5984498e03",
+    "unchanged_sources": {
+      "projects/cinderwatch/tools/export_linux.py": "426bb8b68290e151c84a81268e36760435f26b2ba9bf89465224c86c2db41356",
+      "projects/cinderwatch/global.json": "a0dcc4ee0c1b8044f9498734741bd764d5c2585f4d0d8e31e27e26e9662f751f"
+    },
+    "workflow": "SDK installation, Cinderwatch steps and source exporter are unchanged from baseline; no North Star source participates in SDK selection."
+  },
+  "interpretation": "The installed SDK is not necessarily the SDK selected in a shared hosted inventory. global.json permits latestPatch while the exporter requires exactly 10.0.401. The failing log does not identify the alternative selected version.",
+  "change": "Install into an isolated runner-temporary DOTNET_INSTALL_DIR and assert dotnet --version before compiling. Preserve all source/package identities and strict export guards.",
+  "brain_use": {
+    "engineering": "High ENG-005: explicit environment invariants.",
+    "science": "Medium SCI-017: compare unchanged baseline inputs; require actual CI execution after repair.",
+    "creation": "Low: no creative artifact or authority change."
+  },
+  "local_limit": "No local .NET SDK/Mono engine installed. The real export is verified by the ensuing GitHub job, not claimed from local structural checks.",
+  "workflow_sha256": "d47c0df2450d11d8f4e7b3e0138c2ce8b5c2835d4557c4b672bd5802eb08f901",
+  "prompt": "Unchanged; current environment/baseline and publication instructions already cover this failure."
+}
