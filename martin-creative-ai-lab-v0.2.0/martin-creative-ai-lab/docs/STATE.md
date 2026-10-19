@@ -69,3 +69,6 @@ Isolate installation in runner temporary storage and assert the exact version be
 compiling; no origin source/package or export guard changes. No local .NET execution
 claim: ensuing remote CI must demonstrate the actual export. Product behavior and
 the single successor prompt are unchanged by this publication repair.
+The first SDK follow-up used runner context at job scope and was rejected before
+jobs. Actionlint 1.7.7 reproduces that error and accepts the corrected step scope;
+the action exports PATH/DOTNET_ROOT for later steps. This changes no export guard.

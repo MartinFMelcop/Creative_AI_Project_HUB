@@ -22,6 +22,16 @@
     "creation": "Low: no creative artifact or authority change."
   },
   "local_limit": "No local .NET SDK/Mono engine installed. The real export is verified by the ensuing GitHub job, not claimed from local structural checks.",
-  "workflow_sha256": "d47c0df2450d11d8f4e7b3e0138c2ce8b5c2835d4557c4b672bd5802eb08f901",
-  "prompt": "Unchanged; current environment/baseline and publication instructions already cover this failure."
+  "workflow_sha256": "28d811a2227fd8c7a054f8b9eac7e7366dc0e3cdab4ee0f5481275a842fac3f3",
+  "prompt": "Unchanged; current environment/baseline and publication instructions already cover this failure.",
+  "workflow_scope_correction": {
+    "rejected_run": 39300171041,
+    "observation": "No jobs or check-runs were scheduled. The first follow-up placed runner.temp in job-level env, where runner context is unavailable.",
+    "correction": "Place DOTNET_INSTALL_DIR on the setup-dotnet step; the action exports PATH/DOTNET_ROOT for subsequent commands. Exact SDK guard remains.",
+    "verification": {
+      "tool": "Official actionlint 1.7.7; archive SHA256 023070a287cd8cccd71515fedc843f1985bf96c436b7effaecce67290e7e0757",
+      "before": "Rejected job-level runner context at line 28; available contexts exclude runner.",
+      "after": "Corrected workflow passes syntax/expression checks with -shellcheck= -pyflakes=. No shell/Python lint or actual export claim from this command."
+    }
+  }
 }

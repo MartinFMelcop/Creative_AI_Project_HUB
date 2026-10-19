@@ -24,13 +24,14 @@ jobs:
     env:
       DOTNET_CLI_TELEMETRY_OPTOUT: '1'
       DOTNET_NOLOGO: '1'
-      # A shared hosted SDK inventory can roll latestPatch beyond export pins.
-      DOTNET_INSTALL_DIR: ${{ runner.temp }}/dotnet-sdk-10.0.401
     steps:
       - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
         with:
           persist-credentials: false
       - uses: actions/setup-dotnet@67a3573c9a986a3f9c594539f4ab511d57bb3ce9 # v4
+        env:
+          # runner context is available at step scope; isolate hosted SDK patches.
+          DOTNET_INSTALL_DIR: ${{ runner.temp }}/dotnet-sdk-10.0.401
         with:
           dotnet-version: '10.0.401'
       - name: Require the isolated pinned SDK before compiling
