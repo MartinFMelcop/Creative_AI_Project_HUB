@@ -1,0 +1,179 @@
+{
+  "deliveries": {
+    "pack": {
+      "chosen": {
+        "covered_bolts": 0,
+        "kind": "ridge",
+        "leg": 0,
+        "locked": false
+      },
+      "movement_samples": [
+        {
+          "player": [
+            550.0,
+            390.0
+          ],
+          "tick": 13
+        },
+        {
+          "player": [
+            454.166625976562,
+            390.0
+          ],
+          "tick": 45
+        },
+        {
+          "player": [
+            391.666778564453,
+            390.0
+          ],
+          "tick": 69
+        },
+        {
+          "player": [
+            370.83349609375,
+            390.0
+          ],
+          "tick": 81
+        },
+        {
+          "player": [
+            350.000213623047,
+            390.0
+          ],
+          "tick": 93
+        },
+        {
+          "player": [
+            350.000213623047,
+            285.833587646484
+          ],
+          "tick": 123
+        },
+        {
+          "player": [
+            350.000213623047,
+            273.333618164062
+          ],
+          "tick": 133
+        }
+      ],
+      "outside": {
+        "covered_bolts": 0,
+        "kind": "road",
+        "leg": 0,
+        "locked": false
+      },
+      "paused": {
+        "covered_bolts": 0,
+        "kind": "road",
+        "leg": 0,
+        "locked": false
+      },
+      "retry": {
+        "covered_bolts": 0,
+        "kind": "road",
+        "leg": 0,
+        "locked": false
+      },
+      "revised": {
+        "covered_bolts": 0,
+        "kind": "road",
+        "leg": 0,
+        "locked": false
+      }
+    },
+    "source": {
+      "chosen": {
+        "covered_bolts": 0,
+        "kind": "ridge",
+        "leg": 0,
+        "locked": false
+      },
+      "movement_samples": [
+        {
+          "player": [
+            550.0,
+            390.0
+          ],
+          "tick": 15
+        },
+        {
+          "player": [
+            454.166625976562,
+            390.0
+          ],
+          "tick": 46
+        },
+        {
+          "player": [
+            387.500122070312,
+            390.0
+          ],
+          "tick": 71
+        },
+        {
+          "player": [
+            362.500183105469,
+            390.0
+          ],
+          "tick": 88
+        },
+        {
+          "player": [
+            362.500183105469,
+            298.333557128906
+          ],
+          "tick": 118
+        },
+        {
+          "player": [
+            362.500183105469,
+            285.833587646484
+          ],
+          "tick": 130
+        },
+        {
+          "player": [
+            362.500183105469,
+            285.833587646484
+          ],
+          "tick": 138
+        },
+        {
+          "player": [
+            362.500183105469,
+            277.500274658203
+          ],
+          "tick": 151
+        }
+      ],
+      "outside": {
+        "covered_bolts": 0,
+        "kind": "road",
+        "leg": 0,
+        "locked": false
+      },
+      "paused": {
+        "covered_bolts": 0,
+        "kind": "road",
+        "leg": 0,
+        "locked": false
+      },
+      "retry": {
+        "covered_bolts": 0,
+        "kind": "road",
+        "leg": 0,
+        "locked": false
+      },
+      "revised": {
+        "covered_bolts": 0,
+        "kind": "road",
+        "leg": 0,
+        "locked": false
+      }
+    }
+  },
+  "kind": "synthetic_os_input",
+  "scope": "Actual native keyboard navigation, outside/paused rejection, route signal, revision and clean retry. Paused observations avoid timing interference; not a full OS-input escort or human study."
+}

@@ -1,0 +1,584 @@
+{
+  "schema_version": 1,
+  "kind": "destination_execution",
+  "recorded_at_utc": "2026-10-19T17:57:00+00:00",
+  "baseline_commit": "219a8c586147c6378dce04c18d03aa5984498e03",
+  "branch": "codex/north-star-route-choice-20261019",
+  "mode": "DEVELOPMENT",
+  "priority_category": 1,
+  "capability_ids": [
+    "NS-C03",
+    "NS-C07"
+  ],
+  "consumer_paths": [
+    "north-star/prototype/arena.gd",
+    "north-star/prototype/combat.gd",
+    "north-star/prototype/rehearsal.gd",
+    "north-star/prototype/keepsakes.gd",
+    "north-star/prototype/errand.gd",
+    "north-star/prototype/controls.gd",
+    "north-star/prototype/sound.gd",
+    "north-star/prototype/actors.gd",
+    "north-star/prototype/workshop.gd",
+    "north-star/prototype/route.gd"
+  ],
+  "runtime": "Godot 4.6.3.stable.official.7d41c59c4 standard; Python 3.12.14; Linux; owned Xorg dummy, Mesa llvmpipe, libX11/libXtst, Dummy audio.",
+  "scope": "One local destination, actual route commitment, longer courier path, partial geometric bolt cover and consumer feedback; existing contact/gear/input/profile contracts retained.",
+  "checks": {
+    "passed": 505,
+    "failed": 0
+  },
+  "source_artifacts": [
+    {
+      "local_path": "north-star/prototype/arena.gd",
+      "sha256": "de9725a398c8cabdbf0127d8f758bbd1285f96ae6938284f94a2b25c1f2c9205",
+      "size_bytes": 30085
+    },
+    {
+      "local_path": "north-star/prototype/combat.gd",
+      "sha256": "6c25cf2e09ffec295dbf801a7c7a32abae247729cc724adff34068921a47f834",
+      "size_bytes": 14081
+    },
+    {
+      "local_path": "north-star/prototype/rehearsal.gd",
+      "sha256": "507a27b7832cfc79522396132a0a5f3f32fec34dd443a8a35fc21102080252c9",
+      "size_bytes": 3187
+    },
+    {
+      "local_path": "north-star/prototype/keepsakes.gd",
+      "sha256": "d7790dddbd25904069b0c1a6d5edb2f7d01bc02a375d608a4ec5a25262ddb6c9",
+      "size_bytes": 5848
+    },
+    {
+      "local_path": "north-star/prototype/errand.gd",
+      "sha256": "2a2392fa86bd12544eba5f60ad74d35592c7d6fa207373ec11a1928a9e33e601",
+      "size_bytes": 3831
+    },
+    {
+      "local_path": "north-star/prototype/controls.gd",
+      "sha256": "151bb8867ba735c3b0b2a0048d312472dfe32359d2409825fa4817cbd0a9e9b8",
+      "size_bytes": 9867
+    },
+    {
+      "local_path": "north-star/prototype/sound.gd",
+      "sha256": "4404169ebb2d1711f20e6023292712bb2051f4075c4039d9e2db725b4b8fa80a",
+      "size_bytes": 4116
+    },
+    {
+      "local_path": "north-star/prototype/actors.gd",
+      "sha256": "b7b4d7e268ae69203570b6372d21bed2dcd9f1035025e6ec5249158d6a73304e",
+      "size_bytes": 10535
+    },
+    {
+      "local_path": "north-star/prototype/workshop.gd",
+      "sha256": "5fcba9578edf0c44db9336cb36d6b7783ff1da175e200f9c422392e4eebcc56b",
+      "size_bytes": 2239
+    },
+    {
+      "local_path": "north-star/prototype/route.gd",
+      "sha256": "2936029e1a52933fff0141b546f85fbc53a57b7e6c5301eaef5cabac06a05901",
+      "size_bytes": 2304
+    },
+    {
+      "local_path": "north-star/prototype/project.godot",
+      "sha256": "8d4755b58f1179a9b5ec431579177371e784bca9703a17c88f4c7a6d4ee9385c",
+      "size_bytes": 414
+    },
+    {
+      "local_path": "north-star/prototype/arena.tscn",
+      "sha256": "f794c485663f0ed318ddce6bb7a62bc9b2dbd3af02be4f166cca962c29382591",
+      "size_bytes": 154
+    },
+    {
+      "local_path": "north-star/prototype/provenance.json",
+      "sha256": "8b924aeafee9a537e31387479f2e293fb2283abfe01f877926e7be0faa19edd6",
+      "size_bytes": 4435
+    },
+    {
+      "local_path": "north-star/prototype/tools/pack.gd",
+      "sha256": "6aac96abf5b939525f6ade3239f108b7ab934ea1baab21a815f25c4a0ceeae98",
+      "size_bytes": 1116
+    },
+    {
+      "local_path": "north-star/prototype/tools/verify.py",
+      "sha256": "8ef11bf0384230d7d16e53fb7c0bb883182242b931bc6200ccad140b4f37aad7",
+      "size_bytes": 7514
+    },
+    {
+      "local_path": "north-star/prototype/tools/verify_workshop.py",
+      "sha256": "9480bf10e81f5a220a094b841a009647f91f70b51131ce7258b9b9d211e247aa",
+      "size_bytes": 3474
+    },
+    {
+      "local_path": "north-star/prototype/tools/verify_routes.py",
+      "sha256": "3f065dc5c35b2a450559e1fb629aa2bf74b3c7317516c1c18f94bd98bd86c5e4",
+      "size_bytes": 3597
+    },
+    {
+      "local_path": "north-star/prototype/tools/verify_routes_input.py",
+      "sha256": "7564845de7f59d13f354c8105e95e76724a33d8cd44b49f833ad0814b92e127a",
+      "size_bytes": 7931
+    },
+    {
+      "local_path": "north-star/prototype/tests/route_checks.gd",
+      "sha256": "549272698da6d2e6e07ccf2e13a98fa5ee9b9c5df11c0ef8d1e65c49aa196d83",
+      "size_bytes": 7366
+    },
+    {
+      "local_path": "north-star/prototype/tests/render_routes.gd",
+      "sha256": "00d61a645e6ef22d880acd59cf8b87bc8954bd653e1fe82faed12b7e861acc33",
+      "size_bytes": 1570
+    },
+    {
+      "local_path": "north-star/prototype/tests/run_checks.gd",
+      "sha256": "0bd8b8f448860cae29f87ef947ef2c69c79ce32ba13b0827f004dff809360247",
+      "size_bytes": 8163
+    },
+    {
+      "local_path": "north-star/prototype/tests/policy.gd",
+      "sha256": "646f0758a211e84ffbfd4632460c7d1fc549cbb3b552801ee2508774a5a63e29",
+      "size_bytes": 979
+    },
+    {
+      "local_path": "north-star/prototype/dist/crossing-drill.pck",
+      "sha256": "ef8a226d88c221aca4e30768d4326e068c7873bdbfc14bb4febd7e62060791e1",
+      "size_bytes": 202100
+    }
+  ],
+  "result_artifacts": [
+    {
+      "local_path": "evidence/north-star-route-choice/keyboard.json",
+      "sha256": "4f3c4bf257627a4a354fd77de86598c2a51a19df54d9ff0c3dcaadc81fed02bd",
+      "size_bytes": 3514
+    },
+    {
+      "local_path": "evidence/north-star-route-choice/regressions.json",
+      "sha256": "f4ebd656b8edffa4cea64562e4370a32e9b2d9347f364a07895d55df24584c71",
+      "size_bytes": 105889
+    },
+    {
+      "local_path": "evidence/north-star-route-choice/rendered/duelist-result.png",
+      "sha256": "67f848ebc5c158bc98edf2f6c7076b8ea751b482a31a3bed19ef3baaa4b2c028",
+      "size_bytes": 138682
+    },
+    {
+      "local_path": "evidence/north-star-route-choice/rendered/frames.json",
+      "sha256": "ecd24d72c85c48c48d02a2a7768158d25cc05bbc14e796c93cbb8fe0c758d303",
+      "size_bytes": 11663
+    },
+    {
+      "local_path": "evidence/north-star-route-choice/rendered/guardian-cover.png",
+      "sha256": "f79f0d4573db79bdbad20727f12ee34916bd1d9d989da8ae9e925ff02e8de638",
+      "size_bytes": 92132
+    },
+    {
+      "local_path": "evidence/north-star-route-choice/rendered/guardian-turn.png",
+      "sha256": "3808614d6b4b34f55e099c9172744994f4483dcd1d09d240f4e055bd396fb2f6",
+      "size_bytes": 92751
+    },
+    {
+      "local_path": "evidence/north-star-route-choice/results.json",
+      "sha256": "63ac57ab036910ca84a091871543317f0662213ed1138d0dac8a0ded47ebfc4d",
+      "size_bytes": 1659
+    },
+    {
+      "local_path": "evidence/north-star-route-choice/workshop.json",
+      "sha256": "0305ea27de11912d0f8f668561f3230340b82e74a7ddaacbabcb0fdcf8d633d8",
+      "size_bytes": 1701
+    }
+  ],
+  "baseline_artifact": {
+    "git_commit": "219a8c586147c6378dce04c18d03aa5984498e03",
+    "local_path": "north-star/prototype/dist/crossing-drill.pck",
+    "sha256": "faf1a44ba224200342342c2219b64684c6e8266e2745633e4da8599d67d83451",
+    "size_bytes": 187012,
+    "execution": "Preserved pack and current source passed all 358 controls before editing; compared to prior committed regression record."
+  },
+  "brain_activation": {
+    "engineering": {
+      "relevance": "high",
+      "ids": [
+        "ENG-005"
+      ],
+      "use": "Explicit route/commitment invariants; pure prediction and nearest-contact ownership."
+    },
+    "scientific": {
+      "relevance": "medium",
+      "ids": [
+        "SCI-017"
+      ],
+      "use": "Paired baseline observations, same-speed path budget, negative controls; policy limits."
+    },
+    "creative": {
+      "relevance": "high",
+      "ids": [
+        "CRE-005",
+        "CRE-047",
+        "CRE-058"
+      ],
+      "status": [
+        "A",
+        "H",
+        "H"
+      ],
+      "use": "Agency changes actual path/cost; bounded solo alternative, not named source fiction or canon."
+    },
+    "source_pins_unchanged": {
+      "CATALOGO_DE_CONSULTA.json": "e8927568f2f63f9d5778778a7c8652c57cfedb248cea6d1b659023df80d4119c",
+      "BIBLIOTECA_DE_CONHECIMENTO_APLICADO.md": "2726e3f8d6c2c95acc015fc527437bc8de974170d9a507f62e6e3c289a61eae1",
+      "SCIENTIFIC_BRAIN.md": "4a8dff7d1bc23f06421ffec4a07fcb66b745423f3728bc2cb11dc750a5e38958",
+      "CREATIVE_BRAIN.md": "41efe409375b09ae29006bf475ae5a2221d532d67c1dcbbe0df98b4b1afa8bc1",
+      "ENGINEERING_BRAIN.md": "975b8741f767bc1dcaf3c551e5516a79bcd78d5d8e6efd8a4965d9f3cf37971f",
+      "integrity.json": "1afe93d07e7bd784b6521264e823833ed7e692a052d2e667a6d47456ce99a0cb"
+    },
+    "knowledge": "knowledge/combat-response.md"
+  },
+  "design": {
+    "audience": "Players trying the existing two-approach local escort; reviewers inspecting a real spatial decision.",
+    "baseline_weakness": "Character tactics and preparation exist, but the courier always follows the same straight path.",
+    "alternatives": [
+      {
+        "option": "More workshop/defense refinement",
+        "assessment": "Feasible category 1, but repeats recently developed preparation/timing rather than broadening adventure agency."
+      },
+      {
+        "option": "Post-arrival dialogue or durable quest record",
+        "assessment": "Useful later consequence/identity work; P10 narrative/logistics and P11 handover remain genuine origin demonstrations, not imported here."
+      },
+      {
+        "option": "Independent player comprehension research",
+        "assessment": "Relevant category 3 uncertainty, but no participants; synthetic traces cannot answer it."
+      },
+      {
+        "option": "Native spatial fork",
+        "assessment": "Selected category 1; an actual alternative path with travel cost and bounded protection in the existing consumer, no new engine/lab/network."
+      }
+    ],
+    "decision": "Nearby discrete interaction signals Road/Ridge until courier MARK 1. Path/cost/protection, not merely labels, change. Hold cannot cycle; retry resets.",
+    "provenance": "Original temporary route/filter fiction. CRE-047/058 hypotheses and earlier GDDs do not become canon."
+  },
+  "before_after": {
+    "road_distance_px": 840,
+    "ridge_distance_px": 1120,
+    "added_distance_px": 280,
+    "courier_speed_px_s": "Unchanged 28 walking / 56 after actual shutdown on both routes.",
+    "complete_fixed_policies": [
+      {
+        "cargo": 3,
+        "choice": "road",
+        "covered_bolts": 0,
+        "hp": 5,
+        "mode": "won",
+        "role": "Guardian",
+        "tick": 1648,
+        "visited_upper": false
+      },
+      {
+        "cargo": 3,
+        "choice": "ridge",
+        "covered_bolts": 2,
+        "hp": 5,
+        "mode": "won",
+        "role": "Guardian",
+        "tick": 2117,
+        "visited_upper": true
+      },
+      {
+        "cargo": 3,
+        "choice": "road",
+        "covered_bolts": 0,
+        "hp": 5,
+        "mode": "won",
+        "role": "Duelist",
+        "tick": 1262,
+        "visited_upper": false
+      },
+      {
+        "cargo": 3,
+        "choice": "ridge",
+        "covered_bolts": 1,
+        "hp": 5,
+        "mode": "won",
+        "role": "Duelist",
+        "tick": 1647,
+        "visited_upper": true
+      }
+    ],
+    "retained_core": "All observations exactly equal the baseline after excluding only consumer_hashes; 358 controls and sixteen restart processes.",
+    "retained_workshop": "98 controls and six complete gear/approach outcomes equal prior evidence after excluding consumer_hashes and full-observation identity.",
+    "keyboard": "Actual source/PCK navigation to sign, outside/paused rejection, one held press, explicit revision and clean retry; separate from complete native-driven routes.",
+    "rendering": "Six actual scene frames per source/PCK; complete state dictionaries equal. Three selected packaged frames retained and inspected; not physical listening or unassisted play."
+  },
+  "creative_assessment": {
+    "observer": "Implementing Codex agent, not independent human feedback.",
+    "observed": "The courier turns visibly; the raised filter and its local catch flash are separate from actor impact. Full-path progress moves during vertical travel. Result separates caught bolts from personal blocks.",
+    "refinements": [
+      "Replace horizontal-only progress with remaining polyline distance.",
+      "Orient courier body to the actual path.",
+      "Label filter as passable to people and ineffective against floor pulses."
+    ],
+    "limits": "The fixed policies demonstrate feasible route cost and partial protection, not optimality, preference, fun or unassisted comprehension."
+  },
+  "commands": [
+    {
+      "command": [
+        "python3",
+        "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/prototype/tools/verify.py",
+        "--output",
+        "work/north-star-route-choice/baseline.json",
+        "--compare",
+        "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/evidence/north-star-workshop/regressions.json"
+      ],
+      "cwd": "/workspace/Creative_AI_Project_HUB",
+      "exit_code": 0,
+      "result": "358 controls before editing; preserved source/PCK identical"
+    },
+    {
+      "command": [
+        "godot",
+        "--headless",
+        "--path",
+        "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/prototype",
+        "--script",
+        "tools/pack.gd",
+        "--",
+        "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/prototype/dist/crossing-drill.pck"
+      ],
+      "cwd": "/workspace/Creative_AI_Project_HUB",
+      "exit_code": 0,
+      "result": "Packed source and native/render probes"
+    },
+    {
+      "command": [
+        "python3",
+        "north-star/prototype/tools/verify_routes.py",
+        "--output",
+        "../../work/north-star-route-choice/results.json"
+      ],
+      "cwd": "maintained lab",
+      "exit_code": 0,
+      "result": "49 controls; 4 complete policies; source/PCK identical"
+    },
+    {
+      "command": [
+        "python3",
+        "north-star/prototype/tools/verify.py",
+        "--output",
+        "../../work/north-star-route-choice/regressions.json"
+      ],
+      "cwd": "maintained lab",
+      "exit_code": 0,
+      "result": "358 controls and sixteen restart processes; source/PCK identical"
+    },
+    {
+      "command": [
+        "python3",
+        "north-star/prototype/tools/verify_workshop.py",
+        "--output",
+        "../../work/north-star-route-choice/workshop.json"
+      ],
+      "cwd": "maintained lab",
+      "exit_code": 0,
+      "result": "98 controls and six routes; source/PCK identical"
+    },
+    {
+      "command": [
+        "python3",
+        "north-star/prototype/tools/verify_routes_input.py",
+        "--output",
+        "../../work/north-star-route-choice/keyboard-final"
+      ],
+      "cwd": "maintained lab",
+      "exit_code": 0,
+      "result": "Actual XTest journey in both native deliveries; owned processes stopped"
+    },
+    {
+      "command": [
+        "godot",
+        "--path",
+        "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/prototype",
+        "--audio-driver",
+        "Dummy",
+        "--script",
+        "res://tests/render_routes.gd",
+        "--",
+        "/workspace/Creative_AI_Project_HUB/work/north-star-route-choice/rendered/source"
+      ],
+      "cwd": "/workspace/Creative_AI_Project_HUB",
+      "exit_code": 0,
+      "result": "Actual displayed source frames; invoked from bounded scratch harness with absolute paths and isolated XDG"
+    },
+    {
+      "command": [
+        "godot",
+        "--main-pack",
+        "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/prototype/dist/crossing-drill.pck",
+        "--audio-driver",
+        "Dummy",
+        "--script",
+        "res://tests/render_routes.gd",
+        "--",
+        "/workspace/Creative_AI_Project_HUB/work/north-star-route-choice/rendered/pack"
+      ],
+      "cwd": "/workspace/Creative_AI_Project_HUB",
+      "exit_code": 0,
+      "result": "Actual displayed pack frames; invoked from bounded scratch harness with absolute paths and isolated XDG"
+    },
+    {
+      "command": [
+        "python3",
+        "tools/validate_repo.py"
+      ],
+      "cwd": "maintained lab",
+      "exit_code": 0,
+      "result": "11 projects, 15 transfers, 11 assets, 2 legacy sources; 617 local links"
+    },
+    {
+      "command": [
+        "python3",
+        "tools/reference_library.py",
+        "check"
+      ],
+      "cwd": "maintained lab",
+      "exit_code": 0,
+      "result": "5 reference records, 607 preserved sources, 18 PDF texts, 140 exclusions, 14 North Star capabilities"
+    },
+    {
+      "command": [
+        "python3",
+        "north-star/prototype/tools/verify_routes.py",
+        "--output",
+        "../../work/north-star-route-choice/reproduced.json",
+        "--compare",
+        "evidence/north-star-route-choice/results.json"
+      ],
+      "cwd": "maintained lab",
+      "exit_code": 0,
+      "result": "Exact reproduction; 49 controls, 4 routes"
+    },
+    {
+      "command": [
+        "python3",
+        "tools/brain_query.py",
+        "check"
+      ],
+      "cwd": "maintained lab",
+      "exit_code": 0,
+      "result": "passed; see repository_validation counts and preserved source pins"
+    },
+    {
+      "command": [
+        "python3",
+        "tools/test_brain_query.py"
+      ],
+      "cwd": "maintained lab",
+      "exit_code": 0,
+      "result": "passed; see repository_validation counts and preserved source pins"
+    },
+    {
+      "command": [
+        "python3",
+        "tools/test_validate_repo.py"
+      ],
+      "cwd": "maintained lab",
+      "exit_code": 0,
+      "result": "passed; see repository_validation counts and preserved source pins"
+    },
+    {
+      "command": [
+        "python3",
+        "tools/test_reference_library.py"
+      ],
+      "cwd": "maintained lab",
+      "exit_code": 0,
+      "result": "passed; see repository_validation counts and preserved source pins"
+    },
+    {
+      "command": [
+        "python3",
+        "tools/test_check_manifest.py"
+      ],
+      "cwd": "maintained lab",
+      "exit_code": 0,
+      "result": "passed; see repository_validation counts and preserved source pins"
+    },
+    {
+      "command": [
+        "python3",
+        "north-star/prototype/tools/test_verify.py"
+      ],
+      "cwd": "maintained lab",
+      "exit_code": 0,
+      "result": "passed; see repository_validation counts and preserved source pins"
+    },
+    {
+      "command": [
+        "python3",
+        "north-star/prototype/tools/test_verify_resolution.py"
+      ],
+      "cwd": "maintained lab",
+      "exit_code": 0,
+      "result": "3 failure controls passed"
+    },
+    {
+      "command": [
+        "python3",
+        "tools/check_manifest.py"
+      ],
+      "cwd": "maintained lab",
+      "exit_code": 0,
+      "result": "1465 files covered exactly once; all hashes match"
+    }
+  ],
+  "failure_controls": [
+    "Unknown route, exact fork boundary, mutation-free prediction, distance subdivision and no early finish.",
+    "Cover misses outside finite segment; nearer player/courier/live guard owns contact; ground pulses still hurt.",
+    "Cover grants no personal block or opening; neutral Ridge policy loses despite catches.",
+    "Pause/outside/isolated rehearsal reject route input; remapped physical scene key works; medicine retains nearby recovery.",
+    "Preserved prior PCK lacks the new probe and is rejected; no success report written."
+  ],
+  "failed_commands": [
+    {
+      "phase": "First native test construction",
+      "result": "38 passed, 1 failed: positive geometry case accidentally reused a default-Road fixture; reset fixture to Ridge, then all controls pass. No gameplay behavior changed to satisfy it."
+    },
+    {
+      "phase": "First XTest instrument",
+      "result": "X11 BadWindow during startup window-name discovery; default Xlib handler aborted before finally. Owned game/server stopped explicitly; handle only stale-window query/property errors, retain consumer acknowledgement and unexpected-error rejection. Final owned processes stop in finally."
+    },
+    {
+      "phase": "Reference check before continuity rebinding",
+      "result": "Rejected changed destination source hash against prior RUN, as intended. Current source/result identities must be bound before closing; gate not weakened."
+    }
+  ],
+  "continuity": {
+    "consumer_count": 1,
+    "code_path_count": 10,
+    "capability_states": "All 14 unchanged; NS-C03/07 adapted, no promotion.",
+    "origins": "P01-P05/P07/P08/P10/P11 preserved_pending_extraction; P06 pilot_instrumented; P09 seed_only. No extraction, retirement or new laboratory.",
+    "knowledge": "Existing combat-response record gains bounded contact/travel ownership findings.",
+    "portfolio": "Actual playable spatial decision, route checker and source/PCK images, in addition to retained origin demonstrations.",
+    "prompt": "Unchanged bytes; existing compact consultation, product comparison, execution/instrumentation and full successor contracts applied. Lab guide corrected an obsolete all-index phrase to the current compact procedure."
+  },
+  "limitations": [
+    "No independent human participants, unassisted comprehension, preference, fun, retention or accessibility evidence.",
+    "Four fixed standard-gear completion policies, not optimal strategies, exhaustive gear/Riposte combinations or comparative balance.",
+    "Keyboard probe verifies navigation/choice/revision/reset, not a full OS-driven escort.",
+    "Projectile-only geometric filter is passable by bodies; no solid terrain physics or universal cover.",
+    "No new audio cue or physical listening claim.",
+    "Local prototype only: no multiplayer, MMORPG scale, account/server integration, production engine, market or approved class/geography/canon."
+  ],
+  "repository_validation": {
+    "python_regressions": {
+      "brain_query": 31,
+      "validate_repo": 27,
+      "reference_library": 42,
+      "check_manifest": 11,
+      "native_runner_failures": 3,
+      "resolution_failure_controls": 3
+    },
+    "source_integrity": "All five protected books/catalog/index and integrity.json equal pre-edit pins; inherited fragment warnings retained.",
+    "publication": "Remote SHA and CI are verified separately after the actual commit.",
+    "manifest": "1465 maintained files, exact Git inventory coverage and matching hashes."
+  }
+}

@@ -1,6 +1,6 @@
 # SEED — Martin Creative AI Lab
 
-**Version:** 0.33.12
+**Version:** 0.33.13
 **Data-base:** 10 de outubro de 2026  
 **Autor e responsável pelo portfólio:** Martin Melcop Neto  
 **Working language:** English for new technical documentation, plans, code comments and Git messages; respond in the requested language (Brazilian Portuguese for continuous closeout). Preserve appropriate creative/source languages.
@@ -45,7 +45,19 @@ does not merge fictional universes. Source details below are historical provenan
 retained origin behavior; current operation is defined by this direction, AGENTS,
 STATE and the single [continuous prompt](docs/prompts/CONTINUOUS_DEVELOPMENT.md).
 
-### Current consumer increment — v0.33.12
+### Current consumer increment — v0.33.13
+
+DEVELOPMENT/category 1: a nearby sign chooses an actual courier path before MARK 1.
+Road retains 840px; Ridge adds 280px and partial projectile-only cover, with nearer
+body ownership and floor danger preserved. The courier turns, warnings predict the
+real path, progress counts vertical travel and results separate filter catches from
+personal blocks. [Execution](evidence/north-star-route-choice/RUN.json) binds 49 new
+controls, four complete policies, real source/PCK keyboard navigation and inspected
+images. All 358 prior mechanical observations and six workshop outcomes are unchanged.
+One consumer/ten code paths, fourteen capability states unchanged; no new lab or
+origin migration. Creative route proposals remain experimental. Prompt unchanged.
+
+### Prior consumer increment — v0.33.12
 
 DEVELOPMENT/category 1: a native optional roadside workshop connects one reversible
 fitting blank to a visibly worn health/mobility choice in the actual crossing. Both
@@ -98,12 +110,12 @@ for continuous development and its full successor requirement.
 
 | Field | Current evidence |
 |---|---|
-| Baseline | `8c51b2f1d9d315a5dc0ef991a07968799da9f124`; wrapper retained |
-| Current milestone | DEVELOPMENT/category 1: optional medicine-case recovery and actual courier handoff under continuing threats, with distinct inspected escort outcomes |
+| Baseline | `219a8c586147c6378dce04c18d03aa5984498e03`; wrapper retained |
+| Current milestone | DEVELOPMENT/category 1: actual spatial route choice, added travel cost and partial bolt protection; [execution](evidence/north-star-route-choice/RUN.json) |
 | Sources | Five byte-preserved supplied brain files; historical reference inventories unchanged |
 | Operational state | [STATE](docs/STATE.md), [origins](labs/origins.json), [brain integrity](brains/integrity.json) |
 | Portfolio | Technology capabilities, inspectable source/demonstrations and bounded execution evidence |
-| North Star | One local prototype; fourteen entries, NS-C03 adapted, other thirteen statuses unchanged; no final engine/MMO service |
+| North Star | One local prototype/ten code paths; fourteen entries, NS-C03/07 adapted, other twelve statuses unchanged; no final engine/MMO service |
 | Next selection | Reassess actual character-experience questions, laboratory instruments and portfolio value from new evidence |
 
 Registry and source gates establish structure/integrity, not gameplay quality or truth

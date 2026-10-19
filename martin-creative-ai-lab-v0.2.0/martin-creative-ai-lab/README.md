@@ -12,7 +12,7 @@ merits. The outer `martin-creative-ai-lab-v0.2.0/` name is historical packaging;
 
 Play the [North Star crossing prototype](north-star/prototype/README.md), or
 inspect its [living design](north-star/DESIGN.md) and
-[executed evidence](evidence/north-star-toggle-input/RUN.json). Session-only single-press guard/interaction now remove sustained-key requirements
+[executed evidence](evidence/north-star-route-choice/RUN.json). Session-only single-press guard/interaction remove sustained-key requirements
 without changing combat costs or saving active intentions. Origin demonstrations and
 the preserved lab remain distinct from this actual local consumer. Optional rehearsal
 uses its real rules with retained contact explanations and clean retries. Normal
@@ -20,6 +20,9 @@ completion with an approach-specific response earns an optional visible keepsake
 explicit wear/put-away choices persist locally, with session-safe save recovery.
 The current encounter also offers a real optional recovery/handoff away from the road,
 competing with protection of the moving courier; direct escort remains successful.
+An optional nearby sign now changes the actual courier path: a longer upper lane
+raises partial bolt protection, while the original direct road remains available.
+Commitment, path length, contact ownership and visible results have executed controls.
 
 Original code-drawn actors now show distinct shield/blade silhouettes and event-owned
 gestures; contact effects belong to actual block, counter, player or courier outcomes.
@@ -56,7 +59,8 @@ cd martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab
 ```
 
 Inspect Git, current instructions, state, source and execution evidence before
-editing. Activate the brains before an improvement: read all three indices,
+editing. Activate the brains before an improvement: consider all three domains,
+use compact orientation when needed,
 classify engineering/science/creative relevance, retrieve only pertinent complete
 chapters, and record briefly how their principles affect the work. Consult derived
 knowledge without promoting an interpretation to a verified fact.

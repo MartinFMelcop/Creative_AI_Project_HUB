@@ -82,6 +82,45 @@ benefit or unavoidable class disadvantage follows from this one policy compariso
 
 ![Shutdown during a real normal-consumer route, before escort completion](../../evidence/north-star-sentinel-resolution/rendered/source-sentinel-disabled.png)
 
+## A route chosen in the world
+
+The normal crossing starts on **ROAD**, the original 840px direct path. Walk to the
+sign at (350,260) and press **E** once to signal **RIDGE**. A fresh press revises the
+choice until the courier reaches MARK 1 (x=400); the displayed lock then prevents
+replanning. The sign uses the remapped interaction key, not a new binding. Holding
+interaction never cycles the choice, and pause/rehearsal cannot signal it.
+
+Ridge is an actual 1,120px path: the courier turns north, crosses the upper lane and
+returns to the road. It adds 280px at the same walking/running speed. Its raised
+projectile filter catches only finite bolt segments crossing its upper extent.
+People pass through it; a nearer player or courier still owns contact, and ground
+pulses still hurt. A catch has its own flash/explanation, grants no personal block,
+OPEN, keepsake or immunity, and is counted separately on the result screen.
+
+The warning predicts the courier's real path around corners before locking its aim;
+it is not a homing shot. Progress counts remaining path length, including vertical
+travel. Death and gate arrival keep their original ownership; choosing Ridge and
+doing nothing still loses. Retry starts on Road with no previous catches. Medicine,
+workshop, guard techniques and cosmetics retain their existing contracts.
+
+```bash
+python3 north-star/prototype/tools/verify_routes.py --output /tmp/routes.json --compare evidence/north-star-route-choice/results.json
+python3 north-star/prototype/tools/verify_routes_input.py --output /tmp/route-input
+godot --path north-star/prototype --script res://tests/render_routes.gd -- /tmp/route-frames
+```
+
+The latter two require a display; the input runner owns a bounded Xorg dummy window
+and synthetic XTest keys on Linux. It checks actual navigation, nearby choice,
+revision, pause/outside rejection and reset, not a full OS-input escort. The native
+runner separately executes 49 controls and four complete fixed routes in source/PCK.
+See [execution and images](../../evidence/north-star-route-choice/RUN.json).
+Those policies take longer on Ridge and catch 2/1 bolts for Guardian/Duelist;
+they demonstrate feasible consequences, not a universally safer route, optimal play,
+participant preference or a validated adventure. Temporary names/geometry are
+experimental, not approved geography or final class/canon decisions.
+
+![Actual courier turn and partial bolt filter](../../evidence/north-star-route-choice/rendered/guardian-cover.png)
+
 ## Optional roadside workshop
 
 From approach selection, **F2** opens a safe native preparation space. Walk to a
@@ -117,7 +156,7 @@ craft-to-build consumer, not a profession career, economy, inventory, persistent
 final item/class approval or independently validated player preference.
 
 ```bash
-python3 north-star/prototype/tools/verify_workshop.py --output /tmp/workshop.json --compare evidence/north-star-workshop/results.json
+python3 north-star/prototype/tools/verify_workshop.py --output /tmp/workshop.json --compare evidence/north-star-route-choice/workshop.json
 # Optional actual Linux XTest window navigation; requires Xorg/dummy and local sockets:
 python3 north-star/prototype/tools/verify_workshop_input.py --output /tmp/workshop-input
 ```
@@ -395,7 +434,7 @@ or MMORPG persistence.
 ## Execute checks and reproduce delivery
 
 ```bash
-python3 north-star/prototype/tools/verify.py --godot godot --output /tmp/crossing-check.json --compare evidence/north-star-workshop/regressions.json
+python3 north-star/prototype/tools/verify.py --godot godot --output /tmp/crossing-check.json --compare evidence/north-star-route-choice/regressions.json
 ```
 
 The stdlib runner bounds owned engine processes, uses writable temporary XDG paths,
@@ -419,7 +458,7 @@ The source pack is reproducible with the matching engine:
 godot --headless --path north-star/prototype --script tools/pack.gd -- /absolute/path/crossing-drill.pck
 ```
 
-[Current execution evidence](../../evidence/north-star-workshop/RUN.json) identifies
+[Current execution evidence](../../evidence/north-star-route-choice/RUN.json) identifies
 baseline, source/result hashes, commands, refinements and limitations. The preserved
 [first-consumer record](../../evidence/north-star-crossing/RUN.json) documents the
 original crossing delivery; the [rehearsal record](../../evidence/north-star-rehearsal/RUN.json)

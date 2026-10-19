@@ -1,4 +1,5 @@
 extends Node2D
+const Route = preload("res://route.gd")
 const Workshop = preload("res://workshop.gd")
 var workshop = Workshop.new()
 const Combat = preload("res://combat.gd")
@@ -209,6 +210,8 @@ func sync_sound() -> void:
 
 func advance_crossing(dt: float, command: Dictionary) -> void:
 	var previous: String=game.mode
+	command=command.duplicate()
+	command.route_signal=normal_run and not rehearsal.active and bool(command.get("interact_pressed",false))
 	var effective: Dictionary=errand.prepare(game,dt,command) if normal_run else command
 	game.step(dt,effective)
 	if normal_run: errand.settle(game)
@@ -267,6 +270,7 @@ func _draw() -> void:
 	for y in range(200,650,55): draw_line(Vector2(50,y),Vector2(1102,y),Color("203e49"),1)
 	draw_rect(Rect2(50,355,1052,70),Color("35454a"))
 	draw_line(Vector2(70,390),Vector2(1080,390),Color("718282"),2)
+	if normal_run and not rehearsal.active: draw_route()
 	if errand.active and not rehearsal.active: draw_errand()
 	for x in [400,700,1000]:
 		draw_line(Vector2(x,350),Vector2(x,430),AMBER if game.courier.x>=x else Color("6c777b"),4)
@@ -330,7 +334,7 @@ func draw_header() -> void:
 	draw_rect(Rect2(40,130,300*game.energy/100,12),TEAL if game.role=="Guardian" else AMBER)
 	text(Vector2(355,142),"POSTURE" if game.role=="Guardian" else "RESOLVE",15)
 	if game.role=="Guardian":text(Vector2(460,142),"GUARD "+game.guard_state()+(" / TOGGLE" if bindings.toggle_guard else ""),14,RED if game.guard_state()=="STALE" else PAPER)
-	var progress: float=(game.courier.x-160)/(1000-160)
+	var progress: float=game.route.progress(game.courier)
 	text(Vector2(750,111),("PAUSED" if rehearsal.paused else ("RESPONSE VERIFIED" if rehearsal.passed else rehearsal.state.to_upper())) if rehearsal.active else "CROSSING  %d%%"%roundi(progress*100),19)
 	draw_rect(Rect2(750,130,350,12),Color("32475a"))
 	draw_rect(Rect2(750,130,350*((rehearsal.stage+int(rehearsal.passed))/3.0 if rehearsal.active else progress),12),AMBER)
@@ -357,7 +361,7 @@ func overlay() -> void:
 		text(Vector2(615,400),"Move or step away from the locked line.",18)
 		text(Vector2(615,430),"Feint within the ring; steps cost resolve.",17)
 		text(Vector2(615,467),"Cross + draw: Drew the Danger",17,AMBER)
-		text(Vector2(210,543),"Leave ground pulses. Three close counters disable the sentinel.",19)
+		text(Vector2(210,543),"Leave pulses. Three counters stop the sentinel. E at sign chooses route.",17)
 		text(Vector2(210,580),"T  Rehearse   •   F2  Workshop   •   ENTER  Crossing",21,TEAL)
 		text(Vector2(210,615),"C  Keepsake: "+KEEPSAKE_NAMES[keepsakes.equipped]+"     /     experimental, cosmetic only",17)
 		draw_keepsake(Vector2(1015,602),keepsakes.equipped,1.4)
@@ -368,13 +372,14 @@ func overlay() -> void:
 		text(Vector2(280,430),("Guard faces the direction locked when K was raised." if game.role=="Guardian" else "K draws an amber bolt only inside the sentinel's ring."),19)
 		text(Vector2(280,465),("Release K before turning. Steps move; they grant no immunity." if game.role=="Guardian" else "Leave the drawn line. Steps move; they grant no immunity."),19)
 		draw_impact(Vector2(130,530))
+		text(Vector2(130,590),"Route: "+game.route.kind.to_upper()+" / Ridge adds distance and raises a bolt-only filter. Signal locks at MARK 1.",16,TEAL)
 		text(Vector2(130,617),"Optional case: hold E nearby to recover, then E near courier to hand over. Neither waits.",17,AMBER)
 	else:
 		text(Vector2(250,290),"THE COURIER CROSSED" if game.mode=="won" else "THE LINE BROKE",36,TEAL if game.mode=="won" else RED)
 		text(Vector2(250,345),game.role+(" / "+game.guard_style if game.role=="Guardian" else "")+"  /  blocks %d   drawn bolts %d   counters %d"%[game.counters.blocks,game.counters.redirects,game.counters.counters],22)
-		text(Vector2(250,390),"Health %d / %d    Courier %d / 3    Crossing %d%%"%[game.hp,game.health_limit,game.cargo,roundi((game.courier.x-160)/840*100)],21)
+		text(Vector2(250,390),"Health %d / %d    Courier %d / 3    Crossing %d%%"%[game.hp,game.health_limit,game.cargo,roundi(game.route.progress(game.courier)*100)],21)
 		draw_impact(Vector2(150,435))
-		text(Vector2(250,490),game.sentinel_status(),16,TEAL if game.sentinel_disabled() else AMBER)
+		text(Vector2(250,490),game.sentinel_status()+" / "+game.route.kind.to_upper()+" / filter caught %d bolts"%game.route.covered,16,TEAL if game.sentinel_disabled() else AMBER)
 		text(Vector2(250,518),"ENTER retry this approach     •     R choose approach",22)
 		text(Vector2(150,552),reward_message if game.mode=="won" else "No keepsake earned. Complete a crossing with a block or drawn bolt.",18,TEAL if game.mode=="won" else AMBER)
 		text(Vector2(150,585),"C  Wear / put away     •     F5  Retry local save     /     cosmetic only",18)
@@ -460,6 +465,9 @@ func capture() -> void:
 	get_viewport().get_texture().get_image().save_png(path)
 	var file=FileAccess.open(path+".json",FileAccess.WRITE)
 	var report=game.snapshot()
+	report.route=game.route.snapshot()
+	report.player_position=[game.player.x,game.player.y]
+	report.courier_position=[game.courier.x,game.courier.y]
 	report.workshop=workshop.snapshot()
 	report.actors=actors.snapshot(game)
 	report.last_impact=game.last_impact.duplicate(true)
@@ -499,3 +507,22 @@ func draw_workshop() -> void:
 	text(Vector2(48,679),"WASD move  /  E hold to make  /  C recycle & recover blank  /  R back  /  F1 keys",17)
 	text(Vector2(48,710),"PAUSED / ENTER or ESC resumes" if workshop.paused else "ENTER crosses with worn gear. Crafting never starts the threat clock.",19,TEAL)
 	text(Vector2(45,620),workshop.message,17,AMBER)
+
+func draw_route() -> void:
+	var ridge:bool=game.route.kind=="ridge"
+	var color:Color=TEAL if ridge else Color("647a83")
+	draw_polyline(PackedVector2Array([Vector2(400,390),Vector2(400,250),Vector2(700,250),Vector2(700,390)]),Color("294a50"),34)
+	draw_polyline(PackedVector2Array([Vector2(400,390),Vector2(400,250),Vector2(700,250),Vector2(700,390)]),color,2)
+	text(Vector2(425,229),"RIDGE / LONGER WALK",15,color)
+	draw_circle(Route.BOARD,Route.SIGNAL_RADIUS,Color(0.2,0.4,0.45,0.25))
+	draw_arc(Route.BOARD,Route.SIGNAL_RADIUS,0,TAU,36,color,2)
+	draw_rect(Rect2(Route.BOARD-Vector2(16,9),Vector2(32,18)),PAPER)
+	draw_line(Route.BOARD,Route.BOARD+Vector2(0,20),PAPER,3)
+	text(Vector2(75,210),"ROUTE / "+game.route.kind.to_upper()+"  /  "+("LOCKED AT MARK 1" if game.route.locked else "E AT SIGN TO CHANGE"),16,AMBER)
+	text(Vector2(80,320),"SIGN: "+("locked" if game.route.locked else ("E chooses ROAD" if ridge else "E chooses RIDGE + raises filter")),16,AMBER)
+	if ridge:
+		draw_line(Vector2(Route.SCREEN_X,Route.SCREEN_TOP),Vector2(Route.SCREEN_X,Route.SCREEN_BOTTOM),PAPER if game.route.flash>0 else TEAL,6)
+		for y in range(220,366,15):draw_line(Vector2(642,y),Vector2(658,y),TEAL,2)
+		text(Vector2(675,280),"BOLT FILTER",14,TEAL)
+		text(Vector2(675,302),"People pass; floor hurts.",13)
+		if game.route.flash>0:draw_arc(game.route.last_contact,16,0,TAU,24,PAPER,3)

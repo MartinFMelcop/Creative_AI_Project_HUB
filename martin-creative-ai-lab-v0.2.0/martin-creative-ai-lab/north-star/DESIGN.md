@@ -141,6 +141,35 @@ career would add storage/economy before testing whether this choice matters in p
 Review after observers can explain and choose the actual trade-off. No participant
 study or current author acceptance of either item has occurred.
 
+## A signalled route with a real travel cost — experimental
+
+DEVELOPMENT/category 1. CRE-005 (A) grounds agency in changed actions/cost/path;
+CRE-047/058 are H, motivating implemented alternatives and a bounded solo adventure,
+not approval of their named fiction. Current author character/adventure direction
+remains the authority; no candidate encyclopedia quest/geography is adopted.
+
+Road remains the direct 840px escort. Optional Ridge is 1,120px at the same courier
+speed. A nearby deliberate interaction signals it before MARK 1; another press can
+revise before commitment. The courier actually turns north and returns, rather than
+changing a label or teleporting. The upper projectile filter is passable by people,
+stops only intersecting bolts and never grants personal blocks, OPEN or floor safety.
+Nearest-contact ownership and normal gate/survival/reward rules remain. Progress must
+advance during vertical movement; read-only warning prediction must not consume path
+state. Retry resets the route rather than saving an unapproved adventure preference.
+
+Revised during implementation: orient the courier to its actual path and count full
+remaining distance instead of horizontal progress; explain passable filter geometry
+so the drawing does not imply an unimplemented solid wall. No new sound claims.
+The four fixed completion policies and neutral failure control demonstrate executed
+consequences, not best-route balance, player comprehension or validated enjoyment.
+
+Alternatives deferred: another workshop/timing refinement repeats recently developed
+choices; a post-arrival dialogue adds consequences after the action but not a spatial
+decision during it; independent comprehension research still requires participants.
+An expanded quest/network/terrain framework is unnecessary for this bounded test.
+Neither route, filter device, class preference nor temporary geography is accepted
+final canon. Preserve earlier sources and reassess actual product weakness next.
+
 ## Current product contract
 
 The player chooses one experimental approach, escorts the courier to the far gate,

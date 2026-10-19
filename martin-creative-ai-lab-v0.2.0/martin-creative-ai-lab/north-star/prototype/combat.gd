@@ -1,6 +1,8 @@
 extends RefCounted
 ## A local experimental model, consumed by both the playable scene and native checks.
 ## Paid commitment and facing checks adapt P06's action/contact method; no P06 fiction.
+const Route = preload("res://route.gd")
+var route = Route.new()
 const FIELD := Rect2(50, 185, 1052, 460)
 const ENEMY := Vector2(790, 390)
 const FINISH := 1000.0
@@ -43,6 +45,7 @@ var counters := {"blocks":0,"redirects":0,"dodges":0,"counters":0,"courier_hits"
 
 func reset(kind: String, style: String="Steady") -> void:
 	role = kind
+	route=Route.new()
 	guard_style = "Riposte" if kind=="Guardian" and style=="Riposte" else ("Steady" if kind=="Guardian" else "none")
 	mode = "play"
 	player = Vector2(550,390)
@@ -70,6 +73,13 @@ func reset(kind: String, style: String="Steady") -> void:
 	events.clear()
 	for key in counters: counters[key]=0
 	note("Keep the courier alive until the far gate. Read the first amber line.")
+
+func signal_route(next: String) -> bool:
+	if mode!="play" or player.distance_to(Route.BOARD)>Route.SIGNAL_RADIUS:return false
+	if not route.choose(next,courier):
+		note("Route locked at MARK 1. The courier keeps the committed path.");return false
+	note("RIDGE signalled: longer walk; the raised filter stops crossing bolts, not ground pulses." if next=="ridge" else "ROAD signalled: direct crossing; the upper filter is lowered.")
+	return true
 
 func fit_outfit(id: String) -> bool:
 	# Only a clean normal start can accept equipment; never heal or swap during play.
@@ -128,6 +138,7 @@ func step(delta: float, input: Dictionary) -> void:
 	if mode != "play": return
 	var dt := clampf(delta,0,0.05)
 	elapsed += dt
+	if input.get("route_signal",false):signal_route("ridge" if route.kind=="road" else "road")
 	message_left = maxf(0,message_left-dt)
 	step_cooldown = maxf(0,step_cooldown-dt)
 	feint_cooldown = maxf(0,feint_cooldown-dt)
@@ -205,7 +216,7 @@ func step(delta: float, input: Dictionary) -> void:
 				if player.distance_to(ENEMY)>130: note("Blade fell short. Close within 130px during OPEN.")
 				else: note("Armor held. Wait for an OPEN response window.")
 		else: reject("Finish guard / step recovery and keep 12 resolve to strike.")
-	courier.x=minf(FINISH,courier.x+dt*courier_speed())
+	courier=route.advance(courier,dt*courier_speed(),dt)
 	if not sentinel_disabled():
 		clock+=dt
 		if phase=="rest" and clock>=1.8:
@@ -218,7 +229,7 @@ func step(delta: float, input: Dictionary) -> void:
 				note("PULSE: walk or step out of the red circle. Shield cannot stop the ground.")
 			else:
 				phase="bolt"
-				target=courier+Vector2(28,0)
+				target=route.predict(courier,courier_speed()) if route.kind=="ridge" else courier+Vector2(28,0)
 				note("BOLT: intercept facing the sentinel, or draw its aim with a feint.")
 		elif phase in ["bolt","pulse"] and clock>=1.0:
 			resolve_threat()
@@ -248,6 +259,12 @@ func resolve_threat() -> void:
 	# Finite beam extends only as far as its locked target; nearest interception owns impact.
 	var intercepted := segment_distance(player,ENEMY,target)<24 and (player-ENEMY).dot(target-ENEMY)>0 and player.distance_to(ENEMY)<target.distance_to(ENEMY)+24
 	var courier_contact := segment_distance(courier,ENEMY,target)<18 and (courier-ENEMY).dot(target-ENEMY)>0 and courier.distance_to(ENEMY)<target.distance_to(ENEMY)+18
+	var screen_distance:float=route.cover_distance(ENEMY,target)
+	if screen_distance>=0 and (not intercepted or screen_distance<player.distance_to(ENEMY)) and (not courier_contact or screen_distance<courier.distance_to(ENEMY)):
+		route.hit(ENEMY,target);record("cover_blocked")
+		note("The ridge filter caught this bolt. Bodies in front and ground pulses remain exposed.")
+		retain_impact("cover_blocked","The raised filter was the nearest contact on this bolt segment.","It grants no personal block or OPEN. Protect the courier outside its cover.")
+		return
 	if courier_contact and (not intercepted or courier.distance_to(ENEMY)<player.distance_to(ENEMY)):
 		cargo-=1
 		counters.courier_hits+=1
@@ -289,4 +306,5 @@ func resolve_threat() -> void:
 func snapshot() -> Dictionary:
 	var result={"role":role,"guard_style":guard_style,"enemy_focus":enemy_focus,"courier_speed":courier_speed(),"mode":mode,"tick":roundi(elapsed*60),"hp":hp,"cargo":cargo,"energy":snappedf(energy,0.001),"courier_x":snappedf(courier.x,0.001),"counters":counters.duplicate(),"events":events.duplicate(true)}
 	if outfit!="standard":result.outfit={"id":outfit,"health_limit":health_limit,"movement_scale":movement_scale}
+	if route.kind=="ridge":result.route=route.snapshot();result.courier_y=snappedf(courier.y,0.001)
 	return result

@@ -15,7 +15,7 @@ settings, focus loss and completed work disarm active intentions. Hold stays def
 ## Actual stage and creative authority
 
 The catalog now records **local_prototype**: one executable
-[crossing encounter](prototype/README.md), nine actual consumer code paths and fourteen
+[crossing encounter](prototype/README.md), ten actual consumer code paths and fourteen
 capabilities. **NS-C03 combat and NS-C07 sound are adapted** in this destination; the other twelve contribution
 states remain unchanged. Godot 4.6.3 is the prototype tool; no final MMO engine or
 running multiplayer service is selected. The earlier combat-response lab remains an
@@ -98,3 +98,12 @@ blank becomes a slower six-health coat or faster four-health wrap, visible on ei
 approach; standard gear remains available. Real crafting, undo and locked crossing
 consumption are [executed here](../evidence/north-star-workshop/RUN.json). This adds a
 bounded craft-to-build choice, not a profession career, economy or saved power.
+
+The crossing now offers an [actual spatial fork](prototype/README.md#a-route-chosen-in-the-world).
+Walk to a sign and signal the longer upper path before the courier commits at MARK 1,
+or retain the direct road. The raised upper filter catches some bolts but never
+ground pulses or bodies in front; it grants no personal counter opportunity. The
+courier turns, progress follows path length, and the result names the route/catches.
+[Native, keyboard and rendered execution](../evidence/north-star-route-choice/RUN.json)
+demonstrates this bounded adventure choice. No new lab, origin import, capability
+promotion, approved geography or independent player validation is implied.

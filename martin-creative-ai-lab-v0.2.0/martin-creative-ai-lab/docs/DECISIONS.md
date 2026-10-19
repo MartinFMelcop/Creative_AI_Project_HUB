@@ -2165,3 +2165,23 @@ changes. Stage/capability/origin states remain unchanged; no external player val
   actual source/PCK checks, complete routes, keyboard input, environment failure and limits.
 - **Lifecycle:** current prompt already requires these design/execution distinctions;
   retain it unchanged and reassess future product value rather than fixing the next task.
+
+
+## ADR-083 — A spatial escort decision before commitment
+
+- **Baseline/mode:** `219a8c586147c6378dce04c18d03aa5984498e03`; DEVELOPMENT/category 1.
+- **Selection:** choose actual route agency over more recent workshop/defense refinement,
+  post-arrival dialogue or unstaffed comprehension research. P10/P11 capabilities stay
+  preserved; no unrelated lab or speculative engine/network work is required.
+- **Decision:** default Road remains exact. Nearby discrete interaction can select or
+  revise Ridge before MARK 1; the longer real path raises partial bolt-only cover.
+  Nearest contact, floor danger and gate/survival own outcomes. Cover grants no OPEN,
+  personal block or reward. Predict without mutating, lock at commitment and reset retry.
+- **Knowledge:** ENG-005, SCI-017, CRE-005 (A), CRE-047/058 (H); hypotheses remain proposals.
+- **Refinement/evidence:** full-path progress and actual courier heading avoid stalled
+  progress/misleading motion; label passable projectile geometry explicitly. See
+  `evidence/north-star-route-choice/RUN.json` for unchanged old observations, controls,
+  complete routes, source/PCK keyboard/images, instrument failure and limitations.
+- **Boundary/lifecycle:** one consumer/ten paths, unchanged capability/origin states;
+  no final geography, class, human validation or MMO claim. Current prompt served the
+  work and remains unchanged; the next selection is not fixed to this encounter.

@@ -201,8 +201,9 @@ jobs:
           veil_engine="$RUNNER_TEMP/veil-godot/Godot_v4.6.3-stable_linux.x86_64"
           CROSSING_GODOT="$veil_engine" python3 north-star/prototype/tools/test_verify.py
           CROSSING_GODOT="$veil_engine" python3 north-star/prototype/tools/test_verify_resolution.py
-          python3 north-star/prototype/tools/verify.py --godot "$veil_engine" --output "$RUNNER_TEMP/crossing-check.json" --compare evidence/north-star-workshop/regressions.json
-          python3 north-star/prototype/tools/verify_workshop.py --godot "$veil_engine" --output "$RUNNER_TEMP/workshop-check.json" --compare evidence/north-star-workshop/results.json
+          python3 north-star/prototype/tools/verify.py --godot "$veil_engine" --output "$RUNNER_TEMP/crossing-check.json" --compare evidence/north-star-route-choice/regressions.json
+          python3 north-star/prototype/tools/verify_workshop.py --godot "$veil_engine" --output "$RUNNER_TEMP/workshop-check.json" --compare evidence/north-star-route-choice/workshop.json
+          python3 north-star/prototype/tools/verify_routes.py --godot "$veil_engine" --output "$RUNNER_TEMP/routes-check.json" --compare evidence/north-star-route-choice/results.json
           python3 north-star/prototype/tools/test_verify_sound.py
           python3 north-star/prototype/tools/verify_sound.py --godot "$veil_engine" --output "$RUNNER_TEMP/crossing-sound.json"
 

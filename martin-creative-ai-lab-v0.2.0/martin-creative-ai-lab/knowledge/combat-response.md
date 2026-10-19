@@ -236,3 +236,27 @@ interruption and discard impossible future requests. **Validity:** native script
 routes, synthetic OS input and agent inspection, not human comfort/accessibility,
 optimal play or reception. Modes are session-only; do not infer durable preferences,
 account persistence or a fourth knowledge brain from this contextual finding.
+
+
+## Partial environmental protection needs explicit contact and travel ownership
+
+**Question/context:** Can route choice change an escort without making defense
+irrelevant? **Source:** baseline `219a8c5`, [route execution](../evidence/north-star-route-choice/RUN.json),
+ENG-005, SCI-017, CRE-005 (A)/047/058 (H). **Observation:** Road remains 840px; Ridge
+is 1,120px at the same speed. In four complete fixed policies Ridge takes longer and
+its upper filter catches 2/1 bolts for Guardian/Duelist. A nearer player/courier takes
+contact first; ground pulses bypass it; catches grant no personal block or OPEN.
+Selecting Ridge and ceasing action loses despite actual catches. The retained Road
+mechanical observations and workshop outcomes equal the verified baseline.
+
+**Interpretation/consequence:** distinguish environmental interception from a
+character's paid response and reward. Compare actual ray order and failure controls,
+not a broad safe/unsafe label. Count full path distance so vertical travel has visible
+progress. A warning's prediction must traverse corners without advancing live route
+state; the display should face the real travel direction. Explicitly name passable
+projectile-only geometry rather than drawing a wall whose body collisions do not exist.
+
+**Validity:** deterministic policies, synthetic native/OS input and agent image review;
+not best policies, universal protection, class balance, player preference, adventure
+quality or external validation. Source/PCK equality does not establish human reception,
+MMORPG scale or final creative authority. No new laboratory or origin transfer occurred.

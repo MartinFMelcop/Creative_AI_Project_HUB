@@ -138,7 +138,9 @@ func draw_player(canvas, game) -> void:
 	canvas.draw_set_transform(Vector2.ZERO)
 
 func draw_courier(canvas, game) -> void:
-	var at: Vector2=game.courier
+	var direction:Vector2=game.route.predict(game.courier,1)-game.courier
+	canvas.draw_set_transform(game.courier,direction.angle() if direction.length()>0.001 else 0)
+	var at:=Vector2.ZERO
 	var stride_y: float=sin(game.elapsed*9)*3 if game.mode!="title" else 0
 	canvas.draw_circle(at+Vector2(0,8),19,Color(0,0,0,0.28))
 	for sign in [-1,1]:canvas.draw_line(at+Vector2(-4,sign*9),at+Vector2(-12+stride_y*sign,sign*14),INK,6,true)
@@ -146,6 +148,7 @@ func draw_courier(canvas, game) -> void:
 	canvas.draw_rect(Rect2(at+Vector2(-13,-9),Vector2(14,18)),AMBER,false,2)
 	canvas.draw_circle(at+Vector2(10,0),6,PAPER)
 	if courier_hurt_left>0:canvas.draw_arc(at,24,-0.8,0.8,12,RED,3,true)
+	canvas.draw_set_transform(Vector2.ZERO)
 
 func draw_sentinel(canvas, game) -> void:
 	var at: Vector2=Combat.ENEMY

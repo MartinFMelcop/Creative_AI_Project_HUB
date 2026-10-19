@@ -1,61 +1,59 @@
 # Lab state
 
-**Updated:** 2026-10-18 UTC. **SEED:** 0.33.12.
-**Mode/priority:** DEVELOPMENT, category 1: real Virgo Diamond consumer improvement.
-Initial branch `codex/brain-retrieval-20261018`, clean tracked tree; unrelated work/
-preserved. Inspected/fetched baseline `93dfc8927b4bf172ec6926c00d2d1ab4310914a3`,
-no divergence. Work branch `codex/north-star-workshop-20261018`; Git transport works.
+**Updated:** 2026-10-19 UTC. **SEED:** 0.33.13.
+**Mode/priority:** DEVELOPMENT, category 1: improve the existing Virgo Diamond consumer.
+Initial branch `codex/north-star-workshop-20261018`, tracked tree clean; unrelated
+root work/ preserved. Local/fetched main baseline `219a8c586147c6378dce04c18d03aa5984498e03`,
+no divergence. Work branch `codex/north-star-route-choice-20261019`; authenticated Git works.
 
 ## Observable product change
 
-The [native consumer](../north-star/prototype/README.md#optional-roadside-workshop)
-now connects a small making activity to a real character build. Optional title F2
-opens a safe workshop: walk into a bench ring, hold interaction one second to make
-and wear a piece. One blank becomes a six-health slower coat or four-health faster
-wrap; either approach can keep standard five-health clothing instead. Actual walk,
-guard-walk and paid step move 20% slower/faster. Both fittings remain visible in play.
-C recycles only in preparation and refunds exactly one blank. Deployment locks the
-piece; no live healing/swap, courier bonus, new immunity or changed action price.
-Focus/settings/pause interrupt work safely; held completion retains confirmation.
-The choice persists only in this process; practice and local profile schemas stay
-unchanged. This is a first bounded craft-to-build workflow, not a profession career,
-economy, inventory, final item/class decision or independent player validation.
+The [crossing](../north-star/prototype/README.md#a-route-chosen-in-the-world) now
+offers a spatial choice in the actual scene. Walk to the sign and press interaction
+to signal the upper Ridge, or retain Road. Revise before MARK 1; the courier then
+commits. Road remains 840px. Ridge adds 280px at unchanged speed and raises a finite,
+projectile-only filter. A nearer body owns contact; floor pulses remain dangerous.
+Filter catches grant no personal block, OPEN or reward. The courier turns around
+real corners; locked warnings predict its path and progress counts vertical travel.
+Result feedback names the path and catches. Retry clears the choice. Medicine,
+workshop, remaps, toggle modes, guard techniques and cosmetic profiles retain contracts.
 
-[Execution](../evidence/north-star-workshop/RUN.json) binds source/PCK, six complete
-standard/coat/wrap routes, actual window keyboard navigation and inspected images.
-358 retained native controls and sixteen restart processes pass; standard mechanical
-observations equal the verified baseline exactly. 98 new workshop controls verify
-making/undo/interruption, locked use, actual movement/step and real hit budgets.
-114 relevant Python regressions pass (111 repository/Brain gates and 3 native-runner
-failure tests). The prior PCK is rejected by the new probe without writing a report.
-An Xorg local-socket failure reproduced without game code; granted local-network
-permissions resolve it. No product behavior or gate was weakened.
+[Execution](../evidence/north-star-route-choice/RUN.json): 49 route controls, four
+complete fixed routes, native source/PCK images and actual keyboard navigation,
+signal/revision/pause/range/reset. Guardian Road/Ridge finish at ticks 1648/2117;
+Duelist at 1262/1647. Ridge catches 2/1 bolts respectively; these policies show cost
+and scoped protection, not general safety or balance. A neutral Ridge attempt loses.
+358 retained controls and sixteen restart processes pass with all mechanical
+observations equal to baseline. All 98 workshop controls/six outcomes remain.
+111 repository/Brain Python regressions and three native-runner failure tests pass.
+Prior PCK rejection produces no success report. A startup X11 window-discovery race
+was handled in the input instrument; actual consumer acknowledgement remains required.
+The source-hash gate rejected old destination evidence until current evidence was bound.
 
-## Portfolio, laboratory and origin boundaries
+## Portfolio, knowledge and origins
 
-One executable consumer, now nine code paths; stage local_prototype. Fourteen
-capability states remain unchanged, NS-C03/07 adapted; current destination evidence
-binds the real code, not a new origin economy import. No P01-P11 migration or new lab:
+One executable consumer/ten code paths, stage local_prototype; fourteen contribution
+states unchanged, NS-C03/07 adapted. The portfolio gains a playable spatial-adventure
+decision and reproducible route/cover instrument. No new lab or origin extraction:
 P01-P05/P07/P08/P10/P11 preserved_pending_extraction, P06 pilot_instrumented, P09 seed_only.
-Existing independent demonstrations, source licenses and historical bytes remain.
-The portfolio gains a playable preparation/crafting demonstration. The existing
-character-keepsakes knowledge record gains functional-price and feedback findings.
+Code, media, licenses and historical sources remain. The existing combat-response
+knowledge record gains partial-contact ownership and path-progress findings.
 
-## Reasoning and next selection
+## Reasoning, creative limits and next selection
 
-Engineering high ENG-005: explicit state and conservation. Science medium SCI-017:
-paired baseline and controls. Creation high CRE-022/023, both H: a discernible craft
-trade-off without repeated XP or obligatory grinding. Compared more defense timing,
-participant comprehension research and persistent crafting; cross-checked P06 pilot,
-P10 logistics/narrative and P11 handover rather than expanding unrelated work.
-The selected bounded original workflow needs no engine migration or remote service.
+Engineering high ENG-005: explicit path/commitment state and pure prediction.
+Science medium SCI-017: same-speed controls, old-road equivalence and negative cases.
+Creation high CRE-005 (A), CRE-047/058 (H): actual cost/path agency and a bounded solo
+adventure. Temporary route names/filter fiction are experiments, not canon. Compared
+more workshop/defense refinement, a post-arrival dialogue and external comprehension
+research; inspected P10 narrative/logistics and P11 handover as retained alternatives.
+The spatial fork adds missing adventure agency without a new engine or remote service.
 
-Code-drawn plates/cloth and labels are implementing-agent visual assessment. Fixed
-routes do not establish optimality, geared Riposte balance, perceived identity,
-comprehension, preference, fun or accessibility. No independent participants,
-multiplayer, production engine approval, canon or commercial evidence. Future cycles
-must compare actual product/creative needs rather than automatically enlarging the
-workshop. The single prompt stays unchanged: its existing selection, execution,
-source boundaries and full successor requirements applied. Five supplied brains and
-pins remain byte-identical; compact consultation still works with inherited warnings.
-Publication/remote SHA and CI are verified separately at closeout.
+Agent image assessment confirms legible path/catch/result and heading changes; no
+independent participant, optimal policy, preference, fun, accessibility, multiplayer,
+MMORPG scale, final engine/class/geography or commercial validation exists. Filter
+geometry is not solid-body physics. No new audio cue/listening claim is made.
+Five supplied brains/pins remain byte-identical. The single prompt stays unchanged:
+existing selective consultation, comparison and execution requirements served this
+increment. Reassess product and creative needs next; this is not a mandate for more
+Crossing Drill refinement. Remote publication and CI are verified separately at closeout.
