@@ -12,7 +12,7 @@ merits. The outer `martin-creative-ai-lab-v0.2.0/` name is historical packaging;
 
 Play the [North Star crossing prototype](north-star/prototype/README.md), or
 inspect its [living design](north-star/DESIGN.md) and
-[executed evidence](evidence/north-star-route-choice/RUN.json). Session-only single-press guard/interaction remove sustained-key requirements
+[executed evidence](evidence/north-star-return-gate/RUN.json). Session-only single-press guard/interaction remove sustained-key requirements
 without changing combat costs or saving active intentions. Origin demonstrations and
 the preserved lab remain distinct from this actual local consumer. Optional rehearsal
 uses its real rules with retained contact explanations and clean retries. Normal
@@ -127,3 +127,7 @@ the sentinel and let the courier run. Protective completion remains valid; shutd
 alone awards nothing and does not replace reaching the gate alive. Matched prior-PCK
 routes separate this actual pacing change from synthetic-policy and human-experience
 limits. No origin or capability status is promoted by this increment.
+
+The current consumer also offers a [second playable objective](north-star/prototype/README.md#an-optional-second-playable-goal)
+after an actual escort win: F2 carries remaining health into catch work, winch protection
+and a required exit. Source/PCK execution retains original replay and origin consumers.

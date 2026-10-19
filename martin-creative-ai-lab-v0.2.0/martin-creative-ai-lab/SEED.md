@@ -1,6 +1,6 @@
 # SEED — Martin Creative AI Lab
 
-**Version:** 0.33.13
+**Version:** 0.33.14
 **Data-base:** 10 de outubro de 2026  
 **Autor e responsável pelo portfólio:** Martin Melcop Neto  
 **Working language:** English for new technical documentation, plans, code comments and Git messages; respond in the requested language (Brazilian Portuguese for continuous closeout). Preserve appropriate creative/source languages.
@@ -45,7 +45,20 @@ does not merge fictional universes. Source details below are historical provenan
 retained origin behavior; current operation is defined by this direction, AGENTS,
 STATE and the single [continuous prompt](docs/prompts/CONTINUOUS_DEVELOPMENT.md).
 
-### Current consumer increment — v0.33.13
+### Current consumer increment — v0.33.14
+
+DEVELOPMENT/category 1: completing the real escort can now lead to a second optional
+playable objective. F2 carries actual remaining health/energy, fitting and arrival
+facts into a return gate; Enter retains the original escort replay. Raise two catches
+through nearby committed work, protect a stationary winch, then actually cross the
+opened exit alive. Working under threat or first disabling a separate ward both work;
+neither shutdown nor raised catches alone wins. Retry restores the arrival checkpoint,
+not full health; no additional keepsake or saved power. [Execution](evidence/north-star-return-gate/RUN.json)
+binds 67 new controls/four complete two-stage policies and 505 unchanged retained
+controls. One consumer/eleven code paths, fourteen contribution states unchanged;
+no new laboratory, origin migration, canon approval or human validation. Prompt unchanged.
+
+### Prior consumer increment — v0.33.13
 
 DEVELOPMENT/category 1: a nearby sign chooses an actual courier path before MARK 1.
 Road retains 840px; Ridge adds 280px and partial projectile-only cover, with nearer
@@ -110,12 +123,12 @@ for continuous development and its full successor requirement.
 
 | Field | Current evidence |
 |---|---|
-| Baseline | `219a8c586147c6378dce04c18d03aa5984498e03`; wrapper retained |
-| Current milestone | DEVELOPMENT/category 1: actual spatial route choice, added travel cost and partial bolt protection; [execution](evidence/north-star-route-choice/RUN.json) |
+| Baseline | `5ab0b90a64da191016ea11f491df0f1c991fafd8`; wrapper retained |
+| Current milestone | DEVELOPMENT/category 1: optional second playable goal with actual arrival health, two catches, winch protection and exit; [execution](evidence/north-star-return-gate/RUN.json) |
 | Sources | Five byte-preserved supplied brain files; historical reference inventories unchanged |
 | Operational state | [STATE](docs/STATE.md), [origins](labs/origins.json), [brain integrity](brains/integrity.json) |
 | Portfolio | Technology capabilities, inspectable source/demonstrations and bounded execution evidence |
-| North Star | One local prototype/ten code paths; fourteen entries, NS-C03/07 adapted, other twelve statuses unchanged; no final engine/MMO service |
+| North Star | One local prototype/eleven code paths; fourteen entries, NS-C03/07 adapted, other twelve statuses unchanged; no final engine/MMO service |
 | Next selection | Reassess actual character-experience questions, laboratory instruments and portfolio value from new evidence |
 
 Registry and source gates establish structure/integrity, not gameplay quality or truth

@@ -1,0 +1,114 @@
+{
+  "checks": {
+    "failed": 0,
+    "passed": 67
+  },
+  "consumer_hashes": {
+    "arena.gd": "863144a310bcd74502b5863e6c70b9278f8f3842e3f01900bacb3186150b56b9",
+    "combat.gd": "829c922b86cadbc5a34c4367d7cab73f685e674449769d71a37b5a7450461cbb",
+    "return_gate.gd": "0f8c91dfb071b8ddb3712cabf165f6eaf41b91027d4266ccc7c7db2bc7a178ea",
+    "tests/gate_checks.gd": "3fba7468062a64e46e853fdc557a9425103485580aae7b1704eff11214479453",
+    "tests/gate_policy.gd": "a40d249e877446f7da09890e4c84d1c3243ef4ea110de65b033d7bd8710680ed"
+  },
+  "journeys": [
+    {
+      "crossing_tick": 1648,
+      "entry_hp": 4,
+      "hp": 3,
+      "mode": "won",
+      "raised": [
+        true,
+        true
+      ],
+      "responses": {
+        "blocks": 1,
+        "counters": 0,
+        "courier_hits": 1,
+        "dodges": 0,
+        "player_hits": 1,
+        "redirects": 0,
+        "rejected": 0
+      },
+      "return_tick": 744,
+      "role": "Guardian",
+      "strategy": "work",
+      "ward_disabled": false,
+      "winch": 1
+    },
+    {
+      "crossing_tick": 1648,
+      "entry_hp": 4,
+      "hp": 4,
+      "mode": "won",
+      "raised": [
+        true,
+        true
+      ],
+      "responses": {
+        "blocks": 3,
+        "counters": 3,
+        "courier_hits": 0,
+        "dodges": 0,
+        "player_hits": 0,
+        "redirects": 0,
+        "rejected": 0
+      },
+      "return_tick": 1221,
+      "role": "Guardian",
+      "strategy": "quiet",
+      "ward_disabled": true,
+      "winch": 2
+    },
+    {
+      "crossing_tick": 1347,
+      "entry_hp": 4,
+      "hp": 4,
+      "mode": "won",
+      "raised": [
+        true,
+        true
+      ],
+      "responses": {
+        "blocks": 0,
+        "counters": 0,
+        "courier_hits": 1,
+        "dodges": 0,
+        "player_hits": 0,
+        "redirects": 2,
+        "rejected": 0
+      },
+      "return_tick": 717,
+      "role": "Duelist",
+      "strategy": "work",
+      "ward_disabled": false,
+      "winch": 1
+    },
+    {
+      "crossing_tick": 1347,
+      "entry_hp": 4,
+      "hp": 4,
+      "mode": "won",
+      "raised": [
+        true,
+        true
+      ],
+      "responses": {
+        "blocks": 0,
+        "counters": 3,
+        "courier_hits": 0,
+        "dodges": 2,
+        "player_hits": 0,
+        "redirects": 2,
+        "rejected": 0
+      },
+      "return_tick": 1118,
+      "role": "Duelist",
+      "strategy": "quiet",
+      "ward_disabled": true,
+      "winch": 2
+    }
+  ],
+  "native_observation_sha256": "27b8e73587a475cbc2562dc8d269c6eb8531d9cb6db8322ff4b61788609f1df6",
+  "schema_version": 1,
+  "scope": "Actual wounded crossing then optional return objective, four fixed policies; source/PCK equality is not human comprehension, preference or balance."
+}

@@ -225,3 +225,28 @@ Each cycle must report observable product capability, relevant laboratory knowle
 portfolio demonstration and origin migration. Preserve useful origins/consumers/tests;
 close or consolidate obsolete obligations when evidence supports it. Reassess the next
 weakness in the actual consumer rather than adding unrelated laboratory structures.
+
+## Optional return gate — experimental
+
+CRE-005 (A) informs consequential agency; CRE-058/086 (H) suggest bounded adventure
+and action-owned consequences. Current author direction remains the character-identity
+anchor. Temporary gate, winch and ward fiction is original test material, not approved
+geography, quest canon or a new final class. No encyclopedia proposal is silently adopted.
+
+After genuine escort arrival, F2 offers another playable goal with the actual remaining
+health/energy, selected approach/technique, fitting, route and medicine fact. Only health,
+energy and fitting affect this room; route/medicine are displayed provenance, not invented
+branching benefits. The safe courier does not return to danger. A separate ward threatens
+a stationary winch while two separated catches require committed work; actual alive exit
+through raised bars owns completion. Optional shutdown and direct work are both feasible.
+The two tested direct-work policies spend mechanism integrity for earlier completion;
+the Guardian also loses health. Fixed outcomes do not establish optimality or balance.
+
+Retry deliberately restores the session arrival checkpoint, not full health. Reject live
+healing, fitting/role replacement, repeated escort-mark rewards and shutdown-only victory
+for this scope. Movement/release/hit and management interruptions cancel partial work.
+The target aim was revised after real normal-time controls exposed an invalid moving-
+escort prediction in the new context. Agent image assessment refined mechanism naming
+and guard feedback. See [execution](../evidence/north-star-return-gate/RUN.json).
+Revisit the adventure/identity direction after actual player observation; passing checks
+does not establish meaningfulness, recognition, fun or unassisted comprehension.

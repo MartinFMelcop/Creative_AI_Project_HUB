@@ -2185,3 +2185,29 @@ changes. Stage/capability/origin states remain unchanged; no external player val
 - **Boundary/lifecycle:** one consumer/ten paths, unchanged capability/origin states;
   no final geography, class, human validation or MMO claim. Current prompt served the
   work and remains unchanged; the next selection is not fixed to this encounter.
+
+## ADR-084 — Carry a real escort outcome into a second playable goal
+
+- **Baseline/mode:** `5ab0b90a64da191016ea11f491df0f1c991fafd8`; DEVELOPMENT/category 1.
+- **Problem/audience:** the existing local character consumer ends after one escort;
+  preparation, route and defense choices have no subsequent playable use.
+- **Alternatives:** avatar customization adds identity but no second accomplishment;
+  another workshop/defense refinement deepens an already demonstrated loop; dialogue
+  could remember facts but adds less executed movement/consequence; external research
+  lacks participants. A voluntary second objective changes what can actually be played.
+- **Decision:** F2 after actual arrival carries remaining health/energy and fitting;
+  the courier stays safe. Raise two distant catches, protect a separate stationary
+  winch and cross real open bars alive. Existing role defenses/counters remain; optional
+  ward shutdown gives safe work but does not complete the objective. Enter retry uses
+  the arrival checkpoint, no free live heal, approach swap, account save or extra reward.
+- **Brain use:** ENG-005 explicit entry/commit/terminal invariants; SCI-017 preserved
+  prior PCK and negative controls; CRE-005 A (choices change action/cost), CRE-058/086 H
+  (bounded adventure, consequences enacted). No source proposal becomes canon.
+- **Refinement:** normal-time negative controls exposed moving-target aim missing the
+  stationary winch. Correct aim, then repair the unsafe fixed Guardian policy rather
+  than weaken threat contact. UI now identifies the mechanism, guard and checkpoint.
+- **Evidence/limits:** 67 new native controls, four actual wounded two-stage journeys,
+  source/PCK delivery parity, old-PCK F2 counterfactual, native keyboard and inspected
+  images; 505 retained controls unchanged. Synthetic policies/input and agent assessment
+  are not human comprehension, preference, optimality, identity or balance validation.
+  No origin migration/new lab/production integration. Existing prompt remains sufficient.

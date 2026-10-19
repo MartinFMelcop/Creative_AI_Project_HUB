@@ -1,74 +1,63 @@
 # Lab state
 
-**Updated:** 2026-10-19 UTC. **SEED:** 0.33.13.
+**Updated:** 2026-10-19 UTC. **SEED:** 0.33.14.
 **Mode/priority:** DEVELOPMENT, category 1: improve the existing Virgo Diamond consumer.
-Initial branch `codex/north-star-workshop-20261018`, tracked tree clean; unrelated
-root work/ preserved. Local/fetched main baseline `219a8c586147c6378dce04c18d03aa5984498e03`,
-no divergence. Work branch `codex/north-star-route-choice-20261019`; authenticated Git works.
+Initial branch `codex/north-star-route-choice-20261019`, tracked tree clean; unrelated
+root work/ preserved. Local/fetched main baseline `5ab0b90a64da191016ea11f491df0f1c991fafd8`,
+no divergence. Work branch `codex/north-star-return-gate-20261019`; authenticated Git works.
 
 ## Observable product change
 
-The [crossing](../north-star/prototype/README.md#a-route-chosen-in-the-world) now
-offers a spatial choice in the actual scene. Walk to the sign and press interaction
-to signal the upper Ridge, or retain Road. Revise before MARK 1; the courier then
-commits. Road remains 840px. Ridge adds 280px at unchanged speed and raises a finite,
-projectile-only filter. A nearer body owns contact; floor pulses remain dangerous.
-Filter catches grant no personal block, OPEN or reward. The courier turns around
-real corners; locked warnings predict its path and progress counts vertical travel.
-Result feedback names the path and catches. Retry clears the choice. Medicine,
-workshop, remaps, toggle modes, guard techniques and cosmetic profiles retain contracts.
+The [consumer](../north-star/prototype/README.md#an-optional-second-playable-goal) now
+offers a second objective after an actual escort win. F2 continues with the same
+approach, technique, fitting and actual remaining health/energy; Enter still replays
+the original crossing. A separate ward threatens a stationary winch. Raise two spatially
+separated catches through one-second nearby work, protect the mechanism, then actually
+pass the opened gate alive. Closed bars constrain movement. Work excludes combat;
+release, movement, hit, pause, focus/settings interruption clear partial work/intent.
+Disabling the ward alone does not win; ignoring winch protection loses. The courier
+stays safe. Retry restores this session's arrival checkpoint, not full health or a save.
+No extra keepsake, inventory, power persistence or approach/outfit swap is introduced.
 
-[Execution](../evidence/north-star-route-choice/RUN.json): 49 route controls, four
-complete fixed routes, native source/PCK images and actual keyboard navigation,
-signal/revision/pause/range/reset. Guardian Road/Ridge finish at ticks 1648/2117;
-Duelist at 1262/1647. Ridge catches 2/1 bolts respectively; these policies show cost
-and scoped protection, not general safety or balance. A neutral Ridge attempt loses.
-358 retained controls and sixteen restart processes pass with all mechanical
-observations equal to baseline. All 98 workshop controls/six outcomes remain.
-111 repository/Brain Python regressions and three native-runner failure tests pass.
-Prior PCK rejection produces no success report. A startup X11 window-discovery race
-was handled in the input instrument; actual consumer acknowledgement remains required.
-The source-hash gate rejected old destination evidence until current evidence was bound.
+[Execution](../evidence/north-star-return-gate/RUN.json): 67 new native controls and
+four complete two-stage policies agree in source/PCK. All enter with actual wounded
+health 4. Guardian work/quiet finish the return at ticks 744/1221, health 3/4;
+Duelist at 717/1118, health 4/4. Working under threat leaves winch 1/2 versus 2/2
+after shutdown. These are fixed feasible policies, not optimality or general balance.
+The same external F2 probe leaves the prior PCK won but starts current play with
+health 4. Actual source/PCK OS keys continue, navigate, work, suffer natural loss,
+retry and abandon; the first escort is explicitly native-policy setup, not OS input.
+Retained 358 controls/sixteen restart processes, 49 route controls/four routes and
+98 workshop controls/six outcomes remain mechanically equal to the verified baseline.
 
-## Portfolio, knowledge and origins
+## Findings and limits
 
-One executable consumer/ten code paths, stage local_prototype; fourteen contribution
-states unchanged, NS-C03/07 adapted. The portfolio gains a playable spatial-adventure
-decision and reproducible route/cover instrument. No new lab or origin extraction:
-P01-P05/P07/P08/P10/P11 preserved_pending_extraction, P06 pilot_instrumented, P09 seed_only.
-Code, media, licenses and historical sources remain. The existing combat-response
-knowledge record gains partial-contact ownership and path-progress findings.
+Negative normal-time controls caught moving-target prediction missing the stationary
+winch: two controls failed before the aim fix and pass afterward. Correct contact
+then exposed an unsafe Guardian policy; it now returns to intercept before more work,
+without weakening threats. A SceneTree input-fixture correction restores the actual
+window. Render shutdown diagnostics are recorded with their exact scope in evidence.
+Agent image inspection covers work, open gate and outcome; no independent player,
+unassisted comprehension, enjoyment, accessibility, balance, physical listening,
+multiplayer, MMORPG scale, final engine/class/geography or commercial validation.
 
-## Reasoning, creative limits and next selection
+## Portfolio, knowledge, origins and next selection
 
-Engineering high ENG-005: explicit path/commitment state and pure prediction.
-Science medium SCI-017: same-speed controls, old-road equivalence and negative cases.
-Creation high CRE-005 (A), CRE-047/058 (H): actual cost/path agency and a bounded solo
-adventure. Temporary route names/filter fiction are experiments, not canon. Compared
-more workshop/defense refinement, a post-arrival dialogue and external comprehension
-research; inspected P10 narrative/logistics and P11 handover as retained alternatives.
-The spatial fork adds missing adventure agency without a new engine or remote service.
+One executable consumer/eleven code paths, stage local_prototype; fourteen contribution
+states unchanged, NS-C03/07 adapted. The portfolio gains an executable two-goal adventure
+and reproducible state/contact/continuation controls. Existing combat-response knowledge
+adds stationary-target adaptation and carried-consequence findings. No new laboratory
+or origin extraction: P01–P05/P07/P08/P10/P11 preserved_pending_extraction, P06
+pilot_instrumented, P09 seed_only. Sources, assets, licenses and old consumers remain.
 
-Agent image assessment confirms legible path/catch/result and heading changes; no
-independent participant, optimal policy, preference, fun, accessibility, multiplayer,
-MMORPG scale, final engine/class/geography or commercial validation exists. Filter
-geometry is not solid-body physics. No new audio cue/listening claim is made.
-Five supplied brains/pins remain byte-identical. The single prompt stays unchanged:
-existing selective consultation, comparison and execution requirements served this
-increment. Reassess product and creative needs next; this is not a mandate for more
-Crossing Drill refinement. Remote publication and CI are verified separately at closeout.
+Engineering high ENG-005 (states/invariants), science medium SCI-017 (version/negative
+controls), creation high CRE-005 (A: consequential agency), CRE-058/086 (H: bounded
+adventure and consequences through actions). Compare avatar customization, another
+workshop/defense refinement, dialogue and participant research; a second actual goal
+best closes the inspected single-escort limit with available tools. Temporary gate/ward
+fiction remains experimental in [living design](../north-star/DESIGN.md), not canon.
 
-
-## Publication follow-up — pinned CI SDK
-
-Implementation commit `2604ed0` passed remote North Star and integrity jobs. The
-unchanged Cinderwatch exporter rejected the SDK selected in the hosted shared install,
-despite setup installing 10.0.401. [CI evidence](../evidence/north-star-route-choice/CI.json)
-compares baseline source bytes and records the unresolved selected-version detail.
-Isolate installation in runner temporary storage and assert the exact version before
-compiling; no origin source/package or export guard changes. No local .NET execution
-claim: ensuing remote CI must demonstrate the actual export. Product behavior and
-the single successor prompt are unchanged by this publication repair.
-The first SDK follow-up used runner context at job scope and was rejected before
-jobs. Actionlint 1.7.7 reproduces that error and accepts the corrected step scope;
-the action exports PATH/DOTNET_ROOT for later steps. This changes no export guard.
+Five supplied brains and integrity pins remain byte-identical. The single prompt stays
+unchanged: current selective reading, product comparison and executed controls served
+this increment. Reassess character experience and portfolio value next; no subsystem
+is automatically the next target. Publication and CI are separately verified at closeout.

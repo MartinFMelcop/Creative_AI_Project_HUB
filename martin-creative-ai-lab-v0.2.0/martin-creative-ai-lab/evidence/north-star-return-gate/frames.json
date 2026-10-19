@@ -1,0 +1,619 @@
+{
+  "duelist-opened": {
+    "gate": {
+      "active": true,
+      "channel": false,
+      "entry": {
+        "energy": 100.0,
+        "hp": 4,
+        "medicine": "available",
+        "outfit": "standard",
+        "role": "Duelist",
+        "route": "road",
+        "style": "none"
+      },
+      "events": [
+        {
+          "action": "catch_raised",
+          "index": 0,
+          "tick": 149
+        },
+        {
+          "action": "catch_raised",
+          "index": 1,
+          "tick": 590
+        }
+      ],
+      "game": {
+        "cargo": 1,
+        "counters": {
+          "blocks": 0,
+          "counters": 0,
+          "courier_hits": 1,
+          "dodges": 0,
+          "player_hits": 0,
+          "redirects": 1,
+          "rejected": 0
+        },
+        "courier_speed": 28.0,
+        "courier_x": 600.0,
+        "enemy_focus": 3,
+        "energy": 100.0,
+        "events": [
+          {
+            "cargo": 1,
+            "energy": 100.0,
+            "hp": 4,
+            "kind": "courier_hit",
+            "tick": 169
+          },
+          {
+            "cargo": 1,
+            "energy": 84.0,
+            "hp": 4,
+            "kind": "redirect",
+            "tick": 279
+          },
+          {
+            "cargo": 1,
+            "energy": 100.0,
+            "hp": 4,
+            "kind": "bolt_missed",
+            "tick": 338
+          },
+          {
+            "cargo": 1,
+            "energy": 100.0,
+            "hp": 4,
+            "kind": "pulse_avoided",
+            "tick": 507
+          }
+        ],
+        "guard_style": "none",
+        "hp": 4,
+        "mode": "play",
+        "objective": "return_gate",
+        "role": "Duelist",
+        "tick": 590
+      },
+      "progress": 0.0,
+      "raised": [
+        true,
+        true
+      ],
+      "working": -1
+    },
+    "player": [
+      941.105834960938,
+      528.656372070312
+    ],
+    "sound": {
+      "events": [
+        {
+          "cue": "bolt",
+          "tick": 109
+        },
+        {
+          "cue": "hurt",
+          "tick": 169
+        },
+        {
+          "cue": "bolt",
+          "tick": 278
+        },
+        {
+          "cue": "draw",
+          "tick": 279
+        },
+        {
+          "cue": "pulse",
+          "tick": 447
+        }
+      ],
+      "muted": false,
+      "voice_limit": 2
+    }
+  },
+  "duelist-result": {
+    "gate": {
+      "active": true,
+      "channel": false,
+      "entry": {
+        "energy": 100.0,
+        "hp": 4,
+        "medicine": "available",
+        "outfit": "standard",
+        "role": "Duelist",
+        "route": "road",
+        "style": "none"
+      },
+      "events": [
+        {
+          "action": "catch_raised",
+          "index": 0,
+          "tick": 149
+        },
+        {
+          "action": "catch_raised",
+          "index": 1,
+          "tick": 590
+        },
+        {
+          "action": "return_opened",
+          "tick": 717
+        }
+      ],
+      "game": {
+        "cargo": 1,
+        "counters": {
+          "blocks": 0,
+          "counters": 0,
+          "courier_hits": 1,
+          "dodges": 0,
+          "player_hits": 0,
+          "redirects": 2,
+          "rejected": 0
+        },
+        "courier_speed": 28.0,
+        "courier_x": 600.0,
+        "enemy_focus": 3,
+        "energy": 100.0,
+        "events": [
+          {
+            "cargo": 1,
+            "energy": 100.0,
+            "hp": 4,
+            "kind": "courier_hit",
+            "tick": 169
+          },
+          {
+            "cargo": 1,
+            "energy": 84.0,
+            "hp": 4,
+            "kind": "redirect",
+            "tick": 279
+          },
+          {
+            "cargo": 1,
+            "energy": 100.0,
+            "hp": 4,
+            "kind": "bolt_missed",
+            "tick": 338
+          },
+          {
+            "cargo": 1,
+            "energy": 100.0,
+            "hp": 4,
+            "kind": "pulse_avoided",
+            "tick": 507
+          },
+          {
+            "cargo": 1,
+            "energy": 84.0,
+            "hp": 4,
+            "kind": "redirect",
+            "tick": 617
+          },
+          {
+            "cargo": 1,
+            "energy": 100.0,
+            "hp": 4,
+            "kind": "bolt_missed",
+            "tick": 676
+          }
+        ],
+        "guard_style": "none",
+        "hp": 4,
+        "mode": "won",
+        "objective": "return_gate",
+        "role": "Duelist",
+        "tick": 717
+      },
+      "progress": 0.0,
+      "raised": [
+        true,
+        true
+      ],
+      "working": -1
+    },
+    "player": [
+      1054.84228515625,
+      370.276245117188
+    ],
+    "sound": {
+      "events": [
+        {
+          "cue": "bolt",
+          "tick": 109
+        },
+        {
+          "cue": "hurt",
+          "tick": 169
+        },
+        {
+          "cue": "bolt",
+          "tick": 278
+        },
+        {
+          "cue": "draw",
+          "tick": 279
+        },
+        {
+          "cue": "pulse",
+          "tick": 447
+        },
+        {
+          "cue": "bolt",
+          "tick": 616
+        },
+        {
+          "cue": "draw",
+          "tick": 617
+        },
+        {
+          "cue": "won",
+          "tick": 717
+        }
+      ],
+      "muted": false,
+      "voice_limit": 2
+    }
+  },
+  "duelist-working": {
+    "gate": {
+      "active": true,
+      "channel": true,
+      "entry": {
+        "energy": 100.0,
+        "hp": 4,
+        "medicine": "available",
+        "outfit": "standard",
+        "role": "Duelist",
+        "route": "road",
+        "style": "none"
+      },
+      "events": [],
+      "game": {
+        "cargo": 2,
+        "counters": {
+          "blocks": 0,
+          "counters": 0,
+          "courier_hits": 0,
+          "dodges": 0,
+          "player_hits": 0,
+          "redirects": 0,
+          "rejected": 0
+        },
+        "courier_speed": 28.0,
+        "courier_x": 600.0,
+        "enemy_focus": 3,
+        "energy": 100.0,
+        "events": [],
+        "guard_style": "none",
+        "hp": 4,
+        "mode": "play",
+        "objective": "return_gate",
+        "role": "Duelist",
+        "tick": 114
+      },
+      "progress": 0.416667,
+      "raised": [
+        false,
+        false
+      ],
+      "working": 0
+    },
+    "player": [
+      347.253845214844,
+      275.595886230469
+    ],
+    "sound": {
+      "events": [
+        {
+          "cue": "bolt",
+          "tick": 109
+        }
+      ],
+      "muted": false,
+      "voice_limit": 2
+    }
+  },
+  "guardian-opened": {
+    "gate": {
+      "active": true,
+      "channel": false,
+      "entry": {
+        "energy": 100.0,
+        "hp": 4,
+        "medicine": "available",
+        "outfit": "standard",
+        "role": "Guardian",
+        "route": "road",
+        "style": "Steady"
+      },
+      "events": [
+        {
+          "action": "catch_raised",
+          "index": 0,
+          "tick": 149
+        },
+        {
+          "action": "catch_raised",
+          "index": 1,
+          "tick": 592
+        }
+      ],
+      "game": {
+        "cargo": 1,
+        "counters": {
+          "blocks": 1,
+          "counters": 0,
+          "courier_hits": 1,
+          "dodges": 0,
+          "player_hits": 0,
+          "redirects": 0,
+          "rejected": 0
+        },
+        "courier_speed": 28.0,
+        "courier_x": 600.0,
+        "enemy_focus": 3,
+        "energy": 100.0,
+        "events": [
+          {
+            "cargo": 1,
+            "energy": 100.0,
+            "hp": 4,
+            "kind": "courier_hit",
+            "tick": 169
+          },
+          {
+            "cargo": 1,
+            "energy": 74.4,
+            "hp": 4,
+            "kind": "protected",
+            "tick": 338
+          },
+          {
+            "cargo": 1,
+            "energy": 100.0,
+            "hp": 4,
+            "kind": "pulse_avoided",
+            "tick": 507
+          }
+        ],
+        "guard_style": "Steady",
+        "hp": 4,
+        "mode": "play",
+        "objective": "return_gate",
+        "role": "Guardian",
+        "tick": 592
+      },
+      "progress": 0.0,
+      "raised": [
+        true,
+        true
+      ],
+      "working": -1
+    },
+    "player": [
+      940.493103027344,
+      529.278991699219
+    ],
+    "sound": {
+      "events": [
+        {
+          "cue": "bolt",
+          "tick": 109
+        },
+        {
+          "cue": "hurt",
+          "tick": 169
+        },
+        {
+          "cue": "bolt",
+          "tick": 278
+        },
+        {
+          "cue": "block",
+          "tick": 338
+        },
+        {
+          "cue": "pulse",
+          "tick": 447
+        }
+      ],
+      "muted": false,
+      "voice_limit": 2
+    }
+  },
+  "guardian-result": {
+    "gate": {
+      "active": true,
+      "channel": false,
+      "entry": {
+        "energy": 100.0,
+        "hp": 4,
+        "medicine": "available",
+        "outfit": "standard",
+        "role": "Guardian",
+        "route": "road",
+        "style": "Steady"
+      },
+      "events": [
+        {
+          "action": "catch_raised",
+          "index": 0,
+          "tick": 149
+        },
+        {
+          "action": "catch_raised",
+          "index": 1,
+          "tick": 592
+        },
+        {
+          "action": "return_opened",
+          "tick": 744
+        }
+      ],
+      "game": {
+        "cargo": 1,
+        "counters": {
+          "blocks": 1,
+          "counters": 0,
+          "courier_hits": 1,
+          "dodges": 0,
+          "player_hits": 1,
+          "redirects": 0,
+          "rejected": 0
+        },
+        "courier_speed": 28.0,
+        "courier_x": 600.0,
+        "enemy_focus": 3,
+        "energy": 100.0,
+        "events": [
+          {
+            "cargo": 1,
+            "energy": 100.0,
+            "hp": 4,
+            "kind": "courier_hit",
+            "tick": 169
+          },
+          {
+            "cargo": 1,
+            "energy": 74.4,
+            "hp": 4,
+            "kind": "protected",
+            "tick": 338
+          },
+          {
+            "cargo": 1,
+            "energy": 100.0,
+            "hp": 4,
+            "kind": "pulse_avoided",
+            "tick": 507
+          },
+          {
+            "cargo": 1,
+            "energy": 100.0,
+            "hp": 3,
+            "kind": "bolt_hit",
+            "tick": 676
+          }
+        ],
+        "guard_style": "Steady",
+        "hp": 3,
+        "mode": "won",
+        "objective": "return_gate",
+        "role": "Guardian",
+        "tick": 744
+      },
+      "progress": 0.0,
+      "raised": [
+        true,
+        true
+      ],
+      "working": -1
+    },
+    "player": [
+      1043.70849609375,
+      390.729248046875
+    ],
+    "sound": {
+      "events": [
+        {
+          "cue": "bolt",
+          "tick": 109
+        },
+        {
+          "cue": "hurt",
+          "tick": 169
+        },
+        {
+          "cue": "bolt",
+          "tick": 278
+        },
+        {
+          "cue": "block",
+          "tick": 338
+        },
+        {
+          "cue": "pulse",
+          "tick": 447
+        },
+        {
+          "cue": "bolt",
+          "tick": 616
+        },
+        {
+          "cue": "hurt",
+          "tick": 676
+        },
+        {
+          "cue": "won",
+          "tick": 744
+        }
+      ],
+      "muted": false,
+      "voice_limit": 2
+    }
+  },
+  "guardian-working": {
+    "gate": {
+      "active": true,
+      "channel": true,
+      "entry": {
+        "energy": 100.0,
+        "hp": 4,
+        "medicine": "available",
+        "outfit": "standard",
+        "role": "Guardian",
+        "route": "road",
+        "style": "Steady"
+      },
+      "events": [],
+      "game": {
+        "cargo": 2,
+        "counters": {
+          "blocks": 0,
+          "counters": 0,
+          "courier_hits": 0,
+          "dodges": 0,
+          "player_hits": 0,
+          "redirects": 0,
+          "rejected": 0
+        },
+        "courier_speed": 28.0,
+        "courier_x": 600.0,
+        "enemy_focus": 3,
+        "energy": 100.0,
+        "events": [],
+        "guard_style": "Steady",
+        "hp": 4,
+        "mode": "play",
+        "objective": "return_gate",
+        "role": "Guardian",
+        "tick": 114
+      },
+      "progress": 0.416667,
+      "raised": [
+        false,
+        false
+      ],
+      "working": 0
+    },
+    "player": [
+      347.253845214844,
+      275.595886230469
+    ],
+    "sound": {
+      "events": [
+        {
+          "cue": "bolt",
+          "tick": 109
+        }
+      ],
+      "muted": false,
+      "voice_limit": 2
+    }
+  }
+}

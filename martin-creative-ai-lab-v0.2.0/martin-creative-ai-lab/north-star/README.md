@@ -15,7 +15,7 @@ settings, focus loss and completed work disarm active intentions. Hold stays def
 ## Actual stage and creative authority
 
 The catalog now records **local_prototype**: one executable
-[crossing encounter](prototype/README.md), ten actual consumer code paths and fourteen
+[crossing encounter](prototype/README.md), eleven actual consumer code paths and fourteen
 capabilities. **NS-C03 combat and NS-C07 sound are adapted** in this destination; the other twelve contribution
 states remain unchanged. Godot 4.6.3 is the prototype tool; no final MMO engine or
 running multiplayer service is selected. The earlier combat-response lab remains an
@@ -107,3 +107,9 @@ courier turns, progress follows path length, and the result names the route/catc
 [Native, keyboard and rendered execution](../evidence/north-star-route-choice/RUN.json)
 demonstrates this bounded adventure choice. No new lab, origin import, capability
 promotion, approved geography or independent player validation is implied.
+
+After a real escort win, **F2** now offers an [optional second playable goal](prototype/README.md#an-optional-second-playable-goal).
+Actual remaining health/energy and fitting carry into two-catch work, stationary winch
+protection and a required alive exit; Enter still replays the escort. The courier stays
+safe. [Current execution](../evidence/north-star-return-gate/RUN.json) demonstrates four
+complete two-stage policies and source/PCK parity, not human identity/fun or MMO readiness.

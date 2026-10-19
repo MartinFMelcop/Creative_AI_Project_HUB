@@ -1,0 +1,185 @@
+{
+  "deliveries": {
+    "pack": {
+      "abandoned": true,
+      "entry": {
+        "energy": 100.0,
+        "hp": 4,
+        "medicine": "available",
+        "outfit": "standard",
+        "role": "Guardian",
+        "route": "road",
+        "style": "Steady"
+      },
+      "failure": {
+        "hp": 4,
+        "winch": 0
+      },
+      "first_catch": [
+        true,
+        false
+      ],
+      "movement": [
+        {
+          "player": [
+            700.0,
+            390.0
+          ],
+          "tick": 0
+        },
+        {
+          "player": [
+            616.666259765625,
+            390.0
+          ],
+          "tick": 34
+        },
+        {
+          "player": [
+            524.999145507812,
+            390.0
+          ],
+          "tick": 64
+        },
+        {
+          "player": [
+            504.165771484375,
+            390.0
+          ],
+          "tick": 84
+        },
+        {
+          "player": [
+            399.999359130859,
+            390.0
+          ],
+          "tick": 116
+        },
+        {
+          "player": [
+            349.999481201172,
+            390.0
+          ],
+          "tick": 136
+        },
+        {
+          "player": [
+            324.999542236328,
+            390.0
+          ],
+          "tick": 150
+        },
+        {
+          "player": [
+            324.999542236328,
+            306.666870117188
+          ],
+          "tick": 177
+        },
+        {
+          "player": [
+            324.999542236328,
+            273.333618164062
+          ],
+          "tick": 191
+        }
+      ],
+      "retry": {
+        "hp": 4,
+        "raised": [
+          false,
+          false
+        ],
+        "winch": 2
+      }
+    },
+    "source": {
+      "abandoned": true,
+      "entry": {
+        "energy": 100.0,
+        "hp": 4,
+        "medicine": "available",
+        "outfit": "standard",
+        "role": "Guardian",
+        "route": "road",
+        "style": "Steady"
+      },
+      "failure": {
+        "hp": 4,
+        "winch": 0
+      },
+      "first_catch": [
+        true,
+        false
+      ],
+      "movement": [
+        {
+          "player": [
+            700.0,
+            390.0
+          ],
+          "tick": 0
+        },
+        {
+          "player": [
+            591.666137695312,
+            390.0
+          ],
+          "tick": 34
+        },
+        {
+          "player": [
+            524.999145507812,
+            390.0
+          ],
+          "tick": 58
+        },
+        {
+          "player": [
+            408.332672119141,
+            390.0
+          ],
+          "tick": 86
+        },
+        {
+          "player": [
+            345.832824707031,
+            390.0
+          ],
+          "tick": 101
+        },
+        {
+          "player": [
+            329.166198730469,
+            390.0
+          ],
+          "tick": 110
+        },
+        {
+          "player": [
+            329.166198730469,
+            306.666870117188
+          ],
+          "tick": 140
+        },
+        {
+          "player": [
+            329.166198730469,
+            269.166961669922
+          ],
+          "tick": 153
+        }
+      ],
+      "retry": {
+        "hp": 4,
+        "raised": [
+          false,
+          false
+        ],
+        "winch": 2
+      }
+    }
+  },
+  "kind": "synthetic_os_input",
+  "scope": "Policy-executed wounded first encounter; actual F2, movement/work, natural failure, retry and abandon in both native windows. No full OS-driven first escort or human study."
+}

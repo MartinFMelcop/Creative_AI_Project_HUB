@@ -197,6 +197,49 @@ opportunity difference. Fixed routes show feasibility, not optimal play or prefe
 
 ![Timed guard cue in the actual consumer](../../evidence/north-star-guard-techniques/raise-now.png)
 
+## An optional second playable goal
+
+After winning the real escort, press **F2** to continue to the return gate, or **Enter**
+to replay the original crossing. Your actual remaining health/energy, approach, Guardian
+technique and fitting carry. Route/medicine facts remain visible, without invented room
+bonuses. The courier stays safe; this is a separate ward and protected winch.
+
+Raise **both catches**: walk inside a handle's 32px ring, then hold the applied interaction
+key (default **E**) for one second. Single-press interaction mode also applies. Work
+excludes guard, blade and step; movement, release or being hit cancels partial work.
+Pause, focus loss and controls interrupt/disarm it. Threats keep running. Protect the
+winch with actual interception/redirection, or disable the ward through three existing
+close counters before working. A broken winch or dead character loses. Raised catches
+open a real movement boundary; **walk through the exit alive** to finish. Neither a
+timer, ward shutdown nor raised catches alone completes the second goal.
+
+**Esc** pauses/resumes. After success/failure **Enter** retries from the session arrival
+checkpoint, restoring its health/energy rather than full health. **R** from pause/result
+leaves; no new keepsake, live outfit swap, power save or account progression is added.
+Old courier/cargo contact fields represent the stationary winch internally, not a second
+moving courier. Retry/leave clears room work. Remapped controls, sound mute and visuals
+remain available. No new audio PCM or physical listening claim is made.
+
+![Actual committed catch work after a wounded crossing](../../evidence/north-star-return-gate/guardian-working.png)
+
+[Execution](../../evidence/north-star-return-gate/RUN.json) records 67 room/transition
+controls, four complete wounded two-stage policies, actual source/PCK keyboard input
+and 505 retained controls. Work-first policies finish sooner with winch 1/2; shutdown-
+first policies preserve 2/2. These are feasible fixed routes, not optimal play, balance
+or human judgment. Original test fiction remains experimental, not accepted canon.
+
+```bash
+python3 north-star/prototype/tools/verify_gate.py --output /tmp/return-gate.json --compare evidence/north-star-return-gate/results.json
+python3 north-star/prototype/tools/verify_gate.py --output /tmp/return-gate.json --baseline /path/to/preserved-prior.pck
+python3 north-star/prototype/tools/verify_gate_input.py --output /tmp/return-gate-input
+```
+
+The optional baseline runs the same external native F2 probe after a real wounded
+escort against both PCKs and writes a separate `.before_after.json`. An already-current
+baseline is rejected. OS input needs the Linux display dependencies described below;
+its first escort is explicitly native-policy setup, followed by real keys for continuation,
+movement, work, natural mechanism failure, retry and leave. No independent human study.
+
 ## Character gestures and contact feedback
 
 The current production replaces the static abstract actors with original code-drawn
@@ -258,7 +301,7 @@ Input held through settings/focus loss must be released before deliberate reuse.
 
 Letters use physical positions; navigation arrows use logical identity. Fixed
 management keys (Esc, Enter/keypad Enter, 1, 2, R, T, C, F1, F5, F12) are reserved.
-Mouse, gamepad, modifier combinations and hold/toggle alternatives are unsupported;
+Mouse, gamepad and modifier combinations are unsupported;
 remapping does not change guard/feint/interaction commitment or combat costs.
 
 Preferences live separately from keepsakes at `user://crossing-controls.json`;
@@ -434,7 +477,7 @@ or MMORPG persistence.
 ## Execute checks and reproduce delivery
 
 ```bash
-python3 north-star/prototype/tools/verify.py --godot godot --output /tmp/crossing-check.json --compare evidence/north-star-route-choice/regressions.json
+python3 north-star/prototype/tools/verify.py --godot godot --output /tmp/crossing-check.json --compare evidence/north-star-return-gate/regressions.json
 ```
 
 The stdlib runner bounds owned engine processes, uses writable temporary XDG paths,
@@ -458,7 +501,7 @@ The source pack is reproducible with the matching engine:
 godot --headless --path north-star/prototype --script tools/pack.gd -- /absolute/path/crossing-drill.pck
 ```
 
-[Current execution evidence](../../evidence/north-star-route-choice/RUN.json) identifies
+[Current execution evidence](../../evidence/north-star-return-gate/RUN.json) identifies
 baseline, source/result hashes, commands, refinements and limitations. The preserved
 [first-consumer record](../../evidence/north-star-crossing/RUN.json) documents the
 original crossing delivery; the [rehearsal record](../../evidence/north-star-rehearsal/RUN.json)

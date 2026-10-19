@@ -260,3 +260,27 @@ projectile-only geometry rather than drawing a wall whose body collisions do not
 not best policies, universal protection, class balance, player preference, adventure
 quality or external validation. Source/PCK equality does not establish human reception,
 MMORPG scale or final creative authority. No new laboratory or origin transfer occurred.
+
+## A carried outcome needs a new target-context control
+
+**Question/context:** Can the crossing contact method serve a stationary protected
+device in a second objective without silently erasing risk or prior health loss?
+Baseline `5ab0b9`, [two-stage execution](../evidence/north-star-return-gate/RUN.json).
+
+**Observation:** initial work policies won while ignoring a bolt that stopped 28px
+ahead of the stationary winch. Added normal-time exposed-device controls failed twice;
+using its actual static position restores one hit and bounded destruction. That exposed
+an unsafe Guardian work policy; returning to intercept permits completion. Four fixed
+policies start after actual escort damage at health 4. Work-first leaves winch 1/2;
+shutdown-first leaves 2/2 and takes longer. Raising catches/shutdown alone never wins.
+Old/current PCK share the same first-goal tick/health; only current F2 starts continuation.
+
+**Interpretation/consequence:** adapting a contact system requires controls for the
+new target's trajectory, not merely reusing passing origin tests. Carry actual resource
+state and require new goal completion so narrative continuity has an executable cost.
+Keep arrival facts that are only displayed separate from mechanically used consequences.
+
+**Validity:** deterministic geometry, four feasible nonoptimal policies and synthetic
+input, not participants, balance, felt identity, accessibility or general quest proof.
+The finding belongs to this destination; no retroactive P06 defect or new lab is claimed.
+ENG-005/SCI-017 inform state/negative controls; CRE-005/058/086 motivate the design only.

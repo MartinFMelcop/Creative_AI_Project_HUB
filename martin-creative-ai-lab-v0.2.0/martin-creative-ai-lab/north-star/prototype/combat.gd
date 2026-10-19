@@ -3,6 +3,7 @@ extends RefCounted
 ## Paid commitment and facing checks adapt P06's action/contact method; no P06 fiction.
 const Route = preload("res://route.gd")
 var route = Route.new()
+var stationary_relay := false
 const FIELD := Rect2(50, 185, 1052, 460)
 const ENEMY := Vector2(790, 390)
 const FINISH := 1000.0
@@ -46,6 +47,7 @@ var counters := {"blocks":0,"redirects":0,"dodges":0,"counters":0,"courier_hits"
 func reset(kind: String, style: String="Steady") -> void:
 	role = kind
 	route=Route.new()
+	stationary_relay=false
 	guard_style = "Riposte" if kind=="Guardian" and style=="Riposte" else ("Steady" if kind=="Guardian" else "none")
 	mode = "play"
 	player = Vector2(550,390)
@@ -75,7 +77,7 @@ func reset(kind: String, style: String="Steady") -> void:
 	note("Keep the courier alive until the far gate. Read the first amber line.")
 
 func signal_route(next: String) -> bool:
-	if mode!="play" or player.distance_to(Route.BOARD)>Route.SIGNAL_RADIUS:return false
+	if stationary_relay or mode!="play" or player.distance_to(Route.BOARD)>Route.SIGNAL_RADIUS:return false
 	if not route.choose(next,courier):
 		note("Route locked at MARK 1. The courier keeps the committed path.");return false
 	note("RIDGE signalled: longer walk; the raised filter stops crossing bolts, not ground pulses." if next=="ridge" else "ROAD signalled: direct crossing; the upper filter is lowered.")
@@ -115,7 +117,7 @@ func courier_speed() -> float:
 	return 56.0 if sentinel_disabled() else 28.0
 
 func sentinel_status() -> String:
-	return "DISABLED / ROAD CLEAR" if sentinel_disabled() else "FOCUS %d / 3"%enemy_focus
+	return ("DISABLED / WORK SAFE" if stationary_relay else "DISABLED / ROAD CLEAR") if sentinel_disabled() else "FOCUS %d / 3"%enemy_focus
 
 func guard_limit() -> float:
 	return 0.30 if guard_style=="Riposte" else 10000.0
@@ -173,7 +175,7 @@ func step(delta: float, input: Dictionary) -> void:
 			record("redirect")
 			note("You drew the bolt. Leave the locked amber line.")
 		else:
-			if sentinel_disabled(): reject("Sentinel disabled. The courier runs; medicine is still optional.")
+			if sentinel_disabled(): reject("Ward disabled. Raise both catches and use the exit." if stationary_relay else "Sentinel disabled. The courier runs; medicine is still optional.")
 			elif phase!="bolt": reject("Feint waits for an amber bolt warning.")
 			elif redirected: reject("This bolt is already drawn. Leave its locked line.")
 			elif player.distance_to(ENEMY)>340: reject("Outside feint range. Move inside the sentinel's ring.")
@@ -196,7 +198,7 @@ func step(delta: float, input: Dictionary) -> void:
 	player=player.clamp(FIELD.position+Vector2(20,20),FIELD.end-Vector2(20,20))
 	if bool(input.get("strike",false)):
 		if sentinel_disabled():
-			reject("Sentinel disabled. Keep the courier alive to the gate.")
+			reject("Ward disabled. Raise both catches and use the exit." if stationary_relay else "Sentinel disabled. Keep the courier alive to the gate.")
 		elif strike_cooldown<=0 and energy>=12 and step_left<=0 and not guard:
 			energy-=12
 			strike_cooldown=0.45
@@ -209,14 +211,14 @@ func step(delta: float, input: Dictionary) -> void:
 				if sentinel_disabled():
 					phase="disabled";clock=0;redirected=false
 					record("sentinel_disabled")
-					note("Sentinel disabled. The courier runs along the cleared road.")
-					retain_impact("sentinel_disabled","Three close counters broke the sentinel's focus.","The courier runs at twice its walking speed. Reach the gate; medicine remains optional.")
+					note("Ward disabled. Raise both catches and use the exit." if stationary_relay else "Sentinel disabled. The courier runs along the cleared road.")
+					retain_impact("sentinel_disabled","Three close counters broke the ward's focus." if stationary_relay else "Three close counters broke the sentinel's focus.","Raise both catches, then pass the open gate alive." if stationary_relay else "The courier runs at twice its walking speed. Reach the gate; medicine remains optional.")
 				else:note("Clean counter. Sentinel focus %d / 3; courier gains time."%enemy_focus)
 			else:
 				if player.distance_to(ENEMY)>130: note("Blade fell short. Close within 130px during OPEN.")
 				else: note("Armor held. Wait for an OPEN response window.")
 		else: reject("Finish guard / step recovery and keep 12 resolve to strike.")
-	courier=route.advance(courier,dt*courier_speed(),dt)
+	if not stationary_relay:courier=route.advance(courier,dt*courier_speed(),dt)
 	if not sentinel_disabled():
 		clock+=dt
 		if phase=="rest" and clock>=1.8:
@@ -229,7 +231,7 @@ func step(delta: float, input: Dictionary) -> void:
 				note("PULSE: walk or step out of the red circle. Shield cannot stop the ground.")
 			else:
 				phase="bolt"
-				target=route.predict(courier,courier_speed()) if route.kind=="ridge" else courier+Vector2(28,0)
+				target=courier if stationary_relay else (route.predict(courier,courier_speed()) if route.kind=="ridge" else courier+Vector2(28,0))
 				note("BOLT: intercept facing the sentinel, or draw its aim with a feint.")
 		elif phase in ["bolt","pulse"] and clock>=1.0:
 			resolve_threat()
@@ -238,7 +240,7 @@ func step(delta: float, input: Dictionary) -> void:
 	if cargo<=0 or hp<=0:
 		mode="lost"
 		note("The crossing failed. Read the last impact, then try a different response.")
-	elif courier.x>=FINISH:
+	elif not stationary_relay and courier.x>=FINISH:
 		mode="won"
 		note("The courier reached the gate. Your approach changed how the line was held.")
 
@@ -307,4 +309,5 @@ func snapshot() -> Dictionary:
 	var result={"role":role,"guard_style":guard_style,"enemy_focus":enemy_focus,"courier_speed":courier_speed(),"mode":mode,"tick":roundi(elapsed*60),"hp":hp,"cargo":cargo,"energy":snappedf(energy,0.001),"courier_x":snappedf(courier.x,0.001),"counters":counters.duplicate(),"events":events.duplicate(true)}
 	if outfit!="standard":result.outfit={"id":outfit,"health_limit":health_limit,"movement_scale":movement_scale}
 	if route.kind=="ridge":result.route=route.snapshot();result.courier_y=snappedf(courier.y,0.001)
+	if stationary_relay:result.objective="return_gate"
 	return result

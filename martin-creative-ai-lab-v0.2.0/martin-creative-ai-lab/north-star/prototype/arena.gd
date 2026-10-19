@@ -1,4 +1,6 @@
 extends Node2D
+const ReturnGate=preload("res://return_gate.gd")
+var return_gate=ReturnGate.new()
 const Route = preload("res://route.gd")
 const Workshop = preload("res://workshop.gd")
 var workshop = Workshop.new()
@@ -50,6 +52,7 @@ func _ready() -> void:
 	queue_redraw()
 
 func abandon() -> void:
+	return_gate=ReturnGate.new()
 	bindings.clear_intents()
 	errand=Errand.new()
 	normal_run=false
@@ -63,6 +66,7 @@ func abandon() -> void:
 	taps.clear()
 
 func begin_crossing() -> void:
+	return_gate=ReturnGate.new()
 	bindings.clear_intents()
 	errand.reset()
 	normal_run=true
@@ -79,6 +83,7 @@ func begin_crossing() -> void:
 
 func _notification(what: int) -> void:
 	if what==NOTIFICATION_APPLICATION_FOCUS_OUT:
+		if return_gate.active:return_gate.suspend()
 		if workshop.active:workshop.suspend()
 		if rehearsal.active:
 			if rehearsal.state=="live" and not rehearsal.paused: rehearsal.toggle_pause()
@@ -97,6 +102,10 @@ func _unhandled_key_input(event: InputEvent) -> void:
 		controls_input(event,key);queue_redraw();return
 	if key==KEY_F1:
 		open_controls();queue_redraw();return
+	if return_gate.active:
+		return_gate_input(event,key);sync_sound();queue_redraw();return
+	if normal_run and not rehearsal.active and game.mode=="won" and key==KEY_F2:
+		begin_return_gate();queue_redraw();return
 	if workshop.active:
 		workshop_input(key);queue_redraw();return
 	if not rehearsal.active and game.mode=="title" and key==KEY_F2:
@@ -151,6 +160,7 @@ func workshop_input(key: int) -> void:
 	taps.clear()
 
 func open_controls() -> void:
+	if return_gate.active:return_gate.suspend()
 	if workshop.active:workshop.suspend()
 	if rehearsal.active:
 		if rehearsal.state=="live" and not rehearsal.paused:rehearsal.toggle_pause()
@@ -195,10 +205,16 @@ func _physics_process(dt: float) -> void:
 	command.aim=bindings.vector("aim")
 	command.skill=bindings.down("skill")
 	command.interact=bindings.down("interact")
-	command=bindings.translate(command,game,errand if normal_run and not rehearsal.active else null)
-	if rehearsal.active: rehearsal.step(dt,command)
-	else: advance_crossing(dt,command)
-	bindings.settle_intents(game,errand if normal_run and not rehearsal.active else null)
+	if return_gate.active:
+		command=return_gate_command(command)
+		advance_crossing(dt,command)
+		bindings.settle_intents(game)
+		if not return_gate.channel:bindings.interact_latched=false;bindings.interaction_state=""
+	else:
+		command=bindings.translate(command,game,errand if normal_run and not rehearsal.active else null)
+		if rehearsal.active: rehearsal.step(dt,command)
+		else: advance_crossing(dt,command)
+		bindings.settle_intents(game,errand if normal_run and not rehearsal.active else null)
 	taps.clear()
 	sync_sound()
 	queue_redraw()
@@ -209,6 +225,8 @@ func sync_sound() -> void:
 	actors.observe(game)
 
 func advance_crossing(dt: float, command: Dictionary) -> void:
+	if return_gate.active:
+		return_gate.step(dt,command);return
 	var previous: String=game.mode
 	command=command.duplicate()
 	command.route_signal=normal_run and not rehearsal.active and bool(command.get("interact_pressed",false))
@@ -260,6 +278,10 @@ func style(color: Color) -> StyleBoxFlat:
 	return box
 
 func _draw() -> void:
+	if return_gate.active:
+		draw_return_gate()
+		if controls_open:drawing_controls=true;draw_controls();drawing_controls=false
+		return
 	if workshop.active:
 		draw_workshop()
 		if controls_open:drawing_controls=true;draw_controls();drawing_controls=false
@@ -383,7 +405,8 @@ func overlay() -> void:
 		text(Vector2(250,518),"ENTER retry this approach     •     R choose approach",22)
 		text(Vector2(150,552),reward_message if game.mode=="won" else "No keepsake earned. Complete a crossing with a block or drawn bolt.",18,TEAL if game.mode=="won" else AMBER)
 		text(Vector2(150,585),"C  Wear / put away     •     F5  Retry local save     /     cosmetic only",18)
-		text(Vector2(150,622),errand.outcome(),17,AMBER)
+		text(Vector2(150,612),errand.outcome(),17,AMBER)
+		if game.mode=="won":text(Vector2(150,640),"F2  Continue: open the return gate  /  health carries  /  optional",17,TEAL)
 
 func draw_errand() -> void:
 	if errand.state=="waiting": return
@@ -436,8 +459,13 @@ func footer() -> String:
 
 func draw_impact(at: Vector2) -> void:
 	if game.last_impact.is_empty(): return
-	text(at,"LAST CONTACT  /  "+game.last_impact.explanation,18,AMBER)
-	text(at+Vector2(0,32),game.last_impact.tip,18)
+	var explanation:String=game.last_impact.explanation
+	var tip:String=game.last_impact.tip
+	if return_gate.active:
+		explanation=explanation.replace("courier","winch").replace("sentinel","ward")
+		tip=tip.replace("courier","winch").replace("sentinel","ward")
+	text(at,"LAST CONTACT  /  "+explanation,18,AMBER)
+	text(at+Vector2(0,32),tip,18)
 
 func rehearsal_overlay() -> void:
 	if rehearsal.state=="live" and not rehearsal.paused: return
@@ -465,6 +493,7 @@ func capture() -> void:
 	get_viewport().get_texture().get_image().save_png(path)
 	var file=FileAccess.open(path+".json",FileAccess.WRITE)
 	var report=game.snapshot()
+	if return_gate.active:report.return_gate=return_gate.snapshot()
 	report.route=game.route.snapshot()
 	report.player_position=[game.player.x,game.player.y]
 	report.courier_position=[game.courier.x,game.courier.y]
@@ -526,3 +555,108 @@ func draw_route() -> void:
 		text(Vector2(675,280),"BOLT FILTER",14,TEAL)
 		text(Vector2(675,302),"People pass; floor hurts.",13)
 		if game.route.flash>0:draw_arc(game.route.last_contact,16,0,TAU,24,PAPER,3)
+
+func begin_return_gate() -> bool:
+	if not normal_run or rehearsal.active or not return_gate.begin(game,errand.state):return false
+	normal_run=false;game=return_gate.game
+	taps.clear();bindings.quarantine();sound.observe(game,true);actors.attach(game)
+	return true
+
+func return_gate_input(event: InputEventKey,key: int) -> void:
+	if key==KEY_ESCAPE:
+		return_gate.suspend()
+		if game.mode=="play":game.mode="paused"
+		elif game.mode=="paused":game.mode="play"
+		taps.clear();bindings.quarantine()
+	elif key==KEY_ENTER:
+		if game.mode=="paused":game.mode="play"
+		elif game.mode in ["won","lost"]:
+			return_gate.retry();game=return_gate.game;sound.observe(game,true);actors.attach(game)
+		taps.clear();bindings.quarantine()
+	elif key==KEY_R and game.mode!="play":abandon()
+	elif key==KEY_C and game.mode!="play":keepsakes.cycle_equipped()
+	elif key==KEY_F5 and game.mode!="play":keepsakes.retry_save()
+	elif game.mode=="play":
+		if bindings.matches(event,"strike"):taps.strike=true
+		if bindings.matches(event,"skill"):taps.skill_pressed=true
+		if bindings.matches(event,"step"):taps.dodge=true
+		if bindings.matches(event,"interact"):taps.interact_pressed=true
+
+func return_gate_command(command: Dictionary) -> Dictionary:
+	var result:Dictionary=bindings.translate(command,game)
+	var eligible:bool=return_gate.eligible(command)
+	if bindings.toggle_interact:
+		if not eligible:bindings.interact_latched=false
+		if eligible and command.get("interact_pressed",false):bindings.interact_latched=not bindings.interact_latched
+		result.interact=bindings.interact_latched
+	if eligible and result.get("interact",false) and bindings.toggle_guard:
+		bindings.guard_latched=false;result.skill=false
+	return result
+
+func draw_return_gate() -> void:
+	draw_rect(Rect2(0,0,1152,768),INK)
+	draw_rect(Combat.FIELD,Color("252d3a"))
+	for x in range(80,1100,55):draw_line(Vector2(x,185),Vector2(x,645),Color("354051"),1)
+	for i in ReturnGate.CATCHES.size():
+		var at:Vector2=ReturnGate.CATCHES[i]
+		var tint:Color=TEAL if return_gate.raised[i] else AMBER
+		draw_line(at,ReturnGate.WINCH,Color("596575"),3)
+		draw_arc(at,ReturnGate.RADIUS,0,TAU,32,tint,2)
+		draw_rect(Rect2(at-Vector2(18,14),Vector2(36,28)),Color("596575"))
+		draw_line(at,at+Vector2(17,-28 if return_gate.raised[i] else 20),tint,6,true)
+		text(at+Vector2(-74,-53),("NORTH" if i==0 else "SOUTH")+" CATCH",17,tint)
+		text(at+Vector2(-84,61),"RAISED" if return_gate.raised[i] else "Hold E here / 1s",16,tint)
+		if return_gate.working==i and return_gate.channel:draw_arc(at,41,-PI/2,-PI/2+TAU*return_gate.progress/ReturnGate.WORK_TIME,40,PAPER,5)
+	var winch:Vector2=ReturnGate.WINCH
+	draw_circle(winch,29,Color("566675"));draw_arc(winch,22,0,TAU,24,PAPER,4)
+	for i in 4:
+		var angle:float=i*PI/2
+		draw_line(winch,winch+Vector2.from_angle(angle)*21,PAPER,3)
+	text(winch+Vector2(-62,58),"WINCH %d / 2"%game.cargo,17,TEAL if game.cargo==2 else RED)
+	text(winch+Vector2(-89,82),"Protect this device",14)
+	if game.phase=="bolt":
+		draw_line(Combat.ENEMY,game.target,Color(1,0.75,0.4,0.25+game.clock*0.5),3+game.clock*8)
+		draw_arc(game.target,26,0,TAU,24,AMBER,2)
+		text(Vector2(610,200),"LOCKED BOLT / WINCH EXPOSED",16,AMBER)
+		if game.role=="Guardian" and game.guard_style=="Riposte":draw_guard_timing()
+	if game.phase=="pulse":
+		draw_circle(game.pulse,90,Color(1,0.3,0.3,0.3));draw_arc(game.pulse,90,0,TAU,48,RED,3)
+		text(game.pulse+Vector2(-65,-104),"GROUND PULSE",16,RED)
+	actors.draw_sentinel(self,game)
+	text(Combat.ENEMY+Vector2(-49,-50),"GATE WARD",16,RED if not game.sentinel_disabled() else TEAL)
+	text(Combat.ENEMY+Vector2(-70,84),game.sentinel_status(),14,TEAL if game.sentinel_disabled() else AMBER)
+	if game.opening>0:
+		draw_arc(Combat.ENEMY,130,0,TAU,64,TEAL,2)
+		text(Combat.ENEMY+Vector2(-50,60),"OPEN %.1fs"%game.opening,18,TEAL)
+	if not return_gate.opened():
+		for y in range(195,645,25):draw_line(Vector2(1020,y),Vector2(1020,y+18),AMBER,9)
+	else:draw_line(Vector2(1020,195),Vector2(1020,235),TEAL,9)
+	draw_arc(ReturnGate.EXIT,24,0,TAU,32,TEAL if return_gate.opened() else Color("596575"),3)
+	text(Vector2(1010,450),"EXIT" if return_gate.opened() else "LOCKED",16,TEAL if return_gate.opened() else AMBER)
+	actors.draw_player(self,game);draw_keepsake(game.player,keepsakes.equipped)
+	if game.guard:draw_arc(game.player,37,game.locked_face.angle()-0.9,game.locked_face.angle()+0.9,24,TEAL if game.guards_from(Combat.ENEMY) else AMBER,7)
+	actors.draw_contact(self)
+	text(game.player+Vector2(-20,-38),"YOU",14,TEAL)
+	draw_rect(Rect2(0,0,1152,174),INK)
+	text(Vector2(40,42),"VIRGO DIAMOND / THE RETURN GATE",26)
+	text(Vector2(950,41),"F1 Keys / sound",16,AMBER)
+	text(Vector2(40,72),"Courier safe. Raise BOTH catches, keep the winch intact, then pass the open gate alive.",18,AMBER)
+	text(Vector2(40,111),game.role.to_upper()+(" / "+game.guard_style.to_upper() if game.role=="Guardian" else "")+" / HP %d / %d / "%[game.hp,game.health_limit]+Workshop.NAMES[game.outfit],19)
+	text(Vector2(750,111),"CATCHES %d / 2"%(int(return_gate.raised[0])+int(return_gate.raised[1])),22,TEAL)
+	draw_rect(Rect2(40,130,300,12),Color("32475a"));draw_rect(Rect2(40,130,300*game.energy/100,12),TEAL if game.role=="Guardian" else AMBER)
+	text(Vector2(355,142),"POSTURE" if game.role=="Guardian" else "RESOLVE",15)
+	if game.role=="Guardian":text(Vector2(460,142),"GUARD "+game.guard_state()+(" / TOGGLE" if bindings.toggle_guard else ""),14,RED if game.guard_state()=="STALE" else PAPER)
+	text(Vector2(40,164),"ARRIVAL: %d health / %s route / medicine %s / session checkpoint"%[return_gate.entry.hp,return_gate.entry.route,return_gate.entry.medicine],15,AMBER)
+	panel(Rect2(30,662,1092,86))
+	text(Vector2(48,687),"WASD move / ARROWS aim / J counter / K guard or feint / SPACE step / E work / ESC pause",17)
+	var message:String=game.message.replace("courier safe","winch safe").replace("courier gains time","more time to work").replace("Sentinel focus","Ward focus")
+	text(Vector2(48,718),"Working: no guard, blade or step. Moving, release or a hit cancels partial work." if return_gate.channel else message,17,AMBER)
+	if game.mode!="play":
+		panel(Rect2(90,220,972,365),Color("172535"))
+		text(Vector2(125,271),"RETURN GATE PAUSED" if game.mode=="paused" else ("RETURN PASSAGE OPEN" if game.mode=="won" else "RETURN GATE FAILED"),32,TEAL if game.mode=="won" else AMBER)
+		text(Vector2(125,318),"Health %d / %d    Winch %d / 2    Catches %d / 2"%[game.hp,game.health_limit,game.cargo,int(return_gate.raised[0])+int(return_gate.raised[1])],21)
+		text(Vector2(125,361),"The courier stays safe. This separate ward guards the return mechanism.",19)
+		text(Vector2(125,399),"Raise both catches AND cross the exit. Disabling the ward alone does not finish.",18,AMBER)
+		draw_impact(Vector2(125,446))
+		text(Vector2(125,532),"ENTER / ESC resume   /   R leave" if game.mode=="paused" else "ENTER retry from arrival   /   R leave   /   no extra keepsake",22,TEAL)
+		text(Vector2(125,568),"Retry restores the entry checkpoint, not full health. No live outfit or approach swap.",17)
