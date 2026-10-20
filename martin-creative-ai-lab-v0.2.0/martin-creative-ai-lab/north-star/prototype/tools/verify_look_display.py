@@ -48,7 +48,7 @@ def verify(output, baseline=None):
                     records[mode]=json.loads((target/"frames.json").read_text())
                     pixels[mode]={p.stem:digest(p) for p in sorted(target.glob("*.png"))}
                 if records["source"]!=records["pack"] or pixels["source"]!=pixels["pack"]:raise ValueError("Rendered source/PCK states or pixels differ")
-                if len(pixels["source"])!=10:raise ValueError("Incomplete actual look scenes")
+                if len(pixels["source"])!=13:raise ValueError("Incomplete actual look/persistence scenes")
                 if baseline:
                     if set(pixels["baseline"])!={"guardian-original","duelist-original"}:raise ValueError("Incomplete prior default-art controls")
                     for name in pixels["baseline"]:
@@ -82,7 +82,9 @@ def verify(output, baseline=None):
                             prior=path.stat().st_mtime_ns if path.exists() else 0;tap("F12")
                             for _ in range(100):
                                 if path.exists() and path.stat().st_mtime_ns!=prior:
-                                    value=json.loads(path.read_text())
+                                    try:value=json.loads(path.read_text())
+                                    except json.JSONDecodeError:
+                                        time.sleep(.03);continue
                                     shutil.copyfile(capture,output/(delivery+"-"+label+".png"))
                                     (output/(delivery+"-"+label+".json")).write_text(json.dumps(value,sort_keys=True,indent=2)+"\n")
                                     return value
@@ -103,8 +105,9 @@ def verify(output, baseline=None):
                             assert initial["mode"]=="title";observations["startup_capture_attempts"]=attempts
                             game.terminate();game.wait(timeout=3);game=None
                             break
-                        assert initial["mode"]=="title" and initial["character_look"]["applied"]=={"skin":0,"hair":0,"dye":0}
-                        if fresh:observations["fresh_process_default"]=True
+                        expected_fresh={"skin":3,"hair":2,"dye":1} if fresh else {"skin":0,"hair":0,"dye":0}
+                        assert initial["mode"]=="title" and initial["character_look"]["applied"]==expected_fresh
+                        if fresh:observations["fresh_process_retained"]=expected_fresh
                         else:
                             tap("F3");tap("Right");tap("Down");tap("Right");tap("Down");tap("Right")
                             draft=shot("draft");assert draft["character_look"]["draft"]=={"skin":1,"hair":1,"dye":1} and draft["character_look"]["applied"]=={"skin":0,"hair":0,"dye":0}
@@ -125,6 +128,21 @@ def verify(output, baseline=None):
                             tap("2");tap("Return");live=shot("live");assert live["mode"]=="play" and live["role"]=="Duelist" and live["character_look"]["applied"]==expected
                             tap("F3");assert not shot("title-only")["character_look"]["active"]
                             tap("Escape");tap("r");left=shot("retained");assert left["mode"]=="title" and left["character_look"]["applied"]==expected
+                            # Unknown primary bytes remain untouched while an actual
+                            # applied look stays usable. F5 retries only committed data.
+                            profile.write_text("{")
+                            tap("F3");assert shot("repair-editor")["character_look"]["active"]
+                            tap("Right");assert shot("repair-draft")["character_look"]["draft"]["skin"]==3
+                            tap("Return");pending=shot("save-pending")
+                            retained={"skin":3,"hair":2,"dye":1}
+                            assert pending["character_look"]["applied"]==retained and pending["keepsakes"]["blocked"] and pending["keepsakes"]["dirty"] and profile.read_text()=="{"
+                            profile.write_text(json.dumps({"schema_version":1,"earned":[],"equipped":""}))
+                            tap("F5");repaired=shot("save-repaired")
+                            stored=json.loads(profile.read_text())
+                            assert not repaired["keepsakes"]["dirty"] and not repaired["keepsakes"]["blocked"] and repaired["character_look"]["applied"]==retained
+                            assert stored["schema_version"]==2 and stored["look"]==retained
+                            observations["unknown_bytes_preserved_and_repaired"]=True
+                            observations["repaired_look"]=retained
                             observations.update({"startup_capture_attempts":attempts,"draft":draft["character_look"]["draft"],"cancelled":True,"applied":expected,"live_role":live["role"],"retained_on_abandon":True,"live_editor_rejected":True})
                         game.terminate();game.wait(timeout=3);game=None
                         for _ in range(60):
@@ -142,9 +160,9 @@ def verify(output, baseline=None):
                         except subprocess.TimeoutExpired:child.kill();child.wait()
         logtext=(output/"display.log").read_text()
         if x_errors or any(s in logtext for s in ["SCRIPT ERROR:","Parse Error:","ERROR:","instances leaked"]):raise ValueError(str(x_errors)+logtext[-2500:])
-    result={"kind":"native_render_and_synthetic_os_input","rendered_frames_per_delivery":10,"source_pack_pixel_state_parity":True,"default_prior_pixel_controls":2 if baseline else 0,"baseline_pck_sha256":digest(Path(baseline)) if baseline else None,"pixels":pixels,"keyboard":keyboard,"scope":"Actual same actor drawing, controlled action samples, real OS editor/apply/cancel/gameplay and four native process entries. Agent inspection and fixed controls are not participant identity recognition, taste or accessibility."}
+    result={"kind":"native_render_and_synthetic_os_input","rendered_frames_per_delivery":13,"source_pack_pixel_state_parity":True,"default_prior_pixel_controls":2 if baseline else 0,"baseline_pck_sha256":digest(Path(baseline)) if baseline else None,"pixels":pixels,"keyboard":keyboard,"scope":"Actual shared actor drawing, controlled action samples, real OS editor/apply/cancel/gameplay, unknown-file repair and fresh-process retention. Agent inspection and fixed controls are not participant identity recognition, taste or accessibility."}
     (output/"display.json").write_text(json.dumps(result,sort_keys=True,indent=2)+"\n")
-    print("PASS: ten source/PCK scene samples, default-art control and real keyboard edit/play/reentry")
+    print("PASS: thirteen source/PCK scene samples and real keyboard edit/play/repair/restart")
     return result
 
 if __name__=="__main__":

@@ -73,3 +73,26 @@ order belong to the preview contract. Keep visual expression separate from comba
 and test both real rendering and unchanged full journeys. **Validity:** fixed/native
 samples and agent inspection, not perceived identity, taste or independent accessibility.
 CRE-009/029/066 motivate expression; ENG-023 and SCI-014 limit what passing controls prove.
+
+
+## Independent cosmetic choices need independent recovery intent
+
+**Question/context:** does explicit free appearance survive real process reentry
+without changing legacy mark ownership or restoring play? Baseline `05454410` resets
+an applied look. **Sources:** ENG-010, CRE-030 H, SCI-017 and
+[actual migration/restart execution](../evidence/north-star-appearance-continuity/RUN.json).
+
+**Observation:** legacy load/cancel preserves bytes; explicit apply alone creates v2.
+52 controls and 20 actual source/PCK restart processes retain applied choices across
+both goals and earned marks. Unknown primary bytes remain untouched. Repair keeps
+pending applied look, restored worn selection and unsaved draft distinct. Prior PCK
+rejects v2 safely. JSON whole numbers arrive as floats; strict validation followed
+by normalization is required. Capture mtime alone did not establish complete JSON.
+
+**Interpretation/consequence:** track intent per independent field, rather than let
+one cosmetic edit overwrite another during recovery. Preserve old formats until an
+explicit new choice requires migration. Bound capture-completion polling without
+replaying inputs; instrument races are not product failures. **Validity:** editable
+single-device cosmetics, fixed native/synthetic controls and agent inspection; no
+account, persistent RPG power, power-loss/concurrency guarantee, human recognition
+or preference evidence. Pending unsaved changes can still be lost on close.

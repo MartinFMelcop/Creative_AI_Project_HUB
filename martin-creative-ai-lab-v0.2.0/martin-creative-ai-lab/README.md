@@ -131,9 +131,11 @@ The current consumer also offers a [second playable objective](north-star/protot
 after an actual escort win: F2 carries remaining health into catch work, winch protection
 and a required exit. Source/PCK execution retains original replay and origin consumers.
 
-The current consumer includes [free session character appearance](north-star/prototype/README.md#choose-your-character-look):
+The current consumer includes [free character appearance](north-star/prototype/README.md#choose-your-character-look):
 an explicit draft/apply workflow previews actual actions and follows the player into
-both goals, independently from role, fitted gear and earned marks.
+both goals, independently from role, fitted gear and earned marks. Explicitly applied
+choices now survive process restarts through a recoverable local cosmetic profile;
+[execution](evidence/north-star-appearance-continuity/RUN.json) retains legacy and failure controls.
 
 
 The optional [courier conversation](north-star/prototype/README.md#talk-to-the-courier)

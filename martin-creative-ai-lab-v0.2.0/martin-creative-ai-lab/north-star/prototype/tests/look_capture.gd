@@ -41,5 +41,26 @@ func run() -> void:
 			tick(Policy.command(scene.game))
 		if not scene.begin_return_gate():push_error("No actual crossing for appearance continuation");quit(1);return
 		await frame("custom-return-gate")
+		if scene.keepsakes.has_method("set_look"):
+			# Real unavailable bytes, a pending applied look, then explicit repair.
+			var profile="user://look-capture-repair.json"
+			var invalid=FileAccess.open(profile,FileAccess.WRITE);invalid.store_string("{");invalid.close()
+			scene.abandon();scene.keepsakes.load_profile(profile);scene.sync_look_profile()
+			var key=InputEventKey.new();key.pressed=true
+			for code in [KEY_F3,KEY_RIGHT,KEY_ENTER,KEY_F3,KEY_RIGHT]:
+				key.keycode=code;key.physical_keycode=code;scene._unhandled_key_input(key)
+			await frame("editor-save-pending");frames["editor-save-pending"].profile=scene.keepsakes.snapshot()
+			var restored=FileAccess.open(profile,FileAccess.WRITE)
+			restored.store_string(JSON.stringify({"schema_version":2,"earned":["drew_danger"],"equipped":"drew_danger","look":{"skin":3,"hair":2,"dye":3}}));restored.close()
+			key.keycode=KEY_F5;key.physical_keycode=KEY_F5;scene._unhandled_key_input(key)
+			if scene.keepsakes.dirty or scene.keepsakes.blocked or scene.character_look.applied.skin!=1 or scene.character_look.draft.skin!=2:
+				push_error("Applied look recovery consumed the draft or lost pending intent");quit(1);return
+			await frame("editor-save-recovered");frames["editor-save-recovered"].profile=scene.keepsakes.snapshot()
+			key.keycode=KEY_ESCAPE;key.physical_keycode=KEY_ESCAPE;scene._unhandled_key_input(key)
+			scene.sound.silence();scene.free();await process_frame
+			scene=load("res://arena.tscn").instantiate();scene.profile_path=profile;root.add_child(scene);scene.set_physics_process(false)
+			key.keycode=KEY_F3;key.physical_keycode=KEY_F3;scene._unhandled_key_input(key)
+			if scene.character_look.applied!={"skin":1,"hair":0,"dye":0}:push_error("Scene reload lost repaired look");quit(1);return
+			await frame("editor-reopened-profile");frames["editor-reopened-profile"].profile=scene.keepsakes.snapshot()
 	var file=FileAccess.open(folder+"/frames.json",FileAccess.WRITE);file.store_string(JSON.stringify(frames,"  ")+"\n")
 	scene.sound.silence();await create_timer(.1).timeout;scene.free();await process_frame;quit(0)

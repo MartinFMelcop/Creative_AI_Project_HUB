@@ -1,6 +1,6 @@
 # SEED — Martin Creative AI Lab
 
-**Version:** 0.33.16
+**Version:** 0.33.17
 **Data-base:** 10 de outubro de 2026  
 **Autor e responsável pelo portfólio:** Martin Melcop Neto  
 **Working language:** English for new technical documentation, plans, code comments and Git messages; respond in the requested language (Brazilian Portuguese for continuous closeout). Preserve appropriate creative/source languages.
@@ -45,7 +45,19 @@ does not merge fictional universes. Source details below are historical provenan
 retained origin behavior; current operation is defined by this direction, AGENTS,
 STATE and the single [continuous prompt](docs/prompts/CONTINUOUS_DEVELOPMENT.md).
 
-### Current increment — v0.33.16
+### Current increment — v0.33.17
+
+DEVELOPMENT: explicitly applied free skin, hair and cloth choices now survive actual
+process restarts in the existing device-local cosmetic profile. Legacy mark-only
+profiles load without rewriting; explicit appearance apply creates schema 2 without
+requiring a reward. Cancelled drafts never save. Unknown bytes block replacement;
+F5 repairs pending applied choices independently from worn marks and an open draft.
+[Execution](evidence/north-star-appearance-continuity/RUN.json) binds 52 new controls,
+20 real restart processes, 730 retained controls and inspected source/PCK scenes.
+No account, saved power/session, new lab, origin extraction or capability promotion.
+The adaptive prompt remains unchanged; this subsystem is not the automatic next task.
+
+### Prior consumer increment — v0.33.16
 
 CREATIVE PRODUCTION: an optional arrival conversation connects actual escort facts
 and a finite gift to the next playable goal. F4 offers a wound dressing (+1 prepared
@@ -153,8 +165,8 @@ for continuous development and its full successor requirement.
 
 | Field | Current evidence |
 |---|---|
-| Baseline | `b4feb72076bbc78ee9128eb43ccbb8bb7bc69217`; wrapper retained |
-| Current milestone | CREATIVE PRODUCTION: factual courier conversation and a finite aid choice affect the actual return goal; [execution](evidence/north-star-courier-conversation/RUN.json) |
+| Baseline | `05454410b4ac7ba8053eb2b56ba15fe136f4ae2b`; wrapper retained |
+| Current milestone | DEVELOPMENT: applied free appearance survives process restarts with recoverable local profile migration; [execution](evidence/north-star-appearance-continuity/RUN.json) |
 | Sources | Five byte-preserved supplied brain files; historical reference inventories unchanged |
 | Operational state | [STATE](docs/STATE.md), [origins](labs/origins.json), [brain integrity](brains/integrity.json) |
 | Portfolio | Technology capabilities, inspectable source/demonstrations and bounded execution evidence |

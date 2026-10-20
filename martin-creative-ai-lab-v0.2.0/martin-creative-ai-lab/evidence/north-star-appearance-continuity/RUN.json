@@ -1,0 +1,624 @@
+{
+  "baseline_artifact": {
+    "commit": "05454410b4ac7ba8053eb2b56ba15fe136f4ae2b",
+    "git_path": "north-star/prototype/dist/crossing-drill.pck",
+    "sha256": "86dc1fa26c5353b23948600dd2f9413e176e5d566b161aa5a687f9e98b3cf86d",
+    "size_bytes": 273984
+  },
+  "baseline_commit": "05454410b4ac7ba8053eb2b56ba15fe136f4ae2b",
+  "before_after": {
+    "baseline": "Common native apply makes look 1/1/1 but creates no profile; next process resets 0/0/0.",
+    "current": "Same probe retains 1/1/1 in source and PCK, starts title/tick0; legacy binary blocks v2 and preserves bytes.",
+    "new_controls": 52,
+    "restart_processes": 20,
+    "retained_controls": 730,
+    "retained_observations_equal": true,
+    "scope": "Actual apply/read/cancel/earn/two-goal journey/default/read; free look does not award marks or save power."
+  },
+  "branch": "codex/north-star-appearance-continuity-20261020",
+  "capability_ids": [
+    "NS-C03",
+    "NS-C04",
+    "NS-C07"
+  ],
+  "checks": {
+    "failed": 0,
+    "passed": 782
+  },
+  "commands": [
+    {
+      "command": [
+        "python3",
+        "north-star/prototype/tools/verify.py",
+        "--output",
+        "/workspace/Creative_AI_Project_HUB/work/north-star-appearance-continuity/regressions.json"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "python3",
+        "north-star/prototype/tools/verify_gate.py",
+        "--output",
+        "/workspace/Creative_AI_Project_HUB/work/north-star-appearance-continuity/gate.json"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "python3",
+        "north-star/prototype/tools/verify_routes.py",
+        "--output",
+        "/workspace/Creative_AI_Project_HUB/work/north-star-appearance-continuity/routes.json"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "python3",
+        "north-star/prototype/tools/verify_workshop.py",
+        "--output",
+        "/workspace/Creative_AI_Project_HUB/work/north-star-appearance-continuity/workshop.json"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "python3",
+        "north-star/prototype/tools/verify_look.py",
+        "--output",
+        "/workspace/Creative_AI_Project_HUB/work/north-star-appearance-continuity/look.json"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "python3",
+        "north-star/prototype/tools/verify_conversation.py",
+        "--output",
+        "/workspace/Creative_AI_Project_HUB/work/north-star-appearance-continuity/conversation.json"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "python3",
+        "north-star/prototype/tools/verify_appearance.py",
+        "--output",
+        "/workspace/Creative_AI_Project_HUB/work/north-star-appearance-continuity/results.json"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "python3",
+        "north-star/prototype/tools/verify_sound.py",
+        "--output",
+        "/workspace/Creative_AI_Project_HUB/work/north-star-appearance-continuity/sound.json"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "python3",
+        "north-star/prototype/tools/verify_look_display.py",
+        "--output",
+        "/workspace/Creative_AI_Project_HUB/work/north-star-appearance-continuity/display-reviewed"
+      ],
+      "exit_code": 0
+    }
+  ],
+  "consumer_paths": [
+    "north-star/prototype/arena.gd",
+    "north-star/prototype/combat.gd",
+    "north-star/prototype/rehearsal.gd",
+    "north-star/prototype/keepsakes.gd",
+    "north-star/prototype/errand.gd",
+    "north-star/prototype/controls.gd",
+    "north-star/prototype/sound.gd",
+    "north-star/prototype/actors.gd",
+    "north-star/prototype/workshop.gd",
+    "north-star/prototype/route.gd",
+    "north-star/prototype/return_gate.gd",
+    "north-star/prototype/character_look.gd",
+    "north-star/prototype/courier_talk.gd"
+  ],
+  "continuity": {
+    "laboratories": "No new lab. Existing derived character-keepsakes finding extended with recovery intent and actual numeric/capture boundary.",
+    "north_star": "One local_prototype consumer/thirteen paths/fourteen entries; NS-C03/04/07 remain adapted. No new capability or persistent RPG session claim.",
+    "origins": "No extraction/status change: P01-P05/P07/P08/P10/P11 preserved_pending_extraction, P06 pilot_instrumented, P09 seed_only.",
+    "portfolio": "Reproducible recoverable local cosmetic workflow, source/PCK and process/instrument evidence.",
+    "prompt": {
+      "changed": false,
+      "reason": "Current adaptive lifecycle served selection, proportional knowledge use, execution and publication; no new durable instruction needed.",
+      "sha256": "0e4ec5a2766b204e7f89c6bafac176fd2e69ea90925834fd4ce05fba536a2ecc"
+    }
+  },
+  "creative_assessment": {
+    "inspected": [
+      "editor-save-pending.png",
+      "editor-save-recovered.png",
+      "editor-reopened-profile.png"
+    ],
+    "judgment": "Pending/recovered status is legible beside separate apply/discard/retry controls. Draft and applied values remain distinct; no new art or class canon.",
+    "review": "Implementing agent inspection; no independent human participants."
+  },
+  "failures_resolved": [
+    "Initial native wrapper timed out after valid legacy profile rejection. Numeric version array membership distinguished Godot JSON floats from integer literals; numeric validation fixed and all controls rerun.",
+    "Two parsed-JSON fixture comparisons used integer dictionaries; compare parsed JSON against parsed expected JSON while retaining strict schema validation.",
+    "Display reader caught empty partial capture after mtime changed. Bounded JSON-completion polling, without key replay, fixed the instrument. First failed attempt retained only in scratch."
+  ],
+  "kind": "destination_execution",
+  "knowledge": {
+    "creation": {
+      "effect": "H about memory without compulsory acquisition informs free expression; current author character-identity direction remains authority.",
+      "ids": [
+        "CRE-030"
+      ],
+      "relevance": "medium"
+    },
+    "engineering": {
+      "effect": "Contain failure, preserve unknown bytes, define legacy/explicit migration and recovery ownership.",
+      "ids": [
+        "ENG-010"
+      ],
+      "relevance": "high"
+    },
+    "science": {
+      "effect": "Reuse under unchanged sources for matched process/baseline controls, not participant inference.",
+      "ids": [
+        "SCI-017"
+      ],
+      "relevance": "medium"
+    }
+  },
+  "limitations": [
+    "Editable device-local cosmetic JSON, not account identity, secure ownership, saved power, session restore or MMORPG persistence.",
+    "Older binaries reject schema 2 safely but cannot display it; no automatic downgrade.",
+    "No demonstrated power-loss durability or concurrent-writer safety; unsaved pending changes can be lost on close.",
+    "Fixed policies, synthetic/native OS input and agent visual inspection are not independent human recognition, taste, accessibility, preference or enjoyment.",
+    "Thirteen source/PCK rendered samples use one software display backend; no general rendering or physical input/audio latency guarantee.",
+    "No final engine, multiplayer/MMO scale, market evidence or measured token/cost savings."
+  ],
+  "mode": "DEVELOPMENT",
+  "opportunity": {
+    "alternatives": [
+      "Further courier/medicine aftermath changes an established delivery/arrival contract and repeats the latest subsystem.",
+      "More combat/task refinements repeat the established envelope.",
+      "Waystone 0.7 and Tokyo80s 0.5 remain useful portfolio consumers; no stronger inspected defect justified arbitrary expansion.",
+      "Independent participant recognition research is unavailable."
+    ],
+    "audience": "Users of the existing local playable character consumer.",
+    "selected": "Retain an existing free choice through recoverable cosmetic profile migration.",
+    "storage_alternatives": [
+      "A second look file duplicates failure/recovery ownership.",
+      "A general account/session save creates unsupported scope.",
+      "Selected bounded existing-profile extension; only explicit new appearance apply requires v2."
+    ],
+    "weakness": "An explicitly applied look disappears on actual process restart; common native probe confirms it."
+  },
+  "protected_sources": {
+    "brains/BIBLIOTECA_DE_CONHECIMENTO_APLICADO.md": "2726e3f8d6c2c95acc015fc527437bc8de974170d9a507f62e6e3c289a61eae1",
+    "brains/CATALOGO_DE_CONSULTA.json": "e8927568f2f63f9d5778778a7c8652c57cfedb248cea6d1b659023df80d4119c",
+    "brains/CREATIVE_BRAIN.md": "41efe409375b09ae29006bf475ae5a2221d532d67c1dcbbe0df98b4b1afa8bc1",
+    "brains/ENGINEERING_BRAIN.md": "975b8741f767bc1dcaf3c551e5516a79bcd78d5d8e6efd8a4965d9f3cf37971f",
+    "brains/SCIENTIFIC_BRAIN.md": "4a8dff7d1bc23f06421ffec4a07fcb66b745423f3728bc2cb11dc750a5e38958",
+    "brains/integrity.json": "1afe93d07e7bd784b6521264e823833ed7e692a052d2e667a6d47456ce99a0cb"
+  },
+  "python_regressions": {
+    "failed": 0,
+    "passed": 114,
+    "suites": {
+      "test_brain_query": 31,
+      "test_check_manifest": 11,
+      "test_reference_library": 42,
+      "test_validate_repo": 27,
+      "test_verify": 3
+    }
+  },
+  "recorded_at_utc": "2026-10-20T21:12:08.988927+00:00",
+  "result_artifacts": [
+    {
+      "local_path": "evidence/north-star-appearance-continuity/baseline-controls.json",
+      "sha256": "b1b88c48c0d58b33de08602a01a581509b7fd54269cce52ca0e8c61d92d628c2",
+      "size_bytes": 1208
+    },
+    {
+      "local_path": "evidence/north-star-appearance-continuity/baseline-probe.json",
+      "sha256": "52ec6c6f7b71a3a63561d4417ffd8fc4835964d4d61d78e3c53da5305620737e",
+      "size_bytes": 3422
+    },
+    {
+      "local_path": "evidence/north-star-appearance-continuity/conversation.json",
+      "sha256": "5da1af4422e08c13a04ae8f6f02ae847cd2db826a6c7c25dc586571fb0f299cb",
+      "size_bytes": 6113
+    },
+    {
+      "local_path": "evidence/north-star-appearance-continuity/display.json",
+      "sha256": "1a24b670cbe9405da340cef73fc950afb321bde221b5f5a895d1e4bf8363f675",
+      "size_bytes": 4198
+    },
+    {
+      "local_path": "evidence/north-star-appearance-continuity/editor-reopened-profile.png",
+      "sha256": "0ca0316c82169d303fe2aeadd3b79f7138daf53b9d4c606cf31933a879779b92",
+      "size_bytes": 96450
+    },
+    {
+      "local_path": "evidence/north-star-appearance-continuity/editor-save-pending.png",
+      "sha256": "4c355dc8ba1b80aa4ac7a059e604b58fdb6f2d6d2ffb0989ff0876ac076fb28f",
+      "size_bytes": 106377
+    },
+    {
+      "local_path": "evidence/north-star-appearance-continuity/editor-save-recovered.png",
+      "sha256": "d4fa63e907ef0ff3009fe2b81957661b3f73fc290de9d23a64ad867e10697015",
+      "size_bytes": 103208
+    },
+    {
+      "local_path": "evidence/north-star-appearance-continuity/frames.json",
+      "sha256": "1d211a153a48d71dcf55d72be8806534a777c8cc48db019e173399d37e85ec07",
+      "size_bytes": 16316
+    },
+    {
+      "local_path": "evidence/north-star-appearance-continuity/gate.json",
+      "sha256": "718e71a6de51ecad5776c7b5f9ee262ec169ee805f6a8d9dde6439c1fe0e6399",
+      "size_bytes": 2726
+    },
+    {
+      "local_path": "evidence/north-star-appearance-continuity/look.json",
+      "sha256": "4c17bfef2bdb3a9e7d4f1ddb0fd1c6331e1d576997146a7bb857bff00691d2ab",
+      "size_bytes": 1639
+    },
+    {
+      "local_path": "evidence/north-star-appearance-continuity/regressions.json",
+      "sha256": "f883d123356d0823b53ca718a40016243a13dd61d732eb72df9299d3ba6b1577",
+      "size_bytes": 107269
+    },
+    {
+      "local_path": "evidence/north-star-appearance-continuity/results.json",
+      "sha256": "6e33b4e1f6f8990a4984bea3ca5cf29cab3ea4a64cd3376405494c402fb575f5",
+      "size_bytes": 10156
+    },
+    {
+      "local_path": "evidence/north-star-appearance-continuity/routes.json",
+      "sha256": "7064d4e4ca23b017d86ca0c7debe9448fa174a264710b3d1392dcbc59419d19f",
+      "size_bytes": 1659
+    },
+    {
+      "local_path": "evidence/north-star-appearance-continuity/sound.json",
+      "sha256": "79b181abd66f9e6b9fbc517185f24df2a3d5695e9b2bfbe3acd06bd746de4b81",
+      "size_bytes": 34787
+    },
+    {
+      "local_path": "evidence/north-star-appearance-continuity/workshop.json",
+      "sha256": "2f889872087b4a556d968d34f0acd95c268b6edf28635e2664976ae8a6560947",
+      "size_bytes": 1701
+    }
+  ],
+  "runtime": "Godot 4.6.3.stable.official.7d41c59c4 / Linux x86_64 / Xorg dummy / Dummy audio; Python 3 stdlib",
+  "schema_version": 1,
+  "scope": "Explicit free appearance migration/recovery in the actual local character consumer, separate process reentry, both playable goals, source/PCK parity and real OS repair input.",
+  "source_artifacts": [
+    {
+      "local_path": "north-star/prototype/actors.gd",
+      "sha256": "f4f1cb91251d0bd37ed76ff8c965ab8bc4e15d804597e7caf0fc57c2d296cda3",
+      "size_bytes": 11184
+    },
+    {
+      "local_path": "north-star/prototype/arena.gd",
+      "sha256": "c500894543a06e832518ee27927c6727c0a8b643c8d8d46fcc7ff864f23d2b84",
+      "size_bytes": 48331
+    },
+    {
+      "local_path": "north-star/prototype/arena.tscn",
+      "sha256": "f794c485663f0ed318ddce6bb7a62bc9b2dbd3af02be4f166cca962c29382591",
+      "size_bytes": 154
+    },
+    {
+      "local_path": "north-star/prototype/character_look.gd",
+      "sha256": "d3b00276149918c051ca614b46df5dd5642a6a2fe35de56f9492ede1cfd4f6e9",
+      "size_bytes": 3291
+    },
+    {
+      "local_path": "north-star/prototype/combat.gd",
+      "sha256": "829c922b86cadbc5a34c4367d7cab73f685e674449769d71a37b5a7450461cbb",
+      "size_bytes": 14728
+    },
+    {
+      "local_path": "north-star/prototype/controls.gd",
+      "sha256": "151bb8867ba735c3b0b2a0048d312472dfe32359d2409825fa4817cbd0a9e9b8",
+      "size_bytes": 9867
+    },
+    {
+      "local_path": "north-star/prototype/courier_talk.gd",
+      "sha256": "986c26d0cba960fcf4e678035b6893dd5a106d49214c9ba9f67ca7f22caf5d56",
+      "size_bytes": 3899
+    },
+    {
+      "local_path": "north-star/prototype/dist/crossing-drill.pck",
+      "sha256": "687cbb543800c1098dad9029d10599df469d88374681ca62db15ccb5241f83f8",
+      "size_bytes": 291440
+    },
+    {
+      "local_path": "north-star/prototype/errand.gd",
+      "sha256": "2a2392fa86bd12544eba5f60ad74d35592c7d6fa207373ec11a1928a9e33e601",
+      "size_bytes": 3831
+    },
+    {
+      "local_path": "north-star/prototype/keepsakes.gd",
+      "sha256": "1e1779136f6b7d21568fe72f670285f4bce6a8264172fd102f1b49421fcf8236",
+      "size_bytes": 7306
+    },
+    {
+      "local_path": "north-star/prototype/project.godot",
+      "sha256": "8d4755b58f1179a9b5ec431579177371e784bca9703a17c88f4c7a6d4ee9385c",
+      "size_bytes": 414
+    },
+    {
+      "local_path": "north-star/prototype/rehearsal.gd",
+      "sha256": "507a27b7832cfc79522396132a0a5f3f32fec34dd443a8a35fc21102080252c9",
+      "size_bytes": 3187
+    },
+    {
+      "local_path": "north-star/prototype/return_gate.gd",
+      "sha256": "817e88308bbf878569a7c7a76ae83e38623f9398c7f6416c0ba3a1cd522fa3bc",
+      "size_bytes": 4109
+    },
+    {
+      "local_path": "north-star/prototype/route.gd",
+      "sha256": "2936029e1a52933fff0141b546f85fbc53a57b7e6c5301eaef5cabac06a05901",
+      "size_bytes": 2304
+    },
+    {
+      "local_path": "north-star/prototype/sound.gd",
+      "sha256": "4404169ebb2d1711f20e6023292712bb2051f4075c4039d9e2db725b4b8fa80a",
+      "size_bytes": 4116
+    },
+    {
+      "local_path": "north-star/prototype/tests/actor_capture.gd",
+      "sha256": "762c21bc79f9b56664525273470e93b005b6a995f0594f4e8e6f9ad447933e96",
+      "size_bytes": 3933
+    },
+    {
+      "local_path": "north-star/prototype/tests/actor_checks.gd",
+      "sha256": "52f503ff8f98f5dfab8e44603887c38cb6c3a65b01a77d378e84437d4d9987e9",
+      "size_bytes": 6228
+    },
+    {
+      "local_path": "north-star/prototype/tests/appearance_profile_checks.gd",
+      "sha256": "39d192e8213b9060aea1594c29a80ff8e7fd7ae07a205b56abacf1d8d84283c0",
+      "size_bytes": 9866
+    },
+    {
+      "local_path": "north-star/prototype/tests/appearance_restart.gd",
+      "sha256": "301c95ffcf51c88bead8359b0d86a24218378b34d6806eebfc79e11e6078c2a0",
+      "size_bytes": 2623
+    },
+    {
+      "local_path": "north-star/prototype/tests/controls_checks.gd",
+      "sha256": "aec1a8a26e262a3830714f9fa748923d8b27b9e51d2e93fa6b3b74c2ee3acf0c",
+      "size_bytes": 9525
+    },
+    {
+      "local_path": "north-star/prototype/tests/controls_restart.gd",
+      "sha256": "066f641273c045a97ea1ee6bd2ddd9469e452d6edab80bc36a426927da431b61",
+      "size_bytes": 1134
+    },
+    {
+      "local_path": "north-star/prototype/tests/conversation_capture.gd",
+      "sha256": "88ce5e2e5739991e7ec245374c1c26377ae5728c5b484fcff4db55d915b401dc",
+      "size_bytes": 4426
+    },
+    {
+      "local_path": "north-star/prototype/tests/conversation_checks.gd",
+      "sha256": "d3a6fdfcba70ba3fb61d1516e249b455ae20c90c6a2bd60b3ee0be23c6e2b9e8",
+      "size_bytes": 12998
+    },
+    {
+      "local_path": "north-star/prototype/tests/errand_checks.gd",
+      "sha256": "2f04534e200e82f08e01127a3b31c5dafacb5151c9635038bf6c14d33ac89094",
+      "size_bytes": 6353
+    },
+    {
+      "local_path": "north-star/prototype/tests/errand_policy.gd",
+      "sha256": "74f4d20501771d8697e79629aaa6e86cb5056211eae0ab860aa593cb5190cb9e",
+      "size_bytes": 655
+    },
+    {
+      "local_path": "north-star/prototype/tests/gate_checks.gd",
+      "sha256": "3fba7468062a64e46e853fdc557a9425103485580aae7b1704eff11214479453",
+      "size_bytes": 8948
+    },
+    {
+      "local_path": "north-star/prototype/tests/gate_input_fixture.gd",
+      "sha256": "a87f8c7cc4bcca1dc78049b7c051a0d04d8208bbe3dd8d56382f2fafdbd80337",
+      "size_bytes": 619
+    },
+    {
+      "local_path": "north-star/prototype/tests/gate_policy.gd",
+      "sha256": "a40d249e877446f7da09890e4c84d1c3243ef4ea110de65b033d7bd8710680ed",
+      "size_bytes": 1187
+    },
+    {
+      "local_path": "north-star/prototype/tests/gate_transition.gd",
+      "sha256": "2048fdf378d3b4c98788b01b276682301b13e59d9974d80fbe3ea0ed90400899",
+      "size_bytes": 1117
+    },
+    {
+      "local_path": "north-star/prototype/tests/guard_capture.gd",
+      "sha256": "e6c60d8811c8e704dbfa20826202f645f576b3c9f78f1fb6fc90642a0604b519",
+      "size_bytes": 2903
+    },
+    {
+      "local_path": "north-star/prototype/tests/guard_checks.gd",
+      "sha256": "cf2a8103bb4aa7fc8b61714ad36b43fbdd69d1a133f10b4530e863806ef3ed9b",
+      "size_bytes": 8738
+    },
+    {
+      "local_path": "north-star/prototype/tests/keepsake_checks.gd",
+      "sha256": "a8614cb0592ff8c403185b82f702c289abd42b78c783f4bc8f06d2ecaf211fcf",
+      "size_bytes": 9709
+    },
+    {
+      "local_path": "north-star/prototype/tests/keepsake_restart.gd",
+      "sha256": "8e9f107c310836324c51b1cbe1b2db618feadbd98b0cebbef12f75f39ab112c2",
+      "size_bytes": 1097
+    },
+    {
+      "local_path": "north-star/prototype/tests/look_capture.gd",
+      "sha256": "5202b045a289042a92da750ce527c6ff7550d348d13ecb950e3ece08cc1697fd",
+      "size_bytes": 4747
+    },
+    {
+      "local_path": "north-star/prototype/tests/look_checks.gd",
+      "sha256": "d1f7f9b6a712d4068baf536ac20cbcd60505be57b00eaef159fbe53b4c96d941",
+      "size_bytes": 7123
+    },
+    {
+      "local_path": "north-star/prototype/tests/policy.gd",
+      "sha256": "646f0758a211e84ffbfd4632460c7d1fc549cbb3b552801ee2508774a5a63e29",
+      "size_bytes": 979
+    },
+    {
+      "local_path": "north-star/prototype/tests/rehearsal_checks.gd",
+      "sha256": "0286d8997fdf1bd7ebad0b72a7283651678cfa30f85b2bd55e98e995c3f9b1f5",
+      "size_bytes": 6003
+    },
+    {
+      "local_path": "north-star/prototype/tests/render_gate.gd",
+      "sha256": "7d5d8e73463fff65f2c1638757b7cf2a6a2bf995a41e5c45772edcf1fe1fedeb",
+      "size_bytes": 1945
+    },
+    {
+      "local_path": "north-star/prototype/tests/render_journey.gd",
+      "sha256": "b0de7bc7cdd8795d55c0fdb8248c277c38ead3299714e7290c70df1a2c114e49",
+      "size_bytes": 992
+    },
+    {
+      "local_path": "north-star/prototype/tests/render_keepsakes.gd",
+      "sha256": "eafb1a071de871af521712b32f095a2d6c46f3424e85590c9e43c52310850359",
+      "size_bytes": 1502
+    },
+    {
+      "local_path": "north-star/prototype/tests/render_medicine.gd",
+      "sha256": "0716b982847fbd47dc596954c2f7a98f72e30e0fd6356aacc371e139be8455f1",
+      "size_bytes": 2215
+    },
+    {
+      "local_path": "north-star/prototype/tests/render_rehearsal.gd",
+      "sha256": "fc268d9764cfdd52874c8ea9f2f96aaeaa6f98ebede22dcbf412fe4692c6de42",
+      "size_bytes": 2254
+    },
+    {
+      "local_path": "north-star/prototype/tests/render_routes.gd",
+      "sha256": "00d61a645e6ef22d880acd59cf8b87bc8954bd653e1fe82faed12b7e861acc33",
+      "size_bytes": 1570
+    },
+    {
+      "local_path": "north-star/prototype/tests/resolution_checks.gd",
+      "sha256": "15f40a5ff8b2d9350b78c6c3e064ffdab89fead0f761456fec75a1326edce8a0",
+      "size_bytes": 7842
+    },
+    {
+      "local_path": "north-star/prototype/tests/resolution_routes.gd",
+      "sha256": "fa5cfbd5f42c6ef59fc18fb85d61c2bcca2cd290395760a695bb6cc1575029e5",
+      "size_bytes": 2411
+    },
+    {
+      "local_path": "north-star/prototype/tests/route_checks.gd",
+      "sha256": "549272698da6d2e6e07ccf2e13a98fa5ee9b9c5df11c0ef8d1e65c49aa196d83",
+      "size_bytes": 7366
+    },
+    {
+      "local_path": "north-star/prototype/tests/run_checks.gd",
+      "sha256": "0e23ffc5cac31cf6f70db080fb437d77c632842983554b0dbc6345eaa807a647",
+      "size_bytes": 8521
+    },
+    {
+      "local_path": "north-star/prototype/tests/sound_capture.gd",
+      "sha256": "1a0df88986619fbee9eb48c078726217409acb853e8821f2fcc3c660ceb07ad1",
+      "size_bytes": 5091
+    },
+    {
+      "local_path": "north-star/prototype/tests/sound_checks.gd",
+      "sha256": "c5c3496c2e5ef796399d3884b34b7547c55c4af9438a19220e484977dd2d0569",
+      "size_bytes": 5627
+    },
+    {
+      "local_path": "north-star/prototype/tests/toggle_checks.gd",
+      "sha256": "39d373fdfbb80fa24d90578eed7e7c3b525edd865cc8fd6d8f884e35d1ec6bc7",
+      "size_bytes": 10905
+    },
+    {
+      "local_path": "north-star/prototype/tests/toggle_fixture.gd",
+      "sha256": "c18cb92f89c7a21c70c6708b868153a60f712c65d50e077aaca4e4b1d1ad92a3",
+      "size_bytes": 375
+    },
+    {
+      "local_path": "north-star/prototype/tests/workshop_checks.gd",
+      "sha256": "947d19ce8993d35e2e19e954da906b94211eb3165c4c61544f23f4ee80b71383",
+      "size_bytes": 6130
+    },
+    {
+      "local_path": "north-star/prototype/tools/pack.gd",
+      "sha256": "98a90eeccc55670157a9474b117bd730a5329221ba1377f76f93390fdc361e14",
+      "size_bytes": 1474
+    },
+    {
+      "local_path": "north-star/prototype/tools/verify.py",
+      "sha256": "8ef11bf0384230d7d16e53fb7c0bb883182242b931bc6200ccad140b4f37aad7",
+      "size_bytes": 7514
+    },
+    {
+      "local_path": "north-star/prototype/tools/verify_appearance.py",
+      "sha256": "8c01b257ff87f149899f5cd51dce8a13b8f00cb3342f12d4b738de8caa642923",
+      "size_bytes": 5961
+    },
+    {
+      "local_path": "north-star/prototype/tools/verify_conversation.py",
+      "sha256": "3b7042827502016bd1b6cf8343fad24b05db12d5b11d2702beb6253d6831023a",
+      "size_bytes": 5328
+    },
+    {
+      "local_path": "north-star/prototype/tools/verify_gate.py",
+      "sha256": "3a8bda92c26d4f4aab5ce7c69822a64452439a36bf5eb8090c748e270fff425f",
+      "size_bytes": 5656
+    },
+    {
+      "local_path": "north-star/prototype/tools/verify_look.py",
+      "sha256": "bfdbdf1fe56f5442f06b0e100593f89b8d3d5520dbf1e18f822e9812f4216a67",
+      "size_bytes": 3402
+    },
+    {
+      "local_path": "north-star/prototype/tools/verify_look_display.py",
+      "sha256": "5dc1b36cbad6d009ace00ae27578741f862aa754ac413e8719bafa8bc461b7e6",
+      "size_bytes": 13669
+    },
+    {
+      "local_path": "north-star/prototype/tools/verify_routes.py",
+      "sha256": "3f065dc5c35b2a450559e1fb629aa2bf74b3c7317516c1c18f94bd98bd86c5e4",
+      "size_bytes": 3597
+    },
+    {
+      "local_path": "north-star/prototype/tools/verify_sound.py",
+      "sha256": "dd9f417a9e49803068da737a230031d44ae218b170904c06ebe024da4d92049e",
+      "size_bytes": 6367
+    },
+    {
+      "local_path": "north-star/prototype/tools/verify_workshop.py",
+      "sha256": "9480bf10e81f5a220a094b841a009647f91f70b51131ce7258b9b9d211e247aa",
+      "size_bytes": 3474
+    },
+    {
+      "local_path": "north-star/prototype/workshop.gd",
+      "sha256": "5fcba9578edf0c44db9336cb36d6b7783ff1da175e200f9c422392e4eebcc56b",
+      "size_bytes": 2239
+    }
+  ],
+  "verification": {
+    "brains": "PASS: all five supplied sources and integrity pins byte-identical; 44 inherited fragment warnings retained",
+    "golden_reproduction": "verify_appearance.py --compare repeated: 52 controls and twenty actual restart processes, exact results",
+    "references": "PASS: 5 records, 607 preserved sources, 18 derived texts, 140 exclusions, 14 capabilities",
+    "repository": "PASS: 11 projects, 15 transfers, 11 assets, 2 legacy sources; 650 local file links",
+    "workflow": "actionlint 1.7.7 passed"
+  }
+}

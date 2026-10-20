@@ -197,8 +197,9 @@ and abandonment award nothing. Each mark is earned once, never automatically wor
 the Danger in that order. The worn mark is drawn on the character and named in the
 HUD; it changes no combat rule, resource, collision or result.
 
-The editable JSON profile stores only owned marks and the chosen appearance on this
-device. **F5**, from title/result/pause, retries a pending save. An unavailable profile
+The editable JSON profile stores owned/worn marks and, after explicit editor apply,
+free skin/hair/cloth indices on this device. **F5**, from title/result/pause, retries
+a pending save. An unavailable profile
 is preserved and blocks replacement while the current session remains playable.
 After external restoration or removal, retry combines known marks with the accepted
 profile and respects an explicitly changed appearance. This is bounded local cosmetic
@@ -258,7 +259,12 @@ expression workflow, not a final creator, people list, class art or canon commit
 Choose skin, a head/hair silhouette and cloth dye independently from actual approach,
 fitting and earned mark. Apply/discard is explicit; preview samples use real action
 state and the same actor drawing. Changing preview approach/gear grants nothing.
-Applied appearance stays across existing play for the session; closing resets it.
+Applied appearance now survives process restarts through the local cosmetic profile.
+Legacy mark-only bytes remain unchanged on load; explicit apply creates schema 2.
+F5 retries the applied look, never an unconfirmed editor draft. Restored mark selection
+and pending appearance retain separate intent. This revises the earlier session-only
+decision; [migration execution](../evidence/north-star-appearance-continuity/RUN.json)
+does not establish account identity, saved power, canon or player recognition.
 
 The original role accents, weapons, gear shapes and action/contact signals remain.
 No appearance choice changes size, collision, movement, resource costs or rewards.

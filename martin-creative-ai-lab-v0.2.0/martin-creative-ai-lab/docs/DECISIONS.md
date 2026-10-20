@@ -2260,3 +2260,29 @@ changes. Stage/capability/origin states remain unchanged; no external player val
   extraction. Execution and agent review do not establish player comprehension or fun.
 - **Lifecycle:** current adaptive prompt already served this selection; retain it
   unchanged and reassess opportunities rather than fixing the next task to dialogue.
+
+
+## ADR-087 — Keep applied expression across local process reentry
+
+- **Baseline/mode:** `05454410b4ac7ba8053eb2b56ba15fe136f4ae2b`; DEVELOPMENT.
+- **Selection:** actual apply/read in separate baseline processes loses the look.
+  Prefer continuity of an existing free choice over another conversation/combat
+  refinement, automatic Waystone/Tokyo80s expansion or unavailable participant work.
+- **Decision:** extend the existing recoverable cosmetic profile, not a second file
+  or account system. Legacy v1 load/mark-only writes remain v1; explicit appearance
+  apply writes v2 and preserves marks. Old binaries safely reject v2; no downgrade.
+  Draft/cancel never save. F5 repairs the applied look without confirming the draft;
+  pending look and worn-mark intent are independent. Never restore gameplay power.
+- **Knowledge:** ENG-010 (high engineering), CRE-030 H (medium creation, optional
+  memory rather than forced acquisition), SCI-017 reused (medium science, matched
+  process controls). Current author identity direction remains authority, not canon
+  inferred from native checks or palette choices.
+- **Refinements:** Godot JSON whole numbers are floats; normalize only after strict
+  type/integrality/bounds validation. Array membership initially rejected valid v1.
+  Capture mtime preceded complete JSON; bounded reader polling fixed that instrument
+  race without replaying keys, extending game timing or weakening behavioral gates.
+- **Evidence/limits:** `evidence/north-star-appearance-continuity/RUN.json` binds 52
+  new/730 retained controls, 20 actual restart processes and source/PCK rendering/OS
+  repair. Editable local cosmetics, no account/concurrent-writer/power-loss guarantee
+  or human recognition validation. One consumer, unchanged capability/origin states,
+  no new lab. Retain the adaptive prompt unchanged and reassess the next opportunity.

@@ -24,8 +24,9 @@ origin instrument, separately preserved.
 The player chooses frontal interception or redirection/mobility and protects the same
 courier to the far gate. [Living design](DESIGN.md) distinguishes author decisions,
 experimental mechanics, revisions and rejected alternatives. Current primary mode is
-CREATIVE PRODUCTION: an optional factual conversation commits one aid choice into the
-existing second goal. Free session appearance remains available. Optional rehearsal
+DEVELOPMENT: explicitly applied free appearance now survives process restart through
+the recoverable local cosmetic profile. The optional factual conversation still commits
+one aid choice into the second goal. Optional rehearsal
 uses the same combat rules, preserves causal review and starts a clean normal crossing.
 The three prepared exercises do not demonstrate human learning or sustained resource
 management. [Prior threat-resolution execution](../evidence/north-star-sentinel-resolution/RUN.json) records protective completion, optional
@@ -118,8 +119,8 @@ complete two-stage policies and source/PCK parity, not human identity/fun or MMO
 
 The [character-look workflow](prototype/README.md#choose-your-character-look) now offers
 free independent skin, hair and cloth dye, previewed with the actual drawing and actions.
-Apply/discard is deliberate; the chosen session look follows both goals without changing
-gear or combat. Closing resets appearance. [Execution](../evidence/north-star-character-look/RUN.json)
+Apply/discard is deliberate; the chosen look follows both goals without changing
+gear or combat and explicit apply remembers it on this device. [Execution](../evidence/north-star-appearance-continuity/RUN.json)
 supports functioning expression, not perceived identity or human aesthetic approval.
 
 

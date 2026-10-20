@@ -90,9 +90,10 @@
       "CRE-066"
     ],
     "status": "Experimental palette/head silhouettes; no final people, class art, body/voice system or canon approval.",
-    "scope": "New code-drawn skin/hair/cloth choices and a draft/preview/apply workflow; existing actor geometry and actual action observer reused. No third-party media, P07 atlas or origin code imported.",
+    "scope": "New code-drawn skin/hair/cloth choices and a draft/preview/apply workflow; existing actor geometry and actual action observer reused. No third-party media, P07 atlas or origin code imported. Explicit apply now saves bounded palette/head indices through the existing recoverable device-local cosmetic profile; no account or saved gameplay state.",
     "evidence": "evidence/north-star-character-look/RUN.json",
-    "limits": "Agent inspection and native execution; no independent recognition, aesthetic preference or exclusive-rights claim."
+    "limits": "Agent inspection and native execution; no independent recognition, aesthetic preference or exclusive-rights claim.",
+    "continuity_evidence": "evidence/north-star-appearance-continuity/RUN.json"
   },
   "courier_conversation": {
     "producer": "north-star/prototype/courier_talk.gd",

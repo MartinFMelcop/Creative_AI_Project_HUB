@@ -12,6 +12,11 @@ func check(value: bool,label: String) -> void:
 	else:failed+=1;push_error(label)
 func key(a,code: int) -> void:
 	var event=InputEventKey.new();event.keycode=code;event.physical_keycode=code;event.pressed=true;a._unhandled_key_input(event)
+func fresh(name: String):
+	DirAccess.make_dir_recursive_absolute("user://look-checks")
+	var a=Arena.new();a.profile_path="user://look-checks/"+name+".json"
+	DirAccess.remove_absolute(a.profile_path)
+	root.add_child(a);a.set_physics_process(false);return a
 func _initialize() -> void:call_deferred("run")
 func run() -> void:
 	var look=Look.new();check(look.applied==Look.DEFAULTS and not look.active,"New process starts with original look")
@@ -40,7 +45,7 @@ func run() -> void:
 	check(look.preview.step_left>0 and look.preview.counters.dodges==1,"Step preview executes paid step")
 	look.pose_index=4;look.reset_preview();look.step(.05)
 	check(look.preview.strike_cooldown>0 and look.preview.counters.counters==0,"Blade sample is actual armor strike, not fake counter")
-	var a=Arena.new();root.add_child(a);a.set_physics_process(false)
+	var a=fresh("editor")
 	var before=a.game.snapshot();var reward=a.keepsakes.snapshot();var fitting=a.workshop.snapshot()
 	key(a,KEY_F3);check(a.character_look.active,"Actual title opens editor")
 	key(a,KEY_RIGHT);key(a,KEY_DOWN);key(a,KEY_RIGHT);key(a,KEY_DOWN);key(a,KEY_RIGHT)
@@ -67,11 +72,11 @@ func run() -> void:
 	check(a.character_look.applied.skin==1,"Defaults stay a reversible draft until apply")
 	a.begin_crossing();key(a,KEY_F3);check(not a.character_look.active,"Live consumer cannot open title-only editor")
 	a.abandon();check(a.character_look.applied.skin==1,"Approach replacement retains session appearance")
-	check(Look.new().applied==Look.DEFAULTS,"Fresh instance retains session-only boundary")
+	check(Look.new().applied==Look.DEFAULTS,"Unloaded appearance model does not read a profile")
 	a.free()
 	for role in ["Guardian","Duelist"]:
 		for custom in [false,true]:
-			a=Arena.new();root.add_child(a);a.set_physics_process(false);a.selected=role
+			a=fresh(role+str(custom));a.selected=role
 			if custom:
 				a.character_look.enter(role,"Steady","standard");a.character_look.draft={"skin":3,"hair":2,"dye":3};a.character_look.confirm()
 			a.begin_crossing()

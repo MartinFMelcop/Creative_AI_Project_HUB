@@ -156,7 +156,7 @@ craft-to-build consumer, not a profession career, economy, inventory, persistent
 final item/class approval or independently validated player preference.
 
 ```bash
-python3 north-star/prototype/tools/verify_workshop.py --output /tmp/workshop.json --compare evidence/north-star-courier-conversation/workshop.json
+python3 north-star/prototype/tools/verify_workshop.py --output /tmp/workshop.json --compare evidence/north-star-appearance-continuity/workshop.json
 # Optional actual Linux XTest window navigation; requires Xorg/dummy and local sockets:
 python3 north-star/prototype/tools/verify_workshop_input.py --output /tmp/workshop-input
 ```
@@ -219,7 +219,7 @@ A new crossing or abandonment clears the agreement. No account, reputation meter
 persistent quest or source fictional universe is added.
 
 ```bash
-python3 north-star/prototype/tools/verify_conversation.py --output /tmp/conversation.json --compare evidence/north-star-courier-conversation/results.json
+python3 north-star/prototype/tools/verify_conversation.py --output /tmp/conversation.json --compare evidence/north-star-appearance-continuity/conversation.json
 # Optional Linux XTest keys after a fixture completes the actual escort:
 python3 north-star/prototype/tools/verify_conversation_display.py --output /tmp/conversation-display
 ```
@@ -245,24 +245,39 @@ approach, equipment or rewards. F1 controls remain available. Focus loss pauses 
 sample; an editor key resumes. The blade sample hits closed armor, not a fake counter.
 
 Applied expression reaches the workshop, rehearsal, replay and both adventure goals.
-Role accents, weapons, functional gear and action warnings remain distinct. **Session
-only:** closing the game resets this look; existing keepsake/control saves are separate.
+Role accents, weapons, functional gear and action warnings remain distinct. **Local
+continuity:** Enter applies and saves free choices on this device, without earning a
+mark. Escape discards and Delete changes only the draft. F5 retries the already applied
+look while retaining an open draft. Loading/cancelling never rewrites profile bytes;
+control remaps remain a separate file.
 The editor is available on selection, without live appearance changes or combat timing.
 
 ![Actual character-look draft and shared actor preview](../../evidence/north-star-character-look/editor-rest.png)
 
 ```bash
-python3 north-star/prototype/tools/verify_look.py --output /tmp/look.json --compare evidence/north-star-courier-conversation/look.json
+python3 north-star/prototype/tools/verify_look.py --output /tmp/look.json --compare evidence/north-star-appearance-continuity/look.json
 python3 north-star/prototype/tools/verify_look_display.py --baseline /path/to/prior.pck --output /tmp/look-display
 ```
 
 The optional Linux display runner owns bounded Xorg/engine processes and needs the
 same display dependencies as other native input tools. It compares source/PCK scenes,
 can require prior default gameplay pixels, and uses real keys for draft/cancel/apply,
-play and fresh-process reset. [Evidence](../../evidence/north-star-character-look/RUN.json)
+play, unknown-file repair and fresh-process retention. [Evidence](../../evidence/north-star-appearance-continuity/RUN.json)
 distinguishes these controls from agent art judgment and missing independent player
 recognition, preference or accessibility. The creator is limited experimental expression,
 not final class/people canon, a complete character system or proof of the identity fantasy.
+
+### Verify local appearance continuity
+
+```bash
+python3 north-star/prototype/tools/verify_appearance.py --output /tmp/appearance.json --compare evidence/north-star-appearance-continuity/results.json
+```
+
+52 native migration/failure controls run in source and PCK. Twenty actual engine
+processes apply/read/cancel/earn/play both goals/reset defaults/read, with exact
+source/PCK outcomes. Invalid versions, numeric types, fields and write/replacement
+failure preserve primary bytes; restored mark selection and pending look are tested
+independently. This does not prove power-loss durability or concurrent-writer safety.
 
 ## An optional second playable goal
 
@@ -527,15 +542,20 @@ identity proposals, not final item names or canon commitments.
 The JSON profile defaults to **`user://crossing-keepsakes.json`**, resolved by Godot
 inside this application's per-user data directory. **`CROSSING_PROFILE`** overrides
 the file path for an isolated device-local profile; its parent directory must exist
-and permit writing. The profile has schema version 1, owned mark IDs and the worn ID;
-it contains no account, player identity or remote service credentials.
+and permit writing. Legacy schema 1 holds owned/worn mark IDs. It loads without rewriting and mark-only
+writes retain version 1. Explicit appearance apply creates schema 2, adding exactly
+three bounded indices (skin/hair/dye); subsequent mark saves preserve them. No account,
+character name, combat power, live session or remote credentials are stored. Older
+binaries reject v2 and preserve its bytes; downgrade conversion is not provided.
 
 If saving fails, the mark and appearance remain usable for the current session.
 **F5** on title/result/normal pause retries; closing before a successful save can lose
 pending changes. A malformed, unsupported, oversized or unreadable existing profile
 is preserved and blocks writes. Restore a valid file, or deliberately move/remove the
 unavailable one, then press F5. Retry combines all currently known marks with that
-accepted profile, retaining its chosen appearance unless C explicitly changed yours.
+accepted profile, retaining its worn mark unless C explicitly changed yours. Pending
+editor apply retains your look independently; otherwise restored v2 supplies its look.
+A restored legacy/missing file has no look to supersede a previously known one.
 Writes use a same-directory temporary, flush/readback and final replacement. This
 does not guarantee power-loss durability or concurrent-writer safety. The editable
 local save is cosmetic continuity, not secure achievement proof, account progression
@@ -544,7 +564,7 @@ or MMORPG persistence.
 ## Execute checks and reproduce delivery
 
 ```bash
-python3 north-star/prototype/tools/verify.py --godot godot --output /tmp/crossing-check.json --compare evidence/north-star-courier-conversation/regressions.json
+python3 north-star/prototype/tools/verify.py --godot godot --output /tmp/crossing-check.json --compare evidence/north-star-appearance-continuity/regressions.json
 ```
 
 The stdlib runner bounds owned engine processes, uses writable temporary XDG paths,
@@ -557,7 +577,7 @@ both approaches. Eight further engine invocations (earn,
 read, put away, read for each source/PCK) demonstrate actual process reentry with
 the same local profile. Eight additional apply/read/restore/read processes verify the separate keyboard profile
 in both source/PCK, for sixteen continuity processes total. New crossings remain fresh;
-only earned/equipped marks and explicitly applied controls return.
+only cosmetic marks/look and explicitly applied controls return.
 It rejects script errors, missing reports, failed checks or changed packaged behavior.
 It records hashes separately from gameplay observations. Native checks do not prove
 perceived class identity, reaction fairness or accessibility.
@@ -568,7 +588,7 @@ The source pack is reproducible with the matching engine:
 godot --headless --path north-star/prototype --script tools/pack.gd -- /absolute/path/crossing-drill.pck
 ```
 
-[Current execution evidence](../../evidence/north-star-courier-conversation/RUN.json) identifies
+[Current execution evidence](../../evidence/north-star-appearance-continuity/RUN.json) identifies
 baseline, source/result hashes, commands, refinements and limitations. The preserved
 [first-consumer record](../../evidence/north-star-crossing/RUN.json) documents the
 original crossing delivery; the [rehearsal record](../../evidence/north-star-rehearsal/RUN.json)

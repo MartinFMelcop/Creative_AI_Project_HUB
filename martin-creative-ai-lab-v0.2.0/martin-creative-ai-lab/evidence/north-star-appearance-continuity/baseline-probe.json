@@ -1,0 +1,160 @@
+{
+  "baseline_apply": {
+    "look": {
+      "dye": 1,
+      "hair": 1,
+      "skin": 1
+    },
+    "mode": "title",
+    "operation": "apply",
+    "profile": {
+      "blocked": false,
+      "dirty": false,
+      "earned": [],
+      "equipped": "",
+      "status": "Session only. Earn a crossing mark to save."
+    },
+    "profile_exists": false,
+    "tick": 0
+  },
+  "baseline_commit": "05454410b4ac7ba8053eb2b56ba15fe136f4ae2b",
+  "baseline_read": {
+    "look": {
+      "dye": 0,
+      "hair": 0,
+      "skin": 0
+    },
+    "mode": "title",
+    "operation": "read",
+    "profile": {
+      "blocked": false,
+      "dirty": false,
+      "earned": [],
+      "equipped": "",
+      "status": "Session only. Earn a crossing mark to save."
+    },
+    "profile_exists": false,
+    "tick": 0
+  },
+  "current": {
+    "pack": [
+      {
+        "look": {
+          "dye": 1,
+          "hair": 1,
+          "skin": 1
+        },
+        "mode": "title",
+        "operation": "apply",
+        "profile": {
+          "blocked": false,
+          "dirty": false,
+          "earned": [],
+          "equipped": "",
+          "look": {
+            "dye": 1,
+            "hair": 1,
+            "skin": 1
+          },
+          "status": "Saved locally."
+        },
+        "profile_exists": true,
+        "tick": 0
+      },
+      {
+        "look": {
+          "dye": 1,
+          "hair": 1,
+          "skin": 1
+        },
+        "mode": "title",
+        "operation": "read",
+        "profile": {
+          "blocked": false,
+          "dirty": false,
+          "earned": [],
+          "equipped": "",
+          "look": {
+            "dye": 1,
+            "hair": 1,
+            "skin": 1
+          },
+          "status": "Saved locally."
+        },
+        "profile_exists": true,
+        "tick": 0
+      }
+    ],
+    "source": [
+      {
+        "look": {
+          "dye": 1,
+          "hair": 1,
+          "skin": 1
+        },
+        "mode": "title",
+        "operation": "apply",
+        "profile": {
+          "blocked": false,
+          "dirty": false,
+          "earned": [],
+          "equipped": "",
+          "look": {
+            "dye": 1,
+            "hair": 1,
+            "skin": 1
+          },
+          "status": "Saved locally."
+        },
+        "profile_exists": true,
+        "tick": 0
+      },
+      {
+        "look": {
+          "dye": 1,
+          "hair": 1,
+          "skin": 1
+        },
+        "mode": "title",
+        "operation": "read",
+        "profile": {
+          "blocked": false,
+          "dirty": false,
+          "earned": [],
+          "equipped": "",
+          "look": {
+            "dye": 1,
+            "hair": 1,
+            "skin": 1
+          },
+          "status": "Saved locally."
+        },
+        "profile_exists": true,
+        "tick": 0
+      }
+    ]
+  },
+  "prior_reader": {
+    "observed": {
+      "look": {
+        "dye": 0,
+        "hair": 0,
+        "skin": 0
+      },
+      "mode": "title",
+      "operation": "read",
+      "profile": {
+        "blocked": true,
+        "dirty": false,
+        "earned": [],
+        "equipped": "",
+        "status": "Profile unavailable. Restore or remove it, then F5; session marks remain."
+      },
+      "profile_exists": true,
+      "tick": 0
+    },
+    "preserves_v2_bytes": true,
+    "rejects_v2": true
+  },
+  "scope": "Same external native key probe, separate engine processes; no gameplay session restored, no participant recognition claim."
+}

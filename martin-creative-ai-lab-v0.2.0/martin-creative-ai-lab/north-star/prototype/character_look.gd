@@ -1,5 +1,5 @@
 extends RefCounted
-## Session expression is separate from combat, fitted gear and earned marks.
+## Expression is separate from combat and gear; the scene owns local persistence.
 const Combat=preload("res://combat.gd")
 const DEFAULTS:={"skin":0,"hair":0,"dye":0}
 const FIELDS:=["skin","hair","dye"]
@@ -19,6 +19,17 @@ var outfit:=0
 var pose_index:=0
 var sample_time:=0.0
 var preview=Combat.new()
+
+static func valid_choice(value: Variant) -> bool:
+	if not value is Dictionary or value.size()!=FIELDS.size():return false
+	for field in FIELDS:
+		if not value.has(field) or typeof(value[field]) not in [TYPE_INT,TYPE_FLOAT]:return false
+		var index:float=value[field]
+		if not is_finite(index) or index!=floor(index) or index<0 or index>=NAMES[field].size():return false
+	return true
+
+static func normalized_choice(value: Dictionary) -> Dictionary:
+	return {"skin":int(value.skin),"hair":int(value.hair),"dye":int(value.dye)}
 
 func enter(kind: String, technique: String, fitting: String) -> void:
 	active=true;paused=false;row=0;draft=applied.duplicate()

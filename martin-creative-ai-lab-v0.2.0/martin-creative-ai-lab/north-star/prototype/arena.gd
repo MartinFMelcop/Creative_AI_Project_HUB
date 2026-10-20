@@ -56,6 +56,7 @@ func _ready() -> void:
 	if profile_path.is_empty(): profile_path=OS.get_environment("CROSSING_PROFILE")
 	if profile_path.is_empty(): profile_path="user://crossing-keepsakes.json"
 	keepsakes.load_profile(profile_path)
+	sync_look_profile()
 	if controls_path.is_empty():controls_path=OS.get_environment("CROSSING_CONTROLS")
 	if controls_path.is_empty():controls_path="user://crossing-controls.json"
 	bindings.load_profile(controls_path)
@@ -136,7 +137,7 @@ func _unhandled_key_input(event: InputEvent) -> void:
 		workshop.enter();taps.clear();bindings.quarantine();queue_redraw();return
 	if not rehearsal.active and game.mode!="play":
 		if key==KEY_C: keepsakes.cycle_equipped()
-		elif key==KEY_F5: keepsakes.retry_save()
+		elif key==KEY_F5: retry_cosmetics()
 	if rehearsal.active:
 		if key==KEY_ESCAPE: rehearsal.toggle_pause(); taps.clear()
 		elif key==KEY_R and (rehearsal.paused or rehearsal.state!="live"): abandon()
@@ -406,7 +407,7 @@ func draw_header() -> void:
 	text(Vector2(40,164),"WORN  /  "+KEEPSAKE_NAMES[keepsakes.equipped]+"  •  cosmetic only",14)
 	var shown_outfit: String=workshop.outfit if game.mode=="title" else game.outfit
 	text(Vector2(505,164),("NEXT / " if game.mode=="title" else "GEAR / ")+("COAT" if shown_outfit=="riveted" else ("WRAP" if shown_outfit=="trail" else "STANDARD")),14,AMBER)
-	text(Vector2(750,164),"LOCAL SAVE PENDING" if keepsakes.dirty or keepsakes.blocked else "THIS DEVICE'S KEEPSAKES",14,AMBER)
+	text(Vector2(750,164),"LOCAL SAVE PENDING" if keepsakes.dirty or keepsakes.blocked else ("THIS DEVICE'S LOOK + MARKS" if not keepsakes.look.is_empty() else "THIS DEVICE'S KEEPSAKES"),14,AMBER)
 
 func overlay() -> void:
 	draw_rect(Rect2(40,176,1072,473),Color(0.03,0.07,0.12,0.90))
@@ -620,7 +621,7 @@ func return_gate_input(event: InputEventKey,key: int) -> void:
 		taps.clear();bindings.quarantine()
 	elif key==KEY_R and game.mode!="play":abandon()
 	elif key==KEY_C and game.mode!="play":keepsakes.cycle_equipped()
-	elif key==KEY_F5 and game.mode!="play":keepsakes.retry_save()
+	elif key==KEY_F5 and game.mode!="play":retry_cosmetics()
 	elif game.mode=="play":
 		if bindings.matches(event,"strike"):taps.strike=true
 		if bindings.matches(event,"skill"):taps.skill_pressed=true
@@ -720,6 +721,7 @@ func talk_input(key: int) -> void:
 	elif key in [KEY_1,KEY_2,KEY_3]:courier_talk.select(CourierTalk.OPTIONS[key-KEY_1])
 	elif key==KEY_ENTER:courier_talk.confirm()
 	elif key==KEY_F2:begin_return_gate()
+	elif key==KEY_F5:retry_cosmetics()
 	taps.clear();bindings.quarantine()
 
 func draw_talk() -> void:
@@ -768,7 +770,9 @@ func draw_talk() -> void:
 func look_input(key: int) -> void:
 	character_look.paused=false
 	if key==KEY_ESCAPE:character_look.cancel();bindings.quarantine()
-	elif key==KEY_ENTER:character_look.confirm();bindings.quarantine()
+	elif key==KEY_ENTER:
+		character_look.confirm();keepsakes.set_look(character_look.applied);bindings.quarantine()
+	elif key==KEY_F5:retry_cosmetics()
 	elif key==KEY_UP:character_look.row=posmod(character_look.row-1,3)
 	elif key==KEY_DOWN:character_look.row=(character_look.row+1)%3
 	elif key in [KEY_LEFT,KEY_RIGHT]:character_look.cycle(-1 if key==KEY_LEFT else 1)
@@ -781,11 +785,17 @@ func look_input(key: int) -> void:
 		character_look.pose_index=(character_look.pose_index+1)%CharacterLook.POSES.size();character_look.reset_preview()
 	taps.clear()
 
+func sync_look_profile() -> void:
+	character_look.applied=keepsakes.look.duplicate() if not keepsakes.look.is_empty() else CharacterLook.DEFAULTS.duplicate()
+
+func retry_cosmetics() -> void:
+	keepsakes.retry_save();sync_look_profile()
+
 func draw_look() -> void:
 	draw_rect(Rect2(0,0,1152,768),INK)
 	text(Vector2(45,55),"VIRGO DIAMOND / YOUR CHARACTER LOOK",28)
 	text(Vector2(45,92),"Choose freely. Your weapons, action cues and fitted gear keep their meanings.",20,AMBER)
-	text(Vector2(45,127),"Session only: this look stays through retries and both goals, then resets when you close the game.",17)
+	text(Vector2(45,127),"Apply remembers your look on this device. Preview and cancelled drafts are temporary.",17)
 	panel(Rect2(35,170,510,330))
 	for i in 3:
 		var field:String=CharacterLook.FIELDS[i]
@@ -804,5 +814,6 @@ func draw_look() -> void:
 	text(Vector2(60,540),"UP / DOWN choose detail     LEFT / RIGHT change     DELETE defaults in draft",19)
 	text(Vector2(60,580),"1 / 2 preview approach     TAB preview fitting     SPACE preview action",19)
 	text(Vector2(60,620),"Preview choices do not change your actual approach, equipment or rewards.",18,AMBER)
-	text(Vector2(60,665),"ENTER apply look     ESC discard     F1 controls",22,TEAL)
-	text(Vector2(60,707),"Preview paused after focus loss; an editor key resumes." if character_look.paused else "Draft changes are visible here. Apply to see your look in the adventure.",18)
+	text(Vector2(60,665),"ENTER apply + save     ESC discard     F5 retry save     F1 controls",20,TEAL)
+	text(Vector2(60,707),"Preview paused after focus loss; an editor key resumes." if character_look.paused else "Only ENTER applies this draft; F5 retries the already applied look.",18)
+	text(Vector2(60,745),keepsakes.status if keepsakes.dirty or keepsakes.blocked else ("Applied look saved on this device." if not keepsakes.look.is_empty() else "No saved look yet. Apply to remember it here."),16,AMBER)

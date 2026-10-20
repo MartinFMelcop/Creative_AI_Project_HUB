@@ -1,0 +1,58 @@
+{
+  "baseline_commit": "05454410b4ac7ba8053eb2b56ba15fe136f4ae2b",
+  "excluded_identity_fields": [
+    "consumer_hashes",
+    "native_observation_sha256"
+  ],
+  "scope": "Retained mechanical, journey, persistence and control observations equal the prior executed baseline; only source identities excluded.",
+  "suites": [
+    {
+      "checks": {
+        "failed": 0,
+        "passed": 358
+      },
+      "observations_equal": true,
+      "suite": "regressions.json"
+    },
+    {
+      "checks": {
+        "failed": 0,
+        "passed": 67
+      },
+      "observations_equal": true,
+      "suite": "gate.json"
+    },
+    {
+      "checks": {
+        "failed": 0,
+        "passed": 49
+      },
+      "observations_equal": true,
+      "suite": "routes.json"
+    },
+    {
+      "checks": {
+        "failed": 0,
+        "passed": 98
+      },
+      "observations_equal": true,
+      "suite": "workshop.json"
+    },
+    {
+      "checks": {
+        "failed": 0,
+        "passed": 48
+      },
+      "observations_equal": true,
+      "suite": "look.json"
+    },
+    {
+      "checks": {
+        "failed": 0,
+        "passed": 110
+      },
+      "observations_equal": true,
+      "suite": "conversation.json"
+    }
+  ]
+}
