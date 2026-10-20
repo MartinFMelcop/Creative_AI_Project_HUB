@@ -1,0 +1,1306 @@
+{
+  "braced-return": {
+    "actors": {
+      "action": "idle",
+      "action_left": 0.0,
+      "contact": "",
+      "contact_angle": 0.0,
+      "contact_left": 0.0,
+      "courier_hurt_left": 0.0,
+      "cursor": 0,
+      "hurt_left": 0.0,
+      "pose": "idle",
+      "sentinel_left": 0.0,
+      "stride": 0.0
+    },
+    "game": {
+      "cargo": 3,
+      "counters": {
+        "blocks": 0,
+        "counters": 0,
+        "courier_hits": 0,
+        "dodges": 0,
+        "player_hits": 0,
+        "redirects": 0,
+        "rejected": 0
+      },
+      "courier_speed": 28.0,
+      "courier_x": 600.0,
+      "enemy_focus": 3,
+      "energy": 100.0,
+      "events": [],
+      "guard_style": "none",
+      "hp": 4,
+      "mode": "play",
+      "objective": "return_gate",
+      "role": "Duelist",
+      "tick": 0
+    },
+    "gate": {
+      "active": true,
+      "channel": false,
+      "entry": {
+        "aid": "brace",
+        "energy": 100.0,
+        "hp": 4,
+        "medicine": "available",
+        "outfit": "standard",
+        "role": "Duelist",
+        "route": "road",
+        "style": "none"
+      },
+      "events": [],
+      "game": {
+        "cargo": 3,
+        "counters": {
+          "blocks": 0,
+          "counters": 0,
+          "courier_hits": 0,
+          "dodges": 0,
+          "player_hits": 0,
+          "redirects": 0,
+          "rejected": 0
+        },
+        "courier_speed": 28.0,
+        "courier_x": 600.0,
+        "enemy_focus": 3,
+        "energy": 100.0,
+        "events": [],
+        "guard_style": "none",
+        "hp": 4,
+        "mode": "play",
+        "objective": "return_gate",
+        "role": "Duelist",
+        "tick": 0
+      },
+      "progress": 0.0,
+      "raised": [
+        false,
+        false
+      ],
+      "working": -1
+    },
+    "look": {
+      "dye": 0,
+      "hair": 0,
+      "skin": 0
+    },
+    "talk": {
+      "active": false,
+      "choice": "brace",
+      "draft": "",
+      "facts": {
+        "blocks": 0,
+        "covered": 0,
+        "disabled": true,
+        "health_limit": 5,
+        "hp": 4,
+        "medicine": "available",
+        "redirects": 2,
+        "role": "Duelist",
+        "route": "road",
+        "style": "none"
+      },
+      "message": "",
+      "page": "offer"
+    }
+  },
+  "courier-heal-confirmed": {
+    "actors": {
+      "action": "idle",
+      "action_left": 0.0,
+      "contact": "",
+      "contact_angle": -3.141484,
+      "contact_left": 0.0,
+      "courier_hurt_left": 0.0,
+      "cursor": 12,
+      "hurt_left": 0.0,
+      "pose": "idle",
+      "sentinel_left": 0.0,
+      "stride": 4.547845
+    },
+    "game": {
+      "cargo": 3,
+      "counters": {
+        "blocks": 5,
+        "counters": 3,
+        "courier_hits": 0,
+        "dodges": 0,
+        "player_hits": 1,
+        "redirects": 0,
+        "rejected": 0
+      },
+      "courier_speed": 56.0,
+      "courier_x": 1000.0,
+      "enemy_focus": 0,
+      "energy": 100.0,
+      "events": [
+        {
+          "cargo": 3,
+          "energy": 100.0,
+          "hp": 4,
+          "kind": "bolt_hit",
+          "tick": 169
+        },
+        {
+          "cargo": 3,
+          "energy": 66.2,
+          "hp": 4,
+          "kind": "protected",
+          "tick": 338
+        },
+        {
+          "cargo": 3,
+          "energy": 100.0,
+          "hp": 4,
+          "kind": "pulse_avoided",
+          "tick": 507
+        },
+        {
+          "cargo": 3,
+          "energy": 72.6,
+          "hp": 4,
+          "kind": "protected",
+          "tick": 676
+        },
+        {
+          "cargo": 3,
+          "energy": 67.8,
+          "hp": 4,
+          "kind": "protected",
+          "tick": 845
+        },
+        {
+          "cargo": 3,
+          "energy": 56.1,
+          "hp": 4,
+          "kind": "counter",
+          "tick": 846
+        },
+        {
+          "cargo": 3,
+          "energy": 100.0,
+          "hp": 4,
+          "kind": "pulse_avoided",
+          "tick": 1086
+        },
+        {
+          "cargo": 3,
+          "energy": 73.0,
+          "hp": 4,
+          "kind": "protected",
+          "tick": 1255
+        },
+        {
+          "cargo": 3,
+          "energy": 61.3,
+          "hp": 4,
+          "kind": "counter",
+          "tick": 1256
+        },
+        {
+          "cargo": 3,
+          "energy": 68.8,
+          "hp": 4,
+          "kind": "protected",
+          "tick": 1496
+        },
+        {
+          "cargo": 3,
+          "energy": 57.1,
+          "hp": 4,
+          "kind": "counter",
+          "tick": 1497
+        },
+        {
+          "cargo": 3,
+          "energy": 57.1,
+          "hp": 4,
+          "kind": "sentinel_disabled",
+          "tick": 1497
+        }
+      ],
+      "guard_style": "Steady",
+      "hp": 4,
+      "mode": "won",
+      "role": "Guardian",
+      "tick": 1648
+    },
+    "gate": {
+      "active": false,
+      "channel": false,
+      "entry": {
+
+      },
+      "events": [],
+      "game": {
+        "cargo": 3,
+        "counters": {
+          "blocks": 0,
+          "counters": 0,
+          "courier_hits": 0,
+          "dodges": 0,
+          "player_hits": 0,
+          "redirects": 0,
+          "rejected": 0
+        },
+        "courier_speed": 28.0,
+        "courier_x": 160.0,
+        "enemy_focus": 3,
+        "energy": 100.0,
+        "events": [],
+        "guard_style": "Steady",
+        "hp": 5,
+        "mode": "title",
+        "role": "Guardian",
+        "tick": 0
+      },
+      "progress": 0.0,
+      "raised": [
+        false,
+        false
+      ],
+      "working": -1
+    },
+    "look": {
+      "dye": 0,
+      "hair": 0,
+      "skin": 0
+    },
+    "talk": {
+      "active": true,
+      "choice": "heal",
+      "draft": "",
+      "facts": {
+        "blocks": 5,
+        "covered": 0,
+        "disabled": true,
+        "health_limit": 5,
+        "hp": 4,
+        "medicine": "available",
+        "redirects": 0,
+        "role": "Guardian",
+        "route": "road",
+        "style": "Steady"
+      },
+      "message": "",
+      "page": "offer"
+    }
+  },
+  "courier-heal-selected": {
+    "actors": {
+      "action": "idle",
+      "action_left": 0.0,
+      "contact": "",
+      "contact_angle": -3.141484,
+      "contact_left": 0.0,
+      "courier_hurt_left": 0.0,
+      "cursor": 12,
+      "hurt_left": 0.0,
+      "pose": "idle",
+      "sentinel_left": 0.0,
+      "stride": 4.547845
+    },
+    "game": {
+      "cargo": 3,
+      "counters": {
+        "blocks": 5,
+        "counters": 3,
+        "courier_hits": 0,
+        "dodges": 0,
+        "player_hits": 1,
+        "redirects": 0,
+        "rejected": 0
+      },
+      "courier_speed": 56.0,
+      "courier_x": 1000.0,
+      "enemy_focus": 0,
+      "energy": 100.0,
+      "events": [
+        {
+          "cargo": 3,
+          "energy": 100.0,
+          "hp": 4,
+          "kind": "bolt_hit",
+          "tick": 169
+        },
+        {
+          "cargo": 3,
+          "energy": 66.2,
+          "hp": 4,
+          "kind": "protected",
+          "tick": 338
+        },
+        {
+          "cargo": 3,
+          "energy": 100.0,
+          "hp": 4,
+          "kind": "pulse_avoided",
+          "tick": 507
+        },
+        {
+          "cargo": 3,
+          "energy": 72.6,
+          "hp": 4,
+          "kind": "protected",
+          "tick": 676
+        },
+        {
+          "cargo": 3,
+          "energy": 67.8,
+          "hp": 4,
+          "kind": "protected",
+          "tick": 845
+        },
+        {
+          "cargo": 3,
+          "energy": 56.1,
+          "hp": 4,
+          "kind": "counter",
+          "tick": 846
+        },
+        {
+          "cargo": 3,
+          "energy": 100.0,
+          "hp": 4,
+          "kind": "pulse_avoided",
+          "tick": 1086
+        },
+        {
+          "cargo": 3,
+          "energy": 73.0,
+          "hp": 4,
+          "kind": "protected",
+          "tick": 1255
+        },
+        {
+          "cargo": 3,
+          "energy": 61.3,
+          "hp": 4,
+          "kind": "counter",
+          "tick": 1256
+        },
+        {
+          "cargo": 3,
+          "energy": 68.8,
+          "hp": 4,
+          "kind": "protected",
+          "tick": 1496
+        },
+        {
+          "cargo": 3,
+          "energy": 57.1,
+          "hp": 4,
+          "kind": "counter",
+          "tick": 1497
+        },
+        {
+          "cargo": 3,
+          "energy": 57.1,
+          "hp": 4,
+          "kind": "sentinel_disabled",
+          "tick": 1497
+        }
+      ],
+      "guard_style": "Steady",
+      "hp": 4,
+      "mode": "won",
+      "role": "Guardian",
+      "tick": 1648
+    },
+    "gate": {
+      "active": false,
+      "channel": false,
+      "entry": {
+
+      },
+      "events": [],
+      "game": {
+        "cargo": 3,
+        "counters": {
+          "blocks": 0,
+          "counters": 0,
+          "courier_hits": 0,
+          "dodges": 0,
+          "player_hits": 0,
+          "redirects": 0,
+          "rejected": 0
+        },
+        "courier_speed": 28.0,
+        "courier_x": 160.0,
+        "enemy_focus": 3,
+        "energy": 100.0,
+        "events": [],
+        "guard_style": "Steady",
+        "hp": 5,
+        "mode": "title",
+        "role": "Guardian",
+        "tick": 0
+      },
+      "progress": 0.0,
+      "raised": [
+        false,
+        false
+      ],
+      "working": -1
+    },
+    "look": {
+      "dye": 0,
+      "hair": 0,
+      "skin": 0
+    },
+    "talk": {
+      "active": true,
+      "choice": "",
+      "draft": "heal",
+      "facts": {
+        "blocks": 5,
+        "covered": 0,
+        "disabled": true,
+        "health_limit": 5,
+        "hp": 4,
+        "medicine": "available",
+        "redirects": 0,
+        "role": "Guardian",
+        "route": "road",
+        "style": "Steady"
+      },
+      "message": "Selected only. ENTER confirms; ESC leaves the strip unspent.",
+      "page": "offer"
+    }
+  },
+  "courier-offer": {
+    "actors": {
+      "action": "idle",
+      "action_left": 0.0,
+      "contact": "",
+      "contact_angle": -3.141484,
+      "contact_left": 0.0,
+      "courier_hurt_left": 0.0,
+      "cursor": 12,
+      "hurt_left": 0.0,
+      "pose": "idle",
+      "sentinel_left": 0.0,
+      "stride": 4.547845
+    },
+    "game": {
+      "cargo": 3,
+      "counters": {
+        "blocks": 5,
+        "counters": 3,
+        "courier_hits": 0,
+        "dodges": 0,
+        "player_hits": 1,
+        "redirects": 0,
+        "rejected": 0
+      },
+      "courier_speed": 56.0,
+      "courier_x": 1000.0,
+      "enemy_focus": 0,
+      "energy": 100.0,
+      "events": [
+        {
+          "cargo": 3,
+          "energy": 100.0,
+          "hp": 4,
+          "kind": "bolt_hit",
+          "tick": 169
+        },
+        {
+          "cargo": 3,
+          "energy": 66.2,
+          "hp": 4,
+          "kind": "protected",
+          "tick": 338
+        },
+        {
+          "cargo": 3,
+          "energy": 100.0,
+          "hp": 4,
+          "kind": "pulse_avoided",
+          "tick": 507
+        },
+        {
+          "cargo": 3,
+          "energy": 72.6,
+          "hp": 4,
+          "kind": "protected",
+          "tick": 676
+        },
+        {
+          "cargo": 3,
+          "energy": 67.8,
+          "hp": 4,
+          "kind": "protected",
+          "tick": 845
+        },
+        {
+          "cargo": 3,
+          "energy": 56.1,
+          "hp": 4,
+          "kind": "counter",
+          "tick": 846
+        },
+        {
+          "cargo": 3,
+          "energy": 100.0,
+          "hp": 4,
+          "kind": "pulse_avoided",
+          "tick": 1086
+        },
+        {
+          "cargo": 3,
+          "energy": 73.0,
+          "hp": 4,
+          "kind": "protected",
+          "tick": 1255
+        },
+        {
+          "cargo": 3,
+          "energy": 61.3,
+          "hp": 4,
+          "kind": "counter",
+          "tick": 1256
+        },
+        {
+          "cargo": 3,
+          "energy": 68.8,
+          "hp": 4,
+          "kind": "protected",
+          "tick": 1496
+        },
+        {
+          "cargo": 3,
+          "energy": 57.1,
+          "hp": 4,
+          "kind": "counter",
+          "tick": 1497
+        },
+        {
+          "cargo": 3,
+          "energy": 57.1,
+          "hp": 4,
+          "kind": "sentinel_disabled",
+          "tick": 1497
+        }
+      ],
+      "guard_style": "Steady",
+      "hp": 4,
+      "mode": "won",
+      "role": "Guardian",
+      "tick": 1648
+    },
+    "gate": {
+      "active": false,
+      "channel": false,
+      "entry": {
+
+      },
+      "events": [],
+      "game": {
+        "cargo": 3,
+        "counters": {
+          "blocks": 0,
+          "counters": 0,
+          "courier_hits": 0,
+          "dodges": 0,
+          "player_hits": 0,
+          "redirects": 0,
+          "rejected": 0
+        },
+        "courier_speed": 28.0,
+        "courier_x": 160.0,
+        "enemy_focus": 3,
+        "energy": 100.0,
+        "events": [],
+        "guard_style": "Steady",
+        "hp": 5,
+        "mode": "title",
+        "role": "Guardian",
+        "tick": 0
+      },
+      "progress": 0.0,
+      "raised": [
+        false,
+        false
+      ],
+      "working": -1
+    },
+    "look": {
+      "dye": 0,
+      "hair": 0,
+      "skin": 0
+    },
+    "talk": {
+      "active": true,
+      "choice": "",
+      "draft": "",
+      "facts": {
+        "blocks": 5,
+        "covered": 0,
+        "disabled": true,
+        "health_limit": 5,
+        "hp": 4,
+        "medicine": "available",
+        "redirects": 0,
+        "role": "Guardian",
+        "route": "road",
+        "style": "Steady"
+      },
+      "message": "",
+      "page": "offer"
+    }
+  },
+  "courier-road": {
+    "actors": {
+      "action": "idle",
+      "action_left": 0.0,
+      "contact": "",
+      "contact_angle": -3.141484,
+      "contact_left": 0.0,
+      "courier_hurt_left": 0.0,
+      "cursor": 12,
+      "hurt_left": 0.0,
+      "pose": "idle",
+      "sentinel_left": 0.0,
+      "stride": 4.547845
+    },
+    "game": {
+      "cargo": 3,
+      "counters": {
+        "blocks": 5,
+        "counters": 3,
+        "courier_hits": 0,
+        "dodges": 0,
+        "player_hits": 1,
+        "redirects": 0,
+        "rejected": 0
+      },
+      "courier_speed": 56.0,
+      "courier_x": 1000.0,
+      "enemy_focus": 0,
+      "energy": 100.0,
+      "events": [
+        {
+          "cargo": 3,
+          "energy": 100.0,
+          "hp": 4,
+          "kind": "bolt_hit",
+          "tick": 169
+        },
+        {
+          "cargo": 3,
+          "energy": 66.2,
+          "hp": 4,
+          "kind": "protected",
+          "tick": 338
+        },
+        {
+          "cargo": 3,
+          "energy": 100.0,
+          "hp": 4,
+          "kind": "pulse_avoided",
+          "tick": 507
+        },
+        {
+          "cargo": 3,
+          "energy": 72.6,
+          "hp": 4,
+          "kind": "protected",
+          "tick": 676
+        },
+        {
+          "cargo": 3,
+          "energy": 67.8,
+          "hp": 4,
+          "kind": "protected",
+          "tick": 845
+        },
+        {
+          "cargo": 3,
+          "energy": 56.1,
+          "hp": 4,
+          "kind": "counter",
+          "tick": 846
+        },
+        {
+          "cargo": 3,
+          "energy": 100.0,
+          "hp": 4,
+          "kind": "pulse_avoided",
+          "tick": 1086
+        },
+        {
+          "cargo": 3,
+          "energy": 73.0,
+          "hp": 4,
+          "kind": "protected",
+          "tick": 1255
+        },
+        {
+          "cargo": 3,
+          "energy": 61.3,
+          "hp": 4,
+          "kind": "counter",
+          "tick": 1256
+        },
+        {
+          "cargo": 3,
+          "energy": 68.8,
+          "hp": 4,
+          "kind": "protected",
+          "tick": 1496
+        },
+        {
+          "cargo": 3,
+          "energy": 57.1,
+          "hp": 4,
+          "kind": "counter",
+          "tick": 1497
+        },
+        {
+          "cargo": 3,
+          "energy": 57.1,
+          "hp": 4,
+          "kind": "sentinel_disabled",
+          "tick": 1497
+        }
+      ],
+      "guard_style": "Steady",
+      "hp": 4,
+      "mode": "won",
+      "role": "Guardian",
+      "tick": 1648
+    },
+    "gate": {
+      "active": false,
+      "channel": false,
+      "entry": {
+
+      },
+      "events": [],
+      "game": {
+        "cargo": 3,
+        "counters": {
+          "blocks": 0,
+          "counters": 0,
+          "courier_hits": 0,
+          "dodges": 0,
+          "player_hits": 0,
+          "redirects": 0,
+          "rejected": 0
+        },
+        "courier_speed": 28.0,
+        "courier_x": 160.0,
+        "enemy_focus": 3,
+        "energy": 100.0,
+        "events": [],
+        "guard_style": "Steady",
+        "hp": 5,
+        "mode": "title",
+        "role": "Guardian",
+        "tick": 0
+      },
+      "progress": 0.0,
+      "raised": [
+        false,
+        false
+      ],
+      "working": -1
+    },
+    "look": {
+      "dye": 0,
+      "hair": 0,
+      "skin": 0
+    },
+    "talk": {
+      "active": true,
+      "choice": "",
+      "draft": "",
+      "facts": {
+        "blocks": 5,
+        "covered": 0,
+        "disabled": true,
+        "health_limit": 5,
+        "hp": 4,
+        "medicine": "available",
+        "redirects": 0,
+        "role": "Guardian",
+        "route": "road",
+        "style": "Steady"
+      },
+      "message": "",
+      "page": "road"
+    }
+  },
+  "full-health-brace-confirmed": {
+    "actors": {
+      "action": "idle",
+      "action_left": 0.0,
+      "contact": "",
+      "contact_angle": -3.141484,
+      "contact_left": 0.0,
+      "courier_hurt_left": 0.0,
+      "cursor": 12,
+      "hurt_left": 0.0,
+      "pose": "idle",
+      "sentinel_left": 0.0,
+      "stride": 0.828775
+    },
+    "game": {
+      "cargo": 3,
+      "counters": {
+        "blocks": 6,
+        "counters": 3,
+        "courier_hits": 0,
+        "dodges": 0,
+        "player_hits": 0,
+        "redirects": 0,
+        "rejected": 0
+      },
+      "courier_speed": 56.0,
+      "courier_x": 1000.0,
+      "enemy_focus": 0,
+      "energy": 100.0,
+      "events": [
+        {
+          "cargo": 3,
+          "energy": 67.6,
+          "hp": 5,
+          "kind": "protected",
+          "tick": 169
+        },
+        {
+          "cargo": 3,
+          "energy": 67.8,
+          "hp": 5,
+          "kind": "protected",
+          "tick": 338
+        },
+        {
+          "cargo": 3,
+          "energy": 100.0,
+          "hp": 5,
+          "kind": "pulse_avoided",
+          "tick": 507
+        },
+        {
+          "cargo": 3,
+          "energy": 72.6,
+          "hp": 5,
+          "kind": "protected",
+          "tick": 676
+        },
+        {
+          "cargo": 3,
+          "energy": 67.8,
+          "hp": 5,
+          "kind": "protected",
+          "tick": 845
+        },
+        {
+          "cargo": 3,
+          "energy": 56.1,
+          "hp": 5,
+          "kind": "counter",
+          "tick": 846
+        },
+        {
+          "cargo": 3,
+          "energy": 100.0,
+          "hp": 5,
+          "kind": "pulse_avoided",
+          "tick": 1086
+        },
+        {
+          "cargo": 3,
+          "energy": 73.0,
+          "hp": 5,
+          "kind": "protected",
+          "tick": 1255
+        },
+        {
+          "cargo": 3,
+          "energy": 61.3,
+          "hp": 5,
+          "kind": "counter",
+          "tick": 1256
+        },
+        {
+          "cargo": 3,
+          "energy": 68.8,
+          "hp": 5,
+          "kind": "protected",
+          "tick": 1496
+        },
+        {
+          "cargo": 3,
+          "energy": 57.1,
+          "hp": 5,
+          "kind": "counter",
+          "tick": 1497
+        },
+        {
+          "cargo": 3,
+          "energy": 57.1,
+          "hp": 5,
+          "kind": "sentinel_disabled",
+          "tick": 1497
+        }
+      ],
+      "guard_style": "Steady",
+      "hp": 5,
+      "mode": "won",
+      "role": "Guardian",
+      "tick": 1648
+    },
+    "gate": {
+      "active": false,
+      "channel": false,
+      "entry": {
+
+      },
+      "events": [],
+      "game": {
+        "cargo": 3,
+        "counters": {
+          "blocks": 0,
+          "counters": 0,
+          "courier_hits": 0,
+          "dodges": 0,
+          "player_hits": 0,
+          "redirects": 0,
+          "rejected": 0
+        },
+        "courier_speed": 28.0,
+        "courier_x": 160.0,
+        "enemy_focus": 3,
+        "energy": 100.0,
+        "events": [],
+        "guard_style": "Steady",
+        "hp": 5,
+        "mode": "title",
+        "role": "Guardian",
+        "tick": 0
+      },
+      "progress": 0.0,
+      "raised": [
+        false,
+        false
+      ],
+      "working": -1
+    },
+    "look": {
+      "dye": 0,
+      "hair": 0,
+      "skin": 0
+    },
+    "talk": {
+      "active": true,
+      "choice": "brace",
+      "draft": "",
+      "facts": {
+        "blocks": 6,
+        "covered": 0,
+        "disabled": true,
+        "health_limit": 5,
+        "hp": 5,
+        "medicine": "available",
+        "redirects": 0,
+        "role": "Guardian",
+        "route": "road",
+        "style": "Steady"
+      },
+      "message": "",
+      "page": "offer"
+    }
+  },
+  "full-health-offer": {
+    "actors": {
+      "action": "idle",
+      "action_left": 0.0,
+      "contact": "",
+      "contact_angle": -3.141484,
+      "contact_left": 0.0,
+      "courier_hurt_left": 0.0,
+      "cursor": 12,
+      "hurt_left": 0.0,
+      "pose": "idle",
+      "sentinel_left": 0.0,
+      "stride": 0.828775
+    },
+    "game": {
+      "cargo": 3,
+      "counters": {
+        "blocks": 6,
+        "counters": 3,
+        "courier_hits": 0,
+        "dodges": 0,
+        "player_hits": 0,
+        "redirects": 0,
+        "rejected": 0
+      },
+      "courier_speed": 56.0,
+      "courier_x": 1000.0,
+      "enemy_focus": 0,
+      "energy": 100.0,
+      "events": [
+        {
+          "cargo": 3,
+          "energy": 67.6,
+          "hp": 5,
+          "kind": "protected",
+          "tick": 169
+        },
+        {
+          "cargo": 3,
+          "energy": 67.8,
+          "hp": 5,
+          "kind": "protected",
+          "tick": 338
+        },
+        {
+          "cargo": 3,
+          "energy": 100.0,
+          "hp": 5,
+          "kind": "pulse_avoided",
+          "tick": 507
+        },
+        {
+          "cargo": 3,
+          "energy": 72.6,
+          "hp": 5,
+          "kind": "protected",
+          "tick": 676
+        },
+        {
+          "cargo": 3,
+          "energy": 67.8,
+          "hp": 5,
+          "kind": "protected",
+          "tick": 845
+        },
+        {
+          "cargo": 3,
+          "energy": 56.1,
+          "hp": 5,
+          "kind": "counter",
+          "tick": 846
+        },
+        {
+          "cargo": 3,
+          "energy": 100.0,
+          "hp": 5,
+          "kind": "pulse_avoided",
+          "tick": 1086
+        },
+        {
+          "cargo": 3,
+          "energy": 73.0,
+          "hp": 5,
+          "kind": "protected",
+          "tick": 1255
+        },
+        {
+          "cargo": 3,
+          "energy": 61.3,
+          "hp": 5,
+          "kind": "counter",
+          "tick": 1256
+        },
+        {
+          "cargo": 3,
+          "energy": 68.8,
+          "hp": 5,
+          "kind": "protected",
+          "tick": 1496
+        },
+        {
+          "cargo": 3,
+          "energy": 57.1,
+          "hp": 5,
+          "kind": "counter",
+          "tick": 1497
+        },
+        {
+          "cargo": 3,
+          "energy": 57.1,
+          "hp": 5,
+          "kind": "sentinel_disabled",
+          "tick": 1497
+        }
+      ],
+      "guard_style": "Steady",
+      "hp": 5,
+      "mode": "won",
+      "role": "Guardian",
+      "tick": 1648
+    },
+    "gate": {
+      "active": false,
+      "channel": false,
+      "entry": {
+
+      },
+      "events": [],
+      "game": {
+        "cargo": 3,
+        "counters": {
+          "blocks": 0,
+          "counters": 0,
+          "courier_hits": 0,
+          "dodges": 0,
+          "player_hits": 0,
+          "redirects": 0,
+          "rejected": 0
+        },
+        "courier_speed": 28.0,
+        "courier_x": 160.0,
+        "enemy_focus": 3,
+        "energy": 100.0,
+        "events": [],
+        "guard_style": "Steady",
+        "hp": 5,
+        "mode": "title",
+        "role": "Guardian",
+        "tick": 0
+      },
+      "progress": 0.0,
+      "raised": [
+        false,
+        false
+      ],
+      "working": -1
+    },
+    "look": {
+      "dye": 0,
+      "hair": 0,
+      "skin": 0
+    },
+    "talk": {
+      "active": true,
+      "choice": "",
+      "draft": "",
+      "facts": {
+        "blocks": 6,
+        "covered": 0,
+        "disabled": true,
+        "health_limit": 5,
+        "hp": 5,
+        "medicine": "available",
+        "redirects": 0,
+        "role": "Guardian",
+        "route": "road",
+        "style": "Steady"
+      },
+      "message": "You have no wound to bind. The strip is still unspent.",
+      "page": "offer"
+    }
+  },
+  "healed-return": {
+    "actors": {
+      "action": "idle",
+      "action_left": 0.0,
+      "contact": "",
+      "contact_angle": 0.0,
+      "contact_left": 0.0,
+      "courier_hurt_left": 0.0,
+      "cursor": 0,
+      "hurt_left": 0.0,
+      "pose": "idle",
+      "sentinel_left": 0.0,
+      "stride": 0.0
+    },
+    "game": {
+      "cargo": 2,
+      "counters": {
+        "blocks": 0,
+        "counters": 0,
+        "courier_hits": 0,
+        "dodges": 0,
+        "player_hits": 0,
+        "redirects": 0,
+        "rejected": 0
+      },
+      "courier_speed": 28.0,
+      "courier_x": 600.0,
+      "enemy_focus": 3,
+      "energy": 100.0,
+      "events": [],
+      "guard_style": "Steady",
+      "hp": 5,
+      "mode": "play",
+      "objective": "return_gate",
+      "role": "Guardian",
+      "tick": 0
+    },
+    "gate": {
+      "active": true,
+      "channel": false,
+      "entry": {
+        "aid": "heal",
+        "energy": 100.0,
+        "hp": 4,
+        "medicine": "available",
+        "outfit": "standard",
+        "role": "Guardian",
+        "route": "road",
+        "style": "Steady"
+      },
+      "events": [],
+      "game": {
+        "cargo": 2,
+        "counters": {
+          "blocks": 0,
+          "counters": 0,
+          "courier_hits": 0,
+          "dodges": 0,
+          "player_hits": 0,
+          "redirects": 0,
+          "rejected": 0
+        },
+        "courier_speed": 28.0,
+        "courier_x": 600.0,
+        "enemy_focus": 3,
+        "energy": 100.0,
+        "events": [],
+        "guard_style": "Steady",
+        "hp": 5,
+        "mode": "play",
+        "objective": "return_gate",
+        "role": "Guardian",
+        "tick": 0
+      },
+      "progress": 0.0,
+      "raised": [
+        false,
+        false
+      ],
+      "working": -1
+    },
+    "look": {
+      "dye": 0,
+      "hair": 0,
+      "skin": 0
+    },
+    "talk": {
+      "active": false,
+      "choice": "heal",
+      "draft": "",
+      "facts": {
+        "blocks": 5,
+        "covered": 0,
+        "disabled": true,
+        "health_limit": 5,
+        "hp": 4,
+        "medicine": "available",
+        "redirects": 0,
+        "role": "Guardian",
+        "route": "road",
+        "style": "Steady"
+      },
+      "message": "",
+      "page": "offer"
+    }
+  }
+}

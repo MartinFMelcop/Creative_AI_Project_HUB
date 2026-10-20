@@ -6,8 +6,8 @@ author decisions prevail. Status here describes scope, not independent player ap
 
 | Status | Decision / provenance | Observable consequence and review trigger |
 |---|---|---|
-| Accepted author direction | Recognizable character identity and meaningful adventure; current author convergence mandate, CRE-001 and CRE-005 | Prioritize existing executable consumer improvements, missing milestone capabilities, blocking uncertainty, then justified portfolio work. Checks/reports do not substitute for product experience. |
-| Accepted operational scope | One local executable encounter before unrelated laboratory expansion; current author mandate | Main mode DEVELOPMENT. The first increment created the destination; current work improves it (priority category 1). Godot 4.6.3 is a prototype tool, not the selected production MMO engine. |
+| Accepted author direction | Recognizable character identity and meaningful adventure; current adaptive author mandate, CRE-001 and CRE-005 | Compare creative, technical and knowledge value, strategic relevance and opportunity cost across North Star and justified portfolio work. Checks/reports do not substitute for experience. |
+| Accepted operational scope | One existing local executable character consumer; current adaptive author mandate | Select DEVELOPMENT, CREATIVE PRODUCTION or RESEARCH for the actual opportunity rather than a fixed category order. Godot 4.6.3 is a prototype tool, not the selected production MMO engine. |
 | Experimental | Guardian frontal interception versus Duelist redirection/mobility; CRE-014/015/084 hypotheses | Same courier objective, finite resources, distinct commands/costs and optional reachable counters. Neither approach is a final class/talent system or canon commitment. Revisit after actual player observation. |
 | Experimental | A courier crosses three markers while a sentinel threatens the route | Small original test fiction, not approved geography/quest/lore. Player or courier defeat loses the attempt; either approach can finish. The original session-only token was result feedback; local cosmetic memory now has a separate contract below. |
 | Revised after execution | Redirected beams still collide with a nearer courier | Early implementation checked only the redirected endpoint. Corrected to first-contact ownership; explicit negative control now catches unsafe redirection across the road. |
@@ -267,3 +267,36 @@ and clear portrait bounds; a horizontal paid-step sample fits the preview card.
 Reject general recognition, accessibility or quality claims based on palette counts,
 pixel equality or scripted journeys. Revisit with actual people and stronger art/content
 needs; see [scoped execution](../evidence/north-star-character-look/RUN.json).
+
+
+## The courier's single repair strip — experimental
+
+CRE-005 A grounds agency in an actual cost/consequence rather than extra result text.
+CRE-041/048 H suggest a quieter aftermath and recoverable continuity; their named
+characters, places and campaign proposals are not adopted. The current author identity
+and adaptive value-driven mandate remain the authority. This original courier/repair
+fiction is experimental, not an approved quest, moral judgment or final item system.
+
+After a genuine won escort, F4 offers a conversation that remembers actual route,
+medicine ownership, signature defense and sentinel shutdown. One strip can prepare
+one capped health point for the wounded player, add one initial winch integrity, or
+stay with the courier. Dressing and bracing cannot both be taken. Full-health dressing
+is unavailable; declining or skipping still permits the return objective.
+
+Numbers select, Enter confirms, Escape discards an unconfirmed selection and Tab
+asks about the crossing. A confirmed agreement stays fixed when reopened. Settings
+and focus loss clear a pending selection. Effects occur only on return departure;
+completed escort health, delivery facts and earned marks are not rewritten. The retry
+checkpoint owns the aid once, so retry restores preparation rather than stacking it.
+New crossing/abandonment resets the conversation; no account or saved quest is added.
+
+P10's precondition-before-mutation and fact-owned-response method informed this new
+native consumer. Its fiction, Python/browser implementation, trust/emotion model and
+persistent work-shift campaign are not imported. NS-C04 supports bounded destination
+adaptation, not a shared narrative kernel or MMORPG social simulation.
+
+ENG-005 informs one-resource/state invariants; SCI-017 informs matched no-aid controls
+and complete journeys. [Execution](../evidence/north-star-courier-conversation/RUN.json)
+separates technical/render/input evidence and agent inspection from human narrative
+comprehension, significance, identity, preference or balance. Review these with actual
+participants before claiming the conversation expresses the full character fantasy.

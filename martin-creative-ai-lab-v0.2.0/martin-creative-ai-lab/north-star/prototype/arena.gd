@@ -1,4 +1,8 @@
 extends Node2D
+const CourierTalk=preload("res://courier_talk.gd")
+var courier_talk=CourierTalk.new()
+var talk_stage=Combat.new()
+var talk_actor=Actors.new()
 const CharacterLook=preload("res://character_look.gd")
 var character_look=CharacterLook.new()
 var look_actor=Actors.new()
@@ -59,6 +63,7 @@ func _ready() -> void:
 	queue_redraw()
 
 func abandon() -> void:
+	courier_talk=CourierTalk.new()
 	return_gate=ReturnGate.new()
 	bindings.clear_intents()
 	errand=Errand.new()
@@ -73,6 +78,7 @@ func abandon() -> void:
 	taps.clear()
 
 func begin_crossing() -> void:
+	courier_talk=CourierTalk.new()
 	return_gate=ReturnGate.new()
 	bindings.clear_intents()
 	errand.reset()
@@ -90,6 +96,7 @@ func begin_crossing() -> void:
 
 func _notification(what: int) -> void:
 	if what==NOTIFICATION_APPLICATION_FOCUS_OUT:
+		courier_talk.suspend()
 		if character_look.active:character_look.paused=true
 		if return_gate.active:return_gate.suspend()
 		if workshop.active:workshop.suspend()
@@ -112,11 +119,15 @@ func _unhandled_key_input(event: InputEvent) -> void:
 		open_controls();queue_redraw();return
 	if character_look.active:
 		look_input(key);queue_redraw();return
+	if courier_talk.active:
+		talk_input(key);queue_redraw();return
 	if not workshop.active and not rehearsal.active and game.mode=="title" and key==KEY_F3:
 		character_look.enter(selected,guardian_style,workshop.outfit);look_actor.attach(character_look.preview)
 		taps.clear();bindings.quarantine();queue_redraw();return
 	if return_gate.active:
 		return_gate_input(event,key);sync_sound();queue_redraw();return
+	if normal_run and not rehearsal.active and game.mode=="won" and key==KEY_F4:
+		begin_talk();queue_redraw();return
 	if normal_run and not rehearsal.active and game.mode=="won" and key==KEY_F2:
 		begin_return_gate();queue_redraw();return
 	if workshop.active:
@@ -173,6 +184,7 @@ func workshop_input(key: int) -> void:
 	taps.clear()
 
 func open_controls() -> void:
+	courier_talk.suspend()
 	if return_gate.active:return_gate.suspend()
 	if workshop.active:workshop.suspend()
 	if rehearsal.active:
@@ -210,6 +222,7 @@ func controls_input(event: InputEventKey,key: int) -> void:
 
 func _physics_process(dt: float) -> void:
 	if controls_open:taps.clear();sound.silence();queue_redraw();return
+	if courier_talk.active:taps.clear();sound.silence();queue_redraw();return
 	if character_look.active:
 		if look_actor.model!=character_look.preview:look_actor.attach(character_look.preview)
 		character_look.step(dt);look_actor.observe(character_look.preview)
@@ -299,6 +312,10 @@ func style(color: Color) -> StyleBoxFlat:
 
 func _draw() -> void:
 	for portrait in look_portraits:portrait.visible=character_look.active and not controls_open
+	if courier_talk.active:
+		draw_talk()
+		if controls_open:drawing_controls=true;draw_controls();drawing_controls=false
+		return
 	if character_look.active:
 		draw_look()
 		if controls_open:drawing_controls=true;draw_controls();drawing_controls=false
@@ -431,7 +448,7 @@ func overlay() -> void:
 		text(Vector2(150,552),reward_message if game.mode=="won" else "No keepsake earned. Complete a crossing with a block or drawn bolt.",18,TEAL if game.mode=="won" else AMBER)
 		text(Vector2(150,585),"C  Wear / put away     •     F5  Retry local save     /     cosmetic only",18)
 		text(Vector2(150,612),errand.outcome(),17,AMBER)
-		if game.mode=="won":text(Vector2(150,640),"F2  Continue: open the return gate  /  health carries  /  optional",17,TEAL)
+		if game.mode=="won":text(Vector2(150,640),"F4  Talk to courier   /   F2  Return gate   /   both optional",17,TEAL)
 
 func draw_errand() -> void:
 	if errand.state=="waiting": return
@@ -518,6 +535,7 @@ func capture() -> void:
 	get_viewport().get_texture().get_image().save_png(path)
 	var file=FileAccess.open(path+".json",FileAccess.WRITE)
 	var report=game.snapshot()
+	report.courier_talk=courier_talk.snapshot()
 	report.character_look=character_look.snapshot()
 	if return_gate.active:report.return_gate=return_gate.snapshot()
 	report.route=game.route.snapshot()
@@ -583,7 +601,8 @@ func draw_route() -> void:
 		if game.route.flash>0:draw_arc(game.route.last_contact,16,0,TAU,24,PAPER,3)
 
 func begin_return_gate() -> bool:
-	if not normal_run or rehearsal.active or not return_gate.begin(game,errand.state):return false
+	if not normal_run or rehearsal.active or not return_gate.begin(game,errand.state,courier_talk.aid()):return false
+	courier_talk.close()
 	normal_run=false;game=return_gate.game
 	taps.clear();bindings.quarantine();sound.observe(game,true);actors.attach(game)
 	return true
@@ -638,7 +657,8 @@ func draw_return_gate() -> void:
 	for i in 4:
 		var angle:float=i*PI/2
 		draw_line(winch,winch+Vector2.from_angle(angle)*21,PAPER,3)
-	text(winch+Vector2(-62,58),"WINCH %d / 2"%game.cargo,17,TEAL if game.cargo==2 else RED)
+	if return_gate.entry.get("aid","")=="brace":draw_line(winch+Vector2(-26,-18),winch+Vector2(26,18),AMBER,7,true)
+	text(winch+Vector2(-62,58),"WINCH %d / %d"%[game.cargo,return_gate.cargo_limit()],17,TEAL if game.cargo==return_gate.cargo_limit() else RED)
 	text(winch+Vector2(-89,82),"Protect this device",14)
 	if game.phase=="bolt":
 		draw_line(Combat.ENEMY,game.target,Color(1,0.75,0.4,0.25+game.clock*0.5),3+game.clock*8)
@@ -672,7 +692,7 @@ func draw_return_gate() -> void:
 	draw_rect(Rect2(40,130,300,12),Color("32475a"));draw_rect(Rect2(40,130,300*game.energy/100,12),TEAL if game.role=="Guardian" else AMBER)
 	text(Vector2(355,142),"POSTURE" if game.role=="Guardian" else "RESOLVE",15)
 	if game.role=="Guardian":text(Vector2(460,142),"GUARD "+game.guard_state()+(" / TOGGLE" if bindings.toggle_guard else ""),14,RED if game.guard_state()=="STALE" else PAPER)
-	text(Vector2(40,164),"ARRIVAL: %d health / %s route / medicine %s / session checkpoint"%[return_gate.entry.hp,return_gate.entry.route,return_gate.entry.medicine],15,AMBER)
+	text(Vector2(40,164),"ARRIVAL: %d HP / %s / medicine %s / aid: %s / session checkpoint"%[return_gate.entry.hp,return_gate.entry.route,return_gate.entry.medicine,return_gate.entry.get("aid","none")],15,AMBER)
 	panel(Rect2(30,662,1092,86))
 	text(Vector2(48,687),"WASD move / ARROWS aim / J counter / K guard or feint / SPACE step / E work / ESC pause",17)
 	var message:String=game.message.replace("courier safe","winch safe").replace("courier gains time","more time to work").replace("Sentinel focus","Ward focus")
@@ -680,12 +700,70 @@ func draw_return_gate() -> void:
 	if game.mode!="play":
 		panel(Rect2(90,220,972,365),Color("172535"))
 		text(Vector2(125,271),"RETURN GATE PAUSED" if game.mode=="paused" else ("RETURN PASSAGE OPEN" if game.mode=="won" else "RETURN GATE FAILED"),32,TEAL if game.mode=="won" else AMBER)
-		text(Vector2(125,318),"Health %d / %d    Winch %d / 2    Catches %d / 2"%[game.hp,game.health_limit,game.cargo,int(return_gate.raised[0])+int(return_gate.raised[1])],21)
+		text(Vector2(125,318),"Health %d / %d    Winch %d / %d    Catches %d / 2"%[game.hp,game.health_limit,game.cargo,return_gate.cargo_limit(),int(return_gate.raised[0])+int(return_gate.raised[1])],21)
 		text(Vector2(125,361),"The courier stays safe. This separate ward guards the return mechanism.",19)
 		text(Vector2(125,399),"Raise both catches AND cross the exit. Disabling the ward alone does not finish.",18,AMBER)
 		draw_impact(Vector2(125,446))
 		text(Vector2(125,532),"ENTER / ESC resume   /   R leave" if game.mode=="paused" else "ENTER retry from arrival   /   R leave   /   no extra keepsake",22,TEAL)
-		text(Vector2(125,568),"Retry restores the entry checkpoint, not full health. No live outfit or approach swap.",17)
+		text(Vector2(125,568),"Retry restores this prepared checkpoint. Aid never stacks; no live gear or approach swap.",17)
+
+func begin_talk() -> bool:
+	if not normal_run or rehearsal.active or return_gate.active or not courier_talk.open(game,errand.state):return false
+	talk_stage=Combat.new();talk_stage.role=game.role;talk_stage.guard_style=game.guard_style
+	talk_stage.outfit=game.outfit;talk_stage.player=Vector2(145,142);talk_stage.courier=Vector2(300,142)
+	talk_actor.attach(talk_stage)
+	taps.clear();bindings.quarantine();sound.silence();return true
+
+func talk_input(key: int) -> void:
+	if key==KEY_ESCAPE:courier_talk.close()
+	elif key==KEY_TAB:courier_talk.page="road" if courier_talk.page=="offer" else "offer"
+	elif key in [KEY_1,KEY_2,KEY_3]:courier_talk.select(CourierTalk.OPTIONS[key-KEY_1])
+	elif key==KEY_ENTER:courier_talk.confirm()
+	elif key==KEY_F2:begin_return_gate()
+	taps.clear();bindings.quarantine()
+
+func draw_talk() -> void:
+	draw_rect(Rect2(0,0,1152,768),INK)
+	text(Vector2(50,45),"VIRGO DIAMOND / A MOMENT AT THE GATE",27)
+	text(Vector2(960,45),"F1 Controls",16,AMBER)
+	talk_actor.draw_player(self,talk_stage,character_look.palette());draw_keepsake(talk_stage.player,keepsakes.equipped)
+	talk_actor.draw_courier(self,talk_stage)
+	text(Vector2(100,196),"YOU",15,TEAL);text(Vector2(263,196),"COURIER",15,AMBER)
+	var gesture:String="The courier unwinds the last strip from a repair roll."
+	if courier_talk.choice=="heal":gesture="A strip is set aside for your dressing."
+	elif courier_talk.choice=="brace":gesture="A strip is set aside for the cracked winch."
+	elif courier_talk.choice=="keep":gesture="The courier winds the strip back into the roll."
+	text(Vector2(420,114),gesture,20)
+	text(Vector2(420,149),"Safe side of the gate / arrival health %d of %d"%[courier_talk.facts.hp,courier_talk.facts.health_limit],18,AMBER)
+	draw_arc(Vector2(355,140),10,0,TAU,20,AMBER,3)
+	if courier_talk.choice in ["","keep"]:draw_line(Vector2(355,146),Vector2(380,156),PAPER,5,true)
+	panel(Rect2(50,220,1052,410))
+	if courier_talk.page=="road":
+		text(Vector2(80,264),"YOU: What happened on the road?",23,TEAL)
+		var lines:Array[String]=courier_talk.road_lines()
+		for i in lines.size():text(Vector2(80,321+i*47),lines[i],20)
+		text(Vector2(80,556),"The courier nods toward the road. 'That's what I remember.'",18,AMBER)
+	elif not courier_talk.choice.is_empty():
+		text(Vector2(80,264),"COURIER",22,AMBER)
+		var lines:Array[String]=courier_talk.reply_lines()
+		for i in lines.size():text(Vector2(80,314+i*47),lines[i],20)
+		text(Vector2(80,493),"Agreed: "+("BIND MY WOUND" if courier_talk.choice=="heal" else ("BRACE THE WINCH" if courier_talk.choice=="brace" else "KEEP YOUR STRIP")),24,TEAL)
+		text(Vector2(80,542),"The offer is settled. Reopening this conversation won't change it.",18,AMBER)
+		text(Vector2(80,586),"Prepare before departure. Retry restores that preparation; it never adds another strip.",17)
+	else:
+		text(Vector2(80,260),courier_talk.reply_lines()[0],22,AMBER)
+		text(Vector2(80,291),courier_talk.reply_lines()[1],19)
+		var names:=["1  Bind my wound","2  Brace the winch","3  Keep it for your own road"]
+		var prices:=["+1 return health, up to your fitted limit / no winch brace","Return winch: 3 integrity instead of 2 / arrival health unchanged","No aid / ordinary arrival health and winch / return remains available"]
+		for i in 3:
+			var id:String=CourierTalk.OPTIONS[i];var y:float=312+i*83
+			panel(Rect2(75,y,1002,72),Color("244a50") if courier_talk.draft==id else Color("182b3b"))
+			text(Vector2(95,y+29),names[i]+(" / no wound to bind" if not courier_talk.enabled(id) else ""),20,TEAL if courier_talk.enabled(id) else Color("87949b"))
+			text(Vector2(95,y+56),prices[i],17,AMBER)
+		text(Vector2(80,603),courier_talk.message if not courier_talk.message.is_empty() else "Choose 1, 2 or 3, then ENTER to confirm. Nothing is selected automatically.",16)
+	text(Vector2(70,674),"TAB  Ask about crossing / back    •    ESC  Close conversation",20,TEAL)
+	text(Vector2(70,711),"F2  Depart for return gate / only confirmed aid carries / conversation is optional",18,AMBER)
+	text(Vector2(70,746),"This agreement lasts until you leave this crossing.",16)
 
 func look_input(key: int) -> void:
 	character_look.paused=false

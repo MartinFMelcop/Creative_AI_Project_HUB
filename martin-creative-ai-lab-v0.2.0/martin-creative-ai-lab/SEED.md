@@ -1,6 +1,6 @@
 # SEED — Martin Creative AI Lab
 
-**Version:** 0.33.15
+**Version:** 0.33.16
 **Data-base:** 10 de outubro de 2026  
 **Autor e responsável pelo portfólio:** Martin Melcop Neto  
 **Working language:** English for new technical documentation, plans, code comments and Git messages; respond in the requested language (Brazilian Portuguese for continuous closeout). Preserve appropriate creative/source languages.
@@ -33,7 +33,7 @@ Keep useful demonstrations and tests available while migrating real consumers.
 
 [North Star](north-star/README.md) retains fourteen capability records and now has one
 local playable [crossing consumer](north-star/prototype/README.md), stage `local_prototype`.
-NS-C03 is adapted into this destination; no shared-kernel or production integration is claimed. Origin verification, laboratory
+NS-C03/04/07 methods are adapted into this destination; no shared-kernel or production integration is claimed. Origin verification, laboratory
 instrumentation, adaptation, integration and external validation remain distinct.
 Select engines/languages by requirements, not forced diversity or a predetermined stack.
 The portfolio continues to demonstrate real technologies; this transition is not its
@@ -45,7 +45,22 @@ does not merge fictional universes. Source details below are historical provenan
 retained origin behavior; current operation is defined by this direction, AGENTS,
 STATE and the single [continuous prompt](docs/prompts/CONTINUOUS_DEVELOPMENT.md).
 
-### Current increment — v0.33.15
+### Current increment — v0.33.16
+
+CREATIVE PRODUCTION: an optional arrival conversation connects actual escort facts
+and a finite gift to the next playable goal. F4 offers a wound dressing (+1 prepared
+health), a winch brace (+1 integrity), or leaving the courier's single strip untouched.
+Draft/confirm/discard and a factual crossing account keep the cost and decision explicit.
+Only confirmed aid carries; fixed checkpoint retry cannot accumulate it. Direct F2
+continuation and the old no-aid journey remain. [Execution](evidence/north-star-courier-conversation/RUN.json)
+separates native/OS behavior and inspected experience from absent player validation.
+
+One consumer/thirteen paths; NS-C04 now adapts P10's gated-choice/fact-owned-response
+method, alongside NS-C03/07. No fictional-universe/code import, origin extraction,
+new lab, account/reputation system or final narrative canon is claimed. The adaptive
+prompt remains unchanged and does not fix the next target.
+
+### Prior consumer increment — v0.33.15
 
 CREATIVE PRODUCTION: free session appearance now reaches the existing playable character.
 F3 on selection opens independent skin, hair and cloth-dye choices with explicit draft,
@@ -138,12 +153,12 @@ for continuous development and its full successor requirement.
 
 | Field | Current evidence |
 |---|---|
-| Baseline | `e7c7563e64fd91797e18ae81b01b00d0a8c692b0`; wrapper retained |
-| Current milestone | CREATIVE PRODUCTION: independent character appearance applied in the real two-goal consumer; [execution](evidence/north-star-character-look/RUN.json) |
+| Baseline | `b4feb72076bbc78ee9128eb43ccbb8bb7bc69217`; wrapper retained |
+| Current milestone | CREATIVE PRODUCTION: factual courier conversation and a finite aid choice affect the actual return goal; [execution](evidence/north-star-courier-conversation/RUN.json) |
 | Sources | Five byte-preserved supplied brain files; historical reference inventories unchanged |
 | Operational state | [STATE](docs/STATE.md), [origins](labs/origins.json), [brain integrity](brains/integrity.json) |
 | Portfolio | Technology capabilities, inspectable source/demonstrations and bounded execution evidence |
-| North Star | One local prototype/twelve code paths; fourteen entries, NS-C03/07 adapted, other twelve statuses unchanged; no final engine/MMO service |
+| North Star | One local prototype/thirteen code paths; fourteen entries, NS-C03/04/07 adapted, other eleven statuses unchanged; no final engine/MMO service |
 | Next selection | Reassess actual character-experience questions, laboratory instruments and portfolio value from new evidence |
 
 Registry and source gates establish structure/integrity, not gameplay quality or truth

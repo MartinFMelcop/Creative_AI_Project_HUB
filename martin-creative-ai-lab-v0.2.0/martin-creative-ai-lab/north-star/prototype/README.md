@@ -156,7 +156,7 @@ craft-to-build consumer, not a profession career, economy, inventory, persistent
 final item/class approval or independently validated player preference.
 
 ```bash
-python3 north-star/prototype/tools/verify_workshop.py --output /tmp/workshop.json --compare evidence/north-star-route-choice/workshop.json
+python3 north-star/prototype/tools/verify_workshop.py --output /tmp/workshop.json --compare evidence/north-star-courier-conversation/workshop.json
 # Optional actual Linux XTest window navigation; requires Xorg/dummy and local sockets:
 python3 north-star/prototype/tools/verify_workshop_input.py --output /tmp/workshop-input
 ```
@@ -197,6 +197,40 @@ opportunity difference. Fixed routes show feasibility, not optimal play or prefe
 
 ![Timed guard cue in the actual consumer](../../evidence/north-star-guard-techniques/raise-now.png)
 
+## Talk to the courier
+
+After a real escort arrival, **F4** opens a quiet optional conversation. **Tab** asks
+about the crossing: actual route, blocks/drawn bolts, sentinel shutdown and medicine
+ownership determine the courier's account. A recovered case is not reported as delivered.
+This conversation does not add a post-arrival medicine handoff.
+
+The courier offers one repair strip. Choose **1** to bind a wound (+1 prepared health,
+capped by the fitted limit), **2** to brace the return winch (3 starting integrity
+instead of 2), or **3** to leave it with the courier (no aid). Full-health dressing is
+unavailable. There is no default selection: a number only drafts the response;
+**Enter** confirms it once. **Esc** closes/discards an unconfirmed choice. Settings
+or focus interruption clears pending confirmation. Reopening preserves an agreement.
+
+**F2** departs for the return goal. Only confirmed aid applies, and it does not rewrite
+the completed escort health or earn another keepsake. Retry restores that prepared
+checkpoint; it never stacks another strip. Direct F2 continuation without conversation
+is still valid, and keeping the strip has the same mechanical journey as skipping.
+A new crossing or abandonment clears the agreement. No account, reputation meter,
+persistent quest or source fictional universe is added.
+
+```bash
+python3 north-star/prototype/tools/verify_conversation.py --output /tmp/conversation.json --compare evidence/north-star-courier-conversation/results.json
+# Optional Linux XTest keys after a fixture completes the actual escort:
+python3 north-star/prototype/tools/verify_conversation_display.py --output /tmp/conversation-display
+```
+
+[Bounded execution and inspected scenes](../../evidence/north-star-courier-conversation/RUN.json)
+separate native controls/eight matched two-goal journeys and real synthetic OS keys
+from independent player interpretation. The conversation adapts P10's gated-choice
+and fact-owned-response method in new native code; it does not import its characters,
+setting, implementation or full emotional/work-shift systems. Its repair fiction and
+creative significance remain experimental.
+
 ## Choose your character look
 
 On approach selection, **F3** opens skin, hair and cloth-dye choices independent of
@@ -218,7 +252,7 @@ The editor is available on selection, without live appearance changes or combat 
 ![Actual character-look draft and shared actor preview](../../evidence/north-star-character-look/editor-rest.png)
 
 ```bash
-python3 north-star/prototype/tools/verify_look.py --output /tmp/look.json --compare evidence/north-star-character-look/results.json
+python3 north-star/prototype/tools/verify_look.py --output /tmp/look.json --compare evidence/north-star-courier-conversation/look.json
 python3 north-star/prototype/tools/verify_look_display.py --baseline /path/to/prior.pck --output /tmp/look-display
 ```
 
@@ -510,7 +544,7 @@ or MMORPG persistence.
 ## Execute checks and reproduce delivery
 
 ```bash
-python3 north-star/prototype/tools/verify.py --godot godot --output /tmp/crossing-check.json --compare evidence/north-star-character-look/regressions.json
+python3 north-star/prototype/tools/verify.py --godot godot --output /tmp/crossing-check.json --compare evidence/north-star-courier-conversation/regressions.json
 ```
 
 The stdlib runner bounds owned engine processes, uses writable temporary XDG paths,
@@ -534,7 +568,7 @@ The source pack is reproducible with the matching engine:
 godot --headless --path north-star/prototype --script tools/pack.gd -- /absolute/path/crossing-drill.pck
 ```
 
-[Current execution evidence](../../evidence/north-star-character-look/RUN.json) identifies
+[Current execution evidence](../../evidence/north-star-courier-conversation/RUN.json) identifies
 baseline, source/result hashes, commands, refinements and limitations. The preserved
 [first-consumer record](../../evidence/north-star-crossing/RUN.json) documents the
 original crossing delivery; the [rehearsal record](../../evidence/north-star-rehearsal/RUN.json)

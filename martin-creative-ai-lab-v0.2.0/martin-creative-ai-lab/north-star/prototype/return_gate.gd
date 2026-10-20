@@ -15,18 +15,23 @@ var channel:=false
 var working:=-1
 var events:Array[Dictionary]=[]
 
-func begin(source, medicine: String) -> bool:
+func begin(source, medicine: String, aid: String="") -> bool:
 	if active or source.mode!="won" or source.hp<=0 or source.cargo<=0 or source.courier.x<Combat.FINISH:return false
+	if not aid in ["","heal","brace"] or (aid=="heal" and source.hp>=source.health_limit):return false
 	entry={"role":source.role,"style":source.guard_style,"outfit":source.outfit,
 		"hp":source.hp,"energy":source.energy,"route":source.route.kind,"medicine":medicine}
+	if not aid.is_empty():entry.aid=aid
 	active=true;retry();return true
+
+func cargo_limit() -> int:
+	return 3 if entry.get("aid","")=="brace" else 2
 
 func retry() -> void:
 	if not active:return
 	game=Combat.new();game.reset(entry.role,entry.style);game.fit_outfit(entry.outfit)
-	game.hp=entry.hp;game.energy=entry.energy
+	game.hp=mini(game.health_limit,entry.hp+(1 if entry.get("aid","")=="heal" else 0));game.energy=entry.energy
 	# The protected-contact fields represent this room's stationary device.
-	game.stationary_relay=true;game.courier=WINCH;game.cargo=2
+	game.stationary_relay=true;game.courier=WINCH;game.cargo=cargo_limit()
 	game.player=Vector2(700,390);game.facing=Vector2.RIGHT
 	raised=[false,false];progress=0;channel=false;working=-1;events.clear()
 	game.note("Courier safe. Raise both catches, protect the winch, then pass the gate.")

@@ -16,7 +16,8 @@
     "north-star/prototype/workshop.gd",
     "north-star/prototype/route.gd",
     "north-star/prototype/return_gate.gd",
-    "north-star/prototype/character_look.gd"
+    "north-star/prototype/character_look.gd",
+    "north-star/prototype/courier_talk.gd"
   ],
   "contribution_model": {
     "candidate": "Identified hypothesis; no transfer proof.",
@@ -25,7 +26,7 @@
     "integrated_into_north_star": "A genuine North Star consumer uses the capability with destination verification.",
     "externally_validated": "Relevant destination behavior/experience has independent evaluation; specify what and by whom."
   },
-  "evidence_boundary": "One local executable character consumer exists. NS-C03 combat and NS-C07 bounded sound methods are adapted into the prototype, not shared-kernel imports or production MMORPG integration. Twelve other states retain origin/candidate scope. Native/mixer checks and agent review are not independent human validation; final engine remains undecided.",
+  "evidence_boundary": "One local executable character consumer exists. NS-C03 combat, NS-C04 bounded consequential dialogue and NS-C07 sound methods are adapted into the prototype, not shared-kernel imports or production MMORPG integration. Eleven other states retain origin/candidate scope. Native/render/mixer checks and agent review are not independent human validation; final engine remains undecided.",
   "capabilities": [
     {
       "id": "NS-C01",
@@ -97,8 +98,8 @@
         "north-star/prototype/return_gate.gd",
         "north-star/prototype/character_look.gd"
       ],
-      "destination_scope": "One local courier encounter adapts P06 contact/commitment methodology into finite-resource frontal protection versus locked-line redirection, not shared-code import. Real-model rehearsal freezes causal review and starts a clean crossing. Guardian selects sustained Steady or 60-300ms Riposte with a confirmed 1.6s opening. Three eligible close counters stop this sentinel and double courier pace; gate/survival still own success and pure protection remains complete. Optional medicine needs actual timed recovery and a separate moving handoff while threats continue. Earned, voluntarily worn cosmetic marks and recoverable twelve-action remaps use editable device-local profiles. Independent session-only guard/interaction toggles preserve costs, timing and commitment; interruption/completion disarm intentions. Read-only original actor gestures expose actual events. This is bounded destination adaptation/production, not P10 dialogue/P07 atlas import, NS-C13 promotion, human identity/accessibility/balance validation, account/MMO integration or final class/canon approval. A reversible native preparation workshop makes one of two visibly worn health/mobility fittings for either approach; no origin economy import, profession progression, new capability promotion or persistent power. An optional committed courier detour adds real travel distance and partial geometric bolt interception with distinct ownership; no floor immunity, free opening, origin import or final geography approval. Optional continuation carries actual arrival health/energy and fitting into a stationary-winch, two-catch and alive-exit objective; existing paid defenses/counters serve both work-first and shutdown-first routes. No new capability promotion, canon or human validation. Free session appearance has independent skin, hair and cloth choices, shared actual drawing/action previews and explicit draft/apply/discard; default art and actual mechanics remain. No recognition, full creator or persistence claim.",
-      "destination_evidence": "evidence/north-star-character-look/RUN.json"
+      "destination_scope": "One local courier encounter adapts P06 contact/commitment methodology into finite-resource frontal protection versus locked-line redirection, not shared-code import. Real-model rehearsal freezes causal review and starts a clean crossing. Guardian selects sustained Steady or 60-300ms Riposte with a confirmed 1.6s opening. Three eligible close counters stop this sentinel and double courier pace; gate/survival still own success and pure protection remains complete. Optional medicine needs actual timed recovery and a separate moving handoff while threats continue. Earned, voluntarily worn cosmetic marks and recoverable twelve-action remaps use editable device-local profiles. Independent session-only guard/interaction toggles preserve costs, timing and commitment; interruption/completion disarm intentions. Read-only original actor gestures expose actual events. This is bounded destination adaptation/production, not P10 dialogue/P07 atlas import, NS-C13 promotion, human identity/accessibility/balance validation, account/MMO integration or final class/canon approval. A reversible native preparation workshop makes one of two visibly worn health/mobility fittings for either approach; no origin economy import, profession progression, new capability promotion or persistent power. An optional committed courier detour adds real travel distance and partial geometric bolt interception with distinct ownership; no floor immunity, free opening, origin import or final geography approval. Optional continuation carries actual arrival health/energy and fitting into a stationary-winch, two-catch and alive-exit objective; existing paid defenses/counters serve both work-first and shutdown-first routes. That continuation introduced no additional capability state, canon or human validation. Free session appearance has independent skin, hair and cloth choices, shared actual drawing/action previews and explicit draft/apply/discard; default art and actual mechanics remain. No recognition, full creator or persistence claim.",
+      "destination_evidence": "evidence/north-star-courier-conversation/RUN.json"
     },
     {
       "id": "NS-C04",
@@ -109,16 +110,23 @@
       "reference_collections": [
         "REF-RAVE-36AF165"
       ],
-      "contribution_status": "verified_in_origin",
+      "contribution_status": "adapted",
       "origin_validation": "execution_record_inspected",
       "scope": "Actual Python rescue rules and browser night/morning/noon consequences; dialogue decisions affect local resources and voluntary help.",
       "origin_evidence": [
         "projects/waystone-dialogue/adventure.py",
         "evidence/waystone-dialogue/HANDOVER_RUN.json"
       ],
-      "applicability_hypothesis": "Research whether dialogue, quests and consequential narrative serves a bounded North Star experiment; no consumer or reusable contract exists yet.",
-      "limits": "Current adaptation is distinct from historical tables; local branching is not persistent social simulation. Old CANON names/settings are not North Star lore.",
-      "next_validation": "Select an original short quest and verify consequence ownership, repeated participation and continuity in a genuine destination."
+      "applicability_hypothesis": "An optional factual courier conversation now carries one exclusive aid choice into the real return goal; perceived narrative significance and character identity still require player observation.",
+      "limits": "Original local dialogue and a session-only prepared checkpoint; no P10 fiction/code import, general narrative kernel, reputation, persistent social simulation or independent player validation.",
+      "next_validation": "Observe unassisted players recalling the actual crossing facts and explaining the mutually exclusive aid consequences before judging comprehension, significance or preference.",
+      "destination_consumer_paths": [
+        "north-star/prototype/arena.gd",
+        "north-star/prototype/courier_talk.gd",
+        "north-star/prototype/return_gate.gd"
+      ],
+      "destination_scope": "New native code adapts the inspected P10 precondition-before-mutation and fact-owned-response method. Actual escort facts feed an optional original courier conversation; deliberate confirmation allocates a single strip to capped prepared health or winch integrity, or leaves it with the courier. Only confirmed aid reaches the actual next objective; reopening/retry cannot accumulate benefits. Direct continuation and no-aid mechanics remain. No origin implementation/fiction, emotion model or persistent work-shift campaign is imported; this is bounded destination adaptation, not production integration or independent human validation.",
+      "destination_evidence": "evidence/north-star-courier-conversation/RUN.json"
     },
     {
       "id": "NS-C05",
@@ -185,7 +193,7 @@
         "north-star/prototype/sound.gd"
       ],
       "destination_scope": "New deterministic procedural mono cues adapt the P08/P06 semantic-event, bounded-voice and mute/pause method in the actual crossing and rehearsal. Source/PCK AudioServer capture verifies warnings and consequences, including actual block/draw, counter/damage and terminal outcomes. No old cue/music file or sound kernel is imported. Rhythm calibration, tempo derivatives and MMO/spatial mixing are not transferred. The actual threat voice also stops on sentinel shutdown while accepted counter audio remains; no new PCM or spatial claim.",
-      "destination_evidence": "evidence/north-star-character-look/RUN.json"
+      "destination_evidence": "evidence/north-star-courier-conversation/RUN.json"
     },
     {
       "id": "NS-C08",

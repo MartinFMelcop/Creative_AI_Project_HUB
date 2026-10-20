@@ -1,0 +1,50 @@
+{
+  "baseline_commit": "b4feb72076bbc78ee9128eb43ccbb8bb7bc69217",
+  "excluded_identity_fields": [
+    "consumer_hashes",
+    "native_observation_sha256"
+  ],
+  "scope": "Only executable identity fields differ. All retained mechanical, persistence and control observations match the executed original baseline.",
+  "suites": [
+    {
+      "checks": {
+        "failed": 0,
+        "passed": 358
+      },
+      "observations_equal": true,
+      "suite": "regressions.json"
+    },
+    {
+      "checks": {
+        "failed": 0,
+        "passed": 67
+      },
+      "observations_equal": true,
+      "suite": "gate.json"
+    },
+    {
+      "checks": {
+        "failed": 0,
+        "passed": 49
+      },
+      "observations_equal": true,
+      "suite": "routes.json"
+    },
+    {
+      "checks": {
+        "failed": 0,
+        "passed": 98
+      },
+      "observations_equal": true,
+      "suite": "workshop.json"
+    },
+    {
+      "checks": {
+        "failed": 0,
+        "passed": 48
+      },
+      "observations_equal": true,
+      "suite": "look.json"
+    }
+  ]
+}

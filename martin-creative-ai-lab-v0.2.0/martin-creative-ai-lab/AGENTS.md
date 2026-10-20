@@ -59,7 +59,7 @@ other justified portfolio opportunities. Select languages/engines by requirement
 available tools. Do not migrate software for quotas or default to browser demos. Share abstractions
 only for actual consumers. The North Star catalog separately tracks candidates,
 origin verification, adaptations, actual integration and external validation. Its
-local prototype currently has one executable character consumer; NS-C03 combat and NS-C07 sound methods are adapted,
+local prototype currently has one executable character consumer; the capability catalog records demonstrated adaptations,
 not shared-kernel imports or production integration. A lab instrument that drives
 origin code alone is not a North Star game consumer.
 

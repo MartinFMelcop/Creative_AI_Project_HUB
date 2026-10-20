@@ -15,16 +15,17 @@ settings, focus loss and completed work disarm active intentions. Hold stays def
 ## Actual stage and creative authority
 
 The catalog now records **local_prototype**: one executable
-[crossing encounter](prototype/README.md), twelve actual consumer code paths and fourteen
-capabilities. **NS-C03 combat and NS-C07 sound are adapted** in this destination; the other twelve contribution
-states remain unchanged. Godot 4.6.3 is the prototype tool; no final MMO engine or
+[crossing encounter](prototype/README.md), thirteen actual consumer code paths and fourteen
+capabilities. **NS-C03 combat, NS-C04 consequential dialogue and NS-C07 sound are adapted**
+in this destination; the other eleven contribution states remain unchanged. Godot 4.6.3 is the prototype tool; no final MMO engine or
 running multiplayer service is selected. The earlier combat-response lab remains an
 origin instrument, separately preserved.
 
 The player chooses frontal interception or redirection/mobility and protects the same
 courier to the far gate. [Living design](DESIGN.md) distinguishes author decisions,
 experimental mechanics, revisions and rejected alternatives. Current primary mode is
-CREATIVE PRODUCTION: free appearance applied in this existing consumer. Optional rehearsal
+CREATIVE PRODUCTION: an optional factual conversation commits one aid choice into the
+existing second goal. Free session appearance remains available. Optional rehearsal
 uses the same combat rules, preserves causal review and starts a clean normal crossing.
 The three prepared exercises do not demonstrate human learning or sustained resource
 management. [Prior threat-resolution execution](../evidence/north-star-sentinel-resolution/RUN.json) records protective completion, optional
@@ -112,7 +113,7 @@ promotion, approved geography or independent player validation is implied.
 After a real escort win, **F2** now offers an [optional second playable goal](prototype/README.md#an-optional-second-playable-goal).
 Actual remaining health/energy and fitting carry into two-catch work, stationary winch
 protection and a required alive exit; Enter still replays the escort. The courier stays
-safe. [Current execution](../evidence/north-star-return-gate/RUN.json) demonstrates four
+safe. [Prior return-gate execution](../evidence/north-star-return-gate/RUN.json) demonstrates four
 complete two-stage policies and source/PCK parity, not human identity/fun or MMO readiness.
 
 The [character-look workflow](prototype/README.md#choose-your-character-look) now offers
@@ -120,3 +121,11 @@ free independent skin, hair and cloth dye, previewed with the actual drawing and
 Apply/discard is deliberate; the chosen session look follows both goals without changing
 gear or combat. Closing resets appearance. [Execution](../evidence/north-star-character-look/RUN.json)
 supports functioning expression, not perceived identity or human aesthetic approval.
+
+
+After arrival, [F4 talks to the courier](prototype/README.md#talk-to-the-courier).
+The NPC recalls real route/medicine/defense facts and offers one strip: capped prepared
+health, extra winch integrity, or no aid. Draft, confirmation, cancellation and a fixed
+retry checkpoint connect the conversation to actual play. [Execution](../evidence/north-star-courier-conversation/RUN.json)
+supports bounded NS-C04 adaptation from P10 methodology, not code/fiction import,
+persistent social simulation or human narrative/identity validation.

@@ -1,57 +1,62 @@
 # Lab state
 
-**Updated:** 2026-10-20 UTC. **SEED:** 0.33.15. **Mode:** CREATIVE PRODUCTION.
-Initial branch `codex/north-star-return-gate-20261019`; local/fetched main baseline
-`e7c7563e64fd91797e18ae81b01b00d0a8c692b0`, no divergence. Tracked tree clean at start;
-unrelated root work/ preserved. Work branch `codex/north-star-character-look-20261019`.
-The environment restarted during verification; work survived and final checks rerun.
+**Updated:** 2026-10-20 UTC. **SEED:** 0.33.16. **Mode:** CREATIVE PRODUCTION.
+Initial branch `codex/north-star-character-look-20261019`; local/fetched main baseline
+`b4feb72076bbc78ee9128eb43ccbb8bb7bc69217`, no divergence. Tracked tree clean at start;
+unrelated root work/ preserved. Work branch `codex/north-star-courier-conversation-20261020`.
 
 ## Observable change and evidence
 
-The [actual consumer](../north-star/prototype/README.md#choose-your-character-look)
-now supports independent skin, hair and cloth-dye expression before play. F3 opens a
-draft; apply commits, discard leaves the previous look, defaults remain a draft.
-The same player drawing previews real movement, guard/draw, step and blade samples at
-play size and enlarged detail. Preview approach/fitting changes never replace actual
-choices. Role accents, weapons, fitted gear, earned marks and action cues retain their
-meanings. Applied appearance stays through workshop, rehearsal, replay, abandon and
-both actual goals. It resets on a fresh process; no new appearance save/account exists.
+After a genuine escort arrival, **F4** opens an optional original
+[courier conversation](../north-star/prototype/README.md#talk-to-the-courier).
+The courier recalls actual route, interception/redirection, shutdown and medicine
+facts. One repair strip can bind the player's wound before departure (+1 prepared
+health, capped by fitting), brace the return winch (3 integrity instead of 2), or
+remain with the courier. The two forms of aid are mutually exclusive.
 
-[Execution](../evidence/north-star-character-look/RUN.json) records 48 new native
-controls/four full matched journeys and retained mechanical regressions. Default and
-custom journeys have exactly equal outcomes. Source/PCK render and keyboard evidence
-remain distinct from agent artistic judgment and independent human validation.
-Two default gameplay images match the prior PCK byte-for-byte on the tested renderer.
+Numbers select a draft; Enter confirms once, Escape discards an unconfirmed choice,
+and Tab asks about the crossing. Full-health dressing is unavailable. Settings/focus
+interruptions disarm confirmation. Only confirmed aid reaches departure; reopening
+cannot obtain another strip, and retry restores a fixed prepared checkpoint without
+stacking benefits. The completed escort state and keepsakes remain unchanged.
+F2 still permits direct continuation without conversation or aid.
 
-Image inspection found a real preview defect: its paid blade action executed while
-the observer missed the first event on model replacement. Attach before the first
-action and cover both direct replacement and natural loop reset. Move enlarged art
-above its legend; use a horizontal paid-step sample to keep the isolated card clear.
-Actual gameplay directions and mechanics are unchanged.
+[Execution](../evidence/north-star-courier-conversation/RUN.json) separates native
+controls/eight matched complete two-goal journeys, rendered source/PCK observations,
+and fixture-assisted real OS conversation keys from agent creative assessment.
+Keeping the strip and skipping the conversation have exactly equal mechanical
+journeys. Aid changes its promised resource, not both. Existing appearance, fitting,
+controls and original no-aid behavior remain covered by retained checks.
 
 ## Value, authority and limits
 
-Compared another adventure objective, further combat/route refinement, a P10-style
-dialogue aftermath and participant research without available participants. Free
-appearance closes the observed coupling between role/gear and presentation; actual
-player-recognizable identity and aesthetic preference remain unverified. This is a
-bounded expression capability in existing play, not proof of the entire identity
-fantasy, general customization, final classes/peoples, fun, accessibility or market fit.
+Compared appearance persistence, another combat/task refinement, further Waystone
+content, Tokyo80s production and the prior browser timeout investigation. The actual
+consumer had no NPC interaction after its actions: medicine/route facts ended as
+result labels. A small consequential conversation adds an executable form of agency
+without a general dialogue framework or another laboratory.
 
-CRE-001 D anchors author identity; CRE-009/029/066 H inform independent appearance and
-compatibility, without becoming canon. ENG-023 separates reliable creative mechanisms
-from aesthetic quality; SCI-014 bounds identity inference from pixel/state checks.
-Creation high; engineering/science medium. Agent review is not human validation.
+CRE-005 A informs an intelligible exclusive cost and actual consequence; CRE-041/048 H
+inform quieter aftermath and recoverable, idempotent continuity without importing
+candidate fiction. ENG-005 supplies state/conservation guards; SCI-017 supplies matched
+controls. Creation high; engineering/science medium. No agent assessment establishes
+human comprehension, preference, moral significance, identity, balance or enjoyment.
 
-The current author supplied the adaptive 19-section prompt during this increment.
-It replaces fixed category ordering with value/opportunity-cost comparison and
-proportional knowledge use. AGENTS, consultation guide and SEED align; the single full
-successor/publication contract remains. Next selection is open across meaningful
-product, creative, technical, laboratory and portfolio opportunities.
+P10's inspected gated-choice/pre-turn-fact method is adapted into new native code;
+its characters, setting, emotional model and source implementation are not imported.
+NS-C04 becomes adapted alongside NS-C03/07 only with bound destination execution.
+One local consumer/thirteen code paths and fourteen capability entries remain;
+eleven contribution states are unchanged. Stage stays local_prototype, not production
+integration or persistent social simulation.
 
-One local consumer/twelve code paths; fourteen contribution states unchanged, NS-C03/07
-adapted. No new lab or origin migration: P01–P05/P07/P08/P10/P11 preserved_pending_extraction,
-P06 pilot_instrumented, P09 seed_only. Existing sources, consumers, licenses and Brain
-pins remain. Portfolio gains an inspectable native appearance workflow; existing
-character-keepsake knowledge records the preview-observer finding. No .NET execution
-is claimed locally; full remote CI and publication are verified separately at closeout.
+No new lab or origin extraction: P01–P05/P07/P08/P10/P11 remain
+preserved_pending_extraction, P06 pilot_instrumented, P09 seed_only. Sources, licenses,
+working consumers and Brain pins remain unchanged. The portfolio gains an inspectable
+narrative-to-gameplay workflow; [derived knowledge](../knowledge/narrative-cooperation.md)
+records its bounded conservation/continuity lesson. No account, reputation, appearance
+save, post-arrival medicine handoff, final canon or external player validation is added.
+
+The supplied request matches the current adaptive operational prompt after newline
+normalization. It served this selection and remains unchanged; next work is not fixed
+to this conversation or prototype. Publication and remote CI are verified separately
+at closeout; a local passing suite is not CI success.

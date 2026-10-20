@@ -1,0 +1,660 @@
+{
+  "baseline_artifact": {
+    "commit": "b4feb72076bbc78ee9128eb43ccbb8bb7bc69217",
+    "git_path": "north-star/prototype/dist/crossing-drill.pck",
+    "sha256": "cfb635aca32cc375e567b63bdd5da991f6cd35787eed7d46567430e1986586ec",
+    "size_bytes": 247004
+  },
+  "baseline_commit": "b4feb72076bbc78ee9128eb43ccbb8bb7bc69217",
+  "before_after": {
+    "actual_input": "Source/PCK OS F4, Tab, draft, discard, confirm, F2, reset; fixture first completes the actual escort and freezes arrival/gate entry to isolate receipt.",
+    "choices": "heal adds one capped prepared health only; brace adds one initial winch integrity only; keep equals direct skip.",
+    "full_health": "Actual undamaged escort, rejected dressing and accepted brace inspected in two additional scene samples.",
+    "new_controls": 110,
+    "new_matched_complete_journeys": 8,
+    "retained_controls": 620,
+    "retained_observations_equal": true,
+    "sound": "Actual source/PCK mixer, cue ownership, PCM identity and mute/pause checks pass."
+  },
+  "branch": "codex/north-star-courier-conversation-20261020",
+  "capability_ids": [
+    "NS-C03",
+    "NS-C04",
+    "NS-C07"
+  ],
+  "checks": {
+    "failed": 0,
+    "passed": 730
+  },
+  "commands": [
+    {
+      "command": [
+        "python3",
+        "north-star/prototype/tools/verify.py",
+        "--output",
+        "/tmp/regressions.json"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "python3",
+        "north-star/prototype/tools/verify_gate.py",
+        "--output",
+        "/tmp/gate.json"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "python3",
+        "north-star/prototype/tools/verify_routes.py",
+        "--output",
+        "/tmp/routes.json"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "python3",
+        "north-star/prototype/tools/verify_workshop.py",
+        "--output",
+        "/tmp/workshop.json"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "python3",
+        "north-star/prototype/tools/verify_look.py",
+        "--output",
+        "/tmp/look.json"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "python3",
+        "north-star/prototype/tools/verify_conversation.py",
+        "--output",
+        "/tmp/results.json"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "python3",
+        "north-star/prototype/tools/verify_sound.py",
+        "--output",
+        "/tmp/sound.json"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "python3",
+        "north-star/prototype/tools/verify_conversation_display.py",
+        "--output",
+        "/tmp/conversation-display"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "python3",
+        "tools/validate_repo.py"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "python3",
+        "tools/reference_library.py",
+        "check"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "python3",
+        "tools/brain_query.py",
+        "check"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "actionlint",
+        ".github/workflows/lab-checks.yml"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "python3",
+        "tools/check_manifest.py"
+      ],
+      "exit_code": 0
+    }
+  ],
+  "consumer_paths": [
+    "north-star/prototype/arena.gd",
+    "north-star/prototype/combat.gd",
+    "north-star/prototype/rehearsal.gd",
+    "north-star/prototype/keepsakes.gd",
+    "north-star/prototype/errand.gd",
+    "north-star/prototype/controls.gd",
+    "north-star/prototype/sound.gd",
+    "north-star/prototype/actors.gd",
+    "north-star/prototype/workshop.gd",
+    "north-star/prototype/route.gd",
+    "north-star/prototype/return_gate.gd",
+    "north-star/prototype/character_look.gd",
+    "north-star/prototype/courier_talk.gd"
+  ],
+  "continuity": {
+    "laboratories": "No new lab or maturity claim; derived narrative cooperation finding records actual evidence.",
+    "north_star": "One consumer/thirteen code paths, local_prototype; NS-C04 now adapted alongside NS-C03/07. Eleven other contribution states unchanged.",
+    "origins": "No extraction/status change: P01-P05/P07/P08/P10/P11 preserved_pending_extraction, P06 pilot_instrumented, P09 seed_only.",
+    "portfolio": "Inspectable original native narrative-to-gameplay choice and reproducible instruments.",
+    "prompt": {
+      "changed": false,
+      "reason": "The supplied adaptive request matches the maintained prompt after newline normalization; current lifecycle served this work.",
+      "sha256": "0e4ec5a2766b204e7f89c6bafac176fd2e69ea90925834fd4ce05fba536a2ecc"
+    }
+  },
+  "creative_assessment": {
+    "inspection": "Offer, actual road facts, deferred dressing, braced return and full-health offer/brace scenes inspected. Static state illustrations, not animated NPC cooperation.",
+    "judgment": "Costs, optionality and confirmation are visible and enacted. Narrative significance, attachment and identity remain unvalidated.",
+    "refinements": [
+      "Make confirmed header/roll state agree with the set-aside strip and future departure.",
+      "Full-health brace initially claimed a wound. Use factual unchanged-health prose and inspect an actual unwounded arrival."
+    ],
+    "review": "Implementing and reviewing agents; no independent human participants."
+  },
+  "failure_controls": {
+    "negative_native": "Unavailable/unknown/duplicate confirmation, stale draft, focus/settings, false arrival, no-aid parity, source isolation and retry accounting exercised.",
+    "prior_pack": "Actual exit1; missing conversation check resource; no success artifact."
+  },
+  "kind": "destination_execution",
+  "knowledge": {
+    "creation": {
+      "effect": "A legitimate exclusive cost, quiet aftermath and recoverable remembered consequences. A stays direction; H and original strip fiction remain experimental.",
+      "ids": [
+        "CRE-005",
+        "CRE-041",
+        "CRE-048"
+      ],
+      "relevance": "high"
+    },
+    "engineering": {
+      "effect": "Separate facts, draft, confirmation and fixed checkpoint ownership; conserve one offered strip.",
+      "ids": [
+        "ENG-005"
+      ],
+      "relevance": "medium"
+    },
+    "method_precedent": "P10 availability before mutation and responses from actual pre-turn facts, inspected in source; new native implementation, no source fiction/code imported.",
+    "science": {
+      "effect": "Matched prior/no-aid controls and scoped observations; multiple traces are not independent participants.",
+      "ids": [
+        "SCI-017"
+      ],
+      "relevance": "medium"
+    }
+  },
+  "limitations": [
+    "Session-only aid; no account, saved quest, reputation, personality model or post-arrival medicine handoff.",
+    "Fixed policies and synthetic OS input are not human comprehension, attachment, identity, preference, moral significance, accessibility, balance or enjoyment.",
+    "Eight source/PCK pixel samples use one software display/backend. No general visual equivalence or physical audio/input latency claim.",
+    "P10 method adaptation is not shared code extraction, fiction transfer, production integration or a general quest framework.",
+    "No final engine, multiplayer, MMO scale, market evidence or measured token/cost saving is established."
+  ],
+  "mode": "CREATIVE PRODUCTION",
+  "opportunity": {
+    "alternatives": [
+      "Appearance persistence adds continuity but no new agency and requires profile migration.",
+      "Another combat/task refinement repeats the current interaction envelope.",
+      "Waystone/Tokyo80s remain useful portfolio consumers; no stronger inspected defect justified automatic expansion.",
+      "A prior browser timeout is real but its cause remains unestablished; automation convenience does not decide product value."
+    ],
+    "audience": "Users of the existing executable local character prototype.",
+    "selected": "One bounded aftermath conversation with factual recall, exclusive cost and destination behavior.",
+    "weakness": "Actual route/medicine/defense outcomes ended as result labels; no NPC interaction changed the next playable goal."
+  },
+  "protected_sources": {
+    "brains/BIBLIOTECA_DE_CONHECIMENTO_APLICADO.md": "2726e3f8d6c2c95acc015fc527437bc8de974170d9a507f62e6e3c289a61eae1",
+    "brains/CATALOGO_DE_CONSULTA.json": "e8927568f2f63f9d5778778a7c8652c57cfedb248cea6d1b659023df80d4119c",
+    "brains/CREATIVE_BRAIN.md": "41efe409375b09ae29006bf475ae5a2221d532d67c1dcbbe0df98b4b1afa8bc1",
+    "brains/ENGINEERING_BRAIN.md": "975b8741f767bc1dcaf3c551e5516a79bcd78d5d8e6efd8a4965d9f3cf37971f",
+    "brains/SCIENTIFIC_BRAIN.md": "4a8dff7d1bc23f06421ffec4a07fcb66b745423f3728bc2cb11dc750a5e38958",
+    "brains/integrity.json": "1afe93d07e7bd784b6521264e823833ed7e692a052d2e667a6d47456ce99a0cb"
+  },
+  "python_regressions": {
+    "failed": 0,
+    "passed": 114,
+    "suites": {
+      "test_brain_query": 31,
+      "test_check_manifest": 11,
+      "test_reference_library": 42,
+      "test_validate_repo": 27,
+      "test_verify": 3
+    }
+  },
+  "recorded_at_utc": "2026-10-20T19:35:49.495997+00:00",
+  "repository_validation": {
+    "actionlint": "PASS:1.7.7 workflow semanticcheck.",
+    "brains": "PASS: five protected files andpins unchanged; inheritedfragmentwarnings retained.",
+    "manifest": "PASS: 1525 maintained lab files; exact Git inventory and SHA256 coverage.",
+    "python": {
+      "failed": 0,
+      "passed": 114,
+      "suites": {
+        "test_brain_query": 31,
+        "test_check_manifest": 11,
+        "test_reference_library": 42,
+        "test_validate_repo": 27,
+        "test_verify": 3
+      }
+    },
+    "references": "PASS:5 records,607 preserved sources,18 derivedPDF texts,140 exclusions,14capabilities.",
+    "repository": "PASS: 11 projects,15 transfers,11 assets,2 legacy sources;647 local links."
+  },
+  "result_artifacts": [
+    {
+      "local_path": "evidence/north-star-courier-conversation/baseline-controls.json",
+      "sha256": "014cf3d0566aaf9ca76753a11e67c9a5fa840d29525f9701dea348e11b3d5306",
+      "size_bytes": 1061
+    },
+    {
+      "local_path": "evidence/north-star-courier-conversation/braced-return.png",
+      "sha256": "1ab72dd65e5b8bb5ed59414bf0bd288899a2889205c6cc1ed9c5f32e65f5407d",
+      "size_bytes": 82899
+    },
+    {
+      "local_path": "evidence/north-star-courier-conversation/courier-heal-confirmed.png",
+      "sha256": "5efdad24398e625796663b30d4aeb0615c16467af9605f1c580a9680782bcdf3",
+      "size_bytes": 91868
+    },
+    {
+      "local_path": "evidence/north-star-courier-conversation/courier-offer.png",
+      "sha256": "62741d7203fed5093629aeae61f94033417bc2c13260ac36944f2d9b4fbf4950",
+      "size_bytes": 101727
+    },
+    {
+      "local_path": "evidence/north-star-courier-conversation/courier-road.png",
+      "sha256": "f7f6ffb90f9518657ae43499d610bed704b3eab433e5654eb6ed72fefe83bc6b",
+      "size_bytes": 93161
+    },
+    {
+      "local_path": "evidence/north-star-courier-conversation/display.json",
+      "sha256": "bfc5aa1c5efcab7af4016c9c308bdd8447d428e59f65e1b092234f2b1c18a89e",
+      "size_bytes": 2652
+    },
+    {
+      "local_path": "evidence/north-star-courier-conversation/frames.json",
+      "sha256": "aca1ae3faa049dc3e0a420430a65bf2d367321e7ebb76404c7992d712cb9b9c1",
+      "size_bytes": 26905
+    },
+    {
+      "local_path": "evidence/north-star-courier-conversation/full-health-brace-confirmed.png",
+      "sha256": "c839ac222a2a5fcdc86f04692b4310fca28c83f94a9d099f269d6e60ada832e4",
+      "size_bytes": 89357
+    },
+    {
+      "local_path": "evidence/north-star-courier-conversation/gate.json",
+      "sha256": "26f9603a9c3875758a177cb9d08c7802eece6254412c163572ef88903ff4fe89",
+      "size_bytes": 2726
+    },
+    {
+      "local_path": "evidence/north-star-courier-conversation/look.json",
+      "sha256": "1b35d28957c1e659745581e4d78aa39834fa7b2f01e5622a1f7c36c19d32c6dd",
+      "size_bytes": 1639
+    },
+    {
+      "local_path": "evidence/north-star-courier-conversation/negative-controls.json",
+      "sha256": "932f320d6b7933ac040be5f69c30715567a3e523bdaddf1d8465a98fe609d36a",
+      "size_bytes": 558
+    },
+    {
+      "local_path": "evidence/north-star-courier-conversation/regressions.json",
+      "sha256": "1bf1f131ff60eb0dae0323fe9947e705e903663d3ae8812c5f8260dc37681ac7",
+      "size_bytes": 107056
+    },
+    {
+      "local_path": "evidence/north-star-courier-conversation/results.json",
+      "sha256": "051efe9303961437e4d729b6b8bdbb9aa1658065af6418a5792543ed83ab63a8",
+      "size_bytes": 6113
+    },
+    {
+      "local_path": "evidence/north-star-courier-conversation/routes.json",
+      "sha256": "7143c53b197350e3e1e6229412df6bac74d518e49838152de5df8682417dbaf4",
+      "size_bytes": 1659
+    },
+    {
+      "local_path": "evidence/north-star-courier-conversation/sound.json",
+      "sha256": "719faa5a977bf5f208ef352ca8276b1a8fae127d199795d3626dfcd6a01001e6",
+      "size_bytes": 34789
+    },
+    {
+      "local_path": "evidence/north-star-courier-conversation/workshop.json",
+      "sha256": "fb6f19ea1d9963293e485ed81f55690954f9f9ac2b696fb2454041c623651bd5",
+      "size_bytes": 1701
+    }
+  ],
+  "runtime": "Godot 4.6.3.stable.official.7d41c59c4 / Linux x86_64 / Xorg dummy / Dummy audio; Python 3 stdlib",
+  "schema_version": 1,
+  "scope": "Original optional courier conversation, factual crossing recall, one deliberately confirmed aid choice and real return-goal consumption; source/PCK, matched complete journeys, rendered scenes and explicitly fixture-assisted OS keys.",
+  "source_artifacts": [
+    {
+      "local_path": "north-star/prototype/actors.gd",
+      "sha256": "f4f1cb91251d0bd37ed76ff8c965ab8bc4e15d804597e7caf0fc57c2d296cda3",
+      "size_bytes": 11184
+    },
+    {
+      "local_path": "north-star/prototype/arena.gd",
+      "sha256": "b0d6a74489d0a71d6ef13c710ebde1e8cd15d629a91a970a64f596c93c723072",
+      "size_bytes": 47676
+    },
+    {
+      "local_path": "north-star/prototype/arena.tscn",
+      "sha256": "f794c485663f0ed318ddce6bb7a62bc9b2dbd3af02be4f166cca962c29382591",
+      "size_bytes": 154
+    },
+    {
+      "local_path": "north-star/prototype/character_look.gd",
+      "sha256": "53a2c9eb35d029c1faab43fe117a2abac0f121f423176093e1a481da1af8baf4",
+      "size_bytes": 2760
+    },
+    {
+      "local_path": "north-star/prototype/combat.gd",
+      "sha256": "829c922b86cadbc5a34c4367d7cab73f685e674449769d71a37b5a7450461cbb",
+      "size_bytes": 14728
+    },
+    {
+      "local_path": "north-star/prototype/controls.gd",
+      "sha256": "151bb8867ba735c3b0b2a0048d312472dfe32359d2409825fa4817cbd0a9e9b8",
+      "size_bytes": 9867
+    },
+    {
+      "local_path": "north-star/prototype/courier_talk.gd",
+      "sha256": "986c26d0cba960fcf4e678035b6893dd5a106d49214c9ba9f67ca7f22caf5d56",
+      "size_bytes": 3899
+    },
+    {
+      "local_path": "north-star/prototype/dist/crossing-drill.pck",
+      "sha256": "86dc1fa26c5353b23948600dd2f9413e176e5d566b161aa5a687f9e98b3cf86d",
+      "size_bytes": 273984
+    },
+    {
+      "local_path": "north-star/prototype/errand.gd",
+      "sha256": "2a2392fa86bd12544eba5f60ad74d35592c7d6fa207373ec11a1928a9e33e601",
+      "size_bytes": 3831
+    },
+    {
+      "local_path": "north-star/prototype/keepsakes.gd",
+      "sha256": "d7790dddbd25904069b0c1a6d5edb2f7d01bc02a375d608a4ec5a25262ddb6c9",
+      "size_bytes": 5848
+    },
+    {
+      "local_path": "north-star/prototype/project.godot",
+      "sha256": "8d4755b58f1179a9b5ec431579177371e784bca9703a17c88f4c7a6d4ee9385c",
+      "size_bytes": 414
+    },
+    {
+      "local_path": "north-star/prototype/rehearsal.gd",
+      "sha256": "507a27b7832cfc79522396132a0a5f3f32fec34dd443a8a35fc21102080252c9",
+      "size_bytes": 3187
+    },
+    {
+      "local_path": "north-star/prototype/return_gate.gd",
+      "sha256": "817e88308bbf878569a7c7a76ae83e38623f9398c7f6416c0ba3a1cd522fa3bc",
+      "size_bytes": 4109
+    },
+    {
+      "local_path": "north-star/prototype/route.gd",
+      "sha256": "2936029e1a52933fff0141b546f85fbc53a57b7e6c5301eaef5cabac06a05901",
+      "size_bytes": 2304
+    },
+    {
+      "local_path": "north-star/prototype/sound.gd",
+      "sha256": "4404169ebb2d1711f20e6023292712bb2051f4075c4039d9e2db725b4b8fa80a",
+      "size_bytes": 4116
+    },
+    {
+      "local_path": "north-star/prototype/tests/actor_capture.gd",
+      "sha256": "762c21bc79f9b56664525273470e93b005b6a995f0594f4e8e6f9ad447933e96",
+      "size_bytes": 3933
+    },
+    {
+      "local_path": "north-star/prototype/tests/actor_checks.gd",
+      "sha256": "52f503ff8f98f5dfab8e44603887c38cb6c3a65b01a77d378e84437d4d9987e9",
+      "size_bytes": 6228
+    },
+    {
+      "local_path": "north-star/prototype/tests/controls_checks.gd",
+      "sha256": "aec1a8a26e262a3830714f9fa748923d8b27b9e51d2e93fa6b3b74c2ee3acf0c",
+      "size_bytes": 9525
+    },
+    {
+      "local_path": "north-star/prototype/tests/controls_restart.gd",
+      "sha256": "066f641273c045a97ea1ee6bd2ddd9469e452d6edab80bc36a426927da431b61",
+      "size_bytes": 1134
+    },
+    {
+      "local_path": "north-star/prototype/tests/conversation_capture.gd",
+      "sha256": "88ce5e2e5739991e7ec245374c1c26377ae5728c5b484fcff4db55d915b401dc",
+      "size_bytes": 4426
+    },
+    {
+      "local_path": "north-star/prototype/tests/conversation_checks.gd",
+      "sha256": "d3a6fdfcba70ba3fb61d1516e249b455ae20c90c6a2bd60b3ee0be23c6e2b9e8",
+      "size_bytes": 12998
+    },
+    {
+      "local_path": "north-star/prototype/tests/errand_checks.gd",
+      "sha256": "2f04534e200e82f08e01127a3b31c5dafacb5151c9635038bf6c14d33ac89094",
+      "size_bytes": 6353
+    },
+    {
+      "local_path": "north-star/prototype/tests/errand_policy.gd",
+      "sha256": "74f4d20501771d8697e79629aaa6e86cb5056211eae0ab860aa593cb5190cb9e",
+      "size_bytes": 655
+    },
+    {
+      "local_path": "north-star/prototype/tests/gate_checks.gd",
+      "sha256": "3fba7468062a64e46e853fdc557a9425103485580aae7b1704eff11214479453",
+      "size_bytes": 8948
+    },
+    {
+      "local_path": "north-star/prototype/tests/gate_input_fixture.gd",
+      "sha256": "a87f8c7cc4bcca1dc78049b7c051a0d04d8208bbe3dd8d56382f2fafdbd80337",
+      "size_bytes": 619
+    },
+    {
+      "local_path": "north-star/prototype/tests/gate_policy.gd",
+      "sha256": "a40d249e877446f7da09890e4c84d1c3243ef4ea110de65b033d7bd8710680ed",
+      "size_bytes": 1187
+    },
+    {
+      "local_path": "north-star/prototype/tests/gate_transition.gd",
+      "sha256": "2048fdf378d3b4c98788b01b276682301b13e59d9974d80fbe3ea0ed90400899",
+      "size_bytes": 1117
+    },
+    {
+      "local_path": "north-star/prototype/tests/guard_capture.gd",
+      "sha256": "e6c60d8811c8e704dbfa20826202f645f576b3c9f78f1fb6fc90642a0604b519",
+      "size_bytes": 2903
+    },
+    {
+      "local_path": "north-star/prototype/tests/guard_checks.gd",
+      "sha256": "cf2a8103bb4aa7fc8b61714ad36b43fbdd69d1a133f10b4530e863806ef3ed9b",
+      "size_bytes": 8738
+    },
+    {
+      "local_path": "north-star/prototype/tests/keepsake_checks.gd",
+      "sha256": "a8614cb0592ff8c403185b82f702c289abd42b78c783f4bc8f06d2ecaf211fcf",
+      "size_bytes": 9709
+    },
+    {
+      "local_path": "north-star/prototype/tests/keepsake_restart.gd",
+      "sha256": "8e9f107c310836324c51b1cbe1b2db618feadbd98b0cebbef12f75f39ab112c2",
+      "size_bytes": 1097
+    },
+    {
+      "local_path": "north-star/prototype/tests/look_capture.gd",
+      "sha256": "36b5b07b2cbf45f4433fd6954b6329fe5408e6fb883b4151574f5aab4e089d3e",
+      "size_bytes": 2865
+    },
+    {
+      "local_path": "north-star/prototype/tests/look_checks.gd",
+      "sha256": "697c25cb5f6bd1d5cb499a56915152f38c59d112e96765fb681292715a0c7242",
+      "size_bytes": 6940
+    },
+    {
+      "local_path": "north-star/prototype/tests/policy.gd",
+      "sha256": "646f0758a211e84ffbfd4632460c7d1fc549cbb3b552801ee2508774a5a63e29",
+      "size_bytes": 979
+    },
+    {
+      "local_path": "north-star/prototype/tests/rehearsal_checks.gd",
+      "sha256": "0286d8997fdf1bd7ebad0b72a7283651678cfa30f85b2bd55e98e995c3f9b1f5",
+      "size_bytes": 6003
+    },
+    {
+      "local_path": "north-star/prototype/tests/render_gate.gd",
+      "sha256": "7d5d8e73463fff65f2c1638757b7cf2a6a2bf995a41e5c45772edcf1fe1fedeb",
+      "size_bytes": 1945
+    },
+    {
+      "local_path": "north-star/prototype/tests/render_journey.gd",
+      "sha256": "b0de7bc7cdd8795d55c0fdb8248c277c38ead3299714e7290c70df1a2c114e49",
+      "size_bytes": 992
+    },
+    {
+      "local_path": "north-star/prototype/tests/render_keepsakes.gd",
+      "sha256": "eafb1a071de871af521712b32f095a2d6c46f3424e85590c9e43c52310850359",
+      "size_bytes": 1502
+    },
+    {
+      "local_path": "north-star/prototype/tests/render_medicine.gd",
+      "sha256": "0716b982847fbd47dc596954c2f7a98f72e30e0fd6356aacc371e139be8455f1",
+      "size_bytes": 2215
+    },
+    {
+      "local_path": "north-star/prototype/tests/render_rehearsal.gd",
+      "sha256": "fc268d9764cfdd52874c8ea9f2f96aaeaa6f98ebede22dcbf412fe4692c6de42",
+      "size_bytes": 2254
+    },
+    {
+      "local_path": "north-star/prototype/tests/render_routes.gd",
+      "sha256": "00d61a645e6ef22d880acd59cf8b87bc8954bd653e1fe82faed12b7e861acc33",
+      "size_bytes": 1570
+    },
+    {
+      "local_path": "north-star/prototype/tests/resolution_checks.gd",
+      "sha256": "15f40a5ff8b2d9350b78c6c3e064ffdab89fead0f761456fec75a1326edce8a0",
+      "size_bytes": 7842
+    },
+    {
+      "local_path": "north-star/prototype/tests/resolution_routes.gd",
+      "sha256": "fa5cfbd5f42c6ef59fc18fb85d61c2bcca2cd290395760a695bb6cc1575029e5",
+      "size_bytes": 2411
+    },
+    {
+      "local_path": "north-star/prototype/tests/route_checks.gd",
+      "sha256": "549272698da6d2e6e07ccf2e13a98fa5ee9b9c5df11c0ef8d1e65c49aa196d83",
+      "size_bytes": 7366
+    },
+    {
+      "local_path": "north-star/prototype/tests/run_checks.gd",
+      "sha256": "181b897d531fa7d795d8d1f173ef3002023cf3af449ca76984ea7c23f45fe6f8",
+      "size_bytes": 8454
+    },
+    {
+      "local_path": "north-star/prototype/tests/sound_capture.gd",
+      "sha256": "1a0df88986619fbee9eb48c078726217409acb853e8821f2fcc3c660ceb07ad1",
+      "size_bytes": 5091
+    },
+    {
+      "local_path": "north-star/prototype/tests/sound_checks.gd",
+      "sha256": "c5c3496c2e5ef796399d3884b34b7547c55c4af9438a19220e484977dd2d0569",
+      "size_bytes": 5627
+    },
+    {
+      "local_path": "north-star/prototype/tests/toggle_checks.gd",
+      "sha256": "39d373fdfbb80fa24d90578eed7e7c3b525edd865cc8fd6d8f884e35d1ec6bc7",
+      "size_bytes": 10905
+    },
+    {
+      "local_path": "north-star/prototype/tests/toggle_fixture.gd",
+      "sha256": "c18cb92f89c7a21c70c6708b868153a60f712c65d50e077aaca4e4b1d1ad92a3",
+      "size_bytes": 375
+    },
+    {
+      "local_path": "north-star/prototype/tests/workshop_checks.gd",
+      "sha256": "947d19ce8993d35e2e19e954da906b94211eb3165c4c61544f23f4ee80b71383",
+      "size_bytes": 6130
+    },
+    {
+      "local_path": "north-star/prototype/tools/pack.gd",
+      "sha256": "cc3e38e67434ceb62e0220207cb68dd432bacc53556ecb73da63a0335b03f7e8",
+      "size_bytes": 1407
+    },
+    {
+      "local_path": "north-star/prototype/tools/verify.py",
+      "sha256": "8ef11bf0384230d7d16e53fb7c0bb883182242b931bc6200ccad140b4f37aad7",
+      "size_bytes": 7514
+    },
+    {
+      "local_path": "north-star/prototype/tools/verify_conversation.py",
+      "sha256": "3b7042827502016bd1b6cf8343fad24b05db12d5b11d2702beb6253d6831023a",
+      "size_bytes": 5328
+    },
+    {
+      "local_path": "north-star/prototype/tools/verify_conversation_display.py",
+      "sha256": "bfc0846e81313be357a2707e8844ff563997373add6eecbdfae02831e0af4877",
+      "size_bytes": 9920
+    },
+    {
+      "local_path": "north-star/prototype/tools/verify_gate.py",
+      "sha256": "3a8bda92c26d4f4aab5ce7c69822a64452439a36bf5eb8090c748e270fff425f",
+      "size_bytes": 5656
+    },
+    {
+      "local_path": "north-star/prototype/tools/verify_look.py",
+      "sha256": "bfdbdf1fe56f5442f06b0e100593f89b8d3d5520dbf1e18f822e9812f4216a67",
+      "size_bytes": 3402
+    },
+    {
+      "local_path": "north-star/prototype/tools/verify_routes.py",
+      "sha256": "3f065dc5c35b2a450559e1fb629aa2bf74b3c7317516c1c18f94bd98bd86c5e4",
+      "size_bytes": 3597
+    },
+    {
+      "local_path": "north-star/prototype/tools/verify_sound.py",
+      "sha256": "dd9f417a9e49803068da737a230031d44ae218b170904c06ebe024da4d92049e",
+      "size_bytes": 6367
+    },
+    {
+      "local_path": "north-star/prototype/tools/verify_workshop.py",
+      "sha256": "9480bf10e81f5a220a094b841a009647f91f70b51131ce7258b9b9d211e247aa",
+      "size_bytes": 3474
+    },
+    {
+      "local_path": "north-star/prototype/workshop.gd",
+      "sha256": "5fcba9578edf0c44db9336cb36d6b7783ff1da175e200f9c422392e4eebcc56b",
+      "size_bytes": 2239
+    },
+    {
+      "local_path": "projects/waystone-dialogue/browser/dist/deferred-request.js",
+      "sha256": "3e0cfd18d9f273e0229f5ab61b394fa819c53cad54b2f7a1860aed9acadeb00b",
+      "size_bytes": 12547
+    },
+    {
+      "local_path": "projects/waystone-dialogue/scene.py",
+      "sha256": "d68cb4f3b412711aab454629f944b09a7e142e4bec24758c925ce0b3432b1eeb",
+      "size_bytes": 15313
+    }
+  ]
+}

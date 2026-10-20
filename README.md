@@ -11,7 +11,7 @@ records behind the demonstrations.
 product: an original MMORPG in which character identity becomes visible through
 choices, builds, classes, professions and achievements. Its current stage is
 `local_prototype`: one playable destination consumer, 14 cataloged capabilities and
-NS-C03/NS-C07 adapted. Godot is the prototype tool; the production engine remains undecided.
+NS-C03/NS-C04/NS-C07 adapted. Godot is the prototype tool; the production engine remains undecided.
 The portfolio makes existing technology inspectable while applied laboratories
 investigate what can actually serve that experience.
 
@@ -42,7 +42,7 @@ single-press guard and medicine interaction; costs/commitment stay live and inte
 disarms active intentions. Hold remains the default.
 
 The editable Godot project and small engine-dependent PCK execute the same consumer.
-[Native/input evidence](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/evidence/north-star-character-look/RUN.json)
+[Native/input evidence](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/evidence/north-star-courier-conversation/RUN.json)
 and the [living design record](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/DESIGN.md)
 separate fixed-policy feasibility and agent visual assessment from still-missing human
 understanding, identity and enjoyment evidence.
@@ -63,7 +63,7 @@ fixed policies and agent image review do not establish player preference or bala
 After a real escort win, **F2 continues into a second playable objective**. Actual
 remaining health and fitting carry into two separated catches, a threatened stationary
 winch and an exit that must be crossed alive. Work prevents combat; protecting first or
-working under threat has observable costs. Retry restores arrival state, not full health.
+working under threat has observable costs. Without aid, retry restores arrival state, not full health.
 The courier stays safe; no extra reward or account progression is invented.
 
 **F3 on selection** now lets you choose skin, hair and cloth dye independently from
@@ -72,6 +72,14 @@ look through both goals. These free choices last for the session and change no c
 values. The workflow makes expression usable; player-recognizable identity remains untested.
 
 ![Shared actor preview in the native character-look editor](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/evidence/north-star-character-look/editor-rest.png)
+
+**F4 after arrival** opens an optional [conversation with the courier](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/prototype/README.md#talk-to-the-courier).
+Ask about the actual crossing, then allocate one offered repair strip: prepare one
+health point for yourself, brace the return winch, or leave it with the courier.
+Select and confirm deliberately; only the confirmed choice reaches the next objective.
+Retry restores that preparation without duplicating it. Direct F2 continuation remains.
+This is an executed narrative-to-gameplay choice, not evidence of player attachment,
+final quest canon, account progression or persistent social relationships.
 
 ## Technology demonstrations
 

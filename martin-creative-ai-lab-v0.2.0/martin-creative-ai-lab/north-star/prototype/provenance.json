@@ -93,5 +93,22 @@
     "scope": "New code-drawn skin/hair/cloth choices and a draft/preview/apply workflow; existing actor geometry and actual action observer reused. No third-party media, P07 atlas or origin code imported.",
     "evidence": "evidence/north-star-character-look/RUN.json",
     "limits": "Agent inspection and native execution; no independent recognition, aesthetic preference or exclusive-rights claim."
+  },
+  "courier_conversation": {
+    "producer": "north-star/prototype/courier_talk.gd",
+    "consumer": "north-star/prototype/arena.gd",
+    "consequence": "north-star/prototype/return_gate.gd",
+    "method_precedent": "P10 precondition-before-mutation and response selection from actual pre-turn facts; new GDScript implementation and explicit one-off confirmation, not a shared code import.",
+    "precedent_path": "projects/waystone-dialogue/scene.py",
+    "precedent_sha256": "d68cb4f3b412711aab454629f944b09a7e142e4bec24758c925ce0b3432b1eeb",
+    "creative_sources": [
+      "CRE-005",
+      "CRE-041",
+      "CRE-048"
+    ],
+    "status": "Original experimental courier/repair-strip fiction; no source character, geography, final quest or canon approval.",
+    "scope": "Optional factual arrival dialogue, exclusive prepared-health/winch aid and fixed session checkpoint; no reputation, account, persistent social simulation or post-arrival medicine handoff.",
+    "evidence": "evidence/north-star-courier-conversation/RUN.json",
+    "limits": "Native execution, controlled rendering and agent inspection are not independent player comprehension, identity, moral significance, preference or enjoyment."
   }
 }

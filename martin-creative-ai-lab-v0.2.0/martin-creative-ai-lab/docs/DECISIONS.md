@@ -2236,3 +2236,27 @@ changes. Stage/capability/origin states remain unchanged; no external player val
 - **Limits:** technical equality, native keys and agent visual review do not prove
   recognizable identity, taste, accessibility, fun, MMO readiness or market demand.
   No origin extraction, new lab, automatic next target or capability-state promotion.
+
+
+## ADR-086 — An optional factual conversation with one consequential offer
+
+- **Baseline/mode:** `b4feb72076bbc78ee9128eb43ccbb8bb7bc69217`; CREATIVE PRODUCTION.
+- **Observed gap/selection:** actual escort facts stop at result labels; no NPC interaction
+  connects action to later cooperation. Prefer a bounded consequential aftermath over
+  appearance persistence, another encounter refinement, automatic Waystone/Tokyo80s
+  expansion or a browser-timeout investigation without an established cause.
+- **Decision:** optional F4 after genuine arrival, actual route/medicine/defense memory
+  and one repair strip. Choose capped +1 prepared health, +1 winch integrity, or leave
+  it with the courier. Explicit draft/confirm/discard; full-health dressing unavailable.
+  Direct F2 remains unchanged. Confirmed aid is checkpoint preparation, never a live
+  heal, rewritten delivery fact, duplicate gift or extra keepsake.
+- **Knowledge/precedent:** CRE-005 A, CRE-041/048 H, ENG-005 and SCI-017. P10 scene.py
+  supplies inspected gated-choice and pre-turn-fact methodology; new native code and
+  original temporary fiction, not code/setting import or final creative approval.
+- **Evidence/boundary:** `evidence/north-star-courier-conversation/RUN.json` binds actual
+  consumer execution, eight matched two-goal journeys, retained controls and rendered/
+  fixture-assisted OS observations. NS-C04 becomes adapted with destination proof;
+  stage remains local_prototype, thirteen paths/fourteen entries, no new lab or origin
+  extraction. Execution and agent review do not establish player comprehension or fun.
+- **Lifecycle:** current adaptive prompt already served this selection; retain it
+  unchanged and reassess opportunities rather than fixing the next task to dialogue.

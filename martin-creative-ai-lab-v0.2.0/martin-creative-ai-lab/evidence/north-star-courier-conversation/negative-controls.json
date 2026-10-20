@@ -1,0 +1,16 @@
+{
+  "command": [
+    "godot",
+    "--headless",
+    "--main-pack",
+    "/tmp/b4feb720-crossing-drill.pck",
+    "--script",
+    "res://tests/conversation_checks.gd",
+    "--",
+    "/tmp/stale-conversation.json"
+  ],
+  "earlier_attempt": "One outer 60s diagnostic wrapper timed out; its child had exited and no live owned process remained. A direct bounded native counterfactual then rejected the missing resource with exit1.",
+  "exit_code": 1,
+  "expected": "Prior PCK rejects the missing conversation check resource.",
+  "success_artifact_written": false
+}

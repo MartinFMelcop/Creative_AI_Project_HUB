@@ -14,6 +14,10 @@ may revise a derived lesson; ordinary work must not rewrite the brain sources.
 
 ## Existing lessons and consumers
 
+[Consequential cooperation](narrative-cooperation.md) records an optional native
+courier conversation whose finite aid reaches the next actual goal, with explicit
+confirmation/checkpoint ownership and unvalidated narrative-significance limits.
+
 The [combat-response lesson](combat-response.md) now also records an optional recovery/
 handoff competing for escort position, with fixed-policy costs and human-evidence limits.
 

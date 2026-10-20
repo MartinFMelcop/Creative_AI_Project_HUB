@@ -1,0 +1,52 @@
+{
+  "keyboard": {
+    "pack": {
+      "abandon_reset": true,
+      "arrival_hp": 4,
+      "cancelled_unconfirmed_heal": true,
+      "confirmed": "brace",
+      "gate_hp": 4,
+      "gate_integrity": 3,
+      "read_road": true,
+      "startup_capture_attempts": 1,
+      "title_rejected": true
+    },
+    "source": {
+      "abandon_reset": true,
+      "arrival_hp": 4,
+      "cancelled_unconfirmed_heal": true,
+      "confirmed": "brace",
+      "gate_hp": 4,
+      "gate_integrity": 3,
+      "read_road": true,
+      "startup_capture_attempts": 1,
+      "title_rejected": true
+    }
+  },
+  "kind": "native_conversation_render_and_assisted_os_input",
+  "pixels": {
+    "pack": {
+      "braced-return": "1ab72dd65e5b8bb5ed59414bf0bd288899a2889205c6cc1ed9c5f32e65f5407d",
+      "courier-heal-confirmed": "5efdad24398e625796663b30d4aeb0615c16467af9605f1c580a9680782bcdf3",
+      "courier-heal-selected": "3054edc2f6274fbd41063caf0475c3fbc28a064734fdd604c03f967593906700",
+      "courier-offer": "62741d7203fed5093629aeae61f94033417bc2c13260ac36944f2d9b4fbf4950",
+      "courier-road": "f7f6ffb90f9518657ae43499d610bed704b3eab433e5654eb6ed72fefe83bc6b",
+      "full-health-brace-confirmed": "c839ac222a2a5fcdc86f04692b4310fca28c83f94a9d099f269d6e60ada832e4",
+      "full-health-offer": "a9e38a83bc10b261f07e7fa435512746f0e3711f2ae1bdf8fd8e65f78385a923",
+      "healed-return": "a63a7f4ec8faf86b5ff9be22c2ee9841906ade38c39b292e045738b0572c8ec2"
+    },
+    "source": {
+      "braced-return": "1ab72dd65e5b8bb5ed59414bf0bd288899a2889205c6cc1ed9c5f32e65f5407d",
+      "courier-heal-confirmed": "5efdad24398e625796663b30d4aeb0615c16467af9605f1c580a9680782bcdf3",
+      "courier-heal-selected": "3054edc2f6274fbd41063caf0475c3fbc28a064734fdd604c03f967593906700",
+      "courier-offer": "62741d7203fed5093629aeae61f94033417bc2c13260ac36944f2d9b4fbf4950",
+      "courier-road": "f7f6ffb90f9518657ae43499d610bed704b3eab433e5654eb6ed72fefe83bc6b",
+      "full-health-brace-confirmed": "c839ac222a2a5fcdc86f04692b4310fca28c83f94a9d099f269d6e60ada832e4",
+      "full-health-offer": "a9e38a83bc10b261f07e7fa435512746f0e3711f2ae1bdf8fd8e65f78385a923",
+      "healed-return": "a63a7f4ec8faf86b5ff9be22c2ee9841906ade38c39b292e045738b0572c8ec2"
+    }
+  },
+  "rendered_frames_per_delivery": 8,
+  "scope": "Eight actual scene samples after complete wounded and unwounded policy escorts; full-health healing rejection and brace agreement. Real OS conversation/read/draft/cancel/confirm/depart/reset; assisted fixture freezes arrival and gate entry. No unassisted escort, participant identity/recognition, preference or latency claim.",
+  "source_pack_pixel_state_parity": true
+}
