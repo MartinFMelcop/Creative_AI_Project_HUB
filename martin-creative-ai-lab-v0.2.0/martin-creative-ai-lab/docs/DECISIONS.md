@@ -2286,3 +2286,30 @@ changes. Stage/capability/origin states remain unchanged; no external player val
   repair. Editable local cosmetics, no account/concurrent-writer/power-loss guarantee
   or human recognition validation. One consumer, unchanged capability/origin states,
   no new lab. Retain the adaptive prompt unchanged and reassess the next opportunity.
+
+
+## ADR-088 — Deliver the current adventure without development tools
+
+- **Baseline/mode:** `6a4ecb8a1ec8d866298813814d6a11cc25599f01`; DEVELOPMENT.
+- **Selection:** North Star requires an installed Godot editor/runtime, unlike other
+  native portfolio consumers. Prefer a usable recipient delivery over more cosmetic,
+  courier/combat refinement or arbitrary Waystone/Tokyo80s expansion. Measure and
+  accept about 27 MB compressed runtime cost; preserve the optional small PCK.
+- **Decision:** pinned official standard Linux release template and notices; fresh
+  staging from the existing PCK source inventory, without another build framework.
+  A raw manual PCK pairing omitted exported cache; the real template also rejects
+  editor path/script overrides. Export officially and add an explicit opt-in check
+  entry to the actual scene. Default launches run no policy and preserve game rules.
+- **Knowledge:** ENG-004/015 high, SCI-017 medium, CRE-007 A low. Recipient needs,
+  bounded dependencies, actual-runtime controls and preservation of the small
+  adventure inform the choice. P06 template and P01/P05 delivery precedents are
+  reused, not origin gameplay, fiction or an extracted general kernel.
+- **Evidence:** `evidence/north-star-linux-player/RUN.json` binds archive/source
+  checks, real release two-goal journeys/restart, missing-PCK rejection, default-window
+  keys and semantic rebuild equality. A matched editor/release probe showed a Godot
+  splash before the real title; wait for receipt rather than count a splash as ready.
+- **Limits:** Linux/software-display environment only; no independent installation,
+  hardware/accessibility, identity/fun or market validation. Export cache/UID metadata
+  may differ between builds; exact source and behavior equality are separate from ZIP
+  identity. Stage/capability/origin states unchanged, no new lab or final engine choice.
+  Retain the adaptive prompt unchanged and reassess the next opportunity.

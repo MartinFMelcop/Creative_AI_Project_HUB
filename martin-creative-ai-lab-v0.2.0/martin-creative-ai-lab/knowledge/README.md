@@ -14,6 +14,9 @@ may revise a derived lesson; ordinary work must not rewrite the brain sources.
 
 ## Existing lessons and consumers
 
+[Native delivery](native-delivery.md) separates editor/static package checks from
+actual recipient-runtime journeys, default-window input and rebuild identity limits.
+
 [Consequential cooperation](narrative-cooperation.md) records an optional native
 courier conversation whose finite aid reaches the next actual goal, with explicit
 confirmation/checkpoint ownership and unvalidated narrative-significance limits.

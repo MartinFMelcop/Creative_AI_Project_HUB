@@ -1,0 +1,67 @@
+{
+  "baseline_commit": "6a4ecb8a1ec8d866298813814d6a11cc25599f01",
+  "excluded_identity_fields": [
+    "consumer_hashes",
+    "native_observation_sha256",
+    "unit_observation_sha256"
+  ],
+  "scope": "All retained mechanical/persistence/journey observations equal the prior verified baseline; only source identity fields/hashes excluded.",
+  "suites": [
+    {
+      "checks": {
+        "failed": 0,
+        "passed": 358
+      },
+      "observations_equal": true,
+      "suite": "regressions.json"
+    },
+    {
+      "checks": {
+        "failed": 0,
+        "passed": 67
+      },
+      "observations_equal": true,
+      "suite": "gate.json"
+    },
+    {
+      "checks": {
+        "failed": 0,
+        "passed": 49
+      },
+      "observations_equal": true,
+      "suite": "routes.json"
+    },
+    {
+      "checks": {
+        "failed": 0,
+        "passed": 98
+      },
+      "observations_equal": true,
+      "suite": "workshop.json"
+    },
+    {
+      "checks": {
+        "failed": 0,
+        "passed": 48
+      },
+      "observations_equal": true,
+      "suite": "look.json"
+    },
+    {
+      "checks": {
+        "failed": 0,
+        "passed": 110
+      },
+      "observations_equal": true,
+      "suite": "conversation.json"
+    },
+    {
+      "checks": {
+        "failed": 0,
+        "passed": 52
+      },
+      "observations_equal": true,
+      "suite": "appearance.json"
+    }
+  ]
+}

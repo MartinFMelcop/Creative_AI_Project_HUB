@@ -1,6 +1,6 @@
 # SEED — Martin Creative AI Lab
 
-**Version:** 0.33.17
+**Version:** 0.33.18
 **Data-base:** 10 de outubro de 2026  
 **Autor e responsável pelo portfólio:** Martin Melcop Neto  
 **Working language:** English for new technical documentation, plans, code comments and Git messages; respond in the requested language (Brazilian Portuguese for continuous closeout). Preserve appropriate creative/source languages.
@@ -45,7 +45,18 @@ does not merge fictional universes. Source details below are historical provenan
 retained origin behavior; current operation is defined by this direction, AGENTS,
 STATE and the single [continuous prompt](docs/prompts/CONTINUOUS_DEVELOPMENT.md).
 
-### Current increment — v0.33.17
+### Current increment — v0.33.18
+
+DEVELOPMENT: an optional Linux x86_64 ZIP now bundles the current North Star consumer
+with the pinned official Godot release runtime and notices. Extract and play without
+an editor, SDK, Python, Node or checkout; the small engine-dependent PCK remains.
+Fresh-staged export, archive/source validation, opt-in actual-player journeys and
+native default-window input/reentry are executed. [Evidence](evidence/north-star-linux-player/RUN.json)
+separates delivery from gameplay novelty, human validation and production readiness.
+No new mechanics, lab, origin extraction or capability promotion. The adaptive prompt
+remains unchanged; the next selection is not fixed to distribution.
+
+### Prior consumer increment — v0.33.17
 
 DEVELOPMENT: explicitly applied free skin, hair and cloth choices now survive actual
 process restarts in the existing device-local cosmetic profile. Legacy mark-only
@@ -165,8 +176,8 @@ for continuous development and its full successor requirement.
 
 | Field | Current evidence |
 |---|---|
-| Baseline | `05454410b4ac7ba8053eb2b56ba15fe136f4ae2b`; wrapper retained |
-| Current milestone | DEVELOPMENT: applied free appearance survives process restarts with recoverable local profile migration; [execution](evidence/north-star-appearance-continuity/RUN.json) |
+| Baseline | `6a4ecb8a1ec8d866298813814d6a11cc25599f01`; wrapper retained |
+| Current milestone | DEVELOPMENT: current North Star adventure is delivered as an independently executed Linux player; [execution](evidence/north-star-linux-player/RUN.json) |
 | Sources | Five byte-preserved supplied brain files; historical reference inventories unchanged |
 | Operational state | [STATE](docs/STATE.md), [origins](labs/origins.json), [brain integrity](brains/integrity.json) |
 | Portfolio | Technology capabilities, inspectable source/demonstrations and bounded execution evidence |

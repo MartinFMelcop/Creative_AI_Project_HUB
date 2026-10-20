@@ -24,7 +24,8 @@ origin instrument, separately preserved.
 The player chooses frontal interception or redirection/mobility and protects the same
 courier to the far gate. [Living design](DESIGN.md) distinguishes author decisions,
 experimental mechanics, revisions and rejected alternatives. Current primary mode is
-DEVELOPMENT: explicitly applied free appearance now survives process restart through
+DEVELOPMENT: an optional Linux player now delivers the existing adventure without
+an editor or checkout. Applied free appearance still survives process restart through
 the recoverable local cosmetic profile. The optional factual conversation still commits
 one aid choice into the second goal. Optional rehearsal
 uses the same combat rules, preserves causal review and starts a clean normal crossing.
@@ -130,3 +131,9 @@ health, extra winch integrity, or no aid. Draft, confirmation, cancellation and 
 retry checkpoint connect the conversation to actual play. [Execution](../evidence/north-star-courier-conversation/RUN.json)
 supports bounded NS-C04 adaptation from P10 methodology, not code/fiction import,
 persistent social simulation or human narrative/identity validation.
+
+The [Linux x86_64 delivery](prototype/README.md#play) includes the pinned official
+runtime, notices, source identities and checksum. Actual release journeys and native
+window edit/move/pause/reentry are [executed](../evidence/north-star-linux-player/RUN.json).
+This removes an installation dependency on development tools; it adds no mechanic,
+capability-state promotion, new lab, final engine or independent player validation.

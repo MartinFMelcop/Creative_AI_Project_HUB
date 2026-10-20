@@ -1,0 +1,154 @@
+{
+  "actors": {
+    "action": "idle",
+    "action_left": 0.0,
+    "contact": "",
+    "contact_angle": 0.0,
+    "contact_left": 0.0,
+    "courier_hurt_left": 0.0,
+    "cursor": 0,
+    "hurt_left": 0.0,
+    "pose": "idle",
+    "sentinel_left": 0.0,
+    "stride": 2.724372
+  },
+  "cargo": 3,
+  "character_look": {
+    "active": false,
+    "applied": {
+      "dye": 1,
+      "hair": 1,
+      "skin": 1
+    },
+    "draft": {
+      "dye": 1,
+      "hair": 1,
+      "skin": 1
+    },
+    "paused": false,
+    "preview_outfit": "standard",
+    "preview_pose": "Rest",
+    "preview_role": "Guardian",
+    "row": 2
+  },
+  "controls": {
+    "draft": {},
+    "listening": false,
+    "message": "",
+    "open": false,
+    "profile": {
+      "blocked": false,
+      "dirty": false,
+      "guard_latched": false,
+      "interact_latched": false,
+      "keys": {
+        "aim_down": 4194322,
+        "aim_left": 4194319,
+        "aim_right": 4194321,
+        "aim_up": 4194320,
+        "interact": 69,
+        "move_down": 83,
+        "move_left": 65,
+        "move_right": 68,
+        "move_up": 87,
+        "skill": 75,
+        "step": 32,
+        "strike": 74
+      },
+      "status": "Defaults. Apply to save on this device.",
+      "toggle_guard": false,
+      "toggle_interact": false
+    },
+    "row": 0
+  },
+  "counters": {
+    "blocks": 0,
+    "counters": 0,
+    "courier_hits": 0,
+    "dodges": 0,
+    "player_hits": 0,
+    "redirects": 0,
+    "rejected": 0
+  },
+  "courier_position": [
+    178.199722290039,
+    390.0
+  ],
+  "courier_speed": 28.0,
+  "courier_talk": {
+    "active": false,
+    "choice": "",
+    "draft": "",
+    "facts": {},
+    "message": "",
+    "page": "offer"
+  },
+  "courier_x": 178.2,
+  "enemy_focus": 3,
+  "energy": 100.0,
+  "errand": {
+    "channel": false,
+    "events": [],
+    "finished": false,
+    "progress": 0.0,
+    "state": "waiting"
+  },
+  "events": [],
+  "guard_style": "none",
+  "hp": 5,
+  "keepsakes": {
+    "blocked": false,
+    "dirty": false,
+    "earned": [],
+    "equipped": "",
+    "look": {
+      "dye": 1,
+      "hair": 1,
+      "skin": 1
+    },
+    "status": "Saved locally."
+  },
+  "last_impact": {},
+  "mode": "play",
+  "player_position": [
+    620.833679199219,
+    390.0
+  ],
+  "rehearsal": {
+    "active": false,
+    "attempts": 0,
+    "passed": false,
+    "paused": false,
+    "results": [],
+    "stage": 0,
+    "state": "ready"
+  },
+  "role": "Duelist",
+  "route": {
+    "covered_bolts": 0,
+    "kind": "road",
+    "leg": 0,
+    "locked": false
+  },
+  "sound": {
+    "events": [],
+    "muted": false,
+    "voice_limit": 2
+  },
+  "tick": 39,
+  "workshop": {
+    "active": false,
+    "blank": 1,
+    "made": 0,
+    "needs_release": false,
+    "outfit": "standard",
+    "paused": false,
+    "player": [
+      575.0,
+      540.0
+    ],
+    "progress": 0.0,
+    "recycled": 0,
+    "target": ""
+  }
+}

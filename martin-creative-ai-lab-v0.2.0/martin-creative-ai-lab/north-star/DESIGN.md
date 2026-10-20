@@ -306,3 +306,14 @@ and complete journeys. [Execution](../evidence/north-star-courier-conversation/R
 separates technical/render/input evidence and agent inspection from human narrative
 comprehension, significance, identity, preference or balance. Review these with actual
 participants before claiming the conversation expresses the full character fantasy.
+
+
+## Delivery revision — technical, not additional creative canon
+
+The current small adventure can be launched as an optional Linux x86_64 player
+without installing the editor. Preserve the current two approaches, both goals,
+optional conversation, expression and local-profile contracts. The roughly 27 MB
+runtime cost buys a concrete recipient delivery; the small engine-dependent PCK
+remains. Actual release and default-window [execution](../evidence/north-star-linux-player/RUN.json)
+are not evidence of human comprehension, identity or fun. No other OS, final engine,
+new mechanics, approved lore or production MMORPG scope is accepted by this revision.

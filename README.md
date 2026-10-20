@@ -42,6 +42,11 @@ single-press guard and medicine interaction; costs/commitment stay live and inte
 disarms active intentions. Hold remains the default.
 
 The editable Godot project and small engine-dependent PCK execute the same consumer.
+An optional [Linux x86_64 player](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/prototype/dist/crossing-drill-linux-0.1.0.zip)
+now bundles its official runtime: extract the whole folder and play without an editor,
+SDK or checkout. [Delivery evidence](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/evidence/north-star-linux-player/RUN.json)
+includes actual release execution, default-window input and save/reentry. It establishes
+delivery on the tested Linux environment, not other platforms or human enjoyment.
 [Native/input evidence](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/evidence/north-star-courier-conversation/RUN.json)
 and the [living design record](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/DESIGN.md)
 separate fixed-policy feasibility and agent visual assessment from still-missing human

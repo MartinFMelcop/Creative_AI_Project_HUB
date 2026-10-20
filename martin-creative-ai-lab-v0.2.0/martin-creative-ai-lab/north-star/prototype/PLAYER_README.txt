@@ -1,0 +1,42 @@
+Virgo Diamond: The North Star — Crossing Drill, Linux player 0.1.0
+
+Extract the entire CrossingDrill folder, then open crossing-drill.x86_64 or run
+./crossing-drill.x86_64 from a terminal. Keep crossing-drill.pck beside it.
+No Godot editor, .NET, Python, Node, source checkout or network is needed to play.
+If your extraction tool loses executable permission: chmod +x crossing-drill.x86_64
+Linux x86_64 still needs its system libraries, a desktop/display and OpenGL 3.3.
+Other operating systems, physical hardware coverage and broad accessibility have
+not been validated. Close the window to exit; there is no installer or updater.
+
+Choose 1 Guardian or 2 Duelist. Enter starts, T opens optional rehearsal.
+WASD moves; arrows aim. Guardian holds K to protect the courier from the amber
+bolt; Duelist presses K to draw its locked aim, then moves away. Space steps at
+a resource cost, without invulnerability. J counters nearby during OPEN.
+Red floor pulses must be left; the shield cannot block them. Protect the living
+courier to the gate. Three valid close counters can stop the threat early.
+F1 shows controls and deliberate remapping; H/I there offer optional toggles.
+Escape pauses; R while paused abandons; Enter retries after a result.
+
+F2 on selection opens the reversible roadside fitting workshop. F3 previews free
+skin/hair/cloth choices: arrows edit, Enter applies and saves, Escape discards.
+Applied looks and earned/worn cosmetic marks are stored in this application's
+per-user Godot data directory, outside this extracted folder. Controls have a
+separate local profile. F5 retries a pending cosmetic save after you restore or
+remove an unavailable file. Unknown profile bytes are preserved. Pending changes
+can be lost on close. These files are editable local cosmetics/preferences, not
+accounts, secure ownership, saved combat power or a restored gameplay session.
+
+After a genuine escort win, F4 offers an optional conversation and one exclusive
+aid choice. Enter confirms a draft; Escape discards. F2 continues to a second
+goal with actual arrival health: raise two catches, protect the winch, exit alive.
+Direct continuation and the original escort replay remain available.
+
+This is an experimental local prototype, not a finished MMORPG, final classes,
+approved geography/canon or proof of player identity, enjoyment or market demand.
+Godot's MIT license and third-party copyright notices accompany its runtime.
+PROVENANCE.json describes the original code-drawn/procedural creative material.
+No blanket project license, exclusive rights or commercial clearance is granted.
+SOURCE-IDENTITY.json identifies the exported source; a matching ZIP checksum is
+published beside the download. A checksum establishes bytes, not user trust.
+
+Source, design and evidence: https://github.com/MartinFMelcop/Creative_AI_Project_HUB

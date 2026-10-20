@@ -62,6 +62,19 @@ func _ready() -> void:
 	bindings.load_profile(controls_path)
 	actors.attach(game)
 	queue_redraw()
+	# Release templates disable editor script/path overrides. This explicit opt-in
+	# checks the real default scene; ordinary launches never run a test policy.
+	var args=OS.get_cmdline_user_args()
+	if args.size()==2 and args[0] in ["--verify-player","--verify-player-read"]:
+		call_deferred("verify_player",args[1],args[0]=="--verify-player-read")
+
+func verify_player(output: String,read_only: bool) -> void:
+	set_physics_process(false)
+	var checks=load("res://tests/player_checks.gd").new()
+	var success:bool=checks.run(self,output,read_only)
+	sound.silence()
+	await get_tree().create_timer(.2).timeout
+	get_tree().quit(0 if success else 1)
 
 func abandon() -> void:
 	courier_talk=CourierTalk.new()
