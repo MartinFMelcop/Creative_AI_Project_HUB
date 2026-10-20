@@ -42,7 +42,7 @@ single-press guard and medicine interaction; costs/commitment stay live and inte
 disarms active intentions. Hold remains the default.
 
 The editable Godot project and small engine-dependent PCK execute the same consumer.
-[Native/input evidence](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/evidence/north-star-return-gate/RUN.json)
+[Native/input evidence](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/evidence/north-star-character-look/RUN.json)
 and the [living design record](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/DESIGN.md)
 separate fixed-policy feasibility and agent visual assessment from still-missing human
 understanding, identity and enjoyment evidence.
@@ -65,6 +65,13 @@ remaining health and fitting carry into two separated catches, a threatened stat
 winch and an exit that must be crossed alive. Work prevents combat; protecting first or
 working under threat has observable costs. Retry restores arrival state, not full health.
 The courier stays safe; no extra reward or account progression is invented.
+
+**F3 on selection** now lets you choose skin, hair and cloth dye independently from
+approach and fitted gear. Preview actual actions, apply or discard, then see the same
+look through both goals. These free choices last for the session and change no combat
+values. The workflow makes expression usable; player-recognizable identity remains untested.
+
+![Shared actor preview in the native character-look editor](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/evidence/north-star-character-look/editor-rest.png)
 
 ## Technology demonstrations
 

@@ -1,4 +1,8 @@
 extends Node2D
+const CharacterLook=preload("res://character_look.gd")
+var character_look=CharacterLook.new()
+var look_actor=Actors.new()
+var look_portraits:Array[Node2D]=[]
 const ReturnGate=preload("res://return_gate.gd")
 var return_gate=ReturnGate.new()
 const Route = preload("res://route.gd")
@@ -41,6 +45,9 @@ const AMBER := Color("ffc474")
 const RED := Color("ff796f")
 
 func _ready() -> void:
+	for scale_factor in [1.0,3.0]:
+		var portrait=CharacterLook.Portrait.new();portrait.controller=character_look;portrait.actor=look_actor
+		portrait.scale=Vector2.ONE*scale_factor;portrait.visible=false;add_child(portrait);look_portraits.append(portrait)
 	add_child(sound)
 	if profile_path.is_empty(): profile_path=OS.get_environment("CROSSING_PROFILE")
 	if profile_path.is_empty(): profile_path="user://crossing-keepsakes.json"
@@ -83,6 +90,7 @@ func begin_crossing() -> void:
 
 func _notification(what: int) -> void:
 	if what==NOTIFICATION_APPLICATION_FOCUS_OUT:
+		if character_look.active:character_look.paused=true
 		if return_gate.active:return_gate.suspend()
 		if workshop.active:workshop.suspend()
 		if rehearsal.active:
@@ -102,6 +110,11 @@ func _unhandled_key_input(event: InputEvent) -> void:
 		controls_input(event,key);queue_redraw();return
 	if key==KEY_F1:
 		open_controls();queue_redraw();return
+	if character_look.active:
+		look_input(key);queue_redraw();return
+	if not workshop.active and not rehearsal.active and game.mode=="title" and key==KEY_F3:
+		character_look.enter(selected,guardian_style,workshop.outfit);look_actor.attach(character_look.preview)
+		taps.clear();bindings.quarantine();queue_redraw();return
 	if return_gate.active:
 		return_gate_input(event,key);sync_sound();queue_redraw();return
 	if normal_run and not rehearsal.active and game.mode=="won" and key==KEY_F2:
@@ -197,6 +210,13 @@ func controls_input(event: InputEventKey,key: int) -> void:
 
 func _physics_process(dt: float) -> void:
 	if controls_open:taps.clear();sound.silence();queue_redraw();return
+	if character_look.active:
+		if look_actor.model!=character_look.preview:look_actor.attach(character_look.preview)
+		character_look.step(dt);look_actor.observe(character_look.preview)
+		for i in look_portraits.size():
+			look_portraits[i].position=(Vector2(690,365) if i==0 else Vector2(920,365))-character_look.preview.player*look_portraits[i].scale
+			look_portraits[i].queue_redraw()
+		taps.clear();queue_redraw();return
 	if workshop.active:
 		workshop.step(dt,bindings.vector("move"),bindings.down("interact"))
 		taps.clear();queue_redraw();return
@@ -278,6 +298,11 @@ func style(color: Color) -> StyleBoxFlat:
 	return box
 
 func _draw() -> void:
+	for portrait in look_portraits:portrait.visible=character_look.active and not controls_open
+	if character_look.active:
+		draw_look()
+		if controls_open:drawing_controls=true;draw_controls();drawing_controls=false
+		return
 	if return_gate.active:
 		draw_return_gate()
 		if controls_open:drawing_controls=true;draw_controls();drawing_controls=false
@@ -321,7 +346,7 @@ func _draw() -> void:
 	actors.draw_courier(self,game)
 	text(game.courier+Vector2(-35,40),"COURIER",14,AMBER)
 	var c: Color=TEAL if game.role=="Guardian" else AMBER
-	actors.draw_player(self,game)
+	actors.draw_player(self,game,character_look.palette())
 	draw_keepsake(game.player,keepsakes.equipped)
 	# Keep the facing cue outside the body so it cannot obscure a worn mark.
 	draw_colored_polygon(PackedVector2Array([game.player+game.facing*43,game.player+game.facing*35+game.facing.orthogonal()*4,game.player+game.facing*35-game.facing.orthogonal()*4]),PAPER)
@@ -385,7 +410,7 @@ func overlay() -> void:
 		text(Vector2(615,467),"Cross + draw: Drew the Danger",17,AMBER)
 		text(Vector2(210,543),"Leave pulses. Three counters stop the sentinel. E at sign chooses route.",17)
 		text(Vector2(210,580),"T  Rehearse   •   F2  Workshop   •   ENTER  Crossing",21,TEAL)
-		text(Vector2(210,615),"C  Keepsake: "+KEEPSAKE_NAMES[keepsakes.equipped]+"     /     experimental, cosmetic only",17)
+		text(Vector2(210,615),"F3  Character look   /   C  Keepsake: "+KEEPSAKE_NAMES[keepsakes.equipped],17)
 		draw_keepsake(Vector2(1015,602),keepsakes.equipped,1.4)
 		text(Vector2(150,642),"Sound: high taps = bolt; low pair = floor. F1 opens sound / key controls.",16,AMBER)
 	elif game.mode=="paused":
@@ -493,6 +518,7 @@ func capture() -> void:
 	get_viewport().get_texture().get_image().save_png(path)
 	var file=FileAccess.open(path+".json",FileAccess.WRITE)
 	var report=game.snapshot()
+	report.character_look=character_look.snapshot()
 	if return_gate.active:report.return_gate=return_gate.snapshot()
 	report.route=game.route.snapshot()
 	report.player_position=[game.player.x,game.player.y]
@@ -529,7 +555,7 @@ func draw_workshop() -> void:
 	# The same native actor carries its selected appearance into the actual crossing.
 	var preview=Combat.new();preview.role=selected;preview.player=workshop.player
 	preview.outfit=workshop.outfit
-	actors.draw_player(self,preview)
+	actors.draw_player(self,preview,character_look.palette())
 	draw_keepsake(workshop.player,keepsakes.equipped)
 	text(workshop.player+Vector2(-20,48),"YOU",15)
 	panel(Rect2(30,650,1092,96))
@@ -633,7 +659,7 @@ func draw_return_gate() -> void:
 	else:draw_line(Vector2(1020,195),Vector2(1020,235),TEAL,9)
 	draw_arc(ReturnGate.EXIT,24,0,TAU,32,TEAL if return_gate.opened() else Color("596575"),3)
 	text(Vector2(1010,450),"EXIT" if return_gate.opened() else "LOCKED",16,TEAL if return_gate.opened() else AMBER)
-	actors.draw_player(self,game);draw_keepsake(game.player,keepsakes.equipped)
+	actors.draw_player(self,game,character_look.palette());draw_keepsake(game.player,keepsakes.equipped)
 	if game.guard:draw_arc(game.player,37,game.locked_face.angle()-0.9,game.locked_face.angle()+0.9,24,TEAL if game.guards_from(Combat.ENEMY) else AMBER,7)
 	actors.draw_contact(self)
 	text(game.player+Vector2(-20,-38),"YOU",14,TEAL)
@@ -660,3 +686,45 @@ func draw_return_gate() -> void:
 		draw_impact(Vector2(125,446))
 		text(Vector2(125,532),"ENTER / ESC resume   /   R leave" if game.mode=="paused" else "ENTER retry from arrival   /   R leave   /   no extra keepsake",22,TEAL)
 		text(Vector2(125,568),"Retry restores the entry checkpoint, not full health. No live outfit or approach swap.",17)
+
+func look_input(key: int) -> void:
+	character_look.paused=false
+	if key==KEY_ESCAPE:character_look.cancel();bindings.quarantine()
+	elif key==KEY_ENTER:character_look.confirm();bindings.quarantine()
+	elif key==KEY_UP:character_look.row=posmod(character_look.row-1,3)
+	elif key==KEY_DOWN:character_look.row=(character_look.row+1)%3
+	elif key in [KEY_LEFT,KEY_RIGHT]:character_look.cycle(-1 if key==KEY_LEFT else 1)
+	elif key==KEY_DELETE:character_look.draft=CharacterLook.DEFAULTS.duplicate()
+	elif key in [KEY_1,KEY_2]:
+		character_look.role="Guardian" if key==KEY_1 else "Duelist";character_look.reset_preview()
+	elif key==KEY_TAB:
+		character_look.outfit=(character_look.outfit+1)%CharacterLook.OUTFITS.size();character_look.reset_preview()
+	elif key==KEY_SPACE:
+		character_look.pose_index=(character_look.pose_index+1)%CharacterLook.POSES.size();character_look.reset_preview()
+	taps.clear()
+
+func draw_look() -> void:
+	draw_rect(Rect2(0,0,1152,768),INK)
+	text(Vector2(45,55),"VIRGO DIAMOND / YOUR CHARACTER LOOK",28)
+	text(Vector2(45,92),"Choose freely. Your weapons, action cues and fitted gear keep their meanings.",20,AMBER)
+	text(Vector2(45,127),"Session only: this look stays through retries and both goals, then resets when you close the game.",17)
+	panel(Rect2(35,170,510,330))
+	for i in 3:
+		var field:String=CharacterLook.FIELDS[i]
+		var at:=Vector2(60,225+i*90)
+		if character_look.row==i:draw_rect(Rect2(at-Vector2(12,35),Vector2(476,70)),Color("33485c"))
+		text(at,(" > " if character_look.row==i else "   ")+field.to_upper(),18,TEAL)
+		text(at+Vector2(165,0),CharacterLook.NAMES[field][character_look.draft[field]],22)
+		if field=="skin":
+			for j in CharacterLook.SKIN.size():draw_circle(at+Vector2(175+j*40,25),9,CharacterLook.SKIN[j])
+	panel(Rect2(565,170,552,330))
+	text(Vector2(590,210),"YOUR LOOK IN MOTION",17,TEAL)
+	text(Vector2(605,255),character_look.role+" / "+Workshop.NAMES[CharacterLook.OUTFITS[character_look.outfit]],19)
+	text(Vector2(610,289),CharacterLook.POSES[character_look.pose_index]+" / "+look_actor.pose(character_look.preview),18,AMBER)
+	text(Vector2(657,480),"PLAY SIZE",16)
+	text(Vector2(883,480),"3x DETAIL",16)
+	text(Vector2(60,540),"UP / DOWN choose detail     LEFT / RIGHT change     DELETE defaults in draft",19)
+	text(Vector2(60,580),"1 / 2 preview approach     TAB preview fitting     SPACE preview action",19)
+	text(Vector2(60,620),"Preview choices do not change your actual approach, equipment or rewards.",18,AMBER)
+	text(Vector2(60,665),"ENTER apply look     ESC discard     F1 controls",22,TEAL)
+	text(Vector2(60,707),"Preview paused after focus loss; an editor key resumes." if character_look.paused else "Draft changes are visible here. Apply to see your look in the adventure.",18)

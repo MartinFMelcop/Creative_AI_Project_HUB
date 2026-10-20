@@ -4,23 +4,24 @@ Read the repository-root `AGENTS.md`. Current user directions override historica
 SEED/ADR/product obligations. New technical documentation, comments and Git messages
 use English; preserve the appropriate language of creative works and imported sources.
 
-## Preflight before every improvement
+## Proportional preflight
 
-1. Inspect Git/local/remote state and tools; read `docs/STATE.md`, SEED current sections,
-   `registry/projects.json`, `labs/origins.json` and affected real artifacts/evidence.
-2. Use compact `python3 tools/brain_query.py overview` when orientation is needed;
-   reuse current orientation while source identity is unchanged. Known IDs go directly
-   to `get`. Full `indexes` is optional deliberate catalog inspection.
-3. Classify engineering, science and creative relevance, even where low. Discover with
-   `search "question" --metadata-only`; opt into `--relaxed` for explained exploratory
-   matching. Follow `brains/README.md` boundaries and retrieve complete relevant chapters
-   with `get ID`. Cite document/ID
-   and their practical use concisely in existing work evidence or a decision.
+1. Inspect Git/local/remote state and tools; read `docs/STATE.md`, relevant SEED sections,
+   affected registries and real artifacts/evidence selectively.
+2. Before substantial work, consider engineering, science and creative relevance; use
+   pertinent domains proportionally. Use compact `python3 tools/brain_query.py overview`
+   when orientation is needed; reuse current orientation while source identity is
+   unchanged. Known IDs go directly to `get`; full `indexes` is deliberate inspection.
+3. When useful, discover with `search "question" --metadata-only`; opt into `--relaxed`
+   for exploratory matching. Follow `brains/README.md` retrieval boundaries and read
+   complete relevant chapters with `get ID` when needed. Briefly record materially
+   influential knowledge and its practical effect; do not create ceremonial reports.
 4. Consult pertinent derived `knowledge/` and historical `references/` selectively.
    Separate observation, interpretation, hypothesis and decision; do not infer canon
    from filenames, repeated summaries or missing policies.
-5. Compare credible alternatives across laboratory questions, portfolio technologies
-   and North Star needs before selecting one coherent verifiable increment.
+5. Compare credible opportunities across North Star experience, creative work, portfolio
+   technologies, laboratory findings, defects, distribution and important uncertainties
+   before selecting one valuable coherent increment.
 
 The brains coordinate reasoning, not commands or automatic approval. Engineering
 informs requirements/contracts/trade-offs/failure/reliability; science informs rival
@@ -52,10 +53,10 @@ because Git history exists. P07/P08 have distributed assets; P09 remains an unex
 seed. Candidate labs are not implemented labs. Prefer a small real instrument and
 executed protocol over renaming directories or accumulating research pages.
 
-Virgo Diamond is the principal product and destination for most future investment.
-Prioritize recognizable character agency and meaningful adventures over speculative
-infrastructure/ecology. Select languages/engines by requirements and available tools.
-Do not migrate software for quotas or default to browser demos. Share abstractions
+Virgo Diamond is the principal product and long-term creative priority.
+Prioritize recognizable character agency and meaningful adventures while comparing
+other justified portfolio opportunities. Select languages/engines by requirements and
+available tools. Do not migrate software for quotas or default to browser demos. Share abstractions
 only for actual consumers. The North Star catalog separately tracks candidates,
 origin verification, adaptations, actual integration and external validation. Its
 local prototype currently has one executable character consumer; NS-C03 combat and NS-C07 sound methods are adapted,
@@ -64,14 +65,14 @@ origin code alone is not a North Star game consumer.
 
 ## Product selection and living design
 
-Prefer existing Virgo Diamond consumer improvements, missing next-playable capability,
-blocking uncertainty, then portfolio work with justified relevance/cost. Choose one
-primary mode (RESEARCH, DEVELOPMENT or CREATIVE PRODUCTION); all three brains remain
-available, while evidence matches the mode. Until a destination consumer exists,
-prioritize its smallest meaningful playable experience. Do not repeatedly select
-standalone research for ease of automation. Keep accepted/revised/experimental/rejected
-decisions in `north-star/DESIGN.md`; current author authority and source status persist.
-Report observable product, lab knowledge, portfolio and origin migration changes.
+Use the value-driven comparison in `docs/prompts/CONTINUOUS_DEVELOPMENT.md` rather
+than fixed category ordering. Weigh creative/technical/knowledge value, strategic
+relevance, reuse, feasibility, complexity and opportunity cost. Do not automatically
+prioritize the same prototype or the easiest automated verification. Choose one primary
+mode (RESEARCH, DEVELOPMENT or CREATIVE PRODUCTION); all three domains remain available,
+while evidence matches the work. Keep accepted/revised/experimental/rejected decisions
+in `north-star/DESIGN.md`; current author authority and source status persist. Report
+material product, laboratory knowledge, portfolio and origin migration changes honestly.
 
 ## Verify and close
 

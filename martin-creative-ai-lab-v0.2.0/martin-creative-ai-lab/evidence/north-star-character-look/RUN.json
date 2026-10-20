@@ -1,0 +1,463 @@
+{
+  "baseline_artifact": {
+    "commit": "e7c7563e64fd91797e18ae81b01b00d0a8c692b0",
+    "path": "north-star/prototype/dist/crossing-drill.pck",
+    "preservation": "Copied before editing; 572 existing controls executed against baseline goldens before source changes.",
+    "sha256": "9c13db4d79665cf86fe094b72b2aa867d92c0838c1a1e1990e8871d1cd24b857",
+    "size_bytes": 229220
+  },
+  "baseline_commit": "e7c7563e64fd91797e18ae81b01b00d0a8c692b0",
+  "before_after": {
+    "delivery": "Ten actual scene frames per source/PCK are byte-identical, with matching recorded states; two default gameplay frames also match the preserved prior PCK in this renderer.",
+    "input": "Real OS keys exercise draft, cancel, acknowledged edits, apply, approach selection, live play, title-only rejection, abandon retention and fresh-process reset in both deliveries. No first-goal OS completion or human testing is claimed.",
+    "mechanics": "Four complete matched original/custom two-stage journeys have exactly equal Combat and return-room observations. All 572 retained control observations match the verified baseline, excluding source identity fields only.",
+    "new_behavior": "F3 opens independent appearance draft; arrows edit, Enter applies, Esc discards, Delete resets draft. Preview approach/fitting/real action never changes actual role, equipment or reward. Applied look survives existing scene/model replacements and both goals; a fresh process resets it."
+  },
+  "branch": "codex/north-star-character-look-20261019",
+  "capability_ids": [
+    "NS-C03",
+    "NS-C07"
+  ],
+  "checks": {
+    "failed": 0,
+    "passed": 620
+  },
+  "commands": [
+    {
+      "command": [
+        "python3",
+        "north-star/prototype/tools/verify.py",
+        "--output",
+        "../../work/north-star-character-look/regressions.json"
+      ],
+      "cwd": "maintained lab",
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "python3",
+        "north-star/prototype/tools/verify_gate.py",
+        "--output",
+        "../../work/north-star-character-look/gate.json"
+      ],
+      "cwd": "maintained lab",
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "python3",
+        "north-star/prototype/tools/verify_routes.py",
+        "--output",
+        "../../work/north-star-character-look/routes.json"
+      ],
+      "cwd": "maintained lab",
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "python3",
+        "north-star/prototype/tools/verify_workshop.py",
+        "--output",
+        "../../work/north-star-character-look/workshop.json"
+      ],
+      "cwd": "maintained lab",
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "python3",
+        "north-star/prototype/tools/verify_look.py",
+        "--output",
+        "../../work/north-star-character-look/results.json"
+      ],
+      "cwd": "maintained lab",
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "python3",
+        "north-star/prototype/tools/verify_look_display.py",
+        "--baseline",
+        "../../work/north-star-character-look/baseline.pck",
+        "--output",
+        "../../work/north-star-character-look/display-reviewed"
+      ],
+      "cwd": "maintained lab",
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "python3",
+        "tools/validate_repo.py"
+      ],
+      "cwd": "maintained lab",
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "python3",
+        "tools/reference_library.py",
+        "check"
+      ],
+      "cwd": "maintained lab",
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "python3",
+        "tools/check_manifest.py"
+      ],
+      "cwd": "maintained lab",
+      "exit_code": 0
+    }
+  ],
+  "consumer_paths": [
+    "north-star/prototype/arena.gd",
+    "north-star/prototype/combat.gd",
+    "north-star/prototype/rehearsal.gd",
+    "north-star/prototype/keepsakes.gd",
+    "north-star/prototype/errand.gd",
+    "north-star/prototype/controls.gd",
+    "north-star/prototype/sound.gd",
+    "north-star/prototype/actors.gd",
+    "north-star/prototype/workshop.gd",
+    "north-star/prototype/route.gd",
+    "north-star/prototype/return_gate.gd",
+    "north-star/prototype/character_look.gd"
+  ],
+  "continuity": {
+    "laboratories": "No new lab or claimed lab maturity; existing derived character knowledge updated with a real observer finding.",
+    "north_star": "One existing local prototype / 12 consumer code paths, unchanged 14 contribution states; NS-C03/07 adapted. No production integration or independent validation.",
+    "origins": "No extraction/status change: P01-P05/P07/P08/P10/P11 preserved_pending_extraction, P06 pilot_instrumented, P09 seed_only; sources/licenses/consumers retained.",
+    "portfolio": "Inspectable native appearance creation/application and actual-action preview, alongside preserved demonstrations.",
+    "prompt": {
+      "normalization": "Supplied CRLF to LF and four trailing Markdown spaces removed; section 15 adoption stated in durable present tense, all 19 sections/contracts retained.",
+      "path": "docs/prompts/CONTINUOUS_DEVELOPMENT.md",
+      "reason": "Explicit current author adaptive request replaces fixed selection ordering with value/opportunity-cost comparison and proportional knowledge.",
+      "sha256": "0e4ec5a2766b204e7f89c6bafac176fd2e69ea90925834fd4ce05fba536a2ecc",
+      "size_bytes": 31812
+    },
+    "seed": "0.33.15"
+  },
+  "creative_assessment": {
+    "inspected": [
+      "editor-rest: independent choices, dark skin/tied silhouette, actual riveted fitting, native-size and detail samples.",
+      "editor-blade: actual paid blade gesture, preserved role/gear signals, readable shorter heading and clear labels.",
+      "guardian-custom-guard: applied color/skin/hair with actual live guard and functional coat.",
+      "custom-return-gate: same applied look in the real second consumer goal."
+    ],
+    "judgment": "The inspected samples make free choices and retained action/gear meanings visible; play-size detail is necessarily subtle. The full identity ambition and artistic preference remain unvalidated.",
+    "refinement": "Attach before the first accepted preview event; preserve event through natural loop reset. Raise portrait above the legend, shorten heading, and use horizontal paid-step sample to keep card bounds clear. Gameplay directions remain unchanged.",
+    "review": "Implementing and additional reviewing agents; neither is independent human/player validation."
+  },
+  "failure_controls": [
+    {
+      "control": "Preserved prior pack offered as current look delivery",
+      "observation": "Missing new native check resource rejects stale PCK; exit 1 and no success report."
+    },
+    {
+      "checks": {
+        "failed": 2,
+        "passed": 46
+      },
+      "control": "Temporary source omits pre-action preview-observer attachment",
+      "observation": "Actual native pose assertions fail while paid model actions still occur; the control is expected failure, not an unresolved product result."
+    },
+    {
+      "control": "Draft aliasing, discard/defaults, preview role/fitting/world/reward isolation, controls freeze, live editor rejection and fresh instance",
+      "observation": "Explicit native negative contracts pass."
+    }
+  ],
+  "findings": [
+    {
+      "observation": "Initial 45 native model controls passed while actual editor rendered Blade/idle. Actual image inspection found the missed first visual event; new native observer assertions and a mutation control cover it.",
+      "result": "negative"
+    },
+    {
+      "observation": "Both roles complete original/custom full two-goal policies with exactly equal mechanics; appearance remains independently applied.",
+      "result": "positive"
+    },
+    {
+      "observation": "No independent people establish recognizable identity, aesthetic preference, comfort, comprehension or accessibility.",
+      "result": "inconclusive"
+    },
+    {
+      "observation": "An initial full display attempt was interrupted across an environment restart and has no success claim. Later startup capture and rapid-edit receipts failed in the fixed-delay instrument. The final runner retains captured JSON, retries only idempotent startup capture, and acknowledges each edit without resending edit/gameplay keys; baseline startup is also executed. No product timing rule or expected result was weakened.",
+      "result": "instrumentation"
+    }
+  ],
+  "kind": "destination_execution",
+  "knowledge": {
+    "creation": {
+      "effect": "Direct author identity ambition; separate free expression from action/equipment and check actual drawing in motion. Candidate creator/people/class concepts remain H, not canon.",
+      "ids": [
+        "CRE-001",
+        "CRE-009",
+        "CRE-029",
+        "CRE-066"
+      ],
+      "relevance": "high"
+    },
+    "derived_source": "knowledge/character-keepsakes.md; separate expression, gear and reward ownership.",
+    "engineering": {
+      "effect": "Verify both creative mechanism and inspectable artifact; successful action state cannot replace visible output.",
+      "ids": [
+        "ENG-023"
+      ],
+      "relevance": "medium"
+    },
+    "science": {
+      "effect": "Pixel/state equality and agent judgment are not human identity, preference or accessibility measures.",
+      "ids": [
+        "SCI-014"
+      ],
+      "relevance": "medium"
+    }
+  },
+  "limitations": [
+    "Appearance choices are session-local; existing keepsake/control profiles are unchanged. No name, body morph, voice, account or full character creator is implemented.",
+    "Fixed automated policies and synthetic input are not independent participant recognition, preference, balance, enjoyment or accessibility.",
+    "Default image equivalence covers two gameplay frames on one renderer, not every pose/driver. Source/PCK pixel parity is scoped to the tested environment.",
+    "No new origin art, sound media, fictional universe or rights clearance is imported or inferred. Candidate visual directions remain experimental.",
+    "No final MMO engine, multiplayer, scale, secure progression, retention, market or measured token/cost savings claim."
+  ],
+  "mode": "CREATIVE PRODUCTION",
+  "opportunity": {
+    "alternatives": [
+      "Another playable task: extends adventure but repeats the current role/gear presentation envelope.",
+      "More combat/route/workshop refinements: useful only for an observed weakness; none stronger than missing free expression for this scope.",
+      "P10-style dialogue aftermath: credible content work, deferred rather than copied into canon.",
+      "Participant comprehension/identity research: valuable, but no actual participants available.",
+      "New general appearance/save framework: rejected in favor of bounded in-memory session choices."
+    ],
+    "audience": "Users of the existing local character prototype.",
+    "observed_problem": "Actual player presentation was coupled to approach colors, functional fitting and earned marks, with no free independent appearance choice.",
+    "reassessment": "The current author supplied the adaptive value-driven prompt during implementation. Reconfirmed actual expression value and bounded cost rather than treating old category ordering as authority; no automatic next target.",
+    "selected": "Independent skin/head-hair/cloth choices, previewed by the same actor renderer and deliberately applied into actual play. Session persistence boundary disclosed."
+  },
+  "recorded_at_utc": "2026-10-20T09:39:59.788893+00:00",
+  "repository_validation": {
+    "gates": {
+      "manifest": "PASS: 1502 maintained files; exact Git inventory and hashes",
+      "references": "PASS: 5 records, 607 preserved sources, 18 derived PDF texts, 140 exclusions, 14 capabilities",
+      "repository": "PASS: 11 projects, 15 transfers, 11 assets, 2 legacy sources, 635 local links"
+    },
+    "python_regressions": {
+      "brain_query": 31,
+      "check_manifest": 11,
+      "failed": 0,
+      "native_runner": 3,
+      "reference_library": 42,
+      "total": 114,
+      "validate_repo": 27
+    },
+    "workflow": "Actionlint 1.7.7 passed. Existing gates and isolated pinned SDK remain; native CI adds 48 look controls and updates current golden identities. Remote CI is verified after publication."
+  },
+  "result_artifacts": [
+    {
+      "local_path": "evidence/north-star-character-look/custom-return-gate.png",
+      "sha256": "fd1abd300f67650eacbd28a0ed4c45c4b05d23525357b35f2e0984a295596516",
+      "size_bytes": 82480
+    },
+    {
+      "local_path": "evidence/north-star-character-look/display.json",
+      "sha256": "5b5e52b01da7a29d013c8ff7ddb434b232ebd3a0250c2c418557cc5e364178ea",
+      "size_bytes": 3517
+    },
+    {
+      "local_path": "evidence/north-star-character-look/editor-blade.png",
+      "sha256": "7f679994c150739c4a326670ade14a30204fcd42ed5520a5e73152db0fc41e93",
+      "size_bytes": 107875
+    },
+    {
+      "local_path": "evidence/north-star-character-look/editor-rest.png",
+      "sha256": "7a2765f649ed00816b8d73485e0adfd508f7b93a006cc911f43adb1fd6740816",
+      "size_bytes": 98402
+    },
+    {
+      "local_path": "evidence/north-star-character-look/frames.json",
+      "sha256": "a409ef5c32aa881c0c98bb0941079e500f59c76b3fe65134a66eb34823ae36dc",
+      "size_bytes": 12092
+    },
+    {
+      "local_path": "evidence/north-star-character-look/gate.json",
+      "sha256": "aa6a3984aa869b5e9a6d2dfff65365321e8930f7ebd299a7a9768b9d357a9f2b",
+      "size_bytes": 2726
+    },
+    {
+      "local_path": "evidence/north-star-character-look/guardian-custom-guard.png",
+      "sha256": "1f2fdfc082c9fafa9697a247bb26bdcc00e3159f2932382454331bfed5376ccb",
+      "size_bytes": 82629
+    },
+    {
+      "local_path": "evidence/north-star-character-look/regressions.json",
+      "sha256": "70aac75d7d91123ecd4d6a494c0168ad668273527f9ce613ea197a06592fb4e1",
+      "size_bytes": 106756
+    },
+    {
+      "local_path": "evidence/north-star-character-look/results.json",
+      "sha256": "6e22fa86aca0fde4888dc2861ea7b14b883de9618238bcddd0746feb3c3dddb2",
+      "size_bytes": 1639
+    },
+    {
+      "local_path": "evidence/north-star-character-look/routes.json",
+      "sha256": "e7f421059b3cae03e00a1ee477e0da365bf19239086f76793510a8c4b2b65ef4",
+      "size_bytes": 1659
+    },
+    {
+      "local_path": "evidence/north-star-character-look/workshop.json",
+      "sha256": "aaae9aa99756a7c91d44a7e59d44e05356434a29de4e96a8dc05c11a5071e57b",
+      "size_bytes": 1701
+    }
+  ],
+  "runtime": "Godot 4.6.3.stable.official.7d41c59c4 standard; Python 3.12; Linux/Xorg dummy, Mesa llvmpipe; Dummy audio for native display/input",
+  "schema_version": 1,
+  "scope": "Free independent session appearance integrated into one existing two-goal character consumer. Explicit draft/apply/discard, actual actor/action previews and unchanged mechanics. Functioning expression is not perceived identity or independent creative validation.",
+  "source_artifacts": [
+    {
+      "local_path": "north-star/prototype/arena.gd",
+      "sha256": "0efc724cc3a001275651a5ab0e2ac4c68a8f728cf7a1d7c0c9b0518ca647936e",
+      "size_bytes": 42658
+    },
+    {
+      "local_path": "north-star/prototype/combat.gd",
+      "sha256": "829c922b86cadbc5a34c4367d7cab73f685e674449769d71a37b5a7450461cbb",
+      "size_bytes": 14728
+    },
+    {
+      "local_path": "north-star/prototype/rehearsal.gd",
+      "sha256": "507a27b7832cfc79522396132a0a5f3f32fec34dd443a8a35fc21102080252c9",
+      "size_bytes": 3187
+    },
+    {
+      "local_path": "north-star/prototype/keepsakes.gd",
+      "sha256": "d7790dddbd25904069b0c1a6d5edb2f7d01bc02a375d608a4ec5a25262ddb6c9",
+      "size_bytes": 5848
+    },
+    {
+      "local_path": "north-star/prototype/errand.gd",
+      "sha256": "2a2392fa86bd12544eba5f60ad74d35592c7d6fa207373ec11a1928a9e33e601",
+      "size_bytes": 3831
+    },
+    {
+      "local_path": "north-star/prototype/controls.gd",
+      "sha256": "151bb8867ba735c3b0b2a0048d312472dfe32359d2409825fa4817cbd0a9e9b8",
+      "size_bytes": 9867
+    },
+    {
+      "local_path": "north-star/prototype/sound.gd",
+      "sha256": "4404169ebb2d1711f20e6023292712bb2051f4075c4039d9e2db725b4b8fa80a",
+      "size_bytes": 4116
+    },
+    {
+      "local_path": "north-star/prototype/actors.gd",
+      "sha256": "f4f1cb91251d0bd37ed76ff8c965ab8bc4e15d804597e7caf0fc57c2d296cda3",
+      "size_bytes": 11184
+    },
+    {
+      "local_path": "north-star/prototype/workshop.gd",
+      "sha256": "5fcba9578edf0c44db9336cb36d6b7783ff1da175e200f9c422392e4eebcc56b",
+      "size_bytes": 2239
+    },
+    {
+      "local_path": "north-star/prototype/route.gd",
+      "sha256": "2936029e1a52933fff0141b546f85fbc53a57b7e6c5301eaef5cabac06a05901",
+      "size_bytes": 2304
+    },
+    {
+      "local_path": "north-star/prototype/return_gate.gd",
+      "sha256": "0f8c91dfb071b8ddb3712cabf165f6eaf41b91027d4266ccc7c7db2bc7a178ea",
+      "size_bytes": 3801
+    },
+    {
+      "local_path": "north-star/prototype/character_look.gd",
+      "sha256": "53a2c9eb35d029c1faab43fe117a2abac0f121f423176093e1a481da1af8baf4",
+      "size_bytes": 2760
+    },
+    {
+      "local_path": "north-star/prototype/project.godot",
+      "sha256": "8d4755b58f1179a9b5ec431579177371e784bca9703a17c88f4c7a6d4ee9385c",
+      "size_bytes": 414
+    },
+    {
+      "local_path": "north-star/prototype/arena.tscn",
+      "sha256": "f794c485663f0ed318ddce6bb7a62bc9b2dbd3af02be4f166cca962c29382591",
+      "size_bytes": 154
+    },
+    {
+      "local_path": "north-star/prototype/provenance.json",
+      "sha256": "e971dba8cf1e5aebc21c42f8fd74ee29d1f309014ed2ffc7df90e60ea8d91902",
+      "size_bytes": 5737
+    },
+    {
+      "local_path": "north-star/prototype/tools/pack.gd",
+      "sha256": "6eca8dc87340a5242917a536f217e01c0b7d4db88c90b8fd9efef87b0f24795e",
+      "size_bytes": 1326
+    },
+    {
+      "local_path": "north-star/prototype/tools/verify.py",
+      "sha256": "8ef11bf0384230d7d16e53fb7c0bb883182242b931bc6200ccad140b4f37aad7",
+      "size_bytes": 7514
+    },
+    {
+      "local_path": "north-star/prototype/tools/verify_gate.py",
+      "sha256": "3a8bda92c26d4f4aab5ce7c69822a64452439a36bf5eb8090c748e270fff425f",
+      "size_bytes": 5656
+    },
+    {
+      "local_path": "north-star/prototype/tools/verify_routes.py",
+      "sha256": "3f065dc5c35b2a450559e1fb629aa2bf74b3c7317516c1c18f94bd98bd86c5e4",
+      "size_bytes": 3597
+    },
+    {
+      "local_path": "north-star/prototype/tools/verify_workshop.py",
+      "sha256": "9480bf10e81f5a220a094b841a009647f91f70b51131ce7258b9b9d211e247aa",
+      "size_bytes": 3474
+    },
+    {
+      "local_path": "north-star/prototype/tools/verify_look.py",
+      "sha256": "bfdbdf1fe56f5442f06b0e100593f89b8d3d5520dbf1e18f822e9812f4216a67",
+      "size_bytes": 3402
+    },
+    {
+      "local_path": "north-star/prototype/tools/verify_look_display.py",
+      "sha256": "8ad22542b5328b0050e7b49d6a35da03d551bf00c8105ea6043252474f14ab5a",
+      "size_bytes": 12010
+    },
+    {
+      "local_path": "north-star/prototype/tools/verify_routes_input.py",
+      "sha256": "7564845de7f59d13f354c8105e95e76724a33d8cd44b49f833ad0814b92e127a",
+      "size_bytes": 7931
+    },
+    {
+      "local_path": "north-star/prototype/tests/run_checks.gd",
+      "sha256": "c7e8c507f4b4030babfb64dec8befdb06080cda0950f92ae02354e339326f06c",
+      "size_bytes": 8373
+    },
+    {
+      "local_path": "north-star/prototype/tests/look_checks.gd",
+      "sha256": "697c25cb5f6bd1d5cb499a56915152f38c59d112e96765fb681292715a0c7242",
+      "size_bytes": 6940
+    },
+    {
+      "local_path": "north-star/prototype/tests/look_capture.gd",
+      "sha256": "36b5b07b2cbf45f4433fd6954b6329fe5408e6fb883b4151574f5aab4e089d3e",
+      "size_bytes": 2865
+    },
+    {
+      "local_path": "north-star/prototype/tests/policy.gd",
+      "sha256": "646f0758a211e84ffbfd4632460c7d1fc549cbb3b552801ee2508774a5a63e29",
+      "size_bytes": 979
+    },
+    {
+      "local_path": "north-star/prototype/tests/gate_policy.gd",
+      "sha256": "a40d249e877446f7da09890e4c84d1c3243ef4ea110de65b033d7bd8710680ed",
+      "size_bytes": 1187
+    },
+    {
+      "local_path": "north-star/prototype/dist/crossing-drill.pck",
+      "sha256": "cfb635aca32cc375e567b63bdd5da991f6cd35787eed7d46567430e1986586ec",
+      "size_bytes": 247004
+    }
+  ]
+}

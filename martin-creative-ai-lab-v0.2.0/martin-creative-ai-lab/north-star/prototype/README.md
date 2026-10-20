@@ -197,6 +197,39 @@ opportunity difference. Fixed routes show feasibility, not optimal play or prefe
 
 ![Timed guard cue in the actual consumer](../../evidence/north-star-guard-techniques/raise-now.png)
 
+## Choose your character look
+
+On approach selection, **F3** opens skin, hair and cloth-dye choices independent of
+approach, fitted gear and earned marks. **Up/Down** selects a detail; **Left/Right**
+cycles it. **Enter** applies; **Esc** discards; **Delete** puts defaults in the draft.
+You can revise the look by returning to selection. No unlock, payment or stat change.
+
+The preview uses the same player drawing at play size and 3x detail. **1/2** previews
+either approach; **Tab** previews supported fittings; **Space** cycles real rest/walk,
+response, paid step and blade samples. These preview choices do not change your real
+approach, equipment or rewards. F1 controls remain available. Focus loss pauses the
+sample; an editor key resumes. The blade sample hits closed armor, not a fake counter.
+
+Applied expression reaches the workshop, rehearsal, replay and both adventure goals.
+Role accents, weapons, functional gear and action warnings remain distinct. **Session
+only:** closing the game resets this look; existing keepsake/control saves are separate.
+The editor is available on selection, without live appearance changes or combat timing.
+
+![Actual character-look draft and shared actor preview](../../evidence/north-star-character-look/editor-rest.png)
+
+```bash
+python3 north-star/prototype/tools/verify_look.py --output /tmp/look.json --compare evidence/north-star-character-look/results.json
+python3 north-star/prototype/tools/verify_look_display.py --baseline /path/to/prior.pck --output /tmp/look-display
+```
+
+The optional Linux display runner owns bounded Xorg/engine processes and needs the
+same display dependencies as other native input tools. It compares source/PCK scenes,
+can require prior default gameplay pixels, and uses real keys for draft/cancel/apply,
+play and fresh-process reset. [Evidence](../../evidence/north-star-character-look/RUN.json)
+distinguishes these controls from agent art judgment and missing independent player
+recognition, preference or accessibility. The creator is limited experimental expression,
+not final class/people canon, a complete character system or proof of the identity fantasy.
+
 ## An optional second playable goal
 
 After winning the real escort, press **F2** to continue to the return gate, or **Enter**
@@ -477,7 +510,7 @@ or MMORPG persistence.
 ## Execute checks and reproduce delivery
 
 ```bash
-python3 north-star/prototype/tools/verify.py --godot godot --output /tmp/crossing-check.json --compare evidence/north-star-return-gate/regressions.json
+python3 north-star/prototype/tools/verify.py --godot godot --output /tmp/crossing-check.json --compare evidence/north-star-character-look/regressions.json
 ```
 
 The stdlib runner bounds owned engine processes, uses writable temporary XDG paths,
@@ -501,7 +534,7 @@ The source pack is reproducible with the matching engine:
 godot --headless --path north-star/prototype --script tools/pack.gd -- /absolute/path/crossing-drill.pck
 ```
 
-[Current execution evidence](../../evidence/north-star-return-gate/RUN.json) identifies
+[Current execution evidence](../../evidence/north-star-character-look/RUN.json) identifies
 baseline, source/result hashes, commands, refinements and limitations. The preserved
 [first-consumer record](../../evidence/north-star-crossing/RUN.json) documents the
 original crossing delivery; the [rehearsal record](../../evidence/north-star-rehearsal/RUN.json)

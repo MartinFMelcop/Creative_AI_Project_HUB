@@ -1,0 +1,79 @@
+{
+  "baseline_pck_sha256": "9c13db4d79665cf86fe094b72b2aa867d92c0838c1a1e1990e8871d1cd24b857",
+  "default_prior_pixel_controls": 2,
+  "keyboard": {
+    "baseline": {
+      "startup_capture_attempts": 1
+    },
+    "pack": {
+      "applied": {
+        "dye": 1,
+        "hair": 2,
+        "skin": 2
+      },
+      "cancelled": true,
+      "draft": {
+        "dye": 1,
+        "hair": 1,
+        "skin": 1
+      },
+      "fresh_process_default": true,
+      "live_editor_rejected": true,
+      "live_role": "Duelist",
+      "retained_on_abandon": true,
+      "startup_capture_attempts": 1
+    },
+    "source": {
+      "applied": {
+        "dye": 1,
+        "hair": 2,
+        "skin": 2
+      },
+      "cancelled": true,
+      "draft": {
+        "dye": 1,
+        "hair": 1,
+        "skin": 1
+      },
+      "fresh_process_default": true,
+      "live_editor_rejected": true,
+      "live_role": "Duelist",
+      "retained_on_abandon": true,
+      "startup_capture_attempts": 1
+    }
+  },
+  "kind": "native_render_and_synthetic_os_input",
+  "pixels": {
+    "baseline": {
+      "duelist-original": "efc0d84239fff46e5f24df8581fe60c02c31b3d8f9e8d1d96a08a0b81f5dcc00",
+      "guardian-original": "05cde62d2f49593bbac2c058acda478a7c6f0540123f7ad7d2eab9bd29738c52"
+    },
+    "pack": {
+      "custom-return-gate": "fd1abd300f67650eacbd28a0ed4c45c4b05d23525357b35f2e0984a295596516",
+      "duelist-custom-draw": "9a21e29c033f1ba3c3ad9f24f6f844b56d7692f0c2a06b01433e4129a2894d6a",
+      "duelist-custom-step": "41ded4258c61b510d5ed44bfe2d7e3e11ca62faeda50efdaa27925105e22da54",
+      "duelist-original": "efc0d84239fff46e5f24df8581fe60c02c31b3d8f9e8d1d96a08a0b81f5dcc00",
+      "editor-blade": "7f679994c150739c4a326670ade14a30204fcd42ed5520a5e73152db0fc41e93",
+      "editor-guard": "a9abf9c10cd0e479a1dfd0a1cea54e1f5d0306b75f01987460e6e13c18ad3424",
+      "editor-rest": "7a2765f649ed00816b8d73485e0adfd508f7b93a006cc911f43adb1fd6740816",
+      "guardian-custom-guard": "1f2fdfc082c9fafa9697a247bb26bdcc00e3159f2932382454331bfed5376ccb",
+      "guardian-custom-walk": "3572ca9a57f504c402d31a81e87c21b843eb5a4eb68090eb69b77807769a673a",
+      "guardian-original": "05cde62d2f49593bbac2c058acda478a7c6f0540123f7ad7d2eab9bd29738c52"
+    },
+    "source": {
+      "custom-return-gate": "fd1abd300f67650eacbd28a0ed4c45c4b05d23525357b35f2e0984a295596516",
+      "duelist-custom-draw": "9a21e29c033f1ba3c3ad9f24f6f844b56d7692f0c2a06b01433e4129a2894d6a",
+      "duelist-custom-step": "41ded4258c61b510d5ed44bfe2d7e3e11ca62faeda50efdaa27925105e22da54",
+      "duelist-original": "efc0d84239fff46e5f24df8581fe60c02c31b3d8f9e8d1d96a08a0b81f5dcc00",
+      "editor-blade": "7f679994c150739c4a326670ade14a30204fcd42ed5520a5e73152db0fc41e93",
+      "editor-guard": "a9abf9c10cd0e479a1dfd0a1cea54e1f5d0306b75f01987460e6e13c18ad3424",
+      "editor-rest": "7a2765f649ed00816b8d73485e0adfd508f7b93a006cc911f43adb1fd6740816",
+      "guardian-custom-guard": "1f2fdfc082c9fafa9697a247bb26bdcc00e3159f2932382454331bfed5376ccb",
+      "guardian-custom-walk": "3572ca9a57f504c402d31a81e87c21b843eb5a4eb68090eb69b77807769a673a",
+      "guardian-original": "05cde62d2f49593bbac2c058acda478a7c6f0540123f7ad7d2eab9bd29738c52"
+    }
+  },
+  "rendered_frames_per_delivery": 10,
+  "scope": "Actual same actor drawing, controlled action samples, real OS editor/apply/cancel/gameplay and four native process entries. Agent inspection and fixed controls are not participant identity recognition, taste or accessibility.",
+  "source_pack_pixel_state_parity": true
+}

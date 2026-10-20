@@ -1,0 +1,591 @@
+{
+  "custom-return-gate": {
+    "actors": {
+      "action": "idle",
+      "action_left": 0.0,
+      "contact": "",
+      "contact_angle": 0.0,
+      "contact_left": 0.0,
+      "courier_hurt_left": 0.0,
+      "cursor": 0,
+      "hurt_left": 0.0,
+      "pose": "idle",
+      "sentinel_left": 0.0,
+      "stride": 0.0
+    },
+    "game": {
+      "cargo": 2,
+      "counters": {
+        "blocks": 0,
+        "counters": 0,
+        "courier_hits": 0,
+        "dodges": 0,
+        "player_hits": 0,
+        "redirects": 0,
+        "rejected": 0
+      },
+      "courier_speed": 28.0,
+      "courier_x": 600.0,
+      "enemy_focus": 3,
+      "energy": 100.0,
+      "events": [],
+      "guard_style": "none",
+      "hp": 5,
+      "mode": "play",
+      "objective": "return_gate",
+      "role": "Duelist",
+      "tick": 0
+    },
+    "look": {
+      "active": false,
+      "applied": {
+        "dye": 1,
+        "hair": 1,
+        "skin": 2
+      },
+      "draft": {
+        "dye": 1,
+        "hair": 1,
+        "skin": 2
+      },
+      "paused": false,
+      "preview_outfit": "trail",
+      "preview_pose": "Blade",
+      "preview_role": "Duelist",
+      "row": 0
+    }
+  },
+  "duelist-custom-draw": {
+    "actors": {
+      "action": "draw",
+      "action_left": 0.36,
+      "contact": "",
+      "contact_angle": 0.0,
+      "contact_left": 0.0,
+      "courier_hurt_left": 0.0,
+      "cursor": 1,
+      "hurt_left": 0.0,
+      "pose": "draw",
+      "sentinel_left": 0.0,
+      "stride": 0.0
+    },
+    "game": {
+      "cargo": 3,
+      "counters": {
+        "blocks": 0,
+        "counters": 0,
+        "courier_hits": 0,
+        "dodges": 0,
+        "player_hits": 0,
+        "redirects": 1,
+        "rejected": 0
+      },
+      "courier_speed": 28.0,
+      "courier_x": 160.467,
+      "enemy_focus": 3,
+      "energy": 84.0,
+      "events": [
+        {
+          "cargo": 3,
+          "energy": 84.0,
+          "hp": 4,
+          "kind": "redirect",
+          "tick": 1
+        }
+      ],
+      "guard_style": "none",
+      "hp": 4,
+      "mode": "play",
+      "outfit": {
+        "health_limit": 4,
+        "id": "trail",
+        "movement_scale": 1.2
+      },
+      "role": "Duelist",
+      "tick": 1
+    },
+    "look": {
+      "active": false,
+      "applied": {
+        "dye": 1,
+        "hair": 1,
+        "skin": 2
+      },
+      "draft": {
+        "dye": 1,
+        "hair": 1,
+        "skin": 2
+      },
+      "paused": false,
+      "preview_outfit": "trail",
+      "preview_pose": "Blade",
+      "preview_role": "Duelist",
+      "row": 0
+    }
+  },
+  "duelist-custom-step": {
+    "actors": {
+      "action": "step",
+      "action_left": 0.2,
+      "contact": "",
+      "contact_angle": 0.0,
+      "contact_left": 0.0,
+      "courier_hurt_left": 0.0,
+      "cursor": 2,
+      "hurt_left": 0.0,
+      "pose": "step",
+      "sentinel_left": 0.0,
+      "stride": 0.476923
+    },
+    "game": {
+      "cargo": 3,
+      "counters": {
+        "blocks": 0,
+        "counters": 0,
+        "courier_hits": 0,
+        "dodges": 1,
+        "player_hits": 0,
+        "redirects": 1,
+        "rejected": 0
+      },
+      "courier_speed": 28.0,
+      "courier_x": 160.933,
+      "enemy_focus": 3,
+      "energy": 59.3,
+      "events": [
+        {
+          "cargo": 3,
+          "energy": 84.0,
+          "hp": 4,
+          "kind": "redirect",
+          "tick": 1
+        },
+        {
+          "cargo": 3,
+          "energy": 59.3,
+          "hp": 4,
+          "kind": "step",
+          "tick": 2
+        }
+      ],
+      "guard_style": "none",
+      "hp": 4,
+      "mode": "play",
+      "outfit": {
+        "health_limit": 4,
+        "id": "trail",
+        "movement_scale": 1.2
+      },
+      "role": "Duelist",
+      "tick": 2
+    },
+    "look": {
+      "active": false,
+      "applied": {
+        "dye": 1,
+        "hair": 1,
+        "skin": 2
+      },
+      "draft": {
+        "dye": 1,
+        "hair": 1,
+        "skin": 2
+      },
+      "paused": false,
+      "preview_outfit": "trail",
+      "preview_pose": "Blade",
+      "preview_role": "Duelist",
+      "row": 0
+    }
+  },
+  "duelist-original": {
+    "actors": {
+      "action": "idle",
+      "action_left": 0.0,
+      "contact": "",
+      "contact_angle": 0.0,
+      "contact_left": 0.0,
+      "courier_hurt_left": 0.0,
+      "cursor": 0,
+      "hurt_left": 0.0,
+      "pose": "idle",
+      "sentinel_left": 0.0,
+      "stride": 0.0
+    },
+    "game": {
+      "cargo": 3,
+      "counters": {
+        "blocks": 0,
+        "counters": 0,
+        "courier_hits": 0,
+        "dodges": 0,
+        "player_hits": 0,
+        "redirects": 0,
+        "rejected": 0
+      },
+      "courier_speed": 28.0,
+      "courier_x": 160.0,
+      "enemy_focus": 3,
+      "energy": 100.0,
+      "events": [],
+      "guard_style": "none",
+      "hp": 5,
+      "mode": "play",
+      "role": "Duelist",
+      "tick": 0
+    },
+    "look": {
+      "active": false,
+      "applied": {
+        "dye": 0,
+        "hair": 0,
+        "skin": 0
+      },
+      "draft": {
+        "dye": 0,
+        "hair": 0,
+        "skin": 0
+      },
+      "paused": false,
+      "preview_outfit": "standard",
+      "preview_pose": "Rest",
+      "preview_role": "Guardian",
+      "row": 0
+    }
+  },
+  "editor-blade": {
+    "actors": {
+      "action": "idle",
+      "action_left": 0.0,
+      "contact": "",
+      "contact_angle": 0.0,
+      "contact_left": 0.0,
+      "courier_hurt_left": 0.0,
+      "cursor": 0,
+      "hurt_left": 0.0,
+      "pose": "idle",
+      "sentinel_left": 0.0,
+      "stride": 0.0
+    },
+    "game": {
+      "cargo": 3,
+      "counters": {
+        "blocks": 0,
+        "counters": 0,
+        "courier_hits": 0,
+        "dodges": 0,
+        "player_hits": 0,
+        "redirects": 0,
+        "rejected": 0
+      },
+      "courier_speed": 28.0,
+      "courier_x": 160.0,
+      "enemy_focus": 3,
+      "energy": 100.0,
+      "events": [],
+      "guard_style": "none",
+      "hp": 5,
+      "mode": "title",
+      "role": "Duelist",
+      "tick": 0
+    },
+    "look": {
+      "active": true,
+      "applied": {
+        "dye": 0,
+        "hair": 0,
+        "skin": 0
+      },
+      "draft": {
+        "dye": 1,
+        "hair": 1,
+        "skin": 2
+      },
+      "paused": false,
+      "preview_outfit": "trail",
+      "preview_pose": "Blade",
+      "preview_role": "Duelist",
+      "row": 0
+    }
+  },
+  "editor-guard": {
+    "actors": {
+      "action": "idle",
+      "action_left": 0.0,
+      "contact": "",
+      "contact_angle": 0.0,
+      "contact_left": 0.0,
+      "courier_hurt_left": 0.0,
+      "cursor": 0,
+      "hurt_left": 0.0,
+      "pose": "idle",
+      "sentinel_left": 0.0,
+      "stride": 0.0
+    },
+    "game": {
+      "cargo": 3,
+      "counters": {
+        "blocks": 0,
+        "counters": 0,
+        "courier_hits": 0,
+        "dodges": 0,
+        "player_hits": 0,
+        "redirects": 0,
+        "rejected": 0
+      },
+      "courier_speed": 28.0,
+      "courier_x": 160.0,
+      "enemy_focus": 3,
+      "energy": 100.0,
+      "events": [],
+      "guard_style": "none",
+      "hp": 5,
+      "mode": "title",
+      "role": "Duelist",
+      "tick": 0
+    },
+    "look": {
+      "active": true,
+      "applied": {
+        "dye": 0,
+        "hair": 0,
+        "skin": 0
+      },
+      "draft": {
+        "dye": 3,
+        "hair": 2,
+        "skin": 3
+      },
+      "paused": false,
+      "preview_outfit": "riveted",
+      "preview_pose": "Response",
+      "preview_role": "Guardian",
+      "row": 0
+    }
+  },
+  "editor-rest": {
+    "actors": {
+      "action": "idle",
+      "action_left": 0.0,
+      "contact": "",
+      "contact_angle": 0.0,
+      "contact_left": 0.0,
+      "courier_hurt_left": 0.0,
+      "cursor": 0,
+      "hurt_left": 0.0,
+      "pose": "idle",
+      "sentinel_left": 0.0,
+      "stride": 0.0
+    },
+    "game": {
+      "cargo": 3,
+      "counters": {
+        "blocks": 0,
+        "counters": 0,
+        "courier_hits": 0,
+        "dodges": 0,
+        "player_hits": 0,
+        "redirects": 0,
+        "rejected": 0
+      },
+      "courier_speed": 28.0,
+      "courier_x": 160.0,
+      "enemy_focus": 3,
+      "energy": 100.0,
+      "events": [],
+      "guard_style": "none",
+      "hp": 5,
+      "mode": "title",
+      "role": "Duelist",
+      "tick": 0
+    },
+    "look": {
+      "active": true,
+      "applied": {
+        "dye": 0,
+        "hair": 0,
+        "skin": 0
+      },
+      "draft": {
+        "dye": 3,
+        "hair": 2,
+        "skin": 3
+      },
+      "paused": false,
+      "preview_outfit": "riveted",
+      "preview_pose": "Rest",
+      "preview_role": "Guardian",
+      "row": 0
+    }
+  },
+  "guardian-custom-guard": {
+    "actors": {
+      "action": "idle",
+      "action_left": 0.0,
+      "contact": "",
+      "contact_angle": 0.0,
+      "contact_left": 0.0,
+      "courier_hurt_left": 0.0,
+      "cursor": 0,
+      "hurt_left": 0.0,
+      "pose": "guard_live",
+      "sentinel_left": 0.0,
+      "stride": 0.0
+    },
+    "game": {
+      "cargo": 3,
+      "counters": {
+        "blocks": 0,
+        "counters": 0,
+        "courier_hits": 0,
+        "dodges": 0,
+        "player_hits": 0,
+        "redirects": 0,
+        "rejected": 0
+      },
+      "courier_speed": 28.0,
+      "courier_x": 163.733,
+      "enemy_focus": 3,
+      "energy": 98.4,
+      "events": [],
+      "guard_style": "Steady",
+      "hp": 6,
+      "mode": "play",
+      "outfit": {
+        "health_limit": 6,
+        "id": "riveted",
+        "movement_scale": 0.8
+      },
+      "role": "Guardian",
+      "tick": 8
+    },
+    "look": {
+      "active": false,
+      "applied": {
+        "dye": 1,
+        "hair": 1,
+        "skin": 2
+      },
+      "draft": {
+        "dye": 1,
+        "hair": 1,
+        "skin": 2
+      },
+      "paused": false,
+      "preview_outfit": "trail",
+      "preview_pose": "Blade",
+      "preview_role": "Duelist",
+      "row": 0
+    }
+  },
+  "guardian-custom-walk": {
+    "actors": {
+      "action": "idle",
+      "action_left": 0.0,
+      "contact": "",
+      "contact_angle": 0.0,
+      "contact_left": 0.0,
+      "courier_hurt_left": 0.0,
+      "cursor": 0,
+      "hurt_left": 0.0,
+      "pose": "walk",
+      "sentinel_left": 0.0,
+      "stride": 1.282058
+    },
+    "game": {
+      "cargo": 3,
+      "counters": {
+        "blocks": 0,
+        "counters": 0,
+        "courier_hits": 0,
+        "dodges": 0,
+        "player_hits": 0,
+        "redirects": 0,
+        "rejected": 0
+      },
+      "courier_speed": 28.0,
+      "courier_x": 163.733,
+      "enemy_focus": 3,
+      "energy": 100.0,
+      "events": [],
+      "guard_style": "Steady",
+      "hp": 5,
+      "mode": "play",
+      "role": "Guardian",
+      "tick": 8
+    },
+    "look": {
+      "active": false,
+      "applied": {
+        "dye": 1,
+        "hair": 1,
+        "skin": 2
+      },
+      "draft": {
+        "dye": 1,
+        "hair": 1,
+        "skin": 2
+      },
+      "paused": false,
+      "preview_outfit": "trail",
+      "preview_pose": "Blade",
+      "preview_role": "Duelist",
+      "row": 0
+    }
+  },
+  "guardian-original": {
+    "actors": {
+      "action": "idle",
+      "action_left": 0.0,
+      "contact": "",
+      "contact_angle": 0.0,
+      "contact_left": 0.0,
+      "courier_hurt_left": 0.0,
+      "cursor": 0,
+      "hurt_left": 0.0,
+      "pose": "idle",
+      "sentinel_left": 0.0,
+      "stride": 0.0
+    },
+    "game": {
+      "cargo": 3,
+      "counters": {
+        "blocks": 0,
+        "counters": 0,
+        "courier_hits": 0,
+        "dodges": 0,
+        "player_hits": 0,
+        "redirects": 0,
+        "rejected": 0
+      },
+      "courier_speed": 28.0,
+      "courier_x": 160.0,
+      "enemy_focus": 3,
+      "energy": 100.0,
+      "events": [],
+      "guard_style": "Steady",
+      "hp": 5,
+      "mode": "play",
+      "role": "Guardian",
+      "tick": 0
+    },
+    "look": {
+      "active": false,
+      "applied": {
+        "dye": 0,
+        "hair": 0,
+        "skin": 0
+      },
+      "draft": {
+        "dye": 0,
+        "hair": 0,
+        "skin": 0
+      },
+      "paused": false,
+      "preview_outfit": "standard",
+      "preview_pose": "Rest",
+      "preview_role": "Guardian",
+      "row": 0
+    }
+  }
+}

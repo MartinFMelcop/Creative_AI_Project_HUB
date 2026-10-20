@@ -2211,3 +2211,28 @@ changes. Stage/capability/origin states remain unchanged; no external player val
   images; 505 retained controls unchanged. Synthetic policies/input and agent assessment
   are not human comprehension, preference, optimality, identity or balance validation.
   No origin migration/new lab/production integration. Existing prompt remains sufficient.
+
+## ADR-085 — Independent expression in actual play and adaptive author direction
+
+- **Baseline:** `e7c7563e64fd91797e18ae81b01b00d0a8c692b0`; CREATIVE PRODUCTION.
+- **Opportunity:** player presentation is coupled to approach, functional fitting and
+  earned marks. Choose free expression in the existing two-goal consumer over a third
+  task, more combat refinement, dialogue aftermath or unavailable participant testing.
+  This improves what can be chosen/seen; perceived identity remains a hypothesis.
+- **Decision:** three independent, reversible session choices; shared actual actor
+  rendering, real-action previews and explicit apply/discard/default draft. Keep role
+  signals, fitted gear, collision, combat, rewards and old default art intact. A new
+  persistence schema is deferred: disclose session reset rather than expand save scope.
+- **Knowledge:** CRE-001 D; CRE-009/029/066 H; ENG-023; SCI-014. Appearance, action and
+  recognition are separate claims. No final lore/people/class or human approval.
+- **Refinement:** model replacement lost the first visual event although the action
+  was paid. Attach the observer first and test real gestures after direct/natural reset.
+  Inspect card bounds and retain actual gameplay movement directions.
+- **Author update:** the new supplied adaptive prompt explicitly replaces fixed
+  category ordering with value-driven comparison, proportional knowledge and useful
+  labs. Adopt its 19 sections; normalize line endings/trailing Markdown spaces and
+  state section-15 adoption in present tense. This is current author direction, not
+  a claim that this increment empirically proves the best governance model.
+- **Limits:** technical equality, native keys and agent visual review do not prove
+  recognizable identity, taste, accessibility, fun, MMO readiness or market demand.
+  No origin extraction, new lab, automatic next target or capability-state promotion.

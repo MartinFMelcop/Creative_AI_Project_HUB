@@ -57,3 +57,19 @@ price beside the make action and keep cosmetic memory separate from fitting stat
 **Validity:** fixed routes and synthetic OS input, not perceived identity, general
 balance, profession demand or human preference. One session blank and reversible undo
 are not an economy, inventory or persistent progression system.
+
+## An accepted preview action can still be visually missing
+
+**Question/context:** can a free appearance workflow show the same character and paid
+actions as the real consumer? Baseline `e7c7563`; [execution](../evidence/north-star-character-look/RUN.json).
+**Observation:** initial controls passed paid-action assertions, while the actual
+editor showed Blade/idle. Replacing the preview model after stepping attached its
+observer after the first event. Attaching before stepping and observing natural loop
+reset restores blade/draw gestures. Review also moved enlarged art clear of its legend.
+
+**Interpretation/consequence:** inspect the observer's actual output, not just the
+underlying accepted action. Preparation, first discrete event and observer attachment
+order belong to the preview contract. Keep visual expression separate from combat
+and test both real rendering and unchanged full journeys. **Validity:** fixed/native
+samples and agent inspection, not perceived identity, taste or independent accessibility.
+CRE-009/029/066 motivate expression; ENG-023 and SCI-014 limit what passing controls prove.

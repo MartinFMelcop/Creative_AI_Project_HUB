@@ -250,3 +250,20 @@ escort prediction in the new context. Agent image assessment refined mechanism n
 and guard feedback. See [execution](../evidence/north-star-return-gate/RUN.json).
 Revisit the adventure/identity direction after actual player observation; passing checks
 does not establish meaningfulness, recognition, fun or unassisted comprehension.
+
+## Character look — experimental, separate from author-approved identity direction
+
+CRE-001 D supplies the identity ambition. CRE-009/029/066 H inform this limited free
+expression workflow, not a final creator, people list, class art or canon commitment.
+Choose skin, a head/hair silhouette and cloth dye independently from actual approach,
+fitting and earned mark. Apply/discard is explicit; preview samples use real action
+state and the same actor drawing. Changing preview approach/gear grants nothing.
+Applied appearance stays across existing play for the session; closing resets it.
+
+The original role accents, weapons, gear shapes and action/contact signals remain.
+No appearance choice changes size, collision, movement, resource costs or rewards.
+Default art is retained. Revision after inspection: first-event observer attachment
+and clear portrait bounds; a horizontal paid-step sample fits the preview card.
+Reject general recognition, accessibility or quality claims based on palette counts,
+pixel equality or scripted journeys. Revisit with actual people and stronger art/content
+needs; see [scoped execution](../evidence/north-star-character-look/RUN.json).

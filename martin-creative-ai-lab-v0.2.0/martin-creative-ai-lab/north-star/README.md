@@ -15,7 +15,7 @@ settings, focus loss and completed work disarm active intentions. Hold stays def
 ## Actual stage and creative authority
 
 The catalog now records **local_prototype**: one executable
-[crossing encounter](prototype/README.md), eleven actual consumer code paths and fourteen
+[crossing encounter](prototype/README.md), twelve actual consumer code paths and fourteen
 capabilities. **NS-C03 combat and NS-C07 sound are adapted** in this destination; the other twelve contribution
 states remain unchanged. Godot 4.6.3 is the prototype tool; no final MMO engine or
 running multiplayer service is selected. The earlier combat-response lab remains an
@@ -24,7 +24,7 @@ origin instrument, separately preserved.
 The player chooses frontal interception or redirection/mobility and protects the same
 courier to the far gate. [Living design](DESIGN.md) distinguishes author decisions,
 experimental mechanics, revisions and rejected alternatives. Current primary mode is
-DEVELOPMENT, priority category 1: improve this existing consumer. Optional rehearsal
+CREATIVE PRODUCTION: free appearance applied in this existing consumer. Optional rehearsal
 uses the same combat rules, preserves causal review and starts a clean normal crossing.
 The three prepared exercises do not demonstrate human learning or sustained resource
 management. [Prior threat-resolution execution](../evidence/north-star-sentinel-resolution/RUN.json) records protective completion, optional
@@ -39,7 +39,8 @@ movement/release cancel commitment. Distinct session outcomes require actual han
 and neither choice changes the existing keepsake rules or adds persistent loot.
 [Current input execution](../evidence/north-star-toggle-input/RUN.json) demonstrates
 released presses and recoverable interruption, without human accessibility claims.
-Future selection should first inspect and improve this real consumer.
+Future selection compares actual product, creative and portfolio value; this consumer
+is not an automatic next target.
 
 The [Creative Brain](../brains/README.md) is the central creative knowledge base.
 Current direct author decisions take precedence; D/A/H/E/V source categories distinguish
@@ -113,3 +114,9 @@ Actual remaining health/energy and fitting carry into two-catch work, stationary
 protection and a required alive exit; Enter still replays the escort. The courier stays
 safe. [Current execution](../evidence/north-star-return-gate/RUN.json) demonstrates four
 complete two-stage policies and source/PCK parity, not human identity/fun or MMO readiness.
+
+The [character-look workflow](prototype/README.md#choose-your-character-look) now offers
+free independent skin, hair and cloth dye, previewed with the actual drawing and actions.
+Apply/discard is deliberate; the chosen session look follows both goals without changing
+gear or combat. Closing resets appearance. [Execution](../evidence/north-star-character-look/RUN.json)
+supports functioning expression, not perceived identity or human aesthetic approval.

@@ -1,18 +1,18 @@
 # SEED — Martin Creative AI Lab
 
-**Version:** 0.33.14
+**Version:** 0.33.15
 **Data-base:** 10 de outubro de 2026  
 **Autor e responsável pelo portfólio:** Martin Melcop Neto  
 **Working language:** English for new technical documentation, plans, code comments and Git messages; respond in the requested language (Brazilian Portuguese for continuous closeout). Preserve appropriate creative/source languages.
-**Current state:** The HUB remains an authorial Design-Driven technology portfolio developed with generative AI. Virgo Diamond: The North Star is the principal definitive product; most new investment should demonstrably benefit its character identity and meaningful adventures. P01–P11 are preserved technology origins in controlled transition, without independent product/release obligations. Their versions and technical evidence are retained, not reclassified as laboratory or MMORPG maturity.
+**Current state:** The HUB remains an authorial Design-Driven technology portfolio developed with generative AI. Virgo Diamond: The North Star is the principal definitive product; make its character identity and meaningful adventures increasingly tangible while comparing other justified portfolio opportunities. P01–P11 are preserved technology origins in controlled transition, without independent product/release obligations. Their versions and technical evidence are retained, not reclassified as laboratory or MMORPG maturity.
 
 ## Production direction — Virgo Diamond and the three brains
 
 The five exact supplied sources in [brains/](brains/README.md) are durable knowledge
 bases, separate from historical [references](references/README.md) and derived
-[knowledge](knowledge/README.md). Before any improvement, consider all three domains,
-use compact orientation when needed, classify relevance and selectively retrieve complete
-pertinent chapters and record their practical use briefly. Current user instructions
+[knowledge](knowledge/README.md). Before substantial work, consider all three domains
+and use them proportionally. Use compact orientation when needed; retrieve complete
+pertinent chapters and briefly record knowledge that materially affects the work. Current user instructions
 and platform authorization/safety prevail; relevant brain principles inform operational
 agents using current evidence. Brains do not execute, authorize commands or train models.
 Their source texts/catalog/index require specific authorization to change.
@@ -45,7 +45,22 @@ does not merge fictional universes. Source details below are historical provenan
 retained origin behavior; current operation is defined by this direction, AGENTS,
 STATE and the single [continuous prompt](docs/prompts/CONTINUOUS_DEVELOPMENT.md).
 
-### Current consumer increment — v0.33.14
+### Current increment — v0.33.15
+
+CREATIVE PRODUCTION: free session appearance now reaches the existing playable character.
+F3 on selection opens independent skin, hair and cloth-dye choices with explicit draft,
+apply/discard/default controls. The same actor drawing previews real action samples,
+approaches and fittings without changing actual gear, rewards or combat. Applied looks
+remain through workshop, rehearsal, replay and the two-goal adventure; a fresh process
+starts with the original look. [Execution](evidence/north-star-character-look/RUN.json)
+separates functioning expression from unvalidated recognition, taste and accessibility.
+
+The current author's adaptive prompt replaces fixed category selection with value and
+opportunity-cost comparison, proportional knowledge use and contribution-based labs.
+North Star stays the principal long-term product without automatic prototype fixation.
+One consumer/twelve paths, fourteen capability states unchanged; no origin or lab migration.
+
+### Prior consumer increment — v0.33.14
 
 DEVELOPMENT/category 1: completing the real escort can now lead to a second optional
 playable objective. F2 carries actual remaining health/energy, fitting and arrival
@@ -113,9 +128,9 @@ accessibility/comfort/learning validation. The prior optional threat resolution 
 ## 0. Como começar uma sessão
 
 Read current root/lab AGENTS, STATE, the affected registries and real artifacts.
-Inspect local/remote Git state and tools before editing. Run the mandatory three-brain
-activation described above with compact `overview` when needed, metadata-only
-`search` and complete `get ID` retrieval. Consult relevant derived knowledge.
+Inspect local/remote Git state and tools before editing. Use proportional three-domain
+consultation with compact `overview` when needed, metadata discovery and complete
+`get ID` retrieval when pertinent. Consult relevant derived knowledge.
 Compare alternatives across research questions, portfolio capabilities and North Star
 benefit; choose one verifiable increment and implement/execute it. Use the single
 [operational prompt](docs/prompts/CONTINUOUS_DEVELOPMENT.md), not obsolete phases below,
@@ -123,12 +138,12 @@ for continuous development and its full successor requirement.
 
 | Field | Current evidence |
 |---|---|
-| Baseline | `5ab0b90a64da191016ea11f491df0f1c991fafd8`; wrapper retained |
-| Current milestone | DEVELOPMENT/category 1: optional second playable goal with actual arrival health, two catches, winch protection and exit; [execution](evidence/north-star-return-gate/RUN.json) |
+| Baseline | `e7c7563e64fd91797e18ae81b01b00d0a8c692b0`; wrapper retained |
+| Current milestone | CREATIVE PRODUCTION: independent character appearance applied in the real two-goal consumer; [execution](evidence/north-star-character-look/RUN.json) |
 | Sources | Five byte-preserved supplied brain files; historical reference inventories unchanged |
 | Operational state | [STATE](docs/STATE.md), [origins](labs/origins.json), [brain integrity](brains/integrity.json) |
 | Portfolio | Technology capabilities, inspectable source/demonstrations and bounded execution evidence |
-| North Star | One local prototype/eleven code paths; fourteen entries, NS-C03/07 adapted, other twelve statuses unchanged; no final engine/MMO service |
+| North Star | One local prototype/twelve code paths; fourteen entries, NS-C03/07 adapted, other twelve statuses unchanged; no final engine/MMO service |
 | Next selection | Reassess actual character-experience questions, laboratory instruments and portfolio value from new evidence |
 
 Registry and source gates establish structure/integrity, not gameplay quality or truth
@@ -1518,7 +1533,7 @@ Problema → contexto → evidência → decisão → resultado → limites → 
 
 The only maintained complete operational prompt is
 [docs/prompts/CONTINUOUS_DEVELOPMENT.md](docs/prompts/CONTINUOUS_DEVELOPMENT.md).
-It requires actual state inspection, mandatory selective three-brain activation,
+It requires actual state inspection, proportional selective three-domain consultation,
 contextual knowledge, alternatives, one implemented/executed increment, honest evidence,
 continuity, evidence-based prompt adaptation, authorized non-force publication and its
 own complete successor. Do not maintain parallel continuous-development instructions.

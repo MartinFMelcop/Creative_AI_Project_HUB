@@ -12,7 +12,7 @@ merits. The outer `martin-creative-ai-lab-v0.2.0/` name is historical packaging;
 
 Play the [North Star crossing prototype](north-star/prototype/README.md), or
 inspect its [living design](north-star/DESIGN.md) and
-[executed evidence](evidence/north-star-return-gate/RUN.json). Session-only single-press guard/interaction remove sustained-key requirements
+[executed evidence](evidence/north-star-character-look/RUN.json). Session-only single-press guard/interaction remove sustained-key requirements
 without changing combat costs or saving active intentions. Origin demonstrations and
 the preserved lab remain distinct from this actual local consumer. Optional rehearsal
 uses its real rules with retained contact explanations and clean retries. Normal
@@ -59,10 +59,9 @@ cd martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab
 ```
 
 Inspect Git, current instructions, state, source and execution evidence before
-editing. Activate the brains before an improvement: consider all three domains,
-use compact orientation when needed,
-classify engineering/science/creative relevance, retrieve only pertinent complete
-chapters, and record briefly how their principles affect the work. Consult derived
+editing. Before substantial work, consider all three knowledge domains proportionally.
+Use compact orientation when needed and retrieve pertinent complete chapters when
+they improve decisions, implementation or evaluation. Briefly record material influence. Consult derived
 knowledge without promoting an interpretation to a verified fact.
 
 The consultation tool uses Python's standard library:
@@ -131,3 +130,7 @@ limits. No origin or capability status is promoted by this increment.
 The current consumer also offers a [second playable objective](north-star/prototype/README.md#an-optional-second-playable-goal)
 after an actual escort win: F2 carries remaining health into catch work, winch protection
 and a required exit. Source/PCK execution retains original replay and origin consumers.
+
+The current consumer includes [free session character appearance](north-star/prototype/README.md#choose-your-character-look):
+an explicit draft/apply workflow previews actual actions and follows the player into
+both goals, independently from role, fitted gear and earned marks.

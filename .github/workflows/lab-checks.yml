@@ -208,12 +208,13 @@ jobs:
           veil_engine="$RUNNER_TEMP/veil-godot/Godot_v4.6.3-stable_linux.x86_64"
           CROSSING_GODOT="$veil_engine" python3 north-star/prototype/tools/test_verify.py
           CROSSING_GODOT="$veil_engine" python3 north-star/prototype/tools/test_verify_resolution.py
-          python3 north-star/prototype/tools/verify.py --godot "$veil_engine" --output "$RUNNER_TEMP/crossing-check.json" --compare evidence/north-star-return-gate/regressions.json
-          python3 north-star/prototype/tools/verify_workshop.py --godot "$veil_engine" --output "$RUNNER_TEMP/workshop-check.json" --compare evidence/north-star-return-gate/workshop.json
-          python3 north-star/prototype/tools/verify_routes.py --godot "$veil_engine" --output "$RUNNER_TEMP/routes-check.json" --compare evidence/north-star-return-gate/routes.json
+          python3 north-star/prototype/tools/verify.py --godot "$veil_engine" --output "$RUNNER_TEMP/crossing-check.json" --compare evidence/north-star-character-look/regressions.json
+          python3 north-star/prototype/tools/verify_workshop.py --godot "$veil_engine" --output "$RUNNER_TEMP/workshop-check.json" --compare evidence/north-star-character-look/workshop.json
+          python3 north-star/prototype/tools/verify_routes.py --godot "$veil_engine" --output "$RUNNER_TEMP/routes-check.json" --compare evidence/north-star-character-look/routes.json
           curl --fail --location --silent --show-error --max-time 45 "https://raw.githubusercontent.com/MartinFMelcop/Creative_AI_Project_HUB/5ab0b90a64da191016ea11f491df0f1c991fafd8/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/prototype/dist/crossing-drill.pck" --output "$RUNNER_TEMP/prior-crossing.pck"
           echo "ef8a226d88c221aca4e30768d4326e068c7873bdbfc14bb4febd7e62060791e1  $RUNNER_TEMP/prior-crossing.pck" | sha256sum --check
-          python3 north-star/prototype/tools/verify_gate.py --godot "$veil_engine" --output "$RUNNER_TEMP/gate-check.json" --baseline "$RUNNER_TEMP/prior-crossing.pck" --compare evidence/north-star-return-gate/results.json
+          python3 north-star/prototype/tools/verify_gate.py --godot "$veil_engine" --output "$RUNNER_TEMP/gate-check.json" --baseline "$RUNNER_TEMP/prior-crossing.pck" --compare evidence/north-star-character-look/gate.json
+          python3 north-star/prototype/tools/verify_look.py --godot "$veil_engine" --output "$RUNNER_TEMP/look-check.json" --compare evidence/north-star-character-look/results.json
           python3 north-star/prototype/tools/test_verify_sound.py
           python3 north-star/prototype/tools/verify_sound.py --godot "$veil_engine" --output "$RUNNER_TEMP/crossing-sound.json"
 

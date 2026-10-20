@@ -1,63 +1,57 @@
 # Lab state
 
-**Updated:** 2026-10-19 UTC. **SEED:** 0.33.14.
-**Mode/priority:** DEVELOPMENT, category 1: improve the existing Virgo Diamond consumer.
-Initial branch `codex/north-star-route-choice-20261019`, tracked tree clean; unrelated
-root work/ preserved. Local/fetched main baseline `5ab0b90a64da191016ea11f491df0f1c991fafd8`,
-no divergence. Work branch `codex/north-star-return-gate-20261019`; authenticated Git works.
+**Updated:** 2026-10-20 UTC. **SEED:** 0.33.15. **Mode:** CREATIVE PRODUCTION.
+Initial branch `codex/north-star-return-gate-20261019`; local/fetched main baseline
+`e7c7563e64fd91797e18ae81b01b00d0a8c692b0`, no divergence. Tracked tree clean at start;
+unrelated root work/ preserved. Work branch `codex/north-star-character-look-20261019`.
+The environment restarted during verification; work survived and final checks rerun.
 
-## Observable product change
+## Observable change and evidence
 
-The [consumer](../north-star/prototype/README.md#an-optional-second-playable-goal) now
-offers a second objective after an actual escort win. F2 continues with the same
-approach, technique, fitting and actual remaining health/energy; Enter still replays
-the original crossing. A separate ward threatens a stationary winch. Raise two spatially
-separated catches through one-second nearby work, protect the mechanism, then actually
-pass the opened gate alive. Closed bars constrain movement. Work excludes combat;
-release, movement, hit, pause, focus/settings interruption clear partial work/intent.
-Disabling the ward alone does not win; ignoring winch protection loses. The courier
-stays safe. Retry restores this session's arrival checkpoint, not full health or a save.
-No extra keepsake, inventory, power persistence or approach/outfit swap is introduced.
+The [actual consumer](../north-star/prototype/README.md#choose-your-character-look)
+now supports independent skin, hair and cloth-dye expression before play. F3 opens a
+draft; apply commits, discard leaves the previous look, defaults remain a draft.
+The same player drawing previews real movement, guard/draw, step and blade samples at
+play size and enlarged detail. Preview approach/fitting changes never replace actual
+choices. Role accents, weapons, fitted gear, earned marks and action cues retain their
+meanings. Applied appearance stays through workshop, rehearsal, replay, abandon and
+both actual goals. It resets on a fresh process; no new appearance save/account exists.
 
-[Execution](../evidence/north-star-return-gate/RUN.json): 67 new native controls and
-four complete two-stage policies agree in source/PCK. All enter with actual wounded
-health 4. Guardian work/quiet finish the return at ticks 744/1221, health 3/4;
-Duelist at 717/1118, health 4/4. Working under threat leaves winch 1/2 versus 2/2
-after shutdown. These are fixed feasible policies, not optimality or general balance.
-The same external F2 probe leaves the prior PCK won but starts current play with
-health 4. Actual source/PCK OS keys continue, navigate, work, suffer natural loss,
-retry and abandon; the first escort is explicitly native-policy setup, not OS input.
-Retained 358 controls/sixteen restart processes, 49 route controls/four routes and
-98 workshop controls/six outcomes remain mechanically equal to the verified baseline.
+[Execution](../evidence/north-star-character-look/RUN.json) records 48 new native
+controls/four full matched journeys and retained mechanical regressions. Default and
+custom journeys have exactly equal outcomes. Source/PCK render and keyboard evidence
+remain distinct from agent artistic judgment and independent human validation.
+Two default gameplay images match the prior PCK byte-for-byte on the tested renderer.
 
-## Findings and limits
+Image inspection found a real preview defect: its paid blade action executed while
+the observer missed the first event on model replacement. Attach before the first
+action and cover both direct replacement and natural loop reset. Move enlarged art
+above its legend; use a horizontal paid-step sample to keep the isolated card clear.
+Actual gameplay directions and mechanics are unchanged.
 
-Negative normal-time controls caught moving-target prediction missing the stationary
-winch: two controls failed before the aim fix and pass afterward. Correct contact
-then exposed an unsafe Guardian policy; it now returns to intercept before more work,
-without weakening threats. A SceneTree input-fixture correction restores the actual
-window. Render shutdown diagnostics are recorded with their exact scope in evidence.
-Agent image inspection covers work, open gate and outcome; no independent player,
-unassisted comprehension, enjoyment, accessibility, balance, physical listening,
-multiplayer, MMORPG scale, final engine/class/geography or commercial validation.
+## Value, authority and limits
 
-## Portfolio, knowledge, origins and next selection
+Compared another adventure objective, further combat/route refinement, a P10-style
+dialogue aftermath and participant research without available participants. Free
+appearance closes the observed coupling between role/gear and presentation; actual
+player-recognizable identity and aesthetic preference remain unverified. This is a
+bounded expression capability in existing play, not proof of the entire identity
+fantasy, general customization, final classes/peoples, fun, accessibility or market fit.
 
-One executable consumer/eleven code paths, stage local_prototype; fourteen contribution
-states unchanged, NS-C03/07 adapted. The portfolio gains an executable two-goal adventure
-and reproducible state/contact/continuation controls. Existing combat-response knowledge
-adds stationary-target adaptation and carried-consequence findings. No new laboratory
-or origin extraction: P01–P05/P07/P08/P10/P11 preserved_pending_extraction, P06
-pilot_instrumented, P09 seed_only. Sources, assets, licenses and old consumers remain.
+CRE-001 D anchors author identity; CRE-009/029/066 H inform independent appearance and
+compatibility, without becoming canon. ENG-023 separates reliable creative mechanisms
+from aesthetic quality; SCI-014 bounds identity inference from pixel/state checks.
+Creation high; engineering/science medium. Agent review is not human validation.
 
-Engineering high ENG-005 (states/invariants), science medium SCI-017 (version/negative
-controls), creation high CRE-005 (A: consequential agency), CRE-058/086 (H: bounded
-adventure and consequences through actions). Compare avatar customization, another
-workshop/defense refinement, dialogue and participant research; a second actual goal
-best closes the inspected single-escort limit with available tools. Temporary gate/ward
-fiction remains experimental in [living design](../north-star/DESIGN.md), not canon.
+The current author supplied the adaptive 19-section prompt during this increment.
+It replaces fixed category ordering with value/opportunity-cost comparison and
+proportional knowledge use. AGENTS, consultation guide and SEED align; the single full
+successor/publication contract remains. Next selection is open across meaningful
+product, creative, technical, laboratory and portfolio opportunities.
 
-Five supplied brains and integrity pins remain byte-identical. The single prompt stays
-unchanged: current selective reading, product comparison and executed controls served
-this increment. Reassess character experience and portfolio value next; no subsystem
-is automatically the next target. Publication and CI are separately verified at closeout.
+One local consumer/twelve code paths; fourteen contribution states unchanged, NS-C03/07
+adapted. No new lab or origin migration: P01–P05/P07/P08/P10/P11 preserved_pending_extraction,
+P06 pilot_instrumented, P09 seed_only. Existing sources, consumers, licenses and Brain
+pins remain. Portfolio gains an inspectable native appearance workflow; existing
+character-keepsake knowledge records the preview-observer finding. No .NET execution
+is claimed locally; full remote CI and publication are verified separately at closeout.

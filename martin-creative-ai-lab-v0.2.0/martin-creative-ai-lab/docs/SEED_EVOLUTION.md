@@ -2,6 +2,28 @@
 
 A seed pode ser reescrita quando uma decisão ou descoberta mudar sua direção. O objetivo é manter uma base útil para planejar e desenvolver. Tamanho e quantidade de projetos não são medidas de sucesso.
 
+## Current adaptive operation — 2026-10-20
+
+The current author replaces fixed product-category ordering with the supplied
+19-section [authoritative prompt](prompts/CONTINUOUS_DEVELOPMENT.md). Compare meaningful
+opportunities across North Star experience, creative works, technology, laboratory
+findings, defects, distribution and consequential uncertainty. Select by demonstrated
+value and opportunity cost; neither the latest prototype nor easy automated checks
+receive automatic priority. Virgo Diamond retains its principal long-term role.
+
+Consider all three knowledge domains before substantial work and use them
+proportionally. Selective retrieval remains available; materially influential knowledge
+is recorded briefly, without equal-domain or consultation ceremony. Laboratories
+participate when their instruments contribute. This supersedes the fixed selection
+order and mandatory activation wording in the historical entries below; it does not
+change immutable sources, integrity pins, provenance or functioning consumer contracts.
+
+The supplied prompt replaces the previous version as the single current authority.
+Its section 15 states adoption in durable present tense rather than making replacement
+perpetually conditional on a future increment. Preserve its full-successor, proportionate
+verification and verified non-force publication requirements. Adapt persistent guidance
+only when a concrete observation justifies replacing obsolete instructions.
+
 ## Verification refinement — v0.33.7
 
 Actual keyboard trials exposed screenshot-driven input arriving too late in both
@@ -9,7 +31,7 @@ baseline and current consumer. The continuous prompt now requires checking consu
 receipt and instrumentation interference when timing matters; see ADR-077 and current
 STATE. No production direction, immutable brain or publication safeguard changes.
 
-## Current operation — v0.33.0
+## Historical operation — v0.33.0
 
 The HUB remains a Design-Driven technology portfolio developed with generative AI.
 Virgo Diamond is the principal definitive product; most new investment should
@@ -76,7 +98,7 @@ The current project index replaces obsolete delivery claims. Root entry links an
 lab backlinks join the existing documentary gate. Presentation changes do not
 advance project maturity, revalidate runtimes or promote sources into canon.
 
-## Product convergence — v0.33.1
+## Historical product convergence — v0.33.1
 
 The current author explicitly prioritizes an executable destination before unrelated
 research, and subsequent consumer improvements before lower-category work. Choose

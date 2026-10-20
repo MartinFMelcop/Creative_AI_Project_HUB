@@ -20,15 +20,17 @@ The README, pins and consultation tool are operational wrappers outside the five
 protected documents. Historical sources remain in `references/`; contextual,
 revisable findings remain in `knowledge/`.
 
-## Selective activation before improvements
+## Proportional selective consultation
 
-Consider engineering, science and creation for every task, including low relevance.
+Before substantial work, consider engineering, science and creation; use relevant
+domains proportionally rather than forcing equal attention or ceremonial consultation.
 Read current work state and use `overview` when domain orientation is needed; it
 returns supplied volume/part names and counts, without inventing summaries. Reuse a
 current overview while source identity is unchanged. Known chapter IDs go directly
-to `get`; do not search or emit detailed indices to rediscover them. Retrieve complete
-pertinent chapters, apply their principles to alternatives/risks/checks, and briefly
-record IDs and practical consequences. Trivial tasks need no separate activation report.
+to `get`; do not search or emit detailed indices to rediscover them. Read complete
+pertinent chapters when needed and apply useful principles to decisions, implementation
+or evaluation. Briefly record materially influential IDs and practical consequences;
+no separate activation report is required.
 
 Current user decisions, platform safety and authorization prevail. Preserve D/A/H/E/V:
 a located chapter, detailed proposal or lexical match is not truth, approved canon,

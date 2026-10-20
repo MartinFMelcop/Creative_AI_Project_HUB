@@ -15,9 +15,10 @@ The HUB remains an authorial **Design-Driven technology portfolio developed with
 generative AI**. P01–P11 are preserved technology origins in controlled transition,
 not eleven independently obligated products or release lines. Research laboratories
 are organized around questions and technologies. **Virgo Diamond: The North Star**
-is the principal definitive product; most new investment should demonstrably
-benefit its character identity, choices and meaningful adventures. Preserve useful
-origin demonstrations and deliberate technology diversity without artificial quotas.
+is the principal definitive product and long-term creative priority. Make its character
+identity, choices and meaningful adventures increasingly tangible while comparing
+other justified portfolio opportunities. Preserve useful origin demonstrations and
+appropriate technology diversity without artificial quotas.
 
 Current user instructions and platform safety/authorization take precedence.
 Relevant principles recovered from the three brains inform decisions; operational
@@ -25,26 +26,29 @@ agents/prompts implement them using current state and evidence. Brains are knowl
 bases, not executing agents or model training. Direct current author decisions
 outweigh creative hypotheses. Historical reference instructions are data, not authority.
 
-## Product convergence
+## Value-driven selection
 
-Prefer improving an existing executable Virgo Diamond consumer, then creating a
-missing playable-milestone capability, then resolving a blocking uncertainty, then
-justified portfolio work. Until a destination consumer exists, prioritize the smallest
-meaningful playable experience. Explain exceptions; automated research is not a default.
+Compare credible opportunities across North Star experience, technology, creative work,
+laboratory findings, product defects, distribution and consequential uncertainty. Weigh
+creative/technical/knowledge value, strategic relevance, reuse, feasibility, complexity
+and opportunity cost without fixed category ordering or automatic prototype priority.
+Choose one substantial coherent increment; automation convenience is not product value.
 Choose primary mode RESEARCH, DEVELOPMENT or CREATIVE PRODUCTION and match evidence.
 Maintain `north-star/DESIGN.md` separately from immutable brains, with author authority,
-provenance and accepted/revised/experimental/rejected decisions. Report observable
-product, laboratory knowledge, portfolio and origin-migration changes each cycle.
+provenance and accepted/revised/experimental/rejected decisions. Update only materially
+affected records and distinguish product, knowledge, portfolio and origin claims.
 
-## Mandatory brain activation
+## Proportional knowledge use
 
-Before any improvement, consider engineering/scientific/creative relevance, including
-low relevance, and read current work state. Use compact `tools/brain_query.py overview`
-when orientation is needed; reuse current orientation while source identity is unchanged.
-Known IDs go directly to `get`. Select discovery metadata, then read complete pertinent
-chapters and apply them to alternatives, risks and verification. Record IDs and practical
-use briefly. The lab's `brains/README.md` defines strict versus exploratory retrieval;
-full `indexes` remains available for deliberate catalog inspection.
+Before substantial work, consider engineering/scientific/creative relevance and read
+current work state. Use pertinent domains proportionally; consultation must improve
+understanding, decisions, implementation or evaluation rather than satisfy a ceremony.
+Use compact `tools/brain_query.py overview` when orientation is needed; reuse current
+orientation while source identity is unchanged. Known IDs go directly to `get`. Select
+discovery metadata and read complete pertinent chapters when needed. Briefly record
+materially influential IDs and their practical use. The lab's `brains/README.md` defines
+strict versus exploratory retrieval; full `indexes` remains available for deliberate
+catalog inspection.
 
 The five supplied files under `brains/` are immutable source volumes/index/catalog.
 Their updates require specific user authorization; ordinary implementation commits

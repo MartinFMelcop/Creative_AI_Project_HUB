@@ -79,9 +79,12 @@ static func polygon(canvas, points: Array, color: Color) -> void:
 	canvas.draw_colored_polygon(shape,color)
 	shape.append(shape[0]);canvas.draw_polyline(shape,INK,2.0,true)
 
-func draw_player(canvas, game) -> void:
+func draw_player(canvas, game, appearance: Dictionary={}) -> void:
 	var broad: bool=game.role=="Guardian"
 	var color: Color=TEAL if broad else AMBER
+	# Role accents, weapons, fitted gear and action signals keep their own meanings.
+	var cloth:Color=Color("286c70") if broad else Color("8a6242")
+	if appearance.get("cloth",Color.TRANSPARENT).a>0:cloth=appearance.cloth
 	var state: String=pose(game)
 	var forward: Vector2=game.locked_face if game.guard else game.facing
 	var side:=forward.orthogonal()
@@ -95,11 +98,11 @@ func draw_player(canvas, game) -> void:
 		canvas.draw_line(Vector2(-8,sign*(12 if broad else 9)),Vector2(-13+gait*sign,sign*(18 if broad else 16)),INK,9,true)
 		canvas.draw_line(Vector2(-8,sign*(12 if broad else 9)),Vector2(-13+gait*sign,sign*(18 if broad else 16)),PAPER,3,true)
 	if broad:
-		polygon(canvas,[Vector2(-22,-19),Vector2(5,-21),Vector2(18,-12),Vector2(18,12),Vector2(5,21),Vector2(-22,19),Vector2(-16,0)],Color("286c70"))
+		polygon(canvas,[Vector2(-22,-19),Vector2(5,-21),Vector2(18,-12),Vector2(18,12),Vector2(5,21),Vector2(-22,19),Vector2(-16,0)],cloth)
 		canvas.draw_line(Vector2(-9,-18),Vector2(3,18),color,5,true)
 		for sign in [-1,1]:canvas.draw_circle(Vector2(4,sign*17),7,color)
 	else:
-		polygon(canvas,[Vector2(-26,-16),Vector2(8,-13),Vector2(14,0),Vector2(8,13),Vector2(-26,16),Vector2(-15,0)],Color("8a6242"))
+		polygon(canvas,[Vector2(-26,-16),Vector2(8,-13),Vector2(14,0),Vector2(8,13),Vector2(-26,16),Vector2(-15,0)],cloth)
 		canvas.draw_line(Vector2(-18,-11),Vector2(7,-8),color,4,true)
 		canvas.draw_line(Vector2(-18,11),Vector2(7,8),color,4,true)
 	if game.outfit=="riveted":
@@ -109,7 +112,14 @@ func draw_player(canvas, game) -> void:
 	elif game.outfit=="trail":
 		for sign in [-1,1]:canvas.draw_line(Vector2(-14,sign*15),Vector2(-31,sign*22),Color("a2dfba"),5,true)
 	canvas.draw_circle(Vector2(6,0),9,INK)
-	canvas.draw_circle(Vector2(7,0),6,PAPER)
+	canvas.draw_circle(Vector2(7,0),6,appearance.get("skin",PAPER))
+	var hair:int=appearance.get("hair",0)
+	if hair==1:
+		polygon(canvas,[Vector2(-2,-7),Vector2(10,-7),Vector2(6,-2),Vector2(0,6),Vector2(-2,3)],Color("33303d"))
+		canvas.draw_line(Vector2(0,-5),Vector2(6,-5),PAPER,1,true)
+	elif hair==2:
+		canvas.draw_arc(Vector2(6,0),7,PI/2,PI*1.5,12,Color("33303d"),5,true)
+		canvas.draw_circle(Vector2(-6,0),5,INK);canvas.draw_circle(Vector2(-6,0),3,Color("b69a7d"))
 	canvas.draw_line(Vector2(11,-4),Vector2(11,4),color,3,true)
 	if broad:
 		var shield_x: float=26 if game.guard else 1
