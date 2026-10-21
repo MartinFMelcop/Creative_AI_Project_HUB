@@ -2722,3 +2722,43 @@ No human comprehension/enjoyment, prediction/reconciliation, authentication, WAN
 multiple-player product, persistence, capacity/latency, final canon or engine choice.
 Next compare builds/abilities and independent observation against demonstrated network
 needs rather than automatically extending this architecture.
+
+## ADR-097 — measure delivery effects before extending prediction
+
+**Date:** 2026-10-21 UTC. **Status:** executed RESEARCH.
+**Baseline:** clean `work`, `7da397fda7d08b7e5c3d50a0cb309f52442e79de`; fetched main matched.
+Previous Lab checks #88 completed successfully, verified separately from publication.
+
+**Selection/question:** Compare a coherent abilities/build consumer, independent player
+observation, content/creative production and further architecture. The real interactive
+client exists, but its transport envelope is unmeasured; earlier graphical/headless
+outcomes differed without a matched causal diagnosis. Measure a concrete question before
+adding prediction: does the actual snapshot-driven fixed policy preserve feasible living
+escort outcomes and real costs under delayed/grouped delivery? Human observers are not
+available here. This is a consumed research instrument, not another governance or lab registry.
+
+**Method:** A bounded loopback frame relay preserves exact bytes/FIFO while injecting
+60ms complete-frame retention in both directions or 400ms downstream grouping. Direct and
+no-added-delay controls expose instrument interference. The existing actual View/input
+policy is unchanged; an observer subclass records it. Two role-blocked takes reverse
+profile order, without randomized assignment. Real model/resource identities, owned
+processes/threads, stream conservation, actual delay/grouping and retained matching
+terminals are checked. Ten TCP controls include a disabled-delay mutant; three boundary
+controls preserve existing outputs and prototype inputs on invalid requests.
+
+**Results/decision:** [Execution](../evidence/north-star-transport/RUN.json) retains all 16
+source takes, two existing-PCK transparent-relay smoke takes and the exploratory pilot.
+Direct/transparent controls finish with 5 health/3 cargo. The final delayed Guardian takes
+lose while Duelist wins; grouping defeats both fixed policies. The pilot's delayed
+Guardian won with 1 health/2 cargo, showing variability rather than a universal threshold.
+Regular delayed arrivals need not trigger arrival-gap stale feedback. The client sends
+only after new confirmations, coupled to the server 15-tick held-input lease. Investigate
+bounded heartbeat/freshness feedback and policy adaptation before assuming full prediction
+is necessary; do not relax costs, stale neutralization or damage windows. A policy failure
+is not class balance or human latency evidence. PCK smoke is not the full impairment study.
+
+**Knowledge/limits:** ENG-015 informs temporal contracts and avoiding unneeded distribution;
+SCI-017 informs direct/instrument controls, blocked repetition and preserved negative takes;
+CRE-005 preserves actual paid consequences. Protected sources/pins unchanged. No human,
+WAN/RTT/capacity, security, creative-canon, production-engine, multiplayer product, new lab
+or capability promotion claim. Existing playable sources/PCK/Linux0.5.0 remain unchanged.

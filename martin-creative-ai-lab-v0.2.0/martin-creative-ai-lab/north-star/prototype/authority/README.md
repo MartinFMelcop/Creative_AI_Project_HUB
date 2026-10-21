@@ -51,7 +51,8 @@ requires release before a fresh press; the footer explains this state.
 Positions interpolate between confirmations over 50 ms, never beyond the latest
 position. Threat-phase changes, quarantine and terminal snap to confirmed geometry.
 Resources, threats and results are never predicted; there is no local Combat model.
-Updates older than 250 ms block intents and freeze presentation. Disconnect preserves
+An arrival gap above 250 ms blocks intents and freezes presentation; this measures
+time since receipt, not the age of server state or RTT. Disconnect preserves
 the last known world; terminal results stay visible after the authority closes. Q
 exits. A new attempt needs a new server process; this is intentionally not reconnect.
 The suspension footer leaves ongoing threats visible. Pulse drawing is checked
@@ -128,3 +129,9 @@ publicly. There is no multiplayer product release, capability promotion, human
 validation or production-engine decision. Compare a coherent abilities/build consumer,
 independent observation and measured transport/reconciliation needs before continuing;
 a larger network stack is not the automatic next task.
+
+## Measured transport interventions
+
+The [controlled transport instrument](TRANSPORT.md) now compares direct/no-added-delay
+controls with delayed and grouped frames using the actual remote consumer. It retains
+losses and measured relay residence; these are not player latency or balance estimates.

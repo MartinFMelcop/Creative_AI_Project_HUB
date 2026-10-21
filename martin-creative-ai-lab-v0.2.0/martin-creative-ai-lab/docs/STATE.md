@@ -1,8 +1,8 @@
 # Current initiative continuity
 
 **Updated:** 2026-10-21 UTC. **Product SEED version:** 0.33.20.
-**Mode:** DEVELOPMENT. **Verified integration baseline:**
-`4803a20e1db91857aa428d2d1781f98283acfc3b`, branch `work`; fetched main matched HEAD,
+**Mode:** RESEARCH. **Verified integration baseline:**
+`7da397fda7d08b7e5c3d50a0cb309f52442e79de`, branch `work`; fetched main matched HEAD,
 no divergence, and initial tracked/untracked tree was clean.
 
 This file owns active initiative continuity, not detailed gameplay contracts or an
@@ -100,13 +100,21 @@ The [original authority execution](../evidence/north-star-authority/RUN.json) re
 historical. Existing playable source, PCK, release and
 capability evidence remain unchanged. No new lab, capability state or MMO maturity claim.
 
+**Consumed research instrument:** The [transport study](../north-star/prototype/authority/TRANSPORT.md)
+now runs the actual fixed-input consumer through direct/transparent controls, bidirectional
+retention and downstream batching. [Execution](../evidence/north-star-transport/RUN.json)
+retains all 16 source takes, two PCK integration takes, and an exploratory pilot with
+its own identities. Controls win; delayed/grouped outcomes expose policy and input-lease
+limits without changing costs. Two takes do not establish human thresholds or balance.
+
 **Missing/dependencies:** A shipped network player, prediction/reconciliation, multiple
 players, authentication, encrypted remote transport, persistence and reconnect
 are absent. Loopback fixed policies establish neither player experience nor latency or
 capacity. Pinned Godot 4.6.3 is the executable experiment, not a production engine decision.
 
 **Next/continuation:** Compare a coherent abilities/build consumer and independent
-player comprehension against measured transport/prediction/reconciliation needs.
+player comprehension against bounded input-heartbeat/freshness feedback, policy adaptation
+and demonstrated prediction/reconciliation needs. Arrival gaps do not measure server-state age.
 Interactive input is now demonstrated; a larger network stack is not automatically valuable.
 Continue only to remove a consequential ownership/experience limit; redesign if the seam
 cannot preserve costs under measured transport behavior. Complete this foundation when

@@ -402,3 +402,10 @@ jobs:
           remote_engine="$RUNNER_TEMP/remote-engine/Godot_v4.6.3-stable_linux.x86_64"
           python3 north-star/prototype/tools/verify_remote.py --godot "$remote_engine" --output "$RUNNER_TEMP/remote.json" --compare evidence/north-star-remote/results.json
           python3 north-star/prototype/tools/verify_remote_input.py --godot "$remote_engine" --output "$RUNNER_TEMP/remote-input"
+
+      - name: Verify transport intervention instrument against the existing PCK
+        run: |
+          remote_engine="$RUNNER_TEMP/remote-engine/Godot_v4.6.3-stable_linux.x86_64"
+          python3 north-star/prototype/tools/test_impairment.py
+          python3 north-star/prototype/tools/test_evaluate_transport.py
+          python3 north-star/prototype/tools/evaluate_transport.py --godot "$remote_engine" --profiles relay_zero --repetitions 1 --packed --output "$RUNNER_TEMP/transport-smoke.json"

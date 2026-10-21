@@ -1,0 +1,1082 @@
+{
+  "checks": {
+    "execution_errors": 0,
+    "terminal_and_stream_contracts_passed": 6
+  },
+  "delivery": "source",
+  "identities": {
+    "authority/intent.gd": "1419479da2db30315ce1adaad967d406fc336c712e2ee86d3ff6d15468c91379",
+    "authority/remote.gd": "1d53a052695ef5ffc543ef66ba72dc6bb42587ae8536d7ca67761dd40b7da286",
+    "authority/server.gd": "83c387e16b871b73ef2c38fa6653af0ac2925aa18536ee91ece108d712231969",
+    "authority/view.gd": "b706ca861659dc1726fae47055f7ddf6b36a94dd4969d01119bc790c0cf5bce6",
+    "combat.gd": "77aefc3f6130e114954a867f6404830180ca342c88e2396ec89a3784c2b3b0b3",
+    "data/fittings.json": "cf9ce26272dd4841e89f5de2bb679407f971ec04954bf753c15b4d768eba189d",
+    "fittings.gd": "836fa97cc7c6d81126bcddafc26daae72f5585ff61b70b55c83ea65aa70fc390",
+    "project.godot": "8d4755b58f1179a9b5ec431579177371e784bca9703a17c88f4c7a6d4ee9385c",
+    "route.gd": "2936029e1a52933fff0141b546f85fbc53a57b7e6c5301eaef5cabac06a05901",
+    "tests/remote_journey.gd": "000d5228868719092d87cd2fe3d7074731ca62a65ca975c8e52c3813f07e152f",
+    "tests/transport_probe.gd": "acdd0d14478442e865143003f93b4a18e950e555c06800473914bc28144ab081",
+    "tools/evaluate_transport.py": "c4ec25c15ed53b4cd669d1c283598d6d6257f22c0f3870c08588798bfe4cf180",
+    "tools/impairment.py": "49be1234c5687b4fe2708a42e143f99830a01ffbcfd18bbb9a4524c461d85d15"
+  },
+  "limits": "Synthetic fixed native-input policy, real loopback TCP and unchanged gameplay. Complete-frame scheduling is not TCP loss/reordering, WAN emulation, RTT, player latency tolerance, capacity, balance or production engine evidence. Repetitions measure this instrument under observed host scheduling, not independent participants. Outcomes and timing are observations, not golden equality gates.",
+  "observations": [
+    {
+      "authority": {
+        "accepted": 499,
+        "active_ticks": 1772,
+        "rejected": {},
+        "stale_clears": 1
+      },
+      "cargo": 3.0,
+      "client_observation": {
+        "distinct_observations": 592,
+        "explicit_policy_resumes": 0,
+        "frame_visits": {
+          "closed": 1,
+          "connecting": 4,
+          "live": 3993,
+          "terminal": 379
+        },
+        "limits": "Frame visits and scripted resumes are not participants, RTT or human experience. State tick gaps include observer scheduling.",
+        "max_observed_tick_gap": 3,
+        "quarantine_observations": 36,
+        "transitions": [
+          {
+            "elapsed_ms": 20,
+            "status": "closed"
+          },
+          {
+            "elapsed_ms": 22,
+            "status": "connecting"
+          },
+          {
+            "elapsed_ms": 50,
+            "status": "live"
+          },
+          {
+            "elapsed_ms": 27595,
+            "status": "terminal"
+          }
+        ]
+      },
+      "counters": {
+        "blocks": 6.0,
+        "counters": 3.0,
+        "courier_hits": 0.0,
+        "dodges": 0.0,
+        "player_hits": 0.0,
+        "redirects": 0.0,
+        "rejected": 0.0
+      },
+      "hp": 5.0,
+      "input_events": 41.0,
+      "mode": "won",
+      "model_ticks": 1653.0,
+      "profile": "relay_zero",
+      "relay": {
+        "closed": true,
+        "configured": {
+          "batch_ms": 0,
+          "delay_ms": 0
+        },
+        "connected": true,
+        "directions": {
+          "down": {
+            "bytes_forwarded": 639675,
+            "bytes_received": 639675,
+            "frames_forwarded": 594,
+            "frames_received": 594,
+            "max_frames_per_send_turn": 3,
+            "max_lateness_ms": 0.07523999374825507,
+            "max_queued_bytes": 1752,
+            "max_residence_ms": 0.07523999374825507,
+            "min_residence_ms": 0.004707006155513227,
+            "sum_residence_ms": 5.261530001007486
+          },
+          "up": {
+            "bytes_forwarded": 81234,
+            "bytes_received": 81234,
+            "frames_forwarded": 500,
+            "frames_received": 500,
+            "max_frames_per_send_turn": 1,
+            "max_lateness_ms": 0.3755830039153807,
+            "max_queued_bytes": 167,
+            "max_residence_ms": 0.3755830039153807,
+            "min_residence_ms": 0.003440000000409782,
+            "sum_residence_ms": 3.9053619912010618
+          }
+        },
+        "profile": "relay_zero"
+      },
+      "repetition": 1,
+      "role": "Guardian",
+      "terminal_retained": true
+    },
+    {
+      "authority": {
+        "accepted": 537,
+        "active_ticks": 1919,
+        "rejected": {
+          "terminal": 2
+        },
+        "stale_clears": 1
+      },
+      "cargo": 2.0,
+      "client_observation": {
+        "distinct_observations": 638,
+        "explicit_policy_resumes": 0,
+        "frame_visits": {
+          "closed": 1,
+          "connecting": 21,
+          "live": 4315,
+          "terminal": 379
+        },
+        "limits": "Frame visits and scripted resumes are not participants, RTT or human experience. State tick gaps include observer scheduling.",
+        "max_observed_tick_gap": 9,
+        "quarantine_observations": 38,
+        "transitions": [
+          {
+            "elapsed_ms": 20,
+            "status": "closed"
+          },
+          {
+            "elapsed_ms": 22,
+            "status": "connecting"
+          },
+          {
+            "elapsed_ms": 168,
+            "status": "live"
+          },
+          {
+            "elapsed_ms": 30167,
+            "status": "terminal"
+          }
+        ]
+      },
+      "counters": {
+        "blocks": 2.0,
+        "counters": 1.0,
+        "courier_hits": 1.0,
+        "dodges": 0.0,
+        "player_hits": 4.0,
+        "redirects": 0.0,
+        "rejected": 0.0
+      },
+      "hp": 1.0,
+      "input_events": 81.0,
+      "mode": "won",
+      "model_ticks": 1800.0,
+      "profile": "delay_60",
+      "relay": {
+        "closed": true,
+        "configured": {
+          "batch_ms": 0,
+          "delay_ms": 60
+        },
+        "connected": true,
+        "directions": {
+          "down": {
+            "bytes_forwarded": 685860,
+            "bytes_received": 685860,
+            "frames_forwarded": 645,
+            "frames_received": 645,
+            "max_frames_per_send_turn": 3,
+            "max_lateness_ms": 143.27693100494798,
+            "max_queued_bytes": 5708,
+            "max_residence_ms": 203.27693100261968,
+            "min_residence_ms": 60.02669799636351,
+            "sum_residence_ms": 39533.94264997769
+          },
+          "up": {
+            "bytes_forwarded": 88353,
+            "bytes_received": 88353,
+            "frames_forwarded": 540,
+            "frames_received": 540,
+            "max_frames_per_send_turn": 1,
+            "max_lateness_ms": 145.36351300921524,
+            "max_queued_bytes": 342,
+            "max_residence_ms": 205.36351300688693,
+            "min_residence_ms": 60.00725999911083,
+            "sum_residence_ms": 33275.31354701932
+          }
+        },
+        "profile": "delay_60"
+      },
+      "repetition": 1,
+      "role": "Guardian",
+      "terminal_retained": true
+    },
+    {
+      "authority": {
+        "accepted": 42,
+        "active_ticks": 1133,
+        "rejected": {},
+        "stale_clears": 42
+      },
+      "cargo": 2.0,
+      "client_observation": {
+        "distinct_observations": 48,
+        "explicit_policy_resumes": 41,
+        "frame_visits": {
+          "closed": 1,
+          "connecting": 36,
+          "live": 1544,
+          "stale": 886,
+          "terminal": 379
+        },
+        "limits": "Frame visits and scripted resumes are not participants, RTT or human experience. State tick gaps include observer scheduling.",
+        "max_observed_tick_gap": 24,
+        "quarantine_observations": 48,
+        "transitions": [
+          {
+            "elapsed_ms": 16,
+            "status": "closed"
+          },
+          {
+            "elapsed_ms": 17,
+            "status": "connecting"
+          },
+          {
+            "elapsed_ms": 264,
+            "status": "live"
+          },
+          {
+            "elapsed_ms": 506,
+            "status": "stale"
+          },
+          {
+            "elapsed_ms": 658,
+            "status": "live"
+          },
+          {
+            "elapsed_ms": 906,
+            "status": "stale"
+          },
+          {
+            "elapsed_ms": 1058,
+            "status": "live"
+          },
+          {
+            "elapsed_ms": 1306,
+            "status": "stale"
+          },
+          {
+            "elapsed_ms": 1458,
+            "status": "live"
+          },
+          {
+            "elapsed_ms": 1714,
+            "status": "stale"
+          },
+          {
+            "elapsed_ms": 1858,
+            "status": "live"
+          },
+          {
+            "elapsed_ms": 2114,
+            "status": "stale"
+          },
+          {
+            "elapsed_ms": 2259,
+            "status": "live"
+          },
+          {
+            "elapsed_ms": 2514,
+            "status": "stale"
+          },
+          {
+            "elapsed_ms": 2659,
+            "status": "live"
+          },
+          {
+            "elapsed_ms": 2914,
+            "status": "stale"
+          },
+          {
+            "elapsed_ms": 3059,
+            "status": "live"
+          },
+          {
+            "elapsed_ms": 3314,
+            "status": "stale"
+          },
+          {
+            "elapsed_ms": 3459,
+            "status": "live"
+          },
+          {
+            "elapsed_ms": 3715,
+            "status": "stale"
+          },
+          {
+            "elapsed_ms": 3859,
+            "status": "live"
+          },
+          {
+            "elapsed_ms": 4115,
+            "status": "stale"
+          },
+          {
+            "elapsed_ms": 4260,
+            "status": "live"
+          },
+          {
+            "elapsed_ms": 4515,
+            "status": "stale"
+          },
+          {
+            "elapsed_ms": 4660,
+            "status": "live"
+          },
+          {
+            "elapsed_ms": 4915,
+            "status": "stale"
+          },
+          {
+            "elapsed_ms": 5060,
+            "status": "live"
+          },
+          {
+            "elapsed_ms": 5315,
+            "status": "stale"
+          },
+          {
+            "elapsed_ms": 5460,
+            "status": "live"
+          },
+          {
+            "elapsed_ms": 5716,
+            "status": "stale"
+          },
+          {
+            "elapsed_ms": 5860,
+            "status": "live"
+          },
+          {
+            "elapsed_ms": 6116,
+            "status": "stale"
+          },
+          {
+            "elapsed_ms": 6261,
+            "status": "live"
+          },
+          {
+            "elapsed_ms": 6516,
+            "status": "stale"
+          },
+          {
+            "elapsed_ms": 6661,
+            "status": "live"
+          },
+          {
+            "elapsed_ms": 6916,
+            "status": "stale"
+          },
+          {
+            "elapsed_ms": 7061,
+            "status": "live"
+          },
+          {
+            "elapsed_ms": 7306,
+            "status": "stale"
+          },
+          {
+            "elapsed_ms": 7458,
+            "status": "live"
+          },
+          {
+            "elapsed_ms": 7720,
+            "status": "stale"
+          },
+          {
+            "elapsed_ms": 7858,
+            "status": "live"
+          },
+          {
+            "elapsed_ms": 8113,
+            "status": "stale"
+          },
+          {
+            "elapsed_ms": 8258,
+            "status": "live"
+          },
+          {
+            "elapsed_ms": 8513,
+            "status": "stale"
+          },
+          {
+            "elapsed_ms": 8658,
+            "status": "live"
+          },
+          {
+            "elapsed_ms": 8913,
+            "status": "stale"
+          },
+          {
+            "elapsed_ms": 9058,
+            "status": "live"
+          },
+          {
+            "elapsed_ms": 9313,
+            "status": "stale"
+          }
+        ]
+      },
+      "counters": {
+        "blocks": 0.0,
+        "counters": 0.0,
+        "courier_hits": 1.0,
+        "dodges": 0.0,
+        "player_hits": 5.0,
+        "redirects": 0.0,
+        "rejected": 0.0
+      },
+      "hp": 0.0,
+      "input_events": 85.0,
+      "mode": "lost",
+      "model_ticks": 1014.0,
+      "profile": "batch_400",
+      "relay": {
+        "closed": true,
+        "configured": {
+          "batch_ms": 400,
+          "delay_ms": 0
+        },
+        "connected": true,
+        "directions": {
+          "down": {
+            "bytes_forwarded": 370379,
+            "bytes_received": 370379,
+            "frames_forwarded": 381,
+            "frames_received": 381,
+            "max_frames_per_send_turn": 9,
+            "max_lateness_ms": 2.467836005962454,
+            "max_queued_bytes": 9291,
+            "max_residence_ms": 395.4394690008485,
+            "min_residence_ms": 37.54814399871975,
+            "sum_residence_ms": 81803.28027394717
+          },
+          "up": {
+            "bytes_forwarded": 6704,
+            "bytes_received": 6704,
+            "frames_forwarded": 43,
+            "frames_received": 43,
+            "max_frames_per_send_turn": 1,
+            "max_lateness_ms": 0.009683004464022815,
+            "max_queued_bytes": 158,
+            "max_residence_ms": 0.009683004464022815,
+            "min_residence_ms": 0.0033940013963729143,
+            "sum_residence_ms": 0.29197899129940197
+          }
+        },
+        "profile": "batch_400"
+      },
+      "repetition": 1,
+      "role": "Guardian",
+      "terminal_retained": true
+    },
+    {
+      "authority": {
+        "accepted": 384,
+        "active_ticks": 1391,
+        "rejected": {},
+        "stale_clears": 1
+      },
+      "cargo": 3.0,
+      "client_observation": {
+        "distinct_observations": 465,
+        "explicit_policy_resumes": 0,
+        "frame_visits": {
+          "closed": 1,
+          "connecting": 5,
+          "live": 3065,
+          "terminal": 379
+        },
+        "limits": "Frame visits and scripted resumes are not participants, RTT or human experience. State tick gaps include observer scheduling.",
+        "max_observed_tick_gap": 3,
+        "quarantine_observations": 38,
+        "transitions": [
+          {
+            "elapsed_ms": 34,
+            "status": "closed"
+          },
+          {
+            "elapsed_ms": 36,
+            "status": "connecting"
+          },
+          {
+            "elapsed_ms": 75,
+            "status": "live"
+          },
+          {
+            "elapsed_ms": 21252,
+            "status": "terminal"
+          }
+        ]
+      },
+      "counters": {
+        "blocks": 0.0,
+        "counters": 3.0,
+        "courier_hits": 0.0,
+        "dodges": 2.0,
+        "player_hits": 0.0,
+        "redirects": 2.0,
+        "rejected": 0.0
+      },
+      "hp": 5.0,
+      "input_events": 51.0,
+      "mode": "won",
+      "model_ticks": 1272.0,
+      "profile": "relay_zero",
+      "relay": {
+        "closed": true,
+        "configured": {
+          "batch_ms": 0,
+          "delay_ms": 0
+        },
+        "connected": true,
+        "directions": {
+          "down": {
+            "bytes_forwarded": 498551,
+            "bytes_received": 498551,
+            "frames_forwarded": 467,
+            "frames_received": 467,
+            "max_frames_per_send_turn": 2,
+            "max_lateness_ms": 0.0870730000315234,
+            "max_queued_bytes": 2236,
+            "max_residence_ms": 0.0870730000315234,
+            "min_residence_ms": 0.003387998731341213,
+            "sum_residence_ms": 3.618483984610066
+          },
+          "up": {
+            "bytes_forwarded": 62902,
+            "bytes_received": 62902,
+            "frames_forwarded": 385,
+            "frames_received": 385,
+            "max_frames_per_send_turn": 1,
+            "max_lateness_ms": 0.10916699829977006,
+            "max_queued_bytes": 167,
+            "max_residence_ms": 0.10916699829977006,
+            "min_residence_ms": 0.0031170056900009513,
+            "sum_residence_ms": 3.110794015810825
+          }
+        },
+        "profile": "relay_zero"
+      },
+      "repetition": 1,
+      "role": "Duelist",
+      "terminal_retained": true
+    },
+    {
+      "authority": {
+        "accepted": 412,
+        "active_ticks": 1493,
+        "rejected": {
+          "terminal": 3
+        },
+        "stale_clears": 1
+      },
+      "cargo": 3.0,
+      "client_observation": {
+        "distinct_observations": 499,
+        "explicit_policy_resumes": 0,
+        "frame_visits": {
+          "closed": 1,
+          "connecting": 21,
+          "live": 3317,
+          "terminal": 380
+        },
+        "limits": "Frame visits and scripted resumes are not participants, RTT or human experience. State tick gaps include observer scheduling.",
+        "max_observed_tick_gap": 3,
+        "quarantine_observations": 39,
+        "transitions": [
+          {
+            "elapsed_ms": 17,
+            "status": "closed"
+          },
+          {
+            "elapsed_ms": 18,
+            "status": "connecting"
+          },
+          {
+            "elapsed_ms": 160,
+            "status": "live"
+          },
+          {
+            "elapsed_ms": 23051,
+            "status": "terminal"
+          }
+        ]
+      },
+      "counters": {
+        "blocks": 0.0,
+        "counters": 3.0,
+        "courier_hits": 0.0,
+        "dodges": 3.0,
+        "player_hits": 0.0,
+        "redirects": 3.0,
+        "rejected": 0.0
+      },
+      "hp": 5.0,
+      "input_events": 209.0,
+      "mode": "won",
+      "model_ticks": 1374.0,
+      "profile": "delay_60",
+      "relay": {
+        "closed": true,
+        "configured": {
+          "batch_ms": 0,
+          "delay_ms": 60
+        },
+        "connected": true,
+        "directions": {
+          "down": {
+            "bytes_forwarded": 535229,
+            "bytes_received": 535229,
+            "frames_forwarded": 504,
+            "frames_received": 504,
+            "max_frames_per_send_turn": 3,
+            "max_lateness_ms": 7.407748002151493,
+            "max_queued_bytes": 3406,
+            "max_residence_ms": 67.40774799982319,
+            "min_residence_ms": 60.00644399318844,
+            "sum_residence_ms": 30782.159539929125
+          },
+          "up": {
+            "bytes_forwarded": 69280,
+            "bytes_received": 69280,
+            "frames_forwarded": 416,
+            "frames_received": 416,
+            "max_frames_per_send_turn": 1,
+            "max_lateness_ms": 3.5425090027274564,
+            "max_queued_bytes": 338,
+            "max_residence_ms": 63.54250900039915,
+            "min_residence_ms": 60.01549600478029,
+            "sum_residence_ms": 25493.93735794729
+          }
+        },
+        "profile": "delay_60"
+      },
+      "repetition": 1,
+      "role": "Duelist",
+      "terminal_retained": true
+    },
+    {
+      "authority": {
+        "accepted": 42,
+        "active_ticks": 1133,
+        "rejected": {},
+        "stale_clears": 42
+      },
+      "cargo": 2.0,
+      "client_observation": {
+        "distinct_observations": 49,
+        "explicit_policy_resumes": 41,
+        "frame_visits": {
+          "closed": 1,
+          "connecting": 37,
+          "live": 1552,
+          "stale": 883,
+          "terminal": 379
+        },
+        "limits": "Frame visits and scripted resumes are not participants, RTT or human experience. State tick gaps include observer scheduling.",
+        "max_observed_tick_gap": 24,
+        "quarantine_observations": 48,
+        "transitions": [
+          {
+            "elapsed_ms": 15,
+            "status": "closed"
+          },
+          {
+            "elapsed_ms": 17,
+            "status": "connecting"
+          },
+          {
+            "elapsed_ms": 269,
+            "status": "live"
+          },
+          {
+            "elapsed_ms": 512,
+            "status": "stale"
+          },
+          {
+            "elapsed_ms": 664,
+            "status": "live"
+          },
+          {
+            "elapsed_ms": 912,
+            "status": "stale"
+          },
+          {
+            "elapsed_ms": 1064,
+            "status": "live"
+          },
+          {
+            "elapsed_ms": 1312,
+            "status": "stale"
+          },
+          {
+            "elapsed_ms": 1464,
+            "status": "live"
+          },
+          {
+            "elapsed_ms": 1720,
+            "status": "stale"
+          },
+          {
+            "elapsed_ms": 1864,
+            "status": "live"
+          },
+          {
+            "elapsed_ms": 2120,
+            "status": "stale"
+          },
+          {
+            "elapsed_ms": 2265,
+            "status": "live"
+          },
+          {
+            "elapsed_ms": 2520,
+            "status": "stale"
+          },
+          {
+            "elapsed_ms": 2665,
+            "status": "live"
+          },
+          {
+            "elapsed_ms": 2920,
+            "status": "stale"
+          },
+          {
+            "elapsed_ms": 3065,
+            "status": "live"
+          },
+          {
+            "elapsed_ms": 3320,
+            "status": "stale"
+          },
+          {
+            "elapsed_ms": 3465,
+            "status": "live"
+          },
+          {
+            "elapsed_ms": 3720,
+            "status": "stale"
+          },
+          {
+            "elapsed_ms": 3865,
+            "status": "live"
+          },
+          {
+            "elapsed_ms": 4121,
+            "status": "stale"
+          },
+          {
+            "elapsed_ms": 4266,
+            "status": "live"
+          },
+          {
+            "elapsed_ms": 4521,
+            "status": "stale"
+          },
+          {
+            "elapsed_ms": 4666,
+            "status": "live"
+          },
+          {
+            "elapsed_ms": 4921,
+            "status": "stale"
+          },
+          {
+            "elapsed_ms": 5066,
+            "status": "live"
+          },
+          {
+            "elapsed_ms": 5321,
+            "status": "stale"
+          },
+          {
+            "elapsed_ms": 5466,
+            "status": "live"
+          },
+          {
+            "elapsed_ms": 5721,
+            "status": "stale"
+          },
+          {
+            "elapsed_ms": 5866,
+            "status": "live"
+          },
+          {
+            "elapsed_ms": 6122,
+            "status": "stale"
+          },
+          {
+            "elapsed_ms": 6267,
+            "status": "live"
+          },
+          {
+            "elapsed_ms": 6522,
+            "status": "stale"
+          },
+          {
+            "elapsed_ms": 6667,
+            "status": "live"
+          },
+          {
+            "elapsed_ms": 6922,
+            "status": "stale"
+          },
+          {
+            "elapsed_ms": 7067,
+            "status": "live"
+          },
+          {
+            "elapsed_ms": 7322,
+            "status": "stale"
+          },
+          {
+            "elapsed_ms": 7460,
+            "status": "live"
+          },
+          {
+            "elapsed_ms": 7716,
+            "status": "stale"
+          },
+          {
+            "elapsed_ms": 7867,
+            "status": "live"
+          },
+          {
+            "elapsed_ms": 8123,
+            "status": "stale"
+          },
+          {
+            "elapsed_ms": 8261,
+            "status": "live"
+          },
+          {
+            "elapsed_ms": 8516,
+            "status": "stale"
+          },
+          {
+            "elapsed_ms": 8661,
+            "status": "live"
+          },
+          {
+            "elapsed_ms": 8916,
+            "status": "stale"
+          },
+          {
+            "elapsed_ms": 9061,
+            "status": "live"
+          },
+          {
+            "elapsed_ms": 9323,
+            "status": "stale"
+          }
+        ]
+      },
+      "counters": {
+        "blocks": 0.0,
+        "counters": 0.0,
+        "courier_hits": 1.0,
+        "dodges": 0.0,
+        "player_hits": 5.0,
+        "redirects": 0.0,
+        "rejected": 0.0
+      },
+      "hp": 0.0,
+      "input_events": 85.0,
+      "mode": "lost",
+      "model_ticks": 1014.0,
+      "profile": "batch_400",
+      "relay": {
+        "closed": true,
+        "configured": {
+          "batch_ms": 400,
+          "delay_ms": 0
+        },
+        "connected": true,
+        "directions": {
+          "down": {
+            "bytes_forwarded": 376239,
+            "bytes_received": 376239,
+            "frames_forwarded": 381,
+            "frames_received": 381,
+            "max_frames_per_send_turn": 9,
+            "max_lateness_ms": 3.263147998950444,
+            "max_queued_bytes": 9280,
+            "max_residence_ms": 393.469073002052,
+            "min_residence_ms": 33.82586500083562,
+            "sum_residence_ms": 80860.47839801176
+          },
+          "up": {
+            "bytes_forwarded": 6701,
+            "bytes_received": 6701,
+            "frames_forwarded": 43,
+            "frames_received": 43,
+            "max_frames_per_send_turn": 1,
+            "max_lateness_ms": 0.022999003704171628,
+            "max_queued_bytes": 158,
+            "max_residence_ms": 0.022999003704171628,
+            "min_residence_ms": 0.003116998414043337,
+            "sum_residence_ms": 0.2789549980661832
+          }
+        },
+        "profile": "batch_400"
+      },
+      "repetition": 1,
+      "role": "Duelist",
+      "terminal_retained": true
+    }
+  ],
+  "pack_sha256": null,
+  "protocol": {
+    "interventions": {
+      "batch_400": {
+        "batch_ms": 400,
+        "delay_ms": 0
+      },
+      "delay_60": {
+        "batch_ms": 0,
+        "delay_ms": 60
+      },
+      "relay_zero": {
+        "batch_ms": 0,
+        "delay_ms": 0
+      }
+    },
+    "order": "Role-blocked, profile order reversed on alternating repetitions; no randomized assignment.",
+    "profiles": [
+      "relay_zero",
+      "delay_60",
+      "batch_400"
+    ],
+    "repetitions": 1,
+    "roles": [
+      "Guardian",
+      "Duelist"
+    ],
+    "schema_version": 1
+  },
+  "runtime": "4.6.3.stable.official.7d41c59c4",
+  "schema_version": 1,
+  "summary": [
+    {
+      "cargo": [
+        3.0
+      ],
+      "hp": [
+        5.0
+      ],
+      "losses": 0,
+      "max_observed_tick_gaps": [
+        3
+      ],
+      "profile": "relay_zero",
+      "role": "Guardian",
+      "stale_clears": [
+        1
+      ],
+      "takes": 1,
+      "wins": 1
+    },
+    {
+      "cargo": [
+        2.0
+      ],
+      "hp": [
+        1.0
+      ],
+      "losses": 0,
+      "max_observed_tick_gaps": [
+        9
+      ],
+      "profile": "delay_60",
+      "role": "Guardian",
+      "stale_clears": [
+        1
+      ],
+      "takes": 1,
+      "wins": 1
+    },
+    {
+      "cargo": [
+        2.0
+      ],
+      "hp": [
+        0.0
+      ],
+      "losses": 1,
+      "max_observed_tick_gaps": [
+        24
+      ],
+      "profile": "batch_400",
+      "role": "Guardian",
+      "stale_clears": [
+        42
+      ],
+      "takes": 1,
+      "wins": 0
+    },
+    {
+      "cargo": [
+        3.0
+      ],
+      "hp": [
+        5.0
+      ],
+      "losses": 0,
+      "max_observed_tick_gaps": [
+        3
+      ],
+      "profile": "relay_zero",
+      "role": "Duelist",
+      "stale_clears": [
+        1
+      ],
+      "takes": 1,
+      "wins": 1
+    },
+    {
+      "cargo": [
+        3.0
+      ],
+      "hp": [
+        5.0
+      ],
+      "losses": 0,
+      "max_observed_tick_gaps": [
+        3
+      ],
+      "profile": "delay_60",
+      "role": "Duelist",
+      "stale_clears": [
+        1
+      ],
+      "takes": 1,
+      "wins": 1
+    },
+    {
+      "cargo": [
+        2.0
+      ],
+      "hp": [
+        0.0
+      ],
+      "losses": 1,
+      "max_observed_tick_gaps": [
+        24
+      ],
+      "profile": "batch_400",
+      "role": "Duelist",
+      "stale_clears": [
+        42
+      ],
+      "takes": 1,
+      "wins": 0
+    }
+  ]
+}
