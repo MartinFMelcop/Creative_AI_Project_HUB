@@ -206,6 +206,8 @@ jobs:
         working-directory: martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab
         run: |
           veil_engine="$RUNNER_TEMP/veil-godot/Godot_v4.6.3-stable_linux.x86_64"
+          timeout 20 "$veil_engine" --headless --path north-star/prototype --script abilities/checks.gd -- "$RUNNER_TEMP/ability-controls.json"
+          CROSSING_GODOT="$veil_engine" python3 north-star/prototype/tools/test_abilities.py
           CROSSING_GODOT="$veil_engine" python3 north-star/prototype/tools/test_verify.py
           CROSSING_GODOT="$veil_engine" python3 north-star/prototype/tools/test_fittings.py
           python3 north-star/prototype/tools/fittings.py verify --godot "$veil_engine" --output "$RUNNER_TEMP/fittings.json" --compare evidence/north-star-return-feedback/fittings.json
@@ -402,6 +404,7 @@ jobs:
           remote_engine="$RUNNER_TEMP/remote-engine/Godot_v4.6.3-stable_linux.x86_64"
           python3 north-star/prototype/tools/verify_remote.py --godot "$remote_engine" --output "$RUNNER_TEMP/remote.json" --compare evidence/north-star-preparation/remote.json
           python3 north-star/prototype/tools/verify_remote_input.py --godot "$remote_engine" --output "$RUNNER_TEMP/remote-input"
+          python3 north-star/prototype/tools/verify_ability_input.py --godot "$remote_engine" --output "$RUNNER_TEMP/ability-input"
           CROSSING_GODOT="$remote_engine" NORTH_STAR_STARTUP_RESULT="$RUNNER_TEMP/startup.json" python3 north-star/prototype/tools/test_remote_startup.py
           python3 north-star/prototype/tools/verify_preparation.py --godot "$remote_engine" --output "$RUNNER_TEMP/preparation.json" --compare evidence/north-star-preparation/preparation.json
 

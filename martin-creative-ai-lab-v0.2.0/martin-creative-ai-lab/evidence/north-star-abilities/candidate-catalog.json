@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "rushes": [
+    {
+      "id": "snap",
+      "name": "Snap rush",
+      "cost": 20,
+      "speed": 500,
+      "travel": 0.12,
+      "recovery": 0.1,
+      "cooldown": 0.7
+    },
+    {
+      "id": "reach",
+      "name": "Reach rush",
+      "cost": 30,
+      "speed": 800,
+      "travel": 0.3,
+      "recovery": 0.35,
+      "cooldown": 1.4
+    }
+  ]
+}

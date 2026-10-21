@@ -1,0 +1,640 @@
+{
+  "checks": {
+    "failed": 0,
+    "passed": 16
+  },
+  "controls": [
+    "read-only initial preparation",
+    "select actual snap profile before entry",
+    "select actual reach profile without spending",
+    "explicit Enter starts real crossing",
+    "active selection is locked",
+    "E starts paid committed travel",
+    "actual single upfront 30 resolve cost",
+    "held E and key repeats cannot retrigger",
+    "actual window travels the selected 240px",
+    "rush is neither existing step nor free counter",
+    "guard spends actual energy",
+    "held guard blocks a new rush",
+    "local focus loss pauses and freezes model",
+    "explicit resume advances model",
+    "fresh movement works after focus recovery",
+    "explicit close exits cleanly"
+  ],
+  "identities": {
+    "abilities/catalog.gd": "9431431a07d774b8e4d80609d1be9d9dbfe244773d482c4a8ee0c75add95cada",
+    "abilities/catalog.json": "d86a6acdaddfaef664217eafd2782d86c530f23545a4be03e70baff08d826dfe",
+    "abilities/model.gd": "77a1712dedeb7f4d22eb7f35140d49c16131c4e45d0be1d81f3ead7a57c48992",
+    "abilities/play.gd": "76d67486a4212d3c089d0a58d22ffe03b15cd5c49d131e4f9f2a9a353538045e",
+    "abilities/probe.gd": "874c38cb15a4b08e26208aa7217f43e8e8df9335f525a53ead78ca1f2f87fdd1",
+    "abilities/view.gd": "a945a1c38dc3e0e5aae1679d9a372caa636b9eeacb2b2cdec0934ca85c94744a",
+    "combat.gd": "77aefc3f6130e114954a867f6404830180ca342c88e2396ec89a3784c2b3b0b3",
+    "data/fittings.json": "cf9ce26272dd4841e89f5de2bb679407f971ec04954bf753c15b4d768eba189d",
+    "fittings.gd": "836fa97cc7c6d81126bcddafc26daae72f5585ff61b70b55c83ea65aa70fc390",
+    "project.godot": "8d4755b58f1179a9b5ec431579177371e784bca9703a17c88f4c7a6d4ee9385c",
+    "route.gd": "2936029e1a52933fff0141b546f85fbc53a57b7e6c5301eaef5cabac06a05901",
+    "tests/policy.gd": "646f0758a211e84ffbfd4632460c7d1fc549cbb3b552801ee2508774a5a63e29",
+    "tools/abilities.py": "d1eec134e736230b889b69a41ee1f6023df13aeb495e2c9552052f9029e7975a",
+    "tools/verify_ability_input.py": "1244d5afa81f0cd584013c4c0ed1301e69895dfef9b80787628456320dcee17e"
+  },
+  "kind": "synthetic_os_input",
+  "observations": {
+    "arrived": {
+      "capture": 7,
+      "combat": {
+        "cargo": 3,
+        "counters": {
+          "blocks": 0,
+          "counters": 0,
+          "courier_hits": 0,
+          "dodges": 0,
+          "player_hits": 0,
+          "redirects": 0,
+          "rejected": 0
+        },
+        "courier_speed": 28.0,
+        "courier_x": 195.466,
+        "enemy_focus": 3,
+        "energy": 81.7,
+        "events": [
+          {
+            "cargo": 3,
+            "energy": 70.0,
+            "hp": 5,
+            "kind": "rush_started",
+            "tick": 19
+          },
+          {
+            "cargo": 3,
+            "energy": 70.0,
+            "hp": 5,
+            "kind": "rush_arrived",
+            "tick": 37
+          }
+        ],
+        "guard_style": "Steady",
+        "hp": 5,
+        "mode": "play",
+        "role": "Guardian",
+        "tick": 76
+      },
+      "cooldown": 0.466666666666667,
+      "paused": false,
+      "player": [
+        789.999633789062,
+        390.0
+      ],
+      "recovery": 0.0,
+      "refusals": 0,
+      "selected": "reach",
+      "starts": 1,
+      "status": "COOLDOWN",
+      "travel": 0.0
+    },
+    "baseline": {
+      "capture": 1,
+      "combat": {
+        "cargo": 3,
+        "counters": {
+          "blocks": 0,
+          "counters": 0,
+          "courier_hits": 0,
+          "dodges": 0,
+          "player_hits": 0,
+          "redirects": 0,
+          "rejected": 0
+        },
+        "courier_speed": 28.0,
+        "courier_x": 160.0,
+        "enemy_focus": 3,
+        "energy": 100.0,
+        "events": [],
+        "guard_style": "Steady",
+        "hp": 5,
+        "mode": "title",
+        "role": "Guardian",
+        "tick": 0
+      },
+      "cooldown": 0.0,
+      "paused": false,
+      "player": [
+        550.0,
+        390.0
+      ],
+      "recovery": 0.0,
+      "refusals": 0,
+      "selected": "none",
+      "starts": 0,
+      "status": "TITLE",
+      "travel": 0.0
+    },
+    "committed": {
+      "capture": 6,
+      "combat": {
+        "cargo": 3,
+        "counters": {
+          "blocks": 0,
+          "counters": 0,
+          "courier_hits": 0,
+          "dodges": 0,
+          "player_hits": 0,
+          "redirects": 0,
+          "rejected": 0
+        },
+        "courier_speed": 28.0,
+        "courier_x": 170.733,
+        "enemy_focus": 3,
+        "energy": 70.0,
+        "events": [
+          {
+            "cargo": 3,
+            "energy": 70.0,
+            "hp": 5,
+            "kind": "rush_started",
+            "tick": 19
+          }
+        ],
+        "guard_style": "Steady",
+        "hp": 5,
+        "mode": "play",
+        "role": "Guardian",
+        "tick": 23
+      },
+      "cooldown": 1.35,
+      "paused": false,
+      "player": [
+        603.333251953125,
+        390.0
+      ],
+      "recovery": 0.0,
+      "refusals": 0,
+      "selected": "reach",
+      "starts": 1,
+      "status": "COMMITTED",
+      "travel": 0.233333333333333
+    },
+    "guarded": {
+      "capture": 8,
+      "combat": {
+        "cargo": 3,
+        "counters": {
+          "blocks": 0,
+          "counters": 0,
+          "courier_hits": 0,
+          "dodges": 0,
+          "player_hits": 0,
+          "redirects": 0,
+          "rejected": 0
+        },
+        "courier_speed": 28.0,
+        "courier_x": 217.399,
+        "enemy_focus": 3,
+        "energy": 91.8,
+        "events": [
+          {
+            "cargo": 3,
+            "energy": 70.0,
+            "hp": 5,
+            "kind": "rush_started",
+            "tick": 19
+          },
+          {
+            "cargo": 3,
+            "energy": 70.0,
+            "hp": 5,
+            "kind": "rush_arrived",
+            "tick": 37
+          }
+        ],
+        "guard_style": "Steady",
+        "hp": 5,
+        "mode": "play",
+        "role": "Guardian",
+        "tick": 123
+      },
+      "cooldown": 0.0,
+      "paused": false,
+      "player": [
+        789.999633789062,
+        390.0
+      ],
+      "recovery": 0.0,
+      "refusals": 0,
+      "selected": "reach",
+      "starts": 1,
+      "status": "READY",
+      "travel": 0.0
+    },
+    "live": {
+      "capture": 4,
+      "combat": {
+        "cargo": 3,
+        "counters": {
+          "blocks": 0,
+          "counters": 0,
+          "courier_hits": 0,
+          "dodges": 0,
+          "player_hits": 0,
+          "redirects": 0,
+          "rejected": 0
+        },
+        "courier_speed": 28.0,
+        "courier_x": 164.2,
+        "enemy_focus": 3,
+        "energy": 100.0,
+        "events": [],
+        "guard_style": "Steady",
+        "hp": 5,
+        "mode": "play",
+        "role": "Guardian",
+        "tick": 9
+      },
+      "cooldown": 0.0,
+      "paused": false,
+      "player": [
+        550.0,
+        390.0
+      ],
+      "recovery": 0.0,
+      "refusals": 0,
+      "selected": "reach",
+      "starts": 0,
+      "status": "READY",
+      "travel": 0.0
+    },
+    "locked": {
+      "capture": 5,
+      "combat": {
+        "cargo": 3,
+        "counters": {
+          "blocks": 0,
+          "counters": 0,
+          "courier_hits": 0,
+          "dodges": 0,
+          "player_hits": 0,
+          "redirects": 0,
+          "rejected": 0
+        },
+        "courier_speed": 28.0,
+        "courier_x": 167.933,
+        "enemy_focus": 3,
+        "energy": 100.0,
+        "events": [],
+        "guard_style": "Steady",
+        "hp": 5,
+        "mode": "play",
+        "role": "Guardian",
+        "tick": 17
+      },
+      "cooldown": 0.0,
+      "paused": false,
+      "player": [
+        550.0,
+        390.0
+      ],
+      "recovery": 0.0,
+      "refusals": 0,
+      "selected": "reach",
+      "starts": 0,
+      "status": "READY",
+      "travel": 0.0
+    },
+    "moved": {
+      "capture": 13,
+      "combat": {
+        "cargo": 3,
+        "counters": {
+          "blocks": 0,
+          "counters": 0,
+          "courier_hits": 0,
+          "dodges": 0,
+          "player_hits": 0,
+          "redirects": 0,
+          "rejected": 0
+        },
+        "courier_speed": 28.0,
+        "courier_x": 230.466,
+        "enemy_focus": 3,
+        "energy": 95.7,
+        "events": [
+          {
+            "cargo": 3,
+            "energy": 70.0,
+            "hp": 5,
+            "kind": "rush_started",
+            "tick": 19
+          },
+          {
+            "cargo": 3,
+            "energy": 70.0,
+            "hp": 5,
+            "kind": "rush_arrived",
+            "tick": 37
+          }
+        ],
+        "guard_style": "Steady",
+        "hp": 5,
+        "mode": "play",
+        "role": "Guardian",
+        "tick": 151
+      },
+      "cooldown": 0.0,
+      "paused": false,
+      "player": [
+        789.999633789062,
+        340.000122070312
+      ],
+      "recovery": 0.0,
+      "refusals": 1,
+      "selected": "reach",
+      "starts": 1,
+      "status": "READY",
+      "travel": 0.0
+    },
+    "paused": {
+      "capture": 10,
+      "combat": {
+        "cargo": 3,
+        "counters": {
+          "blocks": 0,
+          "counters": 0,
+          "courier_hits": 0,
+          "dodges": 0,
+          "player_hits": 0,
+          "redirects": 0,
+          "rejected": 0
+        },
+        "courier_speed": 28.0,
+        "courier_x": 221.599,
+        "enemy_focus": 3,
+        "energy": 90.0,
+        "events": [
+          {
+            "cargo": 3,
+            "energy": 70.0,
+            "hp": 5,
+            "kind": "rush_started",
+            "tick": 19
+          },
+          {
+            "cargo": 3,
+            "energy": 70.0,
+            "hp": 5,
+            "kind": "rush_arrived",
+            "tick": 37
+          }
+        ],
+        "guard_style": "Steady",
+        "hp": 5,
+        "mode": "play",
+        "role": "Guardian",
+        "tick": 132
+      },
+      "cooldown": 0.0,
+      "paused": true,
+      "player": [
+        789.999633789062,
+        390.0
+      ],
+      "recovery": 0.0,
+      "refusals": 1,
+      "selected": "reach",
+      "starts": 1,
+      "status": "READY",
+      "travel": 0.0
+    },
+    "preparation": {
+      "capture": 3,
+      "combat": {
+        "cargo": 3,
+        "counters": {
+          "blocks": 0,
+          "counters": 0,
+          "courier_hits": 0,
+          "dodges": 0,
+          "player_hits": 0,
+          "redirects": 0,
+          "rejected": 0
+        },
+        "courier_speed": 28.0,
+        "courier_x": 160.0,
+        "enemy_focus": 3,
+        "energy": 100.0,
+        "events": [],
+        "guard_style": "Steady",
+        "hp": 5,
+        "mode": "title",
+        "role": "Guardian",
+        "tick": 0
+      },
+      "cooldown": 0.0,
+      "paused": false,
+      "player": [
+        550.0,
+        390.0
+      ],
+      "recovery": 0.0,
+      "refusals": 0,
+      "selected": "reach",
+      "starts": 0,
+      "status": "TITLE",
+      "travel": 0.0
+    },
+    "refused": {
+      "capture": 9,
+      "combat": {
+        "cargo": 3,
+        "counters": {
+          "blocks": 0,
+          "counters": 0,
+          "courier_hits": 0,
+          "dodges": 0,
+          "player_hits": 0,
+          "redirects": 0,
+          "rejected": 0
+        },
+        "courier_speed": 28.0,
+        "courier_x": 220.666,
+        "enemy_focus": 3,
+        "energy": 90.4,
+        "events": [
+          {
+            "cargo": 3,
+            "energy": 70.0,
+            "hp": 5,
+            "kind": "rush_started",
+            "tick": 19
+          },
+          {
+            "cargo": 3,
+            "energy": 70.0,
+            "hp": 5,
+            "kind": "rush_arrived",
+            "tick": 37
+          }
+        ],
+        "guard_style": "Steady",
+        "hp": 5,
+        "mode": "play",
+        "role": "Guardian",
+        "tick": 130
+      },
+      "cooldown": 0.0,
+      "paused": false,
+      "player": [
+        789.999633789062,
+        390.0
+      ],
+      "recovery": 0.0,
+      "refusals": 1,
+      "selected": "reach",
+      "starts": 1,
+      "status": "READY",
+      "travel": 0.0
+    },
+    "resumed": {
+      "capture": 12,
+      "combat": {
+        "cargo": 3,
+        "counters": {
+          "blocks": 0,
+          "counters": 0,
+          "courier_hits": 0,
+          "dodges": 0,
+          "player_hits": 0,
+          "redirects": 0,
+          "rejected": 0
+        },
+        "courier_speed": 28.0,
+        "courier_x": 223.466,
+        "enemy_focus": 3,
+        "energy": 91.2,
+        "events": [
+          {
+            "cargo": 3,
+            "energy": 70.0,
+            "hp": 5,
+            "kind": "rush_started",
+            "tick": 19
+          },
+          {
+            "cargo": 3,
+            "energy": 70.0,
+            "hp": 5,
+            "kind": "rush_arrived",
+            "tick": 37
+          }
+        ],
+        "guard_style": "Steady",
+        "hp": 5,
+        "mode": "play",
+        "role": "Guardian",
+        "tick": 136
+      },
+      "cooldown": 0.0,
+      "paused": false,
+      "player": [
+        789.999633789062,
+        390.0
+      ],
+      "recovery": 0.0,
+      "refusals": 1,
+      "selected": "reach",
+      "starts": 1,
+      "status": "READY",
+      "travel": 0.0
+    },
+    "snap": {
+      "capture": 2,
+      "combat": {
+        "cargo": 3,
+        "counters": {
+          "blocks": 0,
+          "counters": 0,
+          "courier_hits": 0,
+          "dodges": 0,
+          "player_hits": 0,
+          "redirects": 0,
+          "rejected": 0
+        },
+        "courier_speed": 28.0,
+        "courier_x": 160.0,
+        "enemy_focus": 3,
+        "energy": 100.0,
+        "events": [],
+        "guard_style": "Steady",
+        "hp": 5,
+        "mode": "title",
+        "role": "Guardian",
+        "tick": 0
+      },
+      "cooldown": 0.0,
+      "paused": false,
+      "player": [
+        550.0,
+        390.0
+      ],
+      "recovery": 0.0,
+      "refusals": 0,
+      "selected": "snap",
+      "starts": 0,
+      "status": "TITLE",
+      "travel": 0.0
+    },
+    "still": {
+      "capture": 11,
+      "combat": {
+        "cargo": 3,
+        "counters": {
+          "blocks": 0,
+          "counters": 0,
+          "courier_hits": 0,
+          "dodges": 0,
+          "player_hits": 0,
+          "redirects": 0,
+          "rejected": 0
+        },
+        "courier_speed": 28.0,
+        "courier_x": 221.599,
+        "enemy_focus": 3,
+        "energy": 90.0,
+        "events": [
+          {
+            "cargo": 3,
+            "energy": 70.0,
+            "hp": 5,
+            "kind": "rush_started",
+            "tick": 19
+          },
+          {
+            "cargo": 3,
+            "energy": 70.0,
+            "hp": 5,
+            "kind": "rush_arrived",
+            "tick": 37
+          }
+        ],
+        "guard_style": "Steady",
+        "hp": 5,
+        "mode": "play",
+        "role": "Guardian",
+        "tick": 132
+      },
+      "cooldown": 0.0,
+      "paused": true,
+      "player": [
+        789.999633789062,
+        390.0
+      ],
+      "recovery": 0.0,
+      "refusals": 1,
+      "selected": "reach",
+      "starts": 1,
+      "status": "READY",
+      "travel": 0.0
+    }
+  },
+  "runtime": "4.6.3.stable.official.7d41c59c4",
+  "schema_version": 1,
+  "scope": "Actual source-only window, synthetic keyboard/focus and model consequences. No physical device, human reception or shipping claim."
+}

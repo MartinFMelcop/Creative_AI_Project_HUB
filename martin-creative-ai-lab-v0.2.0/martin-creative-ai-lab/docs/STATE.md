@@ -2,7 +2,7 @@
 
 **Updated:** 2026-10-21 UTC. **Product SEED version:** 0.33.20.
 **Mode:** DEVELOPMENT. **Verified integration baseline:**
-`e5a2417e4558866f02a1f9c13c3b9f5fa8225461`, branch `work`; fetched main matched HEAD,
+`7f94172073badc510c7958f8eacf4cec73d7c05e`, branch `work`; fetched main matched HEAD,
 no divergence, and initial tracked/untracked tree was clean.
 
 This file owns active initiative continuity, not detailed gameplay contracts or an
@@ -50,11 +50,24 @@ observations from player outcomes. The current feedback delivery preserves all 5
 measured mechanical outcomes; trace identities change with the review. Capability states
 remain unchanged; no new lab/origin transfer.
 
+**New ability/production consumer:** A separate source-only [ability bench](../north-star/prototype/abilities/README.md)
+executes short/long committed rushes on the unchanged real crossing. Selection locks
+before entry; actual cost, direction lock, vulnerable travel and action recovery create
+new behavior. The shared bounded catalog runs candidate data without replacing live
+inputs. [Execution](../evidence/north-star-abilities/RUN.json) retains 60 native controls,
+ordinary walk/step alternatives in ten opening fixtures, three complete living model
+journeys, changed-candidate execution, 16 actual OS controls and inspected images.
+Reach enables the specified distant brief opening but misses a nearer shorter one;
+Snap does not beat walking in that nearer fixture. The complete fixed-policy Reach
+journey retains its additional health loss. Baseline matches the base model exactly.
+This is neither shipped/network integration nor final talent/class/balance validation.
+
 **Missing/uncertain:** Distinct final classes/specializations/progression, professions,
 long-term content throughput, social recognition and shared-world networking/server
 trust are not demonstrated by this local adventure. The new authoring path is limited
-to three fitting benches and supported stat/visual axes; it does not author abilities,
-quests, arbitrary effects or a complete RPG build. Physical controller mapping,
+to three fitting benches and supported stat/visual axes; it does not author quests,
+arbitrary effects or a complete RPG build. The separate ability bench authors only
+bounded rush profiles, not a general skill/tree/quest system. Physical controller mapping,
 independent player comprehension/enjoyment/accessibility, broad hardware and other OSes
 remain unvalidated. Prototype fiction and mechanics are not final author-approved canon.
 
@@ -66,7 +79,8 @@ editor/tool availability and licensing, and is not a prerequisite for continuing
 useful prototype work. Shared-world trust/persistence needs separate architecture.
 
 **Next high-value frontier:** Compare independent author/player comprehension of the
-new preparation/review, a coherent ability/build consumer, alternative work policies
+new preparation/review and rush commitments, deliberate adoption/integration of the
+ability behavior, alternative work policies
 and calibrated architecture needs. The measured failure cases now have inspectable
 cost feedback, but improved comprehension is still an unvalidated hypothesis. Avoid
 expanding the matrix or adding more text without a new consequential question.
@@ -137,8 +151,8 @@ players, authentication, encrypted remote transport, persistence and reconnect
 are absent. Loopback fixed policies establish neither player experience nor latency or
 capacity. Pinned Godot 4.6.3 is the executable experiment, not a production engine decision.
 
-**Next/continuation:** Compare a coherent new ability/build behavior and independent
-player comprehension of preparation against freshness feedback, policy adaptation and demonstrated
+**Next/continuation:** Compare deliberate adoption/integration of the new source-only
+rush behavior and independent player comprehension against freshness feedback, policy adaptation and demonstrated
 prediction/reconciliation needs. Independent neutral heartbeat closes the cadence
 dependency; it does not complete experience or prediction requirements.
 Interactive input is now demonstrated; a larger network stack is not automatically valuable.

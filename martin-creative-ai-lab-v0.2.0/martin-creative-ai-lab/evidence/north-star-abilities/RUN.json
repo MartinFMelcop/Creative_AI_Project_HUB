@@ -1,0 +1,63 @@
+{
+  "artifacts": {
+    "candidate-catalog.json": "405a94f2c2ab9718a35ffe572f32d4a0cda262f3dfb7b1f32137b6a363f8fed8",
+    "candidate.json": "c39a841ae0cd3d6d079f72897c7312e0798db19b7529c93175a6b9585bf2827d",
+    "committed.png": "eebe679dfcf96b5f8536b079ed75dc49e4b36591c9bce1ef044ad1f9caf9f39e",
+    "keyboard.json": "0694896ab61341e37217999fe7972987fba292ea51873cbcaa3d61c6a5973176",
+    "native.json": "212eb049fde17cfffabc1adb034ee208565ba9bbe68632cded24b6fa8ddfe128",
+    "preparation.png": "0af5746f22f54df39afc9c9594697cc4032bfc8d0b97ff7396fc47ab3ce83e26"
+  },
+  "checks": {
+    "candidate_tool_tests": 3,
+    "native": 60,
+    "native_failed": 0,
+    "os_failed": 0,
+    "os_input": 16
+  },
+  "inputs": {
+    "abilities/catalog.gd": "9431431a07d774b8e4d80609d1be9d9dbfe244773d482c4a8ee0c75add95cada",
+    "abilities/catalog.json": "d86a6acdaddfaef664217eafd2782d86c530f23545a4be03e70baff08d826dfe",
+    "abilities/checks.gd": "f73b6d79e181210321be284a09d1ff1608e6883501613eea82c99bc1f45ae6a4",
+    "abilities/model.gd": "77a1712dedeb7f4d22eb7f35140d49c16131c4e45d0be1d81f3ead7a57c48992",
+    "abilities/play.gd": "76d67486a4212d3c089d0a58d22ffe03b15cd5c49d131e4f9f2a9a353538045e",
+    "abilities/probe.gd": "874c38cb15a4b08e26208aa7217f43e8e8df9335f525a53ead78ca1f2f87fdd1",
+    "abilities/view.gd": "a945a1c38dc3e0e5aae1679d9a372caa636b9eeacb2b2cdec0934ca85c94744a",
+    "combat.gd": "77aefc3f6130e114954a867f6404830180ca342c88e2396ec89a3784c2b3b0b3",
+    "data/fittings.json": "cf9ce26272dd4841e89f5de2bb679407f971ec04954bf753c15b4d768eba189d",
+    "fittings.gd": "836fa97cc7c6d81126bcddafc26daae72f5585ff61b70b55c83ea65aa70fc390",
+    "project.godot": "8d4755b58f1179a9b5ec431579177371e784bca9703a17c88f4c7a6d4ee9385c",
+    "route.gd": "2936029e1a52933fff0141b546f85fbc53a57b7e6c5301eaef5cabac06a05901",
+    "tests/policy.gd": "646f0758a211e84ffbfd4632460c7d1fc549cbb3b552801ee2508774a5a63e29",
+    "tools/abilities.py": "d1eec134e736230b889b69a41ee1f6023df13aeb495e2c9552052f9029e7975a",
+    "tools/test_abilities.py": "636ef4f20a0fa73cf427d695396f62d9e4146f9e1735403d7e2cb25a8ed92460",
+    "tools/verify_ability_input.py": "1244d5afa81f0cd584013c4c0ed1301e69895dfef9b80787628456320dcee17e"
+  },
+  "integration_baseline": "7f94172073badc510c7958f8eacf4cec73d7c05e",
+  "kind": "source_only_ability_execution",
+  "limits": "Constructed opening controls, fixed model policies, synthetic actual-window input and agent image inspection. No independent player, optimal policy, balance, final class canon, shipped ability, network integration or maturity promotion.",
+  "mode": "DEVELOPMENT",
+  "observations": {
+    "changed_snap_distance": 59.9998779296875,
+    "complete_model_journeys": 3,
+    "images_inspected": [
+      "preparation.png",
+      "committed.png"
+    ],
+    "journey_cargo": [
+      3,
+      3,
+      3
+    ],
+    "journey_health": [
+      5,
+      5,
+      4
+    ],
+    "matched_fixtures": 10
+  },
+  "runtime": "4.6.3.stable.official.7d41c59c4",
+  "schema_version": 1,
+  "unchanged_delivery_sha256": {
+    "crossing-drill.pck": "352e47bca2482de7da6dd8818ebf5f3464a5585da93b10dd8a6c164ec70c17e2"
+  }
+}

@@ -444,3 +444,26 @@ CRE-011/013 (H) inform visible trade-offs and preparation outside combat, withou
 adopting candidate attributes, talent trees or class canon. Twelve nominal combinations
 are exercised in [the current execution](../evidence/north-star-preparation/RUN.json),
 not twelve competitive builds, new abilities or independent player validation.
+
+
+## Committed-rush hypotheses — executable ability production
+
+**Status:** source-only developer experiment, not approved class canon. The
+[ability bench](prototype/abilities/README.md) adds a locked-direction paid rush to
+the actual crossing model, with short/long profiles chosen before entry. Travel
+suppresses conflicting actions and passive recovery; arrival imposes a recovery
+window before guard, step or counter. Threats and damage continue. Longer reach can
+make a distant brief opening reachable but can also lose a closer short opening;
+ordinary walking/step controls retain their successes. Neither rush is an upgrade
+claim. A complete fixed-policy Reach journey loses one more health than its controls.
+
+A single bounded runtime catalog also powers candidate inspection and actual native
+execution without adopting the candidate. There are two supported profile slots,
+one implemented operation and no arbitrary scripts/effects or tree authoring. Baseline
+behavior matches the unchanged combat model; the shipped adventure/network consumer
+remain separate. CRE-013 (H) informs consequential exclusive pre-entry choice rather
+than percentage bonuses or an assumed talent tree. ENG-015 informs the additive seam
+without a production architecture migration. SCI-017 informs matched constructed
+opening controls, existing-walk/step alternatives and retained negative outcomes.
+[Execution](../evidence/north-star-abilities/RUN.json) distinguishes synthetic execution
+and agent image inspection from absent independent human validation.

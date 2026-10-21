@@ -750,3 +750,11 @@ The separate [loopback authority experiment](authority/README.md) executes the e
 escort model behind a server-owned clock and intent boundary. Its separate interactive
 window accepts keyboard/mouse input and presents confirmed snapshots. It is not included in
 the playable release and does not establish multiplayer or production readiness.
+
+
+## Experimental ability consumer
+
+The separate [committed-rush bench](abilities/README.md) executes two authored movement
+abilities against the real crossing. It provides native play, bounded candidate-data
+execution and matched cost/timing controls. It is source-only and does not alter this
+adventure, its PCK/Linux distribution or the developer authority protocol.
