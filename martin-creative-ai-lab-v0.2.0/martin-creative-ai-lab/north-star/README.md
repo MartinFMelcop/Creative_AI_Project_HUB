@@ -15,7 +15,7 @@ settings, focus loss and completed work disarm active intentions. Hold stays def
 ## Actual stage and creative authority
 
 The catalog now records **local_prototype**: one executable
-[crossing encounter](prototype/README.md), thirteen actual consumer code paths and fourteen
+[crossing encounter](prototype/README.md), fourteen actual consumer code paths and fourteen
 capabilities. **NS-C03 combat, NS-C04 consequential dialogue and NS-C07 sound are adapted**
 in this destination; the other eleven contribution states remain unchanged. Godot 4.6.3 is the prototype tool; no final MMO engine or
 running multiplayer service is selected. The earlier combat-response lab remains an
@@ -134,6 +134,13 @@ persistent social simulation or human narrative/identity validation.
 
 The [Linux x86_64 delivery](prototype/README.md#play) includes the pinned official
 runtime, notices, source identities and checksum. Actual release journeys and native
-window edit/move/pause/reentry are [executed](../evidence/north-star-linux-player/RUN.json).
+window edit/move/pause/reentry are [executed](../evidence/north-star-gamepad/RUN.json).
 This removes an installation dependency on development tools; it adds no mechanic,
 capability-state promotion, new lab, final engine or independent player validation.
+
+
+The existing adventure also has [mapped gamepad control](prototype/README.md#mapped-gamepad-experimental)
+through preparation, appearance, dialogue and both goals. Context hints, deliberate
+pause/resume and disconnect recovery are executed in source/PCK/Linux 0.2.0.
+[Evidence](../evidence/north-star-gamepad/RUN.json) uses injected mapped events;
+physical devices, human accessibility and new gameplay depth remain unproven.

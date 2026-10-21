@@ -1,0 +1,67 @@
+{
+  "checks": {
+    "failed": 0,
+    "passed": 98
+  },
+  "consumer_hashes": {
+    "actors.gd": "f4f1cb91251d0bd37ed76ff8c965ab8bc4e15d804597e7caf0fc57c2d296cda3",
+    "arena.gd": "9e8ca68e4dad33368dcd969d57e8e7b0b23134793b477a392e6be4201f1c58fc",
+    "combat.gd": "829c922b86cadbc5a34c4367d7cab73f685e674449769d71a37b5a7450461cbb",
+    "tests/policy.gd": "646f0758a211e84ffbfd4632460c7d1fc549cbb3b552801ee2508774a5a63e29",
+    "tests/workshop_checks.gd": "947d19ce8993d35e2e19e954da906b94211eb3165c4c61544f23f4ee80b71383",
+    "workshop.gd": "5fcba9578edf0c44db9336cb36d6b7783ff1da175e200f9c422392e4eebcc56b"
+  },
+  "native_observation_sha256": "1c245b771fbce3f00cb792f6c6a77e340bd669e5458bd65e1d142277b7c27160",
+  "routes": [
+    {
+      "cargo": 3,
+      "hp": 5,
+      "mode": "won",
+      "outfit": "standard",
+      "role": "Guardian",
+      "tick": 1648
+    },
+    {
+      "cargo": 3,
+      "hp": 6,
+      "mode": "won",
+      "outfit": "riveted",
+      "role": "Guardian",
+      "tick": 1648
+    },
+    {
+      "cargo": 3,
+      "hp": 4,
+      "mode": "won",
+      "outfit": "trail",
+      "role": "Guardian",
+      "tick": 1648
+    },
+    {
+      "cargo": 3,
+      "hp": 5,
+      "mode": "won",
+      "outfit": "standard",
+      "role": "Duelist",
+      "tick": 1262
+    },
+    {
+      "cargo": 3,
+      "hp": 6,
+      "mode": "won",
+      "outfit": "riveted",
+      "role": "Duelist",
+      "tick": 1271
+    },
+    {
+      "cargo": 3,
+      "hp": 4,
+      "mode": "won",
+      "outfit": "trail",
+      "role": "Duelist",
+      "tick": 1256
+    }
+  ],
+  "schema_version": 1,
+  "scope": "Executed fixed policies and native scene controls, not participants, balance or profession validation."
+}

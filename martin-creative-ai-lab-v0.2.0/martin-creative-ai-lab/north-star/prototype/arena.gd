@@ -1,4 +1,8 @@
 extends Node2D
+const Gamepad=preload("res://gamepad.gd")
+var pad=Gamepad.new()
+var pad_dispatch:=false
+var pad_help:=false
 const CourierTalk=preload("res://courier_talk.gd")
 var courier_talk=CourierTalk.new()
 var talk_stage=Combat.new()
@@ -49,6 +53,7 @@ const AMBER := Color("ffc474")
 const RED := Color("ff796f")
 
 func _ready() -> void:
+	Input.joy_connection_changed.connect(pad_connection)
 	for scale_factor in [1.0,3.0]:
 		var portrait=CharacterLook.Portrait.new();portrait.controller=character_look;portrait.actor=look_actor
 		portrait.scale=Vector2.ONE*scale_factor;portrait.visible=false;add_child(portrait);look_portraits.append(portrait)
@@ -67,6 +72,14 @@ func _ready() -> void:
 	var args=OS.get_cmdline_user_args()
 	if args.size()==2 and args[0] in ["--verify-player","--verify-player-read"]:
 		call_deferred("verify_player",args[1],args[0]=="--verify-player-read")
+	elif args.size()==2 and args[0]=="--verify-pad":call_deferred("verify_pad",args[1])
+
+func verify_pad(output: String) -> void:
+	set_physics_process(false)
+	var driver=load("res://tests/gamepad_driver.gd").new()
+	var report=driver.run(self,output)
+	await get_tree().create_timer(.2).timeout
+	get_tree().quit(0 if report.checks.failed==0 else 1)
 
 func verify_player(output: String,read_only: bool) -> void:
 	set_physics_process(false)
@@ -75,6 +88,88 @@ func verify_player(output: String,read_only: bool) -> void:
 	sound.silence()
 	await get_tree().create_timer(.2).timeout
 	get_tree().quit(0 if success else 1)
+
+func quarantine_inputs() -> void:
+	bindings.quarantine();pad.quarantine()
+
+func pad_connection(id: int,connected: bool) -> void:
+	if not connected and pad.lose_device(id):
+		_notification(NOTIFICATION_APPLICATION_FOCUS_OUT)
+		queue_redraw()
+
+func pad_context() -> String:
+	if character_look.active:return "look"
+	if courier_talk.active:return "talk"
+	if workshop.active:return "workshop_paused" if workshop.paused else "workshop"
+	return game.mode
+
+func pad_key(key: int) -> void:
+	var event=InputEventKey.new();event.keycode=key;event.physical_keycode=key;event.pressed=true
+	pad_dispatch=true
+	_unhandled_key_input(event)
+	pad_dispatch=false
+	quarantine_inputs()
+
+func _input(event: InputEvent) -> void:
+	if not (event is InputEventJoypadButton or event is InputEventJoypadMotion):return
+	var was_pad:bool=pad.using_gamepad
+	var button:int=pad.receive(event)
+	if pad.using_gamepad and not was_pad:bindings.clear_intents();taps.clear()
+	get_viewport().set_input_as_handled()
+	queue_redraw()
+	if button<0:return
+	if controls_open:
+		if button in [JOY_BUTTON_B,JOY_BUTTON_BACK]:pad_key(KEY_ESCAPE)
+		return
+	if pad_help:
+		if button in [JOY_BUTTON_B,JOY_BUTTON_BACK]:pad_help=false;quarantine_inputs()
+		elif button==JOY_BUTTON_X:bindings.toggle_guard=not bindings.toggle_guard;bindings.clear_intents();quarantine_inputs()
+		elif button==JOY_BUTTON_Y:bindings.toggle_interact=not bindings.toggle_interact;bindings.clear_intents();quarantine_inputs()
+		elif button==JOY_BUTTON_RIGHT_SHOULDER:sound.set_muted(not sound.muted);quarantine_inputs()
+		return
+	if button==JOY_BUTTON_BACK:
+		open_controls();controls_open=false;pad_help=true
+		return
+	if character_look.active:
+		var keys={JOY_BUTTON_DPAD_LEFT:KEY_LEFT,JOY_BUTTON_DPAD_RIGHT:KEY_RIGHT,JOY_BUTTON_DPAD_UP:KEY_UP,JOY_BUTTON_DPAD_DOWN:KEY_DOWN,JOY_BUTTON_A:KEY_ENTER,JOY_BUTTON_B:KEY_ESCAPE,JOY_BUTTON_X:KEY_DELETE,JOY_BUTTON_Y:KEY_SPACE,JOY_BUTTON_LEFT_SHOULDER:KEY_1,JOY_BUTTON_RIGHT_SHOULDER:KEY_2,JOY_BUTTON_LEFT_STICK:KEY_TAB,JOY_BUTTON_RIGHT_STICK:KEY_F5}
+		if keys.has(button):pad_key(keys[button])
+		return
+	if courier_talk.active:
+		var keys={JOY_BUTTON_DPAD_UP:KEY_1,JOY_BUTTON_DPAD_DOWN:KEY_2,JOY_BUTTON_DPAD_RIGHT:KEY_3,JOY_BUTTON_A:KEY_ENTER,JOY_BUTTON_B:KEY_ESCAPE,JOY_BUTTON_X:KEY_TAB,JOY_BUTTON_LEFT_SHOULDER:KEY_F2,JOY_BUTTON_RIGHT_STICK:KEY_F5}
+		if keys.has(button):pad_key(keys[button])
+		return
+	if button==JOY_BUTTON_START:pad_key(KEY_ESCAPE);return
+	if workshop.active:
+		if workshop.paused:
+			if button==JOY_BUTTON_A:pad_key(KEY_ENTER)
+		elif button==JOY_BUTTON_Y:pad_key(KEY_ENTER)
+		elif button==JOY_BUTTON_X:pad_key(KEY_C)
+		if button==JOY_BUTTON_B:pad_key(KEY_R)
+		return
+	var paused:bool=rehearsal.paused if rehearsal.active else game.mode=="paused"
+	var live:bool=rehearsal.state=="live" and not rehearsal.paused if rehearsal.active else game.mode=="play"
+	if live:
+		if button==JOY_BUTTON_X:taps.strike=true
+		elif button==JOY_BUTTON_Y:taps.skill_pressed=true
+		elif button==JOY_BUTTON_B:taps.dodge=true
+		elif button==JOY_BUTTON_A:taps.interact_pressed=true
+		return
+	if button==JOY_BUTTON_A:pad_key(KEY_ENTER)
+	elif button==JOY_BUTTON_B:pad_key(KEY_R)
+	elif not paused:
+		var keys={JOY_BUTTON_LEFT_STICK:KEY_C,JOY_BUTTON_RIGHT_STICK:KEY_F5}
+		if game.mode=="title" and not rehearsal.active:
+			keys.merge({JOY_BUTTON_DPAD_LEFT:KEY_1,JOY_BUTTON_DPAD_RIGHT:KEY_2,JOY_BUTTON_Y:KEY_TAB,JOY_BUTTON_X:KEY_T,JOY_BUTTON_LEFT_SHOULDER:KEY_F2,JOY_BUTTON_RIGHT_SHOULDER:KEY_F3})
+		elif rehearsal.active:keys[JOY_BUTTON_X]=KEY_T
+		elif game.mode=="won" and not return_gate.active:keys.merge({JOY_BUTTON_LEFT_SHOULDER:KEY_F2,JOY_BUTTON_RIGHT_SHOULDER:KEY_F4})
+		if keys.has(button):pad_key(keys[button])
+
+func draw_pad_help() -> void:
+	draw_rect(Rect2(Vector2.ZERO,Vector2(1152,768)),INK)
+	text(Vector2(65,85),"MAPPED GAMEPAD / SESSION GUIDE",30,TEAL)
+	var lines=["Standard mapped positions: A south / B east / X west / Y north.","LS / D-pad: move     RS: aim     X: blade     Y: guard or feint", "B: step     A: interact     START: pause     BACK: this guide", "Title: LEFT / RIGHT approach, Y guard style, A start, X rehearsal", "Title: LB workshop / RB appearance. L3 wear / R3 retry save.", "Workshop: hold A make, X recycle, Y deploy, B leave.", "Appearance: D-pad edit, A apply, B cancel, X defaults, Y action.", "Appearance: LB / RB approach preview, L3 fitting, R3 retry save.", "Conversation: UP / DOWN / RIGHT choice, A confirm, X recap, B close.", "After escort: LB return journey / RB conversation. A replays.", "X guard input: "+("TOGGLE" if bindings.toggle_guard else "HOLD")+"    Y interaction: "+("TOGGLE" if bindings.toggle_interact else "HOLD"), "RB sound: "+("MUTED" if sound.muted else "ON")+". Session options preserve keyboard bindings.", "BACK / B closes. Play stays paused; A / START explicitly resumes.", "After focus loss or disconnect: release buttons, center sticks, resume."]
+	for i in lines.size():text(Vector2(65,135+i*38),lines[i],18)
+	text(Vector2(65,705),"Fixed mapped layout; physical controller compatibility is not yet validated.",17,AMBER)
 
 func abandon() -> void:
 	courier_talk=CourierTalk.new()
@@ -103,13 +198,14 @@ func begin_crossing() -> void:
 	game = Combat.new()
 	game.reset(selected,guardian_style)
 	game.fit_outfit(workshop.outfit)
-	if workshop.active:workshop.leave();bindings.quarantine()
+	if workshop.active:workshop.leave();quarantine_inputs()
 	sound.observe(game,true)
 	actors.attach(game)
 	taps.clear()
 
 func _notification(what: int) -> void:
 	if what==NOTIFICATION_APPLICATION_FOCUS_OUT:
+		pad.quarantine()
 		courier_talk.suspend()
 		if character_look.active:character_look.paused=true
 		if return_gate.active:return_gate.suspend()
@@ -117,16 +213,22 @@ func _notification(what: int) -> void:
 		if rehearsal.active:
 			if rehearsal.state=="live" and not rehearsal.paused: rehearsal.toggle_pause()
 		elif game.mode=="play": game.mode="paused"
-		taps.clear();bindings.quarantine();sound.silence()
+		taps.clear();quarantine_inputs();sound.silence()
 
 func _unhandled_key_input(event: InputEvent) -> void:
 	if not event is InputEventKey:return
+	if event.pressed and not pad_dispatch and pad.using_gamepad:
+		pad.keyboard();bindings.clear_intents();taps.clear()
 	if not event.pressed:bindings.release(event);return
 	if event.echo:return
 	var key: int = event.physical_keycode
 	if key==0 or event.keycode in Controls.NAV:key=event.keycode
 	if key==KEY_ESCAPE:bindings.clear_intents()
 	if key==KEY_F12:capture();return
+	if pad_help:
+		if key==KEY_ESCAPE:pad_help=false;quarantine_inputs()
+		elif key==KEY_F1:pad_help=false;open_controls()
+		queue_redraw();return
 	if controls_open:
 		controls_input(event,key);queue_redraw();return
 	if key==KEY_F1:
@@ -137,7 +239,7 @@ func _unhandled_key_input(event: InputEvent) -> void:
 		talk_input(key);queue_redraw();return
 	if not workshop.active and not rehearsal.active and game.mode=="title" and key==KEY_F3:
 		character_look.enter(selected,guardian_style,workshop.outfit);look_actor.attach(character_look.preview)
-		taps.clear();bindings.quarantine();queue_redraw();return
+		taps.clear();quarantine_inputs();queue_redraw();return
 	if return_gate.active:
 		return_gate_input(event,key);sync_sound();queue_redraw();return
 	if normal_run and not rehearsal.active and game.mode=="won" and key==KEY_F4:
@@ -147,7 +249,7 @@ func _unhandled_key_input(event: InputEvent) -> void:
 	if workshop.active:
 		workshop_input(key);queue_redraw();return
 	if not rehearsal.active and game.mode=="title" and key==KEY_F2:
-		workshop.enter();taps.clear();bindings.quarantine();queue_redraw();return
+		workshop.enter();taps.clear();quarantine_inputs();queue_redraw();return
 	if not rehearsal.active and game.mode!="play":
 		if key==KEY_C: keepsakes.cycle_equipped()
 		elif key==KEY_F5: retry_cosmetics()
@@ -189,12 +291,12 @@ func workshop_input(key: int) -> void:
 	if key==KEY_ESCAPE:
 		if workshop.paused:workshop.paused=false
 		else:workshop.suspend()
-		bindings.quarantine()
+		quarantine_inputs()
 	elif key==KEY_ENTER:
-		if workshop.paused:workshop.paused=false;bindings.quarantine()
+		if workshop.paused:workshop.paused=false;quarantine_inputs()
 		else:begin_crossing()
-	elif key==KEY_R:workshop.leave();bindings.quarantine()
-	elif key==KEY_C:workshop.recycle();bindings.quarantine()
+	elif key==KEY_R:workshop.leave();quarantine_inputs()
+	elif key==KEY_C:workshop.recycle();quarantine_inputs()
 	taps.clear()
 
 func open_controls() -> void:
@@ -206,7 +308,7 @@ func open_controls() -> void:
 	elif game.mode=="play":game.mode="paused"
 	controls_open=true;controls_listening=false;controls_row=0
 	controls_draft=bindings.keys.duplicate();controls_message=""
-	taps.clear();bindings.quarantine();sound.silence()
+	taps.clear();quarantine_inputs();sound.silence()
 
 func controls_input(event: InputEventKey,key: int) -> void:
 	if controls_listening:
@@ -219,7 +321,7 @@ func controls_input(event: InputEventKey,key: int) -> void:
 		if error.is_empty():controls_listening=false
 		return
 	if key in [KEY_ESCAPE,KEY_F1]:
-		controls_open=false;controls_listening=false;taps.clear();bindings.quarantine()
+		controls_open=false;controls_listening=false;taps.clear();quarantine_inputs()
 	elif key==KEY_UP:controls_row=posmod(controls_row-1,Controls.ACTIONS.size())
 	elif key==KEY_DOWN:controls_row=(controls_row+1)%Controls.ACTIONS.size()
 	elif key==KEY_ENTER:controls_listening=true;controls_message="Press a new key. Esc cancels capture."
@@ -232,10 +334,10 @@ func controls_input(event: InputEventKey,key: int) -> void:
 		bindings.toggle_interact=not bindings.toggle_interact;bindings.clear_intents()
 		controls_message="Interaction input changed for this session; move or press again to cancel."
 	elif key==KEY_S:
-		bindings.apply(controls_draft);controls_message=bindings.status;taps.clear();bindings.quarantine()
+		bindings.apply(controls_draft);controls_message=bindings.status;taps.clear();quarantine_inputs()
 
 func _physics_process(dt: float) -> void:
-	if controls_open:taps.clear();sound.silence();queue_redraw();return
+	if controls_open or pad_help:taps.clear();sound.silence();queue_redraw();return
 	if courier_talk.active:taps.clear();sound.silence();queue_redraw();return
 	if character_look.active:
 		if look_actor.model!=character_look.preview:look_actor.attach(character_look.preview)
@@ -245,13 +347,13 @@ func _physics_process(dt: float) -> void:
 			look_portraits[i].queue_redraw()
 		taps.clear();queue_redraw();return
 	if workshop.active:
-		workshop.step(dt,bindings.vector("move"),bindings.down("interact"))
+		workshop.step(dt,(bindings.vector("move")+pad.movement()).limit_length(),bindings.down("interact") or pad.held(JOY_BUTTON_A))
 		taps.clear();queue_redraw();return
 	var command: Dictionary=taps.duplicate()
-	command.move=bindings.vector("move")
-	command.aim=bindings.vector("aim")
-	command.skill=bindings.down("skill")
-	command.interact=bindings.down("interact")
+	command.move=(bindings.vector("move")+pad.movement()).limit_length()
+	command.aim=pad.vector(1) if pad.vector(1)!=Vector2.ZERO else bindings.vector("aim")
+	command.skill=bindings.down("skill") or pad.held(JOY_BUTTON_Y)
+	command.interact=bindings.down("interact") or pad.held(JOY_BUTTON_A)
 	if return_gate.active:
 		command=return_gate_command(command)
 		advance_crossing(dt,command)
@@ -267,7 +369,7 @@ func _physics_process(dt: float) -> void:
 	queue_redraw()
 
 func sync_sound() -> void:
-	var suspended: bool=controls_open or (rehearsal.paused or rehearsal.state=="ready" if rehearsal.active else game.mode in ["title","paused"])
+	var suspended: bool=pad_help or controls_open or (rehearsal.paused or rehearsal.state=="ready" if rehearsal.active else game.mode in ["title","paused"])
 	sound.observe(game,suspended)
 	actors.observe(game)
 
@@ -309,7 +411,7 @@ func draw_keepsake(at: Vector2, id: String, scale_factor: float=1.0) -> void:
 	else: draw_line(at+Vector2(-5,5)*scale_factor,at+Vector2(5,-5)*scale_factor,AMBER,3*scale_factor)
 
 func text(at: Vector2, value: String, size: int=18, color: Color=PAPER) -> void:
-	if not drawing_controls:value=bindings.describe(value)
+	if not drawing_controls and not pad_help:value=pad.describe(value,pad_context()) if pad.using_gamepad else bindings.describe(value)
 	draw_string(font,at,value,HORIZONTAL_ALIGNMENT_LEFT,-1,size,color)
 
 func panel(rect: Rect2, color: Color=Color("1b2d40")) -> void:
@@ -325,6 +427,9 @@ func style(color: Color) -> StyleBoxFlat:
 	return box
 
 func _draw() -> void:
+	if pad_help:
+		for portrait in look_portraits:portrait.visible=false
+		draw_pad_help();return
 	for portrait in look_portraits:portrait.visible=character_look.active and not controls_open
 	if courier_talk.active:
 		draw_talk()
@@ -618,7 +723,7 @@ func begin_return_gate() -> bool:
 	if not normal_run or rehearsal.active or not return_gate.begin(game,errand.state,courier_talk.aid()):return false
 	courier_talk.close()
 	normal_run=false;game=return_gate.game
-	taps.clear();bindings.quarantine();sound.observe(game,true);actors.attach(game)
+	taps.clear();quarantine_inputs();sound.observe(game,true);actors.attach(game)
 	return true
 
 func return_gate_input(event: InputEventKey,key: int) -> void:
@@ -626,12 +731,12 @@ func return_gate_input(event: InputEventKey,key: int) -> void:
 		return_gate.suspend()
 		if game.mode=="play":game.mode="paused"
 		elif game.mode=="paused":game.mode="play"
-		taps.clear();bindings.quarantine()
+		taps.clear();quarantine_inputs()
 	elif key==KEY_ENTER:
 		if game.mode=="paused":game.mode="play"
 		elif game.mode in ["won","lost"]:
 			return_gate.retry();game=return_gate.game;sound.observe(game,true);actors.attach(game)
-		taps.clear();bindings.quarantine()
+		taps.clear();quarantine_inputs()
 	elif key==KEY_R and game.mode!="play":abandon()
 	elif key==KEY_C and game.mode!="play":keepsakes.cycle_equipped()
 	elif key==KEY_F5 and game.mode!="play":retry_cosmetics()
@@ -726,7 +831,7 @@ func begin_talk() -> bool:
 	talk_stage=Combat.new();talk_stage.role=game.role;talk_stage.guard_style=game.guard_style
 	talk_stage.outfit=game.outfit;talk_stage.player=Vector2(145,142);talk_stage.courier=Vector2(300,142)
 	talk_actor.attach(talk_stage)
-	taps.clear();bindings.quarantine();sound.silence();return true
+	taps.clear();quarantine_inputs();sound.silence();return true
 
 func talk_input(key: int) -> void:
 	if key==KEY_ESCAPE:courier_talk.close()
@@ -735,7 +840,7 @@ func talk_input(key: int) -> void:
 	elif key==KEY_ENTER:courier_talk.confirm()
 	elif key==KEY_F2:begin_return_gate()
 	elif key==KEY_F5:retry_cosmetics()
-	taps.clear();bindings.quarantine()
+	taps.clear();quarantine_inputs()
 
 func draw_talk() -> void:
 	draw_rect(Rect2(0,0,1152,768),INK)
@@ -782,9 +887,9 @@ func draw_talk() -> void:
 
 func look_input(key: int) -> void:
 	character_look.paused=false
-	if key==KEY_ESCAPE:character_look.cancel();bindings.quarantine()
+	if key==KEY_ESCAPE:character_look.cancel();quarantine_inputs()
 	elif key==KEY_ENTER:
-		character_look.confirm();keepsakes.set_look(character_look.applied);bindings.quarantine()
+		character_look.confirm();keepsakes.set_look(character_look.applied);quarantine_inputs()
 	elif key==KEY_F5:retry_cosmetics()
 	elif key==KEY_UP:character_look.row=posmod(character_look.row-1,3)
 	elif key==KEY_DOWN:character_look.row=(character_look.row+1)%3

@@ -42,9 +42,9 @@ single-press guard and medicine interaction; costs/commitment stay live and inte
 disarms active intentions. Hold remains the default.
 
 The editable Godot project and small engine-dependent PCK execute the same consumer.
-An optional [Linux x86_64 player](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/prototype/dist/crossing-drill-linux-0.1.0.zip)
+An optional [Linux x86_64 player](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/prototype/dist/crossing-drill-linux-0.2.0.zip)
 now bundles its official runtime: extract the whole folder and play without an editor,
-SDK or checkout. [Delivery evidence](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/evidence/north-star-linux-player/RUN.json)
+SDK or checkout. [Delivery evidence](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/evidence/north-star-gamepad/RUN.json)
 includes actual release execution, default-window input and save/reentry. It establishes
 delivery on the tested Linux environment, not other platforms or human enjoyment.
 [Native/input evidence](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/evidence/north-star-courier-conversation/RUN.json)
@@ -180,3 +180,9 @@ author-reported; these artifacts do not imply client delivery or human approval.
 Consult individual provenance and rights records before reuse: no blanket license
 covers all code, fiction and media. Report reproducible findings through
 [repository issues](https://github.com/MartinFMelcop/Creative_AI_Project_HUB/issues).
+
+
+North Star's [mapped gamepad path](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/prototype/README.md#mapped-gamepad-experimental)
+now serves the same complete adventure with contextual hints and interruption recovery.
+Source/PCK/Linux execution uses injected mapped events, not physical-device or human
+accessibility validation. Historical origins and their independent demonstrations remain.

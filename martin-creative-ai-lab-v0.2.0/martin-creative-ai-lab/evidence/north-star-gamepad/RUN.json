@@ -1,0 +1,560 @@
+{
+  "baseline_commit": "3c11446fe86b7eac755650a10aaa8339d7a94470",
+  "baseline_pck_sha256": "16a1101a3e4dcf3b751f68217d7cac2e0c109bea5a0eb246e6ff61bc3fc597e6",
+  "before_after": {
+    "baseline_south": {
+      "mode_after_south": "title",
+      "supports_pad": false,
+      "tick": 0
+    },
+    "current_south": {
+      "mode_after_south": "play",
+      "supports_pad": true,
+      "tick": 9
+    },
+    "external_human_validation": false,
+    "independent_rebuild_mapped_observations_equal": true,
+    "new_gameplay_mechanics": 0,
+    "new_mapped_controls": 56,
+    "physical_controller": false,
+    "retained_controls": 782,
+    "source_pack_release_mapped_observations_equal": true
+  },
+  "brain_consultation": [
+    {
+      "id": "ENG-005",
+      "relevance": "high",
+      "use": "Modal state/event/ownership invariants and explicit transitions."
+    },
+    {
+      "id": "SCI-055",
+      "relevance": "medium/high",
+      "use": "Actual input receipt, bounded automation and negative controls."
+    },
+    {
+      "id": "SCI-061",
+      "relevance": "medium/high",
+      "use": "Device/user/context validity limits; synthetic input is not accessibility validation."
+    },
+    {
+      "editorial_status": "H",
+      "id": "CRE-068",
+      "relevance": "medium",
+      "use": "Preserve action preparation, commitment, contact and recovery; no canon promotion."
+    }
+  ],
+  "branch": "codex/north-star-gamepad-20261020",
+  "capability_ids": [
+    "NS-C03",
+    "NS-C04",
+    "NS-C07"
+  ],
+  "checks": {
+    "failed": 0,
+    "passed": 838
+  },
+  "command_paths_normalized_to_lab": true,
+  "commands": [
+    {
+      "command": [
+        "python3",
+        "north-star/prototype/tools/verify.py",
+        "--output",
+        "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/evidence/north-star-gamepad/regressions.json"
+      ],
+      "exit_code": 0,
+      "retained_behavior_equal": true
+    },
+    {
+      "command": [
+        "python3",
+        "north-star/prototype/tools/verify_gate.py",
+        "--output",
+        "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/evidence/north-star-gamepad/gate.json",
+        "--baseline",
+        "/workspace/Creative_AI_Project_HUB/work/north-star-return-gate/baseline.pck"
+      ],
+      "exit_code": 0,
+      "retained_behavior_equal": true
+    },
+    {
+      "command": [
+        "python3",
+        "north-star/prototype/tools/verify_routes.py",
+        "--output",
+        "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/evidence/north-star-gamepad/routes.json"
+      ],
+      "exit_code": 0,
+      "retained_behavior_equal": true
+    },
+    {
+      "command": [
+        "python3",
+        "north-star/prototype/tools/verify_workshop.py",
+        "--output",
+        "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/evidence/north-star-gamepad/workshop.json"
+      ],
+      "exit_code": 0,
+      "retained_behavior_equal": true
+    },
+    {
+      "command": [
+        "python3",
+        "north-star/prototype/tools/verify_look.py",
+        "--output",
+        "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/evidence/north-star-gamepad/look.json"
+      ],
+      "exit_code": 0,
+      "retained_behavior_equal": true
+    },
+    {
+      "command": [
+        "python3",
+        "north-star/prototype/tools/verify_conversation.py",
+        "--output",
+        "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/evidence/north-star-gamepad/conversation.json"
+      ],
+      "exit_code": 0,
+      "retained_behavior_equal": true
+    },
+    {
+      "command": [
+        "python3",
+        "north-star/prototype/tools/verify_appearance.py",
+        "--output",
+        "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/evidence/north-star-gamepad/appearance.json"
+      ],
+      "exit_code": 0,
+      "retained_behavior_equal": true
+    },
+    {
+      "command": [
+        "python3",
+        "north-star/prototype/tools/verify_sound.py",
+        "--output",
+        "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/evidence/north-star-gamepad/sound.json"
+      ],
+      "exit_code": 0,
+      "retained_behavior_equal": false
+    },
+    {
+      "command": [
+        "python3",
+        "north-star/prototype/tools/test_verify_gamepad.py"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "python3",
+        "north-star/prototype/tools/verify_gamepad.py",
+        "--archive",
+        "north-star/prototype/dist/crossing-drill-linux-0.2.0.zip",
+        "--output",
+        "evidence/north-star-gamepad/gamepad.json"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "python3",
+        "north-star/prototype/tools/verify_linux.py",
+        "--output",
+        "evidence/north-star-gamepad/results.json"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "python3",
+        "north-star/prototype/tools/test_check_linux.py"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "python3",
+        "north-star/prototype/tools/export_linux.py",
+        "--template",
+        "/workspace/Creative_AI_Project_HUB/work/north-star-linux-player/probe/crossing-drill.x86_64"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "python3",
+        "north-star/prototype/tools/export_linux.py",
+        "--template",
+        "/workspace/Creative_AI_Project_HUB/work/north-star-linux-player/probe/crossing-drill.x86_64",
+        "--output",
+        "/workspace/Creative_AI_Project_HUB/work/north-star-gamepad/rebuilt-final.zip"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "python3",
+        "north-star/prototype/tools/verify_linux.py",
+        "--archive",
+        "/workspace/Creative_AI_Project_HUB/work/north-star-gamepad/rebuilt-final.zip",
+        "--output",
+        "/workspace/Creative_AI_Project_HUB/work/north-star-gamepad/rebuilt-final-player.json",
+        "--compare",
+        "evidence/north-star-gamepad/results.json"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "python3",
+        "north-star/prototype/tools/verify_gamepad.py",
+        "--archive",
+        "/workspace/Creative_AI_Project_HUB/work/north-star-gamepad/rebuilt-final.zip",
+        "--output",
+        "/workspace/Creative_AI_Project_HUB/work/north-star-gamepad/rebuilt-final-gamepad.json",
+        "--compare",
+        "evidence/north-star-gamepad/gamepad.json"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "python3",
+        "north-star/prototype/tools/verify_linux_input.py",
+        "--output",
+        "/workspace/Creative_AI_Project_HUB/work/north-star-gamepad/native-window-final"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "godot",
+        "--headless",
+        "--main-pack",
+        "/workspace/Creative_AI_Project_HUB/work/north-star-gamepad/baseline-3c11446.pck",
+        "--script",
+        "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/evidence/north-star-gamepad/baseline_probe.gd",
+        "--",
+        "/workspace/Creative_AI_Project_HUB/work/north-star-gamepad/baseline-probe.json"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "godot",
+        "--headless",
+        "--main-pack",
+        "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/prototype/dist/crossing-drill.pck",
+        "--script",
+        "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/evidence/north-star-gamepad/baseline_probe.gd",
+        "--",
+        "/workspace/Creative_AI_Project_HUB/work/north-star-gamepad/current-probe.json"
+      ],
+      "exit_code": 0
+    }
+  ],
+  "consumer_paths": [
+    "north-star/prototype/arena.gd",
+    "north-star/prototype/combat.gd",
+    "north-star/prototype/rehearsal.gd",
+    "north-star/prototype/keepsakes.gd",
+    "north-star/prototype/errand.gd",
+    "north-star/prototype/controls.gd",
+    "north-star/prototype/sound.gd",
+    "north-star/prototype/actors.gd",
+    "north-star/prototype/workshop.gd",
+    "north-star/prototype/route.gd",
+    "north-star/prototype/return_gate.gd",
+    "north-star/prototype/character_look.gd",
+    "north-star/prototype/courier_talk.gd",
+    "north-star/prototype/gamepad.gd"
+  ],
+  "failures_resolved": [
+    "Initial adapter method name collided with inherited Object.disconnect; renamed lose_device before execution.",
+    "One AudioServer capture exceeded the existing 30s bound during concurrent verification; isolated matched baseline and current source/PCK both passed without changing timing gates.",
+    "Editor cache/socket access failed in restricted environment; private writable XDG paths and permitted local socket access enabled official export without weakening product checks.",
+    "Workshop paused hint initially named Y deploy; contextual A resume corrected and tested.",
+    "An OS-window check rejected a stale archive while final scripts were changing; rebuild and repeat against exact current source."
+  ],
+  "kind": "destination_execution",
+  "limitations": [
+    "Injected mapped events and fixed policies are not physical controllers, independent people, comfort/accessibility, identity recognition, fun or market validation.",
+    "Mapped position labels are fixed; no pad remapping, haptics, device/OS coverage or broad accessibility claim.",
+    "Ordinary default launches run no verification policy; opt-in driver is bounded by subprocess timeouts.",
+    "Retained exposed gameplay observations match prior evidence; source identities and identity-bearing opaque digests change. Full current source/PCK equality is checked.",
+    "No new laboratory or origin extraction; P06 method adapted into new destination code without fiction/assets. Capability and origin statuses unchanged.",
+    "No Codex token/cost or productivity claim; prompt remains unchanged."
+  ],
+  "mode": "DEVELOPMENT",
+  "protected_brain_sha256": {
+    "BIBLIOTECA_DE_CONHECIMENTO_APLICADO.md": "2726e3f8d6c2c95acc015fc527437bc8de974170d9a507f62e6e3c289a61eae1",
+    "CATALOGO_DE_CONSULTA.json": "e8927568f2f63f9d5778778a7c8652c57cfedb248cea6d1b659023df80d4119c",
+    "CREATIVE_BRAIN.md": "41efe409375b09ae29006bf475ae5a2221d532d67c1dcbbe0df98b4b1afa8bc1",
+    "ENGINEERING_BRAIN.md": "975b8741f767bc1dcaf3c551e5516a79bcd78d5d8e6efd8a4965d9f3cf37971f",
+    "SCIENTIFIC_BRAIN.md": "4a8dff7d1bc23f06421ffec4a07fcb66b745423f3728bc2cb11dc750a5e38958",
+    "integrity.json": "1afe93d07e7bd784b6521264e823833ed7e692a052d2e667a6d47456ce99a0cb"
+  },
+  "python_tests": {
+    "failed": 0,
+    "passed": 136,
+    "suites": {
+      "brain_query": 31,
+      "check_linux": 11,
+      "check_manifest": 11,
+      "reference_library": 42,
+      "validate_repo": 27,
+      "verify": 3,
+      "verify_gamepad": 2,
+      "verify_resolution": 3,
+      "verify_sound": 6
+    }
+  },
+  "rebuild": {
+    "archive_sha256": "0ec33a193756a97110b1c980ad7647bef94835502fe10c0745da28a131420209",
+    "byte_equality_required": false,
+    "delivered_archive_sha256": "d37ebb0ed740765d379c25b9ee6595e645294d4ad79823fdc47b7b18cc56c1cc",
+    "source_and_behavior_equal": true
+  },
+  "result_artifacts": [
+    {
+      "local_path": "evidence/north-star-gamepad/appearance.json",
+      "sha256": "fb0ae5d0d6598291f4848a1d4c658f3d6e8fe79183bc893857a831bcb2a513c3",
+      "size_bytes": 10156
+    },
+    {
+      "local_path": "evidence/north-star-gamepad/appearance.png",
+      "sha256": "064e87e9e06d5939eae83b3dba40ed00eb77bb681f2051745c65a198f0079e8b",
+      "size_bytes": 105200
+    },
+    {
+      "local_path": "evidence/north-star-gamepad/baseline-probe.json",
+      "sha256": "3afb63dfcfbfdd7f93ed62e4d0e0c3404358dda3e25b0f080a5700f77b4ce1bb",
+      "size_bytes": 59
+    },
+    {
+      "local_path": "evidence/north-star-gamepad/conversation.json",
+      "sha256": "b3f1f394a9f1a5b26a543f59eff848783760f87bbc208577e85db1f492106982",
+      "size_bytes": 6113
+    },
+    {
+      "local_path": "evidence/north-star-gamepad/current-probe.json",
+      "sha256": "468a30cd715408096318c5f83dd9fa0a82e93c02f1d054778703b7f3e0423213",
+      "size_bytes": 57
+    },
+    {
+      "local_path": "evidence/north-star-gamepad/gamepad.json",
+      "sha256": "4d97e8842a06ea9c3f4dc4bbab7895b462c309fb696ea49ec6c585bc9eeee404",
+      "size_bytes": 13484
+    },
+    {
+      "local_path": "evidence/north-star-gamepad/gate.before_after.json",
+      "sha256": "2a2bc631d34f59428d3a5f4a8c831da4c97c564ed316ea95dcfbfb0c025fb360",
+      "size_bytes": 707
+    },
+    {
+      "local_path": "evidence/north-star-gamepad/gate.json",
+      "sha256": "093614152256db4e7214b03b94ac72d2ff74571e5173cb5410fe99228e4942cf",
+      "size_bytes": 2726
+    },
+    {
+      "local_path": "evidence/north-star-gamepad/guide.png",
+      "sha256": "e7bc572d8b45084a2b5a63c922ac96e8c7df7d5a525846cce5e7ac35e2796572",
+      "size_bytes": 119467
+    },
+    {
+      "local_path": "evidence/north-star-gamepad/look.json",
+      "sha256": "5957c16ed6c876a7c14117126216612e904d863525fcbb6fc4df7cdf879813a2",
+      "size_bytes": 1639
+    },
+    {
+      "local_path": "evidence/north-star-gamepad/native-window.json",
+      "sha256": "e7a4710b800c238310260d99e3ecbb00a2306f8c157a5bfeb1007874723af05d",
+      "size_bytes": 743
+    },
+    {
+      "local_path": "evidence/north-star-gamepad/play.png",
+      "sha256": "b8098ce71835069e01e953a6834c58617d8a58fe4e126e46dac66f8ec27e109c",
+      "size_bytes": 80706
+    },
+    {
+      "local_path": "evidence/north-star-gamepad/regressions.json",
+      "sha256": "54ecce2e28f95410ac23a8a4f80e7baafa25c35cf9bf7da2168fb54c48a694f0",
+      "size_bytes": 107651
+    },
+    {
+      "local_path": "evidence/north-star-gamepad/results.json",
+      "sha256": "dbe5be4bde6b4b7fb5f0d30c1c45cc77c86db3a0f1a5c62459a7172c106f6cb3",
+      "size_bytes": 30365
+    },
+    {
+      "local_path": "evidence/north-star-gamepad/routes.json",
+      "sha256": "cd560fbf1c51a9e95a3438233fb08ebedcf8306b23a5f5e011f0487304692944",
+      "size_bytes": 1659
+    },
+    {
+      "local_path": "evidence/north-star-gamepad/sound.json",
+      "sha256": "211b066666edecd17b4d9774df3fb19aefe7e7e7f148943d01cfcd309c3feeb6",
+      "size_bytes": 34787
+    },
+    {
+      "local_path": "evidence/north-star-gamepad/title.png",
+      "sha256": "b85fc0c9b585410a0438289c82d77ceb9e55c73ac7739eb56182f3bd976a1748",
+      "size_bytes": 142080
+    },
+    {
+      "local_path": "evidence/north-star-gamepad/workshop.json",
+      "sha256": "258bb72b204f825d1ae167faaf1db18f58a982f61cb857de511bae90206b0c4f",
+      "size_bytes": 1701
+    }
+  ],
+  "runtime": "Godot 4.6.3.stable.official.7d41c59c4 source/PCK and pinned official Linux x86_64 release; Python stdlib; owned Xorg dummy/software OpenGL; Dummy audio",
+  "schema_version": 1,
+  "scope": "Mapped gamepad method adapted into the existing full local adventure; native event receipt, modal recovery, real fitting and both complete two-goal journeys. No new class/quest/MMO or production integration.",
+  "source_artifacts": [
+    {
+      "local_path": "evidence/north-star-gamepad/baseline_probe.gd",
+      "sha256": "c227cee8e52e46ba5fc32befe76a5847f8e78de4d76a1f8d9aadb6e1d3d56bfd",
+      "size_bytes": 678
+    },
+    {
+      "local_path": "evidence/north-star-gamepad/capture.gd",
+      "sha256": "ad3ba8991328397d3e6ee0b032fe8a731045ba082f47d12aa322a362c13489e5",
+      "size_bytes": 831
+    },
+    {
+      "local_path": "north-star/prototype/PLAYER_README.txt",
+      "sha256": "d474983f9f9cec74961f469632c4232f93fc4c2841b0ae40cda4751dc88e42ef",
+      "size_bytes": 3408
+    },
+    {
+      "local_path": "north-star/prototype/actors.gd",
+      "sha256": "f4f1cb91251d0bd37ed76ff8c965ab8bc4e15d804597e7caf0fc57c2d296cda3",
+      "size_bytes": 11184
+    },
+    {
+      "local_path": "north-star/prototype/arena.gd",
+      "sha256": "9e8ca68e4dad33368dcd969d57e8e7b0b23134793b477a392e6be4201f1c58fc",
+      "size_bytes": 55163
+    },
+    {
+      "local_path": "north-star/prototype/arena.tscn",
+      "sha256": "f794c485663f0ed318ddce6bb7a62bc9b2dbd3af02be4f166cca962c29382591",
+      "size_bytes": 154
+    },
+    {
+      "local_path": "north-star/prototype/character_look.gd",
+      "sha256": "d3b00276149918c051ca614b46df5dd5642a6a2fe35de56f9492ede1cfd4f6e9",
+      "size_bytes": 3291
+    },
+    {
+      "local_path": "north-star/prototype/combat.gd",
+      "sha256": "829c922b86cadbc5a34c4367d7cab73f685e674449769d71a37b5a7450461cbb",
+      "size_bytes": 14728
+    },
+    {
+      "local_path": "north-star/prototype/controls.gd",
+      "sha256": "151bb8867ba735c3b0b2a0048d312472dfe32359d2409825fa4817cbd0a9e9b8",
+      "size_bytes": 9867
+    },
+    {
+      "local_path": "north-star/prototype/courier_talk.gd",
+      "sha256": "986c26d0cba960fcf4e678035b6893dd5a106d49214c9ba9f67ca7f22caf5d56",
+      "size_bytes": 3899
+    },
+    {
+      "local_path": "north-star/prototype/dist/crossing-drill-linux-0.2.0.zip",
+      "sha256": "d37ebb0ed740765d379c25b9ee6595e645294d4ad79823fdc47b7b18cc56c1cc",
+      "size_bytes": 27270366
+    },
+    {
+      "local_path": "north-star/prototype/dist/crossing-drill-linux-0.2.0.zip.sha256",
+      "sha256": "92a05056b0324522b05aee1d217394cc1bc6137165a3ce20583abaa362d23bbd",
+      "size_bytes": 97
+    },
+    {
+      "local_path": "north-star/prototype/dist/crossing-drill.pck",
+      "sha256": "03a4b5905fbbe7f7ec474f3b009adbcb9a3d8928e5bc92a08b1d3e1c34d9c6a3",
+      "size_bytes": 316228
+    },
+    {
+      "local_path": "north-star/prototype/errand.gd",
+      "sha256": "2a2392fa86bd12544eba5f60ad74d35592c7d6fa207373ec11a1928a9e33e601",
+      "size_bytes": 3831
+    },
+    {
+      "local_path": "north-star/prototype/gamepad.gd",
+      "sha256": "2f944aa12cbb78d5f5ed60e393397706ecd4642debc7c96c6d3dd325e8b0aa0a",
+      "size_bytes": 3734
+    },
+    {
+      "local_path": "north-star/prototype/keepsakes.gd",
+      "sha256": "1e1779136f6b7d21568fe72f670285f4bce6a8264172fd102f1b49421fcf8236",
+      "size_bytes": 7306
+    },
+    {
+      "local_path": "north-star/prototype/project.godot",
+      "sha256": "8d4755b58f1179a9b5ec431579177371e784bca9703a17c88f4c7a6d4ee9385c",
+      "size_bytes": 414
+    },
+    {
+      "local_path": "north-star/prototype/rehearsal.gd",
+      "sha256": "507a27b7832cfc79522396132a0a5f3f32fec34dd443a8a35fc21102080252c9",
+      "size_bytes": 3187
+    },
+    {
+      "local_path": "north-star/prototype/return_gate.gd",
+      "sha256": "817e88308bbf878569a7c7a76ae83e38623f9398c7f6416c0ba3a1cd522fa3bc",
+      "size_bytes": 4109
+    },
+    {
+      "local_path": "north-star/prototype/route.gd",
+      "sha256": "2936029e1a52933fff0141b546f85fbc53a57b7e6c5301eaef5cabac06a05901",
+      "size_bytes": 2304
+    },
+    {
+      "local_path": "north-star/prototype/sound.gd",
+      "sha256": "4404169ebb2d1711f20e6023292712bb2051f4075c4039d9e2db725b4b8fa80a",
+      "size_bytes": 4116
+    },
+    {
+      "local_path": "north-star/prototype/tests/gamepad_checks.gd",
+      "sha256": "a25fb7d8ef1c4dd9ce590d1326824fff5051fc81a0df1195fddd20438a5627b9",
+      "size_bytes": 401
+    },
+    {
+      "local_path": "north-star/prototype/tests/gamepad_driver.gd",
+      "sha256": "02622fbb72e8fa9dc14d1df3ba6570241acdfbf68e11b2bcddb14896eda31837",
+      "size_bytes": 9533
+    },
+    {
+      "local_path": "north-star/prototype/tests/run_checks.gd",
+      "sha256": "0e345684147e58973b91f9f1d953afc5ac0960486445c30df1da33ff2ddec1eb",
+      "size_bytes": 8611
+    },
+    {
+      "local_path": "north-star/prototype/tools/export_linux.py",
+      "sha256": "9cf3962a5e81172091be9d39de63b2f2aa70d9746cae5912508d26102bc20afa",
+      "size_bytes": 6531
+    },
+    {
+      "local_path": "north-star/prototype/tools/pack.gd",
+      "sha256": "040cdfa27f896a39ee9e23891601b0651766a9660d912d4d60a989e1e92901a3",
+      "size_bytes": 1564
+    },
+    {
+      "local_path": "north-star/prototype/tools/test_verify_gamepad.py",
+      "sha256": "48f06cac7a8c290d13ca0bc8d0773b7a12c553ad93442c1473afb34c0a085caa",
+      "size_bytes": 2010
+    },
+    {
+      "local_path": "north-star/prototype/tools/verify_gamepad.py",
+      "sha256": "b11756492c555e4c47a85c4d508c09bf5ca5b15da5c6cb4b8c370fe9db7cf590",
+      "size_bytes": 4116
+    },
+    {
+      "local_path": "north-star/prototype/workshop.gd",
+      "sha256": "5fcba9578edf0c44db9336cb36d6b7783ff1da175e200f9c422392e4eebcc56b",
+      "size_bytes": 2239
+    }
+  ]
+}

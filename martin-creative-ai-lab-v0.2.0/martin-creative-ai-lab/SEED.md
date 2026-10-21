@@ -1,6 +1,6 @@
 # SEED — Martin Creative AI Lab
 
-**Version:** 0.33.18
+**Version:** 0.33.19
 **Data-base:** 10 de outubro de 2026  
 **Autor e responsável pelo portfólio:** Martin Melcop Neto  
 **Working language:** English for new technical documentation, plans, code comments and Git messages; respond in the requested language (Brazilian Portuguese for continuous closeout). Preserve appropriate creative/source languages.
@@ -45,7 +45,18 @@ does not merge fictional universes. Source details below are historical provenan
 retained origin behavior; current operation is defined by this direction, AGENTS,
 STATE and the single [continuous prompt](docs/prompts/CONTINUOUS_DEVELOPMENT.md).
 
-### Current increment — v0.33.18
+### Current increment — v0.33.19
+
+DEVELOPMENT: the existing North Star adventure now accepts mapped gamepad movement,
+aim and contextual actions, including preparation, appearance and consequential
+conversation. Explicit pause/resume, held-input quarantine and keyboard handover
+preserve deliberate control. Source/PCK/Linux player 0.2.0 execute both two-goal
+journeys through mapped events. [Evidence](evidence/north-star-gamepad/RUN.json)
+separates injected input from physical-device, accessibility or human validation.
+One consumer/fourteen paths; capability/origin states remain unchanged, no new lab.
+The adaptive prompt remains unchanged; controller work is not the automatic next task.
+
+### Prior consumer increment — v0.33.18
 
 DEVELOPMENT: an optional Linux x86_64 ZIP now bundles the current North Star consumer
 with the pinned official Godot release runtime and notices. Extract and play without
@@ -176,12 +187,12 @@ for continuous development and its full successor requirement.
 
 | Field | Current evidence |
 |---|---|
-| Baseline | `6a4ecb8a1ec8d866298813814d6a11cc25599f01`; wrapper retained |
-| Current milestone | DEVELOPMENT: current North Star adventure is delivered as an independently executed Linux player; [execution](evidence/north-star-linux-player/RUN.json) |
+| Baseline | `3c11446fe86b7eac755650a10aaa8339d7a94470`; wrapper retained |
+| Current milestone | DEVELOPMENT: mapped input serves the existing North Star adventure in source/PCK/Linux; [execution](evidence/north-star-gamepad/RUN.json) |
 | Sources | Five byte-preserved supplied brain files; historical reference inventories unchanged |
 | Operational state | [STATE](docs/STATE.md), [origins](labs/origins.json), [brain integrity](brains/integrity.json) |
 | Portfolio | Technology capabilities, inspectable source/demonstrations and bounded execution evidence |
-| North Star | One local prototype/thirteen code paths; fourteen entries, NS-C03/04/07 adapted, other eleven statuses unchanged; no final engine/MMO service |
+| North Star | One local prototype/fourteen code paths; fourteen entries, NS-C03/04/07 adapted, other eleven statuses unchanged; no final engine/MMO service |
 | Next selection | Reassess actual character-experience questions, laboratory instruments and portfolio value from new evidence |
 
 Registry and source gates establish structure/integrity, not gameplay quality or truth

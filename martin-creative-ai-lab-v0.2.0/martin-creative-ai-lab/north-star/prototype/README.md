@@ -8,8 +8,8 @@ revisions and rejected alternatives.
 
 ## Play
 
-**Linux x86_64:** download the [standalone ZIP](dist/crossing-drill-linux-0.1.0.zip)
-and its [SHA-256 checksum](dist/crossing-drill-linux-0.1.0.zip.sha256), extract the
+**Linux x86_64:** download the [standalone ZIP](dist/crossing-drill-linux-0.2.0.zip)
+and its [SHA-256 checksum](dist/crossing-drill-linux-0.2.0.zip.sha256), extract the
 complete `CrossingDrill` folder, then open `crossing-drill.x86_64` or run
 `./crossing-drill.x86_64`. Keep its PCK beside it. No Godot editor, SDK, Python,
 Node, source checkout or network is required to play. The roughly 27 MB ZIP bundles
@@ -167,7 +167,7 @@ craft-to-build consumer, not a profession career, economy, inventory, persistent
 final item/class approval or independently validated player preference.
 
 ```bash
-python3 north-star/prototype/tools/verify_workshop.py --output /tmp/workshop.json --compare evidence/north-star-linux-player/workshop.json
+python3 north-star/prototype/tools/verify_workshop.py --output /tmp/workshop.json --compare evidence/north-star-gamepad/workshop.json
 # Optional actual Linux XTest window navigation; requires Xorg/dummy and local sockets:
 python3 north-star/prototype/tools/verify_workshop_input.py --output /tmp/workshop-input
 ```
@@ -230,7 +230,7 @@ A new crossing or abandonment clears the agreement. No account, reputation meter
 persistent quest or source fictional universe is added.
 
 ```bash
-python3 north-star/prototype/tools/verify_conversation.py --output /tmp/conversation.json --compare evidence/north-star-linux-player/conversation.json
+python3 north-star/prototype/tools/verify_conversation.py --output /tmp/conversation.json --compare evidence/north-star-gamepad/conversation.json
 # Optional Linux XTest keys after a fixture completes the actual escort:
 python3 north-star/prototype/tools/verify_conversation_display.py --output /tmp/conversation-display
 ```
@@ -266,7 +266,7 @@ The editor is available on selection, without live appearance changes or combat 
 ![Actual character-look draft and shared actor preview](../../evidence/north-star-character-look/editor-rest.png)
 
 ```bash
-python3 north-star/prototype/tools/verify_look.py --output /tmp/look.json --compare evidence/north-star-linux-player/look.json
+python3 north-star/prototype/tools/verify_look.py --output /tmp/look.json --compare evidence/north-star-gamepad/look.json
 python3 north-star/prototype/tools/verify_look_display.py --baseline /path/to/prior.pck --output /tmp/look-display
 ```
 
@@ -281,7 +281,7 @@ not final class/people canon, a complete character system or proof of the identi
 ### Verify local appearance continuity
 
 ```bash
-python3 north-star/prototype/tools/verify_appearance.py --output /tmp/appearance.json --compare evidence/north-star-linux-player/appearance.json
+python3 north-star/prototype/tools/verify_appearance.py --output /tmp/appearance.json --compare evidence/north-star-gamepad/appearance.json
 ```
 
 52 native migration/failure controls run in source and PCK. Twenty actual engine
@@ -575,7 +575,7 @@ or MMORPG persistence.
 ## Execute checks and reproduce delivery
 
 ```bash
-python3 north-star/prototype/tools/verify.py --godot godot --output /tmp/crossing-check.json --compare evidence/north-star-linux-player/regressions.json
+python3 north-star/prototype/tools/verify.py --godot godot --output /tmp/crossing-check.json --compare evidence/north-star-gamepad/regressions.json
 ```
 
 The stdlib runner bounds owned engine processes, uses writable temporary XDG paths,
@@ -599,7 +599,7 @@ The source pack is reproducible with the matching engine:
 godot --headless --path north-star/prototype --script tools/pack.gd -- /absolute/path/crossing-drill.pck
 ```
 
-[Current execution evidence](../../evidence/north-star-linux-player/RUN.json) identifies
+[Current execution evidence](../../evidence/north-star-gamepad/RUN.json) identifies
 baseline, source/result hashes, commands, refinements and limitations. The preserved
 [first-consumer record](../../evidence/north-star-crossing/RUN.json) documents the
 original crossing delivery; the [rehearsal record](../../evidence/north-star-rehearsal/RUN.json)
@@ -613,9 +613,9 @@ journeys use controlled inputs, not human decisions.
 ```bash
 python3 north-star/prototype/tools/check_linux.py
 python3 north-star/prototype/tools/test_check_linux.py
-python3 north-star/prototype/tools/verify_linux.py --output /tmp/player.json --compare evidence/north-star-linux-player/results.json
+python3 north-star/prototype/tools/verify_linux.py --output /tmp/player.json --compare evidence/north-star-gamepad/results.json
 python3 north-star/prototype/tools/export_linux.py --godot godot --templates /path/to/Godot_v4.6.3-stable_export_templates.tpz --output /tmp/crossing-rebuilt.zip
-python3 north-star/prototype/tools/verify_linux.py --archive /tmp/crossing-rebuilt.zip --output /tmp/rebuilt-player.json --compare evidence/north-star-linux-player/results.json
+python3 north-star/prototype/tools/verify_linux.py --archive /tmp/crossing-rebuilt.zip --output /tmp/rebuilt-player.json --compare evidence/north-star-gamepad/results.json
 ```
 
 An already extracted official standard `linux_release.x86_64` is accepted through
@@ -634,7 +634,7 @@ run test policies. The verifier runs outside the checkout with developer tools a
 from the app PATH. A missing companion PCK must fail. The optional
 `verify_linux_input.py --output /tmp/player-input` uses owned Xorg/libX11/libXtst
 and synthetic OS keys to inspect the normal window, including default-path save/reentry.
-[Actual delivery evidence](../../evidence/north-star-linux-player/RUN.json) separates
+[Actual delivery evidence](../../evidence/north-star-gamepad/RUN.json) separates
 these observations from independent user installation, identity, fun or hardware claims.
 
 ## Provenance and limitations
@@ -651,3 +651,22 @@ networking or authoritative multiplayer. No audio or controller hardware validat
 player study, account/MMORPG progression, production scale or commercial claim. Only
 editable device-local cosmetic continuity is stored. Candidate
 character names/mechanics are experimental; Creative Brain source bytes stay untouched.
+
+
+## Mapped gamepad (experimental)
+
+Standard mapped positions: LS or D-pad moves, RS aims, X blade, Y guard/feint,
+B step, A interact, START pause, BACK guide/session options. The guide covers
+selection, rehearsal, reversible workshop, appearance and consequential conversation.
+Release buttons and center sticks after interruptions; resume deliberately. Keyboard
+remaps remain separate. No pad remapping or physical-device compatibility is claimed.
+
+```bash
+python3 north-star/prototype/tools/test_verify_gamepad.py
+python3 north-star/prototype/tools/verify_gamepad.py --archive north-star/prototype/dist/crossing-drill-linux-0.2.0.zip --output /tmp/pad.json --compare evidence/north-star-gamepad/gamepad.json
+```
+
+The actual viewport receives injected mapped events and both complete journeys use
+its physics consumer in source/PCK/official release. [Execution](../../evidence/north-star-gamepad/RUN.json)
+distinguishes these checks from physical hardware, human comfort/accessibility and
+new gameplay content. Historical Linux 0.1.0 remains available but predates gamepad.

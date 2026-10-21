@@ -2313,3 +2313,26 @@ changes. Stage/capability/origin states remain unchanged; no external player val
   may differ between builds; exact source and behavior equality are separate from ZIP
   identity. Stage/capability/origin states unchanged, no new lab or final engine choice.
   Retain the adaptive prompt unchanged and reassess the next opportunity.
+
+
+## ADR-089 — Map controller intent into the existing adventure
+
+- **Baseline/mode:** `3c11446fe86b7eac755650a10aaa8339d7a94470`; DEVELOPMENT.
+- **Selection:** published South-button input is ignored at title. Adapt P06's
+  mapped-event ownership/deadzone method rather than invent a new input framework.
+  Compared further combat/courier content, cosmetics, prose and other consumers;
+  no stronger new inspected weakness justified those alternatives this cycle.
+- **Decision:** per-consumer mapped device state and scaled circular sticks; reuse
+  current modal commands, physics and action costs. Fixed context layout, readable
+  guide/hints, no InputMap/global keyboard-profile mutation. Explicit release/center
+  quarantine prevents held confirmation/axes leaking across modal transitions.
+  Active disconnect/focus loss pauses; reconnect alone is insufficient. Native
+  release verification is an opt-in actual-scene entry, never ordinary launch policy.
+- **Knowledge:** ENG-005 high; SCI-055/061 medium/high; CRE-068 H medium. State
+  invariants, input receipt/negative controls, actual device-context limits and
+  preservation of committed action phases inform implementation and assessment.
+- **Evidence/limits:** `evidence/north-star-gamepad/RUN.json` binds mapped viewport
+  events, both real two-goal journeys, retained controls and inspected views. New
+  Linux 0.2.0 preserves historical 0.1.0. No physical pad/human, comfort, identity,
+  fun, accessibility, final engine, production integration or NS-C13 promotion.
+  No new lab/extraction. Keep the adaptive prompt unchanged and reassess next work.

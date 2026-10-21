@@ -317,3 +317,18 @@ runtime cost buys a concrete recipient delivery; the small engine-dependent PCK
 remains. Actual release and default-window [execution](../evidence/north-star-linux-player/RUN.json)
 are not evidence of human comprehension, identity or fun. No other OS, final engine,
 new mechanics, approved lore or production MMORPG scope is accepted by this revision.
+
+
+## Mapped-controller decision — experimental
+
+Current author direction preserves character agency and meaningful adventures;
+CRE-068 H motivates keeping action preparation/commitment/contact/recovery legible.
+This increment offers another way to perform the existing actions, not new approved
+classes or creative canon. Standard mapped positions serve selection, workshop,
+appearance, conversation and both goals with the same resources and consequences.
+Contextual hints and a session guide describe the fixed layout. Quarantine after
+modal changes and explicit pause/resume after focus/disconnect retain recoverability.
+Keyboard remaps remain independent. SCI-061 requires actual device/user context;
+synthetic event journeys and agent image inspection cannot establish comfort,
+accessibility, recognizable identity or preference. Physical mapping, pad remapping
+and independent experience evaluation remain open. [Execution](../evidence/north-star-gamepad/RUN.json).

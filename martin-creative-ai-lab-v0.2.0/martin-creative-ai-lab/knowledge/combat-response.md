@@ -284,3 +284,28 @@ Keep arrival facts that are only displayed separate from mechanically used conse
 input, not participants, balance, felt identity, accessibility or general quest proof.
 The finding belongs to this destination; no retroactive P06 defect or new lab is claimed.
 ENG-005/SCI-017 inform state/negative controls; CRE-005/058/086 motivate the design only.
+
+
+## Mapped input needs destination ownership and modal controls
+
+**Question/context:** Can P06's mapped input method serve the entire North Star
+adventure without changing action costs or leaving held intent after interruption?
+Baseline `3c11446`, [destination execution](../evidence/north-star-gamepad/RUN.json).
+
+**Observation:** the published PCK ignored injected South at title (tick zero).
+The destination adapter now receives mapped events through the viewport, selects
+both approaches and completes escort/conversation/return using actual physics.
+Held menu confirmation is suppressed; active disconnect/focus loss pauses and
+clears/quarantines intent. Centering/releasing and explicit resume rearm it.
+Keyboard takeover clears pad state. Image review exposed a workshop resume hint
+that named deploy's Y instead of paused A; context-specific conversion corrects it.
+
+**Interpretation/consequence:** reuse an input method by specifying every destination
+mode and recovery transition, not by adding only live combat buttons. Keep keyboard
+profiles independent and test receipt plus consequences across actual consumers.
+ENG-005 and SCI-055 inform ownership and controls; CRE-068 H preserves action phases.
+
+**Validity:** injected mapped events, fixed policies and agent inspection on one
+Linux/software display, not physical controllers, people, comfort or broad access.
+SCI-061 requires those actual contexts before accessibility inference. No new general
+kernel, origin defect, lab, canon, MMO-scale or human identity evidence is claimed.

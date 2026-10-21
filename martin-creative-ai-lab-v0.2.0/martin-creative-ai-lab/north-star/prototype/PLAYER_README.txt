@@ -1,4 +1,4 @@
-Virgo Diamond: The North Star — Crossing Drill, Linux player 0.1.0
+Virgo Diamond: The North Star — Crossing Drill, Linux player 0.2.0
 
 Extract the entire CrossingDrill folder, then open crossing-drill.x86_64 or run
 ./crossing-drill.x86_64 from a terminal. Keep crossing-drill.pck beside it.
@@ -40,3 +40,11 @@ SOURCE-IDENTITY.json identifies the exported source; a matching ZIP checksum is
 published beside the download. A checksum establishes bytes, not user trust.
 
 Source, design and evidence: https://github.com/MartinFMelcop/Creative_AI_Project_HUB
+
+Mapped gamepad (experimental): LS or D-pad moves, RS aims; X blade, Y guard/feint,
+B step, A interact, START pause, BACK guide. Buttons use standard mapped positions
+(south A, east B, west X, north Y), not necessarily printed device labels.
+The guide lists preparation, appearance, conversation and session options.
+Center sticks and release buttons after focus loss/disconnect, then resume explicitly.
+This layout was checked with injected mapped events, not physical controllers.
+Keyboard bindings and controller layout are independent; gamepad remapping is absent.
