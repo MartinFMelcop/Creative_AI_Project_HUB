@@ -1,0 +1,41 @@
+{
+  "artifacts": {
+    "evidence/north-star-authority/results.json": "b584e5d86dcda782c05601caaf956c01877ce90ff8e2b5e5e156e4494417612d",
+    "north-star/prototype/authority/client.gd": "b64e0a9c03a07b4f3313a3a434b465ac315cdaf66cc256e7a0cd9eb7b3414e52",
+    "north-star/prototype/authority/server.gd": "ee1f09887846713afe0fd6037a773b3c758aa4d6789ca738d89ba04746485ec0",
+    "north-star/prototype/tools/test_verify_authority.py": "d9219cae9de5ad35c52c90244f173c6849f252f546ee8887a7b536384bfdec16",
+    "north-star/prototype/tools/verify_authority.py": "b70b813ae0f03486953424b0bd552ce8db0961d75938d040de91b0f7ef773dd0"
+  },
+  "baseline": "fa2fe4a34c098b7cce0e478efe4fa71ee86d8686",
+  "checks": {
+    "deliveries": [
+      "source",
+      "pack"
+    ],
+    "live_controls_per_delivery": 42,
+    "python_regressions": 9,
+    "remote_living_wins": 4
+  },
+  "command": "python3 north-star/prototype/tools/verify_authority.py --output /workspace/work/authority/full-pilot-3.json",
+  "date": "2026-10-21",
+  "kind": "architecture_execution",
+  "limits": "Developer loopback, one authoritative session, fixed remote policies. No playable release change, capability promotion, human validation, authentication, WAN, multi-player, persistence, latency/capacity or production engine claim.",
+  "provenance": "Successful scratch output copied byte-for-byte to results.json; source identities verified before and after execution.",
+  "regression_command": "python3 north-star/prototype/tools/test_verify_authority.py",
+  "runtime": "4.6.3.stable.official.7d41c59c4",
+  "schema_version": 1,
+  "unchanged_consumer_identities": {
+    "client": "b64e0a9c03a07b4f3313a3a434b465ac315cdaf66cc256e7a0cd9eb7b3414e52",
+    "consumers": {
+      "combat.gd": "77aefc3f6130e114954a867f6404830180ca342c88e2396ec89a3784c2b3b0b3",
+      "data/fittings.json": "cf9ce26272dd4841e89f5de2bb679407f971ec04954bf753c15b4d768eba189d",
+      "fittings.gd": "836fa97cc7c6d81126bcddafc26daae72f5585ff61b70b55c83ea65aa70fc390",
+      "project.godot": "8d4755b58f1179a9b5ec431579177371e784bca9703a17c88f4c7a6d4ee9385c",
+      "route.gd": "2936029e1a52933fff0141b546f85fbc53a57b7e6c5301eaef5cabac06a05901",
+      "tests/policy.gd": "646f0758a211e84ffbfd4632460c7d1fc549cbb3b552801ee2508774a5a63e29"
+    },
+    "pack": "352e47bca2482de7da6dd8818ebf5f3464a5585da93b10dd8a6c164ec70c17e2",
+    "runner": "b70b813ae0f03486953424b0bd552ce8db0961d75938d040de91b0f7ef773dd0",
+    "server": "ee1f09887846713afe0fd6037a773b3c758aa4d6789ca738d89ba04746485ec0"
+  }
+}

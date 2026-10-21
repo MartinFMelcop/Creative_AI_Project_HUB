@@ -2,7 +2,7 @@
 
 **Updated:** 2026-10-21 UTC. **Product SEED version:** 0.33.20.
 **Mode:** DEVELOPMENT. **Verified integration baseline:**
-`a5e27a2000f33f964204a762fbb20276d9ab17a9`, branch `work`; fetched main matched HEAD,
+`fa2fe4a34c098b7cce0e478efe4fa71ee86d8686`, branch `work`; fetched main matched HEAD,
 no divergence, and initial tracked/untracked tree was clean.
 
 This file owns active initiative continuity, not detailed gameplay contracts or an
@@ -80,6 +80,33 @@ step; that does not complete the MMORPG. Suspend if necessary tools, rights or d
 block valuable progress and a stronger opportunity exists. Retire/consolidate this
 prototype only after valuable behavior/evidence is transferred, destination contracts
 are verified and old consumers/dependencies/preservation duties are resolved.
+
+## Active initiative — server-owned shared-world foundations
+
+**Objective/consumer:** Resolve the missing client/server trust boundary using the
+existing actual escort model, before committing to a production engine or shared-world
+implementation. The [developer authority consumer](../north-star/prototype/authority/README.md)
+now separates a real TCP loopback server and remote headless policy client. Server physics
+owns time, catalog resources and paid actions; clients submit bounded sequenced intents.
+Silence/disconnect neutralize actions without pausing or resetting the model.
+
+**Verified scope:** [Execution](../evidence/north-star-authority/RUN.json) binds 42 live
+controls per source/PCK delivery, four living remote escort wins and nine regressions,
+including refutable clock/schema mutants. Existing playable source, PCK, release and
+capability evidence remain unchanged. No new lab, capability state or MMO maturity claim.
+
+**Missing/dependencies:** Interactive network frontend, prediction/reconciliation,
+multiple players, authentication, encrypted remote transport, persistence and reconnect
+are absent. Loopback fixed policies establish neither player experience nor latency or
+capacity. Pinned Godot 4.6.3 is the executable experiment, not a production engine decision.
+
+**Next/continuation:** Compare an interactive prediction/reconciliation slice against
+abilities/builds, independent player comprehension and other actual production needs.
+Continue only to remove a consequential ownership/experience limit; redesign if the seam
+cannot preserve costs under measured transport behavior. Complete this foundation when
+an explicit next architecture decision has sufficient evidence; suspend for stronger
+product value or unavailable dependencies. Retire only after consumers, evidence and
+preservation duties are transferred under the operating lifecycle policy.
 
 ## Stable capabilities and competing opportunities
 

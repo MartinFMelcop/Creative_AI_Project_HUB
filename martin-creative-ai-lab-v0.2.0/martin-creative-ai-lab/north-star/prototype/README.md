@@ -743,3 +743,9 @@ The actual viewport receives injected mapped events and both complete journeys u
 its physics consumer in source/PCK/official release. [Execution](../../evidence/north-star-gamepad/RUN.json)
 distinguishes these checks from physical hardware, human comfort/accessibility and
 new gameplay content. Historical Linux 0.1.0 remains available but predates gamepad.
+
+## Developer architecture consumer
+
+The separate [loopback authority experiment](authority/README.md) executes the existing
+escort model behind a server-owned clock and intent boundary. It is not included in
+the playable release and does not establish multiplayer or production readiness.

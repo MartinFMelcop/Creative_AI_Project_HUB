@@ -2640,3 +2640,37 @@ inspectable costs and recoverable consequences. No new lab/origin extraction, pr
 source change, final canon, player analytics, physical controller, human comprehension,
 accessibility/enjoyment, production engine or MMO readiness claim. Next compare actual
 understanding and a coherent ability/build frontier; more text is not an automatic task.
+
+## ADR-095 — execute a server-owned gameplay boundary
+
+**Date:** 2026-10-21 UTC. **Status:** implemented DEVELOPMENT.
+**Baseline:** clean `work`, `fa2fe4a34c098b7cce0e478efe4fa71ee86d8686`; fetched main matched.
+
+**Selection:** Compare continuing abilities/builds, player comprehension of preparation,
+alternative evaluator policies, creative production and Unity architecture against the
+actual future shared-world trust gap. A bounded authority consumer removes a concrete
+architecture uncertainty with available tools and actual paid gameplay. It does not
+require migration, new governance or speculative content expansion. Keep the product
+initiative active and compare the next opportunity afresh.
+
+**Decision:** A separate loopback server owns the unchanged Combat model and 60 Hz
+clock; a separate native client consumes snapshots and emits intents. Exact schema,
+canonical framing, sequence/window/rate bounds, rising edges, stale release quarantine
+and non-resettable session ownership preserve real resource costs. Source and existing
+PCK execution bind actual resource hashes. Nothing enters the playable package.
+
+**Verification:** [Execution](../evidence/north-star-authority/RUN.json) contains 42
+live controls per delivery and Guardian/Duelist wins with living escort and character
+in both. Nine regressions include actual clock/schema mutants, stale PCK rejection,
+oversize recovery and observer ordering. Initial pilots failed on integral JSON
+serialization and observers consuming older or duplicate terminal states; normalize
+integer wire representation, discard older observations and await explicit terminal
+reset rejection. Preserve these as controls rather than relaxing gameplay assertions.
+Raw packet schedules vary; comparison binds contract/identity, not equal timing.
+
+**Knowledge/limits:** ENG-015 informs temporal ownership and a minimal consumer seam;
+SCI-017 informs live controls, failed observations and refutable mutants; CRE-005 keeps
+cost and agency on the authority. Protected sources/pins remain unchanged. This is
+one loopback session, not authentication, encryption, interactive reconciliation,
+multiplayer product integration, persistent world, capacity/latency evidence or a
+production-engine choice. No human, creative-canon or capability promotion claim.
