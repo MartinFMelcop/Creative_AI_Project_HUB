@@ -1,8 +1,8 @@
 # Current initiative continuity
 
 **Updated:** 2026-10-21 UTC. **Product SEED version:** 0.33.20.
-**Mode:** RESEARCH. **Verified integration baseline:**
-`7da397fda7d08b7e5c3d50a0cb309f52442e79de`, branch `work`; fetched main matched HEAD,
+**Mode:** DEVELOPMENT. **Verified integration baseline:**
+`690796621f0f9e563382673717c931ad1691b90d`, branch `work`; fetched main matched HEAD,
 no divergence, and initial tracked/untracked tree was clean.
 
 This file owns active initiative continuity, not detailed gameplay contracts or an
@@ -91,10 +91,12 @@ window accepts keyboard/mouse events and presents interpolated confirmed positio
 resources, threats and terminal results remain server-owned. Focus loss suspends inputs,
 not the world, and missed releases recover without synthesizing presses. Server physics
 owns time, catalog resources and paid actions; clients submit bounded sequenced intents.
-Silence/disconnect neutralize actions without pausing or resetting the model.
+Silence/disconnect neutralize actions without pausing or resetting the model. Intent
+heartbeat is now bounded by monotonic time, independent of new snapshots; stale windows
+send only neutral while controls remain suspended. Arrival gap is not server-state age.
 
-**Verified scope:** [Current execution](../evidence/north-star-remote/RUN.json) binds
-retained authority controls, native intent/transport/visual controls, complete interactive
+**Verified scope:** [Current execution](../evidence/north-star-heartbeat/RUN.json) binds
+unchanged server authority and native intent/transport/visual controls, complete interactive
 source/PCK journeys, actual OS input/focus recovery and inspected world/terminal images.
 The [original authority execution](../evidence/north-star-authority/RUN.json) remains
 historical. Existing playable source, PCK, release and
@@ -105,7 +107,9 @@ now runs the actual fixed-input consumer through direct/transparent controls, bi
 retention and downstream batching. [Execution](../evidence/north-star-transport/RUN.json)
 retains all 16 source takes, two PCK integration takes, and an exploratory pilot with
 its own identities. Controls win; delayed/grouped outcomes expose policy and input-lease
-limits without changing costs. Two takes do not establish human thresholds or balance.
+limits without changing costs. A current targeted rerun retains eight source/two PCK
+takes: grouped lease clears fall from 42 to 1 including terminal grace, while grouped
+policies still lose. Two takes do not establish human thresholds or balance.
 
 **Missing/dependencies:** A shipped network player, prediction/reconciliation, multiple
 players, authentication, encrypted remote transport, persistence and reconnect
@@ -113,8 +117,9 @@ are absent. Loopback fixed policies establish neither player experience nor late
 capacity. Pinned Godot 4.6.3 is the executable experiment, not a production engine decision.
 
 **Next/continuation:** Compare a coherent abilities/build consumer and independent
-player comprehension against bounded input-heartbeat/freshness feedback, policy adaptation
-and demonstrated prediction/reconciliation needs. Arrival gaps do not measure server-state age.
+player comprehension against freshness feedback, policy adaptation and demonstrated
+prediction/reconciliation needs. Independent neutral heartbeat closes the cadence
+dependency; it does not complete experience or prediction requirements.
 Interactive input is now demonstrated; a larger network stack is not automatically valuable.
 Continue only to remove a consequential ownership/experience limit; redesign if the seam
 cannot preserve costs under measured transport behavior. Complete this foundation when

@@ -48,6 +48,13 @@ synthesizes a press. Brief action taps survive until an admissible send, with a 
 packet between rising edges and a bounded pending queue. Initial/server quarantine
 requires release before a fresh press; the footer explains this state.
 
+Intent sends use monotonic time, at most once per 50 ms, without waiting for another
+snapshot. Active sends require live updates. During stale intervals the window sends
+only an explicit all-neutral intent at the same bound; it never repeats the old held
+command or queues an action. Receipt bursts do not buy send credits. This keeps the
+input lease distinct from snapshot delivery while retaining action suspension. Neutral
+traffic during gaps is intentional; it grants no resource or prediction.
+
 Positions interpolate between confirmations over 50 ms, never beyond the latest
 position. Threat-phase changes, quarantine and terminal snap to confirmed geometry.
 Resources, threats and results are never predicted; there is no local Combat model.
@@ -92,20 +99,20 @@ nonblocking and closes a peer that cannot accept a complete message.
 
 Snapshots expose state/ack/tick/quarantine; final reports bind actual loaded resources.
 Session secrets are omitted from persisted observations. The headless policy client waits
-for
-an explicit reset-probe rejection even with duplicate terminal snapshots. The interactive
+for an explicit reset-probe rejection even with duplicate terminal snapshots. The interactive
 window instead retains the confirmed terminal result through actual socket closure.
 
 ## Evidence and limits
 
-[Current execution](../../../evidence/north-star-remote/RUN.json) binds the actual
+[Current execution](../../../evidence/north-star-heartbeat/RUN.json) binds the actual
 interactive consumer, native event journeys, OS input/focus controls and inspected
-images. [Original authority execution](../../../evidence/north-star-authority/RUN.json)
-remains historical. Adding view fields changed the server identity; active authority
+images. [Earlier interactive execution](../../../evidence/north-star-remote/RUN.json) and
+[original authority execution](../../../evidence/north-star-authority/RUN.json)
+remain historical. Adding view fields changed the server identity; active authority
 comparison uses the reexecuted current `north-star-remote/authority.json` above.
 
 ```bash
-python3 north-star/prototype/tools/verify_remote.py --output /tmp/remote.json --compare evidence/north-star-remote/results.json
+python3 north-star/prototype/tools/verify_remote.py --output /tmp/remote.json --compare evidence/north-star-heartbeat/remote.json
 python3 north-star/prototype/tools/verify_remote_input.py --output /tmp/remote-input
 ```
 

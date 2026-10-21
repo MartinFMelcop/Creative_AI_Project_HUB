@@ -1,0 +1,73 @@
+{
+  "artifacts": {
+    "evidence/north-star-heartbeat/REPORT.md": "ba109635ea51730d0cedd197d8a7ab9a0584decfa2b6007ca39b32d5cca4b3d8",
+    "evidence/north-star-heartbeat/keyboard.json": "129003bc7d83b8b62c832f1b0365378803d7fd8bd87a1dbd0924f318a3f92c7e",
+    "evidence/north-star-heartbeat/pack-transport.json": "79b2a3c365e60388af5dbce45cac3f191f90743b225ac2abc396c92ac5001f0f",
+    "evidence/north-star-heartbeat/remote.json": "93a61524fe050686bcf8309dbc9bd71b8631888d682e2e790c17d270582de661",
+    "evidence/north-star-heartbeat/source-closed.png": "6301a355146a93e2053131cf7ee7766a7c7bf1fb4bb36ba6f1e11077ef5ae9f2",
+    "evidence/north-star-heartbeat/source-suspended.png": "4e3b14ff465741ce8207695586e79b743c7ef74082a8b1b918451d7ff53c3361",
+    "evidence/north-star-heartbeat/source-walking.png": "a4b21e2d5a8b06b60ef8d15e8760f0be033e90a9951970c56998d14f1eba06b0",
+    "evidence/north-star-heartbeat/transport.json": "a582808707c2e8de2cb9515a5b3952cc8bfedc5f07bf3a42fb9cc3254e5014f3",
+    "north-star/prototype/authority/intent.gd": "1419479da2db30315ce1adaad967d406fc336c712e2ee86d3ff6d15468c91379",
+    "north-star/prototype/authority/intent_checks.gd": "1f6cf85015610e558089a0ce3f685c502de4d16d3db392bbebfd6d8dd6fc5b5d",
+    "north-star/prototype/authority/play.gd": "7a0169cd9b9bab04901ad840e6893eec6ad81193f53849995df435727851d9ce",
+    "north-star/prototype/authority/remote.gd": "1f8b48d29461f4fecdbae33cc7351a93203524c8e4c4fc0e6313992b6d85d9bf",
+    "north-star/prototype/authority/server.gd": "83c387e16b871b73ef2c38fa6653af0ac2925aa18536ee91ece108d712231969",
+    "north-star/prototype/authority/view.gd": "e64a37283827a1a15329872d14f9322f21a42b1dc8b688a3be02e46eecfb732c",
+    "north-star/prototype/combat.gd": "77aefc3f6130e114954a867f6404830180ca342c88e2396ec89a3784c2b3b0b3",
+    "north-star/prototype/data/fittings.json": "cf9ce26272dd4841e89f5de2bb679407f971ec04954bf753c15b4d768eba189d",
+    "north-star/prototype/dist/crossing-drill.pck": "352e47bca2482de7da6dd8818ebf5f3464a5585da93b10dd8a6c164ec70c17e2",
+    "north-star/prototype/fittings.gd": "836fa97cc7c6d81126bcddafc26daae72f5585ff61b70b55c83ea65aa70fc390",
+    "north-star/prototype/project.godot": "8d4755b58f1179a9b5ec431579177371e784bca9703a17c88f4c7a6d4ee9385c",
+    "north-star/prototype/route.gd": "2936029e1a52933fff0141b546f85fbc53a57b7e6c5301eaef5cabac06a05901",
+    "north-star/prototype/tests/policy.gd": "646f0758a211e84ffbfd4632460c7d1fc549cbb3b552801ee2508774a5a63e29",
+    "north-star/prototype/tests/remote_checks.gd": "f1b39404f95e6ce19efc848ccbc67c122d48537ebf5060fa8fe895a41e2eaed6",
+    "north-star/prototype/tests/remote_journey.gd": "000d5228868719092d87cd2fe3d7074731ca62a65ca975c8e52c3813f07e152f",
+    "north-star/prototype/tests/remote_visual_checks.gd": "8fb705b6331c65454468c5cda2ab227c53aa2d9c8a3477787ce9648492bd2c29",
+    "north-star/prototype/tools/check_heartbeat.py": "4abf4f399afb59bf91ce4e6d28a8ccaec59a248240ebf193c3e86c672049f5ec",
+    "north-star/prototype/tools/test_check_heartbeat.py": "248aeb904a93b0902559e93a1c1b99293d6717aa48879832698b3d2ba5d51d53",
+    "north-star/prototype/tools/verify_remote.py": "6e83351a61ed69995a5de318e57630351d720d7ec14a6fde2ff72072e005e1b8",
+    "north-star/prototype/tools/verify_remote_input.py": "4235c12f4538e839ac743f814a522655a09027632ed2fcf6705f489cbb6f3f93"
+  },
+  "baseline": "690796621f0f9e563382673717c931ad1691b90d",
+  "checks": {
+    "grouped_lease_gate_takes": 6,
+    "lease_evidence_regressions": 5,
+    "native_per_delivery": {
+      "intent": 44,
+      "transport": 82,
+      "visual": 6
+    },
+    "normal_remote_living_wins": 4,
+    "os_window_controls": 24,
+    "pack_grouped_takes": 2,
+    "pre_fix_observations_rejected_by_lease_rule": true,
+    "result_boundary_tests": 3,
+    "source_transport_takes": 8,
+    "tcp_instrument_tests": 10
+  },
+  "commands": [
+    "python3 north-star/prototype/tools/verify_remote.py --output /workspace/work/heartbeat/remote.json",
+    "python3 north-star/prototype/tools/verify_remote_input.py --output /workspace/work/heartbeat/window",
+    "python3 north-star/prototype/tools/evaluate_transport.py --profiles direct batch_400 --repetitions 2 --output /workspace/work/heartbeat/transport.json",
+    "python3 north-star/prototype/tools/evaluate_transport.py --profiles batch_400 --repetitions 1 --packed --output /workspace/work/heartbeat/pack-transport.json",
+    "python3 north-star/prototype/tools/check_heartbeat.py /workspace/work/heartbeat/transport.json",
+    "python3 north-star/prototype/tools/check_heartbeat.py /workspace/work/heartbeat/pack-transport.json",
+    "python3 north-star/prototype/tools/test_impairment.py",
+    "python3 north-star/prototype/tools/test_evaluate_transport.py",
+    "python3 north-star/prototype/tools/test_check_heartbeat.py"
+  ],
+  "date": "2026-10-21",
+  "inspected_images": [
+    "source-walking.png",
+    "source-suspended.png",
+    "source-closed.png"
+  ],
+  "kind": "architecture_execution",
+  "limits": "Bounded independent heartbeat and explicit neutral stale traffic; no action after stale threshold, prediction, human, WAN/RTT/capacity, gameplay/package change, new lab or capability-state claim.",
+  "negative_control": "check_heartbeat.check_rows on actual evidence/north-star-transport/results.json rejects repeated lease expiry. This row-level negative does not accept historical source identities as current.",
+  "observations": "Grouped current takes have one total clear per take vs historical42; totals include terminal grace. All grouped policies still lose. Normal journeys retain health5/cargo3. The60ms condition was not rerun.",
+  "provenance": "Successful scratch outputs copied byte-for-byte; all consumer inputs match final code. Previous research/remote executions remain historical.",
+  "runtime": "4.6.3.stable.official.7d41c59c4",
+  "schema_version": 1
+}

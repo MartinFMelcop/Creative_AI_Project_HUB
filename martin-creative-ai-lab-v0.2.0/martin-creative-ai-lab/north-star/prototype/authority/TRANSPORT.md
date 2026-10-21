@@ -90,3 +90,14 @@ capacity, WAN reliability, security, production engine or MMO readiness. A polic
 failure alone does not justify prediction, rebalancing, extra invulnerability or a
 relaxed stale-input gate. Compare policy/interaction changes and independent observers
 against production needs before broadening conditions.
+
+## Controller continuation
+
+The [independent heartbeat execution](../../../evidence/north-star-heartbeat/RUN.json)
+now reruns a targeted direct/grouped slice with current controller identities. The
+original 16-take study above remains historical. The new client renews intents on a
+monotonic bound and sends only neutral during stale intervals; actions remain blocked.
+The targeted slice does not replace the earlier 60 ms observations with current claims.
+Use `python3 north-star/prototype/tools/check_heartbeat.py RESULT.json` after a study containing grouped takes for
+both roles to verify current identities, complete cases, actual stale exposure and
+the bounded lease condition. Losses remain valid.

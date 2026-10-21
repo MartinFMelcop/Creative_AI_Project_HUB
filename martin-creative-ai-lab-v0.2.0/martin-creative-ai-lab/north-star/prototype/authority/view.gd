@@ -18,7 +18,6 @@ var style:="Steady"
 var outfit:=0
 var started:=false
 var focused:=true
-var clock:=0.0
 var previous_status:=""
 var font=ThemeDB.fallback_font
 var captures:=0
@@ -60,16 +59,16 @@ func _process(delta:float) -> void:
 	remote.poll(delta)
 	if remote.status=="stale" and previous_status!="stale":suspend_controls()
 	previous_status=remote.status
-	clock+=delta
-	if clock>=.05:
-		clock=0
-		if remote.can_send():
-			var direction:Vector2=get_global_mouse_position()-remote.position
-			# Release a server quarantine before consuming a queued local press.
-			if remote.latest.quarantined:
-				if not controls.suspended:controls.resume()
-				remote.send_intent({})
-			else:remote.send_intent(controls.command(direction.normalized()))
+	if remote.status=="stale":
+		# Keep an explicitly neutral lease alive, never repeat pre-gap controls.
+		remote.send_neutral()
+	elif remote.can_send():
+		var direction:Vector2=get_global_mouse_position()-remote.position
+		# Release server quarantine before consuming a queued local press.
+		if remote.latest.quarantined:
+			if not controls.suspended:controls.resume()
+			remote.send_neutral()
+		else:remote.send_intent(controls.command(direction.normalized()))
 	queue_redraw()
 func reconcile_releases() -> void:
 	# Focus can hide release events. Only remove absent controls; never synthesize
@@ -116,7 +115,7 @@ func _draw() -> void:
 		text(Vector2(650,118),"Confirmed  %.1fs"%(state.tick/60.0),19)
 		text(Vector2(650,147),"Counters %d / 3"%state.counters.counters,17)
 		text(Vector2(888,118),remote.status.to_upper(),20,TEAL if remote.status=="live" else AMBER)
-		text(Vector2(888,147),"Snapshot age %.2fs"%remote.age,16)
+		text(Vector2(888,147),"Arrival gap %.2fs"%remote.age,16)
 		var info:String=state.message
 		text(Vector2(55,676),info.left(114),17,AMBER)
 		text(Vector2(55,710),"WASD / arrows move    Mouse aims    K / right mouse guard    J draw    Space step    L / left mouse counter",16)

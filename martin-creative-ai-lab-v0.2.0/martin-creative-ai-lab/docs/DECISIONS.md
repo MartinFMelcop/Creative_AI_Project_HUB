@@ -2762,3 +2762,40 @@ SCI-017 informs direct/instrument controls, blocked repetition and preserved neg
 CRE-005 preserves actual paid consequences. Protected sources/pins unchanged. No human,
 WAN/RTT/capacity, security, creative-canon, production-engine, multiplayer product, new lab
 or capability promotion claim. Existing playable sources/PCK/Linux0.5.0 remain unchanged.
+
+## ADR-098 — separate bounded input heartbeat from snapshot delivery
+
+**Date:** 2026-10-21 UTC. **Status:** implemented DEVELOPMENT.
+**Baseline:** clean `work`, `690796621f0f9e563382673717c931ad1691b90d`; fetched main matched.
+Prior Lab checks completed successfully, verified separately from publication.
+
+**Selection:** Compare abilities/builds, independent player observation, additional
+research and prediction work. The executed transport study exposed a concrete cadence
+dependency: grouping snapshots throttled input renewals and repeatedly expired held-input
+leases. Implement a bounded consumer correction before expanding a network architecture;
+no new governance, engine decision or laboratory is justified by this finding.
+
+**Behavior:** Monotonic time limits sends to one per 50 ms, independent of confirmation
+ticks. There are no accumulated catch-up credits. Active input still requires live
+updates. Stale windows clear local actions and use a separate literal-neutral send;
+the shared transmit path also rejects active dictionaries during stale state. Focus,
+explicit resume/release, terminal retention, server-owned time/sequence/rate/resources
+and the 250 ms stale-action threshold remain. The HUD labels arrival gap precisely.
+Neutral traffic during gaps is additional bounded traffic, not a performance gain.
+
+**Verification:** [Execution](../evidence/north-star-heartbeat/RUN.json) binds 44 intent,
+82 transport and 6 visual controls per source/PCK delivery, four ordinary living wins,
+24 actual OS window controls, eight targeted source takes and two grouped PCK takes.
+Historical grouped observations fail the new lease rule; six current grouped takes pass
+with one total clear, versus 42 before. Counts include terminal grace. All grouped fixed
+policies still lose, so this closes a temporal contract without claiming delay playability.
+The 60 ms condition was not rerun. Ten TCP/mutant, three evidence-boundary and five
+lease-evidence regression tests pass.
+Agent inspected images for arrival-gap wording and visible world during suspension.
+
+**Knowledge/limits:** ENG-015 informs temporal ownership, ENG-022 deliberate recovery,
+SCI-017 targeted controls and preserved losses, CRE-005 unchanged paid consequences.
+Protected sources/pins, gameplay, PCK/Linux0.5.0 and capability states remain unchanged.
+No human validation, prediction/reconciliation, WAN/RTT/capacity, authentication,
+multiplayer product, creative canon or production-engine claim. Compare builds and
+independent observation with demonstrated freshness/interaction needs before continuing.

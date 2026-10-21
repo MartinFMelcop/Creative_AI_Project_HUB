@@ -20,7 +20,7 @@ var snapshots := 0
 var deadline := 0
 var hello: Dictionary = {}
 var hello_sent := false
-var last_sent_tick := -3
+var next_send_ms := 0
 var from_player := Vector2.ZERO
 var to_player := Vector2.ZERO
 var from_courier := Vector2.ZERO
@@ -57,7 +57,7 @@ func close() -> void:
 func connect_session(port: int, role: String="Guardian", style: String="Steady", outfit: String="standard") -> bool:
 	close()
 	latest.clear(); confirmed.clear(); session=""; sequence=0; age=0; rejected=0; snapshots=0
-	position=Vector2.ZERO; courier_position=Vector2.ZERO; last_sent_tick=-3; hello_sent=false
+	position=Vector2.ZERO; courier_position=Vector2.ZERO; next_send_ms=0; hello_sent=false
 	if port<1024 or port>65535 or role not in ["Guardian", "Duelist"] or style not in (["Steady", "Riposte"] if role=="Guardian" else ["none"]) or outfit.is_empty() or outfit.length()>64:
 		status="error"; reason="Invalid session choice."; return false
 	hello={"v":1,"kind":"hello","role":role,"style":style,"outfit":outfit}
@@ -77,10 +77,22 @@ func write(data: Dictionary) -> bool:
 	return true
 
 func can_send() -> bool:
-	return status=="live" and not session.is_empty() and not latest.is_empty() and int(latest.tick)-last_sent_tick>=3
+	return status=="live" and can_send_neutral()
+
+func can_send_neutral() -> bool:
+	return status in ["live","stale"] and not session.is_empty() and not latest.is_empty() and Time.get_ticks_msec()>=next_send_ms
+
+func send_neutral() -> bool:
+	# The stale path cannot accept caller-supplied movement or paid actions.
+	if not can_send_neutral(): return false
+	return _transmit({})
 
 func send_intent(input: Dictionary) -> bool:
 	if not can_send(): return false
+	return _transmit(input)
+
+func _transmit(input: Dictionary) -> bool:
+	if not can_send_neutral() or (status=="stale" and not input.is_empty()): return false
 	var move=input.get("move",Vector2.ZERO)
 	var aim=input.get("aim",Vector2.ZERO)
 	if not move is Vector2 or not aim is Vector2 or not move.is_finite() or not aim.is_finite(): return false
@@ -91,7 +103,7 @@ func send_intent(input: Dictionary) -> bool:
 		"move":[roundi(move.x*1000),roundi(move.y*1000)],"aim":[roundi(aim.x*1000),roundi(aim.y*1000)],
 		"guard":input.get("guard",false),"feint":input.get("feint",false),"step":input.get("step",false),"strike":input.get("strike",false)}
 	if not write(intent): return false
-	last_sent_tick=int(latest.tick); sequence+=1
+	next_send_ms=Time.get_ticks_msec()+50; sequence+=1
 	return true
 
 static func finite_number(value, low: float, high: float) -> bool:
