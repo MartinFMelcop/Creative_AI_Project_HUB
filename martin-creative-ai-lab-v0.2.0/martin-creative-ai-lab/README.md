@@ -12,7 +12,7 @@ merits. The outer `martin-creative-ai-lab-v0.2.0/` name is historical packaging;
 
 Play the [North Star crossing prototype](north-star/prototype/README.md), or
 inspect its [living design](north-star/DESIGN.md) and
-[executed evidence](evidence/north-star-gamepad/RUN.json). Session-only single-press guard/interaction remove sustained-key requirements
+[executed evidence](evidence/north-star-fittings/RUN.json). Session-only single-press guard/interaction remove sustained-key requirements
 without changing combat costs or saving active intentions. Origin demonstrations and
 the preserved lab remain distinct from this actual local consumer. Optional rehearsal
 uses its real rules with retained contact explanations and clean retries. Normal
@@ -146,14 +146,19 @@ after genuine arrival recalls actual crossing facts and commits one finite aid c
 into the return objective. P10's gated-choice/fact-owned-response method is adapted in
 new native code; no original setting or shared narrative kernel is imported.
 
-The optional [North Star Linux player](north-star/prototype/dist/crossing-drill-linux-0.2.0.zip)
+The optional [North Star Linux player](north-star/prototype/dist/crossing-drill-linux-0.3.0.zip)
 bundles the pinned official runtime, notices and current adventure. Its
 [delivery guide](north-star/prototype/README.md#play) and
-[execution evidence](evidence/north-star-gamepad/RUN.json) distinguish actual
+[execution evidence](evidence/north-star-fittings/RUN.json) distinguish actual
 release/default-window behavior from editor checks and independent human validation.
 
 
 The North Star consumer now supports [mapped gamepad input](north-star/prototype/README.md#mapped-gamepad-experimental)
 through preparation, appearance, conversation and both adventure goals. Source/PCK/Linux
 0.2.0 execute injected mapped events; no physical-pad or human access claim is made.
-[Current evidence](evidence/north-star-gamepad/RUN.json) preserves origin/capability states.
+[Current evidence](evidence/north-star-fittings/RUN.json) preserves origin/capability states.
+
+North Star now has a bounded [equipment authoring workflow](north-star/prototype/data/README.md)
+that stages and executes candidate JSON without editing the consumer. The shipped
+workshop adds a health/recovery trade-off; [evidence](evidence/north-star-fittings/RUN.json)
+separates functioning production and gameplay from absent human balance validation.

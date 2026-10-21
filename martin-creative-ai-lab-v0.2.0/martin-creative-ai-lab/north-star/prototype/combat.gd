@@ -2,6 +2,10 @@ extends RefCounted
 ## A local experimental model, consumed by both the playable scene and native checks.
 ## Paid commitment and facing checks adapt P06's action/contact method; no P06 fiction.
 const Route = preload("res://route.gd")
+const Fittings = preload("res://fittings.gd")
+var fittings := {}
+var content_errors: Array = []
+var recovery_rate := 18.0
 var route = Route.new()
 var stationary_relay := false
 const FIELD := Rect2(50, 185, 1052, 460)
@@ -44,7 +48,13 @@ var last_impact: Dictionary = {}
 var events: Array[Dictionary] = []
 var counters := {"blocks":0,"redirects":0,"dodges":0,"counters":0,"courier_hits":0,"player_hits":0,"rejected":0}
 
+func _init(path: String=Fittings.PATH) -> void:
+	var content := Fittings.load_catalog(path)
+	fittings=content.items;content_errors=content.errors
+	if not content.ok: mode="content_error"
+
 func reset(kind: String, style: String="Steady") -> void:
+	if not content_errors.is_empty(): mode="content_error"; return
 	role = kind
 	route=Route.new()
 	stationary_relay=false
@@ -54,7 +64,7 @@ func reset(kind: String, style: String="Steady") -> void:
 	courier = Vector2(160,390)
 	facing = Vector2.RIGHT
 	locked_face = facing
-	outfit="standard";outfit_fitted=false;health_limit=5;movement_scale=1.0
+	outfit="standard";outfit_fitted=false;health_limit=5;movement_scale=1.0;recovery_rate=18.0
 	hp = 5
 	cargo = 3
 	enemy_focus = SENTINEL_FOCUS
@@ -85,10 +95,11 @@ func signal_route(next: String) -> bool:
 
 func fit_outfit(id: String) -> bool:
 	# Only a clean normal start can accept equipment; never heal or swap during play.
-	if outfit_fitted or mode!="play" or elapsed!=0.0 or id not in ["standard","riveted","trail"]:return false
+	if outfit_fitted or mode!="play" or elapsed!=0.0 or not fittings.has(id):return false
 	outfit=id;outfit_fitted=true
-	health_limit=6 if id=="riveted" else (4 if id=="trail" else 5)
-	movement_scale=0.8 if id=="riveted" else (1.2 if id=="trail" else 1.0)
+	health_limit=int(fittings[id].health)
+	movement_scale=float(fittings[id].movement)
+	recovery_rate=float(fittings[id].recovery)
 	hp=health_limit
 	return true
 
@@ -164,7 +175,7 @@ func step(delta: float, input: Dictionary) -> void:
 		if energy<=0:
 			guard=false
 			note("Posture spent. Release K and reposition to recover.")
-	else: energy=minf(100,energy+dt*18)
+	else: energy=minf(100,energy+dt*recovery_rate)
 	if bool(input.get("skill_pressed",false)) and role=="Duelist":
 		if phase=="bolt" and not redirected and feint_cooldown<=0 and energy>=16 and player.distance_to(ENEMY)<=340:
 			energy-=16
@@ -308,6 +319,7 @@ func resolve_threat() -> void:
 func snapshot() -> Dictionary:
 	var result={"role":role,"guard_style":guard_style,"enemy_focus":enemy_focus,"courier_speed":courier_speed(),"mode":mode,"tick":roundi(elapsed*60),"hp":hp,"cargo":cargo,"energy":snappedf(energy,0.001),"courier_x":snappedf(courier.x,0.001),"counters":counters.duplicate(),"events":events.duplicate(true)}
 	if outfit!="standard":result.outfit={"id":outfit,"health_limit":health_limit,"movement_scale":movement_scale}
+	if recovery_rate!=18.0:result.outfit.recovery_rate=recovery_rate
 	if route.kind=="ridge":result.route=route.snapshot();result.courier_y=snappedf(courier.y,0.001)
 	if stationary_relay:result.objective="return_gate"
 	return result

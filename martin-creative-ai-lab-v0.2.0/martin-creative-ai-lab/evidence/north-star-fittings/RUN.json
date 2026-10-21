@@ -1,0 +1,497 @@
+{
+  "schema_version": 1,
+  "kind": "destination_execution",
+  "baseline_commit": "953faac7587dba96ace1069327c51fbe663a62f1",
+  "mode": "DEVELOPMENT",
+  "capability_ids": [
+    "NS-C03",
+    "NS-C04",
+    "NS-C07"
+  ],
+  "consumer_paths": [
+    "north-star/prototype/arena.gd",
+    "north-star/prototype/combat.gd",
+    "north-star/prototype/rehearsal.gd",
+    "north-star/prototype/keepsakes.gd",
+    "north-star/prototype/errand.gd",
+    "north-star/prototype/controls.gd",
+    "north-star/prototype/sound.gd",
+    "north-star/prototype/actors.gd",
+    "north-star/prototype/workshop.gd",
+    "north-star/prototype/route.gd",
+    "north-star/prototype/return_gate.gd",
+    "north-star/prototype/character_look.gd",
+    "north-star/prototype/courier_talk.gd",
+    "north-star/prototype/gamepad.gd",
+    "north-star/prototype/fittings.gd"
+  ],
+  "runtime": "Godot 4.6.3.stable.official.7d41c59c4 source/PCK and pinned official Linux x86_64 release; Python stdlib; owned Xorg dummy, synthetic XTest keys and software OpenGL",
+  "scope": "One real connected adventure consumes authored equipment data. Eight approach/fitting combinations execute escort and return in source/PCK/release; a staged new ID and values and a separate rebuild execute the same real consumers. No product-stage or capability-state promotion.",
+  "checks": {
+    "failed": 0,
+    "passed": 119
+  },
+  "python_tests": {
+    "passed": 43,
+    "failed": 0
+  },
+  "prior_behavior": {
+    "native_controls": 358,
+    "six_legacy_fitting_routes_equal": true,
+    "all_regression_observations_equal_except_explicit_source_identities": true
+  },
+  "new_mechanical_control": {
+    "initial_energy": 24,
+    "unguarded_seconds": 0.05,
+    "standard_step_accepted": false,
+    "field_sash_step_accepted": true,
+    "health_cost": 1
+  },
+  "independent_rebuild": {
+    "fitting_observations_equal": true,
+    "archive_sha256": "7d2727e6dd00b0f5b9e9123266ac45243ac5d3a8de3866f90d60b60558e904bd",
+    "archive_size_bytes": 27274663,
+    "byte_identical_export_not_required": true
+  },
+  "brain_contributions": {
+    "ENG-015": "One validated data contract for actual consumers, without a generic subsystem.",
+    "SCI-017": "Matched published baseline, invalid-content and actual-runtime controls.",
+    "CRE-022/023": "Hypotheses for bounded reversible trade-offs without profession grind or canon approval."
+  },
+  "observed_corrections": [
+    "First native render found unsupported string formatting that headless checks did not exercise; fixed and native input rerun.",
+    "Moved the workshop player label after image inspection; final source/PCK keyboard verification passed."
+  ],
+  "limitations": [
+    "Fixed policies and synthetic keys are not human balance, enjoyment, accessibility or physical-controller validation.",
+    "Current room accepts at most three benches and known stat/visual axes, not arbitrary effects, persistent gear, professions or complete class/build authoring.",
+    "Only local source/PCK and Linux x86_64 execution; no production MMO engine, server, networking or final creative canon is selected.",
+    "A mechanically valid candidate failing a fixed policy requires investigation; that alone is not a universal impossibility or balance conclusion."
+  ],
+  "commands": [
+    {
+      "command": [
+        "python3",
+        "north-star/prototype/tools/verify.py",
+        "--output",
+        "evidence/north-star-fittings/regressions.json"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "python3",
+        "north-star/prototype/tools/verify_workshop.py",
+        "--output",
+        "evidence/north-star-fittings/workshop.json"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "python3",
+        "north-star/prototype/tools/verify_routes.py",
+        "--output",
+        "evidence/north-star-fittings/routes.json"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "python3",
+        "north-star/prototype/tools/verify_gate.py",
+        "--baseline",
+        "/workspace/work/fittings/prior-gate.pck",
+        "--output",
+        "evidence/north-star-fittings/gate.json"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "python3",
+        "north-star/prototype/tools/verify_look.py",
+        "--output",
+        "evidence/north-star-fittings/look.json"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "python3",
+        "north-star/prototype/tools/verify_conversation.py",
+        "--output",
+        "evidence/north-star-fittings/conversation.json"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "python3",
+        "north-star/prototype/tools/verify_appearance.py",
+        "--output",
+        "evidence/north-star-fittings/appearance.json"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "python3",
+        "north-star/prototype/tools/verify_linux.py",
+        "--output",
+        "evidence/north-star-fittings/results.json"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "python3",
+        "north-star/prototype/tools/verify_gamepad.py",
+        "--archive",
+        "north-star/prototype/dist/crossing-drill-linux-0.3.0.zip",
+        "--output",
+        "evidence/north-star-fittings/gamepad.json"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "python3",
+        "north-star/prototype/tools/verify_sound.py",
+        "--output",
+        "evidence/north-star-fittings/sound.json"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "python3",
+        "north-star/prototype/tools/fittings.py",
+        "verify",
+        "--output",
+        "evidence/north-star-fittings/fittings.json"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "python3",
+        "north-star/prototype/tools/fittings.py",
+        "check",
+        "--catalog",
+        "evidence/north-star-fittings/authored-example.json",
+        "--output",
+        "evidence/north-star-fittings/authored.json"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "python3",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "north-star/prototype/tools",
+        "-p",
+        "test_*.py"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "python3",
+        "north-star/prototype/tools/verify_workshop_input.py",
+        "--output",
+        "/workspace/work/fittings/native-published"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "python3",
+        "north-star/prototype/tools/fittings.py",
+        "verify",
+        "--archive",
+        "/workspace/work/fittings/rebuilt-linux.zip",
+        "--output",
+        "/workspace/work/fittings/rebuilt-fittings.json"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "python3",
+        "north-star/prototype/tools/verify_linux.py",
+        "--archive",
+        "/workspace/work/fittings/rebuilt-linux.zip",
+        "--output",
+        "/workspace/work/fittings/rebuilt-player.json"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "python3",
+        "north-star/prototype/tools/export_linux.py",
+        "--template",
+        "/workspace/work/fittings/linux_release.x86_64"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "python3",
+        "north-star/prototype/tools/export_linux.py",
+        "--template",
+        "/workspace/work/fittings/linux_release.x86_64",
+        "--output",
+        "/workspace/work/fittings/rebuilt-linux.zip"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "/workspace/work/fittings/actionlint/actionlint",
+        "-color",
+        ".github/workflows/lab-checks.yml"
+      ],
+      "exit_code": 0
+    }
+  ],
+  "source_artifacts": [
+    {
+      "local_path": "evidence/north-star-fittings/authored-example.json",
+      "size_bytes": 856,
+      "sha256": "4d5c98558529312aa109a1ed2c281341a86594fe1e214c6e606903342fea2db6"
+    },
+    {
+      "local_path": "north-star/prototype/PLAYER_README.txt",
+      "size_bytes": 3751,
+      "sha256": "9f58f3eb4259ef7f125ae610b4bc0b3499c7330645b9cf0d674e2e2a922abe1a"
+    },
+    {
+      "local_path": "north-star/prototype/actors.gd",
+      "size_bytes": 11443,
+      "sha256": "c1cb826fa57e50267323e6d74787d5aa4e59f8e58710f60ec632a6b275f19217"
+    },
+    {
+      "local_path": "north-star/prototype/arena.gd",
+      "size_bytes": 56258,
+      "sha256": "ca4edc823d8f1f9615afa9dba3949521b79afe1700f9162a3f9710059ce55c98"
+    },
+    {
+      "local_path": "north-star/prototype/character_look.gd",
+      "size_bytes": 3318,
+      "sha256": "494e90189ffbddc383c829d5d5ff9ad4cf10a0c496e52374e3a2adba3ef11e48"
+    },
+    {
+      "local_path": "north-star/prototype/combat.gd",
+      "size_bytes": 15170,
+      "sha256": "77aefc3f6130e114954a867f6404830180ca342c88e2396ec89a3784c2b3b0b3"
+    },
+    {
+      "local_path": "north-star/prototype/controls.gd",
+      "size_bytes": 9867,
+      "sha256": "151bb8867ba735c3b0b2a0048d312472dfe32359d2409825fa4817cbd0a9e9b8"
+    },
+    {
+      "local_path": "north-star/prototype/courier_talk.gd",
+      "size_bytes": 3899,
+      "sha256": "986c26d0cba960fcf4e678035b6893dd5a106d49214c9ba9f67ca7f22caf5d56"
+    },
+    {
+      "local_path": "north-star/prototype/data/fittings.json",
+      "size_bytes": 592,
+      "sha256": "cf9ce26272dd4841e89f5de2bb679407f971ec04954bf753c15b4d768eba189d"
+    },
+    {
+      "local_path": "north-star/prototype/errand.gd",
+      "size_bytes": 3831,
+      "sha256": "2a2392fa86bd12544eba5f60ad74d35592c7d6fa207373ec11a1928a9e33e601"
+    },
+    {
+      "local_path": "north-star/prototype/export_presets.cfg",
+      "size_bytes": 494,
+      "sha256": "721bb96c245e5cbc5f1716dc231e5cace448db3ed066e4db80bd4fc1f495c3a4"
+    },
+    {
+      "local_path": "north-star/prototype/fittings.gd",
+      "size_bytes": 4472,
+      "sha256": "836fa97cc7c6d81126bcddafc26daae72f5585ff61b70b55c83ea65aa70fc390"
+    },
+    {
+      "local_path": "north-star/prototype/gamepad.gd",
+      "size_bytes": 3734,
+      "sha256": "2f944aa12cbb78d5f5ed60e393397706ecd4642debc7c96c6d3dd325e8b0aa0a"
+    },
+    {
+      "local_path": "north-star/prototype/keepsakes.gd",
+      "size_bytes": 7306,
+      "sha256": "1e1779136f6b7d21568fe72f670285f4bce6a8264172fd102f1b49421fcf8236"
+    },
+    {
+      "local_path": "north-star/prototype/rehearsal.gd",
+      "size_bytes": 3187,
+      "sha256": "507a27b7832cfc79522396132a0a5f3f32fec34dd443a8a35fc21102080252c9"
+    },
+    {
+      "local_path": "north-star/prototype/return_gate.gd",
+      "size_bytes": 4109,
+      "sha256": "817e88308bbf878569a7c7a76ae83e38623f9398c7f6416c0ba3a1cd522fa3bc"
+    },
+    {
+      "local_path": "north-star/prototype/route.gd",
+      "size_bytes": 2304,
+      "sha256": "2936029e1a52933fff0141b546f85fbc53a57b7e6c5301eaef5cabac06a05901"
+    },
+    {
+      "local_path": "north-star/prototype/sound.gd",
+      "size_bytes": 4116,
+      "sha256": "4404169ebb2d1711f20e6023292712bb2051f4075c4039d9e2db725b4b8fa80a"
+    },
+    {
+      "local_path": "north-star/prototype/tests/fittings_driver.gd",
+      "size_bytes": 6032,
+      "sha256": "1243ec7aa305a0c9869218f67ae50ee7f09e35fe7ac29a056ae6d5389208bdc2"
+    },
+    {
+      "local_path": "north-star/prototype/tests/fittings_probe.gd",
+      "size_bytes": 554,
+      "sha256": "dc98f82b5f4ee5851d0d49c5c411fdcf84b6be1c600c1f8460e3d5678569b5e4"
+    },
+    {
+      "local_path": "north-star/prototype/tools/export_linux.py",
+      "size_bytes": 6542,
+      "sha256": "277a3788f9820e5c419376fd3e45cf056a194426e4d9208f493f528d827ce347"
+    },
+    {
+      "local_path": "north-star/prototype/tools/fittings.py",
+      "size_bytes": 7655,
+      "sha256": "696ca6cd6f3fc466ca0b1e13a18468545d8a2c288dc5cf4cbcf7deecab0176ce"
+    },
+    {
+      "local_path": "north-star/prototype/tools/pack.gd",
+      "size_bytes": 1652,
+      "sha256": "63e0c50ee98f46cad368f932bc711fa838a48c54fba88d17615089d842e5926f"
+    },
+    {
+      "local_path": "north-star/prototype/tools/test_check_linux.py",
+      "size_bytes": 4918,
+      "sha256": "52cf3ec081e7d0234fb77617fe4e744021af0f2a5d0a8656482ec22d2dd9ff01"
+    },
+    {
+      "local_path": "north-star/prototype/tools/test_fittings.py",
+      "size_bytes": 5794,
+      "sha256": "6cc677c5cc970b98e5a642866a315bc53f949aeda3125157a452bde86ecbf623"
+    },
+    {
+      "local_path": "north-star/prototype/tools/verify_workshop_input.py",
+      "size_bytes": 8102,
+      "sha256": "3d7dcf694caffe37a310ac25e9d7c81ddd36f87975bbb62ba8a93b702aeb52ef"
+    },
+    {
+      "local_path": "north-star/prototype/workshop.gd",
+      "size_bytes": 2781,
+      "sha256": "3214b628f79a7250a5fab9f42110182b13b19f8fd9e412273c21fff8a96eec4f"
+    }
+  ],
+  "result_artifacts": [
+    {
+      "local_path": "evidence/north-star-fittings/appearance.json",
+      "size_bytes": 10156,
+      "sha256": "3b0bb4985068444f30d3edd6bf2baf948805fe313034c8312380e01d40a31bea"
+    },
+    {
+      "local_path": "evidence/north-star-fittings/authored.json",
+      "size_bytes": 38042,
+      "sha256": "6076efcee717f0651e622c5bd03af06808d678d2c8babf56fea6566d3af71e75"
+    },
+    {
+      "local_path": "evidence/north-star-fittings/conversation.json",
+      "size_bytes": 6113,
+      "sha256": "bf199b9abbbb6560857fd8081e5bf9bfa75d5eede2248206388514ebeb259156"
+    },
+    {
+      "local_path": "evidence/north-star-fittings/fittings.json",
+      "size_bytes": 38058,
+      "sha256": "fd2807f7d08433499c424d591e7e6559a3961bec1632bfa15786990261072838"
+    },
+    {
+      "local_path": "evidence/north-star-fittings/gamepad.json",
+      "size_bytes": 13484,
+      "sha256": "ac5da717e02f530fe48eb12bde49f679b9c23bc36b862b8e700ee4916b0247ad"
+    },
+    {
+      "local_path": "evidence/north-star-fittings/gate.before_after.json",
+      "size_bytes": 707,
+      "sha256": "4e60747f2fd3d09674217e72da307e1f7b4e4a77c93bc2d4ba17f7860dafc897"
+    },
+    {
+      "local_path": "evidence/north-star-fittings/gate.json",
+      "size_bytes": 2726,
+      "sha256": "90c4e410fa9cf06a13b2a3ae04e210ed44e77b9abe654663c39ff2e0c8e00c51"
+    },
+    {
+      "local_path": "evidence/north-star-fittings/keyboard.json",
+      "size_bytes": 13451,
+      "sha256": "46a8bc3f182ac1280f5587d816fb64fe11686b5e3ae889758b7cd46064cb22ed"
+    },
+    {
+      "local_path": "evidence/north-star-fittings/look.json",
+      "size_bytes": 1639,
+      "sha256": "043865877d57c144aef93adc1f98871a1e62d70e75f87f90a561cd680609c69a"
+    },
+    {
+      "local_path": "evidence/north-star-fittings/regressions.json",
+      "size_bytes": 108031,
+      "sha256": "810feb5739319941dba01882126f31c34b7aa3329b7a3161fa39b785feeaaa76"
+    },
+    {
+      "local_path": "evidence/north-star-fittings/results.json",
+      "size_bytes": 31677,
+      "sha256": "8585695aef45554227b5c0baa1af894fbfd778d89edb61ee8d6ded748ae8ac4c"
+    },
+    {
+      "local_path": "evidence/north-star-fittings/routes.json",
+      "size_bytes": 1659,
+      "sha256": "3029cab2f167ca25396a0dd993ed4c40e5a1ff363b38a2cbdd6fcf6c0a0a588b"
+    },
+    {
+      "local_path": "evidence/north-star-fittings/sash-crossing.png",
+      "size_bytes": 82272,
+      "sha256": "25b6f82fbfd65393747f58d51f73bdc466e92452128498b1f3b88270630a04ed"
+    },
+    {
+      "local_path": "evidence/north-star-fittings/sound.json",
+      "size_bytes": 34790,
+      "sha256": "d841108e9083bce60890203d91a60c099ff1c18b73aa5abd06eee3b2c514983b"
+    },
+    {
+      "local_path": "evidence/north-star-fittings/workshop.json",
+      "size_bytes": 1701,
+      "sha256": "e139f422c2f1bd3153bed30c4df65689fd197bb3641e747c7af5fab1cca2670e"
+    },
+    {
+      "local_path": "evidence/north-star-fittings/workshop.png",
+      "size_bytes": 95078,
+      "sha256": "b68f2c20237f20ac63f92973aa272d3495704a9a2b4f912076950ca4a2021dfd"
+    },
+    {
+      "local_path": "north-star/prototype/dist/crossing-drill-linux-0.3.0.zip",
+      "size_bytes": 27274670,
+      "sha256": "b326601652cdab1392b1d431218a45a5b01f984f4656c87199dc0311e20bd599"
+    },
+    {
+      "local_path": "north-star/prototype/dist/crossing-drill-linux-0.3.0.zip.sha256",
+      "size_bytes": 97,
+      "sha256": "171ff0fa0adfcf19fcf82a466a137b3e59e64281015a03f5612dbcbfd4b88669"
+    },
+    {
+      "local_path": "north-star/prototype/dist/crossing-drill.pck",
+      "size_bytes": 330644,
+      "sha256": "6c3dd34e7f7cd63c12980a858df5369feff921941ffcc3c032f86b2ffa762102"
+    }
+  ],
+  "workflow_validation": "Official actionlint 1.7.7, downloaded archive checksum verified; no workflow diagnostics."
+}

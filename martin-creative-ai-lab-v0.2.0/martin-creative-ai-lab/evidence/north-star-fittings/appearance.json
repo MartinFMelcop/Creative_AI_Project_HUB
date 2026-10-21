@@ -1,0 +1,490 @@
+{
+  "actual_journey": {
+    "crossing": {
+      "cargo": 3,
+      "counters": {
+        "blocks": 0,
+        "counters": 3,
+        "courier_hits": 0,
+        "dodges": 2,
+        "player_hits": 0,
+        "redirects": 2,
+        "rejected": 0
+      },
+      "courier_speed": 56.0,
+      "courier_x": 1000.0,
+      "enemy_focus": 0,
+      "energy": 100.0,
+      "events": [
+        {
+          "cargo": 3,
+          "energy": 84.0,
+          "hp": 5,
+          "kind": "redirect",
+          "tick": 110
+        },
+        {
+          "cargo": 3,
+          "energy": 59.0,
+          "hp": 5,
+          "kind": "step",
+          "tick": 110
+        },
+        {
+          "cargo": 3,
+          "energy": 76.7,
+          "hp": 5,
+          "kind": "bolt_missed",
+          "tick": 169
+        },
+        {
+          "cargo": 3,
+          "energy": 72.5,
+          "hp": 5,
+          "kind": "counter",
+          "tick": 195
+        },
+        {
+          "cargo": 3,
+          "energy": 84.0,
+          "hp": 5,
+          "kind": "redirect",
+          "tick": 376
+        },
+        {
+          "cargo": 3,
+          "energy": 59.0,
+          "hp": 5,
+          "kind": "step",
+          "tick": 376
+        },
+        {
+          "cargo": 3,
+          "energy": 76.7,
+          "hp": 5,
+          "kind": "bolt_missed",
+          "tick": 435
+        },
+        {
+          "cargo": 3,
+          "energy": 72.5,
+          "hp": 5,
+          "kind": "counter",
+          "tick": 461
+        },
+        {
+          "cargo": 3,
+          "energy": 100.0,
+          "hp": 5,
+          "kind": "pulse_avoided",
+          "tick": 701
+        },
+        {
+          "cargo": 3,
+          "energy": 88.0,
+          "hp": 5,
+          "kind": "counter",
+          "tick": 725
+        },
+        {
+          "cargo": 3,
+          "energy": 88.0,
+          "hp": 5,
+          "kind": "sentinel_disabled",
+          "tick": 725
+        }
+      ],
+      "guard_style": "none",
+      "hp": 5,
+      "mode": "won",
+      "role": "Duelist",
+      "tick": 1262
+    },
+    "crossing_look": {
+      "dye": 1,
+      "hair": 2,
+      "skin": 2
+    },
+    "return_gate": {
+      "active": true,
+      "channel": false,
+      "entry": {
+        "energy": 100.0,
+        "hp": 5,
+        "medicine": "available",
+        "outfit": "standard",
+        "role": "Duelist",
+        "route": "road",
+        "style": "none"
+      },
+      "events": [
+        {
+          "action": "catch_raised",
+          "index": 0,
+          "tick": 149
+        },
+        {
+          "action": "catch_raised",
+          "index": 1,
+          "tick": 590
+        },
+        {
+          "action": "return_opened",
+          "tick": 717
+        }
+      ],
+      "game": {
+        "cargo": 1,
+        "counters": {
+          "blocks": 0,
+          "counters": 0,
+          "courier_hits": 1,
+          "dodges": 0,
+          "player_hits": 0,
+          "redirects": 2,
+          "rejected": 0
+        },
+        "courier_speed": 28.0,
+        "courier_x": 600.0,
+        "enemy_focus": 3,
+        "energy": 100.0,
+        "events": [
+          {
+            "cargo": 1,
+            "energy": 100.0,
+            "hp": 5,
+            "kind": "courier_hit",
+            "tick": 169
+          },
+          {
+            "cargo": 1,
+            "energy": 84.0,
+            "hp": 5,
+            "kind": "redirect",
+            "tick": 279
+          },
+          {
+            "cargo": 1,
+            "energy": 100.0,
+            "hp": 5,
+            "kind": "bolt_missed",
+            "tick": 338
+          },
+          {
+            "cargo": 1,
+            "energy": 100.0,
+            "hp": 5,
+            "kind": "pulse_avoided",
+            "tick": 507
+          },
+          {
+            "cargo": 1,
+            "energy": 84.0,
+            "hp": 5,
+            "kind": "redirect",
+            "tick": 617
+          },
+          {
+            "cargo": 1,
+            "energy": 100.0,
+            "hp": 5,
+            "kind": "bolt_missed",
+            "tick": 676
+          }
+        ],
+        "guard_style": "none",
+        "hp": 5,
+        "mode": "won",
+        "objective": "return_gate",
+        "role": "Duelist",
+        "tick": 717
+      },
+      "progress": 0.0,
+      "raised": [
+        true,
+        true
+      ],
+      "working": -1
+    },
+    "return_look": {
+      "dye": 1,
+      "hair": 2,
+      "skin": 2
+    }
+  },
+  "checks": {
+    "failed": 0,
+    "passed": 52
+  },
+  "consumer_hashes": {
+    "arena.gd": "ca4edc823d8f1f9615afa9dba3949521b79afe1700f9162a3f9710059ce55c98",
+    "character_look.gd": "494e90189ffbddc383c829d5d5ff9ad4cf10a0c496e52374e3a2adba3ef11e48",
+    "keepsakes.gd": "1e1779136f6b7d21568fe72f670285f4bce6a8264172fd102f1b49421fcf8236",
+    "tests/appearance_profile_checks.gd": "39d192e8213b9060aea1594c29a80ff8e7fd7ae07a205b56abacf1d8d84283c0"
+  },
+  "operations_per_delivery": [
+    "apply",
+    "read",
+    "cancel",
+    "read",
+    "earn",
+    "read",
+    "journey",
+    "read",
+    "defaults",
+    "read"
+  ],
+  "restart_observation_sha256": "efadf19d3d77d6f87a9d3bd79186fb03a9a84751da4e893103909b2d636f4f5b",
+  "restart_processes": 20,
+  "restarts": [
+    {
+      "look": {
+        "dye": 1,
+        "hair": 2,
+        "skin": 2
+      },
+      "mode": "title",
+      "operation": "apply",
+      "profile": {
+        "blocked": false,
+        "dirty": false,
+        "earned": [],
+        "equipped": "",
+        "look": {
+          "dye": 1,
+          "hair": 2,
+          "skin": 2
+        },
+        "status": "Saved locally."
+      },
+      "tick": 0,
+      "unchanged_bytes": false
+    },
+    {
+      "look": {
+        "dye": 1,
+        "hair": 2,
+        "skin": 2
+      },
+      "mode": "title",
+      "operation": "read",
+      "profile": {
+        "blocked": false,
+        "dirty": false,
+        "earned": [],
+        "equipped": "",
+        "look": {
+          "dye": 1,
+          "hair": 2,
+          "skin": 2
+        },
+        "status": "Saved locally."
+      },
+      "tick": 0,
+      "unchanged_bytes": true
+    },
+    {
+      "look": {
+        "dye": 1,
+        "hair": 2,
+        "skin": 2
+      },
+      "mode": "title",
+      "operation": "cancel",
+      "profile": {
+        "blocked": false,
+        "dirty": false,
+        "earned": [],
+        "equipped": "",
+        "look": {
+          "dye": 1,
+          "hair": 2,
+          "skin": 2
+        },
+        "status": "Saved locally."
+      },
+      "tick": 0,
+      "unchanged_bytes": true
+    },
+    {
+      "look": {
+        "dye": 1,
+        "hair": 2,
+        "skin": 2
+      },
+      "mode": "title",
+      "operation": "read",
+      "profile": {
+        "blocked": false,
+        "dirty": false,
+        "earned": [],
+        "equipped": "",
+        "look": {
+          "dye": 1,
+          "hair": 2,
+          "skin": 2
+        },
+        "status": "Saved locally."
+      },
+      "tick": 0,
+      "unchanged_bytes": true
+    },
+    {
+      "look": {
+        "dye": 1,
+        "hair": 2,
+        "skin": 2
+      },
+      "mode": "won",
+      "operation": "earn",
+      "profile": {
+        "blocked": false,
+        "dirty": false,
+        "earned": [
+          "held_line"
+        ],
+        "equipped": "",
+        "look": {
+          "dye": 1,
+          "hair": 2,
+          "skin": 2
+        },
+        "status": "Saved locally."
+      },
+      "tick": 1648,
+      "unchanged_bytes": false
+    },
+    {
+      "look": {
+        "dye": 1,
+        "hair": 2,
+        "skin": 2
+      },
+      "mode": "title",
+      "operation": "read",
+      "profile": {
+        "blocked": false,
+        "dirty": false,
+        "earned": [
+          "held_line"
+        ],
+        "equipped": "",
+        "look": {
+          "dye": 1,
+          "hair": 2,
+          "skin": 2
+        },
+        "status": "Saved locally."
+      },
+      "tick": 0,
+      "unchanged_bytes": true
+    },
+    {
+      "look": {
+        "dye": 1,
+        "hair": 2,
+        "skin": 2
+      },
+      "mode": "won",
+      "operation": "journey",
+      "profile": {
+        "blocked": false,
+        "dirty": false,
+        "earned": [
+          "held_line",
+          "drew_danger"
+        ],
+        "equipped": "",
+        "look": {
+          "dye": 1,
+          "hair": 2,
+          "skin": 2
+        },
+        "status": "Saved locally."
+      },
+      "tick": 717,
+      "unchanged_bytes": false
+    },
+    {
+      "look": {
+        "dye": 1,
+        "hair": 2,
+        "skin": 2
+      },
+      "mode": "title",
+      "operation": "read",
+      "profile": {
+        "blocked": false,
+        "dirty": false,
+        "earned": [
+          "held_line",
+          "drew_danger"
+        ],
+        "equipped": "",
+        "look": {
+          "dye": 1,
+          "hair": 2,
+          "skin": 2
+        },
+        "status": "Saved locally."
+      },
+      "tick": 0,
+      "unchanged_bytes": true
+    },
+    {
+      "look": {
+        "dye": 0,
+        "hair": 0,
+        "skin": 0
+      },
+      "mode": "title",
+      "operation": "defaults",
+      "profile": {
+        "blocked": false,
+        "dirty": false,
+        "earned": [
+          "held_line",
+          "drew_danger"
+        ],
+        "equipped": "",
+        "look": {
+          "dye": 0,
+          "hair": 0,
+          "skin": 0
+        },
+        "status": "Saved locally."
+      },
+      "tick": 0,
+      "unchanged_bytes": false
+    },
+    {
+      "look": {
+        "dye": 0,
+        "hair": 0,
+        "skin": 0
+      },
+      "mode": "title",
+      "operation": "read",
+      "profile": {
+        "blocked": false,
+        "dirty": false,
+        "earned": [
+          "held_line",
+          "drew_danger"
+        ],
+        "equipped": "",
+        "look": {
+          "dye": 0,
+          "hair": 0,
+          "skin": 0
+        },
+        "status": "Saved locally."
+      },
+      "tick": 0,
+      "unchanged_bytes": true
+    }
+  ],
+  "schema_version": 1,
+  "scope": "Editable local cosmetic profile, migration/recovery, twenty real restarts and source/PCK two-goal execution; no account, saved power, power-loss or concurrent-writer guarantee.",
+  "unit_observation_sha256": "8aa8e7cb410d1bebb115525f2d18d35911ddf84d29d52163a1eca680f6f7781f"
+}

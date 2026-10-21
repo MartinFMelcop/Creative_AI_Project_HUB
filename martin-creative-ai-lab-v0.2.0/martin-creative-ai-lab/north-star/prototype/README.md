@@ -8,8 +8,8 @@ revisions and rejected alternatives.
 
 ## Play
 
-**Linux x86_64:** download the [standalone ZIP](dist/crossing-drill-linux-0.2.0.zip)
-and its [SHA-256 checksum](dist/crossing-drill-linux-0.2.0.zip.sha256), extract the
+**Linux x86_64:** download the [standalone ZIP](dist/crossing-drill-linux-0.3.0.zip)
+and its [SHA-256 checksum](dist/crossing-drill-linux-0.3.0.zip.sha256), extract the
 complete `CrossingDrill` folder, then open `crossing-drill.x86_64` or run
 `./crossing-drill.x86_64`. Keep its PCK beside it. No Godot editor, SDK, Python,
 Node, source checkout or network is required to play. The roughly 27 MB ZIP bundles
@@ -134,48 +134,53 @@ experimental, not approved geography or final class/canon decisions.
 
 ## Optional roadside workshop
 
-From approach selection, **F2** opens a safe native preparation space. Walk to a
-bench with the current movement bindings and hold the interaction key (**E** by
-default) for one continuous second inside its **46px** ring. The labeled action
-**MAKE & WEAR** spends one fitting blank exactly once and equips the result:
+From selection, **F2** opens safe preparation. Walk to a labeled bench and hold the
+interaction key (**E** by default) continuously for one second inside its **46px** ring.
+The nearest bench's panel shows its real health, movement and recovery trade-off before
+completion. One fitting blank is spent exactly once and the piece is worn immediately.
 
-| Clothing | Player health | Walk / guarded walk | Step distance |
+| Clothing | Health | Walk / guarded walk | Unguarded energy recovery |
 |---|---:|---:|---:|
-| Standard, including skipping the workshop | 5 | 250 / 85 px/s | Baseline |
-| Riveted coat | 6 | 200 / 68 px/s | 20% less |
-| Trail wrap | 4 | 300 / 102 px/s | 20% more |
+| Standard, including skipping preparation | 5 | 250 / 85 px/s | 18/s |
+| Riveted coat | 6 | 200 / 68 px/s | 18/s |
+| Trail wrap | 4 | 300 / 102 px/s | 18/s |
+| Field sash | 4 | 250 / 85 px/s | 26/s |
 
-Both approaches can make either piece. Shoulder plates versus split cloth strips
-remain visible in the actual crossing. Neither changes courier health/speed, threat
-schedule, guard windows, energy costs, invulnerability, keepsakes or reward eligibility.
-Move or release interaction to cancel unfinished work without spending the blank.
-After completion, release before another action; holding does not replace confirmation.
-**C** in the workshop recycles the fitting, restores standard clothing and returns the
-single blank. It is an explicit reversible choice, not material duplication.
+Movement also scales paid-step distance. Recovery applies while unguarded, including
+walking, and remains capped at 100. The sash's original blue diagonal band remains
+visible in play and appearance previews. Both approaches can use any fitting. Guard
+drain, impact/ability costs, cooldowns, contact, damage, courier rules and rewards remain
+unchanged. These choices are experimental, not final equipment or profession canon.
 
-**Enter** leaves for a fresh normal crossing with the worn piece. **R** returns to
-selection. **Esc** pauses/resumes workshop work; focus loss or settings cancels partial
-work and pauses. Enter from pause resumes without departing. Resuming/settings never
-supplies a held interaction. The courier/threat clock has not started in this space.
-F2 cannot open it during play, crossing pause or rehearsal; abandon with R from pause
-or result before changing gear. Retry keeps the fitting, but there is no live swap or
-healing through re-equipping. Isolated rehearsal remains standard clothing.
+Move or release to cancel unfinished work without spending the blank. **C** explicitly
+recycles the piece and returns the single blank. Completion/recycling require release
+before a new action; held input cannot duplicate output. **Enter** leaves for a fresh
+crossing with the worn piece; **R** returns to selection. **Esc**, focus loss and settings
+pause/cancel partial work. Resume never silently crafts or leaves preparation.
 
-Crafting state is session-only. A new process starts standard with one blank; no
-keepsake/control schema or disk save changes. This is an experimental two-recipe
-craft-to-build consumer, not a profession career, economy, inventory, persistent power,
-final item/class approval or independently validated player preference.
+Live crossing, pause and rehearsal cannot open the workshop. Retry retains the fitting;
+abandon before revising it. The second objective carries actual arrival health and the
+same data-defined effects, without healing. Rehearsal remains standard clothing. Gear
+and blanks remain session-only; cosmetics/control save formats are unchanged.
+
+The live [catalog and authoring guide](data/README.md) allow another bounded definition
+to run without editing GDScript. Validation and the real consumer share one contract;
+invalid content blocks play. The finite three-bench room is not a generic item engine,
+inventory, economy, persistent profession or evidence of human balance/preference.
 
 ```bash
-python3 north-star/prototype/tools/verify_workshop.py --output /tmp/workshop.json --compare evidence/north-star-gamepad/workshop.json
-# Optional actual Linux XTest window navigation; requires Xorg/dummy and local sockets:
+python3 north-star/prototype/tools/fittings.py check --output /tmp/fittings.json
+python3 north-star/prototype/tools/fittings.py verify --output /tmp/fitting-delivery.json --compare evidence/north-star-fittings/fittings.json
+python3 north-star/prototype/tools/verify_workshop.py --output /tmp/workshop.json --compare evidence/north-star-fittings/workshop.json
+# Optional synthetic OS keyboard navigation of all three pieces; requires Xorg/dummy:
 python3 north-star/prototype/tools/verify_workshop_input.py --output /tmp/workshop-input
 ```
 
-[Executed source/PCK controls and native images](../../evidence/north-star-workshop/RUN.json)
-include all six standard/coat/wrap approach routes, health/movement/step consequences,
-undo, duplicate rejection and interruption. Fixed policies are not balance evidence;
-synthetic OS input and agent image inspection are not independent human experience.
+[Current execution](../../evidence/north-star-fittings/RUN.json) covers all eight
+approach/fitting combinations through both objectives, fresh staged authoring of a new
+ID and values, invalid-content blocking, retained controls and actual native input.
+
+![Actual native workshop with the authored sash](../../evidence/north-star-fittings/workshop.png)
 
 ## Guardian technique choice
 
@@ -230,7 +235,7 @@ A new crossing or abandonment clears the agreement. No account, reputation meter
 persistent quest or source fictional universe is added.
 
 ```bash
-python3 north-star/prototype/tools/verify_conversation.py --output /tmp/conversation.json --compare evidence/north-star-gamepad/conversation.json
+python3 north-star/prototype/tools/verify_conversation.py --output /tmp/conversation.json --compare evidence/north-star-fittings/conversation.json
 # Optional Linux XTest keys after a fixture completes the actual escort:
 python3 north-star/prototype/tools/verify_conversation_display.py --output /tmp/conversation-display
 ```
@@ -266,7 +271,7 @@ The editor is available on selection, without live appearance changes or combat 
 ![Actual character-look draft and shared actor preview](../../evidence/north-star-character-look/editor-rest.png)
 
 ```bash
-python3 north-star/prototype/tools/verify_look.py --output /tmp/look.json --compare evidence/north-star-gamepad/look.json
+python3 north-star/prototype/tools/verify_look.py --output /tmp/look.json --compare evidence/north-star-fittings/look.json
 python3 north-star/prototype/tools/verify_look_display.py --baseline /path/to/prior.pck --output /tmp/look-display
 ```
 
@@ -281,7 +286,7 @@ not final class/people canon, a complete character system or proof of the identi
 ### Verify local appearance continuity
 
 ```bash
-python3 north-star/prototype/tools/verify_appearance.py --output /tmp/appearance.json --compare evidence/north-star-gamepad/appearance.json
+python3 north-star/prototype/tools/verify_appearance.py --output /tmp/appearance.json --compare evidence/north-star-fittings/appearance.json
 ```
 
 52 native migration/failure controls run in source and PCK. Twenty actual engine
@@ -575,7 +580,7 @@ or MMORPG persistence.
 ## Execute checks and reproduce delivery
 
 ```bash
-python3 north-star/prototype/tools/verify.py --godot godot --output /tmp/crossing-check.json --compare evidence/north-star-gamepad/regressions.json
+python3 north-star/prototype/tools/verify.py --godot godot --output /tmp/crossing-check.json --compare evidence/north-star-fittings/regressions.json
 ```
 
 The stdlib runner bounds owned engine processes, uses writable temporary XDG paths,
@@ -599,7 +604,7 @@ The source pack is reproducible with the matching engine:
 godot --headless --path north-star/prototype --script tools/pack.gd -- /absolute/path/crossing-drill.pck
 ```
 
-[Current execution evidence](../../evidence/north-star-gamepad/RUN.json) identifies
+[Current execution evidence](../../evidence/north-star-fittings/RUN.json) identifies
 baseline, source/result hashes, commands, refinements and limitations. The preserved
 [first-consumer record](../../evidence/north-star-crossing/RUN.json) documents the
 original crossing delivery; the [rehearsal record](../../evidence/north-star-rehearsal/RUN.json)
@@ -613,9 +618,9 @@ journeys use controlled inputs, not human decisions.
 ```bash
 python3 north-star/prototype/tools/check_linux.py
 python3 north-star/prototype/tools/test_check_linux.py
-python3 north-star/prototype/tools/verify_linux.py --output /tmp/player.json --compare evidence/north-star-gamepad/results.json
+python3 north-star/prototype/tools/verify_linux.py --output /tmp/player.json --compare evidence/north-star-fittings/results.json
 python3 north-star/prototype/tools/export_linux.py --godot godot --templates /path/to/Godot_v4.6.3-stable_export_templates.tpz --output /tmp/crossing-rebuilt.zip
-python3 north-star/prototype/tools/verify_linux.py --archive /tmp/crossing-rebuilt.zip --output /tmp/rebuilt-player.json --compare evidence/north-star-gamepad/results.json
+python3 north-star/prototype/tools/verify_linux.py --archive /tmp/crossing-rebuilt.zip --output /tmp/rebuilt-player.json --compare evidence/north-star-fittings/results.json
 ```
 
 An already extracted official standard `linux_release.x86_64` is accepted through
@@ -663,7 +668,7 @@ remaps remain separate. No pad remapping or physical-device compatibility is cla
 
 ```bash
 python3 north-star/prototype/tools/test_verify_gamepad.py
-python3 north-star/prototype/tools/verify_gamepad.py --archive north-star/prototype/dist/crossing-drill-linux-0.2.0.zip --output /tmp/pad.json --compare evidence/north-star-gamepad/gamepad.json
+python3 north-star/prototype/tools/verify_gamepad.py --archive north-star/prototype/dist/crossing-drill-linux-0.3.0.zip --output /tmp/pad.json --compare evidence/north-star-fittings/gamepad.json
 ```
 
 The actual viewport receives injected mapped events and both complete journeys use

@@ -90,7 +90,13 @@ def verify(output):
                     assert light["workshop"]["outfit"]=="trail" and light["workshop"]["made"]==2
                     tap("Return");live_light=shot("wrap-crossing")
                     assert live_light["role"]=="Duelist" and live_light["outfit"]["id"]=="trail" and live_light["hp"]==4
-                    records[delivery]={"heavy":heavy["workshop"],"light":light["workshop"],"recycled":undone["workshop"],"heavy_samples":heavy_samples,"light_samples":light_samples,"crossings":[{"role":s["role"],"outfit":s["outfit"],"hp":s["hp"]} for s in [live_heavy,live_light]]}
+                    tap("Escape");tap("r");tap("F2");tap("c")
+                    walk(575,420);sash,sash_samples=craft("sash")
+                    assert sash["workshop"]["outfit"]=="field_sash" and sash["workshop"]["made"]==3
+                    tap("Return");live_sash=shot("sash-crossing")
+                    assert live_sash["outfit"]["recovery_rate"]==26 and live_sash["hp"]==4
+                    assert live_sash["outfit"]["movement_scale"]==1
+                    records[delivery]={"heavy":heavy["workshop"],"light":light["workshop"],"sash":sash["workshop"],"recycled":undone["workshop"],"heavy_samples":heavy_samples,"light_samples":light_samples,"sash_samples":sash_samples,"crossings":[{"role":s["role"],"outfit":s["outfit"],"hp":s["hp"]} for s in [live_heavy,live_light,live_sash]]}
                     game.terminate();game.wait(timeout=3);game=None
                     for _ in range(60):
                         X.XSync(d,0)

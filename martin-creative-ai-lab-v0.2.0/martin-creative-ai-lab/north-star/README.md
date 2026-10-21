@@ -8,6 +8,13 @@ this product's needs with laboratory, creative and technical opportunities using
 a public Design-Driven technology portfolio; its origin demonstrations and research
 instruments have value without being eleven independently obligated products.
 
+The current [equipment authoring path](prototype/data/README.md) consumes validated
+JSON in combat, workshop and appearance previews. A reversible Field sash trades one
+health for faster unguarded recovery; the original fittings retain their behavior.
+[Execution](../evidence/north-star-fittings/RUN.json) covers real source/PCK/Linux
+consumers and new-definition authoring, without adding a laboratory, capability
+promotion, final class canon or a production engine commitment.
+
 F1 offers recoverable twelve-action keyboard remapping with matching live hints and
 explicit draft/apply/discard/default restoration; settings remain device-local.
 F1/H and F1/I independently offer session-only single-press guard/interaction; pause,
@@ -135,7 +142,7 @@ persistent social simulation or human narrative/identity validation.
 
 The [Linux x86_64 delivery](prototype/README.md#play) includes the pinned official
 runtime, notices, source identities and checksum. Actual release journeys and native
-window edit/move/pause/reentry are [executed](../evidence/north-star-gamepad/RUN.json).
+window edit/move/pause/reentry are [executed](../evidence/north-star-fittings/RUN.json).
 This removes an installation dependency on development tools; it adds no mechanic,
 capability-state promotion, new lab, final engine or independent player validation.
 
@@ -143,5 +150,5 @@ capability-state promotion, new lab, final engine or independent player validati
 The existing adventure also has [mapped gamepad control](prototype/README.md#mapped-gamepad-experimental)
 through preparation, appearance, dialogue and both goals. Context hints, deliberate
 pause/resume and disconnect recovery are executed in source/PCK/Linux 0.2.0.
-[Evidence](../evidence/north-star-gamepad/RUN.json) uses injected mapped events;
+[Evidence](../evidence/north-star-fittings/RUN.json) uses injected mapped events;
 physical devices, human accessibility and new gameplay depth remain unproven.

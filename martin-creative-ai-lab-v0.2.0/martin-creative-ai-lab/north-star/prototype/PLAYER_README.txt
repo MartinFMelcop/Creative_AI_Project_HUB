@@ -1,4 +1,4 @@
-Virgo Diamond: The North Star — Crossing Drill, Linux player 0.2.0
+Virgo Diamond: The North Star — Crossing Drill, Linux player 0.3.0
 
 Extract the entire CrossingDrill folder, then open crossing-drill.x86_64 or run
 ./crossing-drill.x86_64 from a terminal. Keep crossing-drill.pck beside it.
@@ -17,7 +17,12 @@ courier to the gate. Three valid close counters can stop the threat early.
 F1 shows controls and deliberate remapping; H/I there offer optional toggles.
 Escape pauses; R while paused abandons; Enter retries after a result.
 
-F2 on selection opens the reversible roadside fitting workshop. F3 previews free
+F2 on selection opens the reversible roadside fitting workshop. Walk to a bench
+and hold E for one second to make and wear one piece. C recycles your single blank.
+The panel shows each trade-off: coat adds health but slows movement; wrap gives up
+health for movement; sash gives up health for faster unguarded energy recovery.
+Either approach can use any piece. Enter crosses with it; gear is session-only.
+F3 previews free
 skin/hair/cloth choices: arrows edit, Enter applies and saves, Escape discards.
 Applied looks and earned/worn cosmetic marks are stored in this application's
 per-user Godot data directory, outside this extracted folder. Controls have a

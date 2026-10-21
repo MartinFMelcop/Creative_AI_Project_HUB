@@ -1,0 +1,59 @@
+{
+  "checks": {
+    "failed": 0,
+    "passed": 49
+  },
+  "consumer_hashes": {
+    "actors.gd": "c1cb826fa57e50267323e6d74787d5aa4e59f8e58710f60ec632a6b275f19217",
+    "arena.gd": "ca4edc823d8f1f9615afa9dba3949521b79afe1700f9162a3f9710059ce55c98",
+    "combat.gd": "77aefc3f6130e114954a867f6404830180ca342c88e2396ec89a3784c2b3b0b3",
+    "route.gd": "2936029e1a52933fff0141b546f85fbc53a57b7e6c5301eaef5cabac06a05901",
+    "tests/policy.gd": "646f0758a211e84ffbfd4632460c7d1fc549cbb3b552801ee2508774a5a63e29",
+    "tests/route_checks.gd": "549272698da6d2e6e07ccf2e13a98fa5ee9b9c5df11c0ef8d1e65c49aa196d83"
+  },
+  "native_observation_sha256": "55bdbccd1758afa60e60bd65854a32fcebc15fe1400c7b920526524c73f302c6",
+  "routes": [
+    {
+      "cargo": 3,
+      "choice": "road",
+      "covered_bolts": 0,
+      "hp": 5,
+      "mode": "won",
+      "role": "Guardian",
+      "tick": 1648,
+      "visited_upper": false
+    },
+    {
+      "cargo": 3,
+      "choice": "ridge",
+      "covered_bolts": 2,
+      "hp": 5,
+      "mode": "won",
+      "role": "Guardian",
+      "tick": 2117,
+      "visited_upper": true
+    },
+    {
+      "cargo": 3,
+      "choice": "road",
+      "covered_bolts": 0,
+      "hp": 5,
+      "mode": "won",
+      "role": "Duelist",
+      "tick": 1262,
+      "visited_upper": false
+    },
+    {
+      "cargo": 3,
+      "choice": "ridge",
+      "covered_bolts": 1,
+      "hp": 5,
+      "mode": "won",
+      "role": "Duelist",
+      "tick": 1647,
+      "visited_upper": true
+    }
+  ],
+  "schema_version": 1,
+  "scope": "Fixed complete policies and native scene controls; partial geometric cover, not invulnerability, participants or general balance."
+}

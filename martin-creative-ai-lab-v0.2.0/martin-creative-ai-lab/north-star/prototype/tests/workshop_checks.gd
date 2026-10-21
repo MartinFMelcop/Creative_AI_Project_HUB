@@ -14,7 +14,7 @@ func key(scene, code: int) -> void:
 	scene._unhandled_key_input(event)
 func make(shop, id: String) -> void:
 	shop.step(0.0,Vector2.ZERO,false)
-	shop.player=Workshop.STATIONS[id]
+	shop.player=shop.stations[id]
 	for i in 60:shop.step(1.0/60,Vector2.ZERO,true)
 func _initialize() -> void:call_deferred("run")
 func run() -> void:
@@ -24,7 +24,7 @@ func run() -> void:
 	check(not w.recycle(),"inactive cannot refund")
 	w.enter();w.step(0.05,Vector2.ZERO,true)
 	check(w.outfit=="standard" and w.progress==0,"range is required")
-	w.player=Workshop.STATIONS.riveted
+	w.player=w.stations.riveted
 	w.step(0.05,Vector2.ZERO,true)
 	check(is_equal_approx(w.progress,0.05),"actual elapsed craft progress")
 	w.step(0.05,Vector2.RIGHT,true)
@@ -35,7 +35,7 @@ func run() -> void:
 	var frozen=w.snapshot();w.step(0.05,Vector2.LEFT,true)
 	check(w.snapshot()==frozen and w.progress==0,"suspend cancels then freezes")
 	check(not w.recycle(),"paused cannot recycle")
-	w.paused=false;w.player=Workshop.STATIONS.riveted
+	w.paused=false;w.player=w.stations.riveted
 	for i in 59:w.step(1.0/60,Vector2.ZERO,true)
 	check(w.outfit=="standard" and w.blank==1,"incomplete work spends nothing")
 	w.step(1.0/60,Vector2.ZERO,true)
@@ -93,7 +93,7 @@ func run() -> void:
 	check(not a.workshop.active,"paused crossing cannot open workshop")
 	key(a,KEY_R);key(a,KEY_F2);key(a,KEY_C)
 	check(a.workshop.outfit=="standard" and a.workshop.blank==1,"actual title reentry supports undo")
-	a.workshop.player=Workshop.STATIONS.trail;a.workshop.step(0.05,Vector2.ZERO,true)
+	a.workshop.player=a.workshop.stations.trail;a.workshop.step(0.05,Vector2.ZERO,true)
 	a._notification(Node.NOTIFICATION_APPLICATION_FOCUS_OUT)
 	check(a.workshop.paused and a.workshop.progress==0,"focus loss cancels work")
 	key(a,KEY_ENTER);check(not a.workshop.paused and a.workshop.active,"resume never silently departs")

@@ -1,0 +1,519 @@
+{
+  "checks": {
+    "failed": 0,
+    "passed": 56
+  },
+  "consumer_hashes": {
+    "arena.gd": "ca4edc823d8f1f9615afa9dba3949521b79afe1700f9162a3f9710059ce55c98",
+    "gamepad.gd": "2f944aa12cbb78d5f5ed60e393397706ecd4642debc7c96c6d3dd325e8b0aa0a",
+    "tests/gamepad_checks.gd": "a25fb7d8ef1c4dd9ce590d1326824fff5051fc81a0df1195fddd20438a5627b9",
+    "tests/gamepad_driver.gd": "9987f1b07214f0880976c8ab5e647e0bbb8f94af60047e95cb6fed9f6ae7a089"
+  },
+  "deliveries": [
+    "source",
+    "pack",
+    "release"
+  ],
+  "journeys": [
+    {
+      "game": {
+        "cargo": 3,
+        "counters": {
+          "blocks": 3,
+          "counters": 3,
+          "courier_hits": 0,
+          "dodges": 0,
+          "player_hits": 0,
+          "redirects": 0,
+          "rejected": 0
+        },
+        "courier_speed": 56.0,
+        "courier_x": 600.0,
+        "enemy_focus": 0,
+        "energy": 100.0,
+        "events": [
+          {
+            "cargo": 3,
+            "energy": 66.2,
+            "hp": 5,
+            "kind": "protected",
+            "tick": 169
+          },
+          {
+            "cargo": 3,
+            "energy": 54.5,
+            "hp": 5,
+            "kind": "counter",
+            "tick": 170
+          },
+          {
+            "cargo": 3,
+            "energy": 66.0,
+            "hp": 5,
+            "kind": "protected",
+            "tick": 410
+          },
+          {
+            "cargo": 3,
+            "energy": 54.3,
+            "hp": 5,
+            "kind": "counter",
+            "tick": 411
+          },
+          {
+            "cargo": 3,
+            "energy": 100.0,
+            "hp": 5,
+            "kind": "pulse_avoided",
+            "tick": 651
+          },
+          {
+            "cargo": 3,
+            "energy": 71.4,
+            "hp": 5,
+            "kind": "protected",
+            "tick": 820
+          },
+          {
+            "cargo": 3,
+            "energy": 59.7,
+            "hp": 5,
+            "kind": "counter",
+            "tick": 821
+          },
+          {
+            "cargo": 3,
+            "energy": 59.7,
+            "hp": 5,
+            "kind": "sentinel_disabled",
+            "tick": 821
+          }
+        ],
+        "guard_style": "Steady",
+        "hp": 5,
+        "mode": "won",
+        "objective": "return_gate",
+        "role": "Guardian",
+        "tick": 1221
+      },
+      "return_gate": {
+        "active": true,
+        "channel": false,
+        "entry": {
+          "aid": "brace",
+          "energy": 100.0,
+          "hp": 5,
+          "medicine": "available",
+          "outfit": "standard",
+          "role": "Guardian",
+          "route": "road",
+          "style": "Steady"
+        },
+        "events": [
+          {
+            "action": "catch_raised",
+            "index": 0,
+            "tick": 969
+          },
+          {
+            "action": "catch_raised",
+            "index": 1,
+            "tick": 1184
+          },
+          {
+            "action": "return_opened",
+            "tick": 1221
+          }
+        ],
+        "game": {
+          "cargo": 3,
+          "counters": {
+            "blocks": 3,
+            "counters": 3,
+            "courier_hits": 0,
+            "dodges": 0,
+            "player_hits": 0,
+            "redirects": 0,
+            "rejected": 0
+          },
+          "courier_speed": 56.0,
+          "courier_x": 600.0,
+          "enemy_focus": 0,
+          "energy": 100.0,
+          "events": [
+            {
+              "cargo": 3,
+              "energy": 66.2,
+              "hp": 5,
+              "kind": "protected",
+              "tick": 169
+            },
+            {
+              "cargo": 3,
+              "energy": 54.5,
+              "hp": 5,
+              "kind": "counter",
+              "tick": 170
+            },
+            {
+              "cargo": 3,
+              "energy": 66.0,
+              "hp": 5,
+              "kind": "protected",
+              "tick": 410
+            },
+            {
+              "cargo": 3,
+              "energy": 54.3,
+              "hp": 5,
+              "kind": "counter",
+              "tick": 411
+            },
+            {
+              "cargo": 3,
+              "energy": 100.0,
+              "hp": 5,
+              "kind": "pulse_avoided",
+              "tick": 651
+            },
+            {
+              "cargo": 3,
+              "energy": 71.4,
+              "hp": 5,
+              "kind": "protected",
+              "tick": 820
+            },
+            {
+              "cargo": 3,
+              "energy": 59.7,
+              "hp": 5,
+              "kind": "counter",
+              "tick": 821
+            },
+            {
+              "cargo": 3,
+              "energy": 59.7,
+              "hp": 5,
+              "kind": "sentinel_disabled",
+              "tick": 821
+            }
+          ],
+          "guard_style": "Steady",
+          "hp": 5,
+          "mode": "won",
+          "objective": "return_gate",
+          "role": "Guardian",
+          "tick": 1221
+        },
+        "progress": 0.0,
+        "raised": [
+          true,
+          true
+        ],
+        "working": -1
+      },
+      "role": "Guardian"
+    },
+    {
+      "game": {
+        "cargo": 3,
+        "counters": {
+          "blocks": 0,
+          "counters": 3,
+          "courier_hits": 0,
+          "dodges": 2,
+          "player_hits": 0,
+          "redirects": 2,
+          "rejected": 0
+        },
+        "courier_speed": 56.0,
+        "courier_x": 600.0,
+        "enemy_focus": 0,
+        "energy": 100.0,
+        "events": [
+          {
+            "cargo": 3,
+            "energy": 84.0,
+            "hp": 5,
+            "kind": "redirect",
+            "tick": 110
+          },
+          {
+            "cargo": 3,
+            "energy": 59.0,
+            "hp": 5,
+            "kind": "step",
+            "tick": 110
+          },
+          {
+            "cargo": 3,
+            "energy": 76.7,
+            "hp": 5,
+            "kind": "bolt_missed",
+            "tick": 169
+          },
+          {
+            "cargo": 3,
+            "energy": 72.5,
+            "hp": 5,
+            "kind": "counter",
+            "tick": 195
+          },
+          {
+            "cargo": 3,
+            "energy": 84.0,
+            "hp": 5,
+            "kind": "redirect",
+            "tick": 376
+          },
+          {
+            "cargo": 3,
+            "energy": 59.0,
+            "hp": 5,
+            "kind": "step",
+            "tick": 376
+          },
+          {
+            "cargo": 3,
+            "energy": 76.7,
+            "hp": 5,
+            "kind": "bolt_missed",
+            "tick": 435
+          },
+          {
+            "cargo": 3,
+            "energy": 72.5,
+            "hp": 5,
+            "kind": "counter",
+            "tick": 461
+          },
+          {
+            "cargo": 3,
+            "energy": 100.0,
+            "hp": 5,
+            "kind": "pulse_avoided",
+            "tick": 701
+          },
+          {
+            "cargo": 3,
+            "energy": 88.0,
+            "hp": 5,
+            "kind": "counter",
+            "tick": 725
+          },
+          {
+            "cargo": 3,
+            "energy": 88.0,
+            "hp": 5,
+            "kind": "sentinel_disabled",
+            "tick": 725
+          }
+        ],
+        "guard_style": "none",
+        "hp": 5,
+        "mode": "won",
+        "objective": "return_gate",
+        "role": "Duelist",
+        "tick": 1118
+      },
+      "return_gate": {
+        "active": true,
+        "channel": false,
+        "entry": {
+          "aid": "brace",
+          "energy": 100.0,
+          "hp": 5,
+          "medicine": "available",
+          "outfit": "standard",
+          "role": "Duelist",
+          "route": "road",
+          "style": "none"
+        },
+        "events": [
+          {
+            "action": "catch_raised",
+            "index": 0,
+            "tick": 866
+          },
+          {
+            "action": "catch_raised",
+            "index": 1,
+            "tick": 1081
+          },
+          {
+            "action": "return_opened",
+            "tick": 1118
+          }
+        ],
+        "game": {
+          "cargo": 3,
+          "counters": {
+            "blocks": 0,
+            "counters": 3,
+            "courier_hits": 0,
+            "dodges": 2,
+            "player_hits": 0,
+            "redirects": 2,
+            "rejected": 0
+          },
+          "courier_speed": 56.0,
+          "courier_x": 600.0,
+          "enemy_focus": 0,
+          "energy": 100.0,
+          "events": [
+            {
+              "cargo": 3,
+              "energy": 84.0,
+              "hp": 5,
+              "kind": "redirect",
+              "tick": 110
+            },
+            {
+              "cargo": 3,
+              "energy": 59.0,
+              "hp": 5,
+              "kind": "step",
+              "tick": 110
+            },
+            {
+              "cargo": 3,
+              "energy": 76.7,
+              "hp": 5,
+              "kind": "bolt_missed",
+              "tick": 169
+            },
+            {
+              "cargo": 3,
+              "energy": 72.5,
+              "hp": 5,
+              "kind": "counter",
+              "tick": 195
+            },
+            {
+              "cargo": 3,
+              "energy": 84.0,
+              "hp": 5,
+              "kind": "redirect",
+              "tick": 376
+            },
+            {
+              "cargo": 3,
+              "energy": 59.0,
+              "hp": 5,
+              "kind": "step",
+              "tick": 376
+            },
+            {
+              "cargo": 3,
+              "energy": 76.7,
+              "hp": 5,
+              "kind": "bolt_missed",
+              "tick": 435
+            },
+            {
+              "cargo": 3,
+              "energy": 72.5,
+              "hp": 5,
+              "kind": "counter",
+              "tick": 461
+            },
+            {
+              "cargo": 3,
+              "energy": 100.0,
+              "hp": 5,
+              "kind": "pulse_avoided",
+              "tick": 701
+            },
+            {
+              "cargo": 3,
+              "energy": 88.0,
+              "hp": 5,
+              "kind": "counter",
+              "tick": 725
+            },
+            {
+              "cargo": 3,
+              "energy": 88.0,
+              "hp": 5,
+              "kind": "sentinel_disabled",
+              "tick": 725
+            }
+          ],
+          "guard_style": "none",
+          "hp": 5,
+          "mode": "won",
+          "objective": "return_gate",
+          "role": "Duelist",
+          "tick": 1118
+        },
+        "progress": 0.0,
+        "raised": [
+          true,
+          true
+        ],
+        "working": -1
+      },
+      "role": "Duelist"
+    }
+  ],
+  "labels": [
+    "Drift cannot claim the active device",
+    "Unmapped button cannot claim device or dispatch",
+    "Trigger axis is not interpreted as stick movement",
+    "Mapped right selects Duelist through viewport",
+    "Mapped left and north select Guardian technique",
+    "Repeated held button cannot retrigger menu choice",
+    "Mapped shoulder opens appearance",
+    "Appearance navigation edits draft only",
+    "East cancels appearance without application",
+    "South applies appearance without interaction leakage",
+    "Mapped shoulder opens workshop",
+    "Mapped movement reaches actual fitting station",
+    "Held south actually makes and wears paid fitting",
+    "Start pauses workshop",
+    "South resumes workshop without leaking held make",
+    "West recycles actual fitting and restores blank",
+    "Mapped east leaves workshop",
+    "North deploys workshop into actual crossing",
+    "Mapped west opens rehearsal",
+    "South starts rehearsal stage",
+    "Start pauses rehearsal",
+    "East deliberately abandons paused rehearsal",
+    "South starts crossing and suppresses held confirmation",
+    "Left stick actually moves the live character",
+    "Circular deadzone scales partial analog movement",
+    "D-pad supplies digital live motion",
+    "Diagonal movement is bounded",
+    "Right stick supplies independent aim",
+    "Guide freezes the real world and leaves it paused",
+    "Guide changes explicit session toggles",
+    "Closing guide cannot resume play",
+    "Explicit south resumes paused crossing",
+    "Inactive controller disconnect does not pause active play",
+    "Active disconnect clears motion and pauses",
+    "Reconnect cannot silently resume",
+    "Focus loss quarantines held stick",
+    "Resume cannot reactivate an uncentered stick",
+    "Centering rearms movement",
+    "Keyboard takeover releases retained pad state",
+    "Guardian completes actual escort using mapped events",
+    "Guardian uses its distinct mapped response",
+    "Guardian opens actual arrival conversation",
+    "Guardian drafts aid without commitment",
+    "Guardian explicitly confirms aid",
+    "Guardian departs for actual return goal",
+    "Guardian completes both catches and return exit through mapped input",
+    "Duelist completes actual escort using mapped events",
+    "Duelist uses its distinct mapped response",
+    "Duelist opens actual arrival conversation",
+    "Duelist drafts aid without commitment",
+    "Duelist explicitly confirms aid",
+    "Duelist departs for actual return goal",
+    "Duelist completes both catches and return exit through mapped input",
+    "Mapped hints cover actual default action positions",
+    "Appearance hints use their own modal contract",
+    "Paused workshop hints expose actual south resume"
+  ],
+  "physical_controller": false,
+  "schema_version": 1
+}

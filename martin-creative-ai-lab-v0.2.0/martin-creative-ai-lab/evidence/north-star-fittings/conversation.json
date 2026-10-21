@@ -1,0 +1,247 @@
+{
+  "assertion_labels_sha256": "b75190863833028c078de190fcda6ab13b6369113675fc10ad6abe322df58209",
+  "checks": {
+    "failed": 0,
+    "passed": 110
+  },
+  "consumer_hashes": {
+    "arena.gd": "ca4edc823d8f1f9615afa9dba3949521b79afe1700f9162a3f9710059ce55c98",
+    "combat.gd": "77aefc3f6130e114954a867f6404830180ca342c88e2396ec89a3784c2b3b0b3",
+    "courier_talk.gd": "986c26d0cba960fcf4e678035b6893dd5a106d49214c9ba9f67ca7f22caf5d56",
+    "return_gate.gd": "817e88308bbf878569a7c7a76ae83e38623f9398c7f6416c0ba3a1cd522fa3bc",
+    "tests/conversation_checks.gd": "d3a6fdfcba70ba3fb61d1516e249b455ae20c90c6a2bd60b3ee0be23c6e2b9e8",
+    "tests/gate_policy.gd": "a40d249e877446f7da09890e4c84d1c3243ef4ea110de65b033d7bd8710680ed",
+    "tests/policy.gd": "646f0758a211e84ffbfd4632460c7d1fc549cbb3b552801ee2508774a5a63e29"
+  },
+  "journeys": [
+    {
+      "arrival_hp": 4,
+      "choice": "",
+      "conversation": {
+        "active": false,
+        "choice": "",
+        "draft": "",
+        "facts": {},
+        "message": "",
+        "page": "offer"
+      },
+      "crossing_tick": 1648,
+      "hp": 3,
+      "mode": "won",
+      "prepared_hp": 4,
+      "prepared_winch": 2,
+      "return_tick": 744,
+      "role": "Guardian",
+      "winch": 1
+    },
+    {
+      "arrival_hp": 4,
+      "choice": "heal",
+      "conversation": {
+        "active": true,
+        "choice": "heal",
+        "draft": "",
+        "facts": {
+          "blocks": 5,
+          "covered": 0,
+          "disabled": true,
+          "health_limit": 5,
+          "hp": 4,
+          "medicine": "available",
+          "redirects": 0,
+          "role": "Guardian",
+          "route": "road",
+          "style": "Steady"
+        },
+        "message": "",
+        "page": "offer"
+      },
+      "crossing_tick": 1648,
+      "hp": 4,
+      "mode": "won",
+      "prepared_hp": 5,
+      "prepared_winch": 2,
+      "return_tick": 744,
+      "role": "Guardian",
+      "winch": 1
+    },
+    {
+      "arrival_hp": 4,
+      "choice": "brace",
+      "conversation": {
+        "active": true,
+        "choice": "brace",
+        "draft": "",
+        "facts": {
+          "blocks": 5,
+          "covered": 0,
+          "disabled": true,
+          "health_limit": 5,
+          "hp": 4,
+          "medicine": "available",
+          "redirects": 0,
+          "role": "Guardian",
+          "route": "road",
+          "style": "Steady"
+        },
+        "message": "",
+        "page": "offer"
+      },
+      "crossing_tick": 1648,
+      "hp": 3,
+      "mode": "won",
+      "prepared_hp": 4,
+      "prepared_winch": 3,
+      "return_tick": 744,
+      "role": "Guardian",
+      "winch": 2
+    },
+    {
+      "arrival_hp": 4,
+      "choice": "keep",
+      "conversation": {
+        "active": true,
+        "choice": "keep",
+        "draft": "",
+        "facts": {
+          "blocks": 5,
+          "covered": 0,
+          "disabled": true,
+          "health_limit": 5,
+          "hp": 4,
+          "medicine": "available",
+          "redirects": 0,
+          "role": "Guardian",
+          "route": "road",
+          "style": "Steady"
+        },
+        "message": "",
+        "page": "offer"
+      },
+      "crossing_tick": 1648,
+      "hp": 3,
+      "mode": "won",
+      "prepared_hp": 4,
+      "prepared_winch": 2,
+      "return_tick": 744,
+      "role": "Guardian",
+      "winch": 1
+    },
+    {
+      "arrival_hp": 4,
+      "choice": "",
+      "conversation": {
+        "active": false,
+        "choice": "",
+        "draft": "",
+        "facts": {},
+        "message": "",
+        "page": "offer"
+      },
+      "crossing_tick": 1347,
+      "hp": 4,
+      "mode": "won",
+      "prepared_hp": 4,
+      "prepared_winch": 2,
+      "return_tick": 717,
+      "role": "Duelist",
+      "winch": 1
+    },
+    {
+      "arrival_hp": 4,
+      "choice": "heal",
+      "conversation": {
+        "active": true,
+        "choice": "heal",
+        "draft": "",
+        "facts": {
+          "blocks": 0,
+          "covered": 0,
+          "disabled": true,
+          "health_limit": 5,
+          "hp": 4,
+          "medicine": "available",
+          "redirects": 2,
+          "role": "Duelist",
+          "route": "road",
+          "style": "none"
+        },
+        "message": "",
+        "page": "offer"
+      },
+      "crossing_tick": 1347,
+      "hp": 5,
+      "mode": "won",
+      "prepared_hp": 5,
+      "prepared_winch": 2,
+      "return_tick": 717,
+      "role": "Duelist",
+      "winch": 1
+    },
+    {
+      "arrival_hp": 4,
+      "choice": "brace",
+      "conversation": {
+        "active": true,
+        "choice": "brace",
+        "draft": "",
+        "facts": {
+          "blocks": 0,
+          "covered": 0,
+          "disabled": true,
+          "health_limit": 5,
+          "hp": 4,
+          "medicine": "available",
+          "redirects": 2,
+          "role": "Duelist",
+          "route": "road",
+          "style": "none"
+        },
+        "message": "",
+        "page": "offer"
+      },
+      "crossing_tick": 1347,
+      "hp": 4,
+      "mode": "won",
+      "prepared_hp": 4,
+      "prepared_winch": 3,
+      "return_tick": 717,
+      "role": "Duelist",
+      "winch": 2
+    },
+    {
+      "arrival_hp": 4,
+      "choice": "keep",
+      "conversation": {
+        "active": true,
+        "choice": "keep",
+        "draft": "",
+        "facts": {
+          "blocks": 0,
+          "covered": 0,
+          "disabled": true,
+          "health_limit": 5,
+          "hp": 4,
+          "medicine": "available",
+          "redirects": 2,
+          "role": "Duelist",
+          "route": "road",
+          "style": "none"
+        },
+        "message": "",
+        "page": "offer"
+      },
+      "crossing_tick": 1347,
+      "hp": 4,
+      "mode": "won",
+      "prepared_hp": 4,
+      "prepared_winch": 2,
+      "return_tick": 717,
+      "role": "Duelist",
+      "winch": 1
+    }
+  ],
+  "native_observation_sha256": "552220adddf4d1da9e7dbe9532e1e4077a5715dc1cd75addb5023545061d2d42",
+  "schema_version": 1,
+  "scope": "Eight matched native two-goal journeys and actual conversation keys; not OS input, participant comprehension, preference or narrative quality validation."
+}

@@ -73,6 +73,14 @@ func _ready() -> void:
 	if args.size()==2 and args[0] in ["--verify-player","--verify-player-read"]:
 		call_deferred("verify_player",args[1],args[0]=="--verify-player-read")
 	elif args.size()==2 and args[0]=="--verify-pad":call_deferred("verify_pad",args[1])
+	elif args.size()==2 and args[0]=="--verify-fittings":call_deferred("verify_fittings",args[1])
+
+func verify_fittings(output: String) -> void:
+	set_physics_process(false)
+	var report: Dictionary=load("res://tests/fittings_driver.gd").new().run(self,output)
+	sound.silence()
+	await get_tree().create_timer(.2).timeout
+	get_tree().quit(0 if report.get("valid",false) and report.get("failures",["missing"]).is_empty() else 1)
 
 func verify_pad(output: String) -> void:
 	set_physics_process(false)
@@ -187,6 +195,7 @@ func abandon() -> void:
 	taps.clear()
 
 func begin_crossing() -> void:
+	if not game.content_errors.is_empty() or not workshop.content_errors.is_empty():return
 	courier_talk=CourierTalk.new()
 	return_gate=ReturnGate.new()
 	bindings.clear_intents()
@@ -216,6 +225,7 @@ func _notification(what: int) -> void:
 		taps.clear();quarantine_inputs();sound.silence()
 
 func _unhandled_key_input(event: InputEvent) -> void:
+	if not game.content_errors.is_empty():return
 	if not event is InputEventKey:return
 	if event.pressed and not pad_dispatch and pad.using_gamepad:
 		pad.keyboard();bindings.clear_intents();taps.clear()
@@ -427,6 +437,12 @@ func style(color: Color) -> StyleBoxFlat:
 	return box
 
 func _draw() -> void:
+	if not game.content_errors.is_empty():
+		draw_rect(Rect2(0,0,1152,768),INK)
+		text(Vector2(60,180),"EQUIPMENT CONTENT UNAVAILABLE",30,RED)
+		text(Vector2(60,230),"This build cannot start. Restore a valid fitting catalog and relaunch.",21)
+		text(Vector2(60,280),str(game.content_errors[0]).left(95),18,AMBER)
+		return
 	if pad_help:
 		for portrait in look_portraits:portrait.visible=false
 		draw_pad_help();return
@@ -524,7 +540,7 @@ func draw_header() -> void:
 
 	text(Vector2(40,164),"WORN  /  "+KEEPSAKE_NAMES[keepsakes.equipped]+"  •  cosmetic only",14)
 	var shown_outfit: String=workshop.outfit if game.mode=="title" else game.outfit
-	text(Vector2(505,164),("NEXT / " if game.mode=="title" else "GEAR / ")+("COAT" if shown_outfit=="riveted" else ("WRAP" if shown_outfit=="trail" else "STANDARD")),14,AMBER)
+	text(Vector2(505,164),("NEXT / " if game.mode=="title" else "GEAR / ")+workshop.names.get(shown_outfit,"Unavailable").to_upper(),14,AMBER)
 	text(Vector2(750,164),"LOCAL SAVE PENDING" if keepsakes.dirty or keepsakes.blocked else ("THIS DEVICE'S LOOK + MARKS" if not keepsakes.look.is_empty() else "THIS DEVICE'S KEEPSAKES"),14,AMBER)
 
 func overlay() -> void:
@@ -614,7 +630,7 @@ func footer() -> String:
 		if rehearsal.state=="ready": return "ENTER send this trial  •  R choose approach  /  No time passes while you read."
 		if rehearsal.state=="review": return ("ENTER "+("start the crossing" if rehearsal.stage==2 else "next exercise") if rehearsal.passed else "ENTER retry this exercise")+"  •  T repeat  •  R choose approach"
 	if game.mode!="play" and (keepsakes.dirty or keepsakes.blocked): return keepsakes.status
-	if game.mode=="title": return "F2: make gear with a trade-off. Current: "+Workshop.NAMES[workshop.outfit]+". C cycles cosmetic marks."
+	if game.mode=="title": return "F2: make gear with a trade-off. Current: "+workshop.names[workshop.outfit]+". C cycles cosmetic marks."
 	if game.mode=="won": return keepsakes.status
 	return game.message
 
@@ -673,30 +689,31 @@ func capture() -> void:
 func draw_workshop() -> void:
 	draw_rect(Rect2(0,0,1152,768),INK)
 	text(Vector2(45,48),"VIRGO DIAMOND / ROADSIDE WORKSHOP",28)
-	text(Vector2(45,87),"An experimental fitting, not a permanent profession choice. Both approaches can wear either piece.",18,AMBER)
-	text(Vector2(45,128),"ONE BLANK  /  %d available     WORN  /  %s"%[workshop.blank,Workshop.NAMES[workshop.outfit]],21,TEAL)
-	for id in Workshop.STATIONS:
-		var at: Vector2=Workshop.STATIONS[id]
-		var heavy: bool=id=="riveted"
-		var tint: Color=AMBER if heavy else TEAL
-		panel(Rect2(at-Vector2(200,180),Vector2(400,290)),Color("203548"))
-		text(at+Vector2(-175,-145),Workshop.NAMES[id].to_upper(),26,tint)
-		text(at+Vector2(-175,-113),"6 health  /  200px/s walk" if heavy else "4 health  /  300px/s walk",20)
-		text(at+Vector2(-175,-85),"+1 hit; 20% slower movement / step." if heavy else "-1 hit; 20% faster movement / step.",17,tint)
-		text(at+Vector2(-175,-61),"Standard: 5 health / 250px/s. No courier bonus.",15)
+	text(Vector2(45,87),"One reversible fitting. Both approaches can wear any piece; no permanent profession choice.",18,AMBER)
+	text(Vector2(45,128),"ONE BLANK  /  %d available     WORN  /  %s"%[workshop.blank,workshop.names[workshop.outfit]],21,TEAL)
+	var inspected: String=workshop.inspected_fitting()
+	var definition: Dictionary=workshop.fittings[inspected]
+	panel(Rect2(160,160,832,160),Color("203548"))
+	text(Vector2(185,194),definition.name.to_upper(),26,TEAL)
+	text(Vector2(185,224),"%d health  /  %.0fpx/s walk  /  %.0f energy/s while unguarded"%[definition.health,250*definition.movement,definition.recovery],20)
+	text(Vector2(185,254),"Standard: 5 health / 250px/s / 18 recovery. Movement also changes step distance.",17,AMBER)
+	text(Vector2(185,284),"Recovery applies outside guard, capped at 100. Costs, guard drain and courier stay unchanged.",16)
+	for id in workshop.stations:
+		var at: Vector2=workshop.stations[id]
+		var tint: Color=TEAL if id==inspected else PAPER
+		text(at+Vector2(-105,-65),workshop.names[id],20,tint)
 		draw_rect(Rect2(at-Vector2(46,18),Vector2(92,36)),Color("617986"))
 		draw_line(at+Vector2(-30,-20),at+Vector2(25,-20),tint,6)
 		draw_arc(at,Workshop.RADIUS,0,TAU,48,tint,2)
-		text(at+Vector2(-175,82),"Stand in ring. Hold E 1s: MAKE & WEAR.",17,tint)
+		text(at+Vector2(-85,82),"Hold %s 1s to make"%bindings.name_for("interact"),16,tint)
 		if workshop.target==id:draw_arc(at,54,-PI/2,-PI/2+TAU*workshop.progress/Workshop.MAKE_TIME,48,PAPER,5)
-	# The same native actor carries its selected appearance into the actual crossing.
 	var preview=Combat.new();preview.role=selected;preview.player=workshop.player
 	preview.outfit=workshop.outfit
 	actors.draw_player(self,preview,character_look.palette())
 	draw_keepsake(workshop.player,keepsakes.equipped)
-	text(workshop.player+Vector2(-20,48),"YOU",15)
+	text(workshop.player+Vector2(60,8),"YOU",15)
 	panel(Rect2(30,650,1092,96))
-	text(Vector2(48,679),"WASD move  /  E hold to make  /  C recycle & recover blank  /  R back  /  F1 keys",17)
+	text(Vector2(48,679),"%s move / %s hold to make / C recycle / R back / F1 keys"%[bindings.name_for("move_up")+"/"+bindings.name_for("move_left")+"/"+bindings.name_for("move_down")+"/"+bindings.name_for("move_right"),bindings.name_for("interact")],17)
 	text(Vector2(48,710),"PAUSED / ENTER or ESC resumes" if workshop.paused else "ENTER crosses with worn gear. Crafting never starts the threat clock.",19,TEAL)
 	text(Vector2(45,620),workshop.message,17,AMBER)
 
@@ -806,7 +823,7 @@ func draw_return_gate() -> void:
 	text(Vector2(40,42),"VIRGO DIAMOND / THE RETURN GATE",26)
 	text(Vector2(950,41),"F1 Keys / sound",16,AMBER)
 	text(Vector2(40,72),"Courier safe. Raise BOTH catches, keep the winch intact, then pass the open gate alive.",18,AMBER)
-	text(Vector2(40,111),game.role.to_upper()+(" / "+game.guard_style.to_upper() if game.role=="Guardian" else "")+" / HP %d / %d / "%[game.hp,game.health_limit]+Workshop.NAMES[game.outfit],19)
+	text(Vector2(40,111),game.role.to_upper()+(" / "+game.guard_style.to_upper() if game.role=="Guardian" else "")+" / HP %d / %d / "%[game.hp,game.health_limit]+workshop.names[game.outfit],19)
 	text(Vector2(750,111),"CATCHES %d / 2"%(int(return_gate.raised[0])+int(return_gate.raised[1])),22,TEAL)
 	draw_rect(Rect2(40,130,300,12),Color("32475a"));draw_rect(Rect2(40,130,300*game.energy/100,12),TEAL if game.role=="Guardian" else AMBER)
 	text(Vector2(355,142),"POSTURE" if game.role=="Guardian" else "RESOLVE",15)
@@ -898,7 +915,7 @@ func look_input(key: int) -> void:
 	elif key in [KEY_1,KEY_2]:
 		character_look.role="Guardian" if key==KEY_1 else "Duelist";character_look.reset_preview()
 	elif key==KEY_TAB:
-		character_look.outfit=(character_look.outfit+1)%CharacterLook.OUTFITS.size();character_look.reset_preview()
+		character_look.outfit=(character_look.outfit+1)%character_look.outfits.size();character_look.reset_preview()
 	elif key==KEY_SPACE:
 		character_look.pose_index=(character_look.pose_index+1)%CharacterLook.POSES.size();character_look.reset_preview()
 	taps.clear()
@@ -925,7 +942,7 @@ func draw_look() -> void:
 			for j in CharacterLook.SKIN.size():draw_circle(at+Vector2(175+j*40,25),9,CharacterLook.SKIN[j])
 	panel(Rect2(565,170,552,330))
 	text(Vector2(590,210),"YOUR LOOK IN MOTION",17,TEAL)
-	text(Vector2(605,255),character_look.role+" / "+Workshop.NAMES[CharacterLook.OUTFITS[character_look.outfit]],19)
+	text(Vector2(605,255),character_look.role+" / "+workshop.names[character_look.outfits[character_look.outfit]],19)
 	text(Vector2(610,289),CharacterLook.POSES[character_look.pose_index]+" / "+look_actor.pose(character_look.preview),18,AMBER)
 	text(Vector2(657,480),"PLAY SIZE",16)
 	text(Vector2(883,480),"3x DETAIL",16)

@@ -1,0 +1,9 @@
+{
+  "schema_version": 1,
+  "fittings": [
+    {"id": "standard", "name": "Standard clothing", "health": 5, "movement": 1.0, "recovery": 18.0, "visual": "plain", "station": null},
+    {"id": "riveted", "name": "Riveted coat", "health": 6, "movement": 0.8, "recovery": 18.0, "visual": "plates", "station": [330, 420]},
+    {"id": "trail", "name": "Trail wrap", "health": 4, "movement": 1.2, "recovery": 18.0, "visual": "strips", "station": [820, 420]},
+    {"id": "field_sash", "name": "Field sash", "health": 4, "movement": 1.0, "recovery": 26.0, "visual": "sash", "station": [575, 420]}
+  ]
+}

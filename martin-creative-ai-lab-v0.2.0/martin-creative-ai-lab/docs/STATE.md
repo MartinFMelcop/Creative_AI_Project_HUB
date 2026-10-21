@@ -1,10 +1,9 @@
 # Current initiative continuity
 
-**Updated:** 2026-10-21 UTC. **Product SEED version:** 0.33.19, unchanged by this
-operating-model intervention. **Verified integration baseline:**
-`411621330f854d560f66eaa6eb75d38686de48aa` on branch `work`, fast-forwarded from
-`3c11446fe86b7eac755650a10aaa8339d7a94470` after fetching remote main. Initial tracked
-and untracked tree was clean. The fetched gamepad work is preserved.
+**Updated:** 2026-10-21 UTC. **Product SEED version:** 0.33.20.
+**Mode:** DEVELOPMENT. **Verified integration baseline:**
+`953faac7587dba96ace1069327c51fbe663a62f1`, branch `work`; fetched main matched HEAD,
+no divergence, and initial tracked/untracked tree was clean.
 
 This file owns active initiative continuity, not detailed gameplay contracts or an
 execution diary. Follow [the operating instructions](prompts/CONTINUOUS_DEVELOPMENT.md)
@@ -21,20 +20,25 @@ Players should express different approaches and consequences through a connected
 adventure; this remains a prototype frontier within the larger original MMORPG vision.
 
 **Implemented and verified baseline:** The current consumer links paid combat
-approaches, optional practice, equipment trade-offs, appearance and local cosmetic
-memory, courier consequences, escort and return-gate objectives. Actual scope and
-commands live in [the prototype guide](../north-star/prototype/README.md). The latest
-[gamepad execution](../evidence/north-star-gamepad/RUN.json) covers injected mapped
-input, both two-goal journeys and source/PCK/Linux delivery. Prior
-[courier](../evidence/north-star-courier-conversation/RUN.json),
-[appearance continuity](../evidence/north-star-appearance-continuity/RUN.json) and
-[native delivery](../evidence/north-star-linux-player/RUN.json) evidence establish
-specific earlier behavior. These records are inherited inspected evidence, not product
-runtime re-executed by the operating-model intervention. Registry maturity is unchanged.
+approaches, rehearsal, equipment trade-offs, appearance/local cosmetic memory,
+courier consequences, escort and return objectives. A validated equipment catalog
+now drives the actual workshop, combat and supported outfit visuals. Authors can
+stage a new identifier and values without editing consumer code. A new reversible
+Field sash trades health for faster unguarded recovery; existing fittings preserve
+all six prior route outcomes and retained gameplay/persistence observations.
+[Current execution](../evidence/north-star-fittings/RUN.json) covers staged authorship,
+malformed-content blocking, all eight fitting/approach journeys through both goals,
+source/PCK/actual Linux release and separate rebuild, plus synthetic native keyboard
+navigation and inspected images. Detailed contracts belong in
+[the prototype guide](../north-star/prototype/README.md) and
+[the authoring interface](../north-star/prototype/data/README.md). Capability statuses
+and the local-prototype maturity remain unchanged; no new laboratory or origin transfer.
 
 **Missing/uncertain:** Distinct final classes/specializations/progression, professions,
 long-term content throughput, social recognition and shared-world networking/server
-trust are not demonstrated by this local adventure. Physical controller mapping,
+trust are not demonstrated by this local adventure. The new authoring path is limited
+to three fitting benches and supported stat/visual axes; it does not author abilities,
+quests, arbitrary effects or a complete RPG build. Physical controller mapping,
 independent player comprehension/enjoyment/accessibility, broad hardware and other OSes
 remain unvalidated. Prototype fiction and mechanics are not final author-approved canon.
 
@@ -45,11 +49,12 @@ functional progress. Production engine is undecided. Unity execution depends on 
 editor/tool availability and licensing, and is not a prerequisite for continuing
 useful prototype work. Shared-world trust/persistence needs separate architecture.
 
-**Next high-value frontier:** Compare a coherent data-driven character/build and
-content-authoring capability in the real adventure against deeper consequential
-encounter/quest variation, representative production-architecture research and genuine
-player observation when available. Select the strongest actual gap before deciding
-scope; more cosmetics, controller cases or packaging are not automatic continuations.
+**Next high-value frontier:** Compare a coherent authored ability/character-build
+consumer or consequential quest/encounter variation with calibrated architecture
+research and real author/player observation when available. Use the current gear
+pipeline only where it serves that outcome; another item variant or catalog expansion
+is not an automatic continuation. Observe whether a content-production constraint or
+an actual experience gap is now the stronger limit before selecting the next scope.
 
 **Continuation/redesign/completion/suspension/retirement:** Continue when a frontier
 materially advances character expression/agency or removes a demonstrated production

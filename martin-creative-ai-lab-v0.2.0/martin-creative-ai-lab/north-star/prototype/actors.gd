@@ -105,12 +105,16 @@ func draw_player(canvas, game, appearance: Dictionary={}) -> void:
 		polygon(canvas,[Vector2(-26,-16),Vector2(8,-13),Vector2(14,0),Vector2(8,13),Vector2(-26,16),Vector2(-15,0)],cloth)
 		canvas.draw_line(Vector2(-18,-11),Vector2(7,-8),color,4,true)
 		canvas.draw_line(Vector2(-18,11),Vector2(7,8),color,4,true)
-	if game.outfit=="riveted":
+	var fitting_visual: String=game.Fittings.visual(game.fittings,game.outfit)
+	if fitting_visual=="plates":
 		for sign in [-1,1]:
 			canvas.draw_rect(Rect2(Vector2(-14,sign*23-5),Vector2(22,10)),Color("b7bec2"))
 			canvas.draw_circle(Vector2(-3,sign*23),2,INK)
-	elif game.outfit=="trail":
+	elif fitting_visual=="strips":
 		for sign in [-1,1]:canvas.draw_line(Vector2(-14,sign*15),Vector2(-31,sign*22),Color("a2dfba"),5,true)
+	elif fitting_visual=="sash":
+		canvas.draw_line(Vector2(-16,-15),Vector2(8,15),Color("8daceb"),7,true)
+		canvas.draw_line(Vector2(-1,8),Vector2(-24,25),Color("8daceb"),5,true)
 	canvas.draw_circle(Vector2(6,0),9,INK)
 	canvas.draw_circle(Vector2(7,0),6,appearance.get("skin",PAPER))
 	var hair:int=appearance.get("hair",0)

@@ -1,0 +1,1316 @@
+{
+  "captures": {
+    "pack": {
+      "driver": "Dummy",
+      "metrics": {
+        "counter-contact": {
+          "channels": 2,
+          "frames": 36864,
+          "pcm_sha256": "b2009a29ecc358964799ed35fdef785ab92fe73b0df10001cc23d5f2ebe990d4",
+          "peak": 4950,
+          "rate": 44100,
+          "rms": 375.535
+        },
+        "crossing-lost": {
+          "channels": 2,
+          "frames": 36864,
+          "pcm_sha256": "8c905242854a93381fe9318e6aca8e020ec6b78d16f11195a480d16f6bfab23e",
+          "peak": 4771,
+          "rate": 44100,
+          "rms": 1163.926
+        },
+        "crossing-won": {
+          "channels": 2,
+          "frames": 32768,
+          "pcm_sha256": "82cb6e8e5bef176187de40d109316b84f97454d12ad6f7dd47e3e92cedfdd0d7",
+          "peak": 4781,
+          "rate": 44100,
+          "rms": 1281.302
+        },
+        "cue-block": {
+          "channels": 1,
+          "frames": 6174,
+          "pcm_sha256": "9317f94bfd087fc287047a7c278c6b80f8fd2b5b73c5457493978401a3ce1575",
+          "peak": 11119,
+          "rate": 22050,
+          "rms": 2104.027
+        },
+        "cue-bolt": {
+          "channels": 1,
+          "frames": 6615,
+          "pcm_sha256": "d05db9727da7b5f5b1887aa5519b4763feca26aedc35633e74c63c3d00a8f781",
+          "peak": 7676,
+          "rate": 22050,
+          "rms": 1560.016
+        },
+        "cue-counter": {
+          "channels": 1,
+          "frames": 3528,
+          "pcm_sha256": "e63021616dad26ec8b6d1866e8a4c314325e212dd7f496c6fe746377746d7ca0",
+          "peak": 9877,
+          "rate": 22050,
+          "rms": 1714.201
+        },
+        "cue-draw": {
+          "channels": 1,
+          "frames": 5292,
+          "pcm_sha256": "39d6278df131fc4777dc135cc2b3cdd6e5f6957eea522ae3d56f62e484b9fce5",
+          "peak": 4758,
+          "rate": 22050,
+          "rms": 1616.993
+        },
+        "cue-hurt": {
+          "channels": 1,
+          "frames": 5292,
+          "pcm_sha256": "fd56d529638f7f37b58d83fc7e4e324819997414ad8fb744d0b5f3d4dc8c7c9d",
+          "peak": 9315,
+          "rate": 22050,
+          "rms": 1747.158
+        },
+        "cue-lost": {
+          "channels": 1,
+          "frames": 12348,
+          "pcm_sha256": "bf9df9cc2300091d66039890301d132e4c545d347fc255c733fe00f92c73967a",
+          "peak": 9521,
+          "rate": 22050,
+          "rms": 2837.905
+        },
+        "cue-pulse": {
+          "channels": 1,
+          "frames": 8379,
+          "pcm_sha256": "f827cf367db9893e9a06841af5af665edcfad6a00657d388070523c6bbae3b8d",
+          "peak": 9742,
+          "rate": 22050,
+          "rms": 1915.307
+        },
+        "cue-won": {
+          "channels": 1,
+          "frames": 13230,
+          "pcm_sha256": "42ad2a280933d983377299af701b43a2e2c38efcf0da439892c55eba4ced493f",
+          "peak": 9540,
+          "rate": 22050,
+          "rms": 2845.558
+        },
+        "duelist-draw": {
+          "channels": 2,
+          "frames": 81920,
+          "pcm_sha256": "32f315fc20d5bd540322b6c48fe2f785ba2d48d5934f4e1c5bb277b7d330a742",
+          "peak": 3933,
+          "rate": 44100,
+          "rms": 428.232
+        },
+        "guardian-block": {
+          "channels": 2,
+          "frames": 77824,
+          "pcm_sha256": "1785b082036ff52fef57f83d18f030a4db3f80e81876359dd8060904ae8113a7",
+          "peak": 5572,
+          "rate": 44100,
+          "rms": 529.348
+        },
+        "muted-block": {
+          "channels": 2,
+          "frames": 77824,
+          "pcm_sha256": "f4bc1e5e95f61af52ffe72c0566e9050f194905d04490007de194223803f8bb3",
+          "peak": 0,
+          "rate": 44100,
+          "rms": 0.0
+        },
+        "paused-silence": {
+          "channels": 2,
+          "frames": 49152,
+          "pcm_sha256": "3381de4ca9f3a477f25989dfc8b744e7916046b7aa369f61a9a2f7dc0963ec9e",
+          "peak": 0,
+          "rate": 44100,
+          "rms": 0.0
+        },
+        "pulse-avoided": {
+          "channels": 2,
+          "frames": 81920,
+          "pcm_sha256": "ca016ce63f29eb37e53402b4aec6715b23743500c58598f4cc72a7e6daee3aa2",
+          "peak": 4882,
+          "rate": 44100,
+          "rms": 434.056
+        },
+        "pulse-damage": {
+          "channels": 2,
+          "frames": 32768,
+          "pcm_sha256": "dd6401f4f8196a8c98ac1c73cdcbd22e9b1f433376116f3b55d4757b0ef6e778",
+          "peak": 4672,
+          "rate": 44100,
+          "rms": 497.528
+        },
+        "riposte-block": {
+          "channels": 2,
+          "frames": 81920,
+          "pcm_sha256": "aeec5edae0c4924c12e189122f08ccd444e12f718a8f8853d641e3ce3dccc0e6",
+          "peak": 5572,
+          "rate": 44100,
+          "rms": 515.945
+        },
+        "title-silence": {
+          "channels": 2,
+          "frames": 36864,
+          "pcm_sha256": "8123c216413f82bbaa0339c27a43d9822c2a043e20662b27c97874429b996e9a",
+          "peak": 0,
+          "rate": 44100,
+          "rms": 0.0
+        }
+      },
+      "mix_rate": 44100.0,
+      "records": [
+        {
+          "bytes": 147456,
+          "combat": {
+            "cargo": 3,
+            "counters": {
+              "blocks": 0,
+              "counters": 0,
+              "courier_hits": 0,
+              "dodges": 0,
+              "player_hits": 0,
+              "redirects": 0,
+              "rejected": 0
+            },
+            "courier_speed": 28.0,
+            "courier_x": 160.0,
+            "enemy_focus": 3,
+            "energy": 100.0,
+            "events": [],
+            "guard_style": "Steady",
+            "hp": 5,
+            "mode": "title",
+            "role": "Guardian",
+            "tick": 0
+          },
+          "name": "title-silence",
+          "rate": 44100,
+          "sound": {
+            "events": [],
+            "muted": false,
+            "voice_limit": 2
+          },
+          "stereo": true
+        },
+        {
+          "bytes": 311296,
+          "combat": {
+            "cargo": 3,
+            "counters": {
+              "blocks": 1,
+              "counters": 0,
+              "courier_hits": 0,
+              "dodges": 0,
+              "player_hits": 0,
+              "redirects": 0,
+              "rejected": 0
+            },
+            "courier_speed": 28.0,
+            "courier_x": 338.0,
+            "enemy_focus": 3,
+            "energy": 66.0,
+            "events": [
+              {
+                "cargo": 3,
+                "energy": 66.0,
+                "hp": 5,
+                "kind": "protected",
+                "tick": 60
+              }
+            ],
+            "guard_style": "Steady",
+            "hp": 5,
+            "mode": "paused",
+            "role": "Guardian",
+            "tick": 60
+          },
+          "name": "guardian-block",
+          "rate": 44100,
+          "sound": {
+            "events": [
+              {
+                "cue": "bolt",
+                "tick": 0
+              },
+              {
+                "cue": "block",
+                "tick": 60
+              }
+            ],
+            "muted": false,
+            "voice_limit": 2
+          },
+          "stereo": true
+        },
+        {
+          "bytes": 327680,
+          "combat": {
+            "cargo": 3,
+            "counters": {
+              "blocks": 0,
+              "counters": 0,
+              "courier_hits": 0,
+              "dodges": 0,
+              "player_hits": 0,
+              "redirects": 1,
+              "rejected": 0
+            },
+            "courier_speed": 28.0,
+            "courier_x": 338.0,
+            "enemy_focus": 3,
+            "energy": 100.0,
+            "events": [
+              {
+                "cargo": 3,
+                "energy": 84.0,
+                "hp": 5,
+                "kind": "redirect",
+                "tick": 1
+              },
+              {
+                "cargo": 3,
+                "energy": 100.0,
+                "hp": 5,
+                "kind": "bolt_missed",
+                "tick": 60
+              }
+            ],
+            "guard_style": "none",
+            "hp": 5,
+            "mode": "paused",
+            "role": "Duelist",
+            "tick": 60
+          },
+          "name": "duelist-draw",
+          "rate": 44100,
+          "sound": {
+            "events": [
+              {
+                "cue": "bolt",
+                "tick": 0
+              },
+              {
+                "cue": "draw",
+                "tick": 1
+              }
+            ],
+            "muted": false,
+            "voice_limit": 2
+          },
+          "stereo": true
+        },
+        {
+          "bytes": 327680,
+          "combat": {
+            "cargo": 3,
+            "counters": {
+              "blocks": 0,
+              "counters": 0,
+              "courier_hits": 0,
+              "dodges": 0,
+              "player_hits": 0,
+              "redirects": 0,
+              "rejected": 0
+            },
+            "courier_speed": 28.0,
+            "courier_x": 338.0,
+            "enemy_focus": 3,
+            "energy": 100.0,
+            "events": [
+              {
+                "cargo": 3,
+                "energy": 100.0,
+                "hp": 5,
+                "kind": "pulse_avoided",
+                "tick": 60
+              }
+            ],
+            "guard_style": "Steady",
+            "hp": 5,
+            "mode": "paused",
+            "role": "Guardian",
+            "tick": 60
+          },
+          "name": "pulse-avoided",
+          "rate": 44100,
+          "sound": {
+            "events": [
+              {
+                "cue": "pulse",
+                "tick": 0
+              }
+            ],
+            "muted": false,
+            "voice_limit": 2
+          },
+          "stereo": true
+        },
+        {
+          "bytes": 311296,
+          "combat": {
+            "cargo": 3,
+            "counters": {
+              "blocks": 1,
+              "counters": 0,
+              "courier_hits": 0,
+              "dodges": 0,
+              "player_hits": 0,
+              "redirects": 0,
+              "rejected": 0
+            },
+            "courier_speed": 28.0,
+            "courier_x": 338.0,
+            "enemy_focus": 3,
+            "energy": 66.0,
+            "events": [
+              {
+                "cargo": 3,
+                "energy": 66.0,
+                "hp": 5,
+                "kind": "protected",
+                "tick": 60
+              }
+            ],
+            "guard_style": "Steady",
+            "hp": 5,
+            "mode": "paused",
+            "role": "Guardian",
+            "tick": 60
+          },
+          "name": "muted-block",
+          "rate": 44100,
+          "sound": {
+            "events": [],
+            "muted": true,
+            "voice_limit": 2
+          },
+          "stereo": true
+        },
+        {
+          "bytes": 196608,
+          "combat": {
+            "cargo": 3,
+            "counters": {
+              "blocks": 0,
+              "counters": 0,
+              "courier_hits": 0,
+              "dodges": 0,
+              "player_hits": 0,
+              "redirects": 0,
+              "rejected": 0
+            },
+            "courier_speed": 28.0,
+            "courier_x": 311.867,
+            "enemy_focus": 3,
+            "energy": 100.0,
+            "events": [],
+            "guard_style": "Steady",
+            "hp": 5,
+            "mode": "paused",
+            "role": "Guardian",
+            "tick": 4
+          },
+          "name": "paused-silence",
+          "rate": 44100,
+          "sound": {
+            "events": [
+              {
+                "cue": "bolt",
+                "tick": 0
+              }
+            ],
+            "muted": false,
+            "voice_limit": 2
+          },
+          "stereo": true
+        },
+        {
+          "bytes": 327680,
+          "combat": {
+            "cargo": 3,
+            "counters": {
+              "blocks": 1,
+              "counters": 0,
+              "courier_hits": 0,
+              "dodges": 0,
+              "player_hits": 0,
+              "redirects": 0,
+              "rejected": 0
+            },
+            "courier_speed": 28.0,
+            "courier_x": 338.0,
+            "enemy_focus": 3,
+            "energy": 75.0,
+            "events": [
+              {
+                "cargo": 3,
+                "energy": 75.0,
+                "hp": 5,
+                "kind": "protected",
+                "tick": 60
+              }
+            ],
+            "guard_style": "Riposte",
+            "hp": 5,
+            "mode": "paused",
+            "role": "Guardian",
+            "tick": 60
+          },
+          "name": "riposte-block",
+          "rate": 44100,
+          "sound": {
+            "events": [
+              {
+                "cue": "bolt",
+                "tick": 0
+              },
+              {
+                "cue": "block",
+                "tick": 60
+              }
+            ],
+            "muted": false,
+            "voice_limit": 2
+          },
+          "stereo": true
+        },
+        {
+          "bytes": 147456,
+          "combat": {
+            "cargo": 3,
+            "counters": {
+              "blocks": 0,
+              "counters": 1,
+              "courier_hits": 0,
+              "dodges": 0,
+              "player_hits": 0,
+              "redirects": 0,
+              "rejected": 0
+            },
+            "courier_speed": 28.0,
+            "courier_x": 160.467,
+            "enemy_focus": 2,
+            "energy": 88.0,
+            "events": [
+              {
+                "cargo": 3,
+                "energy": 88.0,
+                "hp": 5,
+                "kind": "counter",
+                "tick": 1
+              }
+            ],
+            "guard_style": "Steady",
+            "hp": 5,
+            "mode": "play",
+            "role": "Guardian",
+            "tick": 1
+          },
+          "name": "counter-contact",
+          "rate": 44100,
+          "sound": {
+            "events": [
+              {
+                "cue": "counter",
+                "tick": 1
+              }
+            ],
+            "muted": false,
+            "voice_limit": 2
+          },
+          "stereo": true
+        },
+        {
+          "bytes": 131072,
+          "combat": {
+            "cargo": 3,
+            "counters": {
+              "blocks": 0,
+              "counters": 0,
+              "courier_hits": 0,
+              "dodges": 0,
+              "player_hits": 1,
+              "redirects": 0,
+              "rejected": 0
+            },
+            "courier_speed": 28.0,
+            "courier_x": 160.467,
+            "enemy_focus": 3,
+            "energy": 100.0,
+            "events": [
+              {
+                "cargo": 3,
+                "energy": 100.0,
+                "hp": 4,
+                "kind": "pulse_hit",
+                "tick": 1
+              }
+            ],
+            "guard_style": "Steady",
+            "hp": 4,
+            "mode": "play",
+            "role": "Guardian",
+            "tick": 1
+          },
+          "name": "pulse-damage",
+          "rate": 44100,
+          "sound": {
+            "events": [
+              {
+                "cue": "hurt",
+                "tick": 1
+              }
+            ],
+            "muted": false,
+            "voice_limit": 2
+          },
+          "stereo": true
+        },
+        {
+          "bytes": 131072,
+          "combat": {
+            "cargo": 3,
+            "counters": {
+              "blocks": 0,
+              "counters": 0,
+              "courier_hits": 0,
+              "dodges": 0,
+              "player_hits": 0,
+              "redirects": 0,
+              "rejected": 0
+            },
+            "courier_speed": 28.0,
+            "courier_x": 1000.0,
+            "enemy_focus": 3,
+            "energy": 100.0,
+            "events": [],
+            "guard_style": "Steady",
+            "hp": 5,
+            "mode": "won",
+            "role": "Guardian",
+            "tick": 1
+          },
+          "name": "crossing-won",
+          "rate": 44100,
+          "sound": {
+            "events": [
+              {
+                "cue": "won",
+                "tick": 1
+              }
+            ],
+            "muted": false,
+            "voice_limit": 2
+          },
+          "stereo": true
+        },
+        {
+          "bytes": 147456,
+          "combat": {
+            "cargo": 3,
+            "counters": {
+              "blocks": 0,
+              "counters": 0,
+              "courier_hits": 0,
+              "dodges": 0,
+              "player_hits": 1,
+              "redirects": 0,
+              "rejected": 0
+            },
+            "courier_speed": 28.0,
+            "courier_x": 160.467,
+            "enemy_focus": 3,
+            "energy": 100.0,
+            "events": [
+              {
+                "cargo": 3,
+                "energy": 100.0,
+                "hp": 0,
+                "kind": "pulse_hit",
+                "tick": 1
+              }
+            ],
+            "guard_style": "Steady",
+            "hp": 0,
+            "mode": "lost",
+            "role": "Guardian",
+            "tick": 1
+          },
+          "name": "crossing-lost",
+          "rate": 44100,
+          "sound": {
+            "events": [
+              {
+                "cue": "hurt",
+                "tick": 1
+              },
+              {
+                "cue": "lost",
+                "tick": 1
+              }
+            ],
+            "muted": false,
+            "voice_limit": 2
+          },
+          "stereo": true
+        }
+      ]
+    },
+    "source": {
+      "driver": "Dummy",
+      "metrics": {
+        "counter-contact": {
+          "channels": 2,
+          "frames": 32768,
+          "pcm_sha256": "0139ad3b2fac20566932ef115e857a044ce3f8866f5b1d3b9884c65317e7f45a",
+          "peak": 4950,
+          "rate": 44100,
+          "rms": 398.315
+        },
+        "crossing-lost": {
+          "channels": 2,
+          "frames": 36864,
+          "pcm_sha256": "0030e70cb14728e7526ea6be3c5f965dbb225493a52b74b19042b3ba83cac21c",
+          "peak": 4771,
+          "rate": 44100,
+          "rms": 1163.926
+        },
+        "crossing-won": {
+          "channels": 2,
+          "frames": 32768,
+          "pcm_sha256": "82cb6e8e5bef176187de40d109316b84f97454d12ad6f7dd47e3e92cedfdd0d7",
+          "peak": 4781,
+          "rate": 44100,
+          "rms": 1281.302
+        },
+        "cue-block": {
+          "channels": 1,
+          "frames": 6174,
+          "pcm_sha256": "9317f94bfd087fc287047a7c278c6b80f8fd2b5b73c5457493978401a3ce1575",
+          "peak": 11119,
+          "rate": 22050,
+          "rms": 2104.027
+        },
+        "cue-bolt": {
+          "channels": 1,
+          "frames": 6615,
+          "pcm_sha256": "d05db9727da7b5f5b1887aa5519b4763feca26aedc35633e74c63c3d00a8f781",
+          "peak": 7676,
+          "rate": 22050,
+          "rms": 1560.016
+        },
+        "cue-counter": {
+          "channels": 1,
+          "frames": 3528,
+          "pcm_sha256": "e63021616dad26ec8b6d1866e8a4c314325e212dd7f496c6fe746377746d7ca0",
+          "peak": 9877,
+          "rate": 22050,
+          "rms": 1714.201
+        },
+        "cue-draw": {
+          "channels": 1,
+          "frames": 5292,
+          "pcm_sha256": "39d6278df131fc4777dc135cc2b3cdd6e5f6957eea522ae3d56f62e484b9fce5",
+          "peak": 4758,
+          "rate": 22050,
+          "rms": 1616.993
+        },
+        "cue-hurt": {
+          "channels": 1,
+          "frames": 5292,
+          "pcm_sha256": "fd56d529638f7f37b58d83fc7e4e324819997414ad8fb744d0b5f3d4dc8c7c9d",
+          "peak": 9315,
+          "rate": 22050,
+          "rms": 1747.158
+        },
+        "cue-lost": {
+          "channels": 1,
+          "frames": 12348,
+          "pcm_sha256": "bf9df9cc2300091d66039890301d132e4c545d347fc255c733fe00f92c73967a",
+          "peak": 9521,
+          "rate": 22050,
+          "rms": 2837.905
+        },
+        "cue-pulse": {
+          "channels": 1,
+          "frames": 8379,
+          "pcm_sha256": "f827cf367db9893e9a06841af5af665edcfad6a00657d388070523c6bbae3b8d",
+          "peak": 9742,
+          "rate": 22050,
+          "rms": 1915.307
+        },
+        "cue-won": {
+          "channels": 1,
+          "frames": 13230,
+          "pcm_sha256": "42ad2a280933d983377299af701b43a2e2c38efcf0da439892c55eba4ced493f",
+          "peak": 9540,
+          "rate": 22050,
+          "rms": 2845.558
+        },
+        "duelist-draw": {
+          "channels": 2,
+          "frames": 81920,
+          "pcm_sha256": "073f8c7d4ee1a55e79686acaa8b9d1e32e4cf3af177cd654aae1fbfffa1ac6b4",
+          "peak": 3933,
+          "rate": 44100,
+          "rms": 428.232
+        },
+        "guardian-block": {
+          "channels": 2,
+          "frames": 81920,
+          "pcm_sha256": "aeec5edae0c4924c12e189122f08ccd444e12f718a8f8853d641e3ce3dccc0e6",
+          "peak": 5572,
+          "rate": 44100,
+          "rms": 515.945
+        },
+        "muted-block": {
+          "channels": 2,
+          "frames": 81920,
+          "pcm_sha256": "dae4d3dce1bb0a9414f61a65ee07622fa225ec01e6efe6df6e78f9ad5c58480d",
+          "peak": 0,
+          "rate": 44100,
+          "rms": 0.0
+        },
+        "paused-silence": {
+          "channels": 2,
+          "frames": 49152,
+          "pcm_sha256": "3381de4ca9f3a477f25989dfc8b744e7916046b7aa369f61a9a2f7dc0963ec9e",
+          "peak": 0,
+          "rate": 44100,
+          "rms": 0.0
+        },
+        "pulse-avoided": {
+          "channels": 2,
+          "frames": 77824,
+          "pcm_sha256": "955f6b08f7d318202be39537bac3d56679c5a4858f35d87d0d1ce6baeb7e6b6b",
+          "peak": 4882,
+          "rate": 44100,
+          "rms": 445.332
+        },
+        "pulse-damage": {
+          "channels": 2,
+          "frames": 36864,
+          "pcm_sha256": "498435ac4800365bade81e1d5a5cb89b01b88659d14a73e84c2eebf0b257611c",
+          "peak": 4672,
+          "rate": 44100,
+          "rms": 469.074
+        },
+        "riposte-block": {
+          "channels": 2,
+          "frames": 81920,
+          "pcm_sha256": "327f9b489ead3c964eadc00a4fe84bf2a3af668e78afba7c9595ab101e4c31a9",
+          "peak": 5572,
+          "rate": 44100,
+          "rms": 515.945
+        },
+        "title-silence": {
+          "channels": 2,
+          "frames": 32768,
+          "pcm_sha256": "fa43239bcee7b97ca62f007cc68487560a39e19f74f3dde7486db3f98df8e471",
+          "peak": 0,
+          "rate": 44100,
+          "rms": 0.0
+        }
+      },
+      "mix_rate": 44100.0,
+      "records": [
+        {
+          "bytes": 131072,
+          "combat": {
+            "cargo": 3,
+            "counters": {
+              "blocks": 0,
+              "counters": 0,
+              "courier_hits": 0,
+              "dodges": 0,
+              "player_hits": 0,
+              "redirects": 0,
+              "rejected": 0
+            },
+            "courier_speed": 28.0,
+            "courier_x": 160.0,
+            "enemy_focus": 3,
+            "energy": 100.0,
+            "events": [],
+            "guard_style": "Steady",
+            "hp": 5,
+            "mode": "title",
+            "role": "Guardian",
+            "tick": 0
+          },
+          "name": "title-silence",
+          "rate": 44100,
+          "sound": {
+            "events": [],
+            "muted": false,
+            "voice_limit": 2
+          },
+          "stereo": true
+        },
+        {
+          "bytes": 327680,
+          "combat": {
+            "cargo": 3,
+            "counters": {
+              "blocks": 1,
+              "counters": 0,
+              "courier_hits": 0,
+              "dodges": 0,
+              "player_hits": 0,
+              "redirects": 0,
+              "rejected": 0
+            },
+            "courier_speed": 28.0,
+            "courier_x": 338.0,
+            "enemy_focus": 3,
+            "energy": 66.0,
+            "events": [
+              {
+                "cargo": 3,
+                "energy": 66.0,
+                "hp": 5,
+                "kind": "protected",
+                "tick": 60
+              }
+            ],
+            "guard_style": "Steady",
+            "hp": 5,
+            "mode": "paused",
+            "role": "Guardian",
+            "tick": 60
+          },
+          "name": "guardian-block",
+          "rate": 44100,
+          "sound": {
+            "events": [
+              {
+                "cue": "bolt",
+                "tick": 0
+              },
+              {
+                "cue": "block",
+                "tick": 60
+              }
+            ],
+            "muted": false,
+            "voice_limit": 2
+          },
+          "stereo": true
+        },
+        {
+          "bytes": 327680,
+          "combat": {
+            "cargo": 3,
+            "counters": {
+              "blocks": 0,
+              "counters": 0,
+              "courier_hits": 0,
+              "dodges": 0,
+              "player_hits": 0,
+              "redirects": 1,
+              "rejected": 0
+            },
+            "courier_speed": 28.0,
+            "courier_x": 338.0,
+            "enemy_focus": 3,
+            "energy": 100.0,
+            "events": [
+              {
+                "cargo": 3,
+                "energy": 84.0,
+                "hp": 5,
+                "kind": "redirect",
+                "tick": 1
+              },
+              {
+                "cargo": 3,
+                "energy": 100.0,
+                "hp": 5,
+                "kind": "bolt_missed",
+                "tick": 60
+              }
+            ],
+            "guard_style": "none",
+            "hp": 5,
+            "mode": "paused",
+            "role": "Duelist",
+            "tick": 60
+          },
+          "name": "duelist-draw",
+          "rate": 44100,
+          "sound": {
+            "events": [
+              {
+                "cue": "bolt",
+                "tick": 0
+              },
+              {
+                "cue": "draw",
+                "tick": 1
+              }
+            ],
+            "muted": false,
+            "voice_limit": 2
+          },
+          "stereo": true
+        },
+        {
+          "bytes": 311296,
+          "combat": {
+            "cargo": 3,
+            "counters": {
+              "blocks": 0,
+              "counters": 0,
+              "courier_hits": 0,
+              "dodges": 0,
+              "player_hits": 0,
+              "redirects": 0,
+              "rejected": 0
+            },
+            "courier_speed": 28.0,
+            "courier_x": 338.0,
+            "enemy_focus": 3,
+            "energy": 100.0,
+            "events": [
+              {
+                "cargo": 3,
+                "energy": 100.0,
+                "hp": 5,
+                "kind": "pulse_avoided",
+                "tick": 60
+              }
+            ],
+            "guard_style": "Steady",
+            "hp": 5,
+            "mode": "paused",
+            "role": "Guardian",
+            "tick": 60
+          },
+          "name": "pulse-avoided",
+          "rate": 44100,
+          "sound": {
+            "events": [
+              {
+                "cue": "pulse",
+                "tick": 0
+              }
+            ],
+            "muted": false,
+            "voice_limit": 2
+          },
+          "stereo": true
+        },
+        {
+          "bytes": 327680,
+          "combat": {
+            "cargo": 3,
+            "counters": {
+              "blocks": 1,
+              "counters": 0,
+              "courier_hits": 0,
+              "dodges": 0,
+              "player_hits": 0,
+              "redirects": 0,
+              "rejected": 0
+            },
+            "courier_speed": 28.0,
+            "courier_x": 338.0,
+            "enemy_focus": 3,
+            "energy": 66.0,
+            "events": [
+              {
+                "cargo": 3,
+                "energy": 66.0,
+                "hp": 5,
+                "kind": "protected",
+                "tick": 60
+              }
+            ],
+            "guard_style": "Steady",
+            "hp": 5,
+            "mode": "paused",
+            "role": "Guardian",
+            "tick": 60
+          },
+          "name": "muted-block",
+          "rate": 44100,
+          "sound": {
+            "events": [],
+            "muted": true,
+            "voice_limit": 2
+          },
+          "stereo": true
+        },
+        {
+          "bytes": 196608,
+          "combat": {
+            "cargo": 3,
+            "counters": {
+              "blocks": 0,
+              "counters": 0,
+              "courier_hits": 0,
+              "dodges": 0,
+              "player_hits": 0,
+              "redirects": 0,
+              "rejected": 0
+            },
+            "courier_speed": 28.0,
+            "courier_x": 311.867,
+            "enemy_focus": 3,
+            "energy": 100.0,
+            "events": [],
+            "guard_style": "Steady",
+            "hp": 5,
+            "mode": "paused",
+            "role": "Guardian",
+            "tick": 4
+          },
+          "name": "paused-silence",
+          "rate": 44100,
+          "sound": {
+            "events": [
+              {
+                "cue": "bolt",
+                "tick": 0
+              }
+            ],
+            "muted": false,
+            "voice_limit": 2
+          },
+          "stereo": true
+        },
+        {
+          "bytes": 327680,
+          "combat": {
+            "cargo": 3,
+            "counters": {
+              "blocks": 1,
+              "counters": 0,
+              "courier_hits": 0,
+              "dodges": 0,
+              "player_hits": 0,
+              "redirects": 0,
+              "rejected": 0
+            },
+            "courier_speed": 28.0,
+            "courier_x": 338.0,
+            "enemy_focus": 3,
+            "energy": 75.0,
+            "events": [
+              {
+                "cargo": 3,
+                "energy": 75.0,
+                "hp": 5,
+                "kind": "protected",
+                "tick": 60
+              }
+            ],
+            "guard_style": "Riposte",
+            "hp": 5,
+            "mode": "paused",
+            "role": "Guardian",
+            "tick": 60
+          },
+          "name": "riposte-block",
+          "rate": 44100,
+          "sound": {
+            "events": [
+              {
+                "cue": "bolt",
+                "tick": 0
+              },
+              {
+                "cue": "block",
+                "tick": 60
+              }
+            ],
+            "muted": false,
+            "voice_limit": 2
+          },
+          "stereo": true
+        },
+        {
+          "bytes": 131072,
+          "combat": {
+            "cargo": 3,
+            "counters": {
+              "blocks": 0,
+              "counters": 1,
+              "courier_hits": 0,
+              "dodges": 0,
+              "player_hits": 0,
+              "redirects": 0,
+              "rejected": 0
+            },
+            "courier_speed": 28.0,
+            "courier_x": 160.467,
+            "enemy_focus": 2,
+            "energy": 88.0,
+            "events": [
+              {
+                "cargo": 3,
+                "energy": 88.0,
+                "hp": 5,
+                "kind": "counter",
+                "tick": 1
+              }
+            ],
+            "guard_style": "Steady",
+            "hp": 5,
+            "mode": "play",
+            "role": "Guardian",
+            "tick": 1
+          },
+          "name": "counter-contact",
+          "rate": 44100,
+          "sound": {
+            "events": [
+              {
+                "cue": "counter",
+                "tick": 1
+              }
+            ],
+            "muted": false,
+            "voice_limit": 2
+          },
+          "stereo": true
+        },
+        {
+          "bytes": 147456,
+          "combat": {
+            "cargo": 3,
+            "counters": {
+              "blocks": 0,
+              "counters": 0,
+              "courier_hits": 0,
+              "dodges": 0,
+              "player_hits": 1,
+              "redirects": 0,
+              "rejected": 0
+            },
+            "courier_speed": 28.0,
+            "courier_x": 160.467,
+            "enemy_focus": 3,
+            "energy": 100.0,
+            "events": [
+              {
+                "cargo": 3,
+                "energy": 100.0,
+                "hp": 4,
+                "kind": "pulse_hit",
+                "tick": 1
+              }
+            ],
+            "guard_style": "Steady",
+            "hp": 4,
+            "mode": "play",
+            "role": "Guardian",
+            "tick": 1
+          },
+          "name": "pulse-damage",
+          "rate": 44100,
+          "sound": {
+            "events": [
+              {
+                "cue": "hurt",
+                "tick": 1
+              }
+            ],
+            "muted": false,
+            "voice_limit": 2
+          },
+          "stereo": true
+        },
+        {
+          "bytes": 131072,
+          "combat": {
+            "cargo": 3,
+            "counters": {
+              "blocks": 0,
+              "counters": 0,
+              "courier_hits": 0,
+              "dodges": 0,
+              "player_hits": 0,
+              "redirects": 0,
+              "rejected": 0
+            },
+            "courier_speed": 28.0,
+            "courier_x": 1000.0,
+            "enemy_focus": 3,
+            "energy": 100.0,
+            "events": [],
+            "guard_style": "Steady",
+            "hp": 5,
+            "mode": "won",
+            "role": "Guardian",
+            "tick": 1
+          },
+          "name": "crossing-won",
+          "rate": 44100,
+          "sound": {
+            "events": [
+              {
+                "cue": "won",
+                "tick": 1
+              }
+            ],
+            "muted": false,
+            "voice_limit": 2
+          },
+          "stereo": true
+        },
+        {
+          "bytes": 147456,
+          "combat": {
+            "cargo": 3,
+            "counters": {
+              "blocks": 0,
+              "counters": 0,
+              "courier_hits": 0,
+              "dodges": 0,
+              "player_hits": 1,
+              "redirects": 0,
+              "rejected": 0
+            },
+            "courier_speed": 28.0,
+            "courier_x": 160.467,
+            "enemy_focus": 3,
+            "energy": 100.0,
+            "events": [
+              {
+                "cargo": 3,
+                "energy": 100.0,
+                "hp": 0,
+                "kind": "pulse_hit",
+                "tick": 1
+              }
+            ],
+            "guard_style": "Steady",
+            "hp": 0,
+            "mode": "lost",
+            "role": "Guardian",
+            "tick": 1
+          },
+          "name": "crossing-lost",
+          "rate": 44100,
+          "sound": {
+            "events": [
+              {
+                "cue": "hurt",
+                "tick": 1
+              },
+              {
+                "cue": "lost",
+                "tick": 1
+              }
+            ],
+            "muted": false,
+            "voice_limit": 2
+          },
+          "stereo": true
+        }
+      ]
+    }
+  },
+  "limit": "Actual software AudioServer output, not hardware latency, listening quality, recognition or accessibility validation.",
+  "schema_version": 1
+}

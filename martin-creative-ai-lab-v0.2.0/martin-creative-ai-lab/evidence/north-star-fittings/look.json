@@ -1,0 +1,69 @@
+{
+  "checks": {
+    "failed": 0,
+    "passed": 48
+  },
+  "consumer_hashes": {
+    "actors.gd": "c1cb826fa57e50267323e6d74787d5aa4e59f8e58710f60ec632a6b275f19217",
+    "arena.gd": "ca4edc823d8f1f9615afa9dba3949521b79afe1700f9162a3f9710059ce55c98",
+    "character_look.gd": "494e90189ffbddc383c829d5d5ff9ad4cf10a0c496e52374e3a2adba3ef11e48",
+    "tests/look_checks.gd": "d1f7f9b6a712d4068baf536ac20cbcd60505be57b00eaef159fbe53b4c96d941"
+  },
+  "journeys": [
+    {
+      "crossing_tick": 1648,
+      "custom": false,
+      "hp": 3,
+      "look": {
+        "dye": 0,
+        "hair": 0,
+        "skin": 0
+      },
+      "mode": "won",
+      "return_tick": 744,
+      "role": "Guardian"
+    },
+    {
+      "crossing_tick": 1648,
+      "custom": true,
+      "hp": 3,
+      "look": {
+        "dye": 3,
+        "hair": 2,
+        "skin": 3
+      },
+      "mode": "won",
+      "return_tick": 744,
+      "role": "Guardian"
+    },
+    {
+      "crossing_tick": 1347,
+      "custom": false,
+      "hp": 4,
+      "look": {
+        "dye": 0,
+        "hair": 0,
+        "skin": 0
+      },
+      "mode": "won",
+      "return_tick": 717,
+      "role": "Duelist"
+    },
+    {
+      "crossing_tick": 1347,
+      "custom": true,
+      "hp": 4,
+      "look": {
+        "dye": 3,
+        "hair": 2,
+        "skin": 3
+      },
+      "mode": "won",
+      "return_tick": 717,
+      "role": "Duelist"
+    }
+  ],
+  "native_observation_sha256": "86efb6c1a469f6ed06cdcfd502ee205dfaccb738e1572a7214600444077b1733",
+  "schema_version": 1,
+  "scope": "Native editor and equal complete journeys; visual/identity quality requires actual inspection and independent people."
+}

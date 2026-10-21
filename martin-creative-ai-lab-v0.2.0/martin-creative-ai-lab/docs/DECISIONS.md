@@ -2420,3 +2420,59 @@ or unreliable authority recovery. These are bounded recovery and policy checks, 
 guarantee of future model judgment or independent human/product validation. No token,
 cost or storage saving is claimed from document length. No recurring governance audit,
 new management registry or automatic next task is introduced.
+
+
+## ADR-091 — consume authored equipment in the connected adventure
+
+**Date:** 2026-10-21 UTC. **Status:** implemented; DEVELOPMENT, SEED 0.33.20.
+**Baseline:** `953faac7587dba96ace1069327c51fbe663a62f1`, clean `work`, fetched main
+matched. This continues the character-agency initiative, not operating-model work.
+
+**Selection:** Existing workshop definitions duplicated IDs, names, health/mobility
+values and presentation across scripts. A consumed authoring path increases the
+ability to produce content while adding a concrete player trade-off. Deeper quests,
+a standalone lab program, engine research and creative-origin work remain credible;
+no stronger blocking defect was established in those alternatives. Available Godot
+supports real verification. No Unity execution or production-engine comparison is claimed.
+
+**Implementation:** One bounded JSON catalog and one runtime validator supply combat,
+workshop names/stations/inspection and supported outfit visuals, including appearance
+previews. An authoring CLI stages candidate bytes with unchanged consumer code and
+executes actual preparation, escort and return goals. Field sash sacrifices one health
+for 26/s rather than 18/s unguarded recovery, preserving normal movement. A matched
+24-energy prefix permits a paid step sooner; this is a mechanical distinction, not
+proof of balance or preference. The original three outfits keep their behavior.
+
+Content errors block the actual scene; schema/type/size/placement errors never silently
+substitute defaults. One blank, deliberate completion/recycle, no live equipment swap,
+standard rehearsal and actual arrival-health carry remain. The finite room supports
+three benches and known effects/motifs, not arbitrary scripts, a generic RPG catalog or
+profession progression. Linux 0.3.0 and the current PCK include the data. Export source
+identities now bind the JSON; older ZIPs and profile formats remain preserved.
+
+**Knowledge:** ENG-015 materially informs one contract for real consumers. SCI-017
+informs published-baseline comparisons, invalid-content controls and actual destination
+execution. CRE-022/023 remain hypotheses informing reversible choices without a grind
+or permanent profession obligation. No new canon, human validation or origin extraction.
+
+**Verification:** New data-driven checks execute all eight approach/fitting combinations
+through both objectives identically in source, delivered PCK and actual Linux release;
+a separately staged rebuild matches. An additional new ID, health, movement and recovery
+execute without code edits. Forty-three Python regressions pass, including malformed
+structural types, report/input preservation and an altered JSON payload with recalculated
+PCK/ZIP checksums. The latter is still rejected by source SHA-256 identity.
+
+Retained 358 native gameplay/profile controls and the six previous fitting routes match
+the published baseline after excluding explicit source hashes. Other affected scene,
+route, dialogue, appearance, sound, gamepad and release suites are rerun and bound in
+[execution](../evidence/north-star-fittings/RUN.json). Required source/reference/Brain
+and manifest gates remain. Existing CI checks are retained and point at current evidence;
+new authoring/delivery checks use the same consumer, including the independently rebuilt ZIP.
+
+**Observed correction/limits:** The first real-window check found an unsupported string
+format that headless checks could not expose. Corrected it, clarified recovery as
+unguarded (also while moving), moved the overlapping YOU label and reran source/PCK
+keyboard navigation for all three crafted pieces. Inspected native workshop/play images
+show the new sash and readable trade-offs. These are synthetic OS keys and agent image
+inspection, not physical controller, human author/player, enjoyment, accessibility or
+balance validation. No MMO readiness, final class/profession canon or token saving is claimed.

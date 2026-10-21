@@ -53,7 +53,7 @@ func run(target,output: String) -> Dictionary:
 	check(scene.character_look.applied.skin==1 and not scene.pad.held(JOY_BUTTON_A),"South applies appearance without interaction leakage")
 	tap(JOY_BUTTON_LEFT_SHOULDER);check(scene.workshop.active,"Mapped shoulder opens workshop")
 	for i in 100:
-		var destination:Vector2=scene.Workshop.STATIONS.riveted-scene.workshop.player
+		var destination:Vector2=scene.workshop.stations.riveted-scene.workshop.player
 		if destination.length()<10:break
 		sticks(destination.normalized());scene._physics_process(1.0/60)
 	neutral();check(scene.workshop.near_station()=="riveted","Mapped movement reaches actual fitting station")

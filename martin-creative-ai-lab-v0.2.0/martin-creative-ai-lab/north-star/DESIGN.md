@@ -337,3 +337,26 @@ Keyboard remaps remain independent. SCI-061 requires actual device/user context;
 synthetic event journeys and agent image inspection cannot establish comfort,
 accessibility, recognizable identity or preference. Physical mapping, pad remapping
 and independent experience evaluation remain open. [Execution](../evidence/north-star-gamepad/RUN.json).
+
+
+## Authored fitting production — experimental
+
+The current author mandate supports scalable content production and distinctive
+character choices. CRE-022/023 are hypotheses informing bounded reversible equipment,
+not approved professions, permanent power or final item canon. Existing resistance
+and mobility fittings retain their contracts. A new Field sash gives up one health
+for 26/s rather than 18/s unguarded recovery, with normal movement. It carries an
+original blue sash through gameplay and actual appearance previews. Guard drain,
+energy cap, ability costs, contact, courier rules and reward eligibility do not change.
+
+The same validated catalog drives real stats, bench names/positions, comparative
+information and supported visual motifs. An authoring check stages a new ID and values
+with unchanged code, then executes actual workshop, escort and return consumers.
+The finite room supports three benches; new effects or expanded capacity require
+implementation. This demonstrates a bounded production path, not arbitrary generated
+items, profession progression, validated balance, player preference or engine choice.
+
+ENG-015 informs one data contract with real consumers. SCI-017 informs prior-fitting
+comparisons and malformed-content controls. Revisit the trade-off and production
+interface when actual authors/players use them or encounter a new content requirement.
+See [execution](../evidence/north-star-fittings/RUN.json) and [STATE](../docs/STATE.md).

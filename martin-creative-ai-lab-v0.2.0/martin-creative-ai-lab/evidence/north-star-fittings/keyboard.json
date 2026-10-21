@@ -1,0 +1,607 @@
+{
+  "deliveries": {
+    "pack": {
+      "crossings": [
+        {
+          "hp": 6,
+          "outfit": {
+            "health_limit": 6,
+            "id": "riveted",
+            "movement_scale": 0.8
+          },
+          "role": "Guardian"
+        },
+        {
+          "hp": 4,
+          "outfit": {
+            "health_limit": 4,
+            "id": "trail",
+            "movement_scale": 1.2
+          },
+          "role": "Duelist"
+        },
+        {
+          "hp": 4,
+          "outfit": {
+            "health_limit": 4,
+            "id": "field_sash",
+            "movement_scale": 1.0,
+            "recovery_rate": 26.0
+          },
+          "role": "Duelist"
+        }
+      ],
+      "heavy": {
+        "active": true,
+        "blank": 0,
+        "made": 1,
+        "needs_release": true,
+        "outfit": "riveted",
+        "paused": false,
+        "player": [
+          320.833,
+          444.167
+        ],
+        "progress": 0.0,
+        "recycled": 0,
+        "target": ""
+      },
+      "heavy_samples": [
+        {
+          "active": true,
+          "blank": 1,
+          "made": 0,
+          "needs_release": false,
+          "outfit": "standard",
+          "paused": false,
+          "player": [
+            320.833,
+            444.167
+          ],
+          "progress": 0.15,
+          "recycled": 0,
+          "target": "riveted"
+        },
+        {
+          "active": true,
+          "blank": 1,
+          "made": 0,
+          "needs_release": false,
+          "outfit": "standard",
+          "paused": false,
+          "player": [
+            320.833,
+            444.167
+          ],
+          "progress": 0.4,
+          "recycled": 0,
+          "target": "riveted"
+        },
+        {
+          "active": true,
+          "blank": 1,
+          "made": 0,
+          "needs_release": false,
+          "outfit": "standard",
+          "paused": false,
+          "player": [
+            320.833,
+            444.167
+          ],
+          "progress": 0.783333,
+          "recycled": 0,
+          "target": "riveted"
+        },
+        {
+          "active": true,
+          "blank": 0,
+          "made": 1,
+          "needs_release": true,
+          "outfit": "riveted",
+          "paused": false,
+          "player": [
+            320.833,
+            444.167
+          ],
+          "progress": 0.0,
+          "recycled": 0,
+          "target": ""
+        }
+      ],
+      "light": {
+        "active": true,
+        "blank": 0,
+        "made": 2,
+        "needs_release": true,
+        "outfit": "trail",
+        "paused": false,
+        "player": [
+          829.168,
+          440.0
+        ],
+        "progress": 0.0,
+        "recycled": 1,
+        "target": ""
+      },
+      "light_samples": [
+        {
+          "active": true,
+          "blank": 1,
+          "made": 1,
+          "needs_release": false,
+          "outfit": "standard",
+          "paused": false,
+          "player": [
+            829.168,
+            440.0
+          ],
+          "progress": 0.166667,
+          "recycled": 1,
+          "target": "trail"
+        },
+        {
+          "active": true,
+          "blank": 1,
+          "made": 1,
+          "needs_release": false,
+          "outfit": "standard",
+          "paused": false,
+          "player": [
+            829.168,
+            440.0
+          ],
+          "progress": 0.433333,
+          "recycled": 1,
+          "target": "trail"
+        },
+        {
+          "active": true,
+          "blank": 1,
+          "made": 1,
+          "needs_release": false,
+          "outfit": "standard",
+          "paused": false,
+          "player": [
+            829.168,
+            440.0
+          ],
+          "progress": 0.733333,
+          "recycled": 1,
+          "target": "trail"
+        },
+        {
+          "active": true,
+          "blank": 0,
+          "made": 2,
+          "needs_release": true,
+          "outfit": "trail",
+          "paused": false,
+          "player": [
+            829.168,
+            440.0
+          ],
+          "progress": 0.0,
+          "recycled": 1,
+          "target": ""
+        }
+      ],
+      "recycled": {
+        "active": true,
+        "blank": 1,
+        "made": 1,
+        "needs_release": false,
+        "outfit": "standard",
+        "paused": false,
+        "player": [
+          575.0,
+          540.0
+        ],
+        "progress": 0.0,
+        "recycled": 1,
+        "target": ""
+      },
+      "sash": {
+        "active": true,
+        "blank": 0,
+        "made": 3,
+        "needs_release": true,
+        "outfit": "field_sash",
+        "paused": false,
+        "player": [
+          575.0,
+          448.333
+        ],
+        "progress": 0.0,
+        "recycled": 2,
+        "target": ""
+      },
+      "sash_samples": [
+        {
+          "active": true,
+          "blank": 1,
+          "made": 2,
+          "needs_release": false,
+          "outfit": "standard",
+          "paused": false,
+          "player": [
+            575.0,
+            448.333
+          ],
+          "progress": 0.2,
+          "recycled": 2,
+          "target": "field_sash"
+        },
+        {
+          "active": true,
+          "blank": 1,
+          "made": 2,
+          "needs_release": false,
+          "outfit": "standard",
+          "paused": false,
+          "player": [
+            575.0,
+            448.333
+          ],
+          "progress": 0.516667,
+          "recycled": 2,
+          "target": "field_sash"
+        },
+        {
+          "active": true,
+          "blank": 1,
+          "made": 2,
+          "needs_release": false,
+          "outfit": "standard",
+          "paused": false,
+          "player": [
+            575.0,
+            448.333
+          ],
+          "progress": 0.8,
+          "recycled": 2,
+          "target": "field_sash"
+        },
+        {
+          "active": true,
+          "blank": 0,
+          "made": 3,
+          "needs_release": true,
+          "outfit": "field_sash",
+          "paused": false,
+          "player": [
+            575.0,
+            448.333
+          ],
+          "progress": 0.0,
+          "recycled": 2,
+          "target": ""
+        }
+      ]
+    },
+    "source": {
+      "crossings": [
+        {
+          "hp": 6,
+          "outfit": {
+            "health_limit": 6,
+            "id": "riveted",
+            "movement_scale": 0.8
+          },
+          "role": "Guardian"
+        },
+        {
+          "hp": 4,
+          "outfit": {
+            "health_limit": 4,
+            "id": "trail",
+            "movement_scale": 1.2
+          },
+          "role": "Duelist"
+        },
+        {
+          "hp": 4,
+          "outfit": {
+            "health_limit": 4,
+            "id": "field_sash",
+            "movement_scale": 1.0,
+            "recovery_rate": 26.0
+          },
+          "role": "Duelist"
+        }
+      ],
+      "heavy": {
+        "active": true,
+        "blank": 0,
+        "made": 1,
+        "needs_release": true,
+        "outfit": "riveted",
+        "paused": false,
+        "player": [
+          333.333,
+          444.167
+        ],
+        "progress": 0.0,
+        "recycled": 0,
+        "target": ""
+      },
+      "heavy_samples": [
+        {
+          "active": true,
+          "blank": 1,
+          "made": 0,
+          "needs_release": false,
+          "outfit": "standard",
+          "paused": false,
+          "player": [
+            333.333,
+            444.167
+          ],
+          "progress": 0.133333,
+          "recycled": 0,
+          "target": "riveted"
+        },
+        {
+          "active": true,
+          "blank": 1,
+          "made": 0,
+          "needs_release": false,
+          "outfit": "standard",
+          "paused": false,
+          "player": [
+            333.333,
+            444.167
+          ],
+          "progress": 0.416667,
+          "recycled": 0,
+          "target": "riveted"
+        },
+        {
+          "active": true,
+          "blank": 1,
+          "made": 0,
+          "needs_release": false,
+          "outfit": "standard",
+          "paused": false,
+          "player": [
+            333.333,
+            444.167
+          ],
+          "progress": 0.666667,
+          "recycled": 0,
+          "target": "riveted"
+        },
+        {
+          "active": true,
+          "blank": 1,
+          "made": 0,
+          "needs_release": false,
+          "outfit": "standard",
+          "paused": false,
+          "player": [
+            333.333,
+            444.167
+          ],
+          "progress": 0.933333,
+          "recycled": 0,
+          "target": "riveted"
+        },
+        {
+          "active": true,
+          "blank": 0,
+          "made": 1,
+          "needs_release": true,
+          "outfit": "riveted",
+          "paused": false,
+          "player": [
+            333.333,
+            444.167
+          ],
+          "progress": 0.0,
+          "recycled": 0,
+          "target": ""
+        }
+      ],
+      "light": {
+        "active": true,
+        "blank": 0,
+        "made": 2,
+        "needs_release": true,
+        "outfit": "trail",
+        "paused": false,
+        "player": [
+          820.835,
+          444.167
+        ],
+        "progress": 0.0,
+        "recycled": 1,
+        "target": ""
+      },
+      "light_samples": [
+        {
+          "active": true,
+          "blank": 1,
+          "made": 1,
+          "needs_release": false,
+          "outfit": "standard",
+          "paused": false,
+          "player": [
+            820.835,
+            444.167
+          ],
+          "progress": 0.1,
+          "recycled": 1,
+          "target": "trail"
+        },
+        {
+          "active": true,
+          "blank": 1,
+          "made": 1,
+          "needs_release": false,
+          "outfit": "standard",
+          "paused": false,
+          "player": [
+            820.835,
+            444.167
+          ],
+          "progress": 0.35,
+          "recycled": 1,
+          "target": "trail"
+        },
+        {
+          "active": true,
+          "blank": 1,
+          "made": 1,
+          "needs_release": false,
+          "outfit": "standard",
+          "paused": false,
+          "player": [
+            820.835,
+            444.167
+          ],
+          "progress": 0.616667,
+          "recycled": 1,
+          "target": "trail"
+        },
+        {
+          "active": true,
+          "blank": 1,
+          "made": 1,
+          "needs_release": false,
+          "outfit": "standard",
+          "paused": false,
+          "player": [
+            820.835,
+            444.167
+          ],
+          "progress": 0.883333,
+          "recycled": 1,
+          "target": "trail"
+        },
+        {
+          "active": true,
+          "blank": 0,
+          "made": 2,
+          "needs_release": true,
+          "outfit": "trail",
+          "paused": false,
+          "player": [
+            820.835,
+            444.167
+          ],
+          "progress": 0.0,
+          "recycled": 1,
+          "target": ""
+        }
+      ],
+      "recycled": {
+        "active": true,
+        "blank": 1,
+        "made": 1,
+        "needs_release": false,
+        "outfit": "standard",
+        "paused": false,
+        "player": [
+          575.0,
+          540.0
+        ],
+        "progress": 0.0,
+        "recycled": 1,
+        "target": ""
+      },
+      "sash": {
+        "active": true,
+        "blank": 0,
+        "made": 3,
+        "needs_release": true,
+        "outfit": "field_sash",
+        "paused": false,
+        "player": [
+          575.0,
+          444.167
+        ],
+        "progress": 0.0,
+        "recycled": 2,
+        "target": ""
+      },
+      "sash_samples": [
+        {
+          "active": true,
+          "blank": 1,
+          "made": 2,
+          "needs_release": false,
+          "outfit": "standard",
+          "paused": false,
+          "player": [
+            575.0,
+            444.167
+          ],
+          "progress": 0.116667,
+          "recycled": 2,
+          "target": "field_sash"
+        },
+        {
+          "active": true,
+          "blank": 1,
+          "made": 2,
+          "needs_release": false,
+          "outfit": "standard",
+          "paused": false,
+          "player": [
+            575.0,
+            444.167
+          ],
+          "progress": 0.416667,
+          "recycled": 2,
+          "target": "field_sash"
+        },
+        {
+          "active": true,
+          "blank": 1,
+          "made": 2,
+          "needs_release": false,
+          "outfit": "standard",
+          "paused": false,
+          "player": [
+            575.0,
+            444.167
+          ],
+          "progress": 0.666667,
+          "recycled": 2,
+          "target": "field_sash"
+        },
+        {
+          "active": true,
+          "blank": 1,
+          "made": 2,
+          "needs_release": false,
+          "outfit": "standard",
+          "paused": false,
+          "player": [
+            575.0,
+            444.167
+          ],
+          "progress": 0.966667,
+          "recycled": 2,
+          "target": "field_sash"
+        },
+        {
+          "active": true,
+          "blank": 0,
+          "made": 3,
+          "needs_release": true,
+          "outfit": "field_sash",
+          "paused": false,
+          "player": [
+            575.0,
+            444.167
+          ],
+          "progress": 0.0,
+          "recycled": 2,
+          "target": ""
+        }
+      ]
+    }
+  },
+  "kind": "synthetic_os_input",
+  "scope": "Actual native keyboard navigation, range rejection, craft, undo and equipped crossing. Not a human study or physical timing claim."
+}
