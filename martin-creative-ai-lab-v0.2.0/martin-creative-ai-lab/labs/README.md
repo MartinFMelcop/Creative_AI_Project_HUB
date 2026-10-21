@@ -1,10 +1,12 @@
 # Applied research laboratories
 
 The HUB remains a **Design-Driven technology portfolio developed with generative
-AI**. Laboratories turn existing capabilities into instruments for explicit
-questions, with most new investment directed toward demonstrable benefit to
-**Virgo Diamond: The North Star**. A laboratory is an executed research unit,
-not a renamed game directory or a promise of MMORPG readiness.
+AI**. Laboratories investigate explicit questions and develop useful instruments
+and capabilities. **Virgo Diamond: The North Star** is the principal long-term
+product; laboratory investment competes with direct product and other portfolio
+work under the [operating instructions](../docs/prompts/CONTINUOUS_DEVELOPMENT.md).
+Laboratory maturity requires actual methods and results. Directory names and
+research plans do not establish execution or MMORPG readiness.
 
 [The origin inventory](origins.json) records P01–P11's reusable capabilities,
 actual source/evidence paths, existing consumers, dependencies, preservation
@@ -64,9 +66,11 @@ interpretation and the next validity boundary.
 
 All eleven are **historical origins in controlled transition**, with no obligation
 to ship independent game/tool releases. Their source, media, tests and old delivery
-artifacts remain available; this transition moves no source directory and deletes
-no runtime. P02's old laboratory label and P07/P08's production labels are historical
-provenance, not additional implemented laboratories. Existing validated transfers
+artifacts remain available. Future transformation, consolidation or retirement follows
+the [operating lifecycle rules](../docs/prompts/CONTINUOUS_DEVELOPMENT.md) and actual
+consumer, preservation and validation obligations. P02's old laboratory label and
+P07/P08's production labels are historical provenance, not additional implemented
+laboratories. Existing validated transfers
 and integrated assets retain their named **origin** consumers and scope.
 
 ## Candidate questions
@@ -86,16 +90,24 @@ These are research destinations, not created laboratories or a mandatory backlog
 
 ## Evidence and reuse boundary
 
-Before improving an instrument, complete the three-brain activation in
-[AGENTS.md](../AGENTS.md): classify engineering/science/creative relevance,
-retrieve complete pertinent chapters and consult contextual findings in
-[knowledge/](../knowledge/README.md). Keep derived observations and their validity
-limits there; do not rewrite or duplicate the durable source volumes.
+Use selective knowledge retrieval from the [brain library](../brains/README.md)
+when it informs the question, method or evaluation. Relevant contextual findings
+belong in [knowledge/](../knowledge/README.md), with their validity limits; preserve
+the protected source volumes and record only material contributions.
 
-Each implemented instrument needs a question, refutable prediction, identified
-inputs, appropriate control, executable collection path, actual results and
-limits. Prefer the smallest intervention in an existing capability. Keep negative
-and inconclusive outcomes; a simulation or scripted runtime is not a human study.
+An implemented laboratory establishes a meaningful question or capability,
+an executable or otherwise verifiable method, relevant inputs and controls,
+actual results or demonstrated tools, assumptions, limits and a practical
+contribution to a product, technology or decision. Use refutable predictions when
+applicable. Keep meaningful negative and inconclusive outcomes; a simulation or
+scripted runtime is not a human study.
+
+A substantial research program may continue across sessions and develop coordinated
+instruments using several origins. Reuse existing methods where suitable and choose
+scope by the value and feasibility of the whole contribution. Recover its progress,
+dependencies and next frontier through the existing initiative records described in
+the [operating instructions](../docs/prompts/CONTINUOUS_DEVELOPMENT.md). Consolidate
+or retire structures when their contribution no longer justifies maintenance.
 
 [North Star's capability catalog](../north-star/capabilities.json) separately
 tracks origin verification and destination use. A laboratory consumer is not a

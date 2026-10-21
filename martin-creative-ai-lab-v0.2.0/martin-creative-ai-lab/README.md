@@ -117,9 +117,12 @@ establish destination integration. A North Star contribution advances only with
 a real destination consumer and appropriate execution evidence. Creative Brain
 hypotheses remain hypotheses until the relevant authorial or experiential decision.
 
-The HUB remains a technology portfolio. Most new investment should benefit Virgo
-Diamond's distinctive character experience, demonstrated through bounded research
-and implementation rather than premature MMORPG infrastructure or release counts.
+The HUB remains a technology portfolio with Virgo Diamond as its principal long-term
+product. Compare substantive product, laboratory, engineering and creative initiatives
+using the [operating instructions](docs/prompts/CONTINUOUS_DEVELOPMENT.md); recover
+active objectives, verified progress and the next development frontier in
+[STATE](docs/STATE.md). Historical release identities do not impose permanent
+maintenance obligations; transformation and retirement follow the same operating rules.
 
 The current crossing can also resolve its threat: three eligible close counters disable
 the sentinel and let the courier run. Protective completion remains valid; shutdown

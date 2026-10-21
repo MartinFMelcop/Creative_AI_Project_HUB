@@ -23,9 +23,10 @@ passing an automated combat trace does not demonstrate perceived class identity.
 The HUB remains a public Design-Driven technology portfolio developed with generative
 AI. Eleven historical origins supply code, media, techniques, evidence and useful
 demonstrations without independent release obligations. Question-led labs can combine
-those capabilities. Most investment should benefit Virgo Diamond concretely while
-preserving the portfolio's professional communication and technological diversity
-when justified by requirements, not quotas.
+those capabilities. Virgo Diamond remains the principal long-term product; compare
+product, laboratory, production and portfolio opportunities under
+[the operating instructions](../docs/prompts/CONTINUOUS_DEVELOPMENT.md), without
+investment quotas or automatic rotation.
 
 No final engine, server, database, monetization or large-scale architecture is selected.
 Use bounded instruments and playable increments with real consumers before expensive

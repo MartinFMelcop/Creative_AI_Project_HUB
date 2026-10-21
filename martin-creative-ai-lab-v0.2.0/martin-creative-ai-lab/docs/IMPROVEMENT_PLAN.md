@@ -1,3 +1,12 @@
+# Scope archive
+
+The scopes below retain historical acceptance criteria and execution boundaries.
+Their original “current” headings and imperative wording do not create active work
+orders. Use [STATE](STATE.md) for active initiative continuity and the
+[operating instructions](prompts/CONTINUOUS_DEVELOPMENT.md) for present selection.
+Consult a scope when relevant; no parallel current plan or per-session update is
+required here.
+
 # Current completed scope — response rehearsal and causal review
 
 Improve the existing crossing rather than add another lab. Optional player-paced

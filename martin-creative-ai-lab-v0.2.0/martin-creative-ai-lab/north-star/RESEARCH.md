@@ -1,6 +1,10 @@
 # North Star research direction
 
-## Current playable destination
+## Historical research-to-product transition
+
+This section records the first destination and early medicine/rehearsal evidence.
+[STATE](../docs/STATE.md) owns current initiative continuity; use actual consumer
+records for subsequent capabilities rather than treating this history as a live plan.
 
 [Crossing Drill](prototype/README.md) is the first local executable consumer, selected
 in DEVELOPMENT mode before further standalone research. It makes finite-resource
@@ -12,7 +16,7 @@ reachable counters, with retained causal feedback. Scripted success validates th
 workflow, not player learning transfer. The optional medicine recovery/handoff now
 competes for position and attention while escort/threat simulation continues. Fixed
 complete routes show feasibility and their own costs, not optimal play or player values.
-Reassess observed weaknesses before creating unrelated instruments.
+Compare continuing this initiative with credible product and research alternatives.
 
 ## Preserved executed instrument
 
@@ -38,9 +42,11 @@ bounded question directly concerns recognizable action. This is not a fixed work
 - Can accepted shared actions survive retries/conflicts without double spending?
   P05/P11 offer local recovery evidence, not shared-world authority or production scale.
 
-Choose among these and newly observed weaknesses using current brain activation,
-actual tools, portfolio value and expected North Star benefit. Do not choose massive
-infrastructure simply because source code exists.
+Choose among these and newly observed weaknesses using
+[the operating selection process](../docs/prompts/CONTINUOUS_DEVELOPMENT.md) and
+[selective knowledge retrieval](../brains/README.md). A substantial research or
+production capability needs a consequential question and a concrete consumer or
+decision; source availability alone does not justify infrastructure.
 
 ## Research and destination gates
 

@@ -1,3 +1,12 @@
+# Assessment archive
+
+The records below preserve baseline-specific assessments. Their original uses of
+“current”, priority categories and next steps describe those executions, not new
+obligations. Use [STATE](STATE.md) for active initiative continuity and the
+[operating instructions](prompts/CONTINUOUS_DEVELOPMENT.md) for present selection.
+Retrieve an assessment when its question or evidence matters; no per-session update
+or full-file read is required.
+
 # Current assessment — rehearse and understand the existing consumer
 
 Baseline `88327a7` has a real executable crossing, but its result replaces the impact

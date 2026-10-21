@@ -1,5 +1,11 @@
 # Decisões
 
+Historical decision log. Current execution authority is
+[the operating instructions](prompts/CONTINUOUS_DEVELOPMENT.md); current initiative
+state is [STATE](STATE.md). Earlier mandatory activation, fixed selection order,
+minimum-scope and full-prompt handoff rules are superseded by ADR-090. Their entries
+remain unchanged as historical rationale; original source instructions remain data.
+
 ## ADR-001 — projetos como seeds transformáveis
 
 **Data:** 2026-10-10. **Origem:** orientação explícita de Martin.
@@ -2336,3 +2342,81 @@ changes. Stage/capability/origin states remain unchanged; no external player val
   Linux 0.2.0 preserves historical 0.1.0. No physical pad/human, comfort, identity,
   fun, accessibility, final engine, production integration or NS-C13 promotion.
   No new lab/extraction. Keep the adaptive prompt unchanged and reassess next work.
+
+## ADR-090 — sustain strategic initiatives and retire obsolete obligations
+
+**Date:** 2026-10-21 UTC. **Status:** implemented operating transformation; explicit
+one-time author mandate. Product version, capability maturity and engine selection
+are unchanged.
+
+**Observed limitation:** Clean local `work` started at `3c11446`; fetched main had
+`4116213`, safely incorporated by fast-forward before editing. The active prompt
+already rejected easy-task/automation bias, but SEED retained fixed ordering,
+lab instructions preferred smallest instruments, the validator required a permanent
+implemented pilot, and the handoff repeated the complete operating prompt. SEED/STATE
+repeated latest-delivery facts; historical assessments still appeared current.
+
+**Decision:** Root/local AGENTS own safeguards and local commands; the versioned
+continuous-development document owns process; SEED owns durable direction; STATE owns
+multi-session initiative continuity; design/registries/evidence retain creative,
+maturity and execution authority. Historical ADRs/assessments remain intact under
+explicit historical notices. This supersedes the fixed/minimum-size selection,
+mandatory full-index activation and full-authoritative-text handoff requirements in
+ADR-070/071/081 and subsequent historical references to those rules. Other historical
+technical decisions remain scoped evidence, not erased history.
+
+Initiatives can span sessions and architectures. Compare continuation with alternatives
+by future value and opportunity cost; choose the largest coherent feasible contribution.
+Normalize transformation, stable retention, consolidation and retirement after evaluating
+consumers, compatibility, sources, rights, preservation and current authorization.
+Unity/C# becomes a serious evidence-based candidate, without choosing an engine or
+forcing migration. Laboratories can sustain substantial programs and coordinated
+instruments; the validator no longer imposes an implemented-pilot quota. Its existing
+instrument/evidence and `pilot_instrumented` consumer checks remain required. No schema,
+registry state, protected source, snapshot contract or CI gate was changed.
+
+**Material knowledge:** ENG-015 informed one authority per responsibility and migration
+contracts; SCI-017 informed original-validator negative controls; CRE-001 preserves
+expression, agency and voluntary recognition as the North Star ambition. All three
+chapters were retrieved in full. No new creative canon or laboratory experiment is claimed.
+
+**Selective legacy inspection:** Rave Master's custom `RM_CHARACTER_CREATE_RUNTIME.rb`,
+`RM_UI_SKILL_EQUIP_RUNTIME.rb`, `RM_PLAYER_LEVEL_RUNTIME.rb`, `RM_COMBAT_RUNTIME.rb` and
+`RM_FLAGS_EVENTS_RUNTIME.rb` expose candidate creation/background, loadout, progression,
+combat/status and scoped flag/save contracts. They differ from bundled `Game_*` engine
+scripts. Custom headers do not establish personal authorship, rights or runtime truth.
+No RGSS execution, fictional canon transfer or archive deletion occurred. Removal would
+need to resolve reference catalog/inventory/discovery, legacy ZIP cross-checks, manifests,
+real consumers and unique-source preservation together under existing source contracts.
+
+**Verification:** `tools/test_validate_repo.py` passes 30 tests, including empty and
+candidates-only labs after retiring stale claims, and rejection when instrumented claims
+remain. Both legitimate-retirement fixtures fail under the original validator with its
+mandatory-pilot error: an executed negative control, not a proposed command.
+`tools/test_reference_library.py` passes 42, `tools/test_brain_query.py` 31 and
+`tools/test_check_manifest.py` 11. Repository/reference/Brain gates and exact regenerated
+manifest are checked before integration. Existing inherited Brain heading-fragment
+warnings remain reported, not repaired. Product runtimes were unaffected and not rerun.
+
+Policy scenario review used the resulting instructions:
+
+| Scenario | Observed policy outcome |
+|---|---|
+| A — valuable initiative vs easier unrelated task | Sections 2–3 and STATE recover progress/frontiers and require future-value comparison; a commit does not complete an initiative. |
+| B — replacement and redundant dependencies | Section 5 requires executed destination, compatibility, consumer/preservation resolution and removal of obsolete duties; protected-source deletion is not automatic. |
+| C — Unity unavailable or unsuitable | Section 6 preserves existing Godot evidence, requires representative criteria and honest tool limits; no forced migration. |
+| D — substantial laboratory vs gameplay | Sections 3–4 permit coordinated multi-session instruments with value/feasibility comparison and no quotas. |
+| E — valuable old file | Section 5 permits keep-stable and combines age with actual consumers/provenance; no timestamp maintenance. |
+| F — independent session | A no-history agent received only the successor bootstrap plus a read-only exercise boundary and recovered root/local/process/STATE authority, initiative, source/engine/Git limits and fallback. |
+
+The independent exercise found the pending ADR-090 link before this entry was added;
+that specific target is resolved here and rechecked. The bootstrap remains inside the
+one versioned operating document. The fresh agent's recheck resolved all 163 local
+links/anchors in ten authority documents and verified the exact 1,728-byte bootstrap
+against its supplied exercise text (SHA-256
+`63ccae2f04c6667e5628d178e47a6f33d067852565aea0d669e3af60350fbc55`).
+Its full self-contained fallback handles unavailable
+or unreliable authority recovery. These are bounded recovery and policy checks, not a
+guarantee of future model judgment or independent human/product validation. No token,
+cost or storage saving is claimed from document length. No recurring governance audit,
+new management registry or automatic next task is introduced.

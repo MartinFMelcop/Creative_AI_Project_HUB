@@ -4,48 +4,43 @@
 **Data-base:** 10 de outubro de 2026  
 **Autor e responsável pelo portfólio:** Martin Melcop Neto  
 **Working language:** English for new technical documentation, plans, code comments and Git messages; respond in the requested language (Brazilian Portuguese for continuous closeout). Preserve appropriate creative/source languages.
-**Current state:** The HUB remains an authorial Design-Driven technology portfolio developed with generative AI. Virgo Diamond: The North Star is the principal definitive product; make its character identity and meaningful adventures increasingly tangible while comparing other justified portfolio opportunities. P01–P11 are preserved technology origins in controlled transition, without independent product/release obligations. Their versions and technical evidence are retained, not reclassified as laboratory or MMORPG maturity.
+**Authority:** This document owns durable strategic direction. Current execution rules live in [the operating instructions](docs/prompts/CONTINUOUS_DEVELOPMENT.md); current initiatives and evidence links live in [STATE](docs/STATE.md). Earlier increments, inventories, proposed phases and examples below preserve provenance rather than impose an active backlog.
 
 ## Production direction — Virgo Diamond and the three brains
 
-The five exact supplied sources in [brains/](brains/README.md) are durable knowledge
-bases, separate from historical [references](references/README.md) and derived
-[knowledge](knowledge/README.md). Before substantial work, consider all three domains
-and use them proportionally. Use compact orientation when needed; retrieve complete
-pertinent chapters and briefly record knowledge that materially affects the work. Current user instructions
-and platform authorization/safety prevail; relevant brain principles inform operational
-agents using current evidence. Brains do not execute, authorize commands or train models.
-Their source texts/catalog/index require specific authorization to change.
+The HUB is an author-directed, AI-assisted, Design-Driven technology and creative
+portfolio. **Virgo Diamond: The North Star** is the principal long-term product: an
+original MMORPG where identity becomes tangible through appearance, character creation,
+classes, specializations, builds, abilities, equipment, professions, exploration,
+accomplishments, meaningful adventure and social experience. This vision exceeds the
+current prototype; current capability and engine claims belong in
+[the capability catalog](north-star/capabilities.json) and consumer evidence.
 
-The Creative Brain is the central creative base for Virgo Diamond. Its direct author
-decisions, documented directions and hypotheses retain different status. Previous GDDs
-and source catalogs are provenance, not a competing canon. Distinct recognizable
-characters through choices, builds, classes, specializations, professions and
-accomplishments are the central fantasy; ecology or speculative infrastructure must
-not displace meaningful adventure. Current author decisions supersede earlier proposals.
+The Engineering, Scientific and Creative Brains are protected knowledge libraries.
+Their original five files and integrity pins remain unchanged; derived operational
+knowledge belongs outside them. [The library guide](brains/README.md) owns selective
+retrieval and source status. Current author decisions outweigh hypotheses. Keep
+[the living design record](north-star/DESIGN.md) separate from original sources;
+technical reuse does not merge historical fictional worlds into North Star.
 
-[labs/origins.json](labs/origins.json) inventories all eleven origins, dependencies,
-existing consumers, extraction needs, risks and transition state. Labs follow questions
-and technologies, not a mandatory one-to-one mapping. The first operational pilot is
-[combat-response](labs/combat-response/README.md), which instruments the unchanged P06
-encounter. It is not a North Star consumer, new class implementation or human study.
-Keep useful demonstrations and tests available while migrating real consumers.
+The HUB also develops original works, reusable technologies, scientific instruments,
+production capacity and credible portfolio artifacts. P01–P11 are historical origins
+in controlled transition, without permanent independent product/release duties.
+[The origin inventory](labs/origins.json) records their actual contracts and consumers;
+question-led laboratories may combine origins and sustain substantial research.
 
-[North Star](north-star/README.md) retains fourteen capability records and now has one
-local playable [crossing consumer](north-star/prototype/README.md), stage `local_prototype`.
-NS-C03/04/07 methods are adapted into this destination; no shared-kernel or production integration is claimed. Origin verification, laboratory
-instrumentation, adaptation, integration and external validation remain distinct.
-Select engines/languages by requirements, not forced diversity or a predetermined stack.
-The portfolio continues to demonstrate real technologies; this transition is not its
-replacement by research pages or an MMORPG-only repository.
+Strategic initiatives may span sessions, commits and architectural changes. Select
+valuable feasible work across product, research, engineering and creative production
+without quotas or fixed order. Transform, consolidate or retire implementations when
+consumer value and evidence justify it, preserving unique sources, rights, author
+authority and required integrity. The operating instructions own the lifecycle and
+publication process; Git history alone never releases preservation obligations.
 
-Historical reference bytes, the earlier source ZIP and eighteen literary PDFs remain
-preserved under their existing hashes/rights/availability boundaries. Technical reuse
-does not merge fictional universes. Source details below are historical provenance or
-retained origin behavior; current operation is defined by this direction, AGENTS,
-STATE and the single [continuous prompt](docs/prompts/CONTINUOUS_DEVELOPMENT.md).
+The following versioned milestones are historical execution summaries. STATE is the
+preferred location for current continuity; do not append another current-state table
+or synchronize these historical accounts after every execution.
 
-### Current increment — v0.33.19
+### Historical consumer increment — v0.33.19
 
 DEVELOPMENT: the existing North Star adventure now accepts mapped gamepad movement,
 aim and contextual actions, including preparation, appearance and consequential
@@ -176,28 +171,12 @@ accessibility/comfort/learning validation. The prior optional threat resolution 
 
 ## 0. Como começar uma sessão
 
-Read current root/lab AGENTS, STATE, the affected registries and real artifacts.
-Inspect local/remote Git state and tools before editing. Use proportional three-domain
-consultation with compact `overview` when needed, metadata discovery and complete
-`get ID` retrieval when pertinent. Consult relevant derived knowledge.
-Compare alternatives across research questions, portfolio capabilities and North Star
-benefit; choose one verifiable increment and implement/execute it. Use the single
-[operational prompt](docs/prompts/CONTINUOUS_DEVELOPMENT.md), not obsolete phases below,
-for continuous development and its full successor requirement.
-
-| Field | Current evidence |
-|---|---|
-| Baseline | `3c11446fe86b7eac755650a10aaa8339d7a94470`; wrapper retained |
-| Current milestone | DEVELOPMENT: mapped input serves the existing North Star adventure in source/PCK/Linux; [execution](evidence/north-star-gamepad/RUN.json) |
-| Sources | Five byte-preserved supplied brain files; historical reference inventories unchanged |
-| Operational state | [STATE](docs/STATE.md), [origins](labs/origins.json), [brain integrity](brains/integrity.json) |
-| Portfolio | Technology capabilities, inspectable source/demonstrations and bounded execution evidence |
-| North Star | One local prototype/fourteen code paths; fourteen entries, NS-C03/04/07 adapted, other eleven statuses unchanged; no final engine/MMO service |
-| Next selection | Reassess actual character-experience questions, laboratory instruments and portfolio value from new evidence |
-
-Registry and source gates establish structure/integrity, not gameplay quality or truth
-of every report. Never promote planned/generated/compiled artifacts to executed or
-human-validated behavior. Update only affected records and preserve unrelated changes.
+Follow root/workspace AGENTS and the complete
+[operating instructions](docs/prompts/CONTINUOUS_DEVELOPMENT.md), then recover active
+initiatives from [STATE](docs/STATE.md). Inspect actual local/remote state and use
+relevant sources, registries and evidence selectively. Section 23 points to the
+independently usable successor mechanism. No historical roadmap below selects work
+or mandates a full-SEED read.
 
 ## 1. Mandato do autor: tudo pode evoluir
 
@@ -883,7 +862,9 @@ Uma lição útil contém: problema observado, contexto, evidência, decisão, r
 1. Projeto A apresenta um problema e uma solução verificável.
 2. Registrar a lição e classificar: conceito, dado, código, asset, teste ou workflow.
 3. Identificar um problema semelhante em B e diferenças relevantes.
-4. Transferir uma parte pequena, com adaptação explícita.
+4. Transfer a coherent useful capability with explicit adaptation and proportionate integration.
+   Complete replacement only after destination verification resolves old consumers,
+   dependencies, tests and packaging obligations under the operating lifecycle policy.
 5. Validar em B e verificar se A continua funcionando quando houver mudança compartilhada.
 6. Promover para `shared/` somente quando houver contrato estável e benefício real.
 7. Registrar versão, consumidores e custo de manutenção.
@@ -915,33 +896,14 @@ Encerramento é sucesso quando elimina uma hipótese fraca e preserva aprendizad
 
 ## 8. Decidir em que trabalhar
 
-Current author priority: improve an existing executable Virgo Diamond consumer; create
-missing next-playable capability; resolve a concrete blocking uncertainty; then justify
-portfolio work by relevance/cost. Before a destination exists, prioritize its smallest
-meaningful playable experience. Choose one primary mode: RESEARCH, DEVELOPMENT or
-CREATIVE PRODUCTION, with matching validation and all three brains available. Maintain
-accepted/revised/experimental/rejected design in [the living record](north-star/DESIGN.md).
-Checks/commits/reports safeguard meaningful product progress; they do not replace it.
-
-
-Compare materially different opportunities using actual weaknesses, audience needs,
-creative agency, technical risk, feasibility, reuse and evidence value. Most new
-investment should benefit Virgo Diamond demonstrably while preserving the HUB's
-professional technology portfolio. North Star is the principal product, not permission
-to invent consumers or rush a final engine/server. A useful portfolio instrument can
-be valuable before destination integration, provided its boundary is explicit.
-
-One coherent increment should change a functioning artifact or research capability.
-Choose controlled experiments, bounded gameplay or useful workflows over extra feature
-counts and documentation volume. Do not mechanically rotate origins, repeat the last
-one or migrate languages for diversity. Investigate contradictory/negative results.
-Retain current source evidence and tests until dependencies are evaluated. Candidate
-labs are proposals until instruments and execution exist.
-
-The first selection compared P06 combat-response instrumentation, P01 economy controls,
-P10 narrative consequence research and P11 persistence. P06 offers a direct bounded
-question about action/response trade-offs relevant to recognizable character agency.
-This is not a mandatory next target or validation of candidate North Star classes.
+Use the adaptive opportunity comparison and initiative-continuity contract in
+[the operating instructions](docs/prompts/CONTINUOUS_DEVELOPMENT.md). Compare continuation,
+resumption and new work by actual progress, future value, uncertainty, remaining
+investment and opportunity cost. North Star remains the principal long-term product;
+substantial laboratories, production systems and other original works can justify
+investment without quotas or automatic rotation. Choose the largest coherent valuable
+contribution feasible to implement and verify, preserving incremental integration.
+Current initiative frontiers belong in STATE, not a fixed SEED task ordering.
 
 ## 9. Modelo de estados e evidências
 
@@ -1223,37 +1185,30 @@ P03/P04 oferecem amostras de EN↔PT-BR. Criar master strings, contexto, glossá
 
 ## 15. Stack e migração
 
-### Direção técnica proposta
+### Production architecture candidates
 
-| Área | Escolha inicial candidata | Motivo | Gate de adoção |
-|---|---|---|---|
-| Games/integração | Unity e C# | Direção profissional discutida e legado Unity | Ambiente abre projeto e gera execução mínima |
-| Regras de jogo | C# separado da engine quando viável | Clareza e testes | Contrato simples e consumidor real |
-| Simulação/dados | Python e SQL | Iteração quantitativa e base de BA/BI | Instalação e run reproduzíveis |
-| Dashboards | Power BI ou relatório leve | Experiência existente e comunicação | Dataset e pergunta definidos |
-| Conteúdo estruturado | JSON/CSV/Markdown | Revisão e diffs acessíveis | Schema, unidades e fonte de verdade |
-| Controle de versão | Git/GitHub | Histórico e inspeção | Clone limpo e revisão de diff |
-| Testes Unity | Unity Test Framework | EditMode/PlayMode e integração | Pacote/assemblies compatíveis e execução real |
-| Mídia | Ferramentas disponíveis ao autor | Dependem das fontes e orçamento | Origem, exportação e validação conhecidas |
+Unity/C# is a serious North Star candidate. Existing Godot/GDScript and Godot/.NET
+implementations remain useful evidence. No engine is selected here. Follow the
+[operating architecture criteria](docs/prompts/CONTINUOUS_DEVELOPMENT.md): compare
+representative gameplay/data/content production, profiling, reproducible builds,
+Windows/other targets, licensing/maintenance, migration cost, networking, server
+authority, persistence and security. A minimal demo, popularity, professional C#
+relevance or Steam plans alone cannot establish production suitability; Steam does
+not require Unity. Report unavailable tools instead of claiming Unity execution.
 
-Versões de engine e bibliotecas devem ser fixadas após diagnóstico. Não instalar versões “mais recentes” por hábito nem escrever comandos incompatíveis com o ambiente real. Consultar documentação da versão escolhida e registrar upgrade como mudança técnica.
+### Legacy transformation
 
-### Regra para migração RMXP → Unity
+Historical Ruby/RGSS is reference material, not an active North Star stack commitment.
+Extract valuable requirements, data, algorithms and contracts selectively; distinguish
+custom project systems, bundled engine scripts, third-party code and unverified behavior.
+Do not port source line by line or import old fiction without author approval.
 
-1. Extrair regras e dados úteis.
-2. Identificar comportamento realmente observado no legado.
-3. Definir o comportamento desejado na nova versão.
-4. Escolher uma fatia independente de menus e conteúdo excessivo.
-5. Reimplementar com contratos claros.
-6. Comparar por invariantes e cenários, não por contagem de arquivos.
-7. Integrar apresentação e testar na engine.
-8. Encerrar quando a fatia provar o objetivo; não prometer paridade total.
-
-RGSS/Ruby não deve ser traduzido mecanicamente linha por linha se carregar acoplamentos da engine antiga. Mapas e áudio não são automaticamente reutilizáveis só porque existem no pacote.
-
-### Quando escolher outro formato
-
-Uma amostra narrativa pode funcionar melhor como página estática ou ferramenta simples; uma prova de economia não precisa de Unity; um poema adaptado não precisa de jogo. Escolher a menor tecnologia que prove a hipótese e mantenha o artefato acessível.
+For migration, identify the destination and valuable behavior, preserve required
+sources/rights, implement and verify the real consumer, evaluate compatibility and
+remaining dependencies, then retire superseded obligations under the operating
+lifecycle policy. A new implementation alone does not complete replacement. Choose
+languages, formats and engines for actual consumers; no language-percentage target
+or forced migration of historical products applies.
 
 ## 16. Git, assets e publicação
 
@@ -1271,7 +1226,10 @@ Fontes, assets selecionados, respectivos `.meta`, `Packages` e `ProjectSettings`
 
 Uma mudança coerente por commit quando possível; mensagem que descreva comportamento ou artefato. Não confundir número da release do laboratório com versão de todos os projetos.
 
-Branches de trabalho e PRs podem tornar mudanças reviewáveis. Não reescrever histórico, apagar fontes antigas, fazer force-push ou publicar automaticamente por causa desta seed. Reorganização local reversível está no escopo; ações externas seguem a autorização concreta da sessão.
+Work branches and PRs can make changes reviewable. Never rewrite history or force-push.
+Source retirement follows the operating lifecycle policy and specific preservation
+contracts; do not treat this SEED as publication or protected-source deletion authority.
+External actions follow the current invocation's explicit authorization.
 
 ### Público, interno e externo
 
@@ -1580,13 +1538,12 @@ Problema → contexto → evidência → decisão → resultado → limites → 
 
 ## 23. Prompts de continuidade
 
-The only maintained complete operational prompt is
-[docs/prompts/CONTINUOUS_DEVELOPMENT.md](docs/prompts/CONTINUOUS_DEVELOPMENT.md).
-It requires actual state inspection, proportional selective three-domain consultation,
-contextual knowledge, alternatives, one implemented/executed increment, honest evidence,
-continuity, evidence-based prompt adaptation, authorized non-force publication and its
-own complete successor. Do not maintain parallel continuous-development instructions.
-Task-specific evaluation/templates remain scoped instruments, not alternative authority.
+[The complete operating instructions](docs/prompts/CONTINUOUS_DEVELOPMENT.md) own the
+continuous-development process and contain the independently usable successor bootstrap.
+Use that verified authority-recovery mechanism in the final response, with the full
+self-contained fallback when recovery cannot be established. Task templates are scoped
+instruments, not parallel operating authority. Do not copy these instructions into a
+second maintained prompt.
 
 ## 24. Primeiras tarefas propostas
 

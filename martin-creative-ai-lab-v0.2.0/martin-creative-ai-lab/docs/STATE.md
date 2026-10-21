@@ -1,54 +1,80 @@
-# Lab state
+# Current initiative continuity
 
-**Updated:** 2026-10-21 UTC. **SEED:** 0.33.19. **Mode:** DEVELOPMENT.
-Initial branch `codex/north-star-linux-player-20261020`; local/fetched main baseline
-`3c11446fe86b7eac755650a10aaa8339d7a94470`, no divergence and tracked tree clean.
-Unrelated root work/ preserved. Work branch `codex/north-star-gamepad-20261020`.
+**Updated:** 2026-10-21 UTC. **Product SEED version:** 0.33.19, unchanged by this
+operating-model intervention. **Verified integration baseline:**
+`411621330f854d560f66eaa6eb75d38686de48aa` on branch `work`, fast-forwarded from
+`3c11446fe86b7eac755650a10aaa8339d7a94470` after fetching remote main. Initial tracked
+and untracked tree was clean. The fetched gamepad work is preserved.
 
-## Observable change and evidence
+This file owns active initiative continuity, not detailed gameplay contracts or an
+execution diary. Follow [the operating instructions](prompts/CONTINUOUS_DEVELOPMENT.md)
+for selection/lifecycle; [capabilities](../north-star/capabilities.json),
+[design](../north-star/DESIGN.md), [origins](../labs/origins.json) and actual consumer
+documentation own their detailed facts. Compare these frontiers against credible
+alternatives each session; no listed frontier is an automatic task.
 
-North Star now consumes mapped gamepad events throughout the existing adventure:
-movement/aim, both paid approaches, rehearsal, reversible workshop, appearance,
-courier conversation, escort and return gate. Contextual hints and a fixed-layout
-session guide expose the controls. Keyboard remaps and profile schemas remain intact.
-A confirmation held across a menu is suppressed; focus loss/disconnect pauses and
-requires explicit resumption, button release and stick centering. Connection alone
-never resumes. The optional Linux player is now 0.2.0; historical 0.1.0 remains.
+## Active initiative — distinctive character agency through connected adventures
 
-[Execution](../evidence/north-star-gamepad/RUN.json) binds a published-baseline South
-button ignored at title versus 56 new mapped-event controls, both complete two-goal
-journeys in source/PCK/actual release, retained gameplay checks and inspectable views.
-These are injected mapped events through the viewport and real physics consumer,
-not physical controllers or independent human accessibility/experience validation.
-No new quest, class, appearance option, multiplayer or progression is claimed.
+**Objective/consumers/value:** Make North Star's identity direction tangible in its
+actual local playable consumer and create evidence for future production architecture.
+Players should express different approaches and consequences through a connected
+adventure; this remains a prototype frontier within the larger original MMORPG vision.
 
-## Selection, knowledge and limits
+**Implemented and verified baseline:** The current consumer links paid combat
+approaches, optional practice, equipment trade-offs, appearance and local cosmetic
+memory, courier consequences, escort and return-gate objectives. Actual scope and
+commands live in [the prototype guide](../north-star/prototype/README.md). The latest
+[gamepad execution](../evidence/north-star-gamepad/RUN.json) covers injected mapped
+input, both two-goal journeys and source/PCK/Linux delivery. Prior
+[courier](../evidence/north-star-courier-conversation/RUN.json),
+[appearance continuity](../evidence/north-star-appearance-continuity/RUN.json) and
+[native delivery](../evidence/north-star-linux-player/RUN.json) evidence establish
+specific earlier behavior. These records are inherited inspected evidence, not product
+runtime re-executed by the operating-model intervention. Registry maturity is unchanged.
 
-Compare new combat/courier variations, cosmetic expansion, a literary revision and
-Waystone/Tokyo80s extensions. Baseline North Star ignores controller events while P06
-already demonstrates a bounded mapped-input contract. No stronger new weakness was
-established in the inspected prose. Removing this concrete interaction barrier is
-worth the small adapter; it does not establish controller preference or access benefit.
+**Missing/uncertain:** Distinct final classes/specializations/progression, professions,
+long-term content throughput, social recognition and shared-world networking/server
+trust are not demonstrated by this local adventure. Physical controller mapping,
+independent player comprehension/enjoyment/accessibility, broad hardware and other OSes
+remain unvalidated. Prototype fiction and mechanics are not final author-approved canon.
 
-Engineering high: ENG-005 informs modal state, ownership and transition invariants.
-Science medium/high: SCI-055 informs actual input receipt and negative controls;
-SCI-061 prevents synthetic traces from becoming device/accessibility claims.
-Creation medium: CRE-068 H informs preservation of commitment/contact/recovery cues,
-not new canon. [Derived knowledge](../knowledge/combat-response.md) records the limits.
+**Dependencies/blockers:** Current consumer execution needs its documented Godot
+4.6.3 tools or shipped Linux runtime and desktop libraries; Godot/.NET origin consumers
+have separate requirements. Human/device access limits experience claims, not all
+functional progress. Production engine is undecided. Unity execution depends on actual
+editor/tool availability and licensing, and is not a prerequisite for continuing
+useful prototype work. Shared-world trust/persistence needs separate architecture.
 
-One local_prototype consumer/fourteen gameplay paths/fourteen capability entries;
-NS-C03/04/07 remain adapted and eleven other states unchanged. NS-C13 stays candidate:
-a mapped adapter alone does not validate accessibility, moderation or security.
-No new laboratory or origin extraction. P01–P05/P07/P08/P10/P11 remain
-preserved_pending_extraction, P06 pilot_instrumented, P09 seed_only. P06's input
-method is adapted into new destination code, without importing its fiction/assets.
+**Next high-value frontier:** Compare a coherent data-driven character/build and
+content-authoring capability in the real adventure against deeper consequential
+encounter/quest variation, representative production-architecture research and genuine
+player observation when available. Select the strongest actual gap before deciding
+scope; more cosmetics, controller cases or packaging are not automatic continuations.
 
-Physical device mapping/connection, operating-system coverage, remappable pad layout,
-input comfort, recognition, fun and multiplayer remain unvalidated. Mapped labels
-refer to standard positions, not every manufacturer's printed symbols. Brain/pin,
-reference, license and existing origin consumer bytes remain preserved.
+**Continuation/redesign/completion/suspension/retirement:** Continue when a frontier
+materially advances character expression/agency or removes a demonstrated production
+limit. Redesign if the current encounter or architecture prevents that outcome, or
+valid evidence contradicts the intended experience. Complete this local initiative
+when connected choices and a usable production path support a deliberate next maturity
+step; that does not complete the MMORPG. Suspend if necessary tools, rights or decisions
+block valuable progress and a stronger opportunity exists. Retire/consolidate this
+prototype only after valuable behavior/evidence is transferred, destination contracts
+are verified and old consumers/dependencies/preservation duties are resolved.
 
-The attached request matches the maintained adaptive prompt after newline
-normalization. Existing selective consultation and value-driven selection suffice;
-no persistent prompt change is warranted. Reassess the next opportunity instead of
-automatically adding another controller feature. Publication and CI are separate.
+## Stable capabilities and competing opportunities
+
+[Combat-response](../labs/combat-response/README.md) is an implemented reusable pilot
+with bounded origin evidence, not an automatically active research program or human
+study. Compare a substantial calibrated lab program when it resolves a consequential
+question better than direct product work. Existing economy, persistence, narrative,
+audiovisual and creative-production origins remain credible alternatives; use their
+real [origin contracts](../labs/origins.json) and sources selectively. No new laboratory,
+origin extraction, player validation or product integration is claimed here.
+
+## Completed operating intervention
+
+[ADR-090](DECISIONS.md#adr-090--sustain-strategic-initiatives-and-retire-obsolete-obligations)
+records the authority reconciliation, actual policy/scenario verification and limits.
+This intervention is complete once integrated and published; it creates no recurring
+governance initiative. Return to substantive work unless an observed limitation warrants
+a further process change. Publication and CI outcomes must be checked separately.

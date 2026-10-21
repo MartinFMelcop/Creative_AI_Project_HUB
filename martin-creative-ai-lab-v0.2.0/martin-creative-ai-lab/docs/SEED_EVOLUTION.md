@@ -1,5 +1,13 @@
 # Evolução da seed e continuidade com IA
 
+This is a historical evolution record. The entries below, including headings or
+sentences calling a rule “current” or “mandatory”, describe their adoption context.
+Later operating decisions supersede earlier selection, activation and full-prompt
+handoff requirements. Present authority is defined by [AGENTS](../AGENTS.md) and the
+[versioned operating instructions](prompts/CONTINUOUS_DEVELOPMENT.md); active
+initiative continuity belongs in [STATE](STATE.md). Consult relevant history rather
+than reading or updating this record every execution.
+
 A seed pode ser reescrita quando uma decisão ou descoberta mudar sua direção. O objetivo é manter uma base útil para planejar e desenvolver. Tamanho e quantidade de projetos não são medidas de sucesso.
 
 ## Current adaptive operation — 2026-10-20

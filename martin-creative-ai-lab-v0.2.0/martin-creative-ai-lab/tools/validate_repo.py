@@ -182,7 +182,7 @@ def validate_origin_transition(projects, ids):
     if origin_ids != expected_ids or len(origins) != 11:
         fail("origin transition: inventory must contain exactly one row for each P01–P11")
 
-    lab_ids, implemented_origins, implemented_count = set(), set(), 0
+    lab_ids, implemented_origins = set(), set()
     for row in labs:
         if not isinstance(row, dict):
             fail("origin transition: lab must be an object")
@@ -201,7 +201,6 @@ def validate_origin_transition(projects, ids):
         if not isinstance(row.get("question"), str) or not row["question"].strip():
             fail(f"{label}: missing question")
         if row.get("status") == "implemented":
-            implemented_count += 1
             implemented_origins.update(origin_projects)
             local_reference(row.get("path"), f"{label}: path", directory=True)
             local_reference(row.get("instrument"), f"{label}: instrument")
@@ -222,8 +221,8 @@ def validate_origin_transition(projects, ids):
                 fail(f"{label}: a candidate cannot claim implemented path, instrument or evidence")
         else:
             fail(f"{label}: invalid lab status")
-    if not implemented_count:
-        fail("origin transition: at least one implemented pilot with instrument and evidence is required")
+    # Labs may be retired without manufacturing a replacement. Existing origin
+    # claims still require a real implemented consumer and its evidence above.
     if not instrumented.issubset(implemented_origins):
         fail("origin transition: pilot_instrumented origins require an implemented lab consumer")
 

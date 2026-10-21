@@ -2,10 +2,11 @@
 
 The HUB's **principal definitive product** is an original MMORPG centered on becoming
 a distinct, recognizable character through choices, builds, classes, specializations,
-professions and accomplishments within meaningful adventures. Most new investment
-should demonstrate benefit to that experience. The HUB remains a public Design-Driven
-technology portfolio; its origin demonstrations and research instruments have value
-without being eleven independently obligated products.
+professions and accomplishments within meaningful adventures. Development compares
+this product's needs with laboratory, creative and technical opportunities using the
+[operating instructions](../docs/prompts/CONTINUOUS_DEVELOPMENT.md). The HUB remains
+a public Design-Driven technology portfolio; its origin demonstrations and research
+instruments have value without being eleven independently obligated products.
 
 F1 offers recoverable twelve-action keyboard remapping with matching live hints and
 explicit draft/apply/discard/default restoration; settings remain device-local.
@@ -23,10 +24,10 @@ origin instrument, separately preserved.
 
 The player chooses frontal interception or redirection/mobility and protects the same
 courier to the far gate. [Living design](DESIGN.md) distinguishes author decisions,
-experimental mechanics, revisions and rejected alternatives. Current primary mode is
-DEVELOPMENT: an optional Linux player now delivers the existing adventure without
-an editor or checkout. Applied free appearance still survives process restart through
-the recoverable local cosmetic profile. The optional factual conversation still commits
+experimental mechanics, revisions and rejected alternatives. An optional Linux player
+delivers the existing adventure without an editor or checkout. Applied free appearance
+still survives process restart through the recoverable local cosmetic profile.
+The optional factual conversation still commits
 one aid choice into the second goal. Optional rehearsal
 uses the same combat rules, preserves causal review and starts a clean normal crossing.
 The three prepared exercises do not demonstrate human learning or sustained resource

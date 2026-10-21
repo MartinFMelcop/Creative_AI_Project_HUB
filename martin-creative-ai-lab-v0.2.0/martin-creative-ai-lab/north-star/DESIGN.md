@@ -1,5 +1,10 @@
 # Virgo Diamond living design record
 
+This record owns creative decisions and their provenance, not execution ordering or
+initiative state. Use [the operating instructions](../docs/prompts/CONTINUOUS_DEVELOPMENT.md)
+for opportunity selection and [STATE](../docs/STATE.md) for initiative continuity.
+Past category labels below describe historical executions and impose no current priority.
+
 This record evolves with product work. The Creative Brain remains byte-preserved
 knowledge; its hypotheses do not become canon through implementation. Current direct
 author decisions prevail. Status here describes scope, not independent player approval.
@@ -7,7 +12,7 @@ author decisions prevail. Status here describes scope, not independent player ap
 | Status | Decision / provenance | Observable consequence and review trigger |
 |---|---|---|
 | Accepted author direction | Recognizable character identity and meaningful adventure; current adaptive author mandate, CRE-001 and CRE-005 | Compare creative, technical and knowledge value, strategic relevance and opportunity cost across North Star and justified portfolio work. Checks/reports do not substitute for experience. |
-| Accepted operational scope | One existing local executable character consumer; current adaptive author mandate | Select DEVELOPMENT, CREATIVE PRODUCTION or RESEARCH for the actual opportunity rather than a fixed category order. Godot 4.6.3 is a prototype tool, not the selected production MMO engine. |
+| Observed current scope | One existing local executable character consumer; executed prototype evidence, not a strategic size limit | Select DEVELOPMENT, CREATIVE PRODUCTION or RESEARCH for the actual opportunity rather than a fixed category order. Godot 4.6.3 is a prototype tool, not the selected production MMO engine. |
 | Experimental | Guardian frontal interception versus Duelist redirection/mobility; CRE-014/015/084 hypotheses | Same courier objective, finite resources, distinct commands/costs and optional reachable counters. Neither approach is a final class/talent system or canon commitment. Revisit after actual player observation. |
 | Experimental | A courier crosses three markers while a sentinel threatens the route | Small original test fiction, not approved geography/quest/lore. Player or courier defeat loses the attempt; either approach can finish. The original session-only token was result feedback; local cosmetic memory now has a separate contract below. |
 | Revised after execution | Redirected beams still collide with a nearer courier | Early implementation checked only the redirected endpoint. Corrected to first-contact ownership; explicit negative control now catches unsafe redirection across the road. |
@@ -222,10 +227,10 @@ MMORPG progression, class taxonomy approval or commercial evidence exists. Local
 keepsake storage does not establish social recognition or perceived reward value;
 cross-process and visual claims require their own recorded execution evidence.
 
-Each cycle must report observable product capability, relevant laboratory knowledge,
-portfolio demonstration and origin migration. Preserve useful origins/consumers/tests;
-close or consolidate obsolete obligations when evidence supports it. Reassess the next
-weakness in the actual consumer rather than adding unrelated laboratory structures.
+Report materially affected capability and evidence without manufacturing activity in
+every category. Compare continuation with real product, laboratory, production and
+portfolio opportunities under the operating instructions. Preserve useful consumers;
+close or consolidate obsolete obligations through verified lifecycle decisions.
 
 ## Optional return gate — experimental
 

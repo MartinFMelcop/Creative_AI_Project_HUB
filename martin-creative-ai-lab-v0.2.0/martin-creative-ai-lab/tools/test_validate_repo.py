@@ -175,9 +175,31 @@ class DocumentOwnershipTests(unittest.TestCase):
         self.edit_origins(lambda data: data["labs"][0].update(origin_projects=["P01"]))
         self.assert_invalid("pilot_instrumented origins require an implemented lab consumer")
 
-    def test_pilot_cannot_be_replaced_by_candidates(self):
+    def test_empty_labs_reject_a_remaining_instrumented_origin_claim(self):
         self.edit_origins(lambda data: data.update(labs=[]))
-        self.assert_invalid("at least one implemented pilot with instrument and evidence is required")
+        self.assert_invalid("pilot_instrumented origins require an implemented lab consumer")
+
+    def test_all_labs_can_retire_when_no_instrumented_origin_claim_remains(self):
+        def retire(data):
+            data["labs"] = []
+            next(row for row in data["origins"] if row["id"] == "P06")["transition_status"] = "preserved_pending_extraction"
+        self.edit_origins(retire)
+        result = self.run_validator()
+        self.assertEqual(result.returncode, 0, result.stderr)
+
+    def test_candidates_only_do_not_require_a_manufactured_implementation(self):
+        def retain_candidates(data):
+            data["labs"] = [{"id": "unbuilt", "status": "candidate",
+                             "origin_projects": ["P06"], "question": "A useful future question"}]
+            next(row for row in data["origins"] if row["id"] == "P06")["transition_status"] = "preserved_pending_extraction"
+        self.edit_origins(retain_candidates)
+        result = self.run_validator()
+        self.assertEqual(result.returncode, 0, result.stderr)
+
+    def test_candidate_cannot_satisfy_an_instrumented_origin_claim(self):
+        self.edit_origins(lambda data: data.update(labs=[{"id": "unbuilt", "status": "candidate",
+            "origin_projects": ["P06"], "question": "An unimplemented replacement"}]))
+        self.assert_invalid("pilot_instrumented origins require an implemented lab consumer")
 
     def test_origin_evidence_and_source_paths_must_exist(self):
         self.edit_origins(lambda data: data["origins"][0].update(execution_evidence=["missing.json"]))
