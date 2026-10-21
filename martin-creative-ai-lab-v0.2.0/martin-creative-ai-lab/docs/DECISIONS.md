@@ -2476,3 +2476,53 @@ keyboard navigation for all three crafted pieces. Inspected native workshop/play
 show the new sash and readable trade-offs. These are synthetic OS keys and agent image
 inspection, not physical controller, human author/player, enjoyment, accessibility or
 balance validation. No MMO readiness, final class/profession canon or token saving is claimed.
+
+
+## ADR-092 — trade winch integrity for a quiet return
+
+**Date:** 2026-10-21 UTC. **Status:** implemented local prototype; DEVELOPMENT.
+**Baseline:** `0777f55197fbf5aef57c55f79425c42bf8e81596`, clean `work`, fetched main
+matched with no divergence. Active initiative: distinctive character agency through
+connected adventures. No durable strategy, authority or capability-state change.
+
+**Selection:** The consumed equipment authoring path already works. Another item
+would expand a catalog without deepening the adventure. An authored ability/build
+consumer, independent player/author observation, architecture research and substantive
+lab/creative work remain credible alternatives. No available human observation or
+stronger blocking architecture uncertainty was established. A consequential encounter
+resolution is feasible in the actual consumer and tests agency beyond combat counters,
+without committing to an engine migration or generic quest framework.
+
+**Behavior:** At the visible linked lever, 1.5 seconds of stationary uninterrupted
+interaction spends one winch integrity and grounds the return ward. At least two
+integrity is required. Working suppresses guard/blade/step; movement, release, personal
+or winch damage and suspension cancel partial work. Same-frame harm defeats completion.
+Already-disabled wards cannot charge, and holding cannot spend twice. Brace aid leaves
+an extra margin for the same cost. Both catches, living winch/player and actual exit
+remain mandatory. Retry clears the choice and restores the immutable prepared arrival;
+no fake combat counters, new marks, saved power or aid stacking.
+
+**Knowledge:** CRE-005 materially informs visible consequence and a legitimate cost
+rather than a free perfect solution. ENG-005 informs single-spend, survival and reset
+invariants. SCI-017 informs a matched timed interaction against the prior published
+PCK: before, no effect and integrity two; after, disabled ward and integrity one. This
+is a functional intervention control, not a human experience experiment or new lab.
+
+**Verification:** [Executed evidence](../evidence/north-star-grounding/RUN.json) binds
+56 new controls and eight full escort/grounded-return journeys, identical in source,
+PCK and actual official Linux release. A separately staged export matches. Retained
+native/profile, workshop, route, original return, look, conversation, appearance,
+equipment, mapped-pad, sound and release controls pass. Old fixed-policy gameplay
+outcomes remain unchanged; source/trace identities and release inventory necessarily
+change. Audio capture duration/PCM varies under its existing semantic/silence controls.
+Two native windows receive synthetic OS holds and pause cancellation at a fixture-placed
+lever after a real policy escort; inspected images show progress, cost, quiet ward and
+still-closed catches. This does not establish human understanding, balance, physical
+controller behavior, broad hardware, final canon or production/MMORPG readiness.
+
+**Observed correction:** Initial package regressions overlapped an in-progress ZIP
+refresh and correctly rejected stale source metadata (two failures). Repeat final
+package checks after completed export; do not weaken identities or failure attribution.
+Historical releases/evidence, protected sources, licenses and all integrity gates remain.
+Next compare deeper ability/build production or actual author/player observation against
+architecture needs; repeating another lever or catalog variant is not automatic progress.

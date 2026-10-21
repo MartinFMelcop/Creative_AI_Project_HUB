@@ -8,8 +8,8 @@ revisions and rejected alternatives.
 
 ## Play
 
-**Linux x86_64:** download the [standalone ZIP](dist/crossing-drill-linux-0.3.0.zip)
-and its [SHA-256 checksum](dist/crossing-drill-linux-0.3.0.zip.sha256), extract the
+**Linux x86_64:** download the [standalone ZIP](dist/crossing-drill-linux-0.4.0.zip)
+and its [SHA-256 checksum](dist/crossing-drill-linux-0.4.0.zip.sha256), extract the
 complete `CrossingDrill` folder, then open `crossing-drill.x86_64` or run
 `./crossing-drill.x86_64`. Keep its PCK beside it. No Godot editor, SDK, Python,
 Node, source checkout or network is required to play. The roughly 27 MB ZIP bundles
@@ -170,17 +170,46 @@ inventory, economy, persistent profession or evidence of human balance/preferenc
 
 ```bash
 python3 north-star/prototype/tools/fittings.py check --output /tmp/fittings.json
-python3 north-star/prototype/tools/fittings.py verify --output /tmp/fitting-delivery.json --compare evidence/north-star-fittings/fittings.json
-python3 north-star/prototype/tools/verify_workshop.py --output /tmp/workshop.json --compare evidence/north-star-fittings/workshop.json
+python3 north-star/prototype/tools/fittings.py verify --output /tmp/fitting-delivery.json --compare evidence/north-star-grounding/fittings.json
+python3 north-star/prototype/tools/verify_workshop.py --output /tmp/workshop.json --compare evidence/north-star-grounding/workshop.json
 # Optional synthetic OS keyboard navigation of all three pieces; requires Xorg/dummy:
 python3 north-star/prototype/tools/verify_workshop_input.py --output /tmp/workshop-input
 ```
 
-[Current execution](../../evidence/north-star-fittings/RUN.json) covers all eight
+[Current execution](../../evidence/north-star-grounding/RUN.json) covers all eight
 approach/fitting combinations through both objectives, fresh staged authoring of a new
 ID and values, invalid-content blocking, retained controls and actual native input.
 
 ![Actual native workshop with the authored sash](../../evidence/north-star-fittings/workshop.png)
+
+## Ground the return ward
+
+The optional return room now supports three approaches: work under threat, earn three
+close counters, or ground the ward at the linked lever below the winch. Grounding uses
+the current interact binding (**E** by default, mapped pad **A**), requires at least
+**2 winch integrity**, and spends **1 integrity** after **1.5 uninterrupted seconds**.
+It suppresses guard, blade and step while working. Movement, release, personal damage,
+winch damage, pause or focus loss cancels partial work without charging. The cost is
+shown before commitment. With brace aid, the same cost leaves an extra margin.
+
+Grounding stops future threats without inventing combat counters or awarding another
+keepsake. Both catches and a living exit crossing remain mandatory. A ward already
+disabled by counters cannot charge the lever cost. Checkpoint retry clears grounding,
+catches and work and restores the original prepared arrival; it cannot stack aid.
+
+```bash
+python3 north-star/prototype/tools/verify_grounding.py --output /tmp/grounding.json --compare evidence/north-star-grounding/grounding.json
+python3 north-star/prototype/tools/verify_grounding_input.py --output /tmp/grounding-input
+```
+
+[Current execution](../../evidence/north-star-grounding/RUN.json) binds source, PCK,
+actual Linux 0.4.0 and separately staged rebuild. Eight fixed approach/outfit journeys
+complete both objectives; matched prior-delivery controls isolate the new action.
+Native keyboard holds and pause cancellation use fixture placement after a real policy
+escort. This is functional and agent visual evidence, not independent human validation,
+a physical controller check, balance approval or final North Star canon.
+
+![Grounded ward, paid integrity and still-closed catches](../../evidence/north-star-grounding/source-grounded.png)
 
 ## Guardian technique choice
 
@@ -235,7 +264,7 @@ A new crossing or abandonment clears the agreement. No account, reputation meter
 persistent quest or source fictional universe is added.
 
 ```bash
-python3 north-star/prototype/tools/verify_conversation.py --output /tmp/conversation.json --compare evidence/north-star-fittings/conversation.json
+python3 north-star/prototype/tools/verify_conversation.py --output /tmp/conversation.json --compare evidence/north-star-grounding/conversation.json
 # Optional Linux XTest keys after a fixture completes the actual escort:
 python3 north-star/prototype/tools/verify_conversation_display.py --output /tmp/conversation-display
 ```
@@ -271,7 +300,7 @@ The editor is available on selection, without live appearance changes or combat 
 ![Actual character-look draft and shared actor preview](../../evidence/north-star-character-look/editor-rest.png)
 
 ```bash
-python3 north-star/prototype/tools/verify_look.py --output /tmp/look.json --compare evidence/north-star-fittings/look.json
+python3 north-star/prototype/tools/verify_look.py --output /tmp/look.json --compare evidence/north-star-grounding/look.json
 python3 north-star/prototype/tools/verify_look_display.py --baseline /path/to/prior.pck --output /tmp/look-display
 ```
 
@@ -286,7 +315,7 @@ not final class/people canon, a complete character system or proof of the identi
 ### Verify local appearance continuity
 
 ```bash
-python3 north-star/prototype/tools/verify_appearance.py --output /tmp/appearance.json --compare evidence/north-star-fittings/appearance.json
+python3 north-star/prototype/tools/verify_appearance.py --output /tmp/appearance.json --compare evidence/north-star-grounding/appearance.json
 ```
 
 52 native migration/failure controls run in source and PCK. Twenty actual engine
@@ -580,7 +609,7 @@ or MMORPG persistence.
 ## Execute checks and reproduce delivery
 
 ```bash
-python3 north-star/prototype/tools/verify.py --godot godot --output /tmp/crossing-check.json --compare evidence/north-star-fittings/regressions.json
+python3 north-star/prototype/tools/verify.py --godot godot --output /tmp/crossing-check.json --compare evidence/north-star-grounding/regressions.json
 ```
 
 The stdlib runner bounds owned engine processes, uses writable temporary XDG paths,
@@ -604,7 +633,7 @@ The source pack is reproducible with the matching engine:
 godot --headless --path north-star/prototype --script tools/pack.gd -- /absolute/path/crossing-drill.pck
 ```
 
-[Current execution evidence](../../evidence/north-star-fittings/RUN.json) identifies
+[Current execution evidence](../../evidence/north-star-grounding/RUN.json) identifies
 baseline, source/result hashes, commands, refinements and limitations. The preserved
 [first-consumer record](../../evidence/north-star-crossing/RUN.json) documents the
 original crossing delivery; the [rehearsal record](../../evidence/north-star-rehearsal/RUN.json)
@@ -618,9 +647,9 @@ journeys use controlled inputs, not human decisions.
 ```bash
 python3 north-star/prototype/tools/check_linux.py
 python3 north-star/prototype/tools/test_check_linux.py
-python3 north-star/prototype/tools/verify_linux.py --output /tmp/player.json --compare evidence/north-star-fittings/results.json
+python3 north-star/prototype/tools/verify_linux.py --output /tmp/player.json --compare evidence/north-star-grounding/results.json
 python3 north-star/prototype/tools/export_linux.py --godot godot --templates /path/to/Godot_v4.6.3-stable_export_templates.tpz --output /tmp/crossing-rebuilt.zip
-python3 north-star/prototype/tools/verify_linux.py --archive /tmp/crossing-rebuilt.zip --output /tmp/rebuilt-player.json --compare evidence/north-star-fittings/results.json
+python3 north-star/prototype/tools/verify_linux.py --archive /tmp/crossing-rebuilt.zip --output /tmp/rebuilt-player.json --compare evidence/north-star-grounding/results.json
 ```
 
 An already extracted official standard `linux_release.x86_64` is accepted through
@@ -668,7 +697,7 @@ remaps remain separate. No pad remapping or physical-device compatibility is cla
 
 ```bash
 python3 north-star/prototype/tools/test_verify_gamepad.py
-python3 north-star/prototype/tools/verify_gamepad.py --archive north-star/prototype/dist/crossing-drill-linux-0.3.0.zip --output /tmp/pad.json --compare evidence/north-star-fittings/gamepad.json
+python3 north-star/prototype/tools/verify_gamepad.py --archive north-star/prototype/dist/crossing-drill-linux-0.4.0.zip --output /tmp/pad.json --compare evidence/north-star-grounding/gamepad.json
 ```
 
 The actual viewport receives injected mapped events and both complete journeys use

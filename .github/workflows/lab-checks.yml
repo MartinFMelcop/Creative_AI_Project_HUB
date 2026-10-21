@@ -208,17 +208,17 @@ jobs:
           veil_engine="$RUNNER_TEMP/veil-godot/Godot_v4.6.3-stable_linux.x86_64"
           CROSSING_GODOT="$veil_engine" python3 north-star/prototype/tools/test_verify.py
           CROSSING_GODOT="$veil_engine" python3 north-star/prototype/tools/test_fittings.py
-          python3 north-star/prototype/tools/fittings.py verify --godot "$veil_engine" --output "$RUNNER_TEMP/fittings.json" --compare evidence/north-star-fittings/fittings.json
+          python3 north-star/prototype/tools/fittings.py verify --godot "$veil_engine" --output "$RUNNER_TEMP/fittings.json" --compare evidence/north-star-grounding/fittings.json
           CROSSING_GODOT="$veil_engine" python3 north-star/prototype/tools/test_verify_resolution.py
-          python3 north-star/prototype/tools/verify.py --godot "$veil_engine" --output "$RUNNER_TEMP/crossing-check.json" --compare evidence/north-star-fittings/regressions.json
-          python3 north-star/prototype/tools/verify_workshop.py --godot "$veil_engine" --output "$RUNNER_TEMP/workshop-check.json" --compare evidence/north-star-fittings/workshop.json
-          python3 north-star/prototype/tools/verify_routes.py --godot "$veil_engine" --output "$RUNNER_TEMP/routes-check.json" --compare evidence/north-star-fittings/routes.json
+          python3 north-star/prototype/tools/verify.py --godot "$veil_engine" --output "$RUNNER_TEMP/crossing-check.json" --compare evidence/north-star-grounding/regressions.json
+          python3 north-star/prototype/tools/verify_workshop.py --godot "$veil_engine" --output "$RUNNER_TEMP/workshop-check.json" --compare evidence/north-star-grounding/workshop.json
+          python3 north-star/prototype/tools/verify_routes.py --godot "$veil_engine" --output "$RUNNER_TEMP/routes-check.json" --compare evidence/north-star-grounding/routes.json
           curl --fail --location --silent --show-error --max-time 45 "https://raw.githubusercontent.com/MartinFMelcop/Creative_AI_Project_HUB/5ab0b90a64da191016ea11f491df0f1c991fafd8/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/prototype/dist/crossing-drill.pck" --output "$RUNNER_TEMP/prior-crossing.pck"
           echo "ef8a226d88c221aca4e30768d4326e068c7873bdbfc14bb4febd7e62060791e1  $RUNNER_TEMP/prior-crossing.pck" | sha256sum --check
-          python3 north-star/prototype/tools/verify_gate.py --godot "$veil_engine" --output "$RUNNER_TEMP/gate-check.json" --baseline "$RUNNER_TEMP/prior-crossing.pck" --compare evidence/north-star-fittings/gate.json
-          python3 north-star/prototype/tools/verify_look.py --godot "$veil_engine" --output "$RUNNER_TEMP/look-check.json" --compare evidence/north-star-fittings/look.json
-          python3 north-star/prototype/tools/verify_conversation.py --godot "$veil_engine" --output "$RUNNER_TEMP/conversation-check.json" --compare evidence/north-star-fittings/conversation.json
-          python3 north-star/prototype/tools/verify_appearance.py --godot "$veil_engine" --output "$RUNNER_TEMP/appearance-check.json" --compare evidence/north-star-fittings/appearance.json
+          python3 north-star/prototype/tools/verify_gate.py --godot "$veil_engine" --output "$RUNNER_TEMP/gate-check.json" --baseline "$RUNNER_TEMP/prior-crossing.pck" --compare evidence/north-star-grounding/gate.json
+          python3 north-star/prototype/tools/verify_look.py --godot "$veil_engine" --output "$RUNNER_TEMP/look-check.json" --compare evidence/north-star-grounding/look.json
+          python3 north-star/prototype/tools/verify_conversation.py --godot "$veil_engine" --output "$RUNNER_TEMP/conversation-check.json" --compare evidence/north-star-grounding/conversation.json
+          python3 north-star/prototype/tools/verify_appearance.py --godot "$veil_engine" --output "$RUNNER_TEMP/appearance-check.json" --compare evidence/north-star-grounding/appearance.json
           python3 north-star/prototype/tools/test_verify_gamepad.py
           python3 north-star/prototype/tools/test_verify_sound.py
           python3 north-star/prototype/tools/verify_sound.py --godot "$veil_engine" --output "$RUNNER_TEMP/crossing-sound.json"
@@ -228,14 +228,18 @@ jobs:
         working-directory: martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab
         run: |
           veil_engine="$RUNNER_TEMP/veil-godot/Godot_v4.6.3-stable_linux.x86_64"
+          curl --fail --location --silent --show-error --max-time 45 "https://raw.githubusercontent.com/MartinFMelcop/Creative_AI_Project_HUB/0777f55197fbf5aef57c55f79425c42bf8e81596/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/prototype/dist/crossing-drill.pck" --output "$RUNNER_TEMP/pre-grounding.pck"
+          echo "6c3dd34e7f7cd63c12980a858df5369feff921941ffcc3c032f86b2ffa762102  $RUNNER_TEMP/pre-grounding.pck" | sha256sum --check
+          python3 north-star/prototype/tools/verify_grounding.py --godot "$veil_engine" --baseline "$RUNNER_TEMP/pre-grounding.pck" --output "$RUNNER_TEMP/grounding.json" --compare evidence/north-star-grounding/grounding.json
           python3 north-star/prototype/tools/check_linux.py
           python3 north-star/prototype/tools/test_check_linux.py
-          python3 north-star/prototype/tools/verify_linux.py --output "$RUNNER_TEMP/crossing-player.json" --compare evidence/north-star-fittings/results.json
+          python3 north-star/prototype/tools/verify_linux.py --output "$RUNNER_TEMP/crossing-player.json" --compare evidence/north-star-grounding/results.json
           python3 north-star/prototype/tools/export_linux.py --godot "$veil_engine" --templates "$RUNNER_TEMP/veil-godot/templates.tpz" --output "$RUNNER_TEMP/crossing-rebuilt.zip"
-          python3 north-star/prototype/tools/verify_linux.py --archive "$RUNNER_TEMP/crossing-rebuilt.zip" --output "$RUNNER_TEMP/crossing-rebuilt.json" --compare evidence/north-star-fittings/results.json
-          python3 north-star/prototype/tools/fittings.py verify --godot "$veil_engine" --archive "$RUNNER_TEMP/crossing-rebuilt.zip" --output "$RUNNER_TEMP/rebuilt-fittings.json" --compare evidence/north-star-fittings/fittings.json
-          python3 north-star/prototype/tools/verify_gamepad.py --godot "$veil_engine" --archive north-star/prototype/dist/crossing-drill-linux-0.3.0.zip --output "$RUNNER_TEMP/mapped-pad.json" --compare evidence/north-star-fittings/gamepad.json
-          python3 north-star/prototype/tools/verify_gamepad.py --godot "$veil_engine" --archive "$RUNNER_TEMP/crossing-rebuilt.zip" --output "$RUNNER_TEMP/rebuilt-pad.json" --compare evidence/north-star-fittings/gamepad.json
+          python3 north-star/prototype/tools/verify_grounding.py --godot "$veil_engine" --archive "$RUNNER_TEMP/crossing-rebuilt.zip" --output "$RUNNER_TEMP/rebuilt-grounding.json" --compare evidence/north-star-grounding/grounding.json
+          python3 north-star/prototype/tools/verify_linux.py --archive "$RUNNER_TEMP/crossing-rebuilt.zip" --output "$RUNNER_TEMP/crossing-rebuilt.json" --compare evidence/north-star-grounding/results.json
+          python3 north-star/prototype/tools/fittings.py verify --godot "$veil_engine" --archive "$RUNNER_TEMP/crossing-rebuilt.zip" --output "$RUNNER_TEMP/rebuilt-fittings.json" --compare evidence/north-star-grounding/fittings.json
+          python3 north-star/prototype/tools/verify_gamepad.py --godot "$veil_engine" --archive north-star/prototype/dist/crossing-drill-linux-0.4.0.zip --output "$RUNNER_TEMP/mapped-pad.json" --compare evidence/north-star-grounding/gamepad.json
+          python3 north-star/prototype/tools/verify_gamepad.py --godot "$veil_engine" --archive "$RUNNER_TEMP/crossing-rebuilt.zip" --output "$RUNNER_TEMP/rebuilt-pad.json" --compare evidence/north-star-grounding/gamepad.json
 
   integrity-and-dialogue:
     runs-on: ubuntu-24.04

@@ -73,7 +73,15 @@ func _ready() -> void:
 	if args.size()==2 and args[0] in ["--verify-player","--verify-player-read"]:
 		call_deferred("verify_player",args[1],args[0]=="--verify-player-read")
 	elif args.size()==2 and args[0]=="--verify-pad":call_deferred("verify_pad",args[1])
+	elif args.size()==2 and args[0]=="--verify-grounding":call_deferred("verify_grounding",args[1])
 	elif args.size()==2 and args[0]=="--verify-fittings":call_deferred("verify_fittings",args[1])
+
+func verify_grounding(output: String) -> void:
+	set_physics_process(false)
+	var report: Dictionary=load("res://tests/grounding_driver.gd").new().run(self,output)
+	sound.silence()
+	await get_tree().create_timer(.2).timeout
+	get_tree().quit(0 if report.checks.failed==0 else 1)
 
 func verify_fittings(output: String) -> void:
 	set_physics_process(false)
@@ -786,8 +794,18 @@ func draw_return_gate() -> void:
 		draw_rect(Rect2(at-Vector2(18,14),Vector2(36,28)),Color("596575"))
 		draw_line(at,at+Vector2(17,-28 if return_gate.raised[i] else 20),tint,6,true)
 		text(at+Vector2(-74,-53),("NORTH" if i==0 else "SOUTH")+" CATCH",17,tint)
-		text(at+Vector2(-84,61),"RAISED" if return_gate.raised[i] else "Hold E here / 1s",16,tint)
+		text(at+Vector2(-84,61),"RAISED" if return_gate.raised[i] else "Hold %s here / 1s"%bindings.name_for("interact"),16,tint)
 		if return_gate.working==i and return_gate.channel:draw_arc(at,41,-PI/2,-PI/2+TAU*return_gate.progress/ReturnGate.WORK_TIME,40,PAPER,5)
+	var ground:Vector2=ReturnGate.GROUND
+	var ground_tint:Color=TEAL if return_gate.grounded else (AMBER if game.cargo>1 and not game.sentinel_disabled() else Color("596575"))
+	draw_line(ground,ReturnGate.WINCH,ground_tint,2)
+	draw_arc(ground,ReturnGate.RADIUS,0,TAU,32,ground_tint,2)
+	draw_line(ground+Vector2(-13,8),ground+Vector2(13,8),ground_tint,5)
+	draw_line(ground,ground+Vector2(16,-20),ground_tint,5)
+	text(ground+Vector2(-81,50),"WARD GROUND / 1.5s",16,ground_tint)
+	var ground_label:String="GROUNDED / -1 WINCH" if return_gate.grounded else ("WARD ALREADY QUIET" if game.sentinel_disabled() else ("NEEDS 2+ INTEGRITY" if game.cargo<2 else "Hold %s / costs 1 winch"%bindings.name_for("interact")))
+	text(ground+Vector2(-100,73),ground_label,15,ground_tint)
+	if return_gate.working==ReturnGate.GROUND_INDEX and return_gate.channel:draw_arc(ground,41,-PI/2,-PI/2+TAU*return_gate.progress/ReturnGate.GROUND_TIME,40,PAPER,5)
 	var winch:Vector2=ReturnGate.WINCH
 	draw_circle(winch,29,Color("566675"));draw_arc(winch,22,0,TAU,24,PAPER,4)
 	for i in 4:
@@ -832,7 +850,7 @@ func draw_return_gate() -> void:
 	panel(Rect2(30,662,1092,86))
 	text(Vector2(48,687),"WASD move / ARROWS aim / J counter / K guard or feint / SPACE step / E work / ESC pause",17)
 	var message:String=game.message.replace("courier safe","winch safe").replace("courier gains time","more time to work").replace("Sentinel focus","Ward focus")
-	text(Vector2(48,718),"Working: no guard, blade or step. Moving, release or a hit cancels partial work." if return_gate.channel else message,17,AMBER)
+	text(Vector2(48,718),"Grounding: costs 1 winch. Movement, release or damage cancels." if return_gate.working==ReturnGate.GROUND_INDEX else "Working: no guard, blade or step. Moving, release or a hit cancels partial work." if return_gate.channel else message,17,AMBER)
 	if game.mode!="play":
 		panel(Rect2(90,220,972,365),Color("172535"))
 		text(Vector2(125,271),"RETURN GATE PAUSED" if game.mode=="paused" else ("RETURN PASSAGE OPEN" if game.mode=="won" else "RETURN GATE FAILED"),32,TEAL if game.mode=="won" else AMBER)

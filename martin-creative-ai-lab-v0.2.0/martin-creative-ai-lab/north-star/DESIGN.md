@@ -360,3 +360,23 @@ ENG-015 informs one data contract with real consumers. SCI-017 informs prior-fit
 comparisons and malformed-content controls. Revisit the trade-off and production
 interface when actual authors/players use them or encounter a new content requirement.
 See [execution](../evidence/north-star-fittings/RUN.json) and [STATE](../docs/STATE.md).
+
+## Experimental return resolution — grounding the ward
+
+**Status:** implemented local prototype hypothesis, not final author-approved canon.
+The optional return can be completed under threat, after three close counters, or by
+committing 1.5 seconds at a linked grounding lever and spending one winch integrity.
+At least two integrity is required. This gives the character another actual approach
+without creating a free perfect solution: it trades a safety margin and stationary
+exposure for a quiet room. Brace aid leaves more margin but does not remove the cost.
+
+Movement/release, personal or winch damage and suspension cancel partial work. Same-frame
+harm defeats completion. Already-disabled wards cannot consume integrity; holding cannot
+repeat the charge. The two catches, actual exit and survival still own success. The
+arrival checkpoint remains immutable, and neither fake counters nor extra marks result.
+
+CRE-005 materially informs the visible cost and alternative action; ENG-005 informs
+single-spend/survival/reset invariants; SCI-017 informs matched old/new-delivery controls.
+[Execution](../evidence/north-star-grounding/RUN.json) distinguishes fixed-policy feasibility,
+native synthetic input and agent image inspection from missing human comprehension,
+preference and balance evidence. No new world geography, profession or final class.

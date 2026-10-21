@@ -1,4 +1,4 @@
-Virgo Diamond: The North Star — Crossing Drill, Linux player 0.3.0
+Virgo Diamond: The North Star — Crossing Drill, Linux player 0.4.0
 
 Extract the entire CrossingDrill folder, then open crossing-drill.x86_64 or run
 ./crossing-drill.x86_64 from a terminal. Keep crossing-drill.pck beside it.
@@ -35,6 +35,12 @@ After a genuine escort win, F4 offers an optional conversation and one exclusive
 aid choice. Enter confirms a draft; Escape discards. F2 continues to a second
 goal with actual arrival health: raise two catches, protect the winch, exit alive.
 Direct continuation and the original escort replay remain available.
+To silence the return ward without counters, use the linked lever below the winch:
+hold E (or your interact binding / mapped A) for 1.5 uninterrupted seconds. It needs
+at least 2 winch integrity and spends 1. Movement, release, personal/winch damage,
+pause or focus loss cancels progress. Guard, blade and step are unavailable while
+working. Brace aid leaves extra margin. Both catches and the living exit still matter;
+retry restores the arrival checkpoint, never stacks aid or grants another mark.
 
 This is an experimental local prototype, not a finished MMORPG, final classes,
 approved geography/canon or proof of player identity, enjoyment or market demand.

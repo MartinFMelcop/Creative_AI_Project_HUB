@@ -2,7 +2,7 @@
 
 **Updated:** 2026-10-21 UTC. **Product SEED version:** 0.33.20.
 **Mode:** DEVELOPMENT. **Verified integration baseline:**
-`953faac7587dba96ace1069327c51fbe663a62f1`, branch `work`; fetched main matched HEAD,
+`0777f55197fbf5aef57c55f79425c42bf8e81596`, branch `work`; fetched main matched HEAD,
 no divergence, and initial tracked/untracked tree was clean.
 
 This file owns active initiative continuity, not detailed gameplay contracts or an
@@ -19,20 +19,18 @@ actual local playable consumer and create evidence for future production archite
 Players should express different approaches and consequences through a connected
 adventure; this remains a prototype frontier within the larger original MMORPG vision.
 
-**Implemented and verified baseline:** The current consumer links paid combat
-approaches, rehearsal, equipment trade-offs, appearance/local cosmetic memory,
-courier consequences, escort and return objectives. A validated equipment catalog
-now drives the actual workshop, combat and supported outfit visuals. Authors can
-stage a new identifier and values without editing consumer code. A new reversible
-Field sash trades health for faster unguarded recovery; existing fittings preserve
-all six prior route outcomes and retained gameplay/persistence observations.
-[Current execution](../evidence/north-star-fittings/RUN.json) covers staged authorship,
-malformed-content blocking, all eight fitting/approach journeys through both goals,
-source/PCK/actual Linux release and separate rebuild, plus synthetic native keyboard
-navigation and inspected images. Detailed contracts belong in
-[the prototype guide](../north-star/prototype/README.md) and
-[the authoring interface](../north-star/prototype/data/README.md). Capability statuses
-and the local-prototype maturity remain unchanged; no new laboratory or origin transfer.
+**Implemented and verified baseline:** The connected local adventure retains equipment
+trade-offs, appearance/local cosmetic memory, courier aid, escort and return goals.
+The return now offers an alternative to working under threat or earning three counters:
+commit 1.5 seconds at a grounding lever and sacrifice one winch integrity to silence the
+ward. Damage can interrupt; two catches and actual living exit remain mandatory. Retry
+restores the prepared arrival without stacking aid. [Current execution](../evidence/north-star-grounding/RUN.json)
+binds controls, eight two-goal approach/outfit journeys, source/PCK/Linux release,
+matched prior-delivery observations, native keyboard interaction and inspected images.
+Equipment authorship remains bounded by [the catalog contract](../north-star/prototype/data/README.md);
+[its original execution](../evidence/north-star-fittings/RUN.json) remains historical evidence.
+Detailed mechanics belong in [the prototype guide](../north-star/prototype/README.md).
+Capability states and local-prototype maturity remain unchanged; no new lab/origin transfer.
 
 **Missing/uncertain:** Distinct final classes/specializations/progression, professions,
 long-term content throughput, social recognition and shared-world networking/server
@@ -49,12 +47,11 @@ functional progress. Production engine is undecided. Unity execution depends on 
 editor/tool availability and licensing, and is not a prerequisite for continuing
 useful prototype work. Shared-world trust/persistence needs separate architecture.
 
-**Next high-value frontier:** Compare a coherent authored ability/character-build
-consumer or consequential quest/encounter variation with calibrated architecture
-research and real author/player observation when available. Use the current gear
-pipeline only where it serves that outcome; another item variant or catalog expansion
-is not an automatic continuation. Observe whether a content-production constraint or
-an actual experience gap is now the stronger limit before selecting the next scope.
+**Next high-value frontier:** Compare a coherent authored ability/build consumer,
+independent author/player observation and calibrated architecture research. The return
+now demonstrates distinct resolution costs; another lever or item is not automatically
+valuable. Determine whether comprehension, encounter depth, production throughput or
+shared-world architecture is the strongest actual limit before extending this room.
 
 **Continuation/redesign/completion/suspension/retirement:** Continue when a frontier
 materially advances character expression/agency or removes a demonstrated production

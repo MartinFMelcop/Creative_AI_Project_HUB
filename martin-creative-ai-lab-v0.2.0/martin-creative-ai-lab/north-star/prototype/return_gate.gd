@@ -6,6 +6,10 @@ const CATCHES:=[Vector2(330,270),Vector2(960,530)]
 const EXIT:=Vector2(1060,390)
 const RADIUS:=32.0
 const WORK_TIME:=1.0
+const GROUND:=Vector2(550,560)
+const GROUND_TIME:=1.5
+const GROUND_INDEX:=2
+var grounded:=false
 var active:=false
 var entry:Dictionary={}
 var game=Combat.new()
@@ -33,12 +37,13 @@ func retry() -> void:
 	# The protected-contact fields represent this room's stationary device.
 	game.stationary_relay=true;game.courier=WINCH;game.cargo=cargo_limit()
 	game.player=Vector2(700,390);game.facing=Vector2.RIGHT
-	raised=[false,false];progress=0;channel=false;working=-1;events.clear()
+	grounded=false;raised=[false,false];progress=0;channel=false;working=-1;events.clear()
 	game.note("Courier safe. Raise both catches, protect the winch, then pass the gate.")
 
 func pending_nearby() -> int:
 	for i in CATCHES.size():
 		if not raised[i] and game.player.distance_to(CATCHES[i])<=RADIUS:return i
+	if not game.sentinel_disabled() and game.cargo>1 and game.player.distance_to(GROUND)<=RADIUS:return GROUND_INDEX
 	return -1
 
 func eligible(command: Dictionary) -> bool:
@@ -67,15 +72,23 @@ func step(delta: float, command: Dictionary) -> void:
 		game.note("Winch hit. Only %d integrity remains."%game.cargo)
 	if game.mode=="lost":
 		suspend();game.note("Return gate failed. Retry from the arrival checkpoint or leave.");return
-	if game.hp<previous_hp:
-		suspend();game.note("Hit interrupted the catch. Reposition, then start that work again.")
+	if work and index==GROUND_INDEX and game.counters.courier_hits>previous_hits:
+		suspend();game.note("Winch damage interrupted grounding. At least 2 integrity is required.")
+	elif game.hp<previous_hp:
+		suspend();game.note("Hit interrupted the work. Reposition, then start that work again.")
 	elif work:
 		progress+=clampf(delta,0,0.05)
-		if progress+0.000001>=WORK_TIME:
-			raised[index]=true
-			events.append({"tick":roundi(game.elapsed*60),"action":"catch_raised","index":index})
-			suspend()
-			game.note("Both catches raised. Pass through the open gate alive." if opened() else "One catch raised. The winch is still exposed; reach the other catch.")
+		if progress+0.000001>=(GROUND_TIME if index==GROUND_INDEX else WORK_TIME):
+			if index==GROUND_INDEX:
+				game.cargo-=1;grounded=true
+				game.enemy_focus=0;game.phase="disabled";game.clock=0;game.opening=0;game.redirected=false
+				events.append({"tick":roundi(game.elapsed*60),"action":"ward_grounded","integrity_spent":1})
+				suspend();game.note("Ward grounded. Spent 1 winch integrity; both catches and the exit still need work.")
+			else:
+				raised[index]=true
+				events.append({"tick":roundi(game.elapsed*60),"action":"catch_raised","index":index})
+				suspend()
+				game.note("Both catches raised. Pass through the open gate alive." if opened() else "One catch raised. The winch is still exposed; reach the other catch.")
 	if opened() and game.player.x>=1040 and game.player.distance_to(EXIT)<=24:
 		game.mode="won";suspend()
 		events.append({"tick":roundi(game.elapsed*60),"action":"return_opened"})
@@ -85,6 +98,8 @@ func opened() -> bool:
 	return raised[0] and raised[1]
 
 func snapshot() -> Dictionary:
-	return {"active":active,"entry":entry.duplicate(true),"raised":raised.duplicate(),
+	var result={"active":active,"entry":entry.duplicate(true),"raised":raised.duplicate(),
 		"progress":snappedf(progress,0.000001),"channel":channel,"working":working,
 		"events":events.duplicate(true),"game":game.snapshot()}
+	if grounded:result.grounded=true
+	return result
