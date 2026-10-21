@@ -2799,3 +2799,37 @@ Protected sources/pins, gameplay, PCK/Linux0.5.0 and capability states remain un
 No human validation, prediction/reconciliation, WAN/RTT/capacity, authentication,
 multiplayer product, creative canon or production-engine claim. Compare builds and
 independent observation with demonstrated freshness/interaction needs before continuing.
+
+## ADR-099 — expose server-confirmed action affordances
+
+**Date:** 2026-10-21 UTC. **Status:** implemented DEVELOPMENT.
+**Baseline:** clean `work`, `40d4513978cd30ae55e6b072397f8021b719611f`; fetched main
+matched. Prior Lab checks completed successfully, independently verified.
+
+**Selection/behavior:** Compare new abilities/builds, independent observation, a larger
+network stack and production/creative alternatives. Existing remote actions lacked
+visible cost/readiness context. Deliver three server-authored action cards and actual
+counter/draw reach rings without changing class canon, rules or packages. Snapshot advice
+is for individual actions, never a reservation, prediction, combination budget or future
+admission token. Costs remain paid even when a strike misses. Guard timing/locked facing
+is distinct from protection against a ground pulse. Blocked controls mask availability;
+model ownership, sequence/rate/neutralization and explicit recovery remain intact.
+
+**Verification:** [Execution](../evidence/north-star-action-feedback/RUN.json) binds
+197 native controls per source/PCK delivery, including 57 real-model action controls,
+42 live authority controls per delivery, eight ordinary source/PCK living journeys,
+32 OS window controls and a separate graphical source Duelist living win. Agent inspected
+six retained images, including draw reach and terminal after actual server closure.
+27 authority/instrument/evidence regressions and repository/source/manifest gates pass.
+CI now compares the reexecuted current authority/remote artifacts; historical evidence
+is preserved. These checks do not demonstrate human comprehension or player benefit.
+
+**Negative/limits:** An initial source grouped-delivery run overlapped other native
+suites and failed the unchanged lease gate (Duelist two clears). Preserve its complete
+observations. A serial repeat and PCK integration pass with one each, including terminal
+grace; all grouped policies still lose. These takes do not isolate a scheduling cause
+or establish capacity. No gameplay/PCK/Linux0.5.0, capability state, lab or engine choice
+changes. ENG-022 informs predictable feedback, CRE-075 contextual presentation as a
+hypothesis, SCI-017 real controls and retained negative observations. Protected sources
+and pins remain unchanged. Compare coherent build work and independent observation with
+actual freshness/interaction needs next; no automatic network or governance expansion.

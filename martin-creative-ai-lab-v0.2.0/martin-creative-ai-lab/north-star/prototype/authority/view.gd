@@ -21,6 +21,11 @@ var focused:=true
 var previous_status:=""
 var font=ThemeDB.fallback_font
 var captures:=0
+const ACTION_TEXT={"ready":"READY AT SNAPSHOT","recovering":"RECOVERING","resolve":"NEEDS RESOLVE",
+	"silent":"WARD SILENT","guard":"RELEASE GUARD","stepping":"FINISH STEP","range":"MOVE INTO RANGE",
+	"armored":"WAIT FOR OPEN","hold":"HOLD; FACE THE BOLT","ground":"GROUND PULSE: MOVE OUT",
+	"startup":"GUARD STARTUP","live":"LIVE; FACING LOCKED","stale":"GUARD EXPIRED: RELEASE",
+	"bolt":"WAIT FOR AMBER BOLT","drawn":"BOLT DRAWN: LEAVE LINE","terminal":"SESSION FINISHED"}
 
 func _ready() -> void:
 	DisplayServer.window_set_title("Virgo Diamond — Remote Crossing")
@@ -87,6 +92,40 @@ func panel(rect:Rect2) -> void:
 func style_box() -> StyleBoxFlat:
 	var box=StyleBoxFlat.new();box.bg_color=Color("1c2c3b");box.border_color=Color("3f5a65")
 	box.set_border_width_all(1);box.set_corner_radius_all(12);return box
+func action_rows() -> Array:
+	if remote.confirmed.is_empty():return []
+	var rows:Array=[]
+	for key in ["technique","step","counter"]:
+		var row:Dictionary=remote.confirmed.actions[key].duplicate()
+		row.key=key;row.caption=ACTION_TEXT[row.status]
+		row.available=row.status in ["ready","live"]
+		var blocked:String=""
+		if remote.status!="live":blocked="LAST CONFIRMED / INPUT BLOCKED"
+		elif controls.suspended or not focused:blocked="CONTROLS SUSPENDED"
+		elif controls.quarantined or remote.latest.get("quarantined",true):blocked="RELEASE TO REARM"
+		if not blocked.is_empty():row.caption=blocked;row.available=false
+		rows.append(row)
+	return rows
+func draw_actions(state:Dictionary) -> void:
+	var rows:Array=action_rows()
+	for index in rows.size():
+		var row:Dictionary=rows[index];var x:float=50+index*354
+		panel(Rect2(x,653,344,96))
+		var title:String="Space  /  Step" if row.key=="step" else "L / LMB  /  Counter"
+		if row.key=="technique":title="K / RMB  /  "+state.guard_style+" guard" if state.role=="Guardian" else "J  /  Draw bolt"
+		text(Vector2(x+12,676),title,18)
+		text(Vector2(x+12,701),row.caption,15,TEAL if row.available else AMBER)
+		var detail:String="%d resolve"%row.cost
+		if row.drain>0:detail="%d/s held + %d/contact"%[row.drain,row.cost]
+		elif row.wait>0:detail+="  |  %.2fs recovery"%row.wait
+		elif row.key=="counter":detail+="  |  %dpx teal ring"%state.actions.counter_radius
+		elif row.key=="technique":detail+="  |  %dpx amber ring"%state.actions.draw_radius
+		text(Vector2(x+12,731),detail,16)
+	text(Vector2(55,766),"WASD/arrows move | Mouse aims | Esc suspends/resumes; world continues | Q closes | Snapshot advice; every press is checked by the server.",14)
+func range_ring(center:Vector2,radius:float,color:Color) -> void:
+	for index in 32:
+		var start:float=TAU*index/32.0
+		draw_arc(center,radius,start,start+TAU/64.0,4,color,1.5,true)
 func _draw() -> void:
 	draw_rect(Rect2(0,0,1152,768),INK)
 	var state:Dictionary=remote.confirmed
@@ -116,10 +155,8 @@ func _draw() -> void:
 		text(Vector2(650,147),"Counters %d / 3"%state.counters.counters,17)
 		text(Vector2(888,118),remote.status.to_upper(),20,TEAL if remote.status=="live" else AMBER)
 		text(Vector2(888,147),"Arrival gap %.2fs"%remote.age,16)
-		var info:String=state.message
-		text(Vector2(55,676),info.left(114),17,AMBER)
-		text(Vector2(55,710),"WASD / arrows move    Mouse aims    K / right mouse guard    J draw    Space step    L / left mouse counter",16)
-		text(Vector2(55,740),"Esc suspend / resume controls (world continues)    Q close    |    Confirmed costs; positions interpolate, never predict.",15)
+		text(Vector2(55,182),state.message.left(125),14,AMBER)
+		draw_actions(state)
 		if state.mode in ["won","lost"]:
 			panel(Rect2(250,250,652,235))
 			text(Vector2(286,299),"CROSSING COMPLETE" if state.mode=="won" else "CROSSING LOST",29,accent if state.mode=="won" else RED)
@@ -144,6 +181,9 @@ func draw_world(state:Dictionary,accent:Color) -> void:
 	draw_line(Vector2(1010,333),Vector2(1010,390),TEAL,4)
 	draw_colored_polygon(PackedVector2Array([Vector2(1010,334),Vector2(1040,345),Vector2(1010,358)]),TEAL)
 	if state.enemy_focus>0:
+		range_ring(ENEMY,state.actions.counter_radius,TEAL if state.opening>0 else Color("6d9f98"))
+		if state.role=="Duelist" and state.phase=="bolt" and not state.redirected:
+			range_ring(ENEMY,state.actions.draw_radius,Color("b99462"))
 		if state.phase=="bolt":
 			var target:Vector2=vec(state.target)
 			draw_line(ENEMY,target,AMBER,3,true);draw_arc(target,24,0,TAU,32,AMBER,2,true)
@@ -180,7 +220,7 @@ func draw_world(state:Dictionary,accent:Color) -> void:
 func observation() -> Dictionary:
 	return {"status":remote.status,"reason":remote.reason,"age":remote.age,"confirmed":remote.confirmed.duplicate(true),
 		"position":[remote.position.x,remote.position.y],"courier_position":[remote.courier_position.x,remote.courier_position.y],
-		"suspended":controls.suspended,"quarantined":controls.quarantined,"focused":focused}
+		"suspended":controls.suspended,"quarantined":controls.quarantined,"focused":focused,"actions":action_rows()}
 func capture() -> void:
 	var prefix:String=OS.get_environment("NORTH_STAR_REMOTE_CAPTURE")
 	if prefix.is_empty():return

@@ -1,0 +1,132 @@
+{
+  "actions": [
+    {
+      "available": true,
+      "caption": "READY AT SNAPSHOT",
+      "cost": 16.0,
+      "drain": 0.0,
+      "key": "technique",
+      "status": "ready",
+      "wait": 0.0
+    },
+    {
+      "available": true,
+      "caption": "READY AT SNAPSHOT",
+      "cost": 25.0,
+      "drain": 0.0,
+      "key": "step",
+      "status": "ready",
+      "wait": 0.0
+    },
+    {
+      "available": false,
+      "caption": "WAIT FOR OPEN",
+      "cost": 12.0,
+      "drain": 0.0,
+      "key": "counter",
+      "status": "armored",
+      "wait": 0.0
+    }
+  ],
+  "age": 0.0,
+  "capture": 16,
+  "confirmed": {
+    "actions": {
+      "counter": {
+        "cost": 12.0,
+        "drain": 0.0,
+        "status": "armored",
+        "wait": 0.0
+      },
+      "counter_radius": 130.0,
+      "draw_radius": 340.0,
+      "step": {
+        "cost": 25.0,
+        "drain": 0.0,
+        "status": "ready",
+        "wait": 0.0
+      },
+      "technique": {
+        "cost": 16.0,
+        "drain": 0.0,
+        "status": "ready",
+        "wait": 0.0
+      }
+    },
+    "cargo": 3.0,
+    "clock": 0.0333333333333333,
+    "counters": {
+      "blocks": 0.0,
+      "counters": 0.0,
+      "courier_hits": 0.0,
+      "dodges": 0.0,
+      "player_hits": 0.0,
+      "redirects": 0.0,
+      "rejected": 0.0
+    },
+    "courier": [
+      211.799209594727,
+      390.0
+    ],
+    "courier_speed": 28.0,
+    "courier_x": 211.799,
+    "enemy_focus": 3.0,
+    "energy": 100.0,
+    "facing": [
+      -0.951349675655365,
+      0.308113247156143
+    ],
+    "feint_cooldown": 0.0,
+    "guard": false,
+    "guard_state": "DOWN",
+    "guard_style": "none",
+    "health_limit": 5.0,
+    "hp": 5.0,
+    "last_impact": {
+
+    },
+    "locked_face": [
+      1.0,
+      0.0
+    ],
+    "message": "BOLT: intercept facing the sentinel, or draw its aim with a feint.",
+    "mode": "play",
+    "opening": 0.0,
+    "phase": "bolt",
+    "player": [
+      705.122253417969,
+      350.695831298828
+    ],
+    "pulse": [
+      0.0,
+      0.0
+    ],
+    "redirected": false,
+    "role": "Duelist",
+    "step_cooldown": 0.0,
+    "step_dir": [
+      0.0,
+      0.0
+    ],
+    "step_left": 0.0,
+    "strike_cooldown": 0.0,
+    "target": [
+      238.86589050293,
+      390.0
+    ],
+    "tick": 111.0
+  },
+  "courier_position": [
+    211.799209594727,
+    390.0
+  ],
+  "focused": true,
+  "position": [
+    705.122253417969,
+    350.695831298828
+  ],
+  "quarantined": false,
+  "reason": "Server-confirmed world; presentation interpolation only.",
+  "status": "live",
+  "suspended": false
+}

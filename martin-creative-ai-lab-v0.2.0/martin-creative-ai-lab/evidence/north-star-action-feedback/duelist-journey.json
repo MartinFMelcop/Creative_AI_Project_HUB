@@ -1,0 +1,144 @@
+{
+  "authority_closed": true,
+  "input_events": 207,
+  "limits": "Synthetic Input.parse_input_event drives the actual view. No independent player, physical device, latency or capacity claim.",
+  "observation": {
+    "actions": [
+      {
+        "available": false,
+        "caption": "LAST CONFIRMED / INPUT BLOCKED",
+        "cost": 16.0,
+        "drain": 0.0,
+        "key": "technique",
+        "status": "terminal",
+        "wait": 0.0
+      },
+      {
+        "available": false,
+        "caption": "LAST CONFIRMED / INPUT BLOCKED",
+        "cost": 25.0,
+        "drain": 0.0,
+        "key": "step",
+        "status": "terminal",
+        "wait": 0.0
+      },
+      {
+        "available": false,
+        "caption": "LAST CONFIRMED / INPUT BLOCKED",
+        "cost": 12.0,
+        "drain": 0.0,
+        "key": "counter",
+        "status": "terminal",
+        "wait": 0.0
+      }
+    ],
+    "age": 0.0,
+    "confirmed": {
+      "actions": {
+        "counter": {
+          "cost": 12.0,
+          "drain": 0.0,
+          "status": "terminal",
+          "wait": 0.0
+        },
+        "counter_radius": 130.0,
+        "draw_radius": 340.0,
+        "step": {
+          "cost": 25.0,
+          "drain": 0.0,
+          "status": "terminal",
+          "wait": 0.0
+        },
+        "technique": {
+          "cost": 16.0,
+          "drain": 0.0,
+          "status": "terminal",
+          "wait": 0.0
+        }
+      },
+      "cargo": 3.0,
+      "clock": 0.0,
+      "counters": {
+        "blocks": 0.0,
+        "counters": 3.0,
+        "courier_hits": 0.0,
+        "dodges": 2.0,
+        "player_hits": 0.0,
+        "redirects": 2.0,
+        "rejected": 0.0
+      },
+      "courier": [
+        1000.0,
+        390.0
+      ],
+      "courier_speed": 56.0,
+      "courier_x": 1000.0,
+      "enemy_focus": 0.0,
+      "energy": 100.0,
+      "facing": [
+        -0.876131415367126,
+        0.482072323560715
+      ],
+      "feint_cooldown": 0.0,
+      "guard": false,
+      "guard_state": "DOWN",
+      "guard_style": "none",
+      "health_limit": 5.0,
+      "hp": 5.0,
+      "last_impact": {
+        "code": "sentinel_disabled",
+        "explanation": "Three close counters broke the sentinel's focus.",
+        "tip": "The courier runs at twice its walking speed. Reach the gate; medicine remains optional."
+      },
+      "locked_face": [
+        1.0,
+        0.0
+      ],
+      "message": "The courier reached the gate. Your approach changed how the line was held.",
+      "mode": "won",
+      "opening": 0.0,
+      "phase": "disabled",
+      "player": [
+        694.001831054688,
+        331.512420654297
+      ],
+      "pulse": [
+        689.172119140625,
+        321.666564941406
+      ],
+      "redirected": false,
+      "role": "Duelist",
+      "step_cooldown": 0.0,
+      "step_dir": [
+        0.0,
+        -1.0
+      ],
+      "step_left": 0.0,
+      "strike_cooldown": 0.0,
+      "target": [
+        689.172119140625,
+        320.737335205078
+      ],
+      "tick": 1284.0
+    },
+    "courier_position": [
+      1000.0,
+      390.0
+    ],
+    "focused": true,
+    "position": [
+      694.001831054688,
+      331.512420654297
+    ],
+    "quarantined": false,
+    "reason": "Confirmed won.",
+    "status": "terminal",
+    "suspended": false
+  },
+  "reason": "Confirmed terminal state retained after actual authority closure.",
+  "role": "Duelist",
+  "schema_version": 1,
+  "snapshots": 469,
+  "success": true,
+  "terminal_tick": 1284
+}

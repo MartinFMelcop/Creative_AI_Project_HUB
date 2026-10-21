@@ -1,0 +1,161 @@
+{
+  "contract": {
+    "identities": {
+      "authority/intent.gd": "1419479da2db30315ce1adaad967d406fc336c712e2ee86d3ff6d15468c91379",
+      "authority/intent_checks.gd": "1f6cf85015610e558089a0ce3f685c502de4d16d3db392bbebfd6d8dd6fc5b5d",
+      "authority/play.gd": "7a0169cd9b9bab04901ad840e6893eec6ad81193f53849995df435727851d9ce",
+      "authority/remote.gd": "6223afe74798fd6e506d9a84d11f3436cc1953413e44058ded47440664b70ef1",
+      "authority/server.gd": "cbe9dd7189f328bfda552e2d70efeda886c98ec2d9b88dd0a32664464944b483",
+      "authority/view.gd": "b2098b53b3186652ea6fb7caeba3f5cd9ac3f7be340258b919822f22a1d03cb0",
+      "combat.gd": "77aefc3f6130e114954a867f6404830180ca342c88e2396ec89a3784c2b3b0b3",
+      "data/fittings.json": "cf9ce26272dd4841e89f5de2bb679407f971ec04954bf753c15b4d768eba189d",
+      "dist/crossing-drill.pck": "352e47bca2482de7da6dd8818ebf5f3464a5585da93b10dd8a6c164ec70c17e2",
+      "fittings.gd": "836fa97cc7c6d81126bcddafc26daae72f5585ff61b70b55c83ea65aa70fc390",
+      "project.godot": "8d4755b58f1179a9b5ec431579177371e784bca9703a17c88f4c7a6d4ee9385c",
+      "route.gd": "2936029e1a52933fff0141b546f85fbc53a57b7e6c5301eaef5cabac06a05901",
+      "tests/action_checks.gd": "0f763b9b1b621629c9bb9c7bcbb1774310946403bdadba1dd83737187c21f197",
+      "tests/policy.gd": "646f0758a211e84ffbfd4632460c7d1fc549cbb3b552801ee2508774a5a63e29",
+      "tests/remote_checks.gd": "6147a1149c750ebc0a12522189d10fedb2adfcfe71deb6ea38fad3d2850522f7",
+      "tests/remote_journey.gd": "000d5228868719092d87cd2fe3d7074731ca62a65ca975c8e52c3813f07e152f",
+      "tests/remote_visual_checks.gd": "8fb705b6331c65454468c5cda2ab227c53aa2d9c8a3477787ce9648492bd2c29",
+      "tools/verify_remote.py": "32a16dcee6d8be6ed1e08236f7e99a7b6a64e7c8ad79bbb4ef1423f73513c49f",
+      "tools/verify_remote_input.py": "63536cc5ecf4211c96b2cc8bfcd6628409f81187982052d84c5f08bc741f03b3"
+    },
+    "living_remote_journeys_per_delivery": 2,
+    "native_controls": {
+      "actions": 57,
+      "intent": 44,
+      "transport": 90,
+      "visual": 6
+    },
+    "runtime": "4.6.3.stable.official.7d41c59c4",
+    "schema_version": 1,
+    "scope": "Separate developer window and fixed keyboard/mouse input. Snapshot interpolation only, no local Combat or prediction. Source/PCK real authority and synthetic native events. No shipped multiplayer, authentication, WAN, persistence, player, latency or capacity claim.",
+    "terminal_after_socket_close": true
+  },
+  "observation_limits": "Packet schedules, model completion times and event counts vary. Comparison binds identities and protected behavior, not exact raw observation equality. Synthetic input is not independent human evidence.",
+  "observations": {
+    "pack": {
+      "journeys": [
+        {
+          "cargo": 3.0,
+          "counters": {
+            "blocks": 6.0,
+            "counters": 3.0,
+            "courier_hits": 0.0,
+            "dodges": 0.0,
+            "player_hits": 0.0,
+            "redirects": 0.0,
+            "rejected": 0.0
+          },
+          "hp": 5.0,
+          "input_events": 41,
+          "model_ticks": 1651.0,
+          "role": "Guardian",
+          "snapshots": 592,
+          "terminal_retained_after_authority_close": true
+        },
+        {
+          "cargo": 3.0,
+          "counters": {
+            "blocks": 0.0,
+            "counters": 3.0,
+            "courier_hits": 0.0,
+            "dodges": 2.0,
+            "player_hits": 0.0,
+            "redirects": 2.0,
+            "rejected": 0.0
+          },
+          "hp": 5.0,
+          "input_events": 51,
+          "model_ticks": 1269.0,
+          "role": "Duelist",
+          "snapshots": 465,
+          "terminal_retained_after_authority_close": true
+        }
+      ],
+      "native": {
+        "actions": {
+          "failed": 0,
+          "failures": [],
+          "passed": 57
+        },
+        "intent": {
+          "failed": 0,
+          "passed": 44
+        },
+        "transport": {
+          "failed": 0,
+          "failures": [],
+          "passed": 90
+        },
+        "visual": {
+          "failed": 0,
+          "failures": [],
+          "passed": 6
+        }
+      }
+    },
+    "source": {
+      "journeys": [
+        {
+          "cargo": 3.0,
+          "counters": {
+            "blocks": 6.0,
+            "counters": 3.0,
+            "courier_hits": 0.0,
+            "dodges": 0.0,
+            "player_hits": 0.0,
+            "redirects": 0.0,
+            "rejected": 0.0
+          },
+          "hp": 5.0,
+          "input_events": 43,
+          "model_ticks": 1654.0,
+          "role": "Guardian",
+          "snapshots": 593,
+          "terminal_retained_after_authority_close": true
+        },
+        {
+          "cargo": 3.0,
+          "counters": {
+            "blocks": 0.0,
+            "counters": 3.0,
+            "courier_hits": 0.0,
+            "dodges": 2.0,
+            "player_hits": 0.0,
+            "redirects": 2.0,
+            "rejected": 0.0
+          },
+          "hp": 5.0,
+          "input_events": 57,
+          "model_ticks": 1275.0,
+          "role": "Duelist",
+          "snapshots": 466,
+          "terminal_retained_after_authority_close": true
+        }
+      ],
+      "native": {
+        "actions": {
+          "failed": 0,
+          "failures": [],
+          "passed": 57
+        },
+        "intent": {
+          "failed": 0,
+          "passed": 44
+        },
+        "transport": {
+          "failed": 0,
+          "failures": [],
+          "passed": 90
+        },
+        "visual": {
+          "failed": 0,
+          "failures": [],
+          "passed": 6
+        }
+      }
+    }
+  }
+}

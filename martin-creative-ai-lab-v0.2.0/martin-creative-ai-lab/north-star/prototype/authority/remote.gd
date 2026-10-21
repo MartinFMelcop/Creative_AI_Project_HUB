@@ -109,9 +109,23 @@ func _transmit(input: Dictionary) -> bool:
 static func finite_number(value, low: float, high: float) -> bool:
 	return typeof(value) in [TYPE_INT,TYPE_FLOAT] and is_finite(float(value)) and value>=low and value<=high
 
+static func valid_actions(value) -> bool:
+	if not value is Dictionary or value.size()!=5: return false
+	for key in ["counter_radius","draw_radius"]:
+		if not finite_number(value.get(key),1,1000): return false
+	var statuses={"step":["ready","recovering","resolve","terminal"],
+		"counter":["ready","silent","guard","stepping","recovering","resolve","range","armored","terminal"],
+		"technique":["hold","ground","stepping","resolve","startup","live","stale","ready","silent","bolt","drawn","range","recovering","terminal"]}
+	for key in statuses:
+		var row=value.get(key)
+		if not row is Dictionary or row.size()!=4 or row.get("status") not in statuses[key]: return false
+		if not finite_number(row.get("cost"),0,100) or not finite_number(row.get("wait"),0,120) or not finite_number(row.get("drain"),0,100): return false
+	return true
+
 func valid_state(data: Dictionary) -> bool:
 	if not integer(data.get("tick"),0,2147483647) or not integer(data.get("ack"),-1,2147483647) or typeof(data.get("quarantined"))!=TYPE_BOOL or not data.get("state") is Dictionary: return false
 	var state: Dictionary=data.state
+	if not valid_actions(state.get("actions")): return false
 	if state.get("mode") not in ["play","won","lost"] or state.get("role") not in ["Guardian","Duelist"]: return false
 	if not integer(state.get("tick"),0,int(data.tick)) or not integer(state.get("enemy_focus"),0,3): return false
 	if not integer(state.get("health_limit"),1,6) or not integer(state.get("hp"),0,int(state.health_limit)) or not integer(state.get("cargo"),0,3): return false

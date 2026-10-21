@@ -90,14 +90,17 @@ def verify(output, godot='godot'):
                             while initial['status']=='connecting' and time.monotonic()<ready_until:
                                 time.sleep(.05);initial = shot('initial')
                             check(initial['status']=='live' and initial['confirmed']['role']=='Guardian',delivery+': actual Enter starts remote catalog session',initial)
+                            check(initial['actions'][1]['available'] and initial['actions'][1]['cost']==25 and not initial['actions'][2]['available'] and initial['actions'][2]['status']=='range',delivery+': actual window receives paid step and out-of-range counter advice')
                             key('d');time.sleep(.25);walking = shot('walking',True);key('d',False)
                             check(walking['confirmed']['player'][0]-initial['confirmed']['player'][0]>30,delivery+': OS movement changes authoritative position')
                             key('space');time.sleep(.7);stepped = shot('step');key('space',False)
                             check(stepped['confirmed']['counters']['dodges']==1 and stepped['confirmed']['energy']<100,delivery+': held step spends once in actual model')
-                            key('k');time.sleep(.15);guarded = shot('guard')
+                            key('k');time.sleep(.15);guarded = shot('guard',True)
                             check(guarded['confirmed']['guard'],delivery+': OS guard reaches server')
+                            check(guarded['actions'][0]['status']=='live' and guarded['actions'][0]['cost']==22 and guarded['actions'][0]['drain']==12 and not guarded['actions'][2]['available'],delivery+': authoritative guard advice retains drain/contact cost and blocks counter')
                             tap('Escape');time.sleep(.15);suspended = shot('suspended',True)
                             check(suspended['suspended'] and not suspended['confirmed']['guard'] and suspended['confirmed']['tick']>guarded['confirmed']['tick'],delivery+': suspension neutralizes while server time advances')
+                            check(all(not row['available'] for row in suspended['actions']),delivery+': suspended window masks ready advice')
                             tap('Escape');time.sleep(.1);held = shot('held')
                             check(not held['suspended'] and held['quarantined'] and not held['confirmed']['guard'],delivery+': resume cannot rearm held guard')
                             key('k',False);time.sleep(.06);key('k');time.sleep(.15);rearmed = shot('rearmed')
@@ -114,6 +117,7 @@ def verify(output, godot='godot'):
                             # Leave controls suspended until bounded server exit; no reconnect/local simulation.
                             process.wait(timeout=10);time.sleep(.2);closed = shot('closed',True);time.sleep(.15);frozen = shot('frozen')
                             check(closed['status']=='error' and closed['confirmed']==frozen['confirmed'] and closed['position']==frozen['position'],delivery+': disconnect freezes confirmed presentation')
+                            check(all(not row['available'] for row in closed['actions']),delivery+': disconnected window masks ready advice')
                             observations[delivery] = {label:value for label,value in (('initial',initial),('walking',walking),('step',stepped),('suspended',suspended),('held',held),('rearmed',rearmed),('focus',unfocused),('focus_resumed',resumed),('focus_moved',recovered),('closed',closed))}
                             tap('q');game.wait(timeout=3);check(game.returncode==0,delivery+': explicit close exits cleanly');game=None
                         native = game_log.read_text();require(not any(term in native for term in ('SCRIPT ERROR:','Parse Error:','ERROR:')),'Native window error: '+native[-2500:])

@@ -12,7 +12,11 @@ func frame(tick: int, player: Vector2, courier: Vector2, mode: String="play") ->
 		"tick":tick,"health_limit":5,"enemy_focus":3,"guard_style":"Steady","guard_state":"DOWN","guard":false,"redirected":false,
 		"facing":[1,0],"locked_face":[1,0],"target":[0,0],"pulse":[0,0],"step_dir":[0,0],
 		"step_left":0.0,"strike_cooldown":0.0,"feint_cooldown":0.0,"step_cooldown":0.0,"opening":0.0,"clock":0.0,
-		"message":"Server-owned crossing.","last_impact":{},"counters":{"counters":0},"phase":"rest"}}
+		"message":"Server-owned crossing.","last_impact":{},"counters":{"counters":0},"phase":"rest",
+		"actions":{"counter_radius":130.0,"draw_radius":340.0,
+			"step":{"status":"ready","cost":25.0,"wait":0.0,"drain":0.0},
+			"counter":{"status":"armored","cost":12.0,"wait":0.0,"drain":0.0},
+			"technique":{"status":"hold","cost":22.0,"wait":0.0,"drain":12.0}}}}
 func remote():
 	var value=Remote.new()
 	value.receive_message({"v":1,"kind":"welcome","session":"0123456789abcdef0123456789abcdef"})
@@ -116,7 +120,7 @@ func _initialize() -> void:
 	var negative=remote(); var paid=frame(1,Vector2(100,200),Vector2(160,390)); paid.state.clock=-1.2
 	negative.receive_message(paid)
 	check(negative.status=="live","Actual paid counter negative rest interval remains valid")
-	var required=["tick","health_limit","enemy_focus","guard_style","guard_state","guard","redirected","facing","locked_face","target","pulse","step_dir","step_left","strike_cooldown","feint_cooldown","step_cooldown","opening","clock","message","last_impact","counters"]
+	var required=["tick","health_limit","enemy_focus","guard_style","guard_state","guard","redirected","facing","locked_face","target","pulse","step_dir","step_left","strike_cooldown","feint_cooldown","step_cooldown","opening","clock","message","last_impact","counters","actions"]
 	for key in required:
 		var missing=remote(); var incomplete=frame(1,Vector2(100,200),Vector2(160,390)); incomplete.state.erase(key)
 		missing.receive_message(incomplete)
@@ -125,6 +129,10 @@ func _initialize() -> void:
 		var invalid=remote(); var bad=frame(1,Vector2(100,200),Vector2(160,390))
 		bad.state.merge(mutation,true); invalid.receive_message(bad)
 		check(invalid.status=="error" and invalid.confirmed.is_empty(),"Malformed snapshot rejected: "+str(mutation.keys()[0]))
+	for mutation in [{"counter_radius":NAN},{"draw_radius":0},{"step":{}},{"counter":{"status":"invented","cost":12,"wait":0,"drain":0}},{"technique":{"status":"hold","cost":true,"wait":0,"drain":12}},{"step":{"status":"ready","cost":25,"wait":-1,"drain":0}},{"counter":{"status":"ready","cost":12,"wait":0,"drain":INF}}]:
+		var invalid=remote();var bad=frame(1,Vector2.ZERO,Vector2.ZERO)
+		bad.state.actions.merge(mutation,true);invalid.receive_message(bad)
+		check(invalid.status=="error","Malformed action advice fails closed: "+str(mutation.keys()[0]))
 	var wrong=Remote.new(); wrong.receive_message(frame(1,Vector2.ZERO,Vector2.ZERO))
 	check(wrong.status=="error","Unwelcomed state cannot establish authority")
 	var choice=Remote.new()

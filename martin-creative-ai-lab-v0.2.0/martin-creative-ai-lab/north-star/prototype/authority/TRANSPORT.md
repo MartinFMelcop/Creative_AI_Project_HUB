@@ -101,3 +101,9 @@ The targeted slice does not replace the earlier 60 ms observations with current 
 Use `python3 north-star/prototype/tools/check_heartbeat.py RESULT.json` after a study containing grouped takes for
 both roles to verify current identities, complete cases, actual stale exposure and
 the bounded lease condition. Losses remain valid.
+
+The [action-feedback execution](../../../evidence/north-star-action-feedback/RUN.json)
+rechecks source/PCK grouped delivery after adding read-only server advice. It preserves
+an initial overlapping-suite run with a lease-gate failure separately from the serial
+verification; this is no scheduling or capacity guarantee. The gameplay costs and
+fixed policy remain unchanged.

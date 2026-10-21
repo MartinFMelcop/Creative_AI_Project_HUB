@@ -2,7 +2,7 @@
 
 **Updated:** 2026-10-21 UTC. **Product SEED version:** 0.33.20.
 **Mode:** DEVELOPMENT. **Verified integration baseline:**
-`690796621f0f9e563382673717c931ad1691b90d`, branch `work`; fetched main matched HEAD,
+`40d4513978cd30ae55e6b072397f8021b719611f`, branch `work`; fetched main matched HEAD,
 no divergence, and initial tracked/untracked tree was clean.
 
 This file owns active initiative continuity, not detailed gameplay contracts or an
@@ -95,12 +95,19 @@ Silence/disconnect neutralize actions without pausing or resetting the model. In
 heartbeat is now bounded by monotonic time, independent of new snapshots; stale windows
 send only neutral while controls remain suspended. Arrival gap is not server-state age.
 
-**Verified scope:** [Current execution](../evidence/north-star-heartbeat/RUN.json) binds
-unchanged server authority and native intent/transport/visual controls, complete interactive
+**Verified scope:** [Current execution](../evidence/north-star-action-feedback/RUN.json) binds
+server authority with read-only action advice and native intent/transport/visual controls, complete interactive
 source/PCK journeys, actual OS input/focus recovery and inspected world/terminal images.
 The [original authority execution](../evidence/north-star-authority/RUN.json) remains
 historical. Existing playable source, PCK, release and
 capability evidence remain unchanged. No new lab, capability state or MMO maturity claim.
+
+**Latest interaction improvement:** Three server-authored action cards expose actual
+costs, recovery, guard/draw conditions and counter restrictions; dashed rings show
+counter/draw reach. Active indications are masked during suspension, lost focus,
+quarantine, stale updates and disconnect. Advice describes an individual action at
+its confirmed snapshot, not a future admission token or a combination budget. Actual
+rules, packages and capability states remain unchanged. Human comprehension is untested.
 
 **Consumed research instrument:** The [transport study](../north-star/prototype/authority/TRANSPORT.md)
 now runs the actual fixed-input consumer through direct/transparent controls, bidirectional
@@ -109,7 +116,10 @@ retains all 16 source takes, two PCK integration takes, and an exploratory pilot
 its own identities. Controls win; delayed/grouped outcomes expose policy and input-lease
 limits without changing costs. A current targeted rerun retains eight source/two PCK
 takes: grouped lease clears fall from 42 to 1 including terminal grace, while grouped
-policies still lose. Two takes do not establish human thresholds or balance.
+policies still lose. The action-feedback execution rechecks two source/two PCK grouped
+takes. An initial overlapping-suite source take fails with two clears; the serial repeat
+and PCK pass the unchanged gate with one. The failure remains retained, without an
+isolated scheduling-cause claim. These takes do not establish human thresholds or balance.
 
 **Missing/dependencies:** A shipped network player, prediction/reconciliation, multiple
 players, authentication, encrypted remote transport, persistence and reconnect

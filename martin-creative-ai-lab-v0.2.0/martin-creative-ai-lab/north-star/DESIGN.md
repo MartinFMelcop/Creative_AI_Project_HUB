@@ -229,6 +229,15 @@ multiplayer, accounts, MMORPG progression, class taxonomy approval or commercial
 keepsake storage does not establish social recognition or perceived reward value;
 cross-process and visual claims require their own recorded execution evidence.
 
+The remote window's action cards now expose server-confirmed costs, recovery and
+contextual restrictions for the existing guard/draw, step and counter. Dashed reach
+rings distinguish a paid possible counter from striking armored or distant space;
+guard advice distinguishes timed posture from an unblockable ground threat. ENG-022
+informs predictable feedback; CRE-075 (H) informs contextual presentation, without
+adopting class canon. Snapshot advice is not a promise of future success, human
+comprehension or a new ability/build system. [Execution](../evidence/north-star-action-feedback/RUN.json)
+checks actual model costs/contacts, remote source/PCK input and inspected presentation.
+
 Report materially affected capability and evidence without manufacturing activity in
 every category. Compare continuation with real product, laboratory, production and
 portfolio opportunities under the operating instructions. Preserve useful consumers;

@@ -1,0 +1,647 @@
+{
+  "calibration": {
+    "all_baseline_living_wins": false,
+    "baseline_takes": 0,
+    "limits": "A failed/missing baseline makes comparative interpretation inconclusive; retain it. No equivalence or human inference follows from wins alone."
+  },
+  "checks": {
+    "execution_errors": 0,
+    "terminal_and_stream_contracts_passed": 2
+  },
+  "delivery": "source",
+  "identities": {
+    "authority/intent.gd": "1419479da2db30315ce1adaad967d406fc336c712e2ee86d3ff6d15468c91379",
+    "authority/remote.gd": "6223afe74798fd6e506d9a84d11f3436cc1953413e44058ded47440664b70ef1",
+    "authority/server.gd": "cbe9dd7189f328bfda552e2d70efeda886c98ec2d9b88dd0a32664464944b483",
+    "authority/view.gd": "b2098b53b3186652ea6fb7caeba3f5cd9ac3f7be340258b919822f22a1d03cb0",
+    "combat.gd": "77aefc3f6130e114954a867f6404830180ca342c88e2396ec89a3784c2b3b0b3",
+    "data/fittings.json": "cf9ce26272dd4841e89f5de2bb679407f971ec04954bf753c15b4d768eba189d",
+    "fittings.gd": "836fa97cc7c6d81126bcddafc26daae72f5585ff61b70b55c83ea65aa70fc390",
+    "project.godot": "8d4755b58f1179a9b5ec431579177371e784bca9703a17c88f4c7a6d4ee9385c",
+    "route.gd": "2936029e1a52933fff0141b546f85fbc53a57b7e6c5301eaef5cabac06a05901",
+    "tests/remote_journey.gd": "000d5228868719092d87cd2fe3d7074731ca62a65ca975c8e52c3813f07e152f",
+    "tests/transport_probe.gd": "78efd6d5e86902a03d622c9f8e0043d51cd2d014c4368a044250d3eacdf28537",
+    "tools/evaluate_transport.py": "e002e395721b86215d93fdc512f1392c40bde4a840bd36fb62ea661aa6fa4046",
+    "tools/export_linux.py": "90e23d9b02b75b963ab6efe55bd5961c15748446cfb8e7d1645253e450b3451d",
+    "tools/impairment.py": "f19d38492259ad193453e7f3708d4862edb6401e314c01ebb5a2358578563e31",
+    "tools/verify_authority.py": "b70b813ae0f03486953424b0bd552ce8db0961d75938d040de91b0f7ef773dd0"
+  },
+  "limits": "Synthetic fixed native-input policy, real loopback TCP and unchanged gameplay. Complete-frame scheduling is not TCP loss/reordering, WAN emulation, RTT, player latency tolerance, capacity, balance or production engine evidence. Repetitions measure this instrument under observed host scheduling, not independent participants. Outcomes and timing are observations, not golden equality gates.",
+  "observations": [
+    {
+      "authority": {
+        "accepted": 303,
+        "active_ticks": 1133,
+        "rejected": {
+          "terminal": 2
+        },
+        "stale_clears": 1
+      },
+      "cargo": 2.0,
+      "client_observation": {
+        "distinct_observations": 49,
+        "explicit_policy_resumes": 41,
+        "frame_visits": {
+          "closed": 1,
+          "connecting": 37,
+          "live": 1551,
+          "stale": 883,
+          "terminal": 348
+        },
+        "limits": "Frame visits and scripted resumes are not participants, RTT or human experience. State tick gaps include observer scheduling.",
+        "max_observed_tick_gap": 24,
+        "quarantine_observations": 6,
+        "transition_count": 87,
+        "transitions": [
+          {
+            "elapsed_ms": 16,
+            "status": "closed"
+          },
+          {
+            "elapsed_ms": 17,
+            "status": "connecting"
+          },
+          {
+            "elapsed_ms": 271,
+            "status": "live"
+          },
+          {
+            "elapsed_ms": 513,
+            "status": "stale"
+          },
+          {
+            "elapsed_ms": 664,
+            "status": "live"
+          },
+          {
+            "elapsed_ms": 913,
+            "status": "stale"
+          },
+          {
+            "elapsed_ms": 1065,
+            "status": "live"
+          },
+          {
+            "elapsed_ms": 1320,
+            "status": "stale"
+          },
+          {
+            "elapsed_ms": 1465,
+            "status": "live"
+          },
+          {
+            "elapsed_ms": 1721,
+            "status": "stale"
+          },
+          {
+            "elapsed_ms": 1865,
+            "status": "live"
+          },
+          {
+            "elapsed_ms": 2120,
+            "status": "stale"
+          },
+          {
+            "elapsed_ms": 2258,
+            "status": "live"
+          },
+          {
+            "elapsed_ms": 2514,
+            "status": "stale"
+          },
+          {
+            "elapsed_ms": 2665,
+            "status": "live"
+          },
+          {
+            "elapsed_ms": 2921,
+            "status": "stale"
+          },
+          {
+            "elapsed_ms": 3066,
+            "status": "live"
+          },
+          {
+            "elapsed_ms": 3322,
+            "status": "stale"
+          },
+          {
+            "elapsed_ms": 3466,
+            "status": "live"
+          },
+          {
+            "elapsed_ms": 3721,
+            "status": "stale"
+          },
+          {
+            "elapsed_ms": 3859,
+            "status": "live"
+          },
+          {
+            "elapsed_ms": 4114,
+            "status": "stale"
+          },
+          {
+            "elapsed_ms": 4259,
+            "status": "live"
+          },
+          {
+            "elapsed_ms": 4515,
+            "status": "stale"
+          },
+          {
+            "elapsed_ms": 4660,
+            "status": "live"
+          },
+          {
+            "elapsed_ms": 4915,
+            "status": "stale"
+          },
+          {
+            "elapsed_ms": 5060,
+            "status": "live"
+          },
+          {
+            "elapsed_ms": 5315,
+            "status": "stale"
+          },
+          {
+            "elapsed_ms": 5460,
+            "status": "live"
+          },
+          {
+            "elapsed_ms": 5715,
+            "status": "stale"
+          },
+          {
+            "elapsed_ms": 5860,
+            "status": "live"
+          },
+          {
+            "elapsed_ms": 6115,
+            "status": "stale"
+          },
+          {
+            "elapsed_ms": 6262,
+            "status": "live"
+          },
+          {
+            "elapsed_ms": 6516,
+            "status": "stale"
+          },
+          {
+            "elapsed_ms": 6661,
+            "status": "live"
+          },
+          {
+            "elapsed_ms": 6920,
+            "status": "stale"
+          },
+          {
+            "elapsed_ms": 7062,
+            "status": "live"
+          },
+          {
+            "elapsed_ms": 7316,
+            "status": "stale"
+          },
+          {
+            "elapsed_ms": 7461,
+            "status": "live"
+          },
+          {
+            "elapsed_ms": 7710,
+            "status": "stale"
+          },
+          {
+            "elapsed_ms": 7862,
+            "status": "live"
+          },
+          {
+            "elapsed_ms": 8117,
+            "status": "stale"
+          },
+          {
+            "elapsed_ms": 8262,
+            "status": "live"
+          },
+          {
+            "elapsed_ms": 8517,
+            "status": "stale"
+          },
+          {
+            "elapsed_ms": 8662,
+            "status": "live"
+          },
+          {
+            "elapsed_ms": 8917,
+            "status": "stale"
+          },
+          {
+            "elapsed_ms": 9062,
+            "status": "live"
+          },
+          {
+            "elapsed_ms": 9317,
+            "status": "stale"
+          }
+        ],
+        "transitions_truncated": true
+      },
+      "counters": {
+        "blocks": 0.0,
+        "counters": 0.0,
+        "courier_hits": 1.0,
+        "dodges": 0.0,
+        "player_hits": 5.0,
+        "redirects": 0.0,
+        "rejected": 0.0
+      },
+      "hp": 0.0,
+      "input_events": 85.0,
+      "mode": "lost",
+      "model_ticks": 1014.0,
+      "profile": "batch_400",
+      "relay": {
+        "closed": true,
+        "configured": {
+          "batch_ms": 400,
+          "delay_ms": 0
+        },
+        "connected": true,
+        "directions": {
+          "down": {
+            "bytes_forwarded": 465339,
+            "bytes_received": 465339,
+            "frames_forwarded": 383,
+            "frames_received": 383,
+            "max_frames_per_send_turn": 11,
+            "max_lateness_ms": 4.069345006428193,
+            "max_queued_bytes": 11689,
+            "max_residence_ms": 394.4007000027341,
+            "min_residence_ms": 14.649363998614717,
+            "sum_residence_ms": 81030.24355296657
+          },
+          "up": {
+            "bytes_forwarded": 49009,
+            "bytes_received": 49009,
+            "frames_forwarded": 306,
+            "frames_received": 306,
+            "max_frames_per_send_turn": 1,
+            "max_lateness_ms": 0.048556001274846494,
+            "max_queued_bytes": 162,
+            "max_residence_ms": 0.048556001274846494,
+            "min_residence_ms": 0.0024789987946860492,
+            "sum_residence_ms": 1.7765829761628993
+          }
+        },
+        "profile": "batch_400"
+      },
+      "repetition": 1,
+      "role": "Guardian",
+      "terminal_retained": true
+    },
+    {
+      "authority": {
+        "accepted": 300,
+        "active_ticks": 1133,
+        "rejected": {
+          "terminal": 5
+        },
+        "stale_clears": 1
+      },
+      "cargo": 2.0,
+      "client_observation": {
+        "distinct_observations": 48,
+        "explicit_policy_resumes": 41,
+        "frame_visits": {
+          "closed": 1,
+          "connecting": 56,
+          "live": 1551,
+          "stale": 883,
+          "terminal": 379
+        },
+        "limits": "Frame visits and scripted resumes are not participants, RTT or human experience. State tick gaps include observer scheduling.",
+        "max_observed_tick_gap": 24,
+        "quarantine_observations": 7,
+        "transition_count": 87,
+        "transitions": [
+          {
+            "elapsed_ms": 38,
+            "status": "closed"
+          },
+          {
+            "elapsed_ms": 39,
+            "status": "connecting"
+          },
+          {
+            "elapsed_ms": 431,
+            "status": "live"
+          },
+          {
+            "elapsed_ms": 658,
+            "status": "stale"
+          },
+          {
+            "elapsed_ms": 817,
+            "status": "live"
+          },
+          {
+            "elapsed_ms": 1072,
+            "status": "stale"
+          },
+          {
+            "elapsed_ms": 1217,
+            "status": "live"
+          },
+          {
+            "elapsed_ms": 1472,
+            "status": "stale"
+          },
+          {
+            "elapsed_ms": 1617,
+            "status": "live"
+          },
+          {
+            "elapsed_ms": 1873,
+            "status": "stale"
+          },
+          {
+            "elapsed_ms": 2018,
+            "status": "live"
+          },
+          {
+            "elapsed_ms": 2273,
+            "status": "stale"
+          },
+          {
+            "elapsed_ms": 2418,
+            "status": "live"
+          },
+          {
+            "elapsed_ms": 2673,
+            "status": "stale"
+          },
+          {
+            "elapsed_ms": 2818,
+            "status": "live"
+          },
+          {
+            "elapsed_ms": 3073,
+            "status": "stale"
+          },
+          {
+            "elapsed_ms": 3218,
+            "status": "live"
+          },
+          {
+            "elapsed_ms": 3473,
+            "status": "stale"
+          },
+          {
+            "elapsed_ms": 3618,
+            "status": "live"
+          },
+          {
+            "elapsed_ms": 3874,
+            "status": "stale"
+          },
+          {
+            "elapsed_ms": 4019,
+            "status": "live"
+          },
+          {
+            "elapsed_ms": 4274,
+            "status": "stale"
+          },
+          {
+            "elapsed_ms": 4419,
+            "status": "live"
+          },
+          {
+            "elapsed_ms": 4674,
+            "status": "stale"
+          },
+          {
+            "elapsed_ms": 4819,
+            "status": "live"
+          },
+          {
+            "elapsed_ms": 5074,
+            "status": "stale"
+          },
+          {
+            "elapsed_ms": 5219,
+            "status": "live"
+          },
+          {
+            "elapsed_ms": 5474,
+            "status": "stale"
+          },
+          {
+            "elapsed_ms": 5619,
+            "status": "live"
+          },
+          {
+            "elapsed_ms": 5875,
+            "status": "stale"
+          },
+          {
+            "elapsed_ms": 6020,
+            "status": "live"
+          },
+          {
+            "elapsed_ms": 6275,
+            "status": "stale"
+          },
+          {
+            "elapsed_ms": 6420,
+            "status": "live"
+          },
+          {
+            "elapsed_ms": 6675,
+            "status": "stale"
+          },
+          {
+            "elapsed_ms": 6820,
+            "status": "live"
+          },
+          {
+            "elapsed_ms": 7075,
+            "status": "stale"
+          },
+          {
+            "elapsed_ms": 7220,
+            "status": "live"
+          },
+          {
+            "elapsed_ms": 7476,
+            "status": "stale"
+          },
+          {
+            "elapsed_ms": 7620,
+            "status": "live"
+          },
+          {
+            "elapsed_ms": 7876,
+            "status": "stale"
+          },
+          {
+            "elapsed_ms": 8021,
+            "status": "live"
+          },
+          {
+            "elapsed_ms": 8276,
+            "status": "stale"
+          },
+          {
+            "elapsed_ms": 8421,
+            "status": "live"
+          },
+          {
+            "elapsed_ms": 8676,
+            "status": "stale"
+          },
+          {
+            "elapsed_ms": 8821,
+            "status": "live"
+          },
+          {
+            "elapsed_ms": 9076,
+            "status": "stale"
+          },
+          {
+            "elapsed_ms": 9221,
+            "status": "live"
+          },
+          {
+            "elapsed_ms": 9477,
+            "status": "stale"
+          }
+        ],
+        "transitions_truncated": true
+      },
+      "counters": {
+        "blocks": 0.0,
+        "counters": 0.0,
+        "courier_hits": 1.0,
+        "dodges": 0.0,
+        "player_hits": 5.0,
+        "redirects": 0.0,
+        "rejected": 0.0
+      },
+      "hp": 0.0,
+      "input_events": 85.0,
+      "mode": "lost",
+      "model_ticks": 1014.0,
+      "profile": "batch_400",
+      "relay": {
+        "closed": true,
+        "configured": {
+          "batch_ms": 400,
+          "delay_ms": 0
+        },
+        "connected": true,
+        "directions": {
+          "down": {
+            "bytes_forwarded": 471274,
+            "bytes_received": 471274,
+            "frames_forwarded": 386,
+            "frames_received": 386,
+            "max_frames_per_send_turn": 14,
+            "max_lateness_ms": 2.12730099883629,
+            "max_queued_bytes": 11851,
+            "max_residence_ms": 395.58045800367836,
+            "min_residence_ms": 22.84236700506881,
+            "sum_residence_ms": 83332.56461111887
+          },
+          "up": {
+            "bytes_forwarded": 49006,
+            "bytes_received": 49006,
+            "frames_forwarded": 306,
+            "frames_received": 306,
+            "max_frames_per_send_turn": 1,
+            "max_lateness_ms": 0.04115699994144961,
+            "max_queued_bytes": 162,
+            "max_residence_ms": 0.04115699994144961,
+            "min_residence_ms": 0.00285300484392792,
+            "sum_residence_ms": 1.8504880281398073
+          }
+        },
+        "profile": "batch_400"
+      },
+      "repetition": 1,
+      "role": "Duelist",
+      "terminal_retained": true
+    }
+  ],
+  "pack_sha256": null,
+  "protocol": {
+    "interventions": {
+      "batch_400": {
+        "batch_ms": 400,
+        "delay_ms": 0
+      },
+      "delay_60": {
+        "batch_ms": 0,
+        "delay_ms": 60
+      },
+      "relay_zero": {
+        "batch_ms": 0,
+        "delay_ms": 0
+      }
+    },
+    "order": "Role-blocked, profile order reversed on alternating repetitions; no randomized assignment.",
+    "profiles": [
+      "batch_400"
+    ],
+    "repetitions": 1,
+    "roles": [
+      "Guardian",
+      "Duelist"
+    ],
+    "schema_version": 1
+  },
+  "runtime": "4.6.3.stable.official.7d41c59c4",
+  "schema_version": 1,
+  "summary": [
+    {
+      "cargo": [
+        2.0
+      ],
+      "hp": [
+        0.0
+      ],
+      "losses": 1,
+      "max_observed_tick_gaps": [
+        24
+      ],
+      "profile": "batch_400",
+      "role": "Guardian",
+      "stale_clears": [
+        1
+      ],
+      "takes": 1,
+      "wins": 0
+    },
+    {
+      "cargo": [
+        2.0
+      ],
+      "hp": [
+        0.0
+      ],
+      "losses": 1,
+      "max_observed_tick_gaps": [
+        24
+      ],
+      "profile": "batch_400",
+      "role": "Duelist",
+      "stale_clears": [
+        1
+      ],
+      "takes": 1,
+      "wins": 0
+    }
+  ]
+}

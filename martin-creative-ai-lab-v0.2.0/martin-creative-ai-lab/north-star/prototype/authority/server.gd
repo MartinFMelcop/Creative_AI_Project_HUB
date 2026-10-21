@@ -130,6 +130,43 @@ func command() -> Dictionary:
 		"skill_pressed":held.feint and not previous.get("feint",false),"dodge":held.step and not previous.get("step",false),
 		"strike":held.strike and not previous.get("strike",false)}
 	previous=held.duplicate();return result
+static func action_hints(model) -> Dictionary:
+	# Advisory facts at this snapshot, never an admission token for a future input.
+	var step_status:String="ready"
+	if model.step_cooldown>0:step_status="recovering"
+	elif model.energy<25:step_status="resolve"
+	var counter_status:String="ready"
+	if model.enemy_focus==0:counter_status="silent"
+	elif model.guard:counter_status="guard"
+	elif model.step_left>0:counter_status="stepping"
+	elif model.strike_cooldown>0:counter_status="recovering"
+	elif model.energy<12:counter_status="resolve"
+	elif model.player.distance_to(Combat.ENEMY)>130:counter_status="range"
+	elif model.opening<=0:counter_status="armored"
+	var technique_status:String="hold"
+	var technique_cost:float=22.0
+	var technique_wait:float=0.0
+	var drain:float=12.0
+	if model.role=="Guardian":
+		if model.phase=="pulse":technique_status="ground"
+		elif model.step_left>0:technique_status="stepping"
+		elif model.energy<22:technique_status="resolve"
+		elif model.guard:technique_status=model.guard_state().to_lower()
+	else:
+		technique_cost=16;drain=0;technique_wait=model.feint_cooldown
+		technique_status="ready"
+		if model.enemy_focus==0:technique_status="silent"
+		elif model.phase!="bolt":technique_status="bolt"
+		elif model.redirected:technique_status="drawn"
+		elif model.player.distance_to(Combat.ENEMY)>340:technique_status="range"
+		elif model.energy<16:technique_status="resolve"
+		elif model.feint_cooldown>0:technique_status="recovering"
+	if model.mode!="play":step_status="terminal";counter_status="terminal";technique_status="terminal"
+	return {"counter_radius":130.0,"draw_radius":340.0,
+		"step":{"status":step_status,"cost":25.0,"wait":model.step_cooldown,"drain":0.0},
+		"counter":{"status":counter_status,"cost":12.0,"wait":model.strike_cooldown,"drain":0.0},
+		"technique":{"status":technique_status,"cost":technique_cost,"wait":technique_wait,"drain":drain}}
+
 func state() -> void:
 	if not started:return
 	var value:Dictionary=game.snapshot();value.erase("events")
@@ -141,7 +178,7 @@ func state() -> void:
 		"step_left":game.step_left,"step_dir":[game.step_dir.x,game.step_dir.y],
 		"strike_cooldown":game.strike_cooldown,"feint_cooldown":game.feint_cooldown,
 		"step_cooldown":game.step_cooldown,"health_limit":game.health_limit,
-		"message":game.message,"last_impact":game.last_impact.duplicate(true)},true)
+		"message":game.message,"last_impact":game.last_impact.duplicate(true),"actions":action_hints(game)},true)
 	send({"v":1,"kind":"state","state":value,"ack":high_water,"tick":server_tick,"quarantined":quarantined,
 		"accepted":accepted,"rejected":rejects.duplicate(),"stale_clears":stale_clears})
 func finish() -> void:

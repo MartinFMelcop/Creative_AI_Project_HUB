@@ -14,7 +14,7 @@ import tempfile
 import verify_authority as a
 
 SCRIPTS = ('authority/server.gd','authority/remote.gd','authority/intent.gd','authority/intent_checks.gd',
-           'authority/view.gd','authority/play.gd','tests/remote_checks.gd','tests/remote_visual_checks.gd','tests/remote_journey.gd',
+           'authority/view.gd','authority/play.gd','tests/remote_checks.gd','tests/remote_visual_checks.gd','tests/action_checks.gd','tests/remote_journey.gd',
            'tools/verify_remote.py','tools/verify_remote_input.py')
 
 
@@ -41,7 +41,7 @@ def verify(output, godot='godot', compare=None):
         a.require(version.returncode==0 and version.stdout.strip()==a.VERSION,'Pinned standard Godot 4.6.3 required')
         for delivery, packed in (('source',False),('pack',True)):
             native = {}
-            for script,key in (('authority/intent_checks.gd','intent'),('tests/remote_checks.gd','transport'),('tests/remote_visual_checks.gd','visual')):
+            for script,key in (('authority/intent_checks.gd','intent'),('tests/remote_checks.gd','transport'),('tests/remote_visual_checks.gd','visual'),('tests/action_checks.gd','actions')):
                 text = invoke(engine,script,scratch/delivery,packed)
                 lines = [line[line.index('{'):] for line in text.splitlines() if '{' in line]
                 a.require(lines,'Native controls omitted their result');observed = json.loads(lines[-1])

@@ -11,7 +11,7 @@ From the maintained workspace, with pinned standard Godot 4.6.3 on PATH:
 
 ```bash
 python3 north-star/prototype/tools/test_verify_authority.py
-python3 north-star/prototype/tools/verify_authority.py --output /tmp/authority.json --compare evidence/north-star-remote/authority.json
+python3 north-star/prototype/tools/verify_authority.py --output /tmp/authority.json --compare evidence/north-star-action-feedback/authority.json
 ```
 
 Use `CROSSING_GODOT` for the regression executable or `--godot` for the runner.
@@ -40,6 +40,20 @@ existing catalog outfits. Enter connects and locks preparation. WASD/arrows move
 mouse aims, K/right mouse holds guard, J draws the bolt, Space steps and L/left mouse
 counters. These are fixed experiment bindings, separate from local remaps/gamepad.
 Only server-confirmed costs and outcomes are displayed; input is not success.
+
+The three action cards use server-authored snapshot advice: step cost/recovery,
+Guardian guard state/drain/contact cost or Duelist draw conditions, and a counter
+that needs an opening, range, resolve and a released guard/finished step. Teal dashed
+130px and conditional amber dashed 340px rings show the server's counter/draw ranges;
+the red pulse remains a separate damage telegraph. Empty strikes still cost resolve.
+Guard LIVE describes its timing and locked facing, not protection from every origin;
+ground pulses explicitly warn to move. Advice is for individual actions at the last
+snapshot, not a reservation, prediction, combination budget or guaranteed admission.
+Simultaneous commands and the next physics step can change eligibility. The server
+continues validating every action. Cards mask availability on stale/error/terminal,
+suspension, focus loss and local/server quarantine. During active play, costs remain
+visible even when an action is unavailable.
+No new ability, class, stat or local release is introduced.
 
 Esc suspends/resumes controls, **not the world**. Loss of focus suspends immediately.
 Release held controls and explicitly resume after returning focus. Releases missed
@@ -104,15 +118,15 @@ window instead retains the confirmed terminal result through actual socket closu
 
 ## Evidence and limits
 
-[Current execution](../../../evidence/north-star-heartbeat/RUN.json) binds the actual
+[Current execution](../../../evidence/north-star-action-feedback/RUN.json) binds the actual
 interactive consumer, native event journeys, OS input/focus controls and inspected
 images. [Earlier interactive execution](../../../evidence/north-star-remote/RUN.json) and
 [original authority execution](../../../evidence/north-star-authority/RUN.json)
 remain historical. Adding view fields changed the server identity; active authority
-comparison uses the reexecuted current `north-star-remote/authority.json` above.
+comparison uses the reexecuted current `north-star-action-feedback/authority.json` above.
 
 ```bash
-python3 north-star/prototype/tools/verify_remote.py --output /tmp/remote.json --compare evidence/north-star-heartbeat/remote.json
+python3 north-star/prototype/tools/verify_remote.py --output /tmp/remote.json --compare evidence/north-star-action-feedback/remote.json
 python3 north-star/prototype/tools/verify_remote_input.py --output /tmp/remote-input
 ```
 
