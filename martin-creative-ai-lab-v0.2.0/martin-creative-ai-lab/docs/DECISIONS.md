@@ -2674,3 +2674,51 @@ cost and agency on the authority. Protected sources/pins remain unchanged. This 
 one loopback session, not authentication, encryption, interactive reconciliation,
 multiplayer product integration, persistent world, capacity/latency evidence or a
 production-engine choice. No human, creative-canon or capability promotion claim.
+
+## ADR-096 — make server-owned gameplay directly inspectable
+
+**Date:** 2026-10-21 UTC. **Status:** implemented DEVELOPMENT.
+**Baseline:** clean `work`, `4803a20e1db91857aa428d2d1781f98283acfc3b`; fetched main matched.
+
+**Selection:** Continue the authority initiative beyond headless policy-only execution.
+Compare abilities/builds (strong direct identity value but broader authorship/release
+obligations), independent comprehension (observers unavailable), new evaluator policies,
+creative production and engine migration. An interactive window closes a concrete missing
+consumer at feasible cost without selecting production architecture or changing the
+existing playable adventure. Do not create another governance or laboratory initiative.
+
+**Decision:** Separate View, bounded TCP/snapshot transport and event-latched input,
+without constructing Combat in the interactive client. Read-only server fields expose
+facing, actual guard state, cooldowns, messages and courier position. Only positions
+interpolate between confirmations; no extrapolation, local power or success prediction.
+Focus/Esc neutralize and quarantine inputs while server time continues. Missed releases
+are reconciled by removal only. Delayed/disconnected views cannot simulate a replacement
+world. Confirmed terminal survives actual server closure. Existing PCK/release pipeline,
+creative authority, mechanic costs and capability states remain unchanged.
+
+**Verification/revisions:** [Execution](../evidence/north-star-remote/RUN.json) binds
+four actual source/PCK journeys through View input and TCP, 44 intent/74 transport/6
+visual controls per delivery, 24 OS controls and inspected images. Retained 42 authority
+controls per delivery and nine Python regressions also pass. The rendered fixed-policy
+win retains health2/cargo2 versus headless5/3; these are not matched-condition or balance
+observations. Early OS probes
+exposed incomplete window-focus notification coverage and startup timing assumptions;
+handle both window/application focus and await observed connection. An early Duelist
+driver held movement through initial quarantine and lost with no paid responses; release
+and wait before fresh input, and display that recovery requirement. Do not remove the
+quarantine or grant resources to the driver.
+
+Image inspection found the suspension panel hid continuing threats; move it outside the
+field. Review found the pulse radius falsely suggested safety between 78 and 90px; match
+actual damage and check real model contacts across that boundary. Releases outside focus
+could leave stale held state; reconcile absent controls and add an actual OS resume/move
+control. No contact/timing/cost rule changes. Packet schedules vary; comparison binds
+identity and protected behavior, not exact traces or performance.
+
+**Knowledge/limits:** ENG-022 informs visible state/recoverability rather than hidden
+pause semantics; SCI-017 separates native/OS controls from independent participants;
+CRE-005 preserves paid choice and actual consequence. Protected sources/pins unchanged.
+No human comprehension/enjoyment, prediction/reconciliation, authentication, WAN,
+multiple-player product, persistence, capacity/latency, final canon or engine choice.
+Next compare builds/abilities and independent observation against demonstrated network
+needs rather than automatically extending this architecture.

@@ -1,0 +1,69 @@
+{
+  "artifacts": {
+    "evidence/north-star-remote/authority.json": "4a796bdad6c42cccc4de03092bc7dc44066bb4918cc01efa8cad2885e2ac338a",
+    "evidence/north-star-remote/guardian-retained.png": "81937d100ccb46a0e3c40467783c15e07147c3bccd1ce5ae0176764ad954263a",
+    "evidence/north-star-remote/guardian-terminal.png": "81937d100ccb46a0e3c40467783c15e07147c3bccd1ce5ae0176764ad954263a",
+    "evidence/north-star-remote/keyboard.json": "cb75d64bc69a227d4719a2d42f9d2161776c7d8af1d5e7005b54ac7f6d65f1a7",
+    "evidence/north-star-remote/pack-walking.png": "ac8c0f733a24bc5319f17f87a3defcf655c67accb74e77aee4f42d64119f5d86",
+    "evidence/north-star-remote/pilot-negative.json": "525810dc4d7ec624e7badd3d7f202811bb1cf1a6fd04d327409d1ceed489e12f",
+    "evidence/north-star-remote/rendered-journey.json": "e7ea15f8b5148f4a6792b8b91d4a52ccf0a7ec8f1bbef73f711b52ffa2a4fafc",
+    "evidence/north-star-remote/results.json": "1185c078074e171bbc106a35287b83d5e168b7cf54dcb3f4b3adab833cba4dd6",
+    "evidence/north-star-remote/source-closed.png": "65d2d6f9873fc3ee92f8013b7ceeba486c6fb005c9fc7a3787f08ec9da8867dc",
+    "evidence/north-star-remote/source-suspended.png": "7b6eab39342c500df32a20c0d33b4a4f478a963f3809798d4f9f8e04259d4b51",
+    "evidence/north-star-remote/source-walking.png": "9de73662e9a949374b1c0111e17e034d247bb31681db103ac27873f732c6d3f5",
+    "north-star/prototype/authority/intent.gd": "1419479da2db30315ce1adaad967d406fc336c712e2ee86d3ff6d15468c91379",
+    "north-star/prototype/authority/intent_checks.gd": "1f6cf85015610e558089a0ce3f685c502de4d16d3db392bbebfd6d8dd6fc5b5d",
+    "north-star/prototype/authority/play.gd": "7a0169cd9b9bab04901ad840e6893eec6ad81193f53849995df435727851d9ce",
+    "north-star/prototype/authority/remote.gd": "1d53a052695ef5ffc543ef66ba72dc6bb42587ae8536d7ca67761dd40b7da286",
+    "north-star/prototype/authority/server.gd": "83c387e16b871b73ef2c38fa6653af0ac2925aa18536ee91ece108d712231969",
+    "north-star/prototype/authority/view.gd": "b706ca861659dc1726fae47055f7ddf6b36a94dd4969d01119bc790c0cf5bce6",
+    "north-star/prototype/combat.gd": "77aefc3f6130e114954a867f6404830180ca342c88e2396ec89a3784c2b3b0b3",
+    "north-star/prototype/data/fittings.json": "cf9ce26272dd4841e89f5de2bb679407f971ec04954bf753c15b4d768eba189d",
+    "north-star/prototype/dist/crossing-drill.pck": "352e47bca2482de7da6dd8818ebf5f3464a5585da93b10dd8a6c164ec70c17e2",
+    "north-star/prototype/fittings.gd": "836fa97cc7c6d81126bcddafc26daae72f5585ff61b70b55c83ea65aa70fc390",
+    "north-star/prototype/project.godot": "8d4755b58f1179a9b5ec431579177371e784bca9703a17c88f4c7a6d4ee9385c",
+    "north-star/prototype/route.gd": "2936029e1a52933fff0141b546f85fbc53a57b7e6c5301eaef5cabac06a05901",
+    "north-star/prototype/tests/policy.gd": "646f0758a211e84ffbfd4632460c7d1fc549cbb3b552801ee2508774a5a63e29",
+    "north-star/prototype/tests/remote_checks.gd": "29bfde2ca024a4ddcdfd0988529ef500be2734f039288d28710e80753981c0d4",
+    "north-star/prototype/tests/remote_journey.gd": "000d5228868719092d87cd2fe3d7074731ca62a65ca975c8e52c3813f07e152f",
+    "north-star/prototype/tests/remote_visual_checks.gd": "8fb705b6331c65454468c5cda2ab227c53aa2d9c8a3477787ce9648492bd2c29",
+    "north-star/prototype/tools/verify_remote.py": "6e83351a61ed69995a5de318e57630351d720d7ec14a6fde2ff72072e005e1b8",
+    "north-star/prototype/tools/verify_remote_input.py": "4235c12f4538e839ac743f814a522655a09027632ed2fcf6705f489cbb6f3f93"
+  },
+  "baseline": "4803a20e1db91857aa428d2d1781f98283acfc3b",
+  "checks": {
+    "actual_graphical_guardian_win_and_retained_result": 1,
+    "authority_live_per_delivery": 42,
+    "authority_python_regressions": 9,
+    "authority_remote_wins": 4,
+    "interactive_native_per_delivery": {
+      "intent": 44,
+      "transport": 74,
+      "visual": 6
+    },
+    "interactive_remote_wins": 4,
+    "os_window_controls": 24
+  },
+  "commands": [
+    "python3 north-star/prototype/tools/verify_authority.py --output /workspace/work/interactive-authority/authority.json",
+    "python3 north-star/prototype/tools/test_verify_authority.py",
+    "python3 north-star/prototype/tools/verify_remote.py --output /workspace/work/interactive-authority/remote-final.json",
+    "python3 north-star/prototype/tools/verify_remote_input.py --output /workspace/work/interactive-authority/input-final-reviewed",
+    "godot --path <prototype> --script <prototype>/tests/remote_journey.gd --audio-driver Dummy -- <owned-port> Guardian /workspace/work/interactive-authority/terminal/journey.json (owned Xorg; NORTH_STAR_REMOTE_CAPTURE=/workspace/work/interactive-authority/terminal/guardian)"
+  ],
+  "date": "2026-10-21",
+  "inspected_images": [
+    "source-walking.png",
+    "source-suspended.png",
+    "source-closed.png",
+    "pack-walking.png",
+    "guardian-terminal.png",
+    "guardian-retained.png"
+  ],
+  "kind": "architecture_execution",
+  "limits": "Developer loopback authority, one session. Synthetic native and XTest input, no independent human. No prediction/reconciliation, multiplayer product, accounts, WAN/authentication, persistence, capacity, latency, final canon, new lab/capability state or production engine selection. Existing playable source/PCK/Linux0.5.0 unchanged.",
+  "observations": "Agent inspected actual images for resource/goal/control readability, ongoing threat visibility, real pulse boundary and retained result after socket closure. Headless journeys retain HP5/cargo3; the graphical fixed-policy Guardian win retains HP2/cargo2 with one counter. These schedules/inputs are not equivalent conditions or balance evidence.",
+  "provenance": "Successful scratch result files copied byte-for-byte; bound input hashes checked against final code. Actual graphical terminal driver uses the same final sources.",
+  "runtime": "4.6.3.stable.official.7d41c59c4",
+  "schema_version": 1
+}

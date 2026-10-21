@@ -1,0 +1,72 @@
+{
+  "kind": "development_negative_observation",
+  "outcome": {
+    "cargo": 2.0,
+    "clock": 0.0,
+    "counters": {
+      "blocks": 0.0,
+      "counters": 0.0,
+      "courier_hits": 1.0,
+      "dodges": 0.0,
+      "player_hits": 5.0,
+      "redirects": 0.0,
+      "rejected": 0.0
+    },
+    "courier": [
+      633.205078125,
+      390.0
+    ],
+    "courier_speed": 28.0,
+    "courier_x": 633.205,
+    "enemy_focus": 3.0,
+    "energy": 100.0,
+    "facing": [
+      1.0,
+      0.0
+    ],
+    "feint_cooldown": 0.0,
+    "guard": false,
+    "guard_state": "DOWN",
+    "guard_style": "none",
+    "health_limit": 5.0,
+    "hp": 0.0,
+    "last_impact": {
+      "code": "pulse_hit",
+      "explanation": "You were inside the ground pulse when it landed.",
+      "tip": "Walk or step beyond the circle. Guard cannot protect the floor."
+    },
+    "locked_face": [
+      1.0,
+      0.0
+    ],
+    "message": "The crossing failed. Read the last impact, then try a different response.",
+    "mode": "lost",
+    "opening": 0.0,
+    "phase": "rest",
+    "player": [
+      550.0,
+      390.0
+    ],
+    "pulse": [
+      550.0,
+      390.0
+    ],
+    "redirected": false,
+    "role": "Duelist",
+    "step_cooldown": 0.0,
+    "step_dir": [
+      0.0,
+      0.0
+    ],
+    "step_left": 0.0,
+    "strike_cooldown": 0.0,
+    "target": [
+      554.336547851562,
+      390.0
+    ],
+    "tick": 1014.0
+  },
+  "reason": "Driver held movement through initial local quarantine and waited for destination. Fixed driver releases and waits; quarantine unchanged.",
+  "source": "Initial synthetic Duelist driver before quarantine-aware release; actual loopback authority and View",
+  "status": "Historical pilot, not current source identity or participant evidence."
+}

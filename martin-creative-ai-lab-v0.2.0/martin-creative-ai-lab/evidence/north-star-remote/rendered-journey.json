@@ -1,0 +1,93 @@
+{
+  "authority_closed": true,
+  "input_events": 57,
+  "limits": "Synthetic Input.parse_input_event drives the actual view. No independent player, physical device, latency or capacity claim.",
+  "observation": {
+    "age": 0.0,
+    "confirmed": {
+      "cargo": 2.0,
+      "clock": 0.533333333333334,
+      "counters": {
+        "blocks": 3.0,
+        "counters": 1.0,
+        "courier_hits": 1.0,
+        "dodges": 0.0,
+        "player_hits": 3.0,
+        "redirects": 0.0,
+        "rejected": 0.0
+      },
+      "courier": [
+        1000.0,
+        390.0
+      ],
+      "courier_speed": 28.0,
+      "courier_x": 1000.0,
+      "enemy_focus": 2.0,
+      "energy": 94.8,
+      "facing": [
+        -0.998595654964447,
+        -0.0529785454273224
+      ],
+      "feint_cooldown": 0.0,
+      "guard": false,
+      "guard_state": "DOWN",
+      "guard_style": "Steady",
+      "health_limit": 5.0,
+      "hp": 2.0,
+      "last_impact": {
+        "code": "bolt_blocked",
+        "explanation": "Your live frontal guard intercepted the bolt before the courier.",
+        "tip": "Release guard to recover posture. Strike only when OPEN and close."
+      },
+      "locked_face": [
+        -0.999735653400421,
+        -0.0229939185082912
+      ],
+      "message": "The courier reached the gate. Your approach changed how the line was held.",
+      "mode": "won",
+      "opening": 0.0,
+      "phase": "rest",
+      "player": [
+        867.781860351562,
+        399.604644775391
+      ],
+      "pulse": [
+        791.189453125,
+        390.821105957031
+      ],
+      "redirected": false,
+      "role": "Guardian",
+      "step_cooldown": 0.0,
+      "step_dir": [
+        0.0,
+        0.0
+      ],
+      "step_left": 0.0,
+      "strike_cooldown": 0.0,
+      "target": [
+        948.6767578125,
+        390.0
+      ],
+      "tick": 1800.0
+    },
+    "courier_position": [
+      1000.0,
+      390.0
+    ],
+    "focused": true,
+    "position": [
+      867.781860351562,
+      399.604644775391
+    ],
+    "quarantined": false,
+    "reason": "Confirmed won.",
+    "status": "terminal",
+    "suspended": false
+  },
+  "reason": "Confirmed terminal state retained after actual authority closure.",
+  "role": "Guardian",
+  "schema_version": 1,
+  "snapshots": 641,
+  "success": true,
+  "terminal_tick": 1800
+}

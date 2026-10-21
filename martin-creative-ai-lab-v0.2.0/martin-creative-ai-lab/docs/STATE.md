@@ -2,7 +2,7 @@
 
 **Updated:** 2026-10-21 UTC. **Product SEED version:** 0.33.20.
 **Mode:** DEVELOPMENT. **Verified integration baseline:**
-`fa2fe4a34c098b7cce0e478efe4fa71ee86d8686`, branch `work`; fetched main matched HEAD,
+`4803a20e1db91857aa428d2d1781f98283acfc3b`, branch `work`; fetched main matched HEAD,
 no divergence, and initial tracked/untracked tree was clean.
 
 This file owns active initiative continuity, not detailed gameplay contracts or an
@@ -86,22 +86,28 @@ are verified and old consumers/dependencies/preservation duties are resolved.
 **Objective/consumer:** Resolve the missing client/server trust boundary using the
 existing actual escort model, before committing to a production engine or shared-world
 implementation. The [developer authority consumer](../north-star/prototype/authority/README.md)
-now separates a real TCP loopback server and remote headless policy client. Server physics
+now separates a real TCP loopback server and remote consumers. An interactive developer
+window accepts keyboard/mouse events and presents interpolated confirmed positions;
+resources, threats and terminal results remain server-owned. Focus loss suspends inputs,
+not the world, and missed releases recover without synthesizing presses. Server physics
 owns time, catalog resources and paid actions; clients submit bounded sequenced intents.
 Silence/disconnect neutralize actions without pausing or resetting the model.
 
-**Verified scope:** [Execution](../evidence/north-star-authority/RUN.json) binds 42 live
-controls per source/PCK delivery, four living remote escort wins and nine regressions,
-including refutable clock/schema mutants. Existing playable source, PCK, release and
+**Verified scope:** [Current execution](../evidence/north-star-remote/RUN.json) binds
+retained authority controls, native intent/transport/visual controls, complete interactive
+source/PCK journeys, actual OS input/focus recovery and inspected world/terminal images.
+The [original authority execution](../evidence/north-star-authority/RUN.json) remains
+historical. Existing playable source, PCK, release and
 capability evidence remain unchanged. No new lab, capability state or MMO maturity claim.
 
-**Missing/dependencies:** Interactive network frontend, prediction/reconciliation,
-multiple players, authentication, encrypted remote transport, persistence and reconnect
+**Missing/dependencies:** A shipped network player, prediction/reconciliation, multiple
+players, authentication, encrypted remote transport, persistence and reconnect
 are absent. Loopback fixed policies establish neither player experience nor latency or
 capacity. Pinned Godot 4.6.3 is the executable experiment, not a production engine decision.
 
-**Next/continuation:** Compare an interactive prediction/reconciliation slice against
-abilities/builds, independent player comprehension and other actual production needs.
+**Next/continuation:** Compare a coherent abilities/build consumer and independent
+player comprehension against measured transport/prediction/reconciliation needs.
+Interactive input is now demonstrated; a larger network stack is not automatically valuable.
 Continue only to remove a consequential ownership/experience limit; redesign if the seam
 cannot preserve costs under measured transport behavior. Complete this foundation when
 an explicit next architecture decision has sufficient evidence; suspend for stronger

@@ -222,8 +222,10 @@ a carried case or defeat receives different text. No new persistent state is rec
 Native deterministic policies demonstrate feasible distinct completion, negative
 controls and actual scene consumption. Rendered controlled journeys and synthetic
 keyboard input establish scoped execution/presentation, not unassisted human learning,
-identity perception, fun, accessibility or balance. No multiplayer, server, account,
-MMORPG progression, class taxonomy approval or commercial evidence exists. Local
+identity perception, fun, accessibility or balance. A separate developer-only
+[loopback authority consumer](prototype/authority/README.md) now demonstrates real
+server-owned gameplay with an interactive remote window; it does not establish product
+multiplayer, accounts, MMORPG progression, class taxonomy approval or commercial evidence. Local
 keepsake storage does not establish social recognition or perceived reward value;
 cross-process and visual claims require their own recorded execution evidence.
 

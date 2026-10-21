@@ -1,0 +1,1666 @@
+{
+  "checks": {
+    "failed": 0,
+    "passed": 24
+  },
+  "controls": [
+    "source: actual Enter starts remote catalog session",
+    "source: OS movement changes authoritative position",
+    "source: held step spends once in actual model",
+    "source: OS guard reaches server",
+    "source: suspension neutralizes while server time advances",
+    "source: resume cannot rearm held guard",
+    "source: release and fresh press rearm",
+    "source: actual focus loss neutralizes without world pause",
+    "source: release outside focus permits neutral explicit resume",
+    "source: fresh input works after outside-window release",
+    "source: disconnect freezes confirmed presentation",
+    "source: explicit close exits cleanly",
+    "pack: actual Enter starts remote catalog session",
+    "pack: OS movement changes authoritative position",
+    "pack: held step spends once in actual model",
+    "pack: OS guard reaches server",
+    "pack: suspension neutralizes while server time advances",
+    "pack: resume cannot rearm held guard",
+    "pack: release and fresh press rearm",
+    "pack: actual focus loss neutralizes without world pause",
+    "pack: release outside focus permits neutral explicit resume",
+    "pack: fresh input works after outside-window release",
+    "pack: disconnect freezes confirmed presentation",
+    "pack: explicit close exits cleanly"
+  ],
+  "identities": {
+    "authority/intent.gd": "1419479da2db30315ce1adaad967d406fc336c712e2ee86d3ff6d15468c91379",
+    "authority/play.gd": "7a0169cd9b9bab04901ad840e6893eec6ad81193f53849995df435727851d9ce",
+    "authority/remote.gd": "1d53a052695ef5ffc543ef66ba72dc6bb42587ae8536d7ca67761dd40b7da286",
+    "authority/server.gd": "83c387e16b871b73ef2c38fa6653af0ac2925aa18536ee91ece108d712231969",
+    "authority/view.gd": "b706ca861659dc1726fae47055f7ddf6b36a94dd4969d01119bc790c0cf5bce6",
+    "dist/crossing-drill.pck": "352e47bca2482de7da6dd8818ebf5f3464a5585da93b10dd8a6c164ec70c17e2"
+  },
+  "kind": "synthetic_os_input",
+  "observations": {
+    "pack": {
+      "closed": {
+        "age": 0.033637,
+        "capture": 12,
+        "confirmed": {
+          "cargo": 2.0,
+          "clock": 0.383333333333333,
+          "counters": {
+            "blocks": 0.0,
+            "counters": 0.0,
+            "courier_hits": 1.0,
+            "dodges": 1.0,
+            "player_hits": 1.0,
+            "redirects": 0.0,
+            "rejected": 0.0
+          },
+          "courier": [
+            379.334014892578,
+            390.0
+          ],
+          "courier_speed": 28.0,
+          "courier_x": 379.334,
+          "enemy_focus": 3.0,
+          "energy": 100.0,
+          "facing": [
+            -1.0,
+            0.0
+          ],
+          "feint_cooldown": 0.0,
+          "guard": false,
+          "guard_state": "DOWN",
+          "guard_style": "Steady",
+          "health_limit": 5.0,
+          "hp": 4.0,
+          "last_impact": {
+            "code": "courier_first_contact",
+            "explanation": "The courier was the first body on the locked bolt line.",
+            "tip": "Move between sentinel and courier. Face the sentinel and hold K."
+          },
+          "locked_face": [
+            1.0,
+            0.0
+          ],
+          "message": "PULSE: walk or step out of the red circle. Shield cannot stop the ground.",
+          "mode": "play",
+          "opening": 0.0,
+          "phase": "pulse",
+          "player": [
+            860.167419433594,
+            390.0
+          ],
+          "pulse": [
+            860.167419433594,
+            390.0
+          ],
+          "redirected": false,
+          "role": "Guardian",
+          "step_cooldown": 0.0,
+          "step_dir": [
+            1.0,
+            0.0
+          ],
+          "step_left": 0.0,
+          "strike_cooldown": 0.0,
+          "target": [
+            317.732452392578,
+            390.0
+          ],
+          "tick": 470.0
+        },
+        "courier_position": [
+          378.875854492188,
+          390.0
+        ],
+        "focused": true,
+        "position": [
+          860.167419433594,
+          390.0
+        ],
+        "quarantined": true,
+        "reason": "Authority disconnected. The world cannot be simulated locally.",
+        "status": "error",
+        "suspended": true
+      },
+      "focus": {
+        "age": 0.0,
+        "capture": 9,
+        "confirmed": {
+          "cargo": 3.0,
+          "clock": 0.666666666666667,
+          "counters": {
+            "blocks": 0.0,
+            "counters": 0.0,
+            "courier_hits": 0.0,
+            "dodges": 1.0,
+            "player_hits": 1.0,
+            "redirects": 0.0,
+            "rejected": 0.0
+          },
+          "courier": [
+            257.531890869141,
+            390.0
+          ],
+          "courier_speed": 28.0,
+          "courier_x": 257.532,
+          "enemy_focus": 3.0,
+          "energy": 100.0,
+          "facing": [
+            1.0,
+            0.0
+          ],
+          "feint_cooldown": 0.0,
+          "guard": false,
+          "guard_state": "DOWN",
+          "guard_style": "Steady",
+          "health_limit": 5.0,
+          "hp": 4.0,
+          "last_impact": {
+            "code": "guard_startup",
+            "explanation": "The bolt landed before your guard became live.",
+            "tip": "Begin holding K earlier. Guard needs 60ms to become live."
+          },
+          "locked_face": [
+            1.0,
+            0.0
+          ],
+          "message": "You intercepted the bolt without a live frontal guard.",
+          "mode": "play",
+          "opening": 0.0,
+          "phase": "rest",
+          "player": [
+            760.166931152344,
+            390.0
+          ],
+          "pulse": [
+            0.0,
+            0.0
+          ],
+          "redirected": false,
+          "role": "Guardian",
+          "step_cooldown": 0.0,
+          "step_dir": [
+            1.0,
+            0.0
+          ],
+          "step_left": 0.0,
+          "strike_cooldown": 0.0,
+          "target": [
+            238.86589050293,
+            390.0
+          ],
+          "tick": 209.0
+        },
+        "courier_position": [
+          256.131866455078,
+          390.0
+        ],
+        "focused": true,
+        "position": [
+          760.166931152344,
+          390.0
+        ],
+        "quarantined": true,
+        "reason": "Server-confirmed world; presentation interpolation only.",
+        "status": "live",
+        "suspended": true
+      },
+      "focus_moved": {
+        "age": 0.0232666666666667,
+        "capture": 11,
+        "confirmed": {
+          "cargo": 3.0,
+          "clock": 1.41666666666667,
+          "counters": {
+            "blocks": 0.0,
+            "counters": 0.0,
+            "courier_hits": 0.0,
+            "dodges": 1.0,
+            "player_hits": 1.0,
+            "redirects": 0.0,
+            "rejected": 0.0
+          },
+          "courier": [
+            278.532257080078,
+            390.0
+          ],
+          "courier_speed": 28.0,
+          "courier_x": 278.532,
+          "enemy_focus": 3.0,
+          "energy": 100.0,
+          "facing": [
+            1.0,
+            0.0
+          ],
+          "feint_cooldown": 0.0,
+          "guard": false,
+          "guard_state": "DOWN",
+          "guard_style": "Steady",
+          "health_limit": 5.0,
+          "hp": 4.0,
+          "last_impact": {
+            "code": "guard_startup",
+            "explanation": "The bolt landed before your guard became live.",
+            "tip": "Begin holding K earlier. Guard needs 60ms to become live."
+          },
+          "locked_face": [
+            1.0,
+            0.0
+          ],
+          "message": "You intercepted the bolt without a live frontal guard.",
+          "mode": "play",
+          "opening": 0.0,
+          "phase": "rest",
+          "player": [
+            793.500427246094,
+            390.0
+          ],
+          "pulse": [
+            0.0,
+            0.0
+          ],
+          "redirected": false,
+          "role": "Guardian",
+          "step_cooldown": 0.0,
+          "step_dir": [
+            1.0,
+            0.0
+          ],
+          "step_left": 0.0,
+          "strike_cooldown": 0.0,
+          "target": [
+            238.86589050293,
+            390.0
+          ],
+          "tick": 254.0
+        },
+        "courier_position": [
+          277.783721923828,
+          390.0
+        ],
+        "focused": true,
+        "position": [
+          786.817077636719,
+          390.0
+        ],
+        "quarantined": false,
+        "reason": "Server-confirmed world; presentation interpolation only.",
+        "status": "live",
+        "suspended": false
+      },
+      "focus_resumed": {
+        "age": 0.0,
+        "capture": 10,
+        "confirmed": {
+          "cargo": 3.0,
+          "clock": 1.01666666666667,
+          "counters": {
+            "blocks": 0.0,
+            "counters": 0.0,
+            "courier_hits": 0.0,
+            "dodges": 1.0,
+            "player_hits": 1.0,
+            "redirects": 0.0,
+            "rejected": 0.0
+          },
+          "courier": [
+            267.332061767578,
+            390.0
+          ],
+          "courier_speed": 28.0,
+          "courier_x": 267.332,
+          "enemy_focus": 3.0,
+          "energy": 100.0,
+          "facing": [
+            1.0,
+            0.0
+          ],
+          "feint_cooldown": 0.0,
+          "guard": false,
+          "guard_state": "DOWN",
+          "guard_style": "Steady",
+          "health_limit": 5.0,
+          "hp": 4.0,
+          "last_impact": {
+            "code": "guard_startup",
+            "explanation": "The bolt landed before your guard became live.",
+            "tip": "Begin holding K earlier. Guard needs 60ms to become live."
+          },
+          "locked_face": [
+            1.0,
+            0.0
+          ],
+          "message": "You intercepted the bolt without a live frontal guard.",
+          "mode": "play",
+          "opening": 0.0,
+          "phase": "rest",
+          "player": [
+            760.166931152344,
+            390.0
+          ],
+          "pulse": [
+            0.0,
+            0.0
+          ],
+          "redirected": false,
+          "role": "Guardian",
+          "step_cooldown": 0.0,
+          "step_dir": [
+            1.0,
+            0.0
+          ],
+          "step_left": 0.0,
+          "strike_cooldown": 0.0,
+          "target": [
+            238.86589050293,
+            390.0
+          ],
+          "tick": 230.0
+        },
+        "courier_position": [
+          265.932037353516,
+          390.0
+        ],
+        "focused": true,
+        "position": [
+          760.166931152344,
+          390.0
+        ],
+        "quarantined": false,
+        "reason": "Server-confirmed world; presentation interpolation only.",
+        "status": "live",
+        "suspended": false
+      },
+      "held": {
+        "age": 0.0,
+        "capture": 7,
+        "confirmed": {
+          "cargo": 3.0,
+          "clock": 0.716666666666667,
+          "counters": {
+            "blocks": 0.0,
+            "counters": 0.0,
+            "courier_hits": 0.0,
+            "dodges": 1.0,
+            "player_hits": 0.0,
+            "redirects": 0.0,
+            "rejected": 0.0
+          },
+          "courier": [
+            230.932250976562,
+            390.0
+          ],
+          "courier_speed": 28.0,
+          "courier_x": 230.932,
+          "enemy_focus": 3.0,
+          "energy": 96.5,
+          "facing": [
+            1.0,
+            0.0
+          ],
+          "feint_cooldown": 0.0,
+          "guard": false,
+          "guard_state": "DOWN",
+          "guard_style": "Steady",
+          "health_limit": 5.0,
+          "hp": 5.0,
+          "last_impact": {},
+          "locked_face": [
+            1.0,
+            0.0
+          ],
+          "message": "BOLT: intercept facing the sentinel, or draw its aim with a feint.",
+          "mode": "play",
+          "opening": 0.0,
+          "phase": "bolt",
+          "player": [
+            760.166931152344,
+            390.0
+          ],
+          "pulse": [
+            0.0,
+            0.0
+          ],
+          "redirected": false,
+          "role": "Guardian",
+          "step_cooldown": 0.0,
+          "step_dir": [
+            1.0,
+            0.0
+          ],
+          "step_left": 0.0,
+          "strike_cooldown": 0.0,
+          "target": [
+            238.86589050293,
+            390.0
+          ],
+          "tick": 152.0
+        },
+        "courier_position": [
+          229.532272338867,
+          390.0
+        ],
+        "focused": true,
+        "position": [
+          760.166931152344,
+          390.0
+        ],
+        "quarantined": true,
+        "reason": "Server-confirmed world; presentation interpolation only.",
+        "status": "live",
+        "suspended": false
+      },
+      "initial": {
+        "age": 0.0,
+        "capture": 2,
+        "confirmed": {
+          "cargo": 3.0,
+          "clock": 0.183333333333333,
+          "counters": {
+            "blocks": 0.0,
+            "counters": 0.0,
+            "courier_hits": 0.0,
+            "dodges": 0.0,
+            "player_hits": 0.0,
+            "redirects": 0.0,
+            "rejected": 0.0
+          },
+          "courier": [
+            165.133255004883,
+            390.0
+          ],
+          "courier_speed": 28.0,
+          "courier_x": 165.133,
+          "enemy_focus": 3.0,
+          "energy": 100.0,
+          "facing": [
+            1.0,
+            0.0
+          ],
+          "feint_cooldown": 0.0,
+          "guard": false,
+          "guard_state": "DOWN",
+          "guard_style": "Steady",
+          "health_limit": 5.0,
+          "hp": 5.0,
+          "last_impact": {},
+          "locked_face": [
+            1.0,
+            0.0
+          ],
+          "message": "Keep the courier alive until the far gate. Read the first amber line.",
+          "mode": "play",
+          "opening": 0.0,
+          "phase": "rest",
+          "player": [
+            550.0,
+            390.0
+          ],
+          "pulse": [
+            0.0,
+            0.0
+          ],
+          "redirected": false,
+          "role": "Guardian",
+          "step_cooldown": 0.0,
+          "step_dir": [
+            0.0,
+            0.0
+          ],
+          "step_left": 0.0,
+          "strike_cooldown": 0.0,
+          "target": [
+            0.0,
+            0.0
+          ],
+          "tick": 11.0
+        },
+        "courier_position": [
+          163.733276367188,
+          390.0
+        ],
+        "focused": true,
+        "position": [
+          550.0,
+          390.0
+        ],
+        "quarantined": false,
+        "reason": "Server-confirmed world; presentation interpolation only.",
+        "status": "live",
+        "suspended": false
+      },
+      "rearmed": {
+        "age": 0.0,
+        "capture": 8,
+        "confirmed": {
+          "cargo": 3.0,
+          "clock": 0.116666666666667,
+          "counters": {
+            "blocks": 0.0,
+            "counters": 0.0,
+            "courier_hits": 0.0,
+            "dodges": 1.0,
+            "player_hits": 1.0,
+            "redirects": 0.0,
+            "rejected": 0.0
+          },
+          "courier": [
+            242.132080078125,
+            390.0
+          ],
+          "courier_speed": 28.0,
+          "courier_x": 242.132,
+          "enemy_focus": 3.0,
+          "energy": 98.4,
+          "facing": [
+            1.0,
+            0.0
+          ],
+          "feint_cooldown": 0.0,
+          "guard": true,
+          "guard_state": "LIVE",
+          "guard_style": "Steady",
+          "health_limit": 5.0,
+          "hp": 4.0,
+          "last_impact": {
+            "code": "guard_startup",
+            "explanation": "The bolt landed before your guard became live.",
+            "tip": "Begin holding K earlier. Guard needs 60ms to become live."
+          },
+          "locked_face": [
+            1.0,
+            0.0
+          ],
+          "message": "You intercepted the bolt without a live frontal guard.",
+          "mode": "play",
+          "opening": 0.0,
+          "phase": "rest",
+          "player": [
+            760.166931152344,
+            390.0
+          ],
+          "pulse": [
+            0.0,
+            0.0
+          ],
+          "redirected": false,
+          "role": "Guardian",
+          "step_cooldown": 0.0,
+          "step_dir": [
+            1.0,
+            0.0
+          ],
+          "step_left": 0.0,
+          "strike_cooldown": 0.0,
+          "target": [
+            238.86589050293,
+            390.0
+          ],
+          "tick": 176.0
+        },
+        "courier_position": [
+          240.73210144043,
+          390.0
+        ],
+        "focused": true,
+        "position": [
+          760.166931152344,
+          390.0
+        ],
+        "quarantined": false,
+        "reason": "Server-confirmed world; presentation interpolation only.",
+        "status": "live",
+        "suspended": false
+      },
+      "step": {
+        "age": 0.0,
+        "capture": 4,
+        "confirmed": {
+          "cargo": 3.0,
+          "clock": 1.48333333333333,
+          "counters": {
+            "blocks": 0.0,
+            "counters": 0.0,
+            "courier_hits": 0.0,
+            "dodges": 1.0,
+            "player_hits": 0.0,
+            "redirects": 0.0,
+            "rejected": 0.0
+          },
+          "courier": [
+            201.532699584961,
+            390.0
+          ],
+          "courier_speed": 28.0,
+          "courier_x": 201.533,
+          "enemy_focus": 3.0,
+          "energy": 86.1,
+          "facing": [
+            1.0,
+            0.0
+          ],
+          "feint_cooldown": 0.0,
+          "guard": false,
+          "guard_state": "DOWN",
+          "guard_style": "Steady",
+          "health_limit": 5.0,
+          "hp": 5.0,
+          "last_impact": {},
+          "locked_face": [
+            1.0,
+            0.0
+          ],
+          "message": "Keep the courier alive until the far gate. Read the first amber line.",
+          "mode": "play",
+          "opening": 0.0,
+          "phase": "rest",
+          "player": [
+            760.166931152344,
+            390.0
+          ],
+          "pulse": [
+            0.0,
+            0.0
+          ],
+          "redirected": false,
+          "role": "Guardian",
+          "step_cooldown": 0.183333333333333,
+          "step_dir": [
+            1.0,
+            0.0
+          ],
+          "step_left": 0.0,
+          "strike_cooldown": 0.0,
+          "target": [
+            0.0,
+            0.0
+          ],
+          "tick": 89.0
+        },
+        "courier_position": [
+          200.132720947266,
+          390.0
+        ],
+        "focused": true,
+        "position": [
+          760.166931152344,
+          390.0
+        ],
+        "quarantined": false,
+        "reason": "Server-confirmed world; presentation interpolation only.",
+        "status": "live",
+        "suspended": false
+      },
+      "suspended": {
+        "age": 0.0,
+        "capture": 6,
+        "confirmed": {
+          "cargo": 3.0,
+          "clock": 0.316666666666667,
+          "counters": {
+            "blocks": 0.0,
+            "counters": 0.0,
+            "courier_hits": 0.0,
+            "dodges": 1.0,
+            "player_hits": 0.0,
+            "redirects": 0.0,
+            "rejected": 0.0
+          },
+          "courier": [
+            219.732421875,
+            390.0
+          ],
+          "courier_speed": 28.0,
+          "courier_x": 219.732,
+          "enemy_focus": 3.0,
+          "energy": 89.3,
+          "facing": [
+            1.0,
+            0.0
+          ],
+          "feint_cooldown": 0.0,
+          "guard": false,
+          "guard_state": "DOWN",
+          "guard_style": "Steady",
+          "health_limit": 5.0,
+          "hp": 5.0,
+          "last_impact": {},
+          "locked_face": [
+            1.0,
+            0.0
+          ],
+          "message": "BOLT: intercept facing the sentinel, or draw its aim with a feint.",
+          "mode": "play",
+          "opening": 0.0,
+          "phase": "bolt",
+          "player": [
+            760.166931152344,
+            390.0
+          ],
+          "pulse": [
+            0.0,
+            0.0
+          ],
+          "redirected": false,
+          "role": "Guardian",
+          "step_cooldown": 0.0,
+          "step_dir": [
+            1.0,
+            0.0
+          ],
+          "step_left": 0.0,
+          "strike_cooldown": 0.0,
+          "target": [
+            238.86589050293,
+            390.0
+          ],
+          "tick": 128.0
+        },
+        "courier_position": [
+          218.332443237305,
+          390.0
+        ],
+        "focused": true,
+        "position": [
+          760.166931152344,
+          390.0
+        ],
+        "quarantined": true,
+        "reason": "Server-confirmed world; presentation interpolation only.",
+        "status": "live",
+        "suspended": true
+      },
+      "walking": {
+        "age": 0.0,
+        "capture": 3,
+        "confirmed": {
+          "cargo": 3.0,
+          "clock": 0.633333333333334,
+          "counters": {
+            "blocks": 0.0,
+            "counters": 0.0,
+            "courier_hits": 0.0,
+            "dodges": 0.0,
+            "player_hits": 0.0,
+            "redirects": 0.0,
+            "rejected": 0.0
+          },
+          "courier": [
+            177.733062744141,
+            390.0
+          ],
+          "courier_speed": 28.0,
+          "courier_x": 177.733,
+          "enemy_focus": 3.0,
+          "energy": 100.0,
+          "facing": [
+            1.0,
+            0.0
+          ],
+          "feint_cooldown": 0.0,
+          "guard": false,
+          "guard_state": "DOWN",
+          "guard_style": "Steady",
+          "health_limit": 5.0,
+          "hp": 5.0,
+          "last_impact": {},
+          "locked_face": [
+            1.0,
+            0.0
+          ],
+          "message": "Keep the courier alive until the far gate. Read the first amber line.",
+          "mode": "play",
+          "opening": 0.0,
+          "phase": "rest",
+          "player": [
+            604.166931152344,
+            390.0
+          ],
+          "pulse": [
+            0.0,
+            0.0
+          ],
+          "redirected": false,
+          "role": "Guardian",
+          "step_cooldown": 0.0,
+          "step_dir": [
+            0.0,
+            0.0
+          ],
+          "step_left": 0.0,
+          "strike_cooldown": 0.0,
+          "target": [
+            0.0,
+            0.0
+          ],
+          "tick": 38.0
+        },
+        "courier_position": [
+          176.333084106445,
+          390.0
+        ],
+        "focused": true,
+        "position": [
+          591.666870117188,
+          390.0
+        ],
+        "quarantined": false,
+        "reason": "Server-confirmed world; presentation interpolation only.",
+        "status": "live",
+        "suspended": false
+      }
+    },
+    "source": {
+      "closed": {
+        "age": 0.074447,
+        "capture": 12,
+        "confirmed": {
+          "cargo": 2.0,
+          "clock": 0.750000000000001,
+          "counters": {
+            "blocks": 0.0,
+            "counters": 0.0,
+            "courier_hits": 1.0,
+            "dodges": 1.0,
+            "player_hits": 1.0,
+            "redirects": 0.0,
+            "rejected": 0.0
+          },
+          "courier": [
+            389.600860595703,
+            390.0
+          ],
+          "courier_speed": 28.0,
+          "courier_x": 389.601,
+          "enemy_focus": 3.0,
+          "energy": 100.0,
+          "facing": [
+            -1.0,
+            0.0
+          ],
+          "feint_cooldown": 0.0,
+          "guard": false,
+          "guard_state": "DOWN",
+          "guard_style": "Steady",
+          "health_limit": 5.0,
+          "hp": 4.0,
+          "last_impact": {
+            "code": "courier_first_contact",
+            "explanation": "The courier was the first body on the locked bolt line.",
+            "tip": "Move between sentinel and courier. Face the sentinel and hold K."
+          },
+          "locked_face": [
+            1.0,
+            0.0
+          ],
+          "message": "PULSE: walk or step out of the red circle. Shield cannot stop the ground.",
+          "mode": "play",
+          "opening": 0.0,
+          "phase": "pulse",
+          "player": [
+            818.500549316406,
+            390.0
+          ],
+          "pulse": [
+            818.500549316406,
+            390.0
+          ],
+          "redirected": false,
+          "role": "Guardian",
+          "step_cooldown": 0.0,
+          "step_dir": [
+            1.0,
+            0.0
+          ],
+          "step_left": 0.0,
+          "strike_cooldown": 0.0,
+          "target": [
+            317.732452392578,
+            390.0
+          ],
+          "tick": 492.0
+        },
+        "courier_position": [
+          389.600860595703,
+          390.0
+        ],
+        "focused": true,
+        "position": [
+          818.500549316406,
+          390.0
+        ],
+        "quarantined": true,
+        "reason": "Authority disconnected. The world cannot be simulated locally.",
+        "status": "error",
+        "suspended": true
+      },
+      "focus": {
+        "age": 0.0333333333333333,
+        "capture": 9,
+        "confirmed": {
+          "cargo": 3.0,
+          "clock": 0.0333333333333333,
+          "counters": {
+            "blocks": 0.0,
+            "counters": 0.0,
+            "courier_hits": 0.0,
+            "dodges": 1.0,
+            "player_hits": 1.0,
+            "redirects": 0.0,
+            "rejected": 0.0
+          },
+          "courier": [
+            239.798782348633,
+            390.0
+          ],
+          "courier_speed": 28.0,
+          "courier_x": 239.799,
+          "enemy_focus": 3.0,
+          "energy": 100.0,
+          "facing": [
+            1.0,
+            0.0
+          ],
+          "feint_cooldown": 0.0,
+          "guard": false,
+          "guard_state": "DOWN",
+          "guard_style": "Steady",
+          "health_limit": 5.0,
+          "hp": 4.0,
+          "last_impact": {
+            "code": "guard_not_held",
+            "explanation": "The bolt hit you without an active guard.",
+            "tip": "Face the sentinel and hold K before impact."
+          },
+          "locked_face": [
+            1.0,
+            0.0
+          ],
+          "message": "You intercepted the bolt without a live frontal guard.",
+          "mode": "play",
+          "opening": 0.0,
+          "phase": "rest",
+          "player": [
+            739.33349609375,
+            390.0
+          ],
+          "pulse": [
+            0.0,
+            0.0
+          ],
+          "redirected": false,
+          "role": "Guardian",
+          "step_cooldown": 0.0,
+          "step_dir": [
+            1.0,
+            0.0
+          ],
+          "step_left": 0.0,
+          "strike_cooldown": 0.0,
+          "target": [
+            238.86589050293,
+            390.0
+          ],
+          "tick": 171.0
+        },
+        "courier_position": [
+          239.798782348633,
+          390.0
+        ],
+        "focused": true,
+        "position": [
+          739.33349609375,
+          390.0
+        ],
+        "quarantined": true,
+        "reason": "Server-confirmed world; presentation interpolation only.",
+        "status": "live",
+        "suspended": true
+      },
+      "focus_moved": {
+        "age": 0.045974,
+        "capture": 11,
+        "confirmed": {
+          "cargo": 3.0,
+          "clock": 0.633333333333334,
+          "counters": {
+            "blocks": 0.0,
+            "counters": 0.0,
+            "courier_hits": 0.0,
+            "dodges": 1.0,
+            "player_hits": 1.0,
+            "redirects": 0.0,
+            "rejected": 0.0
+          },
+          "courier": [
+            256.598541259766,
+            390.0
+          ],
+          "courier_speed": 28.0,
+          "courier_x": 256.599,
+          "enemy_focus": 3.0,
+          "energy": 100.0,
+          "facing": [
+            1.0,
+            0.0
+          ],
+          "feint_cooldown": 0.0,
+          "guard": false,
+          "guard_state": "DOWN",
+          "guard_style": "Steady",
+          "health_limit": 5.0,
+          "hp": 4.0,
+          "last_impact": {
+            "code": "guard_not_held",
+            "explanation": "The bolt hit you without an active guard.",
+            "tip": "Face the sentinel and hold K before impact."
+          },
+          "locked_face": [
+            1.0,
+            0.0
+          ],
+          "message": "You intercepted the bolt without a live frontal guard.",
+          "mode": "play",
+          "opening": 0.0,
+          "phase": "rest",
+          "player": [
+            768.500305175781,
+            390.0
+          ],
+          "pulse": [
+            0.0,
+            0.0
+          ],
+          "redirected": false,
+          "role": "Guardian",
+          "step_cooldown": 0.0,
+          "step_dir": [
+            1.0,
+            0.0
+          ],
+          "step_left": 0.0,
+          "strike_cooldown": 0.0,
+          "target": [
+            238.86589050293,
+            390.0
+          ],
+          "tick": 207.0
+        },
+        "courier_position": [
+          256.485809326172,
+          390.0
+        ],
+        "focused": true,
+        "position": [
+          767.493774414062,
+          390.0
+        ],
+        "quarantined": false,
+        "reason": "Server-confirmed world; presentation interpolation only.",
+        "status": "live",
+        "suspended": false
+      },
+      "focus_resumed": {
+        "age": 0.0,
+        "capture": 10,
+        "confirmed": {
+          "cargo": 3.0,
+          "clock": 0.283333333333333,
+          "counters": {
+            "blocks": 0.0,
+            "counters": 0.0,
+            "courier_hits": 0.0,
+            "dodges": 1.0,
+            "player_hits": 1.0,
+            "redirects": 0.0,
+            "rejected": 0.0
+          },
+          "courier": [
+            246.798675537109,
+            390.0
+          ],
+          "courier_speed": 28.0,
+          "courier_x": 246.799,
+          "enemy_focus": 3.0,
+          "energy": 100.0,
+          "facing": [
+            1.0,
+            0.0
+          ],
+          "feint_cooldown": 0.0,
+          "guard": false,
+          "guard_state": "DOWN",
+          "guard_style": "Steady",
+          "health_limit": 5.0,
+          "hp": 4.0,
+          "last_impact": {
+            "code": "guard_not_held",
+            "explanation": "The bolt hit you without an active guard.",
+            "tip": "Face the sentinel and hold K before impact."
+          },
+          "locked_face": [
+            1.0,
+            0.0
+          ],
+          "message": "You intercepted the bolt without a live frontal guard.",
+          "mode": "play",
+          "opening": 0.0,
+          "phase": "rest",
+          "player": [
+            739.33349609375,
+            390.0
+          ],
+          "pulse": [
+            0.0,
+            0.0
+          ],
+          "redirected": false,
+          "role": "Guardian",
+          "step_cooldown": 0.0,
+          "step_dir": [
+            1.0,
+            0.0
+          ],
+          "step_left": 0.0,
+          "strike_cooldown": 0.0,
+          "target": [
+            238.86589050293,
+            390.0
+          ],
+          "tick": 186.0
+        },
+        "courier_position": [
+          245.398696899414,
+          390.0
+        ],
+        "focused": true,
+        "position": [
+          739.33349609375,
+          390.0
+        ],
+        "quarantined": false,
+        "reason": "Server-confirmed world; presentation interpolation only.",
+        "status": "live",
+        "suspended": false
+      },
+      "held": {
+        "age": 0.0,
+        "capture": 7,
+        "confirmed": {
+          "cargo": 3.0,
+          "clock": 0.283333333333333,
+          "counters": {
+            "blocks": 0.0,
+            "counters": 0.0,
+            "courier_hits": 0.0,
+            "dodges": 1.0,
+            "player_hits": 0.0,
+            "redirects": 0.0,
+            "rejected": 0.0
+          },
+          "courier": [
+            218.799102783203,
+            390.0
+          ],
+          "courier_speed": 28.0,
+          "courier_x": 218.799,
+          "enemy_focus": 3.0,
+          "energy": 95.1,
+          "facing": [
+            1.0,
+            0.0
+          ],
+          "feint_cooldown": 0.0,
+          "guard": false,
+          "guard_state": "DOWN",
+          "guard_style": "Steady",
+          "health_limit": 5.0,
+          "hp": 5.0,
+          "last_impact": {},
+          "locked_face": [
+            1.0,
+            0.0
+          ],
+          "message": "BOLT: intercept facing the sentinel, or draw its aim with a feint.",
+          "mode": "play",
+          "opening": 0.0,
+          "phase": "bolt",
+          "player": [
+            739.33349609375,
+            390.0
+          ],
+          "pulse": [
+            0.0,
+            0.0
+          ],
+          "redirected": false,
+          "role": "Guardian",
+          "step_cooldown": 0.0,
+          "step_dir": [
+            1.0,
+            0.0
+          ],
+          "step_left": 0.0,
+          "strike_cooldown": 0.0,
+          "target": [
+            238.86589050293,
+            390.0
+          ],
+          "tick": 126.0
+        },
+        "courier_position": [
+          217.399124145508,
+          390.0
+        ],
+        "focused": true,
+        "position": [
+          739.33349609375,
+          390.0
+        ],
+        "quarantined": true,
+        "reason": "Server-confirmed world; presentation interpolation only.",
+        "status": "live",
+        "suspended": false
+      },
+      "initial": {
+        "age": 0.0,
+        "capture": 2,
+        "confirmed": {
+          "cargo": 3.0,
+          "clock": 0.15,
+          "counters": {
+            "blocks": 0.0,
+            "counters": 0.0,
+            "courier_hits": 0.0,
+            "dodges": 0.0,
+            "player_hits": 0.0,
+            "redirects": 0.0,
+            "rejected": 0.0
+          },
+          "courier": [
+            164.199935913086,
+            390.0
+          ],
+          "courier_speed": 28.0,
+          "courier_x": 164.2,
+          "enemy_focus": 3.0,
+          "energy": 100.0,
+          "facing": [
+            1.0,
+            0.0
+          ],
+          "feint_cooldown": 0.0,
+          "guard": false,
+          "guard_state": "DOWN",
+          "guard_style": "Steady",
+          "health_limit": 5.0,
+          "hp": 5.0,
+          "last_impact": {},
+          "locked_face": [
+            1.0,
+            0.0
+          ],
+          "message": "Keep the courier alive until the far gate. Read the first amber line.",
+          "mode": "play",
+          "opening": 0.0,
+          "phase": "rest",
+          "player": [
+            550.0,
+            390.0
+          ],
+          "pulse": [
+            0.0,
+            0.0
+          ],
+          "redirected": false,
+          "role": "Guardian",
+          "step_cooldown": 0.0,
+          "step_dir": [
+            0.0,
+            0.0
+          ],
+          "step_left": 0.0,
+          "strike_cooldown": 0.0,
+          "target": [
+            0.0,
+            0.0
+          ],
+          "tick": 9.0
+        },
+        "courier_position": [
+          162.799957275391,
+          390.0
+        ],
+        "focused": true,
+        "position": [
+          550.0,
+          390.0
+        ],
+        "quarantined": false,
+        "reason": "Server-confirmed world; presentation interpolation only.",
+        "status": "live",
+        "suspended": false
+      },
+      "rearmed": {
+        "age": 0.0,
+        "capture": 8,
+        "confirmed": {
+          "cargo": 3.0,
+          "clock": 0.583333333333333,
+          "counters": {
+            "blocks": 0.0,
+            "counters": 0.0,
+            "courier_hits": 0.0,
+            "dodges": 1.0,
+            "player_hits": 0.0,
+            "redirects": 0.0,
+            "rejected": 0.0
+          },
+          "courier": [
+            227.198974609375,
+            390.0
+          ],
+          "courier_speed": 28.0,
+          "courier_x": 227.199,
+          "enemy_focus": 3.0,
+          "energy": 98.0,
+          "facing": [
+            1.0,
+            0.0
+          ],
+          "feint_cooldown": 0.0,
+          "guard": true,
+          "guard_state": "LIVE",
+          "guard_style": "Steady",
+          "health_limit": 5.0,
+          "hp": 5.0,
+          "last_impact": {},
+          "locked_face": [
+            1.0,
+            0.0
+          ],
+          "message": "BOLT: intercept facing the sentinel, or draw its aim with a feint.",
+          "mode": "play",
+          "opening": 0.0,
+          "phase": "bolt",
+          "player": [
+            739.33349609375,
+            390.0
+          ],
+          "pulse": [
+            0.0,
+            0.0
+          ],
+          "redirected": false,
+          "role": "Guardian",
+          "step_cooldown": 0.0,
+          "step_dir": [
+            1.0,
+            0.0
+          ],
+          "step_left": 0.0,
+          "strike_cooldown": 0.0,
+          "target": [
+            238.86589050293,
+            390.0
+          ],
+          "tick": 144.0
+        },
+        "courier_position": [
+          225.79899597168,
+          390.0
+        ],
+        "focused": true,
+        "position": [
+          739.33349609375,
+          390.0
+        ],
+        "quarantined": false,
+        "reason": "Server-confirmed world; presentation interpolation only.",
+        "status": "live",
+        "suspended": false
+      },
+      "step": {
+        "age": 0.0,
+        "capture": 4,
+        "confirmed": {
+          "cargo": 3.0,
+          "clock": 1.3,
+          "counters": {
+            "blocks": 0.0,
+            "counters": 0.0,
+            "courier_hits": 0.0,
+            "dodges": 1.0,
+            "player_hits": 0.0,
+            "redirects": 0.0,
+            "rejected": 0.0
+          },
+          "courier": [
+            196.399444580078,
+            390.0
+          ],
+          "courier_speed": 28.0,
+          "courier_x": 196.399,
+          "enemy_focus": 3.0,
+          "energy": 86.7,
+          "facing": [
+            1.0,
+            0.0
+          ],
+          "feint_cooldown": 0.0,
+          "guard": false,
+          "guard_state": "DOWN",
+          "guard_style": "Steady",
+          "health_limit": 5.0,
+          "hp": 5.0,
+          "last_impact": {},
+          "locked_face": [
+            1.0,
+            0.0
+          ],
+          "message": "Keep the courier alive until the far gate. Read the first amber line.",
+          "mode": "play",
+          "opening": 0.0,
+          "phase": "rest",
+          "player": [
+            739.33349609375,
+            390.0
+          ],
+          "pulse": [
+            0.0,
+            0.0
+          ],
+          "redirected": false,
+          "role": "Guardian",
+          "step_cooldown": 0.149999999999999,
+          "step_dir": [
+            1.0,
+            0.0
+          ],
+          "step_left": 0.0,
+          "strike_cooldown": 0.0,
+          "target": [
+            0.0,
+            0.0
+          ],
+          "tick": 78.0
+        },
+        "courier_position": [
+          194.999465942383,
+          390.0
+        ],
+        "focused": true,
+        "position": [
+          739.33349609375,
+          390.0
+        ],
+        "quarantined": false,
+        "reason": "Server-confirmed world; presentation interpolation only.",
+        "status": "live",
+        "suspended": false
+      },
+      "suspended": {
+        "age": 0.025,
+        "capture": 6,
+        "confirmed": {
+          "cargo": 3.0,
+          "clock": 0.0333333333333333,
+          "counters": {
+            "blocks": 0.0,
+            "counters": 0.0,
+            "courier_hits": 0.0,
+            "dodges": 1.0,
+            "player_hits": 0.0,
+            "redirects": 0.0,
+            "rejected": 0.0
+          },
+          "courier": [
+            211.799209594727,
+            390.0
+          ],
+          "courier_speed": 28.0,
+          "courier_x": 211.799,
+          "enemy_focus": 3.0,
+          "energy": 90.6,
+          "facing": [
+            1.0,
+            0.0
+          ],
+          "feint_cooldown": 0.0,
+          "guard": false,
+          "guard_state": "DOWN",
+          "guard_style": "Steady",
+          "health_limit": 5.0,
+          "hp": 5.0,
+          "last_impact": {},
+          "locked_face": [
+            1.0,
+            0.0
+          ],
+          "message": "BOLT: intercept facing the sentinel, or draw its aim with a feint.",
+          "mode": "play",
+          "opening": 0.0,
+          "phase": "bolt",
+          "player": [
+            739.33349609375,
+            390.0
+          ],
+          "pulse": [
+            0.0,
+            0.0
+          ],
+          "redirected": false,
+          "role": "Guardian",
+          "step_cooldown": 0.0,
+          "step_dir": [
+            1.0,
+            0.0
+          ],
+          "step_left": 0.0,
+          "strike_cooldown": 0.0,
+          "target": [
+            238.86589050293,
+            390.0
+          ],
+          "tick": 111.0
+        },
+        "courier_position": [
+          211.799209594727,
+          390.0
+        ],
+        "focused": true,
+        "position": [
+          739.33349609375,
+          390.0
+        ],
+        "quarantined": true,
+        "reason": "Server-confirmed world; presentation interpolation only.",
+        "status": "live",
+        "suspended": true
+      },
+      "walking": {
+        "age": 0.0,
+        "capture": 3,
+        "confirmed": {
+          "cargo": 3.0,
+          "clock": 0.5,
+          "counters": {
+            "blocks": 0.0,
+            "counters": 0.0,
+            "courier_hits": 0.0,
+            "dodges": 0.0,
+            "player_hits": 0.0,
+            "redirects": 0.0,
+            "rejected": 0.0
+          },
+          "courier": [
+            173.999786376953,
+            390.0
+          ],
+          "courier_speed": 28.0,
+          "courier_x": 174.0,
+          "enemy_focus": 3.0,
+          "energy": 100.0,
+          "facing": [
+            1.0,
+            0.0
+          ],
+          "feint_cooldown": 0.0,
+          "guard": false,
+          "guard_state": "DOWN",
+          "guard_style": "Steady",
+          "health_limit": 5.0,
+          "hp": 5.0,
+          "last_impact": {},
+          "locked_face": [
+            1.0,
+            0.0
+          ],
+          "message": "Keep the courier alive until the far gate. Read the first amber line.",
+          "mode": "play",
+          "opening": 0.0,
+          "phase": "rest",
+          "player": [
+            604.166931152344,
+            390.0
+          ],
+          "pulse": [
+            0.0,
+            0.0
+          ],
+          "redirected": false,
+          "role": "Guardian",
+          "step_cooldown": 0.0,
+          "step_dir": [
+            0.0,
+            0.0
+          ],
+          "step_left": 0.0,
+          "strike_cooldown": 0.0,
+          "target": [
+            0.0,
+            0.0
+          ],
+          "tick": 30.0
+        },
+        "courier_position": [
+          172.599807739258,
+          390.0
+        ],
+        "focused": true,
+        "position": [
+          591.666870117188,
+          390.0
+        ],
+        "quarantined": false,
+        "reason": "Server-confirmed world; presentation interpolation only.",
+        "status": "live",
+        "suspended": false
+      }
+    }
+  },
+  "runtime": "4.6.3.stable.official.7d41c59c4",
+  "schema_version": 1,
+  "scope": "Actual source/PCK remote window, XTest keyboard/focus, TCP authority, costs and fail-closed presentation. No independent human, latency benchmark or complete network player journey claim."
+}

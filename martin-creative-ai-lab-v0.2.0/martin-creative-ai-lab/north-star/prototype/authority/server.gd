@@ -135,6 +135,13 @@ func state() -> void:
 	var value:Dictionary=game.snapshot();value.erase("events")
 	value.merge({"player":[game.player.x,game.player.y],"target":[game.target.x,game.target.y],"pulse":[game.pulse.x,game.pulse.y],
 		"phase":game.phase,"clock":game.clock,"opening":game.opening,"redirected":game.redirected,"guard":game.guard},true)
+	# Read-only presentation facts. The client never reconstructs a Combat model.
+	value.merge({"courier":[game.courier.x,game.courier.y],"facing":[game.facing.x,game.facing.y],
+		"locked_face":[game.locked_face.x,game.locked_face.y],"guard_state":game.guard_state(),
+		"step_left":game.step_left,"step_dir":[game.step_dir.x,game.step_dir.y],
+		"strike_cooldown":game.strike_cooldown,"feint_cooldown":game.feint_cooldown,
+		"step_cooldown":game.step_cooldown,"health_limit":game.health_limit,
+		"message":game.message,"last_impact":game.last_impact.duplicate(true)},true)
 	send({"v":1,"kind":"state","state":value,"ack":high_water,"tick":server_tick,"quarantined":quarantined,
 		"accepted":accepted,"rejected":rejects.duplicate(),"stale_clears":stale_clears})
 func finish() -> void:
