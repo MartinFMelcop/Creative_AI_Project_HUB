@@ -1,0 +1,742 @@
+{
+  "missing_pack_exit": 1,
+  "observations": [
+    {
+      "checks": {
+        "failed": 0,
+        "passed": 73
+      },
+      "failures": [],
+      "journeys": [
+        {
+          "escort": {
+            "cargo": 3,
+            "counters": {
+              "blocks": 6,
+              "counters": 3,
+              "courier_hits": 0,
+              "dodges": 0,
+              "player_hits": 0,
+              "redirects": 0,
+              "rejected": 0
+            },
+            "courier_speed": 56.0,
+            "courier_x": 1000.0,
+            "enemy_focus": 0,
+            "energy": 100.0,
+            "events": [
+              {
+                "cargo": 3,
+                "energy": 67.6,
+                "hp": 5,
+                "kind": "protected",
+                "tick": 169
+              },
+              {
+                "cargo": 3,
+                "energy": 67.8,
+                "hp": 5,
+                "kind": "protected",
+                "tick": 338
+              },
+              {
+                "cargo": 3,
+                "energy": 100.0,
+                "hp": 5,
+                "kind": "pulse_avoided",
+                "tick": 507
+              },
+              {
+                "cargo": 3,
+                "energy": 72.6,
+                "hp": 5,
+                "kind": "protected",
+                "tick": 676
+              },
+              {
+                "cargo": 3,
+                "energy": 67.8,
+                "hp": 5,
+                "kind": "protected",
+                "tick": 845
+              },
+              {
+                "cargo": 3,
+                "energy": 56.1,
+                "hp": 5,
+                "kind": "counter",
+                "tick": 846
+              },
+              {
+                "cargo": 3,
+                "energy": 100.0,
+                "hp": 5,
+                "kind": "pulse_avoided",
+                "tick": 1086
+              },
+              {
+                "cargo": 3,
+                "energy": 73.0,
+                "hp": 5,
+                "kind": "protected",
+                "tick": 1255
+              },
+              {
+                "cargo": 3,
+                "energy": 61.3,
+                "hp": 5,
+                "kind": "counter",
+                "tick": 1256
+              },
+              {
+                "cargo": 3,
+                "energy": 68.8,
+                "hp": 5,
+                "kind": "protected",
+                "tick": 1496
+              },
+              {
+                "cargo": 3,
+                "energy": 57.1,
+                "hp": 5,
+                "kind": "counter",
+                "tick": 1497
+              },
+              {
+                "cargo": 3,
+                "energy": 57.1,
+                "hp": 5,
+                "kind": "sentinel_disabled",
+                "tick": 1497
+              }
+            ],
+            "guard_style": "Steady",
+            "hp": 5,
+            "mode": "won",
+            "role": "Guardian",
+            "tick": 1648
+          },
+          "return_gate": {
+            "active": true,
+            "channel": false,
+            "entry": {
+              "aid": "brace",
+              "energy": 100.0,
+              "hp": 5,
+              "medicine": "available",
+              "outfit": "standard",
+              "role": "Guardian",
+              "route": "road",
+              "style": "Steady"
+            },
+            "events": [
+              {
+                "action": "catch_raised",
+                "index": 0,
+                "tick": 149
+              },
+              {
+                "action": "catch_raised",
+                "index": 1,
+                "tick": 592
+              },
+              {
+                "action": "return_opened",
+                "tick": 744
+              }
+            ],
+            "game": {
+              "cargo": 2,
+              "counters": {
+                "blocks": 1,
+                "counters": 0,
+                "courier_hits": 1,
+                "dodges": 0,
+                "player_hits": 1,
+                "redirects": 0,
+                "rejected": 0
+              },
+              "courier_speed": 28.0,
+              "courier_x": 600.0,
+              "enemy_focus": 3,
+              "energy": 100.0,
+              "events": [
+                {
+                  "cargo": 2,
+                  "energy": 100.0,
+                  "hp": 5,
+                  "kind": "courier_hit",
+                  "tick": 169
+                },
+                {
+                  "cargo": 2,
+                  "energy": 74.4,
+                  "hp": 5,
+                  "kind": "protected",
+                  "tick": 338
+                },
+                {
+                  "cargo": 2,
+                  "energy": 100.0,
+                  "hp": 5,
+                  "kind": "pulse_avoided",
+                  "tick": 507
+                },
+                {
+                  "cargo": 2,
+                  "energy": 100.0,
+                  "hp": 4,
+                  "kind": "bolt_hit",
+                  "tick": 676
+                }
+              ],
+              "guard_style": "Steady",
+              "hp": 4,
+              "mode": "won",
+              "objective": "return_gate",
+              "role": "Guardian",
+              "tick": 744
+            },
+            "progress": 0.0,
+            "raised": [
+              true,
+              true
+            ],
+            "working": -1
+          },
+          "role": "Guardian"
+        },
+        {
+          "escort": {
+            "cargo": 3,
+            "counters": {
+              "blocks": 0,
+              "counters": 3,
+              "courier_hits": 0,
+              "dodges": 2,
+              "player_hits": 0,
+              "redirects": 2,
+              "rejected": 0
+            },
+            "courier_speed": 56.0,
+            "courier_x": 1000.0,
+            "enemy_focus": 0,
+            "energy": 100.0,
+            "events": [
+              {
+                "cargo": 3,
+                "energy": 84.0,
+                "hp": 5,
+                "kind": "redirect",
+                "tick": 110
+              },
+              {
+                "cargo": 3,
+                "energy": 59.0,
+                "hp": 5,
+                "kind": "step",
+                "tick": 110
+              },
+              {
+                "cargo": 3,
+                "energy": 76.7,
+                "hp": 5,
+                "kind": "bolt_missed",
+                "tick": 169
+              },
+              {
+                "cargo": 3,
+                "energy": 72.5,
+                "hp": 5,
+                "kind": "counter",
+                "tick": 195
+              },
+              {
+                "cargo": 3,
+                "energy": 84.0,
+                "hp": 5,
+                "kind": "redirect",
+                "tick": 376
+              },
+              {
+                "cargo": 3,
+                "energy": 59.0,
+                "hp": 5,
+                "kind": "step",
+                "tick": 376
+              },
+              {
+                "cargo": 3,
+                "energy": 76.7,
+                "hp": 5,
+                "kind": "bolt_missed",
+                "tick": 435
+              },
+              {
+                "cargo": 3,
+                "energy": 72.5,
+                "hp": 5,
+                "kind": "counter",
+                "tick": 461
+              },
+              {
+                "cargo": 3,
+                "energy": 100.0,
+                "hp": 5,
+                "kind": "pulse_avoided",
+                "tick": 701
+              },
+              {
+                "cargo": 3,
+                "energy": 88.0,
+                "hp": 5,
+                "kind": "counter",
+                "tick": 725
+              },
+              {
+                "cargo": 3,
+                "energy": 88.0,
+                "hp": 5,
+                "kind": "sentinel_disabled",
+                "tick": 725
+              }
+            ],
+            "guard_style": "none",
+            "hp": 5,
+            "mode": "won",
+            "role": "Duelist",
+            "tick": 1262
+          },
+          "return_gate": {
+            "active": true,
+            "channel": false,
+            "entry": {
+              "aid": "brace",
+              "energy": 100.0,
+              "hp": 5,
+              "medicine": "available",
+              "outfit": "standard",
+              "role": "Duelist",
+              "route": "road",
+              "style": "none"
+            },
+            "events": [
+              {
+                "action": "catch_raised",
+                "index": 0,
+                "tick": 149
+              },
+              {
+                "action": "catch_raised",
+                "index": 1,
+                "tick": 590
+              },
+              {
+                "action": "return_opened",
+                "tick": 717
+              }
+            ],
+            "game": {
+              "cargo": 2,
+              "counters": {
+                "blocks": 0,
+                "counters": 0,
+                "courier_hits": 1,
+                "dodges": 0,
+                "player_hits": 0,
+                "redirects": 2,
+                "rejected": 0
+              },
+              "courier_speed": 28.0,
+              "courier_x": 600.0,
+              "enemy_focus": 3,
+              "energy": 100.0,
+              "events": [
+                {
+                  "cargo": 2,
+                  "energy": 100.0,
+                  "hp": 5,
+                  "kind": "courier_hit",
+                  "tick": 169
+                },
+                {
+                  "cargo": 2,
+                  "energy": 84.0,
+                  "hp": 5,
+                  "kind": "redirect",
+                  "tick": 279
+                },
+                {
+                  "cargo": 2,
+                  "energy": 100.0,
+                  "hp": 5,
+                  "kind": "bolt_missed",
+                  "tick": 338
+                },
+                {
+                  "cargo": 2,
+                  "energy": 100.0,
+                  "hp": 5,
+                  "kind": "pulse_avoided",
+                  "tick": 507
+                },
+                {
+                  "cargo": 2,
+                  "energy": 84.0,
+                  "hp": 5,
+                  "kind": "redirect",
+                  "tick": 617
+                },
+                {
+                  "cargo": 2,
+                  "energy": 100.0,
+                  "hp": 5,
+                  "kind": "bolt_missed",
+                  "tick": 676
+                }
+              ],
+              "guard_style": "none",
+              "hp": 5,
+              "mode": "won",
+              "objective": "return_gate",
+              "role": "Duelist",
+              "tick": 717
+            },
+            "progress": 0.0,
+            "raised": [
+              true,
+              true
+            ],
+            "working": -1
+          },
+          "role": "Duelist"
+        }
+      ],
+      "labels": [
+        "Default scene starts a fresh selection",
+        "Controlled release profile starts empty",
+        "Actual editor applies and saves in the release runtime",
+        "Release cancellation preserves profile bytes and applied look",
+        "Actual release escort completes: Guardian",
+        "Confirmed release conversation selects one winch brace: Guardian",
+        "Real release arrival enters the braced second goal: Guardian",
+        "Actual braced return completes: Guardian",
+        "Applied look survives both release goals: Guardian",
+        "Actual release escort completes: Duelist",
+        "Confirmed release conversation selects one winch brace: Duelist",
+        "Real release arrival enters the braced second goal: Duelist",
+        "Actual braced return completes: Duelist",
+        "Applied look survives both release goals: Duelist",
+        "Release journeys earn both marks without auto-wear",
+        "Release embedded source identity: actors.gd",
+        "Release embedded source identity: arena.gd",
+        "Release embedded source identity: character_look.gd",
+        "Release embedded source identity: combat.gd",
+        "Release embedded source identity: controls.gd",
+        "Release embedded source identity: courier_talk.gd",
+        "Release embedded source identity: data/fittings.json",
+        "Release embedded source identity: errand.gd",
+        "Release embedded source identity: fittings.gd",
+        "Release embedded source identity: gamepad.gd",
+        "Release embedded source identity: keepsakes.gd",
+        "Release embedded source identity: rehearsal.gd",
+        "Release embedded source identity: return_gate.gd",
+        "Release embedded source identity: route.gd",
+        "Release embedded source identity: sound.gd",
+        "Release embedded source identity: tests/actor_capture.gd",
+        "Release embedded source identity: tests/actor_checks.gd",
+        "Release embedded source identity: tests/appearance_profile_checks.gd",
+        "Release embedded source identity: tests/appearance_restart.gd",
+        "Release embedded source identity: tests/controls_checks.gd",
+        "Release embedded source identity: tests/controls_restart.gd",
+        "Release embedded source identity: tests/conversation_capture.gd",
+        "Release embedded source identity: tests/conversation_checks.gd",
+        "Release embedded source identity: tests/errand_checks.gd",
+        "Release embedded source identity: tests/errand_policy.gd",
+        "Release embedded source identity: tests/feedback_driver.gd",
+        "Release embedded source identity: tests/fittings_driver.gd",
+        "Release embedded source identity: tests/fittings_probe.gd",
+        "Release embedded source identity: tests/gamepad_checks.gd",
+        "Release embedded source identity: tests/gamepad_driver.gd",
+        "Release embedded source identity: tests/gate_checks.gd",
+        "Release embedded source identity: tests/gate_input_fixture.gd",
+        "Release embedded source identity: tests/gate_policy.gd",
+        "Release embedded source identity: tests/gate_transition.gd",
+        "Release embedded source identity: tests/grounding_driver.gd",
+        "Release embedded source identity: tests/grounding_input_fixture.gd",
+        "Release embedded source identity: tests/grounding_transition.gd",
+        "Release embedded source identity: tests/guard_capture.gd",
+        "Release embedded source identity: tests/guard_checks.gd",
+        "Release embedded source identity: tests/keepsake_checks.gd",
+        "Release embedded source identity: tests/keepsake_restart.gd",
+        "Release embedded source identity: tests/look_capture.gd",
+        "Release embedded source identity: tests/look_checks.gd",
+        "Release embedded source identity: tests/player_checks.gd",
+        "Release embedded source identity: tests/policy.gd",
+        "Release embedded source identity: tests/rehearsal_checks.gd",
+        "Release embedded source identity: tests/render_gate.gd",
+        "Release embedded source identity: tests/render_routes.gd",
+        "Release embedded source identity: tests/resolution_checks.gd",
+        "Release embedded source identity: tests/resolution_routes.gd",
+        "Release embedded source identity: tests/route_checks.gd",
+        "Release embedded source identity: tests/run_checks.gd",
+        "Release embedded source identity: tests/sound_capture.gd",
+        "Release embedded source identity: tests/sound_checks.gd",
+        "Release embedded source identity: tests/toggle_checks.gd",
+        "Release embedded source identity: tests/toggle_fixture.gd",
+        "Release embedded source identity: tests/workshop_checks.gd",
+        "Release embedded source identity: workshop.gd"
+      ],
+      "look": {
+        "dye": 1,
+        "hair": 1,
+        "skin": 2
+      },
+      "mode": "title",
+      "profile": {
+        "blocked": false,
+        "dirty": false,
+        "earned": [
+          "held_line",
+          "drew_danger"
+        ],
+        "equipped": "",
+        "look": {
+          "dye": 1,
+          "hair": 1,
+          "skin": 2
+        },
+        "status": "Saved locally."
+      },
+      "read_only": false,
+      "schema_version": 1,
+      "sources": {
+        "actors.gd": "c1cb826fa57e50267323e6d74787d5aa4e59f8e58710f60ec632a6b275f19217",
+        "arena.gd": "2ae8e916a915f71cee4348e67a85925b01d563aab333d86b73f06ae80e4e983b",
+        "character_look.gd": "494e90189ffbddc383c829d5d5ff9ad4cf10a0c496e52374e3a2adba3ef11e48",
+        "combat.gd": "77aefc3f6130e114954a867f6404830180ca342c88e2396ec89a3784c2b3b0b3",
+        "controls.gd": "151bb8867ba735c3b0b2a0048d312472dfe32359d2409825fa4817cbd0a9e9b8",
+        "courier_talk.gd": "986c26d0cba960fcf4e678035b6893dd5a106d49214c9ba9f67ca7f22caf5d56",
+        "data/fittings.json": "cf9ce26272dd4841e89f5de2bb679407f971ec04954bf753c15b4d768eba189d",
+        "errand.gd": "2a2392fa86bd12544eba5f60ad74d35592c7d6fa207373ec11a1928a9e33e601",
+        "fittings.gd": "836fa97cc7c6d81126bcddafc26daae72f5585ff61b70b55c83ea65aa70fc390",
+        "gamepad.gd": "2f944aa12cbb78d5f5ed60e393397706ecd4642debc7c96c6d3dd325e8b0aa0a",
+        "keepsakes.gd": "1e1779136f6b7d21568fe72f670285f4bce6a8264172fd102f1b49421fcf8236",
+        "rehearsal.gd": "507a27b7832cfc79522396132a0a5f3f32fec34dd443a8a35fc21102080252c9",
+        "return_gate.gd": "bc8a1e38c8e5c537b55ad8871167ace6e300fdec4909a6fcb30b5a142842bf88",
+        "route.gd": "2936029e1a52933fff0141b546f85fbc53a57b7e6c5301eaef5cabac06a05901",
+        "sound.gd": "4404169ebb2d1711f20e6023292712bb2051f4075c4039d9e2db725b4b8fa80a",
+        "tests/actor_capture.gd": "762c21bc79f9b56664525273470e93b005b6a995f0594f4e8e6f9ad447933e96",
+        "tests/actor_checks.gd": "52f503ff8f98f5dfab8e44603887c38cb6c3a65b01a77d378e84437d4d9987e9",
+        "tests/appearance_profile_checks.gd": "39d192e8213b9060aea1594c29a80ff8e7fd7ae07a205b56abacf1d8d84283c0",
+        "tests/appearance_restart.gd": "301c95ffcf51c88bead8359b0d86a24218378b34d6806eebfc79e11e6078c2a0",
+        "tests/controls_checks.gd": "aec1a8a26e262a3830714f9fa748923d8b27b9e51d2e93fa6b3b74c2ee3acf0c",
+        "tests/controls_restart.gd": "066f641273c045a97ea1ee6bd2ddd9469e452d6edab80bc36a426927da431b61",
+        "tests/conversation_capture.gd": "88ce5e2e5739991e7ec245374c1c26377ae5728c5b484fcff4db55d915b401dc",
+        "tests/conversation_checks.gd": "d3a6fdfcba70ba3fb61d1516e249b455ae20c90c6a2bd60b3ee0be23c6e2b9e8",
+        "tests/errand_checks.gd": "2f04534e200e82f08e01127a3b31c5dafacb5151c9635038bf6c14d33ac89094",
+        "tests/errand_policy.gd": "74f4d20501771d8697e79629aaa6e86cb5056211eae0ab860aa593cb5190cb9e",
+        "tests/feedback_driver.gd": "e2c0121f072f319c0284589d4d58531c3bdbf3c059ac67bc0e40f8cac1090a11",
+        "tests/fittings_driver.gd": "1243ec7aa305a0c9869218f67ae50ee7f09e35fe7ac29a056ae6d5389208bdc2",
+        "tests/fittings_probe.gd": "dc98f82b5f4ee5851d0d49c5c411fdcf84b6be1c600c1f8460e3d5678569b5e4",
+        "tests/gamepad_checks.gd": "a25fb7d8ef1c4dd9ce590d1326824fff5051fc81a0df1195fddd20438a5627b9",
+        "tests/gamepad_driver.gd": "9987f1b07214f0880976c8ab5e647e0bbb8f94af60047e95cb6fed9f6ae7a089",
+        "tests/gate_checks.gd": "3fba7468062a64e46e853fdc557a9425103485580aae7b1704eff11214479453",
+        "tests/gate_input_fixture.gd": "a87f8c7cc4bcca1dc78049b7c051a0d04d8208bbe3dd8d56382f2fafdbd80337",
+        "tests/gate_policy.gd": "a40d249e877446f7da09890e4c84d1c3243ef4ea110de65b033d7bd8710680ed",
+        "tests/gate_transition.gd": "2048fdf378d3b4c98788b01b276682301b13e59d9974d80fbe3ea0ed90400899",
+        "tests/grounding_driver.gd": "90b9df4e3c8d9450e5f40d38cd54dfadccade801341cdd2303467069d3509f3c",
+        "tests/grounding_input_fixture.gd": "e86a14059b78f50f8888d70530f380b62d012bca822d05dc31f5d84c80432c92",
+        "tests/grounding_transition.gd": "255023f18acf65fb5a25a531acdc658a093531d98a387b673b44147d42b8bb42",
+        "tests/guard_capture.gd": "e6c60d8811c8e704dbfa20826202f645f576b3c9f78f1fb6fc90642a0604b519",
+        "tests/guard_checks.gd": "cf2a8103bb4aa7fc8b61714ad36b43fbdd69d1a133f10b4530e863806ef3ed9b",
+        "tests/keepsake_checks.gd": "a8614cb0592ff8c403185b82f702c289abd42b78c783f4bc8f06d2ecaf211fcf",
+        "tests/keepsake_restart.gd": "8e9f107c310836324c51b1cbe1b2db618feadbd98b0cebbef12f75f39ab112c2",
+        "tests/look_capture.gd": "5202b045a289042a92da750ce527c6ff7550d348d13ecb950e3ece08cc1697fd",
+        "tests/look_checks.gd": "d1f7f9b6a712d4068baf536ac20cbcd60505be57b00eaef159fbe53b4c96d941",
+        "tests/player_checks.gd": "2c959b1acf0e26d916cf75aea93388ceb7703aee48321331221823143b40c327",
+        "tests/policy.gd": "646f0758a211e84ffbfd4632460c7d1fc549cbb3b552801ee2508774a5a63e29",
+        "tests/rehearsal_checks.gd": "0286d8997fdf1bd7ebad0b72a7283651678cfa30f85b2bd55e98e995c3f9b1f5",
+        "tests/render_gate.gd": "7d5d8e73463fff65f2c1638757b7cf2a6a2bf995a41e5c45772edcf1fe1fedeb",
+        "tests/render_routes.gd": "00d61a645e6ef22d880acd59cf8b87bc8954bd653e1fe82faed12b7e861acc33",
+        "tests/resolution_checks.gd": "15f40a5ff8b2d9350b78c6c3e064ffdab89fead0f761456fec75a1326edce8a0",
+        "tests/resolution_routes.gd": "fa5cfbd5f42c6ef59fc18fb85d61c2bcca2cd290395760a695bb6cc1575029e5",
+        "tests/route_checks.gd": "549272698da6d2e6e07ccf2e13a98fa5ee9b9c5df11c0ef8d1e65c49aa196d83",
+        "tests/run_checks.gd": "b94b621bac11c3d9fd4bc35f27818e14ce49d6d126010d36933d077920ac98b2",
+        "tests/sound_capture.gd": "1a0df88986619fbee9eb48c078726217409acb853e8821f2fcc3c660ceb07ad1",
+        "tests/sound_checks.gd": "c5c3496c2e5ef796399d3884b34b7547c55c4af9438a19220e484977dd2d0569",
+        "tests/toggle_checks.gd": "39d373fdfbb80fa24d90578eed7e7c3b525edd865cc8fd6d8f884e35d1ec6bc7",
+        "tests/toggle_fixture.gd": "c18cb92f89c7a21c70c6708b868153a60f712c65d50e077aaca4e4b1d1ad92a3",
+        "tests/workshop_checks.gd": "3e99096270e59d19155fdfb0ef12fcfffff0ad10502a08edc9106251e1a8242c",
+        "workshop.gd": "3214b628f79a7250a5fab9f42110182b13b19f8fd9e412273c21fff8a96eec4f"
+      },
+      "tick": 0
+    },
+    {
+      "checks": {
+        "failed": 0,
+        "passed": 61
+      },
+      "failures": [],
+      "journeys": [],
+      "labels": [
+        "Default scene starts a fresh selection",
+        "New release process retains the applied free look",
+        "New release process retains earned marks without auto-wear",
+        "Release embedded source identity: actors.gd",
+        "Release embedded source identity: arena.gd",
+        "Release embedded source identity: character_look.gd",
+        "Release embedded source identity: combat.gd",
+        "Release embedded source identity: controls.gd",
+        "Release embedded source identity: courier_talk.gd",
+        "Release embedded source identity: data/fittings.json",
+        "Release embedded source identity: errand.gd",
+        "Release embedded source identity: fittings.gd",
+        "Release embedded source identity: gamepad.gd",
+        "Release embedded source identity: keepsakes.gd",
+        "Release embedded source identity: rehearsal.gd",
+        "Release embedded source identity: return_gate.gd",
+        "Release embedded source identity: route.gd",
+        "Release embedded source identity: sound.gd",
+        "Release embedded source identity: tests/actor_capture.gd",
+        "Release embedded source identity: tests/actor_checks.gd",
+        "Release embedded source identity: tests/appearance_profile_checks.gd",
+        "Release embedded source identity: tests/appearance_restart.gd",
+        "Release embedded source identity: tests/controls_checks.gd",
+        "Release embedded source identity: tests/controls_restart.gd",
+        "Release embedded source identity: tests/conversation_capture.gd",
+        "Release embedded source identity: tests/conversation_checks.gd",
+        "Release embedded source identity: tests/errand_checks.gd",
+        "Release embedded source identity: tests/errand_policy.gd",
+        "Release embedded source identity: tests/feedback_driver.gd",
+        "Release embedded source identity: tests/fittings_driver.gd",
+        "Release embedded source identity: tests/fittings_probe.gd",
+        "Release embedded source identity: tests/gamepad_checks.gd",
+        "Release embedded source identity: tests/gamepad_driver.gd",
+        "Release embedded source identity: tests/gate_checks.gd",
+        "Release embedded source identity: tests/gate_input_fixture.gd",
+        "Release embedded source identity: tests/gate_policy.gd",
+        "Release embedded source identity: tests/gate_transition.gd",
+        "Release embedded source identity: tests/grounding_driver.gd",
+        "Release embedded source identity: tests/grounding_input_fixture.gd",
+        "Release embedded source identity: tests/grounding_transition.gd",
+        "Release embedded source identity: tests/guard_capture.gd",
+        "Release embedded source identity: tests/guard_checks.gd",
+        "Release embedded source identity: tests/keepsake_checks.gd",
+        "Release embedded source identity: tests/keepsake_restart.gd",
+        "Release embedded source identity: tests/look_capture.gd",
+        "Release embedded source identity: tests/look_checks.gd",
+        "Release embedded source identity: tests/player_checks.gd",
+        "Release embedded source identity: tests/policy.gd",
+        "Release embedded source identity: tests/rehearsal_checks.gd",
+        "Release embedded source identity: tests/render_gate.gd",
+        "Release embedded source identity: tests/render_routes.gd",
+        "Release embedded source identity: tests/resolution_checks.gd",
+        "Release embedded source identity: tests/resolution_routes.gd",
+        "Release embedded source identity: tests/route_checks.gd",
+        "Release embedded source identity: tests/run_checks.gd",
+        "Release embedded source identity: tests/sound_capture.gd",
+        "Release embedded source identity: tests/sound_checks.gd",
+        "Release embedded source identity: tests/toggle_checks.gd",
+        "Release embedded source identity: tests/toggle_fixture.gd",
+        "Release embedded source identity: tests/workshop_checks.gd",
+        "Release embedded source identity: workshop.gd"
+      ],
+      "look": {
+        "dye": 1,
+        "hair": 1,
+        "skin": 2
+      },
+      "mode": "title",
+      "profile": {
+        "blocked": false,
+        "dirty": false,
+        "earned": [
+          "held_line",
+          "drew_danger"
+        ],
+        "equipped": "",
+        "look": {
+          "dye": 1,
+          "hair": 1,
+          "skin": 2
+        },
+        "status": "Saved locally."
+      },
+      "read_only": true,
+      "schema_version": 1,
+      "sources": {
+        "actors.gd": "c1cb826fa57e50267323e6d74787d5aa4e59f8e58710f60ec632a6b275f19217",
+        "arena.gd": "2ae8e916a915f71cee4348e67a85925b01d563aab333d86b73f06ae80e4e983b",
+        "character_look.gd": "494e90189ffbddc383c829d5d5ff9ad4cf10a0c496e52374e3a2adba3ef11e48",
+        "combat.gd": "77aefc3f6130e114954a867f6404830180ca342c88e2396ec89a3784c2b3b0b3",
+        "controls.gd": "151bb8867ba735c3b0b2a0048d312472dfe32359d2409825fa4817cbd0a9e9b8",
+        "courier_talk.gd": "986c26d0cba960fcf4e678035b6893dd5a106d49214c9ba9f67ca7f22caf5d56",
+        "data/fittings.json": "cf9ce26272dd4841e89f5de2bb679407f971ec04954bf753c15b4d768eba189d",
+        "errand.gd": "2a2392fa86bd12544eba5f60ad74d35592c7d6fa207373ec11a1928a9e33e601",
+        "fittings.gd": "836fa97cc7c6d81126bcddafc26daae72f5585ff61b70b55c83ea65aa70fc390",
+        "gamepad.gd": "2f944aa12cbb78d5f5ed60e393397706ecd4642debc7c96c6d3dd325e8b0aa0a",
+        "keepsakes.gd": "1e1779136f6b7d21568fe72f670285f4bce6a8264172fd102f1b49421fcf8236",
+        "rehearsal.gd": "507a27b7832cfc79522396132a0a5f3f32fec34dd443a8a35fc21102080252c9",
+        "return_gate.gd": "bc8a1e38c8e5c537b55ad8871167ace6e300fdec4909a6fcb30b5a142842bf88",
+        "route.gd": "2936029e1a52933fff0141b546f85fbc53a57b7e6c5301eaef5cabac06a05901",
+        "sound.gd": "4404169ebb2d1711f20e6023292712bb2051f4075c4039d9e2db725b4b8fa80a",
+        "tests/actor_capture.gd": "762c21bc79f9b56664525273470e93b005b6a995f0594f4e8e6f9ad447933e96",
+        "tests/actor_checks.gd": "52f503ff8f98f5dfab8e44603887c38cb6c3a65b01a77d378e84437d4d9987e9",
+        "tests/appearance_profile_checks.gd": "39d192e8213b9060aea1594c29a80ff8e7fd7ae07a205b56abacf1d8d84283c0",
+        "tests/appearance_restart.gd": "301c95ffcf51c88bead8359b0d86a24218378b34d6806eebfc79e11e6078c2a0",
+        "tests/controls_checks.gd": "aec1a8a26e262a3830714f9fa748923d8b27b9e51d2e93fa6b3b74c2ee3acf0c",
+        "tests/controls_restart.gd": "066f641273c045a97ea1ee6bd2ddd9469e452d6edab80bc36a426927da431b61",
+        "tests/conversation_capture.gd": "88ce5e2e5739991e7ec245374c1c26377ae5728c5b484fcff4db55d915b401dc",
+        "tests/conversation_checks.gd": "d3a6fdfcba70ba3fb61d1516e249b455ae20c90c6a2bd60b3ee0be23c6e2b9e8",
+        "tests/errand_checks.gd": "2f04534e200e82f08e01127a3b31c5dafacb5151c9635038bf6c14d33ac89094",
+        "tests/errand_policy.gd": "74f4d20501771d8697e79629aaa6e86cb5056211eae0ab860aa593cb5190cb9e",
+        "tests/feedback_driver.gd": "e2c0121f072f319c0284589d4d58531c3bdbf3c059ac67bc0e40f8cac1090a11",
+        "tests/fittings_driver.gd": "1243ec7aa305a0c9869218f67ae50ee7f09e35fe7ac29a056ae6d5389208bdc2",
+        "tests/fittings_probe.gd": "dc98f82b5f4ee5851d0d49c5c411fdcf84b6be1c600c1f8460e3d5678569b5e4",
+        "tests/gamepad_checks.gd": "a25fb7d8ef1c4dd9ce590d1326824fff5051fc81a0df1195fddd20438a5627b9",
+        "tests/gamepad_driver.gd": "9987f1b07214f0880976c8ab5e647e0bbb8f94af60047e95cb6fed9f6ae7a089",
+        "tests/gate_checks.gd": "3fba7468062a64e46e853fdc557a9425103485580aae7b1704eff11214479453",
+        "tests/gate_input_fixture.gd": "a87f8c7cc4bcca1dc78049b7c051a0d04d8208bbe3dd8d56382f2fafdbd80337",
+        "tests/gate_policy.gd": "a40d249e877446f7da09890e4c84d1c3243ef4ea110de65b033d7bd8710680ed",
+        "tests/gate_transition.gd": "2048fdf378d3b4c98788b01b276682301b13e59d9974d80fbe3ea0ed90400899",
+        "tests/grounding_driver.gd": "90b9df4e3c8d9450e5f40d38cd54dfadccade801341cdd2303467069d3509f3c",
+        "tests/grounding_input_fixture.gd": "e86a14059b78f50f8888d70530f380b62d012bca822d05dc31f5d84c80432c92",
+        "tests/grounding_transition.gd": "255023f18acf65fb5a25a531acdc658a093531d98a387b673b44147d42b8bb42",
+        "tests/guard_capture.gd": "e6c60d8811c8e704dbfa20826202f645f576b3c9f78f1fb6fc90642a0604b519",
+        "tests/guard_checks.gd": "cf2a8103bb4aa7fc8b61714ad36b43fbdd69d1a133f10b4530e863806ef3ed9b",
+        "tests/keepsake_checks.gd": "a8614cb0592ff8c403185b82f702c289abd42b78c783f4bc8f06d2ecaf211fcf",
+        "tests/keepsake_restart.gd": "8e9f107c310836324c51b1cbe1b2db618feadbd98b0cebbef12f75f39ab112c2",
+        "tests/look_capture.gd": "5202b045a289042a92da750ce527c6ff7550d348d13ecb950e3ece08cc1697fd",
+        "tests/look_checks.gd": "d1f7f9b6a712d4068baf536ac20cbcd60505be57b00eaef159fbe53b4c96d941",
+        "tests/player_checks.gd": "2c959b1acf0e26d916cf75aea93388ceb7703aee48321331221823143b40c327",
+        "tests/policy.gd": "646f0758a211e84ffbfd4632460c7d1fc549cbb3b552801ee2508774a5a63e29",
+        "tests/rehearsal_checks.gd": "0286d8997fdf1bd7ebad0b72a7283651678cfa30f85b2bd55e98e995c3f9b1f5",
+        "tests/render_gate.gd": "7d5d8e73463fff65f2c1638757b7cf2a6a2bf995a41e5c45772edcf1fe1fedeb",
+        "tests/render_routes.gd": "00d61a645e6ef22d880acd59cf8b87bc8954bd653e1fe82faed12b7e861acc33",
+        "tests/resolution_checks.gd": "15f40a5ff8b2d9350b78c6c3e064ffdab89fead0f761456fec75a1326edce8a0",
+        "tests/resolution_routes.gd": "fa5cfbd5f42c6ef59fc18fb85d61c2bcca2cd290395760a695bb6cc1575029e5",
+        "tests/route_checks.gd": "549272698da6d2e6e07ccf2e13a98fa5ee9b9c5df11c0ef8d1e65c49aa196d83",
+        "tests/run_checks.gd": "b94b621bac11c3d9fd4bc35f27818e14ce49d6d126010d36933d077920ac98b2",
+        "tests/sound_capture.gd": "1a0df88986619fbee9eb48c078726217409acb853e8821f2fcc3c660ceb07ad1",
+        "tests/sound_checks.gd": "c5c3496c2e5ef796399d3884b34b7547c55c4af9438a19220e484977dd2d0569",
+        "tests/toggle_checks.gd": "39d373fdfbb80fa24d90578eed7e7c3b525edd865cc8fd6d8f884e35d1ec6bc7",
+        "tests/toggle_fixture.gd": "c18cb92f89c7a21c70c6708b868153a60f712c65d50e077aaca4e4b1d1ad92a3",
+        "tests/workshop_checks.gd": "3e99096270e59d19155fdfb0ef12fcfffff0ad10502a08edc9106251e1a8242c",
+        "workshop.gd": "3214b628f79a7250a5fab9f42110182b13b19f8fd9e412273c21fff8a96eec4f"
+      },
+      "tick": 0
+    }
+  ],
+  "package": {
+    "boundary": "Static archive/identity checks; execute the real player separately.",
+    "bytes": 27280387,
+    "entries": 7,
+    "pck_sha256": "f2e7656ab5d3d41c5fc8c20b64f3ea9dd2ee3c0185e7235783009042cea23475",
+    "resources": 64,
+    "sha256": "ddbaedb27e002066b088c25f70de15fe95f2bb814f1ca689efbf946cd6c5c1ab",
+    "sources": 58
+  },
+  "schema_version": 1,
+  "scope": "Actual pinned release, neutral cwd, absent developer-tool PATH, two complete approach/return journeys and a second process. Fixed policies are not participant validation."
+}

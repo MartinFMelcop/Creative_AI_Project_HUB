@@ -2586,3 +2586,57 @@ repeatability; SCI-050 supports a bounded useful instrument without inflating la
 maturity. ENG-004 separates verified mechanics from experience validation; CRE-005
 focuses evaluation on costs and recovery that actually change available action. Protected
 knowledge/source bytes and pins remain unchanged.
+
+## ADR-094 — make preparation and grounding costs inspectable
+
+**Date:** 2026-10-21 UTC. **Status:** implemented DEVELOPMENT.
+**Baseline:** `a5e27a2000f33f964204a762fbb20276d9ab17a9`, clean `work`; fetched main
+matched with no divergence. Continue character agency through connected adventures.
+
+**Selection:** The evaluator exposed a concrete dependency: brace enables a new grounding
+commitment after winch damage, while heal cannot replace integrity. Existing UI gave
+bonuses but did not connect them to that action or separate damage from grounding cost.
+Compare authored abilities/builds, alternative work policies, independent observation,
+creative production and calibrated engine work. Making the current choice/consequence
+inspectable is a feasible product response to actual evidence; more matrix rows or
+items would not resolve this gap. No available independent player evidence establishes
+comprehension, and no observed blocker justifies engine migration. Do not rebalance from
+a fixed policy loss or turn this into another operating-model intervention.
+
+**Behavior:** One read-only preparation calculation supplies all aid previews and actual
+return initialization. The offer/confirmation show actual fitted health, winch capacity,
+spending one integrity to ground, and the alternative consequence of a winch hit first.
+Draft/confirm/discard, no-wound gating, exclusive strip allocation and direct no-aid
+continuation remain. No action or strategy is chosen automatically.
+
+Actual grounding retains only the latest attempt's start/end ticks, elapsed commitment,
+interruption cause, starting/ending integrity and cost paid. Movement, release,
+suspension, personal damage and winch damage remain distinct. Same-frame harm wins over
+completion. Damage can consume resources while grounding itself costs zero. Successful
+work reports its exact cost; live/pause/result feedback explains current options, retry
+on loss or completed passage on win. Retry clears this observation and restores the
+immutable prepared arrival, without aid stacking, new rewards or persistent power.
+
+**Verification:** [Current execution](../evidence/north-star-return-feedback/RUN.json)
+binds 75 new feedback controls, 56 retained grounding controls and eight complete
+connected journeys identically in source/PCK/actual Linux 0.5.0, plus a separately staged
+rebuild. All 540 evaluated mechanical outcomes match the prior study; only source/full
+trace identities change. Retained functional/profile/equipment/sound/gamepad suites and
+58 Python regressions pass. Previous packages/evidence remain preserved; current CI and
+capability evidence point to the actual delivered sources, without maturity promotion.
+
+A recovered published PCK and current consumer render exactly the same wounded-arrival
+offer state: the new image adds numeric action consequences without changing that state.
+Synthetic OS work receives a real winch hit and pauses into the recorded zero-cost
+review. Agent inspection checks actual offer/confirmation/review images for clipping and
+context. An initial timed OS probe released before the hit under load and truthfully
+reported RELEASE; change the test to wait for observed native ticks/events, not guessed
+wall time. No gameplay gate was relaxed. Clarify mutually exclusive grounding/hit-first
+wording and terminal retry/success text after inspection, then rerun affected checks.
+
+**Knowledge/limits:** ENG-004 separates verified displayed facts from validated human
+usefulness. SCI-017 informs unchanged-outcome and matched-render controls; CRE-005 informs
+inspectable costs and recoverable consequences. No new lab/origin extraction, protected
+source change, final canon, player analytics, physical controller, human comprehension,
+accessibility/enjoyment, production engine or MMO readiness claim. Next compare actual
+understanding and a coherent ability/build frontier; more text is not an automatic task.

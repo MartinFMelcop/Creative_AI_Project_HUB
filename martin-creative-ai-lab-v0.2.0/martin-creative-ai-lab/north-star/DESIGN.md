@@ -399,3 +399,24 @@ perfect phase knowledge and absence of independent players prevent a general dea
 class ranking, enjoyment or balance conclusion. CRE-005 informs costs/consequences;
 SCI-017 informs the controlled comparisons; ENG-004 separates verified rules from
 experience validation. [Evidence](../evidence/north-star-return-envelope/RUN.json).
+
+## Experimental preparation and causal review
+
+**Status:** implemented prototype response to measured costs, not validated comprehension.
+The courier now previews actual prepared health/winch resources, immediate grounding cost
+and the alternative consequence of suffering a winch hit first. Brace and healing serve
+different resources; no choice is made automatically. One shared preparation calculation
+supplies the preview and actual return. Draft/confirm/discard and single-strip authority
+remain intact. This applies the prior instrument's finding without changing balance.
+
+Actual grounding work retains its most recent attempt: committed time, movement/release/
+suspension or damage cause, and zero or paid cost. Damage cost and grounding cost are
+separate facts. Live/pause/result feedback explains remaining options or retry. Completion
+still requires both catches and living exit; retry clears the review and cannot stack aid.
+This session-only observation is not player analytics, final canon or persistent power.
+
+ENG-004 distinguishes correctness of displayed consequences from human usefulness;
+SCI-017 informs unchanged mechanical-outcome controls across the 540-case matrix;
+CRE-005 informs making costs and recoverable consequences inspectable before and after
+action. [Execution](../evidence/north-star-return-feedback/RUN.json) preserves synthetic
+input and agent image assessment separately from still-missing independent human evidence.

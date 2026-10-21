@@ -73,8 +73,16 @@ func _ready() -> void:
 	if args.size()==2 and args[0] in ["--verify-player","--verify-player-read"]:
 		call_deferred("verify_player",args[1],args[0]=="--verify-player-read")
 	elif args.size()==2 and args[0]=="--verify-pad":call_deferred("verify_pad",args[1])
+	elif args.size()==2 and args[0]=="--verify-feedback":call_deferred("verify_feedback",args[1])
 	elif args.size()==2 and args[0]=="--verify-grounding":call_deferred("verify_grounding",args[1])
 	elif args.size()==2 and args[0]=="--verify-fittings":call_deferred("verify_fittings",args[1])
+
+func verify_feedback(output: String) -> void:
+	set_physics_process(false)
+	var report: Dictionary=load("res://tests/feedback_driver.gd").new().run(self,output)
+	sound.silence()
+	await get_tree().create_timer(.2).timeout
+	get_tree().quit(0 if report.checks.failed==0 else 1)
 
 func verify_grounding(output: String) -> void:
 	set_physics_process(false)
@@ -850,14 +858,18 @@ func draw_return_gate() -> void:
 	panel(Rect2(30,662,1092,86))
 	text(Vector2(48,687),"WASD move / ARROWS aim / J counter / K guard or feint / SPACE step / E work / ESC pause",17)
 	var message:String=game.message.replace("courier safe","winch safe").replace("courier gains time","more time to work").replace("Sentinel focus","Ward focus")
+	if not return_gate.grounding_review.is_empty() and return_gate.grounding_review.status=="interrupted":message=return_gate.feedback_lines()[0]
 	text(Vector2(48,718),"Grounding: costs 1 winch. Movement, release or damage cancels." if return_gate.working==ReturnGate.GROUND_INDEX else "Working: no guard, blade or step. Moving, release or a hit cancels partial work." if return_gate.channel else message,17,AMBER)
 	if game.mode!="play":
 		panel(Rect2(90,220,972,365),Color("172535"))
 		text(Vector2(125,271),"RETURN GATE PAUSED" if game.mode=="paused" else ("RETURN PASSAGE OPEN" if game.mode=="won" else "RETURN GATE FAILED"),32,TEAL if game.mode=="won" else AMBER)
 		text(Vector2(125,318),"Health %d / %d    Winch %d / %d    Catches %d / 2"%[game.hp,game.health_limit,game.cargo,return_gate.cargo_limit(),int(return_gate.raised[0])+int(return_gate.raised[1])],21)
-		text(Vector2(125,361),"The courier stays safe. This separate ward guards the return mechanism.",19)
+		text(Vector2(125,361),"Ground: hold %s for 1.5s / costs 1 winch / needs 2+ / damage cancels."%bindings.name_for("interact"),19)
 		text(Vector2(125,399),"Raise both catches AND cross the exit. Disabling the ward alone does not finish.",18,AMBER)
-		draw_impact(Vector2(125,446))
+		var review:Array[String]=return_gate.feedback_lines()
+		if review.is_empty():draw_impact(Vector2(125,446))
+		else:
+			for i in review.size():text(Vector2(125,446+i*32),review[i],17,AMBER if i==0 else PAPER)
 		text(Vector2(125,532),"ENTER / ESC resume   /   R leave" if game.mode=="paused" else "ENTER retry from arrival   /   R leave   /   no extra keepsake",22,TEAL)
 		text(Vector2(125,568),"Retry restores this prepared checkpoint. Aid never stacks; no live gear or approach swap.",17)
 
@@ -903,13 +915,15 @@ func draw_talk() -> void:
 		var lines:Array[String]=courier_talk.reply_lines()
 		for i in lines.size():text(Vector2(80,314+i*47),lines[i],20)
 		text(Vector2(80,493),"Agreed: "+("BIND MY WOUND" if courier_talk.choice=="heal" else ("BRACE THE WINCH" if courier_talk.choice=="brace" else "KEEP YOUR STRIP")),24,TEAL)
-		text(Vector2(80,542),"The offer is settled. Reopening this conversation won't change it.",18,AMBER)
+		text(Vector2(80,525),ReturnGate.preparation_line(courier_talk.facts.hp,courier_talk.facts.health_limit,courier_talk.choice),17,TEAL)
+		text(Vector2(80,557),"The offer is settled. Reopening this conversation won't change it.",18,AMBER)
 		text(Vector2(80,586),"Prepare before departure. Retry restores that preparation; it never adds another strip.",17)
 	else:
 		text(Vector2(80,260),courier_talk.reply_lines()[0],22,AMBER)
 		text(Vector2(80,291),courier_talk.reply_lines()[1],19)
 		var names:=["1  Bind my wound","2  Brace the winch","3  Keep it for your own road"]
-		var prices:=["+1 return health, up to your fitted limit / no winch brace","Return winch: 3 integrity instead of 2 / arrival health unchanged","No aid / ordinary arrival health and winch / return remains available"]
+		var prices:Array[String]=[]
+		for id in CourierTalk.OPTIONS:prices.append(ReturnGate.preparation_line(courier_talk.facts.hp,courier_talk.facts.health_limit,id))
 		for i in 3:
 			var id:String=CourierTalk.OPTIONS[i];var y:float=312+i*83
 			panel(Rect2(75,y,1002,72),Color("244a50") if courier_talk.draft==id else Color("182b3b"))

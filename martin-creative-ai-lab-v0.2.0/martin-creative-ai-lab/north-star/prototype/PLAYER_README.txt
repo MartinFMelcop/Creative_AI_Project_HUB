@@ -1,4 +1,4 @@
-Virgo Diamond: The North Star — Crossing Drill, Linux player 0.4.0
+Virgo Diamond: The North Star — Crossing Drill, Linux player 0.5.0
 
 Extract the entire CrossingDrill folder, then open crossing-drill.x86_64 or run
 ./crossing-drill.x86_64 from a terminal. Keep crossing-drill.pck beside it.
@@ -41,6 +41,13 @@ at least 2 winch integrity and spends 1. Movement, release, personal/winch damag
 pause or focus loss cancels progress. Guard, blade and step are unavailable while
 working. Brace aid leaves extra margin. Both catches and the living exit still matter;
 retry restores the arrival checkpoint, never stacks aid or grants another mark.
+
+The courier's aid options now show your actual prepared health and winch integrity,
+the grounding cost, and whether grounding remains after one winch hit. Selection is
+still only a draft until confirmed. During the return, pause or inspect the result
+to review the last grounding attempt: cause, elapsed work and whether a cost was paid.
+An interrupted attempt pays no grounding cost; damage itself can still reduce health
+or integrity. If grounding becomes unavailable, work and close counters remain options.
 
 This is an experimental local prototype, not a finished MMORPG, final classes,
 approved geography/canon or proof of player identity, enjoyment or market demand.

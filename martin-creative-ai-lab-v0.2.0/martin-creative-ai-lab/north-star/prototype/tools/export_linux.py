@@ -16,7 +16,7 @@ ROOT = Path(__file__).resolve().parents[1]
 VERSION = "4.6.3.stable.official.7d41c59c4"
 TEMPLATE_SHA = "2c78919325d7f29fa7607287c7c1eeac367ea4c94e7b8b6f5f4c6b20492f73d0"
 ARCHIVE_SHA = "3fbe2c0e2dec9d537ab9ec97bcf8da91dcf23357fc51f67092dd068d839290a8"
-DEFAULT = ROOT / "dist/crossing-drill-linux-0.4.0.zip"
+DEFAULT = ROOT / "dist/crossing-drill-linux-0.5.0.zip"
 BUNDLE = "CrossingDrill"
 
 

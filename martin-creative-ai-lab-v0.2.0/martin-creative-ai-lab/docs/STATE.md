@@ -1,8 +1,8 @@
 # Current initiative continuity
 
 **Updated:** 2026-10-21 UTC. **Product SEED version:** 0.33.20.
-**Mode:** RESEARCH with instrument DEVELOPMENT. **Verified integration baseline:**
-`7a9c289019afc35339e524ad64713d8b5a7a1f96`, branch `work`; fetched main matched HEAD,
+**Mode:** DEVELOPMENT. **Verified integration baseline:**
+`a5e27a2000f33f964204a762fbb20276d9ab17a9`, branch `work`; fetched main matched HEAD,
 no divergence, and initial tracked/untracked tree was clean.
 
 This file owns active initiative continuity, not detailed gameplay contracts or an
@@ -24,7 +24,7 @@ trade-offs, appearance/local cosmetic memory, courier aid, escort and return goa
 The return now offers an alternative to working under threat or earning three counters:
 commit 1.5 seconds at a grounding lever and sacrifice one winch integrity to silence the
 ward. Damage can interrupt; two catches and actual living exit remain mandatory. Retry
-restores the prepared arrival without stacking aid. [Current execution](../evidence/north-star-grounding/RUN.json)
+restores the prepared arrival without stacking aid. [Current execution](../evidence/north-star-return-feedback/RUN.json)
 binds controls, eight two-goal approach/outfit journeys, source/PCK/Linux release,
 matched prior-delivery observations, native keyboard interaction and inspected images.
 Equipment authorship remains bounded by [the catalog contract](../north-star/prototype/data/README.md);
@@ -32,14 +32,23 @@ Equipment authorship remains bounded by [the catalog contract](../north-star/pro
 Detailed mechanics belong in [the prototype guide](../north-star/prototype/README.md).
 Capability states and local-prototype maturity remain unchanged; no new lab/origin transfer.
 
+**Latest product improvement:** The courier offer previews actual prepared resources,
+grounding cost and the different consequence of taking a winch hit first. Return play
+now retains a causal last-attempt review: elapsed work, interruption cause and zero/paid
+cost, with remaining options or retry. These observations use actual model transitions;
+no automatic aid/strategy selection or balance change. Shared preparation logic keeps
+the preview and actual return consistent. [Current execution](../evidence/north-star-return-feedback/RUN.json)
+binds source/PCK/Linux controls, complete journeys, native input and inspected images.
+
 **Consumed production instrument:** The [return evaluator](../north-star/prototype/analysis/README.md)
 now exposes encounter/fitting/aid costs beyond a few happy paths. Its current research
 execution covers 540 deterministic conditions, each repeated twice in source and PCK,
 with all 418 wins and 122 losses retained. Brace enables delayed grounding where healing
 does not; the slow coat's fixed work policy has failures despite other feasible policies.
 [Execution](../evidence/north-star-return-envelope/RUN.json) separates actual model
-observations from player outcomes. Gameplay, delivered artifacts and capability states
-remain unchanged; no new lab or origin transfer.
+observations from player outcomes. The current feedback delivery preserves all 540
+measured mechanical outcomes; trace identities change with the review. Capability states
+remain unchanged; no new lab/origin transfer.
 
 **Missing/uncertain:** Distinct final classes/specializations/progression, professions,
 long-term content throughput, social recognition and shared-world networking/server
@@ -56,11 +65,11 @@ functional progress. Production engine is undecided. Unity execution depends on 
 editor/tool availability and licensing, and is not a prerequisite for continuing
 useful prototype work. Shared-world trust/persistence needs separate architecture.
 
-**Next high-value frontier:** Compare actual author/player comprehension of aid and
-commitment costs, alternate work policies/readability informed by the measured failures,
-and a coherent ability/build consumer against calibrated architecture work. The evaluator
-can test future changes; expanding its matrix without a new question is not progress.
-Do not treat a fixed policy loss as an impossible build or automatically rebalance it.
+**Next high-value frontier:** Compare independent author/player comprehension of the
+new preparation/review, a coherent ability/build consumer, alternative work policies
+and calibrated architecture needs. The measured failure cases now have inspectable
+cost feedback, but improved comprehension is still an unvalidated hypothesis. Avoid
+expanding the matrix or adding more text without a new consequential question.
 
 **Continuation/redesign/completion/suspension/retirement:** Continue when a frontier
 materially advances character expression/agency or removes a demonstrated production

@@ -11,7 +11,7 @@ From the maintained workspace, with the pinned standard Godot 4.6.3 editor:
 
 ```bash
 python3 north-star/prototype/tools/test_evaluate_return.py
-python3 north-star/prototype/tools/evaluate_return.py --output /tmp/envelope.json --report /tmp/envelope.md --compare evidence/north-star-return-envelope/results.json
+python3 north-star/prototype/tools/evaluate_return.py --output /tmp/envelope.json --report /tmp/envelope.md --compare evidence/north-star-return-feedback/envelope.json
 ```
 
 The [default protocol](return-envelope.json) crosses three approaches (Steady,
@@ -71,6 +71,11 @@ places the player away from the bolt; matrix positions are never moved by fixtur
 An initial prediction that default idle would destroy the winch was contradicted: the
 body intercepts the bolts. The final control retains that result and adds the separate
 exposed-winch fixture; the original matrix did not change after the pilot.
+
+Current consumer feedback adds preparation previews and grounding-attempt review.
+[Current execution](../../../evidence/north-star-return-feedback/RUN.json) rebinds the
+same 540 mechanical outcomes to that delivered source; only identities/trace digests
+change. The original study below remains its published baseline.
 
 ## Observed result and production consequence
 

@@ -1,0 +1,56 @@
+{
+  "deliveries": {
+    "pack": {
+      "abandoned": true,
+      "entry": {
+        "energy": 100.0,
+        "hp": 4,
+        "medicine": "available",
+        "outfit": "standard",
+        "role": "Guardian",
+        "route": "road",
+        "style": "Steady"
+      },
+      "partial_seconds": 0.4,
+      "pause_cancelled": true,
+      "review": {
+        "cause": "winch hit",
+        "integrity": 1,
+        "seconds": 0.6,
+        "spent": 0,
+        "start_integrity": 2,
+        "started_tick": 132,
+        "status": "interrupted",
+        "tick": 169
+      },
+      "winch": 1
+    },
+    "source": {
+      "abandoned": true,
+      "entry": {
+        "energy": 100.0,
+        "hp": 4,
+        "medicine": "available",
+        "outfit": "standard",
+        "role": "Guardian",
+        "route": "road",
+        "style": "Steady"
+      },
+      "partial_seconds": 0.4,
+      "pause_cancelled": true,
+      "review": {
+        "cause": "winch hit",
+        "integrity": 1,
+        "seconds": 0.617,
+        "spent": 0,
+        "start_integrity": 2,
+        "started_tick": 131,
+        "status": "interrupted",
+        "tick": 169
+      },
+      "winch": 1
+    }
+  },
+  "kind": "synthetic_os_input",
+  "scope": "Policy-executed wounded escort and fixture placement at lever; actual OS hold, pause, timed winch interruption and paused causal review in source/PCK windows. No human or full OS-driven journey."
+}

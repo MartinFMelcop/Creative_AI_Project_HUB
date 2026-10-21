@@ -1,0 +1,1558 @@
+{
+  "catalog_sha256": "cf9ce26272dd4841e89f5de2bb679407f971ec04954bf753c15b4d768eba189d",
+  "checks": {
+    "failed": 0,
+    "passed": 119
+  },
+  "consumer_hashes": {
+    "actors.gd": "c1cb826fa57e50267323e6d74787d5aa4e59f8e58710f60ec632a6b275f19217",
+    "arena.gd": "2ae8e916a915f71cee4348e67a85925b01d563aab333d86b73f06ae80e4e983b",
+    "character_look.gd": "494e90189ffbddc383c829d5d5ff9ad4cf10a0c496e52374e3a2adba3ef11e48",
+    "combat.gd": "77aefc3f6130e114954a867f6404830180ca342c88e2396ec89a3784c2b3b0b3",
+    "data/fittings.json": "cf9ce26272dd4841e89f5de2bb679407f971ec04954bf753c15b4d768eba189d",
+    "fittings.gd": "836fa97cc7c6d81126bcddafc26daae72f5585ff61b70b55c83ea65aa70fc390",
+    "tests/fittings_driver.gd": "1243ec7aa305a0c9869218f67ae50ee7f09e35fe7ac29a056ae6d5389208bdc2",
+    "tests/fittings_probe.gd": "dc98f82b5f4ee5851d0d49c5c411fdcf84b6be1c600c1f8460e3d5678569b5e4",
+    "workshop.gd": "3214b628f79a7250a5fab9f42110182b13b19f8fd9e412273c21fff8a96eec4f"
+  },
+  "errors": [],
+  "failures": [],
+  "items": {
+    "field_sash": {
+      "health": 4.0,
+      "id": "field_sash",
+      "movement": 1.0,
+      "name": "Field sash",
+      "recovery": 26.0,
+      "station": [
+        575.0,
+        420.0
+      ],
+      "visual": "sash"
+    },
+    "riveted": {
+      "health": 6.0,
+      "id": "riveted",
+      "movement": 0.8,
+      "name": "Riveted coat",
+      "recovery": 18.0,
+      "station": [
+        330.0,
+        420.0
+      ],
+      "visual": "plates"
+    },
+    "standard": {
+      "health": 5.0,
+      "id": "standard",
+      "movement": 1.0,
+      "name": "Standard clothing",
+      "recovery": 18.0,
+      "station": null,
+      "visual": "plain"
+    },
+    "trail": {
+      "health": 4.0,
+      "id": "trail",
+      "movement": 1.2,
+      "name": "Trail wrap",
+      "recovery": 18.0,
+      "station": [
+        820.0,
+        420.0
+      ],
+      "visual": "strips"
+    }
+  },
+  "journeys": [
+    {
+      "escort": {
+        "cargo": 3,
+        "counters": {
+          "blocks": 6,
+          "counters": 3,
+          "courier_hits": 0,
+          "dodges": 0,
+          "player_hits": 0,
+          "redirects": 0,
+          "rejected": 0
+        },
+        "energy": 100.0,
+        "events": [
+          {
+            "cargo": 3,
+            "energy": 67.6,
+            "hp": 5,
+            "kind": "protected",
+            "tick": 169
+          },
+          {
+            "cargo": 3,
+            "energy": 67.8,
+            "hp": 5,
+            "kind": "protected",
+            "tick": 338
+          },
+          {
+            "cargo": 3,
+            "energy": 100.0,
+            "hp": 5,
+            "kind": "pulse_avoided",
+            "tick": 507
+          },
+          {
+            "cargo": 3,
+            "energy": 72.6,
+            "hp": 5,
+            "kind": "protected",
+            "tick": 676
+          },
+          {
+            "cargo": 3,
+            "energy": 67.8,
+            "hp": 5,
+            "kind": "protected",
+            "tick": 845
+          },
+          {
+            "cargo": 3,
+            "energy": 56.1,
+            "hp": 5,
+            "kind": "counter",
+            "tick": 846
+          },
+          {
+            "cargo": 3,
+            "energy": 100.0,
+            "hp": 5,
+            "kind": "pulse_avoided",
+            "tick": 1086
+          },
+          {
+            "cargo": 3,
+            "energy": 73.0,
+            "hp": 5,
+            "kind": "protected",
+            "tick": 1255
+          },
+          {
+            "cargo": 3,
+            "energy": 61.3,
+            "hp": 5,
+            "kind": "counter",
+            "tick": 1256
+          },
+          {
+            "cargo": 3,
+            "energy": 68.8,
+            "hp": 5,
+            "kind": "protected",
+            "tick": 1496
+          },
+          {
+            "cargo": 3,
+            "energy": 57.1,
+            "hp": 5,
+            "kind": "counter",
+            "tick": 1497
+          },
+          {
+            "cargo": 3,
+            "energy": 57.1,
+            "hp": 5,
+            "kind": "sentinel_disabled",
+            "tick": 1497
+          }
+        ],
+        "health_limit": 5,
+        "hp": 5,
+        "mode": "won",
+        "movement": 1.0,
+        "outfit": "standard",
+        "recovery": 18.0,
+        "tick": 1648
+      },
+      "id": "standard",
+      "return_gate": {
+        "cargo": 2,
+        "counters": {
+          "blocks": 1,
+          "counters": 0,
+          "courier_hits": 1,
+          "dodges": 0,
+          "player_hits": 1,
+          "redirects": 0,
+          "rejected": 0
+        },
+        "energy": 100.0,
+        "events": [
+          {
+            "cargo": 2,
+            "energy": 100.0,
+            "hp": 5,
+            "kind": "courier_hit",
+            "tick": 169
+          },
+          {
+            "cargo": 2,
+            "energy": 74.4,
+            "hp": 5,
+            "kind": "protected",
+            "tick": 338
+          },
+          {
+            "cargo": 2,
+            "energy": 100.0,
+            "hp": 5,
+            "kind": "pulse_avoided",
+            "tick": 507
+          },
+          {
+            "cargo": 2,
+            "energy": 100.0,
+            "hp": 4,
+            "kind": "bolt_hit",
+            "tick": 676
+          }
+        ],
+        "health_limit": 5,
+        "hp": 4,
+        "mode": "won",
+        "movement": 1.0,
+        "outfit": "standard",
+        "recovery": 18.0,
+        "tick": 744
+      },
+      "role": "Guardian"
+    },
+    {
+      "escort": {
+        "cargo": 3,
+        "counters": {
+          "blocks": 0,
+          "counters": 3,
+          "courier_hits": 0,
+          "dodges": 2,
+          "player_hits": 0,
+          "redirects": 2,
+          "rejected": 0
+        },
+        "energy": 100.0,
+        "events": [
+          {
+            "cargo": 3,
+            "energy": 84.0,
+            "hp": 5,
+            "kind": "redirect",
+            "tick": 110
+          },
+          {
+            "cargo": 3,
+            "energy": 59.0,
+            "hp": 5,
+            "kind": "step",
+            "tick": 110
+          },
+          {
+            "cargo": 3,
+            "energy": 76.7,
+            "hp": 5,
+            "kind": "bolt_missed",
+            "tick": 169
+          },
+          {
+            "cargo": 3,
+            "energy": 72.5,
+            "hp": 5,
+            "kind": "counter",
+            "tick": 195
+          },
+          {
+            "cargo": 3,
+            "energy": 84.0,
+            "hp": 5,
+            "kind": "redirect",
+            "tick": 376
+          },
+          {
+            "cargo": 3,
+            "energy": 59.0,
+            "hp": 5,
+            "kind": "step",
+            "tick": 376
+          },
+          {
+            "cargo": 3,
+            "energy": 76.7,
+            "hp": 5,
+            "kind": "bolt_missed",
+            "tick": 435
+          },
+          {
+            "cargo": 3,
+            "energy": 72.5,
+            "hp": 5,
+            "kind": "counter",
+            "tick": 461
+          },
+          {
+            "cargo": 3,
+            "energy": 100.0,
+            "hp": 5,
+            "kind": "pulse_avoided",
+            "tick": 701
+          },
+          {
+            "cargo": 3,
+            "energy": 88.0,
+            "hp": 5,
+            "kind": "counter",
+            "tick": 725
+          },
+          {
+            "cargo": 3,
+            "energy": 88.0,
+            "hp": 5,
+            "kind": "sentinel_disabled",
+            "tick": 725
+          }
+        ],
+        "health_limit": 5,
+        "hp": 5,
+        "mode": "won",
+        "movement": 1.0,
+        "outfit": "standard",
+        "recovery": 18.0,
+        "tick": 1262
+      },
+      "id": "standard",
+      "return_gate": {
+        "cargo": 2,
+        "counters": {
+          "blocks": 0,
+          "counters": 0,
+          "courier_hits": 1,
+          "dodges": 0,
+          "player_hits": 0,
+          "redirects": 2,
+          "rejected": 0
+        },
+        "energy": 100.0,
+        "events": [
+          {
+            "cargo": 2,
+            "energy": 100.0,
+            "hp": 5,
+            "kind": "courier_hit",
+            "tick": 169
+          },
+          {
+            "cargo": 2,
+            "energy": 84.0,
+            "hp": 5,
+            "kind": "redirect",
+            "tick": 279
+          },
+          {
+            "cargo": 2,
+            "energy": 100.0,
+            "hp": 5,
+            "kind": "bolt_missed",
+            "tick": 338
+          },
+          {
+            "cargo": 2,
+            "energy": 100.0,
+            "hp": 5,
+            "kind": "pulse_avoided",
+            "tick": 507
+          },
+          {
+            "cargo": 2,
+            "energy": 84.0,
+            "hp": 5,
+            "kind": "redirect",
+            "tick": 617
+          },
+          {
+            "cargo": 2,
+            "energy": 100.0,
+            "hp": 5,
+            "kind": "bolt_missed",
+            "tick": 676
+          }
+        ],
+        "health_limit": 5,
+        "hp": 5,
+        "mode": "won",
+        "movement": 1.0,
+        "outfit": "standard",
+        "recovery": 18.0,
+        "tick": 717
+      },
+      "role": "Duelist"
+    },
+    {
+      "escort": {
+        "cargo": 3,
+        "counters": {
+          "blocks": 6,
+          "counters": 3,
+          "courier_hits": 0,
+          "dodges": 0,
+          "player_hits": 0,
+          "redirects": 0,
+          "rejected": 0
+        },
+        "energy": 100.0,
+        "events": [
+          {
+            "cargo": 3,
+            "energy": 68.0,
+            "hp": 6,
+            "kind": "protected",
+            "tick": 169
+          },
+          {
+            "cargo": 3,
+            "energy": 68.2,
+            "hp": 6,
+            "kind": "protected",
+            "tick": 338
+          },
+          {
+            "cargo": 3,
+            "energy": 100.0,
+            "hp": 6,
+            "kind": "pulse_avoided",
+            "tick": 507
+          },
+          {
+            "cargo": 3,
+            "energy": 74.0,
+            "hp": 6,
+            "kind": "protected",
+            "tick": 676
+          },
+          {
+            "cargo": 3,
+            "energy": 68.4,
+            "hp": 6,
+            "kind": "protected",
+            "tick": 845
+          },
+          {
+            "cargo": 3,
+            "energy": 56.7,
+            "hp": 6,
+            "kind": "counter",
+            "tick": 846
+          },
+          {
+            "cargo": 3,
+            "energy": 100.0,
+            "hp": 6,
+            "kind": "pulse_avoided",
+            "tick": 1086
+          },
+          {
+            "cargo": 3,
+            "energy": 74.8,
+            "hp": 6,
+            "kind": "protected",
+            "tick": 1255
+          },
+          {
+            "cargo": 3,
+            "energy": 63.1,
+            "hp": 6,
+            "kind": "counter",
+            "tick": 1256
+          },
+          {
+            "cargo": 3,
+            "energy": 69.2,
+            "hp": 6,
+            "kind": "protected",
+            "tick": 1496
+          },
+          {
+            "cargo": 3,
+            "energy": 57.5,
+            "hp": 6,
+            "kind": "counter",
+            "tick": 1497
+          },
+          {
+            "cargo": 3,
+            "energy": 57.5,
+            "hp": 6,
+            "kind": "sentinel_disabled",
+            "tick": 1497
+          }
+        ],
+        "health_limit": 6,
+        "hp": 6,
+        "mode": "won",
+        "movement": 0.8,
+        "outfit": "riveted",
+        "recovery": 18.0,
+        "tick": 1648
+      },
+      "id": "riveted",
+      "return_gate": {
+        "cargo": 1,
+        "counters": {
+          "blocks": 1,
+          "counters": 0,
+          "courier_hits": 2,
+          "dodges": 0,
+          "player_hits": 0,
+          "redirects": 0,
+          "rejected": 0
+        },
+        "energy": 100.0,
+        "events": [
+          {
+            "cargo": 2,
+            "energy": 100.0,
+            "hp": 6,
+            "kind": "courier_hit",
+            "tick": 169
+          },
+          {
+            "cargo": 2,
+            "energy": 67.6,
+            "hp": 6,
+            "kind": "protected",
+            "tick": 338
+          },
+          {
+            "cargo": 2,
+            "energy": 100.0,
+            "hp": 6,
+            "kind": "pulse_avoided",
+            "tick": 507
+          },
+          {
+            "cargo": 1,
+            "energy": 100.0,
+            "hp": 6,
+            "kind": "courier_hit",
+            "tick": 676
+          }
+        ],
+        "health_limit": 6,
+        "hp": 6,
+        "mode": "won",
+        "movement": 0.8,
+        "outfit": "riveted",
+        "recovery": 18.0,
+        "tick": 752
+      },
+      "role": "Guardian"
+    },
+    {
+      "escort": {
+        "cargo": 3,
+        "counters": {
+          "blocks": 0,
+          "counters": 3,
+          "courier_hits": 0,
+          "dodges": 2,
+          "player_hits": 0,
+          "redirects": 2,
+          "rejected": 0
+        },
+        "energy": 100.0,
+        "events": [
+          {
+            "cargo": 3,
+            "energy": 84.0,
+            "hp": 6,
+            "kind": "redirect",
+            "tick": 110
+          },
+          {
+            "cargo": 3,
+            "energy": 59.0,
+            "hp": 6,
+            "kind": "step",
+            "tick": 110
+          },
+          {
+            "cargo": 3,
+            "energy": 76.7,
+            "hp": 6,
+            "kind": "bolt_missed",
+            "tick": 169
+          },
+          {
+            "cargo": 3,
+            "energy": 74.3,
+            "hp": 6,
+            "kind": "counter",
+            "tick": 201
+          },
+          {
+            "cargo": 3,
+            "energy": 84.0,
+            "hp": 6,
+            "kind": "redirect",
+            "tick": 382
+          },
+          {
+            "cargo": 3,
+            "energy": 59.0,
+            "hp": 6,
+            "kind": "step",
+            "tick": 382
+          },
+          {
+            "cargo": 3,
+            "energy": 76.7,
+            "hp": 6,
+            "kind": "bolt_missed",
+            "tick": 441
+          },
+          {
+            "cargo": 3,
+            "energy": 74.3,
+            "hp": 6,
+            "kind": "counter",
+            "tick": 473
+          },
+          {
+            "cargo": 3,
+            "energy": 100.0,
+            "hp": 6,
+            "kind": "pulse_avoided",
+            "tick": 713
+          },
+          {
+            "cargo": 3,
+            "energy": 88.0,
+            "hp": 6,
+            "kind": "counter",
+            "tick": 742
+          },
+          {
+            "cargo": 3,
+            "energy": 88.0,
+            "hp": 6,
+            "kind": "sentinel_disabled",
+            "tick": 742
+          }
+        ],
+        "health_limit": 6,
+        "hp": 6,
+        "mode": "won",
+        "movement": 0.8,
+        "outfit": "riveted",
+        "recovery": 18.0,
+        "tick": 1271
+      },
+      "id": "riveted",
+      "return_gate": {
+        "cargo": 2,
+        "counters": {
+          "blocks": 0,
+          "counters": 0,
+          "courier_hits": 1,
+          "dodges": 0,
+          "player_hits": 0,
+          "redirects": 2,
+          "rejected": 0
+        },
+        "energy": 100.0,
+        "events": [
+          {
+            "cargo": 2,
+            "energy": 100.0,
+            "hp": 6,
+            "kind": "courier_hit",
+            "tick": 169
+          },
+          {
+            "cargo": 2,
+            "energy": 84.0,
+            "hp": 6,
+            "kind": "redirect",
+            "tick": 279
+          },
+          {
+            "cargo": 2,
+            "energy": 100.0,
+            "hp": 6,
+            "kind": "bolt_missed",
+            "tick": 338
+          },
+          {
+            "cargo": 2,
+            "energy": 100.0,
+            "hp": 6,
+            "kind": "pulse_avoided",
+            "tick": 507
+          },
+          {
+            "cargo": 2,
+            "energy": 84.0,
+            "hp": 6,
+            "kind": "redirect",
+            "tick": 617
+          },
+          {
+            "cargo": 2,
+            "energy": 100.0,
+            "hp": 6,
+            "kind": "bolt_missed",
+            "tick": 676
+          }
+        ],
+        "health_limit": 6,
+        "hp": 6,
+        "mode": "won",
+        "movement": 0.8,
+        "outfit": "riveted",
+        "recovery": 18.0,
+        "tick": 709
+      },
+      "role": "Duelist"
+    },
+    {
+      "escort": {
+        "cargo": 3,
+        "counters": {
+          "blocks": 6,
+          "counters": 3,
+          "courier_hits": 0,
+          "dodges": 0,
+          "player_hits": 0,
+          "redirects": 0,
+          "rejected": 0
+        },
+        "energy": 100.0,
+        "events": [
+          {
+            "cargo": 3,
+            "energy": 67.4,
+            "hp": 4,
+            "kind": "protected",
+            "tick": 169
+          },
+          {
+            "cargo": 3,
+            "energy": 67.6,
+            "hp": 4,
+            "kind": "protected",
+            "tick": 338
+          },
+          {
+            "cargo": 3,
+            "energy": 100.0,
+            "hp": 4,
+            "kind": "pulse_avoided",
+            "tick": 507
+          },
+          {
+            "cargo": 3,
+            "energy": 71.4,
+            "hp": 4,
+            "kind": "protected",
+            "tick": 676
+          },
+          {
+            "cargo": 3,
+            "energy": 67.6,
+            "hp": 4,
+            "kind": "protected",
+            "tick": 845
+          },
+          {
+            "cargo": 3,
+            "energy": 55.9,
+            "hp": 4,
+            "kind": "counter",
+            "tick": 846
+          },
+          {
+            "cargo": 3,
+            "energy": 100.0,
+            "hp": 4,
+            "kind": "pulse_avoided",
+            "tick": 1086
+          },
+          {
+            "cargo": 3,
+            "energy": 71.8,
+            "hp": 4,
+            "kind": "protected",
+            "tick": 1255
+          },
+          {
+            "cargo": 3,
+            "energy": 60.1,
+            "hp": 4,
+            "kind": "counter",
+            "tick": 1256
+          },
+          {
+            "cargo": 3,
+            "energy": 68.2,
+            "hp": 4,
+            "kind": "protected",
+            "tick": 1496
+          },
+          {
+            "cargo": 3,
+            "energy": 56.5,
+            "hp": 4,
+            "kind": "counter",
+            "tick": 1497
+          },
+          {
+            "cargo": 3,
+            "energy": 56.5,
+            "hp": 4,
+            "kind": "sentinel_disabled",
+            "tick": 1497
+          }
+        ],
+        "health_limit": 4,
+        "hp": 4,
+        "mode": "won",
+        "movement": 1.2,
+        "outfit": "trail",
+        "recovery": 18.0,
+        "tick": 1648
+      },
+      "id": "trail",
+      "return_gate": {
+        "cargo": 2,
+        "counters": {
+          "blocks": 1,
+          "counters": 0,
+          "courier_hits": 1,
+          "dodges": 0,
+          "player_hits": 1,
+          "redirects": 0,
+          "rejected": 0
+        },
+        "energy": 100.0,
+        "events": [
+          {
+            "cargo": 2,
+            "energy": 100.0,
+            "hp": 4,
+            "kind": "courier_hit",
+            "tick": 169
+          },
+          {
+            "cargo": 2,
+            "energy": 77.2,
+            "hp": 4,
+            "kind": "protected",
+            "tick": 338
+          },
+          {
+            "cargo": 2,
+            "energy": 100.0,
+            "hp": 4,
+            "kind": "pulse_avoided",
+            "tick": 507
+          },
+          {
+            "cargo": 2,
+            "energy": 100.0,
+            "hp": 3,
+            "kind": "bolt_hit",
+            "tick": 676
+          }
+        ],
+        "health_limit": 4,
+        "hp": 3,
+        "mode": "won",
+        "movement": 1.2,
+        "outfit": "trail",
+        "recovery": 18.0,
+        "tick": 738
+      },
+      "role": "Guardian"
+    },
+    {
+      "escort": {
+        "cargo": 3,
+        "counters": {
+          "blocks": 0,
+          "counters": 3,
+          "courier_hits": 0,
+          "dodges": 2,
+          "player_hits": 0,
+          "redirects": 2,
+          "rejected": 0
+        },
+        "energy": 100.0,
+        "events": [
+          {
+            "cargo": 3,
+            "energy": 84.0,
+            "hp": 4,
+            "kind": "redirect",
+            "tick": 110
+          },
+          {
+            "cargo": 3,
+            "energy": 59.0,
+            "hp": 4,
+            "kind": "step",
+            "tick": 110
+          },
+          {
+            "cargo": 3,
+            "energy": 76.7,
+            "hp": 4,
+            "kind": "bolt_missed",
+            "tick": 169
+          },
+          {
+            "cargo": 3,
+            "energy": 71.3,
+            "hp": 4,
+            "kind": "counter",
+            "tick": 191
+          },
+          {
+            "cargo": 3,
+            "energy": 84.0,
+            "hp": 4,
+            "kind": "redirect",
+            "tick": 372
+          },
+          {
+            "cargo": 3,
+            "energy": 59.0,
+            "hp": 4,
+            "kind": "step",
+            "tick": 372
+          },
+          {
+            "cargo": 3,
+            "energy": 76.7,
+            "hp": 4,
+            "kind": "bolt_missed",
+            "tick": 431
+          },
+          {
+            "cargo": 3,
+            "energy": 71.3,
+            "hp": 4,
+            "kind": "counter",
+            "tick": 453
+          },
+          {
+            "cargo": 3,
+            "energy": 100.0,
+            "hp": 4,
+            "kind": "pulse_avoided",
+            "tick": 693
+          },
+          {
+            "cargo": 3,
+            "energy": 88.0,
+            "hp": 4,
+            "kind": "counter",
+            "tick": 713
+          },
+          {
+            "cargo": 3,
+            "energy": 88.0,
+            "hp": 4,
+            "kind": "sentinel_disabled",
+            "tick": 713
+          }
+        ],
+        "health_limit": 4,
+        "hp": 4,
+        "mode": "won",
+        "movement": 1.2,
+        "outfit": "trail",
+        "recovery": 18.0,
+        "tick": 1256
+      },
+      "id": "trail",
+      "return_gate": {
+        "cargo": 2,
+        "counters": {
+          "blocks": 0,
+          "counters": 0,
+          "courier_hits": 1,
+          "dodges": 0,
+          "player_hits": 0,
+          "redirects": 2,
+          "rejected": 0
+        },
+        "energy": 100.0,
+        "events": [
+          {
+            "cargo": 2,
+            "energy": 100.0,
+            "hp": 4,
+            "kind": "courier_hit",
+            "tick": 169
+          },
+          {
+            "cargo": 2,
+            "energy": 84.0,
+            "hp": 4,
+            "kind": "redirect",
+            "tick": 279
+          },
+          {
+            "cargo": 2,
+            "energy": 100.0,
+            "hp": 4,
+            "kind": "bolt_missed",
+            "tick": 338
+          },
+          {
+            "cargo": 2,
+            "energy": 100.0,
+            "hp": 4,
+            "kind": "pulse_avoided",
+            "tick": 507
+          },
+          {
+            "cargo": 2,
+            "energy": 84.0,
+            "hp": 4,
+            "kind": "redirect",
+            "tick": 617
+          },
+          {
+            "cargo": 2,
+            "energy": 100.0,
+            "hp": 4,
+            "kind": "bolt_missed",
+            "tick": 676
+          }
+        ],
+        "health_limit": 4,
+        "hp": 4,
+        "mode": "won",
+        "movement": 1.2,
+        "outfit": "trail",
+        "recovery": 18.0,
+        "tick": 709
+      },
+      "role": "Duelist"
+    },
+    {
+      "escort": {
+        "cargo": 3,
+        "counters": {
+          "blocks": 6,
+          "counters": 3,
+          "courier_hits": 0,
+          "dodges": 0,
+          "player_hits": 0,
+          "redirects": 0,
+          "rejected": 0
+        },
+        "energy": 100.0,
+        "events": [
+          {
+            "cargo": 3,
+            "energy": 67.6,
+            "hp": 4,
+            "kind": "protected",
+            "tick": 169
+          },
+          {
+            "cargo": 3,
+            "energy": 67.8,
+            "hp": 4,
+            "kind": "protected",
+            "tick": 338
+          },
+          {
+            "cargo": 3,
+            "energy": 100.0,
+            "hp": 4,
+            "kind": "pulse_avoided",
+            "tick": 507
+          },
+          {
+            "cargo": 3,
+            "energy": 72.6,
+            "hp": 4,
+            "kind": "protected",
+            "tick": 676
+          },
+          {
+            "cargo": 3,
+            "energy": 67.8,
+            "hp": 4,
+            "kind": "protected",
+            "tick": 845
+          },
+          {
+            "cargo": 3,
+            "energy": 56.233,
+            "hp": 4,
+            "kind": "counter",
+            "tick": 846
+          },
+          {
+            "cargo": 3,
+            "energy": 100.0,
+            "hp": 4,
+            "kind": "pulse_avoided",
+            "tick": 1086
+          },
+          {
+            "cargo": 3,
+            "energy": 73.0,
+            "hp": 4,
+            "kind": "protected",
+            "tick": 1255
+          },
+          {
+            "cargo": 3,
+            "energy": 61.433,
+            "hp": 4,
+            "kind": "counter",
+            "tick": 1256
+          },
+          {
+            "cargo": 3,
+            "energy": 68.8,
+            "hp": 4,
+            "kind": "protected",
+            "tick": 1496
+          },
+          {
+            "cargo": 3,
+            "energy": 57.233,
+            "hp": 4,
+            "kind": "counter",
+            "tick": 1497
+          },
+          {
+            "cargo": 3,
+            "energy": 57.233,
+            "hp": 4,
+            "kind": "sentinel_disabled",
+            "tick": 1497
+          }
+        ],
+        "health_limit": 4,
+        "hp": 4,
+        "mode": "won",
+        "movement": 1.0,
+        "outfit": "field_sash",
+        "recovery": 26.0,
+        "tick": 1648
+      },
+      "id": "field_sash",
+      "return_gate": {
+        "cargo": 2,
+        "counters": {
+          "blocks": 1,
+          "counters": 0,
+          "courier_hits": 1,
+          "dodges": 0,
+          "player_hits": 1,
+          "redirects": 0,
+          "rejected": 0
+        },
+        "energy": 100.0,
+        "events": [
+          {
+            "cargo": 2,
+            "energy": 100.0,
+            "hp": 4,
+            "kind": "courier_hit",
+            "tick": 169
+          },
+          {
+            "cargo": 2,
+            "energy": 74.4,
+            "hp": 4,
+            "kind": "protected",
+            "tick": 338
+          },
+          {
+            "cargo": 2,
+            "energy": 100.0,
+            "hp": 4,
+            "kind": "pulse_avoided",
+            "tick": 507
+          },
+          {
+            "cargo": 2,
+            "energy": 100.0,
+            "hp": 3,
+            "kind": "bolt_hit",
+            "tick": 676
+          }
+        ],
+        "health_limit": 4,
+        "hp": 3,
+        "mode": "won",
+        "movement": 1.0,
+        "outfit": "field_sash",
+        "recovery": 26.0,
+        "tick": 744
+      },
+      "role": "Guardian"
+    },
+    {
+      "escort": {
+        "cargo": 3,
+        "counters": {
+          "blocks": 0,
+          "counters": 3,
+          "courier_hits": 0,
+          "dodges": 2,
+          "player_hits": 0,
+          "redirects": 2,
+          "rejected": 0
+        },
+        "energy": 100.0,
+        "events": [
+          {
+            "cargo": 3,
+            "energy": 84.0,
+            "hp": 4,
+            "kind": "redirect",
+            "tick": 110
+          },
+          {
+            "cargo": 3,
+            "energy": 59.0,
+            "hp": 4,
+            "kind": "step",
+            "tick": 110
+          },
+          {
+            "cargo": 3,
+            "energy": 84.567,
+            "hp": 4,
+            "kind": "bolt_missed",
+            "tick": 169
+          },
+          {
+            "cargo": 3,
+            "energy": 83.833,
+            "hp": 4,
+            "kind": "counter",
+            "tick": 195
+          },
+          {
+            "cargo": 3,
+            "energy": 84.0,
+            "hp": 4,
+            "kind": "redirect",
+            "tick": 376
+          },
+          {
+            "cargo": 3,
+            "energy": 59.0,
+            "hp": 4,
+            "kind": "step",
+            "tick": 376
+          },
+          {
+            "cargo": 3,
+            "energy": 84.567,
+            "hp": 4,
+            "kind": "bolt_missed",
+            "tick": 435
+          },
+          {
+            "cargo": 3,
+            "energy": 83.833,
+            "hp": 4,
+            "kind": "counter",
+            "tick": 461
+          },
+          {
+            "cargo": 3,
+            "energy": 100.0,
+            "hp": 4,
+            "kind": "pulse_avoided",
+            "tick": 701
+          },
+          {
+            "cargo": 3,
+            "energy": 88.0,
+            "hp": 4,
+            "kind": "counter",
+            "tick": 725
+          },
+          {
+            "cargo": 3,
+            "energy": 88.0,
+            "hp": 4,
+            "kind": "sentinel_disabled",
+            "tick": 725
+          }
+        ],
+        "health_limit": 4,
+        "hp": 4,
+        "mode": "won",
+        "movement": 1.0,
+        "outfit": "field_sash",
+        "recovery": 26.0,
+        "tick": 1262
+      },
+      "id": "field_sash",
+      "return_gate": {
+        "cargo": 2,
+        "counters": {
+          "blocks": 0,
+          "counters": 0,
+          "courier_hits": 1,
+          "dodges": 0,
+          "player_hits": 0,
+          "redirects": 2,
+          "rejected": 0
+        },
+        "energy": 100.0,
+        "events": [
+          {
+            "cargo": 2,
+            "energy": 100.0,
+            "hp": 4,
+            "kind": "courier_hit",
+            "tick": 169
+          },
+          {
+            "cargo": 2,
+            "energy": 84.0,
+            "hp": 4,
+            "kind": "redirect",
+            "tick": 279
+          },
+          {
+            "cargo": 2,
+            "energy": 100.0,
+            "hp": 4,
+            "kind": "bolt_missed",
+            "tick": 338
+          },
+          {
+            "cargo": 2,
+            "energy": 100.0,
+            "hp": 4,
+            "kind": "pulse_avoided",
+            "tick": 507
+          },
+          {
+            "cargo": 2,
+            "energy": 84.0,
+            "hp": 4,
+            "kind": "redirect",
+            "tick": 617
+          },
+          {
+            "cargo": 2,
+            "energy": 100.0,
+            "hp": 4,
+            "kind": "bolt_missed",
+            "tick": 676
+          }
+        ],
+        "health_limit": 4,
+        "hp": 4,
+        "mode": "won",
+        "movement": 1.0,
+        "outfit": "field_sash",
+        "recovery": 26.0,
+        "tick": 717
+      },
+      "role": "Duelist"
+    }
+  ],
+  "labels": [
+    "Guardian accepts authored standard",
+    "Authored health and movement reach combat: Guardian/standard",
+    "Actual displacement follows data: standard",
+    "Actual recovery follows data: standard",
+    "Live fitting cannot heal or swap: standard",
+    "Pause cannot recover energy: standard",
+    "Reset removes authored advantages: standard",
+    "Guard keeps its original drain: standard",
+    "Actual crossing consumes worn data: standard",
+    "Authored escort completes: Guardian/standard",
+    "Authored journey enters return objective: standard",
+    "Return carries gear and health without healing: standard",
+    "Authored return completes: Guardian/standard",
+    "Duelist accepts authored standard",
+    "Authored health and movement reach combat: Duelist/standard",
+    "Actual displacement follows data: standard",
+    "Actual recovery follows data: standard",
+    "Live fitting cannot heal or swap: standard",
+    "Pause cannot recover energy: standard",
+    "Reset removes authored advantages: standard",
+    "Actual crossing consumes worn data: standard",
+    "Authored escort completes: Duelist/standard",
+    "Authored journey enters return objective: standard",
+    "Return carries gear and health without healing: standard",
+    "Authored return completes: Duelist/standard",
+    "Guardian accepts authored riveted",
+    "Authored health and movement reach combat: Guardian/riveted",
+    "Actual displacement follows data: riveted",
+    "Actual recovery follows data: riveted",
+    "Live fitting cannot heal or swap: riveted",
+    "Pause cannot recover energy: riveted",
+    "Reset removes authored advantages: riveted",
+    "Guard keeps its original drain: riveted",
+    "Scene opens data-driven preparation: riveted",
+    "One completion makes the authored piece: riveted",
+    "Holding cannot duplicate output: riveted",
+    "Actual crossing consumes worn data: riveted",
+    "Authored escort completes: Guardian/riveted",
+    "Authored journey enters return objective: riveted",
+    "Return carries gear and health without healing: riveted",
+    "Authored return completes: Guardian/riveted",
+    "Duelist accepts authored riveted",
+    "Authored health and movement reach combat: Duelist/riveted",
+    "Actual displacement follows data: riveted",
+    "Actual recovery follows data: riveted",
+    "Live fitting cannot heal or swap: riveted",
+    "Pause cannot recover energy: riveted",
+    "Reset removes authored advantages: riveted",
+    "Scene opens data-driven preparation: riveted",
+    "One completion makes the authored piece: riveted",
+    "Holding cannot duplicate output: riveted",
+    "Actual crossing consumes worn data: riveted",
+    "Authored escort completes: Duelist/riveted",
+    "Authored journey enters return objective: riveted",
+    "Return carries gear and health without healing: riveted",
+    "Authored return completes: Duelist/riveted",
+    "Guardian accepts authored trail",
+    "Authored health and movement reach combat: Guardian/trail",
+    "Actual displacement follows data: trail",
+    "Actual recovery follows data: trail",
+    "Live fitting cannot heal or swap: trail",
+    "Pause cannot recover energy: trail",
+    "Reset removes authored advantages: trail",
+    "Guard keeps its original drain: trail",
+    "Scene opens data-driven preparation: trail",
+    "One completion makes the authored piece: trail",
+    "Holding cannot duplicate output: trail",
+    "Actual crossing consumes worn data: trail",
+    "Authored escort completes: Guardian/trail",
+    "Authored journey enters return objective: trail",
+    "Return carries gear and health without healing: trail",
+    "Authored return completes: Guardian/trail",
+    "Duelist accepts authored trail",
+    "Authored health and movement reach combat: Duelist/trail",
+    "Actual displacement follows data: trail",
+    "Actual recovery follows data: trail",
+    "Live fitting cannot heal or swap: trail",
+    "Pause cannot recover energy: trail",
+    "Reset removes authored advantages: trail",
+    "Scene opens data-driven preparation: trail",
+    "One completion makes the authored piece: trail",
+    "Holding cannot duplicate output: trail",
+    "Actual crossing consumes worn data: trail",
+    "Authored escort completes: Duelist/trail",
+    "Authored journey enters return objective: trail",
+    "Return carries gear and health without healing: trail",
+    "Authored return completes: Duelist/trail",
+    "Guardian accepts authored field_sash",
+    "Authored health and movement reach combat: Guardian/field_sash",
+    "Actual displacement follows data: field_sash",
+    "Actual recovery follows data: field_sash",
+    "Live fitting cannot heal or swap: field_sash",
+    "Pause cannot recover energy: field_sash",
+    "Reset removes authored advantages: field_sash",
+    "Guard keeps its original drain: field_sash",
+    "Scene opens data-driven preparation: field_sash",
+    "One completion makes the authored piece: field_sash",
+    "Holding cannot duplicate output: field_sash",
+    "Actual crossing consumes worn data: field_sash",
+    "Authored escort completes: Guardian/field_sash",
+    "Authored journey enters return objective: field_sash",
+    "Return carries gear and health without healing: field_sash",
+    "Authored return completes: Guardian/field_sash",
+    "Duelist accepts authored field_sash",
+    "Authored health and movement reach combat: Duelist/field_sash",
+    "Actual displacement follows data: field_sash",
+    "Actual recovery follows data: field_sash",
+    "Live fitting cannot heal or swap: field_sash",
+    "Pause cannot recover energy: field_sash",
+    "Reset removes authored advantages: field_sash",
+    "Scene opens data-driven preparation: field_sash",
+    "One completion makes the authored piece: field_sash",
+    "Holding cannot duplicate output: field_sash",
+    "Actual crossing consumes worn data: field_sash",
+    "Authored escort completes: Duelist/field_sash",
+    "Authored journey enters return objective: field_sash",
+    "Return carries gear and health without healing: field_sash",
+    "Authored return completes: Duelist/field_sash",
+    "Same 24-energy prefix opens a sash step sooner, at one less health"
+  ],
+  "probes": [
+    {
+      "health": 5.0,
+      "id": "standard",
+      "recovery": 18.0,
+      "role": "Guardian",
+      "walk": 250.0
+    },
+    {
+      "health": 5.0,
+      "id": "standard",
+      "recovery": 18.0,
+      "role": "Duelist",
+      "walk": 250.0
+    },
+    {
+      "health": 6.0,
+      "id": "riveted",
+      "recovery": 18.0,
+      "role": "Guardian",
+      "walk": 200.0
+    },
+    {
+      "health": 6.0,
+      "id": "riveted",
+      "recovery": 18.0,
+      "role": "Duelist",
+      "walk": 200.0
+    },
+    {
+      "health": 4.0,
+      "id": "trail",
+      "recovery": 18.0,
+      "role": "Guardian",
+      "walk": 300.0
+    },
+    {
+      "health": 4.0,
+      "id": "trail",
+      "recovery": 18.0,
+      "role": "Duelist",
+      "walk": 300.0
+    },
+    {
+      "health": 4.0,
+      "id": "field_sash",
+      "recovery": 26.0,
+      "role": "Guardian",
+      "walk": 250.0
+    },
+    {
+      "health": 4.0,
+      "id": "field_sash",
+      "recovery": 26.0,
+      "role": "Duelist",
+      "walk": 250.0
+    }
+  ],
+  "schema_version": 1,
+  "valid": true
+}
