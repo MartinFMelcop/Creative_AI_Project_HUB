@@ -15,7 +15,7 @@ import verify_authority as a
 
 SCRIPTS = ('authority/server.gd','authority/remote.gd','authority/intent.gd','authority/intent_checks.gd',
            'authority/view.gd','authority/play.gd','tests/remote_checks.gd','tests/remote_visual_checks.gd','tests/action_checks.gd','tests/remote_journey.gd',
-           'tools/verify_remote.py','tools/verify_remote_input.py')
+           'tools/verify_remote.py','tools/verify_remote_input.py','tools/verify_authority.py')
 
 
 def identities():

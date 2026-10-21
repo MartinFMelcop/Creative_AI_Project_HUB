@@ -1,0 +1,7 @@
+{
+  "condition": "Second local delayed-startup regression, before replacing fixed guard wait with a bounded observed-state wait.",
+  "failure": "pack: authoritative guard advice retains drain/contact cost and blocks counter",
+  "interpretation": "One conjunct failed; the unretained snapshot does not establish which one. The final verifier retains the same LIVE/cost/drain/counter assertions, waits for actual LIVE outside pulse with a one-second bound, and includes the snapshot on future assertion failure. No model timing or costs change.",
+  "kind": "instrument_development_failure",
+  "snapshot_retained": false
+}

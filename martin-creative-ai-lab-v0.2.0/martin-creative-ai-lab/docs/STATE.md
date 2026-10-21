@@ -2,7 +2,7 @@
 
 **Updated:** 2026-10-21 UTC. **Product SEED version:** 0.33.20.
 **Mode:** DEVELOPMENT. **Verified integration baseline:**
-`40d4513978cd30ae55e6b072397f8021b719611f`, branch `work`; fetched main matched HEAD,
+`c5ea1aed17dbde3cc1b30b5be3cf82a8d0f02806`, branch `work`; fetched main matched HEAD,
 no divergence, and initial tracked/untracked tree was clean.
 
 This file owns active initiative continuity, not detailed gameplay contracts or an
@@ -95,9 +95,10 @@ Silence/disconnect neutralize actions without pausing or resetting the model. In
 heartbeat is now bounded by monotonic time, independent of new snapshots; stale windows
 send only neutral while controls remain suspended. Arrival gap is not server-state age.
 
-**Verified scope:** [Current execution](../evidence/north-star-action-feedback/RUN.json) binds
+**Verified scope:** [Current execution](../evidence/north-star-window-startup/RUN.json) binds
 server authority with read-only action advice and native intent/transport/visual controls, complete interactive
-source/PCK journeys, actual OS input/focus recovery and inspected world/terminal images.
+source/PCK journeys and actual OS input/focus recovery. [Unchanged interaction/visual
+evidence](../evidence/north-star-action-feedback/RUN.json) retains inspected world/terminal images.
 The [original authority execution](../evidence/north-star-authority/RUN.json) remains
 historical. Existing playable source, PCK, release and
 capability evidence remain unchanged. No new lab, capability state or MMO maturity claim.
@@ -108,6 +109,14 @@ counter/draw reach. Active indications are masked during suspension, lost focus,
 quarantine, stale updates and disconnect. Advice describes an individual action at
 its confirmed snapshot, not a future admission token or a combination budget. Actual
 rules, packages and capability states remain unchanged. Human comprehension is untested.
+
+**Verification reliability:** The previous CI passed native remote journeys but failed
+window discovery. Window startup now precedes authority startup: a reserved port and
+actual rendered/input acknowledgement separate renderer latency from the unchanged
+nine-second test server lifetime. Normal and deliberately delayed source/PCK OS checks
+retain every input/cost/focus/disconnect requirement. Missing/stopped windows remain
+bounded failures with retained diagnostics. This improves the executable verifier;
+it is not new player functionality or evidence of the exact prior CI failure cause.
 
 **Consumed research instrument:** The [transport study](../north-star/prototype/authority/TRANSPORT.md)
 now runs the actual fixed-input consumer through direct/transparent controls, bidirectional

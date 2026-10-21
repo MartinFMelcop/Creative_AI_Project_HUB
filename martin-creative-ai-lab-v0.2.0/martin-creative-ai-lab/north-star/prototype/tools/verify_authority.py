@@ -74,10 +74,12 @@ def environment(folder):
 
 
 @contextmanager
-def server(engine, folder, packed=False, seconds=12):
+def server(engine, folder, packed=False, seconds=12, port=None):
     folder.mkdir(parents=True, exist_ok=True)
-    with socket.socket() as chosen:
-        chosen.bind(("127.0.0.1", 0));port = chosen.getsockname()[1]
+    if port is None:
+        with socket.socket() as chosen:
+            chosen.bind(("127.0.0.1", 0));port = chosen.getsockname()[1]
+    require(type(port) is int and 1024 <= port <= 65535, "Invalid selected loopback port")
     report = folder / "server.json";log_path = folder / "server.log"
     location = ["--main-pack", str(ROOT / "dist/crossing-drill.pck")] if packed else ["--path", str(ROOT)]
     with log_path.open("w") as log:

@@ -27,6 +27,25 @@ class AuthorityChecks(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, "unavailable"):r.verify(output, "no-such-authority-engine")
         self.assertEqual(output.read_text(), "keep")
 
+    def test_explicit_selected_port_uses_the_actual_authority(self):
+        with socket.socket() as reservation:
+            reservation.bind(('127.0.0.1',0));selected = reservation.getsockname()[1]
+        with r.server(self.engine,self.folder/'selected',seconds=2,port=selected) as (port,report,process):
+            self.assertEqual(port,selected)
+            peer = r.Peer(port)
+            try:
+                peer.send(r.hello('standard'))
+                self.assertEqual(peer.receive(lambda m:m.get('kind')=='welcome')['tick_hz'],60)
+            finally:peer.close()
+        r.check_report(json.loads(report.read_text()))
+
+    def test_occupied_selected_port_cannot_silently_choose_another(self):
+        with socket.socket() as reservation:
+            reservation.bind(('127.0.0.1',0));reservation.listen(1)
+            with self.assertRaisesRegex(ValueError,'startup failed'):
+                with r.server(self.engine,self.folder/'occupied',seconds=2,port=reservation.getsockname()[1]):
+                    self.fail('An occupied selected port must not yield an authority')
+
     def test_oversize_partial_frame_is_closed_without_starting_model(self):
         with r.server(self.engine, self.folder / "oversize", seconds=2) as (port, report, process):
             peer = r.Peer(port)

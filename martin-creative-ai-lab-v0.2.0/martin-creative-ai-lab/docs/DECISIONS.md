@@ -2833,3 +2833,36 @@ changes. ENG-022 informs predictable feedback, CRE-075 contextual presentation a
 hypothesis, SCI-017 real controls and retained negative observations. Protected sources
 and pins remain unchanged. Compare coherent build work and independent observation with
 actual freshness/interaction needs next; no automatic network or governance expansion.
+
+## ADR-100 — start the authority fixture after rendered input readiness
+
+**Date:** 2026-10-21 UTC. **Status:** implemented DEVELOPMENT.
+**Baseline:** clean `work`, `c5ea1aed17dbde3cc1b30b5be3cf82a8d0f02806`; fetched main
+matched. Prior CI failed remote window discovery after native controls and journeys
+passed; the other five jobs passed. Original renderer diagnostics were unavailable.
+
+**Selection:** Compare ability/build work, independent observation, broader network
+architecture and production/creative alternatives. Resolve an observed required CI
+consumer failure before expanding content. This is executable verification reliability,
+not new gameplay or a recurring governance initiative. ENG-015 informs explicit temporal
+responsibility; SCI-017 informs the actual prior/current controlled-delay comparison.
+Creative authority and the existing interaction design remain unchanged.
+
+**Behavior:** Reserve the future loopback port, bound window discovery to 15 seconds,
+and require an actual rendered F12 acknowledgement with no connected model. Start the
+unchanged nine-second authority fixture only then. An explicitly selected occupied port
+fails rather than switching authorities. Observe LIVE guard with a one-second bound
+before retaining the existing cost/drain/counter assertions. Keep bounded known-log
+failure diagnostics and upload them in CI. Extend input/remote source identities to bind
+the changed verification instruments. No server, client, model, package or rule changes.
+
+**Verification/limits:** [Execution](../evidence/north-star-window-startup/RUN.json)
+retains an actual old-verifier failure under six-second graphical startup, 34 normal
+and 34 delayed source/PCK OS controls, four startup and eleven authority regressions.
+Current remote/authority comparisons are reexecuted with 197 native controls per delivery,
+42 live authority controls per delivery and eight living journeys. Current grouped source
+and PCK observations retain actual losses and lease checks; eighteen existing relay/result/
+lease-evidence regressions pass. The earlier CI failure and an intermediate guard-advice
+conjunction failure remain recorded without inventing their unavailable snapshots/root
+causes. This proves the bounded instrument behavior, not the exact prior runner cause,
+renderer performance, player benefit or future CI success. Publication/CI are separate.

@@ -381,7 +381,7 @@ jobs:
           unzip -q "$RUNNER_TEMP/authority-engine/engine.zip" -d "$RUNNER_TEMP/authority-engine"
           authority_engine="$RUNNER_TEMP/authority-engine/Godot_v4.6.3-stable_linux.x86_64"
           CROSSING_GODOT="$authority_engine" python3 north-star/prototype/tools/test_verify_authority.py
-          python3 north-star/prototype/tools/verify_authority.py --godot "$authority_engine" --output "$RUNNER_TEMP/authority.json" --compare evidence/north-star-action-feedback/authority.json
+          python3 north-star/prototype/tools/verify_authority.py --godot "$authority_engine" --output "$RUNNER_TEMP/authority.json" --compare evidence/north-star-window-startup/authority.json
 
   north-star-remote:
     runs-on: ubuntu-24.04
@@ -400,8 +400,9 @@ jobs:
           printf '%s  %s\n' d0bc2113065e481c9c2c2b2c37daa4e8be3fe9e27f0ab9ab0b6096e9a37907f3 "$RUNNER_TEMP/remote-engine/engine.zip" | sha256sum --check
           unzip -q "$RUNNER_TEMP/remote-engine/engine.zip" -d "$RUNNER_TEMP/remote-engine"
           remote_engine="$RUNNER_TEMP/remote-engine/Godot_v4.6.3-stable_linux.x86_64"
-          python3 north-star/prototype/tools/verify_remote.py --godot "$remote_engine" --output "$RUNNER_TEMP/remote.json" --compare evidence/north-star-action-feedback/remote.json
+          python3 north-star/prototype/tools/verify_remote.py --godot "$remote_engine" --output "$RUNNER_TEMP/remote.json" --compare evidence/north-star-window-startup/remote.json
           python3 north-star/prototype/tools/verify_remote_input.py --godot "$remote_engine" --output "$RUNNER_TEMP/remote-input"
+          CROSSING_GODOT="$remote_engine" NORTH_STAR_STARTUP_RESULT="$RUNNER_TEMP/startup.json" python3 north-star/prototype/tools/test_remote_startup.py
 
       - name: Verify transport intervention instrument against the existing PCK
         run: |
@@ -411,3 +412,14 @@ jobs:
           python3 north-star/prototype/tools/test_check_heartbeat.py
           python3 north-star/prototype/tools/evaluate_transport.py --godot "$remote_engine" --profiles batch_400 --repetitions 1 --packed --output "$RUNNER_TEMP/transport-smoke.json"
           python3 north-star/prototype/tools/check_heartbeat.py "$RUNNER_TEMP/transport-smoke.json"
+
+      - name: Retain remote window failure diagnostics
+        if: failure()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: remote-window-diagnostics
+          path: |
+            ${{ runner.temp }}/remote-input/failure/*.log
+            ${{ runner.temp }}/startup/failure/*.log
+          if-no-files-found: ignore
+          retention-days: 7

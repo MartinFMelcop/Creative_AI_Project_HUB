@@ -11,7 +11,7 @@ From the maintained workspace, with pinned standard Godot 4.6.3 on PATH:
 
 ```bash
 python3 north-star/prototype/tools/test_verify_authority.py
-python3 north-star/prototype/tools/verify_authority.py --output /tmp/authority.json --compare evidence/north-star-action-feedback/authority.json
+python3 north-star/prototype/tools/verify_authority.py --output /tmp/authority.json --compare evidence/north-star-window-startup/authority.json
 ```
 
 Use `CROSSING_GODOT` for the regression executable or `--godot` for the runner.
@@ -118,23 +118,32 @@ window instead retains the confirmed terminal result through actual socket closu
 
 ## Evidence and limits
 
-[Current execution](../../../evidence/north-star-action-feedback/RUN.json) binds the actual
-interactive consumer, native event journeys, OS input/focus controls and inspected
-images. [Earlier interactive execution](../../../evidence/north-star-remote/RUN.json) and
+[Current execution](../../../evidence/north-star-window-startup/RUN.json) binds the actual
+interactive consumer, native event journeys, OS input/focus controls and startup
+regressions. [Unchanged interaction/visual evidence](../../../evidence/north-star-action-feedback/RUN.json)
+remains available. [Earlier interactive execution](../../../evidence/north-star-remote/RUN.json) and
 [original authority execution](../../../evidence/north-star-authority/RUN.json)
-remain historical. Adding view fields changed the server identity; active authority
-comparison uses the reexecuted current `north-star-action-feedback/authority.json` above.
+remain historical. Active comparisons bind actual resources and verification
+instruments through the reexecuted current `north-star-window-startup/authority.json` above.
 
 ```bash
-python3 north-star/prototype/tools/verify_remote.py --output /tmp/remote.json --compare evidence/north-star-action-feedback/remote.json
+python3 north-star/prototype/tools/verify_remote.py --output /tmp/remote.json --compare evidence/north-star-window-startup/remote.json
 python3 north-star/prototype/tools/verify_remote_input.py --output /tmp/remote-input
 ```
 
 The first command runs native intent/transport/visual controls and Guardian/Duelist
 living journeys in source and PCK through actual View input events and TCP. The second
-requires Xorg dummy/libX11/libXtst and exercises an actual window using XTest, including
+requires Xorg dummy/libX11/libXtst. It reserves the future loopback port, discovers the
+actual window within 15 seconds, and requires a rendered F12 acknowledgement before
+starting the unchanged nine-second authority lifetime. This prevents graphics startup
+from consuming the interaction/disconnect fixture. It then exercises XTest, including
 release outside focus and explicit recovery. Captures are opt-in through
-`NORTH_STAR_REMOTE_CAPTURE` plus F12. An explicit `tests/remote_journey.gd` driver can
+`NORTH_STAR_REMOTE_CAPTURE` plus F12. Startup failures retain at most 64 KiB per known
+native/display log in `OUTPUT/failure/`; CI uploads those diagnostics on failure.
+`CROSSING_GODOT=godot python3 north-star/prototype/tools/test_remote_startup.py` also
+executes all source/PCK OS controls after a deliberate six-second graphical delay,
+plus bounded missing/stopped-window and diagnostic controls. These timings describe
+verification setup, not renderer or player performance. An explicit `tests/remote_journey.gd` driver can
 also render the real win and retained result when run without `--headless`; its three
 arguments are port, Guardian/Duelist, output JSON. None of these policies is a player.
 
