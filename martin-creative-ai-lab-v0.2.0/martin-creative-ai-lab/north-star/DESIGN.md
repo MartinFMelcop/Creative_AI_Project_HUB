@@ -380,3 +380,22 @@ single-spend/survival/reset invariants; SCI-017 informs matched old/new-delivery
 [Execution](../evidence/north-star-grounding/RUN.json) distinguishes fixed-policy feasibility,
 native synthetic input and agent image inspection from missing human comprehension,
 preference and balance evidence. No new world geography, profession or final class.
+
+## Measured return costs — bounded policy evidence
+
+**Status:** executed model observation, not human validation or an approved balance change.
+The [author-facing instrument](prototype/analysis/README.md) evaluates 540 conditions
+against actual source/PCK rules. The fixed counter-first policy completes all its cases;
+this does not establish an optimal or preferred approach. Immediate grounding is faster
+and avoids combat energy spending but sacrifices winch integrity. Brace can enable a
+fresh grounding commitment after an interrupting hit; health aid cannot replace that
+integrity. The slow coat's work policy can fail at zero delay despite viable grounding
+and counter-first policies. Preserve these failures rather than screening out the outfit.
+
+The practical consequence is to investigate clarity of costs/recovery and alternative
+work paths when expanding this encounter, and to use the tool for concrete tuning
+questions. Runtime values remain unchanged. Fixed policy limits, selected delay points,
+perfect phase knowledge and absence of independent players prevent a general deadline,
+class ranking, enjoyment or balance conclusion. CRE-005 informs costs/consequences;
+SCI-017 informs the controlled comparisons; ENG-004 separates verified rules from
+experience validation. [Evidence](../evidence/north-star-return-envelope/RUN.json).

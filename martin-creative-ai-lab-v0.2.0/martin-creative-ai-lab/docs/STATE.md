@@ -1,8 +1,8 @@
 # Current initiative continuity
 
 **Updated:** 2026-10-21 UTC. **Product SEED version:** 0.33.20.
-**Mode:** DEVELOPMENT. **Verified integration baseline:**
-`0777f55197fbf5aef57c55f79425c42bf8e81596`, branch `work`; fetched main matched HEAD,
+**Mode:** RESEARCH with instrument DEVELOPMENT. **Verified integration baseline:**
+`7a9c289019afc35339e524ad64713d8b5a7a1f96`, branch `work`; fetched main matched HEAD,
 no divergence, and initial tracked/untracked tree was clean.
 
 This file owns active initiative continuity, not detailed gameplay contracts or an
@@ -32,6 +32,15 @@ Equipment authorship remains bounded by [the catalog contract](../north-star/pro
 Detailed mechanics belong in [the prototype guide](../north-star/prototype/README.md).
 Capability states and local-prototype maturity remain unchanged; no new lab/origin transfer.
 
+**Consumed production instrument:** The [return evaluator](../north-star/prototype/analysis/README.md)
+now exposes encounter/fitting/aid costs beyond a few happy paths. Its current research
+execution covers 540 deterministic conditions, each repeated twice in source and PCK,
+with all 418 wins and 122 losses retained. Brace enables delayed grounding where healing
+does not; the slow coat's fixed work policy has failures despite other feasible policies.
+[Execution](../evidence/north-star-return-envelope/RUN.json) separates actual model
+observations from player outcomes. Gameplay, delivered artifacts and capability states
+remain unchanged; no new lab or origin transfer.
+
 **Missing/uncertain:** Distinct final classes/specializations/progression, professions,
 long-term content throughput, social recognition and shared-world networking/server
 trust are not demonstrated by this local adventure. The new authoring path is limited
@@ -47,11 +56,11 @@ functional progress. Production engine is undecided. Unity execution depends on 
 editor/tool availability and licensing, and is not a prerequisite for continuing
 useful prototype work. Shared-world trust/persistence needs separate architecture.
 
-**Next high-value frontier:** Compare a coherent authored ability/build consumer,
-independent author/player observation and calibrated architecture research. The return
-now demonstrates distinct resolution costs; another lever or item is not automatically
-valuable. Determine whether comprehension, encounter depth, production throughput or
-shared-world architecture is the strongest actual limit before extending this room.
+**Next high-value frontier:** Compare actual author/player comprehension of aid and
+commitment costs, alternate work policies/readability informed by the measured failures,
+and a coherent ability/build consumer against calibrated architecture work. The evaluator
+can test future changes; expanding its matrix without a new question is not progress.
+Do not treat a fixed policy loss as an impossible build or automatically rebalance it.
 
 **Continuation/redesign/completion/suspension/retirement:** Continue when a frontier
 materially advances character expression/agency or removes a demonstrated production

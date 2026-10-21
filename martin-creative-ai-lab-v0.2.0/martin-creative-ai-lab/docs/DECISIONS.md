@@ -2526,3 +2526,63 @@ package checks after completed export; do not weaken identities or failure attri
 Historical releases/evidence, protected sources, licenses and all integrity gates remain.
 Next compare deeper ability/build production or actual author/player observation against
 architecture needs; repeating another lever or catalog variant is not automatic progress.
+
+## ADR-093 — measure return-policy limits before expanding content
+
+**Date:** 2026-10-21 UTC. **Status:** executed RESEARCH with instrument DEVELOPMENT.
+**Baseline:** `7a9c289019afc35339e524ad64713d8b5a7a1f96`, clean `work`; fetched main
+matched HEAD, with no local commits ahead or behind. Gameplay remains unchanged.
+
+**Question/selection:** The connected adventure and equipment authoring work, but a
+few successful fixed routes do not describe the interaction between outfit movement,
+prepared aid, idle exposure and resolution policy. Compare continuing with an authored
+ability/build consumer, actual author/player observation, calibrated engine research,
+creative production and the stable origin combat-response pilot. No independent player
+data is supplied or engine migration justified by a blocking need. Measuring this
+concrete consumer uncertainty can inform subsequent content and build production without
+adding another item/lever or selecting an engine. This is a usable author-facing
+instrument, not another governance intervention or a newly declared laboratory.
+
+**Method:** [Protocol and instrument](../north-star/prototype/analysis/README.md) cross
+Steady/Riposte/Duelist, four outfits, no aid/heal/brace, work/quiet/ground policies and
+0/30/60/90/120 idle ticks. Twelve actual deliberately wounded escorts supply arrival
+health/energy/gear. All 540 conditions repeat twice per source/PCK delivery; no copied
+Python combat kernel or fabricated matrix health. Policies use perfect phase knowledge;
+Riposte uses the existing 0.76s regression raise. Every outcome, including loss and live
+budget exhaustion, is retained with resources, event times and full-state trace identity.
+Repetitions and deliveries are consistency controls, not independent participants.
+
+**Calibration correction:** Initial idle control predicted exposed-winch destruction.
+The real normal spawn instead intercepts bolts with the body: four hits, death at tick
+676, intact winch two. Retain this observation and correct the control; add an explicit
+off-line fixture to separately detect winch destruction. The planned factorial matrix
+was not changed after the pilot. This protocol was not externally preregistered.
+
+**Result/consequence:** [Executed outcomes](../evidence/north-star-return-envelope/RUN.json)
+retain 418 wins and 122 losses. Quiet completes all 180 conditions; ground with brace
+completes all 60. Without brace, 30 idle ticks preserve grounding only for the three
+fast-wrap approaches; 60/90/120 preserve none. Heal does not replace lost integrity.
+The slow coat's work policy fails at zero delay without brace for both Guardian
+techniques, even with heal; other resolution policies remain viable. In a matched
+Steady/standard/no-aid case, ground exits at tick 534 while spending integrity; quiet
+exits at 1221 while reaching minimum energy 54.3. These distinct costs do not yield a
+single superior approach. Investigate cost/recovery comprehension and alternative work
+paths before adding content or automatically retuning values. No balance change follows.
+
+**Verification/limits:** Fifteen instrument regressions exercise actual source/PCK,
+stale delivery identity, changed input during execution, damaged policy, false success,
+missing repetitions, lost/timeout retention, comparison/input preservation and real
+process errors/timeouts. Thirty-one native calibration/arrival checks pass; all 2,160
+matrix takes agree within condition and delivery. An independent invocation reproduces
+the committed JSON observations and Markdown. CI retains previous jobs and adds these
+controls. Required source/reference/Brain and manifest gates remain. Runtime source,
+source PCK, standalone release and capability states stay unchanged, so unrelated
+release/gameplay suites are not repeated locally. No physical input, interactive scene,
+standalone-template execution, player enjoyment/accessibility, optimality, exact deadline,
+final canon, production engine, new origin transfer or MMO readiness is established.
+
+**Knowledge:** SCI-017 materially informs controlled factors, negative results and
+repeatability; SCI-050 supports a bounded useful instrument without inflating lab
+maturity. ENG-004 separates verified mechanics from experience validation; CRE-005
+focuses evaluation on costs and recovery that actually change available action. Protected
+knowledge/source bytes and pins remain unchanged.

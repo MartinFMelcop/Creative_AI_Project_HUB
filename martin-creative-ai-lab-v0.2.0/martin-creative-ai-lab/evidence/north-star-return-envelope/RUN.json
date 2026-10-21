@@ -1,0 +1,179 @@
+{
+  "schema_version": 1,
+  "kind": "bounded_model_experiment",
+  "mode": "RESEARCH with instrument DEVELOPMENT",
+  "baseline_commit": "7a9c289019afc35339e524ad64713d8b5a7a1f96",
+  "runtime": "4.6.3.stable.official.7d41c59c4",
+  "python": "3.12.14 stdlib",
+  "question": "How do initial idle delay, approach, fitting and prepared aid change the outcomes/resources of current return policies?",
+  "consumer": "Actual North Star Combat and ReturnGate models and maintained policies; standard Godot source and engine-dependent PCK. No copied Python combat or release-template execution.",
+  "method": {
+    "conditions": 540,
+    "repetitions_per_delivery": 2,
+    "deliveries": [
+      "source",
+      "pack"
+    ],
+    "matrix_takes": 2160,
+    "wounded_arrival_checkpoints_per_delivery": 12,
+    "predeclared_axes": "north-star/prototype/analysis/return-envelope.json",
+    "externally_preregistered": false,
+    "all_outcomes_retained": true,
+    "condition_and_delivery_equality": true,
+    "separate_invocation_matches_json_and_markdown": true
+  },
+  "checks": {
+    "failed": 0,
+    "passed": 31
+  },
+  "python_tests": {
+    "passed": 15,
+    "failed": 0
+  },
+  "observations": {
+    "won": 418,
+    "lost": 122,
+    "budget_exhausted": 0,
+    "quiet_all_aids": {
+      "won": 180,
+      "lost": 0
+    },
+    "ground_brace": {
+      "won": 60,
+      "lost": 0
+    },
+    "ground_none_or_heal_each": {
+      "won": 15,
+      "lost": 45
+    },
+    "ground_without_brace_30_ticks": "Only three trail-wrap approaches win; none win at 60/90/120 sampled ticks.",
+    "zero_delay_work_losses": "Steady/Riposte with riveted coat and none/heal; this fixed policy loss does not imply no viable route."
+  },
+  "calibration_correction": {
+    "initial_prediction": "Default idle exposes and destroys the winch.",
+    "observed": "Body interception at the default spawn instead takes four hits and dies at tick 676; winch retains two integrity.",
+    "consequence": "Retain player-death control and add a separately marked off-line fixture for winch destruction; planned matrix unchanged.",
+    "reproduced_by_final_idle_control": true
+  },
+  "production_consequence": "Use the evaluator for concrete encounter/fitting/aid changes. Brace enables a fresh grounding commitment after damage where heal cannot; investigate cost/recovery clarity and alternate work paths. No automatic runtime rebalance or build rejection.",
+  "brain_contributions": {
+    "ENG-004": "Verifiable mechanical observations versus unestablished human experience.",
+    "SCI-017": "Controlled factors, explicit negative observations and repeatability.",
+    "SCI-050": "Useful bounded instrument without declaring a new implemented lab.",
+    "CRE-005": "Evaluate costs and recovery that actually change available action."
+  },
+  "unchanged": "Shipped gameplay source, data, PCK and standalone releases; capability states, engine decision, historical origins, protected knowledge and pins. Existing destination-execution evidence stays current.",
+  "limitations": [
+    "Fixed policies at 60 Hz; initial idle delay is a controlled intervention, not human reaction time. Loss does not prove no feasible policy exists. Repetitions and deliveries are not independent participants. No enjoyment, balance, physical input, release-template or production-engine claim.",
+    "Perfect phase knowledge and ideal vectors; selected policies, wound/escort setup and delay points do not establish optimality, exact deadlines or general build viability.",
+    "No new laboratory, origin integration, final canon, class/build implementation, network trust or MMO readiness."
+  ],
+  "commands": [
+    {
+      "command": [
+        "python3",
+        "north-star/prototype/tools/test_evaluate_return.py"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "python3",
+        "north-star/prototype/tools/evaluate_return.py",
+        "--output",
+        "evidence/north-star-return-envelope/results.json",
+        "--report",
+        "evidence/north-star-return-envelope/report.md"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "python3",
+        "north-star/prototype/tools/evaluate_return.py",
+        "--output",
+        "/workspace/work/return-envelope/reproduced.json",
+        "--report",
+        "/workspace/work/return-envelope/reproduced.md",
+        "--compare",
+        "evidence/north-star-return-envelope/results.json"
+      ],
+      "exit_code": 0
+    }
+  ],
+  "workflow_validation": "Official checksum-verified actionlint 1.7.7, no diagnostics. Existing jobs retained; instrument tests and exact observation reproduction added.",
+  "source_artifacts": [
+    {
+      "local_path": "north-star/prototype/analysis/README.md",
+      "size_bytes": 8383,
+      "sha256": "44ce93f8b493b201ee74ef9d77d9ce3671d49b02b965ce7065b214f4e936f196"
+    },
+    {
+      "local_path": "north-star/prototype/analysis/return-envelope.json",
+      "size_bytes": 299,
+      "sha256": "5917b67d959568ae8ceb78f7819f13bf87c5f732f6b29a7fdcaa22a27d58b190"
+    },
+    {
+      "local_path": "north-star/prototype/analysis/return_envelope.gd",
+      "size_bytes": 6772,
+      "sha256": "1b77af2c7e6441c0310db601b0eab211bdf0c7a807a6f6012116d44239287b9a"
+    },
+    {
+      "local_path": "north-star/prototype/combat.gd",
+      "size_bytes": 15170,
+      "sha256": "77aefc3f6130e114954a867f6404830180ca342c88e2396ec89a3784c2b3b0b3"
+    },
+    {
+      "local_path": "north-star/prototype/data/fittings.json",
+      "size_bytes": 592,
+      "sha256": "cf9ce26272dd4841e89f5de2bb679407f971ec04954bf753c15b4d768eba189d"
+    },
+    {
+      "local_path": "north-star/prototype/fittings.gd",
+      "size_bytes": 4472,
+      "sha256": "836fa97cc7c6d81126bcddafc26daae72f5585ff61b70b55c83ea65aa70fc390"
+    },
+    {
+      "local_path": "north-star/prototype/return_gate.gd",
+      "size_bytes": 4978,
+      "sha256": "8213e740de06dd7b37922c880074c9a25e75345a534d332dd446b907b27ae362"
+    },
+    {
+      "local_path": "north-star/prototype/route.gd",
+      "size_bytes": 2304,
+      "sha256": "2936029e1a52933fff0141b546f85fbc53a57b7e6c5301eaef5cabac06a05901"
+    },
+    {
+      "local_path": "north-star/prototype/tests/gate_policy.gd",
+      "size_bytes": 1187,
+      "sha256": "a40d249e877446f7da09890e4c84d1c3243ef4ea110de65b033d7bd8710680ed"
+    },
+    {
+      "local_path": "north-star/prototype/tests/policy.gd",
+      "size_bytes": 979,
+      "sha256": "646f0758a211e84ffbfd4632460c7d1fc549cbb3b552801ee2508774a5a63e29"
+    },
+    {
+      "local_path": "north-star/prototype/tools/evaluate_return.py",
+      "size_bytes": 15800,
+      "sha256": "f60e544142041b2038e21852bdb8a101243c578f63a9ffc772e3bedbab3cb0f9"
+    },
+    {
+      "local_path": "north-star/prototype/tools/test_evaluate_return.py",
+      "size_bytes": 8693,
+      "sha256": "e31cddef5dc486fec3e4f7d8120da770f62213345fb15d8c09514d875b2c371f"
+    }
+  ],
+  "result_artifacts": [
+    {
+      "local_path": "evidence/north-star-return-envelope/results.json",
+      "size_bytes": 360124,
+      "sha256": "9e547cebcf8fce5db98a3f34d5a7a4ba16176cd67f75fa3e05c931c14e09f6ce"
+    },
+    {
+      "local_path": "evidence/north-star-return-envelope/report.md",
+      "size_bytes": 9696,
+      "sha256": "66487e719f0e6a88cf29c90afbbf54a8984b7484abad9acd16cb84e19e0a49f5"
+    }
+  ]
+}

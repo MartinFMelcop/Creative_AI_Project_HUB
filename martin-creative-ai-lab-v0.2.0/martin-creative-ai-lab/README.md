@@ -35,6 +35,11 @@ a linked grounding lever spends one winch integrity and silences the ward. Damag
 interrupt; both catches and the living exit remain mandatory. [Executed controls](evidence/north-star-grounding/RUN.json)
 separate functional feasibility from still-missing independent player validation.
 
+An [author-facing encounter evaluator](north-star/prototype/analysis/README.md) now
+checks the actual return rules across approaches, gear, aid and initial delays. It
+retains failed policies and resource costs to inform content work; no balance or
+independent player-validation claim follows.
+
 ## Find the right material
 
 | Goal | Start here |

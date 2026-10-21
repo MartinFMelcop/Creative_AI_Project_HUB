@@ -211,6 +211,15 @@ a physical controller check, balance approval or final North Star canon.
 
 ![Grounded ward, paid integrity and still-closed catches](../../evidence/north-star-grounding/source-grounded.png)
 
+## Evaluate encounter changes
+
+Authors can use the [return evaluator](analysis/README.md) before tuning movement,
+aid or resolution costs. It executes 540 bounded conditions through the real models,
+retains losses and checks repetition/source/PCK identity. The [observed matrix](../../evidence/north-star-return-envelope/report.md)
+shows that brace can enable delayed grounding, and that the slow coat's fixed work
+policy can fail even when grounding/counter alternatives succeed. This instrument
+changes no runtime rules and does not estimate player success or enjoyment.
+
 ## Guardian technique choice
 
 On selection, choose **1 Guardian**, then **Tab** to switch between **Steady**
