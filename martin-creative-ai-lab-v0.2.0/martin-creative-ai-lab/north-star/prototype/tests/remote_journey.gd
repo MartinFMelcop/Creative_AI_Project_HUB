@@ -64,6 +64,7 @@ func _process(_delta:float) -> bool:
 	if now>=deadline:finish(false,"Remote input journey timed out.");return false
 	var state:Dictionary=view.remote.confirmed
 	if state.is_empty():
+		if view.remote.status=="preparing":tap(KEY_ENTER)
 		if view.remote.status=="error":finish(false,view.remote.reason)
 		return false
 	if state.mode in ["won","lost"]:

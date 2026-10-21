@@ -2,7 +2,7 @@
 
 **Updated:** 2026-10-21 UTC. **Product SEED version:** 0.33.20.
 **Mode:** DEVELOPMENT. **Verified integration baseline:**
-`c5ea1aed17dbde3cc1b30b5be3cf82a8d0f02806`, branch `work`; fetched main matched HEAD,
+`e5a2417e4558866f02a1f9c13c3b9f5fa8225461`, branch `work`; fetched main matched HEAD,
 no divergence, and initial tracked/untracked tree was clean.
 
 This file owns active initiative continuity, not detailed gameplay contracts or an
@@ -95,7 +95,7 @@ Silence/disconnect neutralize actions without pausing or resetting the model. In
 heartbeat is now bounded by monotonic time, independent of new snapshots; stale windows
 send only neutral while controls remain suspended. Arrival gap is not server-state age.
 
-**Verified scope:** [Current execution](../evidence/north-star-window-startup/RUN.json) binds
+**Verified scope:** [Current execution](../evidence/north-star-preparation/RUN.json) binds
 server authority with read-only action advice and native intent/transport/visual controls, complete interactive
 source/PCK journeys and actual OS input/focus recovery. [Unchanged interaction/visual
 evidence](../evidence/north-star-action-feedback/RUN.json) retains inspected world/terminal images.
@@ -103,15 +103,17 @@ The [original authority execution](../evidence/north-star-authority/RUN.json) re
 historical. Existing playable source, PCK, release and
 capability evidence remain unchanged. No new lab, capability state or MMO maturity claim.
 
-**Latest interaction improvement:** Three server-authored action cards expose actual
-costs, recovery, guard/draw conditions and counter restrictions; dashed rings show
-counter/draw reach. Active indications are masked during suspension, lost focus,
-quarantine, stale updates and disconnect. Advice describes an individual action at
-its confirmed snapshot, not a future admission token or a combination budget. Actual
-rules, packages and capability states remain unchanged. Human comprehension is untested.
+**Latest interaction improvement:** The remote preparation screen now inspects the
+actual server-loaded catalog before starting a character. It compares clothing health,
+movement and unguarded recovery, combines that choice with the existing approach/
+technique, and explicitly commits once. Confirmed resources must match the selected
+tuple; inspection cannot start or spend the model, and entry cannot be reopened.
+Twelve offered tuples per source/PCK delivery execute their real paid step and distinct
+held-guard consequence. Action cards still expose costs/restrictions during play.
+No new ability, final class, balance, human comprehension or shipped-network claim.
 
-**Verification reliability:** The previous CI passed native remote journeys but failed
-window discovery. Window startup now precedes authority startup: a reserved port and
+**Verification reliability:** The [startup correction](../evidence/north-star-window-startup/RUN.json)
+resolved the bounded verifier startup dependency; its full six-job CI passed before this execution. Window startup now precedes authority startup: a reserved port and
 actual rendered/input acknowledgement separate renderer latency from the unchanged
 nine-second test server lifetime. Normal and deliberately delayed source/PCK OS checks
 retain every input/cost/focus/disconnect requirement. Missing/stopped windows remain
@@ -135,8 +137,8 @@ players, authentication, encrypted remote transport, persistence and reconnect
 are absent. Loopback fixed policies establish neither player experience nor latency or
 capacity. Pinned Godot 4.6.3 is the executable experiment, not a production engine decision.
 
-**Next/continuation:** Compare a coherent abilities/build consumer and independent
-player comprehension against freshness feedback, policy adaptation and demonstrated
+**Next/continuation:** Compare a coherent new ability/build behavior and independent
+player comprehension of preparation against freshness feedback, policy adaptation and demonstrated
 prediction/reconciliation needs. Independent neutral heartbeat closes the cadence
 dependency; it does not complete experience or prediction requirements.
 Interactive input is now demonstrated; a larger network stack is not automatically valuable.

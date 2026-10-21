@@ -11,7 +11,7 @@ From the maintained workspace, with pinned standard Godot 4.6.3 on PATH:
 
 ```bash
 python3 north-star/prototype/tools/test_verify_authority.py
-python3 north-star/prototype/tools/verify_authority.py --output /tmp/authority.json --compare evidence/north-star-window-startup/authority.json
+python3 north-star/prototype/tools/verify_authority.py --output /tmp/authority.json --compare evidence/north-star-preparation/authority.json
 ```
 
 Use `CROSSING_GODOT` for the regression executable or `--godot` for the runner.
@@ -35,8 +35,15 @@ Then open the remote window in another terminal:
 godot --path north-star/prototype --script "$PWD/north-star/prototype/authority/play.gd" -- 47620
 ```
 
-F2 selects Guardian/Duelist, Tab selects Guardian technique and C cycles the four
-existing catalog outfits. Enter connects and locks preparation. WASD/arrows move,
+Enter first inspects the local authority. No encounter/model starts during inspection.
+F2 selects Guardian/Duelist, Tab selects Guardian technique and C cycles the actual
+server catalog outfits. The comparison table shows starting health, movement factor
+and unguarded resolve recovery together, so the health/mobility/recovery trade-offs
+are visible before entry. Technique descriptions distinguish sustained/timed guard
+and Duelist redirection. Enter again commits the selected tuple and starts the session.
+These are the existing experimental choices, not new class canon or a full build system.
+The confirmed snapshot echoes actual prepared resources; the interactive transport
+rejects a substituted choice/resource instead of silently accepting a different setup. WASD/arrows move,
 mouse aims, K/right mouse holds guard, J draws the bolt, Space steps and L/left mouse
 counters. These are fixed experiment bindings, separate from local remaps/gamepad.
 Only server-confirmed costs and outcomes are displayed; input is not success.
@@ -92,7 +99,13 @@ Packet count and client timing never determine model steps. Snapshots arrive at 
 There is no client time/delta, position, health or arbitrary model assignment command.
 
 Requests are sorted-key, compact, canonical ASCII JSON objects terminated by newline.
-Version is integer 1. Hello has exactly `v,kind,role,style,outfit`; kind is `hello`, role
+Version is integer 1. An optional request with exactly `v,kind`, kind `catalog`, returns the server-loaded
+fitting values and supported technique IDs/descriptions once per unstarted connection.
+A duplicate is rejected; extra fields cannot assign resources. Inspection never admits
+an input or starts the encounter. Catalog requests after entry are rejected. Legacy
+headless clients may still send hello directly. The interactive window explicitly
+commits after inspection; it loads neither a local fitting catalog nor Combat.
+Hello has exactly `v,kind,role,style,outfit`; kind is `hello`, role
 is Guardian or Duelist, style is Steady/Riposte for Guardian or none for Duelist, and
 outfit is an actual server catalog ID. Welcome returns a random, connection-bound
 session token. This token is freshness context, **not identity authentication**.
@@ -118,16 +131,16 @@ window instead retains the confirmed terminal result through actual socket closu
 
 ## Evidence and limits
 
-[Current execution](../../../evidence/north-star-window-startup/RUN.json) binds the actual
+[Current execution](../../../evidence/north-star-preparation/RUN.json) binds the actual
 interactive consumer, native event journeys, OS input/focus controls and startup
 regressions. [Unchanged interaction/visual evidence](../../../evidence/north-star-action-feedback/RUN.json)
 remains available. [Earlier interactive execution](../../../evidence/north-star-remote/RUN.json) and
 [original authority execution](../../../evidence/north-star-authority/RUN.json)
 remain historical. Active comparisons bind actual resources and verification
-instruments through the reexecuted current `north-star-window-startup/authority.json` above.
+instruments through the reexecuted current `north-star-preparation/authority.json` above.
 
 ```bash
-python3 north-star/prototype/tools/verify_remote.py --output /tmp/remote.json --compare evidence/north-star-window-startup/remote.json
+python3 north-star/prototype/tools/verify_remote.py --output /tmp/remote.json --compare evidence/north-star-preparation/remote.json
 python3 north-star/prototype/tools/verify_remote_input.py --output /tmp/remote-input
 ```
 
@@ -159,6 +172,19 @@ publicly. There is no multiplayer product release, capability promotion, human
 validation or production-engine decision. Compare a coherent abilities/build consumer,
 independent observation and measured transport/reconciliation needs before continuing;
 a larger network stack is not the automatic next task.
+
+## Verify committed preparation
+
+```bash
+python3 north-star/prototype/tools/verify_preparation.py --output /tmp/preparation.json --compare evidence/north-star-preparation/preparation.json
+```
+
+The actual source/PCK authority executes every offered role/technique/outfit tuple:
+eight Guardian and four Duelist combinations per delivery. It checks unchanged title
+state during inspection, malformed/duplicate requests, forged resources, actual paid
+steps, sustained versus expired/no guard and locked entry. These are twelve nominal
+combinations, not twelve independently validated builds or balance evidence. The
+catalog is fixed in the running authority; a new process is needed for another entry.
 
 ## Measured transport interventions
 

@@ -11,6 +11,8 @@ var reason := "Not connected."
 var latest: Dictionary = {}
 var confirmed: Dictionary = {}
 var session := ""
+var catalog:Dictionary={}
+var prepare_only:=false
 var sequence := 0
 var position := Vector2.ZERO
 var courier_position := Vector2.ZERO
@@ -54,19 +56,59 @@ func close() -> void:
 	buffer.clear()
 	if status!="terminal": status="closed"; reason="Disconnected. The server world is not paused."
 
-func connect_session(port: int, role: String="Guardian", style: String="Steady", outfit: String="standard") -> bool:
+func connect_session(port: int, role: String="Guardian", style: String="Steady", outfit: String="standard", inspect:bool=false) -> bool:
 	close()
-	latest.clear(); confirmed.clear(); session=""; sequence=0; age=0; rejected=0; snapshots=0
+	latest.clear(); confirmed.clear(); catalog.clear();prepare_only=inspect; session=""; sequence=0; age=0; rejected=0; snapshots=0
 	position=Vector2.ZERO; courier_position=Vector2.ZERO; next_send_ms=0; hello_sent=false
 	if port<1024 or port>65535 or role not in ["Guardian", "Duelist"] or style not in (["Steady", "Riposte"] if role=="Guardian" else ["none"]) or outfit.is_empty() or outfit.length()>64:
 		status="error"; reason="Invalid session choice."; return false
 	hello={"v":1,"kind":"hello","role":role,"style":style,"outfit":outfit}
+	if inspect:hello={"v":1,"kind":"catalog"}
 	connection=StreamPeerTCP.new()
 	status="connecting"; reason="Connecting to local authority."
 	deadline=Time.get_ticks_msec()+3000
 	if connection.connect_to_host("127.0.0.1", port)!=OK:
 		fail("Local authority connection failed."); return false
 	return true
+
+func start_prepared(role:String,style:String,outfit:String) -> bool:
+	if status!="preparing" or not catalog.techniques.has(role):return false
+	if not catalog.techniques[role].any(func(row):return row.id==style) or not catalog.outfits.any(func(row):return row.id==outfit):return false
+	hello={"v":1,"kind":"hello","role":role,"style":style,"outfit":outfit}
+	if not write(hello):return false
+	status="joining";reason="Confirming selected preparation.";deadline=Time.get_ticks_msec()+3000
+	return true
+
+static func valid_catalog(data:Dictionary) -> bool:
+	if data.size()!=4 or not data.get("outfits") is Array or data.outfits.is_empty() or data.outfits.size()>16:return false
+	if not data.get("techniques") is Dictionary or data.techniques.size()!=2:return false
+	var ids:Array=[]
+	for row in data.outfits:
+		if not row is Dictionary or row.size()!=5 or not row.get("id") is String or row.id.is_empty() or row.id.length()>64 or row.id in ids:return false
+		if not row.get("name") is String or row.name.is_empty() or row.name.length()>80:return false
+		if not integer(row.get("health"),1,6) or not finite_number(row.get("movement"),.25,2) or not finite_number(row.get("recovery"),1,100):return false
+		ids.append(row.id)
+	for role in ["Guardian","Duelist"]:
+		var rows=data.techniques.get(role)
+		if not rows is Array or rows.size()!=(2 if role=="Guardian" else 1):return false
+		var styles:Array=[]
+		for row in rows:
+			if not row is Dictionary or row.size()!=2 or row.get("id") not in (["Steady","Riposte"] if role=="Guardian" else ["none"]) or row.id in styles:return false
+			if not row.get("summary") is String or row.summary.length()>150:return false
+			styles.append(row.id)
+	return true
+
+func matches_preparation(state:Dictionary) -> bool:
+	if not prepare_only:return true
+	var actual=state.get("preparation")
+	if not actual is Dictionary or actual.size()!=6:return false
+	if not integer(actual.get("health"),1,6) or not finite_number(actual.get("movement"),.25,2) or not finite_number(actual.get("recovery"),1,100):return false
+	if actual.get("role")!=hello.role or actual.get("style")!=hello.style or actual.get("outfit")!=hello.outfit:return false
+	var items:Array=catalog.outfits.filter(func(row):return row.id==hello.outfit)
+	if items.size()!=1:return false
+	for key in ["health","movement","recovery"]:
+		if actual.get(key)!=items[0][key]:return false
+	return state.get("role")==hello.role and state.get("guard_style")==hello.style and state.get("health_limit")==actual.health
 
 func write(data: Dictionary) -> bool:
 	if connection.get_status()!=StreamPeerTCP.STATUS_CONNECTED: return false
@@ -148,8 +190,11 @@ func valid_state(data: Dictionary) -> bool:
 
 func receive_message(data: Dictionary) -> void:
 	if not safe_tree(data) or not integer(data.get("v"),1,1): fail("Invalid authority message."); return
-	if data.get("kind")=="welcome":
-		if not session.is_empty() or not data.get("session") is String or data.session.length()!=32:
+	if data.get("kind")=="catalog":
+		if not prepare_only or status!="connecting" or not catalog.is_empty() or not valid_catalog(data):fail("Invalid preparation catalog.");return
+		catalog=data.duplicate(true);status="preparing";reason="Compare server values, then Enter to commit."
+	elif data.get("kind")=="welcome":
+		if (prepare_only and status!="joining") or not session.is_empty() or not data.get("session") is String or data.session.length()!=32:
 			fail("Invalid authority welcome."); return
 		session=data.session; reason="Waiting for confirmed world state."
 	elif data.get("kind")=="reject":
@@ -157,7 +202,7 @@ func receive_message(data: Dictionary) -> void:
 		rejected+=1; reason="Authority rejected intent: "+data.reason
 		if session.is_empty(): fail(reason)
 	elif data.get("kind")=="state":
-		if session.is_empty() or not valid_state(data): fail("Invalid authority snapshot."); return
+		if session.is_empty() or not valid_state(data) or not matches_preparation(data.state): fail("Invalid authority snapshot."); return
 		if status=="terminal" and data.state.mode!=confirmed.mode: return
 		if not latest.is_empty() and int(data.tick)<=int(latest.tick): return
 		var next_player=Vector2(data.state.player[0],data.state.player[1])
@@ -213,4 +258,4 @@ func poll(delta: float) -> void:
 		receive_message(parser.data)
 		if status=="error": return
 	if buffer.size()>FRAME_LIMIT and buffer.find(10)<0: fail("Unterminated authority frame exceeded its limit.")
-	if session.is_empty() and Time.get_ticks_msec()>=deadline: fail("Authority welcome timed out.")
+	if session.is_empty() and status!="preparing" and Time.get_ticks_msec()>=deadline: fail("Authority welcome timed out.")

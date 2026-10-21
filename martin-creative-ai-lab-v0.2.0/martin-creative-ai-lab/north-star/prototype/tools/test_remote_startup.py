@@ -60,7 +60,7 @@ class StartupChecks(unittest.TestCase):
                 if destination and (root/'result/failure').is_dir():
                     shutil.copytree(root/'result/failure',Path(destination).with_suffix('')/'failure',dirs_exist_ok=True)
                 raise
-            self.assertEqual(result['checks'],{'passed':34,'failed':0})
+            self.assertEqual(result['checks'],{'passed':46,'failed':0})
             self.assertEqual(set(result['startup']),{'source','pack'})
             for observed in result['startup'].values():
                 self.assertGreaterEqual(observed['rendered_input_ready_ms'],6000)

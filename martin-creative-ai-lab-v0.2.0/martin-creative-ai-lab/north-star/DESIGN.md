@@ -431,3 +431,16 @@ SCI-017 informs unchanged mechanical-outcome controls across the 540-case matrix
 CRE-005 informs making costs and recoverable consequences inspectable before and after
 action. [Execution](../evidence/north-star-return-feedback/RUN.json) preserves synthetic
 input and agent image assessment separately from still-missing independent human evidence.
+
+
+## Remote preparation — existing choices, explicit commitment
+
+The developer-only remote window now presents actual server-loaded fitting values
+before encounter entry. Compare starting health, movement factor and unguarded resolve
+recovery; combine a fitting with Guardian Steady/Riposte or Duelist redirection, then
+commit once. The authority owns accepted choices/resources; the client rejects a
+mismatched confirmation. Existing mechanics and local player distributions are unchanged.
+CRE-011/013 (H) inform visible trade-offs and preparation outside combat, without
+adopting candidate attributes, talent trees or class canon. Twelve nominal combinations
+are exercised in [the current execution](../evidence/north-star-preparation/RUN.json),
+not twelve competitive builds, new abilities or independent player validation.

@@ -9,7 +9,6 @@ const AMBER=Color("ffc474")
 const RED=Color("ff796f")
 const ENEMY=Vector2(790,390)
 const PULSE_RADIUS:=90.0
-const OUTFITS=["standard","riveted","trail","field_sash"]
 var remote=Remote.new()
 var controls=Intent.new()
 var port:=47620
@@ -32,8 +31,17 @@ func _ready() -> void:
 	queue_redraw()
 func connect_session() -> void:
 	if started:return
-	started=true
-	remote.connect_session(port,selected,style if selected=="Guardian" else "none",OUTFITS[outfit])
+	if remote.status=="closed":
+		remote.connect_session(port,"Guardian","Steady","standard",true)
+	elif remote.status=="preparing":
+		var id:String=remote.catalog.outfits[outfit].id
+		if remote.start_prepared(selected,style if selected=="Guardian" else "none",id):started=true
+func preparation_preview() -> Dictionary:
+	if remote.catalog.is_empty():return {}
+	var row:Dictionary=remote.catalog.outfits[outfit].duplicate()
+	row.role=selected;row.style=style if selected=="Guardian" else "none"
+	row.summary=remote.catalog.techniques[selected].filter(func(item):return item.id==row.style)[0].summary
+	return row
 func suspend_controls() -> void:
 	controls.suspend()
 	if remote.status=="live":remote.send_intent({})
@@ -51,7 +59,7 @@ func _input(event:InputEvent) -> void:
 		if not started:
 			if key==KEY_F2:selected="Duelist" if selected=="Guardian" else "Guardian"
 			elif key==KEY_TAB:style="Riposte" if style=="Steady" else "Steady"
-			elif key==KEY_C:outfit=(outfit+1)%OUTFITS.size()
+			elif key==KEY_C and remote.status=="preparing":outfit=(outfit+1)%remote.catalog.outfits.size()
 			elif key==KEY_ENTER:connect_session()
 			queue_redraw();return
 		if key==KEY_ESCAPE:
@@ -134,16 +142,32 @@ func _draw() -> void:
 		# Clip telegraphs/avatars to the field without covering them with UI panels.
 		for rect in [Rect2(0,0,1152,185),Rect2(0,645,1152,123),Rect2(0,185,50,460),Rect2(1102,185,50,460)]:draw_rect(rect,INK)
 	text(Vector2(50,42),"VIRGO DIAMOND",24,TEAL)
-	text(Vector2(50,70),"REMOTE CROSSING  /  developer experiment",16)
+	text(Vector2(50,70),"REMOTE CROSSING  /  developer experiment"+("  /  "+str(state.preparation.outfit) if state.has("preparation") else ""),16)
 	text(Vector2(700,40),"Protect the courier. Reach the far gate.",20)
 	if state.is_empty():
-		panel(Rect2(210,200,732,345))
-		text(Vector2(245,247),"One crossing, one server-owned session",26)
-		text(Vector2(245,292),"F2  Approach: "+selected+"     Tab  Guardian: "+style,20)
-		text(Vector2(245,329),"C  Outfit: "+OUTFITS[outfit],20)
-		text(Vector2(245,377),"Enter  Connect to the local server",22,TEAL)
-		text(Vector2(245,418),"Each choice keeps its real costs. Preparation locks on entry.",17)
-		text(Vector2(245,457),"Q  Close     |     "+(remote.reason if started else "Start the documented loopback server first."),16,AMBER)
+		panel(Rect2(100,115,952,565))
+		text(Vector2(130,157),"PREPARE YOUR CROSSING",28,TEAL)
+		text(Vector2(130,192),"F2  Approach: "+selected+("     Tab  Technique: "+style if selected=="Guardian" else "     Technique: none"),20)
+		var preview:Dictionary=preparation_preview()
+		if preview.is_empty():
+			text(Vector2(130,260),"Enter  Inspect preparation from the local authority",22,TEAL)
+			text(Vector2(130,305),"No character or encounter starts while inspecting choices.",18)
+			text(Vector2(130,350),"Start the documented loopback server first. Q closes.",18)
+		else:
+			text(Vector2(130,229),"C  Select clothing  /  server values",18,TEAL)
+			text(Vector2(490,229),"Health       Movement       Resolve recovery",16)
+			var first:int=(outfit/4)*4
+			for index in range(first,mini(first+4,remote.catalog.outfits.size())):
+				var item:Dictionary=remote.catalog.outfits[index];var y:float=273+(index-first)*42
+				if index==outfit:draw_rect(Rect2(118,y-27,910,37),Color("304c53"))
+				text(Vector2(134,y),(" > " if index==outfit else "   ")+str(item.name).left(32),20,TEAL if index==outfit else PAPER)
+				text(Vector2(500,y),"%d              x%.2f              %.0f / second"%[item.health,item.movement,item.recovery],19)
+			text(Vector2(130,455),str(preview.summary).left(100),18,AMBER)
+			text(Vector2(130,492),"Movement scales walking and paid steps. Recovery applies while not guarding.",17)
+			text(Vector2(130,527),"This replaces starting clothing; values do not stack. Appearance is separate.",17)
+			text(Vector2(130,572),"Enter  Commit these choices and begin" if remote.status=="preparing" else "Waiting for authority confirmation...",22,TEAL)
+			text(Vector2(130,608),"Preparation locks on entry. The server checks every choice again.",17)
+		text(Vector2(130,651),remote.reason.left(100),16,AMBER)
 	else:
 		var accent:Color=TEAL if state.role=="Guardian" else AMBER
 		panel(Rect2(50,91,1052,76))
@@ -220,7 +244,7 @@ func draw_world(state:Dictionary,accent:Color) -> void:
 func observation() -> Dictionary:
 	return {"status":remote.status,"reason":remote.reason,"age":remote.age,"confirmed":remote.confirmed.duplicate(true),
 		"position":[remote.position.x,remote.position.y],"courier_position":[remote.courier_position.x,remote.courier_position.y],
-		"suspended":controls.suspended,"quarantined":controls.quarantined,"focused":focused,"actions":action_rows()}
+		"suspended":controls.suspended,"quarantined":controls.quarantined,"focused":focused,"actions":action_rows(),"preview":preparation_preview(),"catalog":remote.catalog.duplicate(true)}
 func capture() -> void:
 	var prefix:String=OS.get_environment("NORTH_STAR_REMOTE_CAPTURE")
 	if prefix.is_empty():return

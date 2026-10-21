@@ -112,6 +112,17 @@ def verify(output, godot='godot'):
                         reservation.close()
                         with authority.server(engine,scratch/delivery,packed,seconds=9,port=port) as (port,report,process):
                             deadline = time.monotonic()+20
+                            tap('Return');offered = shot('catalog')
+                            catalog_until = time.monotonic()+2
+                            while offered['status']=='connecting' and time.monotonic()<catalog_until:
+                                time.sleep(.05);offered = shot('catalog')
+                            check(offered['status']=='preparing' and not offered['confirmed'] and len(offered['catalog']['outfits'])==4,delivery+': server catalog precedes committed session',offered)
+                            for expected in ['riveted','trail','field_sash','standard']:
+                                tap('c');choice = shot('choice',expected=='riveted')
+                                check(choice['preview']['id']==expected and choice['status']=='preparing' and not choice['confirmed'],delivery+': inspect actual outfit trade-off '+expected)
+                            tap('Tab');technique = shot('technique')
+                            check(technique['preview']['style']=='Riposte' and not technique['confirmed'],delivery+': inspect technique before commitment')
+                            tap('Tab')
                             tap('Return');initial = shot('initial')
                             ready_until = time.monotonic()+2
                             while initial['status']=='connecting' and time.monotonic()<ready_until:
@@ -148,7 +159,7 @@ def verify(output, godot='godot'):
                             process.wait(timeout=10);time.sleep(.2);closed = shot('closed',True);time.sleep(.15);frozen = shot('frozen')
                             check(closed['status']=='error' and closed['confirmed']==frozen['confirmed'] and closed['position']==frozen['position'],delivery+': disconnect freezes confirmed presentation')
                             check(all(not row['available'] for row in closed['actions']),delivery+': disconnected window masks ready advice')
-                            observations[delivery] = {label:value for label,value in (('initial',initial),('walking',walking),('step',stepped),('suspended',suspended),('held',held),('rearmed',rearmed),('focus',unfocused),('focus_resumed',resumed),('focus_moved',recovered),('closed',closed))}
+                            observations[delivery] = {label:value for label,value in (('catalog',offered),('initial',initial),('walking',walking),('step',stepped),('suspended',suspended),('held',held),('rearmed',rearmed),('focus',unfocused),('focus_resumed',resumed),('focus_moved',recovered),('closed',closed))}
                             tap('q');game.wait(timeout=3);check(game.returncode==0,delivery+': explicit close exits cleanly');game=None
                         native = game_log.read_text();require(not any(term in native for term in ('SCRIPT ERROR:','Parse Error:','ERROR:')),'Native window error: '+native[-2500:])
                     authority.check_report(json.loads(report.read_text()))

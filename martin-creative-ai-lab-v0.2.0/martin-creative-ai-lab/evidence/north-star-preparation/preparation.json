@@ -1,0 +1,522 @@
+{
+  "contract": {
+    "identities": {
+      "authority/remote.gd": "e76cacab68d9aa52b0490a0f2364854513d9a3e546084ced957ca4745ef75018",
+      "authority/server.gd": "c81b440e8e0b7762b1f302c0545656e02e52f755489d63346b4a315d36f83143",
+      "authority/view.gd": "8998178919a123fe8823f4eec3ad8c44c44d2dae0523eec1ec06515b16db09a1",
+      "combat.gd": "77aefc3f6130e114954a867f6404830180ca342c88e2396ec89a3784c2b3b0b3",
+      "data/fittings.json": "cf9ce26272dd4841e89f5de2bb679407f971ec04954bf753c15b4d768eba189d",
+      "dist/crossing-drill.pck": "352e47bca2482de7da6dd8818ebf5f3464a5585da93b10dd8a6c164ec70c17e2",
+      "fittings.gd": "836fa97cc7c6d81126bcddafc26daae72f5585ff61b70b55c83ea65aa70fc390",
+      "project.godot": "8d4755b58f1179a9b5ec431579177371e784bca9703a17c88f4c7a6d4ee9385c",
+      "route.gd": "2936029e1a52933fff0141b546f85fbc53a57b7e6c5301eaef5cabac06a05901",
+      "tests/policy.gd": "646f0758a211e84ffbfd4632460c7d1fc549cbb3b552801ee2508774a5a63e29",
+      "tests/preparation_checks.gd": "f65b25250486f5f068a84cc8857ac6b53c7ef10807b5345c4167383043788ec4",
+      "tools/verify_authority.py": "4faa7575b7f5ab591510152fea0f0bba087988d111b7d9bbd99e8a8fd06fe3d5",
+      "tools/verify_preparation.py": "2dbbad068e0a8823b386ed267ff9b92dfe56a18da0e2b971c4a13a5120727d46"
+    },
+    "passed_controls": 178,
+    "runtime": "4.6.3.stable.official.7d41c59c4",
+    "schema_version": 1,
+    "scope": "Existing experiment choices, server-owned preparation and paid actions. No new class, ability, canon, shipped network player or player validation.",
+    "tuples_per_delivery": 12
+  },
+  "controls": [
+    "source: forged catalog request rejected",
+    "source: duplicate catalog cannot amplify replies",
+    "source: inspection cannot admit an input",
+    "source: inspection leaves model unstarted",
+    "source: preparation catalog stable for standard/Duelist/none",
+    "source: client cannot assign prepared health",
+    "source: actual tuple agrees with preview",
+    "source: prepared tuple executes actual paid action",
+    "source: catalog cannot reopen a started session",
+    "source: preparation cannot be changed after entry",
+    "source: actual technique retains its guard consequence",
+    "source: preparation catalog stable for standard/Guardian/Steady",
+    "source: client cannot assign prepared health",
+    "source: actual tuple agrees with preview",
+    "source: prepared tuple executes actual paid action",
+    "source: catalog cannot reopen a started session",
+    "source: preparation cannot be changed after entry",
+    "source: actual technique retains its guard consequence",
+    "source: preparation catalog stable for standard/Guardian/Riposte",
+    "source: client cannot assign prepared health",
+    "source: actual tuple agrees with preview",
+    "source: prepared tuple executes actual paid action",
+    "source: catalog cannot reopen a started session",
+    "source: preparation cannot be changed after entry",
+    "source: actual technique retains its guard consequence",
+    "source: preparation catalog stable for riveted/Duelist/none",
+    "source: client cannot assign prepared health",
+    "source: actual tuple agrees with preview",
+    "source: prepared tuple executes actual paid action",
+    "source: catalog cannot reopen a started session",
+    "source: preparation cannot be changed after entry",
+    "source: actual technique retains its guard consequence",
+    "source: preparation catalog stable for riveted/Guardian/Steady",
+    "source: client cannot assign prepared health",
+    "source: actual tuple agrees with preview",
+    "source: prepared tuple executes actual paid action",
+    "source: catalog cannot reopen a started session",
+    "source: preparation cannot be changed after entry",
+    "source: actual technique retains its guard consequence",
+    "source: preparation catalog stable for riveted/Guardian/Riposte",
+    "source: client cannot assign prepared health",
+    "source: actual tuple agrees with preview",
+    "source: prepared tuple executes actual paid action",
+    "source: catalog cannot reopen a started session",
+    "source: preparation cannot be changed after entry",
+    "source: actual technique retains its guard consequence",
+    "source: preparation catalog stable for trail/Duelist/none",
+    "source: client cannot assign prepared health",
+    "source: actual tuple agrees with preview",
+    "source: prepared tuple executes actual paid action",
+    "source: catalog cannot reopen a started session",
+    "source: preparation cannot be changed after entry",
+    "source: actual technique retains its guard consequence",
+    "source: preparation catalog stable for trail/Guardian/Steady",
+    "source: client cannot assign prepared health",
+    "source: actual tuple agrees with preview",
+    "source: prepared tuple executes actual paid action",
+    "source: catalog cannot reopen a started session",
+    "source: preparation cannot be changed after entry",
+    "source: actual technique retains its guard consequence",
+    "source: preparation catalog stable for trail/Guardian/Riposte",
+    "source: client cannot assign prepared health",
+    "source: actual tuple agrees with preview",
+    "source: prepared tuple executes actual paid action",
+    "source: catalog cannot reopen a started session",
+    "source: preparation cannot be changed after entry",
+    "source: actual technique retains its guard consequence",
+    "source: preparation catalog stable for field_sash/Duelist/none",
+    "source: client cannot assign prepared health",
+    "source: actual tuple agrees with preview",
+    "source: prepared tuple executes actual paid action",
+    "source: catalog cannot reopen a started session",
+    "source: preparation cannot be changed after entry",
+    "source: actual technique retains its guard consequence",
+    "source: preparation catalog stable for field_sash/Guardian/Steady",
+    "source: client cannot assign prepared health",
+    "source: actual tuple agrees with preview",
+    "source: prepared tuple executes actual paid action",
+    "source: catalog cannot reopen a started session",
+    "source: preparation cannot be changed after entry",
+    "source: actual technique retains its guard consequence",
+    "source: preparation catalog stable for field_sash/Guardian/Riposte",
+    "source: client cannot assign prepared health",
+    "source: actual tuple agrees with preview",
+    "source: prepared tuple executes actual paid action",
+    "source: catalog cannot reopen a started session",
+    "source: preparation cannot be changed after entry",
+    "source: actual technique retains its guard consequence",
+    "source: all offered tuples executed",
+    "pack: forged catalog request rejected",
+    "pack: duplicate catalog cannot amplify replies",
+    "pack: inspection cannot admit an input",
+    "pack: inspection leaves model unstarted",
+    "pack: preparation catalog stable for standard/Duelist/none",
+    "pack: client cannot assign prepared health",
+    "pack: actual tuple agrees with preview",
+    "pack: prepared tuple executes actual paid action",
+    "pack: catalog cannot reopen a started session",
+    "pack: preparation cannot be changed after entry",
+    "pack: actual technique retains its guard consequence",
+    "pack: preparation catalog stable for standard/Guardian/Steady",
+    "pack: client cannot assign prepared health",
+    "pack: actual tuple agrees with preview",
+    "pack: prepared tuple executes actual paid action",
+    "pack: catalog cannot reopen a started session",
+    "pack: preparation cannot be changed after entry",
+    "pack: actual technique retains its guard consequence",
+    "pack: preparation catalog stable for standard/Guardian/Riposte",
+    "pack: client cannot assign prepared health",
+    "pack: actual tuple agrees with preview",
+    "pack: prepared tuple executes actual paid action",
+    "pack: catalog cannot reopen a started session",
+    "pack: preparation cannot be changed after entry",
+    "pack: actual technique retains its guard consequence",
+    "pack: preparation catalog stable for riveted/Duelist/none",
+    "pack: client cannot assign prepared health",
+    "pack: actual tuple agrees with preview",
+    "pack: prepared tuple executes actual paid action",
+    "pack: catalog cannot reopen a started session",
+    "pack: preparation cannot be changed after entry",
+    "pack: actual technique retains its guard consequence",
+    "pack: preparation catalog stable for riveted/Guardian/Steady",
+    "pack: client cannot assign prepared health",
+    "pack: actual tuple agrees with preview",
+    "pack: prepared tuple executes actual paid action",
+    "pack: catalog cannot reopen a started session",
+    "pack: preparation cannot be changed after entry",
+    "pack: actual technique retains its guard consequence",
+    "pack: preparation catalog stable for riveted/Guardian/Riposte",
+    "pack: client cannot assign prepared health",
+    "pack: actual tuple agrees with preview",
+    "pack: prepared tuple executes actual paid action",
+    "pack: catalog cannot reopen a started session",
+    "pack: preparation cannot be changed after entry",
+    "pack: actual technique retains its guard consequence",
+    "pack: preparation catalog stable for trail/Duelist/none",
+    "pack: client cannot assign prepared health",
+    "pack: actual tuple agrees with preview",
+    "pack: prepared tuple executes actual paid action",
+    "pack: catalog cannot reopen a started session",
+    "pack: preparation cannot be changed after entry",
+    "pack: actual technique retains its guard consequence",
+    "pack: preparation catalog stable for trail/Guardian/Steady",
+    "pack: client cannot assign prepared health",
+    "pack: actual tuple agrees with preview",
+    "pack: prepared tuple executes actual paid action",
+    "pack: catalog cannot reopen a started session",
+    "pack: preparation cannot be changed after entry",
+    "pack: actual technique retains its guard consequence",
+    "pack: preparation catalog stable for trail/Guardian/Riposte",
+    "pack: client cannot assign prepared health",
+    "pack: actual tuple agrees with preview",
+    "pack: prepared tuple executes actual paid action",
+    "pack: catalog cannot reopen a started session",
+    "pack: preparation cannot be changed after entry",
+    "pack: actual technique retains its guard consequence",
+    "pack: preparation catalog stable for field_sash/Duelist/none",
+    "pack: client cannot assign prepared health",
+    "pack: actual tuple agrees with preview",
+    "pack: prepared tuple executes actual paid action",
+    "pack: catalog cannot reopen a started session",
+    "pack: preparation cannot be changed after entry",
+    "pack: actual technique retains its guard consequence",
+    "pack: preparation catalog stable for field_sash/Guardian/Steady",
+    "pack: client cannot assign prepared health",
+    "pack: actual tuple agrees with preview",
+    "pack: prepared tuple executes actual paid action",
+    "pack: catalog cannot reopen a started session",
+    "pack: preparation cannot be changed after entry",
+    "pack: actual technique retains its guard consequence",
+    "pack: preparation catalog stable for field_sash/Guardian/Riposte",
+    "pack: client cannot assign prepared health",
+    "pack: actual tuple agrees with preview",
+    "pack: prepared tuple executes actual paid action",
+    "pack: catalog cannot reopen a started session",
+    "pack: preparation cannot be changed after entry",
+    "pack: actual technique retains its guard consequence",
+    "pack: all offered tuples executed"
+  ],
+  "observations": {
+    "pack": [
+      {
+        "entry_locked": true,
+        "held_guard_state": "DOWN",
+        "paid_step": true,
+        "preparation": {
+          "health": 5.0,
+          "movement": 1.0,
+          "outfit": "standard",
+          "recovery": 18.0,
+          "role": "Duelist",
+          "style": "none"
+        }
+      },
+      {
+        "entry_locked": true,
+        "held_guard_state": "LIVE",
+        "paid_step": true,
+        "preparation": {
+          "health": 5.0,
+          "movement": 1.0,
+          "outfit": "standard",
+          "recovery": 18.0,
+          "role": "Guardian",
+          "style": "Steady"
+        }
+      },
+      {
+        "entry_locked": true,
+        "held_guard_state": "STALE",
+        "paid_step": true,
+        "preparation": {
+          "health": 5.0,
+          "movement": 1.0,
+          "outfit": "standard",
+          "recovery": 18.0,
+          "role": "Guardian",
+          "style": "Riposte"
+        }
+      },
+      {
+        "entry_locked": true,
+        "held_guard_state": "DOWN",
+        "paid_step": true,
+        "preparation": {
+          "health": 6.0,
+          "movement": 0.8,
+          "outfit": "riveted",
+          "recovery": 18.0,
+          "role": "Duelist",
+          "style": "none"
+        }
+      },
+      {
+        "entry_locked": true,
+        "held_guard_state": "LIVE",
+        "paid_step": true,
+        "preparation": {
+          "health": 6.0,
+          "movement": 0.8,
+          "outfit": "riveted",
+          "recovery": 18.0,
+          "role": "Guardian",
+          "style": "Steady"
+        }
+      },
+      {
+        "entry_locked": true,
+        "held_guard_state": "STALE",
+        "paid_step": true,
+        "preparation": {
+          "health": 6.0,
+          "movement": 0.8,
+          "outfit": "riveted",
+          "recovery": 18.0,
+          "role": "Guardian",
+          "style": "Riposte"
+        }
+      },
+      {
+        "entry_locked": true,
+        "held_guard_state": "DOWN",
+        "paid_step": true,
+        "preparation": {
+          "health": 4.0,
+          "movement": 1.2,
+          "outfit": "trail",
+          "recovery": 18.0,
+          "role": "Duelist",
+          "style": "none"
+        }
+      },
+      {
+        "entry_locked": true,
+        "held_guard_state": "LIVE",
+        "paid_step": true,
+        "preparation": {
+          "health": 4.0,
+          "movement": 1.2,
+          "outfit": "trail",
+          "recovery": 18.0,
+          "role": "Guardian",
+          "style": "Steady"
+        }
+      },
+      {
+        "entry_locked": true,
+        "held_guard_state": "STALE",
+        "paid_step": true,
+        "preparation": {
+          "health": 4.0,
+          "movement": 1.2,
+          "outfit": "trail",
+          "recovery": 18.0,
+          "role": "Guardian",
+          "style": "Riposte"
+        }
+      },
+      {
+        "entry_locked": true,
+        "held_guard_state": "DOWN",
+        "paid_step": true,
+        "preparation": {
+          "health": 4.0,
+          "movement": 1.0,
+          "outfit": "field_sash",
+          "recovery": 26.0,
+          "role": "Duelist",
+          "style": "none"
+        }
+      },
+      {
+        "entry_locked": true,
+        "held_guard_state": "LIVE",
+        "paid_step": true,
+        "preparation": {
+          "health": 4.0,
+          "movement": 1.0,
+          "outfit": "field_sash",
+          "recovery": 26.0,
+          "role": "Guardian",
+          "style": "Steady"
+        }
+      },
+      {
+        "entry_locked": true,
+        "held_guard_state": "STALE",
+        "paid_step": true,
+        "preparation": {
+          "health": 4.0,
+          "movement": 1.0,
+          "outfit": "field_sash",
+          "recovery": 26.0,
+          "role": "Guardian",
+          "style": "Riposte"
+        }
+      }
+    ],
+    "source": [
+      {
+        "entry_locked": true,
+        "held_guard_state": "DOWN",
+        "paid_step": true,
+        "preparation": {
+          "health": 5.0,
+          "movement": 1.0,
+          "outfit": "standard",
+          "recovery": 18.0,
+          "role": "Duelist",
+          "style": "none"
+        }
+      },
+      {
+        "entry_locked": true,
+        "held_guard_state": "LIVE",
+        "paid_step": true,
+        "preparation": {
+          "health": 5.0,
+          "movement": 1.0,
+          "outfit": "standard",
+          "recovery": 18.0,
+          "role": "Guardian",
+          "style": "Steady"
+        }
+      },
+      {
+        "entry_locked": true,
+        "held_guard_state": "STALE",
+        "paid_step": true,
+        "preparation": {
+          "health": 5.0,
+          "movement": 1.0,
+          "outfit": "standard",
+          "recovery": 18.0,
+          "role": "Guardian",
+          "style": "Riposte"
+        }
+      },
+      {
+        "entry_locked": true,
+        "held_guard_state": "DOWN",
+        "paid_step": true,
+        "preparation": {
+          "health": 6.0,
+          "movement": 0.8,
+          "outfit": "riveted",
+          "recovery": 18.0,
+          "role": "Duelist",
+          "style": "none"
+        }
+      },
+      {
+        "entry_locked": true,
+        "held_guard_state": "LIVE",
+        "paid_step": true,
+        "preparation": {
+          "health": 6.0,
+          "movement": 0.8,
+          "outfit": "riveted",
+          "recovery": 18.0,
+          "role": "Guardian",
+          "style": "Steady"
+        }
+      },
+      {
+        "entry_locked": true,
+        "held_guard_state": "STALE",
+        "paid_step": true,
+        "preparation": {
+          "health": 6.0,
+          "movement": 0.8,
+          "outfit": "riveted",
+          "recovery": 18.0,
+          "role": "Guardian",
+          "style": "Riposte"
+        }
+      },
+      {
+        "entry_locked": true,
+        "held_guard_state": "DOWN",
+        "paid_step": true,
+        "preparation": {
+          "health": 4.0,
+          "movement": 1.2,
+          "outfit": "trail",
+          "recovery": 18.0,
+          "role": "Duelist",
+          "style": "none"
+        }
+      },
+      {
+        "entry_locked": true,
+        "held_guard_state": "LIVE",
+        "paid_step": true,
+        "preparation": {
+          "health": 4.0,
+          "movement": 1.2,
+          "outfit": "trail",
+          "recovery": 18.0,
+          "role": "Guardian",
+          "style": "Steady"
+        }
+      },
+      {
+        "entry_locked": true,
+        "held_guard_state": "STALE",
+        "paid_step": true,
+        "preparation": {
+          "health": 4.0,
+          "movement": 1.2,
+          "outfit": "trail",
+          "recovery": 18.0,
+          "role": "Guardian",
+          "style": "Riposte"
+        }
+      },
+      {
+        "entry_locked": true,
+        "held_guard_state": "DOWN",
+        "paid_step": true,
+        "preparation": {
+          "health": 4.0,
+          "movement": 1.0,
+          "outfit": "field_sash",
+          "recovery": 26.0,
+          "role": "Duelist",
+          "style": "none"
+        }
+      },
+      {
+        "entry_locked": true,
+        "held_guard_state": "LIVE",
+        "paid_step": true,
+        "preparation": {
+          "health": 4.0,
+          "movement": 1.0,
+          "outfit": "field_sash",
+          "recovery": 26.0,
+          "role": "Guardian",
+          "style": "Steady"
+        }
+      },
+      {
+        "entry_locked": true,
+        "held_guard_state": "STALE",
+        "paid_step": true,
+        "preparation": {
+          "health": 4.0,
+          "movement": 1.0,
+          "outfit": "field_sash",
+          "recovery": 26.0,
+          "role": "Guardian",
+          "style": "Riposte"
+        }
+      }
+    ]
+  }
+}

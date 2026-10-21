@@ -1,0 +1,393 @@
+{
+  "contract": {
+    "checks": {
+      "failed": 0,
+      "passed": 42
+    },
+    "identities": {
+      "client": "b64e0a9c03a07b4f3313a3a434b465ac315cdaf66cc256e7a0cd9eb7b3414e52",
+      "consumers": {
+        "combat.gd": "77aefc3f6130e114954a867f6404830180ca342c88e2396ec89a3784c2b3b0b3",
+        "data/fittings.json": "cf9ce26272dd4841e89f5de2bb679407f971ec04954bf753c15b4d768eba189d",
+        "fittings.gd": "836fa97cc7c6d81126bcddafc26daae72f5585ff61b70b55c83ea65aa70fc390",
+        "project.godot": "8d4755b58f1179a9b5ec431579177371e784bca9703a17c88f4c7a6d4ee9385c",
+        "route.gd": "2936029e1a52933fff0141b546f85fbc53a57b7e6c5301eaef5cabac06a05901",
+        "tests/policy.gd": "646f0758a211e84ffbfd4632460c7d1fc549cbb3b552801ee2508774a5a63e29"
+      },
+      "pack": "352e47bca2482de7da6dd8818ebf5f3464a5585da93b10dd8a6c164ec70c17e2",
+      "runner": "4faa7575b7f5ab591510152fea0f0bba087988d111b7d9bbd99e8a8fd06fe3d5",
+      "server": "c81b440e8e0b7762b1f302c0545656e02e52f755489d63346b4a315d36f83143"
+    },
+    "remote_journeys_per_delivery": 2,
+    "runtime": "4.6.3.stable.official.7d41c59c4",
+    "safety_controls": [
+      "Reject malformed/ambiguous frame 0",
+      "Reject malformed/ambiguous frame 1",
+      "Reject malformed/ambiguous frame 2",
+      "Reject malformed/ambiguous frame 3",
+      "Reject malformed/ambiguous frame 4",
+      "Invalid hello cannot begin or sequence the model 5",
+      "Invalid hello cannot begin or sequence the model 6",
+      "Invalid hello cannot begin or sequence the model 7",
+      "Invalid hello cannot begin or sequence the model 8",
+      "Invalid hello cannot begin or sequence the model 9",
+      "Fragmented hello initializes server-owned catalog values",
+      "Released initial intent arms the connection",
+      "Reject forged state/sequence/schema without consuming input 12",
+      "Reject forged state/sequence/schema without consuming input 13",
+      "Reject forged state/sequence/schema without consuming input 14",
+      "Reject forged state/sequence/schema without consuming input 15",
+      "Reject forged state/sequence/schema without consuming input 16",
+      "Reject forged state/sequence/schema without consuming input 17",
+      "Reject forged state/sequence/schema without consuming input 18",
+      "Reject forged state/sequence/schema without consuming input 19",
+      "Reject forged state/sequence/schema without consuming input 20",
+      "Reject forged state/sequence/schema without consuming input 21",
+      "Reject forged state/sequence/schema without consuming input 22",
+      "Reject forged state/sequence/schema without consuming input 23",
+      "Reject forged state/sequence/schema without consuming input 24",
+      "Reject forged state/sequence/schema without consuming input 25",
+      "Reject forged state/sequence/schema without consuming input 26",
+      "Reject forged state/sequence/schema without consuming input 27",
+      "Reject forged state/sequence/schema without consuming input 28",
+      "Reject forged state/sequence/schema without consuming input 29",
+      "Rejected mutations preserve server ownership",
+      "Burst cannot advance model faster than server physics",
+      "At most one sequenced intent is accepted per physics tick",
+      "Quantized diagonal input stays within actual movement/field rules",
+      "Silence clears held actions and requires release",
+      "Stale held guard cannot rearm without release",
+      "A fresh press enters the actual paid step once",
+      "Repeated held packets cannot repeat an edge action",
+      "Connected client cannot reset or change loadout",
+      "Second connection cannot become authority owner",
+      "Disconnect cannot mint a new prepared session",
+      "Disconnect fails closed without pausing the server clock"
+    ],
+    "schema_version": 1,
+    "scope": "Loopback TCP, one authoritative escort session, server physics and real combat model. No shipped multiplayer client, account/authentication, WAN/TLS, reconnect, persistence, load capacity, production-engine or MMO readiness claim."
+  },
+  "observation_limits": "Actual packet/physics schedules vary. Recorded samples are not exact golden traces, independent players, a latency benchmark or a capacity estimate.",
+  "observations": {
+    "pack": {
+      "checks": [
+        "Reject malformed/ambiguous frame 0",
+        "Reject malformed/ambiguous frame 1",
+        "Reject malformed/ambiguous frame 2",
+        "Reject malformed/ambiguous frame 3",
+        "Reject malformed/ambiguous frame 4",
+        "Invalid hello cannot begin or sequence the model 5",
+        "Invalid hello cannot begin or sequence the model 6",
+        "Invalid hello cannot begin or sequence the model 7",
+        "Invalid hello cannot begin or sequence the model 8",
+        "Invalid hello cannot begin or sequence the model 9",
+        "Fragmented hello initializes server-owned catalog values",
+        "Released initial intent arms the connection",
+        "Reject forged state/sequence/schema without consuming input 12",
+        "Reject forged state/sequence/schema without consuming input 13",
+        "Reject forged state/sequence/schema without consuming input 14",
+        "Reject forged state/sequence/schema without consuming input 15",
+        "Reject forged state/sequence/schema without consuming input 16",
+        "Reject forged state/sequence/schema without consuming input 17",
+        "Reject forged state/sequence/schema without consuming input 18",
+        "Reject forged state/sequence/schema without consuming input 19",
+        "Reject forged state/sequence/schema without consuming input 20",
+        "Reject forged state/sequence/schema without consuming input 21",
+        "Reject forged state/sequence/schema without consuming input 22",
+        "Reject forged state/sequence/schema without consuming input 23",
+        "Reject forged state/sequence/schema without consuming input 24",
+        "Reject forged state/sequence/schema without consuming input 25",
+        "Reject forged state/sequence/schema without consuming input 26",
+        "Reject forged state/sequence/schema without consuming input 27",
+        "Reject forged state/sequence/schema without consuming input 28",
+        "Reject forged state/sequence/schema without consuming input 29",
+        "Rejected mutations preserve server ownership",
+        "Burst cannot advance model faster than server physics",
+        "At most one sequenced intent is accepted per physics tick",
+        "Quantized diagonal input stays within actual movement/field rules",
+        "Silence clears held actions and requires release",
+        "Stale held guard cannot rearm without release",
+        "A fresh press enters the actual paid step once",
+        "Repeated held packets cannot repeat an edge action",
+        "Connected client cannot reset or change loadout",
+        "Second connection cannot become authority owner",
+        "Disconnect cannot mint a new prepared session",
+        "Disconnect fails closed without pausing the server clock"
+      ],
+      "journeys": [
+        {
+          "accepted": 550,
+          "cargo": 3,
+          "counters": {
+            "blocks": 6,
+            "counters": 3,
+            "courier_hits": 0,
+            "dodges": 0,
+            "player_hits": 0,
+            "redirects": 0,
+            "rejected": 0
+          },
+          "hp": 5,
+          "mode": "won",
+          "model_ticks": 1650,
+          "role": "Guardian",
+          "server_ticks": 1769,
+          "snapshots": 553,
+          "terminal_reset_rejected": true
+        },
+        {
+          "accepted": 423,
+          "cargo": 3,
+          "counters": {
+            "blocks": 0,
+            "counters": 3,
+            "courier_hits": 0,
+            "dodges": 2,
+            "player_hits": 0,
+            "redirects": 2,
+            "rejected": 0
+          },
+          "hp": 5,
+          "mode": "won",
+          "model_ticks": 1266,
+          "role": "Duelist",
+          "server_ticks": 1385,
+          "snapshots": 425,
+          "terminal_reset_rejected": true
+        }
+      ],
+      "sample": {
+        "accepted": 15,
+        "active_ticks": 587,
+        "model": {
+          "cargo": 1,
+          "counters": {
+            "blocks": 0,
+            "counters": 0,
+            "courier_hits": 2,
+            "dodges": 1,
+            "player_hits": 1,
+            "redirects": 0,
+            "rejected": 0
+          },
+          "courier_speed": 28.0,
+          "courier_x": 434.402,
+          "enemy_focus": 3,
+          "energy": 100.0,
+          "events": [
+            {
+              "cargo": 3,
+              "energy": 74.8,
+              "hp": 6,
+              "kind": "step",
+              "tick": 53
+            },
+            {
+              "cargo": 2,
+              "energy": 100.0,
+              "hp": 6,
+              "kind": "courier_hit",
+              "tick": 169
+            },
+            {
+              "cargo": 1,
+              "energy": 100.0,
+              "hp": 6,
+              "kind": "courier_hit",
+              "tick": 338
+            },
+            {
+              "cargo": 1,
+              "energy": 100.0,
+              "hp": 5,
+              "kind": "pulse_hit",
+              "tick": 507
+            }
+          ],
+          "guard_style": "Steady",
+          "hp": 5,
+          "mode": "play",
+          "outfit": {
+            "health_limit": 6,
+            "id": "riveted",
+            "movement_scale": 0.8
+          },
+          "role": "Guardian",
+          "tick": 588
+        },
+        "rejected": {
+          "already_started": 1,
+          "choice": 3,
+          "frame": 5,
+          "rate": 93,
+          "release_required": 1,
+          "schema": 13,
+          "sequence": 5,
+          "session": 2
+        },
+        "server_ticks": 602,
+        "stale_clears": 2
+      }
+    },
+    "source": {
+      "checks": [
+        "Reject malformed/ambiguous frame 0",
+        "Reject malformed/ambiguous frame 1",
+        "Reject malformed/ambiguous frame 2",
+        "Reject malformed/ambiguous frame 3",
+        "Reject malformed/ambiguous frame 4",
+        "Invalid hello cannot begin or sequence the model 5",
+        "Invalid hello cannot begin or sequence the model 6",
+        "Invalid hello cannot begin or sequence the model 7",
+        "Invalid hello cannot begin or sequence the model 8",
+        "Invalid hello cannot begin or sequence the model 9",
+        "Fragmented hello initializes server-owned catalog values",
+        "Released initial intent arms the connection",
+        "Reject forged state/sequence/schema without consuming input 12",
+        "Reject forged state/sequence/schema without consuming input 13",
+        "Reject forged state/sequence/schema without consuming input 14",
+        "Reject forged state/sequence/schema without consuming input 15",
+        "Reject forged state/sequence/schema without consuming input 16",
+        "Reject forged state/sequence/schema without consuming input 17",
+        "Reject forged state/sequence/schema without consuming input 18",
+        "Reject forged state/sequence/schema without consuming input 19",
+        "Reject forged state/sequence/schema without consuming input 20",
+        "Reject forged state/sequence/schema without consuming input 21",
+        "Reject forged state/sequence/schema without consuming input 22",
+        "Reject forged state/sequence/schema without consuming input 23",
+        "Reject forged state/sequence/schema without consuming input 24",
+        "Reject forged state/sequence/schema without consuming input 25",
+        "Reject forged state/sequence/schema without consuming input 26",
+        "Reject forged state/sequence/schema without consuming input 27",
+        "Reject forged state/sequence/schema without consuming input 28",
+        "Reject forged state/sequence/schema without consuming input 29",
+        "Rejected mutations preserve server ownership",
+        "Burst cannot advance model faster than server physics",
+        "At most one sequenced intent is accepted per physics tick",
+        "Quantized diagonal input stays within actual movement/field rules",
+        "Silence clears held actions and requires release",
+        "Stale held guard cannot rearm without release",
+        "A fresh press enters the actual paid step once",
+        "Repeated held packets cannot repeat an edge action",
+        "Connected client cannot reset or change loadout",
+        "Second connection cannot become authority owner",
+        "Disconnect cannot mint a new prepared session",
+        "Disconnect fails closed without pausing the server clock"
+      ],
+      "journeys": [
+        {
+          "accepted": 551,
+          "cargo": 3,
+          "counters": {
+            "blocks": 6,
+            "counters": 3,
+            "courier_hits": 0,
+            "dodges": 0,
+            "player_hits": 0,
+            "redirects": 0,
+            "rejected": 0
+          },
+          "hp": 5,
+          "mode": "won",
+          "model_ticks": 1650,
+          "role": "Guardian",
+          "server_ticks": 1769,
+          "snapshots": 553,
+          "terminal_reset_rejected": true
+        },
+        {
+          "accepted": 423,
+          "cargo": 3,
+          "counters": {
+            "blocks": 0,
+            "counters": 3,
+            "courier_hits": 0,
+            "dodges": 2,
+            "player_hits": 0,
+            "redirects": 2,
+            "rejected": 0
+          },
+          "hp": 5,
+          "mode": "won",
+          "model_ticks": 1266,
+          "role": "Duelist",
+          "server_ticks": 1385,
+          "snapshots": 425,
+          "terminal_reset_rejected": true
+        }
+      ],
+      "sample": {
+        "accepted": 15,
+        "active_ticks": 586,
+        "model": {
+          "cargo": 1,
+          "counters": {
+            "blocks": 0,
+            "counters": 0,
+            "courier_hits": 2,
+            "dodges": 1,
+            "player_hits": 1,
+            "redirects": 0,
+            "rejected": 0
+          },
+          "courier_speed": 28.0,
+          "courier_x": 433.935,
+          "enemy_focus": 3,
+          "energy": 100.0,
+          "events": [
+            {
+              "cargo": 3,
+              "energy": 74.8,
+              "hp": 6,
+              "kind": "step",
+              "tick": 52
+            },
+            {
+              "cargo": 2,
+              "energy": 100.0,
+              "hp": 6,
+              "kind": "courier_hit",
+              "tick": 169
+            },
+            {
+              "cargo": 1,
+              "energy": 100.0,
+              "hp": 6,
+              "kind": "courier_hit",
+              "tick": 338
+            },
+            {
+              "cargo": 1,
+              "energy": 100.0,
+              "hp": 5,
+              "kind": "pulse_hit",
+              "tick": 507
+            }
+          ],
+          "guard_style": "Steady",
+          "hp": 5,
+          "mode": "play",
+          "outfit": {
+            "health_limit": 6,
+            "id": "riveted",
+            "movement_scale": 0.8
+          },
+          "role": "Guardian",
+          "tick": 587
+        },
+        "rejected": {
+          "already_started": 1,
+          "choice": 3,
+          "frame": 5,
+          "rate": 93,
+          "release_required": 1,
+          "schema": 13,
+          "sequence": 5,
+          "session": 2
+        },
+        "server_ticks": 602,
+        "stale_clears": 2
+      }
+    }
+  }
+}

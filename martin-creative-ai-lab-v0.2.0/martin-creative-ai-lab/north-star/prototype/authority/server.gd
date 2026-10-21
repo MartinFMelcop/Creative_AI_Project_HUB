@@ -10,6 +10,7 @@ var peer:StreamPeerTCP
 var buffer:=PackedByteArray()
 var game=Combat.new()
 var started:=false
+var catalog_sent:=false
 var session:=""
 var high_water:=-1
 var input_tick:=-100
@@ -75,10 +76,25 @@ func neutral() -> void:
 	held.clear();previous.clear();quarantined=true
 func close_peer() -> void:
 	if peer:peer.disconnect_from_host()
-	peer=null;buffer.clear();neutral()
+	peer=null;buffer.clear();neutral();catalog_sent=false
 	if started:disconnected=true
+static func preparation_catalog(model) -> Dictionary:
+	var outfits:Array=[]
+	for id in model.fittings:
+		var item:Dictionary=model.fittings[id]
+		outfits.append({"id":id,"name":item.name,"health":item.health,"movement":item.movement,"recovery":item.recovery})
+	return {"v":1,"kind":"catalog","outfits":outfits,"techniques":{
+		"Guardian":[{"id":"Steady","summary":"Sustained frontal guard; standard counter opening."},
+			{"id":"Riposte","summary":"Guard expires while held; a timed block earns a longer opening."}],
+		"Duelist":[{"id":"none","summary":"Draw a bolt, leave its locked line; guard is unavailable."}]}}
+
 func message(data:Dictionary) -> void:
 	if not data.get("kind") is String or not integer(data.get("v"),1,1):reject("schema");return
+	if data.kind=="catalog":
+		if started:reject("already_started");return
+		if not fields(data,["v","kind"]):reject("schema");return
+		if catalog_sent:reject("catalog_already_sent");return
+		catalog_sent=true;send(preparation_catalog(game));return
 	if data.kind=="hello":
 		if started:reject("already_started");return
 		if not fields(data,["v","kind","role","style","outfit"]):reject("schema");return
@@ -178,7 +194,9 @@ func state() -> void:
 		"step_left":game.step_left,"step_dir":[game.step_dir.x,game.step_dir.y],
 		"strike_cooldown":game.strike_cooldown,"feint_cooldown":game.feint_cooldown,
 		"step_cooldown":game.step_cooldown,"health_limit":game.health_limit,
-		"message":game.message,"last_impact":game.last_impact.duplicate(true),"actions":action_hints(game)},true)
+		"message":game.message,"last_impact":game.last_impact.duplicate(true),"actions":action_hints(game),
+		"preparation":{"role":game.role,"style":game.guard_style,"outfit":game.outfit,
+			"health":game.health_limit,"movement":game.movement_scale,"recovery":game.recovery_rate}},true)
 	send({"v":1,"kind":"state","state":value,"ack":high_water,"tick":server_tick,"quarantined":quarantined,
 		"accepted":accepted,"rejected":rejects.duplicate(),"stale_clears":stale_clears})
 func finish() -> void:

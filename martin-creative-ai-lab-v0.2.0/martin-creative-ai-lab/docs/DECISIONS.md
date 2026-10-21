@@ -2866,3 +2866,38 @@ lease-evidence regressions pass. The earlier CI failure and an intermediate guar
 conjunction failure remain recorded without inventing their unavailable snapshots/root
 causes. This proves the bounded instrument behavior, not the exact prior runner cause,
 renderer performance, player benefit or future CI success. Publication/CI are separate.
+
+## ADR-101 — inspect and commit server-owned character preparation
+
+**Date:** 2026-10-21 UTC. **Status:** implemented DEVELOPMENT.
+**Baseline:** clean `work`, `e5a2417e4558866f02a1f9c13c3b9f5fa8225461`; fetched main
+matched. The previous full six-job CI succeeded; startup reliability is not a new task.
+
+**Selection:** Compare new ability/build mechanics, authoring/content production,
+independent observation, networking and reliability. Deliver a connected preparation
+consumer now: the remote window previously hid outfit resource trade-offs behind
+local IDs and locked on connection. Existing meaningful choices can become inspectable
+without inventing class canon, a generic talent tree or a production-engine decision.
+CRE-011/013 (H) inform visible trade-offs and pre-combat commitment; ENG-015 informs a
+compatible inspection/commit boundary. SCI-017 informs actual cases and negative controls.
+
+**Behavior:** Optional once-per-connection catalog inspection exposes server-loaded
+fitting values and supported techniques without starting or spending the encounter.
+The window compares health, movement and unguarded recovery; F2/Tab/C compose existing
+choices and Enter explicitly commits. The server revalidates the tuple and owns actual
+resources; interactive confirmation rejects substituted choices/stats. Preparation cannot
+reopen after entry. Direct legacy hello remains valid. Existing clock, sequence, rate,
+release, resource and failure gates remain. Local gameplay/PCK/Linux0.5.0 are unchanged.
+
+**Verification/limits:** [Execution](../evidence/north-star-preparation/RUN.json) binds
+178 real protocol/preparation controls executing twelve nominal tuples per source/PCK
+delivery, including paid steps and sustained/expired/no guard. Current remote native
+controls total 233 per delivery, including 36 new preparation controls; four remote and
+four headless living journeys complete. Normal and deliberately delayed OS suites each
+pass 46 controls. An additional actual View Field sash selection completes a living
+Guardian goal with health4/cargo3 and confirmed recovery26. Actual source images were inspected for trade-off comparison and
+confirmed entry. Original startup/authority and relay/result/lease regressions remain.
+Grouped-delivery losses remain observations under the unchanged lease rule. A preliminary
+instrument run rejected changed test-input identities; no accepted evidence was written.
+These are not twelve competitive builds, new abilities, player validation, final canon,
+a lab/capability promotion, a shipped network release or engine selection.
