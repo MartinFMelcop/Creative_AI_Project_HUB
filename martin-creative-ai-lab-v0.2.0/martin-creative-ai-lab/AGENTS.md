@@ -10,9 +10,12 @@ code comments and Git messages use English; preserve creative/source languages.
 ## Local boundaries
 
 Use relevant SEED sections, registries, product/design records and actual artifacts
-selectively. P01–P11 registry entries describe historical origins; North Star capability
-records describe destination evidence separately. Candidate labs are not implemented
-labs; origin execution is not destination integration. Follow
+selectively. P01–P11 registry entries retain historical source provenance; each has a mandatory
+laboratory destination in `labs/origins.json`. Incomplete destinations are not
+operational laboratories; origin execution is not destination integration. Track
+legacy consumption as INTEGRATED, REJECTED or genuinely UNRESOLVED. The new production
+stack is Unity/C#, with Windows priority and Steam intended; retained Godot execution
+is migration evidence, not a competing undecided engine direction. Follow
 [brains/README.md](brains/README.md) for proportional retrieval and
 [references/AGENTS.md](references/AGENTS.md) for preserved source contracts. Knowledge
 outside the five protected sources is contextual and revisable, with provenance and
@@ -29,8 +32,12 @@ upgrades. Required repository source/link/structure gates are:
 python3 tools/validate_repo.py
 python3 tools/reference_library.py check
 python3 tools/brain_query.py check
+python3 tools/check_transformation.py
 ```
 
+Run affected regressions and actual laboratory instruments, plus C# domain/destination
+checks where affected. Never replace Unity/Windows execution with a source build.
+Run `python3 tools/test_transformation.py` for transformation-contract changes.
 Run affected regressions and integration checks; the actual required CI jobs live in
 `../../.github/workflows/lab-checks.yml`. For operating-validator changes run
 `python3 tools/test_validate_repo.py`; source/query/manifest tooling has corresponding

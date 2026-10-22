@@ -31,7 +31,7 @@ The first comparison favored combat response over existing P01 economy controls,
 P10 narrative consequence research and P11 persistence instrumentation because its
 bounded question directly concerns recognizable action. This is not a fixed work order.
 
-## Candidate next questions, not implemented commitments
+## Unresolved research questions within mandatory destinations
 
 - Can two bounded character identities produce different intelligible decisions under
   the same threat, with meaningful costs and at least two eligible responses?
@@ -42,7 +42,8 @@ bounded question directly concerns recognizable action. This is not a fixed work
 - Can accepted shared actions survive retries/conflicts without double spending?
   P05/P11 offer local recovery evidence, not shared-world authority or production scale.
 
-Choose among these and newly observed weaknesses using
+Resolve these questions and newly observed weaknesses through the mandatory lab
+destinations, with actual methods rather than permanent optionality. Use
 [the operating selection process](../docs/prompts/CONTINUOUS_DEVELOPMENT.md) and
 [selective knowledge retrieval](../brains/README.md). A substantial research or
 production capability needs a consequential question and a concrete consumer or
@@ -60,3 +61,15 @@ executed evidence. Only then evolve the foundation stage and capability contract
 Local gameplay does not prove multiplayer, scale, retention or demand. External
 participants can later assess whether choices, costs, feedback and identity are
 understandable; disclose sample/context and do not treat agent review as human evidence.
+
+
+## Progression recovery and C# destination
+
+The newly operational [RPG Systems laboratory](../labs/rpg-systems/README.md) consumes
+actual threshold/budget/QA sources, exposes the preserved helper's header mismatch and
+executes a typed C# adaptation plus an original North Star destination. Native controls
+separate arithmetic/schema recovery from final balance, class canon and player value.
+[Evidence](../evidence/rpg-progression/RUN.json) binds actual source/result identities.
+The selected Unity/C# direction does not turn this Linux terminal/domain execution into
+Editor or Windows validation. Other mandatory labs retain their concrete next objectives
+in [the catalog](../labs/origins.json); one new method does not complete the transformation.

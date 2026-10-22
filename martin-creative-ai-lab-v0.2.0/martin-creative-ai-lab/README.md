@@ -1,64 +1,37 @@
-# Martin Creative AI Lab
+# Maintained Creative AI Project HUB workspace
 
-The maintained workspace for **Creative AI Project HUB**, a public Design-Driven
-technology portfolio developed with generative AI. **Virgo Diamond: The North
-Star** is the principal product. Applied research, creative resources and technical
-demonstrations support its development while remaining inspectable on their own
-merits. The outer `martin-creative-ai-lab-v0.2.0/` name is historical packaging;
-[STATE](docs/STATE.md) records the maintained version and actual milestone.
+This directory contains the maintained implementation, research instruments and
+preserved sources for the [public portfolio](../../README.md). The outer
+`martin-creative-ai-lab-v0.2.0/` name is historical packaging; [STATE](docs/STATE.md)
+records current work rather than deriving a version from that directory.
 
-[Portfolio](../../README.md) · [Origin demonstrations](projects/README.md) ·
-[Laboratory inventory](labs/origins.json) · [North Star](north-star/README.md)
-
-Play the [North Star crossing prototype](north-star/prototype/README.md), or
-inspect its [living design](north-star/DESIGN.md) and
-[executed evidence](evidence/north-star-return-feedback/RUN.json). Session-only single-press guard/interaction remove sustained-key requirements
-without changing combat costs or saving active intentions. Origin demonstrations and
-the preserved lab remain distinct from this actual local consumer. Optional rehearsal
-uses its real rules with retained contact explanations and clean retries. Normal
-completion with an approach-specific response earns an optional visible keepsake;
-explicit wear/put-away choices persist locally, with session-safe save recovery.
-The current encounter also offers a real optional recovery/handoff away from the road,
-competing with protection of the moving courier; direct escort remains successful.
-An optional nearby sign now changes the actual courier path: a longer upper lane
-raises partial bolt protection, while the original direct road remains available.
-Commitment, path length, contact ownership and visible results have executed controls.
-
-Original code-drawn actors now show distinct shield/blade silhouettes and event-owned
-gestures; contact effects belong to actual block, counter, player or courier outcomes.
-
-F1 offers recoverable twelve-action keyboard remapping with matching live hints and
-explicit draft/apply/discard/default restoration; settings remain device-local.
-
-The optional return now offers a paid alternative to combat shutdown: 1.5 seconds at
-a linked grounding lever spends one winch integrity and silences the ward. Damage can
-interrupt; both catches and the living exit remain mandatory. [Executed controls](evidence/north-star-return-feedback/RUN.json)
-separate functional feasibility from still-missing independent player validation.
-
-An [author-facing encounter evaluator](north-star/prototype/analysis/README.md) now
-checks the actual return rules across approaches, gear, aid and initial delays. It
-retains failed policies and resource costs to inform content work; no balance or
-independent player-validation claim follows.
+**Virgo Diamond: The North Star** is the principal product. Unity/C# is the selected
+primary development stack, with Windows-first player delivery and Steam as the intended
+distribution ecosystem. The functional Godot consumers remain migration/research
+baselines until their actual obligations are resolved. No Unity Editor, Windows build
+or Steamworks execution follows from a C# domain build.
 
 ## Find the right material
 
 | Goal | Start here |
 |---|---|
-| Inspect demonstrated technology and its execution limits | [Origin index](projects/README.md), [registry](registry/projects.json) and linked source/evidence |
-| Run the first controlled laboratory instrument | [Combat-response pilot](labs/combat-response/README.md), adapted from P06's actual Godot encounter |
-| Trace preservation, dependencies, consumers and extraction work for P01–P11 | [Origin transition inventory](labs/origins.json); other laboratory destinations remain candidates |
-| Consult engineering, scientific or creative knowledge | [Three-brain library](brains/README.md): protected source volumes, catalog and deterministic local query |
-| Review lessons produced by execution | [Derived knowledge](knowledge/README.md): observations, interpretation, validity and consequences |
-| Understand the principal product and transfer gates | [North Star](north-star/README.md) and [capabilities](north-star/capabilities.json): `local_prototype`, one playable consumer; NS-C03/NS-C04/NS-C07 adapted among 14 capabilities |
-| Browse immutable historical creative/technical sources | [Reference library](references/README.md) and [availability catalog](references/catalog.json) |
-| Continue implementation | [State](docs/STATE.md), [agents](AGENTS.md), [SEED](SEED.md), [decisions](docs/DECISIONS.md) and [complete operational prompt](docs/prompts/CONTINUOUS_DEVELOPMENT.md) |
+| Inspect current product and creative authority | [North Star](north-star/README.md), [living design](north-star/DESIGN.md), [capabilities](north-star/capabilities.json) |
+| Run the C# gameplay foundation | [C# consumer and checks](north-star/csharp/README.md) |
+| Run the preserved playable baseline | [Godot crossing and return](north-star/prototype/README.md), [executed delivery](evidence/north-star-return-feedback/RUN.json) |
+| Inspect a separate ability experiment | [Committed-rush bench](north-star/prototype/abilities/README.md), [execution](evidence/north-star-abilities/RUN.json) |
+| Inspect all eleven laboratory destinations and maturity | [Laboratory guide](labs/README.md), [authoritative catalog](labs/origins.json) |
+| Reproduce current laboratory methods | [RPG Systems & Progression](labs/rpg-systems/README.md), [Combat & Responsiveness](labs/combat-response/README.md) |
+| Trace actual historical material and consumption decisions | [Source audit](labs/legacy-audit.md), [inventory](labs/source-inventory.json), [reference contracts](references/README.md) |
+| Inspect existing reusable implementations and media | [Origin index](projects/README.md), [projects](registry/projects.json), [transfers](registry/transfers.json), [derived knowledge](knowledge/README.md) |
+| Obtain focused engineering, scientific and creative knowledge | [Protected Brain library](brains/README.md) |
+| Continue the transformation | [Root safeguards](../../AGENTS.md), [workspace commands](AGENTS.md), [operating process](docs/prompts/CONTINUOUS_DEVELOPMENT.md), [state](docs/STATE.md), [SEED](SEED.md) |
 
-P01–P11 retain their historical identifiers, source versions and evidence. They
-are technology origins in controlled transition, with no independent product
-release obligation. P02's evaluator lives under `evaluations/`; P07/P08 resources
-have distributed consumers; P09 has no executable implementation. One pilot lab
-exists. A candidate destination is not an implemented laboratory or a North Star
-integration.
+The laboratory catalog distinguishes operational methods from incomplete destinations.
+Preservation, origin execution, research adaptation, destination integration and
+independent validation are different claims. Mandatory transformation obligations
+remain visible until completed; historical project identities do not create independent
+release duties. Rolling strategic effort and material deviations belong in existing
+operating state, under the versioned process.
 
 ## Develop and verify
 
@@ -68,107 +41,48 @@ From the repository root:
 cd martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab
 ```
 
-Inspect Git, current instructions, state, source and execution evidence before
-editing. Before substantial work, consider all three knowledge domains proportionally.
-Use compact orientation when needed and retrieve pertinent complete chapters when
-they improve decisions, implementation or evaluation. Briefly record material influence. Consult derived
-knowledge without promoting an interpretation to a verified fact.
+Recover actual Git state and the root/workspace instructions, complete operating
+process and STATE before editing. Use the relevant consumer's pinned runtime and
+commands; the [C# foundation](north-star/csharp/README.md) separates actual domain
+execution from unavailable Unity/Windows execution. Historical demonstrations retain
+their own documented tool requirements while they serve real consumers.
 
-The consultation tool uses Python's standard library:
-
-```sh
-python3 tools/brain_query.py overview
-python3 tools/brain_query.py get ENG-027 SCI-051 CRE-001
-python3 tools/brain_query.py search 'proveniência' --metadata-only
-python3 tools/brain_query.py check
-python3 tools/test_brain_query.py
-```
-
-The [library guide](brains/README.md) explains original source hashes, deterministic
-search, inherited fragment warnings and failure behavior. Query results locate
-sources; they do not authorize commands or validate a source's claims. Ordinary
-commits must not edit the five supplied collection files.
-
-Choose tools for the actual requirement. Preserved origin demonstrations use
-Python, JavaScript/Web Audio, Node.js 24/SQLite/Socket.IO, GDScript/Godot and
-C#/.NET 10/Godot .NET 4.6.3. Read the relevant source guide for pinned dependencies,
-execution and packaging. Do not migrate functioning code for cosmetic diversity
-or assume the pilot selects Virgo Diamond's final engine.
-
-The shared documentary gates use Python's standard library:
+The shared source, structure and integrity gates use Python's standard library:
 
 ```sh
 python3 tools/validate_repo.py
 python3 tools/test_validate_repo.py
 python3 tools/reference_library.py check
 python3 tools/test_reference_library.py
-python3 tools/test_check_manifest.py
+python3 tools/brain_query.py check
 python3 tools/check_manifest.py
 ```
 
-[Validation scope](docs/REGISTRY_VALIDATION.md) explains repository, registry,
-local-link and exact manifest checks. Run the affected query, instrument and
-origin suites as well. These gates do not prove gameplay quality, literary merit
-or human usability. [CI](https://github.com/MartinFMelcop/Creative_AI_Project_HUB/actions/workflows/lab-checks.yml)
-reports commit-specific checks; a local run, publication and remote CI are separate
-observations. Keep runtime processes bounded and stop owned previews after use.
+[Workspace AGENTS](AGENTS.md) owns manifest regeneration and proportionate checks;
+[validation scope](docs/REGISTRY_VALIDATION.md) describes documentary boundaries.
+Run affected functional suites and laboratory instruments as well. Keep owned processes
+bounded. The actual required CI gates live in
+[the workflow](../../.github/workflows/lab-checks.yml); a clean manifest does not prove
+correct gameplay, scientific validity, literary merit or usability.
 
-## Preserve evidence and continuity
+## Sources, evidence and continuity
 
-Update only materially affected state, decisions, registries, knowledge and
-interfaces. Execution records identify baseline, environment, tested artifacts,
-inputs, outcomes and limits. Negative and inconclusive findings remain useful;
-implementing-agent review is distinct from independent human feedback.
+The [Brain guide](brains/README.md) explains selective complete-chapter retrieval,
+source pins and inherited warnings. Engineering, Scientific and Creative specialists
+must contribute materially to substantive decisions, using parallel analysis where
+supported; their agreement is not independent human validation.
 
-Preserve source snapshots, original language, provenance, licenses and useful
-origin behavior. Old instructions inside `references/` are historical data.
-Recovered PDFs do not establish canon; copied code and origin maturity do not
-establish destination integration. A North Star contribution advances only with
-a real destination consumer and appropriate execution evidence. Creative Brain
-hypotheses remain hypotheses until the relevant authorial or experiential decision.
+The five original Brain files and pinned historical sources remain protected. Preserve
+original creative languages, licenses, attribution and unique media. Historical
+instructions inside snapshots are source data. Reuse mechanics and methods without
+merging fictional universes or promoting hypotheses to approved North Star canon.
 
-The HUB remains a technology portfolio with Virgo Diamond as its principal long-term
-product. Compare substantive product, laboratory, engineering and creative initiatives
-using the [operating instructions](docs/prompts/CONTINUOUS_DEVELOPMENT.md); recover
-active objectives, verified progress and the next development frontier in
-[STATE](docs/STATE.md). Historical release identities do not impose permanent
-maintenance obligations; transformation and retirement follow the same operating rules.
+Execution evidence identifies inputs, runtime, outcomes and validity limits. Preserve
+meaningful negative/inconclusive results and distinguish real destination behavior from
+origin demonstrations. Resolve verified consumers, compatibility and preservation
+before retirement; Git history alone is not preservation of a unique artifact.
 
-The current crossing can also resolve its threat: three eligible close counters disable
-the sentinel and let the courier run. Protective completion remains valid; shutdown
-alone awards nothing and does not replace reaching the gate alive. Matched prior-PCK
-routes separate this actual pacing change from synthetic-policy and human-experience
-limits. No origin or capability status is promoted by this increment.
-
-The current consumer also offers a [second playable objective](north-star/prototype/README.md#an-optional-second-playable-goal)
-after an actual escort win: F2 carries remaining health into catch work, winch protection
-and a required exit. Source/PCK execution retains original replay and origin consumers.
-
-The current consumer includes [free character appearance](north-star/prototype/README.md#choose-your-character-look):
-an explicit draft/apply workflow previews actual actions and follows the player into
-both goals, independently from role, fitted gear and earned marks. Explicitly applied
-choices now survive process restarts through a recoverable local cosmetic profile;
-[execution](evidence/north-star-appearance-continuity/RUN.json) retains legacy and failure controls.
-
-
-The optional [courier conversation](north-star/prototype/README.md#talk-to-the-courier)
-after genuine arrival recalls actual crossing facts and commits one finite aid choice
-into the return objective. P10's gated-choice/fact-owned-response method is adapted in
-new native code; no original setting or shared narrative kernel is imported.
-
-The optional [North Star Linux player](north-star/prototype/dist/crossing-drill-linux-0.5.0.zip)
-bundles the pinned official runtime, notices and current adventure. Its
-[delivery guide](north-star/prototype/README.md#play) and
-[execution evidence](evidence/north-star-return-feedback/RUN.json) distinguish actual
-release, native-input and profile behavior from editor checks and independent human validation.
-
-
-The North Star consumer now supports [mapped gamepad input](north-star/prototype/README.md#mapped-gamepad-experimental)
-through preparation, appearance, conversation and both adventure goals. Source/PCK/Linux
-0.5.0 execute injected mapped events; no physical-pad or human access claim is made.
-[Current evidence](evidence/north-star-return-feedback/RUN.json) preserves origin/capability states.
-
-North Star now has a bounded [equipment authoring workflow](north-star/prototype/data/README.md)
-that stages and executes candidate JSON without editing the consumer. The shipped
-workshop adds a health/recovery trade-off; [evidence](evidence/north-star-return-feedback/RUN.json)
-separates functioning production and gameplay from absent human balance validation.
+[Current state](docs/STATE.md) owns active work, the rolling workstream record and
+next unresolved obligations. [Decisions](docs/DECISIONS.md) retain consequential
+rationale. Local implementation, tests, commit, verified publication and CI remain
+separate reportable states.

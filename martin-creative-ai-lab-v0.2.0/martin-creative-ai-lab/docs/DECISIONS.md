@@ -2901,3 +2901,37 @@ Grouped-delivery losses remain observations under the unchanged lease rule. A pr
 instrument run rejected changed test-input identities; no accepted evidence was written.
 These are not twelve competitive builds, new abilities, player validation, final canon,
 a lab/capability promotion, a shipped network release or engine selection.
+
+
+## ADR-091 — Operational laboratory transformation and selected Unity/C# direction
+
+**Status:** accepted direct author instruction; implemented foundational increment.
+**Baseline:** `d007eb3b32a38b4ad12da363395d2196e9c17cb6`.
+
+The structural-transformation assignment explicitly replaces optional laboratory
+maturation, open production-engine selection and unrestricted effort selection.
+SEED0.34.0 and continuous-developmentv2 adopt eleven mandatory origin-owned research
+destinations, terminal legacy consumption, approximate rolling47/40/13 targets and
+Unity/C#/Windows-first/Steam-intended production direction. These parts supersede
+ADR-090 and earlier preferences; source preservation, focused retrieval, truthful
+execution, creative authority and safe Git integration remain binding.
+
+Independent parallel Engineering, Scientific and Creative analyses selected a typed
+progression capability over another combat clone, a blind full RGSS port and empty
+Unity scaffolding. The actual source/header defect and historical QA provide controls;
+a narrow C#8/netstandard2.1 domain and original terminal consumer provide executed
+value while the Editor/license/platform modules are unavailable. Scope and results
+belong in the [laboratory evidence](../evidence/rpg-progression/RUN.json), not this ADR.
+
+The existing origin catalog evolves rather than adding a parallel management registry.
+Nine incomplete destinations retain mandatory next acceptances; two operational methods
+do not complete the transformation. A short once-counted STATE window supports effort
+correction without pretending activity counts measure hours or exact percentages.
+
+Artifact inspection found no safe whole-package deletion. A tested changed-path selector
+instead resolves the unconditional unrelated historical rebuild duty while retaining
+full manual/shared/workflow and affected-consumer gates. Integrity remains unconditional.
+No unique source, protected volume/pin, save format, third-party notice or release
+payload was discarded. Future source/consumer retirement still requires explicit
+resolved dependencies, recovery and rights. No Unity Editor, Windows player, Steamworks,
+independent human or final progression/class canon is established by this increment.

@@ -1,116 +1,72 @@
-# Applied research laboratories
+# Research laboratories
 
-The HUB remains a **Design-Driven technology portfolio developed with generative
-AI**. Laboratories investigate explicit questions and develop useful instruments
-and capabilities. **Virgo Diamond: The North Star** is the principal long-term
-product; laboratory investment competes with direct product and other portfolio
-work under the [operating instructions](../docs/prompts/CONTINUOUS_DEVELOPMENT.md).
-Laboratory maturity requires actual methods and results. Directory names and
-research plans do not establish execution or MMORPG readiness.
+The HUB has **eleven mandatory laboratory destinations**, each owned by one P01–P11
+origin and allowed to consume other origins. Their domain, owner role, question,
+source inventory, truthful maturity, consumer relationship, validity boundary and
+next acceptance live in [the transformation catalog](origins.json). The
+[public entry point](../../../README.md) offers a concise navigation table.
+A destination is not operational merely because it has an entry or a directory.
+Nine destinations remain incomplete; they cannot be postponed indefinitely.
 
-[The origin inventory](origins.json) records P01–P11's reusable capabilities,
-actual source/evidence paths, existing consumers, dependencies, preservation
-risks and next extraction boundary. It complements the
-[project registry](../registry/projects.json), which retains historical versions,
-technical maturity and execution records. Historical M4 does not mean a new
-laboratory is calibrated or the MMORPG has consumed its code.
+## Operational methods
 
-## Working pilot: combat response
+- [RPG Systems & Progression](rpg-systems/README.md): interrogates the actual RPG Maker
+  XP progression tables/helpers/QA and executes a typed C# adaptation plus an original
+  North Star destination. The source-binding assay exposes lost health/resolve budgets;
+  boundary and split-grant controls distinguish source arithmetic from final balance.
+  [Evidence](../evidence/rpg-progression/RUN.json).
+- [Combat & Responsiveness](combat-response/README.md): the retained combat-response
+  pilot runs 28 native timing/range/resource cases twice through unchanged P06 physics.
+  [Results](../evidence/combat-response/results.json) preserve failures and comparative
+  response envelopes. This is origin instrument execution, not a Unity migration or
+  independent player result.
 
-[Combat response](combat-response/README.md) instruments the **unchanged P06
-native encounter**. Its 28 fixed cases run twice through real Godot physics and
-contact code, contrasting parry, directional dodge and a single seal under the
-same phase-one sweep warning. Negative controls cover timing, range, resolve
-and a separately imposed echo overlap. The
-[56 outcomes](../evidence/combat-response/results.json) repeat exactly in a
-separate engine invocation; [the execution record](../evidence/combat-response/RUN.json)
-identifies inputs, environment, hashes, failures and limits.
+The new progression capability is additional to the existing combat pilot. It does
+not make the other destinations operational. Their next methods must produce real
+controls, results and practical consumer/decision value; shared instruments are welcome.
 
-The close live parry opens a 24-damage early counter at tick 52, compared with
-ordinary recovery at tick 62. Outward dodge avoids these traces but spends a
-movement commitment and ends farther away; a single seal does not interrupt
-the sweep. At 110px, guard succeeds while the shorter blade misses. These are
-measured mechanical tradeoffs, not evidence that players perceive distinct
-classes. No North Star destination consumes the instrument or its mechanics.
+## Consume available knowledge
 
-From the maintained lab, using Python 3.11+ and Godot 4.6.3:
+[The broad inventory](source-inventory.json) binds actual accessible sources, category
+counts, tree identities, pinned archived members and all retained packages.
+[The legacy audit](legacy-audit.md) inspects real implementations across P01–P11 and the
+RPG Maker XP systems; the inventory command is reproducible rather than a claimed
+whole-corpus deep read. Re-run affected inventory after source/registry changes:
 
 ```bash
-python3 -m unittest discover -s labs/combat-response -p 'test_*.py'
-python3 labs/combat-response/run.py --godot godot \
-  --output /tmp/combat-response.json \
-  --compare evidence/combat-response/results.json
+python3 tools/inventory_origins.py --output labs/source-inventory.json
+python3 tools/inventory_origins.py --check labs/source-inventory.json
 ```
 
-The runner bounds and closes its owned engine processes. Results come from
-scripted headless scene execution; there was no physical input/listening,
-independent human evaluation, multiplayer or new class implementation.
-[The contextual finding](../knowledge/combat-response.md) separates observations,
-interpretation and the next validity boundary.
+The catalog records INTEGRATED only for a real executed consumer, REJECTED only for a
+bounded evaluated decision, and UNRESOLVED with a concrete next action. Preserved bytes,
+an available Ruby helper or a historical report do not prove complete gameplay
+execution. Original class names, world fiction and 180-level pacing are not adopted
+through technical reuse. Missing historic assets do not justify indefinite recovery;
+use available sources, credible new research and other labs with distinct provenance.
 
-## Controlled transition
+## Execution and operating balance
 
-| Origin | Preserved capability | Transition |
-|---|---|---|
-| P01 — Eclipse Fair | C# transactions, policy comparison, replay, native local ownership and saved slots | Preserve consumers; select a bounded economy or persistence question before extraction. |
-| P02 — AI Evaluation & QA | Artifact export, pinned checks, timeout/environment evidence and control calibration | Preserve the existing task; independent candidate/model evaluation remains absent. |
-| P03 — Tokyo 80s | Web Audio timing, charts, phrase rehearsal and head/tail diagnostics | Preserve songs/fixtures; candidate timing, input and feedback research. |
-| P04 — Darsen / Lich | Bilingual scene/source comparison and checked EPUB/PDF production | Preserve texts, editions and rights; candidate narrative/production research. Fiction is not Virgo Diamond canon. |
-| P05 — Cinderwatch | Deterministic tactical rules, response forecasting, replay recovery and native packaging | Preserve consumers/formats; candidate combat-choice, recovery and distribution research. |
-| P06 — Veilbreak | Native contact, telegraphs, commitments, guard/dodge, practice and audiovisual timing | Instrumented by the executed combat-response pilot; original encounter and tests preserved. |
-| P07 — Visual assets | Generated original paintings, motion regions and portrait atlas | Distributed across P06/P05; preserve exact pixels and provenance, rather than inventing a standalone application. |
-| P08 — Audio production | Original synthesis, adaptive loops, semantic cues and tempo derivatives | Distributed across P03/P06/P05; preserve masters, scores, producers and real consumers. |
-| P09 — Operations cases | Reported case themes only; no executable capability/evidence | Seed only. Recover an authorized source before claiming a case or instrument. |
-| P10 — Waystone | NPC state, consequential quests, fresh consent, versioned replay and Python/JS comparison | Preserve source mappings and save fixtures; candidate narrative/behavior research. |
-| P11 — Project Rooms | SQLite/idempotent delivery, bounded reading, backup, search and portable reports | Preserve trusted-local consumers and evaluator snapshots; candidate persistence/evidence tooling. |
+The [operating process](../docs/prompts/CONTINUOUS_DEVELOPMENT.md) requires meaningful
+Engineering, Scientific and Creative analyses, independent and parallel when supported.
+Their agents consult the protected [Brain library](../brains/README.md); the volumes
+are not those agents or independent human validation. Record consequential influence
+and disagreements, not activation ceremonies.
 
-All eleven are **historical origins in controlled transition**, with no obligation
-to ship independent game/tool releases. Their source, media, tests and old delivery
-artifacts remain available. Future transformation, consolidation or retirement follows
-the [operating lifecycle rules](../docs/prompts/CONTINUOUS_DEVELOPMENT.md) and actual
-consumer, preservation and validation obligations. P02's old laboratory label and
-P07/P08's production labels are historical provenance, not additional implemented
-laboratories. Existing validated transfers
-and integrated assets retain their named **origin** consumers and scope.
+The current rolling effort window belongs in [STATE](../docs/STATE.md), with approximate
+47/40/13 targets, once-counted substantive units and correction of persistent
+underinvestment. Laboratory work is a permanent transformation obligation, not an
+optional competing label. Product integration, preserved origin execution, new lab
+execution and independent external validation remain separate claims.
 
-## Candidate questions
+## Lifecycle and validity
 
-These are research destinations, not created laboratories or a mandatory backlog:
+Retained origin applications/media can remain working sources without permanent
+independent release duties. Packaging/source-removal decisions require actual consumers,
+recovery, licenses/notices, save compatibility, integrity and replacements. A duplicate
+embedded runtime does not prove that an entire versioned package is redundant. Source
+pins and protected originals remain intact; Git history alone is not preservation.
 
-- **Evaluation methodology — P02/P11:** can defective/reference controls detect
-  intended behavior without leaking evaluator context or inventing model scores?
-- **Economy/simulation — P01/P05:** which bounded ownership and expenditure rules
-  produce distinct viable choices under matched scenarios?
-- **Narrative agency — P04/P10:** can players understand costs while characters
-  retain distinct motives, voice and causal continuity?
-- **Audiovisual perception — P03/P06/P07/P08:** which cues expose contact and recovery
-  without hiding the character or threat?
-- **Persistence/delivery — P01/P05/P11:** which retry/recovery contracts preserve
-  accepted progress under bounded failures without trusting client state?
-
-## Evidence and reuse boundary
-
-Use selective knowledge retrieval from the [brain library](../brains/README.md)
-when it informs the question, method or evaluation. Relevant contextual findings
-belong in [knowledge/](../knowledge/README.md), with their validity limits; preserve
-the protected source volumes and record only material contributions.
-
-An implemented laboratory establishes a meaningful question or capability,
-an executable or otherwise verifiable method, relevant inputs and controls,
-actual results or demonstrated tools, assumptions, limits and a practical
-contribution to a product, technology or decision. Use refutable predictions when
-applicable. Keep meaningful negative and inconclusive outcomes; a simulation or
-scripted runtime is not a human study.
-
-A substantial research program may continue across sessions and develop coordinated
-instruments using several origins. Reuse existing methods where suitable and choose
-scope by the value and feasibility of the whole contribution. Recover its progress,
-dependencies and next frontier through the existing initiative records described in
-the [operating instructions](../docs/prompts/CONTINUOUS_DEVELOPMENT.md). Consolidate
-or retire structures when their contribution no longer justifies maintenance.
-
-[North Star's capability catalog](../north-star/capabilities.json) separately
-tracks origin verification and destination use. A laboratory consumer is not a
-Virgo Diamond game consumer. Actual destination execution is required before an
-integration claim; this transition does not choose the MMORPG engine or prove
-networking, scale, player enjoyment, accessibility or commercial demand.
+Laboratory claims are checked by `tools/check_transformation.py`; actual instruments
+and destination consumers execute in CI. Documentary hashes cannot substitute for fresh
+execution, scientific validity, player reception, Unity Editor, Windows or Steam.

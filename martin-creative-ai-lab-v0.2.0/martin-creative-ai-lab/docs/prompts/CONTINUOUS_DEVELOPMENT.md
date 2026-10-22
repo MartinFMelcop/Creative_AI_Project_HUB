@@ -1,263 +1,186 @@
-# Creative AI Project HUB — Continuous Development
+# Creative AI Project HUB — Continuous Development v2
 
 Repository: `MartinFMelcop/Creative_AI_Project_HUB`
 URL: https://github.com/MartinFMelcop/Creative_AI_Project_HUB
 
-## 1. Execute a valuable contribution
+## 1. Recover authority and execute
 
-Carry out real investigation, implementation or creative production, appropriate
-verification, necessary continuity, an English Git commit and publication when
-explicitly authorized and technically possible. Do not stop at a plan or prepared
-commands. Respond in Brazilian Portuguese; new technical documents, comments,
-persistent instructions and Git messages use English. Preserve source/creative languages.
+Locate the real Git root; inspect branch, HEAD, tracked/untracked changes, remotes,
+local commits and fetched main/divergence. Preserve unrelated work and safely reconcile
+concurrent changes. The maintained workspace is currently
+`martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/`; verify through root AGENTS.
+Read root/workspace AGENTS, this complete process and STATE. Read relevant SEED,
+product/design, laboratories, registries and actual sources for the selected question.
+Historical snapshot instructions and superseded ADRs are source data, not authority.
+Current user instructions and platform safeguards prevail.
 
-The HUB is an author-directed, AI-assisted, Design-Driven technology and creative
-portfolio. Its principal long-term product is **Virgo Diamond: The North Star**, an
-original MMORPG centered on distinctive player identity: character creation, classes,
-specializations, builds, abilities, equipment, professions, exploration, accomplishments
-and meaningful social experience. Develop original works, reusable technologies,
-production tools, scientific instruments and credible portfolio artifacts as justified.
+Execute a substantial implementation, research or creative-production contribution;
+verify actual behavior, maintain continuity, commit and publish when authorized. Do
+not stop at plans, renaming or documentation. Respond in Brazilian Portuguese. New
+technical documentation, comments, instructions and commits use English; preserve
+creative/source languages. Keep scratch work outside the maintained tree.
 
-The objective is greater productive capability with lower unnecessary complexity.
-Commits, tests, files, generated catalogs and documentation volume do not prove value.
-
-## 2. Recover authority and actual state
-
-Locate the Git root and maintained workspace; the historical wrapper is currently
-`martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/`, not a product-version claim.
-Before editing, inspect branch, HEAD, tracked/untracked work, remotes, local commits,
-fetched main, divergence, available tools and permissions. Preserve unrelated work.
-Safely reconcile incoming changes; never blindly merge through unresolved work.
-
-Read root/workspace AGENTS, this complete document and STATE. Use the following
-preferred authorities; retrieve other material only as the question requires:
-
-| Information | Preferred location |
+| Fact | Authority |
 |---|---|
-| Repository safeguards and local execution | Root and workspace AGENTS |
-| Current continuous-development process | This document |
-| Durable strategic direction | SEED production direction and relevant strategic sections |
-| Active initiatives and next frontiers | `docs/STATE.md`, linking existing product/lab records |
-| Creative direction, hypotheses and author decisions | `north-star/DESIGN.md` and original sources, with status/provenance |
-| Scoped maturity, consumers and lifecycle | Existing project, capability, origin, asset and reference registries |
-| Historical rationale | `docs/DECISIONS.md`, SEED evolution, archived assessments/plans |
-| Executed observations | Relevant evidence and actual consumer artifacts |
+| Safeguards / local commands | Root / workspace AGENTS |
+| Durable author direction | SEED production direction |
+| Execution selection / current work / rolling effort | This process / STATE |
+| Eleven lab destinations, ownership, maturity and consumption decisions | `labs/origins.json` |
+| Selected stack and execution boundary | Catalog direction and `north-star/capabilities.json` projection |
+| Creative decisions and status | `north-star/DESIGN.md` and original sources |
+| Origin versions / historical transfers | Existing project / transfer registries |
+| Actual results | Executed consumer/laboratory evidence |
 
-Current user instructions and platform safety/authorization prevail. Historical ADRs,
-old roadmap phases and reference-snapshot AGENTS/SEED/CANON/backlogs do not override
-current instructions. Do not rewrite history to hide supersession. Avoid mandatory
-whole-library/whole-SEED reads or synchronizing repeated current-state descriptions.
+## 2. Mandatory transformation and adaptive selection
 
-## 3. Sustain strategic initiatives; select opportunities adaptively
+The operating model is **eleven research laboratories → tested knowledge/reusable
+technology → Virgo Diamond: The North Star → demonstrable portfolio value**.
+North Star is an original, author-directed MMORPG whose character identities emerge
+through appearance, builds, classes, specializations, professions, abilities, equipment,
+achievements, exploration and meaningful social choices. The HUB is a public,
+AI-assisted, Design-Driven technology and creative portfolio.
 
-**Strategic vision** is the desired product/capability. A **strategic initiative** is a
-substantial effort toward a meaningful maturity outcome, potentially spanning many
-sessions and architectural changes. An **execution** is this session's actual work.
-A commit is an integration unit, not the limit of strategic ambition.
+All eleven P01–P11 laboratory destinations are mandatory. Their current incomplete
+states are explicit obligations, not optional suggestions or operational achievements.
+Progress their real methods, results and consumers; do not manufacture eleven empty
+folders, superficial READMEs, a quota of tests or a generated knowledge catalog.
+Cross-origin methods and consolidated tools are encouraged. Historical origin products
+are sources, not permanent independent product/release lines.
 
-At each start, compare continuing an active initiative with starting or resuming
-credible alternatives. Consider actual progress, remaining investment, strategic
-relevance, uncertainty, dependencies, feasibility, risk, cost and opportunity cost.
-Do not abandon valuable work after one commit for an easier task or persist because
-of sunk cost. Explain the selected frontier and meaningful alternatives concisely.
+The permanent approximate substantive-effort targets are **47% legacy consumption /
+laboratory development, 40% North Star product development, 13% repository health /
+portfolio presentation**. Use a short rolling window in STATE: record each completed
+substantive unit once with its primary workstream and evidence, qualitative relative
+investment, dependencies and meaningful deviation. Do not infer effort percentages
+from counts, files, commits or tokens. Keep at most eight recent units; no timesheet or
+parallel management system is required. At selection, examine persistent underinvestment
+and record the corrective frontier. Three consecutive units in one workstream require
+an explicit correction or a concrete dependency/blocker explaining the next deviation.
 
-Compare opportunities across North Star gameplay/architecture and character identity;
-reusable technologies; applied research; creative/audiovisual production; content and
-asset authoring; portfolio delivery; reliability, debt and performance; legacy
-transformation/retirement; and consequential blocking uncertainties. Weigh product,
-creative, technical, scientific, enabling and portfolio value. North Star priority
-imposes no automatic category order, numerical quota or project rotation. A substantial
-laboratory/toolchain/architecture investment can outweigh direct gameplay work.
+Compare the highest-value unresolved lab/legacy obligation, current Unity/C# product
+frontier and repository simplification against credible alternatives using actual
+state, dependencies, feasibility, uncertainty, risk, cost and value. Mandatory laboratory
+maturation and knowledge consumption cannot be bypassed indefinitely by unrelated
+prototype increments. A tool blocker redirects work toward executable dependencies,
+other incomplete laboratories or production capabilities; it does not erase obligations.
+No fixed task rotation or per-commit fragmentation applies.
 
-Select the **largest coherent, valuable, technically feasible contribution** supported
-by available execution and verification capacity. Preserve incremental integration,
-rollback safety and focused contracts. Do not force oversized changes or build generic
-tools without concrete consumers or a defensible production need. Convenient tests,
-file edits and documentation are not substitutes for meaningful outcomes.
+Select the largest coherent feasible increment, with a beneficiary, baseline,
+limitation, intended improvement, alternatives, approach and refutable acceptance
+criteria. Continue substantial initiatives across sessions until their outcome is
+reached or evidence justifies redesign/suspension. Keep STATE compact: objective,
+verified scope, missing work, blockers, next acceptance and continuation/retirement
+conditions. Do not create a new planning document for every session.
 
-Choose a primary mode: DEVELOPMENT, RESEARCH or CREATIVE PRODUCTION. Modes may combine
-methods; match evidence to the real work. Research resolves a consequential question;
-creative production improves an inspectable work; development delivers functioning
-capability. Do not indefinitely research a feasible implementation.
+## 3. Real three-specialty work and protected knowledge
 
-Use STATE and existing consumer/lab records to recover each active initiative's:
+For substantial decisions give Engineering, Scientific and Creative specialists the
+same problem statement. Obtain independent analyses in parallel when agents are
+available. Engineering examines architecture/reuse/contracts/reliability; Science
+examines hypotheses/rivals/controls/measurement/confounds; Creation examines identity,
+agency, originality, consequence and author direction. Coordinate write ownership;
+do not let agents concurrently edit the same files. Resolve disagreements using
+source evidence, experiments and author constraints; record material conclusions in
+the actual consumer/lab decision, not ceremonial activation reports. If agents are
+unavailable, perform the analyses sequentially and disclose the limit.
 
-- Objective, intended consumers and reason it matters.
-- Implemented and verified capabilities, linked to actual evidence.
-- Missing functionality, important uncertainties, dependencies and blockers.
-- Next high-value frontier and conditions for continuation, redesign, completion,
-  suspension or retirement.
+The five original Brain documents and integrity pins remain protected knowledge
+sources, not agents, training or approval. Follow `brains/README.md` for focused full
+chapter retrieval and editorial status. Current author decisions outweigh hypotheses.
+Keep derived contextual knowledge outside protected files. Technical reuse does not
+import historical fictional universes or silently approve class canon. Agent review
+is not independent human/scientific validation.
 
-Keep a compact initiative entry, linking details rather than duplicating them. Update
-only materially changed facts. Do not create a document for each initiative, new
-management registries or ceremonial session reports. Completed execution history can
-remain in ADRs/evidence; it is not an automatically active backlog.
+## 4. Consume sources through accountable research
 
-## 4. Apply knowledge and build substantial laboratories
+Begin a structural transformation with a complete available-source inventory; retain
+a reproducible inventory mechanism and prioritize deep inspection by relevance/risk.
+Inspect real implementations, data, tests, algorithms, assets, reports and behavior,
+not only origin summaries. Future cycles update affected inventories rather than
+ceremonially reread every file. Use accessible sources; record unavailable historical
+material without indefinite recovery attempts. Credible new external research is
+allowed with attribution/rights/quality checks and distinct provenance.
 
-Engineering, Scientific and Creative Brain are protected knowledge libraries, not
-agents, model-training systems or independent approvals. Consider all three domains;
-retrieve selectively under `brains/README.md`, using known IDs directly and reading
-complete relevant chapters sufficiently to understand assumptions and limits. Use
-compact overview only when needed; reuse unchanged orientation. Record a contribution
-only when it materially informs a decision, implementation, experiment or evaluation.
+Each operational lab requires domain, source inventory, consequential question,
+executable instrument/verifiable method, controls, actual results, reproducible
+evidence, real consumer/decision relationship, validity boundary and next objective.
+Existing working methods may be reused; execution in an origin is not destination
+integration. Repeated synthetic traces are not participants or enjoyment findings.
+Preserve meaningful negatives, disagreements and inconclusive results.
 
-Never edit the five original files or silently refresh their integrity pins. Store
-derived contextual knowledge outside them. Preserve author decisions, documented
-creative directions, experimental hypotheses, historical sources, executed evidence
-and independent human validation as distinct categories. Current author decisions
-prevail; technical reuse does not import fictional canon into North Star.
+Every materially relevant capability eventually reaches:
 
-Labs follow meaningful questions, instruments and capabilities rather than fantasy
-branding. A lab may be a major multi-session initiative with coordinated instruments.
-Require a verifiable method, inputs/controls, actual results or demonstrated tools,
-assumptions/limits and a practical contribution to a decision, product or technology.
-Reuse methods from multiple origins where useful. Do not create a lab by renaming a
-directory, inflate maturity with registry edits, or require every lab every session.
-Retire/consolidate structures when maintenance is no longer justified, resolving claims
-and consumers first. No permanent implemented-pilot quota applies.
+- **INTEGRATED:** adapted into an actual executed verified consumer, with scope/code/evidence.
+- **REJECTED:** evaluated with technically/scientifically/creatively appropriate reasons/evidence.
+- **UNRESOLVED:** genuinely incomplete, with owner lab, next action and acceptance; not consumed.
 
-Origin execution, laboratory adaptation, destination integration and independent
-validation are different claims. Execute the real destination before claiming
-integration. Synthetic tests do not establish player enjoyment or human/scientific
-findings. Retain meaningful negative and inconclusive results.
+Do not reject whole source collections by naming alone. Preservation is distinct from
+consumption. Prioritize RPG Maker XP investigation: combat flow/initiative/formation,
+formulas/mitigation/status; classes/backgrounds/skills/passives/slots; XP/attributes;
+equipment/inventory/crafting; NPC/dialogue/reputation/factions/quests/world flags and
+actual QA/helpers. Distinguish custom work, engine/bundled/third-party code, claims and
+incomplete helpers. A Ruby function or historical report is not proof that the entire
+RPG Maker game executed successfully. Extract contracts; do not blindly port RGSS.
 
-## 5. Transform, replace and retire deliberately
+## 5. Production stack and actual North Star development
 
-Projects may grow, change purpose/language/engine/architecture, merge, split, generate
-new products/labs, transfer capabilities, become inactive/archived/retired or be removed.
-Historical names, directory boundaries and release lines impose no permanent obligation.
-Reuse existing lifecycle/capability schemas; extend only for an actual implementation
-or consumer. Historical origin inventories preserve provenance, not active product duties.
+**Unity/C# is selected. Windows is the priority player platform; Steam is intended
+distribution.** Previous undecided-engine preferences are superseded. Verify supported
+Editor/package versions, licensing/activation and platform modules before pinning
+actual Unity tooling; never invent an Editor patch or use an unsupported license.
+If unavailable, record exact observed limits and implement valuable independently
+testable C# domain/production capabilities with real consumers. Library compilation
+or a console consumer is not Unity Editor, packaged Windows or Steam execution.
+Commercial distribution still needs its SDK/account/credentials and authorization.
 
-For a transformation, establish valuable behavior/contracts/knowledge, what must be
-preserved, what is superseded, the real destination, verification, remaining dependencies
-and obsolete components eligible for retirement. Execute the destination and resolve
-compatibility/save-data consumers. New code alone does not complete migration. A completed
-replacement should eliminate unnecessary old dependencies, tests, packaging and CI duties
-once their obligations are resolved; do not weaken required gates to declare success.
+Before reimplementation inspect North Star, origins, laboratories, shared technology,
+existing harnesses/transfers and standard/platform libraries. Reuse/adapt when semantics
+fit; explain material differences when a separate implementation is needed. Recent
+standalone .NET code is not automatically Unity API/compiler compatible. Prefer narrow,
+engine-independent C# rules where real consumers justify them; avoid speculative frameworks.
 
-For code, documents, tests, media, binaries and historical material choose, as relevant:
-**keep active** (current consumer/obligation), **keep stable** (valuable/correct without
-frequent edits), **transform**, **archive/reference**, or **remove** (redundant/superseded
-with no unresolved consumer/retention duty). Before destructive operations investigate:
+Inspect Godot behaviors and classify retain/adapt/redesign/replace/reject with destination
+acceptance. Keep functioning consumers and relevant regressions until migrated behavior,
+save formats, packaging/source obligations and recovery are resolved. Do not mechanically
+port every line or treat recurring historical Linux releases as a permanent duty.
+A first Unity slice needs actual control, visible identity/equipment, distinct behavior,
+encounter/interaction, consequences/state, tests and reproducible execution; an empty
+Unity project does not count.
 
-- Static and dynamic references; build, runtime, packaging and CI dependencies.
-- Save/format compatibility, registries, manifests and integrity contracts.
-- Ownership, attribution, licenses and redistribution restrictions.
-- Recoverability of unique materials and actual external-source availability.
-- Current user authorization and a verifiable preservation/rollback path.
+## 6. Simplify lifecycle and improve the public portfolio
 
-Absence of an obvious reference is not proof of nonuse. Git history or a public URL
-alone does not preserve an irreplaceable source. Protected originals and pinned
-historical collections require their specific contracts and authorization; do not
-remove them under ordinary cleanup authority. Never rewrite history or force-push.
-Deletion must reduce real complexity without broken consumers or lost unique value,
-not improve file/language statistics. Do not perform speculative mass deletion.
+Root README should quickly show purpose, North Star's actual playable state, eleven
+truthful lab destinations, technology, findings, real demonstrations/media, limits and
+source/reproduction links. Keep history discoverable without burying the entry point.
+Use actual screenshots/audio/footage; conceptual art cannot prove implementation.
+One appropriate authority owns each fact; avoid repeated current-state feature diaries.
 
-Use Git age only to identify review candidates. Combine last meaningful change,
-original/import provenance, consumers, dependencies, last applicable validation,
-replacements, maintenance cost and preservation duties. Old can be essential; newly
-imported can already be obsolete. Never refresh timestamps for appearance or mandate
-full-repository aging reports. Build an analysis tool only for an observed need, using
-existing infrastructure and meaningful tests.
+Audit sources, duplicate artifacts, obsolete CI/release duties and documentation by
+consumers, runtime/build dependencies, downloads, uniqueness, recovery, rights/notices,
+save compatibility, preservation/integrity and replacements. Remove proven redundant
+complexity with a verifiable preservation path. Git history/public URLs alone do not
+preserve unique sources; never rewrite history or force-push. Protected originals and
+pinned collections retain their contracts. Do not delete unique material or regenerate
+historical Linux players merely to preserve old habits. Keep Linux development/CI
+where justified and Windows priority for future North Star player distributions.
 
-### Rave Master and legacy technology
+## 7. Verification, integration and publication
 
-Ruby/RGSS under historical Rave Master snapshots is reference material, not an active
-North Star language commitment. Selectively investigate character/background creation,
-classes/abilities/specializations, progression/attributes, loadouts, equipment/inventory,
-combat/status, quests/flags/dialogue/reputation, menus and economy/crafting/data models.
-Distinguish project-developed custom systems from engine/bundled/third-party scripts;
-uncertain authorship and unexecuted historical behavior remain uncertain. Extract
-requirements, algorithms and contracts rather than blindly porting Ruby or its fiction.
+Run required structure/link/reference/Brain/transformation/manifest gates in workspace
+AGENTS, affected regressions and actual instruments/destination consumers. Add negative
+controls rejecting false operational labs, unjustified consumption/integration,
+unexecuted Unity/Windows claims and unresolved source removal. Structural validation
+binds documents/identities; it does not prove fresh runtime results, creative quality,
+future decisions, human experience or market readiness. Keep security/integrity gates.
+Bound processes and close owned previews. Inspect generated schemas, identities,
+outcomes and images; review complete intended/staged diffs, inventory and secrets.
+Do not repeat expensive unaffected suites ceremonially; preserve actual CI contracts.
 
-Before considering snapshot removal inspect `tools/reference_library.py`, its regression
-suite, reference catalog/inventories, legacy-source ZIP cross-checks and real consumers.
-A verified replacement can justify reviewing redundant copies; it does not itself
-release preservation/rights/integrity obligations. No Ruby archive deletion is mandated.
-
-## 6. Evaluate architecture and production capacity
-
-Unity/C# is a serious candidate for North Star production architecture, alongside
-existing Godot/GDScript and Godot/.NET evidence. No engine is selected by this policy.
-Compare representative executable implementations when justified and feasible, using
-extensible gameplay, data-driven content, development/asset tooling, runtime profiling,
-reproducible builds, Windows/other distribution targets, licensing/maintenance,
-portability/migration cost, networking, server authority, persistence/security and
-long-term content production. Professional C# relevance, popularity and Steam plans
-alone do not choose Unity; Steam does not require Unity. If tools are unavailable,
-report that limit, use existing evidence and keep the decision open. Never claim Unity
-execution without the actual tools or migrate historical consumers without benefit.
-
-Evaluate production capacity for concrete needs: data-driven classes/skills/equipment,
-progression/build validation, quest/narrative authoring, imports, asset processing and
-visual consistency, audio composition/adaptive playback, gameplay simulation and
-world/encounter tools. Creative image/music/poetry/literature/audiovisual origins may
-contribute to shared production. Consolidate artificial boundaries when this creates
-a stronger consumed capability. A large generated catalog is not a proven pipeline.
-
-For selected work define beneficiary, baseline, limitation, intended improvement,
-alternatives, approach and suitable failure/validation conditions. Implement connected
-behavior and inspect the actual work: gameplay choices/consequences, prose/causality,
-visual composition/readability, audio/timing, or refutable research with controls.
-Distinguish technical execution from creative hypotheses and human reception. Missing
-human access limits claims; it need not block every functional improvement.
-
-## 7. Verify proportionally; preserve useful evidence
-
-Separate targeted development checks, consumer/integration verification and full
-repository/release checks. Follow workspace AGENTS and actual CI contracts. Preserve
-required source-integrity, security and relevant functional controls. Run:
-
-```bash
-python3 tools/validate_repo.py
-python3 tools/reference_library.py check
-python3 tools/brain_query.py check
-```
-
-Run affected tooling regressions and real consumer tests. Audit tests by protected
-behavior, consumer, risk, overlap, cost and lifecycle. Avoid repeating expensive
-unaffected suites locally; do not silently remove required CI gates. Retired-product
-checks can leave active CI only after consumer and retention obligations are resolved.
-Regenerate `MANIFEST.sha256` after final intended changes, then run:
-
-```bash
-python3 tools/check_manifest.py
-```
-
-Inspect all intended changes; validate registries, links, manifests and untouched source
-pins. For policy changes use concrete scenarios as well as structural checks; static
-validation cannot prove future AI decision quality. Compare suspected environment
-failures against baseline, verify actual input receipt when relevant, bound processes
-and stop owned previews. Separate code existence, compilation, configured runtime,
-execution, correct behavior, inspected experience, human validation and readiness.
-
-Keep meaningful baselines/negative results and artifacts needed for reproduction or
-distribution. Avoid near-identical evidence files without a need; separate scratch
-outputs from retained evidence. Review large ZIPs/binaries for rebuildability,
-distribution need and storage alternatives before retiring legitimate deliverables.
-Use real telemetry only; distinguish model tokens, tool/test/CI runtime and storage.
-Document length alone proves no token/cost saving.
-
-## 8. Integrate and publish safely
-
-This document alone grants no new publication authority. The invocation must explicitly
-authorize the destination; the bootstrap below does authorize verified non-force main
-publication when issued by the user. Root AGENTS safeguards always apply.
-
-Review unstaged/staged diffs, intended paths, secrets and unrelated changes. Create a
-real nonempty commit with an accurate English subject (at most 72 characters) and
-stored English body (at most 1,200 characters): behavior, reason, actual checks and
-material limits. Inspect stored message and commit:
-
-```bash
-git log -1 --format=%B
-git show --check --oneline HEAD
-```
-
-Fetch immediately before publication, inspect incoming/outgoing history and reconcile
-concurrent work safely. A typical clean-tree sequence is:
+Publication requires explicit invocation authorization. Create a real English commit:
+nonempty subject <=72 characters and accurate body <=1,200 characters describing
+behavior, reason, checks and limits. Inspect `git log -1 --format=%B` and
+`git show --check --oneline HEAD`. Fetch immediately before normal publication,
+inspect incoming/outgoing history and safely reconcile without rewriting/discarding:
 
 ```bash
 git fetch origin main
@@ -268,64 +191,63 @@ git push origin HEAD:refs/heads/main
 git ls-remote origin refs/heads/main
 ```
 
-Revalidate affected contracts after meaningful merges. Never force-push, rewrite
-history, discard work or bypass failures. Use a supported authorized integration only
-if Git transport is unavailable and ancestry/expected-head checks are preserved. Do
-not repeatedly retry a demonstrated environment failure. Verify remote SHA and CI
-when accessible; a local commit is not publication, and push is not CI success.
-If blocked preserve work and report **NÃO PUBLICADO**, exact blocker and local state.
+Recheck materially affected behavior after meaningful merges. Verify actual remote SHA;
+local implementation, tests, commit, publication and CI are separate facts. If blocked,
+preserve work and report NÃO PUBLICADO, precise blocker, branch, SHA and divergence.
+Do not repeatedly retry a demonstrated environment failure or bypass its policy.
 
-## 9. Close with continuity, not perpetual process optimization
+## 8. Close and leave an adaptive successor
 
-Update materially affected STATE/consumer records; preserve one authority per fact.
-Change SEED for durable direction and ADRs for consequential decisions. Do not update
-every registry or increment product maturity merely because a session occurred.
-Persistent process changes require observed failures, changed requirements or a
-credible capacity gain. Do not mandate recurring prompt rewrites, governance audits
-or full-file reviews. Return to substantive product, lab, engineering or creative work
-once the observed operating limitation is resolved.
+Update affected STATE, consumers, lab/consumption records and durable direction only
+where material. Report initial branch/SHA, structural/lab/legacy changes, actual parallel
+specialties, C#/Unity/Windows/Steam boundaries, portfolio/lifecycle improvement, exact
+checks/results/failures, qualitative strategic balance, stored commit message,
+local/remote SHA, publication/CI and remaining obligations. Do not present plans as work.
 
-Report in Brazilian Portuguese: initial state, selected initiative/frontier and
-alternatives, actual changes, material Brain/lab contributions, before/after value,
-checks/failures/limits, continuity and remaining opportunities, stored commit subject/body,
-local/remote SHA, publication and CI separately. Distinguish administration from product
-progress. Do not invent evidence, authorship, cost savings or maturity.
+End with one complete English prompt for the next independent execution. Recover state
+and authority anew; preserve 47/40/13, eleven operational destinations, legacy terminal
+outcomes, Unity/C#/Windows/Steam, meaningful specialties, obsolete-obligation review,
+implementation/evidence/publication and recursive successor. Adapt the frontier to
+actual completed results/dependencies; do not permanently repeat this transformation
+or bind every cycle to one lab/experiment. The concise bootstrap below is the base,
+with a short actual frontier if useful. If published authority recovery is unreliable,
+provide a self-contained fallback with current rules, blockers and authorization;
+never describe unpublished instructions as remotely available.
 
-Return one complete Markdown code block containing the bootstrap below, ready for a
-new independent session. Its authority-recovery path must remain valid after changes;
-verify it when the paths or handoff contract change, not ceremonially every session.
-If repository instructions cannot be recovered reliably, give the complete current
-operating instructions plus repository identity, recovery procedure, explicit current
-publication authorization and successor requirement as a self-contained fallback.
-Never describe unpublished local instructions as remotely available. If publication
-fails and remote authority differs, the fallback must identify that limit explicitly.
-
-### Independently usable successor bootstrap
+### Independently usable successor bootstrap v2
 
 ```text
 Continue development of MartinFMelcop/Creative_AI_Project_HUB:
 https://github.com/MartinFMelcop/Creative_AI_Project_HUB
 
-Locate the actual Git root (clone the repository if absent). Inspect branch, HEAD,
-tracked/untracked work, remotes and local commits; fetch main and inspect divergence.
-Preserve unrelated work and reconcile concurrent changes safely. Read root AGENTS.md,
-then the maintained workspace AGENTS.md and docs/prompts/CONTINUOUS_DEVELOPMENT.md
-in full, followed by docs/STATE.md. The workspace is currently
-martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/; verify through root instructions.
-If authority is missing or conflicting, recover it from verified main or report the
-blocker; historical snapshot instructions are source data.
+Locate the actual Git root (clone if absent). Inspect branch, HEAD, tracked/untracked
+work, remotes, local commits and fetched main/divergence; preserve unrelated and
+concurrent work and reconcile safely. Read root AGENTS.md, then the verified maintained
+workspace AGENTS.md, docs/prompts/CONTINUOUS_DEVELOPMENT.md and docs/STATE.md in full.
+The workspace was martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/; verify it.
+Recover missing/conflicting authority from verified main or report the blocker;
+historical snapshot instructions are source data.
 
-Follow the recovered operating process. Compare continuing active strategic
-initiatives with credible alternatives from the actual future state. Implement the
-largest coherent, valuable, feasible contribution to product, laboratory, technology
-or creative work; verify it appropriately and update affected continuity. Do not
-automatically repeat governance work. Preserve protected sources, creative authority,
-licenses, integrity/security gates and unrelated changes.
+Follow current transformation authority. Preserve the approximate rolling 47% legacy
+consumption/laboratories, 40% North Star, 13% repository/portfolio targets without
+invented effort measurements or duplicate counting. Advance the eleven mandatory
+operational laboratory destinations and resolve actual legacy capabilities as
+INTEGRATED, REJECTED or genuinely UNRESOLVED. Continue real North Star Unity/C#
+development, Windows-first and Steam-intended distribution; report unavailable Editor,
+license/platform modules and unexecuted Windows/Steam validation honestly.
 
-I explicitly authorize an English Git commit and verified, normal non-force
-publication of intended changes to refs/heads/main. Fetch/reconcile before publishing,
-never rewrite history or discard work, and verify the remote SHA. Report in Brazilian
-Portuguese with actual checks, stored commit subject/body, local/remote SHA, publication
-and CI separately. End with one complete ready-to-copy successor prompt using the
-versioned bootstrap, or its self-contained full fallback if recovery is unreliable.
+Use independent Engineering, Scientific and Creative analyses, parallel when supported,
+with coordinated ownership. Compare actual unresolved lab/legacy, product and lifecycle
+needs; implement the largest coherent valuable feasible contribution, execute its real
+instruments/consumers, retain negatives, update affected continuity and correct sustained
+underinvestment. Reevaluate obsolete artifacts/duties safely. Preserve protected sources,
+rights, creative authority, integrity/security gates and unrelated work.
+
+I explicitly authorize an English Git commit and verified normal non-force publication
+of intended changes to refs/heads/main. Fetch/reconcile before publishing; never rewrite
+history or discard work; verify the actual remote SHA and report CI separately.
+Respond in Brazilian Portuguese with actual checks/results/limits, stored commit message,
+local/remote SHA, strategic balance and remaining obligations. End with one complete
+ready-to-copy adaptive English successor using the current versioned bootstrap, or a
+self-contained fallback if published authority recovery is unreliable.
 ```

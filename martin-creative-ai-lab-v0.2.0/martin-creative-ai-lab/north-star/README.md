@@ -1,154 +1,66 @@
 # Virgo Diamond: The North Star
 
-The HUB's **principal definitive product** is an original MMORPG centered on becoming
-a distinct, recognizable character through choices, builds, classes, specializations,
-professions and accomplishments within meaningful adventures. Development compares
-this product's needs with laboratory, creative and technical opportunities using the
-[operating instructions](../docs/prompts/CONTINUOUS_DEVELOPMENT.md). The HUB remains
-a public Design-Driven technology portfolio; its origin demonstrations and research
-instruments have value without being eleven independently obligated products.
+An original MMORPG whose characters become recognizable through appearance, builds,
+classes, specializations, professions, equipment, abilities, accomplishments and
+meaningful adventures. This is the HUB's principal product; the
+[eleven laboratories](../labs/README.md) consume real source knowledge and develop
+verified capabilities for it. Creative status belongs in [DESIGN](DESIGN.md), durable
+author direction in [SEED](../SEED.md), and current work in [STATE](../docs/STATE.md).
 
-The current [equipment authoring path](prototype/data/README.md) consumes validated
-JSON in combat, workshop and appearance previews. A reversible Field sash trades one
-health for faster unguarded recovery; the original fittings retain their behavior.
-[Execution](../evidence/north-star-fittings/RUN.json) covers real source/PCK/Linux
-consumers and new-definition authoring, without adding a laboratory, capability
-promotion, final class canon or a production engine commitment.
+## Selected production direction and actual execution
 
-F1 offers recoverable twelve-action keyboard remapping with matching live hints and
-explicit draft/apply/discard/default restoration; settings remain device-local.
-F1/H and F1/I independently offer session-only single-press guard/interaction; pause,
-settings, focus loss and completed work disarm active intentions. Hold stays default.
+**Unity/C# is selected. Windows is the priority player platform; Steam is intended
+distribution.** This supersedes the previous undecided-engine direction. The selected
+stack is distinct from the tools that have actually executed:
 
-## Actual stage and creative authority
+| Consumer | Actual scope | Run / evidence |
+|---|---|---|
+| [C# progression destination](csharp/README.md) | Pure C#8/netstandard2.1 rules, native terminal preparation, two connected encounters, earned points and consequential allocations | [RPG Systems assay and destination](../evidence/rpg-progression/RUN.json) |
+| [Godot crossing adventure](prototype/README.md) | Existing local escort/return, equipment, appearance, optional medicine/route/aid and causal review | [Current delivery](../evidence/north-star-return-feedback/RUN.json) |
+| [Authority experiment](prototype/authority/README.md) | Developer-only loopback server, confirmed remote input and read-only preparation | [Execution](../evidence/north-star-preparation/RUN.json) |
+| [Ability bench](prototype/abilities/README.md) | Separate source-only committed-rush experiment and candidate-data execution | [Execution](../evidence/north-star-abilities/RUN.json) |
 
-The catalog now records **local_prototype**: one executable
-[crossing encounter](prototype/README.md), fourteen actual consumer code paths and fourteen
-capabilities. **NS-C03 combat, NS-C04 consequential dialogue and NS-C07 sound are adapted**
-in this destination; the other eleven contribution states remain unchanged. Godot 4.6.3 is the prototype tool; no final MMO engine or
-running multiplayer service is selected. The earlier combat-response lab remains an
-origin instrument, separately preserved.
+The C# domain is compiled against .NET Standard2.1 with C#8 syntax; this is a bounded
+compatibility foundation, **not Unity Editor execution**. No Editor/license/platform
+modules were available in this environment. No Windows player, Steamworks, store listing,
+commercial readiness or shared-world service is claimed. Pin a supported Editor/package
+combination after checking actual tools, current support/licensing and Windows modules;
+do not fabricate an Editor version or call an empty project a vertical slice.
 
-The player chooses frontal interception or redirection/mobility and protects the same
-courier to the far gate. [Living design](DESIGN.md) distinguishes author decisions,
-experimental mechanics, revisions and rejected alternatives. An optional Linux player
-delivers the existing adventure without an editor or checkout. Applied free appearance
-still survives process restart through the recoverable local cosmetic profile.
-The optional factual conversation still commits
-one aid choice into the second goal. Optional rehearsal
-uses the same combat rules, preserves causal review and starts a clean normal crossing.
-The three prepared exercises do not demonstrate human learning or sustained resource
-management. [Prior threat-resolution execution](../evidence/north-star-sentinel-resolution/RUN.json) records protective completion, optional
-offensive shutdown and the causal controls. Completed normal crossings
-with a signature response can earn its approach’s mark, one of two experimental cosmetics. Explicit C selection
-is visible on the next crossing and restored after restart. Malformed/unknown profiles
-are preserved; pending session marks can be saved with F5 after path repair. This is
-editable device-local cosmetic continuity, not character/account or MMO persistence.
-At the first marker a medicine case falls off the road. Recover it and hand it back
-through nearby held interaction, or keep escorting. The courier and threats continue;
-movement/release cancel commitment. Distinct session outcomes require actual handoff,
-and neither choice changes the existing keepsake rules or adds persistent loot.
-[Current input execution](../evidence/north-star-toggle-input/RUN.json) demonstrates
-released presses and recoverable interruption, without human accessibility claims.
-Future selection compares actual product, creative and portfolio value; this consumer
-is not an automatic next target.
+The current Godot player remains a functioning research/regression baseline. Its
+[Linux delivery](prototype/README.md) is retained for existing consumers; it does not
+change the Windows-first direction for future production releases. Source compilation,
+packaged runtime, destination execution and independent human experience are different.
 
-The [Creative Brain](../brains/README.md) is the central creative knowledge base.
-Current direct author decisions take precedence; D/A/H/E/V source categories distinguish
-intent, documented directions, proposals, precedents and actual validation. A class,
-name, chronology or quest is not canon because it is detailed or repeatedly mentioned.
-Prior GDDs, Rave and literary sources remain provenance, without competing creative
-authority or automatically shared fictional universes.
+## Research-to-product value
 
-- [Vision](VISION.md): intended character experience and product boundaries.
-- [Research](RESEARCH.md): bounded questions and actual versus proposed instruments.
-- [Capability catalog](capabilities.json): retained origin evidence and contribution gates.
-- [Origin transitions](../labs/origins.json): all P01–P11 capabilities, dependencies,
-  preservation risks and candidate research destinations.
-- [References](../references/README.md): historical bytes, rights and availability.
+The [progression laboratory](../labs/rpg-systems/README.md) examines actual preserved XP
+threshold/budget tables and QA vectors. The old helper reads different health/resolve
+column names from those supplied. The C# adaptation validates typed aligned tables and
+preserves earned/spent budgets and one-time reward ownership. An original destination
+uses a small experimental curve, not the legacy 180-level pacing or fictional classes.
+Allocating survival versus resolve changes real encounter costs/outcomes; missing
+balance, persistence, multiplayer and independent player validation remain explicit.
 
-The previously silent crossing now consumes short procedural threat/response cues.
-F1/F5 mutes them immediately for the session; visual warnings remain available.
-Actual software-mixer output is recorded, without physical listening or recognition claims.
+The [capability catalog](capabilities.json) owns scoped integration claims. Historical
+origin accomplishments, laboratory operation and a real North Star consumer are not
+interchangeable. [Source references](../references/README.md) and their rights/pins are
+preserved. Current author decisions outweigh Brain hypotheses and historical GDDs;
+technical transfer does not merge fictional worlds or approve final canon.
 
-Guardian has a title-only Steady/Riposte choice. The timing variant gives up sustained
-protection for a longer counter opening; actual rehearsal and normal crossing consume
-the same choice. Neither variant is an approved final specialization or power tier.
+## Migration obligations
 
-## Evidence gates
+- **Retain:** tested Godot action/contact, input interruption, resource/goal, preparation,
+  visual/audio, save/profile and authority evidence until obligations resolve.
+- **Adapt:** independently useful, testable rules and source-derived contracts to C#
+  with source controls and actual destination execution; reuse existing technology when
+  semantics and Unity API/compiler constraints fit.
+- **Redesign:** production input/presentation, multiplayer persistence, content tooling
+  and encounter pacing against the actual Unity/Windows consumer and author direction.
+- **Reject:** blind GDScript/RGSS ports, permissive invalid-data fallback, direct fictional
+  imports and claims that existing standalone .NET10 cores already run in Unity.
+- **Retire:** old packaging/tests/dependencies only after replacement consumers, recovery,
+  rights/notices, save compatibility and integrity obligations are resolved.
 
-| State | Required meaning |
-|---|---|
-| Candidate | Identified hypothesis; no transfer proof |
-| Verified in origin | Scoped execution record supports behavior in its original context |
-| Adapted | Real implementation in a new context, beyond planning or copied sources |
-| Integrated into North Star | Genuine destination consumer uses it with destination execution proof |
-| Externally validated | Relevant destination behavior/experience independently evaluated within stated scope |
-
-The schema preserves foundation-only zero-consumer guards and adds local-prototype
-claims bound to actual code, successful execution metadata and matching source/result
-hashes. Structural checks do not independently prove report semantics. Local prototype
-metadata cannot establish external validation. A lab instrument alone does not change
-the stage; actual destination execution is required. Technical correctness, agent creative
-assessment, human experience and market evidence remain separate. A local prototype
-would not demonstrate multiplayer, MMORPG scale, enjoyment, retention or demand.
-
-Original code-drawn actors now show planted shield defense, an open Duelist blade,
-accepted draw/step gestures, local hit ownership and counter recovery. Sentinel shutters
-expose the existing OPEN state. Simulation time freezes motion during pause and review;
-no artwork changes combat reach, costs, collision or warnings. See the prototype's
-[visual-production guide](prototype/README.md#character-gestures-and-contact-feedback).
-
-The current crossing can also resolve its threat: three eligible close counters disable
-the sentinel and let the courier run. Protective completion remains valid; shutdown
-alone awards nothing and does not replace reaching the gate alive. Matched prior-PCK
-routes separate this actual pacing change from synthetic-policy and human-experience
-limits. No origin or capability status is promoted by this increment.
-
-Before a normal crossing, F2 opens an optional native workshop. One reversible fitting
-blank becomes a slower six-health coat or faster four-health wrap, visible on either
-approach; standard gear remains available. Real crafting, undo and locked crossing
-consumption are [executed here](../evidence/north-star-workshop/RUN.json). This adds a
-bounded craft-to-build choice, not a profession career, economy or saved power.
-
-The crossing now offers an [actual spatial fork](prototype/README.md#a-route-chosen-in-the-world).
-Walk to a sign and signal the longer upper path before the courier commits at MARK 1,
-or retain the direct road. The raised upper filter catches some bolts but never
-ground pulses or bodies in front; it grants no personal counter opportunity. The
-courier turns, progress follows path length, and the result names the route/catches.
-[Native, keyboard and rendered execution](../evidence/north-star-route-choice/RUN.json)
-demonstrates this bounded adventure choice. No new lab, origin import, capability
-promotion, approved geography or independent player validation is implied.
-
-After a real escort win, **F2** now offers an [optional second playable goal](prototype/README.md#an-optional-second-playable-goal).
-Actual remaining health/energy and fitting carry into two-catch work, stationary winch
-protection and a required alive exit; Enter still replays the escort. The courier stays
-safe. [Prior return-gate execution](../evidence/north-star-return-gate/RUN.json) demonstrates four
-complete two-stage policies and source/PCK parity, not human identity/fun or MMO readiness.
-
-The [character-look workflow](prototype/README.md#choose-your-character-look) now offers
-free independent skin, hair and cloth dye, previewed with the actual drawing and actions.
-Apply/discard is deliberate; the chosen look follows both goals without changing
-gear or combat and explicit apply remembers it on this device. [Execution](../evidence/north-star-appearance-continuity/RUN.json)
-supports functioning expression, not perceived identity or human aesthetic approval.
-
-
-After arrival, [F4 talks to the courier](prototype/README.md#talk-to-the-courier).
-The NPC recalls real route/medicine/defense facts and offers one strip: capped prepared
-health, extra winch integrity, or no aid. Draft, confirmation, cancellation and a fixed
-retry checkpoint connect the conversation to actual play. [Execution](../evidence/north-star-courier-conversation/RUN.json)
-supports bounded NS-C04 adaptation from P10 methodology, not code/fiction import,
-persistent social simulation or human narrative/identity validation.
-
-The [Linux x86_64 delivery](prototype/README.md#play) includes the pinned official
-runtime, notices, source identities and checksum. Actual release journeys and native
-window edit/move/pause/reentry are [executed](../evidence/north-star-fittings/RUN.json).
-This removes an installation dependency on development tools; it adds no mechanic,
-capability-state promotion, new lab, final engine or independent player validation.
-
-
-The existing adventure also has [mapped gamepad control](prototype/README.md#mapped-gamepad-experimental)
-through preparation, appearance, dialogue and both goals. Context hints, deliberate
-pause/resume and disconnect recovery are executed in source/PCK/Linux 0.2.0.
-[Evidence](../evidence/north-star-fittings/RUN.json) uses injected mapped events;
-physical devices, human accessibility and new gameplay depth remain unproven.
+Continue the highest-value unresolved laboratory, legacy, product and lifecycle work
+under [the adaptive operating process](../docs/prompts/CONTINUOUS_DEVELOPMENT.md).

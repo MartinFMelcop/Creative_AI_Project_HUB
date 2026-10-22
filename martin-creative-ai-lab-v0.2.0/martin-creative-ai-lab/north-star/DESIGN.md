@@ -12,7 +12,7 @@ author decisions prevail. Status here describes scope, not independent player ap
 | Status | Decision / provenance | Observable consequence and review trigger |
 |---|---|---|
 | Accepted author direction | Recognizable character identity and meaningful adventure; current adaptive author mandate, CRE-001 and CRE-005 | Compare creative, technical and knowledge value, strategic relevance and opportunity cost across North Star and justified portfolio work. Checks/reports do not substitute for experience. |
-| Observed current scope | One existing local executable character consumer; executed prototype evidence, not a strategic size limit | Select DEVELOPMENT, CREATIVE PRODUCTION or RESEARCH for the actual opportunity rather than a fixed category order. Godot 4.6.3 is a prototype tool, not the selected production MMO engine. |
+| Observed current scope | One existing local executable character consumer; executed prototype evidence, not a strategic size limit | Unity/C# is now selected for production, Windows-first and Steam-intended. The Godot4.6.3 consumer remains actual migration/regression evidence; C# domain execution does not establish Unity Editor or Windows play. |
 | Experimental | Guardian frontal interception versus Duelist redirection/mobility; CRE-014/015/084 hypotheses | Same courier objective, finite resources, distinct commands/costs and optional reachable counters. Neither approach is a final class/talent system or canon commitment. Revisit after actual player observation. |
 | Experimental | A courier crosses three markers while a sentinel threatens the route | Small original test fiction, not approved geography/quest/lore. Player or courier defeat loses the attempt; either approach can finish. The original session-only token was result feedback; local cosmetic memory now has a separate contract below. |
 | Revised after execution | Redirected beams still collide with a nearer courier | Early implementation checked only the redirected endpoint. Corrected to first-contact ownership; explicit negative control now catches unsafe redirection across the road. |
@@ -467,3 +467,29 @@ without a production architecture migration. SCI-017 informs matched constructed
 opening controls, existing-walk/step alternatives and retained negative outcomes.
 [Execution](../evidence/north-star-abilities/RUN.json) distinguishes synthetic execution
 and agent image inspection from absent independent human validation.
+
+
+## Author-directed production transformation and progression experiment
+
+**Accepted technology direction:** Unity/C#, Windows-first, Steam intended. The direct
+structural-transformation instruction supersedes the former engine decision being open;
+no unavailable Editor, platform module or Steam action is claimed. Existing Godot work
+remains useful source/consumer evidence, not a permanent production architecture duty.
+
+**Experimental C# destination:** earned progression changes available preparation and
+actual survival/resource consequences across connected encounters. The small original
+curve and allocation names are bounded hypotheses, not adoption of Rave's classes,
+background fiction, 180-level economy or final MMO progression. Preserved helpers and
+reports are interrogated rather than trusted: health/resolve CSV schema loss is rejected,
+while verified threshold/budget semantics are adapted.
+
+Independent Engineering, Scientific and Creative specialists investigated the same
+problem in parallel. All favored progression over another combat clone: Engineering
+required a narrow C#8/netstandard2.1 seam and transactional ownership; Science required
+source goldens, threshold/partition controls and an honest static-helper boundary;
+Creation required visible survival/resolve opportunity cost without importing fiction.
+Review rejected an approach differing only in price; the implemented destination must
+show a consequential behavior difference. CRE-005(A) informs consequence, CRE-011/013(H)
+provide hypotheses rather than final class/tree authority, ENG-005/015 inform ownership
+and modularity, and SCI-017 informs matched controls and retained failures.
+[Actual execution](../evidence/rpg-progression/RUN.json) owns results and limits.

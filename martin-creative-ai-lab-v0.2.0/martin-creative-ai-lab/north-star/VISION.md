@@ -20,15 +20,18 @@ variety or a list of attributes. Accessibility, recovery, readable danger and us
 control support that fantasy. Human play and creative evaluation remain necessary;
 passing an automated combat trace does not demonstrate perceived class identity.
 
-The HUB remains a public Design-Driven technology portfolio developed with generative
-AI. Eleven historical origins supply code, media, techniques, evidence and useful
-demonstrations without independent release obligations. Question-led labs can combine
-those capabilities. Virgo Diamond remains the principal long-term product; compare
-product, laboratory, production and portfolio opportunities under
-[the operating instructions](../docs/prompts/CONTINUOUS_DEVELOPMENT.md), without
-investment quotas or automatic rotation.
+The HUB is a public Design-Driven technology portfolio developed with generative AI.
+Eleven mandatory research laboratories consume historical sources and new knowledge,
+produce tested technology and serve real North Star/production consumers. Historical
+origins have no permanent independent release obligations. Their actual laboratory
+maturity and terminal consumption decisions live in [the catalog](../labs/origins.json);
+rolling 47/40/13 effort and adaptive selection follow
+[the operating process](../docs/prompts/CONTINUOUS_DEVELOPMENT.md).
 
-No final engine, server, database, monetization or large-scale architecture is selected.
-Use bounded instruments and playable increments with real consumers before expensive
-convergence. Preserve rights and irreplaceable sources. Origin verification, adaptation,
-destination integration, external player evidence and commercial signals remain distinct.
+Unity/C# is the selected primary stack, Windows the priority player platform and Steam
+the intended distribution ecosystem. This author decision does not establish Editor,
+Windows or Steam execution. Godot consumers remain migration evidence until relevant
+behavior, dependencies, save formats and preservation obligations resolve. Server,
+database, monetization and large-scale implementation remain undemonstrated. Origin
+verification, adaptation, destination integration, independent human evidence and
+commercial signals stay distinct. Preserve rights and irreplaceable sources.

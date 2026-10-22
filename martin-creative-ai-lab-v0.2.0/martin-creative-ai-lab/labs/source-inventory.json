@@ -1,0 +1,1138 @@
+{
+  "individual_hash_authority": "MANIFEST.sha256",
+  "kind": "accessible_origin_inventory",
+  "limits": "Broad inventory reads every selected file for classification/hash and ZIP members for payload identity, not all semantic content. See labs/legacy-audit.md for material source inspection. Unavailable historical payloads and third-party rights remain bounded by references/catalog.json.",
+  "origins": [
+    {
+      "availability": "available",
+      "evidence_paths": [
+        "evidence/eclipse-fair/BOARD_RUN.json",
+        "evidence/eclipse-fair/LOCAL_RUN.json",
+        "evidence/eclipse-fair/PLANNING_RUN.json",
+        "evidence/eclipse-fair/RELEASE_RUN.json",
+        "evidence/eclipse-fair/RUN.json",
+        "evidence/eclipse-fair/SLOT_RUN.json",
+        "projects/eclipse-fair/Native/README.md",
+        "projects/eclipse-fair/README.md",
+        "projects/eclipse-fair/provenance.json"
+      ],
+      "inventory": {
+        "bytes": 129953682,
+        "classification": {
+          "data_and_contracts": 6,
+          "distribution_or_preservation_package": 8,
+          "documentation_configuration_or_other": 21,
+          "implementation": 10,
+          "production_or_verification_tool": 7,
+          "recorded_evidence": 6,
+          "rights_and_attribution": 2,
+          "tests_and_controls": 7
+        },
+        "files": 67,
+        "tree_sha256": "f3e9aabd3808b1af6e7e90ff67bffcce7ea576ac84016bf39749fd654f04abef"
+      },
+      "laboratory": "economy-simulation",
+      "limits": "Inventory and inspected source availability do not establish destination integration or newly executed origin behavior.",
+      "origin": "P01",
+      "roots": [
+        "projects/eclipse-fair"
+      ]
+    },
+    {
+      "availability": "available",
+      "evidence_paths": [
+        "evaluations/chat-send-buffering/README.md",
+        "evidence/continuous-integration/FOLLOWUP_RUN.json",
+        "evidence/evaluation-task/CALIBRATION.json",
+        "evidence/evaluation-task/DEPENDENCY_RUN.json",
+        "evidence/evaluation-task/SNAPSHOT_RUN.json",
+        "evidence/evaluation-task/SYNTAX_RUN.json",
+        "evidence/evaluation-task/TIMEOUT_RUN.json",
+        "evidence/evaluation-task/UNREAD_CALIBRATION.json",
+        "evidence/realtime-chat/READING_RUN.json",
+        "knowledge/evaluation-artifacts.md"
+      ],
+      "inventory": {
+        "bytes": 272894,
+        "classification": {
+          "documentation_configuration_or_other": 3,
+          "implementation": 1,
+          "recorded_evidence": 8,
+          "tests_and_controls": 1
+        },
+        "files": 13,
+        "tree_sha256": "eb78a6ba2503b21dd9b612e457066e166110272059073b0390c78344d32c38cb"
+      },
+      "laboratory": "ai-evaluation",
+      "limits": "Inventory and inspected source availability do not establish destination integration or newly executed origin behavior.",
+      "origin": "P02",
+      "roots": [
+        "evaluations/chat-send-buffering"
+      ]
+    },
+    {
+      "availability": "available",
+      "evidence_paths": [
+        "evidence/tokyo80s/PITCH_RUN.json",
+        "evidence/tokyo80s/REHEARSAL_RUN.json",
+        "evidence/tokyo80s/REVIEW_RUN.json",
+        "evidence/tokyo80s/RUN.json",
+        "evidence/tokyo80s/SETLIST_RUN.json",
+        "projects/tokyo80s/README.md",
+        "projects/tokyo80s/media/provenance.json"
+      ],
+      "inventory": {
+        "bytes": 33479052,
+        "classification": {
+          "creative_or_runtime_asset": 8,
+          "data_and_contracts": 8,
+          "documentation_configuration_or_other": 1,
+          "implementation": 7,
+          "production_or_verification_tool": 5,
+          "recorded_evidence": 5,
+          "tests_and_controls": 8
+        },
+        "files": 42,
+        "tree_sha256": "938872ea6cc17267b88b119492b3b39bec7cefa5fbe66c503c1df6c73f62b218"
+      },
+      "laboratory": "input-timing",
+      "limits": "Inventory and inspected source availability do not establish destination integration or newly executed origin behavior.",
+      "origin": "P03",
+      "roots": [
+        "projects/tokyo80s"
+      ]
+    },
+    {
+      "availability": "available",
+      "evidence_paths": [
+        "evidence/lich-cistern/ENGLISH_RUN.json",
+        "evidence/lich-cistern/REVISION_RUN.json",
+        "evidence/lich-cistern/RUN.json",
+        "evidence/reference-integration/LICH_MAIN_PDFS.json",
+        "evidence/reference-integration/LICH_OVA_PDFS.json",
+        "projects/lich-cistern/README.md",
+        "projects/lich-cistern/SOURCE_COMPARISON.md",
+        "projects/lich-cistern/provenance.json",
+        "references/literature/lich/README.md"
+      ],
+      "inventory": {
+        "bytes": 95384322,
+        "classification": {
+          "creative_or_runtime_asset": 28,
+          "data_and_contracts": 6,
+          "documentation_configuration_or_other": 26,
+          "implementation": 1,
+          "production_or_verification_tool": 2,
+          "recorded_evidence": 5,
+          "rights_and_attribution": 1
+        },
+        "files": 69,
+        "tree_sha256": "dfbd9d94e9f7ef181f302201b83e17893dfa0ac812657ab55c8f369501c4c559"
+      },
+      "laboratory": "narrative-continuity",
+      "limits": "Inventory and inspected source availability do not establish destination integration or newly executed origin behavior.",
+      "origin": "P04",
+      "roots": [
+        "projects/lich-cistern",
+        "references/literature/lich"
+      ]
+    },
+    {
+      "availability": "available",
+      "evidence_paths": [
+        "evidence/cinderwatch/PRESENTATION_RUN.json",
+        "evidence/cinderwatch/RECOVERY_RUN.json",
+        "evidence/cinderwatch/RELEASE_RUN.json",
+        "evidence/cinderwatch/RESPONSE_RUN.json",
+        "evidence/cinderwatch/RUN.json",
+        "projects/cinderwatch/Native/README.md",
+        "projects/cinderwatch/README.md",
+        "projects/cinderwatch/provenance.json"
+      ],
+      "inventory": {
+        "bytes": 216296416,
+        "classification": {
+          "creative_or_runtime_asset": 8,
+          "data_and_contracts": 5,
+          "distribution_or_preservation_package": 8,
+          "documentation_configuration_or_other": 16,
+          "implementation": 8,
+          "production_or_verification_tool": 7,
+          "recorded_evidence": 5,
+          "rights_and_attribution": 2,
+          "tests_and_controls": 6
+        },
+        "files": 65,
+        "tree_sha256": "51f1818df83bdf8ecfe2235cf380b07b9fd1ca5e1584fc18bc9a7972a0b15ddb"
+      },
+      "laboratory": "rpg-systems",
+      "limits": "Inventory and inspected source availability do not establish destination integration or newly executed origin behavior.",
+      "origin": "P05",
+      "roots": [
+        "projects/cinderwatch"
+      ]
+    },
+    {
+      "availability": "available",
+      "evidence_paths": [
+        "evidence/veil-arena/AUDIO_CLOCK_RUN.json",
+        "evidence/veil-arena/MOTION_RUN.json",
+        "evidence/veil-arena/PARRY_RUN.json",
+        "evidence/veil-arena/PRACTICE_RUN.json",
+        "evidence/veil-arena/PRESENTATION_RUN.json",
+        "evidence/veil-arena/RELEASE_RUN.json",
+        "evidence/veil-arena/RUN.json",
+        "projects/veil-arena/README.md",
+        "projects/veil-arena/media/provenance.json",
+        "projects/veil-arena/provenance.json"
+      ],
+      "inventory": {
+        "bytes": 116108938,
+        "classification": {
+          "creative_or_runtime_asset": 23,
+          "data_and_contracts": 5,
+          "distribution_or_preservation_package": 4,
+          "documentation_configuration_or_other": 33,
+          "implementation": 4,
+          "production_or_verification_tool": 7,
+          "recorded_evidence": 7,
+          "rights_and_attribution": 2,
+          "tests_and_controls": 14
+        },
+        "files": 99,
+        "tree_sha256": "f8cadce3a841fddecea90654125cad2e835efae5e0d20ae61a8f5219c080ffe3"
+      },
+      "laboratory": "combat-response",
+      "limits": "Inventory and inspected source availability do not establish destination integration or newly executed origin behavior.",
+      "origin": "P06",
+      "roots": [
+        "projects/veil-arena"
+      ]
+    },
+    {
+      "availability": "available",
+      "evidence_paths": [
+        "evidence/cinderwatch/PRESENTATION_RUN.json",
+        "evidence/veil-arena/MOTION_RUN.json",
+        "evidence/veil-arena/PRESENTATION_RUN.json",
+        "projects/cinderwatch/Native/media/provenance.json",
+        "projects/veil-arena/media/provenance.json"
+      ],
+      "inventory": {
+        "bytes": 10410427,
+        "classification": {
+          "creative_or_runtime_asset": 13,
+          "data_and_contracts": 3,
+          "documentation_configuration_or_other": 5,
+          "recorded_evidence": 3
+        },
+        "files": 24,
+        "tree_sha256": "33bfc7d7dbaa0fa0f6547ef6718c310add43008b2fb2c2f710d540cf7bf21138"
+      },
+      "laboratory": "visual-animation",
+      "limits": "Inventory and inspected source availability do not establish destination integration or newly executed origin behavior.",
+      "origin": "P07",
+      "roots": [
+        "projects/cinderwatch/Native/media",
+        "projects/veil-arena/media/art"
+      ]
+    },
+    {
+      "availability": "available",
+      "evidence_paths": [
+        "evidence/cinderwatch/PRESENTATION_RUN.json",
+        "evidence/tokyo80s/PITCH_RUN.json",
+        "evidence/tokyo80s/RUN.json",
+        "evidence/tokyo80s/SETLIST_RUN.json",
+        "evidence/veil-arena/PRESENTATION_RUN.json",
+        "projects/cinderwatch/Native/media/audio/catalog.json",
+        "projects/cinderwatch/Native/media/provenance.json",
+        "projects/tokyo80s/media/provenance.json",
+        "projects/tokyo80s/media/rain-provenance.json",
+        "projects/tokyo80s/media/rehearsal-provenance.json",
+        "projects/tokyo80s/tools/render_track.py",
+        "projects/veil-arena/media/provenance.json",
+        "projects/veil-arena/tools/render_audio.py"
+      ],
+      "inventory": {
+        "bytes": 28238133,
+        "classification": {
+          "creative_or_runtime_asset": 25,
+          "data_and_contracts": 6,
+          "documentation_configuration_or_other": 16,
+          "production_or_verification_tool": 2,
+          "recorded_evidence": 5
+        },
+        "files": 54,
+        "tree_sha256": "6d51c57aaf6db9be27adf447d5d6ea0a8a646769fa12327166188533f42b3c96"
+      },
+      "laboratory": "audio-music",
+      "limits": "Inventory and inspected source availability do not establish destination integration or newly executed origin behavior.",
+      "origin": "P08",
+      "roots": [
+        "projects/cinderwatch/Native/media/audio",
+        "projects/tokyo80s/media",
+        "projects/veil-arena/media/audio"
+      ]
+    },
+    {
+      "availability": "no_historical_case_supplied",
+      "evidence_paths": [],
+      "inventory": {
+        "bytes": 0,
+        "classification": {},
+        "files": 0,
+        "tree_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "laboratory": "build-operations",
+      "limits": "Inventory and inspected source availability do not establish destination integration or newly executed origin behavior.",
+      "origin": "P09",
+      "roots": []
+    },
+    {
+      "availability": "available",
+      "evidence_paths": [
+        "docs/LEGACY_REPOSITORIES.md",
+        "evidence/legacy-audit/RUNS.json",
+        "evidence/waystone-dialogue/ADVENTURE_RUN.json",
+        "evidence/waystone-dialogue/AFTERNOON_RUN.json",
+        "evidence/waystone-dialogue/BROWSER_RUN.json",
+        "evidence/waystone-dialogue/CAMPAIGN_RUN.json",
+        "evidence/waystone-dialogue/DEFERRED_REQUEST_RUN.json",
+        "evidence/waystone-dialogue/DIALOGUE_RUN.json",
+        "evidence/waystone-dialogue/DUSK_RUN.json",
+        "evidence/waystone-dialogue/HANDOVER_RUN.json",
+        "evidence/waystone-dialogue/RUN.json",
+        "evidence/waystone-dialogue/TRUST_RUN.json",
+        "projects/waystone-dialogue/README.md",
+        "projects/waystone-dialogue/browser/README.md",
+        "projects/waystone-dialogue/provenance.json",
+        "references/rave-master/README.md"
+      ],
+      "inventory": {
+        "bytes": 6603548,
+        "classification": {
+          "data_and_contracts": 361,
+          "documentation_configuration_or_other": 61,
+          "implementation": 152,
+          "production_or_verification_tool": 25,
+          "recorded_evidence": 11,
+          "tests_and_controls": 30
+        },
+        "files": 640,
+        "tree_sha256": "8bcebbbcc96597c7374b070f89c2187a21ec895fb519abb5e11cc8be0cc28318"
+      },
+      "laboratory": "world-gameplay",
+      "limits": "Inventory and inspected source availability do not establish destination integration or newly executed origin behavior.",
+      "origin": "P10",
+      "roots": [
+        "projects/waystone-dialogue",
+        "references/rave-master"
+      ]
+    },
+    {
+      "availability": "available",
+      "evidence_paths": [
+        "docs/LEGACY_REPOSITORIES.md",
+        "evidence/legacy-audit/RUNS.json",
+        "evidence/realtime-chat/ACTIONS_RUN.json",
+        "evidence/realtime-chat/ACTIVITY_RUN.json",
+        "evidence/realtime-chat/DRAFT_RECOVERY_RUN.json",
+        "evidence/realtime-chat/HISTORY_RUN.json",
+        "evidence/realtime-chat/POLLING_SEND_RUN.json",
+        "evidence/realtime-chat/PORTABLE_RUN.json",
+        "evidence/realtime-chat/PRINT_RUN.json",
+        "evidence/realtime-chat/READING_RUN.json",
+        "evidence/realtime-chat/RECOVERY_RUN.json",
+        "evidence/realtime-chat/RESIZE_RUN.json",
+        "evidence/realtime-chat/ROOMS_RUN.json",
+        "evidence/realtime-chat/RUN.json",
+        "evidence/realtime-chat/SEARCH_RUN.json",
+        "evidence/realtime-chat/TEXT_REFLOW_RUN.json",
+        "evidence/realtime-chat/UNREAD_RUN.json",
+        "projects/realtime-integration-lab/README.md"
+      ],
+      "inventory": {
+        "bytes": 662984,
+        "classification": {
+          "data_and_contracts": 3,
+          "documentation_configuration_or_other": 4,
+          "implementation": 20,
+          "recorded_evidence": 16,
+          "tests_and_controls": 16
+        },
+        "files": 59,
+        "tree_sha256": "c5cf90183825825e74ecd270ea18e016b3464e04f2705adf544c668a76e15ae0"
+      },
+      "laboratory": "networking-persistence",
+      "limits": "Inventory and inspected source availability do not establish destination integration or newly executed origin behavior.",
+      "origin": "P11",
+      "roots": [
+        "projects/realtime-integration-lab"
+      ]
+    }
+  ],
+  "overlap_policy": "A shared source is counted once in unique_available_sources; per-origin counts intentionally overlap, never measure effort.",
+  "packages": {
+    "identical_whole_packages": [],
+    "limits": "No package is declared removable. Identical embedded runtimes do not make version-specific source, saves, PCKs or notices redundant; no extraction or execution occurred.",
+    "package_count": 27,
+    "packages": [
+      {
+        "bytes": 448865,
+        "members": 179,
+        "path": "archive/legacy-source-extracts-v0.2.0.zip",
+        "sha256": "6da636a270284eac1e11d00407dab364c2d9aa8c2f0485e77509e6ccf0dbc1dc",
+        "uncompressed_bytes": 1522758
+      },
+      {
+        "bytes": 27264377,
+        "members": 7,
+        "path": "north-star/prototype/dist/crossing-drill-linux-0.1.0.zip",
+        "sha256": "be6067d48693d34dfcc738d90d02fcee6232739882cdf9408c2b1be93567cee9",
+        "uncompressed_bytes": 71494666
+      },
+      {
+        "bytes": 27270366,
+        "members": 7,
+        "path": "north-star/prototype/dist/crossing-drill-linux-0.2.0.zip",
+        "sha256": "d37ebb0ed740765d379c25b9ee6595e645294d4ad79823fdc47b7b18cc56c1cc",
+        "uncompressed_bytes": 71516035
+      },
+      {
+        "bytes": 27274670,
+        "members": 7,
+        "path": "north-star/prototype/dist/crossing-drill-linux-0.3.0.zip",
+        "sha256": "b326601652cdab1392b1d431218a45a5b01f984f4656c87199dc0311e20bd599",
+        "uncompressed_bytes": 71531622
+      },
+      {
+        "bytes": 27277561,
+        "members": 7,
+        "path": "north-star/prototype/dist/crossing-drill-linux-0.4.0.zip",
+        "sha256": "072a5513b854383659cc9b35b53a58830386786e20998b9b6d66d8d48ce1da78",
+        "uncompressed_bytes": 71543976
+      },
+      {
+        "bytes": 27280387,
+        "members": 7,
+        "path": "north-star/prototype/dist/crossing-drill-linux-0.5.0.zip",
+        "sha256": "ddbaedb27e002066b088c25f70de15fe95f2bb814f1ca689efbf946cd6c5c1ab",
+        "uncompressed_bytes": 71554764
+      },
+      {
+        "bytes": 351784,
+        "path": "north-star/prototype/dist/crossing-drill.pck",
+        "sha256": "352e47bca2482de7da6dd8818ebf5f3464a5585da93b10dd8a6c164ec70c17e2"
+      },
+      {
+        "bytes": 65791,
+        "members": 20,
+        "path": "projects/cinderwatch/dist/cinderwatch-0.1.0.zip",
+        "sha256": "f463d4d21239a1af8cb964ac5190e4b3a04896e5077f33638b5c61c91543c597",
+        "uncompressed_bytes": 160002
+      },
+      {
+        "bytes": 2810385,
+        "members": 33,
+        "path": "projects/cinderwatch/dist/cinderwatch-0.2.0.zip",
+        "sha256": "e2a94f4ff14448c672762cf548a4e610b62ee689acce5797830c025e4d2202b8",
+        "uncompressed_bytes": 3015368
+      },
+      {
+        "bytes": 2813096,
+        "members": 36,
+        "path": "projects/cinderwatch/dist/cinderwatch-0.3.0.zip",
+        "sha256": "ec37ec4ed4f3c20270f639d36fb6b5b2466a57f0a484b42622a7064f3a5184ac",
+        "uncompressed_bytes": 3021066
+      },
+      {
+        "bytes": 2820841,
+        "members": 37,
+        "path": "projects/cinderwatch/dist/cinderwatch-0.4.0.zip",
+        "sha256": "ff9be1eef5e45d65c362f972e383ac4bfc1a73da7bb3bccbbeffa6d76262501d",
+        "uncompressed_bytes": 3042117
+      },
+      {
+        "bytes": 2838889,
+        "members": 41,
+        "path": "projects/cinderwatch/dist/cinderwatch-0.5.0.zip",
+        "sha256": "40feb41bfe21f9e7e9399b472af24b9830cea8ff2c199bbe389739c4e1f4ecf0",
+        "uncompressed_bytes": 3101170
+      },
+      {
+        "bytes": 67267069,
+        "members": 210,
+        "path": "projects/cinderwatch/dist/cinderwatch-linux-0.3.0.zip",
+        "sha256": "f2dede5ea90f11a50d14ce2b308b3f66e33d43f5e8663243b7904b69a789bcbd",
+        "uncompressed_bytes": 162679965
+      },
+      {
+        "bytes": 67272026,
+        "members": 210,
+        "path": "projects/cinderwatch/dist/cinderwatch-linux-0.4.0.zip",
+        "sha256": "7975b11e2be060fe488b2cf329070d7750fca726a55228aeaa72fd863801ff3a",
+        "uncompressed_bytes": 162693889
+      },
+      {
+        "bytes": 67281674,
+        "members": 210,
+        "path": "projects/cinderwatch/dist/cinderwatch-linux-0.5.0.zip",
+        "sha256": "6930386b285c3812ed665040bad425437ee65152e4975a2048df186efc70afc4",
+        "uncompressed_bytes": 162725950
+      },
+      {
+        "bytes": 67124,
+        "members": 22,
+        "path": "projects/eclipse-fair/dist/eclipse-board-0.2.0.zip",
+        "sha256": "faadb4309cd0f7003d8ce3d23646dde455beecab0fe18245db292c94af303c6b",
+        "uncompressed_bytes": 157778
+      },
+      {
+        "bytes": 78949,
+        "members": 23,
+        "path": "projects/eclipse-fair/dist/eclipse-board-0.3.0.zip",
+        "sha256": "a77f3be31829f5f0fb6ba3d1b798a88e8b0525d917860850f81b1c0e5aeee569",
+        "uncompressed_bytes": 191487
+      },
+      {
+        "bytes": 97567,
+        "members": 27,
+        "path": "projects/eclipse-fair/dist/eclipse-board-0.4.0.zip",
+        "sha256": "bd1c81c0b1cb9ac3356b172756c45833ca74ac061580f5a6b145a555d7434a0e",
+        "uncompressed_bytes": 247637
+      },
+      {
+        "bytes": 99476,
+        "members": 29,
+        "path": "projects/eclipse-fair/dist/eclipse-board-0.5.0.zip",
+        "sha256": "f2edfe275f515df8dc1fb94589b3a726fcc1f5c528891b8a8d5d675d742bb6c7",
+        "uncompressed_bytes": 252014
+      },
+      {
+        "bytes": 125244,
+        "members": 35,
+        "path": "projects/eclipse-fair/dist/eclipse-board-0.6.0.zip",
+        "sha256": "9f38c343725930bac8608a97e52635f42f1bd8baa6428f257ca77c9e5563763e",
+        "uncompressed_bytes": 333813
+      },
+      {
+        "bytes": 30282,
+        "members": 8,
+        "path": "projects/eclipse-fair/dist/eclipse-fair-0.1.0.zip",
+        "sha256": "1d931daa1d630fe9201be3af07999d8969447c1cad6e685d1f6f5e34814f1422",
+        "uncompressed_bytes": 67109
+      },
+      {
+        "bytes": 64547335,
+        "members": 200,
+        "path": "projects/eclipse-fair/dist/eclipse-fair-linux-0.5.0.zip",
+        "sha256": "9d7b105f04e9ad045f6192889af38f9a7d60345947dc32c718bc0c185ce78062",
+        "uncompressed_bytes": 159887500
+      },
+      {
+        "bytes": 64561315,
+        "members": 200,
+        "path": "projects/eclipse-fair/dist/eclipse-fair-linux-0.6.0.zip",
+        "sha256": "51fd0ea6ca0163b4e9e940fcd0c75c2b5b83f48fa7e3c59aef132c6d9ba49d03",
+        "uncompressed_bytes": 159930055
+      },
+      {
+        "bytes": 32568885,
+        "members": 6,
+        "path": "projects/veil-arena/dist/veilbreak-linux-0.4.0.zip",
+        "sha256": "8433318647a4426c5545fe723dc1a58a34fb6eb1676c66ab1cd20abf334b578c",
+        "uncompressed_bytes": 76644810
+      },
+      {
+        "bytes": 32570992,
+        "members": 6,
+        "path": "projects/veil-arena/dist/veilbreak-linux-0.5.0.zip",
+        "sha256": "8590358965fcc03874d3e703f1e485aa8c13fec1e4a7b42716e4e14678e110e1",
+        "uncompressed_bytes": 76646955
+      },
+      {
+        "bytes": 32574700,
+        "members": 6,
+        "path": "projects/veil-arena/dist/veilbreak-linux-0.6.0.zip",
+        "sha256": "2cd5af925bf487e17f1f77df7965a1824943ebf4ed443e22f86f9237e9d8f19d",
+        "uncompressed_bytes": 76650867
+      },
+      {
+        "bytes": 5466880,
+        "path": "projects/veil-arena/dist/veilbreak.pck",
+        "sha256": "81d345dc74510a75363b065112521d0c6c3aab3e11a9d789eba53d1ebd93d27b"
+      }
+    ],
+    "repeated_payloads_over_1_mib": [
+      {
+        "bytes": 71229400,
+        "copies": [
+          {
+            "member": "Cinderwatch/cinderwatch.x86_64",
+            "package": "projects/cinderwatch/dist/cinderwatch-linux-0.3.0.zip"
+          },
+          {
+            "member": "Cinderwatch/cinderwatch.x86_64",
+            "package": "projects/cinderwatch/dist/cinderwatch-linux-0.4.0.zip"
+          },
+          {
+            "member": "Cinderwatch/cinderwatch.x86_64",
+            "package": "projects/cinderwatch/dist/cinderwatch-linux-0.5.0.zip"
+          },
+          {
+            "member": "EclipseFair/eclipse-fair.x86_64",
+            "package": "projects/eclipse-fair/dist/eclipse-fair-linux-0.5.0.zip"
+          },
+          {
+            "member": "EclipseFair/eclipse-fair.x86_64",
+            "package": "projects/eclipse-fair/dist/eclipse-fair-linux-0.6.0.zip"
+          }
+        ],
+        "sha256": "dde8bd2f5b6b8666c3656a57900f8c4163b3fc9799cc723746ca88468333b320"
+      },
+      {
+        "bytes": 71075864,
+        "copies": [
+          {
+            "member": "CrossingDrill/crossing-drill.x86_64",
+            "package": "north-star/prototype/dist/crossing-drill-linux-0.1.0.zip"
+          },
+          {
+            "member": "CrossingDrill/crossing-drill.x86_64",
+            "package": "north-star/prototype/dist/crossing-drill-linux-0.2.0.zip"
+          },
+          {
+            "member": "CrossingDrill/crossing-drill.x86_64",
+            "package": "north-star/prototype/dist/crossing-drill-linux-0.3.0.zip"
+          },
+          {
+            "member": "CrossingDrill/crossing-drill.x86_64",
+            "package": "north-star/prototype/dist/crossing-drill-linux-0.4.0.zip"
+          },
+          {
+            "member": "CrossingDrill/crossing-drill.x86_64",
+            "package": "north-star/prototype/dist/crossing-drill-linux-0.5.0.zip"
+          },
+          {
+            "member": "Veilbreak/veilbreak.x86_64",
+            "package": "projects/veil-arena/dist/veilbreak-linux-0.4.0.zip"
+          },
+          {
+            "member": "Veilbreak/veilbreak.x86_64",
+            "package": "projects/veil-arena/dist/veilbreak-linux-0.5.0.zip"
+          },
+          {
+            "member": "Veilbreak/veilbreak.x86_64",
+            "package": "projects/veil-arena/dist/veilbreak-linux-0.6.0.zip"
+          }
+        ],
+        "sha256": "2c78919325d7f29fa7607287c7c1eeac367ea4c94e7b8b6f5f4c6b20492f73d0"
+      },
+      {
+        "bytes": 15576872,
+        "copies": [
+          {
+            "member": "Cinderwatch/data_Cinder.Native_linuxbsd_x86_64/System.Private.CoreLib.dll",
+            "package": "projects/cinderwatch/dist/cinderwatch-linux-0.3.0.zip"
+          },
+          {
+            "member": "Cinderwatch/data_Cinder.Native_linuxbsd_x86_64/System.Private.CoreLib.dll",
+            "package": "projects/cinderwatch/dist/cinderwatch-linux-0.4.0.zip"
+          },
+          {
+            "member": "Cinderwatch/data_Cinder.Native_linuxbsd_x86_64/System.Private.CoreLib.dll",
+            "package": "projects/cinderwatch/dist/cinderwatch-linux-0.5.0.zip"
+          },
+          {
+            "member": "EclipseFair/data_Eclipse.Board_linuxbsd_x86_64/System.Private.CoreLib.dll",
+            "package": "projects/eclipse-fair/dist/eclipse-fair-linux-0.5.0.zip"
+          },
+          {
+            "member": "EclipseFair/data_Eclipse.Board_linuxbsd_x86_64/System.Private.CoreLib.dll",
+            "package": "projects/eclipse-fair/dist/eclipse-fair-linux-0.6.0.zip"
+          }
+        ],
+        "sha256": "26304a2985357b9ee277f273667fcd9c892edae3ee6eba76f739033e95eb39b3"
+      },
+      {
+        "bytes": 7902544,
+        "copies": [
+          {
+            "member": "Cinderwatch/data_Cinder.Native_linuxbsd_x86_64/System.Private.Xml.dll",
+            "package": "projects/cinderwatch/dist/cinderwatch-linux-0.3.0.zip"
+          },
+          {
+            "member": "Cinderwatch/data_Cinder.Native_linuxbsd_x86_64/System.Private.Xml.dll",
+            "package": "projects/cinderwatch/dist/cinderwatch-linux-0.4.0.zip"
+          },
+          {
+            "member": "Cinderwatch/data_Cinder.Native_linuxbsd_x86_64/System.Private.Xml.dll",
+            "package": "projects/cinderwatch/dist/cinderwatch-linux-0.5.0.zip"
+          },
+          {
+            "member": "EclipseFair/data_Eclipse.Board_linuxbsd_x86_64/System.Private.Xml.dll",
+            "package": "projects/eclipse-fair/dist/eclipse-fair-linux-0.5.0.zip"
+          },
+          {
+            "member": "EclipseFair/data_Eclipse.Board_linuxbsd_x86_64/System.Private.Xml.dll",
+            "package": "projects/eclipse-fair/dist/eclipse-fair-linux-0.6.0.zip"
+          }
+        ],
+        "sha256": "61702d155227bfd6317170cce55dcdbfea69ba129e9b173ee2cadd1f5b5cde74"
+      },
+      {
+        "bytes": 7110952,
+        "copies": [
+          {
+            "member": "Cinderwatch/data_Cinder.Native_linuxbsd_x86_64/libcoreclr.so",
+            "package": "projects/cinderwatch/dist/cinderwatch-linux-0.3.0.zip"
+          },
+          {
+            "member": "Cinderwatch/data_Cinder.Native_linuxbsd_x86_64/libcoreclr.so",
+            "package": "projects/cinderwatch/dist/cinderwatch-linux-0.4.0.zip"
+          },
+          {
+            "member": "Cinderwatch/data_Cinder.Native_linuxbsd_x86_64/libcoreclr.so",
+            "package": "projects/cinderwatch/dist/cinderwatch-linux-0.5.0.zip"
+          },
+          {
+            "member": "EclipseFair/data_Eclipse.Board_linuxbsd_x86_64/libcoreclr.so",
+            "package": "projects/eclipse-fair/dist/eclipse-fair-linux-0.5.0.zip"
+          },
+          {
+            "member": "EclipseFair/data_Eclipse.Board_linuxbsd_x86_64/libcoreclr.so",
+            "package": "projects/eclipse-fair/dist/eclipse-fair-linux-0.6.0.zip"
+          }
+        ],
+        "sha256": "df5cfe7ba5abf7931f4836726f2fbb0d47dc32caa45d3c209ddf7ccd25c32f4c"
+      },
+      {
+        "bytes": 5769216,
+        "copies": [
+          {
+            "member": "Cinderwatch/data_Cinder.Native_linuxbsd_x86_64/GodotSharp.dll",
+            "package": "projects/cinderwatch/dist/cinderwatch-linux-0.3.0.zip"
+          },
+          {
+            "member": "Cinderwatch/data_Cinder.Native_linuxbsd_x86_64/GodotSharp.dll",
+            "package": "projects/cinderwatch/dist/cinderwatch-linux-0.4.0.zip"
+          },
+          {
+            "member": "Cinderwatch/data_Cinder.Native_linuxbsd_x86_64/GodotSharp.dll",
+            "package": "projects/cinderwatch/dist/cinderwatch-linux-0.5.0.zip"
+          },
+          {
+            "member": "EclipseFair/data_Eclipse.Board_linuxbsd_x86_64/GodotSharp.dll",
+            "package": "projects/eclipse-fair/dist/eclipse-fair-linux-0.5.0.zip"
+          },
+          {
+            "member": "EclipseFair/data_Eclipse.Board_linuxbsd_x86_64/GodotSharp.dll",
+            "package": "projects/eclipse-fair/dist/eclipse-fair-linux-0.6.0.zip"
+          }
+        ],
+        "sha256": "2142e62894176d7340f50581f8b2fe84e36ae64e1a85f1b2bd7737a7e8a5c8ba"
+      },
+      {
+        "bytes": 4750912,
+        "copies": [
+          {
+            "member": "Cinderwatch/data_Cinder.Native_linuxbsd_x86_64/libclrjit.so",
+            "package": "projects/cinderwatch/dist/cinderwatch-linux-0.3.0.zip"
+          },
+          {
+            "member": "Cinderwatch/data_Cinder.Native_linuxbsd_x86_64/libclrjit.so",
+            "package": "projects/cinderwatch/dist/cinderwatch-linux-0.4.0.zip"
+          },
+          {
+            "member": "Cinderwatch/data_Cinder.Native_linuxbsd_x86_64/libclrjit.so",
+            "package": "projects/cinderwatch/dist/cinderwatch-linux-0.5.0.zip"
+          },
+          {
+            "member": "EclipseFair/data_Eclipse.Board_linuxbsd_x86_64/libclrjit.so",
+            "package": "projects/eclipse-fair/dist/eclipse-fair-linux-0.5.0.zip"
+          },
+          {
+            "member": "EclipseFair/data_Eclipse.Board_linuxbsd_x86_64/libclrjit.so",
+            "package": "projects/eclipse-fair/dist/eclipse-fair-linux-0.6.0.zip"
+          }
+        ],
+        "sha256": "b1982215159bcb8eb0cb57afdccbc9e970411750bd530d1e62592f5ac397c398"
+      },
+      {
+        "bytes": 3724112,
+        "copies": [
+          {
+            "member": "Cinderwatch/data_Cinder.Native_linuxbsd_x86_64/System.Linq.Expressions.dll",
+            "package": "projects/cinderwatch/dist/cinderwatch-linux-0.3.0.zip"
+          },
+          {
+            "member": "Cinderwatch/data_Cinder.Native_linuxbsd_x86_64/System.Linq.Expressions.dll",
+            "package": "projects/cinderwatch/dist/cinderwatch-linux-0.4.0.zip"
+          },
+          {
+            "member": "Cinderwatch/data_Cinder.Native_linuxbsd_x86_64/System.Linq.Expressions.dll",
+            "package": "projects/cinderwatch/dist/cinderwatch-linux-0.5.0.zip"
+          },
+          {
+            "member": "EclipseFair/data_Eclipse.Board_linuxbsd_x86_64/System.Linq.Expressions.dll",
+            "package": "projects/eclipse-fair/dist/eclipse-fair-linux-0.5.0.zip"
+          },
+          {
+            "member": "EclipseFair/data_Eclipse.Board_linuxbsd_x86_64/System.Linq.Expressions.dll",
+            "package": "projects/eclipse-fair/dist/eclipse-fair-linux-0.6.0.zip"
+          }
+        ],
+        "sha256": "d8345995a8f5af5cb11cf39aa318ac98e21ce258d54d2acb6b4bda73693b3c1e"
+      },
+      {
+        "bytes": 2802984,
+        "copies": [
+          {
+            "member": "Cinderwatch/data_Cinder.Native_linuxbsd_x86_64/System.Data.Common.dll",
+            "package": "projects/cinderwatch/dist/cinderwatch-linux-0.3.0.zip"
+          },
+          {
+            "member": "Cinderwatch/data_Cinder.Native_linuxbsd_x86_64/System.Data.Common.dll",
+            "package": "projects/cinderwatch/dist/cinderwatch-linux-0.4.0.zip"
+          },
+          {
+            "member": "Cinderwatch/data_Cinder.Native_linuxbsd_x86_64/System.Data.Common.dll",
+            "package": "projects/cinderwatch/dist/cinderwatch-linux-0.5.0.zip"
+          },
+          {
+            "member": "EclipseFair/data_Eclipse.Board_linuxbsd_x86_64/System.Data.Common.dll",
+            "package": "projects/eclipse-fair/dist/eclipse-fair-linux-0.5.0.zip"
+          },
+          {
+            "member": "EclipseFair/data_Eclipse.Board_linuxbsd_x86_64/System.Data.Common.dll",
+            "package": "projects/eclipse-fair/dist/eclipse-fair-linux-0.6.0.zip"
+          }
+        ],
+        "sha256": "2c447bc8f9288889382b15e208fc342343986bd9f51bd52130410e9e5650edc8"
+      },
+      {
+        "bytes": 2653992,
+        "copies": [
+          {
+            "member": "Cinderwatch/data_Cinder.Native_linuxbsd_x86_64/System.Security.Cryptography.dll",
+            "package": "projects/cinderwatch/dist/cinderwatch-linux-0.3.0.zip"
+          },
+          {
+            "member": "Cinderwatch/data_Cinder.Native_linuxbsd_x86_64/System.Security.Cryptography.dll",
+            "package": "projects/cinderwatch/dist/cinderwatch-linux-0.4.0.zip"
+          },
+          {
+            "member": "Cinderwatch/data_Cinder.Native_linuxbsd_x86_64/System.Security.Cryptography.dll",
+            "package": "projects/cinderwatch/dist/cinderwatch-linux-0.5.0.zip"
+          },
+          {
+            "member": "EclipseFair/data_Eclipse.Board_linuxbsd_x86_64/System.Security.Cryptography.dll",
+            "package": "projects/eclipse-fair/dist/eclipse-fair-linux-0.5.0.zip"
+          },
+          {
+            "member": "EclipseFair/data_Eclipse.Board_linuxbsd_x86_64/System.Security.Cryptography.dll",
+            "package": "projects/eclipse-fair/dist/eclipse-fair-linux-0.6.0.zip"
+          }
+        ],
+        "sha256": "49c7a0f1657dc1da331fbe5dcca5fd13700c692514528380eaff4cf15ddc64a1"
+      },
+      {
+        "bytes": 2540334,
+        "copies": [
+          {
+            "member": "cinderwatch/Native/media/portraits.png",
+            "package": "projects/cinderwatch/dist/cinderwatch-0.2.0.zip"
+          },
+          {
+            "member": "cinderwatch/Native/media/portraits.png",
+            "package": "projects/cinderwatch/dist/cinderwatch-0.3.0.zip"
+          },
+          {
+            "member": "cinderwatch/Native/media/portraits.png",
+            "package": "projects/cinderwatch/dist/cinderwatch-0.4.0.zip"
+          },
+          {
+            "member": "cinderwatch/Native/media/portraits.png",
+            "package": "projects/cinderwatch/dist/cinderwatch-0.5.0.zip"
+          },
+          {
+            "member": "Cinderwatch/media/portraits.png",
+            "package": "projects/cinderwatch/dist/cinderwatch-linux-0.3.0.zip"
+          },
+          {
+            "member": "Cinderwatch/media/portraits.png",
+            "package": "projects/cinderwatch/dist/cinderwatch-linux-0.4.0.zip"
+          },
+          {
+            "member": "Cinderwatch/media/portraits.png",
+            "package": "projects/cinderwatch/dist/cinderwatch-linux-0.5.0.zip"
+          }
+        ],
+        "sha256": "fc0047682ddde11ef4e4339e965164e361432287759a7c12223c7ef55027a1cb"
+      },
+      {
+        "bytes": 2401968,
+        "copies": [
+          {
+            "member": "Cinderwatch/data_Cinder.Native_linuxbsd_x86_64/libmscordaccore.so",
+            "package": "projects/cinderwatch/dist/cinderwatch-linux-0.3.0.zip"
+          },
+          {
+            "member": "Cinderwatch/data_Cinder.Native_linuxbsd_x86_64/libmscordaccore.so",
+            "package": "projects/cinderwatch/dist/cinderwatch-linux-0.4.0.zip"
+          },
+          {
+            "member": "Cinderwatch/data_Cinder.Native_linuxbsd_x86_64/libmscordaccore.so",
+            "package": "projects/cinderwatch/dist/cinderwatch-linux-0.5.0.zip"
+          },
+          {
+            "member": "EclipseFair/data_Eclipse.Board_linuxbsd_x86_64/libmscordaccore.so",
+            "package": "projects/eclipse-fair/dist/eclipse-fair-linux-0.5.0.zip"
+          },
+          {
+            "member": "EclipseFair/data_Eclipse.Board_linuxbsd_x86_64/libmscordaccore.so",
+            "package": "projects/eclipse-fair/dist/eclipse-fair-linux-0.6.0.zip"
+          }
+        ],
+        "sha256": "54554757342c4325ab0eb8147afd1eafec1913fae6b2739cde225387673bdd23"
+      },
+      {
+        "bytes": 2071336,
+        "copies": [
+          {
+            "member": "Cinderwatch/data_Cinder.Native_linuxbsd_x86_64/System.Private.DataContractSerialization.dll",
+            "package": "projects/cinderwatch/dist/cinderwatch-linux-0.3.0.zip"
+          },
+          {
+            "member": "Cinderwatch/data_Cinder.Native_linuxbsd_x86_64/System.Private.DataContractSerialization.dll",
+            "package": "projects/cinderwatch/dist/cinderwatch-linux-0.4.0.zip"
+          },
+          {
+            "member": "Cinderwatch/data_Cinder.Native_linuxbsd_x86_64/System.Private.DataContractSerialization.dll",
+            "package": "projects/cinderwatch/dist/cinderwatch-linux-0.5.0.zip"
+          },
+          {
+            "member": "EclipseFair/data_Eclipse.Board_linuxbsd_x86_64/System.Private.DataContractSerialization.dll",
+            "package": "projects/eclipse-fair/dist/eclipse-fair-linux-0.5.0.zip"
+          },
+          {
+            "member": "EclipseFair/data_Eclipse.Board_linuxbsd_x86_64/System.Private.DataContractSerialization.dll",
+            "package": "projects/eclipse-fair/dist/eclipse-fair-linux-0.6.0.zip"
+          }
+        ],
+        "sha256": "b1cd35e0f5d42fb57e36793429ea627cd3d2f275b11ab560248e9ca0607cbe05"
+      },
+      {
+        "bytes": 1882920,
+        "copies": [
+          {
+            "member": "Cinderwatch/data_Cinder.Native_linuxbsd_x86_64/System.Text.Json.dll",
+            "package": "projects/cinderwatch/dist/cinderwatch-linux-0.3.0.zip"
+          },
+          {
+            "member": "Cinderwatch/data_Cinder.Native_linuxbsd_x86_64/System.Text.Json.dll",
+            "package": "projects/cinderwatch/dist/cinderwatch-linux-0.4.0.zip"
+          },
+          {
+            "member": "Cinderwatch/data_Cinder.Native_linuxbsd_x86_64/System.Text.Json.dll",
+            "package": "projects/cinderwatch/dist/cinderwatch-linux-0.5.0.zip"
+          },
+          {
+            "member": "EclipseFair/data_Eclipse.Board_linuxbsd_x86_64/System.Text.Json.dll",
+            "package": "projects/eclipse-fair/dist/eclipse-fair-linux-0.5.0.zip"
+          },
+          {
+            "member": "EclipseFair/data_Eclipse.Board_linuxbsd_x86_64/System.Text.Json.dll",
+            "package": "projects/eclipse-fair/dist/eclipse-fair-linux-0.6.0.zip"
+          }
+        ],
+        "sha256": "50724e46049548a8efdb3e56ddaf6efaf7c9acb510c3fb5581c10c85577189ea"
+      },
+      {
+        "bytes": 1726248,
+        "copies": [
+          {
+            "member": "Cinderwatch/data_Cinder.Native_linuxbsd_x86_64/System.Net.Http.dll",
+            "package": "projects/cinderwatch/dist/cinderwatch-linux-0.3.0.zip"
+          },
+          {
+            "member": "Cinderwatch/data_Cinder.Native_linuxbsd_x86_64/System.Net.Http.dll",
+            "package": "projects/cinderwatch/dist/cinderwatch-linux-0.4.0.zip"
+          },
+          {
+            "member": "Cinderwatch/data_Cinder.Native_linuxbsd_x86_64/System.Net.Http.dll",
+            "package": "projects/cinderwatch/dist/cinderwatch-linux-0.5.0.zip"
+          },
+          {
+            "member": "EclipseFair/data_Eclipse.Board_linuxbsd_x86_64/System.Net.Http.dll",
+            "package": "projects/eclipse-fair/dist/eclipse-fair-linux-0.5.0.zip"
+          },
+          {
+            "member": "EclipseFair/data_Eclipse.Board_linuxbsd_x86_64/System.Net.Http.dll",
+            "package": "projects/eclipse-fair/dist/eclipse-fair-linux-0.6.0.zip"
+          }
+        ],
+        "sha256": "e8beeb63db39e7d540aa711c701860c5ddb8826f2bfff62af2abfa74eaa7a055"
+      },
+      {
+        "bytes": 1634488,
+        "copies": [
+          {
+            "member": "Cinderwatch/data_Cinder.Native_linuxbsd_x86_64/libmscordbi.so",
+            "package": "projects/cinderwatch/dist/cinderwatch-linux-0.3.0.zip"
+          },
+          {
+            "member": "Cinderwatch/data_Cinder.Native_linuxbsd_x86_64/libmscordbi.so",
+            "package": "projects/cinderwatch/dist/cinderwatch-linux-0.4.0.zip"
+          },
+          {
+            "member": "Cinderwatch/data_Cinder.Native_linuxbsd_x86_64/libmscordbi.so",
+            "package": "projects/cinderwatch/dist/cinderwatch-linux-0.5.0.zip"
+          },
+          {
+            "member": "EclipseFair/data_Eclipse.Board_linuxbsd_x86_64/libmscordbi.so",
+            "package": "projects/eclipse-fair/dist/eclipse-fair-linux-0.5.0.zip"
+          },
+          {
+            "member": "EclipseFair/data_Eclipse.Board_linuxbsd_x86_64/libmscordbi.so",
+            "package": "projects/eclipse-fair/dist/eclipse-fair-linux-0.6.0.zip"
+          }
+        ],
+        "sha256": "6d90714c5ca42977be9025a15084d4f6bf071dfc2066093a856835e28be45505"
+      },
+      {
+        "bytes": 1328936,
+        "copies": [
+          {
+            "member": "Cinderwatch/data_Cinder.Native_linuxbsd_x86_64/System.Linq.AsyncEnumerable.dll",
+            "package": "projects/cinderwatch/dist/cinderwatch-linux-0.3.0.zip"
+          },
+          {
+            "member": "Cinderwatch/data_Cinder.Native_linuxbsd_x86_64/System.Linq.AsyncEnumerable.dll",
+            "package": "projects/cinderwatch/dist/cinderwatch-linux-0.4.0.zip"
+          },
+          {
+            "member": "Cinderwatch/data_Cinder.Native_linuxbsd_x86_64/System.Linq.AsyncEnumerable.dll",
+            "package": "projects/cinderwatch/dist/cinderwatch-linux-0.5.0.zip"
+          },
+          {
+            "member": "EclipseFair/data_Eclipse.Board_linuxbsd_x86_64/System.Linq.AsyncEnumerable.dll",
+            "package": "projects/eclipse-fair/dist/eclipse-fair-linux-0.5.0.zip"
+          },
+          {
+            "member": "EclipseFair/data_Eclipse.Board_linuxbsd_x86_64/System.Linq.AsyncEnumerable.dll",
+            "package": "projects/eclipse-fair/dist/eclipse-fair-linux-0.6.0.zip"
+          }
+        ],
+        "sha256": "a47cbda2710e8d8bc794bd5fe1e7f3675a5487124a650a3195f0b604c1659ba0"
+      },
+      {
+        "bytes": 1166120,
+        "copies": [
+          {
+            "member": "Cinderwatch/data_Cinder.Native_linuxbsd_x86_64/Microsoft.VisualBasic.Core.dll",
+            "package": "projects/cinderwatch/dist/cinderwatch-linux-0.3.0.zip"
+          },
+          {
+            "member": "Cinderwatch/data_Cinder.Native_linuxbsd_x86_64/Microsoft.VisualBasic.Core.dll",
+            "package": "projects/cinderwatch/dist/cinderwatch-linux-0.4.0.zip"
+          },
+          {
+            "member": "Cinderwatch/data_Cinder.Native_linuxbsd_x86_64/Microsoft.VisualBasic.Core.dll",
+            "package": "projects/cinderwatch/dist/cinderwatch-linux-0.5.0.zip"
+          },
+          {
+            "member": "EclipseFair/data_Eclipse.Board_linuxbsd_x86_64/Microsoft.VisualBasic.Core.dll",
+            "package": "projects/eclipse-fair/dist/eclipse-fair-linux-0.5.0.zip"
+          },
+          {
+            "member": "EclipseFair/data_Eclipse.Board_linuxbsd_x86_64/Microsoft.VisualBasic.Core.dll",
+            "package": "projects/eclipse-fair/dist/eclipse-fair-linux-0.6.0.zip"
+          }
+        ],
+        "sha256": "05ecd6e7b7259db9a1c8cdf0f6913096f7c0c693b48a1cf03aa728ace93c584e"
+      },
+      {
+        "bytes": 1148240,
+        "copies": [
+          {
+            "member": "Cinderwatch/data_Cinder.Native_linuxbsd_x86_64/System.Reflection.Metadata.dll",
+            "package": "projects/cinderwatch/dist/cinderwatch-linux-0.3.0.zip"
+          },
+          {
+            "member": "Cinderwatch/data_Cinder.Native_linuxbsd_x86_64/System.Reflection.Metadata.dll",
+            "package": "projects/cinderwatch/dist/cinderwatch-linux-0.4.0.zip"
+          },
+          {
+            "member": "Cinderwatch/data_Cinder.Native_linuxbsd_x86_64/System.Reflection.Metadata.dll",
+            "package": "projects/cinderwatch/dist/cinderwatch-linux-0.5.0.zip"
+          },
+          {
+            "member": "EclipseFair/data_Eclipse.Board_linuxbsd_x86_64/System.Reflection.Metadata.dll",
+            "package": "projects/eclipse-fair/dist/eclipse-fair-linux-0.5.0.zip"
+          },
+          {
+            "member": "EclipseFair/data_Eclipse.Board_linuxbsd_x86_64/System.Reflection.Metadata.dll",
+            "package": "projects/eclipse-fair/dist/eclipse-fair-linux-0.6.0.zip"
+          }
+        ],
+        "sha256": "3316bd0c5a36335cac98cd8747919444e3316452466c0448ecbcd2ea89ca5437"
+      }
+    ],
+    "tracked_blob_bytes": 583126530,
+    "zip_uncompressed_bytes": 1410613373
+  },
+  "preserved_archive_sources": [
+    {
+      "archive": "archive/legacy-source-extracts-v0.2.0.zip",
+      "bytes": 1519685,
+      "classification": {
+        "data_and_contracts": 85,
+        "documentation_configuration_or_other": 29,
+        "implementation": 34,
+        "production_or_verification_tool": 12,
+        "tests_and_controls": 15
+      },
+      "legacy_source": "LEGACY-001",
+      "limits": "Pinned selected extracts, not complete historical repository/runtime. Rave members overlap its readable snapshot; do not double-count unique knowledge.",
+      "members": 175,
+      "origin": "P10",
+      "prefix": "rave/",
+      "tree_sha256": "cea16b6a7a0624853617033df260bd9591771beca08085ac56869e5a990e9b3d"
+    },
+    {
+      "archive": "archive/legacy-source-extracts-v0.2.0.zip",
+      "bytes": 2407,
+      "classification": {
+        "data_and_contracts": 1,
+        "implementation": 2
+      },
+      "legacy_source": "LEGACY-002",
+      "limits": "Pinned selected extracts, not complete historical repository/runtime. Rave members overlap its readable snapshot; do not double-count unique knowledge.",
+      "members": 3,
+      "origin": "P11",
+      "prefix": "websocket/",
+      "tree_sha256": "43bc5e8272a743ff7f4dff1505d5f6eae7a1bf83275f42aba767b00caff9e3d7"
+    }
+  ],
+  "reproduce": "python3 tools/inventory_origins.py --check labs/source-inventory.json; use --files for the complete classified per-file listing.",
+  "schema_version": 1,
+  "shared_source_files": 69,
+  "unique_available_sources": {
+    "bytes": 598711562,
+    "classification": {
+      "creative_or_runtime_asset": 67,
+      "data_and_contracts": 394,
+      "distribution_or_preservation_package": 20,
+      "documentation_configuration_or_other": 164,
+      "implementation": 203,
+      "production_or_verification_tool": 53,
+      "recorded_evidence": 61,
+      "rights_and_attribution": 7,
+      "tests_and_controls": 82
+    },
+    "files": 1051,
+    "tree_sha256": "f838df164bfce132464158bfa712847afa0893ffc2c0bc1bf6cd79ec8d27d4de"
+  }
+}

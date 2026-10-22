@@ -1,6 +1,6 @@
 # SEED — Martin Creative AI Lab
 
-**Version:** 0.33.20
+**Version:** 0.34.0
 **Data-base:** 10 de outubro de 2026  
 **Autor e responsável pelo portfólio:** Martin Melcop Neto  
 **Working language:** English for new technical documentation, plans, code comments and Git messages; respond in the requested language (Brazilian Portuguese for continuous closeout). Preserve appropriate creative/source languages.
@@ -23,18 +23,42 @@ retrieval and source status. Current author decisions outweigh hypotheses. Keep
 [the living design record](north-star/DESIGN.md) separate from original sources;
 technical reuse does not merge historical fictional worlds into North Star.
 
-The HUB also develops original works, reusable technologies, scientific instruments,
-production capacity and credible portfolio artifacts. P01–P11 are historical origins
-in controlled transition, without permanent independent product/release duties.
-[The origin inventory](labs/origins.json) records their actual contracts and consumers;
-question-led laboratories may combine origins and sustain substantial research.
+The HUB operates through **eleven research laboratories → tested knowledge and
+reusable technology → North Star → demonstrable portfolio value**. The destinations,
+ownership, truthful maturity, consumption decisions and allocation targets are
+recorded once in [the transformation catalog](labs/origins.json). All eleven must
+become operational through consequential methods, controls, actual results, concrete
+consumers and validity limits. An incomplete entry is an obligation, not a laboratory
+achievement. Cross-origin research and shared methods are encouraged.
 
-Strategic initiatives may span sessions, commits and architectural changes. Select
-valuable feasible work across product, research, engineering and creative production
-without quotas or fixed order. Transform, consolidate or retire implementations when
-consumer value and evidence justify it, preserving unique sources, rights, author
-authority and required integrity. The operating instructions own the lifecycle and
-publication process; Git history alone never releases preservation obligations.
+**Unity/C# is the selected primary North Star production stack. Windows is the
+priority executable platform; Steam is the intended distribution ecosystem.** Tool,
+licensing and activation availability constrain execution, not this author decision.
+No Editor, Windows build or Steam integration can be claimed from domain compilation.
+Preserve the functioning Godot experiments until their valuable behavior and consumers
+have been deliberately transferred, replaced or rejected and preservation is resolved.
+
+The permanent rolling effort targets are **47% Legacy Knowledge Consumption and
+Laboratory Development / 40% North Star Product Development / 13% Repository Health
+and Portfolio Presentation**. These are approximate substantive effort over a meaningful
+window, not commit/file/token quotas or mandatory task fragmentation. STATE maintains
+a short once-counted window, dependencies, deviations and the corrective next frontier.
+Prior uninterrupted prototype work must not justify indefinite laboratory underinvestment.
+
+Legacy sources are preserved separately from active knowledge consumption. Every
+material capability must reach INTEGRATED in an executed verified consumer or REJECTED
+with appropriate evidence. UNRESOLVED requires a concrete next action and cannot count
+as consumed. Begin with a complete source inventory; prioritize deep reading by value,
+risk and available controls, including RPG Maker XP systems beyond combat. Historical
+projects have no permanent independent release obligations. Remove redundant complexity
+only after consumers, recovery, rights, save compatibility and source integrity resolve.
+
+Substantial decisions use independent Engineering, Scientific and Creative specialist
+analyses, in parallel where available, with coordinated ownership and evidence-based
+resolution. Protected Brain documents remain knowledge sources, not those agents or
+human approval. Current author decisions outweigh hypotheses; technical reuse does
+not merge historical fictional worlds. [Operating instructions](docs/prompts/CONTINUOUS_DEVELOPMENT.md)
+own the concrete selection, verification and publication process.
 
 The following versioned milestones are historical execution summaries. STATE is the
 preferred location for current continuity; do not append another current-state table
@@ -330,11 +354,10 @@ A v0.2.0 acrescenta os snapshots de Rave Master e WebSocket: 180 arquivos textua
 
 ## 5. Inventário de projetos como matéria-prima
 
-**Current classification:** all P01–P11 are technology origins in controlled transition.
-The descriptions below preserve origin accomplishments and provenance, not independent
-product obligations. [The transition inventory](labs/origins.json) records current
-capabilities, dependencies, risks and candidate research destinations. Versioned origin
-artifacts remain inspectable; they are not eleven implemented research laboratories.
+**Historical origin descriptions:** P01–P11 preserve accomplishments and provenance,
+not independent product obligations. Their mandatory laboratory destinations and current
+truthful maturity live in [the transformation catalog](labs/origins.json). The descriptions
+below are source history, not authority over the selected Unity/C# direction.
 
 Identificadores persistem mesmo quando nomes mudam. Um projeto arquivado pode continuar como fonte de dados, arte, narrativa ou conhecimento.
 
@@ -901,15 +924,17 @@ Use the adaptive opportunity comparison and initiative-continuity contract in
 resumption and new work by actual progress, future value, uncertainty, remaining
 investment and opportunity cost. North Star remains the principal long-term product;
 substantial laboratories, production systems and other original works can justify
-investment without quotas or automatic rotation. Choose the largest coherent valuable
-contribution feasible to implement and verify, preserving incremental integration.
+investment within the permanent approximate 47/40/13 rolling effort targets and
+mandatory laboratory/consumption outcomes, without per-commit quotas or automatic
+rotation. Choose the largest coherent valuable contribution feasible to implement
+and verify, preserving incremental integration.
 Current initiative frontiers belong in STATE, not a fixed SEED task ordering.
 
 ## 9. Modelo de estados e evidências
 
 ### Estado de atividade
 
-`seed`, `triage`, `active`, `paused`, `archived`, `retired` and `transition` are schema states. All eleven current records use `transition` with role `historical_origin`; `labs/origins.json` separates preserved pending extraction, pilot instrumentation and seed-only origins. Versions/M0–M6 retain origin evidence, not laboratory readiness. `phase` and `next_action` describe current transition work, not independent release commitments.
+`seed`, `triage`, `active`, `paused`, `archived`, `retired` and `transition` are schema states. All eleven current records use `transition` with role `laboratory_source`; `labs/origins.json` schema2 owns mandatory destinations, truthful operational/incomplete maturity and terminal consumption decisions. Versions/M0–M6 retain origin evidence, not laboratory readiness. `phase` and `next_action` describe current transition work, not independent release commitments.
 
 ### Maturidade do artefato
 
@@ -1185,16 +1210,17 @@ P03/P04 oferecem amostras de EN↔PT-BR. Criar master strings, contexto, glossá
 
 ## 15. Stack e migração
 
-### Production architecture candidates
+### Selected production architecture
 
-Unity/C# is a serious North Star candidate. Existing Godot/GDScript and Godot/.NET
-implementations remain useful evidence. No engine is selected here. Follow the
-[operating architecture criteria](docs/prompts/CONTINUOUS_DEVELOPMENT.md): compare
-representative gameplay/data/content production, profiling, reproducible builds,
-Windows/other targets, licensing/maintenance, migration cost, networking, server
-authority, persistence and security. A minimal demo, popularity, professional C#
-relevance or Steam plans alone cannot establish production suitability; Steam does
-not require Unity. Report unavailable tools instead of claiming Unity execution.
+Unity/C# is the selected primary North Star production stack; Windows is priority
+and Steam intended distribution. Earlier candidate/undecided preferences are superseded.
+Existing Godot/GDScript and Godot/.NET implementations remain migration/regression
+sources until consumer, format, recovery and preservation obligations resolve.
+Validate actual supported Unity versions/packages, activation/licensing and Windows
+modules before pinning/executing an Editor. Independently tested C# rules and real
+terminal/production consumers advance unavailable-tool dependencies but do not prove
+Unity Editor, packaged Windows or Steam execution. Architecture trade-offs still need
+real evidence within this selected direction rather than falsely reopening it each cycle.
 
 ### Legacy transformation
 

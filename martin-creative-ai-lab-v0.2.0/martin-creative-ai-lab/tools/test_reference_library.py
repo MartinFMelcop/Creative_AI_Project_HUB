@@ -425,6 +425,23 @@ class DestinationContractTests(unittest.TestCase):
             destination_evidence="evidence/run.json"))
         return code
 
+    def test_selected_unity_direction_is_not_runtime_maturity(self):
+        self.edit("north-star/capabilities.json",lambda d:d.update(engine_selection="Unity"))
+        self.assertEqual(self.run_cli("check").returncode,0)
+        self.edit("north-star/capabilities.json",lambda d:d.update(stage="unity_playable"))
+        self.assert_invalid("Invalid North Star foundation state")
+
+    def test_actual_csharp_destination_can_live_outside_the_godot_prototype(self):
+        old=self.destination();new=self.root/"north-star/domain/Encounter.cs"
+        new.parent.mkdir(parents=True);old.rename(new)
+        newpath="north-star/domain/Encounter.cs"
+        # This is an existing structural fixture, never a claim of compilation.
+        self.edit("north-star/capabilities.json",lambda d:d.update(engine_selection="Unity",consumer_paths=[newpath]))
+        self.edit("north-star/capabilities.json",lambda d:d["capabilities"][0].update(destination_consumer_paths=[newpath]))
+        self.edit("evidence/run.json",lambda d:d.update(consumer_paths=[newpath]))
+        self.edit("evidence/run.json",lambda d:d["source_artifacts"][0].update(local_path=newpath))
+        self.assertEqual(self.run_cli("check").returncode,0)
+
     def test_bound_local_prototype_metadata_is_valid(self):
         self.destination()
         self.assertEqual(self.run_cli("check").returncode,0)

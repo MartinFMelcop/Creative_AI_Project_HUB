@@ -346,7 +346,8 @@ def validate_library(root=ROOT, project_ids=None):
     consumers = program.get("consumer_paths")
     require(program.get("name") == "North Star" and program.get("kind") == "program"
             and stage in {"foundation_only", "local_prototype"}
-            and program.get("engine_selection") == "undecided", "Invalid North Star foundation state")
+            and isinstance(program.get("engine_selection"), str)
+            and program["engine_selection"] in {"undecided", "Unity", "Unity/C#"}, "Invalid North Star foundation state")
     require(isinstance(consumers, list) and all(isinstance(v, str) for v in consumers)
             and len(set(consumers)) == len(consumers), "Invalid North Star consumer paths")
     if stage == "foundation_only":
@@ -354,7 +355,7 @@ def validate_library(root=ROOT, project_ids=None):
     else:
         require(consumers, "Local prototype requires a real consumer")
         for value in consumers:
-            require(value.startswith("north-star/prototype/") and Path(value).suffix in {".gd", ".py", ".cs"},
+            require(value.startswith("north-star/") and Path(value).suffix in {".gd", ".py", ".cs"},
                     "Local prototype requires actual destination code, not documentation")
             local(root, value)
     capabilities = rows(program, "capabilities", "North Star")

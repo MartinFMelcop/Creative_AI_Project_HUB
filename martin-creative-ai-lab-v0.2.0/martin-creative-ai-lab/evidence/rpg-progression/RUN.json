@@ -1,0 +1,224 @@
+{
+  "baseline_commit": "d007eb3b32a38b4ad12da363395d2196e9c17cb6",
+  "capability_ids": [
+    "NS-C02"
+  ],
+  "checks": {
+    "failed": 0,
+    "passed": 555
+  },
+  "commands": [
+    {
+      "command": [
+        "python3",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "labs/rpg-systems",
+        "-p",
+        "test_*.py"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "/workspace/work/structural-transformation/dotnet/dotnet",
+        "build",
+        "north-star/csharp/Checks/NorthStar.Checks.csproj",
+        "-c",
+        "Release"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "python3",
+        "labs/rpg-systems/run.py",
+        "--dotnet",
+        "/workspace/work/structural-transformation/dotnet/dotnet",
+        "--output",
+        "/workspace/work/structural-transformation/study-final.json"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "/workspace/work/structural-transformation/dotnet/dotnet",
+        "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/Checks/bin/Release/net10.0/NorthStar.Checks.dll",
+        "native",
+        "/workspace/work/structural-transformation/native-final.json"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "/workspace/work/structural-transformation/dotnet/dotnet",
+        "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/Crossing/bin/Release/net10.0/NorthStar.Crossing.dll",
+        "--demo",
+        "/workspace/work/structural-transformation/destination-final.json"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "timeout",
+        "15",
+        "/workspace/work/structural-transformation/dotnet/dotnet",
+        "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/Crossing/bin/Release/net10.0/NorthStar.Crossing.dll"
+      ],
+      "exit_code": 0,
+      "stdin_artifact": "evidence/rpg-progression/terminal-commands.txt",
+      "stdout_artifact": "evidence/rpg-progression/terminal.txt"
+    }
+  ],
+  "consumer_paths": [
+    "north-star/csharp/Domain/Progression.cs",
+    "north-star/csharp/Crossing/Session.cs",
+    "north-star/csharp/Crossing/Program.cs"
+  ],
+  "instrument_regressions": {
+    "failed": 0,
+    "passed": 7
+  },
+  "kind": "destination_execution",
+  "legacy_decisions": {
+    "legacy_180_level_pacing_and_canon": "UNRESOLVED",
+    "legacy_direct_header_adapter": "REJECTED",
+    "validated_threshold_and_budget_contract": "INTEGRATED into actual engine-independent North Star C# domain study consumer"
+  },
+  "limitations": [
+    "No Unity Editor, Windows build, Steamworks, network authority, disk persistence or independent player execution.",
+    "The historical helper/table incompatibility is established by a static source-binding assay; no complete historical RGSS game or Ruby helper was executed.",
+    "The 195 rejected strict-threshold mutations are independent Python reference calibration, not execution of a modified C# binary.",
+    "The legacy 180-level pacing, numerical budgets and fictional universe remain unadopted; native controls do not establish balance or final class canon."
+  ],
+  "native_controls": {
+    "failed": 0,
+    "passed": 77
+  },
+  "result_artifacts": [
+    {
+      "local_path": "evidence/rpg-progression/results.json",
+      "sha256": "f0aca9289e077a3d633cb415b89fe94721aa3c948ae5e04233c5d88100d57bcc",
+      "size_bytes": 116949
+    },
+    {
+      "local_path": "evidence/rpg-progression/native.json",
+      "sha256": "2919f550edeca180aaa48e4b54e49921981c6dba40a116667f98d468c54f7beb",
+      "size_bytes": 3959
+    },
+    {
+      "local_path": "evidence/rpg-progression/destination.json",
+      "sha256": "4ae174b8cf33c2b6eeb07a252ca72f11185b90c5373133f4b40f18fd24513e0c",
+      "size_bytes": 738
+    },
+    {
+      "local_path": "evidence/rpg-progression/terminal.txt",
+      "sha256": "25dbc61c0bcb90ecf86982874157281050012f8f5287444c282791d5b5a47020",
+      "size_bytes": 4962
+    }
+  ],
+  "runtime": "Python 3.12.14; .NET SDK 10.0.401; compiled C# consumers on Linux",
+  "schema_version": 1,
+  "scope": "Validated progression semantics consumed by the actual engine-independent North Star C# domain and connected command-line gameplay consumer; read-only RPG Maker XP source-contract study.",
+  "source_artifacts": [
+    {
+      "local_path": "labs/rpg-systems/run.py",
+      "sha256": "69f7bf552daec98a4749492831b3c1f8909cf98288a341dbdf63e78d5bb595a0",
+      "size_bytes": 14735
+    },
+    {
+      "local_path": "labs/rpg-systems/test_instrument.py",
+      "sha256": "92f9a84569bd3e7e227dfeea2d8f39f77a0a831f728e40fc326d1ed4a744ed23",
+      "size_bytes": 4796
+    },
+    {
+      "local_path": "north-star/csharp/Checks/NorthStar.Checks.csproj",
+      "sha256": "3f58ee26c26f3030dcdb7cc2c6db2b7e14bff43d81e936b95cc116bc82978d35",
+      "size_bytes": 420
+    },
+    {
+      "local_path": "north-star/csharp/Checks/Program.cs",
+      "sha256": "77ad4bf5d9bdb348fef302eb97a35a47e2c5956ed4823a86a622f2cf035b72ae",
+      "size_bytes": 15597
+    },
+    {
+      "local_path": "north-star/csharp/Crossing/NorthStar.Crossing.csproj",
+      "sha256": "09fbdffe415d44079f66da83d4d22e5b91169f3f1abdd0e1ebc2bacd2e3f0c88",
+      "size_bytes": 352
+    },
+    {
+      "local_path": "north-star/csharp/Crossing/Program.cs",
+      "sha256": "268c1b5ac582dd06f15eb3e40e7ce859a9c58eecfc58c7586d94bcaecf9c595e",
+      "size_bytes": 4226
+    },
+    {
+      "local_path": "north-star/csharp/Crossing/Session.cs",
+      "sha256": "d25ac05ba1a94432474dd1b14b4fd608e446fc5344dcc4f779d8d5fe27a1b2c5",
+      "size_bytes": 5357
+    },
+    {
+      "local_path": "north-star/csharp/Domain/NorthStar.Domain.csproj",
+      "sha256": "9570b674acfea69bb60098f495afd3b9e2cef2575fcfeb6db71c2cdecb2c4876",
+      "size_bytes": 344
+    },
+    {
+      "local_path": "north-star/csharp/Domain/Progression.cs",
+      "sha256": "8495e1ad92fea069c2c3989f6f2cc2600980575e72812df9480ed193c51c8685",
+      "size_bytes": 8331
+    },
+    {
+      "local_path": "north-star/csharp/global.json",
+      "sha256": "e0c0882461e712f6c2c66241bf2f175c60832e3ff077dc26091ff8c661d4193e",
+      "size_bytes": 55
+    },
+    {
+      "local_path": "references/rave-master/snapshots/36af1651271422ae33856e8b5d7b45702215f165/source/RM_ACT1/DATA/DEV/RGSS/RM_PLAYER_LEVEL_RUNTIME.rb",
+      "sha256": "4a4876721a614a535b015a2688aafc587101b2cc71ddeb2c808efa3c121f62ed",
+      "size_bytes": 9092
+    },
+    {
+      "local_path": "references/rave-master/snapshots/36af1651271422ae33856e8b5d7b45702215f165/source/RM_CORE/DATA/CORE/PLAYER_LEVEL_STAT_BUDGET.csv",
+      "sha256": "5b28084252715e63df992265f70cb203e3dd5e8f9accc5ae9e14af92df0abf7b",
+      "size_bytes": 20753
+    },
+    {
+      "local_path": "references/rave-master/snapshots/36af1651271422ae33856e8b5d7b45702215f165/source/RM_CORE/DATA/CORE/PLAYER_LEVEL_XP_TABLE.csv",
+      "sha256": "37aaa36eb9141851cb7800dc89fc01725a9f232b7d093ef3334bea1554c5e161",
+      "size_bytes": 16515
+    },
+    {
+      "local_path": "references/rave-master/snapshots/36af1651271422ae33856e8b5d7b45702215f165/source/RM_DIST/RMXP_BASE/Data/RM_CSV/PLAYER_LEVEL_STAT_BUDGET.csv",
+      "sha256": "5b28084252715e63df992265f70cb203e3dd5e8f9accc5ae9e14af92df0abf7b",
+      "size_bytes": 20753
+    },
+    {
+      "local_path": "references/rave-master/snapshots/36af1651271422ae33856e8b5d7b45702215f165/source/RM_DIST/RMXP_BASE/ScriptsCustom/RM_PLAYER_LEVEL_RUNTIME.rb",
+      "sha256": "4a4876721a614a535b015a2688aafc587101b2cc71ddeb2c808efa3c121f62ed",
+      "size_bytes": 9092
+    },
+    {
+      "local_path": "references/rave-master/snapshots/36af1651271422ae33856e8b5d7b45702215f165/source/RM_QA/DATA/QA/RPT_PLAYER_LEVEL_RUNTIME.csv",
+      "sha256": "6f5d3577a697750ffa9fb859c0948d22a3c6608c795550e801268c840c621ba7",
+      "size_bytes": 769
+    },
+    {
+      "local_path": "references/rave-master/snapshots/36af1651271422ae33856e8b5d7b45702215f165/source/RM_QA/DATA/QA/TEST_PLAYER_LEVEL_RUNTIME.csv",
+      "sha256": "ba1e24a2460337765d564dcded2689e620c27a6dd572c965b668b85cb1229311",
+      "size_bytes": 762
+    },
+    {
+      "local_path": "evidence/rpg-progression/terminal-commands.txt",
+      "sha256": "f979a40cb85c7dce49f637f75729e2e1223221d88e1af3c9e2e48f4e7b3fe50b",
+      "size_bytes": 96
+    }
+  ],
+  "study_observations": {
+    "historical_goldens": 9,
+    "off_by_one_reference_mutant_rejections": 195,
+    "partition_controls": 9,
+    "static_header_mismatches": 9,
+    "threshold_neighbors": 537
+  }
+}

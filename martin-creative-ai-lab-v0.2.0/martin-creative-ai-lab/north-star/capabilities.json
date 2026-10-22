@@ -3,7 +3,7 @@
   "name": "North Star",
   "kind": "program",
   "stage": "local_prototype",
-  "engine_selection": "undecided",
+  "engine_selection": "Unity",
   "consumer_paths": [
     "north-star/prototype/arena.gd",
     "north-star/prototype/combat.gd",
@@ -19,7 +19,10 @@
     "north-star/prototype/character_look.gd",
     "north-star/prototype/courier_talk.gd",
     "north-star/prototype/gamepad.gd",
-    "north-star/prototype/fittings.gd"
+    "north-star/prototype/fittings.gd",
+    "north-star/csharp/Domain/Progression.cs",
+    "north-star/csharp/Crossing/Session.cs",
+    "north-star/csharp/Crossing/Program.cs"
   ],
   "contribution_model": {
     "candidate": "Identified hypothesis; no transfer proof.",
@@ -28,7 +31,7 @@
     "integrated_into_north_star": "A genuine North Star consumer uses the capability with destination verification.",
     "externally_validated": "Relevant destination behavior/experience has independent evaluation; specify what and by whom."
   },
-  "evidence_boundary": "One local executable character consumer exists. NS-C03 combat, NS-C04 bounded consequential dialogue and NS-C07 sound methods are adapted into the prototype, not shared-kernel imports or production MMORPG integration. Eleven other states retain origin/candidate scope. Native/render/mixer checks and agent review are not independent human validation; final engine remains undecided.",
+  "evidence_boundary": "Unity/C# is the selected production stack; Windows is priority and Steam intended. Retained Godot local-prototype evidence remains valid. C# domain/destination execution is distinct from unavailable Unity Editor, unexecuted Windows player, Steamworks, shared-world scale and independent human validation.",
   "capabilities": [
     {
       "id": "NS-C01",
@@ -52,12 +55,13 @@
       "id": "NS-C02",
       "title": "RPG domain and durable session recovery",
       "origin_projects": [
-        "P05"
+        "P05",
+        "P10"
       ],
       "reference_collections": [
         "REF-RAVE-36AF165"
       ],
-      "contribution_status": "verified_in_origin",
+      "contribution_status": "adapted",
       "origin_validation": "execution_record_inspected",
       "scope": "Pure C# turn-based rescue domain, supply consequences, replay-validated saves and native Linux delivery.",
       "origin_evidence": [
@@ -65,9 +69,16 @@
         "projects/cinderwatch/Core/Journal.cs",
         "evidence/cinderwatch/RELEASE_RUN.json"
       ],
-      "applicability_hypothesis": "Research whether rpg domain and durable session recovery serves a bounded North Star experiment; no consumer or reusable contract exists yet.",
+      "applicability_hypothesis": "Actual typed progression and allocation change prepared resources and encounter outcomes; player identity/comprehension and production Unity behavior remain hypotheses.",
       "limits": "New Cinderwatch implementation; not recovered RGSS code. Local session saves do not establish account persistence or server trust.",
-      "next_validation": "Test a separately owned inventory/progression slice and crash recovery without trusting client-written state."
+      "next_validation": "Execute a real supported/activated Unity consumer and platform checks; evaluate authored progression meaning and durable recovery separately.",
+      "destination_consumer_paths": [
+        "north-star/csharp/Domain/Progression.cs",
+        "north-star/csharp/Crossing/Session.cs",
+        "north-star/csharp/Crossing/Program.cs"
+      ],
+      "destination_evidence": "evidence/rpg-progression/RUN.json",
+      "destination_scope": "Engine-independent C# XP thresholds, gained-level budgets, transactional local reward ownership and explicit pre-entry allocation consumed by an original connected terminal encounter. No Unity Editor, Windows player, durable account recovery or final progression canon."
     },
     {
       "id": "NS-C03",

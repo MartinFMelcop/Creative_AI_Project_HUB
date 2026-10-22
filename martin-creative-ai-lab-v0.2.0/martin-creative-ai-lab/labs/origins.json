@@ -1,14 +1,14 @@
 {
-  "schema_version": 1,
-  "updated_at": "2026-10-17",
-  "baseline_commit": "c360f68e2be933d55f082a414663d28ab24eac8d",
-  "scope": "Controlled origin transition inventory. P06 remains instrumented; its action/contact methods now inform the actual local North Star consumer recorded in the capability catalog. Other origin observations are not rerun by this inventory.",
+  "schema_version": 2,
+  "updated_at": "2026-10-22",
+  "baseline_commit": "d007eb3b32a38b4ad12da363395d2196e9c17cb6",
+  "scope": "Mandatory eleven-laboratory transformation. Historical source preservation is separate from terminal knowledge consumption; operational claims require executed instruments and bound evidence.",
   "north_star_consumer_demonstrated": true,
   "existing_transfer_scope": "Validated transfers and integrated assets in the existing registries describe their named origin consumers, not Virgo Diamond integration.",
   "origins": [
     {
       "id": "P01",
-      "transition_status": "preserved_pending_extraction",
+      "transition_status": "under_consumption",
       "source_paths": [
         "projects/eclipse-fair/Core",
         "projects/eclipse-fair/Cli/Journal.cs",
@@ -32,8 +32,7 @@
         "P01"
       ],
       "candidate_destinations": [
-        "Economy and simulation research",
-        "Local persistence and distribution research"
+        "Economy & Simulation Laboratory (mandatory destination; see lab record)"
       ],
       "dependencies": [
         "C#/.NET 10; SDK 10.0.401 for builds",
@@ -44,11 +43,12 @@
         "Do not replace accepted journal formats or remove rule/profile fixtures before extracting their contracts",
         "Keep historical runtime ZIPs, notices and original provenance; this is a new seed implementation, not recovered RPG Maker code"
       ],
-      "extraction_next": "Select a resource-ownership question, then expose the existing Core to a bounded batch experiment with common seeds; no MMO economy or concurrent spending is established."
+      "extraction_next": "Adapt a bounded P01 resource/journal batch assay; require retry/conflict conservation and actual North Star transaction consumer.",
+      "laboratory_id": "economy-simulation"
     },
     {
       "id": "P02",
-      "transition_status": "preserved_pending_extraction",
+      "transition_status": "under_consumption",
       "source_paths": [
         "evaluations/chat-send-buffering/run.py",
         "evaluations/chat-send-buffering/test_runner.py",
@@ -68,7 +68,7 @@
         "P02"
       ],
       "candidate_destinations": [
-        "AI evaluation and experimental methodology"
+        "AI Evaluation & Quality Laboratory (mandatory destination; see lab record)"
       ],
       "dependencies": [
         "Python standard library and actual pinned Git history",
@@ -79,11 +79,12 @@
         "A source-only copy without pinned historical commits breaks task reconstruction",
         "Public evaluator files are not confidential; calibration is not an independent candidate or model score"
       ],
-      "extraction_next": "Retain the runner and its negative controls; use a separately produced candidate only when the research question and candidate context are recorded."
+      "extraction_next": "Extend existing calibrated task into an independent candidate evaluation with explicit context/tool records and defect attribution.",
+      "laboratory_id": "ai-evaluation"
     },
     {
       "id": "P03",
-      "transition_status": "preserved_pending_extraction",
+      "transition_status": "under_consumption",
       "source_paths": [
         "projects/tokyo80s/dist/core.js",
         "projects/tokyo80s/dist/rehearsal.js",
@@ -106,8 +107,7 @@
         "P03"
       ],
       "candidate_destinations": [
-        "Audiovisual timing and feedback research",
-        "Input/accessibility and motor-learning research"
+        "Input, Timing & Interaction Laboratory (mandatory destination; see lab record)"
       ],
       "dependencies": [
         "JavaScript ES modules, static HTTP and Web Audio browser runtime",
@@ -118,11 +118,12 @@
         "Keep chart/audio offset relationships and original masters; replacing encoded media alone can invalidate timing comparisons",
         "Synthetic input and virtual playback do not demonstrate physical listening, accessibility or learning"
       ],
-      "extraction_next": "Extract a timing/feedback instrument only for a concrete player-action question; retain original songs and source fixtures as controls."
+      "extraction_next": "Extract the actual P03 head/tail interruption method into controlled timing/input studies with baseline and missing-release controls.",
+      "laboratory_id": "input-timing"
     },
     {
       "id": "P04",
-      "transition_status": "preserved_pending_extraction",
+      "transition_status": "under_consumption",
       "source_paths": [
         "projects/lich-cistern/story.md",
         "projects/lich-cistern/story.en.md",
@@ -146,8 +147,7 @@
         "P04"
       ],
       "candidate_destinations": [
-        "Narrative agency, voice and comprehension research",
-        "Accessible creative-artifact production"
+        "Narrative & Continuity Laboratory (mandatory destination; see lab record)"
       ],
       "dependencies": [
         "Python/ReportLab, Pandoc and preserved DejaVu font notices for edition builds",
@@ -158,11 +158,12 @@
         "Do not rewrite imported historical sources or erase their unavailable/editable-source limitations",
         "Neither the Darsen adaptation nor repeated historical fictional details establish Virgo Diamond canon; preserve source rights and font attribution"
       ],
-      "extraction_next": "Choose a bounded narrative decision/comprehension question and preserve source-to-scene comparisons; require actual readers before claiming reception evidence."
+      "extraction_next": "Execute a cross-source continuity/consent assay on real narrative transitions before adopting a reusable authoring contract.",
+      "laboratory_id": "narrative-continuity"
     },
     {
       "id": "P05",
-      "transition_status": "preserved_pending_extraction",
+      "transition_status": "under_consumption",
       "source_paths": [
         "projects/cinderwatch/Core",
         "projects/cinderwatch/Checks",
@@ -188,8 +189,7 @@
         "P01"
       ],
       "candidate_destinations": [
-        "Combat choice and consequence research",
-        "Persistence, failure recovery and native distribution research"
+        "RPG Systems & Progression Laboratory (mandatory destination; see lab record)"
       ],
       "dependencies": [
         "C#/.NET 10 and Godot .NET 4.6.3",
@@ -200,11 +200,12 @@
         "Keep recovery/save schema and failure fixtures together; accepted memory and saved disk prefix are distinct states",
         "Native local replay does not establish authoritative account persistence, simultaneous writers or power-loss durability"
       ],
-      "extraction_next": "Reuse the pure transition/forecast or recovery contract for a named experiment before extracting a shared framework; retain original native consumers and historical archives."
+      "extraction_next": "Extend validated progression into approved identity/loadout and persistence contracts; resolve final pacing separately from source arithmetic.",
+      "laboratory_id": "rpg-systems"
     },
     {
       "id": "P06",
-      "transition_status": "pilot_instrumented",
+      "transition_status": "partially_consumed",
       "source_paths": [
         "projects/veil-arena/arena.gd",
         "projects/veil-arena/controls.gd",
@@ -230,8 +231,7 @@
         "P06"
       ],
       "candidate_destinations": [
-        "Combat response timing and tradeoff research",
-        "Class identity and audiovisual legibility research"
+        "Combat & Responsiveness Laboratory (mandatory destination; see lab record)"
       ],
       "dependencies": [
         "Godot 4.6.3 standard/GDScript and native physics timing",
@@ -242,11 +242,12 @@
         "Timing thresholds are contact-time/geometry rules, not interchangeable class statistics",
         "The missing historical Unity starter remains missing; current source is a new 2D implementation, not a recovered migration"
       ],
-      "extraction_next": "Preserve unchanged source and pilot. The North Star crossing prototype adapts contact/commitment methodology into a real consumer; no shared kernel has been extracted. Evaluate player comprehension before promoting class identity or integrating more origin code."
+      "extraction_next": "Compare original timing/contact rules with a calibrated Unity/C# destination while retaining existing negative traces.",
+      "laboratory_id": "combat-response"
     },
     {
       "id": "P07",
-      "transition_status": "preserved_pending_extraction",
+      "transition_status": "under_consumption",
       "source_paths": [
         "projects/veil-arena/media/art",
         "projects/veil-arena/media/motion-catalog.json",
@@ -270,7 +271,7 @@
         "P05"
       ],
       "candidate_destinations": [
-        "Audiovisual silhouette, motion and combat-legibility research"
+        "Visual Identity & Animation Laboratory (mandatory destination; see lab record)"
       ],
       "dependencies": [
         "Distributed P06/P05 assets and consumer rendering code; no separate P07 application exists",
@@ -281,11 +282,12 @@
         "Exact original generated pixels cannot be recreated by repeating a prompt; preserve PNG bytes, pivots and accepted/rejected-production records",
         "Generated media and Codex visual review do not grant exclusive copyright or independent artist/player approval"
       ],
-      "extraction_next": "Start with one measured silhouette/motion/readability question using existing native consumers; extract catalog tooling only when a second real consumer needs its contract."
+      "extraction_next": "Implement a repeatable silhouette/pose/readability production assay using real atlas inputs and inspect actual destination rendering.",
+      "laboratory_id": "visual-animation"
     },
     {
       "id": "P08",
-      "transition_status": "preserved_pending_extraction",
+      "transition_status": "under_consumption",
       "source_paths": [
         "projects/tokyo80s/media",
         "projects/tokyo80s/tools/render_track.py",
@@ -314,7 +316,7 @@
         "P05"
       ],
       "candidate_destinations": [
-        "Audiovisual timing, cue identity and accessible feedback research"
+        "Audio & Adaptive Music Laboratory (mandatory destination; see lab record)"
       ],
       "dependencies": [
         "Distributed original PCM masters, scores, producer seeds and consumer catalogs",
@@ -325,28 +327,30 @@
         "Retain original masters and source scores alongside compressed derivatives; no separate P08 game or recovered historical recording exists",
         "Signal/mixer checks do not establish physical listening, musical preference, exclusive rights or an album release"
       ],
-      "extraction_next": "Use controlled cue/timing contrasts for a concrete player decision; record hardware/listening conditions before making perceptual claims."
+      "extraction_next": "Implement adaptive-cue alignment and signal/stress controls using preserved masters and actual destination playback.",
+      "laboratory_id": "audio-music"
     },
     {
       "id": "P09",
-      "transition_status": "seed_only",
+      "transition_status": "source_gap",
       "source_paths": [],
       "reusable_capabilities": [],
       "execution_evidence": [],
       "existing_consumers": [],
       "candidate_destinations": [
-        "Evidence-backed delivery and experimental-method case studies"
+        "Build, Release & Operations Laboratory (mandatory destination; see lab record)"
       ],
       "dependencies": [],
       "preservation_risks": [
         "Do not turn reported professional history, an absent attachment or a simulation into verified employment/customer results",
         "Do not publish private case data or infer rights from the public portfolio mandate"
       ],
-      "extraction_next": "Recover one authorized source and distinguish professional facts from simulation before creating a case or instrument."
+      "extraction_next": "Resolve licensed Unity Editor/Windows modules and execute a bounded Windows delivery; preserve prior notices and consumers.",
+      "laboratory_id": "build-operations"
     },
     {
       "id": "P10",
-      "transition_status": "preserved_pending_extraction",
+      "transition_status": "partially_consumed",
       "source_paths": [
         "projects/waystone-dialogue/scene.py",
         "projects/waystone-dialogue/adventure.py",
@@ -370,8 +374,7 @@
         "P10"
       ],
       "candidate_destinations": [
-        "Narrative agency and NPC behavior research",
-        "Quest continuity, consequence and consent research"
+        "World & Gameplay Systems Laboratory (mandatory destination; see lab record)"
       ],
       "dependencies": [
         "Python standard library for preserved scene/adventure oracle",
@@ -382,11 +385,12 @@
         "Keep original Python dialogue, source rule records and old-schema replay fixtures; the browser campaign has additional new fiction/rules",
         "Technical reuse does not import Rave Master/Waystone fiction as Virgo Diamond canon or prove upstream rescue outcomes"
       ],
-      "extraction_next": "Instrument one meaningful dialogue/quest decision using controlled histories; preserve authored choice consequences before extracting a generic behavior layer."
+      "extraction_next": "Evaluate legacy class/skill prerequisites and NPC/quest state against an original typed C# consumer; do not import fiction or fallback behavior.",
+      "laboratory_id": "world-gameplay"
     },
     {
       "id": "P11",
-      "transition_status": "preserved_pending_extraction",
+      "transition_status": "under_consumption",
       "source_paths": [
         "projects/realtime-integration-lab/server.cjs",
         "projects/realtime-integration-lab/rooms-server.cjs",
@@ -416,8 +420,7 @@
         "P02"
       ],
       "candidate_destinations": [
-        "Persistence and distributed-delivery research",
-        "Experimental evidence capture and handover tooling"
+        "Networking & Persistence Laboratory (mandatory destination; see lab record)"
       ],
       "dependencies": [
         "Node 24+ built-in SQLite for rooms; original ephemeral mode retains its own runtime contract",
@@ -428,71 +431,632 @@
         "Do not publish local SQLite databases, identity tokens or real discussion data; fictional fixtures are distinct from user records",
         "Trusted single-server recovery/idempotency is not private-room authorization, distributed exactly-once delivery or an MMO service"
       ],
-      "extraction_next": "Choose a concrete authoritative command or evidence-capture consumer before adapting protocols; retain legacy evaluator snapshots and current recovery fixtures."
+      "extraction_next": "Adapt actual SQLite/idempotent command/recovery methods to a separately owned domain consumer and injected failure controls.",
+      "laboratory_id": "networking-persistence"
     }
   ],
   "labs": [
     {
+      "id": "economy-simulation",
+      "name": "Economy & Simulation Lab",
+      "owner_origin": "P01",
+      "owner_role": "Economy & Simulation research lead, coordinated by the HUB maintainer; specialist assignments are per execution",
+      "origin_projects": [
+        "P01"
+      ],
+      "status": "incomplete",
+      "domain": "Transactions, resources, ownership, economic policies, crafting and simulation",
+      "question": "Can resource ownership reject duplicate/reordered spending without partial mutations?",
+      "source_paths": [
+        "projects/eclipse-fair/Core",
+        "projects/eclipse-fair/Cli/Journal.cs",
+        "projects/eclipse-fair/Native",
+        "projects/eclipse-fair/rules",
+        "projects/eclipse-fair/tools",
+        "projects/eclipse-fair/provenance.json"
+      ],
+      "source_inventory": "labs/source-inventory.json",
+      "consumer_paths": [],
+      "controls": [],
+      "validity_boundary": "Destination ownership and available sources are established; no operational laboratory method/results or North Star integration is claimed yet. Historical origin execution retains its own narrower scope.",
+      "next_objective": "Adapt a bounded P01 resource/journal batch assay; require retry/conflict conservation and actual North Star transaction consumer."
+    },
+    {
+      "id": "ai-evaluation",
+      "name": "AI Evaluation & Quality Lab",
+      "owner_origin": "P02",
+      "owner_role": "AI Evaluation & Quality research lead, coordinated by the HUB maintainer; specialist assignments are per execution",
+      "origin_projects": [
+        "P02"
+      ],
+      "status": "incomplete",
+      "domain": "Evaluation methods, calibration, defect detection and reproducible verification",
+      "question": "Can known defective and reference artifacts distinguish candidate defects from environment failure?",
+      "source_paths": [
+        "evaluations/chat-send-buffering/run.py",
+        "evaluations/chat-send-buffering/test_runner.py",
+        "evaluations/chat-send-buffering/BRIEF.md"
+      ],
+      "source_inventory": "labs/source-inventory.json",
+      "consumer_paths": [],
+      "controls": [],
+      "validity_boundary": "Destination ownership and available sources are established; no operational laboratory method/results or North Star integration is claimed yet. Historical origin execution retains its own narrower scope.",
+      "next_objective": "Extend existing calibrated task into an independent candidate evaluation with explicit context/tool records and defect attribution."
+    },
+    {
+      "id": "input-timing",
+      "name": "Input, Timing & Interaction Lab",
+      "owner_origin": "P03",
+      "owner_role": "Input, Timing & Interaction research lead, coordinated by the HUB maintainer; specialist assignments are per execution",
+      "origin_projects": [
+        "P03"
+      ],
+      "status": "incomplete",
+      "domain": "Input responsiveness, temporal accuracy, interaction feedback and latency",
+      "question": "Which input/head-tail timing contracts remain correct across interruption and resumed holds?",
+      "source_paths": [
+        "projects/tokyo80s/dist/core.js",
+        "projects/tokyo80s/dist/rehearsal.js",
+        "projects/tokyo80s/dist/review.js",
+        "projects/tokyo80s/dist/app.js",
+        "projects/tokyo80s/tests",
+        "projects/tokyo80s/media"
+      ],
+      "source_inventory": "labs/source-inventory.json",
+      "consumer_paths": [],
+      "controls": [],
+      "validity_boundary": "Destination ownership and available sources are established; no operational laboratory method/results or North Star integration is claimed yet. Historical origin execution retains its own narrower scope.",
+      "next_objective": "Extract the actual P03 head/tail interruption method into controlled timing/input studies with baseline and missing-release controls."
+    },
+    {
+      "id": "narrative-continuity",
+      "name": "Narrative & Continuity Lab",
+      "owner_origin": "P04",
+      "owner_role": "Narrative & Continuity research lead, coordinated by the HUB maintainer; specialist assignments are per execution",
+      "origin_projects": [
+        "P04"
+      ],
+      "status": "incomplete",
+      "domain": "Narrative structure, characterization, continuity, causal writing and localization",
+      "question": "Which consequential narrative transitions preserve characterization, continuity and explicit consent?",
+      "source_paths": [
+        "projects/lich-cistern/story.md",
+        "projects/lich-cistern/story.en.md",
+        "projects/lich-cistern/SOURCE_COMPARISON.md",
+        "projects/lich-cistern/tools",
+        "projects/lich-cistern/fonts",
+        "projects/lich-cistern/provenance.json",
+        "references/literature/lich/README.md"
+      ],
+      "source_inventory": "labs/source-inventory.json",
+      "consumer_paths": [],
+      "controls": [],
+      "validity_boundary": "Destination ownership and available sources are established; no operational laboratory method/results or North Star integration is claimed yet. Historical origin execution retains its own narrower scope.",
+      "next_objective": "Execute a cross-source continuity/consent assay on real narrative transitions before adopting a reusable authoring contract."
+    },
+    {
+      "id": "rpg-systems",
+      "name": "RPG Systems & Progression Lab",
+      "owner_origin": "P05",
+      "owner_role": "RPG Systems & Progression research lead, coordinated by the HUB maintainer; specialist assignments are per execution",
+      "origin_projects": [
+        "P05",
+        "P10"
+      ],
+      "status": "operational",
+      "domain": "Attributes, equipment, progression, status, tactical rules and builds",
+      "question": "Can typed XP thresholds and additive budgets preserve all source vectors while refusing silent schema loss?",
+      "source_paths": [
+        "projects/cinderwatch/Core",
+        "projects/cinderwatch/Checks",
+        "projects/cinderwatch/Native/Recovery.cs",
+        "projects/cinderwatch/Native/Main.cs",
+        "projects/cinderwatch/Native/media",
+        "projects/cinderwatch/tools",
+        "projects/cinderwatch/provenance.json",
+        "references/rave-master/snapshots/36af1651271422ae33856e8b5d7b45702215f165/source/RM_ACT1/DATA/DEV/RGSS/RM_PLAYER_LEVEL_RUNTIME.rb",
+        "references/rave-master/snapshots/36af1651271422ae33856e8b5d7b45702215f165/source/RM_CORE/DATA/CORE/PLAYER_LEVEL_STAT_BUDGET.csv",
+        "references/rave-master/snapshots/36af1651271422ae33856e8b5d7b45702215f165/source/RM_CORE/DATA/CORE/PLAYER_LEVEL_XP_TABLE.csv",
+        "references/rave-master/snapshots/36af1651271422ae33856e8b5d7b45702215f165/source/RM_DIST/RMXP_BASE/Data/RM_CSV/PLAYER_LEVEL_STAT_BUDGET.csv",
+        "references/rave-master/snapshots/36af1651271422ae33856e8b5d7b45702215f165/source/RM_DIST/RMXP_BASE/ScriptsCustom/RM_PLAYER_LEVEL_RUNTIME.rb",
+        "references/rave-master/snapshots/36af1651271422ae33856e8b5d7b45702215f165/source/RM_QA/DATA/QA/RPT_PLAYER_LEVEL_RUNTIME.csv",
+        "references/rave-master/snapshots/36af1651271422ae33856e8b5d7b45702215f165/source/RM_QA/DATA/QA/TEST_PLAYER_LEVEL_RUNTIME.csv"
+      ],
+      "source_inventory": "labs/source-inventory.json",
+      "consumer_paths": [
+        "north-star/csharp/Domain/Progression.cs",
+        "north-star/csharp/Crossing/Session.cs",
+        "north-star/csharp/Crossing/Program.cs"
+      ],
+      "controls": [
+        "Nine preserved legacy vectors",
+        "537 threshold neighbors and nine split-grant controls",
+        "Header/schema rejection and wrong-contract calibration",
+        "Actual C# domain/destination execution"
+      ],
+      "validity_boundary": "Typed progression contract and synthetic original C# destination only; source-binding mismatch is a static assay, not full RGSS execution; no Unity Editor, Windows, independent player or final 180-level pacing claim.",
+      "next_objective": "Extend validated progression into approved identity/loadout and persistence contracts; resolve final pacing separately from source arithmetic.",
+      "path": "labs/rpg-systems",
+      "instrument": "labs/rpg-systems/run.py",
+      "evidence": [
+        "evidence/rpg-progression/RUN.json",
+        "evidence/rpg-progression/results.json"
+      ],
+      "evidence_sha256": {
+        "evidence/rpg-progression/RUN.json": "4e1d68c993104b807f41ddb682b25bab7e8d257690b898a74d511e0361244367",
+        "evidence/rpg-progression/results.json": "f0aca9289e077a3d633cb415b89fe94721aa3c948ae5e04233c5d88100d57bcc"
+      }
+    },
+    {
       "id": "combat-response",
-      "status": "implemented",
+      "name": "Combat & Responsiveness Lab",
+      "owner_origin": "P06",
+      "owner_role": "Combat & Responsiveness research lead, coordinated by the HUB maintainer; specialist assignments are per execution",
       "origin_projects": [
         "P06"
       ],
-      "question": "Do unchanged native guard, directional dodge and seal responses have distinct timing, range, resource and early-counter envelopes under the same phase-one sweep trace?",
+      "status": "operational",
+      "domain": "Contact, commitment, parry, dodge, timing and combat feedback",
+      "question": "Do native guard, dodge and seal have distinguishable contact, resource and counter envelopes?",
+      "source_paths": [
+        "projects/veil-arena/arena.gd",
+        "projects/veil-arena/controls.gd",
+        "projects/veil-arena/motion.gd",
+        "projects/veil-arena/sound.gd",
+        "projects/veil-arena/tests",
+        "projects/veil-arena/media",
+        "projects/veil-arena/provenance.json"
+      ],
+      "source_inventory": "labs/source-inventory.json",
+      "consumer_paths": [
+        "projects/veil-arena/arena.gd"
+      ],
+      "controls": [
+        "28 fixed native physics/contact cases run twice",
+        "Matched timing/range/resolve responses and negative overlaps"
+      ],
+      "validity_boundary": "Executed unchanged origin encounter and recorded technical envelopes; not independent player perception or a North Star instrument consumer.",
+      "next_objective": "Compare original timing/contact rules with a calibrated Unity/C# destination while retaining existing negative traces.",
       "path": "labs/combat-response",
       "instrument": "labs/combat-response/run.py",
       "evidence": [
         "evidence/combat-response/results.json",
         "evidence/combat-response/RUN.json"
-      ]
-    },
-    {
-      "id": "evaluation-methodology",
-      "status": "candidate",
-      "origin_projects": [
-        "P02",
-        "P11"
       ],
-      "question": "Can controlled defective and reference artifacts detect the intended behavior without leaking evaluator context or inventing model-performance claims?"
+      "evidence_sha256": {
+        "evidence/combat-response/results.json": "67140a49483317dfc931705572b228afe8313aa257f2e29086ef8ac238b6f32d",
+        "evidence/combat-response/RUN.json": "a21e36dfe88eb816ce06e89a75a409010593e078ad437c828d1d3a821929b53f"
+      }
     },
     {
-      "id": "economy-simulation",
-      "status": "candidate",
+      "id": "visual-animation",
+      "name": "Visual Identity & Animation Lab",
+      "owner_origin": "P07",
+      "owner_role": "Visual Identity & Animation research lead, coordinated by the HUB maintainer; specialist assignments are per execution",
       "origin_projects": [
+        "P07"
+      ],
+      "status": "incomplete",
+      "domain": "Character silhouettes, animation, asset generation and visual readability",
+      "question": "Which silhouette and committed-animation cues remain readable at gameplay scale?",
+      "source_paths": [
+        "projects/veil-arena/media/art",
+        "projects/veil-arena/media/motion-catalog.json",
+        "projects/veil-arena/tools/build_motion_catalog.gd",
+        "projects/veil-arena/media/provenance.json",
+        "projects/cinderwatch/Native/media/portraits.png",
+        "projects/cinderwatch/Native/media/provenance.json"
+      ],
+      "source_inventory": "labs/source-inventory.json",
+      "consumer_paths": [],
+      "controls": [],
+      "validity_boundary": "Destination ownership and available sources are established; no operational laboratory method/results or North Star integration is claimed yet. Historical origin execution retains its own narrower scope.",
+      "next_objective": "Implement a repeatable silhouette/pose/readability production assay using real atlas inputs and inspect actual destination rendering."
+    },
+    {
+      "id": "audio-music",
+      "name": "Audio & Adaptive Music Lab",
+      "owner_origin": "P08",
+      "owner_role": "Audio & Adaptive Music research lead, coordinated by the HUB maintainer; specialist assignments are per execution",
+      "origin_projects": [
+        "P08"
+      ],
+      "status": "incomplete",
+      "domain": "Adaptive audio, sound identity, musical systems and temporal feedback",
+      "question": "Can adaptive transitions preserve semantic cue timing without masking threats or clipping?",
+      "source_paths": [
+        "projects/tokyo80s/media",
+        "projects/tokyo80s/tools/render_track.py",
+        "projects/tokyo80s/tools/render_rain.py",
+        "projects/tokyo80s/tools/render_rehearsal.py",
+        "projects/veil-arena/media/masters",
+        "projects/veil-arena/media/audio",
+        "projects/veil-arena/tools/render_audio.py",
+        "projects/cinderwatch/Native/media/audio",
+        "projects/cinderwatch/tools/render_feedback.py"
+      ],
+      "source_inventory": "labs/source-inventory.json",
+      "consumer_paths": [],
+      "controls": [],
+      "validity_boundary": "Destination ownership and available sources are established; no operational laboratory method/results or North Star integration is claimed yet. Historical origin execution retains its own narrower scope.",
+      "next_objective": "Implement adaptive-cue alignment and signal/stress controls using preserved masters and actual destination playback."
+    },
+    {
+      "id": "build-operations",
+      "name": "Build, Release & Operations Lab",
+      "owner_origin": "P09",
+      "owner_role": "Build, Release & Operations research lead, coordinated by the HUB maintainer; specialist assignments are per execution",
+      "origin_projects": [
+        "P09",
         "P01",
         "P05"
       ],
-      "question": "Which bounded resource ownership and expenditure rules produce distinct viable choices under matched scenarios?"
+      "status": "incomplete",
+      "domain": "Reproducible builds, CI, packaging, Windows releases and operational reliability",
+      "question": "Can a pinned source-to-Windows delivery preserve actual gameplay and complete notices reproducibly?",
+      "source_paths": [
+        "projects/cinderwatch/tools/export_linux.py",
+        "projects/eclipse-fair/tools/export_linux.py"
+      ],
+      "source_inventory": "labs/source-inventory.json",
+      "consumer_paths": [],
+      "controls": [],
+      "validity_boundary": "Destination ownership and available sources are established; no operational laboratory method/results or North Star integration is claimed yet. Historical origin execution retains its own narrower scope. No recovered P09 professional case or unavailable attachment is claimed; cross-origin build methods are available.",
+      "next_objective": "Resolve licensed Unity Editor/Windows modules and execute a bounded Windows delivery; preserve prior notices and consumers."
     },
     {
-      "id": "narrative-agency",
-      "status": "candidate",
+      "id": "world-gameplay",
+      "name": "World & Gameplay Systems Lab",
+      "owner_origin": "P10",
+      "owner_role": "World & Gameplay Systems research lead, coordinated by the HUB maintainer; specialist assignments are per execution",
       "origin_projects": [
-        "P04",
         "P10"
       ],
-      "question": "Can a player understand the costs of a consequential choice while characters retain distinct motives and continuity?"
-    },
-    {
-      "id": "audiovisual-perception",
-      "status": "candidate",
-      "origin_projects": [
-        "P03",
-        "P06",
-        "P07",
-        "P08"
+      "status": "incomplete",
+      "domain": "Classes, abilities, professions, NPCs, quests, factions, reputation and world state",
+      "question": "Can class/ability/quest prerequisites reject incompatible state transactionally without erasing player identity?",
+      "source_paths": [
+        "projects/waystone-dialogue/scene.py",
+        "projects/waystone-dialogue/adventure.py",
+        "projects/waystone-dialogue/browser/dist",
+        "projects/waystone-dialogue/browser/tests",
+        "projects/waystone-dialogue/browser/tools",
+        "projects/waystone-dialogue/provenance.json",
+        "references/rave-master/README.md"
       ],
-      "question": "Which visual and audio cues expose contact, commitment and recovery without obscuring the character or threat?"
+      "source_inventory": "labs/source-inventory.json",
+      "consumer_paths": [],
+      "controls": [],
+      "validity_boundary": "Destination ownership and available sources are established; no operational laboratory method/results or North Star integration is claimed yet. Historical origin execution retains its own narrower scope.",
+      "next_objective": "Evaluate legacy class/skill prerequisites and NPC/quest state against an original typed C# consumer; do not import fiction or fallback behavior."
     },
     {
-      "id": "persistence-delivery",
-      "status": "candidate",
+      "id": "networking-persistence",
+      "name": "Networking & Persistence Lab",
+      "owner_origin": "P11",
+      "owner_role": "Networking & Persistence research lead, coordinated by the HUB maintainer; specialist assignments are per execution",
       "origin_projects": [
-        "P01",
-        "P05",
         "P11"
       ],
-      "question": "Which command, retry and recovery contracts preserve accepted progress under bounded failures without trusting client state?"
+      "status": "incomplete",
+      "domain": "Authority, synchronization, idempotency, persistence, networking and recovery",
+      "question": "Can accepted commands survive retry, conflict and recovery without double spending or client ownership?",
+      "source_paths": [
+        "projects/realtime-integration-lab/server.cjs",
+        "projects/realtime-integration-lab/rooms-server.cjs",
+        "projects/realtime-integration-lab/rooms-store.cjs",
+        "projects/realtime-integration-lab/rooms-backup.cjs",
+        "projects/realtime-integration-lab/rooms-search.cjs",
+        "projects/realtime-integration-lab/record-export.cjs",
+        "projects/realtime-integration-lab/public",
+        "projects/realtime-integration-lab/tests",
+        "projects/realtime-integration-lab/package-lock.json"
+      ],
+      "source_inventory": "labs/source-inventory.json",
+      "consumer_paths": [],
+      "controls": [],
+      "validity_boundary": "Destination ownership and available sources are established; no operational laboratory method/results or North Star integration is claimed yet. Historical origin execution retains its own narrower scope.",
+      "next_objective": "Adapt actual SQLite/idempotent command/recovery methods to a separately owned domain consumer and injected failure controls."
+    }
+  ],
+  "allocation": {
+    "legacy_labs": 47,
+    "north_star": 40,
+    "repository": 13
+  },
+  "direction": {
+    "stack": "Unity/C#",
+    "player_platform": "Windows",
+    "distribution": "Steam",
+    "unity_execution": "not_executed",
+    "windows_execution": "not_executed",
+    "execution_evidence": []
+  },
+  "consumption": [
+    {
+      "id": "XP-LEVEL-CONTRACT",
+      "origin_projects": [
+        "P10",
+        "P05"
+      ],
+      "laboratory_id": "rpg-systems",
+      "status": "INTEGRATED",
+      "source_paths": [
+        "references/rave-master/snapshots/36af1651271422ae33856e8b5d7b45702215f165/source/RM_ACT1/DATA/DEV/RGSS/RM_PLAYER_LEVEL_RUNTIME.rb",
+        "references/rave-master/snapshots/36af1651271422ae33856e8b5d7b45702215f165/source/RM_CORE/DATA/CORE/PLAYER_LEVEL_STAT_BUDGET.csv",
+        "references/rave-master/snapshots/36af1651271422ae33856e8b5d7b45702215f165/source/RM_CORE/DATA/CORE/PLAYER_LEVEL_XP_TABLE.csv",
+        "references/rave-master/snapshots/36af1651271422ae33856e8b5d7b45702215f165/source/RM_DIST/RMXP_BASE/Data/RM_CSV/PLAYER_LEVEL_STAT_BUDGET.csv",
+        "references/rave-master/snapshots/36af1651271422ae33856e8b5d7b45702215f165/source/RM_DIST/RMXP_BASE/ScriptsCustom/RM_PLAYER_LEVEL_RUNTIME.rb",
+        "references/rave-master/snapshots/36af1651271422ae33856e8b5d7b45702215f165/source/RM_QA/DATA/QA/RPT_PLAYER_LEVEL_RUNTIME.csv",
+        "references/rave-master/snapshots/36af1651271422ae33856e8b5d7b45702215f165/source/RM_QA/DATA/QA/TEST_PLAYER_LEVEL_RUNTIME.csv"
+      ],
+      "decision": "Validated inclusive thresholds and cumulative gained-level main/health/resolve budgets adapted to a typed C# domain and actual original North Star encounter; legacy 180-level pacing/fiction is outside this decision.",
+      "consumer_paths": [
+        "north-star/csharp/Domain/Progression.cs",
+        "north-star/csharp/Crossing/Session.cs",
+        "north-star/csharp/Crossing/Program.cs"
+      ],
+      "evidence": [
+        "evidence/rpg-progression/RUN.json"
+      ],
+      "evidence_sha256": {
+        "evidence/rpg-progression/RUN.json": "4e1d68c993104b807f41ddb682b25bab7e8d257690b898a74d511e0361244367"
+      }
+    },
+    {
+      "id": "XP-HEADER-ADAPTER",
+      "origin_projects": [
+        "P10"
+      ],
+      "laboratory_id": "rpg-systems",
+      "status": "REJECTED",
+      "source_paths": [
+        "references/rave-master/snapshots/36af1651271422ae33856e8b5d7b45702215f165/source/RM_ACT1/DATA/DEV/RGSS/RM_PLAYER_LEVEL_RUNTIME.rb",
+        "references/rave-master/snapshots/36af1651271422ae33856e8b5d7b45702215f165/source/RM_CORE/DATA/CORE/PLAYER_LEVEL_STAT_BUDGET.csv"
+      ],
+      "decision": "Reject direct reuse of the supplied HP/SP header adapter: static source/table binding conflicts with HP_Gain/SP_Gain and all nine positive historical budget expectations. No historical Ruby/RGSS execution is claimed.",
+      "evidence": [
+        "evidence/rpg-progression/results.json"
+      ],
+      "evidence_sha256": {
+        "evidence/rpg-progression/results.json": "f0aca9289e077a3d633cb415b89fe94721aa3c948ae5e04233c5d88100d57bcc"
+      }
+    },
+    {
+      "id": "P06-ACTION-CONTACT-METHOD",
+      "origin_projects": [
+        "P06"
+      ],
+      "laboratory_id": "combat-response",
+      "status": "INTEGRATED",
+      "source_paths": [
+        "projects/veil-arena/arena.gd"
+      ],
+      "decision": "Existing paid commitment/first-contact methods were adapted and executed in the retained North Star crossing. This records prior scoped consumption, not a new full P06 port or Unity integration.",
+      "consumer_paths": [
+        "north-star/prototype/combat.gd"
+      ],
+      "evidence": [
+        "evidence/north-star-return-feedback/RUN.json"
+      ],
+      "evidence_sha256": {
+        "evidence/north-star-return-feedback/RUN.json": "0af83e7a2529aad459bea06b2361df98e7af34c733bf12b388e0c34b2fba8c45"
+      }
+    },
+    {
+      "id": "P01-REMAINING-SCOPE",
+      "origin_projects": [
+        "P01"
+      ],
+      "laboratory_id": "economy-simulation",
+      "status": "UNRESOLVED",
+      "source_paths": [
+        "projects/eclipse-fair/Core",
+        "projects/eclipse-fair/Cli/Journal.cs"
+      ],
+      "decision": "Remaining source capabilities in this laboratory domain are available or explicitly scoped gaps; source preservation and origin execution do not count as consumed.",
+      "next_action": "Adapt a bounded P01 resource/journal batch assay; require retry/conflict conservation and actual North Star transaction consumer."
+    },
+    {
+      "id": "P02-REMAINING-SCOPE",
+      "origin_projects": [
+        "P02"
+      ],
+      "laboratory_id": "ai-evaluation",
+      "status": "UNRESOLVED",
+      "source_paths": [
+        "evaluations/chat-send-buffering/run.py",
+        "evaluations/chat-send-buffering/test_runner.py"
+      ],
+      "decision": "Remaining source capabilities in this laboratory domain are available or explicitly scoped gaps; source preservation and origin execution do not count as consumed.",
+      "next_action": "Extend existing calibrated task into an independent candidate evaluation with explicit context/tool records and defect attribution."
+    },
+    {
+      "id": "P03-REMAINING-SCOPE",
+      "origin_projects": [
+        "P03"
+      ],
+      "laboratory_id": "input-timing",
+      "status": "UNRESOLVED",
+      "source_paths": [
+        "projects/tokyo80s/dist/core.js",
+        "projects/tokyo80s/dist/rehearsal.js"
+      ],
+      "decision": "Remaining source capabilities in this laboratory domain are available or explicitly scoped gaps; source preservation and origin execution do not count as consumed.",
+      "next_action": "Extract the actual P03 head/tail interruption method into controlled timing/input studies with baseline and missing-release controls."
+    },
+    {
+      "id": "P04-REMAINING-SCOPE",
+      "origin_projects": [
+        "P04"
+      ],
+      "laboratory_id": "narrative-continuity",
+      "status": "UNRESOLVED",
+      "source_paths": [
+        "projects/lich-cistern/story.md",
+        "projects/lich-cistern/story.en.md"
+      ],
+      "decision": "Remaining source capabilities in this laboratory domain are available or explicitly scoped gaps; source preservation and origin execution do not count as consumed.",
+      "next_action": "Execute a cross-source continuity/consent assay on real narrative transitions before adopting a reusable authoring contract."
+    },
+    {
+      "id": "P05-REMAINING-SCOPE",
+      "origin_projects": [
+        "P05"
+      ],
+      "laboratory_id": "rpg-systems",
+      "status": "UNRESOLVED",
+      "source_paths": [
+        "projects/cinderwatch/Core",
+        "projects/cinderwatch/Checks"
+      ],
+      "decision": "Remaining source capabilities in this laboratory domain are available or explicitly scoped gaps; source preservation and origin execution do not count as consumed.",
+      "next_action": "Extend validated progression into approved identity/loadout and persistence contracts; resolve final pacing separately from source arithmetic."
+    },
+    {
+      "id": "P06-REMAINING-SCOPE",
+      "origin_projects": [
+        "P06"
+      ],
+      "laboratory_id": "combat-response",
+      "status": "UNRESOLVED",
+      "source_paths": [
+        "projects/veil-arena/arena.gd",
+        "projects/veil-arena/controls.gd"
+      ],
+      "decision": "Remaining source capabilities in this laboratory domain are available or explicitly scoped gaps; source preservation and origin execution do not count as consumed.",
+      "next_action": "Compare original timing/contact rules with a calibrated Unity/C# destination while retaining existing negative traces."
+    },
+    {
+      "id": "P07-REMAINING-SCOPE",
+      "origin_projects": [
+        "P07"
+      ],
+      "laboratory_id": "visual-animation",
+      "status": "UNRESOLVED",
+      "source_paths": [
+        "projects/veil-arena/media/art",
+        "projects/veil-arena/media/motion-catalog.json"
+      ],
+      "decision": "Remaining source capabilities in this laboratory domain are available or explicitly scoped gaps; source preservation and origin execution do not count as consumed.",
+      "next_action": "Implement a repeatable silhouette/pose/readability production assay using real atlas inputs and inspect actual destination rendering."
+    },
+    {
+      "id": "P08-REMAINING-SCOPE",
+      "origin_projects": [
+        "P08"
+      ],
+      "laboratory_id": "audio-music",
+      "status": "UNRESOLVED",
+      "source_paths": [
+        "projects/tokyo80s/media",
+        "projects/tokyo80s/tools/render_track.py"
+      ],
+      "decision": "Remaining source capabilities in this laboratory domain are available or explicitly scoped gaps; source preservation and origin execution do not count as consumed.",
+      "next_action": "Implement adaptive-cue alignment and signal/stress controls using preserved masters and actual destination playback."
+    },
+    {
+      "id": "P09-REMAINING-SCOPE",
+      "origin_projects": [
+        "P09",
+        "P01",
+        "P05"
+      ],
+      "laboratory_id": "build-operations",
+      "status": "UNRESOLVED",
+      "source_paths": [
+        "projects/cinderwatch/tools/export_linux.py",
+        "projects/eclipse-fair/tools/export_linux.py"
+      ],
+      "decision": "No historical P09 delivery case was supplied. Available cross-origin build/source verification methods require a Windows/Unity operational laboratory; no recovered professional case is claimed.",
+      "next_action": "Resolve licensed Unity Editor/Windows modules and execute a bounded Windows delivery; preserve prior notices and consumers."
+    },
+    {
+      "id": "P10-REMAINING-SCOPE",
+      "origin_projects": [
+        "P10"
+      ],
+      "laboratory_id": "world-gameplay",
+      "status": "UNRESOLVED",
+      "source_paths": [
+        "projects/waystone-dialogue/scene.py",
+        "projects/waystone-dialogue/adventure.py"
+      ],
+      "decision": "Remaining source capabilities in this laboratory domain are available or explicitly scoped gaps; source preservation and origin execution do not count as consumed.",
+      "next_action": "Evaluate legacy class/skill prerequisites and NPC/quest state against an original typed C# consumer; do not import fiction or fallback behavior."
+    },
+    {
+      "id": "P11-REMAINING-SCOPE",
+      "origin_projects": [
+        "P11"
+      ],
+      "laboratory_id": "networking-persistence",
+      "status": "UNRESOLVED",
+      "source_paths": [
+        "projects/realtime-integration-lab/server.cjs",
+        "projects/realtime-integration-lab/rooms-server.cjs"
+      ],
+      "decision": "Remaining source capabilities in this laboratory domain are available or explicitly scoped gaps; source preservation and origin execution do not count as consumed.",
+      "next_action": "Adapt actual SQLite/idempotent command/recovery methods to a separately owned domain consumer and injected failure controls."
+    },
+    {
+      "id": "XP-COMBAT-STATUS",
+      "origin_projects": [
+        "P10"
+      ],
+      "laboratory_id": "combat-response",
+      "status": "UNRESOLVED",
+      "source_paths": [
+        "references/rave-master/snapshots/36af1651271422ae33856e8b5d7b45702215f165/source/RM_CORE/DATA/CORE/COMBAT_FORMULAS.csv",
+        "references/rave-master/snapshots/36af1651271422ae33856e8b5d7b45702215f165/source/RM_CORE/DATA/CORE/STATUS_EFFECTS.csv"
+      ],
+      "decision": "Available actual source/data/helpers require a bounded method and verified adaptation or justified rejection; no entire system is declared consumed.",
+      "next_action": "Execute formula/rounding and global-round status/reapply vectors with typed destination controls; retain semantic differences from current tactical/gameplay timing."
+    },
+    {
+      "id": "XP-CLASS-LOADOUT",
+      "origin_projects": [
+        "P10"
+      ],
+      "laboratory_id": "world-gameplay",
+      "status": "UNRESOLVED",
+      "source_paths": [
+        "references/rave-master/snapshots/36af1651271422ae33856e8b5d7b45702215f165/source/RM_ACT1/DATA/DEV/CLASS_SKILLS_MASTER.csv",
+        "references/rave-master/snapshots/36af1651271422ae33856e8b5d7b45702215f165/source/RM_ACT1/DATA/DEV/RGSS/RM_UI_SKILL_EQUIP_RUNTIME.rb",
+        "references/rave-master/snapshots/36af1651271422ae33856e8b5d7b45702215f165/source/RM_ACT1/DATA/DEV/RGSS/RM_CHARACTER_CREATE_RUNTIME.rb"
+      ],
+      "decision": "Available actual source/data/helpers require a bounded method and verified adaptation or justified rejection; no entire system is declared consumed.",
+      "next_action": "Validate class/background/skill/slot constraints transactionally in an original C# consumer; evaluate malformed parsing and permissive deletion/fallback paths before any port."
+    },
+    {
+      "id": "XP-CRAFTING",
+      "origin_projects": [
+        "P10"
+      ],
+      "laboratory_id": "economy-simulation",
+      "status": "UNRESOLVED",
+      "source_paths": [
+        "references/rave-master/snapshots/36af1651271422ae33856e8b5d7b45702215f165/source/RM_CORE/DATA/CORE/CRAFTING_RECIPE.csv",
+        "references/rave-master/snapshots/36af1651271422ae33856e8b5d7b45702215f165/source/RM_CORE/DATA/CORE/CRAFTING_STATION.csv",
+        "references/rave-master/snapshots/36af1651271422ae33856e8b5d7b45702215f165/source/RM_CORE/DATA/CORE/ITENS_MASTER.csv"
+      ],
+      "decision": "Available actual source/data/helpers require a bounded method and verified adaptation or justified rejection; no entire system is declared consumed.",
+      "next_action": "Assay actual row/ID/schema defects and implement atomic material/unlock/output controls in a real consumer; table presence is not implemented crafting."
+    },
+    {
+      "id": "XP-WORLD-CONTINUITY",
+      "origin_projects": [
+        "P10"
+      ],
+      "laboratory_id": "narrative-continuity",
+      "status": "UNRESOLVED",
+      "source_paths": [
+        "references/rave-master/snapshots/36af1651271422ae33856e8b5d7b45702215f165/source/RM_ACT1/DATA/DEV/RGSS/RM_REPUTATION_RUNTIME.rb",
+        "references/rave-master/snapshots/36af1651271422ae33856e8b5d7b45702215f165/source/RM_ACT1/DATA/DEV/RGSS/RM_DIALOGUE_SCORING_RUNTIME.rb",
+        "references/rave-master/snapshots/36af1651271422ae33856e8b5d7b45702215f165/source/RM_ACT1/DATA/DEV/QUEST_STEPS.csv"
+      ],
+      "decision": "Available actual source/data/helpers require a bounded method and verified adaptation or justified rejection; no entire system is declared consumed.",
+      "next_action": "Separate actual selectors/state/expiry from debug/manual helpers, evaluate empty reputation effects and current quest/world consequences with original content."
     }
   ]
 }

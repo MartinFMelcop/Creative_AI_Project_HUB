@@ -1,5 +1,29 @@
 # Registry reference validation
 
+## Current transformation contract
+
+`labs/origins.json` schema2 owns exactly eleven mandatory laboratory destinations,
+47/40/13 targets, the selected Unity/C#/Windows/Steam direction and explicit terminal
+consumption records. Run `python3 tools/check_transformation.py` and
+`python3 tools/test_transformation.py` alongside the repository/reference/Brain/manifest
+gates. Operational labs require methods, controls, real code consumers and bound
+nonempty execution evidence. INTEGRATED requires matching actual destination source
+hashes and successful command/check records; REJECTED requires bounded evidence;
+UNRESOLVED requires next action and cannot be presented as consumed. Typed runtime
+controls reject invented Unity/Windows execution. These documentary bindings do not
+run the instruments; affected CI jobs must execute actual consumers separately.
+
+The project registry keeps historical source identities/versions; source role is not
+a permanent independent product duty. The existing reference/schema evolution allows
+actual C# North Star consumers beyond the retained Godot directory without weakening
+source/archive integrity. The [tested CI scope selector](../tools/ci_scope.py) gates
+affected retained runtime consumers while integrity/claim checks remain unconditional.
+
+## Versioned validation history
+
+Older maturity, count and engine statements below describe their recorded versions;
+the current catalog, process and gates above supersede those state-specific restrictions.
+
 Run `python3 tools/validate_repo.py` from the lab directory. Run the regression
 suite with `python3 -m unittest discover -s tools -p 'test_*.py' -v`.
 

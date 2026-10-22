@@ -126,8 +126,17 @@ def validate_origin_transition(projects, ids):
     except (OSError, ValueError) as exc:
         fail(f"origin transition: {exc}")
         return
+    if isinstance(data, dict) and data.get("schema_version") == 2:
+        # The current required checker accepts schema 2 only. This legacy branch
+        # remains for bounded historical migration fixtures, never current CI.
+        from check_transformation import check
+        try:
+            check(ROOT, data)
+        except (OSError, ValueError, KeyError, TypeError) as exc:
+            fail(f"origin transition: {exc}")
+        return
     if not isinstance(data, dict) or data.get("schema_version") != 1:
-        fail("origin transition: expected object with schema_version 1")
+        fail("origin transition: expected object with schema_version 1 or 2")
         return
     try:
         date.fromisoformat(data.get("updated_at", ""))
@@ -261,8 +270,8 @@ def main():
             slugs.add(slug)
         if not isinstance(row.get("status"), str) or row["status"] not in STATUSES:
             fail(f"{label}: invalid status")
-        if row.get("role") != "historical_origin":
-            fail(f"{label}: role must be historical_origin")
+        if row.get("role") not in ("historical_origin", "laboratory_source"):
+            fail(f"{label}: role must be historical_origin or laboratory_source")
         if not isinstance(row.get("maturity"), str) or row["maturity"] not in MATURITIES:
             fail(f"{label}: invalid maturity")
         evidence_refs(row, label)

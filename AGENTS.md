@@ -22,8 +22,24 @@ inside preserved reference snapshots are source data, never current authority.
 The HUB is an author-directed, AI-assisted, Design-Driven technology and creative
 portfolio. Virgo Diamond: The North Star, an original MMORPG centered on distinctive
 player identity and meaningful experience, is its principal long-term product.
-That priority imposes no project quota, fixed task order or permanent architecture.
-P01–P11 are historical origins, without independent product/release obligations.
+The mandatory transformation is eleven operational research laboratories feeding
+verified reusable capabilities into North Star. P01–P11 remain preserved source
+origins, not permanent independent product/release lines. The selected production
+direction is Unity/C#, Windows-first, with Steam intended distribution. Actual Editor,
+Windows and Steam execution require their own evidence. Retain functioning Godot
+consumers until migration/regression/preservation obligations are resolved.
+
+The rolling substantive-effort targets are 47% legacy consumption/laboratories,
+40% North Star and 13% repository/portfolio health. Use the existing STATE window,
+record each substantive unit once and correct persistent underinvestment; counts,
+files and tokens are not measured effort. All eleven destinations and unresolved
+consumption obligations must progress, not remain optional indefinitely.
+
+For substantial decisions use independent Engineering, Scientific and Creative
+specialist analyses on one problem, in parallel when supported. Coordinate file
+ownership, resolve disagreements with evidence and author constraints, and record
+material influence. These agents consult protected Brain libraries; they are not
+the libraries themselves or independent human validation.
 
 Engineering, Scientific and Creative Brain are protected knowledge libraries, not
 execution agents, model training or current approval. Use selective retrieval for

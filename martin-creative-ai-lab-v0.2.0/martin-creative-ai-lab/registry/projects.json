@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-10-17",
+  "updated_at": "2026-10-22",
   "projects": [
     {
       "id": "P01",
@@ -8,9 +8,9 @@
       "slug": "artemyra",
       "status": "transition",
       "maturity": "M4",
-      "phase": "controlled-origin-transition",
+      "phase": "laboratory-transformation",
       "origin": "new_seed_implementation",
-      "next_action": "Use labs/origins.json to evaluate extraction into a question-led laboratory or a genuine Virgo Diamond consumer; preserve useful source, assets, dependencies and evidence until migration is verified.",
+      "next_action": "Adapt a bounded P01 resource/journal batch assay; require retry/conflict conservation and actual North Star transaction consumer.",
       "related_projects": [
         "P02",
         "P03",
@@ -31,8 +31,9 @@
       "working_path": "projects/eclipse-fair",
       "working_version": "0.6.0",
       "maturity_scope": "Native 0.6.0 retains three independent local fair journals, validates summaries by replay and requires explicit occupied-slot replacement. New configuration is saved immediately; unsaved accepted progress blocks switching until it can be preserved. Unavailable startup saves disable fallback play. Slot one, native/economy schemas, rules, profiles and historical packages stay compatible; added slots and replay exports remain distinct for extensionless paths too. Actual shipped baseline comparison, native control/failure journeys and current source/packaged execution are recorded. Standalone Linux x86_64 includes the same pinned Godot/.NET runtime and notices. Technical M4; three fixed slots and Fair 1 startup, no concurrent-process coordination, undo/cloud sync, independent shared-device/accessibility, other-OS or commercial validation.",
-      "role": "historical_origin",
-      "transition_record": "labs/origins.json"
+      "role": "laboratory_source",
+      "transition_record": "labs/origins.json",
+      "laboratory_id": "economy-simulation"
     },
     {
       "id": "P02",
@@ -40,9 +41,9 @@
       "slug": "ai-evaluation-qa-lab",
       "status": "transition",
       "maturity": "M4",
-      "phase": "controlled-origin-transition",
+      "phase": "laboratory-transformation",
       "origin": "proposed",
-      "next_action": "Use labs/origins.json to evaluate extraction into a question-led laboratory or a genuine Virgo Diamond consumer; preserve useful source, assets, dependencies and evidence until migration is verified.",
+      "next_action": "Extend existing calibrated task into an independent candidate evaluation with explicit context/tool records and defect attribution.",
       "related_projects": [
         "P01",
         "P03",
@@ -67,8 +68,9 @@
       "historical_name": "Unity AI Evaluation & QA Lab",
       "maturity_scope": "Runner 0.2.1 executes committed evaluator snapshots, checks the working lock and installed direct version declarations, and stops mismatches or incomplete reports as inconclusive environment results. All 25 runner regressions pass; controlled calibration retains baseline 15/17 and reference 17/17. Nine exports and the 17-check task stay unchanged. Installed bytes, transitive versions and non-POSIX symlinks remain unverified; no independent candidate score or sandbox.",
       "task_contract_version": "0.1.0",
-      "role": "historical_origin",
-      "transition_record": "labs/origins.json"
+      "role": "laboratory_source",
+      "transition_record": "labs/origins.json",
+      "laboratory_id": "ai-evaluation"
     },
     {
       "id": "P03",
@@ -76,9 +78,9 @@
       "slug": "tokyo80s",
       "status": "transition",
       "maturity": "M4",
-      "phase": "controlled-origin-transition",
+      "phase": "laboratory-transformation",
       "origin": "new_seed_implementation",
-      "next_action": "Use labs/origins.json to evaluate extraction into a question-led laboratory or a genuine Virgo Diamond consumer; preserve useful source, assets, dependencies and evidence until migration is verified.",
+      "next_action": "Extract the actual P03 head/tail interruption method into controlled timing/input studies with baseline and missing-release controls.",
       "related_projects": [
         "P01",
         "P02",
@@ -97,8 +99,9 @@
       "working_path": "projects/tokyo80s",
       "working_version": "0.5.0",
       "maturity_scope": "Two original browser rhythm stages retain charts, media, score/rank/bests, calibration and original-pitch rehearsal. P03 0.5.0 distinguishes received head timing/distance by lane/passage and explicit hold failures, with additive exports and volume-focused keyboard control. Controlled logic, real-audio Chromium and original full-song execution; Codex interface review, no physical listening, independent learning/accessibility or market validation.",
-      "role": "historical_origin",
-      "transition_record": "labs/origins.json"
+      "role": "laboratory_source",
+      "transition_record": "labs/origins.json",
+      "laboratory_id": "input-timing"
     },
     {
       "id": "P04",
@@ -106,9 +109,9 @@
       "slug": "lich",
       "status": "transition",
       "maturity": "M4",
-      "phase": "controlled-origin-transition",
+      "phase": "laboratory-transformation",
       "origin": "new_seed_implementation",
-      "next_action": "Use labs/origins.json to evaluate extraction into a question-led laboratory or a genuine Virgo Diamond consumer; preserve useful source, assets, dependencies and evidence until migration is verified.",
+      "next_action": "Execute a cross-source continuity/consent assay on real narrative transitions before adopting a reusable authoring contract.",
       "related_projects": [
         "P06",
         "P07",
@@ -135,8 +138,9 @@
         "REF-LICH-MAIN-PDFS",
         "REF-LICH-OVA-PDFS"
       ],
-      "role": "historical_origin",
-      "transition_record": "labs/origins.json"
+      "role": "laboratory_source",
+      "transition_record": "labs/origins.json",
+      "laboratory_id": "narrative-continuity"
     },
     {
       "id": "P05",
@@ -144,9 +148,9 @@
       "slug": "dark-knight",
       "status": "transition",
       "maturity": "M4",
-      "phase": "controlled-origin-transition",
+      "phase": "laboratory-transformation",
       "origin": "new_seed_implementation",
-      "next_action": "Use labs/origins.json to evaluate extraction into a question-led laboratory or a genuine Virgo Diamond consumer; preserve useful source, assets, dependencies and evidence until migration is verified.",
+      "next_action": "Extend validated progression into approved identity/loadout and persistence contracts; resolve final pacing separately from source arithmetic.",
       "related_projects": [
         "P02",
         "P06"
@@ -165,8 +169,9 @@
       "working_path": "projects/cinderwatch",
       "working_version": "0.5.0",
       "maturity_scope": "Native 0.5.0 adds readback/replay-verified recovery copies, validated Open run and an explicit guard before New run, Resume, Open or quit leaves unpreserved accepted progress. Keep, retry, copy or deliberate discard remain available; successful recovery retains the current run, opened source files stay unchanged and future actions use the primary autosave. Actual baseline callbacks demonstrate loss after failed writes; native control/failure journeys are recorded. Existing response inspection, Game/Content/Journal, rules/save schema 0.1.0, portraits/cues and historical ZIPs retained. Technical M4 only: one primary slot, no cloud sync, power-loss guarantee, independent play/recovery, physical controller/audio/accessibility, other-OS or commercial validation.",
-      "role": "historical_origin",
-      "transition_record": "labs/origins.json"
+      "role": "laboratory_source",
+      "transition_record": "labs/origins.json",
+      "laboratory_id": "rpg-systems"
     },
     {
       "id": "P06",
@@ -174,9 +179,9 @@
       "slug": "veu-partido",
       "status": "transition",
       "maturity": "M4",
-      "phase": "controlled-origin-transition",
+      "phase": "laboratory-transformation",
       "origin": "new_seed_implementation",
-      "next_action": "Use labs/origins.json to evaluate extraction into a question-led laboratory or a genuine Virgo Diamond consumer; preserve useful source, assets, dependencies and evidence until migration is verified.",
+      "next_action": "Compare original timing/contact rules with a calibrated Unity/C# destination while retaining existing negative traces.",
       "related_projects": [
         "P02",
         "P04",
@@ -198,8 +203,9 @@
       "working_path": "projects/veil-arena",
       "working_version": "0.6.0",
       "maturity_scope": "Native Godot 4.6.3 encounter 0.6.0 adds optional phase-one close-sweep practice with real guard/collision/costs, actual 24-damage blade counter and explicit review/retry/exit. Error feedback distinguishes early/late/range/no guard/avoidance/no counter; practice never counts as trial victory. Repeated take resets also fix a reproduced baseline music-start race through atomic AudioServer start/reset; 64 final reset samples show zero skew and a real shifted stream remains detectable. Source and exact final Linux PCK each pass 188 checks; OpenGL practice/presentation and X11 old/new standalone menu/drill/review/pause/exit/trial journeys execute. The old/new complete two-phase parry policy is unchanged at 23.7167 simulated seconds. Shipped ZIP includes verified official release runtime; prior ZIPs/media remain intact. Scripted input, virtual mixer and Codex visual review do not establish human learning, physical controller/listening, independent balance/accessibility, other-OS or commercial validation.",
-      "role": "historical_origin",
-      "transition_record": "labs/origins.json"
+      "role": "laboratory_source",
+      "transition_record": "labs/origins.json",
+      "laboratory_id": "combat-response"
     },
     {
       "id": "P07",
@@ -207,9 +213,9 @@
       "slug": "visual-asset-lab",
       "status": "transition",
       "maturity": "M4",
-      "phase": "controlled-origin-transition",
+      "phase": "laboratory-transformation",
       "origin": "new_seed_implementation",
-      "next_action": "Use labs/origins.json to evaluate extraction into a question-led laboratory or a genuine Virgo Diamond consumer; preserve useful source, assets, dependencies and evidence until migration is verified.",
+      "next_action": "Implement a repeatable silhouette/pose/readability production assay using real atlas inputs and inspect actual destination rendering.",
       "related_projects": [
         "P03",
         "P04",
@@ -231,8 +237,9 @@
         "projects/veil-arena/media/art",
         "projects/cinderwatch/Native/media"
       ],
-      "role": "historical_origin",
-      "transition_record": "labs/origins.json"
+      "role": "laboratory_source",
+      "transition_record": "labs/origins.json",
+      "laboratory_id": "visual-animation"
     },
     {
       "id": "P08",
@@ -240,9 +247,9 @@
       "slug": "audio-poetry-music-lab",
       "status": "transition",
       "maturity": "M4",
-      "phase": "controlled-origin-transition",
+      "phase": "laboratory-transformation",
       "origin": "user_directive",
-      "next_action": "Use labs/origins.json to evaluate extraction into a question-led laboratory or a genuine Virgo Diamond consumer; preserve useful source, assets, dependencies and evidence until migration is verified.",
+      "next_action": "Implement adaptive-cue alignment and signal/stress controls using preserved masters and actual destination playback.",
       "related_projects": [
         "P03",
         "P04",
@@ -273,8 +280,9 @@
         "projects/veil-arena/media/audio",
         "projects/cinderwatch/Native/media/audio"
       ],
-      "role": "historical_origin",
-      "transition_record": "labs/origins.json"
+      "role": "laboratory_source",
+      "transition_record": "labs/origins.json",
+      "laboratory_id": "audio-music"
     },
     {
       "id": "P09",
@@ -282,16 +290,17 @@
       "slug": "ai-delivery-operations",
       "status": "transition",
       "maturity": "M0",
-      "phase": "controlled-origin-transition",
+      "phase": "laboratory-transformation",
       "origin": "resume_reported_and_historical_context",
-      "next_action": "Preserve seed provenance; no executed delivery case or laboratory capability is established. Require actual sourced material before developing or showcasing a case.",
+      "next_action": "Resolve licensed Unity Editor/Windows modules and execute a bounded Windows delivery; preserve prior notices and consumers.",
       "related_projects": [
         "P01",
         "P02"
       ],
       "evidence": [],
-      "role": "historical_origin",
-      "transition_record": "labs/origins.json"
+      "role": "laboratory_source",
+      "transition_record": "labs/origins.json",
+      "laboratory_id": "build-operations"
     },
     {
       "id": "P10",
@@ -299,9 +308,9 @@
       "slug": "rave-master",
       "status": "transition",
       "maturity": "M4",
-      "phase": "controlled-origin-transition",
+      "phase": "laboratory-transformation",
       "origin": "github_snapshot_inspected",
-      "next_action": "Use labs/origins.json to evaluate extraction into a question-led laboratory or a genuine Virgo Diamond consumer; preserve useful source, assets, dependencies and evidence until migration is verified.",
+      "next_action": "Evaluate legacy class/skill prerequisites and NPC/quest state against an original typed C# consumer; do not import fiction or fallback behavior.",
       "related_projects": [
         "P01",
         "P02",
@@ -337,8 +346,9 @@
       "reference_collection_ids": [
         "REF-RAVE-36AF165"
       ],
-      "role": "historical_origin",
-      "transition_record": "labs/origins.json"
+      "role": "laboratory_source",
+      "transition_record": "labs/origins.json",
+      "laboratory_id": "world-gameplay"
     },
     {
       "id": "P11",
@@ -346,9 +356,9 @@
       "slug": "realtime-integration-lab",
       "status": "transition",
       "maturity": "M4",
-      "phase": "controlled-origin-transition",
+      "phase": "laboratory-transformation",
       "origin": "github_snapshot_inspected",
-      "next_action": "Use labs/origins.json to evaluate extraction into a question-led laboratory or a genuine Virgo Diamond consumer; preserve useful source, assets, dependencies and evidence until migration is verified.",
+      "next_action": "Adapt actual SQLite/idempotent command/recovery methods to a separately owned domain consumer and injected failure controls.",
       "related_projects": [
         "P01",
         "P02",
@@ -378,9 +388,10 @@
       "maturity_scope": "Project Rooms 0.8.0 traverses all saved discussion through before/after pages while retaining at most 300 rows. Fresh return to latest, deferred live insertion, reading/focus anchors and guarded requests preserve drafts, action work and search. Same 650-entry SQLite/API/Chromium baseline/current fixture verifies the old stop and bounded bidirectional reading, real arrivals, own attempts, failures and delayed room/identity/reconnect responses. Existing complete print/export, SQLite schema 2, JSON schema 1, backup format 1 and dependencies remain. Technical M4 for trusted local use; no independent team, assistive-technology, other-browser, full-capacity performance, commercial or North Star integration validation.",
       "working_path": "projects/realtime-integration-lab",
       "working_version": "0.8.0",
-      "role": "historical_origin",
-      "transition_record": "labs/origins.json"
+      "role": "laboratory_source",
+      "transition_record": "labs/origins.json",
+      "laboratory_id": "networking-persistence"
     }
   ],
-  "scope": "Preserved technology origins in controlled transition, not independent product/release commitments. Maturity and versions describe retained origin evidence, not laboratory readiness or Virgo Diamond integration."
+  "scope": "Historical source identities, versions and technical execution provenance. Each origin owns a mandatory laboratory destination; maturity here is not laboratory readiness or North Star integration."
 }
