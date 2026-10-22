@@ -124,3 +124,12 @@ exercises the [Economy & Simulation laboratory](../../labs/economy-simulation/RE
 The standalone Crossing remains unchanged; Forge's supply gate is an explicitly
 experimental scenario rule, not approved profession/class canon. Its new contribution
 is resource ownership and consequential production, not a new combat model.
+
+## Prepared identity and action slots
+
+[Loadout](Loadout/README.md) layers a transactional original identity/action preparation
+onto the actual Forge/Crossing consumers. Approach and outfit have independent owners;
+a small experimental skill catalog controls available verbs and earned-level entry.
+The [World & Gameplay method](../../labs/world-gameplay/README.md) distinguishes source
+contracts from helper defects and from the unimplemented historical skill catalog.
+No final class/background canon, Unity scene or Windows/Steam execution is implied.

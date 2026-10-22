@@ -30,7 +30,8 @@ class Classification(unittest.TestCase):
     def test_csharp_and_progression_only_do_not_rebuild_historical_consumers(self):
         for path in ('north-star/csharp/Domain/Progression.cs', 'labs/rpg-systems/run.py',
                      'evidence/rpg-progression/RUN.json', 'labs/economy-simulation/run.py',
-                     'evidence/economy-crafting/RUN.json', 'references/rave-master/source/PLAYER_LEVEL_STAT_BUDGET.csv'):
+                     'evidence/economy-crafting/RUN.json', 'labs/world-gameplay/run.py',
+                     'evidence/world-loadout/RUN.json', 'references/rave-master/source/PLAYER_LEVEL_STAT_BUDGET.csv'):
             with self.subTest(path=path):
                 self.assertEqual(self.selected(w(path)), {'north_star_csharp'})
 

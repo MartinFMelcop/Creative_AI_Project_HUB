@@ -1,0 +1,57 @@
+NORTH STAR / EXPLICIT PREPARATION — original terminal experiment, not Unity or approved class canon.
+Disciplines: anchor uses brace (2resolve, stationary protection); lure uses draw (3resolve, advances against bolt). Both exposed to pulse. Outfits remain independent: plateHP14/resolve6 or trailHP10/resolve10 before earned bonuses.
+Background compatibility: anchor/workshop, anchor/trailborn, lure/trailborn. Backgrounds are compatibility-only experimental metadata, no supply/stat bonus. Four slots capacity; brace/draw level1, shared dash level2 costs1resolve, advances2. Walk/Wait always available.
+Rig crafting costs2fiber+1binder; starting4fiber+2binder. Enter consumes one rig, no failure refund. Unprepared entry disables skill. No saves.
+{"class_id":"anchor","background_id":"workshop","slots":["brace",null,null,null],"active":false,"complete":false,"won":false,"stage":0,"beat":0,"position":0,"health":0,"resolve":0,"rig":"Unprepared","attempts":0,"consumed_rigs":0,"transactions":0,"inventory":{"fiber":4,"binder":2},"level":1,"xp":0,"unspent":0,"vitality":0,"focus":0}
+Choose an explicit four-slot proposal. Empty slots are permitted.
+loadout CLASS BACKGROUND SLOT1 SLOT2 SLOT3 SLOT4 (- empty) | craft plate/trail | enter plate/trail/unprepared | vitality N | focus N | quit
+{"class_id":"anchor","background_id":"workshop","slots":["brace",null,null,null],"active":false,"complete":false,"won":false,"stage":0,"beat":0,"position":0,"health":0,"resolve":0,"rig":"Unprepared","attempts":0,"consumed_rigs":0,"transactions":1,"inventory":{"fiber":2,"binder":1,"trail_rig":1},"level":1,"xp":0,"unspent":0,"vitality":0,"focus":0}
+Committed.
+loadout CLASS BACKGROUND SLOT1 SLOT2 SLOT3 SLOT4 (- empty) | craft plate/trail | enter plate/trail/unprepared | vitality N | focus N | quit
+{"class_id":"anchor","background_id":"workshop","slots":["brace",null,null,null],"active":false,"complete":false,"won":false,"stage":0,"beat":0,"position":0,"health":0,"resolve":0,"rig":"Unprepared","attempts":0,"consumed_rigs":0,"transactions":2,"inventory":{"fiber":0,"binder":0,"trail_rig":2},"level":1,"xp":0,"unspent":0,"vitality":0,"focus":0}
+Committed.
+loadout CLASS BACKGROUND SLOT1 SLOT2 SLOT3 SLOT4 (- empty) | craft plate/trail | enter plate/trail/unprepared | vitality N | focus N | quit
+{"class_id":"anchor","background_id":"workshop","slots":["brace",null,null,null],"active":false,"complete":false,"won":false,"stage":0,"beat":0,"position":0,"health":0,"resolve":0,"rig":"Unprepared","attempts":0,"consumed_rigs":0,"transactions":2,"inventory":{"fiber":0,"binder":0,"trail_rig":2},"level":1,"xp":0,"unspent":0,"vitality":0,"focus":0}
+Preparation rejected; class, background and all slots unchanged.
+loadout CLASS BACKGROUND SLOT1 SLOT2 SLOT3 SLOT4 (- empty) | craft plate/trail | enter plate/trail/unprepared | vitality N | focus N | quit
+{"class_id":"anchor","background_id":"workshop","slots":["brace",null,null,null],"active":true,"complete":false,"won":false,"stage":0,"beat":0,"position":0,"health":10,"resolve":10,"rig":"Trail","attempts":1,"consumed_rigs":1,"transactions":3,"inventory":{"fiber":0,"binder":0,"trail_rig":1},"level":1,"xp":0,"unspent":0,"vitality":0,"focus":0}
+Encounter committed. One Trail rig consumed; no refund on failure.
+BOLT: moving exposes health; the approach skill spends resolve to protect. Need position2 by beat4. walk | wait | slot 1..4 | quit
+{"class_id":"anchor","background_id":"workshop","slots":["brace",null,null,null],"active":true,"complete":false,"won":false,"stage":0,"beat":1,"position":1,"health":6,"resolve":10,"rig":"Trail","attempts":1,"consumed_rigs":1,"transactions":3,"inventory":{"fiber":0,"binder":0,"trail_rig":1},"level":1,"xp":0,"unspent":0,"vitality":0,"focus":0}
+Walk: 4 damage, 0 resolve spent.
+BOLT: moving exposes health; the approach skill spends resolve to protect. Need position2 by beat4. walk | wait | slot 1..4 | quit
+{"class_id":"anchor","background_id":"workshop","slots":["brace",null,null,null],"active":true,"complete":false,"won":false,"stage":0,"beat":2,"position":1,"health":6,"resolve":8,"rig":"Trail","attempts":1,"consumed_rigs":1,"transactions":3,"inventory":{"fiber":0,"binder":0,"trail_rig":1},"level":1,"xp":0,"unspent":0,"vitality":0,"focus":0}
+Skill: 0 damage, 2 resolve spent.
+PULSE at your current position: walking or dashing leaves it. Need position2 by beat4. walk | wait | slot 1..4 | quit
+{"class_id":"anchor","background_id":"workshop","slots":["brace",null,null,null],"active":true,"complete":false,"won":false,"stage":0,"beat":3,"position":2,"health":6,"resolve":10,"rig":"Trail","attempts":1,"consumed_rigs":1,"transactions":3,"inventory":{"fiber":0,"binder":0,"trail_rig":1},"level":1,"xp":0,"unspent":0,"vitality":0,"focus":0}
+Walk: 0 damage, 0 resolve spent.
+BOLT: moving exposes health; the approach skill spends resolve to protect. Need position2 by beat4. walk | wait | slot 1..4 | quit
+{"class_id":"anchor","background_id":"workshop","slots":["brace",null,null,null],"active":false,"complete":false,"won":true,"stage":1,"beat":4,"position":2,"health":6,"resolve":8,"rig":"Trail","attempts":1,"consumed_rigs":1,"transactions":3,"inventory":{"fiber":0,"binder":0,"trail_rig":1},"level":2,"xp":10,"unspent":2,"vitality":0,"focus":0}
+Skill: 0 damage, 2 resolve spent. Completed; reward committed. Level 2, 2 unspent points.
+loadout CLASS BACKGROUND SLOT1 SLOT2 SLOT3 SLOT4 (- empty) | craft plate/trail | enter plate/trail/unprepared | vitality N | focus N | quit
+{"class_id":"anchor","background_id":"workshop","slots":["brace",null,null,null],"active":false,"complete":false,"won":true,"stage":1,"beat":4,"position":2,"health":6,"resolve":8,"rig":"Trail","attempts":1,"consumed_rigs":1,"transactions":3,"inventory":{"fiber":0,"binder":0,"trail_rig":1},"level":2,"xp":10,"unspent":0,"vitality":0,"focus":2}
+Earned allocation committed.
+loadout CLASS BACKGROUND SLOT1 SLOT2 SLOT3 SLOT4 (- empty) | craft plate/trail | enter plate/trail/unprepared | vitality N | focus N | quit
+{"class_id":"anchor","background_id":"trailborn","slots":["brace","dash",null,null],"active":false,"complete":false,"won":true,"stage":1,"beat":4,"position":2,"health":6,"resolve":8,"rig":"Trail","attempts":1,"consumed_rigs":1,"transactions":3,"inventory":{"fiber":0,"binder":0,"trail_rig":1},"level":2,"xp":10,"unspent":0,"vitality":0,"focus":2}
+Whole preparation committed. No incompatible slots were silently erased.
+loadout CLASS BACKGROUND SLOT1 SLOT2 SLOT3 SLOT4 (- empty) | craft plate/trail | enter plate/trail/unprepared | vitality N | focus N | quit
+{"class_id":"anchor","background_id":"trailborn","slots":["brace","dash",null,null],"active":true,"complete":false,"won":false,"stage":1,"beat":0,"position":0,"health":11,"resolve":15,"rig":"Trail","attempts":2,"consumed_rigs":2,"transactions":4,"inventory":{"fiber":0,"binder":0,"trail_rig":0},"level":2,"xp":10,"unspent":0,"vitality":0,"focus":2}
+Encounter committed. One Trail rig consumed; no refund on failure.
+BOLT: moving exposes health; the approach skill spends resolve to protect. Need position4 by beat6. walk | wait | slot 1..4 | quit
+{"class_id":"anchor","background_id":"trailborn","slots":["brace","dash",null,null],"active":true,"complete":false,"won":false,"stage":1,"beat":1,"position":0,"health":11,"resolve":13,"rig":"Trail","attempts":2,"consumed_rigs":2,"transactions":4,"inventory":{"fiber":0,"binder":0,"trail_rig":0},"level":2,"xp":10,"unspent":0,"vitality":0,"focus":2}
+Skill: 0 damage, 2 resolve spent.
+BOLT: moving exposes health; the approach skill spends resolve to protect. Need position4 by beat6. walk | wait | slot 1..4 | quit
+{"class_id":"anchor","background_id":"trailborn","slots":["brace","dash",null,null],"active":true,"complete":false,"won":false,"stage":1,"beat":2,"position":0,"health":11,"resolve":11,"rig":"Trail","attempts":2,"consumed_rigs":2,"transactions":4,"inventory":{"fiber":0,"binder":0,"trail_rig":0},"level":2,"xp":10,"unspent":0,"vitality":0,"focus":2}
+Skill: 0 damage, 2 resolve spent.
+PULSE at your current position: walking or dashing leaves it. Need position4 by beat6. walk | wait | slot 1..4 | quit
+{"class_id":"anchor","background_id":"trailborn","slots":["brace","dash",null,null],"active":true,"complete":false,"won":false,"stage":1,"beat":3,"position":2,"health":11,"resolve":10,"rig":"Trail","attempts":2,"consumed_rigs":2,"transactions":4,"inventory":{"fiber":0,"binder":0,"trail_rig":0},"level":2,"xp":10,"unspent":0,"vitality":0,"focus":2}
+Dash: 0 damage, 1 resolve spent.
+BOLT: moving exposes health; the approach skill spends resolve to protect. Need position4 by beat6. walk | wait | slot 1..4 | quit
+{"class_id":"anchor","background_id":"trailborn","slots":["brace","dash",null,null],"active":true,"complete":false,"won":false,"stage":1,"beat":4,"position":2,"health":11,"resolve":8,"rig":"Trail","attempts":2,"consumed_rigs":2,"transactions":4,"inventory":{"fiber":0,"binder":0,"trail_rig":0},"level":2,"xp":10,"unspent":0,"vitality":0,"focus":2}
+Skill: 0 damage, 2 resolve spent.
+PULSE at your current position: walking or dashing leaves it. Need position4 by beat6. walk | wait | slot 1..4 | quit
+{"class_id":"anchor","background_id":"trailborn","slots":["brace","dash",null,null],"active":true,"complete":false,"won":false,"stage":1,"beat":5,"position":4,"health":11,"resolve":7,"rig":"Trail","attempts":2,"consumed_rigs":2,"transactions":4,"inventory":{"fiber":0,"binder":0,"trail_rig":0},"level":2,"xp":10,"unspent":0,"vitality":0,"focus":2}
+Dash: 0 damage, 1 resolve spent.
+BOLT: moving exposes health; the approach skill spends resolve to protect. Need position4 by beat6. walk | wait | slot 1..4 | quit
+{"class_id":"anchor","background_id":"trailborn","slots":["brace","dash",null,null],"active":false,"complete":true,"won":true,"stage":1,"beat":6,"position":4,"health":11,"resolve":5,"rig":"Trail","attempts":2,"consumed_rigs":2,"transactions":4,"inventory":{"fiber":0,"binder":0,"trail_rig":0},"level":3,"xp":25,"unspent":2,"vitality":0,"focus":2}
+Connected expedition complete.

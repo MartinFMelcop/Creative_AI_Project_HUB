@@ -6,9 +6,14 @@ source inventory, truthful maturity, consumer relationship, validity boundary an
 next acceptance live in [the transformation catalog](origins.json). The
 [public entry point](../../../README.md) offers a concise navigation table.
 A destination is not operational merely because it has an entry or a directory.
-Eight destinations remain incomplete; they cannot be postponed indefinitely.
+Seven destinations remain incomplete; they cannot be postponed indefinitely.
 
 ## Operational methods
+
+- [World & Gameplay Systems](world-gameplay/README.md): typed class/background/skill
+  intake and atomic prepared-action choices consumed by real C# encounters. Distinct
+  helper variants, modeled stale-cache/silent-erasure counterexamples and rejected
+  proposals remain visible. [Execution](../evidence/world-loadout/RUN.json).
 
 - [Economy & Simulation](economy-simulation/README.md): interrogates preserved crafting
   schemas with typed controls and executes atomic resource ownership in an original

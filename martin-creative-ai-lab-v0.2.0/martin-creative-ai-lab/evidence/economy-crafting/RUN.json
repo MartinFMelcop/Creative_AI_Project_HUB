@@ -68,8 +68,8 @@
     },
     {
       "local_path": "north-star/csharp/Forge/Expedition.cs",
-      "size_bytes": 4565,
-      "sha256": "8e9e1431d90cb752579b275cb6c7c854b489af0116f55170e2b928eed1f7d682"
+      "size_bytes": 4688,
+      "sha256": "579c1eb8375a5c281d35338f1c93cb529c16bf330f0576046c970d42c816bfc3"
     },
     {
       "local_path": "north-star/csharp/Forge/NorthStar.Forge.csproj",
@@ -125,8 +125,8 @@
   "result_artifacts": [
     {
       "local_path": "evidence/economy-crafting/results.json",
-      "size_bytes": 14109,
-      "sha256": "d2e896f80e86a555950da6755cd6e9a3a6ec4fbd63693221afea9ce96c992146"
+      "size_bytes": 14837,
+      "sha256": "aa970124d6df365b4aeb6f7733067fe2acf9b311c96dfb303dd1fc7cda8d83f1"
     },
     {
       "local_path": "evidence/economy-crafting/native.json",
@@ -222,5 +222,7 @@
     "P01 prevalidation semantics adapted; journal persistence/recovery and full XP item/tool/unlock catalog remain unresolved.",
     "Retained source errors are static assay observations, not executed historical crafting failures.",
     "Scripted policies are mechanical observations; no optimality, player preference or necessary crafting claim."
-  ]
+  ],
+  "reverification_baseline": "76fa51afc8f62680565ea91bca9dc143ab252ffc",
+  "reverification_reason": "Added prepared-loadout domain to the shared assembly and an explicit approach overload preserving Forge defaults. Instrument, native/demo and actual STDIN consumers reexecuted."
 }

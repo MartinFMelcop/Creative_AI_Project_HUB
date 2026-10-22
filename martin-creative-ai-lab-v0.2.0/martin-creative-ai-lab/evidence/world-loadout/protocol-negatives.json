@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "kind": "loadout_protocol_rejection_controls",
+  "passed": 6,
+  "failed": 0,
+  "rows": [
+    {
+      "control": "schema_boolean",
+      "exit_code": -6,
+      "success_output_created": false
+    },
+    {
+      "control": "duplicate_field",
+      "exit_code": -6,
+      "success_output_created": false
+    },
+    {
+      "control": "unknown_field",
+      "exit_code": -6,
+      "success_output_created": false
+    },
+    {
+      "control": "missing_field",
+      "exit_code": -6,
+      "success_output_created": false
+    },
+    {
+      "control": "fractional_level",
+      "exit_code": -6,
+      "success_output_created": false
+    },
+    {
+      "control": "duplicate_case",
+      "exit_code": -6,
+      "success_output_created": false
+    }
+  ]
+}

@@ -93,3 +93,8 @@ ledger cap, whole-state rejection, scarce preparation, real completion/failure a
 The lab evidence owns exact source identities and observed results. A source build on
 Linux does not establish Unity import/API compatibility, activation/license, Windows
 modules/player or Steam execution.
+
+The original console and `Begin(Rig)` retain their original outfit/approach mapping.
+`Begin(Rig, Approach)` additionally supports the separate prepared-action consumer;
+it validates both enums before spending a rig. This permits independent outfit/style
+ownership without resetting supplies or changing the original console defaults.

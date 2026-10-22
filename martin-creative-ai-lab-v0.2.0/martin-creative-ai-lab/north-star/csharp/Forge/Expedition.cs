@@ -48,9 +48,10 @@ namespace NorthStar.Forge
         }
         public bool Allocate(Allocation axis,long amount)
         {bool accepted=session.Allocate(axis,amount);Last=accepted?"Earned allocation committed.":"Allocation rejected; state unchanged.";return accepted;}
-        public bool Begin(Rig rig)
+        public bool Begin(Rig rig) => Begin(rig,rig==Rig.Trail?Approach.Lure:Approach.Anchor);
+        public bool Begin(Rig rig,Approach approach)
         {
-            if(Active || Complete || !Enum.IsDefined(typeof(Rig),rig)) {Last="Entry rejected; state unchanged.";return false;}
+            if(Active || Complete || !Enum.IsDefined(typeof(Rig),rig) || !Enum.IsDefined(typeof(Approach),approach)) {Last="Entry rejected; state unchanged.";return false;}
             string item=rig==Rig.Plate?"plate_rig":"trail_rig";
             if(rig!=Rig.Unprepared && inventory.Quantity(item)<1){Last="Requested rig unavailable; no materials or encounter state changed.";return false;}
             // All external validation precedes consumption. Private session has matching preparation preconditions.
@@ -59,7 +60,7 @@ namespace NorthStar.Forge
                 var result=inventory.Consume("entry_"+attempt,item,1);
                 if(!result.Applied){Last=result.Reason;return false;}
             }
-            if(!session.Prepare(rig==Rig.Trail?Approach.Lure:Approach.Anchor,rig==Rig.Trail?Outfit.Trail:Outfit.Plate) || !session.Begin())
+            if(!session.Prepare(approach,rig==Rig.Trail?Outfit.Trail:Outfit.Plate) || !session.Begin())
                 throw new InvalidOperationException("Private encounter violated validated entry preconditions.");
             CurrentRig=rig;attempt++;if(rig!=Rig.Unprepared)ConsumedRigs++;
             Last="Encounter committed. "+(rig==Rig.Unprepared?"Unprepared: skill unavailable; walk/dash/wait remain.":"One "+rig+" rig consumed; no refund on failure.");return true;

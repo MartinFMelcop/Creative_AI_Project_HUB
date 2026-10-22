@@ -493,3 +493,23 @@ show a consequential behavior difference. CRE-005(A) informs consequence, CRE-01
 provide hypotheses rather than final class/tree authority, ENG-005/015 inform ownership
 and modularity, and SCI-017 informs matched controls and retained failures.
 [Actual execution](../evidence/rpg-progression/RUN.json) owns results and limits.
+
+## Experimental C# prepared identity and actions
+
+The World & Gameplay method adapts eligibility and safe preparation, not historical
+fiction or a final class tree. CRE-005 informs legible consequences; CRE-011/013 remain
+hypotheses informing separate identity, skill-slot and outfit owners. Two original
+experimental disciplines select stationary Anchor protection or advancing Lure behavior.
+Their equipment is independently chosen. A complete four-slot proposal commits only
+when class/background, known skills, duplication and earned-level requirements pass;
+incompatibility never silently removes a prior choice. Backgrounds currently express
+compatibility only, without invented supply/stat effects or demographic restrictions.
+
+Only three action definitions exist here: the two existing discipline skills and
+shared Dash, available after actual level2 progression and explicit equipping. Walk
+and Wait remain baseline commands. Preparation is locked during encounters; swapping
+outside play changes available verbs without restoring resources, materials or rewards.
+This is a terminal/Linux experiment, not feedback/recognition, final canon, Unity,
+Windows, Steam or independent player approval. Revisit after actual authored experience
+and human observation; source catalogs and mechanical combinations are not diverse
+implemented abilities or evidence of balance.

@@ -1,0 +1,287 @@
+{
+  "schema_version": 1,
+  "kind": "destination_execution",
+  "baseline_commit": "76fa51afc8f62680565ea91bca9dc143ab252ffc",
+  "capability_ids": [
+    "NS-C02"
+  ],
+  "scope": "Source-derived typed class/background/skill eligibility and original atomic prepared-action consumer with actual earned progression and independent outfits",
+  "runtime": "Python 3.12.14; .NET SDK10.0.401; compiled C#8/netstandard2.1 domain and .NET10 consumers executed on Linux",
+  "consumer_paths": [
+    "north-star/csharp/Domain/Loadout.cs",
+    "north-star/csharp/Loadout/PreparedExpedition.cs",
+    "north-star/csharp/Loadout/Program.cs",
+    "north-star/csharp/Forge/Expedition.cs",
+    "north-star/csharp/Domain/Progression.cs",
+    "north-star/csharp/Crossing/Session.cs",
+    "north-star/csharp/Crossing/Program.cs"
+  ],
+  "checks": {
+    "passed": 2090,
+    "failed": 0
+  },
+  "native_controls": {
+    "passed": 56,
+    "failed": 0
+  },
+  "instrument_regressions": {
+    "passed": 12,
+    "failed": 0
+  },
+  "commands": [
+    {
+      "command": [
+        "python3",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "labs/world-gameplay",
+        "-p",
+        "test_*.py"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "python3",
+        "labs/world-gameplay/run.py",
+        "--dotnet",
+        "/workspace/work/structural-transformation/dotnet/dotnet",
+        "--output",
+        "/workspace/work/world-loadout/study.json"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "/workspace/work/structural-transformation/dotnet/dotnet",
+        "build",
+        "north-star/csharp/LoadoutChecks/NorthStar.LoadoutChecks.csproj",
+        "-c",
+        "Release"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "/workspace/work/structural-transformation/dotnet/dotnet",
+        "north-star/csharp/LoadoutChecks/bin/Release/net10.0/NorthStar.LoadoutChecks.dll",
+        "native",
+        "/workspace/work/world-loadout/native.json"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "/workspace/work/structural-transformation/dotnet/dotnet",
+        "north-star/csharp/Loadout/bin/Release/net10.0/NorthStar.Loadout.dll",
+        "--demo",
+        "/workspace/work/world-loadout/demo-root.json"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "timeout",
+        "15",
+        "/workspace/work/structural-transformation/dotnet/dotnet",
+        "north-star/csharp/Loadout/bin/Release/net10.0/NorthStar.Loadout.dll"
+      ],
+      "exit_code": 0,
+      "stdin_artifact": "evidence/world-loadout/terminal-commands.txt",
+      "stdout_artifact": "evidence/world-loadout/terminal.txt"
+    }
+  ],
+  "source_artifacts": [
+    {
+      "local_path": "labs/world-gameplay/run.py",
+      "size_bytes": 20022,
+      "sha256": "487093e7e3f348e6ee054e2f54362d8365001743b844a9c17bd50c3138d2324f"
+    },
+    {
+      "local_path": "north-star/csharp/Checks/NorthStar.Checks.csproj",
+      "size_bytes": 420,
+      "sha256": "3f58ee26c26f3030dcdb7cc2c6db2b7e14bff43d81e936b95cc116bc82978d35"
+    },
+    {
+      "local_path": "north-star/csharp/Checks/Program.cs",
+      "size_bytes": 15597,
+      "sha256": "77ad4bf5d9bdb348fef302eb97a35a47e2c5956ed4823a86a622f2cf035b72ae"
+    },
+    {
+      "local_path": "north-star/csharp/Crossing/NorthStar.Crossing.csproj",
+      "size_bytes": 352,
+      "sha256": "09fbdffe415d44079f66da83d4d22e5b91169f3f1abdd0e1ebc2bacd2e3f0c88"
+    },
+    {
+      "local_path": "north-star/csharp/Crossing/Program.cs",
+      "size_bytes": 4226,
+      "sha256": "268c1b5ac582dd06f15eb3e40e7ce859a9c58eecfc58c7586d94bcaecf9c595e"
+    },
+    {
+      "local_path": "north-star/csharp/Crossing/Session.cs",
+      "size_bytes": 5357,
+      "sha256": "d25ac05ba1a94432474dd1b14b4fd608e446fc5344dcc4f779d8d5fe27a1b2c5"
+    },
+    {
+      "local_path": "north-star/csharp/Domain/Crafting.cs",
+      "size_bytes": 8035,
+      "sha256": "5a5a892b3e68cff73f7a443d7c014c79dbebf2954d28f447e1bf3a9c4759de57"
+    },
+    {
+      "local_path": "north-star/csharp/Domain/Loadout.cs",
+      "size_bytes": 5692,
+      "sha256": "a1296ca13b5ba6728c073320b860e369ad2e01fdaacb45b5237ef40d0243f682"
+    },
+    {
+      "local_path": "north-star/csharp/Domain/NorthStar.Domain.csproj",
+      "size_bytes": 344,
+      "sha256": "9570b674acfea69bb60098f495afd3b9e2cef2575fcfeb6db71c2cdecb2c4876"
+    },
+    {
+      "local_path": "north-star/csharp/Domain/Progression.cs",
+      "size_bytes": 8331,
+      "sha256": "8495e1ad92fea069c2c3989f6f2cc2600980575e72812df9480ed193c51c8685"
+    },
+    {
+      "local_path": "north-star/csharp/Forge/Expedition.cs",
+      "size_bytes": 4688,
+      "sha256": "579c1eb8375a5c281d35338f1c93cb529c16bf330f0576046c970d42c816bfc3"
+    },
+    {
+      "local_path": "north-star/csharp/Forge/NorthStar.Forge.csproj",
+      "size_bytes": 420,
+      "sha256": "3f58ee26c26f3030dcdb7cc2c6db2b7e14bff43d81e936b95cc116bc82978d35"
+    },
+    {
+      "local_path": "north-star/csharp/Forge/Program.cs",
+      "size_bytes": 6419,
+      "sha256": "3a289847c487ca3bca8a406635b7f0a2334daa959d767d31b3f732445a398c3a"
+    },
+    {
+      "local_path": "north-star/csharp/ForgeChecks/NorthStar.ForgeChecks.csproj",
+      "size_bytes": 350,
+      "sha256": "8a5c8039bcf4e9cb06e51d0a8099ed2b509f0233ee2981d4ddd557c32b874419"
+    },
+    {
+      "local_path": "north-star/csharp/ForgeChecks/Program.cs",
+      "size_bytes": 10852,
+      "sha256": "c918c3f27ba4d388026de300ca851fdfa4dd2c053595e3a367701c786b71cc61"
+    },
+    {
+      "local_path": "north-star/csharp/Loadout/NorthStar.Loadout.csproj",
+      "size_bytes": 414,
+      "sha256": "8b7ae6ab602aa24a78926f23bdf1d0117d79293eeb493334c1a4a2d3d4c85613"
+    },
+    {
+      "local_path": "north-star/csharp/Loadout/PreparedExpedition.cs",
+      "size_bytes": 4861,
+      "sha256": "92fabdaa94f4ad4bb33a55a113a3d4f8cc63c86634d631413a529eb53df24668"
+    },
+    {
+      "local_path": "north-star/csharp/Loadout/Program.cs",
+      "size_bytes": 5919,
+      "sha256": "6409bc7a9d24a9c60ea59657b33925c6dd27e3a6a9a7a9736e2d3a5ff7d6d7d8"
+    },
+    {
+      "local_path": "north-star/csharp/LoadoutChecks/NorthStar.LoadoutChecks.csproj",
+      "size_bytes": 354,
+      "sha256": "1125d739eca20f534119389c4eda50f366d4e511b2d1b229e4ebbe3fb30945f8"
+    },
+    {
+      "local_path": "north-star/csharp/LoadoutChecks/Program.cs",
+      "size_bytes": 11660,
+      "sha256": "c6de586237e5fbb0df552eeb4e458ade42ecf9be86bda814285da223d084b367"
+    },
+    {
+      "local_path": "north-star/csharp/global.json",
+      "size_bytes": 55,
+      "sha256": "e0c0882461e712f6c2c66241bf2f175c60832e3ff077dc26091ff8c661d4193e"
+    },
+    {
+      "local_path": "references/rave-master/snapshots/36af1651271422ae33856e8b5d7b45702215f165/source/RM_ACT1/DATA/CORE/ACT1_ANTECEDENTES_CANON.csv",
+      "size_bytes": 968,
+      "sha256": "666e7ae5445b60a5c6c2030f581dc1851e6d2f33519214d32c1b50b311ae4dd9"
+    },
+    {
+      "local_path": "references/rave-master/snapshots/36af1651271422ae33856e8b5d7b45702215f165/source/RM_ACT1/DATA/CORE/ACT1_CLASSES_CANON.csv",
+      "size_bytes": 704,
+      "sha256": "f1f8921bbc5141389afbbb22c26be25bad227337308a8a712f86a474f349d294"
+    },
+    {
+      "local_path": "references/rave-master/snapshots/36af1651271422ae33856e8b5d7b45702215f165/source/RM_ACT1/DATA/CORE/ACT1_COMBAT_SKILLS_CANON.csv",
+      "size_bytes": 61955,
+      "sha256": "9b320f2243e335dbf0ad5fe2fa12f4deafedb51e1e1f22e6b38f1bc981e73931"
+    },
+    {
+      "local_path": "references/rave-master/snapshots/36af1651271422ae33856e8b5d7b45702215f165/source/RM_ACT1/DATA/CORE/ACT1_REL_CLASS_ANTECEDENTE_CANON.csv",
+      "size_bytes": 1729,
+      "sha256": "fc2be2b26a15130d5ac5730866bcb8caf8006b6058c67787fe6bbe4a8aa50498"
+    },
+    {
+      "local_path": "references/rave-master/snapshots/36af1651271422ae33856e8b5d7b45702215f165/source/RM_ACT1/DATA/DEV/RGSS/RM_CHARACTER_CREATE_RUNTIME.rb",
+      "size_bytes": 15022,
+      "sha256": "5f24a3ad9daaa230b039ce15b43a8780aa0b73e0c499e28cd90146eae613c7d0"
+    },
+    {
+      "local_path": "references/rave-master/snapshots/36af1651271422ae33856e8b5d7b45702215f165/source/RM_ACT1/DATA/DEV/RGSS/RM_UI_SKILL_EQUIP_RUNTIME.rb",
+      "size_bytes": 2905,
+      "sha256": "d8ef41857dea51f435a0693aac2c689e769c5e39be1ce874ae515e472f241fe1"
+    },
+    {
+      "local_path": "references/rave-master/snapshots/36af1651271422ae33856e8b5d7b45702215f165/source/RM_DIST/RMXP_BASE/ScriptsCustom/RM_UI_SKILL_EQUIP_RUNTIME.rb",
+      "size_bytes": 2249,
+      "sha256": "b31e13dc55f2b25b05f4d5b040a25e23343d58c1a04ec465f9b6fde061240d7d"
+    },
+    {
+      "local_path": "evidence/world-loadout/terminal-commands.txt",
+      "size_bytes": 201,
+      "sha256": "35488c8e84a39271734afb48a92c8b8a6398a4377b0458873d94e43969951bd9"
+    }
+  ],
+  "result_artifacts": [
+    {
+      "local_path": "evidence/world-loadout/results.json",
+      "size_bytes": 382012,
+      "sha256": "ded1f605e390cb78925486f63be0e74d3b5f9ae1a525b78152f1de673a226e55"
+    },
+    {
+      "local_path": "evidence/world-loadout/native.json",
+      "size_bytes": 2398,
+      "sha256": "6820acaa6ccd91c9169cf74ca45ccbc7e76a587f9236061039e54ebcc4617bee"
+    },
+    {
+      "local_path": "evidence/world-loadout/destination.json",
+      "size_bytes": 3145,
+      "sha256": "c9e4f3cee83566702303e6361795e750e8f7c0d65c805343d1def1c69ce9949a"
+    },
+    {
+      "local_path": "evidence/world-loadout/terminal.txt",
+      "size_bytes": 10010,
+      "sha256": "0f28f67800b1cb287b51bd0ecad108409b1b661b4aea832bc055fe91843651bc"
+    },
+    {
+      "local_path": "evidence/world-loadout/protocol-negatives.json",
+      "size_bytes": 776,
+      "sha256": "62dd5ce877bda51f0d68f01ddb4833cb405fe5223c9a240606005b8428da3d79"
+    }
+  ],
+  "observations": {
+    "classes": 10,
+    "backgrounds": 11,
+    "allowed_relations": 52,
+    "described_skills": 166,
+    "compiled_background_cases": 110,
+    "compiled_skill_owner_cases": 1660,
+    "compiled_level_boundaries": 320,
+    "completed_scripted_journeys": 2,
+    "actual_malformed_protocol_rejections": 6
+  },
+  "limitations": [
+    "Typed preserved-data/static-binding assay, labeled behavioral models and actual original C# consumers. No historical Ruby/RGSS game, Unity, Windows, Steam, final class canon, implemented legacy skill catalog, human preference or balance proof.",
+    "Helper variant findings are static bindings; stale-cache/erasure counterexamples are explicitly Python models, not historical Ruby execution.",
+    "166 skill IDs are eligibility data, not implemented effects or adopted fictional classes/backgrounds. ClassVariant metadata introduces no destination gender restrictions.",
+    "Prior progression and crafting consumers were reexecuted after shared assembly/API additions; their source evidence remains separately scoped."
+  ]
+}

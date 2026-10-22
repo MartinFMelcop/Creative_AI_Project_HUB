@@ -53,7 +53,7 @@ make its destination laboratory operational.
 | P07 | Visual Identity & Animation | Incomplete |
 | P08 | Audio & Adaptive Music | Incomplete |
 | P09 | Build, Release & Operations | Incomplete |
-| P10 | World & Gameplay Systems | Incomplete |
+| P10 | [World & Gameplay Systems](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/labs/world-gameplay/README.md) | Operational, bounded prepared-action research |
 | P11 | Networking & Persistence | Incomplete |
 
 [The laboratory catalog](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/labs/origins.json) owns destinations, maturity,

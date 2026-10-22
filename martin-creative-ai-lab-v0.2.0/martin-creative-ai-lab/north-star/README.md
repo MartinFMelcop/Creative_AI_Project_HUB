@@ -69,3 +69,7 @@ The [Forge consumer](csharp/Forge/README.md) executes original scarce-material r
 and one-encounter supplies against the same C# Crossing. Its [crafting evidence](../evidence/economy-crafting/RUN.json)
 retains rejected source adapters, transaction controls and failed policies. It does
 not modify the retained Godot delivery or establish a production profession economy.
+
+[Prepared identity/actions](csharp/Loadout/README.md) now composes actual earned slots,
+independent outfit/style and whole-proposal refusal. [World evidence](../evidence/world-loadout/RUN.json)
+separates compiled eligibility from described legacy skills and helper models.

@@ -514,3 +514,10 @@ jobs:
           dotnet build north-star/csharp/ForgeChecks/NorthStar.ForgeChecks.csproj -c Release
           dotnet north-star/csharp/ForgeChecks/bin/Release/net10.0/NorthStar.ForgeChecks.dll native "$RUNNER_TEMP/north-star-forge-native.json"
           dotnet north-star/csharp/Forge/bin/Release/net10.0/NorthStar.Forge.dll --demo "$RUNNER_TEMP/north-star-forge-journey.json"
+      - name: Execute identity intake and transactional prepared actions
+        run: |
+          python3 -m unittest discover -s labs/world-gameplay -p 'test_*.py'
+          python3 labs/world-gameplay/run.py --dotnet dotnet --output "$RUNNER_TEMP/world-loadout.json" --compare evidence/world-loadout/results.json
+          dotnet build north-star/csharp/LoadoutChecks/NorthStar.LoadoutChecks.csproj -c Release
+          dotnet north-star/csharp/LoadoutChecks/bin/Release/net10.0/NorthStar.LoadoutChecks.dll native "$RUNNER_TEMP/north-star-loadout-native.json"
+          dotnet north-star/csharp/Loadout/bin/Release/net10.0/NorthStar.Loadout.dll --demo "$RUNNER_TEMP/north-star-loadout-journey.json"

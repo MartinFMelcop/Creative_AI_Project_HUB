@@ -1,152 +1,127 @@
 # Current transformation continuity
 
 **Updated:** 2026-10-22 UTC. **SEED:** 0.34.0. **Mode:** DEVELOPMENT with executed
-research. **Current execution baseline:** `770720a7ad4bca60d0aa577109b23cde9ea615eb`,
-branch `work`, clean tracked/untracked tree; fetched main matched HEAD (0/0).
+research. **Execution baseline:** `76fa51afc8f62680565ea91bca9dc143ab252ffc`, branch
+`work`, clean tracked/untracked tree; fetched main matched HEAD (0/0).
 
-This file owns current work and the lightweight rolling effort window. Durable direction
-is in SEED, lab/consumption maturity in [the catalog](../labs/origins.json), creative
-status in [DESIGN](../north-star/DESIGN.md), source audit in [labs](../labs/legacy-audit.md),
-and observations in executed evidence. Follow [the current process](prompts/CONTINUOUS_DEVELOPMENT.md).
-The explicit transformation supersedes earlier optional-lab and undecided-engine policies.
+This file owns active work and the rolling investment window. Durable direction is
+in SEED, lab/consumption maturity in [the catalog](../labs/origins.json), creative
+status in [DESIGN](../north-star/DESIGN.md), and actual observations in evidence.
+Follow [Continuous Development v2](prompts/CONTINUOUS_DEVELOPMENT.md).
 
-## Active transformation — eleven operational research destinations
+## Active transformation — laboratory contracts with real consumers
 
-**Outcome/value:** Eleven real laboratories consume legacy/new knowledge into tested
-technology and North Star consumers. The destinations, owners and next acceptances are
-mandatory; an incomplete catalog entry is not an operational method. Historical P01–P11
-versions remain source provenance, not permanent independent product/release commitments.
+**Outcome:** Eleven mandatory operational laboratories consume sources into tested
+technology and meaningful North Star production. Four bounded methods now operate:
+[World & Gameplay](../labs/world-gameplay/README.md),
+[Economy & Simulation](../labs/economy-simulation/README.md),
+[RPG Systems](../labs/rpg-systems/README.md) and
+[Combat & Responsiveness](../labs/combat-response/README.md). Seven destinations
+remain incomplete; operational does not mean a finished domain.
 
-**Executed increment:** Engineering, Scientific and Creative specialists investigated
-the same problem independently in parallel. They selected progression over another
-combat clone, full RPG port or empty Unity scaffold. A broad available-source/package
-inventory and direct implementation/data/QA inspection found a consequential mismatch:
-the preserved level helper requests `HP`/`SP`, while supplied tables use `HP_Gain`/
-`SP_Gain`. The new [RPG Systems method](../labs/rpg-systems/README.md) compares typed
-C# adaptation against source vectors, threshold/partition controls and the source-binding
-assay. [Execution](../evidence/rpg-progression/RUN.json) owns exact observations and counts.
-The [existing combat pilot](../labs/combat-response/README.md) remains operational.
-Eight other destinations still require implemented instruments/results, not more labels.
+**Current increment:** Independent Engineering, Scientific and Creative analyses
+compared prepared identity/actions, durable recovery and NPC/quest continuity against
+actual sources, existing consumers and unavailable Unity tooling. World preparation
+was selected: it matures a new incomplete laboratory and makes explicit equipped
+verbs consequential. Recovery requires a larger joint save/crash/compatibility
+contract; NPC/reputation/quest sources require their own authored transitions and
+assays, rather than adoption of debug journal actions or empty reputation effects.
 
-**Crafting continuation:** Independent Engineering, Scientific and Creative analyses
-compared class/skill/loadout with transactional crafting and actual Unity access.
-Crafting was selected because it matures incomplete Economy & Simulation and adds
-scarce resource ownership to an existing real encounter. Class/slot investigation
-remains consequential but must distinguish ACT1 filtering/destructive sanitation
-from the different bundled helper; it is not consumed by this work. The station
-assay rejects width-only false confidence: expected column counts can coexist with
-semantically shifted access/status fields. Original supplies remain experimental;
-no legacy profession/fiction is imported.
+[World execution](../evidence/world-loadout/RUN.json) binds typed class/background/
+skill constraints and distinct helper variants to an actual C# prepared-action
+consumer. ACT1 filters class but uses an unkeyed cache and silently erases incompatible
+slots; the distributed variant lacks that filter/sanitation. Modeled counterexamples
+are not historical Ruby/RGSS execution. Source gender/variant metadata does not become
+an invented restriction, and 166 source descriptions are not implemented abilities.
+Invalid proposals reject as a whole without erasing identity or resetting resources.
+Original experimental identity, skill slots and outfit remain separate owners.
+Actual execution passed 2,090 compiled eligibility observations (110 background pairs,
+1,660 skill ownership cases and 320 learned-level boundaries), 56 native controls,
+12 instrument regressions and six malformed-protocol refusals without success output.
+Two scripted journeys and actual STDIN earned-slot execution completed. A premature
+Dash proposal was refused before the survey earned level2. Empty slots passed the
+survey under walking but the harder all-walk policy died; these are specific policies,
+not optimality, necessity, preference or balance claims. The coordinator completed
+execution after a specialist hit a usage limit; the independent analyses were delivered.
 
-The [Economy method](../labs/economy-simulation/README.md) and
-[Forge consumer](../north-star/csharp/Forge/README.md) bind the new bounded research
-and production behavior to [execution evidence](../evidence/economy-crafting/RUN.json).
-Existing Crossing and Godot behavior remain preserved migration baselines.
-Execution passed 80 native crafting controls and three scripted completed journeys.
-Mixed preparation completed with one rig consumed and fiber2/binder1 retained;
-all-unprepared walking passed the survey but failed the harder crossing. Failed rigs
-were not refunded and missing-rig retry was rejected without gameplay mutation.
-Ten instrument regressions, exact result reproduction and affected progression
-reexecution (555 cases, 77 native controls) passed. These are deterministic software
-observations, not player preference or balance results.
+**Consumption boundary:** Integrated contracts, rejected unsafe adapters and genuine
+unresolved groups remain distinct in the catalog. Full legacy class fiction, skill
+implementations, malformed character-create parsing, item/tool/unlock catalogs,
+NPCs, reputation, quests and final progression pacing remain unconsumed. Historical
+QA labels and source presence do not establish historical game execution.
 
-**Consumption:** The catalog records a narrow rejected direct header adapter, integrated
-verified progression/budget contracts and unresolved remaining capabilities. Static
-helper binding is not historical RGSS execution. The original 180-level pacing, class/
-background fiction, huge skill catalog, crafting and quest/reputation semantics are not
-silently adopted. Available inventories/QA inform prioritized deep investigation; missing
-historic material must not trigger indefinite recovery attempts.
+**Next acceptance:** Compare the strongest remaining incomplete destination and
+consequential product dependency. Candidate methods include NPC/quest state transitions,
+formula/status timing/rounding, AI evaluation, input timing or production delivery.
+Durable joint inventory/progression/encounter recovery remains valuable if its concrete
+consumer/dependency now outweighs another incomplete laboratory. Do not automatically
+repeat the class matrix, station schema assay, progression study or authority rewrite.
+Correct sustained underinvestment and preserve meaningful negatives.
 
-**Next acceptance:** Compare the strongest remaining incomplete lab/source question against actual
-product dependencies. High-value available candidates include typed class/skill/loadout
-prerequisites, combat/status formula/rounding contracts, NPC/reputation/quest
-transitions and durable transaction recovery. Crafting item/tool/unlock provenance
-remains unresolved beyond the executed station/recipe schema scope; do not repeat
-the same station assay as a new substantive unit. Deliver a method with
-controls, actual results and a real consumer/decision. Correct persistent lab
-underinvestment; do not substitute another isolated Godot HUD increment.
+## Active product — executable C# migration dependencies
 
-## Active product — Unity/C# progression and production migration
+Unity/C# is selected, Windows-first and Steam-intended. Pure C#8/netstandard2.1 rules
+and real Linux command-line consumers execute; they are not Unity imports or players.
+[Progression](../evidence/rpg-progression/RUN.json) binds threshold/budget semantics;
+[Forge](../evidence/economy-crafting/RUN.json) binds atomic scarce supplies and no-refund
+retry; [Loadout](../north-star/csharp/Loadout/README.md) binds transactional identity
+and actual prepared verbs. Rejections must preserve whole gameplay state. Existing
+consumer behavior is retained by compatibility entry points and affected regressions.
 
-**Direction/consumers:** Unity/C# selected, Windows-first, Steam intended. The new
-[C# foundation](../north-star/csharp/README.md) is an actual pure C#8/netstandard2.1
-progression/reward/allocation domain, native controls and original terminal consumer.
-Survey completion earns points; explicit preparation changes later encounter resources
-and outcomes. Transactional rejection, local reward replay ownership and private mutable
-state protect choices. Anchor holds against bolts; more expensive Lure advances while
-drawing one. Both remain exposed to pulses. Retained failure policies prevent universal
-build/balance claims.
+**Observed tool limit:** SDK10.0.401 is available. PATH/targeted filesystem checks did
+not locate Unity Editor/Hub; no activated Editor/license/Windows module was available.
+No Editor patch is invented. Windows player, Steamworks, durable account ownership,
+network authority and independent human experience remain unexecuted/unvalidated.
+If licensed supported Editor/modules become available, execute a bounded real slice
+with controls, visible identity/equipment, distinct actions and consequences; otherwise
+advance executable production dependencies without reopening the engine decision.
 
-**Exact execution limit:** SDK10.0.401 compiled/executed on Linux; no Unity Editor was
-found in the targeted environment/PATH checks and no activated Editor/license/Windows
-module was available. No Unity patch is fabricated or pinned without verification.
-.NET Standard/C# syntax compilation is a compatibility foundation, not Editor import,
-Windows player, Steamworks, multiplayer, durable progression or independent player proof.
-Existing .NET10 origin cores were inspected; their APIs were not blindly imported.
-
-**Next acceptance:** If an appropriately licensed/supported Editor and Windows modules
-become available, execute a bounded actual Unity consumer of the rules with character
-control, identity/equipment, distinct actions, interaction/consequences and checks.
-Otherwise advance consequential C# domain/production methods or incomplete laboratories
-with available tools; record the blocker without deferring useful implementation.
-Preserve rights and author authority; experimental curves/approaches are not final canon.
-
-## Retained migration baselines and resolved obligations
+## Preserved consumers and lifecycle obligations
 
 The [Godot adventure](../north-star/prototype/README.md),
 [return feedback](../evidence/north-star-return-feedback/RUN.json),
-[return policy envelope](../evidence/north-star-return-envelope/RUN.json),
+[return envelope](../evidence/north-star-return-envelope/RUN.json),
 [authority/preparation](../evidence/north-star-preparation/RUN.json) and
-[ability bench](../evidence/north-star-abilities/RUN.json) retain their actual source,
-PCK/Linux, input, negative outcomes and scope. They are stable migration/regression
-baselines, not competing engine decisions or automatic active release initiatives.
-Transfer valuable behavior/save/format/rights obligations before retiring consumers.
+[ability bench](../evidence/north-star-abilities/RUN.json) retain their source, delivered
+PCK/Linux, negative outcomes and boundaries. Migrate behavior/save/format/rights and
+recovery obligations before retiring them. They are not competing engine choices or
+automatic historical release duties.
 
-The [source/package audit](../labs/legacy-audit.md) found no proven safely removable
-whole release package. Preserve unique version payloads and notices; repeated embedded
-runtimes alone do not justify deletion. The tested [CI scope selector](../tools/ci_scope.py)
-removes the unconditional duty to rebuild unrelated historical players every push:
-affected retained consumers/shared dependencies still run their existing gates; workflow,
-unknown shared changes and manual full runs remain conservative. Integrity/source/claim
-checks are unconditional. Future North Star player production is Windows-first.
-**Observed CI follow-up:** Crafting publication `7734a1b` passed C# execution but
-its conservative full run exposed an intermittent retained arena packaged-audio
-negative control failure. A controlled 100ms read/seek gap demonstrated stale-target
-cancellation; test drivers now lock injection as well as observation, preserving
->50ms detection and <15ms alignment/reset limits. Six actual source/PCK driver runs
-passed; [evidence](../evidence/veil-arena/audio-seek-fixture.json) retains the original
-failure, counterexample and environment repair. This does not prove the historical
-CI scheduling cause or change product audio/PCK. New probe coverage remains in CI;
-this bounded defect follow-up is supporting maintenance, not a new strategic unit.
+The [source/package audit](../labs/legacy-audit.md) established no safely removable
+whole release package; preserve unique payloads/notices. The affected-consumer
+[CI selector](../tools/ci_scope.py) preserves required gates without unconditional
+unrelated rebuilds. This cycle extends actual C# consumers/instruments, not another
+lifecycle system. Current public navigation points to bounded operational methods.
 
-The public root/workspace navigation now leads with actual product, laboratories,
-demonstrations/evidence and limits rather than successive prototype feature history.
+[Audio fixture evidence](../evidence/veil-arena/audio-seek-fixture.json) retains the
+prior packaged negative-control failure and controlled stale-target cancellation.
+Atomic injection preserved >50ms detection and <15ms alignment/reset limits; product
+audio/PCK stayed unchanged. This established a fixture vulnerability, not the measured
+scheduling cause of the historical CI failure. Prior final CI run
+[39703441289](https://github.com/MartinFMelcop/Creative_AI_Project_HUB/actions/runs/39703441289)
+was rechecked: all eight jobs completed successfully. New publication/CI remain separate.
 
-## Rolling strategic effort — once-counted substantive units
+## Rolling strategic investment — once-counted substantive units
 
-Targets are approximate **47% legacy/laboratories / 40% North Star / 13% repository**
-substantive effort, not measured session percentages. Start this prospective window at
-the transformation; no prior unmeasured hours are invented. Record each completed unit
-once, at most eight recent units, then examine sustained investment and dependencies.
+Targets remain approximately **47% legacy/laboratories / 40% North Star / 13%
+repository/portfolio**, not measured hours or file/commit/token shares. Keep at most
+eight units; counts cannot establish convergence.
 
 | Completed substantive unit | Primary workstream | Evidence / relative investment |
 |---|---|---|
-| Available-source audit and progression-contract laboratory | Legacy/laboratories | [Inventory](../labs/source-inventory.json), [execution](../evidence/rpg-progression/RUN.json); largest research/investigation scope |
-| Pure C# domain and original connected encounter consumer | North Star | [Destination](../north-star/csharp/README.md); substantial implementation dependent on recovered contracts |
-| Authority/schema, truthful public entry and affected-consumer CI routing | Repository/portfolio | Current versioned authorities, [negative controls](../tools/test_transformation.py), [CI routing controls](../tools/test_ci_scope.py); supporting structural scope |
-| Typed legacy crafting assay and atomic resource method | Legacy/laboratories | [Economy execution](../evidence/economy-crafting/RUN.json); substantive source/negative-control investigation correcting incomplete-lab investment |
-| Scarce crafting preparation in connected C# encounters | North Star | [Forge](../north-star/csharp/Forge/README.md); substantial dependent implementation; inventory/retry ownership, not a new combat model |
+| Available-source audit and progression-contract method | Legacy/laboratories | [Inventory](../labs/source-inventory.json), [progression execution](../evidence/rpg-progression/RUN.json); broad investigation |
+| C# domain and original connected encounter | North Star | [Foundation](../north-star/csharp/README.md); substantial dependent implementation |
+| Authority/schema, public entry and affected CI routing | Repository/portfolio | Current authorities and tested routing; supporting structural scope |
+| Typed crafting assay and atomic resource method | Legacy/laboratories | [Economy execution](../evidence/economy-crafting/RUN.json); corrective incomplete-lab investigation |
+| Scarce crafting preparation in real encounters | North Star | [Forge](../north-star/csharp/Forge/README.md); substantial dependent implementation |
+| Typed identity/skill method and helper counterexamples | Legacy/laboratories | [World execution](../evidence/world-loadout/RUN.json); corrective incomplete-lab investment |
+| Transactional prepared identity and earned action slots | North Star | [Loadout](../north-star/csharp/Loadout/README.md); real consumer of the recovered constraints |
 
-These units are separate outputs, not duplicate counts for a shared test or exact
-effort shares. No measured percentage convergence is claimed. The crafting cycle
-primarily invests in a new incomplete laboratory and its consequential product
-consumer; repository routing/navigation is supporting maintenance, not another
-substantive governance unit.
-The earlier prototype-heavy baseline and eight incomplete labs justify continued
-corrective laboratory investment; actual Unity availability can justify a dependent
-product deviation. Each successor must inspect this window, update once-counted units,
-identify underinvestment and explain its chosen corrective or dependency frontier.
-Three consecutive same-workstream units require explicit correction or a concrete blocker.
-Complete this transformation only when eleven labs actually operate, material legacy
-capabilities have justified terminal outcomes, and production/delivery obligations have
-real destination evidence; documentation counts cannot close it.
+Lab research and product behavior are separate outputs, not duplicate counts for one
+test. Routing/evidence/navigation and the earlier bounded audio repair are supporting
+maintenance, not extra strategic units. No measured percentage convergence is claimed.
+Seven incomplete laboratories still justify corrective investment; actual Unity or
+consequential production dependencies may justify a product deviation. Three consecutive
+units in one stream require explicit correction or a concrete blocker. Completion
+requires real operational methods, justified terminal consumption and production proof,
+not documentation counts.
