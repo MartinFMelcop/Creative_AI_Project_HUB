@@ -28,7 +28,9 @@
     "north-star/csharp/Forge/Program.cs",
     "north-star/csharp/Domain/Loadout.cs",
     "north-star/csharp/Loadout/PreparedExpedition.cs",
-    "north-star/csharp/Loadout/Program.cs"
+    "north-star/csharp/Loadout/Program.cs",
+    "north-star/csharp/Recovery/Journal.cs",
+    "north-star/csharp/Recovery/Program.cs"
   ],
   "contribution_model": {
     "candidate": "Identified hypothesis; no transfer proof.",
@@ -82,9 +84,9 @@
         "projects/cinderwatch/Core/Journal.cs",
         "evidence/cinderwatch/RELEASE_RUN.json"
       ],
-      "applicability_hypothesis": "Explicit identity/skill choices control actual available verbs and earned-level preparation without silent deletion or resource reset; human comprehension and production compatibility remain hypotheses.",
+      "applicability_hypothesis": "Local continuation preserves existing meaningful choice investment; human comprehension, Windows/Unity integration and future service applicability remain hypotheses.",
       "limits": "New Cinderwatch implementation; not recovered RGSS code. Local session saves do not establish account persistence or server trust.",
-      "next_validation": "Compare authored world-state consequences and durable recovery with remaining incomplete laboratories; execute actual supported Unity/Windows consumers when tooling is available.",
+      "next_validation": "Compare authored narrative/world consequences and remaining incomplete laboratories; validate actual Windows filesystem/Unity integration and explicit migration before account or cloud claims.",
       "destination_consumer_paths": [
         "north-star/csharp/Domain/Progression.cs",
         "north-star/csharp/Crossing/Session.cs",
@@ -92,10 +94,12 @@
         "north-star/csharp/Domain/Loadout.cs",
         "north-star/csharp/Loadout/PreparedExpedition.cs",
         "north-star/csharp/Loadout/Program.cs",
-        "north-star/csharp/Forge/Expedition.cs"
+        "north-star/csharp/Forge/Expedition.cs",
+        "north-star/csharp/Recovery/Journal.cs",
+        "north-star/csharp/Recovery/Program.cs"
       ],
-      "destination_evidence": "evidence/world-loadout/RUN.json",
-      "destination_scope": "Original engine-independent C# earned progression and atomic prepared identity/action slots with source-derived eligibility, independent outfit/approach and real connected encounters; prior progression evidence is retained separately. No full legacy abilities, final canon, Unity/Windows/Steam, persistent account or multiplayer proof."
+      "destination_evidence": "evidence/persistent-expedition/RUN.json",
+      "destination_scope": "Actual prepared expedition preserved by bounded full accepted-command replay, local exclusive file ownership, content-bound receipts and commit-before-publication across Linux process restart/failure. Identity, slots, XP/allocation, supplies and active encounter state recover together. Prior eligibility/progression evidence remains separately retained; no historical format import, account/server, Windows, Unity, Steam or power-loss proof."
     },
     {
       "id": "NS-C03",
@@ -234,7 +238,7 @@
         "P11"
       ],
       "reference_collections": [],
-      "contribution_status": "verified_in_origin",
+      "contribution_status": "adapted",
       "origin_validation": "execution_record_inspected",
       "scope": "Trusted local rooms with SQLite persistence, idempotent send retry, revision/source context, backups and portable read-only copies.",
       "origin_evidence": [
@@ -242,9 +246,16 @@
         "evidence/realtime-chat/ROOMS_RUN.json",
         "evidence/realtime-chat/PORTABLE_RUN.json"
       ],
-      "applicability_hypothesis": "Research whether messaging, durable records and recovery serves a bounded North Star experiment; no consumer or reusable contract exists yet.",
+      "applicability_hypothesis": "Local continuation preserves existing meaningful choice investment; human comprehension, Windows/Unity integration and future service applicability remain hypotheses.",
       "limits": "Chosen labels are not authenticated identities. Chat receipts/SQLite schemas are not authoritative world commands, MMORPG backend, moderation or production-load evidence.",
-      "next_validation": "Define actor identity, command authorization and conflict semantics; test domain-specific persistence/recovery separately from chat."
+      "next_validation": "Compare authored narrative/world consequences and remaining incomplete laboratories; validate actual Windows filesystem/Unity integration and explicit migration before account or cloud claims.",
+      "destination_consumer_paths": [
+        "north-star/csharp/Recovery/Journal.cs",
+        "north-star/csharp/Recovery/Program.cs",
+        "north-star/csharp/Loadout/PreparedExpedition.cs"
+      ],
+      "destination_evidence": "evidence/persistent-expedition/RUN.json",
+      "destination_scope": "Actual prepared expedition preserved by bounded full accepted-command replay, local exclusive file ownership, content-bound receipts and commit-before-publication across Linux process restart/failure. Identity, slots, XP/allocation, supplies and active encounter state recover together. Prior eligibility/progression evidence remains separately retained; no historical format import, account/server, Windows, Unity, Steam or power-loss proof."
     },
     {
       "id": "NS-C09",

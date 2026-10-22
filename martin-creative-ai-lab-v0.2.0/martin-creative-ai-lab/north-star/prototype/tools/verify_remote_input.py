@@ -37,6 +37,28 @@ def wait_window(display, process, log_path, timeout=15):
     raise ValueError('Remote window unavailable after bounded startup: '+log_path.read_text()[-4000:])
 
 
+def input_ready(snapshot):
+    """Transport-live is earlier than neutral rearm; do not poll semantic costs/ranges."""
+    rows = snapshot.get('actions', [])
+    return (snapshot.get('status') == 'live' and bool(snapshot.get('confirmed'))
+            and snapshot.get('focused') is True and snapshot.get('suspended') is False
+            and snapshot.get('quarantined') is False and len(rows) == 3
+            and not any(row.get('caption') in ('LAST CONFIRMED / INPUT BLOCKED',
+                        'CONTROLS SUSPENDED', 'RELEASE TO REARM') for row in rows))
+
+
+def wait_input_ready(capture, timeout=2):
+    deadline = time.monotonic() + timeout
+    latest = capture()
+    while not input_ready(latest) and time.monotonic() < deadline:
+        require(latest.get('status') not in ('error', 'closed', 'terminal'),
+                'Remote failed before neutral input readiness: ' + json.dumps(latest))
+        time.sleep(.03)
+        latest = capture()
+    require(input_ready(latest), 'Remote input not ready after bounded neutral rearm: ' + json.dumps(latest))
+    return latest
+
+
 def preserve_diagnostics(scratch, output):
     destination = output/'failure';destination.mkdir(exist_ok=True)
     # Known native/display logs only, bounded tails; never persist session traffic.
@@ -123,12 +145,9 @@ def verify(output, godot='godot'):
                             tap('Tab');technique = shot('technique')
                             check(technique['preview']['style']=='Riposte' and not technique['confirmed'],delivery+': inspect technique before commitment')
                             tap('Tab')
-                            tap('Return');initial = shot('initial')
-                            ready_until = time.monotonic()+2
-                            while initial['status']=='connecting' and time.monotonic()<ready_until:
-                                time.sleep(.05);initial = shot('initial')
+                            tap('Return');initial = wait_input_ready(lambda: shot('initial'))
                             check(initial['status']=='live' and initial['confirmed']['role']=='Guardian',delivery+': actual Enter starts remote catalog session',initial)
-                            check(initial['actions'][1]['available'] and initial['actions'][1]['cost']==25 and not initial['actions'][2]['available'] and initial['actions'][2]['status']=='range',delivery+': actual window receives paid step and out-of-range counter advice')
+                            check(initial['actions'][1]['available'] and initial['actions'][1]['cost']==25 and not initial['actions'][2]['available'] and initial['actions'][2]['status']=='range',delivery+': actual window receives paid step and out-of-range counter advice',initial)
                             key('d');time.sleep(.25);walking = shot('walking',True);key('d',False)
                             check(walking['confirmed']['player'][0]-initial['confirmed']['player'][0]>30,delivery+': OS movement changes authoritative position')
                             key('space');time.sleep(.7);stepped = shot('step');key('space',False)

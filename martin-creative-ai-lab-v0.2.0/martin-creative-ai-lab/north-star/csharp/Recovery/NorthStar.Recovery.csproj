@@ -1,0 +1,10 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup><OutputType>Exe</OutputType><TargetFramework>net10.0</TargetFramework><Nullable>enable</Nullable><TreatWarningsAsErrors>true</TreatWarningsAsErrors><Deterministic>true</Deterministic></PropertyGroup>
+  <ItemGroup><ProjectReference Include="../Loadout/NorthStar.Loadout.csproj" /></ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="../Domain/*.cs" Link="Rules/Domain/%(Filename)%(Extension)" />
+    <EmbeddedResource Include="../Crossing/Session.cs" Link="Rules/Crossing/Session.cs" />
+    <EmbeddedResource Include="../Forge/Expedition.cs" Link="Rules/Forge/Expedition.cs" />
+    <EmbeddedResource Include="../Loadout/PreparedExpedition.cs" Link="Rules/Loadout/PreparedExpedition.cs" />
+  </ItemGroup>
+</Project>

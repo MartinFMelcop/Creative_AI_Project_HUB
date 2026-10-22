@@ -1,0 +1,109 @@
+{
+  "schema_version": 1,
+  "kind": "instrument_execution",
+  "baseline_commit": "983821cc967d83f00bad7d6df36e791f2aa8a830",
+  "scope": "Bounded structural neutral-rearm readiness before unchanged remote-window semantic assertions",
+  "runtime": "Godot 4.6.3.stable.official.7d41c59c4; Python3.12.14; Linux Xorg dummy/XTest; synthetic OS input",
+  "prior_ci_failure": "https://github.com/MartinFMelcop/Creative_AI_Project_HUB/actions/runs/39727979940/job/119656296031",
+  "checks": {
+    "passed": 6,
+    "failed": 0
+  },
+  "controlled_os_checks": {
+    "passed": 46,
+    "failed": 0
+  },
+  "normal_os_checks": {
+    "passed": 46,
+    "failed": 0
+  },
+  "commands": [
+    {
+      "command": [
+        "python3",
+        "north-star/prototype/tools/test_remote_startup.py"
+      ],
+      "environment": {
+        "CROSSING_GODOT": "godot",
+        "NORTH_STAR_STARTUP_RESULT": "/workspace/work/recovery-continuation/startup-final.json"
+      },
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "python3",
+        "north-star/prototype/tools/verify_remote_input.py",
+        "--godot",
+        "godot",
+        "--output",
+        "/workspace/work/recovery-continuation/remote-normal"
+      ],
+      "exit_code": 0
+    }
+  ],
+  "source_artifacts": [
+    {
+      "local_path": "north-star/prototype/tools/verify_remote_input.py",
+      "size_bytes": 16248,
+      "sha256": "2800bc2dd1c19627e50103136ed3816896446c368de3560aee04f8fdc2afdf3d"
+    },
+    {
+      "local_path": "north-star/prototype/tools/test_remote_startup.py",
+      "size_bytes": 6484,
+      "sha256": "c54399fec564cda7687648a41b89df454813f04d4c5949bc10ef513c856d7bcf"
+    },
+    {
+      "local_path": "north-star/prototype/authority/server.gd",
+      "size_bytes": 12027,
+      "sha256": "c81b440e8e0b7762b1f302c0545656e02e52f755489d63346b4a315d36f83143"
+    },
+    {
+      "local_path": "north-star/prototype/authority/view.gd",
+      "size_bytes": 15114,
+      "sha256": "8998178919a123fe8823f4eec3ad8c44c44d2dae0523eec1ec06515b16db09a1"
+    },
+    {
+      "local_path": "north-star/prototype/authority/remote.gd",
+      "size_bytes": 14442,
+      "sha256": "e76cacab68d9aa52b0490a0f2364854513d9a3e546084ced957ca4745ef75018"
+    },
+    {
+      "local_path": "north-star/prototype/authority/intent.gd",
+      "size_bytes": 2684,
+      "sha256": "1419479da2db30315ce1adaad967d406fc336c712e2ee86d3ff6d15468c91379"
+    },
+    {
+      "local_path": "north-star/prototype/dist/crossing-drill.pck",
+      "size_bytes": 351784,
+      "sha256": "352e47bca2482de7da6dd8818ebf5f3464a5585da93b10dd8a6c164ec70c17e2"
+    }
+  ],
+  "result_artifacts": [
+    {
+      "local_path": "evidence/north-star-startup-rearm/controlled-startup.json",
+      "size_bytes": 115675,
+      "sha256": "dd2992fd6e2474a6ce5c77634b3e19076fd72da0afa2b937566b7f2ce8302832"
+    },
+    {
+      "local_path": "evidence/north-star-startup-rearm/normal.json",
+      "size_bytes": 115117,
+      "sha256": "f79981d66d884169819ff76b31bcb4f66329e952866a7f3be3bbf9d81b047669"
+    },
+    {
+      "local_path": "evidence/north-star-startup-rearm/counterexample.json",
+      "size_bytes": 4654,
+      "sha256": "1863dd040ac9c4509b7010b1d87a5634aac03c4bd5bf3f23d5e0fa7090ad05f8"
+    },
+    {
+      "local_path": "evidence/north-star-startup-rearm/terminal.txt",
+      "size_bytes": 151,
+      "sha256": "056d4c3b2097b6c7dd50a7202893f7ab7d4d6e2c2469611fa9372e7e08039a7d"
+    }
+  ],
+  "limitations": [
+    "The original delayed startup reproduction passed locally; the controlled neutral delay demonstrates a real first-live/rearm race, not a measured historical CI scheduling cause.",
+    "The controlled test stages an instrumented authority script. Its base and executed hashes are explicit in controlled-startup.json; actual game model/window/PCK remain unchanged.",
+    "Readiness checks transport/focus/suspension/rearm only; existing step cost25 and counter range assertions remain strict. A unit control confirms wrong semantic cost999 is not polled away.",
+    "No production networking, WAN, account trust, physical controller, performance or human validation claim."
+  ]
+}

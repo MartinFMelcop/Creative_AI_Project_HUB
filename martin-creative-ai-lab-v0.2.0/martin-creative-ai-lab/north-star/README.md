@@ -73,3 +73,8 @@ not modify the retained Godot delivery or establish a production profession econ
 [Prepared identity/actions](csharp/Loadout/README.md) now composes actual earned slots,
 independent outfit/style and whole-proposal refusal. [World evidence](../evidence/world-loadout/RUN.json)
 separates compiled eligibility from described legacy skills and helper models.
+
+[Local recovery](csharp/Recovery/README.md) preserves the actual C# expedition across
+process exits, with explicit refusal of corrupt/incompatible runs and content-bound
+retry ownership. [Recovery evidence](../evidence/persistent-expedition/RUN.json) is
+separate from account/network, Unity, Windows and physical storage durability claims.

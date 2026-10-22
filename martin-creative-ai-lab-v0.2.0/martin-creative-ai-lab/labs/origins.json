@@ -479,8 +479,8 @@
         "evidence/economy-crafting/results.json"
       ],
       "evidence_sha256": {
-        "evidence/economy-crafting/RUN.json": "67b525682ba5fb01d5534aaabb96912032a08aa2ce41292aa019f7382199bf2d",
-        "evidence/economy-crafting/results.json": "aa970124d6df365b4aeb6f7733067fe2acf9b311c96dfb303dd1fc7cda8d83f1"
+        "evidence/economy-crafting/RUN.json": "077ab8ee106ca0b71de265b15e04c8996d5d6a2cc741792ad5b777df0d95e101",
+        "evidence/economy-crafting/results.json": "00d31083e3ba3b06a5af0f1252e6f27c2575eb2d21d3e8996ddc61dbbc8cf447"
       }
     },
     {
@@ -605,8 +605,8 @@
         "evidence/rpg-progression/results.json"
       ],
       "evidence_sha256": {
-        "evidence/rpg-progression/RUN.json": "9732c39afa60d1664f86a4994598eedd4705cf661c22241e06c81d65c996fbef",
-        "evidence/rpg-progression/results.json": "06147f1395ca3147e6305a4dbfa179ccd98fb384a3b1419e9cfe2f34e9288d6f"
+        "evidence/rpg-progression/RUN.json": "50d2aebd329aa6e8bc26fec6b14b8c3244cefadc54b4088ea936d63181223b48",
+        "evidence/rpg-progression/results.json": "93f505d0157a8cdb544e67bc254b017ec46abbe6ed4dcab12b2b22942ea658ac"
       }
     },
     {
@@ -776,8 +776,8 @@
         "evidence/world-loadout/results.json"
       ],
       "evidence_sha256": {
-        "evidence/world-loadout/RUN.json": "6f8d0c977f87088b6745b2827332d40169e800aa229a13dd3ac59ac71fa3886e",
-        "evidence/world-loadout/results.json": "ded1f605e390cb78925486f63be0e74d3b5f9ae1a525b78152f1de673a226e55"
+        "evidence/world-loadout/RUN.json": "44e4c8606bf94e669f86caa464ba3da02306afac653104e51e88a427a3b38218",
+        "evidence/world-loadout/results.json": "f425a751028eb7a2e76e48d898d87bf4926b6b93a8dc95e4e652c7d0643a2f83"
       }
     },
     {
@@ -786,11 +786,13 @@
       "owner_origin": "P11",
       "owner_role": "Networking & Persistence research lead, coordinated by the HUB maintainer; specialist assignments are per execution",
       "origin_projects": [
-        "P11"
+        "P11",
+        "P05",
+        "P01"
       ],
-      "status": "incomplete",
+      "status": "operational",
       "domain": "Authority, synchronization, idempotency, persistence, networking and recovery",
-      "question": "Can accepted commands survive retry, conflict and recovery without double spending or client ownership?",
+      "question": "Can whole accepted-command replay and commit-before-receipt preserve joint expedition choices and resources across actual local process failures without duplicate spending or silent reset?",
       "source_paths": [
         "projects/realtime-integration-lab/server.cjs",
         "projects/realtime-integration-lab/rooms-server.cjs",
@@ -800,13 +802,36 @@
         "projects/realtime-integration-lab/record-export.cjs",
         "projects/realtime-integration-lab/public",
         "projects/realtime-integration-lab/tests",
-        "projects/realtime-integration-lab/package-lock.json"
+        "projects/realtime-integration-lab/package-lock.json",
+        "projects/realtime-integration-lab/rooms-actions.cjs",
+        "projects/cinderwatch/Core/Journal.cs",
+        "projects/eclipse-fair/Cli/Journal.cs"
       ],
       "source_inventory": "labs/source-inventory.json",
-      "consumer_paths": [],
-      "controls": [],
-      "validity_boundary": "Destination ownership and available sources are established; no operational laboratory method/results or North Star integration is claimed yet. Historical origin execution retains its own narrower scope.",
-      "next_objective": "Adapt actual SQLite/idempotent command/recovery methods to a separately owned domain consumer and injected failure controls."
+      "consumer_paths": [
+        "north-star/csharp/Recovery/Journal.cs",
+        "north-star/csharp/Recovery/Program.cs",
+        "north-star/csharp/Loadout/PreparedExpedition.cs"
+      ],
+      "controls": [
+        "Actual multi-process mid-encounter restart and connected completion",
+        "Three abrupt child exits before write/before replacement/after replacement-before-receipt",
+        "Content-bound duplicate/conflict receipts and exact old/new full-state prefixes",
+        "Corrupt/unsupported/semantically illegal journals preserved on refusal",
+        "Exclusive owner, process death, disposed session and same-owner concurrency controls"
+      ],
+      "validity_boundary": "Static P11/P05/P01 invariant bindings and actual local single-owner Linux C# process/file consumer. No origin runtime/database migration, hostile-save authentication, directory-fsync/power-loss guarantee, distributed ownership, Unity, Windows, Steam or independent human validation.",
+      "next_objective": "Evaluate actual Windows/Unity file/runtime integration and explicit rules migration when tooling is available; compare authored NPC/narrative continuity and remaining incomplete laboratories before expanding local storage into account/network services.",
+      "path": "labs/networking-persistence",
+      "instrument": "labs/networking-persistence/run.py",
+      "evidence": [
+        "evidence/persistent-expedition/RUN.json",
+        "evidence/persistent-expedition/results.json"
+      ],
+      "evidence_sha256": {
+        "evidence/persistent-expedition/RUN.json": "ca3fb229720860b3e35408c84f5e0231b7b0193e11f61df72b077601762c8ae4",
+        "evidence/persistent-expedition/results.json": "c9135f3b961e44811040e89933734781fd274a10f469353a86b49ed2666ce71b"
+      }
     }
   ],
   "allocation": {
@@ -850,7 +875,7 @@
         "evidence/rpg-progression/RUN.json"
       ],
       "evidence_sha256": {
-        "evidence/rpg-progression/RUN.json": "9732c39afa60d1664f86a4994598eedd4705cf661c22241e06c81d65c996fbef"
+        "evidence/rpg-progression/RUN.json": "50d2aebd329aa6e8bc26fec6b14b8c3244cefadc54b4088ea936d63181223b48"
       }
     },
     {
@@ -869,7 +894,7 @@
         "evidence/rpg-progression/results.json"
       ],
       "evidence_sha256": {
-        "evidence/rpg-progression/results.json": "06147f1395ca3147e6305a4dbfa179ccd98fb384a3b1419e9cfe2f34e9288d6f"
+        "evidence/rpg-progression/results.json": "93f505d0157a8cdb544e67bc254b017ec46abbe6ed4dcab12b2b22942ea658ac"
       }
     },
     {
@@ -1046,8 +1071,8 @@
         "projects/realtime-integration-lab/server.cjs",
         "projects/realtime-integration-lab/rooms-server.cjs"
       ],
-      "decision": "Remaining source capabilities in this laboratory domain are available or explicitly scoped gaps; source preservation and origin execution do not count as consumed.",
-      "next_action": "Adapt actual SQLite/idempotent command/recovery methods to a separately owned domain consumer and injected failure controls."
+      "decision": "Local content-bound retries, commit-before-receipt and replay recovery are separately integrated. Remaining P11 messaging, authorization, durable account/server/network/database migration and distributed guarantees remain unresolved.",
+      "next_action": "Specify an actual account/network beneficiary, authority and migration contract before adapting remaining P11 services; preserve current origin data/rights and local recovery limits."
     },
     {
       "id": "XP-COMBAT-STATUS",
@@ -1133,8 +1158,8 @@
         "evidence/economy-crafting/results.json"
       ],
       "evidence_sha256": {
-        "evidence/economy-crafting/RUN.json": "67b525682ba5fb01d5534aaabb96912032a08aa2ce41292aa019f7382199bf2d",
-        "evidence/economy-crafting/results.json": "aa970124d6df365b4aeb6f7733067fe2acf9b311c96dfb303dd1fc7cda8d83f1"
+        "evidence/economy-crafting/RUN.json": "077ab8ee106ca0b71de265b15e04c8996d5d6a2cc741792ad5b777df0d95e101",
+        "evidence/economy-crafting/results.json": "00d31083e3ba3b06a5af0f1252e6f27c2575eb2d21d3e8996ddc61dbbc8cf447"
       }
     },
     {
@@ -1154,8 +1179,8 @@
         "evidence/economy-crafting/results.json"
       ],
       "evidence_sha256": {
-        "evidence/economy-crafting/RUN.json": "67b525682ba5fb01d5534aaabb96912032a08aa2ce41292aa019f7382199bf2d",
-        "evidence/economy-crafting/results.json": "aa970124d6df365b4aeb6f7733067fe2acf9b311c96dfb303dd1fc7cda8d83f1"
+        "evidence/economy-crafting/RUN.json": "077ab8ee106ca0b71de265b15e04c8996d5d6a2cc741792ad5b777df0d95e101",
+        "evidence/economy-crafting/results.json": "00d31083e3ba3b06a5af0f1252e6f27c2575eb2d21d3e8996ddc61dbbc8cf447"
       }
     },
     {
@@ -1185,8 +1210,8 @@
         "evidence/world-loadout/results.json"
       ],
       "evidence_sha256": {
-        "evidence/world-loadout/RUN.json": "6f8d0c977f87088b6745b2827332d40169e800aa229a13dd3ac59ac71fa3886e",
-        "evidence/world-loadout/results.json": "ded1f605e390cb78925486f63be0e74d3b5f9ae1a525b78152f1de673a226e55"
+        "evidence/world-loadout/RUN.json": "44e4c8606bf94e669f86caa464ba3da02306afac653104e51e88a427a3b38218",
+        "evidence/world-loadout/results.json": "f425a751028eb7a2e76e48d898d87bf4926b6b93a8dc95e4e652c7d0643a2f83"
       }
     },
     {
@@ -1206,8 +1231,39 @@
         "evidence/world-loadout/results.json"
       ],
       "evidence_sha256": {
-        "evidence/world-loadout/RUN.json": "6f8d0c977f87088b6745b2827332d40169e800aa229a13dd3ac59ac71fa3886e",
-        "evidence/world-loadout/results.json": "ded1f605e390cb78925486f63be0e74d3b5f9ae1a525b78152f1de673a226e55"
+        "evidence/world-loadout/RUN.json": "44e4c8606bf94e669f86caa464ba3da02306afac653104e51e88a427a3b38218",
+        "evidence/world-loadout/results.json": "f425a751028eb7a2e76e48d898d87bf4926b6b93a8dc95e4e652c7d0643a2f83"
+      }
+    },
+    {
+      "id": "P11-P05-LOCAL-REPLAY-OWNERSHIP",
+      "origin_projects": [
+        "P11",
+        "P05",
+        "P01"
+      ],
+      "laboratory_id": "networking-persistence",
+      "status": "INTEGRATED",
+      "source_paths": [
+        "projects/realtime-integration-lab/rooms-store.cjs",
+        "projects/realtime-integration-lab/rooms-actions.cjs",
+        "projects/realtime-integration-lab/rooms-backup.cjs",
+        "projects/cinderwatch/Core/Journal.cs",
+        "projects/eclipse-fair/Cli/Journal.cs"
+      ],
+      "decision": "Adapt inspected full accepted-command replay, content-bound retry and commit-before-receipt invariants into a real joint expedition file/process consumer. Actual tests cover restart, uncertain writes, lost acknowledgement, exclusive ownership, corrupted input refusal and no-refund costs. No SQLite provider, full historical format, hostile-save trust or network account transfer is claimed.",
+      "consumer_paths": [
+        "north-star/csharp/Recovery/Journal.cs",
+        "north-star/csharp/Recovery/Program.cs",
+        "north-star/csharp/Loadout/PreparedExpedition.cs"
+      ],
+      "evidence": [
+        "evidence/persistent-expedition/RUN.json",
+        "evidence/persistent-expedition/results.json"
+      ],
+      "evidence_sha256": {
+        "evidence/persistent-expedition/RUN.json": "ca3fb229720860b3e35408c84f5e0231b7b0193e11f61df72b077601762c8ae4",
+        "evidence/persistent-expedition/results.json": "c9135f3b961e44811040e89933734781fd274a10f469353a86b49ed2666ce71b"
       }
     }
   ]

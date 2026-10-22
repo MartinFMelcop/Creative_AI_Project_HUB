@@ -1,0 +1,4274 @@
+{
+  "checks": {
+    "failed": 0,
+    "passed": 46
+  },
+  "controls": [
+    "source: rendered input-ready window precedes authority startup",
+    "source: server catalog precedes committed session",
+    "source: inspect actual outfit trade-off riveted",
+    "source: inspect actual outfit trade-off trail",
+    "source: inspect actual outfit trade-off field_sash",
+    "source: inspect actual outfit trade-off standard",
+    "source: inspect technique before commitment",
+    "source: actual Enter starts remote catalog session",
+    "source: actual window receives paid step and out-of-range counter advice",
+    "source: OS movement changes authoritative position",
+    "source: held step spends once in actual model",
+    "source: OS guard reaches server",
+    "source: authoritative guard advice retains drain/contact cost and blocks counter",
+    "source: suspension neutralizes while server time advances",
+    "source: suspended window masks ready advice",
+    "source: resume cannot rearm held guard",
+    "source: release and fresh press rearm",
+    "source: actual focus loss neutralizes without world pause",
+    "source: release outside focus permits neutral explicit resume",
+    "source: fresh input works after outside-window release",
+    "source: disconnect freezes confirmed presentation",
+    "source: disconnected window masks ready advice",
+    "source: explicit close exits cleanly",
+    "pack: rendered input-ready window precedes authority startup",
+    "pack: server catalog precedes committed session",
+    "pack: inspect actual outfit trade-off riveted",
+    "pack: inspect actual outfit trade-off trail",
+    "pack: inspect actual outfit trade-off field_sash",
+    "pack: inspect actual outfit trade-off standard",
+    "pack: inspect technique before commitment",
+    "pack: actual Enter starts remote catalog session",
+    "pack: actual window receives paid step and out-of-range counter advice",
+    "pack: OS movement changes authoritative position",
+    "pack: held step spends once in actual model",
+    "pack: OS guard reaches server",
+    "pack: authoritative guard advice retains drain/contact cost and blocks counter",
+    "pack: suspension neutralizes while server time advances",
+    "pack: suspended window masks ready advice",
+    "pack: resume cannot rearm held guard",
+    "pack: release and fresh press rearm",
+    "pack: actual focus loss neutralizes without world pause",
+    "pack: release outside focus permits neutral explicit resume",
+    "pack: fresh input works after outside-window release",
+    "pack: disconnect freezes confirmed presentation",
+    "pack: disconnected window masks ready advice",
+    "pack: explicit close exits cleanly"
+  ],
+  "identities": {
+    "authority/intent.gd": "1419479da2db30315ce1adaad967d406fc336c712e2ee86d3ff6d15468c91379",
+    "authority/play.gd": "7a0169cd9b9bab04901ad840e6893eec6ad81193f53849995df435727851d9ce",
+    "authority/remote.gd": "e76cacab68d9aa52b0490a0f2364854513d9a3e546084ced957ca4745ef75018",
+    "authority/server.gd": "c81b440e8e0b7762b1f302c0545656e02e52f755489d63346b4a315d36f83143",
+    "authority/view.gd": "8998178919a123fe8823f4eec3ad8c44c44d2dae0523eec1ec06515b16db09a1",
+    "dist/crossing-drill.pck": "352e47bca2482de7da6dd8818ebf5f3464a5585da93b10dd8a6c164ec70c17e2",
+    "tools/verify_authority.py": "4faa7575b7f5ab591510152fea0f0bba087988d111b7d9bbd99e8a8fd06fe3d5",
+    "tools/verify_remote_input.py": "2800bc2dd1c19627e50103136ed3816896446c368de3560aee04f8fdc2afdf3d"
+  },
+  "kind": "synthetic_os_input",
+  "observations": {
+    "pack": {
+      "catalog": {
+        "actions": [],
+        "age": 0.0,
+        "capture": 2,
+        "catalog": {
+          "kind": "catalog",
+          "outfits": [
+            {
+              "health": 5.0,
+              "id": "standard",
+              "movement": 1.0,
+              "name": "Standard clothing",
+              "recovery": 18.0
+            },
+            {
+              "health": 6.0,
+              "id": "riveted",
+              "movement": 0.8,
+              "name": "Riveted coat",
+              "recovery": 18.0
+            },
+            {
+              "health": 4.0,
+              "id": "trail",
+              "movement": 1.2,
+              "name": "Trail wrap",
+              "recovery": 18.0
+            },
+            {
+              "health": 4.0,
+              "id": "field_sash",
+              "movement": 1.0,
+              "name": "Field sash",
+              "recovery": 26.0
+            }
+          ],
+          "techniques": {
+            "Duelist": [
+              {
+                "id": "none",
+                "summary": "Draw a bolt, leave its locked line; guard is unavailable."
+              }
+            ],
+            "Guardian": [
+              {
+                "id": "Steady",
+                "summary": "Sustained frontal guard; standard counter opening."
+              },
+              {
+                "id": "Riposte",
+                "summary": "Guard expires while held; a timed block earns a longer opening."
+              }
+            ]
+          },
+          "v": 1.0
+        },
+        "confirmed": {},
+        "courier_position": [
+          0.0,
+          0.0
+        ],
+        "focused": true,
+        "position": [
+          0.0,
+          0.0
+        ],
+        "preview": {
+          "health": 5.0,
+          "id": "standard",
+          "movement": 1.0,
+          "name": "Standard clothing",
+          "recovery": 18.0,
+          "role": "Guardian",
+          "style": "Steady",
+          "summary": "Sustained frontal guard; standard counter opening."
+        },
+        "quarantined": false,
+        "reason": "Compare server values, then Enter to commit.",
+        "status": "preparing",
+        "suspended": false
+      },
+      "closed": {
+        "actions": [
+          {
+            "available": false,
+            "caption": "LAST CONFIRMED / INPUT BLOCKED",
+            "cost": 22.0,
+            "drain": 12.0,
+            "key": "technique",
+            "status": "ground",
+            "wait": 0.0
+          },
+          {
+            "available": false,
+            "caption": "LAST CONFIRMED / INPUT BLOCKED",
+            "cost": 25.0,
+            "drain": 0.0,
+            "key": "step",
+            "status": "ready",
+            "wait": 0.0
+          },
+          {
+            "available": false,
+            "caption": "LAST CONFIRMED / INPUT BLOCKED",
+            "cost": 12.0,
+            "drain": 0.0,
+            "key": "counter",
+            "status": "armored",
+            "wait": 0.0
+          }
+        ],
+        "age": 0.0222222222222222,
+        "capture": 18,
+        "catalog": {
+          "kind": "catalog",
+          "outfits": [
+            {
+              "health": 5.0,
+              "id": "standard",
+              "movement": 1.0,
+              "name": "Standard clothing",
+              "recovery": 18.0
+            },
+            {
+              "health": 6.0,
+              "id": "riveted",
+              "movement": 0.8,
+              "name": "Riveted coat",
+              "recovery": 18.0
+            },
+            {
+              "health": 4.0,
+              "id": "trail",
+              "movement": 1.2,
+              "name": "Trail wrap",
+              "recovery": 18.0
+            },
+            {
+              "health": 4.0,
+              "id": "field_sash",
+              "movement": 1.0,
+              "name": "Field sash",
+              "recovery": 26.0
+            }
+          ],
+          "techniques": {
+            "Duelist": [
+              {
+                "id": "none",
+                "summary": "Draw a bolt, leave its locked line; guard is unavailable."
+              }
+            ],
+            "Guardian": [
+              {
+                "id": "Steady",
+                "summary": "Sustained frontal guard; standard counter opening."
+              },
+              {
+                "id": "Riposte",
+                "summary": "Guard expires while held; a timed block earns a longer opening."
+              }
+            ]
+          },
+          "v": 1.0
+        },
+        "confirmed": {
+          "actions": {
+            "counter": {
+              "cost": 12.0,
+              "drain": 0.0,
+              "status": "armored",
+              "wait": 0.0
+            },
+            "counter_radius": 130.0,
+            "draw_radius": 340.0,
+            "step": {
+              "cost": 25.0,
+              "drain": 0.0,
+              "status": "ready",
+              "wait": 0.0
+            },
+            "technique": {
+              "cost": 22.0,
+              "drain": 12.0,
+              "status": "ground",
+              "wait": 0.0
+            }
+          },
+          "cargo": 2.0,
+          "clock": 0.700000000000001,
+          "counters": {
+            "blocks": 0.0,
+            "counters": 0.0,
+            "courier_hits": 1.0,
+            "dodges": 1.0,
+            "player_hits": 1.0,
+            "redirects": 0.0,
+            "rejected": 0.0
+          },
+          "courier": [
+            388.200836181641,
+            390.0
+          ],
+          "courier_speed": 28.0,
+          "courier_x": 388.201,
+          "enemy_focus": 3.0,
+          "energy": 100.0,
+          "facing": [
+            1.0,
+            0.0
+          ],
+          "feint_cooldown": 0.0,
+          "guard": false,
+          "guard_state": "DOWN",
+          "guard_style": "Steady",
+          "health_limit": 5.0,
+          "hp": 4.0,
+          "last_impact": {
+            "code": "courier_first_contact",
+            "explanation": "The courier was the first body on the locked bolt line.",
+            "tip": "Move between sentinel and courier. Face the sentinel and hold K."
+          },
+          "locked_face": [
+            1.0,
+            0.0
+          ],
+          "message": "PULSE: walk or step out of the red circle. Shield cannot stop the ground.",
+          "mode": "play",
+          "opening": 0.0,
+          "phase": "pulse",
+          "player": [
+            801.833801269531,
+            390.0
+          ],
+          "preparation": {
+            "health": 5.0,
+            "movement": 1.0,
+            "outfit": "standard",
+            "recovery": 18.0,
+            "role": "Guardian",
+            "style": "Steady"
+          },
+          "pulse": [
+            801.833801269531,
+            390.0
+          ],
+          "redirected": false,
+          "role": "Guardian",
+          "step_cooldown": 0.0,
+          "step_dir": [
+            1.0,
+            0.0
+          ],
+          "step_left": 0.0,
+          "strike_cooldown": 0.0,
+          "target": [
+            317.732452392578,
+            390.0
+          ],
+          "tick": 489.0
+        },
+        "courier_position": [
+          387.423034667969,
+          390.0
+        ],
+        "focused": true,
+        "position": [
+          801.833801269531,
+          390.0
+        ],
+        "preview": {
+          "health": 5.0,
+          "id": "standard",
+          "movement": 1.0,
+          "name": "Standard clothing",
+          "recovery": 18.0,
+          "role": "Guardian",
+          "style": "Steady",
+          "summary": "Sustained frontal guard; standard counter opening."
+        },
+        "quarantined": true,
+        "reason": "Authority disconnected. The world cannot be simulated locally.",
+        "status": "error",
+        "suspended": true
+      },
+      "focus": {
+        "actions": [
+          {
+            "available": false,
+            "caption": "CONTROLS SUSPENDED",
+            "cost": 22.0,
+            "drain": 12.0,
+            "key": "technique",
+            "status": "hold",
+            "wait": 0.0
+          },
+          {
+            "available": false,
+            "caption": "CONTROLS SUSPENDED",
+            "cost": 25.0,
+            "drain": 0.0,
+            "key": "step",
+            "status": "ready",
+            "wait": 0.0
+          },
+          {
+            "available": false,
+            "caption": "CONTROLS SUSPENDED",
+            "cost": 12.0,
+            "drain": 0.0,
+            "key": "counter",
+            "status": "armored",
+            "wait": 0.0
+          }
+        ],
+        "age": 0.02,
+        "capture": 15,
+        "catalog": {
+          "kind": "catalog",
+          "outfits": [
+            {
+              "health": 5.0,
+              "id": "standard",
+              "movement": 1.0,
+              "name": "Standard clothing",
+              "recovery": 18.0
+            },
+            {
+              "health": 6.0,
+              "id": "riveted",
+              "movement": 0.8,
+              "name": "Riveted coat",
+              "recovery": 18.0
+            },
+            {
+              "health": 4.0,
+              "id": "trail",
+              "movement": 1.2,
+              "name": "Trail wrap",
+              "recovery": 18.0
+            },
+            {
+              "health": 4.0,
+              "id": "field_sash",
+              "movement": 1.0,
+              "name": "Field sash",
+              "recovery": 26.0
+            }
+          ],
+          "techniques": {
+            "Duelist": [
+              {
+                "id": "none",
+                "summary": "Draw a bolt, leave its locked line; guard is unavailable."
+              }
+            ],
+            "Guardian": [
+              {
+                "id": "Steady",
+                "summary": "Sustained frontal guard; standard counter opening."
+              },
+              {
+                "id": "Riposte",
+                "summary": "Guard expires while held; a timed block earns a longer opening."
+              }
+            ]
+          },
+          "v": 1.0
+        },
+        "confirmed": {
+          "actions": {
+            "counter": {
+              "cost": 12.0,
+              "drain": 0.0,
+              "status": "armored",
+              "wait": 0.0
+            },
+            "counter_radius": 130.0,
+            "draw_radius": 340.0,
+            "step": {
+              "cost": 25.0,
+              "drain": 0.0,
+              "status": "ready",
+              "wait": 0.0
+            },
+            "technique": {
+              "cost": 22.0,
+              "drain": 12.0,
+              "status": "hold",
+              "wait": 0.0
+            }
+          },
+          "cargo": 3.0,
+          "clock": 0.833333333333334,
+          "counters": {
+            "blocks": 0.0,
+            "counters": 0.0,
+            "courier_hits": 0.0,
+            "dodges": 1.0,
+            "player_hits": 0.0,
+            "redirects": 0.0,
+            "rejected": 0.0
+          },
+          "courier": [
+            234.198867797852,
+            390.0
+          ],
+          "courier_speed": 28.0,
+          "courier_x": 234.199,
+          "enemy_focus": 3.0,
+          "energy": 97.8,
+          "facing": [
+            1.0,
+            0.0
+          ],
+          "feint_cooldown": 0.0,
+          "guard": false,
+          "guard_state": "DOWN",
+          "guard_style": "Steady",
+          "health_limit": 5.0,
+          "hp": 5.0,
+          "last_impact": {},
+          "locked_face": [
+            1.0,
+            0.0
+          ],
+          "message": "BOLT: intercept facing the sentinel, or draw its aim with a feint.",
+          "mode": "play",
+          "opening": 0.0,
+          "phase": "bolt",
+          "player": [
+            739.33349609375,
+            390.0
+          ],
+          "preparation": {
+            "health": 5.0,
+            "movement": 1.0,
+            "outfit": "standard",
+            "recovery": 18.0,
+            "role": "Guardian",
+            "style": "Steady"
+          },
+          "pulse": [
+            0.0,
+            0.0
+          ],
+          "redirected": false,
+          "role": "Guardian",
+          "step_cooldown": 0.0,
+          "step_dir": [
+            1.0,
+            0.0
+          ],
+          "step_left": 0.0,
+          "strike_cooldown": 0.0,
+          "target": [
+            238.86589050293,
+            390.0
+          ],
+          "tick": 159.0
+        },
+        "courier_position": [
+          233.35888671875,
+          390.0
+        ],
+        "focused": true,
+        "position": [
+          739.33349609375,
+          390.0
+        ],
+        "preview": {
+          "health": 5.0,
+          "id": "standard",
+          "movement": 1.0,
+          "name": "Standard clothing",
+          "recovery": 18.0,
+          "role": "Guardian",
+          "style": "Steady",
+          "summary": "Sustained frontal guard; standard counter opening."
+        },
+        "quarantined": true,
+        "reason": "Server-confirmed world; presentation interpolation only.",
+        "status": "live",
+        "suspended": true
+      },
+      "focus_moved": {
+        "actions": [
+          {
+            "available": false,
+            "caption": "HOLD; FACE THE BOLT",
+            "cost": 22.0,
+            "drain": 12.0,
+            "key": "technique",
+            "status": "hold",
+            "wait": 0.0
+          },
+          {
+            "available": true,
+            "caption": "READY AT SNAPSHOT",
+            "cost": 25.0,
+            "drain": 0.0,
+            "key": "step",
+            "status": "ready",
+            "wait": 0.0
+          },
+          {
+            "available": false,
+            "caption": "WAIT FOR OPEN",
+            "cost": 12.0,
+            "drain": 0.0,
+            "key": "counter",
+            "status": "armored",
+            "wait": 0.0
+          }
+        ],
+        "age": 0.0,
+        "capture": 17,
+        "catalog": {
+          "kind": "catalog",
+          "outfits": [
+            {
+              "health": 5.0,
+              "id": "standard",
+              "movement": 1.0,
+              "name": "Standard clothing",
+              "recovery": 18.0
+            },
+            {
+              "health": 6.0,
+              "id": "riveted",
+              "movement": 0.8,
+              "name": "Riveted coat",
+              "recovery": 18.0
+            },
+            {
+              "health": 4.0,
+              "id": "trail",
+              "movement": 1.2,
+              "name": "Trail wrap",
+              "recovery": 18.0
+            },
+            {
+              "health": 4.0,
+              "id": "field_sash",
+              "movement": 1.0,
+              "name": "Field sash",
+              "recovery": 26.0
+            }
+          ],
+          "techniques": {
+            "Duelist": [
+              {
+                "id": "none",
+                "summary": "Draw a bolt, leave its locked line; guard is unavailable."
+              }
+            ],
+            "Guardian": [
+              {
+                "id": "Steady",
+                "summary": "Sustained frontal guard; standard counter opening."
+              },
+              {
+                "id": "Riposte",
+                "summary": "Guard expires while held; a timed block earns a longer opening."
+              }
+            ]
+          },
+          "v": 1.0
+        },
+        "confirmed": {
+          "actions": {
+            "counter": {
+              "cost": 12.0,
+              "drain": 0.0,
+              "status": "armored",
+              "wait": 0.0
+            },
+            "counter_radius": 130.0,
+            "draw_radius": 340.0,
+            "step": {
+              "cost": 25.0,
+              "drain": 0.0,
+              "status": "ready",
+              "wait": 0.0
+            },
+            "technique": {
+              "cost": 22.0,
+              "drain": 12.0,
+              "status": "hold",
+              "wait": 0.0
+            }
+          },
+          "cargo": 3.0,
+          "clock": 0.333333333333333,
+          "counters": {
+            "blocks": 0.0,
+            "counters": 0.0,
+            "courier_hits": 0.0,
+            "dodges": 1.0,
+            "player_hits": 1.0,
+            "redirects": 0.0,
+            "rejected": 0.0
+          },
+          "courier": [
+            248.198654174805,
+            390.0
+          ],
+          "courier_speed": 28.0,
+          "courier_x": 248.199,
+          "enemy_focus": 3.0,
+          "energy": 100.0,
+          "facing": [
+            1.0,
+            0.0
+          ],
+          "feint_cooldown": 0.0,
+          "guard": false,
+          "guard_state": "DOWN",
+          "guard_style": "Steady",
+          "health_limit": 5.0,
+          "hp": 4.0,
+          "last_impact": {
+            "code": "guard_not_held",
+            "explanation": "The bolt hit you without an active guard.",
+            "tip": "Face the sentinel and hold K before impact."
+          },
+          "locked_face": [
+            1.0,
+            0.0
+          ],
+          "message": "You intercepted the bolt without a live frontal guard.",
+          "mode": "play",
+          "opening": 0.0,
+          "phase": "rest",
+          "player": [
+            768.500305175781,
+            390.0
+          ],
+          "preparation": {
+            "health": 5.0,
+            "movement": 1.0,
+            "outfit": "standard",
+            "recovery": 18.0,
+            "role": "Guardian",
+            "style": "Steady"
+          },
+          "pulse": [
+            0.0,
+            0.0
+          ],
+          "redirected": false,
+          "role": "Guardian",
+          "step_cooldown": 0.0,
+          "step_dir": [
+            1.0,
+            0.0
+          ],
+          "step_left": 0.0,
+          "strike_cooldown": 0.0,
+          "target": [
+            238.86589050293,
+            390.0
+          ],
+          "tick": 189.0
+        },
+        "courier_position": [
+          246.798675537109,
+          390.0
+        ],
+        "focused": true,
+        "position": [
+          756.000244140625,
+          390.0
+        ],
+        "preview": {
+          "health": 5.0,
+          "id": "standard",
+          "movement": 1.0,
+          "name": "Standard clothing",
+          "recovery": 18.0,
+          "role": "Guardian",
+          "style": "Steady",
+          "summary": "Sustained frontal guard; standard counter opening."
+        },
+        "quarantined": false,
+        "reason": "Server-confirmed world; presentation interpolation only.",
+        "status": "live",
+        "suspended": false
+      },
+      "focus_resumed": {
+        "actions": [
+          {
+            "available": false,
+            "caption": "HOLD; FACE THE BOLT",
+            "cost": 22.0,
+            "drain": 12.0,
+            "key": "technique",
+            "status": "hold",
+            "wait": 0.0
+          },
+          {
+            "available": true,
+            "caption": "READY AT SNAPSHOT",
+            "cost": 25.0,
+            "drain": 0.0,
+            "key": "step",
+            "status": "ready",
+            "wait": 0.0
+          },
+          {
+            "available": false,
+            "caption": "WAIT FOR OPEN",
+            "cost": 12.0,
+            "drain": 0.0,
+            "key": "counter",
+            "status": "armored",
+            "wait": 0.0
+          }
+        ],
+        "age": 0.0194444444444444,
+        "capture": 16,
+        "catalog": {
+          "kind": "catalog",
+          "outfits": [
+            {
+              "health": 5.0,
+              "id": "standard",
+              "movement": 1.0,
+              "name": "Standard clothing",
+              "recovery": 18.0
+            },
+            {
+              "health": 6.0,
+              "id": "riveted",
+              "movement": 0.8,
+              "name": "Riveted coat",
+              "recovery": 18.0
+            },
+            {
+              "health": 4.0,
+              "id": "trail",
+              "movement": 1.2,
+              "name": "Trail wrap",
+              "recovery": 18.0
+            },
+            {
+              "health": 4.0,
+              "id": "field_sash",
+              "movement": 1.0,
+              "name": "Field sash",
+              "recovery": 26.0
+            }
+          ],
+          "techniques": {
+            "Duelist": [
+              {
+                "id": "none",
+                "summary": "Draw a bolt, leave its locked line; guard is unavailable."
+              }
+            ],
+            "Guardian": [
+              {
+                "id": "Steady",
+                "summary": "Sustained frontal guard; standard counter opening."
+              },
+              {
+                "id": "Riposte",
+                "summary": "Guard expires while held; a timed block earns a longer opening."
+              }
+            ]
+          },
+          "v": 1.0
+        },
+        "confirmed": {
+          "actions": {
+            "counter": {
+              "cost": 12.0,
+              "drain": 0.0,
+              "status": "armored",
+              "wait": 0.0
+            },
+            "counter_radius": 130.0,
+            "draw_radius": 340.0,
+            "step": {
+              "cost": 25.0,
+              "drain": 0.0,
+              "status": "ready",
+              "wait": 0.0
+            },
+            "technique": {
+              "cost": 22.0,
+              "drain": 12.0,
+              "status": "hold",
+              "wait": 0.0
+            }
+          },
+          "cargo": 3.0,
+          "clock": 0.0833333333333333,
+          "counters": {
+            "blocks": 0.0,
+            "counters": 0.0,
+            "courier_hits": 0.0,
+            "dodges": 1.0,
+            "player_hits": 1.0,
+            "redirects": 0.0,
+            "rejected": 0.0
+          },
+          "courier": [
+            241.198760986328,
+            390.0
+          ],
+          "courier_speed": 28.0,
+          "courier_x": 241.199,
+          "enemy_focus": 3.0,
+          "energy": 100.0,
+          "facing": [
+            1.0,
+            0.0
+          ],
+          "feint_cooldown": 0.0,
+          "guard": false,
+          "guard_state": "DOWN",
+          "guard_style": "Steady",
+          "health_limit": 5.0,
+          "hp": 4.0,
+          "last_impact": {
+            "code": "guard_not_held",
+            "explanation": "The bolt hit you without an active guard.",
+            "tip": "Face the sentinel and hold K before impact."
+          },
+          "locked_face": [
+            1.0,
+            0.0
+          ],
+          "message": "You intercepted the bolt without a live frontal guard.",
+          "mode": "play",
+          "opening": 0.0,
+          "phase": "rest",
+          "player": [
+            739.33349609375,
+            390.0
+          ],
+          "preparation": {
+            "health": 5.0,
+            "movement": 1.0,
+            "outfit": "standard",
+            "recovery": 18.0,
+            "role": "Guardian",
+            "style": "Steady"
+          },
+          "pulse": [
+            0.0,
+            0.0
+          ],
+          "redirected": false,
+          "role": "Guardian",
+          "step_cooldown": 0.0,
+          "step_dir": [
+            1.0,
+            0.0
+          ],
+          "step_left": 0.0,
+          "strike_cooldown": 0.0,
+          "target": [
+            238.86589050293,
+            390.0
+          ],
+          "tick": 174.0
+        },
+        "courier_position": [
+          240.343215942383,
+          390.0
+        ],
+        "focused": true,
+        "position": [
+          739.33349609375,
+          390.0
+        ],
+        "preview": {
+          "health": 5.0,
+          "id": "standard",
+          "movement": 1.0,
+          "name": "Standard clothing",
+          "recovery": 18.0,
+          "role": "Guardian",
+          "style": "Steady",
+          "summary": "Sustained frontal guard; standard counter opening."
+        },
+        "quarantined": false,
+        "reason": "Server-confirmed world; presentation interpolation only.",
+        "status": "live",
+        "suspended": false
+      },
+      "held": {
+        "actions": [
+          {
+            "available": false,
+            "caption": "RELEASE TO REARM",
+            "cost": 22.0,
+            "drain": 12.0,
+            "key": "technique",
+            "status": "hold",
+            "wait": 0.0
+          },
+          {
+            "available": false,
+            "caption": "RELEASE TO REARM",
+            "cost": 25.0,
+            "drain": 0.0,
+            "key": "step",
+            "status": "ready",
+            "wait": 0.0
+          },
+          {
+            "available": false,
+            "caption": "RELEASE TO REARM",
+            "cost": 12.0,
+            "drain": 0.0,
+            "key": "counter",
+            "status": "armored",
+            "wait": 0.0
+          }
+        ],
+        "age": 0.019047619047619,
+        "capture": 13,
+        "catalog": {
+          "kind": "catalog",
+          "outfits": [
+            {
+              "health": 5.0,
+              "id": "standard",
+              "movement": 1.0,
+              "name": "Standard clothing",
+              "recovery": 18.0
+            },
+            {
+              "health": 6.0,
+              "id": "riveted",
+              "movement": 0.8,
+              "name": "Riveted coat",
+              "recovery": 18.0
+            },
+            {
+              "health": 4.0,
+              "id": "trail",
+              "movement": 1.2,
+              "name": "Trail wrap",
+              "recovery": 18.0
+            },
+            {
+              "health": 4.0,
+              "id": "field_sash",
+              "movement": 1.0,
+              "name": "Field sash",
+              "recovery": 26.0
+            }
+          ],
+          "techniques": {
+            "Duelist": [
+              {
+                "id": "none",
+                "summary": "Draw a bolt, leave its locked line; guard is unavailable."
+              }
+            ],
+            "Guardian": [
+              {
+                "id": "Steady",
+                "summary": "Sustained frontal guard; standard counter opening."
+              },
+              {
+                "id": "Riposte",
+                "summary": "Guard expires while held; a timed block earns a longer opening."
+              }
+            ]
+          },
+          "v": 1.0
+        },
+        "confirmed": {
+          "actions": {
+            "counter": {
+              "cost": 12.0,
+              "drain": 0.0,
+              "status": "armored",
+              "wait": 0.0
+            },
+            "counter_radius": 130.0,
+            "draw_radius": 340.0,
+            "step": {
+              "cost": 25.0,
+              "drain": 0.0,
+              "status": "ready",
+              "wait": 0.0
+            },
+            "technique": {
+              "cost": 22.0,
+              "drain": 12.0,
+              "status": "hold",
+              "wait": 0.0
+            }
+          },
+          "cargo": 3.0,
+          "clock": 0.0833333333333333,
+          "counters": {
+            "blocks": 0.0,
+            "counters": 0.0,
+            "courier_hits": 0.0,
+            "dodges": 1.0,
+            "player_hits": 0.0,
+            "redirects": 0.0,
+            "rejected": 0.0
+          },
+          "courier": [
+            213.199188232422,
+            390.0
+          ],
+          "courier_speed": 28.0,
+          "courier_x": 213.199,
+          "enemy_focus": 3.0,
+          "energy": 92.8,
+          "facing": [
+            1.0,
+            0.0
+          ],
+          "feint_cooldown": 0.0,
+          "guard": false,
+          "guard_state": "DOWN",
+          "guard_style": "Steady",
+          "health_limit": 5.0,
+          "hp": 5.0,
+          "last_impact": {},
+          "locked_face": [
+            1.0,
+            0.0
+          ],
+          "message": "BOLT: intercept facing the sentinel, or draw its aim with a feint.",
+          "mode": "play",
+          "opening": 0.0,
+          "phase": "bolt",
+          "player": [
+            739.33349609375,
+            390.0
+          ],
+          "preparation": {
+            "health": 5.0,
+            "movement": 1.0,
+            "outfit": "standard",
+            "recovery": 18.0,
+            "role": "Guardian",
+            "style": "Steady"
+          },
+          "pulse": [
+            0.0,
+            0.0
+          ],
+          "redirected": false,
+          "role": "Guardian",
+          "step_cooldown": 0.0,
+          "step_dir": [
+            1.0,
+            0.0
+          ],
+          "step_left": 0.0,
+          "strike_cooldown": 0.0,
+          "target": [
+            238.86589050293,
+            390.0
+          ],
+          "tick": 114.0
+        },
+        "courier_position": [
+          212.332534790039,
+          390.0
+        ],
+        "focused": true,
+        "position": [
+          739.33349609375,
+          390.0
+        ],
+        "preview": {
+          "health": 5.0,
+          "id": "standard",
+          "movement": 1.0,
+          "name": "Standard clothing",
+          "recovery": 18.0,
+          "role": "Guardian",
+          "style": "Steady",
+          "summary": "Sustained frontal guard; standard counter opening."
+        },
+        "quarantined": true,
+        "reason": "Server-confirmed world; presentation interpolation only.",
+        "status": "live",
+        "suspended": false
+      },
+      "initial": {
+        "actions": [
+          {
+            "available": false,
+            "caption": "HOLD; FACE THE BOLT",
+            "cost": 22.0,
+            "drain": 12.0,
+            "key": "technique",
+            "status": "hold",
+            "wait": 0.0
+          },
+          {
+            "available": true,
+            "caption": "READY AT SNAPSHOT",
+            "cost": 25.0,
+            "drain": 0.0,
+            "key": "step",
+            "status": "ready",
+            "wait": 0.0
+          },
+          {
+            "available": false,
+            "caption": "MOVE INTO RANGE",
+            "cost": 12.0,
+            "drain": 0.0,
+            "key": "counter",
+            "status": "range",
+            "wait": 0.0
+          }
+        ],
+        "age": 0.0249751111111111,
+        "capture": 8,
+        "catalog": {
+          "kind": "catalog",
+          "outfits": [
+            {
+              "health": 5.0,
+              "id": "standard",
+              "movement": 1.0,
+              "name": "Standard clothing",
+              "recovery": 18.0
+            },
+            {
+              "health": 6.0,
+              "id": "riveted",
+              "movement": 0.8,
+              "name": "Riveted coat",
+              "recovery": 18.0
+            },
+            {
+              "health": 4.0,
+              "id": "trail",
+              "movement": 1.2,
+              "name": "Trail wrap",
+              "recovery": 18.0
+            },
+            {
+              "health": 4.0,
+              "id": "field_sash",
+              "movement": 1.0,
+              "name": "Field sash",
+              "recovery": 26.0
+            }
+          ],
+          "techniques": {
+            "Duelist": [
+              {
+                "id": "none",
+                "summary": "Draw a bolt, leave its locked line; guard is unavailable."
+              }
+            ],
+            "Guardian": [
+              {
+                "id": "Steady",
+                "summary": "Sustained frontal guard; standard counter opening."
+              },
+              {
+                "id": "Riposte",
+                "summary": "Guard expires while held; a timed block earns a longer opening."
+              }
+            ]
+          },
+          "v": 1.0
+        },
+        "confirmed": {
+          "actions": {
+            "counter": {
+              "cost": 12.0,
+              "drain": 0.0,
+              "status": "range",
+              "wait": 0.0
+            },
+            "counter_radius": 130.0,
+            "draw_radius": 340.0,
+            "step": {
+              "cost": 25.0,
+              "drain": 0.0,
+              "status": "ready",
+              "wait": 0.0
+            },
+            "technique": {
+              "cost": 22.0,
+              "drain": 12.0,
+              "status": "hold",
+              "wait": 0.0
+            }
+          },
+          "cargo": 3.0,
+          "clock": 0.05,
+          "counters": {
+            "blocks": 0.0,
+            "counters": 0.0,
+            "courier_hits": 0.0,
+            "dodges": 0.0,
+            "player_hits": 0.0,
+            "redirects": 0.0,
+            "rejected": 0.0
+          },
+          "courier": [
+            161.399978637695,
+            390.0
+          ],
+          "courier_speed": 28.0,
+          "courier_x": 161.4,
+          "enemy_focus": 3.0,
+          "energy": 100.0,
+          "facing": [
+            1.0,
+            0.0
+          ],
+          "feint_cooldown": 0.0,
+          "guard": false,
+          "guard_state": "DOWN",
+          "guard_style": "Steady",
+          "health_limit": 5.0,
+          "hp": 5.0,
+          "last_impact": {},
+          "locked_face": [
+            1.0,
+            0.0
+          ],
+          "message": "Keep the courier alive until the far gate. Read the first amber line.",
+          "mode": "play",
+          "opening": 0.0,
+          "phase": "rest",
+          "player": [
+            550.0,
+            390.0
+          ],
+          "preparation": {
+            "health": 5.0,
+            "movement": 1.0,
+            "outfit": "standard",
+            "recovery": 18.0,
+            "role": "Guardian",
+            "style": "Steady"
+          },
+          "pulse": [
+            0.0,
+            0.0
+          ],
+          "redirected": false,
+          "role": "Guardian",
+          "step_cooldown": 0.0,
+          "step_dir": [
+            0.0,
+            0.0
+          ],
+          "step_left": 0.0,
+          "strike_cooldown": 0.0,
+          "target": [
+            0.0,
+            0.0
+          ],
+          "tick": 3.0
+        },
+        "courier_position": [
+          160.699295043945,
+          390.0
+        ],
+        "focused": true,
+        "position": [
+          550.0,
+          390.0
+        ],
+        "preview": {
+          "health": 5.0,
+          "id": "standard",
+          "movement": 1.0,
+          "name": "Standard clothing",
+          "recovery": 18.0,
+          "role": "Guardian",
+          "style": "Steady",
+          "summary": "Sustained frontal guard; standard counter opening."
+        },
+        "quarantined": false,
+        "reason": "Server-confirmed world; presentation interpolation only.",
+        "status": "live",
+        "suspended": false
+      },
+      "rearmed": {
+        "actions": [
+          {
+            "available": true,
+            "caption": "LIVE; FACING LOCKED",
+            "cost": 22.0,
+            "drain": 12.0,
+            "key": "technique",
+            "status": "live",
+            "wait": 0.0
+          },
+          {
+            "available": true,
+            "caption": "READY AT SNAPSHOT",
+            "cost": 25.0,
+            "drain": 0.0,
+            "key": "step",
+            "status": "ready",
+            "wait": 0.0
+          },
+          {
+            "available": false,
+            "caption": "RELEASE GUARD",
+            "cost": 12.0,
+            "drain": 0.0,
+            "key": "counter",
+            "status": "guard",
+            "wait": 0.0
+          }
+        ],
+        "age": 0.0,
+        "capture": 14,
+        "catalog": {
+          "kind": "catalog",
+          "outfits": [
+            {
+              "health": 5.0,
+              "id": "standard",
+              "movement": 1.0,
+              "name": "Standard clothing",
+              "recovery": 18.0
+            },
+            {
+              "health": 6.0,
+              "id": "riveted",
+              "movement": 0.8,
+              "name": "Riveted coat",
+              "recovery": 18.0
+            },
+            {
+              "health": 4.0,
+              "id": "trail",
+              "movement": 1.2,
+              "name": "Trail wrap",
+              "recovery": 18.0
+            },
+            {
+              "health": 4.0,
+              "id": "field_sash",
+              "movement": 1.0,
+              "name": "Field sash",
+              "recovery": 26.0
+            }
+          ],
+          "techniques": {
+            "Duelist": [
+              {
+                "id": "none",
+                "summary": "Draw a bolt, leave its locked line; guard is unavailable."
+              }
+            ],
+            "Guardian": [
+              {
+                "id": "Steady",
+                "summary": "Sustained frontal guard; standard counter opening."
+              },
+              {
+                "id": "Riposte",
+                "summary": "Guard expires while held; a timed block earns a longer opening."
+              }
+            ]
+          },
+          "v": 1.0
+        },
+        "confirmed": {
+          "actions": {
+            "counter": {
+              "cost": 12.0,
+              "drain": 0.0,
+              "status": "guard",
+              "wait": 0.0
+            },
+            "counter_radius": 130.0,
+            "draw_radius": 340.0,
+            "step": {
+              "cost": 25.0,
+              "drain": 0.0,
+              "status": "ready",
+              "wait": 0.0
+            },
+            "technique": {
+              "cost": 22.0,
+              "drain": 12.0,
+              "status": "live",
+              "wait": 0.0
+            }
+          },
+          "cargo": 3.0,
+          "clock": 0.433333333333333,
+          "counters": {
+            "blocks": 0.0,
+            "counters": 0.0,
+            "courier_hits": 0.0,
+            "dodges": 1.0,
+            "player_hits": 0.0,
+            "redirects": 0.0,
+            "rejected": 0.0
+          },
+          "courier": [
+            222.999038696289,
+            390.0
+          ],
+          "courier_speed": 28.0,
+          "courier_x": 222.999,
+          "enemy_focus": 3.0,
+          "energy": 95.1,
+          "facing": [
+            1.0,
+            0.0
+          ],
+          "feint_cooldown": 0.0,
+          "guard": true,
+          "guard_state": "LIVE",
+          "guard_style": "Steady",
+          "health_limit": 5.0,
+          "hp": 5.0,
+          "last_impact": {},
+          "locked_face": [
+            1.0,
+            0.0
+          ],
+          "message": "BOLT: intercept facing the sentinel, or draw its aim with a feint.",
+          "mode": "play",
+          "opening": 0.0,
+          "phase": "bolt",
+          "player": [
+            739.33349609375,
+            390.0
+          ],
+          "preparation": {
+            "health": 5.0,
+            "movement": 1.0,
+            "outfit": "standard",
+            "recovery": 18.0,
+            "role": "Guardian",
+            "style": "Steady"
+          },
+          "pulse": [
+            0.0,
+            0.0
+          ],
+          "redirected": false,
+          "role": "Guardian",
+          "step_cooldown": 0.0,
+          "step_dir": [
+            1.0,
+            0.0
+          ],
+          "step_left": 0.0,
+          "strike_cooldown": 0.0,
+          "target": [
+            238.86589050293,
+            390.0
+          ],
+          "tick": 135.0
+        },
+        "courier_position": [
+          221.599060058594,
+          390.0
+        ],
+        "focused": true,
+        "position": [
+          739.33349609375,
+          390.0
+        ],
+        "preview": {
+          "health": 5.0,
+          "id": "standard",
+          "movement": 1.0,
+          "name": "Standard clothing",
+          "recovery": 18.0,
+          "role": "Guardian",
+          "style": "Steady",
+          "summary": "Sustained frontal guard; standard counter opening."
+        },
+        "quarantined": false,
+        "reason": "Server-confirmed world; presentation interpolation only.",
+        "status": "live",
+        "suspended": false
+      },
+      "step": {
+        "actions": [
+          {
+            "available": false,
+            "caption": "HOLD; FACE THE BOLT",
+            "cost": 22.0,
+            "drain": 12.0,
+            "key": "technique",
+            "status": "hold",
+            "wait": 0.0
+          },
+          {
+            "available": false,
+            "caption": "RECOVERING",
+            "cost": 25.0,
+            "drain": 0.0,
+            "key": "step",
+            "status": "recovering",
+            "wait": 0.149999999999999
+          },
+          {
+            "available": false,
+            "caption": "WAIT FOR OPEN",
+            "cost": 12.0,
+            "drain": 0.0,
+            "key": "counter",
+            "status": "armored",
+            "wait": 0.0
+          }
+        ],
+        "age": 0.0,
+        "capture": 10,
+        "catalog": {
+          "kind": "catalog",
+          "outfits": [
+            {
+              "health": 5.0,
+              "id": "standard",
+              "movement": 1.0,
+              "name": "Standard clothing",
+              "recovery": 18.0
+            },
+            {
+              "health": 6.0,
+              "id": "riveted",
+              "movement": 0.8,
+              "name": "Riveted coat",
+              "recovery": 18.0
+            },
+            {
+              "health": 4.0,
+              "id": "trail",
+              "movement": 1.2,
+              "name": "Trail wrap",
+              "recovery": 18.0
+            },
+            {
+              "health": 4.0,
+              "id": "field_sash",
+              "movement": 1.0,
+              "name": "Field sash",
+              "recovery": 26.0
+            }
+          ],
+          "techniques": {
+            "Duelist": [
+              {
+                "id": "none",
+                "summary": "Draw a bolt, leave its locked line; guard is unavailable."
+              }
+            ],
+            "Guardian": [
+              {
+                "id": "Steady",
+                "summary": "Sustained frontal guard; standard counter opening."
+              },
+              {
+                "id": "Riposte",
+                "summary": "Guard expires while held; a timed block earns a longer opening."
+              }
+            ]
+          },
+          "v": 1.0
+        },
+        "confirmed": {
+          "actions": {
+            "counter": {
+              "cost": 12.0,
+              "drain": 0.0,
+              "status": "armored",
+              "wait": 0.0
+            },
+            "counter_radius": 130.0,
+            "draw_radius": 340.0,
+            "step": {
+              "cost": 25.0,
+              "drain": 0.0,
+              "status": "recovering",
+              "wait": 0.149999999999999
+            },
+            "technique": {
+              "cost": 22.0,
+              "drain": 12.0,
+              "status": "hold",
+              "wait": 0.0
+            }
+          },
+          "cargo": 3.0,
+          "clock": 1.2,
+          "counters": {
+            "blocks": 0.0,
+            "counters": 0.0,
+            "courier_hits": 0.0,
+            "dodges": 1.0,
+            "player_hits": 0.0,
+            "redirects": 0.0,
+            "rejected": 0.0
+          },
+          "courier": [
+            193.599487304688,
+            390.0
+          ],
+          "courier_speed": 28.0,
+          "courier_x": 193.599,
+          "enemy_focus": 3.0,
+          "energy": 86.7,
+          "facing": [
+            1.0,
+            0.0
+          ],
+          "feint_cooldown": 0.0,
+          "guard": false,
+          "guard_state": "DOWN",
+          "guard_style": "Steady",
+          "health_limit": 5.0,
+          "hp": 5.0,
+          "last_impact": {},
+          "locked_face": [
+            1.0,
+            0.0
+          ],
+          "message": "Keep the courier alive until the far gate. Read the first amber line.",
+          "mode": "play",
+          "opening": 0.0,
+          "phase": "rest",
+          "player": [
+            739.33349609375,
+            390.0
+          ],
+          "preparation": {
+            "health": 5.0,
+            "movement": 1.0,
+            "outfit": "standard",
+            "recovery": 18.0,
+            "role": "Guardian",
+            "style": "Steady"
+          },
+          "pulse": [
+            0.0,
+            0.0
+          ],
+          "redirected": false,
+          "role": "Guardian",
+          "step_cooldown": 0.149999999999999,
+          "step_dir": [
+            1.0,
+            0.0
+          ],
+          "step_left": 0.0,
+          "strike_cooldown": 0.0,
+          "target": [
+            0.0,
+            0.0
+          ],
+          "tick": 72.0
+        },
+        "courier_position": [
+          192.199508666992,
+          390.0
+        ],
+        "focused": true,
+        "position": [
+          739.33349609375,
+          390.0
+        ],
+        "preview": {
+          "health": 5.0,
+          "id": "standard",
+          "movement": 1.0,
+          "name": "Standard clothing",
+          "recovery": 18.0,
+          "role": "Guardian",
+          "style": "Steady",
+          "summary": "Sustained frontal guard; standard counter opening."
+        },
+        "quarantined": false,
+        "reason": "Server-confirmed world; presentation interpolation only.",
+        "status": "live",
+        "suspended": false
+      },
+      "suspended": {
+        "actions": [
+          {
+            "available": false,
+            "caption": "CONTROLS SUSPENDED",
+            "cost": 22.0,
+            "drain": 12.0,
+            "key": "technique",
+            "status": "hold",
+            "wait": 0.0
+          },
+          {
+            "available": false,
+            "caption": "CONTROLS SUSPENDED",
+            "cost": 25.0,
+            "drain": 0.0,
+            "key": "step",
+            "status": "ready",
+            "wait": 0.0
+          },
+          {
+            "available": false,
+            "caption": "CONTROLS SUSPENDED",
+            "cost": 12.0,
+            "drain": 0.0,
+            "key": "counter",
+            "status": "armored",
+            "wait": 0.0
+          }
+        ],
+        "age": 0.0,
+        "capture": 12,
+        "catalog": {
+          "kind": "catalog",
+          "outfits": [
+            {
+              "health": 5.0,
+              "id": "standard",
+              "movement": 1.0,
+              "name": "Standard clothing",
+              "recovery": 18.0
+            },
+            {
+              "health": 6.0,
+              "id": "riveted",
+              "movement": 0.8,
+              "name": "Riveted coat",
+              "recovery": 18.0
+            },
+            {
+              "health": 4.0,
+              "id": "trail",
+              "movement": 1.2,
+              "name": "Trail wrap",
+              "recovery": 18.0
+            },
+            {
+              "health": 4.0,
+              "id": "field_sash",
+              "movement": 1.0,
+              "name": "Field sash",
+              "recovery": 26.0
+            }
+          ],
+          "techniques": {
+            "Duelist": [
+              {
+                "id": "none",
+                "summary": "Draw a bolt, leave its locked line; guard is unavailable."
+              }
+            ],
+            "Guardian": [
+              {
+                "id": "Steady",
+                "summary": "Sustained frontal guard; standard counter opening."
+              },
+              {
+                "id": "Riposte",
+                "summary": "Guard expires while held; a timed block earns a longer opening."
+              }
+            ]
+          },
+          "v": 1.0
+        },
+        "confirmed": {
+          "actions": {
+            "counter": {
+              "cost": 12.0,
+              "drain": 0.0,
+              "status": "armored",
+              "wait": 0.0
+            },
+            "counter_radius": 130.0,
+            "draw_radius": 340.0,
+            "step": {
+              "cost": 25.0,
+              "drain": 0.0,
+              "status": "ready",
+              "wait": 0.0
+            },
+            "technique": {
+              "cost": 22.0,
+              "drain": 12.0,
+              "status": "hold",
+              "wait": 0.0
+            }
+          },
+          "cargo": 3.0,
+          "clock": 1.7,
+          "counters": {
+            "blocks": 0.0,
+            "counters": 0.0,
+            "courier_hits": 0.0,
+            "dodges": 1.0,
+            "player_hits": 0.0,
+            "redirects": 0.0,
+            "rejected": 0.0
+          },
+          "courier": [
+            207.599273681641,
+            390.0
+          ],
+          "courier_speed": 28.0,
+          "courier_x": 207.599,
+          "enemy_focus": 3.0,
+          "energy": 89.2,
+          "facing": [
+            1.0,
+            0.0
+          ],
+          "feint_cooldown": 0.0,
+          "guard": false,
+          "guard_state": "DOWN",
+          "guard_style": "Steady",
+          "health_limit": 5.0,
+          "hp": 5.0,
+          "last_impact": {},
+          "locked_face": [
+            1.0,
+            0.0
+          ],
+          "message": "Keep the courier alive until the far gate. Read the first amber line.",
+          "mode": "play",
+          "opening": 0.0,
+          "phase": "rest",
+          "player": [
+            739.33349609375,
+            390.0
+          ],
+          "preparation": {
+            "health": 5.0,
+            "movement": 1.0,
+            "outfit": "standard",
+            "recovery": 18.0,
+            "role": "Guardian",
+            "style": "Steady"
+          },
+          "pulse": [
+            0.0,
+            0.0
+          ],
+          "redirected": false,
+          "role": "Guardian",
+          "step_cooldown": 0.0,
+          "step_dir": [
+            1.0,
+            0.0
+          ],
+          "step_left": 0.0,
+          "strike_cooldown": 0.0,
+          "target": [
+            0.0,
+            0.0
+          ],
+          "tick": 102.0
+        },
+        "courier_position": [
+          206.199295043945,
+          390.0
+        ],
+        "focused": true,
+        "position": [
+          739.33349609375,
+          390.0
+        ],
+        "preview": {
+          "health": 5.0,
+          "id": "standard",
+          "movement": 1.0,
+          "name": "Standard clothing",
+          "recovery": 18.0,
+          "role": "Guardian",
+          "style": "Steady",
+          "summary": "Sustained frontal guard; standard counter opening."
+        },
+        "quarantined": true,
+        "reason": "Server-confirmed world; presentation interpolation only.",
+        "status": "live",
+        "suspended": true
+      },
+      "walking": {
+        "actions": [
+          {
+            "available": false,
+            "caption": "HOLD; FACE THE BOLT",
+            "cost": 22.0,
+            "drain": 12.0,
+            "key": "technique",
+            "status": "hold",
+            "wait": 0.0
+          },
+          {
+            "available": true,
+            "caption": "READY AT SNAPSHOT",
+            "cost": 25.0,
+            "drain": 0.0,
+            "key": "step",
+            "status": "ready",
+            "wait": 0.0
+          },
+          {
+            "available": false,
+            "caption": "MOVE INTO RANGE",
+            "cost": 12.0,
+            "drain": 0.0,
+            "key": "counter",
+            "status": "range",
+            "wait": 0.0
+          }
+        ],
+        "age": 0.015609,
+        "capture": 9,
+        "catalog": {
+          "kind": "catalog",
+          "outfits": [
+            {
+              "health": 5.0,
+              "id": "standard",
+              "movement": 1.0,
+              "name": "Standard clothing",
+              "recovery": 18.0
+            },
+            {
+              "health": 6.0,
+              "id": "riveted",
+              "movement": 0.8,
+              "name": "Riveted coat",
+              "recovery": 18.0
+            },
+            {
+              "health": 4.0,
+              "id": "trail",
+              "movement": 1.2,
+              "name": "Trail wrap",
+              "recovery": 18.0
+            },
+            {
+              "health": 4.0,
+              "id": "field_sash",
+              "movement": 1.0,
+              "name": "Field sash",
+              "recovery": 26.0
+            }
+          ],
+          "techniques": {
+            "Duelist": [
+              {
+                "id": "none",
+                "summary": "Draw a bolt, leave its locked line; guard is unavailable."
+              }
+            ],
+            "Guardian": [
+              {
+                "id": "Steady",
+                "summary": "Sustained frontal guard; standard counter opening."
+              },
+              {
+                "id": "Riposte",
+                "summary": "Guard expires while held; a timed block earns a longer opening."
+              }
+            ]
+          },
+          "v": 1.0
+        },
+        "confirmed": {
+          "actions": {
+            "counter": {
+              "cost": 12.0,
+              "drain": 0.0,
+              "status": "range",
+              "wait": 0.0
+            },
+            "counter_radius": 130.0,
+            "draw_radius": 340.0,
+            "step": {
+              "cost": 25.0,
+              "drain": 0.0,
+              "status": "ready",
+              "wait": 0.0
+            },
+            "technique": {
+              "cost": 22.0,
+              "drain": 12.0,
+              "status": "hold",
+              "wait": 0.0
+            }
+          },
+          "cargo": 3.0,
+          "clock": 0.4,
+          "counters": {
+            "blocks": 0.0,
+            "counters": 0.0,
+            "courier_hits": 0.0,
+            "dodges": 0.0,
+            "player_hits": 0.0,
+            "redirects": 0.0,
+            "rejected": 0.0
+          },
+          "courier": [
+            171.199829101562,
+            390.0
+          ],
+          "courier_speed": 28.0,
+          "courier_x": 171.2,
+          "enemy_focus": 3.0,
+          "energy": 100.0,
+          "facing": [
+            1.0,
+            0.0
+          ],
+          "feint_cooldown": 0.0,
+          "guard": false,
+          "guard_state": "DOWN",
+          "guard_style": "Steady",
+          "health_limit": 5.0,
+          "hp": 5.0,
+          "last_impact": {},
+          "locked_face": [
+            1.0,
+            0.0
+          ],
+          "message": "Keep the courier alive until the far gate. Read the first amber line.",
+          "mode": "play",
+          "opening": 0.0,
+          "phase": "rest",
+          "player": [
+            604.166931152344,
+            390.0
+          ],
+          "preparation": {
+            "health": 5.0,
+            "movement": 1.0,
+            "outfit": "standard",
+            "recovery": 18.0,
+            "role": "Guardian",
+            "style": "Steady"
+          },
+          "pulse": [
+            0.0,
+            0.0
+          ],
+          "redirected": false,
+          "role": "Guardian",
+          "step_cooldown": 0.0,
+          "step_dir": [
+            0.0,
+            0.0
+          ],
+          "step_left": 0.0,
+          "strike_cooldown": 0.0,
+          "target": [
+            0.0,
+            0.0
+          ],
+          "tick": 24.0
+        },
+        "courier_position": [
+          170.236892700195,
+          390.0
+        ],
+        "focused": true,
+        "position": [
+          595.569152832031,
+          390.0
+        ],
+        "preview": {
+          "health": 5.0,
+          "id": "standard",
+          "movement": 1.0,
+          "name": "Standard clothing",
+          "recovery": 18.0,
+          "role": "Guardian",
+          "style": "Steady",
+          "summary": "Sustained frontal guard; standard counter opening."
+        },
+        "quarantined": false,
+        "reason": "Server-confirmed world; presentation interpolation only.",
+        "status": "live",
+        "suspended": false
+      }
+    },
+    "source": {
+      "catalog": {
+        "actions": [],
+        "age": 0.0,
+        "capture": 2,
+        "catalog": {
+          "kind": "catalog",
+          "outfits": [
+            {
+              "health": 5.0,
+              "id": "standard",
+              "movement": 1.0,
+              "name": "Standard clothing",
+              "recovery": 18.0
+            },
+            {
+              "health": 6.0,
+              "id": "riveted",
+              "movement": 0.8,
+              "name": "Riveted coat",
+              "recovery": 18.0
+            },
+            {
+              "health": 4.0,
+              "id": "trail",
+              "movement": 1.2,
+              "name": "Trail wrap",
+              "recovery": 18.0
+            },
+            {
+              "health": 4.0,
+              "id": "field_sash",
+              "movement": 1.0,
+              "name": "Field sash",
+              "recovery": 26.0
+            }
+          ],
+          "techniques": {
+            "Duelist": [
+              {
+                "id": "none",
+                "summary": "Draw a bolt, leave its locked line; guard is unavailable."
+              }
+            ],
+            "Guardian": [
+              {
+                "id": "Steady",
+                "summary": "Sustained frontal guard; standard counter opening."
+              },
+              {
+                "id": "Riposte",
+                "summary": "Guard expires while held; a timed block earns a longer opening."
+              }
+            ]
+          },
+          "v": 1.0
+        },
+        "confirmed": {},
+        "courier_position": [
+          0.0,
+          0.0
+        ],
+        "focused": true,
+        "position": [
+          0.0,
+          0.0
+        ],
+        "preview": {
+          "health": 5.0,
+          "id": "standard",
+          "movement": 1.0,
+          "name": "Standard clothing",
+          "recovery": 18.0,
+          "role": "Guardian",
+          "style": "Steady",
+          "summary": "Sustained frontal guard; standard counter opening."
+        },
+        "quarantined": false,
+        "reason": "Compare server values, then Enter to commit.",
+        "status": "preparing",
+        "suspended": false
+      },
+      "closed": {
+        "actions": [
+          {
+            "available": false,
+            "caption": "LAST CONFIRMED / INPUT BLOCKED",
+            "cost": 22.0,
+            "drain": 12.0,
+            "key": "technique",
+            "status": "ground",
+            "wait": 0.0
+          },
+          {
+            "available": false,
+            "caption": "LAST CONFIRMED / INPUT BLOCKED",
+            "cost": 25.0,
+            "drain": 0.0,
+            "key": "step",
+            "status": "ready",
+            "wait": 0.0
+          },
+          {
+            "available": false,
+            "caption": "LAST CONFIRMED / INPUT BLOCKED",
+            "cost": 12.0,
+            "drain": 0.0,
+            "key": "counter",
+            "status": "armored",
+            "wait": 0.0
+          }
+        ],
+        "age": 0.0227272727272727,
+        "capture": 18,
+        "catalog": {
+          "kind": "catalog",
+          "outfits": [
+            {
+              "health": 5.0,
+              "id": "standard",
+              "movement": 1.0,
+              "name": "Standard clothing",
+              "recovery": 18.0
+            },
+            {
+              "health": 6.0,
+              "id": "riveted",
+              "movement": 0.8,
+              "name": "Riveted coat",
+              "recovery": 18.0
+            },
+            {
+              "health": 4.0,
+              "id": "trail",
+              "movement": 1.2,
+              "name": "Trail wrap",
+              "recovery": 18.0
+            },
+            {
+              "health": 4.0,
+              "id": "field_sash",
+              "movement": 1.0,
+              "name": "Field sash",
+              "recovery": 26.0
+            }
+          ],
+          "techniques": {
+            "Duelist": [
+              {
+                "id": "none",
+                "summary": "Draw a bolt, leave its locked line; guard is unavailable."
+              }
+            ],
+            "Guardian": [
+              {
+                "id": "Steady",
+                "summary": "Sustained frontal guard; standard counter opening."
+              },
+              {
+                "id": "Riposte",
+                "summary": "Guard expires while held; a timed block earns a longer opening."
+              }
+            ]
+          },
+          "v": 1.0
+        },
+        "confirmed": {
+          "actions": {
+            "counter": {
+              "cost": 12.0,
+              "drain": 0.0,
+              "status": "armored",
+              "wait": 0.0
+            },
+            "counter_radius": 130.0,
+            "draw_radius": 340.0,
+            "step": {
+              "cost": 25.0,
+              "drain": 0.0,
+              "status": "ready",
+              "wait": 0.0
+            },
+            "technique": {
+              "cost": 22.0,
+              "drain": 12.0,
+              "status": "ground",
+              "wait": 0.0
+            }
+          },
+          "cargo": 2.0,
+          "clock": 0.633333333333334,
+          "counters": {
+            "blocks": 0.0,
+            "counters": 0.0,
+            "courier_hits": 1.0,
+            "dodges": 1.0,
+            "player_hits": 1.0,
+            "redirects": 0.0,
+            "rejected": 0.0
+          },
+          "courier": [
+            386.334136962891,
+            390.0
+          ],
+          "courier_speed": 28.0,
+          "courier_x": 386.334,
+          "enemy_focus": 3.0,
+          "energy": 100.0,
+          "facing": [
+            1.0,
+            0.0
+          ],
+          "feint_cooldown": 0.0,
+          "guard": false,
+          "guard_state": "DOWN",
+          "guard_style": "Steady",
+          "health_limit": 5.0,
+          "hp": 4.0,
+          "last_impact": {
+            "code": "courier_first_contact",
+            "explanation": "The courier was the first body on the locked bolt line.",
+            "tip": "Move between sentinel and courier. Face the sentinel and hold K."
+          },
+          "locked_face": [
+            1.0,
+            0.0
+          ],
+          "message": "PULSE: walk or step out of the red circle. Shield cannot stop the ground.",
+          "mode": "play",
+          "opening": 0.0,
+          "phase": "pulse",
+          "player": [
+            810.167175292969,
+            390.0
+          ],
+          "preparation": {
+            "health": 5.0,
+            "movement": 1.0,
+            "outfit": "standard",
+            "recovery": 18.0,
+            "role": "Guardian",
+            "style": "Steady"
+          },
+          "pulse": [
+            810.167175292969,
+            390.0
+          ],
+          "redirected": false,
+          "role": "Guardian",
+          "step_cooldown": 0.0,
+          "step_dir": [
+            1.0,
+            0.0
+          ],
+          "step_left": 0.0,
+          "strike_cooldown": 0.0,
+          "target": [
+            317.732452392578,
+            390.0
+          ],
+          "tick": 485.0
+        },
+        "courier_position": [
+          385.570495605469,
+          390.0
+        ],
+        "focused": true,
+        "position": [
+          810.167175292969,
+          390.0
+        ],
+        "preview": {
+          "health": 5.0,
+          "id": "standard",
+          "movement": 1.0,
+          "name": "Standard clothing",
+          "recovery": 18.0,
+          "role": "Guardian",
+          "style": "Steady",
+          "summary": "Sustained frontal guard; standard counter opening."
+        },
+        "quarantined": true,
+        "reason": "Authority disconnected. The world cannot be simulated locally.",
+        "status": "error",
+        "suspended": true
+      },
+      "focus": {
+        "actions": [
+          {
+            "available": false,
+            "caption": "CONTROLS SUSPENDED",
+            "cost": 22.0,
+            "drain": 12.0,
+            "key": "technique",
+            "status": "hold",
+            "wait": 0.0
+          },
+          {
+            "available": false,
+            "caption": "CONTROLS SUSPENDED",
+            "cost": 25.0,
+            "drain": 0.0,
+            "key": "step",
+            "status": "ready",
+            "wait": 0.0
+          },
+          {
+            "available": false,
+            "caption": "CONTROLS SUSPENDED",
+            "cost": 12.0,
+            "drain": 0.0,
+            "key": "counter",
+            "status": "armored",
+            "wait": 0.0
+          }
+        ],
+        "age": 0.0,
+        "capture": 15,
+        "catalog": {
+          "kind": "catalog",
+          "outfits": [
+            {
+              "health": 5.0,
+              "id": "standard",
+              "movement": 1.0,
+              "name": "Standard clothing",
+              "recovery": 18.0
+            },
+            {
+              "health": 6.0,
+              "id": "riveted",
+              "movement": 0.8,
+              "name": "Riveted coat",
+              "recovery": 18.0
+            },
+            {
+              "health": 4.0,
+              "id": "trail",
+              "movement": 1.2,
+              "name": "Trail wrap",
+              "recovery": 18.0
+            },
+            {
+              "health": 4.0,
+              "id": "field_sash",
+              "movement": 1.0,
+              "name": "Field sash",
+              "recovery": 26.0
+            }
+          ],
+          "techniques": {
+            "Duelist": [
+              {
+                "id": "none",
+                "summary": "Draw a bolt, leave its locked line; guard is unavailable."
+              }
+            ],
+            "Guardian": [
+              {
+                "id": "Steady",
+                "summary": "Sustained frontal guard; standard counter opening."
+              },
+              {
+                "id": "Riposte",
+                "summary": "Guard expires while held; a timed block earns a longer opening."
+              }
+            ]
+          },
+          "v": 1.0
+        },
+        "confirmed": {
+          "actions": {
+            "counter": {
+              "cost": 12.0,
+              "drain": 0.0,
+              "status": "armored",
+              "wait": 0.0
+            },
+            "counter_radius": 130.0,
+            "draw_radius": 340.0,
+            "step": {
+              "cost": 25.0,
+              "drain": 0.0,
+              "status": "ready",
+              "wait": 0.0
+            },
+            "technique": {
+              "cost": 22.0,
+              "drain": 12.0,
+              "status": "hold",
+              "wait": 0.0
+            }
+          },
+          "cargo": 3.0,
+          "clock": 0.0166666666666667,
+          "counters": {
+            "blocks": 0.0,
+            "counters": 0.0,
+            "courier_hits": 0.0,
+            "dodges": 1.0,
+            "player_hits": 1.0,
+            "redirects": 0.0,
+            "rejected": 0.0
+          },
+          "courier": [
+            239.332122802734,
+            390.0
+          ],
+          "courier_speed": 28.0,
+          "courier_x": 239.332,
+          "enemy_focus": 3.0,
+          "energy": 99.7,
+          "facing": [
+            1.0,
+            0.0
+          ],
+          "feint_cooldown": 0.0,
+          "guard": false,
+          "guard_state": "DOWN",
+          "guard_style": "Steady",
+          "health_limit": 5.0,
+          "hp": 4.0,
+          "last_impact": {
+            "code": "guard_not_held",
+            "explanation": "The bolt hit you without an active guard.",
+            "tip": "Face the sentinel and hold K before impact."
+          },
+          "locked_face": [
+            1.0,
+            0.0
+          ],
+          "message": "You intercepted the bolt without a live frontal guard.",
+          "mode": "play",
+          "opening": 0.0,
+          "phase": "rest",
+          "player": [
+            743.500183105469,
+            390.0
+          ],
+          "preparation": {
+            "health": 5.0,
+            "movement": 1.0,
+            "outfit": "standard",
+            "recovery": 18.0,
+            "role": "Guardian",
+            "style": "Steady"
+          },
+          "pulse": [
+            0.0,
+            0.0
+          ],
+          "redirected": false,
+          "role": "Guardian",
+          "step_cooldown": 0.0,
+          "step_dir": [
+            1.0,
+            0.0
+          ],
+          "step_left": 0.0,
+          "strike_cooldown": 0.0,
+          "target": [
+            238.86589050293,
+            390.0
+          ],
+          "tick": 170.0
+        },
+        "courier_position": [
+          239.332122802734,
+          390.0
+        ],
+        "focused": true,
+        "position": [
+          743.500183105469,
+          390.0
+        ],
+        "preview": {
+          "health": 5.0,
+          "id": "standard",
+          "movement": 1.0,
+          "name": "Standard clothing",
+          "recovery": 18.0,
+          "role": "Guardian",
+          "style": "Steady",
+          "summary": "Sustained frontal guard; standard counter opening."
+        },
+        "quarantined": true,
+        "reason": "Server-confirmed world; presentation interpolation only.",
+        "status": "live",
+        "suspended": true
+      },
+      "focus_moved": {
+        "actions": [
+          {
+            "available": false,
+            "caption": "HOLD; FACE THE BOLT",
+            "cost": 22.0,
+            "drain": 12.0,
+            "key": "technique",
+            "status": "hold",
+            "wait": 0.0
+          },
+          {
+            "available": true,
+            "caption": "READY AT SNAPSHOT",
+            "cost": 25.0,
+            "drain": 0.0,
+            "key": "step",
+            "status": "ready",
+            "wait": 0.0
+          },
+          {
+            "available": false,
+            "caption": "WAIT FOR OPEN",
+            "cost": 12.0,
+            "drain": 0.0,
+            "key": "counter",
+            "status": "armored",
+            "wait": 0.0
+          }
+        ],
+        "age": 0.0,
+        "capture": 17,
+        "catalog": {
+          "kind": "catalog",
+          "outfits": [
+            {
+              "health": 5.0,
+              "id": "standard",
+              "movement": 1.0,
+              "name": "Standard clothing",
+              "recovery": 18.0
+            },
+            {
+              "health": 6.0,
+              "id": "riveted",
+              "movement": 0.8,
+              "name": "Riveted coat",
+              "recovery": 18.0
+            },
+            {
+              "health": 4.0,
+              "id": "trail",
+              "movement": 1.2,
+              "name": "Trail wrap",
+              "recovery": 18.0
+            },
+            {
+              "health": 4.0,
+              "id": "field_sash",
+              "movement": 1.0,
+              "name": "Field sash",
+              "recovery": 26.0
+            }
+          ],
+          "techniques": {
+            "Duelist": [
+              {
+                "id": "none",
+                "summary": "Draw a bolt, leave its locked line; guard is unavailable."
+              }
+            ],
+            "Guardian": [
+              {
+                "id": "Steady",
+                "summary": "Sustained frontal guard; standard counter opening."
+              },
+              {
+                "id": "Riposte",
+                "summary": "Guard expires while held; a timed block earns a longer opening."
+              }
+            ]
+          },
+          "v": 1.0
+        },
+        "confirmed": {
+          "actions": {
+            "counter": {
+              "cost": 12.0,
+              "drain": 0.0,
+              "status": "armored",
+              "wait": 0.0
+            },
+            "counter_radius": 130.0,
+            "draw_radius": 340.0,
+            "step": {
+              "cost": 25.0,
+              "drain": 0.0,
+              "status": "ready",
+              "wait": 0.0
+            },
+            "technique": {
+              "cost": 22.0,
+              "drain": 12.0,
+              "status": "hold",
+              "wait": 0.0
+            }
+          },
+          "cargo": 3.0,
+          "clock": 0.516666666666667,
+          "counters": {
+            "blocks": 0.0,
+            "counters": 0.0,
+            "courier_hits": 0.0,
+            "dodges": 1.0,
+            "player_hits": 1.0,
+            "redirects": 0.0,
+            "rejected": 0.0
+          },
+          "courier": [
+            253.331909179688,
+            390.0
+          ],
+          "courier_speed": 28.0,
+          "courier_x": 253.332,
+          "enemy_focus": 3.0,
+          "energy": 100.0,
+          "facing": [
+            1.0,
+            0.0
+          ],
+          "feint_cooldown": 0.0,
+          "guard": false,
+          "guard_state": "DOWN",
+          "guard_style": "Steady",
+          "health_limit": 5.0,
+          "hp": 4.0,
+          "last_impact": {
+            "code": "guard_not_held",
+            "explanation": "The bolt hit you without an active guard.",
+            "tip": "Face the sentinel and hold K before impact."
+          },
+          "locked_face": [
+            1.0,
+            0.0
+          ],
+          "message": "You intercepted the bolt without a live frontal guard.",
+          "mode": "play",
+          "opening": 0.0,
+          "phase": "rest",
+          "player": [
+            776.833679199219,
+            390.0
+          ],
+          "preparation": {
+            "health": 5.0,
+            "movement": 1.0,
+            "outfit": "standard",
+            "recovery": 18.0,
+            "role": "Guardian",
+            "style": "Steady"
+          },
+          "pulse": [
+            0.0,
+            0.0
+          ],
+          "redirected": false,
+          "role": "Guardian",
+          "step_cooldown": 0.0,
+          "step_dir": [
+            1.0,
+            0.0
+          ],
+          "step_left": 0.0,
+          "strike_cooldown": 0.0,
+          "target": [
+            238.86589050293,
+            390.0
+          ],
+          "tick": 200.0
+        },
+        "courier_position": [
+          251.931930541992,
+          390.0
+        ],
+        "focused": true,
+        "position": [
+          764.333618164062,
+          390.0
+        ],
+        "preview": {
+          "health": 5.0,
+          "id": "standard",
+          "movement": 1.0,
+          "name": "Standard clothing",
+          "recovery": 18.0,
+          "role": "Guardian",
+          "style": "Steady",
+          "summary": "Sustained frontal guard; standard counter opening."
+        },
+        "quarantined": false,
+        "reason": "Server-confirmed world; presentation interpolation only.",
+        "status": "live",
+        "suspended": false
+      },
+      "focus_resumed": {
+        "actions": [
+          {
+            "available": false,
+            "caption": "HOLD; FACE THE BOLT",
+            "cost": 22.0,
+            "drain": 12.0,
+            "key": "technique",
+            "status": "hold",
+            "wait": 0.0
+          },
+          {
+            "available": true,
+            "caption": "READY AT SNAPSHOT",
+            "cost": 25.0,
+            "drain": 0.0,
+            "key": "step",
+            "status": "ready",
+            "wait": 0.0
+          },
+          {
+            "available": false,
+            "caption": "WAIT FOR OPEN",
+            "cost": 12.0,
+            "drain": 0.0,
+            "key": "counter",
+            "status": "armored",
+            "wait": 0.0
+          }
+        ],
+        "age": 0.0,
+        "capture": 16,
+        "catalog": {
+          "kind": "catalog",
+          "outfits": [
+            {
+              "health": 5.0,
+              "id": "standard",
+              "movement": 1.0,
+              "name": "Standard clothing",
+              "recovery": 18.0
+            },
+            {
+              "health": 6.0,
+              "id": "riveted",
+              "movement": 0.8,
+              "name": "Riveted coat",
+              "recovery": 18.0
+            },
+            {
+              "health": 4.0,
+              "id": "trail",
+              "movement": 1.2,
+              "name": "Trail wrap",
+              "recovery": 18.0
+            },
+            {
+              "health": 4.0,
+              "id": "field_sash",
+              "movement": 1.0,
+              "name": "Field sash",
+              "recovery": 26.0
+            }
+          ],
+          "techniques": {
+            "Duelist": [
+              {
+                "id": "none",
+                "summary": "Draw a bolt, leave its locked line; guard is unavailable."
+              }
+            ],
+            "Guardian": [
+              {
+                "id": "Steady",
+                "summary": "Sustained frontal guard; standard counter opening."
+              },
+              {
+                "id": "Riposte",
+                "summary": "Guard expires while held; a timed block earns a longer opening."
+              }
+            ]
+          },
+          "v": 1.0
+        },
+        "confirmed": {
+          "actions": {
+            "counter": {
+              "cost": 12.0,
+              "drain": 0.0,
+              "status": "armored",
+              "wait": 0.0
+            },
+            "counter_radius": 130.0,
+            "draw_radius": 340.0,
+            "step": {
+              "cost": 25.0,
+              "drain": 0.0,
+              "status": "ready",
+              "wait": 0.0
+            },
+            "technique": {
+              "cost": 22.0,
+              "drain": 12.0,
+              "status": "hold",
+              "wait": 0.0
+            }
+          },
+          "cargo": 3.0,
+          "clock": 0.266666666666667,
+          "counters": {
+            "blocks": 0.0,
+            "counters": 0.0,
+            "courier_hits": 0.0,
+            "dodges": 1.0,
+            "player_hits": 1.0,
+            "redirects": 0.0,
+            "rejected": 0.0
+          },
+          "courier": [
+            246.332015991211,
+            390.0
+          ],
+          "courier_speed": 28.0,
+          "courier_x": 246.332,
+          "enemy_focus": 3.0,
+          "energy": 100.0,
+          "facing": [
+            1.0,
+            0.0
+          ],
+          "feint_cooldown": 0.0,
+          "guard": false,
+          "guard_state": "DOWN",
+          "guard_style": "Steady",
+          "health_limit": 5.0,
+          "hp": 4.0,
+          "last_impact": {
+            "code": "guard_not_held",
+            "explanation": "The bolt hit you without an active guard.",
+            "tip": "Face the sentinel and hold K before impact."
+          },
+          "locked_face": [
+            1.0,
+            0.0
+          ],
+          "message": "You intercepted the bolt without a live frontal guard.",
+          "mode": "play",
+          "opening": 0.0,
+          "phase": "rest",
+          "player": [
+            743.500183105469,
+            390.0
+          ],
+          "preparation": {
+            "health": 5.0,
+            "movement": 1.0,
+            "outfit": "standard",
+            "recovery": 18.0,
+            "role": "Guardian",
+            "style": "Steady"
+          },
+          "pulse": [
+            0.0,
+            0.0
+          ],
+          "redirected": false,
+          "role": "Guardian",
+          "step_cooldown": 0.0,
+          "step_dir": [
+            1.0,
+            0.0
+          ],
+          "step_left": 0.0,
+          "strike_cooldown": 0.0,
+          "target": [
+            238.86589050293,
+            390.0
+          ],
+          "tick": 185.0
+        },
+        "courier_position": [
+          244.932037353516,
+          390.0
+        ],
+        "focused": true,
+        "position": [
+          743.500183105469,
+          390.0
+        ],
+        "preview": {
+          "health": 5.0,
+          "id": "standard",
+          "movement": 1.0,
+          "name": "Standard clothing",
+          "recovery": 18.0,
+          "role": "Guardian",
+          "style": "Steady",
+          "summary": "Sustained frontal guard; standard counter opening."
+        },
+        "quarantined": false,
+        "reason": "Server-confirmed world; presentation interpolation only.",
+        "status": "live",
+        "suspended": false
+      },
+      "held": {
+        "actions": [
+          {
+            "available": false,
+            "caption": "RELEASE TO REARM",
+            "cost": 22.0,
+            "drain": 12.0,
+            "key": "technique",
+            "status": "hold",
+            "wait": 0.0
+          },
+          {
+            "available": false,
+            "caption": "RELEASE TO REARM",
+            "cost": 25.0,
+            "drain": 0.0,
+            "key": "step",
+            "status": "ready",
+            "wait": 0.0
+          },
+          {
+            "available": false,
+            "caption": "RELEASE TO REARM",
+            "cost": 12.0,
+            "drain": 0.0,
+            "key": "counter",
+            "status": "armored",
+            "wait": 0.0
+          }
+        ],
+        "age": 0.019047619047619,
+        "capture": 13,
+        "catalog": {
+          "kind": "catalog",
+          "outfits": [
+            {
+              "health": 5.0,
+              "id": "standard",
+              "movement": 1.0,
+              "name": "Standard clothing",
+              "recovery": 18.0
+            },
+            {
+              "health": 6.0,
+              "id": "riveted",
+              "movement": 0.8,
+              "name": "Riveted coat",
+              "recovery": 18.0
+            },
+            {
+              "health": 4.0,
+              "id": "trail",
+              "movement": 1.2,
+              "name": "Trail wrap",
+              "recovery": 18.0
+            },
+            {
+              "health": 4.0,
+              "id": "field_sash",
+              "movement": 1.0,
+              "name": "Field sash",
+              "recovery": 26.0
+            }
+          ],
+          "techniques": {
+            "Duelist": [
+              {
+                "id": "none",
+                "summary": "Draw a bolt, leave its locked line; guard is unavailable."
+              }
+            ],
+            "Guardian": [
+              {
+                "id": "Steady",
+                "summary": "Sustained frontal guard; standard counter opening."
+              },
+              {
+                "id": "Riposte",
+                "summary": "Guard expires while held; a timed block earns a longer opening."
+              }
+            ]
+          },
+          "v": 1.0
+        },
+        "confirmed": {
+          "actions": {
+            "counter": {
+              "cost": 12.0,
+              "drain": 0.0,
+              "status": "armored",
+              "wait": 0.0
+            },
+            "counter_radius": 130.0,
+            "draw_radius": 340.0,
+            "step": {
+              "cost": 25.0,
+              "drain": 0.0,
+              "status": "ready",
+              "wait": 0.0
+            },
+            "technique": {
+              "cost": 22.0,
+              "drain": 12.0,
+              "status": "hold",
+              "wait": 0.0
+            }
+          },
+          "cargo": 3.0,
+          "clock": 0.216666666666667,
+          "counters": {
+            "blocks": 0.0,
+            "counters": 0.0,
+            "courier_hits": 0.0,
+            "dodges": 1.0,
+            "player_hits": 0.0,
+            "redirects": 0.0,
+            "rejected": 0.0
+          },
+          "courier": [
+            216.932464599609,
+            390.0
+          ],
+          "courier_speed": 28.0,
+          "courier_x": 216.932,
+          "enemy_focus": 3.0,
+          "energy": 93.3,
+          "facing": [
+            1.0,
+            0.0
+          ],
+          "feint_cooldown": 0.0,
+          "guard": false,
+          "guard_state": "DOWN",
+          "guard_style": "Steady",
+          "health_limit": 5.0,
+          "hp": 5.0,
+          "last_impact": {},
+          "locked_face": [
+            1.0,
+            0.0
+          ],
+          "message": "BOLT: intercept facing the sentinel, or draw its aim with a feint.",
+          "mode": "play",
+          "opening": 0.0,
+          "phase": "bolt",
+          "player": [
+            743.500183105469,
+            390.0
+          ],
+          "preparation": {
+            "health": 5.0,
+            "movement": 1.0,
+            "outfit": "standard",
+            "recovery": 18.0,
+            "role": "Guardian",
+            "style": "Steady"
+          },
+          "pulse": [
+            0.0,
+            0.0
+          ],
+          "redirected": false,
+          "role": "Guardian",
+          "step_cooldown": 0.0,
+          "step_dir": [
+            1.0,
+            0.0
+          ],
+          "step_left": 0.0,
+          "strike_cooldown": 0.0,
+          "target": [
+            238.86589050293,
+            390.0
+          ],
+          "tick": 122.0
+        },
+        "courier_position": [
+          216.065811157227,
+          390.0
+        ],
+        "focused": true,
+        "position": [
+          743.500183105469,
+          390.0
+        ],
+        "preview": {
+          "health": 5.0,
+          "id": "standard",
+          "movement": 1.0,
+          "name": "Standard clothing",
+          "recovery": 18.0,
+          "role": "Guardian",
+          "style": "Steady",
+          "summary": "Sustained frontal guard; standard counter opening."
+        },
+        "quarantined": true,
+        "reason": "Server-confirmed world; presentation interpolation only.",
+        "status": "live",
+        "suspended": false
+      },
+      "initial": {
+        "actions": [
+          {
+            "available": false,
+            "caption": "HOLD; FACE THE BOLT",
+            "cost": 22.0,
+            "drain": 12.0,
+            "key": "technique",
+            "status": "hold",
+            "wait": 0.0
+          },
+          {
+            "available": true,
+            "caption": "READY AT SNAPSHOT",
+            "cost": 25.0,
+            "drain": 0.0,
+            "key": "step",
+            "status": "ready",
+            "wait": 0.0
+          },
+          {
+            "available": false,
+            "caption": "MOVE INTO RANGE",
+            "cost": 12.0,
+            "drain": 0.0,
+            "key": "counter",
+            "status": "range",
+            "wait": 0.0
+          }
+        ],
+        "age": 0.0,
+        "capture": 8,
+        "catalog": {
+          "kind": "catalog",
+          "outfits": [
+            {
+              "health": 5.0,
+              "id": "standard",
+              "movement": 1.0,
+              "name": "Standard clothing",
+              "recovery": 18.0
+            },
+            {
+              "health": 6.0,
+              "id": "riveted",
+              "movement": 0.8,
+              "name": "Riveted coat",
+              "recovery": 18.0
+            },
+            {
+              "health": 4.0,
+              "id": "trail",
+              "movement": 1.2,
+              "name": "Trail wrap",
+              "recovery": 18.0
+            },
+            {
+              "health": 4.0,
+              "id": "field_sash",
+              "movement": 1.0,
+              "name": "Field sash",
+              "recovery": 26.0
+            }
+          ],
+          "techniques": {
+            "Duelist": [
+              {
+                "id": "none",
+                "summary": "Draw a bolt, leave its locked line; guard is unavailable."
+              }
+            ],
+            "Guardian": [
+              {
+                "id": "Steady",
+                "summary": "Sustained frontal guard; standard counter opening."
+              },
+              {
+                "id": "Riposte",
+                "summary": "Guard expires while held; a timed block earns a longer opening."
+              }
+            ]
+          },
+          "v": 1.0
+        },
+        "confirmed": {
+          "actions": {
+            "counter": {
+              "cost": 12.0,
+              "drain": 0.0,
+              "status": "range",
+              "wait": 0.0
+            },
+            "counter_radius": 130.0,
+            "draw_radius": 340.0,
+            "step": {
+              "cost": 25.0,
+              "drain": 0.0,
+              "status": "ready",
+              "wait": 0.0
+            },
+            "technique": {
+              "cost": 22.0,
+              "drain": 12.0,
+              "status": "hold",
+              "wait": 0.0
+            }
+          },
+          "cargo": 3.0,
+          "clock": 0.183333333333333,
+          "counters": {
+            "blocks": 0.0,
+            "counters": 0.0,
+            "courier_hits": 0.0,
+            "dodges": 0.0,
+            "player_hits": 0.0,
+            "redirects": 0.0,
+            "rejected": 0.0
+          },
+          "courier": [
+            165.133255004883,
+            390.0
+          ],
+          "courier_speed": 28.0,
+          "courier_x": 165.133,
+          "enemy_focus": 3.0,
+          "energy": 100.0,
+          "facing": [
+            1.0,
+            0.0
+          ],
+          "feint_cooldown": 0.0,
+          "guard": false,
+          "guard_state": "DOWN",
+          "guard_style": "Steady",
+          "health_limit": 5.0,
+          "hp": 5.0,
+          "last_impact": {},
+          "locked_face": [
+            1.0,
+            0.0
+          ],
+          "message": "Keep the courier alive until the far gate. Read the first amber line.",
+          "mode": "play",
+          "opening": 0.0,
+          "phase": "rest",
+          "player": [
+            550.0,
+            390.0
+          ],
+          "preparation": {
+            "health": 5.0,
+            "movement": 1.0,
+            "outfit": "standard",
+            "recovery": 18.0,
+            "role": "Guardian",
+            "style": "Steady"
+          },
+          "pulse": [
+            0.0,
+            0.0
+          ],
+          "redirected": false,
+          "role": "Guardian",
+          "step_cooldown": 0.0,
+          "step_dir": [
+            0.0,
+            0.0
+          ],
+          "step_left": 0.0,
+          "strike_cooldown": 0.0,
+          "target": [
+            0.0,
+            0.0
+          ],
+          "tick": 11.0
+        },
+        "courier_position": [
+          163.733276367188,
+          390.0
+        ],
+        "focused": true,
+        "position": [
+          550.0,
+          390.0
+        ],
+        "preview": {
+          "health": 5.0,
+          "id": "standard",
+          "movement": 1.0,
+          "name": "Standard clothing",
+          "recovery": 18.0,
+          "role": "Guardian",
+          "style": "Steady",
+          "summary": "Sustained frontal guard; standard counter opening."
+        },
+        "quarantined": false,
+        "reason": "Server-confirmed world; presentation interpolation only.",
+        "status": "live",
+        "suspended": false
+      },
+      "rearmed": {
+        "actions": [
+          {
+            "available": true,
+            "caption": "LIVE; FACING LOCKED",
+            "cost": 22.0,
+            "drain": 12.0,
+            "key": "technique",
+            "status": "live",
+            "wait": 0.0
+          },
+          {
+            "available": true,
+            "caption": "READY AT SNAPSHOT",
+            "cost": 25.0,
+            "drain": 0.0,
+            "key": "step",
+            "status": "ready",
+            "wait": 0.0
+          },
+          {
+            "available": false,
+            "caption": "RELEASE GUARD",
+            "cost": 12.0,
+            "drain": 0.0,
+            "key": "counter",
+            "status": "guard",
+            "wait": 0.0
+          }
+        ],
+        "age": 0.0,
+        "capture": 14,
+        "catalog": {
+          "kind": "catalog",
+          "outfits": [
+            {
+              "health": 5.0,
+              "id": "standard",
+              "movement": 1.0,
+              "name": "Standard clothing",
+              "recovery": 18.0
+            },
+            {
+              "health": 6.0,
+              "id": "riveted",
+              "movement": 0.8,
+              "name": "Riveted coat",
+              "recovery": 18.0
+            },
+            {
+              "health": 4.0,
+              "id": "trail",
+              "movement": 1.2,
+              "name": "Trail wrap",
+              "recovery": 18.0
+            },
+            {
+              "health": 4.0,
+              "id": "field_sash",
+              "movement": 1.0,
+              "name": "Field sash",
+              "recovery": 26.0
+            }
+          ],
+          "techniques": {
+            "Duelist": [
+              {
+                "id": "none",
+                "summary": "Draw a bolt, leave its locked line; guard is unavailable."
+              }
+            ],
+            "Guardian": [
+              {
+                "id": "Steady",
+                "summary": "Sustained frontal guard; standard counter opening."
+              },
+              {
+                "id": "Riposte",
+                "summary": "Guard expires while held; a timed block earns a longer opening."
+              }
+            ]
+          },
+          "v": 1.0
+        },
+        "confirmed": {
+          "actions": {
+            "counter": {
+              "cost": 12.0,
+              "drain": 0.0,
+              "status": "guard",
+              "wait": 0.0
+            },
+            "counter_radius": 130.0,
+            "draw_radius": 340.0,
+            "step": {
+              "cost": 25.0,
+              "drain": 0.0,
+              "status": "ready",
+              "wait": 0.0
+            },
+            "technique": {
+              "cost": 22.0,
+              "drain": 12.0,
+              "status": "live",
+              "wait": 0.0
+            }
+          },
+          "cargo": 3.0,
+          "clock": 0.566666666666667,
+          "counters": {
+            "blocks": 0.0,
+            "counters": 0.0,
+            "courier_hits": 0.0,
+            "dodges": 1.0,
+            "player_hits": 0.0,
+            "redirects": 0.0,
+            "rejected": 0.0
+          },
+          "courier": [
+            226.732315063477,
+            390.0
+          ],
+          "courier_speed": 28.0,
+          "courier_x": 226.732,
+          "enemy_focus": 3.0,
+          "energy": 94.6,
+          "facing": [
+            1.0,
+            0.0
+          ],
+          "feint_cooldown": 0.0,
+          "guard": true,
+          "guard_state": "LIVE",
+          "guard_style": "Steady",
+          "health_limit": 5.0,
+          "hp": 5.0,
+          "last_impact": {},
+          "locked_face": [
+            1.0,
+            0.0
+          ],
+          "message": "BOLT: intercept facing the sentinel, or draw its aim with a feint.",
+          "mode": "play",
+          "opening": 0.0,
+          "phase": "bolt",
+          "player": [
+            743.500183105469,
+            390.0
+          ],
+          "preparation": {
+            "health": 5.0,
+            "movement": 1.0,
+            "outfit": "standard",
+            "recovery": 18.0,
+            "role": "Guardian",
+            "style": "Steady"
+          },
+          "pulse": [
+            0.0,
+            0.0
+          ],
+          "redirected": false,
+          "role": "Guardian",
+          "step_cooldown": 0.0,
+          "step_dir": [
+            1.0,
+            0.0
+          ],
+          "step_left": 0.0,
+          "strike_cooldown": 0.0,
+          "target": [
+            238.86589050293,
+            390.0
+          ],
+          "tick": 143.0
+        },
+        "courier_position": [
+          225.332336425781,
+          390.0
+        ],
+        "focused": true,
+        "position": [
+          743.500183105469,
+          390.0
+        ],
+        "preview": {
+          "health": 5.0,
+          "id": "standard",
+          "movement": 1.0,
+          "name": "Standard clothing",
+          "recovery": 18.0,
+          "role": "Guardian",
+          "style": "Steady",
+          "summary": "Sustained frontal guard; standard counter opening."
+        },
+        "quarantined": false,
+        "reason": "Server-confirmed world; presentation interpolation only.",
+        "status": "live",
+        "suspended": false
+      },
+      "step": {
+        "actions": [
+          {
+            "available": false,
+            "caption": "HOLD; FACE THE BOLT",
+            "cost": 22.0,
+            "drain": 12.0,
+            "key": "technique",
+            "status": "hold",
+            "wait": 0.0
+          },
+          {
+            "available": false,
+            "caption": "RECOVERING",
+            "cost": 25.0,
+            "drain": 0.0,
+            "key": "step",
+            "status": "recovering",
+            "wait": 0.199999999999999
+          },
+          {
+            "available": false,
+            "caption": "WAIT FOR OPEN",
+            "cost": 12.0,
+            "drain": 0.0,
+            "key": "counter",
+            "status": "armored",
+            "wait": 0.0
+          }
+        ],
+        "age": 0.0166974285714285,
+        "capture": 10,
+        "catalog": {
+          "kind": "catalog",
+          "outfits": [
+            {
+              "health": 5.0,
+              "id": "standard",
+              "movement": 1.0,
+              "name": "Standard clothing",
+              "recovery": 18.0
+            },
+            {
+              "health": 6.0,
+              "id": "riveted",
+              "movement": 0.8,
+              "name": "Riveted coat",
+              "recovery": 18.0
+            },
+            {
+              "health": 4.0,
+              "id": "trail",
+              "movement": 1.2,
+              "name": "Trail wrap",
+              "recovery": 18.0
+            },
+            {
+              "health": 4.0,
+              "id": "field_sash",
+              "movement": 1.0,
+              "name": "Field sash",
+              "recovery": 26.0
+            }
+          ],
+          "techniques": {
+            "Duelist": [
+              {
+                "id": "none",
+                "summary": "Draw a bolt, leave its locked line; guard is unavailable."
+              }
+            ],
+            "Guardian": [
+              {
+                "id": "Steady",
+                "summary": "Sustained frontal guard; standard counter opening."
+              },
+              {
+                "id": "Riposte",
+                "summary": "Guard expires while held; a timed block earns a longer opening."
+              }
+            ]
+          },
+          "v": 1.0
+        },
+        "confirmed": {
+          "actions": {
+            "counter": {
+              "cost": 12.0,
+              "drain": 0.0,
+              "status": "armored",
+              "wait": 0.0
+            },
+            "counter_radius": 130.0,
+            "draw_radius": 340.0,
+            "step": {
+              "cost": 25.0,
+              "drain": 0.0,
+              "status": "recovering",
+              "wait": 0.199999999999999
+            },
+            "technique": {
+              "cost": 22.0,
+              "drain": 12.0,
+              "status": "hold",
+              "wait": 0.0
+            }
+          },
+          "cargo": 3.0,
+          "clock": 1.28333333333333,
+          "counters": {
+            "blocks": 0.0,
+            "counters": 0.0,
+            "courier_hits": 0.0,
+            "dodges": 1.0,
+            "player_hits": 0.0,
+            "redirects": 0.0,
+            "rejected": 0.0
+          },
+          "courier": [
+            195.93278503418,
+            390.0
+          ],
+          "courier_speed": 28.0,
+          "courier_x": 195.933,
+          "enemy_focus": 3.0,
+          "energy": 85.8,
+          "facing": [
+            1.0,
+            0.0
+          ],
+          "feint_cooldown": 0.0,
+          "guard": false,
+          "guard_state": "DOWN",
+          "guard_style": "Steady",
+          "health_limit": 5.0,
+          "hp": 5.0,
+          "last_impact": {},
+          "locked_face": [
+            1.0,
+            0.0
+          ],
+          "message": "Keep the courier alive until the far gate. Read the first amber line.",
+          "mode": "play",
+          "opening": 0.0,
+          "phase": "rest",
+          "player": [
+            743.500183105469,
+            390.0
+          ],
+          "preparation": {
+            "health": 5.0,
+            "movement": 1.0,
+            "outfit": "standard",
+            "recovery": 18.0,
+            "role": "Guardian",
+            "style": "Steady"
+          },
+          "pulse": [
+            0.0,
+            0.0
+          ],
+          "redirected": false,
+          "role": "Guardian",
+          "step_cooldown": 0.199999999999999,
+          "step_dir": [
+            1.0,
+            0.0
+          ],
+          "step_left": 0.0,
+          "strike_cooldown": 0.0,
+          "target": [
+            0.0,
+            0.0
+          ],
+          "tick": 77.0
+        },
+        "courier_position": [
+          195.00032043457,
+          390.0
+        ],
+        "focused": true,
+        "position": [
+          743.500183105469,
+          390.0
+        ],
+        "preview": {
+          "health": 5.0,
+          "id": "standard",
+          "movement": 1.0,
+          "name": "Standard clothing",
+          "recovery": 18.0,
+          "role": "Guardian",
+          "style": "Steady",
+          "summary": "Sustained frontal guard; standard counter opening."
+        },
+        "quarantined": false,
+        "reason": "Server-confirmed world; presentation interpolation only.",
+        "status": "live",
+        "suspended": false
+      },
+      "suspended": {
+        "actions": [
+          {
+            "available": false,
+            "caption": "CONTROLS SUSPENDED",
+            "cost": 22.0,
+            "drain": 12.0,
+            "key": "technique",
+            "status": "hold",
+            "wait": 0.0
+          },
+          {
+            "available": false,
+            "caption": "CONTROLS SUSPENDED",
+            "cost": 25.0,
+            "drain": 0.0,
+            "key": "step",
+            "status": "ready",
+            "wait": 0.0
+          },
+          {
+            "available": false,
+            "caption": "CONTROLS SUSPENDED",
+            "cost": 12.0,
+            "drain": 0.0,
+            "key": "counter",
+            "status": "armored",
+            "wait": 0.0
+          }
+        ],
+        "age": 0.0,
+        "capture": 12,
+        "catalog": {
+          "kind": "catalog",
+          "outfits": [
+            {
+              "health": 5.0,
+              "id": "standard",
+              "movement": 1.0,
+              "name": "Standard clothing",
+              "recovery": 18.0
+            },
+            {
+              "health": 6.0,
+              "id": "riveted",
+              "movement": 0.8,
+              "name": "Riveted coat",
+              "recovery": 18.0
+            },
+            {
+              "health": 4.0,
+              "id": "trail",
+              "movement": 1.2,
+              "name": "Trail wrap",
+              "recovery": 18.0
+            },
+            {
+              "health": 4.0,
+              "id": "field_sash",
+              "movement": 1.0,
+              "name": "Field sash",
+              "recovery": 26.0
+            }
+          ],
+          "techniques": {
+            "Duelist": [
+              {
+                "id": "none",
+                "summary": "Draw a bolt, leave its locked line; guard is unavailable."
+              }
+            ],
+            "Guardian": [
+              {
+                "id": "Steady",
+                "summary": "Sustained frontal guard; standard counter opening."
+              },
+              {
+                "id": "Riposte",
+                "summary": "Guard expires while held; a timed block earns a longer opening."
+              }
+            ]
+          },
+          "v": 1.0
+        },
+        "confirmed": {
+          "actions": {
+            "counter": {
+              "cost": 12.0,
+              "drain": 0.0,
+              "status": "armored",
+              "wait": 0.0
+            },
+            "counter_radius": 130.0,
+            "draw_radius": 340.0,
+            "step": {
+              "cost": 25.0,
+              "drain": 0.0,
+              "status": "ready",
+              "wait": 0.0
+            },
+            "technique": {
+              "cost": 22.0,
+              "drain": 12.0,
+              "status": "hold",
+              "wait": 0.0
+            }
+          },
+          "cargo": 3.0,
+          "clock": 0.0166666666666667,
+          "counters": {
+            "blocks": 0.0,
+            "counters": 0.0,
+            "courier_hits": 0.0,
+            "dodges": 1.0,
+            "player_hits": 0.0,
+            "redirects": 0.0,
+            "rejected": 0.0
+          },
+          "courier": [
+            211.332550048828,
+            390.0
+          ],
+          "courier_speed": 28.0,
+          "courier_x": 211.333,
+          "enemy_focus": 3.0,
+          "energy": 89.7,
+          "facing": [
+            1.0,
+            0.0
+          ],
+          "feint_cooldown": 0.0,
+          "guard": false,
+          "guard_state": "DOWN",
+          "guard_style": "Steady",
+          "health_limit": 5.0,
+          "hp": 5.0,
+          "last_impact": {},
+          "locked_face": [
+            1.0,
+            0.0
+          ],
+          "message": "BOLT: intercept facing the sentinel, or draw its aim with a feint.",
+          "mode": "play",
+          "opening": 0.0,
+          "phase": "bolt",
+          "player": [
+            743.500183105469,
+            390.0
+          ],
+          "preparation": {
+            "health": 5.0,
+            "movement": 1.0,
+            "outfit": "standard",
+            "recovery": 18.0,
+            "role": "Guardian",
+            "style": "Steady"
+          },
+          "pulse": [
+            0.0,
+            0.0
+          ],
+          "redirected": false,
+          "role": "Guardian",
+          "step_cooldown": 0.0,
+          "step_dir": [
+            1.0,
+            0.0
+          ],
+          "step_left": 0.0,
+          "strike_cooldown": 0.0,
+          "target": [
+            238.86589050293,
+            390.0
+          ],
+          "tick": 110.0
+        },
+        "courier_position": [
+          211.332550048828,
+          390.0
+        ],
+        "focused": true,
+        "position": [
+          743.500183105469,
+          390.0
+        ],
+        "preview": {
+          "health": 5.0,
+          "id": "standard",
+          "movement": 1.0,
+          "name": "Standard clothing",
+          "recovery": 18.0,
+          "role": "Guardian",
+          "style": "Steady",
+          "summary": "Sustained frontal guard; standard counter opening."
+        },
+        "quarantined": true,
+        "reason": "Server-confirmed world; presentation interpolation only.",
+        "status": "live",
+        "suspended": true
+      },
+      "walking": {
+        "actions": [
+          {
+            "available": false,
+            "caption": "HOLD; FACE THE BOLT",
+            "cost": 22.0,
+            "drain": 12.0,
+            "key": "technique",
+            "status": "hold",
+            "wait": 0.0
+          },
+          {
+            "available": true,
+            "caption": "READY AT SNAPSHOT",
+            "cost": 25.0,
+            "drain": 0.0,
+            "key": "step",
+            "status": "ready",
+            "wait": 0.0
+          },
+          {
+            "available": false,
+            "caption": "MOVE INTO RANGE",
+            "cost": 12.0,
+            "drain": 0.0,
+            "key": "counter",
+            "status": "range",
+            "wait": 0.0
+          }
+        ],
+        "age": 0.0347958888888889,
+        "capture": 9,
+        "catalog": {
+          "kind": "catalog",
+          "outfits": [
+            {
+              "health": 5.0,
+              "id": "standard",
+              "movement": 1.0,
+              "name": "Standard clothing",
+              "recovery": 18.0
+            },
+            {
+              "health": 6.0,
+              "id": "riveted",
+              "movement": 0.8,
+              "name": "Riveted coat",
+              "recovery": 18.0
+            },
+            {
+              "health": 4.0,
+              "id": "trail",
+              "movement": 1.2,
+              "name": "Trail wrap",
+              "recovery": 18.0
+            },
+            {
+              "health": 4.0,
+              "id": "field_sash",
+              "movement": 1.0,
+              "name": "Field sash",
+              "recovery": 26.0
+            }
+          ],
+          "techniques": {
+            "Duelist": [
+              {
+                "id": "none",
+                "summary": "Draw a bolt, leave its locked line; guard is unavailable."
+              }
+            ],
+            "Guardian": [
+              {
+                "id": "Steady",
+                "summary": "Sustained frontal guard; standard counter opening."
+              },
+              {
+                "id": "Riposte",
+                "summary": "Guard expires while held; a timed block earns a longer opening."
+              }
+            ]
+          },
+          "v": 1.0
+        },
+        "confirmed": {
+          "actions": {
+            "counter": {
+              "cost": 12.0,
+              "drain": 0.0,
+              "status": "range",
+              "wait": 0.0
+            },
+            "counter_radius": 130.0,
+            "draw_radius": 340.0,
+            "step": {
+              "cost": 25.0,
+              "drain": 0.0,
+              "status": "ready",
+              "wait": 0.0
+            },
+            "technique": {
+              "cost": 22.0,
+              "drain": 12.0,
+              "status": "hold",
+              "wait": 0.0
+            }
+          },
+          "cargo": 3.0,
+          "clock": 0.483333333333333,
+          "counters": {
+            "blocks": 0.0,
+            "counters": 0.0,
+            "courier_hits": 0.0,
+            "dodges": 0.0,
+            "player_hits": 0.0,
+            "redirects": 0.0,
+            "rejected": 0.0
+          },
+          "courier": [
+            173.533126831055,
+            390.0
+          ],
+          "courier_speed": 28.0,
+          "courier_x": 173.533,
+          "enemy_focus": 3.0,
+          "energy": 100.0,
+          "facing": [
+            1.0,
+            0.0
+          ],
+          "feint_cooldown": 0.0,
+          "guard": false,
+          "guard_state": "DOWN",
+          "guard_style": "Steady",
+          "health_limit": 5.0,
+          "hp": 5.0,
+          "last_impact": {},
+          "locked_face": [
+            1.0,
+            0.0
+          ],
+          "message": "Keep the courier alive until the far gate. Read the first amber line.",
+          "mode": "play",
+          "opening": 0.0,
+          "phase": "rest",
+          "player": [
+            595.833557128906,
+            390.0
+          ],
+          "preparation": {
+            "health": 5.0,
+            "movement": 1.0,
+            "outfit": "standard",
+            "recovery": 18.0,
+            "role": "Guardian",
+            "style": "Steady"
+          },
+          "pulse": [
+            0.0,
+            0.0
+          ],
+          "redirected": false,
+          "role": "Guardian",
+          "step_cooldown": 0.0,
+          "step_dir": [
+            0.0,
+            0.0
+          ],
+          "step_left": 0.0,
+          "strike_cooldown": 0.0,
+          "target": [
+            0.0,
+            0.0
+          ],
+          "tick": 29.0
+        },
+        "courier_position": [
+          173.107421875,
+          390.0
+        ],
+        "focused": true,
+        "position": [
+          592.032531738281,
+          390.0
+        ],
+        "preview": {
+          "health": 5.0,
+          "id": "standard",
+          "movement": 1.0,
+          "name": "Standard clothing",
+          "recovery": 18.0,
+          "role": "Guardian",
+          "style": "Steady",
+          "summary": "Sustained frontal guard; standard counter opening."
+        },
+        "quarantined": false,
+        "reason": "Server-confirmed world; presentation interpolation only.",
+        "status": "live",
+        "suspended": false
+      }
+    }
+  },
+  "runtime": "4.6.3.stable.official.7d41c59c4",
+  "schema_version": 1,
+  "scope": "Actual source/PCK remote window, XTest keyboard/focus, TCP authority, costs and fail-closed presentation. No independent human, latency benchmark or complete network player journey claim.",
+  "startup": {
+    "pack": {
+      "authority_started_after_preflight": true,
+      "rendered_input_ready_ms": 557.662
+    },
+    "source": {
+      "authority_started_after_preflight": true,
+      "rendered_input_ready_ms": 803.359
+    }
+  }
+}

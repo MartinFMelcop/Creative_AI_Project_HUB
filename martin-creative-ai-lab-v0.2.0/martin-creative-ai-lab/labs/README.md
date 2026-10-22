@@ -6,9 +6,14 @@ source inventory, truthful maturity, consumer relationship, validity boundary an
 next acceptance live in [the transformation catalog](origins.json). The
 [public entry point](../../../README.md) offers a concise navigation table.
 A destination is not operational merely because it has an entry or a directory.
-Seven destinations remain incomplete; they cannot be postponed indefinitely.
+Six destinations remain incomplete; they cannot be postponed indefinitely.
 
 ## Operational methods
+
+- [Networking & Persistence](networking-persistence/README.md): binds inspected commit/
+  replay invariants to actual joint expedition recovery across processes and injected
+  failures. File corruption, competing ownership and retry/conflict controls remain
+  distinct from network/account or power-loss claims. [Execution](../evidence/persistent-expedition/RUN.json).
 
 - [World & Gameplay Systems](world-gameplay/README.md): typed class/background/skill
   intake and atomic prepared-action choices consumed by real C# encounters. Distinct

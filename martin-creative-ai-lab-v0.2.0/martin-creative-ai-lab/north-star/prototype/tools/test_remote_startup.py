@@ -45,6 +45,25 @@ class StartupChecks(unittest.TestCase):
             files = list((output/'failure').iterdir());self.assertEqual([p.name for p in files],['source-window.log'])
             self.assertEqual(files[0].stat().st_size,65536);self.assertTrue(files[0].read_bytes().endswith(b'RENDERER_TAIL'))
 
+    def test_transport_live_still_waits_for_neutral_rearm(self):
+        ready = dict(status='live', confirmed={'tick': 1}, focused=True,
+                     suspended=False, quarantined=False,
+                     actions=[{'caption': 'READY', 'cost': 999}] * 3)
+        blocked = dict(ready, actions=[{'caption': 'RELEASE TO REARM'}] * 3)
+        sequence = iter([blocked, ready])
+        observed = runner.wait_input_ready(lambda: next(sequence), timeout=.2)
+        self.assertEqual(observed, ready)
+        # Readiness must not wait for desired semantic values and hide a real defect.
+        self.assertEqual(observed['actions'][1]['cost'], 999)
+
+    def test_rearm_timeout_and_terminal_state_remain_fail_closed(self):
+        blocked = dict(status='live', confirmed={'tick': 1}, focused=True,
+                       suspended=False, quarantined=True, actions=[])
+        with self.assertRaisesRegex(ValueError, 'bounded neutral rearm'):
+            runner.wait_input_ready(lambda: blocked, timeout=.01)
+        with self.assertRaisesRegex(ValueError, 'failed before neutral'):
+            runner.wait_input_ready(lambda: dict(blocked, status='error'), timeout=.1)
+
     def test_six_second_graphical_startup_preserves_real_source_and_pack_controls(self):
         engine = shutil.which(os.environ.get('CROSSING_GODOT','godot'))
         self.assertIsNotNone(engine)
@@ -54,12 +73,29 @@ class StartupChecks(unittest.TestCase):
                                'if "--headless" not in sys.argv and "--version" not in sys.argv:time.sleep(6)\n'
                                f'os.execv({engine!r},[{engine!r},*sys.argv[1:]])\n')
             wrapper.chmod(0o755)
+            original_server = runner.authority.SERVER
+            staged_server = root/'delayed-neutral-server.gd'
+            source = original_server.read_text()
+            marker = '\thigh_water=int(data.seq);input_tick=server_tick;accepted+=1'
+            self.assertIn(marker, source)
+            staged_server.write_text(source.replace(marker,
+                '\tif quarantined and server_tick-active_tick<24:return\n' + marker))
+            runner.authority.SERVER = staged_server
             try:result = runner.verify(root/'result',str(wrapper))
             except Exception:
                 destination = os.environ.get('NORTH_STAR_STARTUP_RESULT')
                 if destination and (root/'result/failure').is_dir():
                     shutil.copytree(root/'result/failure',Path(destination).with_suffix('')/'failure',dirs_exist_ok=True)
                 raise
+            finally:
+                runner.authority.SERVER = original_server
+            result['controlled_initial_neutral_delay_ticks'] = 24
+            result['base_input_identities'] = result.pop('identities')
+            result['controlled_authority'] = {
+                'base_sha256': runner.authority.digest(original_server),
+                'executed_staged_sha256': runner.authority.digest(staged_server),
+                'injection': 'Hold initial neutral rearm until 24 server ticks after hello; preserve model and client gates.'}
+            result['scope'] = 'Controlled delayed-neutral authority fixture with actual unchanged source/PCK model and remote window; not an unchanged authority-script execution.'
             self.assertEqual(result['checks'],{'passed':46,'failed':0})
             self.assertEqual(set(result['startup']),{'source','pack'})
             for observed in result['startup'].values():

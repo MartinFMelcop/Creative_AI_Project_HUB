@@ -1,0 +1,74 @@
+{
+  "schema_version": 1,
+  "kind": "actual_stdin_recovery",
+  "mid": {
+    "revision": 4,
+    "state": {
+      "class_id": "anchor",
+      "background_id": "workshop",
+      "slots": [
+        "brace",
+        null,
+        null,
+        null
+      ],
+      "active": true,
+      "complete": false,
+      "won": false,
+      "stage": 0,
+      "beat": 1,
+      "position": 1,
+      "health": 6,
+      "resolve": 10,
+      "rig": "Trail",
+      "attempts": 1,
+      "consumed_rigs": 1,
+      "transactions": 3,
+      "inventory": {
+        "fiber": 0,
+        "binder": 0,
+        "trail_rig": 1
+      },
+      "level": 1,
+      "xp": 0,
+      "unspent": 0,
+      "vitality": 0,
+      "focus": 0
+    }
+  },
+  "completed": {
+    "revision": 16,
+    "state": {
+      "class_id": "anchor",
+      "background_id": "trailborn",
+      "slots": [
+        "brace",
+        "dash",
+        null,
+        null
+      ],
+      "active": false,
+      "complete": true,
+      "won": true,
+      "stage": 1,
+      "beat": 6,
+      "position": 4,
+      "health": 11,
+      "resolve": 5,
+      "rig": "Trail",
+      "attempts": 2,
+      "consumed_rigs": 2,
+      "transactions": 4,
+      "inventory": {
+        "fiber": 0,
+        "binder": 0,
+        "trail_rig": 0
+      },
+      "level": 3,
+      "xp": 25,
+      "unspent": 2,
+      "vitality": 0,
+      "focus": 2
+    }
+  }
+}

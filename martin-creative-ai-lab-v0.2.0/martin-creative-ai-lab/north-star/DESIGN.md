@@ -513,3 +513,16 @@ This is a terminal/Linux experiment, not feedback/recognition, final canon, Unit
 Windows, Steam or independent player approval. Revisit after actual authored experience
 and human observation; source catalogs and mechanical combinations are not diverse
 implemented abilities or evidence of balance.
+
+## Experimental local continuity of earned choices
+
+Recovery preserves the existing prepared expedition's identity, earned actions,
+resource costs and encounter consequences across process exit. It adds continuation,
+not a new authored narrative branch or approved profession/class rule. Creative review
+preferred narrative continuity as the next experience frontier; Engineering and Science
+selected local recovery as a concrete prerequisite because the current consumer lost
+all investment on quit. CRE-005 supports remembered consequences; CRE-013 remains a
+hypothesis informing safe refusal without erasing earned choices. Explicit new/open
+and refusal of corrupt/incompatible runs prevent silent replacement. Replayed commands
+must not repay rewards or refund failed rigs. Human understanding of continuation,
+Windows/Unity integration and authored NPC consequences remain separate investigations.

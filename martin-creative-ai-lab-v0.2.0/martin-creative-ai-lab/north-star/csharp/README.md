@@ -133,3 +133,12 @@ a small experimental skill catalog controls available verbs and earned-level ent
 The [World & Gameplay method](../../labs/world-gameplay/README.md) distinguishes source
 contracts from helper defects and from the unimplemented historical skill catalog.
 No final class/background canon, Unity scene or Windows/Steam execution is implied.
+
+## Explicit local continuation
+
+[Recovery](Recovery/README.md) persists accepted commands before acknowledgment and
+reconstructs the actual prepared expedition by validated replay. Explicit new/open,
+local ownership, bounded versioned rules and failure refusal preserve identity,
+resources and earned progress together. The [Networking & Persistence method](../../labs/networking-persistence/README.md)
+executes real restart/crash-boundary controls. This .NET10 local host is not a Unity
+runtime assembly, account server, Steam Cloud integration or power-loss guarantee.

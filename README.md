@@ -54,7 +54,7 @@ make its destination laboratory operational.
 | P08 | Audio & Adaptive Music | Incomplete |
 | P09 | Build, Release & Operations | Incomplete |
 | P10 | [World & Gameplay Systems](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/labs/world-gameplay/README.md) | Operational, bounded prepared-action research |
-| P11 | Networking & Persistence | Incomplete |
+| P11 | [Networking & Persistence](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/labs/networking-persistence/README.md) | Operational, bounded local process recovery |
 
 [The laboratory catalog](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/labs/origins.json) owns destinations, maturity,
 consumers and remaining obligations. [Research entry points](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/labs/README.md)

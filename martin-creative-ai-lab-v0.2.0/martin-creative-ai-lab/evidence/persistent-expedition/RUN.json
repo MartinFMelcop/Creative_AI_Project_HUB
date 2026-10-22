@@ -1,0 +1,342 @@
+{
+  "schema_version": 1,
+  "kind": "destination_execution",
+  "baseline_commit": "983821cc967d83f00bad7d6df36e791f2aa8a830",
+  "capability_ids": [
+    "NS-C02",
+    "NS-C08"
+  ],
+  "scope": "Whole accepted-command replay and local commit-before-receipt preserve actual prepared expedition state across independent processes and injected file/ack failures",
+  "runtime": "Python3.12.14; .NET SDK10.0.401; actual .NET10 Linux processes and regular local files; no Unity/Windows execution",
+  "consumer_paths": [
+    "north-star/csharp/Domain/Progression.cs",
+    "north-star/csharp/Crossing/Session.cs",
+    "north-star/csharp/Crossing/Program.cs",
+    "north-star/csharp/Domain/Loadout.cs",
+    "north-star/csharp/Loadout/PreparedExpedition.cs",
+    "north-star/csharp/Loadout/Program.cs",
+    "north-star/csharp/Forge/Expedition.cs",
+    "north-star/csharp/Recovery/Journal.cs",
+    "north-star/csharp/Recovery/Program.cs"
+  ],
+  "checks": {
+    "passed": 82,
+    "failed": 0
+  },
+  "instrument_regressions": {
+    "passed": 10,
+    "failed": 0
+  },
+  "commands": [
+    {
+      "command": [
+        "python3",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "labs/networking-persistence",
+        "-p",
+        "test_*.py"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "python3",
+        "labs/networking-persistence/run.py",
+        "--dotnet",
+        "/workspace/work/structural-transformation/dotnet/dotnet",
+        "--output",
+        "/workspace/work/recovery-continuation/study.json"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "/workspace/work/structural-transformation/dotnet/dotnet",
+        "north-star/csharp/RecoveryChecks/bin/Release/net10.0/NorthStar.RecoveryChecks.dll",
+        "native",
+        "/workspace/work/recovery-continuation/native.json"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "/workspace/work/structural-transformation/dotnet/dotnet",
+        "north-star/csharp/Recovery/bin/Release/net10.0/NorthStar.Recovery.dll",
+        "--demo",
+        "/workspace/work/recovery-continuation/destination.json"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "/workspace/work/structural-transformation/dotnet/dotnet",
+        "north-star/csharp/Recovery/bin/Release/net10.0/NorthStar.Recovery.dll",
+        "play",
+        "/workspace/work/recovery-continuation/interactive-run.json"
+      ],
+      "exit_code": 0,
+      "stdin_artifact": "evidence/persistent-expedition/first-commands.txt",
+      "stdout_artifact": "evidence/persistent-expedition/first-terminal.txt"
+    },
+    {
+      "command": [
+        "/workspace/work/structural-transformation/dotnet/dotnet",
+        "north-star/csharp/Recovery/bin/Release/net10.0/NorthStar.Recovery.dll",
+        "play",
+        "/workspace/work/recovery-continuation/interactive-run.json"
+      ],
+      "exit_code": 0,
+      "stdin_artifact": "evidence/persistent-expedition/resume-commands.txt",
+      "stdout_artifact": "evidence/persistent-expedition/resume-terminal.txt"
+    },
+    {
+      "command": [
+        "north-star/csharp/RecoveryChecks/bin/Release/net10.0/NorthStar.RecoveryChecks",
+        "native",
+        "/workspace/work/recovery-continuation/apphost-native.json"
+      ],
+      "environment": {
+        "DOTNET_ROOT": "/workspace/work/structural-transformation/dotnet"
+      },
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "north-star/csharp/Recovery/bin/Release/net10.0/NorthStar.Recovery",
+        "--demo",
+        "/workspace/work/recovery-continuation/apphost-destination.json"
+      ],
+      "environment": {
+        "DOTNET_ROOT": "/workspace/work/structural-transformation/dotnet"
+      },
+      "exit_code": 0
+    }
+  ],
+  "source_artifacts": [
+    {
+      "local_path": "labs/networking-persistence/run.py",
+      "size_bytes": 12977,
+      "sha256": "1cab3fbc0d526fcb186e9aa23a03d07c4aa2a83465f987429414d76a77c0c78c"
+    },
+    {
+      "local_path": "north-star/csharp/Checks/NorthStar.Checks.csproj",
+      "size_bytes": 420,
+      "sha256": "3f58ee26c26f3030dcdb7cc2c6db2b7e14bff43d81e936b95cc116bc82978d35"
+    },
+    {
+      "local_path": "north-star/csharp/Checks/Program.cs",
+      "size_bytes": 15597,
+      "sha256": "77ad4bf5d9bdb348fef302eb97a35a47e2c5956ed4823a86a622f2cf035b72ae"
+    },
+    {
+      "local_path": "north-star/csharp/Crossing/NorthStar.Crossing.csproj",
+      "size_bytes": 352,
+      "sha256": "09fbdffe415d44079f66da83d4d22e5b91169f3f1abdd0e1ebc2bacd2e3f0c88"
+    },
+    {
+      "local_path": "north-star/csharp/Crossing/Program.cs",
+      "size_bytes": 4226,
+      "sha256": "268c1b5ac582dd06f15eb3e40e7ce859a9c58eecfc58c7586d94bcaecf9c595e"
+    },
+    {
+      "local_path": "north-star/csharp/Crossing/Session.cs",
+      "size_bytes": 5357,
+      "sha256": "d25ac05ba1a94432474dd1b14b4fd608e446fc5344dcc4f779d8d5fe27a1b2c5"
+    },
+    {
+      "local_path": "north-star/csharp/Domain/Crafting.cs",
+      "size_bytes": 8035,
+      "sha256": "5a5a892b3e68cff73f7a443d7c014c79dbebf2954d28f447e1bf3a9c4759de57"
+    },
+    {
+      "local_path": "north-star/csharp/Domain/Loadout.cs",
+      "size_bytes": 5692,
+      "sha256": "a1296ca13b5ba6728c073320b860e369ad2e01fdaacb45b5237ef40d0243f682"
+    },
+    {
+      "local_path": "north-star/csharp/Domain/NorthStar.Domain.csproj",
+      "size_bytes": 344,
+      "sha256": "9570b674acfea69bb60098f495afd3b9e2cef2575fcfeb6db71c2cdecb2c4876"
+    },
+    {
+      "local_path": "north-star/csharp/Domain/Progression.cs",
+      "size_bytes": 8331,
+      "sha256": "8495e1ad92fea069c2c3989f6f2cc2600980575e72812df9480ed193c51c8685"
+    },
+    {
+      "local_path": "north-star/csharp/Forge/Expedition.cs",
+      "size_bytes": 4688,
+      "sha256": "579c1eb8375a5c281d35338f1c93cb529c16bf330f0576046c970d42c816bfc3"
+    },
+    {
+      "local_path": "north-star/csharp/Forge/NorthStar.Forge.csproj",
+      "size_bytes": 420,
+      "sha256": "3f58ee26c26f3030dcdb7cc2c6db2b7e14bff43d81e936b95cc116bc82978d35"
+    },
+    {
+      "local_path": "north-star/csharp/Forge/Program.cs",
+      "size_bytes": 6419,
+      "sha256": "3a289847c487ca3bca8a406635b7f0a2334daa959d767d31b3f732445a398c3a"
+    },
+    {
+      "local_path": "north-star/csharp/ForgeChecks/NorthStar.ForgeChecks.csproj",
+      "size_bytes": 350,
+      "sha256": "8a5c8039bcf4e9cb06e51d0a8099ed2b509f0233ee2981d4ddd557c32b874419"
+    },
+    {
+      "local_path": "north-star/csharp/ForgeChecks/Program.cs",
+      "size_bytes": 10852,
+      "sha256": "c918c3f27ba4d388026de300ca851fdfa4dd2c053595e3a367701c786b71cc61"
+    },
+    {
+      "local_path": "north-star/csharp/Loadout/NorthStar.Loadout.csproj",
+      "size_bytes": 414,
+      "sha256": "8b7ae6ab602aa24a78926f23bdf1d0117d79293eeb493334c1a4a2d3d4c85613"
+    },
+    {
+      "local_path": "north-star/csharp/Loadout/PreparedExpedition.cs",
+      "size_bytes": 4861,
+      "sha256": "92fabdaa94f4ad4bb33a55a113a3d4f8cc63c86634d631413a529eb53df24668"
+    },
+    {
+      "local_path": "north-star/csharp/Loadout/Program.cs",
+      "size_bytes": 5919,
+      "sha256": "6409bc7a9d24a9c60ea59657b33925c6dd27e3a6a9a7a9736e2d3a5ff7d6d7d8"
+    },
+    {
+      "local_path": "north-star/csharp/LoadoutChecks/NorthStar.LoadoutChecks.csproj",
+      "size_bytes": 354,
+      "sha256": "1125d739eca20f534119389c4eda50f366d4e511b2d1b229e4ebbe3fb30945f8"
+    },
+    {
+      "local_path": "north-star/csharp/LoadoutChecks/Program.cs",
+      "size_bytes": 11660,
+      "sha256": "c6de586237e5fbb0df552eeb4e458ade42ecf9be86bda814285da223d084b367"
+    },
+    {
+      "local_path": "north-star/csharp/Recovery/Journal.cs",
+      "size_bytes": 12759,
+      "sha256": "cb0c7daa7b83009ac37f3ad8e51b26ec9c41450e63979686ad47715627e9486f"
+    },
+    {
+      "local_path": "north-star/csharp/Recovery/NorthStar.Recovery.csproj",
+      "size_bytes": 770,
+      "sha256": "9a2a91f12d4ad1d02b49724dfae7339929db1dcf15a79a33b49d13202079ef30"
+    },
+    {
+      "local_path": "north-star/csharp/Recovery/Program.cs",
+      "size_bytes": 11583,
+      "sha256": "0bd2489db6e4d1757caa42a46d862cccae103309beb43a98b1bb8c945ec18112"
+    },
+    {
+      "local_path": "north-star/csharp/RecoveryChecks/NorthStar.RecoveryChecks.csproj",
+      "size_bytes": 356,
+      "sha256": "79618f8cda20a1dd8b38190940befc0fa8d71279835ea450ca6a4e6ad0ccd6fb"
+    },
+    {
+      "local_path": "north-star/csharp/RecoveryChecks/Program.cs",
+      "size_bytes": 11418,
+      "sha256": "79009f6215c8c2e7ffb947c4ef3cab69cb4d262bc79085bb0d3857d796e9026c"
+    },
+    {
+      "local_path": "north-star/csharp/global.json",
+      "size_bytes": 55,
+      "sha256": "e0c0882461e712f6c2c66241bf2f175c60832e3ff077dc26091ff8c661d4193e"
+    },
+    {
+      "local_path": "projects/cinderwatch/Core/Journal.cs",
+      "size_bytes": 2149,
+      "sha256": "46bae735fc58e58dce317234c418775f410e58ad8bea728df2d41c8f098f38e4"
+    },
+    {
+      "local_path": "projects/eclipse-fair/Cli/Journal.cs",
+      "size_bytes": 2439,
+      "sha256": "64db61d7599aa852dfa9815b9f3d58e1126cacc116357388319c791c0d9d6a76"
+    },
+    {
+      "local_path": "projects/realtime-integration-lab/rooms-actions.cjs",
+      "size_bytes": 10329,
+      "sha256": "8c33b5975546027184955ac74eebafc6b96324ed80d2dc1be7c7b4f4cbb00504"
+    },
+    {
+      "local_path": "projects/realtime-integration-lab/rooms-backup.cjs",
+      "size_bytes": 12635,
+      "sha256": "b323743946f24dd688e888476898cd174f190cdb437fdc84454d71f926503b7f"
+    },
+    {
+      "local_path": "projects/realtime-integration-lab/rooms-store.cjs",
+      "size_bytes": 6186,
+      "sha256": "1dc491de2527b9575556d7224c9cd0c7b419948e0fd9666a5687969642be101c"
+    },
+    {
+      "local_path": "evidence/persistent-expedition/first-commands.txt",
+      "size_bytes": 46,
+      "sha256": "dc0b8c13c5a11f754ada4f60013425b4bc4df7b249087ee0781f89b3991ed13e"
+    },
+    {
+      "local_path": "evidence/persistent-expedition/resume-commands.txt",
+      "size_bytes": 126,
+      "sha256": "98294eff7503c29b9e08cd952b1a5040f29bb615e0a3ba5243757e6a2856aee1"
+    }
+  ],
+  "result_artifacts": [
+    {
+      "local_path": "evidence/persistent-expedition/results.json",
+      "size_bytes": 18410,
+      "sha256": "c9135f3b961e44811040e89933734781fd274a10f469353a86b49ed2666ce71b"
+    },
+    {
+      "local_path": "evidence/persistent-expedition/native.json",
+      "size_bytes": 4336,
+      "sha256": "d32293061cce16dd72e4420a4255eabc8168f6e7c3c6bbc83bba0c6064122658"
+    },
+    {
+      "local_path": "evidence/persistent-expedition/destination.json",
+      "size_bytes": 7974,
+      "sha256": "51290663d2f74786cad94d21be6b01cb33e964eb40fd893f2576f1568564383c"
+    },
+    {
+      "local_path": "evidence/persistent-expedition/interactive.json",
+      "size_bytes": 1361,
+      "sha256": "07e625a4cd2d293b3ab4df4ce2d5a7159f3c67838742d862145fd16a4ade8603"
+    },
+    {
+      "local_path": "evidence/persistent-expedition/first-terminal.txt",
+      "size_bytes": 2696,
+      "sha256": "dfe183066ec9cb800755bc955e200531e48805fb96ff17dd8d07eff5cda6d671"
+    },
+    {
+      "local_path": "evidence/persistent-expedition/resume-terminal.txt",
+      "size_bytes": 6667,
+      "sha256": "b25d6408b5ca0631d86a152eb313df82c88f925a9741a2c6c13ce4d2782bb575"
+    },
+    {
+      "local_path": "evidence/persistent-expedition/apphost-native.json",
+      "size_bytes": 4336,
+      "sha256": "d32293061cce16dd72e4420a4255eabc8168f6e7c3c6bbc83bba0c6064122658"
+    },
+    {
+      "local_path": "evidence/persistent-expedition/apphost-destination.json",
+      "size_bytes": 7974,
+      "sha256": "51290663d2f74786cad94d21be6b01cb33e964eb40fd893f2576f1568564383c"
+    }
+  ],
+  "observations": {
+    "native_controls": 82,
+    "abrupt_exit_boundaries": 3,
+    "exit_code_expected": 79,
+    "committed_completion_revision": 16,
+    "real_owner_process_death_recovered": true,
+    "interactive_mid_revision": 4,
+    "interactive_final_revision": 16
+  },
+  "limitations": [
+    "Static origin binding assay and actual local single-owner C# process/file consumer. No full origin runtime, power-loss durability, hostile save authentication, concurrent distributed ownership, Unity, Windows, Steam, human experience or final canon proof.",
+    "The checksum and source-embedded rules fingerprint are not authentication, account trust or a hostile-save boundary.",
+    "File Flush(true) and same-directory replacement were exercised across process interruptions; directory-fsync/power-cut, Windows/Unity/Steam and remote filesystem behavior remain unexecuted.",
+    "The source Cinder/Eclipse/P11 applications and their historical save/database formats were inspected, not executed or imported by this instrument."
+  ]
+}

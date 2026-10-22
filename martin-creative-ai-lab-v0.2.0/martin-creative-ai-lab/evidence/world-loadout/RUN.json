@@ -243,8 +243,8 @@
   "result_artifacts": [
     {
       "local_path": "evidence/world-loadout/results.json",
-      "size_bytes": 382012,
-      "sha256": "ded1f605e390cb78925486f63be0e74d3b5f9ae1a525b78152f1de673a226e55"
+      "size_bytes": 382625,
+      "sha256": "f425a751028eb7a2e76e48d898d87bf4926b6b93a8dc95e4e652c7d0643a2f83"
     },
     {
       "local_path": "evidence/world-loadout/native.json",
@@ -283,5 +283,7 @@
     "Helper variant findings are static bindings; stale-cache/erasure counterexamples are explicitly Python models, not historical Ruby execution.",
     "166 skill IDs are eligibility data, not implemented effects or adopted fictional classes/backgrounds. ClassVariant metadata introduces no destination gender restrictions.",
     "Prior progression and crafting consumers were reexecuted after shared assembly/API additions; their source evidence remains separately scoped."
-  ]
+  ],
+  "reverification_baseline": "983821cc967d83f00bad7d6df36e791f2aa8a830",
+  "reverification_reason": "Added a separate Recovery host over unchanged gameplay owners; reran instrument/native/demo/actual STDIN after the expanded C# source inventory."
 }

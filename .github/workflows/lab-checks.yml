@@ -521,3 +521,10 @@ jobs:
           dotnet build north-star/csharp/LoadoutChecks/NorthStar.LoadoutChecks.csproj -c Release
           dotnet north-star/csharp/LoadoutChecks/bin/Release/net10.0/NorthStar.LoadoutChecks.dll native "$RUNNER_TEMP/north-star-loadout-native.json"
           dotnet north-star/csharp/Loadout/bin/Release/net10.0/NorthStar.Loadout.dll --demo "$RUNNER_TEMP/north-star-loadout-journey.json"
+      - name: Execute persistent joint-state recovery and process failures
+        run: |
+          python3 -m unittest discover -s labs/networking-persistence -p 'test_*.py'
+          python3 labs/networking-persistence/run.py --dotnet dotnet --output "$RUNNER_TEMP/persistent-expedition.json" --compare evidence/persistent-expedition/results.json
+          dotnet build north-star/csharp/RecoveryChecks/NorthStar.RecoveryChecks.csproj -c Release
+          dotnet north-star/csharp/RecoveryChecks/bin/Release/net10.0/NorthStar.RecoveryChecks.dll native "$RUNNER_TEMP/north-star-recovery-native.json"
+          dotnet north-star/csharp/Recovery/bin/Release/net10.0/NorthStar.Recovery.dll --demo "$RUNNER_TEMP/north-star-recovery-journey.json"

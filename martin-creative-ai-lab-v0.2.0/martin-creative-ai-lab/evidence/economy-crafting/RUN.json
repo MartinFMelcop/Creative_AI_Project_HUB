@@ -125,8 +125,8 @@
   "result_artifacts": [
     {
       "local_path": "evidence/economy-crafting/results.json",
-      "size_bytes": 14837,
-      "sha256": "aa970124d6df365b4aeb6f7733067fe2acf9b311c96dfb303dd1fc7cda8d83f1"
+      "size_bytes": 15450,
+      "sha256": "00d31083e3ba3b06a5af0f1252e6f27c2575eb2d21d3e8996ddc61dbbc8cf447"
     },
     {
       "local_path": "evidence/economy-crafting/native.json",
@@ -223,6 +223,6 @@
     "Retained source errors are static assay observations, not executed historical crafting failures.",
     "Scripted policies are mechanical observations; no optimality, player preference or necessary crafting claim."
   ],
-  "reverification_baseline": "76fa51afc8f62680565ea91bca9dc143ab252ffc",
-  "reverification_reason": "Added prepared-loadout domain to the shared assembly and an explicit approach overload preserving Forge defaults. Instrument, native/demo and actual STDIN consumers reexecuted."
+  "reverification_baseline": "983821cc967d83f00bad7d6df36e791f2aa8a830",
+  "reverification_reason": "Added a separate Recovery host over unchanged gameplay owners; reran instrument/native/demo/actual STDIN after the expanded C# source inventory."
 }

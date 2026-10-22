@@ -31,7 +31,8 @@ class Classification(unittest.TestCase):
         for path in ('north-star/csharp/Domain/Progression.cs', 'labs/rpg-systems/run.py',
                      'evidence/rpg-progression/RUN.json', 'labs/economy-simulation/run.py',
                      'evidence/economy-crafting/RUN.json', 'labs/world-gameplay/run.py',
-                     'evidence/world-loadout/RUN.json', 'references/rave-master/source/PLAYER_LEVEL_STAT_BUDGET.csv'):
+                     'evidence/world-loadout/RUN.json', 'labs/networking-persistence/run.py',
+                     'evidence/persistent-expedition/RUN.json', 'references/rave-master/source/PLAYER_LEVEL_STAT_BUDGET.csv'):
             with self.subTest(path=path):
                 self.assertEqual(self.selected(w(path)), {'north_star_csharp'})
 
