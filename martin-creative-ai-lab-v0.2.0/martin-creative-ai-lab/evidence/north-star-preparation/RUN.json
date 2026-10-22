@@ -11,7 +11,7 @@
     "evidence/north-star-preparation/pack-transport.json": "07de3ab91cb44a0be4caa863eacafcb31d0a5a5615c1c067469a419cc1c98a40",
     "evidence/north-star-preparation/preparation.json": "5e0bf3e823e958902492b3f8f7babf4d83c4cb942b8148bc397ad4456ed44993",
     "evidence/north-star-preparation/preparation.png": "98bcf4dd433813fef460c9333a14468be7459df2ccbf91dd8b555c85f57aedb4",
-    "evidence/north-star-preparation/remote.json": "d746b5507b33726ffea2c5828e758180d6a642e71ebfccde5d406ddab321846a",
+    "evidence/north-star-preparation/remote.json": "bfb7cb035bb1319dc22fc96802bbeb3cebfdab7d50826606905a2cd9332014c6",
     "evidence/north-star-preparation/transport.json": "ec484f375d19020a9b9e7da30f8bd9bdeb654bf7f94db01ebb7c966d139377c5",
     "north-star/prototype/authority/intent.gd": "1419479da2db30315ce1adaad967d406fc336c712e2ee86d3ff6d15468c91379",
     "north-star/prototype/authority/intent_checks.gd": "1f6cf85015610e558089a0ce3f685c502de4d16d3db392bbebfd6d8dd6fc5b5d",
@@ -84,5 +84,11 @@
   "limits": "Twelve nominal existing-choice tuples, not new abilities/classes, twelve competitive builds, author-approved canon, human comprehension/balance, a lab/capability promotion or shipped network release. Local playable model/PCK/Linux0.5.0, protected originals and pins unchanged.",
   "provenance": "Successful scratch JSON/images copied byte-for-byte, all current consumer/tool identities checked. A preliminary run rejected changed test identities and wrote no accepted evidence. Current model/local release inputs match preceding execution.",
   "runtime": "4.6.3.stable.official.7d41c59c4",
-  "schema_version": 1
+  "schema_version": 1,
+  "remote_reverification": {
+    "baseline_commit": "cc53e89ef67f87a99f3e2bbd7a7fc6108b90c83a",
+    "command": "python3 north-star/prototype/tools/verify_remote.py --godot godot --output /workspace/work/recovery-continuation/remote-reverified.json",
+    "exit_code": 0,
+    "reason": "CI 39730287452 retained an obsolete instrument fingerprint. Actual four source/PCK living wins and native controls reexecuted. Only contract difference is tools/verify_remote_input.py SHA; semantic controls and all other identities are identical. Historical artifact/source bindings otherwise remain historical."
+  }
 }

@@ -105,5 +105,12 @@
     "The controlled test stages an instrumented authority script. Its base and executed hashes are explicit in controlled-startup.json; actual game model/window/PCK remain unchanged.",
     "Readiness checks transport/focus/suspension/rearm only; existing step cost25 and counter range assertions remain strict. A unit control confirms wrong semantic cost999 is not polled away.",
     "No production networking, WAN, account trust, physical controller, performance or human validation claim."
-  ]
+  ],
+  "loopback_reverification": {
+    "baseline_commit": "cc53e89ef67f87a99f3e2bbd7a7fc6108b90c83a",
+    "command": "python3 north-star/prototype/tools/verify_remote.py --godot godot --output /workspace/work/recovery-continuation/remote-reverified.json",
+    "exit_code": 0,
+    "reason": "CI 39730287452 retained an obsolete instrument fingerprint. Actual four source/PCK living wins and native controls reexecuted. Only contract difference is tools/verify_remote_input.py SHA; semantic controls and all other identities are identical. Historical artifact/source bindings otherwise remain historical.",
+    "artifact": "evidence/north-star-preparation/remote.json"
+  }
 }

@@ -117,7 +117,13 @@ OS checks and 46 normal source/PCK checks passed. [Evidence](../evidence/north-s
 separates the staged authority fixture from unchanged model/client/PCK execution.
 The controlled race does not establish the historical CI scheduling cause. This is
 supporting instrument repair, not another operational laboratory or product release.
-New publication and CI remain separate.
+Publication cc53e89 was verified on main. Its CI run 39730287452 passed C#
+and the integrity/authority gates, but the remote comparator refused an obsolete
+verify_remote_input.py fingerprint before startup testing. Actual loopback
+reexecution passed four source/PCK living wins and native controls. Only that
+instrument identity differs in the contract; semantic assertions, runtime/PCK and
+all other identities are unchanged. The evidence binding is corrected separately;
+new publication and CI remain separate.
 
 ## Rolling strategic investment — once-counted substantive units
 
