@@ -22,7 +22,7 @@ and Steam is the intended distribution ecosystem.**
 
 | Inspect or execute | Actual scope |
 |---|---|
-| [C# development foundation](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/README.md) | Engine-independent gameplay domain, consumer and checks. No Unity Editor or Windows-player execution is claimed. |
+| [C# development foundation](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/README.md) | Engine-independent progression/crafting domains, connected terminal consumers and checks. No Unity Editor or Windows-player execution is claimed. |
 | [Playable Godot research baseline](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/prototype/README.md) | An escort and connected return objective with distinct approaches, equipment trade-offs, cosmetic identity and consequential aid. Preserved during migration. |
 | [Committed-rush ability bench](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/prototype/abilities/README.md) | Separately runnable short/long movement commitments; source-only experiment with cost, timing and negative controls. |
 | [Current capability boundaries](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/capabilities.json) | Origin, adapted, destination and independently validated claims remain distinct. No production MMORPG or Steamworks readiness claim. |
@@ -44,7 +44,7 @@ make its destination laboratory operational.
 
 | Origin | Laboratory destination | Current maturity |
 |---|---|---|
-| P01 | Economy & Simulation | Incomplete |
+| P01 | [Economy & Simulation](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/labs/economy-simulation/README.md) | Operational, bounded crafting/conservation research |
 | P02 | AI Evaluation & Quality | Incomplete |
 | P03 | Input, Timing & Interaction | Incomplete |
 | P04 | Narrative & Continuity | Incomplete |

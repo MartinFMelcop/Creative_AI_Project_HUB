@@ -1,4 +1,4 @@
-# North Star C# progression foundation
+# North Star C# gameplay foundation
 
 A functioning **engine-independent C# domain and original terminal encounter**, built
 as the first practical step toward the selected Unity/C# production direction.
@@ -115,3 +115,12 @@ Unity Editor, activation/license and Windows build modules are unavailable in th
 current execution environment. No Unity or Windows validation is claimed. The next
 migration step must execute a real Editor/import/scene and relevant platform checks;
 existing Godot consumers retain their unresolved behavior/regression obligations.
+
+## Scarce crafting preparation experiment
+
+[Forge](Forge/README.md) composes the actual connected Crossing encounters with a
+finite material inventory, original recipes and one-encounter rig consumption. It
+exercises the [Economy & Simulation laboratory](../../labs/economy-simulation/README.md).
+The standalone Crossing remains unchanged; Forge's supply gate is an explicitly
+experimental scenario rule, not approved profession/class canon. Its new contribution
+is resource ownership and consequential production, not a new combat model.

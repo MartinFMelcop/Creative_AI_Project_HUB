@@ -6,9 +6,14 @@ source inventory, truthful maturity, consumer relationship, validity boundary an
 next acceptance live in [the transformation catalog](origins.json). The
 [public entry point](../../../README.md) offers a concise navigation table.
 A destination is not operational merely because it has an entry or a directory.
-Nine destinations remain incomplete; they cannot be postponed indefinitely.
+Eight destinations remain incomplete; they cannot be postponed indefinitely.
 
 ## Operational methods
+
+- [Economy & Simulation](economy-simulation/README.md): interrogates preserved crafting
+  schemas with typed controls and executes atomic resource ownership in an original
+  North Star preparation consumer. Width-only false acceptance and failed policies
+  remain evidence. [Execution](../evidence/economy-crafting/RUN.json).
 
 - [RPG Systems & Progression](rpg-systems/README.md): interrogates the actual RPG Maker
   XP progression tables/helpers/QA and executes a typed C# adaptation plus an original
@@ -21,7 +26,7 @@ Nine destinations remain incomplete; they cannot be postponed indefinitely.
   response envelopes. This is origin instrument execution, not a Unity migration or
   independent player result.
 
-The new progression capability is additional to the existing combat pilot. It does
+These bounded methods do
 not make the other destinations operational. Their next methods must produce real
 controls, results and practical consumer/decision value; shared instruments are welcome.
 

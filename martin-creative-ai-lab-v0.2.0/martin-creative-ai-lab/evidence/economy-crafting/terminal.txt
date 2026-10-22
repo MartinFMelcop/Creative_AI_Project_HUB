@@ -1,0 +1,48 @@
+NORTH STAR / FORGE — separate original expedition-supplies experiment, not Unity or final canon.
+4fiber +2binder can craft two rigs total. Each costs2fiber+1binder and is consumed for ONE encounter, even on failure.
+Plate rig: HP14/resolve6, Anchor skill blocks bolt for2. Trail rig: HP10/resolve10, Lure skill advances1 against bolt for3. Both take pulse damage unless moving.
+Unprepared: Plate/Anchor resources, walk/dash/wait only. Preparation is locked during encounters. No saves.
+{"stage":0,"active":false,"complete":false,"won":false,"beat":0,"position":0,"health":0,"resolve":0,"max_health":0,"max_resolve":0,"rig":"Unprepared","attempts":0,"consumed_rigs":0,"transactions":0,"inventory":{"fiber":4,"binder":2},"xp":0,"level":1,"unspent":0}
+Two rigs worth of supplies. Failed encounters never refund them.
+craft plate | craft trail | enter plate | enter trail | enter unprepared | vitality N | focus N | quit
+{"stage":0,"active":true,"complete":false,"won":false,"beat":0,"position":0,"health":14,"resolve":6,"max_health":14,"max_resolve":6,"rig":"Unprepared","attempts":1,"consumed_rigs":0,"transactions":0,"inventory":{"fiber":4,"binder":2},"xp":0,"level":1,"unspent":0}
+Encounter committed. Unprepared: skill unavailable; walk/dash/wait remain.
+BOLT: moving exposes health; the approach skill spends resolve to protect. Position needs 2 by beat4. walk | dash | skill | wait | quit
+{"stage":0,"active":true,"complete":false,"won":false,"beat":1,"position":1,"health":10,"resolve":6,"max_health":14,"max_resolve":6,"rig":"Unprepared","attempts":1,"consumed_rigs":0,"transactions":0,"inventory":{"fiber":4,"binder":2},"xp":0,"level":1,"unspent":0}
+Walk: 4 damage, 0 resolve spent.
+BOLT: moving exposes health; the approach skill spends resolve to protect. Position needs 2 by beat4. walk | dash | skill | wait | quit
+{"stage":0,"active":true,"complete":false,"won":false,"beat":2,"position":2,"health":6,"resolve":6,"max_health":14,"max_resolve":6,"rig":"Unprepared","attempts":1,"consumed_rigs":0,"transactions":0,"inventory":{"fiber":4,"binder":2},"xp":0,"level":1,"unspent":0}
+Walk: 4 damage, 0 resolve spent.
+PULSE at your current position: walking or dashing leaves it. Position needs 2 by beat4. walk | dash | skill | wait | quit
+{"stage":0,"active":true,"complete":false,"won":false,"beat":3,"position":3,"health":6,"resolve":6,"max_health":14,"max_resolve":6,"rig":"Unprepared","attempts":1,"consumed_rigs":0,"transactions":0,"inventory":{"fiber":4,"binder":2},"xp":0,"level":1,"unspent":0}
+Walk: 0 damage, 0 resolve spent.
+BOLT: moving exposes health; the approach skill spends resolve to protect. Position needs 2 by beat4. walk | dash | skill | wait | quit
+{"stage":1,"active":false,"complete":false,"won":true,"beat":4,"position":4,"health":2,"resolve":6,"max_health":14,"max_resolve":6,"rig":"Unprepared","attempts":1,"consumed_rigs":0,"transactions":0,"inventory":{"fiber":4,"binder":2},"xp":10,"level":2,"unspent":2}
+Walk: 4 damage, 0 resolve spent. Completed; reward committed. Level 2, 2 unspent points.
+craft plate | craft trail | enter plate | enter trail | enter unprepared | vitality N | focus N | quit
+{"stage":1,"active":false,"complete":false,"won":true,"beat":4,"position":4,"health":2,"resolve":6,"max_health":14,"max_resolve":6,"rig":"Unprepared","attempts":1,"consumed_rigs":0,"transactions":1,"inventory":{"fiber":2,"binder":1,"trail_rig":1},"xp":10,"level":2,"unspent":2}
+Committed.
+craft plate | craft trail | enter plate | enter trail | enter unprepared | vitality N | focus N | quit
+{"stage":1,"active":false,"complete":false,"won":true,"beat":4,"position":4,"health":2,"resolve":6,"max_health":14,"max_resolve":6,"rig":"Unprepared","attempts":1,"consumed_rigs":0,"transactions":1,"inventory":{"fiber":2,"binder":1,"trail_rig":1},"xp":10,"level":2,"unspent":0}
+Earned allocation committed.
+craft plate | craft trail | enter plate | enter trail | enter unprepared | vitality N | focus N | quit
+{"stage":1,"active":true,"complete":false,"won":false,"beat":0,"position":0,"health":11,"resolve":15,"max_health":11,"max_resolve":15,"rig":"Trail","attempts":2,"consumed_rigs":1,"transactions":2,"inventory":{"fiber":2,"binder":1,"trail_rig":0},"xp":10,"level":2,"unspent":0}
+Encounter committed. One Trail rig consumed; no refund on failure.
+BOLT: moving exposes health; the approach skill spends resolve to protect. Position needs 4 by beat6. walk | dash | skill | wait | quit
+{"stage":1,"active":true,"complete":false,"won":false,"beat":1,"position":1,"health":11,"resolve":12,"max_health":11,"max_resolve":15,"rig":"Trail","attempts":2,"consumed_rigs":1,"transactions":2,"inventory":{"fiber":2,"binder":1,"trail_rig":0},"xp":10,"level":2,"unspent":0}
+Skill: 0 damage, 3 resolve spent.
+BOLT: moving exposes health; the approach skill spends resolve to protect. Position needs 4 by beat6. walk | dash | skill | wait | quit
+{"stage":1,"active":true,"complete":false,"won":false,"beat":2,"position":2,"health":11,"resolve":9,"max_health":11,"max_resolve":15,"rig":"Trail","attempts":2,"consumed_rigs":1,"transactions":2,"inventory":{"fiber":2,"binder":1,"trail_rig":0},"xp":10,"level":2,"unspent":0}
+Skill: 0 damage, 3 resolve spent.
+PULSE at your current position: walking or dashing leaves it. Position needs 4 by beat6. walk | dash | skill | wait | quit
+{"stage":1,"active":true,"complete":false,"won":false,"beat":3,"position":4,"health":11,"resolve":8,"max_health":11,"max_resolve":15,"rig":"Trail","attempts":2,"consumed_rigs":1,"transactions":2,"inventory":{"fiber":2,"binder":1,"trail_rig":0},"xp":10,"level":2,"unspent":0}
+Dash: 0 damage, 1 resolve spent.
+BOLT: moving exposes health; the approach skill spends resolve to protect. Position needs 4 by beat6. walk | dash | skill | wait | quit
+{"stage":1,"active":true,"complete":false,"won":false,"beat":4,"position":5,"health":11,"resolve":5,"max_health":11,"max_resolve":15,"rig":"Trail","attempts":2,"consumed_rigs":1,"transactions":2,"inventory":{"fiber":2,"binder":1,"trail_rig":0},"xp":10,"level":2,"unspent":0}
+Skill: 0 damage, 3 resolve spent.
+PULSE at your current position: walking or dashing leaves it. Position needs 4 by beat6. walk | dash | skill | wait | quit
+{"stage":1,"active":true,"complete":false,"won":false,"beat":5,"position":7,"health":11,"resolve":4,"max_health":11,"max_resolve":15,"rig":"Trail","attempts":2,"consumed_rigs":1,"transactions":2,"inventory":{"fiber":2,"binder":1,"trail_rig":0},"xp":10,"level":2,"unspent":0}
+Dash: 0 damage, 1 resolve spent.
+BOLT: moving exposes health; the approach skill spends resolve to protect. Position needs 4 by beat6. walk | dash | skill | wait | quit
+{"stage":1,"active":false,"complete":true,"won":true,"beat":6,"position":8,"health":11,"resolve":1,"max_health":11,"max_resolve":15,"rig":"Trail","attempts":2,"consumed_rigs":1,"transactions":2,"inventory":{"fiber":2,"binder":1,"trail_rig":0},"xp":25,"level":3,"unspent":2}
+Two-stage expedition complete. Skill: 0 damage, 3 resolve spent. Completed; reward committed. Level 3, 2 unspent points.

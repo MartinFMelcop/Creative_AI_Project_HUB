@@ -442,24 +442,46 @@
       "owner_origin": "P01",
       "owner_role": "Economy & Simulation research lead, coordinated by the HUB maintainer; specialist assignments are per execution",
       "origin_projects": [
-        "P01"
+        "P01",
+        "P10"
       ],
-      "status": "incomplete",
+      "status": "operational",
       "domain": "Transactions, resources, ownership, economic policies, crafting and simulation",
-      "question": "Can resource ownership reject duplicate/reordered spending without partial mutations?",
+      "question": "Can typed crafting intake and atomic scarce-material ownership reject semantic shifts, replay/conflicts and failed-retry refunds while driving actual encounter preparation?",
       "source_paths": [
         "projects/eclipse-fair/Core",
         "projects/eclipse-fair/Cli/Journal.cs",
         "projects/eclipse-fair/Native",
         "projects/eclipse-fair/rules",
         "projects/eclipse-fair/tools",
-        "projects/eclipse-fair/provenance.json"
+        "projects/eclipse-fair/provenance.json",
+        "references/rave-master/snapshots/36af1651271422ae33856e8b5d7b45702215f165/source/RM_CORE/DATA/CORE/CRAFTING_RECIPE.csv",
+        "references/rave-master/snapshots/36af1651271422ae33856e8b5d7b45702215f165/source/RM_CORE/DATA/CORE/CRAFTING_STATION.csv"
       ],
       "source_inventory": "labs/source-inventory.json",
-      "consumer_paths": [],
-      "controls": [],
-      "validity_boundary": "Destination ownership and available sources are established; no operational laboratory method/results or North Star integration is claimed yet. Historical origin execution retains its own narrower scope.",
-      "next_objective": "Adapt a bounded P01 resource/journal batch assay; require retry/conflict conservation and actual North Star transaction consumer."
+      "consumer_paths": [
+        "north-star/csharp/Domain/Crafting.cs",
+        "north-star/csharp/Forge/Expedition.cs",
+        "north-star/csharp/Forge/Program.cs"
+      ],
+      "controls": [
+        "Width-only rival versus typed preserved station/recipe assay",
+        "Controlled schema, enum, quantity and reference defects",
+        "Actual C# atomic spending, replay/conflict, overflow and rejection controls",
+        "Two completed crafted journeys, matched unprepared failure and no-refund retry"
+      ],
+      "validity_boundary": "Static preserved data assay and actual original in-memory Linux C# terminal consumers; no historical crafting/RGSS execution, full item catalog integration, Unity import, Windows player, Steam, persistent/network ownership, final profession canon or human balance claim.",
+      "next_objective": "Evaluate item/tool/unlock provenance and journal recovery under injected failure before any persistent or shared-world crafting; extend methods to additional economic policies only with real consumers.",
+      "path": "labs/economy-simulation",
+      "instrument": "labs/economy-simulation/run.py",
+      "evidence": [
+        "evidence/economy-crafting/RUN.json",
+        "evidence/economy-crafting/results.json"
+      ],
+      "evidence_sha256": {
+        "evidence/economy-crafting/RUN.json": "3644b45cdce855b9f4fe40d9dff54448abc2579304c09eb9449f8fd907abd04b",
+        "evidence/economy-crafting/results.json": "d2e896f80e86a555950da6755cd6e9a3a6ec4fbd63693221afea9ce96c992146"
+      }
     },
     {
       "id": "ai-evaluation",
@@ -583,8 +605,8 @@
         "evidence/rpg-progression/results.json"
       ],
       "evidence_sha256": {
-        "evidence/rpg-progression/RUN.json": "4e1d68c993104b807f41ddb682b25bab7e8d257690b898a74d511e0361244367",
-        "evidence/rpg-progression/results.json": "f0aca9289e077a3d633cb415b89fe94721aa3c948ae5e04233c5d88100d57bcc"
+        "evidence/rpg-progression/RUN.json": "2fa14aa1d3c740ef472131bd3a9a5a590870be278601040f077c16aeb85c5d46",
+        "evidence/rpg-progression/results.json": "238a5839592d0a4be532d6c191c27e8154596bb5060c347e55ff32314ea2b3a3"
       }
     },
     {
@@ -800,7 +822,7 @@
         "evidence/rpg-progression/RUN.json"
       ],
       "evidence_sha256": {
-        "evidence/rpg-progression/RUN.json": "4e1d68c993104b807f41ddb682b25bab7e8d257690b898a74d511e0361244367"
+        "evidence/rpg-progression/RUN.json": "2fa14aa1d3c740ef472131bd3a9a5a590870be278601040f077c16aeb85c5d46"
       }
     },
     {
@@ -819,7 +841,7 @@
         "evidence/rpg-progression/results.json"
       ],
       "evidence_sha256": {
-        "evidence/rpg-progression/results.json": "f0aca9289e077a3d633cb415b89fe94721aa3c948ae5e04233c5d88100d57bcc"
+        "evidence/rpg-progression/results.json": "238a5839592d0a4be532d6c191c27e8154596bb5060c347e55ff32314ea2b3a3"
       }
     },
     {
@@ -854,8 +876,8 @@
         "projects/eclipse-fair/Core",
         "projects/eclipse-fair/Cli/Journal.cs"
       ],
-      "decision": "Remaining source capabilities in this laboratory domain are available or explicitly scoped gaps; source preservation and origin execution do not count as consumed.",
-      "next_action": "Adapt a bounded P01 resource/journal batch assay; require retry/conflict conservation and actual North Star transaction consumer."
+      "decision": "Whole-transaction prevalidation is separately integrated into the C# crafting consumer; remaining P01 journal/recovery, policy and market capabilities remain unresolved.",
+      "next_action": "Evaluate item/tool/unlock provenance and journal recovery under injected failure before any persistent or shared-world crafting; extend methods to additional economic policies only with real consumers."
     },
     {
       "id": "P02-REMAINING-SCOPE",
@@ -1040,8 +1062,8 @@
         "references/rave-master/snapshots/36af1651271422ae33856e8b5d7b45702215f165/source/RM_CORE/DATA/CORE/CRAFTING_STATION.csv",
         "references/rave-master/snapshots/36af1651271422ae33856e8b5d7b45702215f165/source/RM_CORE/DATA/CORE/ITENS_MASTER.csv"
       ],
-      "decision": "Available actual source/data/helpers require a bounded method and verified adaptation or justified rejection; no entire system is declared consumed.",
-      "next_action": "Assay actual row/ID/schema defects and implement atomic material/unlock/output controls in a real consumer; table presence is not implemented crafting."
+      "decision": "Recipe/station structure informed an original typed atomic consumer, but full legacy recipes/items/tools/unlocks remain unconsumed. The direct station adapter is separately rejected on actual semantic defects.",
+      "next_action": "Validate legacy item/tool/unlock identities and authored recipe applicability; execute any selected adaptation with real production consumers. Never infer historical runtime from data status."
     },
     {
       "id": "XP-WORLD-CONTINUITY",
@@ -1057,6 +1079,56 @@
       ],
       "decision": "Available actual source/data/helpers require a bounded method and verified adaptation or justified rejection; no entire system is declared consumed.",
       "next_action": "Separate actual selectors/state/expiry from debug/manual helpers, evaluate empty reputation effects and current quest/world consequences with original content."
+    },
+    {
+      "id": "P01-XP-CRAFT-TRANSACTION",
+      "origin_projects": [
+        "P01",
+        "P10"
+      ],
+      "laboratory_id": "economy-simulation",
+      "status": "INTEGRATED",
+      "source_paths": [
+        "projects/eclipse-fair/Core/Game.cs",
+        "projects/eclipse-fair/Cli/Journal.cs",
+        "references/rave-master/snapshots/36af1651271422ae33856e8b5d7b45702215f165/source/RM_CORE/DATA/CORE/CRAFTING_RECIPE.csv",
+        "references/rave-master/snapshots/36af1651271422ae33856e8b5d7b45702215f165/source/RM_CORE/DATA/CORE/CRAFTING_STATION.csv"
+      ],
+      "decision": "Adapt whole-operation prevalidation and recipe/station/material/unlock contracts into original finite-supply C# preparation. Actual executions cover atomic rejection, replay/conflict, consumption and connected encounter consequences; no legacy recipe catalog or durable journal integration.",
+      "consumer_paths": [
+        "north-star/csharp/Domain/Crafting.cs",
+        "north-star/csharp/Forge/Expedition.cs",
+        "north-star/csharp/Forge/Program.cs"
+      ],
+      "evidence": [
+        "evidence/economy-crafting/RUN.json",
+        "evidence/economy-crafting/results.json"
+      ],
+      "evidence_sha256": {
+        "evidence/economy-crafting/RUN.json": "3644b45cdce855b9f4fe40d9dff54448abc2579304c09eb9449f8fd907abd04b",
+        "evidence/economy-crafting/results.json": "d2e896f80e86a555950da6755cd6e9a3a6ec4fbd63693221afea9ce96c992146"
+      }
+    },
+    {
+      "id": "XP-STATION-DIRECT-ADAPTER",
+      "origin_projects": [
+        "P10"
+      ],
+      "laboratory_id": "economy-simulation",
+      "status": "REJECTED",
+      "source_paths": [
+        "references/rave-master/snapshots/36af1651271422ae33856e8b5d7b45702215f165/source/RM_CORE/DATA/CORE/CRAFTING_RECIPE.csv",
+        "references/rave-master/snapshots/36af1651271422ae33856e8b5d7b45702215f165/source/RM_CORE/DATA/CORE/CRAFTING_STATION.csv"
+      ],
+      "decision": "Reject direct unvalidated station import: all15records have18fields, yet16typed-field failures affect6stations and9referencing recipes. Preserve source bytes and typed negatives; this does not reject all crafting sources.",
+      "evidence": [
+        "evidence/economy-crafting/RUN.json",
+        "evidence/economy-crafting/results.json"
+      ],
+      "evidence_sha256": {
+        "evidence/economy-crafting/RUN.json": "3644b45cdce855b9f4fe40d9dff54448abc2579304c09eb9449f8fd907abd04b",
+        "evidence/economy-crafting/results.json": "d2e896f80e86a555950da6755cd6e9a3a6ec4fbd63693221afea9ce96c992146"
+      }
     }
   ]
 }

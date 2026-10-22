@@ -100,8 +100,8 @@
   "result_artifacts": [
     {
       "local_path": "evidence/rpg-progression/results.json",
-      "sha256": "f0aca9289e077a3d633cb415b89fe94721aa3c948ae5e04233c5d88100d57bcc",
-      "size_bytes": 116949
+      "sha256": "238a5839592d0a4be532d6c191c27e8154596bb5060c347e55ff32314ea2b3a3",
+      "size_bytes": 117668
     },
     {
       "local_path": "evidence/rpg-progression/native.json",
@@ -119,6 +119,8 @@
       "size_bytes": 4962
     }
   ],
+  "reverification_baseline": "770720a7ad4bca60d0aa577109b23cde9ea615eb",
+  "reverification_reason": "New crafting source added to the shared domain assembly; original progression and Crossing source unchanged. All affected original controls and STDIN rerun.",
   "runtime": "Python 3.12.14; .NET SDK 10.0.401; compiled C# consumers on Linux",
   "schema_version": 1,
   "scope": "Validated progression semantics consumed by the actual engine-independent North Star C# domain and connected command-line gameplay consumer; read-only RPG Maker XP source-contract study.",

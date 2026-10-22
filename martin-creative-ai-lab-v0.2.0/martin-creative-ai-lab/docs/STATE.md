@@ -1,7 +1,7 @@
 # Current transformation continuity
 
 **Updated:** 2026-10-22 UTC. **SEED:** 0.34.0. **Mode:** DEVELOPMENT with executed
-research. **Initial integration baseline:** `d007eb3b32a38b4ad12da363395d2196e9c17cb6`,
+research. **Current execution baseline:** `770720a7ad4bca60d0aa577109b23cde9ea615eb`,
 branch `work`, clean tracked/untracked tree; fetched main matched HEAD (0/0).
 
 This file owns current work and the lightweight rolling effort window. Durable direction
@@ -26,7 +26,29 @@ the preserved level helper requests `HP`/`SP`, while supplied tables use `HP_Gai
 C# adaptation against source vectors, threshold/partition controls and the source-binding
 assay. [Execution](../evidence/rpg-progression/RUN.json) owns exact observations and counts.
 The [existing combat pilot](../labs/combat-response/README.md) remains operational.
-Nine other destinations require implemented instruments/results, not more labels.
+Eight other destinations still require implemented instruments/results, not more labels.
+
+**Crafting continuation:** Independent Engineering, Scientific and Creative analyses
+compared class/skill/loadout with transactional crafting and actual Unity access.
+Crafting was selected because it matures incomplete Economy & Simulation and adds
+scarce resource ownership to an existing real encounter. Class/slot investigation
+remains consequential but must distinguish ACT1 filtering/destructive sanitation
+from the different bundled helper; it is not consumed by this work. The station
+assay rejects width-only false confidence: expected column counts can coexist with
+semantically shifted access/status fields. Original supplies remain experimental;
+no legacy profession/fiction is imported.
+
+The [Economy method](../labs/economy-simulation/README.md) and
+[Forge consumer](../north-star/csharp/Forge/README.md) bind the new bounded research
+and production behavior to [execution evidence](../evidence/economy-crafting/RUN.json).
+Existing Crossing and Godot behavior remain preserved migration baselines.
+Execution passed 80 native crafting controls and three scripted completed journeys.
+Mixed preparation completed with one rig consumed and fiber2/binder1 retained;
+all-unprepared walking passed the survey but failed the harder crossing. Failed rigs
+were not refunded and missing-rig retry was rejected without gameplay mutation.
+Ten instrument regressions, exact result reproduction and affected progression
+reexecution (555 cases, 77 native controls) passed. These are deterministic software
+observations, not player preference or balance results.
 
 **Consumption:** The catalog records a narrow rejected direct header adapter, integrated
 verified progression/budget contracts and unresolved remaining capabilities. Static
@@ -35,10 +57,12 @@ background fiction, huge skill catalog, crafting and quest/reputation semantics 
 silently adopted. Available inventories/QA inform prioritized deep investigation; missing
 historic material must not trigger indefinite recovery attempts.
 
-**Next acceptance:** Choose the strongest incomplete lab/source question against actual
+**Next acceptance:** Compare the strongest remaining incomplete lab/source question against actual
 product dependencies. High-value available candidates include typed class/skill/loadout
-prerequisites, combat/status formula/rounding contracts, crafting-table schema quality,
-NPC/reputation/quest transitions and resource-retry conservation. Deliver a method with
+prerequisites, combat/status formula/rounding contracts, NPC/reputation/quest
+transitions and durable transaction recovery. Crafting item/tool/unlock provenance
+remains unresolved beyond the executed station/recipe schema scope; do not repeat
+the same station assay as a new substantive unit. Deliver a method with
 controls, actual results and a real consumer/decision. Correct persistent lab
 underinvestment; do not substitute another isolated Godot HUD increment.
 
@@ -100,10 +124,15 @@ once, at most eight recent units, then examine sustained investment and dependen
 | Available-source audit and progression-contract laboratory | Legacy/laboratories | [Inventory](../labs/source-inventory.json), [execution](../evidence/rpg-progression/RUN.json); largest research/investigation scope |
 | Pure C# domain and original connected encounter consumer | North Star | [Destination](../north-star/csharp/README.md); substantial implementation dependent on recovered contracts |
 | Authority/schema, truthful public entry and affected-consumer CI routing | Repository/portfolio | Current versioned authorities, [negative controls](../tools/test_transformation.py), [CI routing controls](../tools/test_ci_scope.py); supporting structural scope |
+| Typed legacy crafting assay and atomic resource method | Legacy/laboratories | [Economy execution](../evidence/economy-crafting/RUN.json); substantive source/negative-control investigation correcting incomplete-lab investment |
+| Scarce crafting preparation in connected C# encounters | North Star | [Forge](../north-star/csharp/Forge/README.md); substantial dependent implementation; inventory/retry ownership, not a new combat model |
 
-These three units are separate outputs, not three counts for one test or three exact
-effort shares. This one execution cannot establish rolling percentage convergence.
-The earlier prototype-heavy baseline and nine incomplete labs justify continued
+These units are separate outputs, not duplicate counts for a shared test or exact
+effort shares. No measured percentage convergence is claimed. The crafting cycle
+primarily invests in a new incomplete laboratory and its consequential product
+consumer; repository routing/navigation is supporting maintenance, not another
+substantive governance unit.
+The earlier prototype-heavy baseline and eight incomplete labs justify continued
 corrective laboratory investment; actual Unity availability can justify a dependent
 product deviation. Each successor must inspect this window, update once-counted units,
 identify underinvestment and explain its chosen corrective or dependency frontier.

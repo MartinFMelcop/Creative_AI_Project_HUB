@@ -15,7 +15,7 @@ stack is distinct from the tools that have actually executed:
 
 | Consumer | Actual scope | Run / evidence |
 |---|---|---|
-| [C# progression destination](csharp/README.md) | Pure C#8/netstandard2.1 rules, native terminal preparation, two connected encounters, earned points and consequential allocations | [RPG Systems assay and destination](../evidence/rpg-progression/RUN.json) |
+| [C# gameplay destination](csharp/README.md) | Pure C#8/netstandard2.1 rules, connected terminal encounters, earned allocation and scarce crafting preparation | [Progression](../evidence/rpg-progression/RUN.json) / [Crafting](../evidence/economy-crafting/RUN.json) |
 | [Godot crossing adventure](prototype/README.md) | Existing local escort/return, equipment, appearance, optional medicine/route/aid and causal review | [Current delivery](../evidence/north-star-return-feedback/RUN.json) |
 | [Authority experiment](prototype/authority/README.md) | Developer-only loopback server, confirmed remote input and read-only preparation | [Execution](../evidence/north-star-preparation/RUN.json) |
 | [Ability bench](prototype/abilities/README.md) | Separate source-only committed-rush experiment and candidate-data execution | [Execution](../evidence/north-star-abilities/RUN.json) |
@@ -64,3 +64,8 @@ technical transfer does not merge fictional worlds or approve final canon.
 
 Continue the highest-value unresolved laboratory, legacy, product and lifecycle work
 under [the adaptive operating process](../docs/prompts/CONTINUOUS_DEVELOPMENT.md).
+
+The [Forge consumer](csharp/Forge/README.md) executes original scarce-material recipes
+and one-encounter supplies against the same C# Crossing. Its [crafting evidence](../evidence/economy-crafting/RUN.json)
+retains rejected source adapters, transaction controls and failed policies. It does
+not modify the retained Godot delivery or establish a production profession economy.

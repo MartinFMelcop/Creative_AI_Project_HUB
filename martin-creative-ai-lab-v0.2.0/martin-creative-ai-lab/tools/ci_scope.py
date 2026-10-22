@@ -53,7 +53,7 @@ def affected(path):
                                        {'labs/origins.json', 'labs/source-inventory.json'}):
         return ()
     if relative.startswith(('north-star/csharp/', 'labs/rpg-systems/', 'evidence/rpg-progression/',
-                            'references/rave-master/')):
+                            'references/rave-master/', 'labs/economy-simulation/', 'evidence/economy-crafting/')):
         return ('north_star_csharp',)
     if relative.startswith('references/'):
         return ()  # Source availability and pins are owned by unconditional integrity.

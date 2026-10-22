@@ -22,7 +22,10 @@
     "north-star/prototype/fittings.gd",
     "north-star/csharp/Domain/Progression.cs",
     "north-star/csharp/Crossing/Session.cs",
-    "north-star/csharp/Crossing/Program.cs"
+    "north-star/csharp/Crossing/Program.cs",
+    "north-star/csharp/Domain/Crafting.cs",
+    "north-star/csharp/Forge/Expedition.cs",
+    "north-star/csharp/Forge/Program.cs"
   ],
   "contribution_model": {
     "candidate": "Identified hypothesis; no transfer proof.",
@@ -40,16 +43,23 @@
         "P01"
       ],
       "reference_collections": [],
-      "contribution_status": "verified_in_origin",
+      "contribution_status": "adapted",
       "origin_validation": "execution_record_inspected",
       "scope": "C# local-match resource budgets, legal actions, replay and any-seat shared-device presentation.",
       "origin_evidence": [
         "projects/eclipse-fair/Core/Game.cs",
         "evidence/eclipse-fair/LOCAL_RUN.json"
       ],
-      "applicability_hypothesis": "Research whether resource transactions and economy serves a bounded North Star experiment; no consumer or reusable contract exists yet.",
+      "applicability_hypothesis": "Actual finite crafting choices drive distinct preparation in connected original C# encounters; player comprehension and production economy remain hypotheses.",
       "limits": "Four-seat deterministic match rules, not shared-world ownership, concurrent spending, general balance or a market economy.",
-      "next_validation": "Specify resource ownership and costs, then test one authoritative command contract under retries and simultaneous requests."
+      "next_validation": "Validate durable journal/recovery, item provenance and actual Unity/Windows consumer before production claims.",
+      "destination_consumer_paths": [
+        "north-star/csharp/Domain/Crafting.cs",
+        "north-star/csharp/Forge/Expedition.cs",
+        "north-star/csharp/Forge/Program.cs"
+      ],
+      "destination_evidence": "evidence/economy-crafting/RUN.json",
+      "destination_scope": "Atomic bounded in-memory material/output ownership with recipe/station/unlock validation, local replay/conflict ledger, one-encounter rig consumption and no-refund retry in original connected C# terminal encounters; no persistence, multiplayer, Unity, Windows or Steam execution."
     },
     {
       "id": "NS-C02",
