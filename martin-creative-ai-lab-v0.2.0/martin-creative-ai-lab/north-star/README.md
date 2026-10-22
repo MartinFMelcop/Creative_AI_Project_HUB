@@ -15,6 +15,7 @@ stack is distinct from the tools that have actually executed:
 
 | Consumer | Actual scope | Run / evidence |
 |---|---|---|
+| [Embodied C# Crossing](csharp/Presentation/README.md) | Original visible body/outfits and accepted protection, advance, harm, refusal and completion from unchanged C# rules | [Visual execution](../evidence/visual-animation/RUN.json) |
 | [C# gameplay destination](csharp/README.md) | Pure C#8/netstandard2.1 rules, connected terminal encounters, earned allocation and scarce crafting preparation | [Progression](../evidence/rpg-progression/RUN.json) / [Crafting](../evidence/economy-crafting/RUN.json) |
 | [Godot crossing adventure](prototype/README.md) | Existing local escort/return, equipment, appearance, optional medicine/route/aid and causal review | [Current delivery](../evidence/north-star-return-feedback/RUN.json) |
 | [Authority experiment](prototype/authority/README.md) | Developer-only loopback server, confirmed remote input and read-only preparation | [Execution](../evidence/north-star-preparation/RUN.json) |

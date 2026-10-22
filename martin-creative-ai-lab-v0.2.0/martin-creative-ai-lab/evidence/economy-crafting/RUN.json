@@ -125,8 +125,8 @@
   "result_artifacts": [
     {
       "local_path": "evidence/economy-crafting/results.json",
-      "size_bytes": 16849,
-      "sha256": "6e5cfb087ce74fe31c4bdfd6ae176e7eba5842066064fac61b7a3972e4d41dbf"
+      "size_bytes": 17373,
+      "sha256": "abe36c7c042d2e2b842aef6446ed0336365847a2fca272b66aab8a080871090c"
     },
     {
       "local_path": "evidence/economy-crafting/native.json",
@@ -225,5 +225,10 @@
   ],
   "reverification_baseline": "411b7c64762b3ab46b1900f39144a3fb27451e2a",
   "reverification_reason": "Six additive InputTiming/Interaction C# and project identities expanded conservative source inventories. Actual study/native/demo/stdin/apphost paths were reexecuted; all prior identities and nonidentity observations/negatives remained exactly equal. Recovery domain/rules inputs unchanged.",
-  "reverification_execution": "evidence/input-timing/prior-consumers.json"
+  "reverification_execution": "evidence/input-timing/prior-consumers.json",
+  "affected_revalidation": {
+    "baseline_commit": "64aa9b291f8bffb50d9113d6bdddc7ecd32aabeb",
+    "reason": "Additive Presentation/PresentationChecks projects change broad C# identity coverage; unchanged prior consumers actually reexecuted.",
+    "execution": "evidence/visual-animation/prior-consumers.json"
+  }
 }

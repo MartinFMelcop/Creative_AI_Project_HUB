@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "updated_at": "2026-10-22",
-  "baseline_commit": "411b7c64762b3ab46b1900f39144a3fb27451e2a",
+  "baseline_commit": "64aa9b291f8bffb50d9113d6bdddc7ecd32aabeb",
   "scope": "Mandatory eleven-laboratory transformation. Historical source preservation is separate from terminal knowledge consumption; operational claims require executed instruments and bound evidence.",
   "north_star_consumer_demonstrated": true,
   "existing_transfer_scope": "Validated transfers and integrated assets in the existing registries describe their named origin consumers, not Virgo Diamond integration.",
@@ -479,8 +479,8 @@
         "evidence/economy-crafting/results.json"
       ],
       "evidence_sha256": {
-        "evidence/economy-crafting/RUN.json": "9f4073a53bacad57b61ea9631aec03334237d5b3147b1904e74166c4f1a015b4",
-        "evidence/economy-crafting/results.json": "6e5cfb087ce74fe31c4bdfd6ae176e7eba5842066064fac61b7a3972e4d41dbf"
+        "evidence/economy-crafting/RUN.json": "7e73ca061c2bb539a96c30ee8aade9a63e46b94517bdfca250a59f4562338f39",
+        "evidence/economy-crafting/results.json": "abe36c7c042d2e2b842aef6446ed0336365847a2fca272b66aab8a080871090c"
       }
     },
     {
@@ -651,8 +651,8 @@
         "evidence/rpg-progression/results.json"
       ],
       "evidence_sha256": {
-        "evidence/rpg-progression/RUN.json": "6eec02ac88b6f69de5270efd83f79131e39c69bc311b86cb1dddfe83c8403efe",
-        "evidence/rpg-progression/results.json": "1437284a2c55e1a15f9739f3e743af347ba121cfd1640ee225bd581f3a686f35"
+        "evidence/rpg-progression/RUN.json": "e04ced738ec62a1d016ba33c8422050ee5fd77cc3d0effb9a666507c164ca1ea",
+        "evidence/rpg-progression/results.json": "7b520609f72aee5e23c3aaf15ea110e6e5cc0be03f49513bd1cbd9067b75636c"
       }
     },
     {
@@ -704,22 +704,44 @@
       "origin_projects": [
         "P07"
       ],
-      "status": "incomplete",
+      "status": "operational",
       "domain": "Character silhouettes, animation, asset generation and visual readability",
-      "question": "Which silhouette and committed-animation cues remain readable at gameplay scale?",
+      "question": "Can source-derived registration and state-owned poses preserve crop/anchor/event fidelity where simplified policies fail, in an actual destination?",
       "source_paths": [
         "projects/veil-arena/media/art",
         "projects/veil-arena/media/motion-catalog.json",
         "projects/veil-arena/tools/build_motion_catalog.gd",
         "projects/veil-arena/media/provenance.json",
         "projects/cinderwatch/Native/media/portraits.png",
-        "projects/cinderwatch/Native/media/provenance.json"
+        "projects/cinderwatch/Native/media/provenance.json",
+        "projects/veil-arena/motion.gd",
+        "north-star/prototype/actors.gd",
+        "north-star/prototype/character_look.gd"
       ],
       "source_inventory": "labs/source-inventory.json",
-      "consumer_paths": [],
-      "controls": [],
-      "validity_boundary": "Destination ownership and available sources are established; no operational laboratory method/results or North Star integration is claimed yet. Historical origin execution retains its own narrower scope.",
-      "next_objective": "Implement a repeatable silhouette/pose/readability production assay using real atlas inputs and inspect actual destination rendering."
+      "consumer_paths": [
+        "north-star/csharp/Presentation/Program.cs",
+        "north-star/csharp/Presentation/web/app.js",
+        "north-star/csharp/Crossing/Session.cs"
+      ],
+      "controls": [
+        "32 actual PNG cells;256 mirror/scale registration checks; exact isolated original producer reproduction",
+        "20 actual native selector and64 recorded native draw-argument controls; detected wrong-anchor mutant",
+        "Eight instrument regressions; fixed-cell, fixed-pivot and alpha-threshold negatives retained",
+        "47 real C# controls/four complete identity journeys and two rejected universal policies;20 actual Chromium controls plus detected forced-contact renderer mutant"
+      ],
+      "validity_boundary": "Bounded source geometry/native call observations and original static event-owned C#/browser rendering. No human readability/accessibility/art approval, full animation pipeline, Unity/Windows/Steam or commercial rights validation.",
+      "next_objective": "Evaluate authored visual meaning with actual participants/devices and validate Unity/Windows rendering with licensed tools. Compare incomplete AI Evaluation, Audio/Music and Build/Operations; do not automatically repeat this atlas assay.",
+      "path": "labs/visual-animation",
+      "instrument": "labs/visual-animation/run.py",
+      "evidence": [
+        "evidence/visual-animation/RUN.json",
+        "evidence/visual-animation/results.json"
+      ],
+      "evidence_sha256": {
+        "evidence/visual-animation/RUN.json": "880ccb0d66adb1b29b50f30defcf0c4417da53fca4c2e785d621dd29e9ea2c5f",
+        "evidence/visual-animation/results.json": "0bd2bd4ff789e5572ace249ec94b695d634020959ea72b4b7407052634bd3e7b"
+      }
     },
     {
       "id": "audio-music",
@@ -822,8 +844,8 @@
         "evidence/world-loadout/results.json"
       ],
       "evidence_sha256": {
-        "evidence/world-loadout/RUN.json": "0395b7c0688c6db702b7d76c3625e478bcef752ee5020c0423161c5194217a55",
-        "evidence/world-loadout/results.json": "c4be4a5e329e106e02e39a7124cdb7261c687d88e88b65e87a5ab2d248c0fa0a"
+        "evidence/world-loadout/RUN.json": "4135b448ab3961f6ef20f4e48d688ba175858ca1e956ad4a2bf2214f74458175",
+        "evidence/world-loadout/results.json": "88e9bfb8575491777289946faeacc65fb9406a5bb6cf8500c42871aec79ac51b"
       }
     },
     {
@@ -875,8 +897,8 @@
         "evidence/persistent-expedition/results.json"
       ],
       "evidence_sha256": {
-        "evidence/persistent-expedition/RUN.json": "d09fa37b06069574057ffc4efe11af6d4c16a3ac99fda6ae842498ec63692173",
-        "evidence/persistent-expedition/results.json": "6ebc76f2f5e44481d90883c792d1bca55af895a45b174799371575d738724923"
+        "evidence/persistent-expedition/RUN.json": "bd3baf48458af3cb0a8bf85209c242c187b812115d8e7113c65e6a4e22e7a42a",
+        "evidence/persistent-expedition/results.json": "22312efdf41d60d24b283ed403777858a9760599e1e7af06af34cc22b57813cc"
       }
     }
   ],
@@ -921,7 +943,7 @@
         "evidence/rpg-progression/RUN.json"
       ],
       "evidence_sha256": {
-        "evidence/rpg-progression/RUN.json": "6eec02ac88b6f69de5270efd83f79131e39c69bc311b86cb1dddfe83c8403efe"
+        "evidence/rpg-progression/RUN.json": "e04ced738ec62a1d016ba33c8422050ee5fd77cc3d0effb9a666507c164ca1ea"
       }
     },
     {
@@ -940,7 +962,7 @@
         "evidence/rpg-progression/results.json"
       ],
       "evidence_sha256": {
-        "evidence/rpg-progression/results.json": "1437284a2c55e1a15f9739f3e743af347ba121cfd1640ee225bd581f3a686f35"
+        "evidence/rpg-progression/results.json": "7b520609f72aee5e23c3aaf15ea110e6e5cc0be03f49513bd1cbd9067b75636c"
       }
     },
     {
@@ -1059,8 +1081,8 @@
         "projects/veil-arena/media/art",
         "projects/veil-arena/media/motion-catalog.json"
       ],
-      "decision": "Remaining source capabilities in this laboratory domain are available or explicitly scoped gaps; source preservation and origin execution do not count as consumed.",
-      "next_action": "Implement a repeatable silhouette/pose/readability production assay using real atlas inputs and inspect actual destination rendering."
+      "decision": "Registration/state ownership is narrowly consumed separately. Human silhouette recognition, directional/continuous animation, production asset pipeline and rights clearance remain unresolved; preserved source art/cast is not North Star canon.",
+      "next_action": "Run appropriate independent recognition/accessibility/art review and actual Unity/Windows import; resolve broader animation coverage and rights without importing fiction."
     },
     {
       "id": "P08-REMAINING-SCOPE",
@@ -1204,8 +1226,8 @@
         "evidence/economy-crafting/results.json"
       ],
       "evidence_sha256": {
-        "evidence/economy-crafting/RUN.json": "9f4073a53bacad57b61ea9631aec03334237d5b3147b1904e74166c4f1a015b4",
-        "evidence/economy-crafting/results.json": "6e5cfb087ce74fe31c4bdfd6ae176e7eba5842066064fac61b7a3972e4d41dbf"
+        "evidence/economy-crafting/RUN.json": "7e73ca061c2bb539a96c30ee8aade9a63e46b94517bdfca250a59f4562338f39",
+        "evidence/economy-crafting/results.json": "abe36c7c042d2e2b842aef6446ed0336365847a2fca272b66aab8a080871090c"
       }
     },
     {
@@ -1225,8 +1247,8 @@
         "evidence/economy-crafting/results.json"
       ],
       "evidence_sha256": {
-        "evidence/economy-crafting/RUN.json": "9f4073a53bacad57b61ea9631aec03334237d5b3147b1904e74166c4f1a015b4",
-        "evidence/economy-crafting/results.json": "6e5cfb087ce74fe31c4bdfd6ae176e7eba5842066064fac61b7a3972e4d41dbf"
+        "evidence/economy-crafting/RUN.json": "7e73ca061c2bb539a96c30ee8aade9a63e46b94517bdfca250a59f4562338f39",
+        "evidence/economy-crafting/results.json": "abe36c7c042d2e2b842aef6446ed0336365847a2fca272b66aab8a080871090c"
       }
     },
     {
@@ -1256,8 +1278,8 @@
         "evidence/world-loadout/results.json"
       ],
       "evidence_sha256": {
-        "evidence/world-loadout/RUN.json": "0395b7c0688c6db702b7d76c3625e478bcef752ee5020c0423161c5194217a55",
-        "evidence/world-loadout/results.json": "c4be4a5e329e106e02e39a7124cdb7261c687d88e88b65e87a5ab2d248c0fa0a"
+        "evidence/world-loadout/RUN.json": "4135b448ab3961f6ef20f4e48d688ba175858ca1e956ad4a2bf2214f74458175",
+        "evidence/world-loadout/results.json": "88e9bfb8575491777289946faeacc65fb9406a5bb6cf8500c42871aec79ac51b"
       }
     },
     {
@@ -1277,8 +1299,8 @@
         "evidence/world-loadout/results.json"
       ],
       "evidence_sha256": {
-        "evidence/world-loadout/RUN.json": "0395b7c0688c6db702b7d76c3625e478bcef752ee5020c0423161c5194217a55",
-        "evidence/world-loadout/results.json": "c4be4a5e329e106e02e39a7124cdb7261c687d88e88b65e87a5ab2d248c0fa0a"
+        "evidence/world-loadout/RUN.json": "4135b448ab3961f6ef20f4e48d688ba175858ca1e956ad4a2bf2214f74458175",
+        "evidence/world-loadout/results.json": "88e9bfb8575491777289946faeacc65fb9406a5bb6cf8500c42871aec79ac51b"
       }
     },
     {
@@ -1308,8 +1330,8 @@
         "evidence/persistent-expedition/results.json"
       ],
       "evidence_sha256": {
-        "evidence/persistent-expedition/RUN.json": "d09fa37b06069574057ffc4efe11af6d4c16a3ac99fda6ae842498ec63692173",
-        "evidence/persistent-expedition/results.json": "6ebc76f2f5e44481d90883c792d1bca55af895a45b174799371575d738724923"
+        "evidence/persistent-expedition/RUN.json": "bd3baf48458af3cb0a8bf85209c242c187b812115d8e7113c65e6a4e22e7a42a",
+        "evidence/persistent-expedition/results.json": "22312efdf41d60d24b283ed403777858a9760599e1e7af06af34cc22b57813cc"
       }
     },
     {
@@ -1408,6 +1430,50 @@
       "evidence_sha256": {
         "evidence/input-timing/RUN.json": "c84988d2586aa8f773c6f030a0696295b48325dc46115fc5780a55260fe4d493",
         "evidence/input-timing/results.json": "c3351bda7b75701ed0dfce09372cadb5522b3ab7fdd7c6fa71d8da6af42e1ec7"
+      }
+    },
+    {
+      "id": "P07-REGISTERED-STATE-PRESENTATION",
+      "origin_projects": [
+        "P07"
+      ],
+      "laboratory_id": "visual-animation",
+      "status": "INTEGRATED",
+      "source_paths": [
+        "projects/veil-arena/tools/build_motion_catalog.gd",
+        "projects/veil-arena/motion.gd",
+        "projects/veil-arena/media/motion-catalog.json"
+      ],
+      "consumer_paths": [
+        "north-star/csharp/Presentation/Program.cs",
+        "north-star/csharp/Presentation/web/app.js",
+        "north-star/csharp/Crossing/Session.cs"
+      ],
+      "decision": "Adapt source-derived foot registration and actual-state-owned pose/contact principle into original vector Crossing C# browser presentation; actual execution binds accepted and rejected consequences. No atlas bytes or character fiction imported.",
+      "evidence": [
+        "evidence/visual-animation/RUN.json"
+      ],
+      "evidence_sha256": {
+        "evidence/visual-animation/RUN.json": "880ccb0d66adb1b29b50f30defcf0c4417da53fca4c2e785d621dd29e9ea2c5f"
+      }
+    },
+    {
+      "id": "P07-FIXED-CELL-PIVOT-POLICIES",
+      "origin_projects": [
+        "P07"
+      ],
+      "laboratory_id": "visual-animation",
+      "status": "REJECTED",
+      "source_paths": [
+        "projects/veil-arena/media/motion-catalog.json",
+        "projects/veil-arena/tools/build_motion_catalog.gd"
+      ],
+      "decision": "Fixed313 cells mismatch32 frames and constant first-frame pivots mismatch30. Naive integer alpha>32 shifts14 pivots versus actual Godot float32 semantics. Reject those blind adapters for these actual inputs; do not reject source art or general fixed-atlas methods.",
+      "evidence": [
+        "evidence/visual-animation/results.json"
+      ],
+      "evidence_sha256": {
+        "evidence/visual-animation/results.json": "0bd2bd4ff789e5572ace249ec94b695d634020959ea72b4b7407052634bd3e7b"
       }
     }
   ]

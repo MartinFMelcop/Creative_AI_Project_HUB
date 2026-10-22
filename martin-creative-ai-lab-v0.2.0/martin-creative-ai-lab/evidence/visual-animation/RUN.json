@@ -1,0 +1,282 @@
+{
+  "schema_version": 1,
+  "kind": "destination_execution",
+  "baseline_commit": "64aa9b291f8bffb50d9113d6bdddc7ecd32aabeb",
+  "capability_ids": [
+    "NS-C06"
+  ],
+  "consumer_paths": [
+    "north-star/csharp/Presentation/Program.cs",
+    "north-star/csharp/Presentation/web/app.js",
+    "north-star/csharp/Crossing/Session.cs"
+  ],
+  "scope": "Source-derived geometric registration and state-owned visual contract adapted into original embodied actual Crossing C# presentation; no source PNG/cast import.",
+  "runtime": "Godot4.6.3 staged source method; SDK10.0.401 .NET10 Linux loopback host, Node24.19.0/Chromium; no Unity/Windows/Steam",
+  "checks": {
+    "passed": 47,
+    "failed": 0
+  },
+  "instrument_regressions": {
+    "passed": 8,
+    "failed": 0
+  },
+  "source_controls": {
+    "atlas_cells": 32,
+    "registration_checks": 256,
+    "native_selection": 20,
+    "native_draw_argument": 64,
+    "anchor_mutants_detected": 1
+  },
+  "browser_controls": 20,
+  "browser_mutants_detected": 1,
+  "commands": [
+    {
+      "command": [
+        "python3",
+        "labs/visual-animation/run.py",
+        "--godot",
+        "/usr/local/bin/godot",
+        "--output",
+        "/workspace/work/visual-cycle/source.json"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "python3",
+        "labs/visual-animation/run.py",
+        "--godot",
+        "/usr/local/bin/godot",
+        "--output",
+        "/workspace/work/visual-cycle/source-repeat.json",
+        "--compare",
+        "/workspace/work/visual-cycle/source.json"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "python3",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "labs/visual-animation",
+        "-p",
+        "test_*.py"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "/workspace/work/structural-transformation/dotnet/dotnet",
+        "build",
+        "north-star/csharp/PresentationChecks/NorthStar.PresentationChecks.csproj",
+        "-c",
+        "Release",
+        "-m:1",
+        "--disable-build-servers"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "/workspace/work/structural-transformation/dotnet/dotnet",
+        "north-star/csharp/PresentationChecks/bin/Release/net10.0/NorthStar.PresentationChecks.dll",
+        "/workspace/work/visual-cycle/native-final.json"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "node",
+        "labs/visual-animation/browser.mjs",
+        "/workspace/work/structural-transformation/dotnet/dotnet",
+        "/workspace/work/visual-cycle/browser-reviewed"
+      ],
+      "exit_code": 0
+    }
+  ],
+  "source_artifacts": [
+    {
+      "local_path": "labs/visual-animation/browser.mjs",
+      "size_bytes": 10313,
+      "sha256": "e5a3eb75346cf6f5af4d61f2862b657d8910e502ac5b406599a2241ea4975197"
+    },
+    {
+      "local_path": "labs/visual-animation/native.gd",
+      "size_bytes": 3091,
+      "sha256": "b47f553e65c34e0c766dad1c9d245787a5ca62662b8f736459dbad7abd8fc931"
+    },
+    {
+      "local_path": "labs/visual-animation/run.py",
+      "size_bytes": 9343,
+      "sha256": "e86b70932884293d27c5b34eada34c41fb217819f8d28600d8ba10beff7de3c0"
+    },
+    {
+      "local_path": "labs/visual-animation/test_instrument.py",
+      "size_bytes": 2126,
+      "sha256": "f8dcddc71f4995f162fbe7d7aa97b73b9405f91a6be78b828f536ba7ef4b8efb"
+    },
+    {
+      "local_path": "north-star/csharp/Crossing/Session.cs",
+      "size_bytes": 5357,
+      "sha256": "d25ac05ba1a94432474dd1b14b4fd608e446fc5344dcc4f779d8d5fe27a1b2c5"
+    },
+    {
+      "local_path": "north-star/csharp/Domain/Progression.cs",
+      "size_bytes": 8331,
+      "sha256": "8495e1ad92fea069c2c3989f6f2cc2600980575e72812df9480ed193c51c8685"
+    },
+    {
+      "local_path": "north-star/csharp/Presentation/NorthStar.Presentation.csproj",
+      "size_bytes": 407,
+      "sha256": "cc74ebc11d8fcee1fb65159725e815ef1b097a81f46c7871e659e4cf524fbb3f"
+    },
+    {
+      "local_path": "north-star/csharp/Presentation/Program.cs",
+      "size_bytes": 7723,
+      "sha256": "21f10ca1a40a02b54cd02094bde290c74a800883539b44d9068b52c88003706a"
+    },
+    {
+      "local_path": "north-star/csharp/Presentation/web/app.js",
+      "size_bytes": 5459,
+      "sha256": "7d6f03266511a5696a6b41f9585bfed233d7827af2b8b5e5a005a6cf7bf7eeb6"
+    },
+    {
+      "local_path": "north-star/csharp/Presentation/web/index.html",
+      "size_bytes": 6688,
+      "sha256": "8ae1b8c44789653c7bd1ac2daf2cd3406cce97970bbb280c65eff317d0a61950"
+    },
+    {
+      "local_path": "north-star/csharp/Presentation/web/style.css",
+      "size_bytes": 4156,
+      "sha256": "6768658c8a0f8282601c788e0c38111303a0cd986aed69ea46e0c692c1b49038"
+    },
+    {
+      "local_path": "north-star/csharp/PresentationChecks/NorthStar.PresentationChecks.csproj",
+      "size_bytes": 357,
+      "sha256": "9bd30f62c4e2661792ed70d0aad6656ce24729a229280ce93fbe9108a3478061"
+    },
+    {
+      "local_path": "north-star/csharp/PresentationChecks/Program.cs",
+      "size_bytes": 9205,
+      "sha256": "5cab8885afe41b68a6727957a8ba7d12f9adb98968b0b82911f354c833ecdd38"
+    },
+    {
+      "local_path": "north-star/csharp/global.json",
+      "size_bytes": 55,
+      "sha256": "e0c0882461e712f6c2c66241bf2f175c60832e3ff077dc26091ff8c661d4193e"
+    },
+    {
+      "local_path": "projects/realtime-integration-lab/package-lock.json",
+      "size_bytes": 42105,
+      "sha256": "aa191ef2158e6cc6f770bf4b3ee44dca17175ef1a3cd572b98115246bf46aea7"
+    },
+    {
+      "local_path": "projects/realtime-integration-lab/package.json",
+      "size_bytes": 1445,
+      "sha256": "42e3cc9633e522dd6d9a5c11023418331129632881a8bf0b95e3717247d57ebe"
+    },
+    {
+      "local_path": "projects/veil-arena/media/art/runner-motion.png",
+      "size_bytes": 1087045,
+      "sha256": "2565b68c380b5fef83d6266a8a3656ccec31c299da31f7e268181fde8190f5bd"
+    },
+    {
+      "local_path": "projects/veil-arena/media/art/warden-motion.png",
+      "size_bytes": 1017519,
+      "sha256": "1764bc35582ceb9a79b45077d017f0b6b044c5f83f7e73156c8dd45755bc4137"
+    },
+    {
+      "local_path": "projects/veil-arena/media/motion-catalog.json",
+      "size_bytes": 3539,
+      "sha256": "cf4a853fd7e59a27f962ee704b394fef339b52e925301dee132015ee7fd79f41"
+    },
+    {
+      "local_path": "projects/veil-arena/media/provenance.json",
+      "size_bytes": 5091,
+      "sha256": "f10e27a7d2769aa98a36a48f12b45d825d89546331bbabc6f7c46bbaeb8d83e3"
+    },
+    {
+      "local_path": "projects/veil-arena/motion.gd",
+      "size_bytes": 2235,
+      "sha256": "c45f43ade6ac5adac3d57dd4e79281208e1ed2adb312fa8cc82bbf3cacbe47a8"
+    },
+    {
+      "local_path": "projects/veil-arena/tools/build_motion_catalog.gd",
+      "size_bytes": 2899,
+      "sha256": "761257428c0ccf70034ef818ac4b5c76ae6842d4d53838daf987635d111fa776"
+    }
+  ],
+  "result_artifacts": [
+    {
+      "local_path": "evidence/visual-animation/anchor.png",
+      "size_bytes": 136987,
+      "sha256": "2218bb224584356d4018d6d13d78d0adae4b143b14c279c718327915492452e7"
+    },
+    {
+      "local_path": "evidence/visual-animation/browser.json",
+      "size_bytes": 22384,
+      "sha256": "039f5fa9e4e32ae67a67a1573978e5e129b5df0f3c91dec5a9dd93769a5ceab5"
+    },
+    {
+      "local_path": "evidence/visual-animation/complete.png",
+      "size_bytes": 139037,
+      "sha256": "9f190f844f2686a0285797389de97d0e97cc33b005284b990b68fe7867c28388"
+    },
+    {
+      "local_path": "evidence/visual-animation/hurt.png",
+      "size_bytes": 138785,
+      "sha256": "4c330665ea1f6c93cf68890047ef591df5189cc4de074160f59c30ea1207fcfd"
+    },
+    {
+      "local_path": "evidence/visual-animation/lost.png",
+      "size_bytes": 135513,
+      "sha256": "1ff5c3e91d8fba14ebe03b0b06f23beab440898e248d555e0b5938485e050ae4"
+    },
+    {
+      "local_path": "evidence/visual-animation/lure.png",
+      "size_bytes": 140224,
+      "sha256": "9103de01687658a7eca2362026023aedae538a626d976f86ac57bc2081cd7a88"
+    },
+    {
+      "local_path": "evidence/visual-animation/native.json",
+      "size_bytes": 79246,
+      "sha256": "57bfb297d35dc2c824f58314de17694c8959e27e4fb5dcd0ad1e52086bc7b09b"
+    },
+    {
+      "local_path": "evidence/visual-animation/prior-consumers.json",
+      "size_bytes": 15327,
+      "sha256": "c531490c30a871c082deefcaafa1f2ffc320828cc1ab1be7c15ee4c79cbe1d37"
+    },
+    {
+      "local_path": "evidence/visual-animation/reduced.png",
+      "size_bytes": 135616,
+      "sha256": "b1b754684df844df26ee273f72f21ac8da309a5e3f7913ec4544d2df249d2cef"
+    },
+    {
+      "local_path": "evidence/visual-animation/refused.png",
+      "size_bytes": 134989,
+      "sha256": "06f99deac245fe3a19a3cf04e550e79f7521b75ab91a71bc39370fac587173d1"
+    },
+    {
+      "local_path": "evidence/visual-animation/results.json",
+      "size_bytes": 5129,
+      "sha256": "0bd2bd4ff789e5572ace249ec94b695d634020959ea72b4b7407052634bd3e7b"
+    }
+  ],
+  "observed_review": [
+    "Actual Anchor/Plate, Lure/Trail, hurt and complete captures inspected. Required-position gate corrected from fixed far-side geometry to actual C# requirement; upcoming threat explicitly separated from prior contact.",
+    "Bodies use registered foot root; original vector silhouette/gesture varies independently with outfit/approach. Clear, blur during pending response and disconnect cannot manufacture contact.",
+    "Source wrong-anchor and destination forced-protection mutants fail specific assertion oracles; environment errors do not count as detection."
+  ],
+  "specialty_boundary": "Three independent Engineering/Scientific/Creative analyses and coordinated source-method/host/native/original-web implementation. Primary integrated actual browser instrument, captures, continuity and review. Agent work is not independent human validation.",
+  "limitations": [
+    "20 source selections and64 native draw argument controls use a staged recorder after removing only canvas:Node2D annotation; actual source catalog producer executes unchanged. This is not Godot raster proof.",
+    "Source alpha float32 conversion admits byte32 where a naive integer threshold does not;14 pivots differ. Fixed313 cell and first-frame pivot policies diverge in32/30 frames.",
+    "Browser shows static accepted event/beat poses, not continuous animation phases or physical latency. Positional interpolation owns no rules.",
+    "Presentation hosts unchanged Crossing.Session; no new skill effects, point allocation UI, journal migration or save. Restart explicitly creates a fresh ephemeral experiment.",
+    "No final canon, imported historical fiction, independent artist/player approval, human recognition/accessibility/enjoyment, exclusive rights/commercial clearance, Unity Editor, Windows, Steam or production networking."
+  ]
+}

@@ -6,6 +6,11 @@ This is not a Unity project, Editor execution, Windows player, Steamworks integr
 or replacement for the existing Godot adventure. Windows remains the intended player
 target; Linux here is a development/verification host.
 
+[Embodied Crossing](Presentation/README.md) adds an original local browser presentation
+of actual independent approach/outfit choices and unchanged encounter consequences.
+[Source/destination evidence](../../evidence/visual-animation/RUN.json) separates
+registered static event poses from unmeasured human readability and Unity execution.
+
 ## Build and play
 
 Use the exact SDK in [global.json](global.json), **10.0.401**:

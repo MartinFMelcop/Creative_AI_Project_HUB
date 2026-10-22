@@ -1,0 +1,198 @@
+{
+  "identities": {
+    "labs/visual-animation/native.gd": "b47f553e65c34e0c766dad1c9d245787a5ca62662b8f736459dbad7abd8fc931",
+    "labs/visual-animation/run.py": "e86b70932884293d27c5b34eada34c41fb217819f8d28600d8ba10beff7de3c0",
+    "projects/veil-arena/media/art/runner-motion.png": "2565b68c380b5fef83d6266a8a3656ccec31c299da31f7e268181fde8190f5bd",
+    "projects/veil-arena/media/art/warden-motion.png": "1764bc35582ceb9a79b45077d017f0b6b044c5f83f7e73156c8dd45755bc4137",
+    "projects/veil-arena/media/motion-catalog.json": "cf4a853fd7e59a27f962ee704b394fef339b52e925301dee132015ee7fd79f41",
+    "projects/veil-arena/media/provenance.json": "f10e27a7d2769aa98a36a48f12b45d825d89546331bbabc6f7c46bbaeb8d83e3",
+    "projects/veil-arena/motion.gd": "c45f43ade6ac5adac3d57dd4e79281208e1ed2adb312fa8cc82bbf3cacbe47a8",
+    "projects/veil-arena/tools/build_motion_catalog.gd": "761257428c0ccf70034ef818ac4b5c76ae6842d4d53838daf987635d111fa776"
+  },
+  "kind": "visual_source_registration_study",
+  "limits": "Pixel geometry, native source selection/draw transform and isolated producer execution only. Foot pivot is an alpha-derived registration convention, not anatomical ground truth. No human silhouette recognition, visual quality, accessibility, final art/canon, exclusive rights, Unity, Windows or Steam validation.",
+  "native": {
+    "controls": [
+      "idle",
+      "walk",
+      "dash",
+      "strike_windup",
+      "strike_active",
+      "strike_recovery",
+      "strike_end",
+      "seal",
+      "seal_active",
+      "seal_recovery",
+      "seal_end",
+      "warden_windup_sweep",
+      "warden_windup_charge",
+      "warden_windup_wave",
+      "warden_active_sweep",
+      "warden_active_charge",
+      "warden_active_wave",
+      "warden_recovery_sweep",
+      "warden_recovery_charge",
+      "warden_recovery_wave",
+      "64_actual_draw_argument_registration_and_crop_controls"
+    ],
+    "draw_controls": 64,
+    "renderer": "staged native draw-argument recorder; no raster/pixel claim",
+    "selection_controls": 20
+  },
+  "native_instrumentation": "Only staged canvas: Node2D parameter annotation is removed to permit a RefCounted draw-call recorder. Actual selector and draw arithmetic execute; renderer I/O is observed, not rasterized. Destination browser must establish actual rendering separately.",
+  "negative_policies": [
+    {
+      "actor": "runner",
+      "classification": "float32 channel versus integer threshold; retained source semantic difference",
+      "detected_frames": [
+        1,
+        4,
+        6,
+        9,
+        10,
+        14
+      ],
+      "policy": "integer_alpha_greater_than_32"
+    },
+    {
+      "actor": "runner",
+      "classification": "expected policy mismatch; not environment failure",
+      "detected_frames": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "policy": "fixed_313_cells"
+    },
+    {
+      "actor": "runner",
+      "classification": "expected policy mismatch; not environment failure",
+      "detected_frames": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "policy": "constant_first_frame_pivot"
+    },
+    {
+      "actor": "warden",
+      "classification": "float32 channel versus integer threshold; retained source semantic difference",
+      "detected_frames": [
+        1,
+        2,
+        3,
+        4,
+        8,
+        11,
+        12,
+        15
+      ],
+      "policy": "integer_alpha_greater_than_32"
+    },
+    {
+      "actor": "warden",
+      "classification": "expected policy mismatch; not environment failure",
+      "detected_frames": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "policy": "fixed_313_cells"
+    },
+    {
+      "actor": "warden",
+      "classification": "expected policy mismatch; not environment failure",
+      "detected_frames": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "policy": "constant_first_frame_pivot"
+    }
+  ],
+  "origin": [
+    {
+      "actor": "runner",
+      "frames": 16,
+      "max_opaque_height": 199,
+      "registration_checks": 128,
+      "scale": 0.331658,
+      "size": [
+        1254,
+        1254
+      ]
+    },
+    {
+      "actor": "warden",
+      "frames": 16,
+      "max_opaque_height": 166,
+      "registration_checks": 128,
+      "scale": 0.506024,
+      "size": [
+        1254,
+        1254
+      ]
+    }
+  ],
+  "runtime": {
+    "godot": "4.6.3.stable.official.7d41c59c4"
+  },
+  "schema_version": 1,
+  "source_mutants": [
+    {
+      "classification": "actual isolated native draw-transform failure",
+      "detected": true,
+      "policy": "wrong_vertical_anchor_23_instead_of_22"
+    }
+  ]
+}

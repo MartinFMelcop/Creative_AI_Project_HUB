@@ -284,6 +284,12 @@ jobs:
           python3 north-star/prototype/tools/verify_gamepad.py --godot "$veil_engine" --archive north-star/prototype/dist/crossing-drill-linux-0.5.0.zip --output "$RUNNER_TEMP/mapped-pad.json" --compare evidence/north-star-return-feedback/gamepad.json
           python3 north-star/prototype/tools/verify_gamepad.py --godot "$veil_engine" --archive "$RUNNER_TEMP/crossing-rebuilt.zip" --output "$RUNNER_TEMP/rebuilt-pad.json" --compare evidence/north-star-return-feedback/gamepad.json
 
+      - name: Execute preserved visual production method and counterexamples
+        working-directory: martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab
+        run: |
+          python3 -m unittest discover -s labs/visual-animation -p 'test_*.py'
+          python3 labs/visual-animation/run.py --godot "$RUNNER_TEMP/veil-godot/Godot_v4.6.3-stable_linux.x86_64" --output "$RUNNER_TEMP/visual-animation.json" --compare evidence/visual-animation/results.json
+
   integrity-and-dialogue:
     runs-on: ubuntu-24.04
     timeout-minutes: 10
@@ -553,3 +559,8 @@ jobs:
           printf 'CHROMIUM_PATH=%s\n' "$browser_path" >> "$GITHUB_ENV"
       - name: Exercise actual visual C# input lifecycle
         run: node labs/input-timing/browser.mjs dotnet "$RUNNER_TEMP/input-browser"
+      - name: Execute embodied Crossing presentation and actual browser controls
+        run: |
+          dotnet build north-star/csharp/PresentationChecks/NorthStar.PresentationChecks.csproj -c Release
+          dotnet north-star/csharp/PresentationChecks/bin/Release/net10.0/NorthStar.PresentationChecks.dll "$RUNNER_TEMP/presentation-native.json"
+          node labs/visual-animation/browser.mjs dotnet "$RUNNER_TEMP/visual-browser"

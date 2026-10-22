@@ -591,3 +591,36 @@ Actual captures were inspected; completed stations were changed from READY to
 STATION COMPLETE to avoid misleading a player about available work. [Execution](../evidence/input-timing/RUN.json)
 distinguishes software/source controls and synthetic browser actions from still absent
 physical latency, comprehension, accessibility, enjoyment and Unity/Windows validation.
+
+
+## Original embodied Crossing presentation
+
+**Status:** implemented visual hypothesis, not approved final character/class canon.
+[The C# presentation](csharp/Presentation/README.md) gives actual independent Anchor/Lure
+and Plate/Trail choices original vector bodies and static accepted event/beat poses.
+Protection in place differs from drawing a bolt while advancing; a request or rejected
+spend is not contact. Harm, pulse evasion, refusal, loss and completion observe unchanged
+Crossing outcomes. A required-position marker follows actual rules; NEXT THREAT labels
+future danger separately from the previous event. No body or gesture grants immunity.
+
+Independent specialties chose this over another apparatus layer: Engineering bounded
+coupling through unchanged owner source; Science derived geometry from actual preserved
+pixels and kept rivals/environment failures distinct; Creation favored visible identity
+and consequential action. P07 alpha/crop/foot registration and event-owned source poses
+are technical sources, not imported Runner/Warden identities or final fiction. New
+SVG/CSS/code is original agent-authored work; no third-party art/package was added.
+Exclusive copyright, noninfringement and commercial clearance are not established.
+
+CRE-005(A) informs observable consequence; CRE-067/068/075(H) inform silhouette, gesture
+and independent outfit hypotheses; CRE-081(A) informs redundant shape/text and reduced
+motion. ENG-005/015/023 inform single owner/contracts and fidelity versus experience;
+SCI-014/017/061 distinguish software/image controls from participants and usability.
+Original vector foot roots remain registered; optional position interpolation owns no
+turns. Clear/blur/disconnect hide stale gestures, including late responses. Reduced
+motion preserves static information; this is not validated human accessibility.
+
+[Execution](../evidence/visual-animation/RUN.json) binds actual source producer, native
+controls, four complete identity journeys, two failed universal policies and actual
+Chromium captures. Pose phases are static event observations, not a timed continuous
+animation system. No people were studied; recognition, comprehension, enjoyment,
+independent art approval, Unity/Windows/Steam and production asset import remain open.

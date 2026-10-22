@@ -1,0 +1,460 @@
+{
+  "schema_version": 1,
+  "baseline_commit": "64aa9b291f8bffb50d9113d6bdddc7ecd32aabeb",
+  "commands": [
+    {
+      "name": "rpg-progression-study",
+      "command": [
+        "python3",
+        "labs/rpg-systems/run.py",
+        "--dotnet",
+        "/workspace/work/structural-transformation/dotnet/dotnet",
+        "--output",
+        "/workspace/work/visual-cycle/revalidate/rpg-progression.json"
+      ],
+      "exit_code": 0,
+      "stdin_artifact": false
+    },
+    {
+      "name": "rpg-progression-native-build",
+      "command": [
+        "/workspace/work/structural-transformation/dotnet/dotnet",
+        "build",
+        "north-star/csharp/Checks/NorthStar.Checks.csproj",
+        "-c",
+        "Release"
+      ],
+      "exit_code": 0,
+      "stdin_artifact": false
+    },
+    {
+      "name": "rpg-progression-native",
+      "command": [
+        "/workspace/work/structural-transformation/dotnet/dotnet",
+        "north-star/csharp/Checks/bin/Release/net10.0/NorthStar.Checks.dll",
+        "native",
+        "/workspace/work/visual-cycle/revalidate/rpg-progression-native.json"
+      ],
+      "exit_code": 0,
+      "stdin_artifact": false
+    },
+    {
+      "name": "rpg-progression-demo-build",
+      "command": [
+        "/workspace/work/structural-transformation/dotnet/dotnet",
+        "build",
+        "north-star/csharp/Crossing/NorthStar.Crossing.csproj",
+        "-c",
+        "Release"
+      ],
+      "exit_code": 0,
+      "stdin_artifact": false
+    },
+    {
+      "name": "rpg-progression-demo",
+      "command": [
+        "/workspace/work/structural-transformation/dotnet/dotnet",
+        "north-star/csharp/Crossing/bin/Release/net10.0/NorthStar.Crossing.dll",
+        "--demo",
+        "/workspace/work/visual-cycle/revalidate/rpg-progression-demo.json"
+      ],
+      "exit_code": 0,
+      "stdin_artifact": false
+    },
+    {
+      "name": "rpg-progression-terminal",
+      "command": [
+        "/workspace/work/structural-transformation/dotnet/dotnet",
+        "north-star/csharp/Crossing/bin/Release/net10.0/NorthStar.Crossing.dll"
+      ],
+      "exit_code": 0,
+      "stdin_artifact": true
+    },
+    {
+      "name": "economy-crafting-study",
+      "command": [
+        "python3",
+        "labs/economy-simulation/run.py",
+        "--dotnet",
+        "/workspace/work/structural-transformation/dotnet/dotnet",
+        "--output",
+        "/workspace/work/visual-cycle/revalidate/economy-crafting.json"
+      ],
+      "exit_code": 0,
+      "stdin_artifact": false
+    },
+    {
+      "name": "economy-crafting-native-build",
+      "command": [
+        "/workspace/work/structural-transformation/dotnet/dotnet",
+        "build",
+        "north-star/csharp/ForgeChecks/NorthStar.ForgeChecks.csproj",
+        "-c",
+        "Release"
+      ],
+      "exit_code": 0,
+      "stdin_artifact": false
+    },
+    {
+      "name": "economy-crafting-native",
+      "command": [
+        "/workspace/work/structural-transformation/dotnet/dotnet",
+        "north-star/csharp/ForgeChecks/bin/Release/net10.0/NorthStar.ForgeChecks.dll",
+        "native",
+        "/workspace/work/visual-cycle/revalidate/economy-crafting-native.json"
+      ],
+      "exit_code": 0,
+      "stdin_artifact": false
+    },
+    {
+      "name": "economy-crafting-demo-build",
+      "command": [
+        "/workspace/work/structural-transformation/dotnet/dotnet",
+        "build",
+        "north-star/csharp/Forge/NorthStar.Forge.csproj",
+        "-c",
+        "Release"
+      ],
+      "exit_code": 0,
+      "stdin_artifact": false
+    },
+    {
+      "name": "economy-crafting-demo",
+      "command": [
+        "/workspace/work/structural-transformation/dotnet/dotnet",
+        "north-star/csharp/Forge/bin/Release/net10.0/NorthStar.Forge.dll",
+        "--demo",
+        "/workspace/work/visual-cycle/revalidate/economy-crafting-demo.json"
+      ],
+      "exit_code": 0,
+      "stdin_artifact": false
+    },
+    {
+      "name": "economy-crafting-terminal",
+      "command": [
+        "/workspace/work/structural-transformation/dotnet/dotnet",
+        "north-star/csharp/Forge/bin/Release/net10.0/NorthStar.Forge.dll"
+      ],
+      "exit_code": 0,
+      "stdin_artifact": true
+    },
+    {
+      "name": "world-loadout-study",
+      "command": [
+        "python3",
+        "labs/world-gameplay/run.py",
+        "--dotnet",
+        "/workspace/work/structural-transformation/dotnet/dotnet",
+        "--output",
+        "/workspace/work/visual-cycle/revalidate/world-loadout.json"
+      ],
+      "exit_code": 0,
+      "stdin_artifact": false
+    },
+    {
+      "name": "world-loadout-native-build",
+      "command": [
+        "/workspace/work/structural-transformation/dotnet/dotnet",
+        "build",
+        "north-star/csharp/LoadoutChecks/NorthStar.LoadoutChecks.csproj",
+        "-c",
+        "Release"
+      ],
+      "exit_code": 1,
+      "stdin_artifact": false
+    },
+    {
+      "name": "world-loadout-native-build",
+      "command": [
+        "/workspace/work/structural-transformation/dotnet/dotnet",
+        "build",
+        "north-star/csharp/LoadoutChecks/NorthStar.LoadoutChecks.csproj",
+        "-c",
+        "Release",
+        "-m:1",
+        "--disable-build-servers"
+      ],
+      "exit_code": 0,
+      "stdin_artifact": false
+    },
+    {
+      "name": "world-loadout-native",
+      "command": [
+        "/workspace/work/structural-transformation/dotnet/dotnet",
+        "north-star/csharp/LoadoutChecks/bin/Release/net10.0/NorthStar.LoadoutChecks.dll",
+        "native",
+        "/workspace/work/visual-cycle/revalidate/world-loadout-native.json"
+      ],
+      "exit_code": 0,
+      "stdin_artifact": false
+    },
+    {
+      "name": "world-loadout-demo-build",
+      "command": [
+        "/workspace/work/structural-transformation/dotnet/dotnet",
+        "build",
+        "north-star/csharp/Loadout/NorthStar.Loadout.csproj",
+        "-c",
+        "Release",
+        "-m:1",
+        "--disable-build-servers"
+      ],
+      "exit_code": 0,
+      "stdin_artifact": false
+    },
+    {
+      "name": "world-loadout-demo",
+      "command": [
+        "/workspace/work/structural-transformation/dotnet/dotnet",
+        "north-star/csharp/Loadout/bin/Release/net10.0/NorthStar.Loadout.dll",
+        "--demo",
+        "/workspace/work/visual-cycle/revalidate/world-loadout-demo.json"
+      ],
+      "exit_code": 0,
+      "stdin_artifact": false
+    },
+    {
+      "name": "world-loadout-terminal",
+      "command": [
+        "/workspace/work/structural-transformation/dotnet/dotnet",
+        "north-star/csharp/Loadout/bin/Release/net10.0/NorthStar.Loadout.dll"
+      ],
+      "exit_code": 0,
+      "stdin_artifact": true
+    },
+    {
+      "name": "persistent-expedition-study",
+      "command": [
+        "python3",
+        "labs/networking-persistence/run.py",
+        "--dotnet",
+        "/workspace/work/structural-transformation/dotnet/dotnet",
+        "--output",
+        "/workspace/work/visual-cycle/revalidate/persistent-expedition.json"
+      ],
+      "exit_code": 0,
+      "stdin_artifact": false
+    },
+    {
+      "name": "persistent-expedition-native-build",
+      "command": [
+        "/workspace/work/structural-transformation/dotnet/dotnet",
+        "build",
+        "north-star/csharp/RecoveryChecks/NorthStar.RecoveryChecks.csproj",
+        "-c",
+        "Release",
+        "-m:1",
+        "--disable-build-servers"
+      ],
+      "exit_code": 0,
+      "stdin_artifact": false
+    },
+    {
+      "name": "persistent-expedition-native",
+      "command": [
+        "/workspace/work/structural-transformation/dotnet/dotnet",
+        "north-star/csharp/RecoveryChecks/bin/Release/net10.0/NorthStar.RecoveryChecks.dll",
+        "native",
+        "/workspace/work/visual-cycle/revalidate/persistent-expedition-native.json"
+      ],
+      "exit_code": 0,
+      "stdin_artifact": false
+    },
+    {
+      "name": "persistent-expedition-demo-build",
+      "command": [
+        "/workspace/work/structural-transformation/dotnet/dotnet",
+        "build",
+        "north-star/csharp/Recovery/NorthStar.Recovery.csproj",
+        "-c",
+        "Release",
+        "-m:1",
+        "--disable-build-servers"
+      ],
+      "exit_code": 0,
+      "stdin_artifact": false
+    },
+    {
+      "name": "persistent-expedition-demo",
+      "command": [
+        "/workspace/work/structural-transformation/dotnet/dotnet",
+        "north-star/csharp/Recovery/bin/Release/net10.0/NorthStar.Recovery.dll",
+        "--demo",
+        "/workspace/work/visual-cycle/revalidate/persistent-expedition-demo.json"
+      ],
+      "exit_code": 0,
+      "stdin_artifact": false
+    },
+    {
+      "name": "persistent-expedition-interactive-new",
+      "command": [
+        "/workspace/work/structural-transformation/dotnet/dotnet",
+        "north-star/csharp/Recovery/bin/Release/net10.0/NorthStar.Recovery.dll",
+        "new",
+        "/workspace/work/visual-cycle/revalidate/interactive-run.json"
+      ],
+      "exit_code": 0,
+      "stdin_artifact": false
+    },
+    {
+      "name": "persistent-expedition-first-terminal",
+      "command": [
+        "/workspace/work/structural-transformation/dotnet/dotnet",
+        "north-star/csharp/Recovery/bin/Release/net10.0/NorthStar.Recovery.dll",
+        "play",
+        "/workspace/work/visual-cycle/revalidate/interactive-run.json"
+      ],
+      "exit_code": 0,
+      "stdin_artifact": true
+    },
+    {
+      "name": "persistent-expedition-resume-terminal",
+      "command": [
+        "/workspace/work/structural-transformation/dotnet/dotnet",
+        "north-star/csharp/Recovery/bin/Release/net10.0/NorthStar.Recovery.dll",
+        "play",
+        "/workspace/work/visual-cycle/revalidate/interactive-run.json"
+      ],
+      "exit_code": 0,
+      "stdin_artifact": true
+    },
+    {
+      "name": "persistent-expedition-interactive-show",
+      "command": [
+        "/workspace/work/structural-transformation/dotnet/dotnet",
+        "north-star/csharp/Recovery/bin/Release/net10.0/NorthStar.Recovery.dll",
+        "show",
+        "/workspace/work/visual-cycle/revalidate/interactive-run.json"
+      ],
+      "exit_code": 0,
+      "stdin_artifact": false
+    },
+    {
+      "name": "persistent-expedition-apphost-native",
+      "command": [
+        "north-star/csharp/RecoveryChecks/bin/Release/net10.0/NorthStar.RecoveryChecks",
+        "native",
+        "/workspace/work/visual-cycle/revalidate/persistent-expedition-apphost-native.json"
+      ],
+      "exit_code": 0,
+      "stdin_artifact": false
+    },
+    {
+      "name": "persistent-expedition-apphost-demo",
+      "command": [
+        "north-star/csharp/Recovery/bin/Release/net10.0/NorthStar.Recovery",
+        "--demo",
+        "/workspace/work/visual-cycle/revalidate/persistent-expedition-apphost-demo.json"
+      ],
+      "exit_code": 0,
+      "stdin_artifact": false
+    },
+    {
+      "name": "rpg-progression-study-final",
+      "command": [
+        "python3",
+        "labs/rpg-systems/run.py",
+        "--dotnet",
+        "/workspace/work/structural-transformation/dotnet/dotnet",
+        "--output",
+        "/workspace/work/visual-cycle/revalidate/rpg-progression.json"
+      ],
+      "exit_code": 0,
+      "stdin_artifact": false
+    },
+    {
+      "name": "economy-crafting-study-final",
+      "command": [
+        "python3",
+        "labs/economy-simulation/run.py",
+        "--dotnet",
+        "/workspace/work/structural-transformation/dotnet/dotnet",
+        "--output",
+        "/workspace/work/visual-cycle/revalidate/economy-crafting.json"
+      ],
+      "exit_code": 0,
+      "stdin_artifact": false
+    },
+    {
+      "name": "world-loadout-study-final",
+      "command": [
+        "python3",
+        "labs/world-gameplay/run.py",
+        "--dotnet",
+        "/workspace/work/structural-transformation/dotnet/dotnet",
+        "--output",
+        "/workspace/work/visual-cycle/revalidate/world-loadout.json"
+      ],
+      "exit_code": 0,
+      "stdin_artifact": false
+    },
+    {
+      "name": "persistent-expedition-study-final",
+      "command": [
+        "python3",
+        "labs/networking-persistence/run.py",
+        "--dotnet",
+        "/workspace/work/structural-transformation/dotnet/dotnet",
+        "--output",
+        "/workspace/work/visual-cycle/revalidate/persistent-expedition.json"
+      ],
+      "exit_code": 0,
+      "stdin_artifact": false
+    }
+  ],
+  "comparisons": [
+    {
+      "consumer": "rpg-progression",
+      "all_nonidentity_study_fields_equal": true,
+      "native_and_demo_equal": true,
+      "identity_change": "Four additive Presentation/PresentationChecks source/project identities; all prior source identities retained. RPG nests them under destination.",
+      "prior_source_identities_unchanged": true,
+      "added_source_project_paths": [
+        "north-star/csharp/Presentation/NorthStar.Presentation.csproj",
+        "north-star/csharp/Presentation/Program.cs",
+        "north-star/csharp/PresentationChecks/NorthStar.PresentationChecks.csproj",
+        "north-star/csharp/PresentationChecks/Program.cs"
+      ]
+    },
+    {
+      "consumer": "economy-crafting",
+      "all_nonidentity_study_fields_equal": true,
+      "native_and_demo_equal": true,
+      "identity_change": "Four additive Presentation/PresentationChecks source/project identities; all prior source identities retained. RPG nests them under destination.",
+      "prior_source_identities_unchanged": true,
+      "added_source_project_paths": [
+        "north-star/csharp/Presentation/NorthStar.Presentation.csproj",
+        "north-star/csharp/Presentation/Program.cs",
+        "north-star/csharp/PresentationChecks/NorthStar.PresentationChecks.csproj",
+        "north-star/csharp/PresentationChecks/Program.cs"
+      ]
+    },
+    {
+      "consumer": "world-loadout",
+      "all_nonidentity_study_fields_equal": true,
+      "native_and_demo_equal": true,
+      "identity_change": "Four additive Presentation/PresentationChecks source/project identities; all prior source identities retained. RPG nests them under destination.",
+      "prior_source_identities_unchanged": true,
+      "added_source_project_paths": [
+        "north-star/csharp/Presentation/NorthStar.Presentation.csproj",
+        "north-star/csharp/Presentation/Program.cs",
+        "north-star/csharp/PresentationChecks/NorthStar.PresentationChecks.csproj",
+        "north-star/csharp/PresentationChecks/Program.cs"
+      ]
+    },
+    {
+      "consumer": "persistent-expedition",
+      "all_nonidentity_study_fields_equal": true,
+      "native_and_demo_equal": true,
+      "identity_change": "Four additive Presentation/PresentationChecks source/project identities; all prior source identities retained. RPG nests them under destination.",
+      "prior_source_identities_unchanged": true,
+      "added_source_project_paths": [
+        "north-star/csharp/Presentation/NorthStar.Presentation.csproj",
+        "north-star/csharp/Presentation/Program.cs",
+        "north-star/csharp/PresentationChecks/NorthStar.PresentationChecks.csproj",
+        "north-star/csharp/PresentationChecks/Program.cs"
+      ]
+    }
+  ],
+  "scope": "Actual four studies/native/demo/stdin and Recovery process/apphost routes. Initial MSB4166 child-node build failure retained; serial -m:1/disabled build servers and DOTNET_PROCESSOR_COUNT=1 succeeded. Cause not proven; no product gate or semantic change. Final studies refresh the last additive checks identity."
+}

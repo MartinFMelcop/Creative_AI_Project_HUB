@@ -6,9 +6,14 @@ source inventory, truthful maturity, consumer relationship, validity boundary an
 next acceptance live in [the transformation catalog](origins.json). The
 [public entry point](../../../README.md) offers a concise navigation table.
 A destination is not operational merely because it has an entry or a directory.
-Four destinations remain incomplete; they cannot be postponed indefinitely.
+Three destinations remain incomplete; they cannot be postponed indefinitely.
 
 ## Operational methods
+
+- [Visual Identity & Animation](visual-animation/README.md): actual preserved PNG registration,
+  isolated source producer/selector/draw controls and retained bad policies feed original
+  embodied C# Crossing presentation. [Execution](../evidence/visual-animation/RUN.json).
+  Technical fidelity is distinct from unmeasured human recognition or art approval.
 
 - [Input, Timing & Interaction](input-timing/README.md): actual rhythm clock/head/tail
   controls and retained policy differences feed portable C# continuous-work rules.

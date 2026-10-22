@@ -100,23 +100,23 @@
   "result_artifacts": [
     {
       "local_path": "evidence/rpg-progression/results.json",
-      "sha256": "1437284a2c55e1a15f9739f3e743af347ba121cfd1640ee225bd581f3a686f35",
-      "size_bytes": 120452
+      "size_bytes": 120984,
+      "sha256": "7b520609f72aee5e23c3aaf15ea110e6e5cc0be03f49513bd1cbd9067b75636c"
     },
     {
       "local_path": "evidence/rpg-progression/native.json",
-      "sha256": "2919f550edeca180aaa48e4b54e49921981c6dba40a116667f98d468c54f7beb",
-      "size_bytes": 3959
+      "size_bytes": 3959,
+      "sha256": "2919f550edeca180aaa48e4b54e49921981c6dba40a116667f98d468c54f7beb"
     },
     {
       "local_path": "evidence/rpg-progression/destination.json",
-      "sha256": "4ae174b8cf33c2b6eeb07a252ca72f11185b90c5373133f4b40f18fd24513e0c",
-      "size_bytes": 738
+      "size_bytes": 738,
+      "sha256": "4ae174b8cf33c2b6eeb07a252ca72f11185b90c5373133f4b40f18fd24513e0c"
     },
     {
       "local_path": "evidence/rpg-progression/terminal.txt",
-      "sha256": "25dbc61c0bcb90ecf86982874157281050012f8f5287444c282791d5b5a47020",
-      "size_bytes": 4962
+      "size_bytes": 4962,
+      "sha256": "25dbc61c0bcb90ecf86982874157281050012f8f5287444c282791d5b5a47020"
     }
   ],
   "reverification_baseline": "411b7c64762b3ab46b1900f39144a3fb27451e2a",
@@ -223,5 +223,10 @@
     "static_header_mismatches": 9,
     "threshold_neighbors": 537
   },
-  "reverification_execution": "evidence/input-timing/prior-consumers.json"
+  "reverification_execution": "evidence/input-timing/prior-consumers.json",
+  "affected_revalidation": {
+    "baseline_commit": "64aa9b291f8bffb50d9113d6bdddc7ecd32aabeb",
+    "reason": "Additive Presentation/PresentationChecks projects change broad C# identity coverage; unchanged prior consumers actually reexecuted.",
+    "execution": "evidence/visual-animation/prior-consumers.json"
+  }
 }

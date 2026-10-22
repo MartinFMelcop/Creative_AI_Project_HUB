@@ -72,6 +72,12 @@ class Classification(unittest.TestCase):
             with self.subTest(prefix=prefix):
                 self.assertEqual(self.selected(w(f'evidence/{prefix}/results.json')), expected)
 
+    def test_visual_method_keeps_both_actual_engine_and_destination_owners(self):
+        for path in ('labs/visual-animation/run.py', 'labs/visual-animation/browser.mjs',
+                     'evidence/visual-animation/results.json'):
+            with self.subTest(path=path):
+                self.assertEqual(self.selected(w(path)), {'native_arena', 'north_star_csharp'})
+
     def test_unknown_shared_tools_workflows_and_roots_fail_broad(self):
         for path in ('.github/workflows/lab-checks.yml', '.github/actions/runtime/action.yml',
                      w('tools/new_runtime_helper.py'), w('shared/transactions.cs'),

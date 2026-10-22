@@ -34,7 +34,8 @@
     "north-star/csharp/Narrative/RequestExpedition.cs",
     "north-star/csharp/Narrative/Program.cs",
     "north-star/csharp/InputTiming/WorkRoom.cs",
-    "north-star/csharp/Interaction/Program.cs"
+    "north-star/csharp/Interaction/Program.cs",
+    "north-star/csharp/Presentation/Program.cs"
   ],
   "contribution_model": {
     "candidate": "Identified hypothesis; no transfer proof.",
@@ -204,7 +205,7 @@
         "P07"
       ],
       "reference_collections": [],
-      "contribution_status": "verified_in_origin",
+      "contribution_status": "adapted",
       "origin_validation": "execution_record_inspected",
       "scope": "Original generated portrait/atlas production with provenance, alpha-bound catalogs and actual native consumers.",
       "origin_evidence": [
@@ -212,9 +213,15 @@
         "projects/cinderwatch/Native/media/provenance.json",
         "evidence/veil-arena/MOTION_RUN.json"
       ],
-      "applicability_hypothesis": "Research whether visual production, animation and interface readability serves a bounded North Star experiment; no consumer or reusable contract exists yet.",
-      "limits": "Static portraits/four-keyframe poses; no full production pipeline, independent artist approval, exclusive rights or commercial clearance.",
-      "next_validation": "Choose a consuming scene and acceptance frames; test identity, movement readability, rights and asset import in that destination."
+      "applicability_hypothesis": "Original embodied presentation can make independent outfit/approach consequences visible; recognition and preference still require actual people.",
+      "limits": "Source alpha/pivot/region and native draw-call contracts plus actual browser SVG; not continuous animation, full production asset pipeline, independent art approval, exclusive rights or commercial clearance.",
+      "next_validation": "Evaluate actual character/action meaning with relevant people/devices; compare three incomplete labs and actual Unity/Windows delivery before more visual framework work.",
+      "destination_consumer_paths": [
+        "north-star/csharp/Presentation/Program.cs",
+        "north-star/csharp/Crossing/Session.cs"
+      ],
+      "destination_evidence": "evidence/visual-animation/RUN.json",
+      "destination_scope": "Actual original SVG body/outfits and registered static event/beat poses render unchanged Crossing C# owner outcomes;47 native controls,20 browser controls and actual inspected images, no atlas fiction import or human/Unity/Windows validation."
     },
     {
       "id": "NS-C07",
