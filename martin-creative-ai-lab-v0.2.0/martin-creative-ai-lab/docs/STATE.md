@@ -1,7 +1,7 @@
 # Current transformation continuity
 
 **Updated:** 2026-10-22 UTC. **SEED:** 0.34.0. **Mode:** DEVELOPMENT with executed
-research. **Execution baseline:** `983821cc967d83f00bad7d6df36e791f2aa8a830`, branch
+research. **Execution baseline:** `b182a2bb46a6cbcea26be8f766a68d2199137ca1`, branch
 `work`, clean tracked/untracked tree; fetched main matched HEAD (0/0).
 
 This file owns active work and the rolling investment window. Durable direction is
@@ -12,76 +12,83 @@ Follow [Continuous Development v2](prompts/CONTINUOUS_DEVELOPMENT.md).
 ## Active transformation — laboratory contracts with real consumers
 
 **Outcome:** Eleven mandatory operational laboratories consume sources into tested
-technology and meaningful North Star production. Five bounded methods now operate:
+technology and meaningful North Star production. Six bounded methods now operate:
+[Narrative & Continuity](../labs/narrative-continuity/README.md),
 [Networking & Persistence](../labs/networking-persistence/README.md),
 [World & Gameplay](../labs/world-gameplay/README.md),
 [Economy & Simulation](../labs/economy-simulation/README.md),
 [RPG Systems](../labs/rpg-systems/README.md) and
-[Combat & Responsiveness](../labs/combat-response/README.md). Six destinations
-remain incomplete; operational does not mean a finished domain.
+[Combat & Responsiveness](../labs/combat-response/README.md). AI Evaluation,
+Input/Timing, Visual/Animation, Audio/Music and Build/Operations remain incomplete.
+Operational does not mean a finished domain.
 
 **Current increment:** Independent Engineering, Scientific and Creative analyses
-compared local joint recovery, authored NPC/narrative continuity and evaluation.
-Engineering and Science selected recovery: exit previously discarded meaningful
-identity, equipped actions, XP/allocation, supplies and active encounter consequences.
-Creation preferred narrative continuity as the next experience gain but accepted this
-concrete preservation dependency. Recovery is not claimed as new narrative agency.
-The narrative alternative remains a valuable future authored frontier.
+selected authored narrative continuity against further storage/preparation, evaluation,
+input timing and actual Unity delivery. Recovery now preserves existing investment;
+it does not itself give another person a consequential response. The previously
+retained Creative alternative now materially changes a real consumer. Evaluation
+needs explicit independent-candidate/context boundaries; input has useful sources;
+Unity delivery remains contingent on observed tools/licensing, not an empty project.
 
-[Persistent execution](../evidence/persistent-expedition/RUN.json) binds inspected P11
-commit-before-receipt/content-bound retries and P05/P01 accepted-command replay to
-an actual C# local single-owner host. A candidate expedition is fully replayed and
-persisted before its memory/state receipt is published. Explicit new/open, strict
-schema/rules/checksum/replay, held ownership and bounded history refuse corruption
-rather than silently replacing investment. Request identity/content owns retry;
-recovery must never repay rewards or refund failed rigs. Real process restarts and
-three failure boundaries preserve full old/new committed prefixes, not only counts.
-Execution passed 82 native controls, ten instrument regressions, exact reproduction,
-real owner-process death/reopen, and both dotnet/apphost invocation. Actual stdin
-processes continued an active revision4 encounter to completed revision16 with
-HP11/resolve5/XP25. These are Linux process/file observations, not power-loss or
-Windows filesystem proof. The C# domain remains unchanged and engine-independent.
+[Narrative execution](../evidence/narrative-continuity/RUN.json) binds selected P04
+refusal/limited reopening and actual P10 fresh-consent/terms contracts to an original
+C# request/work scene using the unchanged actual Crossing encounters. A survey must
+succeed before a guide offers help; tentative terms transfer nothing. Confirmation
+reserves local preparation capacity, departure spends time, and actual encounter
+results alone prove handoff/completed return. Refusal and deferral differ; solo travel
+avoids making guide consent a compulsory progression gate. Prior receipts remain
+append-only. A deadline cannot return an unaccounted-for guide or complete a quest.
 
-[World preparation](../evidence/world-loadout/RUN.json),
-[crafting](../evidence/economy-crafting/RUN.json) and
-[progression](../evidence/rpg-progression/RUN.json) retain their methods, negatives
-and original source boundaries. They are affected assembly regressions here, not new
-substantive repetitions. Described legacy skills remain eligibility data rather than
-implemented effects or adopted fiction.
+Actual execution passed 95 native controls, 12 instrument regressions, eight complete
+compiled journeys, six actual P10 module controls, two isolated detected origin
+mutants and exact reproduction. Three actual stdin sessions separately showed local
+refusal finishing five crates with one light; guided handoff/return with only two
+local crates and no light; and failed delivery leaving Rill unaccounted for with an
+overdue obligation. These are synthetic code observations, not participant/consent,
+literary quality, enjoyment or balance validation. Creative CLI review corrected
+reservation versus departure, player retreat versus completed-journey return, and
+inherited retry advice for a retry this scene does not permit.
 
-**Consumption boundary:** Integrated contracts, rejected unsafe adapters and genuine
-unresolved groups remain distinct in the catalog. Full legacy class fiction, skill
-implementations, malformed character-create parsing, item/tool/unlock catalogs,
-NPCs, reputation, quests and final progression pacing remain unconsumed. Historical
-QA labels and source presence do not establish historical game execution.
+The two preserved legacy quest tables have 73 rows each. DEV and distributed Ruby
+helpers are distinct: both expose manual completion; DEV additionally has trigger
+progress and a first-step guard limitation, absent from DIST. These are static source
+observations, not historical RMXP execution. Only the bounded contextual commitment
+contract is newly integrated; manual completion as objective proof is rejected.
+Full NPC schedules, reputation/factions, selectors, quest content, skill effects,
+creation parsing and item/tool/unlock catalogs remain genuinely unresolved.
 
-**Next acceptance:** Compare the strongest remaining incomplete destination and
-consequential product dependency. Candidate methods include NPC/quest state transitions,
-formula/status timing/rounding, AI evaluation, input timing or production delivery.
-Local joint recovery now has bounded process/file evidence; Windows filesystem,
-Unity integration, migration, accounts and remote ownership remain separate obligations.
-Do not automatically repeat the recovery fault matrix, class matrix, station schema assay, progression
-study or authority rewrite. Correct sustained underinvestment and preserve meaningful negatives.
+**Next acceptance:** Compare the strongest of the five incomplete destinations and
+consequential product/lifecycle needs from actual state. Authored comprehension,
+additional consequence-bearing content, input timing, concrete AI evaluation or real
+Unity/Windows delivery may justify continuation or redirection. Narrative state is
+in-session and is not saved by Recovery; migration/recovery must be designed and
+executed before claiming durable NPC continuity. Do not automatically repeat the
+request matrix, recovery fault study, loadout matrix, station assay, progression
+study, fixture repairs or authority transformation. Correct sustained underinvestment.
 
 ## Active product — executable C# migration dependencies
 
-Unity/C# is selected, Windows-first and Steam-intended. Pure C#8/netstandard2.1 rules
-and real Linux command-line consumers execute; they are not Unity imports or players.
-[Progression](../evidence/rpg-progression/RUN.json) binds threshold/budget semantics;
-[Forge](../evidence/economy-crafting/RUN.json) binds atomic scarce supplies and no-refund
-retry; [Loadout](../north-star/csharp/Loadout/README.md) binds transactional identity
-and actual prepared verbs; [Recovery](../north-star/csharp/Recovery/README.md) preserves
-the same expedition across actual Linux process exits. Rejections must preserve
-whole gameplay state. Existing
-consumer behavior is retained by compatibility entry points and affected regressions.
+Unity/C# is selected, Windows-first and Steam-intended. Existing pure C#8/netstandard2.1
+rules and real Linux hosts execute; the new Narrative host targets .NET10 and is not
+a Unity runtime assembly or player. [Progression](../evidence/rpg-progression/RUN.json),
+[Forge](../evidence/economy-crafting/RUN.json), [Loadout](../evidence/world-loadout/RUN.json)
+and [Recovery](../evidence/persistent-expedition/RUN.json) retain their real consumers.
+The separate [Narrative scene](../north-star/csharp/Narrative/README.md) adds actual
+local work, consent and accountable return without changing those prior C# owners.
+It adds no final class/world canon, general quest engine, NPC AI or global reputation.
 
-**Observed tool limit:** SDK10.0.401 is available. PATH/targeted filesystem checks did
-not locate Unity Editor/Hub; no activated Editor/license/Windows module was available.
-No Editor patch is invented. Windows player, Steamworks, durable account ownership,
-network authority and independent human experience remain unexecuted/unvalidated.
-If licensed supported Editor/modules become available, execute a bounded real slice
-with controls, visible identity/equipment, distinct actions and consequences; otherwise
-advance executable production dependencies without reopening the engine decision.
+The four prior instruments conservatively fingerprint all C# files. Their actual
+studies/native/demo/stdin paths were reexecuted after five additive Narrative source/
+project identities. All nonidentity observations, prior identities and negatives
+remained exactly equal; [execution](../evidence/narrative-continuity/prior-consumers.json)
+records these affected regressions, not new substantive study units. The new narrative
+instrument fingerprints its actual project-reference closure, avoiding unrelated inputs.
+
+**Observed tool limit:** SDK10.0.401 and Node24.19.0 execute. PATH and targeted
+`/opt`, `/usr/local`, `/workspace` filesystem inspection did not locate Unity Editor/Hub.
+No usable activated Editor/license/Windows module was identified. No Editor patch is
+invented. Unity imports, Windows player, Steamworks, account trust, durable narrative,
+power-loss durability and independent human experience remain unexecuted/unvalidated.
 
 ## Preserved consumers and lifecycle obligations
 
@@ -89,67 +96,49 @@ The [Godot adventure](../north-star/prototype/README.md),
 [return feedback](../evidence/north-star-return-feedback/RUN.json),
 [return envelope](../evidence/north-star-return-envelope/RUN.json),
 [authority/preparation](../evidence/north-star-preparation/RUN.json) and
-[ability bench](../evidence/north-star-abilities/RUN.json) retain their source, delivered
-PCK/Linux, negative outcomes and boundaries. Migrate behavior/save/format/rights and
-recovery obligations before retiring them. They are not competing engine choices or
-automatic historical release duties.
+[ability bench](../evidence/north-star-abilities/RUN.json) retain their sources,
+deliveries, negatives and validity limits. Resolve actual behavior/save/format/rights
+and recovery obligations before retirement; historical products are sources, not
+permanent release duties. No newly proven safely removable whole package was found.
+The [source audit](../labs/legacy-audit.md) and [inventory](../labs/source-inventory.json)
+remain preserved: 1,052 unique accessible source files and 27 ZIP/PCK packages.
 
-The [source/package audit](../labs/legacy-audit.md) established no safely removable
-whole release package; preserve unique payloads/notices. The affected-consumer
-[CI selector](../tools/ci_scope.py) preserves required gates without unconditional
-unrelated rebuilds. This cycle extends actual C# consumers/instruments, not another
-lifecycle system. Current public navigation points to bounded operational methods.
-
+Public navigation now exposes the actual original scene and new laboratory. Existing
+[CI routing](../tools/ci_scope.py) adds its real consumers without dropping gates.
+Prior baseline CI [39731019211](https://github.com/MartinFMelcop/Creative_AI_Project_HUB/actions/runs/39731019211)
+was rechecked: five affected jobs passed, three were scope-selected skips. Parent run
+39730287452 passed seven jobs including C# and failed the remote source-contract
+comparison; actual loopback reexecution isolated the changed instrument fingerprint.
+The [startup evidence](../evidence/north-star-startup-rearm/RUN.json) retains that and
+the earlier readiness failure without claiming historical scheduling causality.
 [Audio fixture evidence](../evidence/veil-arena/audio-seek-fixture.json) retains the
-prior packaged negative-control failure and controlled stale-target cancellation.
-Atomic injection preserved >50ms detection and <15ms alignment/reset limits; product
-audio/PCK stayed unchanged. This established a fixture vulnerability, not the measured
-scheduling cause of the historical CI failure. Prior final CI run
-[39703441289](https://github.com/MartinFMelcop/Creative_AI_Project_HUB/actions/runs/39703441289)
-was rechecked: all eight jobs completed successfully. The subsequent Loadout run
-[39727979940](https://github.com/MartinFMelcop/Creative_AI_Project_HUB/actions/runs/39727979940)
-finished with seven successful jobs and one remote-startup failure. A controlled
-24-tick initial neutral delay reproduced a transport-live snapshot whose UI still
-correctly blocked actions for rearm. The instrument now waits boundedly for actual
-neutral readiness before the unchanged cost/range assertions; it does not wait for
-expected semantic values. Six startup regressions, 46 controlled delayed source/PCK
-OS checks and 46 normal source/PCK checks passed. [Evidence](../evidence/north-star-startup-rearm/RUN.json)
-separates the staged authority fixture from unchanged model/client/PCK execution.
-The controlled race does not establish the historical CI scheduling cause. This is
-supporting instrument repair, not another operational laboratory or product release.
-Publication cc53e89 was verified on main. Its CI run 39730287452 passed C#
-and the integrity/authority gates, but the remote comparator refused an obsolete
-verify_remote_input.py fingerprint before startup testing. Actual loopback
-reexecution passed four source/PCK living wins and native controls. Only that
-instrument identity differs in the contract; semantic assertions, runtime/PCK and
-all other identities are unchanged. The evidence binding is corrected separately;
-new publication and CI remain separate.
+separate packaged negative and atomic injection repair with thresholds preserved.
+New publication and CI remain separate facts.
 
 ## Rolling strategic investment — once-counted substantive units
 
 Targets remain approximately **47% legacy/laboratories / 40% North Star / 13%
-repository/portfolio**, not measured hours or file/commit/token shares. Keep at most
-eight units; counts cannot establish convergence.
+repository/portfolio**, not measured hours or file/commit/token shares. At most eight
+units are retained; counts cannot establish convergence.
 
 | Completed substantive unit | Primary workstream | Evidence / relative investment |
 |---|---|---|
-| C# domain and original connected encounter | North Star | [Foundation](../north-star/csharp/README.md); substantial dependent implementation |
-| Authority/schema, public entry and affected CI routing | Repository/portfolio | Current authorities and tested routing; supporting structural scope |
-| Typed crafting assay and atomic resource method | Legacy/laboratories | [Economy execution](../evidence/economy-crafting/RUN.json); corrective incomplete-lab investigation |
+| Typed crafting assay and atomic resource method | Legacy/laboratories | [Economy execution](../evidence/economy-crafting/RUN.json); corrective source investigation |
 | Scarce crafting preparation in real encounters | North Star | [Forge](../north-star/csharp/Forge/README.md); substantial dependent implementation |
-| Typed identity/skill method and helper counterexamples | Legacy/laboratories | [World execution](../evidence/world-loadout/RUN.json); corrective incomplete-lab investment |
-| Transactional prepared identity and earned action slots | North Star | [Loadout](../north-star/csharp/Loadout/README.md); real consumer of the recovered constraints |
-| Commit/replay and local failure-recovery method | Legacy/laboratories | [Persistence execution](../evidence/persistent-expedition/RUN.json); source-informed controls and real process observations |
-| Persistent joint expedition and explicit continuation | North Star | [Recovery](../north-star/csharp/Recovery/README.md); substantial implementation preserving existing choice investment |
+| Typed identity/skill method and helper counterexamples | Legacy/laboratories | [World execution](../evidence/world-loadout/RUN.json); incomplete-lab investment |
+| Transactional prepared identity and earned action slots | North Star | [Loadout](../north-star/csharp/Loadout/README.md); real constraint consumer |
+| Commit/replay and local failure-recovery method | Legacy/laboratories | [Persistence execution](../evidence/persistent-expedition/RUN.json); source controls and real processes |
+| Persistent joint expedition and explicit continuation | North Star | [Recovery](../north-star/csharp/Recovery/README.md); preserves existing investment |
+| Contextual consent/commitment and false-completion method | Legacy/laboratories | [Narrative execution](../evidence/narrative-continuity/RUN.json); selected-source assay and actual origin controls/mutants |
+| Authored request, finite work and accountable actual return | North Star | [Narrative](../north-star/csharp/Narrative/README.md); new consequence-bearing experience |
 
-Lab research and product behavior are separate outputs, not duplicate counts for one
-test. Routing/evidence/navigation and the earlier bounded audio repair are supporting
-maintenance, not extra strategic units. The oldest available-source audit unit aged
-out of this eight-unit window; its [inventory](../labs/source-inventory.json) and
-[legacy audit](../labs/legacy-audit.md) remain preserved. No measured percentage
-convergence is claimed.
-Six incomplete laboratories still justify corrective investment; actual Unity or
-consequential production dependencies may justify a product deviation. Three consecutive
-units in one stream require explicit correction or a concrete blocker. Completion
-requires real operational methods, justified terminal consumption and production proof,
-not documentation counts.
+Research and authored product are distinct outputs, not duplicate counts of native
+tests. Affected regressions, navigation, evidence and CI are supporting maintenance,
+not extra strategic units. Earlier foundation/authority units aged out; their code,
+public authorities and source inventory remain. Current substantive scope still
+concentrates on lab/product breadth. Portfolio work now exposes real scene execution;
+compare actual demonstration/presentation and Windows delivery needs next rather than
+inventing convergence or another governance unit. Five incomplete labs still justify
+corrective investment. Three consecutive units in one stream require correction or
+a concrete dependency/blocker. Completion requires actual methods, terminal consumption
+and production evidence, not documentation or folder counts.

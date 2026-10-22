@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "updated_at": "2026-10-22",
-  "baseline_commit": "d007eb3b32a38b4ad12da363395d2196e9c17cb6",
+  "baseline_commit": "b182a2bb46a6cbcea26be8f766a68d2199137ca1",
   "scope": "Mandatory eleven-laboratory transformation. Historical source preservation is separate from terminal knowledge consumption; operational claims require executed instruments and bound evidence.",
   "north_star_consumer_demonstrated": true,
   "existing_transfer_scope": "Validated transfers and integrated assets in the existing registries describe their named origin consumers, not Virgo Diamond integration.",
@@ -158,7 +158,7 @@
         "Do not rewrite imported historical sources or erase their unavailable/editable-source limitations",
         "Neither the Darsen adaptation nor repeated historical fictional details establish Virgo Diamond canon; preserve source rights and font attribution"
       ],
-      "extraction_next": "Execute a cross-source continuity/consent assay on real narrative transitions before adopting a reusable authoring contract.",
+      "extraction_next": "Evaluate authored consequence comprehension with appropriate readers/players and additional content; compare remaining incomplete laboratories and actual Unity delivery before extending narrative persistence or generic quest architecture.",
       "laboratory_id": "narrative-continuity"
     },
     {
@@ -479,8 +479,8 @@
         "evidence/economy-crafting/results.json"
       ],
       "evidence_sha256": {
-        "evidence/economy-crafting/RUN.json": "077ab8ee106ca0b71de265b15e04c8996d5d6a2cc741792ad5b777df0d95e101",
-        "evidence/economy-crafting/results.json": "00d31083e3ba3b06a5af0f1252e6f27c2575eb2d21d3e8996ddc61dbbc8cf447"
+        "evidence/economy-crafting/RUN.json": "7a2e43312b0b5b1c777a35d724a66c6e8094731fb7de641ba07816a4912d51d2",
+        "evidence/economy-crafting/results.json": "70e76a5e5151c1ae2cd256f8b666cbc9a4bc991d64987403d771fad4bee6c13b"
       }
     },
     {
@@ -536,9 +536,10 @@
       "owner_origin": "P04",
       "owner_role": "Narrative & Continuity research lead, coordinated by the HUB maintainer; specialist assignments are per execution",
       "origin_projects": [
-        "P04"
+        "P04",
+        "P10"
       ],
-      "status": "incomplete",
+      "status": "operational",
       "domain": "Narrative structure, characterization, continuity, causal writing and localization",
       "question": "Which consequential narrative transitions preserve characterization, continuity and explicit consent?",
       "source_paths": [
@@ -548,13 +549,38 @@
         "projects/lich-cistern/tools",
         "projects/lich-cistern/fonts",
         "projects/lich-cistern/provenance.json",
-        "references/literature/lich/README.md"
+        "references/literature/lich/README.md",
+        "projects/waystone-dialogue/browser/dist/deferred-request.js",
+        "projects/waystone-dialogue/browser/tests/deferred-request.test.mjs",
+        "references/rave-master/snapshots/36af1651271422ae33856e8b5d7b45702215f165/source/RM_ACT1/DATA/DEV/QUEST_STEPS.csv",
+        "references/rave-master/snapshots/36af1651271422ae33856e8b5d7b45702215f165/source/RM_ACT1/DATA/DEV/RGSS/RM_UI_QUEST_JOURNAL_RUNTIME.rb",
+        "references/rave-master/snapshots/36af1651271422ae33856e8b5d7b45702215f165/source/RM_DIST/RMXP_BASE/Data/RM_CSV/QUEST_STEPS.csv",
+        "references/rave-master/snapshots/36af1651271422ae33856e8b5d7b45702215f165/source/RM_DIST/RMXP_BASE/ScriptsCustom/RM_UI_QUEST_JOURNAL_RUNTIME.rb"
       ],
       "source_inventory": "labs/source-inventory.json",
-      "consumer_paths": [],
-      "controls": [],
-      "validity_boundary": "Destination ownership and available sources are established; no operational laboratory method/results or North Star integration is claimed yet. Historical origin execution retains its own narrower scope.",
-      "next_objective": "Execute a cross-source continuity/consent assay on real narrative transitions before adopting a reusable authoring contract."
+      "consumer_paths": [
+        "north-star/csharp/Narrative/RequestExpedition.cs",
+        "north-star/csharp/Narrative/Program.cs",
+        "north-star/csharp/Crossing/Session.cs"
+      ],
+      "controls": [
+        "Selected causal/source bindings and typed twin legacy tables with distinct DEV/DIST limitations",
+        "Six actual P10 module controls and two isolated policy mutants",
+        "95 compiled native controls and eight complete outcome-distinct original journeys",
+        "12 instrument regressions, exact reproduction and three actual stdin sessions"
+      ],
+      "validity_boundary": "Bounded selected-source method, actual P10 module controls and original C# in-session consequences. No historical RMXP execution, complete quest/reputation catalogs, durable NPC world, literary/consent/player validation or Unity/Windows/Steam proof.",
+      "next_objective": "Evaluate authored consequence comprehension with appropriate readers/players and additional content; compare remaining incomplete laboratories and actual Unity delivery before extending narrative persistence or generic quest architecture.",
+      "path": "labs/narrative-continuity",
+      "instrument": "labs/narrative-continuity/run.py",
+      "evidence": [
+        "evidence/narrative-continuity/RUN.json",
+        "evidence/narrative-continuity/results.json"
+      ],
+      "evidence_sha256": {
+        "evidence/narrative-continuity/RUN.json": "32e3362e33b593fbdbae5cb5c517afebf2e2067ccbea9f9a5631af27a88e201b",
+        "evidence/narrative-continuity/results.json": "e83cb621700f1d3552911ff063ade2f8990bdfdeb0e600bbc2701c915a1d4413"
+      }
     },
     {
       "id": "rpg-systems",
@@ -605,8 +631,8 @@
         "evidence/rpg-progression/results.json"
       ],
       "evidence_sha256": {
-        "evidence/rpg-progression/RUN.json": "50d2aebd329aa6e8bc26fec6b14b8c3244cefadc54b4088ea936d63181223b48",
-        "evidence/rpg-progression/results.json": "93f505d0157a8cdb544e67bc254b017ec46abbe6ed4dcab12b2b22942ea658ac"
+        "evidence/rpg-progression/RUN.json": "fc23e5ea3eb5f8ae83fa2edd405baf74fbde8ea3084946eeac9c04ba1221b74a",
+        "evidence/rpg-progression/results.json": "c9debbc0b767c978a477d9538a138a7b59c31517d72627d53446a827a38e617f"
       }
     },
     {
@@ -776,8 +802,8 @@
         "evidence/world-loadout/results.json"
       ],
       "evidence_sha256": {
-        "evidence/world-loadout/RUN.json": "44e4c8606bf94e669f86caa464ba3da02306afac653104e51e88a427a3b38218",
-        "evidence/world-loadout/results.json": "f425a751028eb7a2e76e48d898d87bf4926b6b93a8dc95e4e652c7d0643a2f83"
+        "evidence/world-loadout/RUN.json": "d7939fc47524a50e18c0879787389a954072e3b20995a3b088c1872823d22a56",
+        "evidence/world-loadout/results.json": "60969a4739511c54dc1b98188a738d6cb439fd725d86ba241995db5f1956b88c"
       }
     },
     {
@@ -829,8 +855,8 @@
         "evidence/persistent-expedition/results.json"
       ],
       "evidence_sha256": {
-        "evidence/persistent-expedition/RUN.json": "ca3fb229720860b3e35408c84f5e0231b7b0193e11f61df72b077601762c8ae4",
-        "evidence/persistent-expedition/results.json": "c9135f3b961e44811040e89933734781fd274a10f469353a86b49ed2666ce71b"
+        "evidence/persistent-expedition/RUN.json": "e89b820d8dac3fd0379f10e9655b335871faa1b06a589e699228cd7fbd69827b",
+        "evidence/persistent-expedition/results.json": "a33020789a3bfaf5355c820ca3be20e72f585b668737f116f81c270917d35baa"
       }
     }
   ],
@@ -875,7 +901,7 @@
         "evidence/rpg-progression/RUN.json"
       ],
       "evidence_sha256": {
-        "evidence/rpg-progression/RUN.json": "50d2aebd329aa6e8bc26fec6b14b8c3244cefadc54b4088ea936d63181223b48"
+        "evidence/rpg-progression/RUN.json": "fc23e5ea3eb5f8ae83fa2edd405baf74fbde8ea3084946eeac9c04ba1221b74a"
       }
     },
     {
@@ -894,7 +920,7 @@
         "evidence/rpg-progression/results.json"
       ],
       "evidence_sha256": {
-        "evidence/rpg-progression/results.json": "93f505d0157a8cdb544e67bc254b017ec46abbe6ed4dcab12b2b22942ea658ac"
+        "evidence/rpg-progression/results.json": "c9debbc0b767c978a477d9538a138a7b59c31517d72627d53446a827a38e617f"
       }
     },
     {
@@ -971,8 +997,8 @@
         "projects/lich-cistern/story.md",
         "projects/lich-cistern/story.en.md"
       ],
-      "decision": "Remaining source capabilities in this laboratory domain are available or explicitly scoped gaps; source preservation and origin execution do not count as consumed.",
-      "next_action": "Execute a cross-source continuity/consent assay on real narrative transitions before adopting a reusable authoring contract."
+      "decision": "Selected refusal/context/commitment craft contracts now have a bounded consumer; remaining literary/localization/reader and broader source capabilities remain unresolved.",
+      "next_action": "Evaluate actual scene comprehension and additional authored consequences with appropriate human methods, without importing fiction or declaring literary quality from code checks."
     },
     {
       "id": "P05-REMAINING-SCOPE",
@@ -1130,8 +1156,8 @@
         "references/rave-master/snapshots/36af1651271422ae33856e8b5d7b45702215f165/source/RM_ACT1/DATA/DEV/RGSS/RM_DIALOGUE_SCORING_RUNTIME.rb",
         "references/rave-master/snapshots/36af1651271422ae33856e8b5d7b45702215f165/source/RM_ACT1/DATA/DEV/QUEST_STEPS.csv"
       ],
-      "decision": "Available actual source/data/helpers require a bounded method and verified adaptation or justified rejection; no entire system is declared consumed.",
-      "next_action": "Separate actual selectors/state/expiry from debug/manual helpers, evaluate empty reputation effects and current quest/world consequences with original content."
+      "decision": "Static quest helper/table assay preserves DEV/DIST differences and manual-completion/first-step limits. Full NPC schedules, reputation/factions, dialogue selectors, quest/world catalogs and actual RGSS runtime remain unresolved.",
+      "next_action": "Evaluate actual state/event ownership and reputation effects with bounded source controls; do not treat manual UI completion or historical QA labels as objective evidence."
     },
     {
       "id": "P01-XP-CRAFT-TRANSACTION",
@@ -1158,8 +1184,8 @@
         "evidence/economy-crafting/results.json"
       ],
       "evidence_sha256": {
-        "evidence/economy-crafting/RUN.json": "077ab8ee106ca0b71de265b15e04c8996d5d6a2cc741792ad5b777df0d95e101",
-        "evidence/economy-crafting/results.json": "00d31083e3ba3b06a5af0f1252e6f27c2575eb2d21d3e8996ddc61dbbc8cf447"
+        "evidence/economy-crafting/RUN.json": "7a2e43312b0b5b1c777a35d724a66c6e8094731fb7de641ba07816a4912d51d2",
+        "evidence/economy-crafting/results.json": "70e76a5e5151c1ae2cd256f8b666cbc9a4bc991d64987403d771fad4bee6c13b"
       }
     },
     {
@@ -1179,8 +1205,8 @@
         "evidence/economy-crafting/results.json"
       ],
       "evidence_sha256": {
-        "evidence/economy-crafting/RUN.json": "077ab8ee106ca0b71de265b15e04c8996d5d6a2cc741792ad5b777df0d95e101",
-        "evidence/economy-crafting/results.json": "00d31083e3ba3b06a5af0f1252e6f27c2575eb2d21d3e8996ddc61dbbc8cf447"
+        "evidence/economy-crafting/RUN.json": "7a2e43312b0b5b1c777a35d724a66c6e8094731fb7de641ba07816a4912d51d2",
+        "evidence/economy-crafting/results.json": "70e76a5e5151c1ae2cd256f8b666cbc9a4bc991d64987403d771fad4bee6c13b"
       }
     },
     {
@@ -1210,8 +1236,8 @@
         "evidence/world-loadout/results.json"
       ],
       "evidence_sha256": {
-        "evidence/world-loadout/RUN.json": "44e4c8606bf94e669f86caa464ba3da02306afac653104e51e88a427a3b38218",
-        "evidence/world-loadout/results.json": "f425a751028eb7a2e76e48d898d87bf4926b6b93a8dc95e4e652c7d0643a2f83"
+        "evidence/world-loadout/RUN.json": "d7939fc47524a50e18c0879787389a954072e3b20995a3b088c1872823d22a56",
+        "evidence/world-loadout/results.json": "60969a4739511c54dc1b98188a738d6cb439fd725d86ba241995db5f1956b88c"
       }
     },
     {
@@ -1231,8 +1257,8 @@
         "evidence/world-loadout/results.json"
       ],
       "evidence_sha256": {
-        "evidence/world-loadout/RUN.json": "44e4c8606bf94e669f86caa464ba3da02306afac653104e51e88a427a3b38218",
-        "evidence/world-loadout/results.json": "f425a751028eb7a2e76e48d898d87bf4926b6b93a8dc95e4e652c7d0643a2f83"
+        "evidence/world-loadout/RUN.json": "d7939fc47524a50e18c0879787389a954072e3b20995a3b088c1872823d22a56",
+        "evidence/world-loadout/results.json": "60969a4739511c54dc1b98188a738d6cb439fd725d86ba241995db5f1956b88c"
       }
     },
     {
@@ -1262,8 +1288,58 @@
         "evidence/persistent-expedition/results.json"
       ],
       "evidence_sha256": {
-        "evidence/persistent-expedition/RUN.json": "ca3fb229720860b3e35408c84f5e0231b7b0193e11f61df72b077601762c8ae4",
-        "evidence/persistent-expedition/results.json": "c9135f3b961e44811040e89933734781fd274a10f469353a86b49ed2666ce71b"
+        "evidence/persistent-expedition/RUN.json": "e89b820d8dac3fd0379f10e9655b335871faa1b06a589e699228cd7fbd69827b",
+        "evidence/persistent-expedition/results.json": "a33020789a3bfaf5355c820ca3be20e72f585b668737f116f81c270917d35baa"
+      }
+    },
+    {
+      "id": "P04-P10-CONTEXTUAL-COMMITMENT",
+      "origin_projects": [
+        "P04",
+        "P10"
+      ],
+      "laboratory_id": "narrative-continuity",
+      "status": "INTEGRATED",
+      "source_paths": [
+        "projects/lich-cistern/SOURCE_COMPARISON.md",
+        "projects/lich-cistern/story.en.md",
+        "projects/waystone-dialogue/browser/dist/deferred-request.js",
+        "projects/waystone-dialogue/browser/tests/deferred-request.test.mjs"
+      ],
+      "decision": "Adapt refusal changing the plan, fresh contextual offers, tentative terms and observed-versus-promised outcome contracts into actual original C# work/request and unchanged Crossing encounters. No source fiction or complete campaign/quest engine is imported.",
+      "consumer_paths": [
+        "north-star/csharp/Narrative/RequestExpedition.cs",
+        "north-star/csharp/Narrative/Program.cs",
+        "north-star/csharp/Crossing/Session.cs"
+      ],
+      "evidence": [
+        "evidence/narrative-continuity/RUN.json",
+        "evidence/narrative-continuity/results.json"
+      ],
+      "evidence_sha256": {
+        "evidence/narrative-continuity/RUN.json": "32e3362e33b593fbdbae5cb5c517afebf2e2067ccbea9f9a5631af27a88e201b",
+        "evidence/narrative-continuity/results.json": "e83cb621700f1d3552911ff063ade2f8990bdfdeb0e600bbc2701c915a1d4413"
+      }
+    },
+    {
+      "id": "XP-MANUAL-COMPLETION-AS-EVIDENCE",
+      "origin_projects": [
+        "P10"
+      ],
+      "laboratory_id": "narrative-continuity",
+      "status": "REJECTED",
+      "source_paths": [
+        "references/rave-master/snapshots/36af1651271422ae33856e8b5d7b45702215f165/source/RM_ACT1/DATA/DEV/RGSS/RM_UI_QUEST_JOURNAL_RUNTIME.rb",
+        "references/rave-master/snapshots/36af1651271422ae33856e8b5d7b45702215f165/source/RM_DIST/RMXP_BASE/ScriptsCustom/RM_UI_QUEST_JOURNAL_RUNTIME.rb"
+      ],
+      "decision": "Reject direct manual quest completion as objective proof for this destination. Both preserved UI helpers expose it; DEV adds progress omitted in DIST and first-step limits remain explicit. Real destination refuses fabricated complete and requires actual private encounter outcome. This rejects a shortcut, not the entire quest source.",
+      "evidence": [
+        "evidence/narrative-continuity/RUN.json",
+        "evidence/narrative-continuity/results.json"
+      ],
+      "evidence_sha256": {
+        "evidence/narrative-continuity/RUN.json": "32e3362e33b593fbdbae5cb5c517afebf2e2067ccbea9f9a5631af27a88e201b",
+        "evidence/narrative-continuity/results.json": "e83cb621700f1d3552911ff063ade2f8990bdfdeb0e600bbc2701c915a1d4413"
       }
     }
   ]

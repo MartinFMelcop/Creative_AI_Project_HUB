@@ -1,0 +1,92 @@
+The shutter list — original experimental request scene
+Edda sets a coil beside five shutter crates. 'The shutters close our store before dark. The coil is for the far bank.' Rill hooks a boot under the board. 'Not on an unchecked route. Survey it first. This line stays here.'
+Commands: open, hear, offer, terms dusk|open, confirm, defer, decline, withdraw, work, survey, depart guided|solo, skill, walk, dash, wait, show, quit. No save is created.
+
+Light 4/4; shutters 0/5; local capacity 2; Rill local; coil not delivered; request open.
+> Edda unfolds a clean slip beside the work list: 5 crates remain, 4 shifts of light, capacity 2 per shift. No coil or guide has left.
+
+Light 4/4; shutters 0/5; local capacity 2; Rill local; coil not delivered; request open.
+> REFUSED: Rill tightens the line on its peg. 'No offer from me without a surveyed route and two shifts for this trip.'
+
+Light 4/4; shutters 0/5; local capacity 2; Rill local; coil not delivered; request open.
+> Edda writes 'no guide supplied'. Rill takes the near end of a shutter crate. The coil stays on the board; its far-bank delivery is not reported.
+
+Light 4/4; shutters 0/5; local capacity 2; Rill local; coil not delivered; request declined.
+> Rill takes the other end. Together you carry 2 shutter crate(s). 3 remain; 3 shifts of light. Any unsigned offer needs a fresh conversation.
+
+Light 3/4; shutters 2/5; local capacity 2; Rill local; coil not delivered; request declined.
+> Rill takes the other end. Together you carry 2 shutter crate(s). 1 remain; 2 shifts of light. Any unsigned offer needs a fresh conversation.
+
+Light 2/4; shutters 4/5; local capacity 2; Rill local; coil not delivered; request declined.
+> Rill takes the other end. Together you carry 1 shutter crate(s). 0 remain; 1 shifts of light. Any unsigned offer needs a fresh conversation.
+
+Light 1/4; shutters 5/5; local capacity 2; Rill local; coil not delivered; request declined.
+> {
+  "revision": 4,
+  "shift": 3,
+  "remaining": 1,
+  "crates": 5,
+  "crates_required": 5,
+  "capacity": 2,
+  "guide_available": true,
+  "guide_location": "local",
+  "surveyed": false,
+  "delivered": false,
+  "returned": false,
+  "status": "declined",
+  "conversation": "closed",
+  "term": null,
+  "due_elapsed": false,
+  "delivery_started": false,
+  "receipts": [],
+  "encounter": {
+    "kind": "none",
+    "active": false,
+    "stage": 0,
+    "beat": 0,
+    "position": 0,
+    "health": 0,
+    "resolve": 0,
+    "required_position": 2,
+    "maximum_beats": 4,
+    "threat": "BOLT: moving exposes health; the approach skill spends resolve to protect.",
+    "xp": 0
+  },
+  "scope": "In-session original experiment; no persistent quest, Unity/Windows or human validation"
+}
+
+Light 1/4; shutters 5/5; local capacity 2; Rill local; coil not delivered; request declined.
+> Session ended. In-session facts follow; no persistent quest or future return is inferred.
+{
+  "revision": 4,
+  "shift": 3,
+  "remaining": 1,
+  "crates": 5,
+  "crates_required": 5,
+  "capacity": 2,
+  "guide_available": true,
+  "guide_location": "local",
+  "surveyed": false,
+  "delivered": false,
+  "returned": false,
+  "status": "declined",
+  "conversation": "closed",
+  "term": null,
+  "due_elapsed": false,
+  "delivery_started": false,
+  "receipts": [],
+  "encounter": {
+    "kind": "none",
+    "active": false,
+    "stage": 0,
+    "beat": 0,
+    "position": 0,
+    "health": 0,
+    "resolve": 0,
+    "required_position": 2,
+    "maximum_beats": 4,
+    "threat": "BOLT: moving exposes health; the approach skill spends resolve to protect.",
+    "xp": 0
+  },
+  "scope": "In-session original experiment; no persistent quest, Unity/Windows or human validation"
+}

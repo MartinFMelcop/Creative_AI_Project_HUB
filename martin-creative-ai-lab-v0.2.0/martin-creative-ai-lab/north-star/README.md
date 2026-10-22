@@ -78,3 +78,11 @@ separates compiled eligibility from described legacy skills and helper models.
 process exits, with explicit refusal of corrupt/incompatible runs and content-bound
 retry ownership. [Recovery evidence](../evidence/persistent-expedition/RUN.json) is
 separate from account/network, Unity, Windows and physical storage durability claims.
+
+[The original narrative consumer](csharp/Narrative/README.md) executes a local request,
+explicit terms and a consequence-bearing work day. Refusal changes the plan; tentative
+offers do not release resources; recorded obligations are separate from actual outcomes.
+[The Narrative & Continuity method](../labs/narrative-continuity/README.md) compares
+selected P04/P10 contracts and distinct legacy quest helpers against actual execution.
+This is original experimental fiction and local session state, not final canon, a
+general quest engine, shared-world reputation or Unity/Windows delivery.

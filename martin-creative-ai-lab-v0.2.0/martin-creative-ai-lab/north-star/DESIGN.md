@@ -526,3 +526,35 @@ hypothesis informing safe refusal without erasing earned choices. Explicit new/o
 and refusal of corrupt/incompatible runs prevent silent replacement. Replayed commands
 must not repay rewards or refund failed rigs. Human understanding of continuation,
 Windows/Unity integration and authored NPC consequences remain separate investigations.
+
+
+## Experimental request, work and accountable return
+
+**Status:** original implemented local scene hypothesis, not approved cast/world canon.
+Independent Engineering, Scientific and Creative analyses selected narrative continuity
+over another storage/preparation increment. The completed recovery dependency preserves
+existing choices but does not itself give another person a consequential response.
+Input/timing and AI evaluation remain credible incomplete obligations; actual Unity
+delivery remains contingent on tools/licensing rather than an empty project.
+
+[The coil and the shutters](csharp/Narrative/SCENE.md) stages conflicting local needs.
+Listening, volunteering, tentative terms, explicit commitment and observed results have
+different owners. A refusal changes the plan before any renewed proposal; a pause or
+changed facts requires a fresh offer. An obligation is not evidence of return, delivery
+or forgiveness. Actual work competes with travel and a real existing Crossing encounter,
+so agreeing is neither free nor the only legitimate way to proceed. Responses name
+observed losses, remaining work and unaccounted-for people without inventing their fate.
+
+CRE-005(A) materially informs costs, alternatives and remembered consequences;
+CRE-045/046/061(H) inform local scene hypotheses, not adopted campaign/cast canon.
+ENG-005 informs finite state ownership; SCI-014/017 distinguish software controls,
+selected source reading and actual module execution from literary quality, player
+comprehension or consent validation. P04 refusal/limited reopening and P10 fresh terms
+are craft/contract sources, not fictional imports. Legacy manual quest completion is
+an explicit unsafe shortcut for objective evidence, without rejecting the entire source
+collection. Existing ACT1/distributed helper differences remain preserved.
+
+[Execution](../evidence/narrative-continuity/RUN.json) owns precise results. This separate
+in-session C# host does not extend Recovery's journal format, assert durable NPC state,
+add global reputation, render Unity scenes or validate Windows/Steam. Review actual
+interaction with authors/players before inferring significance, comfort or preference.

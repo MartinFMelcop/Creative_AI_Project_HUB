@@ -498,6 +498,9 @@ jobs:
           DOTNET_INSTALL_DIR: ${{ runner.temp }}/north-star-sdk-10.0.401
         with:
           dotnet-version: '10.0.401'
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
+        with:
+          node-version: '24.19.0'
       - name: Execute recovered progression and original C# destination
         run: |
           test "$(dotnet --version)" = "10.0.401"
@@ -528,3 +531,10 @@ jobs:
           dotnet build north-star/csharp/RecoveryChecks/NorthStar.RecoveryChecks.csproj -c Release
           dotnet north-star/csharp/RecoveryChecks/bin/Release/net10.0/NorthStar.RecoveryChecks.dll native "$RUNNER_TEMP/north-star-recovery-native.json"
           dotnet north-star/csharp/Recovery/bin/Release/net10.0/NorthStar.Recovery.dll --demo "$RUNNER_TEMP/north-star-recovery-journey.json"
+      - name: Execute narrative continuity and event-owned outcomes
+        run: |
+          python3 -m unittest discover -s labs/narrative-continuity -p 'test_*.py'
+          python3 labs/narrative-continuity/run.py --dotnet dotnet --output "$RUNNER_TEMP/narrative-continuity.json" --compare evidence/narrative-continuity/results.json
+          dotnet build north-star/csharp/NarrativeChecks/NorthStar.NarrativeChecks.csproj -c Release
+          dotnet north-star/csharp/NarrativeChecks/bin/Release/net10.0/NorthStar.NarrativeChecks.dll "$RUNNER_TEMP/north-star-narrative-native.json"
+          dotnet north-star/csharp/Narrative/bin/Release/net10.0/NorthStar.Narrative.dll --demo "$RUNNER_TEMP/north-star-narrative-journey.json"

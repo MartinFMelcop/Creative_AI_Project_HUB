@@ -1,0 +1,211 @@
+{
+  "schema_version": 1,
+  "kind": "actual_stdin_sessions",
+  "runtime": "dotnet10.0.401/Linux; synthetic input, no human validation",
+  "sessions": [
+    {
+      "name": "local",
+      "exit_code": 0,
+      "commands": [
+        "open",
+        "hear",
+        "decline",
+        "work",
+        "work",
+        "work",
+        "show",
+        "quit"
+      ],
+      "final": {
+        "revision": 4,
+        "shift": 3,
+        "remaining": 1,
+        "crates": 5,
+        "crates_required": 5,
+        "capacity": 2,
+        "guide_available": true,
+        "guide_location": "local",
+        "surveyed": false,
+        "delivered": false,
+        "returned": false,
+        "status": "declined",
+        "conversation": "closed",
+        "term": null,
+        "due_elapsed": false,
+        "delivery_started": false,
+        "receipts": [],
+        "encounter": {
+          "kind": "none",
+          "active": false,
+          "stage": 0,
+          "beat": 0,
+          "position": 0,
+          "health": 0,
+          "resolve": 0,
+          "required_position": 2,
+          "maximum_beats": 4,
+          "threat": "BOLT: moving exposes health; the approach skill spends resolve to protect.",
+          "xp": 0
+        },
+        "scope": "In-session original experiment; no persistent quest, Unity/Windows or human validation"
+      }
+    },
+    {
+      "name": "guided",
+      "exit_code": 0,
+      "commands": [
+        "survey",
+        "skill",
+        "skill",
+        "walk",
+        "skill",
+        "open",
+        "hear",
+        "offer",
+        "terms dusk",
+        "confirm",
+        "show",
+        "depart guided",
+        "skill",
+        "skill",
+        "walk",
+        "skill",
+        "walk",
+        "skill",
+        "work",
+        "show",
+        "quit"
+      ],
+      "final": {
+        "revision": 6,
+        "shift": 4,
+        "remaining": 0,
+        "crates": 2,
+        "crates_required": 5,
+        "capacity": 2,
+        "guide_available": true,
+        "guide_location": "local",
+        "surveyed": true,
+        "delivered": true,
+        "returned": true,
+        "status": "delivered",
+        "conversation": "closed",
+        "term": "dusk",
+        "due_elapsed": false,
+        "delivery_started": true,
+        "receipts": [
+          {
+            "kind": "commitment",
+            "revision": 2,
+            "shift": 1,
+            "crates": 0,
+            "term": "dusk",
+            "guide": "Rill",
+            "delivered": false,
+            "returned": false
+          },
+          {
+            "kind": "observed_return",
+            "revision": 4,
+            "shift": 3,
+            "crates": 0,
+            "term": "dusk",
+            "guide": "Rill",
+            "delivered": true,
+            "returned": true
+          }
+        ],
+        "encounter": {
+          "kind": "guided",
+          "active": false,
+          "stage": 1,
+          "beat": 6,
+          "position": 6,
+          "health": 11,
+          "resolve": 3,
+          "required_position": 4,
+          "maximum_beats": 6,
+          "threat": "BOLT: moving exposes health; the approach skill spends resolve to protect.",
+          "xp": 25
+        },
+        "scope": "In-session original experiment; no persistent quest, Unity/Windows or human validation"
+      }
+    },
+    {
+      "name": "failed",
+      "exit_code": 0,
+      "commands": [
+        "survey",
+        "skill",
+        "skill",
+        "walk",
+        "skill",
+        "open",
+        "hear",
+        "offer",
+        "terms dusk",
+        "confirm",
+        "depart guided",
+        "wait",
+        "wait",
+        "work",
+        "show",
+        "quit"
+      ],
+      "final": {
+        "revision": 6,
+        "shift": 4,
+        "remaining": 0,
+        "crates": 1,
+        "crates_required": 5,
+        "capacity": 1,
+        "guide_available": false,
+        "guide_location": "unaccounted",
+        "surveyed": true,
+        "delivered": false,
+        "returned": false,
+        "status": "failed",
+        "conversation": "closed",
+        "term": "dusk",
+        "due_elapsed": true,
+        "delivery_started": true,
+        "receipts": [
+          {
+            "kind": "commitment",
+            "revision": 2,
+            "shift": 1,
+            "crates": 0,
+            "term": "dusk",
+            "guide": "Rill",
+            "delivered": false,
+            "returned": false
+          },
+          {
+            "kind": "failed_crossing",
+            "revision": 4,
+            "shift": 3,
+            "crates": 0,
+            "term": "dusk",
+            "guide": "Rill",
+            "delivered": false,
+            "returned": false
+          }
+        ],
+        "encounter": {
+          "kind": "guided",
+          "active": false,
+          "stage": 1,
+          "beat": 2,
+          "position": 0,
+          "health": 0,
+          "resolve": 11,
+          "required_position": 4,
+          "maximum_beats": 6,
+          "threat": "PULSE at your current position: walking or dashing leaves it.",
+          "xp": 10
+        },
+        "scope": "In-session original experiment; no persistent quest, Unity/Windows or human validation"
+      }
+    }
+  ]
+}

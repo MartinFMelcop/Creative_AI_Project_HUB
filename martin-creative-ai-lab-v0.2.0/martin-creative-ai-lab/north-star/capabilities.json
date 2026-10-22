@@ -30,7 +30,9 @@
     "north-star/csharp/Loadout/PreparedExpedition.cs",
     "north-star/csharp/Loadout/Program.cs",
     "north-star/csharp/Recovery/Journal.cs",
-    "north-star/csharp/Recovery/Program.cs"
+    "north-star/csharp/Recovery/Program.cs",
+    "north-star/csharp/Narrative/RequestExpedition.cs",
+    "north-star/csharp/Narrative/Program.cs"
   ],
   "contribution_model": {
     "candidate": "Identified hypothesis; no transfer proof.",
@@ -141,6 +143,7 @@
       "id": "NS-C04",
       "title": "Dialogue, quests and consequential narrative",
       "origin_projects": [
+        "P04",
         "P10"
       ],
       "reference_collections": [
@@ -148,21 +151,27 @@
       ],
       "contribution_status": "adapted",
       "origin_validation": "execution_record_inspected",
-      "scope": "Actual Python rescue rules and browser night/morning/noon consequences; dialogue decisions affect local resources and voluntary help.",
+      "scope": "Original C# contextual request/work and actual Crossing outcomes; retained Godot optional aid remains a separate functioning consumer.",
       "origin_evidence": [
         "projects/waystone-dialogue/adventure.py",
         "evidence/waystone-dialogue/HANDOVER_RUN.json"
       ],
-      "applicability_hypothesis": "An optional factual courier conversation now carries one exclusive aid choice into the real return goal; perceived narrative significance and character identity still require player observation.",
-      "limits": "Original local dialogue and a session-only prepared checkpoint; no P10 fiction/code import, general narrative kernel, reputation, persistent social simulation or independent player validation.",
-      "next_validation": "Observe unassisted players recalling the actual crossing facts and explaining the mutually exclusive aid consequences before judging comprehension, significance or preference.",
+      "applicability_hypothesis": "Remembered actual costs and observed responses may make social choices legible; independent comprehension and preference remain unvalidated.",
+      "limits": "Bounded in-session original fiction, no final canon, general quest/reputation system, durable narrative, Unity/Windows/Steam or human validation.",
+      "next_validation": "Evaluate authored consequence comprehension with appropriate readers/players and additional content; compare remaining incomplete laboratories and actual Unity delivery before extending narrative persistence or generic quest architecture.",
       "destination_consumer_paths": [
+        "north-star/csharp/Narrative/RequestExpedition.cs",
+        "north-star/csharp/Narrative/Program.cs",
+        "north-star/csharp/Crossing/Session.cs"
+      ],
+      "destination_scope": "Actual contextual offers, final refusal/defer, reserved-versus-departed guide, finite local work, immutable receipts and real encounter-verified delivery/return; signatures/deadlines cannot manufacture completion. Existing Godot aid consumer/evidence remain valid.",
+      "destination_evidence": "evidence/narrative-continuity/RUN.json",
+      "prior_destination_evidence": "evidence/north-star-return-feedback/RUN.json",
+      "prior_destination_consumer_paths": [
         "north-star/prototype/arena.gd",
         "north-star/prototype/courier_talk.gd",
         "north-star/prototype/return_gate.gd"
-      ],
-      "destination_scope": "New native code adapts the inspected P10 precondition-before-mutation and fact-owned-response method. Actual escort facts feed an optional original courier conversation; deliberate confirmation allocates a single strip to capped prepared health or winch integrity, or leaves it with the courier. Only confirmed aid reaches the actual next objective; reopening/retry cannot accumulate benefits. Direct continuation and no-aid mechanics remain. No origin implementation/fiction, emotion model or persistent work-shift campaign is imported; this is bounded destination adaptation, not production integration or independent human validation.",
-      "destination_evidence": "evidence/north-star-return-feedback/RUN.json"
+      ]
     },
     {
       "id": "NS-C05",

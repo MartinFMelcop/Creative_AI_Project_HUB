@@ -1,0 +1,273 @@
+{
+  "schema_version": 1,
+  "kind": "destination_execution",
+  "baseline_commit": "b182a2bb46a6cbcea26be8f766a68d2199137ca1",
+  "capability_ids": [
+    "NS-C04"
+  ],
+  "scope": "Cross-source refusal/contextual consent, explicit commitment and objective-evidence continuity in an original actual C# request/work and Crossing consumer",
+  "runtime": "Linux; .NET SDK10.0.401; Node24.19.0; actual local deterministic code and synthetic stdin, no Unity/Windows/Steam",
+  "consumer_paths": [
+    "north-star/csharp/Narrative/RequestExpedition.cs",
+    "north-star/csharp/Narrative/Program.cs",
+    "north-star/csharp/Crossing/Session.cs"
+  ],
+  "checks": {
+    "failed": 0,
+    "passed": 95
+  },
+  "instrument_regressions": {
+    "passed": 12,
+    "failed": 0
+  },
+  "origin_controls": {
+    "actual_p10": 6,
+    "controlled_origin_mutants_detected": 2,
+    "legacy_rows_per_copy": 73,
+    "legacy_scope": "Static DEV/DIST schema/source assay; no Ruby/RGSS execution"
+  },
+  "commands": [
+    {
+      "command": [
+        "python3",
+        "labs/narrative-continuity/run.py",
+        "--dotnet",
+        "/workspace/work/structural-transformation/dotnet/dotnet",
+        "--output",
+        "/workspace/work/narrative-continuation-study-compared.json",
+        "--compare",
+        "evidence/narrative-continuity/results.json"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "python3",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "labs/narrative-continuity",
+        "-p",
+        "test_*.py"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "/workspace/work/structural-transformation/dotnet/dotnet",
+        "north-star/csharp/Narrative/bin/Release/net10.0/NorthStar.Narrative.dll"
+      ],
+      "stdin_artifact": "evidence/narrative-continuity/local-commands.txt",
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "/workspace/work/structural-transformation/dotnet/dotnet",
+        "north-star/csharp/Narrative/bin/Release/net10.0/NorthStar.Narrative.dll"
+      ],
+      "stdin_artifact": "evidence/narrative-continuity/guided-commands.txt",
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "/workspace/work/structural-transformation/dotnet/dotnet",
+        "north-star/csharp/Narrative/bin/Release/net10.0/NorthStar.Narrative.dll"
+      ],
+      "stdin_artifact": "evidence/narrative-continuity/failed-commands.txt",
+      "exit_code": 0
+    }
+  ],
+  "source_artifacts": [
+    {
+      "local_path": "labs/narrative-continuity/run.py",
+      "size_bytes": 21298,
+      "sha256": "d58b292b37eb857862424db5e5edc2cd5dbaed56e43241926847be7eac7a4a21"
+    },
+    {
+      "local_path": "north-star/csharp/Crossing/NorthStar.Crossing.csproj",
+      "size_bytes": 352,
+      "sha256": "09fbdffe415d44079f66da83d4d22e5b91169f3f1abdd0e1ebc2bacd2e3f0c88"
+    },
+    {
+      "local_path": "north-star/csharp/Crossing/Program.cs",
+      "size_bytes": 4226,
+      "sha256": "268c1b5ac582dd06f15eb3e40e7ce859a9c58eecfc58c7586d94bcaecf9c595e"
+    },
+    {
+      "local_path": "north-star/csharp/Crossing/Session.cs",
+      "size_bytes": 5357,
+      "sha256": "d25ac05ba1a94432474dd1b14b4fd608e446fc5344dcc4f779d8d5fe27a1b2c5"
+    },
+    {
+      "local_path": "north-star/csharp/Domain/Crafting.cs",
+      "size_bytes": 8035,
+      "sha256": "5a5a892b3e68cff73f7a443d7c014c79dbebf2954d28f447e1bf3a9c4759de57"
+    },
+    {
+      "local_path": "north-star/csharp/Domain/Loadout.cs",
+      "size_bytes": 5692,
+      "sha256": "a1296ca13b5ba6728c073320b860e369ad2e01fdaacb45b5237ef40d0243f682"
+    },
+    {
+      "local_path": "north-star/csharp/Domain/NorthStar.Domain.csproj",
+      "size_bytes": 344,
+      "sha256": "9570b674acfea69bb60098f495afd3b9e2cef2575fcfeb6db71c2cdecb2c4876"
+    },
+    {
+      "local_path": "north-star/csharp/Domain/Progression.cs",
+      "size_bytes": 8331,
+      "sha256": "8495e1ad92fea069c2c3989f6f2cc2600980575e72812df9480ed193c51c8685"
+    },
+    {
+      "local_path": "north-star/csharp/Narrative/NorthStar.Narrative.csproj",
+      "size_bytes": 356,
+      "sha256": "5fb0f921d93c92180940885ea539cff43fa2c36f4f5160809a276e2c33687201"
+    },
+    {
+      "local_path": "north-star/csharp/Narrative/Program.cs",
+      "size_bytes": 4339,
+      "sha256": "7277914d98e49373652b6ab44dd5c1487745076f46ad3c395add981ecf3f512b"
+    },
+    {
+      "local_path": "north-star/csharp/Narrative/RequestExpedition.cs",
+      "size_bytes": 12296,
+      "sha256": "fc18705f8ba1c0f4f65924861b55e21e4e05b0a5d2658e121e0a5cdce85710d4"
+    },
+    {
+      "local_path": "north-star/csharp/Narrative/SCENE.md",
+      "size_bytes": 6140,
+      "sha256": "6325bc445fc52bf87f9aac785ee3cec563cf32120045d42a2c6012cc8c1a43a3"
+    },
+    {
+      "local_path": "north-star/csharp/NarrativeChecks/NorthStar.NarrativeChecks.csproj",
+      "size_bytes": 358,
+      "sha256": "1ee37d328e919633eea97e2e8cc4183f2ae213cf2d853bb1e4dcde3b879d5743"
+    },
+    {
+      "local_path": "north-star/csharp/NarrativeChecks/Program.cs",
+      "size_bytes": 6854,
+      "sha256": "c04190b0621cfc585225d16a2ef91ce3364f93c26429cb3caa80cfe53c750b67"
+    },
+    {
+      "local_path": "north-star/csharp/global.json",
+      "size_bytes": 55,
+      "sha256": "e0c0882461e712f6c2c66241bf2f175c60832e3ff077dc26091ff8c661d4193e"
+    },
+    {
+      "local_path": "projects/lich-cistern/SOURCE_COMPARISON.md",
+      "size_bytes": 5670,
+      "sha256": "150d1c28abd6d57baea8928a1800586b543de72902ddc9b9907919bcccae69e1"
+    },
+    {
+      "local_path": "projects/lich-cistern/story.en.md",
+      "size_bytes": 27650,
+      "sha256": "f21966ae873293c7f88b1e82aa997db2559aff776539ba5d7dc2351b4111055e"
+    },
+    {
+      "local_path": "projects/waystone-dialogue/browser/dist/deferred-request.js",
+      "size_bytes": 12547,
+      "sha256": "3e0cfd18d9f273e0229f5ab61b394fa819c53cad54b2f7a1860aed9acadeb00b"
+    },
+    {
+      "local_path": "projects/waystone-dialogue/browser/tests/deferred-request.test.mjs",
+      "size_bytes": 9624,
+      "sha256": "358c20068c29a53b4dd8dde9ab084eecb36c428fac5437ce757b58058c782ca2"
+    },
+    {
+      "local_path": "references/rave-master/snapshots/36af1651271422ae33856e8b5d7b45702215f165/source/RM_ACT1/DATA/DEV/QUEST_STEPS.csv",
+      "size_bytes": 7972,
+      "sha256": "25206c7f5aae4d3bf84693521b29954277bca6c22f8fd12041bc2909074e7a8b"
+    },
+    {
+      "local_path": "references/rave-master/snapshots/36af1651271422ae33856e8b5d7b45702215f165/source/RM_ACT1/DATA/DEV/RGSS/RM_UI_QUEST_JOURNAL_RUNTIME.rb",
+      "size_bytes": 7790,
+      "sha256": "b755126c90555b4b97725749aaa5ce7d9683c1b5385f6967c807d45786487ea4"
+    },
+    {
+      "local_path": "references/rave-master/snapshots/36af1651271422ae33856e8b5d7b45702215f165/source/RM_DIST/RMXP_BASE/Data/RM_CSV/QUEST_STEPS.csv",
+      "size_bytes": 7972,
+      "sha256": "25206c7f5aae4d3bf84693521b29954277bca6c22f8fd12041bc2909074e7a8b"
+    },
+    {
+      "local_path": "references/rave-master/snapshots/36af1651271422ae33856e8b5d7b45702215f165/source/RM_DIST/RMXP_BASE/ScriptsCustom/RM_UI_QUEST_JOURNAL_RUNTIME.rb",
+      "size_bytes": 6482,
+      "sha256": "6d5d1b5b67b669abf9f9f34b95e64ad9269d170739ce645c6a7e5d62e5a4e148"
+    },
+    {
+      "local_path": "labs/narrative-continuity/test_instrument.py",
+      "size_bytes": 5139,
+      "sha256": "128d4b336d0b443143dfa9eee87dc320ab4a5b3b61d22d570f5f292542db692e"
+    }
+  ],
+  "result_artifacts": [
+    {
+      "local_path": "evidence/narrative-continuity/failed-commands.txt",
+      "size_bytes": 104,
+      "sha256": "c34d3ad4c42d8ee280c79352aa0d864b1d97ea6d59408bb9c1e9cf94513b67a4"
+    },
+    {
+      "local_path": "evidence/narrative-continuity/failed-terminal.txt",
+      "size_bytes": 11363,
+      "sha256": "0c09837b0bdaa33e8d696d6ebd3e0989a74eb992f158fa7121e87004df158581"
+    },
+    {
+      "local_path": "evidence/narrative-continuity/guided-commands.txt",
+      "size_bytes": 133,
+      "sha256": "0ed7e5bcf62d97769c3c3df448ae27bcd703af4462c15a54d29f35e284f41286"
+    },
+    {
+      "local_path": "evidence/narrative-continuity/guided-terminal.txt",
+      "size_bytes": 16783,
+      "sha256": "08d173083cae5710154103beb88507d6b0cc4147c5a186ff27911fdc6ca24870"
+    },
+    {
+      "local_path": "evidence/narrative-continuity/interactive.json",
+      "size_bytes": 5166,
+      "sha256": "8860b70f852e501266982a520e2c6d9bf787cc7d743cc6ba90aad55d42d0b554"
+    },
+    {
+      "local_path": "evidence/narrative-continuity/local-commands.txt",
+      "size_bytes": 43,
+      "sha256": "54f6f262ab1b82d1114358404d702a0001a025a6d2d7cf93b55eea9561de9e7e"
+    },
+    {
+      "local_path": "evidence/narrative-continuity/local-terminal.txt",
+      "size_bytes": 3660,
+      "sha256": "cd73ef5a9c01296b0db4fbeb62d189b27dbe174eddeb99b4dcc0946bad2e7e12"
+    },
+    {
+      "local_path": "evidence/narrative-continuity/prior-consumers.json",
+      "size_bytes": 16257,
+      "sha256": "03405f09232d52bea69c873fb767d0450d3cc2edca41719aecfbc77c99530817"
+    },
+    {
+      "local_path": "evidence/narrative-continuity/results.json",
+      "size_bytes": 194489,
+      "sha256": "e83cb621700f1d3552911ff063ade2f8990bdfdeb0e600bbc2701c915a1d4413"
+    }
+  ],
+  "observations": {
+    "compiled_journeys": 8,
+    "stdin_sessions": 3,
+    "local_refusal": "Five crates, one light, no coil delivery; no moral ranking",
+    "guided": "Actual survey/handoff, two local crates, zero light, completed return",
+    "solo": "Actual handoff without guide, zero local crates, no light",
+    "failed": "Player retreats, Rill unaccounted, no handoff/completed return; overdue obligation retained",
+    "rejected_shortcuts": [
+      "prior consent",
+      "unsigned/stale terms",
+      "manual complete",
+      "promised return as fact",
+      "retroactive receipt mutation",
+      "unavailable retry advice"
+    ]
+  },
+  "limitations": [
+    "Original experimental fiction and local in-session state; prior Recovery format is unchanged and does not save this scene.",
+    "Selected P04 passage bindings are documentary craft observations, not automated literary judgment or free/unpressured consent proof.",
+    "Actual P10 constructed module execution and controlled mutants are not entire campaign/browser validation. Distinct legacy helpers are static sources, not historical game execution.",
+    "Synthetic journeys and agent review are not participants, human comprehension, consent, enjoyment, final canon, reputation or production NPC AI.",
+    "No Unity Editor/license/module, Windows player, Steam, account trust, durable narrative or power-loss validation."
+  ]
+}

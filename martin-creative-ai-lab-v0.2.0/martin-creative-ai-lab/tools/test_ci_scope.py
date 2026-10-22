@@ -23,7 +23,7 @@ class Classification(unittest.TestCase):
         paths = ['AGENTS.md', 'README.md'] + [w(path) for path in
             ('AGENTS.md', 'README.md', 'SEED.md', 'MANIFEST.sha256', 'docs/STATE.md',
              'registry/projects.json', 'registry/transfers.json', 'labs/README.md',
-             'labs/rpg-systems/README.md', 'labs/origins.json', 'labs/source-inventory.json',
+             'labs/rpg-systems/README.md', 'labs/narrative-continuity/README.md', 'labs/origins.json', 'labs/source-inventory.json',
              'north-star/DESIGN.md', 'north-star/capabilities.json', 'brains/integrity.json')]
         self.assertEqual(self.selected(*paths), set())
 
@@ -32,7 +32,10 @@ class Classification(unittest.TestCase):
                      'evidence/rpg-progression/RUN.json', 'labs/economy-simulation/run.py',
                      'evidence/economy-crafting/RUN.json', 'labs/world-gameplay/run.py',
                      'evidence/world-loadout/RUN.json', 'labs/networking-persistence/run.py',
-                     'evidence/persistent-expedition/RUN.json', 'references/rave-master/source/PLAYER_LEVEL_STAT_BUDGET.csv'):
+                     'evidence/persistent-expedition/RUN.json', 'labs/narrative-continuity/run.py',
+                     'labs/narrative-continuity/test_instrument.py', 'evidence/narrative-continuity/RUN.json',
+                     'evidence/narrative-continuity/results.json',
+                     'references/rave-master/source/PLAYER_LEVEL_STAT_BUDGET.csv'):
             with self.subTest(path=path):
                 self.assertEqual(self.selected(w(path)), {'north_star_csharp'})
 
@@ -63,6 +66,7 @@ class Classification(unittest.TestCase):
                                  ('combat-response', {'native_arena'}),
                                  ('north-star-preparation', set(scope.PROTOTYPE)),
                                  ('rpg-progression', {'north_star_csharp'}),
+                                 ('narrative-continuity', {'north_star_csharp'}),
                                  ('realtime-chat', {'chat_evaluation'})]:
             with self.subTest(prefix=prefix):
                 self.assertEqual(self.selected(w(f'evidence/{prefix}/results.json')), expected)

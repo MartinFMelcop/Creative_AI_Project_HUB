@@ -142,3 +142,14 @@ local ownership, bounded versioned rules and failure refusal preserve identity,
 resources and earned progress together. The [Networking & Persistence method](../../labs/networking-persistence/README.md)
 executes real restart/crash-boundary controls. This .NET10 local host is not a Unity
 runtime assembly, account server, Steam Cloud integration or power-loss guarantee.
+
+## Consequential original request
+
+[Narrative](Narrative/README.md) adds a separate authored work-day consumer: hear a
+request, refuse or defer it, make a tentative offer, and explicitly commit terms.
+Actual work and encounter outcomes own later responses; intent, signatures and
+manual quest labels cannot substitute for objective evidence. It reuses existing
+encounter behavior without changing the prior Crossing/Forge/Loadout/Recovery hosts.
+The [narrative laboratory](../../labs/narrative-continuity/README.md) retains source
+variant limits and failed shortcuts. This is local in-session fiction, not durable
+NPC/account state or final class/world canon.
