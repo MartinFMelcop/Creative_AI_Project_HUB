@@ -153,3 +153,14 @@ encounter behavior without changing the prior Crossing/Forge/Loadout/Recovery ho
 The [narrative laboratory](../../labs/narrative-continuity/README.md) retains source
 variant limits and failed shortcuts. This is local in-session fiction, not durable
 NPC/account state or final class/world canon.
+
+## Actual visible timed interaction
+
+[Interaction](Interaction/README.md) exposes a portable C#8/netstandard2.1 continuous-work
+module through an actual bounded .NET10 loopback host. Original SVG/CSS renders real
+snapshots; progress/resources are never a shadow JavaScript simulation. Both catches,
+optional paid grounding, cancellation and actual living exit are observable. This
+adds an executable migration/presentation dependency without modifying the existing
+Domain, Crossing, Forge, Loadout, Narrative or Recovery files/formats. The
+[Input/Timing method](../../labs/input-timing/README.md) preserves rhythm versus world
+work policy differences and synthetic-versus-human execution boundaries.

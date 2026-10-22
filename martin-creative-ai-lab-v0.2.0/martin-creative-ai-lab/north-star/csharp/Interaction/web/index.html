@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark"><title>The relay — North Star interaction trial</title>
+  <link rel="stylesheet" href="style.css"><script src="app.js" defer></script>
+</head>
+<body>
+  <main>
+    <header class="masthead"><div><p class="eyebrow">VIRGO DIAMOND · NORTH STAR</p><h1>The relay</h1><p class="intro">Raise both catches. Reach the passage alive.</p></div><p id="connection" role="status" class="connection">Connecting to the room…</p></header>
+    <section class="trial" aria-label="Relay interaction room">
+      <div class="room-wrap">
+        <div class="room-top"><span class="room-label">RETURN PASSAGE / EXPERIMENTAL ROOM</span><span id="room-state">Awaiting room state</span></div>
+        <svg id="room" viewBox="0 0 900 420" role="img" aria-labelledby="room-title room-description">
+          <title id="room-title">A relay, two catches and a barred exit</title><desc id="room-description">The mechanism drawing follows the current room state. Select a station below; hold the work control to act.</desc>
+          <defs><pattern id="floor" width="44" height="44" patternUnits="userSpaceOnUse"><path d="M44 0H0V44" fill="none" stroke="#2a3b42" stroke-width="1"/></pattern><filter id="glow"><feGaussianBlur stdDeviation="6"/></filter></defs>
+          <path d="M80 65H790L845 110V345L785 390H80L45 345V110Z" fill="#17282e" stroke="#3d555c" stroke-width="2"/>
+          <path d="M80 65H790L845 110V345L785 390H80L45 345V110Z" fill="url(#floor)"/>
+          <path d="M175 235H725M450 125V320" stroke="#4c6064" stroke-width="2" stroke-dasharray="5 9" fill="none"/>
+          <path d="M88 85H780M65 110V330M815 120V330" stroke="#536267" stroke-width="4"/>
+          <g id="catch-a-art" class="station-art"><circle cx="195" cy="235" r="56" class="station-ring"/><path d="M170 268V208H220V268M164 220H226" class="mechanism"/><path id="catch-a-bar" d="M176 248H214" class="bar"/><text x="195" y="319" text-anchor="middle">CATCH A</text><text id="catch-a-caption" x="195" y="340" text-anchor="middle" class="small-label">WAITING</text></g>
+          <g id="ground-art" class="station-art"><circle cx="450" cy="235" r="66" class="station-ring"/><path d="M424 276V210L450 187L476 210V276ZM412 276H488M450 187V152M435 152H465" class="mechanism"/><path d="M436 224H464M436 239H464M436 254H464" class="coil"/><text x="450" y="329" text-anchor="middle">GROUNDING RELAY</text><text id="ground-caption" x="450" y="350" text-anchor="middle" class="small-label">WARD ACTIVE</text></g>
+          <g id="catch-b-art" class="station-art"><circle cx="705" cy="235" r="56" class="station-ring"/><path d="M680 268V208H730V268M674 220H736" class="mechanism"/><path id="catch-b-bar" d="M686 248H724" class="bar"/><text x="705" y="319" text-anchor="middle">CATCH B</text><text id="catch-b-caption" x="705" y="340" text-anchor="middle" class="small-label">WAITING</text></g>
+          <g id="exit-art"><path d="M775 122H835V305H775Z" fill="#0b151a" stroke="#7c918f" stroke-width="3"/><path id="exit-bars" d="M787 125V302M802 125V302M817 125V302" stroke="#aa9881" stroke-width="5"/><text id="exit-caption" x="805" y="108" text-anchor="middle" class="small-label">LOCKED</text></g>
+          <g id="ward-art"><circle cx="450" cy="111" r="15" fill="#d39472"/><path d="M435 111H465M450 96V126" stroke="#2f2423" stroke-width="3"/><text id="ward-caption" x="450" y="77" text-anchor="middle" class="small-label">WARD ACTIVE</text></g>
+        </svg>
+        <div id="notice" class="notice" role="status" aria-live="polite">No local prediction: the room must connect before work can start.</div>
+      </div>
+      <aside class="work-panel">
+        <p class="eyebrow">CURRENT STATION</p><h2 id="target-name">Choose your work</h2><p id="target-description" class="muted">An action begins only after deliberate input.</p>
+        <dl class="resources"><div><dt>Health</dt><dd id="health">—</dd></div><div><dt>Winch integrity</dt><dd id="integrity">—</dd></div></dl>
+        <div class="progress-label"><span id="phase">WAITING</span><span id="progress-value">—</span></div><progress id="progress" max="1" value="0" aria-label="Current work progress"></progress>
+        <p id="cost" class="cost">Work costs and conditions come from the room.</p>
+        <button id="work" class="work-button" type="button" disabled><span>HOLD TO WORK</span><kbd>E</kbd></button>
+        <p id="input-help" class="input-help">Release to stop. A new attempt starts from zero.</p>
+        <div class="session-buttons"><button id="pause" type="button" disabled>Pause <kbd>Esc</kbd></button><button id="resume" type="button" disabled>Resume</button></div>
+        <section class="attempt" aria-label="Last actual attempt"><p class="eyebrow">LAST ATTEMPT</p><p id="last-cause">No work has been attempted.</p><p id="last-cost" class="muted">No cost recorded.</p></section>
+      </aside>
+    </section>
+    <nav class="stations" aria-label="Choose a mechanism"><button type="button" data-target="catch-a" disabled><span>01</span><strong>Catch A</strong><small>Raise the first catch</small></button><button type="button" data-target="ground" disabled><span>02</span><strong>Grounding</strong><small>Optional ward shutdown</small></button><button type="button" data-target="catch-b" disabled><span>03</span><strong>Catch B</strong><small>Raise the second catch</small></button><button id="exit" type="button" disabled><span>→</span><strong>Pass the gate</strong><small>Both catches · alive</small></button></nav>
+    <footer><p>Hold <kbd>E</kbd> or the work control. <kbd>Esc</kbd> pauses. Switching stations cancels partial work.</p><div class="footer-controls"><button id="move" type="button" disabled>Step away / cancel</button><button id="hit" type="button" disabled>Trial: incoming hit</button><button id="restart" type="button" disabled>Restart room</button></div><p class="scope">Original local interaction prototype. The timed work, costs and interruption rules run in the C# host. This is not Unity, a Windows player, final lore or a human accessibility result.</p></footer>
+  </main>
+</body>
+</html>

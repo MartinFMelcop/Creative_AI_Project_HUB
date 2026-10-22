@@ -6,9 +6,14 @@ source inventory, truthful maturity, consumer relationship, validity boundary an
 next acceptance live in [the transformation catalog](origins.json). The
 [public entry point](../../../README.md) offers a concise navigation table.
 A destination is not operational merely because it has an entry or a directory.
-Five destinations remain incomplete; they cannot be postponed indefinitely.
+Four destinations remain incomplete; they cannot be postponed indefinitely.
 
 ## Operational methods
+
+- [Input, Timing & Interaction](input-timing/README.md): actual rhythm clock/head/tail
+  controls and retained policy differences feed portable C# continuous-work rules.
+  A real visual local consumer executes interruption, neutral rearm, bounded missing
+  input, resource spend and living exit. [Execution](../evidence/input-timing/RUN.json).
 
 - [Narrative & Continuity](narrative-continuity/README.md): compares selected refusal,
   renewed consent, commitment and observed-outcome contracts across P04/P10 and

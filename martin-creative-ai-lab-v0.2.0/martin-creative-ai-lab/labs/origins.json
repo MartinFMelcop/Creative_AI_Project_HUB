@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "updated_at": "2026-10-22",
-  "baseline_commit": "b182a2bb46a6cbcea26be8f766a68d2199137ca1",
+  "baseline_commit": "411b7c64762b3ab46b1900f39144a3fb27451e2a",
   "scope": "Mandatory eleven-laboratory transformation. Historical source preservation is separate from terminal knowledge consumption; operational claims require executed instruments and bound evidence.",
   "north_star_consumer_demonstrated": true,
   "existing_transfer_scope": "Validated transfers and integrated assets in the existing registries describe their named origin consumers, not Virgo Diamond integration.",
@@ -118,7 +118,7 @@
         "Keep chart/audio offset relationships and original masters; replacing encoded media alone can invalidate timing comparisons",
         "Synthetic input and virtual playback do not demonstrate physical listening, accessibility or learning"
       ],
-      "extraction_next": "Extract the actual P03 head/tail interruption method into controlled timing/input studies with baseline and missing-release controls.",
+      "extraction_next": "Compare remaining incomplete labs and real Unity/Windows access; evaluate concrete input/feedback with appropriate people and devices, and migrate actual presentation/interruption semantics before end-to-end latency claims.",
       "laboratory_id": "input-timing"
     },
     {
@@ -479,8 +479,8 @@
         "evidence/economy-crafting/results.json"
       ],
       "evidence_sha256": {
-        "evidence/economy-crafting/RUN.json": "7a2e43312b0b5b1c777a35d724a66c6e8094731fb7de641ba07816a4912d51d2",
-        "evidence/economy-crafting/results.json": "70e76a5e5151c1ae2cd256f8b666cbc9a4bc991d64987403d771fad4bee6c13b"
+        "evidence/economy-crafting/RUN.json": "9f4073a53bacad57b61ea9631aec03334237d5b3147b1904e74166c4f1a015b4",
+        "evidence/economy-crafting/results.json": "6e5cfb087ce74fe31c4bdfd6ae176e7eba5842066064fac61b7a3972e4d41dbf"
       }
     },
     {
@@ -513,7 +513,7 @@
       "origin_projects": [
         "P03"
       ],
-      "status": "incomplete",
+      "status": "operational",
       "domain": "Input responsiveness, temporal accuracy, interaction feedback and latency",
       "question": "Which input/head-tail timing contracts remain correct across interruption and resumed holds?",
       "source_paths": [
@@ -522,13 +522,33 @@
         "projects/tokyo80s/dist/review.js",
         "projects/tokyo80s/dist/app.js",
         "projects/tokyo80s/tests",
-        "projects/tokyo80s/media"
+        "projects/tokyo80s/media",
+        "north-star/prototype/return_gate.gd",
+        "north-star/prototype/controls.gd"
       ],
       "source_inventory": "labs/source-inventory.json",
-      "consumer_paths": [],
-      "controls": [],
-      "validity_boundary": "Destination ownership and available sources are established; no operational laboratory method/results or North Star integration is claimed yet. Historical origin execution retains its own narrower scope.",
-      "next_objective": "Extract the actual P03 head/tail interruption method into controlled timing/input studies with baseline and missing-release controls."
+      "consumer_paths": [
+        "north-star/csharp/InputTiming/WorkRoom.cs",
+        "north-star/csharp/Interaction/Program.cs"
+      ],
+      "controls": [
+        "13 actual source clock/head/tail/pause observations and two staged origin mutants",
+        "35 C# controls including frame partitions, exact harm boundary, neutral gate and missing heartbeat",
+        "Seven full deterministic destination outcomes and exact result reproduction",
+        "Six instrument regressions and eight actual Chromium/C# input/goal controls with native captures"
+      ],
+      "validity_boundary": "Bounded actual source/module and C# work ownership; selected static Godot contracts, not full physics parity. Browser is a local developer observer of C#, not Unity/Windows, device latency, human accessibility/readability or production network validation.",
+      "next_objective": "Compare remaining incomplete labs and real Unity/Windows access; evaluate concrete input/feedback with appropriate people and devices, and migrate actual presentation/interruption semantics before end-to-end latency claims.",
+      "path": "labs/input-timing",
+      "instrument": "labs/input-timing/run.py",
+      "evidence": [
+        "evidence/input-timing/RUN.json",
+        "evidence/input-timing/results.json"
+      ],
+      "evidence_sha256": {
+        "evidence/input-timing/RUN.json": "c84988d2586aa8f773c6f030a0696295b48325dc46115fc5780a55260fe4d493",
+        "evidence/input-timing/results.json": "c3351bda7b75701ed0dfce09372cadb5522b3ab7fdd7c6fa71d8da6af42e1ec7"
+      }
     },
     {
       "id": "narrative-continuity",
@@ -631,8 +651,8 @@
         "evidence/rpg-progression/results.json"
       ],
       "evidence_sha256": {
-        "evidence/rpg-progression/RUN.json": "fc23e5ea3eb5f8ae83fa2edd405baf74fbde8ea3084946eeac9c04ba1221b74a",
-        "evidence/rpg-progression/results.json": "c9debbc0b767c978a477d9538a138a7b59c31517d72627d53446a827a38e617f"
+        "evidence/rpg-progression/RUN.json": "6eec02ac88b6f69de5270efd83f79131e39c69bc311b86cb1dddfe83c8403efe",
+        "evidence/rpg-progression/results.json": "1437284a2c55e1a15f9739f3e743af347ba121cfd1640ee225bd581f3a686f35"
       }
     },
     {
@@ -802,8 +822,8 @@
         "evidence/world-loadout/results.json"
       ],
       "evidence_sha256": {
-        "evidence/world-loadout/RUN.json": "d7939fc47524a50e18c0879787389a954072e3b20995a3b088c1872823d22a56",
-        "evidence/world-loadout/results.json": "60969a4739511c54dc1b98188a738d6cb439fd725d86ba241995db5f1956b88c"
+        "evidence/world-loadout/RUN.json": "0395b7c0688c6db702b7d76c3625e478bcef752ee5020c0423161c5194217a55",
+        "evidence/world-loadout/results.json": "c4be4a5e329e106e02e39a7124cdb7261c687d88e88b65e87a5ab2d248c0fa0a"
       }
     },
     {
@@ -855,8 +875,8 @@
         "evidence/persistent-expedition/results.json"
       ],
       "evidence_sha256": {
-        "evidence/persistent-expedition/RUN.json": "e89b820d8dac3fd0379f10e9655b335871faa1b06a589e699228cd7fbd69827b",
-        "evidence/persistent-expedition/results.json": "a33020789a3bfaf5355c820ca3be20e72f585b668737f116f81c270917d35baa"
+        "evidence/persistent-expedition/RUN.json": "d09fa37b06069574057ffc4efe11af6d4c16a3ac99fda6ae842498ec63692173",
+        "evidence/persistent-expedition/results.json": "6ebc76f2f5e44481d90883c792d1bca55af895a45b174799371575d738724923"
       }
     }
   ],
@@ -901,7 +921,7 @@
         "evidence/rpg-progression/RUN.json"
       ],
       "evidence_sha256": {
-        "evidence/rpg-progression/RUN.json": "fc23e5ea3eb5f8ae83fa2edd405baf74fbde8ea3084946eeac9c04ba1221b74a"
+        "evidence/rpg-progression/RUN.json": "6eec02ac88b6f69de5270efd83f79131e39c69bc311b86cb1dddfe83c8403efe"
       }
     },
     {
@@ -920,7 +940,7 @@
         "evidence/rpg-progression/results.json"
       ],
       "evidence_sha256": {
-        "evidence/rpg-progression/results.json": "c9debbc0b767c978a477d9538a138a7b59c31517d72627d53446a827a38e617f"
+        "evidence/rpg-progression/results.json": "1437284a2c55e1a15f9739f3e743af347ba121cfd1640ee225bd581f3a686f35"
       }
     },
     {
@@ -983,8 +1003,8 @@
         "projects/tokyo80s/dist/core.js",
         "projects/tokyo80s/dist/rehearsal.js"
       ],
-      "decision": "Remaining source capabilities in this laboratory domain are available or explicitly scoped gaps; source preservation and origin execution do not count as consumed.",
-      "next_action": "Extract the actual P03 head/tail interruption method into controlled timing/input studies with baseline and missing-release controls."
+      "decision": "Bounded temporal ownership and interrupted commitment are consumed separately; full rhythm production/calibration, music/rehearsal delivery and physical end-to-end input/feedback remain unconsumed.",
+      "next_action": "Use actual people/devices and concrete production consumers for physical timing/feedback; do not infer latency, readability or accessibility from deterministic timestamps."
     },
     {
       "id": "P04-REMAINING-SCOPE",
@@ -1184,8 +1204,8 @@
         "evidence/economy-crafting/results.json"
       ],
       "evidence_sha256": {
-        "evidence/economy-crafting/RUN.json": "7a2e43312b0b5b1c777a35d724a66c6e8094731fb7de641ba07816a4912d51d2",
-        "evidence/economy-crafting/results.json": "70e76a5e5151c1ae2cd256f8b666cbc9a4bc991d64987403d771fad4bee6c13b"
+        "evidence/economy-crafting/RUN.json": "9f4073a53bacad57b61ea9631aec03334237d5b3147b1904e74166c4f1a015b4",
+        "evidence/economy-crafting/results.json": "6e5cfb087ce74fe31c4bdfd6ae176e7eba5842066064fac61b7a3972e4d41dbf"
       }
     },
     {
@@ -1205,8 +1225,8 @@
         "evidence/economy-crafting/results.json"
       ],
       "evidence_sha256": {
-        "evidence/economy-crafting/RUN.json": "7a2e43312b0b5b1c777a35d724a66c6e8094731fb7de641ba07816a4912d51d2",
-        "evidence/economy-crafting/results.json": "70e76a5e5151c1ae2cd256f8b666cbc9a4bc991d64987403d771fad4bee6c13b"
+        "evidence/economy-crafting/RUN.json": "9f4073a53bacad57b61ea9631aec03334237d5b3147b1904e74166c4f1a015b4",
+        "evidence/economy-crafting/results.json": "6e5cfb087ce74fe31c4bdfd6ae176e7eba5842066064fac61b7a3972e4d41dbf"
       }
     },
     {
@@ -1236,8 +1256,8 @@
         "evidence/world-loadout/results.json"
       ],
       "evidence_sha256": {
-        "evidence/world-loadout/RUN.json": "d7939fc47524a50e18c0879787389a954072e3b20995a3b088c1872823d22a56",
-        "evidence/world-loadout/results.json": "60969a4739511c54dc1b98188a738d6cb439fd725d86ba241995db5f1956b88c"
+        "evidence/world-loadout/RUN.json": "0395b7c0688c6db702b7d76c3625e478bcef752ee5020c0423161c5194217a55",
+        "evidence/world-loadout/results.json": "c4be4a5e329e106e02e39a7124cdb7261c687d88e88b65e87a5ab2d248c0fa0a"
       }
     },
     {
@@ -1257,8 +1277,8 @@
         "evidence/world-loadout/results.json"
       ],
       "evidence_sha256": {
-        "evidence/world-loadout/RUN.json": "d7939fc47524a50e18c0879787389a954072e3b20995a3b088c1872823d22a56",
-        "evidence/world-loadout/results.json": "60969a4739511c54dc1b98188a738d6cb439fd725d86ba241995db5f1956b88c"
+        "evidence/world-loadout/RUN.json": "0395b7c0688c6db702b7d76c3625e478bcef752ee5020c0423161c5194217a55",
+        "evidence/world-loadout/results.json": "c4be4a5e329e106e02e39a7124cdb7261c687d88e88b65e87a5ab2d248c0fa0a"
       }
     },
     {
@@ -1288,8 +1308,8 @@
         "evidence/persistent-expedition/results.json"
       ],
       "evidence_sha256": {
-        "evidence/persistent-expedition/RUN.json": "e89b820d8dac3fd0379f10e9655b335871faa1b06a589e699228cd7fbd69827b",
-        "evidence/persistent-expedition/results.json": "a33020789a3bfaf5355c820ca3be20e72f585b668737f116f81c270917d35baa"
+        "evidence/persistent-expedition/RUN.json": "d09fa37b06069574057ffc4efe11af6d4c16a3ac99fda6ae842498ec63692173",
+        "evidence/persistent-expedition/results.json": "6ebc76f2f5e44481d90883c792d1bca55af895a45b174799371575d738724923"
       }
     },
     {
@@ -1340,6 +1360,54 @@
       "evidence_sha256": {
         "evidence/narrative-continuity/RUN.json": "32e3362e33b593fbdbae5cb5c517afebf2e2067ccbea9f9a5631af27a88e201b",
         "evidence/narrative-continuity/results.json": "e83cb621700f1d3552911ff063ade2f8990bdfdeb0e600bbc2701c915a1d4413"
+      }
+    },
+    {
+      "id": "P03-TEMPORAL-INPUT-OWNERSHIP",
+      "laboratory_id": "input-timing",
+      "origin_projects": [
+        "P03"
+      ],
+      "status": "INTEGRATED",
+      "source_paths": [
+        "projects/tokyo80s/dist/core.js",
+        "projects/tokyo80s/dist/rehearsal.js",
+        "north-star/prototype/return_gate.gd",
+        "north-star/prototype/controls.gd"
+      ],
+      "decision": "Adapt explicit clock, hold/interrupt ownership, neutral rearm and separate goal/cost contracts into actual portable C# rules and a real visible local consumer; no rhythm/audio kernel, fiction or full combat is imported.",
+      "consumer_paths": [
+        "north-star/csharp/InputTiming/WorkRoom.cs",
+        "north-star/csharp/Interaction/Program.cs"
+      ],
+      "evidence": [
+        "evidence/input-timing/RUN.json",
+        "evidence/input-timing/results.json"
+      ],
+      "evidence_sha256": {
+        "evidence/input-timing/RUN.json": "c84988d2586aa8f773c6f030a0696295b48325dc46115fc5780a55260fe4d493",
+        "evidence/input-timing/results.json": "c3351bda7b75701ed0dfce09372cadb5522b3ab7fdd7c6fa71d8da6af42e1ec7"
+      }
+    },
+    {
+      "id": "P03-REGRAB-AS-WORLD-COMMITMENT",
+      "laboratory_id": "input-timing",
+      "origin_projects": [
+        "P03"
+      ],
+      "status": "REJECTED",
+      "source_paths": [
+        "projects/tokyo80s/dist/core.js",
+        "north-star/prototype/return_gate.gd"
+      ],
+      "decision": "Reject blindly carrying rhythm tail/regrab forgiveness into dangerous world work. Actual origin retains its intentional grace; actual C# interruptions discard progress, require fresh intent and grant no cost/goal. This rejects cross-context policy equivalence, not the useful rhythm policy or source collection.",
+      "evidence": [
+        "evidence/input-timing/RUN.json",
+        "evidence/input-timing/results.json"
+      ],
+      "evidence_sha256": {
+        "evidence/input-timing/RUN.json": "c84988d2586aa8f773c6f030a0696295b48325dc46115fc5780a55260fe4d493",
+        "evidence/input-timing/results.json": "c3351bda7b75701ed0dfce09372cadb5522b3ab7fdd7c6fa71d8da6af42e1ec7"
       }
     }
   ]

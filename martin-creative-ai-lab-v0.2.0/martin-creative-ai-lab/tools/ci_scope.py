@@ -56,7 +56,8 @@ def affected(path):
                             'references/rave-master/', 'labs/economy-simulation/', 'evidence/economy-crafting/',
                             'labs/world-gameplay/', 'evidence/world-loadout/',
                             'labs/networking-persistence/', 'evidence/persistent-expedition/',
-                            'labs/narrative-continuity/', 'evidence/narrative-continuity/')):
+                            'labs/narrative-continuity/', 'evidence/narrative-continuity/',
+                            'labs/input-timing/', 'evidence/input-timing/')):
         return ('north_star_csharp',)
     if relative.startswith('references/'):
         return ()  # Source availability and pins are owned by unconditional integrity.

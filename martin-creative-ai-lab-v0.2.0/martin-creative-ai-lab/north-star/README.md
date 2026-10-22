@@ -86,3 +86,10 @@ offers do not release resources; recorded obligations are separate from actual o
 selected P04/P10 contracts and distinct legacy quest helpers against actual execution.
 This is original experimental fiction and local session state, not final canon, a
 general quest engine, shared-world reputation or Unity/Windows delivery.
+
+[The relay](csharp/Interaction/README.md) makes actual C# continuous work visible through
+a loopback developer browser view. The C# monotonic host owns progress, input expiry,
+resources and living exit; the browser does not simulate another game model.
+[Input/Timing execution](../evidence/input-timing/RUN.json) separates code/clock,
+synthetic native browser input and actual captures from missing Unity/Windows and
+human/physical-device evidence. No production engine or distribution direction changes.

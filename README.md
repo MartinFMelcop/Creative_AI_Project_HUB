@@ -23,14 +23,18 @@ and Steam is the intended distribution ecosystem.**
 | Inspect or execute | Actual scope |
 |---|---|
 | [C# development foundation](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/README.md) | Engine-independent progression/crafting domains, connected terminal consumers and checks. No Unity Editor or Windows-player execution is claimed. |
+| [Visual C# interaction](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/Interaction/README.md) | Real timed work, interrupt/rearm, single resource cost and living exit; browser developer view of C# rules. |
 | [Original C# narrative scene](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/Narrative/README.md) | Consent, finite local work and actual crossing outcomes; experimental fiction, local session only. |
 | [Playable Godot research baseline](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/prototype/README.md) | An escort and connected return objective with distinct approaches, equipment trade-offs, cosmetic identity and consequential aid. Preserved during migration. |
 | [Committed-rush ability bench](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/prototype/abilities/README.md) | Separately runnable short/long movement commitments; source-only experiment with cost, timing and negative controls. |
 | [Current capability boundaries](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/capabilities.json) | Origin, adapted, destination and independently validated claims remain distinct. No production MMORPG or Steamworks readiness claim. |
 
-![Actual Godot research baseline: a wounded character works a catch while the winch remains exposed](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/evidence/north-star-return-gate/guardian-working.png)
+![Actual browser observation of the C# room during deliberate work](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/evidence/input-timing/working.png)
 
-The image is a recorded native consumer, not a Unity rendering or concept illustration.
+This capture observes the actual local C# interaction host. It is neither a Unity
+render nor concept art. [Timed-input execution](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/evidence/input-timing/RUN.json)
+includes interruption and completed-goal controls. The [retained Godot image](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/evidence/north-star-return-gate/guardian-working.png)
+and playable baseline remain separate migration evidence.
 [Playable delivery evidence](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/evidence/north-star-return-feedback/RUN.json),
 [living design](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/DESIGN.md) and
 [current implementation state](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/docs/STATE.md) identify what was executed and what remains unresolved.
@@ -47,7 +51,7 @@ make its destination laboratory operational.
 |---|---|---|
 | P01 | [Economy & Simulation](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/labs/economy-simulation/README.md) | Operational, bounded crafting/conservation research |
 | P02 | AI Evaluation & Quality | Incomplete |
-| P03 | Input, Timing & Interaction | Incomplete |
+| P03 | [Input, Timing & Interaction](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/labs/input-timing/README.md) | Operational, bounded timed-input research |
 | P04 | [Narrative & Continuity](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/labs/narrative-continuity/README.md) | Operational, bounded consent/causal-state research |
 | P05 | [RPG Systems & Progression](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/labs/rpg-systems/README.md) | Operational, bounded progression research |
 | P06 | [Combat & Responsiveness](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/labs/combat-response/README.md) | Operational, bounded native contact research |

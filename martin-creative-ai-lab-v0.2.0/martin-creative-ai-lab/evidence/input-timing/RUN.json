@@ -1,0 +1,213 @@
+{
+  "schema_version": 1,
+  "kind": "destination_execution",
+  "baseline_commit": "411b7c64762b3ab46b1900f39144a3fb27451e2a",
+  "capability_ids": [
+    "NS-C07"
+  ],
+  "consumer_paths": [
+    "north-star/csharp/InputTiming/WorkRoom.cs",
+    "north-star/csharp/Interaction/Program.cs"
+  ],
+  "scope": "Actual portable C# continuous-work input ownership with a bounded loopback monotonic host and real visual browser observation",
+  "runtime": "C#8/netstandard2.1 compilation; SDK10.0.401 .NET10 Linux host; Node24.19.0 and synthetic Chromium input; no Unity/Windows/Steam",
+  "checks": {
+    "passed": 35,
+    "failed": 0
+  },
+  "instrument_regressions": {
+    "passed": 6,
+    "failed": 0
+  },
+  "origin_controls": 13,
+  "origin_mutants_detected": 2,
+  "browser_controls": 8,
+  "commands": [
+    {
+      "command": [
+        "python3",
+        "labs/input-timing/run.py",
+        "--dotnet",
+        "/workspace/work/structural-transformation/dotnet/dotnet",
+        "--output",
+        "/workspace/work/input-continuation/compared.json",
+        "--compare",
+        "evidence/input-timing/results.json"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "python3",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "labs/input-timing",
+        "-p",
+        "test_*.py"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "node",
+        "labs/input-timing/browser.mjs",
+        "/workspace/work/structural-transformation/dotnet/dotnet",
+        "/workspace/work/input-continuation/browser-final"
+      ],
+      "exit_code": 0
+    }
+  ],
+  "source_artifacts": [
+    {
+      "local_path": "labs/input-timing/origin.mjs",
+      "size_bytes": 2025,
+      "sha256": "679f04ff9943c52d791e87f0bc72c9fc50f2440a12a217fcd25e70fc252d3bba"
+    },
+    {
+      "local_path": "labs/input-timing/run.py",
+      "size_bytes": 8549,
+      "sha256": "e73b0d29c51d0a5c4d7d4abacae8b3169122ef931d38fe165b3f2409406492c2"
+    },
+    {
+      "local_path": "north-star/csharp/InputTiming/NorthStar.InputTiming.csproj",
+      "size_bytes": 267,
+      "sha256": "3acec7333496cb2bb2bb2a8c6aaf151f714f6402e133ead2ca8d3f166d77dd22"
+    },
+    {
+      "local_path": "north-star/csharp/InputTiming/WorkRoom.cs",
+      "size_bytes": 4791,
+      "sha256": "01e89b74127e545fa675a4fe2d82b8d953cc3d4ea9b6a44ec5d76129036ca33b"
+    },
+    {
+      "local_path": "north-star/csharp/Interaction/NorthStar.Interaction.csproj",
+      "size_bytes": 355,
+      "sha256": "ae025be940abc66e2a86a60f61313d781243a1c8c070c971667b3195a7fc2b8f"
+    },
+    {
+      "local_path": "north-star/csharp/Interaction/Program.cs",
+      "size_bytes": 6242,
+      "sha256": "8cdce94de775342930b250bdc8435627875f846bc346fa9551bf4335d72d375f"
+    },
+    {
+      "local_path": "north-star/csharp/Interaction/web/app.js",
+      "size_bytes": 4992,
+      "sha256": "bd676051a4a327cccd45baffe2a7d1a50d7fbeb600db78898412df57195112e9"
+    },
+    {
+      "local_path": "north-star/csharp/Interaction/web/index.html",
+      "size_bytes": 6221,
+      "sha256": "5d2d0333b1a20c66bb1f4a2b24b991791d25b711061e538c7010523e967af4c3"
+    },
+    {
+      "local_path": "north-star/csharp/Interaction/web/style.css",
+      "size_bytes": 6947,
+      "sha256": "dc40bb6ceadf432e934703ea9327bd9c2b3c288bd98ed627abd9a0a68636b1d5"
+    },
+    {
+      "local_path": "north-star/csharp/InteractionChecks/NorthStar.InteractionChecks.csproj",
+      "size_bytes": 355,
+      "sha256": "df0bd3d017b7e817e6842377344fd3479694b6e531559f24d9168a80d27bf028"
+    },
+    {
+      "local_path": "north-star/csharp/InteractionChecks/Program.cs",
+      "size_bytes": 3358,
+      "sha256": "98c008ab4906998625f3ad1c944adbfc6183e793bc1faa4c6fc4521070bb155e"
+    },
+    {
+      "local_path": "north-star/csharp/global.json",
+      "size_bytes": 55,
+      "sha256": "e0c0882461e712f6c2c66241bf2f175c60832e3ff077dc26091ff8c661d4193e"
+    },
+    {
+      "local_path": "north-star/prototype/controls.gd",
+      "size_bytes": 9867,
+      "sha256": "151bb8867ba735c3b0b2a0048d312472dfe32359d2409825fa4817cbd0a9e9b8"
+    },
+    {
+      "local_path": "north-star/prototype/return_gate.gd",
+      "size_bytes": 8050,
+      "sha256": "bc8a1e38c8e5c537b55ad8871167ace6e300fdec4909a6fcb30b5a142842bf88"
+    },
+    {
+      "local_path": "projects/tokyo80s/dist/core.js",
+      "size_bytes": 7116,
+      "sha256": "ef9d3b181b15c1cd2d2ee5df1634c7e02a56b37995a41ab160bca8f6aba96cd4"
+    },
+    {
+      "local_path": "projects/tokyo80s/dist/rehearsal.js",
+      "size_bytes": 3241,
+      "sha256": "2321ac9be8a8fb79b9f18a912d06c64615ef21bf3f2085681c3fc0586951be67"
+    },
+    {
+      "local_path": "projects/tokyo80s/dist/review.js",
+      "size_bytes": 2406,
+      "sha256": "7fa388d7e1580797876265c5bfa758e87e90383e4e598b1e6396688cd772f0f8"
+    },
+    {
+      "local_path": "labs/input-timing/browser.mjs",
+      "size_bytes": 5959,
+      "sha256": "913ad70caacd893378dd6c7dc351a1c65b4d9db2d172de1bc9c7e3aca7bc2a3f"
+    },
+    {
+      "local_path": "labs/input-timing/test_instrument.py",
+      "size_bytes": 1988,
+      "sha256": "0b62c986fcef7134565905a04ec6493cada9965952d21a583dbbe221b71a3520"
+    },
+    {
+      "local_path": "projects/realtime-integration-lab/package.json",
+      "size_bytes": 1445,
+      "sha256": "42e3cc9633e522dd6d9a5c11023418331129632881a8bf0b95e3717247d57ebe"
+    },
+    {
+      "local_path": "projects/realtime-integration-lab/package-lock.json",
+      "size_bytes": 42105,
+      "sha256": "aa191ef2158e6cc6f770bf4b3ee44dca17175ef1a3cd572b98115246bf46aea7"
+    }
+  ],
+  "result_artifacts": [
+    {
+      "local_path": "evidence/input-timing/browser.json",
+      "size_bytes": 5381,
+      "sha256": "98bb0fed765a2c9e68b93e0d5645c17049233d00ca6d6acbfd173ba101e420cb"
+    },
+    {
+      "local_path": "evidence/input-timing/grounded.png",
+      "size_bytes": 209368,
+      "sha256": "f8d34b1be0b364b3c7778a350dfb856e4481d4620d96f86808b84d0862062ca1"
+    },
+    {
+      "local_path": "evidence/input-timing/passage.png",
+      "size_bytes": 219094,
+      "sha256": "1bbd199aaef777a798ffe4f3675577257e21f940c3e0bcf4ce844bb19ec3311d"
+    },
+    {
+      "local_path": "evidence/input-timing/prior-consumers.json",
+      "size_bytes": 14358,
+      "sha256": "430c36bc62e8edc3b9ebab7b3138edfa1c80403665b99a76796ec794dcd0c578"
+    },
+    {
+      "local_path": "evidence/input-timing/results.json",
+      "size_bytes": 9784,
+      "sha256": "c3351bda7b75701ed0dfce09372cadb5522b3ab7fdd7c6fa71d8da6af42e1ec7"
+    },
+    {
+      "local_path": "evidence/input-timing/working.png",
+      "size_bytes": 210257,
+      "sha256": "0604d2249f929fbe6af1ffaff77ccef43a5e3ad2c216567fc31199a044539a5a"
+    }
+  ],
+  "observed_review": [
+    "Actual working, grounded and living-passage images inspected; station completion phase corrected from READY to STATION COMPLETE.",
+    "Browser event loop has no shadow work/reward timer; it renders C# observations. Native deadlines and heartbeat expiry remain distinct from browser wall-time/PNG equality."
+  ],
+  "specialty_boundary": "Three independent Engineering/Scientific/Creative analyses completed. Specialist implementation then hit usage limits; primary agent completed implementation, instruments and review sequentially. Creative specialist supplied initial original HTML/CSS. No human approval is attributed.",
+  "limitations": [
+    "Selected static Godot bindings and actual P03 module controls, not fresh complete Godot/PCK, rhythm playback or full combat/geometry/clamp parity.",
+    "Rhythm95ms tail/200ms paused regrab remains in its origin; dangerous world work intentionally discards progress and requires fresh intent.",
+    "100ms browser intent renewals and600ms local input lease bound missing-input uncertainty; they do not detect physical release instantaneously or establish device latency.",
+    "Hit is an explicit trial intervention; this is not autonomous enemy AI or full source encounter migration.",
+    "Portable compilation, browser captures and agent review are not Unity import/Editor, Windows, Steam, persistent account, human accessibility/readability/enjoyment, production security or MMO networking."
+  ]
+}

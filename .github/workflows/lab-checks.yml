@@ -538,3 +538,18 @@ jobs:
           dotnet build north-star/csharp/NarrativeChecks/NorthStar.NarrativeChecks.csproj -c Release
           dotnet north-star/csharp/NarrativeChecks/bin/Release/net10.0/NorthStar.NarrativeChecks.dll "$RUNNER_TEMP/north-star-narrative-native.json"
           dotnet north-star/csharp/Narrative/bin/Release/net10.0/NorthStar.Narrative.dll --demo "$RUNNER_TEMP/north-star-narrative-journey.json"
+      - name: Execute input timing and actual C# work consumer
+        run: |
+          python3 -m unittest discover -s labs/input-timing -p 'test_*.py'
+          python3 labs/input-timing/run.py --dotnet dotnet --output "$RUNNER_TEMP/input-timing.json" --compare evidence/input-timing/results.json
+      - name: Install existing locked browser instrument
+        run: npm ci --prefix projects/realtime-integration-lab
+      - name: Install matching browser for C# interaction verification
+        working-directory: martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/projects/realtime-integration-lab
+        run: |
+          npx --no-install playwright-core install --with-deps chromium
+          browser_path="$(node -p "require('playwright-core').chromium.executablePath()")"
+          test -x "$browser_path"
+          printf 'CHROMIUM_PATH=%s\n' "$browser_path" >> "$GITHUB_ENV"
+      - name: Exercise actual visual C# input lifecycle
+        run: node labs/input-timing/browser.mjs dotnet "$RUNNER_TEMP/input-browser"

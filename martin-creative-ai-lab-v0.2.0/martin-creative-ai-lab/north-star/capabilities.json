@@ -32,7 +32,9 @@
     "north-star/csharp/Recovery/Journal.cs",
     "north-star/csharp/Recovery/Program.cs",
     "north-star/csharp/Narrative/RequestExpedition.cs",
-    "north-star/csharp/Narrative/Program.cs"
+    "north-star/csharp/Narrative/Program.cs",
+    "north-star/csharp/InputTiming/WorkRoom.cs",
+    "north-star/csharp/Interaction/Program.cs"
   ],
   "contribution_model": {
     "candidate": "Identified hypothesis; no transfer proof.",
@@ -231,14 +233,19 @@
         "projects/tokyo80s/media/rehearsal-provenance.json"
       ],
       "applicability_hypothesis": "Event-driven warning and role-response cues now execute in the local destination; recognition, mix comfort and physical timing remain hypotheses.",
-      "limits": "Scripted signal/clock samples and bounded mixer execution, not physical listening, universal timbre/latency, player learning or multiplayer synchronization.",
-      "next_validation": "Evaluate warning/response recognition and mix comfort with relevant people and physical devices; measure end-to-end latency before claims about real output timing.",
+      "limits": "Bounded clock/code proof and synthetic actual browser input; no new audio playback, full combat parity, physical latency, Unity/Windows, human/accessibility or production network validation.",
+      "next_validation": "Compare remaining incomplete labs and real Unity/Windows access; evaluate concrete input/feedback with appropriate people and devices, and migrate actual presentation/interruption semantics before end-to-end latency claims.",
       "destination_consumer_paths": [
+        "north-star/csharp/InputTiming/WorkRoom.cs",
+        "north-star/csharp/Interaction/Program.cs"
+      ],
+      "destination_scope": "Actual C# timed holds, interruption, neutral rearm, bounded heartbeat expiry, single paid grounding and actual living exit, observed through a local browser adapter. Prior audio/Godot evidence remains separate and unchanged.",
+      "destination_evidence": "evidence/input-timing/RUN.json",
+      "prior_destination_evidence": "evidence/north-star-return-feedback/RUN.json",
+      "prior_destination_consumer_paths": [
         "north-star/prototype/arena.gd",
         "north-star/prototype/sound.gd"
-      ],
-      "destination_scope": "New deterministic procedural mono cues adapt the P08/P06 semantic-event, bounded-voice and mute/pause method in the actual crossing and rehearsal. Source/PCK AudioServer capture verifies warnings and consequences, including actual block/draw, counter/damage and terminal outcomes. No old cue/music file or sound kernel is imported. Rhythm calibration, tempo derivatives and MMO/spatial mixing are not transferred. The actual threat voice also stops on sentinel shutdown while accepted counter audio remains; no new PCM or spatial claim.",
-      "destination_evidence": "evidence/north-star-return-feedback/RUN.json"
+      ]
     },
     {
       "id": "NS-C08",

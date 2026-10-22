@@ -558,3 +558,36 @@ collection. Existing ACT1/distributed helper differences remain preserved.
 in-session C# host does not extend Recovery's journal format, assert durable NPC state,
 add global reputation, render Unity scenes or validate Windows/Steam. Review actual
 interaction with authors/players before inferring significance, comfort or preference.
+
+
+## Experimental visible continuous work and deliberate rearming
+
+**Status:** implemented local interaction hypothesis, not new approved lore/class art.
+Independent Engineering, Scientific and Creative analyses selected Input/Timing on
+condition of a real visible consequence-bearing consumer. Visual/Animation remained
+a strong presentation alternative; atlas geometry alone would not establish readability.
+The public AI practice task needs explicit candidate/context boundaries, and actual
+Windows production remains contingent on tools/license/modules. Specialist execution
+later hit usage limits; the primary agent completed implementation/methods/review
+sequentially. The original HTML/CSS began with the Creative specialist; no independent
+human approval or three-agent implementation review is attributed.
+
+[The relay](csharp/Interaction/README.md) shows the actual C# work state. A full hold
+raises each catch; grounding is optional, takes longer and spends one integrity.
+Shutdown alone is not success: both catches and an actual living exit remain required.
+Release, movement, pause/focus and harm discard partial work. A held input cannot
+resume automatically after interruption; actual neutral release and a fresh deliberate
+attempt are required. A developer hit intervention owns the completion boundary.
+There is no autonomous enemy or claimed full combat/geometry migration in this room.
+
+P03's95ms tail grace and200ms paused regrab are intentional rhythm policies. This
+world action keeps neither. A600ms missing-input lease is bounded uncertainty, not
+instant knowledge of physical release. Integer monotonic work time and a visual
+browser observer are migration evidence, not Unity or production browser direction.
+CRE-005(A)/081(A) inform consequential deliberate input; CRE-067/068/075(H) inform
+visible state without approved art or validated accessibility. ENG-005/022/023 and
+SCI-014/017/061 inform state/clock ownership, interruption and validity boundaries.
+Actual captures were inspected; completed stations were changed from READY to
+STATION COMPLETE to avoid misleading a player about available work. [Execution](../evidence/input-timing/RUN.json)
+distinguishes software/source controls and synthetic browser actions from still absent
+physical latency, comprehension, accessibility, enjoyment and Unity/Windows validation.

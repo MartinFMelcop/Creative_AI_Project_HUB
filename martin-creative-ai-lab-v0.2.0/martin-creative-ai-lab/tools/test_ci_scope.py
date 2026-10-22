@@ -34,7 +34,8 @@ class Classification(unittest.TestCase):
                      'evidence/world-loadout/RUN.json', 'labs/networking-persistence/run.py',
                      'evidence/persistent-expedition/RUN.json', 'labs/narrative-continuity/run.py',
                      'labs/narrative-continuity/test_instrument.py', 'evidence/narrative-continuity/RUN.json',
-                     'evidence/narrative-continuity/results.json',
+                     'evidence/narrative-continuity/results.json', 'labs/input-timing/run.py',
+                     'labs/input-timing/browser.mjs', 'evidence/input-timing/results.json',
                      'references/rave-master/source/PLAYER_LEVEL_STAT_BUDGET.csv'):
             with self.subTest(path=path):
                 self.assertEqual(self.selected(w(path)), {'north_star_csharp'})
