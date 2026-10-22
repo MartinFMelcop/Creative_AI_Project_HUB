@@ -109,6 +109,16 @@ removes the unconditional duty to rebuild unrelated historical players every pus
 affected retained consumers/shared dependencies still run their existing gates; workflow,
 unknown shared changes and manual full runs remain conservative. Integrity/source/claim
 checks are unconditional. Future North Star player production is Windows-first.
+**Observed CI follow-up:** Crafting publication `7734a1b` passed C# execution but
+its conservative full run exposed an intermittent retained arena packaged-audio
+negative control failure. A controlled 100ms read/seek gap demonstrated stale-target
+cancellation; test drivers now lock injection as well as observation, preserving
+>50ms detection and <15ms alignment/reset limits. Six actual source/PCK driver runs
+passed; [evidence](../evidence/veil-arena/audio-seek-fixture.json) retains the original
+failure, counterexample and environment repair. This does not prove the historical
+CI scheduling cause or change product audio/PCK. New probe coverage remains in CI;
+this bounded defect follow-up is supporting maintenance, not a new strategic unit.
+
 The public root/workspace navigation now leads with actual product, laboratories,
 demonstrations/evidence and limits rather than successive prototype feature history.
 

@@ -1,0 +1,102 @@
+{
+  "schema_version": 1,
+  "kind": "audio_seek_fixture_execution",
+  "baseline_commit": "7734a1bc40ac4fde55da5997873ec592d2cb4ae8",
+  "ci_failure_url": "https://github.com/MartinFMelcop/Creative_AI_Project_HUB/actions/runs/39702812645/job/119575870082",
+  "runtime": "Godot 4.6.3.stable.official.7d41c59c4 on Linux; actual AudioServer output, no physical listening",
+  "scope": "Driver-only atomic fault injection; original product sound code and delivered PCK unchanged",
+  "observations": [
+    {
+      "delivery": "source",
+      "test": "presentation",
+      "exit_code": 0,
+      "report": [
+        "PRESENTATION_CHECKS {\"audio_frames\":233472,\"checks\":26,\"display\":\"headless\",\"failures\":[],\"measured_peak\":0.841408967971802}"
+      ],
+      "log": "/workspace/work/audio-seek-investigation/source-presentation.txt"
+    },
+    {
+      "delivery": "source",
+      "test": "audio_reset",
+      "exit_code": 0,
+      "report": [
+        "AUDIO_RESET_CHECKS {\"checks\":3,\"failures\":[],\"resets\":64,\"samples\":[0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0],\"worst_skew\":0.0}"
+      ],
+      "log": "/workspace/work/audio-seek-investigation/source-audio_reset.txt"
+    },
+    {
+      "delivery": "source",
+      "test": "audio_seek_injection",
+      "exit_code": 0,
+      "report": [
+        "AUDIO_SEEK_INJECTION_CHECKS {\"baseline\":[0.188662126660347,0.188662126660347,0.0],\"checks\":3,\"failures\":[],\"locked\":[0.467301577329636,0.570181429386139,0.102879852056503],\"locked_detected\":true,\"requested_gap_ms\":100,\"restored\":[0.188662126660347,0.188662126660347,0.0],\"threshold\":0.05,\"unlocked\":[0.374421775341034,0.384444445371628,0.0100226700305939],\"unlocked_detected\":false,\"unlocked_gap_ms\":100.099}"
+      ],
+      "log": "/workspace/work/audio-seek-investigation/source-audio_seek_injection.txt"
+    },
+    {
+      "delivery": "packed",
+      "test": "presentation",
+      "exit_code": 0,
+      "report": [
+        "PRESENTATION_CHECKS {\"audio_frames\":229376,\"checks\":26,\"display\":\"headless\",\"failures\":[],\"measured_peak\":0.841408967971802}"
+      ],
+      "log": "/workspace/work/audio-seek-investigation/packed-presentation.txt"
+    },
+    {
+      "delivery": "packed",
+      "test": "audio_reset",
+      "exit_code": 0,
+      "report": [
+        "AUDIO_RESET_CHECKS {\"checks\":3,\"failures\":[],\"resets\":64,\"samples\":[0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0],\"worst_skew\":0.0}"
+      ],
+      "log": "/workspace/work/audio-seek-investigation/packed-audio_reset.txt"
+    },
+    {
+      "delivery": "packed",
+      "test": "audio_seek_injection",
+      "exit_code": 0,
+      "report": [
+        "AUDIO_SEEK_INJECTION_CHECKS {\"baseline\":[0.188662126660347,0.188662126660347,0.0],\"checks\":3,\"failures\":[],\"locked\":[0.467301577329636,0.570181429386139,0.102879852056503],\"locked_detected\":true,\"requested_gap_ms\":100,\"restored\":[0.188662126660347,0.188662126660347,0.0],\"threshold\":0.05,\"unlocked\":[0.374421775341034,0.384444445371628,0.0100226700305939],\"unlocked_detected\":false,\"unlocked_gap_ms\":100.1}"
+      ],
+      "log": "/workspace/work/audio-seek-investigation/packed-audio_seek_injection.txt"
+    }
+  ],
+  "source_artifacts": [
+    {
+      "local_path": "projects/veil-arena/tests/presentation.gd",
+      "size_bytes": 7640,
+      "sha256": "8946bf5f5b4e45fdccbaec1b30edc3e04d4dd7fcd6597a0c0c2beaf10dab0601"
+    },
+    {
+      "local_path": "projects/veil-arena/tests/audio_reset.gd",
+      "size_bytes": 1710,
+      "sha256": "bd7cb2ed2a6e581eaae3e3214f675deb846d66a81910e85681d7d70f005a0f80"
+    },
+    {
+      "local_path": "projects/veil-arena/tests/audio_seek_injection.gd",
+      "size_bytes": 1982,
+      "sha256": "098ff24af05f7e51bd9021be9c5019ab09bbc65dee3632a5a6c9d90bc0b555f9"
+    },
+    {
+      "local_path": "projects/veil-arena/sound.gd",
+      "size_bytes": 3256,
+      "sha256": "9c8159e676f713bd1bf60ca4caf967689c8628b4f9a9ba78b30527b92e550cf5"
+    },
+    {
+      "local_path": "projects/veil-arena/dist/veilbreak.pck",
+      "size_bytes": 5466880,
+      "sha256": "81d345dc74510a75363b065112521d0c6c3aab3e11a9d789eba53d1ebd93d27b"
+    }
+  ],
+  "reproduction": [
+    "godot --headless --path projects/veil-arena --editor --import --quit",
+    "Run tests/presentation.gd, tests/audio_reset.gd and tests/audio_seek_injection.gd with --headless --path projects/veil-arena",
+    "Copy the same three driver scripts outside the project and run each with --headless --main-pack projects/veil-arena/dist/veilbreak.pck --script <copied driver>"
+  ],
+  "limitations": [
+    "One historical CI failure does not establish its actual scheduling cause. The controlled gap demonstrates the unlocked fixture vulnerability.",
+    "Unlocked delay/skew are diagnostic observations, not exact wall-clock gates. Locked detection threshold remains >50ms; alignment/reset remains <15ms.",
+    "Initial source attempt lacked ignored import caches and failed; actual editor import repaired the environment before the six successful recorded runs.",
+    "This is test-instrument repair, not new audio production, physical listening or a newly operational Audio laboratory."
+  ]
+}

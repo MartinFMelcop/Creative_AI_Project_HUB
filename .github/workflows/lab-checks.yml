@@ -181,6 +181,7 @@ jobs:
           "$veil_engine" --headless --path . --script tests/parry.gd --fixed-fps 60
           "$veil_engine" --headless --path . --script tests/practice.gd --fixed-fps 60
           "$veil_engine" --headless --path . --script tests/audio_reset.gd
+          "$veil_engine" --headless --path . --script tests/audio_seek_injection.gd
           cp tests/encounter.gd "$RUNNER_TEMP/veil-godot/encounter.gd"
           cp tests/presentation.gd "$RUNNER_TEMP/veil-godot/presentation.gd"
           cp tests/motion.gd "$RUNNER_TEMP/veil-godot/motion.gd"
@@ -188,6 +189,7 @@ jobs:
           cp tests/parry.gd "$RUNNER_TEMP/veil-godot/parry.gd"
           cp tests/practice.gd "$RUNNER_TEMP/veil-godot/practice.gd"
           cp tests/audio_reset.gd "$RUNNER_TEMP/veil-godot/audio_reset.gd"
+          cp tests/audio_seek_injection.gd "$RUNNER_TEMP/veil-godot/audio_seek_injection.gd"
           "$veil_engine" --headless --main-pack "$PWD/dist/veilbreak.pck" --script "$RUNNER_TEMP/veil-godot/encounter.gd" --fixed-fps 60
           "$veil_engine" --headless --main-pack "$PWD/dist/veilbreak.pck" --script "$RUNNER_TEMP/veil-godot/presentation.gd"
           "$veil_engine" --headless --main-pack "$PWD/dist/veilbreak.pck" --script "$RUNNER_TEMP/veil-godot/motion.gd"
@@ -195,6 +197,7 @@ jobs:
           "$veil_engine" --headless --main-pack "$PWD/dist/veilbreak.pck" --script "$RUNNER_TEMP/veil-godot/parry.gd" --fixed-fps 60
           "$veil_engine" --headless --main-pack "$PWD/dist/veilbreak.pck" --script "$RUNNER_TEMP/veil-godot/practice.gd" --fixed-fps 60
           "$veil_engine" --headless --main-pack "$PWD/dist/veilbreak.pck" --script "$RUNNER_TEMP/veil-godot/audio_reset.gd"
+          "$veil_engine" --headless --main-pack "$PWD/dist/veilbreak.pck" --script "$RUNNER_TEMP/veil-godot/audio_seek_injection.gd"
           "$veil_engine" --headless --path . --export-pack Linux "$RUNNER_TEMP/veil-godot/rebuilt.pck"
           "$veil_engine" --headless --main-pack "$RUNNER_TEMP/veil-godot/rebuilt.pck" --script "$RUNNER_TEMP/veil-godot/encounter.gd" --fixed-fps 60
           "$veil_engine" --headless --main-pack "$RUNNER_TEMP/veil-godot/rebuilt.pck" --script "$RUNNER_TEMP/veil-godot/presentation.gd"

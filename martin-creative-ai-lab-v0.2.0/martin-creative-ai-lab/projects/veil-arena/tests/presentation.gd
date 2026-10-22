@@ -61,7 +61,11 @@ func run() -> void:
 	check(music.size()>100 && energy(music)>.001,"The AudioServer produces actual non-silent music samples")
 	check(stem_skew()<.015,"Both stems advance on the same audio transport")
 	# A declared real seek must still expose misalignment; never relax the limit.
+	# Inject against one mixer instant too: a scheduler gap after the read
+	# otherwise spends the intended offset before seek is applied.
+	AudioServer.lock()
 	arena.sound.tracks[1].seek(arena.sound.tracks[0].get_playback_position()+.1)
+	AudioServer.unlock()
 	await wait_audio(.2)
 	check(stem_skew()>.05,"Atomic sampling still detects a real shifted stream")
 	arena.sound.reset()

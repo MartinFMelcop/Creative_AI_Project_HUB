@@ -33,7 +33,11 @@ func run() -> void:
 		samples.append(value)
 		worst = maxf(worst,value)
 	check(worst<.015,"Repeated take resets keep both real transports aligned within 15ms")
+	# Inject against one mixer instant too: a scheduler gap after the read
+	# otherwise spends the intended offset before seek is applied.
+	AudioServer.lock()
 	arena.sound.tracks[1].seek(arena.sound.tracks[0].get_playback_position()+.1)
+	AudioServer.unlock()
 	await create_timer(.15).timeout
 	check(skew()>.05,"Atomic reset audit still detects an actual shifted music stem")
 	arena.sound.reset()
