@@ -290,6 +290,12 @@ jobs:
           python3 -m unittest discover -s labs/visual-animation -p 'test_*.py'
           python3 labs/visual-animation/run.py --godot "$RUNNER_TEMP/veil-godot/Godot_v4.6.3-stable_linux.x86_64" --output "$RUNNER_TEMP/visual-animation.json" --compare evidence/visual-animation/results.json
 
+      - name: Execute preserved adaptive audio sources and actual mixer controls
+        working-directory: martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab
+        run: |
+          python3 -m unittest discover -s labs/audio-music -p 'test_*.py'
+          python3 labs/audio-music/run.py --godot "$RUNNER_TEMP/veil-godot/Godot_v4.6.3-stable_linux.x86_64" --output "$RUNNER_TEMP/audio-source.json" --compare evidence/audio-music/source.json
+
   integrity-and-dialogue:
     runs-on: ubuntu-24.04
     timeout-minutes: 10
@@ -564,3 +570,8 @@ jobs:
           dotnet build north-star/csharp/PresentationChecks/NorthStar.PresentationChecks.csproj -c Release
           dotnet north-star/csharp/PresentationChecks/bin/Release/net10.0/NorthStar.PresentationChecks.dll "$RUNNER_TEMP/presentation-native.json"
           node labs/visual-animation/browser.mjs dotnet "$RUNNER_TEMP/visual-browser"
+      - name: Execute original C# composition and actual real-time playback
+        run: |
+          dotnet build north-star/csharp/AudioChecks/NorthStar.AudioChecks.csproj -c Release
+          dotnet north-star/csharp/AudioChecks/bin/Release/net10.0/NorthStar.AudioChecks.dll "$RUNNER_TEMP/audio-native.json" "$RUNNER_TEMP/audio-assets"
+          node labs/audio-music/browser.mjs dotnet "$RUNNER_TEMP/audio-browser"

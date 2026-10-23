@@ -59,7 +59,8 @@ def affected(path):
                             'labs/narrative-continuity/', 'evidence/narrative-continuity/',
                             'labs/input-timing/', 'evidence/input-timing/')):
         return ('north_star_csharp',)
-    if relative.startswith(('labs/visual-animation/', 'evidence/visual-animation/')):
+    if relative.startswith(('labs/visual-animation/', 'evidence/visual-animation/',
+                            'labs/audio-music/', 'evidence/audio-music/')):
         return ('native_arena', 'north_star_csharp')
     if relative.startswith('references/'):
         return ()  # Source availability and pins are owned by unconditional integrity.

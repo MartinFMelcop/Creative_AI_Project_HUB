@@ -6,9 +6,14 @@ source inventory, truthful maturity, consumer relationship, validity boundary an
 next acceptance live in [the transformation catalog](origins.json). The
 [public entry point](../../../README.md) offers a concise navigation table.
 A destination is not operational merely because it has an entry or a directory.
-Three destinations remain incomplete; they cannot be postponed indefinitely.
+Two destinations remain incomplete; they cannot be postponed indefinitely.
 
 ## Operational methods
+
+- [Audio & Adaptive Music](audio-music/README.md): preserved PCM/mixer source controls
+  feed original portable C# composition and actual Web Audio output. Sequence/lifecycle,
+  phase, gain and silence controls remain distinct from listening quality.
+  [Execution](../evidence/audio-music/RUN.json).
 
 - [Visual Identity & Animation](visual-animation/README.md): actual preserved PNG registration,
   isolated source producer/selector/draw controls and retained bad policies feed original

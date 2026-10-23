@@ -8,6 +8,7 @@ using System.Text;
 using System.Text.Json;
 using System.Threading.Tasks;
 using NorthStar.Crossing;
+using NorthStar.Audio;
 using CrossingAction = NorthStar.Crossing.Action;
 namespace NorthStar.Presentation;
 
@@ -21,7 +22,8 @@ public sealed class Room
     private Dictionary<string,object> State()=>new(){["approach"]=session.Approach.ToString().ToLowerInvariant(),["outfit"]=session.Outfit.ToString().ToLowerInvariant(),["stage"]=session.Stage,["beat"]=session.Beat,["position"]=session.Position,["health"]=session.Health,["resolve"]=session.Resolve,["max_health"]=session.MaximumHealth,["max_resolve"]=session.MaximumResolve,["spent_resolve"]=session.SpentResolve,["rejected"]=session.Rejected,["active"]=session.Active,["won"]=session.Won,["complete"]=session.Complete,["required_position"]=session.RequiredPosition,["max_beats"]=session.MaximumBeats,["pulse"]=session.Pulse,["threat"]=session.Threat,["last"]=session.Last,["level"]=session.Progression.Level,["xp"]=session.Progression.TotalXp};
     private Dictionary<string,object> Observe(string command,bool accepted,string pose,Dictionary<string,object> before,Dictionary<string,object> after,int damage,int cost,int moved,string contact)
     {
-        var result=new Dictionary<string,object>(after){["sequence"]=sequence,["accepted"]=accepted,["command"]=command,["pose"]=pose,["before"]=before,["after"]=after,["damage"]=damage,["cost"]=cost,["moved"]=moved,["contact"]=contact};return result;
+        var plan=Plan.Observe(command,accepted,contact,(string)after["approach"],(bool)after["active"],(bool)after["won"],(bool)after["pulse"],(int)after["stage"]);
+        var result=new Dictionary<string,object>(after){["sequence"]=sequence,["accepted"]=accepted,["command"]=command,["pose"]=pose,["before"]=before,["after"]=after,["damage"]=damage,["cost"]=cost,["moved"]=moved,["contact"]=contact,["audio"]=new{cues=plan.Cues,music=plan.Music}};return result;
     }
     public Dictionary<string,object> Snapshot()=>observation;
     public Dictionary<string,object> Execute(JsonElement d)
@@ -66,6 +68,7 @@ public static class Program
             if(args.Length!=5||args[0]!="--serve"||args[3]!="--seconds")throw new ArgumentException("Usage: --serve PORT WEBROOT --seconds 1..600");
             int port=int.Parse(args[1]),seconds=int.Parse(args[4]);if(port<1024||port>65535||seconds<1||seconds>600)throw new ArgumentException("Bound loopback port/lifetime required.");
             string web=Path.GetFullPath(args[2]);var room=new Room();var clock=Stopwatch.StartNew();
+            var audio=Composer.Names.ToDictionary(name=>"/audio/"+name+".wav",Composer.Wav);
             using var listener=new HttpListener();listener.Prefixes.Add($"http://127.0.0.1:{port}/");listener.Start();Console.WriteLine($"READY http://127.0.0.1:{port}/");
             while(clock.Elapsed.TotalSeconds<seconds)
             {
@@ -74,7 +77,8 @@ public static class Program
                 try
                 {
                     string path=c.Request.Url!.AbsolutePath;
-                    if(c.Request.HttpMethod=="GET"&&new[]{"/","/index.html","/style.css","/app.js"}.Contains(path))
+                    if(c.Request.HttpMethod=="GET"&&audio.TryGetValue(path,out var wav)){body=wav;type="audio/wav";}
+                    else if(c.Request.HttpMethod=="GET"&&new[]{"/","/index.html","/style.css","/app.js","/audio.js"}.Contains(path))
                     {string file=path=="/"?"index.html":path[1..];body=File.ReadAllBytes(Path.Combine(web,file));type=file.EndsWith(".css")?"text/css":file.EndsWith(".js")?"text/javascript":"text/html";}
                     else if(c.Request.HttpMethod=="POST"&&path=="/command")
                     {

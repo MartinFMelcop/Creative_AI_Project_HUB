@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "updated_at": "2026-10-22",
-  "baseline_commit": "64aa9b291f8bffb50d9113d6bdddc7ecd32aabeb",
+  "updated_at": "2026-10-23",
+  "baseline_commit": "45405508d79c024e487a3903c3ca0965f40a0d42",
   "scope": "Mandatory eleven-laboratory transformation. Historical source preservation is separate from terminal knowledge consumption; operational claims require executed instruments and bound evidence.",
   "north_star_consumer_demonstrated": true,
   "existing_transfer_scope": "Validated transfers and integrated assets in the existing registries describe their named origin consumers, not Virgo Diamond integration.",
@@ -479,8 +479,8 @@
         "evidence/economy-crafting/results.json"
       ],
       "evidence_sha256": {
-        "evidence/economy-crafting/RUN.json": "7e73ca061c2bb539a96c30ee8aade9a63e46b94517bdfca250a59f4562338f39",
-        "evidence/economy-crafting/results.json": "abe36c7c042d2e2b842aef6446ed0336365847a2fca272b66aab8a080871090c"
+        "evidence/economy-crafting/RUN.json": "ddd390dda294e6ae91eb00cc6c0a4eb226d4fe931d19eed3cc4ac26707a8c267",
+        "evidence/economy-crafting/results.json": "e34c1976f059db2f85c3bb11a45302f68d12b71d61e1b1b0a988ee5a077fc691"
       }
     },
     {
@@ -651,8 +651,8 @@
         "evidence/rpg-progression/results.json"
       ],
       "evidence_sha256": {
-        "evidence/rpg-progression/RUN.json": "e04ced738ec62a1d016ba33c8422050ee5fd77cc3d0effb9a666507c164ca1ea",
-        "evidence/rpg-progression/results.json": "7b520609f72aee5e23c3aaf15ea110e6e5cc0be03f49513bd1cbd9067b75636c"
+        "evidence/rpg-progression/RUN.json": "4587275b62999ab50f45c64ae8f71823c5a8a658a545a861395e09a97e84c5bb",
+        "evidence/rpg-progression/results.json": "522ba7e3f2a2e9e3794d33c3333d235a1c77763d127a2859653e9236c2d176bf"
       }
     },
     {
@@ -739,7 +739,7 @@
         "evidence/visual-animation/results.json"
       ],
       "evidence_sha256": {
-        "evidence/visual-animation/RUN.json": "880ccb0d66adb1b29b50f30defcf0c4417da53fca4c2e785d621dd29e9ea2c5f",
+        "evidence/visual-animation/RUN.json": "3354e5dae5cbb2174c8812004a746ae770d329bfe0682a84de670bb46e5680dd",
         "evidence/visual-animation/results.json": "0bd2bd4ff789e5572ace249ec94b695d634020959ea72b4b7407052634bd3e7b"
       }
     },
@@ -751,9 +751,9 @@
       "origin_projects": [
         "P08"
       ],
-      "status": "incomplete",
+      "status": "operational",
       "domain": "Adaptive audio, sound identity, musical systems and temporal feedback",
-      "question": "Can adaptive transitions preserve semantic cue timing without masking threats or clipping?",
+      "question": "Can accepted-event ownership and aligned adaptive transports preserve truthful digital cues and phase across mute, suspension, restart and competing gain policies?",
       "source_paths": [
         "projects/tokyo80s/media",
         "projects/tokyo80s/tools/render_track.py",
@@ -763,13 +763,36 @@
         "projects/veil-arena/media/audio",
         "projects/veil-arena/tools/render_audio.py",
         "projects/cinderwatch/Native/media/audio",
-        "projects/cinderwatch/tools/render_feedback.py"
+        "projects/cinderwatch/tools/render_feedback.py",
+        "projects/veil-arena/sound.gd",
+        "projects/veil-arena/media/audio-catalog.json",
+        "projects/veil-arena/media/provenance.json",
+        "north-star/prototype/sound.gd"
       ],
       "source_inventory": "labs/source-inventory.json",
-      "consumer_paths": [],
-      "controls": [],
-      "validity_boundary": "Destination ownership and available sources are established; no operational laboratory method/results or North Star integration is claimed yet. Historical origin execution retains its own narrower scope.",
-      "next_objective": "Implement adaptive-cue alignment and signal/stress controls using preserved masters and actual destination playback."
+      "consumer_paths": [
+        "north-star/csharp/Audio/Sound.cs",
+        "north-star/csharp/Presentation/Program.cs",
+        "north-star/csharp/Presentation/web/audio.js"
+      ],
+      "controls": [
+        "18 preserved catalog identities and16 actual PCM files; three controlled PCM defect negatives",
+        "14 actual unchanged source/mixer lifecycle controls; locked phase shift and reset recovery",
+        "67 actual C# composition/projection controls,10 original WAVs, portable C#8/netstandard2.1 compilation",
+        "29 actual Chromium/C# AudioContext controls; captured PCM, phase/delay/gain and duplicate-dispatch negatives; eight instrument regressions"
+      ],
+      "validity_boundary": "Actual preserved digital source mixer, portable C# composition/projection and browser digital output only. Not physical listening, recognition/masking/comfort/accessibility, commercial rights, Unity/Windows/Steam or production networking validation.",
+      "next_objective": "Compare incomplete AI Evaluation and Build/Operations with actual Unity/Windows access and consequential authored/product/lifecycle needs. Evaluate cue recognition, masking and comfort with documented devices/listeners before experience claims; preserve original source and encoding differences.",
+      "path": "labs/audio-music",
+      "instrument": "labs/audio-music/run.py",
+      "evidence": [
+        "evidence/audio-music/RUN.json",
+        "evidence/audio-music/source.json"
+      ],
+      "evidence_sha256": {
+        "evidence/audio-music/RUN.json": "7f1807fb2936462be42e66dc9aebd80fb29965c6f968ffe6c5931b5d9bfc0773",
+        "evidence/audio-music/source.json": "f02011b488f77ddb3c016f6aa986c9d09c17e203e86bcebb4c58d78d08769b29"
+      }
     },
     {
       "id": "build-operations",
@@ -844,8 +867,8 @@
         "evidence/world-loadout/results.json"
       ],
       "evidence_sha256": {
-        "evidence/world-loadout/RUN.json": "4135b448ab3961f6ef20f4e48d688ba175858ca1e956ad4a2bf2214f74458175",
-        "evidence/world-loadout/results.json": "88e9bfb8575491777289946faeacc65fb9406a5bb6cf8500c42871aec79ac51b"
+        "evidence/world-loadout/RUN.json": "98bda622e86d2059a49368cb2f3f3e4cf0c15b33b532a3335c2720c8be67d533",
+        "evidence/world-loadout/results.json": "3e45a54000ff9cfc6aeb50ccd78356b9c9cb304c3d44e81d82f05e4bc112f055"
       }
     },
     {
@@ -897,8 +920,8 @@
         "evidence/persistent-expedition/results.json"
       ],
       "evidence_sha256": {
-        "evidence/persistent-expedition/RUN.json": "bd3baf48458af3cb0a8bf85209c242c187b812115d8e7113c65e6a4e22e7a42a",
-        "evidence/persistent-expedition/results.json": "22312efdf41d60d24b283ed403777858a9760599e1e7af06af34cc22b57813cc"
+        "evidence/persistent-expedition/RUN.json": "05b2111b8d2ee25413c73550265f9895510fedccebb835dec92501c0b5b8a7f7",
+        "evidence/persistent-expedition/results.json": "3e24e19524e7ad1d5d248a1856758d0a61c70f16dc27d7b8e5cf15b720854a3b"
       }
     }
   ],
@@ -943,7 +966,7 @@
         "evidence/rpg-progression/RUN.json"
       ],
       "evidence_sha256": {
-        "evidence/rpg-progression/RUN.json": "e04ced738ec62a1d016ba33c8422050ee5fd77cc3d0effb9a666507c164ca1ea"
+        "evidence/rpg-progression/RUN.json": "4587275b62999ab50f45c64ae8f71823c5a8a658a545a861395e09a97e84c5bb"
       }
     },
     {
@@ -962,7 +985,7 @@
         "evidence/rpg-progression/results.json"
       ],
       "evidence_sha256": {
-        "evidence/rpg-progression/results.json": "7b520609f72aee5e23c3aaf15ea110e6e5cc0be03f49513bd1cbd9067b75636c"
+        "evidence/rpg-progression/results.json": "522ba7e3f2a2e9e3794d33c3333d235a1c77763d127a2859653e9236c2d176bf"
       }
     },
     {
@@ -1095,8 +1118,8 @@
         "projects/tokyo80s/media",
         "projects/tokyo80s/tools/render_track.py"
       ],
-      "decision": "Remaining source capabilities in this laboratory domain are available or explicitly scoped gaps; source preservation and origin execution do not count as consumed.",
-      "next_action": "Implement adaptive-cue alignment and signal/stress controls using preserved masters and actual destination playback."
+      "decision": "Narrow aligned transport, semantic ownership and editable synthesis methods are consumed separately. Full historical score/rehearsal capabilities, human musical/recognition/masking validation, production mix and commercial rights remain genuinely unresolved.",
+      "next_action": "Assess real cue/mix experience with suitable documented listeners/devices and validate actual Unity/Windows audio; inspect further source capabilities separately rather than declaring the whole audio collection consumed."
     },
     {
       "id": "P09-REMAINING-SCOPE",
@@ -1226,8 +1249,8 @@
         "evidence/economy-crafting/results.json"
       ],
       "evidence_sha256": {
-        "evidence/economy-crafting/RUN.json": "7e73ca061c2bb539a96c30ee8aade9a63e46b94517bdfca250a59f4562338f39",
-        "evidence/economy-crafting/results.json": "abe36c7c042d2e2b842aef6446ed0336365847a2fca272b66aab8a080871090c"
+        "evidence/economy-crafting/RUN.json": "ddd390dda294e6ae91eb00cc6c0a4eb226d4fe931d19eed3cc4ac26707a8c267",
+        "evidence/economy-crafting/results.json": "e34c1976f059db2f85c3bb11a45302f68d12b71d61e1b1b0a988ee5a077fc691"
       }
     },
     {
@@ -1247,8 +1270,8 @@
         "evidence/economy-crafting/results.json"
       ],
       "evidence_sha256": {
-        "evidence/economy-crafting/RUN.json": "7e73ca061c2bb539a96c30ee8aade9a63e46b94517bdfca250a59f4562338f39",
-        "evidence/economy-crafting/results.json": "abe36c7c042d2e2b842aef6446ed0336365847a2fca272b66aab8a080871090c"
+        "evidence/economy-crafting/RUN.json": "ddd390dda294e6ae91eb00cc6c0a4eb226d4fe931d19eed3cc4ac26707a8c267",
+        "evidence/economy-crafting/results.json": "e34c1976f059db2f85c3bb11a45302f68d12b71d61e1b1b0a988ee5a077fc691"
       }
     },
     {
@@ -1278,8 +1301,8 @@
         "evidence/world-loadout/results.json"
       ],
       "evidence_sha256": {
-        "evidence/world-loadout/RUN.json": "4135b448ab3961f6ef20f4e48d688ba175858ca1e956ad4a2bf2214f74458175",
-        "evidence/world-loadout/results.json": "88e9bfb8575491777289946faeacc65fb9406a5bb6cf8500c42871aec79ac51b"
+        "evidence/world-loadout/RUN.json": "98bda622e86d2059a49368cb2f3f3e4cf0c15b33b532a3335c2720c8be67d533",
+        "evidence/world-loadout/results.json": "3e45a54000ff9cfc6aeb50ccd78356b9c9cb304c3d44e81d82f05e4bc112f055"
       }
     },
     {
@@ -1299,8 +1322,8 @@
         "evidence/world-loadout/results.json"
       ],
       "evidence_sha256": {
-        "evidence/world-loadout/RUN.json": "4135b448ab3961f6ef20f4e48d688ba175858ca1e956ad4a2bf2214f74458175",
-        "evidence/world-loadout/results.json": "88e9bfb8575491777289946faeacc65fb9406a5bb6cf8500c42871aec79ac51b"
+        "evidence/world-loadout/RUN.json": "98bda622e86d2059a49368cb2f3f3e4cf0c15b33b532a3335c2720c8be67d533",
+        "evidence/world-loadout/results.json": "3e45a54000ff9cfc6aeb50ccd78356b9c9cb304c3d44e81d82f05e4bc112f055"
       }
     },
     {
@@ -1330,8 +1353,8 @@
         "evidence/persistent-expedition/results.json"
       ],
       "evidence_sha256": {
-        "evidence/persistent-expedition/RUN.json": "bd3baf48458af3cb0a8bf85209c242c187b812115d8e7113c65e6a4e22e7a42a",
-        "evidence/persistent-expedition/results.json": "22312efdf41d60d24b283ed403777858a9760599e1e7af06af34cc22b57813cc"
+        "evidence/persistent-expedition/RUN.json": "05b2111b8d2ee25413c73550265f9895510fedccebb835dec92501c0b5b8a7f7",
+        "evidence/persistent-expedition/results.json": "3e24e19524e7ad1d5d248a1856758d0a61c70f16dc27d7b8e5cf15b720854a3b"
       }
     },
     {
@@ -1454,7 +1477,7 @@
         "evidence/visual-animation/RUN.json"
       ],
       "evidence_sha256": {
-        "evidence/visual-animation/RUN.json": "880ccb0d66adb1b29b50f30defcf0c4417da53fca4c2e785d621dd29e9ea2c5f"
+        "evidence/visual-animation/RUN.json": "3354e5dae5cbb2174c8812004a746ae770d329bfe0682a84de670bb46e5680dd"
       }
     },
     {
@@ -1474,6 +1497,50 @@
       ],
       "evidence_sha256": {
         "evidence/visual-animation/results.json": "0bd2bd4ff789e5572ace249ec94b695d634020959ea72b4b7407052634bd3e7b"
+      }
+    },
+    {
+      "id": "P08-CONSEQUENCE-OWNED-ADAPTIVE-AUDIO",
+      "origin_projects": [
+        "P08"
+      ],
+      "laboratory_id": "audio-music",
+      "status": "INTEGRATED",
+      "source_paths": [
+        "projects/veil-arena/sound.gd",
+        "projects/veil-arena/tools/render_audio.py",
+        "north-star/prototype/sound.gd"
+      ],
+      "consumer_paths": [
+        "north-star/csharp/Audio/Sound.cs",
+        "north-star/csharp/Presentation/Program.cs",
+        "north-star/csharp/Presentation/web/audio.js"
+      ],
+      "decision": "Adapt aligned transports, finite voices, editable synthesis and consume-while-muted event ownership into actual original C# composition/projection and real Chromium playback. No historical score or fiction imported.",
+      "evidence": [
+        "evidence/audio-music/RUN.json"
+      ],
+      "evidence_sha256": {
+        "evidence/audio-music/RUN.json": "7f1807fb2936462be42e66dc9aebd80fb29965c6f968ffe6c5931b5d9bfc0773"
+      }
+    },
+    {
+      "id": "P08-REPLAY-SHIFT-OVERGAIN-POLICIES",
+      "origin_projects": [
+        "P08"
+      ],
+      "laboratory_id": "audio-music",
+      "status": "REJECTED",
+      "source_paths": [
+        "projects/veil-arena/sound.gd",
+        "north-star/prototype/sound.gd"
+      ],
+      "decision": "Reject blind cue replay on duplicate observations, independently delayed transport and excessive gain for this consumer. Actual duplicate-guard mutant,37ms audio path delay and master gain12 controls detect the distinct defects; source PCM defects/100ms shift remain separate negatives.",
+      "evidence": [
+        "evidence/audio-music/RUN.json"
+      ],
+      "evidence_sha256": {
+        "evidence/audio-music/RUN.json": "7f1807fb2936462be42e66dc9aebd80fb29965c6f968ffe6c5931b5d9bfc0773"
       }
     }
   ]

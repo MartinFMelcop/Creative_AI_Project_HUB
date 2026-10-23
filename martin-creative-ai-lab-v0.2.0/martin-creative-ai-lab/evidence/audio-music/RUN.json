@@ -1,0 +1,363 @@
+{
+  "schema_version": 1,
+  "kind": "destination_execution",
+  "baseline_commit": "45405508d79c024e487a3903c3ca0965f40a0d42",
+  "capability_ids": [
+    "NS-C07"
+  ],
+  "consumer_paths": [
+    "north-star/csharp/Audio/Sound.cs",
+    "north-star/csharp/Presentation/Program.cs",
+    "north-star/csharp/Presentation/web/audio.js"
+  ],
+  "scope": "Actual original portable C# composition and consequence-owned plan with real-time Web Audio aligned transport, bounded semantic cues and explicit lifecycle. No historical music/cast import.",
+  "runtime": "C#8/netstandard2.1 Audio library; SDK10.0.401 Linux .NET10 host; Node24.19.0/Chromium actual AudioContext PCM capture; Godot4.6.3 source mixer. No Unity/Windows/Steam.",
+  "checks": {
+    "passed": 67,
+    "failed": 0
+  },
+  "instrument_regressions": {
+    "passed": 8,
+    "failed": 0
+  },
+  "source_controls": {
+    "catalog_assets": 18,
+    "pcm_files": 16,
+    "actual_native_mixer_controls": 14,
+    "controlled_pcm_defects_detected": 3
+  },
+  "browser_controls": 29,
+  "browser_negative_policies_detected": 3,
+  "commands": [
+    {
+      "command": [
+        "python3",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "labs/audio-music",
+        "-p",
+        "test_*.py"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "python3",
+        "labs/audio-music/run.py",
+        "--godot",
+        "/usr/local/bin/godot",
+        "--producer",
+        "--output",
+        "/workspace/work/audio-cycle/source.json"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "python3",
+        "labs/audio-music/run.py",
+        "--godot",
+        "/usr/local/bin/godot",
+        "--output",
+        "/workspace/work/audio-cycle/source-repeat.json",
+        "--compare",
+        "/workspace/work/audio-cycle/source.json"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "/workspace/work/structural-transformation/dotnet/dotnet",
+        "build",
+        "north-star/csharp/AudioChecks/NorthStar.AudioChecks.csproj",
+        "-c",
+        "Release",
+        "-m:1",
+        "--disable-build-servers"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "/workspace/work/structural-transformation/dotnet/dotnet",
+        "north-star/csharp/AudioChecks/bin/Release/net10.0/NorthStar.AudioChecks.dll",
+        "/workspace/work/audio-cycle/native-final.json",
+        "/workspace/work/audio-cycle/assets-final"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "node",
+        "labs/audio-music/browser.mjs",
+        "/workspace/work/structural-transformation/dotnet/dotnet",
+        "/workspace/work/audio-cycle/browser-published"
+      ],
+      "exit_code": 0
+    }
+  ],
+  "source_artifacts": [
+    {
+      "local_path": "labs/audio-music/browser.mjs",
+      "size_bytes": 16449,
+      "sha256": "788b520eee18d3625e583f716cbeffebc66e0c5872e11a2655fbfc70421253eb"
+    },
+    {
+      "local_path": "labs/audio-music/native.gd",
+      "size_bytes": 3208,
+      "sha256": "276f09345f367b82a1a63e3ba8043d55dee6279c61283c38b2c9f5994a3f8176"
+    },
+    {
+      "local_path": "labs/audio-music/run.py",
+      "size_bytes": 7059,
+      "sha256": "172db7b4f34bd25baca554e1147c9cb34fcc7a8be1b84bd1a737d1e127e9ff4e"
+    },
+    {
+      "local_path": "labs/audio-music/test_instrument.py",
+      "size_bytes": 1571,
+      "sha256": "38503bea8316f187bbdbc56fe168a50452da79a35144ff2410533e10f9f612fe"
+    },
+    {
+      "local_path": "north-star/csharp/Audio/NorthStar.Audio.csproj",
+      "size_bytes": 267,
+      "sha256": "3acec7333496cb2bb2bb2a8c6aaf151f714f6402e133ead2ca8d3f166d77dd22"
+    },
+    {
+      "local_path": "north-star/csharp/Audio/Sound.cs",
+      "size_bytes": 5456,
+      "sha256": "e4995638398116dff88d084f6afadb48217c81ee80f50995a2793ed22ce6ad31"
+    },
+    {
+      "local_path": "north-star/csharp/AudioChecks/NorthStar.AudioChecks.csproj",
+      "size_bytes": 419,
+      "sha256": "09817d6577fce1b3e0eac2bf5b308a7ee6b1ddf305f3f33b8a062d9a1ca89b05"
+    },
+    {
+      "local_path": "north-star/csharp/AudioChecks/Program.cs",
+      "size_bytes": 7105,
+      "sha256": "84a1e8ae9d0465901869649573ab117665a146a4f80c04c221b21d1a76e4d068"
+    },
+    {
+      "local_path": "north-star/csharp/Crossing/Session.cs",
+      "size_bytes": 5357,
+      "sha256": "d25ac05ba1a94432474dd1b14b4fd608e446fc5344dcc4f779d8d5fe27a1b2c5"
+    },
+    {
+      "local_path": "north-star/csharp/Domain/Progression.cs",
+      "size_bytes": 8331,
+      "sha256": "8495e1ad92fea069c2c3989f6f2cc2600980575e72812df9480ed193c51c8685"
+    },
+    {
+      "local_path": "north-star/csharp/Presentation/NorthStar.Presentation.csproj",
+      "size_bytes": 469,
+      "sha256": "6e5a04a3e92bc5606c032e20b9b546c4704a55d682c7eb314002822e5bf59387"
+    },
+    {
+      "local_path": "north-star/csharp/Presentation/Program.cs",
+      "size_bytes": 8185,
+      "sha256": "e04317ed8ee81a65360d07653b3fe03e900a748eac677e9b30b70b02721f6581"
+    },
+    {
+      "local_path": "north-star/csharp/Presentation/web/app.js",
+      "size_bytes": 5580,
+      "sha256": "3b70bfeabc63c935bafef49fab1effe615d18e15b1b59748eceb992f2e7d01f6"
+    },
+    {
+      "local_path": "north-star/csharp/Presentation/web/audio.js",
+      "size_bytes": 5963,
+      "sha256": "3ac5765f9353a72737ecce58c76f0d6d34ea7bfbaf3db29ef6953e148665f5a1"
+    },
+    {
+      "local_path": "north-star/csharp/Presentation/web/index.html",
+      "size_bytes": 7322,
+      "sha256": "69a6aa6c4084d284f2953716d889ba74b1079ae9b1371b1313acb788a79a2c89"
+    },
+    {
+      "local_path": "north-star/csharp/Presentation/web/style.css",
+      "size_bytes": 4517,
+      "sha256": "2a053d60cdf0b43c9924cd9c20a5ff0a0b3f5cc63b61d5cb4ad2fdb545cad4e0"
+    },
+    {
+      "local_path": "north-star/csharp/global.json",
+      "size_bytes": 55,
+      "sha256": "e0c0882461e712f6c2c66241bf2f175c60832e3ff077dc26091ff8c661d4193e"
+    },
+    {
+      "local_path": "north-star/prototype/sound.gd",
+      "size_bytes": 4116,
+      "sha256": "4404169ebb2d1711f20e6023292712bb2051f4075c4039d9e2db725b4b8fa80a"
+    },
+    {
+      "local_path": "projects/realtime-integration-lab/package-lock.json",
+      "size_bytes": 42105,
+      "sha256": "aa191ef2158e6cc6f770bf4b3ee44dca17175ef1a3cd572b98115246bf46aea7"
+    },
+    {
+      "local_path": "projects/realtime-integration-lab/package.json",
+      "size_bytes": 1445,
+      "sha256": "42e3cc9633e522dd6d9a5c11023418331129632881a8bf0b95e3717247d57ebe"
+    },
+    {
+      "local_path": "projects/veil-arena/media/audio/break.wav",
+      "size_bytes": 61784,
+      "sha256": "b1d63aaea6d0fb5e9ce1295916e80c21693a508236ddb33136e71e2682d283c4"
+    },
+    {
+      "local_path": "projects/veil-arena/media/audio/charge.wav",
+      "size_bytes": 37088,
+      "sha256": "9d8bc1dca6d0de9eb27f0629b74eeeecf0fb37c36cfe392b9e08a918cf9d6994"
+    },
+    {
+      "local_path": "projects/veil-arena/media/audio/counter.wav",
+      "size_bytes": 33560,
+      "sha256": "f207180c7c7d2b4186a877cc9818dac236d8300c247c1de1e84c4656dfce09d8"
+    },
+    {
+      "local_path": "projects/veil-arena/media/audio/courtyard.ogg",
+      "size_bytes": 44962,
+      "sha256": "273d39c6fbeedeffb05cd558c8280b9f9b03934fd457438ba8aa1f1cd1fc083d"
+    },
+    {
+      "local_path": "projects/veil-arena/media/audio/defeat.wav",
+      "size_bytes": 83834,
+      "sha256": "b1d757617b9d5519423924a1d8fcc255315465f94923e13e8b773be780365ef5"
+    },
+    {
+      "local_path": "projects/veil-arena/media/audio/dodge.wav",
+      "size_bytes": 14156,
+      "sha256": "b03da5758d81540d425d61d7a7cf336fda5b36c72977275a3d16a73f4e7a420a"
+    },
+    {
+      "local_path": "projects/veil-arena/media/audio/echo.wav",
+      "size_bytes": 42380,
+      "sha256": "fce10f784afd0609766197114e26e67d2ee8e9970198e32d90467d156bc4c998"
+    },
+    {
+      "local_path": "projects/veil-arena/media/audio/fracture.ogg",
+      "size_bytes": 127902,
+      "sha256": "25537961cfb15f4d7b3cb6b084ed6f57a0b44f5285c4d1d6b71e6e2acdba875f"
+    },
+    {
+      "local_path": "projects/veil-arena/media/audio/guard.wav",
+      "size_bytes": 17684,
+      "sha256": "6fc04238cbe2ef03f2ec04c9b722c176dafefba82527eedfc3218f9fb216d5bd"
+    },
+    {
+      "local_path": "projects/veil-arena/media/audio/hurt.wav",
+      "size_bytes": 26504,
+      "sha256": "f0eb81a6e44d9ff29bae9ed48931d7f37bafc3951588e4f165d0396f51d8a144"
+    },
+    {
+      "local_path": "projects/veil-arena/media/audio/phase.wav",
+      "size_bytes": 101474,
+      "sha256": "32261a143bfea4eb3e21d3c95b0014106b00a812e5f1bc9d9a2e658fdefeaf10"
+    },
+    {
+      "local_path": "projects/veil-arena/media/audio/seal.wav",
+      "size_bytes": 20330,
+      "sha256": "13950cd8b7fcd590714dbe524caf5bb9560160ef3b66d425234ce2f2f44985f6"
+    },
+    {
+      "local_path": "projects/veil-arena/media/audio/strike.wav",
+      "size_bytes": 11510,
+      "sha256": "3a73b35b915e772cf463aa9c5e3009b79e22d8a5887d72a8e387e3b63372d270"
+    },
+    {
+      "local_path": "projects/veil-arena/media/audio/sweep.wav",
+      "size_bytes": 33560,
+      "sha256": "8c5fd0b0511d00ddb1bbabcf817afd7ecd6eefd1540fdc5f63f679f78cd3a9a0"
+    },
+    {
+      "local_path": "projects/veil-arena/media/audio/victory.wav",
+      "size_bytes": 105884,
+      "sha256": "ea33b771ae8cbf4eb232faa3ea544b1cfaa2c3d4ba28441e32e0f7a0ad11f928"
+    },
+    {
+      "local_path": "projects/veil-arena/media/audio/wave.wav",
+      "size_bytes": 48554,
+      "sha256": "1a4369fb0e6422f950b7850dffa6d46960b68b6848dd57ed765809f0c466c5de"
+    },
+    {
+      "local_path": "projects/veil-arena/media/audio-catalog.json",
+      "size_bytes": 3988,
+      "sha256": "705fd04599734d19f98380e945ef1102d4eddc4c00c49b3fe66a7b0ba142fc65"
+    },
+    {
+      "local_path": "projects/veil-arena/media/masters/courtyard.wav",
+      "size_bytes": 2116844,
+      "sha256": "74c80d6a23ad393b5b88492cc3879cbb22ec8ea0ac6af6eeeb8731894ff57e53"
+    },
+    {
+      "local_path": "projects/veil-arena/media/masters/fracture.wav",
+      "size_bytes": 2116844,
+      "sha256": "10727068f2d47d136b8a29f047dff60c21494c0b81bf6063a4cc7cb1f051aaba"
+    },
+    {
+      "local_path": "projects/veil-arena/media/provenance.json",
+      "size_bytes": 5091,
+      "sha256": "f10e27a7d2769aa98a36a48f12b45d825d89546331bbabc6f7c46bbaeb8d83e3"
+    },
+    {
+      "local_path": "projects/veil-arena/sound.gd",
+      "size_bytes": 3256,
+      "sha256": "9c8159e676f713bd1bf60ca4caf967689c8628b4f9a9ba78b30527b92e550cf5"
+    },
+    {
+      "local_path": "projects/veil-arena/tools/render_audio.py",
+      "size_bytes": 5109,
+      "sha256": "6c287af79c22a18d07659b6fbbac69066610b4168f57cb99880f8b53b306c6fe"
+    }
+  ],
+  "result_artifacts": [
+    {
+      "local_path": "evidence/audio-music/browser.json",
+      "size_bytes": 70720,
+      "sha256": "f8be5d23cfb79e90f93225d182bc8dc1b0af4eae2487fb5f0bb14f449f73da98"
+    },
+    {
+      "local_path": "evidence/audio-music/crossing-output.wav",
+      "size_bytes": 458796,
+      "sha256": "b67ed1b90504886c0814b1e953fa3a9a010d64eded663ac7f798fef22cbe752f"
+    },
+    {
+      "local_path": "evidence/audio-music/native.json",
+      "size_bytes": 55740,
+      "sha256": "ac740ed2e5b089d76b6c41498ef4b8782a91c4198f8e29c8345412d5f3333961"
+    },
+    {
+      "local_path": "evidence/audio-music/prior-consumers.json",
+      "size_bytes": 14751,
+      "sha256": "931c74ba1992979627ef171e0efec8ee507215c1dc790a3348ac4e5324d59b4c"
+    },
+    {
+      "local_path": "evidence/audio-music/source.json",
+      "size_bytes": 7681,
+      "sha256": "f02011b488f77ddb3c016f6aa986c9d09c17e203e86bcebb4c58d78d08769b29"
+    },
+    {
+      "local_path": "evidence/audio-music/source.measurements.json",
+      "size_bytes": 260,
+      "sha256": "f72fe98784e498d0bf104f0971ec4d58914ad08a92d59f0e7188cd86c950954f"
+    },
+    {
+      "local_path": "evidence/audio-music/source.producer.json",
+      "size_bytes": 2400,
+      "sha256": "01e3c603fd4c3074cb5c852bf2d9ad91044a22de0c7486ce0de6c98126c6b85d"
+    }
+  ],
+  "observed_review": [
+    "Three independent specialty analyses selected adaptive audio over public-task recalibration, unavailable licensed Windows delivery and repeated persistence/visual studies. Coordinated C# host/composer, source assay and Web Audio work; primary integrated actual PCM controls and continuity. No human listening attribution.",
+    "Actual AudioContext postmix PCM is captured by an instrument-only zero-output ScriptProcessor branch. Simultaneous pre-gain stem capture tests shared100/150Hz harmonic phase; actual37ms path delay is detected. This is digital graph observation, not physical audio latency.",
+    "Mute produces measured zero PCM. Maximum UI-gain rapid commands preserve bounded voices/headroom. Excess master gain is detected as over-range float samples. A real audio.js duplicate-guard mutant replays accepted audio and fails the sequence criterion.",
+    "Terminal cues stop old threat voices. Restart clears cue/backlog and keeps both transport clocks aligned but silent; explicit suspend/resume recreates both at one start. Blur during resource decoding invalidates the pending enable.",
+    "Optional preserved producer reproduces16 WAVs exactly and retains two differing compressed Vorbis byte identities; original compressed media are never rewritten. No encoding-cause or listening-equivalence claim."
+  ],
+  "limitations": [
+    "Canonical source comparison binds source identities, PCM measures and actual control classifications. Every execution enforces mixer thresholds; variable mixer samples are retained separately instead of claiming bit-exact scheduling.",
+    "Browser PCM windows and phase measurements vary across scheduling/sample rates. Captured preview concatenates declared real output windows, not one continuous performance or a production master.",
+    "Procedural source composition and semantic/signal correctness are distinct from human cue recognition, masking, musical quality, comfort, accessibility, exclusive rights or commercial clearance.",
+    "No hardware speakers/headphones, physical latency, final musical/class/world canon, Unity import/Editor, Windows player, Steam, durable audio preferences or production networking validation."
+  ]
+}

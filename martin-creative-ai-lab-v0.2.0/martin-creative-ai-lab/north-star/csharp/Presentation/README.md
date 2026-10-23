@@ -51,3 +51,20 @@ No preserved PNG, Runner/Warden identity or outside art/package was imported.
 four complete choice journeys, failed policies/successful rivals,20 actual Chromium
 controls, detected source/renderer mutants and inspected captures. Technical fidelity
 is distinct from independent recognition, art approval, experience or commercial rights.
+
+## Original audio with explicit control
+
+Enable audio explicitly after connecting. Music and effects have independent sliders;
+mute consumes current events without replay on unmute. Playback suspension, focus loss
+and disconnect stop voices/transports. Resume is explicit and establishes the current
+observation baseline; lost events are intentionally not replayed. Restart clears old
+cue/async ownership and silences music while both aligned clocks continue; a later
+encounter fades to its actual arrangement. Suspend/resume recreates both at one start.
+
+The host caches ten original WAVs from the portable [C# composer](../Audio/README.md),
+served only at exact `/audio/NAME.wav` routes. Response and next-threat meaning comes
+from the actual C# `audio:{cues,music}` plan, not a click-side JavaScript prediction.
+Terminal won/lost stops prior threat voices. Visual/text consequences remain available
+with sound disabled. The browser is a local developer observer, not a production engine.
+[Audio evidence](../../../evidence/audio-music/RUN.json) binds real digital playback,
+phase/silence/overlap/lifecycle controls; no listener recognition or physical latency claim.

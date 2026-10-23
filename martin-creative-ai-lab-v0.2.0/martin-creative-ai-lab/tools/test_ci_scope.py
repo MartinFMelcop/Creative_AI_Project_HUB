@@ -74,7 +74,8 @@ class Classification(unittest.TestCase):
 
     def test_visual_method_keeps_both_actual_engine_and_destination_owners(self):
         for path in ('labs/visual-animation/run.py', 'labs/visual-animation/browser.mjs',
-                     'evidence/visual-animation/results.json'):
+                     'evidence/visual-animation/results.json', 'labs/audio-music/run.py',
+                     'labs/audio-music/browser.mjs', 'evidence/audio-music/source.json'):
             with self.subTest(path=path):
                 self.assertEqual(self.selected(w(path)), {'native_arena', 'north_star_csharp'})
 

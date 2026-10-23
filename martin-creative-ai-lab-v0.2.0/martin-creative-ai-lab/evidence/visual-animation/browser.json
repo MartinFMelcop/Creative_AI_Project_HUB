@@ -107,7 +107,13 @@
       "damage": 0,
       "cost": 0,
       "moved": 0,
-      "contact": "none"
+      "contact": "none",
+      "audio": {
+        "cues": [
+          "bolt"
+        ],
+        "music": "quiet"
+      }
     },
     "anchor": {
       "approach": "anchor",
@@ -184,7 +190,14 @@
       "damage": 0,
       "cost": 2,
       "moved": 0,
-      "contact": "protected"
+      "contact": "protected",
+      "audio": {
+        "cues": [
+          "block",
+          "bolt"
+        ],
+        "music": "quiet"
+      }
     },
     "lureBegin": {
       "approach": "lure",
@@ -261,7 +274,13 @@
       "damage": 0,
       "cost": 0,
       "moved": 0,
-      "contact": "none"
+      "contact": "none",
+      "audio": {
+        "cues": [
+          "bolt"
+        ],
+        "music": "quiet"
+      }
     },
     "lure": {
       "approach": "lure",
@@ -338,7 +357,14 @@
       "damage": 0,
       "cost": 3,
       "moved": 1,
-      "contact": "protected"
+      "contact": "protected",
+      "audio": {
+        "cues": [
+          "draw",
+          "bolt"
+        ],
+        "music": "quiet"
+      }
     },
     "hurt": {
       "approach": "anchor",
@@ -415,7 +441,14 @@
       "damage": 4,
       "cost": 0,
       "moved": 1,
-      "contact": "hurt"
+      "contact": "hurt",
+      "audio": {
+        "cues": [
+          "hurt",
+          "bolt"
+        ],
+        "music": "quiet"
+      }
     },
     "evade": {
       "approach": "anchor",
@@ -492,7 +525,14 @@
       "damage": 0,
       "cost": 1,
       "moved": 2,
-      "contact": "evaded"
+      "contact": "evaded",
+      "audio": {
+        "cues": [
+          "evade",
+          "bolt"
+        ],
+        "music": "quiet"
+      }
     },
     "survey": {
       "approach": "anchor",
@@ -569,7 +609,13 @@
       "damage": 0,
       "cost": 2,
       "moved": 0,
-      "contact": "protected"
+      "contact": "protected",
+      "audio": {
+        "cues": [
+          "won"
+        ],
+        "music": "silent"
+      }
     },
     "complete": {
       "approach": "anchor",
@@ -646,7 +692,13 @@
       "damage": 6,
       "cost": 0,
       "moved": 1,
-      "contact": "hurt"
+      "contact": "hurt",
+      "audio": {
+        "cues": [
+          "won"
+        ],
+        "music": "silent"
+      }
     },
     "refused": {
       "approach": "anchor",
@@ -723,7 +775,11 @@
       "damage": 0,
       "cost": 0,
       "moved": 0,
-      "contact": "none"
+      "contact": "none",
+      "audio": {
+        "cues": [],
+        "music": "quiet"
+      }
     },
     "lost": {
       "approach": "anchor",
@@ -800,7 +856,13 @@
       "damage": 2,
       "cost": 0,
       "moved": 0,
-      "contact": "hurt"
+      "contact": "hurt",
+      "audio": {
+        "cues": [
+          "lost"
+        ],
+        "music": "silent"
+      }
     }
   },
   "mutants": [

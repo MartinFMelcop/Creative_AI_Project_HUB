@@ -23,6 +23,7 @@ and Steam is the intended distribution ecosystem.**
 | Inspect or execute | Actual scope |
 |---|---|
 | [C# development foundation](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/README.md) | Engine-independent progression/crafting domains, connected terminal consumers and checks. No Unity Editor or Windows-player execution is claimed. |
+| [Original C# adaptive audio](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/Audio/README.md) | Editable synthesis and consequence-owned cues, aligned musical transport and actual controlled browser playback. |
 | [Embodied C# Crossing](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/Presentation/README.md) | Original avatar, independent outfit/approach and actual protection, advance, damage, refusal and completed encounters; bounded C# browser observer. |
 | [Visual C# interaction](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/Interaction/README.md) | Real timed work, interrupt/rearm, single resource cost and living exit; browser developer view of C# rules. |
 | [Original C# narrative scene](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/Narrative/README.md) | Consent, finite local work and actual crossing outcomes; experimental fiction, local session only. |
@@ -31,6 +32,12 @@ and Steam is the intended distribution ecosystem.**
 | [Current capability boundaries](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/capabilities.json) | Origin, adapted, destination and independently validated claims remain distinct. No production MMORPG or Steamworks readiness claim. |
 
 ![Actual original C# Crossing: Lure advances in Trail outfit](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/evidence/visual-animation/lure.png)
+
+[Captured original C# audio](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/evidence/audio-music/crossing-output.wav)
+contains declared excerpts of actual Chromium postmix output, including protection,
+advance, harm, evasion and outcomes. [Audio execution](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/evidence/audio-music/RUN.json)
+records signal/lifecycle controls and negative policies. This is a digital graph capture,
+not a continuous playthrough, physical listening or validated musical quality.
 
 This image captures an actual accepted C# action rendered as original SVG; it is neither
 Unity nor concept art. [Visual execution](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/evidence/visual-animation/RUN.json)
@@ -60,7 +67,7 @@ make its destination laboratory operational.
 | P05 | [RPG Systems & Progression](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/labs/rpg-systems/README.md) | Operational, bounded progression research |
 | P06 | [Combat & Responsiveness](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/labs/combat-response/README.md) | Operational, bounded native contact research |
 | P07 | [Visual Identity & Animation](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/labs/visual-animation/README.md) | Operational, bounded registration/state-presentation research |
-| P08 | Audio & Adaptive Music | Incomplete |
+| P08 | [Audio & Adaptive Music](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/labs/audio-music/README.md) | Operational, bounded source/signal/lifecycle research |
 | P09 | Build, Release & Operations | Incomplete |
 | P10 | [World & Gameplay Systems](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/labs/world-gameplay/README.md) | Operational, bounded prepared-action research |
 | P11 | [Networking & Persistence](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/labs/networking-persistence/README.md) | Operational, bounded local process recovery |

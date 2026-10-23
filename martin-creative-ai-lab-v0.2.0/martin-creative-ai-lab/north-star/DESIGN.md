@@ -624,3 +624,37 @@ controls, four complete identity journeys, two failed universal policies and act
 Chromium captures. Pose phases are static event observations, not a timed continuous
 animation system. No people were studied; recognition, comprehension, enjoyment,
 independent art approval, Unity/Windows/Steam and production asset import remain open.
+
+## Original consequence-owned sound and deliberate silence
+
+**Status:** implemented local sonic hypothesis; no approved final score, class/world
+canon, independent artist/listener approval or commercial clearance.
+[Portable C# composition](csharp/Audio/README.md) supplies a small editable original
+arrangement and cues to the actual embodied Crossing. Low resonant block, airy draw,
+rough harm, light evasion and opposed outcome contours are compositional intentions;
+measured signal differences do not establish human recognition or aesthetic quality.
+No historical tune, opposing character identity, outside sample, cloned voice or
+artist imitation is imported.
+
+The C# owner projects accepted contact and the next real threat separately. Terminal
+outcome has priority; failure cannot play victory. A refused spend does not play
+protection. A second actual encounter changes arrangement through aligned stems,
+without restarting one stream independently. Music/effects controls, explicit enable,
+mute and suspension retain deliberate silence and existing visual/text alternatives.
+Restart clears cue/decode ownership and keeps both transports aligned in silence;
+suspend/resume recreates both at one instant. Sound never creates a turn or consequence.
+
+Three independent specialties selected audio after the previous embodied consumer
+resolved a concrete expressive prerequisite. ENG-015 informs temporal ownership and
+async invalidation; SCI-014/017/064/070 distinguish controlled signal/mixer evidence
+from listening and the louder-is-better rival. CRE-072/073/076(H) inform adaptive
+silence, contextual cue priority and editable provenance, without importing their
+candidate lore or approving final musical direction.
+
+[Actual execution](../evidence/audio-music/RUN.json) retains source mixer/PCM controls,
+67 C# checks,29 actual browser controls, shifted/replayed/overgain negatives and a
+captured digital excerpt. Original media remain unchanged, including two compressed
+producer byte differences. Technical alignment/headroom and agent review do not prove
+absence of perceptual masking, comprehension, comfort, accessibility, enjoyment,
+exclusive rights, Unity Editor, Windows or Steam readiness. Relevant listeners/devices
+and current commercial publication requirements remain separate obligations.

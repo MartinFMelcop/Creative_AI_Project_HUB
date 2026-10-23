@@ -11,6 +11,11 @@ of actual independent approach/outfit choices and unchanged encounter consequenc
 [Source/destination evidence](../../evidence/visual-animation/RUN.json) separates
 registered static event poses from unmeasured human readability and Unity execution.
 
+[Original audio](Audio/README.md) adds C#8/netstandard2.1 editable synthesis and
+read-only accepted-consequence plans. The existing Presentation host plays them through
+actual Web Audio with explicit local controls; [evidence](../../evidence/audio-music/RUN.json)
+binds digital PCM capture, not human listening or Unity execution.
+
 ## Build and play
 
 Use the exact SDK in [global.json](global.json), **10.0.401**:

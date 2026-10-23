@@ -130,28 +130,28 @@
     },
     {
       "local_path": "north-star/csharp/Presentation/NorthStar.Presentation.csproj",
-      "size_bytes": 407,
-      "sha256": "cc74ebc11d8fcee1fb65159725e815ef1b097a81f46c7871e659e4cf524fbb3f"
+      "size_bytes": 469,
+      "sha256": "6e5a04a3e92bc5606c032e20b9b546c4704a55d682c7eb314002822e5bf59387"
     },
     {
       "local_path": "north-star/csharp/Presentation/Program.cs",
-      "size_bytes": 7723,
-      "sha256": "21f10ca1a40a02b54cd02094bde290c74a800883539b44d9068b52c88003706a"
+      "size_bytes": 8185,
+      "sha256": "e04317ed8ee81a65360d07653b3fe03e900a748eac677e9b30b70b02721f6581"
     },
     {
       "local_path": "north-star/csharp/Presentation/web/app.js",
-      "size_bytes": 5459,
-      "sha256": "7d6f03266511a5696a6b41f9585bfed233d7827af2b8b5e5a005a6cf7bf7eeb6"
+      "size_bytes": 5580,
+      "sha256": "3b70bfeabc63c935bafef49fab1effe615d18e15b1b59748eceb992f2e7d01f6"
     },
     {
       "local_path": "north-star/csharp/Presentation/web/index.html",
-      "size_bytes": 6688,
-      "sha256": "8ae1b8c44789653c7bd1ac2daf2cd3406cce97970bbb280c65eff317d0a61950"
+      "size_bytes": 7322,
+      "sha256": "69a6aa6c4084d284f2953716d889ba74b1079ae9b1371b1313acb788a79a2c89"
     },
     {
       "local_path": "north-star/csharp/Presentation/web/style.css",
-      "size_bytes": 4156,
-      "sha256": "6768658c8a0f8282601c788e0c38111303a0cd986aed69ea46e0c692c1b49038"
+      "size_bytes": 4517,
+      "sha256": "2a053d60cdf0b43c9924cd9c20a5ff0a0b3f5cc63b61d5cb4ad2fdb545cad4e0"
     },
     {
       "local_path": "north-star/csharp/PresentationChecks/NorthStar.PresentationChecks.csproj",
@@ -207,43 +207,58 @@
       "local_path": "projects/veil-arena/tools/build_motion_catalog.gd",
       "size_bytes": 2899,
       "sha256": "761257428c0ccf70034ef818ac4b5c76ae6842d4d53838daf987635d111fa776"
+    },
+    {
+      "local_path": "north-star/csharp/Audio/NorthStar.Audio.csproj",
+      "size_bytes": 267,
+      "sha256": "3acec7333496cb2bb2bb2a8c6aaf151f714f6402e133ead2ca8d3f166d77dd22"
+    },
+    {
+      "local_path": "north-star/csharp/Audio/Sound.cs",
+      "size_bytes": 5456,
+      "sha256": "e4995638398116dff88d084f6afadb48217c81ee80f50995a2793ed22ce6ad31"
+    },
+    {
+      "local_path": "north-star/csharp/Presentation/web/audio.js",
+      "size_bytes": 5963,
+      "sha256": "3ac5765f9353a72737ecce58c76f0d6d34ea7bfbaf3db29ef6953e148665f5a1"
     }
   ],
   "result_artifacts": [
     {
       "local_path": "evidence/visual-animation/anchor.png",
-      "size_bytes": 136987,
-      "sha256": "2218bb224584356d4018d6d13d78d0adae4b143b14c279c718327915492452e7"
+      "size_bytes": 148796,
+      "sha256": "db01fd95b3524fe5830a1c6b494502622698a1824790fb1060e605723d32ab11"
     },
     {
       "local_path": "evidence/visual-animation/browser.json",
-      "size_bytes": 22384,
-      "sha256": "039f5fa9e4e32ae67a67a1573978e5e129b5df0f3c91dec5a9dd93769a5ceab5"
+      "size_bytes": 23403,
+      "sha256": "b24afad1fc3602a4e09aa1390bf35cf8ddc7b081b56055f06217d930a4e4e000"
     },
     {
       "local_path": "evidence/visual-animation/complete.png",
-      "size_bytes": 139037,
-      "sha256": "9f190f844f2686a0285797389de97d0e97cc33b005284b990b68fe7867c28388"
+      "size_bytes": 150564,
+      "sha256": "f190420b122baf137cb908635764efdb0e3d05e0b0fb727d5c951fe15ad59e9c"
     },
     {
       "local_path": "evidence/visual-animation/hurt.png",
-      "size_bytes": 138785,
-      "sha256": "4c330665ea1f6c93cf68890047ef591df5189cc4de074160f59c30ea1207fcfd"
+      "size_bytes": 149192,
+      "sha256": "f77d10c952b12bb74e20c3b7bce4f65230e0195f19dd30fb9c910fdbc4541431"
     },
     {
       "local_path": "evidence/visual-animation/lost.png",
-      "size_bytes": 135513,
-      "sha256": "1ff5c3e91d8fba14ebe03b0b06f23beab440898e248d555e0b5938485e050ae4"
+      "size_bytes": 147322,
+      "sha256": "d959eb91364ba8ffcb7ab0cdcd9312de14b1e9a04d354c7ffd56db659bf61401"
     },
     {
       "local_path": "evidence/visual-animation/lure.png",
-      "size_bytes": 140224,
-      "sha256": "9103de01687658a7eca2362026023aedae538a626d976f86ac57bc2081cd7a88"
+      "size_bytes": 152326,
+      "sha256": "cc845cf9803bb812dec18bea8b58edfb30f725e6441e11299f1f48e02264986f"
     },
     {
       "local_path": "evidence/visual-animation/native.json",
-      "size_bytes": 79246,
-      "sha256": "57bfb297d35dc2c824f58314de17694c8959e27e4fb5dcd0ad1e52086bc7b09b"
+      "size_bytes": 83520,
+      "sha256": "d8d303a735148ffcc166fb2008af66ccf693c4ba4352b1dc9c39a2dd1e5796ec"
     },
     {
       "local_path": "evidence/visual-animation/prior-consumers.json",
@@ -252,13 +267,13 @@
     },
     {
       "local_path": "evidence/visual-animation/reduced.png",
-      "size_bytes": 135616,
-      "sha256": "b1b754684df844df26ee273f72f21ac8da309a5e3f7913ec4544d2df249d2cef"
+      "size_bytes": 147422,
+      "sha256": "16ce99d79cf961a98db6959a48b19e470031cde092dfc3c5d38d25491e5b49d2"
     },
     {
       "local_path": "evidence/visual-animation/refused.png",
-      "size_bytes": 134989,
-      "sha256": "06f99deac245fe3a19a3cf04e550e79f7521b75ab91a71bc39370fac587173d1"
+      "size_bytes": 146796,
+      "sha256": "49fef01ccd48bb1affa427f36f1d6d5cb1ec306ffa3bbc72b60c9a784f8b5994"
     },
     {
       "local_path": "evidence/visual-animation/results.json",
@@ -278,5 +293,12 @@
     "Browser shows static accepted event/beat poses, not continuous animation phases or physical latency. Positional interpolation owns no rules.",
     "Presentation hosts unchanged Crossing.Session; no new skill effects, point allocation UI, journal migration or save. Restart explicitly creates a fresh ephemeral experiment.",
     "No final canon, imported historical fiction, independent artist/player approval, human recognition/accessibility/enjoyment, exclusive rights/commercial clearance, Unity Editor, Windows, Steam or production networking."
-  ]
+  ],
+  "affected_revalidation": {
+    "baseline_commit": "45405508d79c024e487a3903c3ca0965f40a0d42",
+    "execution": "evidence/audio-music/prior-consumers.json",
+    "checks": 47,
+    "browser_controls": 20,
+    "scope": "Existing native observations/negative policies unchanged after recursively excluding the additive audio plan. Actual visual browser controls/captures repeated; source atlas study unchanged and not claimed freshly repeated."
+  }
 }
