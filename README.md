@@ -61,7 +61,7 @@ make its destination laboratory operational.
 | Origin | Laboratory destination | Current maturity |
 |---|---|---|
 | P01 | [Economy & Simulation](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/labs/economy-simulation/README.md) | Operational, bounded crafting/conservation research |
-| P02 | AI Evaluation & Quality | Incomplete |
+| P02 | [AI Evaluation & Quality](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/labs/ai-evaluation/README.md) | Operational, bounded independent-context artifact evaluation |
 | P03 | [Input, Timing & Interaction](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/labs/input-timing/README.md) | Operational, bounded timed-input research |
 | P04 | [Narrative & Continuity](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/labs/narrative-continuity/README.md) | Operational, bounded consent/causal-state research |
 | P05 | [RPG Systems & Progression](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/labs/rpg-systems/README.md) | Operational, bounded progression research |
@@ -83,6 +83,12 @@ historical table/runtime agreement and an explicit C# adaptation; historical QA 
 are not accepted as runtime proof. [Combat results](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/evidence/combat-response/results.json)
 retain successful and failed timing/contact cases. These deterministic studies are
 mechanical observations, not independent scientific or player evaluations.
+
+One separately generated first-delivery client passed all 17 checks in a
+[calibrated public practice evaluation](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/labs/ai-evaluation/README.md).
+Baseline defects and missing-browser inconclusiveness remain visible. Fresh agent
+context used declared access rules on a shared filesystem; unknown prior exposure
+cannot be excluded. This is artifact acceptance, not a model score or new gameplay.
 
 ## Technology demonstrations
 

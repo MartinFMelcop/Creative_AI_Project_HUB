@@ -1,0 +1,61 @@
+{
+  "schema_version": 1,
+  "task": "EVAL-001",
+  "task_version": "0.1.0",
+  "runner_version": "0.2.1",
+  "started_at": "2026-10-23T00:52:17.977761+00:00",
+  "run_kind": "artifact_check",
+  "status": "inconclusive",
+  "baseline_commit": "66041e7fdd7687ee21099f95129dff41933c74dd",
+  "suite_commit": "911bf789e31dc2b1df9586a894e37312375771f3",
+  "runner_sha256": "192058674188670ce90e7fc1446a453e20992ebc426e66cb9b82938c1452a0ab",
+  "commands": [
+    {
+      "command": [
+        "node",
+        "--check",
+        "/tmp/p02-client-5c82vnjd/client.js"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "",
+      "timeout_seconds": 15,
+      "timed_out": false,
+      "launch_error": null,
+      "capture_complete": true,
+      "termination_strategy": null,
+      "elapsed_seconds": 0.028
+    },
+    {
+      "command": [
+        "node",
+        "-e",
+        "\nconst { chromium } = require('playwright-core');\nconst manifest = require('./package.json');\nconst dependencies = Object.fromEntries(\n  Object.keys({ ...manifest.dependencies, ...manifest.devDependencies })\n    .map(name => [name, require(name + '/package.json').version]));\nif (Number(process.versions.node.split('.')[0]) < 22) process.exit(2);\n(async () => {\n  const browser = await chromium.launch({\n    executablePath: process.env.CHROMIUM_PATH || '/usr/bin/chromium',\n    headless: true, args: ['--no-sandbox'],\n  });\n  console.log(JSON.stringify({ node: process.version, chromium: browser.version(),\n    playwright: require('playwright-core/package.json').version,\n    socket_io: require('socket.io/package.json').version, dependencies }));\n  await browser.close();\n})().catch(error => { console.error(error.message); process.exit(2); });\n"
+      ],
+      "exit_code": 2,
+      "stdout": "",
+      "stderr": "browserType.launch: Failed to launch chromium because executable doesn't exist at /nonexistent/controlled-ai-evaluation-browser\n",
+      "timeout_seconds": 20,
+      "timed_out": false,
+      "launch_error": null,
+      "capture_complete": true,
+      "termination_strategy": null,
+      "elapsed_seconds": 0.303
+    }
+  ],
+  "candidate_model": null,
+  "score": null,
+  "artifact_sha256": "1b51b9ba200318222f0f509c5e0d8588fe9a0a9c5e878154abce7cb4995b36a2",
+  "evaluator_artifacts": {
+    "server.cjs": "f84e170aa785a6fa5caf223a1c8a245f51688f347eefa8e2d0e37e0f5f3cf9e7",
+    "public/index.html": "abf2c41b7fc6c0d7ae081ac7b6ef15af0de658fb9e738bbcde8dfd07aa852848",
+    "public/style.css": "0e90d0c17dd64e139538357240194fc24b8261bc21e4cb887768f1004948b13d",
+    "package.json": "2eb527a56b15c7949329d7582469bcf1fe12aafedf6c6f70d865b5d3c0766a80",
+    "package-lock.json": "1fcbdb915d484b376a5126d4fd5087bd04df618dd8e461aeb0131506ff0bdcaf",
+    "tests/browser.test.cjs": "5d31f58d99d9e6cd51f24e448063349d916acb2fab4c4585a84a969cb3dca63e",
+    "tests/protocol.test.cjs": "cdf15bd3522bf9c74dc60bf307fc56f4050d74d61b45f27341867ce537254a7a"
+  },
+  "evaluator_source": "git_snapshot",
+  "gate": "environment",
+  "reason": "Browser/dependency preflight failed"
+}

@@ -1,0 +1,80 @@
+{
+  "schema_version": 1,
+  "study_id": "AI-EVAL-001-CANDIDATE-01",
+  "task": "EVAL-001",
+  "recorded_before_candidate": true,
+  "recorded_at_utc": "2026-10-23T00:50:51.291481+00:00",
+  "repository_baseline": "5c5b8a0d302138d3047f3d2452f0064d608a7a50",
+  "attempt_limit": 1,
+  "candidate_context": {
+    "fork_turns": "none",
+    "identity": "Codex sub-agent, inherited model configuration; exact serving model identifier unavailable",
+    "provided": [
+      "Task-specific instruction",
+      "Nine-file exported starter including BRIEF.md and task-manifest.json"
+    ],
+    "excluded": [
+      "Parent conversation",
+      "Repository authority/history",
+      "Reference client",
+      "Evaluator-owned tests",
+      "Calibration feedback"
+    ],
+    "allowed_tools": [
+      "Read and edit only exported workspace",
+      "exec_command for node --check and local app investigation",
+      "No network, dependency installation, Git, reference or evaluator access"
+    ],
+    "shared_filesystem": true,
+    "isolation": "Procedural context separation; no filesystem sandbox or confidential benchmark",
+    "training_contamination": "Unknown; public task/history; no unseen/generalization claim"
+  },
+  "protocol": {
+    "production_deadline_seconds": 600,
+    "feedback": "No evaluator feedback or revision after first frozen submission",
+    "only_changed_file": "public/client.js",
+    "calibration": {
+      "baseline": {
+        "status": "rejected",
+        "tests": 17,
+        "pass": 15,
+        "fail": 2
+      },
+      "reference": {
+        "status": "accepted",
+        "tests": 17,
+        "pass": 17,
+        "fail": 0
+      }
+    },
+    "acceptance": "One frozen artifact classified by unchanged pinned evaluator. Rejection is a valid study outcome; execution/environment failures are inconclusive. No numeric model score.",
+    "cost": "No billing/token telemetry available; no cost estimate"
+  },
+  "export_sha256": {
+    ".node-version": "7e8a2fa94951112b894a3dbe3d05efef5e9263741fa49125f0a70f40fedab4cc",
+    "BRIEF.md": "13b49044c82465f988f23709e76027bf7c75849fdaab23848af325c9da0ccef9",
+    "package-lock.json": "4aef642ad8308c3a87ef328008fce3d75ba4ebd6935edb9f1ac3c833ab1e1727",
+    "package.json": "313b6467e18c7a9b91ab4a208a60fa455dd02e971bab6f99f361d585ca080203",
+    "public/client.js": "1b559d97a981060467725dbed26545cf175dd383bbb6fdc992e4cb761ef3eaff",
+    "public/index.html": "7cb6866cc5f603ae89263db31620a99053439650a0e3e86e215ab2cc13cd9665",
+    "public/style.css": "7f4e6e73f8b6ac534369275f9a3461d00afbe7ab1605d46199d50ff25503d323",
+    "server.cjs": "f84e170aa785a6fa5caf223a1c8a245f51688f347eefa8e2d0e37e0f5f3cf9e7",
+    "task-manifest.json": "ada80ac2958cf856a82b63d74c632d41349c95ddf0ad2d91626e6657f6ed1e5f"
+  },
+  "attempt": 1,
+  "candidate": {
+    "identity": "Codex sub-agent, inherited model configuration; exact serving model identifier unavailable",
+    "context": "Fresh fork_turns:none task-specific context, exported starter only; parent history and evaluator excluded. Shared filesystem, procedural access restrictions.",
+    "tools": [
+      "Read and edit only exported workspace",
+      "exec_command for node --check and local app investigation",
+      "No network, dependency installation, Git, reference or evaluator access"
+    ],
+    "attribution": "Candidate agent produces public/client.js; primary evaluator freezes and checks; no human or general model-performance attribution."
+  },
+  "constraints": {
+    "single_attempt": true,
+    "no_evaluator_feedback": true,
+    "context_separation": "declared_not_sandboxed"
+  }
+}

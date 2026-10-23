@@ -1,0 +1,69 @@
+{
+  "status": "superseded_not_for_acceptance",
+  "reason": "Instrument was edited during the first evaluator execution. Its end-of-run source hash could misbind loaded code to edited bytes. This is observed evaluator integrity debt, not a candidate defect. Initial result cannot authorize acceptance.",
+  "observed_result": {
+    "schema_version": 1,
+    "method": "attributed-first-attempt-v1",
+    "study_id": "AI-EVAL-001-CANDIDATE-01",
+    "task": "EVAL-001",
+    "started_at": "2026-10-23T00:52:21.698971+00:00",
+    "completed_at": "2026-10-23T00:53:58.127050+00:00",
+    "status": "accepted",
+    "reason": "Artifact decision only; no model score or human validation",
+    "calibration": {
+      "baseline": true,
+      "reference": true
+    },
+    "candidate_status": "accepted",
+    "candidate_counts": {
+      "tests": 17,
+      "pass": 17,
+      "fail": 0,
+      "cancelled": 0,
+      "skipped": 0,
+      "todo": 0
+    },
+    "candidate": {
+      "identity": "Codex sub-agent, inherited model configuration; exact serving model identifier unavailable",
+      "context": "Fresh fork_turns:none task-specific context, exported starter only; parent history and evaluator excluded. Shared filesystem, procedural access restrictions.",
+      "tools": [
+        "Read and edit only exported workspace",
+        "exec_command for node --check and local app investigation",
+        "No network, dependency installation, Git, reference or evaluator access"
+      ],
+      "attribution": "Candidate agent produces public/client.js; primary evaluator freezes and checks; no human or general model-performance attribution."
+    },
+    "constraints": {
+      "single_attempt": true,
+      "no_evaluator_feedback": true,
+      "context_separation": "declared_not_sandboxed"
+    },
+    "context_limit": "Declared context separation; shared filesystem is not a sandbox. Public task/history cannot establish secrecy, unseen training data or general model performance.",
+    "model_score": null,
+    "human_validation": false,
+    "identities": {
+      "protocol_sha256": "abcfbb49d11adb85da076587dcb9f1e0b22a134e1e4f5c701bbf21ab6e5b1c1a",
+      "client_sha256": "ec689e2f8a9a84fb1729f237fe1cdc82b6a3e27cc77a83999d29106a8df6a0b9",
+      "instrument_sha256": "dc0910db92447a146a4a1d942e16e51ccbe5306d494a198eda5b6d34bb65909d",
+      "origin_runner_sha256": "192058674188670ce90e7fc1446a453e20992ebc426e66cb9b82938c1452a0ab",
+      "baseline_commit": "66041e7fdd7687ee21099f95129dff41933c74dd",
+      "suite_commit": "911bf789e31dc2b1df9586a894e37312375771f3"
+    },
+    "controls": {
+      "export_support_verified": true,
+      "client_frozen_before_checks": true,
+      "fresh_pinned_baseline": true,
+      "fresh_pinned_reference": true,
+      "candidate_hash_bound": true
+    },
+    "records": {
+      "baseline": "baseline.json",
+      "reference": "reference.json",
+      "candidate": "candidate.json"
+    }
+  },
+  "correction": "Capture source identities before execution, require stability through completion, retain initial hashes on mutation; dedicated regression mutates a copied source. Final evaluator execution uses unchanged frozen candidate and corrected stable sources.",
+  "candidate_attempts": 1,
+  "evaluator_executions": 2,
+  "feedback_to_candidate": false
+}

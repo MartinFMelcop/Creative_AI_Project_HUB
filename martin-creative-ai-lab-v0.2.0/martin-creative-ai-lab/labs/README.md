@@ -6,9 +6,15 @@ source inventory, truthful maturity, consumer relationship, validity boundary an
 next acceptance live in [the transformation catalog](origins.json). The
 [public entry point](../../../README.md) offers a concise navigation table.
 A destination is not operational merely because it has an entry or a directory.
-Two destinations remain incomplete; they cannot be postponed indefinitely.
+Build/Operations remains incomplete; it cannot be postponed indefinitely.
 
 ## Operational methods
+
+- [AI Evaluation & Quality](ai-evaluation/README.md): one separately generated
+  first-delivery artifact is evaluated with exact pinned defect/reference controls,
+  frozen context/identity and explicit environment attribution.
+  [Execution](../evidence/ai-evaluation/RUN.json) is public practice artifact evidence,
+  not a confidential benchmark, model score or North Star gameplay transfer.
 
 - [Audio & Adaptive Music](audio-music/README.md): preserved PCM/mixer source controls
   feed original portable C# composition and actual Web Audio output. Sequence/lifecycle,

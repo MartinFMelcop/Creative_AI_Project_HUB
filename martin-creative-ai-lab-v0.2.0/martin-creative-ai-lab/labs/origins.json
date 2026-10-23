@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "updated_at": "2026-10-23",
-  "baseline_commit": "45405508d79c024e487a3903c3ca0965f40a0d42",
+  "baseline_commit": "5c5b8a0d302138d3047f3d2452f0064d608a7a50",
   "scope": "Mandatory eleven-laboratory transformation. Historical source preservation is separate from terminal knowledge consumption; operational claims require executed instruments and bound evidence.",
   "north_star_consumer_demonstrated": true,
   "existing_transfer_scope": "Validated transfers and integrated assets in the existing registries describe their named origin consumers, not Virgo Diamond integration.",
@@ -491,19 +491,38 @@
       "origin_projects": [
         "P02"
       ],
-      "status": "incomplete",
+      "status": "operational",
       "domain": "Evaluation methods, calibration, defect detection and reproducible verification",
-      "question": "Can known defective and reference artifacts distinguish candidate defects from environment failure?",
+      "question": "Can a fresh-context first-delivery client be classified separately from environment failure under calibrated pinned checks and explicit context/attribution limits?",
       "source_paths": [
         "evaluations/chat-send-buffering/run.py",
         "evaluations/chat-send-buffering/test_runner.py",
         "evaluations/chat-send-buffering/BRIEF.md"
       ],
       "source_inventory": "labs/source-inventory.json",
-      "consumer_paths": [],
-      "controls": [],
-      "validity_boundary": "Destination ownership and available sources are established; no operational laboratory method/results or North Star integration is claimed yet. Historical origin execution retains its own narrower scope.",
-      "next_objective": "Extend existing calibrated task into an independent candidate evaluation with explicit context/tool records and defect attribution."
+      "consumer_paths": [
+        "labs/ai-evaluation/run.py"
+      ],
+      "controls": [
+        "Pinned defective starter rejected 15/17 with the exact two known defects; reference accepted17/17",
+        "One separately generated frozen candidate accepted17/17 with no evaluator feedback",
+        "Actual missing Chromium reference classified inconclusive at environment gate",
+        "Seven method regressions reject missing provenance, false sandbox/retry, wrong calibration failures, tampered support and concurrent source/artifact replacement"
+      ],
+      "validity_boundary": "One public practice artifact produced in a fresh agent context under declared rules, with shared filesystem and unknown training exposure. No model score, confidential benchmark, OS isolation, independent human validation, North Star gameplay/evaluation integration, Unity/Windows/Steam or production outage claim.",
+      "next_objective": "Compare a consequential actual C# candidate defect with coherent authored integration and licensed Windows delivery; require appropriate independent context and discrimination beyond one public task before broader AI claims.",
+      "path": "labs/ai-evaluation",
+      "instrument": "labs/ai-evaluation/run.py",
+      "evidence": [
+        "evidence/ai-evaluation/RUN.json",
+        "evidence/ai-evaluation/results.json",
+        "evidence/ai-evaluation/missing-browser.json"
+      ],
+      "evidence_sha256": {
+        "evidence/ai-evaluation/RUN.json": "159242571767fa000f62950c4f32c81d3c6e756f76cc564bd3f5f01504b4f5fa",
+        "evidence/ai-evaluation/results.json": "1ecb972d196bacab55e62d83a62fde8121c0c6d0e525cf080de92d26ea0864c3",
+        "evidence/ai-evaluation/missing-browser.json": "16bd4b05e6e2d0c7e060c21a692476096199c13ac63d4abc7660a6a0aac2bf03"
+      }
     },
     {
       "id": "input-timing",
@@ -1034,8 +1053,8 @@
         "evaluations/chat-send-buffering/run.py",
         "evaluations/chat-send-buffering/test_runner.py"
       ],
-      "decision": "Remaining source capabilities in this laboratory domain are available or explicitly scoped gaps; source preservation and origin execution do not count as consumed.",
-      "next_action": "Extend existing calibrated task into an independent candidate evaluation with explicit context/tool records and defect attribution."
+      "decision": "Pinned export/calibration/environment-attribution methods are narrowly consumed by the separate destination method. Broader AI evaluation validity, new tasks, generalization, enforced isolation and an actual North Star candidate defect remain unresolved.",
+      "next_action": "Choose a consequential actual C# beneficiary/defect and independent task context only when it outranks authored integration/delivery; do not treat this public single artifact as model performance."
     },
     {
       "id": "P03-REMAINING-SCOPE",
@@ -1541,6 +1560,31 @@
       ],
       "evidence_sha256": {
         "evidence/audio-music/RUN.json": "7f1807fb2936462be42e66dc9aebd80fb29965c6f968ffe6c5931b5d9bfc0773"
+      }
+    },
+    {
+      "id": "P02-ATTRIBUTED-ARTIFACT-DECISION",
+      "origin_projects": [
+        "P02"
+      ],
+      "laboratory_id": "ai-evaluation",
+      "status": "INTEGRATED",
+      "source_paths": [
+        "evaluations/chat-send-buffering/run.py",
+        "evaluations/chat-send-buffering/test_runner.py",
+        "evaluations/chat-send-buffering/BRIEF.md"
+      ],
+      "decision": "Adapt pinned starter/export, exact defect/reference calibration, scope and environment attribution into an actual destination method evaluating one fresh-context frozen artifact. Acceptance is finite artifact evidence; no North Star or model-performance transfer.",
+      "consumer_paths": [
+        "labs/ai-evaluation/run.py"
+      ],
+      "evidence": [
+        "evidence/ai-evaluation/RUN.json",
+        "evidence/ai-evaluation/results.json"
+      ],
+      "evidence_sha256": {
+        "evidence/ai-evaluation/RUN.json": "159242571767fa000f62950c4f32c81d3c6e756f76cc564bd3f5f01504b4f5fa",
+        "evidence/ai-evaluation/results.json": "1ecb972d196bacab55e62d83a62fde8121c0c6d0e525cf080de92d26ea0864c3"
       }
     }
   ]

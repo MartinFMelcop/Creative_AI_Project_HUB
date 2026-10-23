@@ -97,8 +97,9 @@ reference must accept with all 17 passing. See [snapshot calibration](../../evid
 
 These probes validate the harness and TR-009's bounded P11 → P02 adaptation.
 They are not independent candidate attempts, a model comparison, a score, or
-evidence of AI performance. Candidate identity, context, tools, attempts, timing,
-and available cost must be recorded separately before a future candidate run.
+evidence of AI performance. A separate [destination study](../../labs/ai-evaluation/README.md)
+now records one independent-context artifact, its tools/attribution and available
+timing/cost limits; calibration remains distinct from that candidate.
 
 The same Codex session designed the harness and applied existing reference/tests.
 Export separation reduces accidental context inclusion; it is not filesystem
@@ -108,8 +109,9 @@ and context provenance; this public practice task cannot supply confidentiality.
 Heartbeat expiry is injected at a pinned predicate; polling uses real HTTP writes.
 Neither proves production outage reliability, human usability, or Unity behavior.
 
-Next: run one independently produced client with recorded context and permitted
-tools. Keep raw artifact acceptance separate from any claim about its author.
+The [destination laboratory](../../labs/ai-evaluation/README.md) now owns the
+independent-context artifact decision and its next objective. Keep raw artifact
+acceptance separate from any claim about its author.
 
 Runner 0.2.1 retains P11 commit `911bf789e31dc2b1df9586a894e37312375771f3`
 without importing current app sources. Controlled changed-working-project checks

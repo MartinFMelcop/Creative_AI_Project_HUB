@@ -364,7 +364,7 @@ Identificadores persistem mesmo quando nomes mudam. Um projeto arquivado pode co
 | ID | Seed | Matéria-prima principal | Destinos possíveis | Estado nesta fundação |
 |---|---|---|---|---|
 | P01 | Artemyra / Eclipse Fair | Typed economy and native C# presentation | Godot .NET board, terminal workbench, replay and comparison | Native 0.6.0 local fair slots and standalone Linux; core/CLI rules 0.1.0 retained |
-| P02 | AI Evaluation & QA Lab (historical Unity proposal) | Requirements, reproduced bugs, artifact checks | Bounded practice tasks and later independent evaluation | EVAL-001 runner 0.2.1 uses pinned snapshots, starter 0.1.0; M4 harness scope, no model candidate |
+| P02 | AI Evaluation & QA Lab (historical Unity proposal) | Requirements, reproduced bugs, artifact checks | Bounded practice tasks and later independent evaluation | EVAL-001 runner 0.2.1 uses pinned snapshots, starter 0.1.0; Calibrated public harness; independent-context artifact study linked in the destination lab |
 | P03 | Tokyo 80s | Original music, timing and sustained interaction | Midnight Signal and Rain Circuit with track selection/transition | P03 0.5.0 head/tail review / P08 0.5.0 backing; human play/listening pending |
 | P04 | O Lich mais velho da tumba mais antiga / Darsen reading editions | Narrative, translation and reader production | Complete Portuguese story and English EPUB/PDF | Revised standalone adaptation 0.3.0 in both languages; old editions preserved, no historical manuscript restoration |
 | P05 | The Dark Knight / Cinderwatch | Turn-based seed, AGI, rows and states | Native three-encounter tactical rescue campaign | Native 0.5.0 recovery copies and guarded navigation; self-contained Linux player; historical RMXP packages absent |
@@ -455,7 +455,7 @@ contract remains 0.1.0. P11's Project Rooms addition does not repin the task or
 change its dependency graph. This is M4 for a calibrated harness, not independent
 model performance, secrecy or OS isolation.
 
-**Gate:** record an independently produced artifact, actual candidate identity,
+**Acceptance contract:** record an independently produced artifact, actual candidate identity,
 tools, context, attempts and available cost; execute the evaluator separately.
 Public reference/history is discoverable. Bundle separation is not secrecy,
 OS isolation or a security sandbox. Recalibrate after changes to the pinned
@@ -1019,7 +1019,7 @@ Atualizar esses arquivos no encerramento permite que uma nova sessão retome o t
 
 ## 11. Protocolo de AI Evaluation
 
-Current implemented task: [P02 EVAL-001](evaluations/chat-send-buffering/README.md), a calibrated public practice harness without an independent candidate/model result. The examples below remain design guidance.
+Current implemented task: [P02 EVAL-001](evaluations/chat-send-buffering/README.md), a calibrated public practice harness. The [destination laboratory](labs/ai-evaluation/README.md) owns independent-context artifact observations and their limits; these are not model scores or confidential benchmarks. The examples below remain design guidance.
 
 ### Anatomy de uma task
 

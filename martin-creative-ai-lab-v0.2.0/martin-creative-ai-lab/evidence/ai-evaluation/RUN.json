@@ -1,0 +1,107 @@
+{
+  "schema_version": 1,
+  "kind": "destination_execution",
+  "laboratory": "ai-evaluation",
+  "baseline_commit": "5c5b8a0d302138d3047f3d2452f0064d608a7a50",
+  "consumer_paths": [
+    "labs/ai-evaluation/run.py"
+  ],
+  "source_artifacts": [
+    {
+      "local_path": "labs/ai-evaluation/run.py",
+      "sha256": "dc0910db92447a146a4a1d942e16e51ccbe5306d494a198eda5b6d34bb65909d",
+      "size_bytes": 7785
+    },
+    {
+      "local_path": "evaluations/chat-send-buffering/run.py",
+      "sha256": "192058674188670ce90e7fc1446a453e20992ebc426e66cb9b82938c1452a0ab",
+      "size_bytes": 15767
+    },
+    {
+      "local_path": "evaluations/chat-send-buffering/BRIEF.md",
+      "sha256": "13b49044c82465f988f23709e76027bf7c75849fdaab23848af325c9da0ccef9",
+      "size_bytes": 2481
+    }
+  ],
+  "checks": {
+    "passed": 10,
+    "failed": 0,
+    "scope": "Method acceptance controls; not test totals or model score"
+  },
+  "controls": {
+    "only_client_changed": true,
+    "protocol_predeclared_and_bound": true,
+    "frozen_delivery_bound": true,
+    "baseline_known_defects": true,
+    "reference_complete": true,
+    "candidate_complete": true,
+    "sources_stable": true,
+    "candidate_identity": true,
+    "browser_absence_inconclusive": true,
+    "export_support_verified": true
+  },
+  "commands": [
+    {
+      "command": [
+        "python3",
+        "labs/ai-evaluation/run.py",
+        "--protocol",
+        "/workspace/work/continuous-eval/protocol.json",
+        "--workspace",
+        "/workspace/work/continuous-eval/candidate",
+        "--output",
+        "/workspace/work/continuous-eval/final-study"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "python3",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "labs/ai-evaluation",
+        "-p",
+        "test_*.py"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "python3",
+        "evaluations/chat-send-buffering/test_runner.py"
+      ],
+      "exit_code": 0
+    }
+  ],
+  "instrument_regressions": 7,
+  "origin_runner_regressions": 25,
+  "results": "evidence/ai-evaluation/results.json",
+  "artifact_decision": "Accept this exact practice artifact for the pinned finite contract; do not replace the maintained P11 client or import it into North Star.",
+  "candidate_production": {
+    "attempts": 1,
+    "fork_turns": "none",
+    "task": "/root/candidate",
+    "instruction_sha256": "9ef954fb2e2ff14fdac202135e044f4a879e034591bed3b7232b53022179b8ed",
+    "freeze": "evidence/ai-evaluation/frozen.json",
+    "access_record": "Candidate-reported commands/files in frozen.json; task-specific fresh context observed by orchestrator. No OS audit or enforced sandbox.",
+    "exact_serving_model": null,
+    "cost_telemetry": null
+  },
+  "negative": "evidence/ai-evaluation/missing-browser.json",
+  "superseded": "evidence/ai-evaluation/superseded.json",
+  "specialists": {
+    "engineering": "ENG-004/015/028: reuse pinned owner/evaluator; freeze artifact and distinguish context from isolation. Engineering implemented method/negative controls.",
+    "scientific": "SCI-076/077: predeclare one attempt, calibrate rival explanations and retain inconclusive execution. Science wrote method/validity and reviewed provenance.",
+    "creative": "CRE-005(A)/061(H): authored social/action consequences remain product alternative; avoid presenting evaluation as gameplay or human experience. Creation reviewed claims and exact context retention.",
+    "coordination": "Independent read-only selection analyses in parallel, then exclusive instrument/tests and README ownership; primary owns candidate orchestration, evidence, integration and review.",
+    "disagreement": "Creation preferred visible authored RequestExpedition integration. Parent selected feasible independent-context evaluation to mature an incomplete mandatory destination; authored integration remains corrective product frontier."
+  },
+  "limits": [
+    "Public practice task; no unseen/secret benchmark, independent training or general model score.",
+    "Shared filesystem; procedural restrictions and self-report, not security isolation or proof of absent prior exposure.",
+    "Candidate uses private Socket.IO _hasPingExpired; pinned-suite success is not an API stability guarantee.",
+    "No candidate deployment, North Star gameplay change, Unity Editor, Windows, Steam, participant/device or production reliability validation."
+  ]
+}

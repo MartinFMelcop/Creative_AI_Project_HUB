@@ -78,6 +78,7 @@ def affected(path):
         return ('native_arena',)
     if relative.startswith(('projects/realtime-integration-lab/', 'projects/tokyo80s/',
                             'projects/waystone-dialogue/', 'evaluations/',
+                            'labs/ai-evaluation/', 'evidence/ai-evaluation/',
                             'evidence/realtime-chat/', 'evidence/tokyo80s/',
                             'evidence/waystone-dialogue/', 'evidence/evaluation-task/')):
         return ('chat_evaluation',)

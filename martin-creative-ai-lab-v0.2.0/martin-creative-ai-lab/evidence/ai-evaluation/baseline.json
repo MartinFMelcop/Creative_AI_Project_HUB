@@ -1,0 +1,109 @@
+{
+  "schema_version": 1,
+  "task": "EVAL-001",
+  "task_version": "0.1.0",
+  "runner_version": "0.2.1",
+  "started_at": "2026-10-23T00:54:08.218278+00:00",
+  "run_kind": "controlled_calibration",
+  "status": "rejected",
+  "baseline_commit": "66041e7fdd7687ee21099f95129dff41933c74dd",
+  "suite_commit": "911bf789e31dc2b1df9586a894e37312375771f3",
+  "runner_sha256": "192058674188670ce90e7fc1446a453e20992ebc426e66cb9b82938c1452a0ab",
+  "commands": [
+    {
+      "command": [
+        "node",
+        "--check",
+        "/tmp/p02-client-rlzp63jx/client.js"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "",
+      "timeout_seconds": 15,
+      "timed_out": false,
+      "launch_error": null,
+      "capture_complete": true,
+      "termination_strategy": null,
+      "elapsed_seconds": 0.028
+    },
+    {
+      "command": [
+        "node",
+        "-e",
+        "\nconst { chromium } = require('playwright-core');\nconst manifest = require('./package.json');\nconst dependencies = Object.fromEntries(\n  Object.keys({ ...manifest.dependencies, ...manifest.devDependencies })\n    .map(name => [name, require(name + '/package.json').version]));\nif (Number(process.versions.node.split('.')[0]) < 22) process.exit(2);\n(async () => {\n  const browser = await chromium.launch({\n    executablePath: process.env.CHROMIUM_PATH || '/usr/bin/chromium',\n    headless: true, args: ['--no-sandbox'],\n  });\n  console.log(JSON.stringify({ node: process.version, chromium: browser.version(),\n    playwright: require('playwright-core/package.json').version,\n    socket_io: require('socket.io/package.json').version, dependencies }));\n  await browser.close();\n})().catch(error => { console.error(error.message); process.exit(2); });\n"
+      ],
+      "exit_code": 0,
+      "stdout": "{\"node\":\"v24.19.0\",\"chromium\":\"154.0.8037.57\",\"playwright\":\"1.64.0\",\"socket_io\":\"4.8.4\",\"dependencies\":{\"express\":\"4.22.3\",\"socket.io\":\"4.8.4\",\"playwright-core\":\"1.64.0\",\"socket.io-client\":\"4.8.4\"}}\n",
+      "stderr": "",
+      "timeout_seconds": 20,
+      "timed_out": false,
+      "launch_error": null,
+      "capture_complete": true,
+      "termination_strategy": null,
+      "elapsed_seconds": 0.527
+    },
+    {
+      "command": [
+        "node",
+        "--test",
+        "--test-reporter=tap",
+        "tests/browser.test.cjs",
+        "tests/protocol.test.cjs"
+      ],
+      "exit_code": 1,
+      "stdout": "TAP version 13\n# Subtest: two browser clients display accepted messages once in both directions\nok 1 - two browser clients display accepted messages once in both directions\n  ---\n  duration_ms: 2047.80582\n  type: 'test'\n  ...\n# Subtest: a connected form submission waits behind an in-flight polling write\nnot ok 2 - a connected form submission waits behind an in-flight polling write\n  ---\n  duration_ms: 4650.515237\n  type: 'test'\n  location: '/tmp/p02-client-rlzp63jx/runtime/tests/browser.test.cjs:79:1'\n  failureType: 'testCodeFailure'\n  error: 'page.waitForFunction: Timeout 4000ms exceeded.'\n  code: 'ERR_TEST_FAILURE'\n  name: 'TimeoutError'\n  stack: |-\n    expectMessages (/tmp/p02-client-rlzp63jx/runtime/tests/browser.test.cjs:63:14)\n    TestContext.<anonymous> (/tmp/p02-client-rlzp63jx/runtime/tests/browser.test.cjs:97:9)\n  ...\n# Subtest: a stale connected state does not retain a message for reconnect replay\nnot ok 3 - a stale connected state does not retain a message for reconnect replay\n  ---\n  duration_ms: 621.899174\n  type: 'test'\n  location: '/tmp/p02-client-rlzp63jx/runtime/tests/browser.test.cjs:103:1'\n  failureType: 'testCodeFailure'\n  error: |-\n    Expected values to be strictly deep-equal:\n    + actual - expected\n    \n      {\n    +   buffered: 1,\n    -   buffered: 0,\n        connected: true\n      }\n    \n  code: 'ERR_ASSERTION'\n  name: 'AssertionError'\n  expected:\n    connected: true\n    buffered: 0\n  actual:\n    connected: true\n    buffered: 1\n  operator: 'deepStrictEqual'\n  stack: |-\n    TestContext.<anonymous> (/tmp/p02-client-rlzp63jx/runtime/tests/browser.test.cjs:119:10)\n    async Test.run (node:internal/test_runner/test:1389:7)\n    async Test.processPendingSubtests (node:internal/test_runner/test:960:7)\n  ...\n# Subtest: markup remains literal text in both browsers\nok 4 - markup remains literal text in both browsers\n  ---\n  duration_ms: 1725.628728\n  type: 'test'\n  ...\n# Subtest: rejection is visible, preserves the draft, and does not broadcast\nok 5 - rejection is visible, preserves the draft, and does not broadcast\n  ---\n  duration_ms: 3727.63015\n  type: 'test'\n  ...\n# Subtest: a departed client keeps its draft and receives only future messages on rejoining\nok 6 - a departed client keeps its draft and receives only future messages on rejoining\n  ---\n  duration_ms: 3859.723538\n  type: 'test'\n  ...\n# Subtest: transport interruption reconnects automatically without duplicating listeners\nok 7 - transport interruption reconnects automatically without duplicating listeners\n  ---\n  duration_ms: 2800.269707\n  type: 'test'\n  ...\n# Subtest: browser retains only the latest 200 messages\nok 8 - browser retains only the latest 200 messages\n  ---\n  duration_ms: 974.278032\n  type: 'test'\n  ...\n# Subtest: new browser receives future messages without server-side history\nok 9 - new browser receives future messages without server-side history\n  ---\n  duration_ms: 2773.379322\n  type: 'test'\n  ...\n# Subtest: missing acknowledgement reports uncertainty and does not retry automatically\nok 10 - missing acknowledgement reports uncertainty and does not retry automatically\n  ---\n  duration_ms: 4080.378149\n  type: 'test'\n  ...\n# Subtest: an acknowledgement does not erase a newer draft typed during sending\nok 11 - an acknowledgement does not erase a newer draft typed during sending\n  ---\n  duration_ms: 1721.066821\n  type: 'test'\n  ...\n# Subtest: protocol broadcasts trimmed messages to sender and peer in order\nok 12 - protocol broadcasts trimmed messages to sender and peer in order\n  ---\n  duration_ms: 56.103284\n  type: 'test'\n  ...\n# Subtest: non-string payloads are rejected without broadcasts\nok 13 - non-string payloads are rejected without broadcasts\n  ---\n  duration_ms: 20.028063\n  type: 'test'\n  ...\n# Subtest: empty and whitespace-only payloads are rejected without broadcasts\nok 14 - empty and whitespace-only payloads are rejected without broadcasts\n  ---\n  duration_ms: 16.50199\n  type: 'test'\n  ...\n# Subtest: 501 code units are rejected even when trimming would shorten the payload\nok 15 - 501 code units are rejected even when trimming would shorten the payload\n  ---\n  duration_ms: 14.097367\n  type: 'test'\n  ...\n# Subtest: 500 UTF-16 code units are accepted including non-ASCII text\nok 16 - 500 UTF-16 code units are accepted including non-ASCII text\n  ---\n  duration_ms: 16.546109\n  type: 'test'\n  ...\n# Subtest: messages without acknowledgement callbacks do not crash the server\nok 17 - messages without acknowledgement callbacks do not crash the server\n  ---\n  duration_ms: 14.586787\n  type: 'test'\n  ...\n1..17\n# tests 17\n# suites 0\n# pass 15\n# fail 2\n# cancelled 0\n# skipped 0\n# todo 0\n# duration_ms 29738.072476\n",
+      "stderr": "",
+      "timeout_seconds": 180,
+      "timed_out": false,
+      "launch_error": null,
+      "capture_complete": true,
+      "termination_strategy": null,
+      "elapsed_seconds": 29.773
+    }
+  ],
+  "candidate_model": null,
+  "score": null,
+  "artifact_sha256": "1b559d97a981060467725dbed26545cf175dd383bbb6fdc992e4cb761ef3eaff",
+  "evaluator_artifacts": {
+    "server.cjs": "f84e170aa785a6fa5caf223a1c8a245f51688f347eefa8e2d0e37e0f5f3cf9e7",
+    "public/index.html": "abf2c41b7fc6c0d7ae081ac7b6ef15af0de658fb9e738bbcde8dfd07aa852848",
+    "public/style.css": "0e90d0c17dd64e139538357240194fc24b8261bc21e4cb887768f1004948b13d",
+    "package.json": "2eb527a56b15c7949329d7582469bcf1fe12aafedf6c6f70d865b5d3c0766a80",
+    "package-lock.json": "1fcbdb915d484b376a5126d4fd5087bd04df618dd8e461aeb0131506ff0bdcaf",
+    "tests/browser.test.cjs": "5d31f58d99d9e6cd51f24e448063349d916acb2fab4c4585a84a969cb3dca63e",
+    "tests/protocol.test.cjs": "cdf15bd3522bf9c74dc60bf307fc56f4050d74d61b45f27341867ce537254a7a"
+  },
+  "evaluator_source": "git_snapshot",
+  "expected_dependency_versions": {
+    "express": "4.22.3",
+    "playwright-core": "1.64.0",
+    "socket.io": "4.8.4",
+    "socket.io-client": "4.8.4"
+  },
+  "environment": {
+    "node": "v24.19.0",
+    "chromium": "154.0.8037.57",
+    "playwright": "1.64.0",
+    "socket_io": "4.8.4",
+    "dependencies": {
+      "express": "4.22.3",
+      "socket.io": "4.8.4",
+      "playwright-core": "1.64.0",
+      "socket.io-client": "4.8.4"
+    }
+  },
+  "counts": {
+    "tests": 17,
+    "pass": 15,
+    "fail": 2,
+    "cancelled": 0,
+    "skipped": 0,
+    "todo": 0
+  },
+  "gate": "behavior_and_regressions",
+  "failed_checks": [
+    "a connected form submission waits behind an in-flight polling write",
+    "a stale connected state does not retain a message for reconnect replay"
+  ],
+  "calibration_matched": true
+}

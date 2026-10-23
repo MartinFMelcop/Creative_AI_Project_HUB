@@ -49,7 +49,9 @@ class Classification(unittest.TestCase):
                  'projects/waystone-dialogue/browser/public/app.js': 'chat_evaluation',
                  'projects/realtime-integration-lab/package-lock.json': 'chat_evaluation',
                  'evaluations/chat-send-buffering/runner.py': 'chat_evaluation',
-                 'tools/check_calibration.py': 'chat_evaluation'}
+                 'tools/check_calibration.py': 'chat_evaluation',
+                 'labs/ai-evaluation/run.py': 'chat_evaluation',
+                 'evidence/ai-evaluation/candidate-client.js': 'chat_evaluation'}
         for path, expected in cases.items():
             with self.subTest(path=path):self.assertEqual(self.selected(w(path)), {expected})
 
