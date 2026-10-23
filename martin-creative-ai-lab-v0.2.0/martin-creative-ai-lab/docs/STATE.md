@@ -154,6 +154,15 @@ timeout retained; the unchanged isolated local test and requested failed-job rer
 prove its cause. Earlier CI39878560786 integrity cancellation likewise has no proven cause.
 New publication and CI remain separate from these baseline observations.
 
+The first combat publication 7836d512 triggered CI39912547150. Its integrity job
+failed at the origin-inventory check; this was reproduced locally. The reference
+README had changed by 626 bytes after earlier inventory generation/check. P10 includes
+that wrapper, so P10 and union byte/tree identities were stale while the 1052-file count
+and 27 packages stayed unchanged. [Exact failure/correction](../evidence/combat-status/CI_INVENTORY.json)
+retains the dependency, old/new hashes and job identity. The follow-up refreshes only
+the derived inventory/manifest and this continuity; no gate, timeout, fixture, source
+payload or functional rule was changed. Recheck the new publication CI separately.
+
 Next compare actual licensed Unity/Windows access and the incomplete Build/Operations
 method against appropriate author/player/device assessment, product continuity and a
 consequential remaining source capability. SDK access is verified; do not revive the

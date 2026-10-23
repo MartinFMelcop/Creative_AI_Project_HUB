@@ -1,0 +1,27 @@
+{
+  "run_id": 39912547150,
+  "commit": "7836d5121fdc06c7bc8d7f99d2d6f552b042be44",
+  "job_id": 120278613842,
+  "job": "integrity-and-dialogue",
+  "failed_step": "Reject false laboratory, consumption and execution claims",
+  "failed_command": "python3 tools/inventory_origins.py --check labs/source-inventory.json",
+  "message": "Origin inventory differs; inspect changed inputs before regeneration",
+  "locally_reproduced": true,
+  "dependency": "references/rave-master/README.md",
+  "old_bytes": 6530,
+  "new_bytes": 7156,
+  "byte_delta": 626,
+  "old_sha256": "ed8e76922eb905d1a9ee9f8d65d2b30d97fa6be5cccc59ece8b531ff36e31086",
+  "new_sha256": "306bd4d9730178081935e366174abc64159755ae54de5a97d73f7b7e30f9c603",
+  "cause": "Reference wrapper README changed after the earlier inventory generation/check. P10 EXTRA_ROOTS and the unique union include that file; stored derived byte/tree identities were stale. This is a repository ordering error, not an inferred environment failure.",
+  "inventory_differences": [
+    "P10 bytes/tree_sha256",
+    "unique_available_sources bytes/tree_sha256"
+  ],
+  "unchanged": {
+    "unique_file_count": 1052,
+    "packages": 27,
+    "source_payloads": "Protected snapshots and all prior consumers unchanged"
+  },
+  "correction": "Regenerate the affected inventory after final reference content, recheck it and regenerate the maintained manifest. Preserve all gates and failed CI evidence."
+}
