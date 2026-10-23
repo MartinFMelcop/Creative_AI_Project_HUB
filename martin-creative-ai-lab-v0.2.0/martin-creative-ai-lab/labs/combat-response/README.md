@@ -141,3 +141,13 @@ Duelista, multiplayer and class identity remain unimplemented/unvalidated here.
 The actionable result is a measured set of distinct commitments and failure
 cases for a future bounded character experiment, not permission to copy P06's
 fiction or declare a final engine/class system.
+
+## Additional source-bound status method
+
+The [status/formula assay](status/README.md) now consumes selected P10/Rave Master
+requirements into [The Treatment Line](../../north-star/combat-study/README.md),
+an actual separate original C# encounter. [New evidence](../../evidence/combat-status/RUN.json)
+binds 49 historical cases, strict destination controls and visible counterplay. This
+does not rerun or replace the P06 native pilot above, nor claim that its parry method
+has been ported. Existing Cinderwatch individual-turn scorch remains incompatible and
+preserved. Full source combat/runtime, human experience and Unity/Windows remain open.

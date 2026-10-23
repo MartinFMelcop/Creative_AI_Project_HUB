@@ -63,7 +63,10 @@ Build/Operations remains incomplete; it cannot be postponed indefinitely.
   pilot runs 28 native timing/range/resource cases twice through unchanged P06 physics.
   [Results](../evidence/combat-response/results.json) preserve failures and comparative
   response envelopes. This is origin instrument execution, not a Unity migration or
-  independent player result.
+  independent player result. The additional [status method](combat-response/status/README.md)
+  now binds preserved arithmetic/global-round requirements to an actual separate original
+  [C# encounter](../north-star/combat-study/README.md), with winning/losing routes and
+  source discrepancies retained; it preserves the prior pilot and incompatible timing.
 
 These bounded methods do
 not make the other destinations operational. Their next methods must produce real

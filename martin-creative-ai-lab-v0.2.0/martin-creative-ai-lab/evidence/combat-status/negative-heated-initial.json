@@ -1,0 +1,557 @@
+{
+  "passed": false,
+  "failure": "FAILED heated-real-victory",
+  "controls": [
+    {
+      "id": "observation-is-not-action",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "id": "schema-reject-atomic-0",
+      "passed": true,
+      "evidence": {
+        "input": "null"
+      }
+    },
+    {
+      "id": "schema-reject-atomic-1",
+      "passed": true,
+      "evidence": {
+        "input": "[]"
+      }
+    },
+    {
+      "id": "schema-reject-atomic-2",
+      "passed": true,
+      "evidence": {
+        "input": "{}"
+      }
+    },
+    {
+      "id": "schema-reject-atomic-3",
+      "passed": true,
+      "evidence": {
+        "input": "{\u0022command\u0022:1}"
+      }
+    },
+    {
+      "id": "schema-reject-atomic-4",
+      "passed": true,
+      "evidence": {
+        "input": "{\u0022command\u0022:\u0022unknown\u0022}"
+      }
+    },
+    {
+      "id": "schema-reject-atomic-5",
+      "passed": true,
+      "evidence": {
+        "input": "{\u0022command\u0022:\u0022strike\u0022,\u0022extra\u0022:1}"
+      }
+    },
+    {
+      "id": "schema-reject-atomic-6",
+      "passed": true,
+      "evidence": {
+        "input": "{\u0022command\u0022:\u0022strike\u0022,\u0022command\u0022:\u0022guard\u0022}"
+      }
+    },
+    {
+      "id": "toxic-win-accepted-1",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "id": "toxic-win-accepted-2",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "id": "toxic-win-accepted-3",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "id": "toxic-win-accepted-4",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "id": "toxic-real-victory",
+      "passed": true,
+      "evidence": {
+        "profile": "toxic",
+        "round": 4,
+        "hp": 7,
+        "maxHp": 100,
+        "enemyHp": 0,
+        "charges": 2,
+        "effects": [
+          {
+            "effect": "Poison",
+            "remaining": 1
+          }
+        ],
+        "threat": "No further threat; encounter ended.",
+        "events": [
+          "strike: 24 direct damage to target. Burn multiplier 1.0.",
+          "End round 4: Poison incoming DOT 6; actual HP lost 6; 1 rounds remain. Guard does not reduce this tick.",
+          "Round 4 resolved: secured."
+        ],
+        "outcome": "secured",
+        "last": "Round 4 resolved: secured.",
+        "weaponEnabled": true,
+        "attackMultiplier": 1,
+        "healingMultiplier": 1
+      }
+    },
+    {
+      "id": "heated-win-accepted-1",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "id": "heated-win-accepted-2",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "id": "heated-win-accepted-3",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "id": "heated-win-accepted-4",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "id": "heated-win-accepted-5",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "id": "heated-win-accepted-6",
+      "passed": true,
+      "evidence": null
+    },
+    {
+      "id": "heated-real-victory",
+      "passed": false,
+      "evidence": {
+        "profile": "heated",
+        "round": 6,
+        "hp": 0,
+        "maxHp": 100,
+        "enemyHp": 7,
+        "charges": 0,
+        "effects": [],
+        "threat": "No further threat; encounter ended.",
+        "events": [
+          "strike: 17 direct damage to target. Burn multiplier 0.7.",
+          "Target contact: 20 incoming direct damage; 20 actual HP lost.",
+          "End round 6: Burn incoming DOT 3; actual HP lost 3; 0 rounds remain. Guard does not reduce this tick.",
+          "Round 6 resolved: defeated."
+        ],
+        "outcome": "defeated",
+        "last": "Round 6 resolved: defeated.",
+        "weaponEnabled": true,
+        "attackMultiplier": 1,
+        "healingMultiplier": 1
+      }
+    }
+  ],
+  "journeys": [
+    {
+      "id": "toxic-win",
+      "profile": "toxic",
+      "commands": [
+        "strike",
+        "strike",
+        "strike",
+        "strike"
+      ],
+      "observations": [
+        {
+          "sequence": 1,
+          "command": "restart toxic",
+          "accepted": true,
+          "state": {
+            "profile": "toxic",
+            "round": 0,
+            "hp": 100,
+            "maxHp": 100,
+            "enemyHp": 96,
+            "charges": 2,
+            "effects": [
+              {
+                "effect": "Poison",
+                "remaining": 3
+              },
+              {
+                "effect": "Bleed",
+                "remaining": 3
+              }
+            ],
+            "threat": "Contact: 20 direct damage.",
+            "events": [
+              "Practice begins with poison and bleed, each lasting three global rounds."
+            ],
+            "outcome": "active",
+            "last": "Choose an action. Reads and elapsed time do not advance the round.",
+            "weaponEnabled": true,
+            "attackMultiplier": 1,
+            "healingMultiplier": 0.7
+          }
+        },
+        {
+          "sequence": 2,
+          "command": "strike",
+          "accepted": true,
+          "state": {
+            "profile": "toxic",
+            "round": 1,
+            "hp": 71,
+            "maxHp": 100,
+            "enemyHp": 72,
+            "charges": 2,
+            "effects": [
+              {
+                "effect": "Poison",
+                "remaining": 2
+              },
+              {
+                "effect": "Bleed",
+                "remaining": 2
+              }
+            ],
+            "threat": "Pressure: 20 direct damage, then extends poison (toxic) or burn (heated) by two rounds.",
+            "events": [
+              "strike: 24 direct damage to target. Burn multiplier 1.0.",
+              "Target contact: 20 incoming direct damage; 20 actual HP lost.",
+              "End round 1: Poison incoming DOT 6; actual HP lost 6; 2 rounds remain. Guard does not reduce this tick.",
+              "End round 1: Bleed incoming DOT 3; actual HP lost 3; 2 rounds remain. Guard does not reduce this tick.",
+              "Round 1 resolved: active."
+            ],
+            "outcome": "active",
+            "last": "Round 1 resolved: active.",
+            "weaponEnabled": true,
+            "attackMultiplier": 1,
+            "healingMultiplier": 0.7
+          }
+        },
+        {
+          "sequence": 3,
+          "command": "strike",
+          "accepted": true,
+          "state": {
+            "profile": "toxic",
+            "round": 2,
+            "hp": 42,
+            "maxHp": 100,
+            "enemyHp": 48,
+            "charges": 2,
+            "effects": [
+              {
+                "effect": "Poison",
+                "remaining": 3
+              },
+              {
+                "effect": "Bleed",
+                "remaining": 1
+              }
+            ],
+            "threat": "Contact: 20 direct damage.",
+            "events": [
+              "strike: 24 direct damage to target. Burn multiplier 1.0.",
+              "Target contact: 20 incoming direct damage; 20 actual HP lost.",
+              "Announced pressure reapplied Poison: remaining 4 before tick.",
+              "End round 2: Poison incoming DOT 6; actual HP lost 6; 3 rounds remain. Guard does not reduce this tick.",
+              "End round 2: Bleed incoming DOT 3; actual HP lost 3; 1 rounds remain. Guard does not reduce this tick.",
+              "Round 2 resolved: active."
+            ],
+            "outcome": "active",
+            "last": "Round 2 resolved: active.",
+            "weaponEnabled": true,
+            "attackMultiplier": 1,
+            "healingMultiplier": 0.7
+          }
+        },
+        {
+          "sequence": 4,
+          "command": "strike",
+          "accepted": true,
+          "state": {
+            "profile": "toxic",
+            "round": 3,
+            "hp": 13,
+            "maxHp": 100,
+            "enemyHp": 24,
+            "charges": 2,
+            "effects": [
+              {
+                "effect": "Poison",
+                "remaining": 2
+              }
+            ],
+            "threat": "Contact: 20 direct damage.",
+            "events": [
+              "strike: 24 direct damage to target. Burn multiplier 1.0.",
+              "Target contact: 20 incoming direct damage; 20 actual HP lost.",
+              "End round 3: Poison incoming DOT 6; actual HP lost 6; 2 rounds remain. Guard does not reduce this tick.",
+              "End round 3: Bleed incoming DOT 3; actual HP lost 3; 0 rounds remain. Guard does not reduce this tick.",
+              "Round 3 resolved: active."
+            ],
+            "outcome": "active",
+            "last": "Round 3 resolved: active.",
+            "weaponEnabled": true,
+            "attackMultiplier": 1,
+            "healingMultiplier": 1
+          }
+        },
+        {
+          "sequence": 5,
+          "command": "strike",
+          "accepted": true,
+          "state": {
+            "profile": "toxic",
+            "round": 4,
+            "hp": 7,
+            "maxHp": 100,
+            "enemyHp": 0,
+            "charges": 2,
+            "effects": [
+              {
+                "effect": "Poison",
+                "remaining": 1
+              }
+            ],
+            "threat": "No further threat; encounter ended.",
+            "events": [
+              "strike: 24 direct damage to target. Burn multiplier 1.0.",
+              "End round 4: Poison incoming DOT 6; actual HP lost 6; 1 rounds remain. Guard does not reduce this tick.",
+              "Round 4 resolved: secured."
+            ],
+            "outcome": "secured",
+            "last": "Round 4 resolved: secured.",
+            "weaponEnabled": true,
+            "attackMultiplier": 1,
+            "healingMultiplier": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "heated-win",
+      "profile": "heated",
+      "commands": [
+        "cleanse",
+        "strike",
+        "treat",
+        "strike",
+        "strike",
+        "strike"
+      ],
+      "observations": [
+        {
+          "sequence": 1,
+          "command": "restart heated",
+          "accepted": true,
+          "state": {
+            "profile": "heated",
+            "round": 0,
+            "hp": 100,
+            "maxHp": 100,
+            "enemyHp": 96,
+            "charges": 2,
+            "effects": [
+              {
+                "effect": "Burn",
+                "remaining": 3
+              },
+              {
+                "effect": "Disarm",
+                "remaining": 2
+              }
+            ],
+            "threat": "Contact: 20 direct damage.",
+            "events": [
+              "Practice begins with burn for three rounds and disarm for two rounds."
+            ],
+            "outcome": "active",
+            "last": "Choose an action. Reads and elapsed time do not advance the round.",
+            "weaponEnabled": false,
+            "attackMultiplier": 0.7,
+            "healingMultiplier": 1
+          }
+        },
+        {
+          "sequence": 2,
+          "command": "cleanse",
+          "accepted": true,
+          "state": {
+            "profile": "heated",
+            "round": 1,
+            "hp": 80,
+            "maxHp": 100,
+            "enemyHp": 96,
+            "charges": 1,
+            "effects": [],
+            "threat": "Pressure: 20 direct damage, then extends poison (toxic) or burn (heated) by two rounds.",
+            "events": [
+              "Treatment spent: removed 2 effects.",
+              "Target contact: 20 incoming direct damage; 20 actual HP lost.",
+              "Round 1 resolved: active."
+            ],
+            "outcome": "active",
+            "last": "Round 1 resolved: active.",
+            "weaponEnabled": true,
+            "attackMultiplier": 1,
+            "healingMultiplier": 1
+          }
+        },
+        {
+          "sequence": 3,
+          "command": "strike",
+          "accepted": true,
+          "state": {
+            "profile": "heated",
+            "round": 2,
+            "hp": 57,
+            "maxHp": 100,
+            "enemyHp": 72,
+            "charges": 1,
+            "effects": [
+              {
+                "effect": "Burn",
+                "remaining": 1
+              }
+            ],
+            "threat": "Contact: 20 direct damage.",
+            "events": [
+              "strike: 24 direct damage to target. Burn multiplier 1.0.",
+              "Target contact: 20 incoming direct damage; 20 actual HP lost.",
+              "Announced pressure reapplied Burn: remaining 2 before tick.",
+              "End round 2: Burn incoming DOT 3; actual HP lost 3; 1 rounds remain. Guard does not reduce this tick.",
+              "Round 2 resolved: active."
+            ],
+            "outcome": "active",
+            "last": "Round 2 resolved: active.",
+            "weaponEnabled": true,
+            "attackMultiplier": 0.7,
+            "healingMultiplier": 1
+          }
+        },
+        {
+          "sequence": 4,
+          "command": "treat",
+          "accepted": true,
+          "state": {
+            "profile": "heated",
+            "round": 3,
+            "hp": 66,
+            "maxHp": 100,
+            "enemyHp": 72,
+            "charges": 0,
+            "effects": [],
+            "threat": "Contact: 20 direct damage.",
+            "events": [
+              "Treatment spent: healed 32 (eligible 32; bleed multiplier 1.0).",
+              "Target contact: 20 incoming direct damage; 20 actual HP lost.",
+              "End round 3: Burn incoming DOT 3; actual HP lost 3; 0 rounds remain. Guard does not reduce this tick.",
+              "Round 3 resolved: active."
+            ],
+            "outcome": "active",
+            "last": "Round 3 resolved: active.",
+            "weaponEnabled": true,
+            "attackMultiplier": 1,
+            "healingMultiplier": 1
+          }
+        },
+        {
+          "sequence": 5,
+          "command": "strike",
+          "accepted": true,
+          "state": {
+            "profile": "heated",
+            "round": 4,
+            "hp": 46,
+            "maxHp": 100,
+            "enemyHp": 48,
+            "charges": 0,
+            "effects": [],
+            "threat": "Pressure: 20 direct damage, then extends poison (toxic) or burn (heated) by two rounds.",
+            "events": [
+              "strike: 24 direct damage to target. Burn multiplier 1.0.",
+              "Target contact: 20 incoming direct damage; 20 actual HP lost.",
+              "Round 4 resolved: active."
+            ],
+            "outcome": "active",
+            "last": "Round 4 resolved: active.",
+            "weaponEnabled": true,
+            "attackMultiplier": 1,
+            "healingMultiplier": 1
+          }
+        },
+        {
+          "sequence": 6,
+          "command": "strike",
+          "accepted": true,
+          "state": {
+            "profile": "heated",
+            "round": 5,
+            "hp": 23,
+            "maxHp": 100,
+            "enemyHp": 24,
+            "charges": 0,
+            "effects": [
+              {
+                "effect": "Burn",
+                "remaining": 1
+              }
+            ],
+            "threat": "Contact: 20 direct damage.",
+            "events": [
+              "strike: 24 direct damage to target. Burn multiplier 1.0.",
+              "Target contact: 20 incoming direct damage; 20 actual HP lost.",
+              "Announced pressure reapplied Burn: remaining 2 before tick.",
+              "End round 5: Burn incoming DOT 3; actual HP lost 3; 1 rounds remain. Guard does not reduce this tick.",
+              "Round 5 resolved: active."
+            ],
+            "outcome": "active",
+            "last": "Round 5 resolved: active.",
+            "weaponEnabled": true,
+            "attackMultiplier": 0.7,
+            "healingMultiplier": 1
+          }
+        },
+        {
+          "sequence": 7,
+          "command": "strike",
+          "accepted": true,
+          "state": {
+            "profile": "heated",
+            "round": 6,
+            "hp": 0,
+            "maxHp": 100,
+            "enemyHp": 7,
+            "charges": 0,
+            "effects": [],
+            "threat": "No further threat; encounter ended.",
+            "events": [
+              "strike: 17 direct damage to target. Burn multiplier 0.7.",
+              "Target contact: 20 incoming direct damage; 20 actual HP lost.",
+              "End round 6: Burn incoming DOT 3; actual HP lost 3; 0 rounds remain. Guard does not reduce this tick.",
+              "Round 6 resolved: defeated."
+            ],
+            "outcome": "defeated",
+            "last": "Round 6 resolved: defeated.",
+            "weaponEnabled": true,
+            "attackMultiplier": 1,
+            "healingMultiplier": 1
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "reviewer": "independent Engineering agent",
+  "input": {
+    "component": "HIT",
+    "id": "review",
+    "expected": 0.45,
+    "actual": 999999,
+    "passed": true
+  },
+  "observed_pre_fix": "verify_results returned successfully despite wrong actual value",
+  "correction": "Actual/Got now compared numerically with source expectations and component tolerances; fabricated records are rejected in both result formats",
+  "provenance_limit": "Reviewer executed the pre-fix call and reported it; no pre-fix instrument byte identity was retained. Permanent negative regressions retain the input distinction."
+}

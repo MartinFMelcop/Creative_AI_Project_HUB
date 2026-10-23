@@ -694,3 +694,16 @@ human or final three-agent implementation approval is attributed. [Execution](..
 owns results and negatives. Review with actual authors/players and suitable devices before
 claiming comprehension, accessibility, emotional force or preference; delivery still needs
 licensed Unity/Windows execution and rights/production ownership.
+
+## Experimental status practice — no canon approval
+
+The separate [Treatment Line](combat-study/README.md) consumes selected global-round
+status contracts in an original abstract encounter. Two treatment charges make cleanse,
+healing and continued attack consequential; disarm leaves unarmed bash, burn reduces
+attack and bleed reduces eligible healing. Contact 20/10, target 96, initial effects and
+pressure cadence are authored test parameters, not final North Star balance or recovered
+fiction. DOT after the last target hit remains payable; withdrawal infers no victory or
+death. Fixed Crossing Lure/Trail, Cinderwatch turn-start scorch and all existing authored
+work/guide outcomes remain unchanged. CRE-005(A), CRE-012/013/087(H) informed costly
+choices and readable consequences; no agent or software run supplies human experience
+or author approval of this new staging.

@@ -1,0 +1,57 @@
+{
+  "source_sha256": {
+    "RM_QA/DATA/QA/TEST_COMBAT_APPLY.csv": "1b13c8aebebb24430464cc2c65dbe10f4cbe1924a734b8b3f98cdc98e09ea1fb",
+    "RM_QA/DATA/QA/TEST_COMBAT_CRIT.csv": "4ca4405c2071bff90ad276c7d942722a6c63dfe5b909e62fcd0f27ba363b2be4",
+    "RM_QA/DATA/QA/TEST_COMBAT_DOT.csv": "a28cf8376699f163dfe242333f3661b82894228a0b1229de4f82ae9c8c0ef955",
+    "RM_QA/DATA/QA/TEST_COMBAT_DUR.csv": "af29fef77bb3b32f171cc53fed4dcef4d8a5d94067689bd73f983fc31095a027",
+    "RM_QA/DATA/QA/TEST_COMBAT_FINAL_DAMAGE.csv": "f22ca9584fce65697563ac80964de751687a3bf3da57fcf22615aad887f4123d",
+    "RM_QA/DATA/QA/TEST_COMBAT_HIT.csv": "b02766946d9307aa8ffad94792b4dc4bc74720cf6772bc31636516c24cada4a6",
+    "RM_QA/DATA/QA/TEST_COMBAT_MIT.csv": "99011183352069a6eddcc9d86f7073e5d0b96e7a96494339a786a6803750cad9",
+    "RM_QA/DATA/QA/TEST_COMBAT_RAW.csv": "7c1dbf103bb487b7d975e99377399a4d33a305d83b0db04b2a9bb5c10d41ca1b",
+    "RM_QA/DATA/QA/TEST_COMBAT_REAPPLY.csv": "4cfcc1f0cda7046dd7ee9e0968e66a38567e5bfb49b5d3adff68c42d5d96dae9",
+    "RM_QA/DATA/QA/TOOLS/run_combat_vector_runner.py": "af5974ab68777705dfd6f956da6368ad55c348a95a5a0477907bd14961e1c80f",
+    "RM_ACT1/DATA/DEV/RGSS/RM_COMBAT_RUNTIME.rb": "60f1489f5dcfc3f92a112a369b6cefe66b5fb52be3ee2086c6cbe1e7f9ea87a6",
+    "RM_DIST/RMXP_BASE/ScriptsCustom/RM_COMBAT_RUNTIME.rb": "60f1489f5dcfc3f92a112a369b6cefe66b5fb52be3ee2086c6cbe1e7f9ea87a6",
+    "RM_CORE/DATA/CORE/STATUS_EFFECTS.csv": "2739de245001bfeb807c8a84145fec98ebb53ea5388cc3a19696c87ac514cbfe",
+    "RM_CORE/DATA/CORE/COMBAT_FORMULAS.csv": "2bd6f8c5a16693200263391026e63ee63b83b34f9ef1c81ea0406d423ffeb79c",
+    "RM_CORE/DATA/CORE/REGRAS_DE_COMBATE.csv": "f2c97e85ce573c50aa1959ec81221882c4fff4d164126fc22c5e6c9dd64c17e9"
+  },
+  "components": 9,
+  "source_vectors": 49,
+  "python_surrogate_passed": 49,
+  "csharp_passed": 49,
+  "invalid_ratio_difference": {
+    "input": {
+      "ACC": 10,
+      "EVA": -10
+    },
+    "python_surrogate_hit": 0.05,
+    "ruby_static_transcription_hit": 0.95,
+    "equivalent": false,
+    "scope": "Zero denominator only; destination rejects negative EVA. No Ruby execution."
+  },
+  "ruby_static_bindings": {
+    "variants_byte_identical": true,
+    "embedded_defaults": {
+      "base_hit": 0.9,
+      "hit_min": 0.05,
+      "hit_max": 0.95,
+      "lvl_coef": 0.02,
+      "lvl_min": 0.85,
+      "lvl_max": 1.15,
+      "crit_cap": 0.5,
+      "crit_mult": 1.5,
+      "crit_base": 1.0,
+      "k_base": 100.0,
+      "k_lvl": 10.0,
+      "apply_min": 0.05,
+      "apply_max": 0.95
+    },
+    "runtime_kind": "helper without status container or battle loop",
+    "csv_loaded": false,
+    "inspection": "Static reviewed source; no Ruby execution"
+  },
+  "ruby_executed": false,
+  "rmxp_executed": false,
+  "scope": "Preserved QA formula vectors; not battle integration, human experience, or complete runtime equivalence."
+}

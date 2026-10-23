@@ -100,3 +100,12 @@ resources and living exit; the browser does not simulate another game model.
 [Input/Timing execution](../evidence/input-timing/RUN.json) separates code/clock,
 synthetic native browser input and actual captures from missing Unity/Windows and
 human/physical-device evidence. No production engine or distribution direction changes.
+
+## Source-bound combat/status consumer
+
+[The Treatment Line](combat-study/README.md) is a separately authored portable C#
+status owner and actual browser practice encounter: global rounds, duration addition,
+poison/bleed/burn/disarm and finite guard/treatment/cleanse choices. Real winning and
+losing routes are retained. Existing Crossing, authored narrative and tactical scorch
+semantics remain unchanged. [Evidence](../evidence/combat-status/RUN.json) separates
+formula compatibility, original consequences and unvalidated human/production claims.

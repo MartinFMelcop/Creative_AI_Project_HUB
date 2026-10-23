@@ -24,6 +24,7 @@ and Steam is the intended distribution ecosystem.**
 |---|---|
 | [C# development foundation](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/README.md) | Engine-independent progression/crafting domains, connected terminal consumers and checks. No Unity Editor or Windows-player execution is claimed. |
 | [Coherent authored C# scene](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/authored-scene/README.md) | Edda's unfinished work, Rill's actual agreement/departure/return and real encounters share one owner; inspected local browser demonstration. |
+| [Source-bound C# combat practice](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/combat-study/README.md) | Actual global-round effects and two finite treatment charges; visible original encounter with retained winning and losing routes. |
 | [Original C# adaptive audio](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/Audio/README.md) | Editable synthesis and consequence-owned cues, aligned musical transport and actual controlled browser playback. |
 | [Embodied C# Crossing](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/Presentation/README.md) | Original avatar, independent outfit/approach and actual protection, advance, damage, refusal and completed encounters; bounded C# browser observer. |
 | [Visual C# interaction](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/Interaction/README.md) | Real timed work, interrupt/rearm, single resource cost and living exit; browser developer view of C# rules. |
@@ -141,3 +142,8 @@ or invented time measurements. The old outer folder version is historical packag
 reports commit-specific checks. Local execution, publication and CI are separate facts.
 [Repository issues](https://github.com/MartinFMelcop/Creative_AI_Project_HUB/issues)
 can carry reproducible findings; artifacts do not imply independent human approval or client delivery.
+
+The [combat/status case study](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/combat-study/README.md)
+connects preserved formula evidence to an actual original C# encounter and inspected
+browser captures. Its global rounds and status counterplay stay separate from the
+authored work scene. Neither demonstration is Unity/Windows delivery or player validation.

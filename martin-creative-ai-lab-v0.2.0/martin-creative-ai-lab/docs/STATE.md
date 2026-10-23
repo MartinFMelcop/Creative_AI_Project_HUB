@@ -1,151 +1,190 @@
 # Current transformation continuity
 
 **Updated:** 2026-10-23 UTC. **SEED:** 0.34.0. **Mode:** DEVELOPMENT with executed
-product integration. Initial root `/workspace/Creative_AI_Project_HUB`, branch `work`,
-HEAD `2ae15b960fd5f0830bf6ce26b44fa4e82d5e48f6`, clean tracked/untracked work.
-Fetched main matched HEAD, divergence0/0, no outgoing local commits. Final publication
-and CI are separately verified in the handoff, not inferred from local execution.
+source consumption and product consumer. Initial root `/workspace/Creative_AI_Project_HUB`,
+branch `work`, HEAD `e89ccbeb3acb0f19940ef03a5b94d0bb1a0b5496`, clean tracked/untracked work.
+Fetched main matched HEAD, divergence 0/0, no outgoing local commits. Final publication
+and new CI are separately verified at handoff, not inferred from local execution.
 
 This file owns active continuity and rolling investment. SEED owns durable direction,
-[the catalog](../labs/origins.json) maturity/consumption, [DESIGN](../north-star/DESIGN.md)
-creative status and evidence actual observations. Recover the full
+[the catalog](../labs/origins.json) owns maturity/consumption, [DESIGN](../north-star/DESIGN.md)
+creative status and evidence executed observations. Recover the complete published
 [Continuous Development v2](prompts/CONTINUOUS_DEVELOPMENT.md) every execution.
 
-## Active product — one visible authored owner
+## Active contribution — source-bound effects with actual choices
 
-[The coil and the shutters](../north-star/authored-scene/README.md) now composes one
-unchanged RequestExpedition and its actual private Crossing encounters into an original
-visible scene. Edda's five-crate work competes with survey/travel; Rill's line distinguishes
-secured, locally preparing, away, actual guided return and unaccounted-for states.
-Unsigned terms spend no time/ownership. Signing reduces local capacity before departure.
-Withdrawal restores it and retains both receipts. Guided success leaves three crates
-unfinished after the last work shift; solo travel leaves Rill local. Failed delivery
-and overdue obligations never manufacture delivery, completed-journey return or death.
-Fixed Lure/Trail remains scene setup, not free identity selection or approved canon.
+[The Treatment Line](../north-star/combat-study/README.md) is a separate original C#
+practice encounter consuming selected preserved Rave Master combat arithmetic and
+poison/bleed/burn/disarm requirements. Portable Rules use C#8/netstandard2.1; the actual
+.NET10/Linux/browser observer is not a production engine replacement. Its owner resolves
+one global round per accepted combat action, including both living sides and end-round
+DOT, then duration decrement. Reapplication adds duration without magnitude stacking.
+Bleed reduces eligible healing, burn reduces attack and disarm still permits unarmed bash.
+Two shared treatment charges make healing/cleanse and continued attack consequential.
+Guard halves authored contact 20→10 but never DOT. Actual withdrawal ends without victory
+or death; reads, redraw and time never act. Restart explicitly replaces only this practice.
 
-**Selection and ownership:** Three independent analyses ran in parallel. Engineering,
-Science and Creation all preferred coherent authored integration after the AI study.
-Licensed Windows delivery remained blocked; no participants/devices were available for
-experience claims; another AI/media calibration had less immediate product value.
-Engineering implemented Host/Checks; Creation implemented original SVG/web presentation;
-Science wrote the actual browser instrument and began execution. A usage limit stopped
-that agent after an instrument failure; primary completed execution, corrections,
-queue controls, image inspection, evidence, lifecycle review and publication. Relevant
-full chapters ENG-004/015/028, SCI-076/077 and CRE-005(A)/045/046/061(H) materially informed
-one owner, costs, concrete staging and the observation-versus-experience boundary.
-No agent review is independent human validation or author approval.
+The two profiles, fixed contact/target/attack/healing parameters, pressure cadence and
+solo outcome priority are original study choices, not historical fiction or final canon.
+Source hit/application/crit formulas are tested but no hidden random gates enter the
+telegraphed encounter. QA FINAL_DAMAGE's twice-rounding adapter is narrower than the
+full damage-ID/resistance/critical pipeline. A final target kill still pays end-round DOT;
+player zero HP takes priority. Full effects/passives and battle systems remain unresolved.
 
-[Actual execution](../evidence/authored-scene/RUN.json):45 native Room/domain controls,
-35 actual Chromium/C# controls, seven independent HTTP smoke controls and three input-
-closure regressions passed. The unchanged NarrativeChecks also executed95 controls.
-Strict HTTP/JSON and allowlisted assets preserve state on invalid input. GET/redraw/
-wall time and reduced motion never advance gameplay. An isolated actual renderer that
-invents return after a failed guided journey is detected by the specific owner/DOM
-assertion, not a launch failure. Captures were inspected; a post-signature caption and
-static premise were corrected and bound by browser checks.
+**Actual selection:** Independent Engineering, Scientific and Creative agents analyzed
+this problem in parallel with coordinated exclusive ownership. Engineering selected a
+small typed arithmetic/effect boundary and implemented Rules/native consumer checks;
+Science staged reviewed historical Python/CSV outside preserved source, wrote the intake
+instrument and independently challenged source equivalence; Creation authored Trial and
+original browser presentation. Primary implemented bounded host, transport/browser
+verification, actual execution/replay, evidence, source classifications and public navigation.
+ENG-004/015/028, SCI-076/077 and CRE-005(A)/012/013/087(H) materially informed boundaries,
+negative controls and costly choices. These analyses are not independent human validation.
 
-A delayed command actually commits at C# before focus loss. Its late reply cannot revive
-the stale view; explicit reconnect reads the real result without retry. A controlled
-non-abortable response plus queued old intent proves reconnection cannot execute the old
-second command. The browser owns no sound/contact simulation. It deliberately remains
-silent rather than inventing event cues from dialogue or button presses.
+Licensed Windows delivery/Build-Operations was compared first: actual SDK10.0.401 executes,
+but no usable Editor/Hub was located by PATH/conventional probes; activation and Windows
+modules remain unverified. A guessed root license-presence probe was denied; no contents
+were read or policy bypassed. Official activation/Windows requirements were consulted
+and do not supply an activated toolchain. No actual participants/devices were available.
+Reputation sources expose an effects stub and historical fictional data; creation parsing
+has permissive/corrupted helper behavior. Selected status sources supplied a stronger
+bounded source-to-product contract now, rather than another empty delivery scaffold,
+parser repair, calibration or ungrounded human-quality claim.
 
-**Retained negative:** Initial browser execution tried to click decline without first
-opening the consultation. Primary reproduced that instrument timeout, then corrected the
-new UI journey to use its visible controls. No domain rule, timeout or existing fixture
-was changed. Its failure and source identities remain retained; failed executions are
-not counted as completed studies. This cycle adds no new source capability classification.
+## Executed observations and retained negatives
 
-## Eleven laboratory and remaining source obligations
+[Execution](../evidence/combat-status/RUN.json) binds 21 actual forward consumer/instrument
+inputs, stable before/after execution. SDK10.0.401 builds passed with no warnings/errors.
+43 Rules controls and 46 actual Room/Trial controls passed; actual Chromium passed 17
+controls plus five HTTP controls. Seventeen source-instrument regressions passed. The nine
+historical components contain 49 cases: Python surrogate 49/49 and actual compiled C# 49/49
+are the same cases, not 98 independent observations. Ruby/RMXP execution is absent.
 
-Ten bounded methods remain operational: AI Evaluation, Audio/Music, Visual/Animation,
-Input/Timing, Narrative & Continuity, Networking & Persistence, World & Gameplay,
-Economy & Simulation, RPG Systems & Progression and Combat & Responsiveness.
-**Build/Operations remains incomplete.** All eleven destinations remain mandatory;
-a bounded method is not a finished domain or full source consumption. [Entry points](../labs/README.md)
-retain each method. The narrative method gains a real visible consumer, not a new empty
-lab, duplicated extraction or extra strategic study unit.
+- Toxic four strikes secure the target at HP7 after the final poison tick.
+- Heated cleanse/strike/guard/strike/strike/treat/strike secure it at HP10.
+- The initially proposed six-action heated route actually loses at HP0/target7.
+  Its failed assertion/full journey remains; rules were not retuned to force victory.
+- Constant guard loses in both profiles. Real cleansing spends a charge and the action;
+  announced pressure can reapply after cleanse. Burn/disarm and bleed/healing have actual
+  consumer controls, not only isolated arithmetic assertions.
+- Independent review executed two extra valid tiny-positive-denominator failures beyond
+  the 49 canonical vectors. The new port incorrectly applied epsilon to a positive value.
+  Engineering corrected it to replace only denominators≤0; exact input replay and two new
+  controls passed. Pre-fix expected/observed outputs remain retained.
+- Python's invalid ratio behavior and the inspected Ruby transcription differ .05/.95.
+  Direct permissive interchange is REJECTED; negative destination inputs are rejected.
+  This transcription is not Ruby execution or proof of all historical runtime behavior.
+- Independent Engineering reproduced a result-verifier gap: a fabricated actual999999
+  with passed:true was accepted. The instrument now compares actual/Got with source
+  expectations, finite values and component tolerances, in addition to identities and
+  staging hashes. The negative and permanent fault controls are retained.
+- An actual isolated full-HP renderer lies after guarded DOT; the specific HP assertion
+  detects it. A command accepted before its response is lost leaves the browser paused;
+  explicit GET reconnect observes the real result without replaying that intent.
 
-Prior AI Evaluation retains its one fresh-context delivery, exact instruction/protocol,
-frozen artifact, calibrated17/17 result, environment negative and superseded source-race
-execution. Replay is not another candidate attempt. Procedural shared-filesystem rules
-are not a sandbox or proof of unseen training data. No model score, exact serving model,
-cost telemetry or North Star defect evaluation is newly claimed.
+Initial path/build invocation mistakes, source-lock path/handle corrections and the
+incorrect proposed heated success are retained as instrument/development failures.
+No source vector, old fixture, gate or timeout was weakened. The protocol evolved with
+implementation and is not externally preregistered. Captures were inspected for state
+correspondence; human comprehension, fairness, optimal play and enjoyment remain unknown.
 
-Full effects/passives, NPC schedules, quest/reputation/faction/world catalogs, narrative
-persistence, creation parsing, item/tool/unlock catalogs, commercial rights, human experience
-and production ownership remain genuinely UNRESOLVED with their catalog owners/actions.
-No original Brain, source variant, media, fiction, source pin, incompatible choice or
-previous terminal/Godot consumer was discarded or silently normalized.
+## Existing owners, preservation and lifecycle
 
-## Actual tools, dependencies and delivery boundary
+The previous [coherent authored scene](../north-star/authored-scene/README.md) still
+observes ONE unchanged RequestExpedition and actual nested Crossing encounters. Edda's
+unfinished work, Rill's secured/preparing/departed/observed-return/unaccounted state,
+costs, refusal, withdrawal and receipts remain with that owner. Fixed Lure/Trail remains
+setup. No promise, elapsed time or this practice scene manufactures return/delivery.
+Previous 45 native/35 Chromium/7 HTTP/3 closure/95 narrative evidence remains historical evidence;
+none is represented as a newly executed old matrix this cycle.
 
-Unity/C# remains selected, Windows-first and Steam-intended. The pinned SDK10.0.401 was
-restored from official release metadata and the downloaded archive's SHA512 verified.
-Actual serialized C# builds passed without warnings/errors; Node24.19.0 and Chromium
-execute. Fresh PATH/targeted probes found no usable Unity Editor/Hub, activated license
-or Windows module. No patch/license is invented. This .NET10/Linux/browser application
-is not Unity import/Editor, Windows player, Steamworks/account trust, durable narrative,
-hardware latency, participant comprehension, accessibility, enjoyment or commercial clearance.
+New projects depend only on the new Rules root; old C# and Godot owners are unchanged.
+Cinderwatch's fixed two-damage individual-turn-start scorch/shield policy stays incompatible
+with this global-round percent-HP DOT. Existing contact, request, recovery, progression,
+crafting, audio and atlas matrices were not repeated merely to refresh broad identities.
+The originals still have unique behavior/media/formats/notices and recovery obligations.
+No whole package/source/test retirement was justified. Staged historical duplicates remain
+outside maintained source; unique execution outputs/negatives are retained in evidence.
 
-The separate authored application references unchanged Narrative/Crossing/Domain projects.
-Their forward dependencies do not include this reverse consumer. Five actual prior
-identity maps reproduce exactly, and six inspected input closures exclude it. Old study
-records remain intact; no unchanged crafting/progression/recovery/audio/atlas/request
-matrix was reexecuted merely to refresh broad source identities. New verification follows
-the actual forward project/compile closure plus web/instrument files and rejects external
-or unsupported wildcard dependencies. The original terminal, audiovisual Crossing and
-Godot consumers still have unique behavior/formats/media/notices and recovery obligations;
-this new scene proves no safe package/source retirement path.
+CI routes new status sources/evidence to the actual C# job; workflow/shared/unknown
+changes retain conservative full routing. Original P06 pilot, all consumer gates,
+unconditional integrity and protected source pins remain intact. Stale lab next-actions
+that still called AI/Audio incomplete or automatically repeated completed recovery/
+progression were corrected against existing actual evidence, not deleted obligations.
+The public case study links exact source-to-consumer scope and actual capture; navigation
+and CI support the contribution without a duplicated portfolio study count.
 
-CI adds the new actual host/browser execution and dependency controls to the existing C#
-job and conservatively routes its sources/evidence. Existing security/integrity and all
-retained consumer gates stay intact. Public navigation now shows an actual coherent
-handoff with unfinished work, linking earlier separate audio/visual demonstrations.
-This is product/portfolio value, not a second counted unit or a claim of human experience.
+## All eleven mandatory destinations and remaining obligations
 
-## Verified baseline CI and next acceptance
+Maturity was checked anew through actual catalog artifacts/evidence and integrity checks:
+10 bounded methods operational; Build/Operations remains incomplete. The new status
+assay extends Combat & Responsiveness; it does not create a twelfth laboratory or finish
+combat. Entry points and exact source dispositions remain in [labs](../labs/README.md).
 
-Baseline CI39881614084 initially completed with failure: seven jobs passed, but the
-chat recovery-browser test timed out at60000ms before AI evaluation. The unchanged test
-passed locally in7.871s under actual Chromium; that isolated run differs from hosted
-concurrency2 and proves no timeout cause. A rerun was requested for failed job120180124389.
-Supported run/job access now confirms attempt2 completed/success with all eight latest-
-attempt jobs successful. The failure remains retained; no test, timeout, fixture or gate
-was weakened. CI39878560786's earlier integrity cancellation likewise has no proven cause.
-New publication and CI remain separate from this baseline and local checks.
+| Destination | Current next acceptance; prior methods remain retained |
+|---|---|
+| AI Evaluation | Consequential new beneficiary/context beyond the one public first-delivery study; no automatic EVAL-001 replay |
+| Audio/Music | Actual documented listeners/devices for recognition, masking and comfort; Unity delivery and rights |
+| Visual/Animation | Actual author/player/device assessment and Unity import; broader motion coverage |
+| Input/Timing | Real devices/people and actual production input/interruption semantics |
+| Narrative & Continuity | Author/player assessment of the coherent owner and consequential unresolved continuity |
+| Networking & Persistence | Actual Windows/Unity filesystem integration, migration and real account/network beneficiary |
+| World & Gameplay | Remaining NPC/quest/reputation outcomes and full effects before catalog import |
+| Economy & Simulation | Remaining item/tool/unlock provenance and actual product beneficiary |
+| RPG Systems & Progression | Remaining effects, approved identity/pacing; avoid repeating bounded preparation/replay |
+| Combat & Responsiveness | Full unresolved source rules and participant/production assessment; preserve timing differences |
+| Build/Operations — incomplete | Actual licensed Editor/modules and a bounded Windows delivery with execution/notices |
 
-**Next acceptance:** Compare actual licensed Windows/Unity access and the incomplete
-Build/Operations method against author/player review of this real scene, consequential
-unresolved source capabilities and production continuity needs. SDK access is now verified;
-do not carry forward the obsolete missing-SDK blocker. Participant/device assessment
-requires actual documented participants/devices; software controls cannot supply them.
-Narrative persistence is still consequential but not automatically next. Do not bind
-every cycle to EVAL-001, media calibration, this scene's matrix, recovery faults,
-loadout/crafting/progression, fixture repair or the one-time transformation. Continue the
-largest coherent justified contribution and retain truthful limits/negative outcomes.
+Selected XP-COMBAT-STATUS is now INTEGRATED; permissive invalid-ratio interchange is
+REJECTED; the remainder is explicitly XP-COMBAT-FULL-RUNTIME UNRESOLVED. Full effects/
+passives, NPC schedules, quest/reputation catalogs, narrative persistence, creation
+parsing, item/tool/unlock catalogs, human experience, commercial clearance and production
+ownership remain genuinely open. No protected Brain/source/variant/media was altered.
+
+Prior AI Evaluation retains one frozen first delivery, exact protocol/context/access
+limits and superseded source-race execution. No new candidate attempt, model score,
+serving-model/cost telemetry or confidential benchmark is claimed. Shared filesystem
+restrictions remain procedural, not an enforced sandbox.
+
+## Actual CI and next choice
+
+CI39909020239 at initial e89ccbeb completed/success attempt1 with all eight jobs successful.
+Baseline CI39881614084 completed/success attempt2, with attempt1's 60000ms recovery-browser
+timeout retained; the unchanged isolated local test and requested failed-job rerun do not
+prove its cause. Earlier CI39878560786 integrity cancellation likewise has no proven cause.
+New publication and CI remain separate from these baseline observations.
+
+Next compare actual licensed Unity/Windows access and the incomplete Build/Operations
+method against appropriate author/player/device assessment, product continuity and a
+consequential remaining source capability. SDK access is verified; do not revive the
+obsolete missing-SDK blocker. Do not automatically repeat this status assay, the authored
+scene matrix, EVAL-001, isolated media calibration, relay/request/recovery/loadout/crafting/
+progression matrices, fixture repairs or the one-time transformation. Prefer coherent
+product and production/portfolio continuity when real access permits; source expansion
+alone does not close the continuing delivery/human/ownership gaps.
 
 ## Rolling strategic investment — once-counted substantive units
 
-Targets remain approximately **47% legacy/laboratories /40% North Star /13%
-repository/portfolio**, not measured hours or file/token/commit/unit-count percentages.
-At most eight units are retained; supporting checks, CI and navigation are not extra units.
+Approximate targets remain 47% legacy/laboratories, 40% North Star, 13% repository/portfolio.
+These are investment targets, not measured hours or file/token/commit/unit-count shares.
+At most eight substantive units are retained; supporting verification/navigation/CI do
+not create extra units.
 
-| Completed substantive unit | Primary workstream | Evidence / relative investment |
+| Completed substantive unit | Primary stream | Evidence |
 |---|---|---|
-| Source clock/hold/interruption method and policy rivals | Legacy/laboratories | [Input execution](../evidence/input-timing/RUN.json); real origin/destination acceptance |
-| Visible C# continuous work with interruption/rearm | North Star | [Relay](../north-star/csharp/Interaction/README.md); timed resource/goal consumer |
-| Pixel registration and state-owned presentation method | Legacy/laboratories | [Visual execution](../evidence/visual-animation/RUN.json); producer/controls/negatives |
-| Embodied original C# Crossing identity/consequences | North Star | [Presentation](../north-star/csharp/Presentation/README.md); actual differentiated rendering |
-| Adaptive source/signal/lifecycle method and rival policies | Legacy/laboratories | [Audio execution](../evidence/audio-music/RUN.json); preserved sources, mixer/PCM and actual destination |
-| Original portable C# composition and consequence-owned playback | North Star | [Audio](../north-star/csharp/Audio/README.md); editable score/cues and real controlled playback |
-| Attributed first-delivery artifact decision with calibrated environment rivals | Legacy/laboratories | [AI evaluation](../evidence/ai-evaluation/RUN.json); actual candidate, frozen provenance, source-race correction and retained negatives |
-| Coherent visible authored work, agreement and actual journey | North Star | [Authored scene](../evidence/authored-scene/RUN.json); one real owner, original staging, inspected consequences and uncertainty quarantine |
+| Pixel registration and state-owned presentation method | Legacy/laboratories | [Visual](../evidence/visual-animation/RUN.json) |
+| Embodied original C# Crossing identity/consequences | North Star | [Presentation](../north-star/csharp/Presentation/README.md) |
+| Adaptive source/signal/lifecycle method and rival policies | Legacy/laboratories | [Audio](../evidence/audio-music/RUN.json) |
+| Original C# composition and consequence-owned playback | North Star | [Audio consumer](../north-star/csharp/Audio/README.md) |
+| Attributed first-delivery artifact decision with environment rivals | Legacy/laboratories | [AI](../evidence/ai-evaluation/RUN.json) |
+| Coherent visible authored work, agreement and actual journey | North Star | [Authored scene](../evidence/authored-scene/RUN.json) |
+| Source-bound arithmetic/global-round status assay with independent counterexample | Legacy/laboratories | [Status method](../labs/combat-response/status/README.md) |
+| Original costly status encounter and visible actual outcomes | North Star | [Treatment Line](../evidence/combat-status/RUN.json) |
 
-The original terminal narrative unit aged out, while its code/rights/evidence remain.
-This visible coherent integration is one North Star unit; original staging, lifecycle
-controls and public demonstration support it without duplicate portfolio accounting.
-It corrects fragmented terminal-only social presentation and follows the prior lab unit.
-Broader delivery/portfolio investment remains underrepresented; no47/40/13 convergence
-is fabricated. Build/Operations and deeper legacy consumption remain explicit obligations.
-Three consecutive units in one stream require correction or a concrete dependency/blocker.
+The earlier input method/relay units age out of the rolling window; their code/evidence/
+rights remain. Source intake and original gameplay are distinct beneficiaries; their
+supporting controls are not additional units. Public case-study/navigation improves
+portfolio usefulness, but repository/production ownership remains underrepresented.
+No 47/40/13 convergence is fabricated. Correct this with real delivery/ownership/recovery
+value, rather than relabeling the same combat work. Three consecutive units in one
+stream require correction or an explicit concrete dependency/blocker.

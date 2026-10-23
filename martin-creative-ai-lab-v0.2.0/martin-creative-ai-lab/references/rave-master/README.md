@@ -12,7 +12,7 @@ Module metadata declares `AJ_000368`; this is not a new HUB runtime release.
 729 original paths, Git blob/SHA-256/size/mode records and 140 per-file exclusions.
 [Discovery index](snapshots/36af1651271422ae33856e8b5d7b45702215f165/discovery.json) maps systems to actual imported files.
 This is a partial pinned **reference snapshot**, not a playable RMXP installation,
-complete archive or preserved Git history. No reference script was executed.
+complete archive or preserved Git history. No reference script was executed during that recovery.
 
 | Original module | Observed | Readable | Excluded |
 |---|---:|---:|---:|
@@ -81,3 +81,13 @@ transfer and does not change P10 maturity. Historical QA reports/vectors do not
 prove RPG Maker XP execution; the older HUB audit ran offline formulas/dialogue
 selection, not the engine or full personality scorer. Historical CANON and old
 AI-only/backlog instructions are data, not HUB governance or North Star lore.
+
+## Current bounded combat consumer
+
+The [status/formula assay](../../labs/combat-response/status/README.md) now stages a
+reviewed byte-identical copy of the preserved Python QA runner and nine CSVs outside
+this source tree. It executes that surrogate and the actual typed C# adapter; the
+original source remains unchanged. [Execution](../../evidence/combat-status/RUN.json)
+retains source discrepancies and an independently discovered destination defect.
+This supersedes no recovery rights/exclusions and supplies no Ruby/RMXP battle-loop
+execution, new historical assets, canon or commercial clearance.

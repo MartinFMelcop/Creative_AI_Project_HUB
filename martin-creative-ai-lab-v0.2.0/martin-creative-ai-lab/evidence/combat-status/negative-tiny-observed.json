@@ -1,0 +1,18 @@
+{
+  "vectors": [
+    {
+      "component": "HIT",
+      "id": "tiny-positive-hit",
+      "expected": 0.9,
+      "actual": 0.09000000000000001,
+      "passed": false
+    },
+    {
+      "component": "APPLY",
+      "id": "tiny-positive-apply",
+      "expected": 0.95,
+      "actual": 0.1,
+      "passed": false
+    }
+  ]
+}
