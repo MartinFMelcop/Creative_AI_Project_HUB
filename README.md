@@ -20,6 +20,27 @@ appearance, builds, classes, specializations, professions, equipment and meaning
 **Unity + C# is the selected primary stack; Windows is the priority player platform,
 and Steam is the intended distribution ecosystem.**
 
+### Try the current authored scene — Linux x64
+
+[**Download The coil and the shutters**](https://github.com/MartinFMelcop/Creative_AI_Project_HUB/raw/refs/heads/main/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/delivery/authored-scene/dist/authored-scene-demo-linux-x64.zip) · [Instructions and checksums](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/delivery/authored-scene/README.md) · [Actual recipient execution](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/evidence/recipient-delivery/RUN.json)
+
+Extract the complete ZIP, enter `AuthoredSceneDemo`, run `./run-demo.sh` and open
+its printed local URL. The package includes its private .NET runtime, original assets,
+notices and the actual forward source closure; no SDK, Node or checkout is required.
+A graphical browser, shell/coreutils and compatible Linux x64 native libraries are
+needed. Execution coverage is Debian13 x64 on the recorded environment. It stops after
+five minutes by default; Ctrl+C stops it earlier. The session is temporary.
+
+Edda's unfinished work, Rill's consent and actual departure/return share one C# owner.
+A guided handoff still leaves work unfinished. This original experimental scene is
+an executable development demonstration, not Unity/Windows/Steam delivery, approved
+world canon or independent player validation. Build/Operations remains incomplete.
+
+![Actual extracted package after guided handoff: three crates remain unfinished](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/evidence/recipient-delivery/delivered.png)
+
+<details>
+<summary>Developer entry points and retained research consumers</summary>
+
 | Inspect or execute | Actual scope |
 |---|---|
 | [C# development foundation](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/README.md) | Engine-independent progression/crafting domains, connected terminal consumers and checks. No Unity Editor or Windows-player execution is claimed. |
@@ -55,6 +76,8 @@ accessibility, artistic approval or continuous animation quality.
 [living design](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/DESIGN.md) and
 [current implementation state](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/docs/STATE.md) identify what was executed and what remains unresolved.
 Independent player comprehension, enjoyment, broad hardware coverage and commercial readiness are unvalidated.
+
+</details>
 
 ## Applied research
 

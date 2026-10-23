@@ -613,3 +613,14 @@ jobs:
           path: ${{ runner.temp }}/combat-status
           if-no-files-found: ignore
           retention-days: 7
+
+      - name: Rebuild and execute the actual recipient demonstration without SDK on its PATH
+        run: python3 delivery/authored-scene/verify.py --dotnet dotnet --compare delivery/authored-scene/dist/authored-scene-demo-linux-x64.zip --output "$RUNNER_TEMP/recipient-delivery"
+      - name: Retain recipient delivery failure diagnostics
+        if: failure()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: recipient-delivery-diagnostics
+          path: ${{ runner.temp }}/recipient-delivery
+          if-no-files-found: ignore
+          retention-days: 7

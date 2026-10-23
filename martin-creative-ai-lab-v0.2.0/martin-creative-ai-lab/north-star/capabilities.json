@@ -397,22 +397,28 @@
       "id": "NS-C14",
       "title": "Reproducible delivery and observability",
       "origin_projects": [
+        "P01",
         "P02",
         "P05",
         "P06"
       ],
       "reference_collections": [],
-      "contribution_status": "verified_in_origin",
+      "contribution_status": "adapted",
       "origin_validation": "execution_record_inspected",
-      "scope": "Pinned dependency/template verification, source/resource checks, CI and separately executed native delivery artifacts.",
+      "scope": "Isolated source-to-payload build, pinned private runtime/notices, reproducible archive and actual relocated recipient delivery of the unchanged authored scene.",
       "origin_evidence": [
         "evidence/cinderwatch/RELEASE_RUN.json",
         "evidence/veil-arena/PARRY_RUN.json",
         "evidence/continuous-integration/MANIFEST_RUN.json"
       ],
-      "applicability_hypothesis": "Research whether reproducible delivery and observability serves a bounded North Star experiment; no consumer or reusable contract exists yet.",
-      "limits": "Local/Linux CI workflows are not online production telemetry, fleet deployment, service reliability or commercial sustainability.",
-      "next_validation": "For the first real experiment, record commands, state transitions, recovery receipts and repeatable builds; define failure gates before deployment."
+      "applicability_hypothesis": "A real inspectable artifact can reduce the technical prerequisites for author/player review; actual recipient comprehension and experience remain unvalidated.",
+      "limits": "Bounded same-machine Debian13 Linuxx64 relocation with restricted PATH. No Unity/Windows/Steam, human recipient, production operations, security/authentication, broad native compatibility or commercial clearance claim.",
+      "next_validation": "Compare actual licensed Unity/Windows delivery and documented author/player/device use of the artifact with remaining production ownership, source capabilities and product continuity; do not automatically repeat artifact controls.",
+      "destination_consumer_paths": [
+        "north-star/authored-scene/Host/Program.cs"
+      ],
+      "destination_evidence": "evidence/recipient-delivery/RUN.json",
+      "destination_scope": "One trusted-local private-runtime demonstration executes outside the checkout without SDK or Node on its PATH. Two staging roots reproduce the same ZIP, and archived sources reproduce ten application files. Current-source/runtime locks, full notices, expiry/stop and retained fault controls serve a real recipient/recovery beneficiary; no gameplay owner or production engine changed."
     }
   ],
   "product_title": "Virgo Diamond: The North Star",

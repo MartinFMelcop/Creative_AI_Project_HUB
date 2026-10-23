@@ -1,0 +1,33 @@
+[
+  {
+    "arguments": [
+      "--version"
+    ],
+    "exit_code": 0,
+    "stdout": "10.0.401\n",
+    "stderr": ""
+  },
+  {
+    "arguments": [
+      "publish",
+      "/workspace/work/recipient-delivery-publish/first build/source/north-star/authored-scene/Host/NorthStar.AuthoredScene.csproj",
+      "-c",
+      "Release",
+      "--self-contained",
+      "false",
+      "-p:UseAppHost=false",
+      "-p:RuntimeFrameworkVersion=10.0.12",
+      "-p:DebugType=None",
+      "-p:DebugSymbols=false",
+      "-p:ContinuousIntegrationBuild=true",
+      "-p:PathMap=/workspace/work/recipient-delivery-publish/first build/source=/_/source",
+      "-o",
+      "/workspace/work/recipient-delivery-publish/first build/published",
+      "-m:1",
+      "--disable-build-servers"
+    ],
+    "exit_code": 0,
+    "stdout": "  Determining projects to restore...\n  Restored /workspace/work/recipient-delivery-publish/first build/source/north-star/csharp/Narrative/NorthStar.Narrative.csproj (in 143 ms).\n  Restored /workspace/work/recipient-delivery-publish/first build/source/north-star/csharp/Crossing/NorthStar.Crossing.csproj (in 3 ms).\n  Restored /workspace/work/recipient-delivery-publish/first build/source/north-star/authored-scene/Host/NorthStar.AuthoredScene.csproj (in 3 ms).\n  Restored /workspace/work/recipient-delivery-publish/first build/source/north-star/csharp/Domain/NorthStar.Domain.csproj (in 1.26 sec).\n  NorthStar.Domain -> /workspace/work/recipient-delivery-publish/first build/source/north-star/csharp/Domain/bin/Release/netstandard2.1/NorthStar.Domain.dll\n  NorthStar.Crossing -> /workspace/work/recipient-delivery-publish/first build/source/north-star/csharp/Crossing/bin/Release/net10.0/NorthStar.Crossing.dll\n  NorthStar.Narrative -> /workspace/work/recipient-delivery-publish/first build/source/north-star/csharp/Narrative/bin/Release/net10.0/NorthStar.Narrative.dll\n  NorthStar.AuthoredScene -> /workspace/work/recipient-delivery-publish/first build/source/north-star/authored-scene/Host/bin/Release/net10.0/NorthStar.AuthoredScene.dll\n  NorthStar.AuthoredScene -> /workspace/work/recipient-delivery-publish/first build/published/\n",
+    "stderr": ""
+  }
+]

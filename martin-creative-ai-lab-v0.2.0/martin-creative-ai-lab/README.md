@@ -86,3 +86,11 @@ before retirement; Git history alone is not preservation of a unique artifact.
 next unresolved obligations. [Decisions](docs/DECISIONS.md) retain consequential
 rationale. Local implementation, tests, commit, verified publication and CI remain
 separate reportable states.
+
+## Recipient demonstration
+
+The [current authored-scene delivery](delivery/authored-scene/README.md) supplies a
+private-runtime Linux x64 ZIP for a recipient without SDK, Node or checkout. Its
+[execution record](evidence/recipient-delivery/RUN.json) separates actual extracted
+execution, reproducible payloads and remaining Unity/Windows/human boundaries. Existing
+source-development commands and historical consumers remain available.
