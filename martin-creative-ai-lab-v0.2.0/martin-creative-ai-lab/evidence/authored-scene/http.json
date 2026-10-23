@@ -1,0 +1,27 @@
+{
+  "checks": {
+    "passed": 7,
+    "failed": 0
+  },
+  "controls": [
+    "extra_wire_field400_unchanged",
+    "false_json_media400_unchanged",
+    "cross_origin400_unchanged",
+    "actual_command200_owner_consequence",
+    "get_exact_current_observation",
+    "allowlisted_static_route",
+    "bounded_idle_host_exit0"
+  ],
+  "command": [
+    "/workspace/work/authored-scene/dotnet/dotnet",
+    "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/authored-scene/Host/bin/Release/net10.0/NorthStar.AuthoredScene.dll",
+    "--serve",
+    "49233",
+    "/workspace/work/authored-scene/engineering-http",
+    "--seconds",
+    "3"
+  ],
+  "exit_code": 0,
+  "stderr": "",
+  "scope": "Actual bounded loopback HTTP smoke, not browser or production network security"
+}

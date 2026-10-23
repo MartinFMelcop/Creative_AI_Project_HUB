@@ -35,7 +35,9 @@ Build/Operations remains incomplete; it cannot be postponed indefinitely.
   renewed consent, commitment and observed-outcome contracts across P04/P10 and
   distinct legacy quest helpers. Real source controls and an original C# request/work
   consumer distinguish promises from actual consequences.
-  [Execution](../evidence/narrative-continuity/RUN.json).
+  [Execution](../evidence/narrative-continuity/RUN.json). The [coherent authored C# scene](../north-star/authored-scene/README.md)
+  now visibly consumes that unchanged owner; [new execution](../evidence/authored-scene/RUN.json)
+  verifies observation fidelity, not human comprehension or a new legacy extraction.
 
 - [Networking & Persistence](networking-persistence/README.md): binds inspected commit/
   replay invariants to actual joint expedition recovery across processes and injected

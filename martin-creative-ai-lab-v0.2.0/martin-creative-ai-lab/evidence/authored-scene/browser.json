@@ -1,0 +1,1353 @@
+{
+  "schema_version": 1,
+  "kind": "actual_browser_csharp_authored_scene",
+  "runtime": {
+    "node": "v24.19.0",
+    "chromium": "154.0.8037.57",
+    "playwright": "1.64.0"
+  },
+  "viewport": [
+    1280,
+    1120
+  ],
+  "checks": {
+    "passed": 35,
+    "failed": 0
+  },
+  "controls": [
+    "Actual HTTP rejects duplicate command field before mutation",
+    "Actual HTTP rejects extra command field before mutation",
+    "Actual HTTP rejects fabricated complete command before mutation",
+    "Actual HTTP rejects malformed JSON before mutation",
+    "Actual HTTP rejects cross-origin command before mutation",
+    "Actual HTTP rejects wrong content type before mutation",
+    "Actual HTTP rejects oversized request before mutation",
+    "Actual static allowlist rejects missing-route without mutation",
+    "Actual static allowlist rejects %2e%2e/Host/Program.cs without mutation",
+    "Initial board has secured guide and no claimed handoff",
+    "Reads redraw and wall time never advance scene",
+    "Tentative written terms transfer no guide cargo or daylight",
+    "Signed guide prepares locally at reduced work capacity",
+    "Signed scene caption preserves actual predeparture state",
+    "Withdrawal restores local guide and preserves both receipts",
+    "Changed work refuses stale confirmation without ownership change",
+    "Unsurveyed guide refusal is rendered without a loan",
+    "Local refusal completes five crates without false journey",
+    "Completed local work does not claim five crates remain",
+    "Guided departure spends actual two shifts and stages guide away",
+    "Actual guided handoff returns Rill and grants actual once-only XP",
+    "Guided success retains three unfinished crates at dusk",
+    "Solo departure never loans local guide",
+    "Solo return reports delivered coil while Rill stays local",
+    "Failed guided crossing leaves Rill unaccounted and result unchecked",
+    "Failed daylight expiry does not fabricate delivery or return",
+    "Undeparted dusk obligation is not observed return",
+    "Reduced motion retains exact authoritative facts",
+    "Late accepted response cannot replace quarantined last observation",
+    "Explicit reconnection observes actual delayed commit without replay",
+    "Disconnect preserves last facts and disables further commands",
+    "Reconnect cannot rearm old queued intent behind a nonabortable accepted reply",
+    "Actual browser has no uncaught exceptions",
+    "Isolated fabricated-return renderer is detected by owner comparison",
+    "Executed source identity closure remains stable"
+  ],
+  "states": {
+    "initial": {
+      "sequence": 0,
+      "command": "initial",
+      "accepted": true,
+      "text": "Edda sets a coil beside five shutter crates. 'The shutters close our store before dark. The coil is for the far bank.' Rill hooks a boot under the board. 'Not on an unchecked route. Survey it first. This line stays here.'",
+      "state": {
+        "revision": 0,
+        "shift": 0,
+        "remaining": 4,
+        "crates": 0,
+        "crates_required": 5,
+        "capacity": 2,
+        "guide_available": true,
+        "guide_location": "local",
+        "surveyed": false,
+        "delivered": false,
+        "returned": false,
+        "status": "open",
+        "conversation": "closed",
+        "term": null,
+        "due_elapsed": false,
+        "delivery_started": false,
+        "receipts": [],
+        "encounter": {
+          "kind": "none",
+          "active": false,
+          "stage": 0,
+          "beat": 0,
+          "position": 0,
+          "health": 0,
+          "resolve": 0,
+          "required_position": 2,
+          "maximum_beats": 4,
+          "threat": "BOLT: moving exposes health; the approach skill spends resolve to protect.",
+          "xp": 0
+        },
+        "scope": "In-session original experiment; no persistent quest, Unity/Windows or human validation"
+      }
+    },
+    "tentative": {
+      "sequence": 10,
+      "command": "terms dusk",
+      "accepted": true,
+      "text": "Edda writes 'return due before dark'. The return box stays empty. Rill waits for confirmation.",
+      "state": {
+        "revision": 2,
+        "shift": 1,
+        "remaining": 3,
+        "crates": 0,
+        "crates_required": 5,
+        "capacity": 2,
+        "guide_available": true,
+        "guide_location": "local",
+        "surveyed": true,
+        "delivered": false,
+        "returned": false,
+        "status": "open",
+        "conversation": "ready",
+        "term": null,
+        "due_elapsed": false,
+        "delivery_started": false,
+        "receipts": [],
+        "encounter": {
+          "kind": "survey",
+          "active": false,
+          "stage": 1,
+          "beat": 4,
+          "position": 4,
+          "health": 10,
+          "resolve": 3,
+          "required_position": 4,
+          "maximum_beats": 6,
+          "threat": "PULSE at your current position: walking or dashing leaves it.",
+          "xp": 10
+        },
+        "scope": "In-session original experiment; no persistent quest, Unity/Windows or human validation"
+      }
+    },
+    "preparing": {
+      "sequence": 11,
+      "command": "confirm",
+      "accepted": true,
+      "text": "Rill signs his own name, takes down the line and starts rigging the coil. Edda marks him unavailable for shutters. Departure is still pending; neither delivery nor return is checked.",
+      "state": {
+        "revision": 3,
+        "shift": 1,
+        "remaining": 3,
+        "crates": 0,
+        "crates_required": 5,
+        "capacity": 1,
+        "guide_available": false,
+        "guide_location": "local-preparing",
+        "surveyed": true,
+        "delivered": false,
+        "returned": false,
+        "status": "committed",
+        "conversation": "closed",
+        "term": "dusk",
+        "due_elapsed": false,
+        "delivery_started": false,
+        "receipts": [
+          {
+            "kind": "commitment",
+            "revision": 2,
+            "shift": 1,
+            "crates": 0,
+            "term": "dusk",
+            "guide": "Rill",
+            "delivered": false,
+            "returned": false
+          }
+        ],
+        "encounter": {
+          "kind": "survey",
+          "active": false,
+          "stage": 1,
+          "beat": 4,
+          "position": 4,
+          "health": 10,
+          "resolve": 3,
+          "required_position": 4,
+          "maximum_beats": 6,
+          "threat": "PULSE at your current position: walking or dashing leaves it.",
+          "xp": 10
+        },
+        "scope": "In-session original experiment; no persistent quest, Unity/Windows or human validation"
+      }
+    },
+    "withdrawn": {
+      "sequence": 12,
+      "command": "withdraw",
+      "accepted": true,
+      "text": "Rill hangs the line back on its peg. Edda adds a withdrawal below the signed commitment, keeping both entries readable. No departure occurred.",
+      "state": {
+        "revision": 4,
+        "shift": 1,
+        "remaining": 3,
+        "crates": 0,
+        "crates_required": 5,
+        "capacity": 2,
+        "guide_available": true,
+        "guide_location": "local",
+        "surveyed": true,
+        "delivered": false,
+        "returned": false,
+        "status": "deferred",
+        "conversation": "closed",
+        "term": null,
+        "due_elapsed": false,
+        "delivery_started": false,
+        "receipts": [
+          {
+            "kind": "commitment",
+            "revision": 2,
+            "shift": 1,
+            "crates": 0,
+            "term": "dusk",
+            "guide": "Rill",
+            "delivered": false,
+            "returned": false
+          },
+          {
+            "kind": "withdrawal",
+            "revision": 3,
+            "shift": 1,
+            "crates": 0,
+            "term": "dusk",
+            "guide": "Rill",
+            "delivered": false,
+            "returned": false
+          }
+        ],
+        "encounter": {
+          "kind": "survey",
+          "active": false,
+          "stage": 1,
+          "beat": 4,
+          "position": 4,
+          "health": 10,
+          "resolve": 3,
+          "required_position": 4,
+          "maximum_beats": 6,
+          "threat": "PULSE at your current position: walking or dashing leaves it.",
+          "xp": 10
+        },
+        "scope": "In-session original experiment; no persistent quest, Unity/Windows or human validation"
+      }
+    },
+    "stale": {
+      "sequence": 24,
+      "command": "confirm",
+      "accepted": false,
+      "text": "Confirmation refused: facts, offer and written terms must still be current.",
+      "state": {
+        "revision": 3,
+        "shift": 2,
+        "remaining": 2,
+        "crates": 2,
+        "crates_required": 5,
+        "capacity": 2,
+        "guide_available": true,
+        "guide_location": "local",
+        "surveyed": true,
+        "delivered": false,
+        "returned": false,
+        "status": "open",
+        "conversation": "closed",
+        "term": null,
+        "due_elapsed": false,
+        "delivery_started": false,
+        "receipts": [],
+        "encounter": {
+          "kind": "survey",
+          "active": false,
+          "stage": 1,
+          "beat": 4,
+          "position": 4,
+          "health": 10,
+          "resolve": 3,
+          "required_position": 4,
+          "maximum_beats": 6,
+          "threat": "PULSE at your current position: walking or dashing leaves it.",
+          "xp": 10
+        },
+        "scope": "In-session original experiment; no persistent quest, Unity/Windows or human validation"
+      }
+    },
+    "local": {
+      "sequence": 31,
+      "command": "work",
+      "accepted": true,
+      "text": "Rill takes the other end. Together you carry 1 shutter crate(s). 0 remain; 1 shifts of light. Any unsigned offer needs a fresh conversation.",
+      "state": {
+        "revision": 4,
+        "shift": 3,
+        "remaining": 1,
+        "crates": 5,
+        "crates_required": 5,
+        "capacity": 2,
+        "guide_available": true,
+        "guide_location": "local",
+        "surveyed": false,
+        "delivered": false,
+        "returned": false,
+        "status": "declined",
+        "conversation": "closed",
+        "term": null,
+        "due_elapsed": false,
+        "delivery_started": false,
+        "receipts": [],
+        "encounter": {
+          "kind": "none",
+          "active": false,
+          "stage": 0,
+          "beat": 0,
+          "position": 0,
+          "health": 0,
+          "resolve": 0,
+          "required_position": 2,
+          "maximum_beats": 4,
+          "threat": "BOLT: moving exposes health; the approach skill spends resolve to protect.",
+          "xp": 0
+        },
+        "scope": "In-session original experiment; no persistent quest, Unity/Windows or human validation"
+      }
+    },
+    "departed": {
+      "sequence": 43,
+      "command": "depart guided",
+      "accepted": true,
+      "text": "You leave for the coil handoff by the guided route, spending 2 shifts. 5 local shutter crates remain. The coil is carried, not delivered; the actual crossing still has to finish.",
+      "state": {
+        "revision": 4,
+        "shift": 3,
+        "remaining": 1,
+        "crates": 0,
+        "crates_required": 5,
+        "capacity": 1,
+        "guide_available": false,
+        "guide_location": "travelling",
+        "surveyed": true,
+        "delivered": false,
+        "returned": false,
+        "status": "committed",
+        "conversation": "closed",
+        "term": "dusk",
+        "due_elapsed": false,
+        "delivery_started": true,
+        "receipts": [
+          {
+            "kind": "commitment",
+            "revision": 2,
+            "shift": 1,
+            "crates": 0,
+            "term": "dusk",
+            "guide": "Rill",
+            "delivered": false,
+            "returned": false
+          }
+        ],
+        "encounter": {
+          "kind": "guided",
+          "active": true,
+          "stage": 1,
+          "beat": 0,
+          "position": 0,
+          "health": 11,
+          "resolve": 11,
+          "required_position": 4,
+          "maximum_beats": 6,
+          "threat": "BOLT: moving exposes health; the approach skill spends resolve to protect.",
+          "xp": 10
+        },
+        "scope": "In-session original experiment; no persistent quest, Unity/Windows or human validation"
+      }
+    },
+    "returned": {
+      "sequence": 49,
+      "command": "skill",
+      "accepted": true,
+      "text": "Skill: 0 damage, 3 resolve spent. Completed; reward committed. Level 3, 4 unspent points. You come back from the actual handoff with Rill. Edda checks coil delivered and return observed, then points at 5 shutter crates still here. The unfinished work is not erased.",
+      "state": {
+        "revision": 5,
+        "shift": 3,
+        "remaining": 1,
+        "crates": 0,
+        "crates_required": 5,
+        "capacity": 2,
+        "guide_available": true,
+        "guide_location": "local",
+        "surveyed": true,
+        "delivered": true,
+        "returned": true,
+        "status": "delivered",
+        "conversation": "closed",
+        "term": "dusk",
+        "due_elapsed": false,
+        "delivery_started": true,
+        "receipts": [
+          {
+            "kind": "commitment",
+            "revision": 2,
+            "shift": 1,
+            "crates": 0,
+            "term": "dusk",
+            "guide": "Rill",
+            "delivered": false,
+            "returned": false
+          },
+          {
+            "kind": "observed_return",
+            "revision": 4,
+            "shift": 3,
+            "crates": 0,
+            "term": "dusk",
+            "guide": "Rill",
+            "delivered": true,
+            "returned": true
+          }
+        ],
+        "encounter": {
+          "kind": "guided",
+          "active": false,
+          "stage": 1,
+          "beat": 6,
+          "position": 6,
+          "health": 11,
+          "resolve": 3,
+          "required_position": 4,
+          "maximum_beats": 6,
+          "threat": "BOLT: moving exposes health; the approach skill spends resolve to protect.",
+          "xp": 25
+        },
+        "scope": "In-session original experiment; no persistent quest, Unity/Windows or human validation"
+      }
+    },
+    "guided": {
+      "sequence": 50,
+      "command": "work",
+      "accepted": true,
+      "text": "Rill takes the other end. Together you carry 2 shutter crate(s). 3 remain; 0 shifts of light. Any unsigned offer needs a fresh conversation.",
+      "state": {
+        "revision": 6,
+        "shift": 4,
+        "remaining": 0,
+        "crates": 2,
+        "crates_required": 5,
+        "capacity": 2,
+        "guide_available": true,
+        "guide_location": "local",
+        "surveyed": true,
+        "delivered": true,
+        "returned": true,
+        "status": "delivered",
+        "conversation": "closed",
+        "term": "dusk",
+        "due_elapsed": false,
+        "delivery_started": true,
+        "receipts": [
+          {
+            "kind": "commitment",
+            "revision": 2,
+            "shift": 1,
+            "crates": 0,
+            "term": "dusk",
+            "guide": "Rill",
+            "delivered": false,
+            "returned": false
+          },
+          {
+            "kind": "observed_return",
+            "revision": 4,
+            "shift": 3,
+            "crates": 0,
+            "term": "dusk",
+            "guide": "Rill",
+            "delivered": true,
+            "returned": true
+          }
+        ],
+        "encounter": {
+          "kind": "guided",
+          "active": false,
+          "stage": 1,
+          "beat": 6,
+          "position": 6,
+          "health": 11,
+          "resolve": 3,
+          "required_position": 4,
+          "maximum_beats": 6,
+          "threat": "BOLT: moving exposes health; the approach skill spends resolve to protect.",
+          "xp": 25
+        },
+        "scope": "In-session original experiment; no persistent quest, Unity/Windows or human validation"
+      }
+    },
+    "soloDepart": {
+      "sequence": 59,
+      "command": "depart solo",
+      "accepted": true,
+      "text": "You leave for the coil handoff by the solo route, spending 3 shifts. 5 local shutter crates remain. The coil is carried, not delivered; the actual crossing still has to finish.",
+      "state": {
+        "revision": 4,
+        "shift": 4,
+        "remaining": 0,
+        "crates": 0,
+        "crates_required": 5,
+        "capacity": 2,
+        "guide_available": true,
+        "guide_location": "local",
+        "surveyed": true,
+        "delivered": false,
+        "returned": false,
+        "status": "committed",
+        "conversation": "closed",
+        "term": "solo",
+        "due_elapsed": false,
+        "delivery_started": true,
+        "receipts": [
+          {
+            "kind": "solo_departure",
+            "revision": 4,
+            "shift": 4,
+            "crates": 0,
+            "term": "solo",
+            "guide": "none",
+            "delivered": false,
+            "returned": false
+          }
+        ],
+        "encounter": {
+          "kind": "solo",
+          "active": true,
+          "stage": 1,
+          "beat": 0,
+          "position": 0,
+          "health": 11,
+          "resolve": 11,
+          "required_position": 4,
+          "maximum_beats": 6,
+          "threat": "BOLT: moving exposes health; the approach skill spends resolve to protect.",
+          "xp": 10
+        },
+        "scope": "In-session original experiment; no persistent quest, Unity/Windows or human validation"
+      }
+    },
+    "solo": {
+      "sequence": 65,
+      "command": "skill",
+      "accepted": true,
+      "text": "Skill: 0 damage, 3 resolve spent. Completed; reward committed. Level 3, 4 unspent points. You come back from the actual handoff alone. Edda checks coil delivered and return observed, then points at 5 shutter crates still here. The unfinished work is not erased.",
+      "state": {
+        "revision": 5,
+        "shift": 4,
+        "remaining": 0,
+        "crates": 0,
+        "crates_required": 5,
+        "capacity": 2,
+        "guide_available": true,
+        "guide_location": "local",
+        "surveyed": true,
+        "delivered": true,
+        "returned": true,
+        "status": "delivered",
+        "conversation": "closed",
+        "term": "solo",
+        "due_elapsed": false,
+        "delivery_started": true,
+        "receipts": [
+          {
+            "kind": "solo_departure",
+            "revision": 4,
+            "shift": 4,
+            "crates": 0,
+            "term": "solo",
+            "guide": "none",
+            "delivered": false,
+            "returned": false
+          },
+          {
+            "kind": "observed_return",
+            "revision": 4,
+            "shift": 4,
+            "crates": 0,
+            "term": "solo",
+            "guide": "none",
+            "delivered": true,
+            "returned": true
+          }
+        ],
+        "encounter": {
+          "kind": "solo",
+          "active": false,
+          "stage": 1,
+          "beat": 6,
+          "position": 6,
+          "health": 11,
+          "resolve": 3,
+          "required_position": 4,
+          "maximum_beats": 6,
+          "threat": "BOLT: moving exposes health; the approach skill spends resolve to protect.",
+          "xp": 25
+        },
+        "scope": "In-session original experiment; no persistent quest, Unity/Windows or human validation"
+      }
+    },
+    "failed": {
+      "sequence": 79,
+      "command": "wait",
+      "accepted": true,
+      "text": "Wait: 6 damage, 0 resolve spent. Crossing failed. This delivery attempt has ended; no completion reward. Local work may continue if light remains. You retreat to Edda's board without a completed handoff. She leaves delivery and completed-journey return unchecked. Rill is unaccounted for; this is not a confirmed death or return. 5 local crates remain.",
+      "state": {
+        "revision": 5,
+        "shift": 3,
+        "remaining": 1,
+        "crates": 0,
+        "crates_required": 5,
+        "capacity": 1,
+        "guide_available": false,
+        "guide_location": "unaccounted",
+        "surveyed": true,
+        "delivered": false,
+        "returned": false,
+        "status": "failed",
+        "conversation": "closed",
+        "term": "dusk",
+        "due_elapsed": false,
+        "delivery_started": true,
+        "receipts": [
+          {
+            "kind": "commitment",
+            "revision": 2,
+            "shift": 1,
+            "crates": 0,
+            "term": "dusk",
+            "guide": "Rill",
+            "delivered": false,
+            "returned": false
+          },
+          {
+            "kind": "failed_crossing",
+            "revision": 4,
+            "shift": 3,
+            "crates": 0,
+            "term": "dusk",
+            "guide": "Rill",
+            "delivered": false,
+            "returned": false
+          }
+        ],
+        "encounter": {
+          "kind": "guided",
+          "active": false,
+          "stage": 1,
+          "beat": 2,
+          "position": 0,
+          "health": 0,
+          "resolve": 11,
+          "required_position": 4,
+          "maximum_beats": 6,
+          "threat": "PULSE at your current position: walking or dashing leaves it.",
+          "xp": 10
+        },
+        "scope": "In-session original experiment; no persistent quest, Unity/Windows or human validation"
+      }
+    },
+    "failedDusk": {
+      "sequence": 80,
+      "command": "work",
+      "accepted": true,
+      "text": "With Rill unaccounted for, you carry 1 shutter crate(s). 4 remain; 0 shifts of light. Any unsigned offer needs a fresh conversation.",
+      "state": {
+        "revision": 6,
+        "shift": 4,
+        "remaining": 0,
+        "crates": 1,
+        "crates_required": 5,
+        "capacity": 1,
+        "guide_available": false,
+        "guide_location": "unaccounted",
+        "surveyed": true,
+        "delivered": false,
+        "returned": false,
+        "status": "failed",
+        "conversation": "closed",
+        "term": "dusk",
+        "due_elapsed": true,
+        "delivery_started": true,
+        "receipts": [
+          {
+            "kind": "commitment",
+            "revision": 2,
+            "shift": 1,
+            "crates": 0,
+            "term": "dusk",
+            "guide": "Rill",
+            "delivered": false,
+            "returned": false
+          },
+          {
+            "kind": "failed_crossing",
+            "revision": 4,
+            "shift": 3,
+            "crates": 0,
+            "term": "dusk",
+            "guide": "Rill",
+            "delivered": false,
+            "returned": false
+          }
+        ],
+        "encounter": {
+          "kind": "guided",
+          "active": false,
+          "stage": 1,
+          "beat": 2,
+          "position": 0,
+          "health": 0,
+          "resolve": 11,
+          "required_position": 4,
+          "maximum_beats": 6,
+          "threat": "PULSE at your current position: walking or dashing leaves it.",
+          "xp": 10
+        },
+        "scope": "In-session original experiment; no persistent quest, Unity/Windows or human validation"
+      }
+    },
+    "overdue": {
+      "sequence": 94,
+      "command": "work",
+      "accepted": true,
+      "text": "With Rill preparing the coil, you carry 1 shutter crate(s). 2 remain; 0 shifts of light. Any unsigned offer needs a fresh conversation.",
+      "state": {
+        "revision": 6,
+        "shift": 4,
+        "remaining": 0,
+        "crates": 3,
+        "crates_required": 5,
+        "capacity": 1,
+        "guide_available": false,
+        "guide_location": "local-preparing",
+        "surveyed": true,
+        "delivered": false,
+        "returned": false,
+        "status": "committed",
+        "conversation": "closed",
+        "term": "dusk",
+        "due_elapsed": true,
+        "delivery_started": false,
+        "receipts": [
+          {
+            "kind": "commitment",
+            "revision": 2,
+            "shift": 1,
+            "crates": 0,
+            "term": "dusk",
+            "guide": "Rill",
+            "delivered": false,
+            "returned": false
+          }
+        ],
+        "encounter": {
+          "kind": "survey",
+          "active": false,
+          "stage": 1,
+          "beat": 4,
+          "position": 4,
+          "health": 10,
+          "resolve": 3,
+          "required_position": 4,
+          "maximum_beats": 6,
+          "threat": "PULSE at your current position: walking or dashing leaves it.",
+          "xp": 10
+        },
+        "scope": "In-session original experiment; no persistent quest, Unity/Windows or human validation"
+      }
+    }
+  },
+  "negatives": [
+    {
+      "id": "wire-duplicate command field",
+      "status": 400,
+      "state_unchanged": true
+    },
+    {
+      "id": "wire-extra command field",
+      "status": 400,
+      "state_unchanged": true
+    },
+    {
+      "id": "wire-fabricated complete command",
+      "status": 400,
+      "state_unchanged": true
+    },
+    {
+      "id": "wire-malformed JSON",
+      "status": 400,
+      "state_unchanged": true
+    },
+    {
+      "id": "wire-cross-origin command",
+      "status": 400,
+      "state_unchanged": true
+    },
+    {
+      "id": "wire-wrong content type",
+      "status": 400,
+      "state_unchanged": true
+    },
+    {
+      "id": "wire-oversized request",
+      "status": 400,
+      "state_unchanged": true
+    },
+    {
+      "id": "stale-confirmation",
+      "before": {
+        "sequence": 23,
+        "command": "work",
+        "accepted": true,
+        "text": "Rill takes the other end. Together you carry 2 shutter crate(s). 3 remain; 2 shifts of light. Any unsigned offer needs a fresh conversation.",
+        "state": {
+          "revision": 3,
+          "shift": 2,
+          "remaining": 2,
+          "crates": 2,
+          "crates_required": 5,
+          "capacity": 2,
+          "guide_available": true,
+          "guide_location": "local",
+          "surveyed": true,
+          "delivered": false,
+          "returned": false,
+          "status": "open",
+          "conversation": "closed",
+          "term": null,
+          "due_elapsed": false,
+          "delivery_started": false,
+          "receipts": [],
+          "encounter": {
+            "kind": "survey",
+            "active": false,
+            "stage": 1,
+            "beat": 4,
+            "position": 4,
+            "health": 10,
+            "resolve": 3,
+            "required_position": 4,
+            "maximum_beats": 6,
+            "threat": "PULSE at your current position: walking or dashing leaves it.",
+            "xp": 10
+          },
+          "scope": "In-session original experiment; no persistent quest, Unity/Windows or human validation"
+        }
+      },
+      "after": {
+        "sequence": 24,
+        "command": "confirm",
+        "accepted": false,
+        "text": "Confirmation refused: facts, offer and written terms must still be current.",
+        "state": {
+          "revision": 3,
+          "shift": 2,
+          "remaining": 2,
+          "crates": 2,
+          "crates_required": 5,
+          "capacity": 2,
+          "guide_available": true,
+          "guide_location": "local",
+          "surveyed": true,
+          "delivered": false,
+          "returned": false,
+          "status": "open",
+          "conversation": "closed",
+          "term": null,
+          "due_elapsed": false,
+          "delivery_started": false,
+          "receipts": [],
+          "encounter": {
+            "kind": "survey",
+            "active": false,
+            "stage": 1,
+            "beat": 4,
+            "position": 4,
+            "health": 10,
+            "resolve": 3,
+            "required_position": 4,
+            "maximum_beats": 6,
+            "threat": "PULSE at your current position: walking or dashing leaves it.",
+            "xp": 10
+          },
+          "scope": "In-session original experiment; no persistent quest, Unity/Windows or human validation"
+        }
+      },
+      "classification": "Actual owner refusal; current authored refusal rendered, no fictional outcome"
+    },
+    {
+      "id": "failed-guided",
+      "actual": {
+        "sequence": 80,
+        "command": "work",
+        "accepted": true,
+        "text": "With Rill unaccounted for, you carry 1 shutter crate(s). 4 remain; 0 shifts of light. Any unsigned offer needs a fresh conversation.",
+        "state": {
+          "revision": 6,
+          "shift": 4,
+          "remaining": 0,
+          "crates": 1,
+          "crates_required": 5,
+          "capacity": 1,
+          "guide_available": false,
+          "guide_location": "unaccounted",
+          "surveyed": true,
+          "delivered": false,
+          "returned": false,
+          "status": "failed",
+          "conversation": "closed",
+          "term": "dusk",
+          "due_elapsed": true,
+          "delivery_started": true,
+          "receipts": [
+            {
+              "kind": "commitment",
+              "revision": 2,
+              "shift": 1,
+              "crates": 0,
+              "term": "dusk",
+              "guide": "Rill",
+              "delivered": false,
+              "returned": false
+            },
+            {
+              "kind": "failed_crossing",
+              "revision": 4,
+              "shift": 3,
+              "crates": 0,
+              "term": "dusk",
+              "guide": "Rill",
+              "delivered": false,
+              "returned": false
+            }
+          ],
+          "encounter": {
+            "kind": "guided",
+            "active": false,
+            "stage": 1,
+            "beat": 2,
+            "position": 0,
+            "health": 0,
+            "resolve": 11,
+            "required_position": 4,
+            "maximum_beats": 6,
+            "threat": "PULSE at your current position: walking or dashing leaves it.",
+            "xp": 10
+          },
+          "scope": "In-session original experiment; no persistent quest, Unity/Windows or human validation"
+        }
+      },
+      "classification": "Actual encounter loss and overdue unresolved obligation, no inferred death or return"
+    },
+    {
+      "id": "deadline-not-observation",
+      "actual": {
+        "sequence": 94,
+        "command": "work",
+        "accepted": true,
+        "text": "With Rill preparing the coil, you carry 1 shutter crate(s). 2 remain; 0 shifts of light. Any unsigned offer needs a fresh conversation.",
+        "state": {
+          "revision": 6,
+          "shift": 4,
+          "remaining": 0,
+          "crates": 3,
+          "crates_required": 5,
+          "capacity": 1,
+          "guide_available": false,
+          "guide_location": "local-preparing",
+          "surveyed": true,
+          "delivered": false,
+          "returned": false,
+          "status": "committed",
+          "conversation": "closed",
+          "term": "dusk",
+          "due_elapsed": true,
+          "delivery_started": false,
+          "receipts": [
+            {
+              "kind": "commitment",
+              "revision": 2,
+              "shift": 1,
+              "crates": 0,
+              "term": "dusk",
+              "guide": "Rill",
+              "delivered": false,
+              "returned": false
+            }
+          ],
+          "encounter": {
+            "kind": "survey",
+            "active": false,
+            "stage": 1,
+            "beat": 4,
+            "position": 4,
+            "health": 10,
+            "resolve": 3,
+            "required_position": 4,
+            "maximum_beats": 6,
+            "threat": "PULSE at your current position: walking or dashing leaves it.",
+            "xp": 10
+          },
+          "scope": "In-session original experiment; no persistent quest, Unity/Windows or human validation"
+        }
+      }
+    },
+    {
+      "id": "delayed-accepted-response",
+      "prior": {
+        "sequence": 95,
+        "command": "restart",
+        "accepted": true,
+        "text": "Edda sets a coil beside five shutter crates. 'The shutters close our store before dark. The coil is for the far bank.' Rill hooks a boot under the board. 'Not on an unchecked route. Survey it first. This line stays here.'",
+        "state": {
+          "revision": 0,
+          "shift": 0,
+          "remaining": 4,
+          "crates": 0,
+          "crates_required": 5,
+          "capacity": 2,
+          "guide_available": true,
+          "guide_location": "local",
+          "surveyed": false,
+          "delivered": false,
+          "returned": false,
+          "status": "open",
+          "conversation": "closed",
+          "term": null,
+          "due_elapsed": false,
+          "delivery_started": false,
+          "receipts": [],
+          "encounter": {
+            "kind": "none",
+            "active": false,
+            "stage": 0,
+            "beat": 0,
+            "position": 0,
+            "health": 0,
+            "resolve": 0,
+            "required_position": 2,
+            "maximum_beats": 4,
+            "threat": "BOLT: moving exposes health; the approach skill spends resolve to protect.",
+            "xp": 0
+          },
+          "scope": "In-session original experiment; no persistent quest, Unity/Windows or human validation"
+        }
+      },
+      "committed": {
+        "sequence": 96,
+        "command": "work",
+        "accepted": true,
+        "text": "Rill takes the other end. Together you carry 2 shutter crate(s). 3 remain; 3 shifts of light. Any unsigned offer needs a fresh conversation.",
+        "state": {
+          "revision": 1,
+          "shift": 1,
+          "remaining": 3,
+          "crates": 2,
+          "crates_required": 5,
+          "capacity": 2,
+          "guide_available": true,
+          "guide_location": "local",
+          "surveyed": false,
+          "delivered": false,
+          "returned": false,
+          "status": "open",
+          "conversation": "closed",
+          "term": null,
+          "due_elapsed": false,
+          "delivery_started": false,
+          "receipts": [],
+          "encounter": {
+            "kind": "none",
+            "active": false,
+            "stage": 0,
+            "beat": 0,
+            "position": 0,
+            "health": 0,
+            "resolve": 0,
+            "required_position": 2,
+            "maximum_beats": 4,
+            "threat": "BOLT: moving exposes health; the approach skill spends resolve to protect.",
+            "xp": 0
+          },
+          "scope": "In-session original experiment; no persistent quest, Unity/Windows or human validation"
+        }
+      },
+      "classification": "Server action committed; focus invalidated pending visual ownership; explicit GET reconnect observes it"
+    },
+    {
+      "id": "old-queue-after-reconnect",
+      "controlled_nonabortable_response": true,
+      "committed": {
+        "sequence": 98,
+        "command": "work",
+        "accepted": true,
+        "text": "Rill takes the other end. Together you carry 2 shutter crate(s). 3 remain; 3 shifts of light. Any unsigned offer needs a fresh conversation.",
+        "state": {
+          "revision": 1,
+          "shift": 1,
+          "remaining": 3,
+          "crates": 2,
+          "crates_required": 5,
+          "capacity": 2,
+          "guide_available": true,
+          "guide_location": "local",
+          "surveyed": false,
+          "delivered": false,
+          "returned": false,
+          "status": "open",
+          "conversation": "closed",
+          "term": null,
+          "due_elapsed": false,
+          "delivery_started": false,
+          "receipts": [],
+          "encounter": {
+            "kind": "none",
+            "active": false,
+            "stage": 0,
+            "beat": 0,
+            "position": 0,
+            "health": 0,
+            "resolve": 0,
+            "required_position": 2,
+            "maximum_beats": 4,
+            "threat": "BOLT: moving exposes health; the approach skill spends resolve to protect.",
+            "xp": 0
+          },
+          "scope": "In-session original experiment; no persistent quest, Unity/Windows or human validation"
+        }
+      },
+      "after": {
+        "sequence": 98,
+        "command": "work",
+        "accepted": true,
+        "text": "Rill takes the other end. Together you carry 2 shutter crate(s). 3 remain; 3 shifts of light. Any unsigned offer needs a fresh conversation.",
+        "state": {
+          "revision": 1,
+          "shift": 1,
+          "remaining": 3,
+          "crates": 2,
+          "crates_required": 5,
+          "capacity": 2,
+          "guide_available": true,
+          "guide_location": "local",
+          "surveyed": false,
+          "delivered": false,
+          "returned": false,
+          "status": "open",
+          "conversation": "closed",
+          "term": null,
+          "due_elapsed": false,
+          "delivery_started": false,
+          "receipts": [],
+          "encounter": {
+            "kind": "none",
+            "active": false,
+            "stage": 0,
+            "beat": 0,
+            "position": 0,
+            "health": 0,
+            "resolve": 0,
+            "required_position": 2,
+            "maximum_beats": 4,
+            "threat": "BOLT: moving exposes health; the approach skill spends resolve to protect.",
+            "xp": 0
+          },
+          "scope": "In-session original experiment; no persistent quest, Unity/Windows or human validation"
+        }
+      },
+      "classification": "Real first command committed; old-view queued second command never executes even after explicit reconnection"
+    },
+    {
+      "id": "forced-observed-return-renderer",
+      "detected": true,
+      "mutation": {
+        "target": "const returnObserved = Boolean(s.returned);",
+        "replacement": "const returnObserved = true;",
+        "original_sha256": "527b633fec85cac724e98f4de671c56bbd728f713efefe125676848dc164942d",
+        "mutated_sha256": "a0414ba5eb7de92c3b12597c25c0dec6e433832a630df8f9d02ddb60aacf1939"
+      },
+      "actual": {
+        "sequence": 13,
+        "command": "wait",
+        "accepted": true,
+        "text": "Wait: 6 damage, 0 resolve spent. Crossing failed. This delivery attempt has ended; no completion reward. Local work may continue if light remains. You retreat to Edda's board without a completed handoff. She leaves delivery and completed-journey return unchecked. Rill is unaccounted for; this is not a confirmed death or return. 5 local crates remain.",
+        "state": {
+          "revision": 5,
+          "shift": 3,
+          "remaining": 1,
+          "crates": 0,
+          "crates_required": 5,
+          "capacity": 1,
+          "guide_available": false,
+          "guide_location": "unaccounted",
+          "surveyed": true,
+          "delivered": false,
+          "returned": false,
+          "status": "failed",
+          "conversation": "closed",
+          "term": "dusk",
+          "due_elapsed": false,
+          "delivery_started": true,
+          "receipts": [
+            {
+              "kind": "commitment",
+              "revision": 2,
+              "shift": 1,
+              "crates": 0,
+              "term": "dusk",
+              "guide": "Rill",
+              "delivered": false,
+              "returned": false
+            },
+            {
+              "kind": "failed_crossing",
+              "revision": 4,
+              "shift": 3,
+              "crates": 0,
+              "term": "dusk",
+              "guide": "Rill",
+              "delivered": false,
+              "returned": false
+            }
+          ],
+          "encounter": {
+            "kind": "guided",
+            "active": false,
+            "stage": 1,
+            "beat": 2,
+            "position": 0,
+            "health": 0,
+            "resolve": 11,
+            "required_position": 4,
+            "maximum_beats": 6,
+            "threat": "PULSE at your current position: walking or dashing leaves it.",
+            "xp": 10
+          },
+          "scope": "In-session original experiment; no persistent quest, Unity/Windows or human validation"
+        }
+      },
+      "assertion": {
+        "name": "AssertionError",
+        "code": "ERR_ASSERTION",
+        "message": "observed return must follow actual owner\n\n'true' !== 'false'\n"
+      },
+      "classification": "Specific fidelity assertion failure in isolated actual renderer; not a launch/environment failure"
+    }
+  ],
+  "mutants": [
+    {
+      "id": "forced-observed-return-renderer",
+      "detected": true,
+      "mutation": {
+        "target": "const returnObserved = Boolean(s.returned);",
+        "replacement": "const returnObserved = true;",
+        "original_sha256": "527b633fec85cac724e98f4de671c56bbd728f713efefe125676848dc164942d",
+        "mutated_sha256": "a0414ba5eb7de92c3b12597c25c0dec6e433832a630df8f9d02ddb60aacf1939"
+      },
+      "actual": {
+        "sequence": 13,
+        "command": "wait",
+        "accepted": true,
+        "text": "Wait: 6 damage, 0 resolve spent. Crossing failed. This delivery attempt has ended; no completion reward. Local work may continue if light remains. You retreat to Edda's board without a completed handoff. She leaves delivery and completed-journey return unchecked. Rill is unaccounted for; this is not a confirmed death or return. 5 local crates remain.",
+        "state": {
+          "revision": 5,
+          "shift": 3,
+          "remaining": 1,
+          "crates": 0,
+          "crates_required": 5,
+          "capacity": 1,
+          "guide_available": false,
+          "guide_location": "unaccounted",
+          "surveyed": true,
+          "delivered": false,
+          "returned": false,
+          "status": "failed",
+          "conversation": "closed",
+          "term": "dusk",
+          "due_elapsed": false,
+          "delivery_started": true,
+          "receipts": [
+            {
+              "kind": "commitment",
+              "revision": 2,
+              "shift": 1,
+              "crates": 0,
+              "term": "dusk",
+              "guide": "Rill",
+              "delivered": false,
+              "returned": false
+            },
+            {
+              "kind": "failed_crossing",
+              "revision": 4,
+              "shift": 3,
+              "crates": 0,
+              "term": "dusk",
+              "guide": "Rill",
+              "delivered": false,
+              "returned": false
+            }
+          ],
+          "encounter": {
+            "kind": "guided",
+            "active": false,
+            "stage": 1,
+            "beat": 2,
+            "position": 0,
+            "health": 0,
+            "resolve": 11,
+            "required_position": 4,
+            "maximum_beats": 6,
+            "threat": "PULSE at your current position: walking or dashing leaves it.",
+            "xp": 10
+          },
+          "scope": "In-session original experiment; no persistent quest, Unity/Windows or human validation"
+        }
+      },
+      "assertion": {
+        "name": "AssertionError",
+        "code": "ERR_ASSERTION",
+        "message": "observed return must follow actual owner\n\n'true' !== 'false'\n"
+      },
+      "classification": "Specific fidelity assertion failure in isolated actual renderer; not a launch/environment failure"
+    }
+  ],
+  "source_sha256": {
+    "north-star/authored-scene/Checks/NorthStar.AuthoredSceneChecks.csproj": "ffba18e3274c2a5bf577fd1c543973a266978949fea5e3794b49b34b65f1b492",
+    "north-star/authored-scene/Checks/Program.cs": "40aeabc720e4fbdb2f03727373d137c59cb8afc002e2533e4f6b5cc6ce141030",
+    "north-star/authored-scene/Host/NorthStar.AuthoredScene.csproj": "f4f306dc041ac7f001b017f7e919c83b0c8b0c85a0ee45f93de10089a2b52b61",
+    "north-star/authored-scene/Host/Program.cs": "c4ebbac2a8d59ce0cc129a3c158232e143c6f117d70c05703c46ef0c9b6314c9",
+    "north-star/authored-scene/Host/Room.cs": "5ed1c156bc679b833ca6bd9bd58e62fd51184edd4e8226e15469770209a4bc0e",
+    "north-star/authored-scene/tools/browser.mjs": "7542f28bb92956a9bec6bcceaad3e86e02886007f8b5e7d20085b714fc9803dd",
+    "north-star/authored-scene/web/app.js": "527b633fec85cac724e98f4de671c56bbd728f713efefe125676848dc164942d",
+    "north-star/authored-scene/web/index.html": "1d5e33f0165992c4af0a9dd10886287e99228e1a3c1142684709de126135bf4b",
+    "north-star/authored-scene/web/style.css": "2bebe9e87cabecc7b9a31cb6ec9c902997bb882b68a7d538fb8eea5259a07d8c",
+    "north-star/csharp/Crossing/NorthStar.Crossing.csproj": "09fbdffe415d44079f66da83d4d22e5b91169f3f1abdd0e1ebc2bacd2e3f0c88",
+    "north-star/csharp/Crossing/Program.cs": "268c1b5ac582dd06f15eb3e40e7ce859a9c58eecfc58c7586d94bcaecf9c595e",
+    "north-star/csharp/Crossing/Session.cs": "d25ac05ba1a94432474dd1b14b4fd608e446fc5344dcc4f779d8d5fe27a1b2c5",
+    "north-star/csharp/Domain/Crafting.cs": "5a5a892b3e68cff73f7a443d7c014c79dbebf2954d28f447e1bf3a9c4759de57",
+    "north-star/csharp/Domain/Loadout.cs": "a1296ca13b5ba6728c073320b860e369ad2e01fdaacb45b5237ef40d0243f682",
+    "north-star/csharp/Domain/NorthStar.Domain.csproj": "9570b674acfea69bb60098f495afd3b9e2cef2575fcfeb6db71c2cdecb2c4876",
+    "north-star/csharp/Domain/Progression.cs": "8495e1ad92fea069c2c3989f6f2cc2600980575e72812df9480ed193c51c8685",
+    "north-star/csharp/Narrative/NorthStar.Narrative.csproj": "5fb0f921d93c92180940885ea539cff43fa2c36f4f5160809a276e2c33687201",
+    "north-star/csharp/Narrative/Program.cs": "7277914d98e49373652b6ab44dd5c1487745076f46ad3c395add981ecf3f512b",
+    "north-star/csharp/Narrative/RequestExpedition.cs": "fc18705f8ba1c0f4f65924861b55e21e4e05b0a5d2658e121e0a5cdce85710d4",
+    "north-star/csharp/global.json": "e0c0882461e712f6c2c66241bf2f175c60832e3ff077dc26091ff8c661d4193e",
+    "projects/realtime-integration-lab/package-lock.json": "aa191ef2158e6cc6f770bf4b3ee44dca17175ef1a3cd572b98115246bf46aea7",
+    "projects/realtime-integration-lab/package.json": "42e3cc9633e522dd6d9a5c11023418331129632881a8bf0b95e3717247d57ebe"
+  },
+  "source_stable": true,
+  "limits": "Synthetic browser actions against one actual authoritative in-session C# RequestExpedition. DOM/SVG fidelity and lifecycle observations only; no human comprehension, consent experience, accessibility/readability, enjoyment, physical device, production networking, Unity, Windows or Steam validation."
+}

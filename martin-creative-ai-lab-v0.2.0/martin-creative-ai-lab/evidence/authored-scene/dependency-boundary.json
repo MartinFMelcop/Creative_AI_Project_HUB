@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "checks": [
+    {
+      "instrument": "rpg-systems",
+      "current_inputs_equal_recorded": true,
+      "record": "evidence/rpg-progression/results.json",
+      "record_sha256": "522ba7e3f2a2e9e3794d33c3333d235a1c77763d127a2859653e9236c2d176bf",
+      "fingerprint_owner_sha256": "69f7bf552daec98a4749492831b3c1f8909cf98288a341dbdf63e78d5bb595a0",
+      "runtime_reexecuted": false
+    },
+    {
+      "instrument": "economy-simulation",
+      "current_inputs_equal_recorded": true,
+      "record": "evidence/economy-crafting/results.json",
+      "record_sha256": "e34c1976f059db2f85c3bb11a45302f68d12b71d61e1b1b0a988ee5a077fc691",
+      "fingerprint_owner_sha256": "8db26596115394a90b34c62d4fdc47d1217a333f0d6b8605a4f935f10589d382",
+      "runtime_reexecuted": false
+    },
+    {
+      "instrument": "world-gameplay",
+      "current_inputs_equal_recorded": true,
+      "record": "evidence/world-loadout/results.json",
+      "record_sha256": "3e45a54000ff9cfc6aeb50ccd78356b9c9cb304c3d44e81d82f05e4bc112f055",
+      "fingerprint_owner_sha256": "487093e7e3f348e6ee054e2f54362d8365001743b844a9c17bd50c3138d2324f",
+      "runtime_reexecuted": false
+    },
+    {
+      "instrument": "networking-persistence",
+      "current_inputs_equal_recorded": true,
+      "record": "evidence/persistent-expedition/results.json",
+      "record_sha256": "3e24e19524e7ad1d5d248a1856758d0a61c70f16dc27d7b8e5cf15b720854a3b",
+      "fingerprint_owner_sha256": "1cab3fbc0d526fcb186e9aa23a03d07c4aa2a83465f987429414d76a77c0c78c",
+      "runtime_reexecuted": false
+    },
+    {
+      "instrument": "narrative-continuity",
+      "current_inputs_equal_recorded": true,
+      "record": "evidence/narrative-continuity/results.json",
+      "record_sha256": "e83cb621700f1d3552911ff063ade2f8990bdfdeb0e600bbc2701c915a1d4413",
+      "fingerprint_owner_sha256": "d58b292b37eb857862424db5e5edc2cd5dbaed56e43241926847be7eac7a4a21",
+      "runtime_reexecuted": false
+    }
+  ],
+  "native_narrative_baseline": {
+    "passed": 95,
+    "failed": 0
+  },
+  "scope": "Five actual identity functions reproduce exact prior maps. New reverse-dependent application changes no existing source/library/project input. Prior studies remain historical results, not falsely reexecuted matrices. Unchanged NarrativeChecks actually reran95 controls under the restored SDK."
+}

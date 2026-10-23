@@ -1,5 +1,10 @@
 # Virgo Diamond: The North Star
 
+[The coil and the shutters](authored-scene/README.md) now presents one actual C#
+request/work owner and its encounters as a coherent original visible scene.
+[Inspected execution](../evidence/authored-scene/RUN.json) preserves unfinished work
+and unconfirmed outcomes; this remains local .NET/browser, not Unity/Windows delivery.
+
 An original MMORPG whose characters become recognizable through appearance, builds,
 classes, specializations, professions, equipment, abilities, accomplishments and
 meaningful adventures. This is the HUB's principal product; the

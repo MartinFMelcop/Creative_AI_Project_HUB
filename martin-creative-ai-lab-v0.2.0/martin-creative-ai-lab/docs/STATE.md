@@ -1,131 +1,138 @@
 # Current transformation continuity
 
 **Updated:** 2026-10-23 UTC. **SEED:** 0.34.0. **Mode:** DEVELOPMENT with executed
-research. Initial root `/workspace/Creative_AI_Project_HUB`, branch `work`, clean
-tracked/untracked tree, HEAD `45405508d79c024e487a3903c3ca0965f40a0d42`.
-Fetch found main `5c5b8a0d302138d3047f3d2452f0064d608a7a50`, divergence0/1;
-normal fast-forward reconciled it without local commits, rewriting or discarded work.
-That fetched SHA is this increment's implementation baseline. Final publication/CI
-are separately verified in the execution handoff, not inferred from local tests.
+product integration. Initial root `/workspace/Creative_AI_Project_HUB`, branch `work`,
+HEAD `2ae15b960fd5f0830bf6ce26b44fa4e82d5e48f6`, clean tracked/untracked work.
+Fetched main matched HEAD, divergence0/0, no outgoing local commits. Final publication
+and CI are separately verified in the handoff, not inferred from local execution.
 
-This file owns active continuity and rolling investment. Durable direction belongs
-to SEED, maturity/consumption to [the catalog](../labs/origins.json), creative status
-to [DESIGN](../north-star/DESIGN.md), actual results to evidence. Recover the full
-[Continuous Development v2](prompts/CONTINUOUS_DEVELOPMENT.md) each execution.
+This file owns active continuity and rolling investment. SEED owns durable direction,
+[the catalog](../labs/origins.json) maturity/consumption, [DESIGN](../north-star/DESIGN.md)
+creative status and evidence actual observations. Recover the full
+[Continuous Development v2](prompts/CONTINUOUS_DEVELOPMENT.md) every execution.
 
-## Active transformation — ten bounded operational methods
+## Active product — one visible authored owner
 
-All eleven destinations remain mandatory. Ten now operate: AI Evaluation, Audio/Music,
-Visual/Animation, Input/Timing, Narrative & Continuity, Networking & Persistence,
-World & Gameplay, Economy & Simulation, RPG Systems & Progression, and Combat &
-Responsiveness. **Build/Operations remains incomplete.** A bounded operational method
-is not a finished domain, independent human validation or full legacy consumption.
-[Laboratory entry points](../labs/README.md) retain each method and its evidence.
+[The coil and the shutters](../north-star/authored-scene/README.md) now composes one
+unchanged RequestExpedition and its actual private Crossing encounters into an original
+visible scene. Edda's five-crate work competes with survey/travel; Rill's line distinguishes
+secured, locally preparing, away, actual guided return and unaccounted-for states.
+Unsigned terms spend no time/ownership. Signing reduces local capacity before departure.
+Withdrawal restores it and retains both receipts. Guided success leaves three crates
+unfinished after the last work shift; solo travel leaves Rill local. Failed delivery
+and overdue obligations never manufacture delivery, completed-journey return or death.
+Fixed Lure/Trail remains scene setup, not free identity selection or approved canon.
 
-**Current increment:** Independent Engineering, Scientific and Creative analyses ran
-in parallel against the same actual lab/product/lifecycle alternatives. Engineering
-and Science preferred a real fresh-context candidate over another calibration or
-standalone C# module. Creation preferred composing the authored RequestExpedition
-with visible consequences and real encounters. Parent selected the feasible candidate
-study to mature a mandatory incomplete destination; authored integration remains the
-corrective product frontier. Engineering implemented only instrument/tests; Science
-owned method/validity documentation; Creation reviewed public provenance; parent owned
-candidate orchestration, evidence, catalog, CI and publication. Brains chapters
-ENG-004/015/028, SCI-076/077, CRE-005(A)/061(H) influenced those bounded decisions;
-these libraries/agents are not independent human approval.
+**Selection and ownership:** Three independent analyses ran in parallel. Engineering,
+Science and Creation all preferred coherent authored integration after the AI study.
+Licensed Windows delivery remained blocked; no participants/devices were available for
+experience claims; another AI/media calibration had less immediate product value.
+Engineering implemented Host/Checks; Creation implemented original SVG/web presentation;
+Science wrote the actual browser instrument and began execution. A usage limit stopped
+that agent after an instrument failure; primary completed execution, corrections,
+queue controls, image inspection, evidence, lifecycle review and publication. Relevant
+full chapters ENG-004/015/028, SCI-076/077 and CRE-005(A)/045/046/061(H) materially informed
+one owner, costs, concrete staging and the observation-versus-experience boundary.
+No agent review is independent human validation or author approval.
 
-[AI execution](../evidence/ai-evaluation/RUN.json) adapts the unchanged P02 pinned
-export, scope, calibration and environment-attribution owner. A candidate agent was
-spawned with `fork_turns:none` after the protocol was frozen, received only the exact
-instruction and nine-file starter, and returned only a changed client. No evaluator
-feedback or second delivery was provided. Protocol, exact instruction, first bytes,
-hash, tool/access self-report and available identity/cost limits are retained.
-Shared filesystem/procedural rules are not an enforced sandbox; unknown exposure to
-public history/training remains. Do not call this an unseen benchmark or model score.
+[Actual execution](../evidence/authored-scene/RUN.json):45 native Room/domain controls,
+35 actual Chromium/C# controls, seven independent HTTP smoke controls and three input-
+closure regressions passed. The unchanged NarrativeChecks also executed95 controls.
+Strict HTTP/JSON and allowlisted assets preserve state on invalid input. GET/redraw/
+wall time and reduced motion never advance gameplay. An isolated actual renderer that
+invents return after a failed guided journey is detected by the specific owner/DOM
+assertion, not a launch failure. Captures were inspected; a post-signature caption and
+static premise were corrected and bound by browser checks.
 
-Final actual baseline is rejected with 15 passes and 2 failures on the exact known
-polling/stale-state defects;
-reference and candidate each pass 17/17, with no skips/cancellations. Missing Chromium
-on the pinned reference is inconclusive at environment, not a candidate defect.
-Seven destination regressions and 25 unchanged origin-runner regressions pass.
-The first evaluator execution exposed an actual source-identity race: editing the
-instrument while it ran could associate loaded code with end-of-run changed bytes.
-That superseded result is retained and cannot authorize acceptance. Final execution
-uses initial hashes plus a source-stability gate and the unchanged frozen candidate;
-a dedicated controlled mutation is detected. A further artifact replay reproduced
-exact outcome/control/source identities. The superseded study, corrected study and
-replay are three evaluator executions of one candidate delivery. Private `_hasPingExpired` use limits future API compatibility.
-The accepted artifact is retained for study, not installed into P11 or North Star.
+A delayed command actually commits at C# before focus loss. Its late reply cannot revive
+the stale view; explicit reconnect reads the real result without retry. A controlled
+non-abortable response plus queued old intent proves reconnection cannot execute the old
+second command. The browser owns no sound/contact simulation. It deliberately remains
+silent rather than inventing event cues from dialogue or button presses.
 
-**Consumption:** P02's selected export/calibration/attribution methods are INTEGRATED
-in the actual destination instrument. Broader task validity, generalization, enforced
-isolation and an actual North Star defect remain UNRESOLVED. No other source outcome
-is reclassified. Full effects/passives, NPC schedules, quest/reputation/faction/world
-catalogs, narrative persistence, creation parsing, item/tool/unlock catalogs, human
-experience, commercial clearance and production ownership remain unresolved.
+**Retained negative:** Initial browser execution tried to click decline without first
+opening the consultation. Primary reproduced that instrument timeout, then corrected the
+new UI journey to use its visible controls. No domain rule, timeout or existing fixture
+was changed. Its failure and source identities remain retained; failed executions are
+not counted as completed studies. This cycle adds no new source capability classification.
 
-## Product, tool and next acceptance
+## Eleven laboratory and remaining source obligations
 
-Unity/C# remains selected, Windows-first and Steam-intended. This cycle changes no
-C# gameplay, audio clock, save format or creative canon. Prior portable C#8/
-netstandard2.1 rules/audio and real .NET10 Linux/browser consumers retain their
-[evidence](../north-star/csharp/README.md). The nine preceding lab results remain
-scoped; no unchanged media, relay, request, recovery, crafting or progression matrix
-was ceremonially repeated or claimed freshly executed.
+Ten bounded methods remain operational: AI Evaluation, Audio/Music, Visual/Animation,
+Input/Timing, Narrative & Continuity, Networking & Persistence, World & Gameplay,
+Economy & Simulation, RPG Systems & Progression and Combat & Responsiveness.
+**Build/Operations remains incomplete.** All eleven destinations remain mandatory;
+a bounded method is not a finished domain or full source consumption. [Entry points](../labs/README.md)
+retain each method. The narrative method gains a real visible consumer, not a new empty
+lab, duplicated extraction or extra strategic study unit.
 
-**Fresh tool observations:** Node24.19.0, npm11.9.0 and actual Chromium execute;
-the evaluator records direct dependencies and browser versions. `dotnet` is absent
-from this fresh environment's PATH and bounded executable search, unlike the earlier
-SDK-equipped session. Unity/Hub were absent from PATH and targeted installation
-probes; no usable activated license or Windows module was identified. No license
-contents were read, Editor patch invented or policy bypass attempted. Unity import,
-Windows player, Steam/account trust, hardware latency, human listening/recognition,
-masking/accessibility and production reliability remain unexecuted/unvalidated.
+Prior AI Evaluation retains its one fresh-context delivery, exact instruction/protocol,
+frozen artifact, calibrated17/17 result, environment negative and superseded source-race
+execution. Replay is not another candidate attempt. Procedural shared-filesystem rules
+are not a sandbox or proof of unseen training data. No model score, exact serving model,
+cost telemetry or North Star defect evaluation is newly claimed.
 
-**Next acceptance:** Compare Build/Operations' actual licensed delivery access with
-coherent authored C# integration and appropriate participant/device assessment.
-Strong product alternative: one authoritative RequestExpedition visibly stages
-Edda's unfinished crates and Rill's secured/preparing/departed/observed-return state,
-composing actual encounters, costs, refusal, withdrawal and failure. Its fixed Lure/
-Trail setup must not imply free identity choices. Promised return must never become
-verified return through time, redraw or praise. Recheck SDK/Unity access rather than
-assuming prior tools persist. A genuinely separate consequential C# candidate task
-may later justify AI research; do not turn EVAL-001 into a permanent score or repair
-loop. Do not automatically repeat isolated audio/atlas/relay/request matrices, recovery
-faults, loadout/crafting/progression, fixture repairs or one-time transformation.
+Full effects/passives, NPC schedules, quest/reputation/faction/world catalogs, narrative
+persistence, creation parsing, item/tool/unlock catalogs, commercial rights, human experience
+and production ownership remain genuinely UNRESOLVED with their catalog owners/actions.
+No original Brain, source variant, media, fiction, source pin, incompatible choice or
+previous terminal/Godot consumer was discarded or silently normalized.
 
-## Lifecycle, portfolio and verification boundary
+## Actual tools, dependencies and delivery boundary
 
-Pinned starter/evaluator Git objects, runner, original checks, dependencies and rights
-remain necessary; no package/source has a new safe removal path. Protected Brains,
-reference originals, media variants, notices, Godot consumers and historical formats
-remain preserved. [Inventory](../labs/source-inventory.json) is refreshed for changed
-origin documentation, without pretending documentation is a new capability.
+Unity/C# remains selected, Windows-first and Steam-intended. The pinned SDK10.0.401 was
+restored from official release metadata and the downloaded archive's SHA512 verified.
+Actual serialized C# builds passed without warnings/errors; Node24.19.0 and Chromium
+execute. Fresh PATH/targeted probes found no usable Unity Editor/Hub, activated license
+or Windows module. No patch/license is invented. This .NET10/Linux/browser application
+is not Unity import/Editor, Windows player, Steamworks/account trust, durable narrative,
+hardware latency, participant comprehension, accessibility, enjoyment or commercial clearance.
 
-CI now reproduces the frozen artifact together with the same exact defect/reference
-calibration gates and compares outcome/control/source identities. That subsumes the
-duplicate standalone calibration invocation; its tool remains available, and no test,
-source integrity or security gate is weakened. Runtime raw output/timing stays separate
-from deterministic semantic/identity comparison. Scope routes the new method/evidence
-to chat/evaluation; workflow/shared routing changes conservatively run all retained
-jobs. Public navigation exposes bounded candidate evidence and its negatives.
+The separate authored application references unchanged Narrative/Crossing/Domain projects.
+Their forward dependencies do not include this reverse consumer. Five actual prior
+identity maps reproduce exactly, and six inspected input closures exclude it. Old study
+records remain intact; no unchanged crafting/progression/recovery/audio/atlas/request
+matrix was reexecuted merely to refresh broad source identities. New verification follows
+the actual forward project/compile closure plus web/instrument files and rejects external
+or unsupported wildcard dependencies. The original terminal, audiovisual Crossing and
+Godot consumers still have unique behavior/formats/media/notices and recovery obligations;
+this new scene proves no safe package/source retirement path.
 
-Baseline CI39878560786 was rechecked through supported GitHub run and job access:
-attempt2 is completed/success, and all eight latest-attempt jobs are completed/success. The CLI run-list request returned Forbidden;
-the commit-runs wrapper filters PR-triggered runs and returned none, so neither result
-is evidence of missing CI. Earlier attempt1 integrity cancellation remains preserved;
-no cause is proven and no rerun or weakened gate is requested here. New publication
-and its CI remain separate from baseline and local checks.
+CI adds the new actual host/browser execution and dependency controls to the existing C#
+job and conservatively routes its sources/evidence. Existing security/integrity and all
+retained consumer gates stay intact. Public navigation now shows an actual coherent
+handoff with unfinished work, linking earlier separate audio/visual demonstrations.
+This is product/portfolio value, not a second counted unit or a claim of human experience.
+
+## Verified baseline CI and next acceptance
+
+Baseline CI39881614084 initially completed with failure: seven jobs passed, but the
+chat recovery-browser test timed out at60000ms before AI evaluation. The unchanged test
+passed locally in7.871s under actual Chromium; that isolated run differs from hosted
+concurrency2 and proves no timeout cause. A rerun was requested for failed job120180124389.
+Supported run/job access now confirms attempt2 completed/success with all eight latest-
+attempt jobs successful. The failure remains retained; no test, timeout, fixture or gate
+was weakened. CI39878560786's earlier integrity cancellation likewise has no proven cause.
+New publication and CI remain separate from this baseline and local checks.
+
+**Next acceptance:** Compare actual licensed Windows/Unity access and the incomplete
+Build/Operations method against author/player review of this real scene, consequential
+unresolved source capabilities and production continuity needs. SDK access is now verified;
+do not carry forward the obsolete missing-SDK blocker. Participant/device assessment
+requires actual documented participants/devices; software controls cannot supply them.
+Narrative persistence is still consequential but not automatically next. Do not bind
+every cycle to EVAL-001, media calibration, this scene's matrix, recovery faults,
+loadout/crafting/progression, fixture repair or the one-time transformation. Continue the
+largest coherent justified contribution and retain truthful limits/negative outcomes.
 
 ## Rolling strategic investment — once-counted substantive units
 
 Targets remain approximately **47% legacy/laboratories /40% North Star /13%
-repository/portfolio**, not measured hours, files, tokens or unit-count percentages.
-At most eight units are retained; supporting checks/CI/navigation are not extra units.
+repository/portfolio**, not measured hours or file/token/commit/unit-count percentages.
+At most eight units are retained; supporting checks, CI and navigation are not extra units.
 
 | Completed substantive unit | Primary workstream | Evidence / relative investment |
 |---|---|---|
-| Authored request, finite work and accountable return | North Star | [Narrative](../north-star/csharp/Narrative/README.md); consequence-bearing experience |
 | Source clock/hold/interruption method and policy rivals | Legacy/laboratories | [Input execution](../evidence/input-timing/RUN.json); real origin/destination acceptance |
 | Visible C# continuous work with interruption/rearm | North Star | [Relay](../north-star/csharp/Interaction/README.md); timed resource/goal consumer |
 | Pixel registration and state-owned presentation method | Legacy/laboratories | [Visual execution](../evidence/visual-animation/RUN.json); producer/controls/negatives |
@@ -133,12 +140,12 @@ At most eight units are retained; supporting checks/CI/navigation are not extra 
 | Adaptive source/signal/lifecycle method and rival policies | Legacy/laboratories | [Audio execution](../evidence/audio-music/RUN.json); preserved sources, mixer/PCM and actual destination |
 | Original portable C# composition and consequence-owned playback | North Star | [Audio](../north-star/csharp/Audio/README.md); editable score/cues and real controlled playback |
 | Attributed first-delivery artifact decision with calibrated environment rivals | Legacy/laboratories | [AI evaluation](../evidence/ai-evaluation/RUN.json); actual candidate, frozen provenance, source-race correction and retained negatives |
+| Coherent visible authored work, agreement and actual journey | North Star | [Authored scene](../evidence/authored-scene/RUN.json); one real owner, original staging, inspected consequences and uncertainty quarantine |
 
-The new method, candidate execution and its integrity correction form one coherent
-laboratory unit, counted once. Earlier contextual-consent method aged out; its source
-and evidence remain. Recent work favors lab/product breadth; no convergence to 47/40/13
-is fabricated. This cycle corrects an incomplete-lab obligation, while coherent public
-product/delivery investment remains underrepresented and is the explicit next frontier.
-The CI duplication reduction and public study support this unit; they do not manufacture
-a portfolio quota. Three consecutive units in one stream require correction or a
-concrete dependency/blocker. Completion needs real methods and production evidence.
+The original terminal narrative unit aged out, while its code/rights/evidence remain.
+This visible coherent integration is one North Star unit; original staging, lifecycle
+controls and public demonstration support it without duplicate portfolio accounting.
+It corrects fragmented terminal-only social presentation and follows the prior lab unit.
+Broader delivery/portfolio investment remains underrepresented; no47/40/13 convergence
+is fabricated. Build/Operations and deeper legacy consumption remain explicit obligations.
+Three consecutive units in one stream require correction or a concrete dependency/blocker.

@@ -52,7 +52,7 @@ def affected(path):
     if relative.startswith('labs/') and (relative.endswith('.md') or relative in
                                        {'labs/origins.json', 'labs/source-inventory.json'}):
         return ()
-    if relative.startswith(('north-star/csharp/', 'labs/rpg-systems/', 'evidence/rpg-progression/',
+    if relative.startswith(('north-star/csharp/', 'north-star/authored-scene/', 'evidence/authored-scene/', 'labs/rpg-systems/', 'evidence/rpg-progression/',
                             'references/rave-master/', 'labs/economy-simulation/', 'evidence/economy-crafting/',
                             'labs/world-gameplay/', 'evidence/world-loadout/',
                             'labs/networking-persistence/', 'evidence/persistent-expedition/',

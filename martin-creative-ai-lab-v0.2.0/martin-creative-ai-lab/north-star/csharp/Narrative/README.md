@@ -1,5 +1,9 @@
 # The shutter list — bounded narrative consumer
 
+[The visible authored consumer](../../authored-scene/README.md) now observes this
+same owner, including its actual private encounters, work list, guide line and receipts.
+The terminal remains usable; no narrative rule or persistent format was changed.
+
 An original in-session request scene composes the unchanged actual
 [Crossing encounter](../README.md). Edda needs five shutter crates carried
 before four shifts of light end; a coil also needs a far-bank handoff. Rill will not

@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "run_id": 39881614084,
+  "head_sha": "2ae15b960fd5f0830bf6ce26b44fa4e82d5e48f6",
+  "attempt1": {
+    "status": "completed",
+    "conclusion": "failure",
+    "successful_jobs": 7,
+    "failed_job_id": 120180124389,
+    "failed_job": "chat-and-evaluation",
+    "failed_step": "Exercise real protocol and browser behavior",
+    "test": "operator CLI recovers a live multi-project workspace after simulated loss; original browsers resume and retry safely",
+    "observation": "test timed out after60000ms, before AI evaluation execution; no timeout cause proven"
+  },
+  "targeted_local": {
+    "command": [
+      "node",
+      "--test",
+      "--test-reporter=tap",
+      "tests/recovery-browser.test.cjs"
+    ],
+    "cwd": "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/projects/realtime-integration-lab",
+    "CHROMIUM_PATH": "/usr/bin/chromium",
+    "node": "v24.19.0",
+    "chromium": "Chromium 154.0.8037.57 built on Debian GNU/Linux 13 (trixie)",
+    "exit_code": 0,
+    "elapsed_seconds": 7.871,
+    "source_sha256": "509e657066db02187355d90dc813522bcbe98232f8ecbca3bba812d7d5f61a8e",
+    "source_unchanged": true,
+    "scope": "One unchanged targeted test file; no diagnosis of hosted timeout cause, concurrency effect or general reliability."
+  },
+  "requested_rerun": {
+    "operation": "rerun_workflow_job",
+    "job_id": 120180124389,
+    "result_success": true
+  },
+  "attempt2": {
+    "status": "completed",
+    "conclusion": "success",
+    "successful_latest_attempt_jobs": 8
+  },
+  "limits": "Local isolated pass differs from full hosted npm concurrency2. Successful rerun does not establish the timeout cause. No test, timeout, fixture or gate was changed."
+}

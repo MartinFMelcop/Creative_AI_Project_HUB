@@ -587,3 +587,16 @@ jobs:
           dotnet build north-star/csharp/AudioChecks/NorthStar.AudioChecks.csproj -c Release
           dotnet north-star/csharp/AudioChecks/bin/Release/net10.0/NorthStar.AudioChecks.dll "$RUNNER_TEMP/audio-native.json" "$RUNNER_TEMP/audio-assets"
           node labs/audio-music/browser.mjs dotnet "$RUNNER_TEMP/audio-browser"
+
+      - name: Execute coherent authored C# scene and actual browser consequences
+        run: |
+          python3 -m unittest discover -s north-star/authored-scene/tools -p 'test_*.py'
+          python3 north-star/authored-scene/tools/verify.py --dotnet dotnet --output "$RUNNER_TEMP/authored-scene"
+      - name: Retain authored scene failure diagnostics
+        if: failure()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: authored-scene-diagnostics
+          path: ${{ runner.temp }}/authored-scene
+          if-no-files-found: ignore
+          retention-days: 7

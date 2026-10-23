@@ -28,7 +28,8 @@ class Classification(unittest.TestCase):
         self.assertEqual(self.selected(*paths), set())
 
     def test_csharp_and_progression_only_do_not_rebuild_historical_consumers(self):
-        for path in ('north-star/csharp/Domain/Progression.cs', 'labs/rpg-systems/run.py',
+        for path in ('north-star/authored-scene/Host/Room.cs', 'north-star/authored-scene/tools/browser.mjs',
+                     'evidence/authored-scene/RUN.json', 'north-star/csharp/Domain/Progression.cs', 'labs/rpg-systems/run.py',
                      'evidence/rpg-progression/RUN.json', 'labs/economy-simulation/run.py',
                      'evidence/economy-crafting/RUN.json', 'labs/world-gameplay/run.py',
                      'evidence/world-loadout/RUN.json', 'labs/networking-persistence/run.py',

@@ -23,6 +23,7 @@ and Steam is the intended distribution ecosystem.**
 | Inspect or execute | Actual scope |
 |---|---|
 | [C# development foundation](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/README.md) | Engine-independent progression/crafting domains, connected terminal consumers and checks. No Unity Editor or Windows-player execution is claimed. |
+| [Coherent authored C# scene](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/authored-scene/README.md) | Edda's unfinished work, Rill's actual agreement/departure/return and real encounters share one owner; inspected local browser demonstration. |
 | [Original C# adaptive audio](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/Audio/README.md) | Editable synthesis and consequence-owned cues, aligned musical transport and actual controlled browser playback. |
 | [Embodied C# Crossing](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/Presentation/README.md) | Original avatar, independent outfit/approach and actual protection, advance, damage, refusal and completed encounters; bounded C# browser observer. |
 | [Visual C# interaction](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/Interaction/README.md) | Real timed work, interrupt/rearm, single resource cost and living exit; browser developer view of C# rules. |
@@ -31,7 +32,7 @@ and Steam is the intended distribution ecosystem.**
 | [Committed-rush ability bench](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/prototype/abilities/README.md) | Separately runnable short/long movement commitments; source-only experiment with cost, timing and negative controls. |
 | [Current capability boundaries](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/capabilities.json) | Origin, adapted, destination and independently validated claims remain distinct. No production MMORPG or Steamworks readiness claim. |
 
-![Actual original C# Crossing: Lure advances in Trail outfit](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/evidence/visual-animation/lure.png)
+![Actual authored C# scene: Rill returned, coil delivered and three crates still unfinished](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/evidence/authored-scene/board.png)
 
 [Captured original C# audio](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/evidence/audio-music/crossing-output.wav)
 contains declared excerpts of actual Chromium postmix output, including protection,
@@ -39,8 +40,11 @@ advance, harm, evasion and outcomes. [Audio execution](martin-creative-ai-lab-v0
 records signal/lifecycle controls and negative policies. This is a digital graph capture,
 not a continuous playthrough, physical listening or validated musical quality.
 
-This image captures an actual accepted C# action rendered as original SVG; it is neither
-Unity nor concept art. [Visual execution](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/evidence/visual-animation/RUN.json)
+This image records the actual guided handoff and later local work in one original C# scene.
+[Authored execution](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/evidence/authored-scene/RUN.json)
+retains refusal, withdrawal, solo travel, failed delivery, overdue obligations and lifecycle negatives.
+The [separate embodied Crossing image](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/evidence/visual-animation/lure.png)
+remains available with its independent identity choices. [Visual execution](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/evidence/visual-animation/RUN.json)
 retains source geometry/state controls, failed policies and actual browser journeys.
 The [earlier relay capture](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/evidence/input-timing/working.png) and
 [retained Godot image](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/evidence/north-star-return-gate/guardian-working.png)

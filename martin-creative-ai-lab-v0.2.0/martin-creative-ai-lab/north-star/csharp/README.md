@@ -1,5 +1,9 @@
 # North Star C# gameplay foundation
 
+[The authored scene](../authored-scene/README.md) composes the unchanged narrative
+owner and actual encounters into one visible local experience. Its separate .NET10
+application consumes these projects; it changes no source rule or save format.
+
 A functioning **engine-independent C# domain and original terminal encounter**, built
 as the first practical step toward the selected Unity/C# production direction.
 This is not a Unity project, Editor execution, Windows player, Steamworks integration

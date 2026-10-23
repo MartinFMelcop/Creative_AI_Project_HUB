@@ -658,3 +658,39 @@ producer byte differences. Technical alignment/headroom and agent review do not 
 absence of perceptual masking, comprehension, comfort, accessibility, enjoyment,
 exclusive rights, Unity Editor, Windows or Steam readiness. Relevant listeners/devices
 and current commercial publication requirements remain separate obligations.
+
+## Coherent visible work, agreement and accountable return
+
+**Status:** implemented experimental presentation of the existing original scene;
+no new cast/world canon, participant validation or approved final art.
+[The coil and the shutters](authored-scene/README.md) stages one actual
+RequestExpedition rather than placing an unrelated Crossing beside a dialogue panel.
+Edda's remaining crates, Rill's line, the carried coil, receipts and the actual route
+share that owner. Its fixed Lure/Trail setup remains distinct from the separate
+Crossing consumer's free outfit/approach choices. No new profession, quest catalog,
+audio/contact inference or narrative save format is implied.
+
+CRE-005(A) materially informs costs and legitimate alternatives; CRE-045/046/061(H)
+inform concrete local work and remembered consequences without adopting their proposed
+world/cast. An unsigned offer leaves the line secured. Signing shows local preparation
+and reduced work capacity, not departure. Guided return is shown only from the actual
+guided receipt; solo travel never loans Rill. Failure leaves him unaccounted for, without
+a corpse or invented rescue/return. Secured shutters and unfinished crates remain visible
+after a real handoff; no generic praise erases the competing work.
+
+Actual capture inspection exposed a caption asking for an offer after it was already
+signed and a static premise that could imply five crates still remained. The corrected
+caption observes local preparation; the premise names initial needs. Time, redraw and
+reduced-motion settings cannot create consequences. Uncertain accepted commands and old
+queued intent are quarantined across focus/reconnection; an explicit read resolves what
+actually committed. This is observation fidelity, not a player learning or consent result.
+
+Independent Engineering, Scientific and Creative analyses favored the authored integration
+over repeating AI/media calibration or unlicensed delivery preparation. ENG-004/015/028
+informed one owner and bounded dependencies; SCI-076/077 required a method matched to
+observable claims and an isolated fabricated-return rival. Specialist usage limits meant
+the primary completed browser execution, corrections and final image review; no independent
+human or final three-agent implementation approval is attributed. [Execution](../evidence/authored-scene/RUN.json)
+owns results and negatives. Review with actual authors/players and suitable devices before
+claiming comprehension, accessibility, emotional force or preference; delivery still needs
+licensed Unity/Windows execution and rights/production ownership.
