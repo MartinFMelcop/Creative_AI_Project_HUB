@@ -17,12 +17,12 @@
     "failed": 0
   },
   "artifact_controls": {
-    "passed": 13,
+    "passed": 16,
     "failed": 0
   },
   "archive": {
     "path": "delivery/authored-scene/dist/authored-scene-demo-linux-x64.zip",
-    "sha256": "4c7594cb73e6235e545582f754e59f4086bdf2b4b6ede070840f185bbc968ee2",
+    "sha256": "75fbde8772be28d967d6188e852f3ece07273eea347c209b3ceba7af950a29e8",
     "bytes": 35886725,
     "payload_files": 230,
     "source_files": 20,
@@ -52,12 +52,14 @@
         "--dotnet",
         "/workspace/work/authored-scene/dotnet/dotnet",
         "--output",
-        "/workspace/work/recipient-delivery-publish/authored-scene-demo-linux-x64.zip",
+        "/workspace/work/recipient-delivery-runtime-acceptance/authored-scene-demo-linux-x64.zip",
         "--work",
-        "/workspace/work/recipient-delivery-publish/first build"
+        "/workspace/work/recipient-delivery-runtime-acceptance/first build",
+        "--sdk-archive",
+        "/workspace/work/authored-scene/sdk.tar.gz"
       ],
       "exit_code": 0,
-      "stdout": "{\"archive_sha256\": \"4c7594cb73e6235e545582f754e59f4086bdf2b4b6ede070840f185bbc968ee2\", \"bytes\": 35886725, \"files\": 230, \"work\": \"/workspace/work/recipient-delivery-publish/first build\", \"source_stable\": true}\n",
+      "stdout": "{\"archive_sha256\": \"75fbde8772be28d967d6188e852f3ece07273eea347c209b3ceba7af950a29e8\", \"bytes\": 35886725, \"files\": 230, \"work\": \"/workspace/work/recipient-delivery-runtime-acceptance/first build\", \"source_stable\": true}\n",
       "stderr": ""
     },
     {
@@ -68,12 +70,14 @@
         "--dotnet",
         "/workspace/work/authored-scene/dotnet/dotnet",
         "--output",
-        "/workspace/work/recipient-delivery-publish/repeat.zip",
+        "/workspace/work/recipient-delivery-runtime-acceptance/repeat.zip",
         "--work",
-        "/workspace/work/recipient-delivery-publish/second build"
+        "/workspace/work/recipient-delivery-runtime-acceptance/second build",
+        "--sdk-archive",
+        "/workspace/work/authored-scene/sdk.tar.gz"
       ],
       "exit_code": 0,
-      "stdout": "{\"archive_sha256\": \"4c7594cb73e6235e545582f754e59f4086bdf2b4b6ede070840f185bbc968ee2\", \"bytes\": 35886725, \"files\": 230, \"work\": \"/workspace/work/recipient-delivery-publish/second build\", \"source_stable\": true}\n",
+      "stdout": "{\"archive_sha256\": \"75fbde8772be28d967d6188e852f3ece07273eea347c209b3ceba7af950a29e8\", \"bytes\": 35886725, \"files\": 230, \"work\": \"/workspace/work/recipient-delivery-runtime-acceptance/second build\", \"source_stable\": true}\n",
       "stderr": ""
     },
     {
@@ -81,20 +85,22 @@
       "command": [
         "python3",
         "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/delivery/authored-scene/check.py",
-        "/workspace/work/recipient-delivery-publish/authored-scene-demo-linux-x64.zip",
+        "/workspace/work/recipient-delivery-runtime-acceptance/authored-scene-demo-linux-x64.zip",
         "--extract",
-        "/workspace/work/recipient-delivery-publish/recipient path with spaces"
+        "/workspace/work/recipient-delivery-runtime-acceptance/recipient path with spaces",
+        "--sdk-archive",
+        "/workspace/work/authored-scene/sdk.tar.gz"
       ],
       "exit_code": 0,
-      "stdout": "{\"files\": 230, \"runtime_files\": 193, \"scope\": \"Structural identity and current-source binding; actual execution is separate.\", \"sdk_archive_verified\": false, \"source_files\": 20, \"unity_executed\": false, \"windows_executed\": false}\n",
+      "stdout": "{\"files\": 230, \"runtime_files\": 193, \"scope\": \"Structural identity and current-source binding; actual execution is separate.\", \"sdk_archive_verified\": true, \"source_files\": 20, \"unity_executed\": false, \"windows_executed\": false}\n",
       "stderr": ""
     },
     {
-      "cwd": "/workspace/work/recipient-delivery-publish/recovered source/north-star/csharp",
+      "cwd": "/workspace/work/recipient-delivery-runtime-acceptance/recovered source/north-star/csharp",
       "command": [
         "/workspace/work/authored-scene/dotnet/dotnet",
         "publish",
-        "/workspace/work/recipient-delivery-publish/recovered source/north-star/authored-scene/Host/NorthStar.AuthoredScene.csproj",
+        "/workspace/work/recipient-delivery-runtime-acceptance/recovered source/north-star/authored-scene/Host/NorthStar.AuthoredScene.csproj",
         "-c",
         "Release",
         "--self-contained",
@@ -104,14 +110,14 @@
         "-p:DebugType=None",
         "-p:DebugSymbols=false",
         "-p:ContinuousIntegrationBuild=true",
-        "-p:PathMap=/workspace/work/recipient-delivery-publish/recovered source=/_/source",
+        "-p:PathMap=/workspace/work/recipient-delivery-runtime-acceptance/recovered source=/_/source",
         "-o",
-        "/workspace/work/recipient-delivery-publish/recovered application",
+        "/workspace/work/recipient-delivery-runtime-acceptance/recovered application",
         "-m:1",
         "--disable-build-servers"
       ],
       "exit_code": 0,
-      "stdout": "  Determining projects to restore...\n  Restored /workspace/work/recipient-delivery-publish/recovered source/north-star/csharp/Narrative/NorthStar.Narrative.csproj (in 96 ms).\n  Restored /workspace/work/recipient-delivery-publish/recovered source/north-star/csharp/Crossing/NorthStar.Crossing.csproj (in 2 ms).\n  Restored /workspace/work/recipient-delivery-publish/recovered source/north-star/authored-scene/Host/NorthStar.AuthoredScene.csproj (in 2 ms).\n  Restored /workspace/work/recipient-delivery-publish/recovered source/north-star/csharp/Domain/NorthStar.Domain.csproj (in 176 ms).\n  NorthStar.Domain -> /workspace/work/recipient-delivery-publish/recovered source/north-star/csharp/Domain/bin/Release/netstandard2.1/NorthStar.Domain.dll\n  NorthStar.Crossing -> /workspace/work/recipient-delivery-publish/recovered source/north-star/csharp/Crossing/bin/Release/net10.0/NorthStar.Crossing.dll\n  NorthStar.Narrative -> /workspace/work/recipient-delivery-publish/recovered source/north-star/csharp/Narrative/bin/Release/net10.0/NorthStar.Narrative.dll\n  NorthStar.AuthoredScene -> /workspace/work/recipient-delivery-publish/recovered source/north-star/authored-scene/Host/bin/Release/net10.0/NorthStar.AuthoredScene.dll\n  NorthStar.AuthoredScene -> /workspace/work/recipient-delivery-publish/recovered application/\n",
+      "stdout": "  Determining projects to restore...\n  Restored /workspace/work/recipient-delivery-runtime-acceptance/recovered source/north-star/authored-scene/Host/NorthStar.AuthoredScene.csproj (in 130 ms).\n  Restored /workspace/work/recipient-delivery-runtime-acceptance/recovered source/north-star/csharp/Crossing/NorthStar.Crossing.csproj (in 130 ms).\n  Restored /workspace/work/recipient-delivery-runtime-acceptance/recovered source/north-star/csharp/Narrative/NorthStar.Narrative.csproj (in 3 ms).\n  Restored /workspace/work/recipient-delivery-runtime-acceptance/recovered source/north-star/csharp/Domain/NorthStar.Domain.csproj (in 982 ms).\n  NorthStar.Domain -> /workspace/work/recipient-delivery-runtime-acceptance/recovered source/north-star/csharp/Domain/bin/Release/netstandard2.1/NorthStar.Domain.dll\n  NorthStar.Crossing -> /workspace/work/recipient-delivery-runtime-acceptance/recovered source/north-star/csharp/Crossing/bin/Release/net10.0/NorthStar.Crossing.dll\n  NorthStar.Narrative -> /workspace/work/recipient-delivery-runtime-acceptance/recovered source/north-star/csharp/Narrative/bin/Release/net10.0/NorthStar.Narrative.dll\n  NorthStar.AuthoredScene -> /workspace/work/recipient-delivery-runtime-acceptance/recovered source/north-star/authored-scene/Host/bin/Release/net10.0/NorthStar.AuthoredScene.dll\n  NorthStar.AuthoredScene -> /workspace/work/recipient-delivery-runtime-acceptance/recovered application/\n",
       "stderr": ""
     },
     {
@@ -119,10 +125,11 @@
       "command": [
         "python3",
         "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/delivery/authored-scene/test_delivery.py",
-        "/workspace/work/recipient-delivery-publish/authored-scene-demo-linux-x64.zip"
+        "/workspace/work/recipient-delivery-runtime-acceptance/authored-scene-demo-linux-x64.zip",
+        "/workspace/work/authored-scene/sdk.tar.gz"
       ],
       "exit_code": 0,
-      "stdout": "{\"passed\": 13, \"failed\": 0, \"controls\": [{\"id\": \"actual-positive-archive\", \"passed\": true, \"evidence\": {\"files\": 230, \"source_files\": 20, \"runtime_files\": 193, \"sdk_archive_verified\": false, \"windows_executed\": false, \"unity_executed\": false, \"scope\": \"Structural identity and current-source binding; actual execution is separate.\"}}, {\"id\": \"changed-dll\", \"passed\": true, \"rejection\": \"Payload manifest differs from exact archive inventory\"}, {\"id\": \"missing-notice\", \"passed\": true, \"rejection\": \"Missing required application/runtime/web/notices payload\"}, {\"id\": \"missing-web\", \"passed\": true, \"rejection\": \"Missing required application/runtime/web/notices payload\"}, {\"id\": \"self-consistent-forged-runtime\", \"passed\": true, \"rejection\": \"Bundled runtime differs from trusted official runtime lock\"}, {\"id\": \"self-consistent-wrong-source\", \"passed\": true, \"rejection\": \"Source binding mismatch\"}, {\"id\": \"missing-creative-provenance\", \"passed\": true, \"rejection\": \"Incomplete source/runtime build inventory\"}, {\"id\": \"unsafe-path\", \"passed\": true, \"rejection\": \"Unsafe archive path\"}, {\"id\": \"duplicate-path\", \"passed\": true, \"rejection\": \"Duplicate, unordered or excessive ZIP entries\"}, {\"id\": \"lost-executable-permission\", \"passed\": true, \"rejection\": \"Unexpected member type or permissions\"}, {\"id\": \"bundled-sdk-rejected\", \"passed\": true, \"rejection\": \"Runtime inventory mismatch\"}, {\"id\": \"concurrent-output-preserved\", \"passed\": true}, {\"id\": \"source-stage-mutation\", \"passed\": true, \"rejection\": \"Copied source changed during staging/build\"}], \"scope\": \"Actual archive faults and copied-source mutation; no participant or platform generalization.\"}\n",
+      "stdout": "{\"passed\": 16, \"failed\": 0, \"controls\": [{\"id\": \"actual-positive-archive\", \"passed\": true, \"evidence\": {\"files\": 230, \"source_files\": 20, \"runtime_files\": 193, \"sdk_archive_verified\": false, \"windows_executed\": false, \"unity_executed\": false, \"scope\": \"Structural identity and current-source binding; actual execution is separate.\"}}, {\"id\": \"changed-dll\", \"passed\": true, \"rejection\": \"Payload manifest differs from exact archive inventory\"}, {\"id\": \"missing-notice\", \"passed\": true, \"rejection\": \"Missing required application/runtime/web/notices payload\"}, {\"id\": \"missing-web\", \"passed\": true, \"rejection\": \"Missing required application/runtime/web/notices payload\"}, {\"id\": \"self-consistent-forged-runtime\", \"passed\": true, \"rejection\": \"Bundled runtime differs from trusted official runtime lock\"}, {\"id\": \"self-consistent-wrong-source\", \"passed\": true, \"rejection\": \"Source binding mismatch\"}, {\"id\": \"missing-creative-provenance\", \"passed\": true, \"rejection\": \"Incomplete source/runtime build inventory\"}, {\"id\": \"unsafe-path\", \"passed\": true, \"rejection\": \"Unsafe archive path\"}, {\"id\": \"duplicate-path\", \"passed\": true, \"rejection\": \"Duplicate, unordered or excessive ZIP entries\"}, {\"id\": \"lost-executable-permission\", \"passed\": true, \"rejection\": \"Unexpected member type or permissions\"}, {\"id\": \"bundled-sdk-rejected\", \"passed\": true, \"rejection\": \"Runtime inventory mismatch\"}, {\"id\": \"concurrent-output-preserved\", \"passed\": true}, {\"id\": \"divergent-ambient-muxer-rejected\", \"passed\": true, \"rejection\": \"Installed runtime differs from official archive lock: runtime/dotnet\"}, {\"id\": \"verified-archive-owns-payload-despite-ambient-drift\", \"passed\": true, \"files\": 193}, {\"id\": \"unverified-sdk-archive-rejected\", \"passed\": true, \"rejection\": \"SDK archive differs from official SHA512 pin\"}, {\"id\": \"source-stage-mutation\", \"passed\": true, \"rejection\": \"Copied source changed during staging/build\"}], \"scope\": \"Actual archive faults and copied-source mutation; no participant or platform generalization.\"}\n",
       "stderr": ""
     },
     {
@@ -130,8 +137,8 @@
       "command": [
         "node",
         "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/delivery/authored-scene/browser.mjs",
-        "/workspace/work/recipient-delivery-publish/recipient path with spaces/AuthoredSceneDemo",
-        "/workspace/work/recipient-delivery-publish/browser"
+        "/workspace/work/recipient-delivery-runtime-acceptance/recipient path with spaces/AuthoredSceneDemo",
+        "/workspace/work/recipient-delivery-runtime-acceptance/browser"
       ],
       "exit_code": 0,
       "stdout": "17 extracted-package controls passed\n",
@@ -141,12 +148,12 @@
       "command": [
         "python3",
         "delivery/authored-scene/check.py",
-        "delivery/authored-scene/dist/authored-scene-demo-linux-x64.zip",
+        "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/delivery/authored-scene/dist/authored-scene-demo-linux-x64.zip",
         "--sdk-archive",
         "/workspace/work/authored-scene/sdk.tar.gz"
       ],
       "exit_code": 0,
-      "stdout": "{\"files\": 230, \"runtime_files\": 193, \"scope\": \"Structural identity and current-source binding; actual execution is separate.\", \"sdk_archive_verified\": true, \"source_files\": 20, \"unity_executed\": false, \"windows_executed\": false}",
+      "stdout": "{\"files\": 230, \"runtime_files\": 193, \"scope\": \"Structural identity and current-source binding; actual execution is separate.\", \"sdk_archive_verified\": true, \"source_files\": 20, \"unity_executed\": false, \"windows_executed\": false}\n",
       "stderr": ""
     }
   ],
@@ -173,8 +180,8 @@
     },
     {
       "local_path": "delivery/authored-scene/package.py",
-      "size_bytes": 10959,
-      "sha256": "f025a2bcdf6d0175407500494efb3bf74a18b1a6c67d556c21228944fbe5c6de"
+      "size_bytes": 11592,
+      "sha256": "e7296348c81b8e72706b1d839834a7e20f96b127ef75247a4a9f6d994add9c60"
     },
     {
       "local_path": "delivery/authored-scene/runtime-lock.json",
@@ -183,13 +190,13 @@
     },
     {
       "local_path": "delivery/authored-scene/test_delivery.py",
-      "size_bytes": 5661,
-      "sha256": "d72b39a4ce0cb0b407bec3d28cc6cfd4a849003da72b48e46b7855ae98fa2cf1"
+      "size_bytes": 7281,
+      "sha256": "d789a1d9309696291c7c6bafbeec6084a92d38bd36962acfc23fc30152e7ab22"
     },
     {
       "local_path": "delivery/authored-scene/verify.py",
-      "size_bytes": 4967,
-      "sha256": "c69e0ba0a054064e582026e947f2fad0ff7d3a26461b4afe373f38cb30b5608f"
+      "size_bytes": 5031,
+      "sha256": "9913c4c4ee357f7fd24fca6d8d657b717629fed33515190d8a3b2386dfe8b764"
     },
     {
       "local_path": "evidence/authored-scene/sdk-source.json",
@@ -321,7 +328,7 @@
     {
       "local_path": "evidence/recipient-delivery/browser-execution.json",
       "size_bytes": 11200,
-      "sha256": "baa0ba8c4e38dff6a59afb2f32ebba4b5eaea90563905c6efb7d2cec252da657"
+      "sha256": "bbf28ab1294cb6b3cae0dee10d2e479697bf4eb808528b9b24bc9f3eb081a151"
     },
     {
       "local_path": "evidence/recipient-delivery/browser.json",
@@ -330,23 +337,23 @@
     },
     {
       "local_path": "evidence/recipient-delivery/build-one.json",
-      "size_bytes": 2175,
-      "sha256": "7161c6618e8bd9b920984578ff7ec9f9f627912b26a80db48d40faf21f57ebd5"
+      "size_bytes": 2305,
+      "sha256": "b90ef977a71a3208a3380bd1c3929e3ff9c6da18c69b7654c4ad3851bbf00dd5"
     },
     {
       "local_path": "evidence/recipient-delivery/build-two.json",
-      "size_bytes": 2187,
-      "sha256": "d2803fb13ba6130b11f7bcace9d56ee34657cb8272ab456ae32b7f75855538a1"
+      "size_bytes": 2319,
+      "sha256": "cf691cedf2775d923921d26abbaf427f51ee0b9389dcacca950e62f72dd1edcc"
     },
     {
       "local_path": "evidence/recipient-delivery/commands.json",
-      "size_bytes": 7564,
-      "sha256": "8ff513c592f6289f76d81d21b019e1854a478670eb3fe1b32fb0e3c9ec38f2f0"
+      "size_bytes": 8489,
+      "sha256": "816910e09210bbb29b5c9de29f8059014fae66e4ea1bd1f03c48e89f0a2fddd9"
     },
     {
       "local_path": "evidence/recipient-delivery/delivered.png",
-      "size_bytes": 251607,
-      "sha256": "ff0bdb78a38c72f2b5c89576bea7bd1f822a5e2a5c4428053605feb0cca1c656"
+      "size_bytes": 251624,
+      "sha256": "e8cd07fa9e412ffd92f1d4d0a1f4b21be8642a88060c486d923f57a2aa006289"
     },
     {
       "local_path": "evidence/recipient-delivery/initial-instrument-failure.json",
@@ -355,13 +362,13 @@
     },
     {
       "local_path": "evidence/recipient-delivery/inspection.json",
-      "size_bytes": 246,
-      "sha256": "92de5311532572818b44e832ed70012ac447cc6e29635305c63c028097f70c8e"
+      "size_bytes": 245,
+      "sha256": "5ed118b80bc50850144b333ecdd2b750cf494ee113f6ece92056665b7f429a57"
     },
     {
       "local_path": "evidence/recipient-delivery/negative-results.json",
-      "size_bytes": 2096,
-      "sha256": "cf479f70441de7c9b910e901a816b8f79534ebafa8628a0962ad45cae9f945e4"
+      "size_bytes": 2538,
+      "sha256": "464442ecd2bbab568fd0c5110a0ca9168dc504b58cffd81cfa31b31821de3179"
     },
     {
       "local_path": "evidence/recipient-delivery/official-runtime-inspection.json",
@@ -371,17 +378,22 @@
     {
       "local_path": "evidence/recipient-delivery/recipe.json",
       "size_bytes": 390,
-      "sha256": "428117f40eecf3caa875a7c32935e4cfd9aee98e5e84878331420b56ada866d0"
+      "sha256": "484f52efa5a74211695da5adaf2ad11e0cc9d51c00882640668405a236f5408e"
     },
     {
       "local_path": "evidence/recipient-delivery/results.json",
-      "size_bytes": 13482,
-      "sha256": "de00f52bd4311858afb14479a85eff28ebb341470082fbd6ab7f02f4dfd021c6"
+      "size_bytes": 13481,
+      "sha256": "afa5741615de7861f146c97e5365aee7daa3e65a6077456a7bcccf8243998a3e"
     },
     {
       "local_path": "delivery/authored-scene/dist/authored-scene-demo-linux-x64.zip",
       "size_bytes": 35886725,
-      "sha256": "4c7594cb73e6235e545582f754e59f4086bdf2b4b6ede070840f185bbc968ee2"
+      "sha256": "75fbde8772be28d967d6188e852f3ece07273eea347c209b3ceba7af950a29e8"
+    },
+    {
+      "local_path": "evidence/recipient-delivery/CI_RUNTIME.json",
+      "size_bytes": 1376,
+      "sha256": "4a07d7667bc7a646eddf887d2e06172d0d60422c650ab7f19e1c509850dcfbeb"
     }
   ],
   "limitations": [
@@ -416,5 +428,6 @@
     ],
     "unaffected_jobs_skipped": 5
   },
-  "retained_prior_failure": "evidence/combat-status/CI_INVENTORY.json remains unchanged; no cancellation/timeout cause is inferred."
+  "retained_prior_failure": "evidence/combat-status/CI_INVENTORY.json remains unchanged; no cancellation/timeout cause is inferred.",
+  "ci_runtime_correction": "evidence/recipient-delivery/CI_RUNTIME.json"
 }

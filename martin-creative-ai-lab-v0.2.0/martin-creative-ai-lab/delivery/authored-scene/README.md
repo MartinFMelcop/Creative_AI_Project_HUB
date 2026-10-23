@@ -50,14 +50,17 @@ loopback observer has no authentication, shared-world or production-security cla
 ## Reproduce and inspect
 
 [package.py](package.py) builds from a verified copied source closure and includes only
-the installed private runtime files matching [the official runtime lock](runtime-lock.json).
+private runtime files matching [the official runtime lock](runtime-lock.json).
 The lock was derived from the SHA512-verified SDK archive; supplying `--sdk-archive`
-checks that archive again. [check.py](check.py) independently validates and extracts
+verifies that archive again and sources the runtime directly from it, independently
+of an ambient SDK installation that may retain a newer non-versioned muxer. Without
+that option, installed runtime bytes must still match every locked hash. CI always
+supplies the official archive; the runtime lock is unchanged. [check.py](check.py) independently validates and extracts
 the archive. [verify.py](verify.py) builds twice and executes the actual relocated
 recipient package through [Chromium](browser.mjs):
 
 ```sh
-python3 delivery/authored-scene/verify.py --dotnet /absolute/path/to/dotnet --output /tmp/recipient-delivery-new
+python3 delivery/authored-scene/verify.py --dotnet /absolute/path/to/dotnet --sdk-archive /absolute/path/to/verified-sdk.tar.gz --output /tmp/recipient-delivery-new
 ```
 
 The SDK must match 10.0.401, with its included .NET10.0.12 runtime. Verification uses

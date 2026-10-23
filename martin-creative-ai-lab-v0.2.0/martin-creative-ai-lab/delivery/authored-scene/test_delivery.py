@@ -14,7 +14,7 @@ def module(name):
     spec=importlib.util.spec_from_file_location(name,HERE/(name+'.py'));value=importlib.util.module_from_spec(spec);spec.loader.exec_module(value);return value
 check=module('check');pack=module('package')
 
-def main(archive):
+def main(archive,sdk_archive=None):
     payload,report=check.inspect(archive);controls=[{'id':'actual-positive-archive','passed':True,'evidence':report}]
     with tempfile.TemporaryDirectory(prefix='recipient-fault-') as temporary:
         work=Path(temporary)
@@ -62,6 +62,23 @@ def main(archive):
             if concurrent.read_bytes()!=b'preserve':raise AssertionError('Concurrent output changed')
             controls.append({'id':'concurrent-output-preserved','passed':True})
         else:raise AssertionError('Concurrent output overwritten')
+        if sdk_archive:
+            ambient=work/'mixed sdk';ambient.mkdir();(ambient/'dotnet').write_bytes(b'different ambient muxer')
+            for name in ('LICENSE.txt','ThirdPartyNotices.txt'):(ambient/name).write_bytes(payload['runtime/'+name])
+            try:pack.runtime_files(None,ambient/'dotnet',work/'rejected ambient')
+            except ValueError as error:
+                if 'runtime/dotnet' not in str(error):raise
+                controls.append({'id':'divergent-ambient-muxer-rejected','passed':True,'rejection':str(error)})
+            else:raise AssertionError('Divergent ambient muxer accepted')
+            official=work/'official runtime';runtime=pack.runtime_files(sdk_archive,ambient/'dotnet',official)
+            if runtime!=json.loads((HERE/'runtime-lock.json').read_text())['files'] or (official/'runtime/dotnet').read_bytes()!=payload['runtime/dotnet']:raise AssertionError('Archive did not own payload bytes')
+            controls.append({'id':'verified-archive-owns-payload-despite-ambient-drift','passed':True,'files':len(runtime)})
+            bad=work/'bad sdk archive';bad.write_bytes(b'not the official archive')
+            try:pack.runtime_files(bad,ambient/'dotnet',work/'bad archive output')
+            except ValueError as error:
+                if 'official SHA512 pin' not in str(error):raise
+                controls.append({'id':'unverified-sdk-archive-rejected','passed':True,'rejection':str(error)})
+            else:raise AssertionError('Unverified archive accepted')
         stage=work/'stage';stage.mkdir();relative='Room.cs';original=(pack.ROOT/key_source).read_bytes();(stage/relative).write_bytes(original)
         identities={relative:hashlib.sha256(original).hexdigest()};pack.verify_copies(stage,identities);(stage/relative).write_bytes(original+b'\n')
         try:pack.verify_copies(stage,identities)
@@ -70,5 +87,5 @@ def main(archive):
     result={'passed':len(controls),'failed':0,'controls':controls,'scope':'Actual archive faults and copied-source mutation; no participant or platform generalization.'}
     archive.with_name('negative-results.json').write_text(json.dumps(result,indent=2)+'\n');print(json.dumps(result))
 if __name__=='__main__':
-    if len(sys.argv)!=2:raise SystemExit('Usage: test_delivery.py ACTUAL_ARCHIVE')
-    main(Path(sys.argv[1]))
+    if len(sys.argv) not in (2,3):raise SystemExit('Usage: test_delivery.py ACTUAL_ARCHIVE [OFFICIAL_SDK_ARCHIVE]')
+    main(Path(sys.argv[1]),Path(sys.argv[2]) if len(sys.argv)==3 else None)

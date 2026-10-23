@@ -1,5 +1,5 @@
 {
-  "passed": 13,
+  "passed": 16,
   "failed": 0,
   "controls": [
     {
@@ -68,6 +68,21 @@
     {
       "id": "concurrent-output-preserved",
       "passed": true
+    },
+    {
+      "id": "divergent-ambient-muxer-rejected",
+      "passed": true,
+      "rejection": "Installed runtime differs from official archive lock: runtime/dotnet"
+    },
+    {
+      "id": "verified-archive-owns-payload-despite-ambient-drift",
+      "passed": true,
+      "files": 193
+    },
+    {
+      "id": "unverified-sdk-archive-rejected",
+      "passed": true,
+      "rejection": "SDK archive differs from official SHA512 pin"
     },
     {
       "id": "source-stage-mutation",

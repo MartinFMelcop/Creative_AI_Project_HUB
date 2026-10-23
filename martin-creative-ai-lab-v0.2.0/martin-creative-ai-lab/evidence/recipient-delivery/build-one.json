@@ -10,7 +10,7 @@
   {
     "arguments": [
       "publish",
-      "/workspace/work/recipient-delivery-publish/first build/source/north-star/authored-scene/Host/NorthStar.AuthoredScene.csproj",
+      "/workspace/work/recipient-delivery-runtime-acceptance/first build/source/north-star/authored-scene/Host/NorthStar.AuthoredScene.csproj",
       "-c",
       "Release",
       "--self-contained",
@@ -20,14 +20,14 @@
       "-p:DebugType=None",
       "-p:DebugSymbols=false",
       "-p:ContinuousIntegrationBuild=true",
-      "-p:PathMap=/workspace/work/recipient-delivery-publish/first build/source=/_/source",
+      "-p:PathMap=/workspace/work/recipient-delivery-runtime-acceptance/first build/source=/_/source",
       "-o",
-      "/workspace/work/recipient-delivery-publish/first build/published",
+      "/workspace/work/recipient-delivery-runtime-acceptance/first build/published",
       "-m:1",
       "--disable-build-servers"
     ],
     "exit_code": 0,
-    "stdout": "  Determining projects to restore...\n  Restored /workspace/work/recipient-delivery-publish/first build/source/north-star/csharp/Narrative/NorthStar.Narrative.csproj (in 143 ms).\n  Restored /workspace/work/recipient-delivery-publish/first build/source/north-star/csharp/Crossing/NorthStar.Crossing.csproj (in 3 ms).\n  Restored /workspace/work/recipient-delivery-publish/first build/source/north-star/authored-scene/Host/NorthStar.AuthoredScene.csproj (in 3 ms).\n  Restored /workspace/work/recipient-delivery-publish/first build/source/north-star/csharp/Domain/NorthStar.Domain.csproj (in 1.26 sec).\n  NorthStar.Domain -> /workspace/work/recipient-delivery-publish/first build/source/north-star/csharp/Domain/bin/Release/netstandard2.1/NorthStar.Domain.dll\n  NorthStar.Crossing -> /workspace/work/recipient-delivery-publish/first build/source/north-star/csharp/Crossing/bin/Release/net10.0/NorthStar.Crossing.dll\n  NorthStar.Narrative -> /workspace/work/recipient-delivery-publish/first build/source/north-star/csharp/Narrative/bin/Release/net10.0/NorthStar.Narrative.dll\n  NorthStar.AuthoredScene -> /workspace/work/recipient-delivery-publish/first build/source/north-star/authored-scene/Host/bin/Release/net10.0/NorthStar.AuthoredScene.dll\n  NorthStar.AuthoredScene -> /workspace/work/recipient-delivery-publish/first build/published/\n",
+    "stdout": "  Determining projects to restore...\n  Restored /workspace/work/recipient-delivery-runtime-acceptance/first build/source/north-star/csharp/Narrative/NorthStar.Narrative.csproj (in 137 ms).\n  Restored /workspace/work/recipient-delivery-runtime-acceptance/first build/source/north-star/csharp/Crossing/NorthStar.Crossing.csproj (in 2 ms).\n  Restored /workspace/work/recipient-delivery-runtime-acceptance/first build/source/north-star/authored-scene/Host/NorthStar.AuthoredScene.csproj (in 3 ms).\n  Restored /workspace/work/recipient-delivery-runtime-acceptance/first build/source/north-star/csharp/Domain/NorthStar.Domain.csproj (in 868 ms).\n  NorthStar.Domain -> /workspace/work/recipient-delivery-runtime-acceptance/first build/source/north-star/csharp/Domain/bin/Release/netstandard2.1/NorthStar.Domain.dll\n  NorthStar.Crossing -> /workspace/work/recipient-delivery-runtime-acceptance/first build/source/north-star/csharp/Crossing/bin/Release/net10.0/NorthStar.Crossing.dll\n  NorthStar.Narrative -> /workspace/work/recipient-delivery-runtime-acceptance/first build/source/north-star/csharp/Narrative/bin/Release/net10.0/NorthStar.Narrative.dll\n  NorthStar.AuthoredScene -> /workspace/work/recipient-delivery-runtime-acceptance/first build/source/north-star/authored-scene/Host/bin/Release/net10.0/NorthStar.AuthoredScene.dll\n  NorthStar.AuthoredScene -> /workspace/work/recipient-delivery-runtime-acceptance/first build/published/\n",
     "stderr": ""
   }
 ]

@@ -64,7 +64,18 @@ the delivery does not. CI compares exact rebuilt payloads against the committed 
 separating compression implementation from payload identity. SDK archive verification,
 trusted runtime hashes and downloadable carrier SHA remain separate evidence.
 
-Thirteen artifact controls and 17 actual extracted-package controls pass. The latter use
+CI40013655495 rejected the published package build because setup-dotnet retained a
+newer non-versioned muxer while installing SDK10.0.401. The guard was preserved.
+CI now downloads the official SDK archive, verifies its complete SHA512 and sources
+the 193 unchanged locked runtime files directly from it. Three additional controls
+reject ambient drift and an unverified archive, and prove verified-archive extraction
+is independent of that drift. See [retained failure](../evidence/recipient-delivery/CI_RUNTIME.json).
+The next CI result remains a separate observation. The same run also failed the
+unchanged Eclipse Fair export with an EditorSettings error and a nonzero export;
+its cause is not established. Only that job was requested for rerun. No retained
+exporter, source, fixture or gate was changed.
+
+Sixteen artifact controls and 17 actual extracted-package controls pass. The latter use
 an unrelated working directory and PATH containing only dirname/sha256sum: neither
 SDK/dotnet nor Node is discoverable, and the private runtime lists no SDK. Actual refusal,
 reservation cost, nested Crossing, observed guided return/delivery and three remaining

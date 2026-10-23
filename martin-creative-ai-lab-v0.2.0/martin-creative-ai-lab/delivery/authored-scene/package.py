@@ -68,6 +68,10 @@ def runtime_files(archive, dotnet, destination):
     if lock.get('sdk_archive_sha512')!=SDK_SHA512 or lock.get('runtime_version')!=RUNTIME_VERSION:
         raise ValueError('Unexpected runtime lock identity')
     expected=lock['files']
+    for name in expected:
+        path=PurePosixPath(name)
+        if path.is_absolute() or '..' in path.parts or not name.startswith('runtime/'):
+            raise ValueError('Unsafe runtime lock path')
     if archive is not None:
         if digest(archive,'sha512')!=SDK_SHA512:raise ValueError('SDK archive differs from official SHA512 pin')
         observed={}
@@ -76,8 +80,14 @@ def runtime_files(archive, dotnet, destination):
                 name=member.name.removeprefix('./');candidate='runtime/'+name
                 if candidate not in expected:continue
                 if not member.isfile() or candidate in observed:raise ValueError('Linked/duplicate runtime member')
-                with source.extractfile(member) as stream:observed[candidate]=hashlib.sha256(stream.read()).hexdigest()
+                with source.extractfile(member) as stream:data=stream.read()
+                identity=hashlib.sha256(data).hexdigest()
+                if identity!=expected[candidate]:raise ValueError('Official archive runtime differs from lock')
+                target=destination/candidate;target.parent.mkdir(parents=True,exist_ok=True);target.write_bytes(data)
+                observed[candidate]=identity
         if observed!=expected:raise ValueError('Runtime lock differs from verified official archive')
+        # setup-dotnet can retain a newer non-versioned muxer. It is not our payload source.
+        return dict(sorted(observed.items()))
     for name,identity in sorted(expected.items()):
         path=PurePosixPath(name)
         if path.is_absolute() or '..' in path.parts or not name.startswith('runtime/'):

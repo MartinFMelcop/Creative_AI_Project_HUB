@@ -51,7 +51,9 @@ def verify(output,dotnet,sdk_archive=None,compare=None):
     run([dotnet,'publish',recovered/'north-star/authored-scene/Host/NorthStar.AuthoredScene.csproj','-c','Release','--self-contained','false','-p:UseAppHost=false','-p:RuntimeFrameworkVersion=10.0.12','-p:DebugType=None','-p:DebugSymbols=false','-p:ContinuousIntegrationBuild=true','-p:PathMap='+str(recovered)+'=/_/source','-o',rebuilt,'-m:1','--disable-build-servers'],cwd=recovered/'north-star/csharp')
     app_identity=lambda folder:{p.name:sha(p) for p in folder.iterdir() if p.is_file()}
     if app_identity(rebuilt)!=app_identity(recipient/'app'):raise ValueError('Recovered source did not reproduce delivered application')
-    run(['python3',HERE/'test_delivery.py',first])
+    faults=['python3',HERE/'test_delivery.py',first]
+    if sdk_archive:faults.append(sdk_archive)
+    run(faults)
     run(['node',HERE/'browser.mjs',output/'recipient path with spaces/AuthoredSceneDemo',output/'browser'],timeout=180)
     if identities!={str((HERE/n).relative_to(ROOT)):sha(HERE/n) for n in names}:raise ValueError('Delivery instrument changed during execution')
     result={'input_hashes':identities,'source_stable':True,'recovered_application_identical':True,'archive_sha256':sha(first),'archive_bytes':first.stat().st_size,'repeated_archive_sha256':sha(second),'reproducible':True,'inspection':inspection,'browser':json.loads((output/'browser/results.json').read_text()),'commands':'commands.json','scope':'One local Linuxx64 demonstration; no Unity, Windows, Steam or human experience execution.'}

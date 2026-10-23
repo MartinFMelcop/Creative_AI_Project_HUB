@@ -17,12 +17,14 @@
       "--dotnet",
       "/workspace/work/authored-scene/dotnet/dotnet",
       "--output",
-      "/workspace/work/recipient-delivery-publish/authored-scene-demo-linux-x64.zip",
+      "/workspace/work/recipient-delivery-runtime-acceptance/authored-scene-demo-linux-x64.zip",
       "--work",
-      "/workspace/work/recipient-delivery-publish/first build"
+      "/workspace/work/recipient-delivery-runtime-acceptance/first build",
+      "--sdk-archive",
+      "/workspace/work/authored-scene/sdk.tar.gz"
     ],
     "exit_code": 0,
-    "stdout": "{\"archive_sha256\": \"4c7594cb73e6235e545582f754e59f4086bdf2b4b6ede070840f185bbc968ee2\", \"bytes\": 35886725, \"files\": 230, \"work\": \"/workspace/work/recipient-delivery-publish/first build\", \"source_stable\": true}\n",
+    "stdout": "{\"archive_sha256\": \"75fbde8772be28d967d6188e852f3ece07273eea347c209b3ceba7af950a29e8\", \"bytes\": 35886725, \"files\": 230, \"work\": \"/workspace/work/recipient-delivery-runtime-acceptance/first build\", \"source_stable\": true}\n",
     "stderr": ""
   },
   {
@@ -33,12 +35,14 @@
       "--dotnet",
       "/workspace/work/authored-scene/dotnet/dotnet",
       "--output",
-      "/workspace/work/recipient-delivery-publish/repeat.zip",
+      "/workspace/work/recipient-delivery-runtime-acceptance/repeat.zip",
       "--work",
-      "/workspace/work/recipient-delivery-publish/second build"
+      "/workspace/work/recipient-delivery-runtime-acceptance/second build",
+      "--sdk-archive",
+      "/workspace/work/authored-scene/sdk.tar.gz"
     ],
     "exit_code": 0,
-    "stdout": "{\"archive_sha256\": \"4c7594cb73e6235e545582f754e59f4086bdf2b4b6ede070840f185bbc968ee2\", \"bytes\": 35886725, \"files\": 230, \"work\": \"/workspace/work/recipient-delivery-publish/second build\", \"source_stable\": true}\n",
+    "stdout": "{\"archive_sha256\": \"75fbde8772be28d967d6188e852f3ece07273eea347c209b3ceba7af950a29e8\", \"bytes\": 35886725, \"files\": 230, \"work\": \"/workspace/work/recipient-delivery-runtime-acceptance/second build\", \"source_stable\": true}\n",
     "stderr": ""
   },
   {
@@ -46,20 +50,22 @@
     "command": [
       "python3",
       "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/delivery/authored-scene/check.py",
-      "/workspace/work/recipient-delivery-publish/authored-scene-demo-linux-x64.zip",
+      "/workspace/work/recipient-delivery-runtime-acceptance/authored-scene-demo-linux-x64.zip",
       "--extract",
-      "/workspace/work/recipient-delivery-publish/recipient path with spaces"
+      "/workspace/work/recipient-delivery-runtime-acceptance/recipient path with spaces",
+      "--sdk-archive",
+      "/workspace/work/authored-scene/sdk.tar.gz"
     ],
     "exit_code": 0,
-    "stdout": "{\"files\": 230, \"runtime_files\": 193, \"scope\": \"Structural identity and current-source binding; actual execution is separate.\", \"sdk_archive_verified\": false, \"source_files\": 20, \"unity_executed\": false, \"windows_executed\": false}\n",
+    "stdout": "{\"files\": 230, \"runtime_files\": 193, \"scope\": \"Structural identity and current-source binding; actual execution is separate.\", \"sdk_archive_verified\": true, \"source_files\": 20, \"unity_executed\": false, \"windows_executed\": false}\n",
     "stderr": ""
   },
   {
-    "cwd": "/workspace/work/recipient-delivery-publish/recovered source/north-star/csharp",
+    "cwd": "/workspace/work/recipient-delivery-runtime-acceptance/recovered source/north-star/csharp",
     "command": [
       "/workspace/work/authored-scene/dotnet/dotnet",
       "publish",
-      "/workspace/work/recipient-delivery-publish/recovered source/north-star/authored-scene/Host/NorthStar.AuthoredScene.csproj",
+      "/workspace/work/recipient-delivery-runtime-acceptance/recovered source/north-star/authored-scene/Host/NorthStar.AuthoredScene.csproj",
       "-c",
       "Release",
       "--self-contained",
@@ -69,14 +75,14 @@
       "-p:DebugType=None",
       "-p:DebugSymbols=false",
       "-p:ContinuousIntegrationBuild=true",
-      "-p:PathMap=/workspace/work/recipient-delivery-publish/recovered source=/_/source",
+      "-p:PathMap=/workspace/work/recipient-delivery-runtime-acceptance/recovered source=/_/source",
       "-o",
-      "/workspace/work/recipient-delivery-publish/recovered application",
+      "/workspace/work/recipient-delivery-runtime-acceptance/recovered application",
       "-m:1",
       "--disable-build-servers"
     ],
     "exit_code": 0,
-    "stdout": "  Determining projects to restore...\n  Restored /workspace/work/recipient-delivery-publish/recovered source/north-star/csharp/Narrative/NorthStar.Narrative.csproj (in 96 ms).\n  Restored /workspace/work/recipient-delivery-publish/recovered source/north-star/csharp/Crossing/NorthStar.Crossing.csproj (in 2 ms).\n  Restored /workspace/work/recipient-delivery-publish/recovered source/north-star/authored-scene/Host/NorthStar.AuthoredScene.csproj (in 2 ms).\n  Restored /workspace/work/recipient-delivery-publish/recovered source/north-star/csharp/Domain/NorthStar.Domain.csproj (in 176 ms).\n  NorthStar.Domain -> /workspace/work/recipient-delivery-publish/recovered source/north-star/csharp/Domain/bin/Release/netstandard2.1/NorthStar.Domain.dll\n  NorthStar.Crossing -> /workspace/work/recipient-delivery-publish/recovered source/north-star/csharp/Crossing/bin/Release/net10.0/NorthStar.Crossing.dll\n  NorthStar.Narrative -> /workspace/work/recipient-delivery-publish/recovered source/north-star/csharp/Narrative/bin/Release/net10.0/NorthStar.Narrative.dll\n  NorthStar.AuthoredScene -> /workspace/work/recipient-delivery-publish/recovered source/north-star/authored-scene/Host/bin/Release/net10.0/NorthStar.AuthoredScene.dll\n  NorthStar.AuthoredScene -> /workspace/work/recipient-delivery-publish/recovered application/\n",
+    "stdout": "  Determining projects to restore...\n  Restored /workspace/work/recipient-delivery-runtime-acceptance/recovered source/north-star/authored-scene/Host/NorthStar.AuthoredScene.csproj (in 130 ms).\n  Restored /workspace/work/recipient-delivery-runtime-acceptance/recovered source/north-star/csharp/Crossing/NorthStar.Crossing.csproj (in 130 ms).\n  Restored /workspace/work/recipient-delivery-runtime-acceptance/recovered source/north-star/csharp/Narrative/NorthStar.Narrative.csproj (in 3 ms).\n  Restored /workspace/work/recipient-delivery-runtime-acceptance/recovered source/north-star/csharp/Domain/NorthStar.Domain.csproj (in 982 ms).\n  NorthStar.Domain -> /workspace/work/recipient-delivery-runtime-acceptance/recovered source/north-star/csharp/Domain/bin/Release/netstandard2.1/NorthStar.Domain.dll\n  NorthStar.Crossing -> /workspace/work/recipient-delivery-runtime-acceptance/recovered source/north-star/csharp/Crossing/bin/Release/net10.0/NorthStar.Crossing.dll\n  NorthStar.Narrative -> /workspace/work/recipient-delivery-runtime-acceptance/recovered source/north-star/csharp/Narrative/bin/Release/net10.0/NorthStar.Narrative.dll\n  NorthStar.AuthoredScene -> /workspace/work/recipient-delivery-runtime-acceptance/recovered source/north-star/authored-scene/Host/bin/Release/net10.0/NorthStar.AuthoredScene.dll\n  NorthStar.AuthoredScene -> /workspace/work/recipient-delivery-runtime-acceptance/recovered application/\n",
     "stderr": ""
   },
   {
@@ -84,10 +90,11 @@
     "command": [
       "python3",
       "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/delivery/authored-scene/test_delivery.py",
-      "/workspace/work/recipient-delivery-publish/authored-scene-demo-linux-x64.zip"
+      "/workspace/work/recipient-delivery-runtime-acceptance/authored-scene-demo-linux-x64.zip",
+      "/workspace/work/authored-scene/sdk.tar.gz"
     ],
     "exit_code": 0,
-    "stdout": "{\"passed\": 13, \"failed\": 0, \"controls\": [{\"id\": \"actual-positive-archive\", \"passed\": true, \"evidence\": {\"files\": 230, \"source_files\": 20, \"runtime_files\": 193, \"sdk_archive_verified\": false, \"windows_executed\": false, \"unity_executed\": false, \"scope\": \"Structural identity and current-source binding; actual execution is separate.\"}}, {\"id\": \"changed-dll\", \"passed\": true, \"rejection\": \"Payload manifest differs from exact archive inventory\"}, {\"id\": \"missing-notice\", \"passed\": true, \"rejection\": \"Missing required application/runtime/web/notices payload\"}, {\"id\": \"missing-web\", \"passed\": true, \"rejection\": \"Missing required application/runtime/web/notices payload\"}, {\"id\": \"self-consistent-forged-runtime\", \"passed\": true, \"rejection\": \"Bundled runtime differs from trusted official runtime lock\"}, {\"id\": \"self-consistent-wrong-source\", \"passed\": true, \"rejection\": \"Source binding mismatch\"}, {\"id\": \"missing-creative-provenance\", \"passed\": true, \"rejection\": \"Incomplete source/runtime build inventory\"}, {\"id\": \"unsafe-path\", \"passed\": true, \"rejection\": \"Unsafe archive path\"}, {\"id\": \"duplicate-path\", \"passed\": true, \"rejection\": \"Duplicate, unordered or excessive ZIP entries\"}, {\"id\": \"lost-executable-permission\", \"passed\": true, \"rejection\": \"Unexpected member type or permissions\"}, {\"id\": \"bundled-sdk-rejected\", \"passed\": true, \"rejection\": \"Runtime inventory mismatch\"}, {\"id\": \"concurrent-output-preserved\", \"passed\": true}, {\"id\": \"source-stage-mutation\", \"passed\": true, \"rejection\": \"Copied source changed during staging/build\"}], \"scope\": \"Actual archive faults and copied-source mutation; no participant or platform generalization.\"}\n",
+    "stdout": "{\"passed\": 16, \"failed\": 0, \"controls\": [{\"id\": \"actual-positive-archive\", \"passed\": true, \"evidence\": {\"files\": 230, \"source_files\": 20, \"runtime_files\": 193, \"sdk_archive_verified\": false, \"windows_executed\": false, \"unity_executed\": false, \"scope\": \"Structural identity and current-source binding; actual execution is separate.\"}}, {\"id\": \"changed-dll\", \"passed\": true, \"rejection\": \"Payload manifest differs from exact archive inventory\"}, {\"id\": \"missing-notice\", \"passed\": true, \"rejection\": \"Missing required application/runtime/web/notices payload\"}, {\"id\": \"missing-web\", \"passed\": true, \"rejection\": \"Missing required application/runtime/web/notices payload\"}, {\"id\": \"self-consistent-forged-runtime\", \"passed\": true, \"rejection\": \"Bundled runtime differs from trusted official runtime lock\"}, {\"id\": \"self-consistent-wrong-source\", \"passed\": true, \"rejection\": \"Source binding mismatch\"}, {\"id\": \"missing-creative-provenance\", \"passed\": true, \"rejection\": \"Incomplete source/runtime build inventory\"}, {\"id\": \"unsafe-path\", \"passed\": true, \"rejection\": \"Unsafe archive path\"}, {\"id\": \"duplicate-path\", \"passed\": true, \"rejection\": \"Duplicate, unordered or excessive ZIP entries\"}, {\"id\": \"lost-executable-permission\", \"passed\": true, \"rejection\": \"Unexpected member type or permissions\"}, {\"id\": \"bundled-sdk-rejected\", \"passed\": true, \"rejection\": \"Runtime inventory mismatch\"}, {\"id\": \"concurrent-output-preserved\", \"passed\": true}, {\"id\": \"divergent-ambient-muxer-rejected\", \"passed\": true, \"rejection\": \"Installed runtime differs from official archive lock: runtime/dotnet\"}, {\"id\": \"verified-archive-owns-payload-despite-ambient-drift\", \"passed\": true, \"files\": 193}, {\"id\": \"unverified-sdk-archive-rejected\", \"passed\": true, \"rejection\": \"SDK archive differs from official SHA512 pin\"}, {\"id\": \"source-stage-mutation\", \"passed\": true, \"rejection\": \"Copied source changed during staging/build\"}], \"scope\": \"Actual archive faults and copied-source mutation; no participant or platform generalization.\"}\n",
     "stderr": ""
   },
   {
@@ -95,8 +102,8 @@
     "command": [
       "node",
       "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/delivery/authored-scene/browser.mjs",
-      "/workspace/work/recipient-delivery-publish/recipient path with spaces/AuthoredSceneDemo",
-      "/workspace/work/recipient-delivery-publish/browser"
+      "/workspace/work/recipient-delivery-runtime-acceptance/recipient path with spaces/AuthoredSceneDemo",
+      "/workspace/work/recipient-delivery-runtime-acceptance/browser"
     ],
     "exit_code": 0,
     "stdout": "17 extracted-package controls passed\n",

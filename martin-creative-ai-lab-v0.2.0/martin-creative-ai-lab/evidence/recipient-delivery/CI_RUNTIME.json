@@ -1,0 +1,20 @@
+{
+  "run_id": 40013655495,
+  "job_id": 120620244598,
+  "published_commit": "b34da853cedb4ece7f63433143599d2689477fad",
+  "observed_failure": "Installed runtime differs from official archive lock: runtime/dotnet",
+  "observed_setup": "setup-dotnet installed runtime10.0.13, then installed SDK10.0.401 with --skip-non-versioned-files. The installed non-versioned muxer differed from the pinned SDK archive.",
+  "correction": "CI supplies the official SDK archive; full SHA512 verification precedes extraction of the exact193 locked runtime files. The archive supplies payload bytes independently of the ambient muxer. Default installed-runtime validation still rejects drift.",
+  "runtime_lock_changed": false,
+  "gates_weakened": false,
+  "artifact_controls": 16,
+  "recipient_controls": 17,
+  "limits": "Local acceptance is separate from the next CI run; no Windows/Unity/Steam execution.",
+  "other_job_failure": {
+    "job_id": 120620244716,
+    "job": "eclipse-economy",
+    "observed": "Unchanged Eclipse Fair export step returned nonzero; log includes EditorSettings not instantiated yet when getting export/android/android_sdk_path, followed by Build/import/export failed.",
+    "cause": "Not established by this log; no old exporter/source or gate changed.",
+    "action": "Requested rerun of this job alone; its outcome is separate from the runtime correction."
+  }
+}
