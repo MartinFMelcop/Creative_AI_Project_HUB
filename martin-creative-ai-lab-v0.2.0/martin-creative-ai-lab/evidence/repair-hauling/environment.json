@@ -1,0 +1,37 @@
+{
+  "sdk": "10.0.401",
+  "unity_probes": [
+    {
+      "path": "/opt/unity",
+      "exists": false
+    },
+    {
+      "path": "/opt/Unity",
+      "exists": false
+    },
+    {
+      "path": "/opt/unityhub",
+      "exists": false
+    },
+    {
+      "path": "/Applications/Unity",
+      "exists": false
+    },
+    {
+      "path": "/usr/bin/Unity",
+      "exists": false
+    },
+    {
+      "path": "/usr/bin/unityhub",
+      "exists": false
+    },
+    {
+      "path": "/root/Unity/Hub/Editor",
+      "observation": "PermissionError"
+    }
+  ],
+  "activation": "Unverified; no usable Editor located. No license or secret file inspected.",
+  "platform_modules": "Unverified",
+  "windows_steam_executed": false,
+  "participants_devices": "No actual independent participant/device observation available"
+}

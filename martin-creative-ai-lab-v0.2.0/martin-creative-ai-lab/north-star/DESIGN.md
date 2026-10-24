@@ -714,8 +714,8 @@ The kiln window is original agent-authored staging under the current author dire
 not adopted legacy fiction or approved cast/world canon. Mara has two pots of her own
 waiting. A fired jar repair costs one phase to reserve and two to work; collection must
 actually occur. An independent temporary patch costs two phases and has a lower reported
-durability. Durability is an experimental terminal outcome, not yet consumed by another
-journey. A reservation may remain outstanding after the player leaves; dawn cannot
+durability. At that execution, durability was a terminal outcome; the product continuation below
+now consumes actual acquired integrity. A reservation may remain outstanding after the player leaves; dawn cannot
 confirm Mara's return. A closed window can leave an independent alternative.
 
 ENG-001/004/015 and SCI-076/077 informed single ownership and claim-matched controls.
@@ -731,3 +731,22 @@ were expandos, leaving an unaccounted worker and cracked jar visible. Attribute/
 visibility and computed-style checks now align the drawing with actual state, including
 a separate false-picture negative. This is rendering fidelity, not player recognition,
 comprehension, repair quality, balance or human approval.
+
+## Repair-to-watering continuity — experimental
+
+The existing workshop now continues into a single original journey. Fired preparation3
+plus fast route1 pays2integrity; personal preparation2 plus sheltered route2 pays0. Each
+viable route enters the actual fixed Lure/Trail Crossing with1integrity and2water. Each
+accepted damaging contact wears1integrity, regardless of its HP amount. Zero breaks the
+jar and loses water, without fabricating child defeat. The actual two encounters retain
+their own beats, damage, XP and completion. Explicit final delivery pours one unit into
+each of two original seedbeds; Delivered derives from the two observed bed flags.
+
+Costs and wear are authored experimental parameters, not historical rules, practical
+physics, plant growth or approved canon. Workshop phases plus paid route cost do not
+convert encounter beats, wall time or RequestExpedition shifts. Mara's pending work and
+last observation remain historical after departure; the road cannot observe her return.
+ENG-004/015/017 and CRE-005(A),011/013/061(H) informed coherent actual use and alternatives;
+SCI-076/077 kept narrative persistence as a credible unselected alternative and required
+actual watering rather than inferring it from a keeper's receipt. Actual safe/losing
+journeys and rendering checks do not establish human comprehension, balance or approval.

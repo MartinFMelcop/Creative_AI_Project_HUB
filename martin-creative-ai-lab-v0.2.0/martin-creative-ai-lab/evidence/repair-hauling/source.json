@@ -1,0 +1,1558 @@
+{
+  "source_artifacts": {
+    "schedules": {
+      "local_path": "references/rave-master/snapshots/36af1651271422ae33856e8b5d7b45702215f165/source/RM_ACT1/DATA/DEV/NPC_SCHEDULE_RULES.csv",
+      "sha256": "4e3c559e6c0f07c015fe7e24104e31c5f6980f9b5538933e4cb9582e9603b7ef",
+      "size_bytes": 4579
+    },
+    "phases": {
+      "local_path": "references/rave-master/snapshots/36af1651271422ae33856e8b5d7b45702215f165/source/RM_CORE/DATA/CORE/TIME_PHASES_MASTER.csv",
+      "sha256": "2e01799bc7666adbd28488cbe01e7409a2dc70dcde99035fd287426dcc3e2b8f",
+      "size_bytes": 412
+    },
+    "bundled_phases": {
+      "local_path": "references/rave-master/snapshots/36af1651271422ae33856e8b5d7b45702215f165/source/RM_DIST/RMXP_BASE/Data/RM_CSV/TIME_PHASES_MASTER.csv",
+      "sha256": "2e01799bc7666adbd28488cbe01e7409a2dc70dcde99035fd287426dcc3e2b8f",
+      "size_bytes": 412
+    },
+    "state": {
+      "local_path": "references/rave-master/snapshots/36af1651271422ae33856e8b5d7b45702215f165/source/RM_ACT1/DATA/DEV/NPC_STATE.csv",
+      "sha256": "79fd03294259329dd23e328bc037e34a405dc1819ae999cb80eeb3bb1282fe3c",
+      "size_bytes": 1065
+    },
+    "bundled_state": {
+      "local_path": "references/rave-master/snapshots/36af1651271422ae33856e8b5d7b45702215f165/source/RM_DIST/RMXP_BASE/Data/RM_CSV/NPC_STATE.csv",
+      "sha256": "1a66b77b5bc9793f844a3d2fa61c7792007f957f1169be1f51384e5561d3f2cd",
+      "size_bytes": 1027
+    },
+    "dialogue": {
+      "local_path": "references/rave-master/snapshots/36af1651271422ae33856e8b5d7b45702215f165/source/RM_ACT1/DATA/DEV/RGSS/RM_DIALOGUE_SCORING_RUNTIME.rb",
+      "sha256": "07682a3205ea2850d748e4f3ffeef7febe51df1ddb10d5e8689bef7d26d1a735",
+      "size_bytes": 41365
+    }
+  },
+  "schedule_rows": 27,
+  "phase_rows": 5,
+  "literal_mask_cases": 135,
+  "allowed_cases": 103,
+  "observed_position": "UNKNOWN: masks and descriptive locations do not observe a body or prove completed work.",
+  "retained_ambiguities": [
+    {
+      "id": "NPC-0006-phase1",
+      "observation": "PhaseMask contains1 while LocalPreferido places phase1 at home; this is not resolved as work availability or physical presence."
+    },
+    {
+      "id": "worker-phase1-global-rest",
+      "npcs": [
+        "NPC-0006",
+        "NPC-0011",
+        "NPC-0016",
+        "NPC-0017",
+        "NPC-0023",
+        "NPC-0030"
+      ],
+      "observation": "Worker masks include1 while TIME_PHASES_MASTER phase1 WorkersEstado is DESCANSANDO. Neither file establishes override precedence."
+    },
+    {
+      "id": "worker-phase4-heuristic",
+      "observation": "Worker masks and dawn work allow4 while repeated notes say outside street during phases2\u20134; retain the wording conflict."
+    },
+    {
+      "id": "quest-cutscene-ownership",
+      "observation": "Unique rows and initial-scene notes explicitly allow cutscene/quest control. PhaseMask does not override an actual authoritative activity."
+    }
+  ],
+  "scope": "Static literal source data and explicit counterexample models, not historical Ruby/RMXP or complete NPC scheduling.",
+  "schema": 1,
+  "cases": [
+    {
+      "id": "NPC-0001:p0",
+      "phase": 0,
+      "mask": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "expected": true
+    },
+    {
+      "id": "NPC-0001:p1",
+      "phase": 1,
+      "mask": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "expected": true
+    },
+    {
+      "id": "NPC-0001:p2",
+      "phase": 2,
+      "mask": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "expected": true
+    },
+    {
+      "id": "NPC-0001:p3",
+      "phase": 3,
+      "mask": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "expected": true
+    },
+    {
+      "id": "NPC-0001:p4",
+      "phase": 4,
+      "mask": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "expected": true
+    },
+    {
+      "id": "NPC-0002:p0",
+      "phase": 0,
+      "mask": [
+        0,
+        1,
+        2
+      ],
+      "expected": true
+    },
+    {
+      "id": "NPC-0002:p1",
+      "phase": 1,
+      "mask": [
+        0,
+        1,
+        2
+      ],
+      "expected": true
+    },
+    {
+      "id": "NPC-0002:p2",
+      "phase": 2,
+      "mask": [
+        0,
+        1,
+        2
+      ],
+      "expected": true
+    },
+    {
+      "id": "NPC-0002:p3",
+      "phase": 3,
+      "mask": [
+        0,
+        1,
+        2
+      ],
+      "expected": false
+    },
+    {
+      "id": "NPC-0002:p4",
+      "phase": 4,
+      "mask": [
+        0,
+        1,
+        2
+      ],
+      "expected": false
+    },
+    {
+      "id": "NPC-0003:p0",
+      "phase": 0,
+      "mask": [
+        0,
+        1,
+        2
+      ],
+      "expected": true
+    },
+    {
+      "id": "NPC-0003:p1",
+      "phase": 1,
+      "mask": [
+        0,
+        1,
+        2
+      ],
+      "expected": true
+    },
+    {
+      "id": "NPC-0003:p2",
+      "phase": 2,
+      "mask": [
+        0,
+        1,
+        2
+      ],
+      "expected": true
+    },
+    {
+      "id": "NPC-0003:p3",
+      "phase": 3,
+      "mask": [
+        0,
+        1,
+        2
+      ],
+      "expected": false
+    },
+    {
+      "id": "NPC-0003:p4",
+      "phase": 4,
+      "mask": [
+        0,
+        1,
+        2
+      ],
+      "expected": false
+    },
+    {
+      "id": "NPC-0006:p0",
+      "phase": 0,
+      "mask": [
+        0,
+        1,
+        4
+      ],
+      "expected": true
+    },
+    {
+      "id": "NPC-0006:p1",
+      "phase": 1,
+      "mask": [
+        0,
+        1,
+        4
+      ],
+      "expected": true
+    },
+    {
+      "id": "NPC-0006:p2",
+      "phase": 2,
+      "mask": [
+        0,
+        1,
+        4
+      ],
+      "expected": false
+    },
+    {
+      "id": "NPC-0006:p3",
+      "phase": 3,
+      "mask": [
+        0,
+        1,
+        4
+      ],
+      "expected": false
+    },
+    {
+      "id": "NPC-0006:p4",
+      "phase": 4,
+      "mask": [
+        0,
+        1,
+        4
+      ],
+      "expected": true
+    },
+    {
+      "id": "NPC-0007:p0",
+      "phase": 0,
+      "mask": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "expected": true
+    },
+    {
+      "id": "NPC-0007:p1",
+      "phase": 1,
+      "mask": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "expected": true
+    },
+    {
+      "id": "NPC-0007:p2",
+      "phase": 2,
+      "mask": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "expected": true
+    },
+    {
+      "id": "NPC-0007:p3",
+      "phase": 3,
+      "mask": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "expected": true
+    },
+    {
+      "id": "NPC-0007:p4",
+      "phase": 4,
+      "mask": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "expected": true
+    },
+    {
+      "id": "NPC-0008:p0",
+      "phase": 0,
+      "mask": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "expected": true
+    },
+    {
+      "id": "NPC-0008:p1",
+      "phase": 1,
+      "mask": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "expected": true
+    },
+    {
+      "id": "NPC-0008:p2",
+      "phase": 2,
+      "mask": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "expected": true
+    },
+    {
+      "id": "NPC-0008:p3",
+      "phase": 3,
+      "mask": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "expected": true
+    },
+    {
+      "id": "NPC-0008:p4",
+      "phase": 4,
+      "mask": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "expected": true
+    },
+    {
+      "id": "NPC-0009:p0",
+      "phase": 0,
+      "mask": [
+        0,
+        1,
+        2
+      ],
+      "expected": true
+    },
+    {
+      "id": "NPC-0009:p1",
+      "phase": 1,
+      "mask": [
+        0,
+        1,
+        2
+      ],
+      "expected": true
+    },
+    {
+      "id": "NPC-0009:p2",
+      "phase": 2,
+      "mask": [
+        0,
+        1,
+        2
+      ],
+      "expected": true
+    },
+    {
+      "id": "NPC-0009:p3",
+      "phase": 3,
+      "mask": [
+        0,
+        1,
+        2
+      ],
+      "expected": false
+    },
+    {
+      "id": "NPC-0009:p4",
+      "phase": 4,
+      "mask": [
+        0,
+        1,
+        2
+      ],
+      "expected": false
+    },
+    {
+      "id": "NPC-0010:p0",
+      "phase": 0,
+      "mask": [
+        0,
+        1,
+        2
+      ],
+      "expected": true
+    },
+    {
+      "id": "NPC-0010:p1",
+      "phase": 1,
+      "mask": [
+        0,
+        1,
+        2
+      ],
+      "expected": true
+    },
+    {
+      "id": "NPC-0010:p2",
+      "phase": 2,
+      "mask": [
+        0,
+        1,
+        2
+      ],
+      "expected": true
+    },
+    {
+      "id": "NPC-0010:p3",
+      "phase": 3,
+      "mask": [
+        0,
+        1,
+        2
+      ],
+      "expected": false
+    },
+    {
+      "id": "NPC-0010:p4",
+      "phase": 4,
+      "mask": [
+        0,
+        1,
+        2
+      ],
+      "expected": false
+    },
+    {
+      "id": "NPC-0011:p0",
+      "phase": 0,
+      "mask": [
+        0,
+        1,
+        4
+      ],
+      "expected": true
+    },
+    {
+      "id": "NPC-0011:p1",
+      "phase": 1,
+      "mask": [
+        0,
+        1,
+        4
+      ],
+      "expected": true
+    },
+    {
+      "id": "NPC-0011:p2",
+      "phase": 2,
+      "mask": [
+        0,
+        1,
+        4
+      ],
+      "expected": false
+    },
+    {
+      "id": "NPC-0011:p3",
+      "phase": 3,
+      "mask": [
+        0,
+        1,
+        4
+      ],
+      "expected": false
+    },
+    {
+      "id": "NPC-0011:p4",
+      "phase": 4,
+      "mask": [
+        0,
+        1,
+        4
+      ],
+      "expected": true
+    },
+    {
+      "id": "NPC-0012:p0",
+      "phase": 0,
+      "mask": [
+        0,
+        1,
+        2
+      ],
+      "expected": true
+    },
+    {
+      "id": "NPC-0012:p1",
+      "phase": 1,
+      "mask": [
+        0,
+        1,
+        2
+      ],
+      "expected": true
+    },
+    {
+      "id": "NPC-0012:p2",
+      "phase": 2,
+      "mask": [
+        0,
+        1,
+        2
+      ],
+      "expected": true
+    },
+    {
+      "id": "NPC-0012:p3",
+      "phase": 3,
+      "mask": [
+        0,
+        1,
+        2
+      ],
+      "expected": false
+    },
+    {
+      "id": "NPC-0012:p4",
+      "phase": 4,
+      "mask": [
+        0,
+        1,
+        2
+      ],
+      "expected": false
+    },
+    {
+      "id": "NPC-0013:p0",
+      "phase": 0,
+      "mask": [
+        0,
+        1,
+        2
+      ],
+      "expected": true
+    },
+    {
+      "id": "NPC-0013:p1",
+      "phase": 1,
+      "mask": [
+        0,
+        1,
+        2
+      ],
+      "expected": true
+    },
+    {
+      "id": "NPC-0013:p2",
+      "phase": 2,
+      "mask": [
+        0,
+        1,
+        2
+      ],
+      "expected": true
+    },
+    {
+      "id": "NPC-0013:p3",
+      "phase": 3,
+      "mask": [
+        0,
+        1,
+        2
+      ],
+      "expected": false
+    },
+    {
+      "id": "NPC-0013:p4",
+      "phase": 4,
+      "mask": [
+        0,
+        1,
+        2
+      ],
+      "expected": false
+    },
+    {
+      "id": "NPC-0014:p0",
+      "phase": 0,
+      "mask": [
+        0,
+        1,
+        2
+      ],
+      "expected": true
+    },
+    {
+      "id": "NPC-0014:p1",
+      "phase": 1,
+      "mask": [
+        0,
+        1,
+        2
+      ],
+      "expected": true
+    },
+    {
+      "id": "NPC-0014:p2",
+      "phase": 2,
+      "mask": [
+        0,
+        1,
+        2
+      ],
+      "expected": true
+    },
+    {
+      "id": "NPC-0014:p3",
+      "phase": 3,
+      "mask": [
+        0,
+        1,
+        2
+      ],
+      "expected": false
+    },
+    {
+      "id": "NPC-0014:p4",
+      "phase": 4,
+      "mask": [
+        0,
+        1,
+        2
+      ],
+      "expected": false
+    },
+    {
+      "id": "NPC-0015:p0",
+      "phase": 0,
+      "mask": [
+        0,
+        1,
+        2
+      ],
+      "expected": true
+    },
+    {
+      "id": "NPC-0015:p1",
+      "phase": 1,
+      "mask": [
+        0,
+        1,
+        2
+      ],
+      "expected": true
+    },
+    {
+      "id": "NPC-0015:p2",
+      "phase": 2,
+      "mask": [
+        0,
+        1,
+        2
+      ],
+      "expected": true
+    },
+    {
+      "id": "NPC-0015:p3",
+      "phase": 3,
+      "mask": [
+        0,
+        1,
+        2
+      ],
+      "expected": false
+    },
+    {
+      "id": "NPC-0015:p4",
+      "phase": 4,
+      "mask": [
+        0,
+        1,
+        2
+      ],
+      "expected": false
+    },
+    {
+      "id": "NPC-0016:p0",
+      "phase": 0,
+      "mask": [
+        0,
+        1,
+        4
+      ],
+      "expected": true
+    },
+    {
+      "id": "NPC-0016:p1",
+      "phase": 1,
+      "mask": [
+        0,
+        1,
+        4
+      ],
+      "expected": true
+    },
+    {
+      "id": "NPC-0016:p2",
+      "phase": 2,
+      "mask": [
+        0,
+        1,
+        4
+      ],
+      "expected": false
+    },
+    {
+      "id": "NPC-0016:p3",
+      "phase": 3,
+      "mask": [
+        0,
+        1,
+        4
+      ],
+      "expected": false
+    },
+    {
+      "id": "NPC-0016:p4",
+      "phase": 4,
+      "mask": [
+        0,
+        1,
+        4
+      ],
+      "expected": true
+    },
+    {
+      "id": "NPC-0017:p0",
+      "phase": 0,
+      "mask": [
+        0,
+        1,
+        4
+      ],
+      "expected": true
+    },
+    {
+      "id": "NPC-0017:p1",
+      "phase": 1,
+      "mask": [
+        0,
+        1,
+        4
+      ],
+      "expected": true
+    },
+    {
+      "id": "NPC-0017:p2",
+      "phase": 2,
+      "mask": [
+        0,
+        1,
+        4
+      ],
+      "expected": false
+    },
+    {
+      "id": "NPC-0017:p3",
+      "phase": 3,
+      "mask": [
+        0,
+        1,
+        4
+      ],
+      "expected": false
+    },
+    {
+      "id": "NPC-0017:p4",
+      "phase": 4,
+      "mask": [
+        0,
+        1,
+        4
+      ],
+      "expected": true
+    },
+    {
+      "id": "NPC-0018:p0",
+      "phase": 0,
+      "mask": [
+        0,
+        1,
+        2
+      ],
+      "expected": true
+    },
+    {
+      "id": "NPC-0018:p1",
+      "phase": 1,
+      "mask": [
+        0,
+        1,
+        2
+      ],
+      "expected": true
+    },
+    {
+      "id": "NPC-0018:p2",
+      "phase": 2,
+      "mask": [
+        0,
+        1,
+        2
+      ],
+      "expected": true
+    },
+    {
+      "id": "NPC-0018:p3",
+      "phase": 3,
+      "mask": [
+        0,
+        1,
+        2
+      ],
+      "expected": false
+    },
+    {
+      "id": "NPC-0018:p4",
+      "phase": 4,
+      "mask": [
+        0,
+        1,
+        2
+      ],
+      "expected": false
+    },
+    {
+      "id": "NPC-0019:p0",
+      "phase": 0,
+      "mask": [
+        0,
+        1,
+        2
+      ],
+      "expected": true
+    },
+    {
+      "id": "NPC-0019:p1",
+      "phase": 1,
+      "mask": [
+        0,
+        1,
+        2
+      ],
+      "expected": true
+    },
+    {
+      "id": "NPC-0019:p2",
+      "phase": 2,
+      "mask": [
+        0,
+        1,
+        2
+      ],
+      "expected": true
+    },
+    {
+      "id": "NPC-0019:p3",
+      "phase": 3,
+      "mask": [
+        0,
+        1,
+        2
+      ],
+      "expected": false
+    },
+    {
+      "id": "NPC-0019:p4",
+      "phase": 4,
+      "mask": [
+        0,
+        1,
+        2
+      ],
+      "expected": false
+    },
+    {
+      "id": "NPC-0020:p0",
+      "phase": 0,
+      "mask": [
+        0,
+        1,
+        2
+      ],
+      "expected": true
+    },
+    {
+      "id": "NPC-0020:p1",
+      "phase": 1,
+      "mask": [
+        0,
+        1,
+        2
+      ],
+      "expected": true
+    },
+    {
+      "id": "NPC-0020:p2",
+      "phase": 2,
+      "mask": [
+        0,
+        1,
+        2
+      ],
+      "expected": true
+    },
+    {
+      "id": "NPC-0020:p3",
+      "phase": 3,
+      "mask": [
+        0,
+        1,
+        2
+      ],
+      "expected": false
+    },
+    {
+      "id": "NPC-0020:p4",
+      "phase": 4,
+      "mask": [
+        0,
+        1,
+        2
+      ],
+      "expected": false
+    },
+    {
+      "id": "NPC-0021:p0",
+      "phase": 0,
+      "mask": [
+        0,
+        1,
+        2
+      ],
+      "expected": true
+    },
+    {
+      "id": "NPC-0021:p1",
+      "phase": 1,
+      "mask": [
+        0,
+        1,
+        2
+      ],
+      "expected": true
+    },
+    {
+      "id": "NPC-0021:p2",
+      "phase": 2,
+      "mask": [
+        0,
+        1,
+        2
+      ],
+      "expected": true
+    },
+    {
+      "id": "NPC-0021:p3",
+      "phase": 3,
+      "mask": [
+        0,
+        1,
+        2
+      ],
+      "expected": false
+    },
+    {
+      "id": "NPC-0021:p4",
+      "phase": 4,
+      "mask": [
+        0,
+        1,
+        2
+      ],
+      "expected": false
+    },
+    {
+      "id": "NPC-0023:p0",
+      "phase": 0,
+      "mask": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "expected": true
+    },
+    {
+      "id": "NPC-0023:p1",
+      "phase": 1,
+      "mask": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "expected": true
+    },
+    {
+      "id": "NPC-0023:p2",
+      "phase": 2,
+      "mask": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "expected": true
+    },
+    {
+      "id": "NPC-0023:p3",
+      "phase": 3,
+      "mask": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "expected": true
+    },
+    {
+      "id": "NPC-0023:p4",
+      "phase": 4,
+      "mask": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "expected": true
+    },
+    {
+      "id": "NPC-0024:p0",
+      "phase": 0,
+      "mask": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "expected": true
+    },
+    {
+      "id": "NPC-0024:p1",
+      "phase": 1,
+      "mask": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "expected": true
+    },
+    {
+      "id": "NPC-0024:p2",
+      "phase": 2,
+      "mask": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "expected": true
+    },
+    {
+      "id": "NPC-0024:p3",
+      "phase": 3,
+      "mask": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "expected": true
+    },
+    {
+      "id": "NPC-0024:p4",
+      "phase": 4,
+      "mask": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "expected": true
+    },
+    {
+      "id": "NPC-0025:p0",
+      "phase": 0,
+      "mask": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "expected": true
+    },
+    {
+      "id": "NPC-0025:p1",
+      "phase": 1,
+      "mask": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "expected": true
+    },
+    {
+      "id": "NPC-0025:p2",
+      "phase": 2,
+      "mask": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "expected": true
+    },
+    {
+      "id": "NPC-0025:p3",
+      "phase": 3,
+      "mask": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "expected": true
+    },
+    {
+      "id": "NPC-0025:p4",
+      "phase": 4,
+      "mask": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "expected": true
+    },
+    {
+      "id": "NPC-0026:p0",
+      "phase": 0,
+      "mask": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "expected": true
+    },
+    {
+      "id": "NPC-0026:p1",
+      "phase": 1,
+      "mask": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "expected": true
+    },
+    {
+      "id": "NPC-0026:p2",
+      "phase": 2,
+      "mask": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "expected": true
+    },
+    {
+      "id": "NPC-0026:p3",
+      "phase": 3,
+      "mask": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "expected": true
+    },
+    {
+      "id": "NPC-0026:p4",
+      "phase": 4,
+      "mask": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "expected": true
+    },
+    {
+      "id": "NPC-0027:p0",
+      "phase": 0,
+      "mask": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "expected": true
+    },
+    {
+      "id": "NPC-0027:p1",
+      "phase": 1,
+      "mask": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "expected": true
+    },
+    {
+      "id": "NPC-0027:p2",
+      "phase": 2,
+      "mask": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "expected": true
+    },
+    {
+      "id": "NPC-0027:p3",
+      "phase": 3,
+      "mask": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "expected": true
+    },
+    {
+      "id": "NPC-0027:p4",
+      "phase": 4,
+      "mask": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "expected": true
+    },
+    {
+      "id": "NPC-0028:p0",
+      "phase": 0,
+      "mask": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "expected": true
+    },
+    {
+      "id": "NPC-0028:p1",
+      "phase": 1,
+      "mask": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "expected": true
+    },
+    {
+      "id": "NPC-0028:p2",
+      "phase": 2,
+      "mask": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "expected": true
+    },
+    {
+      "id": "NPC-0028:p3",
+      "phase": 3,
+      "mask": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "expected": true
+    },
+    {
+      "id": "NPC-0028:p4",
+      "phase": 4,
+      "mask": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "expected": true
+    },
+    {
+      "id": "NPC-0029:p0",
+      "phase": 0,
+      "mask": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "expected": true
+    },
+    {
+      "id": "NPC-0029:p1",
+      "phase": 1,
+      "mask": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "expected": true
+    },
+    {
+      "id": "NPC-0029:p2",
+      "phase": 2,
+      "mask": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "expected": true
+    },
+    {
+      "id": "NPC-0029:p3",
+      "phase": 3,
+      "mask": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "expected": true
+    },
+    {
+      "id": "NPC-0029:p4",
+      "phase": 4,
+      "mask": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "expected": true
+    },
+    {
+      "id": "NPC-0030:p0",
+      "phase": 0,
+      "mask": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "expected": true
+    },
+    {
+      "id": "NPC-0030:p1",
+      "phase": 1,
+      "mask": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "expected": true
+    },
+    {
+      "id": "NPC-0030:p2",
+      "phase": 2,
+      "mask": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "expected": true
+    },
+    {
+      "id": "NPC-0030:p3",
+      "phase": 3,
+      "mask": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "expected": true
+    },
+    {
+      "id": "NPC-0030:p4",
+      "phase": 4,
+      "mask": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "expected": true
+    }
+  ],
+  "negative_policies": {
+    "kind": "controlled original counterexample models, not historical runtime execution",
+    "observations": [
+      {
+        "scheduled": true,
+        "authority": "away",
+        "accepted_work_events": 0,
+        "expected_available": false,
+        "expected_completed": 0,
+        "authority_policy_available": false,
+        "authority_policy_completed": 0,
+        "mask_presence_policy_available": true,
+        "mask_completion_policy_completed": 1
+      },
+      {
+        "scheduled": true,
+        "authority": "present",
+        "accepted_work_events": 0,
+        "expected_available": true,
+        "expected_completed": 0,
+        "authority_policy_available": true,
+        "authority_policy_completed": 0,
+        "mask_presence_policy_available": true,
+        "mask_completion_policy_completed": 1
+      }
+    ],
+    "mask_presence_policy_errors": 1,
+    "mask_completion_policy_errors": 2
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "schemas_outcomes_and_identities_reviewed": true,
+  "forward_input_count": 36,
+  "new_native_controls": 54,
+  "new_browser_controls": 17,
+  "targeted_independent_overlapping_checks": 12,
+  "old_controls_are_regressions_not_new_studies": true,
+  "watering_not_inferred_from_receipt": true,
+  "arrival_and_damage_boundaries_reviewed": true,
+  "captures_inspected": [
+    "delivered.png",
+    "broken.png"
+  ],
+  "artifacts": {
+    "CI.json": "94cc99c662c5430f8c56345fe24386a9d9bd1db0d7bf33b2cf2a257b9fed6ccc",
+    "RUN.json": "ad5663b296ded8efdffb5efb2202e117fc69ec243262f351198ce3f0f6f1b9bb",
+    "availability-regression.json": "45fd0fcfcaee9a9a4ebaab3491fa4fbbb7a87ae954650b8f9f2f91f252716e1a",
+    "broken.png": "4d2c9c318cc4161b30e3aa4ca5a6081ea5fe41faa383452cc05c95cb7afc6a99",
+    "browser-execution.json": "4a4f759f47ed3fe0c8788c716147e9fc6c1424e62a78133591a69bcfd9e4ef82",
+    "browser.json": "5e697f5e3806f5fc1bc405548234a6ffa5bb37b308219ef879868817029e72ff",
+    "commands.json": "cf7a1ba93a4c68607427caeaaa1ca6153bedaf05eeceba929488b2e7cf4208d7",
+    "delivered.png": "0c3ed5e38e14c0a576347e7ea3634e751c3124c2895031908ed565f8811a1487",
+    "environment.json": "cfbaafd7c9cf12af404c97072bda98036e4c6fea1529f0f5d3ec99132e194fca",
+    "host-logs.json": "3e01c165f0fc11d85a6985ec4abf540ab44a62c45390fbbb6cdaf4f2638eae6d",
+    "independent-checks.cs": "d29de7f60fd1dfa5e86f8d6262ff26701069b740eaa4488713209271d5d54447",
+    "independent-checks.csproj": "0b9b341fc996fe2cd700f5749d16e86b6623fda7e904e52e53b103e8c79c05f6",
+    "independent-commands.json": "8339ac4ef6945089ab5e9e3bc85efb9eeb992b29a51049c16142e809128af159",
+    "independent-identity.json": "58172f75453e642823cb43f80b5d202fe2b45ec47718f6401825c80d3157f22f",
+    "independent-review.json": "57a52b7ea576d8301cde2b8caee429422148acb7c3f093d98ea1614f5b3c37b2",
+    "journey-native.json": "acde2397096cc72a16509a95e19aa924e4b80685a6d656e75cfb138337d19939",
+    "native-source.json": "1544aee5518988ad4064fc92e07a0d74b5a4c2c2d6920c64a42ee56bea3d89c1",
+    "native.json": "c6b4167b6fdc1aac097b66a4bde8bb9e5c1ed4465e8fd91ee382b67faf7e4096",
+    "preservation.json": "ce959765e2c25a0a3a23bbc656ffe7bc354f165416ff5d699e4b48af82cd8b17",
+    "results.json": "ad7cdf7361b66b78d08d6b1e13c91ad0a4a5772ccdafbd9906815e78f925df22",
+    "source.json": "390e28290989169fe553dc3300b081299b7ccb5016ad3e11d38ce928c3da0f07",
+    "verified-source.json": "8440925e56c018e671b2fcba1cc6220b29da3946f01b0cbff0df85d51d266b89"
+  }
+}

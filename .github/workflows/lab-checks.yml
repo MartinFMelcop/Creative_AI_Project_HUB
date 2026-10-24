@@ -614,7 +614,7 @@ jobs:
           if-no-files-found: ignore
           retention-days: 7
 
-      - name: Execute source-bound NPC availability and actual original service choices
+      - name: Execute actual repair-to-watering journey and affected availability controls
         run: python3 north-star/availability-study/tools/verify.py --dotnet dotnet --output "$RUNNER_TEMP/npc-availability"
       - name: Retain availability failure diagnostics
         if: failure()

@@ -22,7 +22,7 @@ def inputs():
     while pending:
         p=pending.pop().resolve()
         if p in seen:continue
-        if not p.is_relative_to(STUDY):raise ValueError('Unexpected project dependency')
+        if not any(p.is_relative_to(base) for base in (STUDY,CSHARP/'Crossing',CSHARP/'Domain')):raise ValueError('Unexpected project dependency')
         seen.add(p);files.add(p)
         files.update(x for x in p.parent.glob('*.cs'))
         for e in ET.parse(p).iter():
@@ -57,7 +57,7 @@ def verify(output,dotnet):
     if node!='v24.19.0':raise ValueError('Pinned Node24.19.0 required')
     run(['python3',LAB/'run.py','--output',output/'source.json'],ROOT)
     run(['python3',LAB/'test_instrument.py'],ROOT)
-    for folder in ('Checks','Host'):
+    for folder in ('Checks','Host','JourneyChecks'):
         projects=list((STUDY/folder).glob('*.csproj'))
         if len(projects)!=1:raise ValueError('One explicit project per consumer required')
         run([sdk,'build',projects[0],'-c','Release','-m:1','--disable-build-servers'])
@@ -65,7 +65,9 @@ def verify(output,dotnet):
     report=run([sdk,STUDY/'Checks/bin/Release/net10.0/NorthStar.AvailabilityChecks.dll','--source-cases',output/'source.json'])
     (output/'native-source.json').write_text(report+'\n')
     run(['python3',LAB/'run.py','--responses',output/'native-source.json','--output',output/'verified-source.json'],ROOT)
+    run([sdk,STUDY/'JourneyChecks/bin/Release/net10.0/NorthStar.JourneyChecks.dll',output/'journey-native.json'])
     run(['node',STUDY/'tools/browser.mjs',sdk,output/'browser'],ROOT)
+    run(['node',STUDY/'tools/journey-browser.mjs',sdk,output/'journey-browser'],ROOT)
     if before!=inputs():raise ValueError('Instrument or consumer changed during execution')
     result=dict(schema_version=1,sdk=version,node=node,input_hashes=before,source_stable=True,scope='Source masks and original local service authority; no historical schedule runtime, Unity, Windows, Steam or participant execution.')
     (output/'results.json').write_text(json.dumps(result,indent=2)+'\n');print('PASS: stable actual availability consumer and source controls')

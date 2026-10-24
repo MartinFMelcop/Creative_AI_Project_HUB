@@ -905,7 +905,7 @@
         "Actual original committed work and costly personal alternative; lost reservation, dawn non-return and actual text/picture renderer negatives"
       ],
       "validity_boundary": "Prior typed eligibility remains bounded as before. New scope is literal mask eligibility and original in-memory NPC service authority. No historical Ruby/RMXP NPC execution, full schedules, placement precedence, reputation/factions, quest catalogs, Unity, Windows, Steam or human adequacy.",
-      "next_objective": "Compare actual Unity/Windows and appropriate participant/device access against consequential unresolved world capabilities; use durability in a real later beneficiary only if justified. Do not automatically extend the workshop matrix or infer source placement.",
+      "next_objective": "Compare actual Unity/Windows and participant/device access against persistent authored continuity and consequential unresolved world capabilities. The existing repair result now has a real composed journey consumer; do not automatically repeat source or route matrices.",
       "path": "labs/world-gameplay",
       "instrument": "labs/world-gameplay/run.py",
       "evidence": [
@@ -913,14 +913,16 @@
         "evidence/world-loadout/results.json",
         "evidence/npc-availability/RUN.json",
         "evidence/npc-availability/source.json",
-        "evidence/npc-availability/browser.json"
+        "evidence/npc-availability/browser.json",
+        "evidence/repair-hauling/RUN.json"
       ],
       "evidence_sha256": {
         "evidence/world-loadout/RUN.json": "98bda622e86d2059a49368cb2f3f3e4cf0c15b33b532a3335c2720c8be67d533",
         "evidence/world-loadout/results.json": "3e45a54000ff9cfc6aeb50ccd78356b9c9cb304c3d44e81d82f05e4bc112f055",
         "evidence/npc-availability/RUN.json": "5b1cd5ead6e8a56f0c5140744d2bf3f4c5b9d57e84aafc5c652ba0e71a6b1f8a",
         "evidence/npc-availability/source.json": "390e28290989169fe553dc3300b081299b7ccb5016ad3e11d38ce928c3da0f07",
-        "evidence/npc-availability/browser.json": "7d45277c974ce3d42ec741f01c0a2e6ecc950ec2654d8f05ea8f4e9d0b2b55a0"
+        "evidence/npc-availability/browser.json": "7d45277c974ce3d42ec741f01c0a2e6ecc950ec2654d8f05ea8f4e9d0b2b55a0",
+        "evidence/repair-hauling/RUN.json": "ad5663b296ded8efdffb5efb2202e117fc69ec243262f351198ce3f0f6f1b9bb"
       },
       "additional_instruments": [
         "labs/world-gameplay/availability/run.py",
@@ -1725,15 +1727,18 @@
         "north-star/availability-study/Host/Room.cs"
       ],
       "evidence": [
-        "evidence/npc-availability/RUN.json",
-        "evidence/npc-availability/verified-source.json",
-        "evidence/npc-availability/browser.json"
+        "evidence/repair-hauling/RUN.json",
+        "evidence/repair-hauling/verified-source.json",
+        "evidence/repair-hauling/availability-regression.json"
       ],
       "evidence_sha256": {
-        "evidence/npc-availability/RUN.json": "5b1cd5ead6e8a56f0c5140744d2bf3f4c5b9d57e84aafc5c652ba0e71a6b1f8a",
-        "evidence/npc-availability/verified-source.json": "8440925e56c018e671b2fcba1cc6220b29da3946f01b0cbff0df85d51d266b89",
-        "evidence/npc-availability/browser.json": "7d45277c974ce3d42ec741f01c0a2e6ecc950ec2654d8f05ea8f4e9d0b2b55a0"
-      }
+        "evidence/repair-hauling/RUN.json": "ad5663b296ded8efdffb5efb2202e117fc69ec243262f351198ce3f0f6f1b9bb",
+        "evidence/repair-hauling/verified-source.json": "8440925e56c018e671b2fcba1cc6220b29da3946f01b0cbff0df85d51d266b89",
+        "evidence/repair-hauling/availability-regression.json": "45fd0fcfcaee9a9a4ebaab3491fa4fbbb7a87ae954650b8f9f2f91f252716e1a"
+      },
+      "prior_evidence": [
+        "evidence/npc-availability/RUN.json"
+      ]
     }
   ]
 }

@@ -1,0 +1,160 @@
+{
+  "schema_version": 1,
+  "kind": "authored_acceptance_protocol",
+  "status": "Declared before the new journey consumer's actual acceptance execution",
+  "question": "Can an actually acquired repair constrain a subsequent original journey and explicit watering handoff without reads, promises, elapsed wall time or an incomplete encounter manufacturing cargo or delivery?",
+  "beneficiary": "The existing original workshop gains a consequential later use for its acquired repair rather than leaving durability as terminal metadata.",
+  "authorship": "Original agent-authored experimental contract under the current author direction. Constants are authored study parameters, not extracted legacy rules, approved canon, practical repair quality or human balance evidence.",
+  "baseline": "The unchanged Workshop Session reports fired or patched durability only after its real accepted repair route. Previously no later gameplay consumed it.",
+  "ownership": {
+    "workshop": "One private actual NorthStar.Availability.Session is the sole source of an acquired jar. A promise, reservation, ready work, posted phase or arbitrary client field cannot grant cargo.",
+    "crossing": "One private actual NorthStar.Crossing.Session, fixed to Lure/Trail, owns its actual stages, accepted actions, health, resolve, XP and Complete/Won facts. The journey must not change its damage or reward rules.",
+    "journey": "A coordinator owns cargo integrity, paid route cost and watering. It may observe actual child-owner facts but cannot fabricate a child result.",
+    "time": "Explicit workshop phases and route phase payments remain distinct from Crossing beats. Wall time, GET, redraw and audio do not act. No historical calendar durations or other RequestExpedition shifts are normalized into this clock.",
+    "watering": "Two original seedbeds each require one water unit. Both start unwatered and are observable separately. Only explicit final deliver may actually pour the two carried units, once, after the actual completed won Crossing and surviving cargo. A keeper receipt alone is not watering. This does not assert plant growth, survival, watering quality or approved world canon."
+  },
+  "authored_constants": {
+    "starting_seedbeds": 2,
+    "water_units_on_valid_delivery": 2,
+    "fired_repair": {
+      "workshop_phase_cost": 3,
+      "acquired_integrity": 3
+    },
+    "patched_repair": {
+      "workshop_phase_cost": 2,
+      "acquired_integrity": 1
+    },
+    "fast_route": {
+      "phase_cost": 1,
+      "integrity_wear_on_accepted_departure": 2
+    },
+    "sheltered_route": {
+      "phase_cost": 2,
+      "integrity_wear_on_accepted_departure": 0
+    },
+    "damage_event_integrity_cost": 1,
+    "broken_integrity": 0
+  },
+  "transition_requirements": [
+    "Acquire cargo only from the actual Workshop Session's completed repair: actual collection for fired, or the accepted independent patch action for patched.",
+    "Accept departure only when an acquired jar and sufficient actual remaining phase budget exist. Accepted departure pays route time and wear exactly once; rejection changes neither.",
+    "Clamp cargo integrity at zero. Zero integrity means broken cargo and zero water; a later positive child health value or successful encounter cannot repair the jar.",
+    "For each accepted Crossing action whose actual HP decreases, consume one cargo integrity. Refused actions and accepted zero-damage actions consume no damage-event integrity. Do not modify Crossing HP, damage, action costs, XP or reward ownership.",
+    "Survey success alone does not authorize watering. The actual subsequent stage1 encounter must reach Complete and Won.",
+    "Require surviving positive-integrity cargo and actual Complete/Won for explicit deliver. In one accepted in-memory action, actually pour one carried unit into each of the two original beds, mark both observable bed flags watered and consume the two carried units. Delivered is derived from those bed flags rather than an independently incrementable receipt counter. Reads, duplicate deliver, later actions and stale intent cannot water again.",
+    "A failed, withdrawn, broken or unfinished route cannot report watering or a successful handoff. It cannot infer another NPC's return or death."
+  ],
+  "predeclared_feasibility_routes": [
+    {
+      "id": "fired-fast-safe",
+      "workshop_commands": [
+        "reserve",
+        "shape",
+        "collect"
+      ],
+      "route": "fast",
+      "expected_phase_total_after_departure": 4,
+      "expected_integrity_after_departure": 1,
+      "stage0_actions": [
+        "skill",
+        "skill",
+        "walk",
+        "skill"
+      ],
+      "stage1_actions": [
+        "skill",
+        "skill",
+        "walk",
+        "skill",
+        "walk",
+        "skill"
+      ],
+      "final_command": "deliver",
+      "expected_water_units": 2
+    },
+    {
+      "id": "patched-sheltered-safe",
+      "workshop_commands": [
+        "alone"
+      ],
+      "route": "sheltered",
+      "expected_phase_total_after_departure": 4,
+      "expected_integrity_after_departure": 1,
+      "stage0_actions": [
+        "skill",
+        "skill",
+        "walk",
+        "skill"
+      ],
+      "stage1_actions": [
+        "skill",
+        "skill",
+        "walk",
+        "skill",
+        "walk",
+        "skill"
+      ],
+      "final_command": "deliver",
+      "expected_water_units": 2
+    }
+  ],
+  "required_negative_cases": [
+    {
+      "id": "no-jar-departure",
+      "expected": "Departure is refused; no route cost, integrity or water is granted."
+    },
+    {
+      "id": "fired-ready-not-collected",
+      "expected": "Ready work without the actual collection does not grant a journey jar or permit departure."
+    },
+    {
+      "id": "promise-is-not-cargo",
+      "expected": "Promise, reads and elapsed wall time do not grant cargo, advance phases or water seedbeds."
+    },
+    {
+      "id": "patched-fast-breaks",
+      "expected": "Accepted fast-route wear exhausts the patched jar; integrity0, broken cargo and water0 are retained. Do not retune wear to make the route win."
+    },
+    {
+      "id": "late-fired-no-time",
+      "expected": "A fired repair obtained at phase4 has no remaining route time; departure is refused without refunding repair costs or inventing watering."
+    },
+    {
+      "id": "survey-only-no-delivery",
+      "expected": "The actual stage0 survey result does not permit deliver or set water."
+    },
+    {
+      "id": "positive-hp-damage-breaks-cargo",
+      "expected": "An accepted real damaging Crossing action consumes one integrity even when player HP remains positive; depleted cargo cannot deliver."
+    },
+    {
+      "id": "duplicate-handoff",
+      "expected": "After a valid explicit deliver, a duplicate cannot add water or consume more resources."
+    },
+    {
+      "id": "invalid-or-refused-child-action",
+      "expected": "A rejected action cannot consume route time, integrity or deliver water."
+    },
+    {
+      "id": "arrival-is-not-watering",
+      "expected": "At actual completed won arrival both bed flags remain false and two water units remain carried. A keeper receipt, message or renderer must not imply watering before explicit pour."
+    }
+  ],
+  "comparison_and_limits": {
+    "credible_alternatives": [
+      "Actual licensed Unity/Windows source-to-player acceptance, if real Editor, activation, platform modules and execution are available.",
+      "Appropriate author/player/device assessment, if actual participants and devices are available; agents cannot replace them.",
+      "Persistent continuity for the existing RequestExpedition scene: a consequential but separate unresolved dependency, not supplied by PreparedExpedition's journal.",
+      "Remaining reputation, creation, quest and placement contracts, each requiring a real beneficiary rather than another isolated helper."
+    ],
+    "selection": "The synthesis selects a coherent existing workshop-to-observed-watering product journey. The prior source mask assay and immutable source conflicts are preserved rather than automatically repeated as a new laboratory result.",
+    "interpretation": "The two declared safe routes are feasibility controls. Their equal final water totals and authored route costs do not establish strategy equivalence, optimal play, meaningful human preference, fairness or balance.",
+    "no_new_legacy_claim": "The hauling, wear and watering constants are original. This protocol does not integrate full legacy NPC schedules, reputation, quest/world catalogs, persistence or historical Ruby/RMXP runtime.",
+    "production_boundary": "Portable C# and an actual Linux/browser observer are not Unity Editor, activated tooling, a Windows player, Steam delivery or commercial clearance.",
+    "evidence_rules": "Record actual execution outcomes, source identities, rejected routes and renderer discrepancies. A change to this declared contract after outcomes are observed must be identified as a revision, with the superseded result retained; do not silently retune a failed route or target."
+  },
+  "scientific_influence": [
+    "SCI-076: choose software ownership and actual consumer execution methods for software claims; use participants for comprehension or preference claims.",
+    "SCI-077: retain failed routes, avoid independent double counting of repeated cases, and do not treat implementation or hashes as experience validation."
+  ]
+}

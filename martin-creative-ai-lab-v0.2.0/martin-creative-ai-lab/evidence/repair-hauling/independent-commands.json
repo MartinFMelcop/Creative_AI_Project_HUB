@@ -1,0 +1,25 @@
+[
+  {
+    "command": [
+      "/workspace/work/authored-scene/dotnet/dotnet",
+      "build",
+      "/workspace/work/journey-science-review/Review.csproj",
+      "-c",
+      "Release",
+      "-m:1",
+      "--disable-build-servers"
+    ],
+    "exit_code": 0,
+    "stdout": "  Determining projects to restore...\n  Restored /workspace/work/journey-science-review/Review.csproj (in 194 ms).\n  4 of 5 projects are up-to-date for restore.\n  NorthStar.Availability -> /workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/availability-study/Rules/bin/Release/netstandard2.1/NorthStar.Availability.dll\n  NorthStar.Domain -> /workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/Domain/bin/Release/netstandard2.1/NorthStar.Domain.dll\n  NorthStar.Crossing -> /workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/Crossing/bin/Release/net10.0/NorthStar.Crossing.dll\n  NorthStar.AvailabilityHost -> /workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/availability-study/Host/bin/Release/net10.0/NorthStar.AvailabilityHost.dll\n  Review -> /workspace/work/journey-science-review/bin/Release/net10.0/Review.dll\n\nBuild succeeded.\n    0 Warning(s)\n    0 Error(s)\n\nTime Elapsed 00:00:04.64\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "/workspace/work/authored-scene/dotnet/dotnet",
+      "/workspace/work/journey-science-review/bin/Release/net10.0/Review.dll"
+    ],
+    "exit_code": 0,
+    "stdout": "{\"scope\":\"Independent targeted actual C# journey checks; not participants or an independent model score\",\"passed\":12,\"checks\":[\"no acquired jar cannot depart or water\",\"ready but uncollected fired work cannot become cargo\",\"predeclared final-survey damage boundary reached\",\"actual child won survey at positive HP after damaging last action\",\"survey-win transition cannot hide damaging cargo contact\",\"broken cargo cannot water despite positive HP and child survey win\",\"actual survey alone leaves both beds dry\",\"survey completion cannot masquerade as final watering\",\"actual completed arrival remains carried water and unwatered beds\",\"explicit pour waters each original bed exactly once\",\"duplicate pour cannot rewater or increment delivered\",\"external view cannot edit bed facts\"],\"damageBoundary\":{\"Stage\":\"broken\",\"Route\":\"sheltered\",\"TotalPhase\":4,\"Integrity\":0,\"Water\":0,\"Delivered\":0,\"WateredBeds\":[false,false],\"Last\":\"Walk: 4 damage, 0 resolve spent. Completed; reward committed. Level 2, 2 unspent points. Actual damaging contact wears one jar integrity, independently of the HP amount. The jar breaks and both water units are lost. This journey has ended; no water was delivered and no repair or phase is refunded.\",\"Commands\":[],\"Encounter\":{\"Stage\":1,\"Beat\":4,\"Position\":4,\"Health\":6,\"Resolve\":8,\"MaximumHealth\":10,\"MaximumResolve\":10,\"RequiredPosition\":4,\"MaximumBeats\":6,\"Active\":false,\"Won\":true,\"Complete\":false,\"Pulse\":true,\"Threat\":\"PULSE at your current position: walking or dashing leaves it.\"}},\"arrival\":{\"Stage\":\"arrival\",\"Route\":\"fast\",\"TotalPhase\":4,\"Integrity\":1,\"Water\":2,\"Delivered\":0,\"WateredBeds\":[false,false],\"Last\":\"Skill: 0 damage, 3 resolve spent. Completed; reward committed. Level 3, 4 unspent points. No damaging contact: jar integrity unchanged. You reach the far landing with water still carried. Arrival is not handoff: explicitly pour one unit into each of the two original seedbeds.\",\"Commands\":[\"deliver\"],\"Encounter\":{\"Stage\":1,\"Beat\":6,\"Position\":6,\"Health\":11,\"Resolve\":3,\"MaximumHealth\":11,\"MaximumResolve\":11,\"RequiredPosition\":4,\"MaximumBeats\":6,\"Active\":false,\"Won\":true,\"Complete\":true,\"Pulse\":false,\"Threat\":\"BOLT: moving exposes health; the approach skill spends resolve to protect.\"}},\"delivered\":{\"Stage\":\"delivered\",\"Route\":\"fast\",\"TotalPhase\":4,\"Integrity\":1,\"Water\":0,\"Delivered\":2,\"WateredBeds\":[true,true],\"Last\":\"You pour one carried water unit into each of the two original seedbeds. Both beds are observed watered now, once. The jar is empty; repair and route costs remain paid. Mara\\u0027s two pots remain unfinished and no return to her yard is claimed.\",\"Commands\":[],\"Encounter\":{\"Stage\":1,\"Beat\":6,\"Position\":6,\"Health\":11,\"Resolve\":3,\"MaximumHealth\":11,\"MaximumResolve\":11,\"RequiredPosition\":4,\"MaximumBeats\":6,\"Active\":false,\"Won\":true,\"Complete\":true,\"Pulse\":false,\"Threat\":\"BOLT: moving exposes health; the approach skill spends resolve to protect.\"}}}\n",
+    "stderr": ""
+  }
+]

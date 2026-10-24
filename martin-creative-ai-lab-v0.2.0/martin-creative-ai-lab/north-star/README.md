@@ -110,9 +110,13 @@ losing routes are retained. Existing Crossing, authored narrative and tactical s
 semantics remain unchanged. [Evidence](../evidence/combat-status/RUN.json) separates
 formula compatibility, original consequences and unvalidated human/production claims.
 
-## Source-bound availability opportunity
+## Continuous repair and delivery opportunity
 
 [The kiln window](availability-study/README.md) separates posted hours from actual
 NPC presence, committed capacity and a real repair handoff. Its C#8 rules and actual
 Linux/browser consumer preserve unresolved source schedule conflicts. This separate
 original study leaves the downloadable authored scene and its single owner unchanged.
+
+The same application now continues the actually acquired repair through a paid route,
+two real Crossing encounters and explicit per-bed watering. [Execution](../evidence/repair-hauling/RUN.json)
+separates the new product integration from reexecuted affected workshop controls.

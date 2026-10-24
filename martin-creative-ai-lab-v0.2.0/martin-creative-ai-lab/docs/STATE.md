@@ -1,135 +1,144 @@
 # Current transformation continuity
 
-**Updated:** 2026-10-24 UTC. **SEED:**0.34.0. Initial actual Git root
+**Updated:**2026-10-24 UTC. **SEED:**0.34.0. Initial actual Git root
 `/workspace/Creative_AI_Project_HUB`, branch `work`, HEAD
-`cd834b4247e595aa125272c6b5f13788a921023e`, clean tracked/untracked work.
-Fetched main matched, divergence0/0, no outgoing commits. Root authority verified the
-maintained workspace and published Continuous Development v2. Publication/new CI are
-separate handoff observations, not inferred from local checks.
+`f3bf54f2b61e13874f990f37a328b5d1217c40fe`, clean tracked/untracked work.
+Fetched main matched, divergence0/0, no outgoing commits. Root authority verifies the
+maintained workspace and published Continuous Development v2. New publication/CI are
+separate handoff observations, not inferred from local execution.
 
-This file owns initiative continuity and rolling investment. SEED owns direction,
-[the catalog](../labs/origins.json) maturity/consumption, [DESIGN](../north-star/DESIGN.md)
-creative status and evidence actual observations. Recover the complete published
-[Continuous Development v2](prompts/CONTINUOUS_DEVELOPMENT.md) each execution.
+STATE owns initiative continuity; SEED owns direction, [catalog](../labs/origins.json)
+maturity/consumption, [DESIGN](../north-star/DESIGN.md) creative status and evidence actual
+observations. Recover [the full operating process](prompts/CONTINUOUS_DEVELOPMENT.md).
 
-## Active result — advertised routine versus actual NPC authority
+## Active result — one repair-to-watering journey
 
-[The kiln window](../north-star/availability-study/README.md) is one original C# service
-opportunity. Mara's advertised phases0/1/4 do not prove physical presence, availability,
-finished work or return. Accepted reservation spends1phase and occupies capacity; actual
-shaping/firing spends2more, including outside the advertised window; only collection
-hands over the repair. A personal patch costs2phases with lower reported durability.
-Both leave her two own pots unfinished. Durability is a terminal experimental outcome,
-not a resource consumed by a later journey or measured practical quality.
+[The kiln and the path](../north-star/availability-study/README.md) extends the existing
+application rather than adding another isolated bench. One coordinator privately owns
+the actual unchanged Workshop Session and Crossing Session. An actual collected fired
+repair or accepted personal patch authorizes departure; ready work, promises and client
+fields cannot create a jar. Durability is now consumed by actual route wear and contact.
 
-Leaving an outstanding reservation preserves it and makes location unaccounted. Explicit
-waiting through advertised dawn cannot restore Mara, complete service or deliver the jar.
-Withdrawal cancels the reservation without refunding time and leaves her away; a personal
-alternative can remain. A late accepted job can still be actually collected at phase4.
-No wall clock, GET, redraw or promise advances gameplay. The finite compressed phases
-are authored step costs, not a real-time simulation of the source's durations.
+Fired preparation3 + fast route1 fits the four-phase horizon and pays2of3integrity.
+Personal preparation2 + sheltered route2 fits and pays0of1. Both carry2water units into
+the real fixed Lure/Trail encounters with1integrity. A personal patch on the fast route
+breaks before Crossing and loses water without refund. A late phase4 repair cannot
+invent travel time. Route payment and workshop phases are separate from encounter beats;
+no wall time, redraw, GET, promise or audio acts.
 
-The new library is C#8/netstandard2.1; the actual host is .NET10/Linux/browser. Its world,
-art and fiction are original experimental staging, not adopted legacy cast or approved
-canon. This separate source-run study does not replace the downloadable authored scene,
-add another packaged Linux release duty or alter RequestExpedition, Crossing or combat.
+Each accepted damaging contact consumes1jar integrity independently of HP amount. Actual
+survey completion only permits explicit continuation with the same cargo. Actual final
+Complete/Won with surviving water permits explicit pouring: one unit into each of two
+original seedbeds. Delivered derives from their two flags, not a UI stamp or keeper's
+receipt. Arrival is not watering. Repeated commands cannot refill cargo or water twice.
+Mara's two own pots stay unfinished; the workshop record is historical after departure,
+not a fresh road observation of her presence or return.
 
-## Selection and independent specialties
+The unchanged Workshop rules remain C#8/netstandard2.1. Composition references the real
+Crossing executable and is **.NET10**, not a Unity/netstandard library. This is original
+experimental local staging, not approved canon, physics, plant growth or human balance.
+The downloadable Edda/Rill scene, RequestExpedition, Crossing/Domain, Treatment Line,
+protected sources, original media and notices remain exact; no new packaged release duty.
 
-Three independent parallel analyses inspected actual sources and focused full chapters.
-Engineering ENG-001/004/015 favored a consequential availability contract and one state
-owner; Creation CRE-005(A),045/048/061(H) favored NPC work, voluntary alternatives and
-uncertain observations. Science SCI-076/077 preferred the credible bounded reputation
-arithmetic alternative and required independent source output checks. Primary selected
-availability for its novel service beneficiary and real unresolved schedule obligation;
-contradictory historical locations were deliberately not compiled into hidden precedence.
+## Selection, specialties and access
 
-Engineering owned rules/native controls, Science the pre-C# source assay/regressions,
-Creation the original browser art/copy; primary owned host, instrument, final visual
-correction and evidence. Independent review caught missing overall source bindings,
-independent-output verification and copy that implied a reservation was released by
-leaving. These were corrected. Agent analyses are not Brain libraries or independent
-human/scientific/author validation.
+Independent parallel Engineering ENG-004/015/017 and Creation CRE-005(A),011/013/061(H)
+recommended actual acquired-repair use to correct product fragmentation. Science
+SCI-076/077 preferred persistent RequestExpedition continuity, a credible unresolved
+alternative: the old Recovery journal owns PreparedExpedition and does not already
+preserve the narrative owner. Primary selected the new continuous beneficiary rather
+than another source helper or journal/recovery matrix.
 
-Licensed Unity/Windows delivery remains higher-value production acceptance when actual
-access exists. SDK10.0.401 executes from its restored path; no dotnet is on PATH. Bounded
-Editor/Hub probes found no usable installation; `/root/Unity/Hub/Editor` returned
-PermissionError, not absence. Activation and Windows modules remain unverified. No
-participant/device assessment was available; agents cannot substitute for it. Creation
-parsing is visibly malformed and depends on unresolved identity/item policy; another
-intake/recovery/packaging/status/media matrix would repeat recent beneficiaries.
+Engineering owned coordinator/native checks; Creation the continuous original UI/art;
+Science the declared protocol and independent read-only scratch review; primary owned
+host/dependency integration, actual browser execution and evidence. They are not Brain
+libraries, independent participants, model benchmarks or author approval.
 
-## Executed evidence and meaningful negatives
+SDK10.0.401 executes from the restored path; PATH has no dotnet/Unity/Hub/Steam tooling.
+Bounded installed-editor probes remain without usable Editor; the prior protected
+installation-directory probe was denied, not proof of absence. Activation and platform
+modules remain unverified. No real participant/device assessment was available. Licensed
+Unity/Windows and appropriate human assessment retain greater production/experience
+value when actual access exists. No empty Editor scaffold substitutes for that evidence.
 
-[Execution](../evidence/npc-availability/RUN.json) binds24actual forward inputs, six of
-them protected reference sources, before/after execution. Actual acceptance passed:
-40native controls,20Chromium controls,7HTTP controls and16instrument regressions.
-Python and compiled C# each passed the **same135** literal NPC×phase source cases,
-not270independent observations. Native output is independently checked for exact IDs,
-booleans, order, totals and source expectations. No historical Ruby/RMXP runs are claimed.
+## Executed controls and retained negatives
 
-The source has27NPCs and five phases, but home/mask membership, phase1 global worker rest,
-dawn/street heuristics and quest/cutscene control conflict. Source position stays UNKNOWN.
-Only the literal mask/event-authority boundary is narrowly INTEGRATED; full NPC schedules,
-location precedence, reputation/faction effects and quest/world catalogs remain UNRESOLVED.
+[Execution](../evidence/repair-hauling/RUN.json) binds36forward inputs before/after:
+54new native controls and17new actual Chromium controls passed. The independent Science
+review executed12targeted overlapping checks; these are not added independent observations
+or people. Captures of actual watered beds/empty carried water and broken cargo/dry beds
+were inspected, with an actual false-delivery renderer specifically rejected.
 
-Retained negatives include the initial equal-time strong/weak repair design; fired work
-now costs3phases versus2for the patch. The first browser instrument addressed obsolete
-`#notice` instead of actual `#last`; its failed execution remains. A later apparently
-passing19-control renderer was superseded after inspecting images: SVG `.hidden` was a
-JavaScript expando, so Mara remained visible while unaccounted and the jar looked cracked
-after collection. Attribute/CSS visibility and computed-style assertions now check the
-actual worker, empty position and all repair drawings. Separate actual false-text and
-false-picture renderers are rejected. Earlier captures/results stay explicitly superseded.
-No fixture, source, timeout or integrity/security gate was weakened.
+The changed host/UI justify rerunning the existing40workshop native,20browser,7HTTP,
+16instrument controls and the same135Python/C# mask cases. They are affected regressions,
+not another legacy study or effort unit. The source assay and all protected source bytes
+are unchanged. Six historical source bindings remain in the overall identity gate.
 
-Current captures were inspected for absence at advertised dawn, actual collected repair
-and pending personal work. Software/pixel correspondence does not establish recognition,
-balance, comprehension, accessibility, enjoyment, repair quality or author approval.
+Material review corrections retained in the current evidence:
+
+- Draft final action handed water to a keeper while the declared goal required observed
+  watering. The actual two per-bed pours and flags now implement that goal. Receipt alone
+  is not watering; no acceptance was weakened to accommodate the draft.
+- Draft observation exposed an unstarted Crossing object. Encounter is now null until
+  actual Begin, including the broken fast approach that never starts an encounter.
+- An actual damaging final survey action leaves child Won=true, HP6, Complete=false,
+  while breaking the jar. Cargo remains lost, beds dry and continuation blocked. The
+  coordinator does not hide contact by automatically starting the next encounter.
+- A broken journey can retain an active/winning child snapshot; no child defeat is
+  fabricated. The defensive child-defeat branch is not claimed reached under these fixed
+  one-integrity viable routes. No repair, phase or water is refunded by observation.
+
+The prior availability selector failure, equal-time design counterexample and superseded
+SVG captures/results remain unchanged in [prior evidence](../evidence/npc-availability/RUN.json).
+Actual attribute/CSS and computed-style visibility continue to reject false worker text
+and pictures. No fixture, dependency pin, timeout or integrity/security gate was weakened.
+Software/visual correspondence is not comprehension, accessibility, enjoyment, practical
+quality, broad compatibility, approval or clearance.
 
 ## Maturity, preservation and lifecycle
 
-All eleven destinations remain mandatory. Ten bounded methods remain operational;
-**Build/Operations stays incomplete** under its unchanged source-to-Windows question.
-The new World & Gameplay extension does not promote Windows, Editor, license/modules,
-Steam or production operations. The prior recipient/runtime/source-recovery artifact
-remains unchanged with its existing notices and exact checksum.
+All eleven destinations remain mandatory; ten bounded methods remain operational.
+**Build/Operations stays incomplete** under its unchanged source-to-Windows acceptance.
+The existing narrow mask/event-authority integration now points to the current executed
+consumer; no new legacy capability or laboratory method is fabricated by original route
+and watering rules. Full NPC schedules/placement conflicts, reputation/factions, quest
+catalogs, creation parsing, full effects/passives, item/tool/unlock catalogs and narrative
+persistence remain genuinely unresolved.
 
-RequestExpedition still owns Edda's work, Rill's consent, costs, actual nested Crossing
-and observed return. Fixed Lure/Trail remains setup; promises, time, redraw and audio
-cannot fabricate return/delivery. Treatment Line global rounds, Cinderwatch individual
-turn scorch and Crossing beats remain distinct. The prior AI study retains one frozen
-first delivery, protocol/access/attribution limits and superseded source-race evidence;
-no new candidate attempt or model score is claimed.
+[Preservation](../evidence/repair-hauling/preservation.json) compares754previously tracked
+files across unchanged owners, libraries, download, Brain and references against actual
+baseline Git bytes. This is identity evidence, not rerunning all old consumers. The
+source inventory retains1052unique available origin files and28ZIP/PCK packages; no unique
+historical engine, behavior, save, media or notice has a demonstrated replacement here.
+Git history/public URL or repeated runtime bytes alone do not authorize retirement.
 
-Full effects/passives, creation parsing, item/tool/unlock catalogs, literary/human
-experience, commercial clearance and production ownership remain unresolved. No protected
-source/variant/Brain, old consumer, media, save format, package or notice was retired.
-Shared runtime bytes do not establish whole historical-package redundancy. Git history
-or public URLs alone do not supply a recovery/rights replacement. The available-origin
-inventory is refreshed after final content; unique historical runtime/behavior remains.
+RequestExpedition still owns Edda's work, Rill's consent/costs/actual Crossing and observed
+return, with fixed Lure/Trail scene setup. No journey clock overrides it. Treatment Line
+global rounds, Cinderwatch turn scorch and Crossing beats remain incompatible. The prior
+AI study retains its one frozen first delivery, protocol/access/attribution and superseded
+race evidence; no new candidate attempt or model score is claimed. Production ownership,
+commercial clearance, Unity/Windows/Steam and human experience remain unresolved.
 
-## CI continuity and next acceptance
+## CI and next acceptance
 
-[CI evidence](../evidence/npc-availability/CI.json): baseline CI40015613477 at initial
-cd834b4 completed/success attempt2 with eight successful jobs, including actual recipient
-rebuild/playback. Attempt1 C# was cancelled during Chromium Linux dependency installation,
-before the delivery step. Only that job was requested for rerun; actual attempt2 job
-collection reports eight successes. Its cancellation cause is not established.
+Baseline CI40046725233 at initial f3bf54f reports eight successful jobs after the requested
+rerun. Attempt1 C# was cancelled during Ubuntu Chromium dependency downloads, before the
+new consumer step; cancellation cause remains unproven. Only that job was requested for
+rerun. Prior CI40015613477 completed/success attempt2 with eight successful jobs; its
+attempt1 dependency-install cancellation retains its separate record. New publication/CI
+remain separate observations.
 
-CI40013655495's runtime/dotnet mismatch remains in the prior recipient CI record; extracting
-from the full SHA512-verified official archive fixed the actual payload source without
-changing193runtime pins. That run's unchanged Eclipse export failure and subsequently
-cancelled rerun remain separate observations with unproven causes. New baseline Eclipse
-success does not explain the earlier failure. Preserve earlier60000ms browser timeout,
-integrity cancellation and reproduced626-byte inventory mismatch without invented causes.
+Preserve earlier runtime/dotnet mismatch and archive-authoritative correction, unchanged
+Eclipse export failure/cancelled rerun,60000ms browser timeout, integrity cancellation
+and reproduced626-byte inventory mismatch without invented causes. None justifies a
+weaker gate. Actual new CI must be checked, not inferred from this local acceptance.
 
-Next compare actual licensed Unity/Windows and appropriate author/player/device access
-against consequential unresolved legacy/world capabilities, coherent product continuity
-and production ownership. SDK absence is obsolete. Do not automatically repeat this
-availability matrix, recipient packaging, scene/status/EVAL-001/media/relay/request/
-recovery/loadout/crafting/progression studies, fixture repairs or the one-time transformation.
-Continue the largest coherent feasible beneficiary; preserve real negatives and limits.
+Next compare licensed Unity/Windows and appropriate author/player/device access against
+actual narrative persistence, coherent character/product continuity, consequential
+remaining legacy capabilities and production ownership. SDK absence is obsolete. Do not
+automatically repeat this journey, availability/source matrix, recipient packaging,
+status/scene/EVAL-001/media/relay/request/recovery/loadout/crafting/progression studies,
+fixture repairs or the one-time transformation. Select an actual next beneficiary.
 
 ## Rolling investment — one unit per beneficiary
 
@@ -138,18 +147,17 @@ Counts, files, commits and tokens do not measure effort. At most eight recent un
 
 | Completed substantive unit | Primary stream | Evidence |
 |---|---|---|
-| Adaptive source/signal/lifecycle method | Legacy/laboratories | [Audio](../evidence/audio-music/RUN.json) |
-| Original composition and consequence-owned playback | North Star | [Audio consumer](../north-star/csharp/Audio/README.md) |
+| Original composition and consequence-owned playback | North Star | [Audio](../north-star/csharp/Audio/README.md) |
 | Attributed first-delivery artifact decision | Legacy/laboratories | [AI](../evidence/ai-evaluation/RUN.json) |
-| Coherent authored work/agreement/journey | North Star | [Authored scene](../evidence/authored-scene/RUN.json) |
-| Source-bound arithmetic/global-round assay | Legacy/laboratories | [Status method](../labs/combat-response/status/README.md) |
+| Coherent authored work/agreement/journey | North Star | [Scene](../evidence/authored-scene/RUN.json) |
+| Source-bound arithmetic/global-round assay | Legacy/laboratories | [Status](../labs/combat-response/status/README.md) |
 | Original costly status encounter | North Star | [Treatment Line](../evidence/combat-status/RUN.json) |
 | Actual recipient/runtime/source-recovery delivery | Repository/portfolio | [Delivery](../evidence/recipient-delivery/RUN.json) |
-| Source mask/actual-authority method and real opportunity | Legacy/laboratories | [Availability](../evidence/npc-availability/RUN.json) |
+| Source mask/actual-authority method and opportunity | Legacy/laboratories | [Availability](../evidence/npc-availability/RUN.json) |
+| Continuous acquired-repair to observed-watering journey | North Star | [Current consumer](../evidence/repair-hauling/RUN.json) |
 
-The oldest embodied Crossing unit ages out; its code/evidence remain. The new consumer,
-art, source assay, tests and CI support ONE legacy/laboratory unit, not extra product or
-portfolio counts. The prior delivery corrected repository/portfolio underinvestment;
-this cycle returns to consequential unresolved legacy consumption. No measured47/40/13
-convergence is claimed. Three consecutive units in one stream require correction or a
-concrete dependency/blocker.
+The oldest audio-method unit ages out; its source/evidence remain. This ONE North Star
+product-continuity unit consumes existing actual results and corrects fragmentation;
+UI, tests, independent review and CI are support, not extra legacy/portfolio units.
+Prior delivery corrected portfolio underinvestment; no measured47/40/13 convergence is
+claimed. Three consecutive units in one stream require correction or a concrete blocker.
