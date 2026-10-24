@@ -1,0 +1,1553 @@
+{
+  "schema_version": 1,
+  "kind": "actual_browser_csharp_reputation",
+  "runtime": {
+    "node": "v24.19.0",
+    "chromium": "154.0.8037.57",
+    "playwright": "1.64.0"
+  },
+  "checks": {
+    "passed": 22,
+    "failed": 0
+  },
+  "http_checks": {
+    "passed": 7,
+    "failed": 0
+  },
+  "controls": [
+    "Both independent regions begin at explicit experimental minus one",
+    "Actual reads redraw and elapsed time cannot create standing return or service",
+    "Insufficient standing refuses real service without charge",
+    "Return without actual custody refuses without time or standing",
+    "Borrowing creates custody without reputational improvement",
+    "A second loan cannot manufacture another held tool",
+    "A tool held at Quay cannot be returned at Orchard",
+    "Visiting another region leaves the first actual custody independent",
+    "Actual return consumes custody and two finite time units before crossing sign",
+    "A returned Quay loan does not improve Orchard standing",
+    "Repeated return cannot improve standing or repay an event",
+    "Eligible service actually consumes two coins and one time unit",
+    "A completed service cannot charge or grant twice",
+    "Insufficient remaining time cannot erase custody or invent return",
+    "An unfinished other-region loan remains visibly held",
+    "Four actually paid minor helps retain the source negative sign counterexample",
+    "Exhausted work cannot spend negative time",
+    "Minor-help losing policy cannot purchase an unearned service",
+    "Accepted new trial discards older queued borrowing intent",
+    "An isolated actual false-service renderer is detected against its unchanged owner",
+    "Actual browser has no uncaught script errors",
+    "Consumer source identities remain stable through execution"
+  ],
+  "http_controls": [
+    "extra client standing",
+    "duplicate command key",
+    "fabricated return command",
+    "malformed JSON",
+    "cross-origin request",
+    "wrong content type",
+    "oversized body"
+  ],
+  "states": {
+    "initial": {
+      "sequence": 0,
+      "accepted": true,
+      "command": "initial",
+      "text": "Two independent counters begin at the experimental -1 setting. It describes this assay, not your character's worth. No tool has been borrowed or service supplied.",
+      "state": {
+        "time": 4,
+        "coins": 3,
+        "region": "quay",
+        "regions": [
+          {
+            "id": "quay",
+            "standing": -1,
+            "custody": false,
+            "returned": false,
+            "work": 0,
+            "service": false
+          },
+          {
+            "id": "orchard",
+            "standing": -1,
+            "custody": false,
+            "returned": false,
+            "work": 0,
+            "service": false
+          }
+        ],
+        "receipts": [],
+        "scope": "Original finite ephemeral laboratory consumer; no imported background/default policy, full legacy effects, persistent world, human validation or approved North Star canon."
+      }
+    },
+    "borrowed": {
+      "sequence": 3,
+      "accepted": true,
+      "command": "borrow",
+      "text": "The counter hands over its one measuring tool. Custody is observed; borrowing itself earns no standing.",
+      "state": {
+        "time": 4,
+        "coins": 3,
+        "region": "quay",
+        "regions": [
+          {
+            "id": "quay",
+            "standing": -1,
+            "custody": true,
+            "returned": false,
+            "work": 0,
+            "service": false
+          },
+          {
+            "id": "orchard",
+            "standing": -1,
+            "custody": false,
+            "returned": false,
+            "work": 0,
+            "service": false
+          }
+        ],
+        "receipts": [
+          {
+            "kind": "borrow",
+            "region": "quay",
+            "sequence": 3,
+            "standing_before": -1,
+            "standing_after": -1,
+            "time_cost": 0,
+            "coin_cost": 0
+          }
+        ],
+        "scope": "Original finite ephemeral laboratory consumer; no imported background/default policy, full legacy effects, persistent world, human validation or approved North Star canon."
+      }
+    },
+    "separate": {
+      "sequence": 6,
+      "accepted": false,
+      "command": "return",
+      "text": "No tool from this counter is in your custody. A promise or another counter's tool cannot be returned here.",
+      "state": {
+        "time": 4,
+        "coins": 3,
+        "region": "orchard",
+        "regions": [
+          {
+            "id": "quay",
+            "standing": -1,
+            "custody": true,
+            "returned": false,
+            "work": 0,
+            "service": false
+          },
+          {
+            "id": "orchard",
+            "standing": -1,
+            "custody": false,
+            "returned": false,
+            "work": 0,
+            "service": false
+          }
+        ],
+        "receipts": [
+          {
+            "kind": "borrow",
+            "region": "quay",
+            "sequence": 3,
+            "standing_before": -1,
+            "standing_after": -1,
+            "time_cost": 0,
+            "coin_cost": 0
+          }
+        ],
+        "scope": "Original finite ephemeral laboratory consumer; no imported background/default policy, full legacy effects, persistent world, human validation or approved North Star canon."
+      }
+    },
+    "returned": {
+      "sequence": 8,
+      "accepted": true,
+      "command": "return",
+      "text": "Actual inspection and return cost two periods. This counter's standing changes from -1 to 1. The other counter receives no event.",
+      "state": {
+        "time": 2,
+        "coins": 3,
+        "region": "quay",
+        "regions": [
+          {
+            "id": "quay",
+            "standing": 1,
+            "custody": false,
+            "returned": true,
+            "work": 0,
+            "service": false
+          },
+          {
+            "id": "orchard",
+            "standing": -1,
+            "custody": false,
+            "returned": false,
+            "work": 0,
+            "service": false
+          }
+        ],
+        "receipts": [
+          {
+            "kind": "borrow",
+            "region": "quay",
+            "sequence": 3,
+            "standing_before": -1,
+            "standing_after": -1,
+            "time_cost": 0,
+            "coin_cost": 0
+          },
+          {
+            "kind": "return",
+            "region": "quay",
+            "sequence": 8,
+            "standing_before": -1,
+            "standing_after": 1,
+            "time_cost": 2,
+            "coin_cost": 0
+          }
+        ],
+        "scope": "Original finite ephemeral laboratory consumer; no imported background/default policy, full legacy effects, persistent world, human validation or approved North Star canon."
+      }
+    },
+    "served": {
+      "sequence": 10,
+      "accepted": true,
+      "command": "service",
+      "text": "The counter actually calibrates your measure: one period and two coins paid. Its service is now supplied; the other counter remains independent.",
+      "state": {
+        "time": 1,
+        "coins": 1,
+        "region": "quay",
+        "regions": [
+          {
+            "id": "quay",
+            "standing": 1,
+            "custody": false,
+            "returned": true,
+            "work": 0,
+            "service": true
+          },
+          {
+            "id": "orchard",
+            "standing": -1,
+            "custody": false,
+            "returned": false,
+            "work": 0,
+            "service": false
+          }
+        ],
+        "receipts": [
+          {
+            "kind": "borrow",
+            "region": "quay",
+            "sequence": 3,
+            "standing_before": -1,
+            "standing_after": -1,
+            "time_cost": 0,
+            "coin_cost": 0
+          },
+          {
+            "kind": "return",
+            "region": "quay",
+            "sequence": 8,
+            "standing_before": -1,
+            "standing_after": 1,
+            "time_cost": 2,
+            "coin_cost": 0
+          },
+          {
+            "kind": "service",
+            "region": "quay",
+            "sequence": 10,
+            "standing_before": 1,
+            "standing_after": 1,
+            "time_cost": 1,
+            "coin_cost": 2
+          }
+        ],
+        "scope": "Original finite ephemeral laboratory consumer; no imported background/default policy, full legacy effects, persistent world, human validation or approved North Star canon."
+      }
+    },
+    "unreturned": {
+      "sequence": 13,
+      "accepted": true,
+      "command": "borrow",
+      "text": "The counter hands over its one measuring tool. Custody is observed; borrowing itself earns no standing.",
+      "state": {
+        "time": 1,
+        "coins": 1,
+        "region": "orchard",
+        "regions": [
+          {
+            "id": "quay",
+            "standing": 1,
+            "custody": false,
+            "returned": true,
+            "work": 0,
+            "service": true
+          },
+          {
+            "id": "orchard",
+            "standing": -1,
+            "custody": true,
+            "returned": false,
+            "work": 0,
+            "service": false
+          }
+        ],
+        "receipts": [
+          {
+            "kind": "borrow",
+            "region": "quay",
+            "sequence": 3,
+            "standing_before": -1,
+            "standing_after": -1,
+            "time_cost": 0,
+            "coin_cost": 0
+          },
+          {
+            "kind": "return",
+            "region": "quay",
+            "sequence": 8,
+            "standing_before": -1,
+            "standing_after": 1,
+            "time_cost": 2,
+            "coin_cost": 0
+          },
+          {
+            "kind": "service",
+            "region": "quay",
+            "sequence": 10,
+            "standing_before": 1,
+            "standing_after": 1,
+            "time_cost": 1,
+            "coin_cost": 2
+          },
+          {
+            "kind": "borrow",
+            "region": "orchard",
+            "sequence": 13,
+            "standing_before": -1,
+            "standing_after": -1,
+            "time_cost": 0,
+            "coin_cost": 0
+          }
+        ],
+        "scope": "Original finite ephemeral laboratory consumer; no imported background/default policy, full legacy effects, persistent world, human validation or approved North Star canon."
+      }
+    },
+    "minor": {
+      "sequence": 19,
+      "accepted": true,
+      "command": "help",
+      "text": "One minor task costs one period. Standing changes from -1 to -1. At -1, repeated +1 tasks cannot cross the source threshold; time is still spent.",
+      "state": {
+        "time": 0,
+        "coins": 3,
+        "region": "quay",
+        "regions": [
+          {
+            "id": "quay",
+            "standing": -1,
+            "custody": false,
+            "returned": false,
+            "work": 4,
+            "service": false
+          },
+          {
+            "id": "orchard",
+            "standing": -1,
+            "custody": false,
+            "returned": false,
+            "work": 0,
+            "service": false
+          }
+        ],
+        "receipts": [
+          {
+            "kind": "help",
+            "region": "quay",
+            "sequence": 16,
+            "standing_before": -1,
+            "standing_after": -1,
+            "time_cost": 1,
+            "coin_cost": 0
+          },
+          {
+            "kind": "help",
+            "region": "quay",
+            "sequence": 17,
+            "standing_before": -1,
+            "standing_after": -1,
+            "time_cost": 1,
+            "coin_cost": 0
+          },
+          {
+            "kind": "help",
+            "region": "quay",
+            "sequence": 18,
+            "standing_before": -1,
+            "standing_after": -1,
+            "time_cost": 1,
+            "coin_cost": 0
+          },
+          {
+            "kind": "help",
+            "region": "quay",
+            "sequence": 19,
+            "standing_before": -1,
+            "standing_after": -1,
+            "time_cost": 1,
+            "coin_cost": 0
+          }
+        ],
+        "scope": "Original finite ephemeral laboratory consumer; no imported background/default policy, full legacy effects, persistent world, human validation or approved North Star canon."
+      }
+    },
+    "newTrialQueue": {
+      "sequence": 22,
+      "accepted": true,
+      "command": "restart",
+      "text": "A separate ephemeral trial begins. Earlier trial state is discarded; this is not a saved campaign.",
+      "state": {
+        "time": 4,
+        "coins": 3,
+        "region": "quay",
+        "regions": [
+          {
+            "id": "quay",
+            "standing": -1,
+            "custody": false,
+            "returned": false,
+            "work": 0,
+            "service": false
+          },
+          {
+            "id": "orchard",
+            "standing": -1,
+            "custody": false,
+            "returned": false,
+            "work": 0,
+            "service": false
+          }
+        ],
+        "receipts": [],
+        "scope": "Original finite ephemeral laboratory consumer; no imported background/default policy, full legacy effects, persistent world, human validation or approved North Star canon."
+      }
+    }
+  },
+  "negatives": [
+    {
+      "id": "Insufficient standing refuses real service without charge",
+      "before": {
+        "sequence": 0,
+        "accepted": true,
+        "command": "initial",
+        "text": "Two independent counters begin at the experimental -1 setting. It describes this assay, not your character's worth. No tool has been borrowed or service supplied.",
+        "state": {
+          "time": 4,
+          "coins": 3,
+          "region": "quay",
+          "regions": [
+            {
+              "id": "quay",
+              "standing": -1,
+              "custody": false,
+              "returned": false,
+              "work": 0,
+              "service": false
+            },
+            {
+              "id": "orchard",
+              "standing": -1,
+              "custody": false,
+              "returned": false,
+              "work": 0,
+              "service": false
+            }
+          ],
+          "receipts": [],
+          "scope": "Original finite ephemeral laboratory consumer; no imported background/default policy, full legacy effects, persistent world, human validation or approved North Star canon."
+        }
+      },
+      "after": {
+        "sequence": 1,
+        "accepted": false,
+        "command": "service",
+        "text": "This experimental counter requires positive standing for its service. Coins alone do not unlock it; no debit occurs.",
+        "state": {
+          "time": 4,
+          "coins": 3,
+          "region": "quay",
+          "regions": [
+            {
+              "id": "quay",
+              "standing": -1,
+              "custody": false,
+              "returned": false,
+              "work": 0,
+              "service": false
+            },
+            {
+              "id": "orchard",
+              "standing": -1,
+              "custody": false,
+              "returned": false,
+              "work": 0,
+              "service": false
+            }
+          ],
+          "receipts": [],
+          "scope": "Original finite ephemeral laboratory consumer; no imported background/default policy, full legacy effects, persistent world, human validation or approved North Star canon."
+        }
+      }
+    },
+    {
+      "id": "Return without actual custody refuses without time or standing",
+      "before": {
+        "sequence": 1,
+        "accepted": false,
+        "command": "service",
+        "text": "This experimental counter requires positive standing for its service. Coins alone do not unlock it; no debit occurs.",
+        "state": {
+          "time": 4,
+          "coins": 3,
+          "region": "quay",
+          "regions": [
+            {
+              "id": "quay",
+              "standing": -1,
+              "custody": false,
+              "returned": false,
+              "work": 0,
+              "service": false
+            },
+            {
+              "id": "orchard",
+              "standing": -1,
+              "custody": false,
+              "returned": false,
+              "work": 0,
+              "service": false
+            }
+          ],
+          "receipts": [],
+          "scope": "Original finite ephemeral laboratory consumer; no imported background/default policy, full legacy effects, persistent world, human validation or approved North Star canon."
+        }
+      },
+      "after": {
+        "sequence": 2,
+        "accepted": false,
+        "command": "return",
+        "text": "No tool from this counter is in your custody. A promise or another counter's tool cannot be returned here.",
+        "state": {
+          "time": 4,
+          "coins": 3,
+          "region": "quay",
+          "regions": [
+            {
+              "id": "quay",
+              "standing": -1,
+              "custody": false,
+              "returned": false,
+              "work": 0,
+              "service": false
+            },
+            {
+              "id": "orchard",
+              "standing": -1,
+              "custody": false,
+              "returned": false,
+              "work": 0,
+              "service": false
+            }
+          ],
+          "receipts": [],
+          "scope": "Original finite ephemeral laboratory consumer; no imported background/default policy, full legacy effects, persistent world, human validation or approved North Star canon."
+        }
+      }
+    },
+    {
+      "id": "A second loan cannot manufacture another held tool",
+      "before": {
+        "sequence": 3,
+        "accepted": true,
+        "command": "borrow",
+        "text": "The counter hands over its one measuring tool. Custody is observed; borrowing itself earns no standing.",
+        "state": {
+          "time": 4,
+          "coins": 3,
+          "region": "quay",
+          "regions": [
+            {
+              "id": "quay",
+              "standing": -1,
+              "custody": true,
+              "returned": false,
+              "work": 0,
+              "service": false
+            },
+            {
+              "id": "orchard",
+              "standing": -1,
+              "custody": false,
+              "returned": false,
+              "work": 0,
+              "service": false
+            }
+          ],
+          "receipts": [
+            {
+              "kind": "borrow",
+              "region": "quay",
+              "sequence": 3,
+              "standing_before": -1,
+              "standing_after": -1,
+              "time_cost": 0,
+              "coin_cost": 0
+            }
+          ],
+          "scope": "Original finite ephemeral laboratory consumer; no imported background/default policy, full legacy effects, persistent world, human validation or approved North Star canon."
+        }
+      },
+      "after": {
+        "sequence": 4,
+        "accepted": false,
+        "command": "borrow",
+        "text": "This counter's one loan is already held or returned. No second tool is created.",
+        "state": {
+          "time": 4,
+          "coins": 3,
+          "region": "quay",
+          "regions": [
+            {
+              "id": "quay",
+              "standing": -1,
+              "custody": true,
+              "returned": false,
+              "work": 0,
+              "service": false
+            },
+            {
+              "id": "orchard",
+              "standing": -1,
+              "custody": false,
+              "returned": false,
+              "work": 0,
+              "service": false
+            }
+          ],
+          "receipts": [
+            {
+              "kind": "borrow",
+              "region": "quay",
+              "sequence": 3,
+              "standing_before": -1,
+              "standing_after": -1,
+              "time_cost": 0,
+              "coin_cost": 0
+            }
+          ],
+          "scope": "Original finite ephemeral laboratory consumer; no imported background/default policy, full legacy effects, persistent world, human validation or approved North Star canon."
+        }
+      }
+    },
+    {
+      "id": "A tool held at Quay cannot be returned at Orchard",
+      "before": {
+        "sequence": 5,
+        "accepted": true,
+        "command": "visit orchard",
+        "text": "You inspect the orchard counter. Looking spends no time and changes no standing, custody or service.",
+        "state": {
+          "time": 4,
+          "coins": 3,
+          "region": "orchard",
+          "regions": [
+            {
+              "id": "quay",
+              "standing": -1,
+              "custody": true,
+              "returned": false,
+              "work": 0,
+              "service": false
+            },
+            {
+              "id": "orchard",
+              "standing": -1,
+              "custody": false,
+              "returned": false,
+              "work": 0,
+              "service": false
+            }
+          ],
+          "receipts": [
+            {
+              "kind": "borrow",
+              "region": "quay",
+              "sequence": 3,
+              "standing_before": -1,
+              "standing_after": -1,
+              "time_cost": 0,
+              "coin_cost": 0
+            }
+          ],
+          "scope": "Original finite ephemeral laboratory consumer; no imported background/default policy, full legacy effects, persistent world, human validation or approved North Star canon."
+        }
+      },
+      "after": {
+        "sequence": 6,
+        "accepted": false,
+        "command": "return",
+        "text": "No tool from this counter is in your custody. A promise or another counter's tool cannot be returned here.",
+        "state": {
+          "time": 4,
+          "coins": 3,
+          "region": "orchard",
+          "regions": [
+            {
+              "id": "quay",
+              "standing": -1,
+              "custody": true,
+              "returned": false,
+              "work": 0,
+              "service": false
+            },
+            {
+              "id": "orchard",
+              "standing": -1,
+              "custody": false,
+              "returned": false,
+              "work": 0,
+              "service": false
+            }
+          ],
+          "receipts": [
+            {
+              "kind": "borrow",
+              "region": "quay",
+              "sequence": 3,
+              "standing_before": -1,
+              "standing_after": -1,
+              "time_cost": 0,
+              "coin_cost": 0
+            }
+          ],
+          "scope": "Original finite ephemeral laboratory consumer; no imported background/default policy, full legacy effects, persistent world, human validation or approved North Star canon."
+        }
+      }
+    },
+    {
+      "id": "Repeated return cannot improve standing or repay an event",
+      "before": {
+        "sequence": 8,
+        "accepted": true,
+        "command": "return",
+        "text": "Actual inspection and return cost two periods. This counter's standing changes from -1 to 1. The other counter receives no event.",
+        "state": {
+          "time": 2,
+          "coins": 3,
+          "region": "quay",
+          "regions": [
+            {
+              "id": "quay",
+              "standing": 1,
+              "custody": false,
+              "returned": true,
+              "work": 0,
+              "service": false
+            },
+            {
+              "id": "orchard",
+              "standing": -1,
+              "custody": false,
+              "returned": false,
+              "work": 0,
+              "service": false
+            }
+          ],
+          "receipts": [
+            {
+              "kind": "borrow",
+              "region": "quay",
+              "sequence": 3,
+              "standing_before": -1,
+              "standing_after": -1,
+              "time_cost": 0,
+              "coin_cost": 0
+            },
+            {
+              "kind": "return",
+              "region": "quay",
+              "sequence": 8,
+              "standing_before": -1,
+              "standing_after": 1,
+              "time_cost": 2,
+              "coin_cost": 0
+            }
+          ],
+          "scope": "Original finite ephemeral laboratory consumer; no imported background/default policy, full legacy effects, persistent world, human validation or approved North Star canon."
+        }
+      },
+      "after": {
+        "sequence": 9,
+        "accepted": false,
+        "command": "return",
+        "text": "No tool from this counter is in your custody. A promise or another counter's tool cannot be returned here.",
+        "state": {
+          "time": 2,
+          "coins": 3,
+          "region": "quay",
+          "regions": [
+            {
+              "id": "quay",
+              "standing": 1,
+              "custody": false,
+              "returned": true,
+              "work": 0,
+              "service": false
+            },
+            {
+              "id": "orchard",
+              "standing": -1,
+              "custody": false,
+              "returned": false,
+              "work": 0,
+              "service": false
+            }
+          ],
+          "receipts": [
+            {
+              "kind": "borrow",
+              "region": "quay",
+              "sequence": 3,
+              "standing_before": -1,
+              "standing_after": -1,
+              "time_cost": 0,
+              "coin_cost": 0
+            },
+            {
+              "kind": "return",
+              "region": "quay",
+              "sequence": 8,
+              "standing_before": -1,
+              "standing_after": 1,
+              "time_cost": 2,
+              "coin_cost": 0
+            }
+          ],
+          "scope": "Original finite ephemeral laboratory consumer; no imported background/default policy, full legacy effects, persistent world, human validation or approved North Star canon."
+        }
+      }
+    },
+    {
+      "id": "A completed service cannot charge or grant twice",
+      "before": {
+        "sequence": 10,
+        "accepted": true,
+        "command": "service",
+        "text": "The counter actually calibrates your measure: one period and two coins paid. Its service is now supplied; the other counter remains independent.",
+        "state": {
+          "time": 1,
+          "coins": 1,
+          "region": "quay",
+          "regions": [
+            {
+              "id": "quay",
+              "standing": 1,
+              "custody": false,
+              "returned": true,
+              "work": 0,
+              "service": true
+            },
+            {
+              "id": "orchard",
+              "standing": -1,
+              "custody": false,
+              "returned": false,
+              "work": 0,
+              "service": false
+            }
+          ],
+          "receipts": [
+            {
+              "kind": "borrow",
+              "region": "quay",
+              "sequence": 3,
+              "standing_before": -1,
+              "standing_after": -1,
+              "time_cost": 0,
+              "coin_cost": 0
+            },
+            {
+              "kind": "return",
+              "region": "quay",
+              "sequence": 8,
+              "standing_before": -1,
+              "standing_after": 1,
+              "time_cost": 2,
+              "coin_cost": 0
+            },
+            {
+              "kind": "service",
+              "region": "quay",
+              "sequence": 10,
+              "standing_before": 1,
+              "standing_after": 1,
+              "time_cost": 1,
+              "coin_cost": 2
+            }
+          ],
+          "scope": "Original finite ephemeral laboratory consumer; no imported background/default policy, full legacy effects, persistent world, human validation or approved North Star canon."
+        }
+      },
+      "after": {
+        "sequence": 11,
+        "accepted": false,
+        "command": "service",
+        "text": "This counter's service was already supplied. No repeat receipt or debit occurs.",
+        "state": {
+          "time": 1,
+          "coins": 1,
+          "region": "quay",
+          "regions": [
+            {
+              "id": "quay",
+              "standing": 1,
+              "custody": false,
+              "returned": true,
+              "work": 0,
+              "service": true
+            },
+            {
+              "id": "orchard",
+              "standing": -1,
+              "custody": false,
+              "returned": false,
+              "work": 0,
+              "service": false
+            }
+          ],
+          "receipts": [
+            {
+              "kind": "borrow",
+              "region": "quay",
+              "sequence": 3,
+              "standing_before": -1,
+              "standing_after": -1,
+              "time_cost": 0,
+              "coin_cost": 0
+            },
+            {
+              "kind": "return",
+              "region": "quay",
+              "sequence": 8,
+              "standing_before": -1,
+              "standing_after": 1,
+              "time_cost": 2,
+              "coin_cost": 0
+            },
+            {
+              "kind": "service",
+              "region": "quay",
+              "sequence": 10,
+              "standing_before": 1,
+              "standing_after": 1,
+              "time_cost": 1,
+              "coin_cost": 2
+            }
+          ],
+          "scope": "Original finite ephemeral laboratory consumer; no imported background/default policy, full legacy effects, persistent world, human validation or approved North Star canon."
+        }
+      }
+    },
+    {
+      "id": "Insufficient remaining time cannot erase custody or invent return",
+      "before": {
+        "sequence": 13,
+        "accepted": true,
+        "command": "borrow",
+        "text": "The counter hands over its one measuring tool. Custody is observed; borrowing itself earns no standing.",
+        "state": {
+          "time": 1,
+          "coins": 1,
+          "region": "orchard",
+          "regions": [
+            {
+              "id": "quay",
+              "standing": 1,
+              "custody": false,
+              "returned": true,
+              "work": 0,
+              "service": true
+            },
+            {
+              "id": "orchard",
+              "standing": -1,
+              "custody": true,
+              "returned": false,
+              "work": 0,
+              "service": false
+            }
+          ],
+          "receipts": [
+            {
+              "kind": "borrow",
+              "region": "quay",
+              "sequence": 3,
+              "standing_before": -1,
+              "standing_after": -1,
+              "time_cost": 0,
+              "coin_cost": 0
+            },
+            {
+              "kind": "return",
+              "region": "quay",
+              "sequence": 8,
+              "standing_before": -1,
+              "standing_after": 1,
+              "time_cost": 2,
+              "coin_cost": 0
+            },
+            {
+              "kind": "service",
+              "region": "quay",
+              "sequence": 10,
+              "standing_before": 1,
+              "standing_after": 1,
+              "time_cost": 1,
+              "coin_cost": 2
+            },
+            {
+              "kind": "borrow",
+              "region": "orchard",
+              "sequence": 13,
+              "standing_before": -1,
+              "standing_after": -1,
+              "time_cost": 0,
+              "coin_cost": 0
+            }
+          ],
+          "scope": "Original finite ephemeral laboratory consumer; no imported background/default policy, full legacy effects, persistent world, human validation or approved North Star canon."
+        }
+      },
+      "after": {
+        "sequence": 14,
+        "accepted": false,
+        "command": "return",
+        "text": "Two work periods are needed to inspect and return this held tool. Time is insufficient; the loan remains outstanding.",
+        "state": {
+          "time": 1,
+          "coins": 1,
+          "region": "orchard",
+          "regions": [
+            {
+              "id": "quay",
+              "standing": 1,
+              "custody": false,
+              "returned": true,
+              "work": 0,
+              "service": true
+            },
+            {
+              "id": "orchard",
+              "standing": -1,
+              "custody": true,
+              "returned": false,
+              "work": 0,
+              "service": false
+            }
+          ],
+          "receipts": [
+            {
+              "kind": "borrow",
+              "region": "quay",
+              "sequence": 3,
+              "standing_before": -1,
+              "standing_after": -1,
+              "time_cost": 0,
+              "coin_cost": 0
+            },
+            {
+              "kind": "return",
+              "region": "quay",
+              "sequence": 8,
+              "standing_before": -1,
+              "standing_after": 1,
+              "time_cost": 2,
+              "coin_cost": 0
+            },
+            {
+              "kind": "service",
+              "region": "quay",
+              "sequence": 10,
+              "standing_before": 1,
+              "standing_after": 1,
+              "time_cost": 1,
+              "coin_cost": 2
+            },
+            {
+              "kind": "borrow",
+              "region": "orchard",
+              "sequence": 13,
+              "standing_before": -1,
+              "standing_after": -1,
+              "time_cost": 0,
+              "coin_cost": 0
+            }
+          ],
+          "scope": "Original finite ephemeral laboratory consumer; no imported background/default policy, full legacy effects, persistent world, human validation or approved North Star canon."
+        }
+      }
+    },
+    {
+      "id": "Exhausted work cannot spend negative time",
+      "before": {
+        "sequence": 19,
+        "accepted": true,
+        "command": "help",
+        "text": "One minor task costs one period. Standing changes from -1 to -1. At -1, repeated +1 tasks cannot cross the source threshold; time is still spent.",
+        "state": {
+          "time": 0,
+          "coins": 3,
+          "region": "quay",
+          "regions": [
+            {
+              "id": "quay",
+              "standing": -1,
+              "custody": false,
+              "returned": false,
+              "work": 4,
+              "service": false
+            },
+            {
+              "id": "orchard",
+              "standing": -1,
+              "custody": false,
+              "returned": false,
+              "work": 0,
+              "service": false
+            }
+          ],
+          "receipts": [
+            {
+              "kind": "help",
+              "region": "quay",
+              "sequence": 16,
+              "standing_before": -1,
+              "standing_after": -1,
+              "time_cost": 1,
+              "coin_cost": 0
+            },
+            {
+              "kind": "help",
+              "region": "quay",
+              "sequence": 17,
+              "standing_before": -1,
+              "standing_after": -1,
+              "time_cost": 1,
+              "coin_cost": 0
+            },
+            {
+              "kind": "help",
+              "region": "quay",
+              "sequence": 18,
+              "standing_before": -1,
+              "standing_after": -1,
+              "time_cost": 1,
+              "coin_cost": 0
+            },
+            {
+              "kind": "help",
+              "region": "quay",
+              "sequence": 19,
+              "standing_before": -1,
+              "standing_after": -1,
+              "time_cost": 1,
+              "coin_cost": 0
+            }
+          ],
+          "scope": "Original finite ephemeral laboratory consumer; no imported background/default policy, full legacy effects, persistent world, human validation or approved North Star canon."
+        }
+      },
+      "after": {
+        "sequence": 20,
+        "accepted": false,
+        "command": "help",
+        "text": "No work period remains. No help event or standing change occurs.",
+        "state": {
+          "time": 0,
+          "coins": 3,
+          "region": "quay",
+          "regions": [
+            {
+              "id": "quay",
+              "standing": -1,
+              "custody": false,
+              "returned": false,
+              "work": 4,
+              "service": false
+            },
+            {
+              "id": "orchard",
+              "standing": -1,
+              "custody": false,
+              "returned": false,
+              "work": 0,
+              "service": false
+            }
+          ],
+          "receipts": [
+            {
+              "kind": "help",
+              "region": "quay",
+              "sequence": 16,
+              "standing_before": -1,
+              "standing_after": -1,
+              "time_cost": 1,
+              "coin_cost": 0
+            },
+            {
+              "kind": "help",
+              "region": "quay",
+              "sequence": 17,
+              "standing_before": -1,
+              "standing_after": -1,
+              "time_cost": 1,
+              "coin_cost": 0
+            },
+            {
+              "kind": "help",
+              "region": "quay",
+              "sequence": 18,
+              "standing_before": -1,
+              "standing_after": -1,
+              "time_cost": 1,
+              "coin_cost": 0
+            },
+            {
+              "kind": "help",
+              "region": "quay",
+              "sequence": 19,
+              "standing_before": -1,
+              "standing_after": -1,
+              "time_cost": 1,
+              "coin_cost": 0
+            }
+          ],
+          "scope": "Original finite ephemeral laboratory consumer; no imported background/default policy, full legacy effects, persistent world, human validation or approved North Star canon."
+        }
+      }
+    },
+    {
+      "id": "Minor-help losing policy cannot purchase an unearned service",
+      "before": {
+        "sequence": 20,
+        "accepted": false,
+        "command": "help",
+        "text": "No work period remains. No help event or standing change occurs.",
+        "state": {
+          "time": 0,
+          "coins": 3,
+          "region": "quay",
+          "regions": [
+            {
+              "id": "quay",
+              "standing": -1,
+              "custody": false,
+              "returned": false,
+              "work": 4,
+              "service": false
+            },
+            {
+              "id": "orchard",
+              "standing": -1,
+              "custody": false,
+              "returned": false,
+              "work": 0,
+              "service": false
+            }
+          ],
+          "receipts": [
+            {
+              "kind": "help",
+              "region": "quay",
+              "sequence": 16,
+              "standing_before": -1,
+              "standing_after": -1,
+              "time_cost": 1,
+              "coin_cost": 0
+            },
+            {
+              "kind": "help",
+              "region": "quay",
+              "sequence": 17,
+              "standing_before": -1,
+              "standing_after": -1,
+              "time_cost": 1,
+              "coin_cost": 0
+            },
+            {
+              "kind": "help",
+              "region": "quay",
+              "sequence": 18,
+              "standing_before": -1,
+              "standing_after": -1,
+              "time_cost": 1,
+              "coin_cost": 0
+            },
+            {
+              "kind": "help",
+              "region": "quay",
+              "sequence": 19,
+              "standing_before": -1,
+              "standing_after": -1,
+              "time_cost": 1,
+              "coin_cost": 0
+            }
+          ],
+          "scope": "Original finite ephemeral laboratory consumer; no imported background/default policy, full legacy effects, persistent world, human validation or approved North Star canon."
+        }
+      },
+      "after": {
+        "sequence": 21,
+        "accepted": false,
+        "command": "service",
+        "text": "This experimental counter requires positive standing for its service. Coins alone do not unlock it; no debit occurs.",
+        "state": {
+          "time": 0,
+          "coins": 3,
+          "region": "quay",
+          "regions": [
+            {
+              "id": "quay",
+              "standing": -1,
+              "custody": false,
+              "returned": false,
+              "work": 4,
+              "service": false
+            },
+            {
+              "id": "orchard",
+              "standing": -1,
+              "custody": false,
+              "returned": false,
+              "work": 0,
+              "service": false
+            }
+          ],
+          "receipts": [
+            {
+              "kind": "help",
+              "region": "quay",
+              "sequence": 16,
+              "standing_before": -1,
+              "standing_after": -1,
+              "time_cost": 1,
+              "coin_cost": 0
+            },
+            {
+              "kind": "help",
+              "region": "quay",
+              "sequence": 17,
+              "standing_before": -1,
+              "standing_after": -1,
+              "time_cost": 1,
+              "coin_cost": 0
+            },
+            {
+              "kind": "help",
+              "region": "quay",
+              "sequence": 18,
+              "standing_before": -1,
+              "standing_after": -1,
+              "time_cost": 1,
+              "coin_cost": 0
+            },
+            {
+              "kind": "help",
+              "region": "quay",
+              "sequence": 19,
+              "standing_before": -1,
+              "standing_after": -1,
+              "time_cost": 1,
+              "coin_cost": 0
+            }
+          ],
+          "scope": "Original finite ephemeral laboratory consumer; no imported background/default policy, full legacy effects, persistent world, human validation or approved North Star canon."
+        }
+      }
+    },
+    {
+      "id": "queued-intent-after-new-trial",
+      "before": {
+        "sequence": 21,
+        "accepted": false,
+        "command": "service",
+        "text": "This experimental counter requires positive standing for its service. Coins alone do not unlock it; no debit occurs.",
+        "state": {
+          "time": 0,
+          "coins": 3,
+          "region": "quay",
+          "regions": [
+            {
+              "id": "quay",
+              "standing": -1,
+              "custody": false,
+              "returned": false,
+              "work": 4,
+              "service": false
+            },
+            {
+              "id": "orchard",
+              "standing": -1,
+              "custody": false,
+              "returned": false,
+              "work": 0,
+              "service": false
+            }
+          ],
+          "receipts": [
+            {
+              "kind": "help",
+              "region": "quay",
+              "sequence": 16,
+              "standing_before": -1,
+              "standing_after": -1,
+              "time_cost": 1,
+              "coin_cost": 0
+            },
+            {
+              "kind": "help",
+              "region": "quay",
+              "sequence": 17,
+              "standing_before": -1,
+              "standing_after": -1,
+              "time_cost": 1,
+              "coin_cost": 0
+            },
+            {
+              "kind": "help",
+              "region": "quay",
+              "sequence": 18,
+              "standing_before": -1,
+              "standing_after": -1,
+              "time_cost": 1,
+              "coin_cost": 0
+            },
+            {
+              "kind": "help",
+              "region": "quay",
+              "sequence": 19,
+              "standing_before": -1,
+              "standing_after": -1,
+              "time_cost": 1,
+              "coin_cost": 0
+            }
+          ],
+          "scope": "Original finite ephemeral laboratory consumer; no imported background/default policy, full legacy effects, persistent world, human validation or approved North Star canon."
+        }
+      },
+      "after": {
+        "sequence": 22,
+        "accepted": true,
+        "command": "restart",
+        "text": "A separate ephemeral trial begins. Earlier trial state is discarded; this is not a saved campaign.",
+        "state": {
+          "time": 4,
+          "coins": 3,
+          "region": "quay",
+          "regions": [
+            {
+              "id": "quay",
+              "standing": -1,
+              "custody": false,
+              "returned": false,
+              "work": 0,
+              "service": false
+            },
+            {
+              "id": "orchard",
+              "standing": -1,
+              "custody": false,
+              "returned": false,
+              "work": 0,
+              "service": false
+            }
+          ],
+          "receipts": [],
+          "scope": "Original finite ephemeral laboratory consumer; no imported background/default policy, full legacy effects, persistent world, human validation or approved North Star canon."
+        }
+      },
+      "classification": "Actual accepted restart changes browser generation; the queued old-view loan does not execute."
+    },
+    {
+      "id": "forced-service-renderer",
+      "detected": true,
+      "mutation": {
+        "target": "const serviceObserved = Boolean(place.service);",
+        "replacement": "const serviceObserved = true;",
+        "original_sha256": "44235772938b860fa397437800c214559101033ee85fbfb5af1c3452ccf1e81a",
+        "mutated_sha256": "8ee29bdba5ada572d1653cf4f29de2bce79833dc0b32f6c833680741cddb407c"
+      },
+      "actual": {
+        "sequence": 0,
+        "accepted": true,
+        "command": "initial",
+        "text": "Two independent counters begin at the experimental -1 setting. It describes this assay, not your character's worth. No tool has been borrowed or service supplied.",
+        "state": {
+          "time": 4,
+          "coins": 3,
+          "region": "quay",
+          "regions": [
+            {
+              "id": "quay",
+              "standing": -1,
+              "custody": false,
+              "returned": false,
+              "work": 0,
+              "service": false
+            },
+            {
+              "id": "orchard",
+              "standing": -1,
+              "custody": false,
+              "returned": false,
+              "work": 0,
+              "service": false
+            }
+          ],
+          "receipts": [],
+          "scope": "Original finite ephemeral laboratory consumer; no imported background/default policy, full legacy effects, persistent world, human validation or approved North Star canon."
+        }
+      },
+      "assertion": {
+        "name": "AssertionError",
+        "code": "ERR_ASSERTION",
+        "message": "Service must follow actual owner\n\n'true' !== 'false'\n"
+      }
+    }
+  ],
+  "source_sha256": {
+    "north-star/csharp/global.json": "e0c0882461e712f6c2c66241bf2f175c60832e3ff077dc26091ff8c661d4193e",
+    "north-star/reputation-study/Checks/NorthStar.ReputationChecks.csproj": "d86aa2ba42240c4b0bb62237aa63e2ba170121476e8d108a185ef37d666cb439",
+    "north-star/reputation-study/Checks/Program.cs": "ea43c6b3379ef5ea4a589eedfc31b0790796c964fed78294a89908cd22f356d2",
+    "north-star/reputation-study/ConsumerChecks/NorthStar.ReputationConsumerChecks.csproj": "2df186e742a0216fbf71dc4f30af0dc53010d53bb1485c6fe86a4b096efbf1cd",
+    "north-star/reputation-study/ConsumerChecks/Program.cs": "4ccfaef69a21cab06267759faee0230775c476ce749a1997d7333eef83679b4c",
+    "north-star/reputation-study/Host/NorthStar.ReputationStudy.csproj": "04ccce7027b6ce885f3adb561f7ab445dffdc0905da23aeae0f021060b8a21e7",
+    "north-star/reputation-study/Host/Program.cs": "c84a94ae7b5dae61a5f93c99f8d1717e6e13eb2508601105f9109a9d0b7591f8",
+    "north-star/reputation-study/Host/Room.cs": "903c4bba8cbe988400fef6db62c9940aa91c436fe7c414c84de1baa9676f1ee0",
+    "north-star/reputation-study/Rules/NorthStar.Reputation.csproj": "9570b674acfea69bb60098f495afd3b9e2cef2575fcfeb6db71c2cdecb2c4876",
+    "north-star/reputation-study/Rules/Standing.cs": "1adc200fe85e6714a7a0195a4048bf2fd465750834f4cc2f12550017a2038c3d",
+    "north-star/reputation-study/tools/browser.mjs": "4eb89238390d105fc78cbc37766668300860e4971ee0c627d8f728e0d7d94de4",
+    "north-star/reputation-study/web/app.js": "44235772938b860fa397437800c214559101033ee85fbfb5af1c3452ccf1e81a",
+    "north-star/reputation-study/web/index.html": "db397fbec7711d2373b24fb434d1dad9837abf209909daaf493a6d0e2e4f3841",
+    "north-star/reputation-study/web/style.css": "56915af65593f57d558c280bba7ed0a7238fe58c83e26fd25bc4068313c82ff7",
+    "projects/realtime-integration-lab/package-lock.json": "aa191ef2158e6cc6f770bf4b3ee44dca17175ef1a3cd572b98115246bf46aea7",
+    "projects/realtime-integration-lab/package.json": "42e3cc9633e522dd6d9a5c11023418331129632881a8bf0b95e3717247d57ebe"
+  },
+  "source_stable": true,
+  "scope": "Finite original trusted-local ephemeral C# service experiment using selected standing arithmetic. Synthetic software actions and rendered fidelity, not people, source effect execution, morality, broad social trust, Unity, Windows, Steam or human balance/quality."
+}

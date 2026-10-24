@@ -601,6 +601,17 @@ jobs:
           if-no-files-found: ignore
           retention-days: 7
 
+      - name: Execute selected reputation source contracts and actual service consumer
+        run: python3 north-star/reputation-study/tools/verify.py --dotnet dotnet --output "$RUNNER_TEMP/reputation-study"
+      - name: Retain reputation failure diagnostics
+        if: failure()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: reputation-study-diagnostics
+          path: ${{ runner.temp }}/reputation-study
+          if-no-files-found: ignore
+          retention-days: 7
+
       - name: Execute source-bound combat status and actual C# practice consumer
         run: |
           python3 labs/combat-response/status/test_instrument.py

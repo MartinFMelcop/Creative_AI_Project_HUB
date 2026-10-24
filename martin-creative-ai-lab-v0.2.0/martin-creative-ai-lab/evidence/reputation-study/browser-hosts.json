@@ -1,0 +1,31 @@
+{
+  "complete": true,
+  "logs": [
+    {
+      "command": [
+        "/workspace/work/authored-scene/dotnet/dotnet",
+        "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/reputation-study/Host/bin/Release/net10.0/NorthStar.ReputationStudy.dll",
+        "--serve",
+        "39615",
+        "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/reputation-study/web",
+        "--seconds",
+        "120"
+      ],
+      "stdout": "READY http://127.0.0.1:39615/\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/workspace/work/authored-scene/dotnet/dotnet",
+        "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/reputation-study/Host/bin/Release/net10.0/NorthStar.ReputationStudy.dll",
+        "--serve",
+        "36929",
+        "/tmp/reputation-render-mutant-HboKiB/web",
+        "--seconds",
+        "120"
+      ],
+      "stdout": "READY http://127.0.0.1:36929/\n",
+      "stderr": ""
+    }
+  ]
+}

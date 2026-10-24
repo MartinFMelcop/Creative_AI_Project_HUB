@@ -1,0 +1,27 @@
+{
+  "scope": "Actual engineering development path failures, distinct from final rule/vector acceptance.",
+  "failures": [
+    {
+      "cwd": "north-star/csharp",
+      "command": [
+        "/workspace/work/authored-scene/dotnet/dotnet",
+        "build",
+        "../reputation-study/Checks/NorthStar.ReputationChecks.csproj",
+        "-c",
+        "Release",
+        "-m:1",
+        "--disable-build-servers"
+      ],
+      "exit_code": 1,
+      "stderr_or_stdout": "MSBUILD : error MSB1009: Project file does not exist. Switch: ../reputation-study/Checks/NorthStar.ReputationChecks.csproj",
+      "cause_observed": "New owned directories had been created relative to csharp using a workspace-relative prefix. Moved only these new Rules/Checks to the intended sibling location."
+    },
+    {
+      "cwd": "north-star/csharp",
+      "operation": "Edit new Checks/Program.cs through incorrectly workspace-relative path",
+      "error": "FileNotFoundError: north-star/reputation-study/Checks/Program.cs",
+      "correction": "Used absolute actual path. Final build/native execution completed after that edit."
+    }
+  ],
+  "final": "SDK10.0.401 build0warnings0errors;25nativecontrols passed;4CLIpositivecases passed; changed expected legal answer returned one genuine comparison failure and exit1."
+}

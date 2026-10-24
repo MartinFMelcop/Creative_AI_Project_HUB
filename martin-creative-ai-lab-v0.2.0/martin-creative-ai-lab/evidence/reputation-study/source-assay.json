@@ -1,0 +1,64 @@
+{
+  "config": {
+    "clamp_min": -3,
+    "clamp_max": 3,
+    "crossing_threshold_abs": 2
+  },
+  "legal_levels": [
+    -3,
+    -2,
+    -1,
+    1,
+    2,
+    3
+  ],
+  "typed_source_effect_rows": 420,
+  "source_only_effect_keys": [
+    "access_services_tier",
+    "aggro_on_sight",
+    "aggro_range_mult",
+    "ambush_chance_bonus",
+    "dialogue_options_tier",
+    "dialogue_persuasion_dc_delta",
+    "dialogue_tone",
+    "fast_travel",
+    "quest_tier_max",
+    "shop_buy_mult",
+    "shop_inventory_tier",
+    "shop_sell_mult",
+    "spawn_enemy_density_mult",
+    "spawn_rare_bonus"
+  ],
+  "dev_dist_helpers_identical": true,
+  "core_dist_effect_tables_identical": true,
+  "retained_negatives": [
+    {
+      "kind": "default-conflict",
+      "region": "VILA_ROSE",
+      "table": -1,
+      "helper_fallback": 1,
+      "resolution": "UNRESOLVED; neither imported as destination policy"
+    },
+    {
+      "kind": "empty-effects-hook",
+      "actual_source_return": [],
+      "resolution": "No historical effects execution or destination table import claimed"
+    },
+    {
+      "kind": "unknown-zone-fallback",
+      "helper_result": 1,
+      "resolution": "Source permissiveness is not destination authority"
+    },
+    {
+      "kind": "header-only-qa",
+      "data_rows": 0,
+      "resolution": "Not an executed historical consistency result"
+    },
+    {
+      "kind": "ruby-coercion",
+      "source": "value.to_i and delta.to_i",
+      "resolution": "Only explicit int32 input contract is adapted; Ruby coercion is not ported"
+    }
+  ],
+  "scope": "Static source-bound interpretation and complete typed table audit; no historical Ruby/RGSS/RMXP execution, effects application, source fiction/default import or human evidence."
+}

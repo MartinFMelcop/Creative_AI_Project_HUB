@@ -1,0 +1,45 @@
+{
+  "sdk": "10.0.401",
+  "path": {
+    "dotnet": null,
+    "Unity": null,
+    "unity": null,
+    "UnityHub": null,
+    "steamcmd": null,
+    "ruby": null
+  },
+  "unity_locations": [
+    {
+      "path": "/opt/Unity",
+      "exists": false,
+      "entries": []
+    },
+    {
+      "path": "/opt/unity",
+      "exists": false,
+      "entries": []
+    },
+    {
+      "path": "/opt/unityhub",
+      "exists": false,
+      "entries": []
+    },
+    {
+      "path": "/Applications/Unity/Hub/Editor",
+      "exists": false,
+      "entries": []
+    },
+    {
+      "path": "/root/Unity/Hub/Editor",
+      "observation": "PermissionError; not proof of absence"
+    }
+  ],
+  "activation": "unverified",
+  "windows_modules": "unverified",
+  "unity_executed": false,
+  "windows_executed": false,
+  "steam_executed": false,
+  "ruby_rmxp_executed": false,
+  "scope": "Bounded actual executable/installation probes. SDK executes outside PATH. No global absence, license or module claim.",
+  "cloud_environment": "Observed current connected/restricted-policy-enforced environment; no configured capabilities/secret/outbound identities. This is not an enforced candidate sandbox or access to participants."
+}

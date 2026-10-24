@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "cases": [
+    {
+      "id": "zero-set",
+      "actual": 1,
+      "expected": 1,
+      "passed": true
+    },
+    {
+      "id": "minor-stall",
+      "actual": -1,
+      "expected": 1,
+      "passed": false
+    },
+    {
+      "id": "threshold-cross",
+      "actual": 1,
+      "expected": 1,
+      "passed": true
+    },
+    {
+      "id": "extreme-negative",
+      "actual": -3,
+      "expected": -3,
+      "passed": true
+    }
+  ],
+  "passed": 3,
+  "failed": 1
+}

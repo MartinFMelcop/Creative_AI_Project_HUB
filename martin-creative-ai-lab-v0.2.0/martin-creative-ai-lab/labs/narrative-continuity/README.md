@@ -90,3 +90,21 @@ Next investigate authored comprehension and agency with appropriate human evalua
 additional NPC/quest content and migration/recovery contracts before combining save
 formats or claiming a persistent world. Preserve actual historical consumers until
 behavior, save compatibility, source/rights and recovery duties are resolved.
+
+
+## Selected reputation method
+
+The [source-bound reputation assay](reputation/run.py) now compares the SAME127
+Python/C# Set/Add cases and audits420 typed effect rows as source data. The
+[original finite service consumer](../../north-star/reputation-study/README.md)
+actually consumes the selected arithmetic through costly local events, keeping
+custody, return and paid service distinct in two independent accounts. This is
+ONE corrective legacy/laboratory unit; consumer/interface/CI are support.
+
+[Current execution](../../evidence/reputation-study/RUN.json) retains source default
+conflicts, empty effects hook, unknown-zone fallback, Ruby coercion limits and the
+header-only QA report. Repeated minor help from-1 spends all finite time without
+crossing sign. No historical faction, background, hostile policy, price/effect
+catalogue or fictional world is imported. These mechanical observations are not
+human trust/fairness, Ruby/RMXP execution or approved canon. Existing narrative,
+journal and downloadable consumers retain separate unchanged evidence.

@@ -1,0 +1,124 @@
+{
+  "schema_version": 1,
+  "checks": {
+    "passed": 127,
+    "failed": 0
+  },
+  "same_python_csharp_cases": 127,
+  "source_assay": {
+    "config": {
+      "clamp_min": -3,
+      "clamp_max": 3,
+      "crossing_threshold_abs": 2
+    },
+    "legal_levels": [
+      -3,
+      -2,
+      -1,
+      1,
+      2,
+      3
+    ],
+    "typed_source_effect_rows": 420,
+    "source_only_effect_keys": [
+      "access_services_tier",
+      "aggro_on_sight",
+      "aggro_range_mult",
+      "ambush_chance_bonus",
+      "dialogue_options_tier",
+      "dialogue_persuasion_dc_delta",
+      "dialogue_tone",
+      "fast_travel",
+      "quest_tier_max",
+      "shop_buy_mult",
+      "shop_inventory_tier",
+      "shop_sell_mult",
+      "spawn_enemy_density_mult",
+      "spawn_rare_bonus"
+    ],
+    "dev_dist_helpers_identical": true,
+    "core_dist_effect_tables_identical": true,
+    "retained_negatives": [
+      {
+        "kind": "default-conflict",
+        "region": "VILA_ROSE",
+        "table": -1,
+        "helper_fallback": 1,
+        "resolution": "UNRESOLVED; neither imported as destination policy"
+      },
+      {
+        "kind": "empty-effects-hook",
+        "actual_source_return": [],
+        "resolution": "No historical effects execution or destination table import claimed"
+      },
+      {
+        "kind": "unknown-zone-fallback",
+        "helper_result": 1,
+        "resolution": "Source permissiveness is not destination authority"
+      },
+      {
+        "kind": "header-only-qa",
+        "data_rows": 0,
+        "resolution": "Not an executed historical consistency result"
+      },
+      {
+        "kind": "ruby-coercion",
+        "source": "value.to_i and delta.to_i",
+        "resolution": "Only explicit int32 input contract is adapted; Ruby coercion is not ported"
+      }
+    ],
+    "scope": "Static source-bound interpretation and complete typed table audit; no historical Ruby/RGSS/RMXP execution, effects application, source fiction/default import or human evidence."
+  },
+  "source_hashes": {
+    "labs/narrative-continuity/reputation/protocol.json": "a75bae35ababacdbafb7051f51a2eb36aaf9ba67875d3a98d0922d6aee1bc3ab",
+    "labs/narrative-continuity/reputation/run.py": "e70a3bae92504f2e8a79c863e298cdbc01e8c4b0985e918bc040eb2649f5ab03",
+    "labs/narrative-continuity/reputation/test_instrument.py": "ebbefa95451f8d892502e9c243583bd15c235c712cafc5d9f889ba90b797190e",
+    "north-star/reputation-study/Checks/NorthStar.ReputationChecks.csproj": "d86aa2ba42240c4b0bb62237aa63e2ba170121476e8d108a185ef37d666cb439",
+    "north-star/reputation-study/Checks/Program.cs": "ea43c6b3379ef5ea4a589eedfc31b0790796c964fed78294a89908cd22f356d2",
+    "north-star/reputation-study/Rules/NorthStar.Reputation.csproj": "9570b674acfea69bb60098f495afd3b9e2cef2575fcfeb6db71c2cdecb2c4876",
+    "north-star/reputation-study/Rules/Standing.cs": "1adc200fe85e6714a7a0195a4048bf2fd465750834f4cc2f12550017a2038c3d",
+    "references/rave-master/snapshots/36af1651271422ae33856e8b5d7b45702215f165/source/RM_ACT1/DATA/DEV/RGSS/RM_REPUTATION_RUNTIME.rb": "fe9d3c65b77e1d9812cf555cbca12d794a7f52e8d63743e7d8bed49cf5213c45",
+    "references/rave-master/snapshots/36af1651271422ae33856e8b5d7b45702215f165/source/RM_CORE/DATA/CORE/DIC_REPUTACAO_NIVEIS.csv": "0074e4dd1b157f75c19c72c424317083715cdbc3a0e909df258c7b21b5920a29",
+    "references/rave-master/snapshots/36af1651271422ae33856e8b5d7b45702215f165/source/RM_CORE/DATA/CORE/DIC_REPUTACAO_REGIOES.csv": "7df6ca4febba0718b2fe42fbae28e4f64a70e0e8dcf0ec736fe53b5ff9b54828",
+    "references/rave-master/snapshots/36af1651271422ae33856e8b5d7b45702215f165/source/RM_CORE/DATA/CORE/REPUTATION_RULES.csv": "68b4d0cd9eef47bd5d2259d3bc33fe8aebc1f748441f3b27a233932bc45e1f5f",
+    "references/rave-master/snapshots/36af1651271422ae33856e8b5d7b45702215f165/source/RM_CORE/DATA/CORE/REPUTATION_RULES.md": "03b486d9f3c6b65955d43cb08f0fbbe86c2dda5f037ae3df4fd7c1f374394dff",
+    "references/rave-master/snapshots/36af1651271422ae33856e8b5d7b45702215f165/source/RM_DIST/RMXP_BASE/Data/RM_CSV/REPUTATION_RULES.csv": "68b4d0cd9eef47bd5d2259d3bc33fe8aebc1f748441f3b27a233932bc45e1f5f",
+    "references/rave-master/snapshots/36af1651271422ae33856e8b5d7b45702215f165/source/RM_DIST/RMXP_BASE/ScriptsCustom/RM_REPUTATION_RUNTIME.rb": "fe9d3c65b77e1d9812cf555cbca12d794a7f52e8d63743e7d8bed49cf5213c45",
+    "references/rave-master/snapshots/36af1651271422ae33856e8b5d7b45702215f165/source/RM_QA/DATA/QA/RPT_REPUTATION_CONSISTENCY.csv": "8a555b3ab6f44be909b7d3ee766e5f46c44f3621f5ee02e66abcf28179050fed"
+  },
+  "source_stable": true,
+  "native": {
+    "schema_version": 1,
+    "passed": 25,
+    "failed": 0,
+    "controls": [
+      "six-exact-legal-levels-exclude-zero",
+      "set-zero-normalizes-to-positive-one",
+      "set-clamps-int-minimum",
+      "set-clamps-int-maximum",
+      "set-retains-legal-signs",
+      "outward-saturation-at-negative-limit",
+      "outward-saturation-at-positive-limit",
+      "inward-movement-from-limits-remains-possible",
+      "zero-delta-retains-every-legal-level",
+      "minor-positive-act-cannot-cross-negative-one",
+      "minor-negative-act-cannot-cross-positive-one",
+      "repeated-minor-positive-acts-remain-stalled",
+      "repeated-minor-negative-acts-remain-stalled",
+      "threshold-positive-act-crosses-sign",
+      "threshold-negative-act-crosses-sign",
+      "zero-result-at-threshold-selects-delta-sign",
+      "large-exact-zero-crossing-selects-delta-sign",
+      "int-max-addition-clamps-without-overflow",
+      "int-min-addition-clamps-without-abs-overflow",
+      "invalid-current-refused--2147483648",
+      "invalid-current-refused--4",
+      "invalid-current-refused-0",
+      "invalid-current-refused-4",
+      "invalid-current-refused-2147483647",
+      "selected-domain-remains-in-six-level-range"
+    ],
+    "scope": "Selected arithmetic only; no historical Ruby/RMXP, social policy, effects catalog, Unity/Windows or human balance execution."
+  },
+  "scope": "Selected source arithmetic interpretation and actual C# rules; table effects remain source-only. No Ruby/RMXP, historical game, Unity/Windows, human trust or balance claim."
+}

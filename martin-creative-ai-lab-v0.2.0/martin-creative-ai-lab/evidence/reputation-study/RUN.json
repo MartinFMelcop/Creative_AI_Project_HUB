@@ -1,0 +1,447 @@
+{
+  "schema_version": 1,
+  "kind": "destination_execution",
+  "baseline_commit": "9301c9e444785fa81fae4627364bac3d9223d7bc",
+  "capability_ids": [
+    "NS-C04"
+  ],
+  "consumer_paths": [
+    "north-star/reputation-study/Rules/Standing.cs",
+    "north-star/reputation-study/Host/Room.cs",
+    "north-star/reputation-study/Host/Program.cs"
+  ],
+  "runtime": "Actual SDK10.0.401, C#8/netstandard2.1 pure rules; .NET10/Linuxx64 original host; Node24.19.0/Chromium154.0.8037.57 with locked Playwright1.64.0 on Debian13. No Ruby/RGSS/RMXP execution.",
+  "scope": "ONE corrective legacy/laboratory unit with an actual original finite C# consumer. No Ruby/RMXP, imported source effects/defaults, human assessment, Unity/Windows/Steam, persistent or shared-world claim.",
+  "checks": {
+    "passed": 29,
+    "failed": 0
+  },
+  "source_cases": {
+    "same_python_csharp_cases": 127,
+    "rules_native": 25,
+    "typed_source_only_rows": 420,
+    "instrument_regressions": 5,
+    "scope": "127 SAME cases, not254 independent samples.420rows are static source-only evidence, not applied effects or fictional canon."
+  },
+  "browser_checks": {
+    "passed": 22,
+    "failed": 0,
+    "http": 7
+  },
+  "commands": [
+    {
+      "command": [
+        "/workspace/work/authored-scene/dotnet/dotnet",
+        "--version"
+      ],
+      "cwd": "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp",
+      "exit_code": 0,
+      "stdout": "10.0.401\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "node",
+        "--version"
+      ],
+      "cwd": "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab",
+      "exit_code": 0,
+      "stdout": "v24.19.0\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python3",
+        "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/labs/narrative-continuity/reputation/run.py",
+        "--dotnet",
+        "/workspace/work/authored-scene/dotnet/dotnet",
+        "--output",
+        "/workspace/work/reputation-study/acceptance/method"
+      ],
+      "cwd": "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab",
+      "exit_code": 0,
+      "stdout": "PASS: SAME 127 Python/C# source cases;420 typed source-only effects; native controls and retained negative decisions\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/workspace/work/authored-scene/dotnet/dotnet",
+        "build",
+        "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/reputation-study/ConsumerChecks/NorthStar.ReputationConsumerChecks.csproj",
+        "-c",
+        "Release",
+        "-m:1",
+        "--disable-build-servers"
+      ],
+      "cwd": "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp",
+      "exit_code": 0,
+      "stdout": "  Determining projects to restore...\n  All projects are up-to-date for restore.\n  NorthStar.Reputation -> /workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/reputation-study/Rules/bin/Release/netstandard2.1/NorthStar.Reputation.dll\n  NorthStar.ReputationStudy -> /workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/reputation-study/Host/bin/Release/net10.0/NorthStar.ReputationStudy.dll\n  NorthStar.ReputationConsumerChecks -> /workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/reputation-study/ConsumerChecks/bin/Release/net10.0/NorthStar.ReputationConsumerChecks.dll\n\nBuild succeeded.\n    0 Warning(s)\n    0 Error(s)\n\nTime Elapsed 00:00:01.21\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/workspace/work/authored-scene/dotnet/dotnet",
+        "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/reputation-study/ConsumerChecks/bin/Release/net10.0/NorthStar.ReputationConsumerChecks.dll",
+        "/workspace/work/reputation-study/acceptance/consumer-native.json"
+      ],
+      "cwd": "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab",
+      "exit_code": 0,
+      "stdout": "PASS: 29 actual consumer controls\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "node",
+        "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/reputation-study/tools/browser.mjs",
+        "/workspace/work/authored-scene/dotnet/dotnet",
+        "/workspace/work/reputation-study/acceptance/browser"
+      ],
+      "cwd": "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab",
+      "exit_code": 0,
+      "stdout": "PASS: 22 actual reputation Chromium controls, 7 HTTP controls and false-service detection\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/workspace/work/authored-scene/dotnet/dotnet",
+        "--version"
+      ],
+      "cwd": "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp",
+      "exit_code": 0,
+      "stdout": "10.0.401\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python3",
+        "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/labs/narrative-continuity/reputation/test_instrument.py"
+      ],
+      "cwd": "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab",
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ".....\n----------------------------------------------------------------------\nRan 5 tests in 0.008s\n\nOK\n"
+    },
+    {
+      "command": [
+        "/workspace/work/authored-scene/dotnet/dotnet",
+        "build",
+        "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/reputation-study/Checks/NorthStar.ReputationChecks.csproj",
+        "-c",
+        "Release",
+        "-m:1",
+        "--disable-build-servers"
+      ],
+      "cwd": "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp",
+      "exit_code": 0,
+      "stdout": "  Determining projects to restore...\n  All projects are up-to-date for restore.\n  NorthStar.Reputation -> /workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/reputation-study/Rules/bin/Release/netstandard2.1/NorthStar.Reputation.dll\n  NorthStar.ReputationChecks -> /workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/reputation-study/Checks/bin/Release/net10.0/NorthStar.ReputationChecks.dll\n\nBuild succeeded.\n    0 Warning(s)\n    0 Error(s)\n\nTime Elapsed 00:00:01.17\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/workspace/work/authored-scene/dotnet/dotnet",
+        "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/reputation-study/Checks/bin/Release/net10.0/NorthStar.ReputationChecks.dll",
+        "--vectors",
+        "/workspace/work/reputation-study/acceptance/method/source-vectors.json",
+        "/workspace/work/reputation-study/acceptance/method/csharp-vectors.json"
+      ],
+      "cwd": "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp",
+      "exit_code": 0,
+      "stdout": "{\"passed\":127,\"failed\":0}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/workspace/work/authored-scene/dotnet/dotnet",
+        "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/reputation-study/Checks/bin/Release/net10.0/NorthStar.ReputationChecks.dll",
+        "--native",
+        "/workspace/work/reputation-study/acceptance/method/native.json"
+      ],
+      "cwd": "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp",
+      "exit_code": 0,
+      "stdout": "PASS: 25 reputation arithmetic controls.\n",
+      "stderr": ""
+    }
+  ],
+  "source_artifacts": [
+    {
+      "local_path": "labs/narrative-continuity/reputation/protocol.json",
+      "size_bytes": 4664,
+      "sha256": "a75bae35ababacdbafb7051f51a2eb36aaf9ba67875d3a98d0922d6aee1bc3ab"
+    },
+    {
+      "local_path": "labs/narrative-continuity/reputation/run.py",
+      "size_bytes": 13938,
+      "sha256": "e70a3bae92504f2e8a79c863e298cdbc01e8c4b0985e918bc040eb2649f5ab03"
+    },
+    {
+      "local_path": "labs/narrative-continuity/reputation/test_instrument.py",
+      "size_bytes": 3659,
+      "sha256": "ebbefa95451f8d892502e9c243583bd15c235c712cafc5d9f889ba90b797190e"
+    },
+    {
+      "local_path": "north-star/csharp/global.json",
+      "size_bytes": 55,
+      "sha256": "e0c0882461e712f6c2c66241bf2f175c60832e3ff077dc26091ff8c661d4193e"
+    },
+    {
+      "local_path": "north-star/reputation-study/Checks/NorthStar.ReputationChecks.csproj",
+      "size_bytes": 471,
+      "sha256": "d86aa2ba42240c4b0bb62237aa63e2ba170121476e8d108a185ef37d666cb439"
+    },
+    {
+      "local_path": "north-star/reputation-study/Checks/Program.cs",
+      "size_bytes": 8483,
+      "sha256": "ea43c6b3379ef5ea4a589eedfc31b0790796c964fed78294a89908cd22f356d2"
+    },
+    {
+      "local_path": "north-star/reputation-study/ConsumerChecks/NorthStar.ReputationConsumerChecks.csproj",
+      "size_bytes": 359,
+      "sha256": "2df186e742a0216fbf71dc4f30af0dc53010d53bb1485c6fe86a4b096efbf1cd"
+    },
+    {
+      "local_path": "north-star/reputation-study/ConsumerChecks/Program.cs",
+      "size_bytes": 6162,
+      "sha256": "4ccfaef69a21cab06267759faee0230775c476ce749a1997d7333eef83679b4c"
+    },
+    {
+      "local_path": "north-star/reputation-study/Host/NorthStar.ReputationStudy.csproj",
+      "size_bytes": 355,
+      "sha256": "04ccce7027b6ce885f3adb561f7ab445dffdc0905da23aeae0f021060b8a21e7"
+    },
+    {
+      "local_path": "north-star/reputation-study/Host/Program.cs",
+      "size_bytes": 5000,
+      "sha256": "c84a94ae7b5dae61a5f93c99f8d1717e6e13eb2508601105f9109a9d0b7591f8"
+    },
+    {
+      "local_path": "north-star/reputation-study/Host/Room.cs",
+      "size_bytes": 5576,
+      "sha256": "903c4bba8cbe988400fef6db62c9940aa91c436fe7c414c84de1baa9676f1ee0"
+    },
+    {
+      "local_path": "north-star/reputation-study/Rules/NorthStar.Reputation.csproj",
+      "size_bytes": 344,
+      "sha256": "9570b674acfea69bb60098f495afd3b9e2cef2575fcfeb6db71c2cdecb2c4876"
+    },
+    {
+      "local_path": "north-star/reputation-study/Rules/Standing.cs",
+      "size_bytes": 1588,
+      "sha256": "1adc200fe85e6714a7a0195a4048bf2fd465750834f4cc2f12550017a2038c3d"
+    },
+    {
+      "local_path": "north-star/reputation-study/tools/browser.mjs",
+      "size_bytes": 15392,
+      "sha256": "4eb89238390d105fc78cbc37766668300860e4971ee0c627d8f728e0d7d94de4"
+    },
+    {
+      "local_path": "north-star/reputation-study/tools/verify.py",
+      "size_bytes": 4348,
+      "sha256": "c8a85661e0307ba732af50c3b0fa94879a9b7c0033130fed28c1a6051adb9ed7"
+    },
+    {
+      "local_path": "north-star/reputation-study/web/app.js",
+      "size_bytes": 6499,
+      "sha256": "44235772938b860fa397437800c214559101033ee85fbfb5af1c3452ccf1e81a"
+    },
+    {
+      "local_path": "north-star/reputation-study/web/index.html",
+      "size_bytes": 5955,
+      "sha256": "db397fbec7711d2373b24fb434d1dad9837abf209909daaf493a6d0e2e4f3841"
+    },
+    {
+      "local_path": "north-star/reputation-study/web/style.css",
+      "size_bytes": 8499,
+      "sha256": "56915af65593f57d558c280bba7ed0a7238fe58c83e26fd25bc4068313c82ff7"
+    },
+    {
+      "local_path": "projects/realtime-integration-lab/package-lock.json",
+      "size_bytes": 42105,
+      "sha256": "aa191ef2158e6cc6f770bf4b3ee44dca17175ef1a3cd572b98115246bf46aea7"
+    },
+    {
+      "local_path": "projects/realtime-integration-lab/package.json",
+      "size_bytes": 1445,
+      "sha256": "42e3cc9633e522dd6d9a5c11023418331129632881a8bf0b95e3717247d57ebe"
+    },
+    {
+      "local_path": "references/rave-master/snapshots/36af1651271422ae33856e8b5d7b45702215f165/source/RM_ACT1/DATA/DEV/RGSS/RM_REPUTATION_RUNTIME.rb",
+      "size_bytes": 3135,
+      "sha256": "fe9d3c65b77e1d9812cf555cbca12d794a7f52e8d63743e7d8bed49cf5213c45"
+    },
+    {
+      "local_path": "references/rave-master/snapshots/36af1651271422ae33856e8b5d7b45702215f165/source/RM_CORE/DATA/CORE/DIC_REPUTACAO_NIVEIS.csv",
+      "size_bytes": 531,
+      "sha256": "0074e4dd1b157f75c19c72c424317083715cdbc3a0e909df258c7b21b5920a29"
+    },
+    {
+      "local_path": "references/rave-master/snapshots/36af1651271422ae33856e8b5d7b45702215f165/source/RM_CORE/DATA/CORE/DIC_REPUTACAO_REGIOES.csv",
+      "size_bytes": 733,
+      "sha256": "7df6ca4febba0718b2fe42fbae28e4f64a70e0e8dcf0ec736fe53b5ff9b54828"
+    },
+    {
+      "local_path": "references/rave-master/snapshots/36af1651271422ae33856e8b5d7b45702215f165/source/RM_CORE/DATA/CORE/REPUTATION_RULES.csv",
+      "size_bytes": 24612,
+      "sha256": "68b4d0cd9eef47bd5d2259d3bc33fe8aebc1f748441f3b27a233932bc45e1f5f"
+    },
+    {
+      "local_path": "references/rave-master/snapshots/36af1651271422ae33856e8b5d7b45702215f165/source/RM_CORE/DATA/CORE/REPUTATION_RULES.md",
+      "size_bytes": 2184,
+      "sha256": "03b486d9f3c6b65955d43cb08f0fbbe86c2dda5f037ae3df4fd7c1f374394dff"
+    },
+    {
+      "local_path": "references/rave-master/snapshots/36af1651271422ae33856e8b5d7b45702215f165/source/RM_DIST/RMXP_BASE/Data/RM_CSV/REPUTATION_RULES.csv",
+      "size_bytes": 24612,
+      "sha256": "68b4d0cd9eef47bd5d2259d3bc33fe8aebc1f748441f3b27a233932bc45e1f5f"
+    },
+    {
+      "local_path": "references/rave-master/snapshots/36af1651271422ae33856e8b5d7b45702215f165/source/RM_DIST/RMXP_BASE/ScriptsCustom/RM_REPUTATION_RUNTIME.rb",
+      "size_bytes": 3135,
+      "sha256": "fe9d3c65b77e1d9812cf555cbca12d794a7f52e8d63743e7d8bed49cf5213c45"
+    },
+    {
+      "local_path": "references/rave-master/snapshots/36af1651271422ae33856e8b5d7b45702215f165/source/RM_QA/DATA/QA/RPT_REPUTATION_CONSISTENCY.csv",
+      "size_bytes": 60,
+      "sha256": "8a555b3ab6f44be909b7d3ee766e5f46c44f3621f5ee02e66abcf28179050fed"
+    }
+  ],
+  "result_artifacts": [
+    {
+      "local_path": "evidence/reputation-study/CI_BASELINE.json",
+      "size_bytes": 1225,
+      "sha256": "2e483072f5f14d62a3257ad1143eaf9296d378454235238c67c15d3d019d6535"
+    },
+    {
+      "local_path": "evidence/reputation-study/DECISION.md",
+      "size_bytes": 8522,
+      "sha256": "2eed6898ec714101344a5fa36bcf9249a4c71e883038f779b616e7efdec4669d"
+    },
+    {
+      "local_path": "evidence/reputation-study/browser-hosts.json",
+      "size_bytes": 1062,
+      "sha256": "5cdb43ea33df58f89f5a2078982e75a214e7b67c48a1f3a3d52750c5fbf66783"
+    },
+    {
+      "local_path": "evidence/reputation-study/browser.json",
+      "size_bytes": 49186,
+      "sha256": "d91f522d0b272da6cef1bc927a15774755407d6a6b7b298e3af5a7b336829a3c"
+    },
+    {
+      "local_path": "evidence/reputation-study/commands.json",
+      "size_bytes": 3576,
+      "sha256": "a3945fe33d35e5fbdc625fdbf33a589ada048636f9bb9d354af3c75581cb650c"
+    },
+    {
+      "local_path": "evidence/reputation-study/consumer-native.json",
+      "size_bytes": 1765,
+      "sha256": "68c6124d87a1170364b0cdfd62a50702c5625068e98c9035e67fa8520a298313"
+    },
+    {
+      "local_path": "evidence/reputation-study/csharp-vectors.json",
+      "size_bytes": 12608,
+      "sha256": "4060ef2c8e1065355173d71116c0ae0ffbb9c7e31d5606d25f6ddfefa531da48"
+    },
+    {
+      "local_path": "evidence/reputation-study/development-path-negatives.json",
+      "size_bytes": 1298,
+      "sha256": "8497fec476fb3ed5bcf0e5c49eec9f7402ed859de1b151d954ed45699bfdb531"
+    },
+    {
+      "local_path": "evidence/reputation-study/environment.json",
+      "size_bytes": 1188,
+      "sha256": "59ac2b263f90f8e461171dac7a676e5c0c3f2a82c4a4985a08d92126990e5f80"
+    },
+    {
+      "local_path": "evidence/reputation-study/false-vectors-input.json",
+      "size_bytes": 374,
+      "sha256": "19556c448ea1ef651db580f94602123e8122cebde5ac99725ce27c9619ad92e6"
+    },
+    {
+      "local_path": "evidence/reputation-study/false-vectors-output.json",
+      "size_bytes": 487,
+      "sha256": "de39e3348f47094a62158b733b13236bec5e05556706136161f032f847dae9cb"
+    },
+    {
+      "local_path": "evidence/reputation-study/inspection.json",
+      "size_bytes": 707,
+      "sha256": "f18235352403372b6f8d9be0b825c4530492ba4ee55dbd004fd7995c4fa0b33f"
+    },
+    {
+      "local_path": "evidence/reputation-study/method-commands.json",
+      "size_bytes": 3080,
+      "sha256": "bcb891c33e706f44180e81f31d6004a2dba46e3946fd788468970df69add1646"
+    },
+    {
+      "local_path": "evidence/reputation-study/method-results.json",
+      "size_bytes": 6125,
+      "sha256": "d08e3ef55ff77fd4b911676c7ca976487b18cb6df5d61de24953de816205382a"
+    },
+    {
+      "local_path": "evidence/reputation-study/minor-help-stall.png",
+      "size_bytes": 212076,
+      "sha256": "9a3bef52c340c6dc9e9f0b623738950dc184538dcf485538d2ce27fdb1daf974"
+    },
+    {
+      "local_path": "evidence/reputation-study/preservation.json",
+      "size_bytes": 907,
+      "sha256": "167d5c2023bd8a1badafe50a69b5397b612b8c1f6b2c34516fca0cba09ff787f"
+    },
+    {
+      "local_path": "evidence/reputation-study/results.json",
+      "size_bytes": 8295,
+      "sha256": "16f88ffc088f9fc35263905c9902ef5afea700f01009a0feaed6abb5413bac4f"
+    },
+    {
+      "local_path": "evidence/reputation-study/rules-native.json",
+      "size_bytes": 1307,
+      "sha256": "43887ce748f4c4ee5fc1a49b9cd32ef7fcc956742c2da45ffe67a9767124b3f9"
+    },
+    {
+      "local_path": "evidence/reputation-study/service.png",
+      "size_bytes": 214402,
+      "sha256": "422f34c7a812895b639581236c529ae90db9b14ae85e4014fe9891eb757a67d8"
+    },
+    {
+      "local_path": "evidence/reputation-study/source-assay.json",
+      "size_bytes": 1733,
+      "sha256": "1a4cd87a562719ca63bcecc144e3505bdd1f134582b451ab619da2aa2d24c3d1"
+    },
+    {
+      "local_path": "evidence/reputation-study/source-vectors.json",
+      "size_bytes": 15445,
+      "sha256": "b4166e839aec57b87a04a87dabf76b00d1bdf2a111b2867105702a5a4e43c6e0"
+    },
+    {
+      "local_path": "evidence/reputation-study/unfinished-loan.png",
+      "size_bytes": 218513,
+      "sha256": "9b05e514d1a6284f7db9d899451719720d928495edf7478f702450c25eeacccc"
+    }
+  ],
+  "limitations": [
+    "Only selected inspected arithmetic is adapted. Ruby coercion, default/background/hostility policies, faction/quest/effect catalog and source fiction remain unimported.",
+    "Python is an independent declared interpretation guarded by source anchors, not Ruby parsing or historical engine execution. Agreement is not full combat/social correctness.",
+    "Original anonymous regional service policy is an experimental beneficiary, not recovered source event rules, player morality or approved North Star canon.",
+    "Finite trusted-local ephemeral host; no persistence, account, shared world, authorization, distributed exactly-once, actualNPC schedule or observedreturn outside acceptedtoolcustody.",
+    "Synthetic software and Chromium fidelity are not independent people, fairness, enjoyment, social trust, accessibility or physical-device evidence.",
+    "Actual licensed Unity Editor/activation/modules, Windows player, Steam, commercial clearance and production ownership remain unverified/unexecuted. Build/Operations remains incomplete.",
+    "An insufficient-coin service refusal is not separately reachable through these four-period/three-coin public routes after paying a first service. Actual debit and standing/time refusals are executed; no universal branch-coverage claim is made."
+  ],
+  "retained_negatives": [
+    "Source village default table-1 vs helper fallback+1 remains UNRESOLVED; destination chooses explicit experimental-1, not a silent resolution.",
+    "Source effects_for=[] cannot supply420table effects; direct adaptation as a provider is REJECTED narrowly. Full effects remain UNRESOLVED.",
+    "Unknown-zone fallback+1, Ruby to_i permissiveness and header-only QA report are not destination authority or past success.",
+    "Actual four paid minorhelps consume alltime but remain-1; this losing policy is retained, not silently normalized.",
+    "Actual false-service renderer is specifically rejected; new-trial generation discards the queued old-view borrowing intent. The latter was corrected in review before execution, not an invented runtime failure.",
+    "Engineering development recorded actual wrong-cwd/path failures. Corrected only new owned directories; final guarded execution passes.",
+    "An intentionally false legal expected value leaves actual Add(-1,+1)=-1, records a failedcomparison and exits1; exact-result and order mutants also fail."
+  ],
+  "specialties": {
+    "engineering": "Independent ENG-004/015/017 favored reputation; owned pure arithmetic/native/vector CLI. Safe long intermediates and strict legal typed current-state domain preserve bounded source semantics.",
+    "scientific": "Independent SCI-013/014/076/077 favored a consequential service over a number display; owned predeclared source assay, SAMEvectors and five negative regressions.",
+    "creative": "Independent CRE-005(A),031/038/045/048/061/071(H) preferred retained-tool/catalog integration. Dissent retained. Original consumer avoids background/hostility/default import, respects separate accounts and actual costly events; owned UI.",
+    "resolution": "Primary selected a bounded legacy/lab unit using a separate library, avoiding old Domain/package source-closure changes. Existing tools contract remains strong next frontier; no consensus or author approval fabricated.",
+    "additional_instrument": "Separately coordinated browser agent owned actualChromium/HTTP/mutant instrument; primary built/executed it, inspected captures, integrated records/gates and publication."
+  },
+  "rolling_stream": "ONE corrective legacy/laboratory unit. Original consumer/UI/CI are support, not extra NorthStar or portfolio units.47/40/13 targets are qualitative, not measured effort.",
+  "lifecycle": "Existing authored request/journal, actualCrossing, repair journey, Domain/libraries, frozenAI evaluation and downloadedscene remain exact under existingidentitymaps. No unique source/oldpackage/save/media/notice retired. This method adds no permanent historical Linux release duty and cannot replace licensed Windows acceptance.",
+  "prior_ci": "evidence/reputation-study/CI_BASELINE.json"
+}

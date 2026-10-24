@@ -594,7 +594,15 @@
         "references/rave-master/snapshots/36af1651271422ae33856e8b5d7b45702215f165/source/RM_ACT1/DATA/DEV/QUEST_STEPS.csv",
         "references/rave-master/snapshots/36af1651271422ae33856e8b5d7b45702215f165/source/RM_ACT1/DATA/DEV/RGSS/RM_UI_QUEST_JOURNAL_RUNTIME.rb",
         "references/rave-master/snapshots/36af1651271422ae33856e8b5d7b45702215f165/source/RM_DIST/RMXP_BASE/Data/RM_CSV/QUEST_STEPS.csv",
-        "references/rave-master/snapshots/36af1651271422ae33856e8b5d7b45702215f165/source/RM_DIST/RMXP_BASE/ScriptsCustom/RM_UI_QUEST_JOURNAL_RUNTIME.rb"
+        "references/rave-master/snapshots/36af1651271422ae33856e8b5d7b45702215f165/source/RM_DIST/RMXP_BASE/ScriptsCustom/RM_UI_QUEST_JOURNAL_RUNTIME.rb",
+        "references/rave-master/snapshots/36af1651271422ae33856e8b5d7b45702215f165/source/RM_ACT1/DATA/DEV/RGSS/RM_REPUTATION_RUNTIME.rb",
+        "references/rave-master/snapshots/36af1651271422ae33856e8b5d7b45702215f165/source/RM_CORE/DATA/CORE/DIC_REPUTACAO_NIVEIS.csv",
+        "references/rave-master/snapshots/36af1651271422ae33856e8b5d7b45702215f165/source/RM_CORE/DATA/CORE/DIC_REPUTACAO_REGIOES.csv",
+        "references/rave-master/snapshots/36af1651271422ae33856e8b5d7b45702215f165/source/RM_CORE/DATA/CORE/REPUTATION_RULES.csv",
+        "references/rave-master/snapshots/36af1651271422ae33856e8b5d7b45702215f165/source/RM_CORE/DATA/CORE/REPUTATION_RULES.md",
+        "references/rave-master/snapshots/36af1651271422ae33856e8b5d7b45702215f165/source/RM_DIST/RMXP_BASE/Data/RM_CSV/REPUTATION_RULES.csv",
+        "references/rave-master/snapshots/36af1651271422ae33856e8b5d7b45702215f165/source/RM_DIST/RMXP_BASE/ScriptsCustom/RM_REPUTATION_RUNTIME.rb",
+        "references/rave-master/snapshots/36af1651271422ae33856e8b5d7b45702215f165/source/RM_QA/DATA/QA/RPT_REPUTATION_CONSISTENCY.csv"
       ],
       "source_inventory": "labs/source-inventory.json",
       "consumer_paths": [
@@ -605,29 +613,35 @@
         "north-star/authored-scene/Host/Program.cs",
         "north-star/authored-scene/web/app.js",
         "north-star/authored-scene/Host/RequestJournal.cs",
-        "north-star/authored-scene/Host/SceneSession.cs"
+        "north-star/authored-scene/Host/SceneSession.cs",
+        "north-star/reputation-study/Rules/Standing.cs",
+        "north-star/reputation-study/Host/Room.cs",
+        "north-star/reputation-study/Host/Program.cs"
       ],
       "controls": [
         "Selected causal/source bindings and typed twin legacy tables with distinct DEV/DIST limitations",
         "Six actual P10 module controls and two isolated policy mutants",
         "95 compiled native controls and eight complete outcome-distinct original journeys",
-        "12 instrument regressions, exact reproduction and three actual stdin sessions"
+        "12 instrument regressions, exact reproduction and three actual stdin sessions",
+        "Selected reputation arithmetic: SAME127Python/C#cases,25native,29consumer,22Chromium,7HTTP and5instrument controls;420effect rows source-only"
       ],
-      "validity_boundary": "Bounded selected-source method, actual P10 module controls and original C# in-session consequences. No historical RMXP execution, complete quest/reputation catalogs, durable NPC world, literary/consent/player validation or Unity/Windows/Steam proof. The new visible .NET10/browser consumer observes the same unchanged request owner; synthetic DOM/SVG fidelity is not comprehension or a new quest/reputation/persistence method. Current scene has narrowly executed trusted-local accepted-command narrative continuation, including private consent and actual process reentry; this is destination support, not full persistent quest/NPC worlds, a new laboratory method, Windows or participant evidence.",
-      "next_objective": "Compare appropriate author/player/device assessment and licensed Windows delivery against consequential unresolved reputation/quest/creation sources and production ownership; do not automatically repeat the continuity matrix.",
+      "validity_boundary": "Bounded selected-source method, actual P10 module controls and original C# in-session consequences. No historical RMXP execution, complete quest/reputation catalogs, durable NPC world, literary/consent/player validation or Unity/Windows/Steam proof. The new visible .NET10/browser consumer observes the same unchanged request owner; synthetic DOM/SVG fidelity is not comprehension or a new quest/reputation/persistence method. Current scene has narrowly executed trusted-local accepted-command narrative continuation, including private consent and actual process reentry; this is destination support, not full persistent quest/NPC worlds, a new laboratory method, Windows or participant evidence. Separate selected-reputation method now executes bounded no-zero/clamp/threshold rules in an original finite service consumer. Historical effect tables/defaults/faction fiction are not applied; static source interpretation is not Ruby/RMXP execution or human social trust.",
+      "next_objective": "Compare licensed Unity/Windows and appropriate people/devices with unresolved item/tool/unlock, reputation/effect and narrative source contracts. Creative retained-tool alternative remains strong; do not automatically expand the reputation matrix.",
       "path": "labs/narrative-continuity",
       "instrument": "labs/narrative-continuity/run.py",
       "evidence": [
         "evidence/narrative-continuity/RUN.json",
         "evidence/narrative-continuity/results.json",
         "evidence/authored-scene/RUN.json",
-        "evidence/request-continuity/RUN.json"
+        "evidence/request-continuity/RUN.json",
+        "evidence/reputation-study/RUN.json"
       ],
       "evidence_sha256": {
         "evidence/narrative-continuity/RUN.json": "32e3362e33b593fbdbae5cb5c517afebf2e2067ccbea9f9a5631af27a88e201b",
         "evidence/narrative-continuity/results.json": "e83cb621700f1d3552911ff063ade2f8990bdfdeb0e600bbc2701c915a1d4413",
         "evidence/authored-scene/RUN.json": "3b548269d8da32f597bd6e27214c88b1b0bf48b69859494ebfc2b2bb5371571f",
-        "evidence/request-continuity/RUN.json": "d1695d0922947be6150a79238b96f3553aa38fc73068cf76379c1856fc1ffe87"
+        "evidence/request-continuity/RUN.json": "d1695d0922947be6150a79238b96f3553aa38fc73068cf76379c1856fc1ffe87",
+        "evidence/reputation-study/RUN.json": "901bcab3f535fefc4b03746ab147c886c88d68470f19be3cbec8c4f573d64bb5"
       }
     },
     {
@@ -1296,8 +1310,8 @@
         "references/rave-master/snapshots/36af1651271422ae33856e8b5d7b45702215f165/source/RM_ACT1/DATA/DEV/RGSS/RM_DIALOGUE_SCORING_RUNTIME.rb",
         "references/rave-master/snapshots/36af1651271422ae33856e8b5d7b45702215f165/source/RM_ACT1/DATA/DEV/QUEST_STEPS.csv"
       ],
-      "decision": "Static quest/helper assays and separately integrated literal NPC mask/event-authority boundary retain DEV/DIST and manual-completion limits. Full NPC schedule/location conflict resolution, reputation/factions, dialogue selectors, quest/world catalogs and actual RGSS runtime remain unresolved.",
-      "next_action": "Choose a consequential actual beneficiary for remaining placement/reputation/quest effects with author-approved ownership; do not make eligibility an observed return or manual UI completion objective evidence."
+      "decision": "Static quest/helper assays and separately integrated literal NPC mask/event-authority boundary retain DEV/DIST and manual-completion limits. Full NPC schedule/location conflict resolution, reputation/factions, dialogue selectors, quest/world catalogs and actual RGSS runtime remain unresolved. Selected reputation six-level arithmetic is now separately INTEGRATED and direct empty-hook effects provision separately REJECTED. Full source effects, regional/default conflicts and faction/quest policies remain UNRESOLVED.",
+      "next_action": "Resolve one consequential remaining source contract with a real beneficiary and explicit author policy: retained tools/catalog identity, conflicting defaults, actual effects/faction/quest rules or licensed Windows delivery. Preserve namespaces and conflicting variants; do not treat prior static tables as implemented gameplay."
     },
     {
       "id": "P01-XP-CRAFT-TRANSACTION",
@@ -1743,6 +1757,59 @@
       "prior_evidence": [
         "evidence/npc-availability/RUN.json"
       ]
+    },
+    {
+      "id": "XP-REPUTATION-ARITHMETIC",
+      "origin_projects": [
+        "P10"
+      ],
+      "laboratory_id": "narrative-continuity",
+      "status": "INTEGRATED",
+      "source_paths": [
+        "references/rave-master/snapshots/36af1651271422ae33856e8b5d7b45702215f165/source/RM_ACT1/DATA/DEV/RGSS/RM_REPUTATION_RUNTIME.rb",
+        "references/rave-master/snapshots/36af1651271422ae33856e8b5d7b45702215f165/source/RM_DIST/RMXP_BASE/ScriptsCustom/RM_REPUTATION_RUNTIME.rb",
+        "references/rave-master/snapshots/36af1651271422ae33856e8b5d7b45702215f165/source/RM_CORE/DATA/CORE/DIC_REPUTACAO_NIVEIS.csv"
+      ],
+      "consumer_paths": [
+        "north-star/reputation-study/Rules/Standing.cs",
+        "north-star/reputation-study/Host/Room.cs",
+        "north-star/reputation-study/Host/Program.cs"
+      ],
+      "decision": "Only six-level Set/Add no-zero, clamp and threshold semantics are adapted in portable C#8/netstandard2.1 and consumed by accepted costly events that actually allow/refuse an original finite regional service. Python/C# apply the SAME127inputs. Source defaults, coercion, background seeds, hostility/effects, historical fiction and human fairness are not integrated.",
+      "evidence": [
+        "evidence/reputation-study/RUN.json",
+        "evidence/reputation-study/source-assay.json",
+        "evidence/reputation-study/browser.json"
+      ],
+      "evidence_sha256": {
+        "evidence/reputation-study/RUN.json": "901bcab3f535fefc4b03746ab147c886c88d68470f19be3cbec8c4f573d64bb5",
+        "evidence/reputation-study/source-assay.json": "1a4cd87a562719ca63bcecc144e3505bdd1f134582b451ab619da2aa2d24c3d1",
+        "evidence/reputation-study/browser.json": "d91f522d0b272da6cef1bc927a15774755407d6a6b7b298e3af5a7b336829a3c"
+      }
+    },
+    {
+      "id": "XP-REPUTATION-DIRECT-EFFECT-HOOK",
+      "origin_projects": [
+        "P10"
+      ],
+      "laboratory_id": "narrative-continuity",
+      "status": "REJECTED",
+      "source_paths": [
+        "references/rave-master/snapshots/36af1651271422ae33856e8b5d7b45702215f165/source/RM_ACT1/DATA/DEV/RGSS/RM_REPUTATION_RUNTIME.rb",
+        "references/rave-master/snapshots/36af1651271422ae33856e8b5d7b45702215f165/source/RM_DIST/RMXP_BASE/ScriptsCustom/RM_REPUTATION_RUNTIME.rb",
+        "references/rave-master/snapshots/36af1651271422ae33856e8b5d7b45702215f165/source/RM_CORE/DATA/CORE/REPUTATION_RULES.csv"
+      ],
+      "decision": "Reject only direct adaptation of the inspected effects_for hook as an implementation of table-defined effects: its body returns[] and has no parser/application. The420typed rows and header-only QA report do not provide execution. This does not reject reputation as a design, the arithmetic or whole collections; full effects/factions/quests/default conflicts remain genuinely UNRESOLVED. Historical Ruby/RMXP is not claimed executed.",
+      "evidence": [
+        "evidence/reputation-study/RUN.json",
+        "evidence/reputation-study/source-assay.json",
+        "evidence/reputation-study/browser.json"
+      ],
+      "evidence_sha256": {
+        "evidence/reputation-study/RUN.json": "901bcab3f535fefc4b03746ab147c886c88d68470f19be3cbec8c4f573d64bb5",
+        "evidence/reputation-study/source-assay.json": "1a4cd87a562719ca63bcecc144e3505bdd1f134582b451ab619da2aa2d24c3d1",
+        "evidence/reputation-study/browser.json": "d91f522d0b272da6cef1bc927a15774755407d6a6b7b298e3af5a7b336829a3c"
+      }
     }
   ]
 }

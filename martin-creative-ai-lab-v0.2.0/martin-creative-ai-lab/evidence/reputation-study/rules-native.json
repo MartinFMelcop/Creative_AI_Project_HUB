@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "passed": 25,
+  "failed": 0,
+  "controls": [
+    "six-exact-legal-levels-exclude-zero",
+    "set-zero-normalizes-to-positive-one",
+    "set-clamps-int-minimum",
+    "set-clamps-int-maximum",
+    "set-retains-legal-signs",
+    "outward-saturation-at-negative-limit",
+    "outward-saturation-at-positive-limit",
+    "inward-movement-from-limits-remains-possible",
+    "zero-delta-retains-every-legal-level",
+    "minor-positive-act-cannot-cross-negative-one",
+    "minor-negative-act-cannot-cross-positive-one",
+    "repeated-minor-positive-acts-remain-stalled",
+    "repeated-minor-negative-acts-remain-stalled",
+    "threshold-positive-act-crosses-sign",
+    "threshold-negative-act-crosses-sign",
+    "zero-result-at-threshold-selects-delta-sign",
+    "large-exact-zero-crossing-selects-delta-sign",
+    "int-max-addition-clamps-without-overflow",
+    "int-min-addition-clamps-without-abs-overflow",
+    "invalid-current-refused--2147483648",
+    "invalid-current-refused--4",
+    "invalid-current-refused-0",
+    "invalid-current-refused-4",
+    "invalid-current-refused-2147483647",
+    "selected-domain-remains-in-six-level-range"
+  ],
+  "scope": "Selected arithmetic only; no historical Ruby/RMXP, social policy, effects catalog, Unity/Windows or human balance execution."
+}
