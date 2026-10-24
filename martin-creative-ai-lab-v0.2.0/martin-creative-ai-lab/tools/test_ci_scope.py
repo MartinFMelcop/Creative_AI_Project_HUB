@@ -30,7 +30,7 @@ class Classification(unittest.TestCase):
     def test_csharp_and_progression_only_do_not_rebuild_historical_consumers(self):
         for path in ('north-star/availability-study/Rules/Availability.cs', 'evidence/npc-availability/RUN.json', 'evidence/repair-hauling/RUN.json',
                      'labs/world-gameplay/availability/run.py', 'delivery/authored-scene/package.py', 'delivery/authored-scene/dist/authored-scene-demo-linux-x64.zip',
-                     'evidence/recipient-delivery/RUN.json', 'north-star/combat-study/Host/Trial.cs', 'labs/combat-response/status/run.py',
+                     'evidence/request-continuity/RUN.json', 'evidence/recipient-delivery/RUN.json', 'north-star/combat-study/Host/Trial.cs', 'labs/combat-response/status/run.py',
                      'evidence/combat-status/RUN.json', 'north-star/authored-scene/Host/Room.cs', 'north-star/authored-scene/tools/browser.mjs',
                      'evidence/authored-scene/RUN.json', 'north-star/csharp/Domain/Progression.cs', 'labs/rpg-systems/run.py',
                      'evidence/rpg-progression/RUN.json', 'labs/economy-simulation/run.py',

@@ -15,14 +15,14 @@ public static class Program
     {
         try
         {
-            if(args.Length!=5 || args[0]!="--serve" || args[3]!="--seconds")
-                throw new ArgumentException("Usage: --serve PORT WEBROOT --seconds 1..600");
+            if(args.Length is not (5 or 7) || args[0]!="--serve" || args[3]!="--seconds" || args.Length==7 && args[5] is not ("--new" or "--resume"))
+                throw new ArgumentException("Usage: --serve PORT WEBROOT --seconds 1..600 [--new PATH | --resume PATH]");
             int port=int.Parse(args[1]),seconds=int.Parse(args[4]);
             if(port<1024 || port>65535 || seconds<1 || seconds>600)
                 throw new ArgumentException("Bound loopback port/lifetime required.");
             string web=Path.GetFullPath(args[2]);
             if(!Directory.Exists(web))throw new ArgumentException("Web root must exist.");
-            var room=new Room();
+            using var room=new SceneSession(args.Length==7?args[6]:null,args.Length==7&&args[5]=="--new");
             using var lifetime=new CancellationTokenSource(TimeSpan.FromSeconds(seconds));
             using var listener=new HttpListener();
             listener.Prefixes.Add($"http://127.0.0.1:{port}/");
@@ -41,11 +41,11 @@ public static class Program
             return 0;
         }
         catch(Exception error) when(error is ArgumentException or FormatException or OverflowException
-                                   or IOException or HttpListenerException)
+                                   or IOException or UnauthorizedAccessException or JsonException or HttpListenerException)
         { Console.Error.WriteLine(error.Message); return 1; }
     }
 
-    private static async Task Respond(HttpListenerContext context,Room room,string web,int port,CancellationToken lifetime)
+    private static async Task Respond(HttpListenerContext context,SceneSession room,string web,int port,CancellationToken lifetime)
     {
         byte[] body; string type="application/json"; int status=200;
         using var request=CancellationTokenSource.CreateLinkedTokenSource(lifetime);
@@ -78,6 +78,8 @@ public static class Program
         { status=400; body=Encoding.UTF8.GetBytes("{\"error\":\"Invalid command; state unchanged\"}"); }
         catch(OperationCanceledException) when(!lifetime.IsCancellationRequested)
         { status=408; body=Encoding.UTF8.GetBytes("{\"error\":\"Request deadline; command not applied\"}"); }
+        catch(SceneStorageException)
+        { status=503; body=Encoding.UTF8.GetBytes(JsonSerializer.Serialize(room.Snapshot(),Json)); }
         catch(FileNotFoundException)
         { status=404; body=Encoding.UTF8.GetBytes("{}"); }
         try

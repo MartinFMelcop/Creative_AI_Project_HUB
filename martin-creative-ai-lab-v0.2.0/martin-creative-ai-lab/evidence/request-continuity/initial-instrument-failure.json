@@ -1,0 +1,226 @@
+{
+  "schema_version": 1,
+  "kind": "retained_actual_instrument_failure",
+  "original_execution_scope": "Primary complete authored-scene verifier before correction; distinct from the later first standalone corrected process run.",
+  "original_failed_command": {
+    "command": [
+      "python3",
+      "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/authored-scene/tools/continuity-process.py",
+      "--dotnet",
+      "/workspace/work/authored-scene/dotnet/dotnet",
+      "--output",
+      "/workspace/work/request-continuity/actual/continuity"
+    ],
+    "exit_code": 1,
+    "stdout": "",
+    "stderr": "FAIL: heard-offer: accepted text and revision recovered\n"
+  },
+  "original_process_execution": {
+    "complete": false,
+    "failure": "heard-offer: accepted text and revision recovered",
+    "controls": [
+      "New durable run is explicitly saved",
+      "heard-offer: exact saved state recovered"
+    ],
+    "boundaries": [],
+    "commands": [
+      {
+        "command": [
+          "/workspace/work/authored-scene/dotnet/dotnet",
+          "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/authored-scene/Host/bin/Release/net10.0/NorthStar.AuthoredScene.dll",
+          "--serve",
+          "45433",
+          "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/authored-scene/web",
+          "--seconds",
+          "120",
+          "--new",
+          "/workspace/work/request-continuity/actual/continuity/one narrative run.json"
+        ],
+        "observation": "Actual loopback READY and state",
+        "exit_code_at_start": null
+      },
+      {
+        "request": {
+          "command": "work",
+          "request_id": "first_work",
+          "revision": 0,
+          "run_id": "e4b4fc39501740ba8337429fb4c1441d-day-1"
+        },
+        "http_status": 200,
+        "accepted": true
+      },
+      {
+        "request": {
+          "command": "survey",
+          "request_id": "process_2",
+          "revision": 1,
+          "run_id": "e4b4fc39501740ba8337429fb4c1441d-day-1"
+        },
+        "http_status": 200,
+        "accepted": true
+      },
+      {
+        "request": {
+          "command": "skill",
+          "request_id": "process_3",
+          "revision": 2,
+          "run_id": "e4b4fc39501740ba8337429fb4c1441d-day-1"
+        },
+        "http_status": 200,
+        "accepted": true
+      },
+      {
+        "request": {
+          "command": "skill",
+          "request_id": "process_4",
+          "revision": 3,
+          "run_id": "e4b4fc39501740ba8337429fb4c1441d-day-1"
+        },
+        "http_status": 200,
+        "accepted": true
+      },
+      {
+        "request": {
+          "command": "walk",
+          "request_id": "process_5",
+          "revision": 4,
+          "run_id": "e4b4fc39501740ba8337429fb4c1441d-day-1"
+        },
+        "http_status": 200,
+        "accepted": true
+      },
+      {
+        "request": {
+          "command": "skill",
+          "request_id": "process_6",
+          "revision": 5,
+          "run_id": "e4b4fc39501740ba8337429fb4c1441d-day-1"
+        },
+        "http_status": 200,
+        "accepted": true
+      },
+      {
+        "request": {
+          "command": "open",
+          "request_id": "process_7",
+          "revision": 6,
+          "run_id": "e4b4fc39501740ba8337429fb4c1441d-day-1"
+        },
+        "http_status": 200,
+        "accepted": true
+      },
+      {
+        "request": {
+          "command": "hear",
+          "request_id": "process_8",
+          "revision": 7,
+          "run_id": "e4b4fc39501740ba8337429fb4c1441d-day-1"
+        },
+        "http_status": 200,
+        "accepted": true
+      },
+      {
+        "command": [
+          "/workspace/work/authored-scene/dotnet/dotnet",
+          "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/authored-scene/Host/bin/Release/net10.0/NorthStar.AuthoredScene.dll",
+          "--serve",
+          "38379",
+          "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/authored-scene/web",
+          "--seconds",
+          "120",
+          "--resume",
+          "/workspace/work/request-continuity/actual/continuity/one narrative run.json"
+        ],
+        "observation": "Actual loopback READY and state",
+        "exit_code_at_start": null
+      }
+    ],
+    "process_exits": [
+      {
+        "command": [
+          "/workspace/work/authored-scene/dotnet/dotnet",
+          "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/authored-scene/Host/bin/Release/net10.0/NorthStar.AuthoredScene.dll",
+          "--serve",
+          "45433",
+          "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/authored-scene/web",
+          "--seconds",
+          "120",
+          "--new",
+          "/workspace/work/request-continuity/actual/continuity/one narrative run.json"
+        ],
+        "owned_process_exit_code": -15,
+        "termination": "owned process stop"
+      },
+      {
+        "command": [
+          "/workspace/work/authored-scene/dotnet/dotnet",
+          "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/authored-scene/Host/bin/Release/net10.0/NorthStar.AuthoredScene.dll",
+          "--serve",
+          "38379",
+          "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/authored-scene/web",
+          "--seconds",
+          "120",
+          "--resume",
+          "/workspace/work/request-continuity/actual/continuity/one narrative run.json"
+        ],
+        "owned_process_exit_code": -15,
+        "termination": "owned process stop"
+      }
+    ]
+  },
+  "original_diagnostic_limit": "The failed run stopped before appending the before/recovered observation pair to boundaries; the separate actual diagnostic below records the reason-only distinction without pretending those values came from the failed run.",
+  "original_assertion": "Recovered accepted text equal AND entire continuity receipt object equal.",
+  "problem": "The entire continuity receipt includes operation-specific reason, duplicate and original_revision metadata. The reason after a committed POST and a fresh recovered GET correctly differ. Those metadata are not all persisted scene facts.",
+  "separate_actual_diagnostic": {
+    "diagnostic_scope": "Actual current compiled host reproduction of the initial over-broad metadata equality, separate from the original failed full acceptance execution. Not an extra independent participant or acceptance attempt.",
+    "accepted_text_equal": true,
+    "state_equal": true,
+    "five_persisted_continuity_facts_equal": true,
+    "whole_receipt_metadata_equal": false,
+    "differing_fields": {
+      "reason": {
+        "accepted": "Committed before receipt.",
+        "recovered": "Current committed request run."
+      }
+    },
+    "before_continuity": {
+      "mode": "local",
+      "run_id": "05a6301168804f6083d72c945bb54ff7-day-1",
+      "revision": 7,
+      "day": 1,
+      "status": "saved",
+      "duplicate": false,
+      "original_revision": 7,
+      "reason": "Committed before receipt."
+    },
+    "after_continuity": {
+      "mode": "local",
+      "run_id": "05a6301168804f6083d72c945bb54ff7-day-1",
+      "revision": 7,
+      "day": 1,
+      "status": "saved",
+      "duplicate": false,
+      "original_revision": 7,
+      "reason": "Current committed request run."
+    },
+    "instrument_sha256": "b7dc347841fc56237edf88ca242b1796d23ad381fb3bc82c1f31a31057d768c7"
+  },
+  "correction": {
+    "accepted_text": "Still compared exactly",
+    "persisted_continuity_facts": [
+      "mode",
+      "run_id",
+      "revision",
+      "day",
+      "status"
+    ],
+    "additional_semantic_controls": "Actual Offer after Hear reload and actual Confirm after pending-terms reload preserve private future permissions, not merely visible JSON. Actual duplicate retry asserts duplicate=true while preserving state, revision and saved bytes.",
+    "unchanged": "No gameplay rule, fixture, timeout, corruption refusal, storage boundary or identity gate weakened."
+  },
+  "corrected_standalone_execution": {
+    "complete": true,
+    "passed": 47,
+    "boundaries": 7,
+    "scope": "Same current implementation and environment; repeated software execution is not an independent participant or candidate attempt."
+  }
+}

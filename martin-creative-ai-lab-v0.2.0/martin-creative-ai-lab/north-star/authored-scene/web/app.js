@@ -2,6 +2,7 @@
 'use strict';
 const $ = id => document.getElementById(id);
 let lastObservation = null;
+let continuity = null;
 let connected = false;
 let busy = false;
 let ownership = 0;
@@ -20,8 +21,30 @@ function visibleCommand(command, visible) {
   if (element) element.hidden = !visible;
 }
 function controls() {
-  for (const button of document.querySelectorAll('[data-command]')) button.disabled = busy || !connected;
+  const blocked = continuity && continuity.mode === 'local' && continuity.status === 'blocked';
+  for (const button of document.querySelectorAll('[data-command]')) button.disabled = busy || !connected || blocked;
   $('reconnect').disabled = busy && connected;
+}
+function showContinuity(observation) {
+  continuity = observation.continuity || null;
+  const local = continuity && continuity.mode === 'local';
+  const blocked = local && continuity.status === 'blocked';
+  document.body.dataset.continuity = blocked ? 'blocked' : local ? 'local' : 'ephemeral';
+  $('continuity').dataset.mode = local ? 'local' : 'ephemeral';
+  $('continuity').dataset.status = blocked ? 'blocked' : local ? 'saved' : 'ephemeral';
+  if (blocked) {
+    text('continuity', 'LOCAL SAVE BLOCKED · no more actions in this process');
+    text('continuity-advice', 'A write had an uncertain outcome. Stop this host and launch it again to validate and resume the same local save. Do not delete the file or begin a replacement to hide the error.');
+  } else if (local) {
+    const result = observation.accepted ? 'Current accepted history is saved locally.' : 'This action was refused; no new choice was saved.';
+    text('continuity', `LOCAL SAVE · day ${continuity.day} · revision ${continuity.revision}`);
+    text('continuity-advice', `${result} Closing or host expiry keeps this attempt. Read after an uncertain reply; choices are not retried automatically. A new day retains the earlier history, without an earlier-day browsing mode.`);
+  } else {
+    text('continuity', 'SESSION ONLY · this launch has no local save');
+    text('continuity-advice', 'This development launch loses its attempt when the host stops. Browser refresh only reads current facts; it does not save them.');
+  }
+  text('restart', local ? 'Begin a new day · retain history' : 'Begin a new day');
+  text('continuity-scope', local ? 'Local attempt history only; no shared campaign, account or Steam Cloud. Unity/Windows delivery and human experience remain unvalidated.' : 'No persistent campaign, Unity/Windows delivery or human experience validation is claimed.');
 }
 function showReceipts(receipts) {
   const list = $('receipts');
@@ -62,6 +85,7 @@ function render(observation) {
   const guide = s.guide_location === 'local-preparing' ? 'preparing' : s.guide_location === 'travelling' ? 'away' : s.guide_location === 'unaccounted' ? 'unaccounted' : rillReturn ? 'returned' : 'secured';
   const guideLabels = { secured: 'Local · line secured here', preparing: 'Local · preparing the coil', away: 'Away · return not observed', unaccounted: 'Unaccounted for · no return confirmed', returned: 'Returned · available locally' };
   lastObservation = observation;
+  showContinuity(observation);
   connected = true;
   document.body.dataset.connected = 'true';
   document.body.dataset.guide = guide;
@@ -150,11 +174,20 @@ function quarantine(message) {
   text('connection', 'STALE · read the current board');
   text('notice', message);
   text('command-result', 'No new outcome is displayed');
+  if (continuity && continuity.mode === 'local') {
+    text('continuity', 'LOCAL SAVE · latest outcome not yet observed');
+    text('continuity-advice', 'The action may already be saved. Read the current board before choosing again; no request is automatically repeated. If the host reports a blocked save, stop and relaunch it to resume the same file.');
+  }
   // The retained facts remain labelled stale. A late accepted reply cannot revive this view.
   controls();
 }
 function command(value) {
   const commandText = typeof value === 'string' ? value : value.command;
+  if (continuity && continuity.mode === 'local' && continuity.status === 'blocked') return Promise.resolve(null);
+  // Capture the exact run/revision when intent is formed, never after queued work changes it.
+  const intent = continuity && continuity.mode === 'local'
+    ? { command: commandText, request_id: crypto.randomUUID(), revision: continuity.revision, run_id: continuity.run_id }
+    : { command: commandText };
   const enqueuedOwner = ownership;
   queue = queue.then(async () => {
     if (!connected || enqueuedOwner !== ownership) return null;
@@ -163,7 +196,7 @@ function command(value) {
     controller = new AbortController();
     controls();
     try {
-      const response = await fetch('/command', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ command: commandText }), signal: controller.signal });
+      const response = await fetch('/command', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(intent), signal: controller.signal });
       if (!response.ok) throw new Error(`The command could not be read (HTTP ${response.status}).`);
       const observation = await response.json();
       if (owner === ownership) render(observation);

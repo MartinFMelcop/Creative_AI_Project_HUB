@@ -14,6 +14,8 @@ class DependencyCoverage(unittest.TestCase):
     def test_actual_closure_includes_owner_not_unrelated_consumers(self):
         names = method.inputs()
         for name in ('north-star/authored-scene/Host/Room.cs',
+                     'north-star/authored-scene/Host/RequestJournal.cs',
+                     'north-star/authored-scene/Host/SceneSession.cs',
                      'north-star/csharp/Narrative/RequestExpedition.cs',
                      'north-star/csharp/Crossing/Session.cs',
                      'north-star/csharp/Domain/Progression.cs'):
@@ -26,6 +28,8 @@ class DependencyCoverage(unittest.TestCase):
         scene = root / 'north-star/authored-scene'
         csharp = root / 'north-star/csharp'
         (scene / 'Checks').mkdir(parents=True)
+        (scene / 'JournalChecks').mkdir()
+        (scene / 'JournalChecks/NorthStar.JournalChecks.csproj').write_text('<Project />')
         (csharp / 'Narrative').mkdir(parents=True)
         (csharp / 'global.json').write_text('{}')
         (csharp / 'Narrative/SCENE.md').write_text('authored contract')

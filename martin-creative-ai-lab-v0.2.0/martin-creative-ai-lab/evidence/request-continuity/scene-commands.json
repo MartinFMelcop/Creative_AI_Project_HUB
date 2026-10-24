@@ -1,0 +1,93 @@
+[
+  {
+    "command": [
+      "/workspace/work/authored-scene/dotnet/dotnet",
+      "--version"
+    ],
+    "exit_code": 0,
+    "stdout": "10.0.401\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node",
+      "--version"
+    ],
+    "exit_code": 0,
+    "stdout": "v24.19.0\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "/workspace/work/authored-scene/dotnet/dotnet",
+      "build",
+      "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/authored-scene/Checks/NorthStar.AuthoredSceneChecks.csproj",
+      "-c",
+      "Release",
+      "-m:1",
+      "--disable-build-servers"
+    ],
+    "exit_code": 0,
+    "stdout": "  Determining projects to restore...\n  All projects are up-to-date for restore.\n  NorthStar.Domain -> /workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/Domain/bin/Release/netstandard2.1/NorthStar.Domain.dll\n  NorthStar.Crossing -> /workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/Crossing/bin/Release/net10.0/NorthStar.Crossing.dll\n  NorthStar.Narrative -> /workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/Narrative/bin/Release/net10.0/NorthStar.Narrative.dll\n  NorthStar.AuthoredScene -> /workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/authored-scene/Host/bin/Release/net10.0/NorthStar.AuthoredScene.dll\n  NorthStar.AuthoredSceneChecks -> /workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/authored-scene/Checks/bin/Release/net10.0/NorthStar.AuthoredSceneChecks.dll\n\nBuild succeeded.\n    0 Warning(s)\n    0 Error(s)\n\nTime Elapsed 00:00:03.99\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "/workspace/work/authored-scene/dotnet/dotnet",
+      "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/authored-scene/Checks/bin/Release/net10.0/NorthStar.AuthoredSceneChecks.dll",
+      "/workspace/work/request-continuity/acceptance/native.json"
+    ],
+    "exit_code": 0,
+    "stdout": "PASS: 45 authored scene native controls.\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "/workspace/work/authored-scene/dotnet/dotnet",
+      "build",
+      "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/authored-scene/JournalChecks/NorthStar.JournalChecks.csproj",
+      "-c",
+      "Release",
+      "-m:1",
+      "--disable-build-servers"
+    ],
+    "exit_code": 0,
+    "stdout": "  Determining projects to restore...\n  All projects are up-to-date for restore.\n  NorthStar.Domain -> /workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/Domain/bin/Release/netstandard2.1/NorthStar.Domain.dll\n  NorthStar.Crossing -> /workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/Crossing/bin/Release/net10.0/NorthStar.Crossing.dll\n  NorthStar.Narrative -> /workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/Narrative/bin/Release/net10.0/NorthStar.Narrative.dll\n  NorthStar.AuthoredScene -> /workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/authored-scene/Host/bin/Release/net10.0/NorthStar.AuthoredScene.dll\n  NorthStar.JournalChecks -> /workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/authored-scene/JournalChecks/bin/Release/net10.0/NorthStar.JournalChecks.dll\n\nBuild succeeded.\n    0 Warning(s)\n    0 Error(s)\n\nTime Elapsed 00:00:02.47\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "/workspace/work/authored-scene/dotnet/dotnet",
+      "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/authored-scene/JournalChecks/bin/Release/net10.0/NorthStar.JournalChecks.dll",
+      "/workspace/work/request-continuity/acceptance/journal-native.json",
+      "/workspace/work/request-continuity/acceptance/journal-native-work"
+    ],
+    "exit_code": 0,
+    "stdout": "{\n  \"schema\": 1,\n  \"passed\": 43,\n  \"failed\": 0,\n  \"controls\": [\n    \"explicit-create-persists-empty-request-run\",\n    \"actual-survey-and-heard-consent-committed\",\n    \"reopen-preserves-public-state-and-stable-day-identity\",\n    \"replayed-private-heard-consent-still-permits-real-offer\",\n    \"reopen-restores-unsigned-private-draft-context\",\n    \"replayed-private-terms-confirm-real-reservation-without-delivery\",\n    \"preparing-reservation-survives-process-owner-replacement\",\n    \"actual-guided-next-beat-hp-resource-and-location-committed\",\n    \"active-reopen-restores-exact-next-threat-without-advancing\",\n    \"only-real-restored-final-action-records-return-and-handoff\",\n    \"completed-reopen-retains-three-unfinished-crates-and-paid-daylight\",\n    \"completed-recovery-cannot-repeat-departure-or-repay-results\",\n    \"open-ended-private-terms-remain-distinct-after-reopen\",\n    \"withdrawal-reopen-keeps-both-receipts-without-inventing-departure\",\n    \"failed-reopen-preserves-unaccounted-guide-without-return-or-death-claim\",\n    \"recovered-dusk-does-not-return-failed-guide-or-restore-capacity\",\n    \"recovered-decline-and-last-accepted-text-cannot-be-erased-by-refused-reopening\",\n    \"actual-work-commits-before-first-receipt\",\n    \"lost-response-retry-is-deduplicated-before-stale-revision-check\",\n    \"same-request-content-substitution-cannot-change-narrative\",\n    \"unique-stale-revision-intent-cannot-act-on-new-facts\",\n    \"explicit-new-day-appends-history-and-changes-day-identity\",\n    \"old-day-identity-is-refused-before-an-existing-request-duplicate\",\n    \"new-day-retains-prior-work-history-instead-of-truncating\",\n    \"new-day-identity-and-full-history-survive-reopen\",\n    \"invalid-request-envelope-rejects-before-mutation\",\n    \"invalid-request-does-not-rewrite-run\",\n    \"cooperating-competing-request-owner-is-excluded\",\n    \"new-never-overwrites-existing-narrative-run\",\n    \"existing-run-bytes-remain-after-new-refusal\",\n    \"resume-never-creates-missing-narrative-run\",\n    \"missing-resume-leaves-no-replacement-save\",\n    \"prepared-expedition-journal-is-not-a-narrative-save\",\n    \"incompatible-old-format-is-preserved-for-explicit-migration\",\n    \"recomputed-checksum-cannot-authorize-incompatible-rules\",\n    \"rejected-incompatible-input-is-not-replaced:rules\",\n    \"recomputed-checksum-cannot-authorize-incompatible-state\",\n    \"rejected-incompatible-input-is-not-replaced:state\",\n    \"uncertain-after-replace-failure-is-retained\",\n    \"uncertain-live-owner-labels-last-published-facts-blocked\",\n    \"blocked-owner-cannot-issue-another-narrative-command\",\n    \"reopen-observes-actual-complete-prefix-after-uncertain-replacement\",\n    \"uncertain-acknowledgement-retry-does-not-repeat-work\"\n  ],\n  \"rules_identity\": \"c9fc4898e30746f27396acd8b584101bf3659531ab4c7a8d94b1238f686467d3\",\n  \"scope\": \"Actual unchanged narrative owner replay, local storage/reopen and targeted uncertainty; process/browser observations are separate. No Unity, Windows, account authorization or power-loss durability claim.\"\n}\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "python3",
+      "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/authored-scene/tools/continuity-process.py",
+      "--dotnet",
+      "/workspace/work/authored-scene/dotnet/dotnet",
+      "--output",
+      "/workspace/work/request-continuity/acceptance/continuity"
+    ],
+    "exit_code": 0,
+    "stdout": "{\"passed\": 47, \"process_boundaries\": 7, \"scope\": \"Selected actual trusted-local Linux host-process continuity; no power loss, Windows, Steam, distributed account or human assessment.\"}\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node",
+      "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/authored-scene/tools/browser.mjs",
+      "/workspace/work/authored-scene/dotnet/dotnet",
+      "/workspace/work/request-continuity/acceptance/browser"
+    ],
+    "exit_code": 0,
+    "stdout": "PASS: 35 actual browser/C# authored-scene controls and isolated false-return mutant detection\n",
+    "stderr": ""
+  }
+]

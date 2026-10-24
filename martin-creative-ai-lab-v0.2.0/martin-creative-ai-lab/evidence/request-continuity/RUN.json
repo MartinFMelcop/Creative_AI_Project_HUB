@@ -1,0 +1,632 @@
+{
+  "schema_version": 1,
+  "kind": "destination_execution",
+  "baseline_commit": "66c7ace5b23169d6d486977542e55c9098be04d1",
+  "capability_ids": [
+    "NS-C04",
+    "NS-C14"
+  ],
+  "consumer_paths": [
+    "north-star/csharp/Narrative/RequestExpedition.cs",
+    "north-star/csharp/Narrative/Program.cs",
+    "north-star/csharp/Crossing/Session.cs",
+    "north-star/authored-scene/Host/Room.cs",
+    "north-star/authored-scene/Host/Program.cs",
+    "north-star/authored-scene/Host/RequestJournal.cs",
+    "north-star/authored-scene/Host/SceneSession.cs",
+    "north-star/authored-scene/web/app.js",
+    "delivery/authored-scene/package.py",
+    "delivery/authored-scene/check.py"
+  ],
+  "scope": "ONE North Star continuation of the existing authored RequestExpedition and affected recipient closure; accepted intent replay preserves private consent, real encounters, costs, unfinished work and uncertain NPC fate. Packaging supports this unit, not another effort unit or completed operations method.",
+  "runtime": "Actual SDK10.0.401, .NET10/Linuxx64 host, Node24.19.0/Chromium154 on Debian13; private official runtime10.0.12 recipient without SDK/Node on PATH.",
+  "checks": {
+    "passed": 43,
+    "failed": 0
+  },
+  "process_checks": {
+    "passed": 47,
+    "failed": 0,
+    "actual_reopenings": 7
+  },
+  "affected_regressions": {
+    "native": 45,
+    "chromium": 35,
+    "http": 7,
+    "dependency_instrument": 3,
+    "scope": "Real unchanged authored scene controls plus affected host/UI/forward-source instrumentation; no fresh legacy media/repair/source matrix claim."
+  },
+  "recipient_checks": {
+    "chromium": 19,
+    "artifact": 16,
+    "failed": 0
+  },
+  "counting_limit": "Control groups overlap narrative outcomes; these are not independent participants, candidate attempts or measured effort. Do not sum them into a population claim.",
+  "archive": {
+    "path": "delivery/authored-scene/dist/authored-scene-demo-linux-x64.zip",
+    "sha256": "d829b1b59ee2dd22f87ab007c4db96bfe1655731b38d02f5085f0b8d30e043e4",
+    "bytes": 35908523,
+    "payload_files": 232,
+    "source_files": 22,
+    "runtime_files": 193
+  },
+  "reproducibility": {
+    "two_separate_builds_exact_zip": true,
+    "recovered_source_exact_application_files": 10,
+    "cross_environment": "Exact payload identities remain distinct from compressed carrier identity."
+  },
+  "commands": [
+    {
+      "command": [
+        "/workspace/work/authored-scene/dotnet/dotnet",
+        "--version"
+      ],
+      "exit_code": 0,
+      "stdout": "10.0.401\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node",
+        "--version"
+      ],
+      "exit_code": 0,
+      "stdout": "v24.19.0\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/workspace/work/authored-scene/dotnet/dotnet",
+        "build",
+        "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/authored-scene/Checks/NorthStar.AuthoredSceneChecks.csproj",
+        "-c",
+        "Release",
+        "-m:1",
+        "--disable-build-servers"
+      ],
+      "exit_code": 0,
+      "stdout": "  Determining projects to restore...\n  All projects are up-to-date for restore.\n  NorthStar.Domain -> /workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/Domain/bin/Release/netstandard2.1/NorthStar.Domain.dll\n  NorthStar.Crossing -> /workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/Crossing/bin/Release/net10.0/NorthStar.Crossing.dll\n  NorthStar.Narrative -> /workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/Narrative/bin/Release/net10.0/NorthStar.Narrative.dll\n  NorthStar.AuthoredScene -> /workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/authored-scene/Host/bin/Release/net10.0/NorthStar.AuthoredScene.dll\n  NorthStar.AuthoredSceneChecks -> /workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/authored-scene/Checks/bin/Release/net10.0/NorthStar.AuthoredSceneChecks.dll\n\nBuild succeeded.\n    0 Warning(s)\n    0 Error(s)\n\nTime Elapsed 00:00:03.99\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/workspace/work/authored-scene/dotnet/dotnet",
+        "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/authored-scene/Checks/bin/Release/net10.0/NorthStar.AuthoredSceneChecks.dll",
+        "/workspace/work/request-continuity/acceptance/native.json"
+      ],
+      "exit_code": 0,
+      "stdout": "PASS: 45 authored scene native controls.\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/workspace/work/authored-scene/dotnet/dotnet",
+        "build",
+        "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/authored-scene/JournalChecks/NorthStar.JournalChecks.csproj",
+        "-c",
+        "Release",
+        "-m:1",
+        "--disable-build-servers"
+      ],
+      "exit_code": 0,
+      "stdout": "  Determining projects to restore...\n  All projects are up-to-date for restore.\n  NorthStar.Domain -> /workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/Domain/bin/Release/netstandard2.1/NorthStar.Domain.dll\n  NorthStar.Crossing -> /workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/Crossing/bin/Release/net10.0/NorthStar.Crossing.dll\n  NorthStar.Narrative -> /workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/Narrative/bin/Release/net10.0/NorthStar.Narrative.dll\n  NorthStar.AuthoredScene -> /workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/authored-scene/Host/bin/Release/net10.0/NorthStar.AuthoredScene.dll\n  NorthStar.JournalChecks -> /workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/authored-scene/JournalChecks/bin/Release/net10.0/NorthStar.JournalChecks.dll\n\nBuild succeeded.\n    0 Warning(s)\n    0 Error(s)\n\nTime Elapsed 00:00:02.47\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/workspace/work/authored-scene/dotnet/dotnet",
+        "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/authored-scene/JournalChecks/bin/Release/net10.0/NorthStar.JournalChecks.dll",
+        "/workspace/work/request-continuity/acceptance/journal-native.json",
+        "/workspace/work/request-continuity/acceptance/journal-native-work"
+      ],
+      "exit_code": 0,
+      "stdout": "{\n  \"schema\": 1,\n  \"passed\": 43,\n  \"failed\": 0,\n  \"controls\": [\n    \"explicit-create-persists-empty-request-run\",\n    \"actual-survey-and-heard-consent-committed\",\n    \"reopen-preserves-public-state-and-stable-day-identity\",\n    \"replayed-private-heard-consent-still-permits-real-offer\",\n    \"reopen-restores-unsigned-private-draft-context\",\n    \"replayed-private-terms-confirm-real-reservation-without-delivery\",\n    \"preparing-reservation-survives-process-owner-replacement\",\n    \"actual-guided-next-beat-hp-resource-and-location-committed\",\n    \"active-reopen-restores-exact-next-threat-without-advancing\",\n    \"only-real-restored-final-action-records-return-and-handoff\",\n    \"completed-reopen-retains-three-unfinished-crates-and-paid-daylight\",\n    \"completed-recovery-cannot-repeat-departure-or-repay-results\",\n    \"open-ended-private-terms-remain-distinct-after-reopen\",\n    \"withdrawal-reopen-keeps-both-receipts-without-inventing-departure\",\n    \"failed-reopen-preserves-unaccounted-guide-without-return-or-death-claim\",\n    \"recovered-dusk-does-not-return-failed-guide-or-restore-capacity\",\n    \"recovered-decline-and-last-accepted-text-cannot-be-erased-by-refused-reopening\",\n    \"actual-work-commits-before-first-receipt\",\n    \"lost-response-retry-is-deduplicated-before-stale-revision-check\",\n    \"same-request-content-substitution-cannot-change-narrative\",\n    \"unique-stale-revision-intent-cannot-act-on-new-facts\",\n    \"explicit-new-day-appends-history-and-changes-day-identity\",\n    \"old-day-identity-is-refused-before-an-existing-request-duplicate\",\n    \"new-day-retains-prior-work-history-instead-of-truncating\",\n    \"new-day-identity-and-full-history-survive-reopen\",\n    \"invalid-request-envelope-rejects-before-mutation\",\n    \"invalid-request-does-not-rewrite-run\",\n    \"cooperating-competing-request-owner-is-excluded\",\n    \"new-never-overwrites-existing-narrative-run\",\n    \"existing-run-bytes-remain-after-new-refusal\",\n    \"resume-never-creates-missing-narrative-run\",\n    \"missing-resume-leaves-no-replacement-save\",\n    \"prepared-expedition-journal-is-not-a-narrative-save\",\n    \"incompatible-old-format-is-preserved-for-explicit-migration\",\n    \"recomputed-checksum-cannot-authorize-incompatible-rules\",\n    \"rejected-incompatible-input-is-not-replaced:rules\",\n    \"recomputed-checksum-cannot-authorize-incompatible-state\",\n    \"rejected-incompatible-input-is-not-replaced:state\",\n    \"uncertain-after-replace-failure-is-retained\",\n    \"uncertain-live-owner-labels-last-published-facts-blocked\",\n    \"blocked-owner-cannot-issue-another-narrative-command\",\n    \"reopen-observes-actual-complete-prefix-after-uncertain-replacement\",\n    \"uncertain-acknowledgement-retry-does-not-repeat-work\"\n  ],\n  \"rules_identity\": \"c9fc4898e30746f27396acd8b584101bf3659531ab4c7a8d94b1238f686467d3\",\n  \"scope\": \"Actual unchanged narrative owner replay, local storage/reopen and targeted uncertainty; process/browser observations are separate. No Unity, Windows, account authorization or power-loss durability claim.\"\n}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python3",
+        "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/authored-scene/tools/continuity-process.py",
+        "--dotnet",
+        "/workspace/work/authored-scene/dotnet/dotnet",
+        "--output",
+        "/workspace/work/request-continuity/acceptance/continuity"
+      ],
+      "exit_code": 0,
+      "stdout": "{\"passed\": 47, \"process_boundaries\": 7, \"scope\": \"Selected actual trusted-local Linux host-process continuity; no power loss, Windows, Steam, distributed account or human assessment.\"}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node",
+        "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/authored-scene/tools/browser.mjs",
+        "/workspace/work/authored-scene/dotnet/dotnet",
+        "/workspace/work/request-continuity/acceptance/browser"
+      ],
+      "exit_code": 0,
+      "stdout": "PASS: 35 actual browser/C# authored-scene controls and isolated false-return mutant detection\n",
+      "stderr": ""
+    },
+    {
+      "cwd": "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab",
+      "command": [
+        "node",
+        "--version"
+      ],
+      "exit_code": 0,
+      "stdout": "v24.19.0\n",
+      "stderr": ""
+    },
+    {
+      "cwd": "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab",
+      "command": [
+        "python3",
+        "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/delivery/authored-scene/package.py",
+        "--dotnet",
+        "/workspace/work/authored-scene/dotnet/dotnet",
+        "--output",
+        "/workspace/work/request-continuity/recipient-final/authored-scene-demo-linux-x64.zip",
+        "--work",
+        "/workspace/work/request-continuity/recipient-final/first build",
+        "--sdk-archive",
+        "/workspace/work/authored-scene/sdk.tar.gz"
+      ],
+      "exit_code": 0,
+      "stdout": "{\"archive_sha256\": \"d829b1b59ee2dd22f87ab007c4db96bfe1655731b38d02f5085f0b8d30e043e4\", \"bytes\": 35908523, \"files\": 232, \"work\": \"/workspace/work/request-continuity/recipient-final/first build\", \"source_stable\": true}\n",
+      "stderr": ""
+    },
+    {
+      "cwd": "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab",
+      "command": [
+        "python3",
+        "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/delivery/authored-scene/package.py",
+        "--dotnet",
+        "/workspace/work/authored-scene/dotnet/dotnet",
+        "--output",
+        "/workspace/work/request-continuity/recipient-final/repeat.zip",
+        "--work",
+        "/workspace/work/request-continuity/recipient-final/second build",
+        "--sdk-archive",
+        "/workspace/work/authored-scene/sdk.tar.gz"
+      ],
+      "exit_code": 0,
+      "stdout": "{\"archive_sha256\": \"d829b1b59ee2dd22f87ab007c4db96bfe1655731b38d02f5085f0b8d30e043e4\", \"bytes\": 35908523, \"files\": 232, \"work\": \"/workspace/work/request-continuity/recipient-final/second build\", \"source_stable\": true}\n",
+      "stderr": ""
+    },
+    {
+      "cwd": "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab",
+      "command": [
+        "python3",
+        "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/delivery/authored-scene/check.py",
+        "/workspace/work/request-continuity/recipient-final/authored-scene-demo-linux-x64.zip",
+        "--extract",
+        "/workspace/work/request-continuity/recipient-final/recipient path with spaces",
+        "--sdk-archive",
+        "/workspace/work/authored-scene/sdk.tar.gz"
+      ],
+      "exit_code": 0,
+      "stdout": "{\"files\": 232, \"runtime_files\": 193, \"scope\": \"Structural identity and current-source binding; actual execution is separate.\", \"sdk_archive_verified\": true, \"source_files\": 22, \"unity_executed\": false, \"windows_executed\": false}\n",
+      "stderr": ""
+    },
+    {
+      "cwd": "/workspace/work/request-continuity/recipient-final/recovered source/north-star/csharp",
+      "command": [
+        "/workspace/work/authored-scene/dotnet/dotnet",
+        "publish",
+        "/workspace/work/request-continuity/recipient-final/recovered source/north-star/authored-scene/Host/NorthStar.AuthoredScene.csproj",
+        "-c",
+        "Release",
+        "--self-contained",
+        "false",
+        "-p:UseAppHost=false",
+        "-p:RuntimeFrameworkVersion=10.0.12",
+        "-p:DebugType=None",
+        "-p:DebugSymbols=false",
+        "-p:ContinuousIntegrationBuild=true",
+        "-p:PathMap=/workspace/work/request-continuity/recipient-final/recovered source=/_/source",
+        "-o",
+        "/workspace/work/request-continuity/recipient-final/recovered application",
+        "-m:1",
+        "--disable-build-servers"
+      ],
+      "exit_code": 0,
+      "stdout": "  Determining projects to restore...\n  Restored /workspace/work/request-continuity/recipient-final/recovered source/north-star/csharp/Narrative/NorthStar.Narrative.csproj (in 96 ms).\n  Restored /workspace/work/request-continuity/recipient-final/recovered source/north-star/csharp/Crossing/NorthStar.Crossing.csproj (in 2 ms).\n  Restored /workspace/work/request-continuity/recipient-final/recovered source/north-star/authored-scene/Host/NorthStar.AuthoredScene.csproj (in 2 ms).\n  Restored /workspace/work/request-continuity/recipient-final/recovered source/north-star/csharp/Domain/NorthStar.Domain.csproj (in 462 ms).\n  NorthStar.Domain -> /workspace/work/request-continuity/recipient-final/recovered source/north-star/csharp/Domain/bin/Release/netstandard2.1/NorthStar.Domain.dll\n  NorthStar.Crossing -> /workspace/work/request-continuity/recipient-final/recovered source/north-star/csharp/Crossing/bin/Release/net10.0/NorthStar.Crossing.dll\n  NorthStar.Narrative -> /workspace/work/request-continuity/recipient-final/recovered source/north-star/csharp/Narrative/bin/Release/net10.0/NorthStar.Narrative.dll\n  NorthStar.AuthoredScene -> /workspace/work/request-continuity/recipient-final/recovered source/north-star/authored-scene/Host/bin/Release/net10.0/NorthStar.AuthoredScene.dll\n  NorthStar.AuthoredScene -> /workspace/work/request-continuity/recipient-final/recovered application/\n",
+      "stderr": ""
+    },
+    {
+      "cwd": "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab",
+      "command": [
+        "python3",
+        "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/delivery/authored-scene/test_delivery.py",
+        "/workspace/work/request-continuity/recipient-final/authored-scene-demo-linux-x64.zip",
+        "/workspace/work/authored-scene/sdk.tar.gz"
+      ],
+      "exit_code": 0,
+      "stdout": "{\"passed\": 16, \"failed\": 0, \"controls\": [{\"id\": \"actual-positive-archive\", \"passed\": true, \"evidence\": {\"files\": 232, \"source_files\": 22, \"runtime_files\": 193, \"sdk_archive_verified\": false, \"windows_executed\": false, \"unity_executed\": false, \"scope\": \"Structural identity and current-source binding; actual execution is separate.\"}}, {\"id\": \"changed-dll\", \"passed\": true, \"rejection\": \"Payload manifest differs from exact archive inventory\"}, {\"id\": \"missing-notice\", \"passed\": true, \"rejection\": \"Missing required application/runtime/web/notices payload\"}, {\"id\": \"missing-web\", \"passed\": true, \"rejection\": \"Missing required application/runtime/web/notices payload\"}, {\"id\": \"self-consistent-forged-runtime\", \"passed\": true, \"rejection\": \"Bundled runtime differs from trusted official runtime lock\"}, {\"id\": \"self-consistent-wrong-source\", \"passed\": true, \"rejection\": \"Source binding mismatch\"}, {\"id\": \"missing-creative-provenance\", \"passed\": true, \"rejection\": \"Incomplete source/runtime build inventory\"}, {\"id\": \"unsafe-path\", \"passed\": true, \"rejection\": \"Unsafe archive path\"}, {\"id\": \"duplicate-path\", \"passed\": true, \"rejection\": \"Duplicate, unordered or excessive ZIP entries\"}, {\"id\": \"lost-executable-permission\", \"passed\": true, \"rejection\": \"Unexpected member type or permissions\"}, {\"id\": \"bundled-sdk-rejected\", \"passed\": true, \"rejection\": \"Runtime inventory mismatch\"}, {\"id\": \"concurrent-output-preserved\", \"passed\": true}, {\"id\": \"divergent-ambient-muxer-rejected\", \"passed\": true, \"rejection\": \"Installed runtime differs from official archive lock: runtime/dotnet\"}, {\"id\": \"verified-archive-owns-payload-despite-ambient-drift\", \"passed\": true, \"files\": 193}, {\"id\": \"unverified-sdk-archive-rejected\", \"passed\": true, \"rejection\": \"SDK archive differs from official SHA512 pin\"}, {\"id\": \"source-stage-mutation\", \"passed\": true, \"rejection\": \"Copied source changed during staging/build\"}], \"scope\": \"Actual archive faults and copied-source mutation; no participant or platform generalization.\"}\n",
+      "stderr": ""
+    },
+    {
+      "cwd": "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab",
+      "command": [
+        "node",
+        "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/delivery/authored-scene/browser.mjs",
+        "/workspace/work/request-continuity/recipient-final/recipient path with spaces/AuthoredSceneDemo",
+        "/workspace/work/request-continuity/recipient-final/browser"
+      ],
+      "exit_code": 0,
+      "stdout": "19 extracted-package controls passed\n",
+      "stderr": ""
+    }
+  ],
+  "source_artifacts": [
+    {
+      "local_path": "delivery/authored-scene/browser.mjs",
+      "size_bytes": 9478,
+      "sha256": "104757399488c13ad85f55daf397b214ba86409e5f4b786e9968500611c648e3"
+    },
+    {
+      "local_path": "delivery/authored-scene/bundle/README.txt",
+      "size_bytes": 5081,
+      "sha256": "ebf36d28ca0697fda38f6a94a899f9ea6e7aaf6b631ef5a6792fddb44032b75b"
+    },
+    {
+      "local_path": "delivery/authored-scene/bundle/run-demo.sh",
+      "size_bytes": 2950,
+      "sha256": "2a4dc2998dc31ddeceaf9b3683e9def3f0b572f04c04d2dcc9897cc8b2077282"
+    },
+    {
+      "local_path": "delivery/authored-scene/check.py",
+      "size_bytes": 11624,
+      "sha256": "0287d2132aa87fe09e636a96801391fb954520b988519dba579a98a89c5c982f"
+    },
+    {
+      "local_path": "delivery/authored-scene/package.py",
+      "size_bytes": 11592,
+      "sha256": "e7296348c81b8e72706b1d839834a7e20f96b127ef75247a4a9f6d994add9c60"
+    },
+    {
+      "local_path": "delivery/authored-scene/runtime-lock.json",
+      "size_bytes": 28937,
+      "sha256": "5765717a0c80975a9a21d754303516d0990ee1886a168fe95b070ef7e914d6be"
+    },
+    {
+      "local_path": "delivery/authored-scene/test_delivery.py",
+      "size_bytes": 7281,
+      "sha256": "d789a1d9309696291c7c6bafbeec6084a92d38bd36962acfc23fc30152e7ab22"
+    },
+    {
+      "local_path": "delivery/authored-scene/verify.py",
+      "size_bytes": 5031,
+      "sha256": "9913c4c4ee357f7fd24fca6d8d657b717629fed33515190d8a3b2386dfe8b764"
+    },
+    {
+      "local_path": "evidence/authored-scene/sdk-source.json",
+      "size_bytes": 306,
+      "sha256": "600d30fd43aba68d4263839313c95cfec611ac88e87689ca3e12b1953e7bf471"
+    },
+    {
+      "local_path": "north-star/authored-scene/Checks/NorthStar.AuthoredSceneChecks.csproj",
+      "size_bytes": 357,
+      "sha256": "ffba18e3274c2a5bf577fd1c543973a266978949fea5e3794b49b34b65f1b492"
+    },
+    {
+      "local_path": "north-star/authored-scene/Checks/Program.cs",
+      "size_bytes": 8029,
+      "sha256": "40aeabc720e4fbdb2f03727373d137c59cb8afc002e2533e4f6b5cc6ce141030"
+    },
+    {
+      "local_path": "north-star/authored-scene/Host/NorthStar.AuthoredScene.csproj",
+      "size_bytes": 368,
+      "sha256": "f4f306dc041ac7f001b017f7e919c83b0c8b0c85a0ee45f93de10089a2b52b61"
+    },
+    {
+      "local_path": "north-star/authored-scene/Host/Program.cs",
+      "size_bytes": 5320,
+      "sha256": "cacd3c5d50eec327cc4979989e3b0f9e47292592bc897338afa4499d390c06fa"
+    },
+    {
+      "local_path": "north-star/authored-scene/Host/RequestJournal.cs",
+      "size_bytes": 12870,
+      "sha256": "25798f327d08c7eca442afc9054ff47b1714371b6260002ce06ee20b4dea9859"
+    },
+    {
+      "local_path": "north-star/authored-scene/Host/Room.cs",
+      "size_bytes": 2103,
+      "sha256": "5ed1c156bc679b833ca6bd9bd58e62fd51184edd4e8226e15469770209a4bc0e"
+    },
+    {
+      "local_path": "north-star/authored-scene/Host/SceneSession.cs",
+      "size_bytes": 2556,
+      "sha256": "0c77077c03f986d8bba2665af117770f728bb857a38d22e20a701a822d9ab52f"
+    },
+    {
+      "local_path": "north-star/authored-scene/JournalChecks/NorthStar.JournalChecks.csproj",
+      "size_bytes": 357,
+      "sha256": "ffba18e3274c2a5bf577fd1c543973a266978949fea5e3794b49b34b65f1b492"
+    },
+    {
+      "local_path": "north-star/authored-scene/JournalChecks/Program.cs",
+      "size_bytes": 16413,
+      "sha256": "ca33839d39576ebe40c743139b51058dbf88ff4a5d8882c20a1fcb2f88f54e3b"
+    },
+    {
+      "local_path": "north-star/authored-scene/README.md",
+      "size_bytes": 7315,
+      "sha256": "5b58206706f0187c38b907aafecc675795f62772ac27b6dcdc15b4f5682dc596"
+    },
+    {
+      "local_path": "north-star/authored-scene/tools/browser.mjs",
+      "size_bytes": 23879,
+      "sha256": "7542f28bb92956a9bec6bcceaad3e86e02886007f8b5e7d20085b714fc9803dd"
+    },
+    {
+      "local_path": "north-star/authored-scene/tools/continuity-process.py",
+      "size_bytes": 13500,
+      "sha256": "b7dc347841fc56237edf88ca242b1796d23ad381fb3bc82c1f31a31057d768c7"
+    },
+    {
+      "local_path": "north-star/authored-scene/tools/continuity-protocol.json",
+      "size_bytes": 7009,
+      "sha256": "b377c74ddd4f99dbb34372b9f645dd0be594c90a6900f045aa3aa945648d84c7"
+    },
+    {
+      "local_path": "north-star/authored-scene/tools/test_verify.py",
+      "size_bytes": 2849,
+      "sha256": "348f3f7536fecffc87784729064c2df6140b4db34714ef24a708e6d5ee880618"
+    },
+    {
+      "local_path": "north-star/authored-scene/tools/verify.py",
+      "size_bytes": 6878,
+      "sha256": "9b82d4dbf94455c5dad9c72b80d6c91613fbadc418a425daec5334380923ce1d"
+    },
+    {
+      "local_path": "north-star/authored-scene/web/app.js",
+      "size_bytes": 16984,
+      "sha256": "557665e2536ee8df989a94ef1cc6e016ff113155477a523c6754b92e3bcda827"
+    },
+    {
+      "local_path": "north-star/authored-scene/web/index.html",
+      "size_bytes": 14504,
+      "sha256": "4ec85666245e5da0a9d5347544ff10cd92c69cbe72aae60d33bd30e48b6df065"
+    },
+    {
+      "local_path": "north-star/authored-scene/web/style.css",
+      "size_bytes": 12220,
+      "sha256": "a46cda1aaeb0fdc9730a07472db8f7e5e8965c95223a87d374af1ed322a14955"
+    },
+    {
+      "local_path": "north-star/csharp/Crossing/NorthStar.Crossing.csproj",
+      "size_bytes": 352,
+      "sha256": "09fbdffe415d44079f66da83d4d22e5b91169f3f1abdd0e1ebc2bacd2e3f0c88"
+    },
+    {
+      "local_path": "north-star/csharp/Crossing/Program.cs",
+      "size_bytes": 4226,
+      "sha256": "268c1b5ac582dd06f15eb3e40e7ce859a9c58eecfc58c7586d94bcaecf9c595e"
+    },
+    {
+      "local_path": "north-star/csharp/Crossing/Session.cs",
+      "size_bytes": 5357,
+      "sha256": "d25ac05ba1a94432474dd1b14b4fd608e446fc5344dcc4f779d8d5fe27a1b2c5"
+    },
+    {
+      "local_path": "north-star/csharp/Domain/Crafting.cs",
+      "size_bytes": 8035,
+      "sha256": "5a5a892b3e68cff73f7a443d7c014c79dbebf2954d28f447e1bf3a9c4759de57"
+    },
+    {
+      "local_path": "north-star/csharp/Domain/Loadout.cs",
+      "size_bytes": 5692,
+      "sha256": "a1296ca13b5ba6728c073320b860e369ad2e01fdaacb45b5237ef40d0243f682"
+    },
+    {
+      "local_path": "north-star/csharp/Domain/NorthStar.Domain.csproj",
+      "size_bytes": 344,
+      "sha256": "9570b674acfea69bb60098f495afd3b9e2cef2575fcfeb6db71c2cdecb2c4876"
+    },
+    {
+      "local_path": "north-star/csharp/Domain/Progression.cs",
+      "size_bytes": 8331,
+      "sha256": "8495e1ad92fea069c2c3989f6f2cc2600980575e72812df9480ed193c51c8685"
+    },
+    {
+      "local_path": "north-star/csharp/Narrative/NorthStar.Narrative.csproj",
+      "size_bytes": 356,
+      "sha256": "5fb0f921d93c92180940885ea539cff43fa2c36f4f5160809a276e2c33687201"
+    },
+    {
+      "local_path": "north-star/csharp/Narrative/Program.cs",
+      "size_bytes": 4339,
+      "sha256": "7277914d98e49373652b6ab44dd5c1487745076f46ad3c395add981ecf3f512b"
+    },
+    {
+      "local_path": "north-star/csharp/Narrative/README.md",
+      "size_bytes": 5999,
+      "sha256": "303415c561efaee0af1078ef924b3fa23722d577b05290479bc5e93d4fbf7be6"
+    },
+    {
+      "local_path": "north-star/csharp/Narrative/RequestExpedition.cs",
+      "size_bytes": 12296,
+      "sha256": "fc18705f8ba1c0f4f65924861b55e21e4e05b0a5d2658e121e0a5cdce85710d4"
+    },
+    {
+      "local_path": "north-star/csharp/Narrative/SCENE.md",
+      "size_bytes": 6140,
+      "sha256": "6325bc445fc52bf87f9aac785ee3cec563cf32120045d42a2c6012cc8c1a43a3"
+    },
+    {
+      "local_path": "north-star/csharp/global.json",
+      "size_bytes": 55,
+      "sha256": "e0c0882461e712f6c2c66241bf2f175c60832e3ff077dc26091ff8c661d4193e"
+    },
+    {
+      "local_path": "projects/cinderwatch/tools/export_linux.py",
+      "size_bytes": 10523,
+      "sha256": "426bb8b68290e151c84a81268e36760435f26b2ba9bf89465224c86c2db41356"
+    },
+    {
+      "local_path": "projects/eclipse-fair/tools/export_linux.py",
+      "size_bytes": 10350,
+      "sha256": "c5fb4bf35c000806ead8aa49b9718ac2befc612fbc24f4dbc60a9aea92496497"
+    },
+    {
+      "local_path": "projects/realtime-integration-lab/package-lock.json",
+      "size_bytes": 42105,
+      "sha256": "aa191ef2158e6cc6f770bf4b3ee44dca17175ef1a3cd572b98115246bf46aea7"
+    },
+    {
+      "local_path": "projects/realtime-integration-lab/package.json",
+      "size_bytes": 1445,
+      "sha256": "42e3cc9633e522dd6d9a5c11023418331129632881a8bf0b95e3717247d57ebe"
+    }
+  ],
+  "result_artifacts": [
+    {
+      "local_path": "evidence/request-continuity/BUILDINFO.json",
+      "size_bytes": 32255,
+      "sha256": "2bd660832d4a6353a93b62680ff5cf41202fd28ab0b58287ff436d5cb0784f45"
+    },
+    {
+      "local_path": "evidence/request-continuity/CI_BASELINE.json",
+      "size_bytes": 1308,
+      "sha256": "53aeda8b1f95fab6065043f1303924f14338087f88f4322a79ea36bff10247fb"
+    },
+    {
+      "local_path": "evidence/request-continuity/DECISION.md",
+      "size_bytes": 7728,
+      "sha256": "4c2d12886114d33f99531ebf4236b9380f93a9cdc3d73668e42ee3dea243f3ed"
+    },
+    {
+      "local_path": "evidence/request-continuity/artifact-controls.json",
+      "size_bytes": 2538,
+      "sha256": "f40344120f03863018d7989f0d1b2f644b91947b7413cddf36f1c63cc83abd16"
+    },
+    {
+      "local_path": "evidence/request-continuity/build-one.json",
+      "size_bytes": 229,
+      "sha256": "426fbe17514129dc9ec500a30766cb04e615b3b65e623db88afff303ab0c14ad"
+    },
+    {
+      "local_path": "evidence/request-continuity/build-two.json",
+      "size_bytes": 230,
+      "sha256": "854e31c6b3a66866fe48c9412df6aed88a7a19dcbdc4e7017f238077440da511"
+    },
+    {
+      "local_path": "evidence/request-continuity/environment.json",
+      "size_bytes": 1015,
+      "sha256": "3e6bd3db3ee13de104e37f289ade77565313206460bdd30d34341f6981aec08d"
+    },
+    {
+      "local_path": "evidence/request-continuity/initial-instrument-failure.json",
+      "size_bytes": 8542,
+      "sha256": "3d3f7e60d61cdcdaeef07ad8876b54f6ec28c0810b0555dde01e307ca99cd30d"
+    },
+    {
+      "local_path": "evidence/request-continuity/inspection.json",
+      "size_bytes": 557,
+      "sha256": "5ff78117b46cf164ae2a4fa278440a9d5340a39e6a81e166142e1daa5c18ff78"
+    },
+    {
+      "local_path": "evidence/request-continuity/journal-native.json",
+      "size_bytes": 3029,
+      "sha256": "aaf9e7de6e737c0fd9bc49ecff4f3111790ca512c8a00ae3cf4229c0f1dba2ee"
+    },
+    {
+      "local_path": "evidence/request-continuity/preserved-identities.json",
+      "size_bytes": 258050,
+      "sha256": "5c7712a8445d66d216f61c4c467a753c23a3efc0e1544bf14f37796511cb8200"
+    },
+    {
+      "local_path": "evidence/request-continuity/process-execution.json",
+      "size_bytes": 54383,
+      "sha256": "5ae795703cdd46b60e63b7122b3963d960027a25e0ddcaaa840c9161d2a87679"
+    },
+    {
+      "local_path": "evidence/request-continuity/process-results.json",
+      "size_bytes": 31135,
+      "sha256": "3221a3abff77f0e0374bdb3408b920fc2cb7345d0e3faa798b724b8da893c408"
+    },
+    {
+      "local_path": "evidence/request-continuity/recipient-browser-execution.json",
+      "size_bytes": 13204,
+      "sha256": "d986d48ffa3c8695953585be6004fa44cea2b107453fcc0050b0974844cb7be3"
+    },
+    {
+      "local_path": "evidence/request-continuity/recipient-browser.json",
+      "size_bytes": 13039,
+      "sha256": "45c8088bff826d9dcbbd5e34848ff584ae932da08a5b8e74f295f61a12d9e8f9"
+    },
+    {
+      "local_path": "evidence/request-continuity/recipient-commands.json",
+      "size_bytes": 8414,
+      "sha256": "8773fbe97bce62b6285f5f868a5940027ca8e701c10b1005c599cc6da6d59143"
+    },
+    {
+      "local_path": "evidence/request-continuity/recipient-inspection.json",
+      "size_bytes": 245,
+      "sha256": "0e40d96f5852703e0033913894ffd0ef8fa08fbf6c949ab0d46ca034a0709831"
+    },
+    {
+      "local_path": "evidence/request-continuity/recipient-results.json",
+      "size_bytes": 15505,
+      "sha256": "2b3f1dd7d33042cfb91e854fc6dc1d7957b667de0c48ce0f2026b1ea163dc4bd"
+    },
+    {
+      "local_path": "evidence/request-continuity/saved-delivery.png",
+      "size_bytes": 266273,
+      "sha256": "4df4d31b8e5a38d7ec2fbc4329038593242c23432efe0e081726520f526f948a"
+    },
+    {
+      "local_path": "evidence/request-continuity/scene-browser.json",
+      "size_bytes": 46664,
+      "sha256": "0ba386448d0c3b6a33cf0a2f2042de98b7f71ab0de6594fee1a720f4b9aa76c2"
+    },
+    {
+      "local_path": "evidence/request-continuity/scene-commands.json",
+      "size_bytes": 8627,
+      "sha256": "6b060a218d980567015fbd82e27d60ebdbb44f9bb1cc3aedd672f36617d46994"
+    },
+    {
+      "local_path": "evidence/request-continuity/scene-native.json",
+      "size_bytes": 1761,
+      "sha256": "51442dd5b157511635392ea8910f481963832bac2225feb49b5d67074ec276a7"
+    },
+    {
+      "local_path": "evidence/request-continuity/scene-run.json",
+      "size_bytes": 15168,
+      "sha256": "1833fb422ab882c2c0c2fdaf898406d406610a8c52d8ccb22317cdd4246b6adf"
+    },
+    {
+      "local_path": "delivery/authored-scene/dist/authored-scene-demo-linux-x64.zip",
+      "size_bytes": 35908523,
+      "sha256": "d829b1b59ee2dd22f87ab007c4db96bfe1655731b38d02f5085f0b8d30e043e4"
+    }
+  ],
+  "limitations": [
+    "Trusted local cooperating filesystem/parent directory; procedural isolation is not a hostile-process sandbox or account authorization.",
+    "File flush plus rename and actual Linux process replacement do not establish directory-fsync, arbitrary power-loss, Windows/Steam Cloud or distributed persistence.",
+    "MVID-based compiled identity is intentionally strict; changed builds require explicit migration and cannot silently overwrite an existing run. PreparedExpedition format is distinct.",
+    "No licensed Unity Editor, activation/platform modules, Windows player, Steam, physical devices or human assessment executed. Build/Operations remains incomplete.",
+    "Accepted history only; refused feedback and operation receipt reasons are transient. New day retains prior history without earlier-day UI browsing.",
+    "Full schedules, reputation/quest/item/tool/unlock catalogs, creation parsing, broad narrative persistence, commercial clearance and production ownership remain unresolved."
+  ],
+  "development_negatives": [
+    "Retained first full verifier failure compared transient POST/recovered GET receipt reason as persisted state; corrected projection retains exact text/state plus five persisted facts and actual next Offer/Confirm controls.",
+    "Corrupt-save startup originally exposed an unhandled JsonException; the host now refuses it through its bounded startup error path. Actual final process instrument retains nonzero refusal and unchanged bytes.",
+    "Source closure fixture was extended with the newly required JournalChecks project so its existing escape/wildcard rejections still test their intended boundary; no production or integrity assertion weakened.",
+    "Review corrected recipient-relaunch draft assertion from carried3 to actual carried2/remaining3 before package acceptance; final actual state is compared exactly."
+  ],
+  "specialties": {
+    "engineering": "Independent ENG-004/015/017; owned RequestJournal and native checks, preserving one owner/private permissions/commit-before-ack.",
+    "scientific": "Independent SCI-076/077; predeclared protocol and actual fresh-process instrument; outcome equality plus actual next permission and retained instrument failure.",
+    "creative": "Independent CRE-005(A),045/048/061(H); unchanged consent, cost, unfinished work and fate; saved/stale/new-day labels and actual interface, not canon approval."
+  },
+  "lifecycle": "The one current downloadable demonstration is updated because Host/web/source closure changed, retaining its private193-file runtime lock and all notices. Original ephemeral mode and unique older consumers/saves/media remain; no historical release line, source or rights-bearing artifact is retired. A current public URL/Git history alone is not used as recovery proof:22 archived source files actually reproduce all ten application files. Protected/origin/unchanged domain identities are retained separately.",
+  "prior_evidence": [
+    "evidence/authored-scene/RUN.json",
+    "evidence/recipient-delivery/RUN.json",
+    "evidence/persistent-expedition/RUN.json",
+    "evidence/repair-hauling/RUN.json"
+  ],
+  "rolling_stream": "ONE North Star unit;47/40/13 remain qualitative targets. Two consecutive product units require corrective selection or concrete dependency before a third."
+}

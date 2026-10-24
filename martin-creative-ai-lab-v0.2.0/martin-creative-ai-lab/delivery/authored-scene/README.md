@@ -8,7 +8,7 @@ who wants to inspect actual choices instead of assembling development tools firs
 ## Obtain and run
 
 [Download the complete Linux x64 ZIP](dist/authored-scene-demo-linux-x64.zip) and
-[its SHA256 checksum](dist/SHA256SUMS). [Actual execution and provenance](../../evidence/recipient-delivery/RUN.json)
+[its SHA256 checksum](dist/SHA256SUMS). [Actual execution and provenance](../../evidence/request-continuity/RUN.json)
 identify the delivered artifact; CI success and source availability are separate facts.
 Extract the archive into a fresh directory; paths with spaces are supported:
 
@@ -23,7 +23,7 @@ cd 'North Star demo/AuthoredSceneDemo'
 Open the loopback URL printed by the host in your graphical browser. No SDK, Node,
 account or network connection is required after acquisition. The bundled official
 .NET runtime still requires compatible Linux x64 native libraries; `sha256sum` is
-required for the launch-time payload check. Actual execution coverage is one Debian13
+required for the launch-time payload check; `mkdir` creates a missing save directory. Actual execution coverage is one Debian13
 Linux x64 environment, not general Linux compatibility, physical-device coverage or
 Windows validation. Consult the linked execution record for the actual tested package.
 
@@ -42,10 +42,35 @@ handoff can succeed while local work remains unfinished. Promise, redraw and ela
 time never fabricate completion. Inspect the visible threat and current state before
 choosing; there is no universal free solution supplied by delivery tooling.
 
-The session is ephemeral. Refresh observes the host; it is not a save. New day
-explicitly replaces the session. Process exit/expiry loses it. Following an uncertain
-response, reconnect observes actual state without replaying intent. This trusted-local
-loopback observer has no authentication, shared-world or production-security claim.
+The packaged launcher now creates or resumes `../NorthStarSaves/scene.json`, relative
+to `AuthoredSceneDemo`, outside the verified payload. Accepted choices commit before
+their response; stopping or expiry keeps the same local attempt, costs, signed terms,
+unfinished work and actual encounter progress. Launch again to resume it. Browser
+refresh reads these facts; it does not create another save. Offline time cannot perform
+work, complete delivery, return Rill or invent his fate.
+
+An existing regular save is always resumed and validated; a missing save creates a new
+attempt. Corrupt, incompatible, linked or directory saves refuse launch without reset.
+Preserve them for inspection. A write with uncertain outcome blocks further commands
+until the host is stopped and the same file is reopened. Read after an uncertain reply;
+no intention is automatically repeated. A refused action is not a saved choice.
+
+Begin a new day appends a distinct day identity while retaining earlier history; the
+page has no earlier-day browsing mode. Old ephemeral sessions cannot be recovered.
+For another directory use an absolute path:
+
+```sh
+NORTH_STAR_SAVE_DIR='/absolute/path/My North Star saves' ./run-demo.sh
+```
+
+The launcher creates a missing selected directory. Keep the save directory when
+replacing the package. To move or copy an attempt, stop the host, copy `scene.json` to
+the selected save directory and retain a backup; a new rules version can require an
+explicit migration or refuse incompatible data. Do not copy a changing live save.
+The mutable save is not covered by the package payload manifest or a signature.
+This trusted-local observer has no authentication, account, synchronization, Steam
+Cloud, shared-world or production-security claim. Linux process recovery does not
+establish power-loss, arbitrary-filesystem or Windows durability.
 
 ## Reproduce and inspect
 
@@ -99,9 +124,11 @@ the committed artifact. Two builds in one environment must reproduce ZIP bytes;
 cross-environment acceptance compares exact payload identities, separating compression
 implementation from source/binary identity. Keep the actual downloadable ZIP SHA distinct.
 
-The copied source closure was rebuilt from the extracted archive and reproduced all
-ten delivered application files byte-for-byte with the pinned SDK. Recovery requires
-that development SDK; running the delivered demonstration does not.
+The verifier rebuilds the copied source closure from the extracted archive and compares
+all delivered application identities. Source recovery needs the development SDK;
+running the demonstration and resuming its local save do not. The linked execution
+record owns actual archive bytes, hash, counts and reproduction results; previous
+recipient results remain historical evidence, not an automatic claim about changed bytes.
 
 The copied sources and notices provide a recovery path for this bounded demonstration;
 unique Godot players, saves, original media and notices have not been replaced or retired.

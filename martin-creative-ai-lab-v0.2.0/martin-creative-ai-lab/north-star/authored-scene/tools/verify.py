@@ -20,7 +20,7 @@ def sha(path):
 
 def inputs():
     # Forward project references are actual inputs; unrelated reverse consumers are not.
-    pending = [SCENE / 'Checks/NorthStar.AuthoredSceneChecks.csproj']
+    pending = [SCENE / 'Checks/NorthStar.AuthoredSceneChecks.csproj', SCENE / 'JournalChecks/NorthStar.JournalChecks.csproj']
     projects, files = set(), {CSHARP / 'global.json', CSHARP / 'Narrative/SCENE.md'}
     while pending:
         project = pending.pop().resolve()
@@ -41,7 +41,7 @@ def inputs():
                     raise ValueError('Explicit wildcard needs a bounded input inventory')
                 files.add((project.parent / value).resolve())
     for folder in ('web', 'tools'):
-        files.update(p for p in (SCENE / folder).rglob('*') if p.suffix in {'.html', '.css', '.js', '.mjs', '.py'})
+        files.update(p for p in (SCENE / folder).rglob('*') if p.suffix in {'.html', '.css', '.js', '.mjs', '.py', '.json'})
     if any(not p.resolve().is_relative_to(ROOT) or p.is_symlink() or not p.is_file() for p in files):
         raise ValueError('Missing, linked or external consumer input')
     return {p.relative_to(ROOT).as_posix(): sha(p) for p in sorted(files)}
@@ -77,6 +77,9 @@ def verify(output, dotnet='dotnet', node='node'):
         raise ValueError('Node differs from existing exercised pin')
     execute([sdk, 'build', str(SCENE / 'Checks/NorthStar.AuthoredSceneChecks.csproj'), '-c', 'Release', '-m:1', '--disable-build-servers'])
     execute([sdk, str(SCENE / 'Checks/bin/Release/net10.0/NorthStar.AuthoredSceneChecks.dll'), str(output / 'native.json')], timeout=60)
+    execute([sdk, 'build', str(SCENE / 'JournalChecks/NorthStar.JournalChecks.csproj'), '-c', 'Release', '-m:1', '--disable-build-servers'])
+    execute([sdk, str(SCENE / 'JournalChecks/bin/Release/net10.0/NorthStar.JournalChecks.dll'), str(output / 'journal-native.json'), str(output / 'journal-native-work')])
+    execute(['python3', str(SCENE / 'tools/continuity-process.py'), '--dotnet', sdk, '--output', str(output / 'continuity')], cwd=ROOT)
     execute([js, str(SCENE / 'tools/browser.mjs'), sdk, str(output / 'browser')], cwd=ROOT, timeout=300)
     if inputs() != before:
         raise ValueError('Consumer or instrument sources changed during execution')
@@ -94,7 +97,7 @@ def verify(output, dotnet='dotnet', node='node'):
               'checks': {'passed': native['checks']['passed'] + browser['checks']['passed'], 'failed': 0},
               'commands': records, 'runtime': {'sdk': version, 'node': node_version, 'unity_executed': False, 'windows_executed': False, 'steam_executed': False},
               'native': 'native.json', 'browser': 'browser/browser.json',
-              'limits': 'Actual local C# and synthetic Chromium journeys; no Unity Editor, Windows player, Steam, participants, device experience, production network, durable narrative or final creative canon.'}
+              'limits': 'Actual local C# and synthetic Chromium journeys; no Unity Editor, Windows player, Steam, participants, device experience, production network, broad storage guarantees or final creative canon.'}
     (output / 'RUN.json').write_text(json.dumps(result, indent=2) + '\n')
     print('PASS: actual authored C# scene, browser consequences and source-stable input closure')
     return result

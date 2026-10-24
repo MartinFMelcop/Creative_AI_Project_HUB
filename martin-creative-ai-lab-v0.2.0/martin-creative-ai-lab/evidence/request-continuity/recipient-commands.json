@@ -1,0 +1,112 @@
+[
+  {
+    "cwd": "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab",
+    "command": [
+      "node",
+      "--version"
+    ],
+    "exit_code": 0,
+    "stdout": "v24.19.0\n",
+    "stderr": ""
+  },
+  {
+    "cwd": "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab",
+    "command": [
+      "python3",
+      "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/delivery/authored-scene/package.py",
+      "--dotnet",
+      "/workspace/work/authored-scene/dotnet/dotnet",
+      "--output",
+      "/workspace/work/request-continuity/recipient-final/authored-scene-demo-linux-x64.zip",
+      "--work",
+      "/workspace/work/request-continuity/recipient-final/first build",
+      "--sdk-archive",
+      "/workspace/work/authored-scene/sdk.tar.gz"
+    ],
+    "exit_code": 0,
+    "stdout": "{\"archive_sha256\": \"d829b1b59ee2dd22f87ab007c4db96bfe1655731b38d02f5085f0b8d30e043e4\", \"bytes\": 35908523, \"files\": 232, \"work\": \"/workspace/work/request-continuity/recipient-final/first build\", \"source_stable\": true}\n",
+    "stderr": ""
+  },
+  {
+    "cwd": "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab",
+    "command": [
+      "python3",
+      "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/delivery/authored-scene/package.py",
+      "--dotnet",
+      "/workspace/work/authored-scene/dotnet/dotnet",
+      "--output",
+      "/workspace/work/request-continuity/recipient-final/repeat.zip",
+      "--work",
+      "/workspace/work/request-continuity/recipient-final/second build",
+      "--sdk-archive",
+      "/workspace/work/authored-scene/sdk.tar.gz"
+    ],
+    "exit_code": 0,
+    "stdout": "{\"archive_sha256\": \"d829b1b59ee2dd22f87ab007c4db96bfe1655731b38d02f5085f0b8d30e043e4\", \"bytes\": 35908523, \"files\": 232, \"work\": \"/workspace/work/request-continuity/recipient-final/second build\", \"source_stable\": true}\n",
+    "stderr": ""
+  },
+  {
+    "cwd": "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab",
+    "command": [
+      "python3",
+      "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/delivery/authored-scene/check.py",
+      "/workspace/work/request-continuity/recipient-final/authored-scene-demo-linux-x64.zip",
+      "--extract",
+      "/workspace/work/request-continuity/recipient-final/recipient path with spaces",
+      "--sdk-archive",
+      "/workspace/work/authored-scene/sdk.tar.gz"
+    ],
+    "exit_code": 0,
+    "stdout": "{\"files\": 232, \"runtime_files\": 193, \"scope\": \"Structural identity and current-source binding; actual execution is separate.\", \"sdk_archive_verified\": true, \"source_files\": 22, \"unity_executed\": false, \"windows_executed\": false}\n",
+    "stderr": ""
+  },
+  {
+    "cwd": "/workspace/work/request-continuity/recipient-final/recovered source/north-star/csharp",
+    "command": [
+      "/workspace/work/authored-scene/dotnet/dotnet",
+      "publish",
+      "/workspace/work/request-continuity/recipient-final/recovered source/north-star/authored-scene/Host/NorthStar.AuthoredScene.csproj",
+      "-c",
+      "Release",
+      "--self-contained",
+      "false",
+      "-p:UseAppHost=false",
+      "-p:RuntimeFrameworkVersion=10.0.12",
+      "-p:DebugType=None",
+      "-p:DebugSymbols=false",
+      "-p:ContinuousIntegrationBuild=true",
+      "-p:PathMap=/workspace/work/request-continuity/recipient-final/recovered source=/_/source",
+      "-o",
+      "/workspace/work/request-continuity/recipient-final/recovered application",
+      "-m:1",
+      "--disable-build-servers"
+    ],
+    "exit_code": 0,
+    "stdout": "  Determining projects to restore...\n  Restored /workspace/work/request-continuity/recipient-final/recovered source/north-star/csharp/Narrative/NorthStar.Narrative.csproj (in 96 ms).\n  Restored /workspace/work/request-continuity/recipient-final/recovered source/north-star/csharp/Crossing/NorthStar.Crossing.csproj (in 2 ms).\n  Restored /workspace/work/request-continuity/recipient-final/recovered source/north-star/authored-scene/Host/NorthStar.AuthoredScene.csproj (in 2 ms).\n  Restored /workspace/work/request-continuity/recipient-final/recovered source/north-star/csharp/Domain/NorthStar.Domain.csproj (in 462 ms).\n  NorthStar.Domain -> /workspace/work/request-continuity/recipient-final/recovered source/north-star/csharp/Domain/bin/Release/netstandard2.1/NorthStar.Domain.dll\n  NorthStar.Crossing -> /workspace/work/request-continuity/recipient-final/recovered source/north-star/csharp/Crossing/bin/Release/net10.0/NorthStar.Crossing.dll\n  NorthStar.Narrative -> /workspace/work/request-continuity/recipient-final/recovered source/north-star/csharp/Narrative/bin/Release/net10.0/NorthStar.Narrative.dll\n  NorthStar.AuthoredScene -> /workspace/work/request-continuity/recipient-final/recovered source/north-star/authored-scene/Host/bin/Release/net10.0/NorthStar.AuthoredScene.dll\n  NorthStar.AuthoredScene -> /workspace/work/request-continuity/recipient-final/recovered application/\n",
+    "stderr": ""
+  },
+  {
+    "cwd": "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab",
+    "command": [
+      "python3",
+      "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/delivery/authored-scene/test_delivery.py",
+      "/workspace/work/request-continuity/recipient-final/authored-scene-demo-linux-x64.zip",
+      "/workspace/work/authored-scene/sdk.tar.gz"
+    ],
+    "exit_code": 0,
+    "stdout": "{\"passed\": 16, \"failed\": 0, \"controls\": [{\"id\": \"actual-positive-archive\", \"passed\": true, \"evidence\": {\"files\": 232, \"source_files\": 22, \"runtime_files\": 193, \"sdk_archive_verified\": false, \"windows_executed\": false, \"unity_executed\": false, \"scope\": \"Structural identity and current-source binding; actual execution is separate.\"}}, {\"id\": \"changed-dll\", \"passed\": true, \"rejection\": \"Payload manifest differs from exact archive inventory\"}, {\"id\": \"missing-notice\", \"passed\": true, \"rejection\": \"Missing required application/runtime/web/notices payload\"}, {\"id\": \"missing-web\", \"passed\": true, \"rejection\": \"Missing required application/runtime/web/notices payload\"}, {\"id\": \"self-consistent-forged-runtime\", \"passed\": true, \"rejection\": \"Bundled runtime differs from trusted official runtime lock\"}, {\"id\": \"self-consistent-wrong-source\", \"passed\": true, \"rejection\": \"Source binding mismatch\"}, {\"id\": \"missing-creative-provenance\", \"passed\": true, \"rejection\": \"Incomplete source/runtime build inventory\"}, {\"id\": \"unsafe-path\", \"passed\": true, \"rejection\": \"Unsafe archive path\"}, {\"id\": \"duplicate-path\", \"passed\": true, \"rejection\": \"Duplicate, unordered or excessive ZIP entries\"}, {\"id\": \"lost-executable-permission\", \"passed\": true, \"rejection\": \"Unexpected member type or permissions\"}, {\"id\": \"bundled-sdk-rejected\", \"passed\": true, \"rejection\": \"Runtime inventory mismatch\"}, {\"id\": \"concurrent-output-preserved\", \"passed\": true}, {\"id\": \"divergent-ambient-muxer-rejected\", \"passed\": true, \"rejection\": \"Installed runtime differs from official archive lock: runtime/dotnet\"}, {\"id\": \"verified-archive-owns-payload-despite-ambient-drift\", \"passed\": true, \"files\": 193}, {\"id\": \"unverified-sdk-archive-rejected\", \"passed\": true, \"rejection\": \"SDK archive differs from official SHA512 pin\"}, {\"id\": \"source-stage-mutation\", \"passed\": true, \"rejection\": \"Copied source changed during staging/build\"}], \"scope\": \"Actual archive faults and copied-source mutation; no participant or platform generalization.\"}\n",
+    "stderr": ""
+  },
+  {
+    "cwd": "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab",
+    "command": [
+      "node",
+      "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/delivery/authored-scene/browser.mjs",
+      "/workspace/work/request-continuity/recipient-final/recipient path with spaces/AuthoredSceneDemo",
+      "/workspace/work/request-continuity/recipient-final/browser"
+    ],
+    "exit_code": 0,
+    "stdout": "19 extracted-package controls passed\n",
+    "stderr": ""
+  }
+]

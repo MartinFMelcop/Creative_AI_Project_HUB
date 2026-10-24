@@ -90,7 +90,13 @@ separate reportable states.
 ## Recipient demonstration
 
 The [current authored-scene delivery](delivery/authored-scene/README.md) supplies a
-private-runtime Linux x64 ZIP for a recipient without SDK, Node or checkout. Its
-[execution record](evidence/recipient-delivery/RUN.json) separates actual extracted
+private-runtime Linux x64 ZIP for a recipient without SDK, Node or checkout. The launcher
+creates or resumes a local journal outside the payload, retaining accepted choices and
+actual encounter progress across host exit. A new day preserves earlier history;
+corrupt/incompatible saves refuse replacement. Offline time advances no gameplay.
+Explicit source-host `--new`/`--resume` commands are in the
+[authored-scene guide](north-star/authored-scene/README.md). Its
+[execution record](evidence/request-continuity/RUN.json) separates actual extracted
 execution, reproducible payloads and remaining Unity/Windows/human boundaries. Existing
-source-development commands and historical consumers remain available.
+source-development commands and historical consumers remain available. Local saves do
+not establish account/Steam Cloud support, power-loss durability or Windows behavior.

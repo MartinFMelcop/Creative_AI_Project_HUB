@@ -22,14 +22,18 @@ and Steam is the intended distribution ecosystem.**
 
 ### Try the current authored scene — Linux x64
 
-[**Download The coil and the shutters**](https://github.com/MartinFMelcop/Creative_AI_Project_HUB/raw/refs/heads/main/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/delivery/authored-scene/dist/authored-scene-demo-linux-x64.zip) · [Instructions and checksums](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/delivery/authored-scene/README.md) · [Actual recipient execution](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/evidence/recipient-delivery/RUN.json)
+[**Download The coil and the shutters**](https://github.com/MartinFMelcop/Creative_AI_Project_HUB/raw/refs/heads/main/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/delivery/authored-scene/dist/authored-scene-demo-linux-x64.zip) · [Instructions and checksums](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/delivery/authored-scene/README.md) · [Actual recipient execution](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/evidence/request-continuity/RUN.json)
 
 Extract the complete ZIP, enter `AuthoredSceneDemo`, run `./run-demo.sh` and open
 its printed local URL. The package includes its private .NET runtime, original assets,
 notices and the actual forward source closure; no SDK, Node or checkout is required.
 A graphical browser, shell/coreutils and compatible Linux x64 native libraries are
 needed. Execution coverage is Debian13 x64 on the recorded environment. It stops after
-five minutes by default; Ctrl+C stops it earlier. The session is temporary.
+five minutes by default; Ctrl+C stops it earlier. Accepted choices now survive in
+`NorthStarSaves/scene.json` beside the extracted package. Launch again to resume the
+same actual scene, commitments and encounter progress. New day retains earlier history;
+offline time performs no work or return. Invalid saves refuse launch rather than reset.
+This is local continuity, not an account, Steam Cloud or Windows/power-loss guarantee.
 
 Edda's unfinished work, Rill's consent and actual departure/return share one C# owner.
 A guided handoff still leaves work unfinished. This original experimental scene is

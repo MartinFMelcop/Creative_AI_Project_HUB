@@ -39,7 +39,9 @@
     "north-star/csharp/Audio/Sound.cs",
     "north-star/authored-scene/Host/Room.cs",
     "north-star/authored-scene/Host/Program.cs",
-    "north-star/availability-study/Host/Program.cs"
+    "north-star/availability-study/Host/Program.cs",
+    "north-star/authored-scene/Host/RequestJournal.cs",
+    "north-star/authored-scene/Host/SceneSession.cs"
   ],
   "contribution_model": {
     "candidate": "Identified hypothesis; no transfer proof.",
@@ -167,16 +169,18 @@
         "evidence/waystone-dialogue/HANDOVER_RUN.json"
       ],
       "applicability_hypothesis": "Remembered actual costs and observed responses may make social choices legible; independent comprehension and preference remain unvalidated.",
-      "limits": "Bounded in-session original fiction, no final canon, general quest/reputation system, durable narrative, Unity/Windows/Steam or human validation.",
-      "next_validation": "Assess the actual authored experience with appropriate people/devices and author review; compare real licensed Windows delivery, narrative persistence and unresolved source capabilities without automatically expanding catalogs or repeating calibration.",
+      "limits": "Bounded original trusted-local Linux narrative history; no final canon, general quest/reputation catalog, account/shared-world persistence, arbitrary power-loss, Unity/Windows/Steam or human validation.",
+      "next_validation": "Compare licensed Unity/Windows and appropriate author/player/device assessment with consequential remaining legacy and production ownership needs. Current local journal is not full narrative persistence; do not automatically extend its fault matrix.",
       "destination_consumer_paths": [
         "north-star/csharp/Narrative/RequestExpedition.cs",
         "north-star/csharp/Crossing/Session.cs",
         "north-star/authored-scene/Host/Room.cs",
-        "north-star/authored-scene/Host/Program.cs"
+        "north-star/authored-scene/Host/Program.cs",
+        "north-star/authored-scene/Host/RequestJournal.cs",
+        "north-star/authored-scene/Host/SceneSession.cs"
       ],
-      "destination_scope": "Actual contextual offers, final refusal/defer, reserved-versus-departed guide, finite local work, immutable receipts and real encounter-verified delivery/return; signatures/deadlines cannot manufacture completion. Existing Godot aid consumer/evidence remain valid. The visible authored scene observes one unchanged RequestExpedition, actual Edda work, Rill reservation/departure/observed return, nested encounters and immutable receipts. Explicit refresh resolves uncertain accepted actions without replay; stale queued intent cannot rearm after reconnection. No new rules, audio/contact inference or persistent format.",
-      "destination_evidence": "evidence/authored-scene/RUN.json",
+      "destination_scope": "Actual contextual offers, final refusal/defer, reserved-versus-departed guide, finite local work, immutable receipts and real encounter-verified delivery/return; signatures/deadlines cannot manufacture completion. Existing Godot aid consumer/evidence remain valid. The visible authored scene observes one unchanged RequestExpedition, actual Edda work, Rill reservation/departure/observed return, nested encounters and immutable receipts. Explicit refresh resolves uncertain accepted actions without replay; stale queued intent cannot rearm after reconnection. No new gameplay rules or audio/contact inference. Local accepted-command history now reconstructs this unchanged owner across actual process replacement, including private heard/draft consent and the next nested encounter beat. Commit-before-receipt, explicit day identity, preserved history and fail-closed incompatibility prevent offline time, retries and missing/corrupt data from manufacturing results; old ephemeral mode remains explicit.",
+      "destination_evidence": "evidence/request-continuity/RUN.json",
       "prior_destination_evidence": "evidence/north-star-return-feedback/RUN.json",
       "prior_destination_consumer_paths": [
         "north-star/prototype/arena.gd",
@@ -184,7 +188,8 @@
         "north-star/prototype/return_gate.gd"
       ],
       "supporting_destination_evidence": [
-        "evidence/narrative-continuity/RUN.json"
+        "evidence/narrative-continuity/RUN.json",
+        "evidence/authored-scene/RUN.json"
       ]
     },
     {
@@ -423,8 +428,8 @@
       "destination_consumer_paths": [
         "north-star/authored-scene/Host/Program.cs"
       ],
-      "destination_evidence": "evidence/recipient-delivery/RUN.json",
-      "destination_scope": "One trusted-local private-runtime demonstration executes outside the checkout without SDK or Node on its PATH. Two staging roots reproduce the same ZIP, and archived sources reproduce ten application files. Current-source/runtime locks, full notices, expiry/stop and retained fault controls serve a real recipient/recovery beneficiary; no gameplay owner or production engine changed."
+      "destination_evidence": "evidence/request-continuity/RUN.json",
+      "destination_scope": "One trusted-local private-runtime demonstration executes outside the checkout without SDK or Node on its PATH. Two staging roots reproduce the same ZIP, and archived sources reproduce ten application files. Current-source/runtime locks, full notices, expiry/stop and retained fault controls serve a real recipient/recovery beneficiary; no gameplay owner or production engine changed. The affected current artifact now resumes the same local narrative journal outside its immutable payload; actual source recovery, two-build equality and recipient relaunch are reverified. This is support for one product-continuity increment, not a new release line or completed Windows operations method."
     }
   ],
   "product_title": "Virgo Diamond: The North Star",
