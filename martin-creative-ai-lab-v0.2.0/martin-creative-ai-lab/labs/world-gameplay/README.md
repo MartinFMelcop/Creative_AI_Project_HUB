@@ -113,3 +113,11 @@ The instrument also submits six malformed payloads to the actual compiled study 
 boolean schema, duplicate/unknown/missing fields, fractional level and duplicate case
 identity. Each must fail without creating success output. These are protocol controls,
 not additional source compatibility cases or players.
+
+## Further bounded method: advertised routine and actual authority
+
+[Availability](availability/README.md) investigates actual source masks, unresolved
+location conflicts and original event-owned service availability. Its separate
+[C# workshop](../../north-star/availability-study/README.md) makes a closed window,
+reserved capacity and an unaccounted worker consequential. This extends the lab
+without declaring full schedules, historical NPC execution or reputation integrated.

@@ -109,3 +109,10 @@ poison/bleed/burn/disarm and finite guard/treatment/cleanse choices. Real winnin
 losing routes are retained. Existing Crossing, authored narrative and tactical scorch
 semantics remain unchanged. [Evidence](../evidence/combat-status/RUN.json) separates
 formula compatibility, original consequences and unvalidated human/production claims.
+
+## Source-bound availability opportunity
+
+[The kiln window](availability-study/README.md) separates posted hours from actual
+NPC presence, committed capacity and a real repair handoff. Its C#8 rules and actual
+Linux/browser consumer preserve unresolved source schedule conflicts. This separate
+original study leaves the downloadable authored scene and its single owner unchanged.

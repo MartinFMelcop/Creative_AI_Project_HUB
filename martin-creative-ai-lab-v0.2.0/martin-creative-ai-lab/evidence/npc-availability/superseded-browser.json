@@ -1,0 +1,135 @@
+{
+  "controls": [
+    "Initial presence is observed separately from advertisement",
+    "Reads redraw and real time spend no phase or work",
+    "Promise reserves nobody and makes no repair",
+    "Accepted reservation spends a phase and removes free capacity",
+    "Actual two-phase work completes outside advertised window without collection",
+    "Actual collection supplies durable repair and releases only its commitment",
+    "Fired repair leaves the potter own two pots unfinished",
+    "Independent route spends two phases for a weaker actual patch",
+    "Closed opportunity removes reservation but retains feasible independent route",
+    "Late independent repair spends the final two phases",
+    "Leaving reserved work makes location unaccounted and no handoff",
+    "Advertised dawn does not teleport an unaccounted worker",
+    "Lost reserved route cannot collect or self-patch at exhausted time",
+    "Withdrawal consumes its prior cost and confirms no return or delivery",
+    "Withdrawal leaves a consequential personal alternative without borrowing worker",
+    "Late accepted work remains committed through phase4",
+    "Explicit ready handoff remains possible at the final phase",
+    "Actual false-presence renderer is rejected specifically",
+    "No actual browser script errors"
+  ],
+  "passed": 19,
+  "http_controls": [
+    "HTTP rejects extra authority",
+    "HTTP rejects duplicate command",
+    "HTTP rejects unknown return command",
+    "HTTP rejects foreign origin",
+    "HTTP rejects non JSON",
+    "HTTP rejects oversized body",
+    "Direct unavailable command cannot fabricate handoff"
+  ],
+  "http_passed": 7,
+  "states": {
+    "ready": {
+      "phase": 3,
+      "remaining": 1,
+      "advertised_phases": [
+        0,
+        1,
+        4
+      ],
+      "advertised": false,
+      "authority": "committed",
+      "available": false,
+      "reserved": true,
+      "work_ready": true,
+      "collected": false,
+      "outcome": "unfinished",
+      "durability": 0,
+      "potter_work_remaining": 2,
+      "last": "You hold the jar while Mara shapes and fires the repair, spending two phases. The repaired jar remains in her working yard: ready is not collected. Her own two pots still wait.",
+      "commands": [
+        "promise",
+        "collect",
+        "leave",
+        "withdraw",
+        "wait"
+      ]
+    },
+    "fired": {
+      "phase": 3,
+      "remaining": 1,
+      "advertised_phases": [
+        0,
+        1,
+        4
+      ],
+      "advertised": false,
+      "authority": "present",
+      "available": false,
+      "reserved": false,
+      "work_ready": true,
+      "collected": true,
+      "outcome": "fired",
+      "durability": 3,
+      "potter_work_remaining": 2,
+      "last": "Mara actually hands over the fired repair. The jar has three durability units in this experiment. Her two pots are still unfinished. This observed handoff frees her commitment; the posted phase mask alone did not return her.",
+      "commands": []
+    },
+    "patched": {
+      "phase": 2,
+      "remaining": 2,
+      "advertised_phases": [
+        0,
+        1,
+        4
+      ],
+      "advertised": false,
+      "authority": "present",
+      "available": false,
+      "reserved": false,
+      "work_ready": false,
+      "collected": false,
+      "outcome": "patched",
+      "durability": 1,
+      "potter_work_remaining": 2,
+      "last": "You spend two phases making your own temporary patch. The jar has one durability unit in this experiment. Mara was not borrowed and no fired service or handoff occurred; her own two pots remain her work.",
+      "commands": []
+    },
+    "stranded": {
+      "phase": 4,
+      "remaining": 0,
+      "advertised_phases": [
+        0,
+        1,
+        4
+      ],
+      "advertised": true,
+      "authority": "unaccounted",
+      "available": false,
+      "reserved": true,
+      "work_ready": false,
+      "collected": false,
+      "outcome": "unfinished",
+      "durability": 0,
+      "potter_work_remaining": 2,
+      "last": "One explicit phase passes. The board may change eligibility; no presence, repair, handoff or return is inferred from it.",
+      "commands": [
+        "promise"
+      ]
+    }
+  },
+  "negatives": [
+    {
+      "policy": "Actual renderer fabricates present while C# worker is unaccounted",
+      "actual": "unaccounted",
+      "detected": true,
+      "assertion": "Visible actual authority\n+ actual - expected\n\n+ 'present'\n- 'unaccounted'\n"
+    }
+  ],
+  "browser": "154.0.8037.57",
+  "errors": [],
+  "scope": "Actual original in-memory C# workshop on this Linux/browser environment; not historical NPC execution or human adequacy."
+}

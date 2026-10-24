@@ -1,0 +1,387 @@
+{
+  "schema_version": 1,
+  "kind": "destination_execution",
+  "baseline_commit": "cd834b4247e595aa125272c6b5f13788a921023e",
+  "capability_ids": [
+    "NS-C10"
+  ],
+  "consumer_paths": [
+    "north-star/availability-study/Rules/Availability.cs",
+    "north-star/availability-study/Host/Program.cs",
+    "north-star/availability-study/Host/Room.cs"
+  ],
+  "scope": "Literal source mask eligibility and original local NPC capacity/work/handoff owner. Source positions and full schedules remain unresolved.",
+  "checks": {
+    "passed": 40,
+    "failed": 0
+  },
+  "additional_controls": {
+    "browser": 20,
+    "http": 7,
+    "instrument_regressions": 16,
+    "same_source_cases_python_and_csharp": 135,
+    "duplicate_counting": "The135source booleans are the SAME cases in both implementations; separate controls are software checks, not people or effort."
+  },
+  "runtime": "SDK10.0.401; C#8/netstandard2.1 rules; .NET10/Linux host; Node24.19.0/Chromium on Debian13 x64",
+  "commands": [
+    {
+      "command": [
+        "/workspace/work/authored-scene/dotnet/dotnet",
+        "--version"
+      ],
+      "exit_code": 0,
+      "stdout": "10.0.401\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "node",
+        "--version"
+      ],
+      "exit_code": 0,
+      "stdout": "v24.19.0\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python3",
+        "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/labs/world-gameplay/availability/run.py",
+        "--output",
+        "/workspace/work/availability/actual-corrected/source.json"
+      ],
+      "exit_code": 0,
+      "stdout": "{\"source_cases\": 135, \"actual_csharp_cases\": null, \"source_stable\": true}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python3",
+        "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/labs/world-gameplay/availability/test_instrument.py"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "................\n----------------------------------------------------------------------\nRan 16 tests in 0.008s\n\nOK\n"
+    },
+    {
+      "command": [
+        "/workspace/work/authored-scene/dotnet/dotnet",
+        "build",
+        "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/availability-study/Checks/NorthStar.AvailabilityChecks.csproj",
+        "-c",
+        "Release",
+        "-m:1",
+        "--disable-build-servers"
+      ],
+      "exit_code": 0,
+      "stdout": "  Determining projects to restore...\n  All projects are up-to-date for restore.\n  NorthStar.Availability -> /workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/availability-study/Rules/bin/Release/netstandard2.1/NorthStar.Availability.dll\n  NorthStar.AvailabilityChecks -> /workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/availability-study/Checks/bin/Release/net10.0/NorthStar.AvailabilityChecks.dll\n\nBuild succeeded.\n    0 Warning(s)\n    0 Error(s)\n\nTime Elapsed 00:00:00.92\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/workspace/work/authored-scene/dotnet/dotnet",
+        "build",
+        "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/availability-study/Host/NorthStar.AvailabilityHost.csproj",
+        "-c",
+        "Release",
+        "-m:1",
+        "--disable-build-servers"
+      ],
+      "exit_code": 0,
+      "stdout": "  Determining projects to restore...\n  All projects are up-to-date for restore.\n  NorthStar.Availability -> /workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/availability-study/Rules/bin/Release/netstandard2.1/NorthStar.Availability.dll\n  NorthStar.AvailabilityHost -> /workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/availability-study/Host/bin/Release/net10.0/NorthStar.AvailabilityHost.dll\n\nBuild succeeded.\n    0 Warning(s)\n    0 Error(s)\n\nTime Elapsed 00:00:00.91\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/workspace/work/authored-scene/dotnet/dotnet",
+        "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/availability-study/Checks/bin/Release/net10.0/NorthStar.AvailabilityChecks.dll",
+        "/workspace/work/availability/actual-corrected/native.json",
+        "/workspace/work/availability/actual-corrected/source.json"
+      ],
+      "exit_code": 0,
+      "stdout": "{\"schema\":1,\"passed\":40,\"failed\":0,\"controls\":[\"negative-phase-refused\",\"phase-past-four-refused\",\"empty-mask-not-universal-presence\",\"duplicate-mask-refused\",\"out-of-range-mask-refused\",\"null-mask-refused\",\"undefined-authority-refused\",\"literal-mask-is-eligibility-only\",\"present-service-requires-advertised-window\",\"posted-window-cannot-overwrite-other-authority\",\"observation-is-pure\",\"promise-is-neither-reservation-nor-progress\",\"invalid-or-unearned-action-preserves-facts:return\",\"invalid-or-unearned-action-preserves-facts:observe-return\",\"invalid-or-unearned-action-preserves-facts:collect\",\"invalid-or-unearned-action-preserves-facts:shape\",\"invalid-or-unearned-action-preserves-facts:reserve now\",\"invalid-or-unearned-action-preserves-facts:RESERVE\",\"invalid-or-unearned-action-preserves-facts:\",\"invalid-or-unearned-action-preserves-facts:oversize\",\"reservation-spends-phase-and-occupies-actual-npc\",\"previous-snapshot-remains-historical\",\"advertised-mask-cannot-be-mutated-by-consumer\",\"second-reservation-cannot-spend-or-duplicate\",\"committed-work-continues-outside-advertised-window\",\"shape-executes-once\",\"actual-fired-handoff-preserves-own-unfinished-work\",\"terminal-repair-cannot-duplicate-or-switch-outcome\",\"alone-route-is-real-weaker-alternative-without-borrowing-potter\",\"alone-route-cannot-hide-two-phase-cost\",\"final-advertised-phase-does-not-create-service-time\",\"phase-four-never-returns-unaccounted-potter\",\"unaccounted-owner-cannot-complete-outstanding-service\",\"ready-pot-does-not-make-unobserved-handoff\",\"withdrawal-refunds-neither-phase-nor-work\",\"schedule-cannot-resurrect-withdrawn-service\",\"withdrawal-can-preserve-costly-alone-alternative-without-return\",\"late-service-retains-commitment-at-advertised-final-phase\",\"actual-handoff-at-phase-four-needs-no-fabricated-return\",\"fired-repair-trades-additional-phase-for-durability\"],\"source_cases\":{\"schema\":1,\"case_count\":135,\"passed\":135,\"failed\":0,\"results\":[{\"id\":\"NPC-0001:p0\",\"allowed\":true,\"expected\":true,\"passed\":true},{\"id\":\"NPC-0001:p1\",\"allowed\":true,\"expected\":true,\"passed\":true},{\"id\":\"NPC-0001:p2\",\"allowed\":true,\"expected\":true,\"passed\":true},{\"id\":\"NPC-0001:p3\",\"allowed\":true,\"expected\":true,\"passed\":true},{\"id\":\"NPC-0001:p4\",\"allowed\":true,\"expected\":true,\"passed\":true},{\"id\":\"NPC-0002:p0\",\"allowed\":true,\"expected\":true,\"passed\":true},{\"id\":\"NPC-0002:p1\",\"allowed\":true,\"expected\":true,\"passed\":true},{\"id\":\"NPC-0002:p2\",\"allowed\":true,\"expected\":true,\"passed\":true},{\"id\":\"NPC-0002:p3\",\"allowed\":false,\"expected\":false,\"passed\":true},{\"id\":\"NPC-0002:p4\",\"allowed\":false,\"expected\":false,\"passed\":true},{\"id\":\"NPC-0003:p0\",\"allowed\":true,\"expected\":true,\"passed\":true},{\"id\":\"NPC-0003:p1\",\"allowed\":true,\"expected\":true,\"passed\":true},{\"id\":\"NPC-0003:p2\",\"allowed\":true,\"expected\":true,\"passed\":true},{\"id\":\"NPC-0003:p3\",\"allowed\":false,\"expected\":false,\"passed\":true},{\"id\":\"NPC-0003:p4\",\"allowed\":false,\"expected\":false,\"passed\":true},{\"id\":\"NPC-0006:p0\",\"allowed\":true,\"expected\":true,\"passed\":true},{\"id\":\"NPC-0006:p1\",\"allowed\":true,\"expected\":true,\"passed\":true},{\"id\":\"NPC-0006:p2\",\"allowed\":false,\"expected\":false,\"passed\":true},{\"id\":\"NPC-0006:p3\",\"allowed\":false,\"expected\":false,\"passed\":true},{\"id\":\"NPC-0006:p4\",\"allowed\":true,\"expected\":true,\"passed\":true},{\"id\":\"NPC-0007:p0\",\"allowed\":true,\"expected\":true,\"passed\":true},{\"id\":\"NPC-0007:p1\",\"allowed\":true,\"expected\":true,\"passed\":true},{\"id\":\"NPC-0007:p2\",\"allowed\":true,\"expected\":true,\"passed\":true},{\"id\":\"NPC-0007:p3\",\"allowed\":true,\"expected\":true,\"passed\":true},{\"id\":\"NPC-0007:p4\",\"allowed\":true,\"expected\":true,\"passed\":true},{\"id\":\"NPC-0008:p0\",\"allowed\":true,\"expected\":true,\"passed\":true},{\"id\":\"NPC-0008:p1\",\"allowed\":true,\"expected\":true,\"passed\":true},{\"id\":\"NPC-0008:p2\",\"allowed\":true,\"expected\":true,\"passed\":true},{\"id\":\"NPC-0008:p3\",\"allowed\":true,\"expected\":true,\"passed\":true},{\"id\":\"NPC-0008:p4\",\"allowed\":true,\"expected\":true,\"passed\":true},{\"id\":\"NPC-0009:p0\",\"allowed\":true,\"expected\":true,\"passed\":true},{\"id\":\"NPC-0009:p1\",\"allowed\":true,\"expected\":true,\"passed\":true},{\"id\":\"NPC-0009:p2\",\"allowed\":true,\"expected\":true,\"passed\":true},{\"id\":\"NPC-0009:p3\",\"allowed\":false,\"expected\":false,\"passed\":true},{\"id\":\"NPC-0009:p4\",\"allowed\":false,\"expected\":false,\"passed\":true},{\"id\":\"NPC-0010:p0\",\"allowed\":true,\"expected\":true,\"passed\":true},{\"id\":\"NPC-0010:p1\",\"allowed\":true,\"expected\":true,\"passed\":true},{\"id\":\"NPC-0010:p2\",\"allowed\":true,\"expected\":true,\"passed\":true},{\"id\":\"NPC-0010:p3\",\"allowed\":false,\"expected\":false,\"passed\":true},{\"id\":\"NPC-0010:p4\",\"allowed\":false,\"expected\":false,\"passed\":true},{\"id\":\"NPC-0011:p0\",\"allowed\":true,\"expected\":true,\"passed\":true},{\"id\":\"NPC-0011:p1\",\"allowed\":true,\"expected\":true,\"passed\":true},{\"id\":\"NPC-0011:p2\",\"allowed\":false,\"expected\":false,\"passed\":true},{\"id\":\"NPC-0011:p3\",\"allowed\":false,\"expected\":false,\"passed\":true},{\"id\":\"NPC-0011:p4\",\"allowed\":true,\"expected\":true,\"passed\":true},{\"id\":\"NPC-0012:p0\",\"allowed\":true,\"expected\":true,\"passed\":true},{\"id\":\"NPC-0012:p1\",\"allowed\":true,\"expected\":true,\"passed\":true},{\"id\":\"NPC-0012:p2\",\"allowed\":true,\"expected\":true,\"passed\":true},{\"id\":\"NPC-0012:p3\",\"allowed\":false,\"expected\":false,\"passed\":true},{\"id\":\"NPC-0012:p4\",\"allowed\":false,\"expected\":false,\"passed\":true},{\"id\":\"NPC-0013:p0\",\"allowed\":true,\"expected\":true,\"passed\":true},{\"id\":\"NPC-0013:p1\",\"allowed\":true,\"expected\":true,\"passed\":true},{\"id\":\"NPC-0013:p2\",\"allowed\":true,\"expected\":true,\"passed\":true},{\"id\":\"NPC-0013:p3\",\"allowed\":false,\"expected\":false,\"passed\":true},{\"id\":\"NPC-0013:p4\",\"allowed\":false,\"expected\":false,\"passed\":true},{\"id\":\"NPC-0014:p0\",\"allowed\":true,\"expected\":true,\"passed\":true},{\"id\":\"NPC-0014:p1\",\"allowed\":true,\"expected\":true,\"passed\":true},{\"id\":\"NPC-0014:p2\",\"allowed\":true,\"expected\":true,\"passed\":true},{\"id\":\"NPC-0014:p3\",\"allowed\":false,\"expected\":false,\"passed\":true},{\"id\":\"NPC-0014:p4\",\"allowed\":false,\"expected\":false,\"passed\":true},{\"id\":\"NPC-0015:p0\",\"allowed\":true,\"expected\":true,\"passed\":true},{\"id\":\"NPC-0015:p1\",\"allowed\":true,\"expected\":true,\"passed\":true},{\"id\":\"NPC-0015:p2\",\"allowed\":true,\"expected\":true,\"passed\":true},{\"id\":\"NPC-0015:p3\",\"allowed\":false,\"expected\":false,\"passed\":true},{\"id\":\"NPC-0015:p4\",\"allowed\":false,\"expected\":false,\"passed\":true},{\"id\":\"NPC-0016:p0\",\"allowed\":true,\"expected\":true,\"passed\":true},{\"id\":\"NPC-0016:p1\",\"allowed\":true,\"expected\":true,\"passed\":true},{\"id\":\"NPC-0016:p2\",\"allowed\":false,\"expected\":false,\"passed\":true},{\"id\":\"NPC-0016:p3\",\"allowed\":false,\"expected\":false,\"passed\":true},{\"id\":\"NPC-0016:p4\",\"allowed\":true,\"expected\":true,\"passed\":true},{\"id\":\"NPC-0017:p0\",\"allowed\":true,\"expected\":true,\"passed\":true},{\"id\":\"NPC-0017:p1\",\"allowed\":true,\"expected\":true,\"passed\":true},{\"id\":\"NPC-0017:p2\",\"allowed\":false,\"expected\":false,\"passed\":true},{\"id\":\"NPC-0017:p3\",\"allowed\":false,\"expected\":false,\"passed\":true},{\"id\":\"NPC-0017:p4\",\"allowed\":true,\"expected\":true,\"passed\":true},{\"id\":\"NPC-0018:p0\",\"allowed\":true,\"expected\":true,\"passed\":true},{\"id\":\"NPC-0018:p1\",\"allowed\":true,\"expected\":true,\"passed\":true},{\"id\":\"NPC-0018:p2\",\"allowed\":true,\"expected\":true,\"passed\":true},{\"id\":\"NPC-0018:p3\",\"allowed\":false,\"expected\":false,\"passed\":true},{\"id\":\"NPC-0018:p4\",\"allowed\":false,\"expected\":false,\"passed\":true},{\"id\":\"NPC-0019:p0\",\"allowed\":true,\"expected\":true,\"passed\":true},{\"id\":\"NPC-0019:p1\",\"allowed\":true,\"expected\":true,\"passed\":true},{\"id\":\"NPC-0019:p2\",\"allowed\":true,\"expected\":true,\"passed\":true},{\"id\":\"NPC-0019:p3\",\"allowed\":false,\"expected\":false,\"passed\":true},{\"id\":\"NPC-0019:p4\",\"allowed\":false,\"expected\":false,\"passed\":true},{\"id\":\"NPC-0020:p0\",\"allowed\":true,\"expected\":true,\"passed\":true},{\"id\":\"NPC-0020:p1\",\"allowed\":true,\"expected\":true,\"passed\":true},{\"id\":\"NPC-0020:p2\",\"allowed\":true,\"expected\":true,\"passed\":true},{\"id\":\"NPC-0020:p3\",\"allowed\":false,\"expected\":false,\"passed\":true},{\"id\":\"NPC-0020:p4\",\"allowed\":false,\"expected\":false,\"passed\":true},{\"id\":\"NPC-0021:p0\",\"allowed\":true,\"expected\":true,\"passed\":true},{\"id\":\"NPC-0021:p1\",\"allowed\":true,\"expected\":true,\"passed\":true},{\"id\":\"NPC-0021:p2\",\"allowed\":true,\"expected\":true,\"passed\":true},{\"id\":\"NPC-0021:p3\",\"allowed\":false,\"expected\":false,\"passed\":true},{\"id\":\"NPC-0021:p4\",\"allowed\":false,\"expected\":false,\"passed\":true},{\"id\":\"NPC-0023:p0\",\"allowed\":true,\"expected\":true,\"passed\":true},{\"id\":\"NPC-0023:p1\",\"allowed\":true,\"expected\":true,\"passed\":true},{\"id\":\"NPC-0023:p2\",\"allowed\":true,\"expected\":true,\"passed\":true},{\"id\":\"NPC-0023:p3\",\"allowed\":true,\"expected\":true,\"passed\":true},{\"id\":\"NPC-0023:p4\",\"allowed\":true,\"expected\":true,\"passed\":true},{\"id\":\"NPC-0024:p0\",\"allowed\":true,\"expected\":true,\"passed\":true},{\"id\":\"NPC-0024:p1\",\"allowed\":true,\"expected\":true,\"passed\":true},{\"id\":\"NPC-0024:p2\",\"allowed\":true,\"expected\":true,\"passed\":true},{\"id\":\"NPC-0024:p3\",\"allowed\":true,\"expected\":true,\"passed\":true},{\"id\":\"NPC-0024:p4\",\"allowed\":true,\"expected\":true,\"passed\":true},{\"id\":\"NPC-0025:p0\",\"allowed\":true,\"expected\":true,\"passed\":true},{\"id\":\"NPC-0025:p1\",\"allowed\":true,\"expected\":true,\"passed\":true},{\"id\":\"NPC-0025:p2\",\"allowed\":true,\"expected\":true,\"passed\":true},{\"id\":\"NPC-0025:p3\",\"allowed\":true,\"expected\":true,\"passed\":true},{\"id\":\"NPC-0025:p4\",\"allowed\":true,\"expected\":true,\"passed\":true},{\"id\":\"NPC-0026:p0\",\"allowed\":true,\"expected\":true,\"passed\":true},{\"id\":\"NPC-0026:p1\",\"allowed\":true,\"expected\":true,\"passed\":true},{\"id\":\"NPC-0026:p2\",\"allowed\":true,\"expected\":true,\"passed\":true},{\"id\":\"NPC-0026:p3\",\"allowed\":true,\"expected\":true,\"passed\":true},{\"id\":\"NPC-0026:p4\",\"allowed\":true,\"expected\":true,\"passed\":true},{\"id\":\"NPC-0027:p0\",\"allowed\":true,\"expected\":true,\"passed\":true},{\"id\":\"NPC-0027:p1\",\"allowed\":true,\"expected\":true,\"passed\":true},{\"id\":\"NPC-0027:p2\",\"allowed\":true,\"expected\":true,\"passed\":true},{\"id\":\"NPC-0027:p3\",\"allowed\":true,\"expected\":true,\"passed\":true},{\"id\":\"NPC-0027:p4\",\"allowed\":true,\"expected\":true,\"passed\":true},{\"id\":\"NPC-0028:p0\",\"allowed\":true,\"expected\":true,\"passed\":true},{\"id\":\"NPC-0028:p1\",\"allowed\":true,\"expected\":true,\"passed\":true},{\"id\":\"NPC-0028:p2\",\"allowed\":true,\"expected\":true,\"passed\":true},{\"id\":\"NPC-0028:p3\",\"allowed\":true,\"expected\":true,\"passed\":true},{\"id\":\"NPC-0028:p4\",\"allowed\":true,\"expected\":true,\"passed\":true},{\"id\":\"NPC-0029:p0\",\"allowed\":true,\"expected\":true,\"passed\":true},{\"id\":\"NPC-0029:p1\",\"allowed\":true,\"expected\":true,\"passed\":true},{\"id\":\"NPC-0029:p2\",\"allowed\":true,\"expected\":true,\"passed\":true},{\"id\":\"NPC-0029:p3\",\"allowed\":true,\"expected\":true,\"passed\":true},{\"id\":\"NPC-0029:p4\",\"allowed\":true,\"expected\":true,\"passed\":true},{\"id\":\"NPC-0030:p0\",\"allowed\":true,\"expected\":true,\"passed\":true},{\"id\":\"NPC-0030:p1\",\"allowed\":true,\"expected\":true,\"passed\":true},{\"id\":\"NPC-0030:p2\",\"allowed\":true,\"expected\":true,\"passed\":true},{\"id\":\"NPC-0030:p3\",\"allowed\":true,\"expected\":true,\"passed\":true},{\"id\":\"NPC-0030:p4\",\"allowed\":true,\"expected\":true,\"passed\":true}]}}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/workspace/work/authored-scene/dotnet/dotnet",
+        "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/availability-study/Checks/bin/Release/net10.0/NorthStar.AvailabilityChecks.dll",
+        "--source-cases",
+        "/workspace/work/availability/actual-corrected/source.json"
+      ],
+      "exit_code": 0,
+      "stdout": "{\"schema\":1,\"case_count\":135,\"passed\":135,\"failed\":0,\"results\":[{\"id\":\"NPC-0001:p0\",\"allowed\":true,\"expected\":true,\"passed\":true},{\"id\":\"NPC-0001:p1\",\"allowed\":true,\"expected\":true,\"passed\":true},{\"id\":\"NPC-0001:p2\",\"allowed\":true,\"expected\":true,\"passed\":true},{\"id\":\"NPC-0001:p3\",\"allowed\":true,\"expected\":true,\"passed\":true},{\"id\":\"NPC-0001:p4\",\"allowed\":true,\"expected\":true,\"passed\":true},{\"id\":\"NPC-0002:p0\",\"allowed\":true,\"expected\":true,\"passed\":true},{\"id\":\"NPC-0002:p1\",\"allowed\":true,\"expected\":true,\"passed\":true},{\"id\":\"NPC-0002:p2\",\"allowed\":true,\"expected\":true,\"passed\":true},{\"id\":\"NPC-0002:p3\",\"allowed\":false,\"expected\":false,\"passed\":true},{\"id\":\"NPC-0002:p4\",\"allowed\":false,\"expected\":false,\"passed\":true},{\"id\":\"NPC-0003:p0\",\"allowed\":true,\"expected\":true,\"passed\":true},{\"id\":\"NPC-0003:p1\",\"allowed\":true,\"expected\":true,\"passed\":true},{\"id\":\"NPC-0003:p2\",\"allowed\":true,\"expected\":true,\"passed\":true},{\"id\":\"NPC-0003:p3\",\"allowed\":false,\"expected\":false,\"passed\":true},{\"id\":\"NPC-0003:p4\",\"allowed\":false,\"expected\":false,\"passed\":true},{\"id\":\"NPC-0006:p0\",\"allowed\":true,\"expected\":true,\"passed\":true},{\"id\":\"NPC-0006:p1\",\"allowed\":true,\"expected\":true,\"passed\":true},{\"id\":\"NPC-0006:p2\",\"allowed\":false,\"expected\":false,\"passed\":true},{\"id\":\"NPC-0006:p3\",\"allowed\":false,\"expected\":false,\"passed\":true},{\"id\":\"NPC-0006:p4\",\"allowed\":true,\"expected\":true,\"passed\":true},{\"id\":\"NPC-0007:p0\",\"allowed\":true,\"expected\":true,\"passed\":true},{\"id\":\"NPC-0007:p1\",\"allowed\":true,\"expected\":true,\"passed\":true},{\"id\":\"NPC-0007:p2\",\"allowed\":true,\"expected\":true,\"passed\":true},{\"id\":\"NPC-0007:p3\",\"allowed\":true,\"expected\":true,\"passed\":true},{\"id\":\"NPC-0007:p4\",\"allowed\":true,\"expected\":true,\"passed\":true},{\"id\":\"NPC-0008:p0\",\"allowed\":true,\"expected\":true,\"passed\":true},{\"id\":\"NPC-0008:p1\",\"allowed\":true,\"expected\":true,\"passed\":true},{\"id\":\"NPC-0008:p2\",\"allowed\":true,\"expected\":true,\"passed\":true},{\"id\":\"NPC-0008:p3\",\"allowed\":true,\"expected\":true,\"passed\":true},{\"id\":\"NPC-0008:p4\",\"allowed\":true,\"expected\":true,\"passed\":true},{\"id\":\"NPC-0009:p0\",\"allowed\":true,\"expected\":true,\"passed\":true},{\"id\":\"NPC-0009:p1\",\"allowed\":true,\"expected\":true,\"passed\":true},{\"id\":\"NPC-0009:p2\",\"allowed\":true,\"expected\":true,\"passed\":true},{\"id\":\"NPC-0009:p3\",\"allowed\":false,\"expected\":false,\"passed\":true},{\"id\":\"NPC-0009:p4\",\"allowed\":false,\"expected\":false,\"passed\":true},{\"id\":\"NPC-0010:p0\",\"allowed\":true,\"expected\":true,\"passed\":true},{\"id\":\"NPC-0010:p1\",\"allowed\":true,\"expected\":true,\"passed\":true},{\"id\":\"NPC-0010:p2\",\"allowed\":true,\"expected\":true,\"passed\":true},{\"id\":\"NPC-0010:p3\",\"allowed\":false,\"expected\":false,\"passed\":true},{\"id\":\"NPC-0010:p4\",\"allowed\":false,\"expected\":false,\"passed\":true},{\"id\":\"NPC-0011:p0\",\"allowed\":true,\"expected\":true,\"passed\":true},{\"id\":\"NPC-0011:p1\",\"allowed\":true,\"expected\":true,\"passed\":true},{\"id\":\"NPC-0011:p2\",\"allowed\":false,\"expected\":false,\"passed\":true},{\"id\":\"NPC-0011:p3\",\"allowed\":false,\"expected\":false,\"passed\":true},{\"id\":\"NPC-0011:p4\",\"allowed\":true,\"expected\":true,\"passed\":true},{\"id\":\"NPC-0012:p0\",\"allowed\":true,\"expected\":true,\"passed\":true},{\"id\":\"NPC-0012:p1\",\"allowed\":true,\"expected\":true,\"passed\":true},{\"id\":\"NPC-0012:p2\",\"allowed\":true,\"expected\":true,\"passed\":true},{\"id\":\"NPC-0012:p3\",\"allowed\":false,\"expected\":false,\"passed\":true},{\"id\":\"NPC-0012:p4\",\"allowed\":false,\"expected\":false,\"passed\":true},{\"id\":\"NPC-0013:p0\",\"allowed\":true,\"expected\":true,\"passed\":true},{\"id\":\"NPC-0013:p1\",\"allowed\":true,\"expected\":true,\"passed\":true},{\"id\":\"NPC-0013:p2\",\"allowed\":true,\"expected\":true,\"passed\":true},{\"id\":\"NPC-0013:p3\",\"allowed\":false,\"expected\":false,\"passed\":true},{\"id\":\"NPC-0013:p4\",\"allowed\":false,\"expected\":false,\"passed\":true},{\"id\":\"NPC-0014:p0\",\"allowed\":true,\"expected\":true,\"passed\":true},{\"id\":\"NPC-0014:p1\",\"allowed\":true,\"expected\":true,\"passed\":true},{\"id\":\"NPC-0014:p2\",\"allowed\":true,\"expected\":true,\"passed\":true},{\"id\":\"NPC-0014:p3\",\"allowed\":false,\"expected\":false,\"passed\":true},{\"id\":\"NPC-0014:p4\",\"allowed\":false,\"expected\":false,\"passed\":true},{\"id\":\"NPC-0015:p0\",\"allowed\":true,\"expected\":true,\"passed\":true},{\"id\":\"NPC-0015:p1\",\"allowed\":true,\"expected\":true,\"passed\":true},{\"id\":\"NPC-0015:p2\",\"allowed\":true,\"expected\":true,\"passed\":true},{\"id\":\"NPC-0015:p3\",\"allowed\":false,\"expected\":false,\"passed\":true},{\"id\":\"NPC-0015:p4\",\"allowed\":false,\"expected\":false,\"passed\":true},{\"id\":\"NPC-0016:p0\",\"allowed\":true,\"expected\":true,\"passed\":true},{\"id\":\"NPC-0016:p1\",\"allowed\":true,\"expected\":true,\"passed\":true},{\"id\":\"NPC-0016:p2\",\"allowed\":false,\"expected\":false,\"passed\":true},{\"id\":\"NPC-0016:p3\",\"allowed\":false,\"expected\":false,\"passed\":true},{\"id\":\"NPC-0016:p4\",\"allowed\":true,\"expected\":true,\"passed\":true},{\"id\":\"NPC-0017:p0\",\"allowed\":true,\"expected\":true,\"passed\":true},{\"id\":\"NPC-0017:p1\",\"allowed\":true,\"expected\":true,\"passed\":true},{\"id\":\"NPC-0017:p2\",\"allowed\":false,\"expected\":false,\"passed\":true},{\"id\":\"NPC-0017:p3\",\"allowed\":false,\"expected\":false,\"passed\":true},{\"id\":\"NPC-0017:p4\",\"allowed\":true,\"expected\":true,\"passed\":true},{\"id\":\"NPC-0018:p0\",\"allowed\":true,\"expected\":true,\"passed\":true},{\"id\":\"NPC-0018:p1\",\"allowed\":true,\"expected\":true,\"passed\":true},{\"id\":\"NPC-0018:p2\",\"allowed\":true,\"expected\":true,\"passed\":true},{\"id\":\"NPC-0018:p3\",\"allowed\":false,\"expected\":false,\"passed\":true},{\"id\":\"NPC-0018:p4\",\"allowed\":false,\"expected\":false,\"passed\":true},{\"id\":\"NPC-0019:p0\",\"allowed\":true,\"expected\":true,\"passed\":true},{\"id\":\"NPC-0019:p1\",\"allowed\":true,\"expected\":true,\"passed\":true},{\"id\":\"NPC-0019:p2\",\"allowed\":true,\"expected\":true,\"passed\":true},{\"id\":\"NPC-0019:p3\",\"allowed\":false,\"expected\":false,\"passed\":true},{\"id\":\"NPC-0019:p4\",\"allowed\":false,\"expected\":false,\"passed\":true},{\"id\":\"NPC-0020:p0\",\"allowed\":true,\"expected\":true,\"passed\":true},{\"id\":\"NPC-0020:p1\",\"allowed\":true,\"expected\":true,\"passed\":true},{\"id\":\"NPC-0020:p2\",\"allowed\":true,\"expected\":true,\"passed\":true},{\"id\":\"NPC-0020:p3\",\"allowed\":false,\"expected\":false,\"passed\":true},{\"id\":\"NPC-0020:p4\",\"allowed\":false,\"expected\":false,\"passed\":true},{\"id\":\"NPC-0021:p0\",\"allowed\":true,\"expected\":true,\"passed\":true},{\"id\":\"NPC-0021:p1\",\"allowed\":true,\"expected\":true,\"passed\":true},{\"id\":\"NPC-0021:p2\",\"allowed\":true,\"expected\":true,\"passed\":true},{\"id\":\"NPC-0021:p3\",\"allowed\":false,\"expected\":false,\"passed\":true},{\"id\":\"NPC-0021:p4\",\"allowed\":false,\"expected\":false,\"passed\":true},{\"id\":\"NPC-0023:p0\",\"allowed\":true,\"expected\":true,\"passed\":true},{\"id\":\"NPC-0023:p1\",\"allowed\":true,\"expected\":true,\"passed\":true},{\"id\":\"NPC-0023:p2\",\"allowed\":true,\"expected\":true,\"passed\":true},{\"id\":\"NPC-0023:p3\",\"allowed\":true,\"expected\":true,\"passed\":true},{\"id\":\"NPC-0023:p4\",\"allowed\":true,\"expected\":true,\"passed\":true},{\"id\":\"NPC-0024:p0\",\"allowed\":true,\"expected\":true,\"passed\":true},{\"id\":\"NPC-0024:p1\",\"allowed\":true,\"expected\":true,\"passed\":true},{\"id\":\"NPC-0024:p2\",\"allowed\":true,\"expected\":true,\"passed\":true},{\"id\":\"NPC-0024:p3\",\"allowed\":true,\"expected\":true,\"passed\":true},{\"id\":\"NPC-0024:p4\",\"allowed\":true,\"expected\":true,\"passed\":true},{\"id\":\"NPC-0025:p0\",\"allowed\":true,\"expected\":true,\"passed\":true},{\"id\":\"NPC-0025:p1\",\"allowed\":true,\"expected\":true,\"passed\":true},{\"id\":\"NPC-0025:p2\",\"allowed\":true,\"expected\":true,\"passed\":true},{\"id\":\"NPC-0025:p3\",\"allowed\":true,\"expected\":true,\"passed\":true},{\"id\":\"NPC-0025:p4\",\"allowed\":true,\"expected\":true,\"passed\":true},{\"id\":\"NPC-0026:p0\",\"allowed\":true,\"expected\":true,\"passed\":true},{\"id\":\"NPC-0026:p1\",\"allowed\":true,\"expected\":true,\"passed\":true},{\"id\":\"NPC-0026:p2\",\"allowed\":true,\"expected\":true,\"passed\":true},{\"id\":\"NPC-0026:p3\",\"allowed\":true,\"expected\":true,\"passed\":true},{\"id\":\"NPC-0026:p4\",\"allowed\":true,\"expected\":true,\"passed\":true},{\"id\":\"NPC-0027:p0\",\"allowed\":true,\"expected\":true,\"passed\":true},{\"id\":\"NPC-0027:p1\",\"allowed\":true,\"expected\":true,\"passed\":true},{\"id\":\"NPC-0027:p2\",\"allowed\":true,\"expected\":true,\"passed\":true},{\"id\":\"NPC-0027:p3\",\"allowed\":true,\"expected\":true,\"passed\":true},{\"id\":\"NPC-0027:p4\",\"allowed\":true,\"expected\":true,\"passed\":true},{\"id\":\"NPC-0028:p0\",\"allowed\":true,\"expected\":true,\"passed\":true},{\"id\":\"NPC-0028:p1\",\"allowed\":true,\"expected\":true,\"passed\":true},{\"id\":\"NPC-0028:p2\",\"allowed\":true,\"expected\":true,\"passed\":true},{\"id\":\"NPC-0028:p3\",\"allowed\":true,\"expected\":true,\"passed\":true},{\"id\":\"NPC-0028:p4\",\"allowed\":true,\"expected\":true,\"passed\":true},{\"id\":\"NPC-0029:p0\",\"allowed\":true,\"expected\":true,\"passed\":true},{\"id\":\"NPC-0029:p1\",\"allowed\":true,\"expected\":true,\"passed\":true},{\"id\":\"NPC-0029:p2\",\"allowed\":true,\"expected\":true,\"passed\":true},{\"id\":\"NPC-0029:p3\",\"allowed\":true,\"expected\":true,\"passed\":true},{\"id\":\"NPC-0029:p4\",\"allowed\":true,\"expected\":true,\"passed\":true},{\"id\":\"NPC-0030:p0\",\"allowed\":true,\"expected\":true,\"passed\":true},{\"id\":\"NPC-0030:p1\",\"allowed\":true,\"expected\":true,\"passed\":true},{\"id\":\"NPC-0030:p2\",\"allowed\":true,\"expected\":true,\"passed\":true},{\"id\":\"NPC-0030:p3\",\"allowed\":true,\"expected\":true,\"passed\":true},{\"id\":\"NPC-0030:p4\",\"allowed\":true,\"expected\":true,\"passed\":true}]}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python3",
+        "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/labs/world-gameplay/availability/run.py",
+        "--responses",
+        "/workspace/work/availability/actual-corrected/native-source.json",
+        "--output",
+        "/workspace/work/availability/actual-corrected/verified-source.json"
+      ],
+      "exit_code": 0,
+      "stdout": "{\"source_cases\": 135, \"actual_csharp_cases\": 135, \"source_stable\": true}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "node",
+        "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/availability-study/tools/browser.mjs",
+        "/workspace/work/authored-scene/dotnet/dotnet",
+        "/workspace/work/availability/actual-corrected/browser"
+      ],
+      "exit_code": 0,
+      "stdout": "20 browser and 7 HTTP controls passed\n",
+      "stderr": ""
+    }
+  ],
+  "source_artifacts": [
+    {
+      "local_path": "labs/world-gameplay/availability/run.py",
+      "size_bytes": 7874,
+      "sha256": "e3812aaf62e84de872f5582361cc3e5ff7981112d533001c795fea00a1b3b72d"
+    },
+    {
+      "local_path": "labs/world-gameplay/availability/source-cases.json",
+      "size_bytes": 19907,
+      "sha256": "ccb9210105029db40a5b3c5b1c81932859f95e15d3970cdd6ee1700889167ad6"
+    },
+    {
+      "local_path": "labs/world-gameplay/availability/test_instrument.py",
+      "size_bytes": 3141,
+      "sha256": "a254b765316d50726072eddbc8125767d25ba9eb0e0d7054c9247b141f26b9d4"
+    },
+    {
+      "local_path": "north-star/availability-study/Checks/NorthStar.AvailabilityChecks.csproj",
+      "size_bytes": 473,
+      "sha256": "ffa68581940c0667d463ae82e2fad7904c63399b95701f4f7e124df695996dc2"
+    },
+    {
+      "local_path": "north-star/availability-study/Checks/Program.cs",
+      "size_bytes": 10608,
+      "sha256": "dad97ebbbcf9ef11205db8a84f6f88f166bf2531e0788fd090dc57a6e3f8843d"
+    },
+    {
+      "local_path": "north-star/availability-study/Host/NorthStar.AvailabilityHost.csproj",
+      "size_bytes": 357,
+      "sha256": "e193c1ec0a3cef88be5d37e50dc92d2f7a5426b954557425a4332a5e692bb7b7"
+    },
+    {
+      "local_path": "north-star/availability-study/Host/Program.cs",
+      "size_bytes": 5006,
+      "sha256": "9da3b5eba5b6d0068bdce6a37655b38cb561415df384b1831e495328af8fab35"
+    },
+    {
+      "local_path": "north-star/availability-study/Host/Room.cs",
+      "size_bytes": 1309,
+      "sha256": "c5e0eb0df5950e6089e7efc77b036794d0d7975a9973d85ba034d7b5e9b8fd53"
+    },
+    {
+      "local_path": "north-star/availability-study/Host/web/app.js",
+      "size_bytes": 9003,
+      "sha256": "05cb125323f86cd956352fa37aa94ed94ae16113e4161de6942cd4b033d38217"
+    },
+    {
+      "local_path": "north-star/availability-study/Host/web/index.html",
+      "size_bytes": 5943,
+      "sha256": "5b15bf9514faf9089ecad65c4f5be6fa21e7b77cfc4b54c6524e8904fd9a2fea"
+    },
+    {
+      "local_path": "north-star/availability-study/Host/web/style.css",
+      "size_bytes": 5032,
+      "sha256": "244dc36d21fde7331654d7ef80df41166fc2f284693b4e00d2cf9f24855b1ee1"
+    },
+    {
+      "local_path": "north-star/availability-study/Rules/Availability.cs",
+      "size_bytes": 8443,
+      "sha256": "aa061e1372faf83d9398f76d65a3a57a5d910dd45448f919325174541f936d06"
+    },
+    {
+      "local_path": "north-star/availability-study/Rules/NorthStar.Availability.csproj",
+      "size_bytes": 344,
+      "sha256": "9570b674acfea69bb60098f495afd3b9e2cef2575fcfeb6db71c2cdecb2c4876"
+    },
+    {
+      "local_path": "north-star/availability-study/tools/browser.mjs",
+      "size_bytes": 12026,
+      "sha256": "b1e02821de00238d31c345d174d8ace505ceb2dcdb97f4d88be81f5a4ff50899"
+    },
+    {
+      "local_path": "north-star/availability-study/tools/verify.py",
+      "size_bytes": 5007,
+      "sha256": "01637097635a560f1124c0055d118a506401d8e39cc28920b73b1496b3bfaa8d"
+    },
+    {
+      "local_path": "north-star/csharp/global.json",
+      "size_bytes": 55,
+      "sha256": "e0c0882461e712f6c2c66241bf2f175c60832e3ff077dc26091ff8c661d4193e"
+    },
+    {
+      "local_path": "projects/realtime-integration-lab/package-lock.json",
+      "size_bytes": 42105,
+      "sha256": "aa191ef2158e6cc6f770bf4b3ee44dca17175ef1a3cd572b98115246bf46aea7"
+    },
+    {
+      "local_path": "projects/realtime-integration-lab/package.json",
+      "size_bytes": 1445,
+      "sha256": "42e3cc9633e522dd6d9a5c11023418331129632881a8bf0b95e3717247d57ebe"
+    },
+    {
+      "local_path": "references/rave-master/snapshots/36af1651271422ae33856e8b5d7b45702215f165/source/RM_ACT1/DATA/DEV/NPC_SCHEDULE_RULES.csv",
+      "size_bytes": 4579,
+      "sha256": "4e3c559e6c0f07c015fe7e24104e31c5f6980f9b5538933e4cb9582e9603b7ef"
+    },
+    {
+      "local_path": "references/rave-master/snapshots/36af1651271422ae33856e8b5d7b45702215f165/source/RM_ACT1/DATA/DEV/NPC_STATE.csv",
+      "size_bytes": 1065,
+      "sha256": "79fd03294259329dd23e328bc037e34a405dc1819ae999cb80eeb3bb1282fe3c"
+    },
+    {
+      "local_path": "references/rave-master/snapshots/36af1651271422ae33856e8b5d7b45702215f165/source/RM_ACT1/DATA/DEV/RGSS/RM_DIALOGUE_SCORING_RUNTIME.rb",
+      "size_bytes": 41365,
+      "sha256": "07682a3205ea2850d748e4f3ffeef7febe51df1ddb10d5e8689bef7d26d1a735"
+    },
+    {
+      "local_path": "references/rave-master/snapshots/36af1651271422ae33856e8b5d7b45702215f165/source/RM_CORE/DATA/CORE/TIME_PHASES_MASTER.csv",
+      "size_bytes": 412,
+      "sha256": "2e01799bc7666adbd28488cbe01e7409a2dc70dcde99035fd287426dcc3e2b8f"
+    },
+    {
+      "local_path": "references/rave-master/snapshots/36af1651271422ae33856e8b5d7b45702215f165/source/RM_DIST/RMXP_BASE/Data/RM_CSV/NPC_STATE.csv",
+      "size_bytes": 1027,
+      "sha256": "1a66b77b5bc9793f844a3d2fa61c7792007f957f1169be1f51384e5561d3f2cd"
+    },
+    {
+      "local_path": "references/rave-master/snapshots/36af1651271422ae33856e8b5d7b45702215f165/source/RM_DIST/RMXP_BASE/Data/RM_CSV/TIME_PHASES_MASTER.csv",
+      "size_bytes": 412,
+      "sha256": "2e01799bc7666adbd28488cbe01e7409a2dc70dcde99035fd287426dcc3e2b8f"
+    }
+  ],
+  "result_artifacts": [
+    {
+      "local_path": "evidence/npc-availability/CI.json",
+      "size_bytes": 1315,
+      "sha256": "53ee1ffd6fb0bf57fa2b550ea494169b43d1f083fa45150c6e57b124996c672a"
+    },
+    {
+      "local_path": "evidence/npc-availability/NEGATIVES.json",
+      "size_bytes": 1263,
+      "sha256": "a93b955644fb838c6c4de8c28a792042c7a22bf5048ab889ec70881f1321d31c"
+    },
+    {
+      "local_path": "evidence/npc-availability/browser-execution.json",
+      "size_bytes": 4781,
+      "sha256": "0ec92c4c300b6225896d33e313c46df62d969fee68794a6a237d162d916caa39"
+    },
+    {
+      "local_path": "evidence/npc-availability/browser.json",
+      "size_bytes": 4943,
+      "sha256": "7d45277c974ce3d42ec741f01c0a2e6ecc950ec2654d8f05ea8f4e9d0b2b55a0"
+    },
+    {
+      "local_path": "evidence/npc-availability/commands.json",
+      "size_bytes": 27609,
+      "sha256": "b4c4098094c0a283d22b5fc378f050db0fd00a80c2be8d7a17de066d4e6490da"
+    },
+    {
+      "local_path": "evidence/npc-availability/environment.json",
+      "size_bytes": 843,
+      "sha256": "b3df7df6949a5913f87563940540531628324a4e0802f07f7ab365134b3d6966"
+    },
+    {
+      "local_path": "evidence/npc-availability/fired.png",
+      "size_bytes": 198570,
+      "sha256": "d98516c6712f687d1812032a3f4e647f58ad0b084e27c40b31335a7b7d7bc563"
+    },
+    {
+      "local_path": "evidence/npc-availability/host-logs.json",
+      "size_bytes": 228,
+      "sha256": "ecf0d2c281fdde413dc56dd12553134e84ff634c2c18a5a209fcfcc4e083e9c3"
+    },
+    {
+      "local_path": "evidence/npc-availability/initial-instrument-failure.json",
+      "size_bytes": 29676,
+      "sha256": "cb8a55e36831f78fd8baa2f40ed9674dd63d5539b3b02d1a8e4acb7c7e7b3e77"
+    },
+    {
+      "local_path": "evidence/npc-availability/native-source.json",
+      "size_bytes": 9040,
+      "sha256": "1544aee5518988ad4064fc92e07a0d74b5a4c2c2d6920c64a42ee56bea3d89c1"
+    },
+    {
+      "local_path": "evidence/npc-availability/native.json",
+      "size_bytes": 10919,
+      "sha256": "c6b4167b6fdc1aac097b66a4bde8bb9e5c1ed4465e8fd91ee382b67faf7e4096"
+    },
+    {
+      "local_path": "evidence/npc-availability/patched.png",
+      "size_bytes": 196342,
+      "sha256": "70591e173bd888fdea1d22da8e597a8ad6afb7572a97d2338ac5bde2fb244f4c"
+    },
+    {
+      "local_path": "evidence/npc-availability/results.json",
+      "size_bytes": 3719,
+      "sha256": "a2216acf660a70d1e021c6af6522836a83071fcb28e6c75756a97806def7ff8d"
+    },
+    {
+      "local_path": "evidence/npc-availability/source.json",
+      "size_bytes": 23907,
+      "sha256": "390e28290989169fe553dc3300b081299b7ccb5016ad3e11d38ce928c3da0f07"
+    },
+    {
+      "local_path": "evidence/npc-availability/superseded-browser.json",
+      "size_bytes": 4638,
+      "sha256": "33206e87344a779610fd0a1c6d6f0c74d3dd02c096bde1bbbf60b8e55dd0a620"
+    },
+    {
+      "local_path": "evidence/npc-availability/superseded-cracked-repair.png",
+      "size_bytes": 197199,
+      "sha256": "e380cd11f9d5793b377daefbd325858ae3d0b140b793897bdee5a981994cd921"
+    },
+    {
+      "local_path": "evidence/npc-availability/superseded-visible-worker.png",
+      "size_bytes": 188089,
+      "sha256": "3b7943e919147ebd6bb1a404694a0a60e21dd90c5fb335a551cbf883eb659e09"
+    },
+    {
+      "local_path": "evidence/npc-availability/unaccounted.png",
+      "size_bytes": 186291,
+      "sha256": "3d66e1364e6e49ecc8fecb4e696247d25c502d9c94ff8bac55d49e65d65ee948"
+    },
+    {
+      "local_path": "evidence/npc-availability/verified-source.json",
+      "size_bytes": 23937,
+      "sha256": "8440925e56c018e671b2fcba1cc6220b29da3946f01b0cbff0df85d51d266b89"
+    },
+    {
+      "local_path": "evidence/npc-availability/preservation.json",
+      "sha256": "f9b9b5b59c3fb3838b90c3d73cf71021225628ef7447aa24e3d13335bbd37ca8",
+      "size_bytes": 768
+    }
+  ],
+  "source_stable": true,
+  "specialties": {
+    "engineering": "ENG-001/004/015: independent schedule/source alternatives, single authority; owned portable rules and native controls.",
+    "scientific": "SCI-076/077: independent reputation alternative, strict source assay before C#; independent output validation and source stability review.",
+    "creative": "CRE-005(A),045/048/061(H): independent consequential availability alternative; owned original web art/copy.",
+    "synthesis": "Selected availability because of a new original NPC/service beneficiary and preserved ambiguous legacy obligation. Rejected automatic historic placement; retained reputation as unselected credible alternative. Primary integrated host, browser, visual correction and evidence.",
+    "boundary": "Agent work is not independent human or author validation."
+  },
+  "actual_results": [
+    "reserve1,shape2,collect completes fired repair at phase3; two personal pots remain",
+    "alone2 produces a weaker reported patch at phase2 without borrowing Mara",
+    "closed phase2 can leave a final two-phase personal alternative",
+    "leave with outstanding service stays unaccounted through advertised dawn; no repair or return",
+    "late accepted reservation/work can still be actually collected at phase4"
+  ],
+  "lifecycle": "No old download, consumer, media, save format or notice was retired. New scene is a source-run study, not a second current packaged release; packaged-scene closure is unchanged.",
+  "limitations": [
+    "No Ruby/RMXP or historical NPC runtime execution",
+    "No full scheduler, real-time calendar, placement conflict resolution, reputation/faction or quest catalog integration",
+    "Durability is a terminal experimental outcome, not later gameplay consumption or measured repair quality",
+    "No Unity Editor/activation/modules, Windows player, Steam, participant/device assessment or commercial clearance",
+    "Original experimental fiction and art are not approved canon"
+  ]
+}

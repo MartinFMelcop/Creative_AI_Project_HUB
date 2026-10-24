@@ -1,0 +1,29 @@
+{
+  "baseline_commit": "cd834b4247e595aa125272c6b5f13788a921023e",
+  "run_id": 40015613477,
+  "observed_status": "completed",
+  "conclusion": "success",
+  "attempt": 2,
+  "successful_jobs": [
+    "scope",
+    "integrity-and-dialogue",
+    "north-star-csharp",
+    "north-star-authority",
+    "native-arena",
+    "chat-and-evaluation",
+    "eclipse-economy",
+    "north-star-remote"
+  ],
+  "attempt1": {
+    "north_star_csharp": "cancelled during matching Chromium Linux dependency installation; delivery step not reached",
+    "observed_log": "Ubuntu apt font/library downloads followed by The operation was canceled.",
+    "cause": "Not established; no timeout, gate or dependency pin was weakened.",
+    "action": "Requested rerun of that job alone; actual attempt2 job collection reports eight successes."
+  },
+  "earlier_run": {
+    "id": 40013655495,
+    "recipient_failure": "Pinned runtime/dotnet mismatch retained in evidence/recipient-delivery/CI_RUNTIME.json; correction verified by baseline attempt2.",
+    "eclipse_failure": "Unchanged export returned nonzero with EditorSettings error. A requested rerun was subsequently observed cancelled. The earlier cause and cancellation cause remain unproven."
+  },
+  "current_publication_ci": "Separate future observation; not inferred from local acceptance."
+}

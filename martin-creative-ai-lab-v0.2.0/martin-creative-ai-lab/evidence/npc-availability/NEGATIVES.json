@@ -1,0 +1,12 @@
+{
+  "superseded_browser": "superseded-browser.json",
+  "retained_captures": [
+    "superseded-visible-worker.png",
+    "superseded-cracked-repair.png"
+  ],
+  "finding": "An apparently passing19-control browser execution checked JavaScript SVG hidden expandos rather than computed visibility. Actual capture showed the worker while unaccounted and the cracked jar after collection. This invalidated its claimed visual fidelity.",
+  "correction": "toggleAttribute hidden plus explicit CSS hiding; actual computed-style checks cover worker, empty place and all jar states. Corrected20-control execution includes separate real false-text and false-picture renderers.",
+  "initial_design": "Engineering reported an initial executed37-control version with both stronger fired and weaker patch routes costing2phases. Review found the missing time tradeoff; final40controls assert fired3 versus patch2. Transient initial stdout was not retained, so it is not the current numerical acceptance record.",
+  "copy_correction": "Leaving does not cancel the outstanding reservation; unaccounted captions and availability no longer imply release or known location.",
+  "limits": "These are software/design counterexamples, not participants, human balance or author approval."
+}

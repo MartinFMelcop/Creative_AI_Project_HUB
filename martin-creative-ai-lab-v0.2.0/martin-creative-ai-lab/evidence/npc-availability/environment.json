@@ -1,0 +1,38 @@
+{
+  "platform": "Linux x86_64",
+  "unity_paths": [
+    {
+      "path": "/opt/unity",
+      "exists": false
+    },
+    {
+      "path": "/opt/Unity",
+      "exists": false
+    },
+    {
+      "path": "/opt/unityhub",
+      "exists": false
+    },
+    {
+      "path": "/Applications/Unity",
+      "exists": false
+    },
+    {
+      "path": "/usr/bin/Unity",
+      "exists": false
+    },
+    {
+      "path": "/usr/bin/unityhub",
+      "exists": false
+    },
+    {
+      "path": "/root/Unity/Hub/Editor",
+      "observation": "PermissionError"
+    }
+  ],
+  "sdk": "10.0.401",
+  "activation": "Unverified; no usable Editor was located in bounded probes. No license secret inspected.",
+  "windows_modules": "Unverified",
+  "windows_steam_executed": false,
+  "participants": "No participant/device observation available; agents are not participants."
+}

@@ -614,6 +614,16 @@ jobs:
           if-no-files-found: ignore
           retention-days: 7
 
+      - name: Execute source-bound NPC availability and actual original service choices
+        run: python3 north-star/availability-study/tools/verify.py --dotnet dotnet --output "$RUNNER_TEMP/npc-availability"
+      - name: Retain availability failure diagnostics
+        if: failure()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: npc-availability-failure
+          path: ${{ runner.temp }}/npc-availability
+          retention-days: 7
+
       - name: Rebuild and execute the actual recipient demonstration without SDK on its PATH
         run: |
           curl --fail --location --max-time 90 --output "$RUNNER_TEMP/recipient-sdk.tar.gz" https://builds.dotnet.microsoft.com/dotnet/Sdk/10.0.401/dotnet-sdk-10.0.401-linux-x64.tar.gz

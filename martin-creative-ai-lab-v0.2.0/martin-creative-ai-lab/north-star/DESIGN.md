@@ -707,3 +707,27 @@ death. Fixed Crossing Lure/Trail, Cinderwatch turn-start scorch and all existing
 work/guide outcomes remain unchanged. CRE-005(A), CRE-012/013/087(H) informed costly
 choices and readable consequences; no agent or software run supplies human experience
 or author approval of this new staging.
+
+## Availability opportunity — experimental
+
+The kiln window is original agent-authored staging under the current author direction,
+not adopted legacy fiction or approved cast/world canon. Mara has two pots of her own
+waiting. A fired jar repair costs one phase to reserve and two to work; collection must
+actually occur. An independent temporary patch costs two phases and has a lower reported
+durability. Durability is an experimental terminal outcome, not yet consumed by another
+journey. A reservation may remain outstanding after the player leaves; dawn cannot
+confirm Mara's return. A closed window can leave an independent alternative.
+
+ENG-001/004/015 and SCI-076/077 informed single ownership and claim-matched controls.
+CRE-005(A) supports voluntary alternatives with cost; CRE-045/048/061(H) distinguish
+private/public facts, fictional failure and justified recognition. These hypotheses do
+not approve the scene, a final scheduler, class or world. Time phases are explicit
+compressed steps; no wall clock acts. The source mask is preserved literally while
+contradictory locations and overrides remain unresolved. RequestExpedition and all
+prior consumers retain their own unchanged authorities.
+
+Actual image inspection superseded an apparently passing renderer: SVG hidden properties
+were expandos, leaving an unaccounted worker and cracked jar visible. Attribute/CSS
+visibility and computed-style checks now align the drawing with actual state, including
+a separate false-picture negative. This is rendering fidelity, not player recognition,
+comprehension, repair quality, balance or human approval.
