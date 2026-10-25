@@ -1,0 +1,74 @@
+[
+  {
+    "command": [
+      "/workspace/work/authored-scene/dotnet/dotnet",
+      "--version"
+    ],
+    "cwd": "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp",
+    "exit_code": 0,
+    "stdout": "10.0.401\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "node",
+      "--version"
+    ],
+    "cwd": "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab",
+    "exit_code": 0,
+    "stdout": "v24.19.0\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "python3",
+      "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/labs/economy-simulation/tooling/run.py",
+      "--dotnet",
+      "/workspace/work/authored-scene/dotnet/dotnet",
+      "--output",
+      "/workspace/work/tooling-study/acceptance-final/method"
+    ],
+    "cwd": "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab",
+    "exit_code": 0,
+    "stdout": "PASS: SAME 87 Python/C# identity cases;81actual references,370known IDs,2quarantined records;native contract controls\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "/workspace/work/authored-scene/dotnet/dotnet",
+      "build",
+      "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/tooling-study/ConsumerChecks/NorthStar.ToolingConsumerChecks.csproj",
+      "-c",
+      "Release",
+      "-m:1",
+      "--disable-build-servers"
+    ],
+    "cwd": "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp",
+    "exit_code": 0,
+    "stdout": "  Determining projects to restore...\n  All projects are up-to-date for restore.\n  NorthStar.Domain -> /workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/Domain/bin/Release/netstandard2.1/NorthStar.Domain.dll\n  NorthStar.Tooling -> /workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/tooling-study/Rules/bin/Release/netstandard2.1/NorthStar.Tooling.dll\n  NorthStar.Crossing -> /workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/Crossing/bin/Release/net10.0/NorthStar.Crossing.dll\n  NorthStar.ToolingStudy -> /workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/tooling-study/Host/bin/Release/net10.0/NorthStar.ToolingStudy.dll\n  NorthStar.ToolingConsumerChecks -> /workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/tooling-study/ConsumerChecks/bin/Release/net10.0/NorthStar.ToolingConsumerChecks.dll\n\nBuild succeeded.\n    0 Warning(s)\n    0 Error(s)\n\nTime Elapsed 00:00:01.37\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "/workspace/work/authored-scene/dotnet/dotnet",
+      "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/tooling-study/ConsumerChecks/bin/Release/net10.0/NorthStar.ToolingConsumerChecks.dll",
+      "/workspace/work/tooling-study/acceptance-final/consumer-native.json"
+    ],
+    "cwd": "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab",
+    "exit_code": 0,
+    "stdout": "PASS:34 actual tooling consumer controls\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "node",
+      "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/tooling-study/tools/browser.mjs",
+      "/workspace/work/authored-scene/dotnet/dotnet",
+      "/workspace/work/tooling-study/acceptance-final/browser"
+    ],
+    "cwd": "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab",
+    "exit_code": 0,
+    "stdout": "PASS: 23 actual tooling Chromium controls, 7 HTTP controls and false-tool detection\n",
+    "stderr": ""
+  }
+]

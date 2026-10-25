@@ -1,0 +1,812 @@
+{
+  "schema_version": 1,
+  "known_ids": [
+    "WEA_ARCO_CURTO_COMUM",
+    "WEA_BLOWGUN_COMUM",
+    "WEA_CAJADO_COMUM",
+    "WEA_CLUB_COMUM",
+    "WEA_CROSSBOW_HAND_COMUM",
+    "WEA_DART_COMUM",
+    "WEA_ESPADA_CURTA_COMUM",
+    "WEA_ESPADA_CURTA_COMUM_B365",
+    "WEA_FLAIL_COMUM",
+    "WEA_FOICE_COMUM",
+    "WEA_GAUNTLETS_COMUM",
+    "WEA_GLAIVE_COMUM",
+    "WEA_GRANDE_CLAVA_COMUM",
+    "WEA_GREATCLUB_COMUM",
+    "WEA_HALBERD_COMUM",
+    "WEA_HANDAXE_COMUM",
+    "WEA_JAVELIN_COMUM",
+    "WEA_LANCE_COMUM",
+    "WEA_LANCA_COMUM",
+    "WEA_LIGHT_HAMMER_COMUM",
+    "WEA_MACE_COMUM",
+    "WEA_MACHADO_DE_MAO_COMUM",
+    "WEA_MAGE_ORB_COMUM",
+    "WEA_MAGIC_SYMBOL_COMUM",
+    "WEA_MANGUAL_SIMPLES_COMUM",
+    "WEA_MACA_COMUM",
+    "WEA_MORNINGSTAR_COMUM",
+    "WEA_NET_COMUM",
+    "WEA_PIKE_COMUM",
+    "WEA_QUARTERSTAFF_COMUM",
+    "WEA_RAPIEIRA_COMUM",
+    "WEA_RAPIER_COMUM",
+    "WEA_SCIMITAR_COMUM",
+    "WEA_SHORTBOW_COMUM",
+    "WEA_SHORTSWORD_COMUM",
+    "WEA_SICKLE_COMUM",
+    "WEA_SLING_COMUM",
+    "WEA_SPEAR_COMUM",
+    "WEA_TRIDENT_COMUM",
+    "WEA_VIOL_INSTRUMENT_COMUM",
+    "WEA_WAR_PICK_COMUM",
+    "WEA_WHIP_COMUM",
+    "WEA_BATTLEAXE_INCOMUM",
+    "WEA_BLOWGUN_INCOMUM",
+    "WEA_CLUB_INCOMUM",
+    "WEA_CROSSBOW_HEAVY_INCOMUM",
+    "WEA_CROSSBOW_LIGHT_INCOMUM",
+    "WEA_DAGGER_INCOMUM",
+    "WEA_DART_INCOMUM",
+    "WEA_GAUNTLETS_INCOMUM",
+    "WEA_GREATAXE_INCOMUM",
+    "WEA_GREATCLUB_INCOMUM",
+    "WEA_GREATSWORD_INCOMUM",
+    "WEA_LIGHT_HAMMER_INCOMUM",
+    "WEA_LONGBOW_INCOMUM",
+    "WEA_LONGSWORD_INCOMUM",
+    "WEA_MAGE_WAND_INCOMUM",
+    "WEA_MAGE_BOOK_INCOMUM",
+    "WEA_MAUL_INCOMUM",
+    "WEA_NET_INCOMUM",
+    "WEA_QUARTERSTAFF_INCOMUM",
+    "WEA_SICKLE_INCOMUM",
+    "WEA_SLING_INCOMUM",
+    "WEA_TRIDENT_INCOMUM",
+    "WEA_VIOL_INSTRUMENT_INCOMUM",
+    "WEA_WAR_PICK_INCOMUM",
+    "WEA_WARHAMMER_INCOMUM",
+    "WEA_WHIP_INCOMUM",
+    "WEA_AKIMBO_SHADOW_SHORTSWORD_LENDARIO",
+    "WEA_ANCIENT_MAGIC_BOOK_LENDARIO",
+    "WEA_DRAGON_SLAYER_S_LANCE_LENDARIO",
+    "WEA_GLORIOUS_HALBERD_LENDARIO",
+    "WEA_LAVAMANCER_S_GREATAXE_LENDARIO",
+    "WEA_NULL_S_WARHAMMER_LENDARIO",
+    "WEA_THE_HERO_S_GREATSWORD_LENDARIO",
+    "WEA_ABYSSAL_WHIP_WHIP_MITICO",
+    "WEA_BLOODY_GREATCLUB_GREATCLUB_MITICO",
+    "WEA_BOOK_OF_SHADOWS_MAGIC_BOOK_MITICO",
+    "WEA_DRUIDIC_SCEPTER_QUARTERSTAFF_MITICO",
+    "WEA_ELEMENTAL_BOW_LONGBOW_MITICO",
+    "WEA_ENCHANTED_FLUTE_INSTRUMENT_MITICO",
+    "WEA_HEAVY_BATTLEAXE_BATTLEAXE_MITICO",
+    "WEA_HOLY_MACE_MACE_MITICO",
+    "WEA_MILITIA_S_CROSSBOW_CROSSBOW_HEAVY_MITICO",
+    "WEA_MYSTIC_GAUNTLETS_GAUNTLETS_MITICO",
+    "WEA_NIGHT_GUARDIAN_S_CROSSBOW_CROSSBOW_HAND_MITICO",
+    "WEA_PHANTOM_BLADE_GREATSWORD_MITICO",
+    "WEA_RESSONANTIC_TRIDENT_TRIDENT_MITICO",
+    "WEA_RUNIC_SWORD_LONGSWORD_MITICO",
+    "WEA_SORCERER_S_RAPIER_RAPIER_MITICO",
+    "WEA_TOTEM_VODOO_MAGIC_SYMBOL_MITICO",
+    "WEA_TRUE_WARRIOR_S_GLAIVE_GLAIVE_MITICO",
+    "WEA_BATTLEAXE_RARO",
+    "WEA_CROSSBOW_HAND_RARO",
+    "WEA_CROSSBOW_HEAVY_RARO",
+    "WEA_CROSSBOW_LIGHT_RARO",
+    "WEA_DAGGER_RARO",
+    "WEA_FLAIL_RARO",
+    "WEA_GLAIVE_RARO",
+    "WEA_GREATAXE_RARO",
+    "WEA_GREATSWORD_RARO",
+    "WEA_HALBERD_RARO",
+    "WEA_HANDAXE_RARO",
+    "WEA_JAVELIN_RARO",
+    "WEA_LANCE_RARO",
+    "WEA_LONGBOW_RARO",
+    "WEA_LONGSWORD_RARO",
+    "WEA_MACE_RARO",
+    "WEA_MAGE_ORB_RARO",
+    "WEA_MAGE_WAND_RARO",
+    "WEA_MAGE_BOOK_RARO",
+    "WEA_MAGIC_SYMBOL_RARO",
+    "WEA_MAUL_RARO",
+    "WEA_MORNINGSTAR_RARO",
+    "WEA_PIKE_RARO",
+    "WEA_RAPIER_RARO",
+    "WEA_SCIMITAR_RARO",
+    "WEA_SHORTBOW_RARO",
+    "WEA_SHORTSWORD_RARO",
+    "WEA_SPEAR_RARO",
+    "WEA_WARHAMMER_RARO",
+    "WEA_PRESAS_DE_BARAHA_UNIQUE",
+    "ARM_BREASTPLATE_BASICO",
+    "ARM_HALF_PLATE_BASICO",
+    "ARM_LEATHER_BASICO",
+    "ARM_PADDED_BASICO",
+    "ARM_PLATE_BASICO",
+    "ARM_SCALE_MAIL_BASICO",
+    "ARM_STUDDED_LEATHER_BASICO",
+    "ARM_ARMADURA_ACOLCHOADA_COMUM",
+    "ARM_ARMADURA_DE_COURO_LEVE_COMUM",
+    "ARM_ARMADURA_DE_COURO_REFORCADO_COMUM",
+    "ARM_ARMADURA_DE_MEIA_PLACA_SIMPLES_COMUM",
+    "ARM_ARMADURA_DE_PLACAS_SIMPLES_COMUM",
+    "ARM_CAPA_DE_SEDA_COMUM",
+    "ARM_CHAIN_MAIL_COMUM",
+    "ARM_COLETE_DE_COURO_COMUM",
+    "ARM_HIDE_COMUM",
+    "ARM_PADDED_COMUM",
+    "ARM_RING_MAIL_COMUM",
+    "ARM_SCALE_MAIL_COMUM",
+    "ARM_ARMADURA_DE_FERRO_INCOMUM",
+    "ARM_BREASTPLATE_INCOMUM",
+    "ARM_CAPA_DE_SEDA_INCOMUM",
+    "ARM_CHAIN_SHIRT_INCOMUM",
+    "ARM_COLETE_DE_COURO_INCOMUM",
+    "ARM_COTA_DE_MALHA_INCOMUM",
+    "ARM_HALF_PLATE_INCOMUM",
+    "ARM_HIDE_INCOMUM",
+    "ARM_LEATHER_INCOMUM",
+    "ARM_PLATE_INCOMUM",
+    "ARM_RING_MAIL_INCOMUM",
+    "ARM_SPLINT_INCOMUM",
+    "ARM_STUDDED_LEATHER_INCOMUM",
+    "ARM_ARMADURA_DE_FERRO_RARO",
+    "ARM_BREASTPLATE_RARO",
+    "ARM_CHAIN_MAIL_RARO",
+    "ARM_CHAIN_SHIRT_RARO",
+    "ARM_HALF_PLATE_RARO",
+    "ARM_LEATHER_RARO",
+    "ARM_PADDED_RARO",
+    "ARM_PLATE_RARO",
+    "ARM_SCALE_MAIL_RARO",
+    "ARM_SPLINT_RARO",
+    "ARM_STUDDED_LEATHER_RARO",
+    "ARM_BREASTPLATE_RARO_MITICO",
+    "ARM_CHAIN_SHIRT_RARO_MITICO",
+    "ARM_HALF_PLATE_RARO_MITICO",
+    "ARM_HIDE_RARO_MITICO",
+    "ARM_LEATHER_RARO_MITICO",
+    "ARM_PLATE_RARO_MITICO",
+    "ARM_SPLINT_RARO_MITICO",
+    "ARM_STUDDED_LEATHER_RARO_MITICO",
+    "ARM_CHAIN_SHIRT_RARO_LENDARIO",
+    "ARM_LEATHER_RARO_LENDARIO",
+    "ARM_PADDED_RARO_LENDARIO",
+    "ARM_PLATE_RARO_LENDARIO",
+    "ARM_SPLINT_RARO_LENDARIO",
+    "ARM_ESCAMAS_DE_KARKOTAKA_UNIQUE",
+    "ARM_ESTOLA_DAS_ALMAS_JULGADAS_UNIQUE",
+    "ARM_NUCLEO_DE_VAJRA_UNIQUE",
+    "SHD_ESCUDO_LEVE_DE_FERRO_COMUM",
+    "SHD_ESCUDO_LEVE_DE_MADEIRA_COMUM",
+    "SHD_ESCUDO_DE_MADEIRA_COMUM",
+    "SHD_ESCUDO_DE_MADEIRA_COMUM_2181",
+    "SHD_ESCUDO_DE_MADEIRA_REFORCADO_COMUM",
+    "SHD_FORCA_DE_VONTADE_COMUM",
+    "SHD_FRATERNIDADE_COMUM",
+    "SHD_LANCA_ARMA_COMUM_INVENTARIO_E_ESCUDO_DE_MADEIRA_COMUM",
+    "SHD_MODESTIA_COMUM",
+    "SHD_MODESTIA_COMUM_F7E4",
+    "SHD_SERENIDADE_COMUM",
+    "SHD_SIMPLICIDADE_COMUM",
+    "SHD_SIMPLICIDADE_COMUM_EF74",
+    "SHD_TEMPERANCA_COMUM",
+    "SHD_ESCUDO_DE_BRONZE_INCOMUM",
+    "SHD_FORCA_DE_VONTADE_INCOMUM",
+    "SHD_FRATERNIDADE_INCOMUM",
+    "SHD_MODESTIA_INCOMUM",
+    "SHD_SERENIDADE_INCOMUM",
+    "SHD_SIMPLICIDADE_INCOMUM",
+    "SHD_ESCUDO_DE_ACO_RARO",
+    "SHD_FRATERNIDADE_RARO",
+    "SHD_SERENIDADE_RARO",
+    "SHD_TEMPERANCA_RARO",
+    "SHD_FORCA_DE_VONTADE_RARO_MITICO",
+    "SHD_GENEROSIDADE_RARO_MITICO",
+    "SHD_TEMPERANCA_RARO_MITICO",
+    "SHD_GENEROSIDADE_RARO_LENDARIO",
+    "SHD_GENEROSIDADE_RARO_LENDARIO_F168",
+    "LEG_BOTA_DE_PANO_COMUM",
+    "LEG_COTURNO_DE_COURO_COMUM",
+    "LEG_PERNEIRAS_ACOLCHOADAS_COMUM",
+    "LEG_PERNEIRAS_DE_COURO_LEVE_COMUM",
+    "LEG_PERNEIRAS_DE_COURO_REFORCADO_COMUM",
+    "LEG_PERNEIRAS_DE_MEIA_PLACA_SIMPLES_COMUM",
+    "LEG_PERNEIRAS_DE_PLACAS_SIMPLES_COMUM",
+    "LEG_SAPATO_DE_FERRO_COMUM",
+    "LEG_BOTA_DE_PANO_INCOMUM",
+    "LEG_COTURNO_DE_COURO_INCOMUM",
+    "LEG_SAPATO_DE_FERRO_INCOMUM",
+    "LEG_PLUMAS_DE_VAYU_UNIQUE",
+    "MAG_ANEL_DA_CLARIAUDIENCIA_COMUM",
+    "MAG_ANEL_DA_DEFESA_LEVE_COMUM",
+    "MAG_ANEL_DA_DESTREZA_MENOR_COMUM",
+    "MAG_ANEL_DA_EVASAO_COMUM",
+    "MAG_ANEL_DA_FORCA_MENOR_COMUM",
+    "MAG_ANEL_DA_LUZ_COMUM",
+    "MAG_ANEL_DA_PACIENCIA_COMUM",
+    "MAG_ANEL_DA_PERCEPCAO_COMUM",
+    "MAG_ANEL_DA_SABEDORIA_MENOR_COMUM",
+    "MAG_ANEL_DAS_SOMBRAS_COMUM",
+    "MAG_ANEL_DE_PESADELOS_COMUM",
+    "MAG_ANEL_DO_ANTIDOTO_COMUM",
+    "MAG_ANEL_DO_ARCANISTA_COMUM",
+    "MAG_ANEL_DO_BRILHO_COMUM",
+    "MAG_ANEL_DO_CURINGA_COMUM",
+    "MAG_ANEL_DO_FOCO_COMUM",
+    "MAG_ANEL_DO_GELO_COMUM",
+    "MAG_ANEL_DO_PEQUENO_ESCUDO_COMUM",
+    "MAG_ANEL_DO_TROVAO_COMUM",
+    "MAG_ANEL_DO_VENTO_COMUM",
+    "MAG_ANEL_DO_VIGOR_COMUM",
+    "MAG_ANEL_DA_AGILIDADE_INCOMUM",
+    "MAG_ANEL_DA_CLARIVIDENCIA_INCOMUM",
+    "MAG_ANEL_DA_CURA_INCOMUM",
+    "MAG_ANEL_DA_DEFESA_MEDIA_INCOMUM",
+    "MAG_ANEL_DA_DETERMINACAO_INCOMUM",
+    "MAG_ANEL_DA_FORCA_INCOMUM",
+    "MAG_ANEL_DA_INTELIGENCIA_INCOMUM",
+    "MAG_ANEL_DA_INVISIBILIDADE_PARCIAL_INCOMUM",
+    "MAG_ANEL_DA_PRECISAO_INCOMUM",
+    "MAG_ANEL_DA_RECUPERACAO_INCOMUM",
+    "MAG_ANEL_DA_RESILIENCIA_INCOMUM",
+    "MAG_ANEL_DO_ARCANO_INCOMUM",
+    "MAG_ANEL_DO_ELEMENTO_MISTO_INCOMUM",
+    "MAG_ANEL_DA_DEFESA_FORTE_RARO",
+    "MAG_ANEL_DA_EVASAO_PERFEITA_RARO",
+    "MAG_ANEL_DA_VIDA_RARO",
+    "MAG_ANEL_DO_ATIRADOR_RARO",
+    "MAG_ANEL_DO_GENIO_RARO",
+    "MAG_ANEL_DO_MISTICO_RARO",
+    "MAG_ANEL_DO_PODER_RARO",
+    "MAG_ANEL_DO_RELAMPAGO_RARO",
+    "MAG_ANEL_DA_ABSORCAO_RARO_MITICO",
+    "MAG_ANEL_DA_IMUNIDADE_RARO_MITICO",
+    "MAG_ANEL_DA_REGENERACAO_RARO_MITICO",
+    "MAG_ANEL_DO_EQUILIBRIO_RARO_MITICO",
+    "MAG_ANEL_DO_REFLEXO_RARO_MITICO",
+    "MAG_ANEL_DA_INVENCIBILIDADE_RARO_LENDARIO",
+    "MAG_ANEL_DA_ONIPOTENCIA_RARO_LENDARIO",
+    "MAG_ANEL_DO_RENASCIMENTO_RARO_LENDARIO",
+    "MAG_AMULETO_DO_ULTIMO_SUSPIRO_UNIQUE",
+    "MAG_BRILHO_DA_APSARA_UNIQUE",
+    "MAG_CATALISADOR_IGNEO_UNIQUE",
+    "MAG_CORACAO_DO_LEVIATA_UNIQUE",
+    "MAG_COROA_DE_DUKKHA_UNIQUE",
+    "MAG_COROA_DE_FREDERIK_ZIX_UNIQUE",
+    "MAG_EMBLEMA_DO_FOLEGO_UNIQUE",
+    "MAG_FAIXA_DE_CAMPO_REMENDADA_UNIQUE",
+    "MAG_FOLHA_DO_RAKSA_UNIQUE",
+    "MAG_LAGRIMA_DE_MARA_UNIQUE",
+    "MAG_MANDIBULA_DO_GAKI_UNIQUE",
+    "MAG_MEDALHAO_DAS_CINZAS_UNIQUE",
+    "MAG_PINGENTE_DO_DEGELO_UNIQUE",
+    "MAG_PINGENTE_DO_INSTINTO_UNIQUE",
+    "MAG_PINGENTE_DO_PASSO_SILENCIOSO_UNIQUE",
+    "MAG_ROSARIO_INVERTIDO_UNIQUE",
+    "MAG_SEMENTE_DA_PERSISTENCIA_UNIQUE",
+    "MAG_TOTEM_ESPIRITUAL_MENOR_UNIQUE",
+    "ITM_BOLSA_DE_FERRAMENTAS_COMUM",
+    "ITM_BUSSOLA_RUSTICA_COMUM",
+    "ITM_CAPA_DE_TRILHA_COMUM",
+    "ITM_LIVRO_NATURALISTA_COMUM",
+    "ITM_LIVRO_DE_ORACOES_COMUM",
+    "ITM_MANUAL_DE_DISCIPLINA_COMUM",
+    "ITM_MASCARA_DE_PALCO_COMUM",
+    "ITM_REGISTRO_DE_COMPRAS_COMUM",
+    "ITM_FITA_DE_TREINAMENTO_DO_GELO_UNIQUE",
+    "CON_CARNE_SECA_COMUM",
+    "CON_ESSENCIA_ESPIRITUAL_COMUM",
+    "CON_FLECHAS_FARPADAS_COMUM",
+    "CON_FLECHAS_SIMPLES_COMUM",
+    "CON_PERGAMINHO_ANULAR_MAGIA_FRACO_COMUM",
+    "CON_PERGAMINHO_COMPANHEIRO_ANIMAL_MENOR_COMUM",
+    "CON_PERGAMINHO_CURA_INFERIOR_COMUM",
+    "CON_PERGAMINHO_RAIO_MENOR_COMUM",
+    "CON_PERGAMINHO_VISAO_ESPIRITUAL_COMUM",
+    "CON_POCAO_DE_CURA_PEQUENA_COMUM",
+    "CON_POCAO_DE_MANA_PEQUENA_COMUM",
+    "CON_PO_REVIGORANTE_COMUM",
+    "CON_PO_DE_REGENERACAO_COMUM",
+    "CON_RUNA_QUEBRADICA_DE_FURIA_COMUM",
+    "CON_RUNA_DE_IMPACTO_COMUM",
+    "CON_RUNA_DE_INVOCACAO_FRACA_COMUM",
+    "CON_VENENO_FRACO_COMUM",
+    "ITM_SELO_DA_TERAPIA_AEREA_UNIQUE",
+    "ITM_CRACHA_RH_HONORARIO_UNIQUE",
+    "ITM_CLAQUETE_DO_DIRETOR_DO_PANTANO_UNIQUE",
+    "CON_ANTIDOTO_DO_BREJO_COMUM",
+    "CON_KIT_CURATIVO_SIMPLES_COMUM",
+    "CON_PEIXE_DEFUMADO_COMUM",
+    "ITM_ISCA_CHEIROSA",
+    "ITM_UPGRADE_SIMPLES",
+    "MAT_AGUA_LIMPA",
+    "MAT_ALCOOL",
+    "MAT_BARRA_FERRO_MARINHO",
+    "MAT_CARNE_CRUA",
+    "MAT_CARVAO",
+    "MAT_CORDA",
+    "MAT_COURO",
+    "MAT_ERVAS_FEBRE_DO_BREJO",
+    "MAT_ERVAS_FORTES",
+    "MAT_ERVAS_MEDICINAIS",
+    "MAT_FERRAO_DE_VESPA",
+    "MAT_FIBRA",
+    "MAT_FIVELA_METAL",
+    "MAT_FRAGMENTO_RUNICO",
+    "MAT_FRASCO_VIDRO",
+    "MAT_FUNGOS_ARCANOS",
+    "MAT_GORDURA_PEIXE",
+    "MAT_HASTE_MADEIRA",
+    "MAT_LENHA",
+    "MAT_LINHA",
+    "MAT_MADEIRA_BRUTA",
+    "MAT_MINERIO_FERRO_MARINHO",
+    "MAT_OFERENDAS",
+    "MAT_ORVALHO_LUMINOSO",
+    "MAT_PANO_LIMPO",
+    "MAT_PAPEL",
+    "MAT_PEDRA_RUNICA_BRUTA",
+    "MAT_PEIXE",
+    "MAT_PENA",
+    "MAT_POLEN",
+    "MAT_PONTA_OSSO",
+    "MAT_PONTA_PEDRA",
+    "MAT_REAGENTE_SECO",
+    "MAT_SAL",
+    "MAT_SEDA_ARANHA",
+    "MAT_SELO_ARCANO",
+    "MAT_SEMENTES_VARIADAS",
+    "MAT_SORO_DE_ABELHA",
+    "MAT_SUCATA_METAL",
+    "MAT_TINTA",
+    "MAT_TINTA_ARCANA",
+    "QIT_GOLEM_NUCLEO_BRUTO",
+    "TOK_VEIL_SHARD",
+    "MAT_ESSENCIA_VEU_T5",
+    "MAT_ESSENCIA_VEU_T6",
+    "MAT_ESSENCIA_VEU_T7"
+  ],
+  "references": [
+    {
+      "id": "RCP-ALQ-001/output",
+      "item_id": "CON_POCAO_DE_CURA_PEQUENA_COMUM",
+      "expected": true
+    },
+    {
+      "id": "RCP-ALQ-001/input/0",
+      "item_id": "MAT_ERVAS_MEDICINAIS",
+      "expected": true
+    },
+    {
+      "id": "RCP-ALQ-001/input/1",
+      "item_id": "MAT_FRASCO_VIDRO",
+      "expected": true
+    },
+    {
+      "id": "RCP-ALQ-001/input/2",
+      "item_id": "MAT_AGUA_LIMPA",
+      "expected": true
+    },
+    {
+      "id": "RCP-ALQ-002/output",
+      "item_id": "CON_POCAO_DE_MANA_PEQUENA_COMUM",
+      "expected": true
+    },
+    {
+      "id": "RCP-ALQ-002/input/0",
+      "item_id": "MAT_FUNGOS_ARCANOS",
+      "expected": true
+    },
+    {
+      "id": "RCP-ALQ-002/input/1",
+      "item_id": "MAT_FRASCO_VIDRO",
+      "expected": true
+    },
+    {
+      "id": "RCP-ALQ-002/input/2",
+      "item_id": "MAT_AGUA_LIMPA",
+      "expected": true
+    },
+    {
+      "id": "RCP-ALQ-003/output",
+      "item_id": "CON_ANTIDOTO_DO_BREJO_COMUM",
+      "expected": true
+    },
+    {
+      "id": "RCP-ALQ-003/input/0",
+      "item_id": "MAT_ERVAS_FEBRE_DO_BREJO",
+      "expected": true
+    },
+    {
+      "id": "RCP-ALQ-003/input/1",
+      "item_id": "MAT_ORVALHO_LUMINOSO",
+      "expected": true
+    },
+    {
+      "id": "RCP-ALQ-003/input/2",
+      "item_id": "MAT_FRASCO_VIDRO",
+      "expected": true
+    },
+    {
+      "id": "RCP-COZ-001/output",
+      "item_id": "CON_CARNE_SECA_COMUM",
+      "expected": true
+    },
+    {
+      "id": "RCP-COZ-001/input/0",
+      "item_id": "MAT_CARNE_CRUA",
+      "expected": true
+    },
+    {
+      "id": "RCP-COZ-001/input/1",
+      "item_id": "MAT_SAL",
+      "expected": true
+    },
+    {
+      "id": "RCP-COZ-001/input/2",
+      "item_id": "MAT_LENHA",
+      "expected": true
+    },
+    {
+      "id": "RCP-COZ-002/output",
+      "item_id": "CON_PEIXE_DEFUMADO_COMUM",
+      "expected": true
+    },
+    {
+      "id": "RCP-COZ-002/input/0",
+      "item_id": "MAT_PEIXE",
+      "expected": true
+    },
+    {
+      "id": "RCP-COZ-002/input/1",
+      "item_id": "MAT_SAL",
+      "expected": true
+    },
+    {
+      "id": "RCP-COZ-002/input/2",
+      "item_id": "MAT_LENHA",
+      "expected": true
+    },
+    {
+      "id": "RCP-COZ-003/output",
+      "item_id": "ITM_ISCA_CHEIROSA",
+      "expected": true
+    },
+    {
+      "id": "RCP-COZ-003/input/0",
+      "item_id": "MAT_GORDURA_PEIXE",
+      "expected": true
+    },
+    {
+      "id": "RCP-COZ-003/input/1",
+      "item_id": "MAT_ERVAS_FORTES",
+      "expected": true
+    },
+    {
+      "id": "RCP-COZ-003/input/2",
+      "item_id": "MAT_CORDA",
+      "expected": true
+    },
+    {
+      "id": "RCP-CUL-001/output",
+      "item_id": "MAT_REAGENTE_SECO",
+      "expected": true
+    },
+    {
+      "id": "RCP-CUL-001/input/0",
+      "item_id": "MAT_ERVAS_MEDICINAIS",
+      "expected": true
+    },
+    {
+      "id": "RCP-CUL-002/output",
+      "item_id": "MAT_LINHA",
+      "expected": true
+    },
+    {
+      "id": "RCP-CUL-002/input/0",
+      "item_id": "MAT_FIBRA",
+      "expected": true
+    },
+    {
+      "id": "RCP-OFI-001/output",
+      "item_id": "CON_FLECHAS_SIMPLES_COMUM",
+      "expected": true
+    },
+    {
+      "id": "RCP-OFI-001/input/0",
+      "item_id": "MAT_HASTE_MADEIRA",
+      "expected": true
+    },
+    {
+      "id": "RCP-OFI-001/input/1",
+      "item_id": "MAT_PONTA_PEDRA",
+      "expected": true
+    },
+    {
+      "id": "RCP-OFI-001/input/2",
+      "item_id": "MAT_PENA",
+      "expected": true
+    },
+    {
+      "id": "RCP-OFI-001/tool/0",
+      "item_id": "ITM_BOLSA_DE_FERRAMENTAS_COMUM",
+      "expected": true
+    },
+    {
+      "id": "RCP-OFI-002/output",
+      "item_id": "CON_FLECHAS_FARPADAS_COMUM",
+      "expected": true
+    },
+    {
+      "id": "RCP-OFI-002/input/0",
+      "item_id": "MAT_HASTE_MADEIRA",
+      "expected": true
+    },
+    {
+      "id": "RCP-OFI-002/input/1",
+      "item_id": "MAT_PONTA_OSSO",
+      "expected": true
+    },
+    {
+      "id": "RCP-OFI-002/input/2",
+      "item_id": "MAT_PENA",
+      "expected": true
+    },
+    {
+      "id": "RCP-OFI-002/input/3",
+      "item_id": "MAT_FERRAO_DE_VESPA",
+      "expected": true
+    },
+    {
+      "id": "RCP-OFI-002/input/4",
+      "item_id": "MAT_SORO_DE_ABELHA",
+      "expected": true
+    },
+    {
+      "id": "RCP-OFI-003/output",
+      "item_id": "ITM_BOLSA_DE_FERRAMENTAS_COMUM",
+      "expected": true
+    },
+    {
+      "id": "RCP-OFI-003/input/0",
+      "item_id": "MAT_COURO",
+      "expected": true
+    },
+    {
+      "id": "RCP-OFI-003/input/1",
+      "item_id": "MAT_FIVELA_METAL",
+      "expected": true
+    },
+    {
+      "id": "RCP-OFI-003/input/2",
+      "item_id": "MAT_LINHA",
+      "expected": true
+    },
+    {
+      "id": "RCP-OFI-004/output",
+      "item_id": "CON_KIT_CURATIVO_SIMPLES_COMUM",
+      "expected": true
+    },
+    {
+      "id": "RCP-OFI-004/input/0",
+      "item_id": "MAT_PANO_LIMPO",
+      "expected": true
+    },
+    {
+      "id": "RCP-OFI-004/input/1",
+      "item_id": "MAT_ALCOOL",
+      "expected": true
+    },
+    {
+      "id": "RCP-OFI-004/input/2",
+      "item_id": "MAT_LINHA",
+      "expected": true
+    },
+    {
+      "id": "RCP-OFI-004/tool/0",
+      "item_id": "ITM_BOLSA_DE_FERRAMENTAS_COMUM",
+      "expected": true
+    },
+    {
+      "id": "RCP-FOR-001/output",
+      "item_id": "MAT_BARRA_FERRO_MARINHO",
+      "expected": true
+    },
+    {
+      "id": "RCP-FOR-001/input/0",
+      "item_id": "MAT_MINERIO_FERRO_MARINHO",
+      "expected": true
+    },
+    {
+      "id": "RCP-FOR-001/input/1",
+      "item_id": "MAT_CARVAO",
+      "expected": true
+    },
+    {
+      "id": "RCP-FOR-002/output",
+      "item_id": "ITM_UPGRADE_SIMPLES",
+      "expected": true
+    },
+    {
+      "id": "RCP-FOR-002/input/0",
+      "item_id": "MAT_SUCATA_METAL",
+      "expected": true
+    },
+    {
+      "id": "RCP-FOR-002/input/1",
+      "item_id": "MAT_BARRA_FERRO_MARINHO",
+      "expected": true
+    },
+    {
+      "id": "RCP-TEX-001/output",
+      "item_id": "ARM_CAPA_DE_SEDA_COMUM",
+      "expected": true
+    },
+    {
+      "id": "RCP-TEX-001/input/0",
+      "item_id": "MAT_SEDA_ARANHA",
+      "expected": true
+    },
+    {
+      "id": "RCP-TEX-001/input/1",
+      "item_id": "MAT_LINHA",
+      "expected": true
+    },
+    {
+      "id": "RCP-TEX-002/output",
+      "item_id": "ARM_CAPA_DE_SEDA_INCOMUM",
+      "expected": true
+    },
+    {
+      "id": "RCP-TEX-002/input/0",
+      "item_id": "MAT_SEDA_ARANHA",
+      "expected": true
+    },
+    {
+      "id": "RCP-TEX-002/input/1",
+      "item_id": "MAT_ORVALHO_LUMINOSO",
+      "expected": true
+    },
+    {
+      "id": "RCP-TEX-002/input/2",
+      "item_id": "MAT_LINHA",
+      "expected": true
+    },
+    {
+      "id": "RCP-RUN-001/output",
+      "item_id": "CON_RUNA_DE_IMPACTO_COMUM",
+      "expected": true
+    },
+    {
+      "id": "RCP-RUN-001/input/0",
+      "item_id": "MAT_PEDRA_RUNICA_BRUTA",
+      "expected": true
+    },
+    {
+      "id": "RCP-RUN-001/input/1",
+      "item_id": "CON_ESSENCIA_ESPIRITUAL_COMUM",
+      "expected": true
+    },
+    {
+      "id": "RCP-RUN-001/input/2",
+      "item_id": "MAT_TINTA_ARCANA",
+      "expected": true
+    },
+    {
+      "id": "RCP-RUN-002/output",
+      "item_id": "CON_RUNA_QUEBRADICA_DE_FURIA_COMUM",
+      "expected": true
+    },
+    {
+      "id": "RCP-RUN-002/input/0",
+      "item_id": "MAT_FRAGMENTO_RUNICO",
+      "expected": true
+    },
+    {
+      "id": "RCP-RUN-002/input/1",
+      "item_id": "CON_ESSENCIA_ESPIRITUAL_COMUM",
+      "expected": true
+    },
+    {
+      "id": "RCP-RUN-002/input/2",
+      "item_id": "MAT_TINTA_ARCANA",
+      "expected": true
+    },
+    {
+      "id": "RCP-SCR-001/output",
+      "item_id": "CON_PERGAMINHO_CURA_INFERIOR_COMUM",
+      "expected": true
+    },
+    {
+      "id": "RCP-SCR-001/input/0",
+      "item_id": "MAT_PAPEL",
+      "expected": true
+    },
+    {
+      "id": "RCP-SCR-001/input/1",
+      "item_id": "MAT_TINTA_ARCANA",
+      "expected": true
+    },
+    {
+      "id": "RCP-SCR-001/input/2",
+      "item_id": "CON_ESSENCIA_ESPIRITUAL_COMUM",
+      "expected": true
+    },
+    {
+      "id": "RCP-SCR-002/output",
+      "item_id": "CON_PERGAMINHO_RAIO_MENOR_COMUM",
+      "expected": true
+    },
+    {
+      "id": "RCP-SCR-002/input/0",
+      "item_id": "MAT_PAPEL",
+      "expected": true
+    },
+    {
+      "id": "RCP-SCR-002/input/1",
+      "item_id": "MAT_TINTA_ARCANA",
+      "expected": true
+    },
+    {
+      "id": "RCP-SCR-002/input/2",
+      "item_id": "MAT_SELO_ARCANO",
+      "expected": true
+    },
+    {
+      "id": "RCP-GOL-001/output",
+      "item_id": "QIT_GOLEM_NUCLEO_BRUTO",
+      "expected": true
+    },
+    {
+      "id": "RCP-GOL-001/input/0",
+      "item_id": "MAT_BARRA_FERRO_MARINHO",
+      "expected": true
+    },
+    {
+      "id": "RCP-GOL-001/input/1",
+      "item_id": "MAT_PEDRA_RUNICA_BRUTA",
+      "expected": true
+    },
+    {
+      "id": "RCP-GOL-001/input/2",
+      "item_id": "CON_ESSENCIA_ESPIRITUAL_COMUM",
+      "expected": true
+    },
+    {
+      "id": "negative/quarantined-torch",
+      "item_id": "LGT_TOCHA_PADRAO",
+      "expected": false
+    },
+    {
+      "id": "negative/quarantined-lantern",
+      "item_id": "LGT_LANTERNA_AVANCADA",
+      "expected": false
+    },
+    {
+      "id": "negative/case-is-not-identity",
+      "item_id": "itm_bolsa_de_ferramentas_comum",
+      "expected": false
+    },
+    {
+      "id": "negative/substring-is-not-identity",
+      "item_id": "ITM_BOLSA_DE_FERRAMENTAS",
+      "expected": false
+    },
+    {
+      "id": "negative/unknown-is-not-placeholder",
+      "item_id": "UNKNOWN_ITEM_0001",
+      "expected": false
+    },
+    {
+      "id": "negative/unprovided-alias-is-not-identity",
+      "item_id": "MAT_ESSENCIA_ESPIRITUAL",
+      "expected": false
+    }
+  ]
+}

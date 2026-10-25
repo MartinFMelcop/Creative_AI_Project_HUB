@@ -1,0 +1,100 @@
+{
+  "item_records": 372,
+  "structurally_valid_identity_records": 370,
+  "quarantined_records": [
+    {
+      "record_ordinal": 371,
+      "item_id": "LGT_TOCHA_PADRAO",
+      "fields": 47,
+      "expected_fields": 48,
+      "reason": "Ragged record: only the literal first-field ID is observed; no shifted columns are interpreted or repaired."
+    },
+    {
+      "record_ordinal": 372,
+      "item_id": "LGT_LANTERNA_AVANCADA",
+      "fields": 47,
+      "expected_fields": 48,
+      "reason": "Ragged record: only the literal first-field ID is observed; no shifted columns are interpreted or repaired."
+    }
+  ],
+  "recipe_records": 21,
+  "actual_resolved_literal_references": 81,
+  "same_identity_cases": 87,
+  "required_tools": [
+    {
+      "recipe_id": "RCP-OFI-001",
+      "item_id": "ITM_BOLSA_DE_FERRAMENTAS_COMUM",
+      "consumed": false
+    },
+    {
+      "recipe_id": "RCP-OFI-004",
+      "item_id": "ITM_BOLSA_DE_FERRAMENTAS_COMUM",
+      "consumed": false
+    }
+  ],
+  "recipe_implementation_statuses": {
+    "Implementar": 14,
+    "Em an\u00e1lise": 5,
+    "Parcial": 1,
+    "Futuro": 1
+  },
+  "ambiguous_unlock_references": [
+    {
+      "recipe_id": "RCP-CUL-002",
+      "raw_refs": "SDQ-0004;SDQ-0012",
+      "resolution": "UNRESOLVED AND/OR; not converted to a grant"
+    },
+    {
+      "recipe_id": "RCP-OFI-004",
+      "raw_refs": "SDQ-0001;SDQ-0007",
+      "resolution": "UNRESOLVED AND/OR; not converted to a grant"
+    },
+    {
+      "recipe_id": "RCP-TEX-002",
+      "raw_refs": "SDQ-0009;SDQ-0012",
+      "resolution": "UNRESOLVED AND/OR; not converted to a grant"
+    },
+    {
+      "recipe_id": "RCP-GOL-001",
+      "raw_refs": "QST-0026;QST-0027",
+      "resolution": "UNRESOLVED AND/OR; not converted to a grant"
+    }
+  ],
+  "deprecated_quest_recipe_references": [
+    "RCP-ALQ-001",
+    "RCP-OFI-004"
+  ],
+  "skill_unlock_records": 78,
+  "core_dist_unlocks_identical": true,
+  "recipe_skill_ids_missing_in_unlock_namespace": [
+    "20",
+    "22",
+    "23",
+    "28"
+  ],
+  "skill_namespace_example": {
+    "recipe_alchemy_skill": "15",
+    "unlock_15_name": "Ritos do V\u00e9u",
+    "unlock_alchemy_skill": "11",
+    "resolution": "UNRESOLVED namespaces; no numeric normalization"
+  },
+  "quest_variants": [
+    {
+      "path": "references/rave-master/snapshots/36af1651271422ae33856e8b5d7b45702215f165/source/RM_ACT1/DATA/DEV/SIDEQUESTS_EM_CONSTRUCAO.csv",
+      "sdq_0001_status": "DESCONSIDERAR; unresolved rewrite, no automatic grant",
+      "sdq_0007_status": "Source quest declaration only; its return/sell outcome is not a destination unlock event"
+    },
+    {
+      "path": "references/rave-master/snapshots/36af1651271422ae33856e8b5d7b45702215f165/source/RM_DIST/RMXP_BASE/Data/RM_CSV/SIDEQUESTS_EM_CONSTRUCAO.csv",
+      "sdq_0001_status": "DESCONSIDERAR; unresolved rewrite, no automatic grant",
+      "sdq_0007_status": "Source quest declaration only; its return/sell outcome is not a destination unlock event"
+    }
+  ],
+  "quest_variants_byte_identical": false,
+  "header_only_alias_rows": 0,
+  "header_only_qa_rows": 0,
+  "tool_price": "Blank Backlog; not free or an implemented price",
+  "dual_use_effect": "Consumable ingredient identity exists; required effect is explicitly missing",
+  "normalized_scope": "Exact item identities only. No unlock grants, prices, effects, source fiction, inventory state or recipe activation are serialized.",
+  "scope": "Source-bound CSV interpretation and quarantine, not historical game/Ruby/RMXP execution, full item semantics, author policy or human assessment."
+}

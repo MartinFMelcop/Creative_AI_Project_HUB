@@ -119,6 +119,8 @@ mechanical observations, not independent scientific or player evaluations.
 
 [Selected reputation arithmetic](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/reputation-study/README.md) now has an actual original C# browser consumer with separate store accounts, costly observed returns and a retained small-help failure; historical defaults, hostility and table effects are not imported. [Execution](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/evidence/reputation-study/RUN.json) separates source-case agreement and software controls from still unexecuted human, Unity/Windows and Steam assessment.
 
+[Retained-tool and item-identity contracts](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/tooling-study/README.md) now serve an actual original C# consumer: two crafts preserve one gauge, while real Crossing entries consume their outputs and retain failure costs. [Execution](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/evidence/tooling-study/RUN.json) preserves malformed source records and unresolved unlock/skill namespaces without importing historical items, quests or effects.
+
 One separately generated first-delivery client passed all 17 checks in a
 [calibrated public practice evaluation](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/labs/ai-evaluation/README.md).
 Baseline defects and missing-browser inconclusiveness remain visible. Fresh agent

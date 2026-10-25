@@ -1,0 +1,19 @@
+{
+  "scope": "Actual engineering development file-creation/build path failure, distinct from final accepted rule/catalog behavior.",
+  "cwd": "north-star/csharp",
+  "creation_command": "cat > north-star/tooling-study/Checks/Program.cs",
+  "creation_error": "/bin/bash: line 1: north-star/tooling-study/Checks/Program.cs: No such file or directory",
+  "following_build_command": [
+    "/workspace/work/authored-scene/dotnet/dotnet",
+    "build",
+    "../tooling-study/Checks/NorthStar.ToolingChecks.csproj",
+    "-c",
+    "Release",
+    "-m:1",
+    "--disable-build-servers"
+  ],
+  "build_exit_code": 1,
+  "build_error": "CSC : error CS5001: Program does not contain a static Main method suitable for an entry point",
+  "observed_cause": "Workspace-relative creation path was used from csharp, so Program.cs was not created. The correctly located project then failed because it lacked Main.",
+  "correction": "Created the owned new file from maintained workspace; no old source changed. Corrected actual build passed0warnings0errors and28nativecontrols."
+}

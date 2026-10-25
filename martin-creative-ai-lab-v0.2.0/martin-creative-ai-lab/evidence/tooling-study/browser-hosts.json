@@ -1,0 +1,31 @@
+{
+  "complete": true,
+  "logs": [
+    {
+      "command": [
+        "/workspace/work/authored-scene/dotnet/dotnet",
+        "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/tooling-study/Host/bin/Release/net10.0/NorthStar.ToolingStudy.dll",
+        "--serve",
+        "39933",
+        "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/tooling-study/web",
+        "--seconds",
+        "120"
+      ],
+      "stdout": "READY http://127.0.0.1:39933/\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/workspace/work/authored-scene/dotnet/dotnet",
+        "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/tooling-study/Host/bin/Release/net10.0/NorthStar.ToolingStudy.dll",
+        "--serve",
+        "34797",
+        "/tmp/tooling-render-mutant-GQDmhX/web",
+        "--seconds",
+        "120"
+      ],
+      "stdout": "READY http://127.0.0.1:34797/\n",
+      "stderr": ""
+    }
+  ]
+}

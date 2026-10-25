@@ -1,0 +1,12 @@
+{
+  "command": [
+    "/workspace/work/authored-scene/dotnet/dotnet",
+    "north-star/tooling-study/Checks/bin/Release/net10.0/NorthStar.ToolingChecks.dll",
+    "--catalog",
+    "/workspace/work/tooling-engineering/false-catalog-input.json",
+    "/workspace/work/tooling-engineering/false-catalog-output.json"
+  ],
+  "exit_code": 1,
+  "stdout": "{\"passed\":1,\"failed\":1}\n",
+  "stderr": ""
+}

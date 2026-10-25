@@ -74,3 +74,24 @@ recipes and values are experiments, not approved professions, fiction or final e
 Next: investigate persistent/server-owned transaction recovery and item/recipe catalog
 integrity when a real consumer requires them; mature the other incomplete laboratories.
 Preserve Godot consumers until their migration and preservation obligations are resolved.
+
+
+## Exact item identity and retained tools
+
+The [new source method](tooling/run.py) keeps two malformed item rows quarantined,
+loads370 exact identities and compares the SAME87Python/C# probes:81 actual recipe
+references all resolve; six negatives reject quarantined/case/substring/unknown/alias
+queries. Identity does not activate recipes, price an item, grant an unlock or implement
+its consumable effect. Four unlock sets, deprecated quest references and skill namespaces
+remain unresolved; protected originals are not repaired.
+
+The [original tooling consumer](../../north-star/tooling-study/README.md) privately
+composes unchanged CraftInventory and Crossing owners. Two productions spend actual
+materials while preserving the required gauge, and two actual entries consume the
+outputs. The selected adapter forbids declared tools as ingredients or Consume targets;
+this explicit nonremovable-tool policy keeps accepted replay preconditions stable.
+R8 same-ID ingredient behavior is preserved without duplicate transaction credit.
+[Execution](../../evidence/tooling-study/RUN.json) records actual native/browser controls,
+source negatives, missing-tool refusal and loss without refund. This is ONE laboratory
+unit, not extra product/portfolio investment, a full item catalog, historical runtime,
+licensed Windows delivery or human experience proof. Prior methods retain their own scope.

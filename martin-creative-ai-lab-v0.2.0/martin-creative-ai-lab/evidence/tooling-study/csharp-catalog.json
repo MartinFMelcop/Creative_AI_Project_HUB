@@ -1,0 +1,616 @@
+{
+  "schema_version": 1,
+  "references": [
+    {
+      "id": "RCP-ALQ-001/output",
+      "item_id": "CON_POCAO_DE_CURA_PEQUENA_COMUM",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "id": "RCP-ALQ-001/input/0",
+      "item_id": "MAT_ERVAS_MEDICINAIS",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "id": "RCP-ALQ-001/input/1",
+      "item_id": "MAT_FRASCO_VIDRO",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "id": "RCP-ALQ-001/input/2",
+      "item_id": "MAT_AGUA_LIMPA",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "id": "RCP-ALQ-002/output",
+      "item_id": "CON_POCAO_DE_MANA_PEQUENA_COMUM",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "id": "RCP-ALQ-002/input/0",
+      "item_id": "MAT_FUNGOS_ARCANOS",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "id": "RCP-ALQ-002/input/1",
+      "item_id": "MAT_FRASCO_VIDRO",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "id": "RCP-ALQ-002/input/2",
+      "item_id": "MAT_AGUA_LIMPA",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "id": "RCP-ALQ-003/output",
+      "item_id": "CON_ANTIDOTO_DO_BREJO_COMUM",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "id": "RCP-ALQ-003/input/0",
+      "item_id": "MAT_ERVAS_FEBRE_DO_BREJO",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "id": "RCP-ALQ-003/input/1",
+      "item_id": "MAT_ORVALHO_LUMINOSO",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "id": "RCP-ALQ-003/input/2",
+      "item_id": "MAT_FRASCO_VIDRO",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "id": "RCP-COZ-001/output",
+      "item_id": "CON_CARNE_SECA_COMUM",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "id": "RCP-COZ-001/input/0",
+      "item_id": "MAT_CARNE_CRUA",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "id": "RCP-COZ-001/input/1",
+      "item_id": "MAT_SAL",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "id": "RCP-COZ-001/input/2",
+      "item_id": "MAT_LENHA",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "id": "RCP-COZ-002/output",
+      "item_id": "CON_PEIXE_DEFUMADO_COMUM",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "id": "RCP-COZ-002/input/0",
+      "item_id": "MAT_PEIXE",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "id": "RCP-COZ-002/input/1",
+      "item_id": "MAT_SAL",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "id": "RCP-COZ-002/input/2",
+      "item_id": "MAT_LENHA",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "id": "RCP-COZ-003/output",
+      "item_id": "ITM_ISCA_CHEIROSA",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "id": "RCP-COZ-003/input/0",
+      "item_id": "MAT_GORDURA_PEIXE",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "id": "RCP-COZ-003/input/1",
+      "item_id": "MAT_ERVAS_FORTES",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "id": "RCP-COZ-003/input/2",
+      "item_id": "MAT_CORDA",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "id": "RCP-CUL-001/output",
+      "item_id": "MAT_REAGENTE_SECO",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "id": "RCP-CUL-001/input/0",
+      "item_id": "MAT_ERVAS_MEDICINAIS",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "id": "RCP-CUL-002/output",
+      "item_id": "MAT_LINHA",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "id": "RCP-CUL-002/input/0",
+      "item_id": "MAT_FIBRA",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "id": "RCP-OFI-001/output",
+      "item_id": "CON_FLECHAS_SIMPLES_COMUM",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "id": "RCP-OFI-001/input/0",
+      "item_id": "MAT_HASTE_MADEIRA",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "id": "RCP-OFI-001/input/1",
+      "item_id": "MAT_PONTA_PEDRA",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "id": "RCP-OFI-001/input/2",
+      "item_id": "MAT_PENA",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "id": "RCP-OFI-001/tool/0",
+      "item_id": "ITM_BOLSA_DE_FERRAMENTAS_COMUM",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "id": "RCP-OFI-002/output",
+      "item_id": "CON_FLECHAS_FARPADAS_COMUM",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "id": "RCP-OFI-002/input/0",
+      "item_id": "MAT_HASTE_MADEIRA",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "id": "RCP-OFI-002/input/1",
+      "item_id": "MAT_PONTA_OSSO",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "id": "RCP-OFI-002/input/2",
+      "item_id": "MAT_PENA",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "id": "RCP-OFI-002/input/3",
+      "item_id": "MAT_FERRAO_DE_VESPA",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "id": "RCP-OFI-002/input/4",
+      "item_id": "MAT_SORO_DE_ABELHA",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "id": "RCP-OFI-003/output",
+      "item_id": "ITM_BOLSA_DE_FERRAMENTAS_COMUM",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "id": "RCP-OFI-003/input/0",
+      "item_id": "MAT_COURO",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "id": "RCP-OFI-003/input/1",
+      "item_id": "MAT_FIVELA_METAL",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "id": "RCP-OFI-003/input/2",
+      "item_id": "MAT_LINHA",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "id": "RCP-OFI-004/output",
+      "item_id": "CON_KIT_CURATIVO_SIMPLES_COMUM",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "id": "RCP-OFI-004/input/0",
+      "item_id": "MAT_PANO_LIMPO",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "id": "RCP-OFI-004/input/1",
+      "item_id": "MAT_ALCOOL",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "id": "RCP-OFI-004/input/2",
+      "item_id": "MAT_LINHA",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "id": "RCP-OFI-004/tool/0",
+      "item_id": "ITM_BOLSA_DE_FERRAMENTAS_COMUM",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "id": "RCP-FOR-001/output",
+      "item_id": "MAT_BARRA_FERRO_MARINHO",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "id": "RCP-FOR-001/input/0",
+      "item_id": "MAT_MINERIO_FERRO_MARINHO",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "id": "RCP-FOR-001/input/1",
+      "item_id": "MAT_CARVAO",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "id": "RCP-FOR-002/output",
+      "item_id": "ITM_UPGRADE_SIMPLES",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "id": "RCP-FOR-002/input/0",
+      "item_id": "MAT_SUCATA_METAL",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "id": "RCP-FOR-002/input/1",
+      "item_id": "MAT_BARRA_FERRO_MARINHO",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "id": "RCP-TEX-001/output",
+      "item_id": "ARM_CAPA_DE_SEDA_COMUM",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "id": "RCP-TEX-001/input/0",
+      "item_id": "MAT_SEDA_ARANHA",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "id": "RCP-TEX-001/input/1",
+      "item_id": "MAT_LINHA",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "id": "RCP-TEX-002/output",
+      "item_id": "ARM_CAPA_DE_SEDA_INCOMUM",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "id": "RCP-TEX-002/input/0",
+      "item_id": "MAT_SEDA_ARANHA",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "id": "RCP-TEX-002/input/1",
+      "item_id": "MAT_ORVALHO_LUMINOSO",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "id": "RCP-TEX-002/input/2",
+      "item_id": "MAT_LINHA",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "id": "RCP-RUN-001/output",
+      "item_id": "CON_RUNA_DE_IMPACTO_COMUM",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "id": "RCP-RUN-001/input/0",
+      "item_id": "MAT_PEDRA_RUNICA_BRUTA",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "id": "RCP-RUN-001/input/1",
+      "item_id": "CON_ESSENCIA_ESPIRITUAL_COMUM",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "id": "RCP-RUN-001/input/2",
+      "item_id": "MAT_TINTA_ARCANA",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "id": "RCP-RUN-002/output",
+      "item_id": "CON_RUNA_QUEBRADICA_DE_FURIA_COMUM",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "id": "RCP-RUN-002/input/0",
+      "item_id": "MAT_FRAGMENTO_RUNICO",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "id": "RCP-RUN-002/input/1",
+      "item_id": "CON_ESSENCIA_ESPIRITUAL_COMUM",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "id": "RCP-RUN-002/input/2",
+      "item_id": "MAT_TINTA_ARCANA",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "id": "RCP-SCR-001/output",
+      "item_id": "CON_PERGAMINHO_CURA_INFERIOR_COMUM",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "id": "RCP-SCR-001/input/0",
+      "item_id": "MAT_PAPEL",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "id": "RCP-SCR-001/input/1",
+      "item_id": "MAT_TINTA_ARCANA",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "id": "RCP-SCR-001/input/2",
+      "item_id": "CON_ESSENCIA_ESPIRITUAL_COMUM",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "id": "RCP-SCR-002/output",
+      "item_id": "CON_PERGAMINHO_RAIO_MENOR_COMUM",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "id": "RCP-SCR-002/input/0",
+      "item_id": "MAT_PAPEL",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "id": "RCP-SCR-002/input/1",
+      "item_id": "MAT_TINTA_ARCANA",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "id": "RCP-SCR-002/input/2",
+      "item_id": "MAT_SELO_ARCANO",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "id": "RCP-GOL-001/output",
+      "item_id": "QIT_GOLEM_NUCLEO_BRUTO",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "id": "RCP-GOL-001/input/0",
+      "item_id": "MAT_BARRA_FERRO_MARINHO",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "id": "RCP-GOL-001/input/1",
+      "item_id": "MAT_PEDRA_RUNICA_BRUTA",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "id": "RCP-GOL-001/input/2",
+      "item_id": "CON_ESSENCIA_ESPIRITUAL_COMUM",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "id": "negative/quarantined-torch",
+      "item_id": "LGT_TOCHA_PADRAO",
+      "actual": false,
+      "expected": false,
+      "passed": true
+    },
+    {
+      "id": "negative/quarantined-lantern",
+      "item_id": "LGT_LANTERNA_AVANCADA",
+      "actual": false,
+      "expected": false,
+      "passed": true
+    },
+    {
+      "id": "negative/case-is-not-identity",
+      "item_id": "itm_bolsa_de_ferramentas_comum",
+      "actual": false,
+      "expected": false,
+      "passed": true
+    },
+    {
+      "id": "negative/substring-is-not-identity",
+      "item_id": "ITM_BOLSA_DE_FERRAMENTAS",
+      "actual": false,
+      "expected": false,
+      "passed": true
+    },
+    {
+      "id": "negative/unknown-is-not-placeholder",
+      "item_id": "UNKNOWN_ITEM_0001",
+      "actual": false,
+      "expected": false,
+      "passed": true
+    },
+    {
+      "id": "negative/unprovided-alias-is-not-identity",
+      "item_id": "MAT_ESSENCIA_ESPIRITUAL",
+      "actual": false,
+      "expected": false,
+      "passed": true
+    }
+  ],
+  "passed": 87,
+  "failed": 0
+}

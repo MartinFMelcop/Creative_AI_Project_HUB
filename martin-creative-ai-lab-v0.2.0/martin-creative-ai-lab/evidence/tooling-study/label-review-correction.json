@@ -1,0 +1,17 @@
+{
+  "classification": "Actual capture inspection after a passing first execution; not a fabricated runtime assertion failure",
+  "observed": "The owner reports two crafts and two output-consumption commits. The UI labeled aggregate CommittedCount as Craft transactions, showing4 at final completion.",
+  "correction": "Inventory transactions now names the actual aggregate. No owner, counter, source case, fixture, timeout or gate changed.",
+  "first_run_complete": true,
+  "first_run_counts": {
+    "rules_native": 28,
+    "consumer_native": 34,
+    "chromium": 23,
+    "http": 7
+  },
+  "old_html_sha256": "30b72b519ba1eb47d35ef0a306e60f3ef55c5a5318b39b8f4d2ffa646053d610",
+  "corrected_html_sha256": "2fe83cfd3db276dc97d7fa9abe43dca6fffde0c9f3a7c8bd3f733d2c75dd474e",
+  "retained_capture": "evidence/tooling-study/superseded-completion-label.png",
+  "retained_raw_browser": "evidence/tooling-study/superseded-browser.json",
+  "final_verification": "Rerun after this source change; final current execution has its own exact input bindings. Same study/controls, not another effort unit or participant."
+}

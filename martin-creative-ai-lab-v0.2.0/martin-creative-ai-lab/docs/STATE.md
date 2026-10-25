@@ -1,9 +1,9 @@
 # Current transformation continuity
 
-**Updated:**2026-10-24 UTC. **SEED:**0.34.0. Initial actual Git root
+**Updated:** 2026-10-25 UTC. **SEED:** 0.34.0. Initial actual Git root
 `/workspace/Creative_AI_Project_HUB`, branch `work`, HEAD
-`9301c9e444785fa81fae4627364bac3d9223d7bc`, clean tracked/untracked work.
-Fetched main matched, divergence0/0, no outgoing commits. Root authority verifies the
+`b2e405baaf8a1f38d0324c9b4b19b156d1d4400e`, clean tracked/untracked work.
+Fetched main matched, divergence 0/0, no outgoing commits. Root authority verifies the
 maintained workspace and published Continuous Development v2. Publication and current
 CI remain separate handoff observations, never inferred from local execution.
 
@@ -11,163 +11,174 @@ STATE owns initiative continuity; SEED owns direction, [catalog](../labs/origins
 maturity/consumption, [DESIGN](../north-star/DESIGN.md) creative status and evidence actual
 observations. Recover [the full operating process](prompts/CONTINUOUS_DEVELOPMENT.md).
 
-## Active result — selected standing arithmetic has an actual consumer
+## Active result — exact identity and retained tools reach actual use
 
-The [new study](../north-star/reputation-study/Rules/Standing.cs) isolates selected
-six-level arithmetic in a C#8/netstandard2.1 library. Set normalizes zero to+1 and clamps
-to−3..3; Add accepts only the six legal current levels and preserves the inspected
-threshold/zero/saturation rules. Wider intermediate arithmetic handles Int32 extremes.
-The typed boundary rejects invalid current values rather than adopting Ruby coercions,
-unknown-region fallback, ancestry seeds or source-specific defaults.
+The [new tooling rules](../north-star/tooling-study/Rules/Tooling.cs) adapt a narrow
+source contract in C#8/netstandard2.1. ItemCatalog accepts exact known ASCII identities;
+it does not resolve case, substring or unprovided aliases. Catalog presence is not
+ownership, price, usable effect, profession or quest completion. ToolRecipe wraps the
+existing immutable CraftRecipe with required tools. ToolWorkshop privately composes
+one unchanged CraftInventory, preserving its atomic quantity and request ledger owner.
 
-The actual original [consumer](../north-star/reputation-study/Host/Room.cs) has two
-independent experimental counters, quay and orchard, both explicitly initialized at−1.
-These are assay settings, not judgments about a character, approved factions or source
-fiction. One actual borrowed measuring tool can be inspected and returned at its own
-counter for+2, costing two of four work periods. A minor task costs one period for+1.
-Only an accepted service pays one period and two of three coins, then issues a receipt.
-Borrowing itself, promises, reads, elapsed time and another counter's acts grant nothing.
+The selected tool policy is explicit: any ID declared as a retained tool is forbidden
+in every recipe's consumed inputs and in Consume. Tools may be produced, but cannot
+subsequently disappear through this API. That restriction keeps successful retry tool
+preconditions valid before the unchanged core replay; it does not introduce a second
+transaction ledger. Same-ID tool/ingredient overlap is refused rather than silently
+choosing quantity semantics. Consumable-as-ingredient identity remains supported without
+inventing a MAT_ alias or duplicating prior atomic-transaction integration credit.
 
-The retained design counterexample matters: Add(−1,+1) stays−1, so four minor tasks can
-spend the whole horizon without opening service. A single costly returned-custody event
-can cross the sign. Set(0) and Add-to-zero are deliberately different operations. The
-study demonstrates this policy's consequences, not fairness, human trust or a universal
-social ranking. Returned custody is neither character consent nor a world-quest result.
+The original [actual consumer](../north-star/tooling-study/Host/Room.cs) privately owns
+the workshop and real unchanged Crossing. Four fiber, two binder and one owned gauge
+permit two actual Trail rigs. Each production spends materials and preserves the same
+gauge; each encounter entry consumes one real rig. Two real fixed Lure/Trail encounters
+use those outputs. Survey victory is not final completion. A losing entry never refunds
+a rig or its materials. Crafting alone is not an expedition result; observing or naming
+an action cannot create a rig, loan a tool or begin an encounter.
+
+The missing-gauge preset refuses production without changing materials or receipts.
+Selecting an equipped or missing preset starts a separate fresh ephemeral trial; it
+is not tool acquisition, a world refund, saved progress or a grant inferred from a
+historical price/status field. No source character, quest, item effect or fictional
+world is adopted as North Star canon.
 
 ## Source decisions and executed acceptance
 
-[Current execution](../evidence/reputation-study/RUN.json) binds the actual current
-sources and results. Python and compiled C# passed the SAME127 ordered input cases:
-13Set boundaries and six legal current levels times19deltas, including Int32 extremes.
-These are shared cases, not254 independent observations. DEV/DIST helper identity and
-CORE/DIST table identity remain distinct from executing Ruby, RGSS or the historical game.
+[Current execution](../evidence/tooling-study/RUN.json) binds actual source and consumer
+identities. The preserved master has 372 unique literal item IDs: 370 records have the
+48-field shape; two 47-field torch/lantern records remain quarantined. No shifted fields
+are interpreted or repaired. All 81 literal references across 21 recipes resolve to
+width-valid identities. Python and C# applied the SAME 87 ordered cases: those references
+plus six negatives for quarantine, case, substring, unknown ID and an unprovided alias.
+These are shared cases, not 174 independent observations or participants.
 
-All420 typed source effect rows were audited across five source zones, six levels and
-14effect keys. They remain source-only. The actual helper's effects_for returns[];
-the historical consistency report has only a header. The regional-table default−1
-versus helper fallback+1 disagreement remains unresolved. No source hostility, background,
-service/quest lock, pricing multiplier or effect catalog is imported into North Star.
+ITEM_CLASS_RULES R7 distinguishes required nonconsumed tools; R8 keeps a consumable's
+identity when used as an ingredient. Only the narrow exact-ID/retained-tool contract is
+integrated here. Full item categories, stack behavior, effects, prices, crafting outcomes,
+professions and unlock catalogs remain genuinely unresolved. The tool's blank price and
+Backlog status do not make it free or owned. Header-only alias/duplicate reports are not
+executed QA or recovered alias mappings.
 
-The narrow six-level arithmetic is integrated into the actual executed consumer. Direct
-use of the empty hook as a provider of the table's effects is rejected with that precise
-scope; full reputation/faction/quest effects remain unresolved. This is not rejection of
-an entire source collection or a new laboratory-maturity promotion.
+Two source recipes require the same tool. Multiple unlock references do not specify
+AND/OR. The referenced SDQ-0001 is explicitly marked DESCONSIDERAR/rewrite in both quest
+variants. CORE/DIST skill unlock tables agree, but recipe skill IDs and names conflict
+with that namespace: alchemy uses 15 in recipes while unlocks identify alchemy as 11 and
+15 as Rites; other recipe IDs are absent. No numeric or quest normalization is performed.
+These references are source observations, not permission to fabricate unlock completion.
 
-Actual acceptance passed25 native arithmetic controls,29 consumer controls,22 Chromium
-controls,7 HTTP controls and5 instrument regressions. Overlapping controls do not become
-participants, model evaluations, population evidence or effort measurements. Retain the
-stalled minor-task route, invalid-domain/source-permissiveness distinction, region/custody
-isolation and verifier/renderer negatives in the current execution record. The engineering
-instrument's initial wrong-directory MSB1009/edit-path failures were corrected without
-changing unrelated sources, gates, fixtures or timeouts.
+Actual acceptance passed 28 rule controls, 34 consumer controls, 23 Chromium controls,
+7 HTTP controls and 8 instrument regressions. Retain two real productions/entries with
+the gauge intact, missing-tool refusal, failed-entry loss, exact lookup and atomic replay
+boundaries. An actual false-tool renderer is rejected against the real missing-tool
+owner. False expected catalog output remains a failed comparison rather than overriding
+actual lookup. The development file-path error and resulting CS5001 were corrected in
+new owned files; no old source, fixture, timeout or integrity/security gate was weakened.
 
-## Selection, disagreement and coordinated specialties
+## Selection and coordinated specialties
 
-Engineering read complete ENG-004/015/017 chapters and selected a verifiable bounded
-contract, separate policy ownership and actual system execution. Science used
-SCI-013/014/076/077 to declare the helper/table/runtime rivals, exact shared cases and
-limits before acceptance. Creation consulted CRE-005(A),031/038/045/048/061/071(H),
-requiring specific consequences rather than universal moral or ancestry judgments.
+Independent Engineering, Scientific and Creative analyses compared licensed Unity/Windows,
+appropriate author/player/device assessment, source consumption and production needs.
+All identified retained tools and catalog identity as a consequential available frontier;
+this follows actual dependencies rather than a compulsory rotation or repeated craft study.
+ENG-004/015/017 informed the beneficiary, private owner, compatibility and execution levels.
+SCI-013/014/076/077 informed source/quarantine rivals, shared inputs and validity limits.
+CRE-005(A),022/023/031/045/048/061/071(H) required actual costly output use instead of a
+catalog display, while preserving authorship and incomplete source decisions.
 
-Creation preferred item identities and retained tools: the current CraftInventory has
-opaque IDs and no explicit nonconsumed tool requirement. That remains a credible next
-legacy beneficiary, not a discarded collection. Primary selected the reputation assay
-with an original finite service consumer, excluding the source defaults, backgrounds,
-hostility and effect catalog that made a wholesale adaptation inappropriate. The new
-separate Rules project avoids changing Domain, old gameplay owners or recipient closure.
-
-Engineering owned the pure library and native/vector CLI; Science the source instrument,
-protocol and failure detection; Creation the observed consumer interface; primary the
-original event owner, host, consumer controls, execution and repository integration.
+Engineering owned Rules/Checks; Science the source method/protocol and negatives; Creation
+the visible consumer; primary the coordinator, host, actual execution and repository
+integration. A separately coordinated browser instrument observes the actual owner.
 These agents are not the Brain libraries, independent human participants, author approval
-or a model-performance evaluation. Implementation cannot approve canon on Martin's behalf.
+or a model benchmark. No software result approves canon or experience on Martin's behalf.
+
+The separate adapter references unchanged Domain instead of modifying it or copying its
+transaction implementation. Altering Domain would also alter the authored download's
+forward source/binary closure. This bounded composition obtains the retained-tool benefit
+without treating another package rebuild or old recovery matrix as the substantive goal.
 
 ## Access, maturity and remaining obligations
 
-SDK10.0.401 executes from its restored path. Bounded Unity installation-root probes found
-no usable Editor; the protected-root probe was denied, not proof of global absence.
-Editor activation and Windows platform modules remain unverified. No licensed Unity,
-Windows player, Steam, physical device or human experience assessment was executed.
-Those remain stronger production/experience acceptances when actual access exists.
+SDK 10.0.401 executes from its restored path. Bounded installation probes found no usable
+Unity Editor; the protected-root probe was denied, not proof of global absence. Editor
+activation and Windows platform modules remain unverified. No licensed Unity Editor,
+Windows player, Steam, physical device or human assessment was executed. Those remain
+stronger production/experience acceptances when actual access exists.
 
 All eleven destinations remain mandatory. Ten bounded methods remain operational:
 Audio/Music, Visual/Animation, Input/Timing, Narrative & Continuity, Networking &
 Persistence, World & Gameplay, Economy & Simulation, RPG Systems & Progression,
 Combat & Responsiveness and AI Evaluation. **Build/Operations stays incomplete** under
-its unchanged source-to-Windows question; another Linux consumer cannot answer it.
+its unchanged source-to-Windows question. Pure library compilation and .NET10/Linux/browser
+composition are not Unity Editor/import or Windows/Steam delivery.
 
-Full NPC schedules and placement conflicts, reputation/faction effects, quest/world
-catalogs, creation parsing, full effects/passives, item/tool/unlock catalogs, broad
-narrative persistence, commercial clearance, production ownership and human experience
-remain genuinely unresolved. Character-create parsing is malformed and uses ambiguous
-substring/fallback behavior; historical data status is not runtime proof or author policy.
+Full item/tool/unlock catalogs, prices/effects, source professions, NPC schedules and
+placement conflicts, reputation/faction effects, quest/world catalogs, creation parsing,
+full combat effects/passives, broader narrative persistence, commercial clearance,
+production ownership and human experience remain unresolved. No malformed row, deprecated
+quest or historical Implementar/Futuro label is promoted into current runtime authority.
 
-## Preservation and lifecycle
+## Preservation, lifecycle and CI
 
-The unchanged [authored scene](../evidence/request-continuity/RUN.json) retains one
-RequestExpedition, private consent/draft history, actual nested Crossing, costs and
-observed or unaccounted Rill. Fixed Lure/Trail remains setup. New day retains earlier
-accepted history; old-day intent, corrupt/incompatible input and uncertain storage cannot
-silently replace facts. No clock, redraw, promise or audio can fabricate return/delivery.
-Its strict compiled identity and separate PreparedExpedition format remain explicit.
+[Current preservation](../evidence/tooling-study/preservation.json) rechecked 1,147
+prior bound identities exactly. Actual capture inspection also corrected an aggregate
+counter caption to Inventory transactions: two crafts plus two rig consumptions are
+four inventory transactions. [Superseded evidence](../evidence/tooling-study/label-review-correction.json)
+remains; final guarded execution repeated after the HTML change with unchanged outcomes.
 
-The current35,908,523-byte downloadable ZIP remains unchanged, SHA256
+The [prior authored scene](../evidence/request-continuity/RUN.json) retains its unchanged
+RequestExpedition, private consent/draft history, actual Crossing, costs and observed or
+unaccounted Rill. Fixed Lure/Trail remains setup. New day retains earlier accepted history;
+corrupt/incompatible saves and uncertain writes cannot silently replace it. No clock,
+redraw, promise or audio fabricates return/delivery. PreparedExpedition's format stays
+separate. The current 35,908,523-byte ZIP remains unchanged, SHA256
 `d829b1b59ee2dd22f87ab007c4db96bfe1655731b38d02f5085f0b8d30e043e4`.
-The prior two-build/source-recovery and recipient-relaunch observations retain their
-historical scope. They are not fresh packaging or process-matrix executions this cycle.
-The [repair-to-watering journey](../evidence/repair-hauling/RUN.json) also remains unchanged:
-survey is not arrival, arrival is not watering, and actual per-bed pours own delivery.
-Workshop observations stay historical; no NPC return is inferred from posted phases.
+Its prior source recovery, two-build equality and recipient execution remain historical;
+they are not freshly repeated packaging/process acceptance this cycle.
 
-Protected Brain/reference sources, variants, notices, original media and functioning
-consumers retain their identities. No old source, save format, package, release duty or
-rights-bearing artifact is retired here. Git history/public URL or repeated runtime bytes
-alone cannot justify deletion; existing formats and unique dependencies still matter.
-Treatment Line global rounds, Cinderwatch individual-turn scorch and Crossing beats stay
-distinct. Frozen AI evaluation retains one first delivery and its protocol/context/tools/
-attribution limits and superseded race evidence; no new candidate attempt is claimed.
+The [repair journey](../evidence/repair-hauling/RUN.json), [reputation study](../evidence/reputation-study/RUN.json),
+old owners, protected Brain/reference sources, variants, media and notices remain intact.
+The reputation minor-help stall, empty effects hook, default conflict and prior negatives
+retain their earlier scope. Treatment Line global rounds, Cinderwatch individual-turn
+scorch and Crossing beats stay distinct. Frozen AI evaluation retains one first delivery,
+protocol/context/tools/attribution limits and superseded race evidence. No old source,
+save, package, media or release duty is retired; Git history/public URLs or repeated
+runtime bytes alone are insufficient preservation grounds.
 
-## CI continuity and next acceptance
+Baseline **CI40162539637 completed/success attempt1 with eight successful jobs** was
+rechecked. CI40138254689 retains eight successful attempt1 jobs. Preserve earlier separate
+attempt2 successes, dependency-install cancellations, runtime/dotnet mismatch and verified
+archive correction, Eclipse export failure/cancelled rerun, browser timeout, integrity
+cancellation and 626-byte inventory mismatch without inventing causes. The prior
+[receipt-comparison failure](../evidence/request-continuity/initial-instrument-failure.json)
+remains preserved. Publication/current CI are checked separately at handoff; this STATE
+cannot self-embed the identity of its own containing commit.
 
-Baseline **CI40138254689 completed/success attempt1 with eight successful jobs** was
-rechecked. CI40049520667 retains its eight successful attempt1 jobs. CI40046725233 and
-CI40015613477 retain their separate successful attempt2 results and earlier dependency-
-installation cancellations; rerun success does not establish cancellation causes.
-Preserve earlier runtime/dotnet mismatch and archive-authoritative correction, unchanged
-Eclipse export failure/cancelled rerun,60000ms browser timeout, integrity cancellation
-and reproduced626-byte inventory mismatch without invented causes or weakened gates.
-
-The prior [receipt-comparison failure](../evidence/request-continuity/initial-instrument-failure.json)
-remains: transient POST/recovered-GET reasons differ while persisted facts agree. The
-corrected projection and actual next Offer/Confirm controls are not relabeled new work.
-Publication and current CI follow final review/gates and are reported separately at
-handoff; this STATE cannot self-embed the identity of its own containing commit.
-
-Next compare actual licensed Unity/Windows and appropriate author/player/device access
-against consequential item/tool/unlock ownership, remaining source effects and production
-continuity/ownership. SDK absence is obsolete. Do not automatically repeat standing,
-journal/process, repair-route, availability, packaging, status/scene/EVAL-001/media/relay/
-request/recovery/loadout/crafting/progression matrices, fixture repairs or transformation.
-Select an actual beneficiary and preserve meaningful negative/inconclusive results.
+Next compare licensed Unity/Windows and appropriate author/player/device access against
+coherent product use, repository/portfolio delivery, consequential remaining source
+semantics and production ownership. SDK absence is obsolete. Do not automatically repeat
+tooling/catalog, reputation, journal/process, repair-route, availability, packaging,
+status/scene/EVAL-001/media/relay/request/recovery/loadout/crafting/progression matrices,
+fixture repairs or transformation. Choose a real next beneficiary and retain negatives.
 
 ## Rolling investment — one unit per beneficiary
 
-Targets remain approximately47%legacy/laboratories,40%North Star,13%repository/portfolio.
-Counts, files, commits and tokens do not measure effort. At most eight recent units:
+Targets remain approximately 47% legacy/laboratories, 40% North Star and 13% repository/
+portfolio. Counts, files, commits and tokens do not measure effort. Eight recent units:
 
 | Completed substantive unit | Primary stream | Evidence |
 |---|---|---|
-| Coherent authored work/agreement/journey | North Star | [Scene](../evidence/authored-scene/RUN.json) |
 | Source-bound arithmetic/global-round assay | Legacy/laboratories | [Status](../labs/combat-response/status/README.md) |
 | Original costly status encounter | North Star | [Treatment Line](../evidence/combat-status/RUN.json) |
 | Actual recipient/runtime/source-recovery delivery | Repository/portfolio | [Delivery](../evidence/recipient-delivery/RUN.json) |
 | Source mask/actual-authority method and opportunity | Legacy/laboratories | [Availability](../evidence/npc-availability/RUN.json) |
 | Continuous acquired-repair to observed-watering journey | North Star | [Journey](../evidence/repair-hauling/RUN.json) |
 | Durable continuation of the same actual RequestExpedition | North Star | [Continuity](../evidence/request-continuity/RUN.json) |
-| Source-bound standing arithmetic and actual service decision | Legacy/laboratories | [Current execution](../evidence/reputation-study/RUN.json) |
+| Source-bound standing arithmetic and actual service decision | Legacy/laboratories | [Standing](../evidence/reputation-study/RUN.json) |
+| Exact identity and retained tools with actual output use | Legacy/laboratories | [Current execution](../evidence/tooling-study/RUN.json) |
 
-The oldest AI-evaluation unit ages out; its frozen artifact and evidence remain. This
-ONE corrective legacy/laboratory unit interrupts two consecutive North Star units.
-Its original consumer, interface and verification support the same source-consumption
-beneficiary, not extra North Star/portfolio counts. Prior delivery corrected portfolio
-underinvestment; no measured47/40/13 convergence or complete source consumption is claimed.
+The oldest authored-scene unit ages out; its actual consumer and evidence remain. This
+ONE legacy/laboratory unit consumes a narrow additional source contract. Its original
+consumer, interface, execution and CI support that same beneficiary, not extra North Star
+or portfolio units. Two successive legacy units now require a deliberate comparison with
+product/portfolio needs before a third, or a concrete dependency/blocker explaining it.
+No measured 47/40/13 convergence or complete legacy consumption is claimed.

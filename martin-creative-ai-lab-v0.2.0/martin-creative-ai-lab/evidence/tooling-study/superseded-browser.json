@@ -1,0 +1,841 @@
+{
+  "schema_version": 1,
+  "kind": "actual_browser_csharp_tooling",
+  "runtime": {
+    "node": "v24.19.0",
+    "chromium": "154.0.8037.57",
+    "playwright": "1.64.0"
+  },
+  "checks": {
+    "passed": 23,
+    "failed": 0
+  },
+  "http_checks": {
+    "passed": 7,
+    "failed": 0
+  },
+  "controls": [
+    "Explicit equipped trial owns one gauge and finite unspent materials",
+    "Read redraw and elapsed time cannot manufacture craft or entry",
+    "No crafted rig means no encounter or consumed output",
+    "Explicit missing-tool trial does not silently grant the tool",
+    "Missing retained tool refuses before materials or transaction change",
+    "First real craft spends ingredients and preserves the single gauge",
+    "Second real craft consumes remaining ingredients without consuming tool",
+    "A retained tool alone cannot manufacture a third rig",
+    "Actual first entry consumes one produced rig and starts Crossing",
+    "Active encounter cannot craft away its supply boundary",
+    "Repeated entry cannot consume another rig during the same encounter",
+    "Actual survey win is not final Crossing completion",
+    "Survey redraw cannot spend second rig or invent final arrival",
+    "Explicit second entry consumes the second actual produced rig",
+    "Actual final encounter completes with both rigs spent and gauge retained",
+    "Completion cannot grant a free further entry",
+    "Completion does not restore ingredients or production",
+    "Actual losing encounter does not refund the crafted and consumed rig",
+    "A failed consumed rig cannot be reused without actual new production",
+    "Accepted replacement trial discards older queued crafting intent",
+    "Isolated false-tool renderer is detected against actual missing-tool owner",
+    "Actual browser has no uncaught script errors",
+    "Current consumer and unchanged referenced source identities remain exact"
+  ],
+  "http_controls": [
+    "extra fabricated tool",
+    "duplicate command key",
+    "fabricated completion command",
+    "malformed JSON",
+    "cross-origin command",
+    "wrong content type",
+    "oversized body"
+  ],
+  "states": {
+    "initial": {
+      "sequence": 0,
+      "accepted": true,
+      "command": "initial",
+      "text": "Four fiber, two binder and one owned gauge. Two rigs are possible; the same gauge must remain. Crafting is not an expedition result.",
+      "state": {
+        "mode": "equipped",
+        "inventory": {
+          "fiber": 4,
+          "binder": 2,
+          "gauge": 1,
+          "trail_rig": 0
+        },
+        "transactions": 0,
+        "consumed_rigs": 0,
+        "attempts": 0,
+        "encounter": null,
+        "scope": "Original finite ephemeral tooling consumer of unchanged inventory/Crossing. No source item effects/quests, persistent world, approved canon, Unity/Windows/Steam or human validation."
+      }
+    },
+    "missing": {
+      "sequence": 2,
+      "accepted": true,
+      "command": "restart missing",
+      "text": "A fresh missing trial replaces this ephemeral study. Initial materials are assay setup, not refunded world resources or an acquired tool.",
+      "state": {
+        "mode": "missing",
+        "inventory": {
+          "fiber": 4,
+          "binder": 2,
+          "gauge": 0,
+          "trail_rig": 0
+        },
+        "transactions": 0,
+        "consumed_rigs": 0,
+        "attempts": 0,
+        "encounter": null,
+        "scope": "Original finite ephemeral tooling consumer of unchanged inventory/Crossing. No source item effects/quests, persistent world, approved canon, Unity/Windows/Steam or human validation."
+      }
+    },
+    "firstCraft": {
+      "sequence": 5,
+      "accepted": true,
+      "command": "craft",
+      "text": "Two fiber and one binder were actually consumed. One Trail rig was made; the required gauge remains owned and unconsumed.",
+      "state": {
+        "mode": "equipped",
+        "inventory": {
+          "fiber": 2,
+          "binder": 1,
+          "gauge": 1,
+          "trail_rig": 1
+        },
+        "transactions": 1,
+        "consumed_rigs": 0,
+        "attempts": 0,
+        "encounter": null,
+        "scope": "Original finite ephemeral tooling consumer of unchanged inventory/Crossing. No source item effects/quests, persistent world, approved canon, Unity/Windows/Steam or human validation."
+      }
+    },
+    "secondCraft": {
+      "sequence": 6,
+      "accepted": true,
+      "command": "craft",
+      "text": "Two fiber and one binder were actually consumed. One Trail rig was made; the required gauge remains owned and unconsumed.",
+      "state": {
+        "mode": "equipped",
+        "inventory": {
+          "fiber": 0,
+          "binder": 0,
+          "gauge": 1,
+          "trail_rig": 2
+        },
+        "transactions": 2,
+        "consumed_rigs": 0,
+        "attempts": 0,
+        "encounter": null,
+        "scope": "Original finite ephemeral tooling consumer of unchanged inventory/Crossing. No source item effects/quests, persistent world, approved canon, Unity/Windows/Steam or human validation."
+      }
+    },
+    "entry": {
+      "sequence": 8,
+      "accepted": true,
+      "command": "enter",
+      "text": "One actual crafted rig was consumed for this fixed Lure/Trail encounter. The gauge remains at the bench. Failure gives no rig or material refund.",
+      "state": {
+        "mode": "equipped",
+        "inventory": {
+          "fiber": 0,
+          "binder": 0,
+          "gauge": 1,
+          "trail_rig": 1
+        },
+        "transactions": 3,
+        "consumed_rigs": 1,
+        "attempts": 1,
+        "encounter": {
+          "active": true,
+          "complete": false,
+          "won": false,
+          "stage": 0,
+          "beat": 0,
+          "position": 0,
+          "health": 10,
+          "resolve": 10,
+          "threat": "BOLT: moving exposes health; the approach skill spends resolve to protect.",
+          "required_position": 2,
+          "maximum_beats": 4
+        },
+        "scope": "Original finite ephemeral tooling consumer of unchanged inventory/Crossing. No source item effects/quests, persistent world, approved canon, Unity/Windows/Steam or human validation."
+      }
+    },
+    "survey": {
+      "sequence": 14,
+      "accepted": true,
+      "command": "skill",
+      "text": "Skill: 0 damage, 3 resolve spent. Completed; reward committed. Level 2, 2 unspent points. Survey won; final expedition is still incomplete. A second actual rig and explicit entry are required.",
+      "state": {
+        "mode": "equipped",
+        "inventory": {
+          "fiber": 0,
+          "binder": 0,
+          "gauge": 1,
+          "trail_rig": 1
+        },
+        "transactions": 3,
+        "consumed_rigs": 1,
+        "attempts": 1,
+        "encounter": {
+          "active": false,
+          "complete": false,
+          "won": true,
+          "stage": 1,
+          "beat": 4,
+          "position": 4,
+          "health": 10,
+          "resolve": 3,
+          "threat": "PULSE at your current position: walking or dashing leaves it.",
+          "required_position": 4,
+          "maximum_beats": 6
+        },
+        "scope": "Original finite ephemeral tooling consumer of unchanged inventory/Crossing. No source item effects/quests, persistent world, approved canon, Unity/Windows/Steam or human validation."
+      }
+    },
+    "secondEntry": {
+      "sequence": 15,
+      "accepted": true,
+      "command": "enter",
+      "text": "One actual crafted rig was consumed for this fixed Lure/Trail encounter. The gauge remains at the bench. Failure gives no rig or material refund.",
+      "state": {
+        "mode": "equipped",
+        "inventory": {
+          "fiber": 0,
+          "binder": 0,
+          "gauge": 1,
+          "trail_rig": 0
+        },
+        "transactions": 4,
+        "consumed_rigs": 2,
+        "attempts": 2,
+        "encounter": {
+          "active": true,
+          "complete": false,
+          "won": false,
+          "stage": 1,
+          "beat": 0,
+          "position": 0,
+          "health": 11,
+          "resolve": 11,
+          "threat": "BOLT: moving exposes health; the approach skill spends resolve to protect.",
+          "required_position": 4,
+          "maximum_beats": 6
+        },
+        "scope": "Original finite ephemeral tooling consumer of unchanged inventory/Crossing. No source item effects/quests, persistent world, approved canon, Unity/Windows/Steam or human validation."
+      }
+    },
+    "complete": {
+      "sequence": 21,
+      "accepted": true,
+      "command": "skill",
+      "text": "Skill: 0 damage, 3 resolve spent. Completed; reward committed. Level 3, 4 unspent points.",
+      "state": {
+        "mode": "equipped",
+        "inventory": {
+          "fiber": 0,
+          "binder": 0,
+          "gauge": 1,
+          "trail_rig": 0
+        },
+        "transactions": 4,
+        "consumed_rigs": 2,
+        "attempts": 2,
+        "encounter": {
+          "active": false,
+          "complete": true,
+          "won": true,
+          "stage": 1,
+          "beat": 6,
+          "position": 6,
+          "health": 11,
+          "resolve": 3,
+          "threat": "BOLT: moving exposes health; the approach skill spends resolve to protect.",
+          "required_position": 4,
+          "maximum_beats": 6
+        },
+        "scope": "Original finite ephemeral tooling consumer of unchanged inventory/Crossing. No source item effects/quests, persistent world, approved canon, Unity/Windows/Steam or human validation."
+      }
+    },
+    "failed": {
+      "sequence": 29,
+      "accepted": true,
+      "command": "wait",
+      "text": "Wait: 4 damage, 0 resolve spent. Crossing failed. Reprepare and retry; no completion reward.",
+      "state": {
+        "mode": "equipped",
+        "inventory": {
+          "fiber": 2,
+          "binder": 1,
+          "gauge": 1,
+          "trail_rig": 0
+        },
+        "transactions": 2,
+        "consumed_rigs": 1,
+        "attempts": 1,
+        "encounter": {
+          "active": false,
+          "complete": false,
+          "won": false,
+          "stage": 0,
+          "beat": 3,
+          "position": 0,
+          "health": 0,
+          "resolve": 10,
+          "threat": "BOLT: moving exposes health; the approach skill spends resolve to protect.",
+          "required_position": 2,
+          "maximum_beats": 4
+        },
+        "scope": "Original finite ephemeral tooling consumer of unchanged inventory/Crossing. No source item effects/quests, persistent world, approved canon, Unity/Windows/Steam or human validation."
+      }
+    },
+    "newTrialQueue": {
+      "sequence": 31,
+      "accepted": true,
+      "command": "restart equipped",
+      "text": "A fresh equipped trial replaces this ephemeral study. Initial materials are assay setup, not refunded world resources or an acquired tool.",
+      "state": {
+        "mode": "equipped",
+        "inventory": {
+          "fiber": 4,
+          "binder": 2,
+          "gauge": 1,
+          "trail_rig": 0
+        },
+        "transactions": 0,
+        "consumed_rigs": 0,
+        "attempts": 0,
+        "encounter": null,
+        "scope": "Original finite ephemeral tooling consumer of unchanged inventory/Crossing. No source item effects/quests, persistent world, approved canon, Unity/Windows/Steam or human validation."
+      }
+    }
+  },
+  "negatives": [
+    {
+      "id": "No crafted rig means no encounter or consumed output",
+      "before": {
+        "sequence": 0,
+        "accepted": true,
+        "command": "initial",
+        "text": "Four fiber, two binder and one owned gauge. Two rigs are possible; the same gauge must remain. Crafting is not an expedition result.",
+        "state": {
+          "mode": "equipped",
+          "inventory": {
+            "fiber": 4,
+            "binder": 2,
+            "gauge": 1,
+            "trail_rig": 0
+          },
+          "transactions": 0,
+          "consumed_rigs": 0,
+          "attempts": 0,
+          "encounter": null,
+          "scope": "Original finite ephemeral tooling consumer of unchanged inventory/Crossing. No source item effects/quests, persistent world, approved canon, Unity/Windows/Steam or human validation."
+        }
+      },
+      "after": {
+        "sequence": 1,
+        "accepted": false,
+        "command": "enter",
+        "text": "No crafted rig exists. Entry cannot spend material promises or the retained gauge.",
+        "state": {
+          "mode": "equipped",
+          "inventory": {
+            "fiber": 4,
+            "binder": 2,
+            "gauge": 1,
+            "trail_rig": 0
+          },
+          "transactions": 0,
+          "consumed_rigs": 0,
+          "attempts": 0,
+          "encounter": null,
+          "scope": "Original finite ephemeral tooling consumer of unchanged inventory/Crossing. No source item effects/quests, persistent world, approved canon, Unity/Windows/Steam or human validation."
+        }
+      }
+    },
+    {
+      "id": "Missing retained tool refuses before materials or transaction change",
+      "before": {
+        "sequence": 2,
+        "accepted": true,
+        "command": "restart missing",
+        "text": "A fresh missing trial replaces this ephemeral study. Initial materials are assay setup, not refunded world resources or an acquired tool.",
+        "state": {
+          "mode": "missing",
+          "inventory": {
+            "fiber": 4,
+            "binder": 2,
+            "gauge": 0,
+            "trail_rig": 0
+          },
+          "transactions": 0,
+          "consumed_rigs": 0,
+          "attempts": 0,
+          "encounter": null,
+          "scope": "Original finite ephemeral tooling consumer of unchanged inventory/Crossing. No source item effects/quests, persistent world, approved canon, Unity/Windows/Steam or human validation."
+        }
+      },
+      "after": {
+        "sequence": 3,
+        "accepted": false,
+        "command": "craft",
+        "text": "Required retained tool is missing.",
+        "state": {
+          "mode": "missing",
+          "inventory": {
+            "fiber": 4,
+            "binder": 2,
+            "gauge": 0,
+            "trail_rig": 0
+          },
+          "transactions": 0,
+          "consumed_rigs": 0,
+          "attempts": 0,
+          "encounter": null,
+          "scope": "Original finite ephemeral tooling consumer of unchanged inventory/Crossing. No source item effects/quests, persistent world, approved canon, Unity/Windows/Steam or human validation."
+        }
+      }
+    },
+    {
+      "id": "A retained tool alone cannot manufacture a third rig",
+      "before": {
+        "sequence": 6,
+        "accepted": true,
+        "command": "craft",
+        "text": "Two fiber and one binder were actually consumed. One Trail rig was made; the required gauge remains owned and unconsumed.",
+        "state": {
+          "mode": "equipped",
+          "inventory": {
+            "fiber": 0,
+            "binder": 0,
+            "gauge": 1,
+            "trail_rig": 2
+          },
+          "transactions": 2,
+          "consumed_rigs": 0,
+          "attempts": 0,
+          "encounter": null,
+          "scope": "Original finite ephemeral tooling consumer of unchanged inventory/Crossing. No source item effects/quests, persistent world, approved canon, Unity/Windows/Steam or human validation."
+        }
+      },
+      "after": {
+        "sequence": 7,
+        "accepted": false,
+        "command": "craft",
+        "text": "Insufficient materials.",
+        "state": {
+          "mode": "equipped",
+          "inventory": {
+            "fiber": 0,
+            "binder": 0,
+            "gauge": 1,
+            "trail_rig": 2
+          },
+          "transactions": 2,
+          "consumed_rigs": 0,
+          "attempts": 0,
+          "encounter": null,
+          "scope": "Original finite ephemeral tooling consumer of unchanged inventory/Crossing. No source item effects/quests, persistent world, approved canon, Unity/Windows/Steam or human validation."
+        }
+      }
+    },
+    {
+      "id": "Active encounter cannot craft away its supply boundary",
+      "before": {
+        "sequence": 8,
+        "accepted": true,
+        "command": "enter",
+        "text": "One actual crafted rig was consumed for this fixed Lure/Trail encounter. The gauge remains at the bench. Failure gives no rig or material refund.",
+        "state": {
+          "mode": "equipped",
+          "inventory": {
+            "fiber": 0,
+            "binder": 0,
+            "gauge": 1,
+            "trail_rig": 1
+          },
+          "transactions": 3,
+          "consumed_rigs": 1,
+          "attempts": 1,
+          "encounter": {
+            "active": true,
+            "complete": false,
+            "won": false,
+            "stage": 0,
+            "beat": 0,
+            "position": 0,
+            "health": 10,
+            "resolve": 10,
+            "threat": "BOLT: moving exposes health; the approach skill spends resolve to protect.",
+            "required_position": 2,
+            "maximum_beats": 4
+          },
+          "scope": "Original finite ephemeral tooling consumer of unchanged inventory/Crossing. No source item effects/quests, persistent world, approved canon, Unity/Windows/Steam or human validation."
+        }
+      },
+      "after": {
+        "sequence": 9,
+        "accepted": false,
+        "command": "craft",
+        "text": "The bench is unavailable during or after this expedition. No inventory changes.",
+        "state": {
+          "mode": "equipped",
+          "inventory": {
+            "fiber": 0,
+            "binder": 0,
+            "gauge": 1,
+            "trail_rig": 1
+          },
+          "transactions": 3,
+          "consumed_rigs": 1,
+          "attempts": 1,
+          "encounter": {
+            "active": true,
+            "complete": false,
+            "won": false,
+            "stage": 0,
+            "beat": 0,
+            "position": 0,
+            "health": 10,
+            "resolve": 10,
+            "threat": "BOLT: moving exposes health; the approach skill spends resolve to protect.",
+            "required_position": 2,
+            "maximum_beats": 4
+          },
+          "scope": "Original finite ephemeral tooling consumer of unchanged inventory/Crossing. No source item effects/quests, persistent world, approved canon, Unity/Windows/Steam or human validation."
+        }
+      }
+    },
+    {
+      "id": "Repeated entry cannot consume another rig during the same encounter",
+      "before": {
+        "sequence": 9,
+        "accepted": false,
+        "command": "craft",
+        "text": "The bench is unavailable during or after this expedition. No inventory changes.",
+        "state": {
+          "mode": "equipped",
+          "inventory": {
+            "fiber": 0,
+            "binder": 0,
+            "gauge": 1,
+            "trail_rig": 1
+          },
+          "transactions": 3,
+          "consumed_rigs": 1,
+          "attempts": 1,
+          "encounter": {
+            "active": true,
+            "complete": false,
+            "won": false,
+            "stage": 0,
+            "beat": 0,
+            "position": 0,
+            "health": 10,
+            "resolve": 10,
+            "threat": "BOLT: moving exposes health; the approach skill spends resolve to protect.",
+            "required_position": 2,
+            "maximum_beats": 4
+          },
+          "scope": "Original finite ephemeral tooling consumer of unchanged inventory/Crossing. No source item effects/quests, persistent world, approved canon, Unity/Windows/Steam or human validation."
+        }
+      },
+      "after": {
+        "sequence": 10,
+        "accepted": false,
+        "command": "enter",
+        "text": "An active or completed expedition cannot start another entry.",
+        "state": {
+          "mode": "equipped",
+          "inventory": {
+            "fiber": 0,
+            "binder": 0,
+            "gauge": 1,
+            "trail_rig": 1
+          },
+          "transactions": 3,
+          "consumed_rigs": 1,
+          "attempts": 1,
+          "encounter": {
+            "active": true,
+            "complete": false,
+            "won": false,
+            "stage": 0,
+            "beat": 0,
+            "position": 0,
+            "health": 10,
+            "resolve": 10,
+            "threat": "BOLT: moving exposes health; the approach skill spends resolve to protect.",
+            "required_position": 2,
+            "maximum_beats": 4
+          },
+          "scope": "Original finite ephemeral tooling consumer of unchanged inventory/Crossing. No source item effects/quests, persistent world, approved canon, Unity/Windows/Steam or human validation."
+        }
+      }
+    },
+    {
+      "id": "Completion cannot grant a free further entry",
+      "before": {
+        "sequence": 21,
+        "accepted": true,
+        "command": "skill",
+        "text": "Skill: 0 damage, 3 resolve spent. Completed; reward committed. Level 3, 4 unspent points.",
+        "state": {
+          "mode": "equipped",
+          "inventory": {
+            "fiber": 0,
+            "binder": 0,
+            "gauge": 1,
+            "trail_rig": 0
+          },
+          "transactions": 4,
+          "consumed_rigs": 2,
+          "attempts": 2,
+          "encounter": {
+            "active": false,
+            "complete": true,
+            "won": true,
+            "stage": 1,
+            "beat": 6,
+            "position": 6,
+            "health": 11,
+            "resolve": 3,
+            "threat": "BOLT: moving exposes health; the approach skill spends resolve to protect.",
+            "required_position": 4,
+            "maximum_beats": 6
+          },
+          "scope": "Original finite ephemeral tooling consumer of unchanged inventory/Crossing. No source item effects/quests, persistent world, approved canon, Unity/Windows/Steam or human validation."
+        }
+      },
+      "after": {
+        "sequence": 22,
+        "accepted": false,
+        "command": "enter",
+        "text": "An active or completed expedition cannot start another entry.",
+        "state": {
+          "mode": "equipped",
+          "inventory": {
+            "fiber": 0,
+            "binder": 0,
+            "gauge": 1,
+            "trail_rig": 0
+          },
+          "transactions": 4,
+          "consumed_rigs": 2,
+          "attempts": 2,
+          "encounter": {
+            "active": false,
+            "complete": true,
+            "won": true,
+            "stage": 1,
+            "beat": 6,
+            "position": 6,
+            "health": 11,
+            "resolve": 3,
+            "threat": "BOLT: moving exposes health; the approach skill spends resolve to protect.",
+            "required_position": 4,
+            "maximum_beats": 6
+          },
+          "scope": "Original finite ephemeral tooling consumer of unchanged inventory/Crossing. No source item effects/quests, persistent world, approved canon, Unity/Windows/Steam or human validation."
+        }
+      }
+    },
+    {
+      "id": "Completion does not restore ingredients or production",
+      "before": {
+        "sequence": 22,
+        "accepted": false,
+        "command": "enter",
+        "text": "An active or completed expedition cannot start another entry.",
+        "state": {
+          "mode": "equipped",
+          "inventory": {
+            "fiber": 0,
+            "binder": 0,
+            "gauge": 1,
+            "trail_rig": 0
+          },
+          "transactions": 4,
+          "consumed_rigs": 2,
+          "attempts": 2,
+          "encounter": {
+            "active": false,
+            "complete": true,
+            "won": true,
+            "stage": 1,
+            "beat": 6,
+            "position": 6,
+            "health": 11,
+            "resolve": 3,
+            "threat": "BOLT: moving exposes health; the approach skill spends resolve to protect.",
+            "required_position": 4,
+            "maximum_beats": 6
+          },
+          "scope": "Original finite ephemeral tooling consumer of unchanged inventory/Crossing. No source item effects/quests, persistent world, approved canon, Unity/Windows/Steam or human validation."
+        }
+      },
+      "after": {
+        "sequence": 23,
+        "accepted": false,
+        "command": "craft",
+        "text": "The bench is unavailable during or after this expedition. No inventory changes.",
+        "state": {
+          "mode": "equipped",
+          "inventory": {
+            "fiber": 0,
+            "binder": 0,
+            "gauge": 1,
+            "trail_rig": 0
+          },
+          "transactions": 4,
+          "consumed_rigs": 2,
+          "attempts": 2,
+          "encounter": {
+            "active": false,
+            "complete": true,
+            "won": true,
+            "stage": 1,
+            "beat": 6,
+            "position": 6,
+            "health": 11,
+            "resolve": 3,
+            "threat": "BOLT: moving exposes health; the approach skill spends resolve to protect.",
+            "required_position": 4,
+            "maximum_beats": 6
+          },
+          "scope": "Original finite ephemeral tooling consumer of unchanged inventory/Crossing. No source item effects/quests, persistent world, approved canon, Unity/Windows/Steam or human validation."
+        }
+      }
+    },
+    {
+      "id": "A failed consumed rig cannot be reused without actual new production",
+      "before": {
+        "sequence": 29,
+        "accepted": true,
+        "command": "wait",
+        "text": "Wait: 4 damage, 0 resolve spent. Crossing failed. Reprepare and retry; no completion reward.",
+        "state": {
+          "mode": "equipped",
+          "inventory": {
+            "fiber": 2,
+            "binder": 1,
+            "gauge": 1,
+            "trail_rig": 0
+          },
+          "transactions": 2,
+          "consumed_rigs": 1,
+          "attempts": 1,
+          "encounter": {
+            "active": false,
+            "complete": false,
+            "won": false,
+            "stage": 0,
+            "beat": 3,
+            "position": 0,
+            "health": 0,
+            "resolve": 10,
+            "threat": "BOLT: moving exposes health; the approach skill spends resolve to protect.",
+            "required_position": 2,
+            "maximum_beats": 4
+          },
+          "scope": "Original finite ephemeral tooling consumer of unchanged inventory/Crossing. No source item effects/quests, persistent world, approved canon, Unity/Windows/Steam or human validation."
+        }
+      },
+      "after": {
+        "sequence": 30,
+        "accepted": false,
+        "command": "enter",
+        "text": "No crafted rig exists. Entry cannot spend material promises or the retained gauge.",
+        "state": {
+          "mode": "equipped",
+          "inventory": {
+            "fiber": 2,
+            "binder": 1,
+            "gauge": 1,
+            "trail_rig": 0
+          },
+          "transactions": 2,
+          "consumed_rigs": 1,
+          "attempts": 1,
+          "encounter": {
+            "active": false,
+            "complete": false,
+            "won": false,
+            "stage": 0,
+            "beat": 3,
+            "position": 0,
+            "health": 0,
+            "resolve": 10,
+            "threat": "BOLT: moving exposes health; the approach skill spends resolve to protect.",
+            "required_position": 2,
+            "maximum_beats": 4
+          },
+          "scope": "Original finite ephemeral tooling consumer of unchanged inventory/Crossing. No source item effects/quests, persistent world, approved canon, Unity/Windows/Steam or human validation."
+        }
+      }
+    },
+    {
+      "id": "forced-tool-renderer",
+      "detected": true,
+      "mutation": {
+        "target": "const gaugeObserved = state.inventory.gauge;",
+        "replacement": "const gaugeObserved = 1;",
+        "original_sha256": "0179228a7fceef6f5109f1269c9c5c08346f1e1f7cf1c3f228edf60152e36f53",
+        "mutated_sha256": "36a86abf67d6c2e9b4544c6d23beadab2aeb39df9917e6cb95a386b96e5f3a79"
+      },
+      "actual": {
+        "sequence": 1,
+        "accepted": true,
+        "command": "restart missing",
+        "text": "A fresh missing trial replaces this ephemeral study. Initial materials are assay setup, not refunded world resources or an acquired tool.",
+        "state": {
+          "mode": "missing",
+          "inventory": {
+            "fiber": 4,
+            "binder": 2,
+            "gauge": 0,
+            "trail_rig": 0
+          },
+          "transactions": 0,
+          "consumed_rigs": 0,
+          "attempts": 0,
+          "encounter": null,
+          "scope": "Original finite ephemeral tooling consumer of unchanged inventory/Crossing. No source item effects/quests, persistent world, approved canon, Unity/Windows/Steam or human validation."
+        }
+      },
+      "assertion": {
+        "name": "AssertionError",
+        "code": "ERR_ASSERTION",
+        "message": "Actual inventory gauge follows owner\n\n1 !== 0\n"
+      }
+    }
+  ],
+  "source_sha256": {
+    "north-star/csharp/Crossing/NorthStar.Crossing.csproj": "09fbdffe415d44079f66da83d4d22e5b91169f3f1abdd0e1ebc2bacd2e3f0c88",
+    "north-star/csharp/Crossing/Program.cs": "268c1b5ac582dd06f15eb3e40e7ce859a9c58eecfc58c7586d94bcaecf9c595e",
+    "north-star/csharp/Crossing/Session.cs": "d25ac05ba1a94432474dd1b14b4fd608e446fc5344dcc4f779d8d5fe27a1b2c5",
+    "north-star/csharp/Domain/Crafting.cs": "5a5a892b3e68cff73f7a443d7c014c79dbebf2954d28f447e1bf3a9c4759de57",
+    "north-star/csharp/Domain/Loadout.cs": "a1296ca13b5ba6728c073320b860e369ad2e01fdaacb45b5237ef40d0243f682",
+    "north-star/csharp/Domain/NorthStar.Domain.csproj": "9570b674acfea69bb60098f495afd3b9e2cef2575fcfeb6db71c2cdecb2c4876",
+    "north-star/csharp/Domain/Progression.cs": "8495e1ad92fea069c2c3989f6f2cc2600980575e72812df9480ed193c51c8685",
+    "north-star/csharp/global.json": "e0c0882461e712f6c2c66241bf2f175c60832e3ff077dc26091ff8c661d4193e",
+    "north-star/tooling-study/Checks/NorthStar.ToolingChecks.csproj": "9de6f4bc362c16681084c225f38feb7e7feafe18ef5361c945f411626f7db325",
+    "north-star/tooling-study/Checks/Program.cs": "66980df4b14edbfbe3ece219fe0c9f7ec2316210b850473dcd8cde999e408eff",
+    "north-star/tooling-study/ConsumerChecks/NorthStar.ToolingConsumerChecks.csproj": "e0398a932406c78a57f1cc5d12d06f8a5d62d4a0c8ae89f2e9e8e4de87c1fbbc",
+    "north-star/tooling-study/ConsumerChecks/Program.cs": "0bcf7f437bd6d2a8a9796c454e986bf42ab3af10a11b36727e72c6e3f3354b08",
+    "north-star/tooling-study/Host/NorthStar.ToolingStudy.csproj": "1dc61643abe73064f301c5c48f3757b1b3dfad3c580db542fb3e7063ef0493d8",
+    "north-star/tooling-study/Host/Program.cs": "3ad223d0ab469060d3bae4a31fe9beeb109b22ecd952df5896061951bab584a4",
+    "north-star/tooling-study/Host/Room.cs": "01475a574f20111f54bd133c1e1b2ce9544a6f37b2e97952ca602698aad9b6a1",
+    "north-star/tooling-study/Rules/NorthStar.Tooling.csproj": "70da75c5a69f7e92b7e73cbfcefd3bd10bd35a8064590b3e98e9a49464471df4",
+    "north-star/tooling-study/Rules/Tooling.cs": "5bf1b1407c015b6e930b5e9c3be5e6551775425aa83ef8f3ae32459e2f6988b1",
+    "north-star/tooling-study/tools/browser.mjs": "22a872f2ff57d216aa75ca70c793fa869904e4edc641c92af3835b6e969a96d3",
+    "north-star/tooling-study/web/app.js": "0179228a7fceef6f5109f1269c9c5c08346f1e1f7cf1c3f228edf60152e36f53",
+    "north-star/tooling-study/web/index.html": "30b72b519ba1eb47d35ef0a306e60f3ef55c5a5318b39b8f4d2ffa646053d610",
+    "north-star/tooling-study/web/style.css": "5781b5a89f05900968994fcd115b9d95f202da5e8e4d3544444efdbdca0a1778",
+    "projects/realtime-integration-lab/package-lock.json": "aa191ef2158e6cc6f770bf4b3ee44dca17175ef1a3cd572b98115246bf46aea7",
+    "projects/realtime-integration-lab/package.json": "42e3cc9633e522dd6d9a5c11023418331129632881a8bf0b95e3717247d57ebe"
+  },
+  "source_stable": true,
+  "scope": "Original finite trusted-local C# tool/production consumer with actual unchanged Crossing output consumption. Synthetic software controls, not people, source quest/effect execution, human balance, Unity/Windows/Steam or production ownership."
+}

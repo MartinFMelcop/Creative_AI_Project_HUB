@@ -1,0 +1,42 @@
+{
+  "sdk": "10.0.401",
+  "path": {
+    "dotnet": null,
+    "Unity": null,
+    "unity": null,
+    "UnityHub": null,
+    "steamcmd": null
+  },
+  "editor_probes": [
+    {
+      "path": "/opt/Unity",
+      "exists": false,
+      "entries": []
+    },
+    {
+      "path": "/opt/unity",
+      "exists": false,
+      "entries": []
+    },
+    {
+      "path": "/opt/unityhub",
+      "exists": false,
+      "entries": []
+    },
+    {
+      "path": "/Applications/Unity/Hub/Editor",
+      "exists": false,
+      "entries": []
+    },
+    {
+      "path": "/root/Unity/Hub/Editor",
+      "observation": "PermissionError; not absence evidence"
+    }
+  ],
+  "activation": "unverified",
+  "windows_modules": "unverified",
+  "unity_executed": false,
+  "windows_executed": false,
+  "steam_executed": false,
+  "scope": "Bounded actual executable/installation probes, not global absence, license/module proof, physical-device or participant access. SDK executes at the restored explicit path. Cloud policy was current/enforced/connected with no configured capabilities or secrets; no bypass attempted."
+}

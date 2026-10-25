@@ -1,0 +1,170 @@
+{
+  "schema_version": 1,
+  "checks": {
+    "passed": 87,
+    "failed": 0
+  },
+  "same_identity_cases": 87,
+  "actual_source_references": 81,
+  "source_assay": {
+    "item_records": 372,
+    "structurally_valid_identity_records": 370,
+    "quarantined_records": [
+      {
+        "record_ordinal": 371,
+        "item_id": "LGT_TOCHA_PADRAO",
+        "fields": 47,
+        "expected_fields": 48,
+        "reason": "Ragged record: only the literal first-field ID is observed; no shifted columns are interpreted or repaired."
+      },
+      {
+        "record_ordinal": 372,
+        "item_id": "LGT_LANTERNA_AVANCADA",
+        "fields": 47,
+        "expected_fields": 48,
+        "reason": "Ragged record: only the literal first-field ID is observed; no shifted columns are interpreted or repaired."
+      }
+    ],
+    "recipe_records": 21,
+    "actual_resolved_literal_references": 81,
+    "same_identity_cases": 87,
+    "required_tools": [
+      {
+        "recipe_id": "RCP-OFI-001",
+        "item_id": "ITM_BOLSA_DE_FERRAMENTAS_COMUM",
+        "consumed": false
+      },
+      {
+        "recipe_id": "RCP-OFI-004",
+        "item_id": "ITM_BOLSA_DE_FERRAMENTAS_COMUM",
+        "consumed": false
+      }
+    ],
+    "recipe_implementation_statuses": {
+      "Implementar": 14,
+      "Em an\u00e1lise": 5,
+      "Parcial": 1,
+      "Futuro": 1
+    },
+    "ambiguous_unlock_references": [
+      {
+        "recipe_id": "RCP-CUL-002",
+        "raw_refs": "SDQ-0004;SDQ-0012",
+        "resolution": "UNRESOLVED AND/OR; not converted to a grant"
+      },
+      {
+        "recipe_id": "RCP-OFI-004",
+        "raw_refs": "SDQ-0001;SDQ-0007",
+        "resolution": "UNRESOLVED AND/OR; not converted to a grant"
+      },
+      {
+        "recipe_id": "RCP-TEX-002",
+        "raw_refs": "SDQ-0009;SDQ-0012",
+        "resolution": "UNRESOLVED AND/OR; not converted to a grant"
+      },
+      {
+        "recipe_id": "RCP-GOL-001",
+        "raw_refs": "QST-0026;QST-0027",
+        "resolution": "UNRESOLVED AND/OR; not converted to a grant"
+      }
+    ],
+    "deprecated_quest_recipe_references": [
+      "RCP-ALQ-001",
+      "RCP-OFI-004"
+    ],
+    "skill_unlock_records": 78,
+    "core_dist_unlocks_identical": true,
+    "recipe_skill_ids_missing_in_unlock_namespace": [
+      "20",
+      "22",
+      "23",
+      "28"
+    ],
+    "skill_namespace_example": {
+      "recipe_alchemy_skill": "15",
+      "unlock_15_name": "Ritos do V\u00e9u",
+      "unlock_alchemy_skill": "11",
+      "resolution": "UNRESOLVED namespaces; no numeric normalization"
+    },
+    "quest_variants": [
+      {
+        "path": "references/rave-master/snapshots/36af1651271422ae33856e8b5d7b45702215f165/source/RM_ACT1/DATA/DEV/SIDEQUESTS_EM_CONSTRUCAO.csv",
+        "sdq_0001_status": "DESCONSIDERAR; unresolved rewrite, no automatic grant",
+        "sdq_0007_status": "Source quest declaration only; its return/sell outcome is not a destination unlock event"
+      },
+      {
+        "path": "references/rave-master/snapshots/36af1651271422ae33856e8b5d7b45702215f165/source/RM_DIST/RMXP_BASE/Data/RM_CSV/SIDEQUESTS_EM_CONSTRUCAO.csv",
+        "sdq_0001_status": "DESCONSIDERAR; unresolved rewrite, no automatic grant",
+        "sdq_0007_status": "Source quest declaration only; its return/sell outcome is not a destination unlock event"
+      }
+    ],
+    "quest_variants_byte_identical": false,
+    "header_only_alias_rows": 0,
+    "header_only_qa_rows": 0,
+    "tool_price": "Blank Backlog; not free or an implemented price",
+    "dual_use_effect": "Consumable ingredient identity exists; required effect is explicitly missing",
+    "normalized_scope": "Exact item identities only. No unlock grants, prices, effects, source fiction, inventory state or recipe activation are serialized.",
+    "scope": "Source-bound CSV interpretation and quarantine, not historical game/Ruby/RMXP execution, full item semantics, author policy or human assessment."
+  },
+  "source_hashes": {
+    "labs/economy-simulation/tooling/protocol.json": "66b585d8fcacb6c289a0c279c50243ac0ab3ef6b3708b4c52d9e8e8a83ae37c4",
+    "labs/economy-simulation/tooling/run.py": "dce675ea0eb7ca6de0c63a551d7b3907d0120783d719da3ce559163632700f25",
+    "labs/economy-simulation/tooling/test_instrument.py": "44b0a4f147e64270cbab14ad1fb4b078ae616d7bac690d85ae9aee4e0f1109e9",
+    "north-star/csharp/Domain/Crafting.cs": "5a5a892b3e68cff73f7a443d7c014c79dbebf2954d28f447e1bf3a9c4759de57",
+    "north-star/csharp/Domain/Loadout.cs": "a1296ca13b5ba6728c073320b860e369ad2e01fdaacb45b5237ef40d0243f682",
+    "north-star/csharp/Domain/NorthStar.Domain.csproj": "9570b674acfea69bb60098f495afd3b9e2cef2575fcfeb6db71c2cdecb2c4876",
+    "north-star/csharp/Domain/Progression.cs": "8495e1ad92fea069c2c3989f6f2cc2600980575e72812df9480ed193c51c8685",
+    "north-star/csharp/global.json": "e0c0882461e712f6c2c66241bf2f175c60832e3ff077dc26091ff8c661d4193e",
+    "north-star/tooling-study/Checks/NorthStar.ToolingChecks.csproj": "9de6f4bc362c16681084c225f38feb7e7feafe18ef5361c945f411626f7db325",
+    "north-star/tooling-study/Checks/Program.cs": "66980df4b14edbfbe3ece219fe0c9f7ec2316210b850473dcd8cde999e408eff",
+    "north-star/tooling-study/Rules/NorthStar.Tooling.csproj": "70da75c5a69f7e92b7e73cbfcefd3bd10bd35a8064590b3e98e9a49464471df4",
+    "north-star/tooling-study/Rules/Tooling.cs": "5bf1b1407c015b6e930b5e9c3be5e6551775425aa83ef8f3ae32459e2f6988b1",
+    "references/rave-master/snapshots/36af1651271422ae33856e8b5d7b45702215f165/source/RM_ACT1/DATA/DEV/SIDEQUESTS_EM_CONSTRUCAO.csv": "8dab504bb9e8ad0ffaa44acea685a02e43c315947f5828b366844ac5e3f91806",
+    "references/rave-master/snapshots/36af1651271422ae33856e8b5d7b45702215f165/source/RM_CORE/DATA/CORE/ALIASES_ITEMS.csv": "db0c71c6aaa1ff85ef4345d6a58fc3a77ca7ccef31a4a831d7ae85ca171be150",
+    "references/rave-master/snapshots/36af1651271422ae33856e8b5d7b45702215f165/source/RM_CORE/DATA/CORE/CRAFTING_RECIPE.csv": "20abe53b6c99fda9bbc85f06f7e1d75983f2084a1561c21165309e455f83bf80",
+    "references/rave-master/snapshots/36af1651271422ae33856e8b5d7b45702215f165/source/RM_CORE/DATA/CORE/ITEM_CLASS_RULES.csv": "60115e8a841f6e69d61800717676c767abf280f054da06108faedc3d460e30f3",
+    "references/rave-master/snapshots/36af1651271422ae33856e8b5d7b45702215f165/source/RM_CORE/DATA/CORE/ITENS_MASTER.csv": "b8d3bfff9ef29d88f3ada71a69ec97bee5f8c6fa6dc4454ab4ed33e2aff8ccbf",
+    "references/rave-master/snapshots/36af1651271422ae33856e8b5d7b45702215f165/source/RM_CORE/DATA/CORE/PERICIA_UNLOCKS.csv": "a8fcc31e90685538ef698ef4aa0d80a3762c607ee7641c809697e21edeb01383",
+    "references/rave-master/snapshots/36af1651271422ae33856e8b5d7b45702215f165/source/RM_DIST/RMXP_BASE/Data/RM_CSV/PERICIA_UNLOCKS.csv": "a8fcc31e90685538ef698ef4aa0d80a3762c607ee7641c809697e21edeb01383",
+    "references/rave-master/snapshots/36af1651271422ae33856e8b5d7b45702215f165/source/RM_DIST/RMXP_BASE/Data/RM_CSV/SIDEQUESTS_EM_CONSTRUCAO.csv": "3e47231f4d7d2acd401b3eb573fa6b1b6d5309871fdab18a11383402f452f2c3",
+    "references/rave-master/snapshots/36af1651271422ae33856e8b5d7b45702215f165/source/RM_QA/DATA/QA/RPT_ITEMID_DUP.csv": "1bed863de8a55f4bc79955bd940ad5d393155cbb8ba7601260f35fb1d8c40c2a"
+  },
+  "source_stable": true,
+  "native": {
+    "schema_version": 1,
+    "passed": 28,
+    "failed": 0,
+    "controls": [
+      "catalog-retains-exact-known-identity",
+      "case-substring-unknown-and-malformed-queries-do-not-resolve",
+      "duplicate-known-identity-refused",
+      "malformed-known-identity-refused",
+      "empty-catalog-refused",
+      "retained-tool-requirements-are-not-mutable",
+      "first-real-production-consumes-materials-and-retains-one-tool",
+      "second-real-production-reuses-same-retained-tool",
+      "earlier-snapshot-is-an-isolated-copy",
+      "published-snapshot-cannot-mutate-private-owner",
+      "existing-core-replays-accepted-request-without-second-effect",
+      "conflicting-request-content-does-not-change-inventory",
+      "declared-tool-cannot-be-consumed-or-reserve-a-request",
+      "refused-tool-request-id-remains-available-for-valid-core-consumption",
+      "missing-tool-refuses-without-material-loss-or-ledger-entry",
+      "catalog-presence-does-not-grant-actual-tool-ownership",
+      "actually-produced-tool-enables-previously-refused-request",
+      "tool-production-retry-also-uses-core-receipt-without-duplication",
+      "consumable-ingredient-keeps-exact-id-and-is-consumed-once",
+      "no-unprovided-material-alias-is-invented",
+      "unknown-initial-item-refused",
+      "unknown-recipe-input-refused",
+      "unknown-recipe-output-refused",
+      "unknown-required-tool-refused",
+      "tool-input-overlap-is-refused-across-all-recipes",
+      "unknown-consume-id-refused-before-quantity-lookup",
+      "quantity-lookup-does-not-fuzz-or-grant-unknown-id",
+      "existing-atomic-core-capacity-refusal-preserves-tool-and-materials"
+    ],
+    "scope": "Selected exact-ID and retained-tool composition around unchanged CraftInventory. No historical recipe/unlock/price/effect runtime, source repair, Unity/Windows, account, physical tool or human quality proof."
+  },
+  "scope": "Exact item identity/quarantine and actual portable C# retained-tool contract; no full source recipe/unlock/effect implementation, historical runtime, Unity/Windows or human assessment."
+}

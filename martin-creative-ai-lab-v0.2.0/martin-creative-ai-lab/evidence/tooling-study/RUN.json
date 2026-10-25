@@ -1,0 +1,513 @@
+{
+  "schema_version": 1,
+  "kind": "destination_execution",
+  "baseline_commit": "b2e405baaf8a1f38d0324c9b4b19b156d1d4400e",
+  "capability_ids": [
+    "NS-C01"
+  ],
+  "consumer_paths": [
+    "north-star/tooling-study/Rules/Tooling.cs",
+    "north-star/tooling-study/Host/Room.cs",
+    "north-star/tooling-study/Host/Program.cs"
+  ],
+  "runtime": "Actual SDK10.0.401; C#8/netstandard2.1 Tooling references unchanged Domain. Actual .NET10/Linuxx64 Host composes unchanged Crossing; Node24.19.0/Chromium154.0.8037.57/locked Playwright1.64.0. No historical runtime or Unity/Windows/Steam execution.",
+  "scope": "ONE legacy/laboratory item-tool contract unit with an actual original C# output consumer and unchanged inventory/Crossing. No source repair, unlock/effect import, historical runtime, Unity/Windows/Steam or human validation.",
+  "checks": {
+    "passed": 34,
+    "failed": 0
+  },
+  "source_method": {
+    "same_identity_cases": 87,
+    "actual_source_references": 81,
+    "declared_negative_cases": 6,
+    "loaded_known_ids": 370,
+    "quarantined_records": 2,
+    "recipe_rows": 21,
+    "rules_native": 28,
+    "instrument_regressions": 8,
+    "scope": "87 SAME ordered probes, not174independent samples or370independent lookup cases. Known identity is not price/effect/unlock/recipe activation or approved fiction."
+  },
+  "browser_checks": {
+    "passed": 23,
+    "failed": 0,
+    "http": 7
+  },
+  "commands": [
+    {
+      "command": [
+        "/workspace/work/authored-scene/dotnet/dotnet",
+        "--version"
+      ],
+      "cwd": "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp",
+      "exit_code": 0,
+      "stdout": "10.0.401\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "node",
+        "--version"
+      ],
+      "cwd": "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab",
+      "exit_code": 0,
+      "stdout": "v24.19.0\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python3",
+        "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/labs/economy-simulation/tooling/run.py",
+        "--dotnet",
+        "/workspace/work/authored-scene/dotnet/dotnet",
+        "--output",
+        "/workspace/work/tooling-study/acceptance-final/method"
+      ],
+      "cwd": "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab",
+      "exit_code": 0,
+      "stdout": "PASS: SAME 87 Python/C# identity cases;81actual references,370known IDs,2quarantined records;native contract controls\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/workspace/work/authored-scene/dotnet/dotnet",
+        "build",
+        "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/tooling-study/ConsumerChecks/NorthStar.ToolingConsumerChecks.csproj",
+        "-c",
+        "Release",
+        "-m:1",
+        "--disable-build-servers"
+      ],
+      "cwd": "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp",
+      "exit_code": 0,
+      "stdout": "  Determining projects to restore...\n  All projects are up-to-date for restore.\n  NorthStar.Domain -> /workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/Domain/bin/Release/netstandard2.1/NorthStar.Domain.dll\n  NorthStar.Tooling -> /workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/tooling-study/Rules/bin/Release/netstandard2.1/NorthStar.Tooling.dll\n  NorthStar.Crossing -> /workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/Crossing/bin/Release/net10.0/NorthStar.Crossing.dll\n  NorthStar.ToolingStudy -> /workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/tooling-study/Host/bin/Release/net10.0/NorthStar.ToolingStudy.dll\n  NorthStar.ToolingConsumerChecks -> /workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/tooling-study/ConsumerChecks/bin/Release/net10.0/NorthStar.ToolingConsumerChecks.dll\n\nBuild succeeded.\n    0 Warning(s)\n    0 Error(s)\n\nTime Elapsed 00:00:01.37\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/workspace/work/authored-scene/dotnet/dotnet",
+        "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/tooling-study/ConsumerChecks/bin/Release/net10.0/NorthStar.ToolingConsumerChecks.dll",
+        "/workspace/work/tooling-study/acceptance-final/consumer-native.json"
+      ],
+      "cwd": "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab",
+      "exit_code": 0,
+      "stdout": "PASS:34 actual tooling consumer controls\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "node",
+        "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/tooling-study/tools/browser.mjs",
+        "/workspace/work/authored-scene/dotnet/dotnet",
+        "/workspace/work/tooling-study/acceptance-final/browser"
+      ],
+      "cwd": "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab",
+      "exit_code": 0,
+      "stdout": "PASS: 23 actual tooling Chromium controls, 7 HTTP controls and false-tool detection\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/workspace/work/authored-scene/dotnet/dotnet",
+        "--version"
+      ],
+      "cwd": "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp",
+      "exit_code": 0,
+      "stdout": "10.0.401\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python3",
+        "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/labs/economy-simulation/tooling/test_instrument.py"
+      ],
+      "cwd": "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab",
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "........\n----------------------------------------------------------------------\nRan 8 tests in 0.044s\n\nOK\n"
+    },
+    {
+      "command": [
+        "/workspace/work/authored-scene/dotnet/dotnet",
+        "build",
+        "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/tooling-study/Checks/NorthStar.ToolingChecks.csproj",
+        "-c",
+        "Release",
+        "-m:1",
+        "--disable-build-servers"
+      ],
+      "cwd": "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp",
+      "exit_code": 0,
+      "stdout": "  Determining projects to restore...\n  All projects are up-to-date for restore.\n  NorthStar.Domain -> /workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/Domain/bin/Release/netstandard2.1/NorthStar.Domain.dll\n  NorthStar.Tooling -> /workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/tooling-study/Rules/bin/Release/netstandard2.1/NorthStar.Tooling.dll\n  NorthStar.ToolingChecks -> /workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/tooling-study/Checks/bin/Release/net10.0/NorthStar.ToolingChecks.dll\n\nBuild succeeded.\n    0 Warning(s)\n    0 Error(s)\n\nTime Elapsed 00:00:01.27\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/workspace/work/authored-scene/dotnet/dotnet",
+        "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/tooling-study/Checks/bin/Release/net10.0/NorthStar.ToolingChecks.dll",
+        "--catalog",
+        "/workspace/work/tooling-study/acceptance-final/method/source-catalog.json",
+        "/workspace/work/tooling-study/acceptance-final/method/csharp-catalog.json"
+      ],
+      "cwd": "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp",
+      "exit_code": 0,
+      "stdout": "{\"passed\":87,\"failed\":0}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/workspace/work/authored-scene/dotnet/dotnet",
+        "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/tooling-study/Checks/bin/Release/net10.0/NorthStar.ToolingChecks.dll",
+        "--native",
+        "/workspace/work/tooling-study/acceptance-final/method/native.json"
+      ],
+      "cwd": "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp",
+      "exit_code": 0,
+      "stdout": "PASS: 28 tooling native controls\n",
+      "stderr": ""
+    }
+  ],
+  "source_artifacts": [
+    {
+      "local_path": "labs/economy-simulation/tooling/protocol.json",
+      "size_bytes": 5908,
+      "sha256": "66b585d8fcacb6c289a0c279c50243ac0ab3ef6b3708b4c52d9e8e8a83ae37c4"
+    },
+    {
+      "local_path": "labs/economy-simulation/tooling/run.py",
+      "size_bytes": 15820,
+      "sha256": "dce675ea0eb7ca6de0c63a551d7b3907d0120783d719da3ce559163632700f25"
+    },
+    {
+      "local_path": "labs/economy-simulation/tooling/test_instrument.py",
+      "size_bytes": 4750,
+      "sha256": "44b0a4f147e64270cbab14ad1fb4b078ae616d7bac690d85ae9aee4e0f1109e9"
+    },
+    {
+      "local_path": "north-star/csharp/Crossing/NorthStar.Crossing.csproj",
+      "size_bytes": 352,
+      "sha256": "09fbdffe415d44079f66da83d4d22e5b91169f3f1abdd0e1ebc2bacd2e3f0c88"
+    },
+    {
+      "local_path": "north-star/csharp/Crossing/Program.cs",
+      "size_bytes": 4226,
+      "sha256": "268c1b5ac582dd06f15eb3e40e7ce859a9c58eecfc58c7586d94bcaecf9c595e"
+    },
+    {
+      "local_path": "north-star/csharp/Crossing/Session.cs",
+      "size_bytes": 5357,
+      "sha256": "d25ac05ba1a94432474dd1b14b4fd608e446fc5344dcc4f779d8d5fe27a1b2c5"
+    },
+    {
+      "local_path": "north-star/csharp/Domain/Crafting.cs",
+      "size_bytes": 8035,
+      "sha256": "5a5a892b3e68cff73f7a443d7c014c79dbebf2954d28f447e1bf3a9c4759de57"
+    },
+    {
+      "local_path": "north-star/csharp/Domain/Loadout.cs",
+      "size_bytes": 5692,
+      "sha256": "a1296ca13b5ba6728c073320b860e369ad2e01fdaacb45b5237ef40d0243f682"
+    },
+    {
+      "local_path": "north-star/csharp/Domain/NorthStar.Domain.csproj",
+      "size_bytes": 344,
+      "sha256": "9570b674acfea69bb60098f495afd3b9e2cef2575fcfeb6db71c2cdecb2c4876"
+    },
+    {
+      "local_path": "north-star/csharp/Domain/Progression.cs",
+      "size_bytes": 8331,
+      "sha256": "8495e1ad92fea069c2c3989f6f2cc2600980575e72812df9480ed193c51c8685"
+    },
+    {
+      "local_path": "north-star/csharp/global.json",
+      "size_bytes": 55,
+      "sha256": "e0c0882461e712f6c2c66241bf2f175c60832e3ff077dc26091ff8c661d4193e"
+    },
+    {
+      "local_path": "north-star/tooling-study/Checks/NorthStar.ToolingChecks.csproj",
+      "size_bytes": 352,
+      "sha256": "9de6f4bc362c16681084c225f38feb7e7feafe18ef5361c945f411626f7db325"
+    },
+    {
+      "local_path": "north-star/tooling-study/Checks/Program.cs",
+      "size_bytes": 11901,
+      "sha256": "66980df4b14edbfbe3ece219fe0c9f7ec2316210b850473dcd8cde999e408eff"
+    },
+    {
+      "local_path": "north-star/tooling-study/ConsumerChecks/NorthStar.ToolingConsumerChecks.csproj",
+      "size_bytes": 356,
+      "sha256": "e0398a932406c78a57f1cc5d12d06f8a5d62d4a0c8ae89f2e9e8e4de87c1fbbc"
+    },
+    {
+      "local_path": "north-star/tooling-study/ConsumerChecks/Program.cs",
+      "size_bytes": 6770,
+      "sha256": "0bcf7f437bd6d2a8a9796c454e986bf42ab3af10a11b36727e72c6e3f3354b08"
+    },
+    {
+      "local_path": "north-star/tooling-study/Host/NorthStar.ToolingStudy.csproj",
+      "size_bytes": 430,
+      "sha256": "1dc61643abe73064f301c5c48f3757b1b3dfad3c580db542fb3e7063ef0493d8"
+    },
+    {
+      "local_path": "north-star/tooling-study/Host/Program.cs",
+      "size_bytes": 4997,
+      "sha256": "3ad223d0ab469060d3bae4a31fe9beeb109b22ecd952df5896061951bab584a4"
+    },
+    {
+      "local_path": "north-star/tooling-study/Host/Room.cs",
+      "size_bytes": 5260,
+      "sha256": "01475a574f20111f54bd133c1e1b2ce9544a6f37b2e97952ca602698aad9b6a1"
+    },
+    {
+      "local_path": "north-star/tooling-study/Rules/NorthStar.Tooling.csproj",
+      "size_bytes": 444,
+      "sha256": "70da75c5a69f7e92b7e73cbfcefd3bd10bd35a8064590b3e98e9a49464471df4"
+    },
+    {
+      "local_path": "north-star/tooling-study/Rules/Tooling.cs",
+      "size_bytes": 6407,
+      "sha256": "5bf1b1407c015b6e930b5e9c3be5e6551775425aa83ef8f3ae32459e2f6988b1"
+    },
+    {
+      "local_path": "north-star/tooling-study/tools/browser.mjs",
+      "size_bytes": 16333,
+      "sha256": "22a872f2ff57d216aa75ca70c793fa869904e4edc641c92af3835b6e969a96d3"
+    },
+    {
+      "local_path": "north-star/tooling-study/tools/verify.py",
+      "size_bytes": 5717,
+      "sha256": "eb7bfe95bc55c5c4887482f77008fdd9c898b4c4e04576bb8fb18b324914e7ed"
+    },
+    {
+      "local_path": "north-star/tooling-study/web/app.js",
+      "size_bytes": 7511,
+      "sha256": "0179228a7fceef6f5109f1269c9c5c08346f1e1f7cf1c3f228edf60152e36f53"
+    },
+    {
+      "local_path": "north-star/tooling-study/web/index.html",
+      "size_bytes": 6187,
+      "sha256": "2fe83cfd3db276dc97d7fa9abe43dca6fffde0c9f3a7c8bd3f733d2c75dd474e"
+    },
+    {
+      "local_path": "north-star/tooling-study/web/style.css",
+      "size_bytes": 7594,
+      "sha256": "5781b5a89f05900968994fcd115b9d95f202da5e8e4d3544444efdbdca0a1778"
+    },
+    {
+      "local_path": "projects/realtime-integration-lab/package-lock.json",
+      "size_bytes": 42105,
+      "sha256": "aa191ef2158e6cc6f770bf4b3ee44dca17175ef1a3cd572b98115246bf46aea7"
+    },
+    {
+      "local_path": "projects/realtime-integration-lab/package.json",
+      "size_bytes": 1445,
+      "sha256": "42e3cc9633e522dd6d9a5c11023418331129632881a8bf0b95e3717247d57ebe"
+    },
+    {
+      "local_path": "references/rave-master/snapshots/36af1651271422ae33856e8b5d7b45702215f165/source/RM_ACT1/DATA/DEV/SIDEQUESTS_EM_CONSTRUCAO.csv",
+      "size_bytes": 63779,
+      "sha256": "8dab504bb9e8ad0ffaa44acea685a02e43c315947f5828b366844ac5e3f91806"
+    },
+    {
+      "local_path": "references/rave-master/snapshots/36af1651271422ae33856e8b5d7b45702215f165/source/RM_CORE/DATA/CORE/ALIASES_ITEMS.csv",
+      "size_bytes": 64,
+      "sha256": "db0c71c6aaa1ff85ef4345d6a58fc3a77ca7ccef31a4a831d7ae85ca171be150"
+    },
+    {
+      "local_path": "references/rave-master/snapshots/36af1651271422ae33856e8b5d7b45702215f165/source/RM_CORE/DATA/CORE/CRAFTING_RECIPE.csv",
+      "size_bytes": 6572,
+      "sha256": "20abe53b6c99fda9bbc85f06f7e1d75983f2084a1561c21165309e455f83bf80"
+    },
+    {
+      "local_path": "references/rave-master/snapshots/36af1651271422ae33856e8b5d7b45702215f165/source/RM_CORE/DATA/CORE/ITEM_CLASS_RULES.csv",
+      "size_bytes": 2283,
+      "sha256": "60115e8a841f6e69d61800717676c767abf280f054da06108faedc3d460e30f3"
+    },
+    {
+      "local_path": "references/rave-master/snapshots/36af1651271422ae33856e8b5d7b45702215f165/source/RM_CORE/DATA/CORE/ITENS_MASTER.csv",
+      "size_bytes": 88610,
+      "sha256": "b8d3bfff9ef29d88f3ada71a69ec97bee5f8c6fa6dc4454ab4ed33e2aff8ccbf"
+    },
+    {
+      "local_path": "references/rave-master/snapshots/36af1651271422ae33856e8b5d7b45702215f165/source/RM_CORE/DATA/CORE/PERICIA_UNLOCKS.csv",
+      "size_bytes": 8816,
+      "sha256": "a8fcc31e90685538ef698ef4aa0d80a3762c607ee7641c809697e21edeb01383"
+    },
+    {
+      "local_path": "references/rave-master/snapshots/36af1651271422ae33856e8b5d7b45702215f165/source/RM_DIST/RMXP_BASE/Data/RM_CSV/PERICIA_UNLOCKS.csv",
+      "size_bytes": 8816,
+      "sha256": "a8fcc31e90685538ef698ef4aa0d80a3762c607ee7641c809697e21edeb01383"
+    },
+    {
+      "local_path": "references/rave-master/snapshots/36af1651271422ae33856e8b5d7b45702215f165/source/RM_DIST/RMXP_BASE/Data/RM_CSV/SIDEQUESTS_EM_CONSTRUCAO.csv",
+      "size_bytes": 63637,
+      "sha256": "3e47231f4d7d2acd401b3eb573fa6b1b6d5309871fdab18a11383402f452f2c3"
+    },
+    {
+      "local_path": "references/rave-master/snapshots/36af1651271422ae33856e8b5d7b45702215f165/source/RM_QA/DATA/QA/RPT_ITEMID_DUP.csv",
+      "size_bytes": 28,
+      "sha256": "1bed863de8a55f4bc79955bd940ad5d393155cbb8ba7601260f35fb1d8c40c2a"
+    }
+  ],
+  "result_artifacts": [
+    {
+      "local_path": "evidence/tooling-study/CI_BASELINE.json",
+      "size_bytes": 1225,
+      "sha256": "0536f42dbd42f1812e0a2b379179f1a3760ef6d1dfce1faebbf4461dc422fd27"
+    },
+    {
+      "local_path": "evidence/tooling-study/DECISION.md",
+      "size_bytes": 9689,
+      "sha256": "b6c6238ba63a92fec6bd3d15c2cf7e30f5a3e9f5bf4f72d363c9740786bfe4d2"
+    },
+    {
+      "local_path": "evidence/tooling-study/actual-completion.png",
+      "size_bytes": 167859,
+      "sha256": "dd5e6d601526c0757e31bb8a61604e230a90eea179347e270aa05a3a7b763719"
+    },
+    {
+      "local_path": "evidence/tooling-study/browser-hosts.json",
+      "size_bytes": 1044,
+      "sha256": "1d01e2c4dc87f5d987e9746d6c443a9e72d12bb8fa3330ac1809045d5740e92c"
+    },
+    {
+      "local_path": "evidence/tooling-study/browser.json",
+      "size_bytes": 31853,
+      "sha256": "14a24d0a998d91e2ca1e52d7fa2f0a2ed85211a7f2cb20ceb37b1c59a9ed6f86"
+    },
+    {
+      "local_path": "evidence/tooling-study/commands.json",
+      "size_bytes": 3907,
+      "sha256": "6eb71cf4edf149b1f15d185133ff8618913241ea9ea131f0be8af8aafe89db09"
+    },
+    {
+      "local_path": "evidence/tooling-study/consumer-native.json",
+      "size_bytes": 2060,
+      "sha256": "6e7d2fc224c10428b25aeae7f402a583960bfb66dcdd07d459f8f7c503478574"
+    },
+    {
+      "local_path": "evidence/tooling-study/csharp-catalog.json",
+      "size_bytes": 13599,
+      "sha256": "911fa388d0f9fe1fbf120172104de8e6f280a9952e2f5b13f3c85f02660ec67b"
+    },
+    {
+      "local_path": "evidence/tooling-study/development-path-negative.json",
+      "size_bytes": 1056,
+      "sha256": "3a818a1a1d073c5a36fcef6ed13262a6bfa39fbc11e518e9c73666a0e7b8458f"
+    },
+    {
+      "local_path": "evidence/tooling-study/environment.json",
+      "size_bytes": 1083,
+      "sha256": "c02245d63a8681ca224ef011e40b4b821d057ec28f669772fd11510f555d41a9"
+    },
+    {
+      "local_path": "evidence/tooling-study/false-catalog-execution.json",
+      "size_bytes": 394,
+      "sha256": "0a7869d131752c91212c135c71da1cb2673a5553bd57bd44d71fa20e1f523996"
+    },
+    {
+      "local_path": "evidence/tooling-study/false-catalog-input.json",
+      "size_bytes": 256,
+      "sha256": "c25caa05bdaa33501464cf246fad66348b5539e812e676c2f6808945e2eae746"
+    },
+    {
+      "local_path": "evidence/tooling-study/false-catalog-output.json",
+      "size_bytes": 341,
+      "sha256": "cfde7133f1c4e7cdb1f59c85dfc367fac38dab821ff1615184b6dc8c648c168e"
+    },
+    {
+      "local_path": "evidence/tooling-study/inspection.json",
+      "size_bytes": 1032,
+      "sha256": "8a16f1e9ed42ac1c08b49e595f40a7d38e9a76f84fc4e99674388c004492e450"
+    },
+    {
+      "local_path": "evidence/tooling-study/label-review-correction.json",
+      "size_bytes": 1105,
+      "sha256": "db0f4904c72ebdebe8a68bde556ec999b371a5959e11652c44498639c0ccb75b"
+    },
+    {
+      "local_path": "evidence/tooling-study/method-commands.json",
+      "size_bytes": 3226,
+      "sha256": "462abdf14aa41e587673dd0e93275c79cf31b03186b8463a1c681b768af2260c"
+    },
+    {
+      "local_path": "evidence/tooling-study/method-results.json",
+      "size_bytes": 9280,
+      "sha256": "e009a098269e648423670c15ba0cb85b47365cbc650a6dc1bc6f5592977b16ba"
+    },
+    {
+      "local_path": "evidence/tooling-study/missing-tool.png",
+      "size_bytes": 165332,
+      "sha256": "212da9575e118d99dbb74b93666f5037fbd90a5f642da3d7b805ac69fc560606"
+    },
+    {
+      "local_path": "evidence/tooling-study/preservation.json",
+      "size_bytes": 1165,
+      "sha256": "d09d05955258a8928de8efa3aa14666fa3900e19b62213175c10296d192db5d4"
+    },
+    {
+      "local_path": "evidence/tooling-study/results.json",
+      "size_bytes": 9594,
+      "sha256": "5999c93e28cba944674ab32e1a3a833f7e1c851fa22d3a93392422b101eb2d1b"
+    },
+    {
+      "local_path": "evidence/tooling-study/rules-native.json",
+      "size_bytes": 1824,
+      "sha256": "0a42cd5a55fbe2409bed8fa32a584626fae4313addcbf7bf678c3b0c7aaf1135"
+    },
+    {
+      "local_path": "evidence/tooling-study/source-assay.json",
+      "size_bytes": 3554,
+      "sha256": "95fc60deeb299e7babf1c0134ab77ed7fd5a03e4e4f45b6dab0719153a398a7c"
+    },
+    {
+      "local_path": "evidence/tooling-study/source-catalog.json",
+      "size_bytes": 21527,
+      "sha256": "4e98d41d6eb8b5f817e26913e80e8cd7e62f9d23f54470fbfe472fcd2234b810"
+    },
+    {
+      "local_path": "evidence/tooling-study/superseded-browser.json",
+      "size_bytes": 31853,
+      "sha256": "dbece27b3091acf7625e0c2559449b1e2cf0bf37df102b81cabb17444c622e35"
+    },
+    {
+      "local_path": "evidence/tooling-study/superseded-completion-label.png",
+      "size_bytes": 167631,
+      "sha256": "6f45707344226f9ef914a766fb779c493e52a8b57e965842fd243d4fc52613f0"
+    },
+    {
+      "local_path": "evidence/tooling-study/two-rigs-one-gauge.png",
+      "size_bytes": 168003,
+      "sha256": "8a17dba737f62e42afe934d06af168bc850ebd79b596142d9d0e9f6543eb9458"
+    }
+  ],
+  "limitations": [
+    "Tools are deliberately nonremovable: any globally declared tool ID is refused in recipe inputs and Consume(tool). This selected policy keeps accepted replay preconditions true. Moving, lending, losing or degrading tools requires a new ownership/replay contract; no general equipment system is claimed.",
+    "The source has no same-ID tool/ingredient overlap in its two tool recipes. Destination overlap rejection is explicit policy, not a claimed recovered source behavior.",
+    "Source-intake interpretation is exact identity/quarantine only. Two malformed rows remain uncorrected; four unlock sets, deprecated quest references and skill namespaces remain unresolved. No source prices, effects, stocks, quests, professions or fictional world imported.",
+    "Original initial gauge/permission/materials are explicit trial setup, not free tool acquisition or a completed source quest. Fresh presets replace an ephemeral trial; they are not refunds or persistent-world actions.",
+    "Actual fixed Lure/Trail Session owns damage, victory and final completion; scripted winning/losing policies are not human balance, optimum play or new combat/progression studies.",
+    "No appropriate human/physical-device assessment, practical tool skill, author/canon approval, commercial clearance or production ownership established.",
+    "Licensed Unity Editor/activation/modules, Windows player, Steam, save/account/shared-world or production operations remain unexecuted. Build/Operations stays incomplete."
+  ],
+  "retained_negatives": [
+    "All81actual source references resolve. Synthetic missing IDs, case/substring/alias and quarantined-ID probes are not invented actual source failures.",
+    "Two47-field item rows are quarantined against the48-fieldheader; do not silently shift/repair fields or import them as valid metadata.",
+    "Four semicolon unlock sets have no AND/OR resolution. Two recipe references point at SDQ-0001 explicitly marked DESCONSIDERAR in both different quest variants.",
+    "The78skill-unlock rows are not78conflicts: specific recipe IDs20/22/23/28 are absent and Alchemy15 conflicts with the unlock namespace Alchemy11/Rites15.",
+    "Backlog blank price is not free; header-only alias/duplicate QA is not an executed successful audit; ingredient identity does not supply the missing consumable effect.",
+    "Actual absence of gauge refuses without spend. Two real productions preserve it; actual entries consume both rigs. Actual failed contact retains the gauge but does not refund the used rig/materials and can leave final passage unfunded.",
+    "False C# expectation is retained as an actual comparison failure/exit1; source comparator rejects false/reordered/permission-bearing output. Actual isolated false-tool renderer is specifically rejected including picture/quantity correspondence.",
+    "Engineering creation-path/CS5001 failure was real and corrected only within new owned files. Initial unknown-gauge presentation was corrected in review before execution; no invented failed runtime test.",
+    "A first passing execution capture exposed mislabeled aggregate craft/consume count. Corrected caption Inventory transactions reflects two crafts plus two consumptions; superseded capture/raw results retained, final guarded execution repeated. No counter/gate/fixture/timeout changed."
+  ],
+  "specialties": {
+    "engineering": "Independent ENG-004/015/017 selected exact identity/retained tool; owned portable adapter and native/catalog CLI. Private unchanged CraftInventory keeps atomic quantities and one receipt ledger.",
+    "scientific": "Independent SCI-013/014/076/077 owned predeclared source/quarantine protocol, SAME87probes and8source/comparator regressions.",
+    "creative": "Independent CRE-005(A),022/023/031/045/048/061/071(H) required two useful real products and actual output use; owned original material/tool/output and realCrossing presentation.",
+    "coordination": "All three converged this cycle after comparing licensed Windows, people/devices, other remaining sources and production ownership. An additional browser agent owned the realChromium/HTTP/mutant instrument. Primary owned actual coordinator/nativeconsumer, guarded execution, capture review, integration and publication. Agents are not Brain libraries, human participants or author approval."
+  },
+  "rolling_stream": "ONE legacy/laboratory unit; consumer/UI/CI support it, not extra NorthStar/portfolio units. Second consecutive legacy unit after reputation.47/40/13 remain qualitative targets, not measured effort.",
+  "lifecycle": "New reverse consumer leaves old Domain/Crossing/Forge/Loadout/Recovery/request/reputation/media/Brain/reference source closures and current ZIP exact under existing maps. No old package, source, save, media, notice or release duty retired. Current downloadable demonstration is not mechanically regenerated for an unrelated dependency.",
+  "preservation": "evidence/tooling-study/preservation.json",
+  "prior_ci": "evidence/tooling-study/CI_BASELINE.json"
+}

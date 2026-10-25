@@ -1,0 +1,125 @@
+{
+  "schema_version": 1,
+  "source_stable": true,
+  "source_sha256": {
+    "labs/economy-simulation/tooling/protocol.json": "66b585d8fcacb6c289a0c279c50243ac0ab3ef6b3708b4c52d9e8e8a83ae37c4",
+    "labs/economy-simulation/tooling/run.py": "dce675ea0eb7ca6de0c63a551d7b3907d0120783d719da3ce559163632700f25",
+    "labs/economy-simulation/tooling/test_instrument.py": "44b0a4f147e64270cbab14ad1fb4b078ae616d7bac690d85ae9aee4e0f1109e9",
+    "north-star/csharp/Crossing/NorthStar.Crossing.csproj": "09fbdffe415d44079f66da83d4d22e5b91169f3f1abdd0e1ebc2bacd2e3f0c88",
+    "north-star/csharp/Crossing/Program.cs": "268c1b5ac582dd06f15eb3e40e7ce859a9c58eecfc58c7586d94bcaecf9c595e",
+    "north-star/csharp/Crossing/Session.cs": "d25ac05ba1a94432474dd1b14b4fd608e446fc5344dcc4f779d8d5fe27a1b2c5",
+    "north-star/csharp/Domain/Crafting.cs": "5a5a892b3e68cff73f7a443d7c014c79dbebf2954d28f447e1bf3a9c4759de57",
+    "north-star/csharp/Domain/Loadout.cs": "a1296ca13b5ba6728c073320b860e369ad2e01fdaacb45b5237ef40d0243f682",
+    "north-star/csharp/Domain/NorthStar.Domain.csproj": "9570b674acfea69bb60098f495afd3b9e2cef2575fcfeb6db71c2cdecb2c4876",
+    "north-star/csharp/Domain/Progression.cs": "8495e1ad92fea069c2c3989f6f2cc2600980575e72812df9480ed193c51c8685",
+    "north-star/csharp/global.json": "e0c0882461e712f6c2c66241bf2f175c60832e3ff077dc26091ff8c661d4193e",
+    "north-star/tooling-study/Checks/NorthStar.ToolingChecks.csproj": "9de6f4bc362c16681084c225f38feb7e7feafe18ef5361c945f411626f7db325",
+    "north-star/tooling-study/Checks/Program.cs": "66980df4b14edbfbe3ece219fe0c9f7ec2316210b850473dcd8cde999e408eff",
+    "north-star/tooling-study/ConsumerChecks/NorthStar.ToolingConsumerChecks.csproj": "e0398a932406c78a57f1cc5d12d06f8a5d62d4a0c8ae89f2e9e8e4de87c1fbbc",
+    "north-star/tooling-study/ConsumerChecks/Program.cs": "0bcf7f437bd6d2a8a9796c454e986bf42ab3af10a11b36727e72c6e3f3354b08",
+    "north-star/tooling-study/Host/NorthStar.ToolingStudy.csproj": "1dc61643abe73064f301c5c48f3757b1b3dfad3c580db542fb3e7063ef0493d8",
+    "north-star/tooling-study/Host/Program.cs": "3ad223d0ab469060d3bae4a31fe9beeb109b22ecd952df5896061951bab584a4",
+    "north-star/tooling-study/Host/Room.cs": "01475a574f20111f54bd133c1e1b2ce9544a6f37b2e97952ca602698aad9b6a1",
+    "north-star/tooling-study/Rules/NorthStar.Tooling.csproj": "70da75c5a69f7e92b7e73cbfcefd3bd10bd35a8064590b3e98e9a49464471df4",
+    "north-star/tooling-study/Rules/Tooling.cs": "5bf1b1407c015b6e930b5e9c3be5e6551775425aa83ef8f3ae32459e2f6988b1",
+    "north-star/tooling-study/tools/browser.mjs": "22a872f2ff57d216aa75ca70c793fa869904e4edc641c92af3835b6e969a96d3",
+    "north-star/tooling-study/tools/verify.py": "eb7bfe95bc55c5c4887482f77008fdd9c898b4c4e04576bb8fb18b324914e7ed",
+    "north-star/tooling-study/web/app.js": "0179228a7fceef6f5109f1269c9c5c08346f1e1f7cf1c3f228edf60152e36f53",
+    "north-star/tooling-study/web/index.html": "2fe83cfd3db276dc97d7fa9abe43dca6fffde0c9f3a7c8bd3f733d2c75dd474e",
+    "north-star/tooling-study/web/style.css": "5781b5a89f05900968994fcd115b9d95f202da5e8e4d3544444efdbdca0a1778",
+    "projects/realtime-integration-lab/package-lock.json": "aa191ef2158e6cc6f770bf4b3ee44dca17175ef1a3cd572b98115246bf46aea7",
+    "projects/realtime-integration-lab/package.json": "42e3cc9633e522dd6d9a5c11023418331129632881a8bf0b95e3717247d57ebe",
+    "references/rave-master/snapshots/36af1651271422ae33856e8b5d7b45702215f165/source/RM_ACT1/DATA/DEV/SIDEQUESTS_EM_CONSTRUCAO.csv": "8dab504bb9e8ad0ffaa44acea685a02e43c315947f5828b366844ac5e3f91806",
+    "references/rave-master/snapshots/36af1651271422ae33856e8b5d7b45702215f165/source/RM_CORE/DATA/CORE/ALIASES_ITEMS.csv": "db0c71c6aaa1ff85ef4345d6a58fc3a77ca7ccef31a4a831d7ae85ca171be150",
+    "references/rave-master/snapshots/36af1651271422ae33856e8b5d7b45702215f165/source/RM_CORE/DATA/CORE/CRAFTING_RECIPE.csv": "20abe53b6c99fda9bbc85f06f7e1d75983f2084a1561c21165309e455f83bf80",
+    "references/rave-master/snapshots/36af1651271422ae33856e8b5d7b45702215f165/source/RM_CORE/DATA/CORE/ITEM_CLASS_RULES.csv": "60115e8a841f6e69d61800717676c767abf280f054da06108faedc3d460e30f3",
+    "references/rave-master/snapshots/36af1651271422ae33856e8b5d7b45702215f165/source/RM_CORE/DATA/CORE/ITENS_MASTER.csv": "b8d3bfff9ef29d88f3ada71a69ec97bee5f8c6fa6dc4454ab4ed33e2aff8ccbf",
+    "references/rave-master/snapshots/36af1651271422ae33856e8b5d7b45702215f165/source/RM_CORE/DATA/CORE/PERICIA_UNLOCKS.csv": "a8fcc31e90685538ef698ef4aa0d80a3762c607ee7641c809697e21edeb01383",
+    "references/rave-master/snapshots/36af1651271422ae33856e8b5d7b45702215f165/source/RM_DIST/RMXP_BASE/Data/RM_CSV/PERICIA_UNLOCKS.csv": "a8fcc31e90685538ef698ef4aa0d80a3762c607ee7641c809697e21edeb01383",
+    "references/rave-master/snapshots/36af1651271422ae33856e8b5d7b45702215f165/source/RM_DIST/RMXP_BASE/Data/RM_CSV/SIDEQUESTS_EM_CONSTRUCAO.csv": "3e47231f4d7d2acd401b3eb573fa6b1b6d5309871fdab18a11383402f452f2c3",
+    "references/rave-master/snapshots/36af1651271422ae33856e8b5d7b45702215f165/source/RM_QA/DATA/QA/RPT_ITEMID_DUP.csv": "1bed863de8a55f4bc79955bd940ad5d393155cbb8ba7601260f35fb1d8c40c2a"
+  },
+  "commands": [
+    {
+      "command": [
+        "/workspace/work/authored-scene/dotnet/dotnet",
+        "--version"
+      ],
+      "cwd": "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp",
+      "exit_code": 0,
+      "stdout": "10.0.401\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "node",
+        "--version"
+      ],
+      "cwd": "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab",
+      "exit_code": 0,
+      "stdout": "v24.19.0\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python3",
+        "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/labs/economy-simulation/tooling/run.py",
+        "--dotnet",
+        "/workspace/work/authored-scene/dotnet/dotnet",
+        "--output",
+        "/workspace/work/tooling-study/acceptance-final/method"
+      ],
+      "cwd": "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab",
+      "exit_code": 0,
+      "stdout": "PASS: SAME 87 Python/C# identity cases;81actual references,370known IDs,2quarantined records;native contract controls\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/workspace/work/authored-scene/dotnet/dotnet",
+        "build",
+        "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/tooling-study/ConsumerChecks/NorthStar.ToolingConsumerChecks.csproj",
+        "-c",
+        "Release",
+        "-m:1",
+        "--disable-build-servers"
+      ],
+      "cwd": "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp",
+      "exit_code": 0,
+      "stdout": "  Determining projects to restore...\n  All projects are up-to-date for restore.\n  NorthStar.Domain -> /workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/Domain/bin/Release/netstandard2.1/NorthStar.Domain.dll\n  NorthStar.Tooling -> /workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/tooling-study/Rules/bin/Release/netstandard2.1/NorthStar.Tooling.dll\n  NorthStar.Crossing -> /workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/Crossing/bin/Release/net10.0/NorthStar.Crossing.dll\n  NorthStar.ToolingStudy -> /workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/tooling-study/Host/bin/Release/net10.0/NorthStar.ToolingStudy.dll\n  NorthStar.ToolingConsumerChecks -> /workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/tooling-study/ConsumerChecks/bin/Release/net10.0/NorthStar.ToolingConsumerChecks.dll\n\nBuild succeeded.\n    0 Warning(s)\n    0 Error(s)\n\nTime Elapsed 00:00:01.37\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/workspace/work/authored-scene/dotnet/dotnet",
+        "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/tooling-study/ConsumerChecks/bin/Release/net10.0/NorthStar.ToolingConsumerChecks.dll",
+        "/workspace/work/tooling-study/acceptance-final/consumer-native.json"
+      ],
+      "cwd": "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab",
+      "exit_code": 0,
+      "stdout": "PASS:34 actual tooling consumer controls\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "node",
+        "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/tooling-study/tools/browser.mjs",
+        "/workspace/work/authored-scene/dotnet/dotnet",
+        "/workspace/work/tooling-study/acceptance-final/browser"
+      ],
+      "cwd": "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab",
+      "exit_code": 0,
+      "stdout": "PASS: 23 actual tooling Chromium controls, 7 HTTP controls and false-tool detection\n",
+      "stderr": ""
+    }
+  ],
+  "same_identity_cases": 87,
+  "actual_source_references": 81,
+  "known_ids": 370,
+  "quarantined": 2,
+  "rules_native": 28,
+  "consumer_native": 34,
+  "chromium": 23,
+  "http": 7,
+  "scope": "ONE legacy/laboratory item-tool contract unit with an actual original C# output consumer and unchanged inventory/Crossing. No source repair, unlock/effect import, historical runtime, Unity/Windows/Steam or human validation."
+}

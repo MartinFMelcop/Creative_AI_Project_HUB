@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "known_ids": [
+    "gauge"
+  ],
+  "references": [
+    {
+      "id": "real",
+      "item_id": "gauge",
+      "expected": true
+    },
+    {
+      "id": "false_expected",
+      "item_id": "Gauge",
+      "expected": true
+    }
+  ]
+}

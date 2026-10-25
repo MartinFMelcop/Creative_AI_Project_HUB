@@ -456,31 +456,45 @@
         "projects/eclipse-fair/tools",
         "projects/eclipse-fair/provenance.json",
         "references/rave-master/snapshots/36af1651271422ae33856e8b5d7b45702215f165/source/RM_CORE/DATA/CORE/CRAFTING_RECIPE.csv",
-        "references/rave-master/snapshots/36af1651271422ae33856e8b5d7b45702215f165/source/RM_CORE/DATA/CORE/CRAFTING_STATION.csv"
+        "references/rave-master/snapshots/36af1651271422ae33856e8b5d7b45702215f165/source/RM_CORE/DATA/CORE/CRAFTING_STATION.csv",
+        "references/rave-master/snapshots/36af1651271422ae33856e8b5d7b45702215f165/source/RM_ACT1/DATA/DEV/SIDEQUESTS_EM_CONSTRUCAO.csv",
+        "references/rave-master/snapshots/36af1651271422ae33856e8b5d7b45702215f165/source/RM_CORE/DATA/CORE/ALIASES_ITEMS.csv",
+        "references/rave-master/snapshots/36af1651271422ae33856e8b5d7b45702215f165/source/RM_CORE/DATA/CORE/ITEM_CLASS_RULES.csv",
+        "references/rave-master/snapshots/36af1651271422ae33856e8b5d7b45702215f165/source/RM_CORE/DATA/CORE/ITENS_MASTER.csv",
+        "references/rave-master/snapshots/36af1651271422ae33856e8b5d7b45702215f165/source/RM_CORE/DATA/CORE/PERICIA_UNLOCKS.csv",
+        "references/rave-master/snapshots/36af1651271422ae33856e8b5d7b45702215f165/source/RM_DIST/RMXP_BASE/Data/RM_CSV/PERICIA_UNLOCKS.csv",
+        "references/rave-master/snapshots/36af1651271422ae33856e8b5d7b45702215f165/source/RM_DIST/RMXP_BASE/Data/RM_CSV/SIDEQUESTS_EM_CONSTRUCAO.csv",
+        "references/rave-master/snapshots/36af1651271422ae33856e8b5d7b45702215f165/source/RM_QA/DATA/QA/RPT_ITEMID_DUP.csv"
       ],
       "source_inventory": "labs/source-inventory.json",
       "consumer_paths": [
         "north-star/csharp/Domain/Crafting.cs",
         "north-star/csharp/Forge/Expedition.cs",
-        "north-star/csharp/Forge/Program.cs"
+        "north-star/csharp/Forge/Program.cs",
+        "north-star/tooling-study/Rules/Tooling.cs",
+        "north-star/tooling-study/Host/Room.cs",
+        "north-star/tooling-study/Host/Program.cs"
       ],
       "controls": [
         "Width-only rival versus typed preserved station/recipe assay",
         "Controlled schema, enum, quantity and reference defects",
         "Actual C# atomic spending, replay/conflict, overflow and rejection controls",
-        "Two completed crafted journeys, matched unprepared failure and no-refund retry"
+        "Two completed crafted journeys, matched unprepared failure and no-refund retry",
+        "Exact identity/tool method:87SAMEprobes(81actualrefs+6negatives),370known/2quarantined,28adapter/34consumer/23Chromium/7HTTP/8instrument controls; actual2outputs consumed by unchangedCrossing"
       ],
-      "validity_boundary": "Static preserved data assay and actual original in-memory Linux C# terminal consumers; no historical crafting/RGSS execution, full item catalog integration, Unity import, Windows player, Steam, persistent/network ownership, final profession canon or human balance claim.",
-      "next_objective": "Prior bounded crafting/journal recovery is executed separately; evaluate remaining item/tool/unlock provenance and actual product beneficiaries before catalog expansion or shared-world crafting. Do not automatically repeat recovery faults.",
+      "validity_boundary": "Static preserved data assay and actual original in-memory Linux C# terminal consumers; no historical crafting/RGSS execution, full item catalog integration, Unity import, Windows player, Steam, persistent/network ownership, final profession canon or human balance claim. Separate exact item identity and R7 retained-tool contract now has a portable wrapper over unchanged CraftInventory plus actual original output consumption. R8 same-ID ingredient behavior is preserved without duplicate transaction credit. Source prices/effects/full catalogs, deprecated or ambiguous unlocks and skill namespaces remain unresolved; no protected row repair or historical runtime claim.",
+      "next_objective": "Compare licensed Windows/Unity and appropriate author/player/device access against coherent product use, portfolio delivery and remaining price/effect/unlock ownership. Do not automatically repeat crafting/tool/catalog matrices; resolve an actual next beneficiary.",
       "path": "labs/economy-simulation",
       "instrument": "labs/economy-simulation/run.py",
       "evidence": [
         "evidence/economy-crafting/RUN.json",
-        "evidence/economy-crafting/results.json"
+        "evidence/economy-crafting/results.json",
+        "evidence/tooling-study/RUN.json"
       ],
       "evidence_sha256": {
         "evidence/economy-crafting/RUN.json": "ddd390dda294e6ae91eb00cc6c0a4eb226d4fe931d19eed3cc4ac26707a8c267",
-        "evidence/economy-crafting/results.json": "e34c1976f059db2f85c3bb11a45302f68d12b71d61e1b1b0a988ee5a077fc691"
+        "evidence/economy-crafting/results.json": "e34c1976f059db2f85c3bb11a45302f68d12b71d61e1b1b0a988ee5a077fc691",
+        "evidence/tooling-study/RUN.json": "2540400774fb495021e6ff1f3c00eced9454c40588cc701d8048453991cffdc6"
       }
     },
     {
@@ -1295,8 +1309,8 @@
         "references/rave-master/snapshots/36af1651271422ae33856e8b5d7b45702215f165/source/RM_CORE/DATA/CORE/CRAFTING_STATION.csv",
         "references/rave-master/snapshots/36af1651271422ae33856e8b5d7b45702215f165/source/RM_CORE/DATA/CORE/ITENS_MASTER.csv"
       ],
-      "decision": "Recipe/station structure informed an original typed atomic consumer, but full legacy recipes/items/tools/unlocks remain unconsumed. The direct station adapter is separately rejected on actual semantic defects.",
-      "next_action": "Validate legacy item/tool/unlock identities and authored recipe applicability; execute any selected adaptation with real production consumers. Never infer historical runtime from data status."
+      "decision": "Recipe/station structure informed the earlier original typed atomic consumer; selected exact item identity and nonconsumed-tool requirements are now separately INTEGRATED through a private adapter over unchanged CraftInventory. Full source item stats/stack/prices/effects, recipe applicability, tools moving/degrading and unlock/skill/quest semantics remain UNRESOLVED. The direct station adapter retains its separate narrow rejection.",
+      "next_action": "Resolve one consequential remaining catalog/permission contract with actual ownership and author decisions. Preserve two quarantined width-invalid records, four ambiguous unlock sets, deprecated quest references, skill namespaces and empty alias/QA evidence; do not infer grants, free prices or historical runtime from identity/status."
     },
     {
       "id": "XP-WORLD-CONTINUITY",
@@ -1809,6 +1823,35 @@
         "evidence/reputation-study/RUN.json": "901bcab3f535fefc4b03746ab147c886c88d68470f19be3cbec8c4f573d64bb5",
         "evidence/reputation-study/source-assay.json": "1a4cd87a562719ca63bcecc144e3505bdd1f134582b451ab619da2aa2d24c3d1",
         "evidence/reputation-study/browser.json": "d91f522d0b272da6cef1bc927a15774755407d6a6b7b298e3af5a7b336829a3c"
+      }
+    },
+    {
+      "id": "XP-ITEM-IDENTITY-RETAINED-TOOL",
+      "origin_projects": [
+        "P10"
+      ],
+      "laboratory_id": "economy-simulation",
+      "status": "INTEGRATED",
+      "source_paths": [
+        "references/rave-master/snapshots/36af1651271422ae33856e8b5d7b45702215f165/source/RM_CORE/DATA/CORE/ITEM_CLASS_RULES.csv",
+        "references/rave-master/snapshots/36af1651271422ae33856e8b5d7b45702215f165/source/RM_CORE/DATA/CORE/ITENS_MASTER.csv",
+        "references/rave-master/snapshots/36af1651271422ae33856e8b5d7b45702215f165/source/RM_CORE/DATA/CORE/CRAFTING_RECIPE.csv"
+      ],
+      "consumer_paths": [
+        "north-star/tooling-study/Rules/Tooling.cs",
+        "north-star/tooling-study/Host/Room.cs",
+        "north-star/tooling-study/Host/Program.cs"
+      ],
+      "decision": "Only exact validated item identity and required nonconsumed-tool preconditions are adapted in portable C#8/netstandard2.1. ToolWorkshop privately reuses unchanged CraftInventory atomic quantities/receipts. Two real productions preserve one tool, and two actual Crossing entries consume their outputs. R8 same-ID ingredient behavior is preserved, not separately recounted as a new transaction capability. Nonremovable tools and global input/Consume overlap rejection are explicit destination policy; no source same-ID overlap behavior or full catalog/unlock/effect/price import claimed.",
+      "evidence": [
+        "evidence/tooling-study/RUN.json",
+        "evidence/tooling-study/source-assay.json",
+        "evidence/tooling-study/browser.json"
+      ],
+      "evidence_sha256": {
+        "evidence/tooling-study/RUN.json": "2540400774fb495021e6ff1f3c00eced9454c40588cc701d8048453991cffdc6",
+        "evidence/tooling-study/source-assay.json": "95fc60deeb299e7babf1c0134ab77ed7fd5a03e4e4f45b6dab0719153a398a7c",
+        "evidence/tooling-study/browser.json": "14a24d0a998d91e2ca1e52d7fa2f0a2ed85211a7f2cb20ceb37b1c59a9ed6f86"
       }
     }
   ]

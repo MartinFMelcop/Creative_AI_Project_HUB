@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "references": [
+    {
+      "id": "real",
+      "item_id": "gauge",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "id": "false_expected",
+      "item_id": "Gauge",
+      "actual": false,
+      "expected": true,
+      "passed": false
+    }
+  ],
+  "passed": 1,
+  "failed": 1
+}
