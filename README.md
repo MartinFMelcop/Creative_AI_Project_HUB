@@ -57,6 +57,18 @@ world canon or independent player validation. Build/Operations remains incomplet
 
 ![Actual extracted package after guided handoff: three crates remain unfinished](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/evidence/recipient-delivery/delivered.png)
 
+### Source experiment — A name on the road
+
+[**Run the original visible intake**](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/intake/README.md) · [Actual execution](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/evidence/intake/RUN.json)
+
+Draft, review and explicitly confirm a named field card, then spend finite materials
+and enact its preparation in the real C# journey. Accent is expression; discipline,
+slots and acquired outfit affect play. Actual failure retains spent rigs. This separate
+SDK-required local experiment has no save/account and is not included in the downloads
+above; no Unity, Windows or human assessment of this new consumer is claimed.
+
+![Actual confirmed identity after the real journey](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/evidence/intake/browser/actual-completion.png)
+
 <details>
 <summary>Developer entry points and retained research consumers</summary>
 

@@ -1,0 +1,7 @@
+{
+  "stage": "before host execution",
+  "command": "node north-star/intake/tools/browser.mjs DOTNET /workspace/work/intake/browser-initial",
+  "exit_code": 1,
+  "error": "ENOENT mkdir: missing external parent /workspace/work/intake",
+  "outcome": "instrument setup failure; no consumer executed"
+}

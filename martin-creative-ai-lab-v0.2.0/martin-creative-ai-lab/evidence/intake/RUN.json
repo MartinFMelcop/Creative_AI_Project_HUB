@@ -1,0 +1,353 @@
+{
+  "schema_version": 1,
+  "kind": "destination_execution",
+  "baseline_commit": "290111eae667834608702dfd03b4d6a8315b9cf2",
+  "consumer_paths": [
+    "north-star/intake/Host/Room.cs",
+    "north-star/intake/Host/Program.cs",
+    "north-star/intake/web/app.js",
+    "north-star/csharp/Loadout/PreparedExpedition.cs"
+  ],
+  "source_artifacts": [
+    {
+      "local_path": "evidence/intake/protocol.json",
+      "size_bytes": 2420,
+      "sha256": "ec4a5707e8dd4253f8d8b818574495c6a110963cf52f7d440137b9f6118ba9c8"
+    },
+    {
+      "local_path": "north-star/csharp/Crossing/NorthStar.Crossing.csproj",
+      "size_bytes": 352,
+      "sha256": "09fbdffe415d44079f66da83d4d22e5b91169f3f1abdd0e1ebc2bacd2e3f0c88"
+    },
+    {
+      "local_path": "north-star/csharp/Crossing/Program.cs",
+      "size_bytes": 4226,
+      "sha256": "268c1b5ac582dd06f15eb3e40e7ce859a9c58eecfc58c7586d94bcaecf9c595e"
+    },
+    {
+      "local_path": "north-star/csharp/Crossing/Session.cs",
+      "size_bytes": 5357,
+      "sha256": "d25ac05ba1a94432474dd1b14b4fd608e446fc5344dcc4f779d8d5fe27a1b2c5"
+    },
+    {
+      "local_path": "north-star/csharp/Domain/Crafting.cs",
+      "size_bytes": 8035,
+      "sha256": "5a5a892b3e68cff73f7a443d7c014c79dbebf2954d28f447e1bf3a9c4759de57"
+    },
+    {
+      "local_path": "north-star/csharp/Domain/Loadout.cs",
+      "size_bytes": 5692,
+      "sha256": "a1296ca13b5ba6728c073320b860e369ad2e01fdaacb45b5237ef40d0243f682"
+    },
+    {
+      "local_path": "north-star/csharp/Domain/NorthStar.Domain.csproj",
+      "size_bytes": 344,
+      "sha256": "9570b674acfea69bb60098f495afd3b9e2cef2575fcfeb6db71c2cdecb2c4876"
+    },
+    {
+      "local_path": "north-star/csharp/Domain/Progression.cs",
+      "size_bytes": 8331,
+      "sha256": "8495e1ad92fea069c2c3989f6f2cc2600980575e72812df9480ed193c51c8685"
+    },
+    {
+      "local_path": "north-star/csharp/Forge/Expedition.cs",
+      "size_bytes": 4688,
+      "sha256": "579c1eb8375a5c281d35338f1c93cb529c16bf330f0576046c970d42c816bfc3"
+    },
+    {
+      "local_path": "north-star/csharp/Forge/NorthStar.Forge.csproj",
+      "size_bytes": 420,
+      "sha256": "3f58ee26c26f3030dcdb7cc2c6db2b7e14bff43d81e936b95cc116bc82978d35"
+    },
+    {
+      "local_path": "north-star/csharp/Forge/Program.cs",
+      "size_bytes": 6419,
+      "sha256": "3a289847c487ca3bca8a406635b7f0a2334daa959d767d31b3f732445a398c3a"
+    },
+    {
+      "local_path": "north-star/csharp/Forge/README.md",
+      "size_bytes": 5243,
+      "sha256": "6a39641bb2b3c60df9f8b5148d82e69c7c83951f072cb5f0caf544d6400ec8b3"
+    },
+    {
+      "local_path": "north-star/csharp/Loadout/NorthStar.Loadout.csproj",
+      "size_bytes": 414,
+      "sha256": "8b7ae6ab602aa24a78926f23bdf1d0117d79293eeb493334c1a4a2d3d4c85613"
+    },
+    {
+      "local_path": "north-star/csharp/Loadout/PreparedExpedition.cs",
+      "size_bytes": 4861,
+      "sha256": "92fabdaa94f4ad4bb33a55a113a3d4f8cc63c86634d631413a529eb53df24668"
+    },
+    {
+      "local_path": "north-star/csharp/Loadout/Program.cs",
+      "size_bytes": 5919,
+      "sha256": "6409bc7a9d24a9c60ea59657b33925c6dd27e3a6a9a7a9736e2d3a5ff7d6d7d8"
+    },
+    {
+      "local_path": "north-star/csharp/Loadout/README.md",
+      "size_bytes": 4777,
+      "sha256": "796423b4450dbec4f37cb0c9a5f3a86aa21168f45464b7a5e46f349a6fb776a9"
+    },
+    {
+      "local_path": "north-star/csharp/global.json",
+      "size_bytes": 55,
+      "sha256": "e0c0882461e712f6c2c66241bf2f175c60832e3ff077dc26091ff8c661d4193e"
+    },
+    {
+      "local_path": "north-star/intake/Checks/NorthStar.IntakeChecks.csproj",
+      "size_bytes": 350,
+      "sha256": "0f123f0913619a8df7bfc9fef33a4664497b37ae71e5c6485b266fea3c6dc9f5"
+    },
+    {
+      "local_path": "north-star/intake/Checks/Program.cs",
+      "size_bytes": 7235,
+      "sha256": "58dd73ade0bf09f8a10ab933ee737abbd8075f3aaf77509d81b4b85bb7a28120"
+    },
+    {
+      "local_path": "north-star/intake/Host/NorthStar.Intake.csproj",
+      "size_bytes": 364,
+      "sha256": "46e249356ebe839340ac57c5434f7b8cfb41f7ea1bc332776339695b7a5b529a"
+    },
+    {
+      "local_path": "north-star/intake/Host/Program.cs",
+      "size_bytes": 4991,
+      "sha256": "711c019d69a309f14d2469e13ac7f5bff2f3fb352d6dbaaa0da54af77a67fbae"
+    },
+    {
+      "local_path": "north-star/intake/Host/Room.cs",
+      "size_bytes": 7446,
+      "sha256": "b5d654a7fa2d64c2ea89d96ab3249d5655008a20a302be916633c688114d3c98"
+    },
+    {
+      "local_path": "north-star/intake/README.md",
+      "size_bytes": 4956,
+      "sha256": "69cef4e20f5cac23411fc913b31ff4c0458e072e9b0f0c0196764e3c687ae9bc"
+    },
+    {
+      "local_path": "north-star/intake/tools/browser.mjs",
+      "size_bytes": 20014,
+      "sha256": "5e27e2fae3fcbb59e6dfc4d75fc297835307aa0512cbb04c21784f344f94e1da"
+    },
+    {
+      "local_path": "north-star/intake/tools/verify.py",
+      "size_bytes": 2902,
+      "sha256": "a539e705edc9fdf63e9b87162a78b70522fef14b7cb2ecbf5713210217e68ae9"
+    },
+    {
+      "local_path": "north-star/intake/web/app.js",
+      "size_bytes": 7848,
+      "sha256": "db906517f8bc4d45b8bf7c30418513a42b2c6d7597f8cbe448f53e612c96c3c2"
+    },
+    {
+      "local_path": "north-star/intake/web/index.html",
+      "size_bytes": 7995,
+      "sha256": "94d79e28d92857ff906a12fe1eb1af68ac11c101fb5952fb5de849e7caf75cb5"
+    },
+    {
+      "local_path": "north-star/intake/web/style.css",
+      "size_bytes": 5253,
+      "sha256": "33a23577126f94b722b0f2a7d23fe754183fa1a43ad97c2466de3e99bdf6b7c3"
+    },
+    {
+      "local_path": "projects/realtime-integration-lab/package-lock.json",
+      "size_bytes": 42105,
+      "sha256": "aa191ef2158e6cc6f770bf4b3ee44dca17175ef1a3cd572b98115246bf46aea7"
+    },
+    {
+      "local_path": "projects/realtime-integration-lab/package.json",
+      "size_bytes": 1445,
+      "sha256": "42e3cc9633e522dd6d9a5c11023418331129632881a8bf0b95e3717247d57ebe"
+    },
+    {
+      "local_path": "north-star/intake/.gitignore",
+      "size_bytes": 16,
+      "sha256": "79810615b4063be5474618fd002df934762fe9ccebb448537ce74ce23b319202"
+    }
+  ],
+  "checks": {
+    "passed": 45,
+    "failed": 0
+  },
+  "check_groups": {
+    "native": {
+      "passed": 25,
+      "failed": 0
+    },
+    "chromium": {
+      "passed": 20,
+      "failed": 0
+    },
+    "http": {
+      "passed": 7,
+      "failed": 0
+    }
+  },
+  "commands": [
+    {
+      "command": [
+        "/workspace/work/authored-scene/dotnet/dotnet",
+        "--version"
+      ],
+      "exit_code": 0,
+      "stdout": "10.0.401\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/workspace/work/authored-scene/dotnet/dotnet",
+        "build",
+        "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/intake/Checks/NorthStar.IntakeChecks.csproj",
+        "-c",
+        "Release"
+      ],
+      "exit_code": 0,
+      "stdout": "  Determining projects to restore...\n  All projects are up-to-date for restore.\n  NorthStar.Domain -> /workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/Domain/bin/Release/netstandard2.1/NorthStar.Domain.dll\n  NorthStar.Crossing -> /workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/Crossing/bin/Release/net10.0/NorthStar.Crossing.dll\n  NorthStar.Forge -> /workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/Forge/bin/Release/net10.0/NorthStar.Forge.dll\n  NorthStar.Loadout -> /workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/Loadout/bin/Release/net10.0/NorthStar.Loadout.dll\n  NorthStar.Intake -> /workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/intake/Host/bin/Release/net10.0/NorthStar.Intake.dll\n  NorthStar.IntakeChecks -> /workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/intake/Checks/bin/Release/net10.0/NorthStar.IntakeChecks.dll\n\nBuild succeeded.\n    0 Warning(s)\n    0 Error(s)\n\nTime Elapsed 00:00:03.92\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/workspace/work/authored-scene/dotnet/dotnet",
+        "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/intake/Checks/bin/Release/net10.0/NorthStar.IntakeChecks.dll",
+        "/workspace/work/intake-cycle/verified/native.json"
+      ],
+      "exit_code": 0,
+      "stdout": "PASS: 25 intake native consumer controls\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "node",
+        "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/intake/tools/browser.mjs",
+        "/workspace/work/authored-scene/dotnet/dotnet",
+        "/workspace/work/intake-cycle/verified/browser"
+      ],
+      "exit_code": 0,
+      "stdout": "PASS: 20 actual intake Chromium controls, 7 HTTP controls and false identity/completion detection\n",
+      "stderr": ""
+    }
+  ],
+  "runtime_observations": {
+    "sdk": "10.0.401",
+    "browser": {
+      "node": "v24.19.0",
+      "chromium": "154.0.8037.57",
+      "playwright": "1.64.0"
+    },
+    "unity_executed": false,
+    "windows_executed": false,
+    "steam_executed": false
+  },
+  "scope": "One original visible draft/review/confirmed identity composes one unchanged PreparedExpedition through actual finite production, two encounters, earned amendments and real loss.",
+  "counting": "ONE North Star product unit. Controls overlap outcomes; not participants, independent studies, new source-capability credit or effort measurements. Consumption remains15 INTEGRATED/9 REJECTED/15 UNRESOLVED.",
+  "retained_negatives": [
+    "External output-parent setup failure before host execution.",
+    "Superseded initial browser/captures with generic terminal copy retained; corrected terminal copy is current.",
+    "Stale reviewed draft refusal, actual losing Wait policy, isolated false identity and false completion renderers."
+  ],
+  "specialists": {
+    "engineering": "Independent selection and Host implementation/review; ENG004/015/017. One private unchanged owner, exact whole confirmation, actual execution levels.",
+    "scientific": "Independent selection and Chromium/HTTP instrument; SCI013/014/076/077. Refute cosmetic-only rival, actual source stability and negative renderers.",
+    "creative": "Independent selection and original web/SVG implementation, six superseded/final captures inspected; CRE001(D)/005(A),009/011/013(H),045/061(H). Distinct expression/eligibility/outfit and costly enacted person.",
+    "primary": "Prospective protocol, native consumer controls, orchestrated actual verification, caption review, preservation, CI/continuity/portfolio integration.",
+    "independence_limit": "Independent agent analyses are not independent human assessment or author approval."
+  },
+  "limits": [
+    "Ephemeral local .NET10/Linux/browser owner, not Unity/netstandard, full avatar/creation parser, save migration, account, distributed persistence or Windows/Steam execution of this new consumer.",
+    "Expression and experimental preparation are not approved final canon, human comprehension/enjoyment/accessibility/balance, exclusive rights or commercial clearance.",
+    "Prior RequestExpedition fixed Lure/Trail, actual outcomes/journal, all source variants and both recipient platforms remain unchanged.",
+    "No licensed usable Unity Editor/modules or participants observed. Windows Hub query previously inconclusive; no new license/module assertion. Build/Operations remains incomplete; ten other bounded methods remain operational."
+  ],
+  "result_artifacts": [
+    {
+      "local_path": "evidence/intake/browser/actual-completion.png",
+      "size_bytes": 187344,
+      "sha256": "c7509c6b032693813a5c3527aa64df75367b3244ccccc676b857bc213013bd90"
+    },
+    {
+      "local_path": "evidence/intake/browser/actual-loss.png",
+      "size_bytes": 175011,
+      "sha256": "ee39e6e58e2e8ea63e28d599bc43e370bad09aa01a70c998567346678fce4f4a"
+    },
+    {
+      "local_path": "evidence/intake/browser/browser.json",
+      "size_bytes": 37640,
+      "sha256": "a2d28a50d006fc41ce9315a7b325388265c50395167ab739bcb25da6ae0d81ba"
+    },
+    {
+      "local_path": "evidence/intake/browser/confirmed-before-entry.png",
+      "size_bytes": 175330,
+      "sha256": "9da4053d1f20a6390df01c85dadf81531d0a4658271498870940854dc1a74376"
+    },
+    {
+      "local_path": "evidence/intake/browser/hosts.json",
+      "size_bytes": 1981,
+      "sha256": "6a4780cdad4f7c8a1d0b0b073ad1fc415bb229a715070fc414fa76afc6428a4d"
+    },
+    {
+      "local_path": "evidence/intake/engineering-smoke.json",
+      "size_bytes": 1344,
+      "sha256": "48c1f7aca6754f30fb0406a14304542292c33c6a909792ef00149ab23e280bcd"
+    },
+    {
+      "local_path": "evidence/intake/execution.json",
+      "size_bytes": 2616,
+      "sha256": "5d7442a88ad971485507dce34f75974505b1cf1d5ce562b113ccc5dad8fb6e0d"
+    },
+    {
+      "local_path": "evidence/intake/initial-output-path-failure.json",
+      "size_bytes": 298,
+      "sha256": "7f2155e9f4f1feff744d4ace8dc3aa6943febc62665038145ecf8b5ac9056020"
+    },
+    {
+      "local_path": "evidence/intake/native.json",
+      "size_bytes": 4561,
+      "sha256": "bf70a3f4eba56c46eaccc2b126764da54fe77d895e816d1235d3024c85b9eebf"
+    },
+    {
+      "local_path": "evidence/intake/preservation.json",
+      "size_bytes": 331121,
+      "sha256": "48f86bb561c3d8c918e90a8a8d0fce1bc97929b799467dbd9f8493d242dd943d"
+    },
+    {
+      "local_path": "evidence/intake/protocol.json",
+      "size_bytes": 2420,
+      "sha256": "ec4a5707e8dd4253f8d8b818574495c6a110963cf52f7d440137b9f6118ba9c8"
+    },
+    {
+      "local_path": "evidence/intake/superseded-browser/actual-completion.png",
+      "size_bytes": 188126,
+      "sha256": "a4b4879506016e8ed3a1313b9f97eb007fcfb2556de15cfa60fa501bc5f7d93a"
+    },
+    {
+      "local_path": "evidence/intake/superseded-browser/actual-loss.png",
+      "size_bytes": 175644,
+      "sha256": "766479f92a46157384e469a105f1be206770ffd2856127ccf9176f061e63ff23"
+    },
+    {
+      "local_path": "evidence/intake/superseded-browser/browser.json",
+      "size_bytes": 37640,
+      "sha256": "c79dcfe0eb290dd4bb34db3320fb46d416e8775a721bd1e1b08c21af5b628d1f"
+    },
+    {
+      "local_path": "evidence/intake/superseded-browser/confirmed-before-entry.png",
+      "size_bytes": 175330,
+      "sha256": "9da4053d1f20a6390df01c85dadf81531d0a4658271498870940854dc1a74376"
+    },
+    {
+      "local_path": "evidence/intake/superseded-browser/hosts.json",
+      "size_bytes": 1981,
+      "sha256": "b1936fd7f23d1c10f94b30c79119e5ceb0a3a8e70998ce54c7a3f60bf9af2a2a"
+    },
+    {
+      "local_path": "evidence/intake/validation.json",
+      "size_bytes": 1579,
+      "sha256": "2445ba169d420be95759da63494907d797d77f19e8c97607846af5d1577b4a35"
+    },
+    {
+      "local_path": "evidence/intake/verification.json",
+      "size_bytes": 3848,
+      "sha256": "3f6176a314807c8ce1f0b601644b8332f1402858cf7cc624bbf6d921ba599cf0"
+    }
+  ]
+}

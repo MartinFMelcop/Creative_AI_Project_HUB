@@ -1,0 +1,69 @@
+{
+  "sequence": 21,
+  "command": "slot",
+  "accepted": true,
+  "text": "Skill: 0 damage, 2 resolve spent. Completed; reward committed. Level 3, 2 unspent points.",
+  "confirmed": true,
+  "pending": false,
+  "draft_revision": 2,
+  "reviewed_revision": 2,
+  "draft": {
+    "handle": "Wayfarer",
+    "accent": "teal",
+    "class_id": "anchor",
+    "background_id": "trailborn",
+    "slots": [
+      "brace",
+      "dash",
+      null,
+      null
+    ]
+  },
+  "identity": {
+    "handle": "Wayfarer",
+    "accent": "teal",
+    "class_id": "anchor",
+    "background_id": "trailborn",
+    "slots": [
+      "brace",
+      "dash",
+      null,
+      null
+    ]
+  },
+  "state": {
+    "class_id": "anchor",
+    "background_id": "trailborn",
+    "slots": [
+      "brace",
+      "dash",
+      null,
+      null
+    ],
+    "active": false,
+    "complete": true,
+    "won": true,
+    "stage": 1,
+    "beat": 6,
+    "position": 4,
+    "health": 11,
+    "resolve": 5,
+    "rig": "Trail",
+    "attempts": 2,
+    "consumed_rigs": 2,
+    "transactions": 4,
+    "inventory": {
+      "fiber": 0,
+      "binder": 0,
+      "trail_rig": 0
+    },
+    "level": 3,
+    "xp": 25,
+    "unspent": 2,
+    "vitality": 0,
+    "focus": 2
+  },
+  "threat": "BOLT: moving exposes health; the approach skill spends resolve to protect.",
+  "required_position": 4,
+  "maximum_beats": 6
+}

@@ -1,0 +1,67 @@
+{
+  "schema_version": 1,
+  "required": {
+    "validate_repo": {
+      "passed": true,
+      "projects": 11,
+      "transfers": 15,
+      "assets": 11,
+      "legacy_sources": 2,
+      "local_links": 1031
+    },
+    "reference_library": {
+      "passed": true,
+      "collections": 5,
+      "preserved_sources": 607,
+      "derived_pdf": 18,
+      "explicit_exclusions": 140,
+      "capabilities": 14
+    },
+    "brain_query": {
+      "passed": true,
+      "chapters": 234,
+      "inherited_source_warnings": 44,
+      "protected_originals_unchanged": true
+    },
+    "transformation": {
+      "passed": true,
+      "destinations": 11,
+      "bounded_operational": 10,
+      "incomplete": 1,
+      "consumption": {
+        "INTEGRATED": 15,
+        "REJECTED": 9,
+        "UNRESOLVED": 15
+      }
+    },
+    "origin_inventory": {
+      "passed": true,
+      "origins": 11,
+      "unique_accessible_files": 1052,
+      "zip_pck_packages": 36
+    }
+  },
+  "affected_regressions": {
+    "ci_scope": {
+      "passed": 13,
+      "failed": 0
+    }
+  },
+  "baseline_ci": {
+    "general": {
+      "id": 40383291625,
+      "attempt": 1,
+      "status": "completed",
+      "conclusion": "success",
+      "jobs_success": 8
+    },
+    "windows": {
+      "id": 40383291594,
+      "attempt": 1,
+      "status": "completed",
+      "conclusion": "success"
+    },
+    "head_sha": "290111eae667834608702dfd03b4d6a8315b9cf2"
+  },
+  "limits": "Documentary gates do not prove runtime or human validity. Actual new consumer results live separately; unchanged prior matrices were not manually rerun."
+}

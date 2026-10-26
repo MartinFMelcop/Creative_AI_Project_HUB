@@ -1,0 +1,57 @@
+{
+  "complete": true,
+  "logs": [
+    {
+      "command": [
+        "/workspace/work/authored-scene/dotnet/dotnet",
+        "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/intake/Host/bin/Release/net10.0/NorthStar.Intake.dll",
+        "--serve",
+        "45973",
+        "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/intake/web",
+        "--seconds",
+        "120"
+      ],
+      "stdout": "READY http://127.0.0.1:45973/\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/workspace/work/authored-scene/dotnet/dotnet",
+        "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/intake/Host/bin/Release/net10.0/NorthStar.Intake.dll",
+        "--serve",
+        "41885",
+        "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/intake/web",
+        "--seconds",
+        "120"
+      ],
+      "stdout": "READY http://127.0.0.1:41885/\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/workspace/work/authored-scene/dotnet/dotnet",
+        "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/intake/Host/bin/Release/net10.0/NorthStar.Intake.dll",
+        "--serve",
+        "41027",
+        "/tmp/intake-render-mutant-UC2Kt3/web",
+        "--seconds",
+        "120"
+      ],
+      "stdout": "READY http://127.0.0.1:41027/\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/workspace/work/authored-scene/dotnet/dotnet",
+        "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/intake/Host/bin/Release/net10.0/NorthStar.Intake.dll",
+        "--serve",
+        "44289",
+        "/tmp/intake-render-mutant-UC2Kt3/web",
+        "--seconds",
+        "120"
+      ],
+      "stdout": "READY http://127.0.0.1:44289/\n",
+      "stderr": ""
+    }
+  ]
+}

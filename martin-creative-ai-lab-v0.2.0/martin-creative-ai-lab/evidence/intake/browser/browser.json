@@ -1,0 +1,1424 @@
+{
+  "schema_version": 1,
+  "kind": "actual_browser_csharp_confirmed_intake",
+  "runtime": {
+    "node": "v24.19.0",
+    "chromium": "154.0.8037.57",
+    "playwright": "1.64.0"
+  },
+  "checks": {
+    "passed": 20,
+    "failed": 0
+  },
+  "http_checks": {
+    "passed": 7,
+    "failed": 0
+  },
+  "controls": [
+    "Initial proposed identity owns no confirmed character or encounter",
+    "Unconfirmed entry cannot consume supplies or begin a journey",
+    "Draft identity does not silently confirm or create supplies",
+    "Editing reviewed intake refuses its stale confirmation without a character",
+    "Explicit current review and confirmation create exactly the proposed identity",
+    "Reads redraw and elapsed time cannot craft enter or complete",
+    "Actual confirmed preparation spends ingredients to make its first rig",
+    "Actual first entry consumes that rig and retains confirmed identity",
+    "Active creation edit cannot replace the confirmed character or encounter",
+    "Confirmed Lure skill actually advances while protecting in Crossing",
+    "Actual survey earns progression without fabricating final completion",
+    "Second encounter needs a second real crafted and consumed rig",
+    "Actual final completion retains identity and exactly earned rewards",
+    "Completed journey cannot mint another entry or reward",
+    "Actual loss retains character and consumed rig without completion or XP",
+    "Consumed losing rig cannot be reused as a promise or refund",
+    "An actual isolated false-completion renderer is detected",
+    "An actual isolated false-identity renderer is detected",
+    "Actual browser has no uncaught script errors",
+    "Actual input closure remains exact through execution"
+  ],
+  "http_controls": [
+    "forged confirmed identity",
+    "duplicate revision",
+    "fabricated completion",
+    "cross-origin intake",
+    "malformed JSON",
+    "wrong media type",
+    "oversized intake"
+  ],
+  "states": {
+    "initial": {
+      "sequence": 0,
+      "command": "initial",
+      "accepted": true,
+      "text": "Draft only. Review exact preparation and explicitly confirm before spending supplies.",
+      "confirmed": false,
+      "pending": true,
+      "draft_revision": 1,
+      "reviewed_revision": null,
+      "draft": {
+        "handle": "Wayfarer",
+        "accent": "copper",
+        "class_id": "anchor",
+        "background_id": "workshop",
+        "slots": [
+          "brace",
+          null,
+          null,
+          null
+        ]
+      },
+      "identity": null,
+      "state": {
+        "class_id": "anchor",
+        "background_id": "workshop",
+        "slots": [
+          "brace",
+          null,
+          null,
+          null
+        ],
+        "active": false,
+        "complete": false,
+        "won": false,
+        "stage": 0,
+        "beat": 0,
+        "position": 0,
+        "health": 0,
+        "resolve": 0,
+        "rig": "Unprepared",
+        "attempts": 0,
+        "consumed_rigs": 0,
+        "transactions": 0,
+        "inventory": {
+          "fiber": 4,
+          "binder": 2
+        },
+        "level": 1,
+        "xp": 0,
+        "unspent": 0,
+        "vitality": 0,
+        "focus": 0
+      },
+      "threat": "BOLT: moving exposes health; the approach skill spends resolve to protect.",
+      "required_position": 2,
+      "maximum_beats": 4
+    },
+    "early": {
+      "sequence": 1,
+      "command": "begin",
+      "accepted": false,
+      "text": "Confirm the pending preparation before entry.",
+      "confirmed": false,
+      "pending": true,
+      "draft_revision": 1,
+      "reviewed_revision": null,
+      "draft": {
+        "handle": "Wayfarer",
+        "accent": "copper",
+        "class_id": "anchor",
+        "background_id": "workshop",
+        "slots": [
+          "brace",
+          null,
+          null,
+          null
+        ]
+      },
+      "identity": null,
+      "state": {
+        "class_id": "anchor",
+        "background_id": "workshop",
+        "slots": [
+          "brace",
+          null,
+          null,
+          null
+        ],
+        "active": false,
+        "complete": false,
+        "won": false,
+        "stage": 0,
+        "beat": 0,
+        "position": 0,
+        "health": 0,
+        "resolve": 0,
+        "rig": "Unprepared",
+        "attempts": 0,
+        "consumed_rigs": 0,
+        "transactions": 0,
+        "inventory": {
+          "fiber": 4,
+          "binder": 2
+        },
+        "level": 1,
+        "xp": 0,
+        "unspent": 0,
+        "vitality": 0,
+        "focus": 0
+      },
+      "threat": "BOLT: moving exposes health; the approach skill spends resolve to protect.",
+      "required_position": 2,
+      "maximum_beats": 4
+    },
+    "draft": {
+      "sequence": 2,
+      "command": "draft",
+      "accepted": true,
+      "text": "Draft changed only. Previous review expired; committed identity, supplies and progress remain unchanged.",
+      "confirmed": false,
+      "pending": true,
+      "draft_revision": 2,
+      "reviewed_revision": null,
+      "draft": {
+        "handle": "Neri",
+        "accent": "teal",
+        "class_id": "lure",
+        "background_id": "trailborn",
+        "slots": [
+          "draw",
+          null,
+          null,
+          null
+        ]
+      },
+      "identity": null,
+      "state": {
+        "class_id": "anchor",
+        "background_id": "workshop",
+        "slots": [
+          "brace",
+          null,
+          null,
+          null
+        ],
+        "active": false,
+        "complete": false,
+        "won": false,
+        "stage": 0,
+        "beat": 0,
+        "position": 0,
+        "health": 0,
+        "resolve": 0,
+        "rig": "Unprepared",
+        "attempts": 0,
+        "consumed_rigs": 0,
+        "transactions": 0,
+        "inventory": {
+          "fiber": 4,
+          "binder": 2
+        },
+        "level": 1,
+        "xp": 0,
+        "unspent": 0,
+        "vitality": 0,
+        "focus": 0
+      },
+      "threat": "BOLT: moving exposes health; the approach skill spends resolve to protect.",
+      "required_position": 2,
+      "maximum_beats": 4
+    },
+    "stale": {
+      "sequence": 5,
+      "command": "confirm",
+      "accepted": false,
+      "text": "Confirmation requires the current exact reviewed draft and an editable journey.",
+      "confirmed": false,
+      "pending": true,
+      "draft_revision": 3,
+      "reviewed_revision": null,
+      "draft": {
+        "handle": "Sora",
+        "accent": "violet",
+        "class_id": "lure",
+        "background_id": "trailborn",
+        "slots": [
+          "draw",
+          null,
+          null,
+          null
+        ]
+      },
+      "identity": null,
+      "state": {
+        "class_id": "anchor",
+        "background_id": "workshop",
+        "slots": [
+          "brace",
+          null,
+          null,
+          null
+        ],
+        "active": false,
+        "complete": false,
+        "won": false,
+        "stage": 0,
+        "beat": 0,
+        "position": 0,
+        "health": 0,
+        "resolve": 0,
+        "rig": "Unprepared",
+        "attempts": 0,
+        "consumed_rigs": 0,
+        "transactions": 0,
+        "inventory": {
+          "fiber": 4,
+          "binder": 2
+        },
+        "level": 1,
+        "xp": 0,
+        "unspent": 0,
+        "vitality": 0,
+        "focus": 0
+      },
+      "threat": "BOLT: moving exposes health; the approach skill spends resolve to protect.",
+      "required_position": 2,
+      "maximum_beats": 4
+    },
+    "confirmed": {
+      "sequence": 7,
+      "command": "confirm",
+      "accepted": true,
+      "text": "Reviewed identity and complete preparation confirmed atomically. No supply, health or reward grant.",
+      "confirmed": true,
+      "pending": false,
+      "draft_revision": 3,
+      "reviewed_revision": 3,
+      "draft": {
+        "handle": "Sora",
+        "accent": "violet",
+        "class_id": "lure",
+        "background_id": "trailborn",
+        "slots": [
+          "draw",
+          null,
+          null,
+          null
+        ]
+      },
+      "identity": {
+        "handle": "Sora",
+        "accent": "violet",
+        "class_id": "lure",
+        "background_id": "trailborn",
+        "slots": [
+          "draw",
+          null,
+          null,
+          null
+        ]
+      },
+      "state": {
+        "class_id": "lure",
+        "background_id": "trailborn",
+        "slots": [
+          "draw",
+          null,
+          null,
+          null
+        ],
+        "active": false,
+        "complete": false,
+        "won": false,
+        "stage": 0,
+        "beat": 0,
+        "position": 0,
+        "health": 0,
+        "resolve": 0,
+        "rig": "Unprepared",
+        "attempts": 0,
+        "consumed_rigs": 0,
+        "transactions": 0,
+        "inventory": {
+          "fiber": 4,
+          "binder": 2
+        },
+        "level": 1,
+        "xp": 0,
+        "unspent": 0,
+        "vitality": 0,
+        "focus": 0
+      },
+      "threat": "BOLT: moving exposes health; the approach skill spends resolve to protect.",
+      "required_position": 2,
+      "maximum_beats": 4
+    },
+    "firstCraft": {
+      "sequence": 8,
+      "command": "craft",
+      "accepted": true,
+      "text": "Committed.",
+      "confirmed": true,
+      "pending": false,
+      "draft_revision": 3,
+      "reviewed_revision": 3,
+      "draft": {
+        "handle": "Sora",
+        "accent": "violet",
+        "class_id": "lure",
+        "background_id": "trailborn",
+        "slots": [
+          "draw",
+          null,
+          null,
+          null
+        ]
+      },
+      "identity": {
+        "handle": "Sora",
+        "accent": "violet",
+        "class_id": "lure",
+        "background_id": "trailborn",
+        "slots": [
+          "draw",
+          null,
+          null,
+          null
+        ]
+      },
+      "state": {
+        "class_id": "lure",
+        "background_id": "trailborn",
+        "slots": [
+          "draw",
+          null,
+          null,
+          null
+        ],
+        "active": false,
+        "complete": false,
+        "won": false,
+        "stage": 0,
+        "beat": 0,
+        "position": 0,
+        "health": 0,
+        "resolve": 0,
+        "rig": "Unprepared",
+        "attempts": 0,
+        "consumed_rigs": 0,
+        "transactions": 1,
+        "inventory": {
+          "fiber": 2,
+          "binder": 1,
+          "trail_rig": 1
+        },
+        "level": 1,
+        "xp": 0,
+        "unspent": 0,
+        "vitality": 0,
+        "focus": 0
+      },
+      "threat": "BOLT: moving exposes health; the approach skill spends resolve to protect.",
+      "required_position": 2,
+      "maximum_beats": 4
+    },
+    "firstEntry": {
+      "sequence": 9,
+      "command": "begin",
+      "accepted": true,
+      "text": "Encounter committed. One Trail rig consumed; no refund on failure.",
+      "confirmed": true,
+      "pending": false,
+      "draft_revision": 3,
+      "reviewed_revision": 3,
+      "draft": {
+        "handle": "Sora",
+        "accent": "violet",
+        "class_id": "lure",
+        "background_id": "trailborn",
+        "slots": [
+          "draw",
+          null,
+          null,
+          null
+        ]
+      },
+      "identity": {
+        "handle": "Sora",
+        "accent": "violet",
+        "class_id": "lure",
+        "background_id": "trailborn",
+        "slots": [
+          "draw",
+          null,
+          null,
+          null
+        ]
+      },
+      "state": {
+        "class_id": "lure",
+        "background_id": "trailborn",
+        "slots": [
+          "draw",
+          null,
+          null,
+          null
+        ],
+        "active": true,
+        "complete": false,
+        "won": false,
+        "stage": 0,
+        "beat": 0,
+        "position": 0,
+        "health": 10,
+        "resolve": 10,
+        "rig": "Trail",
+        "attempts": 1,
+        "consumed_rigs": 1,
+        "transactions": 2,
+        "inventory": {
+          "fiber": 2,
+          "binder": 1,
+          "trail_rig": 0
+        },
+        "level": 1,
+        "xp": 0,
+        "unspent": 0,
+        "vitality": 0,
+        "focus": 0
+      },
+      "threat": "BOLT: moving exposes health; the approach skill spends resolve to protect.",
+      "required_position": 2,
+      "maximum_beats": 4
+    },
+    "liveEdit": {
+      "sequence": 10,
+      "command": "draft",
+      "accepted": false,
+      "text": "Identity handle is fixed after confirmation; preparation edits are unavailable during/after an encounter.",
+      "confirmed": true,
+      "pending": false,
+      "draft_revision": 3,
+      "reviewed_revision": 3,
+      "draft": {
+        "handle": "Sora",
+        "accent": "violet",
+        "class_id": "lure",
+        "background_id": "trailborn",
+        "slots": [
+          "draw",
+          null,
+          null,
+          null
+        ]
+      },
+      "identity": {
+        "handle": "Sora",
+        "accent": "violet",
+        "class_id": "lure",
+        "background_id": "trailborn",
+        "slots": [
+          "draw",
+          null,
+          null,
+          null
+        ]
+      },
+      "state": {
+        "class_id": "lure",
+        "background_id": "trailborn",
+        "slots": [
+          "draw",
+          null,
+          null,
+          null
+        ],
+        "active": true,
+        "complete": false,
+        "won": false,
+        "stage": 0,
+        "beat": 0,
+        "position": 0,
+        "health": 10,
+        "resolve": 10,
+        "rig": "Trail",
+        "attempts": 1,
+        "consumed_rigs": 1,
+        "transactions": 2,
+        "inventory": {
+          "fiber": 2,
+          "binder": 1,
+          "trail_rig": 0
+        },
+        "level": 1,
+        "xp": 0,
+        "unspent": 0,
+        "vitality": 0,
+        "focus": 0
+      },
+      "threat": "BOLT: moving exposes health; the approach skill spends resolve to protect.",
+      "required_position": 2,
+      "maximum_beats": 4
+    },
+    "firstAction": {
+      "sequence": 11,
+      "command": "slot",
+      "accepted": true,
+      "text": "Skill: 0 damage, 3 resolve spent.",
+      "confirmed": true,
+      "pending": false,
+      "draft_revision": 3,
+      "reviewed_revision": 3,
+      "draft": {
+        "handle": "Sora",
+        "accent": "violet",
+        "class_id": "lure",
+        "background_id": "trailborn",
+        "slots": [
+          "draw",
+          null,
+          null,
+          null
+        ]
+      },
+      "identity": {
+        "handle": "Sora",
+        "accent": "violet",
+        "class_id": "lure",
+        "background_id": "trailborn",
+        "slots": [
+          "draw",
+          null,
+          null,
+          null
+        ]
+      },
+      "state": {
+        "class_id": "lure",
+        "background_id": "trailborn",
+        "slots": [
+          "draw",
+          null,
+          null,
+          null
+        ],
+        "active": true,
+        "complete": false,
+        "won": false,
+        "stage": 0,
+        "beat": 1,
+        "position": 1,
+        "health": 10,
+        "resolve": 7,
+        "rig": "Trail",
+        "attempts": 1,
+        "consumed_rigs": 1,
+        "transactions": 2,
+        "inventory": {
+          "fiber": 2,
+          "binder": 1,
+          "trail_rig": 0
+        },
+        "level": 1,
+        "xp": 0,
+        "unspent": 0,
+        "vitality": 0,
+        "focus": 0
+      },
+      "threat": "BOLT: moving exposes health; the approach skill spends resolve to protect.",
+      "required_position": 2,
+      "maximum_beats": 4
+    },
+    "survey": {
+      "sequence": 14,
+      "command": "slot",
+      "accepted": true,
+      "text": "Skill: 0 damage, 3 resolve spent. Completed; reward committed. Level 2, 2 unspent points.",
+      "confirmed": true,
+      "pending": false,
+      "draft_revision": 3,
+      "reviewed_revision": 3,
+      "draft": {
+        "handle": "Sora",
+        "accent": "violet",
+        "class_id": "lure",
+        "background_id": "trailborn",
+        "slots": [
+          "draw",
+          null,
+          null,
+          null
+        ]
+      },
+      "identity": {
+        "handle": "Sora",
+        "accent": "violet",
+        "class_id": "lure",
+        "background_id": "trailborn",
+        "slots": [
+          "draw",
+          null,
+          null,
+          null
+        ]
+      },
+      "state": {
+        "class_id": "lure",
+        "background_id": "trailborn",
+        "slots": [
+          "draw",
+          null,
+          null,
+          null
+        ],
+        "active": false,
+        "complete": false,
+        "won": true,
+        "stage": 1,
+        "beat": 4,
+        "position": 4,
+        "health": 10,
+        "resolve": 3,
+        "rig": "Trail",
+        "attempts": 1,
+        "consumed_rigs": 1,
+        "transactions": 2,
+        "inventory": {
+          "fiber": 2,
+          "binder": 1,
+          "trail_rig": 0
+        },
+        "level": 2,
+        "xp": 10,
+        "unspent": 2,
+        "vitality": 0,
+        "focus": 0
+      },
+      "threat": "PULSE at your current position: walking or dashing leaves it.",
+      "required_position": 4,
+      "maximum_beats": 6
+    },
+    "secondCraft": {
+      "sequence": 15,
+      "command": "craft",
+      "accepted": true,
+      "text": "Committed.",
+      "confirmed": true,
+      "pending": false,
+      "draft_revision": 3,
+      "reviewed_revision": 3,
+      "draft": {
+        "handle": "Sora",
+        "accent": "violet",
+        "class_id": "lure",
+        "background_id": "trailborn",
+        "slots": [
+          "draw",
+          null,
+          null,
+          null
+        ]
+      },
+      "identity": {
+        "handle": "Sora",
+        "accent": "violet",
+        "class_id": "lure",
+        "background_id": "trailborn",
+        "slots": [
+          "draw",
+          null,
+          null,
+          null
+        ]
+      },
+      "state": {
+        "class_id": "lure",
+        "background_id": "trailborn",
+        "slots": [
+          "draw",
+          null,
+          null,
+          null
+        ],
+        "active": false,
+        "complete": false,
+        "won": true,
+        "stage": 1,
+        "beat": 4,
+        "position": 4,
+        "health": 10,
+        "resolve": 3,
+        "rig": "Trail",
+        "attempts": 1,
+        "consumed_rigs": 1,
+        "transactions": 3,
+        "inventory": {
+          "fiber": 0,
+          "binder": 0,
+          "trail_rig": 1
+        },
+        "level": 2,
+        "xp": 10,
+        "unspent": 2,
+        "vitality": 0,
+        "focus": 0
+      },
+      "threat": "PULSE at your current position: walking or dashing leaves it.",
+      "required_position": 4,
+      "maximum_beats": 6
+    },
+    "secondEntry": {
+      "sequence": 16,
+      "command": "begin",
+      "accepted": true,
+      "text": "Encounter committed. One Trail rig consumed; no refund on failure.",
+      "confirmed": true,
+      "pending": false,
+      "draft_revision": 3,
+      "reviewed_revision": 3,
+      "draft": {
+        "handle": "Sora",
+        "accent": "violet",
+        "class_id": "lure",
+        "background_id": "trailborn",
+        "slots": [
+          "draw",
+          null,
+          null,
+          null
+        ]
+      },
+      "identity": {
+        "handle": "Sora",
+        "accent": "violet",
+        "class_id": "lure",
+        "background_id": "trailborn",
+        "slots": [
+          "draw",
+          null,
+          null,
+          null
+        ]
+      },
+      "state": {
+        "class_id": "lure",
+        "background_id": "trailborn",
+        "slots": [
+          "draw",
+          null,
+          null,
+          null
+        ],
+        "active": true,
+        "complete": false,
+        "won": false,
+        "stage": 1,
+        "beat": 0,
+        "position": 0,
+        "health": 11,
+        "resolve": 11,
+        "rig": "Trail",
+        "attempts": 2,
+        "consumed_rigs": 2,
+        "transactions": 4,
+        "inventory": {
+          "fiber": 0,
+          "binder": 0,
+          "trail_rig": 0
+        },
+        "level": 2,
+        "xp": 10,
+        "unspent": 2,
+        "vitality": 0,
+        "focus": 0
+      },
+      "threat": "BOLT: moving exposes health; the approach skill spends resolve to protect.",
+      "required_position": 4,
+      "maximum_beats": 6
+    },
+    "complete": {
+      "sequence": 22,
+      "command": "slot",
+      "accepted": true,
+      "text": "Skill: 0 damage, 3 resolve spent. Completed; reward committed. Level 3, 4 unspent points.",
+      "confirmed": true,
+      "pending": false,
+      "draft_revision": 3,
+      "reviewed_revision": 3,
+      "draft": {
+        "handle": "Sora",
+        "accent": "violet",
+        "class_id": "lure",
+        "background_id": "trailborn",
+        "slots": [
+          "draw",
+          null,
+          null,
+          null
+        ]
+      },
+      "identity": {
+        "handle": "Sora",
+        "accent": "violet",
+        "class_id": "lure",
+        "background_id": "trailborn",
+        "slots": [
+          "draw",
+          null,
+          null,
+          null
+        ]
+      },
+      "state": {
+        "class_id": "lure",
+        "background_id": "trailborn",
+        "slots": [
+          "draw",
+          null,
+          null,
+          null
+        ],
+        "active": false,
+        "complete": true,
+        "won": true,
+        "stage": 1,
+        "beat": 6,
+        "position": 6,
+        "health": 11,
+        "resolve": 3,
+        "rig": "Trail",
+        "attempts": 2,
+        "consumed_rigs": 2,
+        "transactions": 4,
+        "inventory": {
+          "fiber": 0,
+          "binder": 0,
+          "trail_rig": 0
+        },
+        "level": 3,
+        "xp": 25,
+        "unspent": 4,
+        "vitality": 0,
+        "focus": 0
+      },
+      "threat": "BOLT: moving exposes health; the approach skill spends resolve to protect.",
+      "required_position": 4,
+      "maximum_beats": 6
+    },
+    "afterComplete": {
+      "sequence": 23,
+      "command": "begin",
+      "accepted": false,
+      "text": "Entry rejected; preparation and supplies unchanged.",
+      "confirmed": true,
+      "pending": false,
+      "draft_revision": 3,
+      "reviewed_revision": 3,
+      "draft": {
+        "handle": "Sora",
+        "accent": "violet",
+        "class_id": "lure",
+        "background_id": "trailborn",
+        "slots": [
+          "draw",
+          null,
+          null,
+          null
+        ]
+      },
+      "identity": {
+        "handle": "Sora",
+        "accent": "violet",
+        "class_id": "lure",
+        "background_id": "trailborn",
+        "slots": [
+          "draw",
+          null,
+          null,
+          null
+        ]
+      },
+      "state": {
+        "class_id": "lure",
+        "background_id": "trailborn",
+        "slots": [
+          "draw",
+          null,
+          null,
+          null
+        ],
+        "active": false,
+        "complete": true,
+        "won": true,
+        "stage": 1,
+        "beat": 6,
+        "position": 6,
+        "health": 11,
+        "resolve": 3,
+        "rig": "Trail",
+        "attempts": 2,
+        "consumed_rigs": 2,
+        "transactions": 4,
+        "inventory": {
+          "fiber": 0,
+          "binder": 0,
+          "trail_rig": 0
+        },
+        "level": 3,
+        "xp": 25,
+        "unspent": 4,
+        "vitality": 0,
+        "focus": 0
+      },
+      "threat": "BOLT: moving exposes health; the approach skill spends resolve to protect.",
+      "required_position": 4,
+      "maximum_beats": 6
+    },
+    "failed": {
+      "sequence": 8,
+      "command": "wait",
+      "accepted": true,
+      "text": "Wait: 4 damage, 0 resolve spent. Crossing failed. Reprepare and retry; no completion reward.",
+      "confirmed": true,
+      "pending": false,
+      "draft_revision": 2,
+      "reviewed_revision": 2,
+      "draft": {
+        "handle": "Ivo",
+        "accent": "teal",
+        "class_id": "lure",
+        "background_id": "trailborn",
+        "slots": [
+          "draw",
+          null,
+          null,
+          null
+        ]
+      },
+      "identity": {
+        "handle": "Ivo",
+        "accent": "teal",
+        "class_id": "lure",
+        "background_id": "trailborn",
+        "slots": [
+          "draw",
+          null,
+          null,
+          null
+        ]
+      },
+      "state": {
+        "class_id": "lure",
+        "background_id": "trailborn",
+        "slots": [
+          "draw",
+          null,
+          null,
+          null
+        ],
+        "active": false,
+        "complete": false,
+        "won": false,
+        "stage": 0,
+        "beat": 3,
+        "position": 0,
+        "health": 0,
+        "resolve": 10,
+        "rig": "Trail",
+        "attempts": 1,
+        "consumed_rigs": 1,
+        "transactions": 2,
+        "inventory": {
+          "fiber": 2,
+          "binder": 1,
+          "trail_rig": 0
+        },
+        "level": 1,
+        "xp": 0,
+        "unspent": 0,
+        "vitality": 0,
+        "focus": 0
+      },
+      "threat": "BOLT: moving exposes health; the approach skill spends resolve to protect.",
+      "required_position": 2,
+      "maximum_beats": 4
+    },
+    "noRefund": {
+      "sequence": 9,
+      "command": "begin",
+      "accepted": false,
+      "text": "Requested rig unavailable; no materials or encounter state changed.",
+      "confirmed": true,
+      "pending": false,
+      "draft_revision": 2,
+      "reviewed_revision": 2,
+      "draft": {
+        "handle": "Ivo",
+        "accent": "teal",
+        "class_id": "lure",
+        "background_id": "trailborn",
+        "slots": [
+          "draw",
+          null,
+          null,
+          null
+        ]
+      },
+      "identity": {
+        "handle": "Ivo",
+        "accent": "teal",
+        "class_id": "lure",
+        "background_id": "trailborn",
+        "slots": [
+          "draw",
+          null,
+          null,
+          null
+        ]
+      },
+      "state": {
+        "class_id": "lure",
+        "background_id": "trailborn",
+        "slots": [
+          "draw",
+          null,
+          null,
+          null
+        ],
+        "active": false,
+        "complete": false,
+        "won": false,
+        "stage": 0,
+        "beat": 3,
+        "position": 0,
+        "health": 0,
+        "resolve": 10,
+        "rig": "Trail",
+        "attempts": 1,
+        "consumed_rigs": 1,
+        "transactions": 2,
+        "inventory": {
+          "fiber": 2,
+          "binder": 1,
+          "trail_rig": 0
+        },
+        "level": 1,
+        "xp": 0,
+        "unspent": 0,
+        "vitality": 0,
+        "focus": 0
+      },
+      "threat": "BOLT: moving exposes health; the approach skill spends resolve to protect.",
+      "required_position": 2,
+      "maximum_beats": 4
+    }
+  },
+  "negatives": [
+    {
+      "id": "edited-reviewed-draft",
+      "actual": {
+        "sequence": 5,
+        "command": "confirm",
+        "accepted": false,
+        "text": "Confirmation requires the current exact reviewed draft and an editable journey.",
+        "confirmed": false,
+        "pending": true,
+        "draft_revision": 3,
+        "reviewed_revision": null,
+        "draft": {
+          "handle": "Sora",
+          "accent": "violet",
+          "class_id": "lure",
+          "background_id": "trailborn",
+          "slots": [
+            "draw",
+            null,
+            null,
+            null
+          ]
+        },
+        "identity": null,
+        "state": {
+          "class_id": "anchor",
+          "background_id": "workshop",
+          "slots": [
+            "brace",
+            null,
+            null,
+            null
+          ],
+          "active": false,
+          "complete": false,
+          "won": false,
+          "stage": 0,
+          "beat": 0,
+          "position": 0,
+          "health": 0,
+          "resolve": 0,
+          "rig": "Unprepared",
+          "attempts": 0,
+          "consumed_rigs": 0,
+          "transactions": 0,
+          "inventory": {
+            "fiber": 4,
+            "binder": 2
+          },
+          "level": 1,
+          "xp": 0,
+          "unspent": 0,
+          "vitality": 0,
+          "focus": 0
+        },
+        "threat": "BOLT: moving exposes health; the approach skill spends resolve to protect.",
+        "required_position": 2,
+        "maximum_beats": 4
+      },
+      "reviewed_draft_revision": 2
+    },
+    {
+      "id": "losing-wait-policy",
+      "actual": {
+        "sequence": 8,
+        "command": "wait",
+        "accepted": true,
+        "text": "Wait: 4 damage, 0 resolve spent. Crossing failed. Reprepare and retry; no completion reward.",
+        "confirmed": true,
+        "pending": false,
+        "draft_revision": 2,
+        "reviewed_revision": 2,
+        "draft": {
+          "handle": "Ivo",
+          "accent": "teal",
+          "class_id": "lure",
+          "background_id": "trailborn",
+          "slots": [
+            "draw",
+            null,
+            null,
+            null
+          ]
+        },
+        "identity": {
+          "handle": "Ivo",
+          "accent": "teal",
+          "class_id": "lure",
+          "background_id": "trailborn",
+          "slots": [
+            "draw",
+            null,
+            null,
+            null
+          ]
+        },
+        "state": {
+          "class_id": "lure",
+          "background_id": "trailborn",
+          "slots": [
+            "draw",
+            null,
+            null,
+            null
+          ],
+          "active": false,
+          "complete": false,
+          "won": false,
+          "stage": 0,
+          "beat": 3,
+          "position": 0,
+          "health": 0,
+          "resolve": 10,
+          "rig": "Trail",
+          "attempts": 1,
+          "consumed_rigs": 1,
+          "transactions": 2,
+          "inventory": {
+            "fiber": 2,
+            "binder": 1,
+            "trail_rig": 0
+          },
+          "level": 1,
+          "xp": 0,
+          "unspent": 0,
+          "vitality": 0,
+          "focus": 0
+        },
+        "threat": "BOLT: moving exposes health; the approach skill spends resolve to protect.",
+        "required_position": 2,
+        "maximum_beats": 4
+      }
+    },
+    {
+      "id": "forced-completion-renderer",
+      "detected": true,
+      "mutation": {
+        "target": "const completeObserved = Boolean(s.state.complete);",
+        "replacement": "const completeObserved = true;",
+        "original_sha256": "db906517f8bc4d45b8bf7c30418513a42b2c6d7597f8cbe448f53e612c96c3c2",
+        "mutated_sha256": "b3dcd1816746b879c20e718e8f07816a1f164e2d7f24594e3bc95485fa330ce7"
+      },
+      "actual": {
+        "sequence": 0,
+        "command": "initial",
+        "accepted": true,
+        "text": "Draft only. Review exact preparation and explicitly confirm before spending supplies.",
+        "confirmed": false,
+        "pending": true,
+        "draft_revision": 1,
+        "reviewed_revision": null,
+        "draft": {
+          "handle": "Wayfarer",
+          "accent": "copper",
+          "class_id": "anchor",
+          "background_id": "workshop",
+          "slots": [
+            "brace",
+            null,
+            null,
+            null
+          ]
+        },
+        "identity": null,
+        "state": {
+          "class_id": "anchor",
+          "background_id": "workshop",
+          "slots": [
+            "brace",
+            null,
+            null,
+            null
+          ],
+          "active": false,
+          "complete": false,
+          "won": false,
+          "stage": 0,
+          "beat": 0,
+          "position": 0,
+          "health": 0,
+          "resolve": 0,
+          "rig": "Unprepared",
+          "attempts": 0,
+          "consumed_rigs": 0,
+          "transactions": 0,
+          "inventory": {
+            "fiber": 4,
+            "binder": 2
+          },
+          "level": 1,
+          "xp": 0,
+          "unspent": 0,
+          "vitality": 0,
+          "focus": 0
+        },
+        "threat": "BOLT: moving exposes health; the approach skill spends resolve to protect.",
+        "required_position": 2,
+        "maximum_beats": 4
+      },
+      "assertion": {
+        "name": "AssertionError",
+        "code": "ERR_ASSERTION",
+        "message": "Completion picture follows actual owner\n\n'true' !== 'false'\n"
+      }
+    },
+    {
+      "id": "forced-identity-renderer",
+      "detected": true,
+      "mutation": {
+        "target": "const identityObserved = s.identity;",
+        "replacement": "const identityObserved = s.identity ? {...s.identity,handle:'Fabricated'} : s.identity;",
+        "original_sha256": "db906517f8bc4d45b8bf7c30418513a42b2c6d7597f8cbe448f53e612c96c3c2",
+        "mutated_sha256": "a54d47e0e17f2bde3d2d0927489c5fa058e9860fd84c3143c692bc89b8ecfde5"
+      },
+      "actual": {
+        "sequence": 2,
+        "command": "confirm",
+        "accepted": true,
+        "text": "Reviewed identity and complete preparation confirmed atomically. No supply, health or reward grant.",
+        "confirmed": true,
+        "pending": false,
+        "draft_revision": 1,
+        "reviewed_revision": 1,
+        "draft": {
+          "handle": "Wayfarer",
+          "accent": "copper",
+          "class_id": "anchor",
+          "background_id": "workshop",
+          "slots": [
+            "brace",
+            null,
+            null,
+            null
+          ]
+        },
+        "identity": {
+          "handle": "Wayfarer",
+          "accent": "copper",
+          "class_id": "anchor",
+          "background_id": "workshop",
+          "slots": [
+            "brace",
+            null,
+            null,
+            null
+          ]
+        },
+        "state": {
+          "class_id": "anchor",
+          "background_id": "workshop",
+          "slots": [
+            "brace",
+            null,
+            null,
+            null
+          ],
+          "active": false,
+          "complete": false,
+          "won": false,
+          "stage": 0,
+          "beat": 0,
+          "position": 0,
+          "health": 0,
+          "resolve": 0,
+          "rig": "Unprepared",
+          "attempts": 0,
+          "consumed_rigs": 0,
+          "transactions": 0,
+          "inventory": {
+            "fiber": 4,
+            "binder": 2
+          },
+          "level": 1,
+          "xp": 0,
+          "unspent": 0,
+          "vitality": 0,
+          "focus": 0
+        },
+        "threat": "BOLT: moving exposes health; the approach skill spends resolve to protect.",
+        "required_position": 2,
+        "maximum_beats": 4
+      },
+      "assertion": {
+        "name": "AssertionError",
+        "code": "ERR_ASSERTION",
+        "message": "Confirmed name follows actual immutable identity\n+ actual - expected\n\n+ 'Fabricated'\n- 'Wayfarer'\n"
+      }
+    }
+  ],
+  "source_sha256": {
+    "north-star/csharp/Crossing/NorthStar.Crossing.csproj": "09fbdffe415d44079f66da83d4d22e5b91169f3f1abdd0e1ebc2bacd2e3f0c88",
+    "north-star/csharp/Crossing/Program.cs": "268c1b5ac582dd06f15eb3e40e7ce859a9c58eecfc58c7586d94bcaecf9c595e",
+    "north-star/csharp/Crossing/Session.cs": "d25ac05ba1a94432474dd1b14b4fd608e446fc5344dcc4f779d8d5fe27a1b2c5",
+    "north-star/csharp/Domain/Crafting.cs": "5a5a892b3e68cff73f7a443d7c014c79dbebf2954d28f447e1bf3a9c4759de57",
+    "north-star/csharp/Domain/Loadout.cs": "a1296ca13b5ba6728c073320b860e369ad2e01fdaacb45b5237ef40d0243f682",
+    "north-star/csharp/Domain/NorthStar.Domain.csproj": "9570b674acfea69bb60098f495afd3b9e2cef2575fcfeb6db71c2cdecb2c4876",
+    "north-star/csharp/Domain/Progression.cs": "8495e1ad92fea069c2c3989f6f2cc2600980575e72812df9480ed193c51c8685",
+    "north-star/csharp/Forge/Expedition.cs": "579c1eb8375a5c281d35338f1c93cb529c16bf330f0576046c970d42c816bfc3",
+    "north-star/csharp/Forge/NorthStar.Forge.csproj": "3f58ee26c26f3030dcdb7cc2c6db2b7e14bff43d81e936b95cc116bc82978d35",
+    "north-star/csharp/Forge/Program.cs": "3a289847c487ca3bca8a406635b7f0a2334daa959d767d31b3f732445a398c3a",
+    "north-star/csharp/Loadout/NorthStar.Loadout.csproj": "8b7ae6ab602aa24a78926f23bdf1d0117d79293eeb493334c1a4a2d3d4c85613",
+    "north-star/csharp/Loadout/PreparedExpedition.cs": "92fabdaa94f4ad4bb33a55a113a3d4f8cc63c86634d631413a529eb53df24668",
+    "north-star/csharp/Loadout/Program.cs": "6409bc7a9d24a9c60ea59657b33925c6dd27e3a6a9a7a9736e2d3a5ff7d6d7d8",
+    "north-star/csharp/global.json": "e0c0882461e712f6c2c66241bf2f175c60832e3ff077dc26091ff8c661d4193e",
+    "north-star/intake/Checks/NorthStar.IntakeChecks.csproj": "0f123f0913619a8df7bfc9fef33a4664497b37ae71e5c6485b266fea3c6dc9f5",
+    "north-star/intake/Checks/Program.cs": "58dd73ade0bf09f8a10ab933ee737abbd8075f3aaf77509d81b4b85bb7a28120",
+    "north-star/intake/Host/NorthStar.Intake.csproj": "46e249356ebe839340ac57c5434f7b8cfb41f7ea1bc332776339695b7a5b529a",
+    "north-star/intake/Host/Program.cs": "711c019d69a309f14d2469e13ac7f5bff2f3fb352d6dbaaa0da54af77a67fbae",
+    "north-star/intake/Host/Room.cs": "b5d654a7fa2d64c2ea89d96ab3249d5655008a20a302be916633c688114d3c98",
+    "north-star/intake/tools/browser.mjs": "5e27e2fae3fcbb59e6dfc4d75fc297835307aa0512cbb04c21784f344f94e1da",
+    "north-star/intake/web/app.js": "db906517f8bc4d45b8bf7c30418513a42b2c6d7597f8cbe448f53e612c96c3c2",
+    "north-star/intake/web/index.html": "94d79e28d92857ff906a12fe1eb1af68ac11c101fb5952fb5de849e7caf75cb5",
+    "north-star/intake/web/style.css": "33a23577126f94b722b0f2a7d23fe754183fa1a43ad97c2466de3e99bdf6b7c3",
+    "projects/realtime-integration-lab/package-lock.json": "aa191ef2158e6cc6f770bf4b3ee44dca17175ef1a3cd572b98115246bf46aea7",
+    "projects/realtime-integration-lab/package.json": "42e3cc9633e522dd6d9a5c11023418331129632881a8bf0b95e3717247d57ebe"
+  },
+  "source_stable": true,
+  "scope": "One original finite intake and unchanged prepared-expedition owner per host. Synthetic software controls overlap outcomes; not people, independent studies, human recognition, creation free-text parsing, canon approval, production persistence, Unity, Windows or Steam execution."
+}

@@ -2,153 +2,165 @@
 
 **Updated:** 2026-10-26 America/Sao_Paulo. **SEED:**0.34.0. Initial Git root
 `/workspace/Creative_AI_Project_HUB`, branch `work`, HEAD
-`5db1e6d5bae874b5095b56a01e84a1ea79398bcb`, clean tracked/untracked work.
+`290111eae667834608702dfd03b4d6a8315b9cf2`, clean tracked/untracked work.
 Fetched main matched, divergence0/0, no outgoing commits. Root authority verified this
-workspace and the published Continuous Development v2. STATE owns continuity;
-[catalog](../labs/origins.json) owns maturity/consumption, [DESIGN](../north-star/DESIGN.md)
-creative authority and evidence actual execution. Recover [the complete process](prompts/CONTINUOUS_DEVELOPMENT.md).
+workspace and published Continuous Development v2. Recover [the complete process](prompts/CONTINUOUS_DEVELOPMENT.md).
+STATE owns initiative continuity; [catalog](../labs/origins.json) owns maturity/consumption,
+[DESIGN](../north-star/DESIGN.md) creative authority and evidence executed observations.
 
-## Active result — actual access and consequences in a named restricted context
+## Active result — a confirmed person enacts one actual prepared journey
 
-The [new C# token and access instrument](../delivery/windows-access/README.md) tested the
-unchanged Windows recipient rather than assuming administrative-runner success proves
-ordinary-user access. Independent Engineering, Scientific and Creative analyses compared
-licensed Unity, actual participant/device access, coherent character creation/intake,
-remaining source semantics and production ownership. No licensed Editor or participant
-was observed. Actual access was a concrete production prerequisite and a bounded
-Build/Operations contribution; it did not justify another archive or parser-only assay.
+[A name on the road](../north-star/intake/README.md) is an original visible product
+composition of ONE unchanged private PreparedExpedition. The baseline offered terminal
+preparation without an original draft/review/confirmed field card. Independent Engineering,
+Scientific and Creative analyses selected coherent identity-to-play over another token,
+archive or source catalogue assay. This corrects product underinvestment without claiming
+a new historical capability or Unity production delivery.
 
-[Actual execution](../evidence/windows-access/RUN.json), Windows CI40379998693, completed/
-success in attempt 1 at commit 5ee225b699c154b6e521f375a5bf7737c840df19. Three bounded
-Windows Server 2025 processes used the same unchanged private runtime 10.0.12 and scene.
-Six explicit consumer controls passed with 21 accepted commands: actual refusal, private
-heard consent, reserved guide capacity, paid departure and real Crossing progress;
-then explicit reopening of the same external journal restored exact state/run/day and
-revision 15. Actual remaining actions reached revision 21, observed return/delivery and
-three unfinished crates. All three hosts expired normally with exit 0. This is API-level
-execution; no fresh Chromium, physical-device or independent human claim.
+Draft, exact review and explicit confirmation are distinct. Editing expires review;
+stale intent refuses. Only current confirmation applies complete preparation. Handle
+stays fixed after first confirmation; cloth accent is expression without stat bonuses.
+Class/background/four slots retain the existing exact eligibility; actual acquired rig
+is independent. The same owner retains supplies, attempts, costs, XP and progression.
+Pending amendments block crafting/entry; active/completed card edits refuse. Earned
+between-stage changes require fresh explicit review/confirmation, without healing,
+refilling, reward or refund. The later actual Begin retains existing encounter recovery
+rules. No owner or mutable underlying Expedition escapes.
 
-The actual invoking PowerShell token was queried by PID: administrator=false,
-Administrators SID deny-only, medium integrity 8192, **elevated=true**, elevation_type1.
-A genuinely linked limited token was unavailable (Win32 code1312); this is a constructed
-restricted token of the same account/profile, not an ordinary-user or non-elevated
-account. Native application token inheritance is inferred through the unchanged direct
-script invocation; its own token was not independently queried. Shared filesystem
-access is not an enforced sandbox. No account, ACL, execution policy, URL reservation
-or application privilege elevation was changed.
+Starting4fiber+2binder, workbench and permission are disclosed experimental setup.
+Actual crafts cost2fiber+1binder; actual entry spends one rig, including failure.
+Confirmed Lure's Draw actually advances/protects while spending resolve. Survey wins
+earn progression but do not complete the harder encounter. Native execution earned
+Dash, amended the same person and completed both encounters. Browser execution completed
+both real encounters with the confirmed Sora/violet/Lure/Trail person and two spent rigs;
+another ephemeral host's Ivo/teal losing Wait policy retained its person and spent rig,
+with no reward/completion. These are synthetic software controls, not people/studies.
 
-The unchanged recipient starts in this exact context, so these observations do not
-justify replacing HttpListener or introducing another framework/runtime. Ordinary-user
-Windows 10/11, actual devices, author/player understanding and licensed Unity remain
-unresolved. No transport, game rule, owner, fixed Lure/Trail setup, package or save
-migration was added. No fallback grant, clock, redraw, promise or audio creates delivery
-or return. Existing RequestExpedition, journal and both recipient platforms remain exact.
+The portrait is an original static vector observing confirmed accent/discipline and
+actual outfit. It is not action animation, full avatar creation or a validated identity
+signal. Browser interruption/uncertain receipt requires explicit read, no automatic
+retry. Time, redraw, promises and client fields cannot create supplies, XP or completion.
+No NPC recognition, inherited biography or moral judgment is imported. RequestExpedition's
+single owner, fixed Lure/Trail, actual encounters/journal and both recipients stay exact.
 
-## Retained negatives and prospective method corrections
+## Actual verification, negatives and boundaries
 
-All [protocols](../evidence/windows-access/protocol.json), their initial/revision copies,
-original small CI artifacts and normalized JSON views remain preserved. The first
-trial constructed the restricted token but failed to create a second recipient
-PowerShell before package execution: application access was inconclusive. Direct
-invocation then reached the original script, but extra PowerShell redirection produced
-a native-command encoding error before dotnet, journal or HTTP listener. Explicit
-owned standard handles plus removal of redundant wrapper redirection allowed the
-unchanged recipient to start. None of those earlier errors was relabeled an HTTP.sys,
-gameplay or ordinary-user result. Corrected protocols preceded their respective runs.
+[Execution](../evidence/intake/RUN.json) records25native,20actual Chromium and7HTTP
+controls. These groups overlap outcomes and are not participants, independent studies,
+new candidate attempts or measured effort. Actual form/button bindings were exercised;
+computed SVG visibility/accent, portrait identity, position, inventory and terminal
+banner/text were checked against the C# snapshot. Separate isolated false identity
+and false completion renderers were detected. Source/protocol identities remained
+stable throughout the final integrated runner. Engineering's additional HTTP smoke
+and earlier/final browser runs support this ONE contribution, not extra units.
 
-The separate [consumer protocol](../evidence/windows-access/consumer-protocol.json)
-required real accepted actions and reopening, not just READY. Missing resume, timeout,
-unobserved context or incomplete exercise cannot count as success. Reentry compares
-persisted state/run/revision, excluding transient receipt reason metadata. Fifty exact
-source/protocol/recipient identities matched before and after actual execution. A
-local wrong-declared-recipient control was rejected before execution. All recipient
-notices, source closure and original assemblies stayed unchanged; no ZIP was rebuilt.
+The initial external output-parent path failure occurred before any host. Initial
+successful browser/captures are retained as superseded: review found a generic
+preparation caption after completion/loss. Corrected outcome-specific copy was
+reexecuted and final captures inspected by Creation and primary. Stale reviewed-card
+refusal, no-redraw grant, actual losing policy and false renderers remain negative
+results. A temporary managed-executor disconnect occurred after the final runner
+completed; its files/results were recovered and rechecked, not inferred from the lost
+terminal session. No fixture, gate, timeout or owner rule was weakened.
 
-[Baseline CI evidence](../evidence/windows-access/baseline-ci.json) retains
-CI40253496504 attempt 1's C# cancellation after availability controls, cause unproven;
-its requested specific-job rerun produced attempt 2's sixth-host resume refusal,
-`Value cannot be null.`. Actual artifact journal had 18 unique sequential entries and
-an independently matching checksum, but Message-only stderr cannot locate the failure.
-The unchanged local targeted instrument passed 47 assertions across seven process
-boundaries under runtime 10.0.12. Same SDK does not establish the CI serving patch or
-cause. New baseline CI40256900396 completed/success with eight successful jobs; that
-success does not explain earlier failures. Windows CI40253496486 also completed/success.
-Preserve all prior timeout/cancellation/runtime/export/inventory/instrument evidence.
-[Intermediate CI observations](../evidence/windows-access/CI_HISTORY.json) retain four
-subsequent general-run cancellations, including CI40379998650, without inventing causes.
-Windows access CI40379998693 succeeded independently. Current publication and CI are
-separate handoff observations, never inferred locally.
+This is a separate ephemeral .NET10/Linux/browser observer, referencing the actual
+.NET10 Loadout/Forge/Crossing executables and portable Domain. It is NOT Unity/netstandard,
+production browser direction, saved/account identity, full creation parsing, distributed
+exactly-once execution, Windows/Steam delivery or human validation. Existing downloadable
+Linux/Windows authored scenes are unchanged and do not include this new consumer.
 
-## Actual tooling, maturity and unresolved work
+## Actual CI and tool access
 
-SDK 10.0.401 executes from the restored path. No usable local Linux Editor/Hub/Steam
-was found on PATH/conventional roots; `/root/Unity/Hub/Editor` was denied, not globally
-absent. The actual Windows runner exposed Unity Hub 3.22.3. Its read-only installed-
-Editor query timed out after 25 seconds without a list; only the owned Hub tree stopped.
-No activation, download, installation or license-content inspection was requested.
-Editor version, activation and platform modules remain unverified. No Unity or Steam
-execution occurred. Unity/C#, Windows-first and Steam-intended remains production direction.
+Initial Windows CI40383291594 and general CI40383291625 both completed/success in
+attempt1 at290111e; all eight general jobs were individually verified. Baseline
+CI40256900396 remains completed/success with eight jobs. Publication and new CI are
+separate final handoff observations, never inferred from local verification.
+
+[Prior access evidence](../evidence/windows-access/RUN.json) retains six consumer
+controls/21accepted commands across three Windows Server2025 processes, actual in-progress
+reentry/revision15 and final21, observed delivery/return with three unfinished crates.
+The invoking PowerShell token was administrator=false, Administrators SIDdeny-only,
+medium8192, BUT elevated=true/type1; no genuinely linked limited token was available.
+This is same-account constructed restriction, not ordinary-user/non-elevated Windows,
+fresh account/device or enforced sandbox. Native application token inheritance was
+inferred through the original script, not directly queried. Its working unchanged
+baseline did not justify transport replacement.
+
+Preserve original prospective protocols/artifacts and initial inconclusive process/
+native-command-encoding failures; none proves HTTP.sys/gameplay cause. Prior general
+CI40253496504 attempt1 cancelled; its specifically requested C# rerun produced attempt2's
+sixth-host `Value cannot be null.` Message-only stderr cannot locate the cause. The
+unchanged local continuity instrument passed47assertions; SDK equality does not prove
+serving-runtime equivalence. Preserve [intermediate cancellations](../evidence/windows-access/CI_HISTORY.json)
+and all earlier timeout/runtime/export/inventory/instrument evidence without invented
+causes or weakened gates.
+
+SDK10.0.401 reexecutes from `/workspace/work/authored-scene/dotnet/dotnet`. Local PATH
+and conventional Editor/Hub/Steam roots yielded no usable tool; protected
+`/root/Unity/Hub/Editor` was denied, not proof of absence. Previous actual Windows
+runner exposed Unity Hub3.22.3, but read-only installed-editor query timed out without
+a list. No new Editor version, license/activation, platform module or Steam entitlement
+is established; none was bypassed. Unity/C#, Windows-first and Steam-intended remains
+production direction. Human/device assessment needs actual relevant access.
+
+## Maturity, specialists and preservation
 
 All eleven destinations remain mandatory. Ten bounded methods operate: Audio/Music,
 Visual/Animation, Input/Timing, Narrative/Continuity, Networking/Persistence, World/
 Gameplay, Economy/Simulation, RPG/Progression, Combat/Responsiveness and AI Evaluation.
-**Build/Operations remains incomplete** under retained licensed Unity Editor/modules
-and production Windows acceptance. This separate access assessment advances a real
-production dependency without silently changing that acceptance. Consumption remains
-15 INTEGRATED / 9 REJECTED / 15 UNRESOLVED; no new source-capability credit is invented.
+Build/Operations remains incomplete under licensed Unity Editor/modules and production
+Windows acceptance. Consumption stays15INTEGRATED/9REJECTED/15UNRESOLVED. Reusing
+PreparedExpedition here adds no new legacy consumption claim.
+
+Engineering independently analyzed alternatives, implemented/reviewed the private
+coordinator/HTTP host and ran actual smoke. ENG004/015/017 informed necessity, temporal
+ownership and execution levels. Science independently analyzed rivals and implemented
+Chromium/HTTP instrumentation; SCI013/014/076/077 bounded inference and controls.
+Creation independently selected and authored the web/SVG, inspected superseded/final
+captures; CRE001(D)/005(A),009/011/013(H),045/061(H) distinguished expression, eligibility,
+action and observed history. Primary owned prospective acceptance, native controls,
+verification/integration/preservation/continuity/publication. Independent agents are
+not Brain libraries, model training, participants or author approval.
+
+[Preservation](../evidence/intake/preservation.json) binds prior maintained bytes except
+intentional edited metadata. No source, save, package, media, variant or notice was
+retired. Both recipient ZIPs remain exact: Windows35,820,510bytes SHA256
+`0500d70a6a6c7071f12423fd529c0922830c09d34a312ae46c4f1e562c5aaffb`;
+Linux35,908,523bytes SHA256
+`d829b1b59ee2dd22f87ab007c4db96bfe1655731b38d02f5085f0b8d30e043e4`.
+Their source/save/recovery and licensing duties are not replaced by this ephemeral
+consumer. No artifact met unique-consumer/recovery/rights retirement acceptance;
+retained working consumers and security/integrity gates remain.
 
 Full effects/passives, NPC schedules, reputation/faction/quest/item/tool/unlock catalogs,
-creation parsing, broad narrative persistence, human experience, commercial clearance
-and production ownership remain unresolved. Actual creation-source defects and differing
-variants make coherent identity/intake-to-owned-play a credible product alternative,
-not permission to import class/background fiction or automatically repeat loadout tests.
-Frozen AI evaluation retains one first delivery and all original attribution/context/
-source-race limits. Incompatible combat clocks and source variants stay incompatible.
-
-## Specialist influence and preservation
-
-ENG004/015/017 informed the baseline-before-solution comparison, stable compiled journal
-identity, supported WinAPI and verification levels. SCI013/014/076/077 required exact
-observed token/elevation, rival hypotheses, prospective corrections and genuine
-inconclusive outcomes. CRE001(D),005(A),009/011/045/048/061(H),022/023/031/071(H) favored
-one unchanged costly owner and real personal consequences. No source proposal becomes
-approved canon. Agents are not Brain libraries, model training, people or author approval.
-Engineering owned the token/initial PowerShell instrument; Science initial/prospective protocol;
-Creation reviewed product alternatives and the actual retained CI journal. Primary
-integrated standard handles, consumer stages, actual execution and publication.
-Engineering continuation hit a usage limit after code delivery; primary continued
-sequentially. No human validation was substituted.
-
-[Preservation](../evidence/windows-access/preservation.json) rechecked existing baseline
-bytes except intentionally edited metadata. Both ZIPs remain unchanged: Windows
-35,820,510 bytes SHA256 `0500d70a6a6c7071f12423fd529c0922830c09d34a312ae46c4f1e562c5aaffb`;
-Linux 35,908,523 bytes SHA256 `d829b1b59ee2dd22f87ab007c4db96bfe1655731b38d02f5085f0b8d30e043e4`.
-No prior source, owner, save format, unique artifact/media/variant or notice was retired.
-The access evidence cannot replace unique Godot/legacy consumers or rights/recovery
-obligations. No original source, gate, timeout or fixture was weakened.
+creation parsing, broad narrative persistence, player experience, commercial clearance
+and production ownership remain unresolved. Frozen AI evaluation retains its single
+first delivery, attribution/context/source-race limits; incompatible combat clocks,
+variants and protected Brain/source bytes remain incompatible/preserved.
 
 ## Rolling investment — one unit per beneficiary
 
-Targets remain approximately 47% legacy/laboratories, 40% North Star, 13% repository/portfolio.
-Counts, files, commits, commands and tokens do not measure effort. Eight recent units:
+Targets remain approximately47%legacy/laboratories,40%North Star,13%repository/portfolio.
+Counts, files, commits and tokens are not measured effort. Eight recent units:
 
 | Completed substantive unit | Primary stream | Evidence |
 |---|---|---|
-| Actual recipient/runtime/source-recovery delivery | Repository/portfolio | [Delivery](../evidence/recipient-delivery/RUN.json) |
-| Source mask/actual-authority method and opportunity | Legacy/laboratories | [Availability](../evidence/npc-availability/RUN.json) |
+| Source mask/actual-authority opportunity | Legacy/laboratories | [Availability](../evidence/npc-availability/RUN.json) |
 | Continuous acquired-repair to observed-watering journey | North Star | [Journey](../evidence/repair-hauling/RUN.json) |
-| Durable continuation of the same actual RequestExpedition | North Star | [Continuity](../evidence/request-continuity/RUN.json) |
-| Source-bound standing arithmetic and actual service decision | Legacy/laboratories | [Standing](../evidence/reputation-study/RUN.json) |
-| Exact identity/retained tools with actual output use | Legacy/laboratories | [Tooling](../evidence/tooling-study/RUN.json) |
+| Durable same actual RequestExpedition | North Star | [Continuity](../evidence/request-continuity/RUN.json) |
+| Source-bound standing and actual service | Legacy/laboratories | [Standing](../evidence/reputation-study/RUN.json) |
+| Exact identity/retained tools and actual output use | Legacy/laboratories | [Tooling](../evidence/tooling-study/RUN.json) |
 | Same source-bound scene actually delivered on Windows | Repository/portfolio | [Windows](../evidence/windows-recipient/RUN.json) |
-| Actual restricted-context access and consequence/reentry method | Legacy/laboratories | [Access](../evidence/windows-access/RUN.json) |
+| Actual restricted-context access/consequence/reentry | Legacy/laboratories | [Access](../evidence/windows-access/RUN.json) |
+| Visible confirmed identity enacts the same prepared journey | North Star | [Intake](../evidence/intake/RUN.json) |
 
-This is ONE Build/Operations laboratory/production-access unit; scripts, repeated
-corrections, baseline and consumer stages support that same question, not extra North
-Star/portfolio units, participants, studies or candidate attempts. The oldest status-
-encounter unit ages out; its consumer/evidence remain. The concrete administrative-only
-access boundary justified this laboratory investment, not a claim of measured target
-convergence. Coherent product investment is now the corrective frontier to compare
-with genuine licensed Unity and ordinary-user/device access, source semantics and
-production ownership. Do not bind another cycle to token/I/O/packaging, old matrices,
-fixture repairs or the one-time transformation. Select the next real beneficiary.
+This is ONE corrective North Star unit; UI/native/browser/CI/portfolio presentation
+support it rather than extra units. The older Linux delivery unit ages out; all its
+consumer/evidence remain. No measured target convergence is asserted. Next compare
+actual licensed Unity/ordinary-user/device/participant access, a consequential unresolved
+legacy contract and coherent meaningful product continuation/ownership. Intake-to-play
+now works: do not automatically repeat its matrices, add a save/package by habit or
+repeat token/I/O, prior source studies, fixture repairs or the transformation. Appropriate
+author/player assessment has high value for identity readability but requires actual
+participants; no terminal or simulated agent can supply it. Select the next real
+beneficiary and refutable acceptance from current dependencies.

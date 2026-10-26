@@ -56,6 +56,7 @@ def affected(path):
                             'delivery/authored-scene/', 'evidence/recipient-delivery/', 'evidence/request-continuity/',
                             'north-star/reputation-study/', 'evidence/reputation-study/',
                             'north-star/tooling-study/', 'evidence/tooling-study/',
+                            'north-star/intake/', 'evidence/intake/',
                             'north-star/availability-study/', 'evidence/npc-availability/', 'evidence/repair-hauling/',
                             'north-star/combat-study/', 'labs/combat-response/status/', 'evidence/combat-status/', 'labs/rpg-systems/', 'evidence/rpg-progression/',
                             'references/rave-master/', 'labs/economy-simulation/', 'evidence/economy-crafting/',

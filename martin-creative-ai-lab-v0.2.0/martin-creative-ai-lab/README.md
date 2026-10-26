@@ -16,6 +16,7 @@ or Steamworks execution follows from a C# domain build.
 | Goal | Start here |
 |---|---|
 | Inspect current product and creative authority | [North Star](north-star/README.md), [living design](north-star/DESIGN.md), [capabilities](north-star/capabilities.json) |
+| Make and enact an explicit original identity | [Visible intake and owned journey](north-star/intake/README.md), [actual execution](evidence/intake/RUN.json) |
 | Run the C# gameplay foundation | [C# consumer and checks](north-star/csharp/README.md) |
 | Run the preserved playable baseline | [Godot crossing and return](north-star/prototype/README.md), [executed delivery](evidence/north-star-return-feedback/RUN.json) |
 | Inspect a separate ability experiment | [Committed-rush bench](north-star/prototype/abilities/README.md), [execution](evidence/north-star-abilities/RUN.json) |

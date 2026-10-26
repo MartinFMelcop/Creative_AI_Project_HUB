@@ -750,3 +750,31 @@ ENG-004/015/017 and CRE-005(A),011/013/061(H) informed coherent actual use and a
 SCI-076/077 kept narrative persistence as a credible unselected alternative and required
 actual watering rather than inferring it from a keeper's receipt. Actual safe/losing
 journeys and rendering checks do not establish human comprehension, balance or approval.
+
+
+## A name on the road — experimental owned identity
+
+**Status:** original implemented local product hypothesis, not approved final character,
+class/background canon, full avatar creation or historical creation parsing.
+[The visible intake](intake/README.md) makes expression, eligibility and actual acquired
+outfit distinct. Handle and cloth accent are expression; class/background/four-slot
+preparation are validated by the unchanged PreparedExpedition; finite material/rig costs
+and actual Crossing determine enacted behavior. Four slots are capacity, not four new
+abilities. Initial supplies/permission are explicit experimental setup.
+
+A draft has no gameplay authority. Only reviewing its exact current version and explicit
+confirmation applies the whole preparation. Handle stays fixed after first confirmation;
+earned between-stage amendments retain the same owner and its costs/progress. Editing
+invalidates review and pending amendments block crafting/entry. Card confirmation grants
+no heal, supplies, XP, refunds or encounter. A later actual Begin retains the existing
+owner's recovery rules. The portrait observes committed accent/discipline and actual rig;
+it is a static original vector, not action animation or a validated identity signal.
+
+ENG004/015/017, SCI013/014/076/077 and CRE001(D)/005(A),009/011/013(H),045/061(H) materially
+favored a coherent enacted person over another parser, token or package assay. The real
+Lure action changes position/resources; actual losing play consumes a rig without completion.
+A generic terminal caption was corrected after capture inspection; original captures remain.
+No NPC recognition, fame, moral judgment or inherited fictional biography is supplied.
+[Actual evidence](../evidence/intake/RUN.json) does not establish player understanding,
+enjoyment, accessibility, commercial rights, Unity production or participant approval.
+RequestExpedition's single fixed Lure/Trail owner and both recipients remain unchanged.

@@ -575,6 +575,17 @@ jobs:
           browser_path="$(node -p "require('playwright-core').chromium.executablePath()")"
           test -x "$browser_path"
           printf 'CHROMIUM_PATH=%s\n' "$browser_path" >> "$GITHUB_ENV"
+      - name: Execute visible confirmed identity and its actual owned journey
+        run: python3 north-star/intake/tools/verify.py --dotnet dotnet --output "$RUNNER_TEMP/intake"
+      - name: Retain intake failure diagnostics
+        if: failure()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: intake-diagnostics
+          path: ${{ runner.temp }}/intake
+          if-no-files-found: ignore
+          retention-days: 7
+
       - name: Exercise actual visual C# input lifecycle
         run: node labs/input-timing/browser.mjs dotnet "$RUNNER_TEMP/input-browser"
       - name: Execute embodied Crossing presentation and actual browser controls

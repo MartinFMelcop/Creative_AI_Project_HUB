@@ -120,3 +120,12 @@ original study leaves the downloadable authored scene and its single owner uncha
 The same application now continues the actually acquired repair through a paid route,
 two real Crossing encounters and explicit per-bed watering. [Execution](../evidence/repair-hauling/RUN.json)
 separates the new product integration from reexecuted affected workshop controls.
+
+## Visible confirmed identity
+
+[A name on the road](intake/README.md) composes the unchanged PreparedExpedition
+through explicit draft, review and confirmation into actual finite supplies and
+Crossing. The same handle/accent remain visible through earned preparation, completion
+and loss. This separate ephemeral .NET10/browser experiment is not in the existing
+recipient packages. [Executed scope and negatives](../evidence/intake/RUN.json) retain
+the boundary to creation parsing, canon, Unity/Windows/Steam and human experience.
