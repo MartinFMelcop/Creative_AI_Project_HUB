@@ -1,0 +1,101 @@
+{
+  "run_id": 40378588794,
+  "job_id": 121768325100,
+  "commit": "47579996aa017be7aebf05b8e80be29fc6f957cc",
+  "conclusion": "success",
+  "artifact": "evidence/windows-access/native-access-artifact.zip",
+  "artifact_sha256": "5bba88f94a99d0605316948955d8a847d712df3d0e379b7841aa72c7d7181a48",
+  "outcome": {
+    "launcher_exit_code": 0,
+    "scope": "Actual hosted restricted/linked-limited same-user Windows token only; elevated flag is recorded unchanged. Actual restricted PowerShell invokes original script directly; native app token inheritance is inferred, not independently queried. No Windows10/11 physical device, independent participant or broad ordinary-user/non-elevated claim.",
+    "child": {
+      "timed_out": false,
+      "instrument_failure": false,
+      "normal_exit_observed": true,
+      "status": "completed",
+      "save_bytes_after": 273,
+      "exit_code": 0,
+      "save_sha256_after": "e1cede4f4960ca48a30209c5a79606a6074072d23a1965ef1179de89d7994385",
+      "save_exists_after": true,
+      "ready_line": true,
+      "save_existed_before": false,
+      "attempt_marked": true
+    },
+    "recipient_launcher_token": {
+      "pid": 7400,
+      "observer_pid": 7408,
+      "administrator": false,
+      "elevated": true,
+      "elevation_type": 1,
+      "integrity_rid": 8192,
+      "medium_integrity": true,
+      "administrator_sid_deny_only": true,
+      "administrator_group": [
+        {
+          "sid": "S-1-5-32-544",
+          "attributes": 16,
+          "deny_only": true
+        }
+      ],
+      "user_sid_sha256": "9a720b4d60439242a77d1fe889cb1f474730631e8493ff2ce8b7fe643f59f6aa",
+      "scope": "Actual process token; restricted same-user hosted execution is not a physical ordinary-user device or Windows10/11 assessment."
+    },
+    "token_boundary_valid": true,
+    "outcome": "baseline_started_and_expired",
+    "inputs_sha256": {
+      "app/NorthStar.AuthoredScene.dll": "a9b0a9ae90a82a5bd8e621af9d055201c76c68274328adf72557fbdcaa60e545",
+      "payload.sha256": "e09e1a2d9c00e0b338941d9c115aceb77d32ce6fcaa68157bffe351685fb81fd",
+      "run-demo.ps1": "dfcdd157ba73fdfa0cd4880658fde5e1bbdb30c52b7647b2dd411cec651beaae",
+      "runtime/dotnet.exe": "21a46f1e5235cf4e844b9de5429f0e198b9c97a41f0503a66442f1d639ca3ee6"
+    },
+    "network_errors": [
+      "Exception calling \"GetResult\" with \"0\" argument(s): \"The request was canceled due to the configured HttpClient.Timeout of 0.5 seconds elapsing.\"",
+      "Exception calling \"GetResult\" with \"0\" argument(s): \"The request was canceled due to the configured HttpClient.Timeout of 0.5 seconds elapsing.\""
+    ],
+    "token": {
+      "pid": 7136,
+      "observer_pid": 7136,
+      "administrator": false,
+      "elevated": true,
+      "elevation_type": 1,
+      "integrity_rid": 8192,
+      "medium_integrity": true,
+      "administrator_sid_deny_only": true,
+      "administrator_group": [
+        {
+          "sid": "S-1-5-32-544",
+          "attributes": 16,
+          "deny_only": true
+        }
+      ],
+      "user_sid_sha256": "9a720b4d60439242a77d1fe889cb1f474730631e8493ff2ce8b7fe643f59f6aa",
+      "scope": "Actual process token; restricted same-user hosted execution is not a physical ordinary-user device or Windows10/11 assessment."
+    },
+    "parent_token": {
+      "pid": 5428,
+      "observer_pid": 5428,
+      "administrator": true,
+      "elevated": true,
+      "elevation_type": 1,
+      "integrity_rid": 12288,
+      "medium_integrity": false,
+      "administrator_sid_deny_only": false,
+      "administrator_group": [
+        {
+          "sid": "S-1-5-32-544",
+          "attributes": 15,
+          "deny_only": false
+        }
+      ],
+      "user_sid_sha256": "9a720b4d60439242a77d1fe889cb1f474730631e8493ff2ce8b7fe643f59f6aa",
+      "scope": "Actual process token; restricted same-user hosted execution is not a physical ordinary-user device or Windows10/11 assessment."
+    },
+    "http_observed": true
+  },
+  "input_stability": {
+    "count": 49,
+    "before_equals_after": true
+  },
+  "decision": "The unchanged original recipient starts and expires normally in this exact restricted same-user PowerShell context. H1 is supported within that boundary. No transport adaptation is justified by these observations.",
+  "limits": "Elevation flag remains true and native application token inheritance is inferred from unchanged direct invocation. No ordinary-user/non-elevated, Windows10/11, device/human, Unity or Steam claim. Only initial actual state was observed in this baseline, no new accepted-command/reentry claim."
+}

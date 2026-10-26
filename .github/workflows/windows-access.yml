@@ -77,6 +77,10 @@ jobs:
           exit $LASTEXITCODE
       - name: Assess the existing recipient in the actual bounded child token
         run: pwsh -NoProfile -File delivery/windows-access/probe.ps1 -Bundle "$env:RUNNER_TEMP/access-recipient/AuthoredSceneWindows" -Launcher "$env:RUNNER_TEMP/token-probe/TokenProbe.dll" -Output "$env:RUNNER_TEMP/windows-access/baseline" -Shell (Get-Command pwsh).Source
+      - name: Exercise actual choices and preserve their shared journal under the observed context
+        run: pwsh -NoProfile -File delivery/windows-access/probe.ps1 -Bundle "$env:RUNNER_TEMP/access-recipient/AuthoredSceneWindows" -Launcher "$env:RUNNER_TEMP/token-probe/TokenProbe.dll" -Output "$env:RUNNER_TEMP/windows-access/prepare" -Shell (Get-Command pwsh).Source -SaveDirectory "$env:RUNNER_TEMP/windows-access/shared-save" -Stage prepare
+      - name: Reopen actual in-progress choices and complete the real encounter
+        run: pwsh -NoProfile -File delivery/windows-access/probe.ps1 -Bundle "$env:RUNNER_TEMP/access-recipient/AuthoredSceneWindows" -Launcher "$env:RUNNER_TEMP/token-probe/TokenProbe.dll" -Output "$env:RUNNER_TEMP/windows-access/resume" -Shell (Get-Command pwsh).Source -SaveDirectory "$env:RUNNER_TEMP/windows-access/shared-save" -Resume -Stage finish -ExpectedObservation "$env:RUNNER_TEMP/windows-access/prepare/http-last-state.json"
       - name: Require stable source and artifact identities
         if: always()
         run: python delivery/windows-access/inputs.py "$env:RUNNER_TEMP/windows-access/inputs-after.json" --compare "$env:RUNNER_TEMP/windows-access/inputs-before.json"

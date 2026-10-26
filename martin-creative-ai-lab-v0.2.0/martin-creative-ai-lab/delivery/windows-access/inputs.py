@@ -13,6 +13,7 @@ def snapshot():
         inputs.update(p for p in (ROOT/directory).rglob('*') if p.is_file() and not {'bin','obj','__pycache__'} & set(p.parts))
     inputs.add(ROOT.parents[1]/'.github/workflows/windows-access.yml')
     inputs.add(ROOT/'evidence/windows-access/protocol.json')
+    inputs.add(ROOT/'evidence/windows-access/consumer-protocol.json')
     protocol=json.loads((ROOT/'evidence/windows-access/protocol.json').read_text(encoding='utf8'))
     baseline=protocol['baseline']
     archive=(ROOT/baseline['archive_path']).resolve()

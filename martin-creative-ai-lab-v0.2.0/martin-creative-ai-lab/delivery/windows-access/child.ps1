@@ -13,13 +13,17 @@ try {
     & $runtime $Launcher '--identity-pid' ([string]$PID) (Join-Path $Output 'recipient-launcher-token.json')
     if ($LASTEXITCODE -ne 0) { throw 'Actual restricted PowerShell token query failed.' }
     $empty=Join-Path $Output 'empty PATH';[IO.Directory]::CreateDirectory($empty) | Out-Null
-    $saves=Join-Path $Output 'child saves';[IO.Directory]::CreateDirectory($saves) | Out-Null
+    $saveConfig=Join-Path $Output 'save-directory.txt'
+    $saves=$(if(Test-Path -LiteralPath $saveConfig){[IO.Path]::GetFullPath([IO.File]::ReadAllText($saveConfig).Trim())}else{Join-Path $Output 'child saves'})
+    [IO.Directory]::CreateDirectory($saves) | Out-Null
     $save=Join-Path $saves 'scene.json'
-    if (Test-Path -LiteralPath $save) { throw 'Baseline requires a fresh separate save; never overwrite existing data.' }
+    if(Test-Path -LiteralPath (Join-Path $Output 'resume.flag')) {
+        if(-not (Test-Path -LiteralPath $save -PathType Leaf)) { throw 'Explicit resume requires the existing actual save; never create a replacement.' }
+    } elseif(Test-Path -LiteralPath $save) { throw 'Fresh attempt refuses existing data; use explicit resume.' }
     $port=[IO.File]::ReadAllText((Join-Path $Output 'port.txt')).Trim()
     $env:PATH=$empty;$env:NORTH_STAR_SAVE_DIR=$saves
     $env:DOTNET_ROOT='Z:\unavailable';$env:DOTNET_ROOT_X64='Z:\unavailable';$env:DOTNET_MULTILEVEL_LOOKUP='0'
-    Write-Json (Join-Path $Output 'child-start.json') @{ pid=$PID;launcher_pid=$PID;port=$port;save=$save;save_existed_before=$false;token_boundary_valid=$true;invocation='direct unchanged script in existing restricted PowerShell';scope='The actual PowerShell token is queried; nested native dotnet inherits through the unchanged direct invocation. Its token is not independently queried. Elevated flag is retained, never relabeled non-elevated.' }
+    Write-Json (Join-Path $Output 'child-start.json') @{ pid=$PID;launcher_pid=$PID;port=$port;save=$save;save_existed_before=(Test-Path -LiteralPath $save);token_boundary_valid=$true;invocation='direct unchanged script in existing restricted PowerShell';scope='The actual PowerShell token is queried; nested native dotnet inherits through the unchanged direct invocation. Its token is not independently queried. Elevated flag is retained, never relabeled non-elevated.' }
     # Do not create another PowerShell or change any ACL/policy. The baseline owns exit.
     & (Join-Path $Bundle 'run-demo.ps1') $port '20'
     exit $LASTEXITCODE

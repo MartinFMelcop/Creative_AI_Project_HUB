@@ -137,3 +137,22 @@ layer remained. Revision4 removes only that redundant wrapper layer; it reads th
 actual inherited standard-handle files already owned by the C#launcher. Both identity
 native controls had executed without this extra layer. No prior failure is reclassified
 as an HTTP.sys result, and no recipient byte or access policy is changed.
+
+
+## Actual baseline and bounded continuation
+
+[Revision4 actual evidence](../../evidence/windows-access/native-access-result.json)
+shows that the unchanged recipient starts, exposes its real initial owner state,
+creates its journal and expires normally in the recorded restricted context. The
+invoking process is administrator=false, Administrators deny-only, medium8192, but
+Windows still reports elevated=true. This supports only that exact constructed
+context. The observation does not justify replacing the existing transport.
+
+The [consumer protocol](../../evidence/windows-access/consumer-protocol.json) separately
+predeclares actual accepted choices and a fresh-process continuation of the same
+external journal. `-Stage prepare -SaveDirectory ABS` starts fresh and refuses existing
+data. `-Stage finish -Resume -SaveDirectory ABS -ExpectedObservation ACTUAL_JSON`
+requires existing saved facts and the actual earlier observation. It compares state,
+day and revision, not transient receipt reason metadata. Missing resume or a failed
+exercise cannot pass by creating a new world. No recipient rebuild, new owner or
+ordinary-user/human claim follows from these software controls.

@@ -36,7 +36,13 @@ standard-output encoding/handle error. No journal or HTTP listener was reached. 
 artifact and protocol remain retained. Revision3 supplies only owned inheritable
 standard handles; source bytes, token/context, ACLs and policy stay unchanged. Revision3 still refused before native dotnet while PowerShell-level redirection remained.
 Revision4 removes only that redundant wrapper layer and reads the already-owned native
-standard-handle files. Prior artifacts/protocols remain; actual revision4 is UNEXECUTED. Windows now exposed Unity Hub3.22.3, but the
+standard-handle files. Revision4 actually started the unchanged original recipient, returned real initial
+state, created its journal and expired normally. This supports H1 only in the exact
+restricted context, including elevated=true; the observation does not justify a
+transport replacement. A separately predeclared consumer continuation now tests actual
+accepted choices, costs and explicit fresh-process reopening of the same shared journal.
+Its acceptance is UNEXECUTED until the actual next job completes. No new ZIP or owner
+has been introduced and no completed effort unit is counted before this outcome. Windows now exposed Unity Hub3.22.3, but the
 read-only installed-editor query timed out after25seconds. Editor, activation and
 modules remain unverified; no license, download or installation was requested.
 
