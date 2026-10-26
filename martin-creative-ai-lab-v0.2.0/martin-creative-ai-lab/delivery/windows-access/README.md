@@ -1,15 +1,18 @@
 # Windows access probe — unchanged authored-scene recipient
 
 This asks whether the [existing Windows recipient](../authored-scene-windows/README.md)
-can start and expose its actual C# owner under an explicitly observed non-elevated
-Windows token context. Prior recipient execution used an administrative token; it
+can start and expose its actual C# owner under an explicitly observed restricted
+same-user Windows token context. The elevation fields are recorded as observed; this
+is not automatically a non-elevated or ordinary-user context. Prior recipient execution used an administrative token; it
 cannot answer this access question. This probe adds no scene, gameplay owner, resource,
 package release or save migration.
 
-The [predeclared protocol](../../evidence/windows-access/protocol.json) is preparation,
-not an execution result. Initially, this access assessment is **unexecuted**. A later
-record must identify the actual Windows job, executable inputs, token context and
-outcome before any access claim is made. Build/Operations remains incomplete under
+The [revised protocol](../../evidence/windows-access/protocol.json) declares revision2
+before another execution. The [initial protocol](../../evidence/windows-access/protocol-initial.json)
+and [first inconclusive result](../../evidence/windows-access/first-access-inconclusive.json)
+remain preserved. Revision2 is initially **unexecuted**; it does not retroactively pass
+the first trial. A later result must identify its actual Windows job, inputs, context
+and outcome before any new access claim is made. Build/Operations remains incomplete under
 its retained licensed Unity Editor/module and production Windows acceptance.
 
 ## Fixed baseline and actual context
@@ -36,19 +39,43 @@ its resulting identity cannot be observed, the access result is inconclusive.
 This retains the same underlying account/profile and filesystem environment. It is
 not a fresh ordinary-user account, a different person's Windows desktop, a physical
 device assessment or proof for Windows10/11. A process merely launched by a wrapper
-named “restricted” is insufficient evidence: inspect the actual child token and bind
-that observation to the package launch.
+named “restricted” is insufficient evidence: inspect the actual selected child and
+the PowerShell process invoking the original script. Require the declared administrator
+nonmembership, deny-only Administrators SID and medium-integrity boundary, while
+retaining the actual elevation flag/type. The nested native dotnet process inherits
+through the unchanged script; its token is not independently queried.
 
 No accounts, URL reservations, execution policies, privileges or machine security
 settings are changed to make the application succeed. No elevation or policy bypass
 is part of this method. A policy refusal remains a refusal or an inconclusive result,
 with its actual stage retained; it must not be converted into a gameplay result.
 
+## Initial negative and prospective revision
+
+The first actual trial found no linked limited token (Win32 code1312). It constructed
+a restricted same-user context with `administrator=false`, Administrators SID deny-only
+and integrity RID8192 (medium), while Windows still reported `elevated=true` and
+`elevation_type=1`. These fields remain observed facts; do not call that token
+non-elevated or treat it as an ordinary-user account.
+
+The private token observer ran successfully. The instrument then attempted to create
+a second recipient PowerShell through `ProcessStartInfo.Start`, which failed with
+`Access is denied` before the original recipient script ran. No actual recipient token,
+application access outcome or HTTP.sys refusal was established. This first result
+remains inconclusive; its specific process-creation failure cause is not established.
+
+Revision2 invokes the unchanged `run-demo.ps1` directly inside the existing selected
+PowerShell and queries that actual process token by PID. It removes an unnecessary
+instrument process, without changing permissions, policy, accounts, URL reservations,
+payload or gameplay. It also states the restricted context precisely instead of
+promising non-elevation. This is a prospective operationalization/method revision,
+not a permission change or retroactive acceptance of the initial trial.
+
 ## Execute the bounded assessment
 
 Build the separate probe helper with the pinned SDK10.0.401. Record exact helper,
-script, archive and relevant inherited input hashes before execution and verify them
-afterwards. Compilation is preparation; only an actual Windows process can answer
+script, protocol, archive and relevant inherited input hashes before execution and
+verify them afterwards. Compilation is preparation; only an actual Windows process can answer
 the access question. The helper is an instrument, not part of the recipient package.
 
 From an appropriate Windows instrument environment, using absolute paths:
@@ -67,7 +94,8 @@ construct the instrument's process/token.
 ## Decision boundary
 
 A real successful launch and observation of `/state` support only the stated package,
-Windows host and observed token context. A real nonzero application exit supports an
+Windows host and observed restricted same-user context, including its unchanged
+elevation fields. They do not prove non-elevated or ordinary-user Windows access. A real nonzero application exit supports an
 actual refusal at the recorded stage. It does not, by itself, prove that HTTP.sys
 permissions caused it. Preserve the exact diagnostic and separate token/instrument,
 package integrity, policy, filesystem, occupied-port and network possibilities.

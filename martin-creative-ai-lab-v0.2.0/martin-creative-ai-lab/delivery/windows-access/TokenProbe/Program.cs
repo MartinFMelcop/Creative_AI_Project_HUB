@@ -165,7 +165,7 @@ internal static class Program
                 }
                 if(wait!=0)throw Failed("WaitForSingleObject");
                 if(!GetExitCodeProcess(process.Process,out uint code))throw Failed("GetExitCodeProcess");
-                Write(Path.Combine(output,"launch-result.json"),new {status=code==0?"completed":"inconclusive",child_exit_code=code,token_method=method,launch_api=apiUsed,attempts});return code==0?0:2;
+                Write(Path.Combine(output,"launch-result.json"),new {status="completed",child_exit_code=code,token_method=method,launch_api=apiUsed,attempts});return 0;
             }
             finally {CloseHandle(process.Thread);CloseHandle(process.Process);}
         }

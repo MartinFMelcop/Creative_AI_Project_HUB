@@ -376,7 +376,7 @@
   "packages": {
     "identical_whole_packages": [],
     "limits": "No package is declared removable. Identical embedded runtimes do not make version-specific source, saves, PCKs or notices redundant; no extraction or execution occurred.",
-    "package_count": 31,
+    "package_count": 32,
     "packages": [
       {
         "bytes": 448865,
@@ -405,6 +405,13 @@
         "path": "evidence/windows-access/baseline-ci-diagnostics.zip",
         "sha256": "f45473a55c3a933d8b7963b3e115600d94c91c0b9ce2851e997803ecbd554b60",
         "uncompressed_bytes": 56670
+      },
+      {
+        "bytes": 9625,
+        "members": 13,
+        "path": "evidence/windows-access/first-access-artifact.zip",
+        "sha256": "9d6bb08c4b3f9d2f87291d3fa05c69494e830c35e3ca61c04f4f8998956529b6",
+        "uncompressed_bytes": 22080
       },
       {
         "bytes": 425998,
@@ -1182,8 +1189,8 @@
         "sha256": "3316bd0c5a36335cac98cd8747919444e3316452466c0448ecbcd2ea89ca5437"
       }
     ],
-    "tracked_blob_bytes": 655300315,
-    "zip_uncompressed_bytes": 1575298571
+    "tracked_blob_bytes": 655309940,
+    "zip_uncompressed_bytes": 1575320651
   },
   "preserved_archive_sources": [
     {

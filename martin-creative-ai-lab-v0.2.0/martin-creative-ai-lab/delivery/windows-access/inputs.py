@@ -12,6 +12,7 @@ def snapshot():
     for directory in ('delivery/authored-scene','delivery/authored-scene-windows','north-star/authored-scene/Host','north-star/csharp/Domain','north-star/csharp/Narrative','north-star/csharp/Crossing'):
         inputs.update(p for p in (ROOT/directory).rglob('*') if p.is_file() and not {'bin','obj','__pycache__'} & set(p.parts))
     inputs.add(ROOT.parents[1]/'.github/workflows/windows-access.yml')
+    inputs.add(ROOT/'evidence/windows-access/protocol.json')
     identities={}
     for p in sorted(inputs):
         if p.is_symlink():raise ValueError('Linked assessment input')

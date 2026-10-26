@@ -1,6 +1,6 @@
 # Current transformation continuity
 
-**Updated:** 2026-10-25 America/Sao_Paulo. **SEED:**0.34.0. Initial Git root
+**Updated:** 2026-10-26 America/Sao_Paulo. **SEED:**0.34.0. Initial Git root
 `/workspace/Creative_AI_Project_HUB`, branch `work`, HEAD
 `5db1e6d5bae874b5095b56a01e84a1ea79398bcb`, clean tracked/untracked work.
 Fetched main matched with divergence0/0 and no unpublished commits. Root authority
@@ -24,7 +24,14 @@ Windows/Linux packages and compiled journal identity stay exact. The helper reco
 actual token selection, Administrators deny-only status, medium integrity and exit/state
 observations; timeout or token failure is inconclusive. No account, privilege elevation,
 execution policy or URLACL change is permitted. This is not physical or general
-ordinary-user Windows10/11 evidence. The workflow is preparation; access is UNEXECUTED.
+ordinary-user Windows10/11 evidence. First execution was inconclusive: a constructed
+restricted same-user token had Admin SID deny-only and medium integrity but retained
+elevated=true; creating a second recipient PowerShell failed before the original
+script ran. The actual artifact and initial protocol remain preserved. Revision2
+prospectively invokes the unchanged script directly in the existing selected PowerShell,
+records that actual PID token, retains elevation fields and still refuses to equate
+instrument failure/timeout with application refusal. No transport change is justified
+by the first trial. Revision2 access remains UNEXECUTED until its actual run.
 
 [Rechecked baseline CI](../evidence/windows-access/baseline-ci.json) retains attempt1's
 C# cancellation after availability controls, cause unproven, and attempt2's actual

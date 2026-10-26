@@ -1,0 +1,22 @@
+{
+  "run_id": 40256900356,
+  "job_id": 121360597023,
+  "commit": "a82c24c29d4b87938089c8932957c1e7606e634c",
+  "status": "completed",
+  "conclusion": "failure",
+  "classification": "inconclusive_application_access",
+  "artifact": "evidence/windows-access/first-access-artifact.zip",
+  "artifact_sha256": "9d6bb08c4b3f9d2f87291d3fa05c69494e830c35e3ca61c04f4f8998956529b6",
+  "observed_context": {
+    "token_method": "restricted_same_user_admin_deny_only_medium_integrity",
+    "linked_limited_token": "unavailable,Win32 code1312",
+    "administrator": false,
+    "administrators_sid_deny_only": true,
+    "integrity_rid": 8192,
+    "elevated": true,
+    "elevation_type": 1
+  },
+  "observed_failure": "Child token observer ran through the private runtime, but creating a second recipient PowerShell through ProcessStartInfo.Start failed Access is denied before recipient execution. No recipient token or application outcome was observed.",
+  "correction": "Invoke the unchanged recipient script directly within the existing selected PowerShell and observe that actual process token. Parent retains actual child exit and stdout/stderr. This changes only instrument process topology; no package, ACL, account, elevation, policy or URLACL change.",
+  "limits": "The reason second-process creation failed is not established. No HTTP.sys refusal, non-elevated context, ordinary-user access or transport defect is proved. Preserve initial protocol separately; revision2 names the actual restricted context and changed method before another execution."
+}

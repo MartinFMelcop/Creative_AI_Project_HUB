@@ -45,6 +45,29 @@ jobs:
           }
           $commands = @(Get-Command Unity.exe,UnityHub.exe,steamcmd.exe -ErrorAction SilentlyContinue | Select-Object Name,Source)
           @{ commit = $env:GITHUB_SHA; os = [Environment]::OSVersion.VersionString; architecture = $env:PROCESSOR_ARCHITECTURE; powershell = $PSVersionTable.PSVersion.ToString(); editor_path_probes = @($probes); tool_commands = $commands; editor_activation = 'unverified'; platform_modules = 'unverified'; limits = 'Bounded probes only. No license contents read; absent conventional paths do not prove global absence.' } | ConvertTo-Json -Depth 8 | Set-Content -Encoding utf8 "$env:RUNNER_TEMP/windows-access/host.json"
+      - name: Query installed Editors through the observed Unity Hub without activation or installation
+        run: |
+          $hub = "$env:ProgramFiles/Unity Hub/Unity Hub.exe"
+          if (Test-Path -LiteralPath $hub -PathType Leaf) {
+            $start = [Diagnostics.ProcessStartInfo]::new()
+            $start.FileName = $hub
+            $start.UseShellExecute = $false
+            $start.RedirectStandardOutput = $true
+            $start.RedirectStandardError = $true
+            foreach ($arg in @('--','--headless','editors','--installed')) { $start.ArgumentList.Add($arg) }
+            $process = [Diagnostics.Process]::new()
+            $process.StartInfo = $start
+            try {
+              if (-not $process.Start()) { throw 'Observed Unity Hub could not start' }
+              $stdout = $process.StandardOutput.ReadToEndAsync()
+              $stderr = $process.StandardError.ReadToEndAsync()
+              $finished = $process.WaitForExit(25000)
+              if (-not $finished) { $process.Kill($true); $process.WaitForExit() }
+              @{ path = $hub; product_version = (Get-Item -LiteralPath $hub).VersionInfo.ProductVersion; command = @('--','--headless','editors','--installed'); completed = $finished; exit_code = $(if ($finished) { $process.ExitCode } else { $null }); stdout = $stdout.GetAwaiter().GetResult(); stderr = $stderr.GetAwaiter().GetResult(); scope = 'Read-only installed-editor query. Timeout is inconclusive; no activation, download, license-content inspection or platform installation requested.' } | ConvertTo-Json -Depth 6 | Set-Content -Encoding utf8 "$env:RUNNER_TEMP/windows-access/unity-installed-probe.json"
+            } finally { $process.Dispose() }
+          } else {
+            @{ path = $hub; exists = $false; scope = 'Bounded observed path only; no global absence claim.' } | ConvertTo-Json | Set-Content -Encoding utf8 "$env:RUNNER_TEMP/windows-access/unity-installed-probe.json"
+          }
       - name: Inspect and extract the unchanged trusted Windows recipient
         run: python delivery/authored-scene-windows/check.py delivery/authored-scene-windows/dist/authored-scene-demo-win-x64.zip --linux-archive delivery/authored-scene/dist/authored-scene-demo-linux-x64.zip --extract "$env:RUNNER_TEMP/access-recipient"
       - name: Compile bounded token instrumentation with the pinned SDK
