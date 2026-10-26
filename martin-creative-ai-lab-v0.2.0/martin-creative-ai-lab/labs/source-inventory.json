@@ -376,7 +376,7 @@
   "packages": {
     "identical_whole_packages": [],
     "limits": "No package is declared removable. Identical embedded runtimes do not make version-specific source, saves, PCKs or notices redundant; no extraction or execution occurred.",
-    "package_count": 33,
+    "package_count": 34,
     "packages": [
       {
         "bytes": 448865,
@@ -419,6 +419,13 @@
         "path": "evidence/windows-access/first-access-artifact.zip",
         "sha256": "9d6bb08c4b3f9d2f87291d3fa05c69494e830c35e3ca61c04f4f8998956529b6",
         "uncompressed_bytes": 22080
+      },
+      {
+        "bytes": 12115,
+        "members": 20,
+        "path": "evidence/windows-access/stdio-access-artifact.zip",
+        "sha256": "a15f0c2cc9260b2f2a88a543733fc8fad2d2f6e99fdcde28596741261a815560",
+        "uncompressed_bytes": 25665
       },
       {
         "bytes": 425998,
@@ -1196,8 +1203,8 @@
         "sha256": "3316bd0c5a36335cac98cd8747919444e3316452466c0448ecbcd2ea89ca5437"
       }
     ],
-    "tracked_blob_bytes": 655321726,
-    "zip_uncompressed_bytes": 1575346157
+    "tracked_blob_bytes": 655333841,
+    "zip_uncompressed_bytes": 1575371822
   },
   "preserved_archive_sources": [
     {

@@ -34,8 +34,9 @@ instrument failure/timeout with application refusal. No transport change is just
 by the first trial. Revision2 actually invoked the launcher, which exited1 before native dotnet with a
 standard-output encoding/handle error. No journal or HTTP listener was reached. Its
 artifact and protocol remain retained. Revision3 supplies only owned inheritable
-standard handles; source bytes, token/context, ACLs and policy stay unchanged. Actual
-revision3 access is still UNEXECUTED. Windows now exposed Unity Hub3.22.3, but the
+standard handles; source bytes, token/context, ACLs and policy stay unchanged. Revision3 still refused before native dotnet while PowerShell-level redirection remained.
+Revision4 removes only that redundant wrapper layer and reads the already-owned native
+standard-handle files. Prior artifacts/protocols remain; actual revision4 is UNEXECUTED. Windows now exposed Unity Hub3.22.3, but the
 read-only installed-editor query timed out after25seconds. Editor, activation and
 modules remain unverified; no license, download or installation was requested.
 

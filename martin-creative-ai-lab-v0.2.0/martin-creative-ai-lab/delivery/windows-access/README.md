@@ -130,3 +130,10 @@ prevents a non-elevated/ordinary-user claim.
 The Windows host also exposed Unity Hub3.22.3. Its read-only installed-editor query
 expired after25seconds; it does not prove Editor absence, activation or module readiness.
 No license contents were read and no activation/download/installation was requested.
+
+
+Revision3 still refused before the native host while the extra PowerShell redirection
+layer remained. Revision4 removes only that redundant wrapper layer; it reads the
+actual inherited standard-handle files already owned by the C#launcher. Both identity
+native controls had executed without this extra layer. No prior failure is reclassified
+as an HTTP.sys result, and no recipient byte or access policy is changed.

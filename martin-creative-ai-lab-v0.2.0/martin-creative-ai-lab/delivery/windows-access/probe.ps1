@@ -48,7 +48,7 @@ try {
     $attemptPath=Join-Path $Output 'child-start.json';$attempt=$(if(Test-Path -LiteralPath $attemptPath){Get-Content -Raw -LiteralPath $attemptPath | ConvertFrom-Json}else{$null})
     $launchPath=Join-Path $Output 'launch-result.json';$launchResult=$(if(Test-Path -LiteralPath $launchPath){Get-Content -Raw -LiteralPath $launchPath | ConvertFrom-Json}else{$null})
     $childFailed=Test-Path -LiteralPath (Join-Path $Output 'child-failure.json')
-    $stdoutPath=Join-Path $Output 'launcher.stdout.txt';$stderrPath=Join-Path $Output 'launcher.stderr.txt'
+    $stdoutPath=Join-Path $Output 'selected-child.stdout.txt';$stderrPath=Join-Path $Output 'selected-child.stderr.txt'
     $actualOut=$(if(Test-Path -LiteralPath $stdoutPath){[IO.File]::ReadAllText($stdoutPath)}else{''})
     $actualError=$(if(Test-Path -LiteralPath $stderrPath){[IO.File]::ReadAllText($stderrPath)}else{''})
     $save=Join-Path $Output 'child saves/scene.json';$saveExists=Test-Path -LiteralPath $save -PathType Leaf

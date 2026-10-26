@@ -21,7 +21,7 @@ try {
     $env:DOTNET_ROOT='Z:\unavailable';$env:DOTNET_ROOT_X64='Z:\unavailable';$env:DOTNET_MULTILEVEL_LOOKUP='0'
     Write-Json (Join-Path $Output 'child-start.json') @{ pid=$PID;launcher_pid=$PID;port=$port;save=$save;save_existed_before=$false;token_boundary_valid=$true;invocation='direct unchanged script in existing restricted PowerShell';scope='The actual PowerShell token is queried; nested native dotnet inherits through the unchanged direct invocation. Its token is not independently queried. Elevated flag is retained, never relabeled non-elevated.' }
     # Do not create another PowerShell or change any ACL/policy. The baseline owns exit.
-    & (Join-Path $Bundle 'run-demo.ps1') $port '20' 1> (Join-Path $Output 'launcher.stdout.txt') 2> (Join-Path $Output 'launcher.stderr.txt')
+    & (Join-Path $Bundle 'run-demo.ps1') $port '20'
     exit $LASTEXITCODE
 } catch {
     Write-Json (Join-Path $Output 'child-failure.json') @{ status='inconclusive';error=$_.Exception.Message }

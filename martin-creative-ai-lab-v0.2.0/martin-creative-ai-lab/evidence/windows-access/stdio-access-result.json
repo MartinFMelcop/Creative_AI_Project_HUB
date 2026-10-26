@@ -1,0 +1,12 @@
+{
+  "run_id": 40377899346,
+  "commit": "782a98fd1ec55c4eeaefe351aaa127a991a6591b",
+  "outcome": "original_launcher_refused_before_native_host",
+  "exit_code": 1,
+  "source_stable": true,
+  "artifact_sha256": "a15f0c2cc9260b2f2a88a543733fc8fad2d2f6e99fdcde28596741261a815560",
+  "diagnostic": "StandardOutputEncoding is only supported when standard output is redirected.",
+  "context": "Same restricted same-user token, AdminSIDdeny-only,medium8192,elevatedtrue. Explicit standard handles did not remove the error while PowerShell-level redirection remained.",
+  "counter_observation": "The same private dotnet.exe successfully executed both identity queries earlier in this same child without the extra PowerShell redirection layer. No C#scene, journal or HTTP listener was reached.",
+  "next": "Remove only the redundant PowerShell-level1>/2> wrapper redirection; retain C#owned standard handles and actual raw output/error files. Preserve all earlier observations and unchanged recipient bytes."
+}
