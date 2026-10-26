@@ -2,7 +2,7 @@
   "schema_version": 1,
   "kind": "predeclared_windows_token_access_protocol",
   "baseline_commit": "5db1e6d5bae874b5095b56a01e84a1ea79398bcb",
-  "initial_status": "revision2_unexecuted",
+  "initial_status": "revision3_unexecuted",
   "question": "Can the unchanged authored-scene Windows recipient start and expose its actual owner when its original script is invoked directly in the explicitly observed restricted same-user PowerShell context (Administrators deny-only, medium integrity, elevation fields recorded), without changing the package, account, ACL, execution policy or URL reservations?",
   "beneficiary": "A prospective recipient whose access prerequisites need evidence distinct from prior administrative-runner success. This specific restricted-token observation does not establish ordinary-user Windows access.",
   "baseline": {
@@ -51,7 +51,7 @@
     "elevation_fields": "Observed data, never normalized to the intended condition. The initial elevated=true value remains preserved and limits the claim."
   },
   "method": [
-    "Preserve the initial protocol and inconclusive artifact. Declare revision2 before the next access run; build the separate instrument using exact SDK10.0.401 and record compilation commands plus initial/final hashes including this protocol.",
+    "Preserve all earlier protocols/artifacts. Declare revision3 before execution; build SDK10.0.401 and record initial/final source hashes including this protocol and the unchanged recipient. Supply valid owned standard-I/O handles without changing permissions; classify all Win32 construction failures as inconclusive.",
     "Verify the unchanged recipient archive and extracted inventory; retain baseline notices, managed assembly identity and source closure.",
     "Record Windows version/architecture, executed commit and token-selection outcome without dumping credentials or environment secrets.",
     "In the already-selected PowerShell, query that actual process token by PID, then invoke the unchanged run-demo.ps1 directly. Use a fresh external save directory and the original private runtime; do not create a second recipient PowerShell.",
@@ -66,6 +66,7 @@
   "counting": "This baseline is selection evidence for one coherent contribution. Repeated software observations, token branches, compilation and packaging support are not independent participants, studies, candidate attempts or extra workstream units.",
   "maturity": "Build/Operations remains incomplete under its retained licensed Unity Editor, activation/modules and production Windows acceptance. No Unity or Steam execution is claimed.",
   "limitations": [
+    "Revision2 observed original-script refusal before native dotnet execution; it is not evidence that RequestJournal, gameplay or HTTP.sys refused the restricted token. Its exact stdout/stderr and actual token fields remain in the retained artifact.",
     "Initial trial remains inconclusive: elevated=true/elevation_type1 were actually observed, and no application refusal or HTTP.sys cause was established. Revision2 changes the declared operational condition and instrument topology prospectively, not the historical result.",
     "The linked limited and constructed restricted contexts must be named separately; a constructed token is not automatically ordinary-user Windows evidence.",
     "The same account/profile and filesystem environment remain shared; this is not an enforced sandbox or a fresh participant/device.",
@@ -75,18 +76,19 @@
     "The actual observed token belongs to the PowerShell invoking the original script; the nested native dotnet token is inferred by inheritance and is not independently queried."
   ],
   "scientific_influence": "SCI-013/014/076/077: predeclared rival explanations, exact observed token as the operational condition, method selected by the claim, and explicit inconclusive/repeated-observation boundaries.",
-  "revision": 2,
+  "revision": 3,
   "supersedes": {
-    "path": "evidence/windows-access/protocol-initial.json",
-    "sha256": "15587655674e9e3e0d01c50782fa26806f7ed85542a5ed2b942d7e3f2803e649",
-    "policy": "Preserve initial protocol and actual first result exactly. Revision2 is declared before the next execution and does not retroactively pass or reinterpret the first run."
+    "path": "evidence/windows-access/protocol-revision2.json",
+    "sha256": "46b8c74a0cba58616a0e94490398066e16516b641139403dd83b9bade127d247",
+    "policy": "Preserve initial and revision2 protocols and both actual results. Revision3 changes only supported owned-process standard I/O prospectively; no previous result is passed retroactively."
   },
-  "revision_reason": "The first actual trial constructed a same-user restricted token with administrator=false, Administrators SID deny-only and integrity RID8192, but elevated=true and elevation_type1. A genuinely linked limited token was unavailable (Win32 code1312). The private token observer ran; attempting a second recipient PowerShell process failed Access is denied before recipient execution. Application access remained inconclusive. Revision2 states the actual restricted condition without claiming non-elevated or ordinary-user access and removes the extra instrument PowerShell process.",
+  "revision_reason": "Revision2 invoked the unchanged original script and observed a real launcher exit1, but PowerShell failed to start dotnet.exe with StandardOutputEncoding is only supported when standard output is redirected. No C#host, journal or HTTP listener was reached. The selected process lacked explicit standard-I/O handles; revision3 supplies owned inheritable stdin/stdout/stderr handles through STARTF_USESTDHANDLES and CreateProcessAsUser. This is instrument construction, not a permission or recipient change. A failed supported process launch remains inconclusive; do not use fallback APIs with incompatible handle inheritance.",
   "process_topology": {
     "initial": "The selected PowerShell launched a separate recipient PowerShell with ProcessStartInfo.Start. That instrument call failed Access is denied before a recipient token/application outcome existed.",
     "revision2": "The already-selected restricted PowerShell queries its actual own PID token and invokes the unchanged run-demo.ps1 directly with the PowerShell call operator. No second recipient PowerShell is created. The original script directly invokes its private native dotnet process.",
     "why_permitted": "This changes instrument process topology to avoid an unneeded process-creation dependency; it does not grant permissions, elevate, change an account/policy/URLACL, edit the package or waive a confirmed application refusal.",
-    "application_token_limit": "Actual token observation is of the PowerShell process executing the original script. Nested native application token inheritance is inferred from the unchanged direct invocation, not independently queried."
+    "application_token_limit": "Actual token observation is of the PowerShell process executing the original script. Nested native application token inheritance is inferred from the unchanged direct invocation, not independently queried.",
+    "revision3": "Create three owned inheritable standard handles (NUL input, create-new output/error files), pass STARTF_USESTDHANDLES with CreateProcessAsUser inheritHandles=true, then keep revision2 direct unchanged-script invocation and actual process-token checks. No account, token privilege elevation, ACL, execution policy, URL reservation or package changes."
   },
   "prior_result": "evidence/windows-access/first-access-inconclusive.json"
 }

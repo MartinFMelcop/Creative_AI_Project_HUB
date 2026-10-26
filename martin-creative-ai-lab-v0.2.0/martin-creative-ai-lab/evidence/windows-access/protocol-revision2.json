@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "kind": "predeclared_windows_token_access_protocol",
+  "baseline_commit": "5db1e6d5bae874b5095b56a01e84a1ea79398bcb",
+  "initial_status": "revision2_unexecuted",
+  "question": "Can the unchanged authored-scene Windows recipient start and expose its actual owner when its original script is invoked directly in the explicitly observed restricted same-user PowerShell context (Administrators deny-only, medium integrity, elevation fields recorded), without changing the package, account, ACL, execution policy or URL reservations?",
+  "beneficiary": "A prospective recipient whose access prerequisites need evidence distinct from prior administrative-runner success. This specific restricted-token observation does not establish ordinary-user Windows access.",
+  "baseline": {
+    "archive_path": "delivery/authored-scene-windows/dist/authored-scene-demo-win-x64.zip",
+    "archive_bytes": 35820510,
+    "archive_sha256": "0500d70a6a6c7071f12423fd529c0922830c09d34a312ae46c4f1e562c5aaffb",
+    "managed_application": "The same unchanged ten managed files, compiled journal identity and actual SceneSession/RequestExpedition owners.",
+    "runtime": "The existing private official .NET10.0.12 win-x64 runtime with notices; no regenerated recipient ZIP.",
+    "earlier_evidence": "evidence/windows-recipient/RUN.json",
+    "earlier_limit": "Actual Windows Server2025 administrative token; not evidence for this new token context."
+  },
+  "hypotheses": [
+    {
+      "id": "H1",
+      "prediction": "The unchanged package starts and the actual /state endpoint responds when invoked directly in the observed restricted same-user PowerShell context, with the same protected package and without machine changes.",
+      "decision": "Retain bounded access evidence; a replacement transport is not justified merely by the earlier administrative token."
+    },
+    {
+      "id": "H2",
+      "prediction": "The package actually exits nonzero before serving under the selected observed context.",
+      "decision": "Retain the exact refusal stage and diagnostic. A specific dependency, including HTTP.sys permission, requires pertinent evidence rather than attribution from timing or token alone."
+    },
+    {
+      "id": "H3",
+      "prediction": "Token creation, helper launch, identity observation or bounded execution fails or times out before application access can be evaluated.",
+      "decision": "Classify application access as inconclusive; neither successful access nor confirmed application refusal."
+    },
+    {
+      "id": "H4",
+      "prediction": "Results depend on the same account/profile, filesystem permissions, URL reservations or hosted environment rather than general ordinary-user Windows behavior.",
+      "decision": "Restrict claims to the recorded context; no ordinary-user population, Windows10/11 or physical-device generalization."
+    }
+  ],
+  "context_selection": {
+    "first": "If Windows genuinely provides an existing linked limited token, record that separate branch and its actual resulting properties; do not assume it exists or replace a failed lookup with an ordinary-user claim.",
+    "fallback": "CreateRestrictedToken with DISABLE_MAX_PRIVILEGE, Administrators SID deny-only and medium integrity. This remains a constructed restricted same-user context even if Windows reports elevated=true/elevation_type1, as in the initial run. It is not a fresh standard-user account or a demonstrated non-elevated token.",
+    "required_observation": "Record the parent, actual selected child observer and actual PowerShell process token: administrator membership, Administrators deny-only, medium integrity, elevated flag and elevation type. Require administrator=false, medium integrity and Administrators deny-only for this declared restricted boundary. Retain elevated/elevation_type exactly; do not relabel elevated=true as non-elevated or ordinary-user access. The native dotnet application inherits through the unchanged direct invocation; its own token is not independently queried.",
+    "construction_failure": "Inconclusive for application access.",
+    "forbidden_interventions": [
+      "Creating accounts or changing account membership",
+      "Elevation or enabling privileges to make the application pass",
+      "Changing execution policy or URLACL reservations",
+      "Changing machine security settings, protected source, package payload or runtime notices",
+      "Relaxing existing integrity/security gates or counting timeout as refusal"
+    ],
+    "elevation_fields": "Observed data, never normalized to the intended condition. The initial elevated=true value remains preserved and limits the claim."
+  },
+  "method": [
+    "Preserve the initial protocol and inconclusive artifact. Declare revision2 before the next access run; build the separate instrument using exact SDK10.0.401 and record compilation commands plus initial/final hashes including this protocol.",
+    "Verify the unchanged recipient archive and extracted inventory; retain baseline notices, managed assembly identity and source closure.",
+    "Record Windows version/architecture, executed commit and token-selection outcome without dumping credentials or environment secrets.",
+    "In the already-selected PowerShell, query that actual process token by PID, then invoke the unchanged run-demo.ps1 directly. Use a fresh external save directory and the original private runtime; do not create a second recipient PowerShell.",
+    "Observe the restricted PowerShell context and bounded application attempt, retain actual process exit/stdout/stderr and poll the real owner endpoint. Native dotnet token inheritance is inferred through the unchanged script and explicitly not independently queried.",
+    "Classify actual successful access, actual nonzero application refusal, or inconclusive instrument/context/timeout separately. Preserve all observed diagnostics and owned-process cleanup.",
+    "Check initial/final instrument and inherited-input identities; a source mutation invalidates the run rather than silently updating the claim.",
+    "Compare the observed dependency against coherent product/source alternatives before any transport adaptation; do not automatically rebuild a package or repeat prior matrices."
+  ],
+  "refusal_rule": "Require the unchanged original script actually to be invoked and an observed integer nonzero exit with its retained diagnostic. A second-process creation failure before invocation, timeout, missing exit, helper/token/identity failure or unobserved declared context remains inconclusive. A nonzero script exit alone does not identify an HTTP.sys cause.",
+  "success_rule": "Require the actual declared restricted PowerShell context, unchanged original-script invocation and a response from the actual package owner endpoint. Preserve observed elevation fields. This supports only that restricted same-user context, never general ordinary-user or non-elevated access.",
+  "adaptation_rule": "A later transport change is justified only by an observed consequential dependency, with a separate refutable acceptance and actual consumer. Preserve or explicitly resolve compiled journal/save compatibility; do not create a second gameplay owner, fallback grants or fabricated return/delivery.",
+  "counting": "This baseline is selection evidence for one coherent contribution. Repeated software observations, token branches, compilation and packaging support are not independent participants, studies, candidate attempts or extra workstream units.",
+  "maturity": "Build/Operations remains incomplete under its retained licensed Unity Editor, activation/modules and production Windows acceptance. No Unity or Steam execution is claimed.",
+  "limitations": [
+    "Initial trial remains inconclusive: elevated=true/elevation_type1 were actually observed, and no application refusal or HTTP.sys cause was established. Revision2 changes the declared operational condition and instrument topology prospectively, not the historical result.",
+    "The linked limited and constructed restricted contexts must be named separately; a constructed token is not automatically ordinary-user Windows evidence.",
+    "The same account/profile and filesystem environment remain shared; this is not an enforced sandbox or a fresh participant/device.",
+    "No Windows10/11 breadth, physical device, human author/player approval, comprehension, enjoyment, commercial clearance or production ownership claim.",
+    "No general save migration, power-loss, distributed account or production security guarantee.",
+    "A refusal diagnostic can suggest a mechanism but does not establish every causal condition without an appropriate control.",
+    "The actual observed token belongs to the PowerShell invoking the original script; the nested native dotnet token is inferred by inheritance and is not independently queried."
+  ],
+  "scientific_influence": "SCI-013/014/076/077: predeclared rival explanations, exact observed token as the operational condition, method selected by the claim, and explicit inconclusive/repeated-observation boundaries.",
+  "revision": 2,
+  "supersedes": {
+    "path": "evidence/windows-access/protocol-initial.json",
+    "sha256": "15587655674e9e3e0d01c50782fa26806f7ed85542a5ed2b942d7e3f2803e649",
+    "policy": "Preserve initial protocol and actual first result exactly. Revision2 is declared before the next execution and does not retroactively pass or reinterpret the first run."
+  },
+  "revision_reason": "The first actual trial constructed a same-user restricted token with administrator=false, Administrators SID deny-only and integrity RID8192, but elevated=true and elevation_type1. A genuinely linked limited token was unavailable (Win32 code1312). The private token observer ran; attempting a second recipient PowerShell process failed Access is denied before recipient execution. Application access remained inconclusive. Revision2 states the actual restricted condition without claiming non-elevated or ordinary-user access and removes the extra instrument PowerShell process.",
+  "process_topology": {
+    "initial": "The selected PowerShell launched a separate recipient PowerShell with ProcessStartInfo.Start. That instrument call failed Access is denied before a recipient token/application outcome existed.",
+    "revision2": "The already-selected restricted PowerShell queries its actual own PID token and invokes the unchanged run-demo.ps1 directly with the PowerShell call operator. No second recipient PowerShell is created. The original script directly invokes its private native dotnet process.",
+    "why_permitted": "This changes instrument process topology to avoid an unneeded process-creation dependency; it does not grant permissions, elevate, change an account/policy/URLACL, edit the package or waive a confirmed application refusal.",
+    "application_token_limit": "Actual token observation is of the PowerShell process executing the original script. Nested native application token inheritance is inferred from the unchanged direct invocation, not independently queried."
+  },
+  "prior_result": "evidence/windows-access/first-access-inconclusive.json"
+}

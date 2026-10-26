@@ -113,6 +113,7 @@ internal static class Program
     {
         if(!OpenProcessToken(GetCurrentProcess(),Query|Duplicate|AssignPrimary|0x80,out IntPtr current))throw Failed("OpenProcessToken");
         IntPtr selected=IntPtr.Zero,admin=IntPtr.Zero,medium=IntPtr.Zero;
+        IntPtr stdin=IntPtr.Zero,stdout=IntPtr.Zero,stderr=IntPtr.Zero;
         string method="",apiUsed="";var attempts=new List<object>();
         try
         {
@@ -143,16 +144,25 @@ internal static class Program
             Write(Path.Combine(output,"token-method.json"),new {token_method=method,attempts});
             string assembly=Path.GetFullPath(typeof(Program).Assembly.Location);
             string line=string.Join(" ",new[]{shell,"-NoLogo","-NoProfile","-NonInteractive","-File",child,"-Bundle",bundle,"-Launcher",assembly,"-Output",output,"-Shell",shell}.Select(Quote));
-            var startup=new StartupInfo {Cb=Marshal.SizeOf<StartupInfo>()};
+            // Give the owned PowerShell actual inheritable standard handles. A process
+            // with no valid stdout can fail native command creation before the app.
+            var security=new SecurityAttributes {Length=Marshal.SizeOf<SecurityAttributes>(),Inherit=true};
+            stdin=CreateFile("NUL",0x80000000,3,ref security,3,0x80,IntPtr.Zero);
+            if(stdin==new IntPtr(-1))throw Failed("CreateFile(NUL)");
+            stdout=CreateFile(Path.Combine(output,"selected-child.stdout.txt"),0x40000000,1,ref security,1,0x80,IntPtr.Zero);
+            if(stdout==new IntPtr(-1))throw Failed("CreateFile(selected stdout)");
+            stderr=CreateFile(Path.Combine(output,"selected-child.stderr.txt"),0x40000000,1,ref security,1,0x80,IntPtr.Zero);
+            if(stderr==new IntPtr(-1))throw Failed("CreateFile(selected stderr)");
+            var startup=new StartupInfo {Cb=Marshal.SizeOf<StartupInfo>(),Flags=0x100,StdInput=stdin,StdOutput=stdout,StdError=stderr};
             ProcessInformation process;
-            bool launched=CreateProcessAsUser(selected,shell,new StringBuilder(line),IntPtr.Zero,IntPtr.Zero,false,0,IntPtr.Zero,output,ref startup,out process);
+            bool launched=CreateProcessAsUser(selected,shell,new StringBuilder(line),IntPtr.Zero,IntPtr.Zero,true,0,IntPtr.Zero,output,ref startup,out process);
             if(launched)apiUsed="CreateProcessAsUser";
             else
             {
-                attempts.Add(new {api="CreateProcessAsUser",win32_code=Marshal.GetLastWin32Error()});
+                int launchError=Marshal.GetLastWin32Error();
+                attempts.Add(new {api="CreateProcessAsUser",win32_code=launchError});
                 Write(Path.Combine(output,"launch-attempts.json"),new {token_method=method,attempts});
-                if(!CreateProcessWithToken(selected,0,shell,new StringBuilder(line),0,IntPtr.Zero,output,ref startup,out process))throw Failed("CreateProcessWithTokenW");
-                apiUsed="CreateProcessWithTokenW";
+                throw new ProbeFailure("CreateProcessAsUser(inheritable stdio)",launchError);
             }
             try
             {
@@ -169,7 +179,7 @@ internal static class Program
             }
             finally {CloseHandle(process.Thread);CloseHandle(process.Process);}
         }
-        finally {if(selected!=IntPtr.Zero)CloseHandle(selected);if(admin!=IntPtr.Zero)LocalFree(admin);if(medium!=IntPtr.Zero)LocalFree(medium);CloseHandle(current);}
+        finally {foreach(var handle in new[]{stdin,stdout,stderr})if(handle!=IntPtr.Zero&&handle!=new IntPtr(-1))CloseHandle(handle);if(selected!=IntPtr.Zero)CloseHandle(selected);if(admin!=IntPtr.Zero)LocalFree(admin);if(medium!=IntPtr.Zero)LocalFree(medium);CloseHandle(current);}
     }
     private static string Quote(string value)
     {
@@ -182,6 +192,8 @@ internal static class Program
         }
         b.Append('\\',backslashes*2);return b.Append('"').ToString();
     }
+    [StructLayout(LayoutKind.Sequential)] private struct SecurityAttributes {public int Length;public IntPtr Descriptor;[MarshalAs(UnmanagedType.Bool)]public bool Inherit;}
+    [DllImport("kernel32.dll",EntryPoint="CreateFileW",CharSet=CharSet.Unicode,SetLastError=true)] private static extern IntPtr CreateFile(string name,uint access,uint share,ref SecurityAttributes security,uint creation,uint attributes,IntPtr template);
     [StructLayout(LayoutKind.Sequential)] private struct SidAndAttributes {public IntPtr Sid;public uint Attributes;}
     [StructLayout(LayoutKind.Sequential,CharSet=CharSet.Unicode)] private struct StartupInfo
     {public int Cb;public string? Reserved;public string? Desktop;public string? Title;public uint X,Y,XSize,YSize,XCountChars,YCountChars,FillAttribute,Flags;public ushort ShowWindow,Reserved2;public IntPtr ReservedPointer,StdInput,StdOutput,StdError;}

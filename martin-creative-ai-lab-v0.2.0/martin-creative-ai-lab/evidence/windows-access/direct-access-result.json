@@ -1,0 +1,26 @@
+{
+  "run_id": 40376978391,
+  "job_id": 121762589094,
+  "commit": "0346d6cd64627f91f5dc23968d3db93bb388f1ed",
+  "classification": "actual_original_launcher_refusal_before_native_application",
+  "exit_code": 1,
+  "token_context": "restricted same-user, Administrator=false,Administrators deny-only,medium8192,elevated=true,type1. Actual invoking PowerShell PID queried.",
+  "diagnostic": "Program 'dotnet.exe' failed to run: StandardOutputEncoding is only supported when standard output is redirected.",
+  "host_started": false,
+  "journal_created": false,
+  "http_observed": false,
+  "source_stable": true,
+  "artifact": "evidence/windows-access/direct-access-artifact.zip",
+  "artifact_sha256": "1f0167581c078a138ee96572d11f66940aa1a15a5791aecdaf8675503f8d6ebd",
+  "context_limit": "Launcher refusal in this constructed process topology, not ordinary-user or HTTP.sys rejection. Revision3 corrects only instrument standard handles before another attempt.",
+  "unity_observation": {
+    "hub_product_version": "3.22.3",
+    "path": "C:\\Program Files/Unity Hub/Unity Hub.exe",
+    "installed_editor_query": "-- --headless editors --installed",
+    "completed": false,
+    "exit_code": null,
+    "stdout": "\r\n",
+    "stderr": "",
+    "outcome": "25second timeout; stopped only owned Hub process tree. No Editor absence, activation, license or modules result inferred."
+  }
+}

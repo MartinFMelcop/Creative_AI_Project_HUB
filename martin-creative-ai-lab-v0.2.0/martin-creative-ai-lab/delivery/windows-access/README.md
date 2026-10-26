@@ -113,3 +113,20 @@ The existing archives, protected sources, notices and prior consumers remain int
 Read SCI-013/014/076/077 for the materially applied rival-hypothesis, construct,
 method-selection and repeated-observation limits. Specialist review and automated
 controls are not independent human comprehension, approval, usability or enjoyment.
+
+
+## Revision3 — valid instrument standard handles
+
+Revision2 invoked the original launcher and observed exit1, before native dotnet or
+journal creation: PowerShell reported `StandardOutputEncoding is only supported when
+standard output is redirected`. This is not an HTTP.sys, gameplay or journal failure.
+The exact artifact and earlier protocols remain preserved. Revision3 supplies owned
+inheritable stdin/stdout/stderr handles through supported CreateProcessAsUser startup
+information; it does not change privileges, ACLs, policy, URL reservations or recipient
+bytes. Failed handle/process construction remains inconclusive. This revision is
+unexecuted until its own actual job completes. The retained `elevated=true` flag still
+prevents a non-elevated/ordinary-user claim.
+
+The Windows host also exposed Unity Hub3.22.3. Its read-only installed-editor query
+expired after25seconds; it does not prove Editor absence, activation or module readiness.
+No license contents were read and no activation/download/installation was requested.

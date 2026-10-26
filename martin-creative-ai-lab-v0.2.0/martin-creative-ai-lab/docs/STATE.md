@@ -31,7 +31,13 @@ script ran. The actual artifact and initial protocol remain preserved. Revision2
 prospectively invokes the unchanged script directly in the existing selected PowerShell,
 records that actual PID token, retains elevation fields and still refuses to equate
 instrument failure/timeout with application refusal. No transport change is justified
-by the first trial. Revision2 access remains UNEXECUTED until its actual run.
+by the first trial. Revision2 actually invoked the launcher, which exited1 before native dotnet with a
+standard-output encoding/handle error. No journal or HTTP listener was reached. Its
+artifact and protocol remain retained. Revision3 supplies only owned inheritable
+standard handles; source bytes, token/context, ACLs and policy stay unchanged. Actual
+revision3 access is still UNEXECUTED. Windows now exposed Unity Hub3.22.3, but the
+read-only installed-editor query timed out after25seconds. Editor, activation and
+modules remain unverified; no license, download or installation was requested.
 
 [Rechecked baseline CI](../evidence/windows-access/baseline-ci.json) retains attempt1's
 C# cancellation after availability controls, cause unproven, and attempt2's actual
