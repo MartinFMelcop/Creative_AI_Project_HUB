@@ -1,0 +1,70 @@
+name: Windows access assessment
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/windows-access.yml'
+      - 'martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/delivery/windows-access/**'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  bounded-token-access:
+    runs-on: windows-2025
+    timeout-minutes: 10
+    defaults:
+      run:
+        shell: pwsh
+        working-directory: martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        env:
+          GIT_CONFIG_COUNT: '2'
+          GIT_CONFIG_KEY_0: core.autocrlf
+          GIT_CONFIG_VALUE_0: 'false'
+          GIT_CONFIG_KEY_1: core.longpaths
+          GIT_CONFIG_VALUE_1: 'true'
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065 # v5
+        with:
+          python-version: '3.12'
+      - uses: actions/setup-dotnet@67a3573c9a986a3f9c594539f4ab511d57bb3ce9 # v4
+        env:
+          DOTNET_INSTALL_DIR: ${{ runner.temp }}/access-sdk-10.0.401
+        with:
+          dotnet-version: '10.0.401'
+      - name: Record exact source inputs and bounded host tooling access
+        run: |
+          New-Item -ItemType Directory "$env:RUNNER_TEMP/windows-access" -ErrorAction Stop | Out-Null
+          python delivery/windows-access/inputs.py "$env:RUNNER_TEMP/windows-access/inputs-before.json"
+          $roots = @("$env:ProgramFiles/Unity/Hub/Editor", "$env:ProgramFiles/Unity", "$env:ProgramFiles/Unity Hub")
+          $probes = foreach ($root in $roots) {
+            try { @{ path = $root; exists = (Test-Path -LiteralPath $root -ErrorAction Stop); children = @(if (Test-Path -LiteralPath $root) { Get-ChildItem -LiteralPath $root -Directory -ErrorAction Stop | Select-Object -ExpandProperty Name }) } }
+            catch { @{ path = $root; error = $_.Exception.GetType().Name } }
+          }
+          $commands = @(Get-Command Unity.exe,UnityHub.exe,steamcmd.exe -ErrorAction SilentlyContinue | Select-Object Name,Source)
+          @{ commit = $env:GITHUB_SHA; os = [Environment]::OSVersion.VersionString; architecture = $env:PROCESSOR_ARCHITECTURE; powershell = $PSVersionTable.PSVersion.ToString(); editor_path_probes = @($probes); tool_commands = $commands; editor_activation = 'unverified'; platform_modules = 'unverified'; limits = 'Bounded probes only. No license contents read; absent conventional paths do not prove global absence.' } | ConvertTo-Json -Depth 8 | Set-Content -Encoding utf8 "$env:RUNNER_TEMP/windows-access/host.json"
+      - name: Inspect and extract the unchanged trusted Windows recipient
+        run: python delivery/authored-scene-windows/check.py delivery/authored-scene-windows/dist/authored-scene-demo-win-x64.zip --linux-archive delivery/authored-scene/dist/authored-scene-demo-linux-x64.zip --extract "$env:RUNNER_TEMP/access-recipient"
+      - name: Compile bounded token instrumentation with the pinned SDK
+        run: |
+          if ((dotnet --version) -ne '10.0.401') { throw 'Pinned SDK required' }
+          dotnet build delivery/windows-access/TokenProbe/TokenProbe.csproj -c Release -o "$env:RUNNER_TEMP/token-probe" "-p:BaseIntermediateOutputPath=$env:RUNNER_TEMP/token-probe-obj/" -p:RuntimeFrameworkVersion=10.0.12 -p:UseAppHost=false --disable-build-servers
+          exit $LASTEXITCODE
+      - name: Assess the existing recipient in the actual bounded child token
+        run: pwsh -NoProfile -File delivery/windows-access/probe.ps1 -Bundle "$env:RUNNER_TEMP/access-recipient/AuthoredSceneWindows" -Launcher "$env:RUNNER_TEMP/token-probe/TokenProbe.dll" -Output "$env:RUNNER_TEMP/windows-access/baseline" -Shell (Get-Command pwsh).Source
+      - name: Require stable source and artifact identities
+        if: always()
+        run: python delivery/windows-access/inputs.py "$env:RUNNER_TEMP/windows-access/inputs-after.json" --compare "$env:RUNNER_TEMP/windows-access/inputs-before.json"
+      - name: Retain actual tokens, refusals and inconclusive results
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: windows-access
+          path: |
+            ${{ runner.temp }}/windows-access/**/*.json
+            ${{ runner.temp }}/windows-access/**/*.log
+            ${{ runner.temp }}/windows-access/**/*.txt
+          if-no-files-found: error
+          retention-days: 30

@@ -2,14 +2,41 @@
 
 **Updated:** 2026-10-25 America/Sao_Paulo. **SEED:**0.34.0. Initial Git root
 `/workspace/Creative_AI_Project_HUB`, branch `work`, HEAD
-`55406c1456f248d79ef0c0f1d10ad7d981cc61c0`, clean tracked/untracked work.
+`5db1e6d5bae874b5095b56a01e84a1ea79398bcb`, clean tracked/untracked work.
 Fetched main matched with divergence0/0 and no unpublished commits. Root authority
 verifies this maintained workspace and the published Continuous Development v2.
 STATE owns continuity; [catalog](../labs/origins.json) owns maturity/consumption,
 [DESIGN](../north-star/DESIGN.md) creative authority, evidence actual execution.
 Recover [the complete operating process](prompts/CONTINUOUS_DEVELOPMENT.md).
 
-## Active initiative — actual Windows recipient, with Unity still unresolved
+## Active initiative — measure the actual Windows access boundary
+
+The new [predeclared access assessment](../evidence/windows-access/protocol.json)
+first tests the unchanged recipient under an observed linked-limited or constructed
+restricted same-user token. Engineering, Scientific and Creative independently selected
+this concrete dependency against licensed Unity, real participant/device assessment
+and a coherent creation-intake product alternative. No participant or licensed Editor
+access is currently observed. SDK10.0.401 remains usable; bounded Editor probes again
+found no usable conventional installation, while the protected root remained denied.
+
+No transport change is selected before actual baseline evidence. The private C# scene,
+Windows/Linux packages and compiled journal identity stay exact. The helper records
+actual token selection, Administrators deny-only status, medium integrity and exit/state
+observations; timeout or token failure is inconclusive. No account, privilege elevation,
+execution policy or URLACL change is permitted. This is not physical or general
+ordinary-user Windows10/11 evidence. The workflow is preparation; access is UNEXECUTED.
+
+[Rechecked baseline CI](../evidence/windows-access/baseline-ci.json) retains attempt1's
+C# cancellation after availability controls, cause unproven, and attempt2's actual
+sixth-host resume refusal with Value cannot be null. Only the specific C# job was
+requested for rerun. The unchanged targeted local instrument passed47assertions across
+seven process boundaries; this does not explain the remote failure. Its actual artifact,
+journal/checksum inspection and negative remain preserved. No gate or fixture changed.
+Windows CI40253496486 completed/success in attempt1. The older result below remains
+valid within its administrative-token boundary. Rolling units are unchanged while
+this new initiative has no completed outcome.
+
+## Previous result — actual Windows recipient, with Unity still unresolved
 
 After two consecutive legacy/laboratory units, independent Engineering, Scientific
 and Creative analyses compared actual licensed Unity access, appropriate author/player/

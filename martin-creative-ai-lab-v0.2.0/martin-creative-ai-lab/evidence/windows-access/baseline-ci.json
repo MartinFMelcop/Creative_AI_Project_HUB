@@ -1,0 +1,40 @@
+{
+  "baseline_commit": "5db1e6d5bae874b5095b56a01e84a1ea79398bcb",
+  "run_id": 40253496504,
+  "attempt1": {
+    "status": "completed",
+    "conclusion": "cancelled",
+    "successful_jobs": 7,
+    "cancelled_job": 121350335421,
+    "last_observation": "Availability controls printed PASS, followed by The operation was canceled before recipient delivery. Cause not established."
+  },
+  "rerun_request": "Only C# job121350335421 was requested through the supported specific-job rerun tool. Actual attempt2 returned eight job records; request and observed execution are distinct.",
+  "attempt2": {
+    "status": "completed",
+    "conclusion": "failure",
+    "successful_jobs": 7,
+    "failed_job": 121357631512,
+    "failure_step": "Execute coherent authored C# scene and actual browser consequences",
+    "diagnostic": "continuity-process.py: Host refused startup: Value cannot be null.",
+    "boundary": "Sixth --resume host after17 process controls. Prior five hosts emitted READY; sixth exited1 with empty stdout.",
+    "artifact": "evidence/windows-access/baseline-ci-diagnostics.zip",
+    "artifact_sha256": "f45473a55c3a933d8b7963b3e115600d94c91c0b9ce2851e997803ecbd554b60"
+  },
+  "local_reexecution": {
+    "command": [
+      "python3",
+      "north-star/authored-scene/tools/continuity-process.py",
+      "--dotnet",
+      "/workspace/work/authored-scene/dotnet/dotnet",
+      "--output",
+      "/workspace/work/windows-access/continuity-recheck"
+    ],
+    "exit_code": 0,
+    "passed": 47,
+    "process_boundaries": 7,
+    "scope": "Same unchanged targeted instrument/code, actual Linux runtime10.0.12. Not proof of CI cause or Windows recovery."
+  },
+  "independent_inspection": "Retained journal has18sequential accepted entries, unique request IDs, no null entry values and independently matching checksum. Host message alone has no stack/stage provenance; it cannot locate the failure to journal initialization or HttpListener startup.",
+  "limits": "No cause established, no save/gameplay/fixture/gate/timeout modified. Future actual CI remains separately reportable.",
+  "runtime_comparison_limit": "Local targeted serving runtime10.0.12 is observed. CI previously installed10.0.13, but this failure artifact does not report the actual selected serving runtime. Same SDK and unchanged code do not establish exact environment reproduction or a runtime cause."
+}

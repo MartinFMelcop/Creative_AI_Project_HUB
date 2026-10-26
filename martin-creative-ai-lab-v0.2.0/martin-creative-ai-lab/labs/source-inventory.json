@@ -376,7 +376,7 @@
   "packages": {
     "identical_whole_packages": [],
     "limits": "No package is declared removable. Identical embedded runtimes do not make version-specific source, saves, PCKs or notices redundant; no extraction or execution occurred.",
-    "package_count": 30,
+    "package_count": 31,
     "packages": [
       {
         "bytes": 448865,
@@ -398,6 +398,13 @@
         "path": "delivery/authored-scene/dist/authored-scene-demo-linux-x64.zip",
         "sha256": "d829b1b59ee2dd22f87ab007c4db96bfe1655731b38d02f5085f0b8d30e043e4",
         "uncompressed_bytes": 83096958
+      },
+      {
+        "bytes": 18754,
+        "members": 39,
+        "path": "evidence/windows-access/baseline-ci-diagnostics.zip",
+        "sha256": "f45473a55c3a933d8b7963b3e115600d94c91c0b9ce2851e997803ecbd554b60",
+        "uncompressed_bytes": 56670
       },
       {
         "bytes": 425998,
@@ -1175,8 +1182,8 @@
         "sha256": "3316bd0c5a36335cac98cd8747919444e3316452466c0448ecbcd2ea89ca5437"
       }
     ],
-    "tracked_blob_bytes": 655281561,
-    "zip_uncompressed_bytes": 1575241901
+    "tracked_blob_bytes": 655300315,
+    "zip_uncompressed_bytes": 1575298571
   },
   "preserved_archive_sources": [
     {
