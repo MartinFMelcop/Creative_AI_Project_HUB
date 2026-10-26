@@ -65,6 +65,9 @@ jobs:
           name: windows-recipient
           path: |
             ${{ runner.temp }}/windows-host.json
-            ${{ runner.temp }}/windows-recipient
+            ${{ runner.temp }}/windows-recipient/results.json
+            ${{ runner.temp }}/windows-recipient/commands.json
+            ${{ runner.temp }}/windows-recipient/browser/*.json
+            ${{ runner.temp }}/windows-recipient/browser/*.png
           if-no-files-found: error
           retention-days: 30
