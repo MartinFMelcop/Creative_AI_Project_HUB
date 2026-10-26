@@ -1,0 +1,60 @@
+{
+  "sequence": 12,
+  "command": "skill",
+  "accepted": true,
+  "text": "Skill: 0 damage, 3 resolve spent.",
+  "state": {
+    "revision": 4,
+    "shift": 3,
+    "remaining": 1,
+    "crates": 0,
+    "crates_required": 5,
+    "capacity": 1,
+    "guide_available": false,
+    "guide_location": "travelling",
+    "surveyed": true,
+    "delivered": false,
+    "returned": false,
+    "status": "committed",
+    "conversation": "closed",
+    "term": "dusk",
+    "due_elapsed": false,
+    "delivery_started": true,
+    "receipts": [
+      {
+        "kind": "commitment",
+        "revision": 2,
+        "shift": 1,
+        "crates": 0,
+        "term": "dusk",
+        "guide": "Rill",
+        "delivered": false,
+        "returned": false
+      }
+    ],
+    "encounter": {
+      "kind": "guided",
+      "active": true,
+      "stage": 1,
+      "beat": 1,
+      "position": 1,
+      "health": 11,
+      "resolve": 8,
+      "required_position": 4,
+      "maximum_beats": 6,
+      "threat": "BOLT: moving exposes health; the approach skill spends resolve to protect.",
+      "xp": 10
+    },
+    "scope": "In-session original experiment; no persistent quest, Unity/Windows or human validation"
+  },
+  "continuity": {
+    "mode": "local",
+    "run_id": "22c1f0d82d2e4d5496f1106ba74c3c92-day-1",
+    "revision": 12,
+    "day": 1,
+    "status": "saved",
+    "duplicate": false,
+    "original_revision": 12,
+    "reason": "Committed before receipt."
+  }
+}

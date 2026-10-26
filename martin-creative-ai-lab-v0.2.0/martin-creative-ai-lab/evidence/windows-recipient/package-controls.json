@@ -1,0 +1,20 @@
+{
+  "passed": 13,
+  "controls": [
+    "two separate adaptations reproduce bytes",
+    "all193 official Windows runtime files",
+    "all managed app source web provenance bytes unchanged",
+    "structural check does not claim Windows execution",
+    "extracted Windows executable and notices",
+    "existing archive never overwritten",
+    "existing extraction never overwritten",
+    "forged managed payload with rehashed manifests",
+    "missing required notices with rehashed manifests",
+    "runtime drift with rehashed manifests",
+    "unexpected archive file with rehashed manifests",
+    "official runtime archive SHA512 mismatch",
+    "Linux compiled continuity identity mismatch"
+  ],
+  "windows_executed": false,
+  "scope": "Targeted packaging/identity controls only; launcher/HTTP/storage require actual Windows execution."
+}

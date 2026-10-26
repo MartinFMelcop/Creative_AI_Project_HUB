@@ -376,7 +376,7 @@
   "packages": {
     "identical_whole_packages": [],
     "limits": "No package is declared removable. Identical embedded runtimes do not make version-specific source, saves, PCKs or notices redundant; no extraction or execution occurred.",
-    "package_count": 28,
+    "package_count": 29,
     "packages": [
       {
         "bytes": 448865,
@@ -384,6 +384,13 @@
         "path": "archive/legacy-source-extracts-v0.2.0.zip",
         "sha256": "6da636a270284eac1e11d00407dab364c2d9aa8c2f0485e77509e6ccf0dbc1dc",
         "uncompressed_bytes": 1522758
+      },
+      {
+        "bytes": 35820510,
+        "members": 233,
+        "path": "delivery/authored-scene-windows/dist/authored-scene-demo-win-x64.zip",
+        "sha256": "0500d70a6a6c7071f12423fd529c0922830c09d34a312ae46c4f1e562c5aaffb",
+        "uncompressed_bytes": 81030504
       },
       {
         "bytes": 35908523,
@@ -1057,6 +1064,20 @@
         "sha256": "6d90714c5ca42977be9025a15084d4f6bf071dfc2066093a856835e28be45505"
       },
       {
+        "bytes": 1356640,
+        "copies": [
+          {
+            "member": "AuthoredSceneWindows/runtime/shared/Microsoft.NETCore.App/10.0.12/mscordaccore.dll",
+            "package": "delivery/authored-scene-windows/dist/authored-scene-demo-win-x64.zip"
+          },
+          {
+            "member": "AuthoredSceneWindows/runtime/shared/Microsoft.NETCore.App/10.0.12/mscordaccore_amd64_amd64_10.0.1226.42308.dll",
+            "package": "delivery/authored-scene-windows/dist/authored-scene-demo-win-x64.zip"
+          }
+        ],
+        "sha256": "86c29a7b945525135de16c3dcb71e3b8517848c459cbb21395b352d4e6bba09c"
+      },
+      {
         "bytes": 1328936,
         "copies": [
           {
@@ -1147,8 +1168,8 @@
         "sha256": "3316bd0c5a36335cac98cd8747919444e3316452466c0448ecbcd2ea89ca5437"
       }
     ],
-    "tracked_blob_bytes": 619035053,
-    "zip_uncompressed_bytes": 1493710331
+    "tracked_blob_bytes": 654855563,
+    "zip_uncompressed_bytes": 1574740835
   },
   "preserved_archive_sources": [
     {

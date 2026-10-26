@@ -1,0 +1,9 @@
+{
+  "kind": "retained_actual_instrument_failure",
+  "command": "verify.py --runtime-archive ... --dotnet ... --output /workspace/work/windows-delivery/preflight-1",
+  "exit_code": 1,
+  "stderr": "Instrument changed during execution",
+  "cause_observed": "Primary edited the verifier during its initial preflight; the stability gate rejected the run after the recovered-source comparison.",
+  "correction": "Freeze inputs and execute again in a fresh directory. Do not use the superseded run as final acceptance.",
+  "gate_unchanged": true
+}

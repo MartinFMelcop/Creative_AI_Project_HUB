@@ -1,0 +1,73 @@
+[
+  {
+    "arguments": [
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+      "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/delivery/authored-scene-windows/package.py",
+      "--linux-archive",
+      "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/delivery/authored-scene/dist/authored-scene-demo-linux-x64.zip",
+      "--runtime-archive",
+      "/workspace/work/windows-delivery/dotnet-runtime-10.0.12-win-x64.zip",
+      "--output",
+      "/workspace/work/windows-delivery/preflight-guarded/authored-scene-demo-win-x64.zip",
+      "--work",
+      "/workspace/work/windows-delivery/preflight-guarded/stage 0"
+    ],
+    "cwd": "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab",
+    "exit_code": 0,
+    "stdout": "{\"archive_sha256\": \"0500d70a6a6c7071f12423fd529c0922830c09d34a312ae46c4f1e562c5aaffb\", \"bytes\": 35820510, \"files\": 233, \"managed_bytes_unchanged\": true, \"windows_executed\": false}\n",
+    "stderr": ""
+  },
+  {
+    "arguments": [
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+      "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/delivery/authored-scene-windows/package.py",
+      "--linux-archive",
+      "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/delivery/authored-scene/dist/authored-scene-demo-linux-x64.zip",
+      "--runtime-archive",
+      "/workspace/work/windows-delivery/dotnet-runtime-10.0.12-win-x64.zip",
+      "--output",
+      "/workspace/work/windows-delivery/preflight-guarded/repeat.zip",
+      "--work",
+      "/workspace/work/windows-delivery/preflight-guarded/stage 1"
+    ],
+    "cwd": "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab",
+    "exit_code": 0,
+    "stdout": "{\"archive_sha256\": \"0500d70a6a6c7071f12423fd529c0922830c09d34a312ae46c4f1e562c5aaffb\", \"bytes\": 35820510, \"files\": 233, \"managed_bytes_unchanged\": true, \"windows_executed\": false}\n",
+    "stderr": ""
+  },
+  {
+    "arguments": [
+      "/workspace/work/authored-scene/dotnet/dotnet",
+      "--version"
+    ],
+    "cwd": "/workspace/work/windows-delivery/preflight-guarded/recipient path with spaces/AuthoredSceneWindows/source/north-star/csharp",
+    "exit_code": 0,
+    "stdout": "10.0.401\n",
+    "stderr": ""
+  },
+  {
+    "arguments": [
+      "/workspace/work/authored-scene/dotnet/dotnet",
+      "publish",
+      "/workspace/work/windows-delivery/preflight-guarded/recipient path with spaces/AuthoredSceneWindows/source/north-star/authored-scene/Host/NorthStar.AuthoredScene.csproj",
+      "-c",
+      "Release",
+      "--self-contained",
+      "false",
+      "-p:UseAppHost=false",
+      "-p:RuntimeFrameworkVersion=10.0.12",
+      "-p:DebugType=None",
+      "-p:DebugSymbols=false",
+      "-p:ContinuousIntegrationBuild=true",
+      "-p:PathMap=/workspace/work/windows-delivery/preflight-guarded/recipient path with spaces/AuthoredSceneWindows/source=/_/source",
+      "-o",
+      "/workspace/work/windows-delivery/preflight-guarded/recovered application",
+      "-m:1",
+      "--disable-build-servers"
+    ],
+    "cwd": "/workspace/work/windows-delivery/preflight-guarded/recipient path with spaces/AuthoredSceneWindows/source/north-star/csharp",
+    "exit_code": 0,
+    "stdout": "  Determining projects to restore...\n  Restored /workspace/work/windows-delivery/preflight-guarded/recipient path with spaces/AuthoredSceneWindows/source/north-star/csharp/Crossing/NorthStar.Crossing.csproj (in 101 ms).\n  Restored /workspace/work/windows-delivery/preflight-guarded/recipient path with spaces/AuthoredSceneWindows/source/north-star/authored-scene/Host/NorthStar.AuthoredScene.csproj (in 100 ms).\n  Restored /workspace/work/windows-delivery/preflight-guarded/recipient path with spaces/AuthoredSceneWindows/source/north-star/csharp/Narrative/NorthStar.Narrative.csproj (in 2 ms).\n  Restored /workspace/work/windows-delivery/preflight-guarded/recipient path with spaces/AuthoredSceneWindows/source/north-star/csharp/Domain/NorthStar.Domain.csproj (in 94 ms).\n  NorthStar.Domain -> /workspace/work/windows-delivery/preflight-guarded/recipient path with spaces/AuthoredSceneWindows/source/north-star/csharp/Domain/bin/Release/netstandard2.1/NorthStar.Domain.dll\n  NorthStar.Crossing -> /workspace/work/windows-delivery/preflight-guarded/recipient path with spaces/AuthoredSceneWindows/source/north-star/csharp/Crossing/bin/Release/net10.0/NorthStar.Crossing.dll\n  NorthStar.Narrative -> /workspace/work/windows-delivery/preflight-guarded/recipient path with spaces/AuthoredSceneWindows/source/north-star/csharp/Narrative/bin/Release/net10.0/NorthStar.Narrative.dll\n  NorthStar.AuthoredScene -> /workspace/work/windows-delivery/preflight-guarded/recipient path with spaces/AuthoredSceneWindows/source/north-star/authored-scene/Host/bin/Release/net10.0/NorthStar.AuthoredScene.dll\n  NorthStar.AuthoredScene -> /workspace/work/windows-delivery/preflight-guarded/recovered application/\n",
+    "stderr": ""
+  }
+]
