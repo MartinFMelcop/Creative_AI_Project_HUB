@@ -1,0 +1,381 @@
+{
+  "schema_version": 1,
+  "kind": "bounded_windows_access_assessment",
+  "baseline_commit": "5db1e6d5bae874b5095b56a01e84a1ea79398bcb",
+  "executed_commit": "5ee225b699c154b6e521f375a5bf7737c840df19",
+  "platform": "Windows Server2025 x64",
+  "runtime": "SDK10.0.401 compiles the separate native-token instrument; the unchanged original scene executes through its private Microsoft.NETCore.App10.0.12 win-x64 runtime. PowerShell7.6.7. No new Chromium run.",
+  "scope": "ONE Build/Operations laboratory/production-access unit, not a new scene, package, legacy consumption capability, ordinary-user account/device or human assessment. Build/Operations remains incomplete under retained licensed Unity/module production acceptance.",
+  "question": "Can the unchanged scene start and preserve actual accepted consequences across process reentry in the precisely observed restricted same-user Windows context?",
+  "decision": "Supported in this exact context. Preserve the working transport: these observations do not justify an HTTP.sys/transport replacement. Linked limited token was unavailable; constructed token retains elevated=true despite administrator=false, Admin SIDdeny-only and medium integrity.",
+  "checks": {
+    "passed": 6,
+    "failed": 0,
+    "controls": [
+      "Actual refusal retains guide and cannot fabricate delivery or return",
+      "Actual heard consent and confirmation reserve guide capacity before departure",
+      "Actual paid departure enters Crossing without inventing return or delivery",
+      "Actual new restricted process restores the same in-progress state, day and revision",
+      "Actual completed encounter permits observed return and delivery",
+      "Actual handoff leaves three crates unfinished with no daylight remaining"
+    ],
+    "accepted_commands": 21,
+    "bounded_processes": 3,
+    "counting": "Consumer checks overlap existing behavior; commands, repeated baseline/trials and context observations are not independent participants/studies, new candidates or additional effort units."
+  },
+  "contexts": {
+    "baseline": {
+      "observed_token": {
+        "pid": 3940,
+        "observer_pid": 5308,
+        "administrator": false,
+        "elevated": true,
+        "elevation_type": 1,
+        "integrity_rid": 8192,
+        "medium_integrity": true,
+        "administrator_sid_deny_only": true,
+        "administrator_group": [
+          {
+            "sid": "S-1-5-32-544",
+            "attributes": 16,
+            "deny_only": true
+          }
+        ],
+        "user_sid_sha256": "9a720b4d60439242a77d1fe889cb1f474730631e8493ff2ce8b7fe643f59f6aa",
+        "scope": "Actual process token; restricted same-user hosted execution is not a physical ordinary-user device or Windows10/11 assessment."
+      },
+      "child": {
+        "timed_out": false,
+        "normal_exit_observed": true,
+        "attempt_marked": true,
+        "save_exists_after": true,
+        "save_existed_before": false,
+        "status": "completed",
+        "exit_code": 0,
+        "instrument_failure": false,
+        "save_bytes_after": 273,
+        "ready_line": true,
+        "save_sha256_after": "fe6fc8b9c94389d4e1b3d047b1b97ad8502d503837f216475e166b84046ee683"
+      },
+      "outcome": "baseline_started_and_expired",
+      "http_observed": true
+    },
+    "prepare": {
+      "observed_token": {
+        "pid": 3756,
+        "observer_pid": 7344,
+        "administrator": false,
+        "elevated": true,
+        "elevation_type": 1,
+        "integrity_rid": 8192,
+        "medium_integrity": true,
+        "administrator_sid_deny_only": true,
+        "administrator_group": [
+          {
+            "sid": "S-1-5-32-544",
+            "attributes": 16,
+            "deny_only": true
+          }
+        ],
+        "user_sid_sha256": "9a720b4d60439242a77d1fe889cb1f474730631e8493ff2ce8b7fe643f59f6aa",
+        "scope": "Actual process token; restricted same-user hosted execution is not a physical ordinary-user device or Windows10/11 assessment."
+      },
+      "child": {
+        "timed_out": false,
+        "attempt_marked": true,
+        "save_exists_after": true,
+        "status": "completed",
+        "ready_line": true,
+        "normal_exit_observed": true,
+        "save_sha256_after": "11d227bdde8451da1759d7046d79c4f3698b71395052d3343b1347f6817efc9b",
+        "exit_code": 0,
+        "save_existed_before": false,
+        "save_bytes_after": 3090,
+        "instrument_failure": false
+      },
+      "outcome": "baseline_started_and_expired",
+      "http_observed": true
+    },
+    "resume": {
+      "observed_token": {
+        "pid": 7384,
+        "observer_pid": 6012,
+        "administrator": false,
+        "elevated": true,
+        "elevation_type": 1,
+        "integrity_rid": 8192,
+        "medium_integrity": true,
+        "administrator_sid_deny_only": true,
+        "administrator_group": [
+          {
+            "sid": "S-1-5-32-544",
+            "attributes": 16,
+            "deny_only": true
+          }
+        ],
+        "user_sid_sha256": "9a720b4d60439242a77d1fe889cb1f474730631e8493ff2ce8b7fe643f59f6aa",
+        "scope": "Actual process token; restricted same-user hosted execution is not a physical ordinary-user device or Windows10/11 assessment."
+      },
+      "child": {
+        "save_bytes_after": 4203,
+        "save_exists_after": true,
+        "exit_code": 0,
+        "instrument_failure": false,
+        "save_sha256_after": "5f8c6b65a22aac19eeba70c1fa3aad700fa4facebfdf707d93e72f576c7d71b0",
+        "save_existed_before": true,
+        "ready_line": true,
+        "timed_out": false,
+        "attempt_marked": true,
+        "normal_exit_observed": true,
+        "status": "completed"
+      },
+      "outcome": "baseline_started_and_expired",
+      "http_observed": true
+    }
+  },
+  "actual_reentry": {
+    "same_external_journal": true,
+    "expected_revision": 15,
+    "observed_revision": 15,
+    "final_revision": 21,
+    "same_state_and_run": true,
+    "final_returned": true,
+    "final_delivered": true,
+    "unfinished_crates": 3,
+    "receipt_boundary": "Only persisted state/run/revision compared, excluding transient receipt reason metadata."
+  },
+  "execution": {
+    "run_id": 40379998693,
+    "job_id": 121773339713,
+    "attempt": 1,
+    "conclusion": "success",
+    "artifact_id": 12677118910,
+    "artifact_sha256": "5578c47ab1c119b99634146ab56b85f221ca5d3a27b6c52daed8525629396f4f",
+    "artifact_bytes": 41911,
+    "url": "https://github.com/MartinFMelcop/Creative_AI_Project_HUB/actions/runs/40379998693"
+  },
+  "source_stability": {
+    "bound_inputs": 50,
+    "before_equals_after": true,
+    "current_executable_inputs_equal": true
+  },
+  "source_artifacts": [
+    {
+      "local_path": "delivery/windows-access/TokenProbe/Program.cs",
+      "size_bytes": 15495,
+      "sha256": "67c6630dc9b0989ddbf1decd80a503868fd7e5869db7353351ad4c3f1cb502de"
+    },
+    {
+      "local_path": "delivery/windows-access/TokenProbe/TokenProbe.csproj",
+      "size_bytes": 310,
+      "sha256": "aeeb7c60f7711c56a3ccc4de17aa8be3058eff7d3392aa325c8cb9f8ac60d8f4"
+    },
+    {
+      "local_path": "delivery/windows-access/probe.ps1",
+      "size_bytes": 13249,
+      "sha256": "cf8b12181c7edfaf09bdcd665429fd7860bcffbd3f1a8c7de43e0964c9d3fef3"
+    },
+    {
+      "local_path": "delivery/windows-access/child.ps1",
+      "size_bytes": 3009,
+      "sha256": "68bf94859a1ae9f01253005a9dda0d12054a6ae96c7b2bbddb2a751928758f77"
+    },
+    {
+      "local_path": "delivery/windows-access/inputs.py",
+      "size_bytes": 2451,
+      "sha256": "ee735590656056751e2c06679a71db14fa7c04af94e1d16efacc904aab72ea64"
+    }
+  ],
+  "preserved_recipient": {
+    "windows_zip": "0500d70a6a6c7071f12423fd529c0922830c09d34a312ae46c4f1e562c5aaffb",
+    "linux_zip": "d829b1b59ee2dd22f87ab007c4db96bfe1655731b38d02f5085f0b8d30e043e4",
+    "old_owner_and_managed_bytes_unchanged": true,
+    "no_rebuild_or_new_release": true
+  },
+  "unity_access": {
+    "observed_hub_version": "3.22.3",
+    "read_only_installed_editor_query": "Timed out after25seconds without an Editor list; only owned Hub tree stopped.",
+    "editor_activation_and_modules": "unverified",
+    "limits": "Conventional Editor directories absent does not prove global absence. No license content, activation, download or installation requested."
+  },
+  "retained_trials": [
+    {
+      "protocol": "protocol-initial.json",
+      "result": "first-access-inconclusive.json",
+      "outcome": "Second PowerShell creation failed before recipient execution; inconclusive application access."
+    },
+    {
+      "protocol": "protocol-revision2.json",
+      "result": "direct-access-result.json",
+      "outcome": "Original script exited1 on native-command encoding before C#host/journal; no HTTP.sys attribution."
+    },
+    {
+      "protocol": "protocol-revision3.json",
+      "result": "stdio-access-result.json",
+      "outcome": "Same pre-host refusal with extra PowerShell redirection; exact artifact retained."
+    },
+    {
+      "protocol": "protocol.json",
+      "result": "native-access-result.json",
+      "outcome": "Supported native standard handles without redundant PowerShell redirection let the unchanged recipient start normally."
+    }
+  ],
+  "specialties": {
+    "engineering": "Independent ENG004/015/017 compared actual access vs source/product alternatives, implemented token/PS instrumentation and reviewed legitimate direct invocation; later agent continuation hit usage limit after delivery, primary completed integration/standard-I/O repair and actual consumers sequentially.",
+    "scientific": "Independent SCI013/014/076/077 required baseline-before-intervention, exact token/elevation observation, inconclusive failures, preserved prospective protocol revisions and no automatic replacement.",
+    "creative": "Independent CRE001(D),005(A),009/011/045/048/061(H),022/023/031/071(H) favored preserving one real owner and consequences; creation-intake alternative remains valuable. Reviewed retained CIjournal checksum and rejected unsupported corruption/causal claims.",
+    "authority": "Agents consult protected Brain libraries; their reviews are not libraries, human participants, author approval or canon."
+  },
+  "limitations": [
+    "Constructed same-user token, not a fresh standard-user or non-elevated token. Elevated flag remains true.",
+    "PowerShell process token was actually queried by PID; nested native application token inheritance is inferred from the unchanged direct invocation, not independently queried.",
+    "Same account/profile/filesystem remains shared; not an enforced sandbox. No Windows10/11 breadth, physical device, human understanding or experience assessment.",
+    "API consumer controls only; original browser/captures remain historical. No new Unity, Steam, general save migration, power-loss, account/distributed or production security guarantee.",
+    "No commercial clearance, production ownership or full legacy catalog/effects/schedule/creation implementation claim.",
+    "Prior C#CI cancellation and sixth-resume Value cannot be null failure remain; unchanged local47control pass and newer CI success do not prove their causes.",
+    "Input maps preserve the exact documents at executed commit5ee225b. Later documentation reports the results; all current executable/recipient bindings remain exact. JSON views normalize only BOM/line endings; original artifacts remain exact."
+  ],
+  "lifecycle": "No old owner, package, save format, unique source, media, variant or notice retired. No unnecessary transport/framework/runtime added after the baseline worked. Repeated trial artifacts preserve distinct actual failures and protocol identities, not separate release lines.",
+  "result_artifacts": [
+    {
+      "local_path": "evidence/windows-access/consumer-access-artifact.zip",
+      "size_bytes": 41911,
+      "sha256": "5578c47ab1c119b99634146ab56b85f221ca5d3a27b6c52daed8525629396f4f"
+    },
+    {
+      "local_path": "evidence/windows-access/artifact-transport.json",
+      "size_bytes": 2244,
+      "sha256": "f44dcc403aecf15550d52b6d9bb6637e1d4d54df429b4777efc29d958fdfdf20"
+    },
+    {
+      "local_path": "evidence/windows-access/actual-host.json",
+      "size_bytes": 788,
+      "sha256": "ce5c163c0072b7c953ca72378e04aec8cabe51c66342a43a1da80692527a1609"
+    },
+    {
+      "local_path": "evidence/windows-access/actual-unity-query.json",
+      "size_bytes": 410,
+      "sha256": "3f2b725e2243c9dbb477899967b750c2128192908c2068c48a3a6bed9e83f318"
+    },
+    {
+      "local_path": "evidence/windows-access/actual-inputs.json",
+      "size_bytes": 8704,
+      "sha256": "4e6ce18f1c6a0f6215580ab83e867e3adf88a3ae45b73903fbab6a072e5bef0a"
+    },
+    {
+      "local_path": "evidence/windows-access/actual-prepare.json",
+      "size_bytes": 29502,
+      "sha256": "f8a16e16c6e0f834efddd614c3091362f2dfe82c8a741861ba16d8556c4b32c9"
+    },
+    {
+      "local_path": "evidence/windows-access/actual-resume.json",
+      "size_bytes": 16030,
+      "sha256": "4106ac0386210017c36c877403ab5357ec1a3693544302a37b71067b3ab67607"
+    },
+    {
+      "local_path": "evidence/windows-access/baseline-ci.json",
+      "size_bytes": 2375,
+      "sha256": "f1bfd11ebcb0906fc86b7b65812092d479fce41d526793134b2ead164293bfda"
+    },
+    {
+      "local_path": "evidence/windows-access/baseline-ci-diagnostics.zip",
+      "size_bytes": 18754,
+      "sha256": "f45473a55c3a933d8b7963b3e115600d94c91c0b9ce2851e997803ecbd554b60"
+    },
+    {
+      "local_path": "evidence/windows-access/first-access-artifact.zip",
+      "size_bytes": 9625,
+      "sha256": "9d6bb08c4b3f9d2f87291d3fa05c69494e830c35e3ca61c04f4f8998956529b6"
+    },
+    {
+      "local_path": "evidence/windows-access/first-access-inconclusive.json",
+      "size_bytes": 1548,
+      "sha256": "6c4e2649da6a1d076dedb7047093b32a50ca978898c7497501b794acb341371f"
+    },
+    {
+      "local_path": "evidence/windows-access/direct-access-artifact.zip",
+      "size_bytes": 11786,
+      "sha256": "1f0167581c078a138ee96572d11f66940aa1a15a5791aecdaf8675503f8d6ebd"
+    },
+    {
+      "local_path": "evidence/windows-access/direct-access-result.json",
+      "size_bytes": 1375,
+      "sha256": "b569158aaeeb62010e80248deaece0b78d1d6d4b1a5519089f3e552460610256"
+    },
+    {
+      "local_path": "evidence/windows-access/stdio-access-artifact.zip",
+      "size_bytes": 12115,
+      "sha256": "a15f0c2cc9260b2f2a88a543733fc8fad2d2f6e99fdcde28596741261a815560"
+    },
+    {
+      "local_path": "evidence/windows-access/stdio-access-result.json",
+      "size_bytes": 1000,
+      "sha256": "985c347e672c17873d5a6abb03af0c58cc12e3bf1a65f069fd7cad45d964cc12"
+    },
+    {
+      "local_path": "evidence/windows-access/native-access-artifact.zip",
+      "size_bytes": 13264,
+      "sha256": "5bba88f94a99d0605316948955d8a847d712df3d0e379b7841aa72c7d7181a48"
+    },
+    {
+      "local_path": "evidence/windows-access/native-access-result.json",
+      "size_bytes": 4555,
+      "sha256": "54383d2c0a91b97f38ab05edf872c1d483e12f3a27604e0c5b1262bb292e75af"
+    },
+    {
+      "local_path": "evidence/windows-access/protocol-initial.json",
+      "size_bytes": 7271,
+      "sha256": "15587655674e9e3e0d01c50782fa26806f7ed85542a5ed2b942d7e3f2803e649"
+    },
+    {
+      "local_path": "evidence/windows-access/protocol-revision2.json",
+      "size_bytes": 11178,
+      "sha256": "46b8c74a0cba58616a0e94490398066e16516b641139403dd83b9bade127d247"
+    },
+    {
+      "local_path": "evidence/windows-access/protocol-revision3.json",
+      "size_bytes": 11942,
+      "sha256": "deda0ff6d6bb0ade7f6c03f5b7278346c2011ef0f6cd8d92fae48f49b32c086f"
+    },
+    {
+      "local_path": "evidence/windows-access/protocol.json",
+      "size_bytes": 12035,
+      "sha256": "cccf4dd4bc04f2cb4075fb2614f8df9d558a70984e259ca701da0c4f8a46f0d0"
+    },
+    {
+      "local_path": "evidence/windows-access/consumer-protocol.json",
+      "size_bytes": 2885,
+      "sha256": "a25c1e3078108a5f0d9d93b0ba8114c36760affc7d3d955b785113428b564888"
+    },
+    {
+      "local_path": "evidence/windows-access/local-continuity-execution.json",
+      "size_bytes": 54236,
+      "sha256": "d2be7307b510c0b85c68a19d0bddc74cf11aa4e6618821a399612217f03a5bba"
+    },
+    {
+      "local_path": "evidence/windows-access/local-continuity-results.json",
+      "size_bytes": 31135,
+      "sha256": "43a6e624440c42ff3d5efb68f6451cc35f500341726fa5b2d433a6b74eb72a7a"
+    },
+    {
+      "local_path": "evidence/windows-access/preservation.json",
+      "size_bytes": 830,
+      "sha256": "d6d2236f69af108c5759045069d87d1cce7fe0f5113a701b4dad1fe6f8d903bf"
+    },
+    {
+      "local_path": "evidence/windows-access/instrument-controls.json",
+      "size_bytes": 775,
+      "sha256": "b47014f5a5de0384b34692072fa9d4bfb92c2ba82533895455f7c192f1a44a5e"
+    },
+    {
+      "local_path": "evidence/windows-access/CI_HISTORY.json",
+      "size_bytes": 1436,
+      "sha256": "f3484fe1de03ac2c34a051e1c0abca34d83068327b023027c59c9d70078ca6b2"
+    }
+  ],
+  "instrument_controls": {
+    "passed": 2,
+    "failed": 0,
+    "scope": "Distinct instrument false-claim/pin checks; not summed as independent studies with six consumer controls."
+  }
+}

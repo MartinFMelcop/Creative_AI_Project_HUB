@@ -1,0 +1,546 @@
+{
+  "receipts": [
+    {
+      "http_status": 200,
+      "command": "skill",
+      "observation": {
+        "sequence": 16,
+        "command": "skill",
+        "accepted": true,
+        "text": "Skill: 0 damage, 3 resolve spent.",
+        "state": {
+          "revision": 4,
+          "shift": 3,
+          "remaining": 1,
+          "crates": 0,
+          "crates_required": 5,
+          "capacity": 1,
+          "guide_available": false,
+          "guide_location": "travelling",
+          "surveyed": true,
+          "delivered": false,
+          "returned": false,
+          "status": "committed",
+          "conversation": "closed",
+          "term": "dusk",
+          "due_elapsed": false,
+          "delivery_started": true,
+          "receipts": [
+            {
+              "kind": "commitment",
+              "revision": 2,
+              "shift": 1,
+              "crates": 0,
+              "term": "dusk",
+              "guide": "Rill",
+              "delivered": false,
+              "returned": false
+            }
+          ],
+          "encounter": {
+            "kind": "guided",
+            "active": true,
+            "stage": 1,
+            "beat": 2,
+            "position": 2,
+            "health": 11,
+            "resolve": 5,
+            "required_position": 4,
+            "maximum_beats": 6,
+            "threat": "PULSE at your current position: walking or dashing leaves it.",
+            "xp": 10
+          },
+          "scope": "In-session original experiment; no persistent quest, Unity/Windows or human validation"
+        },
+        "continuity": {
+          "mode": "local",
+          "run_id": "f49f90b33d9b4a77853d1aadae87dda0-day-2",
+          "revision": 16,
+          "day": 2,
+          "status": "saved",
+          "duplicate": false,
+          "original_revision": 16,
+          "reason": "Committed before receipt."
+        }
+      }
+    },
+    {
+      "http_status": 200,
+      "command": "walk",
+      "observation": {
+        "sequence": 17,
+        "command": "walk",
+        "accepted": true,
+        "text": "Walk: 0 damage, 0 resolve spent.",
+        "state": {
+          "revision": 4,
+          "shift": 3,
+          "remaining": 1,
+          "crates": 0,
+          "crates_required": 5,
+          "capacity": 1,
+          "guide_available": false,
+          "guide_location": "travelling",
+          "surveyed": true,
+          "delivered": false,
+          "returned": false,
+          "status": "committed",
+          "conversation": "closed",
+          "term": "dusk",
+          "due_elapsed": false,
+          "delivery_started": true,
+          "receipts": [
+            {
+              "kind": "commitment",
+              "revision": 2,
+              "shift": 1,
+              "crates": 0,
+              "term": "dusk",
+              "guide": "Rill",
+              "delivered": false,
+              "returned": false
+            }
+          ],
+          "encounter": {
+            "kind": "guided",
+            "active": true,
+            "stage": 1,
+            "beat": 3,
+            "position": 3,
+            "health": 11,
+            "resolve": 7,
+            "required_position": 4,
+            "maximum_beats": 6,
+            "threat": "BOLT: moving exposes health; the approach skill spends resolve to protect.",
+            "xp": 10
+          },
+          "scope": "In-session original experiment; no persistent quest, Unity/Windows or human validation"
+        },
+        "continuity": {
+          "mode": "local",
+          "run_id": "f49f90b33d9b4a77853d1aadae87dda0-day-2",
+          "revision": 17,
+          "day": 2,
+          "status": "saved",
+          "duplicate": false,
+          "original_revision": 17,
+          "reason": "Committed before receipt."
+        }
+      }
+    },
+    {
+      "http_status": 200,
+      "command": "skill",
+      "observation": {
+        "sequence": 18,
+        "command": "skill",
+        "accepted": true,
+        "text": "Skill: 0 damage, 3 resolve spent.",
+        "state": {
+          "revision": 4,
+          "shift": 3,
+          "remaining": 1,
+          "crates": 0,
+          "crates_required": 5,
+          "capacity": 1,
+          "guide_available": false,
+          "guide_location": "travelling",
+          "surveyed": true,
+          "delivered": false,
+          "returned": false,
+          "status": "committed",
+          "conversation": "closed",
+          "term": "dusk",
+          "due_elapsed": false,
+          "delivery_started": true,
+          "receipts": [
+            {
+              "kind": "commitment",
+              "revision": 2,
+              "shift": 1,
+              "crates": 0,
+              "term": "dusk",
+              "guide": "Rill",
+              "delivered": false,
+              "returned": false
+            }
+          ],
+          "encounter": {
+            "kind": "guided",
+            "active": true,
+            "stage": 1,
+            "beat": 4,
+            "position": 4,
+            "health": 11,
+            "resolve": 4,
+            "required_position": 4,
+            "maximum_beats": 6,
+            "threat": "PULSE at your current position: walking or dashing leaves it.",
+            "xp": 10
+          },
+          "scope": "In-session original experiment; no persistent quest, Unity/Windows or human validation"
+        },
+        "continuity": {
+          "mode": "local",
+          "run_id": "f49f90b33d9b4a77853d1aadae87dda0-day-2",
+          "revision": 18,
+          "day": 2,
+          "status": "saved",
+          "duplicate": false,
+          "original_revision": 18,
+          "reason": "Committed before receipt."
+        }
+      }
+    },
+    {
+      "http_status": 200,
+      "command": "walk",
+      "observation": {
+        "sequence": 19,
+        "command": "walk",
+        "accepted": true,
+        "text": "Walk: 0 damage, 0 resolve spent.",
+        "state": {
+          "revision": 4,
+          "shift": 3,
+          "remaining": 1,
+          "crates": 0,
+          "crates_required": 5,
+          "capacity": 1,
+          "guide_available": false,
+          "guide_location": "travelling",
+          "surveyed": true,
+          "delivered": false,
+          "returned": false,
+          "status": "committed",
+          "conversation": "closed",
+          "term": "dusk",
+          "due_elapsed": false,
+          "delivery_started": true,
+          "receipts": [
+            {
+              "kind": "commitment",
+              "revision": 2,
+              "shift": 1,
+              "crates": 0,
+              "term": "dusk",
+              "guide": "Rill",
+              "delivered": false,
+              "returned": false
+            }
+          ],
+          "encounter": {
+            "kind": "guided",
+            "active": true,
+            "stage": 1,
+            "beat": 5,
+            "position": 5,
+            "health": 11,
+            "resolve": 6,
+            "required_position": 4,
+            "maximum_beats": 6,
+            "threat": "BOLT: moving exposes health; the approach skill spends resolve to protect.",
+            "xp": 10
+          },
+          "scope": "In-session original experiment; no persistent quest, Unity/Windows or human validation"
+        },
+        "continuity": {
+          "mode": "local",
+          "run_id": "f49f90b33d9b4a77853d1aadae87dda0-day-2",
+          "revision": 19,
+          "day": 2,
+          "status": "saved",
+          "duplicate": false,
+          "original_revision": 19,
+          "reason": "Committed before receipt."
+        }
+      }
+    },
+    {
+      "http_status": 200,
+      "command": "skill",
+      "observation": {
+        "sequence": 20,
+        "command": "skill",
+        "accepted": true,
+        "text": "Skill: 0 damage, 3 resolve spent. Completed; reward committed. Level 3, 4 unspent points. You come back from the actual handoff with Rill. Edda checks coil delivered and return observed, then points at 5 shutter crates still here. The unfinished work is not erased.",
+        "state": {
+          "revision": 5,
+          "shift": 3,
+          "remaining": 1,
+          "crates": 0,
+          "crates_required": 5,
+          "capacity": 2,
+          "guide_available": true,
+          "guide_location": "local",
+          "surveyed": true,
+          "delivered": true,
+          "returned": true,
+          "status": "delivered",
+          "conversation": "closed",
+          "term": "dusk",
+          "due_elapsed": false,
+          "delivery_started": true,
+          "receipts": [
+            {
+              "kind": "commitment",
+              "revision": 2,
+              "shift": 1,
+              "crates": 0,
+              "term": "dusk",
+              "guide": "Rill",
+              "delivered": false,
+              "returned": false
+            },
+            {
+              "kind": "observed_return",
+              "revision": 4,
+              "shift": 3,
+              "crates": 0,
+              "term": "dusk",
+              "guide": "Rill",
+              "delivered": true,
+              "returned": true
+            }
+          ],
+          "encounter": {
+            "kind": "guided",
+            "active": false,
+            "stage": 1,
+            "beat": 6,
+            "position": 6,
+            "health": 11,
+            "resolve": 3,
+            "required_position": 4,
+            "maximum_beats": 6,
+            "threat": "BOLT: moving exposes health; the approach skill spends resolve to protect.",
+            "xp": 25
+          },
+          "scope": "In-session original experiment; no persistent quest, Unity/Windows or human validation"
+        },
+        "continuity": {
+          "mode": "local",
+          "run_id": "f49f90b33d9b4a77853d1aadae87dda0-day-2",
+          "revision": 20,
+          "day": 2,
+          "status": "saved",
+          "duplicate": false,
+          "original_revision": 20,
+          "reason": "Committed before receipt."
+        }
+      }
+    },
+    {
+      "http_status": 200,
+      "command": "work",
+      "observation": {
+        "sequence": 21,
+        "command": "work",
+        "accepted": true,
+        "text": "Rill takes the other end. Together you carry 2 shutter crate(s). 3 remain; 0 shifts of light. Any unsigned offer needs a fresh conversation.",
+        "state": {
+          "revision": 6,
+          "shift": 4,
+          "remaining": 0,
+          "crates": 2,
+          "crates_required": 5,
+          "capacity": 2,
+          "guide_available": true,
+          "guide_location": "local",
+          "surveyed": true,
+          "delivered": true,
+          "returned": true,
+          "status": "delivered",
+          "conversation": "closed",
+          "term": "dusk",
+          "due_elapsed": false,
+          "delivery_started": true,
+          "receipts": [
+            {
+              "kind": "commitment",
+              "revision": 2,
+              "shift": 1,
+              "crates": 0,
+              "term": "dusk",
+              "guide": "Rill",
+              "delivered": false,
+              "returned": false
+            },
+            {
+              "kind": "observed_return",
+              "revision": 4,
+              "shift": 3,
+              "crates": 0,
+              "term": "dusk",
+              "guide": "Rill",
+              "delivered": true,
+              "returned": true
+            }
+          ],
+          "encounter": {
+            "kind": "guided",
+            "active": false,
+            "stage": 1,
+            "beat": 6,
+            "position": 6,
+            "health": 11,
+            "resolve": 3,
+            "required_position": 4,
+            "maximum_beats": 6,
+            "threat": "BOLT: moving exposes health; the approach skill spends resolve to protect.",
+            "xp": 25
+          },
+          "scope": "In-session original experiment; no persistent quest, Unity/Windows or human validation"
+        },
+        "continuity": {
+          "mode": "local",
+          "run_id": "f49f90b33d9b4a77853d1aadae87dda0-day-2",
+          "revision": 21,
+          "day": 2,
+          "status": "saved",
+          "duplicate": false,
+          "original_revision": 21,
+          "reason": "Committed before receipt."
+        }
+      }
+    }
+  ],
+  "complete": true,
+  "last": {
+    "sequence": 21,
+    "command": "work",
+    "accepted": true,
+    "text": "Rill takes the other end. Together you carry 2 shutter crate(s). 3 remain; 0 shifts of light. Any unsigned offer needs a fresh conversation.",
+    "state": {
+      "revision": 6,
+      "shift": 4,
+      "remaining": 0,
+      "crates": 2,
+      "crates_required": 5,
+      "capacity": 2,
+      "guide_available": true,
+      "guide_location": "local",
+      "surveyed": true,
+      "delivered": true,
+      "returned": true,
+      "status": "delivered",
+      "conversation": "closed",
+      "term": "dusk",
+      "due_elapsed": false,
+      "delivery_started": true,
+      "receipts": [
+        {
+          "kind": "commitment",
+          "revision": 2,
+          "shift": 1,
+          "crates": 0,
+          "term": "dusk",
+          "guide": "Rill",
+          "delivered": false,
+          "returned": false
+        },
+        {
+          "kind": "observed_return",
+          "revision": 4,
+          "shift": 3,
+          "crates": 0,
+          "term": "dusk",
+          "guide": "Rill",
+          "delivered": true,
+          "returned": true
+        }
+      ],
+      "encounter": {
+        "kind": "guided",
+        "active": false,
+        "stage": 1,
+        "beat": 6,
+        "position": 6,
+        "health": 11,
+        "resolve": 3,
+        "required_position": 4,
+        "maximum_beats": 6,
+        "threat": "BOLT: moving exposes health; the approach skill spends resolve to protect.",
+        "xp": 25
+      },
+      "scope": "In-session original experiment; no persistent quest, Unity/Windows or human validation"
+    },
+    "continuity": {
+      "mode": "local",
+      "run_id": "f49f90b33d9b4a77853d1aadae87dda0-day-2",
+      "revision": 21,
+      "day": 2,
+      "status": "saved",
+      "duplicate": false,
+      "original_revision": 21,
+      "reason": "Committed before receipt."
+    }
+  },
+  "initial": {
+    "sequence": 15,
+    "command": "skill",
+    "accepted": true,
+    "text": "Skill: 0 damage, 3 resolve spent.",
+    "state": {
+      "revision": 4,
+      "shift": 3,
+      "remaining": 1,
+      "crates": 0,
+      "crates_required": 5,
+      "capacity": 1,
+      "guide_available": false,
+      "guide_location": "travelling",
+      "surveyed": true,
+      "delivered": false,
+      "returned": false,
+      "status": "committed",
+      "conversation": "closed",
+      "term": "dusk",
+      "due_elapsed": false,
+      "delivery_started": true,
+      "receipts": [
+        {
+          "kind": "commitment",
+          "revision": 2,
+          "shift": 1,
+          "crates": 0,
+          "term": "dusk",
+          "guide": "Rill",
+          "delivered": false,
+          "returned": false
+        }
+      ],
+      "encounter": {
+        "kind": "guided",
+        "active": true,
+        "stage": 1,
+        "beat": 1,
+        "position": 1,
+        "health": 11,
+        "resolve": 8,
+        "required_position": 4,
+        "maximum_beats": 6,
+        "threat": "BOLT: moving exposes health; the approach skill spends resolve to protect.",
+        "xp": 10
+      },
+      "scope": "In-session original experiment; no persistent quest, Unity/Windows or human validation"
+    },
+    "continuity": {
+      "mode": "local",
+      "run_id": "f49f90b33d9b4a77853d1aadae87dda0-day-2",
+      "revision": 15,
+      "day": 2,
+      "status": "saved",
+      "duplicate": false,
+      "original_revision": 15,
+      "reason": "Current committed request run."
+    }
+  },
+  "scope": "Actual API choices in the observed restricted process context; no fresh browser/participant study.",
+  "controls": [
+    "Actual new restricted process restores the same in-progress state, day and revision",
+    "Actual completed encounter permits observed return and delivery",
+    "Actual handoff leaves three crates unfinished with no daylight remaining"
+  ],
+  "stage": "finish"
+}

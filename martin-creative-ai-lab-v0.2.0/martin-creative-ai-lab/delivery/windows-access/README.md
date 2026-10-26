@@ -1,158 +1,84 @@
-# Windows access probe — unchanged authored-scene recipient
+# Windows restricted-context access assessment
 
-This asks whether the [existing Windows recipient](../authored-scene-windows/README.md)
-can start and expose its actual C# owner under an explicitly observed restricted
-same-user Windows token context. The elevation fields are recorded as observed; this
-is not automatically a non-elevated or ordinary-user context. Prior recipient execution used an administrative token; it
-cannot answer this access question. This probe adds no scene, gameplay owner, resource,
-package release or save migration.
+[Actual execution and limits](../../evidence/windows-access/RUN.json) ·
+[Baseline protocol](../../evidence/windows-access/protocol.json) ·
+[Consumer protocol](../../evidence/windows-access/consumer-protocol.json)
 
-The [revised protocol](../../evidence/windows-access/protocol.json) declares revision2
-before another execution. The [initial protocol](../../evidence/windows-access/protocol-initial.json)
-and [first inconclusive result](../../evidence/windows-access/first-access-inconclusive.json)
-remain preserved. Revision2 is initially **unexecuted**; it does not retroactively pass
-the first trial. A later result must identify its actual Windows job, inputs, context
-and outcome before any new access claim is made. Build/Operations remains incomplete under
-its retained licensed Unity Editor/module and production Windows acceptance.
+The unchanged [Windows recipient](../authored-scene-windows/README.md) starts and
+preserves accepted choices across processes in the precisely recorded constructed
+same-user context. Actual Windows Server 2025 execution passed six consumer controls
+with 21 accepted commands across three bounded processes. Reopening restores actual
+in-progress state/day/revision 15; the real remaining encounter reaches revision 21,
+observed return/delivery and three unfinished crates. No recipient, gameplay owner,
+save format or transport was changed or rebuilt.
 
-## Fixed baseline and actual context
+## Exact access boundary
 
-Use the complete, unchanged `authored-scene-demo-win-x64.zip`:
+The invoking PowerShell process token was queried by PID: administrator=false,
+Administrators SID deny-only, medium integrity 8192, **elevated=true**, elevation_type1.
+An existing linked limited token was unavailable. This is a restricted token derived
+from the same account/profile, not a fresh ordinary-user or non-elevated account,
+Windows 10/11 device, independent participant or enforced sandbox. Native app token
+inheritance is inferred through the unchanged direct script; it was not independently
+queried. No account, ACL, execution policy, URL reservation or application elevation
+was changed. Unity/Steam, licensed Editor/modules, human experience, commercial
+clearance and production ownership remain unresolved; Build/Operations stays incomplete.
 
-- SHA256: `0500d70a6a6c7071f12423fd529c0922830c09d34a312ae46c4f1e562c5aaffb`.
-- Bytes: 35,820,510; official private .NET10.0.12 win-x64 runtime and complete notices.
-- The same ten managed application files and 22 archived sources remain bound to the
-  existing Linux delivery and compiled journal identity.
+The working baseline does not justify an HTTP.sys/transport replacement. Earlier
+instrument failures are preserved as inconclusive or pre-host launcher refusals, never
+as proof against gameplay or HttpListener. Exact original CI ZIPs retain all raw logs,
+protocol identities and synthetic journals; published JSON views normalize only BOM/
+line endings without changing parsed data. No fresh browser/capture claim is made.
 
-Extract and inspect the trusted package before probing. Keep probe outputs, mutable
-saves and any compiled probe helper outside the maintained tree and immutable package.
-Do not change the package, regenerate either recipient, or edit its source to collect
-this baseline.
+## Reproduce with the unchanged package
 
-The probe first uses an already-existing linked limited token if Windows actually
-provides one. Otherwise it attempts a restricted primary token derived from the current
-account: `CreateRestrictedToken(DISABLE_MAX_PRIVILEGE)`, Administrators SID deny-only,
-and medium integrity. The selected branch and actual resulting child context must be
-recorded; these contexts are not interchangeable. If the token cannot be created or
-its resulting identity cannot be observed, the access result is inconclusive.
-
-This retains the same underlying account/profile and filesystem environment. It is
-not a fresh ordinary-user account, a different person's Windows desktop, a physical
-device assessment or proof for Windows10/11. A process merely launched by a wrapper
-named “restricted” is insufficient evidence: inspect the actual selected child and
-the PowerShell process invoking the original script. Require the declared administrator
-nonmembership, deny-only Administrators SID and medium-integrity boundary, while
-retaining the actual elevation flag/type. The nested native dotnet process inherits
-through the unchanged script; its token is not independently queried.
-
-No accounts, URL reservations, execution policies, privileges or machine security
-settings are changed to make the application succeed. No elevation or policy bypass
-is part of this method. A policy refusal remains a refusal or an inconclusive result,
-with its actual stage retained; it must not be converted into a gameplay result.
-
-## Initial negative and prospective revision
-
-The first actual trial found no linked limited token (Win32 code1312). It constructed
-a restricted same-user context with `administrator=false`, Administrators SID deny-only
-and integrity RID8192 (medium), while Windows still reported `elevated=true` and
-`elevation_type=1`. These fields remain observed facts; do not call that token
-non-elevated or treat it as an ordinary-user account.
-
-The private token observer ran successfully. The instrument then attempted to create
-a second recipient PowerShell through `ProcessStartInfo.Start`, which failed with
-`Access is denied` before the original recipient script ran. No actual recipient token,
-application access outcome or HTTP.sys refusal was established. This first result
-remains inconclusive; its specific process-creation failure cause is not established.
-
-Revision2 invokes the unchanged `run-demo.ps1` directly inside the existing selected
-PowerShell and queries that actual process token by PID. It removes an unnecessary
-instrument process, without changing permissions, policy, accounts, URL reservations,
-payload or gameplay. It also states the restricted context precisely instead of
-promising non-elevation. This is a prospective operationalization/method revision,
-not a permission change or retroactive acceptance of the initial trial.
-
-## Execute the bounded assessment
-
-Build the separate probe helper with the pinned SDK10.0.401. Record exact helper,
-script, protocol, archive and relevant inherited input hashes before execution and
-verify them afterwards. Compilation is preparation; only an actual Windows process can answer
-the access question. The helper is an instrument, not part of the recipient package.
-
-From an appropriate Windows instrument environment, using absolute paths:
+The trusted Windows ZIP remains 35,820,510 bytes, SHA256
+`0500d70a6a6c7071f12423fd529c0922830c09d34a312ae46c4f1e562c5aaffb`.
+Its ten managed files, 22 archived sources, 193 runtime files and complete notices remain
+unchanged. Inspect/extract using the existing Windows delivery checker. Build the
+separate TokenProbe with SDK 10.0.401; it is instrumentation, not part of the recipient.
+Keep all outputs and mutable saves outside maintained sources and the immutable bundle.
 
 ```powershell
-pwsh -NoProfile -File delivery/windows-access/probe.ps1 -Bundle 'C:\external\AuthoredSceneWindows' -Launcher 'C:\external\TokenProbe.dll' -Output 'C:\external\new-access-result' -Shell 'C:\Program Files\PowerShell\7\pwsh.exe'
+pwsh -NoProfile -File delivery/windows-access/probe.ps1 -Bundle 'C:\external\AuthoredSceneWindows' -Launcher 'C:\external\TokenProbe.dll' -Output 'C:\external\fresh-result' -Shell 'C:\Program Files\PowerShell\7\pwsh.exe'
 ```
 
-Use a new output directory. The package still invokes its own private runtime. Keep
-all owned process trees bounded and stop them after the probe. The instrument records
-actual exit status, stdout/stderr, observed state and the selected token context.
-Do not infer successful launch from a created process, file, printed intention or
-published workflow. Do not infer an application refusal from a timeout or failure to
-construct the instrument's process/token.
+The baseline records actual token selection, normal process exit/stdout/stderr and
+real `/state`. Token/process/timeout failures remain inconclusive; process creation,
+a wrapper name, hashes or compilation do not prove access. Inputs include the exact
+predeclared recipient pin plus initial/final source/protocol hashes. A wrong declared
+recipient is rejected before execution. No source or machine policy is repaired to
+make the assessment pass.
 
-## Decision boundary
+For actual choices, add `-Stage prepare -SaveDirectory ABS` with a fresh shared save
+location. After actual expiry, call a new output with `-Stage finish -Resume`, the
+same save directory and `-ExpectedObservation` pointing to the actual first
+`http-last-state.json`. Missing resume refuses rather than creating a new world.
+It compares persisted state/run/revision, not transient receipt reason metadata.
+Incomplete exercises cannot pass. Stop only owned process trees and preserve failures.
+The exact commands and supported hosted environment are in the separate Windows-access
+workflow; PowerShell is required, no ordinary-user availability is inferred.
 
-A real successful launch and observation of `/state` support only the stated package,
-Windows host and observed restricted same-user context, including its unchanged
-elevation fields. They do not prove non-elevated or ordinary-user Windows access. A real nonzero application exit supports an
-actual refusal at the recorded stage. It does not, by itself, prove that HTTP.sys
-permissions caused it. Preserve the exact diagnostic and separate token/instrument,
-package integrity, policy, filesystem, occupied-port and network possibilities.
+## Retained method corrections and tooling
 
-A timeout, missing result, unavailable token context or failed helper is inconclusive
-for application access. Retain it without counting it as successful refusal or gameplay.
-No fallback grants, invented return or silent save reset can make an access test pass.
+Initial trial: the selected restricted child ran the native token observer, but
+creating another recipient PowerShell failed before the package ran. Direct original-
+script invocation then reached a native-command output-encoding error before the C#
+host or journal. Explicit owned standard handles and removal of redundant PowerShell
+redirection allowed the unchanged recipient to start. All earlier protocols/results
+remain, with corrections declared prospectively; no historical result is retroactively
+passed. Repeated software trials are one method, not new participants or effort units.
 
-Only an observed consequential dependency can justify a later transport adaptation.
-Such a change needs its own acceptance, actual consumer execution and preservation of
-the existing scene/journal owner; it must not be preselected as the winner. If this
-baseline already works, do not implement a replacement merely to satisfy the hypothesis.
-The existing archives, protected sources, notices and prior consumers remain intact.
+The actual Windows host exposed Unity Hub 3.22.3. A read-only installed-editor query
+expired after 25 seconds without a list. This does not prove Editor absence, activation
+or module readiness; no license contents, activation, download or installation were
+requested. Local SDK 10.0.401 executes; a denied protected-directory probe is not global
+absence. Production direction remains Unity/C#, Windows-first and Steam-intended.
 
-Read SCI-013/014/076/077 for the materially applied rival-hypothesis, construct,
-method-selection and repeated-observation limits. Specialist review and automated
-controls are not independent human comprehension, approval, usability or enjoyment.
-
-
-## Revision3 — valid instrument standard handles
-
-Revision2 invoked the original launcher and observed exit1, before native dotnet or
-journal creation: PowerShell reported `StandardOutputEncoding is only supported when
-standard output is redirected`. This is not an HTTP.sys, gameplay or journal failure.
-The exact artifact and earlier protocols remain preserved. Revision3 supplies owned
-inheritable stdin/stdout/stderr handles through supported CreateProcessAsUser startup
-information; it does not change privileges, ACLs, policy, URL reservations or recipient
-bytes. Failed handle/process construction remains inconclusive. This revision is
-unexecuted until its own actual job completes. The retained `elevated=true` flag still
-prevents a non-elevated/ordinary-user claim.
-
-The Windows host also exposed Unity Hub3.22.3. Its read-only installed-editor query
-expired after25seconds; it does not prove Editor absence, activation or module readiness.
-No license contents were read and no activation/download/installation was requested.
-
-
-Revision3 still refused before the native host while the extra PowerShell redirection
-layer remained. Revision4 removes only that redundant wrapper layer; it reads the
-actual inherited standard-handle files already owned by the C#launcher. Both identity
-native controls had executed without this extra layer. No prior failure is reclassified
-as an HTTP.sys result, and no recipient byte or access policy is changed.
-
-
-## Actual baseline and bounded continuation
-
-[Revision4 actual evidence](../../evidence/windows-access/native-access-result.json)
-shows that the unchanged recipient starts, exposes its real initial owner state,
-creates its journal and expires normally in the recorded restricted context. The
-invoking process is administrator=false, Administrators deny-only, medium8192, but
-Windows still reports elevated=true. This supports only that exact constructed
-context. The observation does not justify replacing the existing transport.
-
-The [consumer protocol](../../evidence/windows-access/consumer-protocol.json) separately
-predeclares actual accepted choices and a fresh-process continuation of the same
-external journal. `-Stage prepare -SaveDirectory ABS` starts fresh and refuses existing
-data. `-Stage finish -Resume -SaveDirectory ABS -ExpectedObservation ACTUAL_JSON`
-requires existing saved facts and the actual earlier observation. It compares state,
-day and revision, not transient receipt reason metadata. Missing resume or a failed
-exercise cannot pass by creating a new world. No recipient rebuild, new owner or
-ordinary-user/human claim follows from these software controls.
+Engineering ENG004/015/017, Science SCI013/014/076/077 and Creative chapters recorded
+in RUN materially shaped baseline-before-intervention, exact token/receipt boundaries
+and preservation of costly agency. Agents are not the protected libraries, human
+validation or Martin's approval. No old owner, package, unique source/media/variant,
+save or notice was retired. Do not automatically repeat this assessment or add a
+transport framework after the actual baseline worked; compare the next real product,
+licensed tooling, source and production-ownership dependency.

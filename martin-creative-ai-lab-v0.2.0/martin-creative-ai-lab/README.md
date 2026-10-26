@@ -108,3 +108,10 @@ Windows Server 2025 administrative-runner execution passed 19 controls, includin
 mid-encounter process reentry and exact Linux-journal replay. This does not validate
 ordinary-user Windows 10/11, Unity, Steam or human experience. The [recorded evidence](evidence/windows-recipient/RUN.json)
 keeps failures, token, identities and inspected captures; Build/Operations remains incomplete.
+
+
+[Windows access assessment](delivery/windows-access/README.md) now tests actual
+accepted choices and journal reentry in an explicitly observed restricted same-user
+context. Six API consumer controls pass; the Windows elevated flag remains true,
+so this is not ordinary-user/non-elevated Windows or human validation. The unchanged
+recipient works in that recorded context; no transport replacement or new recipient ZIP follows.

@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "kind": "observed_ci_history",
+  "runs": [
+    {
+      "id": 40256900396,
+      "head_sha": "a82c24c29d4b87938089c8932957c1e7606e634c",
+      "status": "completed",
+      "conclusion": "success",
+      "attempt": 1
+    },
+    {
+      "id": 40376978492,
+      "head_sha": "0346d6cd64627f91f5dc23968d3db93bb388f1ed",
+      "status": "completed",
+      "conclusion": "cancelled",
+      "attempt": 1
+    },
+    {
+      "id": 40377899311,
+      "head_sha": "782a98fd1ec55c4eeaefe351aaa127a991a6591b",
+      "status": "completed",
+      "conclusion": "cancelled",
+      "attempt": 1
+    },
+    {
+      "id": 40378588731,
+      "head_sha": "47579996aa017be7aebf05b8e80be29fc6f957cc",
+      "status": "completed",
+      "conclusion": "cancelled",
+      "attempt": 1
+    },
+    {
+      "id": 40379998650,
+      "head_sha": "5ee225b699c154b6e521f375a5bf7737c840df19",
+      "status": "completed",
+      "conclusion": "cancelled",
+      "attempt": 1
+    }
+  ],
+  "scope": "Actual run metadata observations. A Windows access-method success is separate from the general Lab checks run. Cancellation causes are not established by these conclusions, timestamps or concurrent-publication configuration; no gate or timeout changed.",
+  "baseline_success": "CI40256900396 had eight successful jobs, independently checked. Earlier CI40253496504 cancellation/failed resume and unchanged local pass remain in baseline-ci.json."
+}

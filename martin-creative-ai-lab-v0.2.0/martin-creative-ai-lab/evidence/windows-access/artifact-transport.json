@@ -1,0 +1,44 @@
+{
+  "original_archive": "evidence/windows-access/consumer-access-artifact.zip",
+  "sha256": "5578c47ab1c119b99634146ab56b85f221ca5d3a27b6c52daed8525629396f4f",
+  "bytes": 41911,
+  "artifact_id": 12677118910,
+  "views": [
+    {
+      "original_member": "host.json",
+      "original_sha256": "ed95c81924029566f9071f1ef71f42c26611750a012278261fbb2b98d73298b4",
+      "published_path": "evidence/windows-access/actual-host.json",
+      "published_sha256": "ce5c163c0072b7c953ca72378e04aec8cabe51c66342a43a1da80692527a1609",
+      "json_semantics_identical": true
+    },
+    {
+      "original_member": "unity-installed-probe.json",
+      "original_sha256": "54f5fe358e77b43dac958a9413732bca806239889be663388ee55a4a10b2e3e5",
+      "published_path": "evidence/windows-access/actual-unity-query.json",
+      "published_sha256": "3f2b725e2243c9dbb477899967b750c2128192908c2068c48a3a6bed9e83f318",
+      "json_semantics_identical": true
+    },
+    {
+      "original_member": "inputs-before.json",
+      "original_sha256": "4e6ce18f1c6a0f6215580ab83e867e3adf88a3ae45b73903fbab6a072e5bef0a",
+      "published_path": "evidence/windows-access/actual-inputs.json",
+      "published_sha256": "4e6ce18f1c6a0f6215580ab83e867e3adf88a3ae45b73903fbab6a072e5bef0a",
+      "json_semantics_identical": true
+    },
+    {
+      "original_member": "prepare/exercise.json",
+      "original_sha256": "e5d1ba85560f97a98a9a519e18897b04894e906bfc87890810778c0056368386",
+      "published_path": "evidence/windows-access/actual-prepare.json",
+      "published_sha256": "f8a16e16c6e0f834efddd614c3091362f2dfe82c8a741861ba16d8556c4b32c9",
+      "json_semantics_identical": true
+    },
+    {
+      "original_member": "resume/exercise.json",
+      "original_sha256": "45eaf6ff27e012ce410d8b5b4990c532f2797110f599b65bc569baaf6e518bfe",
+      "published_path": "evidence/windows-access/actual-resume.json",
+      "published_sha256": "4106ac0386210017c36c877403ab5357ec1a3693544302a37b71067b3ab67607",
+      "json_semantics_identical": true
+    }
+  ],
+  "transform": "Only UTF8 BOM removal and CRLF-to-LF in JSON views. Exact original files, logs and mutable experimental journals remain in the retained original artifact. Escaped output strings and parsed JSON values unchanged."
+}

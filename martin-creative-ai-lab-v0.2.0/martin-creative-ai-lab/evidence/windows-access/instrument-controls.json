@@ -1,0 +1,21 @@
+{
+  "passed": 2,
+  "controls": [
+    "Non-Windows token invocation exits2 and creates no identity claim/file",
+    "Wrong declared recipient bytes/hash rejected before execution"
+  ],
+  "linux_guard": {
+    "command": [
+      "/workspace/work/authored-scene/dotnet/dotnet",
+      "/workspace/work/windows-access/stdio-probe/TokenProbe.dll",
+      "--identity",
+      "/workspace/work/windows-access/false-linux-identity.json"
+    ],
+    "exit_code": 2,
+    "stdout": "",
+    "stderr": "Actual Windows token APIs required.\n"
+  },
+  "source": "delivery/windows-access/inputs.py",
+  "source_sha256": "ee735590656056751e2c06679a71db14fa7c04af94e1d16efacc904aab72ea64",
+  "scope": "Instrument identity controls, not Windows consumers, participants or additional effort units."
+}
