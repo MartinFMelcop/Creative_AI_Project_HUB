@@ -1,0 +1,7 @@
+{
+  "kind": "actual_metadata_gate_rejection",
+  "diagnostic": "NS-C14: missing runtime/scope/limits",
+  "observed": "Initial new destination record omitted required limitations and result_artifacts schema fields, although scope/runtime text already existed. Root validation also reported P04/P10 collection messages; the direct reference-library diagnostic identified the new NS-C14 record.",
+  "correction": "Complete the new record with explicit limitations and exact result-file bindings. Reference sources, old records, validator, fixtures and gates unchanged.",
+  "scope": "Metadata authoring failure, not a Windows gameplay/runtime failure."
+}

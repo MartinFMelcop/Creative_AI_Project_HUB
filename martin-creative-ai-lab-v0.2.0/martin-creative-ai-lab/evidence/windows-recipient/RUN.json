@@ -1,0 +1,381 @@
+{
+  "schema_version": 1,
+  "kind": "destination_execution",
+  "baseline_commit": "55406c1456f248d79ef0c0f1d10ad7d981cc61c0",
+  "executed_commit": "d579dd33e7e697d4d90597087eb6022196b30041",
+  "capability_ids": [
+    "NS-C14"
+  ],
+  "consumer_paths": [
+    "delivery/authored-scene-windows/package.py",
+    "delivery/authored-scene-windows/check.py",
+    "delivery/authored-scene-windows/verify.py",
+    "delivery/authored-scene-windows/browser.mjs",
+    "delivery/authored-scene/package.py",
+    "delivery/authored-scene/check.py",
+    "north-star/authored-scene/Host/Program.cs"
+  ],
+  "platform": "Windows",
+  "executed": true,
+  "runtime": "Actual Microsoft Windows Server2025 10.0.26100 AMD64; PowerShell7.6.7; private Microsoft.NETCore.App10.0.12 win-x64. Actual Node24.19.0/locked Playwright1.64.0/Chromium156.0.8078.4 instrument, absent from recipient PATH. Linux source recovery uses SDK10.0.401.",
+  "artifact_sha256": "0500d70a6a6c7071f12423fd529c0922830c09d34a312ae46c4f1e562c5aaffb",
+  "artifact_bytes": 35820510,
+  "checks": {
+    "passed": 19,
+    "failed": 0
+  },
+  "artifact_controls": {
+    "passed": 13,
+    "failed": 0,
+    "scope": "Targeted packaging controls overlap archive outcomes; do not sum as independent studies or participants."
+  },
+  "archive_path": "delivery/authored-scene-windows/dist/authored-scene-demo-win-x64.zip",
+  "commands": [
+    {
+      "command": [
+        "C:\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\python.exe",
+        "D:\\a\\Creative_AI_Project_HUB\\Creative_AI_Project_HUB\\martin-creative-ai-lab-v0.2.0\\martin-creative-ai-lab\\delivery\\authored-scene-windows\\package.py",
+        "--linux-archive",
+        "D:\\a\\Creative_AI_Project_HUB\\Creative_AI_Project_HUB\\martin-creative-ai-lab-v0.2.0\\martin-creative-ai-lab\\delivery\\authored-scene\\dist\\authored-scene-demo-linux-x64.zip",
+        "--runtime-archive",
+        "D:\\a\\_temp\\windows-runtime.zip",
+        "--output",
+        "D:\\a\\_temp\\windows-recipient\\authored-scene-demo-win-x64.zip",
+        "--work",
+        "D:\\a\\_temp\\windows-recipient\\stage 0"
+      ],
+      "cwd": "D:\\a\\Creative_AI_Project_HUB\\Creative_AI_Project_HUB\\martin-creative-ai-lab-v0.2.0\\martin-creative-ai-lab",
+      "exit_code": 0,
+      "stdout": "{\"archive_sha256\": \"0500d70a6a6c7071f12423fd529c0922830c09d34a312ae46c4f1e562c5aaffb\", \"bytes\": 35820510, \"files\": 233, \"managed_bytes_unchanged\": true, \"windows_executed\": false}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "C:\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\python.exe",
+        "D:\\a\\Creative_AI_Project_HUB\\Creative_AI_Project_HUB\\martin-creative-ai-lab-v0.2.0\\martin-creative-ai-lab\\delivery\\authored-scene-windows\\package.py",
+        "--linux-archive",
+        "D:\\a\\Creative_AI_Project_HUB\\Creative_AI_Project_HUB\\martin-creative-ai-lab-v0.2.0\\martin-creative-ai-lab\\delivery\\authored-scene\\dist\\authored-scene-demo-linux-x64.zip",
+        "--runtime-archive",
+        "D:\\a\\_temp\\windows-runtime.zip",
+        "--output",
+        "D:\\a\\_temp\\windows-recipient\\repeat.zip",
+        "--work",
+        "D:\\a\\_temp\\windows-recipient\\stage 1"
+      ],
+      "cwd": "D:\\a\\Creative_AI_Project_HUB\\Creative_AI_Project_HUB\\martin-creative-ai-lab-v0.2.0\\martin-creative-ai-lab",
+      "exit_code": 0,
+      "stdout": "{\"archive_sha256\": \"0500d70a6a6c7071f12423fd529c0922830c09d34a312ae46c4f1e562c5aaffb\", \"bytes\": 35820510, \"files\": 233, \"managed_bytes_unchanged\": true, \"windows_executed\": false}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "node",
+        "--version"
+      ],
+      "cwd": "D:\\a\\Creative_AI_Project_HUB\\Creative_AI_Project_HUB\\martin-creative-ai-lab-v0.2.0\\martin-creative-ai-lab",
+      "exit_code": 0,
+      "stdout": "v24.19.0\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "node",
+        "D:\\a\\Creative_AI_Project_HUB\\Creative_AI_Project_HUB\\martin-creative-ai-lab-v0.2.0\\martin-creative-ai-lab\\delivery\\authored-scene-windows\\browser.mjs",
+        "D:\\a\\_temp\\windows-recipient\\recipient path with spaces\\AuthoredSceneWindows",
+        "D:\\a\\_temp\\windows-recipient\\browser"
+      ],
+      "cwd": "D:\\a\\Creative_AI_Project_HUB\\Creative_AI_Project_HUB\\martin-creative-ai-lab-v0.2.0\\martin-creative-ai-lab",
+      "exit_code": 0,
+      "stdout": "19 actual Windows recipient controls passed\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/delivery/authored-scene-windows/package.py",
+        "--linux-archive",
+        "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/delivery/authored-scene/dist/authored-scene-demo-linux-x64.zip",
+        "--runtime-archive",
+        "/workspace/work/windows-delivery/dotnet-runtime-10.0.12-win-x64.zip",
+        "--output",
+        "/workspace/work/windows-delivery/preflight-guarded/authored-scene-demo-win-x64.zip",
+        "--work",
+        "/workspace/work/windows-delivery/preflight-guarded/stage 0"
+      ],
+      "cwd": "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab",
+      "exit_code": 0,
+      "stdout": "{\"archive_sha256\": \"0500d70a6a6c7071f12423fd529c0922830c09d34a312ae46c4f1e562c5aaffb\", \"bytes\": 35820510, \"files\": 233, \"managed_bytes_unchanged\": true, \"windows_executed\": false}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/delivery/authored-scene-windows/package.py",
+        "--linux-archive",
+        "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/delivery/authored-scene/dist/authored-scene-demo-linux-x64.zip",
+        "--runtime-archive",
+        "/workspace/work/windows-delivery/dotnet-runtime-10.0.12-win-x64.zip",
+        "--output",
+        "/workspace/work/windows-delivery/preflight-guarded/repeat.zip",
+        "--work",
+        "/workspace/work/windows-delivery/preflight-guarded/stage 1"
+      ],
+      "cwd": "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab",
+      "exit_code": 0,
+      "stdout": "{\"archive_sha256\": \"0500d70a6a6c7071f12423fd529c0922830c09d34a312ae46c4f1e562c5aaffb\", \"bytes\": 35820510, \"files\": 233, \"managed_bytes_unchanged\": true, \"windows_executed\": false}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/workspace/work/authored-scene/dotnet/dotnet",
+        "--version"
+      ],
+      "cwd": "/workspace/work/windows-delivery/preflight-guarded/recipient path with spaces/AuthoredSceneWindows/source/north-star/csharp",
+      "exit_code": 0,
+      "stdout": "10.0.401\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/workspace/work/authored-scene/dotnet/dotnet",
+        "publish",
+        "/workspace/work/windows-delivery/preflight-guarded/recipient path with spaces/AuthoredSceneWindows/source/north-star/authored-scene/Host/NorthStar.AuthoredScene.csproj",
+        "-c",
+        "Release",
+        "--self-contained",
+        "false",
+        "-p:UseAppHost=false",
+        "-p:RuntimeFrameworkVersion=10.0.12",
+        "-p:DebugType=None",
+        "-p:DebugSymbols=false",
+        "-p:ContinuousIntegrationBuild=true",
+        "-p:PathMap=/workspace/work/windows-delivery/preflight-guarded/recipient path with spaces/AuthoredSceneWindows/source=/_/source",
+        "-o",
+        "/workspace/work/windows-delivery/preflight-guarded/recovered application",
+        "-m:1",
+        "--disable-build-servers"
+      ],
+      "cwd": "/workspace/work/windows-delivery/preflight-guarded/recipient path with spaces/AuthoredSceneWindows/source/north-star/csharp",
+      "exit_code": 0,
+      "stdout": "  Determining projects to restore...\n  Restored /workspace/work/windows-delivery/preflight-guarded/recipient path with spaces/AuthoredSceneWindows/source/north-star/csharp/Crossing/NorthStar.Crossing.csproj (in 101 ms).\n  Restored /workspace/work/windows-delivery/preflight-guarded/recipient path with spaces/AuthoredSceneWindows/source/north-star/authored-scene/Host/NorthStar.AuthoredScene.csproj (in 100 ms).\n  Restored /workspace/work/windows-delivery/preflight-guarded/recipient path with spaces/AuthoredSceneWindows/source/north-star/csharp/Narrative/NorthStar.Narrative.csproj (in 2 ms).\n  Restored /workspace/work/windows-delivery/preflight-guarded/recipient path with spaces/AuthoredSceneWindows/source/north-star/csharp/Domain/NorthStar.Domain.csproj (in 94 ms).\n  NorthStar.Domain -> /workspace/work/windows-delivery/preflight-guarded/recipient path with spaces/AuthoredSceneWindows/source/north-star/csharp/Domain/bin/Release/netstandard2.1/NorthStar.Domain.dll\n  NorthStar.Crossing -> /workspace/work/windows-delivery/preflight-guarded/recipient path with spaces/AuthoredSceneWindows/source/north-star/csharp/Crossing/bin/Release/net10.0/NorthStar.Crossing.dll\n  NorthStar.Narrative -> /workspace/work/windows-delivery/preflight-guarded/recipient path with spaces/AuthoredSceneWindows/source/north-star/csharp/Narrative/bin/Release/net10.0/NorthStar.Narrative.dll\n  NorthStar.AuthoredScene -> /workspace/work/windows-delivery/preflight-guarded/recipient path with spaces/AuthoredSceneWindows/source/north-star/authored-scene/Host/bin/Release/net10.0/NorthStar.AuthoredScene.dll\n  NorthStar.AuthoredScene -> /workspace/work/windows-delivery/preflight-guarded/recovered application/\n",
+      "stderr": ""
+    }
+  ],
+  "source_artifacts": [
+    {
+      "local_path": "delivery/authored-scene-windows/package.py",
+      "size_bytes": 5469,
+      "sha256": "ffee619ca564890f9bbd4c7b2f53079e7ab5d36e0a845c737ee5547a7c066779"
+    },
+    {
+      "local_path": "delivery/authored-scene-windows/check.py",
+      "size_bytes": 5762,
+      "sha256": "4cac86498b2ad56e9579ed9db69423d9cf46a9144501b5b65c43b5996a1832b5"
+    },
+    {
+      "local_path": "delivery/authored-scene-windows/verify.py",
+      "size_bytes": 6045,
+      "sha256": "a51d836522c65566739df77c1c960545b3f31534d736468087bf51a83846baca"
+    },
+    {
+      "local_path": "delivery/authored-scene-windows/browser.mjs",
+      "size_bytes": 11245,
+      "sha256": "59088fe7eb86c084a54fd0c6312c03bec8ebb937c1b642822f3ddc089a0d53df"
+    },
+    {
+      "local_path": "delivery/authored-scene/package.py",
+      "size_bytes": 11592,
+      "sha256": "e7296348c81b8e72706b1d839834a7e20f96b127ef75247a4a9f6d994add9c60"
+    },
+    {
+      "local_path": "delivery/authored-scene/check.py",
+      "size_bytes": 11624,
+      "sha256": "0287d2132aa87fe09e636a96801391fb954520b988519dba579a98a89c5c982f"
+    },
+    {
+      "local_path": "north-star/authored-scene/Host/Program.cs",
+      "size_bytes": 5320,
+      "sha256": "cacd3c5d50eec327cc4979989e3b0f9e47292592bc897338afa4499d390c06fa"
+    }
+  ],
+  "results_sha256": {
+    "windows-host.json": "4cd748917e34e1faeb0306b978a062a332b3b4d4d44529f5c99bcc8c6e691c00",
+    "windows-results.json": "7035f3b6ae5b02da8ffd327dae1300b7048f24617225a298ccbed3bee8df485b",
+    "windows-commands.json": "5d691ed8ae35615849dca97af4c98eb9bef5fb044c222b5b85e3c84a71822f8e",
+    "browser-results.json": "f3259e1933b3ae5a9b2aa57b15a6f1bfe8b8b1429c78aac5d0a0e48713284727",
+    "browser-execution.json": "b95eae877c8d37321393b4512605b987a115aa932c20d8d2a6bcc3e30ebbe0a7",
+    "linux-preflight.json": "795b15554e5137b94614409d9c0fc92c446117f8e739d172ae16c75f5ca9b3d5",
+    "linux-commands.json": "a167728d33bbc002ed5f3b9021ce95dbc54d9ce9759d65e7fb2f8d4b85a199f0",
+    "linux-fixture.json": "ceba97eec594ae42dfd4028e23574eb1b0005bb88b00791fe3e69759bb02dbb1",
+    "package-controls.json": "b189abce1070af8efb16a1d6f105cf5cd87f607dfa1eccc95cfee2ad222f6993",
+    "protocol.json": "9743be7c885a2cbe108c183c8e6551ecb0b9a3b733f131bfc377e7318fd61de8",
+    "checkout-long-path-failure.json": "bdd5989aa8740d64ca69fb576112fadd59d5aa0c00f6b7887cc2c73f33c4cc56",
+    "initial-stability-refusal.json": "20bdf2a1e3e69a1f31b2c1bd359d299937e77750fd05283ef1b6c68eb0e4144d",
+    "platform-guard.json": "eb808ae46091c31b48738114ec09140987677c36b0debd24e15b06a0f5478268",
+    "preservation.json": "10f49256baaf9bb612f0c7aff7355a8ef0bd7a93de582d4d7df7a38e2860d521",
+    "delivered.png": "00abb3d6b709284cc9a6c25f813abae23f07da5ce0d582440d83e7a94a827cee",
+    "departed.png": "d36d79e5bf9f8a104bde84e63fa8d139858675d9a40cd57d902f8a53141594a7",
+    "initial-metadata-rejection.json": "44961868706aaa98ff23b9cfcfe403f00e3606f0e90abddc8f31a84199fb54f4",
+    "raw-windows-artifact.zip": "af89f67165713b5116cce618ca24c1690fd9f76e2ee564d2edf386276e08d052",
+    "artifact-transport.json": "e5011237f23d60340beff558ef4d59de618757bc63d558d15c433f5458624ff3"
+  },
+  "platform_job": {
+    "run_id": 40252644940,
+    "job_id": 121347675034,
+    "attempt": 1,
+    "status": "completed",
+    "conclusion": "success",
+    "url": "https://github.com/MartinFMelcop/Creative_AI_Project_HUB/actions/runs/40252644940",
+    "artifact_id": 12621083834,
+    "artifact_bytes": 425998,
+    "artifact_sha256": "af89f67165713b5116cce618ca24c1690fd9f76e2ee564d2edf386276e08d052",
+    "actual_host": {
+      "os": "Microsoft Windows NT 10.0.26100.0",
+      "powershell": "7.6.7",
+      "commit": "d579dd33e7e697d4d90597087eb6022196b30041",
+      "administrator": true,
+      "architecture": "AMD64"
+    }
+  },
+  "prior_platform_execution": {
+    "run_id": 40252336919,
+    "commit": "d6f206e6dd772085de46b0f4fb71d04e2301e099",
+    "conclusion": "success",
+    "same_code_and_package": true,
+    "scope": "Same platform controls repeated for compact artifact review, not a new substantive unit, participant or independent study.",
+    "large_artifact_bytes": 179966062,
+    "transfer_limit_bytes": 33554432
+  },
+  "reproduction": {
+    "linux_two_staging_archives_equal": true,
+    "windows_two_staging_archives_equal": true,
+    "linux_and_windows_zip_bytes_equal": true,
+    "runtime_files": 193,
+    "archived_source_files": 22,
+    "recovered_managed_files_identical": 10,
+    "source_recovery_platform": "Linux only, freshly executed; no Windows source compilation claimed",
+    "cross_platform_save": "Actual unchanged Linux-generated in-travel journal reopened/replayed by the actual Windows owner with exact state/run/revision. No Windows-to-Linux, other binary/runtime, future migration or power-loss guarantee."
+  },
+  "capture_inspection": "Actual departed capture shows local save day2/revision15, real Crossing in progress, Rill away and no return/handoff. Delivered capture shows day2/revision21, observed return/coil receipt, two crates carried and three unfinished. Both visually inspected; original conservative Unity/Windows-production/human footer remains unchanged.",
+  "specialties": {
+    "engineering": "Independent ENG004/015/017; owns packaging/check/runtime lock/launcher/tests. Preserves exact managed MVID and source/runtime rights; flagged Windows newline and path boundaries.",
+    "scientific": "Independent SCI013/014/076/077; predeclared actual-platform rivals, dependent controls, real exit-status negatives and full inherited-source stability. Recommended incomplete lab maturity.",
+    "creative": "Independent CRE005(A),022/023/031/045/048/061/071(H); preserves one unchanged costly/consensual authored scene and unfinished work, no new lore; recommends portfolio rather than third legacy unit.",
+    "resolution": "Engineering accepted possible narrowly operational Windows method; primary retains incomplete Build/Operations because the existing next acceptance also requires licensed Unity Editor/modules. No original question, gate or timeout changed."
+  },
+  "scope": "ONE corrective repository/portfolio unit. Actual automated Windows Server software delivery; not a new North Star scene, new legacy consumption, human/author assessment, normal-user/device breadth, Windows10/11, Unity Player, Steam, commercial clearance or production ownership. Administrator token is explicit; no elevation, execution-policy bypass or URLACL change performed. Build/Operations remains incomplete.",
+  "retained_negatives": [
+    "First Windows checkout failed on two long preserved reference filenames before application execution; corrected native Git longpath handling, names/bytes preserved.",
+    "Initial preflight source-stability refusal retained. Scientific review tightened false-refusal status and inherited-source guards before actual Windows execution.",
+    "Actual Windows missing notices/web content and corrupt saves exit1 without READY or silent reset; invalid port refused.",
+    "Rehashed forged app/runtime/notices/extra files and wrong archive identities rejected by13 targeted controls.",
+    "Linux browser invocation refuses to claim Windows.",
+    "Large artifact transfer exceeded32MiB; direct temporary file-host request was denied403 and was not retried or bypassed. Used the supported artifact/file transfer tools with compact evidence instead."
+  ],
+  "lifecycle": "All baseline maintained source/owner/package/media/notices retained exactly except deliberately updated metadata listed in preservation record. Existing Linux delivery and all unique old consumers still serve their own obligations; no retirement. Duplicate intermediate staging archives are recoverable, not another public release line.",
+  "limitations": [
+    "Actual hosted Windows Server2025 administrative token only; no standard-user Windows10/11 or physical-device assessment.",
+    "No Unity Editor, activation/modules, Unity Windows Player, Steam, human approval, production ownership or commercial clearance.",
+    "Same exact unchanged managed application and Linux-to-Windows journal pair only; no future-version migration, distributed/security or power-loss guarantee.",
+    "Source recovery freshly executed on Linux with SDK10.0.401, not Windows compilation. Controls overlap same software outcomes and are not people or independent studies.",
+    "Build/Operations remains incomplete under its retained licensed Unity production acceptance.",
+    "Input maps preserve the exact files at executed commit d579dd3. Subsequent documentation reports results; all executable/application/runtime bindings remain unchanged. Published JSON views normalize only line endings/BOM; the original compact CI artifact is retained exactly."
+  ],
+  "result_artifacts": [
+    {
+      "local_path": "evidence/windows-recipient/windows-host.json",
+      "size_bytes": 181,
+      "sha256": "4cd748917e34e1faeb0306b978a062a332b3b4d4d44529f5c99bcc8c6e691c00"
+    },
+    {
+      "local_path": "evidence/windows-recipient/windows-results.json",
+      "size_bytes": 24917,
+      "sha256": "7035f3b6ae5b02da8ffd327dae1300b7048f24617225a298ccbed3bee8df485b"
+    },
+    {
+      "local_path": "evidence/windows-recipient/windows-commands.json",
+      "size_bytes": 2990,
+      "sha256": "5d691ed8ae35615849dca97af4c98eb9bef5fb044c222b5b85e3c84a71822f8e"
+    },
+    {
+      "local_path": "evidence/windows-recipient/browser-results.json",
+      "size_bytes": 18181,
+      "sha256": "f3259e1933b3ae5a9b2aa57b15a6f1bfe8b8b1429c78aac5d0a0e48713284727"
+    },
+    {
+      "local_path": "evidence/windows-recipient/browser-execution.json",
+      "size_bytes": 18485,
+      "sha256": "b95eae877c8d37321393b4512605b987a115aa932c20d8d2a6bcc3e30ebbe0a7"
+    },
+    {
+      "local_path": "evidence/windows-recipient/linux-preflight.json",
+      "size_bytes": 5571,
+      "sha256": "795b15554e5137b94614409d9c0fc92c446117f8e739d172ae16c75f5ca9b3d5"
+    },
+    {
+      "local_path": "evidence/windows-recipient/linux-commands.json",
+      "size_bytes": 5173,
+      "sha256": "a167728d33bbc002ed5f3b9021ce95dbc54d9ce9759d65e7fb2f8d4b85a199f0"
+    },
+    {
+      "local_path": "evidence/windows-recipient/linux-fixture.json",
+      "size_bytes": 1046,
+      "sha256": "ceba97eec594ae42dfd4028e23574eb1b0005bb88b00791fe3e69759bb02dbb1"
+    },
+    {
+      "local_path": "evidence/windows-recipient/package-controls.json",
+      "size_bytes": 836,
+      "sha256": "b189abce1070af8efb16a1d6f105cf5cd87f607dfa1eccc95cfee2ad222f6993"
+    },
+    {
+      "local_path": "evidence/windows-recipient/protocol.json",
+      "size_bytes": 2887,
+      "sha256": "9743be7c885a2cbe108c183c8e6551ecb0b9a3b733f131bfc377e7318fd61de8"
+    },
+    {
+      "local_path": "evidence/windows-recipient/checkout-long-path-failure.json",
+      "size_bytes": 1842,
+      "sha256": "bdd5989aa8740d64ca69fb576112fadd59d5aa0c00f6b7887cc2c73f33c4cc56"
+    },
+    {
+      "local_path": "evidence/windows-recipient/initial-stability-refusal.json",
+      "size_bytes": 541,
+      "sha256": "20bdf2a1e3e69a1f31b2c1bd359d299937e77750fd05283ef1b6c68eb0e4144d"
+    },
+    {
+      "local_path": "evidence/windows-recipient/platform-guard.json",
+      "size_bytes": 999,
+      "sha256": "eb808ae46091c31b48738114ec09140987677c36b0debd24e15b06a0f5478268"
+    },
+    {
+      "local_path": "evidence/windows-recipient/preservation.json",
+      "size_bytes": 707,
+      "sha256": "10f49256baaf9bb612f0c7aff7355a8ef0bd7a93de582d4d7df7a38e2860d521"
+    },
+    {
+      "local_path": "evidence/windows-recipient/delivered.png",
+      "size_bytes": 226191,
+      "sha256": "00abb3d6b709284cc9a6c25f813abae23f07da5ce0d582440d83e7a94a827cee"
+    },
+    {
+      "local_path": "evidence/windows-recipient/departed.png",
+      "size_bytes": 209401,
+      "sha256": "d36d79e5bf9f8a104bde84e63fa8d139858675d9a40cd57d902f8a53141594a7"
+    },
+    {
+      "local_path": "evidence/windows-recipient/initial-metadata-rejection.json",
+      "size_bytes": 650,
+      "sha256": "44961868706aaa98ff23b9cfcfe403f00e3606f0e90abddc8f31a84199fb54f4"
+    },
+    {
+      "local_path": "evidence/windows-recipient/raw-windows-artifact.zip",
+      "size_bytes": 425998,
+      "sha256": "af89f67165713b5116cce618ca24c1690fd9f76e2ee564d2edf386276e08d052"
+    },
+    {
+      "local_path": "evidence/windows-recipient/artifact-transport.json",
+      "size_bytes": 2736,
+      "sha256": "e5011237f23d60340beff558ef4d59de618757bc63d558d15c433f5458624ff3"
+    }
+  ]
+}

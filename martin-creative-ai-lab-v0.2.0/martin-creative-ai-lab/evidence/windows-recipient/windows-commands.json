@@ -1,0 +1,60 @@
+[
+  {
+    "arguments": [
+      "C:\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\python.exe",
+      "D:\\a\\Creative_AI_Project_HUB\\Creative_AI_Project_HUB\\martin-creative-ai-lab-v0.2.0\\martin-creative-ai-lab\\delivery\\authored-scene-windows\\package.py",
+      "--linux-archive",
+      "D:\\a\\Creative_AI_Project_HUB\\Creative_AI_Project_HUB\\martin-creative-ai-lab-v0.2.0\\martin-creative-ai-lab\\delivery\\authored-scene\\dist\\authored-scene-demo-linux-x64.zip",
+      "--runtime-archive",
+      "D:\\a\\_temp\\windows-runtime.zip",
+      "--output",
+      "D:\\a\\_temp\\windows-recipient\\authored-scene-demo-win-x64.zip",
+      "--work",
+      "D:\\a\\_temp\\windows-recipient\\stage 0"
+    ],
+    "cwd": "D:\\a\\Creative_AI_Project_HUB\\Creative_AI_Project_HUB\\martin-creative-ai-lab-v0.2.0\\martin-creative-ai-lab",
+    "exit_code": 0,
+    "stdout": "{\"archive_sha256\": \"0500d70a6a6c7071f12423fd529c0922830c09d34a312ae46c4f1e562c5aaffb\", \"bytes\": 35820510, \"files\": 233, \"managed_bytes_unchanged\": true, \"windows_executed\": false}\n",
+    "stderr": ""
+  },
+  {
+    "arguments": [
+      "C:\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\python.exe",
+      "D:\\a\\Creative_AI_Project_HUB\\Creative_AI_Project_HUB\\martin-creative-ai-lab-v0.2.0\\martin-creative-ai-lab\\delivery\\authored-scene-windows\\package.py",
+      "--linux-archive",
+      "D:\\a\\Creative_AI_Project_HUB\\Creative_AI_Project_HUB\\martin-creative-ai-lab-v0.2.0\\martin-creative-ai-lab\\delivery\\authored-scene\\dist\\authored-scene-demo-linux-x64.zip",
+      "--runtime-archive",
+      "D:\\a\\_temp\\windows-runtime.zip",
+      "--output",
+      "D:\\a\\_temp\\windows-recipient\\repeat.zip",
+      "--work",
+      "D:\\a\\_temp\\windows-recipient\\stage 1"
+    ],
+    "cwd": "D:\\a\\Creative_AI_Project_HUB\\Creative_AI_Project_HUB\\martin-creative-ai-lab-v0.2.0\\martin-creative-ai-lab",
+    "exit_code": 0,
+    "stdout": "{\"archive_sha256\": \"0500d70a6a6c7071f12423fd529c0922830c09d34a312ae46c4f1e562c5aaffb\", \"bytes\": 35820510, \"files\": 233, \"managed_bytes_unchanged\": true, \"windows_executed\": false}\n",
+    "stderr": ""
+  },
+  {
+    "arguments": [
+      "node",
+      "--version"
+    ],
+    "cwd": "D:\\a\\Creative_AI_Project_HUB\\Creative_AI_Project_HUB\\martin-creative-ai-lab-v0.2.0\\martin-creative-ai-lab",
+    "exit_code": 0,
+    "stdout": "v24.19.0\n",
+    "stderr": ""
+  },
+  {
+    "arguments": [
+      "node",
+      "D:\\a\\Creative_AI_Project_HUB\\Creative_AI_Project_HUB\\martin-creative-ai-lab-v0.2.0\\martin-creative-ai-lab\\delivery\\authored-scene-windows\\browser.mjs",
+      "D:\\a\\_temp\\windows-recipient\\recipient path with spaces\\AuthoredSceneWindows",
+      "D:\\a\\_temp\\windows-recipient\\browser"
+    ],
+    "cwd": "D:\\a\\Creative_AI_Project_HUB\\Creative_AI_Project_HUB\\martin-creative-ai-lab-v0.2.0\\martin-creative-ai-lab",
+    "exit_code": 0,
+    "stdout": "19 actual Windows recipient controls passed\n",
+    "stderr": ""
+  }
+]

@@ -10,13 +10,13 @@ are not reimplemented. This is one recipient-platform contribution, not a new sc
 
 [Windows x64 ZIP](dist/authored-scene-demo-win-x64.zip) · [SHA256](dist/SHA256SUMS)
 
-Extract the complete archive, open PowerShell7 in `AuthoredSceneWindows`, then:
+Extract the complete archive, open PowerShell 7 in `AuthoredSceneWindows`, then:
 
 ```powershell
 pwsh -NoProfile -File .\run-demo.ps1
 ```
 
-Open the printed `http://127.0.0.1:8768/` in your graphical browser. PowerShell7 and
+Open the printed `http://127.0.0.1:8768/` in your graphical browser. PowerShell 7 and
 Windows x64 are required; SDK, Node, checkout and network are not needed after acquisition.
 The host stops after300seconds by default. Optional port/lifetime:
 `pwsh -NoProfile -File .\run-demo.ps1 8769 600`. Ctrl+C stops earlier.
@@ -42,13 +42,31 @@ and actual Crossing owners remain authoritative.
 
 [Protocol](../../evidence/windows-recipient/protocol.json) fixes the acceptance and
 limits before the first Windows run. The initial published workflow is preparation;
-actual results must identify its Windows job and platform. At preparation time no
-Windows execution is claimed. Build/Operations remains incomplete under the separate
+actual results must identify its Windows job and platform. [Actual reviewed execution](../../evidence/windows-recipient/RUN.json) passed 19 controls
+on hosted Windows Server 2025 x64 with PowerShell 7.6.7, private runtime 10.0.12 and
+Chromium 156.0.8078.4. The token was administrative; ordinary-user Windows, Windows 10/11,
+physical devices and human assessment remain unvalidated. No elevation, policy bypass
+or URLACL change was made. Build/Operations remains incomplete under the separate
 licensed Unity Editor/module and Windows production obligation.
 
+Two distinct Windows staging roots produced exactly the same ZIP as the Linux
+adaptation: 35,820,510 bytes, SHA256 `0500d70a6a6c7071f12423fd529c0922830c09d34a312ae46c4f1e562c5aaffb`.
+The same exact Linux-generated journal reopened on Windows during actual travel;
+this is a tested binary/runtime pair, not automatic future save migration. Source
+recovery was freshly executed on Linux and reproduced all ten managed files.
+
+The first Windows checkout failed on long preserved reference filenames before
+application execution. Supported Git longpath handling corrected checkout without
+renaming, omitting or modifying those originals. A succeeding run was repeated only
+to retain compact reviewable results/captures after its original 179 MB artifact exceeded
+the supported 32 MiB transfer limit. All actual failures and limits remain recorded;
+these executions are not separate substantive units or independent studies.
+
+![Actual Windows private-runtime recipient after guided return; three crates unfinished](../../evidence/windows-recipient/delivered.png)
+
 The official [runtime metadata](https://builds.dotnet.microsoft.com/dotnet/release-metadata/10.0/releases.json)
-identifies runtime10.0.12, [archive URL](https://builds.dotnet.microsoft.com/dotnet/Runtime/10.0.12/dotnet-runtime-10.0.12-win-x64.zip)
-and SHA512. `runtime-lock.json` binds all193runtime files plus the unchanged managed
+identifies runtime 10.0.12, [archive URL](https://builds.dotnet.microsoft.com/dotnet/Runtime/10.0.12/dotnet-runtime-10.0.12-win-x64.zip)
+and SHA512. `runtime-lock.json` binds all193 runtime files plus the unchanged managed
 closure. `package.py` rejects different source, archive or runtime identities.
 `check.py` independently checks exact inventory and source binding before extraction.
 

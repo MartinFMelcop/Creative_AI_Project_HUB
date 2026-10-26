@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "updated_at": "2026-10-23",
+  "updated_at": "2026-10-25",
   "baseline_commit": "9c69f295a1c5d736761a113d0e41aaa8600fb635",
   "scope": "Mandatory eleven-laboratory transformation. Historical source preservation is separate from terminal knowledge consumption; operational claims require executed instruments and bound evidence.",
   "north_star_consumer_demonstrated": true,
@@ -881,8 +881,8 @@
       "source_inventory": "labs/source-inventory.json",
       "consumer_paths": [],
       "controls": [],
-      "validity_boundary": "The separately executed delivery/authored-scene production dependency now provides one private-runtime Linux recipient archive and source recovery. It does not answer this laboratory's source-to-Windows question, so the lab remains incomplete without an operational instrument/evidence claim. No P09 professional case is invented.",
-      "next_objective": "Use the actual recipient package as a continuity baseline; resolve licensed Unity Editor/Windows modules and execute a bounded Windows delivery with real gameplay/notices. Do not relabel Linux execution as completion or regenerate unrelated historical players."
+      "validity_boundary": "The unchanged authored C# scene now has actual private-runtime Windows Server2025 recipient execution with19 Chromium controls, exact Linux-journal replay, source recovery and reproducible Windows archives; see evidence/windows-recipient/RUN.json. This is bounded production-dependency evidence, not licensed Unity Editor/module or Unity Windows Player acceptance. The lab stays incomplete under that retained production obligation; no P09 professional case, normal-user/device breadth, human assessment or Steam delivery is invented.",
+      "next_objective": "Resolve actual licensed Unity Editor activation and Windows modules, then execute a meaningful Unity Windows slice. Compare ordinary-user Windows access, appropriate author/player/device assessment and production ownership against consequential product/source needs. Preserve this .NET Windows/Linux recipient continuity baseline; do not automatically repeat packaging or historical player exports."
     },
     {
       "id": "world-gameplay",
@@ -1025,8 +1025,14 @@
     "player_platform": "Windows",
     "distribution": "Steam",
     "unity_execution": "not_executed",
-    "windows_execution": "not_executed",
-    "execution_evidence": []
+    "windows_execution": "executed",
+    "execution_evidence": [
+      {
+        "runtime": "windows",
+        "path": "evidence/windows-recipient/RUN.json",
+        "sha256": "a7680db787311f63a79ecf79b03e65dd6d4e29f3b4526fed0831329d0e4faf51"
+      }
+    ]
   },
   "consumption": [
     {
@@ -1720,7 +1726,7 @@
         "projects/cinderwatch/tools/export_linux.py",
         "projects/eclipse-fair/tools/export_linux.py"
       ],
-      "decision": "Selected isolated-copy build, pinned runtime/notices, explicit source/payload identities and deterministic ZIP contract is adapted into an actual SDK-free North Star recipient archive. New staging/source recovery, archive faults and extracted browser execution are verified. This integrates a bounded production contract; Godot export/template logic, historical games, missing P09 work and the Windows laboratory acceptance remain unresolved. The changed narrative host/UI/source closure is freshly reverified in the current archive; previous recipient execution is historical. This is supporting an existing bounded integration, not a new consumed capability or completed Windows method.",
+      "decision": "Selected isolated-copy build, pinned runtime/notices, explicit source/payload identities and deterministic ZIP contract is adapted into an actual SDK-free North Star recipient archive. New staging/source recovery, archive faults and extracted browser execution are verified. This integrates a bounded production contract; Godot export/template logic, historical games, missing P09 work and the Windows laboratory acceptance remain unresolved. The changed narrative host/UI/source closure is freshly reverified in the current archive; previous recipient execution is historical. This is supporting an existing bounded integration, not a new consumed capability or completed Windows method. The same bounded contract now supports actual Windows Server2025 recipient execution with unchanged managed/source identity, official Windows runtime/notices and exact Linux-journal replay. This extends existing integration evidence, not a second consumed capability; licensed Unity Windows and broad recipient/device acceptance remain unresolved.",
       "consumer_paths": [
         "delivery/authored-scene/package.py",
         "delivery/authored-scene/check.py",
@@ -1729,12 +1735,14 @@
       "evidence": [
         "evidence/request-continuity/RUN.json",
         "evidence/request-continuity/recipient-results.json",
-        "evidence/request-continuity/artifact-controls.json"
+        "evidence/request-continuity/artifact-controls.json",
+        "evidence/windows-recipient/RUN.json"
       ],
       "evidence_sha256": {
         "evidence/request-continuity/RUN.json": "d1695d0922947be6150a79238b96f3553aa38fc73068cf76379c1856fc1ffe87",
         "evidence/request-continuity/recipient-results.json": "2b3f1dd7d33042cfb91e854fc6dc1d7957b667de0c48ce0f2026b1ea163dc4bd",
-        "evidence/request-continuity/artifact-controls.json": "f40344120f03863018d7989f0d1b2f644b91947b7413cddf36f1c63cc83abd16"
+        "evidence/request-continuity/artifact-controls.json": "f40344120f03863018d7989f0d1b2f644b91947b7413cddf36f1c63cc83abd16",
+        "evidence/windows-recipient/RUN.json": "a7680db787311f63a79ecf79b03e65dd6d4e29f3b4526fed0831329d0e4faf51"
       }
     },
     {

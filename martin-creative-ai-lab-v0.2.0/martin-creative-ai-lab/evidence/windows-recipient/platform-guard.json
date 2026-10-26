@@ -1,0 +1,7 @@
+{
+  "kind": "actual_negative_control",
+  "exit_code": 1,
+  "stdout": "",
+  "stderr": "file:///workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/delivery/authored-scene-windows/browser.mjs:9\nif(process.platform!=='win32'||process.arch!=='x64')throw Error('Actual Windows x64 required; cross-compilation is insufficient');\n                                                          ^\n\nError: Actual Windows x64 required; cross-compilation is insufficient\n    at file:///workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/delivery/authored-scene-windows/browser.mjs:9:59\n    at ModuleJob.run (node:internal/modules/esm/module_job:439:25)\n    at async node:internal/modules/esm/loader:643:26\n    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5)\n\nNode.js v24.19.0\n",
+  "outcome": "Linux cannot be relabeled Windows by invoking the browser instrument. No output or runtime claim created."
+}

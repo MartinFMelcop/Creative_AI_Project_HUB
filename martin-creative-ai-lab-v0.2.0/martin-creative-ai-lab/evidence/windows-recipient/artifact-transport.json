@@ -1,0 +1,47 @@
+{
+  "artifact_id": 12621083834,
+  "run_id": 40252644940,
+  "original_archive": "evidence/windows-recipient/raw-windows-artifact.zip",
+  "sha256": "af89f67165713b5116cce618ca24c1690fd9f76e2ee564d2edf386276e08d052",
+  "bytes": 425998,
+  "transform": "Only UTF8 BOM removal and CRLF-to-LF normalization in published JSON views; escaped stdout/stderr strings and all parsed JSON values unchanged. Original7-file artifact bytes, including captures and CRLF JSON, remain in the exact retained ZIP.",
+  "files": [
+    {
+      "member": "windows-host.json",
+      "published_path": "evidence/windows-recipient/windows-host.json",
+      "original_sha256": "3ee408a177e981dd111a5859d9c62462675e0d38e7d89c46755ece198dd64c80",
+      "published_sha256": "4cd748917e34e1faeb0306b978a062a332b3b4d4d44529f5c99bcc8c6e691c00",
+      "json_semantics_identical": true
+    },
+    {
+      "member": "windows-recipient/results.json",
+      "published_path": "evidence/windows-recipient/windows-results.json",
+      "original_sha256": "d8efc06e31fecb8423deccfbce0a3156bc36b7b63fd85f746fc43e2cfa68cb52",
+      "published_sha256": "7035f3b6ae5b02da8ffd327dae1300b7048f24617225a298ccbed3bee8df485b",
+      "json_semantics_identical": true
+    },
+    {
+      "member": "windows-recipient/commands.json",
+      "published_path": "evidence/windows-recipient/windows-commands.json",
+      "original_sha256": "6959f93fa53b9558c4bb40bd54951342bc08c2b3856dc3fc6290d008e8ae1685",
+      "published_sha256": "5d691ed8ae35615849dca97af4c98eb9bef5fb044c222b5b85e3c84a71822f8e",
+      "json_semantics_identical": true
+    },
+    {
+      "member": "windows-recipient/browser/results.json",
+      "published_path": "evidence/windows-recipient/browser-results.json",
+      "original_sha256": "f3259e1933b3ae5a9b2aa57b15a6f1bfe8b8b1429c78aac5d0a0e48713284727",
+      "published_sha256": "f3259e1933b3ae5a9b2aa57b15a6f1bfe8b8b1429c78aac5d0a0e48713284727",
+      "json_semantics_identical": true
+    },
+    {
+      "member": "windows-recipient/browser/execution.json",
+      "published_path": "evidence/windows-recipient/browser-execution.json",
+      "original_sha256": "b95eae877c8d37321393b4512605b987a115aa932c20d8d2a6bcc3e30ebbe0a7",
+      "published_sha256": "b95eae877c8d37321393b4512605b987a115aa932c20d8d2a6bcc3e30ebbe0a7",
+      "json_semantics_identical": true
+    }
+  ],
+  "reason": "Git whitespace review rejected CRLF as trailing whitespace. Preserve source evidence while keeping textual review/gates intact.",
+  "earlier_transport_limit": "The first successful179MBartifact exceeded32MiBtransfer. Direct file-host access returned403; no retry or bypass. The compact425998-byte artifact was transferred using supported GitHub artifact and Sediment download tools."
+}

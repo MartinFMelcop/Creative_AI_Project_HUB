@@ -19,10 +19,10 @@ scene, without checkout, SDK or Node. This corrects portfolio underinvestment ra
 than introducing a third catalog study or another gameplay prototype.
 
 The [new Windows adapter](../delivery/authored-scene-windows/README.md) retains the
-exact ten managed files,22archived sources and original web assets from the unchanged
+exact ten managed files,22 archived sources and original web assets from the unchanged
 current Linux ZIP. Retaining compiled MVID identity preserves the strict journal
 preconditions; no owner, game rule, save format or fictional choice is rewritten.
-An official .NET10.0.12 win-x64 archive supplies193runtime files and complete notices,
+An official .NET10.0.12 win-x64 archive supplies 193 runtime files and complete notices,
 anchored to official SHA512 and exact per-file identities. The recipient launcher
 checks the complete extracted payload, rejects reparse paths and places mutable saves
 outside it. It changes no execution policy, privileges or HTTP.sys URL reservation.
@@ -30,13 +30,23 @@ outside it. It changes no execution policy, privileges or HTTP.sys URL reservati
 The [predeclared protocol](../evidence/windows-recipient/protocol.json) requires actual
 Windows execution, two independent staging archives, source recovery, real scene
 consequences, mid-travel process reentry, exact Linux-journal replay and calibrated
-payload/notices/save refusals. The Windows workflow is preparation until an actual
-job executes. At this publication stage Windows is **unexecuted**; Linux preflight
-must never be labeled Windows, Unity or Steam execution. The hosted token is recorded;
-elevated-runner success cannot establish normal-user access.
+payload/notices/save refusals. [Actual Windows execution](../evidence/windows-recipient/RUN.json) now passed 19 controls
+on Windows Server 2025 10.0.26100 x64, PowerShell 7.6.7 and Chromium 156.0.8078.4. The hosted
+token was administrative; normal-user Windows, Windows 10/11, physical devices, Unity
+and Steam remain unvalidated. No policy, URLACL or privilege change was made.
+
+The actual extracted Windows recipient preserves refusal, private consent, paid
+preparation/departure, nested Crossing and process reentry during travel. Its completed
+guided handoff leaves three crates unfinished. The same in-progress journal generated
+by the unchanged actual Linux owner reopened/replayed on Windows with identical state,
+run identity and revision. This is one exact binary/runtime pair, not broad migration,
+power-loss, account or human validation. Both Windows staging ZIPs were identical and
+matched the Linux adaptation exactly: 35,820,510 bytes, SHA256
+`0500d70a6a6c7071f12423fd529c0922830c09d34a312ae46c4f1e562c5aaffb`.
+Actual departed and delivered captures were inspected.
 
 Two separate Linux adaptations reproduced the Windows archive, and recovered source
-reproduced all ten delivered managed files exactly under SDK10.0.401. Thirteen targeted
+reproduced all ten delivered managed files exactly under SDK 10.0.401. Thirteen targeted
 packaging controls rejected rehashed forged app/runtime, missing notices, extra files,
 wrong official archive and existing outputs/extraction. Source/manifest identity is
 not behavioral proof. The initial preflight correctly refused when its instrument
@@ -58,11 +68,11 @@ workflow, actual execution and continuity. Other specialist review was read-only
 
 ## Access, maturity and preserved results
 
-SDK10.0.401 and runtime10.0.12 execute from the restored path. No usable Unity/Hub or
+SDK 10.0.401 and runtime 10.0.12 execute from the restored path. No usable Unity/Hub or
 Steam tool was found on PATH or bounded conventional installation paths. The protected
 `/root/Unity/Hub/Editor` probe was denied, not proof of global absence. Actual Editor,
 activation and Windows modules remain unverified; no license bypass is permitted.
-No Unity, Steam, physical device or human assessment has occurred.
+No Unity, Steam, ordinary-user Windows, physical device or human assessment has occurred.
 
 All eleven destinations remain mandatory. Ten bounded methods operate: Audio/Music,
 Visual/Animation, Input/Timing, Narrative/Continuity, Networking/Persistence, World/
@@ -70,11 +80,11 @@ Gameplay, Economy/Simulation, RPG/Progression, Combat/Responsiveness and AI Eval
 **Build/Operations remains incomplete.** Its unchanged question concerns reproducible
 source-to-Windows gameplay/notices; this initiative advances that dependency but does
 not erase the licensed Unity Editor/module and production Windows acceptance.
-Current consumption remains15INTEGRATED/9REJECTED/15UNRESOLVED; no new source-capability
+Current consumption remains15 INTEGRATED / 9 REJECTED / 15 UNRESOLVED; no new source-capability
 credit is claimed for adapting an already integrated production contract.
 
-Prior [tooling execution](../evidence/tooling-study/RUN.json) retains87SAME Python/C#
-identity cases (81actual references plus6negatives),370known IDs and2quarantined malformed
+Prior [tooling execution](../evidence/tooling-study/RUN.json) retains 87 SAME Python/C#
+identity cases (81 actual references plus 6 negatives), 370 known IDs and 2 quarantined malformed
 records. Exact retained nonconsumed tools privately compose unchanged CraftInventory;
 two actual rigs enter real Crossing encounters, loss cannot refund. Four ambiguous
 unlock sets, deprecated SDQ-0001 references, skill namespace conflicts, prices/effects,
@@ -87,7 +97,7 @@ private consent, real costs/encounters, receipts and observed/unaccounted Rill r
 unchanged. Promise, clock, redraw and audio cannot fabricate return or delivery. New
 day retains history; corrupt/incompatible saves and uncertain writes cannot silently
 reset. PreparedExpedition recovery remains separate. The Linux ZIP is unchanged:
-35,908,523bytes, SHA256`d829b1b59ee2dd22f87ab007c4db96bfe1655731b38d02f5085f0b8d30e043e4`.
+35,908,523 bytes, SHA256 `d829b1b59ee2dd22f87ab007c4db96bfe1655731b38d02f5085f0b8d30e043e4`.
 Prior Linux recipient results are historical except the exact new source-recovery and
 fixture generation explicitly recorded here. Frozen AI evaluation remains one first
 delivery with its original protocol/context/tools/attribution and superseded race limits.
@@ -105,28 +115,33 @@ metadata. No old source, unique package, save, media, variant or notice is retir
 A Windows runtime does not supersede Linux recipients or the unique behavior of retained
 Godot consumers. Existing gates and timeouts remain unchanged; no fixture is weakened.
 
-Baseline **CI40209228757 completed/success in attempt1, eight successful jobs**, freshly
-checked. CI40162539637 also retained eight successful attempt1 jobs. Preserve earlier
+Baseline **CI40209228757 completed/success in attempt 1, eight successful jobs**, freshly
+checked. CI40162539637 also retained eight successful attempt 1 jobs. Preserve earlier
 installation cancellations, timeout, official-runtime mismatch/correction, Eclipse
-export failure/cancelled rerun and626-byte inventory mismatch without invented causes.
-The actual Windows job and current Lab checks are separate publication observations;
-this document cannot self-embed its containing commit SHA.
+export failure/cancelled rerun and 626-byte inventory mismatch without invented causes.
+Windows CI40252211009 failed before the consumer on two long preserved filenames;
+native Git longpath support corrected checkout without changing originals. Its secondary
+artifact upload had no files. CI40252336919 completed/success and executed the Windows
+recipient. Its 179 MB artifact exceeded the supported 32 MiB transfer limit; direct temporary
+file-host access was denied 403 and was not retried or bypassed. CI40252644940 completed/
+success with the SAME consumer controls and a 425,998-byte compact artifact, obtained
+through supported artifact/file tools and verified against its SHA256. This repeat is
+review transport, not another participant, study, candidate or effort unit. Current
+Lab checks and publication remain separate handoff observations; this document cannot
+self-embed its containing commit SHA.
 
-Next complete the actual Windows recipient run, inspect real platform results/captures
-and retain any failure before claiming delivery. Then compare licensed Unity/Windows,
+Next compare actual licensed Unity/Windows and normal-user access,
 author/player/device access, coherent product and production ownership with remaining
 legacy obligations. Do not bind another cycle to packaging, catalog, reputation,
 journal, repair, availability, media, EVAL-001 or old matrices without a new dependency.
 
 ## Rolling investment — one unit per beneficiary
 
-Targets remain approximately47%legacy/laboratories,40%North Star,13%repository/portfolio.
-Counts, files, commits and tokens do not measure effort. Current completed eight-unit
-window remains unchanged while Windows execution is pending:
+Targets remain approximately 47% legacy/laboratories, 40% North Star, 13% repository/portfolio.
+Counts, files, commits and tokens do not measure effort. Eight recent completed units:
 
 | Completed substantive unit | Primary stream | Evidence |
 |---|---|---|
-| Source-bound arithmetic/global-round assay | Legacy/laboratories | [Status](../labs/combat-response/status/README.md) |
 | Original costly status encounter | North Star | [Treatment Line](../evidence/combat-status/RUN.json) |
 | Actual recipient/runtime/source-recovery delivery | Repository/portfolio | [Delivery](../evidence/recipient-delivery/RUN.json) |
 | Source mask/actual-authority method and opportunity | Legacy/laboratories | [Availability](../evidence/npc-availability/RUN.json) |
@@ -134,7 +149,11 @@ window remains unchanged while Windows execution is pending:
 | Durable continuation of the same actual RequestExpedition | North Star | [Continuity](../evidence/request-continuity/RUN.json) |
 | Source-bound standing arithmetic and actual service decision | Legacy/laboratories | [Standing](../evidence/reputation-study/RUN.json) |
 | Exact identity and retained tools with actual output use | Legacy/laboratories | [Tooling](../evidence/tooling-study/RUN.json) |
+| Same source-bound scene delivered and actually executed on Windows | Repository/portfolio | [Windows](../evidence/windows-recipient/RUN.json) |
 
-On actual Windows acceptance, count this initiative ONCE as repository/portfolio and
-age out the oldest unit. Browser/CI/source recovery are support, not extra North Star
-or laboratory units. No measured47/40/13convergence or complete consumption is claimed.
+This Windows initiative is ONE corrective repository/portfolio unit after two legacy
+units. The oldest arithmetic assay ages out of the window; its evidence and consumer
+remain preserved. Browser/CI/source recovery are support, not additional North Star or
+laboratory units. Preserve approximate 47/40/13 targets without inventing measured effort.
+Next compare the actual remaining product/legacy/ownership dependencies rather than
+turning Windows packaging into a fixed rotation. No complete consumption is claimed.

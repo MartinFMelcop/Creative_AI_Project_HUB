@@ -100,3 +100,11 @@ Explicit source-host `--new`/`--resume` commands are in the
 execution, reproducible payloads and remaining Unity/Windows/human boundaries. Existing
 source-development commands and historical consumers remain available. Local saves do
 not establish account/Steam Cloud support, power-loss durability or Windows behavior.
+
+
+The [Windows recipient](delivery/authored-scene-windows/README.md) retains the same
+managed scene/source bytes and adds an official private Windows runtime. Actual
+Windows Server 2025 administrative-runner execution passed 19 controls, including
+mid-encounter process reentry and exact Linux-journal replay. This does not validate
+ordinary-user Windows 10/11, Unity, Steam or human experience. The [recorded evidence](evidence/windows-recipient/RUN.json)
+keeps failures, token, identities and inspected captures; Build/Operations remains incomplete.

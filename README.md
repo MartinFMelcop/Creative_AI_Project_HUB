@@ -20,6 +20,21 @@ appearance, builds, classes, specializations, professions, equipment and meaning
 **Unity + C# is the selected primary stack; Windows is the priority player platform,
 and Steam is the intended distribution ecosystem.**
 
+### Try the current authored scene — Windows x64 experiment
+
+[**Download The coil and the shutters for Windows**](https://github.com/MartinFMelcop/Creative_AI_Project_HUB/raw/refs/heads/main/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/delivery/authored-scene-windows/dist/authored-scene-demo-win-x64.zip) · [Instructions/checksum](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/delivery/authored-scene-windows/README.md) · [Actual Windows results](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/evidence/windows-recipient/RUN.json)
+
+Extract the complete ZIP. From PowerShell 7 in `AuthoredSceneWindows`, run
+`pwsh -NoProfile -File .\run-demo.ps1` and open the printed local URL.
+The unchanged C# scene includes its private runtime, notices and recoverable source;
+SDK, Node and checkout are unnecessary. Local choices resume outside the package.
+Actual automated coverage is **Windows Server 2025 x64 with an administrative token**,
+not ordinary-user Windows 10/11 or a physical-device/player assessment. Do not elevate
+or bypass execution/HTTP policies to make it run. Unity and Steam remain unexecuted;
+Build/Operations remains incomplete under its licensed production acceptance.
+
+![Actual Windows recipient: observed return, delivered coil and three crates unfinished](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/evidence/windows-recipient/delivered.png)
+
 ### Try the current authored scene — Linux x64
 
 [**Download The coil and the shutters**](https://github.com/MartinFMelcop/Creative_AI_Project_HUB/raw/refs/heads/main/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/delivery/authored-scene/dist/authored-scene-demo-linux-x64.zip) · [Instructions and checksums](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/delivery/authored-scene/README.md) · [Actual recipient execution](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/evidence/request-continuity/RUN.json)
@@ -37,7 +52,7 @@ This is local continuity, not an account, Steam Cloud or Windows/power-loss guar
 
 Edda's unfinished work, Rill's consent and actual departure/return share one C# owner.
 A guided handoff still leaves work unfinished. This original experimental scene is
-an executable development demonstration, not Unity/Windows/Steam delivery, approved
+an executable development demonstration, not Unity/Steam production delivery, approved
 world canon or independent player validation. Build/Operations remains incomplete.
 
 ![Actual extracted package after guided handoff: three crates remain unfinished](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/evidence/recipient-delivery/delivered.png)
