@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "kind": "actual_windows_preconsumer_failure",
+  "commit": "25379258656925b1d2eda1eee1dc875325971099",
+  "run_id": 40252211009,
+  "job_id": 121346376603,
+  "conclusion": "failure",
+  "application_executed": false,
+  "platform": "Microsoft Windows Server2025 10.0.26100",
+  "git": "2.56.0.windows.2",
+  "observed_errors": [
+    "2026-10-26T01:02:14.3173322Z Microsoft Windows Server 2025",
+    "2026-10-26T01:02:16.2984433Z git version 2.56.0.windows.2",
+    "2026-10-26T01:02:37.0118495Z ##[error]error: unable to create file martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/references/rave-master/snapshots/36af1651271422ae33856e8b5d7b45702215f165/source/RM_QA/DATA/QA/LEGACY_AI_DIGESTS/LEGACY_DOC_0002__RPGMXP_MAIN_DOCUMENT__AI_DIGEST.md: Filename too long",
+    "2026-10-26T01:02:37.0129577Z ##[error]error: unable to create file martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/references/rave-master/snapshots/36af1651271422ae33856e8b5d7b45702215f165/source/RM_QA/DATA/QA/LEGACY_AI_DIGESTS/LEGACY_DOC_0004__LIVRO_DOS_100_CONTOS__AI_DIGEST.md: Filename too long",
+    "2026-10-26T01:02:38.9645345Z ##[error]The process 'C:\\Program Files\\Git\\bin\\git.exe' failed with exit code 1",
+    "2026-10-26T01:02:39.2169467Z ##[error]No files were found with the provided path: D:\\a\\_temp/windows-host.json",
+    "2026-10-26T01:02:39.5082931Z git version 2.56.0.windows.2"
+  ],
+  "correction": "Enable supported Git core.longpaths for checkout, preserving all original filenames and exact source bytes. No reference renamed, omitted or changed; no security/integrity gate or timeout relaxed.",
+  "secondary_failure": "Artifact upload found no files because checkout failed before host/instrument output existed.",
+  "url": "https://github.com/MartinFMelcop/Creative_AI_Project_HUB/actions/runs/40252211009"
+}
