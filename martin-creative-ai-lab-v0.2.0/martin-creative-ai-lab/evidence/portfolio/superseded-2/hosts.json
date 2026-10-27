@@ -1,0 +1,31 @@
+{
+  "complete": false,
+  "hosts": [
+    {
+      "id": "guided",
+      "command": [
+        "sh",
+        "/tmp/portfolio-recipient-JNWVLA/guided/AuthoredSceneDemo/run-demo.sh",
+        "41015",
+        "150"
+      ],
+      "stdout": "READY http://127.0.0.1:41015/\n",
+      "stderr": "",
+      "exit_code": null,
+      "signal": "SIGTERM"
+    },
+    {
+      "id": "refusal",
+      "command": [
+        "sh",
+        "/tmp/portfolio-recipient-JNWVLA/refusal/AuthoredSceneDemo/run-demo.sh",
+        "46451",
+        "150"
+      ],
+      "stdout": "READY http://127.0.0.1:46451/\n",
+      "stderr": "",
+      "exit_code": null,
+      "signal": "SIGTERM"
+    }
+  ]
+}

@@ -22,6 +22,7 @@ INTEGRITY_TOOLS = {
     'brain_query.py', 'test_brain_query.py', 'benchmark_brain_query.py',
     'brain_vocabulary.json', 'brain_retrieval_cases.json', 'inventory_origins.py',
     'test_inventory_origins.py', 'check_transformation.py', 'test_transformation.py',
+    'check_portfolio.py', 'test_check_portfolio.py',
 }
 
 

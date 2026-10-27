@@ -21,7 +21,7 @@ class Classification(unittest.TestCase):
 
     def test_documentary_changes_do_not_rebuild_historical_players(self):
         paths = ['AGENTS.md', 'README.md'] + [w(path) for path in
-            ('AGENTS.md', 'README.md', 'SEED.md', 'MANIFEST.sha256', 'docs/STATE.md',
+            ('tools/check_portfolio.py', 'tools/test_check_portfolio.py', 'AGENTS.md', 'README.md', 'SEED.md', 'MANIFEST.sha256', 'docs/STATE.md',
              'registry/projects.json', 'registry/transfers.json', 'labs/README.md',
              'labs/rpg-systems/README.md', 'labs/narrative-continuity/README.md', 'labs/origins.json', 'labs/source-inventory.json',
              'north-star/DESIGN.md', 'north-star/capabilities.json', 'brains/integrity.json')]

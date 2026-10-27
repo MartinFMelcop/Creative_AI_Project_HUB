@@ -1,0 +1,12 @@
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+page.waitForFunction: Timeout 30000ms exceeded.
+    at act (/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/showcase/capture.mjs:53:272)
+    at async file:///workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/showcase/capture.mjs:64:36 {
+  log: [],
+  name: 'TimeoutError'
+}
+
+Node.js v24.19.0

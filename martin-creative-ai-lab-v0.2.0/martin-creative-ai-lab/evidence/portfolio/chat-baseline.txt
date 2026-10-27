@@ -1,0 +1,215 @@
+
+> creative-ai-realtime-chat@0.8.0 test
+> node --test --test-concurrency=2 tests/*.test.cjs
+
+✔ two real browsers turn a decision into assigned work, review concurrent edits and finish with history/export (4428.699537ms)
+✔ unconfirmed committed actions survive reload/recovery; offline drafts require explicit save (6989.525548ms)
+✔ unconfirmed uncommitted actions survive reload/recovery; offline drafts require explicit save (6794.825745ms)
+✔ narrow action workflow keeps drafts per room, literal text, owner choices and a server conflict intact (1286.035863ms)
+✔ decision to assigned work, blockers, completion and reopening retain an auditable history (20.64538ms)
+✔ immutable retries precede revision checks; changed attempts and stale writes have no effects (4.190284ms)
+✔ invalid linkage, ownership, outcomes and unchanged edits cannot create partial events (2.946542ms)
+✔ schema-1 data migrates transactionally without losing identities, entries or decision links (2.448238ms)
+✔ live backup/restore preserves action history, owner identity and accepted retry receipts (64.746725ms)
+✔ a schema-1 backup remains inspectable/restorable and upgrades only on application open (8.148245ms)
+✔ failed schema migration rolls back new tables and retains the previous data/version (1.724621ms)
+✔ tampered action/audit bytes fail semantic validation even with valid SQLite foreign keys (2.337948ms)
+✔ real sockets scope action broadcasts to the joined project and surface revision conflicts (120.598243ms)
+✔ live WAL snapshot includes all projects, authors and attempts; restored writes continue independently (46.472419ms)
+✔ empty workspace also produces a complete independently restorable bundle (8.593343ms)
+✔ existing bundle, main database, symlink and journal paths are never overwritten (15.04108ms)
+✔ damaged bytes and incomplete bundles are refused before any destination exists (4.613189ms)
+✔ a replaced manifest cannot authorize changed schema, broken references or invalid entry contents (37.778251ms)
+✔ inventory changes and linked image files are refused (6.752964ms)
+✔ CLI works outside the project and reports failures without creating missing sources or overwriting destinations (1231.617157ms)
+✔ two browser clients display accepted messages once in both directions (2636.386226ms)
+✔ a connected form submission waits behind an in-flight polling write (729.578716ms)
+✔ a stale connected state does not retain a message for reconnect replay (2853.798ms)
+✔ markup remains literal text in both browsers (1965.279445ms)
+✔ rejection is visible, preserves the draft, and does not broadcast (6177.484097ms)
+✔ a departed client keeps its draft and receives only future messages on rejoining (4933.234125ms)
+✔ transport interruption reconnects automatically without duplicating listeners (3679.17307ms)
+✔ browser retains only the latest 200 messages (2423.067888ms)
+✔ new browser receives future messages without server-side history (3300.391279ms)
+✔ missing acknowledgement reports uncertainty and does not retry automatically (5565.179333ms)
+✔ timeout with a changed draft retains earlier text without broadcast (6362.395878ms)
+✔ timeout with a changed draft retains earlier text after broadcast (6891.22929ms)
+✔ an acknowledgement does not erase a newer draft typed during sending (4614.581376ms)
+✔ keyboard history boundaries preserve a surviving decision control across variable-height rows (1773.426764ms)
+﹣ baseline probe records the deliberate 300-entry stop and loss of the oldest reading anchor on arrival (0.406774ms) # SKIP
+{"evidence":"bidirectional-history-runtime","stored":650,"maximumDOM":300,"trace":[{"direction":"older","first":1101,"last":1299,"size":100},{"direction":"older","first":1001,"last":1299,"size":150},{"direction":"older","first":901,"last":1299,"size":200},{"direction":"older","first":801,"last":1299,"size":250},{"direction":"older","first":701,"last":1299,"size":300},{"direction":"older","first":601,"last":1199,"size":300},{"direction":"older","first":501,"last":1099,"size":300},{"direction":"older","first":401,"last":999,"size":300},{"direction":"older","first":301,"last":899,"size":300},{"direction":"older","first":201,"last":799,"size":300},{"direction":"older","first":101,"last":699,"size":300},{"direction":"older","first":1,"last":599,"size":300},{"direction":"newer","first":101,"last":699,"size":300},{"direction":"newer","first":201,"last":799,"size":300},{"direction":"newer","first":301,"last":899,"size":300},{"direction":"newer","first":401,"last":999,"size":300},{"direction":"newer","first":501,"last":1099,"size":300},{"direction":"newer","first":601,"last":1199,"size":300},{"direction":"newer","first":701,"last":1299,"size":300}]}
+✔ read all 650 entries in both directions with a bounded DOM and preserve discussion, action and search drafts (7118.128373ms)
+✔ a real second-client arrival preserves the oldest loaded reading anchor until newer or latest is requested (3888.522619ms)
+✔ a delayed own-send acknowledgement resolves its attempt without discarding newer typing or replacing historical rows (1628.530356ms)
+✔ fresh history confirms an uncertain saved attempt without replacing later typing (10189.465103ms)
+✔ failed paging preserves the current window and cursor, and a delayed page cannot cross a project switch (1562.120672ms)
+✔ a delayed return to latest preserves composer focus and signals arrivals newer than its snapshot (2817.697462ms)
+✔ a delayed historical page cannot overwrite the rejoined window after participant change (1654.457988ms)
+✔ a delayed historical page cannot overwrite the rejoined window after disconnect and reconnect (1516.872068ms)
+✔ bidirectional history crosses the 300-row client boundary without skipping interleaved room IDs (108.120316ms)
+✔ before remains compatible while after returns the closest newer page and detects real arrivals (20.637973ms)
+✔ empty and partial history pages stay bounded and invalid or conflicting cursors are rejected (2.35299ms)
+✔ authenticated HTTP history exposes both directions with room isolation and failure responses (101.443402ms)
+✔ protocol broadcasts trimmed messages to sender and peer in order (63.508727ms)
+✔ non-string payloads are rejected without broadcasts (24.559363ms)
+✔ empty and whitespace-only payloads are rejected without broadcasts (18.772692ms)
+✔ 501 code units are rejected even when trimming would shorten the payload (16.017624ms)
+✔ 500 UTF-16 code units are accepted including non-ASCII text (19.630398ms)
+✔ messages without acknowledgement callbacks do not crash the server (15.633252ms)
+✔ the conversation follows initial messages and readers within 24 pixels of the bottom (900.313802ms)
+✔ new broadcasts preserve the visible message and pixel offset while browsing earlier text (619.214878ms)
+✔ scrolling back to the bottom resumes following subsequent messages (771.652062ms)
+✔ retention eviction preserves a surviving reading anchor across variable-height messages (992.253656ms)
+✔ an evicted reading anchor falls back to the earliest retained message (1294.045799ms)
+✔ new arrivals show their count while preserving the reading position (1213.837846ms)
+✔ keyboard activation returns to live text and keeps conversation focus (1123.274099ms)
+✔ manual scrolling to live text clears the count before the next browsing session (1587.881211ms)
+✔ unread counts stay bounded when arrivals exceed the retained history (2320.006156ms)
+✔ inactive tab counts arrivals at the live edge and clears them on focus (1108.834157ms)
+✔ returning to an inactive tab at earlier text retains its unread count and anchor (1399.022525ms)
+✔ hidden page keeps unread arrivals until visible at the live edge (1066.800326ms)
+✔ inactive tab unread count stays bounded to retained messages (1998.578107ms)
+✔ viewport height changes keep live readers at the bottom (1275.932087ms)
+✔ viewport width reflow preserves earlier text through narrowing and widening (1329.411477ms)
+✔ viewport resizing preserves inactive unread state at the live edge (894.642972ms)
+✔ text enlargement with an unchanged panel keeps live readers at the bottom (895.333549ms)
+✔ text size and spacing reflow preserves an earlier anchor through retention eviction (1316.520432ms)
+✔ text enlargement preserves inactive unread arrivals at the live edge (1999.989623ms)
+✖ delivered demo opens without a workspace and exposes decision, blocker and remaining work (1300.449501ms)
+✖ live download becomes a complete offline reader with historical comparison and unchanged drafts (2686.768915ms)
+✖ mobile filters, literal text, pinned pages and source payload remain safe without network access (1297.994372ms)
+✖ legacy and empty snapshots disclose unavailable action data and support JSON download (1382.513703ms)
+✔ late reading exports cannot download across project or participant switches (2206.269389ms)
+✔ HTTP export errors preserve discussion drafts and allow a successful retry (1802.453069ms)
+✖ complete report ignores filters/pages and preserves every source entry/revision without executing text (1491.392213ms)
+✖ browser print creates a complete PDF while retaining the filtered reading state (1517.402481ms)
+✖ legacy/empty reports disclose unavailable action history and return to reading (1385.631395ms)
+✔ delivered fictional reader matches its inspectable JSON source and current renderer (4.223387ms)
+✔ renderer preserves complete schema-1 export and confines hostile source text to inert JSON (110.199185ms)
+✔ legacy exports without action data and empty modern records remain usable without invented work (83.622837ms)
+✔ converter rejects incompatible, incomplete and contradictory records without silently repairing them (117.248362ms)
+✔ revision order remains authoritative when a recorded machine clock moves backwards (46.662366ms)
+✔ CLI runs outside source, refuses overwrites and leaves invalid inputs unpublished (954.696602ms)
+✔ authenticated HTTP export keeps JSON semantics, database schema and snapshot scope intact (473.354055ms)
+✔ operator CLI recovers a live multi-project workspace after simulated loss; original browsers resume and retry safely (10457.232257ms)
+✔ two browser identities share notes/decisions, isolate projects and retain drafts on switching (3243.781304ms)
+✔ missed entries are recovered after real disconnect and server restart using the same local identity (2944.639411ms)
+✔ uncertain committed send survives reload without replacing newer typing or duplicating a retry (5464.591608ms)
+✔ uncertain uncommitted send survives reload without replacing newer typing or duplicating a retry (5268.374828ms)
+✔ earlier history loads in order and the actual downloaded export contains the complete record (1077.399513ms)
+✔ narrow workspace supports the complete workflow without horizontal clipping (963.365221ms)
+✔ explicit rejection preserves editable draft and does not leave an uncertain retry (752.966341ms)
+✔ denied browser storage still permits current-session collaboration with a persistent warning (754.97548ms)
+✔ SQLite stores identity, ordered history and decisions across restart; tokens are hashed (41.719819ms)
+✔ storage rejects invalid content, conflicting retries and duplicate project names (2.655185ms)
+✔ history pagination is chronological, bounded and complete; export omits identity credentials (14.270947ms)
+✔ newer database schemas are refused without downgrading their version (2.00499ms)
+✔ real sockets isolate projects, switch rooms and deduplicate uncertain retries (127.796171ms)
+✔ HTTP and namespace require local identity; malformed requests are rejected; legacy remains separate (105.886176ms)
+✔ old blocker context distinguishes historical and current work while preserving both drafts (1755.308075ms)
+✔ mobile literal search keeps pinned pages, signals real arrivals and refreshes explicitly (1198.396943ms)
+✔ late search and context responses cannot cross a project or participant switch (1818.322619ms)
+✔ full-record search retrieves old decisions and superseded blockers with exact context (54.22128ms)
+✔ pinned mixed-stream pages keep order without duplicate or lost matches after new records (14.289619ms)
+✔ literal Unicode matching, room isolation and cursor validation do not mutate records (12.997102ms)
+✔ search and context routes require local identity and exclude credentials (80.024045ms)
+✔ existing schema-2 recovery bundles remain searchable without an index migration (15.994823ms)
+ℹ tests 111
+ℹ suites 0
+ℹ pass 103
+ℹ fail 7
+ℹ cancelled 0
+ℹ skipped 1
+ℹ todo 0
+ℹ duration_ms 100194.651627
+
+✖ failing tests:
+
+test at tests/record-browser.test.cjs:54:1
+✖ delivered demo opens without a workspace and exposes decision, blocker and remaining work (1300.449501ms)
+  page.goto: net::ERR_BLOCKED_BY_ADMINISTRATOR at file:///workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/projects/realtime-integration-lab/examples/cistern-handover.html
+  Call log:
+  [2m  - navigating to "file:///workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/projects/realtime-integration-lab/examples/cistern-handover.html", waiting until "load"[22m
+
+      at offline (/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/projects/realtime-integration-lab/tests/record-browser.test.cjs:42:19)
+      at async TestContext.<anonymous> (/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/projects/realtime-integration-lab/tests/record-browser.test.cjs:55:16) {
+    name: 'Error',
+    log: [ '  - navigating to "file:///workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/projects/realtime-integration-lab/examples/cistern-handover.html", waiting until "load"' ]
+  }
+
+test at tests/record-browser.test.cjs:65:1
+✖ live download becomes a complete offline reader with historical comparison and unchanged drafts (2686.768915ms)
+  page.goto: net::ERR_BLOCKED_BY_ADMINISTRATOR at file:///tmp/p11-reading-browser-TuQl61/reading.html
+  Call log:
+  [2m  - navigating to "file:///tmp/p11-reading-browser-TuQl61/reading.html", waiting until "load"[22m
+
+      at offline (/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/projects/realtime-integration-lab/tests/record-browser.test.cjs:42:19)
+      at async TestContext.<anonymous> (/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/projects/realtime-integration-lab/tests/record-browser.test.cjs:72:16) {
+    name: 'Error',
+    log: [ '  - navigating to "file:///tmp/p11-reading-browser-TuQl61/reading.html", waiting until "load"' ]
+  }
+
+test at tests/record-browser.test.cjs:95:1
+✖ mobile filters, literal text, pinned pages and source payload remain safe without network access (1297.994372ms)
+  page.goto: net::ERR_BLOCKED_BY_ADMINISTRATOR at file:///tmp/p11-reading-browser-Au3eDd/mobile.html
+  Call log:
+  [2m  - navigating to "file:///tmp/p11-reading-browser-Au3eDd/mobile.html", waiting until "load"[22m
+
+      at offline (/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/projects/realtime-integration-lab/tests/record-browser.test.cjs:42:19)
+      at async TestContext.<anonymous> (/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/projects/realtime-integration-lab/tests/record-browser.test.cjs:97:16) {
+    name: 'Error',
+    log: [ '  - navigating to "file:///tmp/p11-reading-browser-Au3eDd/mobile.html", waiting until "load"' ]
+  }
+
+test at tests/record-browser.test.cjs:118:1
+✖ legacy and empty snapshots disclose unavailable action data and support JSON download (1382.513703ms)
+  page.goto: net::ERR_BLOCKED_BY_ADMINISTRATOR at file:///tmp/p11-reading-browser-W7QfFt/legacy.html
+  Call log:
+  [2m  - navigating to "file:///tmp/p11-reading-browser-W7QfFt/legacy.html", waiting until "load"[22m
+
+      at offline (/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/projects/realtime-integration-lab/tests/record-browser.test.cjs:42:19)
+      at async TestContext.<anonymous> (/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/projects/realtime-integration-lab/tests/record-browser.test.cjs:120:112) {
+    name: 'Error',
+    log: [ '  - navigating to "file:///tmp/p11-reading-browser-W7QfFt/legacy.html", waiting until "load"' ]
+  }
+
+test at tests/record-browser.test.cjs:148:1
+✖ complete report ignores filters/pages and preserves every source entry/revision without executing text (1491.392213ms)
+  page.goto: net::ERR_BLOCKED_BY_ADMINISTRATOR at file:///tmp/p11-reading-browser-kcEwzb/report.html
+  Call log:
+  [2m  - navigating to "file:///tmp/p11-reading-browser-kcEwzb/report.html", waiting until "load"[22m
+
+      at offline (/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/projects/realtime-integration-lab/tests/record-browser.test.cjs:42:19)
+      at async TestContext.<anonymous> (/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/projects/realtime-integration-lab/tests/record-browser.test.cjs:152:16) {
+    name: 'Error',
+    log: [ '  - navigating to "file:///tmp/p11-reading-browser-kcEwzb/report.html", waiting until "load"' ]
+  }
+
+test at tests/record-browser.test.cjs:175:1
+✖ browser print creates a complete PDF while retaining the filtered reading state (1517.402481ms)
+  page.goto: net::ERR_BLOCKED_BY_ADMINISTRATOR at file:///tmp/p11-reading-browser-h78rwV/print.html
+  Call log:
+  [2m  - navigating to "file:///tmp/p11-reading-browser-h78rwV/print.html", waiting until "load"[22m
+
+      at offline (/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/projects/realtime-integration-lab/tests/record-browser.test.cjs:42:19)
+      at async TestContext.<anonymous> (/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/projects/realtime-integration-lab/tests/record-browser.test.cjs:177:16) {
+    name: 'Error',
+    log: [ '  - navigating to "file:///tmp/p11-reading-browser-h78rwV/print.html", waiting until "load"' ]
+  }
+
+test at tests/record-browser.test.cjs:188:1
+✖ legacy/empty reports disclose unavailable action history and return to reading (1385.631395ms)
+  page.goto: net::ERR_BLOCKED_BY_ADMINISTRATOR at file:///tmp/p11-reading-browser-mRRqsB/legacy-report.html
+  Call log:
+  [2m  - navigating to "file:///tmp/p11-reading-browser-mRRqsB/legacy-report.html", waiting until "load"[22m
+
+      at offline (/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/projects/realtime-integration-lab/tests/record-browser.test.cjs:42:19)
+      at async TestContext.<anonymous> (/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/projects/realtime-integration-lab/tests/record-browser.test.cjs:191:16) {
+    name: 'Error',
+    log: [ '  - navigating to "file:///tmp/p11-reading-browser-mRRqsB/legacy-report.html", waiting until "load"' ]
+  }
+npm notice
+npm notice New major version of npm available! 11.9.0 -> 12.2.1
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.2.1
+npm notice To update run: npm install -g npm@12.2.1
+npm notice

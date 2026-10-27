@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "laboratory_catalog": "labs/origins.json",
+  "recipients": [
+    {
+      "id": "windows-x64",
+      "archive_path": "delivery/authored-scene-windows/dist/authored-scene-demo-win-x64.zip",
+      "evidence_path": "evidence/windows-recipient/RUN.json",
+      "evidence_sha256": "a7680db787311f63a79ecf79b03e65dd6d4e29f3b4526fed0831329d0e4faf51",
+      "guide_path": "delivery/authored-scene-windows/README.md",
+      "launcher_path": "AuthoredSceneWindows/run-demo.ps1",
+      "platform": "windows"
+    },
+    {
+      "id": "linux-x64",
+      "archive_path": "delivery/authored-scene/dist/authored-scene-demo-linux-x64.zip",
+      "evidence_path": "evidence/request-continuity/RUN.json",
+      "evidence_sha256": "d1695d0922947be6150a79238b96f3553aa38fc73068cf76379c1856fc1ffe87",
+      "guide_path": "delivery/authored-scene/README.md",
+      "launcher_path": "AuthoredSceneDemo/run-demo.sh",
+      "platform": "linux"
+    }
+  ],
+  "source_experiments": [
+    {
+      "id": "field-journey",
+      "guide_path": "north-star/field-journey/README.md",
+      "evidence_path": "evidence/field-journey/RUN.json",
+      "evidence_sha256": "1855dacc82d81fef0c7e5311d7b59034428dfab323abaeeb8bcbfd457d3b72cd",
+      "consumer_paths": [
+        "north-star/field-journey/Host/Room.cs",
+        "north-star/field-journey/Host/Program.cs"
+      ]
+    },
+    {
+      "id": "selected-passives",
+      "guide_path": "north-star/combat-study/README.md",
+      "evidence_path": "evidence/passive-response/RUN.json",
+      "evidence_sha256": "a74946321271b5045b5d3ca064ce09a8c82678c589bf15198d74d675ee9ffac8",
+      "consumer_paths": [
+        "north-star/combat-study/Rules/Passives.cs",
+        "north-star/combat-study/Host/Trial.cs",
+        "north-star/combat-study/Host/Room.cs"
+      ]
+    }
+  ]
+}

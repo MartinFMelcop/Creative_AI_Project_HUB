@@ -1,0 +1,84 @@
+{
+  "schema_version": 1,
+  "kind": "portfolio_execution",
+  "baseline_commit": "c808d57cb7b09c3947e48b93cb0047ee1c4d6e55",
+  "primary_workstream": "repository/portfolio",
+  "units": 1,
+  "execution": "One continuous guided Linux recipient recording and one separately identified fresh refusal trial, from unchanged existing ZIP/private runtime. No rebuild, owner changes, state injection or new package.",
+  "actual_commands": {
+    "guided": 18,
+    "refusal": 6
+  },
+  "media": [
+    {
+      "path": "evidence/portfolio/walkthrough.webm",
+      "sha256": "aeb9dd7c3cf2df7f47d7e21f6c264e2e7db1b4727f86c3fd467158d1ae203c36",
+      "bytes": 8249330
+    },
+    {
+      "path": "evidence/portfolio/refusal.webm",
+      "sha256": "f2eba3cfcc78f96d507998aede5deb3951faf04c87dd42f79b058cc4f5fc7374",
+      "bytes": 3530492
+    },
+    {
+      "path": "evidence/portfolio/poster.png",
+      "sha256": "9e2781d49fb1f7a9c6425df59c000707401f495a4c206c759e3216684bac1168",
+      "bytes": 84283
+    },
+    {
+      "path": "evidence/portfolio/choices.png",
+      "sha256": "9ea767cb12bf53a23b3250f54a5c36af88296cf949e4bf13232868c8535c0a05",
+      "bytes": 77418
+    }
+  ],
+  "commands": [
+    {
+      "command": [
+        "node",
+        "showcase/capture.mjs",
+        "/workspace/work/portfolio-cycle/capture-3"
+      ],
+      "environment": {
+        "PLAYWRIGHT_BROWSERS_PATH": "/workspace/work/portfolio-cycle/playwright"
+      },
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "python3",
+        "tools/check_portfolio.py"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "python3",
+        "tools/test_check_portfolio.py"
+      ],
+      "exit_code": 0
+    }
+  ],
+  "source_sha256": {
+    "showcase/capture.mjs": "6e15e405c06b6be3270cc6e171ab625c7948dc734dc65477a66c3a05560c8073",
+    "showcase/portfolio.json": "497482636014ba6dad63ecc90fd5496d438f23bfa1a62f41dc10d0d289d73363",
+    "tools/check_portfolio.py": "f86bd48adf6104f37f25c13660bffd13edfa015719191d43f0459d8af6cdf09c",
+    "tools/test_check_portfolio.py": "e80653439ae29be6f27ec0e2cdc15518bd72d4f0e5ef65e6430d5f3abb6c964a",
+    "evidence/portfolio/protocol.json": "b53ec4c7bc33d9d2f12ee657a7af6d634ea3241118013e8b03f3cd91dad120d2"
+  },
+  "navigation": "navigation.json",
+  "negative_test_methods": 7,
+  "capture": "capture.json",
+  "source_stable": true,
+  "visual_inspection": "Primary inspected both direct stage screenshots and video frames at10/25/34seconds: actual survey pending, signed/not departed, real delivery encounter and terminal stage facts. No comprehension/quality inference.",
+  "superseded": [
+    {
+      "path": "superseded-1",
+      "finding": "Expected Playwright FFmpeg executable absent; no complete recording. Exact producer/failure/log retained."
+    },
+    {
+      "path": "superseded-2",
+      "finding": "Actual guided capture reached delivery; refusal capture timed out because instrument incorrectly required accepted revision to increase on refusal. Exact original producer, partial trace/recordings retained. Final producer waits actual command response and exact snapshot without changing app, timeout or fixture."
+    }
+  ],
+  "limits": "Structured navigation/artifact validation plus manual prose/media review; not a general prose truth classifier, human comprehension, author approval, new Windows execution, ordinary-user access, Unity/Steam, physical device, production ownership or commercial clearance. Repeated capture/negative checks are support of ONE portfolio unit, not additional participants/studies/legacy integration."
+}

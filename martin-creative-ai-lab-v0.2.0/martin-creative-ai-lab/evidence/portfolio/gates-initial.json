@@ -1,0 +1,12 @@
+[
+  {
+    "command": [
+      "python3",
+      "tools/validate_repo.py"
+    ],
+    "exit_code": 1,
+    "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stderr_sha256": "b5140ed819a07e0d057d051b70845aa334eeff6957271bc4d884f3ce4d2365c9",
+    "finding": "Assembly-order failure: STATE linked preservation.json before that planned evidence file was written. Final gates reran after writing it; no link validator change."
+  }
+]

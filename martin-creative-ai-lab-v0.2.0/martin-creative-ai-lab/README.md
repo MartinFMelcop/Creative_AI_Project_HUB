@@ -15,6 +15,7 @@ or Steamworks execution follows from a C# domain build.
 
 | Goal | Start here |
 |---|---|
+| Watch the unchanged recipient and distinguish source-only experiments | [Recipient case study](showcase/README.md), [artifact map](showcase/portfolio.json), [actual capture](evidence/portfolio/RUN.json) |
 | Inspect current product and creative authority | [North Star](north-star/README.md), [living design](north-star/DESIGN.md), [capabilities](north-star/capabilities.json) |
 | Make and enact an explicit original identity | [Visible intake and owned journey](north-star/intake/README.md), [actual execution](evidence/intake/RUN.json) |
 | Inspect source-scoped memory in actual use | [The fitting window](north-star/memory-study/README.md), [method](labs/narrative-continuity/memory/README.md) |

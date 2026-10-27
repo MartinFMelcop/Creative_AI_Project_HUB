@@ -1,0 +1,9 @@
+{
+  "complete": false,
+  "error": {
+    "name": "Error",
+    "message": "browserContext.newPage: Executable doesn't exist at /home/agent/.cache/ms-playwright/ffmpeg-1013/ffmpeg-linux\n╔═════════════════════════════════════════════════════════════════╗\n║ Video rendering requires ffmpeg binary.                         ║\n║ Downloading it will not affect any of the system-wide settings. ║\n║ Please run the following command:                               ║\n║                                                                 ║\n║     npx playwright install ffmpeg                               ║\n║                                                                 ║\n║ <3 Playwright Team                                              ║\n╚═════════════════════════════════════════════════════════════════╝",
+    "stack": "browserContext.newPage: Executable doesn't exist at /home/agent/.cache/ms-playwright/ffmpeg-1013/ffmpeg-linux\n╔═════════════════════════════════════════════════════════════════╗\n║ Video rendering requires ffmpeg binary.                         ║\n║ Downloading it will not affect any of the system-wide settings. ║\n║ Please run the following command:                               ║\n║                                                                 ║\n║     npx playwright install ffmpeg                               ║\n║                                                                 ║\n║ <3 Playwright Team                                              ║\n╚═════════════════════════════════════════════════════════════════╝\n    at /workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/showcase/capture.mjs:47:161"
+  },
+  "trials": []
+}

@@ -1,0 +1,82 @@
+{
+  "run_id": 40572236515,
+  "observed": {
+    "id": 40572236515,
+    "status": "in_progress",
+    "conclusion": null,
+    "run_attempt": 2
+  },
+  "jobs": [
+    {
+      "id": 122437017762,
+      "name": "chat-and-evaluation",
+      "status": "in_progress",
+      "conclusion": null
+    },
+    {
+      "id": 122437020097,
+      "name": "north-star-remote",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "id": 122437021140,
+      "name": "north-star-authority",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "id": 122437070037,
+      "name": "eclipse-economy",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "id": 122437071281,
+      "name": "integrity-and-dialogue",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "id": 122437072490,
+      "name": "scope",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "id": 122437080341,
+      "name": "native-arena",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "id": 122437099336,
+      "name": "north-star-csharp",
+      "status": "completed",
+      "conclusion": "cancelled"
+    }
+  ],
+  "attempt1": {
+    "successes": 6,
+    "failed_job": 122429398249,
+    "failure": "Existing 5minute real protocol/browser step timeout; cause not established.",
+    "cancelled_job": 122429398283,
+    "cancellation": "After8input-browser controls; cause not established."
+  },
+  "rerun": {
+    "requested_job": 122429398249,
+    "accepted": true,
+    "observed_job_records": 8,
+    "second_request_job": 122429398283,
+    "second_request_result": "403: containing workflow run already running. No bypass/retry loop."
+  },
+  "local": {
+    "tests": 111,
+    "passed": 103,
+    "failed": 7,
+    "skipped": 1,
+    "cancelled": 0,
+    "failure": "All7failures explicitly ERR_BLOCKED_BY_ADMINISTRATOR for file:// offline reader navigation; policy not bypassed. Not a demonstrated explanation of CI timeout."
+  },
+  "prior": "Retain earlier timeout/cancellation/runtime/export/inventory/instrument evidence and sixth-host resume error; no gate/timeout/fixture change."
+}
