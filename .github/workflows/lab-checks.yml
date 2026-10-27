@@ -597,6 +597,17 @@ jobs:
           if-no-files-found: ignore
           retention-days: 7
 
+      - name: Execute actual fitting to confirmed field journey
+        run: python3 north-star/field-journey/tools/verify.py --dotnet dotnet --output "$RUNNER_TEMP/field-journey"
+      - name: Retain field journey failure diagnostics
+        if: failure()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: field-journey-diagnostics
+          path: ${{ runner.temp }}/field-journey
+          if-no-files-found: ignore
+          retention-days: 7
+
       - name: Exercise actual visual C# input lifecycle
         run: node labs/input-timing/browser.mjs dotnet "$RUNNER_TEMP/input-browser"
       - name: Execute embodied Crossing presentation and actual browser controls

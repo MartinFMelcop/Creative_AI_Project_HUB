@@ -1,145 +1,146 @@
 # Current transformation continuity
 
-**Updated:** 2026-10-26 America/Sao_Paulo. **SEED:**0.34.0. Initial Git root
+**Updated:** 2026-10-27 America/Sao_Paulo. **SEED:**0.34.0. Initial Git root
 `/workspace/Creative_AI_Project_HUB`, branch `work`, HEAD
-`92e0fbd9ddd95edeff6f0e7a9ea884bf777200ac`, clean tracked/untracked work.
+`39beb21a78af2e22455c81d607a7c1f4407635a1`, clean tracked/untracked work.
 Fetched main matched, divergence0/0, no outgoing commits. Root authority verified this
 workspace and published Continuous Development v2. Recover [the complete process](prompts/CONTINUOUS_DEVELOPMENT.md).
 STATE owns continuity; [catalog](../labs/origins.json) owns maturity/consumption,
 [DESIGN](../north-star/DESIGN.md) creative authority and evidence actual execution.
 
-## Active result — observed help is not universal or permanently recent
+## Active result — one confirmed person carries actual component consequences
 
-[The fitting window](../north-star/memory-study/README.md) consumes a consequential
-selected source contract: known GLOBAL/NPC/RELATION flags and recent events with exact
-exp>turn lifetime. Actual DEV/DIST helper and both definition pairs are byte-identical.
-Nine flag and ten event definitions drive the SAME57Python/C#operation cases/237queries.
-Explicit cross-scope writes, false/global union and null-event wildcard are declared
-branch probes, not additional actual source rows. This is source interpretation plus
-executed model/typed-library parity, NOT Ruby/RGSS/RMXP execution.
+[Carry what you made](../north-star/field-journey/README.md) closes a product gap between
+separate intake and memory demonstrations. One private coordinator composes ONE unchanged
+Intake.Room and ONE unchanged MemoryStudy.Room through their exact command/snapshot
+contracts. Actual unused acquired fitting becomes a required component of real rig
+fabrication; actual entry consumes that rig. The same confirmed handle/accent and actual
+preparation continue through earned progression, amendments, failure or completion.
+No child owner is recreated on confirmation and no mutable underlying owner escapes.
 
-Independent Engineering, Scientific and Creative analyses compared genuine licensed
-Unity/player/device access, passives, quest progress, creation parsing, product continuity
-and production ownership. Memory offers positive fresh source consumption with real
-consequence. Quest target1 no-op was already statically recorded; all73actual rows are
-index1 and DIST lacks progress. A new ordered chain would mostly be new policy.
-Passive UI displays/assigns IDs without supplying the prose effect engine; another
-loadout/parser matrix would repeat prior work. No licensed Editor or participant access
-was established; these obligations remain, rather than being replaced by this method.
+Independent Engineering, Scientific and Creative analyses compared remaining legacy
+contracts, actual Unity/licensing and human/device access, production ownership and
+shared product use. Another standalone service or already-recorded source eligibility
+matrix would not close this dependency. No usable licensed Editor or actual participant
+session was established. Product composition therefore provides an executable beneficiary
+without replacing the unresolved laboratory, delivery or human obligations.
 
-The portable C#8/netstandard2.1 library retains explicit source union/wildcard queries;
-its exact named query cannot use a global event as private observation. Known IDs and
-named scope are required: unknown→GLOBAL and missingNPC→NPC_UNKNOWN fallbacks are
-rejected ONLY as private witness/service authority, not as rejection of the whole source.
-Source moral labels/fiction are not imported. All actual DefaultValue entries are0;
-the helper ignores that column. No default grant, full source coercion, Game_System
-persistence or unrestricted storage recovery is claimed.
+Paid workshop actions/assembly require confirmed current preparation; pending proposals
+block them, while an already confirmed person can still withdraw unpaid support.
+Workshop4parts+2coins and field4fiber+2binder remain distinct disclosed experimental
+setup. A witness opportunity is not a physical component. Actual service supplies one
+named fitting; historical acquisition remains true after its allocation. Only accepted
+new fabrication spends that fitting plus actual2fiber/1binder. Expiry/withdrawal cannot
+revoke an already acquired unused fitting. Repeated, stale, wrong-provenance or refused
+requests cannot allocate another fitting or mint a rig.
 
-An original finite two-bench .NET10/Linux/browser consumer uses persistent observed-help
-NPC flags, current RELATION support and strict named recent evidence. Helping costs
-one part/turn, then records observation. A fresh demonstration requires past help and
-costs another part/turn. Current service checks all local conditions and one coin BEFORE
-its one-turn cost; only then does that bench supply its single fitting. A service at
-turn3 can finish at expiry4; a first request at4 refuses. West cannot borrow East's
-observation. Actual repeated demonstrations can exhaust parts without producing output.
+The first accepted actual Begin permanently closes workshop/assembly for this bounded
+expedition. Its last observation becomes historical: worker pictures hide; encounter
+beats do not advance workshop turns or observe NPC presence/return. A refused entry does
+not close preparation. Premature departure with one rig can leave the harder prepared
+entry unfunded even with an unused acquired fitting; no remote assembly/refund escape
+is invented. Actual loss retains spent component/rig. Existing unprepared entry remains
+explicit with no rig/component spend and no discipline skill; it is a limited/losing
+option, not a proven viable full-route alternative or balanced moral choice.
 
-TTL3, four parts/two coins and action costs are explicit original experimental setup,
-not source table values or final balance. The source has independent flag/event clocks;
-this consumer explicitly advances both together on accepted costly actions. Reading,
-redraw and wall time advance neither. Withdrawal costs no turn and clears only current
-support/recency, never past help or fitting/history. Expiry ends opportunity, not truth.
-Promises, audio, elapsed time and client fields cannot fabricate work, recognition,
-service, return or delivery. This is not NPC scheduling or human testimony.
+Survey victory earns actual progression, not final completion. Native execution earned
+Focus/Dash, confirmed the same person's amendment and completed the actual harder Crossing.
+Browser execution completed both encounters with the same prepared person, retained a
+premature unfunded route and actual Wait loss. A card amendment cannot heal, refund or
+reopen workshop. Actual Begin retains the old encounter recovery rules. Workshop supply,
+promises, time, redraw, audio and client fields cannot manufacture final completion.
 
-## Actual checks, negatives and specialty limits
+## Actual verification and retained corrections
 
-[Execution](../evidence/memory-study/RUN.json) records34native,21actual Chromium and7HTTP
-controls, plus SAME57source cases/237queries and a false-result comparison negative.
-These groups overlap outcomes and are not participants, independent population studies,
-extra candidate attempts or measured effort. Actual UI buttons, strict local service,
-paid renewal/withdrawal, two real outputs, expired opportunity and exhausted policy
-were executed. Browser text and computed SVG witness/fitting visibility followed owner
-facts; isolated false-witness and false-fitting renderers were detected. Source/protocol
-identities stayed exact during the final integrated runner. Initial exploration supports
-this one unit; no extra study or failed browser result is invented. Final captures were
-inspected by primary, not independently approved by an unavailable specialist.
+[Execution](../evidence/field-journey/RUN.json) records29native,23actual Chromium and7HTTP
+controls. These overlap outcomes and are not people, independent studies, candidate
+attempts or measured effort. Actual UI buttons and HTTP flowed through the composed
+owner; text, actual stock, rig consumption, computed fitting SVG visibility, historical
+worker visibility and real completion followed owner facts. Two isolated renderers were
+rejected: historical acquisition falsely treated as available after spend, and completed
+workshop falsely treated as completed Crossing. The final integrated runner bound57input
+identities; browser-only closure separately bound48. Sources/protocol stayed stable.
 
-Engineering delivered independent source/architecture analysis but hit a usage limit
-before code. Scientific/Creative analyses were obtained; subsequent implementations
-remained pending/unavailable and were stopped to prevent concurrent ownership. Creation
-supplied initial HTML/CSS. Primary completed rules, actual owner, Python reference,
-C#case bridge, browser/native instruments, final SVG/history behavior and verification
-sequentially. ENG004/015/017 informed authority/contracts; SCI013/014/076/077 required
-claim-matched comparisons; CRE005(A),045/061(H) separated observed history, opportunity
-and consequence without global moral praise/blame. No independent final implementation
-review, Brain-as-agent, model training, human witness or author approval is attributed.
+The initial native comparator wrongly counted legitimate child refusal receipt metadata
+as gameplay mutation. Exact superseded source and exit134 are retained; corrected
+comparison still checks preparation, identity, inventory, memory/history and custody.
+The initial browser instrument expected a different stock-text format; original script,
+failure and logs remain. Correcting that assertion compared exact real text/quantities,
+without changing product or fixture. The earlier22-control run/four captures remain
+superseded: Creative found a survey caption suggesting an available rig at stock0.
+Corrected wording explicitly names the unfunded prepared entry. Its old producer was
+recovered byte-identical against the recorded hash; recovery is not another execution.
+Final four captures were inspected by Creation and primary. No owner, gate or timeout
+was weakened to obtain these results.
 
-## CI, tooling and production boundary
+Engineering ENG004/015/017 informed private ownership/temporal contracts and implemented
+Host plus actual HTTP smoke. Science SCI013/014/076/077 informed the cosmetic/free-craft
+rival, custody/history and clock boundaries and implemented browser/HTTP/mutants.
+Creation CRE001(D)/005(A),009/011/061(H) informed recognizable enacted identity, distinct
+pouches and honest local history; implemented web/SVG and final capture review. Primary
+owned prospective acceptance, native controls/correction, integrated execution, evidence,
+preservation, CI/portfolio/continuity and publication. Agent review is not Brain-as-agent,
+model training, independent human assessment, author approval or commercial clearance.
 
-Initial general CI40399721194 attempt1 retained seven successful jobs and C#job
-121842120423 cancelled during Chromium Linux dependency installation, before the intake
-consumer. Cause is not established. Only that specific job was requested for rerun;
-actual attempt2 exposed eight new job records, seven successful and C#job121931583009
-running at initial observation. It subsequently completed/success with all eight jobs
-individually verified. Request scope and observed execution scope differ.
-[Retained baseline evidence](../evidence/memory-study/baseline-ci.json) owns this snapshot;
-new observations belong in final handoff. Baseline CI40383291625 remains completed/
-success with eight jobs and Windows CI40383291594 completed/success. No gate, fixture
-or timeout was weakened. Preserve prior cancellation/timeout/runtime/export/inventory/
-instrument evidence and the unresolved sixth-host `Value cannot be null.`; the prior
-unchanged local47assertions and SDK equality do not prove its serving runtime or cause.
+## CI, tooling and execution boundary
 
-SDK10.0.401 reexecutes from `/workspace/work/authored-scene/dotnet/dotnet`. No usable
-Editor/Hub/Steam appeared on local PATH/conventional roots; protected
-`/root/Unity/Hub/Editor` was denied, not proof of absence. Earlier actual Windows runner
-exposed Hub3.22.3 but its installed-editor query timed out without a list. Editor version,
-activation/license and modules remain unverified; no license or access policy bypassed.
-Unity/C#, Windows-first and Steam-intended remains production direction. Rules compile
-portably; this new Host is .NET10/Linux/browser and ephemeral, NOT actual Unity, Windows/
-Steam delivery, account/save integration or human/device assessment.
+Initial general CI40427138242 attempt1 retained seven successful jobs, including C#,
+and integrity job121935608047 cancelled during FFmpeg dependency installation after
+Tokyo audio/score controls. Cause remains unproven. Only that integrity job was requested
+for rerun; eight new job records were observed. Attempt2 subsequently completed/success
+with all eight jobs individually verified. [Baseline evidence](../evidence/field-journey/baseline-ci.json)
+distinguishes request from execution scope. Publication/new CI are separate handoff facts.
+Baseline CI40399721194 also completed/success in attempt2; preserve its prior Chromium-
+installation cancellation and all earlier timeout/runtime/export/inventory/instrument
+negatives without invented causes. The prior sixth-host `Value cannot be null.` remains
+unlocated; same SDK/local47assertions do not establish serving-runtime equivalence/cause.
 
-Prior Windows restricted-context evidence remains bounded: administrator=false,
-Administrators SIDdeny-only and medium8192 BUT elevated=true/type1, same account/profile;
-not ordinary-user/non-elevated Windows, fresh account or enforced sandbox. Native token
-inheritance was inferred through the original script. No new token/I/O/packaging cycle
-or transport replacement was justified here.
+SDK10.0.401 reexecutes at `/workspace/work/authored-scene/dotnet/dotnet`. Bounded PATH and
+conventional Editor/Hub/Steam roots found no usable installation; protected
+`/root/Unity/Hub/Editor` was denied, not proof of global absence. Earlier Windows Hub3.22.3
+installed-editor query timed out without a list. Editor version, activation/license and
+platform modules remain unverified; no policy/licensing bypass occurred. Unity/C#,
+Windows-first and Steam-intended remains production direction.
 
-## Maturity, consumption and lifecycle
+The new composition references actual .NET10 executable projects; it is NOT Unity/
+netstandard, production browser direction, account/save migration, Windows/Steam delivery
+or a power-loss/distributed guarantee. It is ephemeral, trusted-local and not included
+in the existing recipient ZIPs. Prior Windows restricted-token evidence remains same-
+account medium8192/deny-only Administrators, administrator=false BUT elevated=true/type1,
+not ordinary-user/non-elevated Windows or a sandbox. Actual human/device access remains
+necessary for recognition, comprehension, enjoyment, accessibility and experience claims.
+
+## Maturity, preservation and remaining obligations
 
 All eleven destinations remain mandatory. Ten bounded methods operate: Audio/Music,
 Visual/Animation, Input/Timing, Narrative/Continuity, Networking/Persistence, World/
 Gameplay, Economy/Simulation, RPG/Progression, Combat/Responsiveness and AI Evaluation.
-Build/Operations remains incomplete under licensed Unity Editor/modules and production
-Windows acceptance. Consumption is now16INTEGRATED/10REJECTED/15UNRESOLVED: one narrow
-known-scope/action-turn memory contract integrated and one unsafe direct private-authority
-fallback rejected. Full world/quest/dialogue/memory catalogs remain genuinely unresolved.
+Build/Operations remains incomplete under licensed Editor/modules and production Windows
+acceptance. Consumption remains16INTEGRATED/10REJECTED/15UNRESOLVED; this original product
+integration adds no new source-capability credit. Full effects/passives, schedules,
+reputation/faction/quest/item/tool/unlock catalogs, creation parsing, broad narrative
+persistence, human experience, clearance and production ownership remain unresolved.
 
-[Preservation](../evidence/memory-study/preservation.json) verifies prior maintained bytes
-except intentional metadata. RequestExpedition/journal, fixed Lure/Trail, all previous
-owners/intake/source studies, frozen AI evaluation and both recipients remain exact.
-Windows ZIP35,820,510bytes SHA256
+[Preservation](../evidence/field-journey/preservation.json) verifies2423prior maintained
+files apart from intentional metadata. RequestExpedition/journal/fixed Lure/Trail,
+Domain/Crossing/Forge/Loadout, intake/memory standalone consumers, previous source studies,
+frozen AI evaluation and both recipients stay exact. Windows ZIP35,820,510bytes SHA256
 `0500d70a6a6c7071f12423fd529c0922830c09d34a312ae46c4f1e562c5aaffb`;
 Linux35,908,523bytes SHA256
 `d829b1b59ee2dd22f87ab007c4db96bfe1655731b38d02f5085f0b8d30e043e4`.
-The ephemeral memory service does not replace their journal/package/recovery/notice
-obligations. No unique source, variant, save, package, media or notice was retired;
-new build caches are ignored, without excluding protected files. No existing artifact
-met verified consumer/uniqueness/recovery/rights retirement acceptance.
+The new application directly depends on old compiled owners and has different closed-
+workshop semantics; it does not replace their unique consumers, journals, source-recovery,
+rights or notices. No source, save, package, variant, media or notice was retired.
+Frozen AI evaluation retains its first-delivery/context/attribution/source-race limits;
+incompatible combat clocks and protected Brain/source bytes remain preserved.
 
-Full effects/passives, NPC schedules, reputation/faction/quest/item/tool/unlock catalogs,
-creation parsing, broad narrative persistence, human experience, commercial clearance
-and production ownership remain unresolved. Frozen AI evaluation retains one first
-delivery and all context/attribution/source-race limits. Incompatible combat clocks,
-source variants and protected Brain/source bytes remain preserved, not normalized.
+## Rolling investment — one unit per beneficiary
 
-## Rolling investment — one substantive unit per beneficiary
-
-Targets remain approximately47%legacy/laboratories,40%North Star,13%repository/portfolio.
-Counts, commits, files and tokens are not measured effort. Eight recent units:
+Approximate targets remain47%legacy/laboratories,40%North Star,13%repository/portfolio.
+Counts, files, commits and tokens do not measure effort. Eight recent units:
 
 | Completed substantive unit | Primary stream | Evidence |
 |---|---|---|
-| Acquired repair to observed watering | North Star | [Journey](../evidence/repair-hauling/RUN.json) |
 | Durable same actual RequestExpedition | North Star | [Continuity](../evidence/request-continuity/RUN.json) |
 | Source standing and actual service | Legacy/laboratories | [Standing](../evidence/reputation-study/RUN.json) |
 | Exact identity/retained tools and actual output use | Legacy/laboratories | [Tooling](../evidence/tooling-study/RUN.json) |
@@ -147,12 +148,14 @@ Counts, commits, files and tokens are not measured effort. Eight recent units:
 | Restricted-context access/consequence/reentry | Legacy/laboratories | [Access](../evidence/windows-access/RUN.json) |
 | Confirmed identity enacts the same prepared journey | North Star | [Intake](../evidence/intake/RUN.json) |
 | Scoped memory and actual finite witness service | Legacy/laboratories | [Memory](../evidence/memory-study/RUN.json) |
+| Same-person actual component→rig→Crossing | North Star | [Field](../evidence/field-journey/RUN.json) |
 
-This is ONE legacy/laboratory unit; consumer/UI/CI/portfolio support it, not additional
-North Star or portfolio units. The older availability unit ages out; its consumer and
-evidence remain. No measured target convergence is asserted. Compare consequential
-remaining contracts with coherent product use, production ownership, genuine licensed
-Unity/ordinary-user access and appropriate participants/devices. Do not automatically
-repeat memory/standing/intake/packaging/token/journal/repair/media/EVAL matrices or the
-one-time transformation. A shared product need or actual player assessment may outrank
-another standalone service; assessment requires real people, never simulated testimony.
+This is ONE North Star unit; its UI/native/browser/CI/portfolio presentation are support,
+not extra laboratory or portfolio units. The older repair journey ages out; its original
+consumer/evidence remain. No measured target convergence is asserted. Shared product use
+now exists; do not automatically add another wrapper, source/service matrix, save or
+package. Compare meaningful remaining gameplay/source semantics, production ownership,
+actual licensed Unity/ordinary-user access and appropriate author/player/device
+assessment. Human experience needs real participants, never simulated testimony.
+Preserve all laboratory obligations and reevaluate unique-consumer/recovery/rights
+evidence before retirement. Do not repeat prior matrices or the transformation by habit.

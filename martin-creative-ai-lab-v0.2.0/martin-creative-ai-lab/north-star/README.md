@@ -137,3 +137,12 @@ in an original finite service: known past help persists, recent local demonstrat
 expires by actual accepted actions, another bench cannot borrow that knowledge, and
 acquired fittings remain real. [Executed scope](../evidence/memory-study/RUN.json)
 is C#8 rules with a .NET10/Linux/browser consumer, not Unity or human testimony.
+
+## Same-person component to field use
+
+[Carry what you made](field-journey/README.md) privately composes the unchanged intake
+and memory owners. One actual fitting is allocated to one actual rig fabrication,
+and actual entry consumes that rig. The first departure seals workshop access;
+unused historical components cannot assemble remotely. [Execution](../evidence/field-journey/RUN.json)
+distinguishes actual completion, unfunded premature departure, loss and source-unprepared
+limits. Existing standalone consumers and both recipients stay unchanged.

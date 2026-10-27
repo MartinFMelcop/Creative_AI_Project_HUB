@@ -1,0 +1,36 @@
+{
+  "run_id": 40427138242,
+  "head_sha": "39beb21a78af2e22455c81d607a7c1f4407635a1",
+  "attempt1": {
+    "status": "completed",
+    "conclusion": "cancelled",
+    "successful_jobs": 7,
+    "csharp": "completed/success",
+    "cancelled_job": 121935608047,
+    "cancelled_job_name": "integrity-and-dialogue",
+    "phase": "FFmpeg Linux dependency installation after Tokyo audio/score verification",
+    "last_error": "The operation was canceled.",
+    "cause": "not established"
+  },
+  "rerun_request": {
+    "only_specific_job": 121935608047,
+    "success": true
+  },
+  "attempt2": {
+    "status": "completed",
+    "conclusion": "success",
+    "successful_jobs": 8,
+    "jobs": [
+      121945914046,
+      121945916385,
+      121945916721,
+      121945916816,
+      121945956400,
+      121945956662,
+      121945965965,
+      121945967588
+    ],
+    "boundary": "Eight new job records were observed although only the cancelled integrity job was requested; request scope and actual execution scope differ."
+  },
+  "no_gate_fixture_timeout_change": true
+}

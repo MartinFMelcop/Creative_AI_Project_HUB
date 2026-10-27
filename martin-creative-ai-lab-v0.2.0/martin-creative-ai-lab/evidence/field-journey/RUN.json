@@ -1,0 +1,533 @@
+{
+  "schema_version": 1,
+  "kind": "destination_execution",
+  "baseline_commit": "39beb21a78af2e22455c81d607a7c1f4407635a1",
+  "consumer_paths": [
+    "north-star/field-journey/Host/Room.cs",
+    "north-star/field-journey/Host/Program.cs",
+    "north-star/field-journey/web/app.js",
+    "north-star/intake/Host/Room.cs",
+    "north-star/memory-study/Host/Room.cs",
+    "north-star/csharp/Loadout/PreparedExpedition.cs"
+  ],
+  "source_artifacts": [
+    {
+      "local_path": "evidence/field-journey/protocol.json",
+      "size_bytes": 3497,
+      "sha256": "99750d12a2d771ee36673f1e6f728aca26b1aea1131e80fc1a61fa0e466980b5"
+    },
+    {
+      "local_path": "north-star/csharp/Crossing/NorthStar.Crossing.csproj",
+      "size_bytes": 352,
+      "sha256": "09fbdffe415d44079f66da83d4d22e5b91169f3f1abdd0e1ebc2bacd2e3f0c88"
+    },
+    {
+      "local_path": "north-star/csharp/Crossing/Program.cs",
+      "size_bytes": 4226,
+      "sha256": "268c1b5ac582dd06f15eb3e40e7ce859a9c58eecfc58c7586d94bcaecf9c595e"
+    },
+    {
+      "local_path": "north-star/csharp/Crossing/Session.cs",
+      "size_bytes": 5357,
+      "sha256": "d25ac05ba1a94432474dd1b14b4fd608e446fc5344dcc4f779d8d5fe27a1b2c5"
+    },
+    {
+      "local_path": "north-star/csharp/Domain/Crafting.cs",
+      "size_bytes": 8035,
+      "sha256": "5a5a892b3e68cff73f7a443d7c014c79dbebf2954d28f447e1bf3a9c4759de57"
+    },
+    {
+      "local_path": "north-star/csharp/Domain/Loadout.cs",
+      "size_bytes": 5692,
+      "sha256": "a1296ca13b5ba6728c073320b860e369ad2e01fdaacb45b5237ef40d0243f682"
+    },
+    {
+      "local_path": "north-star/csharp/Domain/NorthStar.Domain.csproj",
+      "size_bytes": 344,
+      "sha256": "9570b674acfea69bb60098f495afd3b9e2cef2575fcfeb6db71c2cdecb2c4876"
+    },
+    {
+      "local_path": "north-star/csharp/Domain/Progression.cs",
+      "size_bytes": 8331,
+      "sha256": "8495e1ad92fea069c2c3989f6f2cc2600980575e72812df9480ed193c51c8685"
+    },
+    {
+      "local_path": "north-star/csharp/Forge/Expedition.cs",
+      "size_bytes": 4688,
+      "sha256": "579c1eb8375a5c281d35338f1c93cb529c16bf330f0576046c970d42c816bfc3"
+    },
+    {
+      "local_path": "north-star/csharp/Forge/NorthStar.Forge.csproj",
+      "size_bytes": 420,
+      "sha256": "3f58ee26c26f3030dcdb7cc2c6db2b7e14bff43d81e936b95cc116bc82978d35"
+    },
+    {
+      "local_path": "north-star/csharp/Forge/Program.cs",
+      "size_bytes": 6419,
+      "sha256": "3a289847c487ca3bca8a406635b7f0a2334daa959d767d31b3f732445a398c3a"
+    },
+    {
+      "local_path": "north-star/csharp/Forge/README.md",
+      "size_bytes": 5243,
+      "sha256": "6a39641bb2b3c60df9f8b5148d82e69c7c83951f072cb5f0caf544d6400ec8b3"
+    },
+    {
+      "local_path": "north-star/csharp/Loadout/NorthStar.Loadout.csproj",
+      "size_bytes": 414,
+      "sha256": "8b7ae6ab602aa24a78926f23bdf1d0117d79293eeb493334c1a4a2d3d4c85613"
+    },
+    {
+      "local_path": "north-star/csharp/Loadout/PreparedExpedition.cs",
+      "size_bytes": 4861,
+      "sha256": "92fabdaa94f4ad4bb33a55a113a3d4f8cc63c86634d631413a529eb53df24668"
+    },
+    {
+      "local_path": "north-star/csharp/Loadout/Program.cs",
+      "size_bytes": 5919,
+      "sha256": "6409bc7a9d24a9c60ea59657b33925c6dd27e3a6a9a7a9736e2d3a5ff7d6d7d8"
+    },
+    {
+      "local_path": "north-star/csharp/Loadout/README.md",
+      "size_bytes": 4777,
+      "sha256": "796423b4450dbec4f37cb0c9a5f3a86aa21168f45464b7a5e46f349a6fb776a9"
+    },
+    {
+      "local_path": "north-star/csharp/global.json",
+      "size_bytes": 55,
+      "sha256": "e0c0882461e712f6c2c66241bf2f175c60832e3ff077dc26091ff8c661d4193e"
+    },
+    {
+      "local_path": "north-star/field-journey/.gitignore",
+      "size_bytes": 16,
+      "sha256": "79810615b4063be5474618fd002df934762fe9ccebb448537ce74ce23b319202"
+    },
+    {
+      "local_path": "north-star/field-journey/Checks/NorthStar.FieldChecks.csproj",
+      "size_bytes": 349,
+      "sha256": "2c85290c7e35ed1da74af6a330182df52213129455c742521491db73fe813d69"
+    },
+    {
+      "local_path": "north-star/field-journey/Checks/Program.cs",
+      "size_bytes": 10120,
+      "sha256": "18e8539f4f04eee9704ab4788dcd279102f4e4d513f55e388a30ea3e0a1eae73"
+    },
+    {
+      "local_path": "north-star/field-journey/Host/NorthStar.FieldJourney.csproj",
+      "size_bytes": 443,
+      "sha256": "7905b843d79fe670e48b90183817473ddae26494c3de8a91f0dabcd3056d1a98"
+    },
+    {
+      "local_path": "north-star/field-journey/Host/Program.cs",
+      "size_bytes": 4997,
+      "sha256": "fe25089a3bb095950220a0c1f9b782070b58f51805cb07e36cc9debee20404ff"
+    },
+    {
+      "local_path": "north-star/field-journey/Host/Room.cs",
+      "size_bytes": 7557,
+      "sha256": "f612ce63721b4ee3167600396588cbcaa31fbaa532ba6cb8e752ec8e46bb7c02"
+    },
+    {
+      "local_path": "north-star/field-journey/README.md",
+      "size_bytes": 6035,
+      "sha256": "3a4f8ce5f3636690f4fb541ab57bdb6681d614051a51477bdb6f94c7273ddca8"
+    },
+    {
+      "local_path": "north-star/field-journey/tools/browser.mjs",
+      "size_bytes": 22054,
+      "sha256": "da99911396512a8d99bb5963bf01458c00fb09c40dff620873d1d408159a1c79"
+    },
+    {
+      "local_path": "north-star/field-journey/tools/verify.py",
+      "size_bytes": 2974,
+      "sha256": "6d7f3501161726ea6e0e6f17fbb9f15ea6ee50ba4db2a0027cd30efa4b41e99f"
+    },
+    {
+      "local_path": "north-star/field-journey/web/app.js",
+      "size_bytes": 12637,
+      "sha256": "6a8f6f3a9949c537acce419e466c7ac6464a8a30bd62a866e9add9264638a68e"
+    },
+    {
+      "local_path": "north-star/field-journey/web/index.html",
+      "size_bytes": 14766,
+      "sha256": "ef28a88daf4ceda3968915167862d8b8c57dadbb9051dbcc2589538fe66a3574"
+    },
+    {
+      "local_path": "north-star/field-journey/web/style.css",
+      "size_bytes": 8250,
+      "sha256": "a0ed9757c4dfd4a62c72000020fd1c37a6590e30fb4053d4e05fe457f32e3fc7"
+    },
+    {
+      "local_path": "north-star/intake/.gitignore",
+      "size_bytes": 16,
+      "sha256": "79810615b4063be5474618fd002df934762fe9ccebb448537ce74ce23b319202"
+    },
+    {
+      "local_path": "north-star/intake/Checks/NorthStar.IntakeChecks.csproj",
+      "size_bytes": 350,
+      "sha256": "0f123f0913619a8df7bfc9fef33a4664497b37ae71e5c6485b266fea3c6dc9f5"
+    },
+    {
+      "local_path": "north-star/intake/Checks/Program.cs",
+      "size_bytes": 7235,
+      "sha256": "58dd73ade0bf09f8a10ab933ee737abbd8075f3aaf77509d81b4b85bb7a28120"
+    },
+    {
+      "local_path": "north-star/intake/Host/NorthStar.Intake.csproj",
+      "size_bytes": 364,
+      "sha256": "46e249356ebe839340ac57c5434f7b8cfb41f7ea1bc332776339695b7a5b529a"
+    },
+    {
+      "local_path": "north-star/intake/Host/Program.cs",
+      "size_bytes": 4991,
+      "sha256": "711c019d69a309f14d2469e13ac7f5bff2f3fb352d6dbaaa0da54af77a67fbae"
+    },
+    {
+      "local_path": "north-star/intake/Host/Room.cs",
+      "size_bytes": 7446,
+      "sha256": "b5d654a7fa2d64c2ea89d96ab3249d5655008a20a302be916633c688114d3c98"
+    },
+    {
+      "local_path": "north-star/intake/README.md",
+      "size_bytes": 4956,
+      "sha256": "69cef4e20f5cac23411fc913b31ff4c0458e072e9b0f0c0196764e3c687ae9bc"
+    },
+    {
+      "local_path": "north-star/intake/tools/browser.mjs",
+      "size_bytes": 20014,
+      "sha256": "5e27e2fae3fcbb59e6dfc4d75fc297835307aa0512cbb04c21784f344f94e1da"
+    },
+    {
+      "local_path": "north-star/intake/tools/verify.py",
+      "size_bytes": 2902,
+      "sha256": "a539e705edc9fdf63e9b87162a78b70522fef14b7cb2ecbf5713210217e68ae9"
+    },
+    {
+      "local_path": "north-star/intake/web/app.js",
+      "size_bytes": 7848,
+      "sha256": "db906517f8bc4d45b8bf7c30418513a42b2c6d7597f8cbe448f53e612c96c3c2"
+    },
+    {
+      "local_path": "north-star/intake/web/index.html",
+      "size_bytes": 7995,
+      "sha256": "94d79e28d92857ff906a12fe1eb1af68ac11c101fb5952fb5de849e7caf75cb5"
+    },
+    {
+      "local_path": "north-star/intake/web/style.css",
+      "size_bytes": 5253,
+      "sha256": "33a23577126f94b722b0f2a7d23fe754183fa1a43ad97c2466de3e99bdf6b7c3"
+    },
+    {
+      "local_path": "north-star/memory-study/.gitignore",
+      "size_bytes": 16,
+      "sha256": "79810615b4063be5474618fd002df934762fe9ccebb448537ce74ce23b319202"
+    },
+    {
+      "local_path": "north-star/memory-study/Checks/NorthStar.MemoryChecks.csproj",
+      "size_bytes": 348,
+      "sha256": "9c0ea4da0d10f712ab2249ff883dff348868caa2413bd63c565bec91ccd12370"
+    },
+    {
+      "local_path": "north-star/memory-study/Checks/Program.cs",
+      "size_bytes": 11396,
+      "sha256": "1268694ca86b383c66ccc8eef6ea63e91689fbb87b47e7a99a80d03f838bfcca"
+    },
+    {
+      "local_path": "north-star/memory-study/Host/NorthStar.MemoryStudy.csproj",
+      "size_bytes": 344,
+      "sha256": "4a72ac10bbdbb89d5db0f95628206bc90e2b0c5b3beea94acd1146c40d57ef0e"
+    },
+    {
+      "local_path": "north-star/memory-study/Host/Program.cs",
+      "size_bytes": 4996,
+      "sha256": "574f9e77bc44502d72a698a19f55e5a8fe00ae0e8d662d70e7799649d2e537d8"
+    },
+    {
+      "local_path": "north-star/memory-study/Host/Room.cs",
+      "size_bytes": 6120,
+      "sha256": "a4e82fa6e4e7ac03c38b623e8920f168d3efb6996287aa1ee55dc6dd197529e5"
+    },
+    {
+      "local_path": "north-star/memory-study/README.md",
+      "size_bytes": 5310,
+      "sha256": "5d94d5b642c79bb6b0bd48e904fc91c04dee4645d566aa81d5cd2e461291b4ba"
+    },
+    {
+      "local_path": "north-star/memory-study/Rules/Memory.cs",
+      "size_bytes": 6893,
+      "sha256": "4307f83a7e7cbed6ed8f08815ce3e216744be660545c4edd6a6985581abec852"
+    },
+    {
+      "local_path": "north-star/memory-study/Rules/NorthStar.Memory.csproj",
+      "size_bytes": 267,
+      "sha256": "3acec7333496cb2bb2bb2a8c6aaf151f714f6402e133ead2ca8d3f166d77dd22"
+    },
+    {
+      "local_path": "north-star/memory-study/tools/browser.mjs",
+      "size_bytes": 14577,
+      "sha256": "1ea73aaa7dfd1f3f5d2ab3d55918af9d857ec0126ee1ca02d855c481a62bb904"
+    },
+    {
+      "local_path": "north-star/memory-study/tools/verify.py",
+      "size_bytes": 3148,
+      "sha256": "237c261f84eb8a374d132dd424d99f16ce4a37608d2de831dd5a0467efadb3b2"
+    },
+    {
+      "local_path": "north-star/memory-study/web/app.js",
+      "size_bytes": 4700,
+      "sha256": "e255ce998bf51ff5542f8275f8bb1c566de304ec580f76dfc63a63eaad86c6fb"
+    },
+    {
+      "local_path": "north-star/memory-study/web/index.html",
+      "size_bytes": 7124,
+      "sha256": "28af3025fcdaccb3fc31bad2a1b6af7f6d5065e41f7f006ab7a7da112553584d"
+    },
+    {
+      "local_path": "north-star/memory-study/web/style.css",
+      "size_bytes": 4141,
+      "sha256": "7ac8e89d8b9f26dd2d9f98026243ae32618aa260d471b0557e589e5fa81f1654"
+    },
+    {
+      "local_path": "projects/realtime-integration-lab/package-lock.json",
+      "size_bytes": 42105,
+      "sha256": "aa191ef2158e6cc6f770bf4b3ee44dca17175ef1a3cd572b98115246bf46aea7"
+    },
+    {
+      "local_path": "projects/realtime-integration-lab/package.json",
+      "size_bytes": 1445,
+      "sha256": "42e3cc9633e522dd6d9a5c11023418331129632881a8bf0b95e3717247d57ebe"
+    }
+  ],
+  "checks": {
+    "passed": 52,
+    "failed": 0
+  },
+  "check_groups": {
+    "native": {
+      "passed": 29,
+      "failed": 0
+    },
+    "chromium": {
+      "passed": 23,
+      "failed": 0
+    },
+    "http": {
+      "passed": 7,
+      "failed": 0
+    }
+  },
+  "commands": [
+    {
+      "command": [
+        "/workspace/work/authored-scene/dotnet/dotnet",
+        "--version"
+      ],
+      "exit_code": 0,
+      "stdout": "10.0.401\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/workspace/work/authored-scene/dotnet/dotnet",
+        "build",
+        "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/field-journey/Checks/NorthStar.FieldChecks.csproj",
+        "-c",
+        "Release"
+      ],
+      "exit_code": 0,
+      "stdout": "  Determining projects to restore...\n  All projects are up-to-date for restore.\n  NorthStar.Domain -> /workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/Domain/bin/Release/netstandard2.1/NorthStar.Domain.dll\n  NorthStar.Memory -> /workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/memory-study/Rules/bin/Release/netstandard2.1/NorthStar.Memory.dll\n  NorthStar.Crossing -> /workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/Crossing/bin/Release/net10.0/NorthStar.Crossing.dll\n  NorthStar.MemoryStudy -> /workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/memory-study/Host/bin/Release/net10.0/NorthStar.MemoryStudy.dll\n  NorthStar.Forge -> /workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/Forge/bin/Release/net10.0/NorthStar.Forge.dll\n  NorthStar.Loadout -> /workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/Loadout/bin/Release/net10.0/NorthStar.Loadout.dll\n  NorthStar.Intake -> /workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/intake/Host/bin/Release/net10.0/NorthStar.Intake.dll\n  NorthStar.FieldJourney -> /workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/field-journey/Host/bin/Release/net10.0/NorthStar.FieldJourney.dll\n  NorthStar.FieldChecks -> /workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/field-journey/Checks/bin/Release/net10.0/NorthStar.FieldChecks.dll\n\nBuild succeeded.\n    0 Warning(s)\n    0 Error(s)\n\nTime Elapsed 00:00:02.77\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/workspace/work/authored-scene/dotnet/dotnet",
+        "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/field-journey/Checks/bin/Release/net10.0/NorthStar.FieldChecks.dll",
+        "/workspace/work/field-cycle/verified/native.json"
+      ],
+      "exit_code": 0,
+      "stdout": "PASS: 29 field journey native controls\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "node",
+        "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/field-journey/tools/browser.mjs",
+        "/workspace/work/authored-scene/dotnet/dotnet",
+        "/workspace/work/field-cycle/verified/browser"
+      ],
+      "exit_code": 0,
+      "stdout": "PASS: 23 field journey Chromium and 7 HTTP controls\n",
+      "stderr": ""
+    }
+  ],
+  "runtime_observations": {
+    "sdk": "10.0.401",
+    "browser": {
+      "node": "v24.19.0",
+      "chromium": "154.0.8037.57",
+      "playwright": "1.64.0"
+    },
+    "unity_executed": false,
+    "windows_executed": false,
+    "steam_executed": false
+  },
+  "scope": "One original same-person local product composition uses actual unused acquired fitting in actual rig fabrication and actual rig entry, through unchanged private Intake/Memory owners and original encounters.",
+  "counting": "ONE North Star unit. Existing source contracts reused, no new legacy consumption credit. Native/browser/HTTP/smoke overlap outcomes; not people, independent studies, candidate attempts or measured effort.",
+  "specialists": {
+    "engineering": "Independent source/architecture comparison; ENG004/015/017; implemented private Host coordinator and actual HTTP smoke, no old owner edits.",
+    "scientific": "Independent hypothesis/rival/claims comparison; SCI013/014/076/077; implemented actual Chromium/HTTP instrument and two isolated renderer mutants, retained initial instrument error.",
+    "creative": "Independent product/identity/source comparison; CRE001(D)/005(A),009/011/061(H); implemented original web/SVG and inspected four final captures, corrected actual unfunded-caption issue.",
+    "primary": "Prospective protocol, native controls/corrected fact boundary, final integrated execution, source preservation, artifact/portfolio/CI/continuity integration and publication.",
+    "limits": "Independent agent analysis/review is not independent human assessment, author approval or rights clearance."
+  },
+  "negative_results": [
+    "Initial native instrument compared legitimate child refusal receipt metadata with gameplay facts; exact superseded source and failure retained, corrected fact boundary without owner/gate changes.",
+    "Initial browser instrument expected wrong stock-text format; original script/failure retained, corrected exact text/quantities without UI or owner change.",
+    "Superseded22-control browser and four captures retained before a truthful zero-stock survey caption correction; producer preimage recovered byte-identical against recorded hash.",
+    "Current two isolated renderers rejected: historical acquired fitting falsely available after spend, and completed workshop falsely presented as completed Crossing.",
+    "Actual premature departure leaves harder prepared entry unfunded; actual Wait loss never refunds component or rig. Source unprepared mode retained without full-route viability claim."
+  ],
+  "limitations": [
+    "Ephemeral trusted-local .NET10/Linux/browser composition of executable projects, not Unity/netstandard, account/save migration, production browser direction, Windows/Steam delivery or power-loss/distributed guarantee.",
+    "Four workshop parts/two coins and four field fiber/two binder are distinct setup; requiring a fitting for craft is original product policy, not new source data or moral favor/consent requirement.",
+    "Workshop snapshots remain historical after actual departure; no remote worker presence, return or action-clock conversion is inferred.",
+    "Original experimental art/staging, not approved final canon, human identity/readability/enjoyment/balance/accessibility, exclusive rights or commercial clearance.",
+    "Old RequestExpedition fixed Lure/Trail, journals, intake/memory standalone consumers, frozen AI evaluation and both packages remain unchanged. Full effects/schedules/catalogs/creation/broad narrative and production ownership remain unresolved."
+  ],
+  "result_artifacts": [
+    {
+      "local_path": "evidence/field-journey/baseline-ci.json",
+      "size_bytes": 1053,
+      "sha256": "4e238a03afcbd022636d04cc61d7cff1d769dd2b54ee3455a2db7ab49fa7faef"
+    },
+    {
+      "local_path": "evidence/field-journey/browser/actual-loss-no-refund.png",
+      "size_bytes": 377533,
+      "sha256": "15bc88d5a4136559afe786a5f076797af6e02517853b1c832a7b9590c0288b7f"
+    },
+    {
+      "local_path": "evidence/field-journey/browser/actual-named-completion.png",
+      "size_bytes": 388293,
+      "sha256": "f8a1f55394e388665561860645df6c93be45398f9834705fb7b05b4b614ef779"
+    },
+    {
+      "local_path": "evidence/field-journey/browser/browser.json",
+      "size_bytes": 125221,
+      "sha256": "8ff59f6a2860ea3ee01ae8cc2c4bc8bcd09bde203d261fcb0ccc3b20148550ee"
+    },
+    {
+      "local_path": "evidence/field-journey/browser/hosts.json",
+      "size_bytes": 2600,
+      "sha256": "a151f534d7f3138e4fbb1904458cc99bc19fb6c6ceba105e00edfabff0cbec23"
+    },
+    {
+      "local_path": "evidence/field-journey/browser/premature-unfunded.png",
+      "size_bytes": 374734,
+      "sha256": "ac266782cfdd369e7555b9c325319ad46fae89dfd0d92e1b6b3eab93bfade34e"
+    },
+    {
+      "local_path": "evidence/field-journey/browser/two-allocated-fittings.png",
+      "size_bytes": 377953,
+      "sha256": "918c4fb9a789d138f3ee26d5d84f03f89c8bc3d497b85df5845697994747110e"
+    },
+    {
+      "local_path": "evidence/field-journey/caption-correction.json",
+      "size_bytes": 598,
+      "sha256": "a658e54aabeb7eeb87b7346d3655717b450f9e1164d08c41a4388afc201b2d14"
+    },
+    {
+      "local_path": "evidence/field-journey/engineering-smoke.json",
+      "size_bytes": 11456,
+      "sha256": "0cd5150507251ba66ae6b9636fee5a86921c94bac9aaa646f21edf8f63c2c151"
+    },
+    {
+      "local_path": "evidence/field-journey/execution.json",
+      "size_bytes": 3164,
+      "sha256": "72f045b6758df6b93271c61891ef8b499ced0c3d1f4aca8cf82be5caea20cd27"
+    },
+    {
+      "local_path": "evidence/field-journey/initial-browser-failure/browser-instrument.mjs",
+      "size_bytes": 19766,
+      "sha256": "e1a8db5ebb5bf87b9915b0885712b9e0b2fb59d94075ddd1ec823c5128942e15"
+    },
+    {
+      "local_path": "evidence/field-journey/initial-browser-failure/failure.json",
+      "size_bytes": 6610,
+      "sha256": "838b3d3897c9f1046480c0e60aa3b5c19be48e4c0b7e03f9fa46477be77af0b6"
+    },
+    {
+      "local_path": "evidence/field-journey/initial-browser-failure/hosts.json",
+      "size_bytes": 582,
+      "sha256": "6c296b0e3417c60e63eb91b35c896dfc668b6f5c7adc95e60ded574eabe35597"
+    },
+    {
+      "local_path": "evidence/field-journey/native-initial-failure.json",
+      "size_bytes": 760,
+      "sha256": "d5206281d7c2c914d603aa77d30c28536f84b5c323e83dadece2a3edca41f8b9"
+    },
+    {
+      "local_path": "evidence/field-journey/native.json",
+      "size_bytes": 16992,
+      "sha256": "b065ca3b2eec2bf3a71b7a876fde3e27d45041fed88411793a08ddb792587d87"
+    },
+    {
+      "local_path": "evidence/field-journey/preservation.json",
+      "size_bytes": 339076,
+      "sha256": "0b4b877d09098e5d26c6395899afc5cf4997f01b5573b39ec6d7b50be1303d09"
+    },
+    {
+      "local_path": "evidence/field-journey/protocol.json",
+      "size_bytes": 3497,
+      "sha256": "99750d12a2d771ee36673f1e6f728aca26b1aea1131e80fc1a61fa0e466980b5"
+    },
+    {
+      "local_path": "evidence/field-journey/superseded-browser/actual-loss-no-refund.png",
+      "size_bytes": 377533,
+      "sha256": "15bc88d5a4136559afe786a5f076797af6e02517853b1c832a7b9590c0288b7f"
+    },
+    {
+      "local_path": "evidence/field-journey/superseded-browser/actual-named-completion.png",
+      "size_bytes": 388293,
+      "sha256": "f8a1f55394e388665561860645df6c93be45398f9834705fb7b05b4b614ef779"
+    },
+    {
+      "local_path": "evidence/field-journey/superseded-browser/browser.json",
+      "size_bytes": 120113,
+      "sha256": "2b22ac501af7b8dcb6020af3967a2d694d9b1c13fa3d576faddfea5092797c88"
+    },
+    {
+      "local_path": "evidence/field-journey/superseded-browser/hosts.json",
+      "size_bytes": 2127,
+      "sha256": "1bccb6477dd6b58d5add226b3db4bef841a70fbb0a56c7f68dc465e6f615c572"
+    },
+    {
+      "local_path": "evidence/field-journey/superseded-browser/premature-unfunded.png",
+      "size_bytes": 374749,
+      "sha256": "f647b2e4a9a1de6a9567a8af63b40accf55b4334b6df3b10e953f5aa6b2a8bd4"
+    },
+    {
+      "local_path": "evidence/field-journey/superseded-browser/two-allocated-fittings.png",
+      "size_bytes": 377953,
+      "sha256": "918c4fb9a789d138f3ee26d5d84f03f89c8bc3d497b85df5845697994747110e"
+    },
+    {
+      "local_path": "evidence/field-journey/superseded-browser/web-app-before-caption.js",
+      "size_bytes": 12445,
+      "sha256": "94741a501248c5dee859f1c851a720605043f4bc4a634000ec91ad0a09a39649"
+    },
+    {
+      "local_path": "evidence/field-journey/superseded-native-checks.cs",
+      "size_bytes": 9691,
+      "sha256": "f54388d557e1f2e9cee7a302bc1b0b82b8e91f2625696618026a72490d1cd8e0"
+    },
+    {
+      "local_path": "evidence/field-journey/validation.json",
+      "size_bytes": 1164,
+      "sha256": "d4d179fa7cec8bd2c489b412a70c64938faad90701665c5edfe1e44091c35e24"
+    },
+    {
+      "local_path": "evidence/field-journey/verification.json",
+      "size_bytes": 7024,
+      "sha256": "6ba97b9238329ab3e03f02df423d59a7a58cdf3e8e30fc3f08106c7a792695e1"
+    }
+  ]
+}

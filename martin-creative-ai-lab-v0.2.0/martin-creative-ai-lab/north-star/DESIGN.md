@@ -804,3 +804,36 @@ vectors do not establish human understanding, preference, commercial clearance o
 approval. [Actual evidence](../evidence/memory-study/RUN.json) preserves permissive-source
 counterexamples, false renderers and the exhausted policy. Existing RequestExpedition,
 fixed Lure/Trail, journal, intake and both recipient platforms remain unchanged.
+
+
+## Carry what you made — experimental same-person component use
+
+**Status:** original implemented product composition, not final world/class canon,
+full avatar creation, balanced choice or approved production delivery.
+[The field journey](field-journey/README.md) gives one confirmed person continuity from
+actual local service through acquired component, assembly, equipment entry and actual
+Crossing. Workshop4parts/2coins and field4fiber/2binder remain distinct experiment setup.
+One unused acquired named fitting is an explicit additional component for real rig
+fabrication, not a hidden conversion, decorative badge or source catalog permission.
+
+Historical acquisition remains true after allocation; current availability is separate.
+An acquired fitting survives expired witness opportunity and withdrawn current support.
+Only actual accepted new fabrication spends it. First actual entry seals workshop for
+the expedition; later beats cannot age its clocks or observe worker presence/return.
+Unfunded premature departure is retained even with an unused component, without a remote
+assembly/refund escape. Actual losing contact still consumes equipment and component.
+
+The original unprepared mode remains a limited/losing option with no discipline skill,
+not a proven viable full-route alternative. This is practical costly preparation, not a
+moral favor/consent system; no perfect new third path or compensation is fabricated.
+Earned between-encounter preparation still belongs to the same actual owner. Workshop
+completion and survey victory remain distinct from actual final Crossing completion.
+
+Independent Engineering ENG004/015/017, Scientific SCI013/014/076/077 and Creative
+CRE001(D)/005(A),009/011/061(H) favored enacted identity and exact custody/clock boundaries
+over another standalone service or unlicensed scaffold. Creation inspected actual final
+captures and corrected a zero-stock caption; original results/producer bytes remain.
+[Evidence](../evidence/field-journey/RUN.json) preserves renderer negatives, loss and
+instrument mistakes. Agent review is not human comprehension/enjoyment, balance,
+commercial clearance or canon approval. Fixed RequestExpedition, journals, prior source
+variants and both downloaded scenes remain unchanged; no Unity migration is claimed.

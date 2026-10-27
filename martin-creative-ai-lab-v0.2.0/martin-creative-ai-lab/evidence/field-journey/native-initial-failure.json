@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "stage": "initial native comparison",
+  "exit_code": 134,
+  "error": "Unhandled exception. System.Exception: Unconfirmed refusal cannot close preparation",
+  "source_sha256": "f54388d557e1f2e9cee7a302bc1b0b82b8e91f2625696618026a72490d1cd8e0",
+  "source_path": "evidence/field-journey/superseded-native-checks.cs",
+  "observation": "Delegated unchanged Intake records a legitimate refused intent in receipt metadata. The initial comparator included child sequence/accepted/text and treated that receipt as changed gameplay facts.",
+  "correction": "Compare exact gameplay/preparation/custody/history facts separately from refusal receipt metadata; no owner, fixture or gameplay gate changed.",
+  "counts_as_additional_study": false
+}

@@ -1,0 +1,455 @@
+{
+  "trace": [
+    {
+      "request": {
+        "command": "help",
+        "revision": 0,
+        "bench": "west"
+      },
+      "accepted": false,
+      "sequence": 1,
+      "text": "Confirm the current whole identity before paid workshop preparation. A draft supplies no work, witness or goods."
+    },
+    {
+      "request": {
+        "command": "review",
+        "revision": 1
+      },
+      "accepted": true,
+      "sequence": 2,
+      "text": "Exact draft reviewed. Confirmation is separate; no owner, supplies or progress changed."
+    },
+    {
+      "request": {
+        "command": "confirm",
+        "revision": 2,
+        "draft_revision": 1
+      },
+      "accepted": true,
+      "sequence": 3,
+      "text": "Reviewed identity and complete preparation confirmed atomically. No supply, health or reward grant."
+    },
+    {
+      "request": {
+        "command": "help",
+        "revision": 3,
+        "bench": "west"
+      },
+      "accepted": true,
+      "sequence": 4,
+      "text": "One part and one action spent on actual local help. This bench observed the demonstration; its current window expires at turn 4."
+    },
+    {
+      "request": {
+        "command": "serve",
+        "revision": 4,
+        "bench": "west"
+      },
+      "accepted": true,
+      "sequence": 5,
+      "text": "One coin and one action spent. The west bench actually supplied its one fitting. Later expiry cannot erase this output."
+    },
+    {
+      "request": {
+        "command": "help",
+        "revision": 5,
+        "bench": "east"
+      },
+      "accepted": true,
+      "sequence": 6,
+      "text": "One part and one action spent on actual local help. This bench observed the demonstration; its current window expires at turn 6."
+    },
+    {
+      "request": {
+        "command": "serve",
+        "revision": 6,
+        "bench": "east"
+      },
+      "accepted": true,
+      "sequence": 7,
+      "text": "One coin and one action spent. The east bench actually supplied its one fitting. Later expiry cannot erase this output."
+    },
+    {
+      "request": {
+        "command": "craft",
+        "revision": 7,
+        "bench": "west",
+        "rig": "trail"
+      },
+      "accepted": true,
+      "sequence": 8,
+      "text": "Actual trail assembly spent 2 fiber, 1 binder and the acquired west fitting. Its service receipt remains historical acquisition, not another available component."
+    },
+    {
+      "request": {
+        "command": "craft",
+        "revision": 8,
+        "bench": "east",
+        "rig": "trail"
+      },
+      "accepted": true,
+      "sequence": 9,
+      "text": "Actual trail assembly spent 2 fiber, 1 binder and the acquired east fitting. Its service receipt remains historical acquisition, not another available component."
+    },
+    {
+      "request": {
+        "command": "craft",
+        "revision": 9,
+        "bench": "west",
+        "rig": "plate"
+      },
+      "accepted": false,
+      "sequence": 10,
+      "text": "That acquired fitting was already assembled. It cannot fund a second rig."
+    },
+    {
+      "request": {
+        "command": "begin",
+        "revision": 10,
+        "rig": "trail"
+      },
+      "accepted": true,
+      "sequence": 11,
+      "text": "Encounter committed. One Trail rig consumed; no refund on failure. Preparation is now closed; later encounter beats do not advance the separate historical workshop clock."
+    },
+    {
+      "request": {
+        "command": "wait-window",
+        "revision": 11
+      },
+      "accepted": false,
+      "sequence": 12,
+      "text": "Departure closed preparation. The workshop observation is historical; no remote work, fitting or return was observed."
+    },
+    {
+      "request": {
+        "command": "walk",
+        "revision": 12
+      },
+      "accepted": true,
+      "sequence": 13,
+      "text": "Walk: 4 damage, 0 resolve spent."
+    },
+    {
+      "request": {
+        "command": "slot",
+        "revision": 13,
+        "slot": 1
+      },
+      "accepted": true,
+      "sequence": 14,
+      "text": "Skill: 0 damage, 2 resolve spent."
+    },
+    {
+      "request": {
+        "command": "walk",
+        "revision": 14
+      },
+      "accepted": true,
+      "sequence": 15,
+      "text": "Walk: 0 damage, 0 resolve spent."
+    },
+    {
+      "request": {
+        "command": "slot",
+        "revision": 15,
+        "slot": 1
+      },
+      "accepted": true,
+      "sequence": 16,
+      "text": "Skill: 0 damage, 2 resolve spent. Completed; reward committed. Level 2, 2 unspent points."
+    },
+    {
+      "request": {
+        "command": "allocate",
+        "revision": 16,
+        "axis": "focus",
+        "points": 2
+      },
+      "accepted": true,
+      "sequence": 17,
+      "text": "Earned allocation committed."
+    },
+    {
+      "request": {
+        "command": "draft",
+        "revision": 17,
+        "handle": "Wayfarer",
+        "accent": "teal",
+        "class_id": "anchor",
+        "background_id": "trailborn",
+        "slots": [
+          "brace",
+          "dash",
+          null,
+          null
+        ]
+      },
+      "accepted": true,
+      "sequence": 18,
+      "text": "Draft changed only. Previous review expired; committed identity, supplies and progress remain unchanged."
+    },
+    {
+      "request": {
+        "command": "review",
+        "revision": 18
+      },
+      "accepted": true,
+      "sequence": 19,
+      "text": "Exact draft reviewed. Confirmation is separate; no owner, supplies or progress changed."
+    },
+    {
+      "request": {
+        "command": "confirm",
+        "revision": 19,
+        "draft_revision": 2
+      },
+      "accepted": true,
+      "sequence": 20,
+      "text": "Reviewed identity and complete preparation confirmed atomically. No supply, health or reward grant."
+    },
+    {
+      "request": {
+        "command": "begin",
+        "revision": 20,
+        "rig": "trail"
+      },
+      "accepted": true,
+      "sequence": 21,
+      "text": "Encounter committed. One Trail rig consumed; no refund on failure. Preparation is now closed; later encounter beats do not advance the separate historical workshop clock."
+    },
+    {
+      "request": {
+        "command": "slot",
+        "revision": 21,
+        "slot": 1
+      },
+      "accepted": true,
+      "sequence": 22,
+      "text": "Skill: 0 damage, 2 resolve spent."
+    },
+    {
+      "request": {
+        "command": "slot",
+        "revision": 22,
+        "slot": 1
+      },
+      "accepted": true,
+      "sequence": 23,
+      "text": "Skill: 0 damage, 2 resolve spent."
+    },
+    {
+      "request": {
+        "command": "slot",
+        "revision": 23,
+        "slot": 2
+      },
+      "accepted": true,
+      "sequence": 24,
+      "text": "Dash: 0 damage, 1 resolve spent."
+    },
+    {
+      "request": {
+        "command": "slot",
+        "revision": 24,
+        "slot": 1
+      },
+      "accepted": true,
+      "sequence": 25,
+      "text": "Skill: 0 damage, 2 resolve spent."
+    },
+    {
+      "request": {
+        "command": "slot",
+        "revision": 25,
+        "slot": 2
+      },
+      "accepted": true,
+      "sequence": 26,
+      "text": "Dash: 0 damage, 1 resolve spent."
+    },
+    {
+      "request": {
+        "command": "slot",
+        "revision": 26,
+        "slot": 1
+      },
+      "accepted": true,
+      "sequence": 27,
+      "text": "Skill: 0 damage, 2 resolve spent. Completed; reward committed. Level 3, 2 unspent points."
+    }
+  ],
+  "final": {
+    "sequence": 27,
+    "command": "slot",
+    "accepted": true,
+    "text": "Skill: 0 damage, 2 resolve spent. Completed; reward committed. Level 3, 2 unspent points.",
+    "workshop_closed": true,
+    "intake": {
+      "sequence": 20,
+      "command": "slot",
+      "accepted": true,
+      "text": "Skill: 0 damage, 2 resolve spent. Completed; reward committed. Level 3, 2 unspent points.",
+      "confirmed": true,
+      "pending": false,
+      "draft_revision": 2,
+      "reviewed_revision": 2,
+      "draft": {
+        "handle": "Wayfarer",
+        "accent": "teal",
+        "class_id": "anchor",
+        "background_id": "trailborn",
+        "slots": [
+          "brace",
+          "dash",
+          null,
+          null
+        ]
+      },
+      "identity": {
+        "handle": "Wayfarer",
+        "accent": "teal",
+        "class_id": "anchor",
+        "background_id": "trailborn",
+        "slots": [
+          "brace",
+          "dash",
+          null,
+          null
+        ]
+      },
+      "state": {
+        "class_id": "anchor",
+        "background_id": "trailborn",
+        "slots": [
+          "brace",
+          "dash",
+          null,
+          null
+        ],
+        "active": false,
+        "complete": true,
+        "won": true,
+        "stage": 1,
+        "beat": 6,
+        "position": 4,
+        "health": 11,
+        "resolve": 5,
+        "rig": "Trail",
+        "attempts": 2,
+        "consumed_rigs": 2,
+        "transactions": 4,
+        "inventory": {
+          "fiber": 0,
+          "binder": 0,
+          "trail_rig": 0
+        },
+        "level": 3,
+        "xp": 25,
+        "unspent": 2,
+        "vitality": 0,
+        "focus": 2
+      },
+      "threat": "BOLT: moving exposes health; the approach skill spends resolve to protect.",
+      "required_position": 4,
+      "maximum_beats": 6
+    },
+    "memory": {
+      "sequence": 4,
+      "command": "serve",
+      "accepted": true,
+      "text": "One coin and one action spent. The east bench actually supplied its one fitting. Later expiry cannot erase this output.",
+      "turn": 4,
+      "parts": 2,
+      "coins": 0,
+      "complete": true,
+      "benches": [
+        {
+          "id": "west",
+          "helped": true,
+          "support": true,
+          "recent": false,
+          "expires": null,
+          "eligible": false,
+          "delivered": true
+        },
+        {
+          "id": "east",
+          "helped": true,
+          "support": true,
+          "recent": true,
+          "expires": 6,
+          "eligible": false,
+          "delivered": true
+        }
+      ],
+      "history": [
+        {
+          "sequence": 1,
+          "command": "help",
+          "bench": "west",
+          "turn": 1,
+          "parts": 3,
+          "coins": 2,
+          "fittings": 0
+        },
+        {
+          "sequence": 2,
+          "command": "serve",
+          "bench": "west",
+          "turn": 2,
+          "parts": 3,
+          "coins": 1,
+          "fittings": 1
+        },
+        {
+          "sequence": 3,
+          "command": "help",
+          "bench": "east",
+          "turn": 3,
+          "parts": 2,
+          "coins": 1,
+          "fittings": 1
+        },
+        {
+          "sequence": 4,
+          "command": "serve",
+          "bench": "east",
+          "turn": 4,
+          "parts": 2,
+          "coins": 0,
+          "fittings": 2
+        }
+      ]
+    },
+    "fittings": [
+      {
+        "bench": "west",
+        "acquired": true,
+        "spent": true,
+        "available": false,
+        "rig": "trail"
+      },
+      {
+        "bench": "east",
+        "acquired": true,
+        "spent": true,
+        "available": false,
+        "rig": "trail"
+      }
+    ],
+    "assembly_receipts": [
+      {
+        "bench": "west",
+        "rig": "trail",
+        "request_id": "fitting_west"
+      },
+      {
+        "bench": "east",
+        "rig": "trail",
+        "request_id": "fitting_east"
+      }
+    ]
+  },
+  "limits": "Actual HTTP/native smoke overlapping final controls, not an additional study/unit or browser/Unity/Windows evidence."
+}

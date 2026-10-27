@@ -57,17 +57,18 @@ world canon or independent player validation. Build/Operations remains incomplet
 
 ![Actual extracted package after guided handoff: three crates remain unfinished](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/evidence/recipient-delivery/delivered.png)
 
-### Source experiment — A name on the road
+### Source experiment — Carry what you made
 
-[**Run the original visible intake**](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/intake/README.md) · [Actual execution](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/evidence/intake/RUN.json)
+[**Run the coherent C# field journey**](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/field-journey/README.md) · [Actual execution](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/evidence/field-journey/RUN.json)
 
-Draft, review and explicitly confirm a named field card, then spend finite materials
-and enact its preparation in the real C# journey. Accent is expression; discipline,
-slots and acquired outfit affect play. Actual failure retains spent rigs. This separate
-SDK-required local experiment has no save/account and is not included in the downloads
-above; no Unity, Windows or human assessment of this new consumer is claimed.
+Confirm one person, acquire a local fitting, spend it assembling actual equipment,
+and take that same person through real Crossing encounters. Acquired history stays
+true after component use; departure closes the workshop. Leaving too early can leave
+the next prepared entry unfunded. This separate SDK-required local experiment has no
+save/account and is not in the downloads above. Unity, Windows and human assessment
+of this new composition remain unexecuted.
 
-![Actual confirmed identity after the real journey](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/evidence/intake/browser/actual-completion.png)
+![Actual same-person component, equipment and completed road](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/evidence/field-journey/browser/actual-named-completion.png)
 
 <details>
 <summary>Developer entry points and retained research consumers</summary>
@@ -75,6 +76,7 @@ above; no Unity, Windows or human assessment of this new consumer is claimed.
 | Inspect or execute | Actual scope |
 |---|---|
 | [Scoped witness opportunity](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/memory-study/README.md) | Actual local help, current support, action-turn expiry and finite fittings; source-memory integration, not human testimony or a new downloadable package. |
+| [Original intake baseline](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/intake/README.md) | Separate explicit draft/review/confirmed identity and original prepared journey; preserved unchanged without the new fitting requirement. |
 | [C# development foundation](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/README.md) | Engine-independent progression/crafting domains, connected terminal consumers and checks. No Unity Editor or Windows-player execution is claimed. |
 | [Coherent authored C# scene](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/authored-scene/README.md) | Edda's unfinished work, Rill's actual agreement/departure/return and real encounters share one owner; inspected local browser demonstration. |
 | [Continuous C# repair and delivery](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/availability-study/README.md) | Actual repair acquisition, paid route, surviving cargo, two real Crossing encounters and observed watering in one C# browser journey. |
