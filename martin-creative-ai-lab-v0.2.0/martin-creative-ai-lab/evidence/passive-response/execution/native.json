@@ -1,0 +1,198 @@
+{
+  "schema_version": 1,
+  "kind": "actual_passive_native",
+  "checks": {
+    "passed": 33,
+    "failed": 0
+  },
+  "controls": [
+    "One slot begins None",
+    "Explicit preparation selects lining",
+    "Non-preparation context refuses Combat",
+    "Non-preparation context refuses Cutscene",
+    "Non-preparation context refuses Ended",
+    "Replacement removes lining rather than stacking",
+    "Heavy physical direct contact20 becomes18",
+    "Guard-first10 becomes9",
+    "Declared away-from-zero rounding at odd contact",
+    "Light armor supplies no lining mitigation",
+    "Other direct contact is not physical context",
+    "DOT is separate and not mitigated",
+    "Raw reduction is not overkill HP saved",
+    "Zero hit cannot spend rescue at1HP",
+    "Nonfatal hit cannot spend rescue",
+    "Actual fatal hit leaves1HP once without inventing raw mitigation",
+    "Second fatal direct hit defeats",
+    "Dead target never resurrects",
+    "Fatal DOT does not activate direct-hit rescue",
+    "Declared other direct hit remains eligible",
+    "Invalid typed hit leaves usage state exact",
+    "Initial active round0 is not out-of-combat",
+    "Explicit fresh preparation has no active encounter",
+    "Preparation cannot execute combat actions",
+    "Actual Begin owns only the selected effect",
+    "Active equip cannot recreate heal or reset the encounter",
+    "Actual Last thread policy secures at1HP",
+    "Same None policy dies before its final attack",
+    "Actual rescue then DOT still defeats in same round",
+    "Actual lining guard still pays full poison and bleed",
+    "Reads cannot rearm or change completed trial",
+    "Terminal equip is not an implicit new encounter",
+    "Only explicit new practice begins a fresh encounter"
+  ],
+  "none_defeat": {
+    "sequence": 7,
+    "command": "cleanse",
+    "accepted": true,
+    "phase": "ended",
+    "preparation": {
+      "profile": "toxic",
+      "passive": "none",
+      "armor": "light"
+    },
+    "state": {
+      "profile": "toxic",
+      "round": 4,
+      "hp": 0,
+      "maxHp": 100,
+      "enemyHp": 24,
+      "charges": 1,
+      "effects": [],
+      "threat": "No further threat; encounter ended.",
+      "events": [
+        "Treatment spent: removed 1 effects.",
+        "Target contact: 20 incoming direct damage; 13 actual HP lost.",
+        "Round 4 resolved: defeated."
+      ],
+      "outcome": "defeated",
+      "last": "Round 4 resolved: defeated.",
+      "weaponEnabled": true,
+      "attackMultiplier": 1,
+      "healingMultiplier": 1,
+      "passive": "none",
+      "armor": "light",
+      "rescueSpent": false,
+      "lastHit": {
+        "kind": "PhysicalDirect",
+        "incoming": 20,
+        "effectiveDamage": 20,
+        "hpBefore": 13,
+        "hpAfter": 0,
+        "damageReduced": 0,
+        "actualHpLost": 13,
+        "avoidedHpLoss": 0,
+        "rescued": false
+      }
+    }
+  },
+  "same_round_dot_defeat": {
+    "sequence": 7,
+    "command": "bash",
+    "accepted": true,
+    "phase": "ended",
+    "preparation": {
+      "profile": "toxic",
+      "passive": "last-thread",
+      "armor": "light"
+    },
+    "state": {
+      "profile": "toxic",
+      "round": 4,
+      "hp": 0,
+      "maxHp": 100,
+      "enemyHp": 10,
+      "charges": 2,
+      "effects": [
+        {
+          "effect": "Poison",
+          "remaining": 1
+        }
+      ],
+      "threat": "No further threat; encounter ended.",
+      "events": [
+        "bash: 14 direct damage to target. Burn multiplier 1.0.",
+        "Target contact: 20 incoming direct damage; 12 actual HP lost.",
+        "Passive last-thread / light: physical contact 20 \u2192 20; damage reduced 0; actual HP lost 12; HP loss avoided 1; fatal-hit rescue used now; once-per-encounter rescue spent. DOT is separate and remains payable.",
+        "End round 4: Poison incoming DOT 6; actual HP lost 1; 1 rounds remain. Guard does not reduce this tick.",
+        "Round 4 resolved: defeated."
+      ],
+      "outcome": "defeated",
+      "last": "Round 4 resolved: defeated.",
+      "weaponEnabled": true,
+      "attackMultiplier": 1,
+      "healingMultiplier": 1,
+      "passive": "last-thread",
+      "armor": "light",
+      "rescueSpent": true,
+      "lastHit": {
+        "kind": "PhysicalDirect",
+        "incoming": 20,
+        "effectiveDamage": 20,
+        "hpBefore": 13,
+        "hpAfter": 1,
+        "damageReduced": 0,
+        "actualHpLost": 12,
+        "avoidedHpLoss": 1,
+        "rescued": true
+      }
+    }
+  },
+  "lining_guard": {
+    "sequence": 4,
+    "command": "guard",
+    "accepted": true,
+    "phase": "active",
+    "preparation": {
+      "profile": "toxic",
+      "passive": "lining",
+      "armor": "heavy"
+    },
+    "state": {
+      "profile": "toxic",
+      "round": 1,
+      "hp": 82,
+      "maxHp": 100,
+      "enemyHp": 96,
+      "charges": 2,
+      "effects": [
+        {
+          "effect": "Poison",
+          "remaining": 2
+        },
+        {
+          "effect": "Bleed",
+          "remaining": 2
+        }
+      ],
+      "threat": "Pressure: 20 direct damage, then extends poison (toxic) or burn (heated) by two rounds.",
+      "events": [
+        "Guard halves this round\u0027s direct contact; it cannot reduce DOT.",
+        "Target contact: 10 incoming direct damage; 9 actual HP lost.",
+        "Passive lining / heavy: physical contact 10 \u2192 9; damage reduced 1; actual HP lost 9; HP loss avoided 1; fatal-hit rescue not used now; once-per-encounter rescue not equipped. DOT is separate and remains payable.",
+        "End round 1: Poison incoming DOT 6; actual HP lost 6; 2 rounds remain. Guard does not reduce this tick.",
+        "End round 1: Bleed incoming DOT 3; actual HP lost 3; 2 rounds remain. Guard does not reduce this tick.",
+        "Round 1 resolved: active."
+      ],
+      "outcome": "active",
+      "last": "Round 1 resolved: active.",
+      "weaponEnabled": true,
+      "attackMultiplier": 1,
+      "healingMultiplier": 0.7,
+      "passive": "lining",
+      "armor": "heavy",
+      "rescueSpent": false,
+      "lastHit": {
+        "kind": "PhysicalDirect",
+        "incoming": 10,
+        "effectiveDamage": 9,
+        "hpBefore": 100,
+        "hpAfter": 91,
+        "damageReduced": 1,
+        "actualHpLost": 9,
+        "avoidedHpLoss": 1,
+        "rescued": false
+      }
+    }
+  },
+  "limits": "Source prose subset and declared destination policy, not Ruby/RGSS/learning/class eligibility, full passives, human balance or Unity/Windows/Steam."
+}

@@ -146,3 +146,9 @@ and actual entry consumes that rig. The first departure seals workshop access;
 unused historical components cannot assemble remotely. [Execution](../evidence/field-journey/RUN.json)
 distinguishes actual completion, unfunded premature departure, loss and source-unprepared
 limits. Existing standalone consumers and both recipients stay unchanged.
+
+The existing [Treatment Line](combat-study/README.md) now makes one selected passive
+consequential: heavy physical contact mitigation competes with one fatal-hit rescue.
+Actual DOT can still defeat the rescued character. [Executed evidence](../evidence/passive-response/RUN.json)
+is software verification of explicit experimental rules, not learned source classes,
+human balance, approved canon or production delivery.

@@ -91,3 +91,44 @@ Windows module/player and Steam delivery remain unverified/unexecuted. The offic
 and [Windows requirements](https://docs.unity3d.com/6000.0/Documentation/Manual/windows-requirements-and-compatibility.html)
 were consulted; neither supplies an installed licensed toolchain. No Editor patch or
 commercial clearance is inferred. This .NET/Linux/browser consumer is not that delivery.
+
+## Selected passive preparation and actual effects
+
+The same Treatment Line now offers explicit **New practice preparation**, one passive
+slot and typed Light/Heavy context. Begin creates that actual encounter. The existing
+restart buttons still start active None/light trials; existing None outcomes remain
+regression obligations. Round0 in an active encounter is not preparation. Active or
+ended equip refuses; only an explicit new practice discards the ephemeral old trial
+and creates fresh resources/usage. This is not a live swap, account refund or save.
+
+Lining reduces typed physical DIRECT contact10% only with Heavy. Guard applies first;
+remaining integer damage rounds away from zero. Light, other direct categories and DOT
+receive no Lining reduction. Heavy/Light here is a condition, without a complete armor
+stat/cost system. Last Thread intercepts one eligible fatal DIRECT hit at1HP per
+encounter; it never resurrects0HP, never intercepts DOT and cannot protect from later
+DOT in the SAME round. Raw reduction differs from actual HP loss/HP loss avoided.
+
+Source prose supplies these selected patterns, not their complete operational order,
+DOT classification or rounding. Study availability does not grant historical level6/9,
+class/gender/rarity/learning eligibility. Original display names avoid importing that
+fiction. Rogue20% and Knight-while-uncontrolled alternatives remain incompatible and
+unimplemented. The one scalar source UI assignment is not a complete effect provider.
+
+Actual toxic sequence `strike,strike,strike,cleanse,strike` can secure at1HP with Last
+Thread while None dies on its fourth action. `strike,strike,strike,bash` can trigger
+rescue yet die to DOT that same round. These are fixed software policies, not optimality,
+balance, necessity or player preference. Explicit controls show the selected passive,
+armor condition, direct-hit accounting and used rescue without turning rescue into
+victory or invulnerability.
+
+Reproduce the source assay, native mechanics, new actual browser flow and affected
+old regressions using a new external output directory:
+
+```bash
+python3 north-star/combat-study/tools/passive-verify.py --dotnet dotnet --output /tmp/passive-new-output
+```
+
+[Selected method](../../labs/combat-response/passives/README.md) and
+[actual evidence](../../evidence/passive-response/RUN.json) preserve the scope, negatives,
+original producer and limits. Rules remain C#8/netstandard2.1; Host is .NET10/Linux/browser,
+not Unity, new Windows/Steam delivery, human validation or final source canon.

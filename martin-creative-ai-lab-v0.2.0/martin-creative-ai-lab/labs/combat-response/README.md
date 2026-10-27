@@ -151,3 +151,12 @@ binds 49 historical cases, strict destination controls and visible counterplay. 
 does not rerun or replace the P06 native pilot above, nor claim that its parry method
 has been ported. Existing Cinderwatch individual-turn scorch remains incompatible and
 preserved. Full source combat/runtime, human experience and Unity/Windows remain open.
+
+## Selected passive effects in the existing consumer
+
+The [source-bound passive method](passives/README.md) extends the actual original
+[Treatment Line](../../north-star/combat-study/README.md), retaining its None policies
+and global rounds. [Execution](../../evidence/passive-response/RUN.json) separates
+mitigation from HP saved, one-use rescue from survival, and direct contact from later
+DOT. Only selected mechanics/context are consumed; complete source passives, source
+class eligibility, Ruby/RMXP and human balance remain unresolved.

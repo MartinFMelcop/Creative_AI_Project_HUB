@@ -837,3 +837,20 @@ captures and corrected a zero-stock caption; original results/producer bytes rem
 instrument mistakes. Agent review is not human comprehension/enjoyment, balance,
 commercial clearance or canon approval. Fixed RequestExpedition, journals, prior source
 variants and both downloaded scenes remain unchanged; no Unity migration is claimed.
+
+## Selected passive opportunity cost — experimental
+
+In the existing Treatment Line study, one preparation-only slot offers original
+**Lining** (heavy physical direct contact reduced10%) or **Last thread** (one fatal
+direct hit leaves1HP once per encounter). No simultaneous stack, active/round-zero
+replacement or rearm by redraw is allowed. Guard resolves first; integer reduction
+rounds away from zero. Later DOT is unchanged and can defeat the rescued person.
+These are explicit destination policies where source prose is silent, not recovered
+full source timing. [Evidence](../evidence/passive-response/RUN.json) retains the
+winning rescue policy, same-policy None loss and rescue-then-DOT loss.
+
+Mechanics are available as disclosed study presets, not earned classes/levels or
+a new character canon. Source Warrior, Rogue chance and Knight control requirements
+remain separate; no gender, class fiction, faction or moral meaning is imported.
+This is one legacy/laboratory contribution using an existing original consumer,
+not another product wrapper, production armor system or author/player approval.

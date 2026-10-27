@@ -1,0 +1,297 @@
+{
+  "schema_version": 1,
+  "kind": "destination_execution",
+  "baseline_commit": "2c291d4a5eb92c5f5381017a289d3f20fafbf704",
+  "consumer_paths": [
+    "north-star/combat-study/Rules/Combat.cs",
+    "north-star/combat-study/Rules/Passives.cs",
+    "north-star/combat-study/Host/Trial.cs",
+    "north-star/combat-study/Host/Room.cs",
+    "north-star/combat-study/Host/Program.cs",
+    "north-star/combat-study/Host/web/app.js"
+  ],
+  "source_artifacts": [
+    {
+      "local_path": "evidence/passive-response/protocol.json",
+      "sha256": "135028fc1c8ed7cc1bdf3a1fd603fb38076c149702fb1d24b19d3083c8920156",
+      "size_bytes": 3722
+    },
+    {
+      "local_path": "labs/combat-response/passives/assay.py",
+      "sha256": "6a5a08ca3baed67c9ce1c7c269fe94c1ab99b98917abfd7c904c16415e07a131",
+      "size_bytes": 4345
+    },
+    {
+      "local_path": "north-star/combat-study/Checks/.gitignore",
+      "sha256": "6c5082c7e6de3e350189c67a1aacf757485ecc26e0a3cf96683528565f3e5f12",
+      "size_bytes": 10
+    },
+    {
+      "local_path": "north-star/combat-study/Checks/NorthStar.CombatChecks.csproj",
+      "sha256": "d159d1f16880492f4366940b4f8318c45cdede7bea1a237f9686d3ad7a637411",
+      "size_bytes": 309
+    },
+    {
+      "local_path": "north-star/combat-study/Checks/Program.cs",
+      "sha256": "8901ea5754bb5d89d805b0298438cfb2a4a411b0f403e1843abae72720e066a1",
+      "size_bytes": 5543
+    },
+    {
+      "local_path": "north-star/combat-study/Host/.gitignore",
+      "sha256": "6c5082c7e6de3e350189c67a1aacf757485ecc26e0a3cf96683528565f3e5f12",
+      "size_bytes": 10
+    },
+    {
+      "local_path": "north-star/combat-study/Host/NorthStar.CombatStudy.csproj",
+      "sha256": "6ac29b7401802c5166c75d9479eeff138837492f10e3960ee98e0e1494fb0a30",
+      "size_bytes": 347
+    },
+    {
+      "local_path": "north-star/combat-study/Host/Program.cs",
+      "sha256": "c50ae615810de00fefec849ca091db63db0cefca308e2d3befe9d5f3f6a90059",
+      "size_bytes": 4956
+    },
+    {
+      "local_path": "north-star/combat-study/Host/Room.cs",
+      "sha256": "f260e7a9d9ebc3f3c7a98b340ba3b0a5ec311861e0ee566e16b0b04952f971b9",
+      "size_bytes": 3060
+    },
+    {
+      "local_path": "north-star/combat-study/Host/Trial.cs",
+      "sha256": "2d621c10b3cb26a69dd2c20d46d57bd1d831125b35d638eae79f2156fd27272e",
+      "size_bytes": 5793
+    },
+    {
+      "local_path": "north-star/combat-study/Host/web/app.js",
+      "sha256": "8f152813a8b4265bf813e5b2e051b5e280a3b682d9156faa50cd7fb1c1625bf8",
+      "size_bytes": 7811
+    },
+    {
+      "local_path": "north-star/combat-study/Host/web/index.html",
+      "sha256": "194f1feb6e10391f6b03065efd5242e8bd6ffd8e9d5bdaf37623b2354ce841a7",
+      "size_bytes": 5215
+    },
+    {
+      "local_path": "north-star/combat-study/Host/web/style.css",
+      "sha256": "e6774aa759ceeb719143e193bfb86123f8edcc97eb543b4020fa2566e201960a",
+      "size_bytes": 4446
+    },
+    {
+      "local_path": "north-star/combat-study/PassiveChecks/.gitignore",
+      "sha256": "6c5082c7e6de3e350189c67a1aacf757485ecc26e0a3cf96683528565f3e5f12",
+      "size_bytes": 10
+    },
+    {
+      "local_path": "north-star/combat-study/PassiveChecks/NorthStar.PassiveChecks.csproj",
+      "sha256": "4d9265cc2c935d4ffdb5a2c5d9397b6f037b2a852205b93fd7220392ec6d589d",
+      "size_bytes": 348
+    },
+    {
+      "local_path": "north-star/combat-study/PassiveChecks/Program.cs",
+      "sha256": "8b5bd60ea7ca19c2f89ef941b16d5691135d94ea4a7ed467b59082a893ff6fd8",
+      "size_bytes": 8016
+    },
+    {
+      "local_path": "north-star/combat-study/README.md",
+      "sha256": "20dac36e0b1e65f219b893dfcbe9ded000e855fee82eea789785c477e5f21aef",
+      "size_bytes": 8640
+    },
+    {
+      "local_path": "north-star/combat-study/Rules/.gitignore",
+      "sha256": "6c5082c7e6de3e350189c67a1aacf757485ecc26e0a3cf96683528565f3e5f12",
+      "size_bytes": 10
+    },
+    {
+      "local_path": "north-star/combat-study/Rules/COMPATIBILITY.md",
+      "sha256": "cd88dc4b2cf6c9353e208d5ea045eedd7ed04cdd44458bd07435a195932dfc40",
+      "size_bytes": 2159
+    },
+    {
+      "local_path": "north-star/combat-study/Rules/Combat.cs",
+      "sha256": "2624d7596cca2cc4bef78c17f143004b48978866654e4c84f6b4960ff5800fb6",
+      "size_bytes": 5165
+    },
+    {
+      "local_path": "north-star/combat-study/Rules/NorthStar.Combat.csproj",
+      "sha256": "c5ac413d76e9a444ec0662371e5f969c361e3d8ad6c4c0b109c21da09306a845",
+      "size_bytes": 232
+    },
+    {
+      "local_path": "north-star/combat-study/Rules/Passives.cs",
+      "sha256": "4ef33bc84c6fdf7849d3aa8bda925a0f7fd2293be29cdfbf884cc67bccc87d10",
+      "size_bytes": 3997
+    },
+    {
+      "local_path": "north-star/combat-study/TrialChecks/.gitignore",
+      "sha256": "6c5082c7e6de3e350189c67a1aacf757485ecc26e0a3cf96683528565f3e5f12",
+      "size_bytes": 10
+    },
+    {
+      "local_path": "north-star/combat-study/TrialChecks/NorthStar.TrialChecks.csproj",
+      "sha256": "0a72d3d879071cd0be22e857004f718bb46110a7d972d2a2f3644f50a2bc8d79",
+      "size_bytes": 313
+    },
+    {
+      "local_path": "north-star/combat-study/TrialChecks/Program.cs",
+      "sha256": "b3f41b5517f235433311e278901333687fc81bcbb055886376a785af125c8c5a",
+      "size_bytes": 6206
+    },
+    {
+      "local_path": "north-star/combat-study/tools/browser.mjs",
+      "sha256": "7cf368c2f829080c1216d165e66b084d83e0f3652c2d60b3352553a18d0e0091",
+      "size_bytes": 10816
+    },
+    {
+      "local_path": "north-star/combat-study/tools/passive-browser.mjs",
+      "sha256": "6b961013207514f7483dd357e457f8a318e4d71841675ff28bebb13d56634c82",
+      "size_bytes": 17763
+    },
+    {
+      "local_path": "north-star/combat-study/tools/passive-verify.py",
+      "sha256": "560a0394ea8384b8fd9d330bf8a59e847c61ee8eb580d7de16e6a61d6ae45947",
+      "size_bytes": 3136
+    },
+    {
+      "local_path": "north-star/combat-study/tools/verify.py",
+      "sha256": "3a1b79c741faaeb0ca50c9ad6d0a6d83f67098b78ee56b134f51f6f6236d32af",
+      "size_bytes": 4336
+    },
+    {
+      "local_path": "north-star/csharp/global.json",
+      "sha256": "e0c0882461e712f6c2c66241bf2f175c60832e3ff077dc26091ff8c661d4193e",
+      "size_bytes": 55
+    },
+    {
+      "local_path": "projects/realtime-integration-lab/package-lock.json",
+      "sha256": "aa191ef2158e6cc6f770bf4b3ee44dca17175ef1a3cd572b98115246bf46aea7",
+      "size_bytes": 42105
+    },
+    {
+      "local_path": "projects/realtime-integration-lab/package.json",
+      "sha256": "42e3cc9633e522dd6d9a5c11023418331129632881a8bf0b95e3717247d57ebe",
+      "size_bytes": 1445
+    },
+    {
+      "local_path": "references/rave-master/snapshots/36af1651271422ae33856e8b5d7b45702215f165/source/RM_ACT1/DATA/CORE/ACT1_PASSIVES_CANON.csv",
+      "sha256": "0a767068176249d0e2fcde5bf069f0244bee594f8e12e330ddd6ba2311215b5a",
+      "size_bytes": 21351
+    },
+    {
+      "local_path": "references/rave-master/snapshots/36af1651271422ae33856e8b5d7b45702215f165/source/RM_ACT1/DATA/DEV/RGSS/RM_UI_PASSIVE_EQUIP_RUNTIME.rb",
+      "sha256": "3fade011d1b905d7eaf3cdf2158f67fffa7a4df69ad3d81e72b47eb30ec515b2",
+      "size_bytes": 3549
+    },
+    {
+      "local_path": "references/rave-master/snapshots/36af1651271422ae33856e8b5d7b45702215f165/source/RM_CORE/DATA/CORE/PASSIVE_EQUIP_RULES.csv",
+      "sha256": "8a22e1c97a5336e27e2bec8012190f628f61e9466dc0d0213d40a30cfad38130",
+      "size_bytes": 268
+    },
+    {
+      "local_path": "references/rave-master/snapshots/36af1651271422ae33856e8b5d7b45702215f165/source/RM_DIST/RMXP_BASE/Data/RM_CSV/ACT1_PASSIVES_CANON.csv",
+      "sha256": "0a767068176249d0e2fcde5bf069f0244bee594f8e12e330ddd6ba2311215b5a",
+      "size_bytes": 21351
+    },
+    {
+      "local_path": "references/rave-master/snapshots/36af1651271422ae33856e8b5d7b45702215f165/source/RM_DIST/RMXP_BASE/Data/RM_CSV/PASSIVE_EQUIP_RULES.csv",
+      "sha256": "8a22e1c97a5336e27e2bec8012190f628f61e9466dc0d0213d40a30cfad38130",
+      "size_bytes": 268
+    },
+    {
+      "local_path": "references/rave-master/snapshots/36af1651271422ae33856e8b5d7b45702215f165/source/RM_DIST/RMXP_BASE/ScriptsCustom/RM_UI_PASSIVE_EQUIP_RUNTIME.rb",
+      "sha256": "241d84cef46c9bee830c0f217919df6832d112de8a42f9e61eb71e743807a639",
+      "size_bytes": 1954
+    }
+  ],
+  "checks": {
+    "passed": 33,
+    "failed": 0
+  },
+  "commands": [
+    {
+      "command": [
+        "/workspace/work/authored-scene/dotnet/dotnet",
+        "--version"
+      ],
+      "exit_code": 0,
+      "stdout": "10.0.401\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/workspace/work/authored-scene/dotnet/dotnet",
+        "build",
+        "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/combat-study/PassiveChecks/NorthStar.PassiveChecks.csproj",
+        "-c",
+        "Release"
+      ],
+      "exit_code": 0,
+      "stdout": "  Determining projects to restore...\n  All projects are up-to-date for restore.\n  NorthStar.Combat -> /workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/combat-study/Rules/bin/Release/netstandard2.1/NorthStar.Combat.dll\n  NorthStar.CombatStudy -> /workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/combat-study/Host/bin/Release/net10.0/NorthStar.CombatStudy.dll\n  NorthStar.PassiveChecks -> /workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/combat-study/PassiveChecks/bin/Release/net10.0/NorthStar.PassiveChecks.dll\n\nBuild succeeded.\n    0 Warning(s)\n    0 Error(s)\n\nTime Elapsed 00:00:03.95\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/workspace/work/authored-scene/dotnet/dotnet",
+        "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/combat-study/PassiveChecks/bin/Release/net10.0/NorthStar.PassiveChecks.dll",
+        "/workspace/work/passive-cycle/final-1/native.json"
+      ],
+      "exit_code": 0,
+      "stdout": "PASS: 33 passive native controls\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python3",
+        "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/labs/combat-response/passives/assay.py",
+        "--output",
+        "/workspace/work/passive-cycle/final-1/source-assay.json"
+      ],
+      "exit_code": 0,
+      "stdout": "PASS: selected2effect contracts,1slot rule;77rows/2differentUIhelpers inspected, no Ruby execution\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python3",
+        "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/combat-study/tools/verify.py",
+        "--dotnet",
+        "/workspace/work/authored-scene/dotnet/dotnet",
+        "--output",
+        "/workspace/work/passive-cycle/final-1/regressions"
+      ],
+      "exit_code": 0,
+      "stdout": "Actual combat consumer and source instruments passed; stable inputs: 24\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "node",
+        "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/combat-study/tools/passive-browser.mjs",
+        "/workspace/work/authored-scene/dotnet/dotnet",
+        "/workspace/work/passive-cycle/final-1/browser"
+      ],
+      "exit_code": 0,
+      "stdout": "PASS: 21 passive Chromium controls and 7 HTTP controls\n",
+      "stderr": ""
+    }
+  ],
+  "actual_browser_checks": {
+    "passed": 21,
+    "failed": 0
+  },
+  "actual_http_checks": {
+    "passed": 7,
+    "failed": 0
+  },
+  "affected_regressions": {
+    "rules": 43,
+    "consumer": 46,
+    "browser": 17,
+    "http": 5,
+    "same_python_csharp_cases": 49
+  },
+  "source_assay": "execution/source-assay.json",
+  "source_stable": true,
+  "scope": "One existing Treatment Line consumer; selected passive mechanics and one-slot context authority. Not source Ruby execution, full catalog/class eligibility, balance, human approval, Unity or Windows/Steam. Overlapping controls are not independent studies or effort units.",
+  "superseded": "Initial browser passed before a truthful non-rescue caption correction; exact Trial preimage and initial results/captures remain. Final execution followed correction.",
+  "specialists": "Independent Engineering, Scientific and Creative analyses and coordinated rule/UI/instrument implementation delivered. Followups reached usage limits; primary completed final caption correction, verification and Tokyo diagnosis sequentially. Agent review is not human approval."
+}

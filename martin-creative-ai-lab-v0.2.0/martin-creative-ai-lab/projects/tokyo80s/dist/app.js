@@ -165,6 +165,8 @@ async function togglePause(reason='Paused. The song and notes are frozen.') {
     if(mode!=='pausing')return;
     frozen=Math.max(0,audioContext.currentTime-started);
     run.pause(adjustedTime(frozen,offset));
+    // Publish the suspended clock before consumers can observe the paused mode.
+    observePosition(frozen);
     setMode('paused');center('Take a breath.','Re-hold lit lanes before Resume, or within 200 ms after. No notes pass while paused.');message(reason);
   } else if(mode==='paused') {
     const token=epoch;
@@ -437,6 +439,13 @@ function draw(time) {
     }
   }
 }
+function observePosition(time) {
+  $('stage').dataset.position=String(time);
+  $('stage').dataset.songPosition=String(session?session.cueStart+time*session.rate:time);
+  $('progress').value=time;
+  const duration=session?.duration||track?.duration||69;
+  $('timer').textContent=`${stamp(Math.min(duration,time))} / ${stamp(duration)}`;
+}
 function frame() {
   let time=run?position():0;
   if(mode==='results')time=frozen;
@@ -454,11 +463,7 @@ function frame() {
     if(time>=session.duration)completeRun();
     updateStats();
   }
-  $('stage').dataset.position=String(time);
-  $('stage').dataset.songPosition=String(session?session.cueStart+time*session.rate:time);
-  $('progress').value=time;
-  const duration=session?.duration||track?.duration||69;
-  $('timer').textContent=`${stamp(Math.min(duration,time))} / ${stamp(duration)}`;
+  observePosition(time);
   pads.forEach((p,lane)=>p.classList.toggle('sustaining',!!run?.notes.some(n=>n.lane===lane&&n.state==='holding')));
   $('judgment').textContent=time<flash.until?flash.text:'';$('judgment').style.color=flash.color;
   draw(time);

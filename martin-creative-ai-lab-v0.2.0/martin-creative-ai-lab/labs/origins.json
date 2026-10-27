@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "updated_at": "2026-10-26",
+  "updated_at": "2026-10-27",
   "baseline_commit": "9c69f295a1c5d736761a113d0e41aaa8600fb635",
   "scope": "Mandatory eleven-laboratory transformation. Historical source preservation is separate from terminal knowledge consumption; operational claims require executed instruments and bound evidence.",
   "north_star_consumer_demonstrated": true,
@@ -1296,6 +1296,7 @@
         "north-star/combat-study/Host/Trial.cs"
       ],
       "evidence": [
+        "evidence/passive-response/RUN.json",
         "evidence/combat-status/RUN.json",
         "evidence/combat-status/source.json",
         "evidence/combat-status/browser.json"
@@ -1303,7 +1304,8 @@
       "evidence_sha256": {
         "evidence/combat-status/RUN.json": "bc2f0b3d4574072c494f36276085d832a6236a7056b6ff5fb874334869ded9c0",
         "evidence/combat-status/source.json": "e4471d51340762e51fb5aa424874e1ccb856d302c0da3fa097a492ee7bf1b26d",
-        "evidence/combat-status/browser.json": "9d4f2e9d20dffeace99d3f514fbeb818a85b0c9cd4e21833ee70c4a737d887f1"
+        "evidence/combat-status/browser.json": "9d4f2e9d20dffeace99d3f514fbeb818a85b0c9cd4e21833ee70c4a737d887f1",
+        "evidence/passive-response/RUN.json": "a74946321271b5045b5d3ca064ce09a8c82678c589bf15198d74d675ee9ffac8"
       }
     },
     {
@@ -1941,6 +1943,55 @@
         "evidence/memory-study/source/source-assay.json": "2c4998da9aa2885fb83ad6cd490f106181d053f4d4d51b8d47a2f4e4f659b31a",
         "evidence/memory-study/source/results.json": "3cc986ebb26795188c5794844be11300ce04a5303b210be79b3c31a35a99c111",
         "evidence/memory-study/browser/browser.json": "23d5a3dd6e0500a7d8d40294656a42c13a8528e16049abd73f860f9803fbf364"
+      }
+    },
+    {
+      "id": "XP-SELECTED-PASSIVE-CONTRACT",
+      "origin_projects": [
+        "P10"
+      ],
+      "laboratory_id": "combat-response",
+      "status": "INTEGRATED",
+      "source_paths": [
+        "references/rave-master/snapshots/36af1651271422ae33856e8b5d7b45702215f165/source/RM_ACT1/DATA/CORE/ACT1_PASSIVES_CANON.csv",
+        "references/rave-master/snapshots/36af1651271422ae33856e8b5d7b45702215f165/source/RM_DIST/RMXP_BASE/Data/RM_CSV/ACT1_PASSIVES_CANON.csv",
+        "references/rave-master/snapshots/36af1651271422ae33856e8b5d7b45702215f165/source/RM_CORE/DATA/CORE/PASSIVE_EQUIP_RULES.csv",
+        "references/rave-master/snapshots/36af1651271422ae33856e8b5d7b45702215f165/source/RM_DIST/RMXP_BASE/Data/RM_CSV/PASSIVE_EQUIP_RULES.csv"
+      ],
+      "decision": "Adapt one out-of-combat slot and selected literal heavy-physical 10% reduction/fatal-hit 1HP once-per-combat mechanics into the existing C# Treatment Line. Destination explicitly chooses direct-hit versus DOT separation, Guard-before-reduction and away-from-zero integer rounding. Source does not settle these policies. Class/gender/level/pool/scaling/rarity acquisition is not implemented: presets are experimental, not earned source abilities. Rogue chance survival and Knight control condition remain distinct, unintegrated choices.",
+      "evidence": [
+        "evidence/passive-response/RUN.json",
+        "evidence/passive-response/execution/source-assay.json"
+      ],
+      "evidence_sha256": {
+        "evidence/passive-response/RUN.json": "a74946321271b5045b5d3ca064ce09a8c82678c589bf15198d74d675ee9ffac8",
+        "evidence/passive-response/execution/source-assay.json": "b72eec94785a819330fdd0e45601db6673bdaddedf67214036b5c8e0825dee31"
+      },
+      "consumer_paths": [
+        "north-star/combat-study/Rules/Passives.cs",
+        "north-star/combat-study/Host/Trial.cs",
+        "north-star/combat-study/Host/Room.cs"
+      ]
+    },
+    {
+      "id": "XP-PASSIVE-UI-FULL-PROVIDER",
+      "origin_projects": [
+        "P10"
+      ],
+      "laboratory_id": "combat-response",
+      "status": "REJECTED",
+      "source_paths": [
+        "references/rave-master/snapshots/36af1651271422ae33856e8b5d7b45702215f165/source/RM_ACT1/DATA/DEV/RGSS/RM_UI_PASSIVE_EQUIP_RUNTIME.rb",
+        "references/rave-master/snapshots/36af1651271422ae33856e8b5d7b45702215f165/source/RM_DIST/RMXP_BASE/ScriptsCustom/RM_UI_PASSIVE_EQUIP_RUNTIME.rb"
+      ],
+      "decision": "Reject direct UI helpers as a complete context, eligibility and combat-effect provider. Both already assign one scalar rm_passive_equipped_id; do not falsely claim multiple simultaneous slots. DEV parses/displays rule text while DIST differs. Inspected assignments alone do not execute selected effects or enforce all source eligibility. Static source analysis is not Ruby/RMXP execution or evidence of a historical exploit.",
+      "evidence": [
+        "evidence/passive-response/RUN.json",
+        "evidence/passive-response/execution/source-assay.json"
+      ],
+      "evidence_sha256": {
+        "evidence/passive-response/RUN.json": "a74946321271b5045b5d3ca064ce09a8c82678c589bf15198d74d675ee9ffac8",
+        "evidence/passive-response/execution/source-assay.json": "b72eec94785a819330fdd0e45601db6673bdaddedf67214036b5c8e0825dee31"
       }
     }
   ]

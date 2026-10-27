@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "baseline_ci": "ci-baseline.json",
+  "initial_unchanged_test": "tokyo-targeted.txt",
+  "read_only_observations": [
+    "tokyo-observe.txt",
+    "tokyo-trace.txt"
+  ],
+  "observation_script": "tokyo-observe.mjs",
+  "original_producer": "tokyo-original-app.js",
+  "corrected_target": "tokyo-corrected-target.txt",
+  "corrected_review_browser": "tokyo-review-final.txt",
+  "corrected_logic": "tokyo-core-final.txt",
+  "result": {
+    "targeted": 1,
+    "review_browser": 3,
+    "logic": 33,
+    "failed": 0
+  },
+  "finding": "Paused mode was observable before frame projection received frozen position; an observed passing trace changed from4.290839002267574 to4.299546485260771 after paused mode. This supports a real presentation publication gap, not a proof of each CI failure cause.",
+  "correction": "Publish existing suspended clock position/song position/progress/timer before paused mode; share projection with frame. Audio/scoring/test/fixture/tolerance/timeout unchanged.",
+  "initial_log_preservation": {
+    "normalized_view": "tokyo-targeted.txt",
+    "exact_original_base64": "tokyo-targeted-original.base64",
+    "original_sha256": "9bfdf88c0f39e913ed2c396ca7a41b643d75704e8f7fa2f1d4b123899f149d3a",
+    "normalization": "Remove trailing whitespace only; exact original decoded bytes retained."
+  }
+}

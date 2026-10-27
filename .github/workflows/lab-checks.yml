@@ -656,10 +656,10 @@ jobs:
           if-no-files-found: ignore
           retention-days: 7
 
-      - name: Execute source-bound combat status and actual C# practice consumer
+      - name: Execute source-bound status, selected passives and actual C# practice consumer
         run: |
           python3 labs/combat-response/status/test_instrument.py
-          python3 north-star/combat-study/tools/verify.py --dotnet dotnet --output "$RUNNER_TEMP/combat-status"
+          python3 north-star/combat-study/tools/passive-verify.py --dotnet dotnet --output "$RUNNER_TEMP/combat-status"
       - name: Retain combat status failure diagnostics
         if: failure()
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4

@@ -1,0 +1,91 @@
+[
+  {
+    "command": [
+      "/workspace/work/authored-scene/dotnet/dotnet",
+      "--version"
+    ],
+    "exit_code": 0,
+    "stdout": "10.0.401\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "node",
+      "--version"
+    ],
+    "exit_code": 0,
+    "stdout": "v24.19.0\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "/workspace/work/authored-scene/dotnet/dotnet",
+      "build",
+      "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/combat-study/Checks/NorthStar.CombatChecks.csproj",
+      "-c",
+      "Release",
+      "-m:1",
+      "--disable-build-servers"
+    ],
+    "exit_code": 0,
+    "stdout": "  Determining projects to restore...\n  All projects are up-to-date for restore.\n  NorthStar.Combat -> /workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/combat-study/Rules/bin/Release/netstandard2.1/NorthStar.Combat.dll\n  NorthStar.CombatChecks -> /workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/combat-study/Checks/bin/Release/net10.0/NorthStar.CombatChecks.dll\n\nBuild succeeded.\n    0 Warning(s)\n    0 Error(s)\n\nTime Elapsed 00:00:02.71\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "/workspace/work/authored-scene/dotnet/dotnet",
+      "build",
+      "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/combat-study/TrialChecks/NorthStar.TrialChecks.csproj",
+      "-c",
+      "Release",
+      "-m:1",
+      "--disable-build-servers"
+    ],
+    "exit_code": 0,
+    "stdout": "  Determining projects to restore...\n  All projects are up-to-date for restore.\n  NorthStar.Combat -> /workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/combat-study/Rules/bin/Release/netstandard2.1/NorthStar.Combat.dll\n  NorthStar.CombatStudy -> /workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/combat-study/Host/bin/Release/net10.0/NorthStar.CombatStudy.dll\n  NorthStar.TrialChecks -> /workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/combat-study/TrialChecks/bin/Release/net10.0/NorthStar.TrialChecks.dll\n\nBuild succeeded.\n    0 Warning(s)\n    0 Error(s)\n\nTime Elapsed 00:00:02.56\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "/workspace/work/authored-scene/dotnet/dotnet",
+      "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/combat-study/Checks/bin/Release/net10.0/NorthStar.CombatChecks.dll"
+    ],
+    "exit_code": 0,
+    "stdout": "PASS tiny-positive-hit\nPASS tiny-positive-apply\nPASS hit\nPASS hit-floor\nPASS hit-cap\nPASS crit\nPASS raw\nPASS mitigation\nPASS round-away\nPASS apply-floor\nPASS duration-away\nPASS duration-floor\nPASS reapply-zero\nPASS unknown-dot\nPASS dot-no-trim\nPASS dot-case\nPASS minHP-zero\nPASS dot-away\nPASS nan\nPASS infinity\nPASS negative\nPASS level\nPASS sum-overflow\nPASS add-not-max\nPASS modifiers\nPASS snapshot-copy\nPASS enum\nPASS zero-duration\nPASS cap-atomic\nPASS cap-unchanged\nPASS skip-round\nPASS HP-atomic\nPASS invalid-unchanged\nPASS global-dot-sum\nPASS all-entry\nPASS decrement-once\nPASS expiry\nPASS duplicate\nPASS duplicate-unchanged\nPASS tick-copy\nPASS cleanse-count\nPASS cleanse-empty\nPASS empty-round\n43 native controls passed\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "/workspace/work/authored-scene/dotnet/dotnet",
+      "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/combat-study/TrialChecks/bin/Release/net10.0/NorthStar.TrialChecks.dll",
+      "/workspace/work/passive-cycle/final-1/regressions/native.json"
+    ],
+    "exit_code": 0,
+    "stdout": "PASS observation-is-not-action\nPASS schema-reject-atomic-0\nPASS schema-reject-atomic-1\nPASS schema-reject-atomic-2\nPASS schema-reject-atomic-3\nPASS schema-reject-atomic-4\nPASS schema-reject-atomic-5\nPASS schema-reject-atomic-6\nPASS toxic-win-accepted-1\nPASS toxic-win-accepted-2\nPASS toxic-win-accepted-3\nPASS toxic-win-accepted-4\nPASS toxic-real-victory\nPASS heated-win-accepted-1\nPASS heated-win-accepted-2\nPASS heated-win-accepted-3\nPASS heated-win-accepted-4\nPASS heated-win-accepted-5\nPASS heated-win-accepted-6\nPASS heated-win-accepted-7\nPASS heated-real-victory\nPASS heated-mistimed-treatment-negative-accepted-1\nPASS heated-mistimed-treatment-negative-accepted-2\nPASS heated-mistimed-treatment-negative-accepted-3\nPASS heated-mistimed-treatment-negative-accepted-4\nPASS heated-mistimed-treatment-negative-accepted-5\nPASS heated-mistimed-treatment-negative-accepted-6\nPASS mistimed-treatment-does-not-secure\nPASS toxic-constant-guard-defeated\nPASS heated-constant-guard-defeated\nPASS guard-observation-accepted-1\nPASS strike-observation-accepted-1\nPASS guard-halves-contact-leaves-full-dot\nPASS cleanse-cost-accepted-1\nPASS cleanse-charge-and-opportunity\nPASS bleed-treatment-accepted-1\nPASS bleed-treatment-accepted-2\nPASS bleed-real-healing\nPASS disarm-refusal-atomic\nPASS disarm-bash-and-burn\nPASS disarm-global-expiry\nPASS burn-real-strike\nPASS withdrawal-no-fabricated-win\nPASS terminal-refusal-atomic\nPASS explicit-restart\nPASS exhausted-treatment-atomic\n46 consumer controls; passed: True\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "python3",
+      "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/labs/combat-response/status/run.py",
+      "--dotnet",
+      "/workspace/work/authored-scene/dotnet/dotnet",
+      "--output",
+      "/workspace/work/passive-cycle/final-1/regressions/source"
+    ],
+    "exit_code": 0,
+    "stdout": "{\"components\": 9, \"source_vectors\": 49, \"python_surrogate_passed\": 49, \"csharp_passed\": 49, \"ruby_executed\": false, \"rmxp_executed\": false}\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "node",
+      "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/combat-study/tools/browser.mjs",
+      "/workspace/work/authored-scene/dotnet/dotnet",
+      "/workspace/work/passive-cycle/final-1/regressions/browser"
+    ],
+    "exit_code": 0,
+    "stdout": "22 browser/HTTP controls passed; actual renderer negative detected\n",
+    "stderr": ""
+  }
+]

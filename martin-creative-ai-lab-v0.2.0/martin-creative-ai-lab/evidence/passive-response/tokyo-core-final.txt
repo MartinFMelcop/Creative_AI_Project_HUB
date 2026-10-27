@@ -1,0 +1,41 @@
+✔ timing boundaries classify both early and late hits with inclusive windows (2.704179ms)
+✔ frame gaps expire each note exactly once instead of changing successful hit windows (1.247984ms)
+✔ a held or repeated attempt cannot consume the same note twice (0.33078ms)
+✔ simultaneous chord notes remain independently hittable across lanes (0.201955ms)
+✔ Pulse requires earned aura and protects only two misses inside its lifetime (0.459639ms)
+✔ Pulse cannot preserve a miss after its deadline (0.161427ms)
+✔ stray input cannot farm points or aura (0.288068ms)
+✔ positive input offsets compensate late events, and calibration rejects insufficient samples (0.560996ms)
+✔ finishing closes residual notes and prevents all later score mutations (0.542795ms)
+✔ original charts match track sections and can produce complete perfect runs (8.7241ms)
+✔ invalid data and inputs reject before changing session state (0.515179ms)
+✔ a delayed rendering frame preserves the same Pulse consequences as on-time expiration (0.92938ms)
+✔ holds earn their start judgment only after a carried tail, once (1.557538ms)
+✔ release tolerance is inclusive, and early release cannot farm aura or score (1.446239ms)
+✔ pause freezes ownership; re-hold before resume or inside grace, but not indefinitely (0.549615ms)
+✔ simultaneous holds and taps retain lane identity and Pulse uses real failure time (0.230131ms)
+✔ late frames resolve mixed tail completions and misses in event order (0.897239ms)
+✔ sustain duration and lane overlaps reject ambiguous charts (0.670258ms)
+✔ both Rain Circuit charts can be carried to perfect completion or missed honestly (12.971551ms)
+✔ stretched backing covers the same phrase/tails with one-to-one performance playback; missing variants cannot detune (2.40121ms)
+✔ every source head belongs to exactly one four-bar rehearsal, across both charts and all rates (13.943291ms)
+✔ source sustain crossing a phrase boundary is carried in its original phrase (0.794679ms)
+✔ slowing a phrase preserves real judgment/offset, release grace and pause regrab windows (1.592832ms)
+✔ full chart identity/rate stay original; review reflects actual misses and lost holds (2.036795ms)
+✔ same-score opposing lane bias and alternating errors produce different lane reviews (2.421069ms)
+✔ actual hold paths distinguish missed heads, early release, regrab loss and unheld finish (1.11989ms)
+✔ a failed hold retains its received head timing while score summary remains unchanged (0.221559ms)
+✔ historical and unfamiliar failed holds remain unknown without fabricated causes (0.171454ms)
+✔ timing bins retain the actual inclusive Perfect boundary on both sides (0.278343ms)
+✔ empty and unplayed finished lanes have null timing rather than zero error (0.198651ms)
+✔ unfinished notes and invalid lanes reject a finished-only review (0.49133ms)
+✔ head observations stay in performance milliseconds at every delivered rehearsal speed (2.309899ms)
+✔ Pulse-protected failure keeps its actual hold cause and received head timing (0.418716ms)
+ℹ tests 33
+ℹ suites 0
+ℹ pass 33
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 369.353108
