@@ -108,3 +108,13 @@ crossing sign. No historical faction, background, hostile policy, price/effect
 catalogue or fictional world is imported. These mechanical observations are not
 human trust/fairness, Ruby/RMXP execution or approved canon. Existing narrative,
 journal and downloadable consumers retain separate unchanged evidence.
+
+## Scoped memory and finite witness opportunity
+
+The separate [memory method](memory/README.md) evaluates known scoped flags, recent
+events and exact expiry against the SAME Python/C# cases, with an
+[actual original consumer](../../north-star/memory-study/README.md). Its
+[execution](../../evidence/memory-study/RUN.json) distinguishes permanent observed work,
+current relation support and a temporary named demonstration. Explicit source global
+queries remain valid separately; unsafe wildcard/fallback private authority is rejected.
+It does not change previous narrative/reputation consumers or claim human testimony.

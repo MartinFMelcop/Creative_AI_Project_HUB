@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "required": {
+    "structure_links": {
+      "passed": true,
+      "projects": 11,
+      "transfers": 15,
+      "assets": 11,
+      "legacy_sources": 2,
+      "local_links": 1045
+    },
+    "references": {
+      "passed": true,
+      "records": 5,
+      "preserved_sources": 607,
+      "derived_pdf": 18,
+      "exclusions": 140,
+      "capabilities": 14
+    },
+    "brain": {
+      "passed": true,
+      "chapters": 234,
+      "inherited_warnings": 44,
+      "originals_unchanged": true
+    },
+    "transformation": {
+      "passed": true,
+      "destinations": 11,
+      "operational": 10,
+      "incomplete": 1,
+      "consumption": {
+        "INTEGRATED": 16,
+        "REJECTED": 10,
+        "UNRESOLVED": 15
+      }
+    },
+    "source_inventory": {
+      "passed": true,
+      "origins": 11,
+      "unique_sources": 1052,
+      "packages": 36
+    }
+  },
+  "affected_ci_scope_regressions": {
+    "passed": 13,
+    "failed": 0
+  },
+  "limits": "Documentary integrity gates, not fresh runtime results for old consumers. Unchanged old matrices were not manually repeated; new consumer execution is separately bound."
+}

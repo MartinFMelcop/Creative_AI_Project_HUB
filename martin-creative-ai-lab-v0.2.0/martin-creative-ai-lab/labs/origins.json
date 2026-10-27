@@ -616,7 +616,13 @@
         "references/rave-master/snapshots/36af1651271422ae33856e8b5d7b45702215f165/source/RM_CORE/DATA/CORE/REPUTATION_RULES.md",
         "references/rave-master/snapshots/36af1651271422ae33856e8b5d7b45702215f165/source/RM_DIST/RMXP_BASE/Data/RM_CSV/REPUTATION_RULES.csv",
         "references/rave-master/snapshots/36af1651271422ae33856e8b5d7b45702215f165/source/RM_DIST/RMXP_BASE/ScriptsCustom/RM_REPUTATION_RUNTIME.rb",
-        "references/rave-master/snapshots/36af1651271422ae33856e8b5d7b45702215f165/source/RM_QA/DATA/QA/RPT_REPUTATION_CONSISTENCY.csv"
+        "references/rave-master/snapshots/36af1651271422ae33856e8b5d7b45702215f165/source/RM_QA/DATA/QA/RPT_REPUTATION_CONSISTENCY.csv",
+        "references/rave-master/snapshots/36af1651271422ae33856e8b5d7b45702215f165/source/RM_ACT1/DATA/DEV/RGSS/RM_FLAGS_EVENTS_RUNTIME.rb",
+        "references/rave-master/snapshots/36af1651271422ae33856e8b5d7b45702215f165/source/RM_DIST/RMXP_BASE/ScriptsCustom/RM_FLAGS_EVENTS_RUNTIME.rb",
+        "references/rave-master/snapshots/36af1651271422ae33856e8b5d7b45702215f165/source/RM_ACT1/DATA/DEV/MEMORY_FLAGS.csv",
+        "references/rave-master/snapshots/36af1651271422ae33856e8b5d7b45702215f165/source/RM_DIST/RMXP_BASE/Data/RM_CSV/MEMORY_FLAGS.csv",
+        "references/rave-master/snapshots/36af1651271422ae33856e8b5d7b45702215f165/source/RM_ACT1/DATA/DEV/RECENT_EVENTS.csv",
+        "references/rave-master/snapshots/36af1651271422ae33856e8b5d7b45702215f165/source/RM_DIST/RMXP_BASE/Data/RM_CSV/RECENT_EVENTS.csv"
       ],
       "source_inventory": "labs/source-inventory.json",
       "consumer_paths": [
@@ -630,17 +636,21 @@
         "north-star/authored-scene/Host/SceneSession.cs",
         "north-star/reputation-study/Rules/Standing.cs",
         "north-star/reputation-study/Host/Room.cs",
-        "north-star/reputation-study/Host/Program.cs"
+        "north-star/reputation-study/Host/Program.cs",
+        "north-star/memory-study/Rules/Memory.cs",
+        "north-star/memory-study/Host/Room.cs",
+        "north-star/memory-study/Host/Program.cs"
       ],
       "controls": [
         "Selected causal/source bindings and typed twin legacy tables with distinct DEV/DIST limitations",
         "Six actual P10 module controls and two isolated policy mutants",
         "95 compiled native controls and eight complete outcome-distinct original journeys",
         "12 instrument regressions, exact reproduction and three actual stdin sessions",
-        "Selected reputation arithmetic: SAME127Python/C#cases,25native,29consumer,22Chromium,7HTTP and5instrument controls;420effect rows source-only"
+        "Selected reputation arithmetic: SAME127Python/C#cases,25native,29consumer,22Chromium,7HTTP and5instrument controls;420effect rows source-only",
+        "Scoped memory: SAME57Python/C#cases/237queries,34native,21Chromium,7HTTP; exact local witness authority, permanent output after expiry and exhausted policy; false-result and two false-renderer negatives"
       ],
-      "validity_boundary": "Bounded selected-source method, actual P10 module controls and original C# in-session consequences. No historical RMXP execution, complete quest/reputation catalogs, durable NPC world, literary/consent/player validation or Unity/Windows/Steam proof. The new visible .NET10/browser consumer observes the same unchanged request owner; synthetic DOM/SVG fidelity is not comprehension or a new quest/reputation/persistence method. Current scene has narrowly executed trusted-local accepted-command narrative continuation, including private consent and actual process reentry; this is destination support, not full persistent quest/NPC worlds, a new laboratory method, Windows or participant evidence. Separate selected-reputation method now executes bounded no-zero/clamp/threshold rules in an original finite service consumer. Historical effect tables/defaults/faction fiction are not applied; static source interpretation is not Ruby/RMXP execution or human social trust.",
-      "next_objective": "Compare licensed Unity/Windows and appropriate people/devices with unresolved item/tool/unlock, reputation/effect and narrative source contracts. Creative retained-tool alternative remains strong; do not automatically expand the reputation matrix.",
+      "validity_boundary": "Bounded selected-source method, actual P10 module controls and original C# in-session consequences. No historical RMXP execution, complete quest/reputation catalogs, durable NPC world, literary/consent/player validation or Unity/Windows/Steam proof. The new visible .NET10/browser consumer observes the same unchanged request owner; synthetic DOM/SVG fidelity is not comprehension or a new quest/reputation/persistence method. Current scene has narrowly executed trusted-local accepted-command narrative continuation, including private consent and actual process reentry; this is destination support, not full persistent quest/NPC worlds, a new laboratory method, Windows or participant evidence. Separate selected-reputation method now executes bounded no-zero/clamp/threshold rules in an original finite service consumer. Historical effect tables/defaults/faction fiction are not applied; static source interpretation is not Ruby/RMXP execution or human social trust. Separate scoped-memory method consumes known typed scope/expiry only through actual original finite service. Explicit source union/global/null-event semantics stay separate from strict private witness authority; no Ruby/RGSS/Game_System persistence or human testimony.",
+      "next_objective": "Compare genuine licensed Unity, ordinary-user/participant/device assessment, coherent product reuse and consequential unresolved dialogue/effects/quest contracts. Do not automatically repeat memory or prior service matrices.",
       "path": "labs/narrative-continuity",
       "instrument": "labs/narrative-continuity/run.py",
       "evidence": [
@@ -648,14 +658,22 @@
         "evidence/narrative-continuity/results.json",
         "evidence/authored-scene/RUN.json",
         "evidence/request-continuity/RUN.json",
-        "evidence/reputation-study/RUN.json"
+        "evidence/reputation-study/RUN.json",
+        "evidence/memory-study/RUN.json",
+        "evidence/memory-study/source/source-assay.json",
+        "evidence/memory-study/source/results.json",
+        "evidence/memory-study/browser/browser.json"
       ],
       "evidence_sha256": {
         "evidence/narrative-continuity/RUN.json": "32e3362e33b593fbdbae5cb5c517afebf2e2067ccbea9f9a5631af27a88e201b",
         "evidence/narrative-continuity/results.json": "e83cb621700f1d3552911ff063ade2f8990bdfdeb0e600bbc2701c915a1d4413",
         "evidence/authored-scene/RUN.json": "3b548269d8da32f597bd6e27214c88b1b0bf48b69859494ebfc2b2bb5371571f",
         "evidence/request-continuity/RUN.json": "d1695d0922947be6150a79238b96f3553aa38fc73068cf76379c1856fc1ffe87",
-        "evidence/reputation-study/RUN.json": "901bcab3f535fefc4b03746ab147c886c88d68470f19be3cbec8c4f573d64bb5"
+        "evidence/reputation-study/RUN.json": "901bcab3f535fefc4b03746ab147c886c88d68470f19be3cbec8c4f573d64bb5",
+        "evidence/memory-study/RUN.json": "c50a91cc67981348128da67e8ee12be85713beb8e2b80bf5dd423df472366d26",
+        "evidence/memory-study/source/source-assay.json": "2c4998da9aa2885fb83ad6cd490f106181d053f4d4d51b8d47a2f4e4f659b31a",
+        "evidence/memory-study/source/results.json": "3cc986ebb26795188c5794844be11300ce04a5303b210be79b3c31a35a99c111",
+        "evidence/memory-study/browser/browser.json": "23d5a3dd6e0500a7d8d40294656a42c13a8528e16049abd73f860f9803fbf364"
       }
     },
     {
@@ -1330,8 +1348,8 @@
         "references/rave-master/snapshots/36af1651271422ae33856e8b5d7b45702215f165/source/RM_ACT1/DATA/DEV/RGSS/RM_DIALOGUE_SCORING_RUNTIME.rb",
         "references/rave-master/snapshots/36af1651271422ae33856e8b5d7b45702215f165/source/RM_ACT1/DATA/DEV/QUEST_STEPS.csv"
       ],
-      "decision": "Static quest/helper assays and separately integrated literal NPC mask/event-authority boundary retain DEV/DIST and manual-completion limits. Full NPC schedule/location conflict resolution, reputation/factions, dialogue selectors, quest/world catalogs and actual RGSS runtime remain unresolved. Selected reputation six-level arithmetic is now separately INTEGRATED and direct empty-hook effects provision separately REJECTED. Full source effects, regional/default conflicts and faction/quest policies remain UNRESOLVED.",
-      "next_action": "Resolve one consequential remaining source contract with a real beneficiary and explicit author policy: retained tools/catalog identity, conflicting defaults, actual effects/faction/quest rules or licensed Windows delivery. Preserve namespaces and conflicting variants; do not treat prior static tables as implemented gameplay."
+      "decision": "Static quest/helper assays and separately integrated literal NPC mask/event-authority boundary retain DEV/DIST and manual-completion limits. Full NPC schedule/location conflict resolution, reputation/factions, dialogue selectors, quest/world catalogs and actual RGSS runtime remain unresolved. Selected reputation six-level arithmetic is now separately INTEGRATED and direct empty-hook effects provision separately REJECTED. Full source effects, regional/default conflicts and faction/quest policies remain UNRESOLVED. Known scoped flags/recent-event action-turn expiry are now separately INTEGRATED; unsafe unknown/global/missing-subject fallbacks as private witness authority are separately REJECTED. Full source memory/dialogue/quest catalogs and persistence remain unresolved.",
+      "next_action": "Select a consequential remaining dialogue/quest/world rule or shared product need with actual event ownership and author decisions. Preserve exact scope, expiry and variant limits; prioritize actual people/devices or licensed production when accessible."
     },
     {
       "id": "P01-XP-CRAFT-TRANSACTION",
@@ -1860,6 +1878,69 @@
         "evidence/tooling-study/RUN.json": "2540400774fb495021e6ff1f3c00eced9454c40588cc701d8048453991cffdc6",
         "evidence/tooling-study/source-assay.json": "95fc60deeb299e7babf1c0134ab77ed7fd5a03e4e4f45b6dab0719153a398a7c",
         "evidence/tooling-study/browser.json": "14a24d0a998d91e2ca1e52d7fa2f0a2ed85211a7f2cb20ceb37b1c59a9ed6f86"
+      }
+    },
+    {
+      "id": "XP-SCOPED-MEMORY-EXPIRY",
+      "origin_projects": [
+        "P10"
+      ],
+      "laboratory_id": "narrative-continuity",
+      "status": "INTEGRATED",
+      "source_paths": [
+        "references/rave-master/snapshots/36af1651271422ae33856e8b5d7b45702215f165/source/RM_ACT1/DATA/DEV/RGSS/RM_FLAGS_EVENTS_RUNTIME.rb",
+        "references/rave-master/snapshots/36af1651271422ae33856e8b5d7b45702215f165/source/RM_DIST/RMXP_BASE/ScriptsCustom/RM_FLAGS_EVENTS_RUNTIME.rb",
+        "references/rave-master/snapshots/36af1651271422ae33856e8b5d7b45702215f165/source/RM_ACT1/DATA/DEV/MEMORY_FLAGS.csv",
+        "references/rave-master/snapshots/36af1651271422ae33856e8b5d7b45702215f165/source/RM_DIST/RMXP_BASE/Data/RM_CSV/MEMORY_FLAGS.csv",
+        "references/rave-master/snapshots/36af1651271422ae33856e8b5d7b45702215f165/source/RM_ACT1/DATA/DEV/RECENT_EVENTS.csv",
+        "references/rave-master/snapshots/36af1651271422ae33856e8b5d7b45702215f165/source/RM_DIST/RMXP_BASE/Data/RM_CSV/RECENT_EVENTS.csv"
+      ],
+      "consumer_paths": [
+        "north-star/memory-study/Rules/Memory.cs",
+        "north-star/memory-study/Host/Room.cs",
+        "north-star/memory-study/Host/Program.cs"
+      ],
+      "decision": "Known GLOBAL/NPC/RELATION flags, explicit true/false union, clear and strict exp>turn recent-event lifetime operate in C#8/netstandard2.1 and an actual finite original local service. SAME57Python/C#cases/237queries use9actual flag and10event definitions with declared branch probes. Exact private witness authority is a distinct destination policy; source wildcard query remains explicit separately. No moral/source fiction, unknown-ID coercion, full memory/dialogue catalog, Game_System persistence, Ruby/RGSS or human testimony is integrated.",
+      "evidence": [
+        "evidence/memory-study/RUN.json",
+        "evidence/memory-study/source/source-assay.json",
+        "evidence/memory-study/source/results.json",
+        "evidence/memory-study/browser/browser.json"
+      ],
+      "evidence_sha256": {
+        "evidence/memory-study/RUN.json": "c50a91cc67981348128da67e8ee12be85713beb8e2b80bf5dd423df472366d26",
+        "evidence/memory-study/source/source-assay.json": "2c4998da9aa2885fb83ad6cd490f106181d053f4d4d51b8d47a2f4e4f659b31a",
+        "evidence/memory-study/source/results.json": "3cc986ebb26795188c5794844be11300ce04a5303b210be79b3c31a35a99c111",
+        "evidence/memory-study/browser/browser.json": "23d5a3dd6e0500a7d8d40294656a42c13a8528e16049abd73f860f9803fbf364"
+      }
+    },
+    {
+      "id": "XP-MEMORY-PRIVATE-AUTHORITY-FALLBACK",
+      "origin_projects": [
+        "P10"
+      ],
+      "laboratory_id": "narrative-continuity",
+      "status": "REJECTED",
+      "source_paths": [
+        "references/rave-master/snapshots/36af1651271422ae33856e8b5d7b45702215f165/source/RM_ACT1/DATA/DEV/RGSS/RM_FLAGS_EVENTS_RUNTIME.rb",
+        "references/rave-master/snapshots/36af1651271422ae33856e8b5d7b45702215f165/source/RM_DIST/RMXP_BASE/ScriptsCustom/RM_FLAGS_EVENTS_RUNTIME.rb",
+        "references/rave-master/snapshots/36af1651271422ae33856e8b5d7b45702215f165/source/RM_ACT1/DATA/DEV/MEMORY_FLAGS.csv",
+        "references/rave-master/snapshots/36af1651271422ae33856e8b5d7b45702215f165/source/RM_DIST/RMXP_BASE/Data/RM_CSV/MEMORY_FLAGS.csv",
+        "references/rave-master/snapshots/36af1651271422ae33856e8b5d7b45702215f165/source/RM_ACT1/DATA/DEV/RECENT_EVENTS.csv",
+        "references/rave-master/snapshots/36af1651271422ae33856e8b5d7b45702215f165/source/RM_DIST/RMXP_BASE/Data/RM_CSV/RECENT_EVENTS.csv"
+      ],
+      "decision": "Reject only direct use of unknown flag→GLOBAL, missing subject→NPC_UNKNOWN and null-event wildcard as private named witness/service authority: they can supply overbroad knowledge. Source global/union/wildcard semantics remain explicit valid separate queries; the actual consumer uses known IDs and exact named scope. Source counterexamples and strict native/browser consumers reject wrong/absent witness, expired opportunity and false renderers. This is not rejection of the whole helper/collection or proof of Ruby/RMXP execution.",
+      "evidence": [
+        "evidence/memory-study/RUN.json",
+        "evidence/memory-study/source/source-assay.json",
+        "evidence/memory-study/source/results.json",
+        "evidence/memory-study/browser/browser.json"
+      ],
+      "evidence_sha256": {
+        "evidence/memory-study/RUN.json": "c50a91cc67981348128da67e8ee12be85713beb8e2b80bf5dd423df472366d26",
+        "evidence/memory-study/source/source-assay.json": "2c4998da9aa2885fb83ad6cd490f106181d053f4d4d51b8d47a2f4e4f659b31a",
+        "evidence/memory-study/source/results.json": "3cc986ebb26795188c5794844be11300ce04a5303b210be79b3c31a35a99c111",
+        "evidence/memory-study/browser/browser.json": "23d5a3dd6e0500a7d8d40294656a42c13a8528e16049abd73f860f9803fbf364"
       }
     }
   ]

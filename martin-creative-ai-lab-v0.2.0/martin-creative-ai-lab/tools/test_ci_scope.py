@@ -28,7 +28,7 @@ class Classification(unittest.TestCase):
         self.assertEqual(self.selected(*paths), set())
 
     def test_csharp_and_progression_only_do_not_rebuild_historical_consumers(self):
-        for path in ('north-star/intake/Host/Room.cs', 'evidence/intake/RUN.json', 'north-star/availability-study/Rules/Availability.cs', 'evidence/npc-availability/RUN.json', 'evidence/repair-hauling/RUN.json',
+        for path in ('north-star/memory-study/Host/Room.cs', 'evidence/memory-study/RUN.json', 'labs/narrative-continuity/memory/run.py', 'north-star/intake/Host/Room.cs', 'evidence/intake/RUN.json', 'north-star/availability-study/Rules/Availability.cs', 'evidence/npc-availability/RUN.json', 'evidence/repair-hauling/RUN.json',
                      'labs/world-gameplay/availability/run.py', 'delivery/authored-scene/package.py', 'delivery/authored-scene/dist/authored-scene-demo-linux-x64.zip',
                      'north-star/tooling-study/Rules/Tooling.cs', 'evidence/tooling-study/RUN.json', 'north-star/reputation-study/Rules/Standing.cs', 'evidence/reputation-study/RUN.json', 'evidence/request-continuity/RUN.json', 'evidence/recipient-delivery/RUN.json', 'north-star/combat-study/Host/Trial.cs', 'labs/combat-response/status/run.py',
                      'evidence/combat-status/RUN.json', 'north-star/authored-scene/Host/Room.cs', 'north-star/authored-scene/tools/browser.mjs',

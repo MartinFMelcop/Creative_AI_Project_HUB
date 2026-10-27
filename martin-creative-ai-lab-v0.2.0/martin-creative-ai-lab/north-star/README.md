@@ -129,3 +129,11 @@ Crossing. The same handle/accent remain visible through earned preparation, comp
 and loss. This separate ephemeral .NET10/browser experiment is not in the existing
 recipient packages. [Executed scope and negatives](../evidence/intake/RUN.json) retain
 the boundary to creation parsing, canon, Unity/Windows/Steam and human experience.
+
+## Scoped observed opportunity
+
+[The fitting window](memory-study/README.md) consumes bounded source memory contracts
+in an original finite service: known past help persists, recent local demonstration
+expires by actual accepted actions, another bench cannot borrow that knowledge, and
+acquired fittings remain real. [Executed scope](../evidence/memory-study/RUN.json)
+is C#8 rules with a .NET10/Linux/browser consumer, not Unity or human testimony.

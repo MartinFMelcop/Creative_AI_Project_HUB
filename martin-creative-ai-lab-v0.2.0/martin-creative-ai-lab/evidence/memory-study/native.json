@@ -1,0 +1,339 @@
+{
+  "schema_version": 1,
+  "kind": "memory_native_consumer",
+  "checks": {
+    "passed": 34,
+    "failed": 0
+  },
+  "controls": [
+    "Named flag cannot leak to another subject",
+    "Explicit source union retains global despite false local",
+    "Exact clear cannot resurrect false local",
+    "Missing named context refuses without advancing",
+    "Unknown flag cannot silently create global authority",
+    "Zero TTL inactive at insertion boundary",
+    "TTL still active immediately before expiry",
+    "TTL inactive at exact expiry",
+    "Source global event wildcard is retained explicitly",
+    "Strict witness excludes that same global wildcard",
+    "Named event clear preserves separate source-global event",
+    "Typed nonpositive source turn increment clamps to one",
+    "Recent event uses same strict expiry boundary",
+    "Initial service has no witness or output",
+    "An unobserved service cannot charge or supply",
+    "Demonstration cannot manufacture past help",
+    "Actual help pays then records local history and window",
+    "Another bench cannot use private observation",
+    "Opportunity remains before exact boundary",
+    "Service gate precedes actual turn cost and survives expiry",
+    "Actual output cannot be minted twice",
+    "Independent actual second service completes with finite stock",
+    "Repeated reads own no clock or outcome",
+    "Expiry retains actual past help and current relation support",
+    "Expired opportunity cannot consume coin or claim output",
+    "Fresh observed demonstration pays another real part and turn",
+    "Withdrawal clears opportunity without erasing past work or paying turn",
+    "Explicit paid re-demonstration restores support and allows actual output",
+    "Later withdrawal cannot erase an acquired fitting",
+    "Repetition can exhaust parts without making another bench witnessed",
+    "Spent demonstration parts cannot be refunded into second work",
+    "Exhausted expired policy cannot fabricate a replacement part",
+    "Old queued intent refuses without stored observation mutation",
+    "Unknown actual recipient leaves every observation field exact"
+  ],
+  "complete": {
+    "sequence": 10,
+    "command": "serve",
+    "accepted": true,
+    "text": "One coin and one action spent. The east bench actually supplied its one fitting. Later expiry cannot erase this output.",
+    "turn": 6,
+    "parts": 2,
+    "coins": 0,
+    "complete": true,
+    "benches": [
+      {
+        "id": "west",
+        "helped": true,
+        "support": true,
+        "recent": false,
+        "expires": null,
+        "eligible": false,
+        "delivered": true
+      },
+      {
+        "id": "east",
+        "helped": true,
+        "support": true,
+        "recent": true,
+        "expires": 8,
+        "eligible": false,
+        "delivered": true
+      }
+    ],
+    "history": [
+      {
+        "sequence": 3,
+        "command": "help",
+        "bench": "west",
+        "turn": 1,
+        "parts": 3,
+        "coins": 2,
+        "fittings": 0
+      },
+      {
+        "sequence": 5,
+        "command": "wait",
+        "bench": null,
+        "turn": 2,
+        "parts": 3,
+        "coins": 2,
+        "fittings": 0
+      },
+      {
+        "sequence": 6,
+        "command": "wait",
+        "bench": null,
+        "turn": 3,
+        "parts": 3,
+        "coins": 2,
+        "fittings": 0
+      },
+      {
+        "sequence": 7,
+        "command": "serve",
+        "bench": "west",
+        "turn": 4,
+        "parts": 3,
+        "coins": 1,
+        "fittings": 1
+      },
+      {
+        "sequence": 9,
+        "command": "help",
+        "bench": "east",
+        "turn": 5,
+        "parts": 2,
+        "coins": 1,
+        "fittings": 1
+      },
+      {
+        "sequence": 10,
+        "command": "serve",
+        "bench": "east",
+        "turn": 6,
+        "parts": 2,
+        "coins": 0,
+        "fittings": 2
+      }
+    ]
+  },
+  "expired": {
+    "sequence": 10,
+    "command": "decline",
+    "accepted": true,
+    "text": "Current local support withdrawn without a turn. Past observed help and any actual fitting remain true; a fresh paid demonstration is required to reopen an unfinished opportunity.",
+    "turn": 7,
+    "parts": 1,
+    "coins": 1,
+    "complete": false,
+    "benches": [
+      {
+        "id": "west",
+        "helped": true,
+        "support": false,
+        "recent": false,
+        "expires": null,
+        "eligible": false,
+        "delivered": true
+      },
+      {
+        "id": "east",
+        "helped": false,
+        "support": false,
+        "recent": false,
+        "expires": null,
+        "eligible": false,
+        "delivered": false
+      }
+    ],
+    "history": [
+      {
+        "sequence": 1,
+        "command": "help",
+        "bench": "west",
+        "turn": 1,
+        "parts": 3,
+        "coins": 2,
+        "fittings": 0
+      },
+      {
+        "sequence": 2,
+        "command": "wait",
+        "bench": null,
+        "turn": 2,
+        "parts": 3,
+        "coins": 2,
+        "fittings": 0
+      },
+      {
+        "sequence": 3,
+        "command": "wait",
+        "bench": null,
+        "turn": 3,
+        "parts": 3,
+        "coins": 2,
+        "fittings": 0
+      },
+      {
+        "sequence": 4,
+        "command": "wait",
+        "bench": null,
+        "turn": 4,
+        "parts": 3,
+        "coins": 2,
+        "fittings": 0
+      },
+      {
+        "sequence": 6,
+        "command": "demonstrate",
+        "bench": "west",
+        "turn": 5,
+        "parts": 2,
+        "coins": 2,
+        "fittings": 0
+      },
+      {
+        "sequence": 7,
+        "command": "decline",
+        "bench": "west",
+        "turn": 5,
+        "parts": 2,
+        "coins": 2,
+        "fittings": 0
+      },
+      {
+        "sequence": 8,
+        "command": "demonstrate",
+        "bench": "west",
+        "turn": 6,
+        "parts": 1,
+        "coins": 2,
+        "fittings": 0
+      },
+      {
+        "sequence": 9,
+        "command": "serve",
+        "bench": "west",
+        "turn": 7,
+        "parts": 1,
+        "coins": 1,
+        "fittings": 1
+      },
+      {
+        "sequence": 10,
+        "command": "decline",
+        "bench": "west",
+        "turn": 7,
+        "parts": 1,
+        "coins": 1,
+        "fittings": 1
+      }
+    ]
+  },
+  "losing": {
+    "sequence": 9,
+    "command": "demonstrate",
+    "accepted": false,
+    "text": "No spare part remains; a promise cannot supply a demonstration.",
+    "turn": 7,
+    "parts": 0,
+    "coins": 2,
+    "complete": false,
+    "benches": [
+      {
+        "id": "west",
+        "helped": true,
+        "support": true,
+        "recent": false,
+        "expires": null,
+        "eligible": false,
+        "delivered": false
+      },
+      {
+        "id": "east",
+        "helped": false,
+        "support": false,
+        "recent": false,
+        "expires": null,
+        "eligible": false,
+        "delivered": false
+      }
+    ],
+    "history": [
+      {
+        "sequence": 1,
+        "command": "help",
+        "bench": "west",
+        "turn": 1,
+        "parts": 3,
+        "coins": 2,
+        "fittings": 0
+      },
+      {
+        "sequence": 2,
+        "command": "demonstrate",
+        "bench": "west",
+        "turn": 2,
+        "parts": 2,
+        "coins": 2,
+        "fittings": 0
+      },
+      {
+        "sequence": 3,
+        "command": "demonstrate",
+        "bench": "west",
+        "turn": 3,
+        "parts": 1,
+        "coins": 2,
+        "fittings": 0
+      },
+      {
+        "sequence": 4,
+        "command": "demonstrate",
+        "bench": "west",
+        "turn": 4,
+        "parts": 0,
+        "coins": 2,
+        "fittings": 0
+      },
+      {
+        "sequence": 6,
+        "command": "wait",
+        "bench": null,
+        "turn": 5,
+        "parts": 0,
+        "coins": 2,
+        "fittings": 0
+      },
+      {
+        "sequence": 7,
+        "command": "wait",
+        "bench": null,
+        "turn": 6,
+        "parts": 0,
+        "coins": 2,
+        "fittings": 0
+      },
+      {
+        "sequence": 8,
+        "command": "wait",
+        "bench": null,
+        "turn": 7,
+        "parts": 0,
+        "coins": 2,
+        "fittings": 0
+      }
+    ]
+  },
+  "limits": "Software controls overlap outcomes; not Ruby/RGSS, human witnesses, participants, Unity, Windows or Steam."
+}

@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "kind": "memory-study_consumer_verification",
+  "source_sha256": {
+    "evidence/memory-study/protocol.json": "61470b70a436e1bcaf8ebd7916355e03ec7afeac093a37fc0485484f485450a2",
+    "labs/narrative-continuity/memory/run.py": "708c0aec025840f8fe72c6fc4b9f7f5ff929bdd53a36ec689fd0621bbf515ecb",
+    "north-star/csharp/global.json": "e0c0882461e712f6c2c66241bf2f175c60832e3ff077dc26091ff8c661d4193e",
+    "north-star/memory-study/.gitignore": "79810615b4063be5474618fd002df934762fe9ccebb448537ce74ce23b319202",
+    "north-star/memory-study/Checks/NorthStar.MemoryChecks.csproj": "9c0ea4da0d10f712ab2249ff883dff348868caa2413bd63c565bec91ccd12370",
+    "north-star/memory-study/Checks/Program.cs": "1268694ca86b383c66ccc8eef6ea63e91689fbb87b47e7a99a80d03f838bfcca",
+    "north-star/memory-study/Host/NorthStar.MemoryStudy.csproj": "4a72ac10bbdbb89d5db0f95628206bc90e2b0c5b3beea94acd1146c40d57ef0e",
+    "north-star/memory-study/Host/Program.cs": "574f9e77bc44502d72a698a19f55e5a8fe00ae0e8d662d70e7799649d2e537d8",
+    "north-star/memory-study/Host/Room.cs": "a4e82fa6e4e7ac03c38b623e8920f168d3efb6996287aa1ee55dc6dd197529e5",
+    "north-star/memory-study/README.md": "5d94d5b642c79bb6b0bd48e904fc91c04dee4645d566aa81d5cd2e461291b4ba",
+    "north-star/memory-study/Rules/Memory.cs": "4307f83a7e7cbed6ed8f08815ce3e216744be660545c4edd6a6985581abec852",
+    "north-star/memory-study/Rules/NorthStar.Memory.csproj": "3acec7333496cb2bb2bb2a8c6aaf151f714f6402e133ead2ca8d3f166d77dd22",
+    "north-star/memory-study/tools/browser.mjs": "1ea73aaa7dfd1f3f5d2ab3d55918af9d857ec0126ee1ca02d855c481a62bb904",
+    "north-star/memory-study/tools/verify.py": "237c261f84eb8a374d132dd424d99f16ce4a37608d2de831dd5a0467efadb3b2",
+    "north-star/memory-study/web/app.js": "e255ce998bf51ff5542f8275f8bb1c566de304ec580f76dfc63a63eaad86c6fb",
+    "north-star/memory-study/web/index.html": "28af3025fcdaccb3fc31bad2a1b6af7f6d5065e41f7f006ab7a7da112553584d",
+    "north-star/memory-study/web/style.css": "7ac8e89d8b9f26dd2d9f98026243ae32618aa260d471b0557e589e5fa81f1654",
+    "projects/realtime-integration-lab/package-lock.json": "aa191ef2158e6cc6f770bf4b3ee44dca17175ef1a3cd572b98115246bf46aea7",
+    "projects/realtime-integration-lab/package.json": "42e3cc9633e522dd6d9a5c11023418331129632881a8bf0b95e3717247d57ebe"
+  },
+  "source_stable": true,
+  "checks": {
+    "native": {
+      "passed": 34,
+      "failed": 0
+    },
+    "chromium": {
+      "passed": 21,
+      "failed": 0
+    },
+    "http": {
+      "passed": 7,
+      "failed": 0
+    },
+    "source_cases": 57
+  },
+  "limits": "Software controls overlap outcomes, not people, independent studies, Unity, Windows or Steam."
+}

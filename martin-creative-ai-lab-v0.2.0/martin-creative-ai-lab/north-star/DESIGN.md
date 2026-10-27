@@ -778,3 +778,29 @@ No NPC recognition, fame, moral judgment or inherited fictional biography is sup
 [Actual evidence](../evidence/intake/RUN.json) does not establish player understanding,
 enjoyment, accessibility, commercial rights, Unity production or participant approval.
 RequestExpedition's single fixed Lure/Trail owner and both recipients remain unchanged.
+
+
+## The fitting window — experimental observed local opportunity
+
+**Status:** original implemented bounded service hypothesis, not final cast/world canon,
+social trust measurement or a general NPC/dialogue/quest system.
+[The service](memory-study/README.md) separates persistent observed work from current
+relation support and a temporary named demonstration. West cannot use East's private
+observation. Four parts/two coins, TTL3 and action costs are explicit experiment setup,
+not source fiction or production balance. Source GLOBAL and null-event wildcard queries
+remain explicit separate semantics; they cannot supply this private authority.
+
+Actual help or fresh demonstration spends a part/turn before the observation is recorded.
+Service checks eligibility before its paid action and supplies one actual fitting per
+bench. Expiry cannot erase history/output; withdrawal clears only support/recency.
+Actual repeated demonstrations can exhaust material without producing either fitting.
+No promise, redraw, elapsed wall time or audio creates work, recognition or return.
+
+ENG004/015/017, SCI013/014/076/077 and CRE005(A),045/061(H) informed scope ownership,
+claim-matched methods and remembered consequences without global praise/blame or moral
+imports. Independent analyses preceded selection; agent implementation limits left
+primary completing execution and final image review sequentially. Software and static
+vectors do not establish human understanding, preference, commercial clearance or author
+approval. [Actual evidence](../evidence/memory-study/RUN.json) preserves permissive-source
+counterexamples, false renderers and the exhausted policy. Existing RequestExpedition,
+fixed Lure/Trail, journal, intake and both recipient platforms remain unchanged.

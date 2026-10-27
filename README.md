@@ -74,6 +74,7 @@ above; no Unity, Windows or human assessment of this new consumer is claimed.
 
 | Inspect or execute | Actual scope |
 |---|---|
+| [Scoped witness opportunity](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/memory-study/README.md) | Actual local help, current support, action-turn expiry and finite fittings; source-memory integration, not human testimony or a new downloadable package. |
 | [C# development foundation](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/README.md) | Engine-independent progression/crafting domains, connected terminal consumers and checks. No Unity Editor or Windows-player execution is claimed. |
 | [Coherent authored C# scene](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/authored-scene/README.md) | Edda's unfinished work, Rill's actual agreement/departure/return and real encounters share one owner; inspected local browser demonstration. |
 | [Continuous C# repair and delivery](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/availability-study/README.md) | Actual repair acquisition, paid route, surviving cargo, two real Crossing encounters and observed watering in one C# browser journey. |

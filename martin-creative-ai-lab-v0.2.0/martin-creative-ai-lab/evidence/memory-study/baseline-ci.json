@@ -1,0 +1,29 @@
+{
+  "run_id": 40399721194,
+  "head_sha": "92e0fbd9ddd95edeff6f0e7a9ea884bf777200ac",
+  "attempt1": {
+    "conclusion": "cancelled",
+    "successful_jobs": 7,
+    "cancelled_job": 121842120423,
+    "observed_phase": "Chromium Linux dependency installation, before visible intake consumer",
+    "last_error": "The operation was canceled.",
+    "cause": "not established"
+  },
+  "rerun_request": {
+    "specific_job_id": 121842120423,
+    "success": true
+  },
+  "attempt2_observation": {
+    "status": "in_progress",
+    "running_csharp_job": 121931583009,
+    "seven_other_jobs": "completed/success",
+    "boundary": "Only the specific job was requested; eight new job records were actually observed. Do not equate request scope with execution scope."
+  },
+  "no_gate_fixture_timeout_change": true,
+  "attempt2_final": {
+    "status": "completed",
+    "conclusion": "success",
+    "successful_jobs": 8,
+    "csharp_job": 121931583009
+  }
+}

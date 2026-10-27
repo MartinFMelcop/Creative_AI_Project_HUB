@@ -1,0 +1,342 @@
+{
+  "schema_version": 1,
+  "kind": "destination_execution",
+  "baseline_commit": "92e0fbd9ddd95edeff6f0e7a9ea884bf777200ac",
+  "consumer_paths": [
+    "north-star/memory-study/Rules/Memory.cs",
+    "north-star/memory-study/Host/Room.cs",
+    "north-star/memory-study/Host/Program.cs",
+    "north-star/memory-study/web/app.js"
+  ],
+  "source_artifacts": [
+    {
+      "local_path": "evidence/memory-study/protocol.json",
+      "size_bytes": 3026,
+      "sha256": "61470b70a436e1bcaf8ebd7916355e03ec7afeac093a37fc0485484f485450a2"
+    },
+    {
+      "local_path": "labs/narrative-continuity/memory/run.py",
+      "size_bytes": 8904,
+      "sha256": "708c0aec025840f8fe72c6fc4b9f7f5ff929bdd53a36ec689fd0621bbf515ecb"
+    },
+    {
+      "local_path": "north-star/csharp/global.json",
+      "size_bytes": 55,
+      "sha256": "e0c0882461e712f6c2c66241bf2f175c60832e3ff077dc26091ff8c661d4193e"
+    },
+    {
+      "local_path": "north-star/memory-study/.gitignore",
+      "size_bytes": 16,
+      "sha256": "79810615b4063be5474618fd002df934762fe9ccebb448537ce74ce23b319202"
+    },
+    {
+      "local_path": "north-star/memory-study/Checks/NorthStar.MemoryChecks.csproj",
+      "size_bytes": 348,
+      "sha256": "9c0ea4da0d10f712ab2249ff883dff348868caa2413bd63c565bec91ccd12370"
+    },
+    {
+      "local_path": "north-star/memory-study/Checks/Program.cs",
+      "size_bytes": 11396,
+      "sha256": "1268694ca86b383c66ccc8eef6ea63e91689fbb87b47e7a99a80d03f838bfcca"
+    },
+    {
+      "local_path": "north-star/memory-study/Host/NorthStar.MemoryStudy.csproj",
+      "size_bytes": 344,
+      "sha256": "4a72ac10bbdbb89d5db0f95628206bc90e2b0c5b3beea94acd1146c40d57ef0e"
+    },
+    {
+      "local_path": "north-star/memory-study/Host/Program.cs",
+      "size_bytes": 4996,
+      "sha256": "574f9e77bc44502d72a698a19f55e5a8fe00ae0e8d662d70e7799649d2e537d8"
+    },
+    {
+      "local_path": "north-star/memory-study/Host/Room.cs",
+      "size_bytes": 6120,
+      "sha256": "a4e82fa6e4e7ac03c38b623e8920f168d3efb6996287aa1ee55dc6dd197529e5"
+    },
+    {
+      "local_path": "north-star/memory-study/README.md",
+      "size_bytes": 5310,
+      "sha256": "5d94d5b642c79bb6b0bd48e904fc91c04dee4645d566aa81d5cd2e461291b4ba"
+    },
+    {
+      "local_path": "north-star/memory-study/Rules/Memory.cs",
+      "size_bytes": 6893,
+      "sha256": "4307f83a7e7cbed6ed8f08815ce3e216744be660545c4edd6a6985581abec852"
+    },
+    {
+      "local_path": "north-star/memory-study/Rules/NorthStar.Memory.csproj",
+      "size_bytes": 267,
+      "sha256": "3acec7333496cb2bb2bb2a8c6aaf151f714f6402e133ead2ca8d3f166d77dd22"
+    },
+    {
+      "local_path": "north-star/memory-study/tools/browser.mjs",
+      "size_bytes": 14577,
+      "sha256": "1ea73aaa7dfd1f3f5d2ab3d55918af9d857ec0126ee1ca02d855c481a62bb904"
+    },
+    {
+      "local_path": "north-star/memory-study/tools/verify.py",
+      "size_bytes": 3148,
+      "sha256": "237c261f84eb8a374d132dd424d99f16ce4a37608d2de831dd5a0467efadb3b2"
+    },
+    {
+      "local_path": "north-star/memory-study/web/app.js",
+      "size_bytes": 4700,
+      "sha256": "e255ce998bf51ff5542f8275f8bb1c566de304ec580f76dfc63a63eaad86c6fb"
+    },
+    {
+      "local_path": "north-star/memory-study/web/index.html",
+      "size_bytes": 7124,
+      "sha256": "28af3025fcdaccb3fc31bad2a1b6af7f6d5065e41f7f006ab7a7da112553584d"
+    },
+    {
+      "local_path": "north-star/memory-study/web/style.css",
+      "size_bytes": 4141,
+      "sha256": "7ac8e89d8b9f26dd2d9f98026243ae32618aa260d471b0557e589e5fa81f1654"
+    },
+    {
+      "local_path": "projects/realtime-integration-lab/package-lock.json",
+      "size_bytes": 42105,
+      "sha256": "aa191ef2158e6cc6f770bf4b3ee44dca17175ef1a3cd572b98115246bf46aea7"
+    },
+    {
+      "local_path": "projects/realtime-integration-lab/package.json",
+      "size_bytes": 1445,
+      "sha256": "42e3cc9633e522dd6d9a5c11023418331129632881a8bf0b95e3717247d57ebe"
+    },
+    {
+      "local_path": "references/rave-master/snapshots/36af1651271422ae33856e8b5d7b45702215f165/source/RM_ACT1/DATA/DEV/MEMORY_FLAGS.csv",
+      "size_bytes": 1041,
+      "sha256": "fbe336d8dc4224a38a76800730ef94aae59d6a00075654066aec1d4ca4d9946c"
+    },
+    {
+      "local_path": "references/rave-master/snapshots/36af1651271422ae33856e8b5d7b45702215f165/source/RM_ACT1/DATA/DEV/RECENT_EVENTS.csv",
+      "size_bytes": 902,
+      "sha256": "fdaea1fb4b2522e0c86d5f77e4a36632f56dd34732705f9ea5a4f7e2d55b385f"
+    },
+    {
+      "local_path": "references/rave-master/snapshots/36af1651271422ae33856e8b5d7b45702215f165/source/RM_ACT1/DATA/DEV/RGSS/RM_FLAGS_EVENTS_RUNTIME.rb",
+      "size_bytes": 9839,
+      "sha256": "e10b541388fe9d2a1f1aa1aefcb054241ffb58ecf4a4815c5e833f3501366525"
+    },
+    {
+      "local_path": "references/rave-master/snapshots/36af1651271422ae33856e8b5d7b45702215f165/source/RM_DIST/RMXP_BASE/Data/RM_CSV/MEMORY_FLAGS.csv",
+      "size_bytes": 1041,
+      "sha256": "fbe336d8dc4224a38a76800730ef94aae59d6a00075654066aec1d4ca4d9946c"
+    },
+    {
+      "local_path": "references/rave-master/snapshots/36af1651271422ae33856e8b5d7b45702215f165/source/RM_DIST/RMXP_BASE/Data/RM_CSV/RECENT_EVENTS.csv",
+      "size_bytes": 902,
+      "sha256": "fdaea1fb4b2522e0c86d5f77e4a36632f56dd34732705f9ea5a4f7e2d55b385f"
+    },
+    {
+      "local_path": "references/rave-master/snapshots/36af1651271422ae33856e8b5d7b45702215f165/source/RM_DIST/RMXP_BASE/ScriptsCustom/RM_FLAGS_EVENTS_RUNTIME.rb",
+      "size_bytes": 9839,
+      "sha256": "e10b541388fe9d2a1f1aa1aefcb054241ffb58ecf4a4815c5e833f3501366525"
+    }
+  ],
+  "checks": {
+    "passed": 55,
+    "failed": 0
+  },
+  "check_groups": {
+    "native": 34,
+    "chromium": 21,
+    "http": 7,
+    "same_source_cases": 57,
+    "same_source_queries": 237
+  },
+  "commands": [
+    {
+      "command": [
+        "/workspace/work/authored-scene/dotnet/dotnet",
+        "--version"
+      ],
+      "exit_code": 0,
+      "stdout": "10.0.401\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/workspace/work/authored-scene/dotnet/dotnet",
+        "build",
+        "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/memory-study/Checks/NorthStar.MemoryChecks.csproj",
+        "-c",
+        "Release"
+      ],
+      "exit_code": 0,
+      "stdout": "  Determining projects to restore...\n  All projects are up-to-date for restore.\n  NorthStar.Memory -> /workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/memory-study/Rules/bin/Release/netstandard2.1/NorthStar.Memory.dll\n  NorthStar.MemoryStudy -> /workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/memory-study/Host/bin/Release/net10.0/NorthStar.MemoryStudy.dll\n  NorthStar.MemoryChecks -> /workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/memory-study/Checks/bin/Release/net10.0/NorthStar.MemoryChecks.dll\n\nBuild succeeded.\n    0 Warning(s)\n    0 Error(s)\n\nTime Elapsed 00:00:01.66\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/workspace/work/authored-scene/dotnet/dotnet",
+        "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/memory-study/Checks/bin/Release/net10.0/NorthStar.MemoryChecks.dll",
+        "--native",
+        "/workspace/work/memory-cycle/verified/native.json"
+      ],
+      "exit_code": 0,
+      "stdout": "PASS: 34 memory native controls\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python3",
+        "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/labs/narrative-continuity/memory/run.py",
+        "--dotnet",
+        "/workspace/work/authored-scene/dotnet/dotnet",
+        "--output",
+        "/workspace/work/memory-cycle/verified/source"
+      ],
+      "exit_code": 0,
+      "stdout": "PASS: 57 SAME Python/C# source cases and false-result detection\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "node",
+        "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/memory-study/tools/browser.mjs",
+        "/workspace/work/authored-scene/dotnet/dotnet",
+        "/workspace/work/memory-cycle/verified/browser"
+      ],
+      "exit_code": 0,
+      "stdout": "PASS: 21 Chromium and 7 HTTP memory controls\n",
+      "stderr": ""
+    }
+  ],
+  "runtime_observations": {
+    "sdk": "10.0.401",
+    "browser": {
+      "node": "v24.19.0",
+      "chromium": "154.0.8037.57",
+      "playwright": "1.64.0"
+    },
+    "unity_executed": false,
+    "windows_executed": false,
+    "steam_executed": false
+  },
+  "scope": "Bounded known scoped flags and exact action-turn expiry consumed by an actual finite original witness service; explicit source global/union/wildcard query is separate from exact named authority.",
+  "counting": "ONE legacy/laboratory unit; consumer/UI/CI are support, not extra North Star/portfolio units, participants, population observations or measured effort.",
+  "specialists": {
+    "engineering": "Independent source/architecture comparison; ENG004/015/017 informed authority/temporal contracts. Hit usage limit before code.",
+    "scientific": "Independent source/alternative analysis; SCI013/014/076/077 selected scoped memory over already-recorded quest/helper defects. Implementation remained unavailable/pending.",
+    "creative": "Independent source/product analysis plus initial HTML/CSS; CRE005(A),045/061(H) informed past facts vs temporary opportunity without fictional imports. Final implementation/review unavailable.",
+    "primary": "Implemented portable rules, actual owner, distinct Python reference/case bridge, native/browser/HTTP instruments, original SVG behavior/history, actual execution, review/preservation/continuity/CI integration sequentially.",
+    "independence_limit": "No independent final implementation review, Ruby execution, human testimony or author approval attributed."
+  },
+  "negative_results": [
+    "Source null-event wildcard matches any named subject but exact private query excludes it.",
+    "Source unknown flag/global and missing subject/NPC_UNKNOWN fallbacks rejected for private authority.",
+    "False-result comparator control detected; isolated false-witness and false-fitting renderers detected.",
+    "Actual exhausted demonstration policy has no parts and no fittings; expiry and promises cannot refund it.",
+    "Prior baseline C# cancellation preserved with unproven cause and specific-job rerun request."
+  ],
+  "limitations": [
+    "Source interpretation plus executed Python/C# parity, not Ruby/RGSS/RMXP; known typed bounds omit permissive coercion/full storage/Game_System save integration.",
+    "Original TTL3/part/coin/action costs and bench staging are experimental; no source moral labels/fiction, final canon, human comprehension/social trust, accessibility/enjoyment or commercial clearance.",
+    "Rules C#8/netstandard2.1; actual Host .NET10/Linux/browser, ephemeral trusted-local. No Unity Editor/license/module, ordinary-user Windows, device/participant, Steam or production delivery.",
+    "Prior owners/journals/intake/RequestExpedition/fixed Lure/Trail/frozen AI study and both recipients remain unchanged. Full effects/schedules/catalogs/dialogue/creation/broad persistence and ownership remain unresolved."
+  ],
+  "result_artifacts": [
+    {
+      "local_path": "evidence/memory-study/baseline-ci.json",
+      "size_bytes": 938,
+      "sha256": "2ac6884529191f0c1c13462f4f57fdee1d631f5abdf9d9a10b9b45d531a6965d"
+    },
+    {
+      "local_path": "evidence/memory-study/browser/browser.json",
+      "size_bytes": 49409,
+      "sha256": "23d5a3dd6e0500a7d8d40294656a42c13a8528e16049abd73f860f9803fbf364"
+    },
+    {
+      "local_path": "evidence/memory-study/browser/exhausted-window.png",
+      "size_bytes": 212137,
+      "sha256": "b31b86efdb2f14ab5077739ffede474dfacfacc6f511d7ed925b3ef2b7efb678"
+    },
+    {
+      "local_path": "evidence/memory-study/browser/expired-not-erased.png",
+      "size_bytes": 199057,
+      "sha256": "19e537023190ee3a8ec45081f9fd1b96fef7c6bb909fd5e1ec6b069eddcaaaeb"
+    },
+    {
+      "local_path": "evidence/memory-study/browser/hosts.json",
+      "size_bytes": 2059,
+      "sha256": "7bcdc495bc0d54097096697ca878342601924ce2a0294f993b5c6c7460b63f1c"
+    },
+    {
+      "local_path": "evidence/memory-study/browser/two-actual-fittings.png",
+      "size_bytes": 217117,
+      "sha256": "936311ad47d40a31b26108a7cc6a3b1adfec0462e6573bd63723a2fefdc9c130"
+    },
+    {
+      "local_path": "evidence/memory-study/browser/west-observed.png",
+      "size_bytes": 191922,
+      "sha256": "05ccc5a209235c413b4dbd0a86ae5afb104ce37b1fca6caa9e198b3e693d47bb"
+    },
+    {
+      "local_path": "evidence/memory-study/execution.json",
+      "size_bytes": 2531,
+      "sha256": "a68a1af54a0cfbf4fda6a5341b6f4d1c0d3e9584c4a4fdf3ce7add9079614789"
+    },
+    {
+      "local_path": "evidence/memory-study/initial-exploration.json",
+      "size_bytes": 971,
+      "sha256": "7433da22b3d879a87822e8b0cae4ec42c3375c3f5749a73a3789685034ddc6cc"
+    },
+    {
+      "local_path": "evidence/memory-study/native.json",
+      "size_bytes": 8267,
+      "sha256": "08f41ec24864bf6fe50587c1a9997e1ab6f72c458c68898d2b6755cff6827552"
+    },
+    {
+      "local_path": "evidence/memory-study/preservation.json",
+      "size_bytes": 334487,
+      "sha256": "9dd932cfed84de9fe544f39f739aef85616e241397fb848bb8de21c6aa5184e0"
+    },
+    {
+      "local_path": "evidence/memory-study/protocol.json",
+      "size_bytes": 3026,
+      "sha256": "61470b70a436e1bcaf8ebd7916355e03ec7afeac093a37fc0485484f485450a2"
+    },
+    {
+      "local_path": "evidence/memory-study/source/cases.json",
+      "size_bytes": 41527,
+      "sha256": "0b3d9eb221a789afe3c347087d0d0a0e8520bcf193febdd1b0ec6ed8935e4f79"
+    },
+    {
+      "local_path": "evidence/memory-study/source/csharp.json",
+      "size_bytes": 8745,
+      "sha256": "49cc59b95afd0d0b118ed23bdbeb65932d292e1eba872c90c25bc9839e80442f"
+    },
+    {
+      "local_path": "evidence/memory-study/source/execution.json",
+      "size_bytes": 439,
+      "sha256": "d99fa44d7a6b1843db5b4e6370420d1ac422a12bf4ba7c22ab342a01a97fce5f"
+    },
+    {
+      "local_path": "evidence/memory-study/source/python.json",
+      "size_bytes": 8745,
+      "sha256": "49cc59b95afd0d0b118ed23bdbeb65932d292e1eba872c90c25bc9839e80442f"
+    },
+    {
+      "local_path": "evidence/memory-study/source/results.json",
+      "size_bytes": 1658,
+      "sha256": "3cc986ebb26795188c5794844be11300ce04a5303b210be79b3c31a35a99c111"
+    },
+    {
+      "local_path": "evidence/memory-study/source/source-assay.json",
+      "size_bytes": 2777,
+      "sha256": "2c4998da9aa2885fb83ad6cd490f106181d053f4d4d51b8d47a2f4e4f659b31a"
+    },
+    {
+      "local_path": "evidence/memory-study/validation.json",
+      "size_bytes": 1147,
+      "sha256": "7415f16bb7bb7c216a69c5dc6382be74ac55043f6a9e117372f6c2f89b321c7d"
+    },
+    {
+      "local_path": "evidence/memory-study/verification.json",
+      "size_bytes": 2682,
+      "sha256": "eac7533ec18a4f41a1b7fbee8eee201f68439882870a27bca1bfbb22cd466787"
+    }
+  ]
+}
