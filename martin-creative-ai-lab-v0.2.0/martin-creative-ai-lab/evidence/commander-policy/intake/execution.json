@@ -1,0 +1,138 @@
+{
+  "schema_version": 1,
+  "label": "RECORDED_EXECUTION",
+  "scope": "Inspected archive code executed only from scratch copy; archives and extracted originals unchanged",
+  "commands": [
+    {
+      "name": "compiler-version",
+      "args": [
+        "g++",
+        "--version"
+      ],
+      "cwd": "/workspace/work/commander-intake/execution-engine",
+      "exit_code": 0,
+      "stdout_sha256": "5f6798e87440f1e8b88bf6822c33bebe434f83374640a7f8ba967902ee1ea098",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "python-version",
+      "args": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "--version"
+      ],
+      "cwd": "/workspace/work/commander-intake/execution-engine",
+      "exit_code": 0,
+      "stdout_sha256": "4c3569f5da09975434dd9fd9a91fadbc4367a91d8f3c3fab59e9241ab9ee4bd8",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "compile-surrogate",
+      "args": [
+        "g++",
+        "-O3",
+        "-std=c++17",
+        "engine/surrogate.cpp",
+        "-o",
+        "engine/simulate"
+      ],
+      "cwd": "/workspace/work/commander-intake/execution-engine",
+      "exit_code": 0,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "unittest",
+      "args": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-v"
+      ],
+      "cwd": "/workspace/work/commander-intake/execution-engine",
+      "exit_code": 0,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "c2d763aec461b1ce870d2efe487c6d650083911dcfe1ded8bcf0a12b68c43d5a"
+    },
+    {
+      "name": "palladia-isolated",
+      "args": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "tests/test_palladia_rules.py"
+      ],
+      "cwd": "/workspace/work/commander-intake/execution-engine",
+      "exit_code": 1,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "575b86bfa6bd5bc1c93457265d42226167ccbe9d61e50594a38fa4881da714ad"
+    },
+    {
+      "name": "bounded-scenarios",
+      "args": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "scripts/verify_combo_scenarios.py"
+      ],
+      "cwd": "/workspace/work/commander-intake/execution-engine",
+      "exit_code": 0,
+      "stdout_sha256": "e17fe7e0ae8393ffcdbac94c2089b565b6d4fd55dae471fcae5085a88c5d10fa",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "transfer-mechanical",
+      "args": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "release/check_v10.py"
+      ],
+      "cwd": "/workspace/work/commander-intake/transfer",
+      "exit_code": 0,
+      "stdout_sha256": "a81547041e94cf25d21e2b823347625def5cbbb772c771511728f530ec1b3d0e",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "execution_copy_original_member_changes": [],
+  "bounded_scenarios_exact_json_equal_to_recorded": true,
+  "actual_tests": {
+    "suite": 64,
+    "passed": 64,
+    "skipped": 0,
+    "isolated_palladia_launch": "FAILED_ModuleNotFoundError",
+    "cause_observed": "Its standalone bootstrap inserts nonexistent models/ path; discovery imports engine/ through earlier modules."
+  },
+  "surrogate_smoke": {
+    "executions": 2,
+    "episodes_each": 16,
+    "total_surrogate_episodes": 32,
+    "asserted_byte_identical": true,
+    "retention": "Original test uses TemporaryDirectory and removes raw smoke JSON; source and exact test output retained."
+  },
+  "limits": [
+    "No30000episode rerun; recorded report hashes/consistency checked only.",
+    "32smoke executions are not full Magic games.",
+    "Six bounded scenarios are fixtures, not complete Magic games.",
+    "No network/Scryfall audit executed.",
+    "No Windows/Unity/Steam execution."
+  ],
+  "metadata_collection_failure": {
+    "after_all_commands": true,
+    "type": "ValueError",
+    "detail": "Initial metadata collector called relative_to(execution_root) on original source path. Logs were already written. Metadata reconstructed from exact command/output records without rerunning tests; source comparison corrected to use original-root relative paths."
+  },
+  "archive_boundary_controls": {
+    "checks": 11,
+    "passed": 11,
+    "command": [
+      "python",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "labs/economy-simulation",
+      "-p",
+      "test_commander_intake.py",
+      "-v"
+    ],
+    "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stderr_sha256": "75f7a42d30e1aca46c60966f458bc66fe758085abd2d8a7a715e7fe61049bfbf"
+  }
+}

@@ -183,3 +183,7 @@ gates inside the destination execution. The original calibration tool remains us
 no original check or integrity/security gate is removed. No source/package retirement
 is justified: pinned Git snapshots, source owners, dependencies and rights are still
 needed for recovery and reproduction.
+
+## Multiplayer policy evaluation
+
+P02 also evaluates the [P01 complete-game instrument](../economy-simulation/policy-evaluation.md). The [prospective protocol](../../evidence/commander-policy/protocol.json) separates complete-game units, matched assignments, roster holdout, tie membership/fractional credit and technical interruption. [Execution](../../evidence/commander-policy/RUN.json) retains negative results and evaluator forgeries; this is a deterministic heuristic experiment, not another EVAL-001 candidate attempt, model leaderboard or North Star AI transfer.

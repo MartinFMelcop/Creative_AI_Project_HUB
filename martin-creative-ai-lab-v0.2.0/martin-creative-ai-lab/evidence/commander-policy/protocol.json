@@ -1,0 +1,149 @@
+{
+  "schema_version": 1,
+  "experiment_id": "eclipse-policy-commander-transfer-v1",
+  "status": "FROZEN_BEFORE_OUTCOME_EXECUTION",
+  "evidence_level": "PROPOSED_EXPERIMENT",
+  "owners": [
+    "P01 Economy & Simulation",
+    "P02 AI Evaluation & Quality"
+  ],
+  "question": "Does a fixed observation-constrained route heuristic improve complete-game fractional winner credit versus the established collector heuristic under both declared opposing rosters and two legal scenario families, without changing authoritative rules?",
+  "baseline": "collector-v1",
+  "candidate": "route-v1",
+  "seeds": [
+    100,
+    101,
+    102,
+    103,
+    104,
+    105,
+    106,
+    107
+  ],
+  "scenarios": [
+    {
+      "id": "default",
+      "rules": {
+        "starting_gold": 4,
+        "goal": 3,
+        "round_limit": 20,
+        "seal_base": 6,
+        "seal_step": 2,
+        "move_cost": 1,
+        "rite_cost": 2,
+        "work_bonus": 0
+      }
+    },
+    {
+      "id": "scarce",
+      "rules": {
+        "starting_gold": 2,
+        "goal": 3,
+        "round_limit": 16,
+        "seal_base": 7,
+        "seal_step": 2,
+        "move_cost": 1,
+        "rite_cost": 2,
+        "work_bonus": 0
+      }
+    }
+  ],
+  "rosters": [
+    {
+      "id": "primary",
+      "opponents": [
+        "collector-v1",
+        "collector-v1",
+        "interdict-v1"
+      ],
+      "held_out": false
+    },
+    {
+      "id": "heldout",
+      "opponents": [
+        "income-v1",
+        "keeper-v1",
+        "interdict-v1"
+      ],
+      "held_out": true
+    }
+  ],
+  "max_actions": 160,
+  "design": {
+    "development_seeds": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "development_use": "Correctness checks only; no recorded outcome-based candidate tuning",
+    "candidate_count": 1,
+    "training": "None; independently authored deterministic heuristic, not learned model",
+    "assignment": "Focal seat0..3; three cyclic rotations of ordered opposing roster across remaining ascending seats; pair baseline/candidate under identical seed/rules/opponents. Duplicate policy names yield duplicate full assignments; retain as declared balanced technical repeats, not independent trials.",
+    "expected_game_executions": 768,
+    "unit": "One complete multiplayer game; aggregation family is scenario+seed+roster across12assignments and paired arms",
+    "holdout_boundary": "Heldout roster and seeds excluded from correctness/development execution; one frozen candidate evaluation. Configuration visible to implementation/evaluator agents; procedural separation, not enforced blinding or sandbox. Policies cannot observe declared opponent names or source seed.",
+    "seed_confound": "Seed jointly changes starting positions, initiative and event sequence. Policy rotation does not identify pure initiative effect.",
+    "forecast": "Current/next published forecast permitted; not illicit information."
+  },
+  "endpoints": {
+    "primary": "Per focal seat fractional credit1/k for membership in nonempty authoritative terminal winner set of size k, otherwise0. Mean paired candidate-minus-baseline, averaged equally over assignments/seeds/scenarios within each roster.",
+    "secondary": [
+      "exclusive winner indicator",
+      "multiwinner tie count",
+      "winner-set membership",
+      "gate claim versus deadline",
+      "accepted action count",
+      "incomplete/interrupted count",
+      "per-scenario and per-focal-seat differences",
+      "decision timing descriptive only"
+    ],
+    "incomplete": "Never invent terminal outcome or zero-credit loss; record incomplete separately and invalidate comparative acceptance if any technical interruption",
+    "accounting": "Credits sum1 for every complete nonempty winner set; membership can sum above1. No universal25%target."
+  },
+  "analysis": {
+    "practical_threshold": 0.05,
+    "acceptance": "Correctness controls and all complete games required. Finite-suite robust improvement only if each roster mean delta>=0.05 and every scenario-by-roster mean delta>=0. No claim of universal superiority. Otherwise retain negative/mixed/inconclusive result without retuning.",
+    "uncertainty": "Finite explicitly enumerated deterministic suite, not probabilistic sample. Report exact family/assignment effect ranges and subgroup sensitivity; do not invent population CI or independent-seat binomial interval. No unseen-world generalization.",
+    "common_scenarios": "Report observed family-level baseline/candidate covariance and variance of paired differences versus sum of arm variances; shared seeds are not assumed to improve precision.",
+    "multiplicity": "One fixed candidate, one primary endpoint, two required robustness rosters; secondary results descriptive."
+  },
+  "controls": [
+    "Illegal action rejected without owner state mutation",
+    "Observation construction/source state immutable and no evaluator-only fields",
+    "Isolated Fork previews cannot commit outcomes",
+    "Conservation after each actual accepted transition",
+    "Trace replay binds exact rules/seed and reconstructs authoritative terminal result",
+    "Correct empty/nonempty/tied/exclusive winner accounting",
+    "Forged outcome or credit reporter rejected",
+    "Wrong source/config identity rejected",
+    "Duplicate/missing game assignment rejected",
+    "Unsupported policy/config or action-limit interruption reported/refused"
+  ],
+  "limits": {
+    "per_game_actions": 160,
+    "whole_experiment_wall_seconds": 1800,
+    "stop": "Abort/record nonzero on exceptions, illegal action, changed identities, missing assignments, incomplete games or wall deadline; preserve failure, no success-shaped retries. Correctness bugs may be corrected with superseded evidence and a new identified final execution.",
+    "policy_budget": "No recursion/training/network; bounded legal-action heuristic. Record maximum/total selection timing; whole-process1800s cap bounds stalls, not an enforced per-decision sandbox."
+  },
+  "source_lock": "Parent runner must hash authoritative Core, evaluator/candidate and this protocol before execution and verify unchanged afterwards. Freeze manifest distinct from outcome output.",
+  "transfer": "No North Star AI integration claimed. Any combat/identity transfer requires separate actual consumer and acceptance; exact future beneficiary and test to be stated after results.",
+  "specialist_basis": [
+    "SCI-013 rival explanations",
+    "SCI-014 construct versus surrogate metric",
+    "SCI-076 method matched to claim",
+    "SCI-077 negative retention, denominator and dependency discipline"
+  ],
+  "revision": "v1-corrected-before-primary-outcomes",
+  "prospective_correction": {
+    "reason": "Initial correctness instrument executed original heldout roster income/interdict/interdict at seed0 before final experiment. This defeats original roster-exclusion assertion even though evaluation seeds100..107 were not run and no candidate outcome tuning occurred.",
+    "superseded_protocol_sha256": "d729b1b549efc2219ea3ed7767e961a9c2616eaef3f2e86c8fcd994f5664e6f2",
+    "superseded_config_sha256": "a812b52bc17ec98bf7a5a0b18658f17c7175086552bb1123d8acb28cee250a08",
+    "replacement": "New heldout roster income/keeper/interdict was declared before primary outcomes, not used as a correctness roster. Correctness schema fixture now uses keeper/keeper/keeper. Original bytes retained.",
+    "scope": "No primary outcomes before replacement; candidate source unchanged by this correction; no stronger sandbox/blinding claim."
+  }
+}

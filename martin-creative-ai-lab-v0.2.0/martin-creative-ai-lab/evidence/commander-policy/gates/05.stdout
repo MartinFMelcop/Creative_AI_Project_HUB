@@ -1,0 +1,62 @@
+{
+  "laboratories": {
+    "ai-evaluation": "operational",
+    "audio-music": "operational",
+    "build-operations": "incomplete",
+    "combat-response": "operational",
+    "economy-simulation": "operational",
+    "input-timing": "operational",
+    "narrative-continuity": "operational",
+    "networking-persistence": "operational",
+    "rpg-systems": "operational",
+    "visual-animation": "operational",
+    "world-gameplay": "operational"
+  },
+  "limits": "Artifact/navigation identity and recorded execution only. No fresh gameplay, participant, ordinary-user Windows, licensed Unity/Steam, rights clearance or production readiness assessment.",
+  "recipients": {
+    "linux-x64": {
+      "archive_path": "delivery/authored-scene/dist/authored-scene-demo-linux-x64.zip",
+      "bytes": 35908523,
+      "guide_path": "delivery/authored-scene/README.md",
+      "launcher_path": "AuthoredSceneDemo/run-demo.sh",
+      "recorded_execution": "evidence/request-continuity/RUN.json",
+      "runtime_version": "10.0.12",
+      "sha256": "d829b1b59ee2dd22f87ab007c4db96bfe1655731b38d02f5085f0b8d30e043e4",
+      "source_files": 22,
+      "target": "linux-x64"
+    },
+    "windows-x64": {
+      "archive_path": "delivery/authored-scene-windows/dist/authored-scene-demo-win-x64.zip",
+      "bytes": 35820510,
+      "guide_path": "delivery/authored-scene-windows/README.md",
+      "launcher_path": "AuthoredSceneWindows/run-demo.ps1",
+      "recorded_execution": "evidence/windows-recipient/RUN.json",
+      "runtime_version": "10.0.12",
+      "sha256": "0500d70a6a6c7071f12423fd529c0922830c09d34a312ae46c4f1e562c5aaffb",
+      "source_files": 22,
+      "target": "win-x64"
+    }
+  },
+  "schema_version": 1,
+  "source_experiments": {
+    "field-journey": {
+      "consumer_paths": [
+        "north-star/field-journey/Host/Room.cs",
+        "north-star/field-journey/Host/Program.cs"
+      ],
+      "guide_path": "north-star/field-journey/README.md",
+      "included_in_recipient": false,
+      "recorded_execution": "evidence/dialogue-conditions/RUN.json"
+    },
+    "selected-passives": {
+      "consumer_paths": [
+        "north-star/combat-study/Rules/Passives.cs",
+        "north-star/combat-study/Host/Trial.cs",
+        "north-star/combat-study/Host/Room.cs"
+      ],
+      "guide_path": "north-star/combat-study/README.md",
+      "included_in_recipient": false,
+      "recorded_execution": "evidence/passive-response/RUN.json"
+    }
+  }
+}

@@ -95,3 +95,7 @@ R8 same-ID ingredient behavior is preserved without duplicate transaction credit
 source negatives, missing-tool refusal and loss without refund. This is ONE laboratory
 unit, not extra product/portfolio investment, a full item catalog, historical runtime,
 licensed Windows delivery or human experience proof. Prior methods retain their own scope.
+
+## Complete-game policy evaluation
+
+The [additional method](policy-evaluation.md) reuses the unchanged Eclipse Fair Game as the authoritative four-participant consumer. P02 evaluates frozen observation-only policies, actual complete-game outcomes and held-out counterplay. [Execution](../../evidence/commander-policy/RUN.json) distinguishes new Eclipse games from archived CommanderSIM surrogate results and bounded fixtures. This one-time external research intake does not replace crafting methods or create permanent origin release duties.

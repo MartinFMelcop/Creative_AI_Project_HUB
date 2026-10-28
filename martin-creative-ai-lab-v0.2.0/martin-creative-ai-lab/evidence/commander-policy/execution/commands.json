@@ -1,0 +1,133 @@
+[
+  {
+    "label": "sdk",
+    "command": [
+      "/workspace/work/authored-scene/dotnet/dotnet",
+      "--version"
+    ],
+    "exit_code": 0,
+    "stdout_sha256": "93c11b5221b72e0032ab2d9f93d28c2c9b7a0bb2557effffcdfef45ab739a0da",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "elapsed_seconds": 0.12342384499970649
+  },
+  {
+    "label": "build-evaluator",
+    "command": [
+      "/workspace/work/authored-scene/dotnet/dotnet",
+      "build",
+      "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/projects/eclipse-fair/PolicyEvaluation/Eclipse.PolicyEvaluation.csproj",
+      "-c",
+      "Release"
+    ],
+    "exit_code": 0,
+    "stdout_sha256": "b636d89a598efb8a5fa1a49bbc8369b1e38c814b7e76b04c5f4211e42925cc26",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "elapsed_seconds": 1.3346845239993854
+  },
+  {
+    "label": "build-controls",
+    "command": [
+      "/workspace/work/authored-scene/dotnet/dotnet",
+      "build",
+      "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/projects/eclipse-fair/PolicyEvaluation/Checks/Eclipse.PolicyEvaluation.Checks.csproj",
+      "-c",
+      "Release"
+    ],
+    "exit_code": 0,
+    "stdout_sha256": "c17c167691d7c1628827f503681277b5b052d520478868bcfce99bd89256e28a",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "elapsed_seconds": 1.4775856189999104
+  },
+  {
+    "label": "controls",
+    "command": [
+      "/workspace/work/authored-scene/dotnet/dotnet",
+      "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/projects/eclipse-fair/PolicyEvaluation/Checks/bin/Release/net10.0/Eclipse.PolicyEvaluation.Checks.dll"
+    ],
+    "exit_code": 0,
+    "stdout_sha256": "b52516b3f36f2cbb9576471e9588ff1d601f821b829e115ad9363ffa4c111846",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "elapsed_seconds": 3.2047956029991838
+  },
+  {
+    "label": "build-regressions",
+    "command": [
+      "/workspace/work/authored-scene/dotnet/dotnet",
+      "build",
+      "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/projects/eclipse-fair/Checks/Eclipse.Checks.csproj",
+      "-c",
+      "Release"
+    ],
+    "exit_code": 0,
+    "stdout_sha256": "e1a6950a37e02b5af9be5a8edc3bfca159a074ce9326942d606b6d64f68c614f",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "elapsed_seconds": 1.4024869390004824
+  },
+  {
+    "label": "regressions",
+    "command": [
+      "/workspace/work/authored-scene/dotnet/dotnet",
+      "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/projects/eclipse-fair/Checks/bin/Release/net10.0/Eclipse.Checks.dll"
+    ],
+    "exit_code": 0,
+    "stdout_sha256": "94e28db386aac6e81056a0c61ddfb813c161ae0d2e90aa581f98db53aaea009d",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "elapsed_seconds": 2.669015825000315
+  },
+  {
+    "label": "experiment",
+    "command": [
+      "/workspace/work/authored-scene/dotnet/dotnet",
+      "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/projects/eclipse-fair/PolicyEvaluation/bin/Release/net10.0/Eclipse.PolicyEvaluation.dll",
+      "run",
+      "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/evidence/commander-policy/config.json",
+      "/workspace/work/commander-intake/policy-execution-2/report.json",
+      "1997b0d4ab5b07afadda0f044160317ea8f73e571c2ff7e8bfa8d37a7dd020b9"
+    ],
+    "exit_code": 0,
+    "stdout_sha256": "80dbb6b2c4e4fc14418f363de5f690f90d0d0530407997f77fc03e1744b5c260",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "elapsed_seconds": 14.153545477999614
+  },
+  {
+    "label": "replay",
+    "command": [
+      "/workspace/work/authored-scene/dotnet/dotnet",
+      "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/projects/eclipse-fair/PolicyEvaluation/bin/Release/net10.0/Eclipse.PolicyEvaluation.dll",
+      "verify",
+      "/workspace/work/commander-intake/policy-execution-2/report.json"
+    ],
+    "exit_code": 0,
+    "stdout_sha256": "7adf4576cbf3342703068d712e3ba82a2d9341d3fbe02998b77f90ca27910518",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "elapsed_seconds": 6.778435676999834
+  },
+  {
+    "label": "repeat",
+    "command": [
+      "/workspace/work/authored-scene/dotnet/dotnet",
+      "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/projects/eclipse-fair/PolicyEvaluation/bin/Release/net10.0/Eclipse.PolicyEvaluation.dll",
+      "run",
+      "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/evidence/commander-policy/config.json",
+      "/workspace/work/commander-intake/policy-execution-2/repeated-report.json",
+      "1997b0d4ab5b07afadda0f044160317ea8f73e571c2ff7e8bfa8d37a7dd020b9"
+    ],
+    "exit_code": 0,
+    "stdout_sha256": "57d097045a39cf436343d0ea1cd262ec398476b452e20522a9c31f995f963fd1",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "elapsed_seconds": 13.498479052999755
+  },
+  {
+    "label": "repeat-replay",
+    "command": [
+      "/workspace/work/authored-scene/dotnet/dotnet",
+      "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/projects/eclipse-fair/PolicyEvaluation/bin/Release/net10.0/Eclipse.PolicyEvaluation.dll",
+      "verify",
+      "/workspace/work/commander-intake/policy-execution-2/repeated-report.json"
+    ],
+    "exit_code": 0,
+    "stdout_sha256": "7adf4576cbf3342703068d712e3ba82a2d9341d3fbe02998b77f90ca27910518",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "elapsed_seconds": 7.395295549999901
+  }
+]

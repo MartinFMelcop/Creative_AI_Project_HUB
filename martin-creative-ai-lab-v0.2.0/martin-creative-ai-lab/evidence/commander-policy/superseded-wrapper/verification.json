@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "status": "passed",
+  "sdk": "10.0.401",
+  "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+  "source_sha256": {
+    "evidence/commander-policy/config.json": "cdbbdb86ea5d4f99ec62bbc0ed5e4aeb90e41687f2ebd178be00c6e5c6d4430b",
+    "evidence/commander-policy/protocol.json": "3a6c732402e408200acea73754d3ee444c855fc0f30d993cdd7e3bfa0a2eb121",
+    "labs/economy-simulation/policy-evaluation.py": "27d49e7678238bc122a5b74a4010df618f3df669e44c44e83463bd65b51ba500",
+    "projects/eclipse-fair/Checks/Eclipse.Checks.csproj": "9df6fb4052ea5311e5c653eea6b6dbc34502e594cd83a8a3bbb21f713531df45",
+    "projects/eclipse-fair/Checks/Program.cs": "2d3f4fce8c38e8caf10379eed0a1cd0d7c072e3847cd541bb2c5b1d26d04f7a5",
+    "projects/eclipse-fair/Cli/Eclipse.Cli.csproj": "a552950e40e0a81fc602fcbb4c11d13344923368320ea38ee99d648dd36e0b5b",
+    "projects/eclipse-fair/Cli/Journal.cs": "64db61d7599aa852dfa9815b9f3d58e1126cacc116357388319c791c0d9d6a76",
+    "projects/eclipse-fair/Cli/Program.cs": "5fff23038345740d54c1dced60576de152be171d8be0d955eefe21872936a9da",
+    "projects/eclipse-fair/Core/Agents.cs": "026f77026f4bad7839f3f6f70ff350246e6d6d661aa3a97e6138b292c25dfb05",
+    "projects/eclipse-fair/Core/Eclipse.Core.csproj": "8d654c44b7bebb6b31a9f2f606927f45b5072193adc4eef8cce3f3cf3b278df3",
+    "projects/eclipse-fair/Core/Game.cs": "59c4e50b13d0189c88b0a7cc11310f001bed0c687640b9a68b052a16fa2bea94",
+    "projects/eclipse-fair/Core/Planning.cs": "f7dfef9127a59def7b6c862d5293574232c7dac202a84f528c6c9c5a4b849829",
+    "projects/eclipse-fair/Directory.Build.props": "62720f290d07a9d7f4899af16ff649dec8969a0b825aacdf1f5df943bea3668d",
+    "projects/eclipse-fair/PolicyEvaluation/Checks/Eclipse.PolicyEvaluation.Checks.csproj": "eaf503a2aadcf656e083341a4335dbf2dc12af3d184406be7386e385f8068f9f",
+    "projects/eclipse-fair/PolicyEvaluation/Checks/Program.cs": "0408835c6aa05d112750bd6a30706a7625568a8525eba93c9ed0ec57adb9e235",
+    "projects/eclipse-fair/PolicyEvaluation/Eclipse.PolicyEvaluation.csproj": "1ae522787dfd7d3d8648b6564e02d8c210f325ba111d10957a32f4c0f610274f",
+    "projects/eclipse-fair/PolicyEvaluation/Experiment.cs": "fb3fe523e37ebc1aecd865cb309e04759a564cdc09bbeedfbd5f0ea917b3fe32",
+    "projects/eclipse-fair/PolicyEvaluation/Program.cs": "e9300f8b58085294a8bee7b68de05f7056ae10c2376811a6f9ac64c7b63287cc",
+    "projects/eclipse-fair/global.json": "a0dcc4ee0c1b8044f9498734741bd764d5c2585f4d0d8e31e27e26e9662f751f"
+  },
+  "source_closure_sha256": "72a964c6925d092ff2a9553904f13067aa7d1b08935f601c780097d3113dfa8c",
+  "source_stable": true,
+  "controls": {
+    "passed": 18,
+    "failed": []
+  },
+  "affected_regressions": {
+    "checks": 13,
+    "failures": []
+  },
+  "report_sha256": "3fb5ba3691d1f21bd41ded665b5b761af4080b0d9f087f02471cd9050e32b029",
+  "repeated_report_byte_identical": true,
+  "limits": "Complete Eclipse Fair games only; software controls are not participants, CommanderSIM surrogate episodes, Magic games, human findings or Unity/Windows/Steam execution."
+}

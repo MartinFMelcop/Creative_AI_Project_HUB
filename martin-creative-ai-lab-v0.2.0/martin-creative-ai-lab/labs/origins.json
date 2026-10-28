@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "updated_at": "2026-10-27",
+  "updated_at": "2026-10-28",
   "baseline_commit": "9c69f295a1c5d736761a113d0e41aaa8600fb635",
   "scope": "Mandatory eleven-laboratory transformation. Historical source preservation is separate from terminal knowledge consumption; operational claims require executed instruments and bound evidence.",
   "north_star_consumer_demonstrated": true,
@@ -464,7 +464,9 @@
         "references/rave-master/snapshots/36af1651271422ae33856e8b5d7b45702215f165/source/RM_CORE/DATA/CORE/PERICIA_UNLOCKS.csv",
         "references/rave-master/snapshots/36af1651271422ae33856e8b5d7b45702215f165/source/RM_DIST/RMXP_BASE/Data/RM_CSV/PERICIA_UNLOCKS.csv",
         "references/rave-master/snapshots/36af1651271422ae33856e8b5d7b45702215f165/source/RM_DIST/RMXP_BASE/Data/RM_CSV/SIDEQUESTS_EM_CONSTRUCAO.csv",
-        "references/rave-master/snapshots/36af1651271422ae33856e8b5d7b45702215f165/source/RM_QA/DATA/QA/RPT_ITEMID_DUP.csv"
+        "references/rave-master/snapshots/36af1651271422ae33856e8b5d7b45702215f165/source/RM_QA/DATA/QA/RPT_ITEMID_DUP.csv",
+        "evidence/commander-policy/inputs/CommanderSIM_v16_Motor_Refinado.zip",
+        "knowledge/commander-simulation-research.md"
       ],
       "source_inventory": "labs/source-inventory.json",
       "consumer_paths": [
@@ -473,28 +475,33 @@
         "north-star/csharp/Forge/Program.cs",
         "north-star/tooling-study/Rules/Tooling.cs",
         "north-star/tooling-study/Host/Room.cs",
-        "north-star/tooling-study/Host/Program.cs"
+        "north-star/tooling-study/Host/Program.cs",
+        "projects/eclipse-fair/PolicyEvaluation/Experiment.cs",
+        "projects/eclipse-fair/PolicyEvaluation/Program.cs"
       ],
       "controls": [
         "Width-only rival versus typed preserved station/recipe assay",
         "Controlled schema, enum, quantity and reference defects",
         "Actual C# atomic spending, replay/conflict, overflow and rejection controls",
         "Two completed crafted journeys, matched unprepared failure and no-refund retry",
-        "Exact identity/tool method:87SAMEprobes(81actualrefs+6negatives),370known/2quarantined,28adapter/34consumer/23Chromium/7HTTP/8instrument controls; actual2outputs consumed by unchangedCrossing"
+        "Exact identity/tool method:87SAMEprobes(81actualrefs+6negatives),370known/2quarantined,28adapter/34consumer/23Chromium/7HTTP/8instrument controls; actual2outputs consumed by unchangedCrossing",
+        "Frozen observation-constrained complete-game method:18native/13Core regressions,768complete/0interrupted, exact repeat+replay, heldout/scenario/seat controls; negative robust improvement and paired-variance findings retained"
       ],
-      "validity_boundary": "Static preserved data assay and actual original in-memory Linux C# terminal consumers; no historical crafting/RGSS execution, full item catalog integration, Unity import, Windows player, Steam, persistent/network ownership, final profession canon or human balance claim. Separate exact item identity and R7 retained-tool contract now has a portable wrapper over unchanged CraftInventory plus actual original output consumption. R8 same-ID ingredient behavior is preserved without duplicate transaction credit. Source prices/effects/full catalogs, deprecated or ambiguous unlocks and skill namespaces remain unresolved; no protected row repair or historical runtime claim.",
-      "next_objective": "Compare licensed Windows/Unity and appropriate author/player/device access against coherent product use, portfolio delivery and remaining price/effect/unlock ownership. Do not automatically repeat crafting/tool/catalog matrices; resolve an actual next beneficiary.",
+      "validity_boundary": "Static preserved data assay and actual original in-memory Linux C# terminal consumers; no historical crafting/RGSS execution, full item catalog integration, Unity import, Windows player, Steam, persistent/network ownership, final profession canon or human balance claim. Separate exact item identity and R7 retained-tool contract now has a portable wrapper over unchanged CraftInventory plus actual original output consumption. R8 same-ID ingredient behavior is preserved without duplicate transaction credit. Source prices/effects/full catalogs, deprecated or ambiguous unlocks and skill namespaces remain unresolved; no protected row repair or historical runtime claim. Additional P01/P02 method evaluates trusted deterministic heuristics through unchanged Eclipse.Core. No trained model, complete Magic game, population or human finding, North Star policy transfer or Unity/Windows production claim. Candidate fails declared scarce-scenario robustness; method acceptance is not candidate superiority.",
+      "next_objective": "Select current product/production/source needs anew; this one-time intake and frozen experiment are complete. Any North Star policy transfer needs separate actual owner, legal observations, terminal semantics and executable validation; do not automatically repeat the suite or tune against heldout results.",
       "path": "labs/economy-simulation",
       "instrument": "labs/economy-simulation/run.py",
       "evidence": [
         "evidence/economy-crafting/RUN.json",
         "evidence/economy-crafting/results.json",
-        "evidence/tooling-study/RUN.json"
+        "evidence/tooling-study/RUN.json",
+        "evidence/commander-policy/RUN.json"
       ],
       "evidence_sha256": {
         "evidence/economy-crafting/RUN.json": "ddd390dda294e6ae91eb00cc6c0a4eb226d4fe931d19eed3cc4ac26707a8c267",
         "evidence/economy-crafting/results.json": "e34c1976f059db2f85c3bb11a45302f68d12b71d61e1b1b0a988ee5a077fc691",
-        "evidence/tooling-study/RUN.json": "2540400774fb495021e6ff1f3c00eced9454c40588cc701d8048453991cffdc6"
+        "evidence/tooling-study/RUN.json": "2540400774fb495021e6ff1f3c00eced9454c40588cc701d8048453991cffdc6",
+        "evidence/commander-policy/RUN.json": "443e4b540f42aad1dece377028024db8c2b6907259a85d5bc31fec8cd9183b1c"
       }
     },
     {
@@ -511,31 +518,38 @@
       "source_paths": [
         "evaluations/chat-send-buffering/run.py",
         "evaluations/chat-send-buffering/test_runner.py",
-        "evaluations/chat-send-buffering/BRIEF.md"
+        "evaluations/chat-send-buffering/BRIEF.md",
+        "evidence/commander-policy/inputs/CommanderSIM_v16_Motor_Refinado.zip",
+        "knowledge/commander-simulation-research.md"
       ],
       "source_inventory": "labs/source-inventory.json",
       "consumer_paths": [
-        "labs/ai-evaluation/run.py"
+        "labs/ai-evaluation/run.py",
+        "projects/eclipse-fair/PolicyEvaluation/Experiment.cs",
+        "projects/eclipse-fair/PolicyEvaluation/Program.cs"
       ],
       "controls": [
         "Pinned defective starter rejected 15/17 with the exact two known defects; reference accepted17/17",
         "One separately generated frozen candidate accepted17/17 with no evaluator feedback",
         "Actual missing Chromium reference classified inconclusive at environment gate",
-        "Seven method regressions reject missing provenance, false sandbox/retry, wrong calibration failures, tampered support and concurrent source/artifact replacement"
+        "Seven method regressions reject missing provenance, false sandbox/retry, wrong calibration failures, tampered support and concurrent source/artifact replacement",
+        "Frozen observation-constrained complete-game method:18native/13Core regressions,768complete/0interrupted, exact repeat+replay, heldout/scenario/seat controls; negative robust improvement and paired-variance findings retained"
       ],
-      "validity_boundary": "One public practice artifact produced in a fresh agent context under declared rules, with shared filesystem and unknown training exposure. No model score, confidential benchmark, OS isolation, independent human validation, North Star gameplay/evaluation integration, Unity/Windows/Steam or production outage claim.",
-      "next_objective": "Compare a consequential actual C# candidate defect with coherent authored integration and licensed Windows delivery; require appropriate independent context and discrimination beyond one public task before broader AI claims.",
+      "validity_boundary": "One public practice artifact produced in a fresh agent context under declared rules, with shared filesystem and unknown training exposure. No model score, confidential benchmark, OS isolation, independent human validation, North Star gameplay/evaluation integration, Unity/Windows/Steam or production outage claim. Additional P01/P02 method evaluates trusted deterministic heuristics through unchanged Eclipse.Core. No trained model, complete Magic game, population or human finding, North Star policy transfer or Unity/Windows production claim. Candidate fails declared scarce-scenario robustness; method acceptance is not candidate superiority.",
+      "next_objective": "Select current product/production/source needs anew; this one-time intake and frozen experiment are complete. Any North Star policy transfer needs separate actual owner, legal observations, terminal semantics and executable validation; do not automatically repeat the suite or tune against heldout results.",
       "path": "labs/ai-evaluation",
       "instrument": "labs/ai-evaluation/run.py",
       "evidence": [
         "evidence/ai-evaluation/RUN.json",
         "evidence/ai-evaluation/results.json",
-        "evidence/ai-evaluation/missing-browser.json"
+        "evidence/ai-evaluation/missing-browser.json",
+        "evidence/commander-policy/RUN.json"
       ],
       "evidence_sha256": {
         "evidence/ai-evaluation/RUN.json": "159242571767fa000f62950c4f32c81d3c6e756f76cc564bd3f5f01504b4f5fa",
         "evidence/ai-evaluation/results.json": "1ecb972d196bacab55e62d83a62fde8121c0c6d0e525cf080de92d26ea0864c3",
-        "evidence/ai-evaluation/missing-browser.json": "16bd4b05e6e2d0c7e060c21a692476096199c13ac63d4abc7660a6a0aac2bf03"
+        "evidence/ai-evaluation/missing-browser.json": "16bd4b05e6e2d0c7e060c21a692476096199c13ac63d4abc7660a6a0aac2bf03",
+        "evidence/commander-policy/RUN.json": "443e4b540f42aad1dece377028024db8c2b6907259a85d5bc31fec8cd9183b1c"
       }
     },
     {
@@ -2047,6 +2061,30 @@
       "evidence_sha256": {
         "evidence/dialogue-conditions/RUN.json": "cbffb248dcbd5d20c02587f319ec81568657c4f863052d86f7de14a1cec9502d",
         "evidence/dialogue-conditions/execution/source.json": "bb6fe0db8be6b66ac65dbcdbdfc3f7fcee10253f843461ed74ffd40167eea289"
+      }
+    },
+    {
+      "id": "CMDR-OBSERVATION-POLICY-METHOD",
+      "origin_projects": [
+        "P01",
+        "P02"
+      ],
+      "laboratory_id": "economy-simulation",
+      "status": "INTEGRATED",
+      "source_paths": [
+        "evidence/commander-policy/inputs/CommanderSIM_v16_Motor_Refinado.zip",
+        "evidence/commander-policy/inputs/Creative_HUB_CommanderSIM_Research_Transfer_v10.zip"
+      ],
+      "decision": "Narrow observation/legal-action boundary and predeclared multiplayer evaluation method independently authored around actual unchanged Eclipse Game. Not CommanderSIM collection/rules/card integration, candidate superiority or North Star transfer. Research candidate G8 remains pending official key; full Magic remains unverified.",
+      "consumer_paths": [
+        "projects/eclipse-fair/PolicyEvaluation/Experiment.cs",
+        "projects/eclipse-fair/PolicyEvaluation/Program.cs"
+      ],
+      "evidence": [
+        "evidence/commander-policy/RUN.json"
+      ],
+      "evidence_sha256": {
+        "evidence/commander-policy/RUN.json": "443e4b540f42aad1dece377028024db8c2b6907259a85d5bc31fec8cd9183b1c"
       }
     }
   ]

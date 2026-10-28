@@ -75,6 +75,17 @@ jobs:
           dotnet build Checks/Eclipse.Checks.csproj -c Release
           dotnet run --project Checks -c Release --no-build
           python3 tools/check_cli.py
+      - name: Verify CommanderSIM intake and execute frozen four-participant policy evaluation
+        run: |
+          python3 ../../labs/economy-simulation/commander-intake.py --engine-archive ../../evidence/commander-policy/inputs/CommanderSIM_v16_Motor_Refinado.zip --transfer-archive ../../evidence/commander-policy/inputs/Creative_HUB_CommanderSIM_Research_Transfer_v10.zip --output "$RUNNER_TEMP/commander-intake.json"
+          python3 ../../labs/economy-simulation/policy-evaluation.py --dotnet dotnet --output "$RUNNER_TEMP/commander-policy"
+          python3 -m unittest discover -s ../../labs/economy-simulation -p test_commander_intake.py
+          python3 - "$RUNNER_TEMP/commander-policy" <<'PYANALYSIS'
+          import json, pathlib, subprocess, sys
+          root = pathlib.Path(sys.argv[1])
+          source = json.loads((root / 'verification.json').read_text())['source_closure_sha256']
+          subprocess.run([sys.executable, '../../labs/ai-evaluation/eclipse-policy-summary.py', str(root / 'report.json'), '--output', str(root / 'summary.json'), '--source-hash', source, '--self-test'], check=True)
+          PYANALYSIS
       - name: Execute the delivered compiled package outside its source directory
         run: |
           mkdir -p "$RUNNER_TEMP/eclipse-pack"

@@ -39,6 +39,14 @@ two newly created laboratories. No externally validated creative decision is
 recorded here; future creative findings must distinguish author decisions,
 design hypotheses, executed behavior and independent participant evidence.
 
+## External research candidate
+
+[CommanderSIM research transfer](commander-simulation-research.md) preserves the
+v10 candidate, source/proposal evidence labels and pending final reader gate.
+Its one-time P01/P02 intake studies legal observation, replay and multiplayer policy
+comparison; it does not integrate Magic content or certify North Star AI or balance.
+Current execution and laboratory status remain owned by their existing records.
+
 ## First laboratory-derived finding
 
 [Combat response](combat-response.md) separates observed avoidance from commitment,

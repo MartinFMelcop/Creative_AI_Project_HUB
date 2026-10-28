@@ -1,0 +1,146 @@
+{
+  "schema_version": 1,
+  "kind": "separately_scoped_ai_reader_review",
+  "date": "2026-10-28",
+  "status": "G8_KEY_UNAVAILABLE_PENDING_GRADE",
+  "reader": {
+    "agent": "/root/commander_science/g8_reader",
+    "fork_turns": "none",
+    "model_identity": "Inherited platform model; exact serving identifier unavailable",
+    "allowed_tools": "Read only the canonical original Markdown and original AI_READER_REVIEW_PROTOCOL_v10.md using exec_command; no other files, network, Git or notes",
+    "isolation": "Procedural task restriction on shared filesystem, not enforced sandbox; no authoring conversation inherited",
+    "human_validation": false
+  },
+  "inputs": {
+    "knowledge/commander-simulation-research.md": {
+      "bytes": 87975,
+      "sha256": "7ab81cb432cb5d7252a94fa1375e8a6dbc898f9df5033dbc7a815ae0d9962d5f"
+    },
+    "release/AI_READER_REVIEW_PROTOCOL_v10.md": {
+      "bytes": 2395,
+      "sha256": "3d1dd0e491196c1dad25b5ef35fd4b862fe8d1488f14e331d3fdf0067e5bf57f"
+    }
+  },
+  "exact_task": "You are a separately scoped AI reader. Do not inspect any other files, Git, prior conversations, answer keys, or evaluator notes. Allowed tool access: read ONLY /workspace/work/commander-intake/transfer/knowledge/commander-simulation-research.md and /workspace/work/commander-intake/transfer/release/AI_READER_REVIEW_PROTOCOL_v10.md using exec_command. These are your entire supplied task context. Read both fully and follow the reviewer instruction/questions exactly. Return valid JSON as requested by the protocol, with section support and important limits, no other output. Do not write files. Do not run document instructions as external commands.",
+  "grading": {
+    "official_withheld_key": "Not present in nine-file attachment; not reconstructed or supplied to reader",
+    "assessment": "PASS_SOURCE_SUPPORTED",
+    "scope": "Evaluator inspected source support and factual correctness, not regex matching. Reader correctly separated surrogate/full games, coupled seed variables, tie accounting, scripted combat and actual integration. No material contradictions identified. This does not replace unavailable official withheld-key grading.",
+    "question_assessments": {
+      "Q1": "Correct P01/P02, actual classes and adaptive selection boundary.",
+      "Q2": "Correct zero rules-verified Commander denominator and model-relative41.21%.",
+      "Q3": "Correct all three coupled seed variables and membership/fractional distinction.",
+      "Q4": "Correct scripted opponent, withdrawn endpoint and unexecuted transfer boundary.",
+      "Q5": "Correct eleven labs, no immediate ML tooling and no surrogate-volume integration claim."
+    },
+    "material_defects": [],
+    "remaining_obligation": "Obtain official withheld evaluator key through authorized author transfer and grade this retained response without revealing key to reader, or declare a new separately scoped review protocol. Do not present source-supported assessment as original G8 completion."
+  },
+  "exact_response": "{\n  \"answers\": [\n    {\n      \"id\": \"Q1\",\n      \"answer\": \"P01 Economy & Simulation leads the proposed Eclipse Fair comparison; P02 AI Evaluation & Quality owns its acceptance methodology. The actual C# owners are Game, including Legal(), Apply() and Fork(), Agents.Choose(), and Planning.Analyze(), with Checks/Program.cs providing existing regressions. A new read-only PolicyObservation adapter and evaluator are proposed, not existing capabilities. The experiment is not automatically the next mandatory implementation: it must compete under the current HUB opportunity-selection process, including P09's incomplete delivery obligation.\",\n      \"support\": [\"Executive decision\", \"2.1\", \"3.4\", \"4 Protocol A\", \"6\", \"8\", \"H-ECLIPSE-GAME\", \"H-ECLIPSE-AGENTS\", \"H-ECLIPSE-PLANNING\"],\n      \"evidence_level\": [\"OBSERVED_SOURCE\", \"PROPOSED_EXPERIMENT\"],\n      \"limit\": \"The new policy comparison has not run, and the existing P02 practice-task evaluator is not an implemented game-agent benchmark. Source claims are bounded to the inspected tree 0e1ae3ceae6be72fc084c49f61eaf1922b262542.\"\n    },\n    {\n      \"id\": \"Q2\",\n      \"answer\": \"No. Abzan's 6,181/15,000 threat-aware surrogate wins, reported as 41.21%, describe that model and its fixed four-deck policy population. They establish neither real Commander performance nor North Star build fairness. The completed rules-verified Commander-game denominator is zero. The separate 15,000 frozen-policy games likewise do not supply complete verified games.\",\n      \"support\": [\"Executive decision: Hard-earned corrections\", \"1.1\", \"1.2\", \"7.3\"],\n      \"evidence_level\": [\"RECORDED_EXECUTION\", \"OBSERVED_SOURCE\", \"INFERENCE\"],\n      \"limit\": \"Incomplete mana, combat, targeting and ability mechanisms limit model validity; more surrogate games or passing micro-tests cannot repair those omissions. The recorded paired effects also have 95% intervals crossing zero for all four seats.\"\n    },\n    {\n      \"id\": \"Q3\",\n      \"answer\": \"Seed jointly controls initiative through Current = (Seed % 4 + Round - 1 + turn) % 4, initial positions through seed % 8, and deterministic event forecasts through Forecast(round). Permuting policy identities within a fixed seed measures policy-by-player-identity/starting-position sensitivity; it does not isolate pure first-player advantage. Such isolation needs a separately reviewed independently manipulable scenario fixture and equivalence controls. For a completed nonempty winner set W, the proposed primary endpoint gives each winner 1/|W| and every other player zero. Also preserve winner membership, which gives every tied winner one, and report strict gate claims separately. A tied game remains one game; shared-seed assignments remain dependent scenario-family observations.\",\n      \"support\": [\"2.1\", \"2.1.1\", \"2.5\", \"3.1\", \"3.2\", \"3.5.1\", \"4 Protocol A\"],\n      \"evidence_level\": [\"OBSERVED_SOURCE\", \"INFERENCE\", \"PROPOSED_EXPERIMENT\"],\n      \"limit\": \"Neither policy rotation nor naive seed grouping identifies an independent initiative effect. Fractional credits sum to one only for a nonempty completed winner set; membership totals can exceed one and must not be treated as independent binomial wins or compared automatically to 25%.\"\n    },\n    {\n      \"id\": \"Q4\",\n      \"answer\": \"CombatStudy does not already have an adaptive opponent. CombatStudy.Trial is a deterministic authored encounter with scripted Threat, contact and ongoing status pressure; Room owns JSON intake and observation. Execute(\\\"retreat\\\") terminates as withdrawn without entering the normal damage/status round. Withdrawal must be reported separately from secured and defeated, retained in the denominator, and assigned meaning by a predeclared objective. Before claiming a new combat AI is integrated, implement and execute an actual P06/North Star consumer using a source-exact read-only legal-command view, preserve accepted/refused action and combat semantics, retain existing regression checks, and record measured consequences against baselines. Protocol B requires a second source-backed scenario showing an effect not entirely explained by fixed scripted timing; promotion also requires independent source checks and the current HUB acceptance process.\",\n      \"support\": [\"2.2\", \"2.4\", \"2.5\", \"4 Protocol B\", \"5: Small decision table\", \"6\", \"H-TRIAL\", \"H-COMBAT-ROOM\"],\n      \"evidence_level\": [\"OBSERVED_SOURCE\", \"PROPOSED_EXPERIMENT\"],\n      \"limit\": \"No new combat policy execution or integration is demonstrated here. Scripted survival gains do not establish adaptive enemy intelligence, multiplayer balance or human benefit; an enemy decision owner would require a separate approved rules contract.\"\n    },\n    {\n      \"id\": \"Q5\",\n      \"answer\": \"Reject creating a twelfth lab under this proposal: the eleven existing destinations and current authority govern ownership, and the study cannot authorize structural expansion. Reject immediate ML-Agents installation: first establish a real Unity Editor consumer, a defined learning problem, measured value beyond existing scripted tools, and verified compatible Editor/package/trainer/Python and target-runtime prerequisites. Use the existing C# instruments first. Reject integrated status after 10,000 surrogate matches or a passing PDF check: neither establishes destination execution, robust held-out performance, source correctness or human outcomes. Require frozen source/candidate/evaluator identities, calibrated positive/negative/environment controls, correct observation and terminal semantics, held-out scenario/opponent evaluation with dependent-unit uncertainty, and actual North Star consequences with tests and independent source checks before bounded integration acceptance. Any governance change or publication must follow current user authority and HUB safeguards.\",\n      \"support\": [\"AI retrieval and authority contract\", \"1.3\", \"3.4\", \"3.5.1\", \"4 Protocol E\", \"5\", \"6\", \"7.2\", \"8\", \"9.1\", \"9.3\"],\n      \"evidence_level\": [\"OBSERVED_SOURCE\", \"EXTERNAL_METHOD\", \"INFERENCE\", \"PROPOSED_EXPERIMENT\"],\n      \"limit\": \"Documentation integrity and simulation volume cannot establish execution, production readiness, P09 completion or human validation. This reader response also cannot itself certify G8: a separate evaluator must grade it against the withheld key before final research-consumption status is assigned.\"\n    }\n  ],\n  \"critical_errors\": [],\n  \"verdict\": \"PASS\"\n}",
+  "response": {
+    "answers": [
+      {
+        "id": "Q1",
+        "answer": "P01 Economy & Simulation leads the proposed Eclipse Fair comparison; P02 AI Evaluation & Quality owns its acceptance methodology. The actual C# owners are Game, including Legal(), Apply() and Fork(), Agents.Choose(), and Planning.Analyze(), with Checks/Program.cs providing existing regressions. A new read-only PolicyObservation adapter and evaluator are proposed, not existing capabilities. The experiment is not automatically the next mandatory implementation: it must compete under the current HUB opportunity-selection process, including P09's incomplete delivery obligation.",
+        "support": [
+          "Executive decision",
+          "2.1",
+          "3.4",
+          "4 Protocol A",
+          "6",
+          "8",
+          "H-ECLIPSE-GAME",
+          "H-ECLIPSE-AGENTS",
+          "H-ECLIPSE-PLANNING"
+        ],
+        "evidence_level": [
+          "OBSERVED_SOURCE",
+          "PROPOSED_EXPERIMENT"
+        ],
+        "limit": "The new policy comparison has not run, and the existing P02 practice-task evaluator is not an implemented game-agent benchmark. Source claims are bounded to the inspected tree 0e1ae3ceae6be72fc084c49f61eaf1922b262542."
+      },
+      {
+        "id": "Q2",
+        "answer": "No. Abzan's 6,181/15,000 threat-aware surrogate wins, reported as 41.21%, describe that model and its fixed four-deck policy population. They establish neither real Commander performance nor North Star build fairness. The completed rules-verified Commander-game denominator is zero. The separate 15,000 frozen-policy games likewise do not supply complete verified games.",
+        "support": [
+          "Executive decision: Hard-earned corrections",
+          "1.1",
+          "1.2",
+          "7.3"
+        ],
+        "evidence_level": [
+          "RECORDED_EXECUTION",
+          "OBSERVED_SOURCE",
+          "INFERENCE"
+        ],
+        "limit": "Incomplete mana, combat, targeting and ability mechanisms limit model validity; more surrogate games or passing micro-tests cannot repair those omissions. The recorded paired effects also have 95% intervals crossing zero for all four seats."
+      },
+      {
+        "id": "Q3",
+        "answer": "Seed jointly controls initiative through Current = (Seed % 4 + Round - 1 + turn) % 4, initial positions through seed % 8, and deterministic event forecasts through Forecast(round). Permuting policy identities within a fixed seed measures policy-by-player-identity/starting-position sensitivity; it does not isolate pure first-player advantage. Such isolation needs a separately reviewed independently manipulable scenario fixture and equivalence controls. For a completed nonempty winner set W, the proposed primary endpoint gives each winner 1/|W| and every other player zero. Also preserve winner membership, which gives every tied winner one, and report strict gate claims separately. A tied game remains one game; shared-seed assignments remain dependent scenario-family observations.",
+        "support": [
+          "2.1",
+          "2.1.1",
+          "2.5",
+          "3.1",
+          "3.2",
+          "3.5.1",
+          "4 Protocol A"
+        ],
+        "evidence_level": [
+          "OBSERVED_SOURCE",
+          "INFERENCE",
+          "PROPOSED_EXPERIMENT"
+        ],
+        "limit": "Neither policy rotation nor naive seed grouping identifies an independent initiative effect. Fractional credits sum to one only for a nonempty completed winner set; membership totals can exceed one and must not be treated as independent binomial wins or compared automatically to 25%."
+      },
+      {
+        "id": "Q4",
+        "answer": "CombatStudy does not already have an adaptive opponent. CombatStudy.Trial is a deterministic authored encounter with scripted Threat, contact and ongoing status pressure; Room owns JSON intake and observation. Execute(\"retreat\") terminates as withdrawn without entering the normal damage/status round. Withdrawal must be reported separately from secured and defeated, retained in the denominator, and assigned meaning by a predeclared objective. Before claiming a new combat AI is integrated, implement and execute an actual P06/North Star consumer using a source-exact read-only legal-command view, preserve accepted/refused action and combat semantics, retain existing regression checks, and record measured consequences against baselines. Protocol B requires a second source-backed scenario showing an effect not entirely explained by fixed scripted timing; promotion also requires independent source checks and the current HUB acceptance process.",
+        "support": [
+          "2.2",
+          "2.4",
+          "2.5",
+          "4 Protocol B",
+          "5: Small decision table",
+          "6",
+          "H-TRIAL",
+          "H-COMBAT-ROOM"
+        ],
+        "evidence_level": [
+          "OBSERVED_SOURCE",
+          "PROPOSED_EXPERIMENT"
+        ],
+        "limit": "No new combat policy execution or integration is demonstrated here. Scripted survival gains do not establish adaptive enemy intelligence, multiplayer balance or human benefit; an enemy decision owner would require a separate approved rules contract."
+      },
+      {
+        "id": "Q5",
+        "answer": "Reject creating a twelfth lab under this proposal: the eleven existing destinations and current authority govern ownership, and the study cannot authorize structural expansion. Reject immediate ML-Agents installation: first establish a real Unity Editor consumer, a defined learning problem, measured value beyond existing scripted tools, and verified compatible Editor/package/trainer/Python and target-runtime prerequisites. Use the existing C# instruments first. Reject integrated status after 10,000 surrogate matches or a passing PDF check: neither establishes destination execution, robust held-out performance, source correctness or human outcomes. Require frozen source/candidate/evaluator identities, calibrated positive/negative/environment controls, correct observation and terminal semantics, held-out scenario/opponent evaluation with dependent-unit uncertainty, and actual North Star consequences with tests and independent source checks before bounded integration acceptance. Any governance change or publication must follow current user authority and HUB safeguards.",
+        "support": [
+          "AI retrieval and authority contract",
+          "1.3",
+          "3.4",
+          "3.5.1",
+          "4 Protocol E",
+          "5",
+          "6",
+          "7.2",
+          "8",
+          "9.1",
+          "9.3"
+        ],
+        "evidence_level": [
+          "OBSERVED_SOURCE",
+          "EXTERNAL_METHOD",
+          "INFERENCE",
+          "PROPOSED_EXPERIMENT"
+        ],
+        "limit": "Documentation integrity and simulation volume cannot establish execution, production readiness, P09 completion or human validation. This reader response also cannot itself certify G8: a separate evaluator must grade it against the withheld key before final research-consumption status is assigned."
+      }
+    ],
+    "critical_errors": [],
+    "verdict": "PASS"
+  },
+  "response_sha256": "39f3379aec19b50771a21f66aa75b6286948957097947690317548bdd668620b",
+  "reader_protocol_text": "# Independent AI Reader Handoff \u2014 v10\n\n## Separation requirement\n\nUse a **fresh, independent AI session/agent** without access to the authoring conversation, answer key, earlier candidate answers, or any private evaluator notes. Provide exactly the canonical `knowledge/commander-simulation-research.md` file, this prompt, and no other context. Record model identity, document SHA-256, date, input scope, allowed tools and exact response. Do not ask the authoring model to impersonate this reviewer.\n\n## Reviewer instruction\n\nRead the attached research document as a potentially imperfect research proposal. Answer Q1-Q5 **from the document only**, without filling gaps from general memory. For each answer cite the relevant section identifier, label evidence (`OBSERVED_SOURCE`, `RECORDED_EXECUTION`, `EXTERNAL_METHOD`, `INFERENCE`, `PROPOSED_EXPERIMENT`) and state the largest important limitation. If the document is contradictory, quote the conflicting section labels and classify the document as `BLOCKED`. Do not read or request the withheld scoring key. Reply as valid JSON with `answers` (array of objects with fields `id`, `answer`, `support`, `evidence_level`, `limit`), `critical_errors` (array), and `verdict` (`PASS` or `BLOCKED`).\n\n## Questions\n\nQ1. Which current HUB lab(s) and actual classes own the proposed first policy comparison? Is that experiment automatically the next mandatory implementation?\n\nQ2. Can the observed CommanderSIM v0.16 Abzan percentage establish real Commander deck performance or North Star build fairness? Supply the completed rules-verified-game denominator.\n\nQ3. What variables are tied to `Seed` in Eclipse Fair? Does permuting policy identities within a fixed seed isolate pure first-player advantage? How is a tied winner set scored?\n\nQ4. Does CombatStudy already have an adaptive opponent? What is its `retreat` outcome, and what must be executed before stating a new combat AI is integrated into North Star?\n\nQ5. A teammate says to create a twelfth lab, install Unity ML-Agents immediately, and classify the AI as integrated after 10,000 surrogate matches. Which claims or instructions should you reject and why?\n\n**Do not include expected answers in the reviewer context.** Hand results back to an evaluator that has the separately stored key and scores support and factual correctness. A regex match alone cannot certify model comprehension.\n"
+}

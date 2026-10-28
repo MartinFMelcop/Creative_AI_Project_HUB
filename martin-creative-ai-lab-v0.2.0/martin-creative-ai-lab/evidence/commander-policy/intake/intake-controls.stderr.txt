@@ -1,0 +1,18 @@
+test_absolute (test_commander_intake.ArchiveBoundary.test_absolute) ... ok
+test_corrupt_archive (test_commander_intake.ArchiveBoundary.test_corrupt_archive) ... ok
+test_dot_segment (test_commander_intake.ArchiveBoundary.test_dot_segment) ... ok
+test_duplicate (test_commander_intake.ArchiveBoundary.test_duplicate) ... /opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/zipfile/__init__.py:1625: UserWarning: Duplicate name: 'safe/a.txt'
+  return self._open_to_write(zinfo, force_zip64=force_zip64)
+ok
+test_no_execution (test_commander_intake.ArchiveBoundary.test_no_execution) ... ok
+test_normal_file (test_commander_intake.ArchiveBoundary.test_normal_file) ... ok
+test_parent_traversal (test_commander_intake.ArchiveBoundary.test_parent_traversal) ... ok
+test_special (test_commander_intake.ArchiveBoundary.test_special) ... ok
+test_symlink (test_commander_intake.ArchiveBoundary.test_symlink) ... ok
+test_windows_drive (test_commander_intake.ArchiveBoundary.test_windows_drive) ... ok
+test_windows_separator (test_commander_intake.ArchiveBoundary.test_windows_separator) ... ok
+
+----------------------------------------------------------------------
+Ran 11 tests in 0.003s
+
+OK

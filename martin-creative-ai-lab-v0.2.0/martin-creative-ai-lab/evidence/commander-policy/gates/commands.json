@@ -1,0 +1,127 @@
+{
+  "initial": [
+    {
+      "command": [
+        "python3",
+        "tools/validate_repo.py"
+      ],
+      "exit_code": 0,
+      "stdout_sha256": "06376f74008cc0c8e6e06768af715aa3a4ed8e90570a360d28a7a08b020652b0",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "python3",
+        "tools/reference_library.py",
+        "check"
+      ],
+      "exit_code": 0,
+      "stdout_sha256": "25539d1ee832beda298a26fba68ebf76f6861085434f6317722988176fdfed9f",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "python3",
+        "tools/brain_query.py",
+        "check"
+      ],
+      "exit_code": 0,
+      "stdout_sha256": "6dc8ad4e76f43417dad19a51632c0b1ecee8a1bb0d5acc97326d888e13e9acfb",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "python3",
+        "tools/check_transformation.py"
+      ],
+      "exit_code": 0,
+      "stdout_sha256": "5a20c9b7b9c99bce963fa83591ea1d1c8a0f2900c42106d3ed3c6dad1e8dc395",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "python3",
+        "tools/test_transformation.py"
+      ],
+      "exit_code": 0,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "9f818b7c86593331e9a846abf87fb9f8094734748afbcf8b573a7cb692a72b6f"
+    },
+    {
+      "command": [
+        "python3",
+        "tools/check_portfolio.py"
+      ],
+      "exit_code": 0,
+      "stdout_sha256": "69de42f8f07f5cf351546afd64600acfd84a0f59a8ad1b7258cb84d351de79d0",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "python3",
+        "tools/test_check_portfolio.py"
+      ],
+      "exit_code": 0,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "4a171100c6831cf5796fae5fa735631cf3953182242fa492d4ba7d7a54453f36"
+    },
+    {
+      "command": [
+        "python3",
+        "tools/test_ci_scope.py"
+      ],
+      "exit_code": 0,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "1a3749a3d3fd8b608c60936eba4594f2494db9aa26be9248c6c5f4e9b3ec15a0"
+    },
+    {
+      "command": [
+        "python3",
+        "tools/inventory_origins.py",
+        "--check",
+        "labs/source-inventory.json"
+      ],
+      "exit_code": 1,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "8ec1510582a6ad637ec291ebe2f0333ccc4e474fb2969ec54be96aa0c0ff4273"
+    }
+  ],
+  "affected_inventory_refresh": "New retained report ZIPs changed package inventory after initial generation; regenerated actual inventory, no pin or original changed.",
+  "final_remaining": [
+    {
+      "command": [
+        "python3",
+        "tools/inventory_origins.py",
+        "--check",
+        "labs/source-inventory.json"
+      ],
+      "exit_code": 0,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "5902c30fe1ac7315701a3513451fb5f77e4bc75e0664ed2a16edbe51f2a1d4db"
+    },
+    {
+      "command": [
+        "python3",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "labs/economy-simulation",
+        "-p",
+        "test_commander_intake.py"
+      ],
+      "exit_code": 0,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "abb6c02f27e1b21e023e2f467937606e08b03b2caf675b7a8b6be2a381344055"
+    },
+    {
+      "command": [
+        "python3",
+        "projects/eclipse-fair/tools/check_cli.py"
+      ],
+      "exit_code": 0,
+      "stdout_sha256": "4e0987dc2c0266cc3c421571bcd82b1e4cc642e215568d42ec880ce17a4766d6",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ]
+}

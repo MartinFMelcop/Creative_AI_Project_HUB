@@ -1,0 +1,398 @@
+{
+  "schema_version": 1,
+  "label": "OBSERVED_SOURCE",
+  "scope": "Archive content and declared report consistency; no code executed by this tool",
+  "archives": [
+    {
+      "archive": "CommanderSIM_v16_Motor_Refinado.zip",
+      "bytes": 167212,
+      "sha256": "966fe0c17acbcf1688d372cd583c8f616100c86e754007a47f829219d69cd4c7",
+      "member_count": 38,
+      "uncompressed_bytes": 793280,
+      "members": [
+        {
+          "path": "CommanderSIM_v16_Current/CommanderSIM_Relatorio_Atual.pdf",
+          "bytes": 52951,
+          "sha256": "b7dfaf6d60903fc966289d945fee0c5283b2505ab1c9982860d850cfe8011adb",
+          "directory": false
+        },
+        {
+          "path": "CommanderSIM_v16_Current/NEXT_RUN_PROMPT.txt",
+          "bytes": 3795,
+          "sha256": "cc61397cc9aa40731c76e3eb808cb915509984bbcfdde1dbe07504ec0fe84323",
+          "directory": false
+        },
+        {
+          "path": "CommanderSIM_v16_Current/README.md",
+          "bytes": 5068,
+          "sha256": "3ec7a0b715c665adc271f5e6ad92a4cf69f1840d140b4b4bf5c83da840bc09c7",
+          "directory": false
+        },
+        {
+          "path": "CommanderSIM_v16_Current/analyze.py",
+          "bytes": 702,
+          "sha256": "1bfd0cbe58d740b6d67b1b4f12a29a8356f02852b0809bae1ce98f53b379c3cf",
+          "directory": false
+        },
+        {
+          "path": "CommanderSIM_v16_Current/build_windows.ps1",
+          "bytes": 967,
+          "sha256": "9c9bd82d5191f8c7ac3acbe7adc2615fcb183ad5fef8750a14976c48f1161fb1",
+          "directory": false
+        },
+        {
+          "path": "CommanderSIM_v16_Current/data/frozen_card_priors.tsv",
+          "bytes": 9205,
+          "sha256": "8dd83e0245b65326c758cc513aa10e2944a270c6bec947741e0f3c6e335fbb48",
+          "directory": false
+        },
+        {
+          "path": "CommanderSIM_v16_Current/decks/01_Dralnu.txt",
+          "bytes": 1395,
+          "sha256": "a23fe0998f309f2f45e8c57a6f6a24b0c92f5a63202d2d771faf32691a38bced",
+          "directory": false
+        },
+        {
+          "path": "CommanderSIM_v16_Current/decks/02_Palladia.txt",
+          "bytes": 1572,
+          "sha256": "949f3db9a5ed0cee19f86c7fe7392716d7edefa5faea0b78758d326f95244df5",
+          "directory": false
+        },
+        {
+          "path": "CommanderSIM_v16_Current/decks/03_Belakor.txt",
+          "bytes": 1668,
+          "sha256": "acdd3347e7a333903b6aa34de8653ab296aec5f85b94e8fd7abcf1d233b2322d",
+          "directory": false
+        },
+        {
+          "path": "CommanderSIM_v16_Current/decks/04_Abzan.txt",
+          "bytes": 1755,
+          "sha256": "781b5c04bd35444af0aee9110613ca6de8fb6a3e48168721b692a3f6362d6f20",
+          "directory": false
+        },
+        {
+          "path": "CommanderSIM_v16_Current/engine/equipment_bounded.py",
+          "bytes": 2464,
+          "sha256": "5559fcdca2a5873f28c9f9cc1ae204ae9ba63e3af701ae3ef387301be29df18f",
+          "directory": false
+        },
+        {
+          "path": "CommanderSIM_v16_Current/engine/legal_priority_slice.py",
+          "bytes": 13333,
+          "sha256": "d68ff3b44b315c0cb691d918b3dbbde6c0c5104a482a9cfa877e8bb1ad01915d",
+          "directory": false
+        },
+        {
+          "path": "CommanderSIM_v16_Current/engine/lich_sheoldred_bounded.py",
+          "bytes": 2692,
+          "sha256": "e55f70bfb4f921d14c692531ab7ce2a4f2814ccb3f75fbacbd1507a0402040ae",
+          "directory": false
+        },
+        {
+          "path": "CommanderSIM_v16_Current/engine/palladia_rules_reference.py",
+          "bytes": 2862,
+          "sha256": "1c5ae400558f6abe6f17af1423f9dc530c8f494c42bb852e688bc0e32156e63c",
+          "directory": false
+        },
+        {
+          "path": "CommanderSIM_v16_Current/engine/stack_combo_slice.py",
+          "bytes": 16219,
+          "sha256": "69320c1a75b11047d833ec6cfdb85de8bc3cca8affa8a0de4971ccaa8544459c",
+          "directory": false
+        },
+        {
+          "path": "CommanderSIM_v16_Current/engine/surrogate.cpp",
+          "bytes": 23408,
+          "sha256": "a6a4f928d0e66dce12153249207b6ab7f8e7d5832fa31b180efe065b18f956ef",
+          "directory": false
+        },
+        {
+          "path": "CommanderSIM_v16_Current/engine/threat_policy.py",
+          "bytes": 4281,
+          "sha256": "3d482df927746a31022259d1ac4c025ecf9f894111a7d8c6f55cb4695caf3c97",
+          "directory": false
+        },
+        {
+          "path": "CommanderSIM_v16_Current/generate_traces.py",
+          "bytes": 1034,
+          "sha256": "ed91201e4584371fd88dca1f535e2883c004ddeb21c100b6c96b00c1b40a8154",
+          "directory": false
+        },
+        {
+          "path": "CommanderSIM_v16_Current/manifest.json",
+          "bytes": 2337,
+          "sha256": "e339a78b2e2269646ad437bf545f7f2f04df4a2c830fa44383553f6df95b4a09",
+          "directory": false
+        },
+        {
+          "path": "CommanderSIM_v16_Current/profiles.csv",
+          "bytes": 38791,
+          "sha256": "52af773ffe5a61e27cabe82ff97546029c00f90e65f053d002d07f3f8c2bf383",
+          "directory": false
+        },
+        {
+          "path": "CommanderSIM_v16_Current/reports/bounded_combo_scenarios.json",
+          "bytes": 201663,
+          "sha256": "d76cc1121f1aba64c056e2de62a3194ef955da4fd23a24f6a027ebd6bb6825ba",
+          "directory": false
+        },
+        {
+          "path": "CommanderSIM_v16_Current/reports/card_source_ledger.json",
+          "bytes": 51823,
+          "sha256": "66015a56c7048d9775de9f11573ce04f686f30f847bb13175fd7bf6ca486a5d8",
+          "directory": false
+        },
+        {
+          "path": "CommanderSIM_v16_Current/reports/combo_draw_probabilities.json",
+          "bytes": 660,
+          "sha256": "261a91833d0cbd5f84678879e6c9e576a18e7ddef59a8b8ac3792fef0bd7bb23",
+          "directory": false
+        },
+        {
+          "path": "CommanderSIM_v16_Current/reports/current_card_scores.csv",
+          "bytes": 58244,
+          "sha256": "9a8f47ed25c78294b3bea9349c1407fd1d123b8ac1d58e4a824de7ba1016cccc",
+          "directory": false
+        },
+        {
+          "path": "CommanderSIM_v16_Current/reports/current_kpis.json",
+          "bytes": 3795,
+          "sha256": "6ff2e72b9737ee3a4eb8cbcbdc0e4b50f4669cd4f1a04a1e0d068c75221ae053",
+          "directory": false
+        },
+        {
+          "path": "CommanderSIM_v16_Current/reports/rules_coverage.json",
+          "bytes": 1408,
+          "sha256": "15de96947395d2805fe49ec6b51c3070fd29288eeb6107ffa59644dc4cadc7c8",
+          "directory": false
+        },
+        {
+          "path": "CommanderSIM_v16_Current/reports/surrogate_policy_pair_v16.json",
+          "bytes": 250593,
+          "sha256": "fe2ae5fc7b9a05c938a72aada248d25937878bcea15fb66617dbdfb2f0ded88a",
+          "directory": false
+        },
+        {
+          "path": "CommanderSIM_v16_Current/reports/surrogate_stderr.log",
+          "bytes": 139,
+          "sha256": "4045f5d764a7a158bb63286099a87848fa7dad2be1bd7e0a1df91589f6ea4fa3",
+          "directory": false
+        },
+        {
+          "path": "CommanderSIM_v16_Current/scripts/build_current_reports.py",
+          "bytes": 7031,
+          "sha256": "956f6282ebbe1e58d099b1ad1c0c3d0eae6df9dd1497143f7998eb478214d7de",
+          "directory": false
+        },
+        {
+          "path": "CommanderSIM_v16_Current/scripts/scryfall_audit.py",
+          "bytes": 2724,
+          "sha256": "ce11923b75e95e79263e6a73d452265dbc252347fe2a99c2d2f78e79b00f9fea",
+          "directory": false
+        },
+        {
+          "path": "CommanderSIM_v16_Current/scripts/verify_combo_scenarios.py",
+          "bytes": 3039,
+          "sha256": "f4584c1b23c3b55a987e5ba146a941ebd53b6dee793edc674888ce14a18041d2",
+          "directory": false
+        },
+        {
+          "path": "CommanderSIM_v16_Current/tests/test_active_run.py",
+          "bytes": 2634,
+          "sha256": "53ec3974f9be20798dc1d6cde7120b389218c3c429fb3671e00488e142609036",
+          "directory": false
+        },
+        {
+          "path": "CommanderSIM_v16_Current/tests/test_bounded_priority.py",
+          "bytes": 4173,
+          "sha256": "511d1100c2f64519516ba8667867b2b2e687526bcdd5c9997b0c677674d973e7",
+          "directory": false
+        },
+        {
+          "path": "CommanderSIM_v16_Current/tests/test_current.py",
+          "bytes": 4044,
+          "sha256": "31c5f4d3e9520dc7f93737ac9b4c3ddc70ba675dfa59d8c3ae78f7b0a0df307a",
+          "directory": false
+        },
+        {
+          "path": "CommanderSIM_v16_Current/tests/test_lich_sheoldred.py",
+          "bytes": 1696,
+          "sha256": "039ed2c23b7bb625006f8e497c7854f937b2a4ff61ccd00484ac00061ac66000",
+          "directory": false
+        },
+        {
+          "path": "CommanderSIM_v16_Current/tests/test_new_current_synergies.py",
+          "bytes": 1030,
+          "sha256": "b3c8aeddf1439976a52f9ac0ad9f6621c7d110a81c3a6670f837424910bfdd1f",
+          "directory": false
+        },
+        {
+          "path": "CommanderSIM_v16_Current/tests/test_palladia_rules.py",
+          "bytes": 2876,
+          "sha256": "1d7a5201140490b95f829d9c188eafe77760c2e54adc5d3c7684307752cb1c57",
+          "directory": false
+        },
+        {
+          "path": "CommanderSIM_v16_Current/tests/test_stack_combo_slice.py",
+          "bytes": 9209,
+          "sha256": "2a401f527317d375cc9f6609ed5af6402cd4a01a6c25a4a928ab9a7074fea444",
+          "directory": false
+        }
+      ]
+    },
+    {
+      "archive": "Creative_HUB_CommanderSIM_Research_Transfer_v10.zip",
+      "bytes": 199413,
+      "sha256": "faf86de0ab637afe6de80b1860854b95a31862e9704cf09e4160aae2998de778",
+      "member_count": 9,
+      "uncompressed_bytes": 264338,
+      "members": [
+        {
+          "path": "knowledge/commander-simulation-research.md",
+          "bytes": 87975,
+          "sha256": "7ab81cb432cb5d7252a94fa1375e8a6dbc898f9df5033dbc7a815ae0d9962d5f",
+          "directory": false
+        },
+        {
+          "path": "release/CommanderSIM_Research_Transfer_v10.pdf",
+          "bytes": 160447,
+          "sha256": "1c8dafd92917d1ac4198aac2a1f36e706a9430f4b782901bfc9f66781d47e85e",
+          "directory": false
+        },
+        {
+          "path": "release/AI_CONSUMPTION_BRIEF_v10.md",
+          "bytes": 3490,
+          "sha256": "a3b0c7cb4400f1ef4d4d534716ba15348749768bb7230f9d400c86c8450b11be",
+          "directory": false
+        },
+        {
+          "path": "release/AI_READER_REVIEW_PROTOCOL_v10.md",
+          "bytes": 2395,
+          "sha256": "3d1dd0e491196c1dad25b5ef35fd4b862fe8d1488f14e331d3fdf0067e5bf57f",
+          "directory": false
+        },
+        {
+          "path": "release/AI_READINESS_AUDIT_v10.json",
+          "bytes": 3055,
+          "sha256": "dff890b97a558ae77851536cf4ae50c9df8716948d5d7f5a738989271ad3260b",
+          "directory": false
+        },
+        {
+          "path": "release/check_v10.py",
+          "bytes": 3017,
+          "sha256": "f4c52da51d3b68a70af06a7dbcfa9a3de4e5ec7cc8a9e6a3b62871b253378a9d",
+          "directory": false
+        },
+        {
+          "path": "release/README_v10.md",
+          "bytes": 1799,
+          "sha256": "bec3789fe01ce8234d057a4bbafe74ad990bd1ce27a3f70e2a6afe1f2c5ce62e",
+          "directory": false
+        },
+        {
+          "path": "release/INTEGRATION_MANIFEST_v10.json",
+          "bytes": 1348,
+          "sha256": "5b6bef560bd2008706e0aff29b9cc355b2465d718fbbd339299ef8dad9dbd911",
+          "directory": false
+        },
+        {
+          "path": "release/SHA256SUMS",
+          "bytes": 812,
+          "sha256": "8219849989efd39c14ed606a54ea1b5d36cc9becb7e09a23f31cfeb00a26ce22",
+          "directory": false
+        }
+      ]
+    }
+  ],
+  "manifest_checks": {
+    "engine_source_entries": [
+      {
+        "path": "decks/01_Dralnu.txt",
+        "sha256": "a23fe0998f309f2f45e8c57a6f6a24b0c92f5a63202d2d771faf32691a38bced"
+      },
+      {
+        "path": "decks/02_Palladia.txt",
+        "sha256": "949f3db9a5ed0cee19f86c7fe7392716d7edefa5faea0b78758d326f95244df5"
+      },
+      {
+        "path": "decks/03_Belakor.txt",
+        "sha256": "acdd3347e7a333903b6aa34de8653ab296aec5f85b94e8fd7abcf1d233b2322d"
+      },
+      {
+        "path": "decks/04_Abzan.txt",
+        "sha256": "781b5c04bd35444af0aee9110613ca6de8fb6a3e48168721b692a3f6362d6f20"
+      },
+      {
+        "path": "profiles.csv",
+        "sha256": "52af773ffe5a61e27cabe82ff97546029c00f90e65f053d002d07f3f8c2bf383"
+      },
+      {
+        "path": "engine/surrogate.cpp",
+        "sha256": "a6a4f928d0e66dce12153249207b6ab7f8e7d5832fa31b180efe065b18f956ef"
+      },
+      {
+        "path": "engine/stack_combo_slice.py",
+        "sha256": "69320c1a75b11047d833ec6cfdb85de8bc3cca8affa8a0de4971ccaa8544459c"
+      },
+      {
+        "path": "engine/legal_priority_slice.py",
+        "sha256": "d68ff3b44b315c0cb691d918b3dbbde6c0c5104a482a9cfa877e8bb1ad01915d"
+      },
+      {
+        "path": "engine/lich_sheoldred_bounded.py",
+        "sha256": "e55f70bfb4f921d14c692531ab7ce2a4f2814ccb3f75fbacbd1507a0402040ae"
+      }
+    ],
+    "engine_raw_run": "fe2ae5fc7b9a05c938a72aada248d25937878bcea15fb66617dbdfb2f0ded88a",
+    "transfer_manifest_entries": 7,
+    "transfer_checksum_entries": 8
+  },
+  "decks": [
+    {
+      "path": "CommanderSIM_v16_Current/decks/01_Dralnu.txt",
+      "cards": 100,
+      "commanders": [
+        "Dralnu, Lich Lord"
+      ],
+      "sha256": "a23fe0998f309f2f45e8c57a6f6a24b0c92f5a63202d2d771faf32691a38bced",
+      "protected_comparative_reference": false
+    },
+    {
+      "path": "CommanderSIM_v16_Current/decks/02_Palladia.txt",
+      "cards": 100,
+      "commanders": [
+        "Palladia-Mors, the Ruiner"
+      ],
+      "sha256": "949f3db9a5ed0cee19f86c7fe7392716d7edefa5faea0b78758d326f95244df5",
+      "protected_comparative_reference": false
+    },
+    {
+      "path": "CommanderSIM_v16_Current/decks/03_Belakor.txt",
+      "cards": 100,
+      "commanders": [
+        "Be'lakor, the Dark Master"
+      ],
+      "sha256": "acdd3347e7a333903b6aa34de8653ab296aec5f85b94e8fd7abcf1d233b2322d",
+      "protected_comparative_reference": false
+    },
+    {
+      "path": "CommanderSIM_v16_Current/decks/04_Abzan.txt",
+      "cards": 100,
+      "commanders": [
+        "Livio, Oathsworn Sentinel",
+        "Ikra Shidiqi, the Usurper"
+      ],
+      "sha256": "781b5c04bd35444af0aee9110613ca6de8fb6a3e48168721b692a3f6362d6f20",
+      "protected_comparative_reference": true
+    }
+  ],
+  "recorded_claims": {
+    "label": "RECORDED_EXECUTION",
+    "surrogate_episodes": 30000,
+    "paired_policy_trials": 15000,
+    "bounded_scenarios_not_games": 6,
+    "fully_verified_complete_commander_games": 0,
+    "note": "Recorded aggregate consistency is not independent regeneration or full Magic validity."
+  },
+  "rights": "User-supplied research preserved with original notices; no general license or commercial/IP clearance inferred."
+}

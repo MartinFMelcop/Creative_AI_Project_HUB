@@ -1,0 +1,149 @@
+{
+  "schema_version": 1,
+  "kind": "independent_scientific_implementation_and_metric_review",
+  "date": "2026-10-28",
+  "specialist": "/root/commander_science",
+  "brain_chapters": [
+    "SCI-013",
+    "SCI-014",
+    "SCI-076",
+    "SCI-077"
+  ],
+  "analysis_source": {
+    "path": "labs/ai-evaluation/eclipse-policy-summary.py",
+    "sha256": "655204cc6489bc9683be57f093e5de052568da350a2d2bc95ff08c374237b0d4"
+  },
+  "actual_report_sha256": "909267bbcbe00cd6b4ad5169ef90b4cc0b509e9cd8d4cf55f7cce3dfa2b3d170",
+  "summary_sha256": "8340c6770ec5aa6d407b83e50a16e4aad62672c8bc8cf98374d96b762f337fd5",
+  "positive_command": [
+    "python3",
+    "labs/ai-evaluation/eclipse-policy-summary.py",
+    "/workspace/work/commander-intake/policy-execution-2/report.json",
+    "--output",
+    "/workspace/work/commander-intake/policy-execution-2/scientific-summary.json",
+    "--source-hash",
+    "1997b0d4ab5b07afadda0f044160317ea8f73e571c2ff7e8bfa8d37a7dd020b9",
+    "--self-test"
+  ],
+  "positive_exit_code": 0,
+  "negative_calibration": [
+    {
+      "name": "forged-fraction",
+      "detected": true,
+      "reason": "Forged winner/fraction endpoint"
+    },
+    {
+      "name": "missing-game",
+      "detected": true,
+      "reason": "Missing complete game assignment"
+    },
+    {
+      "name": "duplicate-game",
+      "detected": true,
+      "reason": "Unexpected/duplicate game unit"
+    },
+    {
+      "name": "wrong-source",
+      "detected": true,
+      "reason": "Invalid source closure"
+    }
+  ],
+  "initial_analysis": {
+    "record": {
+      "schema_version": 1,
+      "kind": "independent_scientific_implementation_and_metric_review",
+      "date": "2026-10-28",
+      "specialist": "/root/commander_science",
+      "brain_chapters": [
+        "SCI-013",
+        "SCI-014",
+        "SCI-076",
+        "SCI-077"
+      ],
+      "analysis_source": {
+        "path": "labs/ai-evaluation/eclipse-policy-summary.py",
+        "sha256": "ca195890f8713d7d652c01d7dfa99322fecaadbcb3ea36dde1e1ff63b14ea593"
+      },
+      "actual_report_sha256": "3fb5ba3691d1f21bd41ded665b5b761af4080b0d9f087f02471cd9050e32b029",
+      "summary_sha256": "17b3413efa90df874d2cb8dbfefa7c94f08aa60781166b0ea465bb29fb336ef3",
+      "positive_command": [
+        "python3",
+        "labs/ai-evaluation/eclipse-policy-summary.py",
+        "/workspace/work/commander-intake/policy-execution-1/report.json",
+        "--output",
+        "/workspace/work/commander-intake/policy-execution-1/summary.json",
+        "--source-hash",
+        "72a964c6925d092ff2a9553904f13067aa7d1b08935f601c780097d3113dfa8c"
+      ],
+      "positive_exit_code": 0,
+      "negatives": [
+        {
+          "name": "forged-fraction",
+          "command": [
+            "python3",
+            "labs/ai-evaluation/eclipse-policy-summary.py",
+            "/workspace/work/commander-intake/policy-execution-1/forged-fraction.json",
+            "--output",
+            "/workspace/work/commander-intake/policy-execution-1/forged-fraction-summary.json",
+            "--source-hash",
+            "72a964c6925d092ff2a9553904f13067aa7d1b08935f601c780097d3113dfa8c"
+          ],
+          "exit_code": 2,
+          "stdout": "",
+          "stderr": "Refused report: Forged winner/fraction endpoint\n",
+          "output_absent": true
+        },
+        {
+          "name": "missing-game",
+          "command": [
+            "python3",
+            "labs/ai-evaluation/eclipse-policy-summary.py",
+            "/workspace/work/commander-intake/policy-execution-1/missing-game.json",
+            "--output",
+            "/workspace/work/commander-intake/policy-execution-1/missing-game-summary.json",
+            "--source-hash",
+            "72a964c6925d092ff2a9553904f13067aa7d1b08935f601c780097d3113dfa8c"
+          ],
+          "exit_code": 2,
+          "stdout": "",
+          "stderr": "Refused report: Missing complete game assignment\n",
+          "output_absent": true
+        },
+        {
+          "name": "wrong-source",
+          "command": [
+            "python3",
+            "labs/ai-evaluation/eclipse-policy-summary.py",
+            "/workspace/work/commander-intake/policy-execution-1/wrong-source.json",
+            "--output",
+            "/workspace/work/commander-intake/policy-execution-1/wrong-source-summary.json",
+            "--source-hash",
+            "72a964c6925d092ff2a9553904f13067aa7d1b08935f601c780097d3113dfa8c"
+          ],
+          "exit_code": 2,
+          "stdout": "",
+          "stderr": "Refused report: Unexpected source closure\n",
+          "output_absent": true
+        }
+      ],
+      "decision": "NO_ROBUST_IMPROVEMENT",
+      "limits": "Source/protocol frozen before outcomes; summary written after results only to execute preregistered endpoints. Authoritative C# replay and parent source guard supply winner/trace authority. Reader comprehension and this agent review are not human scientific validation, independent model population replication or canon approval."
+    },
+    "exact_producer_recovered": true,
+    "producer_path": "/workspace/work/commander-intake/summary-initial.py",
+    "interpretation": "Initialpassinganalysis preceded addition of reusable --self-test; no measured endpoint changed. Initialproducer recovered byte-identical against recordedhash, not anotherexecution."
+  },
+  "decision": "NO_ROBUST_IMPROVEMENT",
+  "review_findings": [
+    "Complete game units and all declared paired assignments are present; interrupted=0.",
+    "Mean roster improvements exceed0.05 but both scarce-scenario effects are negative; preregistered robust improvement criterion fails.",
+    "Observed negative baseline-candidate family covariance makes paired family-difference variance greater than unpaired arm variance sum; common scenarios are not assumed to reduce uncertainty.",
+    "Finite deterministic seed suite and dependent assignment repetitions do not identify pure initiative or justify population confidence intervals.",
+    "Final independently recomputed analysis bytes match primary analysis exactly; first and final per-game rows are identical despite wrapper-only provenance changes."
+  ],
+  "limits": "Source/protocol frozen before outcomes; analysis implements predeclared endpoints after outcomes. Authoritative C# replay and parent source guard supply winner/trace authority. This agent review and fresh reader comprehension are not human validation, independent population replication or canon approval.",
+  "source_closure_sha256": "1997b0d4ab5b07afadda0f044160317ea8f73e571c2ff7e8bfa8d37a7dd020b9",
+  "first_and_final_game_rows_exact": true,
+  "primary_summary_sha256": "8340c6770ec5aa6d407b83e50a16e4aad62672c8bc8cf98374d96b762f337fd5",
+  "primary_and_specialist_summaries_byte_identical": true
+}

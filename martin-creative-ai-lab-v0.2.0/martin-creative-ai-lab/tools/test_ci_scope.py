@@ -45,7 +45,13 @@ class Classification(unittest.TestCase):
                 self.assertEqual(self.selected(w(path)), {'north_star_csharp'})
 
     def test_existing_origin_implementations_keep_their_actual_jobs(self):
-        cases = {'projects/eclipse-fair/Core/Game.cs': 'eclipse_economy',
+        cases = {'projects/eclipse-fair/PolicyEvaluation/Experiment.cs': 'eclipse_economy',
+                 'evidence/commander-policy/RUN.json': 'eclipse_economy',
+                 'labs/ai-evaluation/eclipse-policy-summary.py': 'eclipse_economy',
+                 'labs/economy-simulation/test_commander_intake.py': 'eclipse_economy',
+                 'labs/economy-simulation/commander-intake.py': 'eclipse_economy',
+                 'labs/economy-simulation/policy-evaluation.py': 'eclipse_economy',
+                 'projects/eclipse-fair/Core/Game.cs': 'eclipse_economy',
                  'projects/cinderwatch/tools/check_linux.py': 'eclipse_economy',
                  'projects/veil-arena/arena.gd': 'native_arena',
                  'labs/combat-response/cases.json': 'native_arena',

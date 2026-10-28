@@ -1,0 +1,18 @@
+PASS observation is immutable source-state projection
+PASS projection contains public current and next forecast
+PASS fork option consequences match authoritative settlement
+PASS all frozen policies choose deterministic legal actions
+PASS collector public projection exactly matches established baseline
+PASS illegal engine action refuses atomically
+PASS illegal policy is interrupted with no invented winners
+PASS execution budget interruption remains incomplete
+PASS unsupported configs fail closed
+PASS complete correctness games rotate seats and opponent order
+PASS accepted-action replay reproduces complete state and outcomes
+PASS forged winner report is rejected
+PASS forged fractional reporting is rejected
+PASS missing and duplicate game units are rejected
+PASS heldout metadata alteration is rejected
+PASS policy identity or accepted action forgery is rejected
+FAIL actual terminal tie endpoints preserve fractional credit: Fixture did not reach actual tie.
+{"passed":16,"failed":["actual terminal tie endpoints preserve fractional credit: Fixture did not reach actual tie."]}

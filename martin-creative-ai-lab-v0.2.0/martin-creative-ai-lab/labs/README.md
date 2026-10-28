@@ -117,3 +117,5 @@ pins and protected originals remain intact; Git history alone is not preservatio
 Laboratory claims are checked by `tools/check_transformation.py`; actual instruments
 and destination consumers execute in CI. Documentary hashes cannot substitute for fresh
 execution, scientific validity, player reception, Unity Editor, Windows or Steam.
+
+[Complete-game policy comparison](economy-simulation/policy-evaluation.md) adds a P01 instrument evaluated through P02: observation-constrained heuristics, held-out roster, exact replay and separate tie/fractional endpoints. The one-time [CommanderSIM candidate](../knowledge/commander-simulation-research.md) retains its research/review limits; it is not a twelfth lab or North Star AI integration.

@@ -1,0 +1,64 @@
+{
+  "experiment_id": "eclipse-policy-commander-transfer-v1",
+  "baseline": "collector-v1",
+  "candidate": "route-v1",
+  "seeds": [
+    100,
+    101,
+    102,
+    103,
+    104,
+    105,
+    106,
+    107
+  ],
+  "scenarios": [
+    {
+      "id": "default",
+      "rules": {
+        "starting_gold": 4,
+        "goal": 3,
+        "round_limit": 20,
+        "seal_base": 6,
+        "seal_step": 2,
+        "move_cost": 1,
+        "rite_cost": 2,
+        "work_bonus": 0
+      }
+    },
+    {
+      "id": "scarce",
+      "rules": {
+        "starting_gold": 2,
+        "goal": 3,
+        "round_limit": 16,
+        "seal_base": 7,
+        "seal_step": 2,
+        "move_cost": 1,
+        "rite_cost": 2,
+        "work_bonus": 0
+      }
+    }
+  ],
+  "rosters": [
+    {
+      "id": "primary",
+      "opponents": [
+        "collector-v1",
+        "collector-v1",
+        "interdict-v1"
+      ],
+      "held_out": false
+    },
+    {
+      "id": "heldout",
+      "opponents": [
+        "income-v1",
+        "keeper-v1",
+        "interdict-v1"
+      ],
+      "held_out": true
+    }
+  ],
+  "max_actions": 160
+}

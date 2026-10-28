@@ -1,0 +1,318 @@
+{
+  "schema_version": 1,
+  "kind": "destination_execution",
+  "date": "2026-10-28 America/Sao_Paulo",
+  "laboratories": [
+    "economy-simulation",
+    "ai-evaluation"
+  ],
+  "one_time_author_directed_intake": true,
+  "consumer_paths": [
+    "projects/eclipse-fair/PolicyEvaluation/Experiment.cs",
+    "projects/eclipse-fair/PolicyEvaluation/Program.cs"
+  ],
+  "runtime": ".NET10/Linux C# executable over unchanged Eclipse.Core",
+  "checks": {
+    "passed": 18,
+    "failed": 0
+  },
+  "commands": [
+    {
+      "command": [
+        "/workspace/work/authored-scene/dotnet/dotnet",
+        "--version"
+      ],
+      "exit_code": 0,
+      "stdout_sha256": "93c11b5221b72e0032ab2d9f93d28c2c9b7a0bb2557effffcdfef45ab739a0da",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "/workspace/work/authored-scene/dotnet/dotnet",
+        "build",
+        "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/projects/eclipse-fair/PolicyEvaluation/Eclipse.PolicyEvaluation.csproj",
+        "-c",
+        "Release"
+      ],
+      "exit_code": 0,
+      "stdout_sha256": "b636d89a598efb8a5fa1a49bbc8369b1e38c814b7e76b04c5f4211e42925cc26",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "/workspace/work/authored-scene/dotnet/dotnet",
+        "build",
+        "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/projects/eclipse-fair/PolicyEvaluation/Checks/Eclipse.PolicyEvaluation.Checks.csproj",
+        "-c",
+        "Release"
+      ],
+      "exit_code": 0,
+      "stdout_sha256": "c17c167691d7c1628827f503681277b5b052d520478868bcfce99bd89256e28a",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "/workspace/work/authored-scene/dotnet/dotnet",
+        "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/projects/eclipse-fair/PolicyEvaluation/Checks/bin/Release/net10.0/Eclipse.PolicyEvaluation.Checks.dll"
+      ],
+      "exit_code": 0,
+      "stdout_sha256": "b52516b3f36f2cbb9576471e9588ff1d601f821b829e115ad9363ffa4c111846",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "/workspace/work/authored-scene/dotnet/dotnet",
+        "build",
+        "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/projects/eclipse-fair/Checks/Eclipse.Checks.csproj",
+        "-c",
+        "Release"
+      ],
+      "exit_code": 0,
+      "stdout_sha256": "e1a6950a37e02b5af9be5a8edc3bfca159a074ce9326942d606b6d64f68c614f",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "/workspace/work/authored-scene/dotnet/dotnet",
+        "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/projects/eclipse-fair/Checks/bin/Release/net10.0/Eclipse.Checks.dll"
+      ],
+      "exit_code": 0,
+      "stdout_sha256": "94e28db386aac6e81056a0c61ddfb813c161ae0d2e90aa581f98db53aaea009d",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "/workspace/work/authored-scene/dotnet/dotnet",
+        "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/projects/eclipse-fair/PolicyEvaluation/bin/Release/net10.0/Eclipse.PolicyEvaluation.dll",
+        "run",
+        "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/evidence/commander-policy/config.json",
+        "/workspace/work/commander-intake/policy-execution-2/report.json",
+        "1997b0d4ab5b07afadda0f044160317ea8f73e571c2ff7e8bfa8d37a7dd020b9"
+      ],
+      "exit_code": 0,
+      "stdout_sha256": "80dbb6b2c4e4fc14418f363de5f690f90d0d0530407997f77fc03e1744b5c260",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "/workspace/work/authored-scene/dotnet/dotnet",
+        "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/projects/eclipse-fair/PolicyEvaluation/bin/Release/net10.0/Eclipse.PolicyEvaluation.dll",
+        "verify",
+        "/workspace/work/commander-intake/policy-execution-2/report.json"
+      ],
+      "exit_code": 0,
+      "stdout_sha256": "7adf4576cbf3342703068d712e3ba82a2d9341d3fbe02998b77f90ca27910518",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "/workspace/work/authored-scene/dotnet/dotnet",
+        "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/projects/eclipse-fair/PolicyEvaluation/bin/Release/net10.0/Eclipse.PolicyEvaluation.dll",
+        "run",
+        "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/evidence/commander-policy/config.json",
+        "/workspace/work/commander-intake/policy-execution-2/repeated-report.json",
+        "1997b0d4ab5b07afadda0f044160317ea8f73e571c2ff7e8bfa8d37a7dd020b9"
+      ],
+      "exit_code": 0,
+      "stdout_sha256": "57d097045a39cf436343d0ea1cd262ec398476b452e20522a9c31f995f963fd1",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "/workspace/work/authored-scene/dotnet/dotnet",
+        "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/projects/eclipse-fair/PolicyEvaluation/bin/Release/net10.0/Eclipse.PolicyEvaluation.dll",
+        "verify",
+        "/workspace/work/commander-intake/policy-execution-2/repeated-report.json"
+      ],
+      "exit_code": 0,
+      "stdout_sha256": "7adf4576cbf3342703068d712e3ba82a2d9341d3fbe02998b77f90ca27910518",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "source_artifacts": [
+    {
+      "local_path": "evidence/commander-policy/config.json",
+      "size_bytes": 1094,
+      "sha256": "cdbbdb86ea5d4f99ec62bbc0ed5e4aeb90e41687f2ebd178be00c6e5c6d4430b"
+    },
+    {
+      "local_path": "evidence/commander-policy/protocol.json",
+      "size_bytes": 7527,
+      "sha256": "3a6c732402e408200acea73754d3ee444c855fc0f30d993cdd7e3bfa0a2eb121"
+    },
+    {
+      "local_path": "labs/economy-simulation/policy-evaluation.py",
+      "size_bytes": 8178,
+      "sha256": "78778e031b8c5f63bd5496a1a3a3787dbd418c606296a4b7b5de5ec476bef541"
+    },
+    {
+      "local_path": "projects/eclipse-fair/Checks/Eclipse.Checks.csproj",
+      "size_bytes": 247,
+      "sha256": "9df6fb4052ea5311e5c653eea6b6dbc34502e594cd83a8a3bbb21f713531df45"
+    },
+    {
+      "local_path": "projects/eclipse-fair/Checks/Program.cs",
+      "size_bytes": 11443,
+      "sha256": "2d3f4fce8c38e8caf10379eed0a1cd0d7c072e3847cd541bb2c5b1d26d04f7a5"
+    },
+    {
+      "local_path": "projects/eclipse-fair/Cli/Eclipse.Cli.csproj",
+      "size_bytes": 257,
+      "sha256": "a552950e40e0a81fc602fcbb4c11d13344923368320ea38ee99d648dd36e0b5b"
+    },
+    {
+      "local_path": "projects/eclipse-fair/Cli/Journal.cs",
+      "size_bytes": 2439,
+      "sha256": "64db61d7599aa852dfa9815b9f3d58e1126cacc116357388319c791c0d9d6a76"
+    },
+    {
+      "local_path": "projects/eclipse-fair/Cli/Program.cs",
+      "size_bytes": 9514,
+      "sha256": "5fff23038345740d54c1dced60576de152be171d8be0d955eefe21872936a9da"
+    },
+    {
+      "local_path": "projects/eclipse-fair/Core/Agents.cs",
+      "size_bytes": 3070,
+      "sha256": "026f77026f4bad7839f3f6f70ff350246e6d6d661aa3a97e6138b292c25dfb05"
+    },
+    {
+      "local_path": "projects/eclipse-fair/Core/Eclipse.Core.csproj",
+      "size_bytes": 36,
+      "sha256": "8d654c44b7bebb6b31a9f2f606927f45b5072193adc4eef8cce3f3cf3b278df3"
+    },
+    {
+      "local_path": "projects/eclipse-fair/Core/Game.cs",
+      "size_bytes": 8403,
+      "sha256": "59c4e50b13d0189c88b0a7cc11310f001bed0c687640b9a68b052a16fa2bea94"
+    },
+    {
+      "local_path": "projects/eclipse-fair/Core/Planning.cs",
+      "size_bytes": 4670,
+      "sha256": "f7dfef9127a59def7b6c862d5293574232c7dac202a84f528c6c9c5a4b849829"
+    },
+    {
+      "local_path": "projects/eclipse-fair/Directory.Build.props",
+      "size_bytes": 407,
+      "sha256": "62720f290d07a9d7f4899af16ff649dec8969a0b825aacdf1f5df943bea3668d"
+    },
+    {
+      "local_path": "projects/eclipse-fair/PolicyEvaluation/Checks/Eclipse.PolicyEvaluation.Checks.csproj",
+      "size_bytes": 198,
+      "sha256": "eaf503a2aadcf656e083341a4335dbf2dc12af3d184406be7386e385f8068f9f"
+    },
+    {
+      "local_path": "projects/eclipse-fair/PolicyEvaluation/Checks/Program.cs",
+      "size_bytes": 6959,
+      "sha256": "0408835c6aa05d112750bd6a30706a7625568a8525eba93c9ed0ec57adb9e235"
+    },
+    {
+      "local_path": "projects/eclipse-fair/PolicyEvaluation/Eclipse.PolicyEvaluation.csproj",
+      "size_bytes": 226,
+      "sha256": "1ae522787dfd7d3d8648b6564e02d8c210f325ba111d10957a32f4c0f610274f"
+    },
+    {
+      "local_path": "projects/eclipse-fair/PolicyEvaluation/Experiment.cs",
+      "size_bytes": 14233,
+      "sha256": "fb3fe523e37ebc1aecd865cb309e04759a564cdc09bbeedfbd5f0ea917b3fe32"
+    },
+    {
+      "local_path": "projects/eclipse-fair/PolicyEvaluation/Program.cs",
+      "size_bytes": 1703,
+      "sha256": "e9300f8b58085294a8bee7b68de05f7056ae10c2376811a6f9ac64c7b63287cc"
+    },
+    {
+      "local_path": "projects/eclipse-fair/global.json",
+      "size_bytes": 59,
+      "sha256": "a0dcc4ee0c1b8044f9498734741bd764d5c2585f4d0d8e31e27e26e9662f751f"
+    },
+    {
+      "local_path": "labs/ai-evaluation/eclipse-policy-summary.py",
+      "size_bytes": 11165,
+      "sha256": "655204cc6489bc9683be57f093e5de052568da350a2d2bc95ff08c374237b0d4"
+    },
+    {
+      "local_path": "labs/economy-simulation/commander-intake.py",
+      "size_bytes": 5594,
+      "sha256": "b2a9bcea370be0c72f51ccf6f0fa6adecdbb6dfd2c48f4c2340960465b2deedc"
+    },
+    {
+      "local_path": "knowledge/commander-simulation-research.md",
+      "size_bytes": 91536,
+      "sha256": "a100a9480f12ede16bc4ce95160fc63bb3305b00121e7290c54a622cf36bbef0"
+    }
+  ],
+  "source_stable": true,
+  "source_closure_sha256": "1997b0d4ab5b07afadda0f044160317ea8f73e571c2ff7e8bfa8d37a7dd020b9",
+  "protocol": "evidence/commander-policy/protocol.json",
+  "configuration": "evidence/commander-policy/config.json",
+  "full_accepted_action_report": {
+    "path": "evidence/commander-policy/execution/report.json.zip",
+    "member": "report.json",
+    "member_sha256": "909267bbcbe00cd6b4ad5169ef90b4cc0b509e9cd8d4cf55f7cce3dfa2b3d170",
+    "archive_sha256": "0db3aa531fda5fee2d37276f08bf2c4a72bb58a708d4a7263ee1d98934a4b630"
+  },
+  "summary": "evidence/commander-policy/summary.json",
+  "measured": {
+    "complete_eclipse_games": 768,
+    "paired_assignments": 384,
+    "interrupted": 0,
+    "accepted_actions": 53353,
+    "multiwinner_games": 77,
+    "exclusive_focal_wins": 235,
+    "focal_winner_memberships": 289,
+    "result": "NO_ROBUST_IMPROVEMENT",
+    "primary_credit_delta": 0.0859375,
+    "heldout_credit_delta": 0.0703125
+  },
+  "reproduction": {
+    "repeat_byte_identical": true,
+    "repeat_not_independent_sample": true,
+    "initial_wrapper_execution": "superseded-wrapper",
+    "note": "Initial completed suite lacked whole-process deadline/config equality/interruption refusal; hardened wrapper executed same frozen suite with1800second total guard. Both primary reports768/768complete; game rows identical, source closure differs. No tuning or added candidate attempt."
+  },
+  "affected_regressions": {
+    "core_checks": 13,
+    "cli": "Existing actual compiled terminal workflow passed: numbered refusal/hint/atomic save, resume, replay, invalid journal/options, common-seed comparison and configured planning profile replay."
+  },
+  "attachment_execution": {
+    "evidence": "evidence/commander-policy/intake/execution.json",
+    "original_tests": 64,
+    "new_archive_controls": 11,
+    "bounded_scenarios_not_games": 6,
+    "new_surrogate_smoke_executions": 32,
+    "historical_surrogate_episodes_recorded_not_rerun": 30000,
+    "fully_verified_complete_commander_games": 0
+  },
+  "negatives": [
+    "Candidate fails predeclared robustness: scarce scenario delta negative in both rosters; no outcome-driven retuning",
+    "Common seeds did not reduce observed family variance",
+    "Illegal policy and explicit budget interruption retain no winners",
+    "Forged winner/fraction, assignment/holdout, missing/duplicate games rejected; Python summary four negative calibrations",
+    "Standalone Palladia test import fails despite64/64discovery; original retained",
+    "Initial income-policy tie fixture did not tie; corrected actual stay fixture, reconstructed unpinned source labelled",
+    "Original correctness roster overlapped proposed holdout atseed0; corrected new heldout before primary outcomes; original protocol/config preserved",
+    "Initial wrapper had per-command bounds but lacked total deadline; superseded evidence retained"
+  ],
+  "review": {
+    "reader": "evidence/commander-policy/reader-review.json",
+    "status": "G8_KEY_UNAVAILABLE_PENDING_GRADE",
+    "scientific": "evidence/commander-policy/scientific-review.json",
+    "engineering": "evidence/commander-policy/engineering-review.json",
+    "creative": "Exact candidate integration, originality/identity boundaries and final wrapper execution",
+    "limits": "AI specialists and separately scoped reader; shared filesystem procedural restrictions, no human approval, private benchmark or enforced sandbox"
+  },
+  "north_star_transfer": {
+    "status": "PROPOSED_EXPERIMENT",
+    "executed": false,
+    "acceptance": "Separate actual Trial/Crossing legal-command observation, original objective, costs and secured/defeated/withdrawn accounting; two source-backed scenarios, baselines, replay and affected regressions. No empty adapter."
+  },
+  "production": {
+    "sdk": "10.0.401",
+    "unity_editor_license_modules": "UNVERIFIED",
+    "windows_this_increment": "NOT_EXECUTED",
+    "steam": "NOT_EXECUTED",
+    "local_probe": "Unity/Hub/Steam absent onPATH; conventional roots missing; protected /root/Unity/Hub/Editor Permission denied is not global absence"
+  },
+  "rights": "Original archives retained for research with all existing notices; no blanket license or commercial clearance inferred. No CommanderSIM code, Magic fiction/art/cards copied into original destination implementation.",
+  "strategic_unit": "ONE author-directed external research/laboratory unit, not separate intake/code/CI/portfolio units; no permanent CommanderSIM priority."
+}

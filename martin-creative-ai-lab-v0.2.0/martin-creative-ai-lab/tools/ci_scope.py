@@ -53,6 +53,10 @@ def affected(path):
     if relative.startswith('labs/') and (relative.endswith('.md') or relative in
                                        {'labs/origins.json', 'labs/source-inventory.json'}):
         return ()
+    if relative.startswith(('evidence/commander-policy/', 'labs/economy-simulation/commander-intake.py',
+                            'labs/economy-simulation/policy-evaluation.py', 'labs/economy-simulation/test_commander_intake.py',
+                            'labs/ai-evaluation/eclipse-policy-summary.py')):
+        return ('eclipse_economy',)
     if relative.startswith(('north-star/csharp/', 'north-star/authored-scene/', 'evidence/authored-scene/',
                             'delivery/authored-scene/', 'evidence/recipient-delivery/', 'evidence/request-continuity/',
                             'north-star/reputation-study/', 'evidence/reputation-study/',
