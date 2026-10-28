@@ -127,3 +127,19 @@ python3 north-star/field-journey/tools/presentation-verify.py --dotnet dotnet --
 losing policies, isolated false-person/completion renderer negatives and any actual
 instrument failures. Earlier component-journey evidence stays historical and unchanged.
 The downloadable recipients and frozen AI evaluation are unrelated to this addition.
+
+## Authored ordered commission option
+
+Append `--policy ordered` to the existing host command to use the explicit original
+ordered service policy; omit it or select `independent` for the unchanged default.
+The private memory owner then requires actual west fitting delivery before east service,
+plus east's own actual help/support/recent demonstration and payment. A true condition
+never supplies a component; actual east service must still occur before real assembly.
+The displayed expressions and policy identify current authority, not a client edit or
+an approval of historical dialogue/NPC fiction. Departure still closes preparation;
+this option does not change encounter rules, confirmation, supplies or return authority.
+
+The [conditions verifier](../memory-study/tools/conditions-verify.py) executes both
+policies and the actual field composition, alongside affected earlier regressions.
+[Current evidence](../../evidence/dialogue-conditions/RUN.json) retains the strict parser,
+source boundaries, refused/expired opportunities and actual output/custody distinction.

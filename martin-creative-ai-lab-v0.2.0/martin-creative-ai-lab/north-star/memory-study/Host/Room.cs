@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text.Json;
 using NorthStar.Memory;
+using NorthStar.Conditions;
 
 namespace NorthStar.MemoryStudy;
 
@@ -17,15 +18,30 @@ public sealed class Room
     private string text="Two independent benches, four parts and two coins. No help has been observed and no fitting exists.";
     private string command="initial";
     private bool accepted=true;
+    private readonly string policy;
+    private readonly CompiledCondition westRule,eastRule;
+    private const string BaseExpression="Helped=true & Support=true & Recent=true";
+    private string Expression(string bench)=>BaseExpression+(policy=="ordered"&&bench=="east"?" & OtherDelivered=true":"");
+    public Room(string policy="independent")
+    {
+        if(policy is not ("independent" or "ordered"))throw new ArgumentException("Exact service policy required.");
+        this.policy=policy;
+        if(policy=="ordered")text="Two named benches, four parts and two coins. The east commission also requires actual west delivery; a condition never supplies a fitting.";
+        var symbols=new Dictionary<string,ConditionType>(StringComparer.Ordinal){{"Helped",ConditionType.Boolean},{"Support",ConditionType.Boolean},{"Recent",ConditionType.Boolean},{"OtherDelivered",ConditionType.Boolean},{"Coins",ConditionType.Integer}};
+        westRule=ConditionCompiler.Compile(Expression("west"),symbols);eastRule=ConditionCompiler.Compile(Expression("east"),symbols);
+    }
+    private ConditionResult Condition(string bench)=>(bench=="west"?westRule:eastRule).Evaluate(new Dictionary<string,ConditionValue>(StringComparer.Ordinal){
+        {"Helped",ConditionValue.Boolean(Helped(bench))},{"Support",ConditionValue.Boolean(Supported(bench))},{"Recent",ConditionValue.Boolean(Recent(bench))},
+        {"OtherDelivered",ConditionValue.Boolean(delivered.Contains(bench=="west"?"east":"west"))},{"Coins",ConditionValue.Integer(coins)}});
     private bool Helped(string bench)=>flags.Exact("helped",FlagScope.Npc,bench);
     private bool Supported(string bench)=>flags.Exact("support",FlagScope.Relation,bench);
     private bool Recent(string bench)=>events.Exact("demonstrated",bench);
-    private bool Eligible(string bench)=>Helped(bench)&&Supported(bench)&&Recent(bench)&&coins>0&&!delivered.Contains(bench);
+    private bool Eligible(string bench)=>Helped(bench)&&Supported(bench)&&Recent(bench)&&coins>0&&!delivered.Contains(bench)&&Condition(bench).Satisfied;
     private void Tick(){flags.Tick();events.Tick();if(flags.Turn!=events.Turn)throw new InvalidOperationException("Private clocks diverged.");}
     private object Observe(string cmd,bool ok,string message)=>new {
-        sequence,command=cmd,accepted=ok,text=message,turn=flags.Turn,parts,coins,
+        sequence,command=cmd,accepted=ok,text=message,turn=flags.Turn,parts,coins,policy,
         complete=delivered.Count==2,
-        benches=new[]{"west","east"}.Select(id=>new{id,helped=Helped(id),support=Supported(id),recent=Recent(id),expires=events.ExactExpiry("demonstrated",id),eligible=Eligible(id),delivered=delivered.Contains(id)}).ToArray(),
+        benches=new[]{"west","east"}.Select(id=>new{id,helped=Helped(id),support=Supported(id),recent=Recent(id),expires=events.ExactExpiry("demonstrated",id),eligible=Eligible(id),delivered=delivered.Contains(id),condition_expression=Expression(id),condition_satisfied=Condition(id).Satisfied,condition_complete=Condition(id).Complete}).ToArray(),
         history=history.ToArray()
     };
     public object Snapshot()=>Observe(command,accepted,text);
@@ -61,7 +77,7 @@ public sealed class Room
         else if(cmd=="serve")
         {
             if(delivered.Contains(bench!))message="That fitting already exists. A repeat cannot mint another.";
-            else if(!Eligible(bench!))message="No current service: this exact bench requires observed help, current support, its recent demonstration and one actual coin. No cost paid.";
+            else if(!Eligible(bench!))message="No current service: this exact bench requires observed help, current support, its recent demonstration, one actual coin and the displayed authored condition. No cost paid.";
             else {Tick();coins--;delivered.Add(bench!);ok=true;message="One coin and one action spent. The "+bench+" bench actually supplied its one fitting. Later expiry cannot erase this output.";}
         }
         else if(cmd=="decline")

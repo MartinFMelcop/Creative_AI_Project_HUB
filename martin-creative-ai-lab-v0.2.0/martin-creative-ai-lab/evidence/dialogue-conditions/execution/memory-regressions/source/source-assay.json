@@ -1,0 +1,57 @@
+{
+  "schema_version": 1,
+  "source_sha256": {
+    "references/rave-master/snapshots/36af1651271422ae33856e8b5d7b45702215f165/source/RM_ACT1/DATA/DEV/RGSS/RM_FLAGS_EVENTS_RUNTIME.rb": "e10b541388fe9d2a1f1aa1aefcb054241ffb58ecf4a4815c5e833f3501366525",
+    "references/rave-master/snapshots/36af1651271422ae33856e8b5d7b45702215f165/source/RM_DIST/RMXP_BASE/ScriptsCustom/RM_FLAGS_EVENTS_RUNTIME.rb": "e10b541388fe9d2a1f1aa1aefcb054241ffb58ecf4a4815c5e833f3501366525",
+    "references/rave-master/snapshots/36af1651271422ae33856e8b5d7b45702215f165/source/RM_ACT1/DATA/DEV/MEMORY_FLAGS.csv": "fbe336d8dc4224a38a76800730ef94aae59d6a00075654066aec1d4ca4d9946c",
+    "references/rave-master/snapshots/36af1651271422ae33856e8b5d7b45702215f165/source/RM_DIST/RMXP_BASE/Data/RM_CSV/MEMORY_FLAGS.csv": "fbe336d8dc4224a38a76800730ef94aae59d6a00075654066aec1d4ca4d9946c",
+    "references/rave-master/snapshots/36af1651271422ae33856e8b5d7b45702215f165/source/RM_ACT1/DATA/DEV/RECENT_EVENTS.csv": "fdaea1fb4b2522e0c86d5f77e4a36632f56dd34732705f9ea5a4f7e2d55b385f",
+    "references/rave-master/snapshots/36af1651271422ae33856e8b5d7b45702215f165/source/RM_DIST/RMXP_BASE/Data/RM_CSV/RECENT_EVENTS.csv": "fdaea1fb4b2522e0c86d5f77e4a36632f56dd34732705f9ea5a4f7e2d55b385f"
+  },
+  "variants_identical": true,
+  "flag_definitions": 9,
+  "event_definitions": 10,
+  "default_values": [
+    "0"
+  ],
+  "default_value_used_by_helper": false,
+  "actual_flag_ttls": [
+    "10",
+    "5",
+    "None"
+  ],
+  "actual_event_ttls": [
+    5,
+    8,
+    10,
+    15,
+    20,
+    50
+  ],
+  "source_bindings": [
+    "scope = scope || (d ? d[\"Scope\"] : \"GLOBAL\")",
+    "npc_id = npc_id || \"NPC_UNKNOWN\"",
+    "exp > @turn",
+    "if npc_id == nil || e[\"npc\"] == nil || e[\"npc\"] == npc_id",
+    "n = 1 if n < 1",
+    "before != @events.size"
+  ],
+  "source_counterexamples": [
+    {
+      "id": "unknown-flag-global-fallback",
+      "source_result": "set unknown true with no scope creates a GLOBAL entry",
+      "destination_policy": "unknown identity rejects; no global witness grant"
+    },
+    {
+      "id": "missing-named-subject",
+      "source_result": "NPC and RELATION writes without subject share NPC_UNKNOWN",
+      "destination_policy": "named context required, not silently grouped"
+    },
+    {
+      "id": "unspecified-event-wildcard",
+      "source_result": "push known event with npc=nil satisfies has?(id,any_named_npc)",
+      "destination_policy": "Any retains explicit source compatibility; Exact excludes global event as named witness evidence"
+    }
+  ],
+  "limits": "Independent Python model of inspected source branches with known typed IDs and bounded integers. No Ruby/RGSS/RMXP execution, moral/source fiction, full permissive coercion, persistence, account or human testimony."
+}

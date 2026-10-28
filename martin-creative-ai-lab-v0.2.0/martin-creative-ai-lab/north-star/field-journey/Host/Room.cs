@@ -12,7 +12,8 @@ namespace NorthStar.FieldJourney;
 public sealed class Room
 {
     private readonly IntakeRoom intake=new();
-    private readonly MemoryRoom memory=new();
+    private readonly MemoryRoom memory;
+    public Room(string servicePolicy="independent"){memory=new MemoryRoom(servicePolicy);}
     private readonly Dictionary<string,string> assembled=new(StringComparer.Ordinal);
     private int sequence;
     private Response response=Projector.Initial();

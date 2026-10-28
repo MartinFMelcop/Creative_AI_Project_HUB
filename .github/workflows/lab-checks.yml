@@ -588,8 +588,8 @@ jobs:
           if-no-files-found: ignore
           retention-days: 7
 
-      - name: Execute scoped memory source contracts and actual witness service
-        run: python3 north-star/memory-study/tools/verify.py --dotnet dotnet --output "$RUNNER_TEMP/memory-study"
+      - name: Execute strict conditions, memory and actual field consumers
+        run: python3 north-star/memory-study/tools/conditions-verify.py --dotnet dotnet --output "$RUNNER_TEMP/memory-study"
       - name: Retain scoped memory failure diagnostics
         if: failure()
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
@@ -599,14 +599,12 @@ jobs:
           if-no-files-found: ignore
           retention-days: 7
 
-      - name: Execute actual fitting to confirmed field journey
-        run: python3 north-star/field-journey/tools/presentation-verify.py --dotnet dotnet --output "$RUNNER_TEMP/field-journey"
       - name: Retain field journey failure diagnostics
         if: failure()
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
         with:
           name: field-journey-diagnostics
-          path: ${{ runner.temp }}/field-journey
+          path: ${{ runner.temp }}/memory-study/field-regressions
           if-no-files-found: ignore
           retention-days: 7
 

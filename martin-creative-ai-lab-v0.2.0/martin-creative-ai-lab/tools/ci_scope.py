@@ -58,7 +58,7 @@ def affected(path):
                             'north-star/reputation-study/', 'evidence/reputation-study/',
                             'north-star/tooling-study/', 'evidence/tooling-study/',
                             'north-star/intake/', 'evidence/intake/',
-                            'north-star/memory-study/', 'evidence/memory-study/',
+                            'north-star/memory-study/', 'evidence/memory-study/', 'evidence/dialogue-conditions/', 'labs/world-gameplay/dialogue-conditions/',
                             'north-star/field-journey/', 'evidence/field-journey/', 'evidence/field-presentation/',
                             'north-star/availability-study/', 'evidence/npc-availability/', 'evidence/repair-hauling/',
                             'north-star/combat-study/', 'labs/combat-response/status/', 'labs/combat-response/passives/', 'evidence/passive-response/', 'evidence/combat-status/', 'labs/rpg-systems/', 'evidence/rpg-progression/',

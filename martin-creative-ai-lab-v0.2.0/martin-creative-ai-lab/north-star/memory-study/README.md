@@ -81,3 +81,35 @@ rights. Software controls overlap outcomes; they are not participants, populatio
 studies, human testimony, comprehension, social trust, enjoyment, accessibility or
 commercial clearance. Prior RequestExpedition, fixed Lure/Trail, owners/journals,
 frozen AI evaluation and both downloadable recipient platforms remain unchanged.
+
+## Strict authored service conditions
+
+The same private service now compiles a bounded typed condition before constructing
+its owner. The default `independent` policy retains the existing behavior. An explicit
+startup `--policy ordered` makes east service additionally require actual west delivery:
+`Helped=true & Support=true & Recent=true & OtherDelivered=true`. West retains the
+base expression. These are original experimental commission policies, not historical
+NPC psychology, fiction, approval or a loaded dialogue catalog.
+
+The expression observes only exact private named-bench facts. Actual help/support/recent
+memory, a coin and not-already-delivered remain nonbypassable owner guards. Satisfied
+condition is eligibility, not output: actual service still pays a coin and one action
+before recording its one acquired fitting. Eligibility is checked before that cost;
+expiry during the paid action cannot retroactively undo accepted output. An unknown
+startup policy refuses rather than falling back or resetting an existing owner.
+
+The C#8/netstandard2.1 parser consumes the whole expression, validates declared types,
+parentheses and all characters, and requires all referenced facts even across an OR
+branch. Missing facts cannot satisfy a negative predicate. Function bindings, source
+coercion, full scoring/catalogs and Ruby/RGSS/RMXP remain unresolved. Nothing supplied
+by the browser becomes a private fact or a new policy.
+
+```bash
+python3 north-star/memory-study/tools/conditions-verify.py --dotnet dotnet --output /tmp/conditions-new-output
+```
+
+This includes affected prior memory and field consumers because their dependency
+closure changed. [Protocol](../../evidence/dialogue-conditions/protocol.json),
+[source method](../../labs/world-gameplay/dialogue-conditions/README.md) and
+[execution](../../evidence/dialogue-conditions/RUN.json) distinguish selected integration,
+private-provider rejection, original policies and unexecuted human/production claims.

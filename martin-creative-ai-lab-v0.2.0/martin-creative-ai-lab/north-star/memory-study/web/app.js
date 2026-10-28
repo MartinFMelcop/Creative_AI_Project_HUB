@@ -6,14 +6,16 @@
  function render(s){
   if(!s||!Array.isArray(s.benches))throw Error('Incomplete owner observation');state=s;
   for(const k of ['parts','coins','turn','sequence'])$(k).textContent=String(s[k]);$('notice').textContent=s.text;
-  document.body.dataset.complete=String(s.complete);
+  document.body.dataset.complete=String(s.complete);document.body.dataset.policy=s.policy;$('policy-note').textContent=s.policy==='ordered'?'Ordered commission: the east fitting also requires actual west delivery. No expression supplies a fitting or waives its cost.':'Independent commissions: either bench may supply its own fitting after actual local work and payment.';
   for(const b of s.benches){
+   const eligibleObserved = Boolean(b.eligible);
    const recentObserved = Boolean(b.recent);
    const deliveredObserved = Boolean(b.delivered);
-   $(b.id).dataset.recent=String(recentObserved);$(b.id).dataset.fitted=String(deliveredObserved);$(b.id).dataset.eligible=String(b.eligible);
+   $(b.id).dataset.recent=String(recentObserved);$(b.id).dataset.fitted=String(deliveredObserved);$(b.id).dataset.eligible=String(eligibleObserved);
+   $(b.id+'-condition').textContent=`Authored condition: ${b.condition_expression} · ${b.condition_complete?'known facts':'incomplete facts'} · ${b.condition_satisfied?'satisfied':'not satisfied'}. Eligibility is not acquired custody.`;
    $(b.id+'-help').textContent=b.helped?'Yes':'No';$(b.id+'-support').textContent=b.support?'Yes':'No';$(b.id+'-recent').textContent=recentObserved?'Yes':'No';$(b.id+'-fitted').textContent=deliveredObserved?'Yes':'No';
-   $(b.id+'-status').textContent=deliveredObserved?'FITTING ACQUIRED':b.eligible?'WINDOW OPEN':b.helped?'PAST WORK RETAINED':'NO OBSERVED HELP';
-   $(b.id+'-window').textContent=deliveredObserved?'The actual fitting remains acquired after any later expiry or withdrawal.':b.eligible?`This exact bench can act now. Demonstration expires at turn ${b.expires}; the service checks before its one-turn cost.`:b.recent?`Demonstration current until turn ${b.expires}, but the full service conditions are not met.`:b.helped?'Past help is still recorded. The recent demonstration is absent or expired; a fresh demonstration costs a part and a turn.':'No local help or demonstration has been observed. Another bench cannot supply either fact.';
+   $(b.id+'-status').textContent=deliveredObserved?'FITTING ACQUIRED':eligibleObserved?'WINDOW OPEN':b.helped?'PAST WORK RETAINED':'NO OBSERVED HELP';
+   $(b.id+'-window').textContent=deliveredObserved?'The actual fitting remains acquired after any later expiry or withdrawal.':eligibleObserved?`This exact bench can act now. Demonstration expires at turn ${b.expires}; the service checks before its one-turn cost.`:b.recent?`Demonstration current until turn ${b.expires}, but the full service conditions are not met.`:b.helped?'Past help is still recorded. The recent demonstration is absent or expired; a fresh demonstration costs a part and a turn.':'No local help or demonstration has been observed. Another bench cannot supply either fact.';
    $(b.id+'-help-button').textContent=b.helped?'Demonstrate again · 1 part':'Help here · 1 part';
    $(b.id+'-picture').textContent=`${b.id} bench: past help ${b.helped?'observed':'not observed'}, current demonstration ${recentObserved?'present':'absent'}, fitting ${deliveredObserved?'acquired':'not acquired'}.`;
   }

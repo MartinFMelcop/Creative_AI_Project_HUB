@@ -872,3 +872,17 @@ human recognition/accessibility/balance or Unity/Windows/Steam validation.
 
 [Execution](../evidence/field-presentation/RUN.json) retains actual loss, insufficient-
 resolve refusal, source-stable affected regressions and isolated false-picture negatives.
+
+## Ordered commission — original experimental policy
+
+The existing fitting service retains independent commissions by default. Explicit
+startup `--policy ordered` makes east service require actual west delivery in addition
+to east's own help/support/recent demonstration and payment. Conditions are observed
+eligibility, not acquired cargo. West delivery can open the opportunity while east has
+no fitting; only actual east service spends the coin/action and supplies it.
+
+This is an original disclosed experiment, not source NPC psychology, social approval,
+quest canon, virtue ranking or a loaded historical dialogue catalog. The same field owner
+still requires actual component allocation, materials, entry and encounters. Expiry,
+withdrawal and departure keep their original boundaries. [Evidence](../evidence/dialogue-conditions/RUN.json)
+retains independent/ordered differences, refusals and actual positive/negative outcomes.

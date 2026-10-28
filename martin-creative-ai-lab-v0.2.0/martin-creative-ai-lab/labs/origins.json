@@ -1350,7 +1350,7 @@
         "references/rave-master/snapshots/36af1651271422ae33856e8b5d7b45702215f165/source/RM_ACT1/DATA/DEV/RGSS/RM_DIALOGUE_SCORING_RUNTIME.rb",
         "references/rave-master/snapshots/36af1651271422ae33856e8b5d7b45702215f165/source/RM_ACT1/DATA/DEV/QUEST_STEPS.csv"
       ],
-      "decision": "Static quest/helper assays and separately integrated literal NPC mask/event-authority boundary retain DEV/DIST and manual-completion limits. Full NPC schedule/location conflict resolution, reputation/factions, dialogue selectors, quest/world catalogs and actual RGSS runtime remain unresolved. Selected reputation six-level arithmetic is now separately INTEGRATED and direct empty-hook effects provision separately REJECTED. Full source effects, regional/default conflicts and faction/quest policies remain UNRESOLVED. Known scoped flags/recent-event action-turn expiry are now separately INTEGRATED; unsafe unknown/global/missing-subject fallbacks as private witness authority are separately REJECTED. Full source memory/dialogue/quest catalogs and persistence remain unresolved.",
+      "decision": "Static quest/helper assays and separately integrated literal NPC mask/event-authority boundary retain DEV/DIST and manual-completion limits. Full NPC schedule/location conflict resolution, reputation/factions, dialogue selectors, quest/world catalogs and actual RGSS runtime remain unresolved. Selected reputation six-level arithmetic is now separately INTEGRATED and direct empty-hook effects provision separately REJECTED. Full source effects, regional/default conflicts and faction/quest policies remain UNRESOLVED. Known scoped flags/recent-event action-turn expiry are now separately INTEGRATED; unsafe unknown/global/missing-subject fallbacks as private witness authority are separately REJECTED. Full source memory/dialogue/quest catalogs and persistence remain unresolved. Selected typed scalar dialogue-condition grammar is separately INTEGRATED and direct permissive parser as private permission authority separately REJECTED. Function query bindings, coercion, full scoring/catalogs and source runtime remain unresolved.",
       "next_action": "Select a consequential remaining dialogue/quest/world rule or shared product need with actual event ownership and author decisions. Preserve exact scope, expiry and variant limits; prioritize actual people/devices or licensed production when accessible."
     },
     {
@@ -1904,6 +1904,7 @@
       ],
       "decision": "Known GLOBAL/NPC/RELATION flags, explicit true/false union, clear and strict exp>turn recent-event lifetime operate in C#8/netstandard2.1 and an actual finite original local service. SAME57Python/C#cases/237queries use9actual flag and10event definitions with declared branch probes. Exact private witness authority is a distinct destination policy; source wildcard query remains explicit separately. No moral/source fiction, unknown-ID coercion, full memory/dialogue catalog, Game_System persistence, Ruby/RGSS or human testimony is integrated.",
       "evidence": [
+        "evidence/dialogue-conditions/RUN.json",
         "evidence/memory-study/RUN.json",
         "evidence/memory-study/source/source-assay.json",
         "evidence/memory-study/source/results.json",
@@ -1913,7 +1914,8 @@
         "evidence/memory-study/RUN.json": "c50a91cc67981348128da67e8ee12be85713beb8e2b80bf5dd423df472366d26",
         "evidence/memory-study/source/source-assay.json": "2c4998da9aa2885fb83ad6cd490f106181d053f4d4d51b8d47a2f4e4f659b31a",
         "evidence/memory-study/source/results.json": "3cc986ebb26795188c5794844be11300ce04a5303b210be79b3c31a35a99c111",
-        "evidence/memory-study/browser/browser.json": "23d5a3dd6e0500a7d8d40294656a42c13a8528e16049abd73f860f9803fbf364"
+        "evidence/memory-study/browser/browser.json": "23d5a3dd6e0500a7d8d40294656a42c13a8528e16049abd73f860f9803fbf364",
+        "evidence/dialogue-conditions/RUN.json": "cbffb248dcbd5d20c02587f319ec81568657c4f863052d86f7de14a1cec9502d"
       }
     },
     {
@@ -1992,6 +1994,59 @@
       "evidence_sha256": {
         "evidence/passive-response/RUN.json": "a74946321271b5045b5d3ca064ce09a8c82678c589bf15198d74d675ee9ffac8",
         "evidence/passive-response/execution/source-assay.json": "b72eec94785a819330fdd0e45601db6673bdaddedf67214036b5c8e0825dee31"
+      }
+    },
+    {
+      "id": "XP-TYPED-DIALOGUE-CONDITIONS",
+      "origin_projects": [
+        "P10"
+      ],
+      "laboratory_id": "world-gameplay",
+      "status": "INTEGRATED",
+      "source_paths": [
+        "references/rave-master/snapshots/36af1651271422ae33856e8b5d7b45702215f165/source/RM_ACT1/DATA/DEV/RGSS/RM_DIALOGUE_SCORING_RUNTIME.rb",
+        "references/rave-master/snapshots/36af1651271422ae33856e8b5d7b45702215f165/source/RM_DIST/RMXP_BASE/ScriptsCustom/RM_DIALOGUE_SCORING_RUNTIME.rb",
+        "references/rave-master/snapshots/36af1651271422ae33856e8b5d7b45702215f165/source/RM_ACT1/DATA/DEV/DIALOGUE_VARIANTS.csv",
+        "references/rave-master/snapshots/36af1651271422ae33856e8b5d7b45702215f165/source/RM_DIST/RMXP_BASE/Data/RM_CSV/DIALOGUE_VARIANTS.csv"
+      ],
+      "decision": "Adapt full-consumption scalar comparison, Boolean precedence and parentheses into a bounded typed C#8/netstandard2.1 condition compiled against declared private facts. Actual existing paid service and field composition demonstrate independent/ordered consequences. Exact eight scalar rows exercise syntax in declared destination context; no Ruby/coercion/function/scoring/catalog or fictional NPC import.",
+      "evidence": [
+        "evidence/dialogue-conditions/RUN.json",
+        "evidence/dialogue-conditions/execution/source.json"
+      ],
+      "evidence_sha256": {
+        "evidence/dialogue-conditions/RUN.json": "cbffb248dcbd5d20c02587f319ec81568657c4f863052d86f7de14a1cec9502d",
+        "evidence/dialogue-conditions/execution/source.json": "bb6fe0db8be6b66ac65dbcdbdfc3f7fcee10253f843461ed74ffd40167eea289"
+      },
+      "consumer_paths": [
+        "north-star/memory-study/Conditions/Conditions.cs",
+        "north-star/memory-study/Host/Room.cs",
+        "north-star/memory-study/Host/Program.cs",
+        "north-star/field-journey/Host/Room.cs",
+        "north-star/field-journey/Host/Program.cs"
+      ]
+    },
+    {
+      "id": "XP-DIALOGUE-PERMISSIVE-AUTHORITY",
+      "origin_projects": [
+        "P10"
+      ],
+      "laboratory_id": "world-gameplay",
+      "status": "REJECTED",
+      "source_paths": [
+        "references/rave-master/snapshots/36af1651271422ae33856e8b5d7b45702215f165/source/RM_ACT1/DATA/DEV/RGSS/RM_DIALOGUE_SCORING_RUNTIME.rb",
+        "references/rave-master/snapshots/36af1651271422ae33856e8b5d7b45702215f165/source/RM_DIST/RMXP_BASE/ScriptsCustom/RM_DIALOGUE_SCORING_RUNTIME.rb",
+        "references/rave-master/snapshots/36af1651271422ae33856e8b5d7b45702215f165/source/RM_ACT1/DATA/DEV/DIALOGUE_VARIANTS.csv",
+        "references/rave-master/snapshots/36af1651271422ae33856e8b5d7b45702215f165/source/RM_DIST/RMXP_BASE/Data/RM_CSV/DIALOGUE_VARIANTS.csv"
+      ],
+      "decision": "Reject direct permissive ConditionsExpr helper as authority for a private paid service: inspected tokenizer skips unknown characters, parser does not consume suffixes or require closing parentheses, missing primary/empty expression become true and rescue uses a different fallback. No Ruby execution claimed; legitimate unconditional dialogue and the source collection are not rejected.",
+      "evidence": [
+        "evidence/dialogue-conditions/RUN.json",
+        "evidence/dialogue-conditions/execution/source.json"
+      ],
+      "evidence_sha256": {
+        "evidence/dialogue-conditions/RUN.json": "cbffb248dcbd5d20c02587f319ec81568657c4f863052d86f7de14a1cec9502d",
+        "evidence/dialogue-conditions/execution/source.json": "bb6fe0db8be6b66ac65dbcdbdfc3f7fcee10253f843461ed74ffd40167eea289"
       }
     }
   ]

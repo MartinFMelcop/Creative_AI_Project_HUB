@@ -1,0 +1,87 @@
+[
+  {
+    "command": [
+      "python3",
+      "tools/validate_repo.py"
+    ],
+    "exit_code": 0,
+    "stdout_sha256": "19145c49721f10ff0be89b8ab301a2cd0e27c06f88d03baa3fddb3a728be158c",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "command": [
+      "python3",
+      "tools/reference_library.py",
+      "check"
+    ],
+    "exit_code": 0,
+    "stdout_sha256": "25539d1ee832beda298a26fba68ebf76f6861085434f6317722988176fdfed9f",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "command": [
+      "python3",
+      "tools/brain_query.py",
+      "check"
+    ],
+    "exit_code": 0,
+    "stdout_sha256": "6dc8ad4e76f43417dad19a51632c0b1ecee8a1bb0d5acc97326d888e13e9acfb",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "command": [
+      "python3",
+      "tools/check_transformation.py"
+    ],
+    "exit_code": 0,
+    "stdout_sha256": "78ac46f6440a1fa09abff7dd92adc5c5e89a2ca26456c5fb40820249116c15b2",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "command": [
+      "python3",
+      "tools/test_transformation.py"
+    ],
+    "exit_code": 0,
+    "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stderr_sha256": "0de7202e568dfca62638f5108b06918e0af7409625909b9e3a817d27e5e0f059"
+  },
+  {
+    "command": [
+      "python3",
+      "tools/check_portfolio.py"
+    ],
+    "exit_code": 0,
+    "stdout_sha256": "69de42f8f07f5cf351546afd64600acfd84a0f59a8ad1b7258cb84d351de79d0",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "command": [
+      "python3",
+      "tools/test_check_portfolio.py"
+    ],
+    "exit_code": 0,
+    "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stderr_sha256": "bcc00aae62dbed820ecf4e735ce356127b8c1ad0847c4a6509514498f8015067"
+  },
+  {
+    "command": [
+      "python3",
+      "tools/test_ci_scope.py"
+    ],
+    "exit_code": 0,
+    "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stderr_sha256": "f58394cf2630c13e494819044b017cf0f6054bce780a6cb68b3ec76252af545d"
+  },
+  {
+    "command": [
+      "python3",
+      "tools/inventory_origins.py",
+      "--check",
+      "labs/source-inventory.json"
+    ],
+    "exit_code": 0,
+    "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stderr_sha256": "5691d7379fa6fc510bda8cde6103349ed02e50ea68e9b55fe8afda9e886f5bc1"
+  }
+]

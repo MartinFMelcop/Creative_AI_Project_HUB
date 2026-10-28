@@ -121,3 +121,13 @@ location conflicts and original event-owned service availability. Its separate
 [C# workshop](../../north-star/availability-study/README.md) makes a closed window,
 reserved capacity and an unaccounted worker consequential. This extends the lab
 without declaring full schedules, historical NPC execution or reputation integrated.
+
+## Strict conditions with actual paid-service consequences
+
+The [dialogue-condition method](dialogue-conditions/README.md) inspects preserved source
+parser/table bytes and adapts selected scalar/Boolean grammar into a portable typed
+library. [Actual execution](../../evidence/dialogue-conditions/RUN.json) uses the existing
+MemoryStudy owner and field composition: an original ordered commission requires actual
+west delivery before east service, without bypassing local evidence, payment or custody.
+Strict compilation and complete private facts replace permissive partial/fallback parsing
+as permission authority. Full source queries/scoring/catalogs/coercion remain unresolved.
