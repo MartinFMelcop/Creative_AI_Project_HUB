@@ -854,3 +854,21 @@ a new character canon. Source Warrior, Rogue chance and Knight control requireme
 remain separate; no gender, class fiction, faction or moral meaning is imported.
 This is one legacy/laboratory contribution using an existing original consumer,
 not another product wrapper, production armor system or author/player approval.
+
+## Same-person field encounter board — experimental
+
+The existing field journey now depicts its actual confirmed handle/accent, discipline
+mark and actually used rig in the encounter. The0..8display bound is not a finish line;
+a marked position threshold is separate from surviving the actual remaining beats.
+Survey success retains its resolved2-cell/four-beat context while `owner_stage` exposes
+the owner's advance to the final encounter. Only actual final Crossing supplies completion.
+
+A read-only portable projector observes prior/after facts and accepted command response.
+Static marks distinguish actual protection, evasion, harm, movement and resolve change.
+Entry recovery is not narrated as a heal, refused intent as an accepted action, or a
+read/redraw as a new event. No clock, figure or client field owns a consequence. Original
+vector staging is experimental presentation, not approved final art, source-cast import,
+human recognition/accessibility/balance or Unity/Windows/Steam validation.
+
+[Execution](../evidence/field-presentation/RUN.json) retains actual loss, insufficient-
+resolve refusal, source-stable affected regressions and isolated false-picture negatives.

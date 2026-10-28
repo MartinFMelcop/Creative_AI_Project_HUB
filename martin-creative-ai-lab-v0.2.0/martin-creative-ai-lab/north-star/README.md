@@ -152,3 +152,9 @@ consequential: heavy physical contact mitigation competes with one fatal-hit res
 Actual DOT can still defeat the rescued character. [Executed evidence](../evidence/passive-response/RUN.json)
 is software verification of explicit experimental rules, not learned source classes,
 human balance, approved canon or production delivery.
+
+The existing [field journey](field-journey/README.md) now shows the same confirmed person,
+actual used rig, announced threat and resolved contact on its road board. Reaching the
+position threshold while beats remain stays active; survey success remains distinct
+from final completion. [Actual execution](../evidence/field-presentation/RUN.json) preserves
+underlying owners and both recipient downloads unchanged; no human/Unity validation follows.

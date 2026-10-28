@@ -95,3 +95,35 @@ enjoyment, balance, accessibility, license/module, Unity/Windows/Steam or distri
 power-loss persistence claim follows. Full effects/passives, NPC schedules, catalogs,
 creation parsing and production ownership remain unresolved. No protected source,
 previous owner/journal, frozen AI study, package, media variant or notice was retired.
+
+## Same-person encounter observation
+
+The existing journey now projects actual confirmed identity, used rig, encounter and
+accepted response through a bounded C#8/netstandard2.1 presentation library. It never
+creates another Session or writes health, progression, inventory or completion. The
+.NET10 host remains the adapter to the unchanged Intake/Memory/Forge/Crossing owners;
+this library build is not Unity Editor or Windows/Steam execution.
+
+The original road board uses position0..8 as its display bound. Its marked positional
+threshold is separate from actual remaining beats, survival and terminal outcome.
+Reaching the threshold while active stays explicitly in progress. A resolved survey
+retains its two-cell/four-beat context even though the owner has advanced to stage1;
+`owner_stage` exposes that distinction. Only actual final Crossing supplies completion.
+
+The same confirmed handle/accent/discipline and actual used outfit appear on the road.
+Static response marks show actual before/after movement, health loss and resolve change
+against the prior announced threat. Entry recovery is not reported as healing; refusal
+is not a new accepted encounter event. Reads, redraw and elapsed time retain the same
+event identity. These are software observations, not participant recognition or final art.
+
+Run the current bounded verifier (including affected prior native/browser/HTTP checks):
+
+```bash
+python3 north-star/field-journey/tools/presentation-verify.py --dotnet dotnet --output /tmp/field-presentation-new
+```
+
+[Prospective protocol](../../evidence/field-presentation/protocol.json) and
+[current execution](../../evidence/field-presentation/RUN.json) preserve positives,
+losing policies, isolated false-person/completion renderer negatives and any actual
+instrument failures. Earlier component-journey evidence stays historical and unchanged.
+The downloadable recipients and frozen AI evaluation are unrelated to this addition.

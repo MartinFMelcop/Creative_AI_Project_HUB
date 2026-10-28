@@ -6,9 +6,31 @@
  window.fieldJourney={get state(){return state;},get status(){return uncertain?'read-required':busy?'pending':'ready';},send,read,render};
  function proposal(){return{handle:$('handle').value,accent:$('accent').value,class_id:$('class_id').value,background_id:$('background_id').value,slots:[1,2,3,4].map(n=>$('slot'+n).value||null)};}
  function adopt(d){if(!d)return;for(const key of ['handle','accent','class_id','background_id'])$(key).value=d[key];d.slots.forEach((value,i)=>$('slot'+(i+1)).value=value||'');}
+ function encounterView(v){
+  if(!v?.person||!v?.encounter||!v?.action)throw Error('Actual encounter projection required');
+  const p=v.person,e=v.encounter,a=v.action;
+  const fieldCompleteObserved = v.encounter.complete;
+  const fieldHandleObserved = v.person.handle;
+  const board=$('field-encounter-board'),actor=$('field-actor');
+  board.dataset.phase=e.phase;board.dataset.complete=String(fieldCompleteObserved);board.dataset.thresholdReached=String(e.threshold_reached);board.dataset.threat=e.threat_kind;
+  for(const [key,value]of Object.entries({handle:fieldHandleObserved??'',class:p.class_id??'',rig:p.rig,accent:p.accent??'copper',confirmed:p.confirmed,contact:a.contact,kind:a.kind,moved:a.moved,eventSequence:a.event_sequence}))actor.dataset[key]=String(value);
+  const x=85+830*e.position/e.world_end;
+  $('field-actor-shape').setAttribute('transform',`translate(${x} 320)`);$('field-cloth').setAttribute('fill',accents[p.accent]||accents.copper);
+  $('field-threshold').setAttribute('transform',`translate(${85+830*e.required_position/e.world_end} 0)`);
+  $('field-pulse').setAttribute('transform',`translate(${x} 328)`);
+  $('field-distance-marks').replaceChildren(...Array.from({length:e.world_end+1},(_,i)=>{const n=document.createElementNS('http://www.w3.org/2000/svg','text');n.setAttribute('x',String(85+830*i/e.world_end));n.setAttribute('y','382');n.setAttribute('text-anchor','middle');n.textContent=String(i);return n;}));
+  $('field-phase').textContent=fieldCompleteObserved?'ACTUAL ROAD COMPLETE':e.phase==='active'?`ACTIVE / ${e.beat} OF ${e.max_beats} BEATS`:e.phase==='survey-won'?'SURVEY WON / ROAD NOT COMPLETE':e.phase==='failed'?'ATTEMPT FAILED':'NO ENCOUNTER';
+  $('field-person-label').textContent=p.confirmed?`${fieldHandleObserved} · ${p.class_id} · actual rig ${p.rig}`:'Confirm a person before taking the road.';
+  $('field-scene-title').textContent=p.confirmed?`${fieldHandleObserved}, ${p.accent} accent, ${p.class_id} discipline, actual ${p.rig} rig.`:'No confirmed traveler';
+  $('field-outcome-label').textContent=e.active?'POSITION ALONE IS NOT COMPLETION':fieldCompleteObserved?'BOTH ACTUAL ENCOUNTERS COMPLETE':e.phase==='survey-won'?'SURVEY ONLY / FINAL ENCOUNTER REMAINS':e.phase==='failed'?'NO VICTORY OR REFUND OBSERVED':'NO ENCOUNTER / NO PREDICTED ACTION';
+  $('field-position').textContent=`Position ${e.position} / threshold ${e.required_position} · display bound ${e.world_end}`;
+  $('field-threshold-note').textContent=e.active?e.threshold_reached?`Position threshold reached; ${e.max_beats-e.beat} actual beats remain. Survival and the owner still decide the outcome.`:`Threshold not yet reached; ${e.max_beats-e.beat} actual beats remain.`:e.phase==='survey-won'?'This ended survey used its two-cell/four-beat objective. The owner has advanced to the next encounter; this is not final completion.':'Position does not create a terminal result. Discipline marks are not acquired rigs.';
+  $('field-threat-label').textContent=e.threat_kind==='none'?'NO ACTIVE THREAT':`NEXT: ${e.threat_kind.toUpperCase()}`;
+  $('field-response').textContent=a.kind==='refused'?`Refused ${a.command}. No accepted encounter response, damage, cost or movement was produced.`:['walk','dash','skill','wait'].includes(a.kind)?`Latest actual response ${a.event_sequence}: ${a.kind}; position ${a.from_position} → ${a.to_position}; HP lost ${a.health_lost}; resolve spent ${a.resolve_spent}, gained ${a.resolve_gained}; contact ${a.contact}.`:`Observed ${a.kind}. Entry/preparation is not narrated as healing or a paid encounter response.`;
+ }
  function render(s){
   if(!s?.intake?.state||!s?.memory||!Array.isArray(s.fittings))throw Error('Incomplete actual journey observation');
-  state=s;const card=s.intake,e=card.state,m=s.memory,id=card.identity;
+  state=s;const card=s.intake,e=card.state,m=s.memory,id=card.identity;encounterView(s.encounter_view);
   const completeObserved = Boolean(s.intake.state.complete);
   document.body.dataset.confirmed=String(card.confirmed);document.body.dataset.workshopClosed=String(s.workshop_closed);document.body.dataset.complete=String(completeObserved);
   $('confirmed-name').textContent=id?id.handle:'Not confirmed';$('identity-discipline').textContent=id?`${id.class_id} / ${id.background_id}`:'No committed preparation';$('identity-accent').textContent=id?`${id.accent} cloth accent · expression only`:'Expression has no combat advantage.';$('identity-slots').textContent=id?`Equipped: ${id.slots.map(x=>x||'empty').join(' / ')}`:'No confirmed actions.';
@@ -37,7 +59,7 @@
   $('road-stage').textContent=completeObserved?'ACTUAL ROAD COMPLETE':e.active?`ENCOUNTER ${e.stage+1} / BEAT ${e.beat}`:e.attempts?e.won?'SURVEY COMPLETE':'ATTEMPT ENDED':'NOT DEPARTED';
   $('departure-warning').textContent=s.workshop_closed?'The workshop is closed for this journey. Only already assembled rigs remain available; card amendments cannot reopen it or restore supplies.':'First accepted entry closes the workshop for this whole session. Assemble the rigs you need before leaving. An unfunded later encounter is a real possible consequence.';
   $('health').textContent=e.attempts?String(e.health):'—';$('resolve').textContent=e.attempts?String(e.resolve):'—';$('beat').textContent=String(e.beat);$('level-xp').textContent=`${e.level} / ${e.xp}`;$('consumed-rigs').textContent=String(e.consumed_rigs);
-  $('route-person').style.left=`${Math.max(0,Math.min(1,e.position/Math.max(1,card.required_position)))*100}%`;
+  $('route-person').style.left=`${Math.max(0,Math.min(1,e.position/s.encounter_view.encounter.world_end))*100}%`;
   $('threat').textContent=e.active?card.threat:completeObserved?'Both actual encounters are complete. Consumed fittings, used rigs and remaining supplies stay accounted for.':e.attempts?e.won?(quantity('trail_rig')+quantity('plate_rig')>0?'Survey victory earned progression, not final completion. Explicitly amend earned preparation if desired, then enter with an actual remaining rig.':'Survey victory earned progression, not final completion. No prepared rig remains. The workshop is closed; a later prepared entry is unfunded.'):'The attempt ended without victory. Its rig remains spent; an unfunded retry does not create new workshop access.':'No actual encounter has begun. Your confirmed discipline and acquired outfit remain independent choices.';
   $('earned-state').textContent=`Earned points remaining: ${e.unspent}. Vitality ${e.vitality}; Focus ${e.focus}. Between encounters, a new whole proposal may equip earned Dash. Confirmation never heals, refunds or reopens the workshop.`;
   for(let n=1;n<=4;n++)$('use-slot'+n).textContent=`Slot ${n}${id?.slots[n-1]?' · '+id.slots[n-1]:''}`;

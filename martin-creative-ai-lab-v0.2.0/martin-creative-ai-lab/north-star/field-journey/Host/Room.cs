@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text.Json;
 using IntakeRoom=NorthStar.Intake.Room;
 using MemoryRoom=NorthStar.MemoryStudy.Room;
+using NorthStar.FieldPresentation;
 
 namespace NorthStar.FieldJourney;
 
@@ -14,6 +15,7 @@ public sealed class Room
     private readonly MemoryRoom memory=new();
     private readonly Dictionary<string,string> assembled=new(StringComparer.Ordinal);
     private int sequence;
+    private Response response=Projector.Initial();
     private bool workshopClosed;
     private string command="initial";
     private bool accepted=true;
@@ -25,10 +27,22 @@ public sealed class Room
     private bool Acquired(string bench)=>Memory().GetProperty("benches").EnumerateArray().Single(b=>b.GetProperty("id").GetString()==bench).GetProperty("delivered").GetBoolean();
     private object Observe(string cmd,bool ok,string message)=>new {
         sequence,command=cmd,accepted=ok,text=message,workshop_closed=workshopClosed,
-        intake=intake.Snapshot(),memory=memory.Snapshot(),
+        intake=intake.Snapshot(),memory=memory.Snapshot(),encounter_view=Projector.Observe(Facts(Intake()),response),
         fittings=new[]{"west","east"}.Select(bench=>new {bench,acquired=Acquired(bench),spent=assembled.ContainsKey(bench),available=Acquired(bench)&&!assembled.ContainsKey(bench),rig=assembled.TryGetValue(bench,out var rig)?rig:null}).ToArray(),
         assembly_receipts=assembled.Select(pair=>new {bench=pair.Key,rig=pair.Value,request_id="fitting_"+pair.Key}).ToArray()
     };
+    private static Facts Facts(JsonElement card)
+    {
+        var state=card.GetProperty("state");var id=card.GetProperty("identity");bool confirmed=Flag(card,"confirmed");
+        return new Facts(confirmed,confirmed?id.GetProperty("handle").GetString():null,confirmed?id.GetProperty("accent").GetString():null,confirmed?id.GetProperty("class_id").GetString():null,
+            state.GetProperty("rig").GetString()!.ToLowerInvariant(),state.GetProperty("attempts").GetInt32(),state.GetProperty("stage").GetInt32(),Flag(state,"active"),Flag(state,"won"),Flag(state,"complete"),state.GetProperty("beat").GetInt32(),state.GetProperty("position").GetInt32(),state.GetProperty("health").GetInt32(),state.GetProperty("resolve").GetInt32(),card.GetProperty("threat").GetString()!);
+    }
+    private static string ActionKind(string cmd,JsonElement root,JsonElement before)
+    {
+        if(cmd!="slot")return cmd;
+        int slot=Number(root,"slot")-1;var slots=before.GetProperty("state").GetProperty("slots");
+        return slot>=0&&slot<slots.GetArrayLength()&&slots[slot].ValueKind==JsonValueKind.String&&slots[slot].GetString()=="dash"?"dash":"skill";
+    }
     public object Snapshot()=>Observe(command,accepted,text);
     private static string Text(JsonElement root,string key)=>root.GetProperty(key).ValueKind==JsonValueKind.String?root.GetProperty(key).GetString()!:throw new ArgumentException("Exact string required.");
     private static int Number(JsonElement root,string key)=>root.GetProperty(key).TryGetInt32(out int result)?result:throw new ArgumentException("Exact integer required.");
@@ -90,6 +104,7 @@ public sealed class Room
             var result=Child(root,cmd,false,extras);ok=Flag(result,"accepted");message=result.GetProperty("text").GetString()!;
             if(cmd=="begin"&&ok){workshopClosed=true;message+=" Preparation is now closed; later encounter beats do not advance the separate historical workshop clock.";}
         }
+        response=Projector.Transition(Facts(current),Facts(Intake()),cmd,ok,ActionKind(cmd,root,current),response.event_sequence);
         sequence=next;command=cmd;accepted=ok;text=message;
         return Snapshot();
     }

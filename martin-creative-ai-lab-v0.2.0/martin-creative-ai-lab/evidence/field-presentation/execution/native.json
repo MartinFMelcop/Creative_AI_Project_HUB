@@ -1,0 +1,462 @@
+{
+  "schema_version": 1,
+  "checks": {
+    "passed": 26,
+    "failed": 0
+  },
+  "controls": [
+    "Initial unconfirmed projection creates no person or active threat",
+    "Actual confirmed identity and cosmetic accent reach projection",
+    "Preparation does not depict a rig merely selected in a form",
+    "Actual entry projects the actual used rig",
+    "Entry recovery is not narrated as healing or paid action",
+    "Actual initial announced bolt is projected",
+    "Empty slot refusal leaves owner facts exact",
+    "Refusal creates no accepted paid response",
+    "Actual Lure bolt response protects and moves",
+    "Threshold reached with active beats is not completion",
+    "Display bound is independent of position threshold",
+    "Next actual pulse is not the prior bolt",
+    "Actual pulse movement evades and gains resolve",
+    "Survey retains resolved objective while owner advances",
+    "Reads retain event and projection exactly",
+    "Earned amendment retains same person and does not heal",
+    "Actual second entry has its own required objective",
+    "Earned actual Dash is depicted as Dash",
+    "Harder threshold with beats pending stays active",
+    "Actual final Crossing supplies completion",
+    "Terminal projection cannot announce a future attack",
+    "Terminal refusal cannot rearm or alter completed owner",
+    "Actual damaging wait depicts actual harm",
+    "Actual defeat never becomes victory or refund",
+    "Anchor protection is stationary and uses actual discipline",
+    "Client projection field is rejected before owner mutation"
+  ],
+  "final": {
+    "sequence": 27,
+    "command": "slot",
+    "accepted": false,
+    "text": "Skill: 0 damage, 3 resolve spent. Completed; reward committed. Level 3, 2 unspent points.",
+    "workshop_closed": true,
+    "intake": {
+      "sequence": 23,
+      "command": "slot",
+      "accepted": false,
+      "text": "Skill: 0 damage, 3 resolve spent. Completed; reward committed. Level 3, 2 unspent points.",
+      "confirmed": true,
+      "pending": false,
+      "draft_revision": 3,
+      "reviewed_revision": 3,
+      "draft": {
+        "handle": "Neri",
+        "accent": "violet",
+        "class_id": "lure",
+        "background_id": "trailborn",
+        "slots": [
+          "draw",
+          "dash",
+          null,
+          null
+        ]
+      },
+      "identity": {
+        "handle": "Neri",
+        "accent": "violet",
+        "class_id": "lure",
+        "background_id": "trailborn",
+        "slots": [
+          "draw",
+          "dash",
+          null,
+          null
+        ]
+      },
+      "state": {
+        "class_id": "lure",
+        "background_id": "trailborn",
+        "slots": [
+          "draw",
+          "dash",
+          null,
+          null
+        ],
+        "active": false,
+        "complete": true,
+        "won": true,
+        "stage": 1,
+        "beat": 6,
+        "position": 8,
+        "health": 11,
+        "resolve": 1,
+        "rig": "Trail",
+        "attempts": 2,
+        "consumed_rigs": 2,
+        "transactions": 4,
+        "inventory": {
+          "fiber": 0,
+          "binder": 0,
+          "trail_rig": 0
+        },
+        "level": 3,
+        "xp": 25,
+        "unspent": 2,
+        "vitality": 0,
+        "focus": 2
+      },
+      "threat": "BOLT: moving exposes health; the approach skill spends resolve to protect.",
+      "required_position": 4,
+      "maximum_beats": 6
+    },
+    "memory": {
+      "sequence": 4,
+      "command": "serve",
+      "accepted": true,
+      "text": "One coin and one action spent. The east bench actually supplied its one fitting. Later expiry cannot erase this output.",
+      "turn": 4,
+      "parts": 2,
+      "coins": 0,
+      "complete": true,
+      "benches": [
+        {
+          "id": "west",
+          "helped": true,
+          "support": true,
+          "recent": false,
+          "expires": null,
+          "eligible": false,
+          "delivered": true
+        },
+        {
+          "id": "east",
+          "helped": true,
+          "support": true,
+          "recent": true,
+          "expires": 6,
+          "eligible": false,
+          "delivered": true
+        }
+      ],
+      "history": [
+        {
+          "sequence": 1,
+          "command": "help",
+          "bench": "west",
+          "turn": 1,
+          "parts": 3,
+          "coins": 2,
+          "fittings": 0
+        },
+        {
+          "sequence": 2,
+          "command": "serve",
+          "bench": "west",
+          "turn": 2,
+          "parts": 3,
+          "coins": 1,
+          "fittings": 1
+        },
+        {
+          "sequence": 3,
+          "command": "help",
+          "bench": "east",
+          "turn": 3,
+          "parts": 2,
+          "coins": 1,
+          "fittings": 1
+        },
+        {
+          "sequence": 4,
+          "command": "serve",
+          "bench": "east",
+          "turn": 4,
+          "parts": 2,
+          "coins": 0,
+          "fittings": 2
+        }
+      ]
+    },
+    "encounter_view": {
+      "person": {
+        "handle": "Neri",
+        "accent": "violet",
+        "class_id": "lure",
+        "rig": "trail",
+        "confirmed": true
+      },
+      "encounter": {
+        "phase": "complete",
+        "outcome": "complete",
+        "stage": 1,
+        "owner_stage": 1,
+        "active": false,
+        "complete": true,
+        "won": true,
+        "beat": 6,
+        "max_beats": 6,
+        "position": 8,
+        "required_position": 4,
+        "world_end": 8,
+        "threshold_reached": true,
+        "health": 11,
+        "resolve": 1,
+        "threat_kind": "none",
+        "threat_text": "No active encounter threat."
+      },
+      "action": {
+        "command": "slot",
+        "accepted": false,
+        "kind": "refused",
+        "event_sequence": 10,
+        "from_position": 8,
+        "to_position": 8,
+        "health_lost": 0,
+        "resolve_spent": 0,
+        "resolve_gained": 0,
+        "moved": false,
+        "contact": "none"
+      }
+    },
+    "fittings": [
+      {
+        "bench": "west",
+        "acquired": true,
+        "spent": true,
+        "available": false,
+        "rig": "trail"
+      },
+      {
+        "bench": "east",
+        "acquired": true,
+        "spent": true,
+        "available": false,
+        "rig": "trail"
+      }
+    ],
+    "assembly_receipts": [
+      {
+        "bench": "west",
+        "rig": "trail",
+        "request_id": "fitting_west"
+      },
+      {
+        "bench": "east",
+        "rig": "trail",
+        "request_id": "fitting_east"
+      }
+    ]
+  },
+  "loss": {
+    "sequence": 13,
+    "command": "wait",
+    "accepted": true,
+    "text": "Wait: 4 damage, 0 resolve spent. Crossing failed. Reprepare and retry; no completion reward.",
+    "workshop_closed": true,
+    "intake": {
+      "sequence": 9,
+      "command": "wait",
+      "accepted": true,
+      "text": "Wait: 4 damage, 0 resolve spent. Crossing failed. Reprepare and retry; no completion reward.",
+      "confirmed": true,
+      "pending": false,
+      "draft_revision": 2,
+      "reviewed_revision": 2,
+      "draft": {
+        "handle": "Sela",
+        "accent": "teal",
+        "class_id": "lure",
+        "background_id": "trailborn",
+        "slots": [
+          "draw",
+          null,
+          null,
+          null
+        ]
+      },
+      "identity": {
+        "handle": "Sela",
+        "accent": "teal",
+        "class_id": "lure",
+        "background_id": "trailborn",
+        "slots": [
+          "draw",
+          null,
+          null,
+          null
+        ]
+      },
+      "state": {
+        "class_id": "lure",
+        "background_id": "trailborn",
+        "slots": [
+          "draw",
+          null,
+          null,
+          null
+        ],
+        "active": false,
+        "complete": false,
+        "won": false,
+        "stage": 0,
+        "beat": 3,
+        "position": 0,
+        "health": 0,
+        "resolve": 10,
+        "rig": "Trail",
+        "attempts": 1,
+        "consumed_rigs": 1,
+        "transactions": 3,
+        "inventory": {
+          "fiber": 0,
+          "binder": 0,
+          "trail_rig": 1
+        },
+        "level": 1,
+        "xp": 0,
+        "unspent": 0,
+        "vitality": 0,
+        "focus": 0
+      },
+      "threat": "BOLT: moving exposes health; the approach skill spends resolve to protect.",
+      "required_position": 2,
+      "maximum_beats": 4
+    },
+    "memory": {
+      "sequence": 4,
+      "command": "serve",
+      "accepted": true,
+      "text": "One coin and one action spent. The east bench actually supplied its one fitting. Later expiry cannot erase this output.",
+      "turn": 4,
+      "parts": 2,
+      "coins": 0,
+      "complete": true,
+      "benches": [
+        {
+          "id": "west",
+          "helped": true,
+          "support": true,
+          "recent": false,
+          "expires": null,
+          "eligible": false,
+          "delivered": true
+        },
+        {
+          "id": "east",
+          "helped": true,
+          "support": true,
+          "recent": true,
+          "expires": 6,
+          "eligible": false,
+          "delivered": true
+        }
+      ],
+      "history": [
+        {
+          "sequence": 1,
+          "command": "help",
+          "bench": "west",
+          "turn": 1,
+          "parts": 3,
+          "coins": 2,
+          "fittings": 0
+        },
+        {
+          "sequence": 2,
+          "command": "serve",
+          "bench": "west",
+          "turn": 2,
+          "parts": 3,
+          "coins": 1,
+          "fittings": 1
+        },
+        {
+          "sequence": 3,
+          "command": "help",
+          "bench": "east",
+          "turn": 3,
+          "parts": 2,
+          "coins": 1,
+          "fittings": 1
+        },
+        {
+          "sequence": 4,
+          "command": "serve",
+          "bench": "east",
+          "turn": 4,
+          "parts": 2,
+          "coins": 0,
+          "fittings": 2
+        }
+      ]
+    },
+    "encounter_view": {
+      "person": {
+        "handle": "Sela",
+        "accent": "teal",
+        "class_id": "lure",
+        "rig": "trail",
+        "confirmed": true
+      },
+      "encounter": {
+        "phase": "failed",
+        "outcome": "failed",
+        "stage": 0,
+        "owner_stage": 0,
+        "active": false,
+        "complete": false,
+        "won": false,
+        "beat": 3,
+        "max_beats": 4,
+        "position": 0,
+        "required_position": 2,
+        "world_end": 8,
+        "threshold_reached": false,
+        "health": 0,
+        "resolve": 10,
+        "threat_kind": "none",
+        "threat_text": "No active encounter threat."
+      },
+      "action": {
+        "command": "wait",
+        "accepted": true,
+        "kind": "wait",
+        "event_sequence": 3,
+        "from_position": 0,
+        "to_position": 0,
+        "health_lost": 2,
+        "resolve_spent": 0,
+        "resolve_gained": 0,
+        "moved": false,
+        "contact": "hurt"
+      }
+    },
+    "fittings": [
+      {
+        "bench": "west",
+        "acquired": true,
+        "spent": true,
+        "available": false,
+        "rig": "trail"
+      },
+      {
+        "bench": "east",
+        "acquired": true,
+        "spent": true,
+        "available": false,
+        "rig": "trail"
+      }
+    ],
+    "assembly_receipts": [
+      {
+        "bench": "west",
+        "rig": "trail",
+        "request_id": "fitting_west"
+      },
+      {
+        "bench": "east",
+        "rig": "trail",
+        "request_id": "fitting_east"
+      }
+    ]
+  },
+  "limits": "Overlapping actual software controls, not participant or source/Unity/Windows validation."
+}

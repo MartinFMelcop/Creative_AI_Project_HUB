@@ -2,126 +2,121 @@
 
 **Updated:**2026-10-27 America/Sao_Paulo. **SEED:**0.34.0. Initial Git root
 `/workspace/Creative_AI_Project_HUB`, branch `work`, clean HEAD
-`c808d57cb7b09c3947e48b93cb0047ee1c4d6e55`. Fetched main matched, divergence0/0,
-no outgoing commits. Root authority verifies this workspace and published
+`0747d5c3c8852e52e2054faa3491d8ad66e6bf68`. Fetched main matched, divergence0/0,
+no outgoing commits. Root authority verified this workspace and published
 [Continuous Development v2](prompts/CONTINUOUS_DEVELOPMENT.md), read in full.
 The [catalog](../labs/origins.json) owns maturity/consumption, [DESIGN](../north-star/DESIGN.md)
 creative status; evidence owns actual execution.
 
-## Active result — artifact-aware portfolio and actual continuous recipient
+## Active result — the same person on the actual field encounter
 
-The root entry is now Windows-first, with separate recipient downloads versus source-
-only experiments. The maintained [case study](../showcase/README.md) explains actual
-consent, paid departure, real encounters, observed return and unfinished local work.
-Historical images/audio and source/reproduction links remain discoverable there rather
-than repeated as a growing root feature diary. No new gameplay wrapper, save or package
-was made. Older plans already identify their historical status; no repeated archive-
-labeling or one-time transformation was counted.
+The existing [field journey](../north-star/field-journey/README.md) now depicts its actual
+confirmed person and used outfit on an original encounter board. Previously a diamond
+clamped position/required_position to100%beside FAR SIDE even while beats remained.
+The new0..8display bound and marked threshold keep positional sufficiency separate
+from actual beats, survival and terminal result. Survey success keeps its resolved
+2-cell/four-beat context while owner_stage exposes the owner's advance to stage1.
+Only actual final Crossing produces final completion.
 
-[Navigation contract](../showcase/portfolio.json) owns only entry paths/provenance, not
-another feature/maturity catalog. [Checker](../tools/check_portfolio.py) reads real ZIP
-identities, pinned existing execution, launchers/notices/source closures, the matching
-managed application and separate source experiments. Laboratory maturity comes from
-origins.json. Seven negative/baseline test methods passed, including an actually changed
-but CRC-valid ZIP, stale evidence, wrong platform, forged experiment owner and unsupported
-inclusion/readiness fields. This is structured artifact/navigation validation with manual
-prose review, not a general prose truth classifier or human comprehension study.
+A bounded C#8/netstandard2.1 presentation library observes actual before/after facts;
+the .NET10 host adapts unchanged Intake/Memory/Forge/Crossing owners. No second Session,
+new game action, inventory/HP write, gameplay timer, save or package was introduced.
+Confirmed handle/accent/discipline, actual used rig, current announced bolt/pulse and
+actual movement, HP loss, resolve change and contact stay accountable to the owner.
+Entry recovery is not narrated as healing. Refused commands produce no accepted beat
+response; reads/redraw/time retain event identity. Static marks show latest observation,
+not autonomous animation, prediction, physical feedback or a new gameplay clock.
 
-[Prospective protocol](../evidence/portfolio/protocol.json) preceded execution.
-[Actual capture](../evidence/portfolio/RUN.json) launches the EXACT unchanged Linux ZIP
-with its private runtime, separate fresh extracted trials and no SDK rebuild/state
-injection. One silent, unedited guided recording lasts43.12s and performs18actual
-commands: survey, heard offer, exact terms, confirmation, paid guided departure, actual
-Crossing and local work. Delivery/observed return leave2crates carried and3unfinished
-at zero daylight. The separate18.64s refusal recording has6commands, including actual
-refused hearing before survey, then decline/work:5crates finished,1shift left, no
-coil delivery or completed-journey return, Rill still local. These are two software
-trials, not people, population studies, extra substantive units or new source credit.
+[Protocol](../evidence/field-presentation/protocol.json) preceded execution;
+[actual evidence](../evidence/field-presentation/RUN.json) binds final source closure.
+Execution passed26native and17actual Chromium controls. Because Host/Room, dependency
+closure and UI changed, affected earlier29native/23Chromium/7HTTP controls were
+reexecuted unchanged and passed.13CI-scope and7portfolio methods passed. Groups overlap
+outcomes, not participants, independent studies, source-case evaluations or effort.
 
-The primary inspected both direct stage screenshots and actual video frames at10/25/34s
-against trace: survey pending, signed/not departed, real delivery encounter and terminal
-facts. No montage, image generation or world-state edit supplies an outcome. Policy and
-read-only API access were known to the automation; no blind/player evaluation is claimed.
-Video timing/bytes need not reproduce exactly on another capture.
+Retain actual active threshold with beats pending, survey-not-final completion,
+Anchor stationary protection, earned Dash/amendment, actual damaging wait/loss with
+spent rig and no XP, and two isolated actual false-person/completion renderers detected
+after real confirmation. The primary inspected final board captures against actual
+facts. Recognition, comprehension, accessibility, enjoyment and balance remain untested.
 
-Initial capture failed before recording because the expected Playwright FFmpeg executable
-was absent. The final capture explicitly selects existing system FFmpeg via a task-local
-encoder adapter and records its actual version; no network/access-policy bypass occurred.
-A second attempt reached actual guided delivery but timed out on refusal: the instrument
-incorrectly expected accepted revision to increase on refused commands. The corrected
-producer awaits the actual response and exact browser snapshot. No application, journal,
-fixture or timeout changed. Exact failed producers, logs, trace and incomplete/superseded
-recordings remain retained alongside final evidence.
+Initial native policy incorrectly expected final completion with one Focus point;
+actual replay retained active beat5/resolve2 and refused the final Draw for insufficient
+resolve. The corrected successful policy spends two points actually earned at survey;
+no rule, cost, fixture or owner was weakened. Exact first producer/error and actual
+refused-policy replay remain. Earlier captures/sources with an overlapping threshold
+label are superseded; the label moved above the actor and the full final verification
+reran. Original pre-change field producer bytes and prior evidence remain separately
+preserved, not silently rebound to the new presentation.
 
-## Independent comparison and production limits
+## Independent alternatives, authorship and production limits
 
-Independent Engineering, Scientific and Creative analyses converged on artifact-led
-portfolio work after the passive legacy unit. Engineering ENG004/015/017 separated
-recipient requirements, authority and actual distribution; Science SCI013/014/076/077
-separated artifact truth/capture from human constructs; Creative CRE005(A)/011/013(H)
-prioritized choices with real costs/consequences rather than another isolated service.
-Engineering implemented checker/navigation; Science wrote protocol before capture and
-seven negative methods; Creative rewrote root/showcase and retained unique media links.
-Primary produced/reviewed actual capture and final integration. Agents are not humans,
-author approval, commercial clearance or assigned production owners.
+Independent Engineering, Scientific and Creative analyses disagreed constructively.
+Engineering preferred authorable original preparation data, identifying hardcoded
+catalog/UI and unsafe arbitrary-class→Lure fallback. Science preferred finite field
+aid, but actual source consumable HP/SP columns in both20rowtables are empty; source
+STATUSLEVE/POISON prose does not supply numeric effects. Creation identified the actual
+position/result alias and absent same-person road depiction. Primary selected that
+concrete product truth/identity dependency without changing core mechanics; the other
+alternatives remain credible future work, not rejected source collections.
 
-Licensed Unity/ordinary-user Windows and actual participant/device assessment were
-compared as stronger production/experience alternatives but no access was established.
-SDK10.0.401 executes from `/workspace/work/authored-scene/dotnet/dotnet`. Bounded local
-PATH/conventional Editor/Hub/Steam probes found no usable installation; unreadable or
-absent roots do not prove global absence. Earlier protected-root denial and Windows
-Hub3.22.3 installed-editor query timeout remain inconclusive. Editor version, activation/
-license and modules remain unverified. No fresh Windows, Unity or Steam execution
-occurred. Unity/C#, Windows-first and Steam-intended remain selected.
+ENG004/015/017 informed authority/reuse; SCI013/014/076/077 separated actual deltas and
+rivals from human constructs; CRE005(A)/011/013(H) informed actual identity/equipment
+and consequence. Engineering delivered the projector/Room skeleton; Creative partial
+original SVG/CSS; Science prospective protocol. Followups became usage-limited or
+unavailable. Primary completed native checks, UI, browser instruments, integration and
+final visual verification sequentially. No independent final implementation review,
+human evaluation, author approval or commercial clearance is attributed.
 
-Existing Windows Server2025 administrative-token evidence remains separate from the new
-Linux recording. Earlier restricted same-user medium8192/deny-only Administrators token
-had administrator=false BUT elevated=true/type1; it is not ordinary-user/non-elevated
-Windows10/11, a fresh account, physical device or enforced sandbox. Production ownership,
-human recognition/comprehension/enjoyment/accessibility/balance and clearance remain open.
+SDK10.0.401 executes from `/workspace/work/authored-scene/dotnet/dotnet`. Unity/Hub/Steam
+were not located on PATH; conventional /opt/Unity, /opt/unity, /usr/local/Unity and
+/workspace/Unity did not exist. `/root/Unity/Hub/Editor` returned Permission denied,
+not proof of absence. Earlier Windows Hub3.22.3 installed-editor query timed out without
+a list. Editor version, activation/license and modules remain unverified. No fresh
+Unity, Windows or Steam execution occurred. Unity/C#, Windows-first and Steam-intended
+remain selected; never bypass license/access policy. The portable library compilation
+is not Editor validation; the composed consumer still refers to .NET10 executables.
 
-## CI and retained failures
+Windows Server2025 administrative-token evidence and restricted same-user medium8192/
+deny-only Administrators with administrator=false BUT elevated=true/type1 remain
+separate. Neither establishes ordinary-user/non-elevated Windows10/11, fresh account,
+physical device, sandbox or human experience. Production ownership remains unresolved.
 
-Initial CI40572236515 attempt1 completed/failure: six jobs succeeded, chat122429398249
-hit the existing5minute real-protocol/browser step timeout; C#122429398283 cancelled
-after intake/memory/field and8input-browser controls, before the new passive verifier.
-Cause of timeout/cancellation is not established. Actual unchanged local chat suite
-completed103passes/7failures/1skip in111tests; all7failures explicitly report browser
-`ERR_BLOCKED_BY_ADMINISTRATOR` on file:// offline readers. Policy was not bypassed;
-this local limit does not explain CI timeout. No source/fixture/gate/timeout changed.
+## CI, preservation and outstanding obligations
 
-A rerun was requested for the failed chat job; eight new job records were observed.
-A subsequent request for the cancelled C# job was rejected403 because the containing
-run was already running; no bypass/retry loop was attempted. At continuity observation,
-attempt2 had six successful jobs, chat running and C# cancelled. Recheck actual status.
-Baseline CI40458122946 attempt2 had eight successes; retain attempt1 Tokyo pause failure,
-initial local reproduction and corrected publication gap without claiming every failure
-cause. Preserve all earlier cancellation/timeout/runtime/export/inventory/instrument
-negatives and unresolved sixth-host `Value cannot be null` resume error.
+Baseline CI40575687998 completed/success in attempt1 with all8jobs successful, including
+C#, chat and integrity. Preserve CI40572236515 attempt1's5minute chat timeout and C#
+cancellation; attempt2 had7successes/C#cancelled. Specific chat rerun request produced
+8new records; subsequent C# request was rejected403 while run already running. Causes
+remain unproven. Earlier unchanged local chat111tests had103passes/7failures/1skip;
+all7failures explicitly ERR_BLOCKED_BY_ADMINISTRATOR for file:// offline readers.
+That policy limit was not bypassed and does not explain prior CI timeout. Retain all
+earlier timeout/cancellation/runtime/export/inventory/instrument negatives and unresolved
+sixth-host `Value cannot be null` resume error. No security/integrity gate was weakened.
 
-## Preservation, maturity and strategic continuation
-
-[Preservation](../evidence/portfolio/preservation.json) binds prior maintained identities
-apart from explicit intended metadata. All gameplay owners/libraries, journals, fixed
-Lure/Trail, field/intake/memory/passives, protected Brain/reference variants, notices,
-media, frozen AI evaluation and BOTH recipient ZIPs remain exact. No source, save,
-package, unique image/audio, variant or notice was retired. Root duplicate presentation
-was replaced with links to retained authoritative guides; their unique recovery/rights/
-compatibility duties remain. Git history alone does not justify deletion.
+[Preservation](../evidence/field-presentation/preservation.json) binds prior maintained
+files apart from explicit intended modifications. Actual child owners/libraries,
+RequestExpedition/journal/fixed Lure/Trail, memory/intake, passives, frozen AI evaluation,
+protected Brain/reference variants, all prior media/notices and BOTH recipient ZIPs
+remain exact. No source, save, package, media, variant or notice was retired. The source-
+only field UI is not in either download; previous continuous recipient videos remain
+unchanged. The navigation contract now binds this actual current field execution;
+historical field/portfolio evidence remains retained with its original scope.
 
 All eleven destinations remain mandatory. Ten bounded methods operate; Build/Operations
 remains incomplete under licensed Editor/modules and production Windows acceptance.
-Consumption stays17INTEGRATED/11REJECTED/15UNRESOLVED: this portfolio work consumes no
-new legacy capability. Full effects/passives, schedules, catalogs, creation parsing,
-broad narrative persistence, human experience, commercial clearance and production
-ownership remain unresolved. Prior selected-passive and Tokyo evidence remain exact.
+Consumption stays17INTEGRATED/11REJECTED/15UNRESOLVED; this original product work adds
+no new legacy credit. Full effects/passives, schedules, catalogs, creation parsing,
+broad narrative persistence, human experience, clearance and production ownership
+remain unresolved. Source helper defects/empty cells are not permission to invent grants.
+
+## Rolling investment — one unit per beneficiary
 
 Approximate targets remain47%legacy/laboratories,40%North Star,13%repository/portfolio.
-Files, commits, counts and tokens do not measure effort. Eight recent substantive units:
+Counts, files, commits and tokens do not measure effort. Eight recent substantive units:
 
 | Completed unit | Primary stream | Evidence |
 |---|---|---|
-| Exact identity/retained tools and actual output use | Legacy/laboratories | [Tooling](../evidence/tooling-study/RUN.json) |
 | Same source-bound scene actually delivered on Windows | Repository/portfolio | [Windows](../evidence/windows-recipient/RUN.json) |
 | Restricted-context access/consequence/reentry | Legacy/laboratories | [Access](../evidence/windows-access/RUN.json) |
 | Confirmed identity enacts same prepared journey | North Star | [Intake](../evidence/intake/RUN.json) |
@@ -129,11 +124,12 @@ Files, commits, counts and tokens do not measure effort. Eight recent substantiv
 | Same-person actual component→rig→Crossing | North Star | [Field](../evidence/field-journey/RUN.json) |
 | Selected passives affect existing combat | Legacy/laboratories | [Passives](../evidence/passive-response/RUN.json) |
 | Artifact-aware entry and continuous actual recipient | Repository/portfolio | [Portfolio](../evidence/portfolio/RUN.json) |
+| Same-person actual encounter/threshold/response board | North Star | [Field presentation](../evidence/field-presentation/RUN.json) |
 
-This is ONE corrective repository/portfolio unit. Capture, navigation, checks and CI are
-support, not extra lab/product/package/participant units. Standing ages out of the short
-window; all original evidence remains. No target convergence is inferred from counts.
-Compare consequential remaining source/gameplay, coherent product use, real production
-ownership, licensed Unity/ordinary-user access and participant/device assessment anew.
-Do not automatically repeat portfolio/capture/packaging/token/I/O or passive/status/
-field/memory/intake/standing matrices, another wrapper/save or the transformation.
+This is ONE North Star unit; projector/native/browser/CI/presentation support are not
+extra legacy/portfolio units. Older tooling ages out of this window; its evidence remains.
+No target convergence follows from counts. Compare consequential remaining source/gameplay,
+actual licensed Unity/ordinary-user access, appropriate participants/devices, coherent
+authored use and production ownership anew. Do not automatically repeat presentation/
+threshold, portfolio/capture/packaging/token/I/O, passive/status or earlier matrices,
+add another wrapper/save, or repeat the one-time transformation.
