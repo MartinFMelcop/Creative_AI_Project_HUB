@@ -886,3 +886,27 @@ quest canon, virtue ranking or a loaded historical dialogue catalog. The same fi
 still requires actual component allocation, materials, entry and encounters. Expiry,
 withdrawal and departure keep their original boundaries. [Evidence](../evidence/dialogue-conditions/RUN.json)
 retains independent/ordered differences, refusals and actual positive/negative outcomes.
+
+## One field case — original experimental exploration
+
+The existing same-person field journey offers one issued empty case and two mutually
+exclusive observations: a ridge rubbing at actual survey position1 or a channel trace
+at actual final-encounter position2. This is original disclosed setup, not a historical
+item grant, approved ecology, quest catalog or moral ranking.
+
+Collection delegates actual Wait, paying the announced contact and beat without moving
+or protecting. Only survival in a continuing or won encounter can acquire the sample.
+A living deadline failure is still failure, not acquisition. Later actual failure loses
+carried cargo while preserving historical acquisition. Only actual final Crossing
+completion secures it; no home return, delivery, sale, appraisal or extra XP is inferred.
+One spent case cannot be replenished by entry recovery, amendment, redraw or retry.
+Choosing neither observation retains prior gameplay outcomes.
+
+Engineering favored authorable preparation cards; Science/Creation initially favored
+finite aid. The selected lower-dependency exploration choice delegates unchanged child
+actions and owns only new case custody. It adds an enacted optional goal without a new
+wrapper or health/rules mutation. Both alternatives remain credible future work, not
+rejected collections. CRE005/013, SCI013/014/076/077 and ENG004/015/017 informed agency,
+refutable ownership and preservation. [Evidence](../evidence/field-sampling/RUN.json)
+separates tested original consequences from unmeasured player meaning, balance,
+recognition, approved canon, commercial rights or Unity/Windows delivery.

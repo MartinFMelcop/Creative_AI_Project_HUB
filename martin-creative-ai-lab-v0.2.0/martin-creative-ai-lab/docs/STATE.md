@@ -1,144 +1,132 @@
 # Current transformation continuity
 
-**Updated:**2026-10-28 America/Sao_Paulo. **SEED:**0.34.0. Actual Git root
+**Updated:**2026-10-29 America/Sao_Paulo. **SEED:**0.34.0. Actual root
 `/workspace/Creative_AI_Project_HUB`, branch `work`, initially clean HEAD
-`0e1ae3ceae6be72fc084c49f61eaf1922b262542`, fetched main matching0/0. Root/workspace
-AGENTS, [Continuous Development v2](prompts/CONTINUOUS_DEVELOPMENT.md) and prior STATE
-were read in full. [Catalog](../labs/origins.json) owns maturity/consumption;
-[DESIGN](../north-star/DESIGN.md) owns creative decisions; evidence owns execution.
+`dd24fe2ba168087fab423f4ac42f2baaac091f80`, fetched main matching0/0. Root authority
+verified this maintained workspace; root/workspace AGENTS, complete
+[Continuous Development v2](prompts/CONTINUOUS_DEVELOPMENT.md) and prior STATE were read.
+[Catalog](../labs/origins.json) owns maturity/consumption, [DESIGN](../north-star/DESIGN.md)
+creative status; evidence owns execution. No unrelated/concurrent work was discarded.
 
-## Completed one-time author objective — CommanderSIM research into real P01/P02
+## Active result — one case, two actual field observations
 
-The [canonical derived candidate](../knowledge/commander-simulation-research.md) retains
-all87,975original v10 bytes as its exact prefix, with a delimited current integration
-boundary. It is not a Brain, production authority, new lab or permanent roadmap.
-The [method](../labs/economy-simulation/policy-evaluation.md), [protocol](../evidence/commander-policy/protocol.json),
-[execution](../evidence/commander-policy/RUN.json) and [summary](../evidence/commander-policy/summary.json)
-connect verified research intake to real complete-game policy evaluation in existing
-Eclipse Fair. One-time intake is complete; do not repeat it in subsequent cycles.
+The EXISTING [field journey](../north-star/field-journey/README.md) now offers one
+explicitly issued empty case and two original site choices: ridge rubbing at active
+survey position1, or channel trace at active final position2. The portable
+C#8/netstandard2.1 case owner observes actual child facts and owns only sample custody;
+FieldRoom privately composes unchanged Intake/Memory/Forge/Loadout/Crossing. No second
+Session, new application, HP/resolve/inventory/XP write, save or package was introduced.
 
-Both original ZIPs are retained with exact SHA256, full member inventories, CRC/path/type/
-duplicate/manifest checks and original notices. Motor has38members; transfer9. Four active
-lists each contain100cards, with five fixed commanders; Abzan remains exact. No historical
-list becomes active, no deck edit occurred, no forced25% outcome or Magic fiction enters
-North Star. No blanket code/IP commercial license was found or inferred.
+An explicit sample action delegates actual Wait. Position stays, one beat and announced
+contact resolve before collection. Only HP>0 AND a continuing/won/complete encounter
+can acquire. Fatal or living deadline failure spends the case without acquisition.
+A later real failed encounter loses carried cargo while historical acquisition remains.
+Only actual final Crossing Complete secures it. Secured means surviving the actual road,
+not observed return, delivery, sale, appraisal or extra reward. Survey is not final.
 
-Inspected original code was executed only in a separate scratch copy:64/64tests passed
-without skips; six bounded scenarios produced JSON exactly equal to supplied traces.
-The C++ smoke ran16surrogate episodes twice (32actual surrogate executions). Stored30,000
-surrogate episodes/15,000pairs were checked for aggregate/source consistency, not rerun
-at that scale. Fully rules-verified complete Commander games remainZERO. Standalone
-Palladia test fails ModuleNotFoundError through a nonexistent models path; discovery
-passes through earlier import-path setup. Original failure remains, no source repaired.
-A post-command metadata collector path failure was recovered from existing logs without
-rerunning the suite. Tests, fixtures, surrogate episodes and complete games stay separate.
+An unused case can survive an ordinary failed attempt as the same original setup.
+A spent/broken/lost case cannot refill via retry, entry recovery, amendment, reads,
+redraw or time. One chosen site permanently excludes the other. Wrong-known/unknown/
+duplicate/stale/forged-site requests cannot fabricate a beat, cargo or completion.
+Actual existing entry recovery remains distinct from sample effects. Optional sampling
+changes no child rule; skipping it retains previous gameplay outcomes.
 
-## Actual C# method and negative outcome
+[Protocol](../evidence/field-sampling/protocol.json), [execution](../evidence/field-sampling/RUN.json)
+and retained snapshots/captures bind34native and20actual Chromium controls plus2HTTP
+negatives. Full source closure95identities remained stable. Both real complete routes
+consume two acquired/crafted rigs, earn25XP and secure their exclusive observation.
+Ridge collection pays bolt10→6HP; later channel pays stationary pulse11→5HP.
+Actual death during collection acquires nothing; later defeat loses acquired cargo and
+retry cannot resupply. No completion, survival, balance or enjoyment is guaranteed.
 
-New PolicyEvaluation consumes unchanged Game.Legal/Apply/Fork/Price/Wage. Only Game owns
-transitions, resources and terminal results. Immutable policy observations contain public
-participants/rules, current/next forecasts, legal actions and actual one-step fork
-consequences; no Game reference, seed, journal, roster or future outcome. This API boundary
-is for trusted local policies, not OS isolation. Public forecasts are legitimate inputs.
-The collector baseline matches64existing collector decisions. The deterministic route
-candidate adds declared budget/route preferences; it is not trained ML.
+Affected composed regressions executed once because FieldHost/Room/UI/dependencies
+changed: conditions69native/21service/25Chromium, memory34native/21Chromium/7HTTP and
+SAME57cases/237queries, field presentation26native/17Chromium and earlier field29native/
+23Chromium/7HTTP. These groups overlap outcomes, not participants, independent studies
+or effort. Prior results/producers remain historical, not silently relabeled fresh.
 
-The frozen finite suite has2scenarios,2opponent rosters,8seeds,4focal seats,3cyclic opponent
-orders and2arms:768complete Eclipse games,384paired assignments,53,353accepted actions,
-zero interruptions. Actual native18controls, unchanged Core13regressions and existing
-compiled CLI workflow passed. Every accepted transition was replayed with actual engine
-and policy choice; separate executions produced exact report bytes,19input identities
-remained stable, and final wrapper elapsed52.263s under1800s whole-process bound.
-Four analysis negatives rejected forged credit, missing game, duplicate game and bad
-source identity. Science independently recomputed byte-identical final summary.
+## Negatives, visible custody and actual specialty limits
 
-The predeclared decision is **NO_ROBUST_IMPROVEMENT**. Primary roster fractional-credit
-means0.255208→0.341146(delta+0.0859375); heldout0.348958→0.419271(+0.0703125).
-Default scenario gains+0.177083/+0.15625, but scarce−0.00520833/−0.015625 violate the
-required nonnegative scenario robustness. No candidate tuning followed results.
-Family baseline/candidate covariance is negative; paired-difference variance exceeds
-sum of arm variances in BOTH rosters. Common seeds did not improve this descriptive
-variance comparison. No population CI, universal superiority or isolated initiative
-causal effect is identified; seed jointly affects position, initiative and events.
+Initial native later-loss policy used only one Wait after collection, leaving2HP rather
+than defeat. Exact source/logs remain; a second actual bolt Wait produces loss. No rule,
+cost, fixture, timeout or gameplay gate was weakened. Source review also found an HP-only
+receipt caption could falsely claim acquisition after living deadline failure. Caption
+now uses actual acquired fact. Actual Anchor/Plate with earned Vitality2/Dash executes
+brace,brace,wait,brace,dash,sample(channel): ends7HP but below position4, so fails with
+spent case and no acquisition. The added counterexample/protocol history are retained.
 
-Complete games are experimental units; correlated seats/assignments/arms are not
-independent participants. Exclusive focal wins235, multiwinner games77 and focal winner
-memberships289 are distinct endpoints, not interchangeable win totals. Fractional credit
-is1/k per declared winner. Incomplete/technical interruption never becomes a fabricated
-loss/winner. Repeated runs and overlapping controls are not additional studies or effort.
+The original visible site markers, case/cargo and secured seal follow actual same-person
+facts and computed SVG/CSS visibility. Actual acquisition is separate from current
+carried/lost/secured status. Two isolated actual renderer mutants are rejected: historical
+acquisition as current carried cargo, and acquisition as final securing. Captures of
+actual contact, carried, secured and lost states were inspected; no conceptual image or
+human assessment substitutes for execution.
 
-Retain superseded protocol/config: initial correctness ran the proposed old holdout roster
-atseed0. A different income/keeper/interdict heldout was declared before primary outcomes;
-candidate was not tuned. The initial income tie fixture did not tie; corrected explicit
-stay policy reaches actual Core tie rules. Its log and reconstructed source remain;
-original initial source was NOT hash-pinned, so reconstruction is not proven preimage.
-Initial wrapper completed the same suite but lacked total deadline/config equality and
-primary-interruption refusal; hardened final wrapper reran with new source identity.
-Both768-game rows are identical; this is not another candidate attempt or sample.
+Engineering preferred authorable preparation cards. Science/Creation initially preferred
+finite health/resolve aid. Science also identified lower-dependency site sampling; primary
+selected its enacted exploration/timing/custody consequence over new owner health rules
+and broad prior identity churn. Both alternatives remain credible, not rejected source
+collections. Historical HP/SP magnitudes remain blank and no numeric consumable effect
+was imported. ENG004/015/017, SCI013/014/076/077 and CRE005/008/013 informed contracts,
+refutable outcomes, agency and preservation.
 
-## Independent specialty and reader limits
+Engineering delivered Sampling/Room/native skeleton, Science prospective protocol and
+Creation original UI. All three hit usage limits before final implementation/review.
+Primary corrected native policy/caption, added healthy-deadline control, implemented
+browser/wrapper and completed final verification sequentially. Do not attribute independent
+final implementation review, human validation, author approval or commercial clearance.
 
-Engineering implemented evaluator/18controls, preserved original Core, projected actual
-prices/wages and reviewed contracts. Science froze protocol, detected holdout overlap,
-implemented independent analysis/negatives and reviewed final results. Creation integrated
-the candidate, enforced originality/identity boundaries and implemented/executed the
-source-guarded wrapper. ENG004/015/017, SCI013/014/076/077 and CRE005/008/013 informed
-contracts, validity, negatives and meaningful choices. No agent review is human approval.
+## Prior research and production boundaries remain
 
-A fresh fork-without-history AI reader received only canonical original Markdown and exact
-reader protocol. Q1–Q5 were source-supported, no material errors found. The official
-withheld grading key is absent from the nine-file package: original G8 remains
-KEY_UNAVAILABLE_PENDING_GRADE. Exact task/tools/response/context and assessment are retained.
-Shared filesystem restrictions are procedural, not enforced sandbox. Mechanical checking
-or reader comprehension does not validate the external research or commercial rights.
-
-## North Star and production obligations
-
-Actual Trial/Room, Crossing and PreparedExpedition were inspected; NO new North Star AI
-transfer was implemented. A separate beneficiary needs read-only actual legal commands,
-frozen resource-aware versus baseline policy, two source-backed contexts, replay, costs/
-progression and secured/defeated/withdrawn endpoints with affected regressions. Do not
-supply an empty adapter or automatically launch another matrix. A result in Eclipse is
-not evidence for combat. No Magic character, ability, art or fiction entered the original
-commercial universe. Existing rules, media, packages and functioning consumers remain.
+The one-time CommanderSIM intake and frozen P01/P02 evaluation are complete and were NOT
+repeated. [Candidate research](../knowledge/commander-simulation-research.md), original
+ZIPs, reader/protocol/context and [negative result](../evidence/commander-policy/RUN.json)
+remain exact. G8 is KEY_UNAVAILABLE_PENDING_GRADE because official withheld key was absent.
+The768-game finite suite remains NO_ROBUST_IMPROVEMENT, with scarce-scenario losses and
+no paired-variance benefit. Surrogate episodes, bounded fixtures and complete Eclipse
+games are separate; fully verified complete Commander games remainZERO. No North Star
+AI transfer or Magic fictional/content import occurred.
 
 SDK10.0.401 executes from `/workspace/work/authored-scene/dotnet/dotnet`. Unity/Hub/Steam
-not on PATH; conventional installation roots missing, protected `/root/Unity/Hub/Editor`
-Permission denied is not global absence. Prior Windows Hub3.22.3 query timed out without
-editor list. Editor version/license/modules remain unverified. No fresh Unity, Windows
-or Steam execution. Unity/C#, Windows-first and Steam-intended remain selected.
-Prior medium-integrity restricted token had administrator=false BUT elevated=true/type1;
-not ordinary-user/non-elevated Windows, fresh account, physical device or human assessment.
+not found on PATH; conventional roots missing; protected `/root/Unity/Hub/Editor` Permission
+denied is not global absence. Earlier Windows Hub3.22.3 installed-editor query timed out.
+Editor version/license/modules remain unverified. No fresh Unity/Windows/Steam execution.
+Unity/C#, Windows-first and Steam-intended remain selected; the composed host is ephemeral
+.NET10/Linux/browser, not a new production browser direction or Unity validation.
+Prior restricted medium8192 token had administrator=false BUT elevated=true/type1;
+not ordinary-user/non-elevated Windows, physical device, sandbox or human experience.
 
-## Preservation, CI and adaptive frontier
+## CI, preservation and adaptive frontier
 
-Baseline CI40621293009 completed/success attempt1 with all8jobs; prior CI40617047251 also
-succeeded. Current publication/CI are checked separately at handoff. Preserve previous
-cancellations/timeouts/runtime/export/inventory/instrument evidence, local file:// admin
-policy failures and unresolved sixth-host Value cannot be null error without invented
-causes or weaker gates. CI adds actual intake/evaluator/analysis to retained Eclipse job;
-existing tests, exports and integrity contracts remain.
+Baseline CI40749611397 attempt1 retained seven successful jobs and cancelled C#job
+123032667766. Cause remains unproven; no particular step/cause is inferred. Only that job
+was requested for rerun, but eight new job records were observed. Request and observed
+execution scopes differ. Attempt2 completed/success with eight successful jobs.
+Earlier baseline CI40621293009 also completed/success in attempt1. Preserve prior
+cancellation/timeout/runtime/export/inventory/instrument evidence, local file:// policy
+failures and unresolved sixth-host resume error without invented causes or weaker gates.
 
-[Preservation](../evidence/commander-policy/preservation.json) binds exact prior identities
-apart from intentional navigation/catalog/scope/CI/STATE changes. Protected Brain/reference
-variants, actual Game/Core/Agents/Planning/Journal, North Star owners/libraries/journals,
-fixed Lure/Trail, frozen AI evaluation, old media/notices and BOTH recipient ZIPs remain
-exact. No source/save/package/media/notice retired. Historical artifacts have unique
-provenance/consumers; no removal was justified solely by duplication or Git history.
+[Preservation](../evidence/field-sampling/preservation.json) binds prior identities apart
+from intended field adapter/UI, navigation/catalog, CI/scope, STATE, inventory/manifest
+changes. Actual child owners/libraries, RequestExpedition/journal/fixed Lure/Trail,
+protected Brain/reference variants, frozen AI evaluation, CommanderSIM study, old media/
+notices and BOTH recipient ZIPs remain exact. No source/save/package/media/notice retired.
+Original field producer bytes and new superseded failures remain. CI composes existing
+conditions/memory/field instruments once under new sampling verifier; all gates and
+failure-artifact routing remain. Navigation binds current field execution truthfully.
 
-All eleven destinations remain mandatory. Ten bounded methods operate; Build/Operations
-remains incomplete under licensed Editor/modules and production Windows acceptance.
-Consumption19INTEGRATED/12REJECTED/15UNRESOLVED includes ONE narrow external evaluation
-method; neither CommanderSIM collection nor superior candidate policy is integrated.
-Full effects/passives, schedules, catalogs, creation parsing, broad narrative persistence,
-human experience, rights clearance and production ownership remain unresolved.
+All eleven destinations remain mandatory; ten bounded methods operate. Build/Operations
+stays incomplete under licensed Editor/modules and production Windows acceptance.
+Consumption stays19INTEGRATED/12REJECTED/15UNRESOLVED: this is original product use, not
+another legacy capability or full item/catalog integration. Full effects/passives,
+schedules, catalogs, creation parsing, broad persistence, human experience, clearance and
+production ownership remain unresolved.
 
-Approximate rolling targets remain47%legacy/laboratories,40%North Star,13%repository/
-portfolio. No counts/files/tokens/tests infer effort. Recent once-counted units:
+Approximate targets remain47%legacy/laboratories,40%North Star,13%repository/portfolio.
+Counts/files/commits/tokens do not measure effort. Recent once-counted units:
 
 | Unit | Primary stream | Evidence |
 |---|---|---|
-| Confirmed identity enacts same prepared journey | North Star | [Intake](../evidence/intake/RUN.json) |
 | Scoped memory and finite witness service | Legacy/laboratories | [Memory](../evidence/memory-study/RUN.json) |
 | Same-person actual component→rig→Crossing | North Star | [Field](../evidence/field-journey/RUN.json) |
 | Selected passives affect existing combat | Legacy/laboratories | [Passives](../evidence/passive-response/RUN.json) |
@@ -146,13 +134,12 @@ portfolio. No counts/files/tokens/tests infer effort. Recent once-counted units:
 | Same-person actual encounter/threshold/response | North Star | [Presentation](../evidence/field-presentation/RUN.json) |
 | Strict conditions govern actual service/preparation | Legacy/laboratories | [Conditions](../evidence/dialogue-conditions/RUN.json) |
 | One-time external research→complete-game evaluation | Legacy/laboratories | [Policy](../evidence/commander-policy/RUN.json) |
+| Same-person finite field collection and custody | North Star | [Sampling](../evidence/field-sampling/RUN.json) |
 
-This is ONE author-directed laboratory unit, not separate intake/implementation/CI/
-portfolio units. Two consecutive laboratory units now require deliberate product and
-production/portfolio comparison before a third; no fixed rotation or invented convergence.
-Coherent original product/production ownership is a corrective frontier. Compare licensed
-Unity/ordinary-user/device/participant access and consequential remaining source/gameplay
-contracts against actual coherent product benefit. Do not repeat attachment intake,
-policy experiment, conditions/service matrices, wrappers, saves, packages, token/I/O,
-media or the one-time transformation by habit. Select a largest coherent feasible next
-contribution from current evidence; CommanderSIM is not a permanent priority.
+This is ONE corrective North Star unit after two laboratory units; UI/library/native/
+browser/CI/navigation support are not extra units. Compare genuine production ownership,
+licensed Unity/ordinary-user/device/participant access and coherent original product needs
+against consequential remaining source contracts. Do not automatically expand sampling,
+provisions/cards, policy evaluation, wrappers, saves, packages, token/I/O/media or older
+matrices; do not repeat attachment intake or the one-time transformation. Select the next
+largest coherent feasible contribution from current dependencies and strategic balance.

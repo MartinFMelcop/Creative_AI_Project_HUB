@@ -5,6 +5,8 @@ using System.Text.Json;
 using IntakeRoom=NorthStar.Intake.Room;
 using MemoryRoom=NorthStar.MemoryStudy.Room;
 using NorthStar.FieldPresentation;
+using SampleCase=NorthStar.FieldSampling.SampleCase;
+using SampleFacts=NorthStar.FieldSampling.Facts;
 
 namespace NorthStar.FieldJourney;
 
@@ -12,6 +14,7 @@ namespace NorthStar.FieldJourney;
 public sealed class Room
 {
     private readonly IntakeRoom intake=new();
+    private readonly SampleCase sampleCase=new();
     private readonly MemoryRoom memory;
     public Room(string servicePolicy="independent"){memory=new MemoryRoom(servicePolicy);}
     private readonly Dictionary<string,string> assembled=new(StringComparer.Ordinal);
@@ -28,10 +31,16 @@ public sealed class Room
     private bool Acquired(string bench)=>Memory().GetProperty("benches").EnumerateArray().Single(b=>b.GetProperty("id").GetString()==bench).GetProperty("delivered").GetBoolean();
     private object Observe(string cmd,bool ok,string message)=>new {
         sequence,command=cmd,accepted=ok,text=message,workshop_closed=workshopClosed,
+        sample_case=sampleCase.Snapshot(SamplingFacts(Intake())),
         intake=intake.Snapshot(),memory=memory.Snapshot(),encounter_view=Projector.Observe(Facts(Intake()),response),
         fittings=new[]{"west","east"}.Select(bench=>new {bench,acquired=Acquired(bench),spent=assembled.ContainsKey(bench),available=Acquired(bench)&&!assembled.ContainsKey(bench),rig=assembled.TryGetValue(bench,out var rig)?rig:null}).ToArray(),
         assembly_receipts=assembled.Select(pair=>new {bench=pair.Key,rig=pair.Value,request_id="fitting_"+pair.Key}).ToArray()
     };
+    private static SampleFacts SamplingFacts(JsonElement card)
+    {
+        var e=card.GetProperty("state");
+        return new SampleFacts(Flag(card,"confirmed"),e.GetProperty("attempts").GetInt32(),e.GetProperty("stage").GetInt32(),e.GetProperty("position").GetInt32(),e.GetProperty("beat").GetInt32(),e.GetProperty("health").GetInt32(),Flag(e,"active"),Flag(e,"won"),Flag(e,"complete"));
+    }
     private static Facts Facts(JsonElement card)
     {
         var state=card.GetProperty("state");var id=card.GetProperty("identity");bool confirmed=Flag(card,"confirmed");
@@ -40,6 +49,7 @@ public sealed class Room
     }
     private static string ActionKind(string cmd,JsonElement root,JsonElement before)
     {
+        if(cmd=="sample")return "wait";
         if(cmd!="slot")return cmd;
         int slot=Number(root,"slot")-1;var slots=before.GetProperty("state").GetProperty("slots");
         return slot>=0&&slot<slots.GetArrayLength()&&slots[slot].ValueKind==JsonValueKind.String&&slots[slot].GetString()=="dash"?"dash":"skill";
@@ -69,12 +79,15 @@ public sealed class Room
             "draft"=>new[]{"handle","accent","class_id","background_id","slots"},
             "confirm"=>new[]{"draft_revision"},"allocate"=>new[]{"axis","points"},"slot"=>new[]{"slot"},
             "help" or "demonstrate" or "serve" or "decline"=>new[]{"bench"},"craft"=>new[]{"bench","rig"},"begin"=>new[]{"rig"},
+            "sample"=>new[]{"site"},
             "review" or "walk" or "wait" or "wait-window"=>Array.Empty<string>(),_=>throw new ArgumentException("Unknown command.")};
         Fields(root,extras);
         // Parse every adapter-owned field before any child can change state.
         int revision=Number(root,"revision");
         string? bench=cmd is "help" or "demonstrate" or "serve" or "decline" or "craft"?Bench(root):null;
         string? rig=cmd is "craft" or "begin"?Rig(root,cmd=="begin"):null;
+        string? site=cmd=="sample"?Text(root,"site"):null;
+        if(site!=null)SampleCase.ValidateSite(site);
         if(revision!=sequence)return Observe(cmd,false,"Old outer intent refused. Read current facts before deliberately acting again.");
         int next=checked(sequence+1);bool ok=false;string message;
         var current=Intake();bool confirmed=Flag(current,"confirmed"),ready=confirmed&&!Flag(current,"pending");
@@ -100,11 +113,26 @@ public sealed class Room
                 else message=result.GetProperty("text").GetString()!;
             }
         }
+        else if(cmd=="sample")
+        {
+            if(!sampleCase.CanCollect(site!,SamplingFacts(current)))message="Sampling requires the one unused case and your actual active position at that exact site. Nothing was collected or spent.";
+            else
+            {
+                var result=Child(root,"wait",false);ok=Flag(result,"accepted");
+                if(ok)
+                {
+                    sampleCase.Collect(site!,SamplingFacts(current),SamplingFacts(Intake()));
+                    message="The actual Wait resolved its threat and beat before collection. The one case is now spent; "+(Json(sampleCase.Snapshot(SamplingFacts(Intake()))).GetProperty("acquired").GetBoolean()?"surviving acquisition is carried, not returned or delivered.":"the paid encounter failed before acquisition; no sample was obtained.");
+                }
+                else message=result.GetProperty("text").GetString()!;
+            }
+        }
         else
         {
             var result=Child(root,cmd,false,extras);ok=Flag(result,"accepted");message=result.GetProperty("text").GetString()!;
             if(cmd=="begin"&&ok){workshopClosed=true;message+=" Preparation is now closed; later encounter beats do not advance the separate historical workshop clock.";}
         }
+        if(ok)sampleCase.ObserveAcceptedTransition(SamplingFacts(current),SamplingFacts(Intake()));
         response=Projector.Transition(Facts(current),Facts(Intake()),cmd,ok,ActionKind(cmd,root,current),response.event_sequence);
         sequence=next;command=cmd;accepted=ok;text=message;
         return Snapshot();

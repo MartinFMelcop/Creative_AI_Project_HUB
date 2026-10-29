@@ -1,0 +1,254 @@
+{
+  "schema_version": 1,
+  "checks": {
+    "passed": 21,
+    "failed": 0
+  },
+  "controls": [
+    "Default and explicit independent policy have identical original observation",
+    "Independent actual east help opens its paid service",
+    "Independent actual east service pays turn and coin",
+    "Ordered policy starts with no supplied conditions or goods",
+    "Real east help cannot stand in for actual west delivery",
+    "Ordered east refusal spends no turn part coin or fitting",
+    "West help alone does not satisfy the other-delivered fact",
+    "Actual west service changes east condition but does not supply east fitting",
+    "Actual rule is visible and complete",
+    "Eligibility checked before actual one-turn cost can deliver at expiry boundary",
+    "Acquired fitting cannot be supplied again by true historical condition",
+    "Other delivery never substitutes for expired local evidence",
+    "Expired refusal has no costs or acquired output",
+    "Actual paid demonstration can renew the ordered opportunity",
+    "Withdrawal retains west output while closing actual east authority",
+    "Stale intent cannot pay for a changed condition",
+    "Forged policy cannot change private facts",
+    "Forged OtherDelivered cannot change private facts",
+    "Forged condition cannot change private facts",
+    "Unknown startup policy refuses rather than silently falling back",
+    "Eight exact preserved scalar rows compile in explicit declared context"
+  ],
+  "source_scalar_rows": [
+    {
+      "variant_id": "DV_NPC0007_SMALLTALK_001",
+      "expression": "Mood!=OUTBURST",
+      "Satisfied": true,
+      "Complete": true
+    },
+    {
+      "variant_id": "DV_NPC0007_NEGOTIATION_001",
+      "expression": "Mood!=OUTBURST \u0026 Trust_Player\u003E=40",
+      "Satisfied": true,
+      "Complete": true
+    },
+    {
+      "variant_id": "DV_NPC0007_NEGOTIATION_002",
+      "expression": "Mood!=OUTBURST \u0026 Trust_Player\u003C40",
+      "Satisfied": false,
+      "Complete": true
+    },
+    {
+      "variant_id": "DV_NPC0007_THREAT_002",
+      "expression": "Mood==OUTBURST",
+      "Satisfied": false,
+      "Complete": true
+    },
+    {
+      "variant_id": "DV_NPC0007_MANIP_SUS_001",
+      "expression": "Mood!=OUTBURST",
+      "Satisfied": true,
+      "Complete": true
+    },
+    {
+      "variant_id": "DV_NPC0007_MANIP_CONF_WARN_001",
+      "expression": "Mood!=OUTBURST \u0026 Stress\u003C80",
+      "Satisfied": true,
+      "Complete": true
+    },
+    {
+      "variant_id": "DV_NPC0007_MANIP_CONF_OUTBURST_001",
+      "expression": "Stress\u003E=80 \u0026 Mood!=OUTBURST",
+      "Satisfied": false,
+      "Complete": true
+    },
+    {
+      "variant_id": "DV_NPC0007_INSULT_002",
+      "expression": "Mood==OUTBURST",
+      "Satisfied": false,
+      "Complete": true
+    }
+  ],
+  "source_context": {
+    "Mood": "CALM",
+    "Stress": 20,
+    "Trust_Player": 50
+  },
+  "ordered": {
+    "sequence": 6,
+    "command": "serve",
+    "accepted": false,
+    "text": "That fitting already exists. A repeat cannot mint another.",
+    "turn": 4,
+    "parts": 2,
+    "coins": 0,
+    "policy": "ordered",
+    "complete": true,
+    "benches": [
+      {
+        "id": "west",
+        "helped": true,
+        "support": true,
+        "recent": true,
+        "expires": 5,
+        "eligible": false,
+        "delivered": true,
+        "condition_expression": "Helped=true \u0026 Support=true \u0026 Recent=true",
+        "condition_satisfied": true,
+        "condition_complete": true
+      },
+      {
+        "id": "east",
+        "helped": true,
+        "support": true,
+        "recent": false,
+        "expires": null,
+        "eligible": false,
+        "delivered": true,
+        "condition_expression": "Helped=true \u0026 Support=true \u0026 Recent=true \u0026 OtherDelivered=true",
+        "condition_satisfied": false,
+        "condition_complete": true
+      }
+    ],
+    "history": [
+      {
+        "sequence": 1,
+        "command": "help",
+        "bench": "east",
+        "turn": 1,
+        "parts": 3,
+        "coins": 2,
+        "fittings": 0
+      },
+      {
+        "sequence": 3,
+        "command": "help",
+        "bench": "west",
+        "turn": 2,
+        "parts": 2,
+        "coins": 2,
+        "fittings": 0
+      },
+      {
+        "sequence": 4,
+        "command": "serve",
+        "bench": "west",
+        "turn": 3,
+        "parts": 2,
+        "coins": 1,
+        "fittings": 1
+      },
+      {
+        "sequence": 5,
+        "command": "serve",
+        "bench": "east",
+        "turn": 4,
+        "parts": 2,
+        "coins": 0,
+        "fittings": 2
+      }
+    ]
+  },
+  "expired": {
+    "sequence": 7,
+    "command": "decline",
+    "accepted": true,
+    "text": "Current local support withdrawn without a turn. Past observed help and any actual fitting remain true; a fresh paid demonstration is required to reopen an unfinished opportunity.",
+    "turn": 5,
+    "parts": 1,
+    "coins": 1,
+    "policy": "ordered",
+    "complete": false,
+    "benches": [
+      {
+        "id": "west",
+        "helped": true,
+        "support": true,
+        "recent": true,
+        "expires": 6,
+        "eligible": false,
+        "delivered": true,
+        "condition_expression": "Helped=true \u0026 Support=true \u0026 Recent=true",
+        "condition_satisfied": true,
+        "condition_complete": true
+      },
+      {
+        "id": "east",
+        "helped": true,
+        "support": false,
+        "recent": false,
+        "expires": null,
+        "eligible": false,
+        "delivered": false,
+        "condition_expression": "Helped=true \u0026 Support=true \u0026 Recent=true \u0026 OtherDelivered=true",
+        "condition_satisfied": false,
+        "condition_complete": true
+      }
+    ],
+    "history": [
+      {
+        "sequence": 1,
+        "command": "help",
+        "bench": "east",
+        "turn": 1,
+        "parts": 3,
+        "coins": 2,
+        "fittings": 0
+      },
+      {
+        "sequence": 2,
+        "command": "wait",
+        "bench": null,
+        "turn": 2,
+        "parts": 3,
+        "coins": 2,
+        "fittings": 0
+      },
+      {
+        "sequence": 3,
+        "command": "help",
+        "bench": "west",
+        "turn": 3,
+        "parts": 2,
+        "coins": 2,
+        "fittings": 0
+      },
+      {
+        "sequence": 4,
+        "command": "serve",
+        "bench": "west",
+        "turn": 4,
+        "parts": 2,
+        "coins": 1,
+        "fittings": 1
+      },
+      {
+        "sequence": 6,
+        "command": "demonstrate",
+        "bench": "east",
+        "turn": 5,
+        "parts": 1,
+        "coins": 1,
+        "fittings": 1
+      },
+      {
+        "sequence": 7,
+        "command": "decline",
+        "bench": "east",
+        "turn": 5,
+        "parts": 1,
+        "coins": 1,
+        "fittings": 1
+      }
+    ]
+  },
+  "limits": "Source scalar syntax in a declared typed destination context, not Ruby/coercion/function/scoring equivalence, actual source NPCs or human validation."
+}

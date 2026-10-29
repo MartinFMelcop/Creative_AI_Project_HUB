@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "updated_at": "2026-10-28",
+  "updated_at": "2026-10-29",
   "baseline_commit": "9c69f295a1c5d736761a113d0e41aaa8600fb635",
   "scope": "Mandatory eleven-laboratory transformation. Historical source preservation is separate from terminal knowledge consumption; operational claims require executed instruments and bound evidence.",
   "north_star_consumer_demonstrated": true,
@@ -2025,12 +2025,14 @@
       ],
       "decision": "Adapt full-consumption scalar comparison, Boolean precedence and parentheses into a bounded typed C#8/netstandard2.1 condition compiled against declared private facts. Actual existing paid service and field composition demonstrate independent/ordered consequences. Exact eight scalar rows exercise syntax in declared destination context; no Ruby/coercion/function/scoring/catalog or fictional NPC import.",
       "evidence": [
+        "evidence/field-sampling/RUN.json",
         "evidence/dialogue-conditions/RUN.json",
         "evidence/dialogue-conditions/execution/source.json"
       ],
       "evidence_sha256": {
         "evidence/dialogue-conditions/RUN.json": "cbffb248dcbd5d20c02587f319ec81568657c4f863052d86f7de14a1cec9502d",
-        "evidence/dialogue-conditions/execution/source.json": "bb6fe0db8be6b66ac65dbcdbdfc3f7fcee10253f843461ed74ffd40167eea289"
+        "evidence/dialogue-conditions/execution/source.json": "bb6fe0db8be6b66ac65dbcdbdfc3f7fcee10253f843461ed74ffd40167eea289",
+        "evidence/field-sampling/RUN.json": "90e47439447ea43dbc81249b40006365dd3fabd205b59afcc4bb7c5a56908139"
       },
       "consumer_paths": [
         "north-star/memory-study/Conditions/Conditions.cs",

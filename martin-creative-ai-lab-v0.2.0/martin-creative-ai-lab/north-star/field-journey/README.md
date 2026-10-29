@@ -143,3 +143,36 @@ The [conditions verifier](../memory-study/tools/conditions-verify.py) executes b
 policies and the actual field composition, alongside affected earlier regressions.
 [Current evidence](../../evidence/dialogue-conditions/RUN.json) retains the strict parser,
 source boundaries, refused/expired opportunities and actual output/custody distinction.
+
+## One case, two field observations
+
+An explicitly issued empty sample case is separate original setup from workshop parts,
+coins, fittings and rig materials. In the active survey, ridge position1 offers a ridge
+rubbing. In the active final encounter, channel position2 offers a channel trace. These
+are original experimental observations, not historical catalog items, rewards or canon.
+One case can record at most one site during this whole journey.
+
+An explicit sample command delegates to the SAME actual owner's Wait: position stays,
+one beat and the announced threat resolve. Only surviving a continuing or won encounter
+can acquire the sample afterward. A fatal/failed collection spends the case without
+inventing acquisition. Later actual encounter failure permanently loses carried cargo;
+actual final Crossing completion secures it. Secured does not mean returned, delivered,
+appraised, sold or a new XP reward. Survey success alone never secures it.
+
+The unused case can persist across an ordinary failed attempt. A spent/broken/lost case
+never refills through entry recovery, draft, confirmation, amendment, reads or redraw.
+Wrong site, inactive encounter, unavailable case or stale intent cannot pay a beat or
+create cargo. The existing unprepared route, recovery, resource costs and final owner
+remain unchanged. Choosing no sample retains previous gameplay outcomes.
+
+```bash
+python3 north-star/field-journey/tools/sampling-verify.py --dotnet dotnet --output /tmp/field-sampling-new
+```
+
+The [sampling protocol](../../evidence/field-sampling/protocol.json) and
+[execution](../../evidence/field-sampling/RUN.json) distinguish collection, custody,
+loss and actual final securing, including losing policies and false visible claims.
+This extension remains ephemeral .NET10/Linux/browser over unchanged child owners.
+The narrow sampling library targets C#8/netstandard2.1; no Unity import, production
+Windows/Steam, participant experience, full creation/item parser or commercial clearance
+is established. Neither recipient package is changed.

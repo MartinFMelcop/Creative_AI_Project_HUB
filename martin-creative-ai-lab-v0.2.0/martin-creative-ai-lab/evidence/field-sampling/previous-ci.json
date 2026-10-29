@@ -1,0 +1,72 @@
+{
+  "run_id": 40749611397,
+  "initial_attempt": {
+    "attempt": 1,
+    "conclusion": "cancelled",
+    "jobs_succeeded": 7,
+    "cancelled_job": {
+      "id": 123032667766,
+      "name": "north-star-csharp"
+    },
+    "cause": "UNPROVEN"
+  },
+  "request": {
+    "scope": "Only job123032667766",
+    "accepted": true
+  },
+  "observed_attempt2": {
+    "status": "completed",
+    "conclusion": "success",
+    "jobs": [
+      {
+        "id": 123039855866,
+        "name": "north-star-csharp",
+        "status": "completed",
+        "conclusion": "success"
+      },
+      {
+        "id": 123039856090,
+        "name": "integrity-and-dialogue",
+        "status": "completed",
+        "conclusion": "success"
+      },
+      {
+        "id": 123039856697,
+        "name": "scope",
+        "status": "completed",
+        "conclusion": "success"
+      },
+      {
+        "id": 123039857297,
+        "name": "eclipse-economy",
+        "status": "completed",
+        "conclusion": "success"
+      },
+      {
+        "id": 123039857896,
+        "name": "north-star-authority",
+        "status": "completed",
+        "conclusion": "success"
+      },
+      {
+        "id": 123039858109,
+        "name": "chat-and-evaluation",
+        "status": "completed",
+        "conclusion": "success"
+      },
+      {
+        "id": 123039858271,
+        "name": "native-arena",
+        "status": "completed",
+        "conclusion": "success"
+      },
+      {
+        "id": 123039946061,
+        "name": "north-star-remote",
+        "status": "completed",
+        "conclusion": "success"
+      }
+    ]
+  },
+  "scope_boundary": "Specific job rerun request and eight observed new job records differ; do not equate request scope and execution scope."
+}

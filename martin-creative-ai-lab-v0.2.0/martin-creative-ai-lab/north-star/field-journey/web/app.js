@@ -28,9 +28,32 @@
   $('field-threat-label').textContent=e.threat_kind==='none'?'NO ACTIVE THREAT':`NEXT: ${e.threat_kind.toUpperCase()}`;
   $('field-response').textContent=a.kind==='refused'?`Refused ${a.command}. No accepted encounter response, damage, cost or movement was produced.`:['walk','dash','skill','wait'].includes(a.kind)?`Latest actual response ${a.event_sequence}: ${a.kind}; position ${a.from_position} → ${a.to_position}; HP lost ${a.health_lost}; resolve spent ${a.resolve_spent}, gained ${a.resolve_gained}; contact ${a.contact}.`:`Observed ${a.kind}. Entry/preparation is not narrated as healing or a paid encounter response.`;
  }
+ function samplingView(s){
+  if(!s.sample_case||!Array.isArray(s.sample_case.sites))throw Error('Actual sampling custody required');
+  const sampleStatusObserved = s.sample_case.status;
+  const sampleCarriedObserved = s.sample_case.status === 'carried';
+  const sampleSecuredObserved = s.sample_case.status === 'secured';
+  const c=s.sample_case,e=s.encounter_view.encounter,id=s.intake.identity,person=id?.handle||'This person';
+  const label=c.site==='ridge'?'ridge rubbing':c.site==='channel'?'channel trace':null;
+  const panel=$('field-sampling'),cargo=$('field-sample-cargo');
+  panel.dataset.status=sampleStatusObserved;panel.dataset.carried=String(sampleCarriedObserved);panel.dataset.secured=String(sampleSecuredObserved);panel.dataset.caseAvailable=String(!c.case_spent);panel.dataset.caseSpent=String(c.case_spent);
+  cargo.dataset.carried=String(sampleCarriedObserved);cargo.dataset.secured=String(sampleSecuredObserved);
+  cargo.setAttribute('aria-label',sampleSecuredObserved?`${person}'s ${label||'sample'} secured through actual final completion; no return or delivery inferred`:sampleCarriedObserved?`${person} currently carries the acquired ${label||'sample'}; the road is not complete`:'No sample currently carried');
+  $('sampling-state').textContent=sampleSecuredObserved?'SECURED THROUGH ACTUAL ROAD':sampleCarriedObserved?'CARRIED / NOT SECURED':sampleStatusObserved==='lost'?'CASE LOST / NO SAMPLE CARRIED':'ONE EMPTY CASE';
+  $('sampling-case').textContent=sampleSecuredObserved?`${person} kept the sample through actual final completion.`:sampleCarriedObserved?`${person} carries one sample. Its safety is still at risk.`:sampleStatusObserved==='lost'?`${person}'s single case is spent and lost. No retry restores it.`:'One empty sample case was issued as disclosed expedition setup.';
+  $('sampling-site').textContent=label?(c.acquired?`Actual ${label} acquired on attempt ${c.collection_attempt}. ${sampleStatusObserved==='lost'?'That acquisition remains historical; current custody is lost.':sampleSecuredObserved?'Final completion secured custody, without a return or delivery.':'Acquisition alone is not securing.'}`:`The ${label} collection attempt spent the case but did not acquire a surviving sample.`):'Choose the ridge during the survey or keep the empty case for the later channel. There is no second case.';
+  $('sampling-picture-title').textContent=sampleSecuredObserved?'Actual sample secured through final completion':sampleCarriedObserved?'Actual sample carried, not secured':sampleStatusObserved==='lost'?'Case lost, no sample currently carried':'One issued empty case, no sample acquired';
+  const r=c.receipt;
+  $('sampling-receipt').textContent=r?`Actual collection receipt: attempt ${r.attempt}, beat ${r.before_beat} → ${r.after_beat}, HP ${r.hp_before} → ${r.hp_after} (${r.health_lost} lost). ${r.acquired?'The surviving contact acquired one sample; later custody is observed separately.':'No sample was acquired.'}`:'No paid collection contact has occurred. Site markers, reads and elapsed time create no sample.';
+  for(const site of c.sites){
+   const marker=$('field-site-'+site.id);marker.dataset.visible=String(e.active&&e.stage===site.stage);marker.dataset.eligible=String(site.eligible);
+   marker.setAttribute('transform',`translate(${85+830*site.position/e.world_end} 0)`);
+   $(site.id+'-sample-window').textContent=site.eligible?'Actual site reached with an empty case. Sampling spends the next beat and resolves its threat.':c.case_spent?'The one case is already spent; this site cannot supply another sample.':!e.active?'Enter the actual encounter before collecting.':e.stage!==site.stage?'This site belongs to the other encounter.':`Reach exact position ${site.position} while this encounter remains active. Passing a site or reaching a threshold does not collect it.`;
+  }
+ }
  function render(s){
   if(!s?.intake?.state||!s?.memory||!Array.isArray(s.fittings))throw Error('Incomplete actual journey observation');
-  state=s;const card=s.intake,e=card.state,m=s.memory,id=card.identity;encounterView(s.encounter_view);
+  state=s;const card=s.intake,e=card.state,m=s.memory,id=card.identity;encounterView(s.encounter_view);samplingView(s);
   const completeObserved = Boolean(s.intake.state.complete);
   document.body.dataset.confirmed=String(card.confirmed);document.body.dataset.workshopClosed=String(s.workshop_closed);document.body.dataset.complete=String(completeObserved);
   $('confirmed-name').textContent=id?id.handle:'Not confirmed';$('identity-discipline').textContent=id?`${id.class_id} / ${id.background_id}`:'No committed preparation';$('identity-accent').textContent=id?`${id.accent} cloth accent · expression only`:'Expression has no combat advantage.';$('identity-slots').textContent=id?`Equipped: ${id.slots.map(x=>x||'empty').join(' / ')}`:'No confirmed actions.';
@@ -79,6 +102,7 @@
   $('assemble').disabled=busy||uncertain||!workshop||!state.fittings.some(f=>f.available)||(e.inventory.fiber??0)<2||(e.inventory.binder??0)<1;
   $('begin').disabled=busy||uncertain||!ready||locked;
   for(const key of ['walk','wait','use-slot1','use-slot2','use-slot3','use-slot4'])$(key).disabled=busy||uncertain||!e.active;
+  for(const site of state.sample_case.sites)$('sample-'+site.id).disabled=busy||uncertain||!site.eligible;
   for(const key of ['focus','vitality'])$(key).disabled=busy||uncertain||locked||e.unspent<1;
  }
  async function read(){if(busy)return;busy=true;controls();const g=++generation;try{const r=await fetch('/state',{cache:'no-store'});if(!r.ok)throw Error('Read refused');const s=await r.json();if(g!==generation)return;uncertain=false;render(s);adopt(s.intake.draft);$('connection').textContent='Current facts read from the owner. No action was retried.';}catch(e){uncertain=true;$('connection').textContent='Unable to read: '+e.message+'. Read again before acting.';}finally{busy=false;controls();}}
@@ -86,6 +110,7 @@
  function invoke(command,fields={}){send(command,fields).catch(()=>{});}
  $('draft-form').onsubmit=e=>{e.preventDefault();invoke('draft',proposal());};$('review').onclick=()=>invoke('review');$('confirm').onclick=()=>invoke('confirm',{draft_revision:state.intake.draft_revision});
  for(const bench of ['west','east']){$(bench+'-help').onclick=()=>invoke(state.memory.benches.find(b=>b.id===bench).helped?'demonstrate':'help',{bench});$(bench+'-serve').onclick=()=>invoke('serve',{bench});$(bench+'-decline').onclick=()=>invoke('decline',{bench});}
+ for(const site of ['ridge','channel'])$('sample-'+site).onclick=()=>invoke('sample',{site});
  $('wait-window').onclick=()=>invoke('wait-window');$('assemble').onclick=()=>invoke('craft',{bench:$('benchselect').value,rig:$('fittingrig').value});$('begin').onclick=()=>invoke('begin',{rig:$('rig').value});for(const command of ['walk','wait'])$(command).onclick=()=>invoke(command);
  for(let n=1;n<=4;n++)$('use-slot'+n).onclick=()=>invoke('slot',{slot:n});for(const axis of ['focus','vitality'])$(axis).onclick=()=>invoke('allocate',{axis,points:1});$('read').onclick=read;
  function interrupt(){if(busy){generation++;uncertain=true;$('connection').textContent='Interrupted while an action may have committed. Read actual facts; do not repeat blindly.';controls();}}
