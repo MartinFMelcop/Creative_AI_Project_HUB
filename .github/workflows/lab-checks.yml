@@ -599,14 +599,14 @@ jobs:
           if-no-files-found: ignore
           retention-days: 7
 
-      - name: Execute finite field sampling and affected conditions/memory/field consumers
-        run: python3 north-star/field-journey/tools/sampling-verify.py --dotnet dotnet --output "$RUNNER_TEMP/field-sampling"
+      - name: Execute authored preparations and affected sampling/conditions/memory/field consumers
+        run: python3 north-star/field-journey/tools/preparation-verify.py --dotnet dotnet --output "$RUNNER_TEMP/preparation-authoring"
       - name: Retain scoped memory failure diagnostics
         if: failure()
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
         with:
           name: memory-study-diagnostics
-          path: ${{ runner.temp }}/field-sampling
+          path: ${{ runner.temp }}/preparation-authoring
           if-no-files-found: ignore
           retention-days: 7
 
@@ -615,7 +615,7 @@ jobs:
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
         with:
           name: field-journey-diagnostics
-          path: ${{ runner.temp }}/field-sampling/conditions-regressions/field-regressions
+          path: ${{ runner.temp }}/preparation-authoring/regressions/conditions-regressions/field-regressions
           if-no-files-found: ignore
           retention-days: 7
 

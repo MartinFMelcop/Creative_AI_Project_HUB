@@ -5,6 +5,7 @@ using System.Text.Json;
 using IntakeRoom=NorthStar.Intake.Room;
 using MemoryRoom=NorthStar.MemoryStudy.Room;
 using NorthStar.FieldPresentation;
+using NorthStar.Preparation;
 using SampleCase=NorthStar.FieldSampling.SampleCase;
 using SampleFacts=NorthStar.FieldSampling.Facts;
 
@@ -13,10 +14,19 @@ namespace NorthStar.FieldJourney;
 // One outer owner coordinates actual unchanged child owners and finite fitting use.
 public sealed class Room
 {
-    private readonly IntakeRoom intake=new();
+    private readonly IntakeRoom intake;
+    private readonly Book preparationBook;
+    private string? draftCardId,confirmedCardId;
     private readonly SampleCase sampleCase=new();
     private readonly MemoryRoom memory;
-    public Room(string servicePolicy="independent"){memory=new MemoryRoom(servicePolicy);}
+    public Room(string servicePolicy="independent",Book? book=null)
+    {
+        preparationBook=book??PackLoader.Default();
+        // A supplied in-process Book cannot widen the real owner catalog either.
+        var catalog=NorthStar.Loadout.PreparedExpedition.Catalog();
+        foreach(var card in preparationBook.Cards)catalog.Validate(card.Proposal,card.MinimumLevel);
+        memory=new MemoryRoom(servicePolicy);intake=new IntakeRoom();
+    }
     private readonly Dictionary<string,string> assembled=new(StringComparer.Ordinal);
     private int sequence;
     private Response response=Projector.Initial();
@@ -32,10 +42,16 @@ public sealed class Room
     private object Observe(string cmd,bool ok,string message)=>new {
         sequence,command=cmd,accepted=ok,text=message,workshop_closed=workshopClosed,
         sample_case=sampleCase.Snapshot(SamplingFacts(Intake())),
+        preparation_book=PreparationBook(),
         intake=intake.Snapshot(),memory=memory.Snapshot(),encounter_view=Projector.Observe(Facts(Intake()),response),
         fittings=new[]{"west","east"}.Select(bench=>new {bench,acquired=Acquired(bench),spent=assembled.ContainsKey(bench),available=Acquired(bench)&&!assembled.ContainsKey(bench),rig=assembled.TryGetValue(bench,out var rig)?rig:null}).ToArray(),
         assembly_receipts=assembled.Select(pair=>new {bench=pair.Key,rig=pair.Value,request_id="fitting_"+pair.Key}).ToArray()
     };
+    private object PreparationBook()
+    {
+        var card=Intake();var state=card.GetProperty("state");bool editable=!Flag(state,"active")&&!Flag(state,"complete");int level=state.GetProperty("level").GetInt32();
+        return new {sha256=preparationBook.Sha256,draft_card_id=draftCardId,confirmed_card_id=confirmedCardId,cards=preparationBook.Cards.Select(c=>new {id=c.Id,title=c.Title,description=c.Description,class_id=c.Proposal.ClassId,background_id=c.Proposal.BackgroundId,slots=c.Proposal.Slots,minimum_level=c.MinimumLevel,recommended_rig=c.RecommendedRig,eligible=editable&&preparationBook.Eligible(c,level)}).ToArray()};
+    }
     private static SampleFacts SamplingFacts(JsonElement card)
     {
         var e=card.GetProperty("state");
@@ -79,7 +95,7 @@ public sealed class Room
             "draft"=>new[]{"handle","accent","class_id","background_id","slots"},
             "confirm"=>new[]{"draft_revision"},"allocate"=>new[]{"axis","points"},"slot"=>new[]{"slot"},
             "help" or "demonstrate" or "serve" or "decline"=>new[]{"bench"},"craft"=>new[]{"bench","rig"},"begin"=>new[]{"rig"},
-            "sample"=>new[]{"site"},
+            "sample"=>new[]{"site"},"propose-card"=>new[]{"card_id"},
             "review" or "walk" or "wait" or "wait-window"=>Array.Empty<string>(),_=>throw new ArgumentException("Unknown command.")};
         Fields(root,extras);
         // Parse every adapter-owned field before any child can change state.
@@ -88,10 +104,23 @@ public sealed class Room
         string? rig=cmd is "craft" or "begin"?Rig(root,cmd=="begin"):null;
         string? site=cmd=="sample"?Text(root,"site"):null;
         if(site!=null)SampleCase.ValidateSite(site);
+        Card? proposed=cmd=="propose-card"?preparationBook.Find(Text(root,"card_id")):null;
         if(revision!=sequence)return Observe(cmd,false,"Old outer intent refused. Read current facts before deliberately acting again.");
         int next=checked(sequence+1);bool ok=false;string message;
         var current=Intake();bool confirmed=Flag(current,"confirmed"),ready=confirmed&&!Flag(current,"pending");
-        if(cmd is "help" or "demonstrate" or "serve" or "decline" or "wait-window")
+        if(cmd=="propose-card")
+        {
+            var e=current.GetProperty("state");
+            if(Flag(e,"active")||Flag(e,"complete")||!preparationBook.Eligible(proposed!,e.GetProperty("level").GetInt32()))message="That exact card is unavailable at the actual earned level or current encounter. No proposal, permission or resource was granted.";
+            else
+            {
+                var draft=current.GetProperty("draft");
+                var request=Json(new {command="draft",revision=current.GetProperty("sequence"),handle=draft.GetProperty("handle"),accent=draft.GetProperty("accent"),class_id=proposed!.Proposal.ClassId,background_id=proposed.Proposal.BackgroundId,slots=proposed.Proposal.Slots});
+                var result=Json(intake.Execute(request));ok=Flag(result,"accepted");message=result.GetProperty("text").GetString()!;
+                if(ok){draftCardId=proposed.Id;message="Authored card proposed as a draft only. Review and confirm separately; its rig is guidance, not equipment or a grant.";}
+            }
+        }
+        else if(cmd is "help" or "demonstrate" or "serve" or "decline" or "wait-window")
         {
             if(workshopClosed)message="Departure closed preparation. The workshop observation is historical; no remote work, fitting or return was observed.";
             else if(!(cmd=="decline"?confirmed:ready))message="Confirm the current whole identity before paid workshop preparation. A draft supplies no work, witness or goods.";
@@ -132,8 +161,11 @@ public sealed class Room
             var result=Child(root,cmd,false,extras);ok=Flag(result,"accepted");message=result.GetProperty("text").GetString()!;
             if(cmd=="begin"&&ok){workshopClosed=true;message+=" Preparation is now closed; later encounter beats do not advance the separate historical workshop clock.";}
         }
+        if(ok&&cmd=="draft")draftCardId=null;
+        if(ok&&cmd=="confirm")confirmedCardId=draftCardId;
         if(ok)sampleCase.ObserveAcceptedTransition(SamplingFacts(current),SamplingFacts(Intake()));
-        response=Projector.Transition(Facts(current),Facts(Intake()),cmd,ok,ActionKind(cmd,root,current),response.event_sequence);
+        // The projector describes the actual delegated draft; the outer receipt retains propose-card.
+        response=Projector.Transition(Facts(current),Facts(Intake()),cmd=="propose-card"?"draft":cmd,ok,ActionKind(cmd,root,current),response.event_sequence);
         sequence=next;command=cmd;accepted=ok;text=message;
         return Snapshot();
     }

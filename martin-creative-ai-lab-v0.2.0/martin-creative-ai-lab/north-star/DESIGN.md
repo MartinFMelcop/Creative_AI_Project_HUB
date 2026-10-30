@@ -910,3 +910,31 @@ rejected collections. CRE005/013, SCI013/014/076/077 and ENG004/015/017 informed
 refutable ownership and preservation. [Evidence](../evidence/field-sampling/RUN.json)
 separates tested original consequences from unmeasured player meaning, balance,
 recognition, approved canon, commercial rights or Unity/Windows delivery.
+
+## Authored preparation proposals — original production contract
+
+A bounded immutable startup book now authors complete original preparation proposals
+inside the existing field journey. Each card declares exact discipline/background,
+four slots, minimum level and a rig recommendation. It is not a new skill, grant,
+class catalog, acquired rig or permission. Actual owner eligibility and earned level
+remain authoritative; proposed data passes the current LoadoutCatalog.
+
+Choosing a card changes only the existing draft and expires its review. Explicit review
+and confirmation stay separate. Manual drafts remain available and clear draft-card
+provenance; the previous confirmed identity/source stays until another real confirmation.
+Handle/accent remain the person's current draft choices. No card supplies materials,
+XP, healing, equipment, allocation, encounter entry or sample security.
+
+Four original cards expose starting Anchor/Lure preparations and earned Dash amendments.
+A separately authored valid book moves Draw from slot1 to slot2 through the SAME compiled
+host; actual slot1 refusal and paid slot2 Draw demonstrate that data reaches the owner.
+This is authoring-to-runtime consequence, not proof of new build diversity, human authoring
+utility, balanced tactics or final class canon. Whole invalid books fail before the host
+is exposed, without partial acceptance, repair or generic fallback supplies.
+
+Independent Engineering, Science and Creation favored this concrete production boundary
+against another sample feature, numeric aid, withdrawal or unavailable licensed tooling.
+Inspected historical DEV/DIST creation helpers differ; their fuzzy grants/defaults and
+malformed paths do not become North Star authority. Full historical parsing remains
+unresolved. [Evidence](../evidence/preparation-authoring/RUN.json) retains actual content
+variation, manual equivalence, no-grant/earned-level controls and false-confirmed renderer.

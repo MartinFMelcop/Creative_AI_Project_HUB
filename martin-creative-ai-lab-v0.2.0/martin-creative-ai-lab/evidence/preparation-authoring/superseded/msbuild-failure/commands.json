@@ -1,0 +1,23 @@
+[
+  {
+    "command": [
+      "/workspace/work/authored-scene/dotnet/dotnet",
+      "--version"
+    ],
+    "exit_code": 0,
+    "stdout": "10.0.401\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "/workspace/work/authored-scene/dotnet/dotnet",
+      "build",
+      "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/field-journey/PreparationChecks/NorthStar.PreparationChecks.csproj",
+      "-c",
+      "Release"
+    ],
+    "exit_code": 1,
+    "stdout": "  Determining projects to restore...\nMSBUILD : error MSB4166: Child node \"2\" exited prematurely. Shutting down. Diagnostic information may be found in files in \"/tmp/MSBuildTempJMZzb7/\" and will be named MSBuild_*.failure.txt. This location can be changed by setting the MSBUILDDEBUGPATH environment variable to a different directory.\n\nBuild FAILED.\n\nMSBUILD : error MSB4166: Child node \"2\" exited prematurely. Shutting down. Diagnostic information may be found in files in \"/tmp/MSBuildTempJMZzb7/\" and will be named MSBuild_*.failure.txt. This location can be changed by setting the MSBUILDDEBUGPATH environment variable to a different directory.\n    0 Warning(s)\n    1 Error(s)\n\nTime Elapsed 00:00:00.73\n",
+    "stderr": ""
+  }
+]

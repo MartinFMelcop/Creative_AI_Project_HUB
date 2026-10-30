@@ -1,0 +1,581 @@
+[
+  {
+    "id": "FLAG_PLAYER_HELPED-declared-scope",
+    "observations": [
+      false,
+      true,
+      false,
+      false,
+      true,
+      false
+    ],
+    "turn": 50
+  },
+  {
+    "id": "FLAG_PLAYER_HELPED-explicit-global-union",
+    "observations": [
+      true,
+      false,
+      false
+    ],
+    "turn": 0
+  },
+  {
+    "id": "FLAG_PLAYER_HELPED-scope-separation",
+    "observations": [
+      true,
+      false,
+      true,
+      true
+    ],
+    "turn": 1
+  },
+  {
+    "id": "FLAG_PLAYER_BETRAYED-declared-scope",
+    "observations": [
+      false,
+      true,
+      false,
+      false,
+      true,
+      false
+    ],
+    "turn": 50
+  },
+  {
+    "id": "FLAG_PLAYER_BETRAYED-explicit-global-union",
+    "observations": [
+      true,
+      false,
+      false
+    ],
+    "turn": 0
+  },
+  {
+    "id": "FLAG_PLAYER_BETRAYED-scope-separation",
+    "observations": [
+      true,
+      false,
+      true,
+      true
+    ],
+    "turn": 1
+  },
+  {
+    "id": "FLAG_PLAYER_LIED-declared-scope",
+    "observations": [
+      false,
+      true,
+      false,
+      false,
+      true,
+      false
+    ],
+    "turn": 50
+  },
+  {
+    "id": "FLAG_PLAYER_LIED-explicit-global-union",
+    "observations": [
+      true,
+      false,
+      false
+    ],
+    "turn": 0
+  },
+  {
+    "id": "FLAG_PLAYER_LIED-scope-separation",
+    "observations": [
+      true,
+      false,
+      true,
+      true
+    ],
+    "turn": 1
+  },
+  {
+    "id": "FLAG_PLAYER_THREATENED-declared-scope",
+    "observations": [
+      false,
+      true,
+      false,
+      false,
+      true,
+      false
+    ],
+    "turn": 50
+  },
+  {
+    "id": "FLAG_PLAYER_THREATENED-explicit-global-union",
+    "observations": [
+      true,
+      false,
+      false
+    ],
+    "turn": 0
+  },
+  {
+    "id": "FLAG_PLAYER_THREATENED-scope-separation",
+    "observations": [
+      true,
+      false,
+      true,
+      true
+    ],
+    "turn": 1
+  },
+  {
+    "id": "FLAG_OUTBURST_RECENT-declared-scope",
+    "observations": [
+      false,
+      true,
+      false,
+      false,
+      true,
+      false
+    ],
+    "turn": 5
+  },
+  {
+    "id": "FLAG_OUTBURST_RECENT-explicit-global-union",
+    "observations": [
+      true,
+      false,
+      false
+    ],
+    "turn": 0
+  },
+  {
+    "id": "FLAG_OUTBURST_RECENT-scope-separation",
+    "observations": [
+      true,
+      false,
+      true,
+      true
+    ],
+    "turn": 1
+  },
+  {
+    "id": "FLAG_OBSESSION_HOOKED-declared-scope",
+    "observations": [
+      false,
+      true,
+      false,
+      false,
+      true,
+      false
+    ],
+    "turn": 50
+  },
+  {
+    "id": "FLAG_OBSESSION_HOOKED-explicit-global-union",
+    "observations": [
+      true,
+      false,
+      false
+    ],
+    "turn": 0
+  },
+  {
+    "id": "FLAG_OBSESSION_HOOKED-scope-separation",
+    "observations": [
+      true,
+      false,
+      true,
+      true
+    ],
+    "turn": 1
+  },
+  {
+    "id": "FLAG_AVOID_PLAYER-declared-scope",
+    "observations": [
+      false,
+      true,
+      false,
+      false,
+      true,
+      false
+    ],
+    "turn": 50
+  },
+  {
+    "id": "FLAG_AVOID_PLAYER-explicit-global-union",
+    "observations": [
+      true,
+      false,
+      false
+    ],
+    "turn": 0
+  },
+  {
+    "id": "FLAG_AVOID_PLAYER-scope-separation",
+    "observations": [
+      true,
+      false,
+      true,
+      true
+    ],
+    "turn": 1
+  },
+  {
+    "id": "FLAG_TRUST_LOCKED_LOW-declared-scope",
+    "observations": [
+      false,
+      true,
+      false,
+      false,
+      true,
+      false
+    ],
+    "turn": 50
+  },
+  {
+    "id": "FLAG_TRUST_LOCKED_LOW-explicit-global-union",
+    "observations": [
+      true,
+      false,
+      false
+    ],
+    "turn": 0
+  },
+  {
+    "id": "FLAG_TRUST_LOCKED_LOW-scope-separation",
+    "observations": [
+      true,
+      false,
+      true,
+      true
+    ],
+    "turn": 1
+  },
+  {
+    "id": "FLAG_NPC0007_AVOID_PLAYER_TEMP-declared-scope",
+    "observations": [
+      false,
+      true,
+      false,
+      false,
+      true,
+      false
+    ],
+    "turn": 10
+  },
+  {
+    "id": "FLAG_NPC0007_AVOID_PLAYER_TEMP-explicit-global-union",
+    "observations": [
+      true,
+      false,
+      false
+    ],
+    "turn": 0
+  },
+  {
+    "id": "FLAG_NPC0007_AVOID_PLAYER_TEMP-scope-separation",
+    "observations": [
+      true,
+      false,
+      true,
+      true
+    ],
+    "turn": 1
+  },
+  {
+    "id": "EVT_PLAYER_HELPED-named-expiry",
+    "observations": [
+      true,
+      false,
+      true,
+      true,
+      false
+    ],
+    "turn": 10
+  },
+  {
+    "id": "EVT_PLAYER_HELPED-global-wildcard",
+    "observations": [
+      true,
+      false,
+      true,
+      false
+    ],
+    "turn": 0
+  },
+  {
+    "id": "EVT_PLAYER_HELPED-named-clear",
+    "observations": [
+      false,
+      true,
+      false
+    ],
+    "turn": 0
+  },
+  {
+    "id": "EVT_PLAYER_LIED-named-expiry",
+    "observations": [
+      true,
+      false,
+      true,
+      true,
+      false
+    ],
+    "turn": 20
+  },
+  {
+    "id": "EVT_PLAYER_LIED-global-wildcard",
+    "observations": [
+      true,
+      false,
+      true,
+      false
+    ],
+    "turn": 0
+  },
+  {
+    "id": "EVT_PLAYER_LIED-named-clear",
+    "observations": [
+      false,
+      true,
+      false
+    ],
+    "turn": 0
+  },
+  {
+    "id": "EVT_PLAYER_THREATENED-named-expiry",
+    "observations": [
+      true,
+      false,
+      true,
+      true,
+      false
+    ],
+    "turn": 20
+  },
+  {
+    "id": "EVT_PLAYER_THREATENED-global-wildcard",
+    "observations": [
+      true,
+      false,
+      true,
+      false
+    ],
+    "turn": 0
+  },
+  {
+    "id": "EVT_PLAYER_THREATENED-named-clear",
+    "observations": [
+      false,
+      true,
+      false
+    ],
+    "turn": 0
+  },
+  {
+    "id": "EVT_PLAYER_PRAISED-named-expiry",
+    "observations": [
+      true,
+      false,
+      true,
+      true,
+      false
+    ],
+    "turn": 10
+  },
+  {
+    "id": "EVT_PLAYER_PRAISED-global-wildcard",
+    "observations": [
+      true,
+      false,
+      true,
+      false
+    ],
+    "turn": 0
+  },
+  {
+    "id": "EVT_PLAYER_PRAISED-named-clear",
+    "observations": [
+      false,
+      true,
+      false
+    ],
+    "turn": 0
+  },
+  {
+    "id": "EVT_PLAYER_INSULTED-named-expiry",
+    "observations": [
+      true,
+      false,
+      true,
+      true,
+      false
+    ],
+    "turn": 15
+  },
+  {
+    "id": "EVT_PLAYER_INSULTED-global-wildcard",
+    "observations": [
+      true,
+      false,
+      true,
+      false
+    ],
+    "turn": 0
+  },
+  {
+    "id": "EVT_PLAYER_INSULTED-named-clear",
+    "observations": [
+      false,
+      true,
+      false
+    ],
+    "turn": 0
+  },
+  {
+    "id": "EVT_TOPIC_OBSESSION-named-expiry",
+    "observations": [
+      true,
+      false,
+      true,
+      true,
+      false
+    ],
+    "turn": 8
+  },
+  {
+    "id": "EVT_TOPIC_OBSESSION-global-wildcard",
+    "observations": [
+      true,
+      false,
+      true,
+      false
+    ],
+    "turn": 0
+  },
+  {
+    "id": "EVT_TOPIC_OBSESSION-named-clear",
+    "observations": [
+      false,
+      true,
+      false
+    ],
+    "turn": 0
+  },
+  {
+    "id": "EVT_MANIPULATION_SUSPECTED-named-expiry",
+    "observations": [
+      true,
+      false,
+      true,
+      true,
+      false
+    ],
+    "turn": 10
+  },
+  {
+    "id": "EVT_MANIPULATION_SUSPECTED-global-wildcard",
+    "observations": [
+      true,
+      false,
+      true,
+      false
+    ],
+    "turn": 0
+  },
+  {
+    "id": "EVT_MANIPULATION_SUSPECTED-named-clear",
+    "observations": [
+      false,
+      true,
+      false
+    ],
+    "turn": 0
+  },
+  {
+    "id": "EVT_NPC_OUTBURST-named-expiry",
+    "observations": [
+      true,
+      false,
+      true,
+      true,
+      false
+    ],
+    "turn": 5
+  },
+  {
+    "id": "EVT_NPC_OUTBURST-global-wildcard",
+    "observations": [
+      true,
+      false,
+      true,
+      false
+    ],
+    "turn": 0
+  },
+  {
+    "id": "EVT_NPC_OUTBURST-named-clear",
+    "observations": [
+      false,
+      true,
+      false
+    ],
+    "turn": 0
+  },
+  {
+    "id": "EVT_NPC0007_LEAVE_SCENE-named-expiry",
+    "observations": [
+      true,
+      false,
+      true,
+      true,
+      false
+    ],
+    "turn": 10
+  },
+  {
+    "id": "EVT_NPC0007_LEAVE_SCENE-global-wildcard",
+    "observations": [
+      true,
+      false,
+      true,
+      false
+    ],
+    "turn": 0
+  },
+  {
+    "id": "EVT_NPC0007_LEAVE_SCENE-named-clear",
+    "observations": [
+      false,
+      true,
+      false
+    ],
+    "turn": 0
+  },
+  {
+    "id": "EVT_PLAYER_RESPEC_STATALLOC-named-expiry",
+    "observations": [
+      true,
+      false,
+      true,
+      true,
+      false
+    ],
+    "turn": 50
+  },
+  {
+    "id": "EVT_PLAYER_RESPEC_STATALLOC-global-wildcard",
+    "observations": [
+      true,
+      false,
+      true,
+      false
+    ],
+    "turn": 0
+  },
+  {
+    "id": "EVT_PLAYER_RESPEC_STATALLOC-named-clear",
+    "observations": [
+      false,
+      true,
+      false
+    ],
+    "turn": 0
+  }
+]

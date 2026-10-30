@@ -1,0 +1,70 @@
+{
+  "schema_version": 1,
+  "kind": "bounded_static_source_inspection",
+  "evidence_label": "OBSERVED_SOURCE",
+  "sources": [
+    {
+      "path": "references/rave-master/snapshots/36af1651271422ae33856e8b5d7b45702215f165/source/RM_ACT1/DATA/DEV/RGSS/RM_CHARACTER_CREATE_RUNTIME.rb",
+      "bytes": 15022,
+      "sha256": "5f24a3ad9daaa230b039ce15b43a8780aa0b73e0c499e28cd90146eae613c7d0"
+    },
+    {
+      "path": "references/rave-master/snapshots/36af1651271422ae33856e8b5d7b45702215f165/source/RM_DIST/RMXP_BASE/ScriptsCustom/RM_CHARACTER_CREATE_RUNTIME.rb",
+      "bytes": 12014,
+      "sha256": "2585a36bff2ebd5afd2f786355a74e3f655d1ae665d316e30c5e1a83b4ffb79f"
+    },
+    {
+      "path": "references/rave-master/snapshots/36af1651271422ae33856e8b5d7b45702215f165/source/RM_CORE/DATA/CORE/KITS_INICIAIS.csv",
+      "bytes": 1727,
+      "sha256": "fba53abe280f94d60d68cc7513ab9edab686e223e14783fc88c8ccb973d96d67"
+    },
+    {
+      "path": "references/rave-master/snapshots/36af1651271422ae33856e8b5d7b45702215f165/source/RM_DIST/RMXP_BASE/Data/RM_CSV/KITS_INICIAIS.csv",
+      "bytes": 1727,
+      "sha256": "fba53abe280f94d60d68cc7513ab9edab686e223e14783fc88c8ccb973d96d67"
+    }
+  ],
+  "observations": [
+    "DEV and DIST creation runtimes differ; do not normalize variants.",
+    "DEV apply_selection passes numeric antecedente ID into apply_loadout; helper matches substring against row Antecedente.",
+    "All26 actual kit rows use named background labels containing no digits.",
+    "DEV contains fuzzy item-name substring selection, item-token text parsing and fallback money/potions when log is empty.",
+    "DIST apply_selection persists class/background without DEV apply_loadout call.",
+    "DEV contains visibly interleaved/parser fragments; no syntax or runtime repair performed."
+  ],
+  "table": {
+    "rows": 26,
+    "fields": 5,
+    "background_labels": [
+      "Acólito",
+      "Artista",
+      "Artífice/Comerciante",
+      "Batedor",
+      "Caçador",
+      "Criminoso",
+      "Cultista",
+      "Erudito",
+      "Guardião",
+      "Sobrevivente",
+      "Soldado"
+    ],
+    "labels_with_digits": 0,
+    "leading_plus_changes": 20
+  },
+  "inferences": [
+    {
+      "evidence_label": "INFERENCE",
+      "text": "If the intended DEV helper flow is reachable/executable, numeric IDs do not match these named kit rows and the empty-log fallback can supply generic resources instead of a selected exact kit."
+    },
+    {
+      "evidence_label": "INFERENCE",
+      "text": "Token delimiters and fuzzy lookup can create empty/ambiguous item-name resolution, so they are unsuitable as an unvalidated original preparation permission/grant authority."
+    }
+  ],
+  "destination_decision": "Use an independently authored strict immutable original JSON book feeding existing exact draft/review/confirm; no fallback grants, source fiction or full historical creation parser adoption.",
+  "limits": [
+    "Static source/data inspection only; no Ruby/RGSS/RMXP or item database executed.",
+    "No whole-source collection rejection or integration is established by this record.",
+    "Protected sources and variants remain exact; current destination is bounded original authored data."
+  ]
+}

@@ -51,9 +51,28 @@
    $(site.id+'-sample-window').textContent=site.eligible?'Actual site reached with an empty case. Sampling spends the next beat and resolves its threat.':c.case_spent?'The one case is already spent; this site cannot supply another sample.':!e.active?'Enter the actual encounter before collecting.':e.stage!==site.stage?'This site belongs to the other encounter.':`Reach exact position ${site.position} while this encounter remains active. Passing a site or reaching a threshold does not collect it.`;
   }
  }
+ function preparationBook(s){
+  if(!s.preparation_book||!Array.isArray(s.preparation_book.cards))throw Error('Actual authored preparation book required');
+  const book=s.preparation_book;
+  const confirmedCardObserved = s.preparation_book.confirmed_card_id;
+  const panel=$('preparation-book');panel.dataset.draftCard=book.draft_card_id||'';panel.dataset.confirmedCard=confirmedCardObserved||'';
+  const name=id=>book.cards.find(card=>card.id===id)?.title||id;
+  $('preparation-draft-source').textContent=book.draft_card_id?`Draft source: ${name(book.draft_card_id)}. This is not confirmation or equipment.`:'Draft source: manual preparation. No authored card is attached.';
+  $('preparation-confirmed-source').textContent=!s.intake.confirmed?'Confirmed source: none. Review and explicitly confirm a whole draft.':confirmedCardObserved?`Confirmed source: ${name(confirmedCardObserved)}. Actual equipped actions and rig remain the owner facts below.`:'Confirmed source: manual preparation. No authored card is attached.';
+  $('preparation-cards').replaceChildren(...book.cards.map(card=>{
+   const article=document.createElement('article');article.dataset.cardId=card.id;article.dataset.eligible=String(card.eligible);article.dataset.minimumLevel=String(card.minimum_level);
+   const title=document.createElement('h3');title.textContent=card.title;
+   const description=document.createElement('p');description.textContent=card.description;
+   const preparation=document.createElement('p');preparation.className='preparation-card-fields';preparation.textContent=`${card.class_id} / ${card.background_id} · slots: ${card.slots.map(x=>x||'empty').join(' / ')}`;
+   const rig=document.createElement('p');rig.className='small';rig.textContent=`Rig recommendation: ${card.recommended_rig}. Not acquired or equipped.`;
+   const eligibility=document.createElement('p');eligibility.className='preparation-card-eligibility';eligibility.textContent=card.eligible?`Actual level ${s.intake.state.level}; this whole proposal is available.`:`Requires actual level ${card.minimum_level} and editable preparation. Current level: ${s.intake.state.level}.`;
+   const button=document.createElement('button');button.id='propose-card-'+card.id;button.type='button';button.className='secondary';button.textContent='Propose '+card.title;button.disabled=busy||uncertain||!card.eligible;button.onclick=()=>invoke('propose-card',{card_id:card.id});
+   article.append(title,description,preparation,rig,eligibility,button);return article;
+  }));
+ }
  function render(s){
   if(!s?.intake?.state||!s?.memory||!Array.isArray(s.fittings))throw Error('Incomplete actual journey observation');
-  state=s;const card=s.intake,e=card.state,m=s.memory,id=card.identity;encounterView(s.encounter_view);samplingView(s);
+  state=s;const card=s.intake,e=card.state,m=s.memory,id=card.identity;encounterView(s.encounter_view);samplingView(s);preparationBook(s);
   const completeObserved = Boolean(s.intake.state.complete);
   document.body.dataset.confirmed=String(card.confirmed);document.body.dataset.workshopClosed=String(s.workshop_closed);document.body.dataset.complete=String(completeObserved);
   $('confirmed-name').textContent=id?id.handle:'Not confirmed';$('identity-discipline').textContent=id?`${id.class_id} / ${id.background_id}`:'No committed preparation';$('identity-accent').textContent=id?`${id.accent} cloth accent · expression only`:'Expression has no combat advantage.';$('identity-slots').textContent=id?`Equipped: ${id.slots.map(x=>x||'empty').join(' / ')}`:'No confirmed actions.';
@@ -103,10 +122,11 @@
   $('begin').disabled=busy||uncertain||!ready||locked;
   for(const key of ['walk','wait','use-slot1','use-slot2','use-slot3','use-slot4'])$(key).disabled=busy||uncertain||!e.active;
   for(const site of state.sample_case.sites)$('sample-'+site.id).disabled=busy||uncertain||!site.eligible;
+  for(const card of state.preparation_book.cards)$('propose-card-'+card.id).disabled=busy||uncertain||!card.eligible;
   for(const key of ['focus','vitality'])$(key).disabled=busy||uncertain||locked||e.unspent<1;
  }
  async function read(){if(busy)return;busy=true;controls();const g=++generation;try{const r=await fetch('/state',{cache:'no-store'});if(!r.ok)throw Error('Read refused');const s=await r.json();if(g!==generation)return;uncertain=false;render(s);adopt(s.intake.draft);$('connection').textContent='Current facts read from the owner. No action was retried.';}catch(e){uncertain=true;$('connection').textContent='Unable to read: '+e.message+'. Read again before acting.';}finally{busy=false;controls();}}
- async function send(command,fields={}){if(busy||uncertain||!state)throw Error('Read current facts before another action');busy=true;controls();const g=generation;try{const r=await fetch('/command',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({command,revision:state.sequence,...fields})});if(!r.ok)throw Error('Command receipt unavailable');const s=await r.json();if(g!==generation)throw Error('Response quarantined after interruption');render(s);if(command==='draft')adopt(s.intake.draft);$('connection').textContent='Actual owner response. No automatic retry or clock conversion.';return s;}catch(e){uncertain=true;$('connection').textContent='Outcome uncertain: '+e.message+'. Explicitly read facts before acting again.';throw e;}finally{busy=false;controls();}}
+ async function send(command,fields={}){if(busy||uncertain||!state)throw Error('Read current facts before another action');busy=true;controls();const g=generation;try{const r=await fetch('/command',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({command,revision:state.sequence,...fields})});if(!r.ok)throw Error('Command receipt unavailable');const s=await r.json();if(g!==generation)throw Error('Response quarantined after interruption');render(s);if(command==='draft'||command==='propose-card')adopt(s.intake.draft);$('connection').textContent='Actual owner response. No automatic retry or clock conversion.';return s;}catch(e){uncertain=true;$('connection').textContent='Outcome uncertain: '+e.message+'. Explicitly read facts before acting again.';throw e;}finally{busy=false;controls();}}
  function invoke(command,fields={}){send(command,fields).catch(()=>{});}
  $('draft-form').onsubmit=e=>{e.preventDefault();invoke('draft',proposal());};$('review').onclick=()=>invoke('review');$('confirm').onclick=()=>invoke('confirm',{draft_revision:state.intake.draft_revision});
  for(const bench of ['west','east']){$(bench+'-help').onclick=()=>invoke(state.memory.benches.find(b=>b.id===bench).helped?'demonstrate':'help',{bench});$(bench+'-serve').onclick=()=>invoke('serve',{bench});$(bench+'-decline').onclick=()=>invoke('decline',{bench});}

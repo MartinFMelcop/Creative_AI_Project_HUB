@@ -1,0 +1,11 @@
+Unhandled exception. System.InvalidOperationException: The requested operation requires an element of type 'Number', but the target element has type 'String'.
+   at System.Text.Json.ThrowHelper.ThrowJsonElementWrongTypeException(JsonTokenType expectedType, JsonTokenType actualType)
+   at System.Text.Json.JsonDocument.TryGetValue(Int32 index, Int32& value)
+   at NorthStar.FieldJourney.PackLoader.Integer(JsonElement value, String name) in /workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/field-journey/Host/PackLoader.cs:line 40
+   at NorthStar.FieldJourney.PackLoader.<>c.<Parse>b__2_0(JsonElement row) in /workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/field-journey/Host/PackLoader.cs:line 34
+   at System.Linq.Enumerable.IEnumerableSelectIterator`2.ToArray()
+   at NorthStar.FieldJourney.PackLoader.Parse(Byte[] bytes) in /workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/field-journey/Host/PackLoader.cs:line 30
+   at Program.Changed(Byte[] raw, Action`1 mutate) in /workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/field-journey/PreparationChecks/Program.cs:line 36
+   at Program.<>c__DisplayClass18_0.<Main>b__13() in /workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/field-journey/PreparationChecks/Program.cs:line 76
+   at Program.Reject(Action action, String name) in /workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/field-journey/PreparationChecks/Program.cs:line 30
+   at Program.Main(String[] args) in /workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/field-journey/PreparationChecks/Program.cs:line 76

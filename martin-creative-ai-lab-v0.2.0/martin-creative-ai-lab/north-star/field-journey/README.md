@@ -176,3 +176,36 @@ This extension remains ephemeral .NET10/Linux/browser over unchanged child owner
 The narrow sampling library targets C#8/netstandard2.1; no Unity import, production
 Windows/Steam, participant experience, full creation/item parser or commercial clearance
 is established. Neither recipient package is changed.
+
+## Author original preparation proposals
+
+The startup `preparations.json` book contains exact original cards, not new classes,
+permissions, inventory or automatic equipment. Authors may supply another bounded book
+with `--preparations PATH` (independently of the optional `--policy`). The host validates
+the WHOLE book before listening: exact schema and fields, unique IDs, typed values,
+four slots and actual current catalog relations/skill prerequisites. Unknown content,
+partial rows, extra grants or unsupported definitions fail; there is no repair/fallback.
+The default book is copied with the managed build. Missing data cannot silently select
+an alternative. Loaded data is immutable for that process; there is no hot reload.
+
+Explicitly proposing a card delegates the existing whole draft action, preserving the
+current handle/accent. It never confirms, crafts, supplies a rig, allocates points, grants
+XP, heals or begins an encounter. Review and confirmation remain separate actual owner
+commands. A declared minimum level cannot supply the person's earned level. The earned
+Dash cards are unavailable until actual progression permits them.
+
+Draft-card and confirmed-card provenance are separate from the actual confirmed identity.
+Manual draft edits clear draft provenance and expire review; rejected proposals leave
+both facts intact. A recommended rig is authored guidance, never current possession or
+what the person actually used. The player may still submit an original manual proposal.
+
+```bash
+python3 north-star/field-journey/tools/preparation-verify.py --dotnet dotnet --output /tmp/preparation-authoring-new
+```
+
+[Acceptance](../../evidence/preparation-authoring/protocol.json) and
+[execution](../../evidence/preparation-authoring/RUN.json) compare real card/manual
+preparation and a separately authored slot variant through actual unchanged owners.
+This is a bounded original authoring workflow, not the historical character-create
+parser, full avatar creator, new skill catalog, human-tested authoring utility, production
+ownership assignment or final class canon. No recipient package or save is changed.

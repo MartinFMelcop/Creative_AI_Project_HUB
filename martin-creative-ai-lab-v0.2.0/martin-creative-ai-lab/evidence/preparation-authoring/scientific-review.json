@@ -1,0 +1,78 @@
+{
+  "schema_version": 1,
+  "kind": "scientific_cross_specialty_readonly_final_review",
+  "date": "2026-10-29 America/Sao_Paulo",
+  "reviewer": "/root/frontier_science",
+  "role_disclosure": "Reviewer independently analyzed source/question and authored prospective protocol plus browser instrument; final review covers Engineering hardening and primary-executed actual artifacts. This is not blinded independent validation of the reviewer-authored instrument, human approval or a population study.",
+  "brain_chapters": [
+    "SCI-013",
+    "SCI-014",
+    "SCI-076",
+    "SCI-077"
+  ],
+  "artifacts": {
+    "verification.json": {
+      "actual_path": "/workspace/work/preparation-pack/final-verified/verification.json",
+      "sha256": "2eee1658e3f036fedef1ee3a3560722025b6f9d4293a05782dfbda356ecbf2ad"
+    },
+    "native.json": {
+      "actual_path": "/workspace/work/preparation-pack/final-verified/native.json",
+      "sha256": "c3aa55529ebd97d5b9cdd6d5d6b53a641fe8e7a1cf12965646372e47f6eac529"
+    },
+    "browser/browser.json": {
+      "actual_path": "/workspace/work/preparation-pack/final-verified/browser/browser.json",
+      "sha256": "26e36eb011e4033583408a2abf2700d8da03e8e98a11319ebfa08134c23d047b"
+    },
+    "commands.json": {
+      "actual_path": "/workspace/work/preparation-pack/final-verified/commands.json",
+      "sha256": "edf750746a818a9c2dea31ddd831c70ce14938be122f60a4c747c3f939a4204a"
+    }
+  },
+  "implementation_sources": {
+    "north-star/field-journey/Preparation/Cards.cs": "3ee288ef5a3cf1e9a6c9ac0a47c0cd5f6fe07005a14c7acccb33f78a65ee7e29",
+    "north-star/field-journey/Host/PackLoader.cs": "3336553d16602a1c98ef0b2bee6deccd54f78d457b8e28e9d8f984db1c13964f",
+    "north-star/field-journey/Host/Room.cs": "4ccf260e41e965505790f944a82f17f5c511073d2a7ac5ce989a8d577f9c33c1",
+    "north-star/field-journey/tools/preparation-verify.py": "5f77b1c385bbdf0e620ee63324177fd6de8efcccd3a54e7df460f64d4a612736",
+    "north-star/field-journey/tools/preparation-browser.mjs": "e7bd403fdfed2a7799eb7d2f9fb5d2074ebd5602adb3bb04f1465d23bcc32231",
+    "north-star/field-journey/preparations.json": "d6771016c773bb10e95410050128094e2f3f1b243be464ef6be611b3dde5ea95",
+    "evidence/preparation-authoring/protocol.json": "9c699b3286781e1f32cf6047e643c035947473545d97a046b9a24cb2fb6d538f"
+  },
+  "actual_checks": {
+    "native": {
+      "passed": 41,
+      "failed": 0
+    },
+    "chromium_host": {
+      "passed": 30,
+      "failed": 0
+    },
+    "bad_startup_controls_included_in_browser_count": 9,
+    "http_negatives": 2,
+    "source_closure_identities": 106,
+    "source_stable_and_current_hashes_rechecked": true,
+    "all_five_command_exit_codes_zero": true,
+    "copied_runtime_default_book_matches_guarded_source": "d6771016c773bb10e95410050128094e2f3f1b243be464ef6be611b3dde5ea95",
+    "native_anchor_and_lure_full_routes_complete": true
+  },
+  "verified_findings": [
+    "All current106source identities equal final verification manifest.",
+    "Default source book/native runtime/browser observation SHA256 agree exactly.",
+    "All nine malformed whole books exit1 without READY; startup validation precedes Room/listener in actual code.",
+    "Publicly supplied in-process Book is revalidated against the real owner catalog; foreign-catalog negative is the41st native control.",
+    "Original whole-card proposal uses actual draft, review and confirmation; no card metadata grants XP, materials, rig, health or level permission.",
+    "Content-only valid variant actually changes slots to null/draw/null/null; real slot1 refusal and slot2 skill execution are retained.",
+    "Actual earned Dash executes with position2, health5, one resolve spent and hurt contact; this is not a favorable-balance finding.",
+    "Actual proposed-as-confirmed renderer is detected against external owner state; draft/card provenance remain separate.",
+    "Both native authored Anchor/Lure full routes complete through actual unchanged owners; manual equivalence and forbidden cases remain controls."
+  ],
+  "hardening_review": "Room validates every supplied Book card through actual PreparedExpedition.Catalog before creating child owners. PackLoader validates complete exact schema/types before listening; wrapper compares runtime default-book identity to guarded authored-source identity. No gameplay/rule/test weakening observed.",
+  "material_defects_found": [],
+  "retained_execution_limit": "First final-hardened wrapper build failed MSB4166 child node2 exited prematurely; initial commands are retained and cause remains unproven. Current final-verified success is an unchanged bounded retry, not proof of that failure cause.",
+  "limits": [
+    "30browser/host controls include9bad-startup controls; groups overlap outcomes and are not independent people/studies.",
+    "Book/source SHA256 is identity, not rights clearance, signature or human authorship validation.",
+    "Current static historical DEV/DIST findings are not Ruby/RMXP execution or full creation parser integration.",
+    "No human author productivity, comprehension, enjoyment, build diversity or balance was measured.",
+    "No Unity Editor/license/module, new Windows/Steam delivery or production ownership approval is established."
+  ]
+}

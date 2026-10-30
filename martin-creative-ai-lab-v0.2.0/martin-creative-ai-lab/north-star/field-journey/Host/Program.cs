@@ -15,14 +15,22 @@ public static class Program
     {
         try
         {
-            if((args.Length!=5&&args.Length!=7) || args[0]!="--serve" || args[3]!="--seconds" || args.Length==7&&args[5]!="--policy")
-                throw new ArgumentException("Usage: --serve PORT WEBROOT --seconds 1..600 [--policy independent|ordered]");
+            if((args.Length!=5&&args.Length!=7&&args.Length!=9)||args[0]!="--serve"||args[3]!="--seconds")
+                throw new ArgumentException("Usage: --serve PORT WEBROOT --seconds 1..600 [--policy independent|ordered] [--preparations PATH]");
+            string policy="independent";string? preparations=null;bool sawPolicy=false;
+            for(int i=5;i<args.Length;i+=2)
+            {
+                if(args[i]=="--policy"&&!sawPolicy){policy=args[i+1];sawPolicy=true;}
+                else if(args[i]=="--preparations"&&preparations==null)preparations=args[i+1];
+                else throw new ArgumentException("Exact unique startup options required.");
+            }
             int port=int.Parse(args[1]),seconds=int.Parse(args[4]);
             if(port<1024 || port>65535 || seconds<1 || seconds>600)
                 throw new ArgumentException("Bound loopback port/lifetime required.");
             string web=Path.GetFullPath(args[2]);
             if(!Directory.Exists(web))throw new ArgumentException("Web root must exist.");
-            var room=new Room(args.Length==7?args[6]:"independent");
+            var book=preparations==null?PackLoader.Default():PackLoader.Load(Path.GetFullPath(preparations));
+            var room=new Room(policy,book);
             using var lifetime=new CancellationTokenSource(TimeSpan.FromSeconds(seconds));
             using var listener=new HttpListener();
             listener.Prefixes.Add($"http://127.0.0.1:{port}/");
