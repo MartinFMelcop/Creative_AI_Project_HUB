@@ -1,0 +1,1433 @@
+{
+  "schema_version": 1,
+  "kind": "actual_browser_named_query_service",
+  "checks": {
+    "passed": 21,
+    "failed": 0
+  },
+  "http_checks": {
+    "passed": 4,
+    "failed": 0
+  },
+  "controls": [
+    "Single-offer policy is visible with actual empty offers",
+    "A refused empty-offer decline cannot write permanent closure",
+    "Actual help pays one part and turn before observing exact West evidence",
+    "Accepted explicit decline closes exact offer without paying another turn",
+    "Fresh paid demonstration restores witness and support but not the closed offer",
+    "A repeated closed-offer decline cannot clear renewed witness or add history",
+    "Closed offer and current witness are distinct visible actual shapes",
+    "Actual service control remains disabled despite fresh paid evidence",
+    "Closed offer refuses service with enough coin and fresh evidence without payment or output",
+    "Read redraw elapsed time and browser reentry cannot reopen an exact offer",
+    "Other exact offer remains independently eligible and supplies its one actual fitting",
+    "Later accepted closure cannot erase acquired fitting or refund its coin",
+    "Existing fitting is not a fresh service or extra receipt after closure",
+    "Client flags query results and policy cannot rewrite private offer authority",
+    "Stale actual request cannot add a transition or change offer state",
+    "Original independent policy still renews current exact witness eligibility",
+    "Same existing independent actions retain their actual paid fitting outcome",
+    "Actual isolated false-open renderer is rejected",
+    "Actual isolated false-fitting renderer is rejected",
+    "No actual uncaught browser errors",
+    "Actual query consumer source closure remains stable"
+  ],
+  "http_controls": [
+    {
+      "id": "forged closed flag",
+      "status": 400,
+      "unchanged": true
+    },
+    {
+      "id": "forged query snapshot",
+      "status": 400,
+      "unchanged": true
+    },
+    {
+      "id": "forged startup policy",
+      "status": 400,
+      "unchanged": true
+    },
+    {
+      "id": "old intent cannot reopen closed offer",
+      "status": 200,
+      "unchanged": true
+    }
+  ],
+  "states": {
+    "initial": {
+      "sequence": 0,
+      "command": "initial",
+      "accepted": true,
+      "text": "Each named bench has one offer. An accepted withdrawal permanently closes only that bench. Paid demonstration can renew support, not reopen its offer.",
+      "turn": 0,
+      "parts": 4,
+      "coins": 2,
+      "policy": "single-offer",
+      "complete": false,
+      "benches": [
+        {
+          "id": "west",
+          "helped": false,
+          "support": false,
+          "recent": false,
+          "offer_closed": false,
+          "expires": null,
+          "eligible": false,
+          "delivered": false,
+          "condition_expression": "HasTag(local-request)=true & HasFlag(helped)=true & HasFlag(support)=true & HasRecentEvent(demonstrated)=true & HasFlag(offer-closed)=false",
+          "condition_satisfied": false,
+          "condition_complete": true
+        },
+        {
+          "id": "east",
+          "helped": false,
+          "support": false,
+          "recent": false,
+          "offer_closed": false,
+          "expires": null,
+          "eligible": false,
+          "delivered": false,
+          "condition_expression": "HasTag(local-request)=true & HasFlag(helped)=true & HasFlag(support)=true & HasRecentEvent(demonstrated)=true & HasFlag(offer-closed)=false",
+          "condition_satisfied": false,
+          "condition_complete": true
+        }
+      ],
+      "history": []
+    },
+    "helped": {
+      "sequence": 2,
+      "command": "help",
+      "accepted": true,
+      "text": "One part and one action spent on actual local help. This bench observed the demonstration; its current window expires at turn 4.",
+      "turn": 1,
+      "parts": 3,
+      "coins": 2,
+      "policy": "single-offer",
+      "complete": false,
+      "benches": [
+        {
+          "id": "west",
+          "helped": true,
+          "support": true,
+          "recent": true,
+          "offer_closed": false,
+          "expires": 4,
+          "eligible": true,
+          "delivered": false,
+          "condition_expression": "HasTag(local-request)=true & HasFlag(helped)=true & HasFlag(support)=true & HasRecentEvent(demonstrated)=true & HasFlag(offer-closed)=false",
+          "condition_satisfied": true,
+          "condition_complete": true
+        },
+        {
+          "id": "east",
+          "helped": false,
+          "support": false,
+          "recent": false,
+          "offer_closed": false,
+          "expires": null,
+          "eligible": false,
+          "delivered": false,
+          "condition_expression": "HasTag(local-request)=true & HasFlag(helped)=true & HasFlag(support)=true & HasRecentEvent(demonstrated)=true & HasFlag(offer-closed)=false",
+          "condition_satisfied": false,
+          "condition_complete": true
+        }
+      ],
+      "history": [
+        {
+          "sequence": 2,
+          "command": "help",
+          "bench": "west",
+          "turn": 1,
+          "parts": 3,
+          "coins": 2,
+          "fittings": 0
+        }
+      ]
+    },
+    "closed": {
+      "sequence": 3,
+      "command": "decline",
+      "accepted": true,
+      "text": "This named offer permanently closed without a turn. Past help and actual fitting remain true. A fresh paid demonstration may renew support, but cannot reopen the offer.",
+      "turn": 1,
+      "parts": 3,
+      "coins": 2,
+      "policy": "single-offer",
+      "complete": false,
+      "benches": [
+        {
+          "id": "west",
+          "helped": true,
+          "support": false,
+          "recent": false,
+          "offer_closed": true,
+          "expires": null,
+          "eligible": false,
+          "delivered": false,
+          "condition_expression": "HasTag(local-request)=true & HasFlag(helped)=true & HasFlag(support)=true & HasRecentEvent(demonstrated)=true & HasFlag(offer-closed)=false",
+          "condition_satisfied": false,
+          "condition_complete": true
+        },
+        {
+          "id": "east",
+          "helped": false,
+          "support": false,
+          "recent": false,
+          "offer_closed": false,
+          "expires": null,
+          "eligible": false,
+          "delivered": false,
+          "condition_expression": "HasTag(local-request)=true & HasFlag(helped)=true & HasFlag(support)=true & HasRecentEvent(demonstrated)=true & HasFlag(offer-closed)=false",
+          "condition_satisfied": false,
+          "condition_complete": true
+        }
+      ],
+      "history": [
+        {
+          "sequence": 2,
+          "command": "help",
+          "bench": "west",
+          "turn": 1,
+          "parts": 3,
+          "coins": 2,
+          "fittings": 0
+        },
+        {
+          "sequence": 3,
+          "command": "decline",
+          "bench": "west",
+          "turn": 1,
+          "parts": 3,
+          "coins": 2,
+          "fittings": 0
+        }
+      ]
+    },
+    "renewed": {
+      "sequence": 4,
+      "command": "demonstrate",
+      "accepted": true,
+      "text": "One part and one action spent on a fresh local demonstration. Current support explicitly renewed; past help was not replayed.",
+      "turn": 2,
+      "parts": 2,
+      "coins": 2,
+      "policy": "single-offer",
+      "complete": false,
+      "benches": [
+        {
+          "id": "west",
+          "helped": true,
+          "support": true,
+          "recent": true,
+          "offer_closed": true,
+          "expires": 5,
+          "eligible": false,
+          "delivered": false,
+          "condition_expression": "HasTag(local-request)=true & HasFlag(helped)=true & HasFlag(support)=true & HasRecentEvent(demonstrated)=true & HasFlag(offer-closed)=false",
+          "condition_satisfied": false,
+          "condition_complete": true
+        },
+        {
+          "id": "east",
+          "helped": false,
+          "support": false,
+          "recent": false,
+          "offer_closed": false,
+          "expires": null,
+          "eligible": false,
+          "delivered": false,
+          "condition_expression": "HasTag(local-request)=true & HasFlag(helped)=true & HasFlag(support)=true & HasRecentEvent(demonstrated)=true & HasFlag(offer-closed)=false",
+          "condition_satisfied": false,
+          "condition_complete": true
+        }
+      ],
+      "history": [
+        {
+          "sequence": 2,
+          "command": "help",
+          "bench": "west",
+          "turn": 1,
+          "parts": 3,
+          "coins": 2,
+          "fittings": 0
+        },
+        {
+          "sequence": 3,
+          "command": "decline",
+          "bench": "west",
+          "turn": 1,
+          "parts": 3,
+          "coins": 2,
+          "fittings": 0
+        },
+        {
+          "sequence": 4,
+          "command": "demonstrate",
+          "bench": "west",
+          "turn": 2,
+          "parts": 2,
+          "coins": 2,
+          "fittings": 0
+        }
+      ]
+    },
+    "refused": {
+      "sequence": 6,
+      "command": "serve",
+      "accepted": false,
+      "text": "No current service: this exact bench requires observed help, current support, its recent demonstration, one actual coin and the displayed authored condition. No cost paid.",
+      "turn": 2,
+      "parts": 2,
+      "coins": 2,
+      "policy": "single-offer",
+      "complete": false,
+      "benches": [
+        {
+          "id": "west",
+          "helped": true,
+          "support": true,
+          "recent": true,
+          "offer_closed": true,
+          "expires": 5,
+          "eligible": false,
+          "delivered": false,
+          "condition_expression": "HasTag(local-request)=true & HasFlag(helped)=true & HasFlag(support)=true & HasRecentEvent(demonstrated)=true & HasFlag(offer-closed)=false",
+          "condition_satisfied": false,
+          "condition_complete": true
+        },
+        {
+          "id": "east",
+          "helped": false,
+          "support": false,
+          "recent": false,
+          "offer_closed": false,
+          "expires": null,
+          "eligible": false,
+          "delivered": false,
+          "condition_expression": "HasTag(local-request)=true & HasFlag(helped)=true & HasFlag(support)=true & HasRecentEvent(demonstrated)=true & HasFlag(offer-closed)=false",
+          "condition_satisfied": false,
+          "condition_complete": true
+        }
+      ],
+      "history": [
+        {
+          "sequence": 2,
+          "command": "help",
+          "bench": "west",
+          "turn": 1,
+          "parts": 3,
+          "coins": 2,
+          "fittings": 0
+        },
+        {
+          "sequence": 3,
+          "command": "decline",
+          "bench": "west",
+          "turn": 1,
+          "parts": 3,
+          "coins": 2,
+          "fittings": 0
+        },
+        {
+          "sequence": 4,
+          "command": "demonstrate",
+          "bench": "west",
+          "turn": 2,
+          "parts": 2,
+          "coins": 2,
+          "fittings": 0
+        }
+      ]
+    },
+    "east": {
+      "sequence": 8,
+      "command": "serve",
+      "accepted": true,
+      "text": "One coin and one action spent. The east bench actually supplied its one fitting. Later expiry cannot erase this output.",
+      "turn": 4,
+      "parts": 1,
+      "coins": 1,
+      "policy": "single-offer",
+      "complete": false,
+      "benches": [
+        {
+          "id": "west",
+          "helped": true,
+          "support": true,
+          "recent": true,
+          "offer_closed": true,
+          "expires": 5,
+          "eligible": false,
+          "delivered": false,
+          "condition_expression": "HasTag(local-request)=true & HasFlag(helped)=true & HasFlag(support)=true & HasRecentEvent(demonstrated)=true & HasFlag(offer-closed)=false",
+          "condition_satisfied": false,
+          "condition_complete": true
+        },
+        {
+          "id": "east",
+          "helped": true,
+          "support": true,
+          "recent": true,
+          "offer_closed": false,
+          "expires": 6,
+          "eligible": false,
+          "delivered": true,
+          "condition_expression": "HasTag(local-request)=true & HasFlag(helped)=true & HasFlag(support)=true & HasRecentEvent(demonstrated)=true & HasFlag(offer-closed)=false",
+          "condition_satisfied": true,
+          "condition_complete": true
+        }
+      ],
+      "history": [
+        {
+          "sequence": 2,
+          "command": "help",
+          "bench": "west",
+          "turn": 1,
+          "parts": 3,
+          "coins": 2,
+          "fittings": 0
+        },
+        {
+          "sequence": 3,
+          "command": "decline",
+          "bench": "west",
+          "turn": 1,
+          "parts": 3,
+          "coins": 2,
+          "fittings": 0
+        },
+        {
+          "sequence": 4,
+          "command": "demonstrate",
+          "bench": "west",
+          "turn": 2,
+          "parts": 2,
+          "coins": 2,
+          "fittings": 0
+        },
+        {
+          "sequence": 7,
+          "command": "help",
+          "bench": "east",
+          "turn": 3,
+          "parts": 1,
+          "coins": 2,
+          "fittings": 0
+        },
+        {
+          "sequence": 8,
+          "command": "serve",
+          "bench": "east",
+          "turn": 4,
+          "parts": 1,
+          "coins": 1,
+          "fittings": 1
+        }
+      ]
+    },
+    "acquiredThenClosed": {
+      "sequence": 9,
+      "command": "decline",
+      "accepted": true,
+      "text": "This named offer permanently closed without a turn. Past help and actual fitting remain true. A fresh paid demonstration may renew support, but cannot reopen the offer.",
+      "turn": 4,
+      "parts": 1,
+      "coins": 1,
+      "policy": "single-offer",
+      "complete": false,
+      "benches": [
+        {
+          "id": "west",
+          "helped": true,
+          "support": true,
+          "recent": true,
+          "offer_closed": true,
+          "expires": 5,
+          "eligible": false,
+          "delivered": false,
+          "condition_expression": "HasTag(local-request)=true & HasFlag(helped)=true & HasFlag(support)=true & HasRecentEvent(demonstrated)=true & HasFlag(offer-closed)=false",
+          "condition_satisfied": false,
+          "condition_complete": true
+        },
+        {
+          "id": "east",
+          "helped": true,
+          "support": false,
+          "recent": false,
+          "offer_closed": true,
+          "expires": null,
+          "eligible": false,
+          "delivered": true,
+          "condition_expression": "HasTag(local-request)=true & HasFlag(helped)=true & HasFlag(support)=true & HasRecentEvent(demonstrated)=true & HasFlag(offer-closed)=false",
+          "condition_satisfied": false,
+          "condition_complete": true
+        }
+      ],
+      "history": [
+        {
+          "sequence": 2,
+          "command": "help",
+          "bench": "west",
+          "turn": 1,
+          "parts": 3,
+          "coins": 2,
+          "fittings": 0
+        },
+        {
+          "sequence": 3,
+          "command": "decline",
+          "bench": "west",
+          "turn": 1,
+          "parts": 3,
+          "coins": 2,
+          "fittings": 0
+        },
+        {
+          "sequence": 4,
+          "command": "demonstrate",
+          "bench": "west",
+          "turn": 2,
+          "parts": 2,
+          "coins": 2,
+          "fittings": 0
+        },
+        {
+          "sequence": 7,
+          "command": "help",
+          "bench": "east",
+          "turn": 3,
+          "parts": 1,
+          "coins": 2,
+          "fittings": 0
+        },
+        {
+          "sequence": 8,
+          "command": "serve",
+          "bench": "east",
+          "turn": 4,
+          "parts": 1,
+          "coins": 1,
+          "fittings": 1
+        },
+        {
+          "sequence": 9,
+          "command": "decline",
+          "bench": "east",
+          "turn": 4,
+          "parts": 1,
+          "coins": 1,
+          "fittings": 1
+        }
+      ]
+    },
+    "independentRenewed": {
+      "sequence": 3,
+      "command": "demonstrate",
+      "accepted": true,
+      "text": "One part and one action spent on a fresh local demonstration. Current support explicitly renewed; past help was not replayed.",
+      "turn": 2,
+      "parts": 2,
+      "coins": 2,
+      "policy": "independent",
+      "complete": false,
+      "benches": [
+        {
+          "id": "west",
+          "helped": true,
+          "support": true,
+          "recent": true,
+          "offer_closed": false,
+          "expires": 5,
+          "eligible": true,
+          "delivered": false,
+          "condition_expression": "Helped=true & Support=true & Recent=true",
+          "condition_satisfied": true,
+          "condition_complete": true
+        },
+        {
+          "id": "east",
+          "helped": false,
+          "support": false,
+          "recent": false,
+          "offer_closed": false,
+          "expires": null,
+          "eligible": false,
+          "delivered": false,
+          "condition_expression": "Helped=true & Support=true & Recent=true",
+          "condition_satisfied": false,
+          "condition_complete": true
+        }
+      ],
+      "history": [
+        {
+          "sequence": 1,
+          "command": "help",
+          "bench": "west",
+          "turn": 1,
+          "parts": 3,
+          "coins": 2,
+          "fittings": 0
+        },
+        {
+          "sequence": 2,
+          "command": "decline",
+          "bench": "west",
+          "turn": 1,
+          "parts": 3,
+          "coins": 2,
+          "fittings": 0
+        },
+        {
+          "sequence": 3,
+          "command": "demonstrate",
+          "bench": "west",
+          "turn": 2,
+          "parts": 2,
+          "coins": 2,
+          "fittings": 0
+        }
+      ]
+    },
+    "independentServed": {
+      "sequence": 4,
+      "command": "serve",
+      "accepted": true,
+      "text": "One coin and one action spent. The west bench actually supplied its one fitting. Later expiry cannot erase this output.",
+      "turn": 3,
+      "parts": 2,
+      "coins": 1,
+      "policy": "independent",
+      "complete": false,
+      "benches": [
+        {
+          "id": "west",
+          "helped": true,
+          "support": true,
+          "recent": true,
+          "offer_closed": false,
+          "expires": 5,
+          "eligible": false,
+          "delivered": true,
+          "condition_expression": "Helped=true & Support=true & Recent=true",
+          "condition_satisfied": true,
+          "condition_complete": true
+        },
+        {
+          "id": "east",
+          "helped": false,
+          "support": false,
+          "recent": false,
+          "offer_closed": false,
+          "expires": null,
+          "eligible": false,
+          "delivered": false,
+          "condition_expression": "Helped=true & Support=true & Recent=true",
+          "condition_satisfied": false,
+          "condition_complete": true
+        }
+      ],
+      "history": [
+        {
+          "sequence": 1,
+          "command": "help",
+          "bench": "west",
+          "turn": 1,
+          "parts": 3,
+          "coins": 2,
+          "fittings": 0
+        },
+        {
+          "sequence": 2,
+          "command": "decline",
+          "bench": "west",
+          "turn": 1,
+          "parts": 3,
+          "coins": 2,
+          "fittings": 0
+        },
+        {
+          "sequence": 3,
+          "command": "demonstrate",
+          "bench": "west",
+          "turn": 2,
+          "parts": 2,
+          "coins": 2,
+          "fittings": 0
+        },
+        {
+          "sequence": 4,
+          "command": "serve",
+          "bench": "west",
+          "turn": 3,
+          "parts": 2,
+          "coins": 1,
+          "fittings": 1
+        }
+      ]
+    }
+  },
+  "negatives": [
+    {
+      "id": "A refused empty-offer decline cannot write permanent closure",
+      "before": {
+        "sequence": 0,
+        "command": "initial",
+        "accepted": true,
+        "text": "Each named bench has one offer. An accepted withdrawal permanently closes only that bench. Paid demonstration can renew support, not reopen its offer.",
+        "turn": 0,
+        "parts": 4,
+        "coins": 2,
+        "policy": "single-offer",
+        "complete": false,
+        "benches": [
+          {
+            "id": "west",
+            "helped": false,
+            "support": false,
+            "recent": false,
+            "offer_closed": false,
+            "expires": null,
+            "eligible": false,
+            "delivered": false,
+            "condition_expression": "HasTag(local-request)=true & HasFlag(helped)=true & HasFlag(support)=true & HasRecentEvent(demonstrated)=true & HasFlag(offer-closed)=false",
+            "condition_satisfied": false,
+            "condition_complete": true
+          },
+          {
+            "id": "east",
+            "helped": false,
+            "support": false,
+            "recent": false,
+            "offer_closed": false,
+            "expires": null,
+            "eligible": false,
+            "delivered": false,
+            "condition_expression": "HasTag(local-request)=true & HasFlag(helped)=true & HasFlag(support)=true & HasRecentEvent(demonstrated)=true & HasFlag(offer-closed)=false",
+            "condition_satisfied": false,
+            "condition_complete": true
+          }
+        ],
+        "history": []
+      },
+      "after": {
+        "sequence": 1,
+        "command": "decline",
+        "accepted": false,
+        "text": "No current support or demonstration to withdraw; past facts remain unchanged.",
+        "turn": 0,
+        "parts": 4,
+        "coins": 2,
+        "policy": "single-offer",
+        "complete": false,
+        "benches": [
+          {
+            "id": "west",
+            "helped": false,
+            "support": false,
+            "recent": false,
+            "offer_closed": false,
+            "expires": null,
+            "eligible": false,
+            "delivered": false,
+            "condition_expression": "HasTag(local-request)=true & HasFlag(helped)=true & HasFlag(support)=true & HasRecentEvent(demonstrated)=true & HasFlag(offer-closed)=false",
+            "condition_satisfied": false,
+            "condition_complete": true
+          },
+          {
+            "id": "east",
+            "helped": false,
+            "support": false,
+            "recent": false,
+            "offer_closed": false,
+            "expires": null,
+            "eligible": false,
+            "delivered": false,
+            "condition_expression": "HasTag(local-request)=true & HasFlag(helped)=true & HasFlag(support)=true & HasRecentEvent(demonstrated)=true & HasFlag(offer-closed)=false",
+            "condition_satisfied": false,
+            "condition_complete": true
+          }
+        ],
+        "history": []
+      }
+    },
+    {
+      "id": "A repeated closed-offer decline cannot clear renewed witness or add history",
+      "before": {
+        "sequence": 4,
+        "command": "demonstrate",
+        "accepted": true,
+        "text": "One part and one action spent on a fresh local demonstration. Current support explicitly renewed; past help was not replayed.",
+        "turn": 2,
+        "parts": 2,
+        "coins": 2,
+        "policy": "single-offer",
+        "complete": false,
+        "benches": [
+          {
+            "id": "west",
+            "helped": true,
+            "support": true,
+            "recent": true,
+            "offer_closed": true,
+            "expires": 5,
+            "eligible": false,
+            "delivered": false,
+            "condition_expression": "HasTag(local-request)=true & HasFlag(helped)=true & HasFlag(support)=true & HasRecentEvent(demonstrated)=true & HasFlag(offer-closed)=false",
+            "condition_satisfied": false,
+            "condition_complete": true
+          },
+          {
+            "id": "east",
+            "helped": false,
+            "support": false,
+            "recent": false,
+            "offer_closed": false,
+            "expires": null,
+            "eligible": false,
+            "delivered": false,
+            "condition_expression": "HasTag(local-request)=true & HasFlag(helped)=true & HasFlag(support)=true & HasRecentEvent(demonstrated)=true & HasFlag(offer-closed)=false",
+            "condition_satisfied": false,
+            "condition_complete": true
+          }
+        ],
+        "history": [
+          {
+            "sequence": 2,
+            "command": "help",
+            "bench": "west",
+            "turn": 1,
+            "parts": 3,
+            "coins": 2,
+            "fittings": 0
+          },
+          {
+            "sequence": 3,
+            "command": "decline",
+            "bench": "west",
+            "turn": 1,
+            "parts": 3,
+            "coins": 2,
+            "fittings": 0
+          },
+          {
+            "sequence": 4,
+            "command": "demonstrate",
+            "bench": "west",
+            "turn": 2,
+            "parts": 2,
+            "coins": 2,
+            "fittings": 0
+          }
+        ]
+      },
+      "after": {
+        "sequence": 5,
+        "command": "decline",
+        "accepted": false,
+        "text": "That named offer is already closed. No new withdrawal, work or output occurred.",
+        "turn": 2,
+        "parts": 2,
+        "coins": 2,
+        "policy": "single-offer",
+        "complete": false,
+        "benches": [
+          {
+            "id": "west",
+            "helped": true,
+            "support": true,
+            "recent": true,
+            "offer_closed": true,
+            "expires": 5,
+            "eligible": false,
+            "delivered": false,
+            "condition_expression": "HasTag(local-request)=true & HasFlag(helped)=true & HasFlag(support)=true & HasRecentEvent(demonstrated)=true & HasFlag(offer-closed)=false",
+            "condition_satisfied": false,
+            "condition_complete": true
+          },
+          {
+            "id": "east",
+            "helped": false,
+            "support": false,
+            "recent": false,
+            "offer_closed": false,
+            "expires": null,
+            "eligible": false,
+            "delivered": false,
+            "condition_expression": "HasTag(local-request)=true & HasFlag(helped)=true & HasFlag(support)=true & HasRecentEvent(demonstrated)=true & HasFlag(offer-closed)=false",
+            "condition_satisfied": false,
+            "condition_complete": true
+          }
+        ],
+        "history": [
+          {
+            "sequence": 2,
+            "command": "help",
+            "bench": "west",
+            "turn": 1,
+            "parts": 3,
+            "coins": 2,
+            "fittings": 0
+          },
+          {
+            "sequence": 3,
+            "command": "decline",
+            "bench": "west",
+            "turn": 1,
+            "parts": 3,
+            "coins": 2,
+            "fittings": 0
+          },
+          {
+            "sequence": 4,
+            "command": "demonstrate",
+            "bench": "west",
+            "turn": 2,
+            "parts": 2,
+            "coins": 2,
+            "fittings": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": "Closed offer refuses service with enough coin and fresh evidence without payment or output",
+      "before": {
+        "sequence": 5,
+        "command": "decline",
+        "accepted": false,
+        "text": "That named offer is already closed. No new withdrawal, work or output occurred.",
+        "turn": 2,
+        "parts": 2,
+        "coins": 2,
+        "policy": "single-offer",
+        "complete": false,
+        "benches": [
+          {
+            "id": "west",
+            "helped": true,
+            "support": true,
+            "recent": true,
+            "offer_closed": true,
+            "expires": 5,
+            "eligible": false,
+            "delivered": false,
+            "condition_expression": "HasTag(local-request)=true & HasFlag(helped)=true & HasFlag(support)=true & HasRecentEvent(demonstrated)=true & HasFlag(offer-closed)=false",
+            "condition_satisfied": false,
+            "condition_complete": true
+          },
+          {
+            "id": "east",
+            "helped": false,
+            "support": false,
+            "recent": false,
+            "offer_closed": false,
+            "expires": null,
+            "eligible": false,
+            "delivered": false,
+            "condition_expression": "HasTag(local-request)=true & HasFlag(helped)=true & HasFlag(support)=true & HasRecentEvent(demonstrated)=true & HasFlag(offer-closed)=false",
+            "condition_satisfied": false,
+            "condition_complete": true
+          }
+        ],
+        "history": [
+          {
+            "sequence": 2,
+            "command": "help",
+            "bench": "west",
+            "turn": 1,
+            "parts": 3,
+            "coins": 2,
+            "fittings": 0
+          },
+          {
+            "sequence": 3,
+            "command": "decline",
+            "bench": "west",
+            "turn": 1,
+            "parts": 3,
+            "coins": 2,
+            "fittings": 0
+          },
+          {
+            "sequence": 4,
+            "command": "demonstrate",
+            "bench": "west",
+            "turn": 2,
+            "parts": 2,
+            "coins": 2,
+            "fittings": 0
+          }
+        ]
+      },
+      "after": {
+        "sequence": 6,
+        "command": "serve",
+        "accepted": false,
+        "text": "No current service: this exact bench requires observed help, current support, its recent demonstration, one actual coin and the displayed authored condition. No cost paid.",
+        "turn": 2,
+        "parts": 2,
+        "coins": 2,
+        "policy": "single-offer",
+        "complete": false,
+        "benches": [
+          {
+            "id": "west",
+            "helped": true,
+            "support": true,
+            "recent": true,
+            "offer_closed": true,
+            "expires": 5,
+            "eligible": false,
+            "delivered": false,
+            "condition_expression": "HasTag(local-request)=true & HasFlag(helped)=true & HasFlag(support)=true & HasRecentEvent(demonstrated)=true & HasFlag(offer-closed)=false",
+            "condition_satisfied": false,
+            "condition_complete": true
+          },
+          {
+            "id": "east",
+            "helped": false,
+            "support": false,
+            "recent": false,
+            "offer_closed": false,
+            "expires": null,
+            "eligible": false,
+            "delivered": false,
+            "condition_expression": "HasTag(local-request)=true & HasFlag(helped)=true & HasFlag(support)=true & HasRecentEvent(demonstrated)=true & HasFlag(offer-closed)=false",
+            "condition_satisfied": false,
+            "condition_complete": true
+          }
+        ],
+        "history": [
+          {
+            "sequence": 2,
+            "command": "help",
+            "bench": "west",
+            "turn": 1,
+            "parts": 3,
+            "coins": 2,
+            "fittings": 0
+          },
+          {
+            "sequence": 3,
+            "command": "decline",
+            "bench": "west",
+            "turn": 1,
+            "parts": 3,
+            "coins": 2,
+            "fittings": 0
+          },
+          {
+            "sequence": 4,
+            "command": "demonstrate",
+            "bench": "west",
+            "turn": 2,
+            "parts": 2,
+            "coins": 2,
+            "fittings": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": "Existing fitting is not a fresh service or extra receipt after closure",
+      "before": {
+        "sequence": 9,
+        "command": "decline",
+        "accepted": true,
+        "text": "This named offer permanently closed without a turn. Past help and actual fitting remain true. A fresh paid demonstration may renew support, but cannot reopen the offer.",
+        "turn": 4,
+        "parts": 1,
+        "coins": 1,
+        "policy": "single-offer",
+        "complete": false,
+        "benches": [
+          {
+            "id": "west",
+            "helped": true,
+            "support": true,
+            "recent": true,
+            "offer_closed": true,
+            "expires": 5,
+            "eligible": false,
+            "delivered": false,
+            "condition_expression": "HasTag(local-request)=true & HasFlag(helped)=true & HasFlag(support)=true & HasRecentEvent(demonstrated)=true & HasFlag(offer-closed)=false",
+            "condition_satisfied": false,
+            "condition_complete": true
+          },
+          {
+            "id": "east",
+            "helped": true,
+            "support": false,
+            "recent": false,
+            "offer_closed": true,
+            "expires": null,
+            "eligible": false,
+            "delivered": true,
+            "condition_expression": "HasTag(local-request)=true & HasFlag(helped)=true & HasFlag(support)=true & HasRecentEvent(demonstrated)=true & HasFlag(offer-closed)=false",
+            "condition_satisfied": false,
+            "condition_complete": true
+          }
+        ],
+        "history": [
+          {
+            "sequence": 2,
+            "command": "help",
+            "bench": "west",
+            "turn": 1,
+            "parts": 3,
+            "coins": 2,
+            "fittings": 0
+          },
+          {
+            "sequence": 3,
+            "command": "decline",
+            "bench": "west",
+            "turn": 1,
+            "parts": 3,
+            "coins": 2,
+            "fittings": 0
+          },
+          {
+            "sequence": 4,
+            "command": "demonstrate",
+            "bench": "west",
+            "turn": 2,
+            "parts": 2,
+            "coins": 2,
+            "fittings": 0
+          },
+          {
+            "sequence": 7,
+            "command": "help",
+            "bench": "east",
+            "turn": 3,
+            "parts": 1,
+            "coins": 2,
+            "fittings": 0
+          },
+          {
+            "sequence": 8,
+            "command": "serve",
+            "bench": "east",
+            "turn": 4,
+            "parts": 1,
+            "coins": 1,
+            "fittings": 1
+          },
+          {
+            "sequence": 9,
+            "command": "decline",
+            "bench": "east",
+            "turn": 4,
+            "parts": 1,
+            "coins": 1,
+            "fittings": 1
+          }
+        ]
+      },
+      "after": {
+        "sequence": 10,
+        "command": "serve",
+        "accepted": false,
+        "text": "That fitting already exists. A repeat cannot mint another.",
+        "turn": 4,
+        "parts": 1,
+        "coins": 1,
+        "policy": "single-offer",
+        "complete": false,
+        "benches": [
+          {
+            "id": "west",
+            "helped": true,
+            "support": true,
+            "recent": true,
+            "offer_closed": true,
+            "expires": 5,
+            "eligible": false,
+            "delivered": false,
+            "condition_expression": "HasTag(local-request)=true & HasFlag(helped)=true & HasFlag(support)=true & HasRecentEvent(demonstrated)=true & HasFlag(offer-closed)=false",
+            "condition_satisfied": false,
+            "condition_complete": true
+          },
+          {
+            "id": "east",
+            "helped": true,
+            "support": false,
+            "recent": false,
+            "offer_closed": true,
+            "expires": null,
+            "eligible": false,
+            "delivered": true,
+            "condition_expression": "HasTag(local-request)=true & HasFlag(helped)=true & HasFlag(support)=true & HasRecentEvent(demonstrated)=true & HasFlag(offer-closed)=false",
+            "condition_satisfied": false,
+            "condition_complete": true
+          }
+        ],
+        "history": [
+          {
+            "sequence": 2,
+            "command": "help",
+            "bench": "west",
+            "turn": 1,
+            "parts": 3,
+            "coins": 2,
+            "fittings": 0
+          },
+          {
+            "sequence": 3,
+            "command": "decline",
+            "bench": "west",
+            "turn": 1,
+            "parts": 3,
+            "coins": 2,
+            "fittings": 0
+          },
+          {
+            "sequence": 4,
+            "command": "demonstrate",
+            "bench": "west",
+            "turn": 2,
+            "parts": 2,
+            "coins": 2,
+            "fittings": 0
+          },
+          {
+            "sequence": 7,
+            "command": "help",
+            "bench": "east",
+            "turn": 3,
+            "parts": 1,
+            "coins": 2,
+            "fittings": 0
+          },
+          {
+            "sequence": 8,
+            "command": "serve",
+            "bench": "east",
+            "turn": 4,
+            "parts": 1,
+            "coins": 1,
+            "fittings": 1
+          },
+          {
+            "sequence": 9,
+            "command": "decline",
+            "bench": "east",
+            "turn": 4,
+            "parts": 1,
+            "coins": 1,
+            "fittings": 1
+          }
+        ]
+      }
+    },
+    {
+      "id": "false-open",
+      "detected": true,
+      "mutation": {
+        "target": "const offerClosedObserved = b.offer_closed;",
+        "replacement": "const offerClosedObserved = b.id==='west'?false:b.offer_closed;",
+        "original_sha256": "46403078ff7f4f5700691cd37d16fa32b819be1277d7a6f9655c545b36820e88",
+        "mutated_sha256": "7a32204021608fc20c5c48e99bdd82f17e0fd8ac084b37dcea169be0789291d0"
+      },
+      "actual": {
+        "sequence": 3,
+        "command": "demonstrate",
+        "accepted": true,
+        "text": "One part and one action spent on a fresh local demonstration. Current support explicitly renewed; past help was not replayed.",
+        "turn": 2,
+        "parts": 2,
+        "coins": 2,
+        "policy": "single-offer",
+        "complete": false,
+        "benches": [
+          {
+            "id": "west",
+            "helped": true,
+            "support": true,
+            "recent": true,
+            "offer_closed": true,
+            "expires": 5,
+            "eligible": false,
+            "delivered": false,
+            "condition_expression": "HasTag(local-request)=true & HasFlag(helped)=true & HasFlag(support)=true & HasRecentEvent(demonstrated)=true & HasFlag(offer-closed)=false",
+            "condition_satisfied": false,
+            "condition_complete": true
+          },
+          {
+            "id": "east",
+            "helped": false,
+            "support": false,
+            "recent": false,
+            "offer_closed": false,
+            "expires": null,
+            "eligible": false,
+            "delivered": false,
+            "condition_expression": "HasTag(local-request)=true & HasFlag(helped)=true & HasFlag(support)=true & HasRecentEvent(demonstrated)=true & HasFlag(offer-closed)=false",
+            "condition_satisfied": false,
+            "condition_complete": true
+          }
+        ],
+        "history": [
+          {
+            "sequence": 1,
+            "command": "help",
+            "bench": "west",
+            "turn": 1,
+            "parts": 3,
+            "coins": 2,
+            "fittings": 0
+          },
+          {
+            "sequence": 2,
+            "command": "decline",
+            "bench": "west",
+            "turn": 1,
+            "parts": 3,
+            "coins": 2,
+            "fittings": 0
+          },
+          {
+            "sequence": 3,
+            "command": "demonstrate",
+            "bench": "west",
+            "turn": 2,
+            "parts": 2,
+            "coins": 2,
+            "fittings": 0
+          }
+        ]
+      },
+      "assertion": {
+        "name": "AssertionError",
+        "code": "ERR_ASSERTION",
+        "message": "Offer closure picture follows actual owner\n\n'false' !== 'true'\n"
+      }
+    },
+    {
+      "id": "false-fitting",
+      "detected": true,
+      "mutation": {
+        "target": "const deliveredObserved = Boolean(b.delivered);",
+        "replacement": "const deliveredObserved = b.id==='west'?true:Boolean(b.delivered);",
+        "original_sha256": "46403078ff7f4f5700691cd37d16fa32b819be1277d7a6f9655c545b36820e88",
+        "mutated_sha256": "feec54e04f46d14eae3688a36eb66cfde582f02d39c119a311c4f4b56698a4aa"
+      },
+      "actual": {
+        "sequence": 3,
+        "command": "demonstrate",
+        "accepted": true,
+        "text": "One part and one action spent on a fresh local demonstration. Current support explicitly renewed; past help was not replayed.",
+        "turn": 2,
+        "parts": 2,
+        "coins": 2,
+        "policy": "single-offer",
+        "complete": false,
+        "benches": [
+          {
+            "id": "west",
+            "helped": true,
+            "support": true,
+            "recent": true,
+            "offer_closed": true,
+            "expires": 5,
+            "eligible": false,
+            "delivered": false,
+            "condition_expression": "HasTag(local-request)=true & HasFlag(helped)=true & HasFlag(support)=true & HasRecentEvent(demonstrated)=true & HasFlag(offer-closed)=false",
+            "condition_satisfied": false,
+            "condition_complete": true
+          },
+          {
+            "id": "east",
+            "helped": false,
+            "support": false,
+            "recent": false,
+            "offer_closed": false,
+            "expires": null,
+            "eligible": false,
+            "delivered": false,
+            "condition_expression": "HasTag(local-request)=true & HasFlag(helped)=true & HasFlag(support)=true & HasRecentEvent(demonstrated)=true & HasFlag(offer-closed)=false",
+            "condition_satisfied": false,
+            "condition_complete": true
+          }
+        ],
+        "history": [
+          {
+            "sequence": 1,
+            "command": "help",
+            "bench": "west",
+            "turn": 1,
+            "parts": 3,
+            "coins": 2,
+            "fittings": 0
+          },
+          {
+            "sequence": 2,
+            "command": "decline",
+            "bench": "west",
+            "turn": 1,
+            "parts": 3,
+            "coins": 2,
+            "fittings": 0
+          },
+          {
+            "sequence": 3,
+            "command": "demonstrate",
+            "bench": "west",
+            "turn": 2,
+            "parts": 2,
+            "coins": 2,
+            "fittings": 0
+          }
+        ]
+      },
+      "assertion": {
+        "name": "AssertionError",
+        "code": "ERR_ASSERTION",
+        "message": "Fitting picture follows actual owner\n\n'true' !== 'false'\n"
+      }
+    }
+  ],
+  "source_sha256": {
+    "evidence/query-bindings/protocol.json": "d9f112609ddf2dede13c2136acd832a43114119659f6ecc77c34f9b407367a93",
+    "labs/world-gameplay/dialogue-conditions/query-assay.py": "650e4d4ee53c146d8c86570a5e6dbd6648b59d8277db639f89dfd9cd61c00676",
+    "north-star/csharp/Domain/Crafting.cs": "5a5a892b3e68cff73f7a443d7c014c79dbebf2954d28f447e1bf3a9c4759de57",
+    "north-star/csharp/Domain/Loadout.cs": "a1296ca13b5ba6728c073320b860e369ad2e01fdaacb45b5237ef40d0243f682",
+    "north-star/csharp/Domain/NorthStar.Domain.csproj": "9570b674acfea69bb60098f495afd3b9e2cef2575fcfeb6db71c2cdecb2c4876",
+    "north-star/csharp/Domain/Progression.cs": "8495e1ad92fea069c2c3989f6f2cc2600980575e72812df9480ed193c51c8685",
+    "north-star/csharp/global.json": "e0c0882461e712f6c2c66241bf2f175c60832e3ff077dc26091ff8c661d4193e",
+    "north-star/memory-study/Checks/NorthStar.MemoryChecks.csproj": "9c0ea4da0d10f712ab2249ff883dff348868caa2413bd63c565bec91ccd12370",
+    "north-star/memory-study/Checks/Program.cs": "1268694ca86b383c66ccc8eef6ea63e91689fbb87b47e7a99a80d03f838bfcca",
+    "north-star/memory-study/Conditions/Conditions.cs": "04faa4d84b061879f22891fcf3b9e6166a70a94ddb8bfa72f8ebe39e7d21c472",
+    "north-star/memory-study/Conditions/NorthStar.Conditions.csproj": "3acec7333496cb2bb2bb2a8c6aaf151f714f6402e133ead2ca8d3f166d77dd22",
+    "north-star/memory-study/ConditionsChecks/NorthStar.ConditionsChecks.csproj": "4df210d5dff78286d31bb7f19a8d0da91734e5a0305ae8740f548a4ab4ab7bc7",
+    "north-star/memory-study/ConditionsChecks/Program.cs": "3c2b2e96e1674dfa4a34f10b4680810778e9fc5e8e996c43dfaa8bd66694ad0a",
+    "north-star/memory-study/Host/NorthStar.MemoryStudy.csproj": "d5dcc14b4facf695f9f91cc63e3d019c14f9f6200f4436457dd8925a7a70649a",
+    "north-star/memory-study/Host/Program.cs": "afd5a812978202c78f9bec8ceec1e892edcec10eb37c7f43bfe8c966425e44e5",
+    "north-star/memory-study/Host/Room.cs": "91dc190402af660d958749a26db7f670a799d285ceb0de7373ab8eacc14619ce",
+    "north-star/memory-study/QueryChecks/NorthStar.QueryChecks.csproj": "9c0ea4da0d10f712ab2249ff883dff348868caa2413bd63c565bec91ccd12370",
+    "north-star/memory-study/QueryChecks/Program.cs": "ab124bfc150c842a1c31ccdf582277ab0ce99e5aea9bd1c49320e27d8a35bbed",
+    "north-star/memory-study/Rules/Memory.cs": "4307f83a7e7cbed6ed8f08815ce3e216744be660545c4edd6a6985581abec852",
+    "north-star/memory-study/Rules/NorthStar.Memory.csproj": "3acec7333496cb2bb2bb2a8c6aaf151f714f6402e133ead2ca8d3f166d77dd22",
+    "north-star/memory-study/ServiceChecks/NorthStar.ConditionServiceChecks.csproj": "bf9ffc3c68026bb2d51d6e23ff53741b70efafa7e1b0a57e05e0345100ac70ab",
+    "north-star/memory-study/ServiceChecks/Program.cs": "2b7fc7843e74e7e741536f1e85fdfcb31586b6212beb9884137a0c8caa410616",
+    "north-star/memory-study/tools/browser.mjs": "1ea73aaa7dfd1f3f5d2ab3d55918af9d857ec0126ee1ca02d855c481a62bb904",
+    "north-star/memory-study/tools/conditions-browser.mjs": "c9abefe88857c869a5e3b29ce264f707adb08154efac7690e4a2a7464890069d",
+    "north-star/memory-study/tools/conditions-verify.py": "46fbf48674a06761714487da56ea428e25bfafa29e07a3c038cc81fcf9aaf47f",
+    "north-star/memory-study/tools/query-browser.mjs": "2a1e653060656e813dc850701103e1463d36e7f81f3ff348cc870cb24b4c1603",
+    "north-star/memory-study/tools/verify.py": "237c261f84eb8a374d132dd424d99f16ce4a37608d2de831dd5a0467efadb3b2",
+    "north-star/memory-study/web/app.js": "46403078ff7f4f5700691cd37d16fa32b819be1277d7a6f9655c545b36820e88",
+    "north-star/memory-study/web/index.html": "17538d4d9a668c2b30fdbf901a648ce46c6675bd8307467605cb11f1deb2f773",
+    "north-star/memory-study/web/style.css": "4e4b8fadef58240b275e440df0868369737b6ec2180eefcb3529bde89d500b51",
+    "projects/realtime-integration-lab/package-lock.json": "aa191ef2158e6cc6f770bf4b3ee44dca17175ef1a3cd572b98115246bf46aea7",
+    "projects/realtime-integration-lab/package.json": "42e3cc9633e522dd6d9a5c11023418331129632881a8bf0b95e3717247d57ebe"
+  },
+  "source_stable": true,
+  "runtime": {
+    "node": "v24.19.0",
+    "chromium": "154.0.8037.57",
+    "playwright": "1.64.0"
+  },
+  "limits": "Overlapping actual software controls, not people, independent studies, historical Ruby/RGSS/RMXP, whole source scoring/dialogue/catalog, human judgment or production Unity/Windows/Steam."
+}

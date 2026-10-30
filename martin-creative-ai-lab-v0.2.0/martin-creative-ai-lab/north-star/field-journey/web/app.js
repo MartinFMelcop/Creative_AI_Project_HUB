@@ -72,6 +72,7 @@
  }
  function render(s){
   if(!s?.intake?.state||!s?.memory||!Array.isArray(s.fittings))throw Error('Incomplete actual journey observation');
+  if(!['independent','ordered','single-offer'].includes(s.memory.policy))throw Error('Actual known service policy required');
   state=s;const card=s.intake,e=card.state,m=s.memory,id=card.identity;encounterView(s.encounter_view);samplingView(s);preparationBook(s);
   const completeObserved = Boolean(s.intake.state.complete);
   document.body.dataset.confirmed=String(card.confirmed);document.body.dataset.workshopClosed=String(s.workshop_closed);document.body.dataset.complete=String(completeObserved);
@@ -81,17 +82,20 @@
   $('avatar-accent').setAttribute('fill',accents[id?.accent]||accents.copper);$('portrait-title').textContent=id?`${id.handle}, ${id.class_id}, ${id.accent} accent. Actual outfit ${e.rig}.`:'Unconfirmed traveler preview';
   $('portrait-plate').style.display=id&&e.rig==='Plate'?'':'none';$('portrait-trail').style.display=id&&e.rig==='Trail'?'':'none';$('portrait-brace').style.display=id?.class_id==='anchor'?'':'none';$('portrait-draw').style.display=id?.class_id==='lure'?'':'none';
   document.body.dataset.policy=m.policy;
-  $('policy-note').textContent=m.policy==='ordered'?'Ordered commission: the east fitting requires actual west delivery as well as its own work and payment. Departure still closes preparation.':'Independent commissions: either bench may supply its own fitting after actual local work and payment.';
+  $('policy-note').textContent=m.policy==='single-offer'?'Single-offer experimental contract: an accepted withdrawal permanently closes only that bench’s fitting offer. A fresh demonstration still costs one part and one workshop turn; it cannot reopen that offer. Prior fittings remain acquired. Departure still closes preparation.':m.policy==='ordered'?'Ordered commission: the east fitting requires actual west delivery as well as its own work and payment. Departure still closes preparation.':'Independent commissions: either bench may supply its own fitting after actual local work and payment.';
   $('workshop-stage').textContent=s.workshop_closed?'HISTORICAL / AT DEPARTURE':'WORKSHOP OPEN';
   $('workshop-context').textContent=s.workshop_closed?`${id?.handle||'This person'} has departed. These are the last workshop facts observed before leaving. The road does not observe either worker's presence, return or current support.`:card.confirmed?`${id.handle}'s local work must actually occur at each bench. An open opportunity supplies a fitting only after its own paid service.`:'Confirm your person before any paid workshop work. A draft is not permission to spend either pouch.';
   for(const key of ['parts','coins'])$(key).textContent=String(m[key]);$('workshop-turn').textContent=String(m.turn);
   for(const b of m.benches){
    const panel=$(b.id+'-bench');panel.dataset.recent=String(b.recent);panel.dataset.historical=String(s.workshop_closed);
-   $(b.id+'-condition').textContent=`Authored condition: ${b.condition_expression} · ${b.condition_satisfied?'satisfied':'not satisfied'}. This observation supplies no component.`;
+   if(typeof b.offer_closed!=='boolean')throw Error('Actual named offer-closure observation required');
+   const offerClosedObserved=b.offer_closed;panel.dataset.offerClosed=String(offerClosedObserved);
+   $(b.id+'-condition').textContent=`Authored condition: ${b.condition_expression} · ${b.condition_satisfied?'satisfied':'not satisfied'}. This observation supplies no component.${m.policy==='single-offer'?offerClosedObserved?' This exact offer was closed by accepted withdrawal.':' This exact single offer has not been closed.':''}`;
    $(b.id+'-helped').textContent=b.helped?'Yes':'No';$(b.id+'-support').textContent=b.support?'Yes':'No';$(b.id+'-recent').textContent=b.recent?'Yes':'No';
-   $(b.id+'-status').textContent=s.workshop_closed?'RECORDED BEFORE LEAVING':b.delivered?'FITTING ACQUIRED':b.eligible?'WINDOW OPEN':b.helped?'PAST WORK RETAINED':'NO OBSERVED HELP';
-   $(b.id+'-window').textContent=s.workshop_closed?`Recorded at workshop turn ${m.turn}: help ${b.helped?'observed':'not observed'}, support ${b.support?'present':'absent'}, recent demonstration ${b.recent?'present':'absent'}. This is historical knowledge, not a fresh observation.`:b.delivered?'This bench already supplied its one fitting. Expiry or withdrawal cannot undo acquisition.':b.eligible?`This exact bench can supply a fitting now, before its one-turn cost. Demonstration expires at workshop turn ${b.expires}.`:b.helped?'Actual help remains known here. A fresh demonstration costs one part and one workshop turn; another bench cannot provide it.':'No actual help observed here. A different bench cannot stand in for it.';
-   $(b.id+'-help').textContent=b.helped?'Demonstrate again · 1 part':'Help here · 1 part';$(b.id+'-picture').textContent=s.workshop_closed?`${b.id} workbench, historical observation at departure. Worker presence is not observed from the road.`:`${b.id} workbench, local worker and ${b.recent?'current':'absent'} recent demonstration.`;
+   $(b.id+'-status').textContent=s.workshop_closed?'RECORDED BEFORE LEAVING':b.delivered?'FITTING ACQUIRED':offerClosedObserved?'OFFER CLOSED':b.eligible?'WINDOW OPEN':b.helped?'PAST WORK RETAINED':'NO OBSERVED HELP';
+   $(b.id+'-window').textContent=s.workshop_closed?`Recorded at workshop turn ${m.turn}: help ${b.helped?'observed':'not observed'}, support ${b.support?'present':'absent'}, recent demonstration ${b.recent?'present':'absent'}${m.policy==='single-offer'?', offer '+(offerClosedObserved?'closed':'not closed'):''}. This is historical knowledge, not a fresh observation.`:b.delivered?'This bench already supplied its one fitting. Expiry or withdrawal cannot undo acquisition.':offerClosedObserved?'This exact fitting offer is closed. A new demonstration still costs a part and workshop turn and can renew support/recency, but cannot reopen service.':b.eligible?`This exact bench can supply a fitting now, before its one-turn cost. Demonstration expires at workshop turn ${b.expires}.`:b.helped?'Actual help remains known here. A fresh demonstration costs one part and one workshop turn; another bench cannot provide it.':'No actual help observed here. A different bench cannot stand in for it.';
+   $(b.id+'-help').textContent=offerClosedObserved?'Demonstrate · 1 part / offer stays closed':b.helped?'Demonstrate again · 1 part':'Help here · 1 part';
+   $(b.id+'-decline').textContent=m.policy==='single-offer'?offerClosedObserved?'Offer already closed':'Close this offer':'Withdraw support';$(b.id+'-picture').textContent=s.workshop_closed?`${b.id} workbench, historical observation at departure. Worker presence is not observed from the road.`:`${b.id} workbench, local worker and ${b.recent?'current':'absent'} recent demonstration.`;
   }
   for(const f of s.fittings){
    const availableObserved = Boolean(f.available);
@@ -116,7 +120,7 @@
   const c=state.intake,e=c.state,ready=c.confirmed&&!c.pending,locked=e.active||e.complete,workshop=ready&&!state.workshop_closed;
   for(const el of $('draft-form').elements)el.disabled=busy||uncertain||locked;$('handle').readOnly=Boolean(c.confirmed);
   $('review').disabled=busy||uncertain||locked;$('confirm').disabled=busy||uncertain||locked||!c.pending||c.reviewed_revision!==c.draft_revision;
-  for(const b of state.memory.benches){$(''+b.id+'-help').disabled=busy||uncertain||!workshop||state.memory.parts<1||b.delivered;$(''+b.id+'-serve').disabled=busy||uncertain||!workshop||!b.eligible;$(''+b.id+'-decline').disabled=busy||uncertain||!c.confirmed||state.workshop_closed||(!b.support&&!b.recent);}
+  for(const b of state.memory.benches){$(''+b.id+'-help').disabled=busy||uncertain||!workshop||state.memory.parts<1||b.delivered;$(''+b.id+'-serve').disabled=busy||uncertain||!workshop||!b.eligible;$(''+b.id+'-decline').disabled=busy||uncertain||!c.confirmed||state.workshop_closed||((state.memory.policy==='single-offer'&&b.offer_closed)||(!b.support&&!b.recent));}
   $('wait-window').disabled=busy||uncertain||!workshop;
   $('assemble').disabled=busy||uncertain||!workshop||!state.fittings.some(f=>f.available)||(e.inventory.fiber??0)<2||(e.inventory.binder??0)<1;
   $('begin').disabled=busy||uncertain||!ready||locked;

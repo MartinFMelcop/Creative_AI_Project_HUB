@@ -938,3 +938,15 @@ Inspected historical DEV/DIST creation helpers differ; their fuzzy grants/defaul
 malformed paths do not become North Star authority. Full historical parsing remains
 unresolved. [Evidence](../evidence/preparation-authoring/RUN.json) retains actual content
 variation, manual equivalence, no-grant/earned-level controls and false-confirmed renderer.
+
+### Experimental exact-query service contract
+
+Single-offer is an original experimental service contract, not recovered NPC
+personality or final canon. An accepted withdrawal closes one exact local offer;
+later paid observation can renew present support and recency without reversing that
+closure. Past work and acquired output remain true. Existing independent and ordered
+policies retain renewable behavior. The additional permission gate is an actual typed
+negative query, not a duplicate hardcoded closure check. This tests declared scoped
+query authority through actual paid service, not human trust, moral worth, remote
+presence, balanced choice or broad dialogue/quest integration. No new source fiction,
+Crossing rule, reward, save or recipient package is implied.

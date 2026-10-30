@@ -131,3 +131,7 @@ MemoryStudy owner and field composition: an original ordered commission requires
 west delivery before east service, without bypassing local evidence, payment or custody.
 Strict compilation and complete private facts replace permissive partial/fallback parsing
 as permission authority. Full source queries/scoring/catalogs/coercion remain unresolved.
+
+The existing [typed-condition method](dialogue-conditions/README.md) now binds declared
+exact queries to actual private service facts; [execution](../../evidence/query-bindings/RUN.json)
+separates known-input source comparison, single-offer consequences and production limits.

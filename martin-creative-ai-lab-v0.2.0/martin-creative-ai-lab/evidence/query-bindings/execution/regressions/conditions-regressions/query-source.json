@@ -1,0 +1,3382 @@
+{
+  "schema_version": 1,
+  "kind": "known_named_query_source_protocol",
+  "source_sha256": {
+    "references/rave-master/snapshots/36af1651271422ae33856e8b5d7b45702215f165/source/RM_ACT1/DATA/DEV/RGSS/RM_DIALOGUE_SCORING_RUNTIME.rb": "07682a3205ea2850d748e4f3ffeef7febe51df1ddb10d5e8689bef7d26d1a735",
+    "references/rave-master/snapshots/36af1651271422ae33856e8b5d7b45702215f165/source/RM_DIST/RMXP_BASE/ScriptsCustom/RM_DIALOGUE_SCORING_RUNTIME.rb": "07682a3205ea2850d748e4f3ffeef7febe51df1ddb10d5e8689bef7d26d1a735",
+    "references/rave-master/snapshots/36af1651271422ae33856e8b5d7b45702215f165/source/RM_ACT1/DATA/DEV/DIALOGUE_VARIANTS.csv": "7434223aa7fe25a8449796d1648b04257efa355bced6d62a0224e3b3f2606787",
+    "references/rave-master/snapshots/36af1651271422ae33856e8b5d7b45702215f165/source/RM_DIST/RMXP_BASE/Data/RM_CSV/DIALOGUE_VARIANTS.csv": "7434223aa7fe25a8449796d1648b04257efa355bced6d62a0224e3b3f2606787"
+  },
+  "source_stable": true,
+  "variants_identical": true,
+  "actual_variant_rows": 29,
+  "query_bearing_variant_rows": 19,
+  "source_function_counts": {
+    "HasTag": 17,
+    "HasFlag": 5,
+    "HasRecentEvent": 0
+  },
+  "actual_source_expressions": [
+    {
+      "variant_id": "DV_NPC0007_SMALLTALK_002",
+      "expression": "Mood!=OUTBURST & HasTag(QUIRK_SELF_TALK)=true"
+    },
+    {
+      "variant_id": "DV_NPC0007_REQUEST_HELP_001",
+      "expression": "Mood!=OUTBURST & HasTag(OBSESSION_TOPIC)=true"
+    },
+    {
+      "variant_id": "DV_NPC0007_REQUEST_HELP_002",
+      "expression": "Mood!=OUTBURST & HasTag(STAKES_LOW)=true"
+    },
+    {
+      "variant_id": "DV_NPC0007_BLAME_001",
+      "expression": "Mood!=OUTBURST & HasTag(STAKES_LOW)=true"
+    },
+    {
+      "variant_id": "DV_NPC0007_BLAME_002",
+      "expression": "Mood!=OUTBURST & HasTag(STAKES_HIGH)=true"
+    },
+    {
+      "variant_id": "DV_NPC0007_APOLOGY_001",
+      "expression": "Mood!=OUTBURST & HasTag(PLAYER_IS_WRONG)=true & HasTag(PLAYER_APOLOGIZED)=true"
+    },
+    {
+      "variant_id": "DV_NPC0007_THREAT_001",
+      "expression": "Mood!=OUTBURST & HasTag(STAKES_LOW)=true"
+    },
+    {
+      "variant_id": "DV_NPC0007_OBSESSION_001",
+      "expression": "HasTag(OBSESSION_TOPIC)=true"
+    },
+    {
+      "variant_id": "DV_NPC0007_OBSESSION_002",
+      "expression": "Mood==OBSESSED & HasTag(QUIRK_SWAMP_HERBS)=true"
+    },
+    {
+      "variant_id": "DV_NPC0007_INSULT_001",
+      "expression": "Mood!=OUTBURST & HasTag(STAKES_LOW)=true"
+    },
+    {
+      "variant_id": "DV_NPC0007_GOODBYE_001",
+      "expression": "Mood!=OUTBURST & HasFlag(FLAG_NPC0007_AVOID_PLAYER_TEMP)=false"
+    },
+    {
+      "variant_id": "DV_NPC0007_GOODBYE_002",
+      "expression": "Mood==OUTBURST | HasFlag(FLAG_NPC0007_AVOID_PLAYER_TEMP)=true"
+    },
+    {
+      "variant_id": "DV_TEST_FLAGOPS_001",
+      "expression": "HasTag(__TEST__)=true"
+    },
+    {
+      "variant_id": "DV_TEST_PAREN_001",
+      "expression": "HasTag(__TEST_PAREN__)=true & (HasFlag(FLAG_PAREN_A)=true | HasFlag(FLAG_PAREN_B)=true) & HasFlag(FLAG_PAREN_C)=false"
+    },
+    {
+      "variant_id": "DV_TEST_TAGFALSE_001",
+      "expression": "HasTag(__TEST_TAGFALSE__)=true & HasTag(TAG_PRESENT)=false"
+    },
+    {
+      "variant_id": "DV_TEST_TAGFALSE_002",
+      "expression": "HasTag(__TEST_TAGFALSE__)=true & HasTag(TAG_PRESENT)=true"
+    },
+    {
+      "variant_id": "DV_TEST_FLAGFALSE_001",
+      "expression": "HasTag(__TEST_FLAGFALSE__)=true & HasFlag(FLAG_PRESENT)=false"
+    },
+    {
+      "variant_id": "DV_TEST_FLAGFALSE_002",
+      "expression": "HasTag(__TEST_FLAGFALSE__)=true & HasFlag(FLAG_PRESENT)=true"
+    },
+    {
+      "variant_id": "DV_TEST_FLAGOPS_002",
+      "expression": "HasTag(__TEST_FLAGOPS2__)=true"
+    }
+  ],
+  "source_branches": {
+    "three_function_dispatch": {
+      "literal": "tok[1] == \"HasTag\" || tok[1] == \"HasFlag\" || tok[1] == \"HasRecentEvent\"",
+      "first_line": 215
+    },
+    "missing_tag_provider_false": {
+      "literal": "has = (tagset != nil && tagset[node[1]] == true)",
+      "first_line": 323
+    },
+    "missing_flag_provider_false": {
+      "literal": "has = (flags != nil && flags[node[1]] == true)",
+      "first_line": 328
+    },
+    "recent_provider_named_subject": {
+      "literal": "has = RM_RecentEvents.has?(eid, npc_id)",
+      "first_line": 340
+    },
+    "recent_numeric_suffix_ignored": {
+      "literal": "eid = $1",
+      "first_line": 335
+    },
+    "recent_exception_becomes_false": {
+      "literal": "rescue\n            has = false",
+      "first_line": 341
+    }
+  },
+  "cases": [
+    {
+      "id": "source_DV_NPC0007_SMALLTALK_002_1",
+      "category": "actual_variant_expression_known_context",
+      "source_variant_ids": [
+        "DV_NPC0007_SMALLTALK_002"
+      ],
+      "expression": "Mood!=OUTBURST & HasTag(QUIRK_SELF_TALK)=true",
+      "queries": [
+        {
+          "function": "HasTag",
+          "argument": "QUIRK_SELF_TALK",
+          "value": false
+        }
+      ],
+      "facts": [
+        {
+          "name": "Mood",
+          "type": "String",
+          "value": "CALM"
+        }
+      ],
+      "expected": {
+        "complete": true,
+        "satisfied": false
+      }
+    },
+    {
+      "id": "source_DV_NPC0007_SMALLTALK_002_2",
+      "category": "actual_variant_expression_known_context",
+      "source_variant_ids": [
+        "DV_NPC0007_SMALLTALK_002"
+      ],
+      "expression": "Mood!=OUTBURST & HasTag(QUIRK_SELF_TALK)=true",
+      "queries": [
+        {
+          "function": "HasTag",
+          "argument": "QUIRK_SELF_TALK",
+          "value": true
+        }
+      ],
+      "facts": [
+        {
+          "name": "Mood",
+          "type": "String",
+          "value": "CALM"
+        }
+      ],
+      "expected": {
+        "complete": true,
+        "satisfied": true
+      }
+    },
+    {
+      "id": "source_DV_NPC0007_SMALLTALK_002_3",
+      "category": "actual_variant_expression_known_context",
+      "source_variant_ids": [
+        "DV_NPC0007_SMALLTALK_002"
+      ],
+      "expression": "Mood!=OUTBURST & HasTag(QUIRK_SELF_TALK)=true",
+      "queries": [
+        {
+          "function": "HasTag",
+          "argument": "QUIRK_SELF_TALK",
+          "value": false
+        }
+      ],
+      "facts": [
+        {
+          "name": "Mood",
+          "type": "String",
+          "value": "OUTBURST"
+        }
+      ],
+      "expected": {
+        "complete": true,
+        "satisfied": false
+      }
+    },
+    {
+      "id": "source_DV_NPC0007_SMALLTALK_002_4",
+      "category": "actual_variant_expression_known_context",
+      "source_variant_ids": [
+        "DV_NPC0007_SMALLTALK_002"
+      ],
+      "expression": "Mood!=OUTBURST & HasTag(QUIRK_SELF_TALK)=true",
+      "queries": [
+        {
+          "function": "HasTag",
+          "argument": "QUIRK_SELF_TALK",
+          "value": true
+        }
+      ],
+      "facts": [
+        {
+          "name": "Mood",
+          "type": "String",
+          "value": "OUTBURST"
+        }
+      ],
+      "expected": {
+        "complete": true,
+        "satisfied": false
+      }
+    },
+    {
+      "id": "source_DV_NPC0007_SMALLTALK_002_5",
+      "category": "actual_variant_expression_known_context",
+      "source_variant_ids": [
+        "DV_NPC0007_SMALLTALK_002"
+      ],
+      "expression": "Mood!=OUTBURST & HasTag(QUIRK_SELF_TALK)=true",
+      "queries": [
+        {
+          "function": "HasTag",
+          "argument": "QUIRK_SELF_TALK",
+          "value": false
+        }
+      ],
+      "facts": [
+        {
+          "name": "Mood",
+          "type": "String",
+          "value": "OBSESSED"
+        }
+      ],
+      "expected": {
+        "complete": true,
+        "satisfied": false
+      }
+    },
+    {
+      "id": "source_DV_NPC0007_SMALLTALK_002_6",
+      "category": "actual_variant_expression_known_context",
+      "source_variant_ids": [
+        "DV_NPC0007_SMALLTALK_002"
+      ],
+      "expression": "Mood!=OUTBURST & HasTag(QUIRK_SELF_TALK)=true",
+      "queries": [
+        {
+          "function": "HasTag",
+          "argument": "QUIRK_SELF_TALK",
+          "value": true
+        }
+      ],
+      "facts": [
+        {
+          "name": "Mood",
+          "type": "String",
+          "value": "OBSESSED"
+        }
+      ],
+      "expected": {
+        "complete": true,
+        "satisfied": true
+      }
+    },
+    {
+      "id": "source_DV_NPC0007_REQUEST_HELP_001_7",
+      "category": "actual_variant_expression_known_context",
+      "source_variant_ids": [
+        "DV_NPC0007_REQUEST_HELP_001"
+      ],
+      "expression": "Mood!=OUTBURST & HasTag(OBSESSION_TOPIC)=true",
+      "queries": [
+        {
+          "function": "HasTag",
+          "argument": "OBSESSION_TOPIC",
+          "value": false
+        }
+      ],
+      "facts": [
+        {
+          "name": "Mood",
+          "type": "String",
+          "value": "CALM"
+        }
+      ],
+      "expected": {
+        "complete": true,
+        "satisfied": false
+      }
+    },
+    {
+      "id": "source_DV_NPC0007_REQUEST_HELP_001_8",
+      "category": "actual_variant_expression_known_context",
+      "source_variant_ids": [
+        "DV_NPC0007_REQUEST_HELP_001"
+      ],
+      "expression": "Mood!=OUTBURST & HasTag(OBSESSION_TOPIC)=true",
+      "queries": [
+        {
+          "function": "HasTag",
+          "argument": "OBSESSION_TOPIC",
+          "value": true
+        }
+      ],
+      "facts": [
+        {
+          "name": "Mood",
+          "type": "String",
+          "value": "CALM"
+        }
+      ],
+      "expected": {
+        "complete": true,
+        "satisfied": true
+      }
+    },
+    {
+      "id": "source_DV_NPC0007_REQUEST_HELP_001_9",
+      "category": "actual_variant_expression_known_context",
+      "source_variant_ids": [
+        "DV_NPC0007_REQUEST_HELP_001"
+      ],
+      "expression": "Mood!=OUTBURST & HasTag(OBSESSION_TOPIC)=true",
+      "queries": [
+        {
+          "function": "HasTag",
+          "argument": "OBSESSION_TOPIC",
+          "value": false
+        }
+      ],
+      "facts": [
+        {
+          "name": "Mood",
+          "type": "String",
+          "value": "OUTBURST"
+        }
+      ],
+      "expected": {
+        "complete": true,
+        "satisfied": false
+      }
+    },
+    {
+      "id": "source_DV_NPC0007_REQUEST_HELP_001_10",
+      "category": "actual_variant_expression_known_context",
+      "source_variant_ids": [
+        "DV_NPC0007_REQUEST_HELP_001"
+      ],
+      "expression": "Mood!=OUTBURST & HasTag(OBSESSION_TOPIC)=true",
+      "queries": [
+        {
+          "function": "HasTag",
+          "argument": "OBSESSION_TOPIC",
+          "value": true
+        }
+      ],
+      "facts": [
+        {
+          "name": "Mood",
+          "type": "String",
+          "value": "OUTBURST"
+        }
+      ],
+      "expected": {
+        "complete": true,
+        "satisfied": false
+      }
+    },
+    {
+      "id": "source_DV_NPC0007_REQUEST_HELP_001_11",
+      "category": "actual_variant_expression_known_context",
+      "source_variant_ids": [
+        "DV_NPC0007_REQUEST_HELP_001"
+      ],
+      "expression": "Mood!=OUTBURST & HasTag(OBSESSION_TOPIC)=true",
+      "queries": [
+        {
+          "function": "HasTag",
+          "argument": "OBSESSION_TOPIC",
+          "value": false
+        }
+      ],
+      "facts": [
+        {
+          "name": "Mood",
+          "type": "String",
+          "value": "OBSESSED"
+        }
+      ],
+      "expected": {
+        "complete": true,
+        "satisfied": false
+      }
+    },
+    {
+      "id": "source_DV_NPC0007_REQUEST_HELP_001_12",
+      "category": "actual_variant_expression_known_context",
+      "source_variant_ids": [
+        "DV_NPC0007_REQUEST_HELP_001"
+      ],
+      "expression": "Mood!=OUTBURST & HasTag(OBSESSION_TOPIC)=true",
+      "queries": [
+        {
+          "function": "HasTag",
+          "argument": "OBSESSION_TOPIC",
+          "value": true
+        }
+      ],
+      "facts": [
+        {
+          "name": "Mood",
+          "type": "String",
+          "value": "OBSESSED"
+        }
+      ],
+      "expected": {
+        "complete": true,
+        "satisfied": true
+      }
+    },
+    {
+      "id": "source_DV_NPC0007_REQUEST_HELP_002_13",
+      "category": "actual_variant_expression_known_context",
+      "source_variant_ids": [
+        "DV_NPC0007_REQUEST_HELP_002"
+      ],
+      "expression": "Mood!=OUTBURST & HasTag(STAKES_LOW)=true",
+      "queries": [
+        {
+          "function": "HasTag",
+          "argument": "STAKES_LOW",
+          "value": false
+        }
+      ],
+      "facts": [
+        {
+          "name": "Mood",
+          "type": "String",
+          "value": "CALM"
+        }
+      ],
+      "expected": {
+        "complete": true,
+        "satisfied": false
+      }
+    },
+    {
+      "id": "source_DV_NPC0007_REQUEST_HELP_002_14",
+      "category": "actual_variant_expression_known_context",
+      "source_variant_ids": [
+        "DV_NPC0007_REQUEST_HELP_002"
+      ],
+      "expression": "Mood!=OUTBURST & HasTag(STAKES_LOW)=true",
+      "queries": [
+        {
+          "function": "HasTag",
+          "argument": "STAKES_LOW",
+          "value": true
+        }
+      ],
+      "facts": [
+        {
+          "name": "Mood",
+          "type": "String",
+          "value": "CALM"
+        }
+      ],
+      "expected": {
+        "complete": true,
+        "satisfied": true
+      }
+    },
+    {
+      "id": "source_DV_NPC0007_REQUEST_HELP_002_15",
+      "category": "actual_variant_expression_known_context",
+      "source_variant_ids": [
+        "DV_NPC0007_REQUEST_HELP_002"
+      ],
+      "expression": "Mood!=OUTBURST & HasTag(STAKES_LOW)=true",
+      "queries": [
+        {
+          "function": "HasTag",
+          "argument": "STAKES_LOW",
+          "value": false
+        }
+      ],
+      "facts": [
+        {
+          "name": "Mood",
+          "type": "String",
+          "value": "OUTBURST"
+        }
+      ],
+      "expected": {
+        "complete": true,
+        "satisfied": false
+      }
+    },
+    {
+      "id": "source_DV_NPC0007_REQUEST_HELP_002_16",
+      "category": "actual_variant_expression_known_context",
+      "source_variant_ids": [
+        "DV_NPC0007_REQUEST_HELP_002"
+      ],
+      "expression": "Mood!=OUTBURST & HasTag(STAKES_LOW)=true",
+      "queries": [
+        {
+          "function": "HasTag",
+          "argument": "STAKES_LOW",
+          "value": true
+        }
+      ],
+      "facts": [
+        {
+          "name": "Mood",
+          "type": "String",
+          "value": "OUTBURST"
+        }
+      ],
+      "expected": {
+        "complete": true,
+        "satisfied": false
+      }
+    },
+    {
+      "id": "source_DV_NPC0007_REQUEST_HELP_002_17",
+      "category": "actual_variant_expression_known_context",
+      "source_variant_ids": [
+        "DV_NPC0007_REQUEST_HELP_002"
+      ],
+      "expression": "Mood!=OUTBURST & HasTag(STAKES_LOW)=true",
+      "queries": [
+        {
+          "function": "HasTag",
+          "argument": "STAKES_LOW",
+          "value": false
+        }
+      ],
+      "facts": [
+        {
+          "name": "Mood",
+          "type": "String",
+          "value": "OBSESSED"
+        }
+      ],
+      "expected": {
+        "complete": true,
+        "satisfied": false
+      }
+    },
+    {
+      "id": "source_DV_NPC0007_REQUEST_HELP_002_18",
+      "category": "actual_variant_expression_known_context",
+      "source_variant_ids": [
+        "DV_NPC0007_REQUEST_HELP_002"
+      ],
+      "expression": "Mood!=OUTBURST & HasTag(STAKES_LOW)=true",
+      "queries": [
+        {
+          "function": "HasTag",
+          "argument": "STAKES_LOW",
+          "value": true
+        }
+      ],
+      "facts": [
+        {
+          "name": "Mood",
+          "type": "String",
+          "value": "OBSESSED"
+        }
+      ],
+      "expected": {
+        "complete": true,
+        "satisfied": true
+      }
+    },
+    {
+      "id": "source_DV_NPC0007_BLAME_001_19",
+      "category": "actual_variant_expression_known_context",
+      "source_variant_ids": [
+        "DV_NPC0007_BLAME_001"
+      ],
+      "expression": "Mood!=OUTBURST & HasTag(STAKES_LOW)=true",
+      "queries": [
+        {
+          "function": "HasTag",
+          "argument": "STAKES_LOW",
+          "value": false
+        }
+      ],
+      "facts": [
+        {
+          "name": "Mood",
+          "type": "String",
+          "value": "CALM"
+        }
+      ],
+      "expected": {
+        "complete": true,
+        "satisfied": false
+      }
+    },
+    {
+      "id": "source_DV_NPC0007_BLAME_001_20",
+      "category": "actual_variant_expression_known_context",
+      "source_variant_ids": [
+        "DV_NPC0007_BLAME_001"
+      ],
+      "expression": "Mood!=OUTBURST & HasTag(STAKES_LOW)=true",
+      "queries": [
+        {
+          "function": "HasTag",
+          "argument": "STAKES_LOW",
+          "value": true
+        }
+      ],
+      "facts": [
+        {
+          "name": "Mood",
+          "type": "String",
+          "value": "CALM"
+        }
+      ],
+      "expected": {
+        "complete": true,
+        "satisfied": true
+      }
+    },
+    {
+      "id": "source_DV_NPC0007_BLAME_001_21",
+      "category": "actual_variant_expression_known_context",
+      "source_variant_ids": [
+        "DV_NPC0007_BLAME_001"
+      ],
+      "expression": "Mood!=OUTBURST & HasTag(STAKES_LOW)=true",
+      "queries": [
+        {
+          "function": "HasTag",
+          "argument": "STAKES_LOW",
+          "value": false
+        }
+      ],
+      "facts": [
+        {
+          "name": "Mood",
+          "type": "String",
+          "value": "OUTBURST"
+        }
+      ],
+      "expected": {
+        "complete": true,
+        "satisfied": false
+      }
+    },
+    {
+      "id": "source_DV_NPC0007_BLAME_001_22",
+      "category": "actual_variant_expression_known_context",
+      "source_variant_ids": [
+        "DV_NPC0007_BLAME_001"
+      ],
+      "expression": "Mood!=OUTBURST & HasTag(STAKES_LOW)=true",
+      "queries": [
+        {
+          "function": "HasTag",
+          "argument": "STAKES_LOW",
+          "value": true
+        }
+      ],
+      "facts": [
+        {
+          "name": "Mood",
+          "type": "String",
+          "value": "OUTBURST"
+        }
+      ],
+      "expected": {
+        "complete": true,
+        "satisfied": false
+      }
+    },
+    {
+      "id": "source_DV_NPC0007_BLAME_001_23",
+      "category": "actual_variant_expression_known_context",
+      "source_variant_ids": [
+        "DV_NPC0007_BLAME_001"
+      ],
+      "expression": "Mood!=OUTBURST & HasTag(STAKES_LOW)=true",
+      "queries": [
+        {
+          "function": "HasTag",
+          "argument": "STAKES_LOW",
+          "value": false
+        }
+      ],
+      "facts": [
+        {
+          "name": "Mood",
+          "type": "String",
+          "value": "OBSESSED"
+        }
+      ],
+      "expected": {
+        "complete": true,
+        "satisfied": false
+      }
+    },
+    {
+      "id": "source_DV_NPC0007_BLAME_001_24",
+      "category": "actual_variant_expression_known_context",
+      "source_variant_ids": [
+        "DV_NPC0007_BLAME_001"
+      ],
+      "expression": "Mood!=OUTBURST & HasTag(STAKES_LOW)=true",
+      "queries": [
+        {
+          "function": "HasTag",
+          "argument": "STAKES_LOW",
+          "value": true
+        }
+      ],
+      "facts": [
+        {
+          "name": "Mood",
+          "type": "String",
+          "value": "OBSESSED"
+        }
+      ],
+      "expected": {
+        "complete": true,
+        "satisfied": true
+      }
+    },
+    {
+      "id": "source_DV_NPC0007_BLAME_002_25",
+      "category": "actual_variant_expression_known_context",
+      "source_variant_ids": [
+        "DV_NPC0007_BLAME_002"
+      ],
+      "expression": "Mood!=OUTBURST & HasTag(STAKES_HIGH)=true",
+      "queries": [
+        {
+          "function": "HasTag",
+          "argument": "STAKES_HIGH",
+          "value": false
+        }
+      ],
+      "facts": [
+        {
+          "name": "Mood",
+          "type": "String",
+          "value": "CALM"
+        }
+      ],
+      "expected": {
+        "complete": true,
+        "satisfied": false
+      }
+    },
+    {
+      "id": "source_DV_NPC0007_BLAME_002_26",
+      "category": "actual_variant_expression_known_context",
+      "source_variant_ids": [
+        "DV_NPC0007_BLAME_002"
+      ],
+      "expression": "Mood!=OUTBURST & HasTag(STAKES_HIGH)=true",
+      "queries": [
+        {
+          "function": "HasTag",
+          "argument": "STAKES_HIGH",
+          "value": true
+        }
+      ],
+      "facts": [
+        {
+          "name": "Mood",
+          "type": "String",
+          "value": "CALM"
+        }
+      ],
+      "expected": {
+        "complete": true,
+        "satisfied": true
+      }
+    },
+    {
+      "id": "source_DV_NPC0007_BLAME_002_27",
+      "category": "actual_variant_expression_known_context",
+      "source_variant_ids": [
+        "DV_NPC0007_BLAME_002"
+      ],
+      "expression": "Mood!=OUTBURST & HasTag(STAKES_HIGH)=true",
+      "queries": [
+        {
+          "function": "HasTag",
+          "argument": "STAKES_HIGH",
+          "value": false
+        }
+      ],
+      "facts": [
+        {
+          "name": "Mood",
+          "type": "String",
+          "value": "OUTBURST"
+        }
+      ],
+      "expected": {
+        "complete": true,
+        "satisfied": false
+      }
+    },
+    {
+      "id": "source_DV_NPC0007_BLAME_002_28",
+      "category": "actual_variant_expression_known_context",
+      "source_variant_ids": [
+        "DV_NPC0007_BLAME_002"
+      ],
+      "expression": "Mood!=OUTBURST & HasTag(STAKES_HIGH)=true",
+      "queries": [
+        {
+          "function": "HasTag",
+          "argument": "STAKES_HIGH",
+          "value": true
+        }
+      ],
+      "facts": [
+        {
+          "name": "Mood",
+          "type": "String",
+          "value": "OUTBURST"
+        }
+      ],
+      "expected": {
+        "complete": true,
+        "satisfied": false
+      }
+    },
+    {
+      "id": "source_DV_NPC0007_BLAME_002_29",
+      "category": "actual_variant_expression_known_context",
+      "source_variant_ids": [
+        "DV_NPC0007_BLAME_002"
+      ],
+      "expression": "Mood!=OUTBURST & HasTag(STAKES_HIGH)=true",
+      "queries": [
+        {
+          "function": "HasTag",
+          "argument": "STAKES_HIGH",
+          "value": false
+        }
+      ],
+      "facts": [
+        {
+          "name": "Mood",
+          "type": "String",
+          "value": "OBSESSED"
+        }
+      ],
+      "expected": {
+        "complete": true,
+        "satisfied": false
+      }
+    },
+    {
+      "id": "source_DV_NPC0007_BLAME_002_30",
+      "category": "actual_variant_expression_known_context",
+      "source_variant_ids": [
+        "DV_NPC0007_BLAME_002"
+      ],
+      "expression": "Mood!=OUTBURST & HasTag(STAKES_HIGH)=true",
+      "queries": [
+        {
+          "function": "HasTag",
+          "argument": "STAKES_HIGH",
+          "value": true
+        }
+      ],
+      "facts": [
+        {
+          "name": "Mood",
+          "type": "String",
+          "value": "OBSESSED"
+        }
+      ],
+      "expected": {
+        "complete": true,
+        "satisfied": true
+      }
+    },
+    {
+      "id": "source_DV_NPC0007_APOLOGY_001_31",
+      "category": "actual_variant_expression_known_context",
+      "source_variant_ids": [
+        "DV_NPC0007_APOLOGY_001"
+      ],
+      "expression": "Mood!=OUTBURST & HasTag(PLAYER_IS_WRONG)=true & HasTag(PLAYER_APOLOGIZED)=true",
+      "queries": [
+        {
+          "function": "HasTag",
+          "argument": "PLAYER_IS_WRONG",
+          "value": false
+        },
+        {
+          "function": "HasTag",
+          "argument": "PLAYER_APOLOGIZED",
+          "value": false
+        }
+      ],
+      "facts": [
+        {
+          "name": "Mood",
+          "type": "String",
+          "value": "CALM"
+        }
+      ],
+      "expected": {
+        "complete": true,
+        "satisfied": false
+      }
+    },
+    {
+      "id": "source_DV_NPC0007_APOLOGY_001_32",
+      "category": "actual_variant_expression_known_context",
+      "source_variant_ids": [
+        "DV_NPC0007_APOLOGY_001"
+      ],
+      "expression": "Mood!=OUTBURST & HasTag(PLAYER_IS_WRONG)=true & HasTag(PLAYER_APOLOGIZED)=true",
+      "queries": [
+        {
+          "function": "HasTag",
+          "argument": "PLAYER_IS_WRONG",
+          "value": false
+        },
+        {
+          "function": "HasTag",
+          "argument": "PLAYER_APOLOGIZED",
+          "value": true
+        }
+      ],
+      "facts": [
+        {
+          "name": "Mood",
+          "type": "String",
+          "value": "CALM"
+        }
+      ],
+      "expected": {
+        "complete": true,
+        "satisfied": false
+      }
+    },
+    {
+      "id": "source_DV_NPC0007_APOLOGY_001_33",
+      "category": "actual_variant_expression_known_context",
+      "source_variant_ids": [
+        "DV_NPC0007_APOLOGY_001"
+      ],
+      "expression": "Mood!=OUTBURST & HasTag(PLAYER_IS_WRONG)=true & HasTag(PLAYER_APOLOGIZED)=true",
+      "queries": [
+        {
+          "function": "HasTag",
+          "argument": "PLAYER_IS_WRONG",
+          "value": true
+        },
+        {
+          "function": "HasTag",
+          "argument": "PLAYER_APOLOGIZED",
+          "value": false
+        }
+      ],
+      "facts": [
+        {
+          "name": "Mood",
+          "type": "String",
+          "value": "CALM"
+        }
+      ],
+      "expected": {
+        "complete": true,
+        "satisfied": false
+      }
+    },
+    {
+      "id": "source_DV_NPC0007_APOLOGY_001_34",
+      "category": "actual_variant_expression_known_context",
+      "source_variant_ids": [
+        "DV_NPC0007_APOLOGY_001"
+      ],
+      "expression": "Mood!=OUTBURST & HasTag(PLAYER_IS_WRONG)=true & HasTag(PLAYER_APOLOGIZED)=true",
+      "queries": [
+        {
+          "function": "HasTag",
+          "argument": "PLAYER_IS_WRONG",
+          "value": true
+        },
+        {
+          "function": "HasTag",
+          "argument": "PLAYER_APOLOGIZED",
+          "value": true
+        }
+      ],
+      "facts": [
+        {
+          "name": "Mood",
+          "type": "String",
+          "value": "CALM"
+        }
+      ],
+      "expected": {
+        "complete": true,
+        "satisfied": true
+      }
+    },
+    {
+      "id": "source_DV_NPC0007_APOLOGY_001_35",
+      "category": "actual_variant_expression_known_context",
+      "source_variant_ids": [
+        "DV_NPC0007_APOLOGY_001"
+      ],
+      "expression": "Mood!=OUTBURST & HasTag(PLAYER_IS_WRONG)=true & HasTag(PLAYER_APOLOGIZED)=true",
+      "queries": [
+        {
+          "function": "HasTag",
+          "argument": "PLAYER_IS_WRONG",
+          "value": false
+        },
+        {
+          "function": "HasTag",
+          "argument": "PLAYER_APOLOGIZED",
+          "value": false
+        }
+      ],
+      "facts": [
+        {
+          "name": "Mood",
+          "type": "String",
+          "value": "OUTBURST"
+        }
+      ],
+      "expected": {
+        "complete": true,
+        "satisfied": false
+      }
+    },
+    {
+      "id": "source_DV_NPC0007_APOLOGY_001_36",
+      "category": "actual_variant_expression_known_context",
+      "source_variant_ids": [
+        "DV_NPC0007_APOLOGY_001"
+      ],
+      "expression": "Mood!=OUTBURST & HasTag(PLAYER_IS_WRONG)=true & HasTag(PLAYER_APOLOGIZED)=true",
+      "queries": [
+        {
+          "function": "HasTag",
+          "argument": "PLAYER_IS_WRONG",
+          "value": false
+        },
+        {
+          "function": "HasTag",
+          "argument": "PLAYER_APOLOGIZED",
+          "value": true
+        }
+      ],
+      "facts": [
+        {
+          "name": "Mood",
+          "type": "String",
+          "value": "OUTBURST"
+        }
+      ],
+      "expected": {
+        "complete": true,
+        "satisfied": false
+      }
+    },
+    {
+      "id": "source_DV_NPC0007_APOLOGY_001_37",
+      "category": "actual_variant_expression_known_context",
+      "source_variant_ids": [
+        "DV_NPC0007_APOLOGY_001"
+      ],
+      "expression": "Mood!=OUTBURST & HasTag(PLAYER_IS_WRONG)=true & HasTag(PLAYER_APOLOGIZED)=true",
+      "queries": [
+        {
+          "function": "HasTag",
+          "argument": "PLAYER_IS_WRONG",
+          "value": true
+        },
+        {
+          "function": "HasTag",
+          "argument": "PLAYER_APOLOGIZED",
+          "value": false
+        }
+      ],
+      "facts": [
+        {
+          "name": "Mood",
+          "type": "String",
+          "value": "OUTBURST"
+        }
+      ],
+      "expected": {
+        "complete": true,
+        "satisfied": false
+      }
+    },
+    {
+      "id": "source_DV_NPC0007_APOLOGY_001_38",
+      "category": "actual_variant_expression_known_context",
+      "source_variant_ids": [
+        "DV_NPC0007_APOLOGY_001"
+      ],
+      "expression": "Mood!=OUTBURST & HasTag(PLAYER_IS_WRONG)=true & HasTag(PLAYER_APOLOGIZED)=true",
+      "queries": [
+        {
+          "function": "HasTag",
+          "argument": "PLAYER_IS_WRONG",
+          "value": true
+        },
+        {
+          "function": "HasTag",
+          "argument": "PLAYER_APOLOGIZED",
+          "value": true
+        }
+      ],
+      "facts": [
+        {
+          "name": "Mood",
+          "type": "String",
+          "value": "OUTBURST"
+        }
+      ],
+      "expected": {
+        "complete": true,
+        "satisfied": false
+      }
+    },
+    {
+      "id": "source_DV_NPC0007_APOLOGY_001_39",
+      "category": "actual_variant_expression_known_context",
+      "source_variant_ids": [
+        "DV_NPC0007_APOLOGY_001"
+      ],
+      "expression": "Mood!=OUTBURST & HasTag(PLAYER_IS_WRONG)=true & HasTag(PLAYER_APOLOGIZED)=true",
+      "queries": [
+        {
+          "function": "HasTag",
+          "argument": "PLAYER_IS_WRONG",
+          "value": false
+        },
+        {
+          "function": "HasTag",
+          "argument": "PLAYER_APOLOGIZED",
+          "value": false
+        }
+      ],
+      "facts": [
+        {
+          "name": "Mood",
+          "type": "String",
+          "value": "OBSESSED"
+        }
+      ],
+      "expected": {
+        "complete": true,
+        "satisfied": false
+      }
+    },
+    {
+      "id": "source_DV_NPC0007_APOLOGY_001_40",
+      "category": "actual_variant_expression_known_context",
+      "source_variant_ids": [
+        "DV_NPC0007_APOLOGY_001"
+      ],
+      "expression": "Mood!=OUTBURST & HasTag(PLAYER_IS_WRONG)=true & HasTag(PLAYER_APOLOGIZED)=true",
+      "queries": [
+        {
+          "function": "HasTag",
+          "argument": "PLAYER_IS_WRONG",
+          "value": false
+        },
+        {
+          "function": "HasTag",
+          "argument": "PLAYER_APOLOGIZED",
+          "value": true
+        }
+      ],
+      "facts": [
+        {
+          "name": "Mood",
+          "type": "String",
+          "value": "OBSESSED"
+        }
+      ],
+      "expected": {
+        "complete": true,
+        "satisfied": false
+      }
+    },
+    {
+      "id": "source_DV_NPC0007_APOLOGY_001_41",
+      "category": "actual_variant_expression_known_context",
+      "source_variant_ids": [
+        "DV_NPC0007_APOLOGY_001"
+      ],
+      "expression": "Mood!=OUTBURST & HasTag(PLAYER_IS_WRONG)=true & HasTag(PLAYER_APOLOGIZED)=true",
+      "queries": [
+        {
+          "function": "HasTag",
+          "argument": "PLAYER_IS_WRONG",
+          "value": true
+        },
+        {
+          "function": "HasTag",
+          "argument": "PLAYER_APOLOGIZED",
+          "value": false
+        }
+      ],
+      "facts": [
+        {
+          "name": "Mood",
+          "type": "String",
+          "value": "OBSESSED"
+        }
+      ],
+      "expected": {
+        "complete": true,
+        "satisfied": false
+      }
+    },
+    {
+      "id": "source_DV_NPC0007_APOLOGY_001_42",
+      "category": "actual_variant_expression_known_context",
+      "source_variant_ids": [
+        "DV_NPC0007_APOLOGY_001"
+      ],
+      "expression": "Mood!=OUTBURST & HasTag(PLAYER_IS_WRONG)=true & HasTag(PLAYER_APOLOGIZED)=true",
+      "queries": [
+        {
+          "function": "HasTag",
+          "argument": "PLAYER_IS_WRONG",
+          "value": true
+        },
+        {
+          "function": "HasTag",
+          "argument": "PLAYER_APOLOGIZED",
+          "value": true
+        }
+      ],
+      "facts": [
+        {
+          "name": "Mood",
+          "type": "String",
+          "value": "OBSESSED"
+        }
+      ],
+      "expected": {
+        "complete": true,
+        "satisfied": true
+      }
+    },
+    {
+      "id": "source_DV_NPC0007_THREAT_001_43",
+      "category": "actual_variant_expression_known_context",
+      "source_variant_ids": [
+        "DV_NPC0007_THREAT_001"
+      ],
+      "expression": "Mood!=OUTBURST & HasTag(STAKES_LOW)=true",
+      "queries": [
+        {
+          "function": "HasTag",
+          "argument": "STAKES_LOW",
+          "value": false
+        }
+      ],
+      "facts": [
+        {
+          "name": "Mood",
+          "type": "String",
+          "value": "CALM"
+        }
+      ],
+      "expected": {
+        "complete": true,
+        "satisfied": false
+      }
+    },
+    {
+      "id": "source_DV_NPC0007_THREAT_001_44",
+      "category": "actual_variant_expression_known_context",
+      "source_variant_ids": [
+        "DV_NPC0007_THREAT_001"
+      ],
+      "expression": "Mood!=OUTBURST & HasTag(STAKES_LOW)=true",
+      "queries": [
+        {
+          "function": "HasTag",
+          "argument": "STAKES_LOW",
+          "value": true
+        }
+      ],
+      "facts": [
+        {
+          "name": "Mood",
+          "type": "String",
+          "value": "CALM"
+        }
+      ],
+      "expected": {
+        "complete": true,
+        "satisfied": true
+      }
+    },
+    {
+      "id": "source_DV_NPC0007_THREAT_001_45",
+      "category": "actual_variant_expression_known_context",
+      "source_variant_ids": [
+        "DV_NPC0007_THREAT_001"
+      ],
+      "expression": "Mood!=OUTBURST & HasTag(STAKES_LOW)=true",
+      "queries": [
+        {
+          "function": "HasTag",
+          "argument": "STAKES_LOW",
+          "value": false
+        }
+      ],
+      "facts": [
+        {
+          "name": "Mood",
+          "type": "String",
+          "value": "OUTBURST"
+        }
+      ],
+      "expected": {
+        "complete": true,
+        "satisfied": false
+      }
+    },
+    {
+      "id": "source_DV_NPC0007_THREAT_001_46",
+      "category": "actual_variant_expression_known_context",
+      "source_variant_ids": [
+        "DV_NPC0007_THREAT_001"
+      ],
+      "expression": "Mood!=OUTBURST & HasTag(STAKES_LOW)=true",
+      "queries": [
+        {
+          "function": "HasTag",
+          "argument": "STAKES_LOW",
+          "value": true
+        }
+      ],
+      "facts": [
+        {
+          "name": "Mood",
+          "type": "String",
+          "value": "OUTBURST"
+        }
+      ],
+      "expected": {
+        "complete": true,
+        "satisfied": false
+      }
+    },
+    {
+      "id": "source_DV_NPC0007_THREAT_001_47",
+      "category": "actual_variant_expression_known_context",
+      "source_variant_ids": [
+        "DV_NPC0007_THREAT_001"
+      ],
+      "expression": "Mood!=OUTBURST & HasTag(STAKES_LOW)=true",
+      "queries": [
+        {
+          "function": "HasTag",
+          "argument": "STAKES_LOW",
+          "value": false
+        }
+      ],
+      "facts": [
+        {
+          "name": "Mood",
+          "type": "String",
+          "value": "OBSESSED"
+        }
+      ],
+      "expected": {
+        "complete": true,
+        "satisfied": false
+      }
+    },
+    {
+      "id": "source_DV_NPC0007_THREAT_001_48",
+      "category": "actual_variant_expression_known_context",
+      "source_variant_ids": [
+        "DV_NPC0007_THREAT_001"
+      ],
+      "expression": "Mood!=OUTBURST & HasTag(STAKES_LOW)=true",
+      "queries": [
+        {
+          "function": "HasTag",
+          "argument": "STAKES_LOW",
+          "value": true
+        }
+      ],
+      "facts": [
+        {
+          "name": "Mood",
+          "type": "String",
+          "value": "OBSESSED"
+        }
+      ],
+      "expected": {
+        "complete": true,
+        "satisfied": true
+      }
+    },
+    {
+      "id": "source_DV_NPC0007_OBSESSION_001_49",
+      "category": "actual_variant_expression_known_context",
+      "source_variant_ids": [
+        "DV_NPC0007_OBSESSION_001"
+      ],
+      "expression": "HasTag(OBSESSION_TOPIC)=true",
+      "queries": [
+        {
+          "function": "HasTag",
+          "argument": "OBSESSION_TOPIC",
+          "value": false
+        }
+      ],
+      "facts": [],
+      "expected": {
+        "complete": true,
+        "satisfied": false
+      }
+    },
+    {
+      "id": "source_DV_NPC0007_OBSESSION_001_50",
+      "category": "actual_variant_expression_known_context",
+      "source_variant_ids": [
+        "DV_NPC0007_OBSESSION_001"
+      ],
+      "expression": "HasTag(OBSESSION_TOPIC)=true",
+      "queries": [
+        {
+          "function": "HasTag",
+          "argument": "OBSESSION_TOPIC",
+          "value": true
+        }
+      ],
+      "facts": [],
+      "expected": {
+        "complete": true,
+        "satisfied": true
+      }
+    },
+    {
+      "id": "source_DV_NPC0007_OBSESSION_002_51",
+      "category": "actual_variant_expression_known_context",
+      "source_variant_ids": [
+        "DV_NPC0007_OBSESSION_002"
+      ],
+      "expression": "Mood==OBSESSED & HasTag(QUIRK_SWAMP_HERBS)=true",
+      "queries": [
+        {
+          "function": "HasTag",
+          "argument": "QUIRK_SWAMP_HERBS",
+          "value": false
+        }
+      ],
+      "facts": [
+        {
+          "name": "Mood",
+          "type": "String",
+          "value": "CALM"
+        }
+      ],
+      "expected": {
+        "complete": true,
+        "satisfied": false
+      }
+    },
+    {
+      "id": "source_DV_NPC0007_OBSESSION_002_52",
+      "category": "actual_variant_expression_known_context",
+      "source_variant_ids": [
+        "DV_NPC0007_OBSESSION_002"
+      ],
+      "expression": "Mood==OBSESSED & HasTag(QUIRK_SWAMP_HERBS)=true",
+      "queries": [
+        {
+          "function": "HasTag",
+          "argument": "QUIRK_SWAMP_HERBS",
+          "value": true
+        }
+      ],
+      "facts": [
+        {
+          "name": "Mood",
+          "type": "String",
+          "value": "CALM"
+        }
+      ],
+      "expected": {
+        "complete": true,
+        "satisfied": false
+      }
+    },
+    {
+      "id": "source_DV_NPC0007_OBSESSION_002_53",
+      "category": "actual_variant_expression_known_context",
+      "source_variant_ids": [
+        "DV_NPC0007_OBSESSION_002"
+      ],
+      "expression": "Mood==OBSESSED & HasTag(QUIRK_SWAMP_HERBS)=true",
+      "queries": [
+        {
+          "function": "HasTag",
+          "argument": "QUIRK_SWAMP_HERBS",
+          "value": false
+        }
+      ],
+      "facts": [
+        {
+          "name": "Mood",
+          "type": "String",
+          "value": "OUTBURST"
+        }
+      ],
+      "expected": {
+        "complete": true,
+        "satisfied": false
+      }
+    },
+    {
+      "id": "source_DV_NPC0007_OBSESSION_002_54",
+      "category": "actual_variant_expression_known_context",
+      "source_variant_ids": [
+        "DV_NPC0007_OBSESSION_002"
+      ],
+      "expression": "Mood==OBSESSED & HasTag(QUIRK_SWAMP_HERBS)=true",
+      "queries": [
+        {
+          "function": "HasTag",
+          "argument": "QUIRK_SWAMP_HERBS",
+          "value": true
+        }
+      ],
+      "facts": [
+        {
+          "name": "Mood",
+          "type": "String",
+          "value": "OUTBURST"
+        }
+      ],
+      "expected": {
+        "complete": true,
+        "satisfied": false
+      }
+    },
+    {
+      "id": "source_DV_NPC0007_OBSESSION_002_55",
+      "category": "actual_variant_expression_known_context",
+      "source_variant_ids": [
+        "DV_NPC0007_OBSESSION_002"
+      ],
+      "expression": "Mood==OBSESSED & HasTag(QUIRK_SWAMP_HERBS)=true",
+      "queries": [
+        {
+          "function": "HasTag",
+          "argument": "QUIRK_SWAMP_HERBS",
+          "value": false
+        }
+      ],
+      "facts": [
+        {
+          "name": "Mood",
+          "type": "String",
+          "value": "OBSESSED"
+        }
+      ],
+      "expected": {
+        "complete": true,
+        "satisfied": false
+      }
+    },
+    {
+      "id": "source_DV_NPC0007_OBSESSION_002_56",
+      "category": "actual_variant_expression_known_context",
+      "source_variant_ids": [
+        "DV_NPC0007_OBSESSION_002"
+      ],
+      "expression": "Mood==OBSESSED & HasTag(QUIRK_SWAMP_HERBS)=true",
+      "queries": [
+        {
+          "function": "HasTag",
+          "argument": "QUIRK_SWAMP_HERBS",
+          "value": true
+        }
+      ],
+      "facts": [
+        {
+          "name": "Mood",
+          "type": "String",
+          "value": "OBSESSED"
+        }
+      ],
+      "expected": {
+        "complete": true,
+        "satisfied": true
+      }
+    },
+    {
+      "id": "source_DV_NPC0007_INSULT_001_57",
+      "category": "actual_variant_expression_known_context",
+      "source_variant_ids": [
+        "DV_NPC0007_INSULT_001"
+      ],
+      "expression": "Mood!=OUTBURST & HasTag(STAKES_LOW)=true",
+      "queries": [
+        {
+          "function": "HasTag",
+          "argument": "STAKES_LOW",
+          "value": false
+        }
+      ],
+      "facts": [
+        {
+          "name": "Mood",
+          "type": "String",
+          "value": "CALM"
+        }
+      ],
+      "expected": {
+        "complete": true,
+        "satisfied": false
+      }
+    },
+    {
+      "id": "source_DV_NPC0007_INSULT_001_58",
+      "category": "actual_variant_expression_known_context",
+      "source_variant_ids": [
+        "DV_NPC0007_INSULT_001"
+      ],
+      "expression": "Mood!=OUTBURST & HasTag(STAKES_LOW)=true",
+      "queries": [
+        {
+          "function": "HasTag",
+          "argument": "STAKES_LOW",
+          "value": true
+        }
+      ],
+      "facts": [
+        {
+          "name": "Mood",
+          "type": "String",
+          "value": "CALM"
+        }
+      ],
+      "expected": {
+        "complete": true,
+        "satisfied": true
+      }
+    },
+    {
+      "id": "source_DV_NPC0007_INSULT_001_59",
+      "category": "actual_variant_expression_known_context",
+      "source_variant_ids": [
+        "DV_NPC0007_INSULT_001"
+      ],
+      "expression": "Mood!=OUTBURST & HasTag(STAKES_LOW)=true",
+      "queries": [
+        {
+          "function": "HasTag",
+          "argument": "STAKES_LOW",
+          "value": false
+        }
+      ],
+      "facts": [
+        {
+          "name": "Mood",
+          "type": "String",
+          "value": "OUTBURST"
+        }
+      ],
+      "expected": {
+        "complete": true,
+        "satisfied": false
+      }
+    },
+    {
+      "id": "source_DV_NPC0007_INSULT_001_60",
+      "category": "actual_variant_expression_known_context",
+      "source_variant_ids": [
+        "DV_NPC0007_INSULT_001"
+      ],
+      "expression": "Mood!=OUTBURST & HasTag(STAKES_LOW)=true",
+      "queries": [
+        {
+          "function": "HasTag",
+          "argument": "STAKES_LOW",
+          "value": true
+        }
+      ],
+      "facts": [
+        {
+          "name": "Mood",
+          "type": "String",
+          "value": "OUTBURST"
+        }
+      ],
+      "expected": {
+        "complete": true,
+        "satisfied": false
+      }
+    },
+    {
+      "id": "source_DV_NPC0007_INSULT_001_61",
+      "category": "actual_variant_expression_known_context",
+      "source_variant_ids": [
+        "DV_NPC0007_INSULT_001"
+      ],
+      "expression": "Mood!=OUTBURST & HasTag(STAKES_LOW)=true",
+      "queries": [
+        {
+          "function": "HasTag",
+          "argument": "STAKES_LOW",
+          "value": false
+        }
+      ],
+      "facts": [
+        {
+          "name": "Mood",
+          "type": "String",
+          "value": "OBSESSED"
+        }
+      ],
+      "expected": {
+        "complete": true,
+        "satisfied": false
+      }
+    },
+    {
+      "id": "source_DV_NPC0007_INSULT_001_62",
+      "category": "actual_variant_expression_known_context",
+      "source_variant_ids": [
+        "DV_NPC0007_INSULT_001"
+      ],
+      "expression": "Mood!=OUTBURST & HasTag(STAKES_LOW)=true",
+      "queries": [
+        {
+          "function": "HasTag",
+          "argument": "STAKES_LOW",
+          "value": true
+        }
+      ],
+      "facts": [
+        {
+          "name": "Mood",
+          "type": "String",
+          "value": "OBSESSED"
+        }
+      ],
+      "expected": {
+        "complete": true,
+        "satisfied": true
+      }
+    },
+    {
+      "id": "source_DV_NPC0007_GOODBYE_001_63",
+      "category": "actual_variant_expression_known_context",
+      "source_variant_ids": [
+        "DV_NPC0007_GOODBYE_001"
+      ],
+      "expression": "Mood!=OUTBURST & HasFlag(FLAG_NPC0007_AVOID_PLAYER_TEMP)=false",
+      "queries": [
+        {
+          "function": "HasFlag",
+          "argument": "FLAG_NPC0007_AVOID_PLAYER_TEMP",
+          "value": false
+        }
+      ],
+      "facts": [
+        {
+          "name": "Mood",
+          "type": "String",
+          "value": "CALM"
+        }
+      ],
+      "expected": {
+        "complete": true,
+        "satisfied": true
+      }
+    },
+    {
+      "id": "source_DV_NPC0007_GOODBYE_001_64",
+      "category": "actual_variant_expression_known_context",
+      "source_variant_ids": [
+        "DV_NPC0007_GOODBYE_001"
+      ],
+      "expression": "Mood!=OUTBURST & HasFlag(FLAG_NPC0007_AVOID_PLAYER_TEMP)=false",
+      "queries": [
+        {
+          "function": "HasFlag",
+          "argument": "FLAG_NPC0007_AVOID_PLAYER_TEMP",
+          "value": true
+        }
+      ],
+      "facts": [
+        {
+          "name": "Mood",
+          "type": "String",
+          "value": "CALM"
+        }
+      ],
+      "expected": {
+        "complete": true,
+        "satisfied": false
+      }
+    },
+    {
+      "id": "source_DV_NPC0007_GOODBYE_001_65",
+      "category": "actual_variant_expression_known_context",
+      "source_variant_ids": [
+        "DV_NPC0007_GOODBYE_001"
+      ],
+      "expression": "Mood!=OUTBURST & HasFlag(FLAG_NPC0007_AVOID_PLAYER_TEMP)=false",
+      "queries": [
+        {
+          "function": "HasFlag",
+          "argument": "FLAG_NPC0007_AVOID_PLAYER_TEMP",
+          "value": false
+        }
+      ],
+      "facts": [
+        {
+          "name": "Mood",
+          "type": "String",
+          "value": "OUTBURST"
+        }
+      ],
+      "expected": {
+        "complete": true,
+        "satisfied": false
+      }
+    },
+    {
+      "id": "source_DV_NPC0007_GOODBYE_001_66",
+      "category": "actual_variant_expression_known_context",
+      "source_variant_ids": [
+        "DV_NPC0007_GOODBYE_001"
+      ],
+      "expression": "Mood!=OUTBURST & HasFlag(FLAG_NPC0007_AVOID_PLAYER_TEMP)=false",
+      "queries": [
+        {
+          "function": "HasFlag",
+          "argument": "FLAG_NPC0007_AVOID_PLAYER_TEMP",
+          "value": true
+        }
+      ],
+      "facts": [
+        {
+          "name": "Mood",
+          "type": "String",
+          "value": "OUTBURST"
+        }
+      ],
+      "expected": {
+        "complete": true,
+        "satisfied": false
+      }
+    },
+    {
+      "id": "source_DV_NPC0007_GOODBYE_001_67",
+      "category": "actual_variant_expression_known_context",
+      "source_variant_ids": [
+        "DV_NPC0007_GOODBYE_001"
+      ],
+      "expression": "Mood!=OUTBURST & HasFlag(FLAG_NPC0007_AVOID_PLAYER_TEMP)=false",
+      "queries": [
+        {
+          "function": "HasFlag",
+          "argument": "FLAG_NPC0007_AVOID_PLAYER_TEMP",
+          "value": false
+        }
+      ],
+      "facts": [
+        {
+          "name": "Mood",
+          "type": "String",
+          "value": "OBSESSED"
+        }
+      ],
+      "expected": {
+        "complete": true,
+        "satisfied": true
+      }
+    },
+    {
+      "id": "source_DV_NPC0007_GOODBYE_001_68",
+      "category": "actual_variant_expression_known_context",
+      "source_variant_ids": [
+        "DV_NPC0007_GOODBYE_001"
+      ],
+      "expression": "Mood!=OUTBURST & HasFlag(FLAG_NPC0007_AVOID_PLAYER_TEMP)=false",
+      "queries": [
+        {
+          "function": "HasFlag",
+          "argument": "FLAG_NPC0007_AVOID_PLAYER_TEMP",
+          "value": true
+        }
+      ],
+      "facts": [
+        {
+          "name": "Mood",
+          "type": "String",
+          "value": "OBSESSED"
+        }
+      ],
+      "expected": {
+        "complete": true,
+        "satisfied": false
+      }
+    },
+    {
+      "id": "source_DV_NPC0007_GOODBYE_002_69",
+      "category": "actual_variant_expression_known_context",
+      "source_variant_ids": [
+        "DV_NPC0007_GOODBYE_002"
+      ],
+      "expression": "Mood==OUTBURST | HasFlag(FLAG_NPC0007_AVOID_PLAYER_TEMP)=true",
+      "queries": [
+        {
+          "function": "HasFlag",
+          "argument": "FLAG_NPC0007_AVOID_PLAYER_TEMP",
+          "value": false
+        }
+      ],
+      "facts": [
+        {
+          "name": "Mood",
+          "type": "String",
+          "value": "CALM"
+        }
+      ],
+      "expected": {
+        "complete": true,
+        "satisfied": false
+      }
+    },
+    {
+      "id": "source_DV_NPC0007_GOODBYE_002_70",
+      "category": "actual_variant_expression_known_context",
+      "source_variant_ids": [
+        "DV_NPC0007_GOODBYE_002"
+      ],
+      "expression": "Mood==OUTBURST | HasFlag(FLAG_NPC0007_AVOID_PLAYER_TEMP)=true",
+      "queries": [
+        {
+          "function": "HasFlag",
+          "argument": "FLAG_NPC0007_AVOID_PLAYER_TEMP",
+          "value": true
+        }
+      ],
+      "facts": [
+        {
+          "name": "Mood",
+          "type": "String",
+          "value": "CALM"
+        }
+      ],
+      "expected": {
+        "complete": true,
+        "satisfied": true
+      }
+    },
+    {
+      "id": "source_DV_NPC0007_GOODBYE_002_71",
+      "category": "actual_variant_expression_known_context",
+      "source_variant_ids": [
+        "DV_NPC0007_GOODBYE_002"
+      ],
+      "expression": "Mood==OUTBURST | HasFlag(FLAG_NPC0007_AVOID_PLAYER_TEMP)=true",
+      "queries": [
+        {
+          "function": "HasFlag",
+          "argument": "FLAG_NPC0007_AVOID_PLAYER_TEMP",
+          "value": false
+        }
+      ],
+      "facts": [
+        {
+          "name": "Mood",
+          "type": "String",
+          "value": "OUTBURST"
+        }
+      ],
+      "expected": {
+        "complete": true,
+        "satisfied": true
+      }
+    },
+    {
+      "id": "source_DV_NPC0007_GOODBYE_002_72",
+      "category": "actual_variant_expression_known_context",
+      "source_variant_ids": [
+        "DV_NPC0007_GOODBYE_002"
+      ],
+      "expression": "Mood==OUTBURST | HasFlag(FLAG_NPC0007_AVOID_PLAYER_TEMP)=true",
+      "queries": [
+        {
+          "function": "HasFlag",
+          "argument": "FLAG_NPC0007_AVOID_PLAYER_TEMP",
+          "value": true
+        }
+      ],
+      "facts": [
+        {
+          "name": "Mood",
+          "type": "String",
+          "value": "OUTBURST"
+        }
+      ],
+      "expected": {
+        "complete": true,
+        "satisfied": true
+      }
+    },
+    {
+      "id": "source_DV_NPC0007_GOODBYE_002_73",
+      "category": "actual_variant_expression_known_context",
+      "source_variant_ids": [
+        "DV_NPC0007_GOODBYE_002"
+      ],
+      "expression": "Mood==OUTBURST | HasFlag(FLAG_NPC0007_AVOID_PLAYER_TEMP)=true",
+      "queries": [
+        {
+          "function": "HasFlag",
+          "argument": "FLAG_NPC0007_AVOID_PLAYER_TEMP",
+          "value": false
+        }
+      ],
+      "facts": [
+        {
+          "name": "Mood",
+          "type": "String",
+          "value": "OBSESSED"
+        }
+      ],
+      "expected": {
+        "complete": true,
+        "satisfied": false
+      }
+    },
+    {
+      "id": "source_DV_NPC0007_GOODBYE_002_74",
+      "category": "actual_variant_expression_known_context",
+      "source_variant_ids": [
+        "DV_NPC0007_GOODBYE_002"
+      ],
+      "expression": "Mood==OUTBURST | HasFlag(FLAG_NPC0007_AVOID_PLAYER_TEMP)=true",
+      "queries": [
+        {
+          "function": "HasFlag",
+          "argument": "FLAG_NPC0007_AVOID_PLAYER_TEMP",
+          "value": true
+        }
+      ],
+      "facts": [
+        {
+          "name": "Mood",
+          "type": "String",
+          "value": "OBSESSED"
+        }
+      ],
+      "expected": {
+        "complete": true,
+        "satisfied": true
+      }
+    },
+    {
+      "id": "source_DV_TEST_FLAGOPS_001_75",
+      "category": "actual_variant_expression_known_context",
+      "source_variant_ids": [
+        "DV_TEST_FLAGOPS_001"
+      ],
+      "expression": "HasTag(__TEST__)=true",
+      "queries": [
+        {
+          "function": "HasTag",
+          "argument": "__TEST__",
+          "value": false
+        }
+      ],
+      "facts": [],
+      "expected": {
+        "complete": true,
+        "satisfied": false
+      }
+    },
+    {
+      "id": "source_DV_TEST_FLAGOPS_001_76",
+      "category": "actual_variant_expression_known_context",
+      "source_variant_ids": [
+        "DV_TEST_FLAGOPS_001"
+      ],
+      "expression": "HasTag(__TEST__)=true",
+      "queries": [
+        {
+          "function": "HasTag",
+          "argument": "__TEST__",
+          "value": true
+        }
+      ],
+      "facts": [],
+      "expected": {
+        "complete": true,
+        "satisfied": true
+      }
+    },
+    {
+      "id": "source_DV_TEST_PAREN_001_77",
+      "category": "actual_variant_expression_known_context",
+      "source_variant_ids": [
+        "DV_TEST_PAREN_001"
+      ],
+      "expression": "HasTag(__TEST_PAREN__)=true & (HasFlag(FLAG_PAREN_A)=true | HasFlag(FLAG_PAREN_B)=true) & HasFlag(FLAG_PAREN_C)=false",
+      "queries": [
+        {
+          "function": "HasTag",
+          "argument": "__TEST_PAREN__",
+          "value": false
+        },
+        {
+          "function": "HasFlag",
+          "argument": "FLAG_PAREN_A",
+          "value": false
+        },
+        {
+          "function": "HasFlag",
+          "argument": "FLAG_PAREN_B",
+          "value": false
+        },
+        {
+          "function": "HasFlag",
+          "argument": "FLAG_PAREN_C",
+          "value": false
+        }
+      ],
+      "facts": [],
+      "expected": {
+        "complete": true,
+        "satisfied": false
+      }
+    },
+    {
+      "id": "source_DV_TEST_PAREN_001_78",
+      "category": "actual_variant_expression_known_context",
+      "source_variant_ids": [
+        "DV_TEST_PAREN_001"
+      ],
+      "expression": "HasTag(__TEST_PAREN__)=true & (HasFlag(FLAG_PAREN_A)=true | HasFlag(FLAG_PAREN_B)=true) & HasFlag(FLAG_PAREN_C)=false",
+      "queries": [
+        {
+          "function": "HasTag",
+          "argument": "__TEST_PAREN__",
+          "value": false
+        },
+        {
+          "function": "HasFlag",
+          "argument": "FLAG_PAREN_A",
+          "value": false
+        },
+        {
+          "function": "HasFlag",
+          "argument": "FLAG_PAREN_B",
+          "value": false
+        },
+        {
+          "function": "HasFlag",
+          "argument": "FLAG_PAREN_C",
+          "value": true
+        }
+      ],
+      "facts": [],
+      "expected": {
+        "complete": true,
+        "satisfied": false
+      }
+    },
+    {
+      "id": "source_DV_TEST_PAREN_001_79",
+      "category": "actual_variant_expression_known_context",
+      "source_variant_ids": [
+        "DV_TEST_PAREN_001"
+      ],
+      "expression": "HasTag(__TEST_PAREN__)=true & (HasFlag(FLAG_PAREN_A)=true | HasFlag(FLAG_PAREN_B)=true) & HasFlag(FLAG_PAREN_C)=false",
+      "queries": [
+        {
+          "function": "HasTag",
+          "argument": "__TEST_PAREN__",
+          "value": false
+        },
+        {
+          "function": "HasFlag",
+          "argument": "FLAG_PAREN_A",
+          "value": false
+        },
+        {
+          "function": "HasFlag",
+          "argument": "FLAG_PAREN_B",
+          "value": true
+        },
+        {
+          "function": "HasFlag",
+          "argument": "FLAG_PAREN_C",
+          "value": false
+        }
+      ],
+      "facts": [],
+      "expected": {
+        "complete": true,
+        "satisfied": false
+      }
+    },
+    {
+      "id": "source_DV_TEST_PAREN_001_80",
+      "category": "actual_variant_expression_known_context",
+      "source_variant_ids": [
+        "DV_TEST_PAREN_001"
+      ],
+      "expression": "HasTag(__TEST_PAREN__)=true & (HasFlag(FLAG_PAREN_A)=true | HasFlag(FLAG_PAREN_B)=true) & HasFlag(FLAG_PAREN_C)=false",
+      "queries": [
+        {
+          "function": "HasTag",
+          "argument": "__TEST_PAREN__",
+          "value": false
+        },
+        {
+          "function": "HasFlag",
+          "argument": "FLAG_PAREN_A",
+          "value": false
+        },
+        {
+          "function": "HasFlag",
+          "argument": "FLAG_PAREN_B",
+          "value": true
+        },
+        {
+          "function": "HasFlag",
+          "argument": "FLAG_PAREN_C",
+          "value": true
+        }
+      ],
+      "facts": [],
+      "expected": {
+        "complete": true,
+        "satisfied": false
+      }
+    },
+    {
+      "id": "source_DV_TEST_PAREN_001_81",
+      "category": "actual_variant_expression_known_context",
+      "source_variant_ids": [
+        "DV_TEST_PAREN_001"
+      ],
+      "expression": "HasTag(__TEST_PAREN__)=true & (HasFlag(FLAG_PAREN_A)=true | HasFlag(FLAG_PAREN_B)=true) & HasFlag(FLAG_PAREN_C)=false",
+      "queries": [
+        {
+          "function": "HasTag",
+          "argument": "__TEST_PAREN__",
+          "value": false
+        },
+        {
+          "function": "HasFlag",
+          "argument": "FLAG_PAREN_A",
+          "value": true
+        },
+        {
+          "function": "HasFlag",
+          "argument": "FLAG_PAREN_B",
+          "value": false
+        },
+        {
+          "function": "HasFlag",
+          "argument": "FLAG_PAREN_C",
+          "value": false
+        }
+      ],
+      "facts": [],
+      "expected": {
+        "complete": true,
+        "satisfied": false
+      }
+    },
+    {
+      "id": "source_DV_TEST_PAREN_001_82",
+      "category": "actual_variant_expression_known_context",
+      "source_variant_ids": [
+        "DV_TEST_PAREN_001"
+      ],
+      "expression": "HasTag(__TEST_PAREN__)=true & (HasFlag(FLAG_PAREN_A)=true | HasFlag(FLAG_PAREN_B)=true) & HasFlag(FLAG_PAREN_C)=false",
+      "queries": [
+        {
+          "function": "HasTag",
+          "argument": "__TEST_PAREN__",
+          "value": false
+        },
+        {
+          "function": "HasFlag",
+          "argument": "FLAG_PAREN_A",
+          "value": true
+        },
+        {
+          "function": "HasFlag",
+          "argument": "FLAG_PAREN_B",
+          "value": false
+        },
+        {
+          "function": "HasFlag",
+          "argument": "FLAG_PAREN_C",
+          "value": true
+        }
+      ],
+      "facts": [],
+      "expected": {
+        "complete": true,
+        "satisfied": false
+      }
+    },
+    {
+      "id": "source_DV_TEST_PAREN_001_83",
+      "category": "actual_variant_expression_known_context",
+      "source_variant_ids": [
+        "DV_TEST_PAREN_001"
+      ],
+      "expression": "HasTag(__TEST_PAREN__)=true & (HasFlag(FLAG_PAREN_A)=true | HasFlag(FLAG_PAREN_B)=true) & HasFlag(FLAG_PAREN_C)=false",
+      "queries": [
+        {
+          "function": "HasTag",
+          "argument": "__TEST_PAREN__",
+          "value": false
+        },
+        {
+          "function": "HasFlag",
+          "argument": "FLAG_PAREN_A",
+          "value": true
+        },
+        {
+          "function": "HasFlag",
+          "argument": "FLAG_PAREN_B",
+          "value": true
+        },
+        {
+          "function": "HasFlag",
+          "argument": "FLAG_PAREN_C",
+          "value": false
+        }
+      ],
+      "facts": [],
+      "expected": {
+        "complete": true,
+        "satisfied": false
+      }
+    },
+    {
+      "id": "source_DV_TEST_PAREN_001_84",
+      "category": "actual_variant_expression_known_context",
+      "source_variant_ids": [
+        "DV_TEST_PAREN_001"
+      ],
+      "expression": "HasTag(__TEST_PAREN__)=true & (HasFlag(FLAG_PAREN_A)=true | HasFlag(FLAG_PAREN_B)=true) & HasFlag(FLAG_PAREN_C)=false",
+      "queries": [
+        {
+          "function": "HasTag",
+          "argument": "__TEST_PAREN__",
+          "value": false
+        },
+        {
+          "function": "HasFlag",
+          "argument": "FLAG_PAREN_A",
+          "value": true
+        },
+        {
+          "function": "HasFlag",
+          "argument": "FLAG_PAREN_B",
+          "value": true
+        },
+        {
+          "function": "HasFlag",
+          "argument": "FLAG_PAREN_C",
+          "value": true
+        }
+      ],
+      "facts": [],
+      "expected": {
+        "complete": true,
+        "satisfied": false
+      }
+    },
+    {
+      "id": "source_DV_TEST_PAREN_001_85",
+      "category": "actual_variant_expression_known_context",
+      "source_variant_ids": [
+        "DV_TEST_PAREN_001"
+      ],
+      "expression": "HasTag(__TEST_PAREN__)=true & (HasFlag(FLAG_PAREN_A)=true | HasFlag(FLAG_PAREN_B)=true) & HasFlag(FLAG_PAREN_C)=false",
+      "queries": [
+        {
+          "function": "HasTag",
+          "argument": "__TEST_PAREN__",
+          "value": true
+        },
+        {
+          "function": "HasFlag",
+          "argument": "FLAG_PAREN_A",
+          "value": false
+        },
+        {
+          "function": "HasFlag",
+          "argument": "FLAG_PAREN_B",
+          "value": false
+        },
+        {
+          "function": "HasFlag",
+          "argument": "FLAG_PAREN_C",
+          "value": false
+        }
+      ],
+      "facts": [],
+      "expected": {
+        "complete": true,
+        "satisfied": false
+      }
+    },
+    {
+      "id": "source_DV_TEST_PAREN_001_86",
+      "category": "actual_variant_expression_known_context",
+      "source_variant_ids": [
+        "DV_TEST_PAREN_001"
+      ],
+      "expression": "HasTag(__TEST_PAREN__)=true & (HasFlag(FLAG_PAREN_A)=true | HasFlag(FLAG_PAREN_B)=true) & HasFlag(FLAG_PAREN_C)=false",
+      "queries": [
+        {
+          "function": "HasTag",
+          "argument": "__TEST_PAREN__",
+          "value": true
+        },
+        {
+          "function": "HasFlag",
+          "argument": "FLAG_PAREN_A",
+          "value": false
+        },
+        {
+          "function": "HasFlag",
+          "argument": "FLAG_PAREN_B",
+          "value": false
+        },
+        {
+          "function": "HasFlag",
+          "argument": "FLAG_PAREN_C",
+          "value": true
+        }
+      ],
+      "facts": [],
+      "expected": {
+        "complete": true,
+        "satisfied": false
+      }
+    },
+    {
+      "id": "source_DV_TEST_PAREN_001_87",
+      "category": "actual_variant_expression_known_context",
+      "source_variant_ids": [
+        "DV_TEST_PAREN_001"
+      ],
+      "expression": "HasTag(__TEST_PAREN__)=true & (HasFlag(FLAG_PAREN_A)=true | HasFlag(FLAG_PAREN_B)=true) & HasFlag(FLAG_PAREN_C)=false",
+      "queries": [
+        {
+          "function": "HasTag",
+          "argument": "__TEST_PAREN__",
+          "value": true
+        },
+        {
+          "function": "HasFlag",
+          "argument": "FLAG_PAREN_A",
+          "value": false
+        },
+        {
+          "function": "HasFlag",
+          "argument": "FLAG_PAREN_B",
+          "value": true
+        },
+        {
+          "function": "HasFlag",
+          "argument": "FLAG_PAREN_C",
+          "value": false
+        }
+      ],
+      "facts": [],
+      "expected": {
+        "complete": true,
+        "satisfied": true
+      }
+    },
+    {
+      "id": "source_DV_TEST_PAREN_001_88",
+      "category": "actual_variant_expression_known_context",
+      "source_variant_ids": [
+        "DV_TEST_PAREN_001"
+      ],
+      "expression": "HasTag(__TEST_PAREN__)=true & (HasFlag(FLAG_PAREN_A)=true | HasFlag(FLAG_PAREN_B)=true) & HasFlag(FLAG_PAREN_C)=false",
+      "queries": [
+        {
+          "function": "HasTag",
+          "argument": "__TEST_PAREN__",
+          "value": true
+        },
+        {
+          "function": "HasFlag",
+          "argument": "FLAG_PAREN_A",
+          "value": false
+        },
+        {
+          "function": "HasFlag",
+          "argument": "FLAG_PAREN_B",
+          "value": true
+        },
+        {
+          "function": "HasFlag",
+          "argument": "FLAG_PAREN_C",
+          "value": true
+        }
+      ],
+      "facts": [],
+      "expected": {
+        "complete": true,
+        "satisfied": false
+      }
+    },
+    {
+      "id": "source_DV_TEST_PAREN_001_89",
+      "category": "actual_variant_expression_known_context",
+      "source_variant_ids": [
+        "DV_TEST_PAREN_001"
+      ],
+      "expression": "HasTag(__TEST_PAREN__)=true & (HasFlag(FLAG_PAREN_A)=true | HasFlag(FLAG_PAREN_B)=true) & HasFlag(FLAG_PAREN_C)=false",
+      "queries": [
+        {
+          "function": "HasTag",
+          "argument": "__TEST_PAREN__",
+          "value": true
+        },
+        {
+          "function": "HasFlag",
+          "argument": "FLAG_PAREN_A",
+          "value": true
+        },
+        {
+          "function": "HasFlag",
+          "argument": "FLAG_PAREN_B",
+          "value": false
+        },
+        {
+          "function": "HasFlag",
+          "argument": "FLAG_PAREN_C",
+          "value": false
+        }
+      ],
+      "facts": [],
+      "expected": {
+        "complete": true,
+        "satisfied": true
+      }
+    },
+    {
+      "id": "source_DV_TEST_PAREN_001_90",
+      "category": "actual_variant_expression_known_context",
+      "source_variant_ids": [
+        "DV_TEST_PAREN_001"
+      ],
+      "expression": "HasTag(__TEST_PAREN__)=true & (HasFlag(FLAG_PAREN_A)=true | HasFlag(FLAG_PAREN_B)=true) & HasFlag(FLAG_PAREN_C)=false",
+      "queries": [
+        {
+          "function": "HasTag",
+          "argument": "__TEST_PAREN__",
+          "value": true
+        },
+        {
+          "function": "HasFlag",
+          "argument": "FLAG_PAREN_A",
+          "value": true
+        },
+        {
+          "function": "HasFlag",
+          "argument": "FLAG_PAREN_B",
+          "value": false
+        },
+        {
+          "function": "HasFlag",
+          "argument": "FLAG_PAREN_C",
+          "value": true
+        }
+      ],
+      "facts": [],
+      "expected": {
+        "complete": true,
+        "satisfied": false
+      }
+    },
+    {
+      "id": "source_DV_TEST_PAREN_001_91",
+      "category": "actual_variant_expression_known_context",
+      "source_variant_ids": [
+        "DV_TEST_PAREN_001"
+      ],
+      "expression": "HasTag(__TEST_PAREN__)=true & (HasFlag(FLAG_PAREN_A)=true | HasFlag(FLAG_PAREN_B)=true) & HasFlag(FLAG_PAREN_C)=false",
+      "queries": [
+        {
+          "function": "HasTag",
+          "argument": "__TEST_PAREN__",
+          "value": true
+        },
+        {
+          "function": "HasFlag",
+          "argument": "FLAG_PAREN_A",
+          "value": true
+        },
+        {
+          "function": "HasFlag",
+          "argument": "FLAG_PAREN_B",
+          "value": true
+        },
+        {
+          "function": "HasFlag",
+          "argument": "FLAG_PAREN_C",
+          "value": false
+        }
+      ],
+      "facts": [],
+      "expected": {
+        "complete": true,
+        "satisfied": true
+      }
+    },
+    {
+      "id": "source_DV_TEST_PAREN_001_92",
+      "category": "actual_variant_expression_known_context",
+      "source_variant_ids": [
+        "DV_TEST_PAREN_001"
+      ],
+      "expression": "HasTag(__TEST_PAREN__)=true & (HasFlag(FLAG_PAREN_A)=true | HasFlag(FLAG_PAREN_B)=true) & HasFlag(FLAG_PAREN_C)=false",
+      "queries": [
+        {
+          "function": "HasTag",
+          "argument": "__TEST_PAREN__",
+          "value": true
+        },
+        {
+          "function": "HasFlag",
+          "argument": "FLAG_PAREN_A",
+          "value": true
+        },
+        {
+          "function": "HasFlag",
+          "argument": "FLAG_PAREN_B",
+          "value": true
+        },
+        {
+          "function": "HasFlag",
+          "argument": "FLAG_PAREN_C",
+          "value": true
+        }
+      ],
+      "facts": [],
+      "expected": {
+        "complete": true,
+        "satisfied": false
+      }
+    },
+    {
+      "id": "source_DV_TEST_TAGFALSE_001_93",
+      "category": "actual_variant_expression_known_context",
+      "source_variant_ids": [
+        "DV_TEST_TAGFALSE_001"
+      ],
+      "expression": "HasTag(__TEST_TAGFALSE__)=true & HasTag(TAG_PRESENT)=false",
+      "queries": [
+        {
+          "function": "HasTag",
+          "argument": "__TEST_TAGFALSE__",
+          "value": false
+        },
+        {
+          "function": "HasTag",
+          "argument": "TAG_PRESENT",
+          "value": false
+        }
+      ],
+      "facts": [],
+      "expected": {
+        "complete": true,
+        "satisfied": false
+      }
+    },
+    {
+      "id": "source_DV_TEST_TAGFALSE_001_94",
+      "category": "actual_variant_expression_known_context",
+      "source_variant_ids": [
+        "DV_TEST_TAGFALSE_001"
+      ],
+      "expression": "HasTag(__TEST_TAGFALSE__)=true & HasTag(TAG_PRESENT)=false",
+      "queries": [
+        {
+          "function": "HasTag",
+          "argument": "__TEST_TAGFALSE__",
+          "value": false
+        },
+        {
+          "function": "HasTag",
+          "argument": "TAG_PRESENT",
+          "value": true
+        }
+      ],
+      "facts": [],
+      "expected": {
+        "complete": true,
+        "satisfied": false
+      }
+    },
+    {
+      "id": "source_DV_TEST_TAGFALSE_001_95",
+      "category": "actual_variant_expression_known_context",
+      "source_variant_ids": [
+        "DV_TEST_TAGFALSE_001"
+      ],
+      "expression": "HasTag(__TEST_TAGFALSE__)=true & HasTag(TAG_PRESENT)=false",
+      "queries": [
+        {
+          "function": "HasTag",
+          "argument": "__TEST_TAGFALSE__",
+          "value": true
+        },
+        {
+          "function": "HasTag",
+          "argument": "TAG_PRESENT",
+          "value": false
+        }
+      ],
+      "facts": [],
+      "expected": {
+        "complete": true,
+        "satisfied": true
+      }
+    },
+    {
+      "id": "source_DV_TEST_TAGFALSE_001_96",
+      "category": "actual_variant_expression_known_context",
+      "source_variant_ids": [
+        "DV_TEST_TAGFALSE_001"
+      ],
+      "expression": "HasTag(__TEST_TAGFALSE__)=true & HasTag(TAG_PRESENT)=false",
+      "queries": [
+        {
+          "function": "HasTag",
+          "argument": "__TEST_TAGFALSE__",
+          "value": true
+        },
+        {
+          "function": "HasTag",
+          "argument": "TAG_PRESENT",
+          "value": true
+        }
+      ],
+      "facts": [],
+      "expected": {
+        "complete": true,
+        "satisfied": false
+      }
+    },
+    {
+      "id": "source_DV_TEST_TAGFALSE_002_97",
+      "category": "actual_variant_expression_known_context",
+      "source_variant_ids": [
+        "DV_TEST_TAGFALSE_002"
+      ],
+      "expression": "HasTag(__TEST_TAGFALSE__)=true & HasTag(TAG_PRESENT)=true",
+      "queries": [
+        {
+          "function": "HasTag",
+          "argument": "__TEST_TAGFALSE__",
+          "value": false
+        },
+        {
+          "function": "HasTag",
+          "argument": "TAG_PRESENT",
+          "value": false
+        }
+      ],
+      "facts": [],
+      "expected": {
+        "complete": true,
+        "satisfied": false
+      }
+    },
+    {
+      "id": "source_DV_TEST_TAGFALSE_002_98",
+      "category": "actual_variant_expression_known_context",
+      "source_variant_ids": [
+        "DV_TEST_TAGFALSE_002"
+      ],
+      "expression": "HasTag(__TEST_TAGFALSE__)=true & HasTag(TAG_PRESENT)=true",
+      "queries": [
+        {
+          "function": "HasTag",
+          "argument": "__TEST_TAGFALSE__",
+          "value": false
+        },
+        {
+          "function": "HasTag",
+          "argument": "TAG_PRESENT",
+          "value": true
+        }
+      ],
+      "facts": [],
+      "expected": {
+        "complete": true,
+        "satisfied": false
+      }
+    },
+    {
+      "id": "source_DV_TEST_TAGFALSE_002_99",
+      "category": "actual_variant_expression_known_context",
+      "source_variant_ids": [
+        "DV_TEST_TAGFALSE_002"
+      ],
+      "expression": "HasTag(__TEST_TAGFALSE__)=true & HasTag(TAG_PRESENT)=true",
+      "queries": [
+        {
+          "function": "HasTag",
+          "argument": "__TEST_TAGFALSE__",
+          "value": true
+        },
+        {
+          "function": "HasTag",
+          "argument": "TAG_PRESENT",
+          "value": false
+        }
+      ],
+      "facts": [],
+      "expected": {
+        "complete": true,
+        "satisfied": false
+      }
+    },
+    {
+      "id": "source_DV_TEST_TAGFALSE_002_100",
+      "category": "actual_variant_expression_known_context",
+      "source_variant_ids": [
+        "DV_TEST_TAGFALSE_002"
+      ],
+      "expression": "HasTag(__TEST_TAGFALSE__)=true & HasTag(TAG_PRESENT)=true",
+      "queries": [
+        {
+          "function": "HasTag",
+          "argument": "__TEST_TAGFALSE__",
+          "value": true
+        },
+        {
+          "function": "HasTag",
+          "argument": "TAG_PRESENT",
+          "value": true
+        }
+      ],
+      "facts": [],
+      "expected": {
+        "complete": true,
+        "satisfied": true
+      }
+    },
+    {
+      "id": "source_DV_TEST_FLAGFALSE_001_101",
+      "category": "actual_variant_expression_known_context",
+      "source_variant_ids": [
+        "DV_TEST_FLAGFALSE_001"
+      ],
+      "expression": "HasTag(__TEST_FLAGFALSE__)=true & HasFlag(FLAG_PRESENT)=false",
+      "queries": [
+        {
+          "function": "HasTag",
+          "argument": "__TEST_FLAGFALSE__",
+          "value": false
+        },
+        {
+          "function": "HasFlag",
+          "argument": "FLAG_PRESENT",
+          "value": false
+        }
+      ],
+      "facts": [],
+      "expected": {
+        "complete": true,
+        "satisfied": false
+      }
+    },
+    {
+      "id": "source_DV_TEST_FLAGFALSE_001_102",
+      "category": "actual_variant_expression_known_context",
+      "source_variant_ids": [
+        "DV_TEST_FLAGFALSE_001"
+      ],
+      "expression": "HasTag(__TEST_FLAGFALSE__)=true & HasFlag(FLAG_PRESENT)=false",
+      "queries": [
+        {
+          "function": "HasTag",
+          "argument": "__TEST_FLAGFALSE__",
+          "value": false
+        },
+        {
+          "function": "HasFlag",
+          "argument": "FLAG_PRESENT",
+          "value": true
+        }
+      ],
+      "facts": [],
+      "expected": {
+        "complete": true,
+        "satisfied": false
+      }
+    },
+    {
+      "id": "source_DV_TEST_FLAGFALSE_001_103",
+      "category": "actual_variant_expression_known_context",
+      "source_variant_ids": [
+        "DV_TEST_FLAGFALSE_001"
+      ],
+      "expression": "HasTag(__TEST_FLAGFALSE__)=true & HasFlag(FLAG_PRESENT)=false",
+      "queries": [
+        {
+          "function": "HasTag",
+          "argument": "__TEST_FLAGFALSE__",
+          "value": true
+        },
+        {
+          "function": "HasFlag",
+          "argument": "FLAG_PRESENT",
+          "value": false
+        }
+      ],
+      "facts": [],
+      "expected": {
+        "complete": true,
+        "satisfied": true
+      }
+    },
+    {
+      "id": "source_DV_TEST_FLAGFALSE_001_104",
+      "category": "actual_variant_expression_known_context",
+      "source_variant_ids": [
+        "DV_TEST_FLAGFALSE_001"
+      ],
+      "expression": "HasTag(__TEST_FLAGFALSE__)=true & HasFlag(FLAG_PRESENT)=false",
+      "queries": [
+        {
+          "function": "HasTag",
+          "argument": "__TEST_FLAGFALSE__",
+          "value": true
+        },
+        {
+          "function": "HasFlag",
+          "argument": "FLAG_PRESENT",
+          "value": true
+        }
+      ],
+      "facts": [],
+      "expected": {
+        "complete": true,
+        "satisfied": false
+      }
+    },
+    {
+      "id": "source_DV_TEST_FLAGFALSE_002_105",
+      "category": "actual_variant_expression_known_context",
+      "source_variant_ids": [
+        "DV_TEST_FLAGFALSE_002"
+      ],
+      "expression": "HasTag(__TEST_FLAGFALSE__)=true & HasFlag(FLAG_PRESENT)=true",
+      "queries": [
+        {
+          "function": "HasTag",
+          "argument": "__TEST_FLAGFALSE__",
+          "value": false
+        },
+        {
+          "function": "HasFlag",
+          "argument": "FLAG_PRESENT",
+          "value": false
+        }
+      ],
+      "facts": [],
+      "expected": {
+        "complete": true,
+        "satisfied": false
+      }
+    },
+    {
+      "id": "source_DV_TEST_FLAGFALSE_002_106",
+      "category": "actual_variant_expression_known_context",
+      "source_variant_ids": [
+        "DV_TEST_FLAGFALSE_002"
+      ],
+      "expression": "HasTag(__TEST_FLAGFALSE__)=true & HasFlag(FLAG_PRESENT)=true",
+      "queries": [
+        {
+          "function": "HasTag",
+          "argument": "__TEST_FLAGFALSE__",
+          "value": false
+        },
+        {
+          "function": "HasFlag",
+          "argument": "FLAG_PRESENT",
+          "value": true
+        }
+      ],
+      "facts": [],
+      "expected": {
+        "complete": true,
+        "satisfied": false
+      }
+    },
+    {
+      "id": "source_DV_TEST_FLAGFALSE_002_107",
+      "category": "actual_variant_expression_known_context",
+      "source_variant_ids": [
+        "DV_TEST_FLAGFALSE_002"
+      ],
+      "expression": "HasTag(__TEST_FLAGFALSE__)=true & HasFlag(FLAG_PRESENT)=true",
+      "queries": [
+        {
+          "function": "HasTag",
+          "argument": "__TEST_FLAGFALSE__",
+          "value": true
+        },
+        {
+          "function": "HasFlag",
+          "argument": "FLAG_PRESENT",
+          "value": false
+        }
+      ],
+      "facts": [],
+      "expected": {
+        "complete": true,
+        "satisfied": false
+      }
+    },
+    {
+      "id": "source_DV_TEST_FLAGFALSE_002_108",
+      "category": "actual_variant_expression_known_context",
+      "source_variant_ids": [
+        "DV_TEST_FLAGFALSE_002"
+      ],
+      "expression": "HasTag(__TEST_FLAGFALSE__)=true & HasFlag(FLAG_PRESENT)=true",
+      "queries": [
+        {
+          "function": "HasTag",
+          "argument": "__TEST_FLAGFALSE__",
+          "value": true
+        },
+        {
+          "function": "HasFlag",
+          "argument": "FLAG_PRESENT",
+          "value": true
+        }
+      ],
+      "facts": [],
+      "expected": {
+        "complete": true,
+        "satisfied": true
+      }
+    },
+    {
+      "id": "source_DV_TEST_FLAGOPS_002_109",
+      "category": "actual_variant_expression_known_context",
+      "source_variant_ids": [
+        "DV_TEST_FLAGOPS_002"
+      ],
+      "expression": "HasTag(__TEST_FLAGOPS2__)=true",
+      "queries": [
+        {
+          "function": "HasTag",
+          "argument": "__TEST_FLAGOPS2__",
+          "value": false
+        }
+      ],
+      "facts": [],
+      "expected": {
+        "complete": true,
+        "satisfied": false
+      }
+    },
+    {
+      "id": "source_DV_TEST_FLAGOPS_002_110",
+      "category": "actual_variant_expression_known_context",
+      "source_variant_ids": [
+        "DV_TEST_FLAGOPS_002"
+      ],
+      "expression": "HasTag(__TEST_FLAGOPS2__)=true",
+      "queries": [
+        {
+          "function": "HasTag",
+          "argument": "__TEST_FLAGOPS2__",
+          "value": true
+        }
+      ],
+      "facts": [],
+      "expected": {
+        "complete": true,
+        "satisfied": true
+      }
+    },
+    {
+      "id": "helper_HasTag_0_0",
+      "category": "declared_runtime_helper_branch_probe_not_table_row",
+      "source_variant_ids": [],
+      "expression": "HasTag(KNOWN_QUERY)=false",
+      "queries": [
+        {
+          "function": "HasTag",
+          "argument": "KNOWN_QUERY",
+          "value": false
+        }
+      ],
+      "facts": [],
+      "expected": {
+        "complete": true,
+        "satisfied": true
+      }
+    },
+    {
+      "id": "helper_HasTag_0_1",
+      "category": "declared_runtime_helper_branch_probe_not_table_row",
+      "source_variant_ids": [],
+      "expression": "HasTag(KNOWN_QUERY)=true",
+      "queries": [
+        {
+          "function": "HasTag",
+          "argument": "KNOWN_QUERY",
+          "value": false
+        }
+      ],
+      "facts": [],
+      "expected": {
+        "complete": true,
+        "satisfied": false
+      }
+    },
+    {
+      "id": "helper_HasTag_1_0",
+      "category": "declared_runtime_helper_branch_probe_not_table_row",
+      "source_variant_ids": [],
+      "expression": "HasTag(KNOWN_QUERY)=false",
+      "queries": [
+        {
+          "function": "HasTag",
+          "argument": "KNOWN_QUERY",
+          "value": true
+        }
+      ],
+      "facts": [],
+      "expected": {
+        "complete": true,
+        "satisfied": false
+      }
+    },
+    {
+      "id": "helper_HasTag_1_1",
+      "category": "declared_runtime_helper_branch_probe_not_table_row",
+      "source_variant_ids": [],
+      "expression": "HasTag(KNOWN_QUERY)=true",
+      "queries": [
+        {
+          "function": "HasTag",
+          "argument": "KNOWN_QUERY",
+          "value": true
+        }
+      ],
+      "facts": [],
+      "expected": {
+        "complete": true,
+        "satisfied": true
+      }
+    },
+    {
+      "id": "helper_HasFlag_0_0",
+      "category": "declared_runtime_helper_branch_probe_not_table_row",
+      "source_variant_ids": [],
+      "expression": "HasFlag(KNOWN_QUERY)=false",
+      "queries": [
+        {
+          "function": "HasFlag",
+          "argument": "KNOWN_QUERY",
+          "value": false
+        }
+      ],
+      "facts": [],
+      "expected": {
+        "complete": true,
+        "satisfied": true
+      }
+    },
+    {
+      "id": "helper_HasFlag_0_1",
+      "category": "declared_runtime_helper_branch_probe_not_table_row",
+      "source_variant_ids": [],
+      "expression": "HasFlag(KNOWN_QUERY)=true",
+      "queries": [
+        {
+          "function": "HasFlag",
+          "argument": "KNOWN_QUERY",
+          "value": false
+        }
+      ],
+      "facts": [],
+      "expected": {
+        "complete": true,
+        "satisfied": false
+      }
+    },
+    {
+      "id": "helper_HasFlag_1_0",
+      "category": "declared_runtime_helper_branch_probe_not_table_row",
+      "source_variant_ids": [],
+      "expression": "HasFlag(KNOWN_QUERY)=false",
+      "queries": [
+        {
+          "function": "HasFlag",
+          "argument": "KNOWN_QUERY",
+          "value": true
+        }
+      ],
+      "facts": [],
+      "expected": {
+        "complete": true,
+        "satisfied": false
+      }
+    },
+    {
+      "id": "helper_HasFlag_1_1",
+      "category": "declared_runtime_helper_branch_probe_not_table_row",
+      "source_variant_ids": [],
+      "expression": "HasFlag(KNOWN_QUERY)=true",
+      "queries": [
+        {
+          "function": "HasFlag",
+          "argument": "KNOWN_QUERY",
+          "value": true
+        }
+      ],
+      "facts": [],
+      "expected": {
+        "complete": true,
+        "satisfied": true
+      }
+    },
+    {
+      "id": "helper_HasRecentEvent_0_0",
+      "category": "declared_runtime_helper_branch_probe_not_table_row",
+      "source_variant_ids": [],
+      "expression": "HasRecentEvent(KNOWN_QUERY)=false",
+      "queries": [
+        {
+          "function": "HasRecentEvent",
+          "argument": "KNOWN_QUERY",
+          "value": false
+        }
+      ],
+      "facts": [],
+      "expected": {
+        "complete": true,
+        "satisfied": true
+      }
+    },
+    {
+      "id": "helper_HasRecentEvent_0_1",
+      "category": "declared_runtime_helper_branch_probe_not_table_row",
+      "source_variant_ids": [],
+      "expression": "HasRecentEvent(KNOWN_QUERY)=true",
+      "queries": [
+        {
+          "function": "HasRecentEvent",
+          "argument": "KNOWN_QUERY",
+          "value": false
+        }
+      ],
+      "facts": [],
+      "expected": {
+        "complete": true,
+        "satisfied": false
+      }
+    },
+    {
+      "id": "helper_HasRecentEvent_1_0",
+      "category": "declared_runtime_helper_branch_probe_not_table_row",
+      "source_variant_ids": [],
+      "expression": "HasRecentEvent(KNOWN_QUERY)=false",
+      "queries": [
+        {
+          "function": "HasRecentEvent",
+          "argument": "KNOWN_QUERY",
+          "value": true
+        }
+      ],
+      "facts": [],
+      "expected": {
+        "complete": true,
+        "satisfied": false
+      }
+    },
+    {
+      "id": "helper_HasRecentEvent_1_1",
+      "category": "declared_runtime_helper_branch_probe_not_table_row",
+      "source_variant_ids": [],
+      "expression": "HasRecentEvent(KNOWN_QUERY)=true",
+      "queries": [
+        {
+          "function": "HasRecentEvent",
+          "argument": "KNOWN_QUERY",
+          "value": true
+        }
+      ],
+      "facts": [],
+      "expected": {
+        "complete": true,
+        "satisfied": true
+      }
+    }
+  ],
+  "case_count": 122,
+  "python_known_subset_passed": 122,
+  "result_verifier_negatives": [
+    {
+      "id": "false_result",
+      "detected": true,
+      "reason": "Actual query result differs: source_DV_NPC0007_SMALLTALK_002_1"
+    },
+    {
+      "id": "missing_case",
+      "detected": true,
+      "reason": "Exact query result count required"
+    },
+    {
+      "id": "duplicate_case",
+      "detected": true,
+      "reason": "Exact unique query case identities required"
+    }
+  ],
+  "strict_destination_differences": [
+    "Unknown query/provider is incomplete, not false; query=false cannot authorize it.",
+    "Prevalidate every referenced query before short-circuit.",
+    "No source numeric-suffix normalization or implicit global/missing-subject fallback as private named authority.",
+    "Only declared exact function+argument references; no arbitrary invocation or Ruby coercion."
+  ],
+  "ruby_executed": false,
+  "rgss_executed": false,
+  "rmxp_executed": false,
+  "limits": "Source-shaped known contexts and helper-branch probes evaluated by independent bounded Python, not historical runtime execution, source whole scoring/catalog, people, population findings or approved fiction."
+}

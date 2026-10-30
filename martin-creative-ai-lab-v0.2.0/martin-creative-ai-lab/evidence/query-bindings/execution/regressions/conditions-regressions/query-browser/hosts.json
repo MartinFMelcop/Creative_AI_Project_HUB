@@ -1,0 +1,65 @@
+{
+  "complete": true,
+  "logs": [
+    {
+      "command": [
+        "/workspace/work/authored-scene/dotnet/dotnet",
+        "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/memory-study/Host/bin/Release/net10.0/NorthStar.MemoryStudy.dll",
+        "--serve",
+        "40743",
+        "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/memory-study/web",
+        "--seconds",
+        "120",
+        "--policy",
+        "single-offer"
+      ],
+      "stdout": "READY http://127.0.0.1:40743/\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/workspace/work/authored-scene/dotnet/dotnet",
+        "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/memory-study/Host/bin/Release/net10.0/NorthStar.MemoryStudy.dll",
+        "--serve",
+        "35519",
+        "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/memory-study/web",
+        "--seconds",
+        "120",
+        "--policy",
+        "independent"
+      ],
+      "stdout": "READY http://127.0.0.1:35519/\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/workspace/work/authored-scene/dotnet/dotnet",
+        "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/memory-study/Host/bin/Release/net10.0/NorthStar.MemoryStudy.dll",
+        "--serve",
+        "40547",
+        "/tmp/query-render-mutants-9YcXnF/false-open",
+        "--seconds",
+        "120",
+        "--policy",
+        "single-offer"
+      ],
+      "stdout": "READY http://127.0.0.1:40547/\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/workspace/work/authored-scene/dotnet/dotnet",
+        "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/memory-study/Host/bin/Release/net10.0/NorthStar.MemoryStudy.dll",
+        "--serve",
+        "44353",
+        "/tmp/query-render-mutants-9YcXnF/false-fitting",
+        "--seconds",
+        "120",
+        "--policy",
+        "single-offer"
+      ],
+      "stdout": "READY http://127.0.0.1:44353/\n",
+      "stderr": ""
+    }
+  ]
+}

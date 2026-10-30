@@ -22,7 +22,7 @@ class CurrentContracts(unittest.TestCase):
         self.assertEqual(len(p['wrapper_coverage']['field']),6)
 
     def test_field_sources_and_memory_remain_inside_maximal_wrapper(self):
-        for path in ['north-star/field-journey/Preparation/Cards.cs','north-star/field-journey/Sampling/SampleCase.cs','north-star/memory-study/Conditions/Conditions.cs']:
+        for path in ['north-star/field-journey/Preparation/Cards.cs','north-star/field-journey/Sampling/SampleCase.cs','north-star/memory-study/Conditions/Conditions.cs','north-star/memory-study/QueryChecks/Program.cs','labs/world-gameplay/dialogue-conditions/query-assay.py','evidence/query-bindings/protocol.json']:
             with self.subTest(path=path):self.assertEqual(chosen(path),{'field'})
 
     def test_intake_reaches_standalone_and_field_consumers(self):

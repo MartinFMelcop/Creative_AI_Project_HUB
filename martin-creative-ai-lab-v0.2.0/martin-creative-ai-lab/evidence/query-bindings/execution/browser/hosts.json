@@ -1,0 +1,178 @@
+[
+  {
+    "command": [
+      "/workspace/work/authored-scene/dotnet/dotnet",
+      "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/field-journey/Host/bin/Release/net10.0/NorthStar.FieldJourney.dll",
+      "--serve",
+      "36037",
+      "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/field-journey/web",
+      "--seconds",
+      "180"
+    ],
+    "stdout": "READY http://127.0.0.1:36037/\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "/workspace/work/authored-scene/dotnet/dotnet",
+      "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/field-journey/Host/bin/Release/net10.0/NorthStar.FieldJourney.dll",
+      "--serve",
+      "44235",
+      "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/field-journey/web",
+      "--seconds",
+      "180",
+      "--preparations",
+      "/tmp/preparation-content-UdduMG/variant.json"
+    ],
+    "stdout": "READY http://127.0.0.1:44235/\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "/workspace/work/authored-scene/dotnet/dotnet",
+      "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/field-journey/Host/bin/Release/net10.0/NorthStar.FieldJourney.dll",
+      "--serve",
+      "40163",
+      "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/field-journey/web",
+      "--seconds",
+      "180",
+      "--preparations",
+      "/tmp/preparation-content-UdduMG/missing-cards.json"
+    ],
+    "stdout": "",
+    "stderr": "Exact unique authored fields required.\n"
+  },
+  {
+    "command": [
+      "/workspace/work/authored-scene/dotnet/dotnet",
+      "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/field-journey/Host/bin/Release/net10.0/NorthStar.FieldJourney.dll",
+      "--serve",
+      "38281",
+      "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/field-journey/web",
+      "--seconds",
+      "180",
+      "--preparations",
+      "/tmp/preparation-content-UdduMG/duplicate-card-id.json"
+    ],
+    "stdout": "",
+    "stderr": "Duplicate, null or excessive preparation cards.\n"
+  },
+  {
+    "command": [
+      "/workspace/work/authored-scene/dotnet/dotnet",
+      "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/field-journey/Host/bin/Release/net10.0/NorthStar.FieldJourney.dll",
+      "--serve",
+      "36215",
+      "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/field-journey/web",
+      "--seconds",
+      "180",
+      "--preparations",
+      "/tmp/preparation-content-UdduMG/unknown-root-field.json"
+    ],
+    "stdout": "",
+    "stderr": "Exact unique authored fields required.\n"
+  },
+  {
+    "command": [
+      "/workspace/work/authored-scene/dotnet/dotnet",
+      "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/field-journey/Host/bin/Release/net10.0/NorthStar.FieldJourney.dll",
+      "--serve",
+      "46283",
+      "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/field-journey/web",
+      "--seconds",
+      "180",
+      "--preparations",
+      "/tmp/preparation-content-UdduMG/unsupported-class.json"
+    ],
+    "stdout": "",
+    "stderr": "Unknown or incompatible class/background.\n"
+  },
+  {
+    "command": [
+      "/workspace/work/authored-scene/dotnet/dotnet",
+      "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/field-journey/Host/bin/Release/net10.0/NorthStar.FieldJourney.dll",
+      "--serve",
+      "36207",
+      "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/field-journey/web",
+      "--seconds",
+      "180",
+      "--preparations",
+      "/tmp/preparation-content-UdduMG/premature-dash.json"
+    ],
+    "stdout": "",
+    "stderr": "Unknown, duplicate, incompatible or locked skill.\n"
+  },
+  {
+    "command": [
+      "/workspace/work/authored-scene/dotnet/dotnet",
+      "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/field-journey/Host/bin/Release/net10.0/NorthStar.FieldJourney.dll",
+      "--serve",
+      "42293",
+      "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/field-journey/web",
+      "--seconds",
+      "180",
+      "--preparations",
+      "/tmp/preparation-content-UdduMG/unsupported-resource-grant.json"
+    ],
+    "stdout": "",
+    "stderr": "Exact unique authored fields required.\n"
+  },
+  {
+    "command": [
+      "/workspace/work/authored-scene/dotnet/dotnet",
+      "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/field-journey/Host/bin/Release/net10.0/NorthStar.FieldJourney.dll",
+      "--serve",
+      "46317",
+      "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/field-journey/web",
+      "--seconds",
+      "180",
+      "--preparations",
+      "/tmp/preparation-content-UdduMG/wrong-slot-count.json"
+    ],
+    "stdout": "",
+    "stderr": "Exactly four authored slots required.\n"
+  },
+  {
+    "command": [
+      "/workspace/work/authored-scene/dotnet/dotnet",
+      "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/field-journey/Host/bin/Release/net10.0/NorthStar.FieldJourney.dll",
+      "--serve",
+      "33697",
+      "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/field-journey/web",
+      "--seconds",
+      "180",
+      "--preparations",
+      "/tmp/preparation-content-UdduMG/wrong-integer-type.json"
+    ],
+    "stdout": "",
+    "stderr": "Exact authored integer required.\n"
+  },
+  {
+    "command": [
+      "/workspace/work/authored-scene/dotnet/dotnet",
+      "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/field-journey/Host/bin/Release/net10.0/NorthStar.FieldJourney.dll",
+      "--serve",
+      "38811",
+      "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/field-journey/web",
+      "--seconds",
+      "180",
+      "--preparations",
+      "/tmp/preparation-content-UdduMG/duplicate-json-field.json"
+    ],
+    "stdout": "",
+    "stderr": "Exact unique authored fields required.\n"
+  },
+  {
+    "command": [
+      "/workspace/work/authored-scene/dotnet/dotnet",
+      "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/field-journey/Host/bin/Release/net10.0/NorthStar.FieldJourney.dll",
+      "--serve",
+      "36683",
+      "/tmp/preparation-content-UdduMG/false-confirmed",
+      "--seconds",
+      "180"
+    ],
+    "stdout": "READY http://127.0.0.1:36683/\n",
+    "stderr": ""
+  }
+]

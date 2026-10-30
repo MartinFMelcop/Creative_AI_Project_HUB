@@ -1,0 +1,312 @@
+{
+  "schema_version": 1,
+  "checks": {
+    "passed": 3,
+    "failed": 0
+  },
+  "controls": [
+    "Actual final FieldHost build",
+    "Invalid invocation advertises all three accepted policies",
+    "Actual single-offer child startup preserves original resources and no acquired outputs"
+  ],
+  "commands": [
+    {
+      "command": [
+        "/workspace/work/authored-scene/dotnet/dotnet",
+        "build",
+        "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/field-journey/Host/NorthStar.FieldJourney.csproj",
+        "-c",
+        "Release"
+      ],
+      "exit_code": 0,
+      "stdout": "  Determining projects to restore...\n  All projects are up-to-date for restore.\n  NorthStar.FieldSampling -> /workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/field-journey/Sampling/bin/Release/netstandard2.1/NorthStar.FieldSampling.dll\n  NorthStar.Domain -> /workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/Domain/bin/Release/netstandard2.1/NorthStar.Domain.dll\n  NorthStar.Preparation -> /workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/field-journey/Preparation/bin/Release/netstandard2.1/NorthStar.Preparation.dll\n  NorthStar.Memory -> /workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/memory-study/Rules/bin/Release/netstandard2.1/NorthStar.Memory.dll\n  NorthStar.Crossing -> /workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/Crossing/bin/Release/net10.0/NorthStar.Crossing.dll\n  NorthStar.Forge -> /workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/Forge/bin/Release/net10.0/NorthStar.Forge.dll\n  NorthStar.Conditions -> /workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/memory-study/Conditions/bin/Release/netstandard2.1/NorthStar.Conditions.dll\n  NorthStar.Loadout -> /workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/Loadout/bin/Release/net10.0/NorthStar.Loadout.dll\n  NorthStar.FieldPresentation -> /workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/field-journey/Presentation/bin/Release/netstandard2.1/NorthStar.FieldPresentation.dll\n  NorthStar.Intake -> /workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/intake/Host/bin/Release/net10.0/NorthStar.Intake.dll\n  NorthStar.MemoryStudy -> /workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/memory-study/Host/bin/Release/net10.0/NorthStar.MemoryStudy.dll\n  NorthStar.FieldJourney -> /workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/field-journey/Host/bin/Release/net10.0/NorthStar.FieldJourney.dll\n\nBuild succeeded.\n    0 Warning(s)\n    0 Error(s)\n\nTime Elapsed 00:00:06.15\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/workspace/work/authored-scene/dotnet/dotnet",
+        "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/field-journey/Host/bin/Release/net10.0/NorthStar.FieldJourney.dll"
+      ],
+      "exit_code": 1,
+      "stdout": "",
+      "stderr": "Usage: --serve PORT WEBROOT --seconds 1..600 [--policy independent|ordered|single-offer] [--preparations PATH]\n"
+    },
+    {
+      "command": [
+        "/workspace/work/authored-scene/dotnet/dotnet",
+        "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/field-journey/Host/bin/Release/net10.0/NorthStar.FieldJourney.dll",
+        "--serve",
+        "53585",
+        "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/field-journey/web",
+        "--seconds",
+        "10",
+        "--policy",
+        "single-offer"
+      ],
+      "exit_code": -15,
+      "stdout": "READY http://127.0.0.1:53585/\n",
+      "stderr": "",
+      "termination": "Owned probe explicitly stopped after observing startup"
+    }
+  ],
+  "source": {
+    "path": "north-star/field-journey/Host/Program.cs",
+    "sha256": "98c6451ba46452e0588f6f22a7fff953e4eb9c4445eb9297f7a0cc27cfe69459"
+  },
+  "state": {
+    "sequence": 0,
+    "command": "initial",
+    "accepted": true,
+    "text": "Propose, review and confirm one person before paid preparation. Acquired fittings and field materials are separate finite supplies.",
+    "workshop_closed": false,
+    "sample_case": {
+      "status": "empty",
+      "case_spent": false,
+      "acquired": false,
+      "site": null,
+      "collection_attempt": null,
+      "receipt": null,
+      "sites": [
+        {
+          "id": "ridge",
+          "stage": 0,
+          "position": 1,
+          "eligible": false
+        },
+        {
+          "id": "channel",
+          "stage": 1,
+          "position": 2,
+          "eligible": false
+        }
+      ]
+    },
+    "preparation_book": {
+      "sha256": "d6771016c773bb10e95410050128094e2f3f1b243be464ef6be611b3dde5ea95",
+      "draft_card_id": null,
+      "confirmed_card_id": null,
+      "cards": [
+        {
+          "id": "anchor-start",
+          "title": "A steady opening",
+          "description": "Brace protects in place against a bolt. Walking during a pulse changes position. This is a starting proposal, not a supplied Plate rig or a promise of survival.",
+          "class_id": "anchor",
+          "background_id": "workshop",
+          "slots": [
+            "brace",
+            null,
+            null,
+            null
+          ],
+          "minimum_level": 1,
+          "recommended_rig": "plate",
+          "eligible": true
+        },
+        {
+          "id": "lure-start",
+          "title": "Draw a path",
+          "description": "Draw advances one cell against a bolt while spending three resolve. Move during a pulse. A Trail rig is suggested here, not acquired or equipped by this card.",
+          "class_id": "lure",
+          "background_id": "trailborn",
+          "slots": [
+            "draw",
+            null,
+            null,
+            null
+          ],
+          "minimum_level": 1,
+          "recommended_rig": "trail",
+          "eligible": true
+        },
+        {
+          "id": "anchor-dash",
+          "title": "Brace, then move",
+          "description": "Keep Brace and add earned Dash as a separate action. Dash spends one resolve to move two cells. This amendment requires actual level two; it grants no points or recovery.",
+          "class_id": "anchor",
+          "background_id": "workshop",
+          "slots": [
+            "brace",
+            "dash",
+            null,
+            null
+          ],
+          "minimum_level": 2,
+          "recommended_rig": "plate",
+          "eligible": false
+        },
+        {
+          "id": "lure-dash",
+          "title": "Draw, then range",
+          "description": "Keep Draw and add earned Dash for a different movement choice. Both spend actual resolve. This amendment requires actual level two and does not refill resources or begin the next encounter.",
+          "class_id": "lure",
+          "background_id": "trailborn",
+          "slots": [
+            "draw",
+            "dash",
+            null,
+            null
+          ],
+          "minimum_level": 2,
+          "recommended_rig": "trail",
+          "eligible": false
+        }
+      ]
+    },
+    "intake": {
+      "sequence": 0,
+      "command": "initial",
+      "accepted": true,
+      "text": "Draft only. Review exact preparation and explicitly confirm before spending supplies.",
+      "confirmed": false,
+      "pending": true,
+      "draft_revision": 1,
+      "reviewed_revision": null,
+      "draft": {
+        "handle": "Wayfarer",
+        "accent": "copper",
+        "class_id": "anchor",
+        "background_id": "workshop",
+        "slots": [
+          "brace",
+          null,
+          null,
+          null
+        ]
+      },
+      "identity": null,
+      "state": {
+        "class_id": "anchor",
+        "background_id": "workshop",
+        "slots": [
+          "brace",
+          null,
+          null,
+          null
+        ],
+        "active": false,
+        "complete": false,
+        "won": false,
+        "stage": 0,
+        "beat": 0,
+        "position": 0,
+        "health": 0,
+        "resolve": 0,
+        "rig": "Unprepared",
+        "attempts": 0,
+        "consumed_rigs": 0,
+        "transactions": 0,
+        "inventory": {
+          "fiber": 4,
+          "binder": 2
+        },
+        "level": 1,
+        "xp": 0,
+        "unspent": 0,
+        "vitality": 0,
+        "focus": 0
+      },
+      "threat": "BOLT: moving exposes health; the approach skill spends resolve to protect.",
+      "required_position": 2,
+      "maximum_beats": 4
+    },
+    "memory": {
+      "sequence": 0,
+      "command": "initial",
+      "accepted": true,
+      "text": "Each named bench has one offer. An accepted withdrawal permanently closes only that bench. Paid demonstration can renew support, not reopen its offer.",
+      "turn": 0,
+      "parts": 4,
+      "coins": 2,
+      "policy": "single-offer",
+      "complete": false,
+      "benches": [
+        {
+          "id": "west",
+          "helped": false,
+          "support": false,
+          "recent": false,
+          "offer_closed": false,
+          "expires": null,
+          "eligible": false,
+          "delivered": false,
+          "condition_expression": "HasTag(local-request)=true & HasFlag(helped)=true & HasFlag(support)=true & HasRecentEvent(demonstrated)=true & HasFlag(offer-closed)=false",
+          "condition_satisfied": false,
+          "condition_complete": true
+        },
+        {
+          "id": "east",
+          "helped": false,
+          "support": false,
+          "recent": false,
+          "offer_closed": false,
+          "expires": null,
+          "eligible": false,
+          "delivered": false,
+          "condition_expression": "HasTag(local-request)=true & HasFlag(helped)=true & HasFlag(support)=true & HasRecentEvent(demonstrated)=true & HasFlag(offer-closed)=false",
+          "condition_satisfied": false,
+          "condition_complete": true
+        }
+      ],
+      "history": []
+    },
+    "encounter_view": {
+      "person": {
+        "handle": null,
+        "accent": null,
+        "class_id": null,
+        "rig": "none",
+        "confirmed": false
+      },
+      "encounter": {
+        "phase": "unconfirmed",
+        "outcome": "unconfirmed",
+        "stage": 0,
+        "owner_stage": 0,
+        "active": false,
+        "complete": false,
+        "won": false,
+        "beat": 0,
+        "max_beats": 4,
+        "position": 0,
+        "required_position": 2,
+        "world_end": 8,
+        "threshold_reached": false,
+        "health": 0,
+        "resolve": 0,
+        "threat_kind": "none",
+        "threat_text": "No active encounter threat."
+      },
+      "action": {
+        "command": "initial",
+        "accepted": false,
+        "kind": "none",
+        "event_sequence": 0,
+        "from_position": 0,
+        "to_position": 0,
+        "health_lost": 0,
+        "resolve_spent": 0,
+        "resolve_gained": 0,
+        "moved": false,
+        "contact": "none"
+      }
+    },
+    "fittings": [
+      {
+        "bench": "west",
+        "acquired": false,
+        "spent": false,
+        "available": false,
+        "rig": null
+      },
+      {
+        "bench": "east",
+        "acquired": false,
+        "spent": false,
+        "available": false,
+        "rig": null
+      }
+    ],
+    "assembly_receipts": []
+  },
+  "limits": "Post-integrated-run CLI usage-string correction only. Targeted actual build/startup/HTTP observations, not a full single-offer Field route, new Windows/Unity or unchanged final112input gameplay execution."
+}

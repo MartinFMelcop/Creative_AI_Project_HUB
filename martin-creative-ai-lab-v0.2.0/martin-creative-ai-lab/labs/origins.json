@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "updated_at": "2026-10-29",
+  "updated_at": "2026-10-30",
   "baseline_commit": "9c69f295a1c5d736761a113d0e41aaa8600fb635",
   "scope": "Mandatory eleven-laboratory transformation. Historical source preservation is separate from terminal knowledge consumption; operational claims require executed instruments and bound evidence.",
   "north_star_consumer_demonstrated": true,
@@ -957,7 +957,11 @@
         "north-star/csharp/Loadout/Program.cs",
         "north-star/csharp/Forge/Expedition.cs",
         "north-star/availability-study/Rules/Availability.cs",
-        "north-star/availability-study/Host/Program.cs"
+        "north-star/availability-study/Host/Program.cs",
+        "north-star/memory-study/Conditions/Conditions.cs",
+        "north-star/memory-study/Rules/Memory.cs",
+        "north-star/memory-study/Host/Room.cs",
+        "north-star/memory-study/Host/Program.cs"
       ],
       "controls": [
         "Actual source class/background and class/skill matrices through compiled C# eligibility with independent reference",
@@ -966,9 +970,11 @@
         "Atomic proposal rejection, active locks, actual outfit-independent actions, earned Dash and negative journeys",
         "Same135literal source NPC phase-mask cases in Python and actual C#; independent exact-output rejection",
         "Conflicting location/rest/heuristic/quest source directives retained; observed source position UNKNOWN",
-        "Actual original committed work and costly personal alternative; lost reservation, dawn non-return and actual text/picture renderer negatives"
+        "Actual original committed work and costly personal alternative; lost reservation, dawn non-return and actual text/picture renderer negatives",
+        "SAME122known query cases in Python/C#; exact providers/context/kind and unknown-negative/short-circuit/suffix controls",
+        "Actual original single-offer versus renewable paid service; permanent exact offer closure distinct from current witness/output; two actual renderer negatives"
       ],
-      "validity_boundary": "Prior typed eligibility remains bounded as before. New scope is literal mask eligibility and original in-memory NPC service authority. No historical Ruby/RMXP NPC execution, full schedules, placement precedence, reputation/factions, quest catalogs, Unity, Windows, Steam or human adequacy.",
+      "validity_boundary": "Prior typed eligibility remains bounded as before. New scope is literal mask eligibility and original in-memory NPC service authority. No historical Ruby/RMXP NPC execution, full schedules, placement precedence, reputation/factions, quest catalogs, Unity, Windows, Steam or human adequacy. Declared exact named-query binding now drives the actual original single-offer service; no whole dialogue scoring/catalog/coercion, historical runtime, human social or production claim.",
       "next_objective": "Compare actual Unity/Windows and participant/device access against persistent authored continuity and consequential unresolved world capabilities. The existing repair result now has a real composed journey consumer; do not automatically repeat source or route matrices.",
       "path": "labs/world-gameplay",
       "instrument": "labs/world-gameplay/run.py",
@@ -978,7 +984,8 @@
         "evidence/npc-availability/RUN.json",
         "evidence/npc-availability/source.json",
         "evidence/npc-availability/browser.json",
-        "evidence/repair-hauling/RUN.json"
+        "evidence/repair-hauling/RUN.json",
+        "evidence/query-bindings/RUN.json"
       ],
       "evidence_sha256": {
         "evidence/world-loadout/RUN.json": "98bda622e86d2059a49368cb2f3f3e4cf0c15b33b532a3335c2720c8be67d533",
@@ -986,11 +993,14 @@
         "evidence/npc-availability/RUN.json": "5b1cd5ead6e8a56f0c5140744d2bf3f4c5b9d57e84aafc5c652ba0e71a6b1f8a",
         "evidence/npc-availability/source.json": "390e28290989169fe553dc3300b081299b7ccb5016ad3e11d38ce928c3da0f07",
         "evidence/npc-availability/browser.json": "7d45277c974ce3d42ec741f01c0a2e6ecc950ec2654d8f05ea8f4e9d0b2b55a0",
-        "evidence/repair-hauling/RUN.json": "ad5663b296ded8efdffb5efb2202e117fc69ec243262f351198ce3f0f6f1b9bb"
+        "evidence/repair-hauling/RUN.json": "ad5663b296ded8efdffb5efb2202e117fc69ec243262f351198ce3f0f6f1b9bb",
+        "evidence/query-bindings/RUN.json": "f0b787311e16538f028fa1d26e64bd0eae64583c4d43bd3d51a3cb9ac3a6f602"
       },
       "additional_instruments": [
         "labs/world-gameplay/availability/run.py",
-        "north-star/availability-study/tools/verify.py"
+        "north-star/availability-study/tools/verify.py",
+        "labs/world-gameplay/dialogue-conditions/query-assay.py",
+        "north-star/memory-study/tools/conditions-verify.py"
       ]
     },
     {
@@ -1364,7 +1374,7 @@
         "references/rave-master/snapshots/36af1651271422ae33856e8b5d7b45702215f165/source/RM_ACT1/DATA/DEV/RGSS/RM_DIALOGUE_SCORING_RUNTIME.rb",
         "references/rave-master/snapshots/36af1651271422ae33856e8b5d7b45702215f165/source/RM_ACT1/DATA/DEV/QUEST_STEPS.csv"
       ],
-      "decision": "Static quest/helper assays and separately integrated literal NPC mask/event-authority boundary retain DEV/DIST and manual-completion limits. Full NPC schedule/location conflict resolution, reputation/factions, dialogue selectors, quest/world catalogs and actual RGSS runtime remain unresolved. Selected reputation six-level arithmetic is now separately INTEGRATED and direct empty-hook effects provision separately REJECTED. Full source effects, regional/default conflicts and faction/quest policies remain UNRESOLVED. Known scoped flags/recent-event action-turn expiry are now separately INTEGRATED; unsafe unknown/global/missing-subject fallbacks as private witness authority are separately REJECTED. Full source memory/dialogue/quest catalogs and persistence remain unresolved. Selected typed scalar dialogue-condition grammar is separately INTEGRATED and direct permissive parser as private permission authority separately REJECTED. Function query bindings, coercion, full scoring/catalogs and source runtime remain unresolved.",
+      "decision": "Static quest/helper assays and separately integrated literal NPC mask/event-authority boundary retain DEV/DIST and manual-completion limits. Full NPC schedule/location conflict resolution, reputation/factions, dialogue selectors, quest/world catalogs and actual RGSS runtime remain unresolved. Selected reputation six-level arithmetic is now separately INTEGRATED and direct empty-hook effects provision separately REJECTED. Full source effects, regional/default conflicts and faction/quest policies remain UNRESOLVED. Known scoped flags/recent-event action-turn expiry are now separately INTEGRATED; unsafe unknown/global/missing-subject fallbacks as private witness authority are separately REJECTED. Full source memory/dialogue/quest catalogs and persistence remain unresolved. Selected typed scalar dialogue-condition grammar is separately INTEGRATED and direct permissive parser as private permission authority separately REJECTED. Declared exact named-query binding is separately INTEGRATED; general source query/coercion/full scoring/catalogs and source runtime remain unresolved.",
       "next_action": "Select a consequential remaining dialogue/quest/world rule or shared product need with actual event ownership and author decisions. Preserve exact scope, expiry and variant limits; prioritize actual people/devices or licensed production when accessible."
     },
     {
@@ -1918,6 +1928,7 @@
       ],
       "decision": "Known GLOBAL/NPC/RELATION flags, explicit true/false union, clear and strict exp>turn recent-event lifetime operate in C#8/netstandard2.1 and an actual finite original local service. SAME57Python/C#cases/237queries use9actual flag and10event definitions with declared branch probes. Exact private witness authority is a distinct destination policy; source wildcard query remains explicit separately. No moral/source fiction, unknown-ID coercion, full memory/dialogue catalog, Game_System persistence, Ruby/RGSS or human testimony is integrated.",
       "evidence": [
+        "evidence/query-bindings/RUN.json",
         "evidence/dialogue-conditions/RUN.json",
         "evidence/memory-study/RUN.json",
         "evidence/memory-study/source/source-assay.json",
@@ -1929,7 +1940,8 @@
         "evidence/memory-study/source/source-assay.json": "2c4998da9aa2885fb83ad6cd490f106181d053f4d4d51b8d47a2f4e4f659b31a",
         "evidence/memory-study/source/results.json": "3cc986ebb26795188c5794844be11300ce04a5303b210be79b3c31a35a99c111",
         "evidence/memory-study/browser/browser.json": "23d5a3dd6e0500a7d8d40294656a42c13a8528e16049abd73f860f9803fbf364",
-        "evidence/dialogue-conditions/RUN.json": "cbffb248dcbd5d20c02587f319ec81568657c4f863052d86f7de14a1cec9502d"
+        "evidence/dialogue-conditions/RUN.json": "cbffb248dcbd5d20c02587f319ec81568657c4f863052d86f7de14a1cec9502d",
+        "evidence/query-bindings/RUN.json": "f0b787311e16538f028fa1d26e64bd0eae64583c4d43bd3d51a3cb9ac3a6f602"
       }
     },
     {
@@ -2025,6 +2037,7 @@
       ],
       "decision": "Adapt full-consumption scalar comparison, Boolean precedence and parentheses into a bounded typed C#8/netstandard2.1 condition compiled against declared private facts. Actual existing paid service and field composition demonstrate independent/ordered consequences. Exact eight scalar rows exercise syntax in declared destination context; no Ruby/coercion/function/scoring/catalog or fictional NPC import.",
       "evidence": [
+        "evidence/query-bindings/RUN.json",
         "evidence/preparation-authoring/RUN.json",
         "evidence/field-sampling/RUN.json",
         "evidence/dialogue-conditions/RUN.json",
@@ -2034,7 +2047,8 @@
         "evidence/dialogue-conditions/RUN.json": "cbffb248dcbd5d20c02587f319ec81568657c4f863052d86f7de14a1cec9502d",
         "evidence/dialogue-conditions/execution/source.json": "bb6fe0db8be6b66ac65dbcdbdfc3f7fcee10253f843461ed74ffd40167eea289",
         "evidence/field-sampling/RUN.json": "90e47439447ea43dbc81249b40006365dd3fabd205b59afcc4bb7c5a56908139",
-        "evidence/preparation-authoring/RUN.json": "e44c8d1a86f0efddede56b271e80fd7fc2a6c52af6e417a146f59cdf507dc078"
+        "evidence/preparation-authoring/RUN.json": "e44c8d1a86f0efddede56b271e80fd7fc2a6c52af6e417a146f59cdf507dc078",
+        "evidence/query-bindings/RUN.json": "f0b787311e16538f028fa1d26e64bd0eae64583c4d43bd3d51a3cb9ac3a6f602"
       },
       "consumer_paths": [
         "north-star/memory-study/Conditions/Conditions.cs",
@@ -2057,14 +2071,16 @@
         "references/rave-master/snapshots/36af1651271422ae33856e8b5d7b45702215f165/source/RM_ACT1/DATA/DEV/DIALOGUE_VARIANTS.csv",
         "references/rave-master/snapshots/36af1651271422ae33856e8b5d7b45702215f165/source/RM_DIST/RMXP_BASE/Data/RM_CSV/DIALOGUE_VARIANTS.csv"
       ],
-      "decision": "Reject direct permissive ConditionsExpr helper as authority for a private paid service: inspected tokenizer skips unknown characters, parser does not consume suffixes or require closing parentheses, missing primary/empty expression become true and rescue uses a different fallback. No Ruby execution claimed; legitimate unconditional dialogue and the source collection are not rejected.",
+      "decision": "Reject direct permissive ConditionsExpr helper as authority for a private paid service: inspected tokenizer skips unknown characters, parser does not consume suffixes or require closing parentheses, missing primary/empty expression become true and rescue uses a different fallback. No Ruby execution claimed; legitimate unconditional dialogue and the source collection are not rejected. Named-query source inspection additionally exposes missing provider→false and recent numeric-suffix stripping; those are not private negative-query authority. This extends the same bounded rejection, not another rejected collection or duplicate capability.",
       "evidence": [
+        "evidence/query-bindings/RUN.json",
         "evidence/dialogue-conditions/RUN.json",
         "evidence/dialogue-conditions/execution/source.json"
       ],
       "evidence_sha256": {
         "evidence/dialogue-conditions/RUN.json": "cbffb248dcbd5d20c02587f319ec81568657c4f863052d86f7de14a1cec9502d",
-        "evidence/dialogue-conditions/execution/source.json": "bb6fe0db8be6b66ac65dbcdbdfc3f7fcee10253f843461ed74ffd40167eea289"
+        "evidence/dialogue-conditions/execution/source.json": "bb6fe0db8be6b66ac65dbcdbdfc3f7fcee10253f843461ed74ffd40167eea289",
+        "evidence/query-bindings/RUN.json": "f0b787311e16538f028fa1d26e64bd0eae64583c4d43bd3d51a3cb9ac3a6f602"
       }
     },
     {
@@ -2089,6 +2105,35 @@
       ],
       "evidence_sha256": {
         "evidence/commander-policy/RUN.json": "443e4b540f42aad1dece377028024db8c2b6907259a85d5bc31fec8cd9183b1c"
+      }
+    },
+    {
+      "id": "XP-DECLARED-NAMED-QUERIES",
+      "origin_projects": [
+        "P10"
+      ],
+      "laboratory_id": "world-gameplay",
+      "status": "INTEGRATED",
+      "source_paths": [
+        "references/rave-master/snapshots/36af1651271422ae33856e8b5d7b45702215f165/source/RM_ACT1/DATA/DEV/RGSS/RM_DIALOGUE_SCORING_RUNTIME.rb",
+        "references/rave-master/snapshots/36af1651271422ae33856e8b5d7b45702215f165/source/RM_DIST/RMXP_BASE/ScriptsCustom/RM_DIALOGUE_SCORING_RUNTIME.rb",
+        "references/rave-master/snapshots/36af1651271422ae33856e8b5d7b45702215f165/source/RM_ACT1/DATA/DEV/DIALOGUE_VARIANTS.csv",
+        "references/rave-master/snapshots/36af1651271422ae33856e8b5d7b45702215f165/source/RM_DIST/RMXP_BASE/Data/RM_CSV/DIALOGUE_VARIANTS.csv"
+      ],
+      "consumer_paths": [
+        "north-star/memory-study/Conditions/Conditions.cs",
+        "north-star/memory-study/Rules/Memory.cs",
+        "north-star/memory-study/Host/Room.cs",
+        "north-star/memory-study/Host/Program.cs"
+      ],
+      "decision": "Known exact HasTag/HasFlag/HasRecentEvent syntax binds immutable declared kind/argument observations to an exact trusted-local context, with whole referenced-context prevalidation before short-circuit. SAME122known Python/C#cases include110contexts from19actual rows plus12helper probes; recent-event calls occur only in probes. Actual original single-offer service demonstrates a consequential known-false gate without duplicating a hardcoded closure eligibility check. Unknown/provider/context/suffix differences remain strict destination policy, not complete source scoring/coercion/catalog or Ruby/RGSS/RMXP integration.",
+      "evidence": [
+        "evidence/query-bindings/RUN.json",
+        "evidence/query-bindings/execution/regressions/conditions-regressions/query-source.json"
+      ],
+      "evidence_sha256": {
+        "evidence/query-bindings/RUN.json": "f0b787311e16538f028fa1d26e64bd0eae64583c4d43bd3d51a3cb9ac3a6f602",
+        "evidence/query-bindings/execution/regressions/conditions-regressions/query-source.json": "e2026d98f0a4eaaa0746cc88b6c1a744d1412c02601d601febf01fa0db75e34d"
       }
     }
   ]

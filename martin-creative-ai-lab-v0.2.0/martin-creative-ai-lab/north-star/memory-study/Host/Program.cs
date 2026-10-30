@@ -16,7 +16,7 @@ public static class Program
         try
         {
             if((args.Length!=5&&args.Length!=7) || args[0]!="--serve" || args[3]!="--seconds" || args.Length==7&&args[5]!="--policy")
-                throw new ArgumentException("Usage: --serve PORT WEBROOT --seconds 1..600 [--policy independent|ordered]");
+                throw new ArgumentException("Usage: --serve PORT WEBROOT --seconds 1..600 [--policy independent|ordered|single-offer]");
             int port=int.Parse(args[1]),seconds=int.Parse(args[4]);
             if(port<1024 || port>65535 || seconds<1 || seconds>600)
                 throw new ArgumentException("Bound loopback port/lifetime required.");

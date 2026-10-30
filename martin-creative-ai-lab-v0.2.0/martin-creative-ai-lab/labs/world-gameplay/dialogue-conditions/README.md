@@ -66,3 +66,15 @@ Creative direction CRE005(A) favors actual action/cost/consequence over a text-o
 selector. CRE011/013(H) keep behavior, identity and prerequisite proposals distinct from
 approved canon. The source method serves one corrective legacy/laboratory contribution;
 its consumer/UI/CI support are not additional product or portfolio units.
+
+## Exact named queries
+
+`query-assay.py` separately inspects the identical preserved DEV/DIST query helpers and
+variant rows, producing fully known source-shaped cases for actual C# comparison.
+Unknown/provider/context/alias refusals are a strict destination contract rather than
+source equivalence. The existing MemoryStudy single-offer policy gives these queries
+an actual paid-service consequence while retaining independent/ordered policies.
+The source's missing-provider false and numeric recent-event suffix stripping are
+unsafe as private named permission authority. Full scoring, catalog/coercion and
+historical engine execution remain unresolved. This extends the existing laboratory;
+it introduces no new mandatory destination, source fiction or separate application.

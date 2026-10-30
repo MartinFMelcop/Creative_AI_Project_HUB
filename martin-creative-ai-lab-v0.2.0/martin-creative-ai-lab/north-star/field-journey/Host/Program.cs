@@ -16,7 +16,7 @@ public static class Program
         try
         {
             if((args.Length!=5&&args.Length!=7&&args.Length!=9)||args[0]!="--serve"||args[3]!="--seconds")
-                throw new ArgumentException("Usage: --serve PORT WEBROOT --seconds 1..600 [--policy independent|ordered] [--preparations PATH]");
+                throw new ArgumentException("Usage: --serve PORT WEBROOT --seconds 1..600 [--policy independent|ordered|single-offer] [--preparations PATH]");
             string policy="independent";string? preparations=null;bool sawPolicy=false;
             for(int i=5;i<args.Length;i+=2)
             {

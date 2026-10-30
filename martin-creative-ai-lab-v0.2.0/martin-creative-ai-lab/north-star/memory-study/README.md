@@ -113,3 +113,28 @@ closure changed. [Protocol](../../evidence/dialogue-conditions/protocol.json),
 [source method](../../labs/world-gameplay/dialogue-conditions/README.md) and
 [execution](../../evidence/dialogue-conditions/RUN.json) distinguish selected integration,
 private-provider rejection, original policies and unexecuted human/production claims.
+
+## Declared named-query authority
+
+The portable Conditions library also supports declared exact `HasTag`, `HasFlag` and
+`HasRecentEvent` references in a frozen named query context. All referenced scalars,
+query providers/IDs and the exact context must be present before Boolean short-circuit;
+unknown is incomplete, never a successful negative. It does not invoke arbitrary
+functions, normalize recent-event suffixes or inherit GLOBAL/missing-subject fallbacks.
+The old scalar API and independent/ordered service outcomes remain supported.
+
+Start this same host with `--policy single-offer` for the original experimental offer
+contract. Actual accepted withdrawal records `offer-closed` for that exact bench.
+A paid demonstration still spends one part and one action and can renew support and
+recency, but cannot reopen the closed offer. Service then refuses without coin, turn
+or fitting spend/output. The independent policy deliberately remains renewable.
+Closing one offer does not close its neighbor; already acquired fittings and past help
+remain true. The page discloses the contract before the action and keeps closure,
+current evidence and acquisition separate. This is not a moral/personality model,
+approved quest canon, human social finding, account persistence or new source permission.
+
+The source-shaped cases use the SAME known-input protocol in Python and C#. Source
+`HasRecentEvent` branches are declared probes; the actual variant rows use the other
+two query functions. No Ruby/RGSS/RMXP or whole dialogue scoring/catalog execution is
+claimed. Use the existing `tools/conditions-verify.py` for the new query method and
+its affected existing regressions; the enclosing field verification still runs it once.
