@@ -33,3 +33,7 @@ A separate implementation agent supplied rules/Host/native work. Primary perform
 scientific/creative source/controls/UI reviews sequentially and final verification.
 No independent final Scientific/Creative review, human approval or commercial clearance
 is attributed. Exact command/source/outcome evidence is the acceptance boundary.
+
+The original decoded CI log and the prior text capture are retained in log.json with
+SHA256 identities. JSON encoding preserves trailing whitespace/BOM exactly; a normal
+follow-up commit corrects the raw-text diff-check failure without rewriting history.
