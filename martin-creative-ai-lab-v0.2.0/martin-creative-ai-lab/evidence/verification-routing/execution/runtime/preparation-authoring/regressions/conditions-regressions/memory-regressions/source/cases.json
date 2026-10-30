@@ -1,0 +1,2433 @@
+[
+  {
+    "id": "FLAG_PLAYER_HELPED-declared-scope",
+    "kind": "flag",
+    "definition": {
+      "id": "FLAG_PLAYER_HELPED",
+      "scope": "Relation",
+      "ttl": null
+    },
+    "operations": [
+      {
+        "op": "any",
+        "subject": "west"
+      },
+      {
+        "op": "set",
+        "subject": "west",
+        "value": true
+      },
+      {
+        "op": "any",
+        "subject": "west"
+      },
+      {
+        "op": "any",
+        "subject": "east"
+      },
+      {
+        "op": "any",
+        "subject": null
+      },
+      {
+        "op": "tick",
+        "count": 50
+      },
+      {
+        "op": "any",
+        "subject": "west"
+      },
+      {
+        "op": "clear",
+        "subject": "west"
+      },
+      {
+        "op": "any",
+        "subject": "west"
+      }
+    ]
+  },
+  {
+    "id": "FLAG_PLAYER_HELPED-explicit-global-union",
+    "kind": "flag",
+    "definition": {
+      "id": "FLAG_PLAYER_HELPED",
+      "scope": "Relation",
+      "ttl": null
+    },
+    "operations": [
+      {
+        "op": "set",
+        "subject": null,
+        "scope": "Global",
+        "value": true
+      },
+      {
+        "op": "set",
+        "subject": "west",
+        "scope": "Npc",
+        "value": false
+      },
+      {
+        "op": "any",
+        "subject": "west"
+      },
+      {
+        "op": "exact",
+        "subject": "west",
+        "scope": "Npc"
+      },
+      {
+        "op": "clear",
+        "subject": null,
+        "scope": "Global"
+      },
+      {
+        "op": "any",
+        "subject": "west"
+      }
+    ]
+  },
+  {
+    "id": "FLAG_PLAYER_HELPED-scope-separation",
+    "kind": "flag",
+    "definition": {
+      "id": "FLAG_PLAYER_HELPED",
+      "scope": "Relation",
+      "ttl": null
+    },
+    "operations": [
+      {
+        "op": "set",
+        "subject": "west",
+        "scope": "Npc",
+        "value": true
+      },
+      {
+        "op": "set",
+        "subject": "west",
+        "scope": "Relation",
+        "value": true
+      },
+      {
+        "op": "clear",
+        "subject": "west",
+        "scope": "Npc"
+      },
+      {
+        "op": "any",
+        "subject": "west"
+      },
+      {
+        "op": "exact",
+        "subject": "west",
+        "scope": "Npc"
+      },
+      {
+        "op": "exact",
+        "subject": "west",
+        "scope": "Relation"
+      },
+      {
+        "op": "tick",
+        "count": 0
+      },
+      {
+        "op": "any",
+        "subject": "west"
+      }
+    ]
+  },
+  {
+    "id": "FLAG_PLAYER_BETRAYED-declared-scope",
+    "kind": "flag",
+    "definition": {
+      "id": "FLAG_PLAYER_BETRAYED",
+      "scope": "Relation",
+      "ttl": null
+    },
+    "operations": [
+      {
+        "op": "any",
+        "subject": "west"
+      },
+      {
+        "op": "set",
+        "subject": "west",
+        "value": true
+      },
+      {
+        "op": "any",
+        "subject": "west"
+      },
+      {
+        "op": "any",
+        "subject": "east"
+      },
+      {
+        "op": "any",
+        "subject": null
+      },
+      {
+        "op": "tick",
+        "count": 50
+      },
+      {
+        "op": "any",
+        "subject": "west"
+      },
+      {
+        "op": "clear",
+        "subject": "west"
+      },
+      {
+        "op": "any",
+        "subject": "west"
+      }
+    ]
+  },
+  {
+    "id": "FLAG_PLAYER_BETRAYED-explicit-global-union",
+    "kind": "flag",
+    "definition": {
+      "id": "FLAG_PLAYER_BETRAYED",
+      "scope": "Relation",
+      "ttl": null
+    },
+    "operations": [
+      {
+        "op": "set",
+        "subject": null,
+        "scope": "Global",
+        "value": true
+      },
+      {
+        "op": "set",
+        "subject": "west",
+        "scope": "Npc",
+        "value": false
+      },
+      {
+        "op": "any",
+        "subject": "west"
+      },
+      {
+        "op": "exact",
+        "subject": "west",
+        "scope": "Npc"
+      },
+      {
+        "op": "clear",
+        "subject": null,
+        "scope": "Global"
+      },
+      {
+        "op": "any",
+        "subject": "west"
+      }
+    ]
+  },
+  {
+    "id": "FLAG_PLAYER_BETRAYED-scope-separation",
+    "kind": "flag",
+    "definition": {
+      "id": "FLAG_PLAYER_BETRAYED",
+      "scope": "Relation",
+      "ttl": null
+    },
+    "operations": [
+      {
+        "op": "set",
+        "subject": "west",
+        "scope": "Npc",
+        "value": true
+      },
+      {
+        "op": "set",
+        "subject": "west",
+        "scope": "Relation",
+        "value": true
+      },
+      {
+        "op": "clear",
+        "subject": "west",
+        "scope": "Npc"
+      },
+      {
+        "op": "any",
+        "subject": "west"
+      },
+      {
+        "op": "exact",
+        "subject": "west",
+        "scope": "Npc"
+      },
+      {
+        "op": "exact",
+        "subject": "west",
+        "scope": "Relation"
+      },
+      {
+        "op": "tick",
+        "count": 0
+      },
+      {
+        "op": "any",
+        "subject": "west"
+      }
+    ]
+  },
+  {
+    "id": "FLAG_PLAYER_LIED-declared-scope",
+    "kind": "flag",
+    "definition": {
+      "id": "FLAG_PLAYER_LIED",
+      "scope": "Relation",
+      "ttl": null
+    },
+    "operations": [
+      {
+        "op": "any",
+        "subject": "west"
+      },
+      {
+        "op": "set",
+        "subject": "west",
+        "value": true
+      },
+      {
+        "op": "any",
+        "subject": "west"
+      },
+      {
+        "op": "any",
+        "subject": "east"
+      },
+      {
+        "op": "any",
+        "subject": null
+      },
+      {
+        "op": "tick",
+        "count": 50
+      },
+      {
+        "op": "any",
+        "subject": "west"
+      },
+      {
+        "op": "clear",
+        "subject": "west"
+      },
+      {
+        "op": "any",
+        "subject": "west"
+      }
+    ]
+  },
+  {
+    "id": "FLAG_PLAYER_LIED-explicit-global-union",
+    "kind": "flag",
+    "definition": {
+      "id": "FLAG_PLAYER_LIED",
+      "scope": "Relation",
+      "ttl": null
+    },
+    "operations": [
+      {
+        "op": "set",
+        "subject": null,
+        "scope": "Global",
+        "value": true
+      },
+      {
+        "op": "set",
+        "subject": "west",
+        "scope": "Npc",
+        "value": false
+      },
+      {
+        "op": "any",
+        "subject": "west"
+      },
+      {
+        "op": "exact",
+        "subject": "west",
+        "scope": "Npc"
+      },
+      {
+        "op": "clear",
+        "subject": null,
+        "scope": "Global"
+      },
+      {
+        "op": "any",
+        "subject": "west"
+      }
+    ]
+  },
+  {
+    "id": "FLAG_PLAYER_LIED-scope-separation",
+    "kind": "flag",
+    "definition": {
+      "id": "FLAG_PLAYER_LIED",
+      "scope": "Relation",
+      "ttl": null
+    },
+    "operations": [
+      {
+        "op": "set",
+        "subject": "west",
+        "scope": "Npc",
+        "value": true
+      },
+      {
+        "op": "set",
+        "subject": "west",
+        "scope": "Relation",
+        "value": true
+      },
+      {
+        "op": "clear",
+        "subject": "west",
+        "scope": "Npc"
+      },
+      {
+        "op": "any",
+        "subject": "west"
+      },
+      {
+        "op": "exact",
+        "subject": "west",
+        "scope": "Npc"
+      },
+      {
+        "op": "exact",
+        "subject": "west",
+        "scope": "Relation"
+      },
+      {
+        "op": "tick",
+        "count": 0
+      },
+      {
+        "op": "any",
+        "subject": "west"
+      }
+    ]
+  },
+  {
+    "id": "FLAG_PLAYER_THREATENED-declared-scope",
+    "kind": "flag",
+    "definition": {
+      "id": "FLAG_PLAYER_THREATENED",
+      "scope": "Relation",
+      "ttl": null
+    },
+    "operations": [
+      {
+        "op": "any",
+        "subject": "west"
+      },
+      {
+        "op": "set",
+        "subject": "west",
+        "value": true
+      },
+      {
+        "op": "any",
+        "subject": "west"
+      },
+      {
+        "op": "any",
+        "subject": "east"
+      },
+      {
+        "op": "any",
+        "subject": null
+      },
+      {
+        "op": "tick",
+        "count": 50
+      },
+      {
+        "op": "any",
+        "subject": "west"
+      },
+      {
+        "op": "clear",
+        "subject": "west"
+      },
+      {
+        "op": "any",
+        "subject": "west"
+      }
+    ]
+  },
+  {
+    "id": "FLAG_PLAYER_THREATENED-explicit-global-union",
+    "kind": "flag",
+    "definition": {
+      "id": "FLAG_PLAYER_THREATENED",
+      "scope": "Relation",
+      "ttl": null
+    },
+    "operations": [
+      {
+        "op": "set",
+        "subject": null,
+        "scope": "Global",
+        "value": true
+      },
+      {
+        "op": "set",
+        "subject": "west",
+        "scope": "Npc",
+        "value": false
+      },
+      {
+        "op": "any",
+        "subject": "west"
+      },
+      {
+        "op": "exact",
+        "subject": "west",
+        "scope": "Npc"
+      },
+      {
+        "op": "clear",
+        "subject": null,
+        "scope": "Global"
+      },
+      {
+        "op": "any",
+        "subject": "west"
+      }
+    ]
+  },
+  {
+    "id": "FLAG_PLAYER_THREATENED-scope-separation",
+    "kind": "flag",
+    "definition": {
+      "id": "FLAG_PLAYER_THREATENED",
+      "scope": "Relation",
+      "ttl": null
+    },
+    "operations": [
+      {
+        "op": "set",
+        "subject": "west",
+        "scope": "Npc",
+        "value": true
+      },
+      {
+        "op": "set",
+        "subject": "west",
+        "scope": "Relation",
+        "value": true
+      },
+      {
+        "op": "clear",
+        "subject": "west",
+        "scope": "Npc"
+      },
+      {
+        "op": "any",
+        "subject": "west"
+      },
+      {
+        "op": "exact",
+        "subject": "west",
+        "scope": "Npc"
+      },
+      {
+        "op": "exact",
+        "subject": "west",
+        "scope": "Relation"
+      },
+      {
+        "op": "tick",
+        "count": 0
+      },
+      {
+        "op": "any",
+        "subject": "west"
+      }
+    ]
+  },
+  {
+    "id": "FLAG_OUTBURST_RECENT-declared-scope",
+    "kind": "flag",
+    "definition": {
+      "id": "FLAG_OUTBURST_RECENT",
+      "scope": "Npc",
+      "ttl": 5
+    },
+    "operations": [
+      {
+        "op": "any",
+        "subject": "west"
+      },
+      {
+        "op": "set",
+        "subject": "west",
+        "value": true
+      },
+      {
+        "op": "any",
+        "subject": "west"
+      },
+      {
+        "op": "any",
+        "subject": "east"
+      },
+      {
+        "op": "any",
+        "subject": null
+      },
+      {
+        "op": "tick",
+        "count": 4
+      },
+      {
+        "op": "any",
+        "subject": "west"
+      },
+      {
+        "op": "tick",
+        "count": 1
+      },
+      {
+        "op": "any",
+        "subject": "west"
+      }
+    ]
+  },
+  {
+    "id": "FLAG_OUTBURST_RECENT-explicit-global-union",
+    "kind": "flag",
+    "definition": {
+      "id": "FLAG_OUTBURST_RECENT",
+      "scope": "Npc",
+      "ttl": 5
+    },
+    "operations": [
+      {
+        "op": "set",
+        "subject": null,
+        "scope": "Global",
+        "value": true
+      },
+      {
+        "op": "set",
+        "subject": "west",
+        "scope": "Npc",
+        "value": false
+      },
+      {
+        "op": "any",
+        "subject": "west"
+      },
+      {
+        "op": "exact",
+        "subject": "west",
+        "scope": "Npc"
+      },
+      {
+        "op": "clear",
+        "subject": null,
+        "scope": "Global"
+      },
+      {
+        "op": "any",
+        "subject": "west"
+      }
+    ]
+  },
+  {
+    "id": "FLAG_OUTBURST_RECENT-scope-separation",
+    "kind": "flag",
+    "definition": {
+      "id": "FLAG_OUTBURST_RECENT",
+      "scope": "Npc",
+      "ttl": 5
+    },
+    "operations": [
+      {
+        "op": "set",
+        "subject": "west",
+        "scope": "Npc",
+        "value": true
+      },
+      {
+        "op": "set",
+        "subject": "west",
+        "scope": "Relation",
+        "value": true
+      },
+      {
+        "op": "clear",
+        "subject": "west",
+        "scope": "Npc"
+      },
+      {
+        "op": "any",
+        "subject": "west"
+      },
+      {
+        "op": "exact",
+        "subject": "west",
+        "scope": "Npc"
+      },
+      {
+        "op": "exact",
+        "subject": "west",
+        "scope": "Relation"
+      },
+      {
+        "op": "tick",
+        "count": 0
+      },
+      {
+        "op": "any",
+        "subject": "west"
+      }
+    ]
+  },
+  {
+    "id": "FLAG_OBSESSION_HOOKED-declared-scope",
+    "kind": "flag",
+    "definition": {
+      "id": "FLAG_OBSESSION_HOOKED",
+      "scope": "Npc",
+      "ttl": null
+    },
+    "operations": [
+      {
+        "op": "any",
+        "subject": "west"
+      },
+      {
+        "op": "set",
+        "subject": "west",
+        "value": true
+      },
+      {
+        "op": "any",
+        "subject": "west"
+      },
+      {
+        "op": "any",
+        "subject": "east"
+      },
+      {
+        "op": "any",
+        "subject": null
+      },
+      {
+        "op": "tick",
+        "count": 50
+      },
+      {
+        "op": "any",
+        "subject": "west"
+      },
+      {
+        "op": "clear",
+        "subject": "west"
+      },
+      {
+        "op": "any",
+        "subject": "west"
+      }
+    ]
+  },
+  {
+    "id": "FLAG_OBSESSION_HOOKED-explicit-global-union",
+    "kind": "flag",
+    "definition": {
+      "id": "FLAG_OBSESSION_HOOKED",
+      "scope": "Npc",
+      "ttl": null
+    },
+    "operations": [
+      {
+        "op": "set",
+        "subject": null,
+        "scope": "Global",
+        "value": true
+      },
+      {
+        "op": "set",
+        "subject": "west",
+        "scope": "Npc",
+        "value": false
+      },
+      {
+        "op": "any",
+        "subject": "west"
+      },
+      {
+        "op": "exact",
+        "subject": "west",
+        "scope": "Npc"
+      },
+      {
+        "op": "clear",
+        "subject": null,
+        "scope": "Global"
+      },
+      {
+        "op": "any",
+        "subject": "west"
+      }
+    ]
+  },
+  {
+    "id": "FLAG_OBSESSION_HOOKED-scope-separation",
+    "kind": "flag",
+    "definition": {
+      "id": "FLAG_OBSESSION_HOOKED",
+      "scope": "Npc",
+      "ttl": null
+    },
+    "operations": [
+      {
+        "op": "set",
+        "subject": "west",
+        "scope": "Npc",
+        "value": true
+      },
+      {
+        "op": "set",
+        "subject": "west",
+        "scope": "Relation",
+        "value": true
+      },
+      {
+        "op": "clear",
+        "subject": "west",
+        "scope": "Npc"
+      },
+      {
+        "op": "any",
+        "subject": "west"
+      },
+      {
+        "op": "exact",
+        "subject": "west",
+        "scope": "Npc"
+      },
+      {
+        "op": "exact",
+        "subject": "west",
+        "scope": "Relation"
+      },
+      {
+        "op": "tick",
+        "count": 0
+      },
+      {
+        "op": "any",
+        "subject": "west"
+      }
+    ]
+  },
+  {
+    "id": "FLAG_AVOID_PLAYER-declared-scope",
+    "kind": "flag",
+    "definition": {
+      "id": "FLAG_AVOID_PLAYER",
+      "scope": "Npc",
+      "ttl": null
+    },
+    "operations": [
+      {
+        "op": "any",
+        "subject": "west"
+      },
+      {
+        "op": "set",
+        "subject": "west",
+        "value": true
+      },
+      {
+        "op": "any",
+        "subject": "west"
+      },
+      {
+        "op": "any",
+        "subject": "east"
+      },
+      {
+        "op": "any",
+        "subject": null
+      },
+      {
+        "op": "tick",
+        "count": 50
+      },
+      {
+        "op": "any",
+        "subject": "west"
+      },
+      {
+        "op": "clear",
+        "subject": "west"
+      },
+      {
+        "op": "any",
+        "subject": "west"
+      }
+    ]
+  },
+  {
+    "id": "FLAG_AVOID_PLAYER-explicit-global-union",
+    "kind": "flag",
+    "definition": {
+      "id": "FLAG_AVOID_PLAYER",
+      "scope": "Npc",
+      "ttl": null
+    },
+    "operations": [
+      {
+        "op": "set",
+        "subject": null,
+        "scope": "Global",
+        "value": true
+      },
+      {
+        "op": "set",
+        "subject": "west",
+        "scope": "Npc",
+        "value": false
+      },
+      {
+        "op": "any",
+        "subject": "west"
+      },
+      {
+        "op": "exact",
+        "subject": "west",
+        "scope": "Npc"
+      },
+      {
+        "op": "clear",
+        "subject": null,
+        "scope": "Global"
+      },
+      {
+        "op": "any",
+        "subject": "west"
+      }
+    ]
+  },
+  {
+    "id": "FLAG_AVOID_PLAYER-scope-separation",
+    "kind": "flag",
+    "definition": {
+      "id": "FLAG_AVOID_PLAYER",
+      "scope": "Npc",
+      "ttl": null
+    },
+    "operations": [
+      {
+        "op": "set",
+        "subject": "west",
+        "scope": "Npc",
+        "value": true
+      },
+      {
+        "op": "set",
+        "subject": "west",
+        "scope": "Relation",
+        "value": true
+      },
+      {
+        "op": "clear",
+        "subject": "west",
+        "scope": "Npc"
+      },
+      {
+        "op": "any",
+        "subject": "west"
+      },
+      {
+        "op": "exact",
+        "subject": "west",
+        "scope": "Npc"
+      },
+      {
+        "op": "exact",
+        "subject": "west",
+        "scope": "Relation"
+      },
+      {
+        "op": "tick",
+        "count": 0
+      },
+      {
+        "op": "any",
+        "subject": "west"
+      }
+    ]
+  },
+  {
+    "id": "FLAG_TRUST_LOCKED_LOW-declared-scope",
+    "kind": "flag",
+    "definition": {
+      "id": "FLAG_TRUST_LOCKED_LOW",
+      "scope": "Relation",
+      "ttl": null
+    },
+    "operations": [
+      {
+        "op": "any",
+        "subject": "west"
+      },
+      {
+        "op": "set",
+        "subject": "west",
+        "value": true
+      },
+      {
+        "op": "any",
+        "subject": "west"
+      },
+      {
+        "op": "any",
+        "subject": "east"
+      },
+      {
+        "op": "any",
+        "subject": null
+      },
+      {
+        "op": "tick",
+        "count": 50
+      },
+      {
+        "op": "any",
+        "subject": "west"
+      },
+      {
+        "op": "clear",
+        "subject": "west"
+      },
+      {
+        "op": "any",
+        "subject": "west"
+      }
+    ]
+  },
+  {
+    "id": "FLAG_TRUST_LOCKED_LOW-explicit-global-union",
+    "kind": "flag",
+    "definition": {
+      "id": "FLAG_TRUST_LOCKED_LOW",
+      "scope": "Relation",
+      "ttl": null
+    },
+    "operations": [
+      {
+        "op": "set",
+        "subject": null,
+        "scope": "Global",
+        "value": true
+      },
+      {
+        "op": "set",
+        "subject": "west",
+        "scope": "Npc",
+        "value": false
+      },
+      {
+        "op": "any",
+        "subject": "west"
+      },
+      {
+        "op": "exact",
+        "subject": "west",
+        "scope": "Npc"
+      },
+      {
+        "op": "clear",
+        "subject": null,
+        "scope": "Global"
+      },
+      {
+        "op": "any",
+        "subject": "west"
+      }
+    ]
+  },
+  {
+    "id": "FLAG_TRUST_LOCKED_LOW-scope-separation",
+    "kind": "flag",
+    "definition": {
+      "id": "FLAG_TRUST_LOCKED_LOW",
+      "scope": "Relation",
+      "ttl": null
+    },
+    "operations": [
+      {
+        "op": "set",
+        "subject": "west",
+        "scope": "Npc",
+        "value": true
+      },
+      {
+        "op": "set",
+        "subject": "west",
+        "scope": "Relation",
+        "value": true
+      },
+      {
+        "op": "clear",
+        "subject": "west",
+        "scope": "Npc"
+      },
+      {
+        "op": "any",
+        "subject": "west"
+      },
+      {
+        "op": "exact",
+        "subject": "west",
+        "scope": "Npc"
+      },
+      {
+        "op": "exact",
+        "subject": "west",
+        "scope": "Relation"
+      },
+      {
+        "op": "tick",
+        "count": 0
+      },
+      {
+        "op": "any",
+        "subject": "west"
+      }
+    ]
+  },
+  {
+    "id": "FLAG_NPC0007_AVOID_PLAYER_TEMP-declared-scope",
+    "kind": "flag",
+    "definition": {
+      "id": "FLAG_NPC0007_AVOID_PLAYER_TEMP",
+      "scope": "Npc",
+      "ttl": 10
+    },
+    "operations": [
+      {
+        "op": "any",
+        "subject": "west"
+      },
+      {
+        "op": "set",
+        "subject": "west",
+        "value": true
+      },
+      {
+        "op": "any",
+        "subject": "west"
+      },
+      {
+        "op": "any",
+        "subject": "east"
+      },
+      {
+        "op": "any",
+        "subject": null
+      },
+      {
+        "op": "tick",
+        "count": 9
+      },
+      {
+        "op": "any",
+        "subject": "west"
+      },
+      {
+        "op": "tick",
+        "count": 1
+      },
+      {
+        "op": "any",
+        "subject": "west"
+      }
+    ]
+  },
+  {
+    "id": "FLAG_NPC0007_AVOID_PLAYER_TEMP-explicit-global-union",
+    "kind": "flag",
+    "definition": {
+      "id": "FLAG_NPC0007_AVOID_PLAYER_TEMP",
+      "scope": "Npc",
+      "ttl": 10
+    },
+    "operations": [
+      {
+        "op": "set",
+        "subject": null,
+        "scope": "Global",
+        "value": true
+      },
+      {
+        "op": "set",
+        "subject": "west",
+        "scope": "Npc",
+        "value": false
+      },
+      {
+        "op": "any",
+        "subject": "west"
+      },
+      {
+        "op": "exact",
+        "subject": "west",
+        "scope": "Npc"
+      },
+      {
+        "op": "clear",
+        "subject": null,
+        "scope": "Global"
+      },
+      {
+        "op": "any",
+        "subject": "west"
+      }
+    ]
+  },
+  {
+    "id": "FLAG_NPC0007_AVOID_PLAYER_TEMP-scope-separation",
+    "kind": "flag",
+    "definition": {
+      "id": "FLAG_NPC0007_AVOID_PLAYER_TEMP",
+      "scope": "Npc",
+      "ttl": 10
+    },
+    "operations": [
+      {
+        "op": "set",
+        "subject": "west",
+        "scope": "Npc",
+        "value": true
+      },
+      {
+        "op": "set",
+        "subject": "west",
+        "scope": "Relation",
+        "value": true
+      },
+      {
+        "op": "clear",
+        "subject": "west",
+        "scope": "Npc"
+      },
+      {
+        "op": "any",
+        "subject": "west"
+      },
+      {
+        "op": "exact",
+        "subject": "west",
+        "scope": "Npc"
+      },
+      {
+        "op": "exact",
+        "subject": "west",
+        "scope": "Relation"
+      },
+      {
+        "op": "tick",
+        "count": 0
+      },
+      {
+        "op": "any",
+        "subject": "west"
+      }
+    ]
+  },
+  {
+    "id": "EVT_PLAYER_HELPED-named-expiry",
+    "kind": "event",
+    "definition": {
+      "id": "EVT_PLAYER_HELPED",
+      "ttl": 10
+    },
+    "operations": [
+      {
+        "op": "push",
+        "subject": "west"
+      },
+      {
+        "op": "any",
+        "subject": "west"
+      },
+      {
+        "op": "any",
+        "subject": "east"
+      },
+      {
+        "op": "any",
+        "subject": null
+      },
+      {
+        "op": "tick",
+        "count": 9
+      },
+      {
+        "op": "any",
+        "subject": "west"
+      },
+      {
+        "op": "tick",
+        "count": 1
+      },
+      {
+        "op": "any",
+        "subject": "west"
+      }
+    ]
+  },
+  {
+    "id": "EVT_PLAYER_HELPED-global-wildcard",
+    "kind": "event",
+    "definition": {
+      "id": "EVT_PLAYER_HELPED",
+      "ttl": 10
+    },
+    "operations": [
+      {
+        "op": "push",
+        "subject": null
+      },
+      {
+        "op": "any",
+        "subject": "east"
+      },
+      {
+        "op": "exact",
+        "subject": "east"
+      },
+      {
+        "op": "clear",
+        "subject": "east"
+      },
+      {
+        "op": "any",
+        "subject": "east"
+      },
+      {
+        "op": "clear",
+        "subject": null
+      },
+      {
+        "op": "any",
+        "subject": "east"
+      }
+    ]
+  },
+  {
+    "id": "EVT_PLAYER_HELPED-named-clear",
+    "kind": "event",
+    "definition": {
+      "id": "EVT_PLAYER_HELPED",
+      "ttl": 10
+    },
+    "operations": [
+      {
+        "op": "push",
+        "subject": "west"
+      },
+      {
+        "op": "push",
+        "subject": "east"
+      },
+      {
+        "op": "clear",
+        "subject": "west"
+      },
+      {
+        "op": "any",
+        "subject": "west"
+      },
+      {
+        "op": "exact",
+        "subject": "east"
+      },
+      {
+        "op": "clear",
+        "subject": null
+      },
+      {
+        "op": "any",
+        "subject": null
+      }
+    ]
+  },
+  {
+    "id": "EVT_PLAYER_LIED-named-expiry",
+    "kind": "event",
+    "definition": {
+      "id": "EVT_PLAYER_LIED",
+      "ttl": 20
+    },
+    "operations": [
+      {
+        "op": "push",
+        "subject": "west"
+      },
+      {
+        "op": "any",
+        "subject": "west"
+      },
+      {
+        "op": "any",
+        "subject": "east"
+      },
+      {
+        "op": "any",
+        "subject": null
+      },
+      {
+        "op": "tick",
+        "count": 19
+      },
+      {
+        "op": "any",
+        "subject": "west"
+      },
+      {
+        "op": "tick",
+        "count": 1
+      },
+      {
+        "op": "any",
+        "subject": "west"
+      }
+    ]
+  },
+  {
+    "id": "EVT_PLAYER_LIED-global-wildcard",
+    "kind": "event",
+    "definition": {
+      "id": "EVT_PLAYER_LIED",
+      "ttl": 20
+    },
+    "operations": [
+      {
+        "op": "push",
+        "subject": null
+      },
+      {
+        "op": "any",
+        "subject": "east"
+      },
+      {
+        "op": "exact",
+        "subject": "east"
+      },
+      {
+        "op": "clear",
+        "subject": "east"
+      },
+      {
+        "op": "any",
+        "subject": "east"
+      },
+      {
+        "op": "clear",
+        "subject": null
+      },
+      {
+        "op": "any",
+        "subject": "east"
+      }
+    ]
+  },
+  {
+    "id": "EVT_PLAYER_LIED-named-clear",
+    "kind": "event",
+    "definition": {
+      "id": "EVT_PLAYER_LIED",
+      "ttl": 20
+    },
+    "operations": [
+      {
+        "op": "push",
+        "subject": "west"
+      },
+      {
+        "op": "push",
+        "subject": "east"
+      },
+      {
+        "op": "clear",
+        "subject": "west"
+      },
+      {
+        "op": "any",
+        "subject": "west"
+      },
+      {
+        "op": "exact",
+        "subject": "east"
+      },
+      {
+        "op": "clear",
+        "subject": null
+      },
+      {
+        "op": "any",
+        "subject": null
+      }
+    ]
+  },
+  {
+    "id": "EVT_PLAYER_THREATENED-named-expiry",
+    "kind": "event",
+    "definition": {
+      "id": "EVT_PLAYER_THREATENED",
+      "ttl": 20
+    },
+    "operations": [
+      {
+        "op": "push",
+        "subject": "west"
+      },
+      {
+        "op": "any",
+        "subject": "west"
+      },
+      {
+        "op": "any",
+        "subject": "east"
+      },
+      {
+        "op": "any",
+        "subject": null
+      },
+      {
+        "op": "tick",
+        "count": 19
+      },
+      {
+        "op": "any",
+        "subject": "west"
+      },
+      {
+        "op": "tick",
+        "count": 1
+      },
+      {
+        "op": "any",
+        "subject": "west"
+      }
+    ]
+  },
+  {
+    "id": "EVT_PLAYER_THREATENED-global-wildcard",
+    "kind": "event",
+    "definition": {
+      "id": "EVT_PLAYER_THREATENED",
+      "ttl": 20
+    },
+    "operations": [
+      {
+        "op": "push",
+        "subject": null
+      },
+      {
+        "op": "any",
+        "subject": "east"
+      },
+      {
+        "op": "exact",
+        "subject": "east"
+      },
+      {
+        "op": "clear",
+        "subject": "east"
+      },
+      {
+        "op": "any",
+        "subject": "east"
+      },
+      {
+        "op": "clear",
+        "subject": null
+      },
+      {
+        "op": "any",
+        "subject": "east"
+      }
+    ]
+  },
+  {
+    "id": "EVT_PLAYER_THREATENED-named-clear",
+    "kind": "event",
+    "definition": {
+      "id": "EVT_PLAYER_THREATENED",
+      "ttl": 20
+    },
+    "operations": [
+      {
+        "op": "push",
+        "subject": "west"
+      },
+      {
+        "op": "push",
+        "subject": "east"
+      },
+      {
+        "op": "clear",
+        "subject": "west"
+      },
+      {
+        "op": "any",
+        "subject": "west"
+      },
+      {
+        "op": "exact",
+        "subject": "east"
+      },
+      {
+        "op": "clear",
+        "subject": null
+      },
+      {
+        "op": "any",
+        "subject": null
+      }
+    ]
+  },
+  {
+    "id": "EVT_PLAYER_PRAISED-named-expiry",
+    "kind": "event",
+    "definition": {
+      "id": "EVT_PLAYER_PRAISED",
+      "ttl": 10
+    },
+    "operations": [
+      {
+        "op": "push",
+        "subject": "west"
+      },
+      {
+        "op": "any",
+        "subject": "west"
+      },
+      {
+        "op": "any",
+        "subject": "east"
+      },
+      {
+        "op": "any",
+        "subject": null
+      },
+      {
+        "op": "tick",
+        "count": 9
+      },
+      {
+        "op": "any",
+        "subject": "west"
+      },
+      {
+        "op": "tick",
+        "count": 1
+      },
+      {
+        "op": "any",
+        "subject": "west"
+      }
+    ]
+  },
+  {
+    "id": "EVT_PLAYER_PRAISED-global-wildcard",
+    "kind": "event",
+    "definition": {
+      "id": "EVT_PLAYER_PRAISED",
+      "ttl": 10
+    },
+    "operations": [
+      {
+        "op": "push",
+        "subject": null
+      },
+      {
+        "op": "any",
+        "subject": "east"
+      },
+      {
+        "op": "exact",
+        "subject": "east"
+      },
+      {
+        "op": "clear",
+        "subject": "east"
+      },
+      {
+        "op": "any",
+        "subject": "east"
+      },
+      {
+        "op": "clear",
+        "subject": null
+      },
+      {
+        "op": "any",
+        "subject": "east"
+      }
+    ]
+  },
+  {
+    "id": "EVT_PLAYER_PRAISED-named-clear",
+    "kind": "event",
+    "definition": {
+      "id": "EVT_PLAYER_PRAISED",
+      "ttl": 10
+    },
+    "operations": [
+      {
+        "op": "push",
+        "subject": "west"
+      },
+      {
+        "op": "push",
+        "subject": "east"
+      },
+      {
+        "op": "clear",
+        "subject": "west"
+      },
+      {
+        "op": "any",
+        "subject": "west"
+      },
+      {
+        "op": "exact",
+        "subject": "east"
+      },
+      {
+        "op": "clear",
+        "subject": null
+      },
+      {
+        "op": "any",
+        "subject": null
+      }
+    ]
+  },
+  {
+    "id": "EVT_PLAYER_INSULTED-named-expiry",
+    "kind": "event",
+    "definition": {
+      "id": "EVT_PLAYER_INSULTED",
+      "ttl": 15
+    },
+    "operations": [
+      {
+        "op": "push",
+        "subject": "west"
+      },
+      {
+        "op": "any",
+        "subject": "west"
+      },
+      {
+        "op": "any",
+        "subject": "east"
+      },
+      {
+        "op": "any",
+        "subject": null
+      },
+      {
+        "op": "tick",
+        "count": 14
+      },
+      {
+        "op": "any",
+        "subject": "west"
+      },
+      {
+        "op": "tick",
+        "count": 1
+      },
+      {
+        "op": "any",
+        "subject": "west"
+      }
+    ]
+  },
+  {
+    "id": "EVT_PLAYER_INSULTED-global-wildcard",
+    "kind": "event",
+    "definition": {
+      "id": "EVT_PLAYER_INSULTED",
+      "ttl": 15
+    },
+    "operations": [
+      {
+        "op": "push",
+        "subject": null
+      },
+      {
+        "op": "any",
+        "subject": "east"
+      },
+      {
+        "op": "exact",
+        "subject": "east"
+      },
+      {
+        "op": "clear",
+        "subject": "east"
+      },
+      {
+        "op": "any",
+        "subject": "east"
+      },
+      {
+        "op": "clear",
+        "subject": null
+      },
+      {
+        "op": "any",
+        "subject": "east"
+      }
+    ]
+  },
+  {
+    "id": "EVT_PLAYER_INSULTED-named-clear",
+    "kind": "event",
+    "definition": {
+      "id": "EVT_PLAYER_INSULTED",
+      "ttl": 15
+    },
+    "operations": [
+      {
+        "op": "push",
+        "subject": "west"
+      },
+      {
+        "op": "push",
+        "subject": "east"
+      },
+      {
+        "op": "clear",
+        "subject": "west"
+      },
+      {
+        "op": "any",
+        "subject": "west"
+      },
+      {
+        "op": "exact",
+        "subject": "east"
+      },
+      {
+        "op": "clear",
+        "subject": null
+      },
+      {
+        "op": "any",
+        "subject": null
+      }
+    ]
+  },
+  {
+    "id": "EVT_TOPIC_OBSESSION-named-expiry",
+    "kind": "event",
+    "definition": {
+      "id": "EVT_TOPIC_OBSESSION",
+      "ttl": 8
+    },
+    "operations": [
+      {
+        "op": "push",
+        "subject": "west"
+      },
+      {
+        "op": "any",
+        "subject": "west"
+      },
+      {
+        "op": "any",
+        "subject": "east"
+      },
+      {
+        "op": "any",
+        "subject": null
+      },
+      {
+        "op": "tick",
+        "count": 7
+      },
+      {
+        "op": "any",
+        "subject": "west"
+      },
+      {
+        "op": "tick",
+        "count": 1
+      },
+      {
+        "op": "any",
+        "subject": "west"
+      }
+    ]
+  },
+  {
+    "id": "EVT_TOPIC_OBSESSION-global-wildcard",
+    "kind": "event",
+    "definition": {
+      "id": "EVT_TOPIC_OBSESSION",
+      "ttl": 8
+    },
+    "operations": [
+      {
+        "op": "push",
+        "subject": null
+      },
+      {
+        "op": "any",
+        "subject": "east"
+      },
+      {
+        "op": "exact",
+        "subject": "east"
+      },
+      {
+        "op": "clear",
+        "subject": "east"
+      },
+      {
+        "op": "any",
+        "subject": "east"
+      },
+      {
+        "op": "clear",
+        "subject": null
+      },
+      {
+        "op": "any",
+        "subject": "east"
+      }
+    ]
+  },
+  {
+    "id": "EVT_TOPIC_OBSESSION-named-clear",
+    "kind": "event",
+    "definition": {
+      "id": "EVT_TOPIC_OBSESSION",
+      "ttl": 8
+    },
+    "operations": [
+      {
+        "op": "push",
+        "subject": "west"
+      },
+      {
+        "op": "push",
+        "subject": "east"
+      },
+      {
+        "op": "clear",
+        "subject": "west"
+      },
+      {
+        "op": "any",
+        "subject": "west"
+      },
+      {
+        "op": "exact",
+        "subject": "east"
+      },
+      {
+        "op": "clear",
+        "subject": null
+      },
+      {
+        "op": "any",
+        "subject": null
+      }
+    ]
+  },
+  {
+    "id": "EVT_MANIPULATION_SUSPECTED-named-expiry",
+    "kind": "event",
+    "definition": {
+      "id": "EVT_MANIPULATION_SUSPECTED",
+      "ttl": 10
+    },
+    "operations": [
+      {
+        "op": "push",
+        "subject": "west"
+      },
+      {
+        "op": "any",
+        "subject": "west"
+      },
+      {
+        "op": "any",
+        "subject": "east"
+      },
+      {
+        "op": "any",
+        "subject": null
+      },
+      {
+        "op": "tick",
+        "count": 9
+      },
+      {
+        "op": "any",
+        "subject": "west"
+      },
+      {
+        "op": "tick",
+        "count": 1
+      },
+      {
+        "op": "any",
+        "subject": "west"
+      }
+    ]
+  },
+  {
+    "id": "EVT_MANIPULATION_SUSPECTED-global-wildcard",
+    "kind": "event",
+    "definition": {
+      "id": "EVT_MANIPULATION_SUSPECTED",
+      "ttl": 10
+    },
+    "operations": [
+      {
+        "op": "push",
+        "subject": null
+      },
+      {
+        "op": "any",
+        "subject": "east"
+      },
+      {
+        "op": "exact",
+        "subject": "east"
+      },
+      {
+        "op": "clear",
+        "subject": "east"
+      },
+      {
+        "op": "any",
+        "subject": "east"
+      },
+      {
+        "op": "clear",
+        "subject": null
+      },
+      {
+        "op": "any",
+        "subject": "east"
+      }
+    ]
+  },
+  {
+    "id": "EVT_MANIPULATION_SUSPECTED-named-clear",
+    "kind": "event",
+    "definition": {
+      "id": "EVT_MANIPULATION_SUSPECTED",
+      "ttl": 10
+    },
+    "operations": [
+      {
+        "op": "push",
+        "subject": "west"
+      },
+      {
+        "op": "push",
+        "subject": "east"
+      },
+      {
+        "op": "clear",
+        "subject": "west"
+      },
+      {
+        "op": "any",
+        "subject": "west"
+      },
+      {
+        "op": "exact",
+        "subject": "east"
+      },
+      {
+        "op": "clear",
+        "subject": null
+      },
+      {
+        "op": "any",
+        "subject": null
+      }
+    ]
+  },
+  {
+    "id": "EVT_NPC_OUTBURST-named-expiry",
+    "kind": "event",
+    "definition": {
+      "id": "EVT_NPC_OUTBURST",
+      "ttl": 5
+    },
+    "operations": [
+      {
+        "op": "push",
+        "subject": "west"
+      },
+      {
+        "op": "any",
+        "subject": "west"
+      },
+      {
+        "op": "any",
+        "subject": "east"
+      },
+      {
+        "op": "any",
+        "subject": null
+      },
+      {
+        "op": "tick",
+        "count": 4
+      },
+      {
+        "op": "any",
+        "subject": "west"
+      },
+      {
+        "op": "tick",
+        "count": 1
+      },
+      {
+        "op": "any",
+        "subject": "west"
+      }
+    ]
+  },
+  {
+    "id": "EVT_NPC_OUTBURST-global-wildcard",
+    "kind": "event",
+    "definition": {
+      "id": "EVT_NPC_OUTBURST",
+      "ttl": 5
+    },
+    "operations": [
+      {
+        "op": "push",
+        "subject": null
+      },
+      {
+        "op": "any",
+        "subject": "east"
+      },
+      {
+        "op": "exact",
+        "subject": "east"
+      },
+      {
+        "op": "clear",
+        "subject": "east"
+      },
+      {
+        "op": "any",
+        "subject": "east"
+      },
+      {
+        "op": "clear",
+        "subject": null
+      },
+      {
+        "op": "any",
+        "subject": "east"
+      }
+    ]
+  },
+  {
+    "id": "EVT_NPC_OUTBURST-named-clear",
+    "kind": "event",
+    "definition": {
+      "id": "EVT_NPC_OUTBURST",
+      "ttl": 5
+    },
+    "operations": [
+      {
+        "op": "push",
+        "subject": "west"
+      },
+      {
+        "op": "push",
+        "subject": "east"
+      },
+      {
+        "op": "clear",
+        "subject": "west"
+      },
+      {
+        "op": "any",
+        "subject": "west"
+      },
+      {
+        "op": "exact",
+        "subject": "east"
+      },
+      {
+        "op": "clear",
+        "subject": null
+      },
+      {
+        "op": "any",
+        "subject": null
+      }
+    ]
+  },
+  {
+    "id": "EVT_NPC0007_LEAVE_SCENE-named-expiry",
+    "kind": "event",
+    "definition": {
+      "id": "EVT_NPC0007_LEAVE_SCENE",
+      "ttl": 10
+    },
+    "operations": [
+      {
+        "op": "push",
+        "subject": "west"
+      },
+      {
+        "op": "any",
+        "subject": "west"
+      },
+      {
+        "op": "any",
+        "subject": "east"
+      },
+      {
+        "op": "any",
+        "subject": null
+      },
+      {
+        "op": "tick",
+        "count": 9
+      },
+      {
+        "op": "any",
+        "subject": "west"
+      },
+      {
+        "op": "tick",
+        "count": 1
+      },
+      {
+        "op": "any",
+        "subject": "west"
+      }
+    ]
+  },
+  {
+    "id": "EVT_NPC0007_LEAVE_SCENE-global-wildcard",
+    "kind": "event",
+    "definition": {
+      "id": "EVT_NPC0007_LEAVE_SCENE",
+      "ttl": 10
+    },
+    "operations": [
+      {
+        "op": "push",
+        "subject": null
+      },
+      {
+        "op": "any",
+        "subject": "east"
+      },
+      {
+        "op": "exact",
+        "subject": "east"
+      },
+      {
+        "op": "clear",
+        "subject": "east"
+      },
+      {
+        "op": "any",
+        "subject": "east"
+      },
+      {
+        "op": "clear",
+        "subject": null
+      },
+      {
+        "op": "any",
+        "subject": "east"
+      }
+    ]
+  },
+  {
+    "id": "EVT_NPC0007_LEAVE_SCENE-named-clear",
+    "kind": "event",
+    "definition": {
+      "id": "EVT_NPC0007_LEAVE_SCENE",
+      "ttl": 10
+    },
+    "operations": [
+      {
+        "op": "push",
+        "subject": "west"
+      },
+      {
+        "op": "push",
+        "subject": "east"
+      },
+      {
+        "op": "clear",
+        "subject": "west"
+      },
+      {
+        "op": "any",
+        "subject": "west"
+      },
+      {
+        "op": "exact",
+        "subject": "east"
+      },
+      {
+        "op": "clear",
+        "subject": null
+      },
+      {
+        "op": "any",
+        "subject": null
+      }
+    ]
+  },
+  {
+    "id": "EVT_PLAYER_RESPEC_STATALLOC-named-expiry",
+    "kind": "event",
+    "definition": {
+      "id": "EVT_PLAYER_RESPEC_STATALLOC",
+      "ttl": 50
+    },
+    "operations": [
+      {
+        "op": "push",
+        "subject": "west"
+      },
+      {
+        "op": "any",
+        "subject": "west"
+      },
+      {
+        "op": "any",
+        "subject": "east"
+      },
+      {
+        "op": "any",
+        "subject": null
+      },
+      {
+        "op": "tick",
+        "count": 49
+      },
+      {
+        "op": "any",
+        "subject": "west"
+      },
+      {
+        "op": "tick",
+        "count": 1
+      },
+      {
+        "op": "any",
+        "subject": "west"
+      }
+    ]
+  },
+  {
+    "id": "EVT_PLAYER_RESPEC_STATALLOC-global-wildcard",
+    "kind": "event",
+    "definition": {
+      "id": "EVT_PLAYER_RESPEC_STATALLOC",
+      "ttl": 50
+    },
+    "operations": [
+      {
+        "op": "push",
+        "subject": null
+      },
+      {
+        "op": "any",
+        "subject": "east"
+      },
+      {
+        "op": "exact",
+        "subject": "east"
+      },
+      {
+        "op": "clear",
+        "subject": "east"
+      },
+      {
+        "op": "any",
+        "subject": "east"
+      },
+      {
+        "op": "clear",
+        "subject": null
+      },
+      {
+        "op": "any",
+        "subject": "east"
+      }
+    ]
+  },
+  {
+    "id": "EVT_PLAYER_RESPEC_STATALLOC-named-clear",
+    "kind": "event",
+    "definition": {
+      "id": "EVT_PLAYER_RESPEC_STATALLOC",
+      "ttl": 50
+    },
+    "operations": [
+      {
+        "op": "push",
+        "subject": "west"
+      },
+      {
+        "op": "push",
+        "subject": "east"
+      },
+      {
+        "op": "clear",
+        "subject": "west"
+      },
+      {
+        "op": "any",
+        "subject": "west"
+      },
+      {
+        "op": "exact",
+        "subject": "east"
+      },
+      {
+        "op": "clear",
+        "subject": null
+      },
+      {
+        "op": "any",
+        "subject": null
+      }
+    ]
+  }
+]

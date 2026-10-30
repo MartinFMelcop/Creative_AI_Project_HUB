@@ -19,6 +19,31 @@ actual C# North Star consumers beyond the retained Godot directory without weake
 source/archive integrity. The [tested CI scope selector](../tools/ci_scope.py) gates
 affected retained runtime consumers while integrity/claim checks remain unconditional.
 
+Within the C# job, [source-backed selection](../tools/csharp_scope.py) routes sixteen
+existing suite groups, preserving their actual workflow command bodies. It follows
+current ProjectReference and reviewed linked/runtime/source-assay inputs. The field
+wrapper remains atomic, including its existing transitive regressions once. Four
+legacy assays fingerprint the entire C# tree, so those identity edges intentionally
+remain broader than compilation. Shared browser locks reach their C# users as well
+as chat. Unknown/deleted inputs, unsupported build syntax, routing/workflow/SDK changes,
+manual or empty scopes select all suites; malformed paths fail. Original coarse job
+requirements cannot be suppressed by this added selector. Integrity remains unconditional.
+
+Reproduce a declared leaf plan (this does not execute tests):
+
+```bash
+python3 tools/csharp_scope.py --path martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/field-journey/preparations.json --report /tmp/csharp-plan.json
+python3 tools/test_csharp_scope.py
+python3 tools/test_csharp_workflow.py
+```
+
+CI retains the exact plan/reasons and selected failure diagnostics. Full mode preserves
+all seventeen verification steps (input timing has two), pins and timeouts. The bounded
+workflow reader is not a general YAML/MSBuild evaluator or sandbox. Skipped suites are
+unexecuted; fewer selected commands do not establish speedup, cost savings, timeout cause,
+human productivity, licensed Unity/Windows/Steam acceptance or Build/Operations maturity.
+See [actual execution and limits](../evidence/verification-routing/RUN.json).
+
 ## Versioned validation history
 
 Older maturity, count and engine statements below describe their recorded versions;

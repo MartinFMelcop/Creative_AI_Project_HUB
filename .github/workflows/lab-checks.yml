@@ -24,7 +24,9 @@ jobs:
       chat_evaluation: ${{ steps.affected.outputs.chat_evaluation }}
       north_star_authority: ${{ steps.affected.outputs.north_star_authority }}
       north_star_remote: ${{ steps.affected.outputs.north_star_remote }}
-      north_star_csharp: ${{ steps.affected.outputs.north_star_csharp }}
+      north_star_csharp: ${{ steps.affected.outputs.north_star_csharp == 'true' || steps.csharp.outputs.required == 'true' }}
+      csharp_suites: ${{ steps.csharp.outputs.suites }}
+      csharp_browser: ${{ steps.csharp.outputs.browser }}
     steps:
       - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
         with:
@@ -44,6 +46,30 @@ jobs:
           else
             python3 tools/ci_scope.py --base "$SCOPE_BASE" --head "$SCOPE_HEAD" --output "$GITHUB_OUTPUT"
           fi
+
+      - name: Resolve source-backed C# verification suites
+        id: csharp
+        working-directory: martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab
+        env:
+          SCOPE_EVENT: ${{ github.event_name }}
+          SCOPE_BASE: ${{ github.event.pull_request.base.sha || github.event.before }}
+          SCOPE_HEAD: ${{ github.event.pull_request.head.sha || github.sha }}
+        run: |
+          python3 tools/test_csharp_scope.py
+          python3 tools/test_csharp_workflow.py
+          if [ "$SCOPE_EVENT" = "workflow_dispatch" ]; then
+            python3 tools/csharp_scope.py --full --output "$GITHUB_OUTPUT" --report "$RUNNER_TEMP/csharp-plan.json"
+          else
+            python3 tools/csharp_scope.py --base "$SCOPE_BASE" --head "$SCOPE_HEAD" --output "$GITHUB_OUTPUT" --report "$RUNNER_TEMP/csharp-plan.json"
+          fi
+      - name: Retain the exact C# selection and dependency reasons
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: csharp-verification-plan
+          path: ${{ runner.temp }}/csharp-plan.json
+          if-no-files-found: error
+          retention-days: 7
 
   eclipse-economy:
     needs: scope
@@ -538,7 +564,10 @@ jobs:
       - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
         with:
           node-version: '24.19.0'
+      - name: Require the pinned SDK for every selected C# suite
+        run: test "$(dotnet --version)" = "10.0.401"
       - name: Execute recovered progression and original C# destination
+        if: contains(fromJSON(needs.scope.outputs.csharp_suites), 'progression')
         run: |
           test "$(dotnet --version)" = "10.0.401"
           python3 -m unittest discover -s labs/rpg-systems -p 'test_*.py'
@@ -548,6 +577,7 @@ jobs:
           dotnet build north-star/csharp/Crossing/NorthStar.Crossing.csproj -c Release
           dotnet north-star/csharp/Crossing/bin/Release/net10.0/NorthStar.Crossing.dll --demo "$RUNNER_TEMP/north-star-journey.json"
       - name: Execute crafting source assay and connected preparation consumer
+        if: contains(fromJSON(needs.scope.outputs.csharp_suites), 'crafting')
         run: |
           python3 -m unittest discover -s labs/economy-simulation -p 'test_*.py'
           python3 labs/economy-simulation/run.py --dotnet dotnet --output "$RUNNER_TEMP/economy-crafting.json" --compare evidence/economy-crafting/results.json
@@ -555,6 +585,7 @@ jobs:
           dotnet north-star/csharp/ForgeChecks/bin/Release/net10.0/NorthStar.ForgeChecks.dll native "$RUNNER_TEMP/north-star-forge-native.json"
           dotnet north-star/csharp/Forge/bin/Release/net10.0/NorthStar.Forge.dll --demo "$RUNNER_TEMP/north-star-forge-journey.json"
       - name: Execute identity intake and transactional prepared actions
+        if: contains(fromJSON(needs.scope.outputs.csharp_suites), 'loadout')
         run: |
           python3 -m unittest discover -s labs/world-gameplay -p 'test_*.py'
           python3 labs/world-gameplay/run.py --dotnet dotnet --output "$RUNNER_TEMP/world-loadout.json" --compare evidence/world-loadout/results.json
@@ -562,6 +593,7 @@ jobs:
           dotnet north-star/csharp/LoadoutChecks/bin/Release/net10.0/NorthStar.LoadoutChecks.dll native "$RUNNER_TEMP/north-star-loadout-native.json"
           dotnet north-star/csharp/Loadout/bin/Release/net10.0/NorthStar.Loadout.dll --demo "$RUNNER_TEMP/north-star-loadout-journey.json"
       - name: Execute persistent joint-state recovery and process failures
+        if: contains(fromJSON(needs.scope.outputs.csharp_suites), 'recovery')
         run: |
           python3 -m unittest discover -s labs/networking-persistence -p 'test_*.py'
           python3 labs/networking-persistence/run.py --dotnet dotnet --output "$RUNNER_TEMP/persistent-expedition.json" --compare evidence/persistent-expedition/results.json
@@ -569,6 +601,7 @@ jobs:
           dotnet north-star/csharp/RecoveryChecks/bin/Release/net10.0/NorthStar.RecoveryChecks.dll native "$RUNNER_TEMP/north-star-recovery-native.json"
           dotnet north-star/csharp/Recovery/bin/Release/net10.0/NorthStar.Recovery.dll --demo "$RUNNER_TEMP/north-star-recovery-journey.json"
       - name: Execute narrative continuity and event-owned outcomes
+        if: contains(fromJSON(needs.scope.outputs.csharp_suites), 'narrative')
         run: |
           python3 -m unittest discover -s labs/narrative-continuity -p 'test_*.py'
           python3 labs/narrative-continuity/run.py --dotnet dotnet --output "$RUNNER_TEMP/narrative-continuity.json" --compare evidence/narrative-continuity/results.json
@@ -576,12 +609,15 @@ jobs:
           dotnet north-star/csharp/NarrativeChecks/bin/Release/net10.0/NorthStar.NarrativeChecks.dll "$RUNNER_TEMP/north-star-narrative-native.json"
           dotnet north-star/csharp/Narrative/bin/Release/net10.0/NorthStar.Narrative.dll --demo "$RUNNER_TEMP/north-star-narrative-journey.json"
       - name: Execute input timing and actual C# work consumer
+        if: contains(fromJSON(needs.scope.outputs.csharp_suites), 'input_timing')
         run: |
           python3 -m unittest discover -s labs/input-timing -p 'test_*.py'
           python3 labs/input-timing/run.py --dotnet dotnet --output "$RUNNER_TEMP/input-timing.json" --compare evidence/input-timing/results.json
       - name: Install existing locked browser instrument
+        if: needs.scope.outputs.csharp_browser == 'true'
         run: npm ci --prefix projects/realtime-integration-lab
       - name: Install matching browser for C# interaction verification
+        if: needs.scope.outputs.csharp_browser == 'true'
         working-directory: martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/projects/realtime-integration-lab
         run: |
           npx --no-install playwright-core install --with-deps chromium
@@ -589,6 +625,7 @@ jobs:
           test -x "$browser_path"
           printf 'CHROMIUM_PATH=%s\n' "$browser_path" >> "$GITHUB_ENV"
       - name: Execute visible confirmed identity and its actual owned journey
+        if: contains(fromJSON(needs.scope.outputs.csharp_suites), 'intake')
         run: python3 north-star/intake/tools/verify.py --dotnet dotnet --output "$RUNNER_TEMP/intake"
       - name: Retain intake failure diagnostics
         if: failure()
@@ -600,6 +637,7 @@ jobs:
           retention-days: 7
 
       - name: Execute authored preparations and affected sampling/conditions/memory/field consumers
+        if: contains(fromJSON(needs.scope.outputs.csharp_suites), 'field')
         run: python3 north-star/field-journey/tools/preparation-verify.py --dotnet dotnet --output "$RUNNER_TEMP/preparation-authoring"
       - name: Retain scoped memory failure diagnostics
         if: failure()
@@ -620,19 +658,23 @@ jobs:
           retention-days: 7
 
       - name: Exercise actual visual C# input lifecycle
+        if: contains(fromJSON(needs.scope.outputs.csharp_suites), 'input_timing')
         run: node labs/input-timing/browser.mjs dotnet "$RUNNER_TEMP/input-browser"
       - name: Execute embodied Crossing presentation and actual browser controls
+        if: contains(fromJSON(needs.scope.outputs.csharp_suites), 'presentation')
         run: |
           dotnet build north-star/csharp/PresentationChecks/NorthStar.PresentationChecks.csproj -c Release
           dotnet north-star/csharp/PresentationChecks/bin/Release/net10.0/NorthStar.PresentationChecks.dll "$RUNNER_TEMP/presentation-native.json"
           node labs/visual-animation/browser.mjs dotnet "$RUNNER_TEMP/visual-browser"
       - name: Execute original C# composition and actual real-time playback
+        if: contains(fromJSON(needs.scope.outputs.csharp_suites), 'audio')
         run: |
           dotnet build north-star/csharp/AudioChecks/NorthStar.AudioChecks.csproj -c Release
           dotnet north-star/csharp/AudioChecks/bin/Release/net10.0/NorthStar.AudioChecks.dll "$RUNNER_TEMP/audio-native.json" "$RUNNER_TEMP/audio-assets"
           node labs/audio-music/browser.mjs dotnet "$RUNNER_TEMP/audio-browser"
 
       - name: Execute coherent authored C# scene and actual browser consequences
+        if: contains(fromJSON(needs.scope.outputs.csharp_suites), 'authored_scene')
         run: |
           python3 -m unittest discover -s north-star/authored-scene/tools -p 'test_*.py'
           python3 north-star/authored-scene/tools/verify.py --dotnet dotnet --output "$RUNNER_TEMP/authored-scene"
@@ -646,6 +688,7 @@ jobs:
           retention-days: 7
 
       - name: Execute exact item identities and actual retained-tool output use
+        if: contains(fromJSON(needs.scope.outputs.csharp_suites), 'tooling')
         run: python3 north-star/tooling-study/tools/verify.py --dotnet dotnet --output "$RUNNER_TEMP/tooling-study"
       - name: Retain tooling failure diagnostics
         if: failure()
@@ -657,6 +700,7 @@ jobs:
           retention-days: 7
 
       - name: Execute selected reputation source contracts and actual service consumer
+        if: contains(fromJSON(needs.scope.outputs.csharp_suites), 'reputation')
         run: python3 north-star/reputation-study/tools/verify.py --dotnet dotnet --output "$RUNNER_TEMP/reputation-study"
       - name: Retain reputation failure diagnostics
         if: failure()
@@ -668,6 +712,7 @@ jobs:
           retention-days: 7
 
       - name: Execute source-bound status, selected passives and actual C# practice consumer
+        if: contains(fromJSON(needs.scope.outputs.csharp_suites), 'combat')
         run: |
           python3 labs/combat-response/status/test_instrument.py
           python3 north-star/combat-study/tools/passive-verify.py --dotnet dotnet --output "$RUNNER_TEMP/combat-status"
@@ -681,6 +726,7 @@ jobs:
           retention-days: 7
 
       - name: Execute actual repair-to-watering journey and affected availability controls
+        if: contains(fromJSON(needs.scope.outputs.csharp_suites), 'availability')
         run: python3 north-star/availability-study/tools/verify.py --dotnet dotnet --output "$RUNNER_TEMP/npc-availability"
       - name: Retain availability failure diagnostics
         if: failure()
@@ -691,6 +737,7 @@ jobs:
           retention-days: 7
 
       - name: Rebuild and execute the actual recipient demonstration without SDK on its PATH
+        if: contains(fromJSON(needs.scope.outputs.csharp_suites), 'recipient')
         run: |
           curl --fail --location --max-time 90 --output "$RUNNER_TEMP/recipient-sdk.tar.gz" https://builds.dotnet.microsoft.com/dotnet/Sdk/10.0.401/dotnet-sdk-10.0.401-linux-x64.tar.gz
           python3 delivery/authored-scene/verify.py --dotnet dotnet --sdk-archive "$RUNNER_TEMP/recipient-sdk.tar.gz" --compare delivery/authored-scene/dist/authored-scene-demo-linux-x64.zip --output "$RUNNER_TEMP/recipient-delivery"

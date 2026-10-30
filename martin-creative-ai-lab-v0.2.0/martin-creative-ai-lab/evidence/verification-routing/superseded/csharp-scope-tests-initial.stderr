@@ -1,0 +1,27 @@
+.........F..............
+======================================================================
+FAIL: test_external_origin_recovery_dependency_is_not_lost (__main__.CurrentContracts.test_external_origin_recovery_dependency_is_not_lost)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/tools/test_csharp_scope.py", line 64, in test_external_origin_recovery_dependency_is_not_lost
+    self.assertEqual(chosen('projects/eclipse-fair/Cli/Journal.cs'),{'crafting','recovery'})
+AssertionError: Items in the first set but not the second:
+'narrative'
+'reputation'
+'field'
+'combat'
+'progression'
+'intake'
+'authored_scene'
+'loadout'
+'input_timing'
+'tooling'
+'recipient'
+'presentation'
+'audio'
+'availability'
+
+----------------------------------------------------------------------
+Ran 24 tests in 4.593s
+
+FAILED (failures=1)

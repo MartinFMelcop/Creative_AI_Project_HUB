@@ -1,0 +1,103 @@
+{
+  "schema_version": 1,
+  "kind": "scientific_cross_specialty_readonly_review",
+  "date": "2026-10-29 America/Sao_Paulo",
+  "reviewer": "/root/cycle_scientific",
+  "disclosure": "Reviewer independently selected question/controls and wrote prospective protocol plus independent workflow/sentinel tests. This is cross-specialty source/result review, not blinded validation of reviewer-authored tests, human approval or author productivity assessment.",
+  "brain_chapters": [
+    "SCI-013",
+    "SCI-014",
+    "SCI-076",
+    "SCI-077"
+  ],
+  "actual_reviewed_execution": {
+    "execution_json_sha256": "2ad60624b389d0a125df647a601cda08f865346bbd0ac324b651088932d8e378",
+    "commands_json_sha256": "b978dcc1b65fdd86b8dd5a9776c387a939442cb51945b8bc0e314eeb87a80bd0",
+    "plan_json_sha256": "2fe671279275629fd897cbd9afa459431f65b33d845faf3a62efd7695aaabe36",
+    "selected": [
+      "field"
+    ],
+    "genuine_workflow_commands": 1,
+    "outer_command_records": 6,
+    "all_outer_exit_codes_zero": true,
+    "consumer_source_identities": 106,
+    "consumer_source_stable_and_current": true,
+    "consumer_native": {
+      "passed": 41,
+      "failed": 0
+    },
+    "chromium_host": {
+      "passed": 30,
+      "failed": 0
+    },
+    "bad_startup_controls_included_in_chromium_host_count": 9,
+    "http_negative_controls": 2,
+    "scope": "One declared leaf-path scenario, without modifying that file, selected the existing maximal wrapper; exact body executed under bash -e -o pipefail. Existing locked browser installation was reused, not simulated."
+  },
+  "post_execution_hardening_boundary": {
+    "changed_routing_inputs": [
+      "tools/csharp_scope.py",
+      "tools/test_csharp_scope.py"
+    ],
+    "reason": "Additional parent-directory symlink refusal/control after consumer execution. The unchanged consumer itself was not rerun. Do not call the final routing bytes identical to execution-time routing bytes.",
+    "separate_current_cli_check": {
+      "command": "python3 tools/csharp_scope.py --path martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/field-journey/preparations.json --report /workspace/work/verification-routing/scientific-final-leaf-plan.json",
+      "exit_code": 0,
+      "report_sha256": "2fe671279275629fd897cbd9afa459431f65b33d845faf3a62efd7695aaabe36",
+      "selected_and_browser_outputs_match_actual_execution_plan": true
+    },
+    "independent_current_tests": {
+      "command": "python3 tools/test_csharp_workflow.py",
+      "passed": 13,
+      "failed": 0
+    }
+  },
+  "review_findings": [
+    {
+      "finding": "Linked Compile source in Presentation creates real Session dependency beyond ProjectReference.",
+      "resolution": "Independent sentinel requires presentation/audio consumers; inspected implementation records linked Compile input."
+    },
+    {
+      "finding": "Initial resolve-before-link-check could erase an in-root project/input link.",
+      "resolution": "Engineering checks lexical path ancestors before canonical resolution; actual independent in-root Compile symlink control passes."
+    },
+    {
+      "finding": "Recipient packager archives authored scene README plus per-project README/SCENE. Initial selector omitted Narrative SCENE recipient edge.",
+      "resolution": "Actual independent test initially failed; exact failing source/log retained. Engineering now derives per-project documents and explicitly includes authored README. Independent sentinel passes."
+    },
+    {
+      "finding": "Four existing source assays fingerprint the complete C# tree.",
+      "resolution": "Conservative progression/crafting/loadout/recovery selection retained for relevant C# tree changes; no false precision claim."
+    }
+  ],
+  "negative_controls_reviewed": [
+    "Wrong suite guard",
+    "Actual field wrapper replaced by true",
+    "Legacy coarse scope suppressed",
+    "SDK pin removed",
+    "Browser setup guard removed",
+    "Failure diagnostics disabled",
+    "Missing/duplicate nested wrapper child obligation",
+    "Deliberately omitted recipient/field/presentation expected consumer",
+    "In-root linked Compile source",
+    "Unknown/shared/manual/empty full fallback"
+  ],
+  "material_defects_remaining_in_reviewed_scope": [],
+  "current_source_sha256": {
+    "tools/csharp_scope.py": "3ab0a6dbd9d78d74f9a70e3686febe746cc10150d81f8005429a842e5120d68e",
+    "tools/test_csharp_scope.py": "d1150bbe5b8071b7f424e6249b1ed189b3c723c986ba3e529b47236c17bfe880",
+    "tools/test_csharp_workflow.py": "428cdebf73e8ce8b873088aa7046332d0865a3b74c1fafaecd6a2b8a9ff37f51",
+    "tools/ci_scope.py": "52154bd5f3228a0e89c3c0144fff0a7ef906617a33adf99efd55d77208e5c172",
+    "tools/test_ci_scope.py": "3ba12e4ee7950dc05430719c9769003f02bbbf7c199331a8c2b6daf5d01d539c",
+    "evidence/verification-routing/protocol.json": "0668f241445dd716d9e184027bdb9385befd10f7959942b9b1693e5808409771",
+    "../../.github/workflows/lab-checks.yml": "80a0a5f758fe10539301987aeb3bd1b471826101ebada72ce6dc3851274b5fdf"
+  },
+  "limits": [
+    "Only the field leaf scenario executed its actual selected workflow body locally; other suites in this trial are unexecuted, not passed.",
+    "Preparation/sampling/conditions/memory/presentation/base-field outcomes overlap and are not participants or independent studies.",
+    "The17existing verification blocks remain16suite keys; input timing has two blocks. The maximal field wrapper supplies nested coverage once.",
+    "No runtime savings, cost, productivity, timeout causality or universal dependency completeness inferred. Unsupported graph syntax must remain conservative.",
+    "Local shell execution is not completed GitHub Actions CI.",
+    "No gameplay rule, protected source, recipient payload, source capability classification, human assessment, ordinary-user Windows, licensed Unity/Steam or P09 completion claimed."
+  ]
+}

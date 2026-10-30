@@ -89,6 +89,8 @@ def affected(path):
     if relative.startswith(('projects/veil-arena/', 'labs/combat-response/', 'evidence/combat-response/',
                             'evidence/veil-arena/')):
         return ('native_arena',)
+    if relative in {'projects/realtime-integration-lab/package.json', 'projects/realtime-integration-lab/package-lock.json'}:
+        return ('chat_evaluation', 'north_star_csharp')  # Shared actual Chromium instrument.
     if relative.startswith(('projects/realtime-integration-lab/', 'projects/tokyo80s/',
                             'projects/waystone-dialogue/', 'evaluations/',
                             'labs/ai-evaluation/', 'evidence/ai-evaluation/',

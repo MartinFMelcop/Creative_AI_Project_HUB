@@ -1,0 +1,158 @@
+{
+  "schema_version": 1,
+  "kind": "repository_verification_execution",
+  "date": "2026-10-29 America/Sao_Paulo",
+  "baseline_commit": "bf6d81fcafeebefc4b6c52527fd4e4e4ec390a61",
+  "question": "Can current source-backed routing preserve existing C# verification obligations while selecting only their affected actual consumers?",
+  "primary_stream": "repository/portfolio production continuity; ONE unit",
+  "source_artifacts": [
+    {
+      "path": "tools/csharp_scope.py",
+      "bytes": 16362,
+      "sha256": "3ab0a6dbd9d78d74f9a70e3686febe746cc10150d81f8005429a842e5120d68e"
+    },
+    {
+      "path": "tools/test_csharp_scope.py",
+      "bytes": 11266,
+      "sha256": "d1150bbe5b8071b7f424e6249b1ed189b3c723c986ba3e529b47236c17bfe880"
+    },
+    {
+      "path": "tools/test_csharp_workflow.py",
+      "bytes": 13458,
+      "sha256": "428cdebf73e8ce8b873088aa7046332d0865a3b74c1fafaecd6a2b8a9ff37f51"
+    },
+    {
+      "path": "tools/ci_scope.py",
+      "bytes": 9896,
+      "sha256": "52154bd5f3228a0e89c3c0144fff0a7ef906617a33adf99efd55d77208e5c172"
+    },
+    {
+      "path": "tools/test_ci_scope.py",
+      "bytes": 11818,
+      "sha256": "3ba12e4ee7950dc05430719c9769003f02bbbf7c199331a8c2b6daf5d01d539c"
+    },
+    {
+      "path": "evidence/verification-routing/protocol.json",
+      "bytes": 8173,
+      "sha256": "0668f241445dd716d9e184027bdb9385befd10f7959942b9b1693e5808409771"
+    },
+    {
+      "path": "evidence/verification-routing/execute-selected.py",
+      "bytes": 4304,
+      "sha256": "b32838a16e8bc0563e59efea7fdbe209a1e4696df4bf11d26a46e86c2246c0a2"
+    },
+    {
+      "path": "evidence/verification-routing/git-diff-controls.py",
+      "bytes": 2788,
+      "sha256": "1ad962c27a72075df3bc0c4dcb77252d501ed72d260154e149cff2235d5f3a81"
+    }
+  ],
+  "root_workflow": {
+    "path": ".github/workflows/lab-checks.yml",
+    "sha256": "80a0a5f758fe10539301987aeb3bd1b471826101ebada72ce6dc3851274b5fdf"
+  },
+  "checks": {
+    "selector": {
+      "passed": 26,
+      "failed": 0
+    },
+    "independent_workflow": {
+      "passed": 13,
+      "failed": 0
+    },
+    "coarse_scope": {
+      "passed": 14,
+      "failed": 0
+    }
+  },
+  "actual_execution": {
+    "record": "execution/execution.json",
+    "commands": "execution/commands.json",
+    "scenario": "Declared unchanged actual field/preparations.json path, not a fabricated Git modification",
+    "selected_suites": [
+      "field"
+    ],
+    "unexecuted_suite_keys": [
+      "progression",
+      "crafting",
+      "loadout",
+      "recovery",
+      "narrative",
+      "input_timing",
+      "intake",
+      "presentation",
+      "audio",
+      "authored_scene",
+      "tooling",
+      "reputation",
+      "combat",
+      "availability",
+      "recipient"
+    ],
+    "actual_unchanged_workflow_verification_steps": 1,
+    "native_controls": 41,
+    "chromium_host_controls": 30,
+    "bad_startup_controls_included_in30": 9,
+    "http_negatives": 2,
+    "consumer_source_identities": 106,
+    "stable": true,
+    "composed_regressions": "execution/runtime/preparation-authoring/regressions/verification.json",
+    "limits": "Overlapping software controls; no people, independent studies or measured effort. Original consumer and wrapper source stayed unchanged."
+  },
+  "post_execution_hardening": {
+    "schema_version": 1,
+    "final_plan_byte_semantics_equal_actual_execution_plan": true,
+    "consumer106identities_remain_exact": true,
+    "final_source_sha256": {
+      "tools/csharp_scope.py": "3ab0a6dbd9d78d74f9a70e3686febe746cc10150d81f8005429a842e5120d68e",
+      "tools/test_csharp_scope.py": "d1150bbe5b8071b7f424e6249b1ed189b3c723c986ba3e529b47236c17bfe880",
+      "tools/test_csharp_workflow.py": "428cdebf73e8ce8b873088aa7046332d0865a3b74c1fafaecd6a2b8a9ff37f51",
+      "tools/ci_scope.py": "52154bd5f3228a0e89c3c0144fff0a7ef906617a33adf99efd55d77208e5c172",
+      "tools/test_ci_scope.py": "3ba12e4ee7950dc05430719c9769003f02bbbf7c199331a8c2b6daf5d01d539c"
+    },
+    "execution_boundary": "Actual consumer executed before final parent-link guard. Final guard then passed26selector controls and identical whole leaf plan; unchanged consumer was not repeated or relabeled final-source execution."
+  },
+  "preserved_commands": {
+    "record": "command-preservation.json",
+    "existing_exact_command_blocks": 19,
+    "verification_steps": 17,
+    "suite_groups": 16,
+    "input_timing_steps": 2,
+    "always_sdk_guard_added": true,
+    "all_original_commands_timeouts_diagnostics_and_integrity_gates_preserved": true
+  },
+  "negative_findings": [
+    "Initial external exact Journal source was overbroad; narrowed only explicitly named non-project sources, not unknown prefixes. Exact producer and failure retained.",
+    "Independent review actually detected missing recipient Narrative/SCENE metadata; graph-derived per-project README/SCENE corrected omission.",
+    "Lexical project/Compile/Content symlink checks precede resolution; final changed-runtime ancestor-link hardening passed isolated negative.",
+    "Independent omitted Domain/Loadout/Session dependents, wrong suite guard, false field no-op, missing/duplicate wrapper child, browser/SDK/diagnostic removal and shell failure controls reject their defects.",
+    "Unknown/deleted/unsupported/shared/manual/empty contexts retain all suites or explicit malformed-path refusal."
+  ],
+  "known_dependency_boundaries": [
+    "ProjectReference plus reviewed Compile/Content/EmbeddedResource inputs; not general MSBuild evaluation.",
+    "Four legacy source-binding assays fingerprint the entire C# tree; these real identity dependencies remain broad.",
+    "Recipient source closure includes per-project README/SCENE and authored README/web, runtime archive/notices/support.",
+    "Actual external P11 recovery sources, origin source assays and shared browser locks propagate additional C# obligations.",
+    "Field remains one maximal existing wrapper covering six nested methods; no child double-counting."
+  ],
+  "baseline_ci": {
+    "run": 40986361963,
+    "attempt1": "seven successful jobs; chat job123838293490 failure with unchanged recovery-browser60000ms timeout;111tests=109passes,1cancelled,1skip",
+    "targeted_local": "recovery-targeted.log: one unchanged actual targeted browser test passed; not cause proof",
+    "requested_rerun": "specific chat job only accepted",
+    "observed_attempt2": "eight new job records, completed/success; request and execution scope differ",
+    "cause": "UNPROVEN",
+    "actual_attempt2_jobs": "baseline-ci-attempt2.json"
+  },
+  "limits": [
+    "Actual consumer command executed before final parent-link hardening; exact identities and subsequent final CLI plan equality are separate, not relabeled final-source execution.",
+    "Current routing/workflow changes require ALL sixteen suites in actual CI; local leaf scenario is not the current commit scope.",
+    "Other fifteen suite groups were not executed locally in the leaf trial and are not called passed.",
+    "No quantified speedup, cost saving, productivity or causal explanation for any prior CI failure.",
+    "No new North Star gameplay, legacy consumption, Unity Editor/license/module, Windows/Steam, ordinary-user/device/human assessment or P09 completion.",
+    "No source, save, download, media or notice retired; existing outputs and protected originals remain unchanged."
+  ],
+  "preservation": "preservation.json",
+  "actual_git_controls": "git-controls.json",
+  "full_mode_plan": "full-plan.json"
+}

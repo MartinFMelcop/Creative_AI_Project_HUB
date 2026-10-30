@@ -1,0 +1,81 @@
+{
+  "schema_version": 1,
+  "git_commands": [
+    {
+      "arguments": [
+        "init",
+        "-q"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "arguments": [
+        "add",
+        "."
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "arguments": [
+        "-c",
+        "user.name=Routing control",
+        "-c",
+        "user.email=routing@example.invalid",
+        "commit",
+        "-qm",
+        "Baseline graph"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "arguments": [
+        "rev-parse",
+        "HEAD"
+      ],
+      "exit_code": 0,
+      "stdout": "3eb6ae40502b4a8afe858a9305d21443b77ca25d\n",
+      "stderr": ""
+    },
+    {
+      "arguments": [
+        "add",
+        "-A"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "arguments": [
+        "-c",
+        "user.name=Routing control",
+        "-c",
+        "user.email=routing@example.invalid",
+        "commit",
+        "-qm",
+        "Rename remove and add"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    }
+  ],
+  "actual_changed_paths": [
+    "martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/field-journey/preparations.json",
+    "martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/field-journey/renamed-preparations.json",
+    "martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/reputation-study/Rules/Standing.cs",
+    "martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/shared/new-contract.py"
+  ],
+  "rename_detection": "disabled deliberately; old and new paths both retained",
+  "all16_on_deleted_unknown_graph": true,
+  "empty_diff_all16": true,
+  "invalid_revision_refused": true,
+  "graph_input_copy": "Exact current declared graph sources copied to isolated temporary repository; no maintained file edited",
+  "limits": "Git/parser/selection controls only, no gameplay/CI execution or benchmark."
+}

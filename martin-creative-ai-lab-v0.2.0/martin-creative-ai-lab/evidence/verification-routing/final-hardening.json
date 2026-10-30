@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "final_plan_byte_semantics_equal_actual_execution_plan": true,
+  "consumer106identities_remain_exact": true,
+  "final_source_sha256": {
+    "tools/csharp_scope.py": "3ab0a6dbd9d78d74f9a70e3686febe746cc10150d81f8005429a842e5120d68e",
+    "tools/test_csharp_scope.py": "d1150bbe5b8071b7f424e6249b1ed189b3c723c986ba3e529b47236c17bfe880",
+    "tools/test_csharp_workflow.py": "428cdebf73e8ce8b873088aa7046332d0865a3b74c1fafaecd6a2b8a9ff37f51",
+    "tools/ci_scope.py": "52154bd5f3228a0e89c3c0144fff0a7ef906617a33adf99efd55d77208e5c172",
+    "tools/test_ci_scope.py": "3ba12e4ee7950dc05430719c9769003f02bbbf7c199331a8c2b6daf5d01d539c"
+  },
+  "execution_boundary": "Actual consumer executed before final parent-link guard. Final guard then passed26selector controls and identical whole leaf plan; unchanged consumer was not repeated or relabeled final-source execution."
+}

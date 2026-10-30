@@ -1,0 +1,129 @@
+{
+  "schema_version": 1,
+  "kind": "prospective_verification_protocol",
+  "date": "2026-10-29 America/Sao_Paulo",
+  "baseline_commit": "bf6d81fcafeebefc4b6c52527fd4e4e4ec390a61",
+  "author": "Scientific specialist /root/cycle_scientific",
+  "question": "Can dependency-backed selection run the existing required C# verification owners for bounded changes while rejecting false omissions, preserving broad fallback and keeping unconditional integrity gates?",
+  "beneficiary": "HUB maintainer and production-continuity CI; not a new player-facing feature or production Unity acceptance",
+  "brain_contributions": {
+    "SCI-013": "Competing explanations: fewer commands may be justified dependency exclusion or a false omission; challenge both.",
+    "SCI-014": "Operationalize coverage as preserved actual command/wrapper obligations, not job count or elapsed time.",
+    "SCI-076": "Use dependency inspection, exact command traces and omission mutants for routing correctness; do not infer human productivity.",
+    "SCI-077": "Do not count nested wrapper tests twice or attribute historic timeout causes to current routing."
+  },
+  "baseline_observations": [
+    "north-star-csharp currently runs all retained C# steps whenever its coarse scope is true.",
+    "ProjectReference chains are actual dependencies: Intake\u2192Loadout\u2192Forge/Domain and AuthoredScene\u2192Narrative; changes must propagate transitively.",
+    "The preparation wrapper already executes sampling\u2192conditions, where conditions executes memory and field-presentation\u2192field. Running those covered wrappers again is duplicate verification, not added coverage.",
+    "The shared realtime-integration-lab package/lock supplies the browser instrument to multiple consumers; its changes must not be treated as chat-only inside C# selection.",
+    "Existing job timeout, pinned SDK/browser setup, artifact diagnostics and unconditional integrity gates remain controls."
+  ],
+  "baseline_source_sha256": {
+    "tools/ci_scope.py": "cbf7afca9fefb7117c354a78d4fb7fcf4e1ce4631a86eaa1f61023524302ec6a",
+    "tools/test_ci_scope.py": "afdcec144370b6a2345d76509e185f36f496902c785dab7d64e6e2bee1bddbcc",
+    "north-star/field-journey/tools/preparation-verify.py": "5f77b1c385bbdf0e620ee63324177fd6de8efcccd3a54e7df460f64d4a612736",
+    "north-star/field-journey/tools/sampling-verify.py": "80ca117cbed297e9d7dc38f0416c25b574a652ebdca8d68ccdb03c30677e8de6",
+    "north-star/memory-study/tools/conditions-verify.py": "1ac6c625e09a27c34f71021b4504d8401b716840c21abc749c14e54e3a68526e",
+    "north-star/memory-study/tools/verify.py": "237c261f84eb8a374d132dd424d99f16ce4a37608d2de831dd5a0467efadb3b2",
+    "north-star/field-journey/tools/presentation-verify.py": "d44af96b4b1bcc34c115e5f2ea310c41f851e4c15b6ccbe2d967a27b053cf1bf",
+    "north-star/field-journey/tools/verify.py": "6d7f3501161726ea6e0e6f17fbb9f15ea6ee50ba4db2a0027cd30efa4b41e99f"
+  },
+  "predeclared_acceptance": [
+    {
+      "id": "A1",
+      "criterion": "Declare a finite suite/coverage vocabulary bound to exact existing commands and real source/project/tool/evidence dependencies."
+    },
+    {
+      "id": "A2",
+      "criterion": "Every existing executable north-star-csharp verification step remains reachable in full/manual/unknown/broad mode; no rule, test, fixture, timeout, expectation or security gate is weakened."
+    },
+    {
+      "id": "A3",
+      "criterion": "A change to a known leaf selects every direct/transitive consumer required by inspected ProjectReference and non-C# wrapper/browser/source dependencies. Mixed paths union obligations."
+    },
+    {
+      "id": "A4",
+      "criterion": "Unknown executable/shared paths, selector/workflow contracts, absent/invalid dependency data and unsupported cases select all relevant suites or refuse clearly; no silent empty success."
+    },
+    {
+      "id": "A5",
+      "criterion": "Known documentary/inventory-only paths preserve unconditional integrity while avoiding unrelated runtime work under the existing contract."
+    },
+    {
+      "id": "A6",
+      "criterion": "Nested wrapper coverage is represented once: the preparation wrapper covers sampling, conditions, memory, presentation and base field obligations. Duplicate outer selection must not rerun covered child wrappers."
+    },
+    {
+      "id": "A7",
+      "criterion": "Actual CLI selection and at least one genuine selected existing consumer command execute, with exact input hashes/versions/commands/exit statuses. Dry-run plans alone are not executable acceptance."
+    },
+    {
+      "id": "A8",
+      "criterion": "Actual Git diff testing includes additions/deletions/renames and an unchanged/empty comparison retains declared broad behavior."
+    },
+    {
+      "id": "A9",
+      "criterion": "Integration preserves SDK/browser dependencies and diagnostic collection for selected failing suites; skipped unrelated suites are reported as unexecuted, not passed."
+    }
+  ],
+  "required_negative_controls": [
+    {
+      "id": "N1",
+      "defect": "Remove a required consumer for a shared Domain change.",
+      "required_detection": "Independent expected-coverage control fails; false omission cannot pass by sharing the same selector table as its oracle."
+    },
+    {
+      "id": "N2",
+      "defect": "Omit an actual transitive ProjectReference consumer such as field from Loadout or authored scene from Narrative.",
+      "required_detection": "Dependency/coverage validation or independently stated sentinel expectation rejects it."
+    },
+    {
+      "id": "N3",
+      "defect": "Treat browser package-lock change as unrelated to C# browser consumers.",
+      "required_detection": "Broad/shared dependency control selects those consumers or rejects the plan."
+    },
+    {
+      "id": "N4",
+      "defect": "Claim sampling/conditions/memory coverage without executing preparation wrapper or required child commands.",
+      "required_detection": "Coverage validation rejects fabricated covered sets or binds supported declared wrappers to inspected executable command contract."
+    },
+    {
+      "id": "N5",
+      "defect": "Unknown path, malformed path or unsupported dependency syntax manufactures zero selected suites.",
+      "required_detection": "Conservative fallback/refusal; never silent empty success."
+    },
+    {
+      "id": "N6",
+      "defect": "Select both a covering wrapper and all its covered children as independent top-level executions.",
+      "required_detection": "Plan normalization keeps each obligation once or rejects duplicate plan."
+    },
+    {
+      "id": "N7",
+      "defect": "Selector returns exit0 after a required actual command failed.",
+      "required_detection": "Actual runner/CI integration preserves nonzero failure; retain logs."
+    }
+  ],
+  "outcome_reporting": {
+    "unit": "One routing decision/change set and its required verification obligations; command counts are not independent studies or effort.",
+    "report_separately": [
+      "Static dependency observations",
+      "Selector and negative controls actually executed",
+      "Existing real consumer commands actually executed",
+      "Full CI status and publication status",
+      "Skipped/unexecuted suites",
+      "Interrupted/inconclusive work"
+    ],
+    "no_claims": [
+      "No invented runtime savings, cost, productivity or causal explanation of prior CI failures.",
+      "No production Unity/Windows/Steam, human assessment, rights clearance or P09 completion claim.",
+      "No new consumed legacy capability solely from routing changes."
+    ]
+  },
+  "execution_limits": "Retain existing workflow and instrument bounds; exact implementation/execution limits must be disclosed by runner. No bypass of administrative policy.",
+  "known_uncertainties": [
+    "Dependency extraction is bounded by supported actual project/wrapper syntax; unsupported additions require broad fallback rather than assumed independence.",
+    "Static inclusion of a source in a hash closure may be conservative and does not prove it is a runtime dependency.",
+    "The baseline chat recovery-browser60000ms timeout cause is unknown; current routing is not a causal diagnosis."
+  ]
+}

@@ -1,0 +1,17 @@
+......E......
+======================================================================
+ERROR: test_narrative_scene_document_is_an_actual_recipient_build_input (__main__.IndependentSourceSentinels.test_narrative_scene_document_is_an_actual_recipient_build_input)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/tools/test_csharp_workflow.py", line 181, in test_narrative_scene_document_is_an_actual_recipient_build_input
+    self.require_coverage(self.selection('north-star/csharp/Narrative/SCENE.md'),
+  File "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/tools/test_csharp_workflow.py", line 172, in require_coverage
+    require(required <= selected, 'Required independently observed source consumer omitted')
+  File "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/tools/test_csharp_workflow.py", line 39, in require
+    raise ValueError(message)
+ValueError: Required independently observed source consumer omitted
+
+----------------------------------------------------------------------
+Ran 13 tests in 1.570s
+
+FAILED (errors=1)

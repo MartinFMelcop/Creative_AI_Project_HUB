@@ -1,0 +1,2157 @@
+{
+  "schema_version": 1,
+  "kind": "actual_browser_scoped_memory",
+  "checks": {
+    "passed": 21,
+    "failed": 0
+  },
+  "http_checks": {
+    "passed": 7,
+    "failed": 0
+  },
+  "controls": [
+    "Neither bench begins witnessed or supplied",
+    "Unobserved service cannot spend coin or fabricate fitting",
+    "Actual local help pays part and turn then records only west",
+    "West witness cannot authorize east service",
+    "Named opportunity remains before exact expiry",
+    "Exact expiry removes opportunity but retains actual help and history",
+    "Wall time reads and redraw cannot renew opportunity",
+    "Expired service refuses without charge or output",
+    "Fresh demonstration costs another part and actual action",
+    "Withdrawal preserves actual work without consuming turn",
+    "Explicit paid renewal then actual service produces exactly west fitting",
+    "Later expiry cannot erase acquired fitting",
+    "Actual independent second service spends last coin and final part",
+    "Completed fitting cannot be minted twice",
+    "Repeated demonstrations can exhaust parts with both outputs absent",
+    "Spent parts cannot be refunded into other bench work",
+    "A promise cannot replace an exhausted demonstration part",
+    "Actual isolated false-witness renderer is detected",
+    "Actual isolated false-fitting renderer is detected",
+    "Actual browser has no uncaught script errors",
+    "Actual consumer source identities remain stable"
+  ],
+  "http_controls": [
+    "forged witness field",
+    "duplicate command",
+    "unknown recipient",
+    "malformed JSON",
+    "cross-origin",
+    "wrong media",
+    "oversized body"
+  ],
+  "states": {
+    "initial": {
+      "sequence": 0,
+      "command": "initial",
+      "accepted": true,
+      "text": "Two independent benches, four parts and two coins. No help has been observed and no fitting exists.",
+      "turn": 0,
+      "parts": 4,
+      "coins": 2,
+      "policy": "independent",
+      "complete": false,
+      "benches": [
+        {
+          "id": "west",
+          "helped": false,
+          "support": false,
+          "recent": false,
+          "expires": null,
+          "eligible": false,
+          "delivered": false,
+          "condition_expression": "Helped=true & Support=true & Recent=true",
+          "condition_satisfied": false,
+          "condition_complete": true
+        },
+        {
+          "id": "east",
+          "helped": false,
+          "support": false,
+          "recent": false,
+          "expires": null,
+          "eligible": false,
+          "delivered": false,
+          "condition_expression": "Helped=true & Support=true & Recent=true",
+          "condition_satisfied": false,
+          "condition_complete": true
+        }
+      ],
+      "history": []
+    },
+    "help": {
+      "sequence": 2,
+      "command": "help",
+      "accepted": true,
+      "text": "One part and one action spent on actual local help. This bench observed the demonstration; its current window expires at turn 4.",
+      "turn": 1,
+      "parts": 3,
+      "coins": 2,
+      "policy": "independent",
+      "complete": false,
+      "benches": [
+        {
+          "id": "west",
+          "helped": true,
+          "support": true,
+          "recent": true,
+          "expires": 4,
+          "eligible": true,
+          "delivered": false,
+          "condition_expression": "Helped=true & Support=true & Recent=true",
+          "condition_satisfied": true,
+          "condition_complete": true
+        },
+        {
+          "id": "east",
+          "helped": false,
+          "support": false,
+          "recent": false,
+          "expires": null,
+          "eligible": false,
+          "delivered": false,
+          "condition_expression": "Helped=true & Support=true & Recent=true",
+          "condition_satisfied": false,
+          "condition_complete": true
+        }
+      ],
+      "history": [
+        {
+          "sequence": 2,
+          "command": "help",
+          "bench": "west",
+          "turn": 1,
+          "parts": 3,
+          "coins": 2,
+          "fittings": 0
+        }
+      ]
+    },
+    "beforeExpiry": {
+      "sequence": 5,
+      "command": "wait",
+      "accepted": true,
+      "text": "One deliberately chosen wait action elapsed. No work, fitting, recognition or return was created.",
+      "turn": 3,
+      "parts": 3,
+      "coins": 2,
+      "policy": "independent",
+      "complete": false,
+      "benches": [
+        {
+          "id": "west",
+          "helped": true,
+          "support": true,
+          "recent": true,
+          "expires": 4,
+          "eligible": true,
+          "delivered": false,
+          "condition_expression": "Helped=true & Support=true & Recent=true",
+          "condition_satisfied": true,
+          "condition_complete": true
+        },
+        {
+          "id": "east",
+          "helped": false,
+          "support": false,
+          "recent": false,
+          "expires": null,
+          "eligible": false,
+          "delivered": false,
+          "condition_expression": "Helped=true & Support=true & Recent=true",
+          "condition_satisfied": false,
+          "condition_complete": true
+        }
+      ],
+      "history": [
+        {
+          "sequence": 2,
+          "command": "help",
+          "bench": "west",
+          "turn": 1,
+          "parts": 3,
+          "coins": 2,
+          "fittings": 0
+        },
+        {
+          "sequence": 4,
+          "command": "wait",
+          "bench": null,
+          "turn": 2,
+          "parts": 3,
+          "coins": 2,
+          "fittings": 0
+        },
+        {
+          "sequence": 5,
+          "command": "wait",
+          "bench": null,
+          "turn": 3,
+          "parts": 3,
+          "coins": 2,
+          "fittings": 0
+        }
+      ]
+    },
+    "expired": {
+      "sequence": 6,
+      "command": "wait",
+      "accepted": true,
+      "text": "One deliberately chosen wait action elapsed. No work, fitting, recognition or return was created.",
+      "turn": 4,
+      "parts": 3,
+      "coins": 2,
+      "policy": "independent",
+      "complete": false,
+      "benches": [
+        {
+          "id": "west",
+          "helped": true,
+          "support": true,
+          "recent": false,
+          "expires": null,
+          "eligible": false,
+          "delivered": false,
+          "condition_expression": "Helped=true & Support=true & Recent=true",
+          "condition_satisfied": false,
+          "condition_complete": true
+        },
+        {
+          "id": "east",
+          "helped": false,
+          "support": false,
+          "recent": false,
+          "expires": null,
+          "eligible": false,
+          "delivered": false,
+          "condition_expression": "Helped=true & Support=true & Recent=true",
+          "condition_satisfied": false,
+          "condition_complete": true
+        }
+      ],
+      "history": [
+        {
+          "sequence": 2,
+          "command": "help",
+          "bench": "west",
+          "turn": 1,
+          "parts": 3,
+          "coins": 2,
+          "fittings": 0
+        },
+        {
+          "sequence": 4,
+          "command": "wait",
+          "bench": null,
+          "turn": 2,
+          "parts": 3,
+          "coins": 2,
+          "fittings": 0
+        },
+        {
+          "sequence": 5,
+          "command": "wait",
+          "bench": null,
+          "turn": 3,
+          "parts": 3,
+          "coins": 2,
+          "fittings": 0
+        },
+        {
+          "sequence": 6,
+          "command": "wait",
+          "bench": null,
+          "turn": 4,
+          "parts": 3,
+          "coins": 2,
+          "fittings": 0
+        }
+      ]
+    },
+    "renew": {
+      "sequence": 8,
+      "command": "demonstrate",
+      "accepted": true,
+      "text": "One part and one action spent on a fresh local demonstration. Current support explicitly renewed; past help was not replayed.",
+      "turn": 5,
+      "parts": 2,
+      "coins": 2,
+      "policy": "independent",
+      "complete": false,
+      "benches": [
+        {
+          "id": "west",
+          "helped": true,
+          "support": true,
+          "recent": true,
+          "expires": 8,
+          "eligible": true,
+          "delivered": false,
+          "condition_expression": "Helped=true & Support=true & Recent=true",
+          "condition_satisfied": true,
+          "condition_complete": true
+        },
+        {
+          "id": "east",
+          "helped": false,
+          "support": false,
+          "recent": false,
+          "expires": null,
+          "eligible": false,
+          "delivered": false,
+          "condition_expression": "Helped=true & Support=true & Recent=true",
+          "condition_satisfied": false,
+          "condition_complete": true
+        }
+      ],
+      "history": [
+        {
+          "sequence": 2,
+          "command": "help",
+          "bench": "west",
+          "turn": 1,
+          "parts": 3,
+          "coins": 2,
+          "fittings": 0
+        },
+        {
+          "sequence": 4,
+          "command": "wait",
+          "bench": null,
+          "turn": 2,
+          "parts": 3,
+          "coins": 2,
+          "fittings": 0
+        },
+        {
+          "sequence": 5,
+          "command": "wait",
+          "bench": null,
+          "turn": 3,
+          "parts": 3,
+          "coins": 2,
+          "fittings": 0
+        },
+        {
+          "sequence": 6,
+          "command": "wait",
+          "bench": null,
+          "turn": 4,
+          "parts": 3,
+          "coins": 2,
+          "fittings": 0
+        },
+        {
+          "sequence": 8,
+          "command": "demonstrate",
+          "bench": "west",
+          "turn": 5,
+          "parts": 2,
+          "coins": 2,
+          "fittings": 0
+        }
+      ]
+    },
+    "decline": {
+      "sequence": 9,
+      "command": "decline",
+      "accepted": true,
+      "text": "Current local support withdrawn without a turn. Past observed help and any actual fitting remain true; a fresh paid demonstration is required to reopen an unfinished opportunity.",
+      "turn": 5,
+      "parts": 2,
+      "coins": 2,
+      "policy": "independent",
+      "complete": false,
+      "benches": [
+        {
+          "id": "west",
+          "helped": true,
+          "support": false,
+          "recent": false,
+          "expires": null,
+          "eligible": false,
+          "delivered": false,
+          "condition_expression": "Helped=true & Support=true & Recent=true",
+          "condition_satisfied": false,
+          "condition_complete": true
+        },
+        {
+          "id": "east",
+          "helped": false,
+          "support": false,
+          "recent": false,
+          "expires": null,
+          "eligible": false,
+          "delivered": false,
+          "condition_expression": "Helped=true & Support=true & Recent=true",
+          "condition_satisfied": false,
+          "condition_complete": true
+        }
+      ],
+      "history": [
+        {
+          "sequence": 2,
+          "command": "help",
+          "bench": "west",
+          "turn": 1,
+          "parts": 3,
+          "coins": 2,
+          "fittings": 0
+        },
+        {
+          "sequence": 4,
+          "command": "wait",
+          "bench": null,
+          "turn": 2,
+          "parts": 3,
+          "coins": 2,
+          "fittings": 0
+        },
+        {
+          "sequence": 5,
+          "command": "wait",
+          "bench": null,
+          "turn": 3,
+          "parts": 3,
+          "coins": 2,
+          "fittings": 0
+        },
+        {
+          "sequence": 6,
+          "command": "wait",
+          "bench": null,
+          "turn": 4,
+          "parts": 3,
+          "coins": 2,
+          "fittings": 0
+        },
+        {
+          "sequence": 8,
+          "command": "demonstrate",
+          "bench": "west",
+          "turn": 5,
+          "parts": 2,
+          "coins": 2,
+          "fittings": 0
+        },
+        {
+          "sequence": 9,
+          "command": "decline",
+          "bench": "west",
+          "turn": 5,
+          "parts": 2,
+          "coins": 2,
+          "fittings": 0
+        }
+      ]
+    },
+    "first": {
+      "sequence": 11,
+      "command": "serve",
+      "accepted": true,
+      "text": "One coin and one action spent. The west bench actually supplied its one fitting. Later expiry cannot erase this output.",
+      "turn": 7,
+      "parts": 1,
+      "coins": 1,
+      "policy": "independent",
+      "complete": false,
+      "benches": [
+        {
+          "id": "west",
+          "helped": true,
+          "support": true,
+          "recent": true,
+          "expires": 9,
+          "eligible": false,
+          "delivered": true,
+          "condition_expression": "Helped=true & Support=true & Recent=true",
+          "condition_satisfied": true,
+          "condition_complete": true
+        },
+        {
+          "id": "east",
+          "helped": false,
+          "support": false,
+          "recent": false,
+          "expires": null,
+          "eligible": false,
+          "delivered": false,
+          "condition_expression": "Helped=true & Support=true & Recent=true",
+          "condition_satisfied": false,
+          "condition_complete": true
+        }
+      ],
+      "history": [
+        {
+          "sequence": 2,
+          "command": "help",
+          "bench": "west",
+          "turn": 1,
+          "parts": 3,
+          "coins": 2,
+          "fittings": 0
+        },
+        {
+          "sequence": 4,
+          "command": "wait",
+          "bench": null,
+          "turn": 2,
+          "parts": 3,
+          "coins": 2,
+          "fittings": 0
+        },
+        {
+          "sequence": 5,
+          "command": "wait",
+          "bench": null,
+          "turn": 3,
+          "parts": 3,
+          "coins": 2,
+          "fittings": 0
+        },
+        {
+          "sequence": 6,
+          "command": "wait",
+          "bench": null,
+          "turn": 4,
+          "parts": 3,
+          "coins": 2,
+          "fittings": 0
+        },
+        {
+          "sequence": 8,
+          "command": "demonstrate",
+          "bench": "west",
+          "turn": 5,
+          "parts": 2,
+          "coins": 2,
+          "fittings": 0
+        },
+        {
+          "sequence": 9,
+          "command": "decline",
+          "bench": "west",
+          "turn": 5,
+          "parts": 2,
+          "coins": 2,
+          "fittings": 0
+        },
+        {
+          "sequence": 10,
+          "command": "demonstrate",
+          "bench": "west",
+          "turn": 6,
+          "parts": 1,
+          "coins": 2,
+          "fittings": 0
+        },
+        {
+          "sequence": 11,
+          "command": "serve",
+          "bench": "west",
+          "turn": 7,
+          "parts": 1,
+          "coins": 1,
+          "fittings": 1
+        }
+      ]
+    },
+    "afterExpiry": {
+      "sequence": 14,
+      "command": "wait",
+      "accepted": true,
+      "text": "One deliberately chosen wait action elapsed. No work, fitting, recognition or return was created.",
+      "turn": 10,
+      "parts": 1,
+      "coins": 1,
+      "policy": "independent",
+      "complete": false,
+      "benches": [
+        {
+          "id": "west",
+          "helped": true,
+          "support": true,
+          "recent": false,
+          "expires": null,
+          "eligible": false,
+          "delivered": true,
+          "condition_expression": "Helped=true & Support=true & Recent=true",
+          "condition_satisfied": false,
+          "condition_complete": true
+        },
+        {
+          "id": "east",
+          "helped": false,
+          "support": false,
+          "recent": false,
+          "expires": null,
+          "eligible": false,
+          "delivered": false,
+          "condition_expression": "Helped=true & Support=true & Recent=true",
+          "condition_satisfied": false,
+          "condition_complete": true
+        }
+      ],
+      "history": [
+        {
+          "sequence": 2,
+          "command": "help",
+          "bench": "west",
+          "turn": 1,
+          "parts": 3,
+          "coins": 2,
+          "fittings": 0
+        },
+        {
+          "sequence": 4,
+          "command": "wait",
+          "bench": null,
+          "turn": 2,
+          "parts": 3,
+          "coins": 2,
+          "fittings": 0
+        },
+        {
+          "sequence": 5,
+          "command": "wait",
+          "bench": null,
+          "turn": 3,
+          "parts": 3,
+          "coins": 2,
+          "fittings": 0
+        },
+        {
+          "sequence": 6,
+          "command": "wait",
+          "bench": null,
+          "turn": 4,
+          "parts": 3,
+          "coins": 2,
+          "fittings": 0
+        },
+        {
+          "sequence": 8,
+          "command": "demonstrate",
+          "bench": "west",
+          "turn": 5,
+          "parts": 2,
+          "coins": 2,
+          "fittings": 0
+        },
+        {
+          "sequence": 9,
+          "command": "decline",
+          "bench": "west",
+          "turn": 5,
+          "parts": 2,
+          "coins": 2,
+          "fittings": 0
+        },
+        {
+          "sequence": 10,
+          "command": "demonstrate",
+          "bench": "west",
+          "turn": 6,
+          "parts": 1,
+          "coins": 2,
+          "fittings": 0
+        },
+        {
+          "sequence": 11,
+          "command": "serve",
+          "bench": "west",
+          "turn": 7,
+          "parts": 1,
+          "coins": 1,
+          "fittings": 1
+        },
+        {
+          "sequence": 12,
+          "command": "wait",
+          "bench": null,
+          "turn": 8,
+          "parts": 1,
+          "coins": 1,
+          "fittings": 1
+        },
+        {
+          "sequence": 13,
+          "command": "wait",
+          "bench": null,
+          "turn": 9,
+          "parts": 1,
+          "coins": 1,
+          "fittings": 1
+        },
+        {
+          "sequence": 14,
+          "command": "wait",
+          "bench": null,
+          "turn": 10,
+          "parts": 1,
+          "coins": 1,
+          "fittings": 1
+        }
+      ]
+    },
+    "complete": {
+      "sequence": 16,
+      "command": "serve",
+      "accepted": true,
+      "text": "One coin and one action spent. The east bench actually supplied its one fitting. Later expiry cannot erase this output.",
+      "turn": 12,
+      "parts": 0,
+      "coins": 0,
+      "policy": "independent",
+      "complete": true,
+      "benches": [
+        {
+          "id": "west",
+          "helped": true,
+          "support": true,
+          "recent": false,
+          "expires": null,
+          "eligible": false,
+          "delivered": true,
+          "condition_expression": "Helped=true & Support=true & Recent=true",
+          "condition_satisfied": false,
+          "condition_complete": true
+        },
+        {
+          "id": "east",
+          "helped": true,
+          "support": true,
+          "recent": true,
+          "expires": 14,
+          "eligible": false,
+          "delivered": true,
+          "condition_expression": "Helped=true & Support=true & Recent=true",
+          "condition_satisfied": true,
+          "condition_complete": true
+        }
+      ],
+      "history": [
+        {
+          "sequence": 2,
+          "command": "help",
+          "bench": "west",
+          "turn": 1,
+          "parts": 3,
+          "coins": 2,
+          "fittings": 0
+        },
+        {
+          "sequence": 4,
+          "command": "wait",
+          "bench": null,
+          "turn": 2,
+          "parts": 3,
+          "coins": 2,
+          "fittings": 0
+        },
+        {
+          "sequence": 5,
+          "command": "wait",
+          "bench": null,
+          "turn": 3,
+          "parts": 3,
+          "coins": 2,
+          "fittings": 0
+        },
+        {
+          "sequence": 6,
+          "command": "wait",
+          "bench": null,
+          "turn": 4,
+          "parts": 3,
+          "coins": 2,
+          "fittings": 0
+        },
+        {
+          "sequence": 8,
+          "command": "demonstrate",
+          "bench": "west",
+          "turn": 5,
+          "parts": 2,
+          "coins": 2,
+          "fittings": 0
+        },
+        {
+          "sequence": 9,
+          "command": "decline",
+          "bench": "west",
+          "turn": 5,
+          "parts": 2,
+          "coins": 2,
+          "fittings": 0
+        },
+        {
+          "sequence": 10,
+          "command": "demonstrate",
+          "bench": "west",
+          "turn": 6,
+          "parts": 1,
+          "coins": 2,
+          "fittings": 0
+        },
+        {
+          "sequence": 11,
+          "command": "serve",
+          "bench": "west",
+          "turn": 7,
+          "parts": 1,
+          "coins": 1,
+          "fittings": 1
+        },
+        {
+          "sequence": 12,
+          "command": "wait",
+          "bench": null,
+          "turn": 8,
+          "parts": 1,
+          "coins": 1,
+          "fittings": 1
+        },
+        {
+          "sequence": 13,
+          "command": "wait",
+          "bench": null,
+          "turn": 9,
+          "parts": 1,
+          "coins": 1,
+          "fittings": 1
+        },
+        {
+          "sequence": 14,
+          "command": "wait",
+          "bench": null,
+          "turn": 10,
+          "parts": 1,
+          "coins": 1,
+          "fittings": 1
+        },
+        {
+          "sequence": 15,
+          "command": "help",
+          "bench": "east",
+          "turn": 11,
+          "parts": 0,
+          "coins": 1,
+          "fittings": 1
+        },
+        {
+          "sequence": 16,
+          "command": "serve",
+          "bench": "east",
+          "turn": 12,
+          "parts": 0,
+          "coins": 0,
+          "fittings": 2
+        }
+      ]
+    },
+    "losing": {
+      "sequence": 7,
+      "command": "wait",
+      "accepted": true,
+      "text": "One deliberately chosen wait action elapsed. No work, fitting, recognition or return was created.",
+      "turn": 7,
+      "parts": 0,
+      "coins": 2,
+      "policy": "independent",
+      "complete": false,
+      "benches": [
+        {
+          "id": "west",
+          "helped": true,
+          "support": true,
+          "recent": false,
+          "expires": null,
+          "eligible": false,
+          "delivered": false,
+          "condition_expression": "Helped=true & Support=true & Recent=true",
+          "condition_satisfied": false,
+          "condition_complete": true
+        },
+        {
+          "id": "east",
+          "helped": false,
+          "support": false,
+          "recent": false,
+          "expires": null,
+          "eligible": false,
+          "delivered": false,
+          "condition_expression": "Helped=true & Support=true & Recent=true",
+          "condition_satisfied": false,
+          "condition_complete": true
+        }
+      ],
+      "history": [
+        {
+          "sequence": 1,
+          "command": "help",
+          "bench": "west",
+          "turn": 1,
+          "parts": 3,
+          "coins": 2,
+          "fittings": 0
+        },
+        {
+          "sequence": 2,
+          "command": "demonstrate",
+          "bench": "west",
+          "turn": 2,
+          "parts": 2,
+          "coins": 2,
+          "fittings": 0
+        },
+        {
+          "sequence": 3,
+          "command": "demonstrate",
+          "bench": "west",
+          "turn": 3,
+          "parts": 1,
+          "coins": 2,
+          "fittings": 0
+        },
+        {
+          "sequence": 4,
+          "command": "demonstrate",
+          "bench": "west",
+          "turn": 4,
+          "parts": 0,
+          "coins": 2,
+          "fittings": 0
+        },
+        {
+          "sequence": 5,
+          "command": "wait",
+          "bench": null,
+          "turn": 5,
+          "parts": 0,
+          "coins": 2,
+          "fittings": 0
+        },
+        {
+          "sequence": 6,
+          "command": "wait",
+          "bench": null,
+          "turn": 6,
+          "parts": 0,
+          "coins": 2,
+          "fittings": 0
+        },
+        {
+          "sequence": 7,
+          "command": "wait",
+          "bench": null,
+          "turn": 7,
+          "parts": 0,
+          "coins": 2,
+          "fittings": 0
+        }
+      ]
+    }
+  },
+  "negatives": [
+    {
+      "id": "Unobserved service cannot spend coin or fabricate fitting",
+      "before": {
+        "sequence": 0,
+        "command": "initial",
+        "accepted": true,
+        "text": "Two independent benches, four parts and two coins. No help has been observed and no fitting exists.",
+        "turn": 0,
+        "parts": 4,
+        "coins": 2,
+        "policy": "independent",
+        "complete": false,
+        "benches": [
+          {
+            "id": "west",
+            "helped": false,
+            "support": false,
+            "recent": false,
+            "expires": null,
+            "eligible": false,
+            "delivered": false,
+            "condition_expression": "Helped=true & Support=true & Recent=true",
+            "condition_satisfied": false,
+            "condition_complete": true
+          },
+          {
+            "id": "east",
+            "helped": false,
+            "support": false,
+            "recent": false,
+            "expires": null,
+            "eligible": false,
+            "delivered": false,
+            "condition_expression": "Helped=true & Support=true & Recent=true",
+            "condition_satisfied": false,
+            "condition_complete": true
+          }
+        ],
+        "history": []
+      },
+      "after": {
+        "sequence": 1,
+        "command": "serve",
+        "accepted": false,
+        "text": "No current service: this exact bench requires observed help, current support, its recent demonstration, one actual coin and the displayed authored condition. No cost paid.",
+        "turn": 0,
+        "parts": 4,
+        "coins": 2,
+        "policy": "independent",
+        "complete": false,
+        "benches": [
+          {
+            "id": "west",
+            "helped": false,
+            "support": false,
+            "recent": false,
+            "expires": null,
+            "eligible": false,
+            "delivered": false,
+            "condition_expression": "Helped=true & Support=true & Recent=true",
+            "condition_satisfied": false,
+            "condition_complete": true
+          },
+          {
+            "id": "east",
+            "helped": false,
+            "support": false,
+            "recent": false,
+            "expires": null,
+            "eligible": false,
+            "delivered": false,
+            "condition_expression": "Helped=true & Support=true & Recent=true",
+            "condition_satisfied": false,
+            "condition_complete": true
+          }
+        ],
+        "history": []
+      }
+    },
+    {
+      "id": "West witness cannot authorize east service",
+      "before": {
+        "sequence": 2,
+        "command": "help",
+        "accepted": true,
+        "text": "One part and one action spent on actual local help. This bench observed the demonstration; its current window expires at turn 4.",
+        "turn": 1,
+        "parts": 3,
+        "coins": 2,
+        "policy": "independent",
+        "complete": false,
+        "benches": [
+          {
+            "id": "west",
+            "helped": true,
+            "support": true,
+            "recent": true,
+            "expires": 4,
+            "eligible": true,
+            "delivered": false,
+            "condition_expression": "Helped=true & Support=true & Recent=true",
+            "condition_satisfied": true,
+            "condition_complete": true
+          },
+          {
+            "id": "east",
+            "helped": false,
+            "support": false,
+            "recent": false,
+            "expires": null,
+            "eligible": false,
+            "delivered": false,
+            "condition_expression": "Helped=true & Support=true & Recent=true",
+            "condition_satisfied": false,
+            "condition_complete": true
+          }
+        ],
+        "history": [
+          {
+            "sequence": 2,
+            "command": "help",
+            "bench": "west",
+            "turn": 1,
+            "parts": 3,
+            "coins": 2,
+            "fittings": 0
+          }
+        ]
+      },
+      "after": {
+        "sequence": 3,
+        "command": "serve",
+        "accepted": false,
+        "text": "No current service: this exact bench requires observed help, current support, its recent demonstration, one actual coin and the displayed authored condition. No cost paid.",
+        "turn": 1,
+        "parts": 3,
+        "coins": 2,
+        "policy": "independent",
+        "complete": false,
+        "benches": [
+          {
+            "id": "west",
+            "helped": true,
+            "support": true,
+            "recent": true,
+            "expires": 4,
+            "eligible": true,
+            "delivered": false,
+            "condition_expression": "Helped=true & Support=true & Recent=true",
+            "condition_satisfied": true,
+            "condition_complete": true
+          },
+          {
+            "id": "east",
+            "helped": false,
+            "support": false,
+            "recent": false,
+            "expires": null,
+            "eligible": false,
+            "delivered": false,
+            "condition_expression": "Helped=true & Support=true & Recent=true",
+            "condition_satisfied": false,
+            "condition_complete": true
+          }
+        ],
+        "history": [
+          {
+            "sequence": 2,
+            "command": "help",
+            "bench": "west",
+            "turn": 1,
+            "parts": 3,
+            "coins": 2,
+            "fittings": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": "Expired service refuses without charge or output",
+      "before": {
+        "sequence": 6,
+        "command": "wait",
+        "accepted": true,
+        "text": "One deliberately chosen wait action elapsed. No work, fitting, recognition or return was created.",
+        "turn": 4,
+        "parts": 3,
+        "coins": 2,
+        "policy": "independent",
+        "complete": false,
+        "benches": [
+          {
+            "id": "west",
+            "helped": true,
+            "support": true,
+            "recent": false,
+            "expires": null,
+            "eligible": false,
+            "delivered": false,
+            "condition_expression": "Helped=true & Support=true & Recent=true",
+            "condition_satisfied": false,
+            "condition_complete": true
+          },
+          {
+            "id": "east",
+            "helped": false,
+            "support": false,
+            "recent": false,
+            "expires": null,
+            "eligible": false,
+            "delivered": false,
+            "condition_expression": "Helped=true & Support=true & Recent=true",
+            "condition_satisfied": false,
+            "condition_complete": true
+          }
+        ],
+        "history": [
+          {
+            "sequence": 2,
+            "command": "help",
+            "bench": "west",
+            "turn": 1,
+            "parts": 3,
+            "coins": 2,
+            "fittings": 0
+          },
+          {
+            "sequence": 4,
+            "command": "wait",
+            "bench": null,
+            "turn": 2,
+            "parts": 3,
+            "coins": 2,
+            "fittings": 0
+          },
+          {
+            "sequence": 5,
+            "command": "wait",
+            "bench": null,
+            "turn": 3,
+            "parts": 3,
+            "coins": 2,
+            "fittings": 0
+          },
+          {
+            "sequence": 6,
+            "command": "wait",
+            "bench": null,
+            "turn": 4,
+            "parts": 3,
+            "coins": 2,
+            "fittings": 0
+          }
+        ]
+      },
+      "after": {
+        "sequence": 7,
+        "command": "serve",
+        "accepted": false,
+        "text": "No current service: this exact bench requires observed help, current support, its recent demonstration, one actual coin and the displayed authored condition. No cost paid.",
+        "turn": 4,
+        "parts": 3,
+        "coins": 2,
+        "policy": "independent",
+        "complete": false,
+        "benches": [
+          {
+            "id": "west",
+            "helped": true,
+            "support": true,
+            "recent": false,
+            "expires": null,
+            "eligible": false,
+            "delivered": false,
+            "condition_expression": "Helped=true & Support=true & Recent=true",
+            "condition_satisfied": false,
+            "condition_complete": true
+          },
+          {
+            "id": "east",
+            "helped": false,
+            "support": false,
+            "recent": false,
+            "expires": null,
+            "eligible": false,
+            "delivered": false,
+            "condition_expression": "Helped=true & Support=true & Recent=true",
+            "condition_satisfied": false,
+            "condition_complete": true
+          }
+        ],
+        "history": [
+          {
+            "sequence": 2,
+            "command": "help",
+            "bench": "west",
+            "turn": 1,
+            "parts": 3,
+            "coins": 2,
+            "fittings": 0
+          },
+          {
+            "sequence": 4,
+            "command": "wait",
+            "bench": null,
+            "turn": 2,
+            "parts": 3,
+            "coins": 2,
+            "fittings": 0
+          },
+          {
+            "sequence": 5,
+            "command": "wait",
+            "bench": null,
+            "turn": 3,
+            "parts": 3,
+            "coins": 2,
+            "fittings": 0
+          },
+          {
+            "sequence": 6,
+            "command": "wait",
+            "bench": null,
+            "turn": 4,
+            "parts": 3,
+            "coins": 2,
+            "fittings": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": "Completed fitting cannot be minted twice",
+      "before": {
+        "sequence": 16,
+        "command": "serve",
+        "accepted": true,
+        "text": "One coin and one action spent. The east bench actually supplied its one fitting. Later expiry cannot erase this output.",
+        "turn": 12,
+        "parts": 0,
+        "coins": 0,
+        "policy": "independent",
+        "complete": true,
+        "benches": [
+          {
+            "id": "west",
+            "helped": true,
+            "support": true,
+            "recent": false,
+            "expires": null,
+            "eligible": false,
+            "delivered": true,
+            "condition_expression": "Helped=true & Support=true & Recent=true",
+            "condition_satisfied": false,
+            "condition_complete": true
+          },
+          {
+            "id": "east",
+            "helped": true,
+            "support": true,
+            "recent": true,
+            "expires": 14,
+            "eligible": false,
+            "delivered": true,
+            "condition_expression": "Helped=true & Support=true & Recent=true",
+            "condition_satisfied": true,
+            "condition_complete": true
+          }
+        ],
+        "history": [
+          {
+            "sequence": 2,
+            "command": "help",
+            "bench": "west",
+            "turn": 1,
+            "parts": 3,
+            "coins": 2,
+            "fittings": 0
+          },
+          {
+            "sequence": 4,
+            "command": "wait",
+            "bench": null,
+            "turn": 2,
+            "parts": 3,
+            "coins": 2,
+            "fittings": 0
+          },
+          {
+            "sequence": 5,
+            "command": "wait",
+            "bench": null,
+            "turn": 3,
+            "parts": 3,
+            "coins": 2,
+            "fittings": 0
+          },
+          {
+            "sequence": 6,
+            "command": "wait",
+            "bench": null,
+            "turn": 4,
+            "parts": 3,
+            "coins": 2,
+            "fittings": 0
+          },
+          {
+            "sequence": 8,
+            "command": "demonstrate",
+            "bench": "west",
+            "turn": 5,
+            "parts": 2,
+            "coins": 2,
+            "fittings": 0
+          },
+          {
+            "sequence": 9,
+            "command": "decline",
+            "bench": "west",
+            "turn": 5,
+            "parts": 2,
+            "coins": 2,
+            "fittings": 0
+          },
+          {
+            "sequence": 10,
+            "command": "demonstrate",
+            "bench": "west",
+            "turn": 6,
+            "parts": 1,
+            "coins": 2,
+            "fittings": 0
+          },
+          {
+            "sequence": 11,
+            "command": "serve",
+            "bench": "west",
+            "turn": 7,
+            "parts": 1,
+            "coins": 1,
+            "fittings": 1
+          },
+          {
+            "sequence": 12,
+            "command": "wait",
+            "bench": null,
+            "turn": 8,
+            "parts": 1,
+            "coins": 1,
+            "fittings": 1
+          },
+          {
+            "sequence": 13,
+            "command": "wait",
+            "bench": null,
+            "turn": 9,
+            "parts": 1,
+            "coins": 1,
+            "fittings": 1
+          },
+          {
+            "sequence": 14,
+            "command": "wait",
+            "bench": null,
+            "turn": 10,
+            "parts": 1,
+            "coins": 1,
+            "fittings": 1
+          },
+          {
+            "sequence": 15,
+            "command": "help",
+            "bench": "east",
+            "turn": 11,
+            "parts": 0,
+            "coins": 1,
+            "fittings": 1
+          },
+          {
+            "sequence": 16,
+            "command": "serve",
+            "bench": "east",
+            "turn": 12,
+            "parts": 0,
+            "coins": 0,
+            "fittings": 2
+          }
+        ]
+      },
+      "after": {
+        "sequence": 17,
+        "command": "serve",
+        "accepted": false,
+        "text": "That fitting already exists. A repeat cannot mint another.",
+        "turn": 12,
+        "parts": 0,
+        "coins": 0,
+        "policy": "independent",
+        "complete": true,
+        "benches": [
+          {
+            "id": "west",
+            "helped": true,
+            "support": true,
+            "recent": false,
+            "expires": null,
+            "eligible": false,
+            "delivered": true,
+            "condition_expression": "Helped=true & Support=true & Recent=true",
+            "condition_satisfied": false,
+            "condition_complete": true
+          },
+          {
+            "id": "east",
+            "helped": true,
+            "support": true,
+            "recent": true,
+            "expires": 14,
+            "eligible": false,
+            "delivered": true,
+            "condition_expression": "Helped=true & Support=true & Recent=true",
+            "condition_satisfied": true,
+            "condition_complete": true
+          }
+        ],
+        "history": [
+          {
+            "sequence": 2,
+            "command": "help",
+            "bench": "west",
+            "turn": 1,
+            "parts": 3,
+            "coins": 2,
+            "fittings": 0
+          },
+          {
+            "sequence": 4,
+            "command": "wait",
+            "bench": null,
+            "turn": 2,
+            "parts": 3,
+            "coins": 2,
+            "fittings": 0
+          },
+          {
+            "sequence": 5,
+            "command": "wait",
+            "bench": null,
+            "turn": 3,
+            "parts": 3,
+            "coins": 2,
+            "fittings": 0
+          },
+          {
+            "sequence": 6,
+            "command": "wait",
+            "bench": null,
+            "turn": 4,
+            "parts": 3,
+            "coins": 2,
+            "fittings": 0
+          },
+          {
+            "sequence": 8,
+            "command": "demonstrate",
+            "bench": "west",
+            "turn": 5,
+            "parts": 2,
+            "coins": 2,
+            "fittings": 0
+          },
+          {
+            "sequence": 9,
+            "command": "decline",
+            "bench": "west",
+            "turn": 5,
+            "parts": 2,
+            "coins": 2,
+            "fittings": 0
+          },
+          {
+            "sequence": 10,
+            "command": "demonstrate",
+            "bench": "west",
+            "turn": 6,
+            "parts": 1,
+            "coins": 2,
+            "fittings": 0
+          },
+          {
+            "sequence": 11,
+            "command": "serve",
+            "bench": "west",
+            "turn": 7,
+            "parts": 1,
+            "coins": 1,
+            "fittings": 1
+          },
+          {
+            "sequence": 12,
+            "command": "wait",
+            "bench": null,
+            "turn": 8,
+            "parts": 1,
+            "coins": 1,
+            "fittings": 1
+          },
+          {
+            "sequence": 13,
+            "command": "wait",
+            "bench": null,
+            "turn": 9,
+            "parts": 1,
+            "coins": 1,
+            "fittings": 1
+          },
+          {
+            "sequence": 14,
+            "command": "wait",
+            "bench": null,
+            "turn": 10,
+            "parts": 1,
+            "coins": 1,
+            "fittings": 1
+          },
+          {
+            "sequence": 15,
+            "command": "help",
+            "bench": "east",
+            "turn": 11,
+            "parts": 0,
+            "coins": 1,
+            "fittings": 1
+          },
+          {
+            "sequence": 16,
+            "command": "serve",
+            "bench": "east",
+            "turn": 12,
+            "parts": 0,
+            "coins": 0,
+            "fittings": 2
+          }
+        ]
+      }
+    },
+    {
+      "id": "Spent parts cannot be refunded into other bench work",
+      "before": {
+        "sequence": 7,
+        "command": "wait",
+        "accepted": true,
+        "text": "One deliberately chosen wait action elapsed. No work, fitting, recognition or return was created.",
+        "turn": 7,
+        "parts": 0,
+        "coins": 2,
+        "policy": "independent",
+        "complete": false,
+        "benches": [
+          {
+            "id": "west",
+            "helped": true,
+            "support": true,
+            "recent": false,
+            "expires": null,
+            "eligible": false,
+            "delivered": false,
+            "condition_expression": "Helped=true & Support=true & Recent=true",
+            "condition_satisfied": false,
+            "condition_complete": true
+          },
+          {
+            "id": "east",
+            "helped": false,
+            "support": false,
+            "recent": false,
+            "expires": null,
+            "eligible": false,
+            "delivered": false,
+            "condition_expression": "Helped=true & Support=true & Recent=true",
+            "condition_satisfied": false,
+            "condition_complete": true
+          }
+        ],
+        "history": [
+          {
+            "sequence": 1,
+            "command": "help",
+            "bench": "west",
+            "turn": 1,
+            "parts": 3,
+            "coins": 2,
+            "fittings": 0
+          },
+          {
+            "sequence": 2,
+            "command": "demonstrate",
+            "bench": "west",
+            "turn": 2,
+            "parts": 2,
+            "coins": 2,
+            "fittings": 0
+          },
+          {
+            "sequence": 3,
+            "command": "demonstrate",
+            "bench": "west",
+            "turn": 3,
+            "parts": 1,
+            "coins": 2,
+            "fittings": 0
+          },
+          {
+            "sequence": 4,
+            "command": "demonstrate",
+            "bench": "west",
+            "turn": 4,
+            "parts": 0,
+            "coins": 2,
+            "fittings": 0
+          },
+          {
+            "sequence": 5,
+            "command": "wait",
+            "bench": null,
+            "turn": 5,
+            "parts": 0,
+            "coins": 2,
+            "fittings": 0
+          },
+          {
+            "sequence": 6,
+            "command": "wait",
+            "bench": null,
+            "turn": 6,
+            "parts": 0,
+            "coins": 2,
+            "fittings": 0
+          },
+          {
+            "sequence": 7,
+            "command": "wait",
+            "bench": null,
+            "turn": 7,
+            "parts": 0,
+            "coins": 2,
+            "fittings": 0
+          }
+        ]
+      },
+      "after": {
+        "sequence": 8,
+        "command": "help",
+        "accepted": false,
+        "text": "No spare part remains; a promise cannot supply a demonstration.",
+        "turn": 7,
+        "parts": 0,
+        "coins": 2,
+        "policy": "independent",
+        "complete": false,
+        "benches": [
+          {
+            "id": "west",
+            "helped": true,
+            "support": true,
+            "recent": false,
+            "expires": null,
+            "eligible": false,
+            "delivered": false,
+            "condition_expression": "Helped=true & Support=true & Recent=true",
+            "condition_satisfied": false,
+            "condition_complete": true
+          },
+          {
+            "id": "east",
+            "helped": false,
+            "support": false,
+            "recent": false,
+            "expires": null,
+            "eligible": false,
+            "delivered": false,
+            "condition_expression": "Helped=true & Support=true & Recent=true",
+            "condition_satisfied": false,
+            "condition_complete": true
+          }
+        ],
+        "history": [
+          {
+            "sequence": 1,
+            "command": "help",
+            "bench": "west",
+            "turn": 1,
+            "parts": 3,
+            "coins": 2,
+            "fittings": 0
+          },
+          {
+            "sequence": 2,
+            "command": "demonstrate",
+            "bench": "west",
+            "turn": 2,
+            "parts": 2,
+            "coins": 2,
+            "fittings": 0
+          },
+          {
+            "sequence": 3,
+            "command": "demonstrate",
+            "bench": "west",
+            "turn": 3,
+            "parts": 1,
+            "coins": 2,
+            "fittings": 0
+          },
+          {
+            "sequence": 4,
+            "command": "demonstrate",
+            "bench": "west",
+            "turn": 4,
+            "parts": 0,
+            "coins": 2,
+            "fittings": 0
+          },
+          {
+            "sequence": 5,
+            "command": "wait",
+            "bench": null,
+            "turn": 5,
+            "parts": 0,
+            "coins": 2,
+            "fittings": 0
+          },
+          {
+            "sequence": 6,
+            "command": "wait",
+            "bench": null,
+            "turn": 6,
+            "parts": 0,
+            "coins": 2,
+            "fittings": 0
+          },
+          {
+            "sequence": 7,
+            "command": "wait",
+            "bench": null,
+            "turn": 7,
+            "parts": 0,
+            "coins": 2,
+            "fittings": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": "A promise cannot replace an exhausted demonstration part",
+      "before": {
+        "sequence": 8,
+        "command": "help",
+        "accepted": false,
+        "text": "No spare part remains; a promise cannot supply a demonstration.",
+        "turn": 7,
+        "parts": 0,
+        "coins": 2,
+        "policy": "independent",
+        "complete": false,
+        "benches": [
+          {
+            "id": "west",
+            "helped": true,
+            "support": true,
+            "recent": false,
+            "expires": null,
+            "eligible": false,
+            "delivered": false,
+            "condition_expression": "Helped=true & Support=true & Recent=true",
+            "condition_satisfied": false,
+            "condition_complete": true
+          },
+          {
+            "id": "east",
+            "helped": false,
+            "support": false,
+            "recent": false,
+            "expires": null,
+            "eligible": false,
+            "delivered": false,
+            "condition_expression": "Helped=true & Support=true & Recent=true",
+            "condition_satisfied": false,
+            "condition_complete": true
+          }
+        ],
+        "history": [
+          {
+            "sequence": 1,
+            "command": "help",
+            "bench": "west",
+            "turn": 1,
+            "parts": 3,
+            "coins": 2,
+            "fittings": 0
+          },
+          {
+            "sequence": 2,
+            "command": "demonstrate",
+            "bench": "west",
+            "turn": 2,
+            "parts": 2,
+            "coins": 2,
+            "fittings": 0
+          },
+          {
+            "sequence": 3,
+            "command": "demonstrate",
+            "bench": "west",
+            "turn": 3,
+            "parts": 1,
+            "coins": 2,
+            "fittings": 0
+          },
+          {
+            "sequence": 4,
+            "command": "demonstrate",
+            "bench": "west",
+            "turn": 4,
+            "parts": 0,
+            "coins": 2,
+            "fittings": 0
+          },
+          {
+            "sequence": 5,
+            "command": "wait",
+            "bench": null,
+            "turn": 5,
+            "parts": 0,
+            "coins": 2,
+            "fittings": 0
+          },
+          {
+            "sequence": 6,
+            "command": "wait",
+            "bench": null,
+            "turn": 6,
+            "parts": 0,
+            "coins": 2,
+            "fittings": 0
+          },
+          {
+            "sequence": 7,
+            "command": "wait",
+            "bench": null,
+            "turn": 7,
+            "parts": 0,
+            "coins": 2,
+            "fittings": 0
+          }
+        ]
+      },
+      "after": {
+        "sequence": 9,
+        "command": "demonstrate",
+        "accepted": false,
+        "text": "No spare part remains; a promise cannot supply a demonstration.",
+        "turn": 7,
+        "parts": 0,
+        "coins": 2,
+        "policy": "independent",
+        "complete": false,
+        "benches": [
+          {
+            "id": "west",
+            "helped": true,
+            "support": true,
+            "recent": false,
+            "expires": null,
+            "eligible": false,
+            "delivered": false,
+            "condition_expression": "Helped=true & Support=true & Recent=true",
+            "condition_satisfied": false,
+            "condition_complete": true
+          },
+          {
+            "id": "east",
+            "helped": false,
+            "support": false,
+            "recent": false,
+            "expires": null,
+            "eligible": false,
+            "delivered": false,
+            "condition_expression": "Helped=true & Support=true & Recent=true",
+            "condition_satisfied": false,
+            "condition_complete": true
+          }
+        ],
+        "history": [
+          {
+            "sequence": 1,
+            "command": "help",
+            "bench": "west",
+            "turn": 1,
+            "parts": 3,
+            "coins": 2,
+            "fittings": 0
+          },
+          {
+            "sequence": 2,
+            "command": "demonstrate",
+            "bench": "west",
+            "turn": 2,
+            "parts": 2,
+            "coins": 2,
+            "fittings": 0
+          },
+          {
+            "sequence": 3,
+            "command": "demonstrate",
+            "bench": "west",
+            "turn": 3,
+            "parts": 1,
+            "coins": 2,
+            "fittings": 0
+          },
+          {
+            "sequence": 4,
+            "command": "demonstrate",
+            "bench": "west",
+            "turn": 4,
+            "parts": 0,
+            "coins": 2,
+            "fittings": 0
+          },
+          {
+            "sequence": 5,
+            "command": "wait",
+            "bench": null,
+            "turn": 5,
+            "parts": 0,
+            "coins": 2,
+            "fittings": 0
+          },
+          {
+            "sequence": 6,
+            "command": "wait",
+            "bench": null,
+            "turn": 6,
+            "parts": 0,
+            "coins": 2,
+            "fittings": 0
+          },
+          {
+            "sequence": 7,
+            "command": "wait",
+            "bench": null,
+            "turn": 7,
+            "parts": 0,
+            "coins": 2,
+            "fittings": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": "false-witness",
+      "detected": true,
+      "mutation": {
+        "target": "const recentObserved = Boolean(b.recent);",
+        "replacement": "const recentObserved = true;",
+        "original_sha256": "1350f729a77120b7e0af6764193d136ede9b3600005ee82d2b0acb630367ce6b",
+        "mutated_sha256": "1a75dc29ca326ca8981de741f45936d8f75599a5cb7fbc3bf905f5ca79fc9ee1"
+      },
+      "actual": {
+        "sequence": 0,
+        "command": "initial",
+        "accepted": true,
+        "text": "Two independent benches, four parts and two coins. No help has been observed and no fitting exists.",
+        "turn": 0,
+        "parts": 4,
+        "coins": 2,
+        "policy": "independent",
+        "complete": false,
+        "benches": [
+          {
+            "id": "west",
+            "helped": false,
+            "support": false,
+            "recent": false,
+            "expires": null,
+            "eligible": false,
+            "delivered": false,
+            "condition_expression": "Helped=true & Support=true & Recent=true",
+            "condition_satisfied": false,
+            "condition_complete": true
+          },
+          {
+            "id": "east",
+            "helped": false,
+            "support": false,
+            "recent": false,
+            "expires": null,
+            "eligible": false,
+            "delivered": false,
+            "condition_expression": "Helped=true & Support=true & Recent=true",
+            "condition_satisfied": false,
+            "condition_complete": true
+          }
+        ],
+        "history": []
+      },
+      "assertion": {
+        "name": "AssertionError",
+        "code": "ERR_ASSERTION",
+        "message": "Named recent picture follows actual owner\n\n'true' !== 'false'\n"
+      }
+    },
+    {
+      "id": "false-fitting",
+      "detected": true,
+      "mutation": {
+        "target": "const deliveredObserved = Boolean(b.delivered);",
+        "replacement": "const deliveredObserved = true;",
+        "original_sha256": "1350f729a77120b7e0af6764193d136ede9b3600005ee82d2b0acb630367ce6b",
+        "mutated_sha256": "b220d9762847c6aeb7d8b095fce241c72ecc274c9299fb822706bbc371fa5bd6"
+      },
+      "actual": {
+        "sequence": 0,
+        "command": "initial",
+        "accepted": true,
+        "text": "Two independent benches, four parts and two coins. No help has been observed and no fitting exists.",
+        "turn": 0,
+        "parts": 4,
+        "coins": 2,
+        "policy": "independent",
+        "complete": false,
+        "benches": [
+          {
+            "id": "west",
+            "helped": false,
+            "support": false,
+            "recent": false,
+            "expires": null,
+            "eligible": false,
+            "delivered": false,
+            "condition_expression": "Helped=true & Support=true & Recent=true",
+            "condition_satisfied": false,
+            "condition_complete": true
+          },
+          {
+            "id": "east",
+            "helped": false,
+            "support": false,
+            "recent": false,
+            "expires": null,
+            "eligible": false,
+            "delivered": false,
+            "condition_expression": "Helped=true & Support=true & Recent=true",
+            "condition_satisfied": false,
+            "condition_complete": true
+          }
+        ],
+        "history": []
+      },
+      "assertion": {
+        "name": "AssertionError",
+        "code": "ERR_ASSERTION",
+        "message": "Named fitting picture follows actual owner\n\n'true' !== 'false'\n"
+      }
+    }
+  ],
+  "source_sha256": {
+    "north-star/csharp/global.json": "e0c0882461e712f6c2c66241bf2f175c60832e3ff077dc26091ff8c661d4193e",
+    "north-star/memory-study/Checks/NorthStar.MemoryChecks.csproj": "9c0ea4da0d10f712ab2249ff883dff348868caa2413bd63c565bec91ccd12370",
+    "north-star/memory-study/Checks/Program.cs": "1268694ca86b383c66ccc8eef6ea63e91689fbb87b47e7a99a80d03f838bfcca",
+    "north-star/memory-study/Conditions/Conditions.cs": "467bccc739d457ce35cf25826cc592195dd443aa569611aeb11e5e742ada2469",
+    "north-star/memory-study/Conditions/NorthStar.Conditions.csproj": "3acec7333496cb2bb2bb2a8c6aaf151f714f6402e133ead2ca8d3f166d77dd22",
+    "north-star/memory-study/ConditionsChecks/NorthStar.ConditionsChecks.csproj": "4df210d5dff78286d31bb7f19a8d0da91734e5a0305ae8740f548a4ab4ab7bc7",
+    "north-star/memory-study/ConditionsChecks/Program.cs": "3c2b2e96e1674dfa4a34f10b4680810778e9fc5e8e996c43dfaa8bd66694ad0a",
+    "north-star/memory-study/Host/NorthStar.MemoryStudy.csproj": "d5dcc14b4facf695f9f91cc63e3d019c14f9f6200f4436457dd8925a7a70649a",
+    "north-star/memory-study/Host/Program.cs": "753f2f5875a62a0da58998d951570c0f1a3c06a6e499ad533bf267923a817981",
+    "north-star/memory-study/Host/Room.cs": "9b7be39cea873e8ff5e17bc958d99613ff6b136396d40499d9c0aecda96d3474",
+    "north-star/memory-study/Rules/Memory.cs": "4307f83a7e7cbed6ed8f08815ce3e216744be660545c4edd6a6985581abec852",
+    "north-star/memory-study/Rules/NorthStar.Memory.csproj": "3acec7333496cb2bb2bb2a8c6aaf151f714f6402e133ead2ca8d3f166d77dd22",
+    "north-star/memory-study/ServiceChecks/NorthStar.ConditionServiceChecks.csproj": "bf9ffc3c68026bb2d51d6e23ff53741b70efafa7e1b0a57e05e0345100ac70ab",
+    "north-star/memory-study/ServiceChecks/Program.cs": "2b7fc7843e74e7e741536f1e85fdfcb31586b6212beb9884137a0c8caa410616",
+    "north-star/memory-study/tools/browser.mjs": "1ea73aaa7dfd1f3f5d2ab3d55918af9d857ec0126ee1ca02d855c481a62bb904",
+    "north-star/memory-study/tools/conditions-browser.mjs": "c9abefe88857c869a5e3b29ce264f707adb08154efac7690e4a2a7464890069d",
+    "north-star/memory-study/tools/conditions-verify.py": "1ac6c625e09a27c34f71021b4504d8401b716840c21abc749c14e54e3a68526e",
+    "north-star/memory-study/tools/verify.py": "237c261f84eb8a374d132dd424d99f16ce4a37608d2de831dd5a0467efadb3b2",
+    "north-star/memory-study/web/app.js": "1350f729a77120b7e0af6764193d136ede9b3600005ee82d2b0acb630367ce6b",
+    "north-star/memory-study/web/index.html": "7bbcbe815222ab1effdd15183d1cfd6ccbbb58b20295abb878ddd007062e3887",
+    "north-star/memory-study/web/style.css": "7ac8e89d8b9f26dd2d9f98026243ae32618aa260d471b0557e589e5fa81f1654",
+    "projects/realtime-integration-lab/package-lock.json": "aa191ef2158e6cc6f770bf4b3ee44dca17175ef1a3cd572b98115246bf46aea7",
+    "projects/realtime-integration-lab/package.json": "42e3cc9633e522dd6d9a5c11023418331129632881a8bf0b95e3717247d57ebe"
+  },
+  "source_stable": true,
+  "runtime": {
+    "node": "v24.19.0",
+    "chromium": "154.0.8037.57",
+    "playwright": "1.64.0"
+  },
+  "limits": "Synthetic software controls, overlapping outcomes, not people, independent studies, full NPC schedules, source fiction, Ruby/RGSS, Unity, Windows, Steam or human testimony."
+}

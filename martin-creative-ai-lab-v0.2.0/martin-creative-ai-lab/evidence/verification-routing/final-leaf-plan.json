@@ -1,0 +1,929 @@
+{
+  "schema_version": 1,
+  "selected": {
+    "progression": false,
+    "crafting": false,
+    "loadout": false,
+    "recovery": false,
+    "narrative": false,
+    "input_timing": false,
+    "intake": false,
+    "field": true,
+    "presentation": false,
+    "audio": false,
+    "authored_scene": false,
+    "tooling": false,
+    "reputation": false,
+    "combat": false,
+    "availability": false,
+    "recipient": false
+  },
+  "suites": [
+    "field"
+  ],
+  "browser": true,
+  "required": true,
+  "full_fallback": false,
+  "changed_paths": [
+    "martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/field-journey/preparations.json"
+  ],
+  "reasons": [
+    {
+      "path": "martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/field-journey/preparations.json",
+      "reason": "Current project/runtime/source-binding dependency",
+      "suites": [
+        "field"
+      ]
+    }
+  ],
+  "graph": {
+    "progression": {
+      "inputs": [
+        "north-star/csharp/Checks/NorthStar.Checks.csproj",
+        "north-star/csharp/Checks/Program.cs",
+        "north-star/csharp/Crossing/NorthStar.Crossing.csproj",
+        "north-star/csharp/Crossing/Program.cs",
+        "north-star/csharp/Crossing/Session.cs",
+        "north-star/csharp/Domain/Crafting.cs",
+        "north-star/csharp/Domain/Loadout.cs",
+        "north-star/csharp/Domain/NorthStar.Domain.csproj",
+        "north-star/csharp/Domain/Progression.cs"
+      ],
+      "projects": {
+        "north-star/csharp/Crossing/NorthStar.Crossing.csproj": "09fbdffe415d44079f66da83d4d22e5b91169f3f1abdd0e1ebc2bacd2e3f0c88",
+        "north-star/csharp/Domain/NorthStar.Domain.csproj": "9570b674acfea69bb60098f495afd3b9e2cef2575fcfeb6db71c2cdecb2c4876",
+        "north-star/csharp/Checks/NorthStar.Checks.csproj": "3f58ee26c26f3030dcdb7cc2c6db2b7e14bff43d81e936b95cc116bc82978d35"
+      },
+      "project_edges": [
+        [
+          "north-star/csharp/Checks/NorthStar.Checks.csproj",
+          "north-star/csharp/Crossing/NorthStar.Crossing.csproj"
+        ],
+        [
+          "north-star/csharp/Checks/NorthStar.Checks.csproj",
+          "north-star/csharp/Domain/NorthStar.Domain.csproj"
+        ],
+        [
+          "north-star/csharp/Crossing/NorthStar.Crossing.csproj",
+          "north-star/csharp/Domain/NorthStar.Domain.csproj"
+        ]
+      ],
+      "linked_inputs": []
+    },
+    "crafting": {
+      "inputs": [
+        "north-star/csharp/Crossing/NorthStar.Crossing.csproj",
+        "north-star/csharp/Crossing/Program.cs",
+        "north-star/csharp/Crossing/Session.cs",
+        "north-star/csharp/Domain/Crafting.cs",
+        "north-star/csharp/Domain/Loadout.cs",
+        "north-star/csharp/Domain/NorthStar.Domain.csproj",
+        "north-star/csharp/Domain/Progression.cs",
+        "north-star/csharp/Forge/Expedition.cs",
+        "north-star/csharp/Forge/NorthStar.Forge.csproj",
+        "north-star/csharp/Forge/Program.cs",
+        "north-star/csharp/ForgeChecks/NorthStar.ForgeChecks.csproj",
+        "north-star/csharp/ForgeChecks/Program.cs"
+      ],
+      "projects": {
+        "north-star/csharp/ForgeChecks/NorthStar.ForgeChecks.csproj": "8a5c8039bcf4e9cb06e51d0a8099ed2b509f0233ee2981d4ddd557c32b874419",
+        "north-star/csharp/Forge/NorthStar.Forge.csproj": "3f58ee26c26f3030dcdb7cc2c6db2b7e14bff43d81e936b95cc116bc82978d35",
+        "north-star/csharp/Crossing/NorthStar.Crossing.csproj": "09fbdffe415d44079f66da83d4d22e5b91169f3f1abdd0e1ebc2bacd2e3f0c88",
+        "north-star/csharp/Domain/NorthStar.Domain.csproj": "9570b674acfea69bb60098f495afd3b9e2cef2575fcfeb6db71c2cdecb2c4876"
+      },
+      "project_edges": [
+        [
+          "north-star/csharp/Crossing/NorthStar.Crossing.csproj",
+          "north-star/csharp/Domain/NorthStar.Domain.csproj"
+        ],
+        [
+          "north-star/csharp/Forge/NorthStar.Forge.csproj",
+          "north-star/csharp/Crossing/NorthStar.Crossing.csproj"
+        ],
+        [
+          "north-star/csharp/Forge/NorthStar.Forge.csproj",
+          "north-star/csharp/Domain/NorthStar.Domain.csproj"
+        ],
+        [
+          "north-star/csharp/ForgeChecks/NorthStar.ForgeChecks.csproj",
+          "north-star/csharp/Forge/NorthStar.Forge.csproj"
+        ]
+      ],
+      "linked_inputs": []
+    },
+    "loadout": {
+      "inputs": [
+        "north-star/csharp/Crossing/NorthStar.Crossing.csproj",
+        "north-star/csharp/Crossing/Program.cs",
+        "north-star/csharp/Crossing/Session.cs",
+        "north-star/csharp/Domain/Crafting.cs",
+        "north-star/csharp/Domain/Loadout.cs",
+        "north-star/csharp/Domain/NorthStar.Domain.csproj",
+        "north-star/csharp/Domain/Progression.cs",
+        "north-star/csharp/Forge/Expedition.cs",
+        "north-star/csharp/Forge/NorthStar.Forge.csproj",
+        "north-star/csharp/Forge/Program.cs",
+        "north-star/csharp/Loadout/NorthStar.Loadout.csproj",
+        "north-star/csharp/Loadout/PreparedExpedition.cs",
+        "north-star/csharp/Loadout/Program.cs",
+        "north-star/csharp/LoadoutChecks/NorthStar.LoadoutChecks.csproj",
+        "north-star/csharp/LoadoutChecks/Program.cs"
+      ],
+      "projects": {
+        "north-star/csharp/LoadoutChecks/NorthStar.LoadoutChecks.csproj": "1125d739eca20f534119389c4eda50f366d4e511b2d1b229e4ebbe3fb30945f8",
+        "north-star/csharp/Loadout/NorthStar.Loadout.csproj": "8b7ae6ab602aa24a78926f23bdf1d0117d79293eeb493334c1a4a2d3d4c85613",
+        "north-star/csharp/Forge/NorthStar.Forge.csproj": "3f58ee26c26f3030dcdb7cc2c6db2b7e14bff43d81e936b95cc116bc82978d35",
+        "north-star/csharp/Crossing/NorthStar.Crossing.csproj": "09fbdffe415d44079f66da83d4d22e5b91169f3f1abdd0e1ebc2bacd2e3f0c88",
+        "north-star/csharp/Domain/NorthStar.Domain.csproj": "9570b674acfea69bb60098f495afd3b9e2cef2575fcfeb6db71c2cdecb2c4876"
+      },
+      "project_edges": [
+        [
+          "north-star/csharp/Crossing/NorthStar.Crossing.csproj",
+          "north-star/csharp/Domain/NorthStar.Domain.csproj"
+        ],
+        [
+          "north-star/csharp/Forge/NorthStar.Forge.csproj",
+          "north-star/csharp/Crossing/NorthStar.Crossing.csproj"
+        ],
+        [
+          "north-star/csharp/Forge/NorthStar.Forge.csproj",
+          "north-star/csharp/Domain/NorthStar.Domain.csproj"
+        ],
+        [
+          "north-star/csharp/Loadout/NorthStar.Loadout.csproj",
+          "north-star/csharp/Domain/NorthStar.Domain.csproj"
+        ],
+        [
+          "north-star/csharp/Loadout/NorthStar.Loadout.csproj",
+          "north-star/csharp/Forge/NorthStar.Forge.csproj"
+        ],
+        [
+          "north-star/csharp/LoadoutChecks/NorthStar.LoadoutChecks.csproj",
+          "north-star/csharp/Loadout/NorthStar.Loadout.csproj"
+        ]
+      ],
+      "linked_inputs": []
+    },
+    "recovery": {
+      "inputs": [
+        "north-star/csharp/Crossing/NorthStar.Crossing.csproj",
+        "north-star/csharp/Crossing/Program.cs",
+        "north-star/csharp/Crossing/Session.cs",
+        "north-star/csharp/Domain/Crafting.cs",
+        "north-star/csharp/Domain/Loadout.cs",
+        "north-star/csharp/Domain/NorthStar.Domain.csproj",
+        "north-star/csharp/Domain/Progression.cs",
+        "north-star/csharp/Forge/Expedition.cs",
+        "north-star/csharp/Forge/NorthStar.Forge.csproj",
+        "north-star/csharp/Forge/Program.cs",
+        "north-star/csharp/Loadout/NorthStar.Loadout.csproj",
+        "north-star/csharp/Loadout/PreparedExpedition.cs",
+        "north-star/csharp/Loadout/Program.cs",
+        "north-star/csharp/Recovery/Journal.cs",
+        "north-star/csharp/Recovery/NorthStar.Recovery.csproj",
+        "north-star/csharp/Recovery/Program.cs",
+        "north-star/csharp/RecoveryChecks/NorthStar.RecoveryChecks.csproj",
+        "north-star/csharp/RecoveryChecks/Program.cs"
+      ],
+      "projects": {
+        "north-star/csharp/RecoveryChecks/NorthStar.RecoveryChecks.csproj": "79618f8cda20a1dd8b38190940befc0fa8d71279835ea450ca6a4e6ad0ccd6fb",
+        "north-star/csharp/Recovery/NorthStar.Recovery.csproj": "9a2a91f12d4ad1d02b49724dfae7339929db1dcf15a79a33b49d13202079ef30",
+        "north-star/csharp/Loadout/NorthStar.Loadout.csproj": "8b7ae6ab602aa24a78926f23bdf1d0117d79293eeb493334c1a4a2d3d4c85613",
+        "north-star/csharp/Forge/NorthStar.Forge.csproj": "3f58ee26c26f3030dcdb7cc2c6db2b7e14bff43d81e936b95cc116bc82978d35",
+        "north-star/csharp/Crossing/NorthStar.Crossing.csproj": "09fbdffe415d44079f66da83d4d22e5b91169f3f1abdd0e1ebc2bacd2e3f0c88",
+        "north-star/csharp/Domain/NorthStar.Domain.csproj": "9570b674acfea69bb60098f495afd3b9e2cef2575fcfeb6db71c2cdecb2c4876"
+      },
+      "project_edges": [
+        [
+          "north-star/csharp/Crossing/NorthStar.Crossing.csproj",
+          "north-star/csharp/Domain/NorthStar.Domain.csproj"
+        ],
+        [
+          "north-star/csharp/Forge/NorthStar.Forge.csproj",
+          "north-star/csharp/Crossing/NorthStar.Crossing.csproj"
+        ],
+        [
+          "north-star/csharp/Forge/NorthStar.Forge.csproj",
+          "north-star/csharp/Domain/NorthStar.Domain.csproj"
+        ],
+        [
+          "north-star/csharp/Loadout/NorthStar.Loadout.csproj",
+          "north-star/csharp/Domain/NorthStar.Domain.csproj"
+        ],
+        [
+          "north-star/csharp/Loadout/NorthStar.Loadout.csproj",
+          "north-star/csharp/Forge/NorthStar.Forge.csproj"
+        ],
+        [
+          "north-star/csharp/Recovery/NorthStar.Recovery.csproj",
+          "north-star/csharp/Loadout/NorthStar.Loadout.csproj"
+        ],
+        [
+          "north-star/csharp/RecoveryChecks/NorthStar.RecoveryChecks.csproj",
+          "north-star/csharp/Recovery/NorthStar.Recovery.csproj"
+        ]
+      ],
+      "linked_inputs": [
+        {
+          "kind": "EmbeddedResource",
+          "from": "north-star/csharp/Recovery/NorthStar.Recovery.csproj",
+          "input": "north-star/csharp/Crossing/Session.cs"
+        },
+        {
+          "kind": "EmbeddedResource",
+          "from": "north-star/csharp/Recovery/NorthStar.Recovery.csproj",
+          "input": "north-star/csharp/Domain/Crafting.cs"
+        },
+        {
+          "kind": "EmbeddedResource",
+          "from": "north-star/csharp/Recovery/NorthStar.Recovery.csproj",
+          "input": "north-star/csharp/Domain/Loadout.cs"
+        },
+        {
+          "kind": "EmbeddedResource",
+          "from": "north-star/csharp/Recovery/NorthStar.Recovery.csproj",
+          "input": "north-star/csharp/Domain/Progression.cs"
+        },
+        {
+          "kind": "EmbeddedResource",
+          "from": "north-star/csharp/Recovery/NorthStar.Recovery.csproj",
+          "input": "north-star/csharp/Forge/Expedition.cs"
+        },
+        {
+          "kind": "EmbeddedResource",
+          "from": "north-star/csharp/Recovery/NorthStar.Recovery.csproj",
+          "input": "north-star/csharp/Loadout/PreparedExpedition.cs"
+        }
+      ]
+    },
+    "narrative": {
+      "inputs": [
+        "north-star/csharp/Crossing/NorthStar.Crossing.csproj",
+        "north-star/csharp/Crossing/Program.cs",
+        "north-star/csharp/Crossing/Session.cs",
+        "north-star/csharp/Domain/Crafting.cs",
+        "north-star/csharp/Domain/Loadout.cs",
+        "north-star/csharp/Domain/NorthStar.Domain.csproj",
+        "north-star/csharp/Domain/Progression.cs",
+        "north-star/csharp/Narrative/NorthStar.Narrative.csproj",
+        "north-star/csharp/Narrative/Program.cs",
+        "north-star/csharp/Narrative/RequestExpedition.cs",
+        "north-star/csharp/NarrativeChecks/NorthStar.NarrativeChecks.csproj",
+        "north-star/csharp/NarrativeChecks/Program.cs"
+      ],
+      "projects": {
+        "north-star/csharp/NarrativeChecks/NorthStar.NarrativeChecks.csproj": "1ee37d328e919633eea97e2e8cc4183f2ae213cf2d853bb1e4dcde3b879d5743",
+        "north-star/csharp/Narrative/NorthStar.Narrative.csproj": "5fb0f921d93c92180940885ea539cff43fa2c36f4f5160809a276e2c33687201",
+        "north-star/csharp/Crossing/NorthStar.Crossing.csproj": "09fbdffe415d44079f66da83d4d22e5b91169f3f1abdd0e1ebc2bacd2e3f0c88",
+        "north-star/csharp/Domain/NorthStar.Domain.csproj": "9570b674acfea69bb60098f495afd3b9e2cef2575fcfeb6db71c2cdecb2c4876"
+      },
+      "project_edges": [
+        [
+          "north-star/csharp/Crossing/NorthStar.Crossing.csproj",
+          "north-star/csharp/Domain/NorthStar.Domain.csproj"
+        ],
+        [
+          "north-star/csharp/Narrative/NorthStar.Narrative.csproj",
+          "north-star/csharp/Crossing/NorthStar.Crossing.csproj"
+        ],
+        [
+          "north-star/csharp/NarrativeChecks/NorthStar.NarrativeChecks.csproj",
+          "north-star/csharp/Narrative/NorthStar.Narrative.csproj"
+        ]
+      ],
+      "linked_inputs": []
+    },
+    "input_timing": {
+      "inputs": [
+        "north-star/csharp/InputTiming/NorthStar.InputTiming.csproj",
+        "north-star/csharp/InputTiming/WorkRoom.cs",
+        "north-star/csharp/Interaction/NorthStar.Interaction.csproj",
+        "north-star/csharp/Interaction/Program.cs",
+        "north-star/csharp/InteractionChecks/NorthStar.InteractionChecks.csproj",
+        "north-star/csharp/InteractionChecks/Program.cs"
+      ],
+      "projects": {
+        "north-star/csharp/InteractionChecks/NorthStar.InteractionChecks.csproj": "df0bd3d017b7e817e6842377344fd3479694b6e531559f24d9168a80d27bf028",
+        "north-star/csharp/Interaction/NorthStar.Interaction.csproj": "ae025be940abc66e2a86a60f61313d781243a1c8c070c971667b3195a7fc2b8f",
+        "north-star/csharp/InputTiming/NorthStar.InputTiming.csproj": "3acec7333496cb2bb2bb2a8c6aaf151f714f6402e133ead2ca8d3f166d77dd22"
+      },
+      "project_edges": [
+        [
+          "north-star/csharp/Interaction/NorthStar.Interaction.csproj",
+          "north-star/csharp/InputTiming/NorthStar.InputTiming.csproj"
+        ],
+        [
+          "north-star/csharp/InteractionChecks/NorthStar.InteractionChecks.csproj",
+          "north-star/csharp/Interaction/NorthStar.Interaction.csproj"
+        ]
+      ],
+      "linked_inputs": []
+    },
+    "intake": {
+      "inputs": [
+        "north-star/csharp/Crossing/NorthStar.Crossing.csproj",
+        "north-star/csharp/Crossing/Program.cs",
+        "north-star/csharp/Crossing/Session.cs",
+        "north-star/csharp/Domain/Crafting.cs",
+        "north-star/csharp/Domain/Loadout.cs",
+        "north-star/csharp/Domain/NorthStar.Domain.csproj",
+        "north-star/csharp/Domain/Progression.cs",
+        "north-star/csharp/Forge/Expedition.cs",
+        "north-star/csharp/Forge/NorthStar.Forge.csproj",
+        "north-star/csharp/Forge/Program.cs",
+        "north-star/csharp/Loadout/NorthStar.Loadout.csproj",
+        "north-star/csharp/Loadout/PreparedExpedition.cs",
+        "north-star/csharp/Loadout/Program.cs",
+        "north-star/intake/Checks/NorthStar.IntakeChecks.csproj",
+        "north-star/intake/Checks/Program.cs",
+        "north-star/intake/Host/NorthStar.Intake.csproj",
+        "north-star/intake/Host/Program.cs",
+        "north-star/intake/Host/Room.cs"
+      ],
+      "projects": {
+        "north-star/intake/Checks/NorthStar.IntakeChecks.csproj": "0f123f0913619a8df7bfc9fef33a4664497b37ae71e5c6485b266fea3c6dc9f5",
+        "north-star/intake/Host/NorthStar.Intake.csproj": "46e249356ebe839340ac57c5434f7b8cfb41f7ea1bc332776339695b7a5b529a",
+        "north-star/csharp/Loadout/NorthStar.Loadout.csproj": "8b7ae6ab602aa24a78926f23bdf1d0117d79293eeb493334c1a4a2d3d4c85613",
+        "north-star/csharp/Forge/NorthStar.Forge.csproj": "3f58ee26c26f3030dcdb7cc2c6db2b7e14bff43d81e936b95cc116bc82978d35",
+        "north-star/csharp/Crossing/NorthStar.Crossing.csproj": "09fbdffe415d44079f66da83d4d22e5b91169f3f1abdd0e1ebc2bacd2e3f0c88",
+        "north-star/csharp/Domain/NorthStar.Domain.csproj": "9570b674acfea69bb60098f495afd3b9e2cef2575fcfeb6db71c2cdecb2c4876"
+      },
+      "project_edges": [
+        [
+          "north-star/csharp/Crossing/NorthStar.Crossing.csproj",
+          "north-star/csharp/Domain/NorthStar.Domain.csproj"
+        ],
+        [
+          "north-star/csharp/Forge/NorthStar.Forge.csproj",
+          "north-star/csharp/Crossing/NorthStar.Crossing.csproj"
+        ],
+        [
+          "north-star/csharp/Forge/NorthStar.Forge.csproj",
+          "north-star/csharp/Domain/NorthStar.Domain.csproj"
+        ],
+        [
+          "north-star/csharp/Loadout/NorthStar.Loadout.csproj",
+          "north-star/csharp/Domain/NorthStar.Domain.csproj"
+        ],
+        [
+          "north-star/csharp/Loadout/NorthStar.Loadout.csproj",
+          "north-star/csharp/Forge/NorthStar.Forge.csproj"
+        ],
+        [
+          "north-star/intake/Checks/NorthStar.IntakeChecks.csproj",
+          "north-star/intake/Host/NorthStar.Intake.csproj"
+        ],
+        [
+          "north-star/intake/Host/NorthStar.Intake.csproj",
+          "north-star/csharp/Loadout/NorthStar.Loadout.csproj"
+        ]
+      ],
+      "linked_inputs": []
+    },
+    "field": {
+      "inputs": [
+        "north-star/csharp/Crossing/NorthStar.Crossing.csproj",
+        "north-star/csharp/Crossing/Program.cs",
+        "north-star/csharp/Crossing/Session.cs",
+        "north-star/csharp/Domain/Crafting.cs",
+        "north-star/csharp/Domain/Loadout.cs",
+        "north-star/csharp/Domain/NorthStar.Domain.csproj",
+        "north-star/csharp/Domain/Progression.cs",
+        "north-star/csharp/Forge/Expedition.cs",
+        "north-star/csharp/Forge/NorthStar.Forge.csproj",
+        "north-star/csharp/Forge/Program.cs",
+        "north-star/csharp/Loadout/NorthStar.Loadout.csproj",
+        "north-star/csharp/Loadout/PreparedExpedition.cs",
+        "north-star/csharp/Loadout/Program.cs",
+        "north-star/field-journey/Checks/NorthStar.FieldChecks.csproj",
+        "north-star/field-journey/Checks/Program.cs",
+        "north-star/field-journey/Host/NorthStar.FieldJourney.csproj",
+        "north-star/field-journey/Host/PackLoader.cs",
+        "north-star/field-journey/Host/Program.cs",
+        "north-star/field-journey/Host/Room.cs",
+        "north-star/field-journey/Preparation/Cards.cs",
+        "north-star/field-journey/Preparation/NorthStar.Preparation.csproj",
+        "north-star/field-journey/PreparationChecks/NorthStar.PreparationChecks.csproj",
+        "north-star/field-journey/PreparationChecks/Program.cs",
+        "north-star/field-journey/Presentation/EncounterView.cs",
+        "north-star/field-journey/Presentation/NorthStar.FieldPresentation.csproj",
+        "north-star/field-journey/PresentationChecks/NorthStar.FieldPresentationChecks.csproj",
+        "north-star/field-journey/PresentationChecks/Program.cs",
+        "north-star/field-journey/Sampling/NorthStar.FieldSampling.csproj",
+        "north-star/field-journey/Sampling/SampleCase.cs",
+        "north-star/field-journey/SamplingChecks/NorthStar.FieldSamplingChecks.csproj",
+        "north-star/field-journey/SamplingChecks/Program.cs",
+        "north-star/field-journey/preparations.json",
+        "north-star/intake/Host/NorthStar.Intake.csproj",
+        "north-star/intake/Host/Program.cs",
+        "north-star/intake/Host/Room.cs",
+        "north-star/memory-study/Checks/NorthStar.MemoryChecks.csproj",
+        "north-star/memory-study/Checks/Program.cs",
+        "north-star/memory-study/Conditions/Conditions.cs",
+        "north-star/memory-study/Conditions/NorthStar.Conditions.csproj",
+        "north-star/memory-study/ConditionsChecks/NorthStar.ConditionsChecks.csproj",
+        "north-star/memory-study/ConditionsChecks/Program.cs",
+        "north-star/memory-study/Host/NorthStar.MemoryStudy.csproj",
+        "north-star/memory-study/Host/Program.cs",
+        "north-star/memory-study/Host/Room.cs",
+        "north-star/memory-study/Rules/Memory.cs",
+        "north-star/memory-study/Rules/NorthStar.Memory.csproj",
+        "north-star/memory-study/ServiceChecks/NorthStar.ConditionServiceChecks.csproj",
+        "north-star/memory-study/ServiceChecks/Program.cs"
+      ],
+      "projects": {
+        "north-star/memory-study/Checks/NorthStar.MemoryChecks.csproj": "9c0ea4da0d10f712ab2249ff883dff348868caa2413bd63c565bec91ccd12370",
+        "north-star/memory-study/Host/NorthStar.MemoryStudy.csproj": "d5dcc14b4facf695f9f91cc63e3d019c14f9f6200f4436457dd8925a7a70649a",
+        "north-star/memory-study/Conditions/NorthStar.Conditions.csproj": "3acec7333496cb2bb2bb2a8c6aaf151f714f6402e133ead2ca8d3f166d77dd22",
+        "north-star/memory-study/Rules/NorthStar.Memory.csproj": "3acec7333496cb2bb2bb2a8c6aaf151f714f6402e133ead2ca8d3f166d77dd22",
+        "north-star/memory-study/ServiceChecks/NorthStar.ConditionServiceChecks.csproj": "bf9ffc3c68026bb2d51d6e23ff53741b70efafa7e1b0a57e05e0345100ac70ab",
+        "north-star/memory-study/ConditionsChecks/NorthStar.ConditionsChecks.csproj": "4df210d5dff78286d31bb7f19a8d0da91734e5a0305ae8740f548a4ab4ab7bc7",
+        "north-star/field-journey/Checks/NorthStar.FieldChecks.csproj": "2c85290c7e35ed1da74af6a330182df52213129455c742521491db73fe813d69",
+        "north-star/field-journey/Host/NorthStar.FieldJourney.csproj": "699243e4f4bc474f68b69fca85253684d4bd33d35935aa1f0708e54e30470c6d",
+        "north-star/intake/Host/NorthStar.Intake.csproj": "46e249356ebe839340ac57c5434f7b8cfb41f7ea1bc332776339695b7a5b529a",
+        "north-star/csharp/Loadout/NorthStar.Loadout.csproj": "8b7ae6ab602aa24a78926f23bdf1d0117d79293eeb493334c1a4a2d3d4c85613",
+        "north-star/csharp/Forge/NorthStar.Forge.csproj": "3f58ee26c26f3030dcdb7cc2c6db2b7e14bff43d81e936b95cc116bc82978d35",
+        "north-star/csharp/Crossing/NorthStar.Crossing.csproj": "09fbdffe415d44079f66da83d4d22e5b91169f3f1abdd0e1ebc2bacd2e3f0c88",
+        "north-star/csharp/Domain/NorthStar.Domain.csproj": "9570b674acfea69bb60098f495afd3b9e2cef2575fcfeb6db71c2cdecb2c4876",
+        "north-star/field-journey/Presentation/NorthStar.FieldPresentation.csproj": "ed7fcb71a3de213cf79cefb17ab64b7f0bd9f077750cecaa2d10ee12c2518c2a",
+        "north-star/field-journey/Sampling/NorthStar.FieldSampling.csproj": "d37f8d0693bc767a6871b1c234ce15aa7754e1a0e21a9c022bc821b620528bbe",
+        "north-star/field-journey/Preparation/NorthStar.Preparation.csproj": "c7bdb194b46d532a300566beebc52e5f9d978a20fbe431e6a6096f9c648754df",
+        "north-star/field-journey/PresentationChecks/NorthStar.FieldPresentationChecks.csproj": "2c85290c7e35ed1da74af6a330182df52213129455c742521491db73fe813d69",
+        "north-star/field-journey/SamplingChecks/NorthStar.FieldSamplingChecks.csproj": "d019a090059277150b6c432c9a4332799073f8403d009261934e42cb3c017557",
+        "north-star/field-journey/PreparationChecks/NorthStar.PreparationChecks.csproj": "d019a090059277150b6c432c9a4332799073f8403d009261934e42cb3c017557"
+      },
+      "project_edges": [
+        [
+          "north-star/csharp/Crossing/NorthStar.Crossing.csproj",
+          "north-star/csharp/Domain/NorthStar.Domain.csproj"
+        ],
+        [
+          "north-star/csharp/Forge/NorthStar.Forge.csproj",
+          "north-star/csharp/Crossing/NorthStar.Crossing.csproj"
+        ],
+        [
+          "north-star/csharp/Forge/NorthStar.Forge.csproj",
+          "north-star/csharp/Domain/NorthStar.Domain.csproj"
+        ],
+        [
+          "north-star/csharp/Loadout/NorthStar.Loadout.csproj",
+          "north-star/csharp/Domain/NorthStar.Domain.csproj"
+        ],
+        [
+          "north-star/csharp/Loadout/NorthStar.Loadout.csproj",
+          "north-star/csharp/Forge/NorthStar.Forge.csproj"
+        ],
+        [
+          "north-star/field-journey/Checks/NorthStar.FieldChecks.csproj",
+          "north-star/field-journey/Host/NorthStar.FieldJourney.csproj"
+        ],
+        [
+          "north-star/field-journey/Host/NorthStar.FieldJourney.csproj",
+          "north-star/field-journey/Preparation/NorthStar.Preparation.csproj"
+        ],
+        [
+          "north-star/field-journey/Host/NorthStar.FieldJourney.csproj",
+          "north-star/field-journey/Presentation/NorthStar.FieldPresentation.csproj"
+        ],
+        [
+          "north-star/field-journey/Host/NorthStar.FieldJourney.csproj",
+          "north-star/field-journey/Sampling/NorthStar.FieldSampling.csproj"
+        ],
+        [
+          "north-star/field-journey/Host/NorthStar.FieldJourney.csproj",
+          "north-star/intake/Host/NorthStar.Intake.csproj"
+        ],
+        [
+          "north-star/field-journey/Host/NorthStar.FieldJourney.csproj",
+          "north-star/memory-study/Host/NorthStar.MemoryStudy.csproj"
+        ],
+        [
+          "north-star/field-journey/Preparation/NorthStar.Preparation.csproj",
+          "north-star/csharp/Domain/NorthStar.Domain.csproj"
+        ],
+        [
+          "north-star/field-journey/PreparationChecks/NorthStar.PreparationChecks.csproj",
+          "north-star/field-journey/Host/NorthStar.FieldJourney.csproj"
+        ],
+        [
+          "north-star/field-journey/PresentationChecks/NorthStar.FieldPresentationChecks.csproj",
+          "north-star/field-journey/Host/NorthStar.FieldJourney.csproj"
+        ],
+        [
+          "north-star/field-journey/SamplingChecks/NorthStar.FieldSamplingChecks.csproj",
+          "north-star/field-journey/Host/NorthStar.FieldJourney.csproj"
+        ],
+        [
+          "north-star/intake/Host/NorthStar.Intake.csproj",
+          "north-star/csharp/Loadout/NorthStar.Loadout.csproj"
+        ],
+        [
+          "north-star/memory-study/Checks/NorthStar.MemoryChecks.csproj",
+          "north-star/memory-study/Host/NorthStar.MemoryStudy.csproj"
+        ],
+        [
+          "north-star/memory-study/ConditionsChecks/NorthStar.ConditionsChecks.csproj",
+          "north-star/memory-study/Conditions/NorthStar.Conditions.csproj"
+        ],
+        [
+          "north-star/memory-study/Host/NorthStar.MemoryStudy.csproj",
+          "north-star/memory-study/Conditions/NorthStar.Conditions.csproj"
+        ],
+        [
+          "north-star/memory-study/Host/NorthStar.MemoryStudy.csproj",
+          "north-star/memory-study/Rules/NorthStar.Memory.csproj"
+        ],
+        [
+          "north-star/memory-study/ServiceChecks/NorthStar.ConditionServiceChecks.csproj",
+          "north-star/memory-study/Host/NorthStar.MemoryStudy.csproj"
+        ]
+      ],
+      "linked_inputs": [
+        {
+          "kind": "Content",
+          "from": "north-star/field-journey/Host/NorthStar.FieldJourney.csproj",
+          "input": "north-star/field-journey/preparations.json"
+        }
+      ]
+    },
+    "presentation": {
+      "inputs": [
+        "north-star/csharp/Audio/NorthStar.Audio.csproj",
+        "north-star/csharp/Audio/Sound.cs",
+        "north-star/csharp/Crossing/Session.cs",
+        "north-star/csharp/Domain/Crafting.cs",
+        "north-star/csharp/Domain/Loadout.cs",
+        "north-star/csharp/Domain/NorthStar.Domain.csproj",
+        "north-star/csharp/Domain/Progression.cs",
+        "north-star/csharp/Presentation/NorthStar.Presentation.csproj",
+        "north-star/csharp/Presentation/Program.cs",
+        "north-star/csharp/PresentationChecks/NorthStar.PresentationChecks.csproj",
+        "north-star/csharp/PresentationChecks/Program.cs"
+      ],
+      "projects": {
+        "north-star/csharp/PresentationChecks/NorthStar.PresentationChecks.csproj": "9bd30f62c4e2661792ed70d0aad6656ce24729a229280ce93fbe9108a3478061",
+        "north-star/csharp/Presentation/NorthStar.Presentation.csproj": "6e5a04a3e92bc5606c032e20b9b546c4704a55d682c7eb314002822e5bf59387",
+        "north-star/csharp/Audio/NorthStar.Audio.csproj": "3acec7333496cb2bb2bb2a8c6aaf151f714f6402e133ead2ca8d3f166d77dd22",
+        "north-star/csharp/Domain/NorthStar.Domain.csproj": "9570b674acfea69bb60098f495afd3b9e2cef2575fcfeb6db71c2cdecb2c4876"
+      },
+      "project_edges": [
+        [
+          "north-star/csharp/Presentation/NorthStar.Presentation.csproj",
+          "north-star/csharp/Audio/NorthStar.Audio.csproj"
+        ],
+        [
+          "north-star/csharp/Presentation/NorthStar.Presentation.csproj",
+          "north-star/csharp/Domain/NorthStar.Domain.csproj"
+        ],
+        [
+          "north-star/csharp/PresentationChecks/NorthStar.PresentationChecks.csproj",
+          "north-star/csharp/Presentation/NorthStar.Presentation.csproj"
+        ]
+      ],
+      "linked_inputs": [
+        {
+          "kind": "Compile",
+          "from": "north-star/csharp/Presentation/NorthStar.Presentation.csproj",
+          "input": "north-star/csharp/Crossing/Session.cs"
+        }
+      ]
+    },
+    "audio": {
+      "inputs": [
+        "north-star/csharp/Audio/NorthStar.Audio.csproj",
+        "north-star/csharp/Audio/Sound.cs",
+        "north-star/csharp/AudioChecks/NorthStar.AudioChecks.csproj",
+        "north-star/csharp/AudioChecks/Program.cs",
+        "north-star/csharp/Crossing/Session.cs",
+        "north-star/csharp/Domain/Crafting.cs",
+        "north-star/csharp/Domain/Loadout.cs",
+        "north-star/csharp/Domain/NorthStar.Domain.csproj",
+        "north-star/csharp/Domain/Progression.cs",
+        "north-star/csharp/Presentation/NorthStar.Presentation.csproj",
+        "north-star/csharp/Presentation/Program.cs"
+      ],
+      "projects": {
+        "north-star/csharp/AudioChecks/NorthStar.AudioChecks.csproj": "09817d6577fce1b3e0eac2bf5b308a7ee6b1ddf305f3f33b8a062d9a1ca89b05",
+        "north-star/csharp/Presentation/NorthStar.Presentation.csproj": "6e5a04a3e92bc5606c032e20b9b546c4704a55d682c7eb314002822e5bf59387",
+        "north-star/csharp/Audio/NorthStar.Audio.csproj": "3acec7333496cb2bb2bb2a8c6aaf151f714f6402e133ead2ca8d3f166d77dd22",
+        "north-star/csharp/Domain/NorthStar.Domain.csproj": "9570b674acfea69bb60098f495afd3b9e2cef2575fcfeb6db71c2cdecb2c4876"
+      },
+      "project_edges": [
+        [
+          "north-star/csharp/AudioChecks/NorthStar.AudioChecks.csproj",
+          "north-star/csharp/Audio/NorthStar.Audio.csproj"
+        ],
+        [
+          "north-star/csharp/AudioChecks/NorthStar.AudioChecks.csproj",
+          "north-star/csharp/Presentation/NorthStar.Presentation.csproj"
+        ],
+        [
+          "north-star/csharp/Presentation/NorthStar.Presentation.csproj",
+          "north-star/csharp/Audio/NorthStar.Audio.csproj"
+        ],
+        [
+          "north-star/csharp/Presentation/NorthStar.Presentation.csproj",
+          "north-star/csharp/Domain/NorthStar.Domain.csproj"
+        ]
+      ],
+      "linked_inputs": [
+        {
+          "kind": "Compile",
+          "from": "north-star/csharp/Presentation/NorthStar.Presentation.csproj",
+          "input": "north-star/csharp/Crossing/Session.cs"
+        }
+      ]
+    },
+    "authored_scene": {
+      "inputs": [
+        "north-star/authored-scene/Checks/NorthStar.AuthoredSceneChecks.csproj",
+        "north-star/authored-scene/Checks/Program.cs",
+        "north-star/authored-scene/Host/NorthStar.AuthoredScene.csproj",
+        "north-star/authored-scene/Host/Program.cs",
+        "north-star/authored-scene/Host/RequestJournal.cs",
+        "north-star/authored-scene/Host/Room.cs",
+        "north-star/authored-scene/Host/SceneSession.cs",
+        "north-star/authored-scene/JournalChecks/NorthStar.JournalChecks.csproj",
+        "north-star/authored-scene/JournalChecks/Program.cs",
+        "north-star/csharp/Crossing/NorthStar.Crossing.csproj",
+        "north-star/csharp/Crossing/Program.cs",
+        "north-star/csharp/Crossing/Session.cs",
+        "north-star/csharp/Domain/Crafting.cs",
+        "north-star/csharp/Domain/Loadout.cs",
+        "north-star/csharp/Domain/NorthStar.Domain.csproj",
+        "north-star/csharp/Domain/Progression.cs",
+        "north-star/csharp/Narrative/NorthStar.Narrative.csproj",
+        "north-star/csharp/Narrative/Program.cs",
+        "north-star/csharp/Narrative/RequestExpedition.cs"
+      ],
+      "projects": {
+        "north-star/authored-scene/JournalChecks/NorthStar.JournalChecks.csproj": "ffba18e3274c2a5bf577fd1c543973a266978949fea5e3794b49b34b65f1b492",
+        "north-star/authored-scene/Host/NorthStar.AuthoredScene.csproj": "f4f306dc041ac7f001b017f7e919c83b0c8b0c85a0ee45f93de10089a2b52b61",
+        "north-star/csharp/Narrative/NorthStar.Narrative.csproj": "5fb0f921d93c92180940885ea539cff43fa2c36f4f5160809a276e2c33687201",
+        "north-star/csharp/Crossing/NorthStar.Crossing.csproj": "09fbdffe415d44079f66da83d4d22e5b91169f3f1abdd0e1ebc2bacd2e3f0c88",
+        "north-star/csharp/Domain/NorthStar.Domain.csproj": "9570b674acfea69bb60098f495afd3b9e2cef2575fcfeb6db71c2cdecb2c4876",
+        "north-star/authored-scene/Checks/NorthStar.AuthoredSceneChecks.csproj": "ffba18e3274c2a5bf577fd1c543973a266978949fea5e3794b49b34b65f1b492"
+      },
+      "project_edges": [
+        [
+          "north-star/authored-scene/Checks/NorthStar.AuthoredSceneChecks.csproj",
+          "north-star/authored-scene/Host/NorthStar.AuthoredScene.csproj"
+        ],
+        [
+          "north-star/authored-scene/Host/NorthStar.AuthoredScene.csproj",
+          "north-star/csharp/Narrative/NorthStar.Narrative.csproj"
+        ],
+        [
+          "north-star/authored-scene/JournalChecks/NorthStar.JournalChecks.csproj",
+          "north-star/authored-scene/Host/NorthStar.AuthoredScene.csproj"
+        ],
+        [
+          "north-star/csharp/Crossing/NorthStar.Crossing.csproj",
+          "north-star/csharp/Domain/NorthStar.Domain.csproj"
+        ],
+        [
+          "north-star/csharp/Narrative/NorthStar.Narrative.csproj",
+          "north-star/csharp/Crossing/NorthStar.Crossing.csproj"
+        ]
+      ],
+      "linked_inputs": []
+    },
+    "tooling": {
+      "inputs": [
+        "north-star/csharp/Crossing/NorthStar.Crossing.csproj",
+        "north-star/csharp/Crossing/Program.cs",
+        "north-star/csharp/Crossing/Session.cs",
+        "north-star/csharp/Domain/Crafting.cs",
+        "north-star/csharp/Domain/Loadout.cs",
+        "north-star/csharp/Domain/NorthStar.Domain.csproj",
+        "north-star/csharp/Domain/Progression.cs",
+        "north-star/tooling-study/Checks/NorthStar.ToolingChecks.csproj",
+        "north-star/tooling-study/Checks/Program.cs",
+        "north-star/tooling-study/ConsumerChecks/NorthStar.ToolingConsumerChecks.csproj",
+        "north-star/tooling-study/ConsumerChecks/Program.cs",
+        "north-star/tooling-study/Host/NorthStar.ToolingStudy.csproj",
+        "north-star/tooling-study/Host/Program.cs",
+        "north-star/tooling-study/Host/Room.cs",
+        "north-star/tooling-study/Rules/NorthStar.Tooling.csproj",
+        "north-star/tooling-study/Rules/Tooling.cs"
+      ],
+      "projects": {
+        "north-star/tooling-study/ConsumerChecks/NorthStar.ToolingConsumerChecks.csproj": "e0398a932406c78a57f1cc5d12d06f8a5d62d4a0c8ae89f2e9e8e4de87c1fbbc",
+        "north-star/tooling-study/Host/NorthStar.ToolingStudy.csproj": "1dc61643abe73064f301c5c48f3757b1b3dfad3c580db542fb3e7063ef0493d8",
+        "north-star/csharp/Crossing/NorthStar.Crossing.csproj": "09fbdffe415d44079f66da83d4d22e5b91169f3f1abdd0e1ebc2bacd2e3f0c88",
+        "north-star/csharp/Domain/NorthStar.Domain.csproj": "9570b674acfea69bb60098f495afd3b9e2cef2575fcfeb6db71c2cdecb2c4876",
+        "north-star/tooling-study/Rules/NorthStar.Tooling.csproj": "70da75c5a69f7e92b7e73cbfcefd3bd10bd35a8064590b3e98e9a49464471df4",
+        "north-star/tooling-study/Checks/NorthStar.ToolingChecks.csproj": "9de6f4bc362c16681084c225f38feb7e7feafe18ef5361c945f411626f7db325"
+      },
+      "project_edges": [
+        [
+          "north-star/csharp/Crossing/NorthStar.Crossing.csproj",
+          "north-star/csharp/Domain/NorthStar.Domain.csproj"
+        ],
+        [
+          "north-star/tooling-study/Checks/NorthStar.ToolingChecks.csproj",
+          "north-star/tooling-study/Rules/NorthStar.Tooling.csproj"
+        ],
+        [
+          "north-star/tooling-study/ConsumerChecks/NorthStar.ToolingConsumerChecks.csproj",
+          "north-star/tooling-study/Host/NorthStar.ToolingStudy.csproj"
+        ],
+        [
+          "north-star/tooling-study/Host/NorthStar.ToolingStudy.csproj",
+          "north-star/csharp/Crossing/NorthStar.Crossing.csproj"
+        ],
+        [
+          "north-star/tooling-study/Host/NorthStar.ToolingStudy.csproj",
+          "north-star/tooling-study/Rules/NorthStar.Tooling.csproj"
+        ],
+        [
+          "north-star/tooling-study/Rules/NorthStar.Tooling.csproj",
+          "north-star/csharp/Domain/NorthStar.Domain.csproj"
+        ]
+      ],
+      "linked_inputs": []
+    },
+    "reputation": {
+      "inputs": [
+        "north-star/reputation-study/Checks/NorthStar.ReputationChecks.csproj",
+        "north-star/reputation-study/Checks/Program.cs",
+        "north-star/reputation-study/ConsumerChecks/NorthStar.ReputationConsumerChecks.csproj",
+        "north-star/reputation-study/ConsumerChecks/Program.cs",
+        "north-star/reputation-study/Host/NorthStar.ReputationStudy.csproj",
+        "north-star/reputation-study/Host/Program.cs",
+        "north-star/reputation-study/Host/Room.cs",
+        "north-star/reputation-study/Rules/NorthStar.Reputation.csproj",
+        "north-star/reputation-study/Rules/Standing.cs"
+      ],
+      "projects": {
+        "north-star/reputation-study/ConsumerChecks/NorthStar.ReputationConsumerChecks.csproj": "2df186e742a0216fbf71dc4f30af0dc53010d53bb1485c6fe86a4b096efbf1cd",
+        "north-star/reputation-study/Host/NorthStar.ReputationStudy.csproj": "04ccce7027b6ce885f3adb561f7ab445dffdc0905da23aeae0f021060b8a21e7",
+        "north-star/reputation-study/Rules/NorthStar.Reputation.csproj": "9570b674acfea69bb60098f495afd3b9e2cef2575fcfeb6db71c2cdecb2c4876",
+        "north-star/reputation-study/Checks/NorthStar.ReputationChecks.csproj": "d86aa2ba42240c4b0bb62237aa63e2ba170121476e8d108a185ef37d666cb439"
+      },
+      "project_edges": [
+        [
+          "north-star/reputation-study/Checks/NorthStar.ReputationChecks.csproj",
+          "north-star/reputation-study/Rules/NorthStar.Reputation.csproj"
+        ],
+        [
+          "north-star/reputation-study/ConsumerChecks/NorthStar.ReputationConsumerChecks.csproj",
+          "north-star/reputation-study/Host/NorthStar.ReputationStudy.csproj"
+        ],
+        [
+          "north-star/reputation-study/Host/NorthStar.ReputationStudy.csproj",
+          "north-star/reputation-study/Rules/NorthStar.Reputation.csproj"
+        ]
+      ],
+      "linked_inputs": []
+    },
+    "combat": {
+      "inputs": [
+        "north-star/combat-study/Checks/NorthStar.CombatChecks.csproj",
+        "north-star/combat-study/Checks/Program.cs",
+        "north-star/combat-study/Host/NorthStar.CombatStudy.csproj",
+        "north-star/combat-study/Host/Program.cs",
+        "north-star/combat-study/Host/Room.cs",
+        "north-star/combat-study/Host/Trial.cs",
+        "north-star/combat-study/PassiveChecks/NorthStar.PassiveChecks.csproj",
+        "north-star/combat-study/PassiveChecks/Program.cs",
+        "north-star/combat-study/Rules/Combat.cs",
+        "north-star/combat-study/Rules/NorthStar.Combat.csproj",
+        "north-star/combat-study/Rules/Passives.cs",
+        "north-star/combat-study/TrialChecks/NorthStar.TrialChecks.csproj",
+        "north-star/combat-study/TrialChecks/Program.cs"
+      ],
+      "projects": {
+        "north-star/combat-study/PassiveChecks/NorthStar.PassiveChecks.csproj": "4d9265cc2c935d4ffdb5a2c5d9397b6f037b2a852205b93fd7220392ec6d589d",
+        "north-star/combat-study/Host/NorthStar.CombatStudy.csproj": "6ac29b7401802c5166c75d9479eeff138837492f10e3960ee98e0e1494fb0a30",
+        "north-star/combat-study/Rules/NorthStar.Combat.csproj": "c5ac413d76e9a444ec0662371e5f969c361e3d8ad6c4c0b109c21da09306a845",
+        "north-star/combat-study/TrialChecks/NorthStar.TrialChecks.csproj": "0a72d3d879071cd0be22e857004f718bb46110a7d972d2a2f3644f50a2bc8d79",
+        "north-star/combat-study/Checks/NorthStar.CombatChecks.csproj": "d159d1f16880492f4366940b4f8318c45cdede7bea1a237f9686d3ad7a637411"
+      },
+      "project_edges": [
+        [
+          "north-star/combat-study/Checks/NorthStar.CombatChecks.csproj",
+          "north-star/combat-study/Rules/NorthStar.Combat.csproj"
+        ],
+        [
+          "north-star/combat-study/Host/NorthStar.CombatStudy.csproj",
+          "north-star/combat-study/Rules/NorthStar.Combat.csproj"
+        ],
+        [
+          "north-star/combat-study/PassiveChecks/NorthStar.PassiveChecks.csproj",
+          "north-star/combat-study/Host/NorthStar.CombatStudy.csproj"
+        ],
+        [
+          "north-star/combat-study/TrialChecks/NorthStar.TrialChecks.csproj",
+          "north-star/combat-study/Host/NorthStar.CombatStudy.csproj"
+        ]
+      ],
+      "linked_inputs": []
+    },
+    "availability": {
+      "inputs": [
+        "north-star/availability-study/Checks/NorthStar.AvailabilityChecks.csproj",
+        "north-star/availability-study/Checks/Program.cs",
+        "north-star/availability-study/Host/Journey.cs",
+        "north-star/availability-study/Host/NorthStar.AvailabilityHost.csproj",
+        "north-star/availability-study/Host/Program.cs",
+        "north-star/availability-study/Host/Room.cs",
+        "north-star/availability-study/JourneyChecks/NorthStar.JourneyChecks.csproj",
+        "north-star/availability-study/JourneyChecks/Program.cs",
+        "north-star/availability-study/Rules/Availability.cs",
+        "north-star/availability-study/Rules/NorthStar.Availability.csproj",
+        "north-star/csharp/Crossing/NorthStar.Crossing.csproj",
+        "north-star/csharp/Crossing/Program.cs",
+        "north-star/csharp/Crossing/Session.cs",
+        "north-star/csharp/Domain/Crafting.cs",
+        "north-star/csharp/Domain/Loadout.cs",
+        "north-star/csharp/Domain/NorthStar.Domain.csproj",
+        "north-star/csharp/Domain/Progression.cs"
+      ],
+      "projects": {
+        "north-star/availability-study/JourneyChecks/NorthStar.JourneyChecks.csproj": "df439fa69ec6da06e3e23a27d1042868af5bfe9c81fe253a4aad0ba19c723b5c",
+        "north-star/availability-study/Host/NorthStar.AvailabilityHost.csproj": "8b7bf97d9e867566fa4d618b3658dc8ba6482fe77ef05c006a4729cd45849eaa",
+        "north-star/csharp/Crossing/NorthStar.Crossing.csproj": "09fbdffe415d44079f66da83d4d22e5b91169f3f1abdd0e1ebc2bacd2e3f0c88",
+        "north-star/csharp/Domain/NorthStar.Domain.csproj": "9570b674acfea69bb60098f495afd3b9e2cef2575fcfeb6db71c2cdecb2c4876",
+        "north-star/availability-study/Rules/NorthStar.Availability.csproj": "9570b674acfea69bb60098f495afd3b9e2cef2575fcfeb6db71c2cdecb2c4876",
+        "north-star/availability-study/Checks/NorthStar.AvailabilityChecks.csproj": "ffa68581940c0667d463ae82e2fad7904c63399b95701f4f7e124df695996dc2"
+      },
+      "project_edges": [
+        [
+          "north-star/availability-study/Checks/NorthStar.AvailabilityChecks.csproj",
+          "north-star/availability-study/Rules/NorthStar.Availability.csproj"
+        ],
+        [
+          "north-star/availability-study/Host/NorthStar.AvailabilityHost.csproj",
+          "north-star/availability-study/Rules/NorthStar.Availability.csproj"
+        ],
+        [
+          "north-star/availability-study/Host/NorthStar.AvailabilityHost.csproj",
+          "north-star/csharp/Crossing/NorthStar.Crossing.csproj"
+        ],
+        [
+          "north-star/availability-study/JourneyChecks/NorthStar.JourneyChecks.csproj",
+          "north-star/availability-study/Host/NorthStar.AvailabilityHost.csproj"
+        ],
+        [
+          "north-star/csharp/Crossing/NorthStar.Crossing.csproj",
+          "north-star/csharp/Domain/NorthStar.Domain.csproj"
+        ]
+      ],
+      "linked_inputs": []
+    },
+    "recipient": {
+      "inputs": [
+        "north-star/authored-scene/Host/NorthStar.AuthoredScene.csproj",
+        "north-star/authored-scene/Host/Program.cs",
+        "north-star/authored-scene/Host/RequestJournal.cs",
+        "north-star/authored-scene/Host/Room.cs",
+        "north-star/authored-scene/Host/SceneSession.cs",
+        "north-star/csharp/Crossing/NorthStar.Crossing.csproj",
+        "north-star/csharp/Crossing/Program.cs",
+        "north-star/csharp/Crossing/Session.cs",
+        "north-star/csharp/Domain/Crafting.cs",
+        "north-star/csharp/Domain/Loadout.cs",
+        "north-star/csharp/Domain/NorthStar.Domain.csproj",
+        "north-star/csharp/Domain/Progression.cs",
+        "north-star/csharp/Narrative/NorthStar.Narrative.csproj",
+        "north-star/csharp/Narrative/Program.cs",
+        "north-star/csharp/Narrative/README.md",
+        "north-star/csharp/Narrative/RequestExpedition.cs",
+        "north-star/csharp/Narrative/SCENE.md"
+      ],
+      "projects": {
+        "north-star/authored-scene/Host/NorthStar.AuthoredScene.csproj": "f4f306dc041ac7f001b017f7e919c83b0c8b0c85a0ee45f93de10089a2b52b61",
+        "north-star/csharp/Narrative/NorthStar.Narrative.csproj": "5fb0f921d93c92180940885ea539cff43fa2c36f4f5160809a276e2c33687201",
+        "north-star/csharp/Crossing/NorthStar.Crossing.csproj": "09fbdffe415d44079f66da83d4d22e5b91169f3f1abdd0e1ebc2bacd2e3f0c88",
+        "north-star/csharp/Domain/NorthStar.Domain.csproj": "9570b674acfea69bb60098f495afd3b9e2cef2575fcfeb6db71c2cdecb2c4876"
+      },
+      "project_edges": [
+        [
+          "north-star/authored-scene/Host/NorthStar.AuthoredScene.csproj",
+          "north-star/csharp/Narrative/NorthStar.Narrative.csproj"
+        ],
+        [
+          "north-star/csharp/Crossing/NorthStar.Crossing.csproj",
+          "north-star/csharp/Domain/NorthStar.Domain.csproj"
+        ],
+        [
+          "north-star/csharp/Narrative/NorthStar.Narrative.csproj",
+          "north-star/csharp/Crossing/NorthStar.Crossing.csproj"
+        ]
+      ],
+      "linked_inputs": []
+    }
+  },
+  "wrapper_coverage": {
+    "field": [
+      "preparation-verify.py",
+      "sampling-verify.py",
+      "conditions-verify.py",
+      "memory-verify",
+      "presentation-verify.py",
+      "field-verify"
+    ]
+  },
+  "limits": "Conservative routing of unchanged verification bodies; no test execution, performance, Unity/Windows or human claim."
+}

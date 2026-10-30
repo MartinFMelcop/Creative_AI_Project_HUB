@@ -1,0 +1,66 @@
+[
+  {
+    "command": [
+      "python3",
+      "tools/csharp_scope.py",
+      "--path",
+      "martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/field-journey/preparations.json",
+      "--report",
+      "/workspace/work/verification-routing/selected-final/plan.json"
+    ],
+    "exit_code": 0,
+    "stdout": "{\"browser\": true, \"changed_paths\": [\"martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/field-journey/preparations.json\"], \"full_fallback\": false, \"limits\": \"Conservative routing of unchanged verification bodies; no test execution, performance, Unity/Windows or human claim.\", \"reasons\": [{\"path\": \"martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/field-journey/preparations.json\", \"reason\": \"Current project/runtime/source-binding dependency\", \"suites\": [\"field\"]}], \"required\": true, \"schema_version\": 1, \"selected\": {\"audio\": false, \"authored_scene\": false, \"availability\": false, \"combat\": false, \"crafting\": false, \"field\": true, \"input_timing\": false, \"intake\": false, \"loadout\": false, \"narrative\": false, \"presentation\": false, \"progression\": false, \"recipient\": false, \"recovery\": false, \"reputation\": false, \"tooling\": false}, \"suites\": [\"field\"], \"wrapper_coverage\": {\"field\": [\"preparation-verify.py\", \"sampling-verify.py\", \"conditions-verify.py\", \"memory-verify\", \"presentation-verify.py\", \"field-verify\"]}}\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "dotnet",
+      "--version"
+    ],
+    "exit_code": 0,
+    "stdout": "10.0.401\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "node",
+      "--version"
+    ],
+    "exit_code": 0,
+    "stdout": "v24.19.0\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "python3",
+      "--version"
+    ],
+    "exit_code": 0,
+    "stdout": "Python 3.12.14\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "/usr/bin/chromium",
+      "--version"
+    ],
+    "exit_code": 0,
+    "stdout": "Chromium 154.0.8037.57 built on Debian GNU/Linux 13 (trixie)\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "bash",
+      "--noprofile",
+      "--norc",
+      "-e",
+      "-o",
+      "pipefail",
+      "-c",
+      "python3 north-star/field-journey/tools/preparation-verify.py --dotnet dotnet --output \"$RUNNER_TEMP/preparation-authoring\""
+    ],
+    "exit_code": 0,
+    "stdout": "PASS: authored preparations and affected existing consumers\n",
+    "stderr": ""
+  }
+]

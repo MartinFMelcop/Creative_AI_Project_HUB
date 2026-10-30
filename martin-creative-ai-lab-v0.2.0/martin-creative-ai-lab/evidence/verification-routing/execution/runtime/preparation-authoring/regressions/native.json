@@ -1,0 +1,2290 @@
+{
+  "schema_version": 1,
+  "kind": "field_sampling_native",
+  "checks": {
+    "passed": 34,
+    "failed": 0
+  },
+  "controls": [
+    "One issued empty case is disclosed, not acquired cargo",
+    "Unconfirmed nonactive person cannot sample",
+    "Confirmed preparation is not actual site arrival",
+    "Actual entry at position zero does not acquire site evidence",
+    "Actual draw reaches ridge without collection",
+    "Exact site eligibility separates current and later encounters",
+    "Wrong known site refuses without spending case or beat",
+    "Unknown exact site throws before owner or receipt mutation",
+    "Duplicate sampling fields cannot cause a partial child transition",
+    "Stale sampling intent leaves exact owner snapshot unchanged",
+    "Sampling pays actual Wait bolt contact before acquiring",
+    "Receipt records actual before/after damage and the current attempt",
+    "Accepted sampling projects actual wait contact, not a fabricated skill",
+    "Actual encounter sampling never advances historical workshop time",
+    "One spent case cannot collect the same site again",
+    "Survey victory carries sample but cannot secure final route",
+    "Earned allocation cannot resupply or secure cargo",
+    "Later site cannot replace the already carried sample",
+    "Only actual final Crossing secures the carried ridge sample",
+    "Final security preserves original acquisition receipt",
+    "Deferring site keeps the same unused case after survey",
+    "Actual second encounter position two opens channel only",
+    "Channel sampling pays actual stationary pulse",
+    "Channel route can actually secure the exclusive later sample",
+    "Low actual HP ridge eligibility does not promise survival",
+    "Lethal collection wait spends case without acquiring",
+    "Retry cannot replace case broken before acquisition",
+    "Later actual failed encounter loses previously acquired cargo",
+    "Retry cannot resupply a lost previously acquired case",
+    "Ordinary failure does not consume an unused case",
+    "Same originally unused case remains usable on real retry",
+    "Skipping sampling preserves actual old full-route outcomes",
+    "Living deadline failure spends case without false acquisition caption",
+    "Repeated reads retain cargo receipt and event identity"
+  ],
+  "ridge": {
+    "sequence": 27,
+    "command": "slot",
+    "accepted": true,
+    "text": "Skill: 0 damage, 3 resolve spent. Completed; reward committed. Level 3, 2 unspent points.",
+    "workshop_closed": true,
+    "sample_case": {
+      "status": "secured",
+      "case_spent": true,
+      "acquired": true,
+      "site": "ridge",
+      "collection_attempt": 1,
+      "receipt": {
+        "site": "ridge",
+        "attempt": 1,
+        "before_beat": 1,
+        "after_beat": 2,
+        "hp_before": 10,
+        "hp_after": 6,
+        "health_lost": 4,
+        "acquired": true
+      },
+      "sites": [
+        {
+          "id": "ridge",
+          "stage": 0,
+          "position": 1,
+          "eligible": false
+        },
+        {
+          "id": "channel",
+          "stage": 1,
+          "position": 2,
+          "eligible": false
+        }
+      ]
+    },
+    "preparation_book": {
+      "sha256": "d6771016c773bb10e95410050128094e2f3f1b243be464ef6be611b3dde5ea95",
+      "draft_card_id": null,
+      "confirmed_card_id": null,
+      "cards": [
+        {
+          "id": "anchor-start",
+          "title": "A steady opening",
+          "description": "Brace protects in place against a bolt. Walking during a pulse changes position. This is a starting proposal, not a supplied Plate rig or a promise of survival.",
+          "class_id": "anchor",
+          "background_id": "workshop",
+          "slots": [
+            "brace",
+            null,
+            null,
+            null
+          ],
+          "minimum_level": 1,
+          "recommended_rig": "plate",
+          "eligible": false
+        },
+        {
+          "id": "lure-start",
+          "title": "Draw a path",
+          "description": "Draw advances one cell against a bolt while spending three resolve. Move during a pulse. A Trail rig is suggested here, not acquired or equipped by this card.",
+          "class_id": "lure",
+          "background_id": "trailborn",
+          "slots": [
+            "draw",
+            null,
+            null,
+            null
+          ],
+          "minimum_level": 1,
+          "recommended_rig": "trail",
+          "eligible": false
+        },
+        {
+          "id": "anchor-dash",
+          "title": "Brace, then move",
+          "description": "Keep Brace and add earned Dash as a separate action. Dash spends one resolve to move two cells. This amendment requires actual level two; it grants no points or recovery.",
+          "class_id": "anchor",
+          "background_id": "workshop",
+          "slots": [
+            "brace",
+            "dash",
+            null,
+            null
+          ],
+          "minimum_level": 2,
+          "recommended_rig": "plate",
+          "eligible": false
+        },
+        {
+          "id": "lure-dash",
+          "title": "Draw, then range",
+          "description": "Keep Draw and add earned Dash for a different movement choice. Both spend actual resolve. This amendment requires actual level two and does not refill resources or begin the next encounter.",
+          "class_id": "lure",
+          "background_id": "trailborn",
+          "slots": [
+            "draw",
+            "dash",
+            null,
+            null
+          ],
+          "minimum_level": 2,
+          "recommended_rig": "trail",
+          "eligible": false
+        }
+      ]
+    },
+    "intake": {
+      "sequence": 18,
+      "command": "slot",
+      "accepted": true,
+      "text": "Skill: 0 damage, 3 resolve spent. Completed; reward committed. Level 3, 2 unspent points.",
+      "confirmed": true,
+      "pending": false,
+      "draft_revision": 2,
+      "reviewed_revision": 2,
+      "draft": {
+        "handle": "Iona",
+        "accent": "teal",
+        "class_id": "lure",
+        "background_id": "trailborn",
+        "slots": [
+          "draw",
+          null,
+          null,
+          null
+        ]
+      },
+      "identity": {
+        "handle": "Iona",
+        "accent": "teal",
+        "class_id": "lure",
+        "background_id": "trailborn",
+        "slots": [
+          "draw",
+          null,
+          null,
+          null
+        ]
+      },
+      "state": {
+        "class_id": "lure",
+        "background_id": "trailborn",
+        "slots": [
+          "draw",
+          null,
+          null,
+          null
+        ],
+        "active": false,
+        "complete": true,
+        "won": true,
+        "stage": 1,
+        "beat": 6,
+        "position": 6,
+        "health": 11,
+        "resolve": 7,
+        "rig": "Trail",
+        "attempts": 2,
+        "consumed_rigs": 2,
+        "transactions": 4,
+        "inventory": {
+          "fiber": 0,
+          "binder": 0,
+          "trail_rig": 0
+        },
+        "level": 3,
+        "xp": 25,
+        "unspent": 2,
+        "vitality": 0,
+        "focus": 2
+      },
+      "threat": "BOLT: moving exposes health; the approach skill spends resolve to protect.",
+      "required_position": 4,
+      "maximum_beats": 6
+    },
+    "memory": {
+      "sequence": 4,
+      "command": "serve",
+      "accepted": true,
+      "text": "One coin and one action spent. The east bench actually supplied its one fitting. Later expiry cannot erase this output.",
+      "turn": 4,
+      "parts": 2,
+      "coins": 0,
+      "policy": "independent",
+      "complete": true,
+      "benches": [
+        {
+          "id": "west",
+          "helped": true,
+          "support": true,
+          "recent": false,
+          "expires": null,
+          "eligible": false,
+          "delivered": true,
+          "condition_expression": "Helped=true \u0026 Support=true \u0026 Recent=true",
+          "condition_satisfied": false,
+          "condition_complete": true
+        },
+        {
+          "id": "east",
+          "helped": true,
+          "support": true,
+          "recent": true,
+          "expires": 6,
+          "eligible": false,
+          "delivered": true,
+          "condition_expression": "Helped=true \u0026 Support=true \u0026 Recent=true",
+          "condition_satisfied": true,
+          "condition_complete": true
+        }
+      ],
+      "history": [
+        {
+          "sequence": 1,
+          "command": "help",
+          "bench": "west",
+          "turn": 1,
+          "parts": 3,
+          "coins": 2,
+          "fittings": 0
+        },
+        {
+          "sequence": 2,
+          "command": "serve",
+          "bench": "west",
+          "turn": 2,
+          "parts": 3,
+          "coins": 1,
+          "fittings": 1
+        },
+        {
+          "sequence": 3,
+          "command": "help",
+          "bench": "east",
+          "turn": 3,
+          "parts": 2,
+          "coins": 1,
+          "fittings": 1
+        },
+        {
+          "sequence": 4,
+          "command": "serve",
+          "bench": "east",
+          "turn": 4,
+          "parts": 2,
+          "coins": 0,
+          "fittings": 2
+        }
+      ]
+    },
+    "encounter_view": {
+      "person": {
+        "handle": "Iona",
+        "accent": "teal",
+        "class_id": "lure",
+        "rig": "trail",
+        "confirmed": true
+      },
+      "encounter": {
+        "phase": "complete",
+        "outcome": "complete",
+        "stage": 1,
+        "owner_stage": 1,
+        "active": false,
+        "complete": true,
+        "won": true,
+        "beat": 6,
+        "max_beats": 6,
+        "position": 6,
+        "required_position": 4,
+        "world_end": 8,
+        "threshold_reached": true,
+        "health": 11,
+        "resolve": 7,
+        "threat_kind": "none",
+        "threat_text": "No active encounter threat."
+      },
+      "action": {
+        "command": "slot",
+        "accepted": true,
+        "kind": "skill",
+        "event_sequence": 10,
+        "from_position": 5,
+        "to_position": 6,
+        "health_lost": 0,
+        "resolve_spent": 3,
+        "resolve_gained": 0,
+        "moved": true,
+        "contact": "protected"
+      }
+    },
+    "fittings": [
+      {
+        "bench": "west",
+        "acquired": true,
+        "spent": true,
+        "available": false,
+        "rig": "trail"
+      },
+      {
+        "bench": "east",
+        "acquired": true,
+        "spent": true,
+        "available": false,
+        "rig": "trail"
+      }
+    ],
+    "assembly_receipts": [
+      {
+        "bench": "west",
+        "rig": "trail",
+        "request_id": "fitting_west"
+      },
+      {
+        "bench": "east",
+        "rig": "trail",
+        "request_id": "fitting_east"
+      }
+    ]
+  },
+  "channel": {
+    "sequence": 22,
+    "command": "slot",
+    "accepted": true,
+    "text": "Skill: 0 damage, 3 resolve spent. Completed; reward committed. Level 3, 2 unspent points.",
+    "workshop_closed": true,
+    "sample_case": {
+      "status": "secured",
+      "case_spent": true,
+      "acquired": true,
+      "site": "channel",
+      "collection_attempt": 2,
+      "receipt": {
+        "site": "channel",
+        "attempt": 2,
+        "before_beat": 2,
+        "after_beat": 3,
+        "hp_before": 11,
+        "hp_after": 5,
+        "health_lost": 6,
+        "acquired": true
+      },
+      "sites": [
+        {
+          "id": "ridge",
+          "stage": 0,
+          "position": 1,
+          "eligible": false
+        },
+        {
+          "id": "channel",
+          "stage": 1,
+          "position": 2,
+          "eligible": false
+        }
+      ]
+    },
+    "preparation_book": {
+      "sha256": "d6771016c773bb10e95410050128094e2f3f1b243be464ef6be611b3dde5ea95",
+      "draft_card_id": null,
+      "confirmed_card_id": null,
+      "cards": [
+        {
+          "id": "anchor-start",
+          "title": "A steady opening",
+          "description": "Brace protects in place against a bolt. Walking during a pulse changes position. This is a starting proposal, not a supplied Plate rig or a promise of survival.",
+          "class_id": "anchor",
+          "background_id": "workshop",
+          "slots": [
+            "brace",
+            null,
+            null,
+            null
+          ],
+          "minimum_level": 1,
+          "recommended_rig": "plate",
+          "eligible": false
+        },
+        {
+          "id": "lure-start",
+          "title": "Draw a path",
+          "description": "Draw advances one cell against a bolt while spending three resolve. Move during a pulse. A Trail rig is suggested here, not acquired or equipped by this card.",
+          "class_id": "lure",
+          "background_id": "trailborn",
+          "slots": [
+            "draw",
+            null,
+            null,
+            null
+          ],
+          "minimum_level": 1,
+          "recommended_rig": "trail",
+          "eligible": false
+        },
+        {
+          "id": "anchor-dash",
+          "title": "Brace, then move",
+          "description": "Keep Brace and add earned Dash as a separate action. Dash spends one resolve to move two cells. This amendment requires actual level two; it grants no points or recovery.",
+          "class_id": "anchor",
+          "background_id": "workshop",
+          "slots": [
+            "brace",
+            "dash",
+            null,
+            null
+          ],
+          "minimum_level": 2,
+          "recommended_rig": "plate",
+          "eligible": false
+        },
+        {
+          "id": "lure-dash",
+          "title": "Draw, then range",
+          "description": "Keep Draw and add earned Dash for a different movement choice. Both spend actual resolve. This amendment requires actual level two and does not refill resources or begin the next encounter.",
+          "class_id": "lure",
+          "background_id": "trailborn",
+          "slots": [
+            "draw",
+            "dash",
+            null,
+            null
+          ],
+          "minimum_level": 2,
+          "recommended_rig": "trail",
+          "eligible": false
+        }
+      ]
+    },
+    "intake": {
+      "sequence": 18,
+      "command": "slot",
+      "accepted": true,
+      "text": "Skill: 0 damage, 3 resolve spent. Completed; reward committed. Level 3, 2 unspent points.",
+      "confirmed": true,
+      "pending": false,
+      "draft_revision": 2,
+      "reviewed_revision": 2,
+      "draft": {
+        "handle": "Iona",
+        "accent": "teal",
+        "class_id": "lure",
+        "background_id": "trailborn",
+        "slots": [
+          "draw",
+          null,
+          null,
+          null
+        ]
+      },
+      "identity": {
+        "handle": "Iona",
+        "accent": "teal",
+        "class_id": "lure",
+        "background_id": "trailborn",
+        "slots": [
+          "draw",
+          null,
+          null,
+          null
+        ]
+      },
+      "state": {
+        "class_id": "lure",
+        "background_id": "trailborn",
+        "slots": [
+          "draw",
+          null,
+          null,
+          null
+        ],
+        "active": false,
+        "complete": true,
+        "won": true,
+        "stage": 1,
+        "beat": 6,
+        "position": 5,
+        "health": 5,
+        "resolve": 5,
+        "rig": "Trail",
+        "attempts": 2,
+        "consumed_rigs": 2,
+        "transactions": 4,
+        "inventory": {
+          "fiber": 0,
+          "binder": 0,
+          "trail_rig": 0
+        },
+        "level": 3,
+        "xp": 25,
+        "unspent": 2,
+        "vitality": 0,
+        "focus": 2
+      },
+      "threat": "BOLT: moving exposes health; the approach skill spends resolve to protect.",
+      "required_position": 4,
+      "maximum_beats": 6
+    },
+    "memory": {
+      "sequence": 4,
+      "command": "serve",
+      "accepted": true,
+      "text": "One coin and one action spent. The east bench actually supplied its one fitting. Later expiry cannot erase this output.",
+      "turn": 4,
+      "parts": 2,
+      "coins": 0,
+      "policy": "independent",
+      "complete": true,
+      "benches": [
+        {
+          "id": "west",
+          "helped": true,
+          "support": true,
+          "recent": false,
+          "expires": null,
+          "eligible": false,
+          "delivered": true,
+          "condition_expression": "Helped=true \u0026 Support=true \u0026 Recent=true",
+          "condition_satisfied": false,
+          "condition_complete": true
+        },
+        {
+          "id": "east",
+          "helped": true,
+          "support": true,
+          "recent": true,
+          "expires": 6,
+          "eligible": false,
+          "delivered": true,
+          "condition_expression": "Helped=true \u0026 Support=true \u0026 Recent=true",
+          "condition_satisfied": true,
+          "condition_complete": true
+        }
+      ],
+      "history": [
+        {
+          "sequence": 1,
+          "command": "help",
+          "bench": "west",
+          "turn": 1,
+          "parts": 3,
+          "coins": 2,
+          "fittings": 0
+        },
+        {
+          "sequence": 2,
+          "command": "serve",
+          "bench": "west",
+          "turn": 2,
+          "parts": 3,
+          "coins": 1,
+          "fittings": 1
+        },
+        {
+          "sequence": 3,
+          "command": "help",
+          "bench": "east",
+          "turn": 3,
+          "parts": 2,
+          "coins": 1,
+          "fittings": 1
+        },
+        {
+          "sequence": 4,
+          "command": "serve",
+          "bench": "east",
+          "turn": 4,
+          "parts": 2,
+          "coins": 0,
+          "fittings": 2
+        }
+      ]
+    },
+    "encounter_view": {
+      "person": {
+        "handle": "Iona",
+        "accent": "teal",
+        "class_id": "lure",
+        "rig": "trail",
+        "confirmed": true
+      },
+      "encounter": {
+        "phase": "complete",
+        "outcome": "complete",
+        "stage": 1,
+        "owner_stage": 1,
+        "active": false,
+        "complete": true,
+        "won": true,
+        "beat": 6,
+        "max_beats": 6,
+        "position": 5,
+        "required_position": 4,
+        "world_end": 8,
+        "threshold_reached": true,
+        "health": 5,
+        "resolve": 5,
+        "threat_kind": "none",
+        "threat_text": "No active encounter threat."
+      },
+      "action": {
+        "command": "slot",
+        "accepted": true,
+        "kind": "skill",
+        "event_sequence": 10,
+        "from_position": 4,
+        "to_position": 5,
+        "health_lost": 0,
+        "resolve_spent": 3,
+        "resolve_gained": 0,
+        "moved": true,
+        "contact": "protected"
+      }
+    },
+    "fittings": [
+      {
+        "bench": "west",
+        "acquired": true,
+        "spent": true,
+        "available": false,
+        "rig": "trail"
+      },
+      {
+        "bench": "east",
+        "acquired": true,
+        "spent": true,
+        "available": false,
+        "rig": "trail"
+      }
+    ],
+    "assembly_receipts": [
+      {
+        "bench": "west",
+        "rig": "trail",
+        "request_id": "fitting_west"
+      },
+      {
+        "bench": "east",
+        "rig": "trail",
+        "request_id": "fitting_east"
+      }
+    ]
+  },
+  "healthy_deadline": {
+    "sequence": 24,
+    "command": "sample",
+    "accepted": true,
+    "text": "The actual Wait resolved its threat and beat before collection. The one case is now spent; the paid encounter failed before acquisition; no sample was obtained.",
+    "workshop_closed": true,
+    "sample_case": {
+      "status": "lost",
+      "case_spent": true,
+      "acquired": false,
+      "site": "channel",
+      "collection_attempt": 2,
+      "receipt": {
+        "site": "channel",
+        "attempt": 2,
+        "before_beat": 5,
+        "after_beat": 6,
+        "hp_before": 13,
+        "hp_after": 7,
+        "health_lost": 6,
+        "acquired": false
+      },
+      "sites": [
+        {
+          "id": "ridge",
+          "stage": 0,
+          "position": 1,
+          "eligible": false
+        },
+        {
+          "id": "channel",
+          "stage": 1,
+          "position": 2,
+          "eligible": false
+        }
+      ]
+    },
+    "preparation_book": {
+      "sha256": "d6771016c773bb10e95410050128094e2f3f1b243be464ef6be611b3dde5ea95",
+      "draft_card_id": null,
+      "confirmed_card_id": null,
+      "cards": [
+        {
+          "id": "anchor-start",
+          "title": "A steady opening",
+          "description": "Brace protects in place against a bolt. Walking during a pulse changes position. This is a starting proposal, not a supplied Plate rig or a promise of survival.",
+          "class_id": "anchor",
+          "background_id": "workshop",
+          "slots": [
+            "brace",
+            null,
+            null,
+            null
+          ],
+          "minimum_level": 1,
+          "recommended_rig": "plate",
+          "eligible": true
+        },
+        {
+          "id": "lure-start",
+          "title": "Draw a path",
+          "description": "Draw advances one cell against a bolt while spending three resolve. Move during a pulse. A Trail rig is suggested here, not acquired or equipped by this card.",
+          "class_id": "lure",
+          "background_id": "trailborn",
+          "slots": [
+            "draw",
+            null,
+            null,
+            null
+          ],
+          "minimum_level": 1,
+          "recommended_rig": "trail",
+          "eligible": true
+        },
+        {
+          "id": "anchor-dash",
+          "title": "Brace, then move",
+          "description": "Keep Brace and add earned Dash as a separate action. Dash spends one resolve to move two cells. This amendment requires actual level two; it grants no points or recovery.",
+          "class_id": "anchor",
+          "background_id": "workshop",
+          "slots": [
+            "brace",
+            "dash",
+            null,
+            null
+          ],
+          "minimum_level": 2,
+          "recommended_rig": "plate",
+          "eligible": true
+        },
+        {
+          "id": "lure-dash",
+          "title": "Draw, then range",
+          "description": "Keep Draw and add earned Dash for a different movement choice. Both spend actual resolve. This amendment requires actual level two and does not refill resources or begin the next encounter.",
+          "class_id": "lure",
+          "background_id": "trailborn",
+          "slots": [
+            "draw",
+            "dash",
+            null,
+            null
+          ],
+          "minimum_level": 2,
+          "recommended_rig": "trail",
+          "eligible": true
+        }
+      ]
+    },
+    "intake": {
+      "sequence": 20,
+      "command": "wait",
+      "accepted": true,
+      "text": "Wait: 6 damage, 0 resolve spent. Crossing failed. Reprepare and retry; no completion reward.",
+      "confirmed": true,
+      "pending": false,
+      "draft_revision": 2,
+      "reviewed_revision": 2,
+      "draft": {
+        "handle": "Wayfarer",
+        "accent": "copper",
+        "class_id": "anchor",
+        "background_id": "workshop",
+        "slots": [
+          "brace",
+          "dash",
+          null,
+          null
+        ]
+      },
+      "identity": {
+        "handle": "Wayfarer",
+        "accent": "copper",
+        "class_id": "anchor",
+        "background_id": "workshop",
+        "slots": [
+          "brace",
+          "dash",
+          null,
+          null
+        ]
+      },
+      "state": {
+        "class_id": "anchor",
+        "background_id": "workshop",
+        "slots": [
+          "brace",
+          "dash",
+          null,
+          null
+        ],
+        "active": false,
+        "complete": false,
+        "won": false,
+        "stage": 1,
+        "beat": 6,
+        "position": 2,
+        "health": 7,
+        "resolve": 0,
+        "rig": "Plate",
+        "attempts": 2,
+        "consumed_rigs": 2,
+        "transactions": 4,
+        "inventory": {
+          "fiber": 0,
+          "binder": 0,
+          "plate_rig": 0
+        },
+        "level": 2,
+        "xp": 10,
+        "unspent": 0,
+        "vitality": 2,
+        "focus": 0
+      },
+      "threat": "BOLT: moving exposes health; the approach skill spends resolve to protect.",
+      "required_position": 4,
+      "maximum_beats": 6
+    },
+    "memory": {
+      "sequence": 4,
+      "command": "serve",
+      "accepted": true,
+      "text": "One coin and one action spent. The east bench actually supplied its one fitting. Later expiry cannot erase this output.",
+      "turn": 4,
+      "parts": 2,
+      "coins": 0,
+      "policy": "independent",
+      "complete": true,
+      "benches": [
+        {
+          "id": "west",
+          "helped": true,
+          "support": true,
+          "recent": false,
+          "expires": null,
+          "eligible": false,
+          "delivered": true,
+          "condition_expression": "Helped=true \u0026 Support=true \u0026 Recent=true",
+          "condition_satisfied": false,
+          "condition_complete": true
+        },
+        {
+          "id": "east",
+          "helped": true,
+          "support": true,
+          "recent": true,
+          "expires": 6,
+          "eligible": false,
+          "delivered": true,
+          "condition_expression": "Helped=true \u0026 Support=true \u0026 Recent=true",
+          "condition_satisfied": true,
+          "condition_complete": true
+        }
+      ],
+      "history": [
+        {
+          "sequence": 1,
+          "command": "help",
+          "bench": "west",
+          "turn": 1,
+          "parts": 3,
+          "coins": 2,
+          "fittings": 0
+        },
+        {
+          "sequence": 2,
+          "command": "serve",
+          "bench": "west",
+          "turn": 2,
+          "parts": 3,
+          "coins": 1,
+          "fittings": 1
+        },
+        {
+          "sequence": 3,
+          "command": "help",
+          "bench": "east",
+          "turn": 3,
+          "parts": 2,
+          "coins": 1,
+          "fittings": 1
+        },
+        {
+          "sequence": 4,
+          "command": "serve",
+          "bench": "east",
+          "turn": 4,
+          "parts": 2,
+          "coins": 0,
+          "fittings": 2
+        }
+      ]
+    },
+    "encounter_view": {
+      "person": {
+        "handle": "Wayfarer",
+        "accent": "copper",
+        "class_id": "anchor",
+        "rig": "plate",
+        "confirmed": true
+      },
+      "encounter": {
+        "phase": "failed",
+        "outcome": "failed",
+        "stage": 1,
+        "owner_stage": 1,
+        "active": false,
+        "complete": false,
+        "won": false,
+        "beat": 6,
+        "max_beats": 6,
+        "position": 2,
+        "required_position": 4,
+        "world_end": 8,
+        "threshold_reached": false,
+        "health": 7,
+        "resolve": 0,
+        "threat_kind": "none",
+        "threat_text": "No active encounter threat."
+      },
+      "action": {
+        "command": "sample",
+        "accepted": true,
+        "kind": "wait",
+        "event_sequence": 10,
+        "from_position": 2,
+        "to_position": 2,
+        "health_lost": 6,
+        "resolve_spent": 0,
+        "resolve_gained": 0,
+        "moved": false,
+        "contact": "hurt"
+      }
+    },
+    "fittings": [
+      {
+        "bench": "west",
+        "acquired": true,
+        "spent": true,
+        "available": false,
+        "rig": "plate"
+      },
+      {
+        "bench": "east",
+        "acquired": true,
+        "spent": true,
+        "available": false,
+        "rig": "plate"
+      }
+    ],
+    "assembly_receipts": [
+      {
+        "bench": "west",
+        "rig": "plate",
+        "request_id": "fitting_west"
+      },
+      {
+        "bench": "east",
+        "rig": "plate",
+        "request_id": "fitting_east"
+      }
+    ]
+  },
+  "lethal_collection": {
+    "sequence": 16,
+    "command": "sample",
+    "accepted": false,
+    "text": "Sampling requires the one unused case and your actual active position at that exact site. Nothing was collected or spent.",
+    "workshop_closed": true,
+    "sample_case": {
+      "status": "lost",
+      "case_spent": true,
+      "acquired": false,
+      "site": "ridge",
+      "collection_attempt": 1,
+      "receipt": {
+        "site": "ridge",
+        "attempt": 1,
+        "before_beat": 2,
+        "after_beat": 3,
+        "hp_before": 2,
+        "hp_after": 0,
+        "health_lost": 2,
+        "acquired": false
+      },
+      "sites": [
+        {
+          "id": "ridge",
+          "stage": 0,
+          "position": 1,
+          "eligible": false
+        },
+        {
+          "id": "channel",
+          "stage": 1,
+          "position": 2,
+          "eligible": false
+        }
+      ]
+    },
+    "preparation_book": {
+      "sha256": "d6771016c773bb10e95410050128094e2f3f1b243be464ef6be611b3dde5ea95",
+      "draft_card_id": null,
+      "confirmed_card_id": null,
+      "cards": [
+        {
+          "id": "anchor-start",
+          "title": "A steady opening",
+          "description": "Brace protects in place against a bolt. Walking during a pulse changes position. This is a starting proposal, not a supplied Plate rig or a promise of survival.",
+          "class_id": "anchor",
+          "background_id": "workshop",
+          "slots": [
+            "brace",
+            null,
+            null,
+            null
+          ],
+          "minimum_level": 1,
+          "recommended_rig": "plate",
+          "eligible": false
+        },
+        {
+          "id": "lure-start",
+          "title": "Draw a path",
+          "description": "Draw advances one cell against a bolt while spending three resolve. Move during a pulse. A Trail rig is suggested here, not acquired or equipped by this card.",
+          "class_id": "lure",
+          "background_id": "trailborn",
+          "slots": [
+            "draw",
+            null,
+            null,
+            null
+          ],
+          "minimum_level": 1,
+          "recommended_rig": "trail",
+          "eligible": false
+        },
+        {
+          "id": "anchor-dash",
+          "title": "Brace, then move",
+          "description": "Keep Brace and add earned Dash as a separate action. Dash spends one resolve to move two cells. This amendment requires actual level two; it grants no points or recovery.",
+          "class_id": "anchor",
+          "background_id": "workshop",
+          "slots": [
+            "brace",
+            "dash",
+            null,
+            null
+          ],
+          "minimum_level": 2,
+          "recommended_rig": "plate",
+          "eligible": false
+        },
+        {
+          "id": "lure-dash",
+          "title": "Draw, then range",
+          "description": "Keep Draw and add earned Dash for a different movement choice. Both spend actual resolve. This amendment requires actual level two and does not refill resources or begin the next encounter.",
+          "class_id": "lure",
+          "background_id": "trailborn",
+          "slots": [
+            "draw",
+            "dash",
+            null,
+            null
+          ],
+          "minimum_level": 2,
+          "recommended_rig": "trail",
+          "eligible": false
+        }
+      ]
+    },
+    "intake": {
+      "sequence": 11,
+      "command": "slot",
+      "accepted": true,
+      "text": "Skill: 0 damage, 3 resolve spent.",
+      "confirmed": true,
+      "pending": false,
+      "draft_revision": 2,
+      "reviewed_revision": 2,
+      "draft": {
+        "handle": "Iona",
+        "accent": "teal",
+        "class_id": "lure",
+        "background_id": "trailborn",
+        "slots": [
+          "draw",
+          null,
+          null,
+          null
+        ]
+      },
+      "identity": {
+        "handle": "Iona",
+        "accent": "teal",
+        "class_id": "lure",
+        "background_id": "trailborn",
+        "slots": [
+          "draw",
+          null,
+          null,
+          null
+        ]
+      },
+      "state": {
+        "class_id": "lure",
+        "background_id": "trailborn",
+        "slots": [
+          "draw",
+          null,
+          null,
+          null
+        ],
+        "active": true,
+        "complete": false,
+        "won": false,
+        "stage": 0,
+        "beat": 1,
+        "position": 1,
+        "health": 10,
+        "resolve": 7,
+        "rig": "Trail",
+        "attempts": 2,
+        "consumed_rigs": 2,
+        "transactions": 4,
+        "inventory": {
+          "fiber": 0,
+          "binder": 0,
+          "trail_rig": 0
+        },
+        "level": 1,
+        "xp": 0,
+        "unspent": 0,
+        "vitality": 0,
+        "focus": 0
+      },
+      "threat": "BOLT: moving exposes health; the approach skill spends resolve to protect.",
+      "required_position": 2,
+      "maximum_beats": 4
+    },
+    "memory": {
+      "sequence": 4,
+      "command": "serve",
+      "accepted": true,
+      "text": "One coin and one action spent. The east bench actually supplied its one fitting. Later expiry cannot erase this output.",
+      "turn": 4,
+      "parts": 2,
+      "coins": 0,
+      "policy": "independent",
+      "complete": true,
+      "benches": [
+        {
+          "id": "west",
+          "helped": true,
+          "support": true,
+          "recent": false,
+          "expires": null,
+          "eligible": false,
+          "delivered": true,
+          "condition_expression": "Helped=true \u0026 Support=true \u0026 Recent=true",
+          "condition_satisfied": false,
+          "condition_complete": true
+        },
+        {
+          "id": "east",
+          "helped": true,
+          "support": true,
+          "recent": true,
+          "expires": 6,
+          "eligible": false,
+          "delivered": true,
+          "condition_expression": "Helped=true \u0026 Support=true \u0026 Recent=true",
+          "condition_satisfied": true,
+          "condition_complete": true
+        }
+      ],
+      "history": [
+        {
+          "sequence": 1,
+          "command": "help",
+          "bench": "west",
+          "turn": 1,
+          "parts": 3,
+          "coins": 2,
+          "fittings": 0
+        },
+        {
+          "sequence": 2,
+          "command": "serve",
+          "bench": "west",
+          "turn": 2,
+          "parts": 3,
+          "coins": 1,
+          "fittings": 1
+        },
+        {
+          "sequence": 3,
+          "command": "help",
+          "bench": "east",
+          "turn": 3,
+          "parts": 2,
+          "coins": 1,
+          "fittings": 1
+        },
+        {
+          "sequence": 4,
+          "command": "serve",
+          "bench": "east",
+          "turn": 4,
+          "parts": 2,
+          "coins": 0,
+          "fittings": 2
+        }
+      ]
+    },
+    "encounter_view": {
+      "person": {
+        "handle": "Iona",
+        "accent": "teal",
+        "class_id": "lure",
+        "rig": "trail",
+        "confirmed": true
+      },
+      "encounter": {
+        "phase": "active",
+        "outcome": "active",
+        "stage": 0,
+        "owner_stage": 0,
+        "active": true,
+        "complete": false,
+        "won": false,
+        "beat": 1,
+        "max_beats": 4,
+        "position": 1,
+        "required_position": 2,
+        "world_end": 8,
+        "threshold_reached": false,
+        "health": 10,
+        "resolve": 7,
+        "threat_kind": "bolt",
+        "threat_text": "BOLT: moving exposes health; the approach skill spends resolve to protect."
+      },
+      "action": {
+        "command": "sample",
+        "accepted": false,
+        "kind": "refused",
+        "event_sequence": 4,
+        "from_position": 1,
+        "to_position": 1,
+        "health_lost": 0,
+        "resolve_spent": 0,
+        "resolve_gained": 0,
+        "moved": false,
+        "contact": "none"
+      }
+    },
+    "fittings": [
+      {
+        "bench": "west",
+        "acquired": true,
+        "spent": true,
+        "available": false,
+        "rig": "trail"
+      },
+      {
+        "bench": "east",
+        "acquired": true,
+        "spent": true,
+        "available": false,
+        "rig": "trail"
+      }
+    ],
+    "assembly_receipts": [
+      {
+        "bench": "west",
+        "rig": "trail",
+        "request_id": "fitting_west"
+      },
+      {
+        "bench": "east",
+        "rig": "trail",
+        "request_id": "fitting_east"
+      }
+    ]
+  },
+  "later_loss": {
+    "sequence": 17,
+    "command": "sample",
+    "accepted": false,
+    "text": "Sampling requires the one unused case and your actual active position at that exact site. Nothing was collected or spent.",
+    "workshop_closed": true,
+    "sample_case": {
+      "status": "lost",
+      "case_spent": true,
+      "acquired": true,
+      "site": "ridge",
+      "collection_attempt": 1,
+      "receipt": {
+        "site": "ridge",
+        "attempt": 1,
+        "before_beat": 1,
+        "after_beat": 2,
+        "hp_before": 10,
+        "hp_after": 6,
+        "health_lost": 4,
+        "acquired": true
+      },
+      "sites": [
+        {
+          "id": "ridge",
+          "stage": 0,
+          "position": 1,
+          "eligible": false
+        },
+        {
+          "id": "channel",
+          "stage": 1,
+          "position": 2,
+          "eligible": false
+        }
+      ]
+    },
+    "preparation_book": {
+      "sha256": "d6771016c773bb10e95410050128094e2f3f1b243be464ef6be611b3dde5ea95",
+      "draft_card_id": null,
+      "confirmed_card_id": null,
+      "cards": [
+        {
+          "id": "anchor-start",
+          "title": "A steady opening",
+          "description": "Brace protects in place against a bolt. Walking during a pulse changes position. This is a starting proposal, not a supplied Plate rig or a promise of survival.",
+          "class_id": "anchor",
+          "background_id": "workshop",
+          "slots": [
+            "brace",
+            null,
+            null,
+            null
+          ],
+          "minimum_level": 1,
+          "recommended_rig": "plate",
+          "eligible": false
+        },
+        {
+          "id": "lure-start",
+          "title": "Draw a path",
+          "description": "Draw advances one cell against a bolt while spending three resolve. Move during a pulse. A Trail rig is suggested here, not acquired or equipped by this card.",
+          "class_id": "lure",
+          "background_id": "trailborn",
+          "slots": [
+            "draw",
+            null,
+            null,
+            null
+          ],
+          "minimum_level": 1,
+          "recommended_rig": "trail",
+          "eligible": false
+        },
+        {
+          "id": "anchor-dash",
+          "title": "Brace, then move",
+          "description": "Keep Brace and add earned Dash as a separate action. Dash spends one resolve to move two cells. This amendment requires actual level two; it grants no points or recovery.",
+          "class_id": "anchor",
+          "background_id": "workshop",
+          "slots": [
+            "brace",
+            "dash",
+            null,
+            null
+          ],
+          "minimum_level": 2,
+          "recommended_rig": "plate",
+          "eligible": false
+        },
+        {
+          "id": "lure-dash",
+          "title": "Draw, then range",
+          "description": "Keep Draw and add earned Dash for a different movement choice. Both spend actual resolve. This amendment requires actual level two and does not refill resources or begin the next encounter.",
+          "class_id": "lure",
+          "background_id": "trailborn",
+          "slots": [
+            "draw",
+            "dash",
+            null,
+            null
+          ],
+          "minimum_level": 2,
+          "recommended_rig": "trail",
+          "eligible": false
+        }
+      ]
+    },
+    "intake": {
+      "sequence": 12,
+      "command": "slot",
+      "accepted": true,
+      "text": "Skill: 0 damage, 3 resolve spent.",
+      "confirmed": true,
+      "pending": false,
+      "draft_revision": 2,
+      "reviewed_revision": 2,
+      "draft": {
+        "handle": "Iona",
+        "accent": "teal",
+        "class_id": "lure",
+        "background_id": "trailborn",
+        "slots": [
+          "draw",
+          null,
+          null,
+          null
+        ]
+      },
+      "identity": {
+        "handle": "Iona",
+        "accent": "teal",
+        "class_id": "lure",
+        "background_id": "trailborn",
+        "slots": [
+          "draw",
+          null,
+          null,
+          null
+        ]
+      },
+      "state": {
+        "class_id": "lure",
+        "background_id": "trailborn",
+        "slots": [
+          "draw",
+          null,
+          null,
+          null
+        ],
+        "active": true,
+        "complete": false,
+        "won": false,
+        "stage": 0,
+        "beat": 1,
+        "position": 1,
+        "health": 10,
+        "resolve": 7,
+        "rig": "Trail",
+        "attempts": 2,
+        "consumed_rigs": 2,
+        "transactions": 4,
+        "inventory": {
+          "fiber": 0,
+          "binder": 0,
+          "trail_rig": 0
+        },
+        "level": 1,
+        "xp": 0,
+        "unspent": 0,
+        "vitality": 0,
+        "focus": 0
+      },
+      "threat": "BOLT: moving exposes health; the approach skill spends resolve to protect.",
+      "required_position": 2,
+      "maximum_beats": 4
+    },
+    "memory": {
+      "sequence": 4,
+      "command": "serve",
+      "accepted": true,
+      "text": "One coin and one action spent. The east bench actually supplied its one fitting. Later expiry cannot erase this output.",
+      "turn": 4,
+      "parts": 2,
+      "coins": 0,
+      "policy": "independent",
+      "complete": true,
+      "benches": [
+        {
+          "id": "west",
+          "helped": true,
+          "support": true,
+          "recent": false,
+          "expires": null,
+          "eligible": false,
+          "delivered": true,
+          "condition_expression": "Helped=true \u0026 Support=true \u0026 Recent=true",
+          "condition_satisfied": false,
+          "condition_complete": true
+        },
+        {
+          "id": "east",
+          "helped": true,
+          "support": true,
+          "recent": true,
+          "expires": 6,
+          "eligible": false,
+          "delivered": true,
+          "condition_expression": "Helped=true \u0026 Support=true \u0026 Recent=true",
+          "condition_satisfied": true,
+          "condition_complete": true
+        }
+      ],
+      "history": [
+        {
+          "sequence": 1,
+          "command": "help",
+          "bench": "west",
+          "turn": 1,
+          "parts": 3,
+          "coins": 2,
+          "fittings": 0
+        },
+        {
+          "sequence": 2,
+          "command": "serve",
+          "bench": "west",
+          "turn": 2,
+          "parts": 3,
+          "coins": 1,
+          "fittings": 1
+        },
+        {
+          "sequence": 3,
+          "command": "help",
+          "bench": "east",
+          "turn": 3,
+          "parts": 2,
+          "coins": 1,
+          "fittings": 1
+        },
+        {
+          "sequence": 4,
+          "command": "serve",
+          "bench": "east",
+          "turn": 4,
+          "parts": 2,
+          "coins": 0,
+          "fittings": 2
+        }
+      ]
+    },
+    "encounter_view": {
+      "person": {
+        "handle": "Iona",
+        "accent": "teal",
+        "class_id": "lure",
+        "rig": "trail",
+        "confirmed": true
+      },
+      "encounter": {
+        "phase": "active",
+        "outcome": "active",
+        "stage": 0,
+        "owner_stage": 0,
+        "active": true,
+        "complete": false,
+        "won": false,
+        "beat": 1,
+        "max_beats": 4,
+        "position": 1,
+        "required_position": 2,
+        "world_end": 8,
+        "threshold_reached": false,
+        "health": 10,
+        "resolve": 7,
+        "threat_kind": "bolt",
+        "threat_text": "BOLT: moving exposes health; the approach skill spends resolve to protect."
+      },
+      "action": {
+        "command": "sample",
+        "accepted": false,
+        "kind": "refused",
+        "event_sequence": 5,
+        "from_position": 1,
+        "to_position": 1,
+        "health_lost": 0,
+        "resolve_spent": 0,
+        "resolve_gained": 0,
+        "moved": false,
+        "contact": "none"
+      }
+    },
+    "fittings": [
+      {
+        "bench": "west",
+        "acquired": true,
+        "spent": true,
+        "available": false,
+        "rig": "trail"
+      },
+      {
+        "bench": "east",
+        "acquired": true,
+        "spent": true,
+        "available": false,
+        "rig": "trail"
+      }
+    ],
+    "assembly_receipts": [
+      {
+        "bench": "west",
+        "rig": "trail",
+        "request_id": "fitting_west"
+      },
+      {
+        "bench": "east",
+        "rig": "trail",
+        "request_id": "fitting_east"
+      }
+    ]
+  },
+  "unused_retry": {
+    "sequence": 16,
+    "command": "sample",
+    "accepted": true,
+    "text": "The actual Wait resolved its threat and beat before collection. The one case is now spent; surviving acquisition is carried, not returned or delivered.",
+    "workshop_closed": true,
+    "sample_case": {
+      "status": "carried",
+      "case_spent": true,
+      "acquired": true,
+      "site": "ridge",
+      "collection_attempt": 2,
+      "receipt": {
+        "site": "ridge",
+        "attempt": 2,
+        "before_beat": 1,
+        "after_beat": 2,
+        "hp_before": 10,
+        "hp_after": 6,
+        "health_lost": 4,
+        "acquired": true
+      },
+      "sites": [
+        {
+          "id": "ridge",
+          "stage": 0,
+          "position": 1,
+          "eligible": false
+        },
+        {
+          "id": "channel",
+          "stage": 1,
+          "position": 2,
+          "eligible": false
+        }
+      ]
+    },
+    "preparation_book": {
+      "sha256": "d6771016c773bb10e95410050128094e2f3f1b243be464ef6be611b3dde5ea95",
+      "draft_card_id": null,
+      "confirmed_card_id": null,
+      "cards": [
+        {
+          "id": "anchor-start",
+          "title": "A steady opening",
+          "description": "Brace protects in place against a bolt. Walking during a pulse changes position. This is a starting proposal, not a supplied Plate rig or a promise of survival.",
+          "class_id": "anchor",
+          "background_id": "workshop",
+          "slots": [
+            "brace",
+            null,
+            null,
+            null
+          ],
+          "minimum_level": 1,
+          "recommended_rig": "plate",
+          "eligible": false
+        },
+        {
+          "id": "lure-start",
+          "title": "Draw a path",
+          "description": "Draw advances one cell against a bolt while spending three resolve. Move during a pulse. A Trail rig is suggested here, not acquired or equipped by this card.",
+          "class_id": "lure",
+          "background_id": "trailborn",
+          "slots": [
+            "draw",
+            null,
+            null,
+            null
+          ],
+          "minimum_level": 1,
+          "recommended_rig": "trail",
+          "eligible": false
+        },
+        {
+          "id": "anchor-dash",
+          "title": "Brace, then move",
+          "description": "Keep Brace and add earned Dash as a separate action. Dash spends one resolve to move two cells. This amendment requires actual level two; it grants no points or recovery.",
+          "class_id": "anchor",
+          "background_id": "workshop",
+          "slots": [
+            "brace",
+            "dash",
+            null,
+            null
+          ],
+          "minimum_level": 2,
+          "recommended_rig": "plate",
+          "eligible": false
+        },
+        {
+          "id": "lure-dash",
+          "title": "Draw, then range",
+          "description": "Keep Draw and add earned Dash for a different movement choice. Both spend actual resolve. This amendment requires actual level two and does not refill resources or begin the next encounter.",
+          "class_id": "lure",
+          "background_id": "trailborn",
+          "slots": [
+            "draw",
+            "dash",
+            null,
+            null
+          ],
+          "minimum_level": 2,
+          "recommended_rig": "trail",
+          "eligible": false
+        }
+      ]
+    },
+    "intake": {
+      "sequence": 12,
+      "command": "wait",
+      "accepted": true,
+      "text": "Wait: 4 damage, 0 resolve spent.",
+      "confirmed": true,
+      "pending": false,
+      "draft_revision": 2,
+      "reviewed_revision": 2,
+      "draft": {
+        "handle": "Iona",
+        "accent": "teal",
+        "class_id": "lure",
+        "background_id": "trailborn",
+        "slots": [
+          "draw",
+          null,
+          null,
+          null
+        ]
+      },
+      "identity": {
+        "handle": "Iona",
+        "accent": "teal",
+        "class_id": "lure",
+        "background_id": "trailborn",
+        "slots": [
+          "draw",
+          null,
+          null,
+          null
+        ]
+      },
+      "state": {
+        "class_id": "lure",
+        "background_id": "trailborn",
+        "slots": [
+          "draw",
+          null,
+          null,
+          null
+        ],
+        "active": true,
+        "complete": false,
+        "won": false,
+        "stage": 0,
+        "beat": 2,
+        "position": 1,
+        "health": 6,
+        "resolve": 7,
+        "rig": "Trail",
+        "attempts": 2,
+        "consumed_rigs": 2,
+        "transactions": 4,
+        "inventory": {
+          "fiber": 0,
+          "binder": 0,
+          "trail_rig": 0
+        },
+        "level": 1,
+        "xp": 0,
+        "unspent": 0,
+        "vitality": 0,
+        "focus": 0
+      },
+      "threat": "PULSE at your current position: walking or dashing leaves it.",
+      "required_position": 2,
+      "maximum_beats": 4
+    },
+    "memory": {
+      "sequence": 4,
+      "command": "serve",
+      "accepted": true,
+      "text": "One coin and one action spent. The east bench actually supplied its one fitting. Later expiry cannot erase this output.",
+      "turn": 4,
+      "parts": 2,
+      "coins": 0,
+      "policy": "independent",
+      "complete": true,
+      "benches": [
+        {
+          "id": "west",
+          "helped": true,
+          "support": true,
+          "recent": false,
+          "expires": null,
+          "eligible": false,
+          "delivered": true,
+          "condition_expression": "Helped=true \u0026 Support=true \u0026 Recent=true",
+          "condition_satisfied": false,
+          "condition_complete": true
+        },
+        {
+          "id": "east",
+          "helped": true,
+          "support": true,
+          "recent": true,
+          "expires": 6,
+          "eligible": false,
+          "delivered": true,
+          "condition_expression": "Helped=true \u0026 Support=true \u0026 Recent=true",
+          "condition_satisfied": true,
+          "condition_complete": true
+        }
+      ],
+      "history": [
+        {
+          "sequence": 1,
+          "command": "help",
+          "bench": "west",
+          "turn": 1,
+          "parts": 3,
+          "coins": 2,
+          "fittings": 0
+        },
+        {
+          "sequence": 2,
+          "command": "serve",
+          "bench": "west",
+          "turn": 2,
+          "parts": 3,
+          "coins": 1,
+          "fittings": 1
+        },
+        {
+          "sequence": 3,
+          "command": "help",
+          "bench": "east",
+          "turn": 3,
+          "parts": 2,
+          "coins": 1,
+          "fittings": 1
+        },
+        {
+          "sequence": 4,
+          "command": "serve",
+          "bench": "east",
+          "turn": 4,
+          "parts": 2,
+          "coins": 0,
+          "fittings": 2
+        }
+      ]
+    },
+    "encounter_view": {
+      "person": {
+        "handle": "Iona",
+        "accent": "teal",
+        "class_id": "lure",
+        "rig": "trail",
+        "confirmed": true
+      },
+      "encounter": {
+        "phase": "active",
+        "outcome": "active",
+        "stage": 0,
+        "owner_stage": 0,
+        "active": true,
+        "complete": false,
+        "won": false,
+        "beat": 2,
+        "max_beats": 4,
+        "position": 1,
+        "required_position": 2,
+        "world_end": 8,
+        "threshold_reached": false,
+        "health": 6,
+        "resolve": 7,
+        "threat_kind": "pulse",
+        "threat_text": "PULSE at your current position: walking or dashing leaves it."
+      },
+      "action": {
+        "command": "sample",
+        "accepted": true,
+        "kind": "wait",
+        "event_sequence": 5,
+        "from_position": 1,
+        "to_position": 1,
+        "health_lost": 4,
+        "resolve_spent": 0,
+        "resolve_gained": 0,
+        "moved": false,
+        "contact": "hurt"
+      }
+    },
+    "fittings": [
+      {
+        "bench": "west",
+        "acquired": true,
+        "spent": true,
+        "available": false,
+        "rig": "trail"
+      },
+      {
+        "bench": "east",
+        "acquired": true,
+        "spent": true,
+        "available": false,
+        "rig": "trail"
+      }
+    ],
+    "assembly_receipts": [
+      {
+        "bench": "west",
+        "rig": "trail",
+        "request_id": "fitting_west"
+      },
+      {
+        "bench": "east",
+        "rig": "trail",
+        "request_id": "fitting_east"
+      }
+    ]
+  },
+  "no_sampling": {
+    "sequence": 22,
+    "command": "slot",
+    "accepted": true,
+    "text": "Skill: 0 damage, 3 resolve spent. Completed; reward committed. Level 3, 2 unspent points.",
+    "workshop_closed": true,
+    "sample_case": {
+      "status": "empty",
+      "case_spent": false,
+      "acquired": false,
+      "site": null,
+      "collection_attempt": null,
+      "receipt": null,
+      "sites": [
+        {
+          "id": "ridge",
+          "stage": 0,
+          "position": 1,
+          "eligible": false
+        },
+        {
+          "id": "channel",
+          "stage": 1,
+          "position": 2,
+          "eligible": false
+        }
+      ]
+    },
+    "preparation_book": {
+      "sha256": "d6771016c773bb10e95410050128094e2f3f1b243be464ef6be611b3dde5ea95",
+      "draft_card_id": null,
+      "confirmed_card_id": null,
+      "cards": [
+        {
+          "id": "anchor-start",
+          "title": "A steady opening",
+          "description": "Brace protects in place against a bolt. Walking during a pulse changes position. This is a starting proposal, not a supplied Plate rig or a promise of survival.",
+          "class_id": "anchor",
+          "background_id": "workshop",
+          "slots": [
+            "brace",
+            null,
+            null,
+            null
+          ],
+          "minimum_level": 1,
+          "recommended_rig": "plate",
+          "eligible": false
+        },
+        {
+          "id": "lure-start",
+          "title": "Draw a path",
+          "description": "Draw advances one cell against a bolt while spending three resolve. Move during a pulse. A Trail rig is suggested here, not acquired or equipped by this card.",
+          "class_id": "lure",
+          "background_id": "trailborn",
+          "slots": [
+            "draw",
+            null,
+            null,
+            null
+          ],
+          "minimum_level": 1,
+          "recommended_rig": "trail",
+          "eligible": false
+        },
+        {
+          "id": "anchor-dash",
+          "title": "Brace, then move",
+          "description": "Keep Brace and add earned Dash as a separate action. Dash spends one resolve to move two cells. This amendment requires actual level two; it grants no points or recovery.",
+          "class_id": "anchor",
+          "background_id": "workshop",
+          "slots": [
+            "brace",
+            "dash",
+            null,
+            null
+          ],
+          "minimum_level": 2,
+          "recommended_rig": "plate",
+          "eligible": false
+        },
+        {
+          "id": "lure-dash",
+          "title": "Draw, then range",
+          "description": "Keep Draw and add earned Dash for a different movement choice. Both spend actual resolve. This amendment requires actual level two and does not refill resources or begin the next encounter.",
+          "class_id": "lure",
+          "background_id": "trailborn",
+          "slots": [
+            "draw",
+            "dash",
+            null,
+            null
+          ],
+          "minimum_level": 2,
+          "recommended_rig": "trail",
+          "eligible": false
+        }
+      ]
+    },
+    "intake": {
+      "sequence": 18,
+      "command": "slot",
+      "accepted": true,
+      "text": "Skill: 0 damage, 3 resolve spent. Completed; reward committed. Level 3, 2 unspent points.",
+      "confirmed": true,
+      "pending": false,
+      "draft_revision": 2,
+      "reviewed_revision": 2,
+      "draft": {
+        "handle": "Iona",
+        "accent": "teal",
+        "class_id": "lure",
+        "background_id": "trailborn",
+        "slots": [
+          "draw",
+          null,
+          null,
+          null
+        ]
+      },
+      "identity": {
+        "handle": "Iona",
+        "accent": "teal",
+        "class_id": "lure",
+        "background_id": "trailborn",
+        "slots": [
+          "draw",
+          null,
+          null,
+          null
+        ]
+      },
+      "state": {
+        "class_id": "lure",
+        "background_id": "trailborn",
+        "slots": [
+          "draw",
+          null,
+          null,
+          null
+        ],
+        "active": false,
+        "complete": true,
+        "won": true,
+        "stage": 1,
+        "beat": 6,
+        "position": 6,
+        "health": 11,
+        "resolve": 7,
+        "rig": "Trail",
+        "attempts": 2,
+        "consumed_rigs": 2,
+        "transactions": 4,
+        "inventory": {
+          "fiber": 0,
+          "binder": 0,
+          "trail_rig": 0
+        },
+        "level": 3,
+        "xp": 25,
+        "unspent": 2,
+        "vitality": 0,
+        "focus": 2
+      },
+      "threat": "BOLT: moving exposes health; the approach skill spends resolve to protect.",
+      "required_position": 4,
+      "maximum_beats": 6
+    },
+    "memory": {
+      "sequence": 4,
+      "command": "serve",
+      "accepted": true,
+      "text": "One coin and one action spent. The east bench actually supplied its one fitting. Later expiry cannot erase this output.",
+      "turn": 4,
+      "parts": 2,
+      "coins": 0,
+      "policy": "independent",
+      "complete": true,
+      "benches": [
+        {
+          "id": "west",
+          "helped": true,
+          "support": true,
+          "recent": false,
+          "expires": null,
+          "eligible": false,
+          "delivered": true,
+          "condition_expression": "Helped=true \u0026 Support=true \u0026 Recent=true",
+          "condition_satisfied": false,
+          "condition_complete": true
+        },
+        {
+          "id": "east",
+          "helped": true,
+          "support": true,
+          "recent": true,
+          "expires": 6,
+          "eligible": false,
+          "delivered": true,
+          "condition_expression": "Helped=true \u0026 Support=true \u0026 Recent=true",
+          "condition_satisfied": true,
+          "condition_complete": true
+        }
+      ],
+      "history": [
+        {
+          "sequence": 1,
+          "command": "help",
+          "bench": "west",
+          "turn": 1,
+          "parts": 3,
+          "coins": 2,
+          "fittings": 0
+        },
+        {
+          "sequence": 2,
+          "command": "serve",
+          "bench": "west",
+          "turn": 2,
+          "parts": 3,
+          "coins": 1,
+          "fittings": 1
+        },
+        {
+          "sequence": 3,
+          "command": "help",
+          "bench": "east",
+          "turn": 3,
+          "parts": 2,
+          "coins": 1,
+          "fittings": 1
+        },
+        {
+          "sequence": 4,
+          "command": "serve",
+          "bench": "east",
+          "turn": 4,
+          "parts": 2,
+          "coins": 0,
+          "fittings": 2
+        }
+      ]
+    },
+    "encounter_view": {
+      "person": {
+        "handle": "Iona",
+        "accent": "teal",
+        "class_id": "lure",
+        "rig": "trail",
+        "confirmed": true
+      },
+      "encounter": {
+        "phase": "complete",
+        "outcome": "complete",
+        "stage": 1,
+        "owner_stage": 1,
+        "active": false,
+        "complete": true,
+        "won": true,
+        "beat": 6,
+        "max_beats": 6,
+        "position": 6,
+        "required_position": 4,
+        "world_end": 8,
+        "threshold_reached": true,
+        "health": 11,
+        "resolve": 7,
+        "threat_kind": "none",
+        "threat_text": "No active encounter threat."
+      },
+      "action": {
+        "command": "slot",
+        "accepted": true,
+        "kind": "skill",
+        "event_sequence": 10,
+        "from_position": 5,
+        "to_position": 6,
+        "health_lost": 0,
+        "resolve_spent": 3,
+        "resolve_gained": 0,
+        "moved": true,
+        "contact": "protected"
+      }
+    },
+    "fittings": [
+      {
+        "bench": "west",
+        "acquired": true,
+        "spent": true,
+        "available": false,
+        "rig": "trail"
+      },
+      {
+        "bench": "east",
+        "acquired": true,
+        "spent": true,
+        "available": false,
+        "rig": "trail"
+      }
+    ],
+    "assembly_receipts": [
+      {
+        "bench": "west",
+        "rig": "trail",
+        "request_id": "fitting_west"
+      },
+      {
+        "bench": "east",
+        "rig": "trail",
+        "request_id": "fitting_east"
+      }
+    ]
+  },
+  "limits": "Overlapping software controls, not participants, source balance, approved canon, return/delivery, Unity/Windows/Steam or human assessment."
+}

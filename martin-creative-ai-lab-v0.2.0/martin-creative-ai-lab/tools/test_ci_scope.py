@@ -57,7 +57,6 @@ class Classification(unittest.TestCase):
                  'labs/combat-response/cases.json': 'native_arena',
                  'projects/tokyo80s/public/game.js': 'chat_evaluation',
                  'projects/waystone-dialogue/browser/public/app.js': 'chat_evaluation',
-                 'projects/realtime-integration-lab/package-lock.json': 'chat_evaluation',
                  'evaluations/chat-send-buffering/runner.py': 'chat_evaluation',
                  'tools/check_calibration.py': 'chat_evaluation',
                  'labs/ai-evaluation/run.py': 'chat_evaluation',
@@ -122,6 +121,13 @@ class Classification(unittest.TestCase):
             self.assertEqual(set(lines[1:]), {f'{key}={str(key == "north_star_csharp").lower()}' for key in scope.JOBS})
             with contextlib.redirect_stdout(io.StringIO()) as stdout:scope.main(['--full'])
             self.assertTrue(all(json.loads(stdout.getvalue()).values()))
+
+
+class SharedBrowserDependencies(unittest.TestCase):
+    def test_actual_browser_lock_reaches_chat_and_csharp(self):
+        for name in ('package.json', 'package-lock.json'):
+            self.assertEqual(set(scope.affected(w('projects/realtime-integration-lab/'+name))),
+                             {'chat_evaluation', 'north_star_csharp'})
 
 
 class ActualGitDiff(unittest.TestCase):
