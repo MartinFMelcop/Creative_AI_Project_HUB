@@ -67,6 +67,10 @@ class CurrentContracts(unittest.TestCase):
         for path in ('delivery/authored-scene/package.py','delivery/authored-scene/runtime-lock.json','delivery/authored-scene/bundle/run-demo.sh'):
             with self.subTest(path=path):self.assertEqual(chosen(path),{'recipient'})
 
+    def test_response_inputs_reach_existing_combat_gate(self):
+        for path in ['north-star/combat-study/ResponseChecks/Program.cs','labs/combat-response/responses/protocol.json','evidence/response-chain/RUN.json']:
+            with self.subTest(path=path):self.assertEqual(chosen(path),{'combat'})
+
     def test_independent_combat_and_reputation_remain_separate(self):
         self.assertEqual(chosen('north-star/combat-study/Rules/Passives.cs'),{'combat'})
         self.assertEqual(chosen('north-star/reputation-study/Rules/Standing.cs'),{'reputation'})

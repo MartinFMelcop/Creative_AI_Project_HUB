@@ -1,0 +1,56 @@
+{
+  "kind": "OBSERVED_SOURCE",
+  "path": "references/rave-master/snapshots/36af1651271422ae33856e8b5d7b45702215f165/source/RM_CORE/DATA/CORE/REGRAS_DE_COMBATE.csv",
+  "sha256": "f2c97e85ce573c50aa1959ec81221882c4fff4d164126fc22c5e6c9dd64c17e9",
+  "selected": [
+    {
+      "RuleID": "STK-001",
+      "Sistema": "Stack",
+      "SubSistema": "Fluxo",
+      "Nome": "Ação entra na pilha",
+      "Definicao": "A ação escolhida entra na pilha, abre janela de triggers/reactions e então resolve (topo).",
+      "ValorPadrao": "A",
+      "Modo": "Todos",
+      "Prioridade": "MVP",
+      "DependeDe": "",
+      "Observacoes": ""
+    },
+    {
+      "RuleID": "STK-002",
+      "Sistema": "Stack",
+      "SubSistema": "Resolução",
+      "Nome": "Resolução LIFO",
+      "Definicao": "A pilha resolve em ordem LIFO (último a entrar, primeiro a resolver).",
+      "ValorPadrao": "LIFO",
+      "Modo": "Todos",
+      "Prioridade": "MVP",
+      "DependeDe": "",
+      "Observacoes": ""
+    },
+    {
+      "RuleID": "STK-007",
+      "Sistema": "Stack",
+      "SubSistema": "UI",
+      "Nome": "Pilha não é UI explícita",
+      "Definicao": "A pilha não é exibida como widget; o combate registra logs textuais de cadeias e resoluções.",
+      "ValorPadrao": "Log",
+      "Modo": "Todos",
+      "Prioridade": "MVP",
+      "DependeDe": "",
+      "Observacoes": ""
+    },
+    {
+      "RuleID": "CST-001",
+      "Sistema": "Custos",
+      "SubSistema": "Commit",
+      "Nome": "Custo no cast",
+      "Definicao": "Habilidades gastam custo mesmo se counteradas na pilha.",
+      "ValorPadrao": "Commit total",
+      "Modo": "Todos",
+      "Prioridade": "MVP",
+      "DependeDe": "",
+      "Observacoes": ""
+    }
+  ],
+  "limits": "Requirements inspected; no historical combat engine or numeric ability recovered/executed."
+}

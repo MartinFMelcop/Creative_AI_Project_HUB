@@ -1,0 +1,234 @@
+{
+  "schema_version": 1,
+  "kind": "destination_execution",
+  "baseline_commit": "770720a7ad4bca60d0aa577109b23cde9ea615eb",
+  "scope": "Typed preserved crafting intake and original scarce preparation using actual connected C# encounters",
+  "capability_ids": [
+    "NS-C01"
+  ],
+  "consumer_paths": [
+    "north-star/csharp/Domain/Crafting.cs",
+    "north-star/csharp/Forge/Expedition.cs",
+    "north-star/csharp/Forge/Program.cs"
+  ],
+  "checks": {
+    "passed": 80,
+    "failed": 0
+  },
+  "instrument_regressions": {
+    "passed": 10,
+    "failed": 0
+  },
+  "runtime": "Python 3.12.14; .NET SDK 10.0.401; actual compiled C# consumers on Linux; Unity/Windows/Steam not executed",
+  "source_artifacts": [
+    {
+      "local_path": "labs/economy-simulation/run.py",
+      "size_bytes": 11594,
+      "sha256": "8db26596115394a90b34c62d4fdc47d1217a333f0d6b8605a4f935f10589d382"
+    },
+    {
+      "local_path": "north-star/csharp/Checks/NorthStar.Checks.csproj",
+      "size_bytes": 420,
+      "sha256": "3f58ee26c26f3030dcdb7cc2c6db2b7e14bff43d81e936b95cc116bc82978d35"
+    },
+    {
+      "local_path": "north-star/csharp/Checks/Program.cs",
+      "size_bytes": 15597,
+      "sha256": "77ad4bf5d9bdb348fef302eb97a35a47e2c5956ed4823a86a622f2cf035b72ae"
+    },
+    {
+      "local_path": "north-star/csharp/Crossing/NorthStar.Crossing.csproj",
+      "size_bytes": 352,
+      "sha256": "09fbdffe415d44079f66da83d4d22e5b91169f3f1abdd0e1ebc2bacd2e3f0c88"
+    },
+    {
+      "local_path": "north-star/csharp/Crossing/Program.cs",
+      "size_bytes": 4226,
+      "sha256": "268c1b5ac582dd06f15eb3e40e7ce859a9c58eecfc58c7586d94bcaecf9c595e"
+    },
+    {
+      "local_path": "north-star/csharp/Crossing/Session.cs",
+      "size_bytes": 5357,
+      "sha256": "d25ac05ba1a94432474dd1b14b4fd608e446fc5344dcc4f779d8d5fe27a1b2c5"
+    },
+    {
+      "local_path": "north-star/csharp/Domain/Crafting.cs",
+      "size_bytes": 8035,
+      "sha256": "5a5a892b3e68cff73f7a443d7c014c79dbebf2954d28f447e1bf3a9c4759de57"
+    },
+    {
+      "local_path": "north-star/csharp/Domain/NorthStar.Domain.csproj",
+      "size_bytes": 344,
+      "sha256": "9570b674acfea69bb60098f495afd3b9e2cef2575fcfeb6db71c2cdecb2c4876"
+    },
+    {
+      "local_path": "north-star/csharp/Domain/Progression.cs",
+      "size_bytes": 8331,
+      "sha256": "8495e1ad92fea069c2c3989f6f2cc2600980575e72812df9480ed193c51c8685"
+    },
+    {
+      "local_path": "north-star/csharp/Forge/Expedition.cs",
+      "size_bytes": 4688,
+      "sha256": "579c1eb8375a5c281d35338f1c93cb529c16bf330f0576046c970d42c816bfc3"
+    },
+    {
+      "local_path": "north-star/csharp/Forge/NorthStar.Forge.csproj",
+      "size_bytes": 420,
+      "sha256": "3f58ee26c26f3030dcdb7cc2c6db2b7e14bff43d81e936b95cc116bc82978d35"
+    },
+    {
+      "local_path": "north-star/csharp/Forge/Program.cs",
+      "size_bytes": 6419,
+      "sha256": "3a289847c487ca3bca8a406635b7f0a2334daa959d767d31b3f732445a398c3a"
+    },
+    {
+      "local_path": "north-star/csharp/ForgeChecks/NorthStar.ForgeChecks.csproj",
+      "size_bytes": 350,
+      "sha256": "8a5c8039bcf4e9cb06e51d0a8099ed2b509f0233ee2981d4ddd557c32b874419"
+    },
+    {
+      "local_path": "north-star/csharp/ForgeChecks/Program.cs",
+      "size_bytes": 10852,
+      "sha256": "c918c3f27ba4d388026de300ca851fdfa4dd2c053595e3a367701c786b71cc61"
+    },
+    {
+      "local_path": "north-star/csharp/global.json",
+      "size_bytes": 55,
+      "sha256": "e0c0882461e712f6c2c66241bf2f175c60832e3ff077dc26091ff8c661d4193e"
+    },
+    {
+      "local_path": "projects/eclipse-fair/Cli/Journal.cs",
+      "size_bytes": 2439,
+      "sha256": "64db61d7599aa852dfa9815b9f3d58e1126cacc116357388319c791c0d9d6a76"
+    },
+    {
+      "local_path": "projects/eclipse-fair/Core/Game.cs",
+      "size_bytes": 8403,
+      "sha256": "59c4e50b13d0189c88b0a7cc11310f001bed0c687640b9a68b052a16fa2bea94"
+    },
+    {
+      "local_path": "references/rave-master/snapshots/36af1651271422ae33856e8b5d7b45702215f165/source/RM_CORE/DATA/CORE/CRAFTING_RECIPE.csv",
+      "size_bytes": 6572,
+      "sha256": "20abe53b6c99fda9bbc85f06f7e1d75983f2084a1561c21165309e455f83bf80"
+    },
+    {
+      "local_path": "references/rave-master/snapshots/36af1651271422ae33856e8b5d7b45702215f165/source/RM_CORE/DATA/CORE/CRAFTING_STATION.csv",
+      "size_bytes": 6385,
+      "sha256": "cc5ec167fdc9f8f75e57827d2987bb7bb2ecc89b79dd42c519b55b40343f464f"
+    },
+    {
+      "local_path": "evidence/economy-crafting/terminal-commands.txt",
+      "size_bytes": 103,
+      "sha256": "e49c1dba24c07629e4565bc9d7e1159538b700715e4f2e468310eeda130e2a10"
+    }
+  ],
+  "result_artifacts": [
+    {
+      "local_path": "evidence/economy-crafting/results.json",
+      "size_bytes": 17853,
+      "sha256": "e34c1976f059db2f85c3bb11a45302f68d12b71d61e1b1b0a988ee5a077fc691"
+    },
+    {
+      "local_path": "evidence/economy-crafting/native.json",
+      "size_bytes": 2873,
+      "sha256": "7804d5a688537f82f7c86a66da9a4f10620894be91b8c80dc00bd1f4af94a9fb"
+    },
+    {
+      "local_path": "evidence/economy-crafting/destination.json",
+      "size_bytes": 3703,
+      "sha256": "1cf626b794a364fd044d50f156508d17d675501eb9f21c5b9f4d0fa618831632"
+    },
+    {
+      "local_path": "evidence/economy-crafting/terminal.txt",
+      "size_bytes": 7008,
+      "sha256": "816aa4780199bdf0517438e96a7b9fca375bf8832f62db10f2bf86f3181484e5"
+    }
+  ],
+  "commands": [
+    {
+      "command": [
+        "python3",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "labs/economy-simulation",
+        "-p",
+        "test_*.py"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "python3",
+        "labs/economy-simulation/run.py",
+        "--dotnet",
+        "/workspace/work/structural-transformation/dotnet/dotnet",
+        "--output",
+        "/workspace/work/crafting-continuation/study.json"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "/workspace/work/structural-transformation/dotnet/dotnet",
+        "build",
+        "north-star/csharp/ForgeChecks/NorthStar.ForgeChecks.csproj",
+        "-c",
+        "Release"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "/workspace/work/structural-transformation/dotnet/dotnet",
+        "north-star/csharp/ForgeChecks/bin/Release/net10.0/NorthStar.ForgeChecks.dll",
+        "native",
+        "/workspace/work/crafting-continuation/native.json"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "/workspace/work/structural-transformation/dotnet/dotnet",
+        "north-star/csharp/Forge/bin/Release/net10.0/NorthStar.Forge.dll",
+        "--demo",
+        "/workspace/work/crafting-continuation/demo.json"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "timeout",
+        "15",
+        "/workspace/work/structural-transformation/dotnet/dotnet",
+        "north-star/csharp/Forge/bin/Release/net10.0/NorthStar.Forge.dll"
+      ],
+      "exit_code": 0,
+      "stdin_artifact": "evidence/economy-crafting/terminal-commands.txt",
+      "stdout_artifact": "evidence/economy-crafting/terminal.txt"
+    }
+  ],
+  "observations": {
+    "stations": 15,
+    "recipes": 21,
+    "typed_field_failures": 16,
+    "affected_stations": 6,
+    "referencing_recipes": 9,
+    "completed_scripted_journeys": 3
+  },
+  "limitations": [
+    "Static legacy-data assay and actual engine-independent C# consumers. No historical full-game, Unity, Windows, Steam, persistence, multiplayer, final canon, human enjoyment or population claims.",
+    "P01 prevalidation semantics adapted; journal persistence/recovery and full XP item/tool/unlock catalog remain unresolved.",
+    "Retained source errors are static assay observations, not executed historical crafting failures.",
+    "Scripted policies are mechanical observations; no optimality, player preference or necessary crafting claim."
+  ],
+  "reverification_baseline": "411b7c64762b3ab46b1900f39144a3fb27451e2a",
+  "reverification_reason": "Six additive InputTiming/Interaction C# and project identities expanded conservative source inventories. Actual study/native/demo/stdin/apphost paths were reexecuted; all prior identities and nonidentity observations/negatives remained exactly equal. Recovery domain/rules inputs unchanged.",
+  "reverification_execution": "evidence/input-timing/prior-consumers.json",
+  "affected_revalidation": {
+    "baseline_commit": "45405508d79c024e487a3903c3ca0965f40a0d42",
+    "reason": "Actual C# audio composition/projection and host dependency alter broad C# identity coverage; prior domain/format consumers remain unchanged.",
+    "execution": "evidence/audio-music/prior-consumers.json"
+  }
+}

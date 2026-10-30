@@ -238,13 +238,28 @@
       "local_path": "evidence/world-loadout/terminal-commands.txt",
       "size_bytes": 201,
       "sha256": "35488c8e84a39271734afb48a92c8b8a6398a4377b0458873d94e43969951bd9"
+    },
+    {
+      "local_path": "north-star/csharp/Portable/Forge/NorthStar.Forge.csproj",
+      "size_bytes": 656,
+      "sha256": "e32e631825a67f1931908e6adf8247f6936e6f79d8efd40b7bfee4aab08dddf0"
+    },
+    {
+      "local_path": "north-star/csharp/Portable/Loadout/NorthStar.Loadout.csproj",
+      "size_bytes": 668,
+      "sha256": "bea76c8d5c8c1e15a71815f19d575dbbdd84ce3cfa08f4288dee3e369d0ee012"
+    },
+    {
+      "local_path": "north-star/csharp/Portable/Crossing/NorthStar.Crossing.csproj",
+      "size_bytes": 580,
+      "sha256": "bf08a1ba3db27ea0848f7f91583192e83d2ccec8168cfb55dd965db786daa3f8"
     }
   ],
   "result_artifacts": [
     {
       "local_path": "evidence/world-loadout/results.json",
-      "size_bytes": 385028,
-      "sha256": "3e45a54000ff9cfc6aeb50ccd78356b9c9cb304c3d44e81d82f05e4bc112f055"
+      "size_bytes": 385431,
+      "sha256": "fb05866b7f29656c2d4ee4166f6c39a092388d52eabd59bcf4fefa0d446d2734"
     },
     {
       "local_path": "evidence/world-loadout/native.json",
@@ -291,5 +306,13 @@
     "baseline_commit": "45405508d79c024e487a3903c3ca0965f40a0d42",
     "reason": "Actual C# audio composition/projection and host dependency alter broad C# identity coverage; prior domain/format consumers remain unchanged.",
     "execution": "evidence/audio-music/prior-consumers.json"
+  },
+  "portable_identity_revalidation": {
+    "baseline_commit": "f9e59f57f70d1ebda92a85d3e0cc05c6639428b5",
+    "reason": "Actual strict CI comparison detected three new portable project identities; full assay reran, all non-identity observations exact. Fingerprint/comparison gates unchanged.",
+    "execution": "evidence/response-chain/assay-reconciliation/commands.json",
+    "comparison": "evidence/response-chain/assay-reconciliation/summary.json",
+    "prior_run": "evidence/response-chain/prior-bound-assays/world-loadout/RUN.json",
+    "prior_result": "evidence/response-chain/prior-bound-assays/world-loadout/results.json"
   }
 }

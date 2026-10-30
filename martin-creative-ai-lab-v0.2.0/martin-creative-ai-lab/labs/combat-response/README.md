@@ -160,3 +160,11 @@ and global rounds. [Execution](../../evidence/passive-response/RUN.json) separat
 mitigation from HP saved, one-use rescue from survival, and direct contact from later
 DOT. Only selected mechanics/context are consumed; complete source passives, source
 class eligibility, Ruby/RMXP and human balance remain unresolved.
+
+[Paid response contract](responses/protocol.json) now consumes selected preserved
+queue/LIFO/cast-cost requirements through optional original Treatment Line counterplay.
+[Actual execution](../../evidence/response-chain/RUN.json) separates paid pending cast,
+ward cancellation, one final global contact/DOT round and classic regressions. It is
+not a full reaction/initiative engine, recovered numeric skill, human balance study
+or another CommanderSIM evaluation. Source requirements and original parameters stay
+separate; no graphical stack widget or source fiction is imported.

@@ -62,7 +62,7 @@ These require the documented development tools and are **not included in either 
 | Inspect or run | Consequential question |
 |---|---|
 | [Carry what you made](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/field-journey/README.md) | One confirmed person acquires a named fitting, spends it on actual equipment and enters real Crossing; premature departure can leave the next prepared entry unfunded. |
-| [The Treatment Line](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/combat-study/README.md) | One preparation-only passive competes for a slot; heavy physical mitigation and a single fatal-hit rescue differ, and later DOT can still defeat rescue. |
+| [The Treatment Line](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/combat-study/README.md) | A preparation-only passive and optional paid response practice: committed casts spend before effect; breaking a ward competes with treatment, and end-round DOT still resolves. |
 | [North Star development and retained consumers](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/README.md) | C# rules, original presentation/audio, intake/memory, authored continuity and the preserved Godot migration baseline retain distinct scopes. |
 
 ## Eleven research destinations

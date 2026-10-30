@@ -5,10 +5,12 @@ const buttons=()=>document.querySelectorAll('[data-command]');
 const passiveNames={none:'None',lining:'Lining','last-thread':'Last thread'};
 function availability(){
  buttons().forEach(b=>b.disabled=pending||uncertain||(observation?.phase==='preparation'&&['strike','bash','guard','treat','cleanse','retreat'].includes(b.dataset.command))||(b.dataset.command==='begin'&&observation?.phase!=='preparation'));
+ const response=current?.responsePractice===true;const waiting=current?.pending!==null&&current?.pending!==undefined;
+ buttons().forEach(b=>{const c=b.dataset.command;if(['commit','release','break-ward'].includes(c))b.disabled=pending||uncertain||observation?.phase!=='active'||!response||(c==='commit'?waiting||current.charges<1:!waiting||(c==='break-ward'&&(!current.pending.ward||current.charges<1)));else if(waiting&&['strike','bash','guard','treat','cleanse','retreat'].includes(c))b.disabled=true;});
  $('reconnect').hidden=!uncertain;$('reconnect').disabled=pending;
  for(const id of ['passive-select','armor-select','equip-passive'])$(id).disabled=pending||uncertain||observation?.phase!=='preparation';
 }
-function valid(s){return s&&['toxic','heated'].includes(s.profile)&&Number.isInteger(s.round)&&s.round>=0&&Number.isInteger(s.hp)&&s.hp>=0&&s.hp<=100&&s.maxHp===100&&Number.isInteger(s.enemyHp)&&s.enemyHp>=0&&s.enemyHp<=96&&Number.isInteger(s.charges)&&s.charges>=0&&s.charges<=2&&Array.isArray(s.effects)&&s.effects.every(e=>['Poison','Bleed','Burn','Disarm'].includes(e.effect)&&Number.isInteger(e.remaining)&&e.remaining>0)&&Array.isArray(s.events)&&s.events.every(e=>typeof e==='string')&&['active','secured','defeated','withdrawn'].includes(s.outcome)&&typeof s.last==='string'&&typeof s.threat==='string'&&Object.hasOwn(passiveNames,s.passive)&&['light','heavy'].includes(s.armor)&&typeof s.rescueSpent==='boolean';}
+function valid(s){return s&&['toxic','heated'].includes(s.profile)&&Number.isInteger(s.round)&&s.round>=0&&Number.isInteger(s.hp)&&s.hp>=0&&s.hp<=100&&s.maxHp===100&&Number.isInteger(s.enemyHp)&&s.enemyHp>=0&&s.enemyHp<=96&&Number.isInteger(s.charges)&&s.charges>=0&&s.charges<=2&&Array.isArray(s.effects)&&s.effects.every(e=>['Poison','Bleed','Burn','Disarm'].includes(e.effect)&&Number.isInteger(e.remaining)&&e.remaining>0)&&Array.isArray(s.events)&&s.events.every(e=>typeof e==='string')&&['active','secured','defeated','withdrawn'].includes(s.outcome)&&typeof s.last==='string'&&typeof s.threat==='string'&&Object.hasOwn(passiveNames,s.passive)&&['light','heavy'].includes(s.armor)&&typeof s.rescueSpent==='boolean'&&typeof s.responsePractice==='boolean'&&typeof s.wardAvailable==='boolean'&&(s.pending===null||(s.pending&&typeof s.pending.ward==='boolean'&&Number.isInteger(s.pending.items)&&s.pending.items>=1&&s.pending.items<=3))&&Array.isArray(s.resolution)&&s.resolution.every(x=>typeof x==='string');}
 function passiveView(passive,armor,spent,hit,preparing){
  if(!Object.hasOwn(passiveNames,passive)||!['light','heavy'].includes(armor)||typeof spent!=='boolean')throw Error('Invalid passive observation');
  $('passive-glyph').dataset.passive=passive;$('passive-glyph').dataset.spent=String(spent);
@@ -23,8 +25,17 @@ function passiveView(passive,armor,spent,hit,preparing){
   $('contact-detail').textContent=`Last physical direct contact: incoming ${hit.incoming}; effective damage ${hit.effectiveDamage}; reduction ${hit.damageReduced}; actual HP lost ${hit.actualHpLost}; avoided HP loss ${hit.avoidedHpLoss}; HP at that hit ${hit.hpBefore} → ${hit.hpAfter}.`+(hit.rescued?' Last thread intercepted this hit. Later DOT still resolves; this is not a survival or victory receipt.':' No fatal-hit interception occurred.');
  }
 }
+function responseView(s){
+ if(s===null){$('response-state').textContent=observation.preparation.responses?'Response practice prepared; no encounter or cast exists yet.':'Classic practice prepared; no encounter exists yet.';$('response-state').dataset.pending='false';$('ward-state').textContent=observation.preparation.responses?'One ward reserve will be issued only when this new practice begins.':'';$('response-resolution').replaceChildren();return;}
+ const enabled=s?.responsePractice===true,waiting=enabled&&s.pending!==null;
+ const pendingObserved=s?.pending??null;
+ $('response-state').textContent=!enabled?'Classic practice. No response window.':waiting?'Cast paid; response pending. No strike damage, contact, DOT or round has resolved yet.':s.outcome==='active'?'Response practice active. A committed strike spends one shared charge before its effect.':'Response practice ended. Resolution log is historical.';
+ $('response-state').dataset.pending=String(waiting);
+ $('ward-state').textContent=!enabled?'No ward policy in classic practice.':s.outcome!=='active'?'Encounter ended; the ward reserve is historical, not a new opportunity.':waiting&&pendingObserved.ward?'Ward queued; its one reserve is spent. Choose Release or pay to Break ward.':s.wardAvailable?'Target has one ward reserve.':'Target ward reserve spent. No new ward is supplied.';
+ $('response-resolution').replaceChildren(...(s?.resolution??[]).map(t=>{const e=document.createElement('li');e.textContent=t;return e;}));
+}
 function render(s){
- document.body.dataset.phase=observation.phase;$('phase-state').textContent=observation.phase==='preparation'?'PREPARATION / NO ENCOUNTER':observation.phase==='ended'?'ENCOUNTER ENDED':'ACTIVE / PREPARATION LOCKED';
+ responseView(s);document.body.dataset.phase=observation.phase;$('phase-state').textContent=observation.phase==='preparation'?'PREPARATION / NO ENCOUNTER':observation.phase==='ended'?'ENCOUNTER ENDED':'ACTIVE / PREPARATION LOCKED';
  if(s===null){
   current=null;const p=observation.preparation;passiveView(p.passive,p.armor,false,null,true);
   $('stats').replaceChildren(...[`Prepared profile ${p.profile}`,'No encounter begun','No damage or rounds resolved'].map(t=>{const n=document.createElement('span');n.textContent=t;return n;}));$('effects').replaceChildren();document.querySelector('.arena').className='arena preparation';$('player-hp').value=0;$('target-hp').value=0;$('threat').textContent='No encounter yet. Apply one whole preparation, then explicitly Begin.';$('last').textContent='Prepared state only. Begin creates a fresh encounter with its actual initial effects and resources.';$('events').replaceChildren();return;

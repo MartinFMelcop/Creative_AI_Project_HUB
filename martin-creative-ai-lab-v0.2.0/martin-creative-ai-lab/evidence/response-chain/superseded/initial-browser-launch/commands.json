@@ -1,0 +1,59 @@
+[
+  {
+    "command": [
+      "/workspace/work/authored-scene/dotnet/dotnet",
+      "--version"
+    ],
+    "exit_code": 0,
+    "stdout": "10.0.401\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "/workspace/work/authored-scene/dotnet/dotnet",
+      "build",
+      "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/combat-study/ResponseChecks/NorthStar.ResponseChecks.csproj",
+      "-c",
+      "Release",
+      "-m:1",
+      "--disable-build-servers"
+    ],
+    "exit_code": 0,
+    "stdout": "  Determining projects to restore...\n  All projects are up-to-date for restore.\n  NorthStar.Combat -> /workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/combat-study/Rules/bin/Release/netstandard2.1/NorthStar.Combat.dll\n  NorthStar.CombatStudy -> /workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/combat-study/Host/bin/Release/net10.0/NorthStar.CombatStudy.dll\n  NorthStar.ResponseChecks -> /workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/combat-study/ResponseChecks/bin/Release/net10.0/NorthStar.ResponseChecks.dll\n\nBuild succeeded.\n    0 Warning(s)\n    0 Error(s)\n\nTime Elapsed 00:00:01.31\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "/workspace/work/authored-scene/dotnet/dotnet",
+      "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/combat-study/ResponseChecks/bin/Release/net10.0/NorthStar.ResponseChecks.dll",
+      "/workspace/work/response-chain/final/native.json"
+    ],
+    "exit_code": 0,
+    "stdout": "PASS: 60 actual response-chain controls\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "python3",
+      "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/labs/combat-response/responses/assay.py",
+      "--native",
+      "/workspace/work/response-chain/final/native.json",
+      "--output",
+      "/workspace/work/response-chain/final/source.json"
+    ],
+    "exit_code": 0,
+    "stdout": "PASS: four observed requirements, actual outcome checks and three false-result negatives\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "node",
+      "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/combat-study/tools/response-browser.mjs",
+      "/workspace/work/authored-scene/dotnet/dotnet",
+      "/workspace/work/response-chain/final/browser"
+    ],
+    "exit_code": 1,
+    "stdout": "",
+    "stderr": "node:internal/modules/run_main:107\n    triggerUncaughtException(\n    ^\n\nbrowserType.launch: Executable doesn't exist at /home/agent/.cache/ms-playwright/chromium_headless_shell-1248/chrome-headless-shell-linux64/chrome-headless-shell\n\u2554\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2557\n\u2551 Looks like Playwright was just installed or updated.       \u2551\n\u2551 Please run the following command to download new browsers: \u2551\n\u2551                                                            \u2551\n\u2551     npx playwright install                                 \u2551\n\u2551                                                            \u2551\n\u2551 <3 Playwright Team                                         \u2551\n\u255a\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u255d\n    at /workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/combat-study/tools/response-browser.mjs:60:52 {\n  log: [],\n  name: 'Error'\n}\n\nNode.js v24.19.0\n"
+  }
+]

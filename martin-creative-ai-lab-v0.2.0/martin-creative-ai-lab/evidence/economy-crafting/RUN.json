@@ -120,13 +120,28 @@
       "local_path": "evidence/economy-crafting/terminal-commands.txt",
       "size_bytes": 103,
       "sha256": "e49c1dba24c07629e4565bc9d7e1159538b700715e4f2e468310eeda130e2a10"
+    },
+    {
+      "local_path": "north-star/csharp/Portable/Forge/NorthStar.Forge.csproj",
+      "size_bytes": 656,
+      "sha256": "e32e631825a67f1931908e6adf8247f6936e6f79d8efd40b7bfee4aab08dddf0"
+    },
+    {
+      "local_path": "north-star/csharp/Portable/Loadout/NorthStar.Loadout.csproj",
+      "size_bytes": 668,
+      "sha256": "bea76c8d5c8c1e15a71815f19d575dbbdd84ce3cfa08f4288dee3e369d0ee012"
+    },
+    {
+      "local_path": "north-star/csharp/Portable/Crossing/NorthStar.Crossing.csproj",
+      "size_bytes": 580,
+      "sha256": "bf08a1ba3db27ea0848f7f91583192e83d2ccec8168cfb55dd965db786daa3f8"
     }
   ],
   "result_artifacts": [
     {
       "local_path": "evidence/economy-crafting/results.json",
-      "size_bytes": 17853,
-      "sha256": "e34c1976f059db2f85c3bb11a45302f68d12b71d61e1b1b0a988ee5a077fc691"
+      "size_bytes": 18256,
+      "sha256": "63fc84d71d0848896e2b1f5bd252573f29949e6fc5be8c47ff16ab1382384f38"
     },
     {
       "local_path": "evidence/economy-crafting/native.json",
@@ -230,5 +245,13 @@
     "baseline_commit": "45405508d79c024e487a3903c3ca0965f40a0d42",
     "reason": "Actual C# audio composition/projection and host dependency alter broad C# identity coverage; prior domain/format consumers remain unchanged.",
     "execution": "evidence/audio-music/prior-consumers.json"
+  },
+  "portable_identity_revalidation": {
+    "baseline_commit": "f9e59f57f70d1ebda92a85d3e0cc05c6639428b5",
+    "reason": "Actual strict CI comparison detected three new portable project identities; full assay reran, all non-identity observations exact. Fingerprint/comparison gates unchanged.",
+    "execution": "evidence/response-chain/assay-reconciliation/commands.json",
+    "comparison": "evidence/response-chain/assay-reconciliation/summary.json",
+    "prior_run": "evidence/response-chain/prior-bound-assays/economy-crafting/RUN.json",
+    "prior_result": "evidence/response-chain/prior-bound-assays/economy-crafting/results.json"
   }
 }

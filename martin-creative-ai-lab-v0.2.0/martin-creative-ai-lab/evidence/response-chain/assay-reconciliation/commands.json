@@ -1,0 +1,54 @@
+[
+  {
+    "command": [
+      "python3",
+      "labs/rpg-systems/run.py",
+      "--dotnet",
+      "/workspace/work/authored-scene/dotnet/dotnet",
+      "--output",
+      "/workspace/work/response-chain/assay-reconciliation/rpg-progression.json"
+    ],
+    "exit_code": 0,
+    "stdout": "PASS: 555 C# destination cases; 9 legacy header mismatches retained; 195 off-by-one reference mutants rejected\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "python3",
+      "labs/economy-simulation/run.py",
+      "--dotnet",
+      "/workspace/work/authored-scene/dotnet/dotnet",
+      "--output",
+      "/workspace/work/response-chain/assay-reconciliation/economy-crafting.json"
+    ],
+    "exit_code": 0,
+    "stdout": "PASS: actual C# forge execution; retained 16 legacy semantic field failures\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "python3",
+      "labs/world-gameplay/run.py",
+      "--dotnet",
+      "/workspace/work/authored-scene/dotnet/dotnet",
+      "--output",
+      "/workspace/work/response-chain/assay-reconciliation/world-loadout.json"
+    ],
+    "exit_code": 0,
+    "stdout": "PASS: World loadout assay and actual C# destination; retained helper variant/counterexample limits\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "python3",
+      "labs/networking-persistence/run.py",
+      "--dotnet",
+      "/workspace/work/authored-scene/dotnet/dotnet",
+      "--output",
+      "/workspace/work/response-chain/assay-reconciliation/persistent-expedition.json"
+    ],
+    "exit_code": 0,
+    "stdout": "PASS: persistent C# consumer and retained recovery failure controls\n",
+    "stderr": ""
+  }
+]

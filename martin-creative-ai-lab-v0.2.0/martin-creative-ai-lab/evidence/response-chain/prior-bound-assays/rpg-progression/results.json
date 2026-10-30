@@ -1,0 +1,5439 @@
+{
+  "checks": {
+    "destination_rows": 555,
+    "failed": 0,
+    "historical_goldens": 9,
+    "partition_controls": 9,
+    "threshold_neighbors": 537
+  },
+  "decisions": {
+    "legacy_180_level_pacing_and_canon": "UNRESOLVED",
+    "legacy_direct_header_adapter": "REJECTED",
+    "validated_threshold_and_budget_contract": "INTEGRATED into actual engine-independent North Star C# domain study consumer"
+  },
+  "delivered_legacy_binding_assay": {
+    "decision": "REJECTED",
+    "golden_mismatches": [
+      {
+        "expected_hp": 30,
+        "expected_sp": 12,
+        "id": "golden/T001",
+        "projected_hp": 0,
+        "projected_sp": 0
+      },
+      {
+        "expected_hp": 270,
+        "expected_sp": 108,
+        "id": "golden/T002",
+        "projected_hp": 0,
+        "projected_sp": 0
+      },
+      {
+        "expected_hp": 14,
+        "expected_sp": 8,
+        "id": "golden/T003",
+        "projected_hp": 0,
+        "projected_sp": 0
+      },
+      {
+        "expected_hp": 2350,
+        "expected_sp": 1198,
+        "id": "golden/T004",
+        "projected_hp": 0,
+        "projected_sp": 0
+      },
+      {
+        "expected_hp": 6,
+        "expected_sp": 4,
+        "id": "golden/T005",
+        "projected_hp": 0,
+        "projected_sp": 0
+      },
+      {
+        "expected_hp": 7,
+        "expected_sp": 4,
+        "id": "golden/T006",
+        "projected_hp": 0,
+        "projected_sp": 0
+      },
+      {
+        "expected_hp": 2460,
+        "expected_sp": 1268,
+        "id": "golden/T007",
+        "projected_hp": 0,
+        "projected_sp": 0
+      },
+      {
+        "expected_hp": 150,
+        "expected_sp": 60,
+        "id": "golden/T008",
+        "projected_hp": 0,
+        "projected_sp": 0
+      },
+      {
+        "expected_hp": 26,
+        "expected_sp": 15,
+        "id": "golden/T009",
+        "projected_hp": 0,
+        "projected_sp": 0
+      }
+    ],
+    "keys": {
+      "hp": "HP",
+      "sp": "SP"
+    },
+    "method": "Static source-binding assay with Ruby nil.to_i semantics; not historical RGSS execution",
+    "missing_columns": [
+      "HP",
+      "SP"
+    ]
+  },
+  "destination_rows": [
+    {
+      "hp_gained": 30,
+      "id": "golden/T001",
+      "level": 2,
+      "levels_gained": 1,
+      "main_gained": 8,
+      "sp_gained": 12,
+      "total_xp": 262
+    },
+    {
+      "hp_gained": 270,
+      "id": "golden/T002",
+      "level": 10,
+      "levels_gained": 9,
+      "main_gained": 72,
+      "sp_gained": 108,
+      "total_xp": 7470
+    },
+    {
+      "hp_gained": 14,
+      "id": "golden/T003",
+      "level": 80,
+      "levels_gained": 1,
+      "main_gained": 5,
+      "sp_gained": 8,
+      "total_xp": 2183560
+    },
+    {
+      "hp_gained": 2350,
+      "id": "golden/T004",
+      "level": 160,
+      "levels_gained": 159,
+      "main_gained": 792,
+      "sp_gained": 1198,
+      "total_xp": 16898520
+    },
+    {
+      "hp_gained": 6,
+      "id": "golden/T005",
+      "level": 161,
+      "levels_gained": 1,
+      "main_gained": 2,
+      "sp_gained": 4,
+      "total_xp": 17209868
+    },
+    {
+      "hp_gained": 7,
+      "id": "golden/T006",
+      "level": 160,
+      "levels_gained": 1,
+      "main_gained": 3,
+      "sp_gained": 4,
+      "total_xp": 16898520
+    },
+    {
+      "hp_gained": 2460,
+      "id": "golden/T007",
+      "level": 180,
+      "levels_gained": 179,
+      "main_gained": 832,
+      "sp_gained": 1268,
+      "total_xp": 1033797041
+    },
+    {
+      "hp_gained": 150,
+      "id": "golden/T008",
+      "level": 6,
+      "levels_gained": 5,
+      "main_gained": 40,
+      "sp_gained": 60,
+      "total_xp": 2410
+    },
+    {
+      "hp_gained": 26,
+      "id": "golden/T009",
+      "level": 81,
+      "levels_gained": 2,
+      "main_gained": 9,
+      "sp_gained": 15,
+      "total_xp": 2264560
+    },
+    {
+      "hp_gained": 0,
+      "id": "boundary/2/-1",
+      "level": 1,
+      "levels_gained": 0,
+      "main_gained": 0,
+      "sp_gained": 0,
+      "total_xp": 261
+    },
+    {
+      "hp_gained": 30,
+      "id": "boundary/2/+0",
+      "level": 2,
+      "levels_gained": 1,
+      "main_gained": 8,
+      "sp_gained": 12,
+      "total_xp": 262
+    },
+    {
+      "hp_gained": 30,
+      "id": "boundary/2/+1",
+      "level": 2,
+      "levels_gained": 1,
+      "main_gained": 8,
+      "sp_gained": 12,
+      "total_xp": 263
+    },
+    {
+      "hp_gained": 30,
+      "id": "boundary/3/-1",
+      "level": 2,
+      "levels_gained": 1,
+      "main_gained": 8,
+      "sp_gained": 12,
+      "total_xp": 609
+    },
+    {
+      "hp_gained": 60,
+      "id": "boundary/3/+0",
+      "level": 3,
+      "levels_gained": 2,
+      "main_gained": 16,
+      "sp_gained": 24,
+      "total_xp": 610
+    },
+    {
+      "hp_gained": 60,
+      "id": "boundary/3/+1",
+      "level": 3,
+      "levels_gained": 2,
+      "main_gained": 16,
+      "sp_gained": 24,
+      "total_xp": 611
+    },
+    {
+      "hp_gained": 60,
+      "id": "boundary/4/-1",
+      "level": 3,
+      "levels_gained": 2,
+      "main_gained": 16,
+      "sp_gained": 24,
+      "total_xp": 1067
+    },
+    {
+      "hp_gained": 90,
+      "id": "boundary/4/+0",
+      "level": 4,
+      "levels_gained": 3,
+      "main_gained": 24,
+      "sp_gained": 36,
+      "total_xp": 1068
+    },
+    {
+      "hp_gained": 90,
+      "id": "boundary/4/+1",
+      "level": 4,
+      "levels_gained": 3,
+      "main_gained": 24,
+      "sp_gained": 36,
+      "total_xp": 1069
+    },
+    {
+      "hp_gained": 90,
+      "id": "boundary/5/-1",
+      "level": 4,
+      "levels_gained": 3,
+      "main_gained": 24,
+      "sp_gained": 36,
+      "total_xp": 1659
+    },
+    {
+      "hp_gained": 120,
+      "id": "boundary/5/+0",
+      "level": 5,
+      "levels_gained": 4,
+      "main_gained": 32,
+      "sp_gained": 48,
+      "total_xp": 1660
+    },
+    {
+      "hp_gained": 120,
+      "id": "boundary/5/+1",
+      "level": 5,
+      "levels_gained": 4,
+      "main_gained": 32,
+      "sp_gained": 48,
+      "total_xp": 1661
+    },
+    {
+      "hp_gained": 120,
+      "id": "boundary/6/-1",
+      "level": 5,
+      "levels_gained": 4,
+      "main_gained": 32,
+      "sp_gained": 48,
+      "total_xp": 2409
+    },
+    {
+      "hp_gained": 150,
+      "id": "boundary/6/+0",
+      "level": 6,
+      "levels_gained": 5,
+      "main_gained": 40,
+      "sp_gained": 60,
+      "total_xp": 2410
+    },
+    {
+      "hp_gained": 150,
+      "id": "boundary/6/+1",
+      "level": 6,
+      "levels_gained": 5,
+      "main_gained": 40,
+      "sp_gained": 60,
+      "total_xp": 2411
+    },
+    {
+      "hp_gained": 150,
+      "id": "boundary/7/-1",
+      "level": 6,
+      "levels_gained": 5,
+      "main_gained": 40,
+      "sp_gained": 60,
+      "total_xp": 3341
+    },
+    {
+      "hp_gained": 180,
+      "id": "boundary/7/+0",
+      "level": 7,
+      "levels_gained": 6,
+      "main_gained": 48,
+      "sp_gained": 72,
+      "total_xp": 3342
+    },
+    {
+      "hp_gained": 180,
+      "id": "boundary/7/+1",
+      "level": 7,
+      "levels_gained": 6,
+      "main_gained": 48,
+      "sp_gained": 72,
+      "total_xp": 3343
+    },
+    {
+      "hp_gained": 180,
+      "id": "boundary/8/-1",
+      "level": 7,
+      "levels_gained": 6,
+      "main_gained": 48,
+      "sp_gained": 72,
+      "total_xp": 4479
+    },
+    {
+      "hp_gained": 210,
+      "id": "boundary/8/+0",
+      "level": 8,
+      "levels_gained": 7,
+      "main_gained": 56,
+      "sp_gained": 84,
+      "total_xp": 4480
+    },
+    {
+      "hp_gained": 210,
+      "id": "boundary/8/+1",
+      "level": 8,
+      "levels_gained": 7,
+      "main_gained": 56,
+      "sp_gained": 84,
+      "total_xp": 4481
+    },
+    {
+      "hp_gained": 210,
+      "id": "boundary/9/-1",
+      "level": 8,
+      "levels_gained": 7,
+      "main_gained": 56,
+      "sp_gained": 84,
+      "total_xp": 5847
+    },
+    {
+      "hp_gained": 240,
+      "id": "boundary/9/+0",
+      "level": 9,
+      "levels_gained": 8,
+      "main_gained": 64,
+      "sp_gained": 96,
+      "total_xp": 5848
+    },
+    {
+      "hp_gained": 240,
+      "id": "boundary/9/+1",
+      "level": 9,
+      "levels_gained": 8,
+      "main_gained": 64,
+      "sp_gained": 96,
+      "total_xp": 5849
+    },
+    {
+      "hp_gained": 240,
+      "id": "boundary/10/-1",
+      "level": 9,
+      "levels_gained": 8,
+      "main_gained": 64,
+      "sp_gained": 96,
+      "total_xp": 7469
+    },
+    {
+      "hp_gained": 270,
+      "id": "boundary/10/+0",
+      "level": 10,
+      "levels_gained": 9,
+      "main_gained": 72,
+      "sp_gained": 108,
+      "total_xp": 7470
+    },
+    {
+      "hp_gained": 270,
+      "id": "boundary/10/+1",
+      "level": 10,
+      "levels_gained": 9,
+      "main_gained": 72,
+      "sp_gained": 108,
+      "total_xp": 7471
+    },
+    {
+      "hp_gained": 270,
+      "id": "boundary/11/-1",
+      "level": 10,
+      "levels_gained": 9,
+      "main_gained": 72,
+      "sp_gained": 108,
+      "total_xp": 9369
+    },
+    {
+      "hp_gained": 296,
+      "id": "boundary/11/+0",
+      "level": 11,
+      "levels_gained": 10,
+      "main_gained": 80,
+      "sp_gained": 119,
+      "total_xp": 9370
+    },
+    {
+      "hp_gained": 296,
+      "id": "boundary/11/+1",
+      "level": 11,
+      "levels_gained": 10,
+      "main_gained": 80,
+      "sp_gained": 119,
+      "total_xp": 9371
+    },
+    {
+      "hp_gained": 296,
+      "id": "boundary/12/-1",
+      "level": 11,
+      "levels_gained": 10,
+      "main_gained": 80,
+      "sp_gained": 119,
+      "total_xp": 11571
+    },
+    {
+      "hp_gained": 322,
+      "id": "boundary/12/+0",
+      "level": 12,
+      "levels_gained": 11,
+      "main_gained": 88,
+      "sp_gained": 130,
+      "total_xp": 11572
+    },
+    {
+      "hp_gained": 322,
+      "id": "boundary/12/+1",
+      "level": 12,
+      "levels_gained": 11,
+      "main_gained": 88,
+      "sp_gained": 130,
+      "total_xp": 11573
+    },
+    {
+      "hp_gained": 322,
+      "id": "boundary/13/-1",
+      "level": 12,
+      "levels_gained": 11,
+      "main_gained": 88,
+      "sp_gained": 130,
+      "total_xp": 14099
+    },
+    {
+      "hp_gained": 348,
+      "id": "boundary/13/+0",
+      "level": 13,
+      "levels_gained": 12,
+      "main_gained": 96,
+      "sp_gained": 141,
+      "total_xp": 14100
+    },
+    {
+      "hp_gained": 348,
+      "id": "boundary/13/+1",
+      "level": 13,
+      "levels_gained": 12,
+      "main_gained": 96,
+      "sp_gained": 141,
+      "total_xp": 14101
+    },
+    {
+      "hp_gained": 348,
+      "id": "boundary/14/-1",
+      "level": 13,
+      "levels_gained": 12,
+      "main_gained": 96,
+      "sp_gained": 141,
+      "total_xp": 16977
+    },
+    {
+      "hp_gained": 374,
+      "id": "boundary/14/+0",
+      "level": 14,
+      "levels_gained": 13,
+      "main_gained": 104,
+      "sp_gained": 152,
+      "total_xp": 16978
+    },
+    {
+      "hp_gained": 374,
+      "id": "boundary/14/+1",
+      "level": 14,
+      "levels_gained": 13,
+      "main_gained": 104,
+      "sp_gained": 152,
+      "total_xp": 16979
+    },
+    {
+      "hp_gained": 374,
+      "id": "boundary/15/-1",
+      "level": 14,
+      "levels_gained": 13,
+      "main_gained": 104,
+      "sp_gained": 152,
+      "total_xp": 20229
+    },
+    {
+      "hp_gained": 400,
+      "id": "boundary/15/+0",
+      "level": 15,
+      "levels_gained": 14,
+      "main_gained": 112,
+      "sp_gained": 163,
+      "total_xp": 20230
+    },
+    {
+      "hp_gained": 400,
+      "id": "boundary/15/+1",
+      "level": 15,
+      "levels_gained": 14,
+      "main_gained": 112,
+      "sp_gained": 163,
+      "total_xp": 20231
+    },
+    {
+      "hp_gained": 400,
+      "id": "boundary/16/-1",
+      "level": 15,
+      "levels_gained": 14,
+      "main_gained": 112,
+      "sp_gained": 163,
+      "total_xp": 23879
+    },
+    {
+      "hp_gained": 426,
+      "id": "boundary/16/+0",
+      "level": 16,
+      "levels_gained": 15,
+      "main_gained": 120,
+      "sp_gained": 174,
+      "total_xp": 23880
+    },
+    {
+      "hp_gained": 426,
+      "id": "boundary/16/+1",
+      "level": 16,
+      "levels_gained": 15,
+      "main_gained": 120,
+      "sp_gained": 174,
+      "total_xp": 23881
+    },
+    {
+      "hp_gained": 426,
+      "id": "boundary/17/-1",
+      "level": 16,
+      "levels_gained": 15,
+      "main_gained": 120,
+      "sp_gained": 174,
+      "total_xp": 27951
+    },
+    {
+      "hp_gained": 452,
+      "id": "boundary/17/+0",
+      "level": 17,
+      "levels_gained": 16,
+      "main_gained": 128,
+      "sp_gained": 185,
+      "total_xp": 27952
+    },
+    {
+      "hp_gained": 452,
+      "id": "boundary/17/+1",
+      "level": 17,
+      "levels_gained": 16,
+      "main_gained": 128,
+      "sp_gained": 185,
+      "total_xp": 27953
+    },
+    {
+      "hp_gained": 452,
+      "id": "boundary/18/-1",
+      "level": 17,
+      "levels_gained": 16,
+      "main_gained": 128,
+      "sp_gained": 185,
+      "total_xp": 32469
+    },
+    {
+      "hp_gained": 478,
+      "id": "boundary/18/+0",
+      "level": 18,
+      "levels_gained": 17,
+      "main_gained": 136,
+      "sp_gained": 196,
+      "total_xp": 32470
+    },
+    {
+      "hp_gained": 478,
+      "id": "boundary/18/+1",
+      "level": 18,
+      "levels_gained": 17,
+      "main_gained": 136,
+      "sp_gained": 196,
+      "total_xp": 32471
+    },
+    {
+      "hp_gained": 478,
+      "id": "boundary/19/-1",
+      "level": 18,
+      "levels_gained": 17,
+      "main_gained": 136,
+      "sp_gained": 196,
+      "total_xp": 37457
+    },
+    {
+      "hp_gained": 504,
+      "id": "boundary/19/+0",
+      "level": 19,
+      "levels_gained": 18,
+      "main_gained": 144,
+      "sp_gained": 207,
+      "total_xp": 37458
+    },
+    {
+      "hp_gained": 504,
+      "id": "boundary/19/+1",
+      "level": 19,
+      "levels_gained": 18,
+      "main_gained": 144,
+      "sp_gained": 207,
+      "total_xp": 37459
+    },
+    {
+      "hp_gained": 504,
+      "id": "boundary/20/-1",
+      "level": 19,
+      "levels_gained": 18,
+      "main_gained": 144,
+      "sp_gained": 207,
+      "total_xp": 42939
+    },
+    {
+      "hp_gained": 530,
+      "id": "boundary/20/+0",
+      "level": 20,
+      "levels_gained": 19,
+      "main_gained": 152,
+      "sp_gained": 218,
+      "total_xp": 42940
+    },
+    {
+      "hp_gained": 530,
+      "id": "boundary/20/+1",
+      "level": 20,
+      "levels_gained": 19,
+      "main_gained": 152,
+      "sp_gained": 218,
+      "total_xp": 42941
+    },
+    {
+      "hp_gained": 530,
+      "id": "boundary/21/-1",
+      "level": 20,
+      "levels_gained": 19,
+      "main_gained": 152,
+      "sp_gained": 218,
+      "total_xp": 48939
+    },
+    {
+      "hp_gained": 552,
+      "id": "boundary/21/+0",
+      "level": 21,
+      "levels_gained": 20,
+      "main_gained": 159,
+      "sp_gained": 228,
+      "total_xp": 48940
+    },
+    {
+      "hp_gained": 552,
+      "id": "boundary/21/+1",
+      "level": 21,
+      "levels_gained": 20,
+      "main_gained": 159,
+      "sp_gained": 228,
+      "total_xp": 48941
+    },
+    {
+      "hp_gained": 552,
+      "id": "boundary/22/-1",
+      "level": 21,
+      "levels_gained": 20,
+      "main_gained": 159,
+      "sp_gained": 228,
+      "total_xp": 55481
+    },
+    {
+      "hp_gained": 574,
+      "id": "boundary/22/+0",
+      "level": 22,
+      "levels_gained": 21,
+      "main_gained": 166,
+      "sp_gained": 238,
+      "total_xp": 55482
+    },
+    {
+      "hp_gained": 574,
+      "id": "boundary/22/+1",
+      "level": 22,
+      "levels_gained": 21,
+      "main_gained": 166,
+      "sp_gained": 238,
+      "total_xp": 55483
+    },
+    {
+      "hp_gained": 574,
+      "id": "boundary/23/-1",
+      "level": 22,
+      "levels_gained": 21,
+      "main_gained": 166,
+      "sp_gained": 238,
+      "total_xp": 62589
+    },
+    {
+      "hp_gained": 596,
+      "id": "boundary/23/+0",
+      "level": 23,
+      "levels_gained": 22,
+      "main_gained": 173,
+      "sp_gained": 248,
+      "total_xp": 62590
+    },
+    {
+      "hp_gained": 596,
+      "id": "boundary/23/+1",
+      "level": 23,
+      "levels_gained": 22,
+      "main_gained": 173,
+      "sp_gained": 248,
+      "total_xp": 62591
+    },
+    {
+      "hp_gained": 596,
+      "id": "boundary/24/-1",
+      "level": 23,
+      "levels_gained": 22,
+      "main_gained": 173,
+      "sp_gained": 248,
+      "total_xp": 70287
+    },
+    {
+      "hp_gained": 618,
+      "id": "boundary/24/+0",
+      "level": 24,
+      "levels_gained": 23,
+      "main_gained": 180,
+      "sp_gained": 258,
+      "total_xp": 70288
+    },
+    {
+      "hp_gained": 618,
+      "id": "boundary/24/+1",
+      "level": 24,
+      "levels_gained": 23,
+      "main_gained": 180,
+      "sp_gained": 258,
+      "total_xp": 70289
+    },
+    {
+      "hp_gained": 618,
+      "id": "boundary/25/-1",
+      "level": 24,
+      "levels_gained": 23,
+      "main_gained": 180,
+      "sp_gained": 258,
+      "total_xp": 78599
+    },
+    {
+      "hp_gained": 640,
+      "id": "boundary/25/+0",
+      "level": 25,
+      "levels_gained": 24,
+      "main_gained": 187,
+      "sp_gained": 268,
+      "total_xp": 78600
+    },
+    {
+      "hp_gained": 640,
+      "id": "boundary/25/+1",
+      "level": 25,
+      "levels_gained": 24,
+      "main_gained": 187,
+      "sp_gained": 268,
+      "total_xp": 78601
+    },
+    {
+      "hp_gained": 640,
+      "id": "boundary/26/-1",
+      "level": 25,
+      "levels_gained": 24,
+      "main_gained": 187,
+      "sp_gained": 268,
+      "total_xp": 87549
+    },
+    {
+      "hp_gained": 662,
+      "id": "boundary/26/+0",
+      "level": 26,
+      "levels_gained": 25,
+      "main_gained": 194,
+      "sp_gained": 278,
+      "total_xp": 87550
+    },
+    {
+      "hp_gained": 662,
+      "id": "boundary/26/+1",
+      "level": 26,
+      "levels_gained": 25,
+      "main_gained": 194,
+      "sp_gained": 278,
+      "total_xp": 87551
+    },
+    {
+      "hp_gained": 662,
+      "id": "boundary/27/-1",
+      "level": 26,
+      "levels_gained": 25,
+      "main_gained": 194,
+      "sp_gained": 278,
+      "total_xp": 97161
+    },
+    {
+      "hp_gained": 684,
+      "id": "boundary/27/+0",
+      "level": 27,
+      "levels_gained": 26,
+      "main_gained": 201,
+      "sp_gained": 288,
+      "total_xp": 97162
+    },
+    {
+      "hp_gained": 684,
+      "id": "boundary/27/+1",
+      "level": 27,
+      "levels_gained": 26,
+      "main_gained": 201,
+      "sp_gained": 288,
+      "total_xp": 97163
+    },
+    {
+      "hp_gained": 684,
+      "id": "boundary/28/-1",
+      "level": 27,
+      "levels_gained": 26,
+      "main_gained": 201,
+      "sp_gained": 288,
+      "total_xp": 107459
+    },
+    {
+      "hp_gained": 706,
+      "id": "boundary/28/+0",
+      "level": 28,
+      "levels_gained": 27,
+      "main_gained": 208,
+      "sp_gained": 298,
+      "total_xp": 107460
+    },
+    {
+      "hp_gained": 706,
+      "id": "boundary/28/+1",
+      "level": 28,
+      "levels_gained": 27,
+      "main_gained": 208,
+      "sp_gained": 298,
+      "total_xp": 107461
+    },
+    {
+      "hp_gained": 706,
+      "id": "boundary/29/-1",
+      "level": 28,
+      "levels_gained": 27,
+      "main_gained": 208,
+      "sp_gained": 298,
+      "total_xp": 118467
+    },
+    {
+      "hp_gained": 728,
+      "id": "boundary/29/+0",
+      "level": 29,
+      "levels_gained": 28,
+      "main_gained": 215,
+      "sp_gained": 308,
+      "total_xp": 118468
+    },
+    {
+      "hp_gained": 728,
+      "id": "boundary/29/+1",
+      "level": 29,
+      "levels_gained": 28,
+      "main_gained": 215,
+      "sp_gained": 308,
+      "total_xp": 118469
+    },
+    {
+      "hp_gained": 728,
+      "id": "boundary/30/-1",
+      "level": 29,
+      "levels_gained": 28,
+      "main_gained": 215,
+      "sp_gained": 308,
+      "total_xp": 130209
+    },
+    {
+      "hp_gained": 750,
+      "id": "boundary/30/+0",
+      "level": 30,
+      "levels_gained": 29,
+      "main_gained": 222,
+      "sp_gained": 318,
+      "total_xp": 130210
+    },
+    {
+      "hp_gained": 750,
+      "id": "boundary/30/+1",
+      "level": 30,
+      "levels_gained": 29,
+      "main_gained": 222,
+      "sp_gained": 318,
+      "total_xp": 130211
+    },
+    {
+      "hp_gained": 750,
+      "id": "boundary/31/-1",
+      "level": 30,
+      "levels_gained": 29,
+      "main_gained": 222,
+      "sp_gained": 318,
+      "total_xp": 142709
+    },
+    {
+      "hp_gained": 772,
+      "id": "boundary/31/+0",
+      "level": 31,
+      "levels_gained": 30,
+      "main_gained": 229,
+      "sp_gained": 328,
+      "total_xp": 142710
+    },
+    {
+      "hp_gained": 772,
+      "id": "boundary/31/+1",
+      "level": 31,
+      "levels_gained": 30,
+      "main_gained": 229,
+      "sp_gained": 328,
+      "total_xp": 142711
+    },
+    {
+      "hp_gained": 772,
+      "id": "boundary/32/-1",
+      "level": 31,
+      "levels_gained": 30,
+      "main_gained": 229,
+      "sp_gained": 328,
+      "total_xp": 155991
+    },
+    {
+      "hp_gained": 794,
+      "id": "boundary/32/+0",
+      "level": 32,
+      "levels_gained": 31,
+      "main_gained": 236,
+      "sp_gained": 338,
+      "total_xp": 155992
+    },
+    {
+      "hp_gained": 794,
+      "id": "boundary/32/+1",
+      "level": 32,
+      "levels_gained": 31,
+      "main_gained": 236,
+      "sp_gained": 338,
+      "total_xp": 155993
+    },
+    {
+      "hp_gained": 794,
+      "id": "boundary/33/-1",
+      "level": 32,
+      "levels_gained": 31,
+      "main_gained": 236,
+      "sp_gained": 338,
+      "total_xp": 170079
+    },
+    {
+      "hp_gained": 816,
+      "id": "boundary/33/+0",
+      "level": 33,
+      "levels_gained": 32,
+      "main_gained": 243,
+      "sp_gained": 348,
+      "total_xp": 170080
+    },
+    {
+      "hp_gained": 816,
+      "id": "boundary/33/+1",
+      "level": 33,
+      "levels_gained": 32,
+      "main_gained": 243,
+      "sp_gained": 348,
+      "total_xp": 170081
+    },
+    {
+      "hp_gained": 816,
+      "id": "boundary/34/-1",
+      "level": 33,
+      "levels_gained": 32,
+      "main_gained": 243,
+      "sp_gained": 348,
+      "total_xp": 184997
+    },
+    {
+      "hp_gained": 838,
+      "id": "boundary/34/+0",
+      "level": 34,
+      "levels_gained": 33,
+      "main_gained": 250,
+      "sp_gained": 358,
+      "total_xp": 184998
+    },
+    {
+      "hp_gained": 838,
+      "id": "boundary/34/+1",
+      "level": 34,
+      "levels_gained": 33,
+      "main_gained": 250,
+      "sp_gained": 358,
+      "total_xp": 184999
+    },
+    {
+      "hp_gained": 838,
+      "id": "boundary/35/-1",
+      "level": 34,
+      "levels_gained": 33,
+      "main_gained": 250,
+      "sp_gained": 358,
+      "total_xp": 200769
+    },
+    {
+      "hp_gained": 860,
+      "id": "boundary/35/+0",
+      "level": 35,
+      "levels_gained": 34,
+      "main_gained": 257,
+      "sp_gained": 368,
+      "total_xp": 200770
+    },
+    {
+      "hp_gained": 860,
+      "id": "boundary/35/+1",
+      "level": 35,
+      "levels_gained": 34,
+      "main_gained": 257,
+      "sp_gained": 368,
+      "total_xp": 200771
+    },
+    {
+      "hp_gained": 860,
+      "id": "boundary/36/-1",
+      "level": 35,
+      "levels_gained": 34,
+      "main_gained": 257,
+      "sp_gained": 368,
+      "total_xp": 217419
+    },
+    {
+      "hp_gained": 882,
+      "id": "boundary/36/+0",
+      "level": 36,
+      "levels_gained": 35,
+      "main_gained": 264,
+      "sp_gained": 378,
+      "total_xp": 217420
+    },
+    {
+      "hp_gained": 882,
+      "id": "boundary/36/+1",
+      "level": 36,
+      "levels_gained": 35,
+      "main_gained": 264,
+      "sp_gained": 378,
+      "total_xp": 217421
+    },
+    {
+      "hp_gained": 882,
+      "id": "boundary/37/-1",
+      "level": 36,
+      "levels_gained": 35,
+      "main_gained": 264,
+      "sp_gained": 378,
+      "total_xp": 234971
+    },
+    {
+      "hp_gained": 904,
+      "id": "boundary/37/+0",
+      "level": 37,
+      "levels_gained": 36,
+      "main_gained": 271,
+      "sp_gained": 388,
+      "total_xp": 234972
+    },
+    {
+      "hp_gained": 904,
+      "id": "boundary/37/+1",
+      "level": 37,
+      "levels_gained": 36,
+      "main_gained": 271,
+      "sp_gained": 388,
+      "total_xp": 234973
+    },
+    {
+      "hp_gained": 904,
+      "id": "boundary/38/-1",
+      "level": 37,
+      "levels_gained": 36,
+      "main_gained": 271,
+      "sp_gained": 388,
+      "total_xp": 253449
+    },
+    {
+      "hp_gained": 926,
+      "id": "boundary/38/+0",
+      "level": 38,
+      "levels_gained": 37,
+      "main_gained": 278,
+      "sp_gained": 398,
+      "total_xp": 253450
+    },
+    {
+      "hp_gained": 926,
+      "id": "boundary/38/+1",
+      "level": 38,
+      "levels_gained": 37,
+      "main_gained": 278,
+      "sp_gained": 398,
+      "total_xp": 253451
+    },
+    {
+      "hp_gained": 926,
+      "id": "boundary/39/-1",
+      "level": 38,
+      "levels_gained": 37,
+      "main_gained": 278,
+      "sp_gained": 398,
+      "total_xp": 272877
+    },
+    {
+      "hp_gained": 948,
+      "id": "boundary/39/+0",
+      "level": 39,
+      "levels_gained": 38,
+      "main_gained": 285,
+      "sp_gained": 408,
+      "total_xp": 272878
+    },
+    {
+      "hp_gained": 948,
+      "id": "boundary/39/+1",
+      "level": 39,
+      "levels_gained": 38,
+      "main_gained": 285,
+      "sp_gained": 408,
+      "total_xp": 272879
+    },
+    {
+      "hp_gained": 948,
+      "id": "boundary/40/-1",
+      "level": 39,
+      "levels_gained": 38,
+      "main_gained": 285,
+      "sp_gained": 408,
+      "total_xp": 293279
+    },
+    {
+      "hp_gained": 970,
+      "id": "boundary/40/+0",
+      "level": 40,
+      "levels_gained": 39,
+      "main_gained": 292,
+      "sp_gained": 418,
+      "total_xp": 293280
+    },
+    {
+      "hp_gained": 970,
+      "id": "boundary/40/+1",
+      "level": 40,
+      "levels_gained": 39,
+      "main_gained": 292,
+      "sp_gained": 418,
+      "total_xp": 293281
+    },
+    {
+      "hp_gained": 970,
+      "id": "boundary/41/-1",
+      "level": 40,
+      "levels_gained": 39,
+      "main_gained": 292,
+      "sp_gained": 418,
+      "total_xp": 314679
+    },
+    {
+      "hp_gained": 988,
+      "id": "boundary/41/+0",
+      "level": 41,
+      "levels_gained": 40,
+      "main_gained": 298,
+      "sp_gained": 427,
+      "total_xp": 314680
+    },
+    {
+      "hp_gained": 988,
+      "id": "boundary/41/+1",
+      "level": 41,
+      "levels_gained": 40,
+      "main_gained": 298,
+      "sp_gained": 427,
+      "total_xp": 314681
+    },
+    {
+      "hp_gained": 988,
+      "id": "boundary/42/-1",
+      "level": 41,
+      "levels_gained": 40,
+      "main_gained": 298,
+      "sp_gained": 427,
+      "total_xp": 337101
+    },
+    {
+      "hp_gained": 1006,
+      "id": "boundary/42/+0",
+      "level": 42,
+      "levels_gained": 41,
+      "main_gained": 304,
+      "sp_gained": 436,
+      "total_xp": 337102
+    },
+    {
+      "hp_gained": 1006,
+      "id": "boundary/42/+1",
+      "level": 42,
+      "levels_gained": 41,
+      "main_gained": 304,
+      "sp_gained": 436,
+      "total_xp": 337103
+    },
+    {
+      "hp_gained": 1006,
+      "id": "boundary/43/-1",
+      "level": 42,
+      "levels_gained": 41,
+      "main_gained": 304,
+      "sp_gained": 436,
+      "total_xp": 360569
+    },
+    {
+      "hp_gained": 1024,
+      "id": "boundary/43/+0",
+      "level": 43,
+      "levels_gained": 42,
+      "main_gained": 310,
+      "sp_gained": 445,
+      "total_xp": 360570
+    },
+    {
+      "hp_gained": 1024,
+      "id": "boundary/43/+1",
+      "level": 43,
+      "levels_gained": 42,
+      "main_gained": 310,
+      "sp_gained": 445,
+      "total_xp": 360571
+    },
+    {
+      "hp_gained": 1024,
+      "id": "boundary/44/-1",
+      "level": 43,
+      "levels_gained": 42,
+      "main_gained": 310,
+      "sp_gained": 445,
+      "total_xp": 385107
+    },
+    {
+      "hp_gained": 1042,
+      "id": "boundary/44/+0",
+      "level": 44,
+      "levels_gained": 43,
+      "main_gained": 316,
+      "sp_gained": 454,
+      "total_xp": 385108
+    },
+    {
+      "hp_gained": 1042,
+      "id": "boundary/44/+1",
+      "level": 44,
+      "levels_gained": 43,
+      "main_gained": 316,
+      "sp_gained": 454,
+      "total_xp": 385109
+    },
+    {
+      "hp_gained": 1042,
+      "id": "boundary/45/-1",
+      "level": 44,
+      "levels_gained": 43,
+      "main_gained": 316,
+      "sp_gained": 454,
+      "total_xp": 410739
+    },
+    {
+      "hp_gained": 1060,
+      "id": "boundary/45/+0",
+      "level": 45,
+      "levels_gained": 44,
+      "main_gained": 322,
+      "sp_gained": 463,
+      "total_xp": 410740
+    },
+    {
+      "hp_gained": 1060,
+      "id": "boundary/45/+1",
+      "level": 45,
+      "levels_gained": 44,
+      "main_gained": 322,
+      "sp_gained": 463,
+      "total_xp": 410741
+    },
+    {
+      "hp_gained": 1060,
+      "id": "boundary/46/-1",
+      "level": 45,
+      "levels_gained": 44,
+      "main_gained": 322,
+      "sp_gained": 463,
+      "total_xp": 437489
+    },
+    {
+      "hp_gained": 1078,
+      "id": "boundary/46/+0",
+      "level": 46,
+      "levels_gained": 45,
+      "main_gained": 328,
+      "sp_gained": 472,
+      "total_xp": 437490
+    },
+    {
+      "hp_gained": 1078,
+      "id": "boundary/46/+1",
+      "level": 46,
+      "levels_gained": 45,
+      "main_gained": 328,
+      "sp_gained": 472,
+      "total_xp": 437491
+    },
+    {
+      "hp_gained": 1078,
+      "id": "boundary/47/-1",
+      "level": 46,
+      "levels_gained": 45,
+      "main_gained": 328,
+      "sp_gained": 472,
+      "total_xp": 465381
+    },
+    {
+      "hp_gained": 1096,
+      "id": "boundary/47/+0",
+      "level": 47,
+      "levels_gained": 46,
+      "main_gained": 334,
+      "sp_gained": 481,
+      "total_xp": 465382
+    },
+    {
+      "hp_gained": 1096,
+      "id": "boundary/47/+1",
+      "level": 47,
+      "levels_gained": 46,
+      "main_gained": 334,
+      "sp_gained": 481,
+      "total_xp": 465383
+    },
+    {
+      "hp_gained": 1096,
+      "id": "boundary/48/-1",
+      "level": 47,
+      "levels_gained": 46,
+      "main_gained": 334,
+      "sp_gained": 481,
+      "total_xp": 494439
+    },
+    {
+      "hp_gained": 1114,
+      "id": "boundary/48/+0",
+      "level": 48,
+      "levels_gained": 47,
+      "main_gained": 340,
+      "sp_gained": 490,
+      "total_xp": 494440
+    },
+    {
+      "hp_gained": 1114,
+      "id": "boundary/48/+1",
+      "level": 48,
+      "levels_gained": 47,
+      "main_gained": 340,
+      "sp_gained": 490,
+      "total_xp": 494441
+    },
+    {
+      "hp_gained": 1114,
+      "id": "boundary/49/-1",
+      "level": 48,
+      "levels_gained": 47,
+      "main_gained": 340,
+      "sp_gained": 490,
+      "total_xp": 524687
+    },
+    {
+      "hp_gained": 1132,
+      "id": "boundary/49/+0",
+      "level": 49,
+      "levels_gained": 48,
+      "main_gained": 346,
+      "sp_gained": 499,
+      "total_xp": 524688
+    },
+    {
+      "hp_gained": 1132,
+      "id": "boundary/49/+1",
+      "level": 49,
+      "levels_gained": 48,
+      "main_gained": 346,
+      "sp_gained": 499,
+      "total_xp": 524689
+    },
+    {
+      "hp_gained": 1132,
+      "id": "boundary/50/-1",
+      "level": 49,
+      "levels_gained": 48,
+      "main_gained": 346,
+      "sp_gained": 499,
+      "total_xp": 556149
+    },
+    {
+      "hp_gained": 1150,
+      "id": "boundary/50/+0",
+      "level": 50,
+      "levels_gained": 49,
+      "main_gained": 352,
+      "sp_gained": 508,
+      "total_xp": 556150
+    },
+    {
+      "hp_gained": 1150,
+      "id": "boundary/50/+1",
+      "level": 50,
+      "levels_gained": 49,
+      "main_gained": 352,
+      "sp_gained": 508,
+      "total_xp": 556151
+    },
+    {
+      "hp_gained": 1150,
+      "id": "boundary/51/-1",
+      "level": 50,
+      "levels_gained": 49,
+      "main_gained": 352,
+      "sp_gained": 508,
+      "total_xp": 588849
+    },
+    {
+      "hp_gained": 1168,
+      "id": "boundary/51/+0",
+      "level": 51,
+      "levels_gained": 50,
+      "main_gained": 358,
+      "sp_gained": 517,
+      "total_xp": 588850
+    },
+    {
+      "hp_gained": 1168,
+      "id": "boundary/51/+1",
+      "level": 51,
+      "levels_gained": 50,
+      "main_gained": 358,
+      "sp_gained": 517,
+      "total_xp": 588851
+    },
+    {
+      "hp_gained": 1168,
+      "id": "boundary/52/-1",
+      "level": 51,
+      "levels_gained": 50,
+      "main_gained": 358,
+      "sp_gained": 517,
+      "total_xp": 622811
+    },
+    {
+      "hp_gained": 1186,
+      "id": "boundary/52/+0",
+      "level": 52,
+      "levels_gained": 51,
+      "main_gained": 364,
+      "sp_gained": 526,
+      "total_xp": 622812
+    },
+    {
+      "hp_gained": 1186,
+      "id": "boundary/52/+1",
+      "level": 52,
+      "levels_gained": 51,
+      "main_gained": 364,
+      "sp_gained": 526,
+      "total_xp": 622813
+    },
+    {
+      "hp_gained": 1186,
+      "id": "boundary/53/-1",
+      "level": 52,
+      "levels_gained": 51,
+      "main_gained": 364,
+      "sp_gained": 526,
+      "total_xp": 658059
+    },
+    {
+      "hp_gained": 1204,
+      "id": "boundary/53/+0",
+      "level": 53,
+      "levels_gained": 52,
+      "main_gained": 370,
+      "sp_gained": 535,
+      "total_xp": 658060
+    },
+    {
+      "hp_gained": 1204,
+      "id": "boundary/53/+1",
+      "level": 53,
+      "levels_gained": 52,
+      "main_gained": 370,
+      "sp_gained": 535,
+      "total_xp": 658061
+    },
+    {
+      "hp_gained": 1204,
+      "id": "boundary/54/-1",
+      "level": 53,
+      "levels_gained": 52,
+      "main_gained": 370,
+      "sp_gained": 535,
+      "total_xp": 694617
+    },
+    {
+      "hp_gained": 1222,
+      "id": "boundary/54/+0",
+      "level": 54,
+      "levels_gained": 53,
+      "main_gained": 376,
+      "sp_gained": 544,
+      "total_xp": 694618
+    },
+    {
+      "hp_gained": 1222,
+      "id": "boundary/54/+1",
+      "level": 54,
+      "levels_gained": 53,
+      "main_gained": 376,
+      "sp_gained": 544,
+      "total_xp": 694619
+    },
+    {
+      "hp_gained": 1222,
+      "id": "boundary/55/-1",
+      "level": 54,
+      "levels_gained": 53,
+      "main_gained": 376,
+      "sp_gained": 544,
+      "total_xp": 732509
+    },
+    {
+      "hp_gained": 1240,
+      "id": "boundary/55/+0",
+      "level": 55,
+      "levels_gained": 54,
+      "main_gained": 382,
+      "sp_gained": 553,
+      "total_xp": 732510
+    },
+    {
+      "hp_gained": 1240,
+      "id": "boundary/55/+1",
+      "level": 55,
+      "levels_gained": 54,
+      "main_gained": 382,
+      "sp_gained": 553,
+      "total_xp": 732511
+    },
+    {
+      "hp_gained": 1240,
+      "id": "boundary/56/-1",
+      "level": 55,
+      "levels_gained": 54,
+      "main_gained": 382,
+      "sp_gained": 553,
+      "total_xp": 771759
+    },
+    {
+      "hp_gained": 1258,
+      "id": "boundary/56/+0",
+      "level": 56,
+      "levels_gained": 55,
+      "main_gained": 388,
+      "sp_gained": 562,
+      "total_xp": 771760
+    },
+    {
+      "hp_gained": 1258,
+      "id": "boundary/56/+1",
+      "level": 56,
+      "levels_gained": 55,
+      "main_gained": 388,
+      "sp_gained": 562,
+      "total_xp": 771761
+    },
+    {
+      "hp_gained": 1258,
+      "id": "boundary/57/-1",
+      "level": 56,
+      "levels_gained": 55,
+      "main_gained": 388,
+      "sp_gained": 562,
+      "total_xp": 812391
+    },
+    {
+      "hp_gained": 1276,
+      "id": "boundary/57/+0",
+      "level": 57,
+      "levels_gained": 56,
+      "main_gained": 394,
+      "sp_gained": 571,
+      "total_xp": 812392
+    },
+    {
+      "hp_gained": 1276,
+      "id": "boundary/57/+1",
+      "level": 57,
+      "levels_gained": 56,
+      "main_gained": 394,
+      "sp_gained": 571,
+      "total_xp": 812393
+    },
+    {
+      "hp_gained": 1276,
+      "id": "boundary/58/-1",
+      "level": 57,
+      "levels_gained": 56,
+      "main_gained": 394,
+      "sp_gained": 571,
+      "total_xp": 854429
+    },
+    {
+      "hp_gained": 1294,
+      "id": "boundary/58/+0",
+      "level": 58,
+      "levels_gained": 57,
+      "main_gained": 400,
+      "sp_gained": 580,
+      "total_xp": 854430
+    },
+    {
+      "hp_gained": 1294,
+      "id": "boundary/58/+1",
+      "level": 58,
+      "levels_gained": 57,
+      "main_gained": 400,
+      "sp_gained": 580,
+      "total_xp": 854431
+    },
+    {
+      "hp_gained": 1294,
+      "id": "boundary/59/-1",
+      "level": 58,
+      "levels_gained": 57,
+      "main_gained": 400,
+      "sp_gained": 580,
+      "total_xp": 897897
+    },
+    {
+      "hp_gained": 1312,
+      "id": "boundary/59/+0",
+      "level": 59,
+      "levels_gained": 58,
+      "main_gained": 406,
+      "sp_gained": 589,
+      "total_xp": 897898
+    },
+    {
+      "hp_gained": 1312,
+      "id": "boundary/59/+1",
+      "level": 59,
+      "levels_gained": 58,
+      "main_gained": 406,
+      "sp_gained": 589,
+      "total_xp": 897899
+    },
+    {
+      "hp_gained": 1312,
+      "id": "boundary/60/-1",
+      "level": 59,
+      "levels_gained": 58,
+      "main_gained": 406,
+      "sp_gained": 589,
+      "total_xp": 942819
+    },
+    {
+      "hp_gained": 1330,
+      "id": "boundary/60/+0",
+      "level": 60,
+      "levels_gained": 59,
+      "main_gained": 412,
+      "sp_gained": 598,
+      "total_xp": 942820
+    },
+    {
+      "hp_gained": 1330,
+      "id": "boundary/60/+1",
+      "level": 60,
+      "levels_gained": 59,
+      "main_gained": 412,
+      "sp_gained": 598,
+      "total_xp": 942821
+    },
+    {
+      "hp_gained": 1330,
+      "id": "boundary/61/-1",
+      "level": 60,
+      "levels_gained": 59,
+      "main_gained": 412,
+      "sp_gained": 598,
+      "total_xp": 989219
+    },
+    {
+      "hp_gained": 1344,
+      "id": "boundary/61/+0",
+      "level": 61,
+      "levels_gained": 60,
+      "main_gained": 417,
+      "sp_gained": 606,
+      "total_xp": 989220
+    },
+    {
+      "hp_gained": 1344,
+      "id": "boundary/61/+1",
+      "level": 61,
+      "levels_gained": 60,
+      "main_gained": 417,
+      "sp_gained": 606,
+      "total_xp": 989221
+    },
+    {
+      "hp_gained": 1344,
+      "id": "boundary/62/-1",
+      "level": 61,
+      "levels_gained": 60,
+      "main_gained": 417,
+      "sp_gained": 606,
+      "total_xp": 1037121
+    },
+    {
+      "hp_gained": 1358,
+      "id": "boundary/62/+0",
+      "level": 62,
+      "levels_gained": 61,
+      "main_gained": 422,
+      "sp_gained": 614,
+      "total_xp": 1037122
+    },
+    {
+      "hp_gained": 1358,
+      "id": "boundary/62/+1",
+      "level": 62,
+      "levels_gained": 61,
+      "main_gained": 422,
+      "sp_gained": 614,
+      "total_xp": 1037123
+    },
+    {
+      "hp_gained": 1358,
+      "id": "boundary/63/-1",
+      "level": 62,
+      "levels_gained": 61,
+      "main_gained": 422,
+      "sp_gained": 614,
+      "total_xp": 1086549
+    },
+    {
+      "hp_gained": 1372,
+      "id": "boundary/63/+0",
+      "level": 63,
+      "levels_gained": 62,
+      "main_gained": 427,
+      "sp_gained": 622,
+      "total_xp": 1086550
+    },
+    {
+      "hp_gained": 1372,
+      "id": "boundary/63/+1",
+      "level": 63,
+      "levels_gained": 62,
+      "main_gained": 427,
+      "sp_gained": 622,
+      "total_xp": 1086551
+    },
+    {
+      "hp_gained": 1372,
+      "id": "boundary/64/-1",
+      "level": 63,
+      "levels_gained": 62,
+      "main_gained": 427,
+      "sp_gained": 622,
+      "total_xp": 1137527
+    },
+    {
+      "hp_gained": 1386,
+      "id": "boundary/64/+0",
+      "level": 64,
+      "levels_gained": 63,
+      "main_gained": 432,
+      "sp_gained": 630,
+      "total_xp": 1137528
+    },
+    {
+      "hp_gained": 1386,
+      "id": "boundary/64/+1",
+      "level": 64,
+      "levels_gained": 63,
+      "main_gained": 432,
+      "sp_gained": 630,
+      "total_xp": 1137529
+    },
+    {
+      "hp_gained": 1386,
+      "id": "boundary/65/-1",
+      "level": 64,
+      "levels_gained": 63,
+      "main_gained": 432,
+      "sp_gained": 630,
+      "total_xp": 1190079
+    },
+    {
+      "hp_gained": 1400,
+      "id": "boundary/65/+0",
+      "level": 65,
+      "levels_gained": 64,
+      "main_gained": 437,
+      "sp_gained": 638,
+      "total_xp": 1190080
+    },
+    {
+      "hp_gained": 1400,
+      "id": "boundary/65/+1",
+      "level": 65,
+      "levels_gained": 64,
+      "main_gained": 437,
+      "sp_gained": 638,
+      "total_xp": 1190081
+    },
+    {
+      "hp_gained": 1400,
+      "id": "boundary/66/-1",
+      "level": 65,
+      "levels_gained": 64,
+      "main_gained": 437,
+      "sp_gained": 638,
+      "total_xp": 1244229
+    },
+    {
+      "hp_gained": 1414,
+      "id": "boundary/66/+0",
+      "level": 66,
+      "levels_gained": 65,
+      "main_gained": 442,
+      "sp_gained": 646,
+      "total_xp": 1244230
+    },
+    {
+      "hp_gained": 1414,
+      "id": "boundary/66/+1",
+      "level": 66,
+      "levels_gained": 65,
+      "main_gained": 442,
+      "sp_gained": 646,
+      "total_xp": 1244231
+    },
+    {
+      "hp_gained": 1414,
+      "id": "boundary/67/-1",
+      "level": 66,
+      "levels_gained": 65,
+      "main_gained": 442,
+      "sp_gained": 646,
+      "total_xp": 1300001
+    },
+    {
+      "hp_gained": 1428,
+      "id": "boundary/67/+0",
+      "level": 67,
+      "levels_gained": 66,
+      "main_gained": 447,
+      "sp_gained": 654,
+      "total_xp": 1300002
+    },
+    {
+      "hp_gained": 1428,
+      "id": "boundary/67/+1",
+      "level": 67,
+      "levels_gained": 66,
+      "main_gained": 447,
+      "sp_gained": 654,
+      "total_xp": 1300003
+    },
+    {
+      "hp_gained": 1428,
+      "id": "boundary/68/-1",
+      "level": 67,
+      "levels_gained": 66,
+      "main_gained": 447,
+      "sp_gained": 654,
+      "total_xp": 1357419
+    },
+    {
+      "hp_gained": 1442,
+      "id": "boundary/68/+0",
+      "level": 68,
+      "levels_gained": 67,
+      "main_gained": 452,
+      "sp_gained": 662,
+      "total_xp": 1357420
+    },
+    {
+      "hp_gained": 1442,
+      "id": "boundary/68/+1",
+      "level": 68,
+      "levels_gained": 67,
+      "main_gained": 452,
+      "sp_gained": 662,
+      "total_xp": 1357421
+    },
+    {
+      "hp_gained": 1442,
+      "id": "boundary/69/-1",
+      "level": 68,
+      "levels_gained": 67,
+      "main_gained": 452,
+      "sp_gained": 662,
+      "total_xp": 1416507
+    },
+    {
+      "hp_gained": 1456,
+      "id": "boundary/69/+0",
+      "level": 69,
+      "levels_gained": 68,
+      "main_gained": 457,
+      "sp_gained": 670,
+      "total_xp": 1416508
+    },
+    {
+      "hp_gained": 1456,
+      "id": "boundary/69/+1",
+      "level": 69,
+      "levels_gained": 68,
+      "main_gained": 457,
+      "sp_gained": 670,
+      "total_xp": 1416509
+    },
+    {
+      "hp_gained": 1456,
+      "id": "boundary/70/-1",
+      "level": 69,
+      "levels_gained": 68,
+      "main_gained": 457,
+      "sp_gained": 670,
+      "total_xp": 1477289
+    },
+    {
+      "hp_gained": 1470,
+      "id": "boundary/70/+0",
+      "level": 70,
+      "levels_gained": 69,
+      "main_gained": 462,
+      "sp_gained": 678,
+      "total_xp": 1477290
+    },
+    {
+      "hp_gained": 1470,
+      "id": "boundary/70/+1",
+      "level": 70,
+      "levels_gained": 69,
+      "main_gained": 462,
+      "sp_gained": 678,
+      "total_xp": 1477291
+    },
+    {
+      "hp_gained": 1470,
+      "id": "boundary/71/-1",
+      "level": 70,
+      "levels_gained": 69,
+      "main_gained": 462,
+      "sp_gained": 678,
+      "total_xp": 1539789
+    },
+    {
+      "hp_gained": 1484,
+      "id": "boundary/71/+0",
+      "level": 71,
+      "levels_gained": 70,
+      "main_gained": 467,
+      "sp_gained": 686,
+      "total_xp": 1539790
+    },
+    {
+      "hp_gained": 1484,
+      "id": "boundary/71/+1",
+      "level": 71,
+      "levels_gained": 70,
+      "main_gained": 467,
+      "sp_gained": 686,
+      "total_xp": 1539791
+    },
+    {
+      "hp_gained": 1484,
+      "id": "boundary/72/-1",
+      "level": 71,
+      "levels_gained": 70,
+      "main_gained": 467,
+      "sp_gained": 686,
+      "total_xp": 1604031
+    },
+    {
+      "hp_gained": 1498,
+      "id": "boundary/72/+0",
+      "level": 72,
+      "levels_gained": 71,
+      "main_gained": 472,
+      "sp_gained": 694,
+      "total_xp": 1604032
+    },
+    {
+      "hp_gained": 1498,
+      "id": "boundary/72/+1",
+      "level": 72,
+      "levels_gained": 71,
+      "main_gained": 472,
+      "sp_gained": 694,
+      "total_xp": 1604033
+    },
+    {
+      "hp_gained": 1498,
+      "id": "boundary/73/-1",
+      "level": 72,
+      "levels_gained": 71,
+      "main_gained": 472,
+      "sp_gained": 694,
+      "total_xp": 1670039
+    },
+    {
+      "hp_gained": 1512,
+      "id": "boundary/73/+0",
+      "level": 73,
+      "levels_gained": 72,
+      "main_gained": 477,
+      "sp_gained": 702,
+      "total_xp": 1670040
+    },
+    {
+      "hp_gained": 1512,
+      "id": "boundary/73/+1",
+      "level": 73,
+      "levels_gained": 72,
+      "main_gained": 477,
+      "sp_gained": 702,
+      "total_xp": 1670041
+    },
+    {
+      "hp_gained": 1512,
+      "id": "boundary/74/-1",
+      "level": 73,
+      "levels_gained": 72,
+      "main_gained": 477,
+      "sp_gained": 702,
+      "total_xp": 1737837
+    },
+    {
+      "hp_gained": 1526,
+      "id": "boundary/74/+0",
+      "level": 74,
+      "levels_gained": 73,
+      "main_gained": 482,
+      "sp_gained": 710,
+      "total_xp": 1737838
+    },
+    {
+      "hp_gained": 1526,
+      "id": "boundary/74/+1",
+      "level": 74,
+      "levels_gained": 73,
+      "main_gained": 482,
+      "sp_gained": 710,
+      "total_xp": 1737839
+    },
+    {
+      "hp_gained": 1526,
+      "id": "boundary/75/-1",
+      "level": 74,
+      "levels_gained": 73,
+      "main_gained": 482,
+      "sp_gained": 710,
+      "total_xp": 1807449
+    },
+    {
+      "hp_gained": 1540,
+      "id": "boundary/75/+0",
+      "level": 75,
+      "levels_gained": 74,
+      "main_gained": 487,
+      "sp_gained": 718,
+      "total_xp": 1807450
+    },
+    {
+      "hp_gained": 1540,
+      "id": "boundary/75/+1",
+      "level": 75,
+      "levels_gained": 74,
+      "main_gained": 487,
+      "sp_gained": 718,
+      "total_xp": 1807451
+    },
+    {
+      "hp_gained": 1540,
+      "id": "boundary/76/-1",
+      "level": 75,
+      "levels_gained": 74,
+      "main_gained": 487,
+      "sp_gained": 718,
+      "total_xp": 1878899
+    },
+    {
+      "hp_gained": 1554,
+      "id": "boundary/76/+0",
+      "level": 76,
+      "levels_gained": 75,
+      "main_gained": 492,
+      "sp_gained": 726,
+      "total_xp": 1878900
+    },
+    {
+      "hp_gained": 1554,
+      "id": "boundary/76/+1",
+      "level": 76,
+      "levels_gained": 75,
+      "main_gained": 492,
+      "sp_gained": 726,
+      "total_xp": 1878901
+    },
+    {
+      "hp_gained": 1554,
+      "id": "boundary/77/-1",
+      "level": 76,
+      "levels_gained": 75,
+      "main_gained": 492,
+      "sp_gained": 726,
+      "total_xp": 1952211
+    },
+    {
+      "hp_gained": 1568,
+      "id": "boundary/77/+0",
+      "level": 77,
+      "levels_gained": 76,
+      "main_gained": 497,
+      "sp_gained": 734,
+      "total_xp": 1952212
+    },
+    {
+      "hp_gained": 1568,
+      "id": "boundary/77/+1",
+      "level": 77,
+      "levels_gained": 76,
+      "main_gained": 497,
+      "sp_gained": 734,
+      "total_xp": 1952213
+    },
+    {
+      "hp_gained": 1568,
+      "id": "boundary/78/-1",
+      "level": 77,
+      "levels_gained": 76,
+      "main_gained": 497,
+      "sp_gained": 734,
+      "total_xp": 2027409
+    },
+    {
+      "hp_gained": 1582,
+      "id": "boundary/78/+0",
+      "level": 78,
+      "levels_gained": 77,
+      "main_gained": 502,
+      "sp_gained": 742,
+      "total_xp": 2027410
+    },
+    {
+      "hp_gained": 1582,
+      "id": "boundary/78/+1",
+      "level": 78,
+      "levels_gained": 77,
+      "main_gained": 502,
+      "sp_gained": 742,
+      "total_xp": 2027411
+    },
+    {
+      "hp_gained": 1582,
+      "id": "boundary/79/-1",
+      "level": 78,
+      "levels_gained": 77,
+      "main_gained": 502,
+      "sp_gained": 742,
+      "total_xp": 2104517
+    },
+    {
+      "hp_gained": 1596,
+      "id": "boundary/79/+0",
+      "level": 79,
+      "levels_gained": 78,
+      "main_gained": 507,
+      "sp_gained": 750,
+      "total_xp": 2104518
+    },
+    {
+      "hp_gained": 1596,
+      "id": "boundary/79/+1",
+      "level": 79,
+      "levels_gained": 78,
+      "main_gained": 507,
+      "sp_gained": 750,
+      "total_xp": 2104519
+    },
+    {
+      "hp_gained": 1596,
+      "id": "boundary/80/-1",
+      "level": 79,
+      "levels_gained": 78,
+      "main_gained": 507,
+      "sp_gained": 750,
+      "total_xp": 2183559
+    },
+    {
+      "hp_gained": 1610,
+      "id": "boundary/80/+0",
+      "level": 80,
+      "levels_gained": 79,
+      "main_gained": 512,
+      "sp_gained": 758,
+      "total_xp": 2183560
+    },
+    {
+      "hp_gained": 1610,
+      "id": "boundary/80/+1",
+      "level": 80,
+      "levels_gained": 79,
+      "main_gained": 512,
+      "sp_gained": 758,
+      "total_xp": 2183561
+    },
+    {
+      "hp_gained": 1610,
+      "id": "boundary/81/-1",
+      "level": 80,
+      "levels_gained": 79,
+      "main_gained": 512,
+      "sp_gained": 758,
+      "total_xp": 2264559
+    },
+    {
+      "hp_gained": 1622,
+      "id": "boundary/81/+0",
+      "level": 81,
+      "levels_gained": 80,
+      "main_gained": 516,
+      "sp_gained": 765,
+      "total_xp": 2264560
+    },
+    {
+      "hp_gained": 1622,
+      "id": "boundary/81/+1",
+      "level": 81,
+      "levels_gained": 80,
+      "main_gained": 516,
+      "sp_gained": 765,
+      "total_xp": 2264561
+    },
+    {
+      "hp_gained": 1622,
+      "id": "boundary/82/-1",
+      "level": 81,
+      "levels_gained": 80,
+      "main_gained": 516,
+      "sp_gained": 765,
+      "total_xp": 2347541
+    },
+    {
+      "hp_gained": 1634,
+      "id": "boundary/82/+0",
+      "level": 82,
+      "levels_gained": 81,
+      "main_gained": 520,
+      "sp_gained": 772,
+      "total_xp": 2347542
+    },
+    {
+      "hp_gained": 1634,
+      "id": "boundary/82/+1",
+      "level": 82,
+      "levels_gained": 81,
+      "main_gained": 520,
+      "sp_gained": 772,
+      "total_xp": 2347543
+    },
+    {
+      "hp_gained": 1634,
+      "id": "boundary/83/-1",
+      "level": 82,
+      "levels_gained": 81,
+      "main_gained": 520,
+      "sp_gained": 772,
+      "total_xp": 2432529
+    },
+    {
+      "hp_gained": 1646,
+      "id": "boundary/83/+0",
+      "level": 83,
+      "levels_gained": 82,
+      "main_gained": 524,
+      "sp_gained": 779,
+      "total_xp": 2432530
+    },
+    {
+      "hp_gained": 1646,
+      "id": "boundary/83/+1",
+      "level": 83,
+      "levels_gained": 82,
+      "main_gained": 524,
+      "sp_gained": 779,
+      "total_xp": 2432531
+    },
+    {
+      "hp_gained": 1646,
+      "id": "boundary/84/-1",
+      "level": 83,
+      "levels_gained": 82,
+      "main_gained": 524,
+      "sp_gained": 779,
+      "total_xp": 2519547
+    },
+    {
+      "hp_gained": 1658,
+      "id": "boundary/84/+0",
+      "level": 84,
+      "levels_gained": 83,
+      "main_gained": 528,
+      "sp_gained": 786,
+      "total_xp": 2519548
+    },
+    {
+      "hp_gained": 1658,
+      "id": "boundary/84/+1",
+      "level": 84,
+      "levels_gained": 83,
+      "main_gained": 528,
+      "sp_gained": 786,
+      "total_xp": 2519549
+    },
+    {
+      "hp_gained": 1658,
+      "id": "boundary/85/-1",
+      "level": 84,
+      "levels_gained": 83,
+      "main_gained": 528,
+      "sp_gained": 786,
+      "total_xp": 2608619
+    },
+    {
+      "hp_gained": 1670,
+      "id": "boundary/85/+0",
+      "level": 85,
+      "levels_gained": 84,
+      "main_gained": 532,
+      "sp_gained": 793,
+      "total_xp": 2608620
+    },
+    {
+      "hp_gained": 1670,
+      "id": "boundary/85/+1",
+      "level": 85,
+      "levels_gained": 84,
+      "main_gained": 532,
+      "sp_gained": 793,
+      "total_xp": 2608621
+    },
+    {
+      "hp_gained": 1670,
+      "id": "boundary/86/-1",
+      "level": 85,
+      "levels_gained": 84,
+      "main_gained": 532,
+      "sp_gained": 793,
+      "total_xp": 2699769
+    },
+    {
+      "hp_gained": 1682,
+      "id": "boundary/86/+0",
+      "level": 86,
+      "levels_gained": 85,
+      "main_gained": 536,
+      "sp_gained": 800,
+      "total_xp": 2699770
+    },
+    {
+      "hp_gained": 1682,
+      "id": "boundary/86/+1",
+      "level": 86,
+      "levels_gained": 85,
+      "main_gained": 536,
+      "sp_gained": 800,
+      "total_xp": 2699771
+    },
+    {
+      "hp_gained": 1682,
+      "id": "boundary/87/-1",
+      "level": 86,
+      "levels_gained": 85,
+      "main_gained": 536,
+      "sp_gained": 800,
+      "total_xp": 2793021
+    },
+    {
+      "hp_gained": 1694,
+      "id": "boundary/87/+0",
+      "level": 87,
+      "levels_gained": 86,
+      "main_gained": 540,
+      "sp_gained": 807,
+      "total_xp": 2793022
+    },
+    {
+      "hp_gained": 1694,
+      "id": "boundary/87/+1",
+      "level": 87,
+      "levels_gained": 86,
+      "main_gained": 540,
+      "sp_gained": 807,
+      "total_xp": 2793023
+    },
+    {
+      "hp_gained": 1694,
+      "id": "boundary/88/-1",
+      "level": 87,
+      "levels_gained": 86,
+      "main_gained": 540,
+      "sp_gained": 807,
+      "total_xp": 2888399
+    },
+    {
+      "hp_gained": 1706,
+      "id": "boundary/88/+0",
+      "level": 88,
+      "levels_gained": 87,
+      "main_gained": 544,
+      "sp_gained": 814,
+      "total_xp": 2888400
+    },
+    {
+      "hp_gained": 1706,
+      "id": "boundary/88/+1",
+      "level": 88,
+      "levels_gained": 87,
+      "main_gained": 544,
+      "sp_gained": 814,
+      "total_xp": 2888401
+    },
+    {
+      "hp_gained": 1706,
+      "id": "boundary/89/-1",
+      "level": 88,
+      "levels_gained": 87,
+      "main_gained": 544,
+      "sp_gained": 814,
+      "total_xp": 2985927
+    },
+    {
+      "hp_gained": 1718,
+      "id": "boundary/89/+0",
+      "level": 89,
+      "levels_gained": 88,
+      "main_gained": 548,
+      "sp_gained": 821,
+      "total_xp": 2985928
+    },
+    {
+      "hp_gained": 1718,
+      "id": "boundary/89/+1",
+      "level": 89,
+      "levels_gained": 88,
+      "main_gained": 548,
+      "sp_gained": 821,
+      "total_xp": 2985929
+    },
+    {
+      "hp_gained": 1718,
+      "id": "boundary/90/-1",
+      "level": 89,
+      "levels_gained": 88,
+      "main_gained": 548,
+      "sp_gained": 821,
+      "total_xp": 3085629
+    },
+    {
+      "hp_gained": 1730,
+      "id": "boundary/90/+0",
+      "level": 90,
+      "levels_gained": 89,
+      "main_gained": 552,
+      "sp_gained": 828,
+      "total_xp": 3085630
+    },
+    {
+      "hp_gained": 1730,
+      "id": "boundary/90/+1",
+      "level": 90,
+      "levels_gained": 89,
+      "main_gained": 552,
+      "sp_gained": 828,
+      "total_xp": 3085631
+    },
+    {
+      "hp_gained": 1730,
+      "id": "boundary/91/-1",
+      "level": 90,
+      "levels_gained": 89,
+      "main_gained": 552,
+      "sp_gained": 828,
+      "total_xp": 3187529
+    },
+    {
+      "hp_gained": 1742,
+      "id": "boundary/91/+0",
+      "level": 91,
+      "levels_gained": 90,
+      "main_gained": 556,
+      "sp_gained": 835,
+      "total_xp": 3187530
+    },
+    {
+      "hp_gained": 1742,
+      "id": "boundary/91/+1",
+      "level": 91,
+      "levels_gained": 90,
+      "main_gained": 556,
+      "sp_gained": 835,
+      "total_xp": 3187531
+    },
+    {
+      "hp_gained": 1742,
+      "id": "boundary/92/-1",
+      "level": 91,
+      "levels_gained": 90,
+      "main_gained": 556,
+      "sp_gained": 835,
+      "total_xp": 3291651
+    },
+    {
+      "hp_gained": 1754,
+      "id": "boundary/92/+0",
+      "level": 92,
+      "levels_gained": 91,
+      "main_gained": 560,
+      "sp_gained": 842,
+      "total_xp": 3291652
+    },
+    {
+      "hp_gained": 1754,
+      "id": "boundary/92/+1",
+      "level": 92,
+      "levels_gained": 91,
+      "main_gained": 560,
+      "sp_gained": 842,
+      "total_xp": 3291653
+    },
+    {
+      "hp_gained": 1754,
+      "id": "boundary/93/-1",
+      "level": 92,
+      "levels_gained": 91,
+      "main_gained": 560,
+      "sp_gained": 842,
+      "total_xp": 3398019
+    },
+    {
+      "hp_gained": 1766,
+      "id": "boundary/93/+0",
+      "level": 93,
+      "levels_gained": 92,
+      "main_gained": 564,
+      "sp_gained": 849,
+      "total_xp": 3398020
+    },
+    {
+      "hp_gained": 1766,
+      "id": "boundary/93/+1",
+      "level": 93,
+      "levels_gained": 92,
+      "main_gained": 564,
+      "sp_gained": 849,
+      "total_xp": 3398021
+    },
+    {
+      "hp_gained": 1766,
+      "id": "boundary/94/-1",
+      "level": 93,
+      "levels_gained": 92,
+      "main_gained": 564,
+      "sp_gained": 849,
+      "total_xp": 3506657
+    },
+    {
+      "hp_gained": 1778,
+      "id": "boundary/94/+0",
+      "level": 94,
+      "levels_gained": 93,
+      "main_gained": 568,
+      "sp_gained": 856,
+      "total_xp": 3506658
+    },
+    {
+      "hp_gained": 1778,
+      "id": "boundary/94/+1",
+      "level": 94,
+      "levels_gained": 93,
+      "main_gained": 568,
+      "sp_gained": 856,
+      "total_xp": 3506659
+    },
+    {
+      "hp_gained": 1778,
+      "id": "boundary/95/-1",
+      "level": 94,
+      "levels_gained": 93,
+      "main_gained": 568,
+      "sp_gained": 856,
+      "total_xp": 3617589
+    },
+    {
+      "hp_gained": 1790,
+      "id": "boundary/95/+0",
+      "level": 95,
+      "levels_gained": 94,
+      "main_gained": 572,
+      "sp_gained": 863,
+      "total_xp": 3617590
+    },
+    {
+      "hp_gained": 1790,
+      "id": "boundary/95/+1",
+      "level": 95,
+      "levels_gained": 94,
+      "main_gained": 572,
+      "sp_gained": 863,
+      "total_xp": 3617591
+    },
+    {
+      "hp_gained": 1790,
+      "id": "boundary/96/-1",
+      "level": 95,
+      "levels_gained": 94,
+      "main_gained": 572,
+      "sp_gained": 863,
+      "total_xp": 3730839
+    },
+    {
+      "hp_gained": 1802,
+      "id": "boundary/96/+0",
+      "level": 96,
+      "levels_gained": 95,
+      "main_gained": 576,
+      "sp_gained": 870,
+      "total_xp": 3730840
+    },
+    {
+      "hp_gained": 1802,
+      "id": "boundary/96/+1",
+      "level": 96,
+      "levels_gained": 95,
+      "main_gained": 576,
+      "sp_gained": 870,
+      "total_xp": 3730841
+    },
+    {
+      "hp_gained": 1802,
+      "id": "boundary/97/-1",
+      "level": 96,
+      "levels_gained": 95,
+      "main_gained": 576,
+      "sp_gained": 870,
+      "total_xp": 3846431
+    },
+    {
+      "hp_gained": 1814,
+      "id": "boundary/97/+0",
+      "level": 97,
+      "levels_gained": 96,
+      "main_gained": 580,
+      "sp_gained": 877,
+      "total_xp": 3846432
+    },
+    {
+      "hp_gained": 1814,
+      "id": "boundary/97/+1",
+      "level": 97,
+      "levels_gained": 96,
+      "main_gained": 580,
+      "sp_gained": 877,
+      "total_xp": 3846433
+    },
+    {
+      "hp_gained": 1814,
+      "id": "boundary/98/-1",
+      "level": 97,
+      "levels_gained": 96,
+      "main_gained": 580,
+      "sp_gained": 877,
+      "total_xp": 3964389
+    },
+    {
+      "hp_gained": 1826,
+      "id": "boundary/98/+0",
+      "level": 98,
+      "levels_gained": 97,
+      "main_gained": 584,
+      "sp_gained": 884,
+      "total_xp": 3964390
+    },
+    {
+      "hp_gained": 1826,
+      "id": "boundary/98/+1",
+      "level": 98,
+      "levels_gained": 97,
+      "main_gained": 584,
+      "sp_gained": 884,
+      "total_xp": 3964391
+    },
+    {
+      "hp_gained": 1826,
+      "id": "boundary/99/-1",
+      "level": 98,
+      "levels_gained": 97,
+      "main_gained": 584,
+      "sp_gained": 884,
+      "total_xp": 4084737
+    },
+    {
+      "hp_gained": 1838,
+      "id": "boundary/99/+0",
+      "level": 99,
+      "levels_gained": 98,
+      "main_gained": 588,
+      "sp_gained": 891,
+      "total_xp": 4084738
+    },
+    {
+      "hp_gained": 1838,
+      "id": "boundary/99/+1",
+      "level": 99,
+      "levels_gained": 98,
+      "main_gained": 588,
+      "sp_gained": 891,
+      "total_xp": 4084739
+    },
+    {
+      "hp_gained": 1838,
+      "id": "boundary/100/-1",
+      "level": 99,
+      "levels_gained": 98,
+      "main_gained": 588,
+      "sp_gained": 891,
+      "total_xp": 4207499
+    },
+    {
+      "hp_gained": 1850,
+      "id": "boundary/100/+0",
+      "level": 100,
+      "levels_gained": 99,
+      "main_gained": 592,
+      "sp_gained": 898,
+      "total_xp": 4207500
+    },
+    {
+      "hp_gained": 1850,
+      "id": "boundary/100/+1",
+      "level": 100,
+      "levels_gained": 99,
+      "main_gained": 592,
+      "sp_gained": 898,
+      "total_xp": 4207501
+    },
+    {
+      "hp_gained": 1850,
+      "id": "boundary/101/-1",
+      "level": 100,
+      "levels_gained": 99,
+      "main_gained": 592,
+      "sp_gained": 898,
+      "total_xp": 4332699
+    },
+    {
+      "hp_gained": 1860,
+      "id": "boundary/101/+0",
+      "level": 101,
+      "levels_gained": 100,
+      "main_gained": 596,
+      "sp_gained": 904,
+      "total_xp": 4332700
+    },
+    {
+      "hp_gained": 1860,
+      "id": "boundary/101/+1",
+      "level": 101,
+      "levels_gained": 100,
+      "main_gained": 596,
+      "sp_gained": 904,
+      "total_xp": 4332701
+    },
+    {
+      "hp_gained": 1860,
+      "id": "boundary/102/-1",
+      "level": 101,
+      "levels_gained": 100,
+      "main_gained": 596,
+      "sp_gained": 904,
+      "total_xp": 4460361
+    },
+    {
+      "hp_gained": 1870,
+      "id": "boundary/102/+0",
+      "level": 102,
+      "levels_gained": 101,
+      "main_gained": 600,
+      "sp_gained": 910,
+      "total_xp": 4460362
+    },
+    {
+      "hp_gained": 1870,
+      "id": "boundary/102/+1",
+      "level": 102,
+      "levels_gained": 101,
+      "main_gained": 600,
+      "sp_gained": 910,
+      "total_xp": 4460363
+    },
+    {
+      "hp_gained": 1870,
+      "id": "boundary/103/-1",
+      "level": 102,
+      "levels_gained": 101,
+      "main_gained": 600,
+      "sp_gained": 910,
+      "total_xp": 4590509
+    },
+    {
+      "hp_gained": 1880,
+      "id": "boundary/103/+0",
+      "level": 103,
+      "levels_gained": 102,
+      "main_gained": 604,
+      "sp_gained": 916,
+      "total_xp": 4590510
+    },
+    {
+      "hp_gained": 1880,
+      "id": "boundary/103/+1",
+      "level": 103,
+      "levels_gained": 102,
+      "main_gained": 604,
+      "sp_gained": 916,
+      "total_xp": 4590511
+    },
+    {
+      "hp_gained": 1880,
+      "id": "boundary/104/-1",
+      "level": 103,
+      "levels_gained": 102,
+      "main_gained": 604,
+      "sp_gained": 916,
+      "total_xp": 4723167
+    },
+    {
+      "hp_gained": 1890,
+      "id": "boundary/104/+0",
+      "level": 104,
+      "levels_gained": 103,
+      "main_gained": 608,
+      "sp_gained": 922,
+      "total_xp": 4723168
+    },
+    {
+      "hp_gained": 1890,
+      "id": "boundary/104/+1",
+      "level": 104,
+      "levels_gained": 103,
+      "main_gained": 608,
+      "sp_gained": 922,
+      "total_xp": 4723169
+    },
+    {
+      "hp_gained": 1890,
+      "id": "boundary/105/-1",
+      "level": 104,
+      "levels_gained": 103,
+      "main_gained": 608,
+      "sp_gained": 922,
+      "total_xp": 4858359
+    },
+    {
+      "hp_gained": 1900,
+      "id": "boundary/105/+0",
+      "level": 105,
+      "levels_gained": 104,
+      "main_gained": 612,
+      "sp_gained": 928,
+      "total_xp": 4858360
+    },
+    {
+      "hp_gained": 1900,
+      "id": "boundary/105/+1",
+      "level": 105,
+      "levels_gained": 104,
+      "main_gained": 612,
+      "sp_gained": 928,
+      "total_xp": 4858361
+    },
+    {
+      "hp_gained": 1900,
+      "id": "boundary/106/-1",
+      "level": 105,
+      "levels_gained": 104,
+      "main_gained": 612,
+      "sp_gained": 928,
+      "total_xp": 4996109
+    },
+    {
+      "hp_gained": 1910,
+      "id": "boundary/106/+0",
+      "level": 106,
+      "levels_gained": 105,
+      "main_gained": 616,
+      "sp_gained": 934,
+      "total_xp": 4996110
+    },
+    {
+      "hp_gained": 1910,
+      "id": "boundary/106/+1",
+      "level": 106,
+      "levels_gained": 105,
+      "main_gained": 616,
+      "sp_gained": 934,
+      "total_xp": 4996111
+    },
+    {
+      "hp_gained": 1910,
+      "id": "boundary/107/-1",
+      "level": 106,
+      "levels_gained": 105,
+      "main_gained": 616,
+      "sp_gained": 934,
+      "total_xp": 5136441
+    },
+    {
+      "hp_gained": 1920,
+      "id": "boundary/107/+0",
+      "level": 107,
+      "levels_gained": 106,
+      "main_gained": 620,
+      "sp_gained": 940,
+      "total_xp": 5136442
+    },
+    {
+      "hp_gained": 1920,
+      "id": "boundary/107/+1",
+      "level": 107,
+      "levels_gained": 106,
+      "main_gained": 620,
+      "sp_gained": 940,
+      "total_xp": 5136443
+    },
+    {
+      "hp_gained": 1920,
+      "id": "boundary/108/-1",
+      "level": 107,
+      "levels_gained": 106,
+      "main_gained": 620,
+      "sp_gained": 940,
+      "total_xp": 5279379
+    },
+    {
+      "hp_gained": 1930,
+      "id": "boundary/108/+0",
+      "level": 108,
+      "levels_gained": 107,
+      "main_gained": 624,
+      "sp_gained": 946,
+      "total_xp": 5279380
+    },
+    {
+      "hp_gained": 1930,
+      "id": "boundary/108/+1",
+      "level": 108,
+      "levels_gained": 107,
+      "main_gained": 624,
+      "sp_gained": 946,
+      "total_xp": 5279381
+    },
+    {
+      "hp_gained": 1930,
+      "id": "boundary/109/-1",
+      "level": 108,
+      "levels_gained": 107,
+      "main_gained": 624,
+      "sp_gained": 946,
+      "total_xp": 5424947
+    },
+    {
+      "hp_gained": 1940,
+      "id": "boundary/109/+0",
+      "level": 109,
+      "levels_gained": 108,
+      "main_gained": 628,
+      "sp_gained": 952,
+      "total_xp": 5424948
+    },
+    {
+      "hp_gained": 1940,
+      "id": "boundary/109/+1",
+      "level": 109,
+      "levels_gained": 108,
+      "main_gained": 628,
+      "sp_gained": 952,
+      "total_xp": 5424949
+    },
+    {
+      "hp_gained": 1940,
+      "id": "boundary/110/-1",
+      "level": 109,
+      "levels_gained": 108,
+      "main_gained": 628,
+      "sp_gained": 952,
+      "total_xp": 5573169
+    },
+    {
+      "hp_gained": 1950,
+      "id": "boundary/110/+0",
+      "level": 110,
+      "levels_gained": 109,
+      "main_gained": 632,
+      "sp_gained": 958,
+      "total_xp": 5573170
+    },
+    {
+      "hp_gained": 1950,
+      "id": "boundary/110/+1",
+      "level": 110,
+      "levels_gained": 109,
+      "main_gained": 632,
+      "sp_gained": 958,
+      "total_xp": 5573171
+    },
+    {
+      "hp_gained": 1950,
+      "id": "boundary/111/-1",
+      "level": 110,
+      "levels_gained": 109,
+      "main_gained": 632,
+      "sp_gained": 958,
+      "total_xp": 5724069
+    },
+    {
+      "hp_gained": 1960,
+      "id": "boundary/111/+0",
+      "level": 111,
+      "levels_gained": 110,
+      "main_gained": 636,
+      "sp_gained": 964,
+      "total_xp": 5724070
+    },
+    {
+      "hp_gained": 1960,
+      "id": "boundary/111/+1",
+      "level": 111,
+      "levels_gained": 110,
+      "main_gained": 636,
+      "sp_gained": 964,
+      "total_xp": 5724071
+    },
+    {
+      "hp_gained": 1960,
+      "id": "boundary/112/-1",
+      "level": 111,
+      "levels_gained": 110,
+      "main_gained": 636,
+      "sp_gained": 964,
+      "total_xp": 5877671
+    },
+    {
+      "hp_gained": 1970,
+      "id": "boundary/112/+0",
+      "level": 112,
+      "levels_gained": 111,
+      "main_gained": 640,
+      "sp_gained": 970,
+      "total_xp": 5877672
+    },
+    {
+      "hp_gained": 1970,
+      "id": "boundary/112/+1",
+      "level": 112,
+      "levels_gained": 111,
+      "main_gained": 640,
+      "sp_gained": 970,
+      "total_xp": 5877673
+    },
+    {
+      "hp_gained": 1970,
+      "id": "boundary/113/-1",
+      "level": 112,
+      "levels_gained": 111,
+      "main_gained": 640,
+      "sp_gained": 970,
+      "total_xp": 6033999
+    },
+    {
+      "hp_gained": 1980,
+      "id": "boundary/113/+0",
+      "level": 113,
+      "levels_gained": 112,
+      "main_gained": 644,
+      "sp_gained": 976,
+      "total_xp": 6034000
+    },
+    {
+      "hp_gained": 1980,
+      "id": "boundary/113/+1",
+      "level": 113,
+      "levels_gained": 112,
+      "main_gained": 644,
+      "sp_gained": 976,
+      "total_xp": 6034001
+    },
+    {
+      "hp_gained": 1980,
+      "id": "boundary/114/-1",
+      "level": 113,
+      "levels_gained": 112,
+      "main_gained": 644,
+      "sp_gained": 976,
+      "total_xp": 6193077
+    },
+    {
+      "hp_gained": 1990,
+      "id": "boundary/114/+0",
+      "level": 114,
+      "levels_gained": 113,
+      "main_gained": 648,
+      "sp_gained": 982,
+      "total_xp": 6193078
+    },
+    {
+      "hp_gained": 1990,
+      "id": "boundary/114/+1",
+      "level": 114,
+      "levels_gained": 113,
+      "main_gained": 648,
+      "sp_gained": 982,
+      "total_xp": 6193079
+    },
+    {
+      "hp_gained": 1990,
+      "id": "boundary/115/-1",
+      "level": 114,
+      "levels_gained": 113,
+      "main_gained": 648,
+      "sp_gained": 982,
+      "total_xp": 6354929
+    },
+    {
+      "hp_gained": 2000,
+      "id": "boundary/115/+0",
+      "level": 115,
+      "levels_gained": 114,
+      "main_gained": 652,
+      "sp_gained": 988,
+      "total_xp": 6354930
+    },
+    {
+      "hp_gained": 2000,
+      "id": "boundary/115/+1",
+      "level": 115,
+      "levels_gained": 114,
+      "main_gained": 652,
+      "sp_gained": 988,
+      "total_xp": 6354931
+    },
+    {
+      "hp_gained": 2000,
+      "id": "boundary/116/-1",
+      "level": 115,
+      "levels_gained": 114,
+      "main_gained": 652,
+      "sp_gained": 988,
+      "total_xp": 6519579
+    },
+    {
+      "hp_gained": 2010,
+      "id": "boundary/116/+0",
+      "level": 116,
+      "levels_gained": 115,
+      "main_gained": 656,
+      "sp_gained": 994,
+      "total_xp": 6519580
+    },
+    {
+      "hp_gained": 2010,
+      "id": "boundary/116/+1",
+      "level": 116,
+      "levels_gained": 115,
+      "main_gained": 656,
+      "sp_gained": 994,
+      "total_xp": 6519581
+    },
+    {
+      "hp_gained": 2010,
+      "id": "boundary/117/-1",
+      "level": 116,
+      "levels_gained": 115,
+      "main_gained": 656,
+      "sp_gained": 994,
+      "total_xp": 6687051
+    },
+    {
+      "hp_gained": 2020,
+      "id": "boundary/117/+0",
+      "level": 117,
+      "levels_gained": 116,
+      "main_gained": 660,
+      "sp_gained": 1000,
+      "total_xp": 6687052
+    },
+    {
+      "hp_gained": 2020,
+      "id": "boundary/117/+1",
+      "level": 117,
+      "levels_gained": 116,
+      "main_gained": 660,
+      "sp_gained": 1000,
+      "total_xp": 6687053
+    },
+    {
+      "hp_gained": 2020,
+      "id": "boundary/118/-1",
+      "level": 117,
+      "levels_gained": 116,
+      "main_gained": 660,
+      "sp_gained": 1000,
+      "total_xp": 6857369
+    },
+    {
+      "hp_gained": 2030,
+      "id": "boundary/118/+0",
+      "level": 118,
+      "levels_gained": 117,
+      "main_gained": 664,
+      "sp_gained": 1006,
+      "total_xp": 6857370
+    },
+    {
+      "hp_gained": 2030,
+      "id": "boundary/118/+1",
+      "level": 118,
+      "levels_gained": 117,
+      "main_gained": 664,
+      "sp_gained": 1006,
+      "total_xp": 6857371
+    },
+    {
+      "hp_gained": 2030,
+      "id": "boundary/119/-1",
+      "level": 118,
+      "levels_gained": 117,
+      "main_gained": 664,
+      "sp_gained": 1006,
+      "total_xp": 7030557
+    },
+    {
+      "hp_gained": 2040,
+      "id": "boundary/119/+0",
+      "level": 119,
+      "levels_gained": 118,
+      "main_gained": 668,
+      "sp_gained": 1012,
+      "total_xp": 7030558
+    },
+    {
+      "hp_gained": 2040,
+      "id": "boundary/119/+1",
+      "level": 119,
+      "levels_gained": 118,
+      "main_gained": 668,
+      "sp_gained": 1012,
+      "total_xp": 7030559
+    },
+    {
+      "hp_gained": 2040,
+      "id": "boundary/120/-1",
+      "level": 119,
+      "levels_gained": 118,
+      "main_gained": 668,
+      "sp_gained": 1012,
+      "total_xp": 7206639
+    },
+    {
+      "hp_gained": 2050,
+      "id": "boundary/120/+0",
+      "level": 120,
+      "levels_gained": 119,
+      "main_gained": 672,
+      "sp_gained": 1018,
+      "total_xp": 7206640
+    },
+    {
+      "hp_gained": 2050,
+      "id": "boundary/120/+1",
+      "level": 120,
+      "levels_gained": 119,
+      "main_gained": 672,
+      "sp_gained": 1018,
+      "total_xp": 7206641
+    },
+    {
+      "hp_gained": 2050,
+      "id": "boundary/121/-1",
+      "level": 120,
+      "levels_gained": 119,
+      "main_gained": 672,
+      "sp_gained": 1018,
+      "total_xp": 7385639
+    },
+    {
+      "hp_gained": 2058,
+      "id": "boundary/121/+0",
+      "level": 121,
+      "levels_gained": 120,
+      "main_gained": 675,
+      "sp_gained": 1023,
+      "total_xp": 7385640
+    },
+    {
+      "hp_gained": 2058,
+      "id": "boundary/121/+1",
+      "level": 121,
+      "levels_gained": 120,
+      "main_gained": 675,
+      "sp_gained": 1023,
+      "total_xp": 7385641
+    },
+    {
+      "hp_gained": 2058,
+      "id": "boundary/122/-1",
+      "level": 121,
+      "levels_gained": 120,
+      "main_gained": 675,
+      "sp_gained": 1023,
+      "total_xp": 7567581
+    },
+    {
+      "hp_gained": 2066,
+      "id": "boundary/122/+0",
+      "level": 122,
+      "levels_gained": 121,
+      "main_gained": 678,
+      "sp_gained": 1028,
+      "total_xp": 7567582
+    },
+    {
+      "hp_gained": 2066,
+      "id": "boundary/122/+1",
+      "level": 122,
+      "levels_gained": 121,
+      "main_gained": 678,
+      "sp_gained": 1028,
+      "total_xp": 7567583
+    },
+    {
+      "hp_gained": 2066,
+      "id": "boundary/123/-1",
+      "level": 122,
+      "levels_gained": 121,
+      "main_gained": 678,
+      "sp_gained": 1028,
+      "total_xp": 7752489
+    },
+    {
+      "hp_gained": 2074,
+      "id": "boundary/123/+0",
+      "level": 123,
+      "levels_gained": 122,
+      "main_gained": 681,
+      "sp_gained": 1033,
+      "total_xp": 7752490
+    },
+    {
+      "hp_gained": 2074,
+      "id": "boundary/123/+1",
+      "level": 123,
+      "levels_gained": 122,
+      "main_gained": 681,
+      "sp_gained": 1033,
+      "total_xp": 7752491
+    },
+    {
+      "hp_gained": 2074,
+      "id": "boundary/124/-1",
+      "level": 123,
+      "levels_gained": 122,
+      "main_gained": 681,
+      "sp_gained": 1033,
+      "total_xp": 7940387
+    },
+    {
+      "hp_gained": 2082,
+      "id": "boundary/124/+0",
+      "level": 124,
+      "levels_gained": 123,
+      "main_gained": 684,
+      "sp_gained": 1038,
+      "total_xp": 7940388
+    },
+    {
+      "hp_gained": 2082,
+      "id": "boundary/124/+1",
+      "level": 124,
+      "levels_gained": 123,
+      "main_gained": 684,
+      "sp_gained": 1038,
+      "total_xp": 7940389
+    },
+    {
+      "hp_gained": 2082,
+      "id": "boundary/125/-1",
+      "level": 124,
+      "levels_gained": 123,
+      "main_gained": 684,
+      "sp_gained": 1038,
+      "total_xp": 8131299
+    },
+    {
+      "hp_gained": 2090,
+      "id": "boundary/125/+0",
+      "level": 125,
+      "levels_gained": 124,
+      "main_gained": 687,
+      "sp_gained": 1043,
+      "total_xp": 8131300
+    },
+    {
+      "hp_gained": 2090,
+      "id": "boundary/125/+1",
+      "level": 125,
+      "levels_gained": 124,
+      "main_gained": 687,
+      "sp_gained": 1043,
+      "total_xp": 8131301
+    },
+    {
+      "hp_gained": 2090,
+      "id": "boundary/126/-1",
+      "level": 125,
+      "levels_gained": 124,
+      "main_gained": 687,
+      "sp_gained": 1043,
+      "total_xp": 8325249
+    },
+    {
+      "hp_gained": 2098,
+      "id": "boundary/126/+0",
+      "level": 126,
+      "levels_gained": 125,
+      "main_gained": 690,
+      "sp_gained": 1048,
+      "total_xp": 8325250
+    },
+    {
+      "hp_gained": 2098,
+      "id": "boundary/126/+1",
+      "level": 126,
+      "levels_gained": 125,
+      "main_gained": 690,
+      "sp_gained": 1048,
+      "total_xp": 8325251
+    },
+    {
+      "hp_gained": 2098,
+      "id": "boundary/127/-1",
+      "level": 126,
+      "levels_gained": 125,
+      "main_gained": 690,
+      "sp_gained": 1048,
+      "total_xp": 8522261
+    },
+    {
+      "hp_gained": 2106,
+      "id": "boundary/127/+0",
+      "level": 127,
+      "levels_gained": 126,
+      "main_gained": 693,
+      "sp_gained": 1053,
+      "total_xp": 8522262
+    },
+    {
+      "hp_gained": 2106,
+      "id": "boundary/127/+1",
+      "level": 127,
+      "levels_gained": 126,
+      "main_gained": 693,
+      "sp_gained": 1053,
+      "total_xp": 8522263
+    },
+    {
+      "hp_gained": 2106,
+      "id": "boundary/128/-1",
+      "level": 127,
+      "levels_gained": 126,
+      "main_gained": 693,
+      "sp_gained": 1053,
+      "total_xp": 8722359
+    },
+    {
+      "hp_gained": 2114,
+      "id": "boundary/128/+0",
+      "level": 128,
+      "levels_gained": 127,
+      "main_gained": 696,
+      "sp_gained": 1058,
+      "total_xp": 8722360
+    },
+    {
+      "hp_gained": 2114,
+      "id": "boundary/128/+1",
+      "level": 128,
+      "levels_gained": 127,
+      "main_gained": 696,
+      "sp_gained": 1058,
+      "total_xp": 8722361
+    },
+    {
+      "hp_gained": 2114,
+      "id": "boundary/129/-1",
+      "level": 128,
+      "levels_gained": 127,
+      "main_gained": 696,
+      "sp_gained": 1058,
+      "total_xp": 8925567
+    },
+    {
+      "hp_gained": 2122,
+      "id": "boundary/129/+0",
+      "level": 129,
+      "levels_gained": 128,
+      "main_gained": 699,
+      "sp_gained": 1063,
+      "total_xp": 8925568
+    },
+    {
+      "hp_gained": 2122,
+      "id": "boundary/129/+1",
+      "level": 129,
+      "levels_gained": 128,
+      "main_gained": 699,
+      "sp_gained": 1063,
+      "total_xp": 8925569
+    },
+    {
+      "hp_gained": 2122,
+      "id": "boundary/130/-1",
+      "level": 129,
+      "levels_gained": 128,
+      "main_gained": 699,
+      "sp_gained": 1063,
+      "total_xp": 9131909
+    },
+    {
+      "hp_gained": 2130,
+      "id": "boundary/130/+0",
+      "level": 130,
+      "levels_gained": 129,
+      "main_gained": 702,
+      "sp_gained": 1068,
+      "total_xp": 9131910
+    },
+    {
+      "hp_gained": 2130,
+      "id": "boundary/130/+1",
+      "level": 130,
+      "levels_gained": 129,
+      "main_gained": 702,
+      "sp_gained": 1068,
+      "total_xp": 9131911
+    },
+    {
+      "hp_gained": 2130,
+      "id": "boundary/131/-1",
+      "level": 130,
+      "levels_gained": 129,
+      "main_gained": 702,
+      "sp_gained": 1068,
+      "total_xp": 9341409
+    },
+    {
+      "hp_gained": 2138,
+      "id": "boundary/131/+0",
+      "level": 131,
+      "levels_gained": 130,
+      "main_gained": 705,
+      "sp_gained": 1073,
+      "total_xp": 9341410
+    },
+    {
+      "hp_gained": 2138,
+      "id": "boundary/131/+1",
+      "level": 131,
+      "levels_gained": 130,
+      "main_gained": 705,
+      "sp_gained": 1073,
+      "total_xp": 9341411
+    },
+    {
+      "hp_gained": 2138,
+      "id": "boundary/132/-1",
+      "level": 131,
+      "levels_gained": 130,
+      "main_gained": 705,
+      "sp_gained": 1073,
+      "total_xp": 9554091
+    },
+    {
+      "hp_gained": 2146,
+      "id": "boundary/132/+0",
+      "level": 132,
+      "levels_gained": 131,
+      "main_gained": 708,
+      "sp_gained": 1078,
+      "total_xp": 9554092
+    },
+    {
+      "hp_gained": 2146,
+      "id": "boundary/132/+1",
+      "level": 132,
+      "levels_gained": 131,
+      "main_gained": 708,
+      "sp_gained": 1078,
+      "total_xp": 9554093
+    },
+    {
+      "hp_gained": 2146,
+      "id": "boundary/133/-1",
+      "level": 132,
+      "levels_gained": 131,
+      "main_gained": 708,
+      "sp_gained": 1078,
+      "total_xp": 9769979
+    },
+    {
+      "hp_gained": 2154,
+      "id": "boundary/133/+0",
+      "level": 133,
+      "levels_gained": 132,
+      "main_gained": 711,
+      "sp_gained": 1083,
+      "total_xp": 9769980
+    },
+    {
+      "hp_gained": 2154,
+      "id": "boundary/133/+1",
+      "level": 133,
+      "levels_gained": 132,
+      "main_gained": 711,
+      "sp_gained": 1083,
+      "total_xp": 9769981
+    },
+    {
+      "hp_gained": 2154,
+      "id": "boundary/134/-1",
+      "level": 133,
+      "levels_gained": 132,
+      "main_gained": 711,
+      "sp_gained": 1083,
+      "total_xp": 9989097
+    },
+    {
+      "hp_gained": 2162,
+      "id": "boundary/134/+0",
+      "level": 134,
+      "levels_gained": 133,
+      "main_gained": 714,
+      "sp_gained": 1088,
+      "total_xp": 9989098
+    },
+    {
+      "hp_gained": 2162,
+      "id": "boundary/134/+1",
+      "level": 134,
+      "levels_gained": 133,
+      "main_gained": 714,
+      "sp_gained": 1088,
+      "total_xp": 9989099
+    },
+    {
+      "hp_gained": 2162,
+      "id": "boundary/135/-1",
+      "level": 134,
+      "levels_gained": 133,
+      "main_gained": 714,
+      "sp_gained": 1088,
+      "total_xp": 10211469
+    },
+    {
+      "hp_gained": 2170,
+      "id": "boundary/135/+0",
+      "level": 135,
+      "levels_gained": 134,
+      "main_gained": 717,
+      "sp_gained": 1093,
+      "total_xp": 10211470
+    },
+    {
+      "hp_gained": 2170,
+      "id": "boundary/135/+1",
+      "level": 135,
+      "levels_gained": 134,
+      "main_gained": 717,
+      "sp_gained": 1093,
+      "total_xp": 10211471
+    },
+    {
+      "hp_gained": 2170,
+      "id": "boundary/136/-1",
+      "level": 135,
+      "levels_gained": 134,
+      "main_gained": 717,
+      "sp_gained": 1093,
+      "total_xp": 10437119
+    },
+    {
+      "hp_gained": 2178,
+      "id": "boundary/136/+0",
+      "level": 136,
+      "levels_gained": 135,
+      "main_gained": 720,
+      "sp_gained": 1098,
+      "total_xp": 10437120
+    },
+    {
+      "hp_gained": 2178,
+      "id": "boundary/136/+1",
+      "level": 136,
+      "levels_gained": 135,
+      "main_gained": 720,
+      "sp_gained": 1098,
+      "total_xp": 10437121
+    },
+    {
+      "hp_gained": 2178,
+      "id": "boundary/137/-1",
+      "level": 136,
+      "levels_gained": 135,
+      "main_gained": 720,
+      "sp_gained": 1098,
+      "total_xp": 10666071
+    },
+    {
+      "hp_gained": 2186,
+      "id": "boundary/137/+0",
+      "level": 137,
+      "levels_gained": 136,
+      "main_gained": 723,
+      "sp_gained": 1103,
+      "total_xp": 10666072
+    },
+    {
+      "hp_gained": 2186,
+      "id": "boundary/137/+1",
+      "level": 137,
+      "levels_gained": 136,
+      "main_gained": 723,
+      "sp_gained": 1103,
+      "total_xp": 10666073
+    },
+    {
+      "hp_gained": 2186,
+      "id": "boundary/138/-1",
+      "level": 137,
+      "levels_gained": 136,
+      "main_gained": 723,
+      "sp_gained": 1103,
+      "total_xp": 10898349
+    },
+    {
+      "hp_gained": 2194,
+      "id": "boundary/138/+0",
+      "level": 138,
+      "levels_gained": 137,
+      "main_gained": 726,
+      "sp_gained": 1108,
+      "total_xp": 10898350
+    },
+    {
+      "hp_gained": 2194,
+      "id": "boundary/138/+1",
+      "level": 138,
+      "levels_gained": 137,
+      "main_gained": 726,
+      "sp_gained": 1108,
+      "total_xp": 10898351
+    },
+    {
+      "hp_gained": 2194,
+      "id": "boundary/139/-1",
+      "level": 138,
+      "levels_gained": 137,
+      "main_gained": 726,
+      "sp_gained": 1108,
+      "total_xp": 11133977
+    },
+    {
+      "hp_gained": 2202,
+      "id": "boundary/139/+0",
+      "level": 139,
+      "levels_gained": 138,
+      "main_gained": 729,
+      "sp_gained": 1113,
+      "total_xp": 11133978
+    },
+    {
+      "hp_gained": 2202,
+      "id": "boundary/139/+1",
+      "level": 139,
+      "levels_gained": 138,
+      "main_gained": 729,
+      "sp_gained": 1113,
+      "total_xp": 11133979
+    },
+    {
+      "hp_gained": 2202,
+      "id": "boundary/140/-1",
+      "level": 139,
+      "levels_gained": 138,
+      "main_gained": 729,
+      "sp_gained": 1113,
+      "total_xp": 11372979
+    },
+    {
+      "hp_gained": 2210,
+      "id": "boundary/140/+0",
+      "level": 140,
+      "levels_gained": 139,
+      "main_gained": 732,
+      "sp_gained": 1118,
+      "total_xp": 11372980
+    },
+    {
+      "hp_gained": 2210,
+      "id": "boundary/140/+1",
+      "level": 140,
+      "levels_gained": 139,
+      "main_gained": 732,
+      "sp_gained": 1118,
+      "total_xp": 11372981
+    },
+    {
+      "hp_gained": 2210,
+      "id": "boundary/141/-1",
+      "level": 140,
+      "levels_gained": 139,
+      "main_gained": 732,
+      "sp_gained": 1118,
+      "total_xp": 11615379
+    },
+    {
+      "hp_gained": 2217,
+      "id": "boundary/141/+0",
+      "level": 141,
+      "levels_gained": 140,
+      "main_gained": 735,
+      "sp_gained": 1122,
+      "total_xp": 11615380
+    },
+    {
+      "hp_gained": 2217,
+      "id": "boundary/141/+1",
+      "level": 141,
+      "levels_gained": 140,
+      "main_gained": 735,
+      "sp_gained": 1122,
+      "total_xp": 11615381
+    },
+    {
+      "hp_gained": 2217,
+      "id": "boundary/142/-1",
+      "level": 141,
+      "levels_gained": 140,
+      "main_gained": 735,
+      "sp_gained": 1122,
+      "total_xp": 11861201
+    },
+    {
+      "hp_gained": 2224,
+      "id": "boundary/142/+0",
+      "level": 142,
+      "levels_gained": 141,
+      "main_gained": 738,
+      "sp_gained": 1126,
+      "total_xp": 11861202
+    },
+    {
+      "hp_gained": 2224,
+      "id": "boundary/142/+1",
+      "level": 142,
+      "levels_gained": 141,
+      "main_gained": 738,
+      "sp_gained": 1126,
+      "total_xp": 11861203
+    },
+    {
+      "hp_gained": 2224,
+      "id": "boundary/143/-1",
+      "level": 142,
+      "levels_gained": 141,
+      "main_gained": 738,
+      "sp_gained": 1126,
+      "total_xp": 12110469
+    },
+    {
+      "hp_gained": 2231,
+      "id": "boundary/143/+0",
+      "level": 143,
+      "levels_gained": 142,
+      "main_gained": 741,
+      "sp_gained": 1130,
+      "total_xp": 12110470
+    },
+    {
+      "hp_gained": 2231,
+      "id": "boundary/143/+1",
+      "level": 143,
+      "levels_gained": 142,
+      "main_gained": 741,
+      "sp_gained": 1130,
+      "total_xp": 12110471
+    },
+    {
+      "hp_gained": 2231,
+      "id": "boundary/144/-1",
+      "level": 143,
+      "levels_gained": 142,
+      "main_gained": 741,
+      "sp_gained": 1130,
+      "total_xp": 12363207
+    },
+    {
+      "hp_gained": 2238,
+      "id": "boundary/144/+0",
+      "level": 144,
+      "levels_gained": 143,
+      "main_gained": 744,
+      "sp_gained": 1134,
+      "total_xp": 12363208
+    },
+    {
+      "hp_gained": 2238,
+      "id": "boundary/144/+1",
+      "level": 144,
+      "levels_gained": 143,
+      "main_gained": 744,
+      "sp_gained": 1134,
+      "total_xp": 12363209
+    },
+    {
+      "hp_gained": 2238,
+      "id": "boundary/145/-1",
+      "level": 144,
+      "levels_gained": 143,
+      "main_gained": 744,
+      "sp_gained": 1134,
+      "total_xp": 12619439
+    },
+    {
+      "hp_gained": 2245,
+      "id": "boundary/145/+0",
+      "level": 145,
+      "levels_gained": 144,
+      "main_gained": 747,
+      "sp_gained": 1138,
+      "total_xp": 12619440
+    },
+    {
+      "hp_gained": 2245,
+      "id": "boundary/145/+1",
+      "level": 145,
+      "levels_gained": 144,
+      "main_gained": 747,
+      "sp_gained": 1138,
+      "total_xp": 12619441
+    },
+    {
+      "hp_gained": 2245,
+      "id": "boundary/146/-1",
+      "level": 145,
+      "levels_gained": 144,
+      "main_gained": 747,
+      "sp_gained": 1138,
+      "total_xp": 12879189
+    },
+    {
+      "hp_gained": 2252,
+      "id": "boundary/146/+0",
+      "level": 146,
+      "levels_gained": 145,
+      "main_gained": 750,
+      "sp_gained": 1142,
+      "total_xp": 12879190
+    },
+    {
+      "hp_gained": 2252,
+      "id": "boundary/146/+1",
+      "level": 146,
+      "levels_gained": 145,
+      "main_gained": 750,
+      "sp_gained": 1142,
+      "total_xp": 12879191
+    },
+    {
+      "hp_gained": 2252,
+      "id": "boundary/147/-1",
+      "level": 146,
+      "levels_gained": 145,
+      "main_gained": 750,
+      "sp_gained": 1142,
+      "total_xp": 13142481
+    },
+    {
+      "hp_gained": 2259,
+      "id": "boundary/147/+0",
+      "level": 147,
+      "levels_gained": 146,
+      "main_gained": 753,
+      "sp_gained": 1146,
+      "total_xp": 13142482
+    },
+    {
+      "hp_gained": 2259,
+      "id": "boundary/147/+1",
+      "level": 147,
+      "levels_gained": 146,
+      "main_gained": 753,
+      "sp_gained": 1146,
+      "total_xp": 13142483
+    },
+    {
+      "hp_gained": 2259,
+      "id": "boundary/148/-1",
+      "level": 147,
+      "levels_gained": 146,
+      "main_gained": 753,
+      "sp_gained": 1146,
+      "total_xp": 13409339
+    },
+    {
+      "hp_gained": 2266,
+      "id": "boundary/148/+0",
+      "level": 148,
+      "levels_gained": 147,
+      "main_gained": 756,
+      "sp_gained": 1150,
+      "total_xp": 13409340
+    },
+    {
+      "hp_gained": 2266,
+      "id": "boundary/148/+1",
+      "level": 148,
+      "levels_gained": 147,
+      "main_gained": 756,
+      "sp_gained": 1150,
+      "total_xp": 13409341
+    },
+    {
+      "hp_gained": 2266,
+      "id": "boundary/149/-1",
+      "level": 148,
+      "levels_gained": 147,
+      "main_gained": 756,
+      "sp_gained": 1150,
+      "total_xp": 13679787
+    },
+    {
+      "hp_gained": 2273,
+      "id": "boundary/149/+0",
+      "level": 149,
+      "levels_gained": 148,
+      "main_gained": 759,
+      "sp_gained": 1154,
+      "total_xp": 13679788
+    },
+    {
+      "hp_gained": 2273,
+      "id": "boundary/149/+1",
+      "level": 149,
+      "levels_gained": 148,
+      "main_gained": 759,
+      "sp_gained": 1154,
+      "total_xp": 13679789
+    },
+    {
+      "hp_gained": 2273,
+      "id": "boundary/150/-1",
+      "level": 149,
+      "levels_gained": 148,
+      "main_gained": 759,
+      "sp_gained": 1154,
+      "total_xp": 13953849
+    },
+    {
+      "hp_gained": 2280,
+      "id": "boundary/150/+0",
+      "level": 150,
+      "levels_gained": 149,
+      "main_gained": 762,
+      "sp_gained": 1158,
+      "total_xp": 13953850
+    },
+    {
+      "hp_gained": 2280,
+      "id": "boundary/150/+1",
+      "level": 150,
+      "levels_gained": 149,
+      "main_gained": 762,
+      "sp_gained": 1158,
+      "total_xp": 13953851
+    },
+    {
+      "hp_gained": 2280,
+      "id": "boundary/151/-1",
+      "level": 150,
+      "levels_gained": 149,
+      "main_gained": 762,
+      "sp_gained": 1158,
+      "total_xp": 14231549
+    },
+    {
+      "hp_gained": 2287,
+      "id": "boundary/151/+0",
+      "level": 151,
+      "levels_gained": 150,
+      "main_gained": 765,
+      "sp_gained": 1162,
+      "total_xp": 14231550
+    },
+    {
+      "hp_gained": 2287,
+      "id": "boundary/151/+1",
+      "level": 151,
+      "levels_gained": 150,
+      "main_gained": 765,
+      "sp_gained": 1162,
+      "total_xp": 14231551
+    },
+    {
+      "hp_gained": 2287,
+      "id": "boundary/152/-1",
+      "level": 151,
+      "levels_gained": 150,
+      "main_gained": 765,
+      "sp_gained": 1162,
+      "total_xp": 14512911
+    },
+    {
+      "hp_gained": 2294,
+      "id": "boundary/152/+0",
+      "level": 152,
+      "levels_gained": 151,
+      "main_gained": 768,
+      "sp_gained": 1166,
+      "total_xp": 14512912
+    },
+    {
+      "hp_gained": 2294,
+      "id": "boundary/152/+1",
+      "level": 152,
+      "levels_gained": 151,
+      "main_gained": 768,
+      "sp_gained": 1166,
+      "total_xp": 14512913
+    },
+    {
+      "hp_gained": 2294,
+      "id": "boundary/153/-1",
+      "level": 152,
+      "levels_gained": 151,
+      "main_gained": 768,
+      "sp_gained": 1166,
+      "total_xp": 14797959
+    },
+    {
+      "hp_gained": 2301,
+      "id": "boundary/153/+0",
+      "level": 153,
+      "levels_gained": 152,
+      "main_gained": 771,
+      "sp_gained": 1170,
+      "total_xp": 14797960
+    },
+    {
+      "hp_gained": 2301,
+      "id": "boundary/153/+1",
+      "level": 153,
+      "levels_gained": 152,
+      "main_gained": 771,
+      "sp_gained": 1170,
+      "total_xp": 14797961
+    },
+    {
+      "hp_gained": 2301,
+      "id": "boundary/154/-1",
+      "level": 153,
+      "levels_gained": 152,
+      "main_gained": 771,
+      "sp_gained": 1170,
+      "total_xp": 15086717
+    },
+    {
+      "hp_gained": 2308,
+      "id": "boundary/154/+0",
+      "level": 154,
+      "levels_gained": 153,
+      "main_gained": 774,
+      "sp_gained": 1174,
+      "total_xp": 15086718
+    },
+    {
+      "hp_gained": 2308,
+      "id": "boundary/154/+1",
+      "level": 154,
+      "levels_gained": 153,
+      "main_gained": 774,
+      "sp_gained": 1174,
+      "total_xp": 15086719
+    },
+    {
+      "hp_gained": 2308,
+      "id": "boundary/155/-1",
+      "level": 154,
+      "levels_gained": 153,
+      "main_gained": 774,
+      "sp_gained": 1174,
+      "total_xp": 15379209
+    },
+    {
+      "hp_gained": 2315,
+      "id": "boundary/155/+0",
+      "level": 155,
+      "levels_gained": 154,
+      "main_gained": 777,
+      "sp_gained": 1178,
+      "total_xp": 15379210
+    },
+    {
+      "hp_gained": 2315,
+      "id": "boundary/155/+1",
+      "level": 155,
+      "levels_gained": 154,
+      "main_gained": 777,
+      "sp_gained": 1178,
+      "total_xp": 15379211
+    },
+    {
+      "hp_gained": 2315,
+      "id": "boundary/156/-1",
+      "level": 155,
+      "levels_gained": 154,
+      "main_gained": 777,
+      "sp_gained": 1178,
+      "total_xp": 15675459
+    },
+    {
+      "hp_gained": 2322,
+      "id": "boundary/156/+0",
+      "level": 156,
+      "levels_gained": 155,
+      "main_gained": 780,
+      "sp_gained": 1182,
+      "total_xp": 15675460
+    },
+    {
+      "hp_gained": 2322,
+      "id": "boundary/156/+1",
+      "level": 156,
+      "levels_gained": 155,
+      "main_gained": 780,
+      "sp_gained": 1182,
+      "total_xp": 15675461
+    },
+    {
+      "hp_gained": 2322,
+      "id": "boundary/157/-1",
+      "level": 156,
+      "levels_gained": 155,
+      "main_gained": 780,
+      "sp_gained": 1182,
+      "total_xp": 15975491
+    },
+    {
+      "hp_gained": 2329,
+      "id": "boundary/157/+0",
+      "level": 157,
+      "levels_gained": 156,
+      "main_gained": 783,
+      "sp_gained": 1186,
+      "total_xp": 15975492
+    },
+    {
+      "hp_gained": 2329,
+      "id": "boundary/157/+1",
+      "level": 157,
+      "levels_gained": 156,
+      "main_gained": 783,
+      "sp_gained": 1186,
+      "total_xp": 15975493
+    },
+    {
+      "hp_gained": 2329,
+      "id": "boundary/158/-1",
+      "level": 157,
+      "levels_gained": 156,
+      "main_gained": 783,
+      "sp_gained": 1186,
+      "total_xp": 16279329
+    },
+    {
+      "hp_gained": 2336,
+      "id": "boundary/158/+0",
+      "level": 158,
+      "levels_gained": 157,
+      "main_gained": 786,
+      "sp_gained": 1190,
+      "total_xp": 16279330
+    },
+    {
+      "hp_gained": 2336,
+      "id": "boundary/158/+1",
+      "level": 158,
+      "levels_gained": 157,
+      "main_gained": 786,
+      "sp_gained": 1190,
+      "total_xp": 16279331
+    },
+    {
+      "hp_gained": 2336,
+      "id": "boundary/159/-1",
+      "level": 158,
+      "levels_gained": 157,
+      "main_gained": 786,
+      "sp_gained": 1190,
+      "total_xp": 16586997
+    },
+    {
+      "hp_gained": 2343,
+      "id": "boundary/159/+0",
+      "level": 159,
+      "levels_gained": 158,
+      "main_gained": 789,
+      "sp_gained": 1194,
+      "total_xp": 16586998
+    },
+    {
+      "hp_gained": 2343,
+      "id": "boundary/159/+1",
+      "level": 159,
+      "levels_gained": 158,
+      "main_gained": 789,
+      "sp_gained": 1194,
+      "total_xp": 16586999
+    },
+    {
+      "hp_gained": 2343,
+      "id": "boundary/160/-1",
+      "level": 159,
+      "levels_gained": 158,
+      "main_gained": 789,
+      "sp_gained": 1194,
+      "total_xp": 16898519
+    },
+    {
+      "hp_gained": 2350,
+      "id": "boundary/160/+0",
+      "level": 160,
+      "levels_gained": 159,
+      "main_gained": 792,
+      "sp_gained": 1198,
+      "total_xp": 16898520
+    },
+    {
+      "hp_gained": 2350,
+      "id": "boundary/160/+1",
+      "level": 160,
+      "levels_gained": 159,
+      "main_gained": 792,
+      "sp_gained": 1198,
+      "total_xp": 16898521
+    },
+    {
+      "hp_gained": 2350,
+      "id": "boundary/161/-1",
+      "level": 160,
+      "levels_gained": 159,
+      "main_gained": 792,
+      "sp_gained": 1198,
+      "total_xp": 17209867
+    },
+    {
+      "hp_gained": 2356,
+      "id": "boundary/161/+0",
+      "level": 161,
+      "levels_gained": 160,
+      "main_gained": 794,
+      "sp_gained": 1202,
+      "total_xp": 17209868
+    },
+    {
+      "hp_gained": 2356,
+      "id": "boundary/161/+1",
+      "level": 161,
+      "levels_gained": 160,
+      "main_gained": 794,
+      "sp_gained": 1202,
+      "total_xp": 17209869
+    },
+    {
+      "hp_gained": 2356,
+      "id": "boundary/162/-1",
+      "level": 161,
+      "levels_gained": 160,
+      "main_gained": 794,
+      "sp_gained": 1202,
+      "total_xp": 17550871
+    },
+    {
+      "hp_gained": 2362,
+      "id": "boundary/162/+0",
+      "level": 162,
+      "levels_gained": 161,
+      "main_gained": 796,
+      "sp_gained": 1206,
+      "total_xp": 17550872
+    },
+    {
+      "hp_gained": 2362,
+      "id": "boundary/162/+1",
+      "level": 162,
+      "levels_gained": 161,
+      "main_gained": 796,
+      "sp_gained": 1206,
+      "total_xp": 17550873
+    },
+    {
+      "hp_gained": 2362,
+      "id": "boundary/163/-1",
+      "level": 162,
+      "levels_gained": 161,
+      "main_gained": 796,
+      "sp_gained": 1206,
+      "total_xp": 17924355
+    },
+    {
+      "hp_gained": 2368,
+      "id": "boundary/163/+0",
+      "level": 163,
+      "levels_gained": 162,
+      "main_gained": 798,
+      "sp_gained": 1210,
+      "total_xp": 17924356
+    },
+    {
+      "hp_gained": 2368,
+      "id": "boundary/163/+1",
+      "level": 163,
+      "levels_gained": 162,
+      "main_gained": 798,
+      "sp_gained": 1210,
+      "total_xp": 17924357
+    },
+    {
+      "hp_gained": 2368,
+      "id": "boundary/164/-1",
+      "level": 163,
+      "levels_gained": 162,
+      "main_gained": 798,
+      "sp_gained": 1210,
+      "total_xp": 18333414
+    },
+    {
+      "hp_gained": 2374,
+      "id": "boundary/164/+0",
+      "level": 164,
+      "levels_gained": 163,
+      "main_gained": 800,
+      "sp_gained": 1214,
+      "total_xp": 18333415
+    },
+    {
+      "hp_gained": 2374,
+      "id": "boundary/164/+1",
+      "level": 164,
+      "levels_gained": 163,
+      "main_gained": 800,
+      "sp_gained": 1214,
+      "total_xp": 18333416
+    },
+    {
+      "hp_gained": 2374,
+      "id": "boundary/165/-1",
+      "level": 164,
+      "levels_gained": 163,
+      "main_gained": 800,
+      "sp_gained": 1214,
+      "total_xp": 18781436
+    },
+    {
+      "hp_gained": 2380,
+      "id": "boundary/165/+0",
+      "level": 165,
+      "levels_gained": 164,
+      "main_gained": 802,
+      "sp_gained": 1218,
+      "total_xp": 18781437
+    },
+    {
+      "hp_gained": 2380,
+      "id": "boundary/165/+1",
+      "level": 165,
+      "levels_gained": 164,
+      "main_gained": 802,
+      "sp_gained": 1218,
+      "total_xp": 18781438
+    },
+    {
+      "hp_gained": 2380,
+      "id": "boundary/166/-1",
+      "level": 165,
+      "levels_gained": 164,
+      "main_gained": 802,
+      "sp_gained": 1218,
+      "total_xp": 19272132
+    },
+    {
+      "hp_gained": 2386,
+      "id": "boundary/166/+0",
+      "level": 166,
+      "levels_gained": 165,
+      "main_gained": 804,
+      "sp_gained": 1222,
+      "total_xp": 19272133
+    },
+    {
+      "hp_gained": 2386,
+      "id": "boundary/166/+1",
+      "level": 166,
+      "levels_gained": 165,
+      "main_gained": 804,
+      "sp_gained": 1222,
+      "total_xp": 19272134
+    },
+    {
+      "hp_gained": 2386,
+      "id": "boundary/167/-1",
+      "level": 166,
+      "levels_gained": 165,
+      "main_gained": 804,
+      "sp_gained": 1222,
+      "total_xp": 19809567
+    },
+    {
+      "hp_gained": 2392,
+      "id": "boundary/167/+0",
+      "level": 167,
+      "levels_gained": 166,
+      "main_gained": 806,
+      "sp_gained": 1226,
+      "total_xp": 19809568
+    },
+    {
+      "hp_gained": 2392,
+      "id": "boundary/167/+1",
+      "level": 167,
+      "levels_gained": 166,
+      "main_gained": 806,
+      "sp_gained": 1226,
+      "total_xp": 19809569
+    },
+    {
+      "hp_gained": 2392,
+      "id": "boundary/168/-1",
+      "level": 167,
+      "levels_gained": 166,
+      "main_gained": 806,
+      "sp_gained": 1226,
+      "total_xp": 20398193
+    },
+    {
+      "hp_gained": 2398,
+      "id": "boundary/168/+0",
+      "level": 168,
+      "levels_gained": 167,
+      "main_gained": 808,
+      "sp_gained": 1230,
+      "total_xp": 20398194
+    },
+    {
+      "hp_gained": 2398,
+      "id": "boundary/168/+1",
+      "level": 168,
+      "levels_gained": 167,
+      "main_gained": 808,
+      "sp_gained": 1230,
+      "total_xp": 20398195
+    },
+    {
+      "hp_gained": 2398,
+      "id": "boundary/169/-1",
+      "level": 168,
+      "levels_gained": 167,
+      "main_gained": 808,
+      "sp_gained": 1230,
+      "total_xp": 21042885
+    },
+    {
+      "hp_gained": 2404,
+      "id": "boundary/169/+0",
+      "level": 169,
+      "levels_gained": 168,
+      "main_gained": 810,
+      "sp_gained": 1234,
+      "total_xp": 21042886
+    },
+    {
+      "hp_gained": 2404,
+      "id": "boundary/169/+1",
+      "level": 169,
+      "levels_gained": 168,
+      "main_gained": 810,
+      "sp_gained": 1234,
+      "total_xp": 21042887
+    },
+    {
+      "hp_gained": 2404,
+      "id": "boundary/170/-1",
+      "level": 169,
+      "levels_gained": 168,
+      "main_gained": 810,
+      "sp_gained": 1234,
+      "total_xp": 21748984
+    },
+    {
+      "hp_gained": 2410,
+      "id": "boundary/170/+0",
+      "level": 170,
+      "levels_gained": 169,
+      "main_gained": 812,
+      "sp_gained": 1238,
+      "total_xp": 21748985
+    },
+    {
+      "hp_gained": 2410,
+      "id": "boundary/170/+1",
+      "level": 170,
+      "levels_gained": 169,
+      "main_gained": 812,
+      "sp_gained": 1238,
+      "total_xp": 21748986
+    },
+    {
+      "hp_gained": 2410,
+      "id": "boundary/171/-1",
+      "level": 170,
+      "levels_gained": 169,
+      "main_gained": 812,
+      "sp_gained": 1238,
+      "total_xp": 22522340
+    },
+    {
+      "hp_gained": 2415,
+      "id": "boundary/171/+0",
+      "level": 171,
+      "levels_gained": 170,
+      "main_gained": 814,
+      "sp_gained": 1241,
+      "total_xp": 22522341
+    },
+    {
+      "hp_gained": 2415,
+      "id": "boundary/171/+1",
+      "level": 171,
+      "levels_gained": 170,
+      "main_gained": 814,
+      "sp_gained": 1241,
+      "total_xp": 22522342
+    },
+    {
+      "hp_gained": 2415,
+      "id": "boundary/172/-1",
+      "level": 171,
+      "levels_gained": 170,
+      "main_gained": 814,
+      "sp_gained": 1241,
+      "total_xp": 23369358
+    },
+    {
+      "hp_gained": 2420,
+      "id": "boundary/172/+0",
+      "level": 172,
+      "levels_gained": 171,
+      "main_gained": 816,
+      "sp_gained": 1244,
+      "total_xp": 23369359
+    },
+    {
+      "hp_gained": 2420,
+      "id": "boundary/172/+1",
+      "level": 172,
+      "levels_gained": 171,
+      "main_gained": 816,
+      "sp_gained": 1244,
+      "total_xp": 23369360
+    },
+    {
+      "hp_gained": 2420,
+      "id": "boundary/173/-1",
+      "level": 172,
+      "levels_gained": 171,
+      "main_gained": 816,
+      "sp_gained": 1244,
+      "total_xp": 24297055
+    },
+    {
+      "hp_gained": 2425,
+      "id": "boundary/173/+0",
+      "level": 173,
+      "levels_gained": 172,
+      "main_gained": 818,
+      "sp_gained": 1247,
+      "total_xp": 24297056
+    },
+    {
+      "hp_gained": 2425,
+      "id": "boundary/173/+1",
+      "level": 173,
+      "levels_gained": 172,
+      "main_gained": 818,
+      "sp_gained": 1247,
+      "total_xp": 24297057
+    },
+    {
+      "hp_gained": 2425,
+      "id": "boundary/174/-1",
+      "level": 173,
+      "levels_gained": 172,
+      "main_gained": 818,
+      "sp_gained": 1247,
+      "total_xp": 25313115
+    },
+    {
+      "hp_gained": 2430,
+      "id": "boundary/174/+0",
+      "level": 174,
+      "levels_gained": 173,
+      "main_gained": 820,
+      "sp_gained": 1250,
+      "total_xp": 25313116
+    },
+    {
+      "hp_gained": 2430,
+      "id": "boundary/174/+1",
+      "level": 174,
+      "levels_gained": 173,
+      "main_gained": 820,
+      "sp_gained": 1250,
+      "total_xp": 25313117
+    },
+    {
+      "hp_gained": 2430,
+      "id": "boundary/175/-1",
+      "level": 174,
+      "levels_gained": 173,
+      "main_gained": 820,
+      "sp_gained": 1250,
+      "total_xp": 26425955
+    },
+    {
+      "hp_gained": 2435,
+      "id": "boundary/175/+0",
+      "level": 175,
+      "levels_gained": 174,
+      "main_gained": 822,
+      "sp_gained": 1253,
+      "total_xp": 26425956
+    },
+    {
+      "hp_gained": 2435,
+      "id": "boundary/175/+1",
+      "level": 175,
+      "levels_gained": 174,
+      "main_gained": 822,
+      "sp_gained": 1253,
+      "total_xp": 26425957
+    },
+    {
+      "hp_gained": 2435,
+      "id": "boundary/176/-1",
+      "level": 175,
+      "levels_gained": 174,
+      "main_gained": 822,
+      "sp_gained": 1253,
+      "total_xp": 27644793
+    },
+    {
+      "hp_gained": 2440,
+      "id": "boundary/176/+0",
+      "level": 176,
+      "levels_gained": 175,
+      "main_gained": 824,
+      "sp_gained": 1256,
+      "total_xp": 27644794
+    },
+    {
+      "hp_gained": 2440,
+      "id": "boundary/176/+1",
+      "level": 176,
+      "levels_gained": 175,
+      "main_gained": 824,
+      "sp_gained": 1256,
+      "total_xp": 27644795
+    },
+    {
+      "hp_gained": 2440,
+      "id": "boundary/177/-1",
+      "level": 176,
+      "levels_gained": 175,
+      "main_gained": 824,
+      "sp_gained": 1256,
+      "total_xp": 28979726
+    },
+    {
+      "hp_gained": 2445,
+      "id": "boundary/177/+0",
+      "level": 177,
+      "levels_gained": 176,
+      "main_gained": 826,
+      "sp_gained": 1259,
+      "total_xp": 28979727
+    },
+    {
+      "hp_gained": 2445,
+      "id": "boundary/177/+1",
+      "level": 177,
+      "levels_gained": 176,
+      "main_gained": 826,
+      "sp_gained": 1259,
+      "total_xp": 28979728
+    },
+    {
+      "hp_gained": 2445,
+      "id": "boundary/178/-1",
+      "level": 177,
+      "levels_gained": 176,
+      "main_gained": 826,
+      "sp_gained": 1259,
+      "total_xp": 30441812
+    },
+    {
+      "hp_gained": 2450,
+      "id": "boundary/178/+0",
+      "level": 178,
+      "levels_gained": 177,
+      "main_gained": 828,
+      "sp_gained": 1262,
+      "total_xp": 30441813
+    },
+    {
+      "hp_gained": 2450,
+      "id": "boundary/178/+1",
+      "level": 178,
+      "levels_gained": 177,
+      "main_gained": 828,
+      "sp_gained": 1262,
+      "total_xp": 30441814
+    },
+    {
+      "hp_gained": 2450,
+      "id": "boundary/179/-1",
+      "level": 178,
+      "levels_gained": 177,
+      "main_gained": 828,
+      "sp_gained": 1262,
+      "total_xp": 32043162
+    },
+    {
+      "hp_gained": 2455,
+      "id": "boundary/179/+0",
+      "level": 179,
+      "levels_gained": 178,
+      "main_gained": 830,
+      "sp_gained": 1265,
+      "total_xp": 32043163
+    },
+    {
+      "hp_gained": 2455,
+      "id": "boundary/179/+1",
+      "level": 179,
+      "levels_gained": 178,
+      "main_gained": 830,
+      "sp_gained": 1265,
+      "total_xp": 32043164
+    },
+    {
+      "hp_gained": 2455,
+      "id": "boundary/180/-1",
+      "level": 179,
+      "levels_gained": 178,
+      "main_gained": 830,
+      "sp_gained": 1265,
+      "total_xp": 33797041
+    },
+    {
+      "hp_gained": 2460,
+      "id": "boundary/180/+0",
+      "level": 180,
+      "levels_gained": 179,
+      "main_gained": 832,
+      "sp_gained": 1268,
+      "total_xp": 33797042
+    },
+    {
+      "hp_gained": 2460,
+      "id": "boundary/180/+1",
+      "level": 180,
+      "levels_gained": 179,
+      "main_gained": 832,
+      "sp_gained": 1268,
+      "total_xp": 33797043
+    },
+    {
+      "hp_gained": 30,
+      "id": "partition/T001",
+      "level": 2,
+      "levels_gained": 1,
+      "main_gained": 8,
+      "sp_gained": 12,
+      "total_xp": 262
+    },
+    {
+      "hp_gained": 270,
+      "id": "partition/T002",
+      "level": 10,
+      "levels_gained": 9,
+      "main_gained": 72,
+      "sp_gained": 108,
+      "total_xp": 7470
+    },
+    {
+      "hp_gained": 14,
+      "id": "partition/T003",
+      "level": 80,
+      "levels_gained": 1,
+      "main_gained": 5,
+      "sp_gained": 8,
+      "total_xp": 2183560
+    },
+    {
+      "hp_gained": 2350,
+      "id": "partition/T004",
+      "level": 160,
+      "levels_gained": 159,
+      "main_gained": 792,
+      "sp_gained": 1198,
+      "total_xp": 16898520
+    },
+    {
+      "hp_gained": 6,
+      "id": "partition/T005",
+      "level": 161,
+      "levels_gained": 1,
+      "main_gained": 2,
+      "sp_gained": 4,
+      "total_xp": 17209868
+    },
+    {
+      "hp_gained": 7,
+      "id": "partition/T006",
+      "level": 160,
+      "levels_gained": 1,
+      "main_gained": 3,
+      "sp_gained": 4,
+      "total_xp": 16898520
+    },
+    {
+      "hp_gained": 2460,
+      "id": "partition/T007",
+      "level": 180,
+      "levels_gained": 179,
+      "main_gained": 832,
+      "sp_gained": 1268,
+      "total_xp": 1033797041
+    },
+    {
+      "hp_gained": 150,
+      "id": "partition/T008",
+      "level": 6,
+      "levels_gained": 5,
+      "main_gained": 40,
+      "sp_gained": 60,
+      "total_xp": 2410
+    },
+    {
+      "hp_gained": 26,
+      "id": "partition/T009",
+      "level": 81,
+      "levels_gained": 2,
+      "main_gained": 9,
+      "sp_gained": 15,
+      "total_xp": 2264560
+    }
+  ],
+  "historical_report": {
+    "recorded_passes": 9,
+    "reexecuted": false,
+    "scope": "Preserved report claims do not establish the execution path or resolve current helper/table incompatibility"
+  },
+  "identities": {
+    "destination": {
+      "north-star/csharp/Audio/NorthStar.Audio.csproj": "3acec7333496cb2bb2bb2a8c6aaf151f714f6402e133ead2ca8d3f166d77dd22",
+      "north-star/csharp/Audio/Sound.cs": "e4995638398116dff88d084f6afadb48217c81ee80f50995a2793ed22ce6ad31",
+      "north-star/csharp/AudioChecks/NorthStar.AudioChecks.csproj": "09817d6577fce1b3e0eac2bf5b308a7ee6b1ddf305f3f33b8a062d9a1ca89b05",
+      "north-star/csharp/AudioChecks/Program.cs": "84a1e8ae9d0465901869649573ab117665a146a4f80c04c221b21d1a76e4d068",
+      "north-star/csharp/Checks/NorthStar.Checks.csproj": "3f58ee26c26f3030dcdb7cc2c6db2b7e14bff43d81e936b95cc116bc82978d35",
+      "north-star/csharp/Checks/Program.cs": "77ad4bf5d9bdb348fef302eb97a35a47e2c5956ed4823a86a622f2cf035b72ae",
+      "north-star/csharp/Crossing/NorthStar.Crossing.csproj": "09fbdffe415d44079f66da83d4d22e5b91169f3f1abdd0e1ebc2bacd2e3f0c88",
+      "north-star/csharp/Crossing/Program.cs": "268c1b5ac582dd06f15eb3e40e7ce859a9c58eecfc58c7586d94bcaecf9c595e",
+      "north-star/csharp/Crossing/Session.cs": "d25ac05ba1a94432474dd1b14b4fd608e446fc5344dcc4f779d8d5fe27a1b2c5",
+      "north-star/csharp/Domain/Crafting.cs": "5a5a892b3e68cff73f7a443d7c014c79dbebf2954d28f447e1bf3a9c4759de57",
+      "north-star/csharp/Domain/Loadout.cs": "a1296ca13b5ba6728c073320b860e369ad2e01fdaacb45b5237ef40d0243f682",
+      "north-star/csharp/Domain/NorthStar.Domain.csproj": "9570b674acfea69bb60098f495afd3b9e2cef2575fcfeb6db71c2cdecb2c4876",
+      "north-star/csharp/Domain/Progression.cs": "8495e1ad92fea069c2c3989f6f2cc2600980575e72812df9480ed193c51c8685",
+      "north-star/csharp/Forge/Expedition.cs": "579c1eb8375a5c281d35338f1c93cb529c16bf330f0576046c970d42c816bfc3",
+      "north-star/csharp/Forge/NorthStar.Forge.csproj": "3f58ee26c26f3030dcdb7cc2c6db2b7e14bff43d81e936b95cc116bc82978d35",
+      "north-star/csharp/Forge/Program.cs": "3a289847c487ca3bca8a406635b7f0a2334daa959d767d31b3f732445a398c3a",
+      "north-star/csharp/ForgeChecks/NorthStar.ForgeChecks.csproj": "8a5c8039bcf4e9cb06e51d0a8099ed2b509f0233ee2981d4ddd557c32b874419",
+      "north-star/csharp/ForgeChecks/Program.cs": "c918c3f27ba4d388026de300ca851fdfa4dd2c053595e3a367701c786b71cc61",
+      "north-star/csharp/InputTiming/NorthStar.InputTiming.csproj": "3acec7333496cb2bb2bb2a8c6aaf151f714f6402e133ead2ca8d3f166d77dd22",
+      "north-star/csharp/InputTiming/WorkRoom.cs": "01e89b74127e545fa675a4fe2d82b8d953cc3d4ea9b6a44ec5d76129036ca33b",
+      "north-star/csharp/Interaction/NorthStar.Interaction.csproj": "ae025be940abc66e2a86a60f61313d781243a1c8c070c971667b3195a7fc2b8f",
+      "north-star/csharp/Interaction/Program.cs": "8cdce94de775342930b250bdc8435627875f846bc346fa9551bf4335d72d375f",
+      "north-star/csharp/InteractionChecks/NorthStar.InteractionChecks.csproj": "df0bd3d017b7e817e6842377344fd3479694b6e531559f24d9168a80d27bf028",
+      "north-star/csharp/InteractionChecks/Program.cs": "98c008ab4906998625f3ad1c944adbfc6183e793bc1faa4c6fc4521070bb155e",
+      "north-star/csharp/Loadout/NorthStar.Loadout.csproj": "8b7ae6ab602aa24a78926f23bdf1d0117d79293eeb493334c1a4a2d3d4c85613",
+      "north-star/csharp/Loadout/PreparedExpedition.cs": "92fabdaa94f4ad4bb33a55a113a3d4f8cc63c86634d631413a529eb53df24668",
+      "north-star/csharp/Loadout/Program.cs": "6409bc7a9d24a9c60ea59657b33925c6dd27e3a6a9a7a9736e2d3a5ff7d6d7d8",
+      "north-star/csharp/LoadoutChecks/NorthStar.LoadoutChecks.csproj": "1125d739eca20f534119389c4eda50f366d4e511b2d1b229e4ebbe3fb30945f8",
+      "north-star/csharp/LoadoutChecks/Program.cs": "c6de586237e5fbb0df552eeb4e458ade42ecf9be86bda814285da223d084b367",
+      "north-star/csharp/Narrative/NorthStar.Narrative.csproj": "5fb0f921d93c92180940885ea539cff43fa2c36f4f5160809a276e2c33687201",
+      "north-star/csharp/Narrative/Program.cs": "7277914d98e49373652b6ab44dd5c1487745076f46ad3c395add981ecf3f512b",
+      "north-star/csharp/Narrative/RequestExpedition.cs": "fc18705f8ba1c0f4f65924861b55e21e4e05b0a5d2658e121e0a5cdce85710d4",
+      "north-star/csharp/NarrativeChecks/NorthStar.NarrativeChecks.csproj": "1ee37d328e919633eea97e2e8cc4183f2ae213cf2d853bb1e4dcde3b879d5743",
+      "north-star/csharp/NarrativeChecks/Program.cs": "c04190b0621cfc585225d16a2ef91ce3364f93c26429cb3caa80cfe53c750b67",
+      "north-star/csharp/Presentation/NorthStar.Presentation.csproj": "6e5a04a3e92bc5606c032e20b9b546c4704a55d682c7eb314002822e5bf59387",
+      "north-star/csharp/Presentation/Program.cs": "e04317ed8ee81a65360d07653b3fe03e900a748eac677e9b30b70b02721f6581",
+      "north-star/csharp/PresentationChecks/NorthStar.PresentationChecks.csproj": "9bd30f62c4e2661792ed70d0aad6656ce24729a229280ce93fbe9108a3478061",
+      "north-star/csharp/PresentationChecks/Program.cs": "5cab8885afe41b68a6727957a8ba7d12f9adb98968b0b82911f354c833ecdd38",
+      "north-star/csharp/Recovery/Journal.cs": "cb0c7daa7b83009ac37f3ad8e51b26ec9c41450e63979686ad47715627e9486f",
+      "north-star/csharp/Recovery/NorthStar.Recovery.csproj": "9a2a91f12d4ad1d02b49724dfae7339929db1dcf15a79a33b49d13202079ef30",
+      "north-star/csharp/Recovery/Program.cs": "0bd2489db6e4d1757caa42a46d862cccae103309beb43a98b1bb8c945ec18112",
+      "north-star/csharp/RecoveryChecks/NorthStar.RecoveryChecks.csproj": "79618f8cda20a1dd8b38190940befc0fa8d71279835ea450ca6a4e6ad0ccd6fb",
+      "north-star/csharp/RecoveryChecks/Program.cs": "79009f6215c8c2e7ffb947c4ef3cab69cb4d262bc79085bb0d3857d796e9026c",
+      "north-star/csharp/global.json": "e0c0882461e712f6c2c66241bf2f175c60832e3ff077dc26091ff8c661d4193e"
+    },
+    "instrument": {
+      "run.py": "69f7bf552daec98a4749492831b3c1f8909cf98288a341dbdf63e78d5bb595a0"
+    },
+    "sources": {
+      "budgets": "5b28084252715e63df992265f70cb203e3dd5e8f9accc5ae9e14af92df0abf7b",
+      "goldens": "ba1e24a2460337765d564dcded2689e620c27a6dd572c965b668b85cb1229311",
+      "reported_results": "6f5d3577a697750ffa9fb859c0948d22a3c6608c795550e801268c840c621ba7",
+      "runtime": "4a4876721a614a535b015a2688aafc587101b2cc71ddeb2c808efa3c121f62ed",
+      "shipped_budgets": "5b28084252715e63df992265f70cb203e3dd5e8f9accc5ae9e14af92df0abf7b",
+      "shipped_runtime": "4a4876721a614a535b015a2688aafc587101b2cc71ddeb2c808efa3c121f62ed",
+      "thresholds": "37aaa36eb9141851cb7800dc89fc01725a9f232b7d093ef3334bea1554c5e161"
+    }
+  },
+  "kind": "rpg_progression_contract_study",
+  "legacy_binding_assay": {
+    "decision": "REJECTED",
+    "golden_mismatches": [
+      {
+        "expected_hp": 30,
+        "expected_sp": 12,
+        "id": "golden/T001",
+        "projected_hp": 0,
+        "projected_sp": 0
+      },
+      {
+        "expected_hp": 270,
+        "expected_sp": 108,
+        "id": "golden/T002",
+        "projected_hp": 0,
+        "projected_sp": 0
+      },
+      {
+        "expected_hp": 14,
+        "expected_sp": 8,
+        "id": "golden/T003",
+        "projected_hp": 0,
+        "projected_sp": 0
+      },
+      {
+        "expected_hp": 2350,
+        "expected_sp": 1198,
+        "id": "golden/T004",
+        "projected_hp": 0,
+        "projected_sp": 0
+      },
+      {
+        "expected_hp": 6,
+        "expected_sp": 4,
+        "id": "golden/T005",
+        "projected_hp": 0,
+        "projected_sp": 0
+      },
+      {
+        "expected_hp": 7,
+        "expected_sp": 4,
+        "id": "golden/T006",
+        "projected_hp": 0,
+        "projected_sp": 0
+      },
+      {
+        "expected_hp": 2460,
+        "expected_sp": 1268,
+        "id": "golden/T007",
+        "projected_hp": 0,
+        "projected_sp": 0
+      },
+      {
+        "expected_hp": 150,
+        "expected_sp": 60,
+        "id": "golden/T008",
+        "projected_hp": 0,
+        "projected_sp": 0
+      },
+      {
+        "expected_hp": 26,
+        "expected_sp": 15,
+        "id": "golden/T009",
+        "projected_hp": 0,
+        "projected_sp": 0
+      }
+    ],
+    "keys": {
+      "hp": "HP",
+      "sp": "SP"
+    },
+    "method": "Static source-binding assay with Ruby nil.to_i semantics; not historical RGSS execution",
+    "missing_columns": [
+      "HP",
+      "SP"
+    ]
+  },
+  "limits": "Preserved helper/table binding assay plus actual engine-independent C# execution. No complete historical RGSS game, Unity Editor, Windows build, networking, balance, final progression canon, independent player or empirical population claim.",
+  "off_by_one_reference_mutant": {
+    "ids": [
+      "golden/T001",
+      "golden/T002",
+      "golden/T003",
+      "golden/T004",
+      "golden/T005",
+      "golden/T006",
+      "golden/T008",
+      "golden/T009",
+      "boundary/2/+0",
+      "boundary/3/+0",
+      "boundary/4/+0",
+      "boundary/5/+0",
+      "boundary/6/+0",
+      "boundary/7/+0",
+      "boundary/8/+0",
+      "boundary/9/+0",
+      "boundary/10/+0",
+      "boundary/11/+0",
+      "boundary/12/+0",
+      "boundary/13/+0",
+      "boundary/14/+0",
+      "boundary/15/+0",
+      "boundary/16/+0",
+      "boundary/17/+0",
+      "boundary/18/+0",
+      "boundary/19/+0",
+      "boundary/20/+0",
+      "boundary/21/+0",
+      "boundary/22/+0",
+      "boundary/23/+0",
+      "boundary/24/+0",
+      "boundary/25/+0",
+      "boundary/26/+0",
+      "boundary/27/+0",
+      "boundary/28/+0",
+      "boundary/29/+0",
+      "boundary/30/+0",
+      "boundary/31/+0",
+      "boundary/32/+0",
+      "boundary/33/+0",
+      "boundary/34/+0",
+      "boundary/35/+0",
+      "boundary/36/+0",
+      "boundary/37/+0",
+      "boundary/38/+0",
+      "boundary/39/+0",
+      "boundary/40/+0",
+      "boundary/41/+0",
+      "boundary/42/+0",
+      "boundary/43/+0",
+      "boundary/44/+0",
+      "boundary/45/+0",
+      "boundary/46/+0",
+      "boundary/47/+0",
+      "boundary/48/+0",
+      "boundary/49/+0",
+      "boundary/50/+0",
+      "boundary/51/+0",
+      "boundary/52/+0",
+      "boundary/53/+0",
+      "boundary/54/+0",
+      "boundary/55/+0",
+      "boundary/56/+0",
+      "boundary/57/+0",
+      "boundary/58/+0",
+      "boundary/59/+0",
+      "boundary/60/+0",
+      "boundary/61/+0",
+      "boundary/62/+0",
+      "boundary/63/+0",
+      "boundary/64/+0",
+      "boundary/65/+0",
+      "boundary/66/+0",
+      "boundary/67/+0",
+      "boundary/68/+0",
+      "boundary/69/+0",
+      "boundary/70/+0",
+      "boundary/71/+0",
+      "boundary/72/+0",
+      "boundary/73/+0",
+      "boundary/74/+0",
+      "boundary/75/+0",
+      "boundary/76/+0",
+      "boundary/77/+0",
+      "boundary/78/+0",
+      "boundary/79/+0",
+      "boundary/80/+0",
+      "boundary/81/+0",
+      "boundary/82/+0",
+      "boundary/83/+0",
+      "boundary/84/+0",
+      "boundary/85/+0",
+      "boundary/86/+0",
+      "boundary/87/+0",
+      "boundary/88/+0",
+      "boundary/89/+0",
+      "boundary/90/+0",
+      "boundary/91/+0",
+      "boundary/92/+0",
+      "boundary/93/+0",
+      "boundary/94/+0",
+      "boundary/95/+0",
+      "boundary/96/+0",
+      "boundary/97/+0",
+      "boundary/98/+0",
+      "boundary/99/+0",
+      "boundary/100/+0",
+      "boundary/101/+0",
+      "boundary/102/+0",
+      "boundary/103/+0",
+      "boundary/104/+0",
+      "boundary/105/+0",
+      "boundary/106/+0",
+      "boundary/107/+0",
+      "boundary/108/+0",
+      "boundary/109/+0",
+      "boundary/110/+0",
+      "boundary/111/+0",
+      "boundary/112/+0",
+      "boundary/113/+0",
+      "boundary/114/+0",
+      "boundary/115/+0",
+      "boundary/116/+0",
+      "boundary/117/+0",
+      "boundary/118/+0",
+      "boundary/119/+0",
+      "boundary/120/+0",
+      "boundary/121/+0",
+      "boundary/122/+0",
+      "boundary/123/+0",
+      "boundary/124/+0",
+      "boundary/125/+0",
+      "boundary/126/+0",
+      "boundary/127/+0",
+      "boundary/128/+0",
+      "boundary/129/+0",
+      "boundary/130/+0",
+      "boundary/131/+0",
+      "boundary/132/+0",
+      "boundary/133/+0",
+      "boundary/134/+0",
+      "boundary/135/+0",
+      "boundary/136/+0",
+      "boundary/137/+0",
+      "boundary/138/+0",
+      "boundary/139/+0",
+      "boundary/140/+0",
+      "boundary/141/+0",
+      "boundary/142/+0",
+      "boundary/143/+0",
+      "boundary/144/+0",
+      "boundary/145/+0",
+      "boundary/146/+0",
+      "boundary/147/+0",
+      "boundary/148/+0",
+      "boundary/149/+0",
+      "boundary/150/+0",
+      "boundary/151/+0",
+      "boundary/152/+0",
+      "boundary/153/+0",
+      "boundary/154/+0",
+      "boundary/155/+0",
+      "boundary/156/+0",
+      "boundary/157/+0",
+      "boundary/158/+0",
+      "boundary/159/+0",
+      "boundary/160/+0",
+      "boundary/161/+0",
+      "boundary/162/+0",
+      "boundary/163/+0",
+      "boundary/164/+0",
+      "boundary/165/+0",
+      "boundary/166/+0",
+      "boundary/167/+0",
+      "boundary/168/+0",
+      "boundary/169/+0",
+      "boundary/170/+0",
+      "boundary/171/+0",
+      "boundary/172/+0",
+      "boundary/173/+0",
+      "boundary/174/+0",
+      "boundary/175/+0",
+      "boundary/176/+0",
+      "boundary/177/+0",
+      "boundary/178/+0",
+      "boundary/179/+0",
+      "boundary/180/+0",
+      "partition/T001",
+      "partition/T002",
+      "partition/T003",
+      "partition/T004",
+      "partition/T005",
+      "partition/T006",
+      "partition/T008",
+      "partition/T009"
+    ],
+    "rejected_rows": 195
+  },
+  "protocol_sha256": "37410925c0bda01d57df7f34a696b083cafd5bd03e5128dd770ab482f288d82d",
+  "runtime": {
+    "dotnet_sdk": "10.0.401",
+    "unity_executed": false,
+    "windows_executed": false
+  },
+  "schema_version": 1
+}

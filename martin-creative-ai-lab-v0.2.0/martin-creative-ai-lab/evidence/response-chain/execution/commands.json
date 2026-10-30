@@ -1,0 +1,59 @@
+[
+  {
+    "command": [
+      "/workspace/work/authored-scene/dotnet/dotnet",
+      "--version"
+    ],
+    "exit_code": 0,
+    "stdout": "10.0.401\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "/workspace/work/authored-scene/dotnet/dotnet",
+      "build",
+      "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/combat-study/ResponseChecks/NorthStar.ResponseChecks.csproj",
+      "-c",
+      "Release",
+      "-m:1",
+      "--disable-build-servers"
+    ],
+    "exit_code": 0,
+    "stdout": "  Determining projects to restore...\n  All projects are up-to-date for restore.\n  NorthStar.Combat -> /workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/combat-study/Rules/bin/Release/netstandard2.1/NorthStar.Combat.dll\n  NorthStar.CombatStudy -> /workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/combat-study/Host/bin/Release/net10.0/NorthStar.CombatStudy.dll\n  NorthStar.ResponseChecks -> /workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/combat-study/ResponseChecks/bin/Release/net10.0/NorthStar.ResponseChecks.dll\n\nBuild succeeded.\n    0 Warning(s)\n    0 Error(s)\n\nTime Elapsed 00:00:01.36\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "/workspace/work/authored-scene/dotnet/dotnet",
+      "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/combat-study/ResponseChecks/bin/Release/net10.0/NorthStar.ResponseChecks.dll",
+      "/workspace/work/response-chain/final-launch-corrected/native.json"
+    ],
+    "exit_code": 0,
+    "stdout": "PASS: 60 actual response-chain controls\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "python3",
+      "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/labs/combat-response/responses/assay.py",
+      "--native",
+      "/workspace/work/response-chain/final-launch-corrected/native.json",
+      "--output",
+      "/workspace/work/response-chain/final-launch-corrected/source.json"
+    ],
+    "exit_code": 0,
+    "stdout": "PASS: four observed requirements, actual outcome checks and three false-result negatives\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "node",
+      "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/combat-study/tools/response-browser.mjs",
+      "/workspace/work/authored-scene/dotnet/dotnet",
+      "/workspace/work/response-chain/final-launch-corrected/browser"
+    ],
+    "exit_code": 0,
+    "stdout": "PASS: 16 actual response Chromium controls and 3 HTTP negatives\n",
+    "stderr": ""
+  }
+]

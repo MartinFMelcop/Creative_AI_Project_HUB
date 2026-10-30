@@ -498,8 +498,8 @@
         "evidence/commander-policy/RUN.json"
       ],
       "evidence_sha256": {
-        "evidence/economy-crafting/RUN.json": "ddd390dda294e6ae91eb00cc6c0a4eb226d4fe931d19eed3cc4ac26707a8c267",
-        "evidence/economy-crafting/results.json": "e34c1976f059db2f85c3bb11a45302f68d12b71d61e1b1b0a988ee5a077fc691",
+        "evidence/economy-crafting/RUN.json": "e19872d36956286e354337cac6e1abe091279df48da3e163babe2eec09af9a1f",
+        "evidence/economy-crafting/results.json": "63fc84d71d0848896e2b1f5bd252573f29949e6fc5be8c47ff16ab1382384f38",
         "evidence/tooling-study/RUN.json": "2540400774fb495021e6ff1f3c00eced9454c40588cc701d8048453991cffdc6",
         "evidence/commander-policy/RUN.json": "443e4b540f42aad1dece377028024db8c2b6907259a85d5bc31fec8cd9183b1c"
       }
@@ -739,8 +739,8 @@
         "evidence/rpg-progression/results.json"
       ],
       "evidence_sha256": {
-        "evidence/rpg-progression/RUN.json": "4587275b62999ab50f45c64ae8f71823c5a8a658a545a861395e09a97e84c5bb",
-        "evidence/rpg-progression/results.json": "522ba7e3f2a2e9e3794d33c3333d235a1c77763d127a2859653e9236c2d176bf"
+        "evidence/rpg-progression/RUN.json": "659f3f02ba15d41bd38557dfcb1333d60530128e9a18f9dee2068c366a099058",
+        "evidence/rpg-progression/results.json": "9d3528cd27e6c8fa6876ef094b08e7820996bba837968c143240f262f49bb7a8"
       }
     },
     {
@@ -762,25 +762,30 @@
         "projects/veil-arena/sound.gd",
         "projects/veil-arena/tests",
         "projects/veil-arena/media",
-        "projects/veil-arena/provenance.json"
+        "projects/veil-arena/provenance.json",
+        "references/rave-master/snapshots/36af1651271422ae33856e8b5d7b45702215f165/source/RM_CORE/DATA/CORE/REGRAS_DE_COMBATE.csv"
       ],
       "source_inventory": "labs/source-inventory.json",
       "consumer_paths": [
         "projects/veil-arena/arena.gd",
         "north-star/combat-study/Rules/Combat.cs",
-        "north-star/combat-study/Host/Trial.cs"
+        "north-star/combat-study/Host/Trial.cs",
+        "north-star/combat-study/Rules/ResponseChain.cs",
+        "north-star/combat-study/Host/Room.cs"
       ],
       "controls": [
         "28 fixed native physics/contact cases run twice",
         "Matched timing/range/resolve responses and negative overlaps",
         "49 same historical cases executed through reviewed staged Python surrogate and actual C# adapter;15source hashes",
-        "43 rules,46 actual consumer,17 Chromium and5HTTP controls;17 intake regressions; failed tiny denominator and heated policy retained"
+        "43 rules,46 actual consumer,17 Chromium and5HTTP controls;17 intake regressions; failed tiny denominator and heated policy retained",
+        "Actual paid pending cast, LIFO/cost retention, classic parity and false-result/visible-renderer rejection; bounded original policies, not full battle stack."
       ],
-      "validity_boundary": "P06 pilot retains its original evidence; separate P10 status method executes selected arithmetic and an authored C# encounter. No full Ruby/RMXP runtime, full combat pipeline, Unity/Windows, human comprehension or balance proof.",
+      "validity_boundary": "P06 pilot retains its original evidence; separate P10 status method executes selected arithmetic and an authored C# encounter. No full Ruby/RMXP runtime, full combat pipeline, Unity/Windows, human comprehension or balance proof. Selected queued-action/LIFO/paid-cast requirements now execute in an opt-in original Treatment Line with finite counterplay. This is not full reaction/initiative/trigger ordering, source numeric skill recovery, human balance or Unity validation.",
       "next_objective": "Compare actual licensed Windows/Unity delivery and player/author assessment with remaining effects/passives and consequential product continuity. Preserve incompatible global-round, individual-turn and Crossing timing; do not automatically repeat either combat matrix.",
       "path": "labs/combat-response",
       "instrument": "labs/combat-response/run.py",
       "evidence": [
+        "evidence/response-chain/RUN.json",
         "evidence/combat-response/results.json",
         "evidence/combat-response/RUN.json",
         "evidence/combat-status/RUN.json",
@@ -792,8 +797,13 @@
         "evidence/combat-response/RUN.json": "a21e36dfe88eb816ce06e89a75a409010593e078ad437c828d1d3a821929b53f",
         "evidence/combat-status/RUN.json": "bc2f0b3d4574072c494f36276085d832a6236a7056b6ff5fb874334869ded9c0",
         "evidence/combat-status/source.json": "e4471d51340762e51fb5aa424874e1ccb856d302c0da3fa097a492ee7bf1b26d",
-        "evidence/combat-status/browser.json": "9d4f2e9d20dffeace99d3f514fbeb818a85b0c9cd4e21833ee70c4a737d887f1"
-      }
+        "evidence/combat-status/browser.json": "9d4f2e9d20dffeace99d3f514fbeb818a85b0c9cd4e21833ee70c4a737d887f1",
+        "evidence/response-chain/RUN.json": "638130278829912603ccd89e38e4da2945d4072221fc3eb08bcb8dd985006f14"
+      },
+      "additional_instruments": [
+        "labs/combat-response/responses/assay.py",
+        "north-star/combat-study/tools/response-verify.py"
+      ]
     },
     {
       "id": "visual-animation",
@@ -994,8 +1004,8 @@
         "evidence/query-bindings/RUN.json"
       ],
       "evidence_sha256": {
-        "evidence/world-loadout/RUN.json": "98bda622e86d2059a49368cb2f3f3e4cf0c15b33b532a3335c2720c8be67d533",
-        "evidence/world-loadout/results.json": "3e45a54000ff9cfc6aeb50ccd78356b9c9cb304c3d44e81d82f05e4bc112f055",
+        "evidence/world-loadout/RUN.json": "91ddeaa91427b61049a9dcaf24d1f6875f19c0528aac23032f9d77c4587d0aef",
+        "evidence/world-loadout/results.json": "fb05866b7f29656c2d4ee4166f6c39a092388d52eabd59bcf4fefa0d446d2734",
         "evidence/npc-availability/RUN.json": "5b1cd5ead6e8a56f0c5140744d2bf3f4c5b9d57e84aafc5c652ba0e71a6b1f8a",
         "evidence/npc-availability/source.json": "390e28290989169fe553dc3300b081299b7ccb5016ad3e11d38ce928c3da0f07",
         "evidence/npc-availability/browser.json": "7d45277c974ce3d42ec741f01c0a2e6ecc950ec2654d8f05ea8f4e9d0b2b55a0",
@@ -1058,8 +1068,8 @@
         "evidence/persistent-expedition/results.json"
       ],
       "evidence_sha256": {
-        "evidence/persistent-expedition/RUN.json": "05b2111b8d2ee25413c73550265f9895510fedccebb835dec92501c0b5b8a7f7",
-        "evidence/persistent-expedition/results.json": "3e24e19524e7ad1d5d248a1856758d0a61c70f16dc27d7b8e5cf15b720854a3b"
+        "evidence/persistent-expedition/RUN.json": "58380d343ec2be4429cfb7d6bc0a6bf22b6e26a3c58983e1b9d0ab19cfadf751",
+        "evidence/persistent-expedition/results.json": "f0145995d390c5d33666c92bc1f9536a8038db209d65a35348db560b4afecfae"
       }
     }
   ],
@@ -1110,7 +1120,7 @@
         "evidence/rpg-progression/RUN.json"
       ],
       "evidence_sha256": {
-        "evidence/rpg-progression/RUN.json": "4587275b62999ab50f45c64ae8f71823c5a8a658a545a861395e09a97e84c5bb"
+        "evidence/rpg-progression/RUN.json": "659f3f02ba15d41bd38557dfcb1333d60530128e9a18f9dee2068c366a099058"
       }
     },
     {
@@ -1129,7 +1139,7 @@
         "evidence/rpg-progression/results.json"
       ],
       "evidence_sha256": {
-        "evidence/rpg-progression/results.json": "522ba7e3f2a2e9e3794d33c3333d235a1c77763d127a2859653e9236c2d176bf"
+        "evidence/rpg-progression/results.json": "9d3528cd27e6c8fa6876ef094b08e7820996bba837968c143240f262f49bb7a8"
       }
     },
     {
@@ -1326,6 +1336,7 @@
         "north-star/combat-study/Host/Trial.cs"
       ],
       "evidence": [
+        "evidence/response-chain/RUN.json",
         "evidence/passive-response/RUN.json",
         "evidence/combat-status/RUN.json",
         "evidence/combat-status/source.json",
@@ -1335,7 +1346,8 @@
         "evidence/combat-status/RUN.json": "bc2f0b3d4574072c494f36276085d832a6236a7056b6ff5fb874334869ded9c0",
         "evidence/combat-status/source.json": "e4471d51340762e51fb5aa424874e1ccb856d302c0da3fa097a492ee7bf1b26d",
         "evidence/combat-status/browser.json": "9d4f2e9d20dffeace99d3f514fbeb818a85b0c9cd4e21833ee70c4a737d887f1",
-        "evidence/passive-response/RUN.json": "a74946321271b5045b5d3ca064ce09a8c82678c589bf15198d74d675ee9ffac8"
+        "evidence/passive-response/RUN.json": "a74946321271b5045b5d3ca064ce09a8c82678c589bf15198d74d675ee9ffac8",
+        "evidence/response-chain/RUN.json": "638130278829912603ccd89e38e4da2945d4072221fc3eb08bcb8dd985006f14"
       }
     },
     {
@@ -1408,8 +1420,8 @@
         "evidence/economy-crafting/results.json"
       ],
       "evidence_sha256": {
-        "evidence/economy-crafting/RUN.json": "ddd390dda294e6ae91eb00cc6c0a4eb226d4fe931d19eed3cc4ac26707a8c267",
-        "evidence/economy-crafting/results.json": "e34c1976f059db2f85c3bb11a45302f68d12b71d61e1b1b0a988ee5a077fc691"
+        "evidence/economy-crafting/RUN.json": "e19872d36956286e354337cac6e1abe091279df48da3e163babe2eec09af9a1f",
+        "evidence/economy-crafting/results.json": "63fc84d71d0848896e2b1f5bd252573f29949e6fc5be8c47ff16ab1382384f38"
       }
     },
     {
@@ -1429,8 +1441,8 @@
         "evidence/economy-crafting/results.json"
       ],
       "evidence_sha256": {
-        "evidence/economy-crafting/RUN.json": "ddd390dda294e6ae91eb00cc6c0a4eb226d4fe931d19eed3cc4ac26707a8c267",
-        "evidence/economy-crafting/results.json": "e34c1976f059db2f85c3bb11a45302f68d12b71d61e1b1b0a988ee5a077fc691"
+        "evidence/economy-crafting/RUN.json": "e19872d36956286e354337cac6e1abe091279df48da3e163babe2eec09af9a1f",
+        "evidence/economy-crafting/results.json": "63fc84d71d0848896e2b1f5bd252573f29949e6fc5be8c47ff16ab1382384f38"
       }
     },
     {
@@ -1460,8 +1472,8 @@
         "evidence/world-loadout/results.json"
       ],
       "evidence_sha256": {
-        "evidence/world-loadout/RUN.json": "98bda622e86d2059a49368cb2f3f3e4cf0c15b33b532a3335c2720c8be67d533",
-        "evidence/world-loadout/results.json": "3e45a54000ff9cfc6aeb50ccd78356b9c9cb304c3d44e81d82f05e4bc112f055"
+        "evidence/world-loadout/RUN.json": "91ddeaa91427b61049a9dcaf24d1f6875f19c0528aac23032f9d77c4587d0aef",
+        "evidence/world-loadout/results.json": "fb05866b7f29656c2d4ee4166f6c39a092388d52eabd59bcf4fefa0d446d2734"
       }
     },
     {
@@ -1481,8 +1493,8 @@
         "evidence/world-loadout/results.json"
       ],
       "evidence_sha256": {
-        "evidence/world-loadout/RUN.json": "98bda622e86d2059a49368cb2f3f3e4cf0c15b33b532a3335c2720c8be67d533",
-        "evidence/world-loadout/results.json": "3e45a54000ff9cfc6aeb50ccd78356b9c9cb304c3d44e81d82f05e4bc112f055"
+        "evidence/world-loadout/RUN.json": "91ddeaa91427b61049a9dcaf24d1f6875f19c0528aac23032f9d77c4587d0aef",
+        "evidence/world-loadout/results.json": "fb05866b7f29656c2d4ee4166f6c39a092388d52eabd59bcf4fefa0d446d2734"
       }
     },
     {
@@ -1512,8 +1524,8 @@
         "evidence/persistent-expedition/results.json"
       ],
       "evidence_sha256": {
-        "evidence/persistent-expedition/RUN.json": "05b2111b8d2ee25413c73550265f9895510fedccebb835dec92501c0b5b8a7f7",
-        "evidence/persistent-expedition/results.json": "3e24e19524e7ad1d5d248a1856758d0a61c70f16dc27d7b8e5cf15b720854a3b"
+        "evidence/persistent-expedition/RUN.json": "58380d343ec2be4429cfb7d6bc0a6bf22b6e26a3c58983e1b9d0ab19cfadf751",
+        "evidence/persistent-expedition/results.json": "f0145995d390c5d33666c92bc1f9536a8038db209d65a35348db560b4afecfae"
       }
     },
     {
@@ -1761,7 +1773,7 @@
         "references/rave-master/snapshots/36af1651271422ae33856e8b5d7b45702215f165/source/RM_CORE/DATA/CORE/REGRAS_DE_COMBATE.csv",
         "references/rave-master/snapshots/36af1651271422ae33856e8b5d7b45702215f165/source/RM_ACT1/DATA/DEV/RGSS/RM_COMBAT_RUNTIME.rb"
       ],
-      "decision": "Remainder of former XP-COMBAT-STATUS scope: full damage-ID/resistance/critical pipeline, initiative/formation/reactions, breakbar/downstate, complete effects/passives and historical battle integration are not supplied by helper arithmetic or four authored effects. Ruby/RMXP execution and excluded runtime/assets remain unavailable.",
+      "decision": "Remainder of former XP-COMBAT-STATUS scope: full damage-ID/resistance/critical pipeline, initiative/formation/reactions, breakbar/downstate, complete effects/passives and historical battle integration are not supplied by helper arithmetic or four authored effects. Ruby/RMXP execution and excluded runtime/assets remain unavailable. One bounded queued-commit/LIFO/paid-cast path is now separately INTEGRATED. It does not provide the remaining full battle stack, trigger/slot/AGI ordering, fizzle or cooldown pipeline.",
       "next_action": "Choose an actual product beneficiary and authority for a consequential remaining rule before adaptation; preserve source variants/rights and explicit timing conflicts, and evaluate actual human/Unity delivery when access exists."
     },
     {
@@ -1994,12 +2006,14 @@
       ],
       "decision": "Adapt one out-of-combat slot and selected literal heavy-physical 10% reduction/fatal-hit 1HP once-per-combat mechanics into the existing C# Treatment Line. Destination explicitly chooses direct-hit versus DOT separation, Guard-before-reduction and away-from-zero integer rounding. Source does not settle these policies. Class/gender/level/pool/scaling/rarity acquisition is not implemented: presets are experimental, not earned source abilities. Rogue chance survival and Knight control condition remain distinct, unintegrated choices.",
       "evidence": [
+        "evidence/response-chain/RUN.json",
         "evidence/passive-response/RUN.json",
         "evidence/passive-response/execution/source-assay.json"
       ],
       "evidence_sha256": {
         "evidence/passive-response/RUN.json": "a74946321271b5045b5d3ca064ce09a8c82678c589bf15198d74d675ee9ffac8",
-        "evidence/passive-response/execution/source-assay.json": "b72eec94785a819330fdd0e45601db6673bdaddedf67214036b5c8e0825dee31"
+        "evidence/passive-response/execution/source-assay.json": "b72eec94785a819330fdd0e45601db6673bdaddedf67214036b5c8e0825dee31",
+        "evidence/response-chain/RUN.json": "638130278829912603ccd89e38e4da2945d4072221fc3eb08bcb8dd985006f14"
       },
       "consumer_paths": [
         "north-star/combat-study/Rules/Passives.cs",
@@ -2141,6 +2155,30 @@
         "evidence/query-bindings/RUN.json": "f0b787311e16538f028fa1d26e64bd0eae64583c4d43bd3d51a3cb9ac3a6f602",
         "evidence/query-bindings/execution/regressions/conditions-regressions/query-source.json": "e2026d98f0a4eaaa0746cc88b6c1a744d1412c02601d601febf01fa0db75e34d"
       }
+    },
+    {
+      "id": "XP-BOUNDED-PAID-REACTION",
+      "status": "INTEGRATED",
+      "source_paths": [
+        "references/rave-master/snapshots/36af1651271422ae33856e8b5d7b45702215f165/source/RM_CORE/DATA/CORE/REGRAS_DE_COMBATE.csv"
+      ],
+      "consumer_paths": [
+        "north-star/combat-study/Rules/ResponseChain.cs",
+        "north-star/combat-study/Host/Trial.cs",
+        "north-star/combat-study/Host/Room.cs"
+      ],
+      "decision": "Only selected queued action/reaction, LIFO and cast-cost-retention contracts are integrated through actual opt-in original Treatment Line. Damage48, one ward and shared charge policy are original, not recovered source abilities. Classic mode remains. Full stack, initiative, slot ordering, triggers, fizzle, cooldown and battle/runtime remain unresolved.",
+      "next_action": "Compare actual authored combat needs and appropriate people/production access; do not automatically extend response matrices. Resolve broader battle contracts under explicit owner semantics.",
+      "evidence": [
+        "evidence/response-chain/RUN.json"
+      ],
+      "evidence_sha256": {
+        "evidence/response-chain/RUN.json": "638130278829912603ccd89e38e4da2945d4072221fc3eb08bcb8dd985006f14"
+      },
+      "origin_projects": [
+        "P10"
+      ],
+      "laboratory_id": "combat-response"
     }
   ]
 }

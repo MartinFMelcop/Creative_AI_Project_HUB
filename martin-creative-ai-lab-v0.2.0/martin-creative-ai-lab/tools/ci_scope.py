@@ -65,7 +65,7 @@ def affected(path):
                             'north-star/memory-study/', 'evidence/memory-study/', 'evidence/dialogue-conditions/', 'labs/world-gameplay/dialogue-conditions/',
                             'north-star/field-journey/', 'evidence/field-journey/', 'evidence/field-presentation/', 'evidence/field-sampling/', 'evidence/preparation-authoring/', 'evidence/query-bindings/',
                             'north-star/availability-study/', 'evidence/npc-availability/', 'evidence/repair-hauling/',
-                            'north-star/combat-study/', 'labs/combat-response/status/', 'labs/combat-response/passives/', 'evidence/passive-response/', 'evidence/combat-status/', 'labs/rpg-systems/', 'evidence/rpg-progression/',
+                            'north-star/combat-study/', 'labs/combat-response/status/', 'labs/combat-response/passives/', 'labs/combat-response/responses/', 'evidence/response-chain/', 'evidence/passive-response/', 'evidence/combat-status/', 'labs/rpg-systems/', 'evidence/rpg-progression/',
                             'references/rave-master/', 'labs/economy-simulation/', 'evidence/economy-crafting/',
                             'labs/world-gameplay/', 'evidence/world-loadout/',
                             'labs/networking-persistence/', 'evidence/persistent-expedition/',

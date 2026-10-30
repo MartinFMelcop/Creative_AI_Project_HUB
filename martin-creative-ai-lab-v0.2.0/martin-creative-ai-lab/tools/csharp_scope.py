@@ -33,7 +33,7 @@ PROJECT_ROOTS={
  'authored_scene':('north-star/authored-scene/Checks/NorthStar.AuthoredSceneChecks.csproj','north-star/authored-scene/JournalChecks/NorthStar.JournalChecks.csproj'),
  'tooling':('north-star/tooling-study/Checks/NorthStar.ToolingChecks.csproj','north-star/tooling-study/ConsumerChecks/NorthStar.ToolingConsumerChecks.csproj'),
  'reputation':('north-star/reputation-study/Checks/NorthStar.ReputationChecks.csproj','north-star/reputation-study/ConsumerChecks/NorthStar.ReputationConsumerChecks.csproj'),
- 'combat':('north-star/combat-study/Checks/NorthStar.CombatChecks.csproj','north-star/combat-study/TrialChecks/NorthStar.TrialChecks.csproj','north-star/combat-study/PassiveChecks/NorthStar.PassiveChecks.csproj'),
+ 'combat':('north-star/combat-study/ResponseChecks/NorthStar.ResponseChecks.csproj','north-star/combat-study/Checks/NorthStar.CombatChecks.csproj','north-star/combat-study/TrialChecks/NorthStar.TrialChecks.csproj','north-star/combat-study/PassiveChecks/NorthStar.PassiveChecks.csproj'),
  'availability':('north-star/availability-study/Checks/NorthStar.AvailabilityChecks.csproj','north-star/availability-study/JourneyChecks/NorthStar.JourneyChecks.csproj'),
  'recipient':('north-star/authored-scene/Host/NorthStar.AuthoredScene.csproj',),
 }
@@ -53,7 +53,7 @@ EXTRA={
  'authored_scene':('north-star/authored-scene/','evidence/authored-scene/','evidence/request-continuity/',CS+'Narrative/SCENE.md'),
  'tooling':('north-star/tooling-study/','labs/economy-simulation/tooling/','evidence/tooling-study/'),
  'reputation':('north-star/reputation-study/','labs/narrative-continuity/reputation/','evidence/reputation-study/'),
- 'combat':('north-star/combat-study/','labs/combat-response/status/','labs/combat-response/passives/','evidence/combat-status/','evidence/passive-response/'),
+ 'combat':('north-star/combat-study/','labs/combat-response/status/','labs/combat-response/passives/','labs/combat-response/responses/','evidence/response-chain/','evidence/combat-status/','evidence/passive-response/'),
  'availability':('north-star/availability-study/','labs/world-gameplay/availability/','evidence/npc-availability/','evidence/repair-hauling/'),
  'recipient':('delivery/authored-scene/','evidence/recipient-delivery/','evidence/request-continuity/','north-star/authored-scene/Host/','north-star/authored-scene/web/','north-star/authored-scene/README.md'),
 }

@@ -13,14 +13,18 @@ public sealed class Trial
     readonly string profile;
     readonly PassiveEncounter passive;
     HitResult? lastHit;
+    readonly bool responses;
+    bool wardAvailable=true;
+    ResponseChain? pending;
+    string[] resolution=Array.Empty<string>();
     public bool Active=>outcome=="active";
     int round, hp=100, enemyHp=96, charges=2;
     string outcome="active";
     public string Last {get; private set;}="Choose an action. Reads and elapsed time do not advance the round.";
-    public Trial(string profile="toxic",Passive passive=Passive.None,Armor armor=Armor.Light)
+    public Trial(string profile="toxic",Passive passive=Passive.None,Armor armor=Armor.Light,bool responses=false)
     {
         if(profile!="toxic" && profile!="heated") throw new ArgumentException("Unknown practice profile.");
-        this.profile=profile;
+        this.profile=profile;this.responses=responses;
         this.passive=new PassiveEncounter(passive,armor);
         if(profile=="toxic") { effects.Apply(Effect.Poison,3);effects.Apply(Effect.Bleed,3); }
         else { effects.Apply(Effect.Burn,3);effects.Apply(Effect.Disarm,2); }
@@ -30,6 +34,33 @@ public sealed class Trial
     public bool Execute(string command)
     {
         if(outcome!="active") return Refuse("Encounter ended. Restart explicitly to practice again.");
+        if(pending!=null)
+        {
+            if(command!="release"&&command!="break-ward")return Refuse("Resolve the committed response first. No action, contact or round was spent.");
+            if(command=="break-ward"&&(!pending.HasWard||charges==0))return Refuse("Breaking requires the actual pending ward and one remaining charge. No cost or resolution occurred.");
+            bool broken=command=="break-ward";
+            if(broken)charges--;
+            var result=pending.Resolve(broken);pending=null;
+            resolution=result.Entries.Select(e=>e.Kind+":"+(e.Applied?"applied":"cancelled")).ToArray();
+            events.Clear();lastHit=null;
+            if(broken)events.Add("Break ward committed: one shared treatment charge spent before resolution.");
+            foreach(var entry in resolution)events.Add("Resolution: "+entry);
+            enemyHp=Math.Max(0,enemyHp-result.Damage);
+            events.Add("Committed strike resolved: "+result.Damage+" direct damage. Its cast charge is never refunded, including when countered.");
+            return FinishRound(false);
+        }
+        if(command=="commit")
+        {
+            if(!responses)return Refuse("Response practice was not prepared. No cost or round spent.");
+            if(!effects.WeaponEnabled)return Refuse("Disarmed: committed strike unavailable. No charge or round spent.");
+            if(charges==0)return Refuse("No shared treatment charge remains to commit. No round spent.");
+            int damage=(int)Math.Round(48*effects.AttackMultiplier,MidpointRounding.AwayFromZero);
+            var chain=new ResponseChain(damage,wardAvailable);
+            charges--;pending=chain;wardAvailable=false;resolution=Array.Empty<string>();events.Clear();lastHit=null;
+            Last="Committed strike costs one shared treatment charge now. "+(chain.HasWard?"The target committed its one ward. Break it for one remaining charge, or Release without refund.":"The target has no ward reserve left. Release resolves the pending strike.");
+            events.Add(Last);return true;
+        }
+        if(command=="release"||command=="break-ward")return Refuse("No response chain is pending. No charge or round spent.");
         if(!new[]{"strike","bash","guard","treat","cleanse","retreat"}.Contains(command)) return Refuse("Unknown action.");
         if(command=="strike"&&!effects.WeaponEnabled) return Refuse("Disarmed: strike unavailable. Bash remains available; no round spent.");
         if((command=="treat"||command=="cleanse")&&charges==0) return Refuse("No treatment charges remain; no round spent.");
@@ -45,6 +76,10 @@ public sealed class Trial
         if(command=="treat") { charges--;int amount=(int)Math.Round(32*effects.HealingMultiplier,MidpointRounding.AwayFromZero);int healed=Math.Min(100-hp,amount);hp+=healed;events.Add($"Treatment spent: healed {healed} (eligible {amount}; bleed multiplier {effects.HealingMultiplier:0.0})."); }
         if(command=="cleanse") { charges--;events.Add($"Treatment spent: removed {effects.Cleanse()} effects."); }
         if(guard) events.Add("Guard halves this round's direct contact; it cannot reduce DOT.");
+        return FinishRound(guard);
+    }
+    bool FinishRound(bool guard)
+    {
         if(enemyHp>0)
         {
             int direct=guard?10:20;lastHit=passive.Resolve(hp,direct,DamageKind.PhysicalDirect);int directLoss=hp-lastHit.HpAfter;hp=lastHit.HpAfter;
@@ -64,5 +99,5 @@ public sealed class Trial
     }
     bool Refuse(string reason) { Last=reason;return false; }
     object? HitObservation()=>lastHit==null?null:new {kind=lastHit.Kind.ToString(),incoming=lastHit.Incoming,effectiveDamage=lastHit.EffectiveDamage,hpBefore=lastHit.HpBefore,hpAfter=lastHit.HpAfter,damageReduced=lastHit.DamageReduced,actualHpLost=lastHit.ActualHpLost,avoidedHpLoss=lastHit.AvoidedHpLoss,rescued=lastHit.Rescued};
-    public object Snapshot()=>new { profile,round,hp,maxHp=100,enemyHp,charges,effects=effects.Snapshot().Select(e=>new {effect=e.Effect.ToString(),remaining=e.Remaining}).ToArray(),threat=outcome=="active"?Threat:"No further threat; encounter ended.",events=events.ToArray(),outcome,last=Last,weaponEnabled=effects.WeaponEnabled,attackMultiplier=effects.AttackMultiplier,healingMultiplier=effects.HealingMultiplier,passive=PassiveIds.Name(passive.Selection),armor=PassiveIds.Name(passive.Armor),rescueSpent=passive.RescueSpent,lastHit=HitObservation() };
+    public object Snapshot()=>new { profile,responsePractice=responses,wardAvailable=responses&&wardAvailable,pending=pending==null?null:new {ward=pending.HasWard,items=pending.PendingCount},resolution=resolution.ToArray(),round,hp,maxHp=100,enemyHp,charges,effects=effects.Snapshot().Select(e=>new {effect=e.Effect.ToString(),remaining=e.Remaining}).ToArray(),threat=outcome=="active"?Threat:"No further threat; encounter ended.",events=events.ToArray(),outcome,last=Last,weaponEnabled=effects.WeaponEnabled,attackMultiplier=effects.AttackMultiplier,healingMultiplier=effects.HealingMultiplier,passive=PassiveIds.Name(passive.Selection),armor=PassiveIds.Name(passive.Armor),rescueSpent=passive.RescueSpent,lastHit=HitObservation() };
 }

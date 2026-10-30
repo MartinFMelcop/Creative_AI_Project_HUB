@@ -100,8 +100,8 @@
   "result_artifacts": [
     {
       "local_path": "evidence/rpg-progression/results.json",
-      "size_bytes": 121472,
-      "sha256": "522ba7e3f2a2e9e3794d33c3333d235a1c77763d127a2859653e9236c2d176bf"
+      "size_bytes": 121881,
+      "sha256": "9d3528cd27e6c8fa6876ef094b08e7820996bba837968c143240f262f49bb7a8"
     },
     {
       "local_path": "evidence/rpg-progression/native.json",
@@ -214,6 +214,21 @@
       "local_path": "evidence/rpg-progression/terminal-commands.txt",
       "sha256": "f979a40cb85c7dce49f637f75729e2e1223221d88e1af3c9e2e48f4e7b3fe50b",
       "size_bytes": 96
+    },
+    {
+      "local_path": "north-star/csharp/Portable/Forge/NorthStar.Forge.csproj",
+      "size_bytes": 656,
+      "sha256": "e32e631825a67f1931908e6adf8247f6936e6f79d8efd40b7bfee4aab08dddf0"
+    },
+    {
+      "local_path": "north-star/csharp/Portable/Loadout/NorthStar.Loadout.csproj",
+      "size_bytes": 668,
+      "sha256": "bea76c8d5c8c1e15a71815f19d575dbbdd84ce3cfa08f4288dee3e369d0ee012"
+    },
+    {
+      "local_path": "north-star/csharp/Portable/Crossing/NorthStar.Crossing.csproj",
+      "size_bytes": 580,
+      "sha256": "bf08a1ba3db27ea0848f7f91583192e83d2ccec8168cfb55dd965db786daa3f8"
     }
   ],
   "study_observations": {
@@ -228,5 +243,13 @@
     "baseline_commit": "45405508d79c024e487a3903c3ca0965f40a0d42",
     "reason": "Actual C# audio composition/projection and host dependency alter broad C# identity coverage; prior domain/format consumers remain unchanged.",
     "execution": "evidence/audio-music/prior-consumers.json"
+  },
+  "portable_identity_revalidation": {
+    "baseline_commit": "f9e59f57f70d1ebda92a85d3e0cc05c6639428b5",
+    "reason": "Actual strict CI comparison detected three new portable project identities; full assay reran, all non-identity observations exact. Fingerprint/comparison gates unchanged.",
+    "execution": "evidence/response-chain/assay-reconciliation/commands.json",
+    "comparison": "evidence/response-chain/assay-reconciliation/summary.json",
+    "prior_run": "evidence/response-chain/prior-bound-assays/rpg-progression/RUN.json",
+    "prior_result": "evidence/response-chain/prior-bound-assays/rpg-progression/results.json"
   }
 }

@@ -950,3 +950,20 @@ negative query, not a duplicate hardcoded closure check. This tests declared sco
 query authority through actual paid service, not human trust, moral worth, remote
 presence, balanced choice or broad dialogue/quest integration. No new source fiction,
 Crossing rule, reward, save or recipient package is implied.
+
+### Original paid response practice — experimental counterplay
+
+The existing Treatment Line has optional response preparation. One committed strike
+spends a shared treatment charge before effect; the target commits its one ward.
+Release lets that ward counter the strike without refund. Breaking it spends another
+shared charge and resolves first. The entire chain then resolves one existing contact/
+global-DOT round. Waiting for the player does not advance combat; unrelated actions
+cannot replace the pending commitment. Text logs expose actual resolution order.
+
+Damage48, one ward and the shared-resource policy are original experimental values,
+not a recovered historical skill, class canon or balance finding. Classic actions and
+practice remain available. Preparing/restarting explicitly creates a separate ephemeral
+trial, not world recovery. Actual winning and losing software policies demonstrate
+consequences, not optimal tactics or player agency findings. Only bounded source queue/
+LIFO/paid-cast requirements are consumed; full battle/trigger/initiative/fizzle remains
+unresolved. [Execution](../evidence/response-chain/RUN.json) retains negative controls.

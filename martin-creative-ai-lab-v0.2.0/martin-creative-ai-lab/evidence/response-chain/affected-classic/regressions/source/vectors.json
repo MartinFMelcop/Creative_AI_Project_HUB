@@ -1,0 +1,518 @@
+{
+  "vectors": [
+    {
+      "component": "HIT",
+      "row": {
+        "TestID": "HIT_001_balanced",
+        "ACC": "50",
+        "EVA": "50",
+        "LvlAtk": "10",
+        "LvlDef": "10",
+        "BaseHitSkill": "0.9",
+        "Expected_HitChance": "0.45"
+      }
+    },
+    {
+      "component": "HIT",
+      "row": {
+        "TestID": "HIT_002_eva0",
+        "ACC": "100",
+        "EVA": "0",
+        "LvlAtk": "10",
+        "LvlDef": "10",
+        "BaseHitSkill": "0.9",
+        "Expected_HitChance": "0.9"
+      }
+    },
+    {
+      "component": "HIT",
+      "row": {
+        "TestID": "HIT_003_acc0",
+        "ACC": "0",
+        "EVA": "100",
+        "LvlAtk": "10",
+        "LvlDef": "10",
+        "BaseHitSkill": "0.9",
+        "Expected_HitChance": "0.05"
+      }
+    },
+    {
+      "component": "HIT",
+      "row": {
+        "TestID": "HIT_004_tiny_ratio",
+        "ACC": "1",
+        "EVA": "999",
+        "LvlAtk": "10",
+        "LvlDef": "10",
+        "BaseHitSkill": "0.9",
+        "Expected_HitChance": "0.05"
+      }
+    },
+    {
+      "component": "HIT",
+      "row": {
+        "TestID": "HIT_005_high_ratio",
+        "ACC": "999",
+        "EVA": "1",
+        "LvlAtk": "10",
+        "LvlDef": "10",
+        "BaseHitSkill": "0.9",
+        "Expected_HitChance": "0.8991"
+      }
+    },
+    {
+      "component": "HIT",
+      "row": {
+        "TestID": "HIT_006_lvl_cap_high",
+        "ACC": "100",
+        "EVA": "100",
+        "LvlAtk": "30",
+        "LvlDef": "1",
+        "BaseHitSkill": "0.9",
+        "Expected_HitChance": "0.5175"
+      }
+    },
+    {
+      "component": "HIT",
+      "row": {
+        "TestID": "HIT_007_lvl_cap_low",
+        "ACC": "100",
+        "EVA": "100",
+        "LvlAtk": "1",
+        "LvlDef": "30",
+        "BaseHitSkill": "0.9",
+        "Expected_HitChance": "0.3825"
+      }
+    },
+    {
+      "component": "HIT",
+      "row": {
+        "TestID": "HIT_008_basehit_1",
+        "ACC": "50",
+        "EVA": "50",
+        "LvlAtk": "10",
+        "LvlDef": "10",
+        "BaseHitSkill": "1.0",
+        "Expected_HitChance": "0.5"
+      }
+    },
+    {
+      "component": "HIT",
+      "row": {
+        "TestID": "HIT_009_basehit_0_7",
+        "ACC": "50",
+        "EVA": "50",
+        "LvlAtk": "10",
+        "LvlDef": "10",
+        "BaseHitSkill": "0.7",
+        "Expected_HitChance": "0.35"
+      }
+    },
+    {
+      "component": "HIT",
+      "row": {
+        "TestID": "HIT_010_clamp_high",
+        "ACC": "999999",
+        "EVA": "0",
+        "LvlAtk": "50",
+        "LvlDef": "1",
+        "BaseHitSkill": "1.0",
+        "Expected_HitChance": "0.95"
+      }
+    },
+    {
+      "component": "HIT",
+      "row": {
+        "TestID": "HIT_011_clamp_low",
+        "ACC": "0",
+        "EVA": "999999",
+        "LvlAtk": "1",
+        "LvlDef": "50",
+        "BaseHitSkill": "0.7",
+        "Expected_HitChance": "0.05"
+      }
+    },
+    {
+      "component": "CRIT",
+      "row": {
+        "TestID": "CRIT_001_zero",
+        "CRIT_percent": "0",
+        "CritBaseSkill": "1.0",
+        "Expected_CritChance": "0.0"
+      }
+    },
+    {
+      "component": "CRIT",
+      "row": {
+        "TestID": "CRIT_002_10pct",
+        "CRIT_percent": "10",
+        "CritBaseSkill": "1.0",
+        "Expected_CritChance": "0.1"
+      }
+    },
+    {
+      "component": "CRIT",
+      "row": {
+        "TestID": "CRIT_003_cap",
+        "CRIT_percent": "60",
+        "CritBaseSkill": "1.0",
+        "Expected_CritChance": "0.5"
+      }
+    },
+    {
+      "component": "CRIT",
+      "row": {
+        "TestID": "CRIT_004_base0_5",
+        "CRIT_percent": "20",
+        "CritBaseSkill": "0.5",
+        "Expected_CritChance": "0.1"
+      }
+    },
+    {
+      "component": "CRIT",
+      "row": {
+        "TestID": "CRIT_005_base2_cap",
+        "CRIT_percent": "30",
+        "CritBaseSkill": "2.0",
+        "Expected_CritChance": "0.5"
+      }
+    },
+    {
+      "component": "RAW",
+      "row": {
+        "TestID": "RAW_001_simple",
+        "ATK_or_MATK": "100",
+        "EscalaCoef": "1.0",
+        "Letalidade": "0.0",
+        "Expected_RawDamage": "100.0"
+      }
+    },
+    {
+      "component": "RAW",
+      "row": {
+        "TestID": "RAW_002_lethality",
+        "ATK_or_MATK": "120",
+        "EscalaCoef": "0.8",
+        "Letalidade": "0.25",
+        "Expected_RawDamage": "120.0"
+      }
+    },
+    {
+      "component": "RAW",
+      "row": {
+        "TestID": "RAW_003_magic",
+        "ATK_or_MATK": "80",
+        "EscalaCoef": "1.5",
+        "Letalidade": "0.1",
+        "Expected_RawDamage": "132.0"
+      }
+    },
+    {
+      "component": "RAW",
+      "row": {
+        "TestID": "RAW_004_decimal",
+        "ATK_or_MATK": "37",
+        "EscalaCoef": "2.35",
+        "Letalidade": "0.07",
+        "Expected_RawDamage": "93.0365"
+      }
+    },
+    {
+      "component": "MIT",
+      "row": {
+        "TestID": "MIT_001_def0",
+        "RawDamage": "100.0",
+        "DEF_or_MDEF": "0",
+        "LvlDef": "10",
+        "Expected_MitigatedDamage": "100"
+      }
+    },
+    {
+      "component": "MIT",
+      "row": {
+        "TestID": "MIT_002_half",
+        "RawDamage": "100.0",
+        "DEF_or_MDEF": "200",
+        "LvlDef": "10",
+        "Expected_MitigatedDamage": "50"
+      }
+    },
+    {
+      "component": "MIT",
+      "row": {
+        "TestID": "MIT_003_rounding",
+        "RawDamage": "99.0",
+        "DEF_or_MDEF": "101",
+        "LvlDef": "1",
+        "Expected_MitigatedDamage": "52"
+      }
+    },
+    {
+      "component": "MIT",
+      "row": {
+        "TestID": "MIT_004_small",
+        "RawDamage": "1.0",
+        "DEF_or_MDEF": "999",
+        "LvlDef": "20",
+        "Expected_MitigatedDamage": "0"
+      }
+    },
+    {
+      "component": "MIT",
+      "row": {
+        "TestID": "MIT_005_large_raw",
+        "RawDamage": "543.21",
+        "DEF_or_MDEF": "321",
+        "LvlDef": "15",
+        "Expected_MitigatedDamage": "238"
+      }
+    },
+    {
+      "component": "APPLY",
+      "row": {
+        "TestID": "APPLY_001_eff0",
+        "EFF": "0",
+        "RES": "100",
+        "BaseApplySkill": "1.0",
+        "Expected_ApplyChance": "0.05"
+      }
+    },
+    {
+      "component": "APPLY",
+      "row": {
+        "TestID": "APPLY_002_res0",
+        "EFF": "100",
+        "RES": "0",
+        "BaseApplySkill": "1.0",
+        "Expected_ApplyChance": "0.95"
+      }
+    },
+    {
+      "component": "APPLY",
+      "row": {
+        "TestID": "APPLY_003_balanced",
+        "EFF": "50",
+        "RES": "50",
+        "BaseApplySkill": "1.0",
+        "Expected_ApplyChance": "0.5"
+      }
+    },
+    {
+      "component": "APPLY",
+      "row": {
+        "TestID": "APPLY_004_base0_8",
+        "EFF": "50",
+        "RES": "50",
+        "BaseApplySkill": "0.8",
+        "Expected_ApplyChance": "0.4"
+      }
+    },
+    {
+      "component": "APPLY",
+      "row": {
+        "TestID": "APPLY_005_tiny",
+        "EFF": "1",
+        "RES": "999",
+        "BaseApplySkill": "1.0",
+        "Expected_ApplyChance": "0.05"
+      }
+    },
+    {
+      "component": "APPLY",
+      "row": {
+        "TestID": "APPLY_006_high_clamp",
+        "EFF": "999",
+        "RES": "1",
+        "BaseApplySkill": "1.0",
+        "Expected_ApplyChance": "0.95"
+      }
+    },
+    {
+      "component": "DUR",
+      "row": {
+        "TestID": "DUR_001_base3",
+        "BaseDur": "3",
+        "DurApply_percent": "0",
+        "Ten_percent": "0",
+        "Expected_Duration": "3"
+      }
+    },
+    {
+      "component": "DUR",
+      "row": {
+        "TestID": "DUR_002_plus50",
+        "BaseDur": "3",
+        "DurApply_percent": "50",
+        "Ten_percent": "0",
+        "Expected_Duration": "5"
+      }
+    },
+    {
+      "component": "DUR",
+      "row": {
+        "TestID": "DUR_003_ten50",
+        "BaseDur": "3",
+        "DurApply_percent": "0",
+        "Ten_percent": "50",
+        "Expected_Duration": "2"
+      }
+    },
+    {
+      "component": "DUR",
+      "row": {
+        "TestID": "DUR_004_min1",
+        "BaseDur": "1",
+        "DurApply_percent": "0",
+        "Ten_percent": "80",
+        "Expected_Duration": "1"
+      }
+    },
+    {
+      "component": "DUR",
+      "row": {
+        "TestID": "DUR_005_mixed",
+        "BaseDur": "5",
+        "DurApply_percent": "25",
+        "Ten_percent": "10",
+        "Expected_Duration": "6"
+      }
+    },
+    {
+      "component": "DOT",
+      "row": {
+        "TestID": "DOT_001_poison_1000",
+        "StatusID": "POISON",
+        "HPmax": "1000",
+        "Expected_DOT_Tick": "60"
+      }
+    },
+    {
+      "component": "DOT",
+      "row": {
+        "TestID": "DOT_002_bleed_999",
+        "StatusID": "BLEED",
+        "HPmax": "999",
+        "Expected_DOT_Tick": "30"
+      }
+    },
+    {
+      "component": "DOT",
+      "row": {
+        "TestID": "DOT_003_burn_333",
+        "StatusID": "BURN",
+        "HPmax": "333",
+        "Expected_DOT_Tick": "10"
+      }
+    },
+    {
+      "component": "DOT",
+      "row": {
+        "TestID": "DOT_004_unknown",
+        "StatusID": "FROST",
+        "HPmax": "1000",
+        "Expected_DOT_Tick": "0"
+      }
+    },
+    {
+      "component": "DOT",
+      "row": {
+        "TestID": "DOT_005_poison_hp1",
+        "StatusID": "POISON",
+        "HPmax": "1",
+        "Expected_DOT_Tick": "0"
+      }
+    },
+    {
+      "component": "REAPPLY",
+      "row": {
+        "TestID": "REAP_001_add",
+        "Remaining": "2",
+        "Add": "3",
+        "Expected_NewRemaining": "5"
+      }
+    },
+    {
+      "component": "REAPPLY",
+      "row": {
+        "TestID": "REAP_002_zero",
+        "Remaining": "0",
+        "Add": "0",
+        "Expected_NewRemaining": "1"
+      }
+    },
+    {
+      "component": "REAPPLY",
+      "row": {
+        "TestID": "REAP_003_large",
+        "Remaining": "7",
+        "Add": "10",
+        "Expected_NewRemaining": "17"
+      }
+    },
+    {
+      "component": "FINAL_DAMAGE",
+      "row": {
+        "TestID": "FINAL_001_no_defender",
+        "ATK_or_MATK": "100",
+        "EscalaCoef": "1.0",
+        "Letalidade": "0.0",
+        "DEF_or_MDEF": "0",
+        "LvlDef": "10",
+        "DefenderFlag": "0",
+        "Expected_FinalDamage": "100"
+      }
+    },
+    {
+      "component": "FINAL_DAMAGE",
+      "row": {
+        "TestID": "FINAL_002_defender",
+        "ATK_or_MATK": "100",
+        "EscalaCoef": "1.0",
+        "Letalidade": "0.0",
+        "DEF_or_MDEF": "0",
+        "LvlDef": "10",
+        "DefenderFlag": "1",
+        "Expected_FinalDamage": "50"
+      }
+    },
+    {
+      "component": "FINAL_DAMAGE",
+      "row": {
+        "TestID": "FINAL_003_with_def",
+        "ATK_or_MATK": "120",
+        "EscalaCoef": "0.8",
+        "Letalidade": "0.25",
+        "DEF_or_MDEF": "200",
+        "LvlDef": "10",
+        "DefenderFlag": "0",
+        "Expected_FinalDamage": "60"
+      }
+    },
+    {
+      "component": "FINAL_DAMAGE",
+      "row": {
+        "TestID": "FINAL_004_with_def_defender",
+        "ATK_or_MATK": "120",
+        "EscalaCoef": "0.8",
+        "Letalidade": "0.25",
+        "DEF_or_MDEF": "200",
+        "LvlDef": "10",
+        "DefenderFlag": "1",
+        "Expected_FinalDamage": "30"
+      }
+    },
+    {
+      "component": "FINAL_DAMAGE",
+      "row": {
+        "TestID": "FINAL_005_rounding_chain",
+        "ATK_or_MATK": "37",
+        "EscalaCoef": "2.35",
+        "Letalidade": "0.07",
+        "DEF_or_MDEF": "111",
+        "LvlDef": "7",
+        "DefenderFlag": "1",
+        "Expected_FinalDamage": "28"
+      }
+    }
+  ]
+}

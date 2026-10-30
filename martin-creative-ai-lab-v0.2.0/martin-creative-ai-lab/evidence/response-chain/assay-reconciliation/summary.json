@@ -1,0 +1,90 @@
+{
+  "kind": "actual_source_identity_reconciliation",
+  "results": [
+    {
+      "lab": "rpg-systems",
+      "evidence": "rpg-progression",
+      "observations_exact": true,
+      "identity_changes": {
+        "destination/north-star/csharp/Portable/Forge/NorthStar.Forge.csproj": {
+          "before": null,
+          "after": "e32e631825a67f1931908e6adf8247f6936e6f79d8efd40b7bfee4aab08dddf0"
+        },
+        "destination/north-star/csharp/Portable/Crossing/NorthStar.Crossing.csproj": {
+          "before": null,
+          "after": "bf08a1ba3db27ea0848f7f91583192e83d2ccec8168cfb55dd965db786daa3f8"
+        },
+        "destination/north-star/csharp/Portable/Loadout/NorthStar.Loadout.csproj": {
+          "before": null,
+          "after": "bea76c8d5c8c1e15a71815f19d575dbbdd84ce3cfa08f4288dee3e369d0ee012"
+        }
+      },
+      "old_result_sha256": "522ba7e3f2a2e9e3794d33c3333d235a1c77763d127a2859653e9236c2d176bf",
+      "new_result_sha256": "9d3528cd27e6c8fa6876ef094b08e7820996bba837968c143240f262f49bb7a8"
+    },
+    {
+      "lab": "economy-simulation",
+      "evidence": "economy-crafting",
+      "observations_exact": true,
+      "identity_changes": {
+        "north-star/csharp/Portable/Loadout/NorthStar.Loadout.csproj": {
+          "before": null,
+          "after": "bea76c8d5c8c1e15a71815f19d575dbbdd84ce3cfa08f4288dee3e369d0ee012"
+        },
+        "north-star/csharp/Portable/Forge/NorthStar.Forge.csproj": {
+          "before": null,
+          "after": "e32e631825a67f1931908e6adf8247f6936e6f79d8efd40b7bfee4aab08dddf0"
+        },
+        "north-star/csharp/Portable/Crossing/NorthStar.Crossing.csproj": {
+          "before": null,
+          "after": "bf08a1ba3db27ea0848f7f91583192e83d2ccec8168cfb55dd965db786daa3f8"
+        }
+      },
+      "old_result_sha256": "e34c1976f059db2f85c3bb11a45302f68d12b71d61e1b1b0a988ee5a077fc691",
+      "new_result_sha256": "63fc84d71d0848896e2b1f5bd252573f29949e6fc5be8c47ff16ab1382384f38"
+    },
+    {
+      "lab": "world-gameplay",
+      "evidence": "world-loadout",
+      "observations_exact": true,
+      "identity_changes": {
+        "north-star/csharp/Portable/Loadout/NorthStar.Loadout.csproj": {
+          "before": null,
+          "after": "bea76c8d5c8c1e15a71815f19d575dbbdd84ce3cfa08f4288dee3e369d0ee012"
+        },
+        "north-star/csharp/Portable/Forge/NorthStar.Forge.csproj": {
+          "before": null,
+          "after": "e32e631825a67f1931908e6adf8247f6936e6f79d8efd40b7bfee4aab08dddf0"
+        },
+        "north-star/csharp/Portable/Crossing/NorthStar.Crossing.csproj": {
+          "before": null,
+          "after": "bf08a1ba3db27ea0848f7f91583192e83d2ccec8168cfb55dd965db786daa3f8"
+        }
+      },
+      "old_result_sha256": "3e45a54000ff9cfc6aeb50ccd78356b9c9cb304c3d44e81d82f05e4bc112f055",
+      "new_result_sha256": "fb05866b7f29656c2d4ee4166f6c39a092388d52eabd59bcf4fefa0d446d2734"
+    },
+    {
+      "lab": "networking-persistence",
+      "evidence": "persistent-expedition",
+      "observations_exact": true,
+      "identity_changes": {
+        "north-star/csharp/Portable/Loadout/NorthStar.Loadout.csproj": {
+          "before": null,
+          "after": "bea76c8d5c8c1e15a71815f19d575dbbdd84ce3cfa08f4288dee3e369d0ee012"
+        },
+        "north-star/csharp/Portable/Forge/NorthStar.Forge.csproj": {
+          "before": null,
+          "after": "e32e631825a67f1931908e6adf8247f6936e6f79d8efd40b7bfee4aab08dddf0"
+        },
+        "north-star/csharp/Portable/Crossing/NorthStar.Crossing.csproj": {
+          "before": null,
+          "after": "bf08a1ba3db27ea0848f7f91583192e83d2ccec8168cfb55dd965db786daa3f8"
+        }
+      },
+      "old_result_sha256": "3e24e19524e7ad1d5d248a1856758d0a61c70f16dc27d7b8e5cf15b720854a3b",
+      "new_result_sha256": "f0145995d390c5d33666c92bc1f9536a8038db209d65a35348db560b4afecfae"
+    }
+  ],
+  "limits": "Fresh actual assays; only observed three new portable project identities differ. No gate, fingerprint scope, source fixture, output policy or gameplay changed."
+}

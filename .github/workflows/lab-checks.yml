@@ -719,6 +719,9 @@ jobs:
         run: |
           python3 labs/combat-response/status/test_instrument.py
           python3 north-star/combat-study/tools/passive-verify.py --dotnet dotnet --output "$RUNNER_TEMP/combat-status"
+      - name: Execute actual paid response windows and LIFO consequences
+        if: contains(fromJSON(needs.scope.outputs.csharp_suites), 'combat')
+        run: python3 north-star/combat-study/tools/response-verify.py --dotnet dotnet --output "$RUNNER_TEMP/response-chain"
       - name: Retain combat status failure diagnostics
         if: failure()
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4

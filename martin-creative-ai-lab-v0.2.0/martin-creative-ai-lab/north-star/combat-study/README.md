@@ -132,3 +132,24 @@ python3 north-star/combat-study/tools/passive-verify.py --dotnet dotnet --output
 [actual evidence](../../evidence/passive-response/RUN.json) preserve the scope, negatives,
 original producer and limits. Rules remain C#8/netstandard2.1; Host is .NET10/Linux/browser,
 not Unity, new Windows/Steam delivery, human validation or final source canon.
+
+## Optional paid response practice — original bounded policy
+
+Prepare responses explicitly, then Begin. Commit spends one shared treatment charge
+before its 48-base weapon strike resolves (existing burn/disarm still apply). The target
+commits its single ward above that cast. Release lets the ward counter it without
+refund; Break ward spends another shared charge and resolves before the ward. Each
+whole chain resolves one existing contact/global-DOT round, never one round per item.
+Pending casts lock unrelated actions; reads and elapsed time cannot resolve them.
+
+The same charges also fund treatment/cleanse. These costs and the one ward are original
+experimental parameters, not a recovered skill or balanced player finding. Classic
+practice remains available. Explicit fresh preparation/restart is a new ephemeral
+trial, not a refund or rearm within the old encounter. Textual resolution logs record
+actual order; no graphical stack widget is introduced. Only STK-001/002 and CST-001's
+narrow queue/LIFO/paid-cast contracts are adapted; full triggers/slot priorities/AGI,
+state-based battle rules, fizzle and ultimate cooldowns remain unresolved.
+
+```bash
+python3 north-star/combat-study/tools/response-verify.py --dotnet dotnet --output /tmp/response-practice-new
+```

@@ -1,0 +1,12 @@
+{
+  "schema_version":1,
+  "kind":"prospective_bounded_response_contract",
+  "baseline_commit":"f9e59f57f70d1ebda92a85d3e0cc05c6639428b5",
+  "question":"Can the existing Treatment Line consume a bounded LIFO reaction chain with cast-time resource commitment while preserving classic combat and exact final contact/DOT ownership?",
+  "source_contracts":["STK-001: chosen action enters stack and opens reaction window","STK-002: LIFO resolution","CST-001: cast cost remains spent even when countered"],
+  "original_policy":"Optional response practice only: commit is 48 base physical weapon damage affected by existing burn, paid by one shared treatment charge before queuing. The target has one ward reserve. Release resolves ward before commit; break-ward costs one further shared charge and resolves before ward. Full chain consumes one existing round/contact/DOT, not one round per stack item. Classic free actions stay unchanged.",
+  "acceptance":["Commit cost occurs before pending observation; HP, enemy HP, round and effects do not advance until actual release/counter resolution.","LIFO counter neutralizes actual ward before actual commit; release retains paid cost but deals zero through resolved ward.","Malformed, unknown, unavailable and wrong-phase actions cannot supply effects or extra resources.","Pending window cannot substitute unrelated action or passive swap; reads/redraw/time cannot resolve or refund.","Current global-round DOT and terminal ordering stay owned by Trial after chain.","At least two actual policies, including a losing or exhausted choice, retain exact traces without balance/population claims.","Original classic controls and source vectors reexecute unchanged.","False result and visible pending-as-hit/refund renderer controls are rejected."],
+  "limits":"Bounded software contract adaptation from preserved requirements, not full stack/initiative/trigger-slot system, complete Ruby/RMXP execution, trained AI, Commander game, human balance/canon, Unity/Windows/Steam or durable world.",
+  "exclusions":["STK-003 general triggers","STK-004/005 slot/AGI/RNG ordering","STK-006 full death/downstate pipeline","CST-002/003 full target/area fizzle","ultimate cooldowns"],
+  "timing_disclosure":"Draft before current implementation outcomes. Specialist analyses requested independently; actual availability and influence must be reported, not assumed."
+}
