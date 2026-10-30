@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "kind": "prospective_portable_existing_owner_protocol",
+  "baseline_commit": "a8cf73727b564963dbdd437c5cb7924f2dd1dddd",
+  "question": "Can the existing Crossing, Forge and Loadout owners compile as C#8/netstandard2.1 libraries and supply actual existing .NET10 consumers with unchanged accepted/refused transitions, costs, progression and terminal outcomes?",
+  "beneficiary": "The existing Intake/Field production dependency on executable-only gameplay projects, while preserving immutable recipient source-closure and baseline build contracts.",
+  "selected_change": "Restore all three original executable project files byte-exact to the archive-bound baseline. Add three explicit netstandard2.1/C#8 sibling projects under csharp/Portable, linking each exact existing owner source once without copying rules. Route existing Intake and Field through those portable projects using ordinary references.",
+  "predeclared_comparisons": [
+    "Exact JSON bytes for each unchanged CLI --demo across preserved baseline net10, current net10 and an actual external net10 consumer compiling the unchanged CLI Program.cs against portable library outputs.",
+    "Exact native output bytes for existing Checks, ForgeChecks and LoadoutChecks Program.cs across normal current consumers and external consumers referencing portable owner targets. These controls include refusals, conservation, failure, retry, earned allocation and actual completion.",
+    "Actual evaluated MSBuild output type, target framework, language version, exact linked Compile owner path and ProjectReference closure for each new portable sibling project and unchanged Domain dependency. Original executable projects and owner/CLI sources remain byte-exact to baseline.",
+    "Actual copied Domain/Crossing/Forge/Loadout DLL identities in both Intake and Field output must equal the compiled netstandard2.1 library artifacts; metadata on one reference alone is insufficient."
+  ],
+  "negative_controls": [
+    "A forged parity report with a changed result identity must be rejected rather than accepted through an unchanged passing count.",
+    "A real temporary evaluated project contaminated with Program.cs must fail the portable compilation-input contract.",
+    "A real temporary evaluated netstandard project referencing an executable/net10-only project must fail the portable dependency contract.",
+    "A portable compilation item pointing at copied or foreign owner source must be rejected even if its code is textually equivalent."
+  ],
+  "execution_contract": {
+    "sdk": "10.0.401",
+    "output": "New directory outside maintained workspace; every command retained with actual exit/stdout/stderr; nonzero required commands fail.",
+    "limits": "Each command bounded to 300 seconds. Source identities sampled before and after actual execution. Missing baseline/tools/required output are failures, not passes.",
+    "unit": "A bounded software compatibility and preservation experiment. Overlapping native controls and repeated CLI routes are not independent studies, people or measured effort."
+  },
+  "known_rivals": [
+    "Only a target-framework label changed while the actual consumer still links executable/net10 gameplay.",
+    "A second copied rules implementation passes a convenient demo while authoritative owners diverge.",
+    "A parity verifier trusts a declared pass or ignores changed resources/terminal outcomes.",
+    "Successful portable compilation is misreported as licensed Unity, production Windows/Steam or save migration acceptance."
+  ],
+  "failure_conditions": [
+    "Any compared exact output differs or expected trace is missing.",
+    "Portable closure includes Program.cs, System.Text.Json transport code, nonportable/executable dependency, wrong language or missing owner.",
+    "Actual Intake selected reference remains net10 instead of portable Loadout.",
+    "Source changes during the recorded run or a negative control is not detected."
+  ],
+  "production_limits": "No Editor patch/version, license, module, Unity runtime/API support, Windows Player, Steam, account/save migration, binary identity preservation, participant finding or Build/Operations completion follows. Existing recipient archives remain unchanged.",
+  "brain_influence": [
+    "SCI-013: explicit rival explanations",
+    "SCI-014: compilation is not production compatibility",
+    "SCI-076: actual consumer/reference observation fits the dependency question",
+    "SCI-077: exact negatives and separate execution categories"
+  ],
+  "protocol_timing_disclosure": "Revision2 declared before its scientific verifier outcomes, after revision1 passed24controls but primary preserved-archive gates exposed original project source-identity incompatibility. Architecture revision protects source/recipient contracts; no gameplay or acceptance gate was weakened. This is not external preregistration.",
+  "protocol_revision": 2,
+  "revision_reason": "The passing multitarget compatibility run did not satisfy unchanged recipient source-binding gates: actual Linux archive check rejected Source binding mismatch and Windows check rejected Current source identity mismatch after original project files changed. These are material preservation negatives. Retain that full execution/producer as superseded; do not weaken source gates or rebuild unchanged recipient archives."
+}

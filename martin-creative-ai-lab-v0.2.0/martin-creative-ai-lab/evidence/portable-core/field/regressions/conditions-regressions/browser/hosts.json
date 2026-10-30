@@ -1,0 +1,95 @@
+{
+  "complete": true,
+  "logs": [
+    {
+      "command": [
+        "/workspace/work/authored-scene/dotnet/dotnet",
+        "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/memory-study/Host/bin/Release/net10.0/NorthStar.MemoryStudy.dll",
+        "--serve",
+        "44639",
+        "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/memory-study/web",
+        "--seconds",
+        "120",
+        "--policy",
+        "independent"
+      ],
+      "stdout": "READY http://127.0.0.1:44639/\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/workspace/work/authored-scene/dotnet/dotnet",
+        "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/memory-study/Host/bin/Release/net10.0/NorthStar.MemoryStudy.dll",
+        "--serve",
+        "36993",
+        "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/memory-study/web",
+        "--seconds",
+        "120",
+        "--policy",
+        "ordered"
+      ],
+      "stdout": "READY http://127.0.0.1:36993/\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/workspace/work/authored-scene/dotnet/dotnet",
+        "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/memory-study/Host/bin/Release/net10.0/NorthStar.MemoryStudy.dll",
+        "--serve",
+        "46293",
+        "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/memory-study/web",
+        "--seconds",
+        "120",
+        "--policy",
+        "ordered"
+      ],
+      "stdout": "READY http://127.0.0.1:46293/\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/workspace/work/authored-scene/dotnet/dotnet",
+        "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/memory-study/Host/bin/Release/net10.0/NorthStar.MemoryStudy.dll",
+        "--serve",
+        "45683",
+        "/tmp/conditions-render-mutants-1k35RC/false-eligible",
+        "--seconds",
+        "120",
+        "--policy",
+        "ordered"
+      ],
+      "stdout": "READY http://127.0.0.1:45683/\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/workspace/work/authored-scene/dotnet/dotnet",
+        "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/memory-study/Host/bin/Release/net10.0/NorthStar.MemoryStudy.dll",
+        "--serve",
+        "40435",
+        "/tmp/conditions-render-mutants-1k35RC/false-delivered",
+        "--seconds",
+        "120",
+        "--policy",
+        "ordered"
+      ],
+      "stdout": "READY http://127.0.0.1:40435/\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/workspace/work/authored-scene/dotnet/dotnet",
+        "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/field-journey/Host/bin/Release/net10.0/NorthStar.FieldJourney.dll",
+        "--serve",
+        "39811",
+        "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/field-journey/web",
+        "--seconds",
+        "120",
+        "--policy",
+        "ordered"
+      ],
+      "stdout": "READY http://127.0.0.1:39811/\n",
+      "stderr": ""
+    }
+  ]
+}

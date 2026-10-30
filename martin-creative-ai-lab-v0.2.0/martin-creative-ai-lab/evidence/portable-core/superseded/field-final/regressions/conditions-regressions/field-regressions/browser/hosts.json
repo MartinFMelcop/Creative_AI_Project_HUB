@@ -1,0 +1,54 @@
+[
+  {
+    "command": [
+      "/workspace/work/authored-scene/dotnet/dotnet",
+      "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/field-journey/Host/bin/Release/net10.0/NorthStar.FieldJourney.dll",
+      "--serve",
+      "45253",
+      "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/field-journey/web",
+      "--seconds",
+      "120"
+    ],
+    "stdout": "READY http://127.0.0.1:45253/\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "/workspace/work/authored-scene/dotnet/dotnet",
+      "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/field-journey/Host/bin/Release/net10.0/NorthStar.FieldJourney.dll",
+      "--serve",
+      "36091",
+      "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/field-journey/web",
+      "--seconds",
+      "120"
+    ],
+    "stdout": "READY http://127.0.0.1:36091/\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "/workspace/work/authored-scene/dotnet/dotnet",
+      "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/field-journey/Host/bin/Release/net10.0/NorthStar.FieldJourney.dll",
+      "--serve",
+      "46073",
+      "/tmp/field-picture-negative-ixX0DS/false-complete",
+      "--seconds",
+      "120"
+    ],
+    "stdout": "READY http://127.0.0.1:46073/\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "/workspace/work/authored-scene/dotnet/dotnet",
+      "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/field-journey/Host/bin/Release/net10.0/NorthStar.FieldJourney.dll",
+      "--serve",
+      "40331",
+      "/tmp/field-picture-negative-ixX0DS/false-person",
+      "--seconds",
+      "120"
+    ],
+    "stdout": "READY http://127.0.0.1:40331/\n",
+    "stderr": ""
+  }
+]

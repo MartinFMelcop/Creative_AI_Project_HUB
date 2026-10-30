@@ -566,6 +566,9 @@ jobs:
           node-version: '24.19.0'
       - name: Require the pinned SDK for every selected C# suite
         run: test "$(dotnet --version)" = "10.0.401"
+      - name: Verify portable gameplay owners in actual existing consumers
+        if: contains(fromJSON(needs.scope.outputs.csharp_suites), 'intake')
+        run: python3 labs/build-operations/portable-core/verify.py --dotnet dotnet --output "$RUNNER_TEMP/portable-core"
       - name: Execute recovered progression and original C# destination
         if: contains(fromJSON(needs.scope.outputs.csharp_suites), 'progression')
         run: |

@@ -1,0 +1,26 @@
+{
+  "kind": "recorded_actual_tool_observations",
+  "epoch": "superseded_existing_project_multitarget",
+  "commands": [
+    {
+      "command": [
+        "python3",
+        "delivery/authored-scene/check.py",
+        "delivery/authored-scene/dist/authored-scene-demo-linux-x64.zip"
+      ],
+      "exit_code": 1,
+      "stderr": "Source binding mismatch\n"
+    },
+    {
+      "command": [
+        "python3",
+        "delivery/authored-scene-windows/check.py",
+        "delivery/authored-scene-windows/dist/authored-scene-demo-win-x64.zip"
+      ],
+      "exit_code": 1,
+      "stderr": "Current source identity mismatch\n"
+    }
+  ],
+  "capture_boundary": "These exact messages and exit codes were observed in the primary tool outputs; this JSON transcribes those observations after execution, not a recovered original log file. Original archives/checkers unchanged.",
+  "decision": "Preserve original archive-bound projects; source-link the existing owners into three portable library projects instead. No gate or archive weakened."
+}

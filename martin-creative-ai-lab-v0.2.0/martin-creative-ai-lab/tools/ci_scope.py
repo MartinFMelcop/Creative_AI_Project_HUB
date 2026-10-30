@@ -61,7 +61,7 @@ def affected(path):
                             'delivery/authored-scene/', 'evidence/recipient-delivery/', 'evidence/request-continuity/',
                             'north-star/reputation-study/', 'evidence/reputation-study/',
                             'north-star/tooling-study/', 'evidence/tooling-study/',
-                            'north-star/intake/', 'evidence/intake/',
+                            'north-star/intake/', 'evidence/intake/', 'labs/build-operations/portable-core/', 'evidence/portable-core/',
                             'north-star/memory-study/', 'evidence/memory-study/', 'evidence/dialogue-conditions/', 'labs/world-gameplay/dialogue-conditions/',
                             'north-star/field-journey/', 'evidence/field-journey/', 'evidence/field-presentation/', 'evidence/field-sampling/', 'evidence/preparation-authoring/', 'evidence/query-bindings/',
                             'north-star/availability-study/', 'evidence/npc-availability/', 'evidence/repair-hauling/',

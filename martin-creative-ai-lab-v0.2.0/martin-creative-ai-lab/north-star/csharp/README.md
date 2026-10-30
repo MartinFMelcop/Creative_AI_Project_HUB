@@ -73,10 +73,23 @@ These are fixed policies, not optimal play or independent player evidence.
 [Progression.cs](Domain/Progression.cs) adapts the useful legacy threshold-lookup and
 per-gained-level budget contracts. Its project compiles with **C# 8** against
 **.NET Standard 2.1**, without UnityEngine, RGSS, UI, JSON or NuGet dependencies.
-That compilation establishes a portable API/language boundary; **it does not prove
-Unity API/compiler/import compatibility**. The terminal application and JSON study
-host target .NET 10 and are not offered as Unity runtime assemblies. No particular
-Unity Editor version/module is pinned until it can be verified and exercised.
+Three **C# 8 / .NET Standard 2.1 libraries** under Portable source-link the existing
+Session, Expedition and PreparedExpedition files. Those original files remain the
+single rule implementations; the portable projects do not copy or fork them. Their
+explicit compile lists omit Program.cs and its CLI/JSON handling. Domain remains
+their portable dependency. The original .NET10 projects and commands stay unchanged,
+including the source identities required by both retained recipient archives.
+
+```bash
+dotnet build Portable/Loadout/NorthStar.Loadout.csproj -c Release
+```
+
+The existing Intake and FieldJourney hosts reference the portable Loadout, Forge and
+Crossing libraries. Intake and FieldJourney are still .NET10 hosts, not portable
+assemblies. This compilation and actual dependency selection establish a narrow
+API/language boundary; **they do not prove Unity API/compiler/import compatibility**.
+No particular Unity Editor version/module is pinned until verified and exercised.
+No new rule implementation, save migration or recipient package follows.
 
 Tables require consecutive levels, a zero first threshold and strictly increasing
 bounded XP. Per-level budgets are nonnegative/bounded. Initial XP determines the

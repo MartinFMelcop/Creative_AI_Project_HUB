@@ -1,0 +1,44 @@
+[
+  {
+    "command": [
+      "/workspace/work/authored-scene/dotnet/dotnet",
+      "--version"
+    ],
+    "returncode": 0,
+    "stdout": "10.0.401\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "/workspace/work/authored-scene/dotnet/dotnet",
+      "build",
+      "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/field-journey/Checks/NorthStar.FieldChecks.csproj",
+      "-c",
+      "Release"
+    ],
+    "returncode": 0,
+    "stdout": "  Determining projects to restore...\n  Restored /workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/field-journey/Checks/NorthStar.FieldChecks.csproj (in 113 ms).\n  12 of 13 projects are up-to-date for restore.\n  NorthStar.Domain -> /workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/Domain/bin/Release/netstandard2.1/NorthStar.Domain.dll\n  NorthStar.Crossing -> /workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/Portable/Crossing/bin/Release/netstandard2.1/NorthStar.Crossing.dll\n  NorthStar.Forge -> /workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/Portable/Forge/bin/Release/netstandard2.1/NorthStar.Forge.dll\n  NorthStar.Loadout -> /workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/Portable/Loadout/bin/Release/netstandard2.1/NorthStar.Loadout.dll\n  NorthStar.Conditions -> /workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/memory-study/Conditions/bin/Release/netstandard2.1/NorthStar.Conditions.dll\n  NorthStar.Preparation -> /workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/field-journey/Preparation/bin/Release/netstandard2.1/NorthStar.Preparation.dll\n  NorthStar.Memory -> /workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/memory-study/Rules/bin/Release/netstandard2.1/NorthStar.Memory.dll\n  NorthStar.FieldSampling -> /workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/field-journey/Sampling/bin/Release/netstandard2.1/NorthStar.FieldSampling.dll\n  NorthStar.FieldPresentation -> /workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/field-journey/Presentation/bin/Release/netstandard2.1/NorthStar.FieldPresentation.dll\n  NorthStar.Intake -> /workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/intake/Host/bin/Release/net10.0/NorthStar.Intake.dll\n  NorthStar.MemoryStudy -> /workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/memory-study/Host/bin/Release/net10.0/NorthStar.MemoryStudy.dll\n  NorthStar.FieldJourney -> /workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/field-journey/Host/bin/Release/net10.0/NorthStar.FieldJourney.dll\n  NorthStar.FieldChecks -> /workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/field-journey/Checks/bin/Release/net10.0/NorthStar.FieldChecks.dll\n\nBuild succeeded.\n    0 Warning(s)\n    0 Error(s)\n\nTime Elapsed 00:00:03.54\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "/workspace/work/authored-scene/dotnet/dotnet",
+      "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/field-journey/Checks/bin/Release/net10.0/NorthStar.FieldChecks.dll",
+      "/workspace/work/portable-core/field-source-linked-retry/regressions/conditions-regressions/field-regressions/regressions/native.json"
+    ],
+    "returncode": 0,
+    "stdout": "PASS: 29 field journey native controls\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "node",
+      "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/field-journey/tools/browser.mjs",
+      "/workspace/work/authored-scene/dotnet/dotnet",
+      "/workspace/work/portable-core/field-source-linked-retry/regressions/conditions-regressions/field-regressions/regressions/browser"
+    ],
+    "returncode": 0,
+    "stdout": "PASS: 23 field journey Chromium and 7 HTTP controls\n",
+    "stderr": ""
+  }
+]

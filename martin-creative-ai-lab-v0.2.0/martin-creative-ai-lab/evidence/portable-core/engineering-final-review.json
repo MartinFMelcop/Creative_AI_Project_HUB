@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "kind": "engineering_cross_specialty_readonly_review",
+  "reviewer": "/root/cycle_engineering_1030",
+  "disclosure": "Reviewer independently analyzed and implemented portable project boundaries, but did not author the Scientific protocol, verifier or parity instrument. This review concerns that separate instrument and actual source-linked results. It is not independent final review of reviewer-authored project implementation, blinded validation, human assessment, author approval or commercial clearance.",
+  "inputs": {
+    "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/labs/build-operations/portable-core/protocol.json": "23c6e86351198d771fa3952799c1a24294fb0264f521b80ea8f1f2332e72582c",
+    "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/labs/build-operations/portable-core/verify.py": "718d0a6da4e86d9e2cabb374943babaf2d0b131085a63ecaf42713930681b670",
+    "/workspace/work/portable-core/verification-source-linked-final/results.json": "f0da138d6c01622366b6fa596cc192118907d849000faf59a5102c83d7fcbbc9",
+    "/workspace/work/portable-core/verification-source-linked-final/commands.json": "998f2325b4a6f6a2c8dc8ed930801cbbaa47ed2e9cff0339f2f7b10ac9b4e050",
+    "/workspace/work/portable-core/source-linked-linux-check.json": "4725c4292c0b19f7ef25c9991d168534f1e351994ca6e7bce2199c82b1846d6e",
+    "/workspace/work/portable-core/source-linked-windows-check.json": "8ea5ab5273f5e20231a64eb7c5405f663ff8aa2b2147bed49a6ee943ffcfaa3a",
+    "/workspace/work/portable-core/source-linked-preservation.json": "8180eb9b6597d7274c57be7f3f4190272661aa9d28e94eb9f2b4628d1f8788c7",
+    "/workspace/work/portable-core/verification-source-linked-final/negative-program.json": "0ac580edee02bcb12916beb371d135b0dcf767dc97304b2f94c7f65bca128cb9",
+    "/workspace/work/portable-core/verification-source-linked-final/negative-reference.json": "20278234ce1153fc7ffe9b3508776d7c7708ff07ce102f13473d376f4b1677fa",
+    "/workspace/work/portable-core/verification-source-linked-final/negative-copied-owner.json": "540bc6cfbf96d4ef6b08c5bf4ec415c30e67f37b96f3ec70cf1472df6df9404d",
+    "/workspace/work/portable-core/verification-source-linked-final/negative-result.json": "f1737a50b7274f896809327755165e27cf8325914254244212ae5e18e8b035a9",
+    "/workspace/work/portable-core/verification-source-linked-final/negative-gameplay-result.json": "a3264e0e3377c8459b9125036546b3f8e60cfef72a1d0aff56a1b157a3e8ae7c"
+  },
+  "observed": {
+    "scientific_controls": {
+      "passed": 26,
+      "failed": 0
+    },
+    "exact_result_comparisons": 6,
+    "copied_portable_assemblies": 8,
+    "current_source_identity_recheck": true,
+    "readonly_report_verifier_replay": true,
+    "original_linux_archive_check_passed": true,
+    "original_windows_archive_check_passed": true,
+    "actual_windows_execution": false,
+    "unity_execution": false
+  },
+  "findings": [
+    "Actual evaluated Compile inputs contain the exact authoritative Session.cs, Expedition.cs and PreparedExpedition.cs, one per portable project; Domain contains its unchanged three source files. No copied rules or Program.cs supplies the portable target.",
+    "All portable closure evaluations declare Library, netstandard2.1 and LangVersion8.0. Actual copied PE metadata for both hosts declares .NETStandard,Version=v2.1 and has no System.Text.Json dependency; this is stronger than reference labels alone.",
+    "All six exact parity groups replay against actual output file bytes and SHA256 identities: baseline/current/portable CLI demos and normal/portable existing native consumers.",
+    "Original three archive-bound executable project pins match unchanged baseline. Original Linux and Windows checkers passed without gate edits or archive regeneration; their structural source-binding result is distinct from fresh runtime execution.",
+    "Meaningful evaluated-project negatives separately reject Program contamination, net10-only dependency and text-identical copied owner source. Result negatives distinguish forged hash from changed actual health with a truthful new hash.",
+    "The pre-revision multi-target approach passed compatibility but failed preserved archive source binding. Revision2 openly records this material redesign; superseded success is not current architecture acceptance."
+  ],
+  "material_defects_found": [],
+  "pending_boundary": "Primary reported first full Field source-linked wrapper failed MSB4166 in SamplingChecks, with no diagnostic file found; one unchanged bounded retry is running. This review does not claim completed final Field regression review. Actual Intake verification is separately available; the scientific build/parity instrument is not a substitute for the pending full Field wrapper.",
+  "limits": [
+    "No licensed Unity Editor/API/runtime, Windows Player, Steam or save-migration guarantee.",
+    "Existing experiment outcome parity is software compatibility evidence, not balance, player identity comprehension, human testing or independent population evidence.",
+    "The verifier is a bounded current project/source contract instrument, not general MSBuild evaluation security or a sandbox."
+  ]
+}

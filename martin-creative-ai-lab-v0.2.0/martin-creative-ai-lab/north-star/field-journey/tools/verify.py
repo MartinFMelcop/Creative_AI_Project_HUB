@@ -12,7 +12,7 @@ STUDY=ROOT/'north-star/field-journey'
 
 def identities():
     names=[]
-    for part in ['field-journey','intake','memory-study','csharp/Domain','csharp/Crossing','csharp/Forge','csharp/Loadout']:
+    for part in ['field-journey','intake','memory-study','csharp/Domain','csharp/Portable','csharp/Crossing','csharp/Forge','csharp/Loadout']:
         for path in (ROOT/'north-star'/part).rglob('*'):
             if path.is_file() and not {'bin','obj','__pycache__'}.intersection(path.parts):
                 names.append(path)

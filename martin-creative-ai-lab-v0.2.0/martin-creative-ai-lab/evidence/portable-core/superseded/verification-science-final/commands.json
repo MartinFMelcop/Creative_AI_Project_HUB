@@ -1,0 +1,679 @@
+[
+  {
+    "command": [
+      "/workspace/work/authored-scene/dotnet/dotnet",
+      "--version"
+    ],
+    "exit_code": 0,
+    "stdout": "10.0.401\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "/workspace/work/authored-scene/dotnet/dotnet",
+      "build",
+      "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/Crossing/NorthStar.Crossing.csproj",
+      "-c",
+      "Release"
+    ],
+    "exit_code": 0,
+    "stdout": "  Determining projects to restore...\n  All projects are up-to-date for restore.\n  NorthStar.Domain -> /workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/Domain/bin/Release/netstandard2.1/NorthStar.Domain.dll\n  NorthStar.Crossing -> /workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/Crossing/bin/Release/netstandard2.1/NorthStar.Crossing.dll\n  NorthStar.Crossing -> /workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/Crossing/bin/Release/net10.0/NorthStar.Crossing.dll\n\nBuild succeeded.\n    0 Warning(s)\n    0 Error(s)\n\nTime Elapsed 00:00:01.24\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "/workspace/work/authored-scene/dotnet/dotnet",
+      "msbuild",
+      "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/Crossing/NorthStar.Crossing.csproj",
+      "-nologo",
+      "-getProperty:TargetFramework,TargetFrameworks,OutputType,LangVersion",
+      "-getItem:Compile,ProjectReference"
+    ],
+    "exit_code": 0,
+    "stdout": "{\n  \"Properties\": {\n    \"TargetFramework\": \"\",\n    \"TargetFrameworks\": \"net10.0;netstandard2.1\",\n    \"OutputType\": \"Library\",\n    \"LangVersion\": \"\"\n  },\n  \"Items\": {\n    \"Compile\": [],\n    \"ProjectReference\": [\n      {\n        \"Identity\": \"../Domain/NorthStar.Domain.csproj\",\n        \"FullPath\": \"/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/Domain/NorthStar.Domain.csproj\",\n        \"RootDir\": \"/\",\n        \"Filename\": \"NorthStar.Domain\",\n        \"Extension\": \".csproj\",\n        \"RelativeDir\": \"../Domain/\",\n        \"Directory\": \"workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/Domain/\",\n        \"RecursiveDir\": \"\",\n        \"ModifiedTime\": \"\",\n        \"CreatedTime\": \"\",\n        \"AccessedTime\": \"\",\n        \"DefiningProjectFullPath\": \"/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/Crossing/NorthStar.Crossing.csproj\",\n        \"DefiningProjectDirectory\": \"/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/Crossing/\",\n        \"DefiningProjectName\": \"NorthStar.Crossing\",\n        \"DefiningProjectExtension\": \".csproj\"\n      }\n    ]\n  }\n}\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "/workspace/work/authored-scene/dotnet/dotnet",
+      "msbuild",
+      "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/Crossing/NorthStar.Crossing.csproj",
+      "-nologo",
+      "-getProperty:TargetFramework,TargetFrameworks,OutputType,LangVersion",
+      "-getItem:Compile,ProjectReference",
+      "-p:TargetFramework=netstandard2.1"
+    ],
+    "exit_code": 0,
+    "stdout": "{\n  \"Properties\": {\n    \"TargetFramework\": \"netstandard2.1\",\n    \"TargetFrameworks\": \"net10.0;netstandard2.1\",\n    \"OutputType\": \"Library\",\n    \"LangVersion\": \"8.0\"\n  },\n  \"Items\": {\n    \"Compile\": [\n      {\n        \"Identity\": \"Session.cs\",\n        \"FullPath\": \"/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/Crossing/Session.cs\",\n        \"RootDir\": \"/\",\n        \"Filename\": \"Session\",\n        \"Extension\": \".cs\",\n        \"RelativeDir\": \"\",\n        \"Directory\": \"workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/Crossing/\",\n        \"RecursiveDir\": \"\",\n        \"ModifiedTime\": \"\",\n        \"CreatedTime\": \"\",\n        \"AccessedTime\": \"\",\n        \"DefiningProjectFullPath\": \"/workspace/work/authored-scene/dotnet/sdk/10.0.401/Sdks/Microsoft.NET.Sdk/targets/Microsoft.NET.Sdk.DefaultItems.props\",\n        \"DefiningProjectDirectory\": \"/workspace/work/authored-scene/dotnet/sdk/10.0.401/Sdks/Microsoft.NET.Sdk/targets/\",\n        \"DefiningProjectName\": \"Microsoft.NET.Sdk.DefaultItems\",\n        \"DefiningProjectExtension\": \".props\"\n      }\n    ],\n    \"ProjectReference\": [\n      {\n        \"Identity\": \"../Domain/NorthStar.Domain.csproj\",\n        \"Targets\": \"\",\n        \"OutputItemType\": \"\",\n        \"ReferenceSourceTarget\": \"ProjectReference\",\n        \"FullPath\": \"/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/Domain/NorthStar.Domain.csproj\",\n        \"RootDir\": \"/\",\n        \"Filename\": \"NorthStar.Domain\",\n        \"Extension\": \".csproj\",\n        \"RelativeDir\": \"../Domain/\",\n        \"Directory\": \"workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/Domain/\",\n        \"RecursiveDir\": \"\",\n        \"ModifiedTime\": \"\",\n        \"CreatedTime\": \"\",\n        \"AccessedTime\": \"\",\n        \"DefiningProjectFullPath\": \"/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/Crossing/NorthStar.Crossing.csproj\",\n        \"DefiningProjectDirectory\": \"/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/Crossing/\",\n        \"DefiningProjectName\": \"NorthStar.Crossing\",\n        \"DefiningProjectExtension\": \".csproj\"\n      }\n    ]\n  }\n}\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "/workspace/work/authored-scene/dotnet/dotnet",
+      "msbuild",
+      "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/Domain/NorthStar.Domain.csproj",
+      "-nologo",
+      "-getProperty:TargetFramework,TargetFrameworks,OutputType,LangVersion",
+      "-getItem:Compile,ProjectReference"
+    ],
+    "exit_code": 0,
+    "stdout": "{\n  \"Properties\": {\n    \"TargetFramework\": \"netstandard2.1\",\n    \"TargetFrameworks\": \"\",\n    \"OutputType\": \"Library\",\n    \"LangVersion\": \"8.0\"\n  },\n  \"Items\": {\n    \"Compile\": [\n      {\n        \"Identity\": \"Crafting.cs\",\n        \"FullPath\": \"/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/Domain/Crafting.cs\",\n        \"RootDir\": \"/\",\n        \"Filename\": \"Crafting\",\n        \"Extension\": \".cs\",\n        \"RelativeDir\": \"\",\n        \"Directory\": \"workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/Domain/\",\n        \"RecursiveDir\": \"\",\n        \"ModifiedTime\": \"\",\n        \"CreatedTime\": \"\",\n        \"AccessedTime\": \"\",\n        \"DefiningProjectFullPath\": \"/workspace/work/authored-scene/dotnet/sdk/10.0.401/Sdks/Microsoft.NET.Sdk/targets/Microsoft.NET.Sdk.DefaultItems.props\",\n        \"DefiningProjectDirectory\": \"/workspace/work/authored-scene/dotnet/sdk/10.0.401/Sdks/Microsoft.NET.Sdk/targets/\",\n        \"DefiningProjectName\": \"Microsoft.NET.Sdk.DefaultItems\",\n        \"DefiningProjectExtension\": \".props\"\n      },\n      {\n        \"Identity\": \"Loadout.cs\",\n        \"FullPath\": \"/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/Domain/Loadout.cs\",\n        \"RootDir\": \"/\",\n        \"Filename\": \"Loadout\",\n        \"Extension\": \".cs\",\n        \"RelativeDir\": \"\",\n        \"Directory\": \"workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/Domain/\",\n        \"RecursiveDir\": \"\",\n        \"ModifiedTime\": \"\",\n        \"CreatedTime\": \"\",\n        \"AccessedTime\": \"\",\n        \"DefiningProjectFullPath\": \"/workspace/work/authored-scene/dotnet/sdk/10.0.401/Sdks/Microsoft.NET.Sdk/targets/Microsoft.NET.Sdk.DefaultItems.props\",\n        \"DefiningProjectDirectory\": \"/workspace/work/authored-scene/dotnet/sdk/10.0.401/Sdks/Microsoft.NET.Sdk/targets/\",\n        \"DefiningProjectName\": \"Microsoft.NET.Sdk.DefaultItems\",\n        \"DefiningProjectExtension\": \".props\"\n      },\n      {\n        \"Identity\": \"Progression.cs\",\n        \"FullPath\": \"/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/Domain/Progression.cs\",\n        \"RootDir\": \"/\",\n        \"Filename\": \"Progression\",\n        \"Extension\": \".cs\",\n        \"RelativeDir\": \"\",\n        \"Directory\": \"workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/Domain/\",\n        \"RecursiveDir\": \"\",\n        \"ModifiedTime\": \"\",\n        \"CreatedTime\": \"\",\n        \"AccessedTime\": \"\",\n        \"DefiningProjectFullPath\": \"/workspace/work/authored-scene/dotnet/sdk/10.0.401/Sdks/Microsoft.NET.Sdk/targets/Microsoft.NET.Sdk.DefaultItems.props\",\n        \"DefiningProjectDirectory\": \"/workspace/work/authored-scene/dotnet/sdk/10.0.401/Sdks/Microsoft.NET.Sdk/targets/\",\n        \"DefiningProjectName\": \"Microsoft.NET.Sdk.DefaultItems\",\n        \"DefiningProjectExtension\": \".props\"\n      }\n    ],\n    \"ProjectReference\": []\n  }\n}\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "/workspace/work/authored-scene/dotnet/dotnet",
+      "msbuild",
+      "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/Domain/NorthStar.Domain.csproj",
+      "-nologo",
+      "-getProperty:TargetFramework,TargetFrameworks,OutputType,LangVersion",
+      "-getItem:Compile,ProjectReference",
+      "-p:TargetFramework=netstandard2.1"
+    ],
+    "exit_code": 0,
+    "stdout": "{\n  \"Properties\": {\n    \"TargetFramework\": \"netstandard2.1\",\n    \"TargetFrameworks\": \"\",\n    \"OutputType\": \"Library\",\n    \"LangVersion\": \"8.0\"\n  },\n  \"Items\": {\n    \"Compile\": [\n      {\n        \"Identity\": \"Crafting.cs\",\n        \"FullPath\": \"/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/Domain/Crafting.cs\",\n        \"RootDir\": \"/\",\n        \"Filename\": \"Crafting\",\n        \"Extension\": \".cs\",\n        \"RelativeDir\": \"\",\n        \"Directory\": \"workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/Domain/\",\n        \"RecursiveDir\": \"\",\n        \"ModifiedTime\": \"\",\n        \"CreatedTime\": \"\",\n        \"AccessedTime\": \"\",\n        \"DefiningProjectFullPath\": \"/workspace/work/authored-scene/dotnet/sdk/10.0.401/Sdks/Microsoft.NET.Sdk/targets/Microsoft.NET.Sdk.DefaultItems.props\",\n        \"DefiningProjectDirectory\": \"/workspace/work/authored-scene/dotnet/sdk/10.0.401/Sdks/Microsoft.NET.Sdk/targets/\",\n        \"DefiningProjectName\": \"Microsoft.NET.Sdk.DefaultItems\",\n        \"DefiningProjectExtension\": \".props\"\n      },\n      {\n        \"Identity\": \"Loadout.cs\",\n        \"FullPath\": \"/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/Domain/Loadout.cs\",\n        \"RootDir\": \"/\",\n        \"Filename\": \"Loadout\",\n        \"Extension\": \".cs\",\n        \"RelativeDir\": \"\",\n        \"Directory\": \"workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/Domain/\",\n        \"RecursiveDir\": \"\",\n        \"ModifiedTime\": \"\",\n        \"CreatedTime\": \"\",\n        \"AccessedTime\": \"\",\n        \"DefiningProjectFullPath\": \"/workspace/work/authored-scene/dotnet/sdk/10.0.401/Sdks/Microsoft.NET.Sdk/targets/Microsoft.NET.Sdk.DefaultItems.props\",\n        \"DefiningProjectDirectory\": \"/workspace/work/authored-scene/dotnet/sdk/10.0.401/Sdks/Microsoft.NET.Sdk/targets/\",\n        \"DefiningProjectName\": \"Microsoft.NET.Sdk.DefaultItems\",\n        \"DefiningProjectExtension\": \".props\"\n      },\n      {\n        \"Identity\": \"Progression.cs\",\n        \"FullPath\": \"/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/Domain/Progression.cs\",\n        \"RootDir\": \"/\",\n        \"Filename\": \"Progression\",\n        \"Extension\": \".cs\",\n        \"RelativeDir\": \"\",\n        \"Directory\": \"workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/Domain/\",\n        \"RecursiveDir\": \"\",\n        \"ModifiedTime\": \"\",\n        \"CreatedTime\": \"\",\n        \"AccessedTime\": \"\",\n        \"DefiningProjectFullPath\": \"/workspace/work/authored-scene/dotnet/sdk/10.0.401/Sdks/Microsoft.NET.Sdk/targets/Microsoft.NET.Sdk.DefaultItems.props\",\n        \"DefiningProjectDirectory\": \"/workspace/work/authored-scene/dotnet/sdk/10.0.401/Sdks/Microsoft.NET.Sdk/targets/\",\n        \"DefiningProjectName\": \"Microsoft.NET.Sdk.DefaultItems\",\n        \"DefiningProjectExtension\": \".props\"\n      }\n    ],\n    \"ProjectReference\": []\n  }\n}\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "/workspace/work/authored-scene/dotnet/dotnet",
+      "build",
+      "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/Forge/NorthStar.Forge.csproj",
+      "-c",
+      "Release"
+    ],
+    "exit_code": 0,
+    "stdout": "  Determining projects to restore...\n  All projects are up-to-date for restore.\n  NorthStar.Domain -> /workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/Domain/bin/Release/netstandard2.1/NorthStar.Domain.dll\n  NorthStar.Crossing -> /workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/Crossing/bin/Release/net10.0/NorthStar.Crossing.dll\n  NorthStar.Forge -> /workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/Forge/bin/Release/net10.0/NorthStar.Forge.dll\n  NorthStar.Crossing -> /workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/Crossing/bin/Release/netstandard2.1/NorthStar.Crossing.dll\n  NorthStar.Forge -> /workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/Forge/bin/Release/netstandard2.1/NorthStar.Forge.dll\n\nBuild succeeded.\n    0 Warning(s)\n    0 Error(s)\n\nTime Elapsed 00:00:02.29\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "/workspace/work/authored-scene/dotnet/dotnet",
+      "msbuild",
+      "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/Forge/NorthStar.Forge.csproj",
+      "-nologo",
+      "-getProperty:TargetFramework,TargetFrameworks,OutputType,LangVersion",
+      "-getItem:Compile,ProjectReference"
+    ],
+    "exit_code": 0,
+    "stdout": "{\n  \"Properties\": {\n    \"TargetFramework\": \"\",\n    \"TargetFrameworks\": \"net10.0;netstandard2.1\",\n    \"OutputType\": \"Library\",\n    \"LangVersion\": \"\"\n  },\n  \"Items\": {\n    \"Compile\": [],\n    \"ProjectReference\": [\n      {\n        \"Identity\": \"../Domain/NorthStar.Domain.csproj\",\n        \"FullPath\": \"/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/Domain/NorthStar.Domain.csproj\",\n        \"RootDir\": \"/\",\n        \"Filename\": \"NorthStar.Domain\",\n        \"Extension\": \".csproj\",\n        \"RelativeDir\": \"../Domain/\",\n        \"Directory\": \"workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/Domain/\",\n        \"RecursiveDir\": \"\",\n        \"ModifiedTime\": \"\",\n        \"CreatedTime\": \"\",\n        \"AccessedTime\": \"\",\n        \"DefiningProjectFullPath\": \"/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/Forge/NorthStar.Forge.csproj\",\n        \"DefiningProjectDirectory\": \"/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/Forge/\",\n        \"DefiningProjectName\": \"NorthStar.Forge\",\n        \"DefiningProjectExtension\": \".csproj\"\n      },\n      {\n        \"Identity\": \"../Crossing/NorthStar.Crossing.csproj\",\n        \"FullPath\": \"/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/Crossing/NorthStar.Crossing.csproj\",\n        \"RootDir\": \"/\",\n        \"Filename\": \"NorthStar.Crossing\",\n        \"Extension\": \".csproj\",\n        \"RelativeDir\": \"../Crossing/\",\n        \"Directory\": \"workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/Crossing/\",\n        \"RecursiveDir\": \"\",\n        \"ModifiedTime\": \"\",\n        \"CreatedTime\": \"\",\n        \"AccessedTime\": \"\",\n        \"DefiningProjectFullPath\": \"/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/Forge/NorthStar.Forge.csproj\",\n        \"DefiningProjectDirectory\": \"/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/Forge/\",\n        \"DefiningProjectName\": \"NorthStar.Forge\",\n        \"DefiningProjectExtension\": \".csproj\"\n      }\n    ]\n  }\n}\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "/workspace/work/authored-scene/dotnet/dotnet",
+      "msbuild",
+      "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/Forge/NorthStar.Forge.csproj",
+      "-nologo",
+      "-getProperty:TargetFramework,TargetFrameworks,OutputType,LangVersion",
+      "-getItem:Compile,ProjectReference",
+      "-p:TargetFramework=netstandard2.1"
+    ],
+    "exit_code": 0,
+    "stdout": "{\n  \"Properties\": {\n    \"TargetFramework\": \"netstandard2.1\",\n    \"TargetFrameworks\": \"net10.0;netstandard2.1\",\n    \"OutputType\": \"Library\",\n    \"LangVersion\": \"8.0\"\n  },\n  \"Items\": {\n    \"Compile\": [\n      {\n        \"Identity\": \"Expedition.cs\",\n        \"FullPath\": \"/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/Forge/Expedition.cs\",\n        \"RootDir\": \"/\",\n        \"Filename\": \"Expedition\",\n        \"Extension\": \".cs\",\n        \"RelativeDir\": \"\",\n        \"Directory\": \"workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/Forge/\",\n        \"RecursiveDir\": \"\",\n        \"ModifiedTime\": \"\",\n        \"CreatedTime\": \"\",\n        \"AccessedTime\": \"\",\n        \"DefiningProjectFullPath\": \"/workspace/work/authored-scene/dotnet/sdk/10.0.401/Sdks/Microsoft.NET.Sdk/targets/Microsoft.NET.Sdk.DefaultItems.props\",\n        \"DefiningProjectDirectory\": \"/workspace/work/authored-scene/dotnet/sdk/10.0.401/Sdks/Microsoft.NET.Sdk/targets/\",\n        \"DefiningProjectName\": \"Microsoft.NET.Sdk.DefaultItems\",\n        \"DefiningProjectExtension\": \".props\"\n      }\n    ],\n    \"ProjectReference\": [\n      {\n        \"Identity\": \"../Domain/NorthStar.Domain.csproj\",\n        \"Targets\": \"\",\n        \"OutputItemType\": \"\",\n        \"ReferenceSourceTarget\": \"ProjectReference\",\n        \"FullPath\": \"/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/Domain/NorthStar.Domain.csproj\",\n        \"RootDir\": \"/\",\n        \"Filename\": \"NorthStar.Domain\",\n        \"Extension\": \".csproj\",\n        \"RelativeDir\": \"../Domain/\",\n        \"Directory\": \"workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/Domain/\",\n        \"RecursiveDir\": \"\",\n        \"ModifiedTime\": \"\",\n        \"CreatedTime\": \"\",\n        \"AccessedTime\": \"\",\n        \"DefiningProjectFullPath\": \"/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/Forge/NorthStar.Forge.csproj\",\n        \"DefiningProjectDirectory\": \"/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/Forge/\",\n        \"DefiningProjectName\": \"NorthStar.Forge\",\n        \"DefiningProjectExtension\": \".csproj\"\n      },\n      {\n        \"Identity\": \"../Crossing/NorthStar.Crossing.csproj\",\n        \"Targets\": \"\",\n        \"OutputItemType\": \"\",\n        \"ReferenceSourceTarget\": \"ProjectReference\",\n        \"FullPath\": \"/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/Crossing/NorthStar.Crossing.csproj\",\n        \"RootDir\": \"/\",\n        \"Filename\": \"NorthStar.Crossing\",\n        \"Extension\": \".csproj\",\n        \"RelativeDir\": \"../Crossing/\",\n        \"Directory\": \"workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/Crossing/\",\n        \"RecursiveDir\": \"\",\n        \"ModifiedTime\": \"\",\n        \"CreatedTime\": \"\",\n        \"AccessedTime\": \"\",\n        \"DefiningProjectFullPath\": \"/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/Forge/NorthStar.Forge.csproj\",\n        \"DefiningProjectDirectory\": \"/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/Forge/\",\n        \"DefiningProjectName\": \"NorthStar.Forge\",\n        \"DefiningProjectExtension\": \".csproj\"\n      }\n    ]\n  }\n}\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "/workspace/work/authored-scene/dotnet/dotnet",
+      "msbuild",
+      "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/Domain/NorthStar.Domain.csproj",
+      "-nologo",
+      "-getProperty:TargetFramework,TargetFrameworks,OutputType,LangVersion",
+      "-getItem:Compile,ProjectReference"
+    ],
+    "exit_code": 0,
+    "stdout": "{\n  \"Properties\": {\n    \"TargetFramework\": \"netstandard2.1\",\n    \"TargetFrameworks\": \"\",\n    \"OutputType\": \"Library\",\n    \"LangVersion\": \"8.0\"\n  },\n  \"Items\": {\n    \"Compile\": [\n      {\n        \"Identity\": \"Crafting.cs\",\n        \"FullPath\": \"/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/Domain/Crafting.cs\",\n        \"RootDir\": \"/\",\n        \"Filename\": \"Crafting\",\n        \"Extension\": \".cs\",\n        \"RelativeDir\": \"\",\n        \"Directory\": \"workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/Domain/\",\n        \"RecursiveDir\": \"\",\n        \"ModifiedTime\": \"\",\n        \"CreatedTime\": \"\",\n        \"AccessedTime\": \"\",\n        \"DefiningProjectFullPath\": \"/workspace/work/authored-scene/dotnet/sdk/10.0.401/Sdks/Microsoft.NET.Sdk/targets/Microsoft.NET.Sdk.DefaultItems.props\",\n        \"DefiningProjectDirectory\": \"/workspace/work/authored-scene/dotnet/sdk/10.0.401/Sdks/Microsoft.NET.Sdk/targets/\",\n        \"DefiningProjectName\": \"Microsoft.NET.Sdk.DefaultItems\",\n        \"DefiningProjectExtension\": \".props\"\n      },\n      {\n        \"Identity\": \"Loadout.cs\",\n        \"FullPath\": \"/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/Domain/Loadout.cs\",\n        \"RootDir\": \"/\",\n        \"Filename\": \"Loadout\",\n        \"Extension\": \".cs\",\n        \"RelativeDir\": \"\",\n        \"Directory\": \"workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/Domain/\",\n        \"RecursiveDir\": \"\",\n        \"ModifiedTime\": \"\",\n        \"CreatedTime\": \"\",\n        \"AccessedTime\": \"\",\n        \"DefiningProjectFullPath\": \"/workspace/work/authored-scene/dotnet/sdk/10.0.401/Sdks/Microsoft.NET.Sdk/targets/Microsoft.NET.Sdk.DefaultItems.props\",\n        \"DefiningProjectDirectory\": \"/workspace/work/authored-scene/dotnet/sdk/10.0.401/Sdks/Microsoft.NET.Sdk/targets/\",\n        \"DefiningProjectName\": \"Microsoft.NET.Sdk.DefaultItems\",\n        \"DefiningProjectExtension\": \".props\"\n      },\n      {\n        \"Identity\": \"Progression.cs\",\n        \"FullPath\": \"/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/Domain/Progression.cs\",\n        \"RootDir\": \"/\",\n        \"Filename\": \"Progression\",\n        \"Extension\": \".cs\",\n        \"RelativeDir\": \"\",\n        \"Directory\": \"workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/Domain/\",\n        \"RecursiveDir\": \"\",\n        \"ModifiedTime\": \"\",\n        \"CreatedTime\": \"\",\n        \"AccessedTime\": \"\",\n        \"DefiningProjectFullPath\": \"/workspace/work/authored-scene/dotnet/sdk/10.0.401/Sdks/Microsoft.NET.Sdk/targets/Microsoft.NET.Sdk.DefaultItems.props\",\n        \"DefiningProjectDirectory\": \"/workspace/work/authored-scene/dotnet/sdk/10.0.401/Sdks/Microsoft.NET.Sdk/targets/\",\n        \"DefiningProjectName\": \"Microsoft.NET.Sdk.DefaultItems\",\n        \"DefiningProjectExtension\": \".props\"\n      }\n    ],\n    \"ProjectReference\": []\n  }\n}\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "/workspace/work/authored-scene/dotnet/dotnet",
+      "msbuild",
+      "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/Domain/NorthStar.Domain.csproj",
+      "-nologo",
+      "-getProperty:TargetFramework,TargetFrameworks,OutputType,LangVersion",
+      "-getItem:Compile,ProjectReference",
+      "-p:TargetFramework=netstandard2.1"
+    ],
+    "exit_code": 0,
+    "stdout": "{\n  \"Properties\": {\n    \"TargetFramework\": \"netstandard2.1\",\n    \"TargetFrameworks\": \"\",\n    \"OutputType\": \"Library\",\n    \"LangVersion\": \"8.0\"\n  },\n  \"Items\": {\n    \"Compile\": [\n      {\n        \"Identity\": \"Crafting.cs\",\n        \"FullPath\": \"/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/Domain/Crafting.cs\",\n        \"RootDir\": \"/\",\n        \"Filename\": \"Crafting\",\n        \"Extension\": \".cs\",\n        \"RelativeDir\": \"\",\n        \"Directory\": \"workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/Domain/\",\n        \"RecursiveDir\": \"\",\n        \"ModifiedTime\": \"\",\n        \"CreatedTime\": \"\",\n        \"AccessedTime\": \"\",\n        \"DefiningProjectFullPath\": \"/workspace/work/authored-scene/dotnet/sdk/10.0.401/Sdks/Microsoft.NET.Sdk/targets/Microsoft.NET.Sdk.DefaultItems.props\",\n        \"DefiningProjectDirectory\": \"/workspace/work/authored-scene/dotnet/sdk/10.0.401/Sdks/Microsoft.NET.Sdk/targets/\",\n        \"DefiningProjectName\": \"Microsoft.NET.Sdk.DefaultItems\",\n        \"DefiningProjectExtension\": \".props\"\n      },\n      {\n        \"Identity\": \"Loadout.cs\",\n        \"FullPath\": \"/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/Domain/Loadout.cs\",\n        \"RootDir\": \"/\",\n        \"Filename\": \"Loadout\",\n        \"Extension\": \".cs\",\n        \"RelativeDir\": \"\",\n        \"Directory\": \"workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/Domain/\",\n        \"RecursiveDir\": \"\",\n        \"ModifiedTime\": \"\",\n        \"CreatedTime\": \"\",\n        \"AccessedTime\": \"\",\n        \"DefiningProjectFullPath\": \"/workspace/work/authored-scene/dotnet/sdk/10.0.401/Sdks/Microsoft.NET.Sdk/targets/Microsoft.NET.Sdk.DefaultItems.props\",\n        \"DefiningProjectDirectory\": \"/workspace/work/authored-scene/dotnet/sdk/10.0.401/Sdks/Microsoft.NET.Sdk/targets/\",\n        \"DefiningProjectName\": \"Microsoft.NET.Sdk.DefaultItems\",\n        \"DefiningProjectExtension\": \".props\"\n      },\n      {\n        \"Identity\": \"Progression.cs\",\n        \"FullPath\": \"/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/Domain/Progression.cs\",\n        \"RootDir\": \"/\",\n        \"Filename\": \"Progression\",\n        \"Extension\": \".cs\",\n        \"RelativeDir\": \"\",\n        \"Directory\": \"workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/Domain/\",\n        \"RecursiveDir\": \"\",\n        \"ModifiedTime\": \"\",\n        \"CreatedTime\": \"\",\n        \"AccessedTime\": \"\",\n        \"DefiningProjectFullPath\": \"/workspace/work/authored-scene/dotnet/sdk/10.0.401/Sdks/Microsoft.NET.Sdk/targets/Microsoft.NET.Sdk.DefaultItems.props\",\n        \"DefiningProjectDirectory\": \"/workspace/work/authored-scene/dotnet/sdk/10.0.401/Sdks/Microsoft.NET.Sdk/targets/\",\n        \"DefiningProjectName\": \"Microsoft.NET.Sdk.DefaultItems\",\n        \"DefiningProjectExtension\": \".props\"\n      }\n    ],\n    \"ProjectReference\": []\n  }\n}\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "/workspace/work/authored-scene/dotnet/dotnet",
+      "msbuild",
+      "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/Crossing/NorthStar.Crossing.csproj",
+      "-nologo",
+      "-getProperty:TargetFramework,TargetFrameworks,OutputType,LangVersion",
+      "-getItem:Compile,ProjectReference"
+    ],
+    "exit_code": 0,
+    "stdout": "{\n  \"Properties\": {\n    \"TargetFramework\": \"\",\n    \"TargetFrameworks\": \"net10.0;netstandard2.1\",\n    \"OutputType\": \"Library\",\n    \"LangVersion\": \"\"\n  },\n  \"Items\": {\n    \"Compile\": [],\n    \"ProjectReference\": [\n      {\n        \"Identity\": \"../Domain/NorthStar.Domain.csproj\",\n        \"FullPath\": \"/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/Domain/NorthStar.Domain.csproj\",\n        \"RootDir\": \"/\",\n        \"Filename\": \"NorthStar.Domain\",\n        \"Extension\": \".csproj\",\n        \"RelativeDir\": \"../Domain/\",\n        \"Directory\": \"workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/Domain/\",\n        \"RecursiveDir\": \"\",\n        \"ModifiedTime\": \"\",\n        \"CreatedTime\": \"\",\n        \"AccessedTime\": \"\",\n        \"DefiningProjectFullPath\": \"/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/Crossing/NorthStar.Crossing.csproj\",\n        \"DefiningProjectDirectory\": \"/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/Crossing/\",\n        \"DefiningProjectName\": \"NorthStar.Crossing\",\n        \"DefiningProjectExtension\": \".csproj\"\n      }\n    ]\n  }\n}\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "/workspace/work/authored-scene/dotnet/dotnet",
+      "msbuild",
+      "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/Crossing/NorthStar.Crossing.csproj",
+      "-nologo",
+      "-getProperty:TargetFramework,TargetFrameworks,OutputType,LangVersion",
+      "-getItem:Compile,ProjectReference",
+      "-p:TargetFramework=netstandard2.1"
+    ],
+    "exit_code": 0,
+    "stdout": "{\n  \"Properties\": {\n    \"TargetFramework\": \"netstandard2.1\",\n    \"TargetFrameworks\": \"net10.0;netstandard2.1\",\n    \"OutputType\": \"Library\",\n    \"LangVersion\": \"8.0\"\n  },\n  \"Items\": {\n    \"Compile\": [\n      {\n        \"Identity\": \"Session.cs\",\n        \"FullPath\": \"/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/Crossing/Session.cs\",\n        \"RootDir\": \"/\",\n        \"Filename\": \"Session\",\n        \"Extension\": \".cs\",\n        \"RelativeDir\": \"\",\n        \"Directory\": \"workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/Crossing/\",\n        \"RecursiveDir\": \"\",\n        \"ModifiedTime\": \"\",\n        \"CreatedTime\": \"\",\n        \"AccessedTime\": \"\",\n        \"DefiningProjectFullPath\": \"/workspace/work/authored-scene/dotnet/sdk/10.0.401/Sdks/Microsoft.NET.Sdk/targets/Microsoft.NET.Sdk.DefaultItems.props\",\n        \"DefiningProjectDirectory\": \"/workspace/work/authored-scene/dotnet/sdk/10.0.401/Sdks/Microsoft.NET.Sdk/targets/\",\n        \"DefiningProjectName\": \"Microsoft.NET.Sdk.DefaultItems\",\n        \"DefiningProjectExtension\": \".props\"\n      }\n    ],\n    \"ProjectReference\": [\n      {\n        \"Identity\": \"../Domain/NorthStar.Domain.csproj\",\n        \"Targets\": \"\",\n        \"OutputItemType\": \"\",\n        \"ReferenceSourceTarget\": \"ProjectReference\",\n        \"FullPath\": \"/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/Domain/NorthStar.Domain.csproj\",\n        \"RootDir\": \"/\",\n        \"Filename\": \"NorthStar.Domain\",\n        \"Extension\": \".csproj\",\n        \"RelativeDir\": \"../Domain/\",\n        \"Directory\": \"workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/Domain/\",\n        \"RecursiveDir\": \"\",\n        \"ModifiedTime\": \"\",\n        \"CreatedTime\": \"\",\n        \"AccessedTime\": \"\",\n        \"DefiningProjectFullPath\": \"/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/Crossing/NorthStar.Crossing.csproj\",\n        \"DefiningProjectDirectory\": \"/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/Crossing/\",\n        \"DefiningProjectName\": \"NorthStar.Crossing\",\n        \"DefiningProjectExtension\": \".csproj\"\n      }\n    ]\n  }\n}\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "/workspace/work/authored-scene/dotnet/dotnet",
+      "build",
+      "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/Loadout/NorthStar.Loadout.csproj",
+      "-c",
+      "Release"
+    ],
+    "exit_code": 0,
+    "stdout": "  Determining projects to restore...\n  All projects are up-to-date for restore.\n  NorthStar.Domain -> /workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/Domain/bin/Release/netstandard2.1/NorthStar.Domain.dll\n  NorthStar.Crossing -> /workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/Crossing/bin/Release/netstandard2.1/NorthStar.Crossing.dll\n  NorthStar.Forge -> /workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/Forge/bin/Release/netstandard2.1/NorthStar.Forge.dll\n  NorthStar.Loadout -> /workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/Loadout/bin/Release/netstandard2.1/NorthStar.Loadout.dll\n  NorthStar.Crossing -> /workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/Crossing/bin/Release/net10.0/NorthStar.Crossing.dll\n  NorthStar.Forge -> /workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/Forge/bin/Release/net10.0/NorthStar.Forge.dll\n  NorthStar.Loadout -> /workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/Loadout/bin/Release/net10.0/NorthStar.Loadout.dll\n\nBuild succeeded.\n    0 Warning(s)\n    0 Error(s)\n\nTime Elapsed 00:00:03.41\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "/workspace/work/authored-scene/dotnet/dotnet",
+      "msbuild",
+      "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/Loadout/NorthStar.Loadout.csproj",
+      "-nologo",
+      "-getProperty:TargetFramework,TargetFrameworks,OutputType,LangVersion",
+      "-getItem:Compile,ProjectReference"
+    ],
+    "exit_code": 0,
+    "stdout": "{\n  \"Properties\": {\n    \"TargetFramework\": \"\",\n    \"TargetFrameworks\": \"net10.0;netstandard2.1\",\n    \"OutputType\": \"Library\",\n    \"LangVersion\": \"\"\n  },\n  \"Items\": {\n    \"Compile\": [],\n    \"ProjectReference\": [\n      {\n        \"Identity\": \"../Domain/NorthStar.Domain.csproj\",\n        \"FullPath\": \"/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/Domain/NorthStar.Domain.csproj\",\n        \"RootDir\": \"/\",\n        \"Filename\": \"NorthStar.Domain\",\n        \"Extension\": \".csproj\",\n        \"RelativeDir\": \"../Domain/\",\n        \"Directory\": \"workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/Domain/\",\n        \"RecursiveDir\": \"\",\n        \"ModifiedTime\": \"\",\n        \"CreatedTime\": \"\",\n        \"AccessedTime\": \"\",\n        \"DefiningProjectFullPath\": \"/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/Loadout/NorthStar.Loadout.csproj\",\n        \"DefiningProjectDirectory\": \"/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/Loadout/\",\n        \"DefiningProjectName\": \"NorthStar.Loadout\",\n        \"DefiningProjectExtension\": \".csproj\"\n      },\n      {\n        \"Identity\": \"../Forge/NorthStar.Forge.csproj\",\n        \"FullPath\": \"/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/Forge/NorthStar.Forge.csproj\",\n        \"RootDir\": \"/\",\n        \"Filename\": \"NorthStar.Forge\",\n        \"Extension\": \".csproj\",\n        \"RelativeDir\": \"../Forge/\",\n        \"Directory\": \"workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/Forge/\",\n        \"RecursiveDir\": \"\",\n        \"ModifiedTime\": \"\",\n        \"CreatedTime\": \"\",\n        \"AccessedTime\": \"\",\n        \"DefiningProjectFullPath\": \"/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/Loadout/NorthStar.Loadout.csproj\",\n        \"DefiningProjectDirectory\": \"/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/Loadout/\",\n        \"DefiningProjectName\": \"NorthStar.Loadout\",\n        \"DefiningProjectExtension\": \".csproj\"\n      }\n    ]\n  }\n}\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "/workspace/work/authored-scene/dotnet/dotnet",
+      "msbuild",
+      "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/Loadout/NorthStar.Loadout.csproj",
+      "-nologo",
+      "-getProperty:TargetFramework,TargetFrameworks,OutputType,LangVersion",
+      "-getItem:Compile,ProjectReference",
+      "-p:TargetFramework=netstandard2.1"
+    ],
+    "exit_code": 0,
+    "stdout": "{\n  \"Properties\": {\n    \"TargetFramework\": \"netstandard2.1\",\n    \"TargetFrameworks\": \"net10.0;netstandard2.1\",\n    \"OutputType\": \"Library\",\n    \"LangVersion\": \"8.0\"\n  },\n  \"Items\": {\n    \"Compile\": [\n      {\n        \"Identity\": \"PreparedExpedition.cs\",\n        \"FullPath\": \"/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/Loadout/PreparedExpedition.cs\",\n        \"RootDir\": \"/\",\n        \"Filename\": \"PreparedExpedition\",\n        \"Extension\": \".cs\",\n        \"RelativeDir\": \"\",\n        \"Directory\": \"workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/Loadout/\",\n        \"RecursiveDir\": \"\",\n        \"ModifiedTime\": \"\",\n        \"CreatedTime\": \"\",\n        \"AccessedTime\": \"\",\n        \"DefiningProjectFullPath\": \"/workspace/work/authored-scene/dotnet/sdk/10.0.401/Sdks/Microsoft.NET.Sdk/targets/Microsoft.NET.Sdk.DefaultItems.props\",\n        \"DefiningProjectDirectory\": \"/workspace/work/authored-scene/dotnet/sdk/10.0.401/Sdks/Microsoft.NET.Sdk/targets/\",\n        \"DefiningProjectName\": \"Microsoft.NET.Sdk.DefaultItems\",\n        \"DefiningProjectExtension\": \".props\"\n      }\n    ],\n    \"ProjectReference\": [\n      {\n        \"Identity\": \"../Domain/NorthStar.Domain.csproj\",\n        \"Targets\": \"\",\n        \"OutputItemType\": \"\",\n        \"ReferenceSourceTarget\": \"ProjectReference\",\n        \"FullPath\": \"/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/Domain/NorthStar.Domain.csproj\",\n        \"RootDir\": \"/\",\n        \"Filename\": \"NorthStar.Domain\",\n        \"Extension\": \".csproj\",\n        \"RelativeDir\": \"../Domain/\",\n        \"Directory\": \"workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/Domain/\",\n        \"RecursiveDir\": \"\",\n        \"ModifiedTime\": \"\",\n        \"CreatedTime\": \"\",\n        \"AccessedTime\": \"\",\n        \"DefiningProjectFullPath\": \"/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/Loadout/NorthStar.Loadout.csproj\",\n        \"DefiningProjectDirectory\": \"/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/Loadout/\",\n        \"DefiningProjectName\": \"NorthStar.Loadout\",\n        \"DefiningProjectExtension\": \".csproj\"\n      },\n      {\n        \"Identity\": \"../Forge/NorthStar.Forge.csproj\",\n        \"Targets\": \"\",\n        \"OutputItemType\": \"\",\n        \"ReferenceSourceTarget\": \"ProjectReference\",\n        \"FullPath\": \"/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/Forge/NorthStar.Forge.csproj\",\n        \"RootDir\": \"/\",\n        \"Filename\": \"NorthStar.Forge\",\n        \"Extension\": \".csproj\",\n        \"RelativeDir\": \"../Forge/\",\n        \"Directory\": \"workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/Forge/\",\n        \"RecursiveDir\": \"\",\n        \"ModifiedTime\": \"\",\n        \"CreatedTime\": \"\",\n        \"AccessedTime\": \"\",\n        \"DefiningProjectFullPath\": \"/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/Loadout/NorthStar.Loadout.csproj\",\n        \"DefiningProjectDirectory\": \"/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/Loadout/\",\n        \"DefiningProjectName\": \"NorthStar.Loadout\",\n        \"DefiningProjectExtension\": \".csproj\"\n      }\n    ]\n  }\n}\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "/workspace/work/authored-scene/dotnet/dotnet",
+      "msbuild",
+      "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/Domain/NorthStar.Domain.csproj",
+      "-nologo",
+      "-getProperty:TargetFramework,TargetFrameworks,OutputType,LangVersion",
+      "-getItem:Compile,ProjectReference"
+    ],
+    "exit_code": 0,
+    "stdout": "{\n  \"Properties\": {\n    \"TargetFramework\": \"netstandard2.1\",\n    \"TargetFrameworks\": \"\",\n    \"OutputType\": \"Library\",\n    \"LangVersion\": \"8.0\"\n  },\n  \"Items\": {\n    \"Compile\": [\n      {\n        \"Identity\": \"Crafting.cs\",\n        \"FullPath\": \"/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/Domain/Crafting.cs\",\n        \"RootDir\": \"/\",\n        \"Filename\": \"Crafting\",\n        \"Extension\": \".cs\",\n        \"RelativeDir\": \"\",\n        \"Directory\": \"workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/Domain/\",\n        \"RecursiveDir\": \"\",\n        \"ModifiedTime\": \"\",\n        \"CreatedTime\": \"\",\n        \"AccessedTime\": \"\",\n        \"DefiningProjectFullPath\": \"/workspace/work/authored-scene/dotnet/sdk/10.0.401/Sdks/Microsoft.NET.Sdk/targets/Microsoft.NET.Sdk.DefaultItems.props\",\n        \"DefiningProjectDirectory\": \"/workspace/work/authored-scene/dotnet/sdk/10.0.401/Sdks/Microsoft.NET.Sdk/targets/\",\n        \"DefiningProjectName\": \"Microsoft.NET.Sdk.DefaultItems\",\n        \"DefiningProjectExtension\": \".props\"\n      },\n      {\n        \"Identity\": \"Loadout.cs\",\n        \"FullPath\": \"/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/Domain/Loadout.cs\",\n        \"RootDir\": \"/\",\n        \"Filename\": \"Loadout\",\n        \"Extension\": \".cs\",\n        \"RelativeDir\": \"\",\n        \"Directory\": \"workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/Domain/\",\n        \"RecursiveDir\": \"\",\n        \"ModifiedTime\": \"\",\n        \"CreatedTime\": \"\",\n        \"AccessedTime\": \"\",\n        \"DefiningProjectFullPath\": \"/workspace/work/authored-scene/dotnet/sdk/10.0.401/Sdks/Microsoft.NET.Sdk/targets/Microsoft.NET.Sdk.DefaultItems.props\",\n        \"DefiningProjectDirectory\": \"/workspace/work/authored-scene/dotnet/sdk/10.0.401/Sdks/Microsoft.NET.Sdk/targets/\",\n        \"DefiningProjectName\": \"Microsoft.NET.Sdk.DefaultItems\",\n        \"DefiningProjectExtension\": \".props\"\n      },\n      {\n        \"Identity\": \"Progression.cs\",\n        \"FullPath\": \"/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/Domain/Progression.cs\",\n        \"RootDir\": \"/\",\n        \"Filename\": \"Progression\",\n        \"Extension\": \".cs\",\n        \"RelativeDir\": \"\",\n        \"Directory\": \"workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/Domain/\",\n        \"RecursiveDir\": \"\",\n        \"ModifiedTime\": \"\",\n        \"CreatedTime\": \"\",\n        \"AccessedTime\": \"\",\n        \"DefiningProjectFullPath\": \"/workspace/work/authored-scene/dotnet/sdk/10.0.401/Sdks/Microsoft.NET.Sdk/targets/Microsoft.NET.Sdk.DefaultItems.props\",\n        \"DefiningProjectDirectory\": \"/workspace/work/authored-scene/dotnet/sdk/10.0.401/Sdks/Microsoft.NET.Sdk/targets/\",\n        \"DefiningProjectName\": \"Microsoft.NET.Sdk.DefaultItems\",\n        \"DefiningProjectExtension\": \".props\"\n      }\n    ],\n    \"ProjectReference\": []\n  }\n}\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "/workspace/work/authored-scene/dotnet/dotnet",
+      "msbuild",
+      "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/Domain/NorthStar.Domain.csproj",
+      "-nologo",
+      "-getProperty:TargetFramework,TargetFrameworks,OutputType,LangVersion",
+      "-getItem:Compile,ProjectReference",
+      "-p:TargetFramework=netstandard2.1"
+    ],
+    "exit_code": 0,
+    "stdout": "{\n  \"Properties\": {\n    \"TargetFramework\": \"netstandard2.1\",\n    \"TargetFrameworks\": \"\",\n    \"OutputType\": \"Library\",\n    \"LangVersion\": \"8.0\"\n  },\n  \"Items\": {\n    \"Compile\": [\n      {\n        \"Identity\": \"Crafting.cs\",\n        \"FullPath\": \"/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/Domain/Crafting.cs\",\n        \"RootDir\": \"/\",\n        \"Filename\": \"Crafting\",\n        \"Extension\": \".cs\",\n        \"RelativeDir\": \"\",\n        \"Directory\": \"workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/Domain/\",\n        \"RecursiveDir\": \"\",\n        \"ModifiedTime\": \"\",\n        \"CreatedTime\": \"\",\n        \"AccessedTime\": \"\",\n        \"DefiningProjectFullPath\": \"/workspace/work/authored-scene/dotnet/sdk/10.0.401/Sdks/Microsoft.NET.Sdk/targets/Microsoft.NET.Sdk.DefaultItems.props\",\n        \"DefiningProjectDirectory\": \"/workspace/work/authored-scene/dotnet/sdk/10.0.401/Sdks/Microsoft.NET.Sdk/targets/\",\n        \"DefiningProjectName\": \"Microsoft.NET.Sdk.DefaultItems\",\n        \"DefiningProjectExtension\": \".props\"\n      },\n      {\n        \"Identity\": \"Loadout.cs\",\n        \"FullPath\": \"/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/Domain/Loadout.cs\",\n        \"RootDir\": \"/\",\n        \"Filename\": \"Loadout\",\n        \"Extension\": \".cs\",\n        \"RelativeDir\": \"\",\n        \"Directory\": \"workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/Domain/\",\n        \"RecursiveDir\": \"\",\n        \"ModifiedTime\": \"\",\n        \"CreatedTime\": \"\",\n        \"AccessedTime\": \"\",\n        \"DefiningProjectFullPath\": \"/workspace/work/authored-scene/dotnet/sdk/10.0.401/Sdks/Microsoft.NET.Sdk/targets/Microsoft.NET.Sdk.DefaultItems.props\",\n        \"DefiningProjectDirectory\": \"/workspace/work/authored-scene/dotnet/sdk/10.0.401/Sdks/Microsoft.NET.Sdk/targets/\",\n        \"DefiningProjectName\": \"Microsoft.NET.Sdk.DefaultItems\",\n        \"DefiningProjectExtension\": \".props\"\n      },\n      {\n        \"Identity\": \"Progression.cs\",\n        \"FullPath\": \"/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/Domain/Progression.cs\",\n        \"RootDir\": \"/\",\n        \"Filename\": \"Progression\",\n        \"Extension\": \".cs\",\n        \"RelativeDir\": \"\",\n        \"Directory\": \"workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/Domain/\",\n        \"RecursiveDir\": \"\",\n        \"ModifiedTime\": \"\",\n        \"CreatedTime\": \"\",\n        \"AccessedTime\": \"\",\n        \"DefiningProjectFullPath\": \"/workspace/work/authored-scene/dotnet/sdk/10.0.401/Sdks/Microsoft.NET.Sdk/targets/Microsoft.NET.Sdk.DefaultItems.props\",\n        \"DefiningProjectDirectory\": \"/workspace/work/authored-scene/dotnet/sdk/10.0.401/Sdks/Microsoft.NET.Sdk/targets/\",\n        \"DefiningProjectName\": \"Microsoft.NET.Sdk.DefaultItems\",\n        \"DefiningProjectExtension\": \".props\"\n      }\n    ],\n    \"ProjectReference\": []\n  }\n}\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "/workspace/work/authored-scene/dotnet/dotnet",
+      "msbuild",
+      "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/Forge/NorthStar.Forge.csproj",
+      "-nologo",
+      "-getProperty:TargetFramework,TargetFrameworks,OutputType,LangVersion",
+      "-getItem:Compile,ProjectReference"
+    ],
+    "exit_code": 0,
+    "stdout": "{\n  \"Properties\": {\n    \"TargetFramework\": \"\",\n    \"TargetFrameworks\": \"net10.0;netstandard2.1\",\n    \"OutputType\": \"Library\",\n    \"LangVersion\": \"\"\n  },\n  \"Items\": {\n    \"Compile\": [],\n    \"ProjectReference\": [\n      {\n        \"Identity\": \"../Domain/NorthStar.Domain.csproj\",\n        \"FullPath\": \"/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/Domain/NorthStar.Domain.csproj\",\n        \"RootDir\": \"/\",\n        \"Filename\": \"NorthStar.Domain\",\n        \"Extension\": \".csproj\",\n        \"RelativeDir\": \"../Domain/\",\n        \"Directory\": \"workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/Domain/\",\n        \"RecursiveDir\": \"\",\n        \"ModifiedTime\": \"\",\n        \"CreatedTime\": \"\",\n        \"AccessedTime\": \"\",\n        \"DefiningProjectFullPath\": \"/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/Forge/NorthStar.Forge.csproj\",\n        \"DefiningProjectDirectory\": \"/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/Forge/\",\n        \"DefiningProjectName\": \"NorthStar.Forge\",\n        \"DefiningProjectExtension\": \".csproj\"\n      },\n      {\n        \"Identity\": \"../Crossing/NorthStar.Crossing.csproj\",\n        \"FullPath\": \"/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/Crossing/NorthStar.Crossing.csproj\",\n        \"RootDir\": \"/\",\n        \"Filename\": \"NorthStar.Crossing\",\n        \"Extension\": \".csproj\",\n        \"RelativeDir\": \"../Crossing/\",\n        \"Directory\": \"workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/Crossing/\",\n        \"RecursiveDir\": \"\",\n        \"ModifiedTime\": \"\",\n        \"CreatedTime\": \"\",\n        \"AccessedTime\": \"\",\n        \"DefiningProjectFullPath\": \"/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/Forge/NorthStar.Forge.csproj\",\n        \"DefiningProjectDirectory\": \"/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/Forge/\",\n        \"DefiningProjectName\": \"NorthStar.Forge\",\n        \"DefiningProjectExtension\": \".csproj\"\n      }\n    ]\n  }\n}\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "/workspace/work/authored-scene/dotnet/dotnet",
+      "msbuild",
+      "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/Forge/NorthStar.Forge.csproj",
+      "-nologo",
+      "-getProperty:TargetFramework,TargetFrameworks,OutputType,LangVersion",
+      "-getItem:Compile,ProjectReference",
+      "-p:TargetFramework=netstandard2.1"
+    ],
+    "exit_code": 0,
+    "stdout": "{\n  \"Properties\": {\n    \"TargetFramework\": \"netstandard2.1\",\n    \"TargetFrameworks\": \"net10.0;netstandard2.1\",\n    \"OutputType\": \"Library\",\n    \"LangVersion\": \"8.0\"\n  },\n  \"Items\": {\n    \"Compile\": [\n      {\n        \"Identity\": \"Expedition.cs\",\n        \"FullPath\": \"/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/Forge/Expedition.cs\",\n        \"RootDir\": \"/\",\n        \"Filename\": \"Expedition\",\n        \"Extension\": \".cs\",\n        \"RelativeDir\": \"\",\n        \"Directory\": \"workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/Forge/\",\n        \"RecursiveDir\": \"\",\n        \"ModifiedTime\": \"\",\n        \"CreatedTime\": \"\",\n        \"AccessedTime\": \"\",\n        \"DefiningProjectFullPath\": \"/workspace/work/authored-scene/dotnet/sdk/10.0.401/Sdks/Microsoft.NET.Sdk/targets/Microsoft.NET.Sdk.DefaultItems.props\",\n        \"DefiningProjectDirectory\": \"/workspace/work/authored-scene/dotnet/sdk/10.0.401/Sdks/Microsoft.NET.Sdk/targets/\",\n        \"DefiningProjectName\": \"Microsoft.NET.Sdk.DefaultItems\",\n        \"DefiningProjectExtension\": \".props\"\n      }\n    ],\n    \"ProjectReference\": [\n      {\n        \"Identity\": \"../Domain/NorthStar.Domain.csproj\",\n        \"Targets\": \"\",\n        \"OutputItemType\": \"\",\n        \"ReferenceSourceTarget\": \"ProjectReference\",\n        \"FullPath\": \"/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/Domain/NorthStar.Domain.csproj\",\n        \"RootDir\": \"/\",\n        \"Filename\": \"NorthStar.Domain\",\n        \"Extension\": \".csproj\",\n        \"RelativeDir\": \"../Domain/\",\n        \"Directory\": \"workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/Domain/\",\n        \"RecursiveDir\": \"\",\n        \"ModifiedTime\": \"\",\n        \"CreatedTime\": \"\",\n        \"AccessedTime\": \"\",\n        \"DefiningProjectFullPath\": \"/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/Forge/NorthStar.Forge.csproj\",\n        \"DefiningProjectDirectory\": \"/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/Forge/\",\n        \"DefiningProjectName\": \"NorthStar.Forge\",\n        \"DefiningProjectExtension\": \".csproj\"\n      },\n      {\n        \"Identity\": \"../Crossing/NorthStar.Crossing.csproj\",\n        \"Targets\": \"\",\n        \"OutputItemType\": \"\",\n        \"ReferenceSourceTarget\": \"ProjectReference\",\n        \"FullPath\": \"/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/Crossing/NorthStar.Crossing.csproj\",\n        \"RootDir\": \"/\",\n        \"Filename\": \"NorthStar.Crossing\",\n        \"Extension\": \".csproj\",\n        \"RelativeDir\": \"../Crossing/\",\n        \"Directory\": \"workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/Crossing/\",\n        \"RecursiveDir\": \"\",\n        \"ModifiedTime\": \"\",\n        \"CreatedTime\": \"\",\n        \"AccessedTime\": \"\",\n        \"DefiningProjectFullPath\": \"/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/Forge/NorthStar.Forge.csproj\",\n        \"DefiningProjectDirectory\": \"/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/Forge/\",\n        \"DefiningProjectName\": \"NorthStar.Forge\",\n        \"DefiningProjectExtension\": \".csproj\"\n      }\n    ]\n  }\n}\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "/workspace/work/authored-scene/dotnet/dotnet",
+      "msbuild",
+      "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/Crossing/NorthStar.Crossing.csproj",
+      "-nologo",
+      "-getProperty:TargetFramework,TargetFrameworks,OutputType,LangVersion",
+      "-getItem:Compile,ProjectReference"
+    ],
+    "exit_code": 0,
+    "stdout": "{\n  \"Properties\": {\n    \"TargetFramework\": \"\",\n    \"TargetFrameworks\": \"net10.0;netstandard2.1\",\n    \"OutputType\": \"Library\",\n    \"LangVersion\": \"\"\n  },\n  \"Items\": {\n    \"Compile\": [],\n    \"ProjectReference\": [\n      {\n        \"Identity\": \"../Domain/NorthStar.Domain.csproj\",\n        \"FullPath\": \"/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/Domain/NorthStar.Domain.csproj\",\n        \"RootDir\": \"/\",\n        \"Filename\": \"NorthStar.Domain\",\n        \"Extension\": \".csproj\",\n        \"RelativeDir\": \"../Domain/\",\n        \"Directory\": \"workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/Domain/\",\n        \"RecursiveDir\": \"\",\n        \"ModifiedTime\": \"\",\n        \"CreatedTime\": \"\",\n        \"AccessedTime\": \"\",\n        \"DefiningProjectFullPath\": \"/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/Crossing/NorthStar.Crossing.csproj\",\n        \"DefiningProjectDirectory\": \"/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/Crossing/\",\n        \"DefiningProjectName\": \"NorthStar.Crossing\",\n        \"DefiningProjectExtension\": \".csproj\"\n      }\n    ]\n  }\n}\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "/workspace/work/authored-scene/dotnet/dotnet",
+      "msbuild",
+      "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/Crossing/NorthStar.Crossing.csproj",
+      "-nologo",
+      "-getProperty:TargetFramework,TargetFrameworks,OutputType,LangVersion",
+      "-getItem:Compile,ProjectReference",
+      "-p:TargetFramework=netstandard2.1"
+    ],
+    "exit_code": 0,
+    "stdout": "{\n  \"Properties\": {\n    \"TargetFramework\": \"netstandard2.1\",\n    \"TargetFrameworks\": \"net10.0;netstandard2.1\",\n    \"OutputType\": \"Library\",\n    \"LangVersion\": \"8.0\"\n  },\n  \"Items\": {\n    \"Compile\": [\n      {\n        \"Identity\": \"Session.cs\",\n        \"FullPath\": \"/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/Crossing/Session.cs\",\n        \"RootDir\": \"/\",\n        \"Filename\": \"Session\",\n        \"Extension\": \".cs\",\n        \"RelativeDir\": \"\",\n        \"Directory\": \"workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/Crossing/\",\n        \"RecursiveDir\": \"\",\n        \"ModifiedTime\": \"\",\n        \"CreatedTime\": \"\",\n        \"AccessedTime\": \"\",\n        \"DefiningProjectFullPath\": \"/workspace/work/authored-scene/dotnet/sdk/10.0.401/Sdks/Microsoft.NET.Sdk/targets/Microsoft.NET.Sdk.DefaultItems.props\",\n        \"DefiningProjectDirectory\": \"/workspace/work/authored-scene/dotnet/sdk/10.0.401/Sdks/Microsoft.NET.Sdk/targets/\",\n        \"DefiningProjectName\": \"Microsoft.NET.Sdk.DefaultItems\",\n        \"DefiningProjectExtension\": \".props\"\n      }\n    ],\n    \"ProjectReference\": [\n      {\n        \"Identity\": \"../Domain/NorthStar.Domain.csproj\",\n        \"Targets\": \"\",\n        \"OutputItemType\": \"\",\n        \"ReferenceSourceTarget\": \"ProjectReference\",\n        \"FullPath\": \"/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/Domain/NorthStar.Domain.csproj\",\n        \"RootDir\": \"/\",\n        \"Filename\": \"NorthStar.Domain\",\n        \"Extension\": \".csproj\",\n        \"RelativeDir\": \"../Domain/\",\n        \"Directory\": \"workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/Domain/\",\n        \"RecursiveDir\": \"\",\n        \"ModifiedTime\": \"\",\n        \"CreatedTime\": \"\",\n        \"AccessedTime\": \"\",\n        \"DefiningProjectFullPath\": \"/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/Crossing/NorthStar.Crossing.csproj\",\n        \"DefiningProjectDirectory\": \"/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/Crossing/\",\n        \"DefiningProjectName\": \"NorthStar.Crossing\",\n        \"DefiningProjectExtension\": \".csproj\"\n      }\n    ]\n  }\n}\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "/workspace/work/authored-scene/dotnet/dotnet",
+      "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/Crossing/bin/Release/net10.0/NorthStar.Crossing.dll",
+      "--demo",
+      "/workspace/work/portable-core/verification-science-final/crossing-current.json"
+    ],
+    "exit_code": 0,
+    "stdout": "PASS: prepared survey -> earned points -> Focus allocation -> distinct Lure crossing -> level3 reward\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "/workspace/work/authored-scene/dotnet/dotnet",
+      "build",
+      "/workspace/work/portable-core/verification-science-final/CrossingPortableCli/CrossingPortableCli.csproj",
+      "-c",
+      "Release"
+    ],
+    "exit_code": 0,
+    "stdout": "  Determining projects to restore...\n  Restored /workspace/work/portable-core/verification-science-final/CrossingPortableCli/CrossingPortableCli.csproj (in 129 ms).\n  CrossingPortableCli -> /workspace/work/portable-core/verification-science-final/CrossingPortableCli/bin/Release/net10.0/CrossingPortableCli.dll\n\nBuild succeeded.\n    0 Warning(s)\n    0 Error(s)\n\nTime Elapsed 00:00:06.71\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "/workspace/work/authored-scene/dotnet/dotnet",
+      "/workspace/work/portable-core/verification-science-final/CrossingPortableCli/bin/Release/net10.0/CrossingPortableCli.dll",
+      "--demo",
+      "/workspace/work/portable-core/verification-science-final/crossing-portable.json"
+    ],
+    "exit_code": 0,
+    "stdout": "PASS: prepared survey -> earned points -> Focus allocation -> distinct Lure crossing -> level3 reward\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "/workspace/work/authored-scene/dotnet/dotnet",
+      "build",
+      "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/Checks/NorthStar.Checks.csproj",
+      "-c",
+      "Release"
+    ],
+    "exit_code": 0,
+    "stdout": "  Determining projects to restore...\n  Restored /workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/Checks/NorthStar.Checks.csproj (in 720 ms).\n  2 of 3 projects are up-to-date for restore.\n  NorthStar.Domain -> /workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/Domain/bin/Release/netstandard2.1/NorthStar.Domain.dll\n  NorthStar.Crossing -> /workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/Crossing/bin/Release/net10.0/NorthStar.Crossing.dll\n  NorthStar.Checks -> /workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/Checks/bin/Release/net10.0/NorthStar.Checks.dll\n\nBuild succeeded.\n    0 Warning(s)\n    0 Error(s)\n\nTime Elapsed 00:00:08.01\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "/workspace/work/authored-scene/dotnet/dotnet",
+      "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/Checks/bin/Release/net10.0/NorthStar.Checks.dll",
+      "native",
+      "/workspace/work/portable-core/verification-science-final/crossing-native-normal.json"
+    ],
+    "exit_code": 0,
+    "stdout": "PASS: 1 actual C# progression cases\nPASS: 77 C# domain/destination controls\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "/workspace/work/authored-scene/dotnet/dotnet",
+      "build",
+      "/workspace/work/portable-core/verification-science-final/CrossingPortableChecks/CrossingPortableChecks.csproj",
+      "-c",
+      "Release"
+    ],
+    "exit_code": 0,
+    "stdout": "  Determining projects to restore...\n  Restored /workspace/work/portable-core/verification-science-final/CrossingPortableChecks/CrossingPortableChecks.csproj (in 238 ms).\n  CrossingPortableChecks -> /workspace/work/portable-core/verification-science-final/CrossingPortableChecks/bin/Release/net10.0/CrossingPortableChecks.dll\n\nBuild succeeded.\n    0 Warning(s)\n    0 Error(s)\n\nTime Elapsed 00:00:06.22\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "/workspace/work/authored-scene/dotnet/dotnet",
+      "/workspace/work/portable-core/verification-science-final/CrossingPortableChecks/bin/Release/net10.0/CrossingPortableChecks.dll",
+      "native",
+      "/workspace/work/portable-core/verification-science-final/crossing-native-portable.json"
+    ],
+    "exit_code": 0,
+    "stdout": "PASS: 1 actual C# progression cases\nPASS: 77 C# domain/destination controls\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "/workspace/work/authored-scene/dotnet/dotnet",
+      "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/Forge/bin/Release/net10.0/NorthStar.Forge.dll",
+      "--demo",
+      "/workspace/work/portable-core/verification-science-final/forge-current.json"
+    ],
+    "exit_code": 0,
+    "stdout": "PASS: two crafted and one mixed connected journeys, unprepared walking loss, failed-rig no-refund and unprepared retry.\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "/workspace/work/authored-scene/dotnet/dotnet",
+      "build",
+      "/workspace/work/portable-core/verification-science-final/ForgePortableCli/ForgePortableCli.csproj",
+      "-c",
+      "Release"
+    ],
+    "exit_code": 0,
+    "stdout": "  Determining projects to restore...\n  Restored /workspace/work/portable-core/verification-science-final/ForgePortableCli/ForgePortableCli.csproj (in 116 ms).\n  ForgePortableCli -> /workspace/work/portable-core/verification-science-final/ForgePortableCli/bin/Release/net10.0/ForgePortableCli.dll\n\nBuild succeeded.\n    0 Warning(s)\n    0 Error(s)\n\nTime Elapsed 00:00:01.59\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "/workspace/work/authored-scene/dotnet/dotnet",
+      "/workspace/work/portable-core/verification-science-final/ForgePortableCli/bin/Release/net10.0/ForgePortableCli.dll",
+      "--demo",
+      "/workspace/work/portable-core/verification-science-final/forge-portable.json"
+    ],
+    "exit_code": 0,
+    "stdout": "PASS: two crafted and one mixed connected journeys, unprepared walking loss, failed-rig no-refund and unprepared retry.\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "/workspace/work/authored-scene/dotnet/dotnet",
+      "build",
+      "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/ForgeChecks/NorthStar.ForgeChecks.csproj",
+      "-c",
+      "Release"
+    ],
+    "exit_code": 0,
+    "stdout": "  Determining projects to restore...\n  Restored /workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/ForgeChecks/NorthStar.ForgeChecks.csproj (in 209 ms).\n  3 of 4 projects are up-to-date for restore.\n  NorthStar.Domain -> /workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/Domain/bin/Release/netstandard2.1/NorthStar.Domain.dll\n  NorthStar.Crossing -> /workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/Crossing/bin/Release/net10.0/NorthStar.Crossing.dll\n  NorthStar.Forge -> /workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/Forge/bin/Release/net10.0/NorthStar.Forge.dll\n  NorthStar.ForgeChecks -> /workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/ForgeChecks/bin/Release/net10.0/NorthStar.ForgeChecks.dll\n\nBuild succeeded.\n    0 Warning(s)\n    0 Error(s)\n\nTime Elapsed 00:00:02.71\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "/workspace/work/authored-scene/dotnet/dotnet",
+      "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/ForgeChecks/bin/Release/net10.0/NorthStar.ForgeChecks.dll",
+      "native",
+      "/workspace/work/portable-core/verification-science-final/forge-native-normal.json"
+    ],
+    "exit_code": 0,
+    "stdout": "PASS: 80 native crafting and connected consumer controls.\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "/workspace/work/authored-scene/dotnet/dotnet",
+      "build",
+      "/workspace/work/portable-core/verification-science-final/ForgePortableChecks/ForgePortableChecks.csproj",
+      "-c",
+      "Release"
+    ],
+    "exit_code": 0,
+    "stdout": "  Determining projects to restore...\n  Restored /workspace/work/portable-core/verification-science-final/ForgePortableChecks/ForgePortableChecks.csproj (in 176 ms).\n  ForgePortableChecks -> /workspace/work/portable-core/verification-science-final/ForgePortableChecks/bin/Release/net10.0/ForgePortableChecks.dll\n\nBuild succeeded.\n    0 Warning(s)\n    0 Error(s)\n\nTime Elapsed 00:00:02.41\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "/workspace/work/authored-scene/dotnet/dotnet",
+      "/workspace/work/portable-core/verification-science-final/ForgePortableChecks/bin/Release/net10.0/ForgePortableChecks.dll",
+      "native",
+      "/workspace/work/portable-core/verification-science-final/forge-native-portable.json"
+    ],
+    "exit_code": 0,
+    "stdout": "PASS: 80 native crafting and connected consumer controls.\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "/workspace/work/authored-scene/dotnet/dotnet",
+      "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/Loadout/bin/Release/net10.0/NorthStar.Loadout.dll",
+      "--demo",
+      "/workspace/work/portable-core/verification-science-final/loadout-current.json"
+    ],
+    "exit_code": 0,
+    "stdout": "PASS: earned Dash, independent Anchor/Trail and Lure/Plate journeys; empty-loadout and atomic-rejection controls retained.\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "/workspace/work/authored-scene/dotnet/dotnet",
+      "build",
+      "/workspace/work/portable-core/verification-science-final/LoadoutPortableCli/LoadoutPortableCli.csproj",
+      "-c",
+      "Release"
+    ],
+    "exit_code": 0,
+    "stdout": "  Determining projects to restore...\n  Restored /workspace/work/portable-core/verification-science-final/LoadoutPortableCli/LoadoutPortableCli.csproj (in 171 ms).\n  LoadoutPortableCli -> /workspace/work/portable-core/verification-science-final/LoadoutPortableCli/bin/Release/net10.0/LoadoutPortableCli.dll\n\nBuild succeeded.\n    0 Warning(s)\n    0 Error(s)\n\nTime Elapsed 00:00:02.04\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "/workspace/work/authored-scene/dotnet/dotnet",
+      "/workspace/work/portable-core/verification-science-final/LoadoutPortableCli/bin/Release/net10.0/LoadoutPortableCli.dll",
+      "--demo",
+      "/workspace/work/portable-core/verification-science-final/loadout-portable.json"
+    ],
+    "exit_code": 0,
+    "stdout": "PASS: earned Dash, independent Anchor/Trail and Lure/Plate journeys; empty-loadout and atomic-rejection controls retained.\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "/workspace/work/authored-scene/dotnet/dotnet",
+      "build",
+      "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/LoadoutChecks/NorthStar.LoadoutChecks.csproj",
+      "-c",
+      "Release"
+    ],
+    "exit_code": 0,
+    "stdout": "  Determining projects to restore...\n  Restored /workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/LoadoutChecks/NorthStar.LoadoutChecks.csproj (in 186 ms).\n  4 of 5 projects are up-to-date for restore.\n  NorthStar.Domain -> /workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/Domain/bin/Release/netstandard2.1/NorthStar.Domain.dll\n  NorthStar.Crossing -> /workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/Crossing/bin/Release/net10.0/NorthStar.Crossing.dll\n  NorthStar.Forge -> /workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/Forge/bin/Release/net10.0/NorthStar.Forge.dll\n  NorthStar.Loadout -> /workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/Loadout/bin/Release/net10.0/NorthStar.Loadout.dll\n  NorthStar.LoadoutChecks -> /workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/LoadoutChecks/bin/Release/net10.0/NorthStar.LoadoutChecks.dll\n\nBuild succeeded.\n    0 Warning(s)\n    0 Error(s)\n\nTime Elapsed 00:00:02.34\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "/workspace/work/authored-scene/dotnet/dotnet",
+      "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/LoadoutChecks/bin/Release/net10.0/NorthStar.LoadoutChecks.dll",
+      "native",
+      "/workspace/work/portable-core/verification-science-final/loadout-native-normal.json"
+    ],
+    "exit_code": 0,
+    "stdout": "PASS: 56 native preparation/consumer controls.\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "/workspace/work/authored-scene/dotnet/dotnet",
+      "build",
+      "/workspace/work/portable-core/verification-science-final/LoadoutPortableChecks/LoadoutPortableChecks.csproj",
+      "-c",
+      "Release"
+    ],
+    "exit_code": 0,
+    "stdout": "  Determining projects to restore...\n  Restored /workspace/work/portable-core/verification-science-final/LoadoutPortableChecks/LoadoutPortableChecks.csproj (in 118 ms).\n  LoadoutPortableChecks -> /workspace/work/portable-core/verification-science-final/LoadoutPortableChecks/bin/Release/net10.0/LoadoutPortableChecks.dll\n\nBuild succeeded.\n    0 Warning(s)\n    0 Error(s)\n\nTime Elapsed 00:00:01.41\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "/workspace/work/authored-scene/dotnet/dotnet",
+      "/workspace/work/portable-core/verification-science-final/LoadoutPortableChecks/bin/Release/net10.0/LoadoutPortableChecks.dll",
+      "native",
+      "/workspace/work/portable-core/verification-science-final/loadout-native-portable.json"
+    ],
+    "exit_code": 0,
+    "stdout": "PASS: 56 native preparation/consumer controls.\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "/workspace/work/authored-scene/dotnet/dotnet",
+      "build",
+      "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/intake/Host/NorthStar.Intake.csproj",
+      "-c",
+      "Release"
+    ],
+    "exit_code": 0,
+    "stdout": "  Determining projects to restore...\n  All projects are up-to-date for restore.\n  NorthStar.Domain -> /workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/Domain/bin/Release/netstandard2.1/NorthStar.Domain.dll\n  NorthStar.Crossing -> /workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/Crossing/bin/Release/netstandard2.1/NorthStar.Crossing.dll\n  NorthStar.Forge -> /workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/Forge/bin/Release/netstandard2.1/NorthStar.Forge.dll\n  NorthStar.Loadout -> /workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/Loadout/bin/Release/netstandard2.1/NorthStar.Loadout.dll\n  NorthStar.Intake -> /workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/intake/Host/bin/Release/net10.0/NorthStar.Intake.dll\n\nBuild succeeded.\n    0 Warning(s)\n    0 Error(s)\n\nTime Elapsed 00:00:01.76\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "/workspace/work/authored-scene/dotnet/dotnet",
+      "msbuild",
+      "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/intake/Host/NorthStar.Intake.csproj",
+      "-nologo",
+      "-getProperty:TargetFramework,TargetFrameworks,OutputType,LangVersion",
+      "-getItem:Compile,ProjectReference"
+    ],
+    "exit_code": 0,
+    "stdout": "{\n  \"Properties\": {\n    \"TargetFramework\": \"net10.0\",\n    \"TargetFrameworks\": \"\",\n    \"OutputType\": \"Exe\",\n    \"LangVersion\": \"14.0\"\n  },\n  \"Items\": {\n    \"Compile\": [\n      {\n        \"Identity\": \"Program.cs\",\n        \"FullPath\": \"/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/intake/Host/Program.cs\",\n        \"RootDir\": \"/\",\n        \"Filename\": \"Program\",\n        \"Extension\": \".cs\",\n        \"RelativeDir\": \"\",\n        \"Directory\": \"workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/intake/Host/\",\n        \"RecursiveDir\": \"\",\n        \"ModifiedTime\": \"\",\n        \"CreatedTime\": \"\",\n        \"AccessedTime\": \"\",\n        \"DefiningProjectFullPath\": \"/workspace/work/authored-scene/dotnet/sdk/10.0.401/Sdks/Microsoft.NET.Sdk/targets/Microsoft.NET.Sdk.DefaultItems.props\",\n        \"DefiningProjectDirectory\": \"/workspace/work/authored-scene/dotnet/sdk/10.0.401/Sdks/Microsoft.NET.Sdk/targets/\",\n        \"DefiningProjectName\": \"Microsoft.NET.Sdk.DefaultItems\",\n        \"DefiningProjectExtension\": \".props\"\n      },\n      {\n        \"Identity\": \"Room.cs\",\n        \"FullPath\": \"/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/intake/Host/Room.cs\",\n        \"RootDir\": \"/\",\n        \"Filename\": \"Room\",\n        \"Extension\": \".cs\",\n        \"RelativeDir\": \"\",\n        \"Directory\": \"workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/intake/Host/\",\n        \"RecursiveDir\": \"\",\n        \"ModifiedTime\": \"\",\n        \"CreatedTime\": \"\",\n        \"AccessedTime\": \"\",\n        \"DefiningProjectFullPath\": \"/workspace/work/authored-scene/dotnet/sdk/10.0.401/Sdks/Microsoft.NET.Sdk/targets/Microsoft.NET.Sdk.DefaultItems.props\",\n        \"DefiningProjectDirectory\": \"/workspace/work/authored-scene/dotnet/sdk/10.0.401/Sdks/Microsoft.NET.Sdk/targets/\",\n        \"DefiningProjectName\": \"Microsoft.NET.Sdk.DefaultItems\",\n        \"DefiningProjectExtension\": \".props\"\n      }\n    ],\n    \"ProjectReference\": [\n      {\n        \"Identity\": \"../../csharp/Crossing/NorthStar.Crossing.csproj\",\n        \"Targets\": \"\",\n        \"OutputItemType\": \"\",\n        \"ReferenceSourceTarget\": \"ProjectReference\",\n        \"SetTargetFramework\": \"TargetFramework=netstandard2.1\",\n        \"FullPath\": \"/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/Crossing/NorthStar.Crossing.csproj\",\n        \"RootDir\": \"/\",\n        \"Filename\": \"NorthStar.Crossing\",\n        \"Extension\": \".csproj\",\n        \"RelativeDir\": \"../../csharp/Crossing/\",\n        \"Directory\": \"workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/Crossing/\",\n        \"RecursiveDir\": \"\",\n        \"ModifiedTime\": \"\",\n        \"CreatedTime\": \"\",\n        \"AccessedTime\": \"\",\n        \"DefiningProjectFullPath\": \"/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/intake/Host/NorthStar.Intake.csproj\",\n        \"DefiningProjectDirectory\": \"/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/intake/Host/\",\n        \"DefiningProjectName\": \"NorthStar.Intake\",\n        \"DefiningProjectExtension\": \".csproj\"\n      },\n      {\n        \"Identity\": \"../../csharp/Forge/NorthStar.Forge.csproj\",\n        \"Targets\": \"\",\n        \"OutputItemType\": \"\",\n        \"ReferenceSourceTarget\": \"ProjectReference\",\n        \"SetTargetFramework\": \"TargetFramework=netstandard2.1\",\n        \"FullPath\": \"/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/Forge/NorthStar.Forge.csproj\",\n        \"RootDir\": \"/\",\n        \"Filename\": \"NorthStar.Forge\",\n        \"Extension\": \".csproj\",\n        \"RelativeDir\": \"../../csharp/Forge/\",\n        \"Directory\": \"workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/Forge/\",\n        \"RecursiveDir\": \"\",\n        \"ModifiedTime\": \"\",\n        \"CreatedTime\": \"\",\n        \"AccessedTime\": \"\",\n        \"DefiningProjectFullPath\": \"/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/intake/Host/NorthStar.Intake.csproj\",\n        \"DefiningProjectDirectory\": \"/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/intake/Host/\",\n        \"DefiningProjectName\": \"NorthStar.Intake\",\n        \"DefiningProjectExtension\": \".csproj\"\n      },\n      {\n        \"Identity\": \"../../csharp/Loadout/NorthStar.Loadout.csproj\",\n        \"Targets\": \"\",\n        \"OutputItemType\": \"\",\n        \"ReferenceSourceTarget\": \"ProjectReference\",\n        \"SetTargetFramework\": \"TargetFramework=netstandard2.1\",\n        \"FullPath\": \"/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/Loadout/NorthStar.Loadout.csproj\",\n        \"RootDir\": \"/\",\n        \"Filename\": \"NorthStar.Loadout\",\n        \"Extension\": \".csproj\",\n        \"RelativeDir\": \"../../csharp/Loadout/\",\n        \"Directory\": \"workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/Loadout/\",\n        \"RecursiveDir\": \"\",\n        \"ModifiedTime\": \"\",\n        \"CreatedTime\": \"\",\n        \"AccessedTime\": \"\",\n        \"DefiningProjectFullPath\": \"/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/intake/Host/NorthStar.Intake.csproj\",\n        \"DefiningProjectDirectory\": \"/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/intake/Host/\",\n        \"DefiningProjectName\": \"NorthStar.Intake\",\n        \"DefiningProjectExtension\": \".csproj\"\n      }\n    ]\n  }\n}\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "/workspace/work/authored-scene/dotnet/dotnet",
+      "build",
+      "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/field-journey/Host/NorthStar.FieldJourney.csproj",
+      "-c",
+      "Release"
+    ],
+    "exit_code": 0,
+    "stdout": "  Determining projects to restore...\n  All projects are up-to-date for restore.\n  NorthStar.Domain -> /workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/Domain/bin/Release/netstandard2.1/NorthStar.Domain.dll\n  NorthStar.Crossing -> /workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/Crossing/bin/Release/netstandard2.1/NorthStar.Crossing.dll\n  NorthStar.Forge -> /workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/Forge/bin/Release/netstandard2.1/NorthStar.Forge.dll\n  NorthStar.Loadout -> /workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/Loadout/bin/Release/netstandard2.1/NorthStar.Loadout.dll\n  NorthStar.FieldSampling -> /workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/field-journey/Sampling/bin/Release/netstandard2.1/NorthStar.FieldSampling.dll\n  NorthStar.Preparation -> /workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/field-journey/Preparation/bin/Release/netstandard2.1/NorthStar.Preparation.dll\n  NorthStar.FieldPresentation -> /workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/field-journey/Presentation/bin/Release/netstandard2.1/NorthStar.FieldPresentation.dll\n  NorthStar.Memory -> /workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/memory-study/Rules/bin/Release/netstandard2.1/NorthStar.Memory.dll\n  NorthStar.Conditions -> /workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/memory-study/Conditions/bin/Release/netstandard2.1/NorthStar.Conditions.dll\n  NorthStar.MemoryStudy -> /workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/memory-study/Host/bin/Release/net10.0/NorthStar.MemoryStudy.dll\n  NorthStar.Intake -> /workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/intake/Host/bin/Release/net10.0/NorthStar.Intake.dll\n  NorthStar.FieldJourney -> /workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/field-journey/Host/bin/Release/net10.0/NorthStar.FieldJourney.dll\n\nBuild succeeded.\n    0 Warning(s)\n    0 Error(s)\n\nTime Elapsed 00:00:02.48\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "/workspace/work/authored-scene/dotnet/dotnet",
+      "msbuild",
+      "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/field-journey/Host/NorthStar.FieldJourney.csproj",
+      "-nologo",
+      "-getProperty:TargetFramework,TargetFrameworks,OutputType,LangVersion",
+      "-getItem:Compile,ProjectReference"
+    ],
+    "exit_code": 0,
+    "stdout": "{\n  \"Properties\": {\n    \"TargetFramework\": \"net10.0\",\n    \"TargetFrameworks\": \"\",\n    \"OutputType\": \"Exe\",\n    \"LangVersion\": \"14.0\"\n  },\n  \"Items\": {\n    \"Compile\": [\n      {\n        \"Identity\": \"PackLoader.cs\",\n        \"FullPath\": \"/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/field-journey/Host/PackLoader.cs\",\n        \"RootDir\": \"/\",\n        \"Filename\": \"PackLoader\",\n        \"Extension\": \".cs\",\n        \"RelativeDir\": \"\",\n        \"Directory\": \"workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/field-journey/Host/\",\n        \"RecursiveDir\": \"\",\n        \"ModifiedTime\": \"\",\n        \"CreatedTime\": \"\",\n        \"AccessedTime\": \"\",\n        \"DefiningProjectFullPath\": \"/workspace/work/authored-scene/dotnet/sdk/10.0.401/Sdks/Microsoft.NET.Sdk/targets/Microsoft.NET.Sdk.DefaultItems.props\",\n        \"DefiningProjectDirectory\": \"/workspace/work/authored-scene/dotnet/sdk/10.0.401/Sdks/Microsoft.NET.Sdk/targets/\",\n        \"DefiningProjectName\": \"Microsoft.NET.Sdk.DefaultItems\",\n        \"DefiningProjectExtension\": \".props\"\n      },\n      {\n        \"Identity\": \"Program.cs\",\n        \"FullPath\": \"/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/field-journey/Host/Program.cs\",\n        \"RootDir\": \"/\",\n        \"Filename\": \"Program\",\n        \"Extension\": \".cs\",\n        \"RelativeDir\": \"\",\n        \"Directory\": \"workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/field-journey/Host/\",\n        \"RecursiveDir\": \"\",\n        \"ModifiedTime\": \"\",\n        \"CreatedTime\": \"\",\n        \"AccessedTime\": \"\",\n        \"DefiningProjectFullPath\": \"/workspace/work/authored-scene/dotnet/sdk/10.0.401/Sdks/Microsoft.NET.Sdk/targets/Microsoft.NET.Sdk.DefaultItems.props\",\n        \"DefiningProjectDirectory\": \"/workspace/work/authored-scene/dotnet/sdk/10.0.401/Sdks/Microsoft.NET.Sdk/targets/\",\n        \"DefiningProjectName\": \"Microsoft.NET.Sdk.DefaultItems\",\n        \"DefiningProjectExtension\": \".props\"\n      },\n      {\n        \"Identity\": \"Room.cs\",\n        \"FullPath\": \"/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/field-journey/Host/Room.cs\",\n        \"RootDir\": \"/\",\n        \"Filename\": \"Room\",\n        \"Extension\": \".cs\",\n        \"RelativeDir\": \"\",\n        \"Directory\": \"workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/field-journey/Host/\",\n        \"RecursiveDir\": \"\",\n        \"ModifiedTime\": \"\",\n        \"CreatedTime\": \"\",\n        \"AccessedTime\": \"\",\n        \"DefiningProjectFullPath\": \"/workspace/work/authored-scene/dotnet/sdk/10.0.401/Sdks/Microsoft.NET.Sdk/targets/Microsoft.NET.Sdk.DefaultItems.props\",\n        \"DefiningProjectDirectory\": \"/workspace/work/authored-scene/dotnet/sdk/10.0.401/Sdks/Microsoft.NET.Sdk/targets/\",\n        \"DefiningProjectName\": \"Microsoft.NET.Sdk.DefaultItems\",\n        \"DefiningProjectExtension\": \".props\"\n      }\n    ],\n    \"ProjectReference\": [\n      {\n        \"Identity\": \"../../csharp/Crossing/NorthStar.Crossing.csproj\",\n        \"Targets\": \"\",\n        \"OutputItemType\": \"\",\n        \"ReferenceSourceTarget\": \"ProjectReference\",\n        \"SetTargetFramework\": \"TargetFramework=netstandard2.1\",\n        \"FullPath\": \"/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/Crossing/NorthStar.Crossing.csproj\",\n        \"RootDir\": \"/\",\n        \"Filename\": \"NorthStar.Crossing\",\n        \"Extension\": \".csproj\",\n        \"RelativeDir\": \"../../csharp/Crossing/\",\n        \"Directory\": \"workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/Crossing/\",\n        \"RecursiveDir\": \"\",\n        \"ModifiedTime\": \"\",\n        \"CreatedTime\": \"\",\n        \"AccessedTime\": \"\",\n        \"DefiningProjectFullPath\": \"/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/field-journey/Host/NorthStar.FieldJourney.csproj\",\n        \"DefiningProjectDirectory\": \"/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/field-journey/Host/\",\n        \"DefiningProjectName\": \"NorthStar.FieldJourney\",\n        \"DefiningProjectExtension\": \".csproj\"\n      },\n      {\n        \"Identity\": \"../../csharp/Forge/NorthStar.Forge.csproj\",\n        \"Targets\": \"\",\n        \"OutputItemType\": \"\",\n        \"ReferenceSourceTarget\": \"ProjectReference\",\n        \"SetTargetFramework\": \"TargetFramework=netstandard2.1\",\n        \"FullPath\": \"/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/Forge/NorthStar.Forge.csproj\",\n        \"RootDir\": \"/\",\n        \"Filename\": \"NorthStar.Forge\",\n        \"Extension\": \".csproj\",\n        \"RelativeDir\": \"../../csharp/Forge/\",\n        \"Directory\": \"workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/Forge/\",\n        \"RecursiveDir\": \"\",\n        \"ModifiedTime\": \"\",\n        \"CreatedTime\": \"\",\n        \"AccessedTime\": \"\",\n        \"DefiningProjectFullPath\": \"/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/field-journey/Host/NorthStar.FieldJourney.csproj\",\n        \"DefiningProjectDirectory\": \"/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/field-journey/Host/\",\n        \"DefiningProjectName\": \"NorthStar.FieldJourney\",\n        \"DefiningProjectExtension\": \".csproj\"\n      },\n      {\n        \"Identity\": \"../../csharp/Loadout/NorthStar.Loadout.csproj\",\n        \"Targets\": \"\",\n        \"OutputItemType\": \"\",\n        \"ReferenceSourceTarget\": \"ProjectReference\",\n        \"SetTargetFramework\": \"TargetFramework=netstandard2.1\",\n        \"FullPath\": \"/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/Loadout/NorthStar.Loadout.csproj\",\n        \"RootDir\": \"/\",\n        \"Filename\": \"NorthStar.Loadout\",\n        \"Extension\": \".csproj\",\n        \"RelativeDir\": \"../../csharp/Loadout/\",\n        \"Directory\": \"workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/Loadout/\",\n        \"RecursiveDir\": \"\",\n        \"ModifiedTime\": \"\",\n        \"CreatedTime\": \"\",\n        \"AccessedTime\": \"\",\n        \"DefiningProjectFullPath\": \"/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/field-journey/Host/NorthStar.FieldJourney.csproj\",\n        \"DefiningProjectDirectory\": \"/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/field-journey/Host/\",\n        \"DefiningProjectName\": \"NorthStar.FieldJourney\",\n        \"DefiningProjectExtension\": \".csproj\"\n      },\n      {\n        \"Identity\": \"../Preparation/NorthStar.Preparation.csproj\",\n        \"Targets\": \"\",\n        \"OutputItemType\": \"\",\n        \"ReferenceSourceTarget\": \"ProjectReference\",\n        \"FullPath\": \"/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/field-journey/Preparation/NorthStar.Preparation.csproj\",\n        \"RootDir\": \"/\",\n        \"Filename\": \"NorthStar.Preparation\",\n        \"Extension\": \".csproj\",\n        \"RelativeDir\": \"../Preparation/\",\n        \"Directory\": \"workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/field-journey/Preparation/\",\n        \"RecursiveDir\": \"\",\n        \"ModifiedTime\": \"\",\n        \"CreatedTime\": \"\",\n        \"AccessedTime\": \"\",\n        \"DefiningProjectFullPath\": \"/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/field-journey/Host/NorthStar.FieldJourney.csproj\",\n        \"DefiningProjectDirectory\": \"/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/field-journey/Host/\",\n        \"DefiningProjectName\": \"NorthStar.FieldJourney\",\n        \"DefiningProjectExtension\": \".csproj\"\n      },\n      {\n        \"Identity\": \"../Sampling/NorthStar.FieldSampling.csproj\",\n        \"Targets\": \"\",\n        \"OutputItemType\": \"\",\n        \"ReferenceSourceTarget\": \"ProjectReference\",\n        \"FullPath\": \"/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/field-journey/Sampling/NorthStar.FieldSampling.csproj\",\n        \"RootDir\": \"/\",\n        \"Filename\": \"NorthStar.FieldSampling\",\n        \"Extension\": \".csproj\",\n        \"RelativeDir\": \"../Sampling/\",\n        \"Directory\": \"workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/field-journey/Sampling/\",\n        \"RecursiveDir\": \"\",\n        \"ModifiedTime\": \"\",\n        \"CreatedTime\": \"\",\n        \"AccessedTime\": \"\",\n        \"DefiningProjectFullPath\": \"/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/field-journey/Host/NorthStar.FieldJourney.csproj\",\n        \"DefiningProjectDirectory\": \"/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/field-journey/Host/\",\n        \"DefiningProjectName\": \"NorthStar.FieldJourney\",\n        \"DefiningProjectExtension\": \".csproj\"\n      },\n      {\n        \"Identity\": \"../Presentation/NorthStar.FieldPresentation.csproj\",\n        \"Targets\": \"\",\n        \"OutputItemType\": \"\",\n        \"ReferenceSourceTarget\": \"ProjectReference\",\n        \"FullPath\": \"/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/field-journey/Presentation/NorthStar.FieldPresentation.csproj\",\n        \"RootDir\": \"/\",\n        \"Filename\": \"NorthStar.FieldPresentation\",\n        \"Extension\": \".csproj\",\n        \"RelativeDir\": \"../Presentation/\",\n        \"Directory\": \"workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/field-journey/Presentation/\",\n        \"RecursiveDir\": \"\",\n        \"ModifiedTime\": \"\",\n        \"CreatedTime\": \"\",\n        \"AccessedTime\": \"\",\n        \"DefiningProjectFullPath\": \"/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/field-journey/Host/NorthStar.FieldJourney.csproj\",\n        \"DefiningProjectDirectory\": \"/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/field-journey/Host/\",\n        \"DefiningProjectName\": \"NorthStar.FieldJourney\",\n        \"DefiningProjectExtension\": \".csproj\"\n      },\n      {\n        \"Identity\": \"../../intake/Host/NorthStar.Intake.csproj\",\n        \"Targets\": \"\",\n        \"OutputItemType\": \"\",\n        \"ReferenceSourceTarget\": \"ProjectReference\",\n        \"FullPath\": \"/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/intake/Host/NorthStar.Intake.csproj\",\n        \"RootDir\": \"/\",\n        \"Filename\": \"NorthStar.Intake\",\n        \"Extension\": \".csproj\",\n        \"RelativeDir\": \"../../intake/Host/\",\n        \"Directory\": \"workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/intake/Host/\",\n        \"RecursiveDir\": \"\",\n        \"ModifiedTime\": \"\",\n        \"CreatedTime\": \"\",\n        \"AccessedTime\": \"\",\n        \"DefiningProjectFullPath\": \"/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/field-journey/Host/NorthStar.FieldJourney.csproj\",\n        \"DefiningProjectDirectory\": \"/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/field-journey/Host/\",\n        \"DefiningProjectName\": \"NorthStar.FieldJourney\",\n        \"DefiningProjectExtension\": \".csproj\"\n      },\n      {\n        \"Identity\": \"../../memory-study/Host/NorthStar.MemoryStudy.csproj\",\n        \"Targets\": \"\",\n        \"OutputItemType\": \"\",\n        \"ReferenceSourceTarget\": \"ProjectReference\",\n        \"FullPath\": \"/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/memory-study/Host/NorthStar.MemoryStudy.csproj\",\n        \"RootDir\": \"/\",\n        \"Filename\": \"NorthStar.MemoryStudy\",\n        \"Extension\": \".csproj\",\n        \"RelativeDir\": \"../../memory-study/Host/\",\n        \"Directory\": \"workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/memory-study/Host/\",\n        \"RecursiveDir\": \"\",\n        \"ModifiedTime\": \"\",\n        \"CreatedTime\": \"\",\n        \"AccessedTime\": \"\",\n        \"DefiningProjectFullPath\": \"/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/field-journey/Host/NorthStar.FieldJourney.csproj\",\n        \"DefiningProjectDirectory\": \"/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/field-journey/Host/\",\n        \"DefiningProjectName\": \"NorthStar.FieldJourney\",\n        \"DefiningProjectExtension\": \".csproj\"\n      }\n    ]\n  }\n}\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "/workspace/work/authored-scene/dotnet/dotnet",
+      "build",
+      "/workspace/work/portable-core/verification-science-final/MetadataProbe/MetadataProbe.csproj",
+      "-c",
+      "Release"
+    ],
+    "exit_code": 0,
+    "stdout": "  Determining projects to restore...\n  Restored /workspace/work/portable-core/verification-science-final/MetadataProbe/MetadataProbe.csproj (in 82 ms).\n  MetadataProbe -> /workspace/work/portable-core/verification-science-final/MetadataProbe/bin/Release/net10.0/MetadataProbe.dll\n\nBuild succeeded.\n    0 Warning(s)\n    0 Error(s)\n\nTime Elapsed 00:00:01.13\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "/workspace/work/authored-scene/dotnet/dotnet",
+      "/workspace/work/portable-core/verification-science-final/MetadataProbe/bin/Release/net10.0/MetadataProbe.dll",
+      "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/intake/Host/bin/Release/net10.0/NorthStar.Domain.dll",
+      "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/intake/Host/bin/Release/net10.0/NorthStar.Crossing.dll",
+      "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/intake/Host/bin/Release/net10.0/NorthStar.Forge.dll",
+      "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/intake/Host/bin/Release/net10.0/NorthStar.Loadout.dll",
+      "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/field-journey/Host/bin/Release/net10.0/NorthStar.Domain.dll",
+      "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/field-journey/Host/bin/Release/net10.0/NorthStar.Crossing.dll",
+      "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/field-journey/Host/bin/Release/net10.0/NorthStar.Forge.dll",
+      "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/field-journey/Host/bin/Release/net10.0/NorthStar.Loadout.dll",
+      "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/Crossing/bin/Release/net10.0/NorthStar.Crossing.dll",
+      "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/Forge/bin/Release/net10.0/NorthStar.Forge.dll",
+      "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/Loadout/bin/Release/net10.0/NorthStar.Loadout.dll"
+    ],
+    "exit_code": 0,
+    "stdout": "[{\"path\":\"/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/intake/Host/bin/Release/net10.0/NorthStar.Domain.dll\",\"target_framework\":\".NETStandard,Version=v2.1\",\"assembly_references\":[\"netstandard\"]},{\"path\":\"/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/intake/Host/bin/Release/net10.0/NorthStar.Crossing.dll\",\"target_framework\":\".NETStandard,Version=v2.1\",\"assembly_references\":[\"netstandard\",\"NorthStar.Domain\"]},{\"path\":\"/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/intake/Host/bin/Release/net10.0/NorthStar.Forge.dll\",\"target_framework\":\".NETStandard,Version=v2.1\",\"assembly_references\":[\"netstandard\",\"NorthStar.Crossing\",\"NorthStar.Domain\"]},{\"path\":\"/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/intake/Host/bin/Release/net10.0/NorthStar.Loadout.dll\",\"target_framework\":\".NETStandard,Version=v2.1\",\"assembly_references\":[\"netstandard\",\"NorthStar.Forge\",\"NorthStar.Domain\",\"NorthStar.Crossing\"]},{\"path\":\"/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/field-journey/Host/bin/Release/net10.0/NorthStar.Domain.dll\",\"target_framework\":\".NETStandard,Version=v2.1\",\"assembly_references\":[\"netstandard\"]},{\"path\":\"/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/field-journey/Host/bin/Release/net10.0/NorthStar.Crossing.dll\",\"target_framework\":\".NETStandard,Version=v2.1\",\"assembly_references\":[\"netstandard\",\"NorthStar.Domain\"]},{\"path\":\"/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/field-journey/Host/bin/Release/net10.0/NorthStar.Forge.dll\",\"target_framework\":\".NETStandard,Version=v2.1\",\"assembly_references\":[\"netstandard\",\"NorthStar.Crossing\",\"NorthStar.Domain\"]},{\"path\":\"/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/field-journey/Host/bin/Release/net10.0/NorthStar.Loadout.dll\",\"target_framework\":\".NETStandard,Version=v2.1\",\"assembly_references\":[\"netstandard\",\"NorthStar.Forge\",\"NorthStar.Domain\",\"NorthStar.Crossing\"]},{\"path\":\"/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/Crossing/bin/Release/net10.0/NorthStar.Crossing.dll\",\"target_framework\":\".NETCoreApp,Version=v10.0\",\"assembly_references\":[\"System.Runtime\",\"NorthStar.Domain\",\"System.Collections\",\"System.Text.Json\",\"System.Console\"]},{\"path\":\"/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/Forge/bin/Release/net10.0/NorthStar.Forge.dll\",\"target_framework\":\".NETCoreApp,Version=v10.0\",\"assembly_references\":[\"System.Runtime\",\"NorthStar.Crossing\",\"NorthStar.Domain\",\"System.Collections\",\"System.Text.Json\",\"System.Console\"]},{\"path\":\"/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/Loadout/bin/Release/net10.0/NorthStar.Loadout.dll\",\"target_framework\":\".NETCoreApp,Version=v10.0\",\"assembly_references\":[\"System.Runtime\",\"NorthStar.Forge\",\"NorthStar.Domain\",\"NorthStar.Crossing\",\"System.Collections\",\"System.Text.Json\",\"System.Console\"]}]\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "/workspace/work/authored-scene/dotnet/dotnet",
+      "msbuild",
+      "/workspace/work/portable-core/verification-science-final/negative-projects/Bad.csproj",
+      "-nologo",
+      "-getProperty:TargetFramework,TargetFrameworks,OutputType,LangVersion",
+      "-getItem:Compile,ProjectReference"
+    ],
+    "exit_code": 0,
+    "stdout": "{\n  \"Properties\": {\n    \"TargetFramework\": \"netstandard2.1\",\n    \"TargetFrameworks\": \"\",\n    \"OutputType\": \"Library\",\n    \"LangVersion\": \"8.0\"\n  },\n  \"Items\": {\n    \"Compile\": [\n      {\n        \"Identity\": \"Program.cs\",\n        \"FullPath\": \"/workspace/work/portable-core/verification-science-final/negative-projects/Program.cs\",\n        \"RootDir\": \"/\",\n        \"Filename\": \"Program\",\n        \"Extension\": \".cs\",\n        \"RelativeDir\": \"\",\n        \"Directory\": \"workspace/work/portable-core/verification-science-final/negative-projects/\",\n        \"RecursiveDir\": \"\",\n        \"ModifiedTime\": \"\",\n        \"CreatedTime\": \"\",\n        \"AccessedTime\": \"\",\n        \"DefiningProjectFullPath\": \"/workspace/work/authored-scene/dotnet/sdk/10.0.401/Sdks/Microsoft.NET.Sdk/targets/Microsoft.NET.Sdk.DefaultItems.props\",\n        \"DefiningProjectDirectory\": \"/workspace/work/authored-scene/dotnet/sdk/10.0.401/Sdks/Microsoft.NET.Sdk/targets/\",\n        \"DefiningProjectName\": \"Microsoft.NET.Sdk.DefaultItems\",\n        \"DefiningProjectExtension\": \".props\"\n      }\n    ],\n    \"ProjectReference\": []\n  }\n}\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "/workspace/work/authored-scene/dotnet/dotnet",
+      "msbuild",
+      "/workspace/work/portable-core/verification-science-final/negative-projects/Bad.csproj",
+      "-nologo",
+      "-getProperty:TargetFramework,TargetFrameworks,OutputType,LangVersion",
+      "-getItem:Compile,ProjectReference",
+      "-p:TargetFramework=netstandard2.1"
+    ],
+    "exit_code": 0,
+    "stdout": "{\n  \"Properties\": {\n    \"TargetFramework\": \"netstandard2.1\",\n    \"TargetFrameworks\": \"\",\n    \"OutputType\": \"Library\",\n    \"LangVersion\": \"8.0\"\n  },\n  \"Items\": {\n    \"Compile\": [\n      {\n        \"Identity\": \"Program.cs\",\n        \"FullPath\": \"/workspace/work/portable-core/verification-science-final/negative-projects/Program.cs\",\n        \"RootDir\": \"/\",\n        \"Filename\": \"Program\",\n        \"Extension\": \".cs\",\n        \"RelativeDir\": \"\",\n        \"Directory\": \"workspace/work/portable-core/verification-science-final/negative-projects/\",\n        \"RecursiveDir\": \"\",\n        \"ModifiedTime\": \"\",\n        \"CreatedTime\": \"\",\n        \"AccessedTime\": \"\",\n        \"DefiningProjectFullPath\": \"/workspace/work/authored-scene/dotnet/sdk/10.0.401/Sdks/Microsoft.NET.Sdk/targets/Microsoft.NET.Sdk.DefaultItems.props\",\n        \"DefiningProjectDirectory\": \"/workspace/work/authored-scene/dotnet/sdk/10.0.401/Sdks/Microsoft.NET.Sdk/targets/\",\n        \"DefiningProjectName\": \"Microsoft.NET.Sdk.DefaultItems\",\n        \"DefiningProjectExtension\": \".props\"\n      }\n    ],\n    \"ProjectReference\": []\n  }\n}\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "/workspace/work/authored-scene/dotnet/dotnet",
+      "msbuild",
+      "/workspace/work/portable-core/verification-science-final/negative-projects/Bad.csproj",
+      "-nologo",
+      "-getProperty:TargetFramework,TargetFrameworks,OutputType,LangVersion",
+      "-getItem:Compile,ProjectReference"
+    ],
+    "exit_code": 0,
+    "stdout": "{\n  \"Properties\": {\n    \"TargetFramework\": \"netstandard2.1\",\n    \"TargetFrameworks\": \"\",\n    \"OutputType\": \"Library\",\n    \"LangVersion\": \"8.0\"\n  },\n  \"Items\": {\n    \"Compile\": [\n      {\n        \"Identity\": \"Owner.cs\",\n        \"FullPath\": \"/workspace/work/portable-core/verification-science-final/negative-projects/Owner.cs\",\n        \"RootDir\": \"/\",\n        \"Filename\": \"Owner\",\n        \"Extension\": \".cs\",\n        \"RelativeDir\": \"\",\n        \"Directory\": \"workspace/work/portable-core/verification-science-final/negative-projects/\",\n        \"RecursiveDir\": \"\",\n        \"ModifiedTime\": \"\",\n        \"CreatedTime\": \"\",\n        \"AccessedTime\": \"\",\n        \"DefiningProjectFullPath\": \"/workspace/work/portable-core/verification-science-final/negative-projects/Bad.csproj\",\n        \"DefiningProjectDirectory\": \"/workspace/work/portable-core/verification-science-final/negative-projects/\",\n        \"DefiningProjectName\": \"Bad\",\n        \"DefiningProjectExtension\": \".csproj\"\n      }\n    ],\n    \"ProjectReference\": [\n      {\n        \"Identity\": \"OnlyNet10.csproj\",\n        \"Targets\": \"\",\n        \"OutputItemType\": \"\",\n        \"ReferenceSourceTarget\": \"ProjectReference\",\n        \"FullPath\": \"/workspace/work/portable-core/verification-science-final/negative-projects/OnlyNet10.csproj\",\n        \"RootDir\": \"/\",\n        \"Filename\": \"OnlyNet10\",\n        \"Extension\": \".csproj\",\n        \"RelativeDir\": \"\",\n        \"Directory\": \"workspace/work/portable-core/verification-science-final/negative-projects/\",\n        \"RecursiveDir\": \"\",\n        \"ModifiedTime\": \"\",\n        \"CreatedTime\": \"\",\n        \"AccessedTime\": \"\",\n        \"DefiningProjectFullPath\": \"/workspace/work/portable-core/verification-science-final/negative-projects/Bad.csproj\",\n        \"DefiningProjectDirectory\": \"/workspace/work/portable-core/verification-science-final/negative-projects/\",\n        \"DefiningProjectName\": \"Bad\",\n        \"DefiningProjectExtension\": \".csproj\"\n      }\n    ]\n  }\n}\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "/workspace/work/authored-scene/dotnet/dotnet",
+      "msbuild",
+      "/workspace/work/portable-core/verification-science-final/negative-projects/Bad.csproj",
+      "-nologo",
+      "-getProperty:TargetFramework,TargetFrameworks,OutputType,LangVersion",
+      "-getItem:Compile,ProjectReference",
+      "-p:TargetFramework=netstandard2.1"
+    ],
+    "exit_code": 0,
+    "stdout": "{\n  \"Properties\": {\n    \"TargetFramework\": \"netstandard2.1\",\n    \"TargetFrameworks\": \"\",\n    \"OutputType\": \"Library\",\n    \"LangVersion\": \"8.0\"\n  },\n  \"Items\": {\n    \"Compile\": [\n      {\n        \"Identity\": \"Owner.cs\",\n        \"FullPath\": \"/workspace/work/portable-core/verification-science-final/negative-projects/Owner.cs\",\n        \"RootDir\": \"/\",\n        \"Filename\": \"Owner\",\n        \"Extension\": \".cs\",\n        \"RelativeDir\": \"\",\n        \"Directory\": \"workspace/work/portable-core/verification-science-final/negative-projects/\",\n        \"RecursiveDir\": \"\",\n        \"ModifiedTime\": \"\",\n        \"CreatedTime\": \"\",\n        \"AccessedTime\": \"\",\n        \"DefiningProjectFullPath\": \"/workspace/work/portable-core/verification-science-final/negative-projects/Bad.csproj\",\n        \"DefiningProjectDirectory\": \"/workspace/work/portable-core/verification-science-final/negative-projects/\",\n        \"DefiningProjectName\": \"Bad\",\n        \"DefiningProjectExtension\": \".csproj\"\n      }\n    ],\n    \"ProjectReference\": [\n      {\n        \"Identity\": \"OnlyNet10.csproj\",\n        \"Targets\": \"\",\n        \"OutputItemType\": \"\",\n        \"ReferenceSourceTarget\": \"ProjectReference\",\n        \"FullPath\": \"/workspace/work/portable-core/verification-science-final/negative-projects/OnlyNet10.csproj\",\n        \"RootDir\": \"/\",\n        \"Filename\": \"OnlyNet10\",\n        \"Extension\": \".csproj\",\n        \"RelativeDir\": \"\",\n        \"Directory\": \"workspace/work/portable-core/verification-science-final/negative-projects/\",\n        \"RecursiveDir\": \"\",\n        \"ModifiedTime\": \"\",\n        \"CreatedTime\": \"\",\n        \"AccessedTime\": \"\",\n        \"DefiningProjectFullPath\": \"/workspace/work/portable-core/verification-science-final/negative-projects/Bad.csproj\",\n        \"DefiningProjectDirectory\": \"/workspace/work/portable-core/verification-science-final/negative-projects/\",\n        \"DefiningProjectName\": \"Bad\",\n        \"DefiningProjectExtension\": \".csproj\"\n      }\n    ]\n  }\n}\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "/workspace/work/authored-scene/dotnet/dotnet",
+      "msbuild",
+      "/workspace/work/portable-core/verification-science-final/negative-projects/OnlyNet10.csproj",
+      "-nologo",
+      "-getProperty:TargetFramework,TargetFrameworks,OutputType,LangVersion",
+      "-getItem:Compile,ProjectReference"
+    ],
+    "exit_code": 0,
+    "stdout": "{\n  \"Properties\": {\n    \"TargetFramework\": \"net10.0\",\n    \"TargetFrameworks\": \"\",\n    \"OutputType\": \"Exe\",\n    \"LangVersion\": \"14.0\"\n  },\n  \"Items\": {\n    \"Compile\": [],\n    \"ProjectReference\": []\n  }\n}\n",
+    "stderr": ""
+  }
+]

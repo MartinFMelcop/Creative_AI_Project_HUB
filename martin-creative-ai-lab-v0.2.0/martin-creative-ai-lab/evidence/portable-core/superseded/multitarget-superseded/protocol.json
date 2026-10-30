@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "kind": "prospective_portable_existing_owner_protocol",
+  "baseline_commit": "a8cf73727b564963dbdd437c5cb7924f2dd1dddd",
+  "question": "Can the existing Crossing, Forge and Loadout owners compile as C#8/netstandard2.1 libraries and supply actual existing .NET10 consumers with unchanged accepted/refused transitions, costs, progression and terminal outcomes?",
+  "beneficiary": "The existing Intake/Field production dependency on executable-only gameplay projects, and future licensed Unity integration.",
+  "selected_change": "Multitarget the three existing projects without duplicating owner source; exclude each unchanged Program.cs only from the portable target and route actual Intake and Field to portable Crossing/Forge/Loadout targets.",
+  "predeclared_comparisons": [
+    "Exact JSON bytes for each unchanged CLI --demo across preserved baseline net10, current net10 and an actual external net10 consumer compiling the unchanged CLI Program.cs against portable library outputs.",
+    "Exact native output bytes for existing Checks, ForgeChecks and LoadoutChecks Program.cs across normal current consumers and external consumers referencing portable owner targets. These controls include refusals, conservation, failure, retry, earned allocation and actual completion.",
+    "Actual evaluated MSBuild output type, target framework, language version, Compile and ProjectReference closure for every portable gameplay owner and Domain dependency.",
+    "Actual copied Domain/Crossing/Forge/Loadout DLL identities in both Intake and Field output must equal the compiled netstandard2.1 library artifacts; metadata on one reference alone is insufficient."
+  ],
+  "negative_controls": [
+    "A forged parity report with a changed result identity must be rejected rather than accepted through an unchanged passing count.",
+    "A real temporary evaluated project contaminated with Program.cs must fail the portable compilation-input contract.",
+    "A real temporary evaluated netstandard project referencing an executable/net10-only project must fail the portable dependency contract."
+  ],
+  "execution_contract": {
+    "sdk": "10.0.401",
+    "output": "New directory outside maintained workspace; every command retained with actual exit/stdout/stderr; nonzero required commands fail.",
+    "limits": "Each command bounded to 300 seconds. Source identities sampled before and after actual execution. Missing baseline/tools/required output are failures, not passes.",
+    "unit": "A bounded software compatibility and preservation experiment. Overlapping native controls and repeated CLI routes are not independent studies, people or measured effort."
+  },
+  "known_rivals": [
+    "Only a target-framework label changed while the actual consumer still links executable/net10 gameplay.",
+    "A second copied rules implementation passes a convenient demo while authoritative owners diverge.",
+    "A parity verifier trusts a declared pass or ignores changed resources/terminal outcomes.",
+    "Successful portable compilation is misreported as licensed Unity, production Windows/Steam or save migration acceptance."
+  ],
+  "failure_conditions": [
+    "Any compared exact output differs or expected trace is missing.",
+    "Portable closure includes Program.cs, System.Text.Json transport code, nonportable/executable dependency, wrong language or missing owner.",
+    "Actual Intake selected reference remains net10 instead of portable Loadout.",
+    "Source changes during the recorded run or a negative control is not detected."
+  ],
+  "production_limits": "No Editor patch/version, license, module, Unity runtime/API support, Windows Player, Steam, account/save migration, binary identity preservation, participant finding or Build/Operations completion follows. Existing recipient archives remain unchanged.",
+  "brain_influence": [
+    "SCI-013: explicit rival explanations",
+    "SCI-014: compilation is not production compatibility",
+    "SCI-076: actual consumer/reference observation fits the dependency question",
+    "SCI-077: exact negatives and separate execution categories"
+  ],
+  "protocol_timing_disclosure": "Written before the scientific verifier outcomes, after engineering baseline capture/build work had begun. Engineering subsequently discovered transitive nearest-target mismatches; actual copied-artifact checks and explicit Field coverage were added before this verifier executed. Not external preregistration."
+}

@@ -1,0 +1,56 @@
+{
+  "schema_version": 1,
+  "kind": "intake_consumer_verification",
+  "source_sha256": {
+    "evidence/intake/protocol.json": "ec4a5707e8dd4253f8d8b818574495c6a110963cf52f7d440137b9f6118ba9c8",
+    "north-star/csharp/Crossing/NorthStar.Crossing.csproj": "09fbdffe415d44079f66da83d4d22e5b91169f3f1abdd0e1ebc2bacd2e3f0c88",
+    "north-star/csharp/Crossing/Program.cs": "268c1b5ac582dd06f15eb3e40e7ce859a9c58eecfc58c7586d94bcaecf9c595e",
+    "north-star/csharp/Crossing/Session.cs": "d25ac05ba1a94432474dd1b14b4fd608e446fc5344dcc4f779d8d5fe27a1b2c5",
+    "north-star/csharp/Domain/Crafting.cs": "5a5a892b3e68cff73f7a443d7c014c79dbebf2954d28f447e1bf3a9c4759de57",
+    "north-star/csharp/Domain/Loadout.cs": "a1296ca13b5ba6728c073320b860e369ad2e01fdaacb45b5237ef40d0243f682",
+    "north-star/csharp/Domain/NorthStar.Domain.csproj": "9570b674acfea69bb60098f495afd3b9e2cef2575fcfeb6db71c2cdecb2c4876",
+    "north-star/csharp/Domain/Progression.cs": "8495e1ad92fea069c2c3989f6f2cc2600980575e72812df9480ed193c51c8685",
+    "north-star/csharp/Forge/Expedition.cs": "579c1eb8375a5c281d35338f1c93cb529c16bf330f0576046c970d42c816bfc3",
+    "north-star/csharp/Forge/NorthStar.Forge.csproj": "3f58ee26c26f3030dcdb7cc2c6db2b7e14bff43d81e936b95cc116bc82978d35",
+    "north-star/csharp/Forge/Program.cs": "3a289847c487ca3bca8a406635b7f0a2334daa959d767d31b3f732445a398c3a",
+    "north-star/csharp/Forge/README.md": "6a39641bb2b3c60df9f8b5148d82e69c7c83951f072cb5f0caf544d6400ec8b3",
+    "north-star/csharp/Loadout/NorthStar.Loadout.csproj": "8b7ae6ab602aa24a78926f23bdf1d0117d79293eeb493334c1a4a2d3d4c85613",
+    "north-star/csharp/Loadout/PreparedExpedition.cs": "92fabdaa94f4ad4bb33a55a113a3d4f8cc63c86634d631413a529eb53df24668",
+    "north-star/csharp/Loadout/Program.cs": "6409bc7a9d24a9c60ea59657b33925c6dd27e3a6a9a7a9736e2d3a5ff7d6d7d8",
+    "north-star/csharp/Loadout/README.md": "796423b4450dbec4f37cb0c9a5f3a86aa21168f45464b7a5e46f349a6fb776a9",
+    "north-star/csharp/Portable/Crossing/NorthStar.Crossing.csproj": "bf08a1ba3db27ea0848f7f91583192e83d2ccec8168cfb55dd965db786daa3f8",
+    "north-star/csharp/Portable/Forge/NorthStar.Forge.csproj": "e32e631825a67f1931908e6adf8247f6936e6f79d8efd40b7bfee4aab08dddf0",
+    "north-star/csharp/Portable/Loadout/NorthStar.Loadout.csproj": "bea76c8d5c8c1e15a71815f19d575dbbdd84ce3cfa08f4288dee3e369d0ee012",
+    "north-star/csharp/global.json": "e0c0882461e712f6c2c66241bf2f175c60832e3ff077dc26091ff8c661d4193e",
+    "north-star/intake/.gitignore": "79810615b4063be5474618fd002df934762fe9ccebb448537ce74ce23b319202",
+    "north-star/intake/Checks/NorthStar.IntakeChecks.csproj": "0f123f0913619a8df7bfc9fef33a4664497b37ae71e5c6485b266fea3c6dc9f5",
+    "north-star/intake/Checks/Program.cs": "58dd73ade0bf09f8a10ab933ee737abbd8075f3aaf77509d81b4b85bb7a28120",
+    "north-star/intake/Host/NorthStar.Intake.csproj": "0ee05535f0644acc8ff648218880dbd6b10faf74872fb07455ba7c628847749e",
+    "north-star/intake/Host/Program.cs": "711c019d69a309f14d2469e13ac7f5bff2f3fb352d6dbaaa0da54af77a67fbae",
+    "north-star/intake/Host/Room.cs": "b5d654a7fa2d64c2ea89d96ab3249d5655008a20a302be916633c688114d3c98",
+    "north-star/intake/README.md": "69cef4e20f5cac23411fc913b31ff4c0458e072e9b0f0c0196764e3c687ae9bc",
+    "north-star/intake/tools/browser.mjs": "07178095da56efde4179153122c9393b5539e9699e5a6360dc6d6f86f4fd3907",
+    "north-star/intake/tools/verify.py": "d4f0a2d31b13cfe043b8b1d17d77d702579264a777c14e2b49e24e7f86257739",
+    "north-star/intake/web/app.js": "db906517f8bc4d45b8bf7c30418513a42b2c6d7597f8cbe448f53e612c96c3c2",
+    "north-star/intake/web/index.html": "94d79e28d92857ff906a12fe1eb1af68ac11c101fb5952fb5de849e7caf75cb5",
+    "north-star/intake/web/style.css": "33a23577126f94b722b0f2a7d23fe754183fa1a43ad97c2466de3e99bdf6b7c3",
+    "projects/realtime-integration-lab/package-lock.json": "aa191ef2158e6cc6f770bf4b3ee44dca17175ef1a3cd572b98115246bf46aea7",
+    "projects/realtime-integration-lab/package.json": "42e3cc9633e522dd6d9a5c11023418331129632881a8bf0b95e3717247d57ebe"
+  },
+  "source_stable": true,
+  "checks": {
+    "native": {
+      "passed": 25,
+      "failed": 0
+    },
+    "chromium": {
+      "passed": 20,
+      "failed": 0
+    },
+    "http": {
+      "passed": 7,
+      "failed": 0
+    }
+  },
+  "limits": "Software controls overlap outcomes, not people, independent studies, Unity, Windows or Steam."
+}

@@ -28,6 +28,21 @@ class CurrentContracts(unittest.TestCase):
     def test_intake_reaches_standalone_and_field_consumers(self):
         self.assertEqual(chosen('north-star/intake/Host/Room.cs'),{'intake','field'})
 
+    def test_portable_method_reaches_its_existing_consumer_gate(self):
+        self.assertEqual(chosen('labs/build-operations/portable-core/protocol.json'),{'intake'})
+
+    def test_portable_graph_reuses_exact_existing_owners_without_cli_sources(self):
+        g=scope.project_inputs(scope.ROOT,['north-star/csharp/Portable/Loadout/NorthStar.Loadout.csproj'])
+        for name,source in [('Crossing','Session.cs'),('Forge','Expedition.cs'),('Loadout','PreparedExpedition.cs')]:
+            self.assertIn('north-star/csharp/'+name+'/'+source,g['inputs'])
+            self.assertNotIn('north-star/csharp/'+name+'/Program.cs',g['inputs'])
+        self.assertEqual(len(g['projects']),4)
+
+    def test_unreviewed_default_compile_switch_is_rejected(self):
+        with tempfile.TemporaryDirectory() as td:
+            root=Path(td);(root/'unreviewed.csproj').write_text('<Project Sdk="Microsoft.NET.Sdk"><PropertyGroup><EnableDefaultCompileItems>false</EnableDefaultCompileItems></PropertyGroup></Project>')
+            with self.assertRaises(ValueError):scope.project_inputs(root,['unreviewed.csproj'])
+
     def test_domain_reaches_real_reverse_consumers(self):
         self.assertEqual(chosen('north-star/csharp/Domain/Progression.cs'),set(scope.SUITES)-{'input_timing','reputation','combat'})
 

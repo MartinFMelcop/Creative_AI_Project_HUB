@@ -1,0 +1,58 @@
+{
+  "kind": "actual_environment_probe",
+  "date": "2026-10-30 America/Sao_Paulo",
+  "commands": [
+    {
+      "command": [
+        "python3",
+        "--version"
+      ],
+      "exit_code": 0,
+      "stdout": "Python 3.12.14\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "node",
+        "--version"
+      ],
+      "exit_code": 0,
+      "stdout": "v24.19.0\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/workspace/work/authored-scene/dotnet/dotnet",
+        "--version"
+      ],
+      "exit_code": 0,
+      "stdout": "10.0.401\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "bash",
+        "-c",
+        "command -v Unity unity unityhub steam steamcmd"
+      ],
+      "exit_code": 1,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "ls",
+        "-ld",
+        "/opt/Unity",
+        "/opt/unity",
+        "/usr/local/Unity",
+        "/workspace/Unity",
+        "/root/Unity/Hub/Editor"
+      ],
+      "exit_code": 2,
+      "stdout": "",
+      "stderr": "ls: cannot access '/opt/Unity': No such file or directory\nls: cannot access '/opt/unity': No such file or directory\nls: cannot access '/usr/local/Unity': No such file or directory\nls: cannot access '/workspace/Unity': No such file or directory\nls: cannot access '/root/Unity/Hub/Editor': Permission denied\n"
+    }
+  ],
+  "limits": "Bounded PATH/conventional-root probes; protected-root denial is not global absence. No licensed Editor/activation/module or fresh Windows/Steam/device/human acceptance."
+}

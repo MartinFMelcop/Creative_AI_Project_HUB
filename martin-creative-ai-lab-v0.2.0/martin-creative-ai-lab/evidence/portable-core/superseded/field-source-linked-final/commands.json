@@ -1,0 +1,46 @@
+[
+  {
+    "command": [
+      "/workspace/work/authored-scene/dotnet/dotnet",
+      "--version"
+    ],
+    "exit_code": 0,
+    "stdout": "10.0.401\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "/workspace/work/authored-scene/dotnet/dotnet",
+      "build",
+      "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/field-journey/PreparationChecks/NorthStar.PreparationChecks.csproj",
+      "-c",
+      "Release"
+    ],
+    "exit_code": 0,
+    "stdout": "  Determining projects to restore...\n  Restored /workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/field-journey/PreparationChecks/NorthStar.PreparationChecks.csproj (in 169 ms).\n  12 of 13 projects are up-to-date for restore.\n  NorthStar.Domain -> /workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/Domain/bin/Release/netstandard2.1/NorthStar.Domain.dll\n  NorthStar.Crossing -> /workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/Portable/Crossing/bin/Release/netstandard2.1/NorthStar.Crossing.dll\n  NorthStar.Preparation -> /workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/field-journey/Preparation/bin/Release/netstandard2.1/NorthStar.Preparation.dll\n  NorthStar.Conditions -> /workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/memory-study/Conditions/bin/Release/netstandard2.1/NorthStar.Conditions.dll\n  NorthStar.FieldSampling -> /workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/field-journey/Sampling/bin/Release/netstandard2.1/NorthStar.FieldSampling.dll\n  NorthStar.FieldPresentation -> /workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/field-journey/Presentation/bin/Release/netstandard2.1/NorthStar.FieldPresentation.dll\n  NorthStar.Memory -> /workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/memory-study/Rules/bin/Release/netstandard2.1/NorthStar.Memory.dll\n  NorthStar.Forge -> /workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/Portable/Forge/bin/Release/netstandard2.1/NorthStar.Forge.dll\n  NorthStar.Loadout -> /workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/Portable/Loadout/bin/Release/netstandard2.1/NorthStar.Loadout.dll\n  NorthStar.MemoryStudy -> /workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/memory-study/Host/bin/Release/net10.0/NorthStar.MemoryStudy.dll\n  NorthStar.Intake -> /workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/intake/Host/bin/Release/net10.0/NorthStar.Intake.dll\n  NorthStar.FieldJourney -> /workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/field-journey/Host/bin/Release/net10.0/NorthStar.FieldJourney.dll\n  NorthStar.PreparationChecks -> /workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/field-journey/PreparationChecks/bin/Release/net10.0/NorthStar.PreparationChecks.dll\n\nBuild succeeded.\n    0 Warning(s)\n    0 Error(s)\n\nTime Elapsed 00:00:04.33\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "/workspace/work/authored-scene/dotnet/dotnet",
+      "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/field-journey/PreparationChecks/bin/Release/net10.0/NorthStar.PreparationChecks.dll",
+      "/workspace/work/portable-core/field-source-linked-final/native.json"
+    ],
+    "exit_code": 0,
+    "stdout": "PASS: 41 authored preparation native controls\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "python3",
+      "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/field-journey/tools/sampling-verify.py",
+      "--dotnet",
+      "/workspace/work/authored-scene/dotnet/dotnet",
+      "--output",
+      "/workspace/work/portable-core/field-source-linked-final/regressions"
+    ],
+    "exit_code": 1,
+    "stdout": "",
+    "stderr": "Traceback (most recent call last):\n  File \"/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/field-journey/tools/sampling-verify.py\", line 30, in <module>\n    if __name__=='__main__':main()\n                            ^^^^^^\n  File \"/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/field-journey/tools/sampling-verify.py\", line 23, in main\n    if r.returncode:raise RuntimeError('Actual command failed: '+command[1])\n                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nRuntimeError: Actual command failed: build\n"
+  }
+]

@@ -1,0 +1,174 @@
+{
+  "schema_version": 1,
+  "kind": "intake_native_consumer",
+  "checks": {
+    "passed": 25,
+    "failed": 0
+  },
+  "controls": [
+    "Initial card is unconfirmed",
+    "Unconfirmed craft cannot grant or spend",
+    "Unconfirmed entry cannot create encounter",
+    "Confirmation without review fails",
+    "Draft can stage independent cosmetic identity",
+    "Edit invalidates previous review",
+    "Invalid whole proposal leaves all observation fields exact",
+    "Explicit current review confirms at native step 7",
+    "Confirmed card has exact original name and accent",
+    "Stale response refuses",
+    "Stale intent leaves stored receipt and owner exact",
+    "Confirmed identity uses actual finite crafting",
+    "Active cosmetic edit cannot reset owner",
+    "Actual survey earns stage without final completion",
+    "Different handle refuses without losing earned facts",
+    "Earned amendment preserves live identity and resources",
+    "Pending amendment blocks entry before rig spend",
+    "Explicit current review confirms at native step 17",
+    "Confirmation preserves earned owner facts",
+    "Same named owner completes actual earned-action journey",
+    "Completed edit cannot erase completion",
+    "Explicit current review confirms at native step 21",
+    "Actual failure retains spent rig without completion",
+    "Explicit current review confirms at native step 23",
+    "Post-loss confirmation never refunds or heals"
+  ],
+  "complete": {
+    "sequence": 30,
+    "command": "draft",
+    "accepted": false,
+    "text": "Identity handle is fixed after confirmation; preparation edits are unavailable during/after an encounter.",
+    "confirmed": true,
+    "pending": false,
+    "draft_revision": 3,
+    "reviewed_revision": 3,
+    "draft": {
+      "handle": "Kestrel",
+      "accent": "violet",
+      "class_id": "anchor",
+      "background_id": "trailborn",
+      "slots": [
+        "brace",
+        "dash",
+        null,
+        null
+      ]
+    },
+    "identity": {
+      "handle": "Kestrel",
+      "accent": "violet",
+      "class_id": "anchor",
+      "background_id": "trailborn",
+      "slots": [
+        "brace",
+        "dash",
+        null,
+        null
+      ]
+    },
+    "state": {
+      "class_id": "anchor",
+      "background_id": "trailborn",
+      "slots": [
+        "brace",
+        "dash",
+        null,
+        null
+      ],
+      "active": false,
+      "complete": true,
+      "won": true,
+      "stage": 1,
+      "beat": 6,
+      "position": 4,
+      "health": 11,
+      "resolve": 5,
+      "rig": "Trail",
+      "attempts": 2,
+      "consumed_rigs": 2,
+      "transactions": 4,
+      "inventory": {
+        "fiber": 0,
+        "binder": 0,
+        "trail_rig": 0
+      },
+      "level": 3,
+      "xp": 25,
+      "unspent": 2,
+      "vitality": 0,
+      "focus": 2
+    },
+    "threat": "BOLT: moving exposes health; the approach skill spends resolve to protect.",
+    "required_position": 4,
+    "maximum_beats": 6
+  },
+  "failed": {
+    "sequence": 10,
+    "command": "confirm",
+    "accepted": true,
+    "text": "Reviewed identity and complete preparation confirmed atomically. No supply, health or reward grant.",
+    "confirmed": true,
+    "pending": false,
+    "draft_revision": 2,
+    "reviewed_revision": 2,
+    "draft": {
+      "handle": "Wayfarer",
+      "accent": "violet",
+      "class_id": "anchor",
+      "background_id": "workshop",
+      "slots": [
+        "brace",
+        null,
+        null,
+        null
+      ]
+    },
+    "identity": {
+      "handle": "Wayfarer",
+      "accent": "violet",
+      "class_id": "anchor",
+      "background_id": "workshop",
+      "slots": [
+        "brace",
+        null,
+        null,
+        null
+      ]
+    },
+    "state": {
+      "class_id": "anchor",
+      "background_id": "workshop",
+      "slots": [
+        "brace",
+        null,
+        null,
+        null
+      ],
+      "active": false,
+      "complete": false,
+      "won": false,
+      "stage": 0,
+      "beat": 3,
+      "position": 0,
+      "health": 0,
+      "resolve": 10,
+      "rig": "Trail",
+      "attempts": 1,
+      "consumed_rigs": 1,
+      "transactions": 2,
+      "inventory": {
+        "fiber": 2,
+        "binder": 1,
+        "trail_rig": 0
+      },
+      "level": 1,
+      "xp": 0,
+      "unspent": 0,
+      "vitality": 0,
+      "focus": 0
+    },
+    "threat": "BOLT: moving exposes health; the approach skill spends resolve to protect.",
+    "required_position": 2,
+    "maximum_beats": 4
+  },
+  "limits": "Software controls, not people, legacy creation parsing, Unity, Windows or Steam."
+}

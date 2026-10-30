@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup><TargetFrameworks>net10.0;netstandard2.1</TargetFrameworks><Nullable>enable</Nullable><TreatWarningsAsErrors>true</TreatWarningsAsErrors><Deterministic>true</Deterministic></PropertyGroup>
+  <PropertyGroup Condition="'$(TargetFramework)' == 'net10.0'">
+    <OutputType>Exe</OutputType>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(TargetFramework)' == 'netstandard2.1'">
+    <OutputType>Library</OutputType>
+    <LangVersion>8.0</LangVersion>
+    <DefaultItemExcludes>$(DefaultItemExcludes);Program.cs</DefaultItemExcludes>
+  </PropertyGroup>
+  <ItemGroup><ProjectReference Include="../Domain/NorthStar.Domain.csproj" /><ProjectReference Include="../Forge/NorthStar.Forge.csproj" /></ItemGroup>
+</Project>

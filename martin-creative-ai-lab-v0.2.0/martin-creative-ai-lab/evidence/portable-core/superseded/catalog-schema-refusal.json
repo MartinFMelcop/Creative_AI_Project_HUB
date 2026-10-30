@@ -1,0 +1,11 @@
+{
+  "kind": "recorded_actual_tool_observation",
+  "command": [
+    "python3",
+    "tools/check_transformation.py"
+  ],
+  "exit_code": 1,
+  "stdout": "FAIL: lab build-operations: consumer_paths requires actual consumer code\n",
+  "cause": "The draft catalog listed project files in consumer_paths, whose existing schema requires code files. Replaced those paths with the actual existing owner/Host .cs files; validator unchanged.",
+  "capture_boundary": "Transcribed exact primary tool output, not an original subprocess log."
+}

@@ -1,0 +1,4 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup><OutputType>Exe</OutputType><TargetFramework>net10.0</TargetFramework><Nullable>enable</Nullable><TreatWarningsAsErrors>true</TreatWarningsAsErrors><Deterministic>true</Deterministic></PropertyGroup>
+  <ItemGroup><ProjectReference Include="../../csharp/Crossing/NorthStar.Crossing.csproj" SetTargetFramework="TargetFramework=netstandard2.1" /><ProjectReference Include="../../csharp/Forge/NorthStar.Forge.csproj" SetTargetFramework="TargetFramework=netstandard2.1" /><ProjectReference Include="../../csharp/Loadout/NorthStar.Loadout.csproj" SetTargetFramework="TargetFramework=netstandard2.1" /></ItemGroup>
+</Project>

@@ -17,8 +17,12 @@ dotnet north-star/field-journey/Host/bin/Release/net10.0/NorthStar.FieldJourney.
 
 Open `http://127.0.0.1:8099/`. The entire session is ephemeral and trusted-local;
 closing this host loses it. Do not expose it publicly. This .NET10/Linux/browser
-composition references executable projects and is not a Unity/netstandard library,
-production browser direction, saved account or new Windows/Steam recipient package.
+composition still references the executable Intake and MemoryStudy adapters. FieldJourney
+and Intake reference C#8/netstandard2.1 libraries under csharp/Portable that source-link
+the original Loadout/Forge/Crossing rules and omit their CLI programs. The original
+.NET10 rule projects and both recipient source closures remain unchanged. The entire FieldJourney host remains
+.NET10, not a Unity/netstandard library, production browser direction, saved account
+or new Windows/Steam recipient package.
 Both existing downloadable scenes stay unchanged and do not include this application.
 
 ## One person's actual preparation

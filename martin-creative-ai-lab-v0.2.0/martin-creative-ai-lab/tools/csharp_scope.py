@@ -46,7 +46,7 @@ EXTRA={
  'recovery':('labs/networking-persistence/','evidence/persistent-expedition/','projects/cinderwatch/Core/Journal.cs','projects/eclipse-fair/Cli/Journal.cs','projects/realtime-integration-lab/rooms-store.cjs','projects/realtime-integration-lab/rooms-actions.cjs','projects/realtime-integration-lab/rooms-backup.cjs'),
  'narrative':('labs/narrative-continuity/run.py','labs/narrative-continuity/test_instrument.py','evidence/narrative-continuity/','projects/lich-cistern/story.en.md','projects/lich-cistern/SOURCE_COMPARISON.md','projects/waystone-dialogue/browser/dist/deferred-request.js','projects/waystone-dialogue/browser/tests/deferred-request.test.mjs',CS+'Narrative/SCENE.md'),
  'input_timing':('labs/input-timing/','evidence/input-timing/',CS+'InputTiming/',CS+'Interaction/','projects/tokyo80s/dist/core.js','projects/tokyo80s/dist/rehearsal.js','projects/tokyo80s/dist/review.js','north-star/prototype/return_gate.gd','north-star/prototype/controls.gd'),
- 'intake':('north-star/intake/','evidence/intake/'),
+ 'intake':('north-star/intake/','evidence/intake/','labs/build-operations/portable-core/','evidence/portable-core/'),
  'field':('north-star/field-journey/','north-star/intake/','north-star/memory-study/','labs/narrative-continuity/memory/','labs/world-gameplay/dialogue-conditions/','evidence/preparation-authoring/','evidence/query-bindings/','evidence/field-sampling/','evidence/field-presentation/','evidence/field-journey/','evidence/dialogue-conditions/','evidence/memory-study/'),
  'presentation':('labs/visual-animation/','evidence/visual-animation/',CS+'Presentation/'),
  'audio':('labs/audio-music/','evidence/audio-music/',CS+'Audio/',CS+'Presentation/'),
@@ -64,6 +64,7 @@ WHOLE_CSHARP_BINDINGS=('progression','crafting','loadout','recovery')
 SHARED_FILES={'north-star/csharp/global.json','tools/ci_scope.py','tools/csharp_scope.py','tools/test_ci_scope.py','tools/test_csharp_scope.py','tools/test_csharp_workflow.py'}
 BUILD_NAMES={'global.json','Directory.Build.props','Directory.Build.targets','Directory.Packages.props','NuGet.Config','nuget.config'}
 PROPERTIES={'TargetFramework','LangVersion','OutputType','Nullable','TreatWarningsAsErrors','Deterministic','ImplicitUsings'}
+PORTABLE_PROJECTS={CS+'Portable/'+name+'/NorthStar.'+name+'.csproj' for name in ('Crossing','Forge','Loadout')}
 SKIP={'bin','obj','.git','__pycache__','node_modules'}
 
 
@@ -105,6 +106,8 @@ def project_inputs(root,seeds):
                 if tag!='Project' and item.attrib:raise ValueError('Unsupported MSBuild group attributes')
             elif tag in PROPERTIES:
                 if item.attrib or list(item):raise ValueError('Unsupported build property')
+            elif tag=='EnableDefaultCompileItems':
+                if project.relative_to(root).as_posix() not in PORTABLE_PROJECTS or item.attrib or list(item) or item.text!='false':raise ValueError('Unreviewed explicit source ownership')
             elif tag in ('ProjectReference','Compile','Content','None','EmbeddedResource'):
                 allowed={'Include','Link','CopyToOutputDirectory','CopyToPublishDirectory'}
                 if not item.attrib.get('Include') or set(item.attrib)-allowed:raise ValueError('Unsupported MSBuild input attributes')

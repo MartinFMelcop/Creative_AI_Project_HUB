@@ -8,6 +8,10 @@ next acceptance live in [the transformation catalog](origins.json). The
 A destination is not operational merely because it has an entry or a directory.
 Build/Operations remains incomplete; it cannot be postponed indefinitely.
 
+The incomplete [Build/Operations destination](build-operations/README.md) now has
+bounded existing-owner portability evidence. Its retained licensed Unity/Windows
+acceptance is still outstanding.
+
 ## Operational methods
 
 - [AI Evaluation & Quality](ai-evaluation/README.md): one separately generated

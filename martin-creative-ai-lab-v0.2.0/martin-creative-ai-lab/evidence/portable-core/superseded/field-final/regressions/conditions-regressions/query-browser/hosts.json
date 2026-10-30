@@ -1,0 +1,65 @@
+{
+  "complete": true,
+  "logs": [
+    {
+      "command": [
+        "/workspace/work/authored-scene/dotnet/dotnet",
+        "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/memory-study/Host/bin/Release/net10.0/NorthStar.MemoryStudy.dll",
+        "--serve",
+        "35833",
+        "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/memory-study/web",
+        "--seconds",
+        "120",
+        "--policy",
+        "single-offer"
+      ],
+      "stdout": "READY http://127.0.0.1:35833/\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/workspace/work/authored-scene/dotnet/dotnet",
+        "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/memory-study/Host/bin/Release/net10.0/NorthStar.MemoryStudy.dll",
+        "--serve",
+        "33613",
+        "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/memory-study/web",
+        "--seconds",
+        "120",
+        "--policy",
+        "independent"
+      ],
+      "stdout": "READY http://127.0.0.1:33613/\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/workspace/work/authored-scene/dotnet/dotnet",
+        "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/memory-study/Host/bin/Release/net10.0/NorthStar.MemoryStudy.dll",
+        "--serve",
+        "37567",
+        "/tmp/query-render-mutants-PknPAP/false-open",
+        "--seconds",
+        "120",
+        "--policy",
+        "single-offer"
+      ],
+      "stdout": "READY http://127.0.0.1:37567/\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/workspace/work/authored-scene/dotnet/dotnet",
+        "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/memory-study/Host/bin/Release/net10.0/NorthStar.MemoryStudy.dll",
+        "--serve",
+        "46835",
+        "/tmp/query-render-mutants-PknPAP/false-fitting",
+        "--seconds",
+        "120",
+        "--policy",
+        "single-offer"
+      ],
+      "stdout": "READY http://127.0.0.1:46835/\n",
+      "stderr": ""
+    }
+  ]
+}
