@@ -140,8 +140,8 @@
   "result_artifacts": [
     {
       "local_path": "evidence/economy-crafting/results.json",
-      "size_bytes": 18256,
-      "sha256": "63fc84d71d0848896e2b1f5bd252573f29949e6fc5be8c47ff16ab1382384f38"
+      "size_bytes": 18368,
+      "sha256": "7a6daefa1945b75ff6d04c9ba2d1713c8e23010275a6e3c78221cb5861c551a5"
     },
     {
       "local_path": "evidence/economy-crafting/native.json",
@@ -253,5 +253,55 @@
     "comparison": "evidence/response-chain/assay-reconciliation/summary.json",
     "prior_run": "evidence/response-chain/prior-bound-assays/economy-crafting/RUN.json",
     "prior_result": "evidence/response-chain/prior-bound-assays/economy-crafting/results.json"
+  },
+  "audio_priority_identity_revalidation": {
+    "baseline_commit": "1cc982a525b63abbd8a1091ebd70e16df7844cb5",
+    "reason": "Actual finite audio admission and its native checks/Presentation descriptor alter conservative whole-C#-tree identity coverage. The complete supported assay reran; all nonidentity observations are exact and strict full-result comparison passed without changing fingerprints, fixtures or comparison gates.",
+    "observations_exact": true,
+    "identity_changes": {
+      "north-star/csharp/Audio/Admission.cs": {
+        "before": null,
+        "after": "51a98f3e963def8305cd4d3e2e542dc004912d54a683a5551128186fd89e2cb2"
+      },
+      "north-star/csharp/AudioChecks/Program.cs": {
+        "before": "84a1e8ae9d0465901869649573ab117665a146a4f80c04c221b21d1a76e4d068",
+        "after": "eb48a218e76dd9c3fe59631285035b2b041f483df9d0d401107cc8f3c4f328b9"
+      },
+      "north-star/csharp/Presentation/Program.cs": {
+        "before": "e04317ed8ee81a65360d07653b3fe03e900a748eac677e9b30b70b02721f6581",
+        "after": "44089db8317ca46fc8e1ec9c5004d9f585ec8fd55cb01241c2d7c592c1b1a5b9"
+      }
+    },
+    "prior_run": "evidence/audio-music/p08-v6/prior-assays/economy-crafting/RUN.json",
+    "prior_result": "evidence/audio-music/p08-v6/prior-assays/economy-crafting/results.json",
+    "prior_run_sha256": "e19872d36956286e354337cac6e1abe091279df48da3e163babe2eec09af9a1f",
+    "prior_result_sha256": "63fc84d71d0848896e2b1f5bd252573f29949e6fc5be8c47ff16ab1382384f38",
+    "result_sha256": "7a6daefa1945b75ff6d04c9ba2d1713c8e23010275a6e3c78221cb5861c551a5",
+    "commands": [
+      {
+        "command": [
+          "python3",
+          "labs/economy-simulation/run.py",
+          "--dotnet",
+          "/workspace/work/authored-scene/dotnet/dotnet",
+          "--output",
+          "/workspace/work/p08-v6/regressions/economy-crafting.json"
+        ],
+        "exit_code": 0
+      },
+      {
+        "command": [
+          "python3",
+          "labs/economy-simulation/run.py",
+          "--dotnet",
+          "/workspace/work/authored-scene/dotnet/dotnet",
+          "--output",
+          "/workspace/work/p08-v6/regressions/economy-crafting-strict-compare.json",
+          "--compare",
+          "evidence/economy-crafting/results.json"
+        ],
+        "exit_code": 0
+      }
+    ]
   }
 }

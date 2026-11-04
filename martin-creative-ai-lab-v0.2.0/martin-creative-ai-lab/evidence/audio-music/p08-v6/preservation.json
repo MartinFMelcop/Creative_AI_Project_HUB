@@ -1,0 +1,143 @@
+{
+  "schema": "p08.preservation-and-publication-boundary.v1",
+  "baseline_commit": "1cc982a525b63abbd8a1091ebd70e16df7844cb5",
+  "baseline_files": 3653,
+  "compared_prior_files": 3652,
+  "excluded_self_referential_manifest": "MANIFEST.sha256 is regenerated and checked after final records; no circular after-digest claimed.",
+  "unchanged_prior_files": 3633,
+  "changed_intended_prior_files": [
+    {
+      "path": "docs/STATE.md",
+      "before": "95c043465594a13144a79e8762bcd5a337a01aef3f9362801702a5b1e1464f11",
+      "after": "14dba78086ba660456bb0de1995af9b40f5573bc484cb139326841a28066029a"
+    },
+    {
+      "path": "evidence/economy-crafting/RUN.json",
+      "before": "e19872d36956286e354337cac6e1abe091279df48da3e163babe2eec09af9a1f",
+      "after": "cc7bcf9742e2da377cdcf685a612a57b3d76b533a7970e17653e6eea7095c108"
+    },
+    {
+      "path": "evidence/economy-crafting/results.json",
+      "before": "63fc84d71d0848896e2b1f5bd252573f29949e6fc5be8c47ff16ab1382384f38",
+      "after": "7a6daefa1945b75ff6d04c9ba2d1713c8e23010275a6e3c78221cb5861c551a5"
+    },
+    {
+      "path": "evidence/persistent-expedition/RUN.json",
+      "before": "58380d343ec2be4429cfb7d6bc0a6bf22b6e26a3c58983e1b9d0ab19cfadf751",
+      "after": "e26201b869dfa4fa1f5f01891cd4655b478bfaf6140cf872ee96b38f26581804"
+    },
+    {
+      "path": "evidence/persistent-expedition/results.json",
+      "before": "f0145995d390c5d33666c92bc1f9536a8038db209d65a35348db560b4afecfae",
+      "after": "5380934fb871df9ce0d8af31c62a7f9ec7df837e7631fb79e4174c90285d549c"
+    },
+    {
+      "path": "evidence/rpg-progression/RUN.json",
+      "before": "659f3f02ba15d41bd38557dfcb1333d60530128e9a18f9dee2068c366a099058",
+      "after": "40ecd7eb61d9b1e3a51deb3ce3240b2f54d7e1f14def2e7b513212b35f1ec05a"
+    },
+    {
+      "path": "evidence/rpg-progression/results.json",
+      "before": "9d3528cd27e6c8fa6876ef094b08e7820996bba837968c143240f262f49bb7a8",
+      "after": "e1f46e6e746400222a673da68cd94b10687515d44f7f61a6818d14df1749648f"
+    },
+    {
+      "path": "evidence/world-loadout/RUN.json",
+      "before": "91ddeaa91427b61049a9dcaf24d1f6875f19c0528aac23032f9d77c4587d0aef",
+      "after": "ae4573886580f35988074d4ad0942593f8fbb5e30ed92b3aec290500ee309d87"
+    },
+    {
+      "path": "evidence/world-loadout/results.json",
+      "before": "fb05866b7f29656c2d4ee4166f6c39a092388d52eabd59bcf4fefa0d446d2734",
+      "after": "a83bfa3ce4848bf378b005151225fd69aafe62c875dee90bdf6a496fcd5896af"
+    },
+    {
+      "path": "knowledge/README.md",
+      "before": "381bcbeba0eb028081976955a5e46045406632a698a4ccdc2100f8a5cdd94c20",
+      "after": "d5a434b41d4c9b2e8b25576e213c9c90e63e93adb148c5eb0ea0d80342f69833"
+    },
+    {
+      "path": "labs/README.md",
+      "before": "c6c28fe0337973dd88e3e5f391c50f4469d7e454a8ed515066805eaa4ff205e3",
+      "after": "1e0ed922ec8f1a039dd97c0b2e2093b4c8c91d62e863d396230320ed27496f7b"
+    },
+    {
+      "path": "labs/audio-music/README.md",
+      "before": "74ef98d5b03dc1db4b9ee935971b3b3802c51ddde5e0e1f63c12cebb031fbc02",
+      "after": "cce30e63386fc4f7c4a56faac1b0244a78728485cf7fbe689afd922e86fba937"
+    },
+    {
+      "path": "labs/origins.json",
+      "before": "9017b4d5f51167c1ceb819e685f0702ebb1c93588660d6f6f33af9d484a459fd",
+      "after": "b7002f07986db95d073b08caee6f0ebc31d2fdd2fdbe722bb0133ff21b20a21d"
+    },
+    {
+      "path": "north-star/capabilities.json",
+      "before": "c39b3058182eec1f685534299cc3dfed164cc2ad2d9d1baff812d5d199e937aa",
+      "after": "7c2e45e08db3a82299b5e9859d3434e107c4395dd74f635f181d75a42922ecc7"
+    },
+    {
+      "path": "north-star/csharp/Audio/README.md",
+      "before": "a501e6401d58bd6804e7607055dd419f75052d4e1b2ca78e7f39c2c402359503",
+      "after": "8ac75159cafed88a7d60e088259df4c9351f976b1ce07301d927b448771b8987"
+    },
+    {
+      "path": "north-star/csharp/AudioChecks/Program.cs",
+      "before": "84a1e8ae9d0465901869649573ab117665a146a4f80c04c221b21d1a76e4d068",
+      "after": "eb48a218e76dd9c3fe59631285035b2b041f483df9d0d401107cc8f3c4f328b9"
+    },
+    {
+      "path": "north-star/csharp/Presentation/Program.cs",
+      "before": "e04317ed8ee81a65360d07653b3fe03e900a748eac677e9b30b70b02721f6581",
+      "after": "44089db8317ca46fc8e1ec9c5004d9f585ec8fd55cb01241c2d7c592c1b1a5b9"
+    },
+    {
+      "path": "north-star/csharp/Presentation/web/audio.js",
+      "before": "3ac5765f9353a72737ecce58c76f0d6d34ea7bfbaf3db29ef6953e148665f5a1",
+      "after": "472d07cf5936625c2f613e303bb51ac02d2b9d1c11fed833972c35601d8b9a6b"
+    },
+    {
+      "path": "tools/test_csharp_workflow.py",
+      "before": "18fdc05578d4fd7c7c9d91fd309f5672315282cb533c73a7102084ef588e8d81",
+      "after": "4251fefb771330e3ebf05c888a6def64f1974cf89d1fa2f6dd2f802d3749b6d0"
+    }
+  ],
+  "removed_prior_files": [],
+  "unexpected_changes": [],
+  "protected_prefixes_exact": [
+    "brains/",
+    "references/",
+    "projects/",
+    "north-star/csharp/Portable/",
+    "north-star/csharp/Domain/",
+    "north-star/csharp/Crossing/",
+    "north-star/csharp/Forge/",
+    "north-star/csharp/Loadout/",
+    "north-star/csharp/Narrative/",
+    "north-star/csharp/Recovery/",
+    "north-star/authored-scene/",
+    "north-star/intake/",
+    "north-star/field-journey/",
+    "north-star/memory-study/",
+    "north-star/combat-study/",
+    "delivery/"
+  ],
+  "original_audio_sound_source_exact": true,
+  "current_priority_input11_and_frozen_core4_exact": true,
+  "new_files_matching_any48held_media_hashes": 0,
+  "new_code_files_matching_supplied_source_hashes": 0,
+  "recipient_archives": [
+    {
+      "path": "delivery/authored-scene/dist/authored-scene-demo-linux-x64.zip",
+      "bytes": 35908523,
+      "sha256": "d829b1b59ee2dd22f87ab007c4db96bfe1655731b38d02f5085f0b8d30e043e4"
+    },
+    {
+      "path": "delivery/authored-scene-windows/dist/authored-scene-demo-win-x64.zip",
+      "bytes": 35820510,
+      "sha256": "0500d70a6a6c7071f12423fd529c0922830c09d34a312ae46c4f1e562c5aaffb"
+    }
+  ],
+  "retirement": "None; no source/save/package/media/notice retired. Original ZIP/extraction remain outside Git; no assumption that Git history alone preserves rights-held sources.",
+  "boundary": "This is preservation and identity evidence, not another consumer execution, legal clearance, production or human acceptance."
+}

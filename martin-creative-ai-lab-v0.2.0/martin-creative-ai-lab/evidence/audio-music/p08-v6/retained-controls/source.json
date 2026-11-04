@@ -1,0 +1,206 @@
+{
+  "identities": {
+    "labs/audio-music/native.gd": "276f09345f367b82a1a63e3ba8043d55dee6279c61283c38b2c9f5994a3f8176",
+    "labs/audio-music/run.py": "172db7b4f34bd25baca554e1147c9cb34fcc7a8be1b84bd1a737d1e127e9ff4e",
+    "projects/veil-arena/media/audio-catalog.json": "705fd04599734d19f98380e945ef1102d4eddc4c00c49b3fe66a7b0ba142fc65",
+    "projects/veil-arena/media/audio/break.wav": "b1d63aaea6d0fb5e9ce1295916e80c21693a508236ddb33136e71e2682d283c4",
+    "projects/veil-arena/media/audio/charge.wav": "9d8bc1dca6d0de9eb27f0629b74eeeecf0fb37c36cfe392b9e08a918cf9d6994",
+    "projects/veil-arena/media/audio/counter.wav": "f207180c7c7d2b4186a877cc9818dac236d8300c247c1de1e84c4656dfce09d8",
+    "projects/veil-arena/media/audio/courtyard.ogg": "273d39c6fbeedeffb05cd558c8280b9f9b03934fd457438ba8aa1f1cd1fc083d",
+    "projects/veil-arena/media/audio/defeat.wav": "b1d757617b9d5519423924a1d8fcc255315465f94923e13e8b773be780365ef5",
+    "projects/veil-arena/media/audio/dodge.wav": "b03da5758d81540d425d61d7a7cf336fda5b36c72977275a3d16a73f4e7a420a",
+    "projects/veil-arena/media/audio/echo.wav": "fce10f784afd0609766197114e26e67d2ee8e9970198e32d90467d156bc4c998",
+    "projects/veil-arena/media/audio/fracture.ogg": "25537961cfb15f4d7b3cb6b084ed6f57a0b44f5285c4d1d6b71e6e2acdba875f",
+    "projects/veil-arena/media/audio/guard.wav": "6fc04238cbe2ef03f2ec04c9b722c176dafefba82527eedfc3218f9fb216d5bd",
+    "projects/veil-arena/media/audio/hurt.wav": "f0eb81a6e44d9ff29bae9ed48931d7f37bafc3951588e4f165d0396f51d8a144",
+    "projects/veil-arena/media/audio/phase.wav": "32261a143bfea4eb3e21d3c95b0014106b00a812e5f1bc9d9a2e658fdefeaf10",
+    "projects/veil-arena/media/audio/seal.wav": "13950cd8b7fcd590714dbe524caf5bb9560160ef3b66d425234ce2f2f44985f6",
+    "projects/veil-arena/media/audio/strike.wav": "3a73b35b915e772cf463aa9c5e3009b79e22d8a5887d72a8e387e3b63372d270",
+    "projects/veil-arena/media/audio/sweep.wav": "8c5fd0b0511d00ddb1bbabcf817afd7ecd6eefd1540fdc5f63f679f78cd3a9a0",
+    "projects/veil-arena/media/audio/victory.wav": "ea33b771ae8cbf4eb232faa3ea544b1cfaa2c3d4ba28441e32e0f7a0ad11f928",
+    "projects/veil-arena/media/audio/wave.wav": "1a4369fb0e6422f950b7850dffa6d46960b68b6848dd57ed765809f0c466c5de",
+    "projects/veil-arena/media/masters/courtyard.wav": "74c80d6a23ad393b5b88492cc3879cbb22ec8ea0ac6af6eeeb8731894ff57e53",
+    "projects/veil-arena/media/masters/fracture.wav": "10727068f2d47d136b8a29f047dff60c21494c0b81bf6063a4cc7cb1f051aaba",
+    "projects/veil-arena/media/provenance.json": "f10e27a7d2769aa98a36a48f12b45d825d89546331bbabc6f7c46bbaeb8d83e3",
+    "projects/veil-arena/sound.gd": "9c8159e676f713bd1bf60ca4caf967689c8628b4f9a9ba78b30527b92e550cf5",
+    "projects/veil-arena/tools/render_audio.py": "6c287af79c22a18d07659b6fbbac69066610b4168f57cb99880f8b53b306c6fe"
+  },
+  "kind": "actual_audio_source_study",
+  "limits": "Actual preserved source and post-limiter digital mixer capture, not physical listening, cue recognition, preference, speaker/headphone quality, latency, Unity, Windows or Steam. Equal PCM transport length is not phase proof; native locked position observations supply bounded alignment controls.",
+  "native": {
+    "controls": [
+      "actual_same_block_stems_within_15ms",
+      "actual_post_limiter_audio_nonzero",
+      "actual_phase_crossfade_reaches_endpoint",
+      "crossfade_keeps_transport_phase",
+      "suspended_source_drops_cue",
+      "actual_suspended_output_silent",
+      "muted_source_audits_without_playback",
+      "actual_muted_output_below_minus80db",
+      "bounded_eight_voices_and_64_events",
+      "actual_gain_stress_limiter_below_minus1_3db",
+      "atomic_100ms_shift_detected_above50ms",
+      "actual_reset_restores_transport",
+      "actual_reset_clears_phase_and_event_history",
+      "actual_stop_output_silent"
+    ],
+    "driver": "Dummy",
+    "measurements_contract": "Actual variable mixer values retained in sibling .measurements.json; exact comparison applies classifications/identities, not nondeterministic scheduling samples."
+  },
+  "negative_pcm_controls": [
+    {
+      "classification": "controlled in-memory PCM defect",
+      "detected": true,
+      "policy": "endpoint_step",
+      "reason": "Endpoint discontinuity"
+    },
+    {
+      "classification": "controlled in-memory PCM defect",
+      "detected": true,
+      "policy": "gain_clipping",
+      "reason": "Peak clipping/silence"
+    },
+    {
+      "classification": "controlled in-memory PCM defect",
+      "detected": true,
+      "policy": "missing_frame",
+      "reason": "Frame count"
+    }
+  ],
+  "pcm": [
+    {
+      "first": 0,
+      "frames": 16758,
+      "last": 0,
+      "path": "media/audio/sweep.wav",
+      "peak_integer": 11141,
+      "rms_integer": 3015.44735
+    },
+    {
+      "first": 0,
+      "frames": 18522,
+      "last": 0,
+      "path": "media/audio/charge.wav",
+      "peak_integer": 11141,
+      "rms_integer": 3139.033498
+    },
+    {
+      "first": 0,
+      "frames": 24255,
+      "last": 0,
+      "path": "media/audio/wave.wav",
+      "peak_integer": 11141,
+      "rms_integer": 2936.790111
+    },
+    {
+      "first": 0,
+      "frames": 5733,
+      "last": 0,
+      "path": "media/audio/strike.wav",
+      "peak_integer": 11141,
+      "rms_integer": 2218.891283
+    },
+    {
+      "first": 0,
+      "frames": 10143,
+      "last": 0,
+      "path": "media/audio/seal.wav",
+      "peak_integer": 11141,
+      "rms_integer": 4433.228039
+    },
+    {
+      "first": 0,
+      "frames": 8820,
+      "last": 0,
+      "path": "media/audio/guard.wav",
+      "peak_integer": 11141,
+      "rms_integer": 4026.61061
+    },
+    {
+      "first": 0,
+      "frames": 16758,
+      "last": 0,
+      "path": "media/audio/counter.wav",
+      "peak_integer": 11141,
+      "rms_integer": 2605.118707
+    },
+    {
+      "first": 0,
+      "frames": 30870,
+      "last": 0,
+      "path": "media/audio/break.wav",
+      "peak_integer": 11141,
+      "rms_integer": 2129.060784
+    },
+    {
+      "first": 0,
+      "frames": 13230,
+      "last": 0,
+      "path": "media/audio/hurt.wav",
+      "peak_integer": 11141,
+      "rms_integer": 2667.990103
+    },
+    {
+      "first": 0,
+      "frames": 7056,
+      "last": 0,
+      "path": "media/audio/dodge.wav",
+      "peak_integer": 11141,
+      "rms_integer": 1966.844598
+    },
+    {
+      "first": 0,
+      "frames": 50715,
+      "last": 0,
+      "path": "media/audio/phase.wav",
+      "peak_integer": 11141,
+      "rms_integer": 2330.445917
+    },
+    {
+      "first": 0,
+      "frames": 21168,
+      "last": 0,
+      "path": "media/audio/echo.wav",
+      "peak_integer": 11141,
+      "rms_integer": 4432.869093
+    },
+    {
+      "first": 0,
+      "frames": 52920,
+      "last": 0,
+      "path": "media/audio/victory.wav",
+      "peak_integer": 11141,
+      "rms_integer": 2289.730051
+    },
+    {
+      "first": 0,
+      "frames": 41895,
+      "last": 0,
+      "path": "media/audio/defeat.wav",
+      "peak_integer": 11141,
+      "rms_integer": 2769.520721
+    },
+    {
+      "first": 0,
+      "frames": 1058400,
+      "last": 0,
+      "path": "media/masters/courtyard.wav",
+      "peak_integer": 18022,
+      "rms_integer": 5735.708825
+    },
+    {
+      "first": 0,
+      "frames": 1058400,
+      "last": 0,
+      "path": "media/masters/fracture.wav",
+      "peak_integer": 18022,
+      "rms_integer": 3462.451766
+    }
+  ],
+  "producer_contract": "Optional --producer executes NumPy/FFmpeg source regeneration and records sibling .producer.json; canonical source method requires neither NumPy nor regeneration.",
+  "runtime": {
+    "godot": "4.6.3.stable.official.7d41c59c4",
+    "python": "standard-library PCM/native method"
+  },
+  "schema_version": 1
+}

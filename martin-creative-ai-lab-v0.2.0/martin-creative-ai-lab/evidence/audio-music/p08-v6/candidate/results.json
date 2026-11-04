@@ -1,0 +1,260 @@
+{
+  "schema": "p08.candidate-private-build-review.v1",
+  "source_copies": "copied-source-identities.json",
+  "sdk": "10.0.401",
+  "platform": "Linux Debian 13 x64",
+  "desktop": "NOT_BUILT (Avalonia 12.1.4 external packages; no version substitutions)",
+  "media_copied": 0,
+  "results": [
+    {
+      "label": "sdk-info",
+      "command": [
+        "/workspace/work/authored-scene/dotnet/dotnet",
+        "--info"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.155,
+      "log": "sdk-info.log",
+      "log_sha256": "0b2d829aff75553d9ff73faba97cbf7dd041a1a92c9b486cf06c75c28bcd63e1",
+      "summary_lines": []
+    },
+    {
+      "label": "Audio.Checks-build",
+      "command": [
+        "/workspace/work/authored-scene/dotnet/dotnet",
+        "build",
+        "tests/Audio.Checks/Audio.Checks.csproj",
+        "-c",
+        "Release",
+        "--nologo",
+        "-m:1",
+        "--disable-build-servers"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 8.287,
+      "log": "Audio.Checks-build.log",
+      "log_sha256": "cdd2420246c3f84a04f539537f11e7bad532a786b1050cb72ebc93c28bb1ced3",
+      "summary_lines": [
+        "Build succeeded.",
+        "    0 Warning(s)",
+        "    0 Error(s)"
+      ]
+    },
+    {
+      "label": "Audio.Checks-run",
+      "command": [
+        "/workspace/work/authored-scene/dotnet/dotnet",
+        "/workspace/work/p08-v6/candidate-build/tests/Audio.Checks/bin/Release/net10.0/Audio.Checks.dll"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.7,
+      "log": "Audio.Checks-run.log",
+      "log_sha256": "4d6f8ed409ddb556bf9940678eebbd23ca443be92f58b90161c12fb5ca39b0df",
+      "summary_lines": [
+        "PASS 24-bit PCM input supported",
+        "PASS 24-bit PCM output exact signed conversion",
+        "PASS 24-bit PCM output refuses full-scale boundary",
+        "PASS 142 executed checks (no audio device, UI, Unity or Windows validation)."
+      ]
+    },
+    {
+      "label": "Audio.MusicChecks-build",
+      "command": [
+        "/workspace/work/authored-scene/dotnet/dotnet",
+        "build",
+        "tests/Audio.MusicChecks/Audio.MusicChecks.csproj",
+        "-c",
+        "Release",
+        "--nologo",
+        "-m:1",
+        "--disable-build-servers"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 3.203,
+      "log": "Audio.MusicChecks-build.log",
+      "log_sha256": "879e3e67cc73040009fd1383e887e7fdc4c300bedb9530c17fbd8c1b598976d6",
+      "summary_lines": [
+        "Build succeeded.",
+        "    0 Warning(s)",
+        "    0 Error(s)"
+      ]
+    },
+    {
+      "label": "Audio.MusicChecks-run",
+      "command": [
+        "/workspace/work/authored-scene/dotnet/dotnet",
+        "/workspace/work/p08-v6/candidate-build/tests/Audio.MusicChecks/bin/Release/net10.0/Audio.MusicChecks.dll"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.902,
+      "log": "Audio.MusicChecks-run.log",
+      "log_sha256": "92605f3c44cb1bb32e12e673e96c160d58325feaa591653ce6f25920ade7686d",
+      "summary_lines": [
+        "PASS 36 C# music checks. These claims require execution on a .NET machine."
+      ]
+    },
+    {
+      "label": "Audio.AdaptiveChecks-build",
+      "command": [
+        "/workspace/work/authored-scene/dotnet/dotnet",
+        "build",
+        "tests/Audio.AdaptiveChecks/Audio.AdaptiveChecks.csproj",
+        "-c",
+        "Release",
+        "--nologo",
+        "-m:1",
+        "--disable-build-servers"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 3.046,
+      "log": "Audio.AdaptiveChecks-build.log",
+      "log_sha256": "e9f53cea00e52ccdade215f6fc7f7de5236d367482da1804167f0435eaea432e",
+      "summary_lines": [
+        "Build succeeded.",
+        "    0 Warning(s)",
+        "    0 Error(s)"
+      ]
+    },
+    {
+      "label": "Audio.AdaptiveChecks-run",
+      "command": [
+        "/workspace/work/authored-scene/dotnet/dotnet",
+        "/workspace/work/p08-v6/candidate-build/tests/Audio.AdaptiveChecks/bin/Release/net10.0/Audio.AdaptiveChecks.dll"
+      ],
+      "exit_code": 1,
+      "elapsed_seconds": 0.058,
+      "log": "Audio.AdaptiveChecks-run.log",
+      "log_sha256": "32788ad2acf4651ccc3ba761581ac98d774669a93d8d908bc44339c406eaead5",
+      "summary_lines": [
+        "FAIL: System.Exception: Assertion failed."
+      ]
+    },
+    {
+      "label": "Audio.TimingChecks-build",
+      "command": [
+        "/workspace/work/authored-scene/dotnet/dotnet",
+        "build",
+        "tests/Audio.TimingChecks/Audio.TimingChecks.csproj",
+        "-c",
+        "Release",
+        "--nologo",
+        "-m:1",
+        "--disable-build-servers"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 3.317,
+      "log": "Audio.TimingChecks-build.log",
+      "log_sha256": "679e721e2be38ac63dc39788a6705c2335d0f0011a47e6342a20846cf6d48324",
+      "summary_lines": [
+        "Build succeeded.",
+        "    0 Warning(s)",
+        "    0 Error(s)"
+      ]
+    },
+    {
+      "label": "Audio.TimingChecks-run",
+      "command": [
+        "/workspace/work/authored-scene/dotnet/dotnet",
+        "/workspace/work/p08-v6/candidate-build/tests/Audio.TimingChecks/bin/Release/net10.0/Audio.TimingChecks.dll"
+      ],
+      "exit_code": 1,
+      "elapsed_seconds": 0.092,
+      "log": "Audio.TimingChecks-run.log",
+      "log_sha256": "07ec3d95557d1b19cb19dcc93875ecd307de543d33c2a84741ffc57b92af03b4",
+      "summary_lines": [
+        "PASS 7/8 bar contains 3360 ticks",
+        "PASS 7/8 total duration has no frame drift",
+        "FAIL after 23 checks: System.ArgumentException: Invalid note event."
+      ]
+    },
+    {
+      "label": "Audio.Cli-build",
+      "command": [
+        "/workspace/work/authored-scene/dotnet/dotnet",
+        "build",
+        "src/Audio.Cli/Audio.Cli.csproj",
+        "-c",
+        "Release",
+        "--nologo",
+        "-m:1",
+        "--disable-build-servers"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 3.224,
+      "log": "Audio.Cli-build.log",
+      "log_sha256": "d985181bfe1aa11380d4c70d98e9c7f56e5d96cf90236d4bab70d346dcf51640",
+      "summary_lines": [
+        "Build succeeded.",
+        "    0 Warning(s)",
+        "    0 Error(s)"
+      ]
+    }
+  ],
+  "intake_preservation": {
+    "before_files": 246,
+    "after_files": 246,
+    "exact": true,
+    "new": [],
+    "removed": [],
+    "changed": []
+  },
+  "known_optional_noop": "Audio.AdaptiveChecks: editable external scene score contract returns without assertions when no argument is passed; report separately, never count as executed external fixture.",
+  "review": {
+    "check_accounting": [
+      {
+        "suite": "Audio.Checks",
+        "result": "PASS",
+        "passed_cases": 142,
+        "run_exit_code": 0
+      },
+      {
+        "suite": "Audio.MusicChecks",
+        "result": "PASS",
+        "passed_cases": 36,
+        "run_exit_code": 0
+      },
+      {
+        "suite": "Audio.AdaptiveChecks",
+        "result": "FAIL",
+        "passed_cases_before_failure": 1,
+        "run_exit_code": 1,
+        "failure": "Second case, 7/8 next-bar scheduling uses eighth-note denominator, Program.cs line 47 assertion",
+        "remaining_checks": "NOT_REACHED"
+      },
+      {
+        "suite": "Audio.TimingChecks",
+        "result": "FAIL",
+        "passed_cases_before_failure": 24,
+        "run_exit_code": 1,
+        "failure": "R32 bar scheduler respects arbitrary phase and odd meter: MusicScore.Validate Invalid note event, ArrangementChecks.cs line 27",
+        "outer_summary_count": 23,
+        "summary_limit": "24 individual PASS lines were observed; nested ArrangementChecks returned no count after later failure",
+        "remaining_checks": "NOT_REACHED"
+      }
+    ],
+    "adaptive_source_diagnosis": {
+      "basis": "Observed failure plus independently calculated arithmetic using unmodified candidate source; these values were not printed by the failing executable",
+      "ticks_per_7_8_bar": 3360,
+      "rate": 22050,
+      "quarter_bpm": 120,
+      "round_half_up_bar_frames": 38588,
+      "summed_two_bar_end": 77176,
+      "whole_two_bar_total_frames": 77175,
+      "difference_frames": 1,
+      "reason": "NextBar adds separately rounded one-bar ramp frames to rounded next-bar start, while test compares with total duration rounded once."
+    },
+    "timing_source_diagnosis": {
+      "basis": "Observed Invalid note event plus source inspection",
+      "source_meter": "4/4 generated notes",
+      "test_mutation": "BeatUnit=8; BeatsPerBar=7 followed by Validate without removing/rescaling notes",
+      "original_total_ticks": 26880,
+      "mutated_total_ticks": 23520,
+      "reason": "Last-bar generated notes exceed shortened score bounds, so validation rejects before scheduler assertions. No scheduler property was tested in that failing case."
+    },
+    "optional_external_case": "NOT_REACHED: Adaptive suite failed before optional external scene score case. If invoked without an argument this case would be a no-op PASS, but this execution never reached it.",
+    "source_repairs": 0,
+    "source_imported_to_git": false,
+    "candidate_status": "PRIVATE_RESEARCH_ONLY; builds compile, entire candidate validation fails; no audio device/UI/Unity/Windows/Steam/rights/artistic approval",
+    "separate_from_python": "These C# checks are independent accounting from the parent 112 Python tests; no combined total is asserted."
+  }
+}

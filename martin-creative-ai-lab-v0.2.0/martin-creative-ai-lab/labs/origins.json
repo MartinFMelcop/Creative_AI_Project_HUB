@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "updated_at": "2026-10-30",
+  "updated_at": "2026-11-04",
   "baseline_commit": "9c69f295a1c5d736761a113d0e41aaa8600fb635",
   "scope": "Mandatory eleven-laboratory transformation. Historical source preservation is separate from terminal knowledge consumption; operational claims require executed instruments and bound evidence.",
   "north_star_consumer_demonstrated": true,
@@ -498,8 +498,8 @@
         "evidence/commander-policy/RUN.json"
       ],
       "evidence_sha256": {
-        "evidence/economy-crafting/RUN.json": "e19872d36956286e354337cac6e1abe091279df48da3e163babe2eec09af9a1f",
-        "evidence/economy-crafting/results.json": "63fc84d71d0848896e2b1f5bd252573f29949e6fc5be8c47ff16ab1382384f38",
+        "evidence/economy-crafting/RUN.json": "cc7bcf9742e2da377cdcf685a612a57b3d76b533a7970e17653e6eea7095c108",
+        "evidence/economy-crafting/results.json": "7a6daefa1945b75ff6d04c9ba2d1713c8e23010275a6e3c78221cb5861c551a5",
         "evidence/tooling-study/RUN.json": "2540400774fb495021e6ff1f3c00eced9454c40588cc701d8048453991cffdc6",
         "evidence/commander-policy/RUN.json": "443e4b540f42aad1dece377028024db8c2b6907259a85d5bc31fec8cd9183b1c"
       }
@@ -739,8 +739,8 @@
         "evidence/rpg-progression/results.json"
       ],
       "evidence_sha256": {
-        "evidence/rpg-progression/RUN.json": "659f3f02ba15d41bd38557dfcb1333d60530128e9a18f9dee2068c366a099058",
-        "evidence/rpg-progression/results.json": "9d3528cd27e6c8fa6876ef094b08e7820996bba837968c143240f262f49bb7a8"
+        "evidence/rpg-progression/RUN.json": "40ecd7eb61d9b1e3a51deb3ce3240b2f54d7e1f14def2e7b513212b35f1ec05a",
+        "evidence/rpg-progression/results.json": "e1f46e6e746400222a673da68cd94b10687515d44f7f61a6818d14df1749648f"
       }
     },
     {
@@ -793,12 +793,12 @@
         "evidence/combat-status/browser.json"
       ],
       "evidence_sha256": {
+        "evidence/response-chain/RUN.json": "638130278829912603ccd89e38e4da2945d4072221fc3eb08bcb8dd985006f14",
         "evidence/combat-response/results.json": "67140a49483317dfc931705572b228afe8313aa257f2e29086ef8ac238b6f32d",
         "evidence/combat-response/RUN.json": "a21e36dfe88eb816ce06e89a75a409010593e078ad437c828d1d3a821929b53f",
         "evidence/combat-status/RUN.json": "bc2f0b3d4574072c494f36276085d832a6236a7056b6ff5fb874334869ded9c0",
         "evidence/combat-status/source.json": "e4471d51340762e51fb5aa424874e1ccb856d302c0da3fa097a492ee7bf1b26d",
-        "evidence/combat-status/browser.json": "9d4f2e9d20dffeace99d3f514fbeb818a85b0c9cd4e21833ee70c4a737d887f1",
-        "evidence/response-chain/RUN.json": "638130278829912603ccd89e38e4da2945d4072221fc3eb08bcb8dd985006f14"
+        "evidence/combat-status/browser.json": "9d4f2e9d20dffeace99d3f514fbeb818a85b0c9cd4e21833ee70c4a737d887f1"
       },
       "additional_instruments": [
         "labs/combat-response/responses/assay.py",
@@ -845,11 +845,13 @@
       "instrument": "labs/visual-animation/run.py",
       "evidence": [
         "evidence/visual-animation/RUN.json",
-        "evidence/visual-animation/results.json"
+        "evidence/visual-animation/results.json",
+        "evidence/audio-music/p08-v6/RUN.json"
       ],
       "evidence_sha256": {
         "evidence/visual-animation/RUN.json": "3354e5dae5cbb2174c8812004a746ae770d329bfe0682a84de670bb46e5680dd",
-        "evidence/visual-animation/results.json": "0bd2bd4ff789e5572ace249ec94b695d634020959ea72b4b7407052634bd3e7b"
+        "evidence/visual-animation/results.json": "0bd2bd4ff789e5572ace249ec94b695d634020959ea72b4b7407052634bd3e7b",
+        "evidence/audio-music/p08-v6/RUN.json": "e5153bda319cba238fd081c8396b84a85165abe4f1c5c8b9740ffd73925d290a"
       }
     },
     {
@@ -862,7 +864,7 @@
       ],
       "status": "operational",
       "domain": "Adaptive audio, sound identity, musical systems and temporal feedback",
-      "question": "Can accepted-event ownership and aligned adaptive transports preserve truthful digital cues and phase across mute, suspension, restart and competing gain policies?",
+      "question": "Can causal bounded admission preserve accepted stronger cues while aligned adaptive transports, lifecycle and finite-source headroom remain truthful?",
       "source_paths": [
         "projects/tokyo80s/media",
         "projects/tokyo80s/tools/render_track.py",
@@ -876,10 +878,13 @@
         "projects/veil-arena/sound.gd",
         "projects/veil-arena/media/audio-catalog.json",
         "projects/veil-arena/media/provenance.json",
-        "north-star/prototype/sound.gd"
+        "north-star/prototype/sound.gd",
+        "knowledge/audio-engineering.md",
+        "evidence/audio-music/p08-v6/research/archive-inventory.json"
       ],
       "source_inventory": "labs/source-inventory.json",
       "consumer_paths": [
+        "north-star/csharp/Audio/Admission.cs",
         "north-star/csharp/Audio/Sound.cs",
         "north-star/csharp/Presentation/Program.cs",
         "north-star/csharp/Presentation/web/audio.js"
@@ -888,19 +893,23 @@
         "18 preserved catalog identities and16 actual PCM files; three controlled PCM defect negatives",
         "14 actual unchanged source/mixer lifecycle controls; locked phase shift and reset recovery",
         "67 actual C# composition/projection controls,10 original WAVs, portable C#8/netstandard2.1 compilation",
-        "29 actual Chromium/C# AudioContext controls; captured PCM, phase/delay/gain and duplicate-dispatch negatives; eight instrument regressions"
+        "29 actual Chromium/C# AudioContext controls; captured PCM, phase/delay/gain and duplicate-dispatch negatives; eight instrument regressions",
+        "Finite author-directed V6 intake:112actual Python tests,13exact reports,12claim rows and48rights-held media;5private C#builds with2suite failures retained",
+        "85native (67original+18admission),28actual priority Chromium controls plus29unchanged audio controls;3detected policy/gain/phase negatives; all10WAVs exact"
       ],
-      "validity_boundary": "Actual preserved digital source mixer, portable C# composition/projection and browser digital output only. Not physical listening, recognition/masking/comfort/accessibility, commercial rights, Unity/Windows/Steam or production networking validation.",
-      "next_objective": "Compare incomplete Build/Operations with actual Unity/Windows access and consequential authored/product/lifecycle needs. AI Evaluation is now bounded operational. Evaluate recognition, masking and comfort with documented listeners/devices; preserve encoding differences.",
+      "validity_boundary": "Actual preserved digital source mixer, portable C# composition/projection and browser digital output only. Not physical listening, recognition/masking/comfort/accessibility, commercial rights, Unity/Windows/Steam or production networking validation. New late-window PCM supports retained terminal contribution under real overlapping commands, not full sample continuity, true-peak certification, perceptual preservation or full R32 adoption. All48package media remain held outside Git.",
+      "next_objective": "Finite V6 intake and priority acceptance complete. Compare coherent product/production ownership and portfolio needs before a third consecutive laboratory unit; evaluate author/listener/device or licensed Unity/Windows access when genuinely available. Do not automatically expand audio/meter matrices or adopt/repair the Workbench.",
       "path": "labs/audio-music",
       "instrument": "labs/audio-music/run.py",
       "evidence": [
         "evidence/audio-music/RUN.json",
-        "evidence/audio-music/source.json"
+        "evidence/audio-music/source.json",
+        "evidence/audio-music/p08-v6/RUN.json"
       ],
       "evidence_sha256": {
         "evidence/audio-music/RUN.json": "7f1807fb2936462be42e66dc9aebd80fb29965c6f968ffe6c5931b5d9bfc0773",
-        "evidence/audio-music/source.json": "f02011b488f77ddb3c016f6aa986c9d09c17e203e86bcebb4c58d78d08769b29"
+        "evidence/audio-music/source.json": "f02011b488f77ddb3c016f6aa986c9d09c17e203e86bcebb4c58d78d08769b29",
+        "evidence/audio-music/p08-v6/RUN.json": "e5153bda319cba238fd081c8396b84a85165abe4f1c5c8b9740ffd73925d290a"
       }
     },
     {
@@ -1004,8 +1013,8 @@
         "evidence/query-bindings/RUN.json"
       ],
       "evidence_sha256": {
-        "evidence/world-loadout/RUN.json": "91ddeaa91427b61049a9dcaf24d1f6875f19c0528aac23032f9d77c4587d0aef",
-        "evidence/world-loadout/results.json": "fb05866b7f29656c2d4ee4166f6c39a092388d52eabd59bcf4fefa0d446d2734",
+        "evidence/world-loadout/RUN.json": "ae4573886580f35988074d4ad0942593f8fbb5e30ed92b3aec290500ee309d87",
+        "evidence/world-loadout/results.json": "a83bfa3ce4848bf378b005151225fd69aafe62c875dee90bdf6a496fcd5896af",
         "evidence/npc-availability/RUN.json": "5b1cd5ead6e8a56f0c5140744d2bf3f4c5b9d57e84aafc5c652ba0e71a6b1f8a",
         "evidence/npc-availability/source.json": "390e28290989169fe553dc3300b081299b7ccb5016ad3e11d38ce928c3da0f07",
         "evidence/npc-availability/browser.json": "7d45277c974ce3d42ec741f01c0a2e6ecc950ec2654d8f05ea8f4e9d0b2b55a0",
@@ -1068,8 +1077,8 @@
         "evidence/persistent-expedition/results.json"
       ],
       "evidence_sha256": {
-        "evidence/persistent-expedition/RUN.json": "58380d343ec2be4429cfb7d6bc0a6bf22b6e26a3c58983e1b9d0ab19cfadf751",
-        "evidence/persistent-expedition/results.json": "f0145995d390c5d33666c92bc1f9536a8038db209d65a35348db560b4afecfae"
+        "evidence/persistent-expedition/RUN.json": "e26201b869dfa4fa1f5f01891cd4655b478bfaf6140cf872ee96b38f26581804",
+        "evidence/persistent-expedition/results.json": "5380934fb871df9ce0d8af31c62a7f9ec7df837e7631fb79e4174c90285d549c"
       }
     }
   ],
@@ -1120,7 +1129,7 @@
         "evidence/rpg-progression/RUN.json"
       ],
       "evidence_sha256": {
-        "evidence/rpg-progression/RUN.json": "659f3f02ba15d41bd38557dfcb1333d60530128e9a18f9dee2068c366a099058"
+        "evidence/rpg-progression/RUN.json": "40ecd7eb61d9b1e3a51deb3ce3240b2f54d7e1f14def2e7b513212b35f1ec05a"
       }
     },
     {
@@ -1139,7 +1148,7 @@
         "evidence/rpg-progression/results.json"
       ],
       "evidence_sha256": {
-        "evidence/rpg-progression/results.json": "9d3528cd27e6c8fa6876ef094b08e7820996bba837968c143240f262f49bb7a8"
+        "evidence/rpg-progression/results.json": "e1f46e6e746400222a673da68cd94b10687515d44f7f61a6818d14df1749648f"
       }
     },
     {
@@ -1343,11 +1352,11 @@
         "evidence/combat-status/browser.json"
       ],
       "evidence_sha256": {
+        "evidence/response-chain/RUN.json": "638130278829912603ccd89e38e4da2945d4072221fc3eb08bcb8dd985006f14",
+        "evidence/passive-response/RUN.json": "a74946321271b5045b5d3ca064ce09a8c82678c589bf15198d74d675ee9ffac8",
         "evidence/combat-status/RUN.json": "bc2f0b3d4574072c494f36276085d832a6236a7056b6ff5fb874334869ded9c0",
         "evidence/combat-status/source.json": "e4471d51340762e51fb5aa424874e1ccb856d302c0da3fa097a492ee7bf1b26d",
-        "evidence/combat-status/browser.json": "9d4f2e9d20dffeace99d3f514fbeb818a85b0c9cd4e21833ee70c4a737d887f1",
-        "evidence/passive-response/RUN.json": "a74946321271b5045b5d3ca064ce09a8c82678c589bf15198d74d675ee9ffac8",
-        "evidence/response-chain/RUN.json": "638130278829912603ccd89e38e4da2945d4072221fc3eb08bcb8dd985006f14"
+        "evidence/combat-status/browser.json": "9d4f2e9d20dffeace99d3f514fbeb818a85b0c9cd4e21833ee70c4a737d887f1"
       }
     },
     {
@@ -1420,8 +1429,8 @@
         "evidence/economy-crafting/results.json"
       ],
       "evidence_sha256": {
-        "evidence/economy-crafting/RUN.json": "e19872d36956286e354337cac6e1abe091279df48da3e163babe2eec09af9a1f",
-        "evidence/economy-crafting/results.json": "63fc84d71d0848896e2b1f5bd252573f29949e6fc5be8c47ff16ab1382384f38"
+        "evidence/economy-crafting/RUN.json": "cc7bcf9742e2da377cdcf685a612a57b3d76b533a7970e17653e6eea7095c108",
+        "evidence/economy-crafting/results.json": "7a6daefa1945b75ff6d04c9ba2d1713c8e23010275a6e3c78221cb5861c551a5"
       }
     },
     {
@@ -1441,8 +1450,8 @@
         "evidence/economy-crafting/results.json"
       ],
       "evidence_sha256": {
-        "evidence/economy-crafting/RUN.json": "e19872d36956286e354337cac6e1abe091279df48da3e163babe2eec09af9a1f",
-        "evidence/economy-crafting/results.json": "63fc84d71d0848896e2b1f5bd252573f29949e6fc5be8c47ff16ab1382384f38"
+        "evidence/economy-crafting/RUN.json": "cc7bcf9742e2da377cdcf685a612a57b3d76b533a7970e17653e6eea7095c108",
+        "evidence/economy-crafting/results.json": "7a6daefa1945b75ff6d04c9ba2d1713c8e23010275a6e3c78221cb5861c551a5"
       }
     },
     {
@@ -1472,8 +1481,8 @@
         "evidence/world-loadout/results.json"
       ],
       "evidence_sha256": {
-        "evidence/world-loadout/RUN.json": "91ddeaa91427b61049a9dcaf24d1f6875f19c0528aac23032f9d77c4587d0aef",
-        "evidence/world-loadout/results.json": "fb05866b7f29656c2d4ee4166f6c39a092388d52eabd59bcf4fefa0d446d2734"
+        "evidence/world-loadout/RUN.json": "ae4573886580f35988074d4ad0942593f8fbb5e30ed92b3aec290500ee309d87",
+        "evidence/world-loadout/results.json": "a83bfa3ce4848bf378b005151225fd69aafe62c875dee90bdf6a496fcd5896af"
       }
     },
     {
@@ -1493,8 +1502,8 @@
         "evidence/world-loadout/results.json"
       ],
       "evidence_sha256": {
-        "evidence/world-loadout/RUN.json": "91ddeaa91427b61049a9dcaf24d1f6875f19c0528aac23032f9d77c4587d0aef",
-        "evidence/world-loadout/results.json": "fb05866b7f29656c2d4ee4166f6c39a092388d52eabd59bcf4fefa0d446d2734"
+        "evidence/world-loadout/RUN.json": "ae4573886580f35988074d4ad0942593f8fbb5e30ed92b3aec290500ee309d87",
+        "evidence/world-loadout/results.json": "a83bfa3ce4848bf378b005151225fd69aafe62c875dee90bdf6a496fcd5896af"
       }
     },
     {
@@ -1524,8 +1533,8 @@
         "evidence/persistent-expedition/results.json"
       ],
       "evidence_sha256": {
-        "evidence/persistent-expedition/RUN.json": "58380d343ec2be4429cfb7d6bc0a6bf22b6e26a3c58983e1b9d0ab19cfadf751",
-        "evidence/persistent-expedition/results.json": "f0145995d390c5d33666c92bc1f9536a8038db209d65a35348db560b4afecfae"
+        "evidence/persistent-expedition/RUN.json": "e26201b869dfa4fa1f5f01891cd4655b478bfaf6140cf872ee96b38f26581804",
+        "evidence/persistent-expedition/results.json": "5380934fb871df9ce0d8af31c62a7f9ec7df837e7631fb79e4174c90285d549c"
       }
     },
     {
@@ -1643,11 +1652,13 @@
         "north-star/csharp/Presentation/web/app.js",
         "north-star/csharp/Crossing/Session.cs"
       ],
-      "decision": "Adapt source-derived foot registration and actual-state-owned pose/contact principle into original vector Crossing C# browser presentation; actual execution binds accepted and rejected consequences. No atlas bytes or character fiction imported.",
+      "decision": "Adapt source-derived foot registration and actual-state-owned pose/contact principle into original vector Crossing C# browser presentation; actual execution binds accepted and rejected consequences. No atlas bytes or character fiction imported. Current actual P08 acceptance also reexecutes original audio/visual consumers; historical evidence remains separate and unchanged.",
       "evidence": [
+        "evidence/audio-music/p08-v6/RUN.json",
         "evidence/visual-animation/RUN.json"
       ],
       "evidence_sha256": {
+        "evidence/audio-music/p08-v6/RUN.json": "e5153bda319cba238fd081c8396b84a85165abe4f1c5c8b9740ffd73925d290a",
         "evidence/visual-animation/RUN.json": "3354e5dae5cbb2174c8812004a746ae770d329bfe0682a84de670bb46e5680dd"
       }
     },
@@ -1687,11 +1698,13 @@
         "north-star/csharp/Presentation/Program.cs",
         "north-star/csharp/Presentation/web/audio.js"
       ],
-      "decision": "Adapt aligned transports, finite voices, editable synthesis and consume-while-muted event ownership into actual original C# composition/projection and real Chromium playback. No historical score or fiction imported.",
+      "decision": "Adapt aligned transports, finite voices, editable synthesis and consume-while-muted event ownership into actual original C# composition/projection and real Chromium playback. No historical score or fiction imported. Current actual P08 acceptance also reexecutes original audio/visual consumers; historical evidence remains separate and unchanged.",
       "evidence": [
+        "evidence/audio-music/p08-v6/RUN.json",
         "evidence/audio-music/RUN.json"
       ],
       "evidence_sha256": {
+        "evidence/audio-music/p08-v6/RUN.json": "e5153bda319cba238fd081c8396b84a85165abe4f1c5c8b9740ffd73925d290a",
         "evidence/audio-music/RUN.json": "7f1807fb2936462be42e66dc9aebd80fb29965c6f968ffe6c5931b5d9bfc0773"
       }
     },
@@ -1954,12 +1967,12 @@
         "evidence/memory-study/browser/browser.json"
       ],
       "evidence_sha256": {
+        "evidence/query-bindings/RUN.json": "f0b787311e16538f028fa1d26e64bd0eae64583c4d43bd3d51a3cb9ac3a6f602",
+        "evidence/dialogue-conditions/RUN.json": "cbffb248dcbd5d20c02587f319ec81568657c4f863052d86f7de14a1cec9502d",
         "evidence/memory-study/RUN.json": "c50a91cc67981348128da67e8ee12be85713beb8e2b80bf5dd423df472366d26",
         "evidence/memory-study/source/source-assay.json": "2c4998da9aa2885fb83ad6cd490f106181d053f4d4d51b8d47a2f4e4f659b31a",
         "evidence/memory-study/source/results.json": "3cc986ebb26795188c5794844be11300ce04a5303b210be79b3c31a35a99c111",
-        "evidence/memory-study/browser/browser.json": "23d5a3dd6e0500a7d8d40294656a42c13a8528e16049abd73f860f9803fbf364",
-        "evidence/dialogue-conditions/RUN.json": "cbffb248dcbd5d20c02587f319ec81568657c4f863052d86f7de14a1cec9502d",
-        "evidence/query-bindings/RUN.json": "f0b787311e16538f028fa1d26e64bd0eae64583c4d43bd3d51a3cb9ac3a6f602"
+        "evidence/memory-study/browser/browser.json": "23d5a3dd6e0500a7d8d40294656a42c13a8528e16049abd73f860f9803fbf364"
       }
     },
     {
@@ -2011,9 +2024,9 @@
         "evidence/passive-response/execution/source-assay.json"
       ],
       "evidence_sha256": {
+        "evidence/response-chain/RUN.json": "638130278829912603ccd89e38e4da2945d4072221fc3eb08bcb8dd985006f14",
         "evidence/passive-response/RUN.json": "a74946321271b5045b5d3ca064ce09a8c82678c589bf15198d74d675ee9ffac8",
-        "evidence/passive-response/execution/source-assay.json": "b72eec94785a819330fdd0e45601db6673bdaddedf67214036b5c8e0825dee31",
-        "evidence/response-chain/RUN.json": "638130278829912603ccd89e38e4da2945d4072221fc3eb08bcb8dd985006f14"
+        "evidence/passive-response/execution/source-assay.json": "b72eec94785a819330fdd0e45601db6673bdaddedf67214036b5c8e0825dee31"
       },
       "consumer_paths": [
         "north-star/combat-study/Rules/Passives.cs",
@@ -2064,11 +2077,11 @@
         "evidence/dialogue-conditions/execution/source.json"
       ],
       "evidence_sha256": {
-        "evidence/dialogue-conditions/RUN.json": "cbffb248dcbd5d20c02587f319ec81568657c4f863052d86f7de14a1cec9502d",
-        "evidence/dialogue-conditions/execution/source.json": "bb6fe0db8be6b66ac65dbcdbdfc3f7fcee10253f843461ed74ffd40167eea289",
-        "evidence/field-sampling/RUN.json": "90e47439447ea43dbc81249b40006365dd3fabd205b59afcc4bb7c5a56908139",
+        "evidence/query-bindings/RUN.json": "f0b787311e16538f028fa1d26e64bd0eae64583c4d43bd3d51a3cb9ac3a6f602",
         "evidence/preparation-authoring/RUN.json": "e44c8d1a86f0efddede56b271e80fd7fc2a6c52af6e417a146f59cdf507dc078",
-        "evidence/query-bindings/RUN.json": "f0b787311e16538f028fa1d26e64bd0eae64583c4d43bd3d51a3cb9ac3a6f602"
+        "evidence/field-sampling/RUN.json": "90e47439447ea43dbc81249b40006365dd3fabd205b59afcc4bb7c5a56908139",
+        "evidence/dialogue-conditions/RUN.json": "cbffb248dcbd5d20c02587f319ec81568657c4f863052d86f7de14a1cec9502d",
+        "evidence/dialogue-conditions/execution/source.json": "bb6fe0db8be6b66ac65dbcdbdfc3f7fcee10253f843461ed74ffd40167eea289"
       },
       "consumer_paths": [
         "north-star/memory-study/Conditions/Conditions.cs",
@@ -2098,9 +2111,9 @@
         "evidence/dialogue-conditions/execution/source.json"
       ],
       "evidence_sha256": {
+        "evidence/query-bindings/RUN.json": "f0b787311e16538f028fa1d26e64bd0eae64583c4d43bd3d51a3cb9ac3a6f602",
         "evidence/dialogue-conditions/RUN.json": "cbffb248dcbd5d20c02587f319ec81568657c4f863052d86f7de14a1cec9502d",
-        "evidence/dialogue-conditions/execution/source.json": "bb6fe0db8be6b66ac65dbcdbdfc3f7fcee10253f843461ed74ffd40167eea289",
-        "evidence/query-bindings/RUN.json": "f0b787311e16538f028fa1d26e64bd0eae64583c4d43bd3d51a3cb9ac3a6f602"
+        "evidence/dialogue-conditions/execution/source.json": "bb6fe0db8be6b66ac65dbcdbdfc3f7fcee10253f843461ed74ffd40167eea289"
       }
     },
     {
@@ -2179,6 +2192,31 @@
         "P10"
       ],
       "laboratory_id": "combat-response"
+    },
+    {
+      "id": "P08-CAUSAL-CRITICAL-ADMISSION",
+      "origin_projects": [
+        "P08"
+      ],
+      "laboratory_id": "audio-music",
+      "status": "INTEGRATED",
+      "source_paths": [
+        "evidence/audio-music/p08-v6/research/archive-inventory.json",
+        "evidence/audio-music/p08-v6/research/INTAKE_REPLAY.json",
+        "knowledge/audio-engineering.md"
+      ],
+      "consumer_paths": [
+        "north-star/csharp/Audio/Admission.cs",
+        "north-star/csharp/Presentation/Program.cs",
+        "north-star/csharp/Presentation/web/audio.js"
+      ],
+      "decision": "Only narrow event-preservation/causal voice-budget experimental method is independently adapted into the existing actual C# and Chromium consumer. Original terminal>contact>threat policy uses the C#finite table; exact equal-critical saturation is explicit suppression, not zero event loss. Sample headroom is conservative, not certified true peak. No R32source/media/score import, full candidate adoption, perceptual proof or Unity/Windows claim.",
+      "evidence": [
+        "evidence/audio-music/p08-v6/RUN.json"
+      ],
+      "evidence_sha256": {
+        "evidence/audio-music/p08-v6/RUN.json": "e5153bda319cba238fd081c8396b84a85165abe4f1c5c8b9740ffd73925d290a"
+      }
     }
   ]
 }

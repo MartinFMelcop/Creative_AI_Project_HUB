@@ -120,3 +120,39 @@ browser timing/PCM varies across platforms; reproduction enforces properties ins
 of requiring cross-host byte equality. Source canonical equality and variable capture
 measurements retain distinct contracts. Physical listening, signal recognition,
 masking, accessibility, quality, rights clearance, Unity/Windows/Steam remain open.
+
+## Finite V6 research intake and causal priority preservation
+
+The author-supplied `P08_V6_FINAL_REENVIO.zip` (the request called it
+`P08_Audio_Research_V6_FINAL.zip`) contains the expected `P08_AUDIO_RESEARCH_V6` root.
+The [finite intake and execution](../../evidence/audio-music/p08-v6/RUN.json) records
+246 files, a matching 245-entry manifest, independent execution of 112 Python tests
+and 13 reproduced JSON reports. Its 12-claim ledger checks traceability rather than
+independent truth. All 47 WAVs and one MIDI remain rights-pending outside Git.
+No package media, soundfont master, Workbench source or new archive was imported.
+
+The [derived lesson](../../knowledge/audio-engineering.md) separates composition,
+timing, signal diagnostics, candidate failures and listening hypotheses. Five private
+C# builds passed, but Adaptive and Timing tests failed; the candidate is not accepted.
+The offline gain optimizer needs future scene information and cannot control real-time
+playback. Five sample-pass/4x-interpolated-fail comparisons reproduce an estimator
+limitation, not certified ITU true peak. The original package's hardcoded missing-SDK
+label is not a probe of this host, where SDK10.0.401 actually executes.
+
+The actual existing consumer exposed a narrower problem: FIFO stopped a 0.60-second
+survey-outcome cue after about 8.7 ms when real later commands arrived. The independently
+authored [C# policy](../../north-star/csharp/Audio/Admission.cs) now supplies the bounded
+decision table used by the existing adapter. Outcomes outrank contact, which outranks
+next threat. Equal-critical overload is explicitly suppressed without backlog; no
+two-voice policy can promise all events at arbitrary rates. Duck recovery follows the
+greatest admitted end. Original WAVs, aligned transports and gameplay owners stay exact.
+
+```bash
+node labs/audio-music/priority-browser.mjs dotnet /tmp/audio-priority
+```
+
+The [prospective protocol](priority-protocol.json) requires actual overlapping accepted
+commands, effects-only terminal-tail PCM, lifecycle/identity controls and detected
+isolated FIFO/gain/phase negatives. The new evidence complements the original execution
+above; it does not overwrite it. Digital signal preservation is not human audibility,
+masking relief, musical quality, commercial clearance or Unity/Windows delivery.

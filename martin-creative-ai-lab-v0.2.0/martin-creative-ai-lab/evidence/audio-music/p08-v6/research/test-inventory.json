@@ -1,0 +1,184 @@
+[
+  {
+    "case_ids": [
+      "TransportTests.test_four_four_one_bar_at_120",
+      "TransportTests.test_seven_eight_one_bar",
+      "TransportTests.test_five_four_bar",
+      "TransportTests.test_tempo_change_not_single_bpm",
+      "TransportTests.test_no_incremental_rounding_drift",
+      "TransportTests.test_parse_note_tempo_meter",
+      "TransportTests.test_retrigger_negative",
+      "TransportTests.test_unclosed_negative",
+      "TransportTests.test_malformed_midi_negative"
+    ],
+    "count": 9,
+    "path": "experiments/test_timing_oracle.py",
+    "sha256": "5333a1416fb572287e04ba5e543212698eab9d846a962b5791169ae5d6f9f1fa"
+  },
+  {
+    "case_ids": [
+      "VariantTriageTest.test_gain_only_fails_novelty",
+      "VariantTriageTest.test_time_shifted_duplicate_flagged",
+      "VariantTriageTest.test_fundamentally_different_pitch_not_wave_dup",
+      "VariantTriageTest.test_empty_refused",
+      "VariantTriageTest.test_sample_rate_mismatch_refused",
+      "VariantTriageTest.test_missing_pair_refused",
+      "VariantTriageTest.test_unrecognized_name_refused",
+      "VariantTriageTest.test_scan_reproducible",
+      "VariantTriageTest.test_multichannel_average"
+    ],
+    "count": 9,
+    "path": "experiments/test_variant_similarity.py",
+    "sha256": "e06a6fbc62240e2d06d17b9b9ac68949b6df33b9c68b19b4349bd76d1d2896a5"
+  },
+  {
+    "case_ids": [
+      "PolicyTests.test_duplicate_same_sequence_does_not_replay",
+      "PolicyTests.test_stale_sequence_cannot_replay",
+      "PolicyTests.test_muted_consumes_event_no_backlog",
+      "PolicyTests.test_suspended_consumes_event_no_backlog",
+      "PolicyTests.test_cooldown",
+      "PolicyTests.test_voice_limit_suppresses_less_important",
+      "PolicyTests.test_priority_steals_lower_priority",
+      "PolicyTests.test_voice_ends",
+      "PolicyTests.test_different_emitters_separate_cooldowns",
+      "PolicyTests.test_bag_no_immediate_repeat_across_cycle",
+      "PolicyTests.test_deterministic_replay",
+      "PolicyTests.test_timestamp_future_consumed_not_queued",
+      "PolicyTests.test_invalid_clock_rejected",
+      "PolicyTests.test_unknown_event_silent",
+      "PolicyTests.test_no_originating_gameplay_consequence"
+    ],
+    "count": 15,
+    "path": "experiments/test_event_policy.py",
+    "sha256": "62e74331d54662b7ca036e010e8b4938de6b78a6a856ad4045fb5ea4afb4cd05"
+  },
+  {
+    "case_ids": [
+      "SceneMixTests.test_same_frequency_proxy_close_to_one",
+      "SceneMixTests.test_different_frequency_proxy_near_zero",
+      "SceneMixTests.test_rms_nonnegative",
+      "SceneMixTests.test_masker_determinism",
+      "SceneMixTests.test_distinct_maskers",
+      "SceneMixTests.test_target_to_masker_snr",
+      "SceneMixTests.test_length_mismatch_fails",
+      "SceneMixTests.test_unknown_masker_fails",
+      "SceneMixTests.test_silent_spectrum_fails",
+      "SceneMixTests.test_read_rejects_clipping",
+      "SceneMixTests.test_real_fixture_six_events"
+    ],
+    "count": 11,
+    "path": "experiments/test_scene_mix_probe.py",
+    "sha256": "ba631060c8e130080ffb993dc3b74bd77ec3bfd6b49e1ca2d6e0102136736e49"
+  },
+  {
+    "case_ids": [
+      "GateTests.test_research_passes_declared_candidates",
+      "GateTests.test_public_fails_without_rights",
+      "GateTests.test_mismatch_fails",
+      "GateTests.test_untracked_fails",
+      "GateTests.test_declared_missing_fails",
+      "GateTests.test_unsafe_relative_fails",
+      "GateTests.test_duplicate_fails",
+      "GateTests.test_fake_clearance_fails",
+      "GateTests.test_bad_enum_fails",
+      "GateTests.test_fake_permission_without_evidence_fails"
+    ],
+    "count": 10,
+    "path": "governance/test_asset_release_gate.py",
+    "sha256": "6aa23fb0d63334bfb794cfda5b505c23a1521d8072137c8396b0158edfb92dd5"
+  },
+  {
+    "case_ids": [
+      "ScenePolicyTests.test_real_inputs_6_scenes_3_policies",
+      "ScenePolicyTests.test_deterministic_byte_representation",
+      "ScenePolicyTests.test_reference_no_suppression",
+      "ScenePolicyTests.test_equal_priority_overflow_suppressed_newest",
+      "ScenePolicyTests.test_high_priority_preempts_lower_without_rewriting_ids",
+      "ScenePolicyTests.test_lower_priority_cannot_preempt_higher",
+      "ScenePolicyTests.test_duplicate_identity_negative",
+      "ScenePolicyTests.test_unsorted_schedule_negative",
+      "ScenePolicyTests.test_bad_timestamp_negative",
+      "ScenePolicyTests.test_unknown_event_negative",
+      "ScenePolicyTests.test_music_only_duck_does_not_change_sfx_decision",
+      "ScenePolicyTests.test_duck_envelope_outside_event_is_unity",
+      "ScenePolicyTests.test_no_duck_for_low_priority_event",
+      "ScenePolicyTests.test_bounded_bus_reduces_max_peak_in_crowded_fixture",
+      "ScenePolicyTests.test_positive_overrange_raw_sum_control",
+      "ScenePolicyTests.test_bounded_voice_limit_rejects_invalid",
+      "ScenePolicyTests.test_input_source_not_mutated",
+      "ScenePolicyTests.test_factorial_all_eight_policies_and_48_conditions",
+      "ScenePolicyTests.test_factorial_constant_event_ids",
+      "ScenePolicyTests.test_factorial_gain_only_comparison_no_culling",
+      "ScenePolicyTests.test_factorial_music_duck_only_can_fail_to_prevent_overrange",
+      "ScenePolicyTests.test_factorial_voice_cap_trades_preservation_for_peak"
+    ],
+    "count": 22,
+    "path": "experiments/test_combat_mix_policy_probe.py",
+    "sha256": "1cd7154e6b37d208d3c778149487a41a66886ab56eb31b2596c79ace214ed68f"
+  },
+  {
+    "case_ids": [
+      "WholePackageTests.test_complete_inventory_48_media_files",
+      "WholePackageTests.test_research_gate_passes_but_does_not_clear_rights",
+      "WholePackageTests.test_all_48_public_files_blocked"
+    ],
+    "count": 3,
+    "path": "governance/test_whole_package_inventory.py",
+    "sha256": "d6d89a14ec009b2ebc7a6eac05ad705245770e4c9b70905b5ce0f692f3ebd52f"
+  },
+  {
+    "case_ids": [
+      "HeadroomPreservationTests.test_six_scenes_three_policies",
+      "HeadroomPreservationTests.test_all_schedules_and_ids_retained",
+      "HeadroomPreservationTests.test_safe_policy_never_exceeds_target",
+      "HeadroomPreservationTests.test_fixture_background_infeasibility_is_explicit",
+      "HeadroomPreservationTests.test_optimiser_maximises_gain_within_ceiling",
+      "HeadroomPreservationTests.test_no_gain_reduction_when_unused",
+      "HeadroomPreservationTests.test_background_alone_over_ceiling_fails_closed",
+      "HeadroomPreservationTests.test_bad_nonfinite_background_rejected",
+      "HeadroomPreservationTests.test_duplicate_event_rejected",
+      "HeadroomPreservationTests.test_bad_shape_rejected",
+      "HeadroomPreservationTests.test_invalid_constraint_rejected",
+      "HeadroomPreservationTests.test_critical_proxy_is_not_audibility_claim",
+      "HeadroomPreservationTests.test_source_samples_are_immutable",
+      "HeadroomPreservationTests.test_deterministic_output"
+    ],
+    "count": 14,
+    "path": "experiments/test_headroom_preservation_probe.py",
+    "sha256": "597b798a4f03eaf6c2aa048ff9b9dcf11ecb0ebd2e2925514eac3c1ecda8bf65"
+  },
+  {
+    "case_ids": [
+      "IntersampleDiagnosticTests.test_silence",
+      "IntersampleDiagnosticTests.test_rejects_nan",
+      "IntersampleDiagnosticTests.test_rejects_infinite",
+      "IntersampleDiagnosticTests.test_rejects_too_short",
+      "IntersampleDiagnosticTests.test_rejects_nonmono",
+      "IntersampleDiagnosticTests.test_rejects_invalid_up",
+      "IntersampleDiagnosticTests.test_intersample_counterexample",
+      "IntersampleDiagnosticTests.test_gain_scaling",
+      "IntersampleDiagnosticTests.test_repetition",
+      "IntersampleDiagnosticTests.test_actual_fixtures_exact_and_limited"
+    ],
+    "count": 10,
+    "path": "experiments/test_intersample_peak_probe.py",
+    "sha256": "8c53af47ade4d7bc85b5f15187a45d3aa2f0b92a50a2c6aa22f3124ba2437253"
+  },
+  {
+    "case_ids": [
+      "ClaimsTests.test_valid_records",
+      "ClaimsTests.test_duplicate",
+      "ClaimsTests.test_wrong_expected",
+      "ClaimsTests.test_missing_reference",
+      "ClaimsTests.test_traversal",
+      "ClaimsTests.test_absolute",
+      "ClaimsTests.test_unknown_status",
+      "ClaimsTests.test_missing_limit",
+      "ClaimsTests.test_selector_must_resolve"
+    ],
+    "count": 9,
+    "path": "tools/test_claims_v6.py",
+    "sha256": "ebdacf8f818a5d8004259a2da6c8ff96f7bb749dd53e1ee966a009ea13f4385e"
+  }
+]

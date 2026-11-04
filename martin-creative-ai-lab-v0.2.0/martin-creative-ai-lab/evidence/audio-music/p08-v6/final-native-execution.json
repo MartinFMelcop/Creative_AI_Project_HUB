@@ -1,0 +1,39 @@
+{
+  "schema": "p08.final-native-gate.v1",
+  "inputs_stable": {
+    "north-star/csharp/Audio/Admission.cs": "51a98f3e963def8305cd4d3e2e542dc004912d54a683a5551128186fd89e2cb2",
+    "north-star/csharp/AudioChecks/Program.cs": "eb48a218e76dd9c3fe59631285035b2b041f483df9d0d401107cc8f3c4f328b9",
+    "north-star/csharp/Presentation/Program.cs": "44089db8317ca46fc8e1ec9c5004d9f585ec8fd55cb01241c2d7c592c1b1a5b9",
+    "north-star/csharp/Presentation/web/audio.js": "472d07cf5936625c2f613e303bb51ac02d2b9d1c11fed833972c35601d8b9a6b"
+  },
+  "commands": [
+    {
+      "command": [
+        "/workspace/work/authored-scene/dotnet/dotnet",
+        "build",
+        "north-star/csharp/AudioChecks/NorthStar.AudioChecks.csproj",
+        "-c",
+        "Release",
+        "-m:1",
+        "--disable-build-servers"
+      ],
+      "exit_code": 0,
+      "seconds": 4.25,
+      "stdout": "  Determining projects to restore...\n  Restored /workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/AudioChecks/NorthStar.AudioChecks.csproj (in 132 ms).\n  3 of 4 projects are up-to-date for restore.\n  NorthStar.Audio -> /workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/Audio/bin/Release/netstandard2.1/NorthStar.Audio.dll\n  NorthStar.Domain -> /workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/Domain/bin/Release/netstandard2.1/NorthStar.Domain.dll\n  NorthStar.Presentation -> /workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/Presentation/bin/Release/net10.0/NorthStar.Presentation.dll\n  NorthStar.AudioChecks -> /workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/AudioChecks/bin/Release/net10.0/NorthStar.AudioChecks.dll\n\nBuild succeeded.\n    0 Warning(s)\n    0 Error(s)\n\nTime Elapsed 00:00:03.80\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/workspace/work/authored-scene/dotnet/dotnet",
+        "north-star/csharp/AudioChecks/bin/Release/net10.0/NorthStar.AudioChecks.dll",
+        "/workspace/work/p08-v6/final-native/native.json",
+        "/workspace/work/p08-v6/final-native/assets"
+      ],
+      "exit_code": 0,
+      "seconds": 0.519,
+      "stdout": "AUDIO_CHECKS 85 passed; 10 WAV assets\n",
+      "stderr": ""
+    }
+  ],
+  "result_byte_exact_to_prior85": true
+}

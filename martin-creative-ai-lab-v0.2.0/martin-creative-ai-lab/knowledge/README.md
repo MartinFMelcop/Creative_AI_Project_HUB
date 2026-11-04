@@ -14,6 +14,10 @@ may revise a derived lesson; ordinary work must not rewrite the brain sources.
 
 ## Existing lessons and consumers
 
+[Audio engineering](audio-engineering.md) separates finite P08 research, failed
+candidate C# acceptance, existing consequence-owned playback, held media rights and
+unverified listening/artistic quality; bounded admission has separate actual runtime evidence.
+
 [Native delivery](native-delivery.md) separates editor/static package checks from
 actual recipient-runtime journeys, default-window input and rebuild identity limits.
 

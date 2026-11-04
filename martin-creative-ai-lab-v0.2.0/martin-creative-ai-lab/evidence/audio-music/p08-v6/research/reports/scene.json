@@ -1,0 +1,570 @@
+{
+  "bands_hz": [
+    70.0,
+    94.657,
+    128.0,
+    173.089,
+    234.059,
+    316.506,
+    427.995,
+    578.756,
+    782.622,
+    1058.301,
+    1431.086,
+    1935.185,
+    2616.853,
+    3538.638,
+    4785.121,
+    6470.676,
+    8749.967,
+    11832.138,
+    16000.0
+  ],
+  "conditions": 54,
+  "conditions_per_effect": 9,
+  "rows": [
+    {
+      "combined_sample_overrange": false,
+      "combined_sample_peak": 0.519188,
+      "event": "arcane_portal_v01",
+      "first_100ms_target_to_masker_rms_db": -6.1679,
+      "masker": "low_drone",
+      "masker_rms_relative_to_target_db": -6,
+      "normalized_spectral_band_overlap_proxy": 0.00021,
+      "target_to_masker_rms_db": 6.0
+    },
+    {
+      "combined_sample_overrange": false,
+      "combined_sample_peak": 0.613251,
+      "event": "arcane_portal_v01",
+      "first_100ms_target_to_masker_rms_db": -12.1679,
+      "masker": "low_drone",
+      "masker_rms_relative_to_target_db": 0,
+      "normalized_spectral_band_overlap_proxy": 0.00021,
+      "target_to_masker_rms_db": 0.0
+    },
+    {
+      "combined_sample_overrange": false,
+      "combined_sample_peak": 0.800933,
+      "event": "arcane_portal_v01",
+      "first_100ms_target_to_masker_rms_db": -18.1679,
+      "masker": "low_drone",
+      "masker_rms_relative_to_target_db": 6,
+      "normalized_spectral_band_overlap_proxy": 0.00021,
+      "target_to_masker_rms_db": -6.0
+    },
+    {
+      "combined_sample_overrange": false,
+      "combined_sample_peak": 0.543846,
+      "event": "arcane_portal_v01",
+      "first_100ms_target_to_masker_rms_db": -10.0173,
+      "masker": "mid_pulse",
+      "masker_rms_relative_to_target_db": -6,
+      "normalized_spectral_band_overlap_proxy": 0.23349,
+      "target_to_masker_rms_db": 6.0
+    },
+    {
+      "combined_sample_overrange": false,
+      "combined_sample_peak": 0.808769,
+      "event": "arcane_portal_v01",
+      "first_100ms_target_to_masker_rms_db": -16.0173,
+      "masker": "mid_pulse",
+      "masker_rms_relative_to_target_db": 0,
+      "normalized_spectral_band_overlap_proxy": 0.23349,
+      "target_to_masker_rms_db": -0.0
+    },
+    {
+      "combined_sample_overrange": true,
+      "combined_sample_peak": 1.372414,
+      "event": "arcane_portal_v01",
+      "first_100ms_target_to_masker_rms_db": -22.0173,
+      "masker": "mid_pulse",
+      "masker_rms_relative_to_target_db": 6,
+      "normalized_spectral_band_overlap_proxy": 0.23349,
+      "target_to_masker_rms_db": -6.0
+    },
+    {
+      "combined_sample_overrange": false,
+      "combined_sample_peak": 0.550526,
+      "event": "arcane_portal_v01",
+      "first_100ms_target_to_masker_rms_db": -5.9352,
+      "masker": "wide_noise",
+      "masker_rms_relative_to_target_db": -6,
+      "normalized_spectral_band_overlap_proxy": 0.1084,
+      "target_to_masker_rms_db": 6.0
+    },
+    {
+      "combined_sample_overrange": false,
+      "combined_sample_peak": 0.777278,
+      "event": "arcane_portal_v01",
+      "first_100ms_target_to_masker_rms_db": -11.9352,
+      "masker": "wide_noise",
+      "masker_rms_relative_to_target_db": 0,
+      "normalized_spectral_band_overlap_proxy": 0.1084,
+      "target_to_masker_rms_db": -0.0
+    },
+    {
+      "combined_sample_overrange": true,
+      "combined_sample_peak": 1.229707,
+      "event": "arcane_portal_v01",
+      "first_100ms_target_to_masker_rms_db": -17.9352,
+      "masker": "wide_noise",
+      "masker_rms_relative_to_target_db": 6,
+      "normalized_spectral_band_overlap_proxy": 0.1084,
+      "target_to_masker_rms_db": -6.0
+    },
+    {
+      "combined_sample_overrange": false,
+      "combined_sample_peak": 0.751254,
+      "event": "electric_burst_v01",
+      "first_100ms_target_to_masker_rms_db": 10.2101,
+      "masker": "low_drone",
+      "masker_rms_relative_to_target_db": -6,
+      "normalized_spectral_band_overlap_proxy": 0.00016,
+      "target_to_masker_rms_db": 6.0
+    },
+    {
+      "combined_sample_overrange": false,
+      "combined_sample_peak": 0.824064,
+      "event": "electric_burst_v01",
+      "first_100ms_target_to_masker_rms_db": 4.2101,
+      "masker": "low_drone",
+      "masker_rms_relative_to_target_db": 0,
+      "normalized_spectral_band_overlap_proxy": 0.00016,
+      "target_to_masker_rms_db": 0.0
+    },
+    {
+      "combined_sample_overrange": false,
+      "combined_sample_peak": 0.969341,
+      "event": "electric_burst_v01",
+      "first_100ms_target_to_masker_rms_db": -1.7899,
+      "masker": "low_drone",
+      "masker_rms_relative_to_target_db": 6,
+      "normalized_spectral_band_overlap_proxy": 0.00016,
+      "target_to_masker_rms_db": -6.0
+    },
+    {
+      "combined_sample_overrange": false,
+      "combined_sample_peak": 0.799366,
+      "event": "electric_burst_v01",
+      "first_100ms_target_to_masker_rms_db": 6.2871,
+      "masker": "mid_pulse",
+      "masker_rms_relative_to_target_db": -6,
+      "normalized_spectral_band_overlap_proxy": 0.00433,
+      "target_to_masker_rms_db": 6.0
+    },
+    {
+      "combined_sample_overrange": true,
+      "combined_sample_peak": 1.04055,
+      "event": "electric_burst_v01",
+      "first_100ms_target_to_masker_rms_db": 0.2871,
+      "masker": "mid_pulse",
+      "masker_rms_relative_to_target_db": 0,
+      "normalized_spectral_band_overlap_proxy": 0.00433,
+      "target_to_masker_rms_db": 0.0
+    },
+    {
+      "combined_sample_overrange": true,
+      "combined_sample_peak": 1.522679,
+      "event": "electric_burst_v01",
+      "first_100ms_target_to_masker_rms_db": -5.7129,
+      "masker": "mid_pulse",
+      "masker_rms_relative_to_target_db": 6,
+      "normalized_spectral_band_overlap_proxy": 0.00433,
+      "target_to_masker_rms_db": -6.0
+    },
+    {
+      "combined_sample_overrange": false,
+      "combined_sample_peak": 0.676286,
+      "event": "electric_burst_v01",
+      "first_100ms_target_to_masker_rms_db": 10.4306,
+      "masker": "wide_noise",
+      "masker_rms_relative_to_target_db": -6,
+      "normalized_spectral_band_overlap_proxy": 0.8261,
+      "target_to_masker_rms_db": 6.0
+    },
+    {
+      "combined_sample_overrange": false,
+      "combined_sample_peak": 0.719876,
+      "event": "electric_burst_v01",
+      "first_100ms_target_to_masker_rms_db": 4.4306,
+      "masker": "wide_noise",
+      "masker_rms_relative_to_target_db": 0,
+      "normalized_spectral_band_overlap_proxy": 0.8261,
+      "target_to_masker_rms_db": 0.0
+    },
+    {
+      "combined_sample_overrange": false,
+      "combined_sample_peak": 0.955922,
+      "event": "electric_burst_v01",
+      "first_100ms_target_to_masker_rms_db": -1.5694,
+      "masker": "wide_noise",
+      "masker_rms_relative_to_target_db": 6,
+      "normalized_spectral_band_overlap_proxy": 0.8261,
+      "target_to_masker_rms_db": -6.0
+    },
+    {
+      "combined_sample_overrange": false,
+      "combined_sample_peak": 0.26075,
+      "event": "fire_spell_v01",
+      "first_100ms_target_to_masker_rms_db": 4.529,
+      "masker": "low_drone",
+      "masker_rms_relative_to_target_db": -6,
+      "normalized_spectral_band_overlap_proxy": 0.01256,
+      "target_to_masker_rms_db": 6.0
+    },
+    {
+      "combined_sample_overrange": false,
+      "combined_sample_peak": 0.288997,
+      "event": "fire_spell_v01",
+      "first_100ms_target_to_masker_rms_db": -1.471,
+      "masker": "low_drone",
+      "masker_rms_relative_to_target_db": 0,
+      "normalized_spectral_band_overlap_proxy": 0.01256,
+      "target_to_masker_rms_db": 0.0
+    },
+    {
+      "combined_sample_overrange": false,
+      "combined_sample_peak": 0.345357,
+      "event": "fire_spell_v01",
+      "first_100ms_target_to_masker_rms_db": -7.471,
+      "masker": "low_drone",
+      "masker_rms_relative_to_target_db": 6,
+      "normalized_spectral_band_overlap_proxy": 0.01256,
+      "target_to_masker_rms_db": -6.0
+    },
+    {
+      "combined_sample_overrange": false,
+      "combined_sample_peak": 0.232837,
+      "event": "fire_spell_v01",
+      "first_100ms_target_to_masker_rms_db": 0.9688,
+      "masker": "mid_pulse",
+      "masker_rms_relative_to_target_db": -6,
+      "normalized_spectral_band_overlap_proxy": 0.14107,
+      "target_to_masker_rms_db": 6.0
+    },
+    {
+      "combined_sample_overrange": false,
+      "combined_sample_peak": 0.273435,
+      "event": "fire_spell_v01",
+      "first_100ms_target_to_masker_rms_db": -5.0312,
+      "masker": "mid_pulse",
+      "masker_rms_relative_to_target_db": 0,
+      "normalized_spectral_band_overlap_proxy": 0.14107,
+      "target_to_masker_rms_db": 0.0
+    },
+    {
+      "combined_sample_overrange": false,
+      "combined_sample_peak": 0.414218,
+      "event": "fire_spell_v01",
+      "first_100ms_target_to_masker_rms_db": -11.0312,
+      "masker": "mid_pulse",
+      "masker_rms_relative_to_target_db": 6,
+      "normalized_spectral_band_overlap_proxy": 0.14107,
+      "target_to_masker_rms_db": -6.0
+    },
+    {
+      "combined_sample_overrange": false,
+      "combined_sample_peak": 0.23472,
+      "event": "fire_spell_v01",
+      "first_100ms_target_to_masker_rms_db": 4.7566,
+      "masker": "wide_noise",
+      "masker_rms_relative_to_target_db": -6,
+      "normalized_spectral_band_overlap_proxy": 0.37261,
+      "target_to_masker_rms_db": 6.0
+    },
+    {
+      "combined_sample_overrange": false,
+      "combined_sample_peak": 0.250218,
+      "event": "fire_spell_v01",
+      "first_100ms_target_to_masker_rms_db": -1.2434,
+      "masker": "wide_noise",
+      "masker_rms_relative_to_target_db": 0,
+      "normalized_spectral_band_overlap_proxy": 0.37261,
+      "target_to_masker_rms_db": 0.0
+    },
+    {
+      "combined_sample_overrange": false,
+      "combined_sample_peak": 0.362196,
+      "event": "fire_spell_v01",
+      "first_100ms_target_to_masker_rms_db": -7.2434,
+      "masker": "wide_noise",
+      "masker_rms_relative_to_target_db": 6,
+      "normalized_spectral_band_overlap_proxy": 0.37261,
+      "target_to_masker_rms_db": -6.0
+    },
+    {
+      "combined_sample_overrange": false,
+      "combined_sample_peak": 0.555655,
+      "event": "forest_creature_v01",
+      "first_100ms_target_to_masker_rms_db": -6.7846,
+      "masker": "low_drone",
+      "masker_rms_relative_to_target_db": -6,
+      "normalized_spectral_band_overlap_proxy": 0.19469,
+      "target_to_masker_rms_db": 6.0
+    },
+    {
+      "combined_sample_overrange": false,
+      "combined_sample_peak": 0.657857,
+      "event": "forest_creature_v01",
+      "first_100ms_target_to_masker_rms_db": -12.7846,
+      "masker": "low_drone",
+      "masker_rms_relative_to_target_db": 0,
+      "normalized_spectral_band_overlap_proxy": 0.19469,
+      "target_to_masker_rms_db": 0.0
+    },
+    {
+      "combined_sample_overrange": false,
+      "combined_sample_peak": 0.861775,
+      "event": "forest_creature_v01",
+      "first_100ms_target_to_masker_rms_db": -18.7846,
+      "masker": "low_drone",
+      "masker_rms_relative_to_target_db": 6,
+      "normalized_spectral_band_overlap_proxy": 0.19469,
+      "target_to_masker_rms_db": -6.0
+    },
+    {
+      "combined_sample_overrange": false,
+      "combined_sample_peak": 0.652476,
+      "event": "forest_creature_v01",
+      "first_100ms_target_to_masker_rms_db": -10.4249,
+      "masker": "mid_pulse",
+      "masker_rms_relative_to_target_db": -6,
+      "normalized_spectral_band_overlap_proxy": 0.09727,
+      "target_to_masker_rms_db": 6.0
+    },
+    {
+      "combined_sample_overrange": false,
+      "combined_sample_peak": 0.941295,
+      "event": "forest_creature_v01",
+      "first_100ms_target_to_masker_rms_db": -16.4249,
+      "masker": "mid_pulse",
+      "masker_rms_relative_to_target_db": 0,
+      "normalized_spectral_band_overlap_proxy": 0.09727,
+      "target_to_masker_rms_db": 0.0
+    },
+    {
+      "combined_sample_overrange": true,
+      "combined_sample_peak": 1.531897,
+      "event": "forest_creature_v01",
+      "first_100ms_target_to_masker_rms_db": -22.4249,
+      "masker": "mid_pulse",
+      "masker_rms_relative_to_target_db": 6,
+      "normalized_spectral_band_overlap_proxy": 0.09727,
+      "target_to_masker_rms_db": -6.0
+    },
+    {
+      "combined_sample_overrange": false,
+      "combined_sample_peak": 0.606514,
+      "event": "forest_creature_v01",
+      "first_100ms_target_to_masker_rms_db": -6.5583,
+      "masker": "wide_noise",
+      "masker_rms_relative_to_target_db": -6,
+      "normalized_spectral_band_overlap_proxy": 0.08736,
+      "target_to_masker_rms_db": 6.0
+    },
+    {
+      "combined_sample_overrange": false,
+      "combined_sample_peak": 0.748372,
+      "event": "forest_creature_v01",
+      "first_100ms_target_to_masker_rms_db": -12.5583,
+      "masker": "wide_noise",
+      "masker_rms_relative_to_target_db": 0,
+      "normalized_spectral_band_overlap_proxy": 0.08736,
+      "target_to_masker_rms_db": 0.0
+    },
+    {
+      "combined_sample_overrange": true,
+      "combined_sample_peak": 1.151728,
+      "event": "forest_creature_v01",
+      "first_100ms_target_to_masker_rms_db": -18.5583,
+      "masker": "wide_noise",
+      "masker_rms_relative_to_target_db": 6,
+      "normalized_spectral_band_overlap_proxy": 0.08736,
+      "target_to_masker_rms_db": -6.0
+    },
+    {
+      "combined_sample_overrange": false,
+      "combined_sample_peak": 0.497419,
+      "event": "steel_armor_v01",
+      "first_100ms_target_to_masker_rms_db": -3.867,
+      "masker": "low_drone",
+      "masker_rms_relative_to_target_db": -6,
+      "normalized_spectral_band_overlap_proxy": 0.0002,
+      "target_to_masker_rms_db": 6.0
+    },
+    {
+      "combined_sample_overrange": false,
+      "combined_sample_peak": 0.506977,
+      "event": "steel_armor_v01",
+      "first_100ms_target_to_masker_rms_db": -9.867,
+      "masker": "low_drone",
+      "masker_rms_relative_to_target_db": 0,
+      "normalized_spectral_band_overlap_proxy": 0.0002,
+      "target_to_masker_rms_db": 0.0
+    },
+    {
+      "combined_sample_overrange": false,
+      "combined_sample_peak": 0.566807,
+      "event": "steel_armor_v01",
+      "first_100ms_target_to_masker_rms_db": -15.867,
+      "masker": "low_drone",
+      "masker_rms_relative_to_target_db": 6,
+      "normalized_spectral_band_overlap_proxy": 0.0002,
+      "target_to_masker_rms_db": -6.0
+    },
+    {
+      "combined_sample_overrange": false,
+      "combined_sample_peak": 0.539547,
+      "event": "steel_armor_v01",
+      "first_100ms_target_to_masker_rms_db": -7.0797,
+      "masker": "mid_pulse",
+      "masker_rms_relative_to_target_db": -6,
+      "normalized_spectral_band_overlap_proxy": 0.20431,
+      "target_to_masker_rms_db": 6.0
+    },
+    {
+      "combined_sample_overrange": false,
+      "combined_sample_peak": 0.541102,
+      "event": "steel_armor_v01",
+      "first_100ms_target_to_masker_rms_db": -13.0797,
+      "masker": "mid_pulse",
+      "masker_rms_relative_to_target_db": 0,
+      "normalized_spectral_band_overlap_proxy": 0.20431,
+      "target_to_masker_rms_db": 0.0
+    },
+    {
+      "combined_sample_overrange": false,
+      "combined_sample_peak": 0.770866,
+      "event": "steel_armor_v01",
+      "first_100ms_target_to_masker_rms_db": -19.0797,
+      "masker": "mid_pulse",
+      "masker_rms_relative_to_target_db": 6,
+      "normalized_spectral_band_overlap_proxy": 0.20431,
+      "target_to_masker_rms_db": -6.0
+    },
+    {
+      "combined_sample_overrange": false,
+      "combined_sample_peak": 0.574801,
+      "event": "steel_armor_v01",
+      "first_100ms_target_to_masker_rms_db": -3.635,
+      "masker": "wide_noise",
+      "masker_rms_relative_to_target_db": -6,
+      "normalized_spectral_band_overlap_proxy": 0.14066,
+      "target_to_masker_rms_db": 6.0
+    },
+    {
+      "combined_sample_overrange": false,
+      "combined_sample_peak": 0.620758,
+      "event": "steel_armor_v01",
+      "first_100ms_target_to_masker_rms_db": -9.635,
+      "masker": "wide_noise",
+      "masker_rms_relative_to_target_db": 0,
+      "normalized_spectral_band_overlap_proxy": 0.14066,
+      "target_to_masker_rms_db": 0.0
+    },
+    {
+      "combined_sample_overrange": false,
+      "combined_sample_peak": 0.78136,
+      "event": "steel_armor_v01",
+      "first_100ms_target_to_masker_rms_db": -15.635,
+      "masker": "wide_noise",
+      "masker_rms_relative_to_target_db": 6,
+      "normalized_spectral_band_overlap_proxy": 0.14066,
+      "target_to_masker_rms_db": -6.0
+    },
+    {
+      "combined_sample_overrange": false,
+      "combined_sample_peak": 0.540733,
+      "event": "stone_impact_v01",
+      "first_100ms_target_to_masker_rms_db": 12.0131,
+      "masker": "low_drone",
+      "masker_rms_relative_to_target_db": -6,
+      "normalized_spectral_band_overlap_proxy": 0.30157,
+      "target_to_masker_rms_db": 6.0
+    },
+    {
+      "combined_sample_overrange": false,
+      "combined_sample_peak": 0.583707,
+      "event": "stone_impact_v01",
+      "first_100ms_target_to_masker_rms_db": 6.0131,
+      "masker": "low_drone",
+      "masker_rms_relative_to_target_db": 0,
+      "normalized_spectral_band_overlap_proxy": 0.30157,
+      "target_to_masker_rms_db": 0.0
+    },
+    {
+      "combined_sample_overrange": false,
+      "combined_sample_peak": 0.669453,
+      "event": "stone_impact_v01",
+      "first_100ms_target_to_masker_rms_db": 0.0131,
+      "masker": "low_drone",
+      "masker_rms_relative_to_target_db": 6,
+      "normalized_spectral_band_overlap_proxy": 0.30157,
+      "target_to_masker_rms_db": -6.0
+    },
+    {
+      "combined_sample_overrange": false,
+      "combined_sample_peak": 0.492635,
+      "event": "stone_impact_v01",
+      "first_100ms_target_to_masker_rms_db": 7.9218,
+      "masker": "mid_pulse",
+      "masker_rms_relative_to_target_db": -6,
+      "normalized_spectral_band_overlap_proxy": 0.04735,
+      "target_to_masker_rms_db": 6.0
+    },
+    {
+      "combined_sample_overrange": false,
+      "combined_sample_peak": 0.579466,
+      "event": "stone_impact_v01",
+      "first_100ms_target_to_masker_rms_db": 1.9218,
+      "masker": "mid_pulse",
+      "masker_rms_relative_to_target_db": 0,
+      "normalized_spectral_band_overlap_proxy": 0.04735,
+      "target_to_masker_rms_db": -0.0
+    },
+    {
+      "combined_sample_overrange": false,
+      "combined_sample_peak": 0.758942,
+      "event": "stone_impact_v01",
+      "first_100ms_target_to_masker_rms_db": -4.0782,
+      "masker": "mid_pulse",
+      "masker_rms_relative_to_target_db": 6,
+      "normalized_spectral_band_overlap_proxy": 0.04735,
+      "target_to_masker_rms_db": -6.0
+    },
+    {
+      "combined_sample_overrange": false,
+      "combined_sample_peak": 0.506712,
+      "event": "stone_impact_v01",
+      "first_100ms_target_to_masker_rms_db": 12.2371,
+      "masker": "wide_noise",
+      "masker_rms_relative_to_target_db": -6,
+      "normalized_spectral_band_overlap_proxy": 0.40347,
+      "target_to_masker_rms_db": 6.0
+    },
+    {
+      "combined_sample_overrange": false,
+      "combined_sample_peak": 0.54981,
+      "event": "stone_impact_v01",
+      "first_100ms_target_to_masker_rms_db": 6.2371,
+      "masker": "wide_noise",
+      "masker_rms_relative_to_target_db": 0,
+      "normalized_spectral_band_overlap_proxy": 0.40347,
+      "target_to_masker_rms_db": -0.0
+    },
+    {
+      "combined_sample_overrange": false,
+      "combined_sample_peak": 0.691533,
+      "event": "stone_impact_v01",
+      "first_100ms_target_to_masker_rms_db": 0.2371,
+      "masker": "wide_noise",
+      "masker_rms_relative_to_target_db": 6,
+      "normalized_spectral_band_overlap_proxy": 0.40347,
+      "target_to_masker_rms_db": -6.0
+    }
+  ],
+  "sample_rate": 48000,
+  "scope": "offline controlled procedural masker; descriptive diagnostic only; not soundfont music, measured masking, listener recognition or game mix",
+  "source_files": 6
+}

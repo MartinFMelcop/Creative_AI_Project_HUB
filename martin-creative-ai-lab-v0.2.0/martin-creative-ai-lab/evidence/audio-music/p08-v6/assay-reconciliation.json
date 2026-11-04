@@ -1,0 +1,144 @@
+{
+  "schema_version": 1,
+  "kind": "actual_p08_priority_identity_reconciliation",
+  "baseline_commit": "1cc982a525b63abbd8a1091ebd70e16df7844cb5",
+  "results": [
+    {
+      "lab": "rpg-systems",
+      "evidence": "rpg-progression",
+      "observations_exact": true,
+      "nonidentity_canonical_sha256": "fe2c08cdf5b11d249fb6eef1faca968d7e262fabad3f15b203213673c0d32034",
+      "identity_changes": {
+        "destination/north-star/csharp/Audio/Admission.cs": {
+          "before": null,
+          "after": "51a98f3e963def8305cd4d3e2e542dc004912d54a683a5551128186fd89e2cb2"
+        },
+        "destination/north-star/csharp/AudioChecks/Program.cs": {
+          "before": "84a1e8ae9d0465901869649573ab117665a146a4f80c04c221b21d1a76e4d068",
+          "after": "eb48a218e76dd9c3fe59631285035b2b041f483df9d0d401107cc8f3c4f328b9"
+        },
+        "destination/north-star/csharp/Presentation/Program.cs": {
+          "before": "e04317ed8ee81a65360d07653b3fe03e900a748eac677e9b30b70b02721f6581",
+          "after": "44089db8317ca46fc8e1ec9c5004d9f585ec8fd55cb01241c2d7c592c1b1a5b9"
+        }
+      },
+      "prior_run_sha256": "659f3f02ba15d41bd38557dfcb1333d60530128e9a18f9dee2068c366a099058",
+      "prior_result_sha256": "9d3528cd27e6c8fa6876ef094b08e7820996bba837968c143240f262f49bb7a8",
+      "result_sha256": "e1f46e6e746400222a673da68cd94b10687515d44f7f61a6818d14df1749648f",
+      "prior_run": "evidence/audio-music/p08-v6/prior-assays/rpg-progression/RUN.json",
+      "prior_result": "evidence/audio-music/p08-v6/prior-assays/rpg-progression/results.json",
+      "strict_comparison_exit_code": 0,
+      "strict_output_byte_exact": true,
+      "current_run_sha256": "40ecd7eb61d9b1e3a51deb3ce3240b2f54d7e1f14def2e7b513212b35f1ec05a",
+      "result_size_bytes": 121995,
+      "prior_files_match_baseline_commit": true,
+      "final_source_fingerprint_exact": true
+    },
+    {
+      "lab": "economy-simulation",
+      "evidence": "economy-crafting",
+      "observations_exact": true,
+      "nonidentity_canonical_sha256": "5df1799a7aa07bb9a07a50a9f56b540dbcf7b49c57601674c2b84cc8b1c3d9fc",
+      "identity_changes": {
+        "north-star/csharp/Audio/Admission.cs": {
+          "before": null,
+          "after": "51a98f3e963def8305cd4d3e2e542dc004912d54a683a5551128186fd89e2cb2"
+        },
+        "north-star/csharp/AudioChecks/Program.cs": {
+          "before": "84a1e8ae9d0465901869649573ab117665a146a4f80c04c221b21d1a76e4d068",
+          "after": "eb48a218e76dd9c3fe59631285035b2b041f483df9d0d401107cc8f3c4f328b9"
+        },
+        "north-star/csharp/Presentation/Program.cs": {
+          "before": "e04317ed8ee81a65360d07653b3fe03e900a748eac677e9b30b70b02721f6581",
+          "after": "44089db8317ca46fc8e1ec9c5004d9f585ec8fd55cb01241c2d7c592c1b1a5b9"
+        }
+      },
+      "prior_run_sha256": "e19872d36956286e354337cac6e1abe091279df48da3e163babe2eec09af9a1f",
+      "prior_result_sha256": "63fc84d71d0848896e2b1f5bd252573f29949e6fc5be8c47ff16ab1382384f38",
+      "result_sha256": "7a6daefa1945b75ff6d04c9ba2d1713c8e23010275a6e3c78221cb5861c551a5",
+      "prior_run": "evidence/audio-music/p08-v6/prior-assays/economy-crafting/RUN.json",
+      "prior_result": "evidence/audio-music/p08-v6/prior-assays/economy-crafting/results.json",
+      "strict_comparison_exit_code": 0,
+      "strict_output_byte_exact": true,
+      "current_run_sha256": "cc7bcf9742e2da377cdcf685a612a57b3d76b533a7970e17653e6eea7095c108",
+      "result_size_bytes": 18368,
+      "prior_files_match_baseline_commit": true,
+      "final_source_fingerprint_exact": true
+    },
+    {
+      "lab": "world-gameplay",
+      "evidence": "world-loadout",
+      "observations_exact": true,
+      "nonidentity_canonical_sha256": "c0fd03bf67f4262b0b38fb715d69bf97b3e48fac668e81c166482891c32f2322",
+      "identity_changes": {
+        "north-star/csharp/Audio/Admission.cs": {
+          "before": null,
+          "after": "51a98f3e963def8305cd4d3e2e542dc004912d54a683a5551128186fd89e2cb2"
+        },
+        "north-star/csharp/AudioChecks/Program.cs": {
+          "before": "84a1e8ae9d0465901869649573ab117665a146a4f80c04c221b21d1a76e4d068",
+          "after": "eb48a218e76dd9c3fe59631285035b2b041f483df9d0d401107cc8f3c4f328b9"
+        },
+        "north-star/csharp/Presentation/Program.cs": {
+          "before": "e04317ed8ee81a65360d07653b3fe03e900a748eac677e9b30b70b02721f6581",
+          "after": "44089db8317ca46fc8e1ec9c5004d9f585ec8fd55cb01241c2d7c592c1b1a5b9"
+        }
+      },
+      "prior_run_sha256": "91ddeaa91427b61049a9dcaf24d1f6875f19c0528aac23032f9d77c4587d0aef",
+      "prior_result_sha256": "fb05866b7f29656c2d4ee4166f6c39a092388d52eabd59bcf4fefa0d446d2734",
+      "result_sha256": "a83bfa3ce4848bf378b005151225fd69aafe62c875dee90bdf6a496fcd5896af",
+      "prior_run": "evidence/audio-music/p08-v6/prior-assays/world-loadout/RUN.json",
+      "prior_result": "evidence/audio-music/p08-v6/prior-assays/world-loadout/results.json",
+      "strict_comparison_exit_code": 0,
+      "strict_output_byte_exact": true,
+      "current_run_sha256": "ae4573886580f35988074d4ad0942593f8fbb5e30ed92b3aec290500ee309d87",
+      "result_size_bytes": 385543,
+      "prior_files_match_baseline_commit": true,
+      "final_source_fingerprint_exact": true
+    },
+    {
+      "lab": "networking-persistence",
+      "evidence": "persistent-expedition",
+      "observations_exact": true,
+      "nonidentity_canonical_sha256": "1a4bf0943c92521f3a363d4c96a1d792bb6453a20eeab4c0d9ff07474b98786a",
+      "identity_changes": {
+        "north-star/csharp/Audio/Admission.cs": {
+          "before": null,
+          "after": "51a98f3e963def8305cd4d3e2e542dc004912d54a683a5551128186fd89e2cb2"
+        },
+        "north-star/csharp/AudioChecks/Program.cs": {
+          "before": "84a1e8ae9d0465901869649573ab117665a146a4f80c04c221b21d1a76e4d068",
+          "after": "eb48a218e76dd9c3fe59631285035b2b041f483df9d0d401107cc8f3c4f328b9"
+        },
+        "north-star/csharp/Presentation/Program.cs": {
+          "before": "e04317ed8ee81a65360d07653b3fe03e900a748eac677e9b30b70b02721f6581",
+          "after": "44089db8317ca46fc8e1ec9c5004d9f585ec8fd55cb01241c2d7c592c1b1a5b9"
+        }
+      },
+      "prior_run_sha256": "58380d343ec2be4429cfb7d6bc0a6bf22b6e26a3c58983e1b9d0ab19cfadf751",
+      "prior_result_sha256": "f0145995d390c5d33666c92bc1f9536a8038db209d65a35348db560b4afecfae",
+      "result_sha256": "5380934fb871df9ce0d8af31c62a7f9ec7df837e7631fb79e4174c90285d549c",
+      "prior_run": "evidence/audio-music/p08-v6/prior-assays/persistent-expedition/RUN.json",
+      "prior_result": "evidence/audio-music/p08-v6/prior-assays/persistent-expedition/results.json",
+      "strict_comparison_exit_code": 0,
+      "strict_output_byte_exact": true,
+      "current_run_sha256": "e26201b869dfa4fa1f5f01891cd4655b478bfaf6140cf872ee96b38f26581804",
+      "result_size_bytes": 21328,
+      "prior_files_match_baseline_commit": true,
+      "final_source_fingerprint_exact": true
+    }
+  ],
+  "limits": "Fresh actual engine-independent C# assays. Exactly one new Audio admission source and two modified AudioChecks/Presentation C# identities differ. All nonidentity source assays, cases, observations, negative controls and result limits remain exact. No fingerprint, fixture, comparison gate or command body was weakened. No Unity, Windows, Steam, physical audio device or human validation.",
+  "commands": "commands.json",
+  "strict_full_comparisons": {
+    "passed": 4,
+    "failed": 0
+  },
+  "current_receipt_checks": {
+    "result_artifact_hashes_exact": true,
+    "prior_bytes_exact": true,
+    "strict_output_bytes_exact": true,
+    "prior_files_match_baseline_commit": true,
+    "final_source_fingerprints_exact": true
+  }
+}

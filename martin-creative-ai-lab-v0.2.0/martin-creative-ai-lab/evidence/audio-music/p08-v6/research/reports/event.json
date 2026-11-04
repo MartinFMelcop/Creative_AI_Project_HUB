@@ -1,0 +1,86 @@
+{
+  "catalog": {
+    "boss": [
+      "boss_v01",
+      "boss_v02"
+    ],
+    "heal": [
+      "heal_v01",
+      "heal_v02"
+    ],
+    "hit": [
+      "steel_v01",
+      "steel_v02",
+      "steel_v03"
+    ]
+  },
+  "cooldown_ms": 30,
+  "max_voices": 2,
+  "scope": "offline reference policy, not game execution or playable audio",
+  "seed": 91,
+  "trace": [
+    {
+      "decision": "PLAY",
+      "emitter": "player",
+      "event": "hit",
+      "priority": 120,
+      "seq": 1,
+      "variant": "steel_v02"
+    },
+    {
+      "decision": "DUPLICATE_OR_STALE_OBSERVATION",
+      "seq": 1
+    },
+    {
+      "decision": "COOLDOWN_SUPPRESSED",
+      "seq": 2
+    },
+    {
+      "decision": "CONSUMED_MUTED_SILENT",
+      "seq": 3
+    },
+    {
+      "decision": "PLAY",
+      "emitter": "player",
+      "event": "hit",
+      "priority": 120,
+      "seq": 4,
+      "variant": "steel_v03"
+    },
+    {
+      "decision": "PLAY",
+      "emitter": "ally",
+      "event": "heal",
+      "priority": 80,
+      "seq": 5,
+      "stole_seq": 1,
+      "variant": "heal_v01"
+    },
+    {
+      "decision": "PLAY",
+      "emitter": "boss1",
+      "event": "boss",
+      "priority": 0,
+      "seq": 6,
+      "stole_seq": 4,
+      "variant": "boss_v02"
+    },
+    {
+      "decision": "VOICE_LIMIT_SUPPRESSED",
+      "seq": 7
+    },
+    {
+      "decision": "CONSUMED_SUSPENDED_SILENT",
+      "seq": 8
+    },
+    {
+      "decision": "PLAY",
+      "emitter": "boss1",
+      "event": "boss",
+      "priority": 0,
+      "seq": 9,
+      "stole_seq": 5,
+      "variant": "boss_v01"
+    }
+  ]
+}

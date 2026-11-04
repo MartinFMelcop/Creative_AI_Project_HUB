@@ -1,0 +1,6713 @@
+{
+  "schema_version": 1,
+  "kind": "actual_realtime_browser_csharp_audio",
+  "runtime": {
+    "node": "v24.19.0",
+    "chromium": "154.0.8037.57",
+    "sample_rate": 44100
+  },
+  "checks": [
+    "Actual C# begins while audio remains explicitly disabled",
+    "Late unlock never replays the previous accepted event",
+    "Actual real-time music graph emits PCM",
+    "Both decoded stems share frame length and one scheduled start",
+    "Actual pre-gain stereo capture retains shared harmonic phase",
+    "A real 37ms shifted audio path is detected",
+    "Accepted Anchor response and next threat follow C# audio plan",
+    "Actual response playback emits PCM",
+    "GET and duplicate snapshots cannot repeat cue playback",
+    "Lure uses distinct draw cue for actual protected advance",
+    "Actual damage owns hurt cue",
+    "Actual pulse escape owns evade cue",
+    "Actual survey terminal has outcome priority",
+    "Second encounter adapts music without independently restarting a stem",
+    "Adaptive transition preserves actual stem phase",
+    "Actual rapid commands at maximum UI gains remain bounded and below clipping",
+    "Scarce refusal creates no success cue",
+    "Mute is actual PCM silence while events are consumed",
+    "Unmute cannot replay muted events",
+    "Independent music zero leaves silence without an event",
+    "Effects remain actual audible PCM with music disabled",
+    "Actual excessive master gain is detected before encoding",
+    "Actual defeat renders and plays only the loss plan",
+    "Loss outcome has actual effects-only PCM",
+    "Blur actually suspends the context and clears voices/transports",
+    "Explicit resume consumes suspended events without backlog",
+    "Disconnect actually suspends playback",
+    "Blur invalidates asynchronous decode and leaves master silent",
+    "No application browser exceptions"
+  ],
+  "observations": {
+    "preEnable": {
+      "approach": "anchor",
+      "outfit": "plate",
+      "stage": 0,
+      "beat": 0,
+      "position": 0,
+      "health": 14,
+      "resolve": 6,
+      "max_health": 14,
+      "max_resolve": 6,
+      "spent_resolve": 0,
+      "rejected": 0,
+      "active": true,
+      "won": false,
+      "complete": false,
+      "required_position": 2,
+      "max_beats": 4,
+      "pulse": false,
+      "threat": "BOLT: moving exposes health; the approach skill spends resolve to protect.",
+      "last": "Encounter committed. Preparation is locked.",
+      "level": 1,
+      "xp": 0,
+      "sequence": 3,
+      "accepted": true,
+      "command": "begin",
+      "pose": "ready",
+      "before": {
+        "approach": "anchor",
+        "outfit": "plate",
+        "stage": 0,
+        "beat": 0,
+        "position": 0,
+        "health": 0,
+        "resolve": 0,
+        "max_health": 0,
+        "max_resolve": 0,
+        "spent_resolve": 0,
+        "rejected": 0,
+        "active": false,
+        "won": false,
+        "complete": false,
+        "required_position": 2,
+        "max_beats": 4,
+        "pulse": false,
+        "threat": "BOLT: moving exposes health; the approach skill spends resolve to protect.",
+        "last": "Prepare an approach, outfit and earned points.",
+        "level": 1,
+        "xp": 0
+      },
+      "after": {
+        "approach": "anchor",
+        "outfit": "plate",
+        "stage": 0,
+        "beat": 0,
+        "position": 0,
+        "health": 14,
+        "resolve": 6,
+        "max_health": 14,
+        "max_resolve": 6,
+        "spent_resolve": 0,
+        "rejected": 0,
+        "active": true,
+        "won": false,
+        "complete": false,
+        "required_position": 2,
+        "max_beats": 4,
+        "pulse": false,
+        "threat": "BOLT: moving exposes health; the approach skill spends resolve to protect.",
+        "last": "Encounter committed. Preparation is locked.",
+        "level": 1,
+        "xp": 0
+      },
+      "damage": 0,
+      "cost": 0,
+      "moved": 0,
+      "contact": "none",
+      "audio": {
+        "cues": [
+          "bolt"
+        ],
+        "music": "quiet",
+        "playback": {
+          "version": 1,
+          "maxvoices": 2,
+          "master": 0.8,
+          "ceiling": 0.9,
+          "source_bound": 0.45386993498348416,
+          "catalog": {
+            "bolt": {
+              "priority": 1,
+              "frames": 5292,
+              "peak": 0.18549774746735836
+            },
+            "pulse": {
+              "priority": 1,
+              "frames": 7938,
+              "peak": 0.2116373049941343
+            },
+            "block": {
+              "priority": 2,
+              "frames": 5292,
+              "peak": 0.2352234279393713
+            },
+            "draw": {
+              "priority": 2,
+              "frames": 5292,
+              "peak": 0.24168930897548968
+            },
+            "hurt": {
+              "priority": 2,
+              "frames": 5292,
+              "peak": 0.2529133501155912
+            },
+            "evade": {
+              "priority": 2,
+              "frames": 5292,
+              "peak": 0.19477369788211804
+            },
+            "won": {
+              "priority": 3,
+              "frames": 13230,
+              "peak": 0.1943615234677495
+            },
+            "lost": {
+              "priority": 3,
+              "frames": 13230,
+              "peak": 0.1943615234677495
+            }
+          },
+          "rules": {
+            "1": [
+              -2,
+              -2,
+              -2
+            ],
+            "2": [
+              -2,
+              -2,
+              -2
+            ],
+            "3": [
+              -2,
+              -2,
+              -2
+            ],
+            "": [
+              -2,
+              -2,
+              -2
+            ],
+            "1,1": [
+              0,
+              0,
+              0
+            ],
+            "1,2": [
+              0,
+              0,
+              0
+            ],
+            "1,3": [
+              0,
+              0,
+              0
+            ],
+            "2,1": [
+              1,
+              1,
+              1
+            ],
+            "2,2": [
+              -1,
+              -1,
+              0
+            ],
+            "2,3": [
+              -1,
+              -1,
+              0
+            ],
+            "3,1": [
+              1,
+              1,
+              1
+            ],
+            "3,2": [
+              -1,
+              -1,
+              1
+            ],
+            "3,3": [
+              -1,
+              -1,
+              -1
+            ]
+          }
+        }
+      }
+    },
+    "anchor": {
+      "approach": "anchor",
+      "outfit": "plate",
+      "stage": 0,
+      "beat": 1,
+      "position": 0,
+      "health": 14,
+      "resolve": 4,
+      "max_health": 14,
+      "max_resolve": 6,
+      "spent_resolve": 2,
+      "rejected": 0,
+      "active": true,
+      "won": false,
+      "complete": false,
+      "required_position": 2,
+      "max_beats": 4,
+      "pulse": false,
+      "threat": "BOLT: moving exposes health; the approach skill spends resolve to protect.",
+      "last": "Skill: 0 damage, 2 resolve spent.",
+      "level": 1,
+      "xp": 0,
+      "sequence": 8,
+      "accepted": true,
+      "command": "skill",
+      "pose": "anchor",
+      "before": {
+        "approach": "anchor",
+        "outfit": "plate",
+        "stage": 0,
+        "beat": 0,
+        "position": 0,
+        "health": 14,
+        "resolve": 6,
+        "max_health": 14,
+        "max_resolve": 6,
+        "spent_resolve": 0,
+        "rejected": 0,
+        "active": true,
+        "won": false,
+        "complete": false,
+        "required_position": 2,
+        "max_beats": 4,
+        "pulse": false,
+        "threat": "BOLT: moving exposes health; the approach skill spends resolve to protect.",
+        "last": "Encounter committed. Preparation is locked.",
+        "level": 1,
+        "xp": 0
+      },
+      "after": {
+        "approach": "anchor",
+        "outfit": "plate",
+        "stage": 0,
+        "beat": 1,
+        "position": 0,
+        "health": 14,
+        "resolve": 4,
+        "max_health": 14,
+        "max_resolve": 6,
+        "spent_resolve": 2,
+        "rejected": 0,
+        "active": true,
+        "won": false,
+        "complete": false,
+        "required_position": 2,
+        "max_beats": 4,
+        "pulse": false,
+        "threat": "BOLT: moving exposes health; the approach skill spends resolve to protect.",
+        "last": "Skill: 0 damage, 2 resolve spent.",
+        "level": 1,
+        "xp": 0
+      },
+      "damage": 0,
+      "cost": 2,
+      "moved": 0,
+      "contact": "protected",
+      "audio": {
+        "cues": [
+          "block",
+          "bolt"
+        ],
+        "music": "quiet",
+        "playback": {
+          "version": 1,
+          "maxvoices": 2,
+          "master": 0.8,
+          "ceiling": 0.9,
+          "source_bound": 0.45386993498348416,
+          "catalog": {
+            "bolt": {
+              "priority": 1,
+              "frames": 5292,
+              "peak": 0.18549774746735836
+            },
+            "pulse": {
+              "priority": 1,
+              "frames": 7938,
+              "peak": 0.2116373049941343
+            },
+            "block": {
+              "priority": 2,
+              "frames": 5292,
+              "peak": 0.2352234279393713
+            },
+            "draw": {
+              "priority": 2,
+              "frames": 5292,
+              "peak": 0.24168930897548968
+            },
+            "hurt": {
+              "priority": 2,
+              "frames": 5292,
+              "peak": 0.2529133501155912
+            },
+            "evade": {
+              "priority": 2,
+              "frames": 5292,
+              "peak": 0.19477369788211804
+            },
+            "won": {
+              "priority": 3,
+              "frames": 13230,
+              "peak": 0.1943615234677495
+            },
+            "lost": {
+              "priority": 3,
+              "frames": 13230,
+              "peak": 0.1943615234677495
+            }
+          },
+          "rules": {
+            "1": [
+              -2,
+              -2,
+              -2
+            ],
+            "2": [
+              -2,
+              -2,
+              -2
+            ],
+            "3": [
+              -2,
+              -2,
+              -2
+            ],
+            "": [
+              -2,
+              -2,
+              -2
+            ],
+            "1,1": [
+              0,
+              0,
+              0
+            ],
+            "1,2": [
+              0,
+              0,
+              0
+            ],
+            "1,3": [
+              0,
+              0,
+              0
+            ],
+            "2,1": [
+              1,
+              1,
+              1
+            ],
+            "2,2": [
+              -1,
+              -1,
+              0
+            ],
+            "2,3": [
+              -1,
+              -1,
+              0
+            ],
+            "3,1": [
+              1,
+              1,
+              1
+            ],
+            "3,2": [
+              -1,
+              -1,
+              1
+            ],
+            "3,3": [
+              -1,
+              -1,
+              -1
+            ]
+          }
+        }
+      }
+    },
+    "lure": {
+      "approach": "lure",
+      "outfit": "trail",
+      "stage": 0,
+      "beat": 1,
+      "position": 1,
+      "health": 10,
+      "resolve": 7,
+      "max_health": 10,
+      "max_resolve": 10,
+      "spent_resolve": 3,
+      "rejected": 0,
+      "active": true,
+      "won": false,
+      "complete": false,
+      "required_position": 2,
+      "max_beats": 4,
+      "pulse": false,
+      "threat": "BOLT: moving exposes health; the approach skill spends resolve to protect.",
+      "last": "Skill: 0 damage, 3 resolve spent.",
+      "level": 1,
+      "xp": 0,
+      "sequence": 12,
+      "accepted": true,
+      "command": "skill",
+      "pose": "lure",
+      "before": {
+        "approach": "lure",
+        "outfit": "trail",
+        "stage": 0,
+        "beat": 0,
+        "position": 0,
+        "health": 10,
+        "resolve": 10,
+        "max_health": 10,
+        "max_resolve": 10,
+        "spent_resolve": 0,
+        "rejected": 0,
+        "active": true,
+        "won": false,
+        "complete": false,
+        "required_position": 2,
+        "max_beats": 4,
+        "pulse": false,
+        "threat": "BOLT: moving exposes health; the approach skill spends resolve to protect.",
+        "last": "Encounter committed. Preparation is locked.",
+        "level": 1,
+        "xp": 0
+      },
+      "after": {
+        "approach": "lure",
+        "outfit": "trail",
+        "stage": 0,
+        "beat": 1,
+        "position": 1,
+        "health": 10,
+        "resolve": 7,
+        "max_health": 10,
+        "max_resolve": 10,
+        "spent_resolve": 3,
+        "rejected": 0,
+        "active": true,
+        "won": false,
+        "complete": false,
+        "required_position": 2,
+        "max_beats": 4,
+        "pulse": false,
+        "threat": "BOLT: moving exposes health; the approach skill spends resolve to protect.",
+        "last": "Skill: 0 damage, 3 resolve spent.",
+        "level": 1,
+        "xp": 0
+      },
+      "damage": 0,
+      "cost": 3,
+      "moved": 1,
+      "contact": "protected",
+      "audio": {
+        "cues": [
+          "draw",
+          "bolt"
+        ],
+        "music": "quiet",
+        "playback": {
+          "version": 1,
+          "maxvoices": 2,
+          "master": 0.8,
+          "ceiling": 0.9,
+          "source_bound": 0.45386993498348416,
+          "catalog": {
+            "bolt": {
+              "priority": 1,
+              "frames": 5292,
+              "peak": 0.18549774746735836
+            },
+            "pulse": {
+              "priority": 1,
+              "frames": 7938,
+              "peak": 0.2116373049941343
+            },
+            "block": {
+              "priority": 2,
+              "frames": 5292,
+              "peak": 0.2352234279393713
+            },
+            "draw": {
+              "priority": 2,
+              "frames": 5292,
+              "peak": 0.24168930897548968
+            },
+            "hurt": {
+              "priority": 2,
+              "frames": 5292,
+              "peak": 0.2529133501155912
+            },
+            "evade": {
+              "priority": 2,
+              "frames": 5292,
+              "peak": 0.19477369788211804
+            },
+            "won": {
+              "priority": 3,
+              "frames": 13230,
+              "peak": 0.1943615234677495
+            },
+            "lost": {
+              "priority": 3,
+              "frames": 13230,
+              "peak": 0.1943615234677495
+            }
+          },
+          "rules": {
+            "1": [
+              -2,
+              -2,
+              -2
+            ],
+            "2": [
+              -2,
+              -2,
+              -2
+            ],
+            "3": [
+              -2,
+              -2,
+              -2
+            ],
+            "": [
+              -2,
+              -2,
+              -2
+            ],
+            "1,1": [
+              0,
+              0,
+              0
+            ],
+            "1,2": [
+              0,
+              0,
+              0
+            ],
+            "1,3": [
+              0,
+              0,
+              0
+            ],
+            "2,1": [
+              1,
+              1,
+              1
+            ],
+            "2,2": [
+              -1,
+              -1,
+              0
+            ],
+            "2,3": [
+              -1,
+              -1,
+              0
+            ],
+            "3,1": [
+              1,
+              1,
+              1
+            ],
+            "3,2": [
+              -1,
+              -1,
+              1
+            ],
+            "3,3": [
+              -1,
+              -1,
+              -1
+            ]
+          }
+        }
+      }
+    },
+    "hurt": {
+      "approach": "anchor",
+      "outfit": "plate",
+      "stage": 0,
+      "beat": 1,
+      "position": 1,
+      "health": 10,
+      "resolve": 6,
+      "max_health": 14,
+      "max_resolve": 6,
+      "spent_resolve": 0,
+      "rejected": 0,
+      "active": true,
+      "won": false,
+      "complete": false,
+      "required_position": 2,
+      "max_beats": 4,
+      "pulse": false,
+      "threat": "BOLT: moving exposes health; the approach skill spends resolve to protect.",
+      "last": "Walk: 4 damage, 0 resolve spent.",
+      "level": 1,
+      "xp": 0,
+      "sequence": 16,
+      "accepted": true,
+      "command": "walk",
+      "pose": "walk",
+      "before": {
+        "approach": "anchor",
+        "outfit": "plate",
+        "stage": 0,
+        "beat": 0,
+        "position": 0,
+        "health": 14,
+        "resolve": 6,
+        "max_health": 14,
+        "max_resolve": 6,
+        "spent_resolve": 0,
+        "rejected": 0,
+        "active": true,
+        "won": false,
+        "complete": false,
+        "required_position": 2,
+        "max_beats": 4,
+        "pulse": false,
+        "threat": "BOLT: moving exposes health; the approach skill spends resolve to protect.",
+        "last": "Encounter committed. Preparation is locked.",
+        "level": 1,
+        "xp": 0
+      },
+      "after": {
+        "approach": "anchor",
+        "outfit": "plate",
+        "stage": 0,
+        "beat": 1,
+        "position": 1,
+        "health": 10,
+        "resolve": 6,
+        "max_health": 14,
+        "max_resolve": 6,
+        "spent_resolve": 0,
+        "rejected": 0,
+        "active": true,
+        "won": false,
+        "complete": false,
+        "required_position": 2,
+        "max_beats": 4,
+        "pulse": false,
+        "threat": "BOLT: moving exposes health; the approach skill spends resolve to protect.",
+        "last": "Walk: 4 damage, 0 resolve spent.",
+        "level": 1,
+        "xp": 0
+      },
+      "damage": 4,
+      "cost": 0,
+      "moved": 1,
+      "contact": "hurt",
+      "audio": {
+        "cues": [
+          "hurt",
+          "bolt"
+        ],
+        "music": "quiet",
+        "playback": {
+          "version": 1,
+          "maxvoices": 2,
+          "master": 0.8,
+          "ceiling": 0.9,
+          "source_bound": 0.45386993498348416,
+          "catalog": {
+            "bolt": {
+              "priority": 1,
+              "frames": 5292,
+              "peak": 0.18549774746735836
+            },
+            "pulse": {
+              "priority": 1,
+              "frames": 7938,
+              "peak": 0.2116373049941343
+            },
+            "block": {
+              "priority": 2,
+              "frames": 5292,
+              "peak": 0.2352234279393713
+            },
+            "draw": {
+              "priority": 2,
+              "frames": 5292,
+              "peak": 0.24168930897548968
+            },
+            "hurt": {
+              "priority": 2,
+              "frames": 5292,
+              "peak": 0.2529133501155912
+            },
+            "evade": {
+              "priority": 2,
+              "frames": 5292,
+              "peak": 0.19477369788211804
+            },
+            "won": {
+              "priority": 3,
+              "frames": 13230,
+              "peak": 0.1943615234677495
+            },
+            "lost": {
+              "priority": 3,
+              "frames": 13230,
+              "peak": 0.1943615234677495
+            }
+          },
+          "rules": {
+            "1": [
+              -2,
+              -2,
+              -2
+            ],
+            "2": [
+              -2,
+              -2,
+              -2
+            ],
+            "3": [
+              -2,
+              -2,
+              -2
+            ],
+            "": [
+              -2,
+              -2,
+              -2
+            ],
+            "1,1": [
+              0,
+              0,
+              0
+            ],
+            "1,2": [
+              0,
+              0,
+              0
+            ],
+            "1,3": [
+              0,
+              0,
+              0
+            ],
+            "2,1": [
+              1,
+              1,
+              1
+            ],
+            "2,2": [
+              -1,
+              -1,
+              0
+            ],
+            "2,3": [
+              -1,
+              -1,
+              0
+            ],
+            "3,1": [
+              1,
+              1,
+              1
+            ],
+            "3,2": [
+              -1,
+              -1,
+              1
+            ],
+            "3,3": [
+              -1,
+              -1,
+              -1
+            ]
+          }
+        }
+      }
+    },
+    "evade": {
+      "approach": "anchor",
+      "outfit": "plate",
+      "stage": 0,
+      "beat": 3,
+      "position": 3,
+      "health": 10,
+      "resolve": 3,
+      "max_health": 14,
+      "max_resolve": 6,
+      "spent_resolve": 3,
+      "rejected": 0,
+      "active": true,
+      "won": false,
+      "complete": false,
+      "required_position": 2,
+      "max_beats": 4,
+      "pulse": false,
+      "threat": "BOLT: moving exposes health; the approach skill spends resolve to protect.",
+      "last": "Dash: 0 damage, 1 resolve spent.",
+      "level": 1,
+      "xp": 0,
+      "sequence": 18,
+      "accepted": true,
+      "command": "dash",
+      "pose": "dash",
+      "before": {
+        "approach": "anchor",
+        "outfit": "plate",
+        "stage": 0,
+        "beat": 2,
+        "position": 1,
+        "health": 10,
+        "resolve": 4,
+        "max_health": 14,
+        "max_resolve": 6,
+        "spent_resolve": 2,
+        "rejected": 0,
+        "active": true,
+        "won": false,
+        "complete": false,
+        "required_position": 2,
+        "max_beats": 4,
+        "pulse": true,
+        "threat": "PULSE at your current position: walking or dashing leaves it.",
+        "last": "Skill: 0 damage, 2 resolve spent.",
+        "level": 1,
+        "xp": 0
+      },
+      "after": {
+        "approach": "anchor",
+        "outfit": "plate",
+        "stage": 0,
+        "beat": 3,
+        "position": 3,
+        "health": 10,
+        "resolve": 3,
+        "max_health": 14,
+        "max_resolve": 6,
+        "spent_resolve": 3,
+        "rejected": 0,
+        "active": true,
+        "won": false,
+        "complete": false,
+        "required_position": 2,
+        "max_beats": 4,
+        "pulse": false,
+        "threat": "BOLT: moving exposes health; the approach skill spends resolve to protect.",
+        "last": "Dash: 0 damage, 1 resolve spent.",
+        "level": 1,
+        "xp": 0
+      },
+      "damage": 0,
+      "cost": 1,
+      "moved": 2,
+      "contact": "evaded",
+      "audio": {
+        "cues": [
+          "evade",
+          "bolt"
+        ],
+        "music": "quiet",
+        "playback": {
+          "version": 1,
+          "maxvoices": 2,
+          "master": 0.8,
+          "ceiling": 0.9,
+          "source_bound": 0.45386993498348416,
+          "catalog": {
+            "bolt": {
+              "priority": 1,
+              "frames": 5292,
+              "peak": 0.18549774746735836
+            },
+            "pulse": {
+              "priority": 1,
+              "frames": 7938,
+              "peak": 0.2116373049941343
+            },
+            "block": {
+              "priority": 2,
+              "frames": 5292,
+              "peak": 0.2352234279393713
+            },
+            "draw": {
+              "priority": 2,
+              "frames": 5292,
+              "peak": 0.24168930897548968
+            },
+            "hurt": {
+              "priority": 2,
+              "frames": 5292,
+              "peak": 0.2529133501155912
+            },
+            "evade": {
+              "priority": 2,
+              "frames": 5292,
+              "peak": 0.19477369788211804
+            },
+            "won": {
+              "priority": 3,
+              "frames": 13230,
+              "peak": 0.1943615234677495
+            },
+            "lost": {
+              "priority": 3,
+              "frames": 13230,
+              "peak": 0.1943615234677495
+            }
+          },
+          "rules": {
+            "1": [
+              -2,
+              -2,
+              -2
+            ],
+            "2": [
+              -2,
+              -2,
+              -2
+            ],
+            "3": [
+              -2,
+              -2,
+              -2
+            ],
+            "": [
+              -2,
+              -2,
+              -2
+            ],
+            "1,1": [
+              0,
+              0,
+              0
+            ],
+            "1,2": [
+              0,
+              0,
+              0
+            ],
+            "1,3": [
+              0,
+              0,
+              0
+            ],
+            "2,1": [
+              1,
+              1,
+              1
+            ],
+            "2,2": [
+              -1,
+              -1,
+              0
+            ],
+            "2,3": [
+              -1,
+              -1,
+              0
+            ],
+            "3,1": [
+              1,
+              1,
+              1
+            ],
+            "3,2": [
+              -1,
+              -1,
+              1
+            ],
+            "3,3": [
+              -1,
+              -1,
+              -1
+            ]
+          }
+        }
+      }
+    },
+    "survey": {
+      "approach": "anchor",
+      "outfit": "plate",
+      "stage": 1,
+      "beat": 4,
+      "position": 3,
+      "health": 10,
+      "resolve": 1,
+      "max_health": 14,
+      "max_resolve": 6,
+      "spent_resolve": 5,
+      "rejected": 0,
+      "active": false,
+      "won": true,
+      "complete": false,
+      "required_position": 4,
+      "max_beats": 6,
+      "pulse": true,
+      "threat": "PULSE at your current position: walking or dashing leaves it.",
+      "last": "Skill: 0 damage, 2 resolve spent. Completed; reward committed. Level 2, 2 unspent points.",
+      "level": 2,
+      "xp": 10,
+      "sequence": 19,
+      "accepted": true,
+      "command": "skill",
+      "pose": "won",
+      "before": {
+        "approach": "anchor",
+        "outfit": "plate",
+        "stage": 0,
+        "beat": 3,
+        "position": 3,
+        "health": 10,
+        "resolve": 3,
+        "max_health": 14,
+        "max_resolve": 6,
+        "spent_resolve": 3,
+        "rejected": 0,
+        "active": true,
+        "won": false,
+        "complete": false,
+        "required_position": 2,
+        "max_beats": 4,
+        "pulse": false,
+        "threat": "BOLT: moving exposes health; the approach skill spends resolve to protect.",
+        "last": "Dash: 0 damage, 1 resolve spent.",
+        "level": 1,
+        "xp": 0
+      },
+      "after": {
+        "approach": "anchor",
+        "outfit": "plate",
+        "stage": 1,
+        "beat": 4,
+        "position": 3,
+        "health": 10,
+        "resolve": 1,
+        "max_health": 14,
+        "max_resolve": 6,
+        "spent_resolve": 5,
+        "rejected": 0,
+        "active": false,
+        "won": true,
+        "complete": false,
+        "required_position": 4,
+        "max_beats": 6,
+        "pulse": true,
+        "threat": "PULSE at your current position: walking or dashing leaves it.",
+        "last": "Skill: 0 damage, 2 resolve spent. Completed; reward committed. Level 2, 2 unspent points.",
+        "level": 2,
+        "xp": 10
+      },
+      "damage": 0,
+      "cost": 2,
+      "moved": 0,
+      "contact": "protected",
+      "audio": {
+        "cues": [
+          "won"
+        ],
+        "music": "silent",
+        "playback": {
+          "version": 1,
+          "maxvoices": 2,
+          "master": 0.8,
+          "ceiling": 0.9,
+          "source_bound": 0.45386993498348416,
+          "catalog": {
+            "bolt": {
+              "priority": 1,
+              "frames": 5292,
+              "peak": 0.18549774746735836
+            },
+            "pulse": {
+              "priority": 1,
+              "frames": 7938,
+              "peak": 0.2116373049941343
+            },
+            "block": {
+              "priority": 2,
+              "frames": 5292,
+              "peak": 0.2352234279393713
+            },
+            "draw": {
+              "priority": 2,
+              "frames": 5292,
+              "peak": 0.24168930897548968
+            },
+            "hurt": {
+              "priority": 2,
+              "frames": 5292,
+              "peak": 0.2529133501155912
+            },
+            "evade": {
+              "priority": 2,
+              "frames": 5292,
+              "peak": 0.19477369788211804
+            },
+            "won": {
+              "priority": 3,
+              "frames": 13230,
+              "peak": 0.1943615234677495
+            },
+            "lost": {
+              "priority": 3,
+              "frames": 13230,
+              "peak": 0.1943615234677495
+            }
+          },
+          "rules": {
+            "1": [
+              -2,
+              -2,
+              -2
+            ],
+            "2": [
+              -2,
+              -2,
+              -2
+            ],
+            "3": [
+              -2,
+              -2,
+              -2
+            ],
+            "": [
+              -2,
+              -2,
+              -2
+            ],
+            "1,1": [
+              0,
+              0,
+              0
+            ],
+            "1,2": [
+              0,
+              0,
+              0
+            ],
+            "1,3": [
+              0,
+              0,
+              0
+            ],
+            "2,1": [
+              1,
+              1,
+              1
+            ],
+            "2,2": [
+              -1,
+              -1,
+              0
+            ],
+            "2,3": [
+              -1,
+              -1,
+              0
+            ],
+            "3,1": [
+              1,
+              1,
+              1
+            ],
+            "3,2": [
+              -1,
+              -1,
+              1
+            ],
+            "3,3": [
+              -1,
+              -1,
+              -1
+            ]
+          }
+        }
+      }
+    },
+    "second": {
+      "approach": "anchor",
+      "outfit": "plate",
+      "stage": 1,
+      "beat": 0,
+      "position": 0,
+      "health": 15,
+      "resolve": 7,
+      "max_health": 15,
+      "max_resolve": 7,
+      "spent_resolve": 0,
+      "rejected": 0,
+      "active": true,
+      "won": false,
+      "complete": false,
+      "required_position": 4,
+      "max_beats": 6,
+      "pulse": false,
+      "threat": "BOLT: moving exposes health; the approach skill spends resolve to protect.",
+      "last": "Encounter committed. Preparation is locked.",
+      "level": 2,
+      "xp": 10,
+      "sequence": 20,
+      "accepted": true,
+      "command": "begin",
+      "pose": "ready",
+      "before": {
+        "approach": "anchor",
+        "outfit": "plate",
+        "stage": 1,
+        "beat": 4,
+        "position": 3,
+        "health": 10,
+        "resolve": 1,
+        "max_health": 14,
+        "max_resolve": 6,
+        "spent_resolve": 5,
+        "rejected": 0,
+        "active": false,
+        "won": true,
+        "complete": false,
+        "required_position": 4,
+        "max_beats": 6,
+        "pulse": true,
+        "threat": "PULSE at your current position: walking or dashing leaves it.",
+        "last": "Skill: 0 damage, 2 resolve spent. Completed; reward committed. Level 2, 2 unspent points.",
+        "level": 2,
+        "xp": 10
+      },
+      "after": {
+        "approach": "anchor",
+        "outfit": "plate",
+        "stage": 1,
+        "beat": 0,
+        "position": 0,
+        "health": 15,
+        "resolve": 7,
+        "max_health": 15,
+        "max_resolve": 7,
+        "spent_resolve": 0,
+        "rejected": 0,
+        "active": true,
+        "won": false,
+        "complete": false,
+        "required_position": 4,
+        "max_beats": 6,
+        "pulse": false,
+        "threat": "BOLT: moving exposes health; the approach skill spends resolve to protect.",
+        "last": "Encounter committed. Preparation is locked.",
+        "level": 2,
+        "xp": 10
+      },
+      "damage": 0,
+      "cost": 0,
+      "moved": 0,
+      "contact": "none",
+      "audio": {
+        "cues": [
+          "bolt"
+        ],
+        "music": "crossing",
+        "playback": {
+          "version": 1,
+          "maxvoices": 2,
+          "master": 0.8,
+          "ceiling": 0.9,
+          "source_bound": 0.45386993498348416,
+          "catalog": {
+            "bolt": {
+              "priority": 1,
+              "frames": 5292,
+              "peak": 0.18549774746735836
+            },
+            "pulse": {
+              "priority": 1,
+              "frames": 7938,
+              "peak": 0.2116373049941343
+            },
+            "block": {
+              "priority": 2,
+              "frames": 5292,
+              "peak": 0.2352234279393713
+            },
+            "draw": {
+              "priority": 2,
+              "frames": 5292,
+              "peak": 0.24168930897548968
+            },
+            "hurt": {
+              "priority": 2,
+              "frames": 5292,
+              "peak": 0.2529133501155912
+            },
+            "evade": {
+              "priority": 2,
+              "frames": 5292,
+              "peak": 0.19477369788211804
+            },
+            "won": {
+              "priority": 3,
+              "frames": 13230,
+              "peak": 0.1943615234677495
+            },
+            "lost": {
+              "priority": 3,
+              "frames": 13230,
+              "peak": 0.1943615234677495
+            }
+          },
+          "rules": {
+            "1": [
+              -2,
+              -2,
+              -2
+            ],
+            "2": [
+              -2,
+              -2,
+              -2
+            ],
+            "3": [
+              -2,
+              -2,
+              -2
+            ],
+            "": [
+              -2,
+              -2,
+              -2
+            ],
+            "1,1": [
+              0,
+              0,
+              0
+            ],
+            "1,2": [
+              0,
+              0,
+              0
+            ],
+            "1,3": [
+              0,
+              0,
+              0
+            ],
+            "2,1": [
+              1,
+              1,
+              1
+            ],
+            "2,2": [
+              -1,
+              -1,
+              0
+            ],
+            "2,3": [
+              -1,
+              -1,
+              0
+            ],
+            "3,1": [
+              1,
+              1,
+              1
+            ],
+            "3,2": [
+              -1,
+              -1,
+              1
+            ],
+            "3,3": [
+              -1,
+              -1,
+              -1
+            ]
+          }
+        }
+      }
+    },
+    "playbackAtTransition": {
+      "enabled": true,
+      "suspended": false,
+      "muted": false,
+      "loading": false,
+      "sequence": 20,
+      "music": "crossing",
+      "mode": "crossing",
+      "cursor": 20,
+      "voices": 1,
+      "maxvoices": 2,
+      "activeVoices": [
+        {
+          "id": 14,
+          "name": "bolt",
+          "priority": 1,
+          "sequence": 20,
+          "started": 6.7424943310657595,
+          "ends": 6.98249433106576,
+          "peak": 0.1854933649301529
+        }
+      ],
+      "headroom": {
+        "decoded_bound": 0.11368238002640713,
+        "ceiling": 0.9,
+        "source_bound": 0.45386993498348416
+      },
+      "duck": {
+        "until": 6.98249433106576,
+        "gain": 0.3199999928474426
+      },
+      "stems": 2,
+      "transports": [
+        {
+          "start": 0.11256235827664399,
+          "frames": 352800
+        },
+        {
+          "start": 0.11256235827664399,
+          "frames": 352800
+        }
+      ],
+      "epoch": 5,
+      "history": [
+        {
+          "event": "observe",
+          "time": null,
+          "sequence": 0,
+          "music": "silent"
+        },
+        {
+          "event": "consumed-silent",
+          "time": null,
+          "sequence": 0
+        },
+        {
+          "event": "observe",
+          "time": null,
+          "sequence": 1,
+          "music": "silent"
+        },
+        {
+          "event": "restart",
+          "time": null,
+          "sequence": 1,
+          "transport": "continuous-aligned-silent"
+        },
+        {
+          "event": "consumed-silent",
+          "time": null,
+          "sequence": 1
+        },
+        {
+          "event": "observe",
+          "time": null,
+          "sequence": 2,
+          "music": "silent"
+        },
+        {
+          "event": "consumed-silent",
+          "time": null,
+          "sequence": 2
+        },
+        {
+          "event": "observe",
+          "time": null,
+          "sequence": 3,
+          "music": "quiet"
+        },
+        {
+          "event": "consumed-silent",
+          "time": null,
+          "sequence": 3
+        },
+        {
+          "event": "observe",
+          "time": null,
+          "sequence": 4,
+          "music": "quiet"
+        },
+        {
+          "event": "consumed-silent",
+          "time": null,
+          "sequence": 4
+        },
+        {
+          "event": "decoded-budget",
+          "time": 0.07256235827664399,
+          "bound": 0.4540134489701676,
+          "ceiling": 0.9
+        },
+        {
+          "event": "stems-start",
+          "time": 0.07256235827664399,
+          "when": 0.11256235827664399,
+          "frames": 352800
+        },
+        {
+          "event": "enable",
+          "time": 0.07256235827664399,
+          "sequence": 4
+        },
+        {
+          "event": "observe",
+          "time": 2.8705668934240363,
+          "sequence": 5,
+          "music": "silent"
+        },
+        {
+          "event": "restart",
+          "time": 2.8705668934240363,
+          "sequence": 5,
+          "transport": "continuous-aligned-silent"
+        },
+        {
+          "event": "observe",
+          "time": 2.9518367346938774,
+          "sequence": 6,
+          "music": "silent"
+        },
+        {
+          "event": "observe",
+          "time": 3.0214965986394557,
+          "sequence": 7,
+          "music": "quiet"
+        },
+        {
+          "event": "cue",
+          "time": 3.0214965986394557,
+          "id": 1,
+          "name": "bolt",
+          "priority": 1,
+          "sequence": 7,
+          "started": 3.0214965986394557,
+          "ends": 3.2614965986394555,
+          "peak": 0.1854933649301529
+        },
+        {
+          "event": "observe",
+          "time": 3.091156462585034,
+          "sequence": 8,
+          "music": "quiet"
+        },
+        {
+          "event": "cue",
+          "time": 3.091156462585034,
+          "id": 2,
+          "name": "block",
+          "priority": 2,
+          "sequence": 8,
+          "started": 3.091156462585034,
+          "ends": 3.3311564625850343,
+          "peak": 0.2354004681110382
+        },
+        {
+          "event": "voice-stop",
+          "time": 3.091156462585034,
+          "id": 1,
+          "name": "bolt",
+          "priority": 1,
+          "sequence": 7,
+          "started": 3.0214965986394557,
+          "ends": 3.2614965986394555,
+          "peak": 0.1854933649301529,
+          "reason": "higher-priority-or-new-threat"
+        },
+        {
+          "event": "cue",
+          "time": 3.091156462585034,
+          "id": 3,
+          "name": "bolt",
+          "priority": 1,
+          "sequence": 8,
+          "started": 3.091156462585034,
+          "ends": 3.3311564625850343,
+          "peak": 0.1854933649301529
+        },
+        {
+          "event": "quarantined-voice-end",
+          "time": 3.102766439909297,
+          "id": 1,
+          "sequence": 7
+        },
+        {
+          "event": "voice-end",
+          "time": 3.332063492063492,
+          "id": 2,
+          "name": "block",
+          "priority": 2,
+          "sequence": 8,
+          "started": 3.091156462585034,
+          "ends": 3.3311564625850343,
+          "peak": 0.2354004681110382
+        },
+        {
+          "event": "voice-end",
+          "time": 3.332063492063492,
+          "id": 3,
+          "name": "bolt",
+          "priority": 1,
+          "sequence": 8,
+          "started": 3.091156462585034,
+          "ends": 3.3311564625850343,
+          "peak": 0.1854933649301529
+        },
+        {
+          "event": "ignored",
+          "time": 3.642630385487528,
+          "sequence": 8
+        },
+        {
+          "event": "ignored",
+          "time": 3.642630385487528,
+          "sequence": 8
+        },
+        {
+          "event": "observe",
+          "time": 3.671655328798186,
+          "sequence": 9,
+          "music": "silent"
+        },
+        {
+          "event": "restart",
+          "time": 3.671655328798186,
+          "sequence": 9,
+          "transport": "continuous-aligned-silent"
+        },
+        {
+          "event": "observe",
+          "time": 3.7500226757369615,
+          "sequence": 10,
+          "music": "silent"
+        },
+        {
+          "event": "observe",
+          "time": 3.8225850340136054,
+          "sequence": 11,
+          "music": "quiet"
+        },
+        {
+          "event": "cue",
+          "time": 3.8225850340136054,
+          "id": 4,
+          "name": "bolt",
+          "priority": 1,
+          "sequence": 11,
+          "started": 3.8225850340136054,
+          "ends": 4.062585034013606,
+          "peak": 0.1854933649301529
+        },
+        {
+          "event": "observe",
+          "time": 3.8922448979591837,
+          "sequence": 12,
+          "music": "quiet"
+        },
+        {
+          "event": "cue",
+          "time": 3.8922448979591837,
+          "id": 5,
+          "name": "draw",
+          "priority": 2,
+          "sequence": 12,
+          "started": 3.8922448979591837,
+          "ends": 4.1322448979591835,
+          "peak": 0.24416683614253998
+        },
+        {
+          "event": "voice-stop",
+          "time": 3.8922448979591837,
+          "id": 4,
+          "name": "bolt",
+          "priority": 1,
+          "sequence": 11,
+          "started": 3.8225850340136054,
+          "ends": 4.062585034013606,
+          "peak": 0.1854933649301529,
+          "reason": "higher-priority-or-new-threat"
+        },
+        {
+          "event": "cue",
+          "time": 3.8922448979591837,
+          "id": 6,
+          "name": "bolt",
+          "priority": 1,
+          "sequence": 12,
+          "started": 3.8922448979591837,
+          "ends": 4.1322448979591835,
+          "peak": 0.1854933649301529
+        },
+        {
+          "event": "quarantined-voice-end",
+          "time": 3.900952380952381,
+          "id": 4,
+          "sequence": 11
+        },
+        {
+          "event": "voice-end",
+          "time": 4.141859410430839,
+          "id": 5,
+          "name": "draw",
+          "priority": 2,
+          "sequence": 12,
+          "started": 3.8922448979591837,
+          "ends": 4.1322448979591835,
+          "peak": 0.24416683614253998
+        },
+        {
+          "event": "voice-end",
+          "time": 4.141859410430839,
+          "id": 6,
+          "name": "bolt",
+          "priority": 1,
+          "sequence": 12,
+          "started": 3.8922448979591837,
+          "ends": 4.1322448979591835,
+          "peak": 0.1854933649301529
+        },
+        {
+          "event": "observe",
+          "time": 4.4524263038548755,
+          "sequence": 13,
+          "music": "silent"
+        },
+        {
+          "event": "restart",
+          "time": 4.4524263038548755,
+          "sequence": 13,
+          "transport": "continuous-aligned-silent"
+        },
+        {
+          "event": "observe",
+          "time": 4.542403628117913,
+          "sequence": 14,
+          "music": "silent"
+        },
+        {
+          "event": "observe",
+          "time": 4.600453514739229,
+          "sequence": 15,
+          "music": "quiet"
+        },
+        {
+          "event": "cue",
+          "time": 4.612063492063492,
+          "id": 7,
+          "name": "bolt",
+          "priority": 1,
+          "sequence": 15,
+          "started": 4.612063492063492,
+          "ends": 4.852063492063492,
+          "peak": 0.1854933649301529
+        },
+        {
+          "event": "observe",
+          "time": 4.670113378684808,
+          "sequence": 16,
+          "music": "quiet"
+        },
+        {
+          "event": "cue",
+          "time": 4.670113378684808,
+          "id": 8,
+          "name": "hurt",
+          "priority": 2,
+          "sequence": 16,
+          "started": 4.670113378684808,
+          "ends": 4.910113378684808,
+          "peak": 0.2529979944229126
+        },
+        {
+          "event": "voice-stop",
+          "time": 4.670113378684808,
+          "id": 7,
+          "name": "bolt",
+          "priority": 1,
+          "sequence": 15,
+          "started": 4.612063492063492,
+          "ends": 4.852063492063492,
+          "peak": 0.1854933649301529,
+          "reason": "higher-priority-or-new-threat"
+        },
+        {
+          "event": "cue",
+          "time": 4.670113378684808,
+          "id": 9,
+          "name": "bolt",
+          "priority": 1,
+          "sequence": 16,
+          "started": 4.670113378684808,
+          "ends": 4.910113378684808,
+          "peak": 0.1854933649301529
+        },
+        {
+          "event": "quarantined-voice-end",
+          "time": 4.68172335600907,
+          "id": 7,
+          "sequence": 15
+        },
+        {
+          "event": "voice-end",
+          "time": 4.911020408163266,
+          "id": 9,
+          "name": "bolt",
+          "priority": 1,
+          "sequence": 16,
+          "started": 4.670113378684808,
+          "ends": 4.910113378684808,
+          "peak": 0.1854933649301529
+        },
+        {
+          "event": "voice-end",
+          "time": 4.911020408163266,
+          "id": 8,
+          "name": "hurt",
+          "priority": 2,
+          "sequence": 16,
+          "started": 4.670113378684808,
+          "ends": 4.910113378684808,
+          "peak": 0.2529979944229126
+        },
+        {
+          "event": "observe",
+          "time": 5.262222222222222,
+          "sequence": 17,
+          "music": "quiet"
+        },
+        {
+          "event": "cue",
+          "time": 5.262222222222222,
+          "id": 10,
+          "name": "block",
+          "priority": 2,
+          "sequence": 17,
+          "started": 5.262222222222222,
+          "ends": 5.502222222222223,
+          "peak": 0.2354004681110382
+        },
+        {
+          "event": "cue",
+          "time": 5.262222222222222,
+          "id": 11,
+          "name": "pulse",
+          "priority": 1,
+          "sequence": 17,
+          "started": 5.262222222222222,
+          "ends": 5.622222222222223,
+          "peak": 0.21164056658744812
+        },
+        {
+          "event": "observe",
+          "time": 5.320272108843538,
+          "sequence": 18,
+          "music": "quiet"
+        },
+        {
+          "event": "voice-stop",
+          "time": 5.320272108843538,
+          "id": 11,
+          "name": "pulse",
+          "priority": 1,
+          "sequence": 17,
+          "started": 5.262222222222222,
+          "ends": 5.622222222222223,
+          "peak": 0.21164056658744812,
+          "reason": "higher-priority-or-new-threat"
+        },
+        {
+          "event": "cue",
+          "time": 5.320272108843538,
+          "id": 12,
+          "name": "evade",
+          "priority": 2,
+          "sequence": 18,
+          "started": 5.320272108843538,
+          "ends": 5.560272108843538,
+          "peak": 0.19477689266204834
+        },
+        {
+          "event": "cue-suppressed",
+          "time": 5.320272108843538,
+          "name": "bolt",
+          "priority": 1,
+          "sequence": 18,
+          "reason": "priority-saturation",
+          "state": "2,2"
+        },
+        {
+          "event": "quarantined-voice-end",
+          "time": 5.3318820861678,
+          "id": 11,
+          "sequence": 17
+        },
+        {
+          "event": "voice-end",
+          "time": 5.511836734693878,
+          "id": 10,
+          "name": "block",
+          "priority": 2,
+          "sequence": 17,
+          "started": 5.262222222222222,
+          "ends": 5.502222222222223,
+          "peak": 0.2354004681110382
+        },
+        {
+          "event": "voice-end",
+          "time": 5.561179138321996,
+          "id": 12,
+          "name": "evade",
+          "priority": 2,
+          "sequence": 18,
+          "started": 5.320272108843538,
+          "ends": 5.560272108843538,
+          "peak": 0.19477689266204834
+        },
+        {
+          "event": "observe",
+          "time": 5.900770975056689,
+          "sequence": 19,
+          "music": "silent"
+        },
+        {
+          "event": "terminal-priority",
+          "time": 5.900770975056689,
+          "sequence": 19
+        },
+        {
+          "event": "cue",
+          "time": 5.900770975056689,
+          "id": 13,
+          "name": "won",
+          "priority": 3,
+          "sequence": 19,
+          "started": 5.900770975056689,
+          "ends": 6.500770975056689,
+          "peak": 0.1943754255771637
+        },
+        {
+          "event": "voice-end",
+          "time": 6.501587301587302,
+          "id": 13,
+          "name": "won",
+          "priority": 3,
+          "sequence": 19,
+          "started": 5.900770975056689,
+          "ends": 6.500770975056689,
+          "peak": 0.1943754255771637
+        },
+        {
+          "event": "observe",
+          "time": 6.7424943310657595,
+          "sequence": 20,
+          "music": "crossing"
+        },
+        {
+          "event": "cue",
+          "time": 6.7424943310657595,
+          "id": 14,
+          "name": "bolt",
+          "priority": 1,
+          "sequence": 20,
+          "started": 6.7424943310657595,
+          "ends": 6.98249433106576,
+          "peak": 0.1854933649301529
+        }
+      ]
+    },
+    "refused": {
+      "approach": "anchor",
+      "outfit": "plate",
+      "stage": 0,
+      "beat": 3,
+      "position": 0,
+      "health": 10,
+      "resolve": 0,
+      "max_health": 14,
+      "max_resolve": 6,
+      "spent_resolve": 6,
+      "rejected": 1,
+      "active": true,
+      "won": false,
+      "complete": false,
+      "required_position": 2,
+      "max_beats": 4,
+      "pulse": false,
+      "threat": "BOLT: moving exposes health; the approach skill spends resolve to protect.",
+      "last": "Not enough resolve. No time, position or health changed.",
+      "level": 1,
+      "xp": 0,
+      "sequence": 33,
+      "accepted": false,
+      "command": "skill",
+      "pose": "rejected",
+      "before": {
+        "approach": "anchor",
+        "outfit": "plate",
+        "stage": 0,
+        "beat": 3,
+        "position": 0,
+        "health": 10,
+        "resolve": 0,
+        "max_health": 14,
+        "max_resolve": 6,
+        "spent_resolve": 6,
+        "rejected": 0,
+        "active": true,
+        "won": false,
+        "complete": false,
+        "required_position": 2,
+        "max_beats": 4,
+        "pulse": false,
+        "threat": "BOLT: moving exposes health; the approach skill spends resolve to protect.",
+        "last": "Skill: 4 damage, 2 resolve spent.",
+        "level": 1,
+        "xp": 0
+      },
+      "after": {
+        "approach": "anchor",
+        "outfit": "plate",
+        "stage": 0,
+        "beat": 3,
+        "position": 0,
+        "health": 10,
+        "resolve": 0,
+        "max_health": 14,
+        "max_resolve": 6,
+        "spent_resolve": 6,
+        "rejected": 1,
+        "active": true,
+        "won": false,
+        "complete": false,
+        "required_position": 2,
+        "max_beats": 4,
+        "pulse": false,
+        "threat": "BOLT: moving exposes health; the approach skill spends resolve to protect.",
+        "last": "Not enough resolve. No time, position or health changed.",
+        "level": 1,
+        "xp": 0
+      },
+      "damage": 0,
+      "cost": 0,
+      "moved": 0,
+      "contact": "none",
+      "audio": {
+        "cues": [],
+        "music": "quiet",
+        "playback": {
+          "version": 1,
+          "maxvoices": 2,
+          "master": 0.8,
+          "ceiling": 0.9,
+          "source_bound": 0.45386993498348416,
+          "catalog": {
+            "bolt": {
+              "priority": 1,
+              "frames": 5292,
+              "peak": 0.18549774746735836
+            },
+            "pulse": {
+              "priority": 1,
+              "frames": 7938,
+              "peak": 0.2116373049941343
+            },
+            "block": {
+              "priority": 2,
+              "frames": 5292,
+              "peak": 0.2352234279393713
+            },
+            "draw": {
+              "priority": 2,
+              "frames": 5292,
+              "peak": 0.24168930897548968
+            },
+            "hurt": {
+              "priority": 2,
+              "frames": 5292,
+              "peak": 0.2529133501155912
+            },
+            "evade": {
+              "priority": 2,
+              "frames": 5292,
+              "peak": 0.19477369788211804
+            },
+            "won": {
+              "priority": 3,
+              "frames": 13230,
+              "peak": 0.1943615234677495
+            },
+            "lost": {
+              "priority": 3,
+              "frames": 13230,
+              "peak": 0.1943615234677495
+            }
+          },
+          "rules": {
+            "1": [
+              -2,
+              -2,
+              -2
+            ],
+            "2": [
+              -2,
+              -2,
+              -2
+            ],
+            "3": [
+              -2,
+              -2,
+              -2
+            ],
+            "": [
+              -2,
+              -2,
+              -2
+            ],
+            "1,1": [
+              0,
+              0,
+              0
+            ],
+            "1,2": [
+              0,
+              0,
+              0
+            ],
+            "1,3": [
+              0,
+              0,
+              0
+            ],
+            "2,1": [
+              1,
+              1,
+              1
+            ],
+            "2,2": [
+              -1,
+              -1,
+              0
+            ],
+            "2,3": [
+              -1,
+              -1,
+              0
+            ],
+            "3,1": [
+              1,
+              1,
+              1
+            ],
+            "3,2": [
+              -1,
+              -1,
+              1
+            ],
+            "3,3": [
+              -1,
+              -1,
+              -1
+            ]
+          }
+        }
+      }
+    },
+    "muted": {
+      "approach": "anchor",
+      "outfit": "plate",
+      "stage": 0,
+      "beat": 4,
+      "position": 1,
+      "health": 6,
+      "resolve": 2,
+      "max_health": 14,
+      "max_resolve": 6,
+      "spent_resolve": 6,
+      "rejected": 1,
+      "active": false,
+      "won": false,
+      "complete": false,
+      "required_position": 2,
+      "max_beats": 4,
+      "pulse": false,
+      "threat": "BOLT: moving exposes health; the approach skill spends resolve to protect.",
+      "last": "Walk: 4 damage, 0 resolve spent. Crossing failed. Reprepare and retry; no completion reward.",
+      "level": 1,
+      "xp": 0,
+      "sequence": 34,
+      "accepted": true,
+      "command": "walk",
+      "pose": "lost",
+      "before": {
+        "approach": "anchor",
+        "outfit": "plate",
+        "stage": 0,
+        "beat": 3,
+        "position": 0,
+        "health": 10,
+        "resolve": 0,
+        "max_health": 14,
+        "max_resolve": 6,
+        "spent_resolve": 6,
+        "rejected": 1,
+        "active": true,
+        "won": false,
+        "complete": false,
+        "required_position": 2,
+        "max_beats": 4,
+        "pulse": false,
+        "threat": "BOLT: moving exposes health; the approach skill spends resolve to protect.",
+        "last": "Not enough resolve. No time, position or health changed.",
+        "level": 1,
+        "xp": 0
+      },
+      "after": {
+        "approach": "anchor",
+        "outfit": "plate",
+        "stage": 0,
+        "beat": 4,
+        "position": 1,
+        "health": 6,
+        "resolve": 2,
+        "max_health": 14,
+        "max_resolve": 6,
+        "spent_resolve": 6,
+        "rejected": 1,
+        "active": false,
+        "won": false,
+        "complete": false,
+        "required_position": 2,
+        "max_beats": 4,
+        "pulse": false,
+        "threat": "BOLT: moving exposes health; the approach skill spends resolve to protect.",
+        "last": "Walk: 4 damage, 0 resolve spent. Crossing failed. Reprepare and retry; no completion reward.",
+        "level": 1,
+        "xp": 0
+      },
+      "damage": 4,
+      "cost": 0,
+      "moved": 1,
+      "contact": "hurt",
+      "audio": {
+        "cues": [
+          "lost"
+        ],
+        "music": "silent",
+        "playback": {
+          "version": 1,
+          "maxvoices": 2,
+          "master": 0.8,
+          "ceiling": 0.9,
+          "source_bound": 0.45386993498348416,
+          "catalog": {
+            "bolt": {
+              "priority": 1,
+              "frames": 5292,
+              "peak": 0.18549774746735836
+            },
+            "pulse": {
+              "priority": 1,
+              "frames": 7938,
+              "peak": 0.2116373049941343
+            },
+            "block": {
+              "priority": 2,
+              "frames": 5292,
+              "peak": 0.2352234279393713
+            },
+            "draw": {
+              "priority": 2,
+              "frames": 5292,
+              "peak": 0.24168930897548968
+            },
+            "hurt": {
+              "priority": 2,
+              "frames": 5292,
+              "peak": 0.2529133501155912
+            },
+            "evade": {
+              "priority": 2,
+              "frames": 5292,
+              "peak": 0.19477369788211804
+            },
+            "won": {
+              "priority": 3,
+              "frames": 13230,
+              "peak": 0.1943615234677495
+            },
+            "lost": {
+              "priority": 3,
+              "frames": 13230,
+              "peak": 0.1943615234677495
+            }
+          },
+          "rules": {
+            "1": [
+              -2,
+              -2,
+              -2
+            ],
+            "2": [
+              -2,
+              -2,
+              -2
+            ],
+            "3": [
+              -2,
+              -2,
+              -2
+            ],
+            "": [
+              -2,
+              -2,
+              -2
+            ],
+            "1,1": [
+              0,
+              0,
+              0
+            ],
+            "1,2": [
+              0,
+              0,
+              0
+            ],
+            "1,3": [
+              0,
+              0,
+              0
+            ],
+            "2,1": [
+              1,
+              1,
+              1
+            ],
+            "2,2": [
+              -1,
+              -1,
+              0
+            ],
+            "2,3": [
+              -1,
+              -1,
+              0
+            ],
+            "3,1": [
+              1,
+              1,
+              1
+            ],
+            "3,2": [
+              -1,
+              -1,
+              1
+            ],
+            "3,3": [
+              -1,
+              -1,
+              -1
+            ]
+          }
+        }
+      }
+    },
+    "playbackAtMute": {
+      "enabled": true,
+      "suspended": false,
+      "muted": true,
+      "loading": false,
+      "sequence": 34,
+      "music": "silent",
+      "mode": "silent",
+      "cursor": 34,
+      "voices": 0,
+      "maxvoices": 2,
+      "activeVoices": [],
+      "headroom": {
+        "decoded_bound": 0.034451660525455216,
+        "ceiling": 0.9,
+        "source_bound": 0.45386993498348416
+      },
+      "duck": {
+        "until": 10.161632653061224,
+        "gain": 0.9998598694801331
+      },
+      "stems": 2,
+      "transports": [
+        {
+          "start": 0.11256235827664399,
+          "frames": 352800
+        },
+        {
+          "start": 0.11256235827664399,
+          "frames": 352800
+        }
+      ],
+      "epoch": 6,
+      "history": [
+        {
+          "event": "observe",
+          "time": null,
+          "sequence": 0,
+          "music": "silent"
+        },
+        {
+          "event": "consumed-silent",
+          "time": null,
+          "sequence": 0
+        },
+        {
+          "event": "observe",
+          "time": null,
+          "sequence": 1,
+          "music": "silent"
+        },
+        {
+          "event": "restart",
+          "time": null,
+          "sequence": 1,
+          "transport": "continuous-aligned-silent"
+        },
+        {
+          "event": "consumed-silent",
+          "time": null,
+          "sequence": 1
+        },
+        {
+          "event": "observe",
+          "time": null,
+          "sequence": 2,
+          "music": "silent"
+        },
+        {
+          "event": "consumed-silent",
+          "time": null,
+          "sequence": 2
+        },
+        {
+          "event": "observe",
+          "time": null,
+          "sequence": 3,
+          "music": "quiet"
+        },
+        {
+          "event": "consumed-silent",
+          "time": null,
+          "sequence": 3
+        },
+        {
+          "event": "observe",
+          "time": null,
+          "sequence": 4,
+          "music": "quiet"
+        },
+        {
+          "event": "consumed-silent",
+          "time": null,
+          "sequence": 4
+        },
+        {
+          "event": "decoded-budget",
+          "time": 0.07256235827664399,
+          "bound": 0.4540134489701676,
+          "ceiling": 0.9
+        },
+        {
+          "event": "stems-start",
+          "time": 0.07256235827664399,
+          "when": 0.11256235827664399,
+          "frames": 352800
+        },
+        {
+          "event": "enable",
+          "time": 0.07256235827664399,
+          "sequence": 4
+        },
+        {
+          "event": "observe",
+          "time": 2.8705668934240363,
+          "sequence": 5,
+          "music": "silent"
+        },
+        {
+          "event": "restart",
+          "time": 2.8705668934240363,
+          "sequence": 5,
+          "transport": "continuous-aligned-silent"
+        },
+        {
+          "event": "observe",
+          "time": 2.9518367346938774,
+          "sequence": 6,
+          "music": "silent"
+        },
+        {
+          "event": "observe",
+          "time": 3.0214965986394557,
+          "sequence": 7,
+          "music": "quiet"
+        },
+        {
+          "event": "cue",
+          "time": 3.0214965986394557,
+          "id": 1,
+          "name": "bolt",
+          "priority": 1,
+          "sequence": 7,
+          "started": 3.0214965986394557,
+          "ends": 3.2614965986394555,
+          "peak": 0.1854933649301529
+        },
+        {
+          "event": "observe",
+          "time": 3.091156462585034,
+          "sequence": 8,
+          "music": "quiet"
+        },
+        {
+          "event": "cue",
+          "time": 3.091156462585034,
+          "id": 2,
+          "name": "block",
+          "priority": 2,
+          "sequence": 8,
+          "started": 3.091156462585034,
+          "ends": 3.3311564625850343,
+          "peak": 0.2354004681110382
+        },
+        {
+          "event": "voice-stop",
+          "time": 3.091156462585034,
+          "id": 1,
+          "name": "bolt",
+          "priority": 1,
+          "sequence": 7,
+          "started": 3.0214965986394557,
+          "ends": 3.2614965986394555,
+          "peak": 0.1854933649301529,
+          "reason": "higher-priority-or-new-threat"
+        },
+        {
+          "event": "cue",
+          "time": 3.091156462585034,
+          "id": 3,
+          "name": "bolt",
+          "priority": 1,
+          "sequence": 8,
+          "started": 3.091156462585034,
+          "ends": 3.3311564625850343,
+          "peak": 0.1854933649301529
+        },
+        {
+          "event": "quarantined-voice-end",
+          "time": 3.102766439909297,
+          "id": 1,
+          "sequence": 7
+        },
+        {
+          "event": "voice-end",
+          "time": 3.332063492063492,
+          "id": 2,
+          "name": "block",
+          "priority": 2,
+          "sequence": 8,
+          "started": 3.091156462585034,
+          "ends": 3.3311564625850343,
+          "peak": 0.2354004681110382
+        },
+        {
+          "event": "voice-end",
+          "time": 3.332063492063492,
+          "id": 3,
+          "name": "bolt",
+          "priority": 1,
+          "sequence": 8,
+          "started": 3.091156462585034,
+          "ends": 3.3311564625850343,
+          "peak": 0.1854933649301529
+        },
+        {
+          "event": "ignored",
+          "time": 3.642630385487528,
+          "sequence": 8
+        },
+        {
+          "event": "ignored",
+          "time": 3.642630385487528,
+          "sequence": 8
+        },
+        {
+          "event": "observe",
+          "time": 3.671655328798186,
+          "sequence": 9,
+          "music": "silent"
+        },
+        {
+          "event": "restart",
+          "time": 3.671655328798186,
+          "sequence": 9,
+          "transport": "continuous-aligned-silent"
+        },
+        {
+          "event": "observe",
+          "time": 3.7500226757369615,
+          "sequence": 10,
+          "music": "silent"
+        },
+        {
+          "event": "observe",
+          "time": 3.8225850340136054,
+          "sequence": 11,
+          "music": "quiet"
+        },
+        {
+          "event": "cue",
+          "time": 3.8225850340136054,
+          "id": 4,
+          "name": "bolt",
+          "priority": 1,
+          "sequence": 11,
+          "started": 3.8225850340136054,
+          "ends": 4.062585034013606,
+          "peak": 0.1854933649301529
+        },
+        {
+          "event": "observe",
+          "time": 3.8922448979591837,
+          "sequence": 12,
+          "music": "quiet"
+        },
+        {
+          "event": "cue",
+          "time": 3.8922448979591837,
+          "id": 5,
+          "name": "draw",
+          "priority": 2,
+          "sequence": 12,
+          "started": 3.8922448979591837,
+          "ends": 4.1322448979591835,
+          "peak": 0.24416683614253998
+        },
+        {
+          "event": "voice-stop",
+          "time": 3.8922448979591837,
+          "id": 4,
+          "name": "bolt",
+          "priority": 1,
+          "sequence": 11,
+          "started": 3.8225850340136054,
+          "ends": 4.062585034013606,
+          "peak": 0.1854933649301529,
+          "reason": "higher-priority-or-new-threat"
+        },
+        {
+          "event": "cue",
+          "time": 3.8922448979591837,
+          "id": 6,
+          "name": "bolt",
+          "priority": 1,
+          "sequence": 12,
+          "started": 3.8922448979591837,
+          "ends": 4.1322448979591835,
+          "peak": 0.1854933649301529
+        },
+        {
+          "event": "quarantined-voice-end",
+          "time": 3.900952380952381,
+          "id": 4,
+          "sequence": 11
+        },
+        {
+          "event": "voice-end",
+          "time": 4.141859410430839,
+          "id": 5,
+          "name": "draw",
+          "priority": 2,
+          "sequence": 12,
+          "started": 3.8922448979591837,
+          "ends": 4.1322448979591835,
+          "peak": 0.24416683614253998
+        },
+        {
+          "event": "voice-end",
+          "time": 4.141859410430839,
+          "id": 6,
+          "name": "bolt",
+          "priority": 1,
+          "sequence": 12,
+          "started": 3.8922448979591837,
+          "ends": 4.1322448979591835,
+          "peak": 0.1854933649301529
+        },
+        {
+          "event": "observe",
+          "time": 4.4524263038548755,
+          "sequence": 13,
+          "music": "silent"
+        },
+        {
+          "event": "restart",
+          "time": 4.4524263038548755,
+          "sequence": 13,
+          "transport": "continuous-aligned-silent"
+        },
+        {
+          "event": "observe",
+          "time": 4.542403628117913,
+          "sequence": 14,
+          "music": "silent"
+        },
+        {
+          "event": "observe",
+          "time": 4.600453514739229,
+          "sequence": 15,
+          "music": "quiet"
+        },
+        {
+          "event": "cue",
+          "time": 4.612063492063492,
+          "id": 7,
+          "name": "bolt",
+          "priority": 1,
+          "sequence": 15,
+          "started": 4.612063492063492,
+          "ends": 4.852063492063492,
+          "peak": 0.1854933649301529
+        },
+        {
+          "event": "observe",
+          "time": 4.670113378684808,
+          "sequence": 16,
+          "music": "quiet"
+        },
+        {
+          "event": "cue",
+          "time": 4.670113378684808,
+          "id": 8,
+          "name": "hurt",
+          "priority": 2,
+          "sequence": 16,
+          "started": 4.670113378684808,
+          "ends": 4.910113378684808,
+          "peak": 0.2529979944229126
+        },
+        {
+          "event": "voice-stop",
+          "time": 4.670113378684808,
+          "id": 7,
+          "name": "bolt",
+          "priority": 1,
+          "sequence": 15,
+          "started": 4.612063492063492,
+          "ends": 4.852063492063492,
+          "peak": 0.1854933649301529,
+          "reason": "higher-priority-or-new-threat"
+        },
+        {
+          "event": "cue",
+          "time": 4.670113378684808,
+          "id": 9,
+          "name": "bolt",
+          "priority": 1,
+          "sequence": 16,
+          "started": 4.670113378684808,
+          "ends": 4.910113378684808,
+          "peak": 0.1854933649301529
+        },
+        {
+          "event": "quarantined-voice-end",
+          "time": 4.68172335600907,
+          "id": 7,
+          "sequence": 15
+        },
+        {
+          "event": "voice-end",
+          "time": 4.911020408163266,
+          "id": 9,
+          "name": "bolt",
+          "priority": 1,
+          "sequence": 16,
+          "started": 4.670113378684808,
+          "ends": 4.910113378684808,
+          "peak": 0.1854933649301529
+        },
+        {
+          "event": "voice-end",
+          "time": 4.911020408163266,
+          "id": 8,
+          "name": "hurt",
+          "priority": 2,
+          "sequence": 16,
+          "started": 4.670113378684808,
+          "ends": 4.910113378684808,
+          "peak": 0.2529979944229126
+        },
+        {
+          "event": "observe",
+          "time": 5.262222222222222,
+          "sequence": 17,
+          "music": "quiet"
+        },
+        {
+          "event": "cue",
+          "time": 5.262222222222222,
+          "id": 10,
+          "name": "block",
+          "priority": 2,
+          "sequence": 17,
+          "started": 5.262222222222222,
+          "ends": 5.502222222222223,
+          "peak": 0.2354004681110382
+        },
+        {
+          "event": "cue",
+          "time": 5.262222222222222,
+          "id": 11,
+          "name": "pulse",
+          "priority": 1,
+          "sequence": 17,
+          "started": 5.262222222222222,
+          "ends": 5.622222222222223,
+          "peak": 0.21164056658744812
+        },
+        {
+          "event": "observe",
+          "time": 5.320272108843538,
+          "sequence": 18,
+          "music": "quiet"
+        },
+        {
+          "event": "voice-stop",
+          "time": 5.320272108843538,
+          "id": 11,
+          "name": "pulse",
+          "priority": 1,
+          "sequence": 17,
+          "started": 5.262222222222222,
+          "ends": 5.622222222222223,
+          "peak": 0.21164056658744812,
+          "reason": "higher-priority-or-new-threat"
+        },
+        {
+          "event": "cue",
+          "time": 5.320272108843538,
+          "id": 12,
+          "name": "evade",
+          "priority": 2,
+          "sequence": 18,
+          "started": 5.320272108843538,
+          "ends": 5.560272108843538,
+          "peak": 0.19477689266204834
+        },
+        {
+          "event": "cue-suppressed",
+          "time": 5.320272108843538,
+          "name": "bolt",
+          "priority": 1,
+          "sequence": 18,
+          "reason": "priority-saturation",
+          "state": "2,2"
+        },
+        {
+          "event": "quarantined-voice-end",
+          "time": 5.3318820861678,
+          "id": 11,
+          "sequence": 17
+        },
+        {
+          "event": "voice-end",
+          "time": 5.511836734693878,
+          "id": 10,
+          "name": "block",
+          "priority": 2,
+          "sequence": 17,
+          "started": 5.262222222222222,
+          "ends": 5.502222222222223,
+          "peak": 0.2354004681110382
+        },
+        {
+          "event": "voice-end",
+          "time": 5.561179138321996,
+          "id": 12,
+          "name": "evade",
+          "priority": 2,
+          "sequence": 18,
+          "started": 5.320272108843538,
+          "ends": 5.560272108843538,
+          "peak": 0.19477689266204834
+        },
+        {
+          "event": "observe",
+          "time": 5.900770975056689,
+          "sequence": 19,
+          "music": "silent"
+        },
+        {
+          "event": "terminal-priority",
+          "time": 5.900770975056689,
+          "sequence": 19
+        },
+        {
+          "event": "cue",
+          "time": 5.900770975056689,
+          "id": 13,
+          "name": "won",
+          "priority": 3,
+          "sequence": 19,
+          "started": 5.900770975056689,
+          "ends": 6.500770975056689,
+          "peak": 0.1943754255771637
+        },
+        {
+          "event": "voice-end",
+          "time": 6.501587301587302,
+          "id": 13,
+          "name": "won",
+          "priority": 3,
+          "sequence": 19,
+          "started": 5.900770975056689,
+          "ends": 6.500770975056689,
+          "peak": 0.1943754255771637
+        },
+        {
+          "event": "observe",
+          "time": 6.7424943310657595,
+          "sequence": 20,
+          "music": "crossing"
+        },
+        {
+          "event": "cue",
+          "time": 6.7424943310657595,
+          "id": 14,
+          "name": "bolt",
+          "priority": 1,
+          "sequence": 20,
+          "started": 6.7424943310657595,
+          "ends": 6.98249433106576,
+          "peak": 0.1854933649301529
+        },
+        {
+          "event": "voice-end",
+          "time": 6.992108843537415,
+          "id": 14,
+          "name": "bolt",
+          "priority": 1,
+          "sequence": 20,
+          "started": 6.7424943310657595,
+          "ends": 6.98249433106576,
+          "peak": 0.1854933649301529
+        },
+        {
+          "event": "observe",
+          "time": 7.801904761904762,
+          "sequence": 21,
+          "music": "crossing"
+        },
+        {
+          "event": "cue",
+          "time": 7.801904761904762,
+          "id": 15,
+          "name": "block",
+          "priority": 2,
+          "sequence": 21,
+          "started": 7.801904761904762,
+          "ends": 8.041904761904762,
+          "peak": 0.2354004681110382
+        },
+        {
+          "event": "cue",
+          "time": 7.801904761904762,
+          "id": 16,
+          "name": "bolt",
+          "priority": 1,
+          "sequence": 21,
+          "started": 7.801904761904762,
+          "ends": 8.041904761904762,
+          "peak": 0.1854933649301529
+        },
+        {
+          "event": "observe",
+          "time": 7.891882086167801,
+          "sequence": 22,
+          "music": "crossing"
+        },
+        {
+          "event": "voice-stop",
+          "time": 7.891882086167801,
+          "id": 16,
+          "name": "bolt",
+          "priority": 1,
+          "sequence": 21,
+          "started": 7.801904761904762,
+          "ends": 8.041904761904762,
+          "peak": 0.1854933649301529,
+          "reason": "higher-priority-or-new-threat"
+        },
+        {
+          "event": "cue",
+          "time": 7.891882086167801,
+          "id": 17,
+          "name": "block",
+          "priority": 2,
+          "sequence": 22,
+          "started": 7.891882086167801,
+          "ends": 8.131882086167801,
+          "peak": 0.2354004681110382
+        },
+        {
+          "event": "cue-suppressed",
+          "time": 7.891882086167801,
+          "name": "pulse",
+          "priority": 1,
+          "sequence": 22,
+          "reason": "priority-saturation",
+          "state": "2,2"
+        },
+        {
+          "event": "quarantined-voice-end",
+          "time": 7.9005895691609975,
+          "id": 16,
+          "sequence": 21
+        },
+        {
+          "event": "observe",
+          "time": 7.952834467120182,
+          "sequence": 23,
+          "music": "crossing"
+        },
+        {
+          "event": "cue-suppressed",
+          "time": 7.961541950113379,
+          "name": "evade",
+          "priority": 2,
+          "sequence": 23,
+          "reason": "priority-saturation",
+          "state": "2,2"
+        },
+        {
+          "event": "cue-suppressed",
+          "time": 7.961541950113379,
+          "name": "bolt",
+          "priority": 1,
+          "sequence": 23,
+          "reason": "priority-saturation",
+          "state": "2,2"
+        },
+        {
+          "event": "voice-end",
+          "time": 8.04281179138322,
+          "id": 15,
+          "name": "block",
+          "priority": 2,
+          "sequence": 21,
+          "started": 7.801904761904762,
+          "ends": 8.041904761904762,
+          "peak": 0.2354004681110382
+        },
+        {
+          "event": "observe",
+          "time": 8.04281179138322,
+          "sequence": 24,
+          "music": "crossing"
+        },
+        {
+          "event": "cue",
+          "time": 8.04281179138322,
+          "id": 18,
+          "name": "block",
+          "priority": 2,
+          "sequence": 24,
+          "started": 8.04281179138322,
+          "ends": 8.28281179138322,
+          "peak": 0.2354004681110382
+        },
+        {
+          "event": "cue-suppressed",
+          "time": 8.04281179138322,
+          "name": "pulse",
+          "priority": 1,
+          "sequence": 24,
+          "reason": "priority-saturation",
+          "state": "2,2"
+        },
+        {
+          "event": "observe",
+          "time": 8.100861678004534,
+          "sequence": 25,
+          "music": "crossing"
+        },
+        {
+          "event": "cue-suppressed",
+          "time": 8.100861678004534,
+          "name": "evade",
+          "priority": 2,
+          "sequence": 25,
+          "reason": "priority-saturation",
+          "state": "2,2"
+        },
+        {
+          "event": "cue-suppressed",
+          "time": 8.100861678004534,
+          "name": "bolt",
+          "priority": 1,
+          "sequence": 25,
+          "reason": "priority-saturation",
+          "state": "2,2"
+        },
+        {
+          "event": "voice-end",
+          "time": 8.132789115646258,
+          "id": 17,
+          "name": "block",
+          "priority": 2,
+          "sequence": 22,
+          "started": 7.891882086167801,
+          "ends": 8.131882086167801,
+          "peak": 0.2354004681110382
+        },
+        {
+          "event": "observe",
+          "time": 8.170521541950114,
+          "sequence": 26,
+          "music": "silent"
+        },
+        {
+          "event": "voice-stop",
+          "time": 8.170521541950114,
+          "id": 18,
+          "name": "block",
+          "priority": 2,
+          "sequence": 24,
+          "started": 8.04281179138322,
+          "ends": 8.28281179138322,
+          "peak": 0.2354004681110382,
+          "reason": "terminal-arrival"
+        },
+        {
+          "event": "terminal-priority",
+          "time": 8.170521541950114,
+          "sequence": 26
+        },
+        {
+          "event": "cue",
+          "time": 8.170521541950114,
+          "id": 19,
+          "name": "won",
+          "priority": 3,
+          "sequence": 26,
+          "started": 8.170521541950114,
+          "ends": 8.770521541950114,
+          "peak": 0.1943754255771637
+        },
+        {
+          "event": "quarantined-voice-end",
+          "time": 8.182131519274376,
+          "id": 18,
+          "sequence": 24
+        },
+        {
+          "event": "voice-end",
+          "time": 8.771337868480726,
+          "id": 19,
+          "name": "won",
+          "priority": 3,
+          "sequence": 26,
+          "started": 8.170521541950114,
+          "ends": 8.770521541950114,
+          "peak": 0.1943754255771637
+        },
+        {
+          "event": "observe",
+          "time": 9.520181405895691,
+          "sequence": 27,
+          "music": "silent"
+        },
+        {
+          "event": "restart",
+          "time": 9.520181405895691,
+          "sequence": 27,
+          "transport": "continuous-aligned-silent"
+        },
+        {
+          "event": "observe",
+          "time": 9.601451247165533,
+          "sequence": 28,
+          "music": "silent"
+        },
+        {
+          "event": "observe",
+          "time": 9.671111111111111,
+          "sequence": 29,
+          "music": "quiet"
+        },
+        {
+          "event": "cue",
+          "time": 9.671111111111111,
+          "id": 20,
+          "name": "bolt",
+          "priority": 1,
+          "sequence": 29,
+          "started": 9.671111111111111,
+          "ends": 9.911111111111111,
+          "peak": 0.1854933649301529
+        },
+        {
+          "event": "observe",
+          "time": 9.740770975056689,
+          "sequence": 30,
+          "music": "quiet"
+        },
+        {
+          "event": "cue",
+          "time": 9.740770975056689,
+          "id": 21,
+          "name": "block",
+          "priority": 2,
+          "sequence": 30,
+          "started": 9.740770975056689,
+          "ends": 9.98077097505669,
+          "peak": 0.2354004681110382
+        },
+        {
+          "event": "voice-stop",
+          "time": 9.740770975056689,
+          "id": 20,
+          "name": "bolt",
+          "priority": 1,
+          "sequence": 29,
+          "started": 9.671111111111111,
+          "ends": 9.911111111111111,
+          "peak": 0.1854933649301529,
+          "reason": "higher-priority-or-new-threat"
+        },
+        {
+          "event": "cue",
+          "time": 9.740770975056689,
+          "id": 22,
+          "name": "bolt",
+          "priority": 1,
+          "sequence": 30,
+          "started": 9.740770975056689,
+          "ends": 9.98077097505669,
+          "peak": 0.1854933649301529
+        },
+        {
+          "event": "quarantined-voice-end",
+          "time": 9.752380952380953,
+          "id": 20,
+          "sequence": 29
+        },
+        {
+          "event": "observe",
+          "time": 9.80172335600907,
+          "sequence": 31,
+          "music": "quiet"
+        },
+        {
+          "event": "voice-stop",
+          "time": 9.80172335600907,
+          "id": 22,
+          "name": "bolt",
+          "priority": 1,
+          "sequence": 30,
+          "started": 9.740770975056689,
+          "ends": 9.98077097505669,
+          "peak": 0.1854933649301529,
+          "reason": "higher-priority-or-new-threat"
+        },
+        {
+          "event": "cue",
+          "time": 9.80172335600907,
+          "id": 23,
+          "name": "block",
+          "priority": 2,
+          "sequence": 31,
+          "started": 9.80172335600907,
+          "ends": 10.04172335600907,
+          "peak": 0.2354004681110382
+        },
+        {
+          "event": "cue-suppressed",
+          "time": 9.80172335600907,
+          "name": "pulse",
+          "priority": 1,
+          "sequence": 31,
+          "reason": "priority-saturation",
+          "state": "2,2"
+        },
+        {
+          "event": "quarantined-voice-end",
+          "time": 9.810430839002267,
+          "id": 22,
+          "sequence": 30
+        },
+        {
+          "event": "observe",
+          "time": 9.871383219954648,
+          "sequence": 32,
+          "music": "quiet"
+        },
+        {
+          "event": "cue-suppressed",
+          "time": 9.871383219954648,
+          "name": "hurt",
+          "priority": 2,
+          "sequence": 32,
+          "reason": "priority-saturation",
+          "state": "2,2"
+        },
+        {
+          "event": "cue-suppressed",
+          "time": 9.871383219954648,
+          "name": "bolt",
+          "priority": 1,
+          "sequence": 32,
+          "reason": "priority-saturation",
+          "state": "2,2"
+        },
+        {
+          "event": "observe",
+          "time": 9.941043083900226,
+          "sequence": 33,
+          "music": "quiet"
+        },
+        {
+          "event": "voice-end",
+          "time": 9.981678004535148,
+          "id": 21,
+          "name": "block",
+          "priority": 2,
+          "sequence": 30,
+          "started": 9.740770975056689,
+          "ends": 9.98077097505669,
+          "peak": 0.2354004681110382
+        },
+        {
+          "event": "voice-stop",
+          "time": 10.031020408163265,
+          "id": 23,
+          "name": "block",
+          "priority": 2,
+          "sequence": 31,
+          "started": 9.80172335600907,
+          "ends": 10.04172335600907,
+          "peak": 0.2354004681110382,
+          "reason": "mute"
+        },
+        {
+          "event": "mute",
+          "time": 10.031020408163265,
+          "muted": true
+        },
+        {
+          "event": "quarantined-voice-end",
+          "time": 10.042630385487529,
+          "id": 23,
+          "sequence": 31
+        },
+        {
+          "event": "observe",
+          "time": 10.161632653061224,
+          "sequence": 34,
+          "music": "silent"
+        },
+        {
+          "event": "terminal-priority",
+          "time": 10.161632653061224,
+          "sequence": 34
+        },
+        {
+          "event": "consumed-silent",
+          "time": 10.161632653061224,
+          "sequence": 34
+        }
+      ]
+    },
+    "lost": {
+      "approach": "anchor",
+      "outfit": "plate",
+      "stage": 0,
+      "beat": 4,
+      "position": 0,
+      "health": 0,
+      "resolve": 6,
+      "max_health": 14,
+      "max_resolve": 6,
+      "spent_resolve": 0,
+      "rejected": 0,
+      "active": false,
+      "won": false,
+      "complete": false,
+      "required_position": 2,
+      "max_beats": 4,
+      "pulse": false,
+      "threat": "BOLT: moving exposes health; the approach skill spends resolve to protect.",
+      "last": "Wait: 4 damage, 0 resolve spent. Crossing failed. Reprepare and retry; no completion reward.",
+      "level": 1,
+      "xp": 0,
+      "sequence": 46,
+      "accepted": true,
+      "command": "wait",
+      "pose": "lost",
+      "before": {
+        "approach": "anchor",
+        "outfit": "plate",
+        "stage": 0,
+        "beat": 3,
+        "position": 0,
+        "health": 2,
+        "resolve": 6,
+        "max_health": 14,
+        "max_resolve": 6,
+        "spent_resolve": 0,
+        "rejected": 0,
+        "active": true,
+        "won": false,
+        "complete": false,
+        "required_position": 2,
+        "max_beats": 4,
+        "pulse": false,
+        "threat": "BOLT: moving exposes health; the approach skill spends resolve to protect.",
+        "last": "Wait: 4 damage, 0 resolve spent.",
+        "level": 1,
+        "xp": 0
+      },
+      "after": {
+        "approach": "anchor",
+        "outfit": "plate",
+        "stage": 0,
+        "beat": 4,
+        "position": 0,
+        "health": 0,
+        "resolve": 6,
+        "max_health": 14,
+        "max_resolve": 6,
+        "spent_resolve": 0,
+        "rejected": 0,
+        "active": false,
+        "won": false,
+        "complete": false,
+        "required_position": 2,
+        "max_beats": 4,
+        "pulse": false,
+        "threat": "BOLT: moving exposes health; the approach skill spends resolve to protect.",
+        "last": "Wait: 4 damage, 0 resolve spent. Crossing failed. Reprepare and retry; no completion reward.",
+        "level": 1,
+        "xp": 0
+      },
+      "damage": 2,
+      "cost": 0,
+      "moved": 0,
+      "contact": "hurt",
+      "audio": {
+        "cues": [
+          "lost"
+        ],
+        "music": "silent",
+        "playback": {
+          "version": 1,
+          "maxvoices": 2,
+          "master": 0.8,
+          "ceiling": 0.9,
+          "source_bound": 0.45386993498348416,
+          "catalog": {
+            "bolt": {
+              "priority": 1,
+              "frames": 5292,
+              "peak": 0.18549774746735836
+            },
+            "pulse": {
+              "priority": 1,
+              "frames": 7938,
+              "peak": 0.2116373049941343
+            },
+            "block": {
+              "priority": 2,
+              "frames": 5292,
+              "peak": 0.2352234279393713
+            },
+            "draw": {
+              "priority": 2,
+              "frames": 5292,
+              "peak": 0.24168930897548968
+            },
+            "hurt": {
+              "priority": 2,
+              "frames": 5292,
+              "peak": 0.2529133501155912
+            },
+            "evade": {
+              "priority": 2,
+              "frames": 5292,
+              "peak": 0.19477369788211804
+            },
+            "won": {
+              "priority": 3,
+              "frames": 13230,
+              "peak": 0.1943615234677495
+            },
+            "lost": {
+              "priority": 3,
+              "frames": 13230,
+              "peak": 0.1943615234677495
+            }
+          },
+          "rules": {
+            "1": [
+              -2,
+              -2,
+              -2
+            ],
+            "2": [
+              -2,
+              -2,
+              -2
+            ],
+            "3": [
+              -2,
+              -2,
+              -2
+            ],
+            "": [
+              -2,
+              -2,
+              -2
+            ],
+            "1,1": [
+              0,
+              0,
+              0
+            ],
+            "1,2": [
+              0,
+              0,
+              0
+            ],
+            "1,3": [
+              0,
+              0,
+              0
+            ],
+            "2,1": [
+              1,
+              1,
+              1
+            ],
+            "2,2": [
+              -1,
+              -1,
+              0
+            ],
+            "2,3": [
+              -1,
+              -1,
+              0
+            ],
+            "3,1": [
+              1,
+              1,
+              1
+            ],
+            "3,2": [
+              -1,
+              -1,
+              1
+            ],
+            "3,3": [
+              -1,
+              -1,
+              -1
+            ]
+          }
+        }
+      }
+    },
+    "suspended": {
+      "approach": "anchor",
+      "outfit": "plate",
+      "stage": 0,
+      "beat": 1,
+      "position": 2,
+      "health": 10,
+      "resolve": 5,
+      "max_health": 14,
+      "max_resolve": 6,
+      "spent_resolve": 1,
+      "rejected": 0,
+      "active": true,
+      "won": false,
+      "complete": false,
+      "required_position": 2,
+      "max_beats": 4,
+      "pulse": false,
+      "threat": "BOLT: moving exposes health; the approach skill spends resolve to protect.",
+      "last": "Dash: 4 damage, 1 resolve spent.",
+      "level": 1,
+      "xp": 0,
+      "sequence": 50,
+      "accepted": true,
+      "command": "dash",
+      "pose": "dash",
+      "before": {
+        "approach": "anchor",
+        "outfit": "plate",
+        "stage": 0,
+        "beat": 0,
+        "position": 0,
+        "health": 14,
+        "resolve": 6,
+        "max_health": 14,
+        "max_resolve": 6,
+        "spent_resolve": 0,
+        "rejected": 0,
+        "active": true,
+        "won": false,
+        "complete": false,
+        "required_position": 2,
+        "max_beats": 4,
+        "pulse": false,
+        "threat": "BOLT: moving exposes health; the approach skill spends resolve to protect.",
+        "last": "Encounter committed. Preparation is locked.",
+        "level": 1,
+        "xp": 0
+      },
+      "after": {
+        "approach": "anchor",
+        "outfit": "plate",
+        "stage": 0,
+        "beat": 1,
+        "position": 2,
+        "health": 10,
+        "resolve": 5,
+        "max_health": 14,
+        "max_resolve": 6,
+        "spent_resolve": 1,
+        "rejected": 0,
+        "active": true,
+        "won": false,
+        "complete": false,
+        "required_position": 2,
+        "max_beats": 4,
+        "pulse": false,
+        "threat": "BOLT: moving exposes health; the approach skill spends resolve to protect.",
+        "last": "Dash: 4 damage, 1 resolve spent.",
+        "level": 1,
+        "xp": 0
+      },
+      "damage": 4,
+      "cost": 1,
+      "moved": 2,
+      "contact": "hurt",
+      "audio": {
+        "cues": [
+          "hurt",
+          "bolt"
+        ],
+        "music": "quiet",
+        "playback": {
+          "version": 1,
+          "maxvoices": 2,
+          "master": 0.8,
+          "ceiling": 0.9,
+          "source_bound": 0.45386993498348416,
+          "catalog": {
+            "bolt": {
+              "priority": 1,
+              "frames": 5292,
+              "peak": 0.18549774746735836
+            },
+            "pulse": {
+              "priority": 1,
+              "frames": 7938,
+              "peak": 0.2116373049941343
+            },
+            "block": {
+              "priority": 2,
+              "frames": 5292,
+              "peak": 0.2352234279393713
+            },
+            "draw": {
+              "priority": 2,
+              "frames": 5292,
+              "peak": 0.24168930897548968
+            },
+            "hurt": {
+              "priority": 2,
+              "frames": 5292,
+              "peak": 0.2529133501155912
+            },
+            "evade": {
+              "priority": 2,
+              "frames": 5292,
+              "peak": 0.19477369788211804
+            },
+            "won": {
+              "priority": 3,
+              "frames": 13230,
+              "peak": 0.1943615234677495
+            },
+            "lost": {
+              "priority": 3,
+              "frames": 13230,
+              "peak": 0.1943615234677495
+            }
+          },
+          "rules": {
+            "1": [
+              -2,
+              -2,
+              -2
+            ],
+            "2": [
+              -2,
+              -2,
+              -2
+            ],
+            "3": [
+              -2,
+              -2,
+              -2
+            ],
+            "": [
+              -2,
+              -2,
+              -2
+            ],
+            "1,1": [
+              0,
+              0,
+              0
+            ],
+            "1,2": [
+              0,
+              0,
+              0
+            ],
+            "1,3": [
+              0,
+              0,
+              0
+            ],
+            "2,1": [
+              1,
+              1,
+              1
+            ],
+            "2,2": [
+              -1,
+              -1,
+              0
+            ],
+            "2,3": [
+              -1,
+              -1,
+              0
+            ],
+            "3,1": [
+              1,
+              1,
+              1
+            ],
+            "3,2": [
+              -1,
+              -1,
+              1
+            ],
+            "3,3": [
+              -1,
+              -1,
+              -1
+            ]
+          }
+        }
+      }
+    },
+    "playbackAfterResume": {
+      "enabled": true,
+      "suspended": false,
+      "muted": false,
+      "loading": false,
+      "sequence": 50,
+      "music": "quiet",
+      "mode": "quiet",
+      "cursor": 50,
+      "voices": 0,
+      "maxvoices": 2,
+      "activeVoices": [],
+      "headroom": {
+        "decoded_bound": 0,
+        "ceiling": 0.9,
+        "source_bound": 0.45386993498348416
+      },
+      "duck": {
+        "until": 14.31219954648526,
+        "gain": 0.5907032489776611
+      },
+      "stems": 2,
+      "transports": [
+        {
+          "start": 14.392834467120181,
+          "frames": 352800
+        },
+        {
+          "start": 14.392834467120181,
+          "frames": 352800
+        }
+      ],
+      "epoch": 11,
+      "history": [
+        {
+          "event": "observe",
+          "time": 3.0214965986394557,
+          "sequence": 7,
+          "music": "quiet"
+        },
+        {
+          "event": "cue",
+          "time": 3.0214965986394557,
+          "id": 1,
+          "name": "bolt",
+          "priority": 1,
+          "sequence": 7,
+          "started": 3.0214965986394557,
+          "ends": 3.2614965986394555,
+          "peak": 0.1854933649301529
+        },
+        {
+          "event": "observe",
+          "time": 3.091156462585034,
+          "sequence": 8,
+          "music": "quiet"
+        },
+        {
+          "event": "cue",
+          "time": 3.091156462585034,
+          "id": 2,
+          "name": "block",
+          "priority": 2,
+          "sequence": 8,
+          "started": 3.091156462585034,
+          "ends": 3.3311564625850343,
+          "peak": 0.2354004681110382
+        },
+        {
+          "event": "voice-stop",
+          "time": 3.091156462585034,
+          "id": 1,
+          "name": "bolt",
+          "priority": 1,
+          "sequence": 7,
+          "started": 3.0214965986394557,
+          "ends": 3.2614965986394555,
+          "peak": 0.1854933649301529,
+          "reason": "higher-priority-or-new-threat"
+        },
+        {
+          "event": "cue",
+          "time": 3.091156462585034,
+          "id": 3,
+          "name": "bolt",
+          "priority": 1,
+          "sequence": 8,
+          "started": 3.091156462585034,
+          "ends": 3.3311564625850343,
+          "peak": 0.1854933649301529
+        },
+        {
+          "event": "quarantined-voice-end",
+          "time": 3.102766439909297,
+          "id": 1,
+          "sequence": 7
+        },
+        {
+          "event": "voice-end",
+          "time": 3.332063492063492,
+          "id": 2,
+          "name": "block",
+          "priority": 2,
+          "sequence": 8,
+          "started": 3.091156462585034,
+          "ends": 3.3311564625850343,
+          "peak": 0.2354004681110382
+        },
+        {
+          "event": "voice-end",
+          "time": 3.332063492063492,
+          "id": 3,
+          "name": "bolt",
+          "priority": 1,
+          "sequence": 8,
+          "started": 3.091156462585034,
+          "ends": 3.3311564625850343,
+          "peak": 0.1854933649301529
+        },
+        {
+          "event": "ignored",
+          "time": 3.642630385487528,
+          "sequence": 8
+        },
+        {
+          "event": "ignored",
+          "time": 3.642630385487528,
+          "sequence": 8
+        },
+        {
+          "event": "observe",
+          "time": 3.671655328798186,
+          "sequence": 9,
+          "music": "silent"
+        },
+        {
+          "event": "restart",
+          "time": 3.671655328798186,
+          "sequence": 9,
+          "transport": "continuous-aligned-silent"
+        },
+        {
+          "event": "observe",
+          "time": 3.7500226757369615,
+          "sequence": 10,
+          "music": "silent"
+        },
+        {
+          "event": "observe",
+          "time": 3.8225850340136054,
+          "sequence": 11,
+          "music": "quiet"
+        },
+        {
+          "event": "cue",
+          "time": 3.8225850340136054,
+          "id": 4,
+          "name": "bolt",
+          "priority": 1,
+          "sequence": 11,
+          "started": 3.8225850340136054,
+          "ends": 4.062585034013606,
+          "peak": 0.1854933649301529
+        },
+        {
+          "event": "observe",
+          "time": 3.8922448979591837,
+          "sequence": 12,
+          "music": "quiet"
+        },
+        {
+          "event": "cue",
+          "time": 3.8922448979591837,
+          "id": 5,
+          "name": "draw",
+          "priority": 2,
+          "sequence": 12,
+          "started": 3.8922448979591837,
+          "ends": 4.1322448979591835,
+          "peak": 0.24416683614253998
+        },
+        {
+          "event": "voice-stop",
+          "time": 3.8922448979591837,
+          "id": 4,
+          "name": "bolt",
+          "priority": 1,
+          "sequence": 11,
+          "started": 3.8225850340136054,
+          "ends": 4.062585034013606,
+          "peak": 0.1854933649301529,
+          "reason": "higher-priority-or-new-threat"
+        },
+        {
+          "event": "cue",
+          "time": 3.8922448979591837,
+          "id": 6,
+          "name": "bolt",
+          "priority": 1,
+          "sequence": 12,
+          "started": 3.8922448979591837,
+          "ends": 4.1322448979591835,
+          "peak": 0.1854933649301529
+        },
+        {
+          "event": "quarantined-voice-end",
+          "time": 3.900952380952381,
+          "id": 4,
+          "sequence": 11
+        },
+        {
+          "event": "voice-end",
+          "time": 4.141859410430839,
+          "id": 5,
+          "name": "draw",
+          "priority": 2,
+          "sequence": 12,
+          "started": 3.8922448979591837,
+          "ends": 4.1322448979591835,
+          "peak": 0.24416683614253998
+        },
+        {
+          "event": "voice-end",
+          "time": 4.141859410430839,
+          "id": 6,
+          "name": "bolt",
+          "priority": 1,
+          "sequence": 12,
+          "started": 3.8922448979591837,
+          "ends": 4.1322448979591835,
+          "peak": 0.1854933649301529
+        },
+        {
+          "event": "observe",
+          "time": 4.4524263038548755,
+          "sequence": 13,
+          "music": "silent"
+        },
+        {
+          "event": "restart",
+          "time": 4.4524263038548755,
+          "sequence": 13,
+          "transport": "continuous-aligned-silent"
+        },
+        {
+          "event": "observe",
+          "time": 4.542403628117913,
+          "sequence": 14,
+          "music": "silent"
+        },
+        {
+          "event": "observe",
+          "time": 4.600453514739229,
+          "sequence": 15,
+          "music": "quiet"
+        },
+        {
+          "event": "cue",
+          "time": 4.612063492063492,
+          "id": 7,
+          "name": "bolt",
+          "priority": 1,
+          "sequence": 15,
+          "started": 4.612063492063492,
+          "ends": 4.852063492063492,
+          "peak": 0.1854933649301529
+        },
+        {
+          "event": "observe",
+          "time": 4.670113378684808,
+          "sequence": 16,
+          "music": "quiet"
+        },
+        {
+          "event": "cue",
+          "time": 4.670113378684808,
+          "id": 8,
+          "name": "hurt",
+          "priority": 2,
+          "sequence": 16,
+          "started": 4.670113378684808,
+          "ends": 4.910113378684808,
+          "peak": 0.2529979944229126
+        },
+        {
+          "event": "voice-stop",
+          "time": 4.670113378684808,
+          "id": 7,
+          "name": "bolt",
+          "priority": 1,
+          "sequence": 15,
+          "started": 4.612063492063492,
+          "ends": 4.852063492063492,
+          "peak": 0.1854933649301529,
+          "reason": "higher-priority-or-new-threat"
+        },
+        {
+          "event": "cue",
+          "time": 4.670113378684808,
+          "id": 9,
+          "name": "bolt",
+          "priority": 1,
+          "sequence": 16,
+          "started": 4.670113378684808,
+          "ends": 4.910113378684808,
+          "peak": 0.1854933649301529
+        },
+        {
+          "event": "quarantined-voice-end",
+          "time": 4.68172335600907,
+          "id": 7,
+          "sequence": 15
+        },
+        {
+          "event": "voice-end",
+          "time": 4.911020408163266,
+          "id": 9,
+          "name": "bolt",
+          "priority": 1,
+          "sequence": 16,
+          "started": 4.670113378684808,
+          "ends": 4.910113378684808,
+          "peak": 0.1854933649301529
+        },
+        {
+          "event": "voice-end",
+          "time": 4.911020408163266,
+          "id": 8,
+          "name": "hurt",
+          "priority": 2,
+          "sequence": 16,
+          "started": 4.670113378684808,
+          "ends": 4.910113378684808,
+          "peak": 0.2529979944229126
+        },
+        {
+          "event": "observe",
+          "time": 5.262222222222222,
+          "sequence": 17,
+          "music": "quiet"
+        },
+        {
+          "event": "cue",
+          "time": 5.262222222222222,
+          "id": 10,
+          "name": "block",
+          "priority": 2,
+          "sequence": 17,
+          "started": 5.262222222222222,
+          "ends": 5.502222222222223,
+          "peak": 0.2354004681110382
+        },
+        {
+          "event": "cue",
+          "time": 5.262222222222222,
+          "id": 11,
+          "name": "pulse",
+          "priority": 1,
+          "sequence": 17,
+          "started": 5.262222222222222,
+          "ends": 5.622222222222223,
+          "peak": 0.21164056658744812
+        },
+        {
+          "event": "observe",
+          "time": 5.320272108843538,
+          "sequence": 18,
+          "music": "quiet"
+        },
+        {
+          "event": "voice-stop",
+          "time": 5.320272108843538,
+          "id": 11,
+          "name": "pulse",
+          "priority": 1,
+          "sequence": 17,
+          "started": 5.262222222222222,
+          "ends": 5.622222222222223,
+          "peak": 0.21164056658744812,
+          "reason": "higher-priority-or-new-threat"
+        },
+        {
+          "event": "cue",
+          "time": 5.320272108843538,
+          "id": 12,
+          "name": "evade",
+          "priority": 2,
+          "sequence": 18,
+          "started": 5.320272108843538,
+          "ends": 5.560272108843538,
+          "peak": 0.19477689266204834
+        },
+        {
+          "event": "cue-suppressed",
+          "time": 5.320272108843538,
+          "name": "bolt",
+          "priority": 1,
+          "sequence": 18,
+          "reason": "priority-saturation",
+          "state": "2,2"
+        },
+        {
+          "event": "quarantined-voice-end",
+          "time": 5.3318820861678,
+          "id": 11,
+          "sequence": 17
+        },
+        {
+          "event": "voice-end",
+          "time": 5.511836734693878,
+          "id": 10,
+          "name": "block",
+          "priority": 2,
+          "sequence": 17,
+          "started": 5.262222222222222,
+          "ends": 5.502222222222223,
+          "peak": 0.2354004681110382
+        },
+        {
+          "event": "voice-end",
+          "time": 5.561179138321996,
+          "id": 12,
+          "name": "evade",
+          "priority": 2,
+          "sequence": 18,
+          "started": 5.320272108843538,
+          "ends": 5.560272108843538,
+          "peak": 0.19477689266204834
+        },
+        {
+          "event": "observe",
+          "time": 5.900770975056689,
+          "sequence": 19,
+          "music": "silent"
+        },
+        {
+          "event": "terminal-priority",
+          "time": 5.900770975056689,
+          "sequence": 19
+        },
+        {
+          "event": "cue",
+          "time": 5.900770975056689,
+          "id": 13,
+          "name": "won",
+          "priority": 3,
+          "sequence": 19,
+          "started": 5.900770975056689,
+          "ends": 6.500770975056689,
+          "peak": 0.1943754255771637
+        },
+        {
+          "event": "voice-end",
+          "time": 6.501587301587302,
+          "id": 13,
+          "name": "won",
+          "priority": 3,
+          "sequence": 19,
+          "started": 5.900770975056689,
+          "ends": 6.500770975056689,
+          "peak": 0.1943754255771637
+        },
+        {
+          "event": "observe",
+          "time": 6.7424943310657595,
+          "sequence": 20,
+          "music": "crossing"
+        },
+        {
+          "event": "cue",
+          "time": 6.7424943310657595,
+          "id": 14,
+          "name": "bolt",
+          "priority": 1,
+          "sequence": 20,
+          "started": 6.7424943310657595,
+          "ends": 6.98249433106576,
+          "peak": 0.1854933649301529
+        },
+        {
+          "event": "voice-end",
+          "time": 6.992108843537415,
+          "id": 14,
+          "name": "bolt",
+          "priority": 1,
+          "sequence": 20,
+          "started": 6.7424943310657595,
+          "ends": 6.98249433106576,
+          "peak": 0.1854933649301529
+        },
+        {
+          "event": "observe",
+          "time": 7.801904761904762,
+          "sequence": 21,
+          "music": "crossing"
+        },
+        {
+          "event": "cue",
+          "time": 7.801904761904762,
+          "id": 15,
+          "name": "block",
+          "priority": 2,
+          "sequence": 21,
+          "started": 7.801904761904762,
+          "ends": 8.041904761904762,
+          "peak": 0.2354004681110382
+        },
+        {
+          "event": "cue",
+          "time": 7.801904761904762,
+          "id": 16,
+          "name": "bolt",
+          "priority": 1,
+          "sequence": 21,
+          "started": 7.801904761904762,
+          "ends": 8.041904761904762,
+          "peak": 0.1854933649301529
+        },
+        {
+          "event": "observe",
+          "time": 7.891882086167801,
+          "sequence": 22,
+          "music": "crossing"
+        },
+        {
+          "event": "voice-stop",
+          "time": 7.891882086167801,
+          "id": 16,
+          "name": "bolt",
+          "priority": 1,
+          "sequence": 21,
+          "started": 7.801904761904762,
+          "ends": 8.041904761904762,
+          "peak": 0.1854933649301529,
+          "reason": "higher-priority-or-new-threat"
+        },
+        {
+          "event": "cue",
+          "time": 7.891882086167801,
+          "id": 17,
+          "name": "block",
+          "priority": 2,
+          "sequence": 22,
+          "started": 7.891882086167801,
+          "ends": 8.131882086167801,
+          "peak": 0.2354004681110382
+        },
+        {
+          "event": "cue-suppressed",
+          "time": 7.891882086167801,
+          "name": "pulse",
+          "priority": 1,
+          "sequence": 22,
+          "reason": "priority-saturation",
+          "state": "2,2"
+        },
+        {
+          "event": "quarantined-voice-end",
+          "time": 7.9005895691609975,
+          "id": 16,
+          "sequence": 21
+        },
+        {
+          "event": "observe",
+          "time": 7.952834467120182,
+          "sequence": 23,
+          "music": "crossing"
+        },
+        {
+          "event": "cue-suppressed",
+          "time": 7.961541950113379,
+          "name": "evade",
+          "priority": 2,
+          "sequence": 23,
+          "reason": "priority-saturation",
+          "state": "2,2"
+        },
+        {
+          "event": "cue-suppressed",
+          "time": 7.961541950113379,
+          "name": "bolt",
+          "priority": 1,
+          "sequence": 23,
+          "reason": "priority-saturation",
+          "state": "2,2"
+        },
+        {
+          "event": "voice-end",
+          "time": 8.04281179138322,
+          "id": 15,
+          "name": "block",
+          "priority": 2,
+          "sequence": 21,
+          "started": 7.801904761904762,
+          "ends": 8.041904761904762,
+          "peak": 0.2354004681110382
+        },
+        {
+          "event": "observe",
+          "time": 8.04281179138322,
+          "sequence": 24,
+          "music": "crossing"
+        },
+        {
+          "event": "cue",
+          "time": 8.04281179138322,
+          "id": 18,
+          "name": "block",
+          "priority": 2,
+          "sequence": 24,
+          "started": 8.04281179138322,
+          "ends": 8.28281179138322,
+          "peak": 0.2354004681110382
+        },
+        {
+          "event": "cue-suppressed",
+          "time": 8.04281179138322,
+          "name": "pulse",
+          "priority": 1,
+          "sequence": 24,
+          "reason": "priority-saturation",
+          "state": "2,2"
+        },
+        {
+          "event": "observe",
+          "time": 8.100861678004534,
+          "sequence": 25,
+          "music": "crossing"
+        },
+        {
+          "event": "cue-suppressed",
+          "time": 8.100861678004534,
+          "name": "evade",
+          "priority": 2,
+          "sequence": 25,
+          "reason": "priority-saturation",
+          "state": "2,2"
+        },
+        {
+          "event": "cue-suppressed",
+          "time": 8.100861678004534,
+          "name": "bolt",
+          "priority": 1,
+          "sequence": 25,
+          "reason": "priority-saturation",
+          "state": "2,2"
+        },
+        {
+          "event": "voice-end",
+          "time": 8.132789115646258,
+          "id": 17,
+          "name": "block",
+          "priority": 2,
+          "sequence": 22,
+          "started": 7.891882086167801,
+          "ends": 8.131882086167801,
+          "peak": 0.2354004681110382
+        },
+        {
+          "event": "observe",
+          "time": 8.170521541950114,
+          "sequence": 26,
+          "music": "silent"
+        },
+        {
+          "event": "voice-stop",
+          "time": 8.170521541950114,
+          "id": 18,
+          "name": "block",
+          "priority": 2,
+          "sequence": 24,
+          "started": 8.04281179138322,
+          "ends": 8.28281179138322,
+          "peak": 0.2354004681110382,
+          "reason": "terminal-arrival"
+        },
+        {
+          "event": "terminal-priority",
+          "time": 8.170521541950114,
+          "sequence": 26
+        },
+        {
+          "event": "cue",
+          "time": 8.170521541950114,
+          "id": 19,
+          "name": "won",
+          "priority": 3,
+          "sequence": 26,
+          "started": 8.170521541950114,
+          "ends": 8.770521541950114,
+          "peak": 0.1943754255771637
+        },
+        {
+          "event": "quarantined-voice-end",
+          "time": 8.182131519274376,
+          "id": 18,
+          "sequence": 24
+        },
+        {
+          "event": "voice-end",
+          "time": 8.771337868480726,
+          "id": 19,
+          "name": "won",
+          "priority": 3,
+          "sequence": 26,
+          "started": 8.170521541950114,
+          "ends": 8.770521541950114,
+          "peak": 0.1943754255771637
+        },
+        {
+          "event": "observe",
+          "time": 9.520181405895691,
+          "sequence": 27,
+          "music": "silent"
+        },
+        {
+          "event": "restart",
+          "time": 9.520181405895691,
+          "sequence": 27,
+          "transport": "continuous-aligned-silent"
+        },
+        {
+          "event": "observe",
+          "time": 9.601451247165533,
+          "sequence": 28,
+          "music": "silent"
+        },
+        {
+          "event": "observe",
+          "time": 9.671111111111111,
+          "sequence": 29,
+          "music": "quiet"
+        },
+        {
+          "event": "cue",
+          "time": 9.671111111111111,
+          "id": 20,
+          "name": "bolt",
+          "priority": 1,
+          "sequence": 29,
+          "started": 9.671111111111111,
+          "ends": 9.911111111111111,
+          "peak": 0.1854933649301529
+        },
+        {
+          "event": "observe",
+          "time": 9.740770975056689,
+          "sequence": 30,
+          "music": "quiet"
+        },
+        {
+          "event": "cue",
+          "time": 9.740770975056689,
+          "id": 21,
+          "name": "block",
+          "priority": 2,
+          "sequence": 30,
+          "started": 9.740770975056689,
+          "ends": 9.98077097505669,
+          "peak": 0.2354004681110382
+        },
+        {
+          "event": "voice-stop",
+          "time": 9.740770975056689,
+          "id": 20,
+          "name": "bolt",
+          "priority": 1,
+          "sequence": 29,
+          "started": 9.671111111111111,
+          "ends": 9.911111111111111,
+          "peak": 0.1854933649301529,
+          "reason": "higher-priority-or-new-threat"
+        },
+        {
+          "event": "cue",
+          "time": 9.740770975056689,
+          "id": 22,
+          "name": "bolt",
+          "priority": 1,
+          "sequence": 30,
+          "started": 9.740770975056689,
+          "ends": 9.98077097505669,
+          "peak": 0.1854933649301529
+        },
+        {
+          "event": "quarantined-voice-end",
+          "time": 9.752380952380953,
+          "id": 20,
+          "sequence": 29
+        },
+        {
+          "event": "observe",
+          "time": 9.80172335600907,
+          "sequence": 31,
+          "music": "quiet"
+        },
+        {
+          "event": "voice-stop",
+          "time": 9.80172335600907,
+          "id": 22,
+          "name": "bolt",
+          "priority": 1,
+          "sequence": 30,
+          "started": 9.740770975056689,
+          "ends": 9.98077097505669,
+          "peak": 0.1854933649301529,
+          "reason": "higher-priority-or-new-threat"
+        },
+        {
+          "event": "cue",
+          "time": 9.80172335600907,
+          "id": 23,
+          "name": "block",
+          "priority": 2,
+          "sequence": 31,
+          "started": 9.80172335600907,
+          "ends": 10.04172335600907,
+          "peak": 0.2354004681110382
+        },
+        {
+          "event": "cue-suppressed",
+          "time": 9.80172335600907,
+          "name": "pulse",
+          "priority": 1,
+          "sequence": 31,
+          "reason": "priority-saturation",
+          "state": "2,2"
+        },
+        {
+          "event": "quarantined-voice-end",
+          "time": 9.810430839002267,
+          "id": 22,
+          "sequence": 30
+        },
+        {
+          "event": "observe",
+          "time": 9.871383219954648,
+          "sequence": 32,
+          "music": "quiet"
+        },
+        {
+          "event": "cue-suppressed",
+          "time": 9.871383219954648,
+          "name": "hurt",
+          "priority": 2,
+          "sequence": 32,
+          "reason": "priority-saturation",
+          "state": "2,2"
+        },
+        {
+          "event": "cue-suppressed",
+          "time": 9.871383219954648,
+          "name": "bolt",
+          "priority": 1,
+          "sequence": 32,
+          "reason": "priority-saturation",
+          "state": "2,2"
+        },
+        {
+          "event": "observe",
+          "time": 9.941043083900226,
+          "sequence": 33,
+          "music": "quiet"
+        },
+        {
+          "event": "voice-end",
+          "time": 9.981678004535148,
+          "id": 21,
+          "name": "block",
+          "priority": 2,
+          "sequence": 30,
+          "started": 9.740770975056689,
+          "ends": 9.98077097505669,
+          "peak": 0.2354004681110382
+        },
+        {
+          "event": "voice-stop",
+          "time": 10.031020408163265,
+          "id": 23,
+          "name": "block",
+          "priority": 2,
+          "sequence": 31,
+          "started": 9.80172335600907,
+          "ends": 10.04172335600907,
+          "peak": 0.2354004681110382,
+          "reason": "mute"
+        },
+        {
+          "event": "mute",
+          "time": 10.031020408163265,
+          "muted": true
+        },
+        {
+          "event": "quarantined-voice-end",
+          "time": 10.042630385487529,
+          "id": 23,
+          "sequence": 31
+        },
+        {
+          "event": "observe",
+          "time": 10.161632653061224,
+          "sequence": 34,
+          "music": "silent"
+        },
+        {
+          "event": "terminal-priority",
+          "time": 10.161632653061224,
+          "sequence": 34
+        },
+        {
+          "event": "consumed-silent",
+          "time": 10.161632653061224,
+          "sequence": 34
+        },
+        {
+          "event": "mute",
+          "time": 10.782766439909297,
+          "muted": false
+        },
+        {
+          "event": "observe",
+          "time": 11.560634920634921,
+          "sequence": 35,
+          "music": "silent"
+        },
+        {
+          "event": "restart",
+          "time": 11.560634920634921,
+          "sequence": 35,
+          "transport": "continuous-aligned-silent"
+        },
+        {
+          "event": "observe",
+          "time": 11.682539682539682,
+          "sequence": 36,
+          "music": "silent"
+        },
+        {
+          "event": "observe",
+          "time": 11.77251700680272,
+          "sequence": 37,
+          "music": "quiet"
+        },
+        {
+          "event": "cue",
+          "time": 11.77251700680272,
+          "id": 24,
+          "name": "bolt",
+          "priority": 1,
+          "sequence": 37,
+          "started": 11.77251700680272,
+          "ends": 12.012517006802721,
+          "peak": 0.1854933649301529
+        },
+        {
+          "event": "observe",
+          "time": 11.830566893424036,
+          "sequence": 38,
+          "music": "quiet"
+        },
+        {
+          "event": "cue",
+          "time": 11.830566893424036,
+          "id": 25,
+          "name": "block",
+          "priority": 2,
+          "sequence": 38,
+          "started": 11.830566893424036,
+          "ends": 12.070566893424036,
+          "peak": 0.2354004681110382
+        },
+        {
+          "event": "voice-stop",
+          "time": 11.830566893424036,
+          "id": 24,
+          "name": "bolt",
+          "priority": 1,
+          "sequence": 37,
+          "started": 11.77251700680272,
+          "ends": 12.012517006802721,
+          "peak": 0.1854933649301529,
+          "reason": "higher-priority-or-new-threat"
+        },
+        {
+          "event": "cue",
+          "time": 11.830566893424036,
+          "id": 26,
+          "name": "bolt",
+          "priority": 1,
+          "sequence": 38,
+          "started": 11.830566893424036,
+          "ends": 12.070566893424036,
+          "peak": 0.1854933649301529
+        },
+        {
+          "event": "quarantined-voice-end",
+          "time": 11.842176870748299,
+          "id": 24,
+          "sequence": 37
+        },
+        {
+          "event": "voice-end",
+          "time": 12.071473922902495,
+          "id": 25,
+          "name": "block",
+          "priority": 2,
+          "sequence": 38,
+          "started": 11.830566893424036,
+          "ends": 12.070566893424036,
+          "peak": 0.2354004681110382
+        },
+        {
+          "event": "voice-end",
+          "time": 12.071473922902495,
+          "id": 26,
+          "name": "bolt",
+          "priority": 1,
+          "sequence": 38,
+          "started": 11.830566893424036,
+          "ends": 12.070566893424036,
+          "peak": 0.1854933649301529
+        },
+        {
+          "event": "observe",
+          "time": 12.181768707482993,
+          "sequence": 39,
+          "music": "quiet"
+        },
+        {
+          "event": "cue",
+          "time": 12.181768707482993,
+          "id": 27,
+          "name": "block",
+          "priority": 2,
+          "sequence": 39,
+          "started": 12.181768707482993,
+          "ends": 12.421768707482993,
+          "peak": 0.2354004681110382
+        },
+        {
+          "event": "cue",
+          "time": 12.181768707482993,
+          "id": 28,
+          "name": "pulse",
+          "priority": 1,
+          "sequence": 39,
+          "started": 12.181768707482993,
+          "ends": 12.541768707482992,
+          "peak": 0.21164056658744812
+        },
+        {
+          "event": "voice-end",
+          "time": 12.422675736961452,
+          "id": 27,
+          "name": "block",
+          "priority": 2,
+          "sequence": 39,
+          "started": 12.181768707482993,
+          "ends": 12.421768707482993,
+          "peak": 0.2354004681110382
+        },
+        {
+          "event": "voice-end",
+          "time": 12.550385487528345,
+          "id": 28,
+          "name": "pulse",
+          "priority": 1,
+          "sequence": 39,
+          "started": 12.181768707482993,
+          "ends": 12.541768707482992,
+          "peak": 0.21164056658744812
+        },
+        {
+          "event": "observe",
+          "time": 12.82031746031746,
+          "sequence": 40,
+          "music": "silent"
+        },
+        {
+          "event": "restart",
+          "time": 12.82031746031746,
+          "sequence": 40,
+          "transport": "continuous-aligned-silent"
+        },
+        {
+          "event": "observe",
+          "time": 12.901587301587302,
+          "sequence": 41,
+          "music": "silent"
+        },
+        {
+          "event": "observe",
+          "time": 12.97124716553288,
+          "sequence": 42,
+          "music": "quiet"
+        },
+        {
+          "event": "cue",
+          "time": 12.97124716553288,
+          "id": 29,
+          "name": "bolt",
+          "priority": 1,
+          "sequence": 42,
+          "started": 12.97124716553288,
+          "ends": 13.21124716553288,
+          "peak": 0.1854933649301529
+        },
+        {
+          "event": "observe",
+          "time": 13.032199546485261,
+          "sequence": 43,
+          "music": "quiet"
+        },
+        {
+          "event": "cue",
+          "time": 13.032199546485261,
+          "id": 30,
+          "name": "hurt",
+          "priority": 2,
+          "sequence": 43,
+          "started": 13.032199546485261,
+          "ends": 13.272199546485261,
+          "peak": 0.2529979944229126
+        },
+        {
+          "event": "voice-stop",
+          "time": 13.032199546485261,
+          "id": 29,
+          "name": "bolt",
+          "priority": 1,
+          "sequence": 42,
+          "started": 12.97124716553288,
+          "ends": 13.21124716553288,
+          "peak": 0.1854933649301529,
+          "reason": "higher-priority-or-new-threat"
+        },
+        {
+          "event": "cue",
+          "time": 13.032199546485261,
+          "id": 31,
+          "name": "bolt",
+          "priority": 1,
+          "sequence": 43,
+          "started": 13.032199546485261,
+          "ends": 13.272199546485261,
+          "peak": 0.1854933649301529
+        },
+        {
+          "event": "quarantined-voice-end",
+          "time": 13.040907029478458,
+          "id": 29,
+          "sequence": 42
+        },
+        {
+          "event": "observe",
+          "time": 13.101859410430839,
+          "sequence": 44,
+          "music": "quiet"
+        },
+        {
+          "event": "voice-stop",
+          "time": 13.101859410430839,
+          "id": 31,
+          "name": "bolt",
+          "priority": 1,
+          "sequence": 43,
+          "started": 13.032199546485261,
+          "ends": 13.272199546485261,
+          "peak": 0.1854933649301529,
+          "reason": "higher-priority-or-new-threat"
+        },
+        {
+          "event": "cue",
+          "time": 13.101859410430839,
+          "id": 32,
+          "name": "hurt",
+          "priority": 2,
+          "sequence": 44,
+          "started": 13.101859410430839,
+          "ends": 13.341859410430839,
+          "peak": 0.2529979944229126
+        },
+        {
+          "event": "cue-suppressed",
+          "time": 13.101859410430839,
+          "name": "pulse",
+          "priority": 1,
+          "sequence": 44,
+          "reason": "priority-saturation",
+          "state": "2,2"
+        },
+        {
+          "event": "quarantined-voice-end",
+          "time": 13.110566893424036,
+          "id": 31,
+          "sequence": 43
+        },
+        {
+          "event": "observe",
+          "time": 13.171519274376417,
+          "sequence": 45,
+          "music": "quiet"
+        },
+        {
+          "event": "cue-suppressed",
+          "time": 13.171519274376417,
+          "name": "hurt",
+          "priority": 2,
+          "sequence": 45,
+          "reason": "priority-saturation",
+          "state": "2,2"
+        },
+        {
+          "event": "cue-suppressed",
+          "time": 13.171519274376417,
+          "name": "bolt",
+          "priority": 1,
+          "sequence": 45,
+          "reason": "priority-saturation",
+          "state": "2,2"
+        },
+        {
+          "event": "observe",
+          "time": 13.232471655328798,
+          "sequence": 46,
+          "music": "silent"
+        },
+        {
+          "event": "voice-stop",
+          "time": 13.232471655328798,
+          "id": 30,
+          "name": "hurt",
+          "priority": 2,
+          "sequence": 43,
+          "started": 13.032199546485261,
+          "ends": 13.272199546485261,
+          "peak": 0.2529979944229126,
+          "reason": "terminal-arrival"
+        },
+        {
+          "event": "voice-stop",
+          "time": 13.232471655328798,
+          "id": 32,
+          "name": "hurt",
+          "priority": 2,
+          "sequence": 44,
+          "started": 13.101859410430839,
+          "ends": 13.341859410430839,
+          "peak": 0.2529979944229126,
+          "reason": "terminal-arrival"
+        },
+        {
+          "event": "terminal-priority",
+          "time": 13.232471655328798,
+          "sequence": 46
+        },
+        {
+          "event": "cue",
+          "time": 13.232471655328798,
+          "id": 33,
+          "name": "lost",
+          "priority": 3,
+          "sequence": 46,
+          "started": 13.232471655328798,
+          "ends": 13.832471655328797,
+          "peak": 0.1943754255771637
+        },
+        {
+          "event": "quarantined-voice-end",
+          "time": 13.241179138321996,
+          "id": 32,
+          "sequence": 44
+        },
+        {
+          "event": "quarantined-voice-end",
+          "time": 13.241179138321996,
+          "id": 30,
+          "sequence": 43
+        },
+        {
+          "event": "voice-end",
+          "time": 13.841995464852607,
+          "id": 33,
+          "name": "lost",
+          "priority": 3,
+          "sequence": 46,
+          "started": 13.232471655328798,
+          "ends": 13.832471655328797,
+          "peak": 0.1943754255771637
+        },
+        {
+          "event": "observe",
+          "time": 14.140952380952381,
+          "sequence": 47,
+          "music": "silent"
+        },
+        {
+          "event": "restart",
+          "time": 14.140952380952381,
+          "sequence": 47,
+          "transport": "continuous-aligned-silent"
+        },
+        {
+          "event": "observe",
+          "time": 14.222222222222221,
+          "sequence": 48,
+          "music": "silent"
+        },
+        {
+          "event": "observe",
+          "time": 14.291882086167801,
+          "sequence": 49,
+          "music": "quiet"
+        },
+        {
+          "event": "cue",
+          "time": 14.291882086167801,
+          "id": 34,
+          "name": "bolt",
+          "priority": 1,
+          "sequence": 49,
+          "started": 14.291882086167801,
+          "ends": 14.531882086167801,
+          "peak": 0.1854933649301529
+        },
+        {
+          "event": "voice-stop",
+          "time": 14.31219954648526,
+          "id": 34,
+          "name": "bolt",
+          "priority": 1,
+          "sequence": 49,
+          "started": 14.291882086167801,
+          "ends": 14.531882086167801,
+          "peak": 0.1854933649301529,
+          "reason": "suspend"
+        },
+        {
+          "event": "suspend",
+          "time": 14.31219954648526,
+          "reason": "Focus left the crossing",
+          "sequence": 49
+        },
+        {
+          "event": "observe",
+          "time": 14.31219954648526,
+          "sequence": 50,
+          "music": "quiet"
+        },
+        {
+          "event": "consumed-silent",
+          "time": 14.31219954648526,
+          "sequence": 50
+        },
+        {
+          "event": "decoded-budget",
+          "time": 14.352834467120182,
+          "bound": 0.4540134489701676,
+          "ceiling": 0.9
+        },
+        {
+          "event": "stems-start",
+          "time": 14.352834467120182,
+          "when": 14.392834467120181,
+          "frames": 352800
+        },
+        {
+          "event": "enable",
+          "time": 14.352834467120182,
+          "sequence": 50
+        },
+        {
+          "event": "quarantined-voice-end",
+          "time": 14.352834467120182,
+          "id": 34,
+          "sequence": 49
+        }
+      ]
+    },
+    "playbackAfterDisconnect": {
+      "enabled": true,
+      "suspended": true,
+      "muted": false,
+      "loading": false,
+      "sequence": 50,
+      "music": "quiet",
+      "mode": "quiet",
+      "cursor": 50,
+      "voices": 0,
+      "maxvoices": 2,
+      "activeVoices": [],
+      "headroom": {
+        "decoded_bound": 0,
+        "ceiling": 0.9,
+        "source_bound": 0.45386993498348416
+      },
+      "duck": {
+        "until": 14.42249433106576,
+        "gain": 0.8286532759666443
+      },
+      "stems": 0,
+      "transports": [],
+      "epoch": 12,
+      "history": [
+        {
+          "event": "cue",
+          "time": 3.0214965986394557,
+          "id": 1,
+          "name": "bolt",
+          "priority": 1,
+          "sequence": 7,
+          "started": 3.0214965986394557,
+          "ends": 3.2614965986394555,
+          "peak": 0.1854933649301529
+        },
+        {
+          "event": "observe",
+          "time": 3.091156462585034,
+          "sequence": 8,
+          "music": "quiet"
+        },
+        {
+          "event": "cue",
+          "time": 3.091156462585034,
+          "id": 2,
+          "name": "block",
+          "priority": 2,
+          "sequence": 8,
+          "started": 3.091156462585034,
+          "ends": 3.3311564625850343,
+          "peak": 0.2354004681110382
+        },
+        {
+          "event": "voice-stop",
+          "time": 3.091156462585034,
+          "id": 1,
+          "name": "bolt",
+          "priority": 1,
+          "sequence": 7,
+          "started": 3.0214965986394557,
+          "ends": 3.2614965986394555,
+          "peak": 0.1854933649301529,
+          "reason": "higher-priority-or-new-threat"
+        },
+        {
+          "event": "cue",
+          "time": 3.091156462585034,
+          "id": 3,
+          "name": "bolt",
+          "priority": 1,
+          "sequence": 8,
+          "started": 3.091156462585034,
+          "ends": 3.3311564625850343,
+          "peak": 0.1854933649301529
+        },
+        {
+          "event": "quarantined-voice-end",
+          "time": 3.102766439909297,
+          "id": 1,
+          "sequence": 7
+        },
+        {
+          "event": "voice-end",
+          "time": 3.332063492063492,
+          "id": 2,
+          "name": "block",
+          "priority": 2,
+          "sequence": 8,
+          "started": 3.091156462585034,
+          "ends": 3.3311564625850343,
+          "peak": 0.2354004681110382
+        },
+        {
+          "event": "voice-end",
+          "time": 3.332063492063492,
+          "id": 3,
+          "name": "bolt",
+          "priority": 1,
+          "sequence": 8,
+          "started": 3.091156462585034,
+          "ends": 3.3311564625850343,
+          "peak": 0.1854933649301529
+        },
+        {
+          "event": "ignored",
+          "time": 3.642630385487528,
+          "sequence": 8
+        },
+        {
+          "event": "ignored",
+          "time": 3.642630385487528,
+          "sequence": 8
+        },
+        {
+          "event": "observe",
+          "time": 3.671655328798186,
+          "sequence": 9,
+          "music": "silent"
+        },
+        {
+          "event": "restart",
+          "time": 3.671655328798186,
+          "sequence": 9,
+          "transport": "continuous-aligned-silent"
+        },
+        {
+          "event": "observe",
+          "time": 3.7500226757369615,
+          "sequence": 10,
+          "music": "silent"
+        },
+        {
+          "event": "observe",
+          "time": 3.8225850340136054,
+          "sequence": 11,
+          "music": "quiet"
+        },
+        {
+          "event": "cue",
+          "time": 3.8225850340136054,
+          "id": 4,
+          "name": "bolt",
+          "priority": 1,
+          "sequence": 11,
+          "started": 3.8225850340136054,
+          "ends": 4.062585034013606,
+          "peak": 0.1854933649301529
+        },
+        {
+          "event": "observe",
+          "time": 3.8922448979591837,
+          "sequence": 12,
+          "music": "quiet"
+        },
+        {
+          "event": "cue",
+          "time": 3.8922448979591837,
+          "id": 5,
+          "name": "draw",
+          "priority": 2,
+          "sequence": 12,
+          "started": 3.8922448979591837,
+          "ends": 4.1322448979591835,
+          "peak": 0.24416683614253998
+        },
+        {
+          "event": "voice-stop",
+          "time": 3.8922448979591837,
+          "id": 4,
+          "name": "bolt",
+          "priority": 1,
+          "sequence": 11,
+          "started": 3.8225850340136054,
+          "ends": 4.062585034013606,
+          "peak": 0.1854933649301529,
+          "reason": "higher-priority-or-new-threat"
+        },
+        {
+          "event": "cue",
+          "time": 3.8922448979591837,
+          "id": 6,
+          "name": "bolt",
+          "priority": 1,
+          "sequence": 12,
+          "started": 3.8922448979591837,
+          "ends": 4.1322448979591835,
+          "peak": 0.1854933649301529
+        },
+        {
+          "event": "quarantined-voice-end",
+          "time": 3.900952380952381,
+          "id": 4,
+          "sequence": 11
+        },
+        {
+          "event": "voice-end",
+          "time": 4.141859410430839,
+          "id": 5,
+          "name": "draw",
+          "priority": 2,
+          "sequence": 12,
+          "started": 3.8922448979591837,
+          "ends": 4.1322448979591835,
+          "peak": 0.24416683614253998
+        },
+        {
+          "event": "voice-end",
+          "time": 4.141859410430839,
+          "id": 6,
+          "name": "bolt",
+          "priority": 1,
+          "sequence": 12,
+          "started": 3.8922448979591837,
+          "ends": 4.1322448979591835,
+          "peak": 0.1854933649301529
+        },
+        {
+          "event": "observe",
+          "time": 4.4524263038548755,
+          "sequence": 13,
+          "music": "silent"
+        },
+        {
+          "event": "restart",
+          "time": 4.4524263038548755,
+          "sequence": 13,
+          "transport": "continuous-aligned-silent"
+        },
+        {
+          "event": "observe",
+          "time": 4.542403628117913,
+          "sequence": 14,
+          "music": "silent"
+        },
+        {
+          "event": "observe",
+          "time": 4.600453514739229,
+          "sequence": 15,
+          "music": "quiet"
+        },
+        {
+          "event": "cue",
+          "time": 4.612063492063492,
+          "id": 7,
+          "name": "bolt",
+          "priority": 1,
+          "sequence": 15,
+          "started": 4.612063492063492,
+          "ends": 4.852063492063492,
+          "peak": 0.1854933649301529
+        },
+        {
+          "event": "observe",
+          "time": 4.670113378684808,
+          "sequence": 16,
+          "music": "quiet"
+        },
+        {
+          "event": "cue",
+          "time": 4.670113378684808,
+          "id": 8,
+          "name": "hurt",
+          "priority": 2,
+          "sequence": 16,
+          "started": 4.670113378684808,
+          "ends": 4.910113378684808,
+          "peak": 0.2529979944229126
+        },
+        {
+          "event": "voice-stop",
+          "time": 4.670113378684808,
+          "id": 7,
+          "name": "bolt",
+          "priority": 1,
+          "sequence": 15,
+          "started": 4.612063492063492,
+          "ends": 4.852063492063492,
+          "peak": 0.1854933649301529,
+          "reason": "higher-priority-or-new-threat"
+        },
+        {
+          "event": "cue",
+          "time": 4.670113378684808,
+          "id": 9,
+          "name": "bolt",
+          "priority": 1,
+          "sequence": 16,
+          "started": 4.670113378684808,
+          "ends": 4.910113378684808,
+          "peak": 0.1854933649301529
+        },
+        {
+          "event": "quarantined-voice-end",
+          "time": 4.68172335600907,
+          "id": 7,
+          "sequence": 15
+        },
+        {
+          "event": "voice-end",
+          "time": 4.911020408163266,
+          "id": 9,
+          "name": "bolt",
+          "priority": 1,
+          "sequence": 16,
+          "started": 4.670113378684808,
+          "ends": 4.910113378684808,
+          "peak": 0.1854933649301529
+        },
+        {
+          "event": "voice-end",
+          "time": 4.911020408163266,
+          "id": 8,
+          "name": "hurt",
+          "priority": 2,
+          "sequence": 16,
+          "started": 4.670113378684808,
+          "ends": 4.910113378684808,
+          "peak": 0.2529979944229126
+        },
+        {
+          "event": "observe",
+          "time": 5.262222222222222,
+          "sequence": 17,
+          "music": "quiet"
+        },
+        {
+          "event": "cue",
+          "time": 5.262222222222222,
+          "id": 10,
+          "name": "block",
+          "priority": 2,
+          "sequence": 17,
+          "started": 5.262222222222222,
+          "ends": 5.502222222222223,
+          "peak": 0.2354004681110382
+        },
+        {
+          "event": "cue",
+          "time": 5.262222222222222,
+          "id": 11,
+          "name": "pulse",
+          "priority": 1,
+          "sequence": 17,
+          "started": 5.262222222222222,
+          "ends": 5.622222222222223,
+          "peak": 0.21164056658744812
+        },
+        {
+          "event": "observe",
+          "time": 5.320272108843538,
+          "sequence": 18,
+          "music": "quiet"
+        },
+        {
+          "event": "voice-stop",
+          "time": 5.320272108843538,
+          "id": 11,
+          "name": "pulse",
+          "priority": 1,
+          "sequence": 17,
+          "started": 5.262222222222222,
+          "ends": 5.622222222222223,
+          "peak": 0.21164056658744812,
+          "reason": "higher-priority-or-new-threat"
+        },
+        {
+          "event": "cue",
+          "time": 5.320272108843538,
+          "id": 12,
+          "name": "evade",
+          "priority": 2,
+          "sequence": 18,
+          "started": 5.320272108843538,
+          "ends": 5.560272108843538,
+          "peak": 0.19477689266204834
+        },
+        {
+          "event": "cue-suppressed",
+          "time": 5.320272108843538,
+          "name": "bolt",
+          "priority": 1,
+          "sequence": 18,
+          "reason": "priority-saturation",
+          "state": "2,2"
+        },
+        {
+          "event": "quarantined-voice-end",
+          "time": 5.3318820861678,
+          "id": 11,
+          "sequence": 17
+        },
+        {
+          "event": "voice-end",
+          "time": 5.511836734693878,
+          "id": 10,
+          "name": "block",
+          "priority": 2,
+          "sequence": 17,
+          "started": 5.262222222222222,
+          "ends": 5.502222222222223,
+          "peak": 0.2354004681110382
+        },
+        {
+          "event": "voice-end",
+          "time": 5.561179138321996,
+          "id": 12,
+          "name": "evade",
+          "priority": 2,
+          "sequence": 18,
+          "started": 5.320272108843538,
+          "ends": 5.560272108843538,
+          "peak": 0.19477689266204834
+        },
+        {
+          "event": "observe",
+          "time": 5.900770975056689,
+          "sequence": 19,
+          "music": "silent"
+        },
+        {
+          "event": "terminal-priority",
+          "time": 5.900770975056689,
+          "sequence": 19
+        },
+        {
+          "event": "cue",
+          "time": 5.900770975056689,
+          "id": 13,
+          "name": "won",
+          "priority": 3,
+          "sequence": 19,
+          "started": 5.900770975056689,
+          "ends": 6.500770975056689,
+          "peak": 0.1943754255771637
+        },
+        {
+          "event": "voice-end",
+          "time": 6.501587301587302,
+          "id": 13,
+          "name": "won",
+          "priority": 3,
+          "sequence": 19,
+          "started": 5.900770975056689,
+          "ends": 6.500770975056689,
+          "peak": 0.1943754255771637
+        },
+        {
+          "event": "observe",
+          "time": 6.7424943310657595,
+          "sequence": 20,
+          "music": "crossing"
+        },
+        {
+          "event": "cue",
+          "time": 6.7424943310657595,
+          "id": 14,
+          "name": "bolt",
+          "priority": 1,
+          "sequence": 20,
+          "started": 6.7424943310657595,
+          "ends": 6.98249433106576,
+          "peak": 0.1854933649301529
+        },
+        {
+          "event": "voice-end",
+          "time": 6.992108843537415,
+          "id": 14,
+          "name": "bolt",
+          "priority": 1,
+          "sequence": 20,
+          "started": 6.7424943310657595,
+          "ends": 6.98249433106576,
+          "peak": 0.1854933649301529
+        },
+        {
+          "event": "observe",
+          "time": 7.801904761904762,
+          "sequence": 21,
+          "music": "crossing"
+        },
+        {
+          "event": "cue",
+          "time": 7.801904761904762,
+          "id": 15,
+          "name": "block",
+          "priority": 2,
+          "sequence": 21,
+          "started": 7.801904761904762,
+          "ends": 8.041904761904762,
+          "peak": 0.2354004681110382
+        },
+        {
+          "event": "cue",
+          "time": 7.801904761904762,
+          "id": 16,
+          "name": "bolt",
+          "priority": 1,
+          "sequence": 21,
+          "started": 7.801904761904762,
+          "ends": 8.041904761904762,
+          "peak": 0.1854933649301529
+        },
+        {
+          "event": "observe",
+          "time": 7.891882086167801,
+          "sequence": 22,
+          "music": "crossing"
+        },
+        {
+          "event": "voice-stop",
+          "time": 7.891882086167801,
+          "id": 16,
+          "name": "bolt",
+          "priority": 1,
+          "sequence": 21,
+          "started": 7.801904761904762,
+          "ends": 8.041904761904762,
+          "peak": 0.1854933649301529,
+          "reason": "higher-priority-or-new-threat"
+        },
+        {
+          "event": "cue",
+          "time": 7.891882086167801,
+          "id": 17,
+          "name": "block",
+          "priority": 2,
+          "sequence": 22,
+          "started": 7.891882086167801,
+          "ends": 8.131882086167801,
+          "peak": 0.2354004681110382
+        },
+        {
+          "event": "cue-suppressed",
+          "time": 7.891882086167801,
+          "name": "pulse",
+          "priority": 1,
+          "sequence": 22,
+          "reason": "priority-saturation",
+          "state": "2,2"
+        },
+        {
+          "event": "quarantined-voice-end",
+          "time": 7.9005895691609975,
+          "id": 16,
+          "sequence": 21
+        },
+        {
+          "event": "observe",
+          "time": 7.952834467120182,
+          "sequence": 23,
+          "music": "crossing"
+        },
+        {
+          "event": "cue-suppressed",
+          "time": 7.961541950113379,
+          "name": "evade",
+          "priority": 2,
+          "sequence": 23,
+          "reason": "priority-saturation",
+          "state": "2,2"
+        },
+        {
+          "event": "cue-suppressed",
+          "time": 7.961541950113379,
+          "name": "bolt",
+          "priority": 1,
+          "sequence": 23,
+          "reason": "priority-saturation",
+          "state": "2,2"
+        },
+        {
+          "event": "voice-end",
+          "time": 8.04281179138322,
+          "id": 15,
+          "name": "block",
+          "priority": 2,
+          "sequence": 21,
+          "started": 7.801904761904762,
+          "ends": 8.041904761904762,
+          "peak": 0.2354004681110382
+        },
+        {
+          "event": "observe",
+          "time": 8.04281179138322,
+          "sequence": 24,
+          "music": "crossing"
+        },
+        {
+          "event": "cue",
+          "time": 8.04281179138322,
+          "id": 18,
+          "name": "block",
+          "priority": 2,
+          "sequence": 24,
+          "started": 8.04281179138322,
+          "ends": 8.28281179138322,
+          "peak": 0.2354004681110382
+        },
+        {
+          "event": "cue-suppressed",
+          "time": 8.04281179138322,
+          "name": "pulse",
+          "priority": 1,
+          "sequence": 24,
+          "reason": "priority-saturation",
+          "state": "2,2"
+        },
+        {
+          "event": "observe",
+          "time": 8.100861678004534,
+          "sequence": 25,
+          "music": "crossing"
+        },
+        {
+          "event": "cue-suppressed",
+          "time": 8.100861678004534,
+          "name": "evade",
+          "priority": 2,
+          "sequence": 25,
+          "reason": "priority-saturation",
+          "state": "2,2"
+        },
+        {
+          "event": "cue-suppressed",
+          "time": 8.100861678004534,
+          "name": "bolt",
+          "priority": 1,
+          "sequence": 25,
+          "reason": "priority-saturation",
+          "state": "2,2"
+        },
+        {
+          "event": "voice-end",
+          "time": 8.132789115646258,
+          "id": 17,
+          "name": "block",
+          "priority": 2,
+          "sequence": 22,
+          "started": 7.891882086167801,
+          "ends": 8.131882086167801,
+          "peak": 0.2354004681110382
+        },
+        {
+          "event": "observe",
+          "time": 8.170521541950114,
+          "sequence": 26,
+          "music": "silent"
+        },
+        {
+          "event": "voice-stop",
+          "time": 8.170521541950114,
+          "id": 18,
+          "name": "block",
+          "priority": 2,
+          "sequence": 24,
+          "started": 8.04281179138322,
+          "ends": 8.28281179138322,
+          "peak": 0.2354004681110382,
+          "reason": "terminal-arrival"
+        },
+        {
+          "event": "terminal-priority",
+          "time": 8.170521541950114,
+          "sequence": 26
+        },
+        {
+          "event": "cue",
+          "time": 8.170521541950114,
+          "id": 19,
+          "name": "won",
+          "priority": 3,
+          "sequence": 26,
+          "started": 8.170521541950114,
+          "ends": 8.770521541950114,
+          "peak": 0.1943754255771637
+        },
+        {
+          "event": "quarantined-voice-end",
+          "time": 8.182131519274376,
+          "id": 18,
+          "sequence": 24
+        },
+        {
+          "event": "voice-end",
+          "time": 8.771337868480726,
+          "id": 19,
+          "name": "won",
+          "priority": 3,
+          "sequence": 26,
+          "started": 8.170521541950114,
+          "ends": 8.770521541950114,
+          "peak": 0.1943754255771637
+        },
+        {
+          "event": "observe",
+          "time": 9.520181405895691,
+          "sequence": 27,
+          "music": "silent"
+        },
+        {
+          "event": "restart",
+          "time": 9.520181405895691,
+          "sequence": 27,
+          "transport": "continuous-aligned-silent"
+        },
+        {
+          "event": "observe",
+          "time": 9.601451247165533,
+          "sequence": 28,
+          "music": "silent"
+        },
+        {
+          "event": "observe",
+          "time": 9.671111111111111,
+          "sequence": 29,
+          "music": "quiet"
+        },
+        {
+          "event": "cue",
+          "time": 9.671111111111111,
+          "id": 20,
+          "name": "bolt",
+          "priority": 1,
+          "sequence": 29,
+          "started": 9.671111111111111,
+          "ends": 9.911111111111111,
+          "peak": 0.1854933649301529
+        },
+        {
+          "event": "observe",
+          "time": 9.740770975056689,
+          "sequence": 30,
+          "music": "quiet"
+        },
+        {
+          "event": "cue",
+          "time": 9.740770975056689,
+          "id": 21,
+          "name": "block",
+          "priority": 2,
+          "sequence": 30,
+          "started": 9.740770975056689,
+          "ends": 9.98077097505669,
+          "peak": 0.2354004681110382
+        },
+        {
+          "event": "voice-stop",
+          "time": 9.740770975056689,
+          "id": 20,
+          "name": "bolt",
+          "priority": 1,
+          "sequence": 29,
+          "started": 9.671111111111111,
+          "ends": 9.911111111111111,
+          "peak": 0.1854933649301529,
+          "reason": "higher-priority-or-new-threat"
+        },
+        {
+          "event": "cue",
+          "time": 9.740770975056689,
+          "id": 22,
+          "name": "bolt",
+          "priority": 1,
+          "sequence": 30,
+          "started": 9.740770975056689,
+          "ends": 9.98077097505669,
+          "peak": 0.1854933649301529
+        },
+        {
+          "event": "quarantined-voice-end",
+          "time": 9.752380952380953,
+          "id": 20,
+          "sequence": 29
+        },
+        {
+          "event": "observe",
+          "time": 9.80172335600907,
+          "sequence": 31,
+          "music": "quiet"
+        },
+        {
+          "event": "voice-stop",
+          "time": 9.80172335600907,
+          "id": 22,
+          "name": "bolt",
+          "priority": 1,
+          "sequence": 30,
+          "started": 9.740770975056689,
+          "ends": 9.98077097505669,
+          "peak": 0.1854933649301529,
+          "reason": "higher-priority-or-new-threat"
+        },
+        {
+          "event": "cue",
+          "time": 9.80172335600907,
+          "id": 23,
+          "name": "block",
+          "priority": 2,
+          "sequence": 31,
+          "started": 9.80172335600907,
+          "ends": 10.04172335600907,
+          "peak": 0.2354004681110382
+        },
+        {
+          "event": "cue-suppressed",
+          "time": 9.80172335600907,
+          "name": "pulse",
+          "priority": 1,
+          "sequence": 31,
+          "reason": "priority-saturation",
+          "state": "2,2"
+        },
+        {
+          "event": "quarantined-voice-end",
+          "time": 9.810430839002267,
+          "id": 22,
+          "sequence": 30
+        },
+        {
+          "event": "observe",
+          "time": 9.871383219954648,
+          "sequence": 32,
+          "music": "quiet"
+        },
+        {
+          "event": "cue-suppressed",
+          "time": 9.871383219954648,
+          "name": "hurt",
+          "priority": 2,
+          "sequence": 32,
+          "reason": "priority-saturation",
+          "state": "2,2"
+        },
+        {
+          "event": "cue-suppressed",
+          "time": 9.871383219954648,
+          "name": "bolt",
+          "priority": 1,
+          "sequence": 32,
+          "reason": "priority-saturation",
+          "state": "2,2"
+        },
+        {
+          "event": "observe",
+          "time": 9.941043083900226,
+          "sequence": 33,
+          "music": "quiet"
+        },
+        {
+          "event": "voice-end",
+          "time": 9.981678004535148,
+          "id": 21,
+          "name": "block",
+          "priority": 2,
+          "sequence": 30,
+          "started": 9.740770975056689,
+          "ends": 9.98077097505669,
+          "peak": 0.2354004681110382
+        },
+        {
+          "event": "voice-stop",
+          "time": 10.031020408163265,
+          "id": 23,
+          "name": "block",
+          "priority": 2,
+          "sequence": 31,
+          "started": 9.80172335600907,
+          "ends": 10.04172335600907,
+          "peak": 0.2354004681110382,
+          "reason": "mute"
+        },
+        {
+          "event": "mute",
+          "time": 10.031020408163265,
+          "muted": true
+        },
+        {
+          "event": "quarantined-voice-end",
+          "time": 10.042630385487529,
+          "id": 23,
+          "sequence": 31
+        },
+        {
+          "event": "observe",
+          "time": 10.161632653061224,
+          "sequence": 34,
+          "music": "silent"
+        },
+        {
+          "event": "terminal-priority",
+          "time": 10.161632653061224,
+          "sequence": 34
+        },
+        {
+          "event": "consumed-silent",
+          "time": 10.161632653061224,
+          "sequence": 34
+        },
+        {
+          "event": "mute",
+          "time": 10.782766439909297,
+          "muted": false
+        },
+        {
+          "event": "observe",
+          "time": 11.560634920634921,
+          "sequence": 35,
+          "music": "silent"
+        },
+        {
+          "event": "restart",
+          "time": 11.560634920634921,
+          "sequence": 35,
+          "transport": "continuous-aligned-silent"
+        },
+        {
+          "event": "observe",
+          "time": 11.682539682539682,
+          "sequence": 36,
+          "music": "silent"
+        },
+        {
+          "event": "observe",
+          "time": 11.77251700680272,
+          "sequence": 37,
+          "music": "quiet"
+        },
+        {
+          "event": "cue",
+          "time": 11.77251700680272,
+          "id": 24,
+          "name": "bolt",
+          "priority": 1,
+          "sequence": 37,
+          "started": 11.77251700680272,
+          "ends": 12.012517006802721,
+          "peak": 0.1854933649301529
+        },
+        {
+          "event": "observe",
+          "time": 11.830566893424036,
+          "sequence": 38,
+          "music": "quiet"
+        },
+        {
+          "event": "cue",
+          "time": 11.830566893424036,
+          "id": 25,
+          "name": "block",
+          "priority": 2,
+          "sequence": 38,
+          "started": 11.830566893424036,
+          "ends": 12.070566893424036,
+          "peak": 0.2354004681110382
+        },
+        {
+          "event": "voice-stop",
+          "time": 11.830566893424036,
+          "id": 24,
+          "name": "bolt",
+          "priority": 1,
+          "sequence": 37,
+          "started": 11.77251700680272,
+          "ends": 12.012517006802721,
+          "peak": 0.1854933649301529,
+          "reason": "higher-priority-or-new-threat"
+        },
+        {
+          "event": "cue",
+          "time": 11.830566893424036,
+          "id": 26,
+          "name": "bolt",
+          "priority": 1,
+          "sequence": 38,
+          "started": 11.830566893424036,
+          "ends": 12.070566893424036,
+          "peak": 0.1854933649301529
+        },
+        {
+          "event": "quarantined-voice-end",
+          "time": 11.842176870748299,
+          "id": 24,
+          "sequence": 37
+        },
+        {
+          "event": "voice-end",
+          "time": 12.071473922902495,
+          "id": 25,
+          "name": "block",
+          "priority": 2,
+          "sequence": 38,
+          "started": 11.830566893424036,
+          "ends": 12.070566893424036,
+          "peak": 0.2354004681110382
+        },
+        {
+          "event": "voice-end",
+          "time": 12.071473922902495,
+          "id": 26,
+          "name": "bolt",
+          "priority": 1,
+          "sequence": 38,
+          "started": 11.830566893424036,
+          "ends": 12.070566893424036,
+          "peak": 0.1854933649301529
+        },
+        {
+          "event": "observe",
+          "time": 12.181768707482993,
+          "sequence": 39,
+          "music": "quiet"
+        },
+        {
+          "event": "cue",
+          "time": 12.181768707482993,
+          "id": 27,
+          "name": "block",
+          "priority": 2,
+          "sequence": 39,
+          "started": 12.181768707482993,
+          "ends": 12.421768707482993,
+          "peak": 0.2354004681110382
+        },
+        {
+          "event": "cue",
+          "time": 12.181768707482993,
+          "id": 28,
+          "name": "pulse",
+          "priority": 1,
+          "sequence": 39,
+          "started": 12.181768707482993,
+          "ends": 12.541768707482992,
+          "peak": 0.21164056658744812
+        },
+        {
+          "event": "voice-end",
+          "time": 12.422675736961452,
+          "id": 27,
+          "name": "block",
+          "priority": 2,
+          "sequence": 39,
+          "started": 12.181768707482993,
+          "ends": 12.421768707482993,
+          "peak": 0.2354004681110382
+        },
+        {
+          "event": "voice-end",
+          "time": 12.550385487528345,
+          "id": 28,
+          "name": "pulse",
+          "priority": 1,
+          "sequence": 39,
+          "started": 12.181768707482993,
+          "ends": 12.541768707482992,
+          "peak": 0.21164056658744812
+        },
+        {
+          "event": "observe",
+          "time": 12.82031746031746,
+          "sequence": 40,
+          "music": "silent"
+        },
+        {
+          "event": "restart",
+          "time": 12.82031746031746,
+          "sequence": 40,
+          "transport": "continuous-aligned-silent"
+        },
+        {
+          "event": "observe",
+          "time": 12.901587301587302,
+          "sequence": 41,
+          "music": "silent"
+        },
+        {
+          "event": "observe",
+          "time": 12.97124716553288,
+          "sequence": 42,
+          "music": "quiet"
+        },
+        {
+          "event": "cue",
+          "time": 12.97124716553288,
+          "id": 29,
+          "name": "bolt",
+          "priority": 1,
+          "sequence": 42,
+          "started": 12.97124716553288,
+          "ends": 13.21124716553288,
+          "peak": 0.1854933649301529
+        },
+        {
+          "event": "observe",
+          "time": 13.032199546485261,
+          "sequence": 43,
+          "music": "quiet"
+        },
+        {
+          "event": "cue",
+          "time": 13.032199546485261,
+          "id": 30,
+          "name": "hurt",
+          "priority": 2,
+          "sequence": 43,
+          "started": 13.032199546485261,
+          "ends": 13.272199546485261,
+          "peak": 0.2529979944229126
+        },
+        {
+          "event": "voice-stop",
+          "time": 13.032199546485261,
+          "id": 29,
+          "name": "bolt",
+          "priority": 1,
+          "sequence": 42,
+          "started": 12.97124716553288,
+          "ends": 13.21124716553288,
+          "peak": 0.1854933649301529,
+          "reason": "higher-priority-or-new-threat"
+        },
+        {
+          "event": "cue",
+          "time": 13.032199546485261,
+          "id": 31,
+          "name": "bolt",
+          "priority": 1,
+          "sequence": 43,
+          "started": 13.032199546485261,
+          "ends": 13.272199546485261,
+          "peak": 0.1854933649301529
+        },
+        {
+          "event": "quarantined-voice-end",
+          "time": 13.040907029478458,
+          "id": 29,
+          "sequence": 42
+        },
+        {
+          "event": "observe",
+          "time": 13.101859410430839,
+          "sequence": 44,
+          "music": "quiet"
+        },
+        {
+          "event": "voice-stop",
+          "time": 13.101859410430839,
+          "id": 31,
+          "name": "bolt",
+          "priority": 1,
+          "sequence": 43,
+          "started": 13.032199546485261,
+          "ends": 13.272199546485261,
+          "peak": 0.1854933649301529,
+          "reason": "higher-priority-or-new-threat"
+        },
+        {
+          "event": "cue",
+          "time": 13.101859410430839,
+          "id": 32,
+          "name": "hurt",
+          "priority": 2,
+          "sequence": 44,
+          "started": 13.101859410430839,
+          "ends": 13.341859410430839,
+          "peak": 0.2529979944229126
+        },
+        {
+          "event": "cue-suppressed",
+          "time": 13.101859410430839,
+          "name": "pulse",
+          "priority": 1,
+          "sequence": 44,
+          "reason": "priority-saturation",
+          "state": "2,2"
+        },
+        {
+          "event": "quarantined-voice-end",
+          "time": 13.110566893424036,
+          "id": 31,
+          "sequence": 43
+        },
+        {
+          "event": "observe",
+          "time": 13.171519274376417,
+          "sequence": 45,
+          "music": "quiet"
+        },
+        {
+          "event": "cue-suppressed",
+          "time": 13.171519274376417,
+          "name": "hurt",
+          "priority": 2,
+          "sequence": 45,
+          "reason": "priority-saturation",
+          "state": "2,2"
+        },
+        {
+          "event": "cue-suppressed",
+          "time": 13.171519274376417,
+          "name": "bolt",
+          "priority": 1,
+          "sequence": 45,
+          "reason": "priority-saturation",
+          "state": "2,2"
+        },
+        {
+          "event": "observe",
+          "time": 13.232471655328798,
+          "sequence": 46,
+          "music": "silent"
+        },
+        {
+          "event": "voice-stop",
+          "time": 13.232471655328798,
+          "id": 30,
+          "name": "hurt",
+          "priority": 2,
+          "sequence": 43,
+          "started": 13.032199546485261,
+          "ends": 13.272199546485261,
+          "peak": 0.2529979944229126,
+          "reason": "terminal-arrival"
+        },
+        {
+          "event": "voice-stop",
+          "time": 13.232471655328798,
+          "id": 32,
+          "name": "hurt",
+          "priority": 2,
+          "sequence": 44,
+          "started": 13.101859410430839,
+          "ends": 13.341859410430839,
+          "peak": 0.2529979944229126,
+          "reason": "terminal-arrival"
+        },
+        {
+          "event": "terminal-priority",
+          "time": 13.232471655328798,
+          "sequence": 46
+        },
+        {
+          "event": "cue",
+          "time": 13.232471655328798,
+          "id": 33,
+          "name": "lost",
+          "priority": 3,
+          "sequence": 46,
+          "started": 13.232471655328798,
+          "ends": 13.832471655328797,
+          "peak": 0.1943754255771637
+        },
+        {
+          "event": "quarantined-voice-end",
+          "time": 13.241179138321996,
+          "id": 32,
+          "sequence": 44
+        },
+        {
+          "event": "quarantined-voice-end",
+          "time": 13.241179138321996,
+          "id": 30,
+          "sequence": 43
+        },
+        {
+          "event": "voice-end",
+          "time": 13.841995464852607,
+          "id": 33,
+          "name": "lost",
+          "priority": 3,
+          "sequence": 46,
+          "started": 13.232471655328798,
+          "ends": 13.832471655328797,
+          "peak": 0.1943754255771637
+        },
+        {
+          "event": "observe",
+          "time": 14.140952380952381,
+          "sequence": 47,
+          "music": "silent"
+        },
+        {
+          "event": "restart",
+          "time": 14.140952380952381,
+          "sequence": 47,
+          "transport": "continuous-aligned-silent"
+        },
+        {
+          "event": "observe",
+          "time": 14.222222222222221,
+          "sequence": 48,
+          "music": "silent"
+        },
+        {
+          "event": "observe",
+          "time": 14.291882086167801,
+          "sequence": 49,
+          "music": "quiet"
+        },
+        {
+          "event": "cue",
+          "time": 14.291882086167801,
+          "id": 34,
+          "name": "bolt",
+          "priority": 1,
+          "sequence": 49,
+          "started": 14.291882086167801,
+          "ends": 14.531882086167801,
+          "peak": 0.1854933649301529
+        },
+        {
+          "event": "voice-stop",
+          "time": 14.31219954648526,
+          "id": 34,
+          "name": "bolt",
+          "priority": 1,
+          "sequence": 49,
+          "started": 14.291882086167801,
+          "ends": 14.531882086167801,
+          "peak": 0.1854933649301529,
+          "reason": "suspend"
+        },
+        {
+          "event": "suspend",
+          "time": 14.31219954648526,
+          "reason": "Focus left the crossing",
+          "sequence": 49
+        },
+        {
+          "event": "observe",
+          "time": 14.31219954648526,
+          "sequence": 50,
+          "music": "quiet"
+        },
+        {
+          "event": "consumed-silent",
+          "time": 14.31219954648526,
+          "sequence": 50
+        },
+        {
+          "event": "decoded-budget",
+          "time": 14.352834467120182,
+          "bound": 0.4540134489701676,
+          "ceiling": 0.9
+        },
+        {
+          "event": "stems-start",
+          "time": 14.352834467120182,
+          "when": 14.392834467120181,
+          "frames": 352800
+        },
+        {
+          "event": "enable",
+          "time": 14.352834467120182,
+          "sequence": 50
+        },
+        {
+          "event": "quarantined-voice-end",
+          "time": 14.352834467120182,
+          "id": 34,
+          "sequence": 49
+        },
+        {
+          "event": "suspend",
+          "time": 14.42249433106576,
+          "reason": "Connection lost",
+          "sequence": 50
+        }
+      ]
+    }
+  },
+  "signals": {
+    "bed": {
+      "frames": 28672,
+      "peak": 0.009736623615026474,
+      "rms": 0.005367850508474369
+    },
+    "phase": {
+      "sample_rate": 44100,
+      "stats": [
+        {
+          "frames": 38912,
+          "peak": 0.034064825624227524,
+          "rms": 0.01872818517648682
+        },
+        {
+          "frames": 38912,
+          "peak": 0.04600897058844566,
+          "rms": 0.019737961798346637
+        }
+      ],
+      "phases": [
+        -0.0009995300723899766,
+        -0.001477758545048502
+      ]
+    },
+    "shiftedPhase": {
+      "sample_rate": 44100,
+      "stats": [
+        {
+          "frames": 38912,
+          "peak": 0.03431856632232666,
+          "rms": 0.018913813234979274
+        },
+        {
+          "frames": 38912,
+          "peak": 0.04311973601579666,
+          "rms": 0.01942908396657235
+        }
+      ],
+      "phases": [
+        1.882977437520215,
+        2.8347514706392354
+      ]
+    },
+    "anchor": {
+      "frames": 18432,
+      "peak": 0.18685026466846466,
+      "rms": 0.029866073348229973
+    },
+    "lure": {
+      "frames": 18432,
+      "peak": 0.20316560566425323,
+      "rms": 0.04262611952551881
+    },
+    "afterTransitionPhase": {
+      "sample_rate": 44100,
+      "stats": [
+        {
+          "frames": 30720,
+          "peak": 0.032604582607746124,
+          "rms": 0.018745460213663884
+        },
+        {
+          "frames": 30720,
+          "peak": 0.044099703431129456,
+          "rms": 0.019744502572444193
+        }
+      ],
+      "phases": [
+        0.0001738241573261412,
+        0.0017983278783192391
+      ]
+    },
+    "stress": {
+      "frames": 61440,
+      "peak": 0.2400543987751007,
+      "rms": 0.04213659231402133
+    },
+    "muted": {
+      "frames": 16384,
+      "peak": 0,
+      "rms": 0
+    },
+    "musicOff": {
+      "frames": 18432,
+      "peak": 0,
+      "rms": 0
+    },
+    "effectsOnly": {
+      "frames": 10240,
+      "peak": 0.2091251164674759,
+      "rms": 0.04758897018574186
+    },
+    "overload": {
+      "frames": 20480,
+      "peak": 2.8626205921173096,
+      "rms": 0.7185507285294459
+    },
+    "lost": {
+      "frames": 28672,
+      "peak": 0.12440027296543121,
+      "rms": 0.04280137652836263
+    }
+  },
+  "negatives": [
+    {
+      "policy": "actual 37ms delay in isolated stem capture path",
+      "detected": true,
+      "phases": [
+        1.882977437520215,
+        2.8347514706392354
+      ]
+    },
+    {
+      "policy": "actual master gain12 fixture",
+      "detected": true,
+      "peak": 2.8626205921173096
+    },
+    {
+      "policy": "isolated actual audio.js duplicate-sequence guard removed",
+      "detected": true,
+      "before": 1,
+      "after": 2
+    }
+  ],
+  "recording": {
+    "frames": 231424,
+    "seconds": 5.2477097505668935,
+    "composition": "Concatenated actual real-time output windows; not one continuous playthrough."
+  },
+  "limits": "Real Chromium AudioContext PCM taps with actual loopback C# commands and instrument-only silent capture branches. No physical speakers, hardware latency, human recognition/comfort/preference/masking, Unity/Windows/Steam or production networking validation."
+}

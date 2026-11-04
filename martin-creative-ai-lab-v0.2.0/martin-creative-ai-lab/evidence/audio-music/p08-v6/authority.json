@@ -1,0 +1,42 @@
+{
+  "schema": "p08.authority-recovery.v1",
+  "initial_branch": "work",
+  "head_and_fetched_main": "1cc982a525b63abbd8a1091ebd70e16df7844cb5",
+  "initial_tree": "clean",
+  "incoming": 0,
+  "outgoing": 0,
+  "authority": [
+    {
+      "path": "AGENTS.md",
+      "sha256": "52c31061602852bca1f56dfa5c97c7f4c86669dd4b76540a01ea230ff42cda60",
+      "published_bytes_exact_before_edit": true
+    },
+    {
+      "path": "martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/AGENTS.md",
+      "sha256": "cacb6b622b55af3652310239b5c1982e78292d565d932eb04b0864fd309326a5",
+      "published_bytes_exact_before_edit": true
+    },
+    {
+      "path": "martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/docs/prompts/CONTINUOUS_DEVELOPMENT.md",
+      "sha256": "e04491650b8d10e3509091eb7ccfbb4e417ea057a87f0796547a004c3010867c",
+      "published_bytes_exact_before_edit": true
+    },
+    {
+      "path": "martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/docs/STATE.md",
+      "sha256": "95c043465594a13144a79e8762bcd5a337a01aef3f9362801702a5b1e1464f11",
+      "published_bytes_exact_before_edit": true
+    }
+  ],
+  "runtime_probe": {
+    "sdk": "10.0.401",
+    "editor_hub_steam_path": {
+      "Unity": "not located on PATH",
+      "unity": "not located on PATH",
+      "unityhub": "not located on PATH",
+      "steam": "not located on PATH",
+      "steamcmd": "not located on PATH"
+    },
+    "license_modules": "unverified; no usable Editor observed; protected-root denial is not global absence"
+  },
+  "publication_authorization": "Persistent explicit user authorization to commit intended verified changes and normal non-force publication to refs/heads/main; never publish held supplied media."
+}

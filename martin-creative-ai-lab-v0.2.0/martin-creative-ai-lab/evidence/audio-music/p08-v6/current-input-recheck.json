@@ -1,0 +1,18 @@
+{
+  "schema": "p08.post-execution-current-identity.v1",
+  "all11_priority_inputs_exact": true,
+  "identities": {
+    "labs/audio-music/priority-browser.mjs": "5dc57426932d354ae81bd2264f95c5aca08eecfd7639ef998986297394be8a9a",
+    "labs/audio-music/priority-protocol.json": "13069689d971b83497cd1702e10ca274b9c3bdfd02103f19384d2376945e78c2",
+    "north-star/csharp/Audio/Admission.cs": "51a98f3e963def8305cd4d3e2e542dc004912d54a683a5551128186fd89e2cb2",
+    "north-star/csharp/Audio/NorthStar.Audio.csproj": "3acec7333496cb2bb2bb2a8c6aaf151f714f6402e133ead2ca8d3f166d77dd22",
+    "north-star/csharp/Audio/Sound.cs": "e4995638398116dff88d084f6afadb48217c81ee80f50995a2793ed22ce6ad31",
+    "north-star/csharp/Presentation/NorthStar.Presentation.csproj": "6e5a04a3e92bc5606c032e20b9b546c4704a55d682c7eb314002822e5bf59387",
+    "north-star/csharp/Presentation/Program.cs": "44089db8317ca46fc8e1ec9c5004d9f585ec8fd55cb01241c2d7c592c1b1a5b9",
+    "north-star/csharp/Presentation/web/app.js": "3b70bfeabc63c935bafef49fab1effe615d18e15b1b59748eceb992f2e7d01f6",
+    "north-star/csharp/Presentation/web/audio.js": "472d07cf5936625c2f613e303bb51ac02d2b9d1c11fed833972c35601d8b9a6b",
+    "north-star/csharp/Presentation/web/index.html": "69a6aa6c4084d284f2953716d889ba74b1079ae9b1371b1313acb788a79a2c89",
+    "projects/realtime-integration-lab/package-lock.json": "aa191ef2158e6cc6f770bf4b3ee44dca17175ef1a3cd572b98115246bf46aea7"
+  },
+  "boundary": "Post-execution identity check at handoff. The current browser report separately records its own before/after stability gate; this is not another execution."
+}

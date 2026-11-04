@@ -1,0 +1,418 @@
+{
+  "schema": "p08.exact-utf8-log-container.v1",
+  "logs": [
+    {
+      "name": "dependency-install.log",
+      "bytes": 541,
+      "sha256": "ae530e739424b42f9da227f8bab424614c89cbb229cb6fe063eda417a2ea3e48",
+      "encoding": "UTF-8",
+      "content": "Collecting soundfile==0.13.1\n  Downloading soundfile-0.13.1-py2.py3-none-manylinux_2_28_x86_64.whl.metadata (16 kB)\nDownloading soundfile-0.13.1-py2.py3-none-manylinux_2_28_x86_64.whl (1.3 MB)\n   \u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501 1.3/1.3 MB 28.3 MB/s  0:00:00\nInstalling collected packages: soundfile\nSuccessfully installed soundfile-0.13.1\n\n[notice] A new release of pip is available: 26.2.1 -> 26.2.2\n[notice] To update, run: pip install --upgrade pip\n"
+    },
+    {
+      "name": "priority-build.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "encoding": "UTF-8",
+      "content": ""
+    },
+    {
+      "name": "priority-build.stdout.log",
+      "bytes": 1048,
+      "sha256": "d2bdd2cbcc0b2fb489549c64f562f8f306c837433f7ef70d9c08fa23d5b8560f",
+      "encoding": "UTF-8",
+      "content": "  Determining projects to restore...\n  Restored /workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/Presentation/NorthStar.Presentation.csproj (in 203 ms).\n  Restored /workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/Audio/NorthStar.Audio.csproj (in 190 ms).\n  1 of 3 projects are up-to-date for restore.\n  NorthStar.Domain -> /workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/Domain/bin/Release/netstandard2.1/NorthStar.Domain.dll\n  NorthStar.Audio -> /workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/Audio/bin/Release/netstandard2.1/NorthStar.Audio.dll\n  NorthStar.Presentation -> /workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/Presentation/bin/Release/net10.0/NorthStar.Presentation.dll\n\nBuild succeeded.\n    0 Warning(s)\n    0 Error(s)\n\nTime Elapsed 00:00:05.77\n"
+    },
+    {
+      "name": "priority-run-01.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "encoding": "UTF-8",
+      "content": ""
+    },
+    {
+      "name": "priority-run-01.stdout.log",
+      "bytes": 74,
+      "sha256": "19933bdb09927965ff0287907459f7baa5463a655b52b2b4a8da4efe4f4493a4",
+      "encoding": "UTF-8",
+      "content": "PASS 26 actual priority browser controls; 3 detected controlled negatives\n"
+    },
+    {
+      "name": "produce-combat.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "encoding": "UTF-8",
+      "content": ""
+    },
+    {
+      "name": "produce-combat.stdout.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "encoding": "UTF-8",
+      "content": ""
+    },
+    {
+      "name": "produce-event.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "encoding": "UTF-8",
+      "content": ""
+    },
+    {
+      "name": "produce-event.stdout.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "encoding": "UTF-8",
+      "content": ""
+    },
+    {
+      "name": "produce-factorial.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "encoding": "UTF-8",
+      "content": ""
+    },
+    {
+      "name": "produce-factorial.stdout.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "encoding": "UTF-8",
+      "content": ""
+    },
+    {
+      "name": "produce-headroom.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "encoding": "UTF-8",
+      "content": ""
+    },
+    {
+      "name": "produce-headroom.stdout.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "encoding": "UTF-8",
+      "content": ""
+    },
+    {
+      "name": "produce-midi.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "encoding": "UTF-8",
+      "content": ""
+    },
+    {
+      "name": "produce-midi.stdout.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "encoding": "UTF-8",
+      "content": ""
+    },
+    {
+      "name": "produce-public-gate.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "encoding": "UTF-8",
+      "content": ""
+    },
+    {
+      "name": "produce-public-gate.stdout.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "encoding": "UTF-8",
+      "content": ""
+    },
+    {
+      "name": "produce-research-gate.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "encoding": "UTF-8",
+      "content": ""
+    },
+    {
+      "name": "produce-research-gate.stdout.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "encoding": "UTF-8",
+      "content": ""
+    },
+    {
+      "name": "produce-scene.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "encoding": "UTF-8",
+      "content": ""
+    },
+    {
+      "name": "produce-scene.stdout.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "encoding": "UTF-8",
+      "content": ""
+    },
+    {
+      "name": "produce-sfx.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "encoding": "UTF-8",
+      "content": ""
+    },
+    {
+      "name": "produce-sfx.stdout.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "encoding": "UTF-8",
+      "content": ""
+    },
+    {
+      "name": "produce-variants.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "encoding": "UTF-8",
+      "content": ""
+    },
+    {
+      "name": "produce-variants.stdout.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "encoding": "UTF-8",
+      "content": ""
+    },
+    {
+      "name": "produce-whole-public-gate.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "encoding": "UTF-8",
+      "content": ""
+    },
+    {
+      "name": "produce-whole-public-gate.stdout.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "encoding": "UTF-8",
+      "content": ""
+    },
+    {
+      "name": "produce-whole-research-gate.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "encoding": "UTF-8",
+      "content": ""
+    },
+    {
+      "name": "produce-whole-research-gate.stdout.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "encoding": "UTF-8",
+      "content": ""
+    },
+    {
+      "name": "replay-driver.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "encoding": "UTF-8",
+      "content": ""
+    },
+    {
+      "name": "replay-driver.stdout.log",
+      "bytes": 893,
+      "sha256": "eb222751d462444e71eb8d4cb03369b2be5b747e82d7e03c23ed2f4c745e01fd",
+      "encoding": "UTF-8",
+      "content": "validate-before 0 PASS V6 manifest 245 tracked files; 112 offline cases; 12 checked claims; 48 rights held; package NOT published\nrun-v6 0 PASS V6 93 inherited + 10 intersample + 9 traceability cases = 112\nstandalone-intersample 0 \ntest-00 0 \ntest-01 0 \ntest-02 0 \ntest-03 0 \ntest-04 0 \ntest-05 0 \ntest-06 0 \ntest-07 0 \ntest-08 0 \ntest-09 0 \nproduce-midi 0 \nproduce-sfx 0 \nproduce-variants 0 \nproduce-event 0 \nproduce-scene 0 \nproduce-research-gate 0 \nproduce-combat 0 \nproduce-factorial 0 \nproduce-whole-research-gate 0 \nproduce-public-gate 2 \nproduce-whole-public-gate 2 \nproduce-headroom 0 \nvalidate-after 0 PASS V6 manifest 245 tracked files; 112 offline cases; 12 checked claims; 48 rights held; package NOT published\n{\n  \"source_files\": 246,\n  \"source_stable\": true,\n  \"tests_by_ast\": 112,\n  \"tests_observed_individual\": 112,\n  \"all_commands_passed\": true,\n  \"all_reports_equal\": true\n}\n"
+    },
+    {
+      "name": "run-v6.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "encoding": "UTF-8",
+      "content": ""
+    },
+    {
+      "name": "run-v6.stdout.log",
+      "bytes": 67,
+      "sha256": "55b465e5fcbbd18c86e00e3c47914ebd84bce354c759e689fb6b56b8ba730a84",
+      "encoding": "UTF-8",
+      "content": "PASS V6 93 inherited + 10 intersample + 9 traceability cases = 112\n"
+    },
+    {
+      "name": "standalone-intersample.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "encoding": "UTF-8",
+      "content": ""
+    },
+    {
+      "name": "standalone-intersample.stdout.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "encoding": "UTF-8",
+      "content": ""
+    },
+    {
+      "name": "test-00.stderr.log",
+      "bytes": 887,
+      "sha256": "7e8f3a8d420918313365d6ac4485363974efc3e61607c234d5a32e7f84fc5bcb",
+      "encoding": "UTF-8",
+      "content": "test_five_four_bar (__main__.TransportTests.test_five_four_bar) ... ok\ntest_four_four_one_bar_at_120 (__main__.TransportTests.test_four_four_one_bar_at_120) ... ok\ntest_malformed_midi_negative (__main__.TransportTests.test_malformed_midi_negative) ... ok\ntest_no_incremental_rounding_drift (__main__.TransportTests.test_no_incremental_rounding_drift) ... ok\ntest_parse_note_tempo_meter (__main__.TransportTests.test_parse_note_tempo_meter) ... ok\ntest_retrigger_negative (__main__.TransportTests.test_retrigger_negative) ... ok\ntest_seven_eight_one_bar (__main__.TransportTests.test_seven_eight_one_bar) ... ok\ntest_tempo_change_not_single_bpm (__main__.TransportTests.test_tempo_change_not_single_bpm) ... ok\ntest_unclosed_negative (__main__.TransportTests.test_unclosed_negative) ... ok\n\n----------------------------------------------------------------------\nRan 9 tests in 0.000s\n\nOK\n"
+    },
+    {
+      "name": "test-00.stdout.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "encoding": "UTF-8",
+      "content": ""
+    },
+    {
+      "name": "test-01.stderr.log",
+      "bytes": 966,
+      "sha256": "c39e33e647ff12df09fa6feafc1164b026e271de4d09dd11e7a8080582b2f0a9",
+      "encoding": "UTF-8",
+      "content": "test_empty_refused (__main__.VariantTriageTest.test_empty_refused) ... ok\ntest_fundamentally_different_pitch_not_wave_dup (__main__.VariantTriageTest.test_fundamentally_different_pitch_not_wave_dup) ... ok\ntest_gain_only_fails_novelty (__main__.VariantTriageTest.test_gain_only_fails_novelty) ... ok\ntest_missing_pair_refused (__main__.VariantTriageTest.test_missing_pair_refused) ... ok\ntest_multichannel_average (__main__.VariantTriageTest.test_multichannel_average) ... ok\ntest_sample_rate_mismatch_refused (__main__.VariantTriageTest.test_sample_rate_mismatch_refused) ... ok\ntest_scan_reproducible (__main__.VariantTriageTest.test_scan_reproducible) ... ok\ntest_time_shifted_duplicate_flagged (__main__.VariantTriageTest.test_time_shifted_duplicate_flagged) ... ok\ntest_unrecognized_name_refused (__main__.VariantTriageTest.test_unrecognized_name_refused) ... ok\n\n----------------------------------------------------------------------\nRan 9 tests in 0.068s\n\nOK\n"
+    },
+    {
+      "name": "test-01.stdout.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "encoding": "UTF-8",
+      "content": ""
+    },
+    {
+      "name": "test-02.stderr.log",
+      "bytes": 1577,
+      "sha256": "0dec72c81cc5e4f7c056a3f1845f48899e440b4a096871c6d22bec5ac6cab797",
+      "encoding": "UTF-8",
+      "content": "test_bag_no_immediate_repeat_across_cycle (__main__.PolicyTests.test_bag_no_immediate_repeat_across_cycle) ... ok\ntest_cooldown (__main__.PolicyTests.test_cooldown) ... ok\ntest_deterministic_replay (__main__.PolicyTests.test_deterministic_replay) ... ok\ntest_different_emitters_separate_cooldowns (__main__.PolicyTests.test_different_emitters_separate_cooldowns) ... ok\ntest_duplicate_same_sequence_does_not_replay (__main__.PolicyTests.test_duplicate_same_sequence_does_not_replay) ... ok\ntest_invalid_clock_rejected (__main__.PolicyTests.test_invalid_clock_rejected) ... ok\ntest_muted_consumes_event_no_backlog (__main__.PolicyTests.test_muted_consumes_event_no_backlog) ... ok\ntest_no_originating_gameplay_consequence (__main__.PolicyTests.test_no_originating_gameplay_consequence) ... ok\ntest_priority_steals_lower_priority (__main__.PolicyTests.test_priority_steals_lower_priority) ... ok\ntest_stale_sequence_cannot_replay (__main__.PolicyTests.test_stale_sequence_cannot_replay) ... ok\ntest_suspended_consumes_event_no_backlog (__main__.PolicyTests.test_suspended_consumes_event_no_backlog) ... ok\ntest_timestamp_future_consumed_not_queued (__main__.PolicyTests.test_timestamp_future_consumed_not_queued) ... ok\ntest_unknown_event_silent (__main__.PolicyTests.test_unknown_event_silent) ... ok\ntest_voice_ends (__main__.PolicyTests.test_voice_ends) ... ok\ntest_voice_limit_suppresses_less_important (__main__.PolicyTests.test_voice_limit_suppresses_less_important) ... ok\n\n----------------------------------------------------------------------\nRan 15 tests in 0.001s\n\nOK\n"
+    },
+    {
+      "name": "test-02.stdout.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "encoding": "UTF-8",
+      "content": ""
+    },
+    {
+      "name": "test-03.stderr.log",
+      "bytes": 1069,
+      "sha256": "247a9bf96de5940cdf9bbd60e0d53e05ceee86e3484cd48c3168a64fff97603e",
+      "encoding": "UTF-8",
+      "content": "test_different_frequency_proxy_near_zero (__main__.SceneMixTests.test_different_frequency_proxy_near_zero) ... ok\ntest_distinct_maskers (__main__.SceneMixTests.test_distinct_maskers) ... ok\ntest_length_mismatch_fails (__main__.SceneMixTests.test_length_mismatch_fails) ... ok\ntest_masker_determinism (__main__.SceneMixTests.test_masker_determinism) ... ok\ntest_read_rejects_clipping (__main__.SceneMixTests.test_read_rejects_clipping) ... ok\ntest_real_fixture_six_events (__main__.SceneMixTests.test_real_fixture_six_events) ... ok\ntest_rms_nonnegative (__main__.SceneMixTests.test_rms_nonnegative) ... ok\ntest_same_frequency_proxy_close_to_one (__main__.SceneMixTests.test_same_frequency_proxy_close_to_one) ... ok\ntest_silent_spectrum_fails (__main__.SceneMixTests.test_silent_spectrum_fails) ... ok\ntest_target_to_masker_snr (__main__.SceneMixTests.test_target_to_masker_snr) ... ok\ntest_unknown_masker_fails (__main__.SceneMixTests.test_unknown_masker_fails) ... ok\n\n----------------------------------------------------------------------\nRan 11 tests in 0.323s\n\nOK\n"
+    },
+    {
+      "name": "test-03.stdout.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "encoding": "UTF-8",
+      "content": ""
+    },
+    {
+      "name": "test-04.stderr.log",
+      "bytes": 941,
+      "sha256": "fd4ec16b1145775489e2932e4131b785fa115e2f060dfaaf0655281cabd23768",
+      "encoding": "UTF-8",
+      "content": "test_bad_enum_fails (__main__.GateTests.test_bad_enum_fails) ... ok\ntest_declared_missing_fails (__main__.GateTests.test_declared_missing_fails) ... ok\ntest_duplicate_fails (__main__.GateTests.test_duplicate_fails) ... ok\ntest_fake_clearance_fails (__main__.GateTests.test_fake_clearance_fails) ... ok\ntest_fake_permission_without_evidence_fails (__main__.GateTests.test_fake_permission_without_evidence_fails) ... ok\ntest_mismatch_fails (__main__.GateTests.test_mismatch_fails) ... ok\ntest_public_fails_without_rights (__main__.GateTests.test_public_fails_without_rights) ... ok\ntest_research_passes_declared_candidates (__main__.GateTests.test_research_passes_declared_candidates) ... ok\ntest_unsafe_relative_fails (__main__.GateTests.test_unsafe_relative_fails) ... ok\ntest_untracked_fails (__main__.GateTests.test_untracked_fails) ... ok\n\n----------------------------------------------------------------------\nRan 10 tests in 0.004s\n\nOK\n"
+    },
+    {
+      "name": "test-04.stdout.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "encoding": "UTF-8",
+      "content": ""
+    },
+    {
+      "name": "test-05.stderr.log",
+      "bytes": 2693,
+      "sha256": "35cdbced70f9ccfeac216d930f478a163c5224c1f3174baab3153fcebc2dc4fc",
+      "encoding": "UTF-8",
+      "content": "test_bad_timestamp_negative (__main__.ScenePolicyTests.test_bad_timestamp_negative) ... ok\ntest_bounded_bus_reduces_max_peak_in_crowded_fixture (__main__.ScenePolicyTests.test_bounded_bus_reduces_max_peak_in_crowded_fixture) ... ok\ntest_bounded_voice_limit_rejects_invalid (__main__.ScenePolicyTests.test_bounded_voice_limit_rejects_invalid) ... ok\ntest_deterministic_byte_representation (__main__.ScenePolicyTests.test_deterministic_byte_representation) ... ok\ntest_duck_envelope_outside_event_is_unity (__main__.ScenePolicyTests.test_duck_envelope_outside_event_is_unity) ... ok\ntest_duplicate_identity_negative (__main__.ScenePolicyTests.test_duplicate_identity_negative) ... ok\ntest_equal_priority_overflow_suppressed_newest (__main__.ScenePolicyTests.test_equal_priority_overflow_suppressed_newest) ... ok\ntest_factorial_all_eight_policies_and_48_conditions (__main__.ScenePolicyTests.test_factorial_all_eight_policies_and_48_conditions) ... ok\ntest_factorial_constant_event_ids (__main__.ScenePolicyTests.test_factorial_constant_event_ids) ... ok\ntest_factorial_gain_only_comparison_no_culling (__main__.ScenePolicyTests.test_factorial_gain_only_comparison_no_culling) ... ok\ntest_factorial_music_duck_only_can_fail_to_prevent_overrange (__main__.ScenePolicyTests.test_factorial_music_duck_only_can_fail_to_prevent_overrange) ... ok\ntest_factorial_voice_cap_trades_preservation_for_peak (__main__.ScenePolicyTests.test_factorial_voice_cap_trades_preservation_for_peak) ... ok\ntest_high_priority_preempts_lower_without_rewriting_ids (__main__.ScenePolicyTests.test_high_priority_preempts_lower_without_rewriting_ids) ... ok\ntest_input_source_not_mutated (__main__.ScenePolicyTests.test_input_source_not_mutated) ... ok\ntest_lower_priority_cannot_preempt_higher (__main__.ScenePolicyTests.test_lower_priority_cannot_preempt_higher) ... ok\ntest_music_only_duck_does_not_change_sfx_decision (__main__.ScenePolicyTests.test_music_only_duck_does_not_change_sfx_decision) ... ok\ntest_no_duck_for_low_priority_event (__main__.ScenePolicyTests.test_no_duck_for_low_priority_event) ... ok\ntest_positive_overrange_raw_sum_control (__main__.ScenePolicyTests.test_positive_overrange_raw_sum_control) ... ok\ntest_real_inputs_6_scenes_3_policies (__main__.ScenePolicyTests.test_real_inputs_6_scenes_3_policies) ... ok\ntest_reference_no_suppression (__main__.ScenePolicyTests.test_reference_no_suppression) ... ok\ntest_unknown_event_negative (__main__.ScenePolicyTests.test_unknown_event_negative) ... ok\ntest_unsorted_schedule_negative (__main__.ScenePolicyTests.test_unsorted_schedule_negative) ... ok\n\n----------------------------------------------------------------------\nRan 22 tests in 0.676s\n\nOK\n"
+    },
+    {
+      "name": "test-05.stdout.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "encoding": "UTF-8",
+      "content": ""
+    },
+    {
+      "name": "test-06.stderr.log",
+      "bytes": 454,
+      "sha256": "bfdfc99c39f58e02337848f38f3fd9beb3d1f8427ee9838f1d5a066af0ea9431",
+      "encoding": "UTF-8",
+      "content": "test_all_48_public_files_blocked (__main__.WholePackageTests.test_all_48_public_files_blocked) ... ok\ntest_complete_inventory_48_media_files (__main__.WholePackageTests.test_complete_inventory_48_media_files) ... ok\ntest_research_gate_passes_but_does_not_clear_rights (__main__.WholePackageTests.test_research_gate_passes_but_does_not_clear_rights) ... ok\n\n----------------------------------------------------------------------\nRan 3 tests in 0.074s\n\nOK\n"
+    },
+    {
+      "name": "test-06.stdout.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "encoding": "UTF-8",
+      "content": ""
+    },
+    {
+      "name": "test-07.stderr.log",
+      "bytes": 1741,
+      "sha256": "b8f25cd9a64f6ef9bb4e4759425de9ce002adde906afd8a4f035efc2066e329c",
+      "encoding": "UTF-8",
+      "content": "test_all_schedules_and_ids_retained (__main__.HeadroomPreservationTests.test_all_schedules_and_ids_retained) ... ok\ntest_background_alone_over_ceiling_fails_closed (__main__.HeadroomPreservationTests.test_background_alone_over_ceiling_fails_closed) ... ok\ntest_bad_nonfinite_background_rejected (__main__.HeadroomPreservationTests.test_bad_nonfinite_background_rejected) ... ok\ntest_bad_shape_rejected (__main__.HeadroomPreservationTests.test_bad_shape_rejected) ... ok\ntest_critical_proxy_is_not_audibility_claim (__main__.HeadroomPreservationTests.test_critical_proxy_is_not_audibility_claim) ... ok\ntest_deterministic_output (__main__.HeadroomPreservationTests.test_deterministic_output) ... ok\ntest_duplicate_event_rejected (__main__.HeadroomPreservationTests.test_duplicate_event_rejected) ... ok\ntest_fixture_background_infeasibility_is_explicit (__main__.HeadroomPreservationTests.test_fixture_background_infeasibility_is_explicit) ... ok\ntest_invalid_constraint_rejected (__main__.HeadroomPreservationTests.test_invalid_constraint_rejected) ... ok\ntest_no_gain_reduction_when_unused (__main__.HeadroomPreservationTests.test_no_gain_reduction_when_unused) ... ok\ntest_optimiser_maximises_gain_within_ceiling (__main__.HeadroomPreservationTests.test_optimiser_maximises_gain_within_ceiling) ... ok\ntest_safe_policy_never_exceeds_target (__main__.HeadroomPreservationTests.test_safe_policy_never_exceeds_target) ... ok\ntest_six_scenes_three_policies (__main__.HeadroomPreservationTests.test_six_scenes_three_policies) ... ok\ntest_source_samples_are_immutable (__main__.HeadroomPreservationTests.test_source_samples_are_immutable) ... ok\n\n----------------------------------------------------------------------\nRan 14 tests in 2.756s\n\nOK\n"
+    },
+    {
+      "name": "test-07.stdout.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "encoding": "UTF-8",
+      "content": ""
+    },
+    {
+      "name": "test-08.stderr.log",
+      "bytes": 999,
+      "sha256": "695b0cfee074bea19b939a90efce582d37dcec02cb40956353fa23e51ed7a4d8",
+      "encoding": "UTF-8",
+      "content": "test_actual_fixtures_exact_and_limited (__main__.IntersampleDiagnosticTests.test_actual_fixtures_exact_and_limited) ... ok\ntest_gain_scaling (__main__.IntersampleDiagnosticTests.test_gain_scaling) ... ok\ntest_intersample_counterexample (__main__.IntersampleDiagnosticTests.test_intersample_counterexample) ... ok\ntest_rejects_infinite (__main__.IntersampleDiagnosticTests.test_rejects_infinite) ... ok\ntest_rejects_invalid_up (__main__.IntersampleDiagnosticTests.test_rejects_invalid_up) ... ok\ntest_rejects_nan (__main__.IntersampleDiagnosticTests.test_rejects_nan) ... ok\ntest_rejects_nonmono (__main__.IntersampleDiagnosticTests.test_rejects_nonmono) ... ok\ntest_rejects_too_short (__main__.IntersampleDiagnosticTests.test_rejects_too_short) ... ok\ntest_repetition (__main__.IntersampleDiagnosticTests.test_repetition) ... ok\ntest_silence (__main__.IntersampleDiagnosticTests.test_silence) ... ok\n\n----------------------------------------------------------------------\nRan 10 tests in 0.519s\n\nOK\n"
+    },
+    {
+      "name": "test-08.stdout.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "encoding": "UTF-8",
+      "content": ""
+    },
+    {
+      "name": "test-09.stderr.log",
+      "bytes": 712,
+      "sha256": "2838535df548c583926fd3e274431a4e55713ab501276baaf0262ed4a8a9654e",
+      "encoding": "UTF-8",
+      "content": "test_absolute (__main__.ClaimsTests.test_absolute) ... ok\ntest_duplicate (__main__.ClaimsTests.test_duplicate) ... ok\ntest_missing_limit (__main__.ClaimsTests.test_missing_limit) ... ok\ntest_missing_reference (__main__.ClaimsTests.test_missing_reference) ... ok\ntest_selector_must_resolve (__main__.ClaimsTests.test_selector_must_resolve) ... ok\ntest_traversal (__main__.ClaimsTests.test_traversal) ... ok\ntest_unknown_status (__main__.ClaimsTests.test_unknown_status) ... ok\ntest_valid_records (__main__.ClaimsTests.test_valid_records) ... ok\ntest_wrong_expected (__main__.ClaimsTests.test_wrong_expected) ... ok\n\n----------------------------------------------------------------------\nRan 9 tests in 0.042s\n\nOK\n"
+    },
+    {
+      "name": "test-09.stdout.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "encoding": "UTF-8",
+      "content": ""
+    },
+    {
+      "name": "validate-after.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "encoding": "UTF-8",
+      "content": ""
+    },
+    {
+      "name": "validate-after.stdout.log",
+      "bytes": 112,
+      "sha256": "9cfb1194911b42ee93ec8dda47bb0da98663fa7e70755dd98462b6c677a1de6e",
+      "encoding": "UTF-8",
+      "content": "PASS V6 manifest 245 tracked files; 112 offline cases; 12 checked claims; 48 rights held; package NOT published\n"
+    },
+    {
+      "name": "validate-before.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "encoding": "UTF-8",
+      "content": ""
+    },
+    {
+      "name": "validate-before.stdout.log",
+      "bytes": 112,
+      "sha256": "9cfb1194911b42ee93ec8dda47bb0da98663fa7e70755dd98462b6c677a1de6e",
+      "encoding": "UTF-8",
+      "content": "PASS V6 manifest 245 tracked files; 112 offline cases; 12 checked claims; 48 rights held; package NOT published\n"
+    }
+  ]
+}

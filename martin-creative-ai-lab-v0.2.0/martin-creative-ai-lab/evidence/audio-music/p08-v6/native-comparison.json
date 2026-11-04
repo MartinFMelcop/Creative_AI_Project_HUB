@@ -1,0 +1,17 @@
+{
+  "schema": "p08.native-regression-identity.v1",
+  "original_controls_exact": 67,
+  "additional_controls": 18,
+  "all_original_assets_exact": 10,
+  "original_events_exact": 22,
+  "additional_admission_events": 9,
+  "comparison_boundary": "Compare original event prefix after removing only added audio.playback contract; nine actual new admission-trial events are additional, not original regressions.",
+  "baseline_result_sha256": "ac740ed2e5b089d76b6c41498ef4b8782a91c4198f8e29c8345412d5f3333961",
+  "current_result_sha256": "04dc44ba66344a43ab56960ef46b878567d217a4dd87f2016a03bfb92da8d6a1",
+  "initial_comparator_failure": {
+    "assertion": "all current events after removing playback == all baseline events",
+    "observed": "31 events versus22; all22 paired events exact; nine appended by new admission trial",
+    "correction": "Explicit original prefix plus separate new-trial cardinality; no runtime or test changed."
+  },
+  "interpretation": "An exact outcome/identity comparison of two actual native executions, not extra tests, people or a second study."
+}

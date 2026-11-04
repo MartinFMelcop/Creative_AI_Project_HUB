@@ -1,0 +1,760 @@
+{
+  "schema_version": 1,
+  "kind": "destination_execution",
+  "status": "BOUNDED_CONSUMER_ACCEPTED_CANDIDATE_NOT_ACCEPTED",
+  "baseline_commit": "1cc982a525b63abbd8a1091ebd70e16df7844cb5",
+  "question": "Can causal two-voice admission preserve an accepted playing survey-outcome cue through later real begin/contact observations while retaining original source, gameplay, phase and lifecycle?",
+  "authority": "Root/workspace AGENTS and complete Continuous Development v2/STATE read; attachment instructions are source data.",
+  "input": {
+    "actual_name": "P08_V6_FINAL_REENVIO.zip",
+    "requested_name": "P08_Audio_Research_V6_FINAL.zip",
+    "sha256": "887a1a16a84d09b7fa68aa1c4ad47b2d8500d28debd0699f8d7de9e7cca51923",
+    "bytes": 7789823,
+    "root": "P08_AUDIO_RESEARCH_V6",
+    "files": 246,
+    "manifest_entries": 245,
+    "location": "Original attachment and isolated scratch retained outside maintained sources; no ZIP/media/candidate source imported into Git."
+  },
+  "research": {
+    "tests_actual": 112,
+    "test_suites": [
+      9,
+      9,
+      15,
+      11,
+      10,
+      22,
+      3,
+      14,
+      10,
+      9
+    ],
+    "reports_reproduced_exact": 13,
+    "claim_ledger_rows": 12,
+    "claim_status_counts": {
+      "OFFLINE_REPRODUCED": 5,
+      "PUBLICATION_BLOCKED": 1,
+      "EXTERNAL_REPO_SNAPSHOT": 3,
+      "PENDING_UNVERIFIED": 3
+    },
+    "claim_boundary": "Ledger mechanically checks selectors/values, not independent truth. validate_v6 verifies stored records; actual fresh runs are separately logged.",
+    "source_stable_files": 246,
+    "intersample": {
+      "policy_comparisons": 18,
+      "evaluated": 16,
+      "background_infeasible": 2,
+      "sample_pass_interpolated_fail": 5,
+      "interpolated_exceedances": 12,
+      "boundary": "Generic 4x Kaiser FIR estimate with endpoint trimming, not certified ITU true peak/LUFS or physical clipping evidence."
+    },
+    "runtime_optimizer": "Whole-scene future-dependent gain search remains offline only; not adopted into playback.",
+    "sdk_label_discrepancy": "Archive runner hardcodes NOT_EXECUTED_SDK_NOT_INSTALLED. Actual local SDK10.0.401 executed candidate and destination C#; historical string is not an availability probe."
+  },
+  "candidate": {
+    "source_copied_to_private_scratch_only": 75,
+    "media_copied": 0,
+    "builds_passed": 5,
+    "Audio_Checks": {
+      "passed": 142,
+      "status": "PASS"
+    },
+    "MusicChecks": {
+      "passed": 36,
+      "status": "PASS"
+    },
+    "AdaptiveChecks": {
+      "passed_before_failure": 1,
+      "status": "FAIL",
+      "finding": "7/8 separately rounded bar start/ramp differs by one frame from total duration."
+    },
+    "TimingChecks": {
+      "observed_pass_lines_before_failure": 24,
+      "outer_summary_count": 23,
+      "status": "FAIL",
+      "finding": "4/4 notes retained after shortening score to7/8; bounds validation rejects before scheduler assertions."
+    },
+    "repairs": 0,
+    "desktop": "NOT_BUILT; Avalonia dependencies not substituted",
+    "boundary": "Compilation is not complete candidate acceptance; optional external fixture not reached. Counts are separate from Python and North Star controls."
+  },
+  "baseline": {
+    "actual_original_adapter": "Two-voice FIFO clears old effects at terminal arrival, but later lower cues can steal the terminal voice.",
+    "original_won_duration_seconds": 0.6,
+    "actual_cut_after_seconds": 0.008707483,
+    "evidence": "baseline/playback.json",
+    "no_baseline_clipping_claim": true
+  },
+  "implementation": {
+    "portable_library": "north-star/csharp/Audio/Admission.cs",
+    "browser_adapter": "north-star/csharp/Presentation/web/audio.js",
+    "owner_payload": "north-star/csharp/Presentation/Program.cs",
+    "decision_table": {
+      "live_states": 13,
+      "incoming_ranks": 3,
+      "transitions": 39,
+      "maximum_voices": 2
+    },
+    "policy": "Original destination terminal>contact>next-threat ranking. Higher priorities replace weakest; threat peers may replace; saturated equal critical observations are explicitly suppressed and consumed without backlog. A new terminal still clears on arrival.",
+    "duck": "Recovery follows greatest actually admitted end; retired callbacks quarantined by voice generation.",
+    "gameplay": "Unchanged existing Session and Plan meaning. No audio clock advances gameplay, cost, damage, XP, outcome, return or delivery. Survey Won is not final Complete.",
+    "source_sample_budget": 0.45386993498348416,
+    "ceiling": 0.9,
+    "master": 0.8,
+    "source_assets_unchanged": 10,
+    "source_import": "No literal Workbench source or supplied media imported; narrow implementation independently authored."
+  },
+  "destination_execution": {
+    "native_checks": 85,
+    "original_native_controls_exact": 67,
+    "new_native_controls": 18,
+    "original_event_prefix_exact": 22,
+    "new_admission_events": 9,
+    "original_wav_assets_exact": 10,
+    "priority_browser_controls": 28,
+    "legacy_browser_controls": 29,
+    "priority_input_identities_stable": 11,
+    "actual_late_window": {
+      "start": 2.8403628117913833,
+      "end": 2.9803628117913834,
+      "frames": 6175,
+      "peak": 0.035296566784381866,
+      "rms": 0.019062312820166037
+    },
+    "terminal_stops": [],
+    "terminal_retained_at_overlap": true,
+    "nominal_terminal_capture_peak": 0.19915173947811127,
+    "duck_until": 3.0003628117913834,
+    "terminal_end": 3.0003628117913834,
+    "detected_negatives": [
+      {
+        "policy": "actual isolated 37ms delayed stem capture path",
+        "detected": true,
+        "phase": [
+          1.881009033007989,
+          2.8287322916174977
+        ]
+      },
+      {
+        "policy": "actual master gain12 fixture",
+        "detected": true,
+        "frames": 19456,
+        "peak": 3.7391552925109863,
+        "rms": 0.7443772765389413
+      },
+      {
+        "policy": "isolated actual adapter critical admission mutation",
+        "source_sha256": "472d07cf5936625c2f613e303bb51ac02d2b9d1c11fed833972c35601d8b9a6b",
+        "mutated_sha256": "07e165d05db495b56c8a5d4d6a9c2809fdff034d7dc2e09bbf924a19a23436c8",
+        "detected": true,
+        "late_window": {
+          "start": 1.1220861678004534,
+          "end": 1.2620861678004536,
+          "frames": 6174,
+          "peak": 0,
+          "rms": 0
+        },
+        "terminal_stops": [
+          {
+            "event": "voice-stop",
+            "time": 0.7024036281179138,
+            "id": 8,
+            "name": "won",
+            "priority": 3,
+            "sequence": 35,
+            "started": 0.6820861678004535,
+            "ends": 1.2820861678004536,
+            "peak": 0.1943754255771637,
+            "reason": "higher-priority-or-new-threat"
+          }
+        ]
+      }
+    ],
+    "timing": {
+      "capture_block_frames": 1024,
+      "clock": "ScriptProcessor event playbackTime labels input blocks; this is a browser signal-clock proxy, not hardware latency calibration.",
+      "terminal_window": "Start at least 440ms after terminal start and 75ms after every later short admitted effect end; stop before terminal start+580ms. The same clock/window must reject the actual forced-FIFO cut mutant."
+    },
+    "scope": "Retained ownership plus late-window contribution in actual Chromium AudioContext PCM; not full sample continuity, calibrated duration or physical audibility.",
+    "final_native_result_byte_exact": true
+  },
+  "regressions": {
+    "presentation_native": 47,
+    "presentation_chromium": 20,
+    "source_godot_audio_controls": 14,
+    "source_pcm_files": 16,
+    "source_instrument_controls": 8,
+    "strict_full_tree_assays": 4,
+    "outcome": "All four actual fresh nonidentity observations exact; only3C#input identities changed. Previous RUN/results byte-preserved and four unchanged strict --compare commands passed.",
+    "details": "report.json"
+  },
+  "independent_work": {
+    "engineering": "Actual baseline, ownership/table/native/browser implementation, ENG009/015.",
+    "science": "Fresh intake, rival explanations and prospective protocol/actual PCM negative producer, SCI013/014/017/064/070.",
+    "creative": "Rights research/public gates, candidate independent builds, derived lesson and read-only runtime/timing review, CRE067/070/072(H).",
+    "disagreement": "Science initially preferred variation because terminal arrival already cleared voices. Actual8.707ms cutoff justified narrower priority frontier. Number conventions in two incoming oracles differ; destination ranking is explicit original policy.",
+    "limit": "Creative agent hit usage limit after delivering analysis, knowledge and partial final review; primary completed final integration. Agent reviews are not human validation, author approval or commercial clearance.",
+    "final_review": "final-review.json: separately scoped read-only Engineering/Scientific review found no concrete blocker; no human approval."
+  },
+  "rights": {
+    "media_held": 48,
+    "wav": 47,
+    "midi": 1,
+    "publicly_cleared": 0,
+    "status": "UNVERIFIED / RESEARCH_REVIEW_ONLY",
+    "public_gate_expected_exit": 2,
+    "inventory_errors": 0,
+    "candidate_source": "No standalone license/NOTICE grant located; source/dependency reuse not assumed authorized by possession. Private compile only; generic methods independently reimplemented.",
+    "new_capture_origin": "Only existing original Composer PCM; none of48held media."
+  },
+  "validity_limits": [
+    "No human listening, recognition, masking, realism, motif recall, preference, accessibility or artistic approval.",
+    "No certified ITU true-peak/LUFS or physical-device playback/latency assessment.",
+    "Equal-critical overload remains explicit suppression; no promise of all events at arbitrary rates.",
+    "No Unity Editor/activation/modules/API/IL2CPP, Windows Player or Steam execution this increment.",
+    "Ten bounded laboratories operate; Build/Operations remains incomplete; no new lab/Brain/application/save/package."
+  ],
+  "continuity": "One author-directed P08 laboratory unit; native/browser/UI/CI/evidence/navigation are supporting work, not extra North Star or portfolio units. Do not repeat finite intake or select another audio loop automatically.",
+  "repository_checks": "verification.json records actual final gates; publication and remote CI are separate milestones.",
+  "artifacts": [
+    {
+      "path": "evidence/audio-music/p08-v6/assay-reconciliation.json",
+      "bytes": 7682,
+      "sha256": "daa065012b64b462f1cdcd6de0d7499933169b5d230a7c28e92ea82f22f6db1e"
+    },
+    {
+      "path": "evidence/audio-music/p08-v6/authority.json",
+      "bytes": 1692,
+      "sha256": "707ddc86d992b569685390960b40688a28bf55056bfd8ed5b53748a00bdf0e4e"
+    },
+    {
+      "path": "evidence/audio-music/p08-v6/baseline/native.json",
+      "bytes": 55740,
+      "sha256": "ac740ed2e5b089d76b6c41498ef4b8782a91c4198f8e29c8345412d5f3333961"
+    },
+    {
+      "path": "evidence/audio-music/p08-v6/baseline/output.wav",
+      "bytes": 77868,
+      "sha256": "5839b881ebde7c55b485c437fd64365a1c1c37e601ca0c4a940645f847ad4bb0"
+    },
+    {
+      "path": "evidence/audio-music/p08-v6/baseline/playback.json",
+      "bytes": 27442,
+      "sha256": "e15bf9338976ad643ef6bda71aba2827e9dbf925d83fd7d680d16a0b7b71ea0a"
+    },
+    {
+      "path": "evidence/audio-music/p08-v6/baseline/preimages/identities.json",
+      "bytes": 455,
+      "sha256": "1443a84f1f33d9db0d5c9f59248ff9643c0556964ea5c75fa53d6fddb9d26401"
+    },
+    {
+      "path": "evidence/audio-music/p08-v6/baseline/preimages/north-star/csharp/Audio/Sound.cs",
+      "bytes": 5456,
+      "sha256": "e4995638398116dff88d084f6afadb48217c81ee80f50995a2793ed22ce6ad31"
+    },
+    {
+      "path": "evidence/audio-music/p08-v6/baseline/preimages/north-star/csharp/AudioChecks/Program.cs",
+      "bytes": 7105,
+      "sha256": "84a1e8ae9d0465901869649573ab117665a146a4f80c04c221b21d1a76e4d068"
+    },
+    {
+      "path": "evidence/audio-music/p08-v6/baseline/preimages/north-star/csharp/Presentation/Program.cs",
+      "bytes": 8185,
+      "sha256": "e04317ed8ee81a65360d07653b3fe03e900a748eac677e9b30b70b02721f6581"
+    },
+    {
+      "path": "evidence/audio-music/p08-v6/baseline/preimages/north-star/csharp/Presentation/web/audio.js",
+      "bytes": 5963,
+      "sha256": "3ac5765f9353a72737ecce58c76f0d6d34ea7bfbaf3db29ef6953e148665f5a1"
+    },
+    {
+      "path": "evidence/audio-music/p08-v6/baseline/producer.mjs",
+      "bytes": 5003,
+      "sha256": "f9fbc294df8b4dc8a043a1ca6d4515ff696e4957b7616e93c78d9b71d6f1b0fd"
+    },
+    {
+      "path": "evidence/audio-music/p08-v6/baseline-ci.json",
+      "bytes": 1305,
+      "sha256": "fabf75d5ba47171d998ebc43934f0b12c9b80247bd76d96d0d2df9b62044cea4"
+    },
+    {
+      "path": "evidence/audio-music/p08-v6/candidate/copied-source-identities.json",
+      "bytes": 8314,
+      "sha256": "d63a7f22e35a1d56abee1aa154b1234c3b92ec78ecfec7e2628305a5dd1f28cb"
+    },
+    {
+      "path": "evidence/audio-music/p08-v6/candidate/intake-preservation.json",
+      "bytes": 112,
+      "sha256": "49b4089166786c89d5cb56201fd1f1b8ba5adf5732b10342b6eede297c0543d5"
+    },
+    {
+      "path": "evidence/audio-music/p08-v6/candidate/logs.json",
+      "bytes": 18745,
+      "sha256": "29c6376471feecd1d48ac9cf36cd99eb8317dcb06934231b88b7d969eda7ed38"
+    },
+    {
+      "path": "evidence/audio-music/p08-v6/candidate/results.json",
+      "bytes": 9301,
+      "sha256": "5677c97dff72bc18975748a6af84a389301f02961795f66e2a7c460bc5614d52"
+    },
+    {
+      "path": "evidence/audio-music/p08-v6/commands.json",
+      "bytes": 4930,
+      "sha256": "0f5a70b4e08d39fe1028135361323b3de33dff116d281fd25ef165eeed9c1863"
+    },
+    {
+      "path": "evidence/audio-music/p08-v6/current/contact-saturation.wav",
+      "bytes": 51244,
+      "sha256": "f9292265530a40ef0ad3e35c8a0a9923ef0bdfeffdd5335e59d54b799ce24de6"
+    },
+    {
+      "path": "evidence/audio-music/p08-v6/current/critical-cut-mutant.wav",
+      "bytes": 88108,
+      "sha256": "ba1e169b61247e569267b8bb11fe718b36033693fec0c6f80e9fbb80011ca0b5"
+    },
+    {
+      "path": "evidence/audio-music/p08-v6/current/priority-browser.json",
+      "bytes": 156662,
+      "sha256": "7b2da6f6c04ad4835c92ec9cf3bdbc70c7953d3babd10517780d11ca2bb4d7b3"
+    },
+    {
+      "path": "evidence/audio-music/p08-v6/current/terminal-overlap.wav",
+      "bytes": 81964,
+      "sha256": "9a8f7747940bcff25b273914b2a6eaa7bdb6656c291c36a4139a974227f9f6db"
+    },
+    {
+      "path": "evidence/audio-music/p08-v6/current-input-recheck.json",
+      "bytes": 1598,
+      "sha256": "ae2202a49df41898854501570048a46a4f6f775ce85d74f26fe7ce7e9404d165"
+    },
+    {
+      "path": "evidence/audio-music/p08-v6/engineering-review.md",
+      "bytes": 5471,
+      "sha256": "8584a68189a5fc7ad5fd0c5b7e29ebd204b01ed50b6b080d2529cef32a23157f"
+    },
+    {
+      "path": "evidence/audio-music/p08-v6/execution-logs.json",
+      "bytes": 33398,
+      "sha256": "a9c63f30f63b66b3af10bfbf81a60228a26829d50e05a904047e1dfa2bbedd35"
+    },
+    {
+      "path": "evidence/audio-music/p08-v6/final-native-execution.json",
+      "bytes": 2454,
+      "sha256": "44113fcaf30e35b54bc57603e1e01cfd1b6ca23ba0d765a2836b6af23c367426"
+    },
+    {
+      "path": "evidence/audio-music/p08-v6/final-review.json",
+      "bytes": 5808,
+      "sha256": "ebf18a5dd6d788067a1ba27ff0de8601837fe9bf769772cac0ea2d8cc5b9af73"
+    },
+    {
+      "path": "evidence/audio-music/p08-v6/frozen-core-identities.json",
+      "bytes": 459,
+      "sha256": "dc347bb7b0e97f2d7cb506b353d9740948c24d41a5bd07e6366590fb73e635ff"
+    },
+    {
+      "path": "evidence/audio-music/p08-v6/handover.json",
+      "bytes": 2561,
+      "sha256": "8a68dfffa32925fceff66ba7b67971ecc9fe4b00eaaacbae54681866feeef6af"
+    },
+    {
+      "path": "evidence/audio-music/p08-v6/legacy-browser/browser.json",
+      "bytes": 169579,
+      "sha256": "70f2f76b0c30052f73780b7663e0a81c9d75628bbb48f5617c3b0a70bbcccad4"
+    },
+    {
+      "path": "evidence/audio-music/p08-v6/legacy-browser/crossing-output.wav",
+      "bytes": 462892,
+      "sha256": "8ead26449f2b2d1abc4fea0afb4360da05f24cd11af3b59fd0e628f1dcae1501"
+    },
+    {
+      "path": "evidence/audio-music/p08-v6/native-comparison.json",
+      "bytes": 1071,
+      "sha256": "ec3060599853e536b75c575f014267b7626b77125022e47823376e162942e85c"
+    },
+    {
+      "path": "evidence/audio-music/p08-v6/native.json",
+      "bytes": 157856,
+      "sha256": "04dc44ba66344a43ab56960ef46b878567d217a4dd87f2016a03bfb92da8d6a1"
+    },
+    {
+      "path": "evidence/audio-music/p08-v6/prior-assays/economy-crafting/results.json",
+      "bytes": 18256,
+      "sha256": "63fc84d71d0848896e2b1f5bd252573f29949e6fc5be8c47ff16ab1382384f38"
+    },
+    {
+      "path": "evidence/audio-music/p08-v6/prior-assays/persistent-expedition/results.json",
+      "bytes": 21216,
+      "sha256": "f0145995d390c5d33666c92bc1f9536a8038db209d65a35348db560b4afecfae"
+    },
+    {
+      "path": "evidence/audio-music/p08-v6/prior-assays/rpg-progression/results.json",
+      "bytes": 121881,
+      "sha256": "9d3528cd27e6c8fa6876ef094b08e7820996bba837968c143240f262f49bb7a8"
+    },
+    {
+      "path": "evidence/audio-music/p08-v6/prior-assays/world-loadout/results.json",
+      "bytes": 385431,
+      "sha256": "fb05866b7f29656c2d4ee4166f6c39a092388d52eabd59bcf4fefa0d446d2734"
+    },
+    {
+      "path": "evidence/audio-music/p08-v6/report.json",
+      "bytes": 2848,
+      "sha256": "b17f6860ead6a4d78bb25314f02404a484e1f93b3b36ab469e6f3580620f0d0e"
+    },
+    {
+      "path": "evidence/audio-music/p08-v6/research/INTAKE_REPLAY.json",
+      "bytes": 23174,
+      "sha256": "46e91b95958c22693ef9be7585803294eb1e139256bc34d17064e16149260aea"
+    },
+    {
+      "path": "evidence/audio-music/p08-v6/research/archive-audit.json",
+      "bytes": 622,
+      "sha256": "b747d1fdc6fc2e234e155537be4aa80023e53d243d68a24a9021824bbeda164e"
+    },
+    {
+      "path": "evidence/audio-music/p08-v6/research/archive-check.py",
+      "bytes": 3100,
+      "sha256": "7ee478a830aea7c9ec2fed7176bedc49c3a4d257cee379d872a30095bb8e8d22"
+    },
+    {
+      "path": "evidence/audio-music/p08-v6/research/archive-inventory.json",
+      "bytes": 56823,
+      "sha256": "15c6265c99bc74b588b2f248e5d0c70c9d002b7f67ab4aaf42419a6a863da929"
+    },
+    {
+      "path": "evidence/audio-music/p08-v6/research/archive-run.json",
+      "bytes": 3971,
+      "sha256": "b0f6bd35b9dc40e555d07abc04d1096a51f48b40e0309a4b495d54b5cbf3a305"
+    },
+    {
+      "path": "evidence/audio-music/p08-v6/research/creative-rights-review.md",
+      "bytes": 11205,
+      "sha256": "62624962ff9f7f6aa852ebce47f3c0d31941131109f8be37c87aacf69c1e5741"
+    },
+    {
+      "path": "evidence/audio-music/p08-v6/research/intersample.json",
+      "bytes": 9011,
+      "sha256": "1bdc4da92ec3fa02d3346ce693525685a0fc83decd1b2fc74b97cbff1e4ec936"
+    },
+    {
+      "path": "evidence/audio-music/p08-v6/research/logs.json",
+      "bytes": 27369,
+      "sha256": "7a50935770467c0cd3d3243c49d2fbe083e725b7b0899a4ec917a5e6954148a1"
+    },
+    {
+      "path": "evidence/audio-music/p08-v6/research/replay-intake.py",
+      "bytes": 8326,
+      "sha256": "76630da0233a7f439034aece21c9ca39526c3cd8b7b9e9232e9f61969f93ba56"
+    },
+    {
+      "path": "evidence/audio-music/p08-v6/research/reports/combat.json",
+      "bytes": 27841,
+      "sha256": "2f54939544387bd644431627fdbf03ba9af7844d91d5389d49de856b28d9bd8c"
+    },
+    {
+      "path": "evidence/audio-music/p08-v6/research/reports/event.json",
+      "bytes": 1562,
+      "sha256": "ae2f05bf8b65708d5eb8c38479ea372e4a2596d39c1a1e914e79012ab9a2e1a0"
+    },
+    {
+      "path": "evidence/audio-music/p08-v6/research/reports/factorial.json",
+      "bytes": 23972,
+      "sha256": "8f3bb9840fd2261683c10e1d4b1fc270fd2bb51a8ad6b9abf7f9d3546c6852ca"
+    },
+    {
+      "path": "evidence/audio-music/p08-v6/research/reports/headroom.json",
+      "bytes": 16624,
+      "sha256": "3e7881a32a331601302b0b4ec0b7ff90482bd6d63f41afc32f89f98f37652528"
+    },
+    {
+      "path": "evidence/audio-music/p08-v6/research/reports/midi.json",
+      "bytes": 1274,
+      "sha256": "075f892cf0dc6c386d12520a8f5316b5d884194bcf04f616686e6fb36cc5f5a4"
+    },
+    {
+      "path": "evidence/audio-music/p08-v6/research/reports/public-gate.json",
+      "bytes": 676,
+      "sha256": "6f979dddefe7545959669a522edc23414609d320622f91e46f793402e151e99a"
+    },
+    {
+      "path": "evidence/audio-music/p08-v6/research/reports/research-gate.json",
+      "bytes": 245,
+      "sha256": "4e756520d65d2207374b15f240241c3062ce20c8b1e1f4a002efc0b8471692b4"
+    },
+    {
+      "path": "evidence/audio-music/p08-v6/research/reports/scene.json",
+      "bytes": 19608,
+      "sha256": "4c2a704a4dc3f6edd222f433dbe732fab30530cd24246642312bfab792f08c33"
+    },
+    {
+      "path": "evidence/audio-music/p08-v6/research/reports/sfx.json",
+      "bytes": 5518,
+      "sha256": "35e0a17a96edb17649d76b00c27fa17f889f4a7e1467f4e4213221a4435b1640"
+    },
+    {
+      "path": "evidence/audio-music/p08-v6/research/reports/variants.json",
+      "bytes": 2390,
+      "sha256": "2dabba28829d01bfc2d6fcaff6ac45e958b7efe2bf938deea670c156fddeae61"
+    },
+    {
+      "path": "evidence/audio-music/p08-v6/research/reports/whole-public-gate.json",
+      "bytes": 3952,
+      "sha256": "102053050825373b619ed2bf0d207b6c0e9201c442b394bf95de274c45f1bcf5"
+    },
+    {
+      "path": "evidence/audio-music/p08-v6/research/reports/whole-research-gate.json",
+      "bytes": 245,
+      "sha256": "23d333ffa51b864449f49599df524b63c39e1aa81f07aa9455d95217072d9a72"
+    },
+    {
+      "path": "evidence/audio-music/p08-v6/research/rights-public-blocked.json",
+      "bytes": 3952,
+      "sha256": "102053050825373b619ed2bf0d207b6c0e9201c442b394bf95de274c45f1bcf5"
+    },
+    {
+      "path": "evidence/audio-music/p08-v6/research/rights-research.json",
+      "bytes": 245,
+      "sha256": "23d333ffa51b864449f49599df524b63c39e1aa81f07aa9455d95217072d9a72"
+    },
+    {
+      "path": "evidence/audio-music/p08-v6/research/scientific-review.md",
+      "bytes": 5738,
+      "sha256": "61f16907e4bcd2a6db3927cc7afe74284431d7a8def7d7e67ace7450e7ceccce"
+    },
+    {
+      "path": "evidence/audio-music/p08-v6/research/test-inventory.json",
+      "bytes": 8318,
+      "sha256": "07bdd30bab13a7a3a7eb3f57fc1dd82c3c028236ad52cf70e48361991fdff386"
+    },
+    {
+      "path": "evidence/audio-music/p08-v6/retained-controls/presentation-native.json",
+      "bytes": 177116,
+      "sha256": "0fcf2283799998573224edc969e877bc5380006f278058b8ec221efecf564939"
+    },
+    {
+      "path": "evidence/audio-music/p08-v6/retained-controls/report.json",
+      "bytes": 12520,
+      "sha256": "0bbd5c30d950fa230f0cb912a707e96ba6a2eea3fd3276026f82eb5fe17a9364"
+    },
+    {
+      "path": "evidence/audio-music/p08-v6/retained-controls/source.json",
+      "bytes": 7681,
+      "sha256": "f02011b488f77ddb3c016f6aa986c9d09c17e203e86bcebb4c58d78d08769b29"
+    },
+    {
+      "path": "evidence/audio-music/p08-v6/retained-controls/source.measurements.json",
+      "bytes": 259,
+      "sha256": "2b25ec4c345b7cc7057f10ea54bb528343e8f304ddeef7d670019a9022233163"
+    },
+    {
+      "path": "evidence/audio-music/p08-v6/retained-controls/visual-browser/browser.json",
+      "bytes": 48213,
+      "sha256": "9b2919a0ba6a1443af2834bb6da62bc913a2e28b4234768a2f17eaa251b96263"
+    },
+    {
+      "path": "evidence/audio-music/p08-v6/superseded-26/contact-saturation.wav",
+      "bytes": 57388,
+      "sha256": "3ed8367252340d014620d4d9718451e35dade85c17bb1f2f34bdd5ef1e9f9547"
+    },
+    {
+      "path": "evidence/audio-music/p08-v6/superseded-26/critical-cut-mutant.wav",
+      "bytes": 88108,
+      "sha256": "ecb01d2c21ad27a5a476dfb7633984110911b4509dfe4928d1e5453fe8743239"
+    },
+    {
+      "path": "evidence/audio-music/p08-v6/superseded-26/preimage-recovery.json",
+      "bytes": 570,
+      "sha256": "8b82e8cc6b31fd6e46c583e48c27073cddfc894a8145d2cbdb7fe5beda57af95"
+    },
+    {
+      "path": "evidence/audio-music/p08-v6/superseded-26/priority-browser.json",
+      "bytes": 156826,
+      "sha256": "87549a5b6e4c2e7b853b0ddbff4831c14263d7ecb972aef6eafeef17bceb15d3"
+    },
+    {
+      "path": "evidence/audio-music/p08-v6/superseded-26/producer-preimage.mjs",
+      "bytes": 18780,
+      "sha256": "3c7de0c2fc7b8eb2d42891706784448a4c7f223823a8a15e8d4c17e0e5e19f4c"
+    },
+    {
+      "path": "evidence/audio-music/p08-v6/superseded-26/terminal-overlap.wav",
+      "bytes": 88108,
+      "sha256": "d4c8524f6f52dcf51d5162a3c56a11d8d3daa6520ee05cbf274c1d49f57d5e0b"
+    }
+  ],
+  "study_kind": "finite_p08_research_intake_and_actual_critical_cue_admission",
+  "reproduction_commands": {
+    "archive": [
+      "python3 -B tools/run_v6_checks.py --out EXTERNAL",
+      "python3 -B tools/validate_v6.py",
+      "python3 -B experiments/intersample_peak_probe.py demonstrations/sfx --out EXTERNAL"
+    ],
+    "destination": [
+      "dotnet build north-star/csharp/AudioChecks/NorthStar.AudioChecks.csproj -c Release",
+      "dotnet north-star/csharp/AudioChecks/bin/Release/net10.0/NorthStar.AudioChecks.dll EXTERNAL_JSON EXTERNAL_ASSETS",
+      "node labs/audio-music/browser.mjs dotnet EXTERNAL",
+      "node labs/audio-music/priority-browser.mjs dotnet EXTERNAL"
+    ],
+    "exact_records": [
+      "research/INTAKE_REPLAY.json",
+      "candidate/results.json",
+      "handover.json",
+      "commands.json",
+      "retained-controls/report.json",
+      "execution-logs.json"
+    ]
+  },
+  "commands": [
+    {
+      "command": [
+        "/workspace/work/authored-scene/dotnet/dotnet",
+        "build",
+        "north-star/csharp/AudioChecks/NorthStar.AudioChecks.csproj",
+        "-c",
+        "Release",
+        "-m:1",
+        "--disable-build-servers"
+      ],
+      "exit_code": 0,
+      "seconds": 4.25,
+      "stdout": "  Determining projects to restore...\n  Restored /workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/AudioChecks/NorthStar.AudioChecks.csproj (in 132 ms).\n  3 of 4 projects are up-to-date for restore.\n  NorthStar.Audio -> /workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/Audio/bin/Release/netstandard2.1/NorthStar.Audio.dll\n  NorthStar.Domain -> /workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/Domain/bin/Release/netstandard2.1/NorthStar.Domain.dll\n  NorthStar.Presentation -> /workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/Presentation/bin/Release/net10.0/NorthStar.Presentation.dll\n  NorthStar.AudioChecks -> /workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/AudioChecks/bin/Release/net10.0/NorthStar.AudioChecks.dll\n\nBuild succeeded.\n    0 Warning(s)\n    0 Error(s)\n\nTime Elapsed 00:00:03.80\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/workspace/work/authored-scene/dotnet/dotnet",
+        "north-star/csharp/AudioChecks/bin/Release/net10.0/NorthStar.AudioChecks.dll",
+        "/workspace/work/p08-v6/final-native/native.json",
+        "/workspace/work/p08-v6/final-native/assets"
+      ],
+      "exit_code": 0,
+      "seconds": 0.519,
+      "stdout": "AUDIO_CHECKS 85 passed; 10 WAV assets\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "node",
+        "labs/audio-music/browser.mjs",
+        "/workspace/work/authored-scene/dotnet/dotnet",
+        "/workspace/work/p08-v6/engineering/legacy-browser"
+      ],
+      "exit_code": 0,
+      "evidence": "execution-logs.json"
+    },
+    {
+      "command": [
+        "node",
+        "labs/audio-music/priority-browser.mjs",
+        "/workspace/work/authored-scene/dotnet/dotnet",
+        "/workspace/work/p08-v6/science/priority-run-02"
+      ],
+      "exit_code": 0,
+      "evidence": "execution-logs.json"
+    },
+    {
+      "command": [
+        "/workspace/work/authored-scene/dotnet/dotnet",
+        "north-star/csharp/PresentationChecks/bin/Release/net10.0/NorthStar.PresentationChecks.dll",
+        "/workspace/work/p08-v6/regressions/retained-controls/presentation-native.json"
+      ],
+      "exit_code": 0,
+      "cwd": "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab"
+    },
+    {
+      "command": [
+        "node",
+        "labs/visual-animation/browser.mjs",
+        "/workspace/work/authored-scene/dotnet/dotnet",
+        "/workspace/work/p08-v6/regressions/retained-controls/visual-browser"
+      ],
+      "exit_code": 0,
+      "cwd": "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab"
+    }
+  ],
+  "checks": {
+    "passed": 85,
+    "failed": 0,
+    "boundary": "Actual native controls only. The28priority/29legacy browser controls and47/20presentation regressions are separate overlapping groups, not independent studies or people."
+  },
+  "consumer_paths": [
+    "north-star/csharp/Audio/Admission.cs",
+    "north-star/csharp/Audio/Sound.cs",
+    "north-star/csharp/Presentation/Program.cs",
+    "north-star/csharp/Presentation/web/audio.js",
+    "north-star/csharp/Presentation/web/app.js",
+    "north-star/csharp/Crossing/Session.cs"
+  ],
+  "source_artifacts": [
+    {
+      "local_path": "north-star/csharp/Audio/Admission.cs",
+      "size_bytes": 5046,
+      "sha256": "51a98f3e963def8305cd4d3e2e542dc004912d54a683a5551128186fd89e2cb2"
+    },
+    {
+      "local_path": "north-star/csharp/Audio/Sound.cs",
+      "size_bytes": 5456,
+      "sha256": "e4995638398116dff88d084f6afadb48217c81ee80f50995a2793ed22ce6ad31"
+    },
+    {
+      "local_path": "north-star/csharp/Presentation/Program.cs",
+      "size_bytes": 8213,
+      "sha256": "44089db8317ca46fc8e1ec9c5004d9f585ec8fd55cb01241c2d7c592c1b1a5b9"
+    },
+    {
+      "local_path": "north-star/csharp/Presentation/web/audio.js",
+      "size_bytes": 9174,
+      "sha256": "472d07cf5936625c2f613e303bb51ac02d2b9d1c11fed833972c35601d8b9a6b"
+    },
+    {
+      "local_path": "north-star/csharp/Presentation/web/app.js",
+      "size_bytes": 5580,
+      "sha256": "3b70bfeabc63c935bafef49fab1effe615d18e15b1b59748eceb992f2e7d01f6"
+    },
+    {
+      "local_path": "north-star/csharp/Crossing/Session.cs",
+      "size_bytes": 5357,
+      "sha256": "d25ac05ba1a94432474dd1b14b4fd608e446fc5344dcc4f779d8d5fe27a1b2c5"
+    }
+  ],
+  "capability_ids": [
+    "NS-C06",
+    "NS-C07"
+  ],
+  "runtime": "SDK10.0.401; Linux; Node24.19.0; Chromium154.0.8037.57; retained Godot4.6.3 source mixer",
+  "scope": "Actual original C# consequence projection/causal audio admission and existing visual observer regressions. Digital browser PCM, finite sample budget, explicit overload, sequence/lifecycle and phase controls; no gameplay changes.",
+  "limitations": [
+    "No human listening, recognition, masking, realism, motif recall, preference, accessibility or artistic approval.",
+    "No certified ITU true-peak/LUFS or physical-device playback/latency assessment.",
+    "Equal-critical overload remains explicit suppression; no promise of all events at arbitrary rates.",
+    "No Unity Editor/activation/modules/API/IL2CPP, Windows Player or Steam execution this increment.",
+    "Ten bounded laboratories operate; Build/Operations remains incomplete; no new lab/Brain/application/save/package."
+  ],
+  "result_artifacts": [
+    {
+      "local_path": "evidence/audio-music/p08-v6/native.json",
+      "size_bytes": 157856,
+      "sha256": "04dc44ba66344a43ab56960ef46b878567d217a4dd87f2016a03bfb92da8d6a1"
+    },
+    {
+      "local_path": "evidence/audio-music/p08-v6/current/priority-browser.json",
+      "size_bytes": 156662,
+      "sha256": "7b2da6f6c04ad4835c92ec9cf3bdbc70c7953d3babd10517780d11ca2bb4d7b3"
+    },
+    {
+      "local_path": "evidence/audio-music/p08-v6/legacy-browser/browser.json",
+      "size_bytes": 169579,
+      "sha256": "70f2f76b0c30052f73780b7663e0a81c9d75628bbb48f5617c3b0a70bbcccad4"
+    },
+    {
+      "local_path": "evidence/audio-music/p08-v6/retained-controls/presentation-native.json",
+      "size_bytes": 177116,
+      "sha256": "0fcf2283799998573224edc969e877bc5380006f278058b8ec221efecf564939"
+    },
+    {
+      "local_path": "evidence/audio-music/p08-v6/retained-controls/visual-browser/browser.json",
+      "size_bytes": 48213,
+      "sha256": "9b2919a0ba6a1443af2834bb6da62bc913a2e28b4234768a2f17eaa251b96263"
+    }
+  ]
+}

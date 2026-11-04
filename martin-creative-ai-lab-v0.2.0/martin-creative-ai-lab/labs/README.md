@@ -23,7 +23,9 @@ acceptance is still outstanding.
 - [Audio & Adaptive Music](audio-music/README.md): preserved PCM/mixer source controls
   feed original portable C# composition and actual Web Audio output. Sequence/lifecycle,
   phase, gain and silence controls remain distinct from listening quality.
-  [Execution](../evidence/audio-music/RUN.json).
+  [Original execution](../evidence/audio-music/RUN.json) and
+  [finite research→critical-cue preservation](../evidence/audio-music/p08-v6/RUN.json)
+  retain actual priority/PCM negatives and rights-held media boundaries.
 
 - [Visual Identity & Animation](visual-animation/README.md): actual preserved PNG registration,
   isolated source producer/selector/draw controls and retained bad policies feed original

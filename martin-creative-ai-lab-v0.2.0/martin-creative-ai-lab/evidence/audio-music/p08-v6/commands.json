@@ -1,0 +1,138 @@
+[
+  {
+    "command": [
+      "python3",
+      "labs/rpg-systems/run.py",
+      "--dotnet",
+      "/workspace/work/authored-scene/dotnet/dotnet",
+      "--output",
+      "/workspace/work/p08-v6/regressions/rpg-progression.json"
+    ],
+    "cwd": "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab",
+    "started_utc": "2026-10-31T04:23:38.689892+00:00",
+    "elapsed_seconds": 9.746,
+    "exit_code": 0,
+    "stdout": "PASS: 555 C# destination cases; 9 legacy header mismatches retained; 195 off-by-one reference mutants rejected\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "python3",
+      "labs/economy-simulation/run.py",
+      "--dotnet",
+      "/workspace/work/authored-scene/dotnet/dotnet",
+      "--output",
+      "/workspace/work/p08-v6/regressions/economy-crafting.json"
+    ],
+    "cwd": "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab",
+    "started_utc": "2026-10-31T04:23:48.436737+00:00",
+    "elapsed_seconds": 5.24,
+    "exit_code": 0,
+    "stdout": "PASS: actual C# forge execution; retained 16 legacy semantic field failures\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "python3",
+      "labs/world-gameplay/run.py",
+      "--dotnet",
+      "/workspace/work/authored-scene/dotnet/dotnet",
+      "--output",
+      "/workspace/work/p08-v6/regressions/world-loadout.json"
+    ],
+    "cwd": "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab",
+    "started_utc": "2026-10-31T04:23:53.677167+00:00",
+    "elapsed_seconds": 4.508,
+    "exit_code": 0,
+    "stdout": "PASS: World loadout assay and actual C# destination; retained helper variant/counterexample limits\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "python3",
+      "labs/networking-persistence/run.py",
+      "--dotnet",
+      "/workspace/work/authored-scene/dotnet/dotnet",
+      "--output",
+      "/workspace/work/p08-v6/regressions/persistent-expedition.json"
+    ],
+    "cwd": "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab",
+    "started_utc": "2026-10-31T04:23:58.186205+00:00",
+    "elapsed_seconds": 11.26,
+    "exit_code": 0,
+    "stdout": "PASS: persistent C# consumer and retained recovery failure controls\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "python3",
+      "labs/rpg-systems/run.py",
+      "--dotnet",
+      "/workspace/work/authored-scene/dotnet/dotnet",
+      "--output",
+      "/workspace/work/p08-v6/regressions/rpg-progression-strict-compare.json",
+      "--compare",
+      "evidence/rpg-progression/results.json"
+    ],
+    "cwd": "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab",
+    "started_utc": "2026-10-31T04:24:38.774387+00:00",
+    "elapsed_seconds": 2.288,
+    "exit_code": 0,
+    "stdout": "PASS: 555 C# destination cases; 9 legacy header mismatches retained; 195 off-by-one reference mutants rejected\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "python3",
+      "labs/economy-simulation/run.py",
+      "--dotnet",
+      "/workspace/work/authored-scene/dotnet/dotnet",
+      "--output",
+      "/workspace/work/p08-v6/regressions/economy-crafting-strict-compare.json",
+      "--compare",
+      "evidence/economy-crafting/results.json"
+    ],
+    "cwd": "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab",
+    "started_utc": "2026-10-31T04:24:41.063323+00:00",
+    "elapsed_seconds": 2.42,
+    "exit_code": 0,
+    "stdout": "PASS: actual C# forge execution; retained 16 legacy semantic field failures\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "python3",
+      "labs/world-gameplay/run.py",
+      "--dotnet",
+      "/workspace/work/authored-scene/dotnet/dotnet",
+      "--output",
+      "/workspace/work/p08-v6/regressions/world-loadout-strict-compare.json",
+      "--compare",
+      "evidence/world-loadout/results.json"
+    ],
+    "cwd": "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab",
+    "started_utc": "2026-10-31T04:24:43.484041+00:00",
+    "elapsed_seconds": 2.737,
+    "exit_code": 0,
+    "stdout": "PASS: World loadout assay and actual C# destination; retained helper variant/counterexample limits\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "python3",
+      "labs/networking-persistence/run.py",
+      "--dotnet",
+      "/workspace/work/authored-scene/dotnet/dotnet",
+      "--output",
+      "/workspace/work/p08-v6/regressions/persistent-expedition-strict-compare.json",
+      "--compare",
+      "evidence/persistent-expedition/results.json"
+    ],
+    "cwd": "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab",
+    "started_utc": "2026-10-31T04:24:46.222129+00:00",
+    "elapsed_seconds": 8.228,
+    "exit_code": 0,
+    "stdout": "PASS: persistent C# consumer and retained recovery failure controls\n",
+    "stderr": ""
+  }
+]

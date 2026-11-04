@@ -300,8 +300,8 @@
   "result_artifacts": [
     {
       "local_path": "evidence/persistent-expedition/results.json",
-      "size_bytes": 21216,
-      "sha256": "f0145995d390c5d33666c92bc1f9536a8038db209d65a35348db560b4afecfae"
+      "size_bytes": 21328,
+      "sha256": "5380934fb871df9ce0d8af31c62a7f9ec7df837e7631fb79e4174c90285d549c"
     },
     {
       "local_path": "evidence/persistent-expedition/native.json",
@@ -369,5 +369,55 @@
     "comparison": "evidence/response-chain/assay-reconciliation/summary.json",
     "prior_run": "evidence/response-chain/prior-bound-assays/persistent-expedition/RUN.json",
     "prior_result": "evidence/response-chain/prior-bound-assays/persistent-expedition/results.json"
+  },
+  "audio_priority_identity_revalidation": {
+    "baseline_commit": "1cc982a525b63abbd8a1091ebd70e16df7844cb5",
+    "reason": "Actual finite audio admission and its native checks/Presentation descriptor alter conservative whole-C#-tree identity coverage. The complete supported assay reran; all nonidentity observations are exact and strict full-result comparison passed without changing fingerprints, fixtures or comparison gates.",
+    "observations_exact": true,
+    "identity_changes": {
+      "north-star/csharp/Audio/Admission.cs": {
+        "before": null,
+        "after": "51a98f3e963def8305cd4d3e2e542dc004912d54a683a5551128186fd89e2cb2"
+      },
+      "north-star/csharp/AudioChecks/Program.cs": {
+        "before": "84a1e8ae9d0465901869649573ab117665a146a4f80c04c221b21d1a76e4d068",
+        "after": "eb48a218e76dd9c3fe59631285035b2b041f483df9d0d401107cc8f3c4f328b9"
+      },
+      "north-star/csharp/Presentation/Program.cs": {
+        "before": "e04317ed8ee81a65360d07653b3fe03e900a748eac677e9b30b70b02721f6581",
+        "after": "44089db8317ca46fc8e1ec9c5004d9f585ec8fd55cb01241c2d7c592c1b1a5b9"
+      }
+    },
+    "prior_run": "evidence/audio-music/p08-v6/prior-assays/persistent-expedition/RUN.json",
+    "prior_result": "evidence/audio-music/p08-v6/prior-assays/persistent-expedition/results.json",
+    "prior_run_sha256": "58380d343ec2be4429cfb7d6bc0a6bf22b6e26a3c58983e1b9d0ab19cfadf751",
+    "prior_result_sha256": "f0145995d390c5d33666c92bc1f9536a8038db209d65a35348db560b4afecfae",
+    "result_sha256": "5380934fb871df9ce0d8af31c62a7f9ec7df837e7631fb79e4174c90285d549c",
+    "commands": [
+      {
+        "command": [
+          "python3",
+          "labs/networking-persistence/run.py",
+          "--dotnet",
+          "/workspace/work/authored-scene/dotnet/dotnet",
+          "--output",
+          "/workspace/work/p08-v6/regressions/persistent-expedition.json"
+        ],
+        "exit_code": 0
+      },
+      {
+        "command": [
+          "python3",
+          "labs/networking-persistence/run.py",
+          "--dotnet",
+          "/workspace/work/authored-scene/dotnet/dotnet",
+          "--output",
+          "/workspace/work/p08-v6/regressions/persistent-expedition-strict-compare.json",
+          "--compare",
+          "evidence/persistent-expedition/results.json"
+        ],
+        "exit_code": 0
+      }
+    ]
   }
 }

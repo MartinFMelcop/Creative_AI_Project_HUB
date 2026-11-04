@@ -1,0 +1,586 @@
+{
+  "all_commands_passed": true,
+  "all_reports_equal": true,
+  "commands": [
+    {
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-B",
+        "tools/validate_v6.py"
+      ],
+      "cwd": "/workspace/work/p08-v6/intake/P08_AUDIO_RESEARCH_V6",
+      "exit": 0,
+      "expected_exit": 0,
+      "name": "validate-before",
+      "passed": true,
+      "seconds": 0.074,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "9cfb1194911b42ee93ec8dda47bb0da98663fa7e70755dd98462b6c677a1de6e"
+    },
+    {
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-B",
+        "tools/run_v6_checks.py",
+        "--out",
+        "/workspace/work/p08-v6/science/V6_RUN_REPLAY.json"
+      ],
+      "cwd": "/workspace/work/p08-v6/intake/P08_AUDIO_RESEARCH_V6",
+      "exit": 0,
+      "expected_exit": 0,
+      "name": "run-v6",
+      "passed": true,
+      "seconds": 14.491,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "55b465e5fcbbd18c86e00e3c47914ebd84bce354c759e689fb6b56b8ba730a84"
+    },
+    {
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-B",
+        "experiments/intersample_peak_probe.py",
+        "demonstrations/sfx",
+        "--out",
+        "/workspace/work/p08-v6/science/INTERSAMPLE_REPLAY.json"
+      ],
+      "cwd": "/workspace/work/p08-v6/intake/P08_AUDIO_RESEARCH_V6",
+      "exit": 0,
+      "expected_exit": 0,
+      "name": "standalone-intersample",
+      "passed": true,
+      "seconds": 1.239,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-B",
+        "experiments/test_timing_oracle.py"
+      ],
+      "cwd": "/workspace/work/p08-v6/intake/P08_AUDIO_RESEARCH_V6",
+      "exit": 0,
+      "expected_exit": 0,
+      "name": "test-00",
+      "observed_unit_tests": 9,
+      "passed": true,
+      "seconds": 0.077,
+      "stderr_sha256": "7e8f3a8d420918313365d6ac4485363974efc3e61607c234d5a32e7f84fc5bcb",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-B",
+        "experiments/test_variant_similarity.py"
+      ],
+      "cwd": "/workspace/work/p08-v6/intake/P08_AUDIO_RESEARCH_V6",
+      "exit": 0,
+      "expected_exit": 0,
+      "name": "test-01",
+      "observed_unit_tests": 9,
+      "passed": true,
+      "seconds": 0.219,
+      "stderr_sha256": "c39e33e647ff12df09fa6feafc1164b026e271de4d09dd11e7a8080582b2f0a9",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-B",
+        "experiments/test_event_policy.py"
+      ],
+      "cwd": "/workspace/work/p08-v6/intake/P08_AUDIO_RESEARCH_V6",
+      "exit": 0,
+      "expected_exit": 0,
+      "name": "test-02",
+      "observed_unit_tests": 15,
+      "passed": true,
+      "seconds": 0.081,
+      "stderr_sha256": "0dec72c81cc5e4f7c056a3f1845f48899e440b4a096871c6d22bec5ac6cab797",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-B",
+        "experiments/test_scene_mix_probe.py"
+      ],
+      "cwd": "/workspace/work/p08-v6/intake/P08_AUDIO_RESEARCH_V6",
+      "exit": 0,
+      "expected_exit": 0,
+      "name": "test-03",
+      "observed_unit_tests": 11,
+      "passed": true,
+      "seconds": 1.24,
+      "stderr_sha256": "247a9bf96de5940cdf9bbd60e0d53e05ceee86e3484cd48c3168a64fff97603e",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-B",
+        "governance/test_asset_release_gate.py"
+      ],
+      "cwd": "/workspace/work/p08-v6/intake/P08_AUDIO_RESEARCH_V6",
+      "exit": 0,
+      "expected_exit": 0,
+      "name": "test-04",
+      "observed_unit_tests": 10,
+      "passed": true,
+      "seconds": 0.075,
+      "stderr_sha256": "fd4ec16b1145775489e2932e4131b785fa115e2f060dfaaf0655281cabd23768",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-B",
+        "experiments/test_combat_mix_policy_probe.py"
+      ],
+      "cwd": "/workspace/work/p08-v6/intake/P08_AUDIO_RESEARCH_V6",
+      "exit": 0,
+      "expected_exit": 0,
+      "name": "test-05",
+      "observed_unit_tests": 22,
+      "passed": true,
+      "seconds": 1.554,
+      "stderr_sha256": "35cdbced70f9ccfeac216d930f478a163c5224c1f3174baab3153fcebc2dc4fc",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-B",
+        "governance/test_whole_package_inventory.py"
+      ],
+      "cwd": "/workspace/work/p08-v6/intake/P08_AUDIO_RESEARCH_V6",
+      "exit": 0,
+      "expected_exit": 0,
+      "name": "test-06",
+      "observed_unit_tests": 3,
+      "passed": true,
+      "seconds": 0.148,
+      "stderr_sha256": "bfdfc99c39f58e02337848f38f3fd9beb3d1f8427ee9838f1d5a066af0ea9431",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-B",
+        "experiments/test_headroom_preservation_probe.py"
+      ],
+      "cwd": "/workspace/work/p08-v6/intake/P08_AUDIO_RESEARCH_V6",
+      "exit": 0,
+      "expected_exit": 0,
+      "name": "test-07",
+      "observed_unit_tests": 14,
+      "passed": true,
+      "seconds": 3.967,
+      "stderr_sha256": "b8f25cd9a64f6ef9bb4e4759425de9ce002adde906afd8a4f035efc2066e329c",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-B",
+        "experiments/test_intersample_peak_probe.py"
+      ],
+      "cwd": "/workspace/work/p08-v6/intake/P08_AUDIO_RESEARCH_V6",
+      "exit": 0,
+      "expected_exit": 0,
+      "name": "test-08",
+      "observed_unit_tests": 10,
+      "passed": true,
+      "seconds": 2.236,
+      "stderr_sha256": "695b0cfee074bea19b939a90efce582d37dcec02cb40956353fa23e51ed7a4d8",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-B",
+        "tools/test_claims_v6.py"
+      ],
+      "cwd": "/workspace/work/p08-v6/intake/P08_AUDIO_RESEARCH_V6",
+      "exit": 0,
+      "expected_exit": 0,
+      "name": "test-09",
+      "observed_unit_tests": 9,
+      "passed": true,
+      "seconds": 0.174,
+      "stderr_sha256": "2838535df548c583926fd3e274431a4e55713ab501276baaf0262ed4a8a9654e",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-B",
+        "experiments/timing_oracle.py",
+        "demonstrations/North_Star_R32_Authored_Score.mid",
+        "--out",
+        "/workspace/work/p08-v6/science/midi.json"
+      ],
+      "cwd": "/workspace/work/p08-v6/intake/P08_AUDIO_RESEARCH_V6",
+      "exit": 0,
+      "expected_exit": 0,
+      "name": "produce-midi",
+      "passed": true,
+      "seconds": 0.091,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-B",
+        "experiments/sfx_signal_report.py",
+        "demonstrations/sfx",
+        "--out",
+        "/workspace/work/p08-v6/science/sfx.json"
+      ],
+      "cwd": "/workspace/work/p08-v6/intake/P08_AUDIO_RESEARCH_V6",
+      "exit": 0,
+      "expected_exit": 0,
+      "name": "produce-sfx",
+      "passed": true,
+      "seconds": 0.33,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-B",
+        "experiments/variant_similarity.py",
+        "demonstrations/sfx",
+        "--out",
+        "/workspace/work/p08-v6/science/variants.json"
+      ],
+      "cwd": "/workspace/work/p08-v6/intake/P08_AUDIO_RESEARCH_V6",
+      "exit": 0,
+      "expected_exit": 0,
+      "name": "produce-variants",
+      "passed": true,
+      "seconds": 1.617,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-B",
+        "experiments/event_policy_oracle.py",
+        "--out",
+        "/workspace/work/p08-v6/science/event.json"
+      ],
+      "cwd": "/workspace/work/p08-v6/intake/P08_AUDIO_RESEARCH_V6",
+      "exit": 0,
+      "expected_exit": 0,
+      "name": "produce-event",
+      "passed": true,
+      "seconds": 0.179,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-B",
+        "experiments/scene_mix_probe.py",
+        "demonstrations/sfx",
+        "--out",
+        "/workspace/work/p08-v6/science/scene.json"
+      ],
+      "cwd": "/workspace/work/p08-v6/intake/P08_AUDIO_RESEARCH_V6",
+      "exit": 0,
+      "expected_exit": 0,
+      "name": "produce-scene",
+      "passed": true,
+      "seconds": 1.716,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-B",
+        "governance/asset_release_gate.py",
+        "demonstrations",
+        "governance/MEDIA_ASSET_INVENTORY.json",
+        "--mode",
+        "research",
+        "--out",
+        "/workspace/work/p08-v6/science/research-gate.json"
+      ],
+      "cwd": "/workspace/work/p08-v6/intake/P08_AUDIO_RESEARCH_V6",
+      "exit": 0,
+      "expected_exit": 0,
+      "name": "produce-research-gate",
+      "passed": true,
+      "seconds": 0.036,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-B",
+        "experiments/combat_mix_policy_probe.py",
+        "demonstrations/sfx",
+        "--out",
+        "/workspace/work/p08-v6/science/combat.json"
+      ],
+      "cwd": "/workspace/work/p08-v6/intake/P08_AUDIO_RESEARCH_V6",
+      "exit": 0,
+      "expected_exit": 0,
+      "name": "produce-combat",
+      "passed": true,
+      "seconds": 0.966,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-B",
+        "experiments/combat_mix_policy_probe.py",
+        "demonstrations/sfx",
+        "--factorial",
+        "--out",
+        "/workspace/work/p08-v6/science/factorial.json"
+      ],
+      "cwd": "/workspace/work/p08-v6/intake/P08_AUDIO_RESEARCH_V6",
+      "exit": 0,
+      "expected_exit": 0,
+      "name": "produce-factorial",
+      "passed": true,
+      "seconds": 1.032,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-B",
+        "governance/asset_release_gate.py",
+        ".",
+        "governance/WHOLE_PACKAGE_MEDIA_INVENTORY.json",
+        "--mode",
+        "research",
+        "--out",
+        "/workspace/work/p08-v6/science/whole-research-gate.json"
+      ],
+      "cwd": "/workspace/work/p08-v6/intake/P08_AUDIO_RESEARCH_V6",
+      "exit": 0,
+      "expected_exit": 0,
+      "name": "produce-whole-research-gate",
+      "passed": true,
+      "seconds": 0.051,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-B",
+        "governance/asset_release_gate.py",
+        "demonstrations",
+        "governance/MEDIA_ASSET_INVENTORY.json",
+        "--mode",
+        "public",
+        "--out",
+        "/workspace/work/p08-v6/science/public-gate.json"
+      ],
+      "cwd": "/workspace/work/p08-v6/intake/P08_AUDIO_RESEARCH_V6",
+      "exit": 2,
+      "expected_exit": 2,
+      "name": "produce-public-gate",
+      "passed": true,
+      "seconds": 0.036,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-B",
+        "governance/asset_release_gate.py",
+        ".",
+        "governance/WHOLE_PACKAGE_MEDIA_INVENTORY.json",
+        "--mode",
+        "public",
+        "--out",
+        "/workspace/work/p08-v6/science/whole-public-gate.json"
+      ],
+      "cwd": "/workspace/work/p08-v6/intake/P08_AUDIO_RESEARCH_V6",
+      "exit": 2,
+      "expected_exit": 2,
+      "name": "produce-whole-public-gate",
+      "passed": true,
+      "seconds": 0.05,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-B",
+        "experiments/headroom_preservation_probe.py",
+        "demonstrations/sfx",
+        "--out",
+        "/workspace/work/p08-v6/science/headroom.json"
+      ],
+      "cwd": "/workspace/work/p08-v6/intake/P08_AUDIO_RESEARCH_V6",
+      "exit": 0,
+      "expected_exit": 0,
+      "name": "produce-headroom",
+      "passed": true,
+      "seconds": 1.149,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-B",
+        "tools/validate_v6.py"
+      ],
+      "cwd": "/workspace/work/p08-v6/intake/P08_AUDIO_RESEARCH_V6",
+      "exit": 0,
+      "expected_exit": 0,
+      "name": "validate-after",
+      "passed": true,
+      "seconds": 0.074,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "9cfb1194911b42ee93ec8dda47bb0da98663fa7e70755dd98462b6c677a1de6e"
+    }
+  ],
+  "environment": {
+    "dependencies": {
+      "libsndfile": "1.2.2",
+      "numpy": "2.3.5",
+      "scipy": "1.17.0",
+      "soundfile": "0.13.1"
+    },
+    "platform": "Linux-6.18.55-x86_64-with-glibc2.41",
+    "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]"
+  },
+  "limits": [
+    "Offline software/signal observations only; no human listening, Unity, Windows or true-peak certification.",
+    "Archive runner hardcodes dotnet NOT_EXECUTED_SDK_NOT_INSTALLED; that string is historical source behavior and is not a host availability probe.",
+    "validate_v6 checks stored evidence; actual local replay and all ten independently logged suite counts are recorded separately."
+  ],
+  "report_comparisons": [
+    {
+      "actual_sha256": "075f892cf0dc6c386d12520a8f5316b5d884194bcf04f616686e6fb36cc5f5a4",
+      "equal_json": true,
+      "producer": "experiments/timing_oracle.py",
+      "producer_sha256": "1816f25472222915d73dccd68d314ef83ec77d01e2ec2f8ca9232d36ec17b97e",
+      "reference": "reports/R32_MIDI_INDEPENDENT_AUDIT.json",
+      "reference_sha256": "075f892cf0dc6c386d12520a8f5316b5d884194bcf04f616686e6fb36cc5f5a4"
+    },
+    {
+      "actual_sha256": "35e0a17a96edb17649d76b00c27fa17f889f4a7e1467f4e4213221a4435b1640",
+      "equal_json": true,
+      "producer": "experiments/sfx_signal_report.py",
+      "producer_sha256": "38dedd84fab137714d4eef1228b6f62000e0ea992332109fb510157d16989ec6",
+      "reference": "reports/R32_SFX_DESCRIPTIVE_SIGNAL.json",
+      "reference_sha256": "35e0a17a96edb17649d76b00c27fa17f889f4a7e1467f4e4213221a4435b1640"
+    },
+    {
+      "actual_sha256": "2dabba28829d01bfc2d6fcaff6ac45e958b7efe2bf938deea670c156fddeae61",
+      "equal_json": true,
+      "producer": "experiments/variant_similarity.py",
+      "producer_sha256": "1d50a23355954072fb974aa7be9817b8775abdbc93b093060d1c952d22e65e78",
+      "reference": "reports/R32_VARIANT_SIMILARITY_TRIAGE.json",
+      "reference_sha256": "2dabba28829d01bfc2d6fcaff6ac45e958b7efe2bf938deea670c156fddeae61"
+    },
+    {
+      "actual_sha256": "ae2f05bf8b65708d5eb8c38479ea372e4a2596d39c1a1e914e79012ab9a2e1a0",
+      "equal_json": true,
+      "producer": "experiments/event_policy_oracle.py",
+      "producer_sha256": "8b35eee26a6320ad6c0062053f018d2ca325c3bce6d093e50b707db7b21e2f42",
+      "reference": "reports/R32_SEMANTIC_POLICY_REFERENCE.json",
+      "reference_sha256": "ae2f05bf8b65708d5eb8c38479ea372e4a2596d39c1a1e914e79012ab9a2e1a0"
+    },
+    {
+      "actual_sha256": "4c2a704a4dc3f6edd222f433dbe732fab30530cd24246642312bfab792f08c33",
+      "equal_json": true,
+      "producer": "experiments/scene_mix_probe.py",
+      "producer_sha256": "9fd18097e94bbe4f22d664f8f3aaffd4f52e34d135116f01a0b3e7e3524d7419",
+      "reference": "reports/R32_CONTEXTUAL_MIX_DIAGNOSTICS.json",
+      "reference_sha256": "4c2a704a4dc3f6edd222f433dbe732fab30530cd24246642312bfab792f08c33"
+    },
+    {
+      "actual_sha256": "4e756520d65d2207374b15f240241c3062ce20c8b1e1f4a002efc0b8471692b4",
+      "equal_json": true,
+      "producer": "governance/asset_release_gate.py",
+      "producer_sha256": "1a02699fb3ac3dd00392348981a672e222b1d09c4054f9fcd7c213ed1d91f123",
+      "reference": "reports/RESEARCH_ASSET_GATE.json",
+      "reference_sha256": "4e756520d65d2207374b15f240241c3062ce20c8b1e1f4a002efc0b8471692b4"
+    },
+    {
+      "actual_sha256": "2f54939544387bd644431627fdbf03ba9af7844d91d5389d49de856b28d9bd8c",
+      "equal_json": true,
+      "producer": "experiments/combat_mix_policy_probe.py",
+      "producer_sha256": "f748f1dbeae03a8489c8061fd8305331ffee0412ff9909e069c107cc84167557",
+      "reference": "reports/R32_MULTI_EVENT_COMBAT_POLICY_DIAGNOSTICS.json",
+      "reference_sha256": "2f54939544387bd644431627fdbf03ba9af7844d91d5389d49de856b28d9bd8c"
+    },
+    {
+      "actual_sha256": "8f3bb9840fd2261683c10e1d4b1fc270fd2bb51a8ad6b9abf7f9d3546c6852ca",
+      "equal_json": true,
+      "producer": "experiments/combat_mix_policy_probe.py",
+      "producer_sha256": "f748f1dbeae03a8489c8061fd8305331ffee0412ff9909e069c107cc84167557",
+      "reference": "reports/R32_FACTORIAL_POLICY_ABLATION.json",
+      "reference_sha256": "8f3bb9840fd2261683c10e1d4b1fc270fd2bb51a8ad6b9abf7f9d3546c6852ca"
+    },
+    {
+      "actual_sha256": "23d333ffa51b864449f49599df524b63c39e1aa81f07aa9455d95217072d9a72",
+      "equal_json": true,
+      "producer": "governance/asset_release_gate.py",
+      "producer_sha256": "1a02699fb3ac3dd00392348981a672e222b1d09c4054f9fcd7c213ed1d91f123",
+      "reference": "reports/WHOLE_PACKAGE_RESEARCH_ASSET_GATE.json",
+      "reference_sha256": "23d333ffa51b864449f49599df524b63c39e1aa81f07aa9455d95217072d9a72"
+    },
+    {
+      "actual_sha256": "6f979dddefe7545959669a522edc23414609d320622f91e46f793402e151e99a",
+      "equal_json": true,
+      "producer": "governance/asset_release_gate.py",
+      "producer_sha256": "1a02699fb3ac3dd00392348981a672e222b1d09c4054f9fcd7c213ed1d91f123",
+      "reference": "reports/PUBLIC_ASSET_GATE_BLOCKED.json",
+      "reference_sha256": "6f979dddefe7545959669a522edc23414609d320622f91e46f793402e151e99a"
+    },
+    {
+      "actual_sha256": "102053050825373b619ed2bf0d207b6c0e9201c442b394bf95de274c45f1bcf5",
+      "equal_json": true,
+      "producer": "governance/asset_release_gate.py",
+      "producer_sha256": "1a02699fb3ac3dd00392348981a672e222b1d09c4054f9fcd7c213ed1d91f123",
+      "reference": "reports/WHOLE_PACKAGE_PUBLIC_ASSET_BLOCKED.json",
+      "reference_sha256": "102053050825373b619ed2bf0d207b6c0e9201c442b394bf95de274c45f1bcf5"
+    },
+    {
+      "actual_sha256": "3e7881a32a331601302b0b4ec0b7ff90482bd6d63f41afc32f89f98f37652528",
+      "equal_json": true,
+      "producer": "experiments/headroom_preservation_probe.py",
+      "producer_sha256": "27d6cfcd0a00194ccfb3a7b0008bcea27208039c9e1aa5b2f0c09e7de4241fd3",
+      "reference": "reports/R32_V5_HEADROOM_PRESERVATION.json",
+      "reference_sha256": "3e7881a32a331601302b0b4ec0b7ff90482bd6d63f41afc32f89f98f37652528"
+    },
+    {
+      "actual_sha256": "1bdc4da92ec3fa02d3346ce693525685a0fc83decd1b2fc74b97cbff1e4ec936",
+      "equal_json": true,
+      "producer": "experiments/intersample_peak_probe.py",
+      "producer_sha256": "62edc4bec94000af769680c0201edbc694487975bd68bb98a3302400b7f369af",
+      "reference": "reports/R32_V6_INTERSAMPLE_ESTIMATE.json",
+      "reference_sha256": "1bdc4da92ec3fa02d3346ce693525685a0fc83decd1b2fc74b97cbff1e4ec936"
+    }
+  ],
+  "schema": "p08.v6.independent-local-intake-replay.v1",
+  "source_differences": [],
+  "source_files": 246,
+  "source_stable": true,
+  "tests_by_ast": 112,
+  "tests_observed_individual": 112
+}

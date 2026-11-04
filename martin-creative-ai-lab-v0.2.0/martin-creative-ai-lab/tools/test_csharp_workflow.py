@@ -14,6 +14,7 @@ import unittest
 ROOT = Path(__file__).resolve().parents[1]
 WORKFLOW = ROOT.parents[1] / '.github/workflows/lab-checks.yml'
 EXPECTED = {
+    'Execute bounded critical-cue admission and actual PCM negatives': 'audio',
     'Execute actual paid response windows and LIFO consequences': 'combat',
     'Verify portable gameplay owners in actual existing consumers': 'intake',
     'Execute recovered progression and original C# destination': 'progression',
@@ -91,6 +92,7 @@ def validate_workflow(text):
         require(body.strip() not in ('', 'true', ':', 'echo skipped'), 'Verification command removed: ' + name)
     require(run_body(rows['Verify portable gameplay owners in actual existing consumers']) == 'python3 labs/build-operations/portable-core/verify.py --dotnet dotnet --output "$RUNNER_TEMP/portable-core"', 'Portable owner instrument missing')
     require(run_body(rows['Execute actual paid response windows and LIFO consequences']) == 'python3 north-star/combat-study/tools/response-verify.py --dotnet dotnet --output "$RUNNER_TEMP/response-chain"', 'Paid response instrument missing')
+    require(run_body(rows['Execute bounded critical-cue admission and actual PCM negatives']) == 'node labs/audio-music/priority-browser.mjs dotnet "$RUNNER_TEMP/audio-priority"', 'Critical-cue PCM instrument missing')
     field = run_body(rows['Execute authored preparations and affected sampling/conditions/memory/field consumers'])
     require(field == 'python3 north-star/field-journey/tools/preparation-verify.py --dotnet dotnet --output "$RUNNER_TEMP/preparation-authoring"',
             'Field wrapper no longer supplies declared nested coverage')
@@ -128,7 +130,7 @@ def validate_wrappers(overrides=None):
 
 class WorkflowContract(unittest.TestCase):
     def test_actual_workflow_has_all_guarded_existing_commands(self):
-        self.assertEqual(validate_workflow(WORKFLOW.read_text()), {'verification_steps': 19, 'suite_keys': 16})
+        self.assertEqual(validate_workflow(WORKFLOW.read_text()), {'verification_steps': 20, 'suite_keys': 16})
 
     def test_wrong_guard_and_removed_field_command_are_rejected(self):
         text = WORKFLOW.read_text()

@@ -23,7 +23,7 @@ public sealed class Room
     private Dictionary<string,object> Observe(string command,bool accepted,string pose,Dictionary<string,object> before,Dictionary<string,object> after,int damage,int cost,int moved,string contact)
     {
         var plan=Plan.Observe(command,accepted,contact,(string)after["approach"],(bool)after["active"],(bool)after["won"],(bool)after["pulse"],(int)after["stage"]);
-        var result=new Dictionary<string,object>(after){["sequence"]=sequence,["accepted"]=accepted,["command"]=command,["pose"]=pose,["before"]=before,["after"]=after,["damage"]=damage,["cost"]=cost,["moved"]=moved,["contact"]=contact,["audio"]=new{cues=plan.Cues,music=plan.Music}};return result;
+        var result=new Dictionary<string,object>(after){["sequence"]=sequence,["accepted"]=accepted,["command"]=command,["pose"]=pose,["before"]=before,["after"]=after,["damage"]=damage,["cost"]=cost,["moved"]=moved,["contact"]=contact,["audio"]=new{cues=plan.Cues,music=plan.Music,playback=Admission.Contract}};return result;
     }
     public Dictionary<string,object> Snapshot()=>observation;
     public Dictionary<string,object> Execute(JsonElement d)

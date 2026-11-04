@@ -1,0 +1,250 @@
+{
+  "assay": {
+    "compliant_true_peak_meter": false,
+    "interpolation": "4x scipy.signal.resample_poly with Kaiser FIR window",
+    "loudness_meter": false,
+    "perceived_quality_measure": false,
+    "real_time_controller": false,
+    "sample_rate_hz": 48000,
+    "trimmed_original_samples_each_end": 64
+  },
+  "experimental_sample_ceiling": 0.8912509,
+  "limitations": [
+    "4x generic FIR interpolation is NOT a BS.1770-5 validated true-peak implementation",
+    "Trimming edges explicitly excludes start/end transients; this is a controlled comparative estimate only",
+    "No hearing, LUFS, licence, C#/Unity runtime or distribution readiness conclusion",
+    "V5 gain optimization is noncausal and minimizes sample peaks, not 4x reconstructed peaks"
+  ],
+  "scenes": [
+    {
+      "events_count": 1,
+      "policies": [
+        {
+          "gain": 0.78,
+          "interpolated_above_experimental_ceiling": true,
+          "interpolated_peak_estimate_4x": 1.1057884,
+          "policy": "baseline",
+          "sample_above_experimental_ceiling": true,
+          "sample_pass_but_interpolated_fail": false,
+          "sample_peak": 1.1057799,
+          "status": "EVALUATED"
+        },
+        {
+          "gain": 0.37,
+          "interpolated_above_experimental_ceiling": true,
+          "interpolated_peak_estimate_4x": 0.9962443,
+          "policy": "reduced_sfx",
+          "sample_above_experimental_ceiling": true,
+          "sample_pass_but_interpolated_fail": false,
+          "sample_peak": 0.9962367,
+          "status": "EVALUATED"
+        },
+        {
+          "gain": null,
+          "policy": "v5_offline_max_safe",
+          "status": "INFEASIBLE_BACKGROUND"
+        }
+      ],
+      "scene": "single_melee"
+    },
+    {
+      "events_count": 3,
+      "policies": [
+        {
+          "gain": 0.78,
+          "interpolated_above_experimental_ceiling": false,
+          "interpolated_peak_estimate_4x": 0.7030479,
+          "policy": "baseline",
+          "sample_above_experimental_ceiling": false,
+          "sample_pass_but_interpolated_fail": false,
+          "sample_peak": 0.7030425,
+          "status": "EVALUATED"
+        },
+        {
+          "gain": 0.37,
+          "interpolated_above_experimental_ceiling": false,
+          "interpolated_peak_estimate_4x": 0.4833098,
+          "policy": "reduced_sfx",
+          "sample_above_experimental_ceiling": false,
+          "sample_pass_but_interpolated_fail": false,
+          "sample_peak": 0.482469,
+          "status": "EVALUATED"
+        },
+        {
+          "gain": 0.78,
+          "interpolated_above_experimental_ceiling": false,
+          "interpolated_peak_estimate_4x": 0.7030479,
+          "policy": "v5_offline_max_safe",
+          "sample_above_experimental_ceiling": false,
+          "sample_pass_but_interpolated_fail": false,
+          "sample_peak": 0.7030425,
+          "status": "EVALUATED"
+        }
+      ],
+      "scene": "spaced_attacks"
+    },
+    {
+      "events_count": 3,
+      "policies": [
+        {
+          "gain": 0.78,
+          "interpolated_above_experimental_ceiling": true,
+          "interpolated_peak_estimate_4x": 1.0216439,
+          "policy": "baseline",
+          "sample_above_experimental_ceiling": true,
+          "sample_pass_but_interpolated_fail": false,
+          "sample_peak": 0.9902586,
+          "status": "EVALUATED"
+        },
+        {
+          "gain": 0.37,
+          "interpolated_above_experimental_ceiling": true,
+          "interpolated_peak_estimate_4x": 0.9520181,
+          "policy": "reduced_sfx",
+          "sample_above_experimental_ceiling": false,
+          "sample_pass_but_interpolated_fail": true,
+          "sample_peak": 0.8687254,
+          "status": "EVALUATED"
+        },
+        {
+          "gain": 0.5026962,
+          "interpolated_above_experimental_ceiling": true,
+          "interpolated_peak_estimate_4x": 0.9745524,
+          "policy": "v5_offline_max_safe",
+          "sample_above_experimental_ceiling": false,
+          "sample_pass_but_interpolated_fail": true,
+          "sample_peak": 0.8912509,
+          "status": "EVALUATED"
+        }
+      ],
+      "scene": "dual_spell"
+    },
+    {
+      "events_count": 8,
+      "policies": [
+        {
+          "gain": 0.78,
+          "interpolated_above_experimental_ceiling": true,
+          "interpolated_peak_estimate_4x": 1.5757514,
+          "policy": "baseline",
+          "sample_above_experimental_ceiling": true,
+          "sample_pass_but_interpolated_fail": false,
+          "sample_peak": 1.5757394,
+          "status": "EVALUATED"
+        },
+        {
+          "gain": 0.37,
+          "interpolated_above_experimental_ceiling": true,
+          "interpolated_peak_estimate_4x": 1.140703,
+          "policy": "reduced_sfx",
+          "sample_above_experimental_ceiling": true,
+          "sample_pass_but_interpolated_fail": false,
+          "sample_peak": 1.1403457,
+          "status": "EVALUATED"
+        },
+        {
+          "gain": null,
+          "policy": "v5_offline_max_safe",
+          "status": "INFEASIBLE_BACKGROUND"
+        }
+      ],
+      "scene": "crowded_raid"
+    },
+    {
+      "events_count": 4,
+      "policies": [
+        {
+          "gain": 0.78,
+          "interpolated_above_experimental_ceiling": true,
+          "interpolated_peak_estimate_4x": 0.9747475,
+          "policy": "baseline",
+          "sample_above_experimental_ceiling": true,
+          "sample_pass_but_interpolated_fail": false,
+          "sample_peak": 0.9744357,
+          "status": "EVALUATED"
+        },
+        {
+          "gain": 0.37,
+          "interpolated_above_experimental_ceiling": false,
+          "interpolated_peak_estimate_4x": 0.5972421,
+          "policy": "reduced_sfx",
+          "sample_above_experimental_ceiling": false,
+          "sample_pass_but_interpolated_fail": false,
+          "sample_peak": 0.5972376,
+          "status": "EVALUATED"
+        },
+        {
+          "gain": 0.6895813,
+          "interpolated_above_experimental_ceiling": true,
+          "interpolated_peak_estimate_4x": 0.8914708,
+          "policy": "v5_offline_max_safe",
+          "sample_above_experimental_ceiling": false,
+          "sample_pass_but_interpolated_fail": true,
+          "sample_peak": 0.8912509,
+          "status": "EVALUATED"
+        }
+      ],
+      "scene": "boss_roar"
+    },
+    {
+      "events_count": 6,
+      "policies": [
+        {
+          "gain": 0.78,
+          "interpolated_above_experimental_ceiling": true,
+          "interpolated_peak_estimate_4x": 1.1406843,
+          "policy": "baseline",
+          "sample_above_experimental_ceiling": true,
+          "sample_pass_but_interpolated_fail": false,
+          "sample_peak": 1.1343096,
+          "status": "EVALUATED"
+        },
+        {
+          "gain": 0.37,
+          "interpolated_above_experimental_ceiling": true,
+          "interpolated_peak_estimate_4x": 0.9345867,
+          "policy": "reduced_sfx",
+          "sample_above_experimental_ceiling": false,
+          "sample_pass_but_interpolated_fail": true,
+          "sample_peak": 0.8616338,
+          "status": "EVALUATED"
+        },
+        {
+          "gain": 0.4555741,
+          "interpolated_above_experimental_ceiling": true,
+          "interpolated_peak_estimate_4x": 0.9345867,
+          "policy": "v5_offline_max_safe",
+          "sample_above_experimental_ceiling": false,
+          "sample_pass_but_interpolated_fail": true,
+          "sample_peak": 0.8912509,
+          "status": "EVALUATED"
+        }
+      ],
+      "scene": "spell_storm"
+    }
+  ],
+  "schema": "p08.v6.experimental-inter-sample-estimate.v1",
+  "source_sha256": {
+    "arcane_portal_v01.wav": "a6416945aac40cbfde521e8dd6e83899f7aae1fdfad039dae613dfffa45b06b1",
+    "arcane_portal_v02.wav": "88ad385f5b0e328143900f1aa24f48f50367e1e4c26d78a05c6e3b25dbedca5c",
+    "electric_burst_v01.wav": "580630a31410e84bd664f1438bb60657252f8f83815ef53d733ab312672c6969",
+    "electric_burst_v02.wav": "69e5d199077a213a30a90e91c08dd18e2ce7185a731c7291f3adac1acdb41a29",
+    "fire_spell_v01.wav": "378717df34877c8ce3e88f735b4f1528fb3f6155ecef0246c813eb720df2587e",
+    "fire_spell_v02.wav": "6f1dcebd329d3130dd115b4e0cb7512fef2762367875c3bd452e8c6b5f770b41",
+    "forest_creature_v01.wav": "cb7b45cd9ddbcb473719504b7db892113a268454ea965386b63524887b838e1d",
+    "forest_creature_v02.wav": "96d40c45eebc894e47f3277de761c1379d5618a5578d69dffef17eae0229312b",
+    "steel_armor_v01.wav": "eaef05618d6e9106f30c61768e36a72d651d9679b500de3ebde0567ff3e6e0bf",
+    "steel_armor_v02.wav": "8a614a0b11a44afae47b2a9b7773eea8b368e49e3251235db35bb2a29417deed",
+    "stone_impact_v01.wav": "5226141e43d8d088f0e45834bd5a279d3f2f356d4bd009c305b1ff978ca6c2a2",
+    "stone_impact_v02.wav": "426059e68376914ae05f3f4ef1c2f6b4c11cfb6fdb53e8df3c7d6802badc4e4e"
+  },
+  "status": "DIAGNOSTIC_ONLY",
+  "summary": {
+    "comparisons": 18,
+    "evaluated": 16,
+    "infeasible_comparisons": 2,
+    "interpolated_exceedances": 12,
+    "sample_pass_but_interpolated_fail": 5,
+    "scenes": 6
+  }
+}

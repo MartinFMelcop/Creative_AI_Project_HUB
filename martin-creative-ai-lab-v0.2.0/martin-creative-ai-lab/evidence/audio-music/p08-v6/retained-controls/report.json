@@ -1,0 +1,309 @@
+{
+  "schema_version": 1,
+  "kind": "p08_retained_control_execution",
+  "commands": [
+    {
+      "label": "audio-instrument",
+      "command": [
+        "python3",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "labs/audio-music",
+        "-p",
+        "test_*.py"
+      ],
+      "cwd": "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab",
+      "exit_code": 0,
+      "elapsed_seconds": 0.105,
+      "stdout": "/workspace/work/p08-v6/regressions/retained-controls/audio-instrument.stdout.log",
+      "stderr": "/workspace/work/p08-v6/regressions/retained-controls/audio-instrument.stderr.log"
+    },
+    {
+      "label": "audio-source",
+      "command": [
+        "python3",
+        "labs/audio-music/run.py",
+        "--godot",
+        "/usr/local/bin/godot",
+        "--output",
+        "/workspace/work/p08-v6/regressions/retained-controls/source.json",
+        "--compare",
+        "evidence/audio-music/source.json"
+      ],
+      "cwd": "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab",
+      "exit_code": 0,
+      "elapsed_seconds": 14.471,
+      "stdout": "/workspace/work/p08-v6/regressions/retained-controls/audio-source.stdout.log",
+      "stderr": "/workspace/work/p08-v6/regressions/retained-controls/audio-source.stderr.log"
+    },
+    {
+      "label": "presentation-build",
+      "command": [
+        "/workspace/work/authored-scene/dotnet/dotnet",
+        "build",
+        "north-star/csharp/PresentationChecks/NorthStar.PresentationChecks.csproj",
+        "-c",
+        "Release",
+        "-m:1",
+        "--disable-build-servers"
+      ],
+      "cwd": "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab",
+      "exit_code": 0,
+      "elapsed_seconds": 3.351,
+      "stdout": "/workspace/work/p08-v6/regressions/retained-controls/presentation-build.stdout.log",
+      "stderr": "/workspace/work/p08-v6/regressions/retained-controls/presentation-build.stderr.log",
+      "environment": {
+        "DOTNET_CLI_TELEMETRY_OPTOUT": "1",
+        "DOTNET_NOLOGO": "1"
+      }
+    },
+    {
+      "label": "presentation-native",
+      "command": [
+        "/workspace/work/authored-scene/dotnet/dotnet",
+        "north-star/csharp/PresentationChecks/bin/Release/net10.0/NorthStar.PresentationChecks.dll",
+        "/workspace/work/p08-v6/regressions/retained-controls/presentation-native.json"
+      ],
+      "cwd": "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab",
+      "exit_code": 0,
+      "elapsed_seconds": 0.26,
+      "stdout": "/workspace/work/p08-v6/regressions/retained-controls/presentation-native.stdout.log",
+      "stderr": "/workspace/work/p08-v6/regressions/retained-controls/presentation-native.stderr.log",
+      "environment": {
+        "DOTNET_CLI_TELEMETRY_OPTOUT": "1",
+        "DOTNET_NOLOGO": "1"
+      }
+    },
+    {
+      "label": "presentation-browser",
+      "command": [
+        "node",
+        "labs/visual-animation/browser.mjs",
+        "/workspace/work/authored-scene/dotnet/dotnet",
+        "/workspace/work/p08-v6/regressions/retained-controls/visual-browser"
+      ],
+      "cwd": "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab",
+      "exit_code": 0,
+      "elapsed_seconds": 7.465,
+      "stdout": "/workspace/work/p08-v6/regressions/retained-controls/presentation-browser.stdout.log",
+      "stderr": "/workspace/work/p08-v6/regressions/retained-controls/presentation-browser.stderr.log",
+      "environment": {
+        "DOTNET_CLI_TELEMETRY_OPTOUT": "1",
+        "DOTNET_NOLOGO": "1"
+      }
+    }
+  ],
+  "limits": "Actual retained Godot/Linux digital mixer source method and engine-independent C#/Chromium Presentation consumers. No Unity Editor, Windows Player, Steam, physical audio-device listening, human readability/preference or human acceptance validation.",
+  "source": {
+    "pcm_files": 16,
+    "negative_pcm_controls": 3,
+    "native_controls": 14,
+    "runtime": {
+      "godot": "4.6.3.stable.official.7d41c59c4",
+      "python": "standard-library PCM/native method"
+    },
+    "baseline_exact_compare": true
+  },
+  "source_result_sha256": "f02011b488f77ddb3c016f6aa986c9d09c17e203e86bcebb4c58d78d08769b29",
+  "instrument_regressions": {
+    "passed": 8,
+    "failed": 0,
+    "evidence": "/workspace/work/p08-v6/regressions/retained-controls/audio-instrument.stderr.log"
+  },
+  "presentation_native": {
+    "result_path": "/workspace/work/p08-v6/regressions/retained-controls/presentation-native.json",
+    "size_bytes": 177116,
+    "sha256": "0fcf2283799998573224edc969e877bc5380006f278058b8ec221efecf564939",
+    "checks": 47,
+    "runtime": null,
+    "failed": 0,
+    "dotnet_sdk": "10.0.401",
+    "control_ids_equal_prior": true
+  },
+  "presentation_browser": {
+    "result_path": "/workspace/work/p08-v6/regressions/retained-controls/visual-browser/browser.json",
+    "size_bytes": 48213,
+    "sha256": "9b2919a0ba6a1443af2834bb6da62bc913a2e28b4234768a2f17eaa251b96263",
+    "checks": 20,
+    "runtime": {
+      "node": "v24.19.0",
+      "chromium": "154.0.8037.57"
+    },
+    "negative_mutants": 1,
+    "control_ids_equal_prior": true,
+    "failed": 0
+  },
+  "source_artifacts": [
+    {
+      "local_path": "labs/audio-music/run.py",
+      "size_bytes": 7059,
+      "sha256": "172db7b4f34bd25baca554e1147c9cb34fcc7a8be1b84bd1a737d1e127e9ff4e"
+    },
+    {
+      "local_path": "labs/audio-music/native.gd",
+      "size_bytes": 3208,
+      "sha256": "276f09345f367b82a1a63e3ba8043d55dee6279c61283c38b2c9f5994a3f8176"
+    },
+    {
+      "local_path": "labs/audio-music/test_instrument.py",
+      "size_bytes": 1571,
+      "sha256": "38503bea8316f187bbdbc56fe168a50452da79a35144ff2410533e10f9f612fe"
+    },
+    {
+      "local_path": "north-star/csharp/PresentationChecks/NorthStar.PresentationChecks.csproj",
+      "size_bytes": 357,
+      "sha256": "9bd30f62c4e2661792ed70d0aad6656ce24729a229280ce93fbe9108a3478061"
+    },
+    {
+      "local_path": "north-star/csharp/PresentationChecks/Program.cs",
+      "size_bytes": 9205,
+      "sha256": "5cab8885afe41b68a6727957a8ba7d12f9adb98968b0b82911f354c833ecdd38"
+    },
+    {
+      "local_path": "north-star/csharp/Presentation/NorthStar.Presentation.csproj",
+      "size_bytes": 469,
+      "sha256": "6e5a04a3e92bc5606c032e20b9b546c4704a55d682c7eb314002822e5bf59387"
+    },
+    {
+      "local_path": "north-star/csharp/Presentation/Program.cs",
+      "size_bytes": 8213,
+      "sha256": "44089db8317ca46fc8e1ec9c5004d9f585ec8fd55cb01241c2d7c592c1b1a5b9"
+    },
+    {
+      "local_path": "north-star/csharp/Presentation/web/app.js",
+      "size_bytes": 5580,
+      "sha256": "3b70bfeabc63c935bafef49fab1effe615d18e15b1b59748eceb992f2e7d01f6"
+    },
+    {
+      "local_path": "north-star/csharp/Presentation/web/audio.js",
+      "size_bytes": 9174,
+      "sha256": "472d07cf5936625c2f613e303bb51ac02d2b9d1c11fed833972c35601d8b9a6b"
+    },
+    {
+      "local_path": "labs/visual-animation/browser.mjs",
+      "size_bytes": 10313,
+      "sha256": "e5a3eb75346cf6f5af4d61f2862b657d8910e502ac5b406599a2241ea4975197"
+    }
+  ],
+  "result_artifacts": [
+    {
+      "external_path": "/workspace/work/p08-v6/regressions/retained-controls/audio-instrument.stderr.log",
+      "size_bytes": 106,
+      "sha256": "75ff54e727b57e4bd7b88956ed0c92c4b9a416e6f0976707e8fb54aa385ac0bd"
+    },
+    {
+      "external_path": "/workspace/work/p08-v6/regressions/retained-controls/audio-instrument.stdout.log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "external_path": "/workspace/work/p08-v6/regressions/retained-controls/audio-source.stderr.log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "external_path": "/workspace/work/p08-v6/regressions/retained-controls/audio-source.stdout.log",
+      "size_bytes": 81,
+      "sha256": "c18d29e2e92ef5b714e6ee9b28844a3169977b0eaaa6041286d872ebc870524d"
+    },
+    {
+      "external_path": "/workspace/work/p08-v6/regressions/retained-controls/presentation-browser.stderr.log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "external_path": "/workspace/work/p08-v6/regressions/retained-controls/presentation-browser.stdout.log",
+      "size_bytes": 74,
+      "sha256": "c86982a0b3f6672abb87a06f8513f154025ce94bd28ba91446d07c76058c1f69"
+    },
+    {
+      "external_path": "/workspace/work/p08-v6/regressions/retained-controls/presentation-build.stderr.log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "external_path": "/workspace/work/p08-v6/regressions/retained-controls/presentation-build.stdout.log",
+      "size_bytes": 1112,
+      "sha256": "d09280341de60a9cd5cc554a779910aaa49dce747865d8b9716bef0d881d46f1"
+    },
+    {
+      "external_path": "/workspace/work/p08-v6/regressions/retained-controls/presentation-native.json",
+      "size_bytes": 177116,
+      "sha256": "0fcf2283799998573224edc969e877bc5380006f278058b8ec221efecf564939"
+    },
+    {
+      "external_path": "/workspace/work/p08-v6/regressions/retained-controls/presentation-native.stderr.log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "external_path": "/workspace/work/p08-v6/regressions/retained-controls/presentation-native.stdout.log",
+      "size_bytes": 30,
+      "sha256": "e7fdd677bd4aa8312b3dc6b85dbe848926b4f7a715de72e540f5bf0bdb6511dc"
+    },
+    {
+      "external_path": "/workspace/work/p08-v6/regressions/retained-controls/source.json",
+      "size_bytes": 7681,
+      "sha256": "f02011b488f77ddb3c016f6aa986c9d09c17e203e86bcebb4c58d78d08769b29"
+    },
+    {
+      "external_path": "/workspace/work/p08-v6/regressions/retained-controls/source.measurements.json",
+      "size_bytes": 259,
+      "sha256": "2b25ec4c345b7cc7057f10ea54bb528343e8f304ddeef7d670019a9022233163"
+    },
+    {
+      "external_path": "/workspace/work/p08-v6/regressions/retained-controls/visual-browser/anchor.png",
+      "size_bytes": 148796,
+      "sha256": "db01fd95b3524fe5830a1c6b494502622698a1824790fb1060e605723d32ab11"
+    },
+    {
+      "external_path": "/workspace/work/p08-v6/regressions/retained-controls/visual-browser/browser.json",
+      "size_bytes": 48213,
+      "sha256": "9b2919a0ba6a1443af2834bb6da62bc913a2e28b4234768a2f17eaa251b96263"
+    },
+    {
+      "external_path": "/workspace/work/p08-v6/regressions/retained-controls/visual-browser/complete.png",
+      "size_bytes": 150619,
+      "sha256": "efd3bc5ce95c775c912988cb8273f970d066d0d44833cc724043a97823e74420"
+    },
+    {
+      "external_path": "/workspace/work/p08-v6/regressions/retained-controls/visual-browser/host.log",
+      "size_bytes": 30,
+      "sha256": "a85f77ec24fb6043f7399072a859d3976765a845e284ea25294b1fec463e76bf"
+    },
+    {
+      "external_path": "/workspace/work/p08-v6/regressions/retained-controls/visual-browser/hurt.png",
+      "size_bytes": 150560,
+      "sha256": "e6fac6c6f9b6f4720ae9f591f387b7d068b71d1d064df72c2d7de311ac888dad"
+    },
+    {
+      "external_path": "/workspace/work/p08-v6/regressions/retained-controls/visual-browser/lost.png",
+      "size_bytes": 147322,
+      "sha256": "d959eb91364ba8ffcb7ab0cdcd9312de14b1e9a04d354c7ffd56db659bf61401"
+    },
+    {
+      "external_path": "/workspace/work/p08-v6/regressions/retained-controls/visual-browser/lure.png",
+      "size_bytes": 152053,
+      "sha256": "564c7570aa3836e74b57bdfccc2c7b04b54afe8998728780135417a62df2f181"
+    },
+    {
+      "external_path": "/workspace/work/p08-v6/regressions/retained-controls/visual-browser/reduced.png",
+      "size_bytes": 147422,
+      "sha256": "16ce99d79cf961a98db6959a48b19e470031cde092dfc3c5d38d25491e5b49d2"
+    },
+    {
+      "external_path": "/workspace/work/p08-v6/regressions/retained-controls/visual-browser/refused.png",
+      "size_bytes": 146796,
+      "sha256": "49fef01ccd48bb1affa427f36f1d6d5cb1ec306ffa3bbc72b60c9a784f8b5994"
+    }
+  ],
+  "capture_review": {
+    "reviewed": [
+      "visual-browser/complete.png",
+      "visual-browser/refused.png"
+    ],
+    "observation": "Actual complete and refused screenshots match their visible state labels and readouts; sound remains optional/off in this visual instrument. No human readability or preference validation."
+  }
+}

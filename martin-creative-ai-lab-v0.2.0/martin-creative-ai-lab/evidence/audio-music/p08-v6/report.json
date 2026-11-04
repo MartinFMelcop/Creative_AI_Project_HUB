@@ -1,0 +1,81 @@
+{
+  "schema_version": 1,
+  "kind": "p08_affected_regression_handover",
+  "baseline_commit": "1cc982a525b63abbd8a1091ebd70e16df7844cb5",
+  "status": "PASS",
+  "failed_commands": 0,
+  "retries": 0,
+  "fresh_assays": {
+    "passed": 4,
+    "failed": 0
+  },
+  "strict_full_result_comparisons": {
+    "passed": 4,
+    "failed": 0
+  },
+  "all_nonidentity_observations_exact": true,
+  "all_prior_files_match_baseline_git_bytes": true,
+  "entire_csharp_tree_fingerprints_retained": true,
+  "identity_scope": "Only new Audio/Admission.cs and modified AudioChecks/Program.cs plus Presentation/Program.cs; unchanged supported run.py instruments and comparisons.",
+  "counts": {
+    "rpg_progression": {
+      "destination_cases": 555,
+      "historical_goldens": 9,
+      "threshold_neighbors": 537,
+      "partition_controls": 9,
+      "off_by_one_reference_mutants_rejected": 195,
+      "legacy_static_header_mismatches_retained": 9
+    },
+    "economy_crafting": {
+      "native_controls": 80,
+      "legacy_semantic_failures_retained": 16
+    },
+    "world_loadout": {
+      "native_controls": 56,
+      "compatibility_cases": 2090,
+      "malformed_protocol_rejections": 6
+    },
+    "persistent_expedition": {
+      "native_controls": 82,
+      "actual_process_interruption_boundaries": 3
+    },
+    "p08_retained_source": {
+      "python_instrument_controls": 8,
+      "godot_native_controls": 14,
+      "pcm_files": 16,
+      "negative_pcm_controls": 3,
+      "strict_source_comparison_passed": true
+    },
+    "presentation": {
+      "native_controls": 47,
+      "actual_chromium_controls": 20,
+      "actual_renderer_mutants_detected": 1,
+      "control_ids_equal_prior": true
+    }
+  },
+  "runtime": {
+    "dotnet_sdk": "10.0.401",
+    "godot": "4.6.3.stable.official.7d41c59c4",
+    "node": "v24.19.0",
+    "chromium": "154.0.8037.57"
+  },
+  "reports": [
+    {
+      "path": "commands.json",
+      "size_bytes": 4930,
+      "sha256": "0f5a70b4e08d39fe1028135361323b3de33dff116d281fd25ef165eeed9c1863"
+    },
+    {
+      "path": "assay-reconciliation.json",
+      "size_bytes": 7682,
+      "sha256": "daa065012b64b462f1cdcd6de0d7499933169b5d230a7c28e92ea82f22f6db1e"
+    },
+    {
+      "path": "retained-controls/report.json",
+      "size_bytes": 12520,
+      "sha256": "0bbd5c30d950fa230f0cb912a707e96ba6a2eea3fd3276026f82eb5fe17a9364"
+    }
+  ],
+  "repository_edits": "Only the four existing evidence RUN.json/results.json pairs and byte-preserved prior pairs under evidence/audio-music/p08-v6/prior-assays. Parent owns remaining pins, documents, copied reports and publication.",
+  "limits": "Actual retained Godot/Linux digital mixer source method and engine-independent C#/Chromium Presentation consumers. No Unity Editor, Windows Player, Steam, physical audio-device listening, human readability/preference or human acceptance validation."
+}

@@ -1,0 +1,85 @@
+{
+  "claim_boundary": "Offline reproducible research and intake only; not code/Unity or subjective quality approval.",
+  "commands": [
+    {
+      "command": [
+        "python",
+        "-B",
+        "tools/run_v5_checks.py",
+        "--out",
+        "/tmp/p08-v6-replay-72y0ngpw/prior.json"
+      ],
+      "exit": 0,
+      "stderr_tail": "",
+      "stdout_tail": "PASS V5: 79 V4 cases + 14 V5 cases; 9 V4 reports + 1 V5 report exact; 18 new comparisons; two infeasible backgrounds\n",
+      "unit_test_cases": null
+    },
+    {
+      "command": [
+        "python",
+        "-B",
+        "experiments/test_intersample_peak_probe.py"
+      ],
+      "exit": 0,
+      "stderr_tail": "test_actual_fixtures_exact_and_limited (__main__.IntersampleDiagnosticTests.test_actual_fixtures_exact_and_limited) ... ok\ntest_gain_scaling (__main__.IntersampleDiagnosticTests.test_gain_scaling) ... ok\ntest_intersample_counterexample (__main__.IntersampleDiagnosticTests.test_intersample_counterexample) ... ok\ntest_rejects_infinite (__main__.IntersampleDiagnosticTests.test_rejects_infinite) ... ok\ntest_rejects_invalid_up (__main__.IntersampleDiagnosticTests.test_rejects_invalid_up) ... ok\ntest_rejects_nan (__main__.IntersampleDiagnosticTests.test_rejects_nan) ... ok\ntest_rejects_nonmono (__main__.IntersampleDiagnosticTests.test_rejects_nonmono) ... ok\ntest_rejects_too_short (__main__.IntersampleDiagnosticTests.test_rejects_too_short) ... ok\ntest_repetition (__main__.IntersampleDiagnosticTests.test_repetition) ... ok\ntest_silence (__main__.IntersampleDiagnosticTests.test_silence) ... ok\n\n----------------------------------------------------------------------\nRan 10 tests in 0.368s\n\nOK\n",
+      "stdout_tail": "",
+      "unit_test_cases": 10
+    },
+    {
+      "command": [
+        "python",
+        "-B",
+        "tools/test_claims_v6.py"
+      ],
+      "exit": 0,
+      "stderr_tail": "test_absolute (__main__.ClaimsTests.test_absolute) ... ok\ntest_duplicate (__main__.ClaimsTests.test_duplicate) ... ok\ntest_missing_limit (__main__.ClaimsTests.test_missing_limit) ... ok\ntest_missing_reference (__main__.ClaimsTests.test_missing_reference) ... ok\ntest_selector_must_resolve (__main__.ClaimsTests.test_selector_must_resolve) ... ok\ntest_traversal (__main__.ClaimsTests.test_traversal) ... ok\ntest_unknown_status (__main__.ClaimsTests.test_unknown_status) ... ok\ntest_valid_records (__main__.ClaimsTests.test_valid_records) ... ok\ntest_wrong_expected (__main__.ClaimsTests.test_wrong_expected) ... ok\n\n----------------------------------------------------------------------\nRan 9 tests in 0.004s\n\nOK\n",
+      "stdout_tail": "",
+      "unit_test_cases": 9
+    },
+    {
+      "command": [
+        "python",
+        "-B",
+        "experiments/intersample_peak_probe.py",
+        "demonstrations/sfx",
+        "--out",
+        "/tmp/p08-v6-replay-72y0ngpw/intersample.json"
+      ],
+      "exit": 0,
+      "stderr_tail": "",
+      "stdout_tail": "",
+      "unit_test_cases": null
+    },
+    {
+      "command": [
+        "python",
+        "-B",
+        "tools/validate_claims_v6.py"
+      ],
+      "exit": 0,
+      "stderr_tail": "",
+      "stdout_tail": "PASS V6 evidence crosswalk 12 claims\n",
+      "unit_test_cases": null
+    }
+  ],
+  "commercial_rights": "UNVERIFIED",
+  "dotnet": "NOT_EXECUTED_SDK_NOT_INSTALLED",
+  "environment": {
+    "platform": "Linux-6.18.55-x86_64-with-glibc2.41",
+    "python": "3.12.14"
+  },
+  "github_publication": "NOT_PERFORMED",
+  "human_listener_study": "NOT_EXECUTED",
+  "new_v6_intersample_tests": 10,
+  "new_v6_traceability_tests": 9,
+  "replayed_v5_cases": 93,
+  "result": "PASS",
+  "schema": "p08.v6.reproducible-research.v1",
+  "total_unit_tests": 112,
+  "unity": "NOT_EXECUTED",
+  "v5_report_comparisons": 10,
+  "v6_interpolated_peak_alert_comparisons": 5,
+  "v6_report_exact_json": true,
+  "v6_report_sha256": "1bdc4da92ec3fa02d3346ce693525685a0fc83decd1b2fc74b97cbff1e4ec936",
+  "windows": "NOT_EXECUTED"
+}

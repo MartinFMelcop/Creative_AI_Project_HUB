@@ -1,0 +1,56 @@
+{
+  "schema": "p08.independent-final-engineering-scientific-review.v1",
+  "date_utc": "2026-11-04",
+  "baseline_commit": "1cc982a",
+  "decision": "NO_BLOCKER_WITH_RECORDED_LIMITS",
+  "method": "Read-only independent source, protocol, actual result and identity review; no maintained edits, expensive suite reruns or supplied ZIP media copies.",
+  "reviewed_authority": [
+    "AGENTS.md",
+    "workspace AGENTS.md",
+    "docs/prompts/CONTINUOUS_DEVELOPMENT.md",
+    "docs/STATE.md"
+  ],
+  "blockers": [],
+  "findings": [
+    "Presentation only adds Admission.Contract to the existing observation. Room/Plan remain authoritative for accepted game consequences; audio adds no damage, payment, turn, result or alternate gameplay owner.",
+    "Admission is an engine-independent C#8/netstandard2.1 library using standard read-only collections. Its 13 ordered live states and three incoming ranks export 39 finite decisions consumed by the browser. The adapter does not reimplement the rank-selection algorithm or install a noncausal offline optimizer.",
+    "Two-voice admission preserves stronger playing consequences, replaces a weaker voice or threat peer, and explicitly suppresses saturated critical peers without a queue. Browser replacement and logical expiry disconnect the old node before appending; stale onended callbacks check both generation and live membership.",
+    "Mute, suspended observation, repeated/stale observation and explicit resume retain cursor ownership. Enable checks its epoch after asynchronous resume and decode; suspension and restart invalidate the generation. Reconnect requires explicit re-enable. A second narrow independent lifecycle review found no concrete blocker.",
+    "Ducking recomputes the greatest admitted end after start, suppression and completion; a later short cue cannot schedule release before a longer retained terminal voice. Existing aligned stem startup and mute controls remain intact.",
+    "The source sample bound is 0.45386993498348416 at maximum permitted bus gains, using a Euclidean bound for equal-power stems and two greatest cue peaks under master 0.8. Browser separately checks actual decoded peaks before playback; current decoded bound is approximately 0.454013 below 0.9. This is finite-source sample headroom, not a generic limiter.",
+    "Actual terminal/begin/action commands succeeded within the 0.60-second terminal lifetime. Music-zero final AudioContext capture retains a terminal-only late interval: 6175 frames, RMS 0.019062312820166037, nominal capture peak 0.19915173947811127. The forced-FIFO mutation kept game commands successful, recorded the critical stop and failed the same criterion with 6174 late frames at RMS zero.",
+    "The other controlled negatives are actual browser graph changes: isolated 37ms stem capture delay and master gain12. Their phase and over-range float PCM observations are distinct from errors, static metadata or fabricated result edits.",
+    "The separate supplied candidate has five passing builds but two failing runtime suites. Current records retain failure locations and do not imply whole-candidate/R32 adoption, Desktop execution or passing all validation."
+  ],
+  "identity_review": {
+    "browser_source_and_producer_entries": 11,
+    "all_still_exact": true,
+    "native_passed_controls": 85,
+    "original_67_controls_exact_prefix": true,
+    "ten_baseline_asset_descriptors_exact": true,
+    "reviewed_sources": {
+      "north-star/csharp/Audio/Admission.cs": "51a98f3e963def8305cd4d3e2e542dc004912d54a683a5551128186fd89e2cb2",
+      "north-star/csharp/Presentation/Program.cs": "44089db8317ca46fc8e1ec9c5004d9f585ec8fd55cb01241c2d7c592c1b1a5b9",
+      "north-star/csharp/Presentation/web/audio.js": "472d07cf5936625c2f613e303bb51ac02d2b9d1c11fed833972c35601d8b9a6b",
+      "north-star/csharp/AudioChecks/Program.cs": "eb48a218e76dd9c3fe59631285035b2b041f483df9d0d401107cc8f3c4f328b9",
+      "labs/audio-music/priority-browser.mjs": "5dc57426932d354ae81bd2264f95c5aca08eecfd7639ef998986297394be8a9a",
+      "labs/audio-music/priority-protocol.json": "13069689d971b83497cd1702e10ca274b9c3bdfd02103f19384d2376945e78c2"
+    }
+  },
+  "result_accounting": {
+    "native_controls": 85,
+    "actual_browser_controls": 28,
+    "actual_detected_negatives": 3,
+    "candidate_builds": 5,
+    "candidate_runtime_suites_failed": 2,
+    "research_record": "112 Python tests / 13 reproduced reports / 12-claim traceability / 48 held media are separately recorded intake observations; this final review does not claim to have rerun them."
+  },
+  "limits": [
+    "ScriptProcessor block playbackTime is a browser signal-clock proxy. Tail energy plus voice ownership is narrower than calibrated duration or full sample-by-sample continuity of the complete terminal cue.",
+    "No certified ITU true peak/LUFS, physical clipping, hardware latency/output, masking, recognition, comfort, preference, artistic approval or human validation is established. The supplied generic 4x estimate must retain this distinction.",
+    "Finite overload intentionally suppresses cues; consumption does not mean every consequence was heard. A new terminal arrival deliberately clears prior cues as documented.",
+    "Repeated explicit Enable restarts both aligned stems; this behavior predates the change and is not evidence of continuous transport across re-enable.",
+    "No Unity Editor, Windows Player, Steam, ordinary-user device or distribution-rights acceptance. All 48 supplied media remain held; current runtime uses only its ten unchanged original Composer WAVs.",
+    "This is agent review of the selected changes, not independent human/scientific validation or final repository publication approval. Primary still owns final manifests, gates, exact staged inventory, reconciliation and publication."
+  ]
+}

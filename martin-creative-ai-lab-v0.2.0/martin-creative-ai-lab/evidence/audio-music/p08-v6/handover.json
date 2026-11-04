@@ -1,0 +1,93 @@
+{
+  "brain_ids": [
+    "ENG-009",
+    "ENG-015"
+  ],
+  "original_controls_preserved": true,
+  "additional_controls": [
+    {
+      "name": "Original experimental terminal/contact/threat playback hierarchy",
+      "passed": true
+    },
+    {
+      "name": "Music cannot enter consequence voice admission",
+      "passed": true
+    },
+    {
+      "name": "Malformed live priority state rejected 0",
+      "passed": true
+    },
+    {
+      "name": "Malformed live priority state rejected 4",
+      "passed": true
+    },
+    {
+      "name": "Malformed live priority state rejected 1,2,3",
+      "passed": true
+    },
+    {
+      "name": "Unknown incoming priority rejected",
+      "passed": true
+    },
+    {
+      "name": "Free voice preserves critical playback beside a new consequence",
+      "passed": true
+    },
+    {
+      "name": "Latest threat replaces an older threat while preserving outcome",
+      "passed": true
+    },
+    {
+      "name": "Higher consequence replaces weakest voice in causal order",
+      "passed": true
+    },
+    {
+      "name": "Lower consequence never cuts stronger admitted voices",
+      "passed": true
+    },
+    {
+      "name": "Equal critical saturation consumes newest without truncation or queue",
+      "passed": true
+    },
+    {
+      "name": "C# exports complete bounded live-state decision table",
+      "passed": true
+    },
+    {
+      "name": "All39 exported transitions preserve critical priority and native policy identity",
+      "passed": true
+    },
+    {
+      "name": "Maximum bus gains and two source voices retain conservative sample headroom",
+      "passed": true
+    },
+    {
+      "name": "Nonfinite peak budget rejected",
+      "passed": true
+    },
+    {
+      "name": "Over-unit authored bus gain rejected",
+      "passed": true
+    },
+    {
+      "name": "Actual C# survey outcome retains full lifetime through immediate next begin and harm",
+      "passed": true
+    },
+    {
+      "name": "Real accepted overload preserves outcome and harm while explicitly consuming excess threats",
+      "passed": true
+    }
+  ],
+  "asset_identities_equal": true,
+  "baseline_terminal": {
+    "id": 10,
+    "sequence": 7,
+    "duration": 0.6,
+    "started": 0.1219047619047619,
+    "stopped": 0.1306122448979592,
+    "age": 0.00870748299319729,
+    "cut_by_lower_priority": true
+  },
+  "source_bound": 0.45386993498348416,
+  "limits": "Actual C# policy/projection and Chromium digital playback; original experimental priorities, no imported media/code, Unity/Windows/Steam/listener validation not executed."
+}

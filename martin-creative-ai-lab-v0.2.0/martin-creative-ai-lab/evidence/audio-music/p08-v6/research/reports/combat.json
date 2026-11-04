@@ -1,0 +1,1050 @@
+{
+  "asset_sha256": {
+    "arcane_portal_v01.wav": "a6416945aac40cbfde521e8dd6e83899f7aae1fdfad039dae613dfffa45b06b1",
+    "arcane_portal_v02.wav": "88ad385f5b0e328143900f1aa24f48f50367e1e4c26d78a05c6e3b25dbedca5c",
+    "electric_burst_v01.wav": "580630a31410e84bd664f1438bb60657252f8f83815ef53d733ab312672c6969",
+    "electric_burst_v02.wav": "69e5d199077a213a30a90e91c08dd18e2ce7185a731c7291f3adac1acdb41a29",
+    "fire_spell_v01.wav": "378717df34877c8ce3e88f735b4f1528fb3f6155ecef0246c813eb720df2587e",
+    "fire_spell_v02.wav": "6f1dcebd329d3130dd115b4e0cb7512fef2762367875c3bd452e8c6b5f770b41",
+    "forest_creature_v01.wav": "cb7b45cd9ddbcb473719504b7db892113a268454ea965386b63524887b838e1d",
+    "forest_creature_v02.wav": "96d40c45eebc894e47f3277de761c1379d5618a5578d69dffef17eae0229312b",
+    "steel_armor_v01.wav": "eaef05618d6e9106f30c61768e36a72d651d9679b500de3ebde0567ff3e6e0bf",
+    "steel_armor_v02.wav": "8a614a0b11a44afae47b2a9b7773eea8b368e49e3251235db35bb2a29417deed",
+    "stone_impact_v01.wav": "5226141e43d8d088f0e45834bd5a279d3f2f356d4bd009c305b1ff978ca6c2a2",
+    "stone_impact_v02.wav": "426059e68376914ae05f3f4ef1c2f6b4c11cfb6fdb53e8df3c7d6802badc4e4e"
+  },
+  "conditions": 18,
+  "duration_seconds": 4.0,
+  "interpretation": "Deterministic offline raw PCM sum only; sample peak is NOT true peak, spectral masking, recognition, comfort, or game-runtime behavior",
+  "music_background": "Controlled synthesized masker, not original game soundtrack",
+  "policies": [
+    "unbounded_reference",
+    "music_only_duck",
+    "bounded_voice_bus"
+  ],
+  "policy_count": 3,
+  "rows": [
+    {
+      "background_type": "mid_pulse",
+      "decisions": [
+        {
+          "decision": "played",
+          "event": "steel_armor",
+          "id": "obs-01",
+          "priority": 3,
+          "start_frame": 28800,
+          "stop_frame": 69600,
+          "variant": 1
+        }
+      ],
+      "events_consumed": 1,
+      "mix_rms": 0.1816132,
+      "music_rms": 0.18,
+      "played": 1,
+      "policy": "unbounded_reference",
+      "priority_four_played": 0,
+      "raw_sample_peak": 1.10578,
+      "sample_overrange": true,
+      "samples_at_or_above_full_scale": 20,
+      "scene": "single_melee",
+      "sfx_bus_rms_after_gain": 0.0239771,
+      "stolen": 0,
+      "suppressed": 0
+    },
+    {
+      "background_type": "mid_pulse",
+      "decisions": [
+        {
+          "decision": "played",
+          "event": "steel_armor",
+          "id": "obs-01",
+          "priority": 3,
+          "start_frame": 28800,
+          "stop_frame": 69600,
+          "variant": 1
+        }
+      ],
+      "events_consumed": 1,
+      "mix_rms": 0.1770753,
+      "music_rms": 0.1754233,
+      "played": 1,
+      "policy": "music_only_duck",
+      "priority_four_played": 0,
+      "raw_sample_peak": 0.981714,
+      "sample_overrange": false,
+      "samples_at_or_above_full_scale": 0,
+      "scene": "single_melee",
+      "sfx_bus_rms_after_gain": 0.0239771,
+      "stolen": 0,
+      "suppressed": 0
+    },
+    {
+      "background_type": "mid_pulse",
+      "decisions": [
+        {
+          "decision": "played",
+          "event": "steel_armor",
+          "id": "obs-01",
+          "priority": 3,
+          "start_frame": 28800,
+          "stop_frame": 69600,
+          "variant": 1
+        }
+      ],
+      "events_consumed": 1,
+      "mix_rms": 0.1758016,
+      "music_rms": 0.1754233,
+      "played": 1,
+      "policy": "bounded_voice_bus",
+      "priority_four_played": 0,
+      "raw_sample_peak": 0.946317,
+      "sample_overrange": false,
+      "samples_at_or_above_full_scale": 0,
+      "scene": "single_melee",
+      "sfx_bus_rms_after_gain": 0.0113738,
+      "stolen": 0,
+      "suppressed": 0
+    },
+    {
+      "background_type": "low_drone",
+      "decisions": [
+        {
+          "decision": "played",
+          "event": "stone_impact",
+          "id": "obs-01",
+          "priority": 2,
+          "start_frame": 16800,
+          "stop_frame": 54240,
+          "variant": 1
+        },
+        {
+          "decision": "played",
+          "event": "steel_armor",
+          "id": "obs-02",
+          "priority": 3,
+          "start_frame": 74400,
+          "stop_frame": 115200,
+          "variant": 1
+        },
+        {
+          "decision": "played",
+          "event": "stone_impact",
+          "id": "obs-03",
+          "priority": 2,
+          "start_frame": 129600,
+          "stop_frame": 167040,
+          "variant": 2
+        }
+      ],
+      "events_consumed": 3,
+      "mix_rms": 0.1835734,
+      "music_rms": 0.18,
+      "played": 3,
+      "policy": "unbounded_reference",
+      "priority_four_played": 0,
+      "raw_sample_peak": 0.703042,
+      "sample_overrange": false,
+      "samples_at_or_above_full_scale": 0,
+      "scene": "spaced_attacks",
+      "sfx_bus_rms_after_gain": 0.0360446,
+      "stolen": 0,
+      "suppressed": 0
+    },
+    {
+      "background_type": "low_drone",
+      "decisions": [
+        {
+          "decision": "played",
+          "event": "stone_impact",
+          "id": "obs-01",
+          "priority": 2,
+          "start_frame": 16800,
+          "stop_frame": 54240,
+          "variant": 1
+        },
+        {
+          "decision": "played",
+          "event": "steel_armor",
+          "id": "obs-02",
+          "priority": 3,
+          "start_frame": 74400,
+          "stop_frame": 115200,
+          "variant": 1
+        },
+        {
+          "decision": "played",
+          "event": "stone_impact",
+          "id": "obs-03",
+          "priority": 2,
+          "start_frame": 129600,
+          "stop_frame": 167040,
+          "variant": 2
+        }
+      ],
+      "events_consumed": 3,
+      "mix_rms": 0.1785069,
+      "music_rms": 0.1748272,
+      "played": 3,
+      "policy": "music_only_duck",
+      "priority_four_played": 0,
+      "raw_sample_peak": 0.692871,
+      "sample_overrange": false,
+      "samples_at_or_above_full_scale": 0,
+      "scene": "spaced_attacks",
+      "sfx_bus_rms_after_gain": 0.0360446,
+      "stolen": 0,
+      "suppressed": 0
+    },
+    {
+      "background_type": "low_drone",
+      "decisions": [
+        {
+          "decision": "played",
+          "event": "stone_impact",
+          "id": "obs-01",
+          "priority": 2,
+          "start_frame": 16800,
+          "stop_frame": 54240,
+          "variant": 1
+        },
+        {
+          "decision": "played",
+          "event": "steel_armor",
+          "id": "obs-02",
+          "priority": 3,
+          "start_frame": 74400,
+          "stop_frame": 115200,
+          "variant": 1
+        },
+        {
+          "decision": "played",
+          "event": "stone_impact",
+          "id": "obs-03",
+          "priority": 2,
+          "start_frame": 129600,
+          "stop_frame": 167040,
+          "variant": 2
+        }
+      ],
+      "events_consumed": 3,
+      "mix_rms": 0.1756626,
+      "music_rms": 0.1748272,
+      "played": 3,
+      "policy": "bounded_voice_bus",
+      "priority_four_played": 0,
+      "raw_sample_peak": 0.482188,
+      "sample_overrange": false,
+      "samples_at_or_above_full_scale": 0,
+      "scene": "spaced_attacks",
+      "sfx_bus_rms_after_gain": 0.0170981,
+      "stolen": 0,
+      "suppressed": 0
+    },
+    {
+      "background_type": "wide_noise",
+      "decisions": [
+        {
+          "decision": "played",
+          "event": "fire_spell",
+          "id": "obs-01",
+          "priority": 3,
+          "start_frame": 26400,
+          "stop_frame": 81599,
+          "variant": 1
+        },
+        {
+          "decision": "played",
+          "event": "electric_burst",
+          "id": "obs-02",
+          "priority": 3,
+          "start_frame": 26400,
+          "stop_frame": 74400,
+          "variant": 1
+        },
+        {
+          "decision": "played",
+          "event": "arcane_portal",
+          "id": "obs-03",
+          "priority": 2,
+          "start_frame": 100800,
+          "stop_frame": 192000,
+          "variant": 1
+        }
+      ],
+      "events_consumed": 3,
+      "mix_rms": 0.1965064,
+      "music_rms": 0.18,
+      "played": 3,
+      "policy": "unbounded_reference",
+      "priority_four_played": 0,
+      "raw_sample_peak": 0.990259,
+      "sample_overrange": false,
+      "samples_at_or_above_full_scale": 0,
+      "scene": "dual_spell",
+      "sfx_bus_rms_after_gain": 0.0782716,
+      "stolen": 0,
+      "suppressed": 0
+    },
+    {
+      "background_type": "wide_noise",
+      "decisions": [
+        {
+          "decision": "played",
+          "event": "fire_spell",
+          "id": "obs-01",
+          "priority": 3,
+          "start_frame": 26400,
+          "stop_frame": 81599,
+          "variant": 1
+        },
+        {
+          "decision": "played",
+          "event": "electric_burst",
+          "id": "obs-02",
+          "priority": 3,
+          "start_frame": 26400,
+          "stop_frame": 74400,
+          "variant": 1
+        },
+        {
+          "decision": "played",
+          "event": "arcane_portal",
+          "id": "obs-03",
+          "priority": 2,
+          "start_frame": 100800,
+          "stop_frame": 192000,
+          "variant": 1
+        }
+      ],
+      "events_consumed": 3,
+      "mix_rms": 0.1918223,
+      "music_rms": 0.174897,
+      "played": 3,
+      "policy": "music_only_duck",
+      "priority_four_played": 0,
+      "raw_sample_peak": 0.990259,
+      "sample_overrange": false,
+      "samples_at_or_above_full_scale": 0,
+      "scene": "dual_spell",
+      "sfx_bus_rms_after_gain": 0.0782716,
+      "stolen": 0,
+      "suppressed": 0
+    },
+    {
+      "background_type": "wide_noise",
+      "decisions": [
+        {
+          "decision": "played",
+          "event": "fire_spell",
+          "id": "obs-01",
+          "priority": 3,
+          "start_frame": 26400,
+          "stop_frame": 81599,
+          "variant": 1
+        },
+        {
+          "decision": "played",
+          "event": "electric_burst",
+          "id": "obs-02",
+          "priority": 3,
+          "start_frame": 26400,
+          "stop_frame": 74400,
+          "variant": 1
+        },
+        {
+          "decision": "played",
+          "event": "arcane_portal",
+          "id": "obs-03",
+          "priority": 2,
+          "start_frame": 100800,
+          "stop_frame": 192000,
+          "variant": 1
+        }
+      ],
+      "events_consumed": 3,
+      "mix_rms": 0.1789013,
+      "music_rms": 0.174897,
+      "played": 3,
+      "policy": "bounded_voice_bus",
+      "priority_four_played": 0,
+      "raw_sample_peak": 0.868725,
+      "sample_overrange": false,
+      "samples_at_or_above_full_scale": 0,
+      "scene": "dual_spell",
+      "sfx_bus_rms_after_gain": 0.0371288,
+      "stolen": 0,
+      "suppressed": 0
+    },
+    {
+      "background_type": "mid_pulse",
+      "decisions": [
+        {
+          "decision": "played",
+          "event": "stone_impact",
+          "id": "obs-01",
+          "priority": 1,
+          "start_frame": 24000,
+          "stop_frame": 61440,
+          "variant": 1
+        },
+        {
+          "decision": "played",
+          "event": "steel_armor",
+          "id": "obs-02",
+          "priority": 2,
+          "start_frame": 26400,
+          "stop_frame": 67200,
+          "variant": 1
+        },
+        {
+          "decision": "played",
+          "event": "fire_spell",
+          "id": "obs-03",
+          "priority": 2,
+          "start_frame": 26880,
+          "stop_frame": 82079,
+          "variant": 1
+        },
+        {
+          "decision": "played",
+          "event": "electric_burst",
+          "id": "obs-04",
+          "priority": 4,
+          "start_frame": 27840,
+          "stop_frame": 75840,
+          "variant": 1
+        },
+        {
+          "decision": "played",
+          "event": "forest_creature",
+          "id": "obs-05",
+          "priority": 3,
+          "start_frame": 28800,
+          "stop_frame": 96000,
+          "variant": 1
+        },
+        {
+          "decision": "played",
+          "event": "arcane_portal",
+          "id": "obs-06",
+          "priority": 2,
+          "start_frame": 29280,
+          "stop_frame": 134880,
+          "variant": 1
+        },
+        {
+          "decision": "played",
+          "event": "steel_armor",
+          "id": "obs-07",
+          "priority": 2,
+          "start_frame": 33600,
+          "stop_frame": 74400,
+          "variant": 2
+        },
+        {
+          "decision": "played",
+          "event": "electric_burst",
+          "id": "obs-08",
+          "priority": 4,
+          "start_frame": 34560,
+          "stop_frame": 82560,
+          "variant": 2
+        }
+      ],
+      "events_consumed": 8,
+      "mix_rms": 0.2137984,
+      "music_rms": 0.18,
+      "played": 8,
+      "policy": "unbounded_reference",
+      "priority_four_played": 2,
+      "raw_sample_peak": 1.575739,
+      "sample_overrange": true,
+      "samples_at_or_above_full_scale": 228,
+      "scene": "crowded_raid",
+      "sfx_bus_rms_after_gain": 0.1150738,
+      "stolen": 0,
+      "suppressed": 0
+    },
+    {
+      "background_type": "mid_pulse",
+      "decisions": [
+        {
+          "decision": "played",
+          "event": "stone_impact",
+          "id": "obs-01",
+          "priority": 1,
+          "start_frame": 24000,
+          "stop_frame": 61440,
+          "variant": 1
+        },
+        {
+          "decision": "played",
+          "event": "steel_armor",
+          "id": "obs-02",
+          "priority": 2,
+          "start_frame": 26400,
+          "stop_frame": 67200,
+          "variant": 1
+        },
+        {
+          "decision": "played",
+          "event": "fire_spell",
+          "id": "obs-03",
+          "priority": 2,
+          "start_frame": 26880,
+          "stop_frame": 82079,
+          "variant": 1
+        },
+        {
+          "decision": "played",
+          "event": "electric_burst",
+          "id": "obs-04",
+          "priority": 4,
+          "start_frame": 27840,
+          "stop_frame": 75840,
+          "variant": 1
+        },
+        {
+          "decision": "played",
+          "event": "forest_creature",
+          "id": "obs-05",
+          "priority": 3,
+          "start_frame": 28800,
+          "stop_frame": 96000,
+          "variant": 1
+        },
+        {
+          "decision": "played",
+          "event": "arcane_portal",
+          "id": "obs-06",
+          "priority": 2,
+          "start_frame": 29280,
+          "stop_frame": 134880,
+          "variant": 1
+        },
+        {
+          "decision": "played",
+          "event": "steel_armor",
+          "id": "obs-07",
+          "priority": 2,
+          "start_frame": 33600,
+          "stop_frame": 74400,
+          "variant": 2
+        },
+        {
+          "decision": "played",
+          "event": "electric_burst",
+          "id": "obs-08",
+          "priority": 4,
+          "start_frame": 34560,
+          "stop_frame": 82560,
+          "variant": 2
+        }
+      ],
+      "events_consumed": 8,
+      "mix_rms": 0.2094293,
+      "music_rms": 0.1744514,
+      "played": 8,
+      "policy": "music_only_duck",
+      "priority_four_played": 2,
+      "raw_sample_peak": 1.575739,
+      "sample_overrange": true,
+      "samples_at_or_above_full_scale": 162,
+      "scene": "crowded_raid",
+      "sfx_bus_rms_after_gain": 0.1150738,
+      "stolen": 0,
+      "suppressed": 0
+    },
+    {
+      "background_type": "mid_pulse",
+      "decisions": [
+        {
+          "decision": "stolen_by_higher_priority",
+          "event": "stone_impact",
+          "id": "obs-01",
+          "priority": 1,
+          "start_frame": 24000,
+          "stop_frame": 28800,
+          "variant": 1
+        },
+        {
+          "decision": "stolen_by_higher_priority",
+          "event": "steel_armor",
+          "id": "obs-02",
+          "priority": 2,
+          "start_frame": 26400,
+          "stop_frame": 34560,
+          "variant": 1
+        },
+        {
+          "decision": "played",
+          "event": "fire_spell",
+          "id": "obs-03",
+          "priority": 2,
+          "start_frame": 26880,
+          "stop_frame": 82079,
+          "variant": 1
+        },
+        {
+          "decision": "played",
+          "event": "electric_burst",
+          "id": "obs-04",
+          "priority": 4,
+          "start_frame": 27840,
+          "stop_frame": 75840,
+          "variant": 1
+        },
+        {
+          "decision": "played",
+          "event": "forest_creature",
+          "id": "obs-05",
+          "priority": 3,
+          "start_frame": 28800,
+          "stop_frame": 96000,
+          "variant": 1
+        },
+        {
+          "decision": "suppressed_at_voice_limit",
+          "event": "arcane_portal",
+          "id": "obs-06",
+          "priority": 2,
+          "start_frame": 29280,
+          "stop_frame": 29280,
+          "variant": 1
+        },
+        {
+          "decision": "suppressed_at_voice_limit",
+          "event": "steel_armor",
+          "id": "obs-07",
+          "priority": 2,
+          "start_frame": 33600,
+          "stop_frame": 33600,
+          "variant": 2
+        },
+        {
+          "decision": "played",
+          "event": "electric_burst",
+          "id": "obs-08",
+          "priority": 4,
+          "start_frame": 34560,
+          "stop_frame": 82560,
+          "variant": 2
+        }
+      ],
+      "events_consumed": 8,
+      "mix_rms": 0.1791325,
+      "music_rms": 0.1744514,
+      "played": 6,
+      "policy": "bounded_voice_bus",
+      "priority_four_played": 2,
+      "raw_sample_peak": 1.062535,
+      "sample_overrange": true,
+      "samples_at_or_above_full_scale": 12,
+      "scene": "crowded_raid",
+      "sfx_bus_rms_after_gain": 0.040862,
+      "stolen": 2,
+      "suppressed": 2
+    },
+    {
+      "background_type": "low_drone",
+      "decisions": [
+        {
+          "decision": "played",
+          "event": "forest_creature",
+          "id": "obs-01",
+          "priority": 4,
+          "start_frame": 21600,
+          "stop_frame": 88800,
+          "variant": 1
+        },
+        {
+          "decision": "played",
+          "event": "forest_creature",
+          "id": "obs-02",
+          "priority": 4,
+          "start_frame": 26400,
+          "stop_frame": 93600,
+          "variant": 2
+        },
+        {
+          "decision": "played",
+          "event": "steel_armor",
+          "id": "obs-03",
+          "priority": 3,
+          "start_frame": 33600,
+          "stop_frame": 74400,
+          "variant": 1
+        },
+        {
+          "decision": "played",
+          "event": "stone_impact",
+          "id": "obs-04",
+          "priority": 2,
+          "start_frame": 76800,
+          "stop_frame": 114240,
+          "variant": 1
+        }
+      ],
+      "events_consumed": 4,
+      "mix_rms": 0.2008894,
+      "music_rms": 0.18,
+      "played": 4,
+      "policy": "unbounded_reference",
+      "priority_four_played": 2,
+      "raw_sample_peak": 0.974436,
+      "sample_overrange": false,
+      "samples_at_or_above_full_scale": 0,
+      "scene": "boss_roar",
+      "sfx_bus_rms_after_gain": 0.0878691,
+      "stolen": 0,
+      "suppressed": 0
+    },
+    {
+      "background_type": "low_drone",
+      "decisions": [
+        {
+          "decision": "played",
+          "event": "forest_creature",
+          "id": "obs-01",
+          "priority": 4,
+          "start_frame": 21600,
+          "stop_frame": 88800,
+          "variant": 1
+        },
+        {
+          "decision": "played",
+          "event": "forest_creature",
+          "id": "obs-02",
+          "priority": 4,
+          "start_frame": 26400,
+          "stop_frame": 93600,
+          "variant": 2
+        },
+        {
+          "decision": "played",
+          "event": "steel_armor",
+          "id": "obs-03",
+          "priority": 3,
+          "start_frame": 33600,
+          "stop_frame": 74400,
+          "variant": 1
+        },
+        {
+          "decision": "played",
+          "event": "stone_impact",
+          "id": "obs-04",
+          "priority": 2,
+          "start_frame": 76800,
+          "stop_frame": 114240,
+          "variant": 1
+        }
+      ],
+      "events_consumed": 4,
+      "mix_rms": 0.1919561,
+      "music_rms": 0.1701558,
+      "played": 4,
+      "policy": "music_only_duck",
+      "priority_four_played": 2,
+      "raw_sample_peak": 0.832322,
+      "sample_overrange": false,
+      "samples_at_or_above_full_scale": 0,
+      "scene": "boss_roar",
+      "sfx_bus_rms_after_gain": 0.0878691,
+      "stolen": 0,
+      "suppressed": 0
+    },
+    {
+      "background_type": "low_drone",
+      "decisions": [
+        {
+          "decision": "played",
+          "event": "forest_creature",
+          "id": "obs-01",
+          "priority": 4,
+          "start_frame": 21600,
+          "stop_frame": 88800,
+          "variant": 1
+        },
+        {
+          "decision": "played",
+          "event": "forest_creature",
+          "id": "obs-02",
+          "priority": 4,
+          "start_frame": 26400,
+          "stop_frame": 93600,
+          "variant": 2
+        },
+        {
+          "decision": "played",
+          "event": "steel_armor",
+          "id": "obs-03",
+          "priority": 3,
+          "start_frame": 33600,
+          "stop_frame": 74400,
+          "variant": 1
+        },
+        {
+          "decision": "played",
+          "event": "stone_impact",
+          "id": "obs-04",
+          "priority": 2,
+          "start_frame": 76800,
+          "stop_frame": 114240,
+          "variant": 1
+        }
+      ],
+      "events_consumed": 4,
+      "mix_rms": 0.1754209,
+      "music_rms": 0.1701558,
+      "played": 4,
+      "policy": "bounded_voice_bus",
+      "priority_four_played": 2,
+      "raw_sample_peak": 0.482579,
+      "sample_overrange": false,
+      "samples_at_or_above_full_scale": 0,
+      "scene": "boss_roar",
+      "sfx_bus_rms_after_gain": 0.0416815,
+      "stolen": 0,
+      "suppressed": 0
+    },
+    {
+      "background_type": "wide_noise",
+      "decisions": [
+        {
+          "decision": "played",
+          "event": "arcane_portal",
+          "id": "obs-01",
+          "priority": 2,
+          "start_frame": 24000,
+          "stop_frame": 129600,
+          "variant": 1
+        },
+        {
+          "decision": "played",
+          "event": "fire_spell",
+          "id": "obs-02",
+          "priority": 3,
+          "start_frame": 25440,
+          "stop_frame": 80639,
+          "variant": 1
+        },
+        {
+          "decision": "played",
+          "event": "electric_burst",
+          "id": "obs-03",
+          "priority": 4,
+          "start_frame": 26400,
+          "stop_frame": 74400,
+          "variant": 1
+        },
+        {
+          "decision": "played",
+          "event": "fire_spell",
+          "id": "obs-04",
+          "priority": 3,
+          "start_frame": 27840,
+          "stop_frame": 83039,
+          "variant": 2
+        },
+        {
+          "decision": "played",
+          "event": "electric_burst",
+          "id": "obs-05",
+          "priority": 4,
+          "start_frame": 30240,
+          "stop_frame": 78240,
+          "variant": 2
+        },
+        {
+          "decision": "played",
+          "event": "arcane_portal",
+          "id": "obs-06",
+          "priority": 2,
+          "start_frame": 31680,
+          "stop_frame": 137280,
+          "variant": 2
+        }
+      ],
+      "events_consumed": 6,
+      "mix_rms": 0.214611,
+      "music_rms": 0.18,
+      "played": 6,
+      "policy": "unbounded_reference",
+      "priority_four_played": 2,
+      "raw_sample_peak": 1.13431,
+      "sample_overrange": true,
+      "samples_at_or_above_full_scale": 3,
+      "scene": "spell_storm",
+      "sfx_bus_rms_after_gain": 0.1163781,
+      "stolen": 0,
+      "suppressed": 0
+    },
+    {
+      "background_type": "wide_noise",
+      "decisions": [
+        {
+          "decision": "played",
+          "event": "arcane_portal",
+          "id": "obs-01",
+          "priority": 2,
+          "start_frame": 24000,
+          "stop_frame": 129600,
+          "variant": 1
+        },
+        {
+          "decision": "played",
+          "event": "fire_spell",
+          "id": "obs-02",
+          "priority": 3,
+          "start_frame": 25440,
+          "stop_frame": 80639,
+          "variant": 1
+        },
+        {
+          "decision": "played",
+          "event": "electric_burst",
+          "id": "obs-03",
+          "priority": 4,
+          "start_frame": 26400,
+          "stop_frame": 74400,
+          "variant": 1
+        },
+        {
+          "decision": "played",
+          "event": "fire_spell",
+          "id": "obs-04",
+          "priority": 3,
+          "start_frame": 27840,
+          "stop_frame": 83039,
+          "variant": 2
+        },
+        {
+          "decision": "played",
+          "event": "electric_burst",
+          "id": "obs-05",
+          "priority": 4,
+          "start_frame": 30240,
+          "stop_frame": 78240,
+          "variant": 2
+        },
+        {
+          "decision": "played",
+          "event": "arcane_portal",
+          "id": "obs-06",
+          "priority": 2,
+          "start_frame": 31680,
+          "stop_frame": 137280,
+          "variant": 2
+        }
+      ],
+      "events_consumed": 6,
+      "mix_rms": 0.2088118,
+      "music_rms": 0.173071,
+      "played": 6,
+      "policy": "music_only_duck",
+      "priority_four_played": 2,
+      "raw_sample_peak": 1.033279,
+      "sample_overrange": true,
+      "samples_at_or_above_full_scale": 1,
+      "scene": "spell_storm",
+      "sfx_bus_rms_after_gain": 0.1163781,
+      "stolen": 0,
+      "suppressed": 0
+    },
+    {
+      "background_type": "wide_noise",
+      "decisions": [
+        {
+          "decision": "stolen_by_higher_priority",
+          "event": "arcane_portal",
+          "id": "obs-01",
+          "priority": 2,
+          "start_frame": 24000,
+          "stop_frame": 30240,
+          "variant": 1
+        },
+        {
+          "decision": "played",
+          "event": "fire_spell",
+          "id": "obs-02",
+          "priority": 3,
+          "start_frame": 25440,
+          "stop_frame": 80639,
+          "variant": 1
+        },
+        {
+          "decision": "played",
+          "event": "electric_burst",
+          "id": "obs-03",
+          "priority": 4,
+          "start_frame": 26400,
+          "stop_frame": 74400,
+          "variant": 1
+        },
+        {
+          "decision": "played",
+          "event": "fire_spell",
+          "id": "obs-04",
+          "priority": 3,
+          "start_frame": 27840,
+          "stop_frame": 83039,
+          "variant": 2
+        },
+        {
+          "decision": "played",
+          "event": "electric_burst",
+          "id": "obs-05",
+          "priority": 4,
+          "start_frame": 30240,
+          "stop_frame": 78240,
+          "variant": 2
+        },
+        {
+          "decision": "suppressed_at_voice_limit",
+          "event": "arcane_portal",
+          "id": "obs-06",
+          "priority": 2,
+          "start_frame": 31680,
+          "stop_frame": 31680,
+          "variant": 2
+        }
+      ],
+      "events_consumed": 6,
+      "mix_rms": 0.1754658,
+      "music_rms": 0.173071,
+      "played": 5,
+      "policy": "bounded_voice_bus",
+      "priority_four_played": 2,
+      "raw_sample_peak": 0.861634,
+      "sample_overrange": false,
+      "samples_at_or_above_full_scale": 0,
+      "scene": "spell_storm",
+      "sfx_bus_rms_after_gain": 0.0285885,
+      "stolen": 1,
+      "suppressed": 1
+    }
+  ],
+  "sample_rate": 48000,
+  "scene_count": 6,
+  "schema": "p08.offline.combat-scene.v1",
+  "summary": {
+    "bounded_voice_bus": {
+      "max_raw_sample_peak": 1.062535,
+      "overrange_scenes": 1,
+      "stolen_events": 3,
+      "suppressed_events": 3
+    },
+    "music_only_duck": {
+      "max_raw_sample_peak": 1.575739,
+      "overrange_scenes": 2,
+      "stolen_events": 0,
+      "suppressed_events": 0
+    },
+    "unbounded_reference": {
+      "max_raw_sample_peak": 1.575739,
+      "overrange_scenes": 3,
+      "stolen_events": 0,
+      "suppressed_events": 0
+    }
+  }
+}

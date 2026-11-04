@@ -1,0 +1,543 @@
+{
+  "conditions": 18,
+  "limitations": [
+    "Not an ITU true peak or LUFS meter",
+    "100-ms RMS contrast is NOT perceived masking or recognition",
+    "Per-scene gain optimization is noncausal and cannot be assumed possible for real-time playback",
+    "INFEASIBLE_BACKGROUND means even zero SFX gain is insufficient; no fake successful candidate is reported",
+    "No device/listener/Unity/C# runtime test; does not establish quality, rights or game mix"
+  ],
+  "method": "same source hashes/observation order across three policies; no voice stealing; binary search max SFX bus gain for -1 dBFS sample ceiling",
+  "sample_peak_ceiling": 0.8912509,
+  "scene_count": 6,
+  "scenes": [
+    {
+      "background": "mid_pulse",
+      "events_count": 1,
+      "policies": [
+        {
+          "above_sample_ceiling": true,
+          "critical_event_proxies": [],
+          "critical_events_below_exploratory_margin": 0,
+          "event_ids": [
+            "obs-01"
+          ],
+          "events_consumed": 1,
+          "events_suppressed": 0,
+          "events_truncated": 0,
+          "policy": "baseline",
+          "sample_peak": 1.1057799,
+          "sfx_gain": 0.78,
+          "status": "EVALUATED"
+        },
+        {
+          "above_sample_ceiling": true,
+          "critical_event_proxies": [],
+          "critical_events_below_exploratory_margin": 0,
+          "event_ids": [
+            "obs-01"
+          ],
+          "events_consumed": 1,
+          "events_suppressed": 0,
+          "events_truncated": 0,
+          "policy": "fixed_reduction",
+          "sample_peak": 0.9962367,
+          "sfx_gain": 0.37,
+          "status": "EVALUATED"
+        },
+        {
+          "above_sample_ceiling": null,
+          "critical_event_proxies": [],
+          "critical_events_below_exploratory_margin": null,
+          "event_ids": [
+            "obs-01"
+          ],
+          "events_consumed": 1,
+          "events_suppressed": null,
+          "events_truncated": null,
+          "policy": "scene_adaptive_max_safe",
+          "sample_peak": null,
+          "sfx_gain": null,
+          "status": "INFEASIBLE_BACKGROUND"
+        }
+      ],
+      "scene": "single_melee"
+    },
+    {
+      "background": "low_drone",
+      "events_count": 3,
+      "policies": [
+        {
+          "above_sample_ceiling": false,
+          "critical_event_proxies": [],
+          "critical_events_below_exploratory_margin": 0,
+          "event_ids": [
+            "obs-01",
+            "obs-02",
+            "obs-03"
+          ],
+          "events_consumed": 3,
+          "events_suppressed": 0,
+          "events_truncated": 0,
+          "policy": "baseline",
+          "sample_peak": 0.7030425,
+          "sfx_gain": 0.78,
+          "status": "EVALUATED"
+        },
+        {
+          "above_sample_ceiling": false,
+          "critical_event_proxies": [],
+          "critical_events_below_exploratory_margin": 0,
+          "event_ids": [
+            "obs-01",
+            "obs-02",
+            "obs-03"
+          ],
+          "events_consumed": 3,
+          "events_suppressed": 0,
+          "events_truncated": 0,
+          "policy": "fixed_reduction",
+          "sample_peak": 0.482469,
+          "sfx_gain": 0.37,
+          "status": "EVALUATED"
+        },
+        {
+          "above_sample_ceiling": false,
+          "critical_event_proxies": [],
+          "critical_events_below_exploratory_margin": 0,
+          "event_ids": [
+            "obs-01",
+            "obs-02",
+            "obs-03"
+          ],
+          "events_consumed": 3,
+          "events_suppressed": 0,
+          "events_truncated": 0,
+          "policy": "scene_adaptive_max_safe",
+          "sample_peak": 0.7030425,
+          "sfx_gain": 0.78,
+          "status": "EVALUATED"
+        }
+      ],
+      "scene": "spaced_attacks"
+    },
+    {
+      "background": "wide_noise",
+      "events_count": 3,
+      "policies": [
+        {
+          "above_sample_ceiling": true,
+          "critical_event_proxies": [],
+          "critical_events_below_exploratory_margin": 0,
+          "event_ids": [
+            "obs-01",
+            "obs-02",
+            "obs-03"
+          ],
+          "events_consumed": 3,
+          "events_suppressed": 0,
+          "events_truncated": 0,
+          "policy": "baseline",
+          "sample_peak": 0.9902586,
+          "sfx_gain": 0.78,
+          "status": "EVALUATED"
+        },
+        {
+          "above_sample_ceiling": false,
+          "critical_event_proxies": [],
+          "critical_events_below_exploratory_margin": 0,
+          "event_ids": [
+            "obs-01",
+            "obs-02",
+            "obs-03"
+          ],
+          "events_consumed": 3,
+          "events_suppressed": 0,
+          "events_truncated": 0,
+          "policy": "fixed_reduction",
+          "sample_peak": 0.8687254,
+          "sfx_gain": 0.37,
+          "status": "EVALUATED"
+        },
+        {
+          "above_sample_ceiling": false,
+          "critical_event_proxies": [],
+          "critical_events_below_exploratory_margin": 0,
+          "event_ids": [
+            "obs-01",
+            "obs-02",
+            "obs-03"
+          ],
+          "events_consumed": 3,
+          "events_suppressed": 0,
+          "events_truncated": 0,
+          "policy": "scene_adaptive_max_safe",
+          "sample_peak": 0.8912509,
+          "sfx_gain": 0.5026962,
+          "status": "EVALUATED"
+        }
+      ],
+      "scene": "dual_spell"
+    },
+    {
+      "background": "mid_pulse",
+      "events_count": 8,
+      "policies": [
+        {
+          "above_sample_ceiling": true,
+          "critical_event_proxies": [
+            {
+              "below_exploratory_margin": false,
+              "contribution_to_other_rms_db": -0.228,
+              "event": "electric_burst",
+              "id": "obs-04",
+              "priority": 4
+            },
+            {
+              "below_exploratory_margin": true,
+              "contribution_to_other_rms_db": -7.045,
+              "event": "electric_burst",
+              "id": "obs-08",
+              "priority": 4
+            }
+          ],
+          "critical_events_below_exploratory_margin": 1,
+          "event_ids": [
+            "obs-01",
+            "obs-02",
+            "obs-03",
+            "obs-04",
+            "obs-05",
+            "obs-06",
+            "obs-07",
+            "obs-08"
+          ],
+          "events_consumed": 8,
+          "events_suppressed": 0,
+          "events_truncated": 0,
+          "policy": "baseline",
+          "sample_peak": 1.5757394,
+          "sfx_gain": 0.78,
+          "status": "EVALUATED"
+        },
+        {
+          "above_sample_ceiling": true,
+          "critical_event_proxies": [
+            {
+              "below_exploratory_margin": false,
+              "contribution_to_other_rms_db": -2.652,
+              "event": "electric_burst",
+              "id": "obs-04",
+              "priority": 4
+            },
+            {
+              "below_exploratory_margin": true,
+              "contribution_to_other_rms_db": -12.489,
+              "event": "electric_burst",
+              "id": "obs-08",
+              "priority": 4
+            }
+          ],
+          "critical_events_below_exploratory_margin": 1,
+          "event_ids": [
+            "obs-01",
+            "obs-02",
+            "obs-03",
+            "obs-04",
+            "obs-05",
+            "obs-06",
+            "obs-07",
+            "obs-08"
+          ],
+          "events_consumed": 8,
+          "events_suppressed": 0,
+          "events_truncated": 0,
+          "policy": "fixed_reduction",
+          "sample_peak": 1.1403457,
+          "sfx_gain": 0.37,
+          "status": "EVALUATED"
+        },
+        {
+          "above_sample_ceiling": null,
+          "critical_event_proxies": [],
+          "critical_events_below_exploratory_margin": null,
+          "event_ids": [
+            "obs-01",
+            "obs-02",
+            "obs-03",
+            "obs-04",
+            "obs-05",
+            "obs-06",
+            "obs-07",
+            "obs-08"
+          ],
+          "events_consumed": 8,
+          "events_suppressed": null,
+          "events_truncated": null,
+          "policy": "scene_adaptive_max_safe",
+          "sample_peak": null,
+          "sfx_gain": null,
+          "status": "INFEASIBLE_BACKGROUND"
+        }
+      ],
+      "scene": "crowded_raid"
+    },
+    {
+      "background": "low_drone",
+      "events_count": 4,
+      "policies": [
+        {
+          "above_sample_ceiling": true,
+          "critical_event_proxies": [
+            {
+              "below_exploratory_margin": true,
+              "contribution_to_other_rms_db": -18.131,
+              "event": "forest_creature",
+              "id": "obs-01",
+              "priority": 4
+            },
+            {
+              "below_exploratory_margin": true,
+              "contribution_to_other_rms_db": -20.773,
+              "event": "forest_creature",
+              "id": "obs-02",
+              "priority": 4
+            }
+          ],
+          "critical_events_below_exploratory_margin": 2,
+          "event_ids": [
+            "obs-01",
+            "obs-02",
+            "obs-03",
+            "obs-04"
+          ],
+          "events_consumed": 4,
+          "events_suppressed": 0,
+          "events_truncated": 0,
+          "policy": "baseline",
+          "sample_peak": 0.9744357,
+          "sfx_gain": 0.78,
+          "status": "EVALUATED"
+        },
+        {
+          "above_sample_ceiling": false,
+          "critical_event_proxies": [
+            {
+              "below_exploratory_margin": true,
+              "contribution_to_other_rms_db": -24.609,
+              "event": "forest_creature",
+              "id": "obs-01",
+              "priority": 4
+            },
+            {
+              "below_exploratory_margin": true,
+              "contribution_to_other_rms_db": -26.747,
+              "event": "forest_creature",
+              "id": "obs-02",
+              "priority": 4
+            }
+          ],
+          "critical_events_below_exploratory_margin": 2,
+          "event_ids": [
+            "obs-01",
+            "obs-02",
+            "obs-03",
+            "obs-04"
+          ],
+          "events_consumed": 4,
+          "events_suppressed": 0,
+          "events_truncated": 0,
+          "policy": "fixed_reduction",
+          "sample_peak": 0.5972376,
+          "sfx_gain": 0.37,
+          "status": "EVALUATED"
+        },
+        {
+          "above_sample_ceiling": false,
+          "critical_event_proxies": [
+            {
+              "below_exploratory_margin": true,
+              "contribution_to_other_rms_db": -19.201,
+              "event": "forest_creature",
+              "id": "obs-01",
+              "priority": 4
+            },
+            {
+              "below_exploratory_margin": true,
+              "contribution_to_other_rms_db": -21.716,
+              "event": "forest_creature",
+              "id": "obs-02",
+              "priority": 4
+            }
+          ],
+          "critical_events_below_exploratory_margin": 2,
+          "event_ids": [
+            "obs-01",
+            "obs-02",
+            "obs-03",
+            "obs-04"
+          ],
+          "events_consumed": 4,
+          "events_suppressed": 0,
+          "events_truncated": 0,
+          "policy": "scene_adaptive_max_safe",
+          "sample_peak": 0.8912509,
+          "sfx_gain": 0.6895813,
+          "status": "EVALUATED"
+        }
+      ],
+      "scene": "boss_roar"
+    },
+    {
+      "background": "wide_noise",
+      "events_count": 6,
+      "policies": [
+        {
+          "above_sample_ceiling": true,
+          "critical_event_proxies": [
+            {
+              "below_exploratory_margin": false,
+              "contribution_to_other_rms_db": -3.893,
+              "event": "electric_burst",
+              "id": "obs-03",
+              "priority": 4
+            },
+            {
+              "below_exploratory_margin": false,
+              "contribution_to_other_rms_db": -4.823,
+              "event": "electric_burst",
+              "id": "obs-05",
+              "priority": 4
+            }
+          ],
+          "critical_events_below_exploratory_margin": 0,
+          "event_ids": [
+            "obs-01",
+            "obs-02",
+            "obs-03",
+            "obs-04",
+            "obs-05",
+            "obs-06"
+          ],
+          "events_consumed": 6,
+          "events_suppressed": 0,
+          "events_truncated": 0,
+          "policy": "baseline",
+          "sample_peak": 1.1343096,
+          "sfx_gain": 0.78,
+          "status": "EVALUATED"
+        },
+        {
+          "above_sample_ceiling": false,
+          "critical_event_proxies": [
+            {
+              "below_exploratory_margin": true,
+              "contribution_to_other_rms_db": -9.812,
+              "event": "electric_burst",
+              "id": "obs-03",
+              "priority": 4
+            },
+            {
+              "below_exploratory_margin": true,
+              "contribution_to_other_rms_db": -9.984,
+              "event": "electric_burst",
+              "id": "obs-05",
+              "priority": 4
+            }
+          ],
+          "critical_events_below_exploratory_margin": 2,
+          "event_ids": [
+            "obs-01",
+            "obs-02",
+            "obs-03",
+            "obs-04",
+            "obs-05",
+            "obs-06"
+          ],
+          "events_consumed": 6,
+          "events_suppressed": 0,
+          "events_truncated": 0,
+          "policy": "fixed_reduction",
+          "sample_peak": 0.8616338,
+          "sfx_gain": 0.37,
+          "status": "EVALUATED"
+        },
+        {
+          "above_sample_ceiling": false,
+          "critical_event_proxies": [
+            {
+              "below_exploratory_margin": true,
+              "contribution_to_other_rms_db": -8.094,
+              "event": "electric_burst",
+              "id": "obs-03",
+              "priority": 4
+            },
+            {
+              "below_exploratory_margin": true,
+              "contribution_to_other_rms_db": -8.402,
+              "event": "electric_burst",
+              "id": "obs-05",
+              "priority": 4
+            }
+          ],
+          "critical_events_below_exploratory_margin": 2,
+          "event_ids": [
+            "obs-01",
+            "obs-02",
+            "obs-03",
+            "obs-04",
+            "obs-05",
+            "obs-06"
+          ],
+          "events_consumed": 6,
+          "events_suppressed": 0,
+          "events_truncated": 0,
+          "policy": "scene_adaptive_max_safe",
+          "sample_peak": 0.8912509,
+          "sfx_gain": 0.4555741,
+          "status": "EVALUATED"
+        }
+      ],
+      "scene": "spell_storm"
+    }
+  ],
+  "schema": "p08.v5.headroom-vs-event-contrast.v1",
+  "source_sha256": {
+    "arcane_portal_v01.wav": "a6416945aac40cbfde521e8dd6e83899f7aae1fdfad039dae613dfffa45b06b1",
+    "arcane_portal_v02.wav": "88ad385f5b0e328143900f1aa24f48f50367e1e4c26d78a05c6e3b25dbedca5c",
+    "electric_burst_v01.wav": "580630a31410e84bd664f1438bb60657252f8f83815ef53d733ab312672c6969",
+    "electric_burst_v02.wav": "69e5d199077a213a30a90e91c08dd18e2ce7185a731c7291f3adac1acdb41a29",
+    "fire_spell_v01.wav": "378717df34877c8ce3e88f735b4f1528fb3f6155ecef0246c813eb720df2587e",
+    "fire_spell_v02.wav": "6f1dcebd329d3130dd115b4e0cb7512fef2762367875c3bd452e8c6b5f770b41",
+    "forest_creature_v01.wav": "cb7b45cd9ddbcb473719504b7db892113a268454ea965386b63524887b838e1d",
+    "forest_creature_v02.wav": "96d40c45eebc894e47f3277de761c1379d5618a5578d69dffef17eae0229312b",
+    "steel_armor_v01.wav": "eaef05618d6e9106f30c61768e36a72d651d9679b500de3ebde0567ff3e6e0bf",
+    "steel_armor_v02.wav": "8a614a0b11a44afae47b2a9b7773eea8b368e49e3251235db35bb2a29417deed",
+    "stone_impact_v01.wav": "5226141e43d8d088f0e45834bd5a279d3f2f356d4bd009c305b1ff978ca6c2a2",
+    "stone_impact_v02.wav": "426059e68376914ae05f3f4ef1c2f6b4c11cfb6fdb53e8df3c7d6802badc4e4e"
+  },
+  "status": "OFFLINE_RESEARCH_ONLY",
+  "summary": {
+    "baseline": {
+      "ceiling_exceeded_scenes": 5,
+      "infeasible_background_scenes": 0,
+      "min_sfx_gain": 0.78,
+      "sum_critical_proxies_below_margin": 3,
+      "total_events_suppressed": 0
+    },
+    "fixed_reduction": {
+      "ceiling_exceeded_scenes": 2,
+      "infeasible_background_scenes": 0,
+      "min_sfx_gain": 0.37,
+      "sum_critical_proxies_below_margin": 5,
+      "total_events_suppressed": 0
+    },
+    "scene_adaptive_max_safe": {
+      "ceiling_exceeded_scenes": 0,
+      "infeasible_background_scenes": 2,
+      "min_sfx_gain": 0.4555741,
+      "sum_critical_proxies_below_margin": 4,
+      "total_events_suppressed": 0
+    }
+  }
+}

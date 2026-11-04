@@ -1,0 +1,74 @@
+{
+  "flagged_pairs": 3,
+  "pairs": [
+    {
+      "a": "arcane_portal_v01.wav",
+      "b": "arcane_portal_v02.wav",
+      "duration_difference_ms": 0.0,
+      "event": "arcane_portal",
+      "global_log_spectrum_cosine": 0.999866,
+      "normalized_envelope_cosine": 0.999868,
+      "same_sample_rate": 48000,
+      "triage_flag": "COARSE_TEXTURE_SIMILARITY_REVIEW",
+      "waveform_ncc_max_20ms": 0.036938
+    },
+    {
+      "a": "electric_burst_v01.wav",
+      "b": "electric_burst_v02.wav",
+      "duration_difference_ms": 0.0,
+      "event": "electric_burst",
+      "global_log_spectrum_cosine": 0.99995,
+      "normalized_envelope_cosine": 0.89132,
+      "same_sample_rate": 48000,
+      "triage_flag": "NO_AUTOMATIC_WARNING",
+      "waveform_ncc_max_20ms": 0.396091
+    },
+    {
+      "a": "fire_spell_v01.wav",
+      "b": "fire_spell_v02.wav",
+      "duration_difference_ms": 0.0,
+      "event": "fire_spell",
+      "global_log_spectrum_cosine": 0.999834,
+      "normalized_envelope_cosine": 0.993535,
+      "same_sample_rate": 48000,
+      "triage_flag": "COARSE_TEXTURE_SIMILARITY_REVIEW",
+      "waveform_ncc_max_20ms": 0.043508
+    },
+    {
+      "a": "forest_creature_v01.wav",
+      "b": "forest_creature_v02.wav",
+      "duration_difference_ms": 0.0,
+      "event": "forest_creature",
+      "global_log_spectrum_cosine": 0.999522,
+      "normalized_envelope_cosine": 0.992991,
+      "same_sample_rate": 48000,
+      "triage_flag": "COARSE_TEXTURE_SIMILARITY_REVIEW",
+      "waveform_ncc_max_20ms": 0.13075
+    },
+    {
+      "a": "steel_armor_v01.wav",
+      "b": "steel_armor_v02.wav",
+      "duration_difference_ms": 0.0,
+      "event": "steel_armor",
+      "global_log_spectrum_cosine": 0.999727,
+      "normalized_envelope_cosine": 0.967449,
+      "same_sample_rate": 48000,
+      "triage_flag": "NO_AUTOMATIC_WARNING",
+      "waveform_ncc_max_20ms": 0.759285
+    },
+    {
+      "a": "stone_impact_v01.wav",
+      "b": "stone_impact_v02.wav",
+      "duration_difference_ms": 0.0,
+      "event": "stone_impact",
+      "global_log_spectrum_cosine": 0.99972,
+      "normalized_envelope_cosine": 0.921821,
+      "same_sample_rate": 48000,
+      "triage_flag": "NO_AUTOMATIC_WARNING",
+      "waveform_ncc_max_20ms": 0.725531
+    }
+  ],
+  "scope": "exploratory DSP triage; similarity is not perceived realism or distinguishability",
+  "total_events": 6,
+  "total_variants": 12
+}
