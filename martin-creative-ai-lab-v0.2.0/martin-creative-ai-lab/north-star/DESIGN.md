@@ -967,3 +967,15 @@ trial, not world recovery. Actual winning and losing software policies demonstra
 consequences, not optimal tactics or player agency findings. Only bounded source queue/
 LIFO/paid-cast requirements are consumed; full battle/trigger/initiative/fizzle remains
 unresolved. [Execution](../evidence/response-chain/RUN.json) retains negative controls.
+
+## Explicit Field expedition closure — experimental
+
+The existing component-to-field journey now offers a deliberate irreversible outer
+withdrawal after actual departure and before final completion. It retains spent costs,
+earned progression and the last child encounter as history; it does not simulate retreat,
+return, death or delivery. Carried sample custody is relinquished while its actual
+acquisition receipt remains. Later preparation/play cannot reopen this owner. This is
+an original finite trial policy informed by CRE-005 agency direction and ENG-015 temporal
+ownership, not approved world lore or a source Crossing action. Its value to human
+players, readability and balance remain unvalidated; executed software acceptance
+belongs to the [current evidence](../evidence/field-withdrawal/RUN.json).

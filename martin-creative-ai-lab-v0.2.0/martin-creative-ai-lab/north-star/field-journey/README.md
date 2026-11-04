@@ -213,3 +213,40 @@ preparation and a separately authored slot variant through actual unchanged owne
 This is a bounded original authoring workflow, not the historical character-create
 parser, full avatar creator, new skill catalog, human-tested authoring utility, production
 ownership assignment or final class canon. No recipient package or save is changed.
+
+## Explicit expedition withdrawal — original bounded policy
+
+After actual paid departure, the confirmed person may explicitly withdraw from this
+unfinished expedition. This closes the OUTER local trial irreversibly. It is not a
+new Crossing retreat action: the unchanged child's last HP, resolve, position, beat,
+active/won/failed state and earned progression remain historical facts. No physical
+escape, home return, delivery, defeat or completion is inferred. An already completed
+road cannot be retroactively withdrawn. A failed attempt may also be deliberately
+closed instead of retried.
+
+The receipt records actual costs and child facts at withdrawal. Materials, consumed
+rigs, earned XP and acquisition history remain unchanged. A currently carried sample
+is explicitly relinquished: custody becomes lost with reason `withdrawn`, retaining
+its real collection receipt and acquired/spent history. An unused case is not falsely
+broken or spent. Secured cargo cannot be retroactively forfeited through this command.
+
+Every later mutation is refused, including retry, preparation, assembly, workshop,
+allocation, sampling and another withdrawal. Reads and browser reload preserve the
+same closed owner; restarting the host creates a distinct ephemeral trial, not a refund
+or rearm of this one. The UI labels the last encounter historical, removes live threat
+and site affordances and leaves factual reading available. Raw child `active=true`
+may coexist with outer `withdrawn=true`; neither is rewritten to pretend another result.
+This experimental policy is not world retreat simulation, a save/account, source canon,
+balanced choice, human comprehension or Unity/Windows delivery evidence.
+
+```sh
+dotnet build north-star/field-journey/WithdrawalChecks/NorthStar.WithdrawalChecks.csproj -c Release
+dotnet north-star/field-journey/WithdrawalChecks/bin/Release/net10.0/NorthStar.WithdrawalChecks.dll EXTERNAL_NATIVE_JSON
+node north-star/field-journey/tools/withdrawal-browser.mjs dotnet EXTERNAL_BROWSER_DIRECTORY
+```
+
+The [prospective protocol](tools/withdrawal-protocol.json) and
+[execution](../../evidence/field-withdrawal/RUN.json) distinguish actual command
+acceptance, retained child facts, lost custody, renderer negatives and prior regressions.
+The existing maximal preparation verifier remains the affected-regression command;
+its prior command bodies, assertions and timeouts remain intact.

@@ -1,0 +1,930 @@
+{
+  "schema_version": 1,
+  "kind": "actual_csharp_typed_queries_and_owned_offer",
+  "checks": {
+    "passed": 39,
+    "failed": 0
+  },
+  "controls": [
+    "Known false can satisfy an exact negative",
+    "Known true does not satisfy negative",
+    "Missing observation is incomplete not false",
+    "Missing provider is incomplete",
+    "Foreign exact context is incomplete",
+    "Context spelling is ordinal",
+    "Query kinds are separate identity namespaces",
+    "OR cannot bypass missing query",
+    "False AND cannot bypass missing query",
+    "Unknown function rejected",
+    "Unknown exact query ID rejected",
+    "Unknown case variant ID rejected",
+    "Function names are exact",
+    "Suffix is not silently stripped",
+    "Trailing query text rejected",
+    "Nonboolean query comparison rejected",
+    "Unsupported query operator rejected",
+    "Multiple arguments rejected",
+    "Legacy scalar compiler does not acquire query permissions",
+    "Duplicate query declaration rejected",
+    "Duplicate observation rejected",
+    "Invalid query enum rejected",
+    "Compiled declarations and observation lists are copied",
+    "Scalar API remains exact",
+    "Bare declared Boolean query remains true test",
+    "Initial unsupported withdrawal refuses",
+    "Actual help accepted strict",
+    "Actual help accepted original",
+    "Renewed support and recent are real even when offer closed",
+    "Same actual preparation cost under both policies",
+    "Closed offer repeat withdrawal refuses",
+    "Repeated closed withdrawal does not change paid facts or history",
+    "Real typed negative query alone prevents reopened service",
+    "Denied service spends nothing and writes no receipt",
+    "Original policy still supplies after paid renewal",
+    "West closure does not close other actual bench",
+    "Decline after acquisition retains actual fitting",
+    "Elapsed action turns cannot erase acquired fitting or reopen offer",
+    "Reads do not tick or change offer"
+  ],
+  "source_results": [
+    {
+      "id": "source_DV_NPC0007_SMALLTALK_002_1",
+      "complete": true,
+      "satisfied": false
+    },
+    {
+      "id": "source_DV_NPC0007_SMALLTALK_002_2",
+      "complete": true,
+      "satisfied": true
+    },
+    {
+      "id": "source_DV_NPC0007_SMALLTALK_002_3",
+      "complete": true,
+      "satisfied": false
+    },
+    {
+      "id": "source_DV_NPC0007_SMALLTALK_002_4",
+      "complete": true,
+      "satisfied": false
+    },
+    {
+      "id": "source_DV_NPC0007_SMALLTALK_002_5",
+      "complete": true,
+      "satisfied": false
+    },
+    {
+      "id": "source_DV_NPC0007_SMALLTALK_002_6",
+      "complete": true,
+      "satisfied": true
+    },
+    {
+      "id": "source_DV_NPC0007_REQUEST_HELP_001_7",
+      "complete": true,
+      "satisfied": false
+    },
+    {
+      "id": "source_DV_NPC0007_REQUEST_HELP_001_8",
+      "complete": true,
+      "satisfied": true
+    },
+    {
+      "id": "source_DV_NPC0007_REQUEST_HELP_001_9",
+      "complete": true,
+      "satisfied": false
+    },
+    {
+      "id": "source_DV_NPC0007_REQUEST_HELP_001_10",
+      "complete": true,
+      "satisfied": false
+    },
+    {
+      "id": "source_DV_NPC0007_REQUEST_HELP_001_11",
+      "complete": true,
+      "satisfied": false
+    },
+    {
+      "id": "source_DV_NPC0007_REQUEST_HELP_001_12",
+      "complete": true,
+      "satisfied": true
+    },
+    {
+      "id": "source_DV_NPC0007_REQUEST_HELP_002_13",
+      "complete": true,
+      "satisfied": false
+    },
+    {
+      "id": "source_DV_NPC0007_REQUEST_HELP_002_14",
+      "complete": true,
+      "satisfied": true
+    },
+    {
+      "id": "source_DV_NPC0007_REQUEST_HELP_002_15",
+      "complete": true,
+      "satisfied": false
+    },
+    {
+      "id": "source_DV_NPC0007_REQUEST_HELP_002_16",
+      "complete": true,
+      "satisfied": false
+    },
+    {
+      "id": "source_DV_NPC0007_REQUEST_HELP_002_17",
+      "complete": true,
+      "satisfied": false
+    },
+    {
+      "id": "source_DV_NPC0007_REQUEST_HELP_002_18",
+      "complete": true,
+      "satisfied": true
+    },
+    {
+      "id": "source_DV_NPC0007_BLAME_001_19",
+      "complete": true,
+      "satisfied": false
+    },
+    {
+      "id": "source_DV_NPC0007_BLAME_001_20",
+      "complete": true,
+      "satisfied": true
+    },
+    {
+      "id": "source_DV_NPC0007_BLAME_001_21",
+      "complete": true,
+      "satisfied": false
+    },
+    {
+      "id": "source_DV_NPC0007_BLAME_001_22",
+      "complete": true,
+      "satisfied": false
+    },
+    {
+      "id": "source_DV_NPC0007_BLAME_001_23",
+      "complete": true,
+      "satisfied": false
+    },
+    {
+      "id": "source_DV_NPC0007_BLAME_001_24",
+      "complete": true,
+      "satisfied": true
+    },
+    {
+      "id": "source_DV_NPC0007_BLAME_002_25",
+      "complete": true,
+      "satisfied": false
+    },
+    {
+      "id": "source_DV_NPC0007_BLAME_002_26",
+      "complete": true,
+      "satisfied": true
+    },
+    {
+      "id": "source_DV_NPC0007_BLAME_002_27",
+      "complete": true,
+      "satisfied": false
+    },
+    {
+      "id": "source_DV_NPC0007_BLAME_002_28",
+      "complete": true,
+      "satisfied": false
+    },
+    {
+      "id": "source_DV_NPC0007_BLAME_002_29",
+      "complete": true,
+      "satisfied": false
+    },
+    {
+      "id": "source_DV_NPC0007_BLAME_002_30",
+      "complete": true,
+      "satisfied": true
+    },
+    {
+      "id": "source_DV_NPC0007_APOLOGY_001_31",
+      "complete": true,
+      "satisfied": false
+    },
+    {
+      "id": "source_DV_NPC0007_APOLOGY_001_32",
+      "complete": true,
+      "satisfied": false
+    },
+    {
+      "id": "source_DV_NPC0007_APOLOGY_001_33",
+      "complete": true,
+      "satisfied": false
+    },
+    {
+      "id": "source_DV_NPC0007_APOLOGY_001_34",
+      "complete": true,
+      "satisfied": true
+    },
+    {
+      "id": "source_DV_NPC0007_APOLOGY_001_35",
+      "complete": true,
+      "satisfied": false
+    },
+    {
+      "id": "source_DV_NPC0007_APOLOGY_001_36",
+      "complete": true,
+      "satisfied": false
+    },
+    {
+      "id": "source_DV_NPC0007_APOLOGY_001_37",
+      "complete": true,
+      "satisfied": false
+    },
+    {
+      "id": "source_DV_NPC0007_APOLOGY_001_38",
+      "complete": true,
+      "satisfied": false
+    },
+    {
+      "id": "source_DV_NPC0007_APOLOGY_001_39",
+      "complete": true,
+      "satisfied": false
+    },
+    {
+      "id": "source_DV_NPC0007_APOLOGY_001_40",
+      "complete": true,
+      "satisfied": false
+    },
+    {
+      "id": "source_DV_NPC0007_APOLOGY_001_41",
+      "complete": true,
+      "satisfied": false
+    },
+    {
+      "id": "source_DV_NPC0007_APOLOGY_001_42",
+      "complete": true,
+      "satisfied": true
+    },
+    {
+      "id": "source_DV_NPC0007_THREAT_001_43",
+      "complete": true,
+      "satisfied": false
+    },
+    {
+      "id": "source_DV_NPC0007_THREAT_001_44",
+      "complete": true,
+      "satisfied": true
+    },
+    {
+      "id": "source_DV_NPC0007_THREAT_001_45",
+      "complete": true,
+      "satisfied": false
+    },
+    {
+      "id": "source_DV_NPC0007_THREAT_001_46",
+      "complete": true,
+      "satisfied": false
+    },
+    {
+      "id": "source_DV_NPC0007_THREAT_001_47",
+      "complete": true,
+      "satisfied": false
+    },
+    {
+      "id": "source_DV_NPC0007_THREAT_001_48",
+      "complete": true,
+      "satisfied": true
+    },
+    {
+      "id": "source_DV_NPC0007_OBSESSION_001_49",
+      "complete": true,
+      "satisfied": false
+    },
+    {
+      "id": "source_DV_NPC0007_OBSESSION_001_50",
+      "complete": true,
+      "satisfied": true
+    },
+    {
+      "id": "source_DV_NPC0007_OBSESSION_002_51",
+      "complete": true,
+      "satisfied": false
+    },
+    {
+      "id": "source_DV_NPC0007_OBSESSION_002_52",
+      "complete": true,
+      "satisfied": false
+    },
+    {
+      "id": "source_DV_NPC0007_OBSESSION_002_53",
+      "complete": true,
+      "satisfied": false
+    },
+    {
+      "id": "source_DV_NPC0007_OBSESSION_002_54",
+      "complete": true,
+      "satisfied": false
+    },
+    {
+      "id": "source_DV_NPC0007_OBSESSION_002_55",
+      "complete": true,
+      "satisfied": false
+    },
+    {
+      "id": "source_DV_NPC0007_OBSESSION_002_56",
+      "complete": true,
+      "satisfied": true
+    },
+    {
+      "id": "source_DV_NPC0007_INSULT_001_57",
+      "complete": true,
+      "satisfied": false
+    },
+    {
+      "id": "source_DV_NPC0007_INSULT_001_58",
+      "complete": true,
+      "satisfied": true
+    },
+    {
+      "id": "source_DV_NPC0007_INSULT_001_59",
+      "complete": true,
+      "satisfied": false
+    },
+    {
+      "id": "source_DV_NPC0007_INSULT_001_60",
+      "complete": true,
+      "satisfied": false
+    },
+    {
+      "id": "source_DV_NPC0007_INSULT_001_61",
+      "complete": true,
+      "satisfied": false
+    },
+    {
+      "id": "source_DV_NPC0007_INSULT_001_62",
+      "complete": true,
+      "satisfied": true
+    },
+    {
+      "id": "source_DV_NPC0007_GOODBYE_001_63",
+      "complete": true,
+      "satisfied": true
+    },
+    {
+      "id": "source_DV_NPC0007_GOODBYE_001_64",
+      "complete": true,
+      "satisfied": false
+    },
+    {
+      "id": "source_DV_NPC0007_GOODBYE_001_65",
+      "complete": true,
+      "satisfied": false
+    },
+    {
+      "id": "source_DV_NPC0007_GOODBYE_001_66",
+      "complete": true,
+      "satisfied": false
+    },
+    {
+      "id": "source_DV_NPC0007_GOODBYE_001_67",
+      "complete": true,
+      "satisfied": true
+    },
+    {
+      "id": "source_DV_NPC0007_GOODBYE_001_68",
+      "complete": true,
+      "satisfied": false
+    },
+    {
+      "id": "source_DV_NPC0007_GOODBYE_002_69",
+      "complete": true,
+      "satisfied": false
+    },
+    {
+      "id": "source_DV_NPC0007_GOODBYE_002_70",
+      "complete": true,
+      "satisfied": true
+    },
+    {
+      "id": "source_DV_NPC0007_GOODBYE_002_71",
+      "complete": true,
+      "satisfied": true
+    },
+    {
+      "id": "source_DV_NPC0007_GOODBYE_002_72",
+      "complete": true,
+      "satisfied": true
+    },
+    {
+      "id": "source_DV_NPC0007_GOODBYE_002_73",
+      "complete": true,
+      "satisfied": false
+    },
+    {
+      "id": "source_DV_NPC0007_GOODBYE_002_74",
+      "complete": true,
+      "satisfied": true
+    },
+    {
+      "id": "source_DV_TEST_FLAGOPS_001_75",
+      "complete": true,
+      "satisfied": false
+    },
+    {
+      "id": "source_DV_TEST_FLAGOPS_001_76",
+      "complete": true,
+      "satisfied": true
+    },
+    {
+      "id": "source_DV_TEST_PAREN_001_77",
+      "complete": true,
+      "satisfied": false
+    },
+    {
+      "id": "source_DV_TEST_PAREN_001_78",
+      "complete": true,
+      "satisfied": false
+    },
+    {
+      "id": "source_DV_TEST_PAREN_001_79",
+      "complete": true,
+      "satisfied": false
+    },
+    {
+      "id": "source_DV_TEST_PAREN_001_80",
+      "complete": true,
+      "satisfied": false
+    },
+    {
+      "id": "source_DV_TEST_PAREN_001_81",
+      "complete": true,
+      "satisfied": false
+    },
+    {
+      "id": "source_DV_TEST_PAREN_001_82",
+      "complete": true,
+      "satisfied": false
+    },
+    {
+      "id": "source_DV_TEST_PAREN_001_83",
+      "complete": true,
+      "satisfied": false
+    },
+    {
+      "id": "source_DV_TEST_PAREN_001_84",
+      "complete": true,
+      "satisfied": false
+    },
+    {
+      "id": "source_DV_TEST_PAREN_001_85",
+      "complete": true,
+      "satisfied": false
+    },
+    {
+      "id": "source_DV_TEST_PAREN_001_86",
+      "complete": true,
+      "satisfied": false
+    },
+    {
+      "id": "source_DV_TEST_PAREN_001_87",
+      "complete": true,
+      "satisfied": true
+    },
+    {
+      "id": "source_DV_TEST_PAREN_001_88",
+      "complete": true,
+      "satisfied": false
+    },
+    {
+      "id": "source_DV_TEST_PAREN_001_89",
+      "complete": true,
+      "satisfied": true
+    },
+    {
+      "id": "source_DV_TEST_PAREN_001_90",
+      "complete": true,
+      "satisfied": false
+    },
+    {
+      "id": "source_DV_TEST_PAREN_001_91",
+      "complete": true,
+      "satisfied": true
+    },
+    {
+      "id": "source_DV_TEST_PAREN_001_92",
+      "complete": true,
+      "satisfied": false
+    },
+    {
+      "id": "source_DV_TEST_TAGFALSE_001_93",
+      "complete": true,
+      "satisfied": false
+    },
+    {
+      "id": "source_DV_TEST_TAGFALSE_001_94",
+      "complete": true,
+      "satisfied": false
+    },
+    {
+      "id": "source_DV_TEST_TAGFALSE_001_95",
+      "complete": true,
+      "satisfied": true
+    },
+    {
+      "id": "source_DV_TEST_TAGFALSE_001_96",
+      "complete": true,
+      "satisfied": false
+    },
+    {
+      "id": "source_DV_TEST_TAGFALSE_002_97",
+      "complete": true,
+      "satisfied": false
+    },
+    {
+      "id": "source_DV_TEST_TAGFALSE_002_98",
+      "complete": true,
+      "satisfied": false
+    },
+    {
+      "id": "source_DV_TEST_TAGFALSE_002_99",
+      "complete": true,
+      "satisfied": false
+    },
+    {
+      "id": "source_DV_TEST_TAGFALSE_002_100",
+      "complete": true,
+      "satisfied": true
+    },
+    {
+      "id": "source_DV_TEST_FLAGFALSE_001_101",
+      "complete": true,
+      "satisfied": false
+    },
+    {
+      "id": "source_DV_TEST_FLAGFALSE_001_102",
+      "complete": true,
+      "satisfied": false
+    },
+    {
+      "id": "source_DV_TEST_FLAGFALSE_001_103",
+      "complete": true,
+      "satisfied": true
+    },
+    {
+      "id": "source_DV_TEST_FLAGFALSE_001_104",
+      "complete": true,
+      "satisfied": false
+    },
+    {
+      "id": "source_DV_TEST_FLAGFALSE_002_105",
+      "complete": true,
+      "satisfied": false
+    },
+    {
+      "id": "source_DV_TEST_FLAGFALSE_002_106",
+      "complete": true,
+      "satisfied": false
+    },
+    {
+      "id": "source_DV_TEST_FLAGFALSE_002_107",
+      "complete": true,
+      "satisfied": false
+    },
+    {
+      "id": "source_DV_TEST_FLAGFALSE_002_108",
+      "complete": true,
+      "satisfied": true
+    },
+    {
+      "id": "source_DV_TEST_FLAGOPS_002_109",
+      "complete": true,
+      "satisfied": false
+    },
+    {
+      "id": "source_DV_TEST_FLAGOPS_002_110",
+      "complete": true,
+      "satisfied": true
+    },
+    {
+      "id": "helper_HasTag_0_0",
+      "complete": true,
+      "satisfied": true
+    },
+    {
+      "id": "helper_HasTag_0_1",
+      "complete": true,
+      "satisfied": false
+    },
+    {
+      "id": "helper_HasTag_1_0",
+      "complete": true,
+      "satisfied": false
+    },
+    {
+      "id": "helper_HasTag_1_1",
+      "complete": true,
+      "satisfied": true
+    },
+    {
+      "id": "helper_HasFlag_0_0",
+      "complete": true,
+      "satisfied": true
+    },
+    {
+      "id": "helper_HasFlag_0_1",
+      "complete": true,
+      "satisfied": false
+    },
+    {
+      "id": "helper_HasFlag_1_0",
+      "complete": true,
+      "satisfied": false
+    },
+    {
+      "id": "helper_HasFlag_1_1",
+      "complete": true,
+      "satisfied": true
+    },
+    {
+      "id": "helper_HasRecentEvent_0_0",
+      "complete": true,
+      "satisfied": true
+    },
+    {
+      "id": "helper_HasRecentEvent_0_1",
+      "complete": true,
+      "satisfied": false
+    },
+    {
+      "id": "helper_HasRecentEvent_1_0",
+      "complete": true,
+      "satisfied": false
+    },
+    {
+      "id": "helper_HasRecentEvent_1_1",
+      "complete": true,
+      "satisfied": true
+    }
+  ],
+  "states": {
+    "strict": {
+      "sequence": 8,
+      "command": "serve",
+      "accepted": true,
+      "text": "One coin and one action spent. The east bench actually supplied its one fitting. Later expiry cannot erase this output.",
+      "turn": 4,
+      "parts": 1,
+      "coins": 1,
+      "policy": "single-offer",
+      "complete": false,
+      "benches": [
+        {
+          "id": "west",
+          "helped": true,
+          "support": true,
+          "recent": true,
+          "offer_closed": true,
+          "expires": 5,
+          "eligible": false,
+          "delivered": false,
+          "condition_expression": "HasTag(local-request)=true \u0026 HasFlag(helped)=true \u0026 HasFlag(support)=true \u0026 HasRecentEvent(demonstrated)=true \u0026 HasFlag(offer-closed)=false",
+          "condition_satisfied": false,
+          "condition_complete": true
+        },
+        {
+          "id": "east",
+          "helped": true,
+          "support": true,
+          "recent": true,
+          "offer_closed": false,
+          "expires": 6,
+          "eligible": false,
+          "delivered": true,
+          "condition_expression": "HasTag(local-request)=true \u0026 HasFlag(helped)=true \u0026 HasFlag(support)=true \u0026 HasRecentEvent(demonstrated)=true \u0026 HasFlag(offer-closed)=false",
+          "condition_satisfied": true,
+          "condition_complete": true
+        }
+      ],
+      "history": [
+        {
+          "sequence": 2,
+          "command": "help",
+          "bench": "west",
+          "turn": 1,
+          "parts": 3,
+          "coins": 2,
+          "fittings": 0
+        },
+        {
+          "sequence": 3,
+          "command": "decline",
+          "bench": "west",
+          "turn": 1,
+          "parts": 3,
+          "coins": 2,
+          "fittings": 0
+        },
+        {
+          "sequence": 4,
+          "command": "demonstrate",
+          "bench": "west",
+          "turn": 2,
+          "parts": 2,
+          "coins": 2,
+          "fittings": 0
+        },
+        {
+          "sequence": 7,
+          "command": "help",
+          "bench": "east",
+          "turn": 3,
+          "parts": 1,
+          "coins": 2,
+          "fittings": 0
+        },
+        {
+          "sequence": 8,
+          "command": "serve",
+          "bench": "east",
+          "turn": 4,
+          "parts": 1,
+          "coins": 1,
+          "fittings": 1
+        }
+      ]
+    },
+    "original": {
+      "sequence": 4,
+      "command": "serve",
+      "accepted": true,
+      "text": "One coin and one action spent. The west bench actually supplied its one fitting. Later expiry cannot erase this output.",
+      "turn": 3,
+      "parts": 2,
+      "coins": 1,
+      "policy": "independent",
+      "complete": false,
+      "benches": [
+        {
+          "id": "west",
+          "helped": true,
+          "support": true,
+          "recent": true,
+          "offer_closed": false,
+          "expires": 5,
+          "eligible": false,
+          "delivered": true,
+          "condition_expression": "Helped=true \u0026 Support=true \u0026 Recent=true",
+          "condition_satisfied": true,
+          "condition_complete": true
+        },
+        {
+          "id": "east",
+          "helped": false,
+          "support": false,
+          "recent": false,
+          "offer_closed": false,
+          "expires": null,
+          "eligible": false,
+          "delivered": false,
+          "condition_expression": "Helped=true \u0026 Support=true \u0026 Recent=true",
+          "condition_satisfied": false,
+          "condition_complete": true
+        }
+      ],
+      "history": [
+        {
+          "sequence": 1,
+          "command": "help",
+          "bench": "west",
+          "turn": 1,
+          "parts": 3,
+          "coins": 2,
+          "fittings": 0
+        },
+        {
+          "sequence": 2,
+          "command": "decline",
+          "bench": "west",
+          "turn": 1,
+          "parts": 3,
+          "coins": 2,
+          "fittings": 0
+        },
+        {
+          "sequence": 3,
+          "command": "demonstrate",
+          "bench": "west",
+          "turn": 2,
+          "parts": 2,
+          "coins": 2,
+          "fittings": 0
+        },
+        {
+          "sequence": 4,
+          "command": "serve",
+          "bench": "west",
+          "turn": 3,
+          "parts": 2,
+          "coins": 1,
+          "fittings": 1
+        }
+      ]
+    },
+    "delivered": {
+      "sequence": 7,
+      "command": "wait",
+      "accepted": true,
+      "text": "One deliberately chosen wait action elapsed. No work, fitting, recognition or return was created.",
+      "turn": 6,
+      "parts": 3,
+      "coins": 1,
+      "policy": "single-offer",
+      "complete": false,
+      "benches": [
+        {
+          "id": "west",
+          "helped": true,
+          "support": false,
+          "recent": false,
+          "offer_closed": true,
+          "expires": null,
+          "eligible": false,
+          "delivered": true,
+          "condition_expression": "HasTag(local-request)=true \u0026 HasFlag(helped)=true \u0026 HasFlag(support)=true \u0026 HasRecentEvent(demonstrated)=true \u0026 HasFlag(offer-closed)=false",
+          "condition_satisfied": false,
+          "condition_complete": true
+        },
+        {
+          "id": "east",
+          "helped": false,
+          "support": false,
+          "recent": false,
+          "offer_closed": false,
+          "expires": null,
+          "eligible": false,
+          "delivered": false,
+          "condition_expression": "HasTag(local-request)=true \u0026 HasFlag(helped)=true \u0026 HasFlag(support)=true \u0026 HasRecentEvent(demonstrated)=true \u0026 HasFlag(offer-closed)=false",
+          "condition_satisfied": false,
+          "condition_complete": true
+        }
+      ],
+      "history": [
+        {
+          "sequence": 1,
+          "command": "help",
+          "bench": "west",
+          "turn": 1,
+          "parts": 3,
+          "coins": 2,
+          "fittings": 0
+        },
+        {
+          "sequence": 2,
+          "command": "serve",
+          "bench": "west",
+          "turn": 2,
+          "parts": 3,
+          "coins": 1,
+          "fittings": 1
+        },
+        {
+          "sequence": 3,
+          "command": "decline",
+          "bench": "west",
+          "turn": 2,
+          "parts": 3,
+          "coins": 1,
+          "fittings": 1
+        },
+        {
+          "sequence": 4,
+          "command": "wait",
+          "bench": null,
+          "turn": 3,
+          "parts": 3,
+          "coins": 1,
+          "fittings": 1
+        },
+        {
+          "sequence": 5,
+          "command": "wait",
+          "bench": null,
+          "turn": 4,
+          "parts": 3,
+          "coins": 1,
+          "fittings": 1
+        },
+        {
+          "sequence": 6,
+          "command": "wait",
+          "bench": null,
+          "turn": 5,
+          "parts": 3,
+          "coins": 1,
+          "fittings": 1
+        },
+        {
+          "sequence": 7,
+          "command": "wait",
+          "bench": null,
+          "turn": 6,
+          "parts": 3,
+          "coins": 1,
+          "fittings": 1
+        }
+      ]
+    }
+  }
+}

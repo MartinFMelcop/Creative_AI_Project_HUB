@@ -36,7 +36,7 @@
   const c=s.sample_case,e=s.encounter_view.encounter,id=s.intake.identity,person=id?.handle||'This person';
   const label=c.site==='ridge'?'ridge rubbing':c.site==='channel'?'channel trace':null;
   const panel=$('field-sampling'),cargo=$('field-sample-cargo');
-  panel.dataset.status=sampleStatusObserved;panel.dataset.carried=String(sampleCarriedObserved);panel.dataset.secured=String(sampleSecuredObserved);panel.dataset.caseAvailable=String(!c.case_spent);panel.dataset.caseSpent=String(c.case_spent);
+  panel.dataset.status=sampleStatusObserved;panel.dataset.lossReason=c.loss_reason||'';panel.dataset.carried=String(sampleCarriedObserved);panel.dataset.secured=String(sampleSecuredObserved);panel.dataset.caseAvailable=String(!c.case_spent);panel.dataset.caseSpent=String(c.case_spent);
   cargo.dataset.carried=String(sampleCarriedObserved);cargo.dataset.secured=String(sampleSecuredObserved);
   cargo.setAttribute('aria-label',sampleSecuredObserved?`${person}'s ${label||'sample'} secured through actual final completion; no return or delivery inferred`:sampleCarriedObserved?`${person} currently carries the acquired ${label||'sample'}; the road is not complete`:'No sample currently carried');
   $('sampling-state').textContent=sampleSecuredObserved?'SECURED THROUGH ACTUAL ROAD':sampleCarriedObserved?'CARRIED / NOT SECURED':sampleStatusObserved==='lost'?'CASE LOST / NO SAMPLE CARRIED':'ONE EMPTY CASE';
@@ -69,6 +69,30 @@
    const button=document.createElement('button');button.id='propose-card-'+card.id;button.type='button';button.className='secondary';button.textContent='Propose '+card.title;button.disabled=busy||uncertain||!card.eligible;button.onclick=()=>invoke('propose-card',{card_id:card.id});
    article.append(title,description,preparation,rig,eligibility,button);return article;
   }));
+ }
+ function withdrawalView(s){
+  const withdrawalObserved = s.withdrawn === true;
+  document.body.dataset.withdrawn=String(withdrawalObserved);
+  $('withdrawal-summary').hidden=!withdrawalObserved;
+  $('withdraw-expedition').hidden=!s.workshop_closed||Boolean(s.intake.state.complete)||withdrawalObserved;
+  const board=$('field-encounter-board');board.dataset.historical=String(withdrawalObserved);
+  if(!withdrawalObserved)return;
+  const r=s.withdrawal_receipt;if(!r||s.encounter_historical!==true)throw Error('Actual retained withdrawal receipt required');
+  $('withdrawal-context').textContent=`${s.intake.identity?.handle||'This person'} deliberately ended this expedition. Carried cargo is forfeited; all prior costs and earned progression remain. No home return, delivery or encounter defeat was observed.`;
+  $('withdrawal-receipt').textContent=`Accepted withdrawal ${r.sequence}: attempt ${r.attempt}, stage ${r.stage}, beat ${r.beat}; retained HP ${r.health}, resolve ${r.resolve}, XP ${r.xp}, consumed rigs ${r.consumed_rigs}.`;
+  $('road-stage').textContent='EXPEDITION WITHDRAWN';
+  $('departure-warning').textContent='This expedition is closed by your accepted withdrawal. Preparation, retry and encounter actions cannot resume it. Resources and earned XP are not reset.';
+  $('threat').textContent='HISTORICAL CHILD ENCOUNTER / NO LIVE ACTIONS. Its recorded facts below were not resolved into victory, defeat or return by withdrawal.';
+  $('earned-state').textContent=`Retained earned points: ${s.intake.state.unspent}. This closed expedition cannot allocate, amend, heal or refund them.`;
+  $('field-phase').textContent='WITHDRAWN / HISTORICAL ENCOUNTER';
+  $('field-outcome-label').textContent='OUTER EXPEDITION CLOSED / NO CHILD RESULT FABRICATED';
+  $('field-threshold-note').textContent='Recorded position and beat remain unchanged. This picture is history, not an active objective or observed return.';
+  $('field-threat-label').textContent='HISTORICAL THREAT / NOT ACTIVE';
+  $('field-response').textContent='Accepted expedition withdrawal. No child beat, damage, cost, movement or terminal outcome was fabricated.';
+  $('field-scene-description').textContent='Historical last encounter observation after deliberate expedition withdrawal. No current threat or home return is observed.';
+  for(const e of document.querySelectorAll('.preparation-card-eligibility'))e.textContent='Historical preparation eligibility only. This withdrawn expedition cannot accept another proposal.';
+  for(const site of s.sample_case.sites)$(site.id+'-sample-window').textContent='Expedition withdrawn. Historical site position cannot authorize another collection.';
+  if(s.sample_case.loss_reason==='withdrawn'){$('sampling-state').textContent='FORFEITED / NO SAMPLE CARRIED';$('sampling-picture-title').textContent='Sample custody forfeited by withdrawal. No physical breakage observed.';$('sampling-case').textContent='The carried sample was forfeited by accepted expedition withdrawal. Its acquisition and paid collection receipt remain historical.';}
  }
  function render(s){
   if(!s?.intake?.state||!s?.memory||!Array.isArray(s.fittings))throw Error('Incomplete actual journey observation');
@@ -113,7 +137,7 @@
   $('earned-state').textContent=`Earned points remaining: ${e.unspent}. Vitality ${e.vitality}; Focus ${e.focus}. Between encounters, a new whole proposal may equip earned Dash. Confirmation never heals, refunds or reopens the workshop.`;
   for(let n=1;n<=4;n++)$('use-slot'+n).textContent=`Slot ${n}${id?.slots[n-1]?' · '+id.slots[n-1]:''}`;
   $('completion').hidden=!completeObserved;$('completion').textContent=`${id?.handle||'This person'} completed the actual road. Workshop acquisition and assembly remain distinct from that completion.`;
-  $('sequence').textContent=String(s.sequence);$('notice').textContent=s.text;controls();
+  $('sequence').textContent=String(s.sequence);$('notice').textContent=s.text;withdrawalView(s);controls();
  }
  function controls(){
   for(const b of document.querySelectorAll('button'))b.disabled=busy||uncertain;$('read').disabled=busy;if(!state)return;
@@ -128,6 +152,8 @@
   for(const site of state.sample_case.sites)$('sample-'+site.id).disabled=busy||uncertain||!site.eligible;
   for(const card of state.preparation_book.cards)$('propose-card-'+card.id).disabled=busy||uncertain||!card.eligible;
   for(const key of ['focus','vitality'])$(key).disabled=busy||uncertain||locked||e.unspent<1;
+  $('withdraw-expedition').disabled=busy||uncertain||!state.workshop_closed||e.complete||state.withdrawn===true;
+  if(state.withdrawn===true){for(const el of document.querySelectorAll('button,input,select'))if(el.id!=='read')el.disabled=true;}
  }
  async function read(){if(busy)return;busy=true;controls();const g=++generation;try{const r=await fetch('/state',{cache:'no-store'});if(!r.ok)throw Error('Read refused');const s=await r.json();if(g!==generation)return;uncertain=false;render(s);adopt(s.intake.draft);$('connection').textContent='Current facts read from the owner. No action was retried.';}catch(e){uncertain=true;$('connection').textContent='Unable to read: '+e.message+'. Read again before acting.';}finally{busy=false;controls();}}
  async function send(command,fields={}){if(busy||uncertain||!state)throw Error('Read current facts before another action');busy=true;controls();const g=generation;try{const r=await fetch('/command',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({command,revision:state.sequence,...fields})});if(!r.ok)throw Error('Command receipt unavailable');const s=await r.json();if(g!==generation)throw Error('Response quarantined after interruption');render(s);if(command==='draft'||command==='propose-card')adopt(s.intake.draft);$('connection').textContent='Actual owner response. No automatic retry or clock conversion.';return s;}catch(e){uncertain=true;$('connection').textContent='Outcome uncertain: '+e.message+'. Explicitly read facts before acting again.';throw e;}finally{busy=false;controls();}}
@@ -136,7 +162,7 @@
  for(const bench of ['west','east']){$(bench+'-help').onclick=()=>invoke(state.memory.benches.find(b=>b.id===bench).helped?'demonstrate':'help',{bench});$(bench+'-serve').onclick=()=>invoke('serve',{bench});$(bench+'-decline').onclick=()=>invoke('decline',{bench});}
  for(const site of ['ridge','channel'])$('sample-'+site).onclick=()=>invoke('sample',{site});
  $('wait-window').onclick=()=>invoke('wait-window');$('assemble').onclick=()=>invoke('craft',{bench:$('benchselect').value,rig:$('fittingrig').value});$('begin').onclick=()=>invoke('begin',{rig:$('rig').value});for(const command of ['walk','wait'])$(command).onclick=()=>invoke(command);
- for(let n=1;n<=4;n++)$('use-slot'+n).onclick=()=>invoke('slot',{slot:n});for(const axis of ['focus','vitality'])$(axis).onclick=()=>invoke('allocate',{axis,points:1});$('read').onclick=read;
+ for(let n=1;n<=4;n++)$('use-slot'+n).onclick=()=>invoke('slot',{slot:n});for(const axis of ['focus','vitality'])$(axis).onclick=()=>invoke('allocate',{axis,points:1});$('read').onclick=read;$('withdraw-expedition').onclick=()=>invoke('withdraw');
  function interrupt(){if(busy){generation++;uncertain=true;$('connection').textContent='Interrupted while an action may have committed. Read actual facts; do not repeat blindly.';controls();}}
  window.addEventListener('blur',interrupt);window.addEventListener('offline',interrupt);document.addEventListener('visibilitychange',()=>{if(document.hidden)interrupt();});read();
 })();

@@ -1,0 +1,65 @@
+{
+  "schema_version": 1,
+  "cards": [
+    {
+      "id": "anchor-start",
+      "title": "A steady opening",
+      "description": "Brace protects in place against a bolt. Walking during a pulse changes position. This is a starting proposal, not a supplied Plate rig or a promise of survival.",
+      "class_id": "anchor",
+      "background_id": "workshop",
+      "slots": [
+        "brace",
+        null,
+        null,
+        null
+      ],
+      "minimum_level": 1,
+      "recommended_rig": "plate"
+    },
+    {
+      "id": "lure-start",
+      "title": "Draw a path",
+      "description": "Draw advances one cell against a bolt while spending three resolve. Move during a pulse. A Trail rig is suggested here, not acquired or equipped by this card.",
+      "class_id": "lure",
+      "background_id": "trailborn",
+      "slots": [
+        null,
+        "draw",
+        null,
+        null
+      ],
+      "minimum_level": 1,
+      "recommended_rig": "trail"
+    },
+    {
+      "id": "anchor-dash",
+      "title": "Brace, then move",
+      "description": "Keep Brace and add earned Dash as a separate action. Dash spends one resolve to move two cells. This amendment requires actual level two; it grants no points or recovery.",
+      "class_id": "anchor",
+      "background_id": "workshop",
+      "slots": [
+        "brace",
+        "dash",
+        null,
+        null
+      ],
+      "minimum_level": 2,
+      "recommended_rig": "plate"
+    },
+    {
+      "id": "lure-dash",
+      "title": "Draw, then range",
+      "description": "Keep Draw and add earned Dash for a different movement choice. Both spend actual resolve. This amendment requires actual level two and does not refill resources or begin the next encounter.",
+      "class_id": "lure",
+      "background_id": "trailborn",
+      "slots": [
+        "draw",
+        "dash",
+        null,
+        null
+      ],
+      "minimum_level": 2,
+      "recommended_rig": "trail"
+    }
+  ]
+}

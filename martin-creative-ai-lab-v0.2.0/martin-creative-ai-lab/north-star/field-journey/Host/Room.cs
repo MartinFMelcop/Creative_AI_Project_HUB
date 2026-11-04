@@ -31,6 +31,8 @@ public sealed class Room
     private int sequence;
     private Response response=Projector.Initial();
     private bool workshopClosed;
+    private bool withdrawn;
+    private object? withdrawalReceipt;
     private string command="initial";
     private bool accepted=true;
     private string text="Propose, review and confirm one person before paid preparation. Acquired fittings and field materials are separate finite supplies.";
@@ -41,7 +43,8 @@ public sealed class Room
     private bool Acquired(string bench)=>Memory().GetProperty("benches").EnumerateArray().Single(b=>b.GetProperty("id").GetString()==bench).GetProperty("delivered").GetBoolean();
     private object Observe(string cmd,bool ok,string message)=>new {
         sequence,command=cmd,accepted=ok,text=message,workshop_closed=workshopClosed,
-        sample_case=sampleCase.Snapshot(SamplingFacts(Intake())),
+        withdrawn,encounter_historical=withdrawn,withdrawal_receipt=withdrawalReceipt,
+        sample_case=sampleCase.Snapshot(SamplingFacts(Intake()),!withdrawn),
         preparation_book=PreparationBook(),
         intake=intake.Snapshot(),memory=memory.Snapshot(),encounter_view=Projector.Observe(Facts(Intake()),response),
         fittings=new[]{"west","east"}.Select(bench=>new {bench,acquired=Acquired(bench),spent=assembled.ContainsKey(bench),available=Acquired(bench)&&!assembled.ContainsKey(bench),rig=assembled.TryGetValue(bench,out var rig)?rig:null}).ToArray(),
@@ -49,7 +52,7 @@ public sealed class Room
     };
     private object PreparationBook()
     {
-        var card=Intake();var state=card.GetProperty("state");bool editable=!Flag(state,"active")&&!Flag(state,"complete");int level=state.GetProperty("level").GetInt32();
+        var card=Intake();var state=card.GetProperty("state");bool editable=!withdrawn&&!Flag(state,"active")&&!Flag(state,"complete");int level=state.GetProperty("level").GetInt32();
         return new {sha256=preparationBook.Sha256,draft_card_id=draftCardId,confirmed_card_id=confirmedCardId,cards=preparationBook.Cards.Select(c=>new {id=c.Id,title=c.Title,description=c.Description,class_id=c.Proposal.ClassId,background_id=c.Proposal.BackgroundId,slots=c.Proposal.Slots,minimum_level=c.MinimumLevel,recommended_rig=c.RecommendedRig,eligible=editable&&preparationBook.Eligible(c,level)}).ToArray()};
     }
     private static SampleFacts SamplingFacts(JsonElement card)
@@ -96,7 +99,7 @@ public sealed class Room
             "confirm"=>new[]{"draft_revision"},"allocate"=>new[]{"axis","points"},"slot"=>new[]{"slot"},
             "help" or "demonstrate" or "serve" or "decline"=>new[]{"bench"},"craft"=>new[]{"bench","rig"},"begin"=>new[]{"rig"},
             "sample"=>new[]{"site"},"propose-card"=>new[]{"card_id"},
-            "review" or "walk" or "wait" or "wait-window"=>Array.Empty<string>(),_=>throw new ArgumentException("Unknown command.")};
+            "review" or "walk" or "wait" or "wait-window" or "withdraw"=>Array.Empty<string>(),_=>throw new ArgumentException("Unknown command.")};
         Fields(root,extras);
         // Parse every adapter-owned field before any child can change state.
         int revision=Number(root,"revision");
@@ -108,7 +111,22 @@ public sealed class Room
         if(revision!=sequence)return Observe(cmd,false,"Old outer intent refused. Read current facts before deliberately acting again.");
         int next=checked(sequence+1);bool ok=false;string message;
         var current=Intake();bool confirmed=Flag(current,"confirmed"),ready=confirmed&&!Flag(current,"pending");
-        if(cmd=="propose-card")
+        if(withdrawn)message="This person explicitly withdrew from this expedition. Recorded encounter facts are historical; no later action, retry, preparation, return, refund or completion is authorized.";
+        else if(cmd=="withdraw")
+        {
+            var e=current.GetProperty("state");
+            if(!confirmed||!workshopClosed||e.GetProperty("attempts").GetInt32()<1||Flag(e,"complete"))
+                message="Withdrawal requires this confirmed person's actual departure and an unfinished expedition. No child encounter, resource or custody changed.";
+            else
+            {
+                // Explicit outer lifecycle decision; the unchanged child encounter is
+                // retained as history, never rewritten as defeat, escape or home return.
+                sampleCase.Relinquish();
+                withdrawalReceipt=new {sequence=next,command="withdraw",reason="explicit-person-withdrawal",stage=e.GetProperty("stage").GetInt32(),attempt=e.GetProperty("attempts").GetInt32(),beat=e.GetProperty("beat").GetInt32(),health=e.GetProperty("health").GetInt32(),resolve=e.GetProperty("resolve").GetInt32(),xp=e.GetProperty("xp").GetInt32(),consumed_rigs=e.GetProperty("consumed_rigs").GetInt32(),child_active=Flag(e,"active"),child_won=Flag(e,"won"),complete=false,returned=false};
+                withdrawn=true;ok=true;message="Expedition withdrawn by the confirmed person. Carried sample custody is relinquished; unused supplies and prior costs remain recorded. The last child encounter is historical, not defeated, escaped, completed or returned home. This expedition cannot resume.";
+            }
+        }
+        else if(cmd=="propose-card")
         {
             var e=current.GetProperty("state");
             if(Flag(e,"active")||Flag(e,"complete")||!preparationBook.Eligible(proposed!,e.GetProperty("level").GetInt32()))message="That exact card is unavailable at the actual earned level or current encounter. No proposal, permission or resource was granted.";
@@ -165,7 +183,7 @@ public sealed class Room
         if(ok&&cmd=="confirm")confirmedCardId=draftCardId;
         if(ok)sampleCase.ObserveAcceptedTransition(SamplingFacts(current),SamplingFacts(Intake()));
         // The projector describes the actual delegated draft; the outer receipt retains propose-card.
-        response=Projector.Transition(Facts(current),Facts(Intake()),cmd=="propose-card"?"draft":cmd,ok,ActionKind(cmd,root,current),response.event_sequence);
+        if(!withdrawn)response=Projector.Transition(Facts(current),Facts(Intake()),cmd=="propose-card"?"draft":cmd,ok,ActionKind(cmd,root,current),response.event_sequence);
         sequence=next;command=cmd;accepted=ok;text=message;
         return Snapshot();
     }

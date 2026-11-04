@@ -1,0 +1,7 @@
+{
+  "exit_code": 134,
+  "producer_sha256": "e2a8c21df6ce893351f0b89e624a1cea88033682a25b7415cf780592d99f1096",
+  "observed_error": "Unconfirmed initial person cannot withdraw a never-departed journey",
+  "diagnosis_from_source": "Owned comparator included encounter_view.action, which normally changes to refused on a refused command. Child owners and gameplay must be compared separately; after withdrawal the complete historical view is additionally frozen.",
+  "source_stability_limit": "PreparationBook editable gained !withdrawn while initial build was running. Initial build is not treated as final source-bound execution."
+}

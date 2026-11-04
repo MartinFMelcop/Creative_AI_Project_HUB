@@ -1,0 +1,264 @@
+{
+  "schema_version": 1,
+  "kind": "dialogue_condition_static_source_inspection",
+  "source_sha256": {
+    "references/rave-master/snapshots/36af1651271422ae33856e8b5d7b45702215f165/source/RM_ACT1/DATA/DEV/RGSS/RM_DIALOGUE_SCORING_RUNTIME.rb": "07682a3205ea2850d748e4f3ffeef7febe51df1ddb10d5e8689bef7d26d1a735",
+    "references/rave-master/snapshots/36af1651271422ae33856e8b5d7b45702215f165/source/RM_DIST/RMXP_BASE/ScriptsCustom/RM_DIALOGUE_SCORING_RUNTIME.rb": "07682a3205ea2850d748e4f3ffeef7febe51df1ddb10d5e8689bef7d26d1a735",
+    "references/rave-master/snapshots/36af1651271422ae33856e8b5d7b45702215f165/source/RM_ACT1/DATA/DEV/DIALOGUE_VARIANTS.csv": "7434223aa7fe25a8449796d1648b04257efa355bced6d62a0224e3b3f2606787",
+    "references/rave-master/snapshots/36af1651271422ae33856e8b5d7b45702215f165/source/RM_DIST/RMXP_BASE/Data/RM_CSV/DIALOGUE_VARIANTS.csv": "7434223aa7fe25a8449796d1648b04257efa355bced6d62a0224e3b3f2606787"
+  },
+  "source_stable": true,
+  "runtime_variants_identical": true,
+  "table_variants_identical": true,
+  "variant_rows_per_copy": 29,
+  "columns": 26,
+  "distinct_expressions": [
+    "",
+    "HasTag(OBSESSION_TOPIC)=true",
+    "HasTag(__TEST_FLAGFALSE__)=true & HasFlag(FLAG_PRESENT)=false",
+    "HasTag(__TEST_FLAGFALSE__)=true & HasFlag(FLAG_PRESENT)=true",
+    "HasTag(__TEST_FLAGOPS2__)=true",
+    "HasTag(__TEST_PAREN__)=true & (HasFlag(FLAG_PAREN_A)=true | HasFlag(FLAG_PAREN_B)=true) & HasFlag(FLAG_PAREN_C)=false",
+    "HasTag(__TEST_TAGFALSE__)=true & HasTag(TAG_PRESENT)=false",
+    "HasTag(__TEST_TAGFALSE__)=true & HasTag(TAG_PRESENT)=true",
+    "HasTag(__TEST__)=true",
+    "Mood!=OUTBURST",
+    "Mood!=OUTBURST & HasFlag(FLAG_NPC0007_AVOID_PLAYER_TEMP)=false",
+    "Mood!=OUTBURST & HasTag(OBSESSION_TOPIC)=true",
+    "Mood!=OUTBURST & HasTag(PLAYER_IS_WRONG)=true & HasTag(PLAYER_APOLOGIZED)=true",
+    "Mood!=OUTBURST & HasTag(QUIRK_SELF_TALK)=true",
+    "Mood!=OUTBURST & HasTag(STAKES_HIGH)=true",
+    "Mood!=OUTBURST & HasTag(STAKES_LOW)=true",
+    "Mood!=OUTBURST & Stress<80",
+    "Mood!=OUTBURST & Trust_Player<40",
+    "Mood!=OUTBURST & Trust_Player>=40",
+    "Mood==OBSESSED & HasTag(QUIRK_SWAMP_HERBS)=true",
+    "Mood==OUTBURST",
+    "Mood==OUTBURST | HasFlag(FLAG_NPC0007_AVOID_PLAYER_TEMP)=true",
+    "Stress>=80 & Mood!=OUTBURST"
+  ],
+  "variant_conditions": [
+    {
+      "variant_id": "DV_GLOBAL_0001",
+      "expression": ""
+    },
+    {
+      "variant_id": "DV_GLOBAL_0002",
+      "expression": ""
+    },
+    {
+      "variant_id": "DV_NPC0007_SMALLTALK_001",
+      "expression": "Mood!=OUTBURST"
+    },
+    {
+      "variant_id": "DV_NPC0007_SMALLTALK_002",
+      "expression": "Mood!=OUTBURST & HasTag(QUIRK_SELF_TALK)=true"
+    },
+    {
+      "variant_id": "DV_NPC0007_REQUEST_HELP_001",
+      "expression": "Mood!=OUTBURST & HasTag(OBSESSION_TOPIC)=true"
+    },
+    {
+      "variant_id": "DV_NPC0007_REQUEST_HELP_002",
+      "expression": "Mood!=OUTBURST & HasTag(STAKES_LOW)=true"
+    },
+    {
+      "variant_id": "DV_NPC0007_NEGOTIATION_001",
+      "expression": "Mood!=OUTBURST & Trust_Player>=40"
+    },
+    {
+      "variant_id": "DV_NPC0007_NEGOTIATION_002",
+      "expression": "Mood!=OUTBURST & Trust_Player<40"
+    },
+    {
+      "variant_id": "DV_NPC0007_BLAME_001",
+      "expression": "Mood!=OUTBURST & HasTag(STAKES_LOW)=true"
+    },
+    {
+      "variant_id": "DV_NPC0007_BLAME_002",
+      "expression": "Mood!=OUTBURST & HasTag(STAKES_HIGH)=true"
+    },
+    {
+      "variant_id": "DV_NPC0007_APOLOGY_001",
+      "expression": "Mood!=OUTBURST & HasTag(PLAYER_IS_WRONG)=true & HasTag(PLAYER_APOLOGIZED)=true"
+    },
+    {
+      "variant_id": "DV_NPC0007_THREAT_001",
+      "expression": "Mood!=OUTBURST & HasTag(STAKES_LOW)=true"
+    },
+    {
+      "variant_id": "DV_NPC0007_THREAT_002",
+      "expression": "Mood==OUTBURST"
+    },
+    {
+      "variant_id": "DV_NPC0007_MANIP_SUS_001",
+      "expression": "Mood!=OUTBURST"
+    },
+    {
+      "variant_id": "DV_NPC0007_MANIP_CONF_WARN_001",
+      "expression": "Mood!=OUTBURST & Stress<80"
+    },
+    {
+      "variant_id": "DV_NPC0007_MANIP_CONF_OUTBURST_001",
+      "expression": "Stress>=80 & Mood!=OUTBURST"
+    },
+    {
+      "variant_id": "DV_NPC0007_OBSESSION_001",
+      "expression": "HasTag(OBSESSION_TOPIC)=true"
+    },
+    {
+      "variant_id": "DV_NPC0007_OBSESSION_002",
+      "expression": "Mood==OBSESSED & HasTag(QUIRK_SWAMP_HERBS)=true"
+    },
+    {
+      "variant_id": "DV_NPC0007_INSULT_001",
+      "expression": "Mood!=OUTBURST & HasTag(STAKES_LOW)=true"
+    },
+    {
+      "variant_id": "DV_NPC0007_INSULT_002",
+      "expression": "Mood==OUTBURST"
+    },
+    {
+      "variant_id": "DV_NPC0007_GOODBYE_001",
+      "expression": "Mood!=OUTBURST & HasFlag(FLAG_NPC0007_AVOID_PLAYER_TEMP)=false"
+    },
+    {
+      "variant_id": "DV_NPC0007_GOODBYE_002",
+      "expression": "Mood==OUTBURST | HasFlag(FLAG_NPC0007_AVOID_PLAYER_TEMP)=true"
+    },
+    {
+      "variant_id": "DV_TEST_FLAGOPS_001",
+      "expression": "HasTag(__TEST__)=true"
+    },
+    {
+      "variant_id": "DV_TEST_PAREN_001",
+      "expression": "HasTag(__TEST_PAREN__)=true & (HasFlag(FLAG_PAREN_A)=true | HasFlag(FLAG_PAREN_B)=true) & HasFlag(FLAG_PAREN_C)=false"
+    },
+    {
+      "variant_id": "DV_TEST_TAGFALSE_001",
+      "expression": "HasTag(__TEST_TAGFALSE__)=true & HasTag(TAG_PRESENT)=false"
+    },
+    {
+      "variant_id": "DV_TEST_TAGFALSE_002",
+      "expression": "HasTag(__TEST_TAGFALSE__)=true & HasTag(TAG_PRESENT)=true"
+    },
+    {
+      "variant_id": "DV_TEST_FLAGFALSE_001",
+      "expression": "HasTag(__TEST_FLAGFALSE__)=true & HasFlag(FLAG_PRESENT)=false"
+    },
+    {
+      "variant_id": "DV_TEST_FLAGFALSE_002",
+      "expression": "HasTag(__TEST_FLAGFALSE__)=true & HasFlag(FLAG_PRESENT)=true"
+    },
+    {
+      "variant_id": "DV_TEST_FLAGOPS_002",
+      "expression": "HasTag(__TEST_FLAGOPS2__)=true"
+    }
+  ],
+  "nonempty_scalar_comparison_rows": [
+    {
+      "variant_id": "DV_NPC0007_SMALLTALK_001",
+      "expression": "Mood!=OUTBURST"
+    },
+    {
+      "variant_id": "DV_NPC0007_NEGOTIATION_001",
+      "expression": "Mood!=OUTBURST & Trust_Player>=40"
+    },
+    {
+      "variant_id": "DV_NPC0007_NEGOTIATION_002",
+      "expression": "Mood!=OUTBURST & Trust_Player<40"
+    },
+    {
+      "variant_id": "DV_NPC0007_THREAT_002",
+      "expression": "Mood==OUTBURST"
+    },
+    {
+      "variant_id": "DV_NPC0007_MANIP_SUS_001",
+      "expression": "Mood!=OUTBURST"
+    },
+    {
+      "variant_id": "DV_NPC0007_MANIP_CONF_WARN_001",
+      "expression": "Mood!=OUTBURST & Stress<80"
+    },
+    {
+      "variant_id": "DV_NPC0007_MANIP_CONF_OUTBURST_001",
+      "expression": "Stress>=80 & Mood!=OUTBURST"
+    },
+    {
+      "variant_id": "DV_NPC0007_INSULT_002",
+      "expression": "Mood==OUTBURST"
+    }
+  ],
+  "declared_grammar": "Comparison == != < <= > >= (plus source = alias), & before |, parentheses; source also declares HasTag/HasFlag/HasRecentEvent queries.",
+  "static_source_risks": {
+    "unknown_character_skip": true,
+    "prefix_parse_without_exhaustion": true,
+    "missing_closing_parenthesis_not_checked": true,
+    "missing_primary_becomes_true": true,
+    "empty_expression_true": true,
+    "exception_fallback_differs": true,
+    "recent_suffix_removed_before_query": true
+  },
+  "source_sections": {
+    "conditions_module": {
+      "first_line": 105,
+      "last_line": 447,
+      "sha256": "9b677862a04ec29554fea4e24b2720536605e18361e522854beab2e6b2064f58"
+    },
+    "tokenizer_skip": {
+      "first_line": 136,
+      "last_line": 140,
+      "sha256": "8e3cfb0745155a7d3dcd53d3f2a10d099542ef53c247725c6129e03be35b3fab"
+    },
+    "prefix_parser": {
+      "first_line": 163,
+      "last_line": 168,
+      "sha256": "3c1826229f23287329737fe2c6d46e4806f6540a1b854c270a1712825f894637"
+    },
+    "public_eval": {
+      "first_line": 410,
+      "last_line": 422,
+      "sha256": "ba60d1f2e4a92585e13a75501312d3c4a9681fe0344a2acc4b05af90562eaffd"
+    },
+    "comparison": {
+      "first_line": 281,
+      "last_line": 308,
+      "sha256": "46077e21c4495cf2c5b0bb54995d520aabace1f38be4c59fbb12027de0e928a4"
+    }
+  },
+  "declared_negative_probes": [
+    {
+      "input": "Coins>=1 !",
+      "risk": "unknown_character_skip",
+      "strict_destination": "reject unknown character"
+    },
+    {
+      "input": "Coins>=1 trailing",
+      "risk": "prefix_parse_without_exhaustion",
+      "strict_destination": "reject unconsumed suffix"
+    },
+    {
+      "input": "(Coins>=1",
+      "risk": "missing_closing_parenthesis_not_checked",
+      "strict_destination": "reject missing closing parenthesis"
+    },
+    {
+      "input": "Coins>=1 &",
+      "risk": "missing_primary_becomes_true",
+      "strict_destination": "reject missing operand"
+    },
+    {
+      "input": "",
+      "risk": "empty_expression_true",
+      "strict_destination": "reject empty private service permission; preserve legitimate unconditional source dialogue separately"
+    }
+  ],
+  "probe_method": "These are inputs motivated by exact inspected source branches and expected strict-destination refusals. No Ruby evaluation result is asserted; actual C# probe execution belongs to its separate instrument.",
+  "comparison_boundary": "Source resolves relation before state and then key_0_100 fallback. Integer-looking strings compare numerically; otherwise only equality/inequality use exact strings. Destination typed/missing-key/coercion policy must be explicit, never silently called source equivalence.",
+  "private_authority_decision": "Reject direct permissive source parser/fallback as complete private paid-service permission authority. Empty unconditional dialogue remains a legitimate separate source case; no collection-wide rejection.",
+  "remaining": "Function-query bindings, recent-event suffix semantics, full candidate filtering, scoring/tie breaks, personality axes/state deltas, dialogue/catalog fiction and actual Ruby/RGSS/RMXP execution remain unresolved unless separately implemented and verified.",
+  "ruby_executed": false,
+  "rgss_executed": false,
+  "rmxp_executed": false,
+  "limits": "Static exact-byte source inspection and declared negative inputs, not historical execution, human psychology/relationship validation, North Star canon or commercial clearance."
+}

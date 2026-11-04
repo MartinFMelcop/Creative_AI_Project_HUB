@@ -27,7 +27,7 @@ PROJECT_ROOTS={
  'narrative':(CS+'NarrativeChecks/NorthStar.NarrativeChecks.csproj',),
  'input_timing':(CS+'InteractionChecks/NorthStar.InteractionChecks.csproj',),
  'intake':('north-star/intake/Checks/NorthStar.IntakeChecks.csproj',),
- 'field':tuple('north-star/'+p for p in ('field-journey/PreparationChecks/NorthStar.PreparationChecks.csproj','field-journey/SamplingChecks/NorthStar.FieldSamplingChecks.csproj','field-journey/PresentationChecks/NorthStar.FieldPresentationChecks.csproj','field-journey/Checks/NorthStar.FieldChecks.csproj','memory-study/ConditionsChecks/NorthStar.ConditionsChecks.csproj','memory-study/QueryChecks/NorthStar.QueryChecks.csproj','memory-study/ServiceChecks/NorthStar.ConditionServiceChecks.csproj','memory-study/Checks/NorthStar.MemoryChecks.csproj')),
+ 'field':tuple('north-star/'+p for p in ('field-journey/WithdrawalChecks/NorthStar.WithdrawalChecks.csproj','field-journey/PreparationChecks/NorthStar.PreparationChecks.csproj','field-journey/SamplingChecks/NorthStar.FieldSamplingChecks.csproj','field-journey/PresentationChecks/NorthStar.FieldPresentationChecks.csproj','field-journey/Checks/NorthStar.FieldChecks.csproj','memory-study/ConditionsChecks/NorthStar.ConditionsChecks.csproj','memory-study/QueryChecks/NorthStar.QueryChecks.csproj','memory-study/ServiceChecks/NorthStar.ConditionServiceChecks.csproj','memory-study/Checks/NorthStar.MemoryChecks.csproj')),
  'presentation':(CS+'PresentationChecks/NorthStar.PresentationChecks.csproj',),
  'audio':(CS+'AudioChecks/NorthStar.AudioChecks.csproj',),
  'authored_scene':('north-star/authored-scene/Checks/NorthStar.AuthoredSceneChecks.csproj','north-star/authored-scene/JournalChecks/NorthStar.JournalChecks.csproj'),

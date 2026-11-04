@@ -642,6 +642,12 @@ jobs:
       - name: Execute authored preparations and affected sampling/conditions/memory/field consumers
         if: contains(fromJSON(needs.scope.outputs.csharp_suites), 'field')
         run: python3 north-star/field-journey/tools/preparation-verify.py --dotnet dotnet --output "$RUNNER_TEMP/preparation-authoring"
+      - name: Execute explicit field withdrawal and retained paid consequences
+        if: contains(fromJSON(needs.scope.outputs.csharp_suites), 'field')
+        run: |
+          dotnet build north-star/field-journey/WithdrawalChecks/NorthStar.WithdrawalChecks.csproj -c Release
+          dotnet north-star/field-journey/WithdrawalChecks/bin/Release/net10.0/NorthStar.WithdrawalChecks.dll "$RUNNER_TEMP/field-withdrawal-native.json"
+          node north-star/field-journey/tools/withdrawal-browser.mjs dotnet "$RUNNER_TEMP/field-withdrawal-browser"
       - name: Retain scoped memory failure diagnostics
         if: failure()
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4

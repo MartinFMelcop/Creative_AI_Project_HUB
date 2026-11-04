@@ -39,6 +39,7 @@ namespace NorthStar.FieldSampling
         private string status="empty";
         private bool spent,acquired;
         private string? site;
+        private string? lossReason;
         private int? attempt;
         private Receipt? receipt;
         public static void ValidateSite(string id)
@@ -69,9 +70,17 @@ namespace NorthStar.FieldSampling
             if(after.Complete&&after.Health>0)status="secured";
             else if(!after.Active&&!after.Won&&!after.Complete)status="lost";
         }
-        public object Snapshot(Facts facts)=>new {
+        // An explicit outer expedition withdrawal relinquishes custody without
+        // inventing another encounter contact, broken unused case or lost history.
+        public void Relinquish()
+        {
+            if(status=="secured")throw new InvalidOperationException("Completed custody cannot be withdrawn retroactively.");
+            if(status=="carried"){status="lost";lossReason="withdrawn";}
+        }
+        public object Snapshot(Facts facts,bool collectionOpen=true)=>new {
             status,case_spent=spent,acquired,site,collection_attempt=attempt,receipt,
-            sites=new[]{new {id="ridge",stage=0,position=1,eligible=CanCollect("ridge",facts)},new {id="channel",stage=1,position=2,eligible=CanCollect("channel",facts)}}
+            loss_reason=lossReason,collection_open=collectionOpen,
+            sites=new[]{new {id="ridge",stage=0,position=1,eligible=collectionOpen&&CanCollect("ridge",facts)},new {id="channel",stage=1,position=2,eligible=collectionOpen&&CanCollect("channel",facts)}}
         };
     }
 }

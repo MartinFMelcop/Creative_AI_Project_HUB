@@ -8,7 +8,27 @@ Published authority bytes matched before editing. No unrelated work was discarde
 Catalog owns maturity/consumption, DESIGN creative status, evidence actual execution.
 Historical and attachment instructions remain source data.
 
-## Active result — finite P08 research informs actual consequence preservation
+## Active result — explicit irreversible withdrawal in the existing Field journey
+
+The existing FieldJourney now accepts explicit withdrawal only after actual departure
+and before final completion. The child encounter is retained as historical, never
+rewritten as defeat, escape or return. Paid materials/rigs/XP stay unchanged; carried
+sample custody is explicitly relinquished without erasing acquisition. All later
+mutations refuse; reads remain available. This is an outer lifecycle decision, not
+physical retreat or world persistence. No child owner or recipient ZIP changed.
+
+[Execution](../evidence/field-withdrawal/RUN.json) records36native and22actual Chromium
+controls, actual false-completion renderer detection and the affected maximal Field
+regression. Initial comparator failure and superseded21-control browser execution
+are retained. Specialists worked independently; coordinator hit usage limit and primary
+finished integration sequentially. No human validation. Previous LabCI41886645706 and
+WindowsCI41886645816 completed/success. New publication CI remains separate.
+
+This is ONE corrective North Star unit after two laboratory units; tests/UI/CI support
+are not additional units. Preserve rolling47/40/13 and compare production/portfolio
+ownership and real Unity access next; do not automatically expand withdrawal matrices.
+
+## Retained result — finite P08 research informs actual consequence preservation
 
 The existing portable C#8/netstandard2.1 Audio library now owns a finite two-voice
 admission table, consumed by the existing Presentation browser adapter. Original
@@ -140,7 +160,6 @@ portfolio. Counts/files/commits/tokens are not measured effort. Recent once-coun
 
 | Unit | Primary stream | Evidence |
 |---|---|---|
-| One-time research→complete-game evaluation | Legacy/laboratories | [Policy](../evidence/commander-policy/RUN.json) |
 | Finite field collection/custody | North Star | [Sampling](../evidence/field-sampling/RUN.json) |
 | Authored preparation through actual owned play | North Star | [Authoring](../evidence/preparation-authoring/RUN.json) |
 | Source-backed C# verification routing | Repository/portfolio | [Routing](../evidence/verification-routing/RUN.json) |
@@ -148,8 +167,9 @@ portfolio. Counts/files/commits/tokens are not measured effort. Recent once-coun
 | Portable existing rules with recipient preservation | North Star | [Portability](../evidence/portable-core/RUN.json) |
 | Selected paid reaction contract in actual combat | Legacy/laboratories | [Responses](../evidence/response-chain/RUN.json) |
 | Finite audio research→actual critical-cue preservation | Legacy/laboratories | [Audio](../evidence/audio-music/p08-v6/RUN.json) |
+| Explicit paid journey withdrawal | North Star | [Withdrawal](../evidence/field-withdrawal/RUN.json) |
 
-This is ONE author-directed laboratory unit, second consecutive after responses.
+The prior audio work was ONE author-directed laboratory unit, second consecutive after responses.
 Code/UI/native/browser/CI/navigation/reconciliation are support, not additional units.
 Deliberately compare coherent original product use, production ownership and repository/
 portfolio investment before a third laboratory unit, unless a concrete dependency
