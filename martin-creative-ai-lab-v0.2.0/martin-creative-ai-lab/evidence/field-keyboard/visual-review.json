@@ -1,0 +1,19 @@
+{
+  "review_kind": "bounded agent visual inspection",
+  "capture": "/workspace/work/field-keyboard/science/run2/keyboard-actual.png",
+  "capture_sha256": "90b007b6f24d2c8b5fa9ae7478bf839f830c63bb6ba1b29f5ce59dddf2d42b54",
+  "observed_scope": "One actual desktop Chromium full-page capture, confirmed Neri/Lure/Trail, encounter 1 beat 3, focused road control group.",
+  "outcome": "PASS_WITH_LIMITS",
+  "findings": [
+    "No visible overlap or clipped road keyboard instructions, six buttons or status in the inspected desktop capture.",
+    "Strong cream focus outline identifies the road-only group; entry, withdrawal and sampling controls are visibly outside it.",
+    "Visible shortcut help distinguishes Walk, Wait and slots 1-4, requires release before another press and states accepted actions resolve an encounter beat.",
+    "Slot 1 caption is draw and agrees with confirmed identity draw/empty/empty/empty; slots 2-4 retain generic slot labels and do not invent equipped abilities. Empty slot refusal remains an execution question.",
+    "Current bolt threat, HP 2, resolve 9, beat 3 and last paid Wait response remain visible separately from the keyboard-ready status. Keyboard readiness is not presented as survival or completion."
+  ],
+  "limitations": [
+    "Agent review of one desktop image is not participant understanding, accessibility evaluation, mobile/device testing or author approval.",
+    "This image alone does not establish keyboard event semantics or mutation/refusal correctness; executed browser evidence owns those claims."
+  ],
+  "ui_edits_after_capture": false
+}

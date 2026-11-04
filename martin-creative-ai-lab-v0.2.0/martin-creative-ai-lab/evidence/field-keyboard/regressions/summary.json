@@ -1,0 +1,474 @@
+{
+  "records": [
+    {
+      "record": "regressions/regressions/conditions-regressions/field-regressions/regressions/verification.json",
+      "record_sha256": "4d30ffb900472d37e5c201abdf896e9e0bf828ef6608ac33ae4a779655d54bdb",
+      "source_input_count": 107,
+      "commands": [
+        {
+          "command": [
+            "/workspace/work/authored-scene/dotnet/dotnet",
+            "--version"
+          ],
+          "exit_code": 0,
+          "stdout_sha256": "93c11b5221b72e0032ab2d9f93d28c2c9b7a0bb2557effffcdfef45ab739a0da",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "command": [
+            "/workspace/work/authored-scene/dotnet/dotnet",
+            "build",
+            "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/field-journey/Checks/NorthStar.FieldChecks.csproj",
+            "-c",
+            "Release"
+          ],
+          "exit_code": 0,
+          "stdout_sha256": "a0b3813b47e7ec5a21320a30a2eedd143f424a21825d94d24f9bebfc86956e58",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "command": [
+            "/workspace/work/authored-scene/dotnet/dotnet",
+            "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/field-journey/Checks/bin/Release/net10.0/NorthStar.FieldChecks.dll",
+            "/workspace/work/field-keyboard/regressions/regressions/conditions-regressions/field-regressions/regressions/native.json"
+          ],
+          "exit_code": 0,
+          "stdout_sha256": "4c80167b44fd4bfe94356b210e90f964b32078e0d81550e4e6d5ac333fe47858",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "command": [
+            "node",
+            "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/field-journey/tools/browser.mjs",
+            "/workspace/work/authored-scene/dotnet/dotnet",
+            "/workspace/work/field-keyboard/regressions/regressions/conditions-regressions/field-regressions/regressions/browser"
+          ],
+          "exit_code": 0,
+          "stdout_sha256": "82af02e22ecd20ecf65b7d89971a5b1fe57378a5fe0f8e1f1ba1d778a6c5baee",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      ],
+      "raw_directory_retained_external": "/workspace/work/field-keyboard/regressions/regressions/conditions-regressions/field-regressions/regressions"
+    },
+    {
+      "record": "regressions/regressions/conditions-regressions/field-regressions/verification.json",
+      "record_sha256": "b7ff0d9d5ed0f61916e7cdd053bb7b397436edd28ecab4db92b71742d22da34c",
+      "source_input_count": 108,
+      "commands": [
+        {
+          "command": [
+            "/workspace/work/authored-scene/dotnet/dotnet",
+            "--version"
+          ],
+          "exit_code": 0,
+          "stdout_sha256": "93c11b5221b72e0032ab2d9f93d28c2c9b7a0bb2557effffcdfef45ab739a0da",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "command": [
+            "/workspace/work/authored-scene/dotnet/dotnet",
+            "build",
+            "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/field-journey/PresentationChecks/NorthStar.FieldPresentationChecks.csproj",
+            "-c",
+            "Release"
+          ],
+          "exit_code": 0,
+          "stdout_sha256": "ae4133b0d0ae2b25118e11cdaaf676ed01f07c5f2e2bf0f938753cd814efdb87",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "command": [
+            "/workspace/work/authored-scene/dotnet/dotnet",
+            "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/field-journey/PresentationChecks/bin/Release/net10.0/NorthStar.FieldPresentationChecks.dll",
+            "/workspace/work/field-keyboard/regressions/regressions/conditions-regressions/field-regressions/native.json"
+          ],
+          "exit_code": 0,
+          "stdout_sha256": "56a8e9b2709e46c382d4f884104e81bcf694753770f1ceb2516ee4a33dbeb9e9",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "command": [
+            "python3",
+            "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/field-journey/tools/verify.py",
+            "--dotnet",
+            "/workspace/work/authored-scene/dotnet/dotnet",
+            "--output",
+            "/workspace/work/field-keyboard/regressions/regressions/conditions-regressions/field-regressions/regressions"
+          ],
+          "exit_code": 0,
+          "stdout_sha256": "681c2af778f6551550b4cd05307d5bb46b8fbd2a8316d28ffe24afc25ebfbe1f",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "command": [
+            "node",
+            "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/field-journey/tools/presentation-browser.mjs",
+            "/workspace/work/authored-scene/dotnet/dotnet",
+            "/workspace/work/field-keyboard/regressions/regressions/conditions-regressions/field-regressions/browser"
+          ],
+          "exit_code": 0,
+          "stdout_sha256": "15fff478d973f282e76a1778f9006bf89919fe8f72cebe2168d1ed139ad1384c",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      ],
+      "raw_directory_retained_external": "/workspace/work/field-keyboard/regressions/regressions/conditions-regressions/field-regressions"
+    },
+    {
+      "record": "regressions/regressions/conditions-regressions/memory-regressions/verification.json",
+      "record_sha256": "9f94ef4e0d57bb51d61cfde44a73a21c65e7fa24bcc004a5013480e1a31fe899",
+      "source_input_count": 34,
+      "commands": [
+        {
+          "command": [
+            "/workspace/work/authored-scene/dotnet/dotnet",
+            "--version"
+          ],
+          "exit_code": 0,
+          "stdout_sha256": "93c11b5221b72e0032ab2d9f93d28c2c9b7a0bb2557effffcdfef45ab739a0da",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "command": [
+            "/workspace/work/authored-scene/dotnet/dotnet",
+            "build",
+            "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/memory-study/Checks/NorthStar.MemoryChecks.csproj",
+            "-c",
+            "Release"
+          ],
+          "exit_code": 0,
+          "stdout_sha256": "f504e5d9e5eebd49384050d1583586f1678b553a2cb0703e4ef599ae5b17bc89",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "command": [
+            "/workspace/work/authored-scene/dotnet/dotnet",
+            "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/memory-study/Checks/bin/Release/net10.0/NorthStar.MemoryChecks.dll",
+            "--native",
+            "/workspace/work/field-keyboard/regressions/regressions/conditions-regressions/memory-regressions/native.json"
+          ],
+          "exit_code": 0,
+          "stdout_sha256": "22b58fe2e1ee6e5ce1b1f4c67a1520b9afd51930d0fcec904b96d41561d74bd4",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "command": [
+            "python3",
+            "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/labs/narrative-continuity/memory/run.py",
+            "--dotnet",
+            "/workspace/work/authored-scene/dotnet/dotnet",
+            "--output",
+            "/workspace/work/field-keyboard/regressions/regressions/conditions-regressions/memory-regressions/source"
+          ],
+          "exit_code": 0,
+          "stdout_sha256": "8f9270471dfd16ba2907a1393ba425537e86d3903dc86ac8f61fc3ec7b0f2fb2",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "command": [
+            "node",
+            "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/memory-study/tools/browser.mjs",
+            "/workspace/work/authored-scene/dotnet/dotnet",
+            "/workspace/work/field-keyboard/regressions/regressions/conditions-regressions/memory-regressions/browser"
+          ],
+          "exit_code": 0,
+          "stdout_sha256": "96d02a79c5366d2fb0498327237962316bd10f1ce602947899498af3b3231bcd",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      ],
+      "raw_directory_retained_external": "/workspace/work/field-keyboard/regressions/regressions/conditions-regressions/memory-regressions"
+    },
+    {
+      "record": "regressions/regressions/conditions-regressions/verification.json",
+      "record_sha256": "27b5cc84a845eb4fe3cc3883d6c2a252f093cfecca224b7fd362b71a232f5912",
+      "source_input_count": 119,
+      "commands": [
+        {
+          "command": [
+            "/workspace/work/authored-scene/dotnet/dotnet",
+            "--version"
+          ],
+          "exit_code": 0,
+          "stdout_sha256": "93c11b5221b72e0032ab2d9f93d28c2c9b7a0bb2557effffcdfef45ab739a0da",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "command": [
+            "python3",
+            "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/labs/world-gameplay/dialogue-conditions/assay.py",
+            "--output",
+            "/workspace/work/field-keyboard/regressions/regressions/conditions-regressions/source.json"
+          ],
+          "exit_code": 0,
+          "stdout_sha256": "d0accecdf02ee208e6afebf37c26cf2027bac978c1fca105e03a824c7b68a87e",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "command": [
+            "/workspace/work/authored-scene/dotnet/dotnet",
+            "build",
+            "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/memory-study/ConditionsChecks/NorthStar.ConditionsChecks.csproj",
+            "-c",
+            "Release"
+          ],
+          "exit_code": 0,
+          "stdout_sha256": "0c5176381f4db59230d577de3f2b14f55c400a0143fabe8fa97fe1a18572f6a1",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "command": [
+            "/workspace/work/authored-scene/dotnet/dotnet",
+            "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/memory-study/ConditionsChecks/bin/Release/net10.0/NorthStar.ConditionsChecks.dll",
+            "/workspace/work/field-keyboard/regressions/regressions/conditions-regressions/native.json"
+          ],
+          "exit_code": 0,
+          "stdout_sha256": "8515179f18279619b438219db317d64ff4b66ade346e50a500445a27b736632a",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "command": [
+            "/workspace/work/authored-scene/dotnet/dotnet",
+            "build",
+            "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/memory-study/ServiceChecks/NorthStar.ConditionServiceChecks.csproj",
+            "-c",
+            "Release"
+          ],
+          "exit_code": 0,
+          "stdout_sha256": "e221ac055c75076f1023f742cd19118f3fdc18ebb633316e7f56d649721479b6",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "command": [
+            "/workspace/work/authored-scene/dotnet/dotnet",
+            "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/memory-study/ServiceChecks/bin/Release/net10.0/NorthStar.ConditionServiceChecks.dll",
+            "/workspace/work/field-keyboard/regressions/regressions/conditions-regressions/consumer.json",
+            "/workspace/work/field-keyboard/regressions/regressions/conditions-regressions/source.json"
+          ],
+          "exit_code": 0,
+          "stdout_sha256": "227787a6510f823ae33225341028a9c3099d6d4daf05254662482a59f40336aa",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "command": [
+            "python3",
+            "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/labs/world-gameplay/dialogue-conditions/query-assay.py",
+            "--output",
+            "/workspace/work/field-keyboard/regressions/regressions/conditions-regressions/query-source.json"
+          ],
+          "exit_code": 0,
+          "stdout_sha256": "f9e3e63586e755e751c55e2e96b714e9f0ee41f24287435a2b349971407597ec",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "command": [
+            "/workspace/work/authored-scene/dotnet/dotnet",
+            "build",
+            "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/memory-study/QueryChecks/NorthStar.QueryChecks.csproj",
+            "-c",
+            "Release"
+          ],
+          "exit_code": 0,
+          "stdout_sha256": "bcd2c6f12bfafe60543923bd83fad364bca1f1b0771b48e2a6e1bfa8f578f3be",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "command": [
+            "/workspace/work/authored-scene/dotnet/dotnet",
+            "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/memory-study/QueryChecks/bin/Release/net10.0/NorthStar.QueryChecks.dll",
+            "/workspace/work/field-keyboard/regressions/regressions/conditions-regressions/query-source.json",
+            "/workspace/work/field-keyboard/regressions/regressions/conditions-regressions/query-native.json"
+          ],
+          "exit_code": 0,
+          "stdout_sha256": "09beb8eb58f032504257f464db97d3149b4d14386f0e4b82fc2f113e8e9287fb",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "command": [
+            "python3",
+            "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/labs/world-gameplay/dialogue-conditions/query-assay.py",
+            "--verify-result",
+            "/workspace/work/field-keyboard/regressions/regressions/conditions-regressions/query-native.json"
+          ],
+          "exit_code": 0,
+          "stdout_sha256": "482095b2edb193e19fee3c6ff5bb6158c2368a68b507b5745c49dc5f7e02781e",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "command": [
+            "node",
+            "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/memory-study/tools/query-browser.mjs",
+            "/workspace/work/authored-scene/dotnet/dotnet",
+            "/workspace/work/field-keyboard/regressions/regressions/conditions-regressions/query-browser"
+          ],
+          "exit_code": 0,
+          "stdout_sha256": "28f705eb62e2750d30ce3ba958e92bacb28f2977caebdcf3996aa9ff53b4217e",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "command": [
+            "python3",
+            "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/memory-study/tools/verify.py",
+            "--dotnet",
+            "/workspace/work/authored-scene/dotnet/dotnet",
+            "--output",
+            "/workspace/work/field-keyboard/regressions/regressions/conditions-regressions/memory-regressions"
+          ],
+          "exit_code": 0,
+          "stdout_sha256": "910b44527ae56c0b0bc9257e352d4ffd537f09e4c60ff180d8b67c36f5d7db94",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "command": [
+            "python3",
+            "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/field-journey/tools/presentation-verify.py",
+            "--dotnet",
+            "/workspace/work/authored-scene/dotnet/dotnet",
+            "--output",
+            "/workspace/work/field-keyboard/regressions/regressions/conditions-regressions/field-regressions"
+          ],
+          "exit_code": 0,
+          "stdout_sha256": "3f8746e2ad2f0cd1350d160ce57f51d6b30f59b77fe1888165ba9c82cbe9ae33",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "command": [
+            "node",
+            "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/memory-study/tools/conditions-browser.mjs",
+            "/workspace/work/authored-scene/dotnet/dotnet",
+            "/workspace/work/field-keyboard/regressions/regressions/conditions-regressions/browser"
+          ],
+          "exit_code": 0,
+          "stdout_sha256": "66c661091d4bde49ffd4677c564925b3166a3c4d0a910657d1b75eaebaa677e8",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      ],
+      "raw_directory_retained_external": "/workspace/work/field-keyboard/regressions/regressions/conditions-regressions"
+    },
+    {
+      "record": "regressions/regressions/verification.json",
+      "record_sha256": "972af067858006612a93d7f2e495bdabef5e1a4f339650c2854fa2d770e1e906",
+      "source_input_count": 120,
+      "commands": [
+        {
+          "command": [
+            "/workspace/work/authored-scene/dotnet/dotnet",
+            "--version"
+          ],
+          "exit_code": 0,
+          "stdout_sha256": "93c11b5221b72e0032ab2d9f93d28c2c9b7a0bb2557effffcdfef45ab739a0da",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "command": [
+            "/workspace/work/authored-scene/dotnet/dotnet",
+            "build",
+            "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/field-journey/SamplingChecks/NorthStar.FieldSamplingChecks.csproj",
+            "-c",
+            "Release"
+          ],
+          "exit_code": 0,
+          "stdout_sha256": "6bba085d7eabef30e2983e9aee4ed21cabbdc80c0340e2a4074372249781da09",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "command": [
+            "/workspace/work/authored-scene/dotnet/dotnet",
+            "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/field-journey/SamplingChecks/bin/Release/net10.0/NorthStar.FieldSamplingChecks.dll",
+            "/workspace/work/field-keyboard/regressions/regressions/native.json"
+          ],
+          "exit_code": 0,
+          "stdout_sha256": "82aff3e7544c16ab0f83bd7297f9155d2a6645ae0a8dccf44cc3912ecd1ccb7a",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "command": [
+            "python3",
+            "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/memory-study/tools/conditions-verify.py",
+            "--dotnet",
+            "/workspace/work/authored-scene/dotnet/dotnet",
+            "--output",
+            "/workspace/work/field-keyboard/regressions/regressions/conditions-regressions"
+          ],
+          "exit_code": 0,
+          "stdout_sha256": "2d26c4dd1ac99f439ea596d4859bee2a800e1997a7e59d2d4e7e540966c0c1a2",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "command": [
+            "node",
+            "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/field-journey/tools/sampling-browser.mjs",
+            "/workspace/work/authored-scene/dotnet/dotnet",
+            "/workspace/work/field-keyboard/regressions/regressions/browser"
+          ],
+          "exit_code": 0,
+          "stdout_sha256": "03626c025a58fc1e58e070bb6ad763965c0e0c74faf892d45111335d95ca9355",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      ],
+      "raw_directory_retained_external": "/workspace/work/field-keyboard/regressions/regressions"
+    },
+    {
+      "record": "regressions/verification.json",
+      "record_sha256": "732ecf615197027aef2e690c869612bb75a35d5dbd9870e5b2437b2288eacc6c",
+      "source_input_count": 121,
+      "commands": [
+        {
+          "command": [
+            "/workspace/work/authored-scene/dotnet/dotnet",
+            "--version"
+          ],
+          "exit_code": 0,
+          "stdout_sha256": "93c11b5221b72e0032ab2d9f93d28c2c9b7a0bb2557effffcdfef45ab739a0da",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "command": [
+            "/workspace/work/authored-scene/dotnet/dotnet",
+            "build",
+            "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/field-journey/PreparationChecks/NorthStar.PreparationChecks.csproj",
+            "-c",
+            "Release"
+          ],
+          "exit_code": 0,
+          "stdout_sha256": "754e0fa526641e2f8c0111b4d42deb0fc2bf98041a31bbd635345503e221b309",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "command": [
+            "/workspace/work/authored-scene/dotnet/dotnet",
+            "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/field-journey/PreparationChecks/bin/Release/net10.0/NorthStar.PreparationChecks.dll",
+            "/workspace/work/field-keyboard/regressions/native.json"
+          ],
+          "exit_code": 0,
+          "stdout_sha256": "e00dd441f57944ac5476ea30bd6d28e13fbf09ac1dd158db152f30270abc0456",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "command": [
+            "python3",
+            "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/field-journey/tools/sampling-verify.py",
+            "--dotnet",
+            "/workspace/work/authored-scene/dotnet/dotnet",
+            "--output",
+            "/workspace/work/field-keyboard/regressions/regressions"
+          ],
+          "exit_code": 0,
+          "stdout_sha256": "eb7e5dba1d58b6d8000673de676592af6e99efbe4f5c57a77c38a85033845048",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "command": [
+            "node",
+            "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/field-journey/tools/preparation-browser.mjs",
+            "/workspace/work/authored-scene/dotnet/dotnet",
+            "/workspace/work/field-keyboard/regressions/browser"
+          ],
+          "exit_code": 0,
+          "stdout_sha256": "ffd57fc0a04f67f80cca7cad66e88530d5a49244cbdcdbdd07c1eaf477cf70eb",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      ],
+      "raw_directory_retained_external": "/workspace/work/field-keyboard/regressions"
+    }
+  ],
+  "overlap": "Nested controls overlap; repeated execution is not additional studies, people or units."
+}

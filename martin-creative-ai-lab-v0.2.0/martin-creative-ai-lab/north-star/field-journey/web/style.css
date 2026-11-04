@@ -13,3 +13,6 @@
 
 /* A forfeiture is a custody decision, not observed physical case breakage. */
 #field-sampling[data-status=lost][data-loss-reason=withdrawn] .sample-lost{display:none}#field-sampling[data-status=lost][data-loss-reason=withdrawn] .sample-empty{display:inline}
+
+/* Keyboard commands are scoped to the existing road controls. */
+#field-keyboard-surface{border:1px solid #736b82;padding:18px;background:#1b1c26;scroll-margin-block:24px}#field-keyboard-surface:focus{outline:3px solid #fff1cc;outline-offset:4px}#field-keyboard-surface:focus-within{border-color:var(--gold)}.field-keyboard-help{margin:0 0 16px;font-size:12px;line-height:1.8;color:var(--ink)}.field-keyboard-help kbd{display:inline-block;min-width:23px;padding:0 5px;text-align:center;border:1px solid #91879f;border-bottom-width:2px;border-radius:3px;background:#2a2836;color:#fff1cc;font:12px/1.7 ui-monospace,monospace}.field-keyboard-status{margin:14px 0 0;padding-top:12px;border-top:1px solid var(--line);font-size:12px;line-height:1.6;color:var(--gold)}@media(max-width:650px){#field-keyboard-surface{padding:14px}.field-keyboard-help{font-size:12px}}

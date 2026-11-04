@@ -1,0 +1,127 @@
+{
+  "schema_version": 1,
+  "kind": "destination_execution",
+  "baseline_commit": "92b6024478ada6b735c13c8c3c142deb7ca31bff",
+  "capability_ids": [],
+  "consumer_paths": [
+    "north-star/field-journey/Host/Room.cs",
+    "north-star/field-journey/Host/Program.cs",
+    "north-star/field-journey/web/app.js"
+  ],
+  "runtime": "SDK10.0.401/Linux; Node24.19.0/Chromium154.0.8037.57",
+  "scope": "Original discrete focused logical keyboard path in the existing Field consumer, through unchanged native buttons/commands and actual paid C#consequences.",
+  "checks": {
+    "passed": 36,
+    "failed": 0
+  },
+  "commands": [
+    {
+      "command": [
+        "node",
+        "north-star/field-journey/tools/keyboard-browser.mjs",
+        "/workspace/work/authored-scene/dotnet/dotnet",
+        "/workspace/work/field-keyboard/science/run3",
+        "evidence/field-keyboard/baseline/app.js"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "python3",
+        "north-star/field-journey/tools/preparation-verify.py",
+        "--dotnet",
+        "/workspace/work/authored-scene/dotnet/dotnet",
+        "--output",
+        "/workspace/work/field-keyboard/regressions"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "node",
+        "north-star/field-journey/tools/withdrawal-browser.mjs",
+        "/workspace/work/authored-scene/dotnet/dotnet",
+        "/workspace/work/field-keyboard/withdrawal-regression"
+      ],
+      "exit_code": 0
+    }
+  ],
+  "source_artifacts": [
+    {
+      "local_path": "north-star/field-journey/Host/Room.cs",
+      "size_bytes": 15365,
+      "sha256": "b2d087df9275e728738bbddd35d30d07a6e1a0722e245b96f4233b5c8952132d"
+    },
+    {
+      "local_path": "north-star/field-journey/Host/Program.cs",
+      "size_bytes": 5646,
+      "sha256": "98c6451ba46452e0588f6f22a7fff953e4eb9c4445eb9297f7a0cc27cfe69459"
+    },
+    {
+      "local_path": "north-star/field-journey/web/app.js",
+      "size_bytes": 30285,
+      "sha256": "7fdd97ba174da67d494feb90309ee4e9bcf69ba950f8bb4376411f32465596a6"
+    },
+    {
+      "local_path": "north-star/field-journey/web/index.html",
+      "size_bytes": 27131,
+      "sha256": "cde2ed276128a5e764a6cb4b467b3a02e165f70094d993ee2c41f7db5007a2a7"
+    },
+    {
+      "local_path": "north-star/field-journey/web/style.css",
+      "size_bytes": 15110,
+      "sha256": "f23518d6a8bd297207378ebf876f825120ce529cf6b1c3904e7786052b1a8d62"
+    },
+    {
+      "local_path": "north-star/field-journey/tools/keyboard-browser.mjs",
+      "size_bytes": 13118,
+      "sha256": "b1f67787ee7e11e879c0a3f3fde2ca938075e90aaa5759a864456edced9e072d"
+    },
+    {
+      "local_path": "north-star/field-journey/tools/keyboard-protocol.json",
+      "size_bytes": 1963,
+      "sha256": "dc05474cdc606a63355d614f8dd66c70809e5eabc0cd9166ed2e88c3c2b80d2e"
+    }
+  ],
+  "result_artifacts": [
+    {
+      "local_path": "evidence/field-keyboard/browser.json",
+      "size_bytes": 66549,
+      "sha256": "6534286b232807ec77ab56404149bc3503166a9fdcaf5d69eaf9262c80532953"
+    },
+    {
+      "local_path": "evidence/field-keyboard/withdrawal-regression.json",
+      "size_bytes": 403512,
+      "sha256": "21dbb471c1b9dc54ccf1eb723613896e804c94174c76caed28c6d0b91dd2a6ca"
+    },
+    {
+      "local_path": "evidence/field-keyboard/regressions/verification.json",
+      "size_bytes": 15703,
+      "sha256": "732ecf615197027aef2e690c869612bb75a35d5dbd9870e5b2437b2288eacc6c"
+    }
+  ],
+  "baseline": "Exact old app.js produces0shortcut POSTs against separately fingerprinted current focus wrapper; native Tab/Enter buttons already worked before. This is not a claim of previously absent keyboard access.",
+  "result": "Actual keyboard and matched pointer full owner states equal. Same-person two-encounter keyboard route completes XP25/HP11/resolve3/two rigs/two attempts. Empty slots remain actual owner refusals.",
+  "policy": "Unmodified logical ArrowRight/wait-period/1-4 only while road surface focused. Existing enabled button.click delegates once; no queue, timer, gameplay grants or new owner. All tracked mapped keys must release after interruptions before fresh intent. Entry/sample/withdraw remain explicit buttons.",
+  "negative": {
+    "policy": "Isolated actual repeat/latch guard removal",
+    "observed": "Two actual accepted walk POSTs instead of one; exact held-key oracle rejects with AssertionError. Not syntax/environment error."
+  },
+  "regressions": "Actual maximal existing preparation/sampling/conditions/queries/memory/presentation/field wrapper passed once,121input identities stable; separate existing22withdrawal browser controls passed. Raw matrices remain external; summary hashes/exit statuses retained.",
+  "source_boundary": "No C#source changed anywhere, no whole-C#-tree assay drift, no new source-consumption decision, no new app/save/package. All protected Brain/reference/source variants and both recipient ZIPs remain unchanged.",
+  "research_and_review": {
+    "engineering": "ENG009/015; reuse same buttons and reject temporal intent after interruption.",
+    "science": "SCI013/014/017/061; actual baseline/pointer comparator, request counts, negative sensitivity, no human proxies.",
+    "creative": "CRE012(H)/081(A); recognizable finite command budget, contextual instructions, visible focus; no real-time movement/canon/accessibility claim.",
+    "disagreement": "Engineering W/E versus Creative ArrowRight/period resolved in favor of logical arrow/wait punctuation to avoid implying continuous WASD movement. Production ownership and portfolio remain strategic alternatives.",
+    "primary_review": "Detected cross-key bypass of per-key-only post-blur latch; engineering added all-held neutral guard before final freeze.",
+    "failures": "Initial preliminary run failed final app source-stability gate after concurrent neutral-guard edit. Failure and hash-verified producer/app preimages retained; not accepted as final execution. Older successful36-control run has historical Host identity; final run reexecutes actual rebuilt Host.",
+    "visual": "Inspected actual run2 image is byte-identical to current run3 capture; bounded agent review, not human approval."
+  },
+  "limitations": [
+    "Synthetic Chromium/C#command execution only; no physical device latency, reaction-time, human usability/accessibility/preference, Unity Editor/Windows Player/Steam or production multiplayer claim.",
+    "Logical unmodified mappings are not remappable; layouts requiring Shift for digits/period are not validated. Native pointer and Tab/Enter controls remain.",
+    "Consumer is trusted-local and ephemeral; public debug API and shared filesystem are not sandbox/security isolation."
+  ],
+  "allocation": "ONE North Star product unit. UI/instrument/CI/navigation/regression support are not extra units. No fixed task rotation; compare production/portfolio ownership next."
+}

@@ -1,0 +1,55 @@
+{
+  "schema": "field.keyboard.preservation.v1",
+  "baseline_commit": "92b6024478ada6b735c13c8c3c142deb7ca31bff",
+  "prior_files": 3835,
+  "comparison_excludes": "Self-referential MANIFEST.sha256; final exact coverage regenerated/checks separately.",
+  "unchanged_prior_nonmanifest_files": 3826,
+  "intended_changes": [
+    {
+      "path": "README.md",
+      "before": "4454c51087bb2ccd37e8c1f986d2e5c7e0fd16bf18c8eb80094c07cd283161a9",
+      "after": "4785f6558662be6e1b9514d69be285d9e1e286ab0a8172a1551792a7b5ef8168"
+    },
+    {
+      "path": "docs/STATE.md",
+      "before": "f2b1c934b32db1249adf60a738fcbe0910b4b5af6bb604882e70e66af3e409d0",
+      "after": "3de628179edd4da7c2db76cdac908b90197039aadb0dcf31a480fc32c3ff005c"
+    },
+    {
+      "path": "north-star/DESIGN.md",
+      "before": "9ccd6d39295f567613d482c6a8ea0f22d65d188c4db55a7d66a1fc266f4a8fb5",
+      "after": "06310d2e2273c22fbee942df46f1a08b218dc3534bbfc819410276740b605e1b"
+    },
+    {
+      "path": "north-star/field-journey/web/app.js",
+      "before": "96e2fbfdcc36f5babe065f48c2126a2229189368dfdff0e4c1f17cacc7e006ae",
+      "after": "7fdd97ba174da67d494feb90309ee4e9bcf69ba950f8bb4376411f32465596a6"
+    },
+    {
+      "path": "north-star/field-journey/web/index.html",
+      "before": "a11c7c130510bd4e3ac42614d6b4fafe19dc8e242b90d84bd40a2c84acc92cf7",
+      "after": "cde2ed276128a5e764a6cb4b467b3a02e165f70094d993ee2c41f7db5007a2a7"
+    },
+    {
+      "path": "north-star/field-journey/web/style.css",
+      "before": "e32e638f2dde9d577f6812d2ace04fd52d7c3f15406eef5afa81a66fae735a9b",
+      "after": "f23518d6a8bd297207378ebf876f825120ce529cf6b1c3904e7786052b1a8d62"
+    },
+    {
+      "path": "showcase/portfolio.json",
+      "before": "582c96fe63856aa41d1733d23824a2fa55f9ad9a5201b09e0aeaba431bfb42cc",
+      "after": "bab2479903946303a4221511e20527640792991a0981590a99eaff016d9a3422"
+    },
+    {
+      "path": "tools/test_csharp_workflow.py",
+      "before": "df95fe5ae93146d14774d9d5ab96f2a0005d687f4f2aa1b29bfd2912e4498db6",
+      "after": "83300088e203e0a6955008b314f5dd4fb62d3c414c0e2f455ffa2ff3663d3a18"
+    }
+  ],
+  "removed_files": [],
+  "all_CSharp_source_and_protected_libraries_and_recipient_archives_exact": true,
+  "current_all7_recorded_keyboard_identities_exact": true,
+  "current_maximal_wrapper_input_identities_exact": 121,
+  "retirement": "None. Existing unique artifacts/rights/notices/source variants retained; raw unchanged regression matrices external, summary metadata maintained.",
+  "repository_wide_additional_change": ".github/workflows/lab-checks.yml adds keyboard gate; prior21command bodies and9diagnostics/pins/timeouts retained."
+}

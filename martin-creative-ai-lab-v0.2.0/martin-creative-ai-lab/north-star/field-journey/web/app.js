@@ -2,6 +2,9 @@
 (() => {
  const $=id=>document.getElementById(id);
  let state=null,busy=false,uncertain=false,generation=0;
+ const keyboardButtons={ArrowRight:'walk','.':'wait','1':'use-slot1','2':'use-slot2','3':'use-slot3','4':'use-slot4'};
+ const keyboardHeld=new Set();
+ let keyboardArmed=false,keyboardNeedsNeutral=false;
  const accents={copper:'#ae794f',teal:'#5c9997',violet:'#9b88b1'};
  window.fieldJourney={get state(){return state;},get status(){return uncertain?'read-required':busy?'pending':'ready';},send,read,render};
  function proposal(){return{handle:$('handle').value,accent:$('accent').value,class_id:$('class_id').value,background_id:$('background_id').value,slots:[1,2,3,4].map(n=>$('slot'+n).value||null)};}
@@ -139,7 +142,12 @@
   $('completion').hidden=!completeObserved;$('completion').textContent=`${id?.handle||'This person'} completed the actual road. Workshop acquisition and assembly remain distinct from that completion.`;
   $('sequence').textContent=String(s.sequence);$('notice').textContent=s.text;withdrawalView(s);controls();
  }
+ function keyboardStatus(){
+  const status=$('field-keyboard-status');
+  if(status)status.textContent=keyboardNeedsNeutral?'Keyboard interrupted. Release every held road key before a fresh choice.':!keyboardArmed?'Keyboard inactive. Focus the road controls, release held keys, then press a fresh key.':uncertain?'Read actual facts before another keyboard action.':busy?'Action pending. Further key presses are discarded; release before choosing again.':keyboardHeld.size?'Release held keys before pressing them again.':'Keyboard ready: → Walk · . Wait · 1–4 equipped slots. One fresh press chooses one response.';
+ }
  function controls(){
+  keyboardStatus();
   for(const b of document.querySelectorAll('button'))b.disabled=busy||uncertain;$('read').disabled=busy;if(!state)return;
   const c=state.intake,e=c.state,ready=c.confirmed&&!c.pending,locked=e.active||e.complete,workshop=ready&&!state.workshop_closed;
   for(const el of $('draft-form').elements)el.disabled=busy||uncertain||locked;$('handle').readOnly=Boolean(c.confirmed);
@@ -164,5 +172,25 @@
  $('wait-window').onclick=()=>invoke('wait-window');$('assemble').onclick=()=>invoke('craft',{bench:$('benchselect').value,rig:$('fittingrig').value});$('begin').onclick=()=>invoke('begin',{rig:$('rig').value});for(const command of ['walk','wait'])$(command).onclick=()=>invoke(command);
  for(let n=1;n<=4;n++)$('use-slot'+n).onclick=()=>invoke('slot',{slot:n});for(const axis of ['focus','vitality'])$(axis).onclick=()=>invoke('allocate',{axis,points:1});$('read').onclick=read;$('withdraw-expedition').onclick=()=>invoke('withdraw');
  function interrupt(){if(busy){generation++;uncertain=true;$('connection').textContent='Interrupted while an action may have committed. Read actual facts; do not repeat blindly.';controls();}}
- window.addEventListener('blur',interrupt);window.addEventListener('offline',interrupt);document.addEventListener('visibilitychange',()=>{if(document.hidden)interrupt();});read();
+ const surface=$('field-keyboard-surface');
+ surface.addEventListener('focus',()=>{keyboardArmed=!document.hidden;keyboardStatus();});
+ surface.addEventListener('blur',disarmKeyboard);
+ document.addEventListener('keydown',event=>{
+  const buttonId=keyboardButtons[event.key];
+  if(!buttonId)return;
+  const identity=event.code||event.key,alreadyHeld=keyboardHeld.has(identity);
+  keyboardHeld.add(identity);keyboardStatus();
+  if(event.repeat||alreadyHeld)return;
+  if(keyboardNeedsNeutral)return;
+  if(event.isComposing||event.ctrlKey||event.altKey||event.metaKey||event.shiftKey)return;
+  if(!keyboardArmed||document.activeElement!==surface)return;
+  event.preventDefault();
+  const button=$(buttonId);
+  if(busy||uncertain||!state||document.hidden||button.disabled)return;
+  button.click();
+ });
+ document.addEventListener('keyup',event=>{keyboardHeld.delete(event.code||event.key);if(keyboardHeld.size===0)keyboardNeedsNeutral=false;keyboardStatus();});
+ function disarmKeyboard(){keyboardArmed=false;if(keyboardHeld.size>0)keyboardNeedsNeutral=true;keyboardStatus();}
+ function suspendKeyboard(){disarmKeyboard();interrupt();}
+ window.addEventListener('blur',suspendKeyboard);window.addEventListener('offline',suspendKeyboard);document.addEventListener('visibilitychange',()=>{if(document.hidden)suspendKeyboard();});read();
 })();

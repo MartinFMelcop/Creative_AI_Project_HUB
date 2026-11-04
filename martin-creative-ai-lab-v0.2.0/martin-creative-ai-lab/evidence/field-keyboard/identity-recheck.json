@@ -1,0 +1,29 @@
+{
+  "current_all7_exact": true,
+  "identities": {
+    "app": "7fdd97ba174da67d494feb90309ee4e9bcf69ba950f8bb4376411f32465596a6",
+    "baseline_app": "96e2fbfdcc36f5babe065f48c2126a2229189368dfdff0e4c1f17cacc7e006ae",
+    "producer": "b1f67787ee7e11e879c0a3f3fde2ca938075e90aaa5759a864456edced9e072d",
+    "protocol": "dc05474cdc606a63355d614f8dd66c70809e5eabc0cd9166ed2e88c3c2b80d2e",
+    "html": "cde2ed276128a5e764a6cb4b467b3a02e165f70094d993ee2c41f7db5007a2a7",
+    "css": "f23518d6a8bd297207378ebf876f825120ce529cf6b1c3904e7786052b1a8d62",
+    "host": "6a4ad866a898e69748c5773188ae04063b4b7bf6fdbc732a01ad079d99da2f83"
+  },
+  "boundary": "Browser producer checks app.js before/after; remaining identities are recorded at start and independently rechecked after execution. Not an enforced filesystem sandbox.",
+  "prior_success": {
+    "report_sha256": "3b7935bb46ce90ff9cf893028e69de1cc9f02a8e806a8b5e08fb33ea95ed0062",
+    "checks": 36,
+    "identities": {
+      "app": "7fdd97ba174da67d494feb90309ee4e9bcf69ba950f8bb4376411f32465596a6",
+      "baseline_app": "96e2fbfdcc36f5babe065f48c2126a2229189368dfdff0e4c1f17cacc7e006ae",
+      "producer": "b1f67787ee7e11e879c0a3f3fde2ca938075e90aaa5759a864456edced9e072d",
+      "protocol": "dc05474cdc606a63355d614f8dd66c70809e5eabc0cd9166ed2e88c3c2b80d2e",
+      "html": "cde2ed276128a5e764a6cb4b467b3a02e165f70094d993ee2c41f7db5007a2a7",
+      "css": "f23518d6a8bd297207378ebf876f825120ce529cf6b1c3904e7786052b1a8d62",
+      "host": "a4caae23fd1f58df921d72b1ab165d910e984e97462e3b80bb36b9f8371b1e1f"
+    },
+    "status": "Historical36-control success on prior compiled Host. Maximal wrapper rebuild changed Host binary; final producer actually reran against current Host. Six other identities and screenshot remained exact.",
+    "raw_retained_external": "/workspace/work/field-keyboard/science/run2/keyboard-browser.json"
+  },
+  "initial_preimage_recovery": "Both original app and producer reconstructed byte-identically against failure identities; recovery is not execution."
+}

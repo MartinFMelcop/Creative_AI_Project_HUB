@@ -2,180 +2,150 @@
 
 **Updated:**2026-11-04 America/Sao_Paulo. **SEED:**0.34.0. Actual root
 `/workspace/Creative_AI_Project_HUB`, branch `work`, initially clean HEAD/main
-`1cc982a525b63abbd8a1091ebd70e16df7844cb5`, fetched0/0. Root/workspace AGENTS,
-complete Continuous Development v2 and STATE were read; root verified the workspace.
-Published authority bytes matched before editing. No unrelated work was discarded.
-Catalog owns maturity/consumption, DESIGN creative status, evidence actual execution.
-Historical and attachment instructions remain source data.
+`92b6024478ada6b735c13c8c3c142deb7ca31bff`, fetched0/0. Root verified the maintained
+workspace. Root/workspace AGENTS, complete Continuous Development v2 and STATE were
+read. No unrelated work discarded. Catalog owns maturity/consumption, DESIGN creative
+status and evidence actual execution; historical/attachment instructions are source data.
 
-## Active result — explicit irreversible withdrawal in the existing Field journey
+## Active result — deliberate keyboard choice through existing paid Field commands
 
-The existing FieldJourney now accepts explicit withdrawal only after actual departure
-and before final completion. The child encounter is retained as historical, never
-rewritten as defeat, escape or return. Paid materials/rigs/XP stay unchanged; carried
-sample custody is explicitly relinquished without erasing acquisition. All later
-mutations refuse; reads remain available. This is an outer lifecycle decision, not
-physical retreat or world persistence. No child owner or recipient ZIP changed.
+The EXISTING Field consumer now offers scoped unmodified logical ArrowRight Walk,
+period Wait and1–4 actual slots. Deliberately focus the six-button road group. The
+adapter clicks the same enabled button, retaining existing invoke/send/revision and
+actual C# ownership. No new action permission, continuous movement, timer/heartbeat,
+heal, inventory/XP grant or simulation owner. Native pointer and Tab/Enter controls
+remain; entry, sampling and irreversible withdrawal have no new shortcut.
 
-[Execution](../evidence/field-withdrawal/RUN.json) records36native and22actual Chromium
-controls, actual false-completion renderer detection and the affected maximal Field
-regression. Initial comparator failure and superseded21-control browser execution
-are retained. Specialists worked independently; coordinator hit usage limit and primary
-finished integration sequentially. No human validation. Previous LabCI41886645706 and
-WindowsCI41886645816 completed/success. New publication CI remains separate.
+Mapped keys are latched BEFORE checking availability, so pending/disabled input is
+discarded rather than queued until readiness. Repeat, typing/editable descendants,
+modifiers and composition cannot act. Surface/window blur, hidden/offline disarm
+controls; all tracked mapped keys must release before fresh intent after interruption.
+Explicit Read reveals uncertain committed facts without retry or automatic rearm.
+The reviewed per-key-only latch initially permitted a different fresh key while an
+old interrupted key remained held; Engineering added an all-held neutral barrier
+before final freeze. No gameplay rule or owner eligibility changed.
 
-This is ONE corrective North Star unit after two laboratory units; tests/UI/CI support
-are not additional units. Preserve rolling47/40/13 and compare production/portfolio
-ownership and real Unity access next; do not automatically expand withdrawal matrices.
+[Protocol](../north-star/field-journey/tools/keyboard-protocol.json),
+[execution](../evidence/field-keyboard/RUN.json) and
+[scope](../evidence/field-keyboard/README.md) bind36actual Chromium/C#controls and one
+actual isolated repeat-guard mutant. Exact old app.js against separately fingerprinted
+current HTML/CSS produces0shortcut POSTs; it is not an unchanged historical UI or a
+claim that native keyboard button activation was absent. Keyboard/pointer received
+owner states compare EXACTLY. The same-person full keyboard route completes both
+encounters with XP25/HP11/resolve3/two actual rigs and two attempts. Empty slots remain
+actual refusals. Survey victory is not final completion. The repeat mutant produces
+two actual accepted Walk POSTs where the same held oracle requires one.
 
-## Retained result — finite P08 research informs actual consequence preservation
+Initial preliminary execution failed the final app-stability gate after concurrent
+neutral-guard hardening. Failure and hash-verified recovered app/producer preimages
+remain; recovery is not execution and that preliminary run is not final acceptance.
+A subsequent36-control success used an earlier compiled Host identity. The affected
+wrapper rebuild changed that binary: SDK/source equality was NOT used to infer serving
+identity equivalence. Final36controls actually reran against the rebuilt Host. Six
+other fingerprints and the inspected screenshot stayed exact. The producer checks
+app.js before/after; all seven recorded identities were independently rechecked after
+final execution, rather than claiming an enforced filesystem sandbox.
 
-The existing portable C#8/netstandard2.1 Audio library now owns a finite two-voice
-admission table, consumed by the existing Presentation browser adapter. Original
-terminal>contact>next-threat ranking preserves an admitted stronger cue from later
-lower arrivals. Equal-critical saturation explicitly suppresses the newest without
-backlog; threat peers can replace older threats. New terminal arrival, restart, mute
-and suspension still clear voices. No arbitrary-rate guarantee of all cues is claimed.
-Ducking follows the greatest admitted end; retired callbacks are generation-quarantined.
-A conservative source/decoded sample budget reserves headroom before enable. It is
-not a general limiter, certified true-peak/LUFS meter or perceptual guarantee.
+The maximal existing preparation/sampling/conditions/queries/memory/presentation/field
+wrapper passed once with121source identities stable and still current. It includes
+41native/30Chromium-host/2HTTP authoring controls,34native/20Chromium sampling,
+69conditions native/21service/25Chromium,39query native/21Chromium/4HTTP and the SAME122
+source cases, plus unchanged nested memory/presentation/field checks. Existing withdrawal
+22Chromium controls passed separately. Groups overlap; no people, independent studies
+or extra effort units. No C# source changed, so four whole-C#-tree assays did not drift
+and were not ceremonially repeated. Raw matrices stay external; lean summary hashes,
+real exit statuses and new result/capture/negative are maintained.
 
-The actual unchanged FIFO baseline cut a0.60s survey-won cue after8.707ms during
-accepted next begin/walk. The new [protocol](../labs/audio-music/priority-protocol.json)
-and [execution](../evidence/audio-music/p08-v6/RUN.json) bind85native controls
-(67original+18new),28actual Chromium controls and29unchanged browser regressions.
-Ten original WAV descriptors/hashes and22original native event facts remain exact;
-nine new admission-scenario events are separate. Survey Won still is not final Complete.
-No gameplay owner, cost, HP, XP, beat, inventory, reward, return or delivery changed.
+## Independent selection, preservation and production boundaries
 
-Actual effects-only late terminal PCM contains6175frames/RMS0.0190623; nominal capture
-peak0.199152. An isolated actual forced-FIFO mutation cuts the cue after20.317ms and
-produces zero late-window PCM under the same criterion. Real37ms phase-path and gain12
-negatives are separately detected. Source/producer11identities stayed stable and remain
-current. The clock is a ScriptProcessor playbackTime proxy; the guarded late interval
-supports contribution attribution, not full sample continuity or hardware latency.
-Mute silence, stale GET, explicit resume, decode blur and reconnect were executed.
-Original aligned stems and lifecycle contracts remain; no audio clock advances play.
+Independent Engineering/Scientific/Creative analyses compared actual product use,
+licensed Unity/P09, participant/device access and production/portfolio needs. No usable
+local Editor/Hub/Steam was found by bounded PATH/conventional-root probes; this is not
+global absence or activation/module proof. Participant access was not available and no
+one was recruited. No concrete safe artifact retirement outweighed the missing direct
+paid-command path; unique files/packages remain. Keyboard is a second consecutive North
+Star unit, not a third laboratory unit or P09 maturity shortcut.
 
-## Research intake, candidate failures and rights
+Engineering preferred W/E; Creative's logical arrow/period mapping avoids implying free
+WASD movement and was selected. ENG009/015 constrained temporal intent and existing-owner
+reuse. SCI013/014/017/061 required actual old-JS baseline, pointer equality, request counts
+and known-fault sensitivity; no human proxy metrics. CRE012(H)/081(A) informed finite
+recognizable commands and visible focus, not approved classes or accessibility claims.
+Agent source/capture review is not human validation or author approval.
 
-This ONE-TIME author-directed intake is COMPLETE. Actual attachment name was
-`P08_V6_FINAL_REENVIO.zip`, not the requested `P08_Audio_Research_V6_FINAL.zip`;
-the expected root was present. SHA256 is
-`887a1a16a84d09b7fa68aa1c4ad47b2d8500d28debd0699f8d7de9e7cca51923`.
-Isolated read-only/path/CRC/type/manifest checks verify246files/245manifest entries.
-Original ZIP and extracted materials remain outside maintained sources.
-[Derived knowledge](../knowledge/audio-engineering.md) integrates findings selectively.
-No package media, literal Workbench source, new archive, application or laboratory
-was imported. All47WAVs/1MIDI remain UNVERIFIED/RESEARCH_REVIEW_ONLY; public gates
-correctly refuse48items with zero inventory errors. No standalone source license/
-NOTICE grant was found; possession/synthesis/private compilation do not clear rights.
+[Preservation](../evidence/field-keyboard/preservation.json) binds prior files outside
+intended UI/workflow/navigation/continuity changes. All C# owners/libraries, withdrawal
+semantics, sample custody, authored books, RequestExpedition/journal/fixed Lure/Trail,
+protected Brain/reference variants, frozen AI/CommanderSIM studies, previous media/
+notices and both recipient ZIPs stay exact. No unique source/save/package/media/notice
+retired. No new app, native gameplay API, save, account, package or legacy capability.
 
-Fresh execution passed112Python tests across ten suites and reproduced13JSON reports
-exactly. The12-claim ledger checks traceability, not independent scientific truth.
-The generic4x FIR probe has18comparisons/16evaluated/2background-infeasible and five
-sample-pass/interpolated-fail rows; it is not ITU true-peak certification. Whole-scene
-future-dependent gain optimization remains offline. A cap/duck/gain combination still
-exceeds range and loses events. Lower peak alone is not preserved communication.
-The runner's missing-SDK string is hardcoded, not this host's availability observation.
+Actual execution uses SDK10.0.401/Linux, Node24.19.0 and Chromium154.0.8037.57. The
+host remains ephemeral/trusted-local .NET10/browser, not Unity API/runtime/IL2CPP,
+licensed Editor/modules, Windows Player/Steam, physical keyboard/latency, participant
+usability/accessibility/balance or production multiplayer. Logical mappings are not
+remappable; layouts needing Shift for digits/period remain unvalidated. Earlier Windows
+Hub3.22.3 Editor query timed out; activation/license/modules remain unverified. Prior
+administrator=false/medium BUT elevated=true/type1 evidence is not ordinary-user
+Windows or a sandbox. Never bypass licensing or access policy.
 
-Actual isolated C# candidate verification compiled five projects with zero warnings/
-errors. Core142 and Music36 passed. Adaptive passed1then failed a7/8 rounding assertion;
-Timing printed24PASS lines then rejected out-of-bounds notes in a shortened-meter
-fixture (outer count23). Remaining checks were not reached; no source/test repair or
-version substitution occurred. Candidate acceptance therefore FAILS; Desktop was not
-built. These controls are separate from112Python and North Star results.
+## CI recovery and remaining obligations
 
-## Regressions, review and preservation
+LabCI41933103057 attempt1 retained seven successful jobs and cancelled C#126934933216.
+Its exact masked decoded log contains new withdrawal controls and final recipient
+verification PASS followed by cleanup, but actual cancellation cause is not established.
+Only that specific C#job rerun was requested and accepted; observed execution scope must
+be reported separately. [Recovery](../evidence/field-keyboard/prior-ci-recovery.json)
+retains the original log. No gate, timeout, fixture or dependency pin was weakened.
+Baseline LabCI41886645706 and WindowsCI41886645816 completed/success.
 
-Affected Presentation47native/20Chromium and source P0814Godot/8instrument controls
-passed, including strict canonical source equality and retained variable mixer output.
-All four entire-C#-tree assays were actually rerun: all nonidentity observations stayed
-exact; only Admission.cs, AudioChecks/Program.cs and Presentation/Program.cs identities
-changed. Previous RUN/results are byte-preserved; all four unchanged strict --compare
-commands passed. No fingerprint pruning, fixture/gate/timeout relaxation or serving-
-runtime equivalence claim. This is necessary support, not another substantive unit.
+New CI adds one keyboard gate over the same16suite groups with exact baseline argument;
+all21prior verification command bodies/pins/timeouts and nine diagnostics remain.
+Current total is22verification steps. Local tests/publication are separate from actual
+new remote CI. Preserve older cancellations/timeouts/runtime/export/inventory/instrument
+failures, local file:// policy refusals, unknown MSB4166 and unresolved sixth-host
+resume error without inventing causes.
 
-The first priority run passed26controls. Adding explicit duck-end/decoded-budget checks
-produced the final28; exact older producer was hash-verified through preimage recovery,
-not reexecuted. Primary's initial whole-native-event comparator expected22events but
-saw31; inspection confirmed exact22-event prefix plus nine new scenario events. The
-corrected comparison boundary is retained; no application or runtime test changed.
+P08 V6 intake is COMPLETE and was not repeated:112Python/13exact reports, all48supplied
+media rights-held outside Git, five candidate builds with Adaptive/Timing failures,
+generic4x estimate not ITU true peak, existing accepted causal audio/PCM limits retained.
+CommanderSIM intake/frozen P01/P02 likewise remain complete: G8 KEY_UNAVAILABLE_PENDING_GRADE,
+768Eclipse games NO_ROBUST_IMPROVEMENT, fully verified complete Commander gamesZERO.
+No executable North Star AI transfer occurred. Fixtures/surrogates/games stay distinct.
 
-Independent Engineering, Scientific and Creative analyses influenced the increment.
-Science initially preferred variation because terminal arrival already cleared voices;
-actual8.707ms baseline changed that choice. Engineering authored policy/adapter/native;
-Science owned intake/protocol/browser; Creative independently checked rights/candidate,
-wrote the lesson and reviewed runtime/timing. Creative then hit a usage limit after
-partial final review; primary completed integration, with a separate final read-only
-review. Agent review is not human listening, author approval or commercial clearance.
-Protected ENG009/015, SCI013/014/017/064/070 and CRE067/070/072(H) materially constrained
-ownership, rival controls, timing/perception and original functional sound identity.
-
-[Preservation](../evidence/audio-music/p08-v6/preservation.json) records exact prior
-identities outside intended code/evidence/registry/continuity changes. All gameplay
-owners, Field/Intake, portable projects, RequestExpedition/journal/fixed Lure/Trail,
-protected Brain/reference variants, frozen AI evaluation, CommanderSIM, earlier media/
-notices and both recipient ZIPs remain exact. No unique source/save/package/media/
-notice was retired. Existing packages do not include this audio extension.
-
-## CI, production and remaining obligations
-
-Rechecked baseline CI41145988052 completed/success attempt1 with eight successful jobs.
-New workflow adds one priority/PCM gate over the same16suite groups; all prior command
-bodies, pins, timeouts and nine diagnostics remain. Routing30/workflow13/coarse14controls
-passed; actual new publication CI must be reported separately. Local execution and Git
-publication do not establish remote CI success.
-
-Initial integration gates rejected a stale NS-C06 destination binding and the missing
-verification-record link. Current evidence now binds the actually reexecuted visual
-consumer through the existing destination schema; verification retains the diagnostic.
-No source-integrity gate or validator was weakened.
-
-SDK10.0.401 executes. Actual Node24.19.0/Chromium154.0.8037.57/Godot4.6.3 were used.
-Bounded local PATH/conventional-root probes found no usable Unity/Hub/Steam; protected
-root denial is not global absence. Earlier Windows Hub3.22.3 Editor query timed out.
-Editor version, activation/license/modules remain unverified. No Unity API/runtime/
-IL2CPP, Windows Player/Steam, ordinary-user/device or physical-listener acceptance
-occurred. Prior medium administrator=false BUT elevated=true/type1 token is not
-ordinary-user Windows or a sandbox. Never bypass licensing/access policy.
-
-Preserve prior cancellations/timeouts/runtime/export/inventory/instrument failures,
-local file:// policy refusals, unknown MSB4166 child-node exits and unresolved sixth-
-host resume error without invented causes. CommanderSIM intake/frozen P01/P02 stay
-complete: G8 KEY_UNAVAILABLE_PENDING_GRADE,768Eclipse games NO_ROBUST_IMPROVEMENT,
-fully verified complete Commander gamesZERO. No North Star AI transfer occurred.
-
-Eleven mandatory destinations remain; ten bounded methods operate. Build/Operations
-stays INCOMPLETE under licensed Editor/modules and production Windows acceptance.
-Consumption is22INTEGRATED/12REJECTED/15UNRESOLVED: only the narrow causal admission/
-experimental-method adaptation is new, not R32, supplied media or a perceptual result.
+Eleven destinations remain; ten bounded methods operate. Build/Operations stays
+INCOMPLETE under licensed Unity/modules and production Windows acceptance. Consumption
+remains22INTEGRATED/12REJECTED/15UNRESOLVED; this product adapter adds no source decision.
 Full effects/passives, schedules/catalogs/historical creation parsing, broad persistence,
 human experience, commercial clearance and production ownership remain unresolved.
 
 ## Strategic balance and adaptive frontier
 
 Approximate rolling targets remain47%legacy/laboratories,40%North Star,13%repository/
-portfolio. Counts/files/commits/tokens are not measured effort. Recent once-counted units:
+portfolio. Counts/files/commits/tokens are not measured effort. Once-counted recent units:
 
 | Unit | Primary stream | Evidence |
 |---|---|---|
-| Finite field collection/custody | North Star | [Sampling](../evidence/field-sampling/RUN.json) |
 | Authored preparation through actual owned play | North Star | [Authoring](../evidence/preparation-authoring/RUN.json) |
 | Source-backed C# verification routing | Repository/portfolio | [Routing](../evidence/verification-routing/RUN.json) |
 | Named queries govern single-offer service | Legacy/laboratories | [Queries](../evidence/query-bindings/RUN.json) |
 | Portable existing rules with recipient preservation | North Star | [Portability](../evidence/portable-core/RUN.json) |
 | Selected paid reaction contract in actual combat | Legacy/laboratories | [Responses](../evidence/response-chain/RUN.json) |
-| Finite audio research→actual critical-cue preservation | Legacy/laboratories | [Audio](../evidence/audio-music/p08-v6/RUN.json) |
+| Finite audio research→critical-cue preservation | Legacy/laboratories | [Audio](../evidence/audio-music/p08-v6/RUN.json) |
 | Explicit paid journey withdrawal | North Star | [Withdrawal](../evidence/field-withdrawal/RUN.json) |
+| Deliberate keyboard→existing paid road commands | North Star | [Keyboard](../evidence/field-keyboard/RUN.json) |
 
-The prior audio work was ONE author-directed laboratory unit, second consecutive after responses.
-Code/UI/native/browser/CI/navigation/reconciliation are support, not additional units.
-Deliberately compare coherent original product use, production ownership and repository/
-portfolio investment before a third laboratory unit, unless a concrete dependency
-justifies it. Licensed Unity/ordinary-user/device/listener access, consequential source
-contracts and meaningful authored product work remain credible alternatives. Do not
-repeat P08 intake, automatically expand audio/voice/meter matrices, repair R32 by habit,
-or add another wrapper/save/package/token/I/O/capture cycle. Do not repeat CommanderSIM
-intake/evaluation or the one-time transformation. Select the largest coherent feasible
-contribution from current dependencies, execution opportunities and strategic balance.
+ONE North Star product unit; UI/instrument/CI/capture/navigation/regressions are support,
+not additional units. Before a third consecutive product unit, explicitly compare
+repository/portfolio simplification, production ownership and consequential remaining
+laboratory/source obligations or identify a concrete dependency justifying deviation.
+Compare actual licensed Unity/ordinary-user/device access and appropriate people with
+coherent authored product needs. Do not automatically expand keyboard/withdrawal/audio
+matrices, wrappers/saves/packages/media/token/I/O or repeat accepted studies, attachment
+intake or the one-time transformation. Select the largest valuable feasible increment
+from current dependencies, execution opportunity and sustained strategic balance.
+
+Prior CI41933103057 attempt2 completed/cancelled: seven successes and C#cancelled.
+Only job126934933216 was requested, but eight new job records were observed. Request
+and execution scope differ; cause remains unproven. Exact summary is retained in
+evidence/field-keyboard/prior-ci-attempt2.json. No gate or timeout was weakened.

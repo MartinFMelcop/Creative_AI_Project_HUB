@@ -1,0 +1,98 @@
+{
+  "schema": "field.keyboard.repository-verification.v1",
+  "status": "PASS",
+  "commands": [
+    {
+      "command": [
+        "python3",
+        "tools/validate_repo.py"
+      ],
+      "exit_code": 0,
+      "test_count": null
+    },
+    {
+      "command": [
+        "python3",
+        "tools/reference_library.py",
+        "check"
+      ],
+      "exit_code": 0,
+      "test_count": null
+    },
+    {
+      "command": [
+        "python3",
+        "tools/brain_query.py",
+        "check"
+      ],
+      "exit_code": 0,
+      "test_count": null
+    },
+    {
+      "command": [
+        "python3",
+        "tools/check_transformation.py"
+      ],
+      "exit_code": 0,
+      "test_count": null
+    },
+    {
+      "command": [
+        "python3",
+        "tools/check_portfolio.py"
+      ],
+      "exit_code": 0,
+      "test_count": null
+    },
+    {
+      "command": [
+        "python3",
+        "tools/inventory_origins.py",
+        "--check",
+        "labs/source-inventory.json"
+      ],
+      "exit_code": 0,
+      "test_count": null
+    },
+    {
+      "command": [
+        "python3",
+        "tools/test_csharp_workflow.py"
+      ],
+      "exit_code": 0,
+      "test_count": 13
+    },
+    {
+      "command": [
+        "python3",
+        "tools/test_csharp_scope.py"
+      ],
+      "exit_code": 0,
+      "test_count": 30
+    },
+    {
+      "command": [
+        "python3",
+        "tools/test_ci_scope.py"
+      ],
+      "exit_code": 0,
+      "test_count": 14
+    },
+    {
+      "command": [
+        "python3",
+        "tools/test_check_portfolio.py"
+      ],
+      "exit_code": 0,
+      "test_count": 7
+    }
+  ],
+  "workflow": {
+    "old_command_bodies_exact": 21,
+    "new_verification_steps": 22,
+    "suite_keys": 16,
+    "old_failure_diagnostics": 9,
+    "pins_timeouts_and_security_gates_unchanged": true
+  },
+  "boundary": "Actual parent-execution local gate outcomes; no remote CI or Unity/Windows/player acceptance implied. Final exact manifest coverage generated and checked after this record."
+}

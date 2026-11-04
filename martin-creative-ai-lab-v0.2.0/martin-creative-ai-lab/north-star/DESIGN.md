@@ -979,3 +979,19 @@ an original finite trial policy informed by CRE-005 agency direction and ENG-015
 ownership, not approved world lore or a source Crossing action. Its value to human
 players, readability and balance remain unvalidated; executed software acceptance
 belongs to the [current evidence](../evidence/field-withdrawal/RUN.json).
+
+## Existing Field journey — discrete keyboard choice (experimental)
+
+The existing original C# Field consumer offers six direct logical road shortcuts only
+inside an explicitly focused group: ArrowRight Walk, period Wait and1–4 actual slots.
+It delegates the existing buttons and paid owner commands, rather than implying free
+movement or a realtime combat system. Preparation, entry, sampling and irreversible
+withdrawal retain their explicit controls. Labels describe the confirmed person's
+actual slots; empty slots can still be refused by the owner.
+
+Repeated, modified, composing, typing, pending and interrupted input cannot become a
+later queued action. Interruption disarms the surface; release all tracked mapped
+keys and focus deliberately before fresh intent. Existing pointer/native Tab/Enter
+controls remain. CRE012(H)/081(A) guide recognizable choices and reduced input barriers,
+not canon, human accessibility or device validation. [Execution](../evidence/field-keyboard/RUN.json)
+separates actual software input and owner consequences from those unverified claims.

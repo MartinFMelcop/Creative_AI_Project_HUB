@@ -1,0 +1,57 @@
+{
+  "schema_version": 1,
+  "kind": "memory-study_consumer_verification",
+  "source_sha256": {
+    "evidence/memory-study/protocol.json": "61470b70a436e1bcaf8ebd7916355e03ec7afeac093a37fc0485484f485450a2",
+    "labs/narrative-continuity/memory/run.py": "708c0aec025840f8fe72c6fc4b9f7f5ff929bdd53a36ec689fd0621bbf515ecb",
+    "north-star/csharp/global.json": "e0c0882461e712f6c2c66241bf2f175c60832e3ff077dc26091ff8c661d4193e",
+    "north-star/memory-study/.gitignore": "79810615b4063be5474618fd002df934762fe9ccebb448537ce74ce23b319202",
+    "north-star/memory-study/Checks/NorthStar.MemoryChecks.csproj": "9c0ea4da0d10f712ab2249ff883dff348868caa2413bd63c565bec91ccd12370",
+    "north-star/memory-study/Checks/Program.cs": "1268694ca86b383c66ccc8eef6ea63e91689fbb87b47e7a99a80d03f838bfcca",
+    "north-star/memory-study/Conditions/.gitignore": "6c5082c7e6de3e350189c67a1aacf757485ecc26e0a3cf96683528565f3e5f12",
+    "north-star/memory-study/Conditions/Conditions.cs": "04faa4d84b061879f22891fcf3b9e6166a70a94ddb8bfa72f8ebe39e7d21c472",
+    "north-star/memory-study/Conditions/NorthStar.Conditions.csproj": "3acec7333496cb2bb2bb2a8c6aaf151f714f6402e133ead2ca8d3f166d77dd22",
+    "north-star/memory-study/ConditionsChecks/.gitignore": "6c5082c7e6de3e350189c67a1aacf757485ecc26e0a3cf96683528565f3e5f12",
+    "north-star/memory-study/ConditionsChecks/NorthStar.ConditionsChecks.csproj": "4df210d5dff78286d31bb7f19a8d0da91734e5a0305ae8740f548a4ab4ab7bc7",
+    "north-star/memory-study/ConditionsChecks/Program.cs": "3c2b2e96e1674dfa4a34f10b4680810778e9fc5e8e996c43dfaa8bd66694ad0a",
+    "north-star/memory-study/Host/NorthStar.MemoryStudy.csproj": "d5dcc14b4facf695f9f91cc63e3d019c14f9f6200f4436457dd8925a7a70649a",
+    "north-star/memory-study/Host/Program.cs": "afd5a812978202c78f9bec8ceec1e892edcec10eb37c7f43bfe8c966425e44e5",
+    "north-star/memory-study/Host/Room.cs": "91dc190402af660d958749a26db7f670a799d285ceb0de7373ab8eacc14619ce",
+    "north-star/memory-study/QueryChecks/.gitignore": "6c5082c7e6de3e350189c67a1aacf757485ecc26e0a3cf96683528565f3e5f12",
+    "north-star/memory-study/QueryChecks/NorthStar.QueryChecks.csproj": "9c0ea4da0d10f712ab2249ff883dff348868caa2413bd63c565bec91ccd12370",
+    "north-star/memory-study/QueryChecks/Program.cs": "ab124bfc150c842a1c31ccdf582277ab0ce99e5aea9bd1c49320e27d8a35bbed",
+    "north-star/memory-study/README.md": "832292e36c4cf33d1667fdcca666b7d0e1252c2bbc83972c9219f9b83abfd9ea",
+    "north-star/memory-study/Rules/Memory.cs": "4307f83a7e7cbed6ed8f08815ce3e216744be660545c4edd6a6985581abec852",
+    "north-star/memory-study/Rules/NorthStar.Memory.csproj": "3acec7333496cb2bb2bb2a8c6aaf151f714f6402e133ead2ca8d3f166d77dd22",
+    "north-star/memory-study/ServiceChecks/.gitignore": "6c5082c7e6de3e350189c67a1aacf757485ecc26e0a3cf96683528565f3e5f12",
+    "north-star/memory-study/ServiceChecks/NorthStar.ConditionServiceChecks.csproj": "bf9ffc3c68026bb2d51d6e23ff53741b70efafa7e1b0a57e05e0345100ac70ab",
+    "north-star/memory-study/ServiceChecks/Program.cs": "2b7fc7843e74e7e741536f1e85fdfcb31586b6212beb9884137a0c8caa410616",
+    "north-star/memory-study/tools/browser.mjs": "1ea73aaa7dfd1f3f5d2ab3d55918af9d857ec0126ee1ca02d855c481a62bb904",
+    "north-star/memory-study/tools/conditions-browser.mjs": "35e99a0b7521f48d4f3c95006e9d5db88c3e14615184e1ec8b0a2758cf64863f",
+    "north-star/memory-study/tools/conditions-verify.py": "46fbf48674a06761714487da56ea428e25bfafa29e07a3c038cc81fcf9aaf47f",
+    "north-star/memory-study/tools/query-browser.mjs": "2a1e653060656e813dc850701103e1463d36e7f81f3ff348cc870cb24b4c1603",
+    "north-star/memory-study/tools/verify.py": "237c261f84eb8a374d132dd424d99f16ce4a37608d2de831dd5a0467efadb3b2",
+    "north-star/memory-study/web/app.js": "46403078ff7f4f5700691cd37d16fa32b819be1277d7a6f9655c545b36820e88",
+    "north-star/memory-study/web/index.html": "17538d4d9a668c2b30fdbf901a648ce46c6675bd8307467605cb11f1deb2f773",
+    "north-star/memory-study/web/style.css": "4e4b8fadef58240b275e440df0868369737b6ec2180eefcb3529bde89d500b51",
+    "projects/realtime-integration-lab/package-lock.json": "aa191ef2158e6cc6f770bf4b3ee44dca17175ef1a3cd572b98115246bf46aea7",
+    "projects/realtime-integration-lab/package.json": "42e3cc9633e522dd6d9a5c11023418331129632881a8bf0b95e3717247d57ebe"
+  },
+  "source_stable": true,
+  "checks": {
+    "native": {
+      "passed": 34,
+      "failed": 0
+    },
+    "chromium": {
+      "passed": 21,
+      "failed": 0
+    },
+    "http": {
+      "passed": 7,
+      "failed": 0
+    },
+    "source_cases": 57
+  },
+  "limits": "Software controls overlap outcomes, not people, independent studies, Unity, Windows or Steam."
+}
