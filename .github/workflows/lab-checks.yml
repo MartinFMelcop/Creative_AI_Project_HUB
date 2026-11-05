@@ -651,6 +651,9 @@ jobs:
       - name: Execute deliberate keyboard actions and interruption quarantine
         if: contains(fromJSON(needs.scope.outputs.csharp_suites), 'field')
         run: node north-star/field-journey/tools/keyboard-browser.mjs dotnet "$RUNNER_TEMP/field-keyboard" evidence/field-keyboard/baseline/app.js
+      - name: Execute focused journey navigation and unchanged paid owner route
+        if: contains(fromJSON(needs.scope.outputs.csharp_suites), 'field')
+        run: python3 north-star/field-journey/tools/journey-view-verify.py --dotnet dotnet --output "$RUNNER_TEMP/journey-view"
       - name: Retain scoped memory failure diagnostics
         if: failure()
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4

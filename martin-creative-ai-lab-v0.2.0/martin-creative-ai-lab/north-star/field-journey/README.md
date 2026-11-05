@@ -250,3 +250,32 @@ The [prospective protocol](tools/withdrawal-protocol.json) and
 acceptance, retained child facts, lost custody, renderer negatives and prior regressions.
 The existing maximal preparation verifier remains the affected-regression command;
 its prior command bodies, assertions and timeouts remain intact.
+
+## Deliberate focused journey view
+
+The same consumer offers an optional focused workflow for Person, Workshop, Assembly
+and Road. Full view remains the default. Switching views is local observation only:
+it sends no owner command, supplies no eligibility and never reviews, confirms, spends,
+heals, enters or advances a beat. Status comes from the current actual snapshot; opening
+a section is not proof that its actions are ready. The confirmed person and last owner
+receipt remain available while earlier workshop facts stay explicitly historical.
+
+An earned pending amendment remains reachable through Person without applying it.
+Hiding Road disarms its existing keyboard surface; showing Road never restores held
+intent or focuses gameplay automatically. Neutral release and deliberate fresh focus
+are required. Navigation during a pending or uncertain receipt cannot release the
+existing command quarantine. Read actual facts remains the recovery action.
+
+[Acceptance](tools/journey-view-protocol.json) defines actual Chromium navigation,
+full-route owner parity, historical/failure/withdrawal observations, held-input and
+delayed-response controls plus an isolated false-readiness negative. These are software
+workflow controls, not human usability/accessibility, reduced cognitive load, physical
+latency, balance or Unity/Windows/Steam acceptance. No gameplay owner, source capability,
+account, save or recipient package is introduced.
+
+```sh
+python3 north-star/field-journey/tools/journey-view-verify.py --dotnet dotnet --output /tmp/journey-view-new
+```
+
+[Execution](../../evidence/journey-view/RUN.json) separates the new focused-view
+controls from affected unchanged regressions and preserved failed attempts.

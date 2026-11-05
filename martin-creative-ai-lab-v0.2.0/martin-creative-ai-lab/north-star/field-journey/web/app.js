@@ -5,6 +5,7 @@
  const keyboardButtons={ArrowRight:'walk','.':'wait','1':'use-slot1','2':'use-slot2','3':'use-slot3','4':'use-slot4'};
  const keyboardHeld=new Set();
  let keyboardArmed=false,keyboardNeedsNeutral=false;
+ let focusedView=false,viewStage='person';
  const accents={copper:'#ae794f',teal:'#5c9997',violet:'#9b88b1'};
  window.fieldJourney={get state(){return state;},get status(){return uncertain?'read-required':busy?'pending':'ready';},send,read,render};
  function proposal(){return{handle:$('handle').value,accent:$('accent').value,class_id:$('class_id').value,background_id:$('background_id').value,slots:[1,2,3,4].map(n=>$('slot'+n).value||null)};}
@@ -140,15 +141,47 @@
   $('earned-state').textContent=`Earned points remaining: ${e.unspent}. Vitality ${e.vitality}; Focus ${e.focus}. Between encounters, a new whole proposal may equip earned Dash. Confirmation never heals, refunds or reopens the workshop.`;
   for(let n=1;n<=4;n++)$('use-slot'+n).textContent=`Slot ${n}${id?.slots[n-1]?' · '+id.slots[n-1]:''}`;
   $('completion').hidden=!completeObserved;$('completion').textContent=`${id?.handle||'This person'} completed the actual road. Workshop acquisition and assembly remain distinct from that completion.`;
-  $('sequence').textContent=String(s.sequence);$('notice').textContent=s.text;withdrawalView(s);controls();
+  $('sequence').textContent=String(s.sequence);$('notice').textContent=s.text;withdrawalView(s);journeyView();controls();
  }
+ // Local presentation preference only. No owner command, read or automatic stage change.
+ function journeyView(){
+  document.body.dataset.journeyView=focusedView?'focused':'all';
+  const panel=$('journey-view');panel.dataset.mode=focusedView?'focused':'all';panel.dataset.stage=viewStage;
+  for(const section of document.querySelectorAll('[data-journey-stage]')){
+   const hide=focusedView&&section.dataset.journeyStage!==viewStage;
+   if(hide&&section.dataset.journeyStage==='road'){
+    disarmKeyboard();
+    if(section.contains(document.activeElement))document.activeElement.blur();
+   }
+   section.hidden=hide;section.inert=hide;
+  }
+  $('journey-view-all').setAttribute('aria-pressed',String(!focusedView));
+  for(const stage of ['person','workshop','assembly','road'])$('journey-view-'+stage).setAttribute('aria-pressed',String(focusedView&&viewStage===stage));
+  if(!state)return;
+  const c=state.intake,e=c.state;
+  const person=!c.confirmed?'Person unconfirmed':c.pending?'Confirmed person / amendment pending':'Person confirmed';
+  const workshop=state.workshop_closed?'Workshop historical after departure':!c.confirmed?'Workshop requires confirmed preparation':c.pending?'Workshop paid actions await confirmed preparation':'Workshop open; each service still checks its own facts and costs';
+  const quantity=name=>e.inventory[name]??0;
+  const stock=`Actual rig stock: ${quantity('trail_rig')} Trail / ${quantity('plate_rig')} Plate`;
+  const road=state.withdrawn===true?'Expedition withdrawn / child facts historical':e.complete?'Actual road complete':e.active?`Actual encounter active / stage ${e.stage+1} / beat ${e.beat}`:e.attempts?e.won?'Survey won / final road not complete':'Attempt ended / no completion':'Not departed';
+  $('journey-view-facts').textContent=`${person}. ${workshop}. ${stock}. ${road}. Viewing a section never makes its actions eligible.`;
+  $('journey-view-amendment').hidden=!c.confirmed||!c.pending||state.withdrawn===true;
+ }
+ function selectJourneyView(stage){
+  if(stage!=='all'&&!['person','workshop','assembly','road'].includes(stage))throw Error('Known journey section required');
+  focusedView=stage!=='all';if(focusedView)viewStage=stage;
+  journeyView();
+ }
+ $('journey-view-all').onclick=()=>selectJourneyView('all');
+ for(const stage of ['person','workshop','assembly','road'])$('journey-view-'+stage).onclick=()=>selectJourneyView(stage);
+ $('journey-view-review-person').onclick=()=>selectJourneyView('person');
  function keyboardStatus(){
   const status=$('field-keyboard-status');
   if(status)status.textContent=keyboardNeedsNeutral?'Keyboard interrupted. Release every held road key before a fresh choice.':!keyboardArmed?'Keyboard inactive. Focus the road controls, release held keys, then press a fresh key.':uncertain?'Read actual facts before another keyboard action.':busy?'Action pending. Further key presses are discarded; release before choosing again.':keyboardHeld.size?'Release held keys before pressing them again.':'Keyboard ready: → Walk · . Wait · 1–4 equipped slots. One fresh press chooses one response.';
  }
  function controls(){
   keyboardStatus();
-  for(const b of document.querySelectorAll('button'))b.disabled=busy||uncertain;$('read').disabled=busy;if(!state)return;
+  for(const b of document.querySelectorAll('button:not([data-journey-nav])'))b.disabled=busy||uncertain;$('read').disabled=busy;if(!state)return;
   const c=state.intake,e=c.state,ready=c.confirmed&&!c.pending,locked=e.active||e.complete,workshop=ready&&!state.workshop_closed;
   for(const el of $('draft-form').elements)el.disabled=busy||uncertain||locked;$('handle').readOnly=Boolean(c.confirmed);
   $('review').disabled=busy||uncertain||locked;$('confirm').disabled=busy||uncertain||locked||!c.pending||c.reviewed_revision!==c.draft_revision;
@@ -161,7 +194,7 @@
   for(const card of state.preparation_book.cards)$('propose-card-'+card.id).disabled=busy||uncertain||!card.eligible;
   for(const key of ['focus','vitality'])$(key).disabled=busy||uncertain||locked||e.unspent<1;
   $('withdraw-expedition').disabled=busy||uncertain||!state.workshop_closed||e.complete||state.withdrawn===true;
-  if(state.withdrawn===true){for(const el of document.querySelectorAll('button,input,select'))if(el.id!=='read')el.disabled=true;}
+  if(state.withdrawn===true){for(const el of document.querySelectorAll('button,input,select'))if(el.id!=='read'&&!el.hasAttribute('data-journey-nav'))el.disabled=true;}
  }
  async function read(){if(busy)return;busy=true;controls();const g=++generation;try{const r=await fetch('/state',{cache:'no-store'});if(!r.ok)throw Error('Read refused');const s=await r.json();if(g!==generation)return;uncertain=false;render(s);adopt(s.intake.draft);$('connection').textContent='Current facts read from the owner. No action was retried.';}catch(e){uncertain=true;$('connection').textContent='Unable to read: '+e.message+'. Read again before acting.';}finally{busy=false;controls();}}
  async function send(command,fields={}){if(busy||uncertain||!state)throw Error('Read current facts before another action');busy=true;controls();const g=generation;try{const r=await fetch('/command',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({command,revision:state.sequence,...fields})});if(!r.ok)throw Error('Command receipt unavailable');const s=await r.json();if(g!==generation)throw Error('Response quarantined after interruption');render(s);if(command==='draft'||command==='propose-card')adopt(s.intake.draft);$('connection').textContent='Actual owner response. No automatic retry or clock conversion.';return s;}catch(e){uncertain=true;$('connection').textContent='Outcome uncertain: '+e.message+'. Explicitly read facts before acting again.';throw e;}finally{busy=false;controls();}}

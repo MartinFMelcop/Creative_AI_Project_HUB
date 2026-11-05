@@ -1,0 +1,26 @@
+{
+  "primary": [
+    {
+      "command": "python3 tools/reference_library.py check",
+      "exit_code": 0,
+      "tail": "PASS: 5 reference records; 607 preserved sources, 18 derived PDF texts, 140 explicit exclusions; 14 North Star capabilities.\nIntegrity and structured evidence boundaries only; no legacy scripts, engine or rights review executed.\n"
+    },
+    {
+      "command": "python3 tools/brain_query.py check",
+      "exit_code": 0,
+      "tail": "\"line\": 188,\n      \"target\": \"#91-caso-h-um-visual-impressionante-destr\u00f3i-a-legibilidade\",\n      \"source_fragment\": \"91-caso-h--um-visual-impressionante-destr\u00f3i-a-legibilidade\",\n      \"kind\": \"inherited_heading_fragment_difference\"\n    }\n  ],\n  \"limits\": \"Pins detect byte changes, not factual accuracy, rights or independent validation. Inherited fragment differences are reported, not repaired.\"\n}\n"
+    },
+    {
+      "command": "python3 tools/inventory_origins.py --check labs/source-inventory.json",
+      "exit_code": 0,
+      "tail": "PASS: 11 origins, 1058 unique accessible files, 41 ZIP/PCK packages\n"
+    }
+  ],
+  "coordinator": {
+    "validate_repo": "PASS:1179 links",
+    "check_transformation": "PASS:23INTEGRATED/12REJECTED/15UNRESOLVED;11labs10operational1incomplete",
+    "check_portfolio": "PASS",
+    "routing_workflow_scope": "57 tests PASS"
+  },
+  "review": "Primary reviewed complete UI/browser/wrapper/withdrawal-oracle diffs and both actual screenshots; no human approval."
+}

@@ -45,7 +45,8 @@ async function fidelity(page,s){
  assert.equal(await page.locator('#withdraw-expedition').isVisible(),false,'Already accepted withdrawal cannot offer another confirmation');
  for(const value of await page.locator('.field-sample-site').evaluateAll(xs=>xs.map(x=>getComputedStyle(x).display)))assert.equal(value,'none','Historical sampling sites are not active opportunities');
  assert.equal(await page.locator('#field-sample-cargo').evaluate(el=>getComputedStyle(el).display),'none','Forfeited or never acquired cargo cannot remain visibly carried');
- assert.ok(await page.locator('button,input,select').evaluateAll(xs=>xs.every(x=>x.id==='read'||x.disabled)),'Every mutating form control remains disabled');
+ const readOnlyNavigation=['journey-view-all','journey-view-person','journey-view-workshop','journey-view-assembly','journey-view-road','journey-view-review-person'];
+ assert.ok(await page.locator('button,input,select').evaluateAll((xs,nav)=>xs.every(x=>x.id==='read'||nav.includes(x.id)&&x.tagName==='BUTTON'&&x.type==='button'&&x.hasAttribute('data-journey-nav')||x.disabled),readOnlyNavigation),'Every mutating form control remains disabled; only exact read-only navigation is exempt');
  assert.equal(await page.locator('body').getAttribute('data-withdrawn'),String(s.withdrawn),'Visible outer withdrawal follows actual owner');
  assert.equal(await page.locator('body').getAttribute('data-complete'),String(s.intake.state.complete),'Withdrawal cannot fabricate final completion');
  assert.equal((await page.locator('#confirmed-name').textContent()).trim(),s.intake.identity.handle,'Confirmed person remains the same');

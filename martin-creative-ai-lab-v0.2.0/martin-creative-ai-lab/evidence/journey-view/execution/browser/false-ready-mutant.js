@@ -1,0 +1,229 @@
+'use strict';
+(() => {
+ const $=id=>document.getElementById(id);
+ let state=null,busy=false,uncertain=false,generation=0;
+ const keyboardButtons={ArrowRight:'walk','.':'wait','1':'use-slot1','2':'use-slot2','3':'use-slot3','4':'use-slot4'};
+ const keyboardHeld=new Set();
+ let keyboardArmed=false,keyboardNeedsNeutral=false;
+ let focusedView=false,viewStage='person';
+ const accents={copper:'#ae794f',teal:'#5c9997',violet:'#9b88b1'};
+ window.fieldJourney={get state(){return state;},get status(){return uncertain?'read-required':busy?'pending':'ready';},send,read,render};
+ function proposal(){return{handle:$('handle').value,accent:$('accent').value,class_id:$('class_id').value,background_id:$('background_id').value,slots:[1,2,3,4].map(n=>$('slot'+n).value||null)};}
+ function adopt(d){if(!d)return;for(const key of ['handle','accent','class_id','background_id'])$(key).value=d[key];d.slots.forEach((value,i)=>$('slot'+(i+1)).value=value||'');}
+ function encounterView(v){
+  if(!v?.person||!v?.encounter||!v?.action)throw Error('Actual encounter projection required');
+  const p=v.person,e=v.encounter,a=v.action;
+  const fieldCompleteObserved = v.encounter.complete;
+  const fieldHandleObserved = v.person.handle;
+  const board=$('field-encounter-board'),actor=$('field-actor');
+  board.dataset.phase=e.phase;board.dataset.complete=String(fieldCompleteObserved);board.dataset.thresholdReached=String(e.threshold_reached);board.dataset.threat=e.threat_kind;
+  for(const [key,value]of Object.entries({handle:fieldHandleObserved??'',class:p.class_id??'',rig:p.rig,accent:p.accent??'copper',confirmed:p.confirmed,contact:a.contact,kind:a.kind,moved:a.moved,eventSequence:a.event_sequence}))actor.dataset[key]=String(value);
+  const x=85+830*e.position/e.world_end;
+  $('field-actor-shape').setAttribute('transform',`translate(${x} 320)`);$('field-cloth').setAttribute('fill',accents[p.accent]||accents.copper);
+  $('field-threshold').setAttribute('transform',`translate(${85+830*e.required_position/e.world_end} 0)`);
+  $('field-pulse').setAttribute('transform',`translate(${x} 328)`);
+  $('field-distance-marks').replaceChildren(...Array.from({length:e.world_end+1},(_,i)=>{const n=document.createElementNS('http://www.w3.org/2000/svg','text');n.setAttribute('x',String(85+830*i/e.world_end));n.setAttribute('y','382');n.setAttribute('text-anchor','middle');n.textContent=String(i);return n;}));
+  $('field-phase').textContent=fieldCompleteObserved?'ACTUAL ROAD COMPLETE':e.phase==='active'?`ACTIVE / ${e.beat} OF ${e.max_beats} BEATS`:e.phase==='survey-won'?'SURVEY WON / ROAD NOT COMPLETE':e.phase==='failed'?'ATTEMPT FAILED':'NO ENCOUNTER';
+  $('field-person-label').textContent=p.confirmed?`${fieldHandleObserved} · ${p.class_id} · actual rig ${p.rig}`:'Confirm a person before taking the road.';
+  $('field-scene-title').textContent=p.confirmed?`${fieldHandleObserved}, ${p.accent} accent, ${p.class_id} discipline, actual ${p.rig} rig.`:'No confirmed traveler';
+  $('field-outcome-label').textContent=e.active?'POSITION ALONE IS NOT COMPLETION':fieldCompleteObserved?'BOTH ACTUAL ENCOUNTERS COMPLETE':e.phase==='survey-won'?'SURVEY ONLY / FINAL ENCOUNTER REMAINS':e.phase==='failed'?'NO VICTORY OR REFUND OBSERVED':'NO ENCOUNTER / NO PREDICTED ACTION';
+  $('field-position').textContent=`Position ${e.position} / threshold ${e.required_position} · display bound ${e.world_end}`;
+  $('field-threshold-note').textContent=e.active?e.threshold_reached?`Position threshold reached; ${e.max_beats-e.beat} actual beats remain. Survival and the owner still decide the outcome.`:`Threshold not yet reached; ${e.max_beats-e.beat} actual beats remain.`:e.phase==='survey-won'?'This ended survey used its two-cell/four-beat objective. The owner has advanced to the next encounter; this is not final completion.':'Position does not create a terminal result. Discipline marks are not acquired rigs.';
+  $('field-threat-label').textContent=e.threat_kind==='none'?'NO ACTIVE THREAT':`NEXT: ${e.threat_kind.toUpperCase()}`;
+  $('field-response').textContent=a.kind==='refused'?`Refused ${a.command}. No accepted encounter response, damage, cost or movement was produced.`:['walk','dash','skill','wait'].includes(a.kind)?`Latest actual response ${a.event_sequence}: ${a.kind}; position ${a.from_position} → ${a.to_position}; HP lost ${a.health_lost}; resolve spent ${a.resolve_spent}, gained ${a.resolve_gained}; contact ${a.contact}.`:`Observed ${a.kind}. Entry/preparation is not narrated as healing or a paid encounter response.`;
+ }
+ function samplingView(s){
+  if(!s.sample_case||!Array.isArray(s.sample_case.sites))throw Error('Actual sampling custody required');
+  const sampleStatusObserved = s.sample_case.status;
+  const sampleCarriedObserved = s.sample_case.status === 'carried';
+  const sampleSecuredObserved = s.sample_case.status === 'secured';
+  const c=s.sample_case,e=s.encounter_view.encounter,id=s.intake.identity,person=id?.handle||'This person';
+  const label=c.site==='ridge'?'ridge rubbing':c.site==='channel'?'channel trace':null;
+  const panel=$('field-sampling'),cargo=$('field-sample-cargo');
+  panel.dataset.status=sampleStatusObserved;panel.dataset.lossReason=c.loss_reason||'';panel.dataset.carried=String(sampleCarriedObserved);panel.dataset.secured=String(sampleSecuredObserved);panel.dataset.caseAvailable=String(!c.case_spent);panel.dataset.caseSpent=String(c.case_spent);
+  cargo.dataset.carried=String(sampleCarriedObserved);cargo.dataset.secured=String(sampleSecuredObserved);
+  cargo.setAttribute('aria-label',sampleSecuredObserved?`${person}'s ${label||'sample'} secured through actual final completion; no return or delivery inferred`:sampleCarriedObserved?`${person} currently carries the acquired ${label||'sample'}; the road is not complete`:'No sample currently carried');
+  $('sampling-state').textContent=sampleSecuredObserved?'SECURED THROUGH ACTUAL ROAD':sampleCarriedObserved?'CARRIED / NOT SECURED':sampleStatusObserved==='lost'?'CASE LOST / NO SAMPLE CARRIED':'ONE EMPTY CASE';
+  $('sampling-case').textContent=sampleSecuredObserved?`${person} kept the sample through actual final completion.`:sampleCarriedObserved?`${person} carries one sample. Its safety is still at risk.`:sampleStatusObserved==='lost'?`${person}'s single case is spent and lost. No retry restores it.`:'One empty sample case was issued as disclosed expedition setup.';
+  $('sampling-site').textContent=label?(c.acquired?`Actual ${label} acquired on attempt ${c.collection_attempt}. ${sampleStatusObserved==='lost'?'That acquisition remains historical; current custody is lost.':sampleSecuredObserved?'Final completion secured custody, without a return or delivery.':'Acquisition alone is not securing.'}`:`The ${label} collection attempt spent the case but did not acquire a surviving sample.`):'Choose the ridge during the survey or keep the empty case for the later channel. There is no second case.';
+  $('sampling-picture-title').textContent=sampleSecuredObserved?'Actual sample secured through final completion':sampleCarriedObserved?'Actual sample carried, not secured':sampleStatusObserved==='lost'?'Case lost, no sample currently carried':'One issued empty case, no sample acquired';
+  const r=c.receipt;
+  $('sampling-receipt').textContent=r?`Actual collection receipt: attempt ${r.attempt}, beat ${r.before_beat} → ${r.after_beat}, HP ${r.hp_before} → ${r.hp_after} (${r.health_lost} lost). ${r.acquired?'The surviving contact acquired one sample; later custody is observed separately.':'No sample was acquired.'}`:'No paid collection contact has occurred. Site markers, reads and elapsed time create no sample.';
+  for(const site of c.sites){
+   const marker=$('field-site-'+site.id);marker.dataset.visible=String(e.active&&e.stage===site.stage);marker.dataset.eligible=String(site.eligible);
+   marker.setAttribute('transform',`translate(${85+830*site.position/e.world_end} 0)`);
+   $(site.id+'-sample-window').textContent=site.eligible?'Actual site reached with an empty case. Sampling spends the next beat and resolves its threat.':c.case_spent?'The one case is already spent; this site cannot supply another sample.':!e.active?'Enter the actual encounter before collecting.':e.stage!==site.stage?'This site belongs to the other encounter.':`Reach exact position ${site.position} while this encounter remains active. Passing a site or reaching a threshold does not collect it.`;
+  }
+ }
+ function preparationBook(s){
+  if(!s.preparation_book||!Array.isArray(s.preparation_book.cards))throw Error('Actual authored preparation book required');
+  const book=s.preparation_book;
+  const confirmedCardObserved = s.preparation_book.confirmed_card_id;
+  const panel=$('preparation-book');panel.dataset.draftCard=book.draft_card_id||'';panel.dataset.confirmedCard=confirmedCardObserved||'';
+  const name=id=>book.cards.find(card=>card.id===id)?.title||id;
+  $('preparation-draft-source').textContent=book.draft_card_id?`Draft source: ${name(book.draft_card_id)}. This is not confirmation or equipment.`:'Draft source: manual preparation. No authored card is attached.';
+  $('preparation-confirmed-source').textContent=!s.intake.confirmed?'Confirmed source: none. Review and explicitly confirm a whole draft.':confirmedCardObserved?`Confirmed source: ${name(confirmedCardObserved)}. Actual equipped actions and rig remain the owner facts below.`:'Confirmed source: manual preparation. No authored card is attached.';
+  $('preparation-cards').replaceChildren(...book.cards.map(card=>{
+   const article=document.createElement('article');article.dataset.cardId=card.id;article.dataset.eligible=String(card.eligible);article.dataset.minimumLevel=String(card.minimum_level);
+   const title=document.createElement('h3');title.textContent=card.title;
+   const description=document.createElement('p');description.textContent=card.description;
+   const preparation=document.createElement('p');preparation.className='preparation-card-fields';preparation.textContent=`${card.class_id} / ${card.background_id} · slots: ${card.slots.map(x=>x||'empty').join(' / ')}`;
+   const rig=document.createElement('p');rig.className='small';rig.textContent=`Rig recommendation: ${card.recommended_rig}. Not acquired or equipped.`;
+   const eligibility=document.createElement('p');eligibility.className='preparation-card-eligibility';eligibility.textContent=card.eligible?`Actual level ${s.intake.state.level}; this whole proposal is available.`:`Requires actual level ${card.minimum_level} and editable preparation. Current level: ${s.intake.state.level}.`;
+   const button=document.createElement('button');button.id='propose-card-'+card.id;button.type='button';button.className='secondary';button.textContent='Propose '+card.title;button.disabled=busy||uncertain||!card.eligible;button.onclick=()=>invoke('propose-card',{card_id:card.id});
+   article.append(title,description,preparation,rig,eligibility,button);return article;
+  }));
+ }
+ function withdrawalView(s){
+  const withdrawalObserved = s.withdrawn === true;
+  document.body.dataset.withdrawn=String(withdrawalObserved);
+  $('withdrawal-summary').hidden=!withdrawalObserved;
+  $('withdraw-expedition').hidden=!s.workshop_closed||Boolean(s.intake.state.complete)||withdrawalObserved;
+  const board=$('field-encounter-board');board.dataset.historical=String(withdrawalObserved);
+  if(!withdrawalObserved)return;
+  const r=s.withdrawal_receipt;if(!r||s.encounter_historical!==true)throw Error('Actual retained withdrawal receipt required');
+  $('withdrawal-context').textContent=`${s.intake.identity?.handle||'This person'} deliberately ended this expedition. Carried cargo is forfeited; all prior costs and earned progression remain. No home return, delivery or encounter defeat was observed.`;
+  $('withdrawal-receipt').textContent=`Accepted withdrawal ${r.sequence}: attempt ${r.attempt}, stage ${r.stage}, beat ${r.beat}; retained HP ${r.health}, resolve ${r.resolve}, XP ${r.xp}, consumed rigs ${r.consumed_rigs}.`;
+  $('road-stage').textContent='EXPEDITION WITHDRAWN';
+  $('departure-warning').textContent='This expedition is closed by your accepted withdrawal. Preparation, retry and encounter actions cannot resume it. Resources and earned XP are not reset.';
+  $('threat').textContent='HISTORICAL CHILD ENCOUNTER / NO LIVE ACTIONS. Its recorded facts below were not resolved into victory, defeat or return by withdrawal.';
+  $('earned-state').textContent=`Retained earned points: ${s.intake.state.unspent}. This closed expedition cannot allocate, amend, heal or refund them.`;
+  $('field-phase').textContent='WITHDRAWN / HISTORICAL ENCOUNTER';
+  $('field-outcome-label').textContent='OUTER EXPEDITION CLOSED / NO CHILD RESULT FABRICATED';
+  $('field-threshold-note').textContent='Recorded position and beat remain unchanged. This picture is history, not an active objective or observed return.';
+  $('field-threat-label').textContent='HISTORICAL THREAT / NOT ACTIVE';
+  $('field-response').textContent='Accepted expedition withdrawal. No child beat, damage, cost, movement or terminal outcome was fabricated.';
+  $('field-scene-description').textContent='Historical last encounter observation after deliberate expedition withdrawal. No current threat or home return is observed.';
+  for(const e of document.querySelectorAll('.preparation-card-eligibility'))e.textContent='Historical preparation eligibility only. This withdrawn expedition cannot accept another proposal.';
+  for(const site of s.sample_case.sites)$(site.id+'-sample-window').textContent='Expedition withdrawn. Historical site position cannot authorize another collection.';
+  if(s.sample_case.loss_reason==='withdrawn'){$('sampling-state').textContent='FORFEITED / NO SAMPLE CARRIED';$('sampling-picture-title').textContent='Sample custody forfeited by withdrawal. No physical breakage observed.';$('sampling-case').textContent='The carried sample was forfeited by accepted expedition withdrawal. Its acquisition and paid collection receipt remain historical.';}
+ }
+ function render(s){
+  if(!s?.intake?.state||!s?.memory||!Array.isArray(s.fittings))throw Error('Incomplete actual journey observation');
+  if(!['independent','ordered','single-offer'].includes(s.memory.policy))throw Error('Actual known service policy required');
+  state=s;const card=s.intake,e=card.state,m=s.memory,id=card.identity;encounterView(s.encounter_view);samplingView(s);preparationBook(s);
+  const completeObserved = Boolean(s.intake.state.complete);
+  document.body.dataset.confirmed=String(card.confirmed);document.body.dataset.workshopClosed=String(s.workshop_closed);document.body.dataset.complete=String(completeObserved);
+  $('confirmed-name').textContent=id?id.handle:'Not confirmed';$('identity-discipline').textContent=id?`${id.class_id} / ${id.background_id}`:'No committed preparation';$('identity-accent').textContent=id?`${id.accent} cloth accent · expression only`:'Expression has no combat advantage.';$('identity-slots').textContent=id?`Equipped: ${id.slots.map(x=>x||'empty').join(' / ')}`:'No confirmed actions.';
+  $('card-status').textContent=card.confirmed?card.pending?'AMENDMENT PENDING':'CONFIRMED':'UNCONFIRMED';$('draft-status').textContent=`Draft ${card.draft_revision} · review ${card.reviewed_revision===null?'none':card.reviewed_revision}`;
+  $('review-text').textContent=card.reviewed_revision===card.draft_revision?`Reviewed: ${card.draft.handle}, ${card.draft.accent}, ${card.draft.class_id} / ${card.draft.background_id}; slots ${card.draft.slots.map(x=>x||'empty').join(', ')}. Confirmation applies this whole submitted card, not unsaved form edits, without granting supplies or restoring resources.`:'Submit a complete proposal, then review its exact current version before confirming. Unsaved form edits are not part of a review. No step creates a fitting, rig, heal or encounter.';
+  $('avatar-accent').setAttribute('fill',accents[id?.accent]||accents.copper);$('portrait-title').textContent=id?`${id.handle}, ${id.class_id}, ${id.accent} accent. Actual outfit ${e.rig}.`:'Unconfirmed traveler preview';
+  $('portrait-plate').style.display=id&&e.rig==='Plate'?'':'none';$('portrait-trail').style.display=id&&e.rig==='Trail'?'':'none';$('portrait-brace').style.display=id?.class_id==='anchor'?'':'none';$('portrait-draw').style.display=id?.class_id==='lure'?'':'none';
+  document.body.dataset.policy=m.policy;
+  $('policy-note').textContent=m.policy==='single-offer'?'Single-offer experimental contract: an accepted withdrawal permanently closes only that bench’s fitting offer. A fresh demonstration still costs one part and one workshop turn; it cannot reopen that offer. Prior fittings remain acquired. Departure still closes preparation.':m.policy==='ordered'?'Ordered commission: the east fitting requires actual west delivery as well as its own work and payment. Departure still closes preparation.':'Independent commissions: either bench may supply its own fitting after actual local work and payment.';
+  $('workshop-stage').textContent=s.workshop_closed?'HISTORICAL / AT DEPARTURE':'WORKSHOP OPEN';
+  $('workshop-context').textContent=s.workshop_closed?`${id?.handle||'This person'} has departed. These are the last workshop facts observed before leaving. The road does not observe either worker's presence, return or current support.`:card.confirmed?`${id.handle}'s local work must actually occur at each bench. An open opportunity supplies a fitting only after its own paid service.`:'Confirm your person before any paid workshop work. A draft is not permission to spend either pouch.';
+  for(const key of ['parts','coins'])$(key).textContent=String(m[key]);$('workshop-turn').textContent=String(m.turn);
+  for(const b of m.benches){
+   const panel=$(b.id+'-bench');panel.dataset.recent=String(b.recent);panel.dataset.historical=String(s.workshop_closed);
+   if(typeof b.offer_closed!=='boolean')throw Error('Actual named offer-closure observation required');
+   const offerClosedObserved=b.offer_closed;panel.dataset.offerClosed=String(offerClosedObserved);
+   $(b.id+'-condition').textContent=`Authored condition: ${b.condition_expression} · ${b.condition_satisfied?'satisfied':'not satisfied'}. This observation supplies no component.${m.policy==='single-offer'?offerClosedObserved?' This exact offer was closed by accepted withdrawal.':' This exact single offer has not been closed.':''}`;
+   $(b.id+'-helped').textContent=b.helped?'Yes':'No';$(b.id+'-support').textContent=b.support?'Yes':'No';$(b.id+'-recent').textContent=b.recent?'Yes':'No';
+   $(b.id+'-status').textContent=s.workshop_closed?'RECORDED BEFORE LEAVING':b.delivered?'FITTING ACQUIRED':offerClosedObserved?'OFFER CLOSED':b.eligible?'WINDOW OPEN':b.helped?'PAST WORK RETAINED':'NO OBSERVED HELP';
+   $(b.id+'-window').textContent=s.workshop_closed?`Recorded at workshop turn ${m.turn}: help ${b.helped?'observed':'not observed'}, support ${b.support?'present':'absent'}, recent demonstration ${b.recent?'present':'absent'}${m.policy==='single-offer'?', offer '+(offerClosedObserved?'closed':'not closed'):''}. This is historical knowledge, not a fresh observation.`:b.delivered?'This bench already supplied its one fitting. Expiry or withdrawal cannot undo acquisition.':offerClosedObserved?'This exact fitting offer is closed. A new demonstration still costs a part and workshop turn and can renew support/recency, but cannot reopen service.':b.eligible?`This exact bench can supply a fitting now, before its one-turn cost. Demonstration expires at workshop turn ${b.expires}.`:b.helped?'Actual help remains known here. A fresh demonstration costs one part and one workshop turn; another bench cannot provide it.':'No actual help observed here. A different bench cannot stand in for it.';
+   $(b.id+'-help').textContent=offerClosedObserved?'Demonstrate · 1 part / offer stays closed':b.helped?'Demonstrate again · 1 part':'Help here · 1 part';
+   $(b.id+'-decline').textContent=m.policy==='single-offer'?offerClosedObserved?'Offer already closed':'Close this offer':'Withdraw support';$(b.id+'-picture').textContent=s.workshop_closed?`${b.id} workbench, historical observation at departure. Worker presence is not observed from the road.`:`${b.id} workbench, local worker and ${b.recent?'current':'absent'} recent demonstration.`;
+  }
+  for(const f of s.fittings){
+   const availableObserved = Boolean(f.available);
+   const panel=$(f.bench+'-fitting');panel.dataset.acquired=String(f.acquired);panel.dataset.spent=String(f.spent);panel.dataset.available=String(availableObserved);
+   $(f.bench+'-fitting-state').textContent=f.spent?'Spent in actual assembly':availableObserved?'Acquired · available':'Not acquired';
+   $(f.bench+'-fitting-history').textContent=f.acquired?f.spent?`${f.bench} supplied this fitting; it was used assembling a ${f.rig} rig. History stays true; it cannot be spent again.`:`Actually supplied by ${f.bench}. Later workshop expiry or withdrawal cannot revoke it.`:'No fitting has been supplied here.';
+  }
+  const quantity=name=>e.inventory[name]??0;$('field-materials').textContent=`${quantity('fiber')} FIBER / ${quantity('binder')} BINDER`;$('rig-stock').textContent=`Actual stock: ${quantity('trail_rig')} Trail rigs · ${quantity('plate_rig')} Plate rigs`;
+  $('assembly-list').replaceChildren(...s.assembly_receipts.map(r=>{const li=document.createElement('li');li.textContent=`${r.bench} fitting → ${r.rig} rig. One fitting, 2 fiber and 1 binder spent.`;return li;}));
+  $('road-stage').textContent=completeObserved?'ACTUAL ROAD COMPLETE':e.active?`ENCOUNTER ${e.stage+1} / BEAT ${e.beat}`:e.attempts?e.won?'SURVEY COMPLETE':'ATTEMPT ENDED':'NOT DEPARTED';
+  $('departure-warning').textContent=s.workshop_closed?'The workshop is closed for this journey. Only already assembled rigs remain available; card amendments cannot reopen it or restore supplies.':'First accepted entry closes the workshop for this whole session. Assemble the rigs you need before leaving. An unfunded later encounter is a real possible consequence.';
+  $('health').textContent=e.attempts?String(e.health):'—';$('resolve').textContent=e.attempts?String(e.resolve):'—';$('beat').textContent=String(e.beat);$('level-xp').textContent=`${e.level} / ${e.xp}`;$('consumed-rigs').textContent=String(e.consumed_rigs);
+  $('route-person').style.left=`${Math.max(0,Math.min(1,e.position/s.encounter_view.encounter.world_end))*100}%`;
+  $('threat').textContent=e.active?card.threat:completeObserved?'Both actual encounters are complete. Consumed fittings, used rigs and remaining supplies stay accounted for.':e.attempts?e.won?(quantity('trail_rig')+quantity('plate_rig')>0?'Survey victory earned progression, not final completion. Explicitly amend earned preparation if desired, then enter with an actual remaining rig.':'Survey victory earned progression, not final completion. No prepared rig remains. The workshop is closed; a later prepared entry is unfunded.'):'The attempt ended without victory. Its rig remains spent; an unfunded retry does not create new workshop access.':'No actual encounter has begun. Your confirmed discipline and acquired outfit remain independent choices.';
+  $('earned-state').textContent=`Earned points remaining: ${e.unspent}. Vitality ${e.vitality}; Focus ${e.focus}. Between encounters, a new whole proposal may equip earned Dash. Confirmation never heals, refunds or reopens the workshop.`;
+  for(let n=1;n<=4;n++)$('use-slot'+n).textContent=`Slot ${n}${id?.slots[n-1]?' · '+id.slots[n-1]:''}`;
+  $('completion').hidden=!completeObserved;$('completion').textContent=`${id?.handle||'This person'} completed the actual road. Workshop acquisition and assembly remain distinct from that completion.`;
+  $('sequence').textContent=String(s.sequence);$('notice').textContent=s.text;withdrawalView(s);journeyView();controls();
+ }
+ // Local presentation preference only. No owner command, read or automatic stage change.
+ function journeyView(){
+  document.body.dataset.journeyView=focusedView?'focused':'all';
+  const panel=$('journey-view');panel.dataset.mode=focusedView?'focused':'all';panel.dataset.stage=viewStage;
+  for(const section of document.querySelectorAll('[data-journey-stage]')){
+   const hide=focusedView&&section.dataset.journeyStage!==viewStage;
+   if(hide&&section.dataset.journeyStage==='road'){
+    disarmKeyboard();
+    if(section.contains(document.activeElement))document.activeElement.blur();
+   }
+   section.hidden=hide;section.inert=hide;
+  }
+  $('journey-view-all').setAttribute('aria-pressed',String(!focusedView));
+  for(const stage of ['person','workshop','assembly','road'])$('journey-view-'+stage).setAttribute('aria-pressed',String(focusedView&&viewStage===stage));
+  if(!state)return;
+  const c=state.intake,e=c.state;
+  const person='Person confirmed'; /* isolated false-readiness fault */
+  const workshop=state.workshop_closed?'Workshop historical after departure':!c.confirmed?'Workshop requires confirmed preparation':c.pending?'Workshop paid actions await confirmed preparation':'Workshop open; each service still checks its own facts and costs';
+  const quantity=name=>e.inventory[name]??0;
+  const stock=`Actual rig stock: ${quantity('trail_rig')} Trail / ${quantity('plate_rig')} Plate`;
+  const road=state.withdrawn===true?'Expedition withdrawn / child facts historical':e.complete?'Actual road complete':e.active?`Actual encounter active / stage ${e.stage+1} / beat ${e.beat}`:e.attempts?e.won?'Survey won / final road not complete':'Attempt ended / no completion':'Not departed';
+  $('journey-view-facts').textContent=`${person}. ${workshop}. ${stock}. ${road}. Viewing a section never makes its actions eligible.`;
+  $('journey-view-amendment').hidden=!c.confirmed||!c.pending||state.withdrawn===true;
+ }
+ function selectJourneyView(stage){
+  if(stage!=='all'&&!['person','workshop','assembly','road'].includes(stage))throw Error('Known journey section required');
+  focusedView=stage!=='all';if(focusedView)viewStage=stage;
+  journeyView();
+ }
+ $('journey-view-all').onclick=()=>selectJourneyView('all');
+ for(const stage of ['person','workshop','assembly','road'])$('journey-view-'+stage).onclick=()=>selectJourneyView(stage);
+ $('journey-view-review-person').onclick=()=>selectJourneyView('person');
+ function keyboardStatus(){
+  const status=$('field-keyboard-status');
+  if(status)status.textContent=keyboardNeedsNeutral?'Keyboard interrupted. Release every held road key before a fresh choice.':!keyboardArmed?'Keyboard inactive. Focus the road controls, release held keys, then press a fresh key.':uncertain?'Read actual facts before another keyboard action.':busy?'Action pending. Further key presses are discarded; release before choosing again.':keyboardHeld.size?'Release held keys before pressing them again.':'Keyboard ready: → Walk · . Wait · 1–4 equipped slots. One fresh press chooses one response.';
+ }
+ function controls(){
+  keyboardStatus();
+  for(const b of document.querySelectorAll('button:not([data-journey-nav])'))b.disabled=busy||uncertain;$('read').disabled=busy;if(!state)return;
+  const c=state.intake,e=c.state,ready=c.confirmed&&!c.pending,locked=e.active||e.complete,workshop=ready&&!state.workshop_closed;
+  for(const el of $('draft-form').elements)el.disabled=busy||uncertain||locked;$('handle').readOnly=Boolean(c.confirmed);
+  $('review').disabled=busy||uncertain||locked;$('confirm').disabled=busy||uncertain||locked||!c.pending||c.reviewed_revision!==c.draft_revision;
+  for(const b of state.memory.benches){$(''+b.id+'-help').disabled=busy||uncertain||!workshop||state.memory.parts<1||b.delivered;$(''+b.id+'-serve').disabled=busy||uncertain||!workshop||!b.eligible;$(''+b.id+'-decline').disabled=busy||uncertain||!c.confirmed||state.workshop_closed||((state.memory.policy==='single-offer'&&b.offer_closed)||(!b.support&&!b.recent));}
+  $('wait-window').disabled=busy||uncertain||!workshop;
+  $('assemble').disabled=busy||uncertain||!workshop||!state.fittings.some(f=>f.available)||(e.inventory.fiber??0)<2||(e.inventory.binder??0)<1;
+  $('begin').disabled=busy||uncertain||!ready||locked;
+  for(const key of ['walk','wait','use-slot1','use-slot2','use-slot3','use-slot4'])$(key).disabled=busy||uncertain||!e.active;
+  for(const site of state.sample_case.sites)$('sample-'+site.id).disabled=busy||uncertain||!site.eligible;
+  for(const card of state.preparation_book.cards)$('propose-card-'+card.id).disabled=busy||uncertain||!card.eligible;
+  for(const key of ['focus','vitality'])$(key).disabled=busy||uncertain||locked||e.unspent<1;
+  $('withdraw-expedition').disabled=busy||uncertain||!state.workshop_closed||e.complete||state.withdrawn===true;
+  if(state.withdrawn===true){for(const el of document.querySelectorAll('button,input,select'))if(el.id!=='read'&&!el.hasAttribute('data-journey-nav'))el.disabled=true;}
+ }
+ async function read(){if(busy)return;busy=true;controls();const g=++generation;try{const r=await fetch('/state',{cache:'no-store'});if(!r.ok)throw Error('Read refused');const s=await r.json();if(g!==generation)return;uncertain=false;render(s);adopt(s.intake.draft);$('connection').textContent='Current facts read from the owner. No action was retried.';}catch(e){uncertain=true;$('connection').textContent='Unable to read: '+e.message+'. Read again before acting.';}finally{busy=false;controls();}}
+ async function send(command,fields={}){if(busy||uncertain||!state)throw Error('Read current facts before another action');busy=true;controls();const g=generation;try{const r=await fetch('/command',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({command,revision:state.sequence,...fields})});if(!r.ok)throw Error('Command receipt unavailable');const s=await r.json();if(g!==generation)throw Error('Response quarantined after interruption');render(s);if(command==='draft'||command==='propose-card')adopt(s.intake.draft);$('connection').textContent='Actual owner response. No automatic retry or clock conversion.';return s;}catch(e){uncertain=true;$('connection').textContent='Outcome uncertain: '+e.message+'. Explicitly read facts before acting again.';throw e;}finally{busy=false;controls();}}
+ function invoke(command,fields={}){send(command,fields).catch(()=>{});}
+ $('draft-form').onsubmit=e=>{e.preventDefault();invoke('draft',proposal());};$('review').onclick=()=>invoke('review');$('confirm').onclick=()=>invoke('confirm',{draft_revision:state.intake.draft_revision});
+ for(const bench of ['west','east']){$(bench+'-help').onclick=()=>invoke(state.memory.benches.find(b=>b.id===bench).helped?'demonstrate':'help',{bench});$(bench+'-serve').onclick=()=>invoke('serve',{bench});$(bench+'-decline').onclick=()=>invoke('decline',{bench});}
+ for(const site of ['ridge','channel'])$('sample-'+site).onclick=()=>invoke('sample',{site});
+ $('wait-window').onclick=()=>invoke('wait-window');$('assemble').onclick=()=>invoke('craft',{bench:$('benchselect').value,rig:$('fittingrig').value});$('begin').onclick=()=>invoke('begin',{rig:$('rig').value});for(const command of ['walk','wait'])$(command).onclick=()=>invoke(command);
+ for(let n=1;n<=4;n++)$('use-slot'+n).onclick=()=>invoke('slot',{slot:n});for(const axis of ['focus','vitality'])$(axis).onclick=()=>invoke('allocate',{axis,points:1});$('read').onclick=read;$('withdraw-expedition').onclick=()=>invoke('withdraw');
+ function interrupt(){if(busy){generation++;uncertain=true;$('connection').textContent='Interrupted while an action may have committed. Read actual facts; do not repeat blindly.';controls();}}
+ const surface=$('field-keyboard-surface');
+ surface.addEventListener('focus',()=>{keyboardArmed=!document.hidden;keyboardStatus();});
+ surface.addEventListener('blur',disarmKeyboard);
+ document.addEventListener('keydown',event=>{
+  const buttonId=keyboardButtons[event.key];
+  if(!buttonId)return;
+  const identity=event.code||event.key,alreadyHeld=keyboardHeld.has(identity);
+  keyboardHeld.add(identity);keyboardStatus();
+  if(event.repeat||alreadyHeld)return;
+  if(keyboardNeedsNeutral)return;
+  if(event.isComposing||event.ctrlKey||event.altKey||event.metaKey||event.shiftKey)return;
+  if(!keyboardArmed||document.activeElement!==surface)return;
+  event.preventDefault();
+  const button=$(buttonId);
+  if(busy||uncertain||!state||document.hidden||button.disabled)return;
+  button.click();
+ });
+ document.addEventListener('keyup',event=>{keyboardHeld.delete(event.code||event.key);if(keyboardHeld.size===0)keyboardNeedsNeutral=false;keyboardStatus();});
+ function disarmKeyboard(){keyboardArmed=false;if(keyboardHeld.size>0)keyboardNeedsNeutral=true;keyboardStatus();}
+ function suspendKeyboard(){disarmKeyboard();interrupt();}
+ window.addEventListener('blur',suspendKeyboard);window.addEventListener('offline',suspendKeyboard);document.addEventListener('visibilitychange',()=>{if(document.hidden)suspendKeyboard();});read();
+})();
