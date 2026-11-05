@@ -1,0 +1,33 @@
+{
+  "schema": "portfolio.source-launch-protocol.v1",
+  "status": "declared_before_new_launcher_execution",
+  "question": "Can one bounded entry point build and start both declared existing source experiments, distinguish actual HTTP readiness from process messages, and preserve their owners and recipient boundaries?",
+  "baseline": "The portfolio binds existing artifact/source evidence but does not launch an experiment. Its two source guides require distinct build paths and manual tool/port/lifetime coordination.",
+  "intervention": "A finite source launcher selects only existing declared experiment identities, validates actual local inputs and pinned SDK, builds the existing project, launches its unchanged loopback CLI and observes readiness without sending gameplay commands.",
+  "acceptance": [
+    "Both declared source experiments reach their actual browser and owner JSON through the launcher, with original source and recipient identities stable.",
+    "Each launched consumer accepts an independently submitted existing action; repeated GETs do not advance its owner state.",
+    "Declared finite lifetime expires normally and the owned listening port closes. Instrument cleanup terminates only its own children on failure.",
+    "Unsupported selection, invalid lifetime, wrong SDK and occupied port refuse with explicit preflight attribution rather than being counted as runtime successes.",
+    "A deliberately false readiness process/HTTP fixture is rejected by the same readiness contract; process execution or environment failures cannot count as a detected negative.",
+    "Structured results distinguish preflight, build, start, HTTP readiness, normal expiry, interruption and technical failure. Source/runtime versions, exact commands and actual outcomes remain recoverable."
+  ],
+  "rivals": [
+    "A READY stdout line could come from a process that never serves the expected owner; actual HTTP state and static asset checks are required.",
+    "A preexisting process could own the chosen port; occupied-port preflight must refuse, with the residual reserve/release race disclosed.",
+    "A new gameplay implementation could manufacture acceptance; the launcher must reuse unchanged existing project/CLI/owner files.",
+    "A successful local run could be misread as easier onboarding or production readiness; no participant, accessibility, speedup or platform claim is measured."
+  ],
+  "limits": [
+    "Trusted-local process/HTTP observations, not an enforced sandbox or cryptographic process-port attestation.",
+    "No human onboarding, usability, time saving, accessibility, ordinary-user Windows, Unity Editor/module, Steam or commercial-clearance assessment.",
+    "Source-only experiments remain absent from existing recipient ZIPs; no new package, product or laboratory maturity is established.",
+    "Repeated software requests/trials are not independent participants or population studies."
+  ],
+  "material_brain_influence": {
+    "SCI-013": "Separate readiness hypotheses from a printed-message rival and unchanged-owner alternative.",
+    "SCI-014": "Operationalize process and HTTP readiness without treating these as human usability or production readiness.",
+    "SCI-017": "Use a real known-fault readiness control and preserve distinct execution/outcome categories.",
+    "SCI-061": "Participant/device access is necessary for actual onboarding/accessibility findings and remains unexecuted."
+  }
+}

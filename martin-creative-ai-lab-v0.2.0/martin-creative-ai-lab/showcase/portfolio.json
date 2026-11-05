@@ -30,7 +30,13 @@
       "consumer_paths": [
         "north-star/field-journey/Host/Room.cs",
         "north-star/field-journey/Host/Program.cs"
-      ]
+      ],
+      "launch": {
+        "project": "north-star/field-journey/Host/NorthStar.FieldJourney.csproj",
+        "assembly": "north-star/field-journey/Host/bin/Release/net10.0/NorthStar.FieldJourney.dll",
+        "web": "north-star/field-journey/web",
+        "state_path": "/state"
+      }
     },
     {
       "id": "selected-passives",
@@ -41,7 +47,13 @@
         "north-star/combat-study/Rules/Passives.cs",
         "north-star/combat-study/Host/Trial.cs",
         "north-star/combat-study/Host/Room.cs"
-      ]
+      ],
+      "launch": {
+        "project": "north-star/combat-study/Host/NorthStar.CombatStudy.csproj",
+        "assembly": "north-star/combat-study/Host/bin/Release/net10.0/NorthStar.CombatStudy.dll",
+        "web": "north-star/combat-study/Host/web",
+        "state_path": "/api/state"
+      }
     }
   ]
 }

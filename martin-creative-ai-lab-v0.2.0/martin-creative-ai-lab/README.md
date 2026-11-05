@@ -120,3 +120,5 @@ accepted choices and journal reentry in an explicitly observed restricted same-u
 context. Six API consumer controls pass; the Windows elevated flag remains true,
 so this is not ordinary-user/non-elevated Windows or human validation. The unchanged
 recipient works in that recorded context; no transport replacement or new recipient ZIP follows.
+
+Source experiments now have a [bounded verified launcher](showcase/README.md#launch-an-existing-source-experiment) using installed SDK10.0.401. Downloads remain separate; no Unity/Windows readiness is implied.

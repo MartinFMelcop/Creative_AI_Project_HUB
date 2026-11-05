@@ -140,3 +140,29 @@ observations with a known policy, not blind play. It records silent, unedited br
 video; video bytes/timing may vary on another execution. The protocol, command trace,
 actual encoder version, hashes, initial failures and exact superseded producers are
 retained in [execution evidence](../evidence/portfolio/RUN.json).
+
+## Launch an existing source experiment
+
+From the maintained workspace, use Python3.11+ and installed SDK10.0.401:
+
+```sh
+python3 tools/run_source_experiment.py list
+python3 tools/run_source_experiment.py run field-journey --port 8099 --seconds 300
+# Alternatively, launch the existing Treatment Line:
+python3 tools/run_source_experiment.py run selected-passives --port 8100 --seconds 300
+```
+
+The tool validates the existing portfolio catalog and exact SDK, builds the declared
+project, starts its unchanged loopback host and prints a ready URL only after real
+owner JSON responds. `--dotnet PATH` selects an installed SDK executable. The SDK is not
+installed automatically; normal project restore/build is retained. Open the printed URL in your browser. Use Ctrl+C to stop;
+normal lifetime is bounded to1–600seconds. An optional `--report EXTERNAL_NEW_FILE`
+preserves bounded build/host logs, stages and cleanup outcomes without overwriting files.
+Ports must be free; the tool refuses occupied ports. Reserve/release has a residual
+race and HTTP readiness is not cryptographic process-port attestation or a sandbox.
+
+These SDK-required ephemeral experiments are NOT included in either recipient ZIP.
+No new gameplay, account, save or package is introduced. Current execution is Linux;
+Windows/Unity/Steam, human onboarding, accessibility and time savings remain unverified.
+[Actual launch evidence and known-fault controls](../evidence/source-launch/RUN.json)
+separate real owner actions, readiness, normal expiry and explicit interruption.

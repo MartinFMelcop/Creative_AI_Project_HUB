@@ -117,3 +117,5 @@ The rolling substantive-effort targets are47%legacy/laboratories,40%North Star a
 Local execution, publication and [CI](https://github.com/MartinFMelcop/Creative_AI_Project_HUB/actions/workflows/lab-checks.yml)
 are separate facts. Agent implementation/review does not establish author approval,
 human experience, client work or production ownership.
+
+Source experiments now have a [bounded verified launcher](martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/showcase/README.md#launch-an-existing-source-experiment) using installed SDK10.0.401. Downloads remain separate; no Unity/Windows readiness is implied.

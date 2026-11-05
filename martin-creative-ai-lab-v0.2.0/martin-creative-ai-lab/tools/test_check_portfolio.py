@@ -68,8 +68,11 @@ class PortfolioClaims(unittest.TestCase):
         for row in data['source_experiments']:
             names.update(row[key] for key in ('guide_path', 'evidence_path'))
             names.update(row['consumer_paths'])
+            names.add(row['launch']['project'])
         with tempfile.TemporaryDirectory(prefix='portfolio-contract-') as folder:
             root = Path(folder)
+            for row in data['source_experiments']:
+                (root / row['launch']['web']).mkdir(parents=True, exist_ok=True)
             for name in sorted(names):
                 target = root / name
                 target.parent.mkdir(parents=True, exist_ok=True)

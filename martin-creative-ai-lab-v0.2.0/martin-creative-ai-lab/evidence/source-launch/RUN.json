@@ -1,0 +1,79 @@
+{
+  "schema_version": 1,
+  "kind": "source_experiment_launch_execution",
+  "baseline_commit": "416e1e485c5e9f25e6b3807911ece9159ca9b1bc",
+  "scope": "One finite source launcher for two existing original consumers through existing catalog; no new game host or gameplay permission.",
+  "browser_controls": 19,
+  "negative_controls": 6,
+  "real_interruption": "SIGTERM invokes owned host cleanup, exit130 and closed port; normal expiry independently tested for both consumers.",
+  "schema": "Strict allowlisted launch paths, exact installed SDK10.0.401, bounded process/readiness/HTTP/response/lifetime, existing owners only.",
+  "source_sha256": {
+    "tools/run_source_experiment.py": "66641e19e9ce53c63f2afb450e1168902aa2a495364e99c1b42a577a8520709c",
+    "tools/check_portfolio.py": "10d854dda635b030575518892f53d3feba1dd5fc1b881a1d8026cbe470f4e74d",
+    "showcase/portfolio.json": "c5631f212d48f5591f342fbd9375f50977e8311acc66aba8ce4bbd5aa1ebe885",
+    "showcase/launch-browser.mjs": "02a7028bd5773d12836023a7cc4a7f96cba5d50e4c5af4e9f3abc52847832626",
+    "showcase/launch-protocol.json": "e0bcaed66e2227a2b9a4634c5d8bd5706418109ff5882c2ed89a42f6b5b4ca77",
+    "north-star/field-journey/Host/Program.cs": "98c6451ba46452e0588f6f22a7fff953e4eb9c4445eb9297f7a0cc27cfe69459",
+    "north-star/field-journey/Host/Room.cs": "b2d087df9275e728738bbddd35d30d07a6e1a0722e245b96f4233b5c8952132d",
+    "north-star/field-journey/web/app.js": "7fdd97ba174da67d494feb90309ee4e9bcf69ba950f8bb4376411f32465596a6",
+    "north-star/combat-study/Host/Program.cs": "c50ae615810de00fefec849ca091db63db0cefca308e2d3befe9d5f3f6a90059",
+    "north-star/combat-study/Host/Room.cs": "b40666807a867db8f84804f356fa976a1d2e2feb2046862c8446a3536cbe3fef",
+    "north-star/combat-study/Host/web/app.js": "c3f19b6bb98312fd8041bbc4a8942542ab278f3b9214ba8efb62df790f19d86f",
+    "projects/realtime-integration-lab/package-lock.json": "aa191ef2158e6cc6f770bf4b3ee44dca17175ef1a3cd572b98115246bf46aea7"
+  },
+  "actual_commands": [
+    [
+      "python3",
+      "tools/run_source_experiment.py",
+      "run",
+      "field-journey",
+      "--dotnet",
+      "/workspace/work/authored-scene/dotnet/dotnet",
+      "--port",
+      "45937",
+      "--seconds",
+      "12",
+      "--report",
+      "/workspace/work/source-launch/actual-04/field-journey.json"
+    ],
+    [
+      "python3",
+      "tools/run_source_experiment.py",
+      "run",
+      "selected-passives",
+      "--dotnet",
+      "/workspace/work/authored-scene/dotnet/dotnet",
+      "--port",
+      "40749",
+      "--seconds",
+      "12",
+      "--report",
+      "/workspace/work/source-launch/actual-04/selected-passives.json"
+    ]
+  ],
+  "positive": "Field confirmed Aster and paid actual help; Treatment actual strike advances one round; repeated GETs preserve state. Both natural expiries close ports.",
+  "negative": "A real process advertises READY while real HTTP supplies wrong owner JSON; the same wait_ready contract rejects it. WrongSDK, occupiedport, lifetime, unknownselection and wrongschema refuse.",
+  "initial_failures": [
+    "Partial browser producer syntax error before any acceptance; repaired extra closing parenthesis.",
+    "Vacuous portrait-name count assertion replaced with actual visible confirmed-name text.",
+    "Existing isolated archive-negative fixture omitted new launch project/web inputs; copied actual project and created declared web directories while preserving the archive tampering assertion."
+  ],
+  "limits": [
+    "Trusted-local observations, not cryptographic process-port attestation or sandbox; reserve/release race remains.",
+    "No quantified time saving, human onboarding/accessibility, physical devices, Unity/Windows/Steam validation.",
+    "No owner, source media, save, recipient ZIP, lab maturity or consumed capability changed."
+  ],
+  "strategic_unit": "ONE corrective repository/production-access unit after two North Star units.",
+  "specialists": "Independent Engineering/Scientific/Creative analyses selected bounded actual launch over another product/control matrix. Coordinator hit usage limit; primary repaired partial producer, implemented lifecycle negatives/reporting and completed execution/gates sequentially. Not human approval.",
+  "preservation": {
+    "changed_prior_files_before_continuity": [
+      "README.md",
+      "showcase/README.md",
+      "showcase/portfolio.json",
+      "tools/check_portfolio.py",
+      "tools/csharp_scope.py",
+      "tools/test_check_portfolio.py"
+    ],
+    "retirement": "None; all original C#owners/protected sources and recipient archives remain unchanged."
+  }
+}

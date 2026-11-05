@@ -20,6 +20,26 @@ EXPERIMENTS = {
 }
 
 
+LAUNCHES = {
+    'field-journey': {'project': 'north-star/field-journey/Host/NorthStar.FieldJourney.csproj',
+                      'assembly': 'north-star/field-journey/Host/bin/Release/net10.0/NorthStar.FieldJourney.dll',
+                      'web': 'north-star/field-journey/web', 'state_path': '/state'},
+    'selected-passives': {'project': 'north-star/combat-study/Host/NorthStar.CombatStudy.csproj',
+                          'assembly': 'north-star/combat-study/Host/bin/Release/net10.0/NorthStar.CombatStudy.dll',
+                          'web': 'north-star/combat-study/Host/web', 'state_path': '/api/state'},
+}
+
+
+def validate_launch(root, eid, value):
+    require(eid in LAUNCHES and value == LAUNCHES[eid], 'Source launch identity or fields differ')
+    for key in ('project', 'web'):
+        path = Path(root) / value[key]
+        require(not any(p.is_symlink() for p in [path, *path.parents] if p != Path(root).parent),
+                'Linked source launch path')
+        require(path.is_dir() if key == 'web' else path.is_file(), 'Missing source launch input')
+    return dict(value)
+
+
 def require(condition, message):
     if not condition:
         raise ValueError(message)
@@ -152,9 +172,10 @@ def validate(root, catalog):
     require(isinstance(experiments, list) and len(experiments) == len(EXPERIMENTS), 'Source experiment identities required')
     sources = {}
     for row in experiments:
-        exact_keys(row, ('id', 'guide_path', 'evidence_path', 'evidence_sha256', 'consumer_paths'), 'Source experiment')
+        exact_keys(row, ('id', 'guide_path', 'evidence_path', 'evidence_sha256', 'consumer_paths', 'launch'), 'Source experiment')
         eid = row['id']
         require(eid in EXPERIMENTS and eid not in sources, 'Duplicate or unknown source experiment identity')
+        validate_launch(root, eid, row['launch'])
         record = proof(root, row)
         paths = row['consumer_paths']
         require(isinstance(paths, list) and paths and len(paths) == len(set(paths))

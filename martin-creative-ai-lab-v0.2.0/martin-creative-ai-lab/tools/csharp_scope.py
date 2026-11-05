@@ -62,6 +62,10 @@ WRAPPER_COVERAGE={'field':('preparation-verify.py','sampling-verify.py','conditi
 # even files not compiled by their domain. Preserve that existing exact-compare gate.
 WHOLE_CSHARP_BINDINGS=('progression','crafting','loadout','recovery')
 SHARED_FILES={'north-star/csharp/global.json','tools/ci_scope.py','tools/csharp_scope.py','tools/test_ci_scope.py','tools/test_csharp_scope.py','tools/test_csharp_workflow.py'}
+SOURCE_LAUNCH_INPUTS=('tools/run_source_experiment.py','tools/test_source_launch.py','tools/check_portfolio.py','showcase/portfolio.json','showcase/launch-browser.mjs','showcase/launch-protocol.json')
+for _suite in ('field','combat'):
+    EXTRA[_suite] += SOURCE_LAUNCH_INPUTS
+
 BUILD_NAMES={'global.json','Directory.Build.props','Directory.Build.targets','Directory.Packages.props','NuGet.Config','nuget.config'}
 PROPERTIES={'TargetFramework','LangVersion','OutputType','Nullable','TreatWarningsAsErrors','Deterministic','ImplicitUsings'}
 PORTABLE_PROJECTS={CS+'Portable/'+name+'/NorthStar.'+name+'.csproj' for name in ('Crossing','Forge','Loadout')}

@@ -768,3 +768,42 @@ jobs:
           path: ${{ runner.temp }}/recipient-delivery
           if-no-files-found: ignore
           retention-days: 7
+
+  source-experiment-launch:
+    needs: scope
+    if: contains(fromJSON(needs.scope.outputs.csharp_suites), 'field') || contains(fromJSON(needs.scope.outputs.csharp_suites), 'combat')
+    runs-on: ubuntu-24.04
+    timeout-minutes: 8
+    defaults:
+      run:
+        working-directory: martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab
+    env:
+      DOTNET_CLI_TELEMETRY_OPTOUT: '1'
+      DOTNET_NOLOGO: '1'
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-dotnet@67a3573c9a986a3f9c594539f4ab511d57bb3ce9 # v4
+        env:
+          DOTNET_INSTALL_DIR: ${{ runner.temp }}/north-star-sdk-10.0.401
+        with:
+          dotnet-version: '10.0.401'
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
+        with:
+          node-version: '24.19.0'
+      - name: Require the pinned SDK for every selected C# suite
+        run: test "$(dotnet --version)" = "10.0.401"
+      - name: Install existing locked browser instrument
+        run: npm ci --prefix projects/realtime-integration-lab
+      - name: Install matching browser for C# interaction verification
+        working-directory: martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/projects/realtime-integration-lab
+        run: |
+          npx --no-install playwright-core install --with-deps chromium
+          browser_path="$(node -p "require('playwright-core').chromium.executablePath()")"
+          test -x "$browser_path"
+          printf 'CHROMIUM_PATH=%s\n' "$browser_path" >> "$GITHUB_ENV"
+      - name: Verify bounded source launch and false readiness controls
+        run: |
+          python3 tools/test_source_launch.py
+          node showcase/launch-browser.mjs dotnet "$RUNNER_TEMP/source-launch"
