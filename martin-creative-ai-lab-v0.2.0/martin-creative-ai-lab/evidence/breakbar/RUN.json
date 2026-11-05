@@ -1,0 +1,183 @@
+{
+  "schema_version": 1,
+  "kind": "destination_execution",
+  "baseline_commit": "a16a19168bc7caecce7b699564e577cba462b4fd",
+  "capability_ids": [],
+  "consumer_paths": [
+    "north-star/combat-study/Host/Room.cs",
+    "north-star/combat-study/Host/Trial.cs",
+    "north-star/combat-study/Host/web/app.js",
+    "north-star/combat-study/Rules/Breakbar.cs",
+    "north-star/combat-study/Rules/Combat.cs",
+    "north-star/combat-study/Rules/Passives.cs",
+    "north-star/combat-study/Rules/ResponseChain.cs"
+  ],
+  "runtime": "SDK10.0.401/Linux; Node24.19.0/Chromium154; C#8/netstandard2.1 rules in existing net10 host",
+  "scope": "Selected phased breakbar and paid original control consumption; prior passive/status/response consumer regressions reexecuted.",
+  "checks": {
+    "passed": 22,
+    "failed": 0
+  },
+  "commands": [
+    {
+      "command": [
+        "/workspace/work/authored-scene/dotnet/dotnet",
+        "--version"
+      ],
+      "exit_code": 0,
+      "stdout": "10.0.401\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/workspace/work/authored-scene/dotnet/dotnet",
+        "build",
+        "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/combat-study/ControlChecks/NorthStar.ControlChecks.csproj",
+        "-c",
+        "Release",
+        "-m:1",
+        "--disable-build-servers"
+      ],
+      "exit_code": 0,
+      "stdout": "  Determining projects to restore...\n  All projects are up-to-date for restore.\n  NorthStar.Combat -> /workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/combat-study/Rules/bin/Release/netstandard2.1/NorthStar.Combat.dll\n  NorthStar.CombatStudy -> /workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/combat-study/Host/bin/Release/net10.0/NorthStar.CombatStudy.dll\n  NorthStar.ControlChecks -> /workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/combat-study/ControlChecks/bin/Release/net10.0/NorthStar.ControlChecks.dll\n\nBuild succeeded.\n    0 Warning(s)\n    0 Error(s)\n\nTime Elapsed 00:00:04.41\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/workspace/work/authored-scene/dotnet/dotnet",
+        "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/combat-study/ControlChecks/bin/Release/net10.0/NorthStar.ControlChecks.dll",
+        "/workspace/work/breakbar-integrated-retry/native.json"
+      ],
+      "exit_code": 0,
+      "stdout": "{\n  \"checks\": 22,\n  \"controls\": [\n    \"hard drains three without control\",\n    \"specific immunity neither drains nor applies\",\n    \"breaking application drains only\",\n    \"exposed hard applies and refills\",\n    \"positive exposed value remains vulnerable\",\n    \"full refill application applies before protection\",\n    \"renewed protection drains instead of controls\",\n    \"invalid category rejected\",\n    \"classic refuses new action\",\n    \"hard actual cost round and contact\",\n    \"light pays contact plus DOT\",\n    \"zero crossing still pays contact\",\n    \"exposed control suppresses contact but DOT payable\",\n    \"empty hard refused without advancing bar round\",\n    \"partial refill remains exposed\",\n    \"full refill controls actual contact\",\n    \"next immune contact defeats\",\n    \"terminal control refuses\",\n    \"explicit preparation has no owner state\",\n    \"begin creates original control practice\",\n    \"retreat remains explicit not boss-world escape\",\n    \"read stable\"\n  ],\n  \"trace\": {\n    \"profile\": \"toxic\",\n    \"breakbar\": {\n      \"phase\": \"protected\",\n      \"value\": 4,\n      \"capacity\": 5,\n      \"lastApplied\": false,\n      \"lastDrain\": 1,\n      \"lastRefill\": 0\n    },\n    \"responsePractice\": false,\n    \"wardAvailable\": false,\n    \"pending\": null,\n    \"resolution\": [],\n    \"round\": 7,\n    \"hp\": 0,\n    \"maxHp\": 100,\n    \"enemyHp\": 96,\n    \"charges\": 0,\n    \"effects\": [],\n    \"threat\": \"No further threat; encounter ended.\",\n    \"events\": [\n      \"Control paid: one actual round; drained 1, refilled 0, applied False. No target HP damage.\",\n      \"Target contact: 20 incoming direct damage; 1 actual HP lost.\",\n      \"Round 7 resolved: defeated.\"\n    ],\n    \"outcome\": \"defeated\",\n    \"last\": \"Encounter ended. Restart explicitly to practice again.\",\n    \"weaponEnabled\": true,\n    \"attackMultiplier\": 1,\n    \"healingMultiplier\": 1,\n    \"passive\": \"none\",\n    \"armor\": \"light\",\n    \"rescueSpent\": false,\n    \"lastHit\": {\n      \"kind\": \"PhysicalDirect\",\n      \"incoming\": 20,\n      \"effectiveDamage\": 20,\n      \"hpBefore\": 1,\n      \"hpAfter\": 0,\n      \"damageReduced\": 0,\n      \"actualHpLost\": 1,\n      \"avoidedHpLoss\": 0,\n      \"rescued\": false\n    }\n  }\n}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python3",
+        "-B",
+        "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/tools/verify_breakbar_source.py",
+        "--output",
+        "/workspace/work/breakbar-integrated-retry/source-initial.json",
+        "--export-cases",
+        "/workspace/work/breakbar-integrated-retry/cases.json"
+      ],
+      "exit_code": 0,
+      "stdout": "PASS: 8 exact BBR rows; 6 declared cases/52 transitions; C# compared=False\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/workspace/work/authored-scene/dotnet/dotnet",
+        "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/combat-study/ControlChecks/bin/Release/net10.0/NorthStar.ControlChecks.dll",
+        "--source-vectors",
+        "/workspace/work/breakbar-integrated-retry/cases.json",
+        "/workspace/work/breakbar-integrated-retry/csharp-cases.json"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python3",
+        "-B",
+        "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/tools/verify_breakbar_source.py",
+        "--output",
+        "/workspace/work/breakbar-integrated-retry/source.json",
+        "--csharp-results",
+        "/workspace/work/breakbar-integrated-retry/csharp-cases.json"
+      ],
+      "exit_code": 0,
+      "stdout": "PASS: 8 exact BBR rows; 6 declared cases/52 transitions; C# compared=True\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "node",
+        "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/combat-study/tools/control-browser.mjs",
+        "/workspace/work/authored-scene/dotnet/dotnet",
+        "/workspace/work/breakbar-integrated-retry/browser"
+      ],
+      "exit_code": 0,
+      "stdout": "PASS: 21 control Chromium controls\n",
+      "stderr": ""
+    }
+  ],
+  "source_artifacts": [
+    {
+      "local_path": "north-star/combat-study/Host/Room.cs",
+      "size_bytes": 3559,
+      "sha256": "95d58b1dd8b780ac2f2c796c851011e66d49ccccdfc94ddb8c82e7c1652e895f"
+    },
+    {
+      "local_path": "north-star/combat-study/Host/Trial.cs",
+      "size_bytes": 9835,
+      "sha256": "efa22ff24fb0506da97737a90a8fe57fd1d3a796925fbcc34e4d3495ff334e73"
+    },
+    {
+      "local_path": "north-star/combat-study/Host/web/app.js",
+      "size_bytes": 11651,
+      "sha256": "0559d8e6e5f732c7c2ae98c410ebb8d755e3c40cfd49445c01ce43ec581c4449"
+    },
+    {
+      "local_path": "north-star/combat-study/Rules/Breakbar.cs",
+      "size_bytes": 1813,
+      "sha256": "e63f1f3ba5165112da903a16e4a07bec2bd88b0832af6c923d5038cb27bfe5c5"
+    },
+    {
+      "local_path": "north-star/combat-study/Rules/Combat.cs",
+      "size_bytes": 5165,
+      "sha256": "2624d7596cca2cc4bef78c17f143004b48978866654e4c84f6b4960ff5800fb6"
+    },
+    {
+      "local_path": "north-star/combat-study/Rules/Passives.cs",
+      "size_bytes": 3997,
+      "sha256": "4ef33bc84c6fdf7849d3aa8bda925a0f7fd2293be29cdfbf884cc67bccc87d10"
+    },
+    {
+      "local_path": "north-star/combat-study/Rules/ResponseChain.cs",
+      "size_bytes": 2412,
+      "sha256": "ebcad92f15603d95b1cd0b32163e4fcfe17a082422cf003c172865f0bd4d6692"
+    }
+  ],
+  "result_artifacts": [
+    {
+      "local_path": "evidence/breakbar/execution/native.json",
+      "size_bytes": 2172,
+      "sha256": "d91960dbe5020cbc83655a22d3092849828f7d6193373f4ae631dcb74583c020"
+    },
+    {
+      "local_path": "evidence/breakbar/execution/source.json",
+      "size_bytes": 3013,
+      "sha256": "49063d9bf3437b5e08f7733a6b0f578266e49d99370c64d17094c38c4c640e49"
+    },
+    {
+      "local_path": "evidence/breakbar/execution/browser/browser.json",
+      "size_bytes": 22411,
+      "sha256": "25238b2092530e7bdedf68fe4960e9fff88290ce4a3474290fadce97505add62"
+    }
+  ],
+  "limitations": [
+    "Original experimental costs/duration/zero-crossing/refill ordering, not recovered source timing or approved canon.",
+    "Same six declared software cases/52transitions, not52source games or independent participants. Eight literal source rows inspected; Ruby/RGSS/RMXP not executed.",
+    "Full CC/passive/boss/initiative/catalog/world/human balance remain unresolved; no Unity/Windows/Steam or commercial clearance."
+  ],
+  "source_inputs_stable": 44,
+  "native_controls": 22,
+  "browser_controls": 21,
+  "source_case_count": 6,
+  "source_transitions": 52,
+  "source_rows": 8,
+  "policy_negative": "Seven-round control-only policy loses to payable DOT; temporary contact suppression is not victory.",
+  "negative_controls": "Actual false full-bar renderer and false reported source result rejected.",
+  "retained_failures": "CS0136 build; expectedHP7 vs actualHP1 due payable Poison; initial browser receipt comparison; concurrent-source stability rejection. Exact available producers/results retained; no rule/cost/fixture/gate weakened.",
+  "strategic_unit": "ONE legacy/laboratory unit after corrective repository unit; UI/tests/CI are support.",
+  "specialists": "Independent Engineering/Scientific/Creative analyses and coordinated implementation; two coordinators reached usage limits, primary finished integration sequentially. No independent human approval.",
+  "source_launch_regression": {
+    "controls": 19,
+    "result": "source-launch-regression.json",
+    "actual_combat_host_binary_after_build": "SHA256 equal to pre-launch comparison; current44source inputs exact"
+  },
+  "protocol_boundary": "Browser protocol preceded browser execution only; native implementation/testing had already started. Not native preregistration."
+}

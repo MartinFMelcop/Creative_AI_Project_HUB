@@ -732,6 +732,9 @@ jobs:
         run: |
           python3 labs/combat-response/status/test_instrument.py
           python3 north-star/combat-study/tools/passive-verify.py --dotnet dotnet --output "$RUNNER_TEMP/combat-status"
+      - name: Execute phased breakbar and payable actual combat consequences
+        if: contains(fromJSON(needs.scope.outputs.csharp_suites), 'combat')
+        run: python3 north-star/combat-study/tools/control-verify.py --dotnet dotnet --output "$RUNNER_TEMP/control-practice"
       - name: Execute actual paid response windows and LIFO consequences
         if: contains(fromJSON(needs.scope.outputs.csharp_suites), 'combat')
         run: python3 north-star/combat-study/tools/response-verify.py --dotnet dotnet --output "$RUNNER_TEMP/response-chain"

@@ -168,3 +168,15 @@ ward cancellation, one final global contact/DOT round and classic regressions. I
 not a full reaction/initiative engine, recovered numeric skill, human balance study
 or another CommanderSIM evaluation. Source requirements and original parameters stay
 separate; no graphical stack widget or source fiction is imported.
+
+
+## Selected breakbar contract in the existing Treatment Line
+
+The existing C# practice now exposes an optional control mode with an explicit
+Protected/Exposed phase and shared treatment opportunity cost. See the
+[bounded protocol](breakbar/PROTOCOL.md), [actual evidence](../../evidence/breakbar/RUN.json)
+and [consumer contract](../../north-star/combat-study/README.md#optional-control-practice--phase-opportunity-cost-and-payable-dot).
+This narrowly consumes literal source drain/refill/immunity requirements; zero-crossing
+order, equal-weight refill and practice costs are disclosed destination policies.
+A partially refilled positive bar remains Exposed. Actual DOT can still defeat the
+player after contact suppression. No full boss catalog, human balance or new lab is claimed.

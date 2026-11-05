@@ -14,6 +14,7 @@ import unittest
 ROOT = Path(__file__).resolve().parents[1]
 WORKFLOW = ROOT.parents[1] / '.github/workflows/lab-checks.yml'
 EXPECTED = {
+    'Execute phased breakbar and payable actual combat consequences': 'combat',
     'Execute deliberate keyboard actions and interruption quarantine': 'field',
     'Execute explicit field withdrawal and retained paid consequences': 'field',
     'Execute bounded critical-cue admission and actual PCM negatives': 'audio',
@@ -93,6 +94,7 @@ def validate_workflow(text):
         body = run_body(row)
         require(body.strip() not in ('', 'true', ':', 'echo skipped'), 'Verification command removed: ' + name)
     require(run_body(rows['Verify portable gameplay owners in actual existing consumers']) == 'python3 labs/build-operations/portable-core/verify.py --dotnet dotnet --output "$RUNNER_TEMP/portable-core"', 'Portable owner instrument missing')
+    require(run_body(rows['Execute phased breakbar and payable actual combat consequences']) == 'python3 north-star/combat-study/tools/control-verify.py --dotnet dotnet --output "$RUNNER_TEMP/control-practice"', 'Phased control instrument missing')
     require(run_body(rows['Execute actual paid response windows and LIFO consequences']) == 'python3 north-star/combat-study/tools/response-verify.py --dotnet dotnet --output "$RUNNER_TEMP/response-chain"', 'Paid response instrument missing')
     require(run_body(rows['Execute bounded critical-cue admission and actual PCM negatives']) == 'node labs/audio-music/priority-browser.mjs dotnet "$RUNNER_TEMP/audio-priority"', 'Critical-cue PCM instrument missing')
     require(run_body(rows['Execute deliberate keyboard actions and interruption quarantine']) == 'node north-star/field-journey/tools/keyboard-browser.mjs dotnet "$RUNNER_TEMP/field-keyboard" evidence/field-keyboard/baseline/app.js', 'Actual keyboard instrument and exact baseline required')
@@ -133,7 +135,7 @@ def validate_wrappers(overrides=None):
 
 class WorkflowContract(unittest.TestCase):
     def test_actual_workflow_has_all_guarded_existing_commands(self):
-        self.assertEqual(validate_workflow(WORKFLOW.read_text()), {'verification_steps': 22, 'suite_keys': 16})
+        self.assertEqual(validate_workflow(WORKFLOW.read_text()), {'verification_steps': 23, 'suite_keys': 16})
 
     def test_wrong_guard_and_removed_field_command_are_rejected(self):
         text = WORKFLOW.read_text()

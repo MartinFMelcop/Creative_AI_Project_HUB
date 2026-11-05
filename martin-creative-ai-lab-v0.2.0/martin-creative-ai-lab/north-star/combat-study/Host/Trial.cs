@@ -14,6 +14,8 @@ public sealed class Trial
     readonly PassiveEncounter passive;
     HitResult? lastHit;
     readonly bool responses;
+    readonly Breakbar? breakbar;
+    ControlResult? lastControl;
     bool wardAvailable=true;
     ResponseChain? pending;
     string[] resolution=Array.Empty<string>();
@@ -21,10 +23,11 @@ public sealed class Trial
     int round, hp=100, enemyHp=96, charges=2;
     string outcome="active";
     public string Last {get; private set;}="Choose an action. Reads and elapsed time do not advance the round.";
-    public Trial(string profile="toxic",Passive passive=Passive.None,Armor armor=Armor.Light,bool responses=false)
+    public Trial(string profile="toxic",Passive passive=Passive.None,Armor armor=Armor.Light,bool responses=false,bool controls=false)
     {
         if(profile!="toxic" && profile!="heated") throw new ArgumentException("Unknown practice profile.");
-        this.profile=profile;this.responses=responses;
+        if(responses&&controls)throw new ArgumentException("Practice modes are exclusive.");
+        this.profile=profile;this.responses=responses;breakbar=controls?new Breakbar(5):null;
         this.passive=new PassiveEncounter(passive,armor);
         if(profile=="toxic") { effects.Apply(Effect.Poison,3);effects.Apply(Effect.Bleed,3); }
         else { effects.Apply(Effect.Burn,3);effects.Apply(Effect.Disarm,2); }
@@ -61,11 +64,21 @@ public sealed class Trial
             events.Add(Last);return true;
         }
         if(command=="release"||command=="break-ward")return Refuse("No response chain is pending. No charge or round spent.");
+        if(command=="light-control"||command=="hard-control")
+        {
+            if(breakbar==null)return Refuse("Control practice was not prepared. No cost or round spent.");
+            bool hard=command=="hard-control";
+            if(hard&&charges==0)return Refuse("Hard control needs one shared treatment charge. No round spent.");
+            if(hard)charges--;
+            events.Clear();lastHit=null;lastControl=breakbar.Apply(hard?ControlWeight.Hard:ControlWeight.Light);
+            events.Add($"Control paid: one actual round{(hard?" and one shared charge":"")}; drained {lastControl.Drained}, refilled {lastControl.Refilled}, applied {lastControl.Applied}. No target HP damage.");
+            return FinishRound(false,lastControl.Applied);
+        }
         if(!new[]{"strike","bash","guard","treat","cleanse","retreat"}.Contains(command)) return Refuse("Unknown action.");
         if(command=="strike"&&!effects.WeaponEnabled) return Refuse("Disarmed: strike unavailable. Bash remains available; no round spent.");
         if((command=="treat"||command=="cleanse")&&charges==0) return Refuse("No treatment charges remain; no round spent.");
         if(command=="cleanse"&&effects.Snapshot().Length==0) return Refuse("No effects to cleanse; no charge or round spent.");
-        events.Clear();lastHit=null;
+        events.Clear();lastHit=null;lastControl=null;
         if(command=="retreat") { outcome="withdrawn";Last="You withdraw. No victory or death is inferred.";events.Add(Last);return true; }
         bool guard=command=="guard";
         if(command=="strike"||command=="bash")
@@ -78,9 +91,10 @@ public sealed class Trial
         if(guard) events.Add("Guard halves this round's direct contact; it cannot reduce DOT.");
         return FinishRound(guard);
     }
-    bool FinishRound(bool guard)
+    bool FinishRound(bool guard,bool controlled=false)
     {
-        if(enemyHp>0)
+        if(controlled)events.Add("Applied control suppresses this contact and pressure only. End-round DOT remains payable.");
+        if(enemyHp>0&&!controlled)
         {
             int direct=guard?10:20;lastHit=passive.Resolve(hp,direct,DamageKind.PhysicalDirect);int directLoss=hp-lastHit.HpAfter;hp=lastHit.HpAfter;
             events.Add($"Target contact: {direct} incoming direct damage; {directLoss} actual HP lost.");
@@ -99,5 +113,5 @@ public sealed class Trial
     }
     bool Refuse(string reason) { Last=reason;return false; }
     object? HitObservation()=>lastHit==null?null:new {kind=lastHit.Kind.ToString(),incoming=lastHit.Incoming,effectiveDamage=lastHit.EffectiveDamage,hpBefore=lastHit.HpBefore,hpAfter=lastHit.HpAfter,damageReduced=lastHit.DamageReduced,actualHpLost=lastHit.ActualHpLost,avoidedHpLoss=lastHit.AvoidedHpLoss,rescued=lastHit.Rescued};
-    public object Snapshot()=>new { profile,responsePractice=responses,wardAvailable=responses&&wardAvailable,pending=pending==null?null:new {ward=pending.HasWard,items=pending.PendingCount},resolution=resolution.ToArray(),round,hp,maxHp=100,enemyHp,charges,effects=effects.Snapshot().Select(e=>new {effect=e.Effect.ToString(),remaining=e.Remaining}).ToArray(),threat=outcome=="active"?Threat:"No further threat; encounter ended.",events=events.ToArray(),outcome,last=Last,weaponEnabled=effects.WeaponEnabled,attackMultiplier=effects.AttackMultiplier,healingMultiplier=effects.HealingMultiplier,passive=PassiveIds.Name(passive.Selection),armor=PassiveIds.Name(passive.Armor),rescueSpent=passive.RescueSpent,lastHit=HitObservation() };
+    public object Snapshot()=>new { profile,breakbar=breakbar==null?null:new {phase=breakbar.Protected?"protected":"exposed",value=breakbar.Value,capacity=breakbar.Capacity,lastApplied=lastControl?.Applied??false,lastDrain=lastControl?.Drained??0,lastRefill=lastControl?.Refilled??0},responsePractice=responses,wardAvailable=responses&&wardAvailable,pending=pending==null?null:new {ward=pending.HasWard,items=pending.PendingCount},resolution=resolution.ToArray(),round,hp,maxHp=100,enemyHp,charges,effects=effects.Snapshot().Select(e=>new {effect=e.Effect.ToString(),remaining=e.Remaining}).ToArray(),threat=outcome=="active"?Threat:"No further threat; encounter ended.",events=events.ToArray(),outcome,last=Last,weaponEnabled=effects.WeaponEnabled,attackMultiplier=effects.AttackMultiplier,healingMultiplier=effects.HealingMultiplier,passive=PassiveIds.Name(passive.Selection),armor=PassiveIds.Name(passive.Armor),rescueSpent=passive.RescueSpent,lastHit=HitObservation() };
 }

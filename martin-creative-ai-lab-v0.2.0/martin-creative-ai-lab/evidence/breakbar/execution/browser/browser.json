@@ -1,0 +1,635 @@
+{
+  "schema_version": 1,
+  "kind": "actual_control_breakbar_browser",
+  "checks": {
+    "passed": 21,
+    "failed": 0
+  },
+  "controls": [
+    "Explicit preparation and Begin issue same toxic baseline plus protected five",
+    "Actual hard-control round1 bar2 HP71 appliedfalse",
+    "Actual light-control round2 bar1 HP42 appliedfalse",
+    "Actual light-control round3 bar0 HP13 appliedfalse",
+    "Actual hard-control round4 bar3 HP7 appliedtrue",
+    "Actual light-control round5 bar4 HP1 appliedtrue",
+    "Actual light-control round6 bar5 HP1 appliedtrue",
+    "Zero crossing does not suppress contact or DOT",
+    "Exposed application suppresses contact while six DOT remain payable",
+    "Filling application still applies before protection returns",
+    "Exhausted hard control refuses atomically",
+    "Exhausted hard button is disabled",
+    "GET redraw and time preserve exact owner observation",
+    "Renewed protection makes next control fail to suppress actual fatal contact",
+    "Ended control refuses with exact retained state",
+    "Second actual source-backed context starts original heated effects",
+    "Ordinary guard and DOT do not alter protection",
+    "Ordinary practice cannot manufacture control ownership",
+    "Real false-full-bar renderer detected after actual paid control",
+    "No uncaught actual browser errors",
+    "Actual input identities stable through browser execution"
+  ],
+  "states": {
+    "begin": {
+      "sequence": 2,
+      "command": "begin",
+      "accepted": true,
+      "phase": "active",
+      "preparation": {
+        "profile": "toxic",
+        "responses": false,
+        "controls": true,
+        "passive": "none",
+        "armor": "light"
+      },
+      "state": {
+        "profile": "toxic",
+        "breakbar": {
+          "phase": "protected",
+          "value": 5,
+          "capacity": 5,
+          "lastApplied": false,
+          "lastDrain": 0,
+          "lastRefill": 0
+        },
+        "responsePractice": false,
+        "wardAvailable": false,
+        "pending": null,
+        "resolution": [],
+        "round": 0,
+        "hp": 100,
+        "maxHp": 100,
+        "enemyHp": 96,
+        "charges": 2,
+        "effects": [
+          {
+            "effect": "Poison",
+            "remaining": 3
+          },
+          {
+            "effect": "Bleed",
+            "remaining": 3
+          }
+        ],
+        "threat": "Contact: 20 direct damage.",
+        "events": [
+          "Practice begins with poison and bleed, each lasting three global rounds."
+        ],
+        "outcome": "active",
+        "last": "Choose an action. Reads and elapsed time do not advance the round.",
+        "weaponEnabled": true,
+        "attackMultiplier": 1,
+        "healingMultiplier": 0.7,
+        "passive": "none",
+        "armor": "light",
+        "rescueSpent": false,
+        "lastHit": null
+      }
+    },
+    "round1": {
+      "sequence": 3,
+      "command": "hard-control",
+      "accepted": true,
+      "phase": "active",
+      "preparation": {
+        "profile": "toxic",
+        "responses": false,
+        "controls": true,
+        "passive": "none",
+        "armor": "light"
+      },
+      "state": {
+        "profile": "toxic",
+        "breakbar": {
+          "phase": "protected",
+          "value": 2,
+          "capacity": 5,
+          "lastApplied": false,
+          "lastDrain": 3,
+          "lastRefill": 0
+        },
+        "responsePractice": false,
+        "wardAvailable": false,
+        "pending": null,
+        "resolution": [],
+        "round": 1,
+        "hp": 71,
+        "maxHp": 100,
+        "enemyHp": 96,
+        "charges": 1,
+        "effects": [
+          {
+            "effect": "Poison",
+            "remaining": 2
+          },
+          {
+            "effect": "Bleed",
+            "remaining": 2
+          }
+        ],
+        "threat": "Pressure: 20 direct damage, then extends poison (toxic) or burn (heated) by two rounds.",
+        "events": [
+          "Control paid: one actual round and one shared charge; drained 3, refilled 0, applied False. No target HP damage.",
+          "Target contact: 20 incoming direct damage; 20 actual HP lost.",
+          "End round 1: Poison incoming DOT 6; actual HP lost 6; 2 rounds remain. Guard does not reduce this tick.",
+          "End round 1: Bleed incoming DOT 3; actual HP lost 3; 2 rounds remain. Guard does not reduce this tick.",
+          "Round 1 resolved: active."
+        ],
+        "outcome": "active",
+        "last": "Round 1 resolved: active.",
+        "weaponEnabled": true,
+        "attackMultiplier": 1,
+        "healingMultiplier": 0.7,
+        "passive": "none",
+        "armor": "light",
+        "rescueSpent": false,
+        "lastHit": {
+          "kind": "PhysicalDirect",
+          "incoming": 20,
+          "effectiveDamage": 20,
+          "hpBefore": 100,
+          "hpAfter": 80,
+          "damageReduced": 0,
+          "actualHpLost": 20,
+          "avoidedHpLoss": 0,
+          "rescued": false
+        }
+      }
+    },
+    "round2": {
+      "sequence": 4,
+      "command": "light-control",
+      "accepted": true,
+      "phase": "active",
+      "preparation": {
+        "profile": "toxic",
+        "responses": false,
+        "controls": true,
+        "passive": "none",
+        "armor": "light"
+      },
+      "state": {
+        "profile": "toxic",
+        "breakbar": {
+          "phase": "protected",
+          "value": 1,
+          "capacity": 5,
+          "lastApplied": false,
+          "lastDrain": 1,
+          "lastRefill": 0
+        },
+        "responsePractice": false,
+        "wardAvailable": false,
+        "pending": null,
+        "resolution": [],
+        "round": 2,
+        "hp": 42,
+        "maxHp": 100,
+        "enemyHp": 96,
+        "charges": 1,
+        "effects": [
+          {
+            "effect": "Poison",
+            "remaining": 3
+          },
+          {
+            "effect": "Bleed",
+            "remaining": 1
+          }
+        ],
+        "threat": "Contact: 20 direct damage.",
+        "events": [
+          "Control paid: one actual round; drained 1, refilled 0, applied False. No target HP damage.",
+          "Target contact: 20 incoming direct damage; 20 actual HP lost.",
+          "Announced pressure reapplied Poison: remaining 4 before tick.",
+          "End round 2: Poison incoming DOT 6; actual HP lost 6; 3 rounds remain. Guard does not reduce this tick.",
+          "End round 2: Bleed incoming DOT 3; actual HP lost 3; 1 rounds remain. Guard does not reduce this tick.",
+          "Round 2 resolved: active."
+        ],
+        "outcome": "active",
+        "last": "Round 2 resolved: active.",
+        "weaponEnabled": true,
+        "attackMultiplier": 1,
+        "healingMultiplier": 0.7,
+        "passive": "none",
+        "armor": "light",
+        "rescueSpent": false,
+        "lastHit": {
+          "kind": "PhysicalDirect",
+          "incoming": 20,
+          "effectiveDamage": 20,
+          "hpBefore": 71,
+          "hpAfter": 51,
+          "damageReduced": 0,
+          "actualHpLost": 20,
+          "avoidedHpLoss": 0,
+          "rescued": false
+        }
+      }
+    },
+    "round3": {
+      "sequence": 5,
+      "command": "light-control",
+      "accepted": true,
+      "phase": "active",
+      "preparation": {
+        "profile": "toxic",
+        "responses": false,
+        "controls": true,
+        "passive": "none",
+        "armor": "light"
+      },
+      "state": {
+        "profile": "toxic",
+        "breakbar": {
+          "phase": "exposed",
+          "value": 0,
+          "capacity": 5,
+          "lastApplied": false,
+          "lastDrain": 1,
+          "lastRefill": 0
+        },
+        "responsePractice": false,
+        "wardAvailable": false,
+        "pending": null,
+        "resolution": [],
+        "round": 3,
+        "hp": 13,
+        "maxHp": 100,
+        "enemyHp": 96,
+        "charges": 1,
+        "effects": [
+          {
+            "effect": "Poison",
+            "remaining": 2
+          }
+        ],
+        "threat": "Contact: 20 direct damage.",
+        "events": [
+          "Control paid: one actual round; drained 1, refilled 0, applied False. No target HP damage.",
+          "Target contact: 20 incoming direct damage; 20 actual HP lost.",
+          "End round 3: Poison incoming DOT 6; actual HP lost 6; 2 rounds remain. Guard does not reduce this tick.",
+          "End round 3: Bleed incoming DOT 3; actual HP lost 3; 0 rounds remain. Guard does not reduce this tick.",
+          "Round 3 resolved: active."
+        ],
+        "outcome": "active",
+        "last": "Round 3 resolved: active.",
+        "weaponEnabled": true,
+        "attackMultiplier": 1,
+        "healingMultiplier": 1,
+        "passive": "none",
+        "armor": "light",
+        "rescueSpent": false,
+        "lastHit": {
+          "kind": "PhysicalDirect",
+          "incoming": 20,
+          "effectiveDamage": 20,
+          "hpBefore": 42,
+          "hpAfter": 22,
+          "damageReduced": 0,
+          "actualHpLost": 20,
+          "avoidedHpLoss": 0,
+          "rescued": false
+        }
+      }
+    },
+    "round4": {
+      "sequence": 6,
+      "command": "hard-control",
+      "accepted": true,
+      "phase": "active",
+      "preparation": {
+        "profile": "toxic",
+        "responses": false,
+        "controls": true,
+        "passive": "none",
+        "armor": "light"
+      },
+      "state": {
+        "profile": "toxic",
+        "breakbar": {
+          "phase": "exposed",
+          "value": 3,
+          "capacity": 5,
+          "lastApplied": true,
+          "lastDrain": 0,
+          "lastRefill": 3
+        },
+        "responsePractice": false,
+        "wardAvailable": false,
+        "pending": null,
+        "resolution": [],
+        "round": 4,
+        "hp": 7,
+        "maxHp": 100,
+        "enemyHp": 96,
+        "charges": 0,
+        "effects": [
+          {
+            "effect": "Poison",
+            "remaining": 1
+          }
+        ],
+        "threat": "Pressure: 20 direct damage, then extends poison (toxic) or burn (heated) by two rounds.",
+        "events": [
+          "Control paid: one actual round and one shared charge; drained 0, refilled 3, applied True. No target HP damage.",
+          "Applied control suppresses this contact and pressure only. End-round DOT remains payable.",
+          "End round 4: Poison incoming DOT 6; actual HP lost 6; 1 rounds remain. Guard does not reduce this tick.",
+          "Round 4 resolved: active."
+        ],
+        "outcome": "active",
+        "last": "Round 4 resolved: active.",
+        "weaponEnabled": true,
+        "attackMultiplier": 1,
+        "healingMultiplier": 1,
+        "passive": "none",
+        "armor": "light",
+        "rescueSpent": false,
+        "lastHit": null
+      }
+    },
+    "round5": {
+      "sequence": 7,
+      "command": "light-control",
+      "accepted": true,
+      "phase": "active",
+      "preparation": {
+        "profile": "toxic",
+        "responses": false,
+        "controls": true,
+        "passive": "none",
+        "armor": "light"
+      },
+      "state": {
+        "profile": "toxic",
+        "breakbar": {
+          "phase": "exposed",
+          "value": 4,
+          "capacity": 5,
+          "lastApplied": true,
+          "lastDrain": 0,
+          "lastRefill": 1
+        },
+        "responsePractice": false,
+        "wardAvailable": false,
+        "pending": null,
+        "resolution": [],
+        "round": 5,
+        "hp": 1,
+        "maxHp": 100,
+        "enemyHp": 96,
+        "charges": 0,
+        "effects": [],
+        "threat": "Contact: 20 direct damage.",
+        "events": [
+          "Control paid: one actual round; drained 0, refilled 1, applied True. No target HP damage.",
+          "Applied control suppresses this contact and pressure only. End-round DOT remains payable.",
+          "End round 5: Poison incoming DOT 6; actual HP lost 6; 0 rounds remain. Guard does not reduce this tick.",
+          "Round 5 resolved: active."
+        ],
+        "outcome": "active",
+        "last": "Round 5 resolved: active.",
+        "weaponEnabled": true,
+        "attackMultiplier": 1,
+        "healingMultiplier": 1,
+        "passive": "none",
+        "armor": "light",
+        "rescueSpent": false,
+        "lastHit": null
+      }
+    },
+    "round6": {
+      "sequence": 8,
+      "command": "light-control",
+      "accepted": true,
+      "phase": "active",
+      "preparation": {
+        "profile": "toxic",
+        "responses": false,
+        "controls": true,
+        "passive": "none",
+        "armor": "light"
+      },
+      "state": {
+        "profile": "toxic",
+        "breakbar": {
+          "phase": "protected",
+          "value": 5,
+          "capacity": 5,
+          "lastApplied": true,
+          "lastDrain": 0,
+          "lastRefill": 1
+        },
+        "responsePractice": false,
+        "wardAvailable": false,
+        "pending": null,
+        "resolution": [],
+        "round": 6,
+        "hp": 1,
+        "maxHp": 100,
+        "enemyHp": 96,
+        "charges": 0,
+        "effects": [],
+        "threat": "Contact: 20 direct damage.",
+        "events": [
+          "Control paid: one actual round; drained 0, refilled 1, applied True. No target HP damage.",
+          "Applied control suppresses this contact and pressure only. End-round DOT remains payable.",
+          "Round 6 resolved: active."
+        ],
+        "outcome": "active",
+        "last": "Round 6 resolved: active.",
+        "weaponEnabled": true,
+        "attackMultiplier": 1,
+        "healingMultiplier": 1,
+        "passive": "none",
+        "armor": "light",
+        "rescueSpent": false,
+        "lastHit": null
+      }
+    },
+    "loss": {
+      "sequence": 10,
+      "command": "light-control",
+      "accepted": true,
+      "phase": "ended",
+      "preparation": {
+        "profile": "toxic",
+        "responses": false,
+        "controls": true,
+        "passive": "none",
+        "armor": "light"
+      },
+      "state": {
+        "profile": "toxic",
+        "breakbar": {
+          "phase": "protected",
+          "value": 4,
+          "capacity": 5,
+          "lastApplied": false,
+          "lastDrain": 1,
+          "lastRefill": 0
+        },
+        "responsePractice": false,
+        "wardAvailable": false,
+        "pending": null,
+        "resolution": [],
+        "round": 7,
+        "hp": 0,
+        "maxHp": 100,
+        "enemyHp": 96,
+        "charges": 0,
+        "effects": [],
+        "threat": "No further threat; encounter ended.",
+        "events": [
+          "Control paid: one actual round; drained 1, refilled 0, applied False. No target HP damage.",
+          "Target contact: 20 incoming direct damage; 1 actual HP lost.",
+          "Round 7 resolved: defeated."
+        ],
+        "outcome": "defeated",
+        "last": "Round 7 resolved: defeated.",
+        "weaponEnabled": true,
+        "attackMultiplier": 1,
+        "healingMultiplier": 1,
+        "passive": "none",
+        "armor": "light",
+        "rescueSpent": false,
+        "lastHit": {
+          "kind": "PhysicalDirect",
+          "incoming": 20,
+          "effectiveDamage": 20,
+          "hpBefore": 1,
+          "hpAfter": 0,
+          "damageReduced": 0,
+          "actualHpLost": 1,
+          "avoidedHpLoss": 0,
+          "rescued": false
+        }
+      }
+    }
+  },
+  "negatives": [
+    {
+      "id": "false-full-bar",
+      "detected": true,
+      "actual": {
+        "sequence": 3,
+        "command": "hard-control",
+        "accepted": true,
+        "phase": "active",
+        "preparation": {
+          "profile": "toxic",
+          "responses": false,
+          "controls": true,
+          "passive": "none",
+          "armor": "light"
+        },
+        "state": {
+          "profile": "toxic",
+          "breakbar": {
+            "phase": "protected",
+            "value": 2,
+            "capacity": 5,
+            "lastApplied": false,
+            "lastDrain": 3,
+            "lastRefill": 0
+          },
+          "responsePractice": false,
+          "wardAvailable": false,
+          "pending": null,
+          "resolution": [],
+          "round": 1,
+          "hp": 71,
+          "maxHp": 100,
+          "enemyHp": 96,
+          "charges": 1,
+          "effects": [
+            {
+              "effect": "Poison",
+              "remaining": 2
+            },
+            {
+              "effect": "Bleed",
+              "remaining": 2
+            }
+          ],
+          "threat": "Pressure: 20 direct damage, then extends poison (toxic) or burn (heated) by two rounds.",
+          "events": [
+            "Control paid: one actual round and one shared charge; drained 3, refilled 0, applied False. No target HP damage.",
+            "Target contact: 20 incoming direct damage; 20 actual HP lost.",
+            "End round 1: Poison incoming DOT 6; actual HP lost 6; 2 rounds remain. Guard does not reduce this tick.",
+            "End round 1: Bleed incoming DOT 3; actual HP lost 3; 2 rounds remain. Guard does not reduce this tick.",
+            "Round 1 resolved: active."
+          ],
+          "outcome": "active",
+          "last": "Round 1 resolved: active.",
+          "weaponEnabled": true,
+          "attackMultiplier": 1,
+          "healingMultiplier": 0.7,
+          "passive": "none",
+          "armor": "light",
+          "rescueSpent": false,
+          "lastHit": {
+            "kind": "PhysicalDirect",
+            "incoming": 20,
+            "effectiveDamage": 20,
+            "hpBefore": 100,
+            "hpAfter": 80,
+            "damageReduced": 0,
+            "actualHpLost": 20,
+            "avoidedHpLoss": 0,
+            "rescued": false
+          }
+        }
+      },
+      "assertion": {
+        "name": "AssertionError",
+        "message": "Actual bar amount follows owner\n\n5 !== 2\n"
+      },
+      "original_sha256": "0559d8e6e5f732c7c2ae98c410ebb8d755e3c40cfd49445c01ce43ec581c4449",
+      "mutated_sha256": "2045047a5502ea23131f009605fb8923f18d3e0ee8d303ba218cee9a2c6c81fa",
+      "target": "$('control-bar').value=b?.value??0;",
+      "replacement": "$('control-bar').value=5;"
+    }
+  ],
+  "source_sha256": {
+    "north-star/combat-study/Checks/NorthStar.CombatChecks.csproj": "d159d1f16880492f4366940b4f8318c45cdede7bea1a237f9686d3ad7a637411",
+    "north-star/combat-study/Checks/Program.cs": "8901ea5754bb5d89d805b0298438cfb2a4a411b0f403e1843abae72720e066a1",
+    "north-star/combat-study/ControlChecks/NorthStar.ControlChecks.csproj": "0a72d3d879071cd0be22e857004f718bb46110a7d972d2a2f3644f50a2bc8d79",
+    "north-star/combat-study/ControlChecks/Program.cs": "ccc7d13b6e0f49714ad6d59c985a6b8970dc4d644ff907c0e40710c57e1a816d",
+    "north-star/combat-study/Host/NorthStar.CombatStudy.csproj": "6ac29b7401802c5166c75d9479eeff138837492f10e3960ee98e0e1494fb0a30",
+    "north-star/combat-study/Host/Program.cs": "c50ae615810de00fefec849ca091db63db0cefca308e2d3befe9d5f3f6a90059",
+    "north-star/combat-study/Host/Room.cs": "95d58b1dd8b780ac2f2c796c851011e66d49ccccdfc94ddb8c82e7c1652e895f",
+    "north-star/combat-study/Host/Trial.cs": "efa22ff24fb0506da97737a90a8fe57fd1d3a796925fbcc34e4d3495ff334e73",
+    "north-star/combat-study/Host/web/app.js": "0559d8e6e5f732c7c2ae98c410ebb8d755e3c40cfd49445c01ce43ec581c4449",
+    "north-star/combat-study/Host/web/index.html": "9b7b37d53cef8a312e3b3edf17ed23c7ed46c405c2c721c4fa1166de6e8f7640",
+    "north-star/combat-study/Host/web/style.css": "b3cc2176aa3336a9eb9550eed1cfe075d304f3b059d391a2cbb68d9fd2f6e9fc",
+    "north-star/combat-study/PassiveChecks/NorthStar.PassiveChecks.csproj": "4d9265cc2c935d4ffdb5a2c5d9397b6f037b2a852205b93fd7220392ec6d589d",
+    "north-star/combat-study/PassiveChecks/Program.cs": "8b5bd60ea7ca19c2f89ef941b16d5691135d94ea4a7ed467b59082a893ff6fd8",
+    "north-star/combat-study/ResponseChecks/NorthStar.ResponseChecks.csproj": "0a72d3d879071cd0be22e857004f718bb46110a7d972d2a2f3644f50a2bc8d79",
+    "north-star/combat-study/ResponseChecks/Program.cs": "7dd02485beee6fa39277d59ca456bb08a6d55f1cee78bc8d875185d0f73a2bda",
+    "north-star/combat-study/Rules/Breakbar.cs": "e63f1f3ba5165112da903a16e4a07bec2bd88b0832af6c923d5038cb27bfe5c5",
+    "north-star/combat-study/Rules/Combat.cs": "2624d7596cca2cc4bef78c17f143004b48978866654e4c84f6b4960ff5800fb6",
+    "north-star/combat-study/Rules/NorthStar.Combat.csproj": "c5ac413d76e9a444ec0662371e5f969c361e3d8ad6c4c0b109c21da09306a845",
+    "north-star/combat-study/Rules/Passives.cs": "4ef33bc84c6fdf7849d3aa8bda925a0f7fd2293be29cdfbf884cc67bccc87d10",
+    "north-star/combat-study/Rules/ResponseChain.cs": "ebcad92f15603d95b1cd0b32163e4fcfe17a082422cf003c172865f0bd4d6692",
+    "north-star/combat-study/TrialChecks/NorthStar.TrialChecks.csproj": "0a72d3d879071cd0be22e857004f718bb46110a7d972d2a2f3644f50a2bc8d79",
+    "north-star/combat-study/TrialChecks/Program.cs": "b3f41b5517f235433311e278901333687fc81bcbb055886376a785af125c8c5a",
+    "north-star/combat-study/tools/browser.mjs": "7cf368c2f829080c1216d165e66b084d83e0f3652c2d60b3352553a18d0e0091",
+    "north-star/combat-study/tools/control-browser.mjs": "05be6b161ed2835b5ca1f202ebb1d81ee4505003dcc729119b59e925383ac56f",
+    "north-star/combat-study/tools/control-verify.py": "16aeac0ac88901b19f0c2be89a565d1fc3ab3903d7f61fd77c9305d27492e11c",
+    "north-star/combat-study/tools/passive-browser.mjs": "6b961013207514f7483dd357e457f8a318e4d71841675ff28bebb13d56634c82",
+    "north-star/combat-study/tools/passive-verify.py": "560a0394ea8384b8fd9d330bf8a59e847c61ee8eb580d7de16e6a61d6ae45947",
+    "north-star/combat-study/tools/response-browser.mjs": "3621617e300b14f6f53e1f5bc33768d327127ee652a58ddaa74472e4ea0d6c2d",
+    "north-star/combat-study/tools/response-verify.py": "09569c99c9538c2b178eb6e0a4173e07fdf2914997e56010bab31f4a706b3798",
+    "north-star/combat-study/tools/verify.py": "3a1b79c741faaeb0ca50c9ad6d0a6d83f67098b78ee56b134f51f6f6236d32af",
+    "north-star/csharp/global.json": "e0c0882461e712f6c2c66241bf2f175c60832e3ff077dc26091ff8c661d4193e",
+    "projects/realtime-integration-lab/package-lock.json": "aa191ef2158e6cc6f770bf4b3ee44dca17175ef1a3cd572b98115246bf46aea7",
+    "projects/realtime-integration-lab/package.json": "42e3cc9633e522dd6d9a5c11023418331129632881a8bf0b95e3717247d57ebe"
+  },
+  "source_stable": true,
+  "runtime": {
+    "node": "v24.19.0",
+    "chromium": "154.0.8037.57",
+    "playwright": "1.64.0"
+  },
+  "limits": "Deterministic overlapping software controls, not people, independent samples, strategic balance, source Ruby/RMXP, Unity, Windows or Steam."
+}

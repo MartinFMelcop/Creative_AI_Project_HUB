@@ -1,0 +1,115 @@
+{
+  "schema_version": 1,
+  "source": "references/rave-master/snapshots/36af1651271422ae33856e8b5d7b45702215f165/source/RM_CORE/DATA/CORE/REGRAS_DE_COMBATE.csv",
+  "source_sha256": "f2c97e85ce573c50aa1959ec81221882c4fff4d164126fc22c5e6c9dd64c17e9",
+  "source_rows": {
+    "BBR-001": [
+      "BBR-001",
+      "Boss",
+      "Breakbar",
+      "Imune a CC antes do break",
+      "Enquanto breakbar > 0, boss é imune a todo tipo de CC; CC consumido drena barra.",
+      "Imune",
+      "Todos",
+      "MVP",
+      "",
+      ""
+    ],
+    "BBR-002": [
+      "BBR-002",
+      "Boss",
+      "Breakbar",
+      "Quebra da barra",
+      "Quando a barra chega a 0, o boss deixa de ser imune a CC (salvo imunidades do boss).",
+      "Vulnerável",
+      "Todos",
+      "MVP",
+      "",
+      ""
+    ],
+    "BBR-003": [
+      "BBR-003",
+      "Boss",
+      "Breakbar",
+      "Após break, CC aplica",
+      "Após break, CC aplicado funciona normalmente e carrega a barra de volta.",
+      "Sim",
+      "Todos",
+      "MVP",
+      "",
+      ""
+    ],
+    "BBR-004": [
+      "BBR-004",
+      "Boss",
+      "Breakbar",
+      "Retorno da imunidade",
+      "Quando a barra volta a 100%, o boss retorna ao estado imune a CC.",
+      "1",
+      "Todos",
+      "MVP",
+      "",
+      ""
+    ],
+    "BBR-005": [
+      "BBR-005",
+      "Boss",
+      "Breakbar",
+      "Pesos de CC",
+      "Breakbar drena por aplicação de CC: Categoria Leve drena 1 ponto; Categoria Não-leve (hard CC) drena 3 pontos. DOT não drena breakbar por padrão.",
+      "Leve=1; Não-leve=3",
+      "Todos",
+      "Next",
+      "",
+      ""
+    ],
+    "BBR-006": [
+      "BBR-006",
+      "Boss",
+      "Exceções",
+      "Imunidades por boss",
+      "Boss pode declarar imunidade a CC específico mesmo pós-break.",
+      "Por boss",
+      "Todos",
+      "MVP",
+      "",
+      ""
+    ],
+    "BBR-010": [
+      "BBR-010",
+      "Boss",
+      "Breakbar",
+      "Breakbar de Mini-boss",
+      "Mini-bosses usam breakbar com total fixo para permitir quebra por CC.",
+      "5",
+      "Todos",
+      "Next",
+      "",
+      ""
+    ],
+    "BBR-011": [
+      "BBR-011",
+      "Boss",
+      "Breakbar",
+      "Breakbar de Calamidade",
+      "Calamidades (chefes principais) usam breakbar maior para encounters longos.",
+      "20",
+      "Todos",
+      "Next",
+      "",
+      ""
+    ]
+  },
+  "case_count": 6,
+  "transition_count": 52,
+  "csharp_same_cases_compared": true,
+  "false_report_rejected": true,
+  "evidence_class": "OBSERVED_SOURCE and RECORDED_EXECUTION",
+  "destination_policies": [
+    "Independent Protected/Exposed phase resolves refill versus positive-bar ambiguity",
+    "Zero-crossing protected CC is consumed without applying",
+    "Exposed eligible CC applies before full-bar immunity returns",
+    "Refill uses category drain weight; specific immune CC neither drains nor refills"
+  ],
+  "limits": "Literal selected source rows and declared transition cases only; no Ruby/RGSS/RMXP, full boss/status catalog, balance or human validation"
+}

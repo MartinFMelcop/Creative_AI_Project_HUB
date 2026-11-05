@@ -1,0 +1,16 @@
+{
+  "observed_failures": [
+    {
+      "producer": "Program.cs",
+      "stage": "build",
+      "diagnostic": "CS0136: local r shadows a name in an enclosing scope; build failed."
+    },
+    {
+      "producer": "Program-second.cs",
+      "stage": "native control",
+      "diagnostic": "System.Exception: partial refill remains exposed",
+      "correction": "Expected HP7 at exposed refill4 was wrong: still-payable Poison dealt6, actual HP1. Gameplay owner unchanged."
+    }
+  ],
+  "scope": "Transcribed exact material diagnostics from actual tool execution; not a reconstructed full stdout log."
+}

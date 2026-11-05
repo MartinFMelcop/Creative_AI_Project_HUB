@@ -1,0 +1,42 @@
+[
+  {
+    "command": "python3 tools/validate_repo.py",
+    "exit_code": 0,
+    "tail": "PASS: 11 projects, 15 transfers, 11 assets, 2 legacy sources; 1176 local file links.\nDocumentary checks only; no game, model benchmark or media runtime executed.\n"
+  },
+  {
+    "command": "python3 tools/reference_library.py check",
+    "exit_code": 0,
+    "tail": "PASS: 5 reference records; 607 preserved sources, 18 derived PDF texts, 140 explicit exclusions; 14 North Star capabilities.\nIntegrity and structured evidence boundaries only; no legacy scripts, engine or rights review executed.\n"
+  },
+  {
+    "command": "python3 tools/brain_query.py check",
+    "exit_code": 0,
+    "tail": "\"line\": 188,\n      \"target\": \"#91-caso-h-um-visual-impressionante-destr\u00f3i-a-legibilidade\",\n      \"source_fragment\": \"91-caso-h--um-visual-impressionante-destr\u00f3i-a-legibilidade\",\n      \"kind\": \"inherited_heading_fragment_difference\"\n    }\n  ],\n  \"limits\": \"Pins detect byte changes, not factual accuracy, rights or independent validation. Inherited fragment differences are reported, not repaired.\"\n}\n"
+  },
+  {
+    "command": "python3 tools/check_transformation.py",
+    "exit_code": 0,
+    "tail": "PASS: {\"consumption\": {\"INTEGRATED\": 23, \"REJECTED\": 12, \"UNRESOLVED\": 15}, \"incomplete\": 1, \"laboratories\": 11, \"operational\": 10}; documentary identities, not fresh runtime execution\n"
+  },
+  {
+    "command": "python3 tools/inventory_origins.py --check labs/source-inventory.json",
+    "exit_code": 0,
+    "tail": "PASS: 11 origins, 1058 unique accessible files, 41 ZIP/PCK packages\n"
+  },
+  {
+    "command": "python3 tools/check_portfolio.py",
+    "exit_code": 0,
+    "tail": "eyboard/RUN.json\"\n    },\n    \"selected-passives\": {\n      \"consumer_paths\": [\n        \"north-star/combat-study/Rules/Passives.cs\",\n        \"north-star/combat-study/Host/Trial.cs\",\n        \"north-star/combat-study/Host/Room.cs\"\n      ],\n      \"guide_path\": \"north-star/combat-study/README.md\",\n      \"included_in_recipient\": false,\n      \"recorded_execution\": \"evidence/breakbar/RUN.json\"\n    }\n  }\n}\n"
+  },
+  {
+    "command": "python3 -m unittest tools/test_csharp_scope.py tools/test_csharp_workflow.py tools/test_ci_scope.py",
+    "exit_code": 1,
+    "tail": "e = __import__(module_name)\n             ^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/tools/test_ci_scope.py\", line 11, in <module>\n    import ci_scope as scope\nModuleNotFoundError: No module named 'ci_scope'\n\n\n----------------------------------------------------------------------\nRan 15 tests in 0.018s\n\nFAILED (errors=10)\n"
+  },
+  {
+    "command": "PYTHONPATH=tools python3 -m unittest tools/test_csharp_scope.py tools/test_csharp_workflow.py tools/test_ci_scope.py",
+    "exit_code": 0,
+    "result": "57 tests passed; initial import-path failure retained above"
+  }
+]

@@ -44,7 +44,8 @@ not adopt random hit gates or the full resistance/critical damage pipeline.
 Contact 20, target 96, strike 24/bash 14, treatment 32, two charges, pressure cadence, initial
 conditions and the solo loss policy are authored study parameters. Final target defeat
 still resolves the round's DOT; zero player HP takes priority. No existing source fiction,
-full effects/passives, formation, initiative, downstate, breakbar or rewards are imported.
+full effects/passives, formation, initiative, downstate or rewards are imported.
+The later optional breakbar practice below consumes only its explicitly bounded contract.
 
 ## Actual observations and failures
 
@@ -153,3 +154,37 @@ state-based battle rules, fizzle and ultimate cooldowns remain unresolved.
 ```bash
 python3 north-star/combat-study/tools/response-verify.py --dotnet dotnet --output /tmp/response-practice-new
 ```
+
+## Optional control practice — phase, opportunity cost and payable DOT
+
+Prepare **control** explicitly before Begin; ordinary and paid-response modes remain
+separate. This SAME encounter offers light control (one actual round) or hard control
+(one actual round plus one shared treatment charge). Both use an original five-point
+practice bar. Protected control drains1/light or3/hard, clamped at zero. The contact
+that reaches zero exposes the target but does not itself apply control. This ordering
+is an explicit destination policy: the source does not uniquely fix that boundary.
+
+During Exposed, eligible control suppresses this actual round's target contact AND
+pressure, then refills by the same category weight. DOT still resolves through the
+existing EffectSet and can defeat the player. Full refill restores Protected only
+AFTER that application. A positive partially refilled bar is therefore not immunity.
+Specific immunity is a separate library observation; the original practice target has
+none. It is not a source boss or closed-instance classification: existing retreat
+remains available. No clock, read, redraw or ordinary attack drains/refills this bar.
+
+[Prospective bounded protocol](../../labs/combat-response/breakbar/PROTOCOL.md) and
+[current execution](../../evidence/breakbar/RUN.json) preserve the literal source assay,
+the SAME declared Python/C# transitions, actual browser flow, negative controls and
+affected classic/passive/response regressions. The control-only policy
+`hard,light,light,hard,light,light,light` loses after seven rounds with target96,
+HP0 and zero charges. Temporary contact suppression is neither damage nor immunity
+from payable poison, and this is no claim of balance, preference or strategic superiority.
+
+```bash
+python3 north-star/combat-study/tools/control-verify.py --dotnet dotnet --output /tmp/control-practice-new
+```
+
+The source also declares a twenty-point category; library vectors exercise it, but
+this consumer does not stage that encounter. Complete boss immunity/effect/acquisition
+catalogs, trigger durations, full combat, Ruby/RGSS/RMXP, Unity/Windows/Steam and human
+assessment remain unresolved. New code is original; no source fiction was imported.
