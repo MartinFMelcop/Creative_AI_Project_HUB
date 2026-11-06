@@ -1,0 +1,56 @@
+{
+  "kind": "observed_engineering_command_index",
+  "note": "Initial build stdout was returned by execution tool, not initially redirected to disk. No build or native-check command failed in this engineering task. Later build logs and every native output version remain separate. This index is a transcription of observed command results, not a raw historical stdout log.",
+  "commands": [
+    {
+      "stage": "initial build",
+      "project": "InitiativeChecks/NorthStar.InitiativeChecks.csproj",
+      "exit_code": 0,
+      "warnings": 0,
+      "errors": 0,
+      "tool_session": 17026
+    },
+    {
+      "stage": "initial exploratory native",
+      "exit_code": 0,
+      "passed": 2,
+      "output": "explore.json"
+    },
+    {
+      "stage": "expanded build",
+      "exit_code": 0,
+      "warnings": 0,
+      "errors": 0,
+      "tool_session": 37703
+    },
+    {
+      "stage": "expanded native",
+      "exit_code": 0,
+      "passed": 37,
+      "output": "native.json"
+    },
+    {
+      "stage": "additional fixed-policy exploration build",
+      "exit_code": 0,
+      "stdout": "build.log"
+    },
+    {
+      "stage": "additional fixed-policy exploration native",
+      "exit_code": 0,
+      "passed": 37,
+      "output": "explore2.json",
+      "negative_outcomes_retained": true
+    },
+    {
+      "stage": "final causal-control build",
+      "exit_code": 0,
+      "stdout": "build-final.log"
+    },
+    {
+      "stage": "final native",
+      "exit_code": 0,
+      "passed": 40,
+      "output": "native-final.json"
+    }
+  ]
+}

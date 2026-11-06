@@ -1011,3 +1011,24 @@ keys and focus deliberately before fresh intent. Existing pointer/native Tab/Ent
 controls remain. CRE012(H)/081(A) guide recognizable choices and reduced input barriers,
 not canon, human accessibility or device validation. [Execution](../evidence/field-keyboard/RUN.json)
 separates actual software input and owner consequences from those unverified claims.
+
+
+## Announced combat initiative — experimental source consumption
+
+One selected P10 round/order contract now reaches the EXISTING Treatment Line rather
+than another Field extension. Heavy/Quick trade agility and damage in a prepared
+opt-in mode. The same actual global-round effects and finite treatment charges remain;
+contact, cure, guard and withdrawal occur in their announced actor position. Defeat
+prevents a later queued action; target defeat prevents its contact; neither a read nor
+a rejected command advances the RNG. End-round DOT can still defeat the player.
+
+INI requirements do not supply a complete numeric algorithm. Fixed seed, bounded jitter,
+tie handling, tempo values and two one-turn participants are ORIGINAL destination
+policies. No class, fictional source, real-time combat preference, optimum, player
+comprehension or balance is approved. Extra turns, formation, complete initiative,
+fizzle and cooldown remain open. Engineering preferred consequential turn ownership;
+Science preferred precise target-fizzle rules but required a real causal target
+invalidation absent from the current consumer. Creation favored surviving-to-act
+consequences over another Field layer. The chosen initiative scope makes its greater
+original-policy burden explicit and preserves classic controls. See
+[evidence](../evidence/initiative/RUN.json), not agent opinion, for executed observations.

@@ -1,0 +1,86 @@
+[
+  {
+    "command": [
+      "/workspace/work/takakae-t02/runtime/dotnet/dotnet",
+      "--version"
+    ],
+    "exit_code": 0,
+    "stdout": "10.0.401\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "/workspace/work/takakae-t02/runtime/dotnet/dotnet",
+      "build",
+      "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/combat-study/ControlChecks/NorthStar.ControlChecks.csproj",
+      "-c",
+      "Release",
+      "-m:1",
+      "--disable-build-servers"
+    ],
+    "exit_code": 0,
+    "stdout": "  Determining projects to restore...\n  Restored /workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/combat-study/ControlChecks/NorthStar.ControlChecks.csproj (in 115 ms).\n  2 of 3 projects are up-to-date for restore.\n  NorthStar.Combat -> /workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/combat-study/Rules/bin/Release/netstandard2.1/NorthStar.Combat.dll\n  NorthStar.CombatStudy -> /workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/combat-study/Host/bin/Release/net10.0/NorthStar.CombatStudy.dll\n  NorthStar.ControlChecks -> /workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/combat-study/ControlChecks/bin/Release/net10.0/NorthStar.ControlChecks.dll\n\nBuild succeeded.\n    0 Warning(s)\n    0 Error(s)\n\nTime Elapsed 00:00:03.04\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "/workspace/work/takakae-t02/runtime/dotnet/dotnet",
+      "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/combat-study/ControlChecks/bin/Release/net10.0/NorthStar.ControlChecks.dll",
+      "/workspace/work/initiative/final-control/native.json"
+    ],
+    "exit_code": 0,
+    "stdout": "{\n  \"checks\": 22,\n  \"controls\": [\n    \"hard drains three without control\",\n    \"specific immunity neither drains nor applies\",\n    \"breaking application drains only\",\n    \"exposed hard applies and refills\",\n    \"positive exposed value remains vulnerable\",\n    \"full refill application applies before protection\",\n    \"renewed protection drains instead of controls\",\n    \"invalid category rejected\",\n    \"classic refuses new action\",\n    \"hard actual cost round and contact\",\n    \"light pays contact plus DOT\",\n    \"zero crossing still pays contact\",\n    \"exposed control suppresses contact but DOT payable\",\n    \"empty hard refused without advancing bar round\",\n    \"partial refill remains exposed\",\n    \"full refill controls actual contact\",\n    \"next immune contact defeats\",\n    \"terminal control refuses\",\n    \"explicit preparation has no owner state\",\n    \"begin creates original control practice\",\n    \"retreat remains explicit not boss-world escape\",\n    \"read stable\"\n  ],\n  \"trace\": {\n    \"profile\": \"toxic\",\n    \"initiative\": null,\n    \"breakbar\": {\n      \"phase\": \"protected\",\n      \"value\": 4,\n      \"capacity\": 5,\n      \"lastApplied\": false,\n      \"lastDrain\": 1,\n      \"lastRefill\": 0\n    },\n    \"responsePractice\": false,\n    \"wardAvailable\": false,\n    \"pending\": null,\n    \"resolution\": [],\n    \"round\": 7,\n    \"hp\": 0,\n    \"maxHp\": 100,\n    \"enemyHp\": 96,\n    \"charges\": 0,\n    \"effects\": [],\n    \"threat\": \"No further threat; encounter ended.\",\n    \"events\": [\n      \"Control paid: one actual round; drained 1, refilled 0, applied False. No target HP damage.\",\n      \"Target contact: 20 incoming direct damage; 1 actual HP lost.\",\n      \"Round 7 resolved: defeated.\"\n    ],\n    \"outcome\": \"defeated\",\n    \"last\": \"Encounter ended. Restart explicitly to practice again.\",\n    \"weaponEnabled\": true,\n    \"attackMultiplier\": 1,\n    \"healingMultiplier\": 1,\n    \"passive\": \"none\",\n    \"armor\": \"light\",\n    \"rescueSpent\": false,\n    \"lastHit\": {\n      \"kind\": \"PhysicalDirect\",\n      \"incoming\": 20,\n      \"effectiveDamage\": 20,\n      \"hpBefore\": 1,\n      \"hpAfter\": 0,\n      \"damageReduced\": 0,\n      \"actualHpLost\": 1,\n      \"avoidedHpLoss\": 0,\n      \"rescued\": false\n    }\n  }\n}\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "python3",
+      "-B",
+      "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/tools/verify_breakbar_source.py",
+      "--output",
+      "/workspace/work/initiative/final-control/source-initial.json",
+      "--export-cases",
+      "/workspace/work/initiative/final-control/cases.json"
+    ],
+    "exit_code": 0,
+    "stdout": "PASS: 8 exact BBR rows; 6 declared cases/52 transitions; C# compared=False\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "/workspace/work/takakae-t02/runtime/dotnet/dotnet",
+      "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/combat-study/ControlChecks/bin/Release/net10.0/NorthStar.ControlChecks.dll",
+      "--source-vectors",
+      "/workspace/work/initiative/final-control/cases.json",
+      "/workspace/work/initiative/final-control/csharp-cases.json"
+    ],
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "python3",
+      "-B",
+      "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/tools/verify_breakbar_source.py",
+      "--output",
+      "/workspace/work/initiative/final-control/source.json",
+      "--csharp-results",
+      "/workspace/work/initiative/final-control/csharp-cases.json"
+    ],
+    "exit_code": 0,
+    "stdout": "PASS: 8 exact BBR rows; 6 declared cases/52 transitions; C# compared=True\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "node",
+      "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/combat-study/tools/control-browser.mjs",
+      "/workspace/work/takakae-t02/runtime/dotnet/dotnet",
+      "/workspace/work/initiative/final-control/browser"
+    ],
+    "exit_code": 0,
+    "stdout": "PASS: 21 control Chromium controls\n",
+    "stderr": ""
+  }
+]

@@ -1,0 +1,64 @@
+{
+  "schema": "hub.source-launch.v1",
+  "status": "success",
+  "events": [
+    {
+      "event": "ready",
+      "id": "selected-passives",
+      "url": "http://127.0.0.1:44531/",
+      "pid": 8865
+    },
+    {
+      "event": "expired",
+      "exit_code": 0
+    }
+  ],
+  "boundary": "Trusted-local source experiment, ephemeral and SDK-required. No Unity/Windows/Steam, recipient inclusion, sandbox or human validation.",
+  "stage": "expired",
+  "commands": [
+    {
+      "command": [
+        "/workspace/work/takakae-t02/runtime/dotnet/dotnet",
+        "--version"
+      ],
+      "exit_code": 0,
+      "stdout": "10.0.401\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/workspace/work/takakae-t02/runtime/dotnet/dotnet",
+        "build",
+        "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/combat-study/Host/NorthStar.CombatStudy.csproj",
+        "-c",
+        "Release",
+        "-m:1",
+        "--disable-build-servers"
+      ],
+      "exit_code": 0,
+      "stdout": "  Determining projects to restore...\n  All projects are up-to-date for restore.\n  NorthStar.Combat -> /workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/combat-study/Rules/bin/Release/netstandard2.1/NorthStar.Combat.dll\n  NorthStar.CombatStudy -> /workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/combat-study/Host/bin/Release/net10.0/NorthStar.CombatStudy.dll\n\nBuild succeeded.\n    0 Warning(s)\n    0 Error(s)\n\nTime Elapsed 00:00:01.14\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/workspace/work/takakae-t02/runtime/dotnet/dotnet",
+        "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/combat-study/Host/bin/Release/net10.0/NorthStar.CombatStudy.dll",
+        "--serve",
+        "44531",
+        "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/combat-study/Host/web",
+        "--seconds",
+        "12"
+      ],
+      "exit_code": 0
+    }
+  ],
+  "id": "selected-passives",
+  "pid": 8865,
+  "sdk": "10.0.401",
+  "url": "http://127.0.0.1:44531/",
+  "host_exit_code": 0,
+  "host_lines": [
+    "READY http://127.0.0.1:44531/"
+  ],
+  "owned_process_exited": true
+}

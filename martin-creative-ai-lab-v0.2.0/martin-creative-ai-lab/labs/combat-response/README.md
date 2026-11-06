@@ -180,3 +180,14 @@ This narrowly consumes literal source drain/refill/immunity requirements; zero-c
 order, equal-weight refill and practice costs are disclosed destination policies.
 A partially refilled positive bar remains Exposed. Actual DOT can still defeat the
 player after contact suppression. No full boss catalog, human balance or new lab is claimed.
+
+
+## Selected announced initiative in the same Treatment Line
+
+The [initiative protocol](initiative/PROTOCOL.md) separates literal preserved round/order
+requirements from original numeric/RNG policies. The existing C# consumer now offers an
+optional prepared tempo whose announced queue determines whether the character acts
+before contact or must survive it. [Executed evidence](../../evidence/initiative/RUN.json)
+keeps the source assay, actual actor-order consequences, negative controls and prior
+consumer regressions separate. This is a selected laboratory consumption increment,
+not the full source initiative, formation, extra-turn or reaction pipeline.

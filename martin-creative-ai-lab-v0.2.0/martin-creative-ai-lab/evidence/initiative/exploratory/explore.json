@@ -1,0 +1,4795 @@
+{
+  "schema_version": 1,
+  "checks": {
+    "passed": 2,
+    "failed": 0
+  },
+  "controls": [
+    "Queue reads preserve exact scores RNG round and immutable order",
+    "Advance replaces immutable prior queue once"
+  ],
+  "vectors": [],
+  "samples": [
+    {
+      "style": "heavy",
+      "profile": "toxic",
+      "policy": [
+        "cleanse",
+        "strike",
+        "strike",
+        "strike",
+        "strike",
+        "strike",
+        "strike"
+      ],
+      "steps": [
+        {
+          "command": "cleanse",
+          "accepted": true,
+          "state": {
+            "profile": "toxic",
+            "initiative": {
+              "style": "heavy",
+              "playerAgility": 8,
+              "enemyAgility": 12,
+              "round": 2,
+              "order": [
+                "player",
+                "target"
+              ],
+              "playerScore": 14,
+              "targetScore": 6,
+              "seedState": 1424732933
+            },
+            "breakbar": null,
+            "responsePractice": false,
+            "wardAvailable": false,
+            "pending": null,
+            "resolution": [],
+            "round": 1,
+            "hp": 80,
+            "maxHp": 100,
+            "enemyHp": 96,
+            "charges": 1,
+            "effects": [],
+            "threat": "Pressure: 20 direct damage, then extends poison (toxic) or burn (heated) by two rounds.",
+            "events": [
+              "Initiative round 1: target then player; scores 7/11.",
+              "Target contact: 20 incoming direct damage; 20 actual HP lost.",
+              "Treatment spent in player slot: removed 2 effects.",
+              "Round 1 resolved: active."
+            ],
+            "outcome": "active",
+            "last": "Round 1 resolved: active.",
+            "weaponEnabled": true,
+            "attackMultiplier": 1,
+            "healingMultiplier": 1,
+            "passive": "none",
+            "armor": "light",
+            "rescueSpent": false,
+            "lastHit": {
+              "kind": "PhysicalDirect",
+              "incoming": 20,
+              "effectiveDamage": 20,
+              "hpBefore": 100,
+              "hpAfter": 80,
+              "damageReduced": 0,
+              "actualHpLost": 20,
+              "avoidedHpLoss": 0,
+              "rescued": false
+            }
+          }
+        },
+        {
+          "command": "strike",
+          "accepted": true,
+          "state": {
+            "profile": "toxic",
+            "initiative": {
+              "style": "heavy",
+              "playerAgility": 8,
+              "enemyAgility": 12,
+              "round": 3,
+              "order": [
+                "target",
+                "player"
+              ],
+              "playerScore": 6,
+              "targetScore": 18,
+              "seedState": 2807505791
+            },
+            "breakbar": null,
+            "responsePractice": false,
+            "wardAvailable": false,
+            "pending": null,
+            "resolution": [],
+            "round": 2,
+            "hp": 54,
+            "maxHp": 100,
+            "enemyHp": 64,
+            "charges": 1,
+            "effects": [
+              {
+                "effect": "Poison",
+                "remaining": 1
+              }
+            ],
+            "threat": "Contact: 20 direct damage.",
+            "events": [
+              "Initiative round 2: player then target; scores 14/6.",
+              "strike: 32 direct damage to target. Burn multiplier 1.0.",
+              "Target contact: 20 incoming direct damage; 20 actual HP lost.",
+              "Announced pressure reapplied Poison: remaining 2 before tick.",
+              "End round 2: Poison incoming DOT 6; actual HP lost 6; 1 rounds remain. Guard does not reduce this tick.",
+              "Round 2 resolved: active."
+            ],
+            "outcome": "active",
+            "last": "Round 2 resolved: active.",
+            "weaponEnabled": true,
+            "attackMultiplier": 1,
+            "healingMultiplier": 1,
+            "passive": "none",
+            "armor": "light",
+            "rescueSpent": false,
+            "lastHit": {
+              "kind": "PhysicalDirect",
+              "incoming": 20,
+              "effectiveDamage": 20,
+              "hpBefore": 80,
+              "hpAfter": 60,
+              "damageReduced": 0,
+              "actualHpLost": 20,
+              "avoidedHpLoss": 0,
+              "rescued": false
+            }
+          }
+        },
+        {
+          "command": "strike",
+          "accepted": true,
+          "state": {
+            "profile": "toxic",
+            "initiative": {
+              "style": "heavy",
+              "playerAgility": 8,
+              "enemyAgility": 12,
+              "round": 4,
+              "order": [
+                "target",
+                "player"
+              ],
+              "playerScore": 6,
+              "targetScore": 7,
+              "seedState": 1029717001
+            },
+            "breakbar": null,
+            "responsePractice": false,
+            "wardAvailable": false,
+            "pending": null,
+            "resolution": [],
+            "round": 3,
+            "hp": 28,
+            "maxHp": 100,
+            "enemyHp": 32,
+            "charges": 1,
+            "effects": [],
+            "threat": "Contact: 20 direct damage.",
+            "events": [
+              "Initiative round 3: target then player; scores 6/18.",
+              "Target contact: 20 incoming direct damage; 20 actual HP lost.",
+              "strike: 32 direct damage to target. Burn multiplier 1.0.",
+              "End round 3: Poison incoming DOT 6; actual HP lost 6; 0 rounds remain. Guard does not reduce this tick.",
+              "Round 3 resolved: active."
+            ],
+            "outcome": "active",
+            "last": "Round 3 resolved: active.",
+            "weaponEnabled": true,
+            "attackMultiplier": 1,
+            "healingMultiplier": 1,
+            "passive": "none",
+            "armor": "light",
+            "rescueSpent": false,
+            "lastHit": {
+              "kind": "PhysicalDirect",
+              "incoming": 20,
+              "effectiveDamage": 20,
+              "hpBefore": 54,
+              "hpAfter": 34,
+              "damageReduced": 0,
+              "actualHpLost": 20,
+              "avoidedHpLoss": 0,
+              "rescued": false
+            }
+          }
+        },
+        {
+          "command": "strike",
+          "accepted": true,
+          "state": {
+            "profile": "toxic",
+            "initiative": {
+              "style": "heavy",
+              "playerAgility": 8,
+              "enemyAgility": 12,
+              "round": 4,
+              "order": [
+                "target",
+                "player"
+              ],
+              "playerScore": 6,
+              "targetScore": 7,
+              "seedState": 1029717001
+            },
+            "breakbar": null,
+            "responsePractice": false,
+            "wardAvailable": false,
+            "pending": null,
+            "resolution": [],
+            "round": 4,
+            "hp": 8,
+            "maxHp": 100,
+            "enemyHp": 0,
+            "charges": 1,
+            "effects": [],
+            "threat": "No further threat; encounter ended.",
+            "events": [
+              "Initiative round 4: target then player; scores 6/7.",
+              "Target contact: 20 incoming direct damage; 20 actual HP lost.",
+              "strike: 32 direct damage to target. Burn multiplier 1.0.",
+              "Round 4 resolved: secured."
+            ],
+            "outcome": "secured",
+            "last": "Round 4 resolved: secured.",
+            "weaponEnabled": true,
+            "attackMultiplier": 1,
+            "healingMultiplier": 1,
+            "passive": "none",
+            "armor": "light",
+            "rescueSpent": false,
+            "lastHit": {
+              "kind": "PhysicalDirect",
+              "incoming": 20,
+              "effectiveDamage": 20,
+              "hpBefore": 28,
+              "hpAfter": 8,
+              "damageReduced": 0,
+              "actualHpLost": 20,
+              "avoidedHpLoss": 0,
+              "rescued": false
+            }
+          }
+        }
+      ],
+      "final": {
+        "profile": "toxic",
+        "initiative": {
+          "style": "heavy",
+          "playerAgility": 8,
+          "enemyAgility": 12,
+          "round": 4,
+          "order": [
+            "target",
+            "player"
+          ],
+          "playerScore": 6,
+          "targetScore": 7,
+          "seedState": 1029717001
+        },
+        "breakbar": null,
+        "responsePractice": false,
+        "wardAvailable": false,
+        "pending": null,
+        "resolution": [],
+        "round": 4,
+        "hp": 8,
+        "maxHp": 100,
+        "enemyHp": 0,
+        "charges": 1,
+        "effects": [],
+        "threat": "No further threat; encounter ended.",
+        "events": [
+          "Initiative round 4: target then player; scores 6/7.",
+          "Target contact: 20 incoming direct damage; 20 actual HP lost.",
+          "strike: 32 direct damage to target. Burn multiplier 1.0.",
+          "Round 4 resolved: secured."
+        ],
+        "outcome": "secured",
+        "last": "Round 4 resolved: secured.",
+        "weaponEnabled": true,
+        "attackMultiplier": 1,
+        "healingMultiplier": 1,
+        "passive": "none",
+        "armor": "light",
+        "rescueSpent": false,
+        "lastHit": {
+          "kind": "PhysicalDirect",
+          "incoming": 20,
+          "effectiveDamage": 20,
+          "hpBefore": 28,
+          "hpAfter": 8,
+          "damageReduced": 0,
+          "actualHpLost": 20,
+          "avoidedHpLoss": 0,
+          "rescued": false
+        }
+      }
+    },
+    {
+      "style": "heavy",
+      "profile": "toxic",
+      "policy": [
+        "bash",
+        "bash",
+        "treat",
+        "strike",
+        "strike",
+        "strike",
+        "strike"
+      ],
+      "steps": [
+        {
+          "command": "bash",
+          "accepted": true,
+          "state": {
+            "profile": "toxic",
+            "initiative": {
+              "style": "heavy",
+              "playerAgility": 8,
+              "enemyAgility": 12,
+              "round": 2,
+              "order": [
+                "player",
+                "target"
+              ],
+              "playerScore": 14,
+              "targetScore": 6,
+              "seedState": 1424732933
+            },
+            "breakbar": null,
+            "responsePractice": false,
+            "wardAvailable": false,
+            "pending": null,
+            "resolution": [],
+            "round": 1,
+            "hp": 71,
+            "maxHp": 100,
+            "enemyHp": 78,
+            "charges": 2,
+            "effects": [
+              {
+                "effect": "Poison",
+                "remaining": 2
+              },
+              {
+                "effect": "Bleed",
+                "remaining": 2
+              }
+            ],
+            "threat": "Pressure: 20 direct damage, then extends poison (toxic) or burn (heated) by two rounds.",
+            "events": [
+              "Initiative round 1: target then player; scores 7/11.",
+              "Target contact: 20 incoming direct damage; 20 actual HP lost.",
+              "bash: 18 direct damage to target. Burn multiplier 1.0.",
+              "End round 1: Poison incoming DOT 6; actual HP lost 6; 2 rounds remain. Guard does not reduce this tick.",
+              "End round 1: Bleed incoming DOT 3; actual HP lost 3; 2 rounds remain. Guard does not reduce this tick.",
+              "Round 1 resolved: active."
+            ],
+            "outcome": "active",
+            "last": "Round 1 resolved: active.",
+            "weaponEnabled": true,
+            "attackMultiplier": 1,
+            "healingMultiplier": 0.7,
+            "passive": "none",
+            "armor": "light",
+            "rescueSpent": false,
+            "lastHit": {
+              "kind": "PhysicalDirect",
+              "incoming": 20,
+              "effectiveDamage": 20,
+              "hpBefore": 100,
+              "hpAfter": 80,
+              "damageReduced": 0,
+              "actualHpLost": 20,
+              "avoidedHpLoss": 0,
+              "rescued": false
+            }
+          }
+        },
+        {
+          "command": "bash",
+          "accepted": true,
+          "state": {
+            "profile": "toxic",
+            "initiative": {
+              "style": "heavy",
+              "playerAgility": 8,
+              "enemyAgility": 12,
+              "round": 3,
+              "order": [
+                "target",
+                "player"
+              ],
+              "playerScore": 6,
+              "targetScore": 18,
+              "seedState": 2807505791
+            },
+            "breakbar": null,
+            "responsePractice": false,
+            "wardAvailable": false,
+            "pending": null,
+            "resolution": [],
+            "round": 2,
+            "hp": 42,
+            "maxHp": 100,
+            "enemyHp": 60,
+            "charges": 2,
+            "effects": [
+              {
+                "effect": "Poison",
+                "remaining": 3
+              },
+              {
+                "effect": "Bleed",
+                "remaining": 1
+              }
+            ],
+            "threat": "Contact: 20 direct damage.",
+            "events": [
+              "Initiative round 2: player then target; scores 14/6.",
+              "bash: 18 direct damage to target. Burn multiplier 1.0.",
+              "Target contact: 20 incoming direct damage; 20 actual HP lost.",
+              "Announced pressure reapplied Poison: remaining 4 before tick.",
+              "End round 2: Poison incoming DOT 6; actual HP lost 6; 3 rounds remain. Guard does not reduce this tick.",
+              "End round 2: Bleed incoming DOT 3; actual HP lost 3; 1 rounds remain. Guard does not reduce this tick.",
+              "Round 2 resolved: active."
+            ],
+            "outcome": "active",
+            "last": "Round 2 resolved: active.",
+            "weaponEnabled": true,
+            "attackMultiplier": 1,
+            "healingMultiplier": 0.7,
+            "passive": "none",
+            "armor": "light",
+            "rescueSpent": false,
+            "lastHit": {
+              "kind": "PhysicalDirect",
+              "incoming": 20,
+              "effectiveDamage": 20,
+              "hpBefore": 71,
+              "hpAfter": 51,
+              "damageReduced": 0,
+              "actualHpLost": 20,
+              "avoidedHpLoss": 0,
+              "rescued": false
+            }
+          }
+        },
+        {
+          "command": "treat",
+          "accepted": true,
+          "state": {
+            "profile": "toxic",
+            "initiative": {
+              "style": "heavy",
+              "playerAgility": 8,
+              "enemyAgility": 12,
+              "round": 4,
+              "order": [
+                "target",
+                "player"
+              ],
+              "playerScore": 6,
+              "targetScore": 7,
+              "seedState": 1029717001
+            },
+            "breakbar": null,
+            "responsePractice": false,
+            "wardAvailable": false,
+            "pending": null,
+            "resolution": [],
+            "round": 3,
+            "hp": 35,
+            "maxHp": 100,
+            "enemyHp": 60,
+            "charges": 1,
+            "effects": [
+              {
+                "effect": "Poison",
+                "remaining": 2
+              }
+            ],
+            "threat": "Contact: 20 direct damage.",
+            "events": [
+              "Initiative round 3: target then player; scores 6/18.",
+              "Target contact: 20 incoming direct damage; 20 actual HP lost.",
+              "Treatment spent in player slot: healed 22 (eligible 22).",
+              "End round 3: Poison incoming DOT 6; actual HP lost 6; 2 rounds remain. Guard does not reduce this tick.",
+              "End round 3: Bleed incoming DOT 3; actual HP lost 3; 0 rounds remain. Guard does not reduce this tick.",
+              "Round 3 resolved: active."
+            ],
+            "outcome": "active",
+            "last": "Round 3 resolved: active.",
+            "weaponEnabled": true,
+            "attackMultiplier": 1,
+            "healingMultiplier": 1,
+            "passive": "none",
+            "armor": "light",
+            "rescueSpent": false,
+            "lastHit": {
+              "kind": "PhysicalDirect",
+              "incoming": 20,
+              "effectiveDamage": 20,
+              "hpBefore": 42,
+              "hpAfter": 22,
+              "damageReduced": 0,
+              "actualHpLost": 20,
+              "avoidedHpLoss": 0,
+              "rescued": false
+            }
+          }
+        },
+        {
+          "command": "strike",
+          "accepted": true,
+          "state": {
+            "profile": "toxic",
+            "initiative": {
+              "style": "heavy",
+              "playerAgility": 8,
+              "enemyAgility": 12,
+              "round": 5,
+              "order": [
+                "target",
+                "player"
+              ],
+              "playerScore": 7,
+              "targetScore": 15,
+              "seedState": 1382221603
+            },
+            "breakbar": null,
+            "responsePractice": false,
+            "wardAvailable": false,
+            "pending": null,
+            "resolution": [],
+            "round": 4,
+            "hp": 9,
+            "maxHp": 100,
+            "enemyHp": 28,
+            "charges": 1,
+            "effects": [
+              {
+                "effect": "Poison",
+                "remaining": 1
+              }
+            ],
+            "threat": "Pressure: 20 direct damage, then extends poison (toxic) or burn (heated) by two rounds.",
+            "events": [
+              "Initiative round 4: target then player; scores 6/7.",
+              "Target contact: 20 incoming direct damage; 20 actual HP lost.",
+              "strike: 32 direct damage to target. Burn multiplier 1.0.",
+              "End round 4: Poison incoming DOT 6; actual HP lost 6; 1 rounds remain. Guard does not reduce this tick.",
+              "Round 4 resolved: active."
+            ],
+            "outcome": "active",
+            "last": "Round 4 resolved: active.",
+            "weaponEnabled": true,
+            "attackMultiplier": 1,
+            "healingMultiplier": 1,
+            "passive": "none",
+            "armor": "light",
+            "rescueSpent": false,
+            "lastHit": {
+              "kind": "PhysicalDirect",
+              "incoming": 20,
+              "effectiveDamage": 20,
+              "hpBefore": 35,
+              "hpAfter": 15,
+              "damageReduced": 0,
+              "actualHpLost": 20,
+              "avoidedHpLoss": 0,
+              "rescued": false
+            }
+          }
+        },
+        {
+          "command": "strike",
+          "accepted": true,
+          "state": {
+            "profile": "toxic",
+            "initiative": {
+              "style": "heavy",
+              "playerAgility": 8,
+              "enemyAgility": 12,
+              "round": 5,
+              "order": [
+                "target",
+                "player"
+              ],
+              "playerScore": 7,
+              "targetScore": 15,
+              "seedState": 1382221603
+            },
+            "breakbar": null,
+            "responsePractice": false,
+            "wardAvailable": false,
+            "pending": null,
+            "resolution": [],
+            "round": 5,
+            "hp": 0,
+            "maxHp": 100,
+            "enemyHp": 28,
+            "charges": 1,
+            "effects": [],
+            "threat": "No further threat; encounter ended.",
+            "events": [
+              "Initiative round 5: target then player; scores 7/15.",
+              "Target contact: 20 incoming direct damage; 9 actual HP lost.",
+              "End round 5: Poison incoming DOT 6; actual HP lost 0; 0 rounds remain. Guard does not reduce this tick.",
+              "Round 5 resolved: defeated."
+            ],
+            "outcome": "defeated",
+            "last": "Round 5 resolved: defeated.",
+            "weaponEnabled": true,
+            "attackMultiplier": 1,
+            "healingMultiplier": 1,
+            "passive": "none",
+            "armor": "light",
+            "rescueSpent": false,
+            "lastHit": {
+              "kind": "PhysicalDirect",
+              "incoming": 20,
+              "effectiveDamage": 20,
+              "hpBefore": 9,
+              "hpAfter": 0,
+              "damageReduced": 0,
+              "actualHpLost": 9,
+              "avoidedHpLoss": 0,
+              "rescued": false
+            }
+          }
+        }
+      ],
+      "final": {
+        "profile": "toxic",
+        "initiative": {
+          "style": "heavy",
+          "playerAgility": 8,
+          "enemyAgility": 12,
+          "round": 5,
+          "order": [
+            "target",
+            "player"
+          ],
+          "playerScore": 7,
+          "targetScore": 15,
+          "seedState": 1382221603
+        },
+        "breakbar": null,
+        "responsePractice": false,
+        "wardAvailable": false,
+        "pending": null,
+        "resolution": [],
+        "round": 5,
+        "hp": 0,
+        "maxHp": 100,
+        "enemyHp": 28,
+        "charges": 1,
+        "effects": [],
+        "threat": "No further threat; encounter ended.",
+        "events": [
+          "Initiative round 5: target then player; scores 7/15.",
+          "Target contact: 20 incoming direct damage; 9 actual HP lost.",
+          "End round 5: Poison incoming DOT 6; actual HP lost 0; 0 rounds remain. Guard does not reduce this tick.",
+          "Round 5 resolved: defeated."
+        ],
+        "outcome": "defeated",
+        "last": "Round 5 resolved: defeated.",
+        "weaponEnabled": true,
+        "attackMultiplier": 1,
+        "healingMultiplier": 1,
+        "passive": "none",
+        "armor": "light",
+        "rescueSpent": false,
+        "lastHit": {
+          "kind": "PhysicalDirect",
+          "incoming": 20,
+          "effectiveDamage": 20,
+          "hpBefore": 9,
+          "hpAfter": 0,
+          "damageReduced": 0,
+          "actualHpLost": 9,
+          "avoidedHpLoss": 0,
+          "rescued": false
+        }
+      }
+    },
+    {
+      "style": "heavy",
+      "profile": "toxic",
+      "policy": [
+        "guard",
+        "guard",
+        "guard",
+        "guard",
+        "guard",
+        "guard",
+        "guard"
+      ],
+      "steps": [
+        {
+          "command": "guard",
+          "accepted": true,
+          "state": {
+            "profile": "toxic",
+            "initiative": {
+              "style": "heavy",
+              "playerAgility": 8,
+              "enemyAgility": 12,
+              "round": 2,
+              "order": [
+                "player",
+                "target"
+              ],
+              "playerScore": 14,
+              "targetScore": 6,
+              "seedState": 1424732933
+            },
+            "breakbar": null,
+            "responsePractice": false,
+            "wardAvailable": false,
+            "pending": null,
+            "resolution": [],
+            "round": 1,
+            "hp": 71,
+            "maxHp": 100,
+            "enemyHp": 96,
+            "charges": 2,
+            "effects": [
+              {
+                "effect": "Poison",
+                "remaining": 2
+              },
+              {
+                "effect": "Bleed",
+                "remaining": 2
+              }
+            ],
+            "threat": "Pressure: 20 direct damage, then extends poison (toxic) or burn (heated) by two rounds.",
+            "events": [
+              "Initiative round 1: target then player; scores 7/11.",
+              "Target contact: 20 incoming direct damage; 20 actual HP lost.",
+              "Guard raised in player slot; only later contact is halved. DOT is unchanged.",
+              "End round 1: Poison incoming DOT 6; actual HP lost 6; 2 rounds remain. Guard does not reduce this tick.",
+              "End round 1: Bleed incoming DOT 3; actual HP lost 3; 2 rounds remain. Guard does not reduce this tick.",
+              "Round 1 resolved: active."
+            ],
+            "outcome": "active",
+            "last": "Round 1 resolved: active.",
+            "weaponEnabled": true,
+            "attackMultiplier": 1,
+            "healingMultiplier": 0.7,
+            "passive": "none",
+            "armor": "light",
+            "rescueSpent": false,
+            "lastHit": {
+              "kind": "PhysicalDirect",
+              "incoming": 20,
+              "effectiveDamage": 20,
+              "hpBefore": 100,
+              "hpAfter": 80,
+              "damageReduced": 0,
+              "actualHpLost": 20,
+              "avoidedHpLoss": 0,
+              "rescued": false
+            }
+          }
+        },
+        {
+          "command": "guard",
+          "accepted": true,
+          "state": {
+            "profile": "toxic",
+            "initiative": {
+              "style": "heavy",
+              "playerAgility": 8,
+              "enemyAgility": 12,
+              "round": 3,
+              "order": [
+                "target",
+                "player"
+              ],
+              "playerScore": 6,
+              "targetScore": 18,
+              "seedState": 2807505791
+            },
+            "breakbar": null,
+            "responsePractice": false,
+            "wardAvailable": false,
+            "pending": null,
+            "resolution": [],
+            "round": 2,
+            "hp": 52,
+            "maxHp": 100,
+            "enemyHp": 96,
+            "charges": 2,
+            "effects": [
+              {
+                "effect": "Poison",
+                "remaining": 3
+              },
+              {
+                "effect": "Bleed",
+                "remaining": 1
+              }
+            ],
+            "threat": "Contact: 20 direct damage.",
+            "events": [
+              "Initiative round 2: player then target; scores 14/6.",
+              "Guard raised in player slot; only later contact is halved. DOT is unchanged.",
+              "Target contact: 10 incoming direct damage; 10 actual HP lost.",
+              "Announced pressure reapplied Poison: remaining 4 before tick.",
+              "End round 2: Poison incoming DOT 6; actual HP lost 6; 3 rounds remain. Guard does not reduce this tick.",
+              "End round 2: Bleed incoming DOT 3; actual HP lost 3; 1 rounds remain. Guard does not reduce this tick.",
+              "Round 2 resolved: active."
+            ],
+            "outcome": "active",
+            "last": "Round 2 resolved: active.",
+            "weaponEnabled": true,
+            "attackMultiplier": 1,
+            "healingMultiplier": 0.7,
+            "passive": "none",
+            "armor": "light",
+            "rescueSpent": false,
+            "lastHit": {
+              "kind": "PhysicalDirect",
+              "incoming": 10,
+              "effectiveDamage": 10,
+              "hpBefore": 71,
+              "hpAfter": 61,
+              "damageReduced": 0,
+              "actualHpLost": 10,
+              "avoidedHpLoss": 0,
+              "rescued": false
+            }
+          }
+        },
+        {
+          "command": "guard",
+          "accepted": true,
+          "state": {
+            "profile": "toxic",
+            "initiative": {
+              "style": "heavy",
+              "playerAgility": 8,
+              "enemyAgility": 12,
+              "round": 4,
+              "order": [
+                "target",
+                "player"
+              ],
+              "playerScore": 6,
+              "targetScore": 7,
+              "seedState": 1029717001
+            },
+            "breakbar": null,
+            "responsePractice": false,
+            "wardAvailable": false,
+            "pending": null,
+            "resolution": [],
+            "round": 3,
+            "hp": 23,
+            "maxHp": 100,
+            "enemyHp": 96,
+            "charges": 2,
+            "effects": [
+              {
+                "effect": "Poison",
+                "remaining": 2
+              }
+            ],
+            "threat": "Contact: 20 direct damage.",
+            "events": [
+              "Initiative round 3: target then player; scores 6/18.",
+              "Target contact: 20 incoming direct damage; 20 actual HP lost.",
+              "Guard raised in player slot; only later contact is halved. DOT is unchanged.",
+              "End round 3: Poison incoming DOT 6; actual HP lost 6; 2 rounds remain. Guard does not reduce this tick.",
+              "End round 3: Bleed incoming DOT 3; actual HP lost 3; 0 rounds remain. Guard does not reduce this tick.",
+              "Round 3 resolved: active."
+            ],
+            "outcome": "active",
+            "last": "Round 3 resolved: active.",
+            "weaponEnabled": true,
+            "attackMultiplier": 1,
+            "healingMultiplier": 1,
+            "passive": "none",
+            "armor": "light",
+            "rescueSpent": false,
+            "lastHit": {
+              "kind": "PhysicalDirect",
+              "incoming": 20,
+              "effectiveDamage": 20,
+              "hpBefore": 52,
+              "hpAfter": 32,
+              "damageReduced": 0,
+              "actualHpLost": 20,
+              "avoidedHpLoss": 0,
+              "rescued": false
+            }
+          }
+        },
+        {
+          "command": "guard",
+          "accepted": true,
+          "state": {
+            "profile": "toxic",
+            "initiative": {
+              "style": "heavy",
+              "playerAgility": 8,
+              "enemyAgility": 12,
+              "round": 4,
+              "order": [
+                "target",
+                "player"
+              ],
+              "playerScore": 6,
+              "targetScore": 7,
+              "seedState": 1029717001
+            },
+            "breakbar": null,
+            "responsePractice": false,
+            "wardAvailable": false,
+            "pending": null,
+            "resolution": [],
+            "round": 4,
+            "hp": 0,
+            "maxHp": 100,
+            "enemyHp": 96,
+            "charges": 2,
+            "effects": [
+              {
+                "effect": "Poison",
+                "remaining": 1
+              }
+            ],
+            "threat": "No further threat; encounter ended.",
+            "events": [
+              "Initiative round 4: target then player; scores 6/7.",
+              "Target contact: 20 incoming direct damage; 20 actual HP lost.",
+              "Guard raised in player slot; only later contact is halved. DOT is unchanged.",
+              "End round 4: Poison incoming DOT 6; actual HP lost 3; 1 rounds remain. Guard does not reduce this tick.",
+              "Round 4 resolved: defeated."
+            ],
+            "outcome": "defeated",
+            "last": "Round 4 resolved: defeated.",
+            "weaponEnabled": true,
+            "attackMultiplier": 1,
+            "healingMultiplier": 1,
+            "passive": "none",
+            "armor": "light",
+            "rescueSpent": false,
+            "lastHit": {
+              "kind": "PhysicalDirect",
+              "incoming": 20,
+              "effectiveDamage": 20,
+              "hpBefore": 23,
+              "hpAfter": 3,
+              "damageReduced": 0,
+              "actualHpLost": 20,
+              "avoidedHpLoss": 0,
+              "rescued": false
+            }
+          }
+        }
+      ],
+      "final": {
+        "profile": "toxic",
+        "initiative": {
+          "style": "heavy",
+          "playerAgility": 8,
+          "enemyAgility": 12,
+          "round": 4,
+          "order": [
+            "target",
+            "player"
+          ],
+          "playerScore": 6,
+          "targetScore": 7,
+          "seedState": 1029717001
+        },
+        "breakbar": null,
+        "responsePractice": false,
+        "wardAvailable": false,
+        "pending": null,
+        "resolution": [],
+        "round": 4,
+        "hp": 0,
+        "maxHp": 100,
+        "enemyHp": 96,
+        "charges": 2,
+        "effects": [
+          {
+            "effect": "Poison",
+            "remaining": 1
+          }
+        ],
+        "threat": "No further threat; encounter ended.",
+        "events": [
+          "Initiative round 4: target then player; scores 6/7.",
+          "Target contact: 20 incoming direct damage; 20 actual HP lost.",
+          "Guard raised in player slot; only later contact is halved. DOT is unchanged.",
+          "End round 4: Poison incoming DOT 6; actual HP lost 3; 1 rounds remain. Guard does not reduce this tick.",
+          "Round 4 resolved: defeated."
+        ],
+        "outcome": "defeated",
+        "last": "Round 4 resolved: defeated.",
+        "weaponEnabled": true,
+        "attackMultiplier": 1,
+        "healingMultiplier": 1,
+        "passive": "none",
+        "armor": "light",
+        "rescueSpent": false,
+        "lastHit": {
+          "kind": "PhysicalDirect",
+          "incoming": 20,
+          "effectiveDamage": 20,
+          "hpBefore": 23,
+          "hpAfter": 3,
+          "damageReduced": 0,
+          "actualHpLost": 20,
+          "avoidedHpLoss": 0,
+          "rescued": false
+        }
+      }
+    },
+    {
+      "style": "heavy",
+      "profile": "heated",
+      "policy": [
+        "cleanse",
+        "strike",
+        "strike",
+        "strike",
+        "strike",
+        "strike",
+        "strike"
+      ],
+      "steps": [
+        {
+          "command": "cleanse",
+          "accepted": true,
+          "state": {
+            "profile": "heated",
+            "initiative": {
+              "style": "heavy",
+              "playerAgility": 8,
+              "enemyAgility": 12,
+              "round": 2,
+              "order": [
+                "player",
+                "target"
+              ],
+              "playerScore": 14,
+              "targetScore": 6,
+              "seedState": 1424732933
+            },
+            "breakbar": null,
+            "responsePractice": false,
+            "wardAvailable": false,
+            "pending": null,
+            "resolution": [],
+            "round": 1,
+            "hp": 80,
+            "maxHp": 100,
+            "enemyHp": 96,
+            "charges": 1,
+            "effects": [],
+            "threat": "Pressure: 20 direct damage, then extends poison (toxic) or burn (heated) by two rounds.",
+            "events": [
+              "Initiative round 1: target then player; scores 7/11.",
+              "Target contact: 20 incoming direct damage; 20 actual HP lost.",
+              "Treatment spent in player slot: removed 2 effects.",
+              "Round 1 resolved: active."
+            ],
+            "outcome": "active",
+            "last": "Round 1 resolved: active.",
+            "weaponEnabled": true,
+            "attackMultiplier": 1,
+            "healingMultiplier": 1,
+            "passive": "none",
+            "armor": "light",
+            "rescueSpent": false,
+            "lastHit": {
+              "kind": "PhysicalDirect",
+              "incoming": 20,
+              "effectiveDamage": 20,
+              "hpBefore": 100,
+              "hpAfter": 80,
+              "damageReduced": 0,
+              "actualHpLost": 20,
+              "avoidedHpLoss": 0,
+              "rescued": false
+            }
+          }
+        },
+        {
+          "command": "strike",
+          "accepted": true,
+          "state": {
+            "profile": "heated",
+            "initiative": {
+              "style": "heavy",
+              "playerAgility": 8,
+              "enemyAgility": 12,
+              "round": 3,
+              "order": [
+                "target",
+                "player"
+              ],
+              "playerScore": 6,
+              "targetScore": 18,
+              "seedState": 2807505791
+            },
+            "breakbar": null,
+            "responsePractice": false,
+            "wardAvailable": false,
+            "pending": null,
+            "resolution": [],
+            "round": 2,
+            "hp": 57,
+            "maxHp": 100,
+            "enemyHp": 64,
+            "charges": 1,
+            "effects": [
+              {
+                "effect": "Burn",
+                "remaining": 1
+              }
+            ],
+            "threat": "Contact: 20 direct damage.",
+            "events": [
+              "Initiative round 2: player then target; scores 14/6.",
+              "strike: 32 direct damage to target. Burn multiplier 1.0.",
+              "Target contact: 20 incoming direct damage; 20 actual HP lost.",
+              "Announced pressure reapplied Burn: remaining 2 before tick.",
+              "End round 2: Burn incoming DOT 3; actual HP lost 3; 1 rounds remain. Guard does not reduce this tick.",
+              "Round 2 resolved: active."
+            ],
+            "outcome": "active",
+            "last": "Round 2 resolved: active.",
+            "weaponEnabled": true,
+            "attackMultiplier": 0.7,
+            "healingMultiplier": 1,
+            "passive": "none",
+            "armor": "light",
+            "rescueSpent": false,
+            "lastHit": {
+              "kind": "PhysicalDirect",
+              "incoming": 20,
+              "effectiveDamage": 20,
+              "hpBefore": 80,
+              "hpAfter": 60,
+              "damageReduced": 0,
+              "actualHpLost": 20,
+              "avoidedHpLoss": 0,
+              "rescued": false
+            }
+          }
+        },
+        {
+          "command": "strike",
+          "accepted": true,
+          "state": {
+            "profile": "heated",
+            "initiative": {
+              "style": "heavy",
+              "playerAgility": 8,
+              "enemyAgility": 12,
+              "round": 4,
+              "order": [
+                "target",
+                "player"
+              ],
+              "playerScore": 6,
+              "targetScore": 7,
+              "seedState": 1029717001
+            },
+            "breakbar": null,
+            "responsePractice": false,
+            "wardAvailable": false,
+            "pending": null,
+            "resolution": [],
+            "round": 3,
+            "hp": 34,
+            "maxHp": 100,
+            "enemyHp": 42,
+            "charges": 1,
+            "effects": [],
+            "threat": "Contact: 20 direct damage.",
+            "events": [
+              "Initiative round 3: target then player; scores 6/18.",
+              "Target contact: 20 incoming direct damage; 20 actual HP lost.",
+              "strike: 22 direct damage to target. Burn multiplier 0.7.",
+              "End round 3: Burn incoming DOT 3; actual HP lost 3; 0 rounds remain. Guard does not reduce this tick.",
+              "Round 3 resolved: active."
+            ],
+            "outcome": "active",
+            "last": "Round 3 resolved: active.",
+            "weaponEnabled": true,
+            "attackMultiplier": 1,
+            "healingMultiplier": 1,
+            "passive": "none",
+            "armor": "light",
+            "rescueSpent": false,
+            "lastHit": {
+              "kind": "PhysicalDirect",
+              "incoming": 20,
+              "effectiveDamage": 20,
+              "hpBefore": 57,
+              "hpAfter": 37,
+              "damageReduced": 0,
+              "actualHpLost": 20,
+              "avoidedHpLoss": 0,
+              "rescued": false
+            }
+          }
+        },
+        {
+          "command": "strike",
+          "accepted": true,
+          "state": {
+            "profile": "heated",
+            "initiative": {
+              "style": "heavy",
+              "playerAgility": 8,
+              "enemyAgility": 12,
+              "round": 5,
+              "order": [
+                "target",
+                "player"
+              ],
+              "playerScore": 7,
+              "targetScore": 15,
+              "seedState": 1382221603
+            },
+            "breakbar": null,
+            "responsePractice": false,
+            "wardAvailable": false,
+            "pending": null,
+            "resolution": [],
+            "round": 4,
+            "hp": 14,
+            "maxHp": 100,
+            "enemyHp": 10,
+            "charges": 1,
+            "effects": [],
+            "threat": "Pressure: 20 direct damage, then extends poison (toxic) or burn (heated) by two rounds.",
+            "events": [
+              "Initiative round 4: target then player; scores 6/7.",
+              "Target contact: 20 incoming direct damage; 20 actual HP lost.",
+              "strike: 32 direct damage to target. Burn multiplier 1.0.",
+              "Round 4 resolved: active."
+            ],
+            "outcome": "active",
+            "last": "Round 4 resolved: active.",
+            "weaponEnabled": true,
+            "attackMultiplier": 1,
+            "healingMultiplier": 1,
+            "passive": "none",
+            "armor": "light",
+            "rescueSpent": false,
+            "lastHit": {
+              "kind": "PhysicalDirect",
+              "incoming": 20,
+              "effectiveDamage": 20,
+              "hpBefore": 34,
+              "hpAfter": 14,
+              "damageReduced": 0,
+              "actualHpLost": 20,
+              "avoidedHpLoss": 0,
+              "rescued": false
+            }
+          }
+        },
+        {
+          "command": "strike",
+          "accepted": true,
+          "state": {
+            "profile": "heated",
+            "initiative": {
+              "style": "heavy",
+              "playerAgility": 8,
+              "enemyAgility": 12,
+              "round": 5,
+              "order": [
+                "target",
+                "player"
+              ],
+              "playerScore": 7,
+              "targetScore": 15,
+              "seedState": 1382221603
+            },
+            "breakbar": null,
+            "responsePractice": false,
+            "wardAvailable": false,
+            "pending": null,
+            "resolution": [],
+            "round": 5,
+            "hp": 0,
+            "maxHp": 100,
+            "enemyHp": 10,
+            "charges": 1,
+            "effects": [],
+            "threat": "No further threat; encounter ended.",
+            "events": [
+              "Initiative round 5: target then player; scores 7/15.",
+              "Target contact: 20 incoming direct damage; 14 actual HP lost.",
+              "Round 5 resolved: defeated."
+            ],
+            "outcome": "defeated",
+            "last": "Round 5 resolved: defeated.",
+            "weaponEnabled": true,
+            "attackMultiplier": 1,
+            "healingMultiplier": 1,
+            "passive": "none",
+            "armor": "light",
+            "rescueSpent": false,
+            "lastHit": {
+              "kind": "PhysicalDirect",
+              "incoming": 20,
+              "effectiveDamage": 20,
+              "hpBefore": 14,
+              "hpAfter": 0,
+              "damageReduced": 0,
+              "actualHpLost": 14,
+              "avoidedHpLoss": 0,
+              "rescued": false
+            }
+          }
+        }
+      ],
+      "final": {
+        "profile": "heated",
+        "initiative": {
+          "style": "heavy",
+          "playerAgility": 8,
+          "enemyAgility": 12,
+          "round": 5,
+          "order": [
+            "target",
+            "player"
+          ],
+          "playerScore": 7,
+          "targetScore": 15,
+          "seedState": 1382221603
+        },
+        "breakbar": null,
+        "responsePractice": false,
+        "wardAvailable": false,
+        "pending": null,
+        "resolution": [],
+        "round": 5,
+        "hp": 0,
+        "maxHp": 100,
+        "enemyHp": 10,
+        "charges": 1,
+        "effects": [],
+        "threat": "No further threat; encounter ended.",
+        "events": [
+          "Initiative round 5: target then player; scores 7/15.",
+          "Target contact: 20 incoming direct damage; 14 actual HP lost.",
+          "Round 5 resolved: defeated."
+        ],
+        "outcome": "defeated",
+        "last": "Round 5 resolved: defeated.",
+        "weaponEnabled": true,
+        "attackMultiplier": 1,
+        "healingMultiplier": 1,
+        "passive": "none",
+        "armor": "light",
+        "rescueSpent": false,
+        "lastHit": {
+          "kind": "PhysicalDirect",
+          "incoming": 20,
+          "effectiveDamage": 20,
+          "hpBefore": 14,
+          "hpAfter": 0,
+          "damageReduced": 0,
+          "actualHpLost": 14,
+          "avoidedHpLoss": 0,
+          "rescued": false
+        }
+      }
+    },
+    {
+      "style": "heavy",
+      "profile": "heated",
+      "policy": [
+        "bash",
+        "bash",
+        "treat",
+        "strike",
+        "strike",
+        "strike",
+        "strike"
+      ],
+      "steps": [
+        {
+          "command": "bash",
+          "accepted": true,
+          "state": {
+            "profile": "heated",
+            "initiative": {
+              "style": "heavy",
+              "playerAgility": 8,
+              "enemyAgility": 12,
+              "round": 2,
+              "order": [
+                "player",
+                "target"
+              ],
+              "playerScore": 14,
+              "targetScore": 6,
+              "seedState": 1424732933
+            },
+            "breakbar": null,
+            "responsePractice": false,
+            "wardAvailable": false,
+            "pending": null,
+            "resolution": [],
+            "round": 1,
+            "hp": 77,
+            "maxHp": 100,
+            "enemyHp": 83,
+            "charges": 2,
+            "effects": [
+              {
+                "effect": "Burn",
+                "remaining": 2
+              },
+              {
+                "effect": "Disarm",
+                "remaining": 1
+              }
+            ],
+            "threat": "Pressure: 20 direct damage, then extends poison (toxic) or burn (heated) by two rounds.",
+            "events": [
+              "Initiative round 1: target then player; scores 7/11.",
+              "Target contact: 20 incoming direct damage; 20 actual HP lost.",
+              "bash: 13 direct damage to target. Burn multiplier 0.7.",
+              "End round 1: Burn incoming DOT 3; actual HP lost 3; 2 rounds remain. Guard does not reduce this tick.",
+              "End round 1: Disarm incoming DOT 0; actual HP lost 0; 1 rounds remain. Guard does not reduce this tick.",
+              "Round 1 resolved: active."
+            ],
+            "outcome": "active",
+            "last": "Round 1 resolved: active.",
+            "weaponEnabled": false,
+            "attackMultiplier": 0.7,
+            "healingMultiplier": 1,
+            "passive": "none",
+            "armor": "light",
+            "rescueSpent": false,
+            "lastHit": {
+              "kind": "PhysicalDirect",
+              "incoming": 20,
+              "effectiveDamage": 20,
+              "hpBefore": 100,
+              "hpAfter": 80,
+              "damageReduced": 0,
+              "actualHpLost": 20,
+              "avoidedHpLoss": 0,
+              "rescued": false
+            }
+          }
+        },
+        {
+          "command": "bash",
+          "accepted": true,
+          "state": {
+            "profile": "heated",
+            "initiative": {
+              "style": "heavy",
+              "playerAgility": 8,
+              "enemyAgility": 12,
+              "round": 3,
+              "order": [
+                "target",
+                "player"
+              ],
+              "playerScore": 6,
+              "targetScore": 18,
+              "seedState": 2807505791
+            },
+            "breakbar": null,
+            "responsePractice": false,
+            "wardAvailable": false,
+            "pending": null,
+            "resolution": [],
+            "round": 2,
+            "hp": 54,
+            "maxHp": 100,
+            "enemyHp": 70,
+            "charges": 2,
+            "effects": [
+              {
+                "effect": "Burn",
+                "remaining": 3
+              }
+            ],
+            "threat": "Contact: 20 direct damage.",
+            "events": [
+              "Initiative round 2: player then target; scores 14/6.",
+              "bash: 13 direct damage to target. Burn multiplier 0.7.",
+              "Target contact: 20 incoming direct damage; 20 actual HP lost.",
+              "Announced pressure reapplied Burn: remaining 4 before tick.",
+              "End round 2: Burn incoming DOT 3; actual HP lost 3; 3 rounds remain. Guard does not reduce this tick.",
+              "End round 2: Disarm incoming DOT 0; actual HP lost 0; 0 rounds remain. Guard does not reduce this tick.",
+              "Round 2 resolved: active."
+            ],
+            "outcome": "active",
+            "last": "Round 2 resolved: active.",
+            "weaponEnabled": true,
+            "attackMultiplier": 0.7,
+            "healingMultiplier": 1,
+            "passive": "none",
+            "armor": "light",
+            "rescueSpent": false,
+            "lastHit": {
+              "kind": "PhysicalDirect",
+              "incoming": 20,
+              "effectiveDamage": 20,
+              "hpBefore": 77,
+              "hpAfter": 57,
+              "damageReduced": 0,
+              "actualHpLost": 20,
+              "avoidedHpLoss": 0,
+              "rescued": false
+            }
+          }
+        },
+        {
+          "command": "treat",
+          "accepted": true,
+          "state": {
+            "profile": "heated",
+            "initiative": {
+              "style": "heavy",
+              "playerAgility": 8,
+              "enemyAgility": 12,
+              "round": 4,
+              "order": [
+                "target",
+                "player"
+              ],
+              "playerScore": 6,
+              "targetScore": 7,
+              "seedState": 1029717001
+            },
+            "breakbar": null,
+            "responsePractice": false,
+            "wardAvailable": false,
+            "pending": null,
+            "resolution": [],
+            "round": 3,
+            "hp": 63,
+            "maxHp": 100,
+            "enemyHp": 70,
+            "charges": 1,
+            "effects": [
+              {
+                "effect": "Burn",
+                "remaining": 2
+              }
+            ],
+            "threat": "Contact: 20 direct damage.",
+            "events": [
+              "Initiative round 3: target then player; scores 6/18.",
+              "Target contact: 20 incoming direct damage; 20 actual HP lost.",
+              "Treatment spent in player slot: healed 32 (eligible 32).",
+              "End round 3: Burn incoming DOT 3; actual HP lost 3; 2 rounds remain. Guard does not reduce this tick.",
+              "Round 3 resolved: active."
+            ],
+            "outcome": "active",
+            "last": "Round 3 resolved: active.",
+            "weaponEnabled": true,
+            "attackMultiplier": 0.7,
+            "healingMultiplier": 1,
+            "passive": "none",
+            "armor": "light",
+            "rescueSpent": false,
+            "lastHit": {
+              "kind": "PhysicalDirect",
+              "incoming": 20,
+              "effectiveDamage": 20,
+              "hpBefore": 54,
+              "hpAfter": 34,
+              "damageReduced": 0,
+              "actualHpLost": 20,
+              "avoidedHpLoss": 0,
+              "rescued": false
+            }
+          }
+        },
+        {
+          "command": "strike",
+          "accepted": true,
+          "state": {
+            "profile": "heated",
+            "initiative": {
+              "style": "heavy",
+              "playerAgility": 8,
+              "enemyAgility": 12,
+              "round": 5,
+              "order": [
+                "target",
+                "player"
+              ],
+              "playerScore": 7,
+              "targetScore": 15,
+              "seedState": 1382221603
+            },
+            "breakbar": null,
+            "responsePractice": false,
+            "wardAvailable": false,
+            "pending": null,
+            "resolution": [],
+            "round": 4,
+            "hp": 40,
+            "maxHp": 100,
+            "enemyHp": 48,
+            "charges": 1,
+            "effects": [
+              {
+                "effect": "Burn",
+                "remaining": 1
+              }
+            ],
+            "threat": "Pressure: 20 direct damage, then extends poison (toxic) or burn (heated) by two rounds.",
+            "events": [
+              "Initiative round 4: target then player; scores 6/7.",
+              "Target contact: 20 incoming direct damage; 20 actual HP lost.",
+              "strike: 22 direct damage to target. Burn multiplier 0.7.",
+              "End round 4: Burn incoming DOT 3; actual HP lost 3; 1 rounds remain. Guard does not reduce this tick.",
+              "Round 4 resolved: active."
+            ],
+            "outcome": "active",
+            "last": "Round 4 resolved: active.",
+            "weaponEnabled": true,
+            "attackMultiplier": 0.7,
+            "healingMultiplier": 1,
+            "passive": "none",
+            "armor": "light",
+            "rescueSpent": false,
+            "lastHit": {
+              "kind": "PhysicalDirect",
+              "incoming": 20,
+              "effectiveDamage": 20,
+              "hpBefore": 63,
+              "hpAfter": 43,
+              "damageReduced": 0,
+              "actualHpLost": 20,
+              "avoidedHpLoss": 0,
+              "rescued": false
+            }
+          }
+        },
+        {
+          "command": "strike",
+          "accepted": true,
+          "state": {
+            "profile": "heated",
+            "initiative": {
+              "style": "heavy",
+              "playerAgility": 8,
+              "enemyAgility": 12,
+              "round": 6,
+              "order": [
+                "target",
+                "player"
+              ],
+              "playerScore": 9,
+              "targetScore": 18,
+              "seedState": 4125651789
+            },
+            "breakbar": null,
+            "responsePractice": false,
+            "wardAvailable": false,
+            "pending": null,
+            "resolution": [],
+            "round": 5,
+            "hp": 17,
+            "maxHp": 100,
+            "enemyHp": 26,
+            "charges": 1,
+            "effects": [
+              {
+                "effect": "Burn",
+                "remaining": 2
+              }
+            ],
+            "threat": "Contact: 20 direct damage.",
+            "events": [
+              "Initiative round 5: target then player; scores 7/15.",
+              "Target contact: 20 incoming direct damage; 20 actual HP lost.",
+              "Announced pressure reapplied Burn: remaining 3 before tick.",
+              "strike: 22 direct damage to target. Burn multiplier 0.7.",
+              "End round 5: Burn incoming DOT 3; actual HP lost 3; 2 rounds remain. Guard does not reduce this tick.",
+              "Round 5 resolved: active."
+            ],
+            "outcome": "active",
+            "last": "Round 5 resolved: active.",
+            "weaponEnabled": true,
+            "attackMultiplier": 0.7,
+            "healingMultiplier": 1,
+            "passive": "none",
+            "armor": "light",
+            "rescueSpent": false,
+            "lastHit": {
+              "kind": "PhysicalDirect",
+              "incoming": 20,
+              "effectiveDamage": 20,
+              "hpBefore": 40,
+              "hpAfter": 20,
+              "damageReduced": 0,
+              "actualHpLost": 20,
+              "avoidedHpLoss": 0,
+              "rescued": false
+            }
+          }
+        },
+        {
+          "command": "strike",
+          "accepted": true,
+          "state": {
+            "profile": "heated",
+            "initiative": {
+              "style": "heavy",
+              "playerAgility": 8,
+              "enemyAgility": 12,
+              "round": 6,
+              "order": [
+                "target",
+                "player"
+              ],
+              "playerScore": 9,
+              "targetScore": 18,
+              "seedState": 4125651789
+            },
+            "breakbar": null,
+            "responsePractice": false,
+            "wardAvailable": false,
+            "pending": null,
+            "resolution": [],
+            "round": 6,
+            "hp": 0,
+            "maxHp": 100,
+            "enemyHp": 26,
+            "charges": 1,
+            "effects": [
+              {
+                "effect": "Burn",
+                "remaining": 1
+              }
+            ],
+            "threat": "No further threat; encounter ended.",
+            "events": [
+              "Initiative round 6: target then player; scores 9/18.",
+              "Target contact: 20 incoming direct damage; 17 actual HP lost.",
+              "End round 6: Burn incoming DOT 3; actual HP lost 0; 1 rounds remain. Guard does not reduce this tick.",
+              "Round 6 resolved: defeated."
+            ],
+            "outcome": "defeated",
+            "last": "Round 6 resolved: defeated.",
+            "weaponEnabled": true,
+            "attackMultiplier": 0.7,
+            "healingMultiplier": 1,
+            "passive": "none",
+            "armor": "light",
+            "rescueSpent": false,
+            "lastHit": {
+              "kind": "PhysicalDirect",
+              "incoming": 20,
+              "effectiveDamage": 20,
+              "hpBefore": 17,
+              "hpAfter": 0,
+              "damageReduced": 0,
+              "actualHpLost": 17,
+              "avoidedHpLoss": 0,
+              "rescued": false
+            }
+          }
+        }
+      ],
+      "final": {
+        "profile": "heated",
+        "initiative": {
+          "style": "heavy",
+          "playerAgility": 8,
+          "enemyAgility": 12,
+          "round": 6,
+          "order": [
+            "target",
+            "player"
+          ],
+          "playerScore": 9,
+          "targetScore": 18,
+          "seedState": 4125651789
+        },
+        "breakbar": null,
+        "responsePractice": false,
+        "wardAvailable": false,
+        "pending": null,
+        "resolution": [],
+        "round": 6,
+        "hp": 0,
+        "maxHp": 100,
+        "enemyHp": 26,
+        "charges": 1,
+        "effects": [
+          {
+            "effect": "Burn",
+            "remaining": 1
+          }
+        ],
+        "threat": "No further threat; encounter ended.",
+        "events": [
+          "Initiative round 6: target then player; scores 9/18.",
+          "Target contact: 20 incoming direct damage; 17 actual HP lost.",
+          "End round 6: Burn incoming DOT 3; actual HP lost 0; 1 rounds remain. Guard does not reduce this tick.",
+          "Round 6 resolved: defeated."
+        ],
+        "outcome": "defeated",
+        "last": "Round 6 resolved: defeated.",
+        "weaponEnabled": true,
+        "attackMultiplier": 0.7,
+        "healingMultiplier": 1,
+        "passive": "none",
+        "armor": "light",
+        "rescueSpent": false,
+        "lastHit": {
+          "kind": "PhysicalDirect",
+          "incoming": 20,
+          "effectiveDamage": 20,
+          "hpBefore": 17,
+          "hpAfter": 0,
+          "damageReduced": 0,
+          "actualHpLost": 17,
+          "avoidedHpLoss": 0,
+          "rescued": false
+        }
+      }
+    },
+    {
+      "style": "heavy",
+      "profile": "heated",
+      "policy": [
+        "guard",
+        "guard",
+        "guard",
+        "guard",
+        "guard",
+        "guard",
+        "guard"
+      ],
+      "steps": [
+        {
+          "command": "guard",
+          "accepted": true,
+          "state": {
+            "profile": "heated",
+            "initiative": {
+              "style": "heavy",
+              "playerAgility": 8,
+              "enemyAgility": 12,
+              "round": 2,
+              "order": [
+                "player",
+                "target"
+              ],
+              "playerScore": 14,
+              "targetScore": 6,
+              "seedState": 1424732933
+            },
+            "breakbar": null,
+            "responsePractice": false,
+            "wardAvailable": false,
+            "pending": null,
+            "resolution": [],
+            "round": 1,
+            "hp": 77,
+            "maxHp": 100,
+            "enemyHp": 96,
+            "charges": 2,
+            "effects": [
+              {
+                "effect": "Burn",
+                "remaining": 2
+              },
+              {
+                "effect": "Disarm",
+                "remaining": 1
+              }
+            ],
+            "threat": "Pressure: 20 direct damage, then extends poison (toxic) or burn (heated) by two rounds.",
+            "events": [
+              "Initiative round 1: target then player; scores 7/11.",
+              "Target contact: 20 incoming direct damage; 20 actual HP lost.",
+              "Guard raised in player slot; only later contact is halved. DOT is unchanged.",
+              "End round 1: Burn incoming DOT 3; actual HP lost 3; 2 rounds remain. Guard does not reduce this tick.",
+              "End round 1: Disarm incoming DOT 0; actual HP lost 0; 1 rounds remain. Guard does not reduce this tick.",
+              "Round 1 resolved: active."
+            ],
+            "outcome": "active",
+            "last": "Round 1 resolved: active.",
+            "weaponEnabled": false,
+            "attackMultiplier": 0.7,
+            "healingMultiplier": 1,
+            "passive": "none",
+            "armor": "light",
+            "rescueSpent": false,
+            "lastHit": {
+              "kind": "PhysicalDirect",
+              "incoming": 20,
+              "effectiveDamage": 20,
+              "hpBefore": 100,
+              "hpAfter": 80,
+              "damageReduced": 0,
+              "actualHpLost": 20,
+              "avoidedHpLoss": 0,
+              "rescued": false
+            }
+          }
+        },
+        {
+          "command": "guard",
+          "accepted": true,
+          "state": {
+            "profile": "heated",
+            "initiative": {
+              "style": "heavy",
+              "playerAgility": 8,
+              "enemyAgility": 12,
+              "round": 3,
+              "order": [
+                "target",
+                "player"
+              ],
+              "playerScore": 6,
+              "targetScore": 18,
+              "seedState": 2807505791
+            },
+            "breakbar": null,
+            "responsePractice": false,
+            "wardAvailable": false,
+            "pending": null,
+            "resolution": [],
+            "round": 2,
+            "hp": 64,
+            "maxHp": 100,
+            "enemyHp": 96,
+            "charges": 2,
+            "effects": [
+              {
+                "effect": "Burn",
+                "remaining": 3
+              }
+            ],
+            "threat": "Contact: 20 direct damage.",
+            "events": [
+              "Initiative round 2: player then target; scores 14/6.",
+              "Guard raised in player slot; only later contact is halved. DOT is unchanged.",
+              "Target contact: 10 incoming direct damage; 10 actual HP lost.",
+              "Announced pressure reapplied Burn: remaining 4 before tick.",
+              "End round 2: Burn incoming DOT 3; actual HP lost 3; 3 rounds remain. Guard does not reduce this tick.",
+              "End round 2: Disarm incoming DOT 0; actual HP lost 0; 0 rounds remain. Guard does not reduce this tick.",
+              "Round 2 resolved: active."
+            ],
+            "outcome": "active",
+            "last": "Round 2 resolved: active.",
+            "weaponEnabled": true,
+            "attackMultiplier": 0.7,
+            "healingMultiplier": 1,
+            "passive": "none",
+            "armor": "light",
+            "rescueSpent": false,
+            "lastHit": {
+              "kind": "PhysicalDirect",
+              "incoming": 10,
+              "effectiveDamage": 10,
+              "hpBefore": 77,
+              "hpAfter": 67,
+              "damageReduced": 0,
+              "actualHpLost": 10,
+              "avoidedHpLoss": 0,
+              "rescued": false
+            }
+          }
+        },
+        {
+          "command": "guard",
+          "accepted": true,
+          "state": {
+            "profile": "heated",
+            "initiative": {
+              "style": "heavy",
+              "playerAgility": 8,
+              "enemyAgility": 12,
+              "round": 4,
+              "order": [
+                "target",
+                "player"
+              ],
+              "playerScore": 6,
+              "targetScore": 7,
+              "seedState": 1029717001
+            },
+            "breakbar": null,
+            "responsePractice": false,
+            "wardAvailable": false,
+            "pending": null,
+            "resolution": [],
+            "round": 3,
+            "hp": 41,
+            "maxHp": 100,
+            "enemyHp": 96,
+            "charges": 2,
+            "effects": [
+              {
+                "effect": "Burn",
+                "remaining": 2
+              }
+            ],
+            "threat": "Contact: 20 direct damage.",
+            "events": [
+              "Initiative round 3: target then player; scores 6/18.",
+              "Target contact: 20 incoming direct damage; 20 actual HP lost.",
+              "Guard raised in player slot; only later contact is halved. DOT is unchanged.",
+              "End round 3: Burn incoming DOT 3; actual HP lost 3; 2 rounds remain. Guard does not reduce this tick.",
+              "Round 3 resolved: active."
+            ],
+            "outcome": "active",
+            "last": "Round 3 resolved: active.",
+            "weaponEnabled": true,
+            "attackMultiplier": 0.7,
+            "healingMultiplier": 1,
+            "passive": "none",
+            "armor": "light",
+            "rescueSpent": false,
+            "lastHit": {
+              "kind": "PhysicalDirect",
+              "incoming": 20,
+              "effectiveDamage": 20,
+              "hpBefore": 64,
+              "hpAfter": 44,
+              "damageReduced": 0,
+              "actualHpLost": 20,
+              "avoidedHpLoss": 0,
+              "rescued": false
+            }
+          }
+        },
+        {
+          "command": "guard",
+          "accepted": true,
+          "state": {
+            "profile": "heated",
+            "initiative": {
+              "style": "heavy",
+              "playerAgility": 8,
+              "enemyAgility": 12,
+              "round": 5,
+              "order": [
+                "target",
+                "player"
+              ],
+              "playerScore": 7,
+              "targetScore": 15,
+              "seedState": 1382221603
+            },
+            "breakbar": null,
+            "responsePractice": false,
+            "wardAvailable": false,
+            "pending": null,
+            "resolution": [],
+            "round": 4,
+            "hp": 18,
+            "maxHp": 100,
+            "enemyHp": 96,
+            "charges": 2,
+            "effects": [
+              {
+                "effect": "Burn",
+                "remaining": 1
+              }
+            ],
+            "threat": "Pressure: 20 direct damage, then extends poison (toxic) or burn (heated) by two rounds.",
+            "events": [
+              "Initiative round 4: target then player; scores 6/7.",
+              "Target contact: 20 incoming direct damage; 20 actual HP lost.",
+              "Guard raised in player slot; only later contact is halved. DOT is unchanged.",
+              "End round 4: Burn incoming DOT 3; actual HP lost 3; 1 rounds remain. Guard does not reduce this tick.",
+              "Round 4 resolved: active."
+            ],
+            "outcome": "active",
+            "last": "Round 4 resolved: active.",
+            "weaponEnabled": true,
+            "attackMultiplier": 0.7,
+            "healingMultiplier": 1,
+            "passive": "none",
+            "armor": "light",
+            "rescueSpent": false,
+            "lastHit": {
+              "kind": "PhysicalDirect",
+              "incoming": 20,
+              "effectiveDamage": 20,
+              "hpBefore": 41,
+              "hpAfter": 21,
+              "damageReduced": 0,
+              "actualHpLost": 20,
+              "avoidedHpLoss": 0,
+              "rescued": false
+            }
+          }
+        },
+        {
+          "command": "guard",
+          "accepted": true,
+          "state": {
+            "profile": "heated",
+            "initiative": {
+              "style": "heavy",
+              "playerAgility": 8,
+              "enemyAgility": 12,
+              "round": 5,
+              "order": [
+                "target",
+                "player"
+              ],
+              "playerScore": 7,
+              "targetScore": 15,
+              "seedState": 1382221603
+            },
+            "breakbar": null,
+            "responsePractice": false,
+            "wardAvailable": false,
+            "pending": null,
+            "resolution": [],
+            "round": 5,
+            "hp": 0,
+            "maxHp": 100,
+            "enemyHp": 96,
+            "charges": 2,
+            "effects": [],
+            "threat": "No further threat; encounter ended.",
+            "events": [
+              "Initiative round 5: target then player; scores 7/15.",
+              "Target contact: 20 incoming direct damage; 18 actual HP lost.",
+              "End round 5: Burn incoming DOT 3; actual HP lost 0; 0 rounds remain. Guard does not reduce this tick.",
+              "Round 5 resolved: defeated."
+            ],
+            "outcome": "defeated",
+            "last": "Round 5 resolved: defeated.",
+            "weaponEnabled": true,
+            "attackMultiplier": 1,
+            "healingMultiplier": 1,
+            "passive": "none",
+            "armor": "light",
+            "rescueSpent": false,
+            "lastHit": {
+              "kind": "PhysicalDirect",
+              "incoming": 20,
+              "effectiveDamage": 20,
+              "hpBefore": 18,
+              "hpAfter": 0,
+              "damageReduced": 0,
+              "actualHpLost": 18,
+              "avoidedHpLoss": 0,
+              "rescued": false
+            }
+          }
+        }
+      ],
+      "final": {
+        "profile": "heated",
+        "initiative": {
+          "style": "heavy",
+          "playerAgility": 8,
+          "enemyAgility": 12,
+          "round": 5,
+          "order": [
+            "target",
+            "player"
+          ],
+          "playerScore": 7,
+          "targetScore": 15,
+          "seedState": 1382221603
+        },
+        "breakbar": null,
+        "responsePractice": false,
+        "wardAvailable": false,
+        "pending": null,
+        "resolution": [],
+        "round": 5,
+        "hp": 0,
+        "maxHp": 100,
+        "enemyHp": 96,
+        "charges": 2,
+        "effects": [],
+        "threat": "No further threat; encounter ended.",
+        "events": [
+          "Initiative round 5: target then player; scores 7/15.",
+          "Target contact: 20 incoming direct damage; 18 actual HP lost.",
+          "End round 5: Burn incoming DOT 3; actual HP lost 0; 0 rounds remain. Guard does not reduce this tick.",
+          "Round 5 resolved: defeated."
+        ],
+        "outcome": "defeated",
+        "last": "Round 5 resolved: defeated.",
+        "weaponEnabled": true,
+        "attackMultiplier": 1,
+        "healingMultiplier": 1,
+        "passive": "none",
+        "armor": "light",
+        "rescueSpent": false,
+        "lastHit": {
+          "kind": "PhysicalDirect",
+          "incoming": 20,
+          "effectiveDamage": 20,
+          "hpBefore": 18,
+          "hpAfter": 0,
+          "damageReduced": 0,
+          "actualHpLost": 18,
+          "avoidedHpLoss": 0,
+          "rescued": false
+        }
+      }
+    },
+    {
+      "style": "quick",
+      "profile": "toxic",
+      "policy": [
+        "cleanse",
+        "strike",
+        "strike",
+        "strike",
+        "strike",
+        "strike",
+        "strike"
+      ],
+      "steps": [
+        {
+          "command": "cleanse",
+          "accepted": true,
+          "state": {
+            "profile": "toxic",
+            "initiative": {
+              "style": "quick",
+              "playerAgility": 16,
+              "enemyAgility": 12,
+              "round": 2,
+              "order": [
+                "player",
+                "target"
+              ],
+              "playerScore": 22,
+              "targetScore": 6,
+              "seedState": 1424732933
+            },
+            "breakbar": null,
+            "responsePractice": false,
+            "wardAvailable": false,
+            "pending": null,
+            "resolution": [],
+            "round": 1,
+            "hp": 80,
+            "maxHp": 100,
+            "enemyHp": 96,
+            "charges": 1,
+            "effects": [],
+            "threat": "Pressure: 20 direct damage, then extends poison (toxic) or burn (heated) by two rounds.",
+            "events": [
+              "Initiative round 1: player then target; scores 15/11.",
+              "Treatment spent in player slot: removed 2 effects.",
+              "Target contact: 20 incoming direct damage; 20 actual HP lost.",
+              "Round 1 resolved: active."
+            ],
+            "outcome": "active",
+            "last": "Round 1 resolved: active.",
+            "weaponEnabled": true,
+            "attackMultiplier": 1,
+            "healingMultiplier": 1,
+            "passive": "none",
+            "armor": "light",
+            "rescueSpent": false,
+            "lastHit": {
+              "kind": "PhysicalDirect",
+              "incoming": 20,
+              "effectiveDamage": 20,
+              "hpBefore": 100,
+              "hpAfter": 80,
+              "damageReduced": 0,
+              "actualHpLost": 20,
+              "avoidedHpLoss": 0,
+              "rescued": false
+            }
+          }
+        },
+        {
+          "command": "strike",
+          "accepted": true,
+          "state": {
+            "profile": "toxic",
+            "initiative": {
+              "style": "quick",
+              "playerAgility": 16,
+              "enemyAgility": 12,
+              "round": 3,
+              "order": [
+                "target",
+                "player"
+              ],
+              "playerScore": 14,
+              "targetScore": 18,
+              "seedState": 2807505791
+            },
+            "breakbar": null,
+            "responsePractice": false,
+            "wardAvailable": false,
+            "pending": null,
+            "resolution": [],
+            "round": 2,
+            "hp": 54,
+            "maxHp": 100,
+            "enemyHp": 80,
+            "charges": 1,
+            "effects": [
+              {
+                "effect": "Poison",
+                "remaining": 1
+              }
+            ],
+            "threat": "Contact: 20 direct damage.",
+            "events": [
+              "Initiative round 2: player then target; scores 22/6.",
+              "strike: 16 direct damage to target. Burn multiplier 1.0.",
+              "Target contact: 20 incoming direct damage; 20 actual HP lost.",
+              "Announced pressure reapplied Poison: remaining 2 before tick.",
+              "End round 2: Poison incoming DOT 6; actual HP lost 6; 1 rounds remain. Guard does not reduce this tick.",
+              "Round 2 resolved: active."
+            ],
+            "outcome": "active",
+            "last": "Round 2 resolved: active.",
+            "weaponEnabled": true,
+            "attackMultiplier": 1,
+            "healingMultiplier": 1,
+            "passive": "none",
+            "armor": "light",
+            "rescueSpent": false,
+            "lastHit": {
+              "kind": "PhysicalDirect",
+              "incoming": 20,
+              "effectiveDamage": 20,
+              "hpBefore": 80,
+              "hpAfter": 60,
+              "damageReduced": 0,
+              "actualHpLost": 20,
+              "avoidedHpLoss": 0,
+              "rescued": false
+            }
+          }
+        },
+        {
+          "command": "strike",
+          "accepted": true,
+          "state": {
+            "profile": "toxic",
+            "initiative": {
+              "style": "quick",
+              "playerAgility": 16,
+              "enemyAgility": 12,
+              "round": 4,
+              "order": [
+                "player",
+                "target"
+              ],
+              "playerScore": 14,
+              "targetScore": 7,
+              "seedState": 1029717001
+            },
+            "breakbar": null,
+            "responsePractice": false,
+            "wardAvailable": false,
+            "pending": null,
+            "resolution": [],
+            "round": 3,
+            "hp": 28,
+            "maxHp": 100,
+            "enemyHp": 64,
+            "charges": 1,
+            "effects": [],
+            "threat": "Contact: 20 direct damage.",
+            "events": [
+              "Initiative round 3: target then player; scores 14/18.",
+              "Target contact: 20 incoming direct damage; 20 actual HP lost.",
+              "strike: 16 direct damage to target. Burn multiplier 1.0.",
+              "End round 3: Poison incoming DOT 6; actual HP lost 6; 0 rounds remain. Guard does not reduce this tick.",
+              "Round 3 resolved: active."
+            ],
+            "outcome": "active",
+            "last": "Round 3 resolved: active.",
+            "weaponEnabled": true,
+            "attackMultiplier": 1,
+            "healingMultiplier": 1,
+            "passive": "none",
+            "armor": "light",
+            "rescueSpent": false,
+            "lastHit": {
+              "kind": "PhysicalDirect",
+              "incoming": 20,
+              "effectiveDamage": 20,
+              "hpBefore": 54,
+              "hpAfter": 34,
+              "damageReduced": 0,
+              "actualHpLost": 20,
+              "avoidedHpLoss": 0,
+              "rescued": false
+            }
+          }
+        },
+        {
+          "command": "strike",
+          "accepted": true,
+          "state": {
+            "profile": "toxic",
+            "initiative": {
+              "style": "quick",
+              "playerAgility": 16,
+              "enemyAgility": 12,
+              "round": 5,
+              "order": [
+                "player",
+                "target"
+              ],
+              "playerScore": 15,
+              "targetScore": 15,
+              "seedState": 2461614630
+            },
+            "breakbar": null,
+            "responsePractice": false,
+            "wardAvailable": false,
+            "pending": null,
+            "resolution": [],
+            "round": 4,
+            "hp": 8,
+            "maxHp": 100,
+            "enemyHp": 48,
+            "charges": 1,
+            "effects": [],
+            "threat": "Pressure: 20 direct damage, then extends poison (toxic) or burn (heated) by two rounds.",
+            "events": [
+              "Initiative round 4: player then target; scores 14/7.",
+              "strike: 16 direct damage to target. Burn multiplier 1.0.",
+              "Target contact: 20 incoming direct damage; 20 actual HP lost.",
+              "Round 4 resolved: active."
+            ],
+            "outcome": "active",
+            "last": "Round 4 resolved: active.",
+            "weaponEnabled": true,
+            "attackMultiplier": 1,
+            "healingMultiplier": 1,
+            "passive": "none",
+            "armor": "light",
+            "rescueSpent": false,
+            "lastHit": {
+              "kind": "PhysicalDirect",
+              "incoming": 20,
+              "effectiveDamage": 20,
+              "hpBefore": 28,
+              "hpAfter": 8,
+              "damageReduced": 0,
+              "actualHpLost": 20,
+              "avoidedHpLoss": 0,
+              "rescued": false
+            }
+          }
+        },
+        {
+          "command": "strike",
+          "accepted": true,
+          "state": {
+            "profile": "toxic",
+            "initiative": {
+              "style": "quick",
+              "playerAgility": 16,
+              "enemyAgility": 12,
+              "round": 5,
+              "order": [
+                "player",
+                "target"
+              ],
+              "playerScore": 15,
+              "targetScore": 15,
+              "seedState": 2461614630
+            },
+            "breakbar": null,
+            "responsePractice": false,
+            "wardAvailable": false,
+            "pending": null,
+            "resolution": [],
+            "round": 5,
+            "hp": 0,
+            "maxHp": 100,
+            "enemyHp": 32,
+            "charges": 1,
+            "effects": [],
+            "threat": "No further threat; encounter ended.",
+            "events": [
+              "Initiative round 5: player then target; scores 15/15.",
+              "strike: 16 direct damage to target. Burn multiplier 1.0.",
+              "Target contact: 20 incoming direct damage; 8 actual HP lost.",
+              "Round 5 resolved: defeated."
+            ],
+            "outcome": "defeated",
+            "last": "Round 5 resolved: defeated.",
+            "weaponEnabled": true,
+            "attackMultiplier": 1,
+            "healingMultiplier": 1,
+            "passive": "none",
+            "armor": "light",
+            "rescueSpent": false,
+            "lastHit": {
+              "kind": "PhysicalDirect",
+              "incoming": 20,
+              "effectiveDamage": 20,
+              "hpBefore": 8,
+              "hpAfter": 0,
+              "damageReduced": 0,
+              "actualHpLost": 8,
+              "avoidedHpLoss": 0,
+              "rescued": false
+            }
+          }
+        }
+      ],
+      "final": {
+        "profile": "toxic",
+        "initiative": {
+          "style": "quick",
+          "playerAgility": 16,
+          "enemyAgility": 12,
+          "round": 5,
+          "order": [
+            "player",
+            "target"
+          ],
+          "playerScore": 15,
+          "targetScore": 15,
+          "seedState": 2461614630
+        },
+        "breakbar": null,
+        "responsePractice": false,
+        "wardAvailable": false,
+        "pending": null,
+        "resolution": [],
+        "round": 5,
+        "hp": 0,
+        "maxHp": 100,
+        "enemyHp": 32,
+        "charges": 1,
+        "effects": [],
+        "threat": "No further threat; encounter ended.",
+        "events": [
+          "Initiative round 5: player then target; scores 15/15.",
+          "strike: 16 direct damage to target. Burn multiplier 1.0.",
+          "Target contact: 20 incoming direct damage; 8 actual HP lost.",
+          "Round 5 resolved: defeated."
+        ],
+        "outcome": "defeated",
+        "last": "Round 5 resolved: defeated.",
+        "weaponEnabled": true,
+        "attackMultiplier": 1,
+        "healingMultiplier": 1,
+        "passive": "none",
+        "armor": "light",
+        "rescueSpent": false,
+        "lastHit": {
+          "kind": "PhysicalDirect",
+          "incoming": 20,
+          "effectiveDamage": 20,
+          "hpBefore": 8,
+          "hpAfter": 0,
+          "damageReduced": 0,
+          "actualHpLost": 8,
+          "avoidedHpLoss": 0,
+          "rescued": false
+        }
+      }
+    },
+    {
+      "style": "quick",
+      "profile": "toxic",
+      "policy": [
+        "bash",
+        "bash",
+        "treat",
+        "strike",
+        "strike",
+        "strike",
+        "strike"
+      ],
+      "steps": [
+        {
+          "command": "bash",
+          "accepted": true,
+          "state": {
+            "profile": "toxic",
+            "initiative": {
+              "style": "quick",
+              "playerAgility": 16,
+              "enemyAgility": 12,
+              "round": 2,
+              "order": [
+                "player",
+                "target"
+              ],
+              "playerScore": 22,
+              "targetScore": 6,
+              "seedState": 1424732933
+            },
+            "breakbar": null,
+            "responsePractice": false,
+            "wardAvailable": false,
+            "pending": null,
+            "resolution": [],
+            "round": 1,
+            "hp": 71,
+            "maxHp": 100,
+            "enemyHp": 86,
+            "charges": 2,
+            "effects": [
+              {
+                "effect": "Poison",
+                "remaining": 2
+              },
+              {
+                "effect": "Bleed",
+                "remaining": 2
+              }
+            ],
+            "threat": "Pressure: 20 direct damage, then extends poison (toxic) or burn (heated) by two rounds.",
+            "events": [
+              "Initiative round 1: player then target; scores 15/11.",
+              "bash: 10 direct damage to target. Burn multiplier 1.0.",
+              "Target contact: 20 incoming direct damage; 20 actual HP lost.",
+              "End round 1: Poison incoming DOT 6; actual HP lost 6; 2 rounds remain. Guard does not reduce this tick.",
+              "End round 1: Bleed incoming DOT 3; actual HP lost 3; 2 rounds remain. Guard does not reduce this tick.",
+              "Round 1 resolved: active."
+            ],
+            "outcome": "active",
+            "last": "Round 1 resolved: active.",
+            "weaponEnabled": true,
+            "attackMultiplier": 1,
+            "healingMultiplier": 0.7,
+            "passive": "none",
+            "armor": "light",
+            "rescueSpent": false,
+            "lastHit": {
+              "kind": "PhysicalDirect",
+              "incoming": 20,
+              "effectiveDamage": 20,
+              "hpBefore": 100,
+              "hpAfter": 80,
+              "damageReduced": 0,
+              "actualHpLost": 20,
+              "avoidedHpLoss": 0,
+              "rescued": false
+            }
+          }
+        },
+        {
+          "command": "bash",
+          "accepted": true,
+          "state": {
+            "profile": "toxic",
+            "initiative": {
+              "style": "quick",
+              "playerAgility": 16,
+              "enemyAgility": 12,
+              "round": 3,
+              "order": [
+                "target",
+                "player"
+              ],
+              "playerScore": 14,
+              "targetScore": 18,
+              "seedState": 2807505791
+            },
+            "breakbar": null,
+            "responsePractice": false,
+            "wardAvailable": false,
+            "pending": null,
+            "resolution": [],
+            "round": 2,
+            "hp": 42,
+            "maxHp": 100,
+            "enemyHp": 76,
+            "charges": 2,
+            "effects": [
+              {
+                "effect": "Poison",
+                "remaining": 3
+              },
+              {
+                "effect": "Bleed",
+                "remaining": 1
+              }
+            ],
+            "threat": "Contact: 20 direct damage.",
+            "events": [
+              "Initiative round 2: player then target; scores 22/6.",
+              "bash: 10 direct damage to target. Burn multiplier 1.0.",
+              "Target contact: 20 incoming direct damage; 20 actual HP lost.",
+              "Announced pressure reapplied Poison: remaining 4 before tick.",
+              "End round 2: Poison incoming DOT 6; actual HP lost 6; 3 rounds remain. Guard does not reduce this tick.",
+              "End round 2: Bleed incoming DOT 3; actual HP lost 3; 1 rounds remain. Guard does not reduce this tick.",
+              "Round 2 resolved: active."
+            ],
+            "outcome": "active",
+            "last": "Round 2 resolved: active.",
+            "weaponEnabled": true,
+            "attackMultiplier": 1,
+            "healingMultiplier": 0.7,
+            "passive": "none",
+            "armor": "light",
+            "rescueSpent": false,
+            "lastHit": {
+              "kind": "PhysicalDirect",
+              "incoming": 20,
+              "effectiveDamage": 20,
+              "hpBefore": 71,
+              "hpAfter": 51,
+              "damageReduced": 0,
+              "actualHpLost": 20,
+              "avoidedHpLoss": 0,
+              "rescued": false
+            }
+          }
+        },
+        {
+          "command": "treat",
+          "accepted": true,
+          "state": {
+            "profile": "toxic",
+            "initiative": {
+              "style": "quick",
+              "playerAgility": 16,
+              "enemyAgility": 12,
+              "round": 4,
+              "order": [
+                "player",
+                "target"
+              ],
+              "playerScore": 14,
+              "targetScore": 7,
+              "seedState": 1029717001
+            },
+            "breakbar": null,
+            "responsePractice": false,
+            "wardAvailable": false,
+            "pending": null,
+            "resolution": [],
+            "round": 3,
+            "hp": 35,
+            "maxHp": 100,
+            "enemyHp": 76,
+            "charges": 1,
+            "effects": [
+              {
+                "effect": "Poison",
+                "remaining": 2
+              }
+            ],
+            "threat": "Contact: 20 direct damage.",
+            "events": [
+              "Initiative round 3: target then player; scores 14/18.",
+              "Target contact: 20 incoming direct damage; 20 actual HP lost.",
+              "Treatment spent in player slot: healed 22 (eligible 22).",
+              "End round 3: Poison incoming DOT 6; actual HP lost 6; 2 rounds remain. Guard does not reduce this tick.",
+              "End round 3: Bleed incoming DOT 3; actual HP lost 3; 0 rounds remain. Guard does not reduce this tick.",
+              "Round 3 resolved: active."
+            ],
+            "outcome": "active",
+            "last": "Round 3 resolved: active.",
+            "weaponEnabled": true,
+            "attackMultiplier": 1,
+            "healingMultiplier": 1,
+            "passive": "none",
+            "armor": "light",
+            "rescueSpent": false,
+            "lastHit": {
+              "kind": "PhysicalDirect",
+              "incoming": 20,
+              "effectiveDamage": 20,
+              "hpBefore": 42,
+              "hpAfter": 22,
+              "damageReduced": 0,
+              "actualHpLost": 20,
+              "avoidedHpLoss": 0,
+              "rescued": false
+            }
+          }
+        },
+        {
+          "command": "strike",
+          "accepted": true,
+          "state": {
+            "profile": "toxic",
+            "initiative": {
+              "style": "quick",
+              "playerAgility": 16,
+              "enemyAgility": 12,
+              "round": 5,
+              "order": [
+                "player",
+                "target"
+              ],
+              "playerScore": 15,
+              "targetScore": 15,
+              "seedState": 2461614630
+            },
+            "breakbar": null,
+            "responsePractice": false,
+            "wardAvailable": false,
+            "pending": null,
+            "resolution": [],
+            "round": 4,
+            "hp": 9,
+            "maxHp": 100,
+            "enemyHp": 60,
+            "charges": 1,
+            "effects": [
+              {
+                "effect": "Poison",
+                "remaining": 1
+              }
+            ],
+            "threat": "Pressure: 20 direct damage, then extends poison (toxic) or burn (heated) by two rounds.",
+            "events": [
+              "Initiative round 4: player then target; scores 14/7.",
+              "strike: 16 direct damage to target. Burn multiplier 1.0.",
+              "Target contact: 20 incoming direct damage; 20 actual HP lost.",
+              "End round 4: Poison incoming DOT 6; actual HP lost 6; 1 rounds remain. Guard does not reduce this tick.",
+              "Round 4 resolved: active."
+            ],
+            "outcome": "active",
+            "last": "Round 4 resolved: active.",
+            "weaponEnabled": true,
+            "attackMultiplier": 1,
+            "healingMultiplier": 1,
+            "passive": "none",
+            "armor": "light",
+            "rescueSpent": false,
+            "lastHit": {
+              "kind": "PhysicalDirect",
+              "incoming": 20,
+              "effectiveDamage": 20,
+              "hpBefore": 35,
+              "hpAfter": 15,
+              "damageReduced": 0,
+              "actualHpLost": 20,
+              "avoidedHpLoss": 0,
+              "rescued": false
+            }
+          }
+        },
+        {
+          "command": "strike",
+          "accepted": true,
+          "state": {
+            "profile": "toxic",
+            "initiative": {
+              "style": "quick",
+              "playerAgility": 16,
+              "enemyAgility": 12,
+              "round": 5,
+              "order": [
+                "player",
+                "target"
+              ],
+              "playerScore": 15,
+              "targetScore": 15,
+              "seedState": 2461614630
+            },
+            "breakbar": null,
+            "responsePractice": false,
+            "wardAvailable": false,
+            "pending": null,
+            "resolution": [],
+            "round": 5,
+            "hp": 0,
+            "maxHp": 100,
+            "enemyHp": 44,
+            "charges": 1,
+            "effects": [],
+            "threat": "No further threat; encounter ended.",
+            "events": [
+              "Initiative round 5: player then target; scores 15/15.",
+              "strike: 16 direct damage to target. Burn multiplier 1.0.",
+              "Target contact: 20 incoming direct damage; 9 actual HP lost.",
+              "End round 5: Poison incoming DOT 6; actual HP lost 0; 0 rounds remain. Guard does not reduce this tick.",
+              "Round 5 resolved: defeated."
+            ],
+            "outcome": "defeated",
+            "last": "Round 5 resolved: defeated.",
+            "weaponEnabled": true,
+            "attackMultiplier": 1,
+            "healingMultiplier": 1,
+            "passive": "none",
+            "armor": "light",
+            "rescueSpent": false,
+            "lastHit": {
+              "kind": "PhysicalDirect",
+              "incoming": 20,
+              "effectiveDamage": 20,
+              "hpBefore": 9,
+              "hpAfter": 0,
+              "damageReduced": 0,
+              "actualHpLost": 9,
+              "avoidedHpLoss": 0,
+              "rescued": false
+            }
+          }
+        }
+      ],
+      "final": {
+        "profile": "toxic",
+        "initiative": {
+          "style": "quick",
+          "playerAgility": 16,
+          "enemyAgility": 12,
+          "round": 5,
+          "order": [
+            "player",
+            "target"
+          ],
+          "playerScore": 15,
+          "targetScore": 15,
+          "seedState": 2461614630
+        },
+        "breakbar": null,
+        "responsePractice": false,
+        "wardAvailable": false,
+        "pending": null,
+        "resolution": [],
+        "round": 5,
+        "hp": 0,
+        "maxHp": 100,
+        "enemyHp": 44,
+        "charges": 1,
+        "effects": [],
+        "threat": "No further threat; encounter ended.",
+        "events": [
+          "Initiative round 5: player then target; scores 15/15.",
+          "strike: 16 direct damage to target. Burn multiplier 1.0.",
+          "Target contact: 20 incoming direct damage; 9 actual HP lost.",
+          "End round 5: Poison incoming DOT 6; actual HP lost 0; 0 rounds remain. Guard does not reduce this tick.",
+          "Round 5 resolved: defeated."
+        ],
+        "outcome": "defeated",
+        "last": "Round 5 resolved: defeated.",
+        "weaponEnabled": true,
+        "attackMultiplier": 1,
+        "healingMultiplier": 1,
+        "passive": "none",
+        "armor": "light",
+        "rescueSpent": false,
+        "lastHit": {
+          "kind": "PhysicalDirect",
+          "incoming": 20,
+          "effectiveDamage": 20,
+          "hpBefore": 9,
+          "hpAfter": 0,
+          "damageReduced": 0,
+          "actualHpLost": 9,
+          "avoidedHpLoss": 0,
+          "rescued": false
+        }
+      }
+    },
+    {
+      "style": "quick",
+      "profile": "toxic",
+      "policy": [
+        "guard",
+        "guard",
+        "guard",
+        "guard",
+        "guard",
+        "guard",
+        "guard"
+      ],
+      "steps": [
+        {
+          "command": "guard",
+          "accepted": true,
+          "state": {
+            "profile": "toxic",
+            "initiative": {
+              "style": "quick",
+              "playerAgility": 16,
+              "enemyAgility": 12,
+              "round": 2,
+              "order": [
+                "player",
+                "target"
+              ],
+              "playerScore": 22,
+              "targetScore": 6,
+              "seedState": 1424732933
+            },
+            "breakbar": null,
+            "responsePractice": false,
+            "wardAvailable": false,
+            "pending": null,
+            "resolution": [],
+            "round": 1,
+            "hp": 81,
+            "maxHp": 100,
+            "enemyHp": 96,
+            "charges": 2,
+            "effects": [
+              {
+                "effect": "Poison",
+                "remaining": 2
+              },
+              {
+                "effect": "Bleed",
+                "remaining": 2
+              }
+            ],
+            "threat": "Pressure: 20 direct damage, then extends poison (toxic) or burn (heated) by two rounds.",
+            "events": [
+              "Initiative round 1: player then target; scores 15/11.",
+              "Guard raised in player slot; only later contact is halved. DOT is unchanged.",
+              "Target contact: 10 incoming direct damage; 10 actual HP lost.",
+              "End round 1: Poison incoming DOT 6; actual HP lost 6; 2 rounds remain. Guard does not reduce this tick.",
+              "End round 1: Bleed incoming DOT 3; actual HP lost 3; 2 rounds remain. Guard does not reduce this tick.",
+              "Round 1 resolved: active."
+            ],
+            "outcome": "active",
+            "last": "Round 1 resolved: active.",
+            "weaponEnabled": true,
+            "attackMultiplier": 1,
+            "healingMultiplier": 0.7,
+            "passive": "none",
+            "armor": "light",
+            "rescueSpent": false,
+            "lastHit": {
+              "kind": "PhysicalDirect",
+              "incoming": 10,
+              "effectiveDamage": 10,
+              "hpBefore": 100,
+              "hpAfter": 90,
+              "damageReduced": 0,
+              "actualHpLost": 10,
+              "avoidedHpLoss": 0,
+              "rescued": false
+            }
+          }
+        },
+        {
+          "command": "guard",
+          "accepted": true,
+          "state": {
+            "profile": "toxic",
+            "initiative": {
+              "style": "quick",
+              "playerAgility": 16,
+              "enemyAgility": 12,
+              "round": 3,
+              "order": [
+                "target",
+                "player"
+              ],
+              "playerScore": 14,
+              "targetScore": 18,
+              "seedState": 2807505791
+            },
+            "breakbar": null,
+            "responsePractice": false,
+            "wardAvailable": false,
+            "pending": null,
+            "resolution": [],
+            "round": 2,
+            "hp": 62,
+            "maxHp": 100,
+            "enemyHp": 96,
+            "charges": 2,
+            "effects": [
+              {
+                "effect": "Poison",
+                "remaining": 3
+              },
+              {
+                "effect": "Bleed",
+                "remaining": 1
+              }
+            ],
+            "threat": "Contact: 20 direct damage.",
+            "events": [
+              "Initiative round 2: player then target; scores 22/6.",
+              "Guard raised in player slot; only later contact is halved. DOT is unchanged.",
+              "Target contact: 10 incoming direct damage; 10 actual HP lost.",
+              "Announced pressure reapplied Poison: remaining 4 before tick.",
+              "End round 2: Poison incoming DOT 6; actual HP lost 6; 3 rounds remain. Guard does not reduce this tick.",
+              "End round 2: Bleed incoming DOT 3; actual HP lost 3; 1 rounds remain. Guard does not reduce this tick.",
+              "Round 2 resolved: active."
+            ],
+            "outcome": "active",
+            "last": "Round 2 resolved: active.",
+            "weaponEnabled": true,
+            "attackMultiplier": 1,
+            "healingMultiplier": 0.7,
+            "passive": "none",
+            "armor": "light",
+            "rescueSpent": false,
+            "lastHit": {
+              "kind": "PhysicalDirect",
+              "incoming": 10,
+              "effectiveDamage": 10,
+              "hpBefore": 81,
+              "hpAfter": 71,
+              "damageReduced": 0,
+              "actualHpLost": 10,
+              "avoidedHpLoss": 0,
+              "rescued": false
+            }
+          }
+        },
+        {
+          "command": "guard",
+          "accepted": true,
+          "state": {
+            "profile": "toxic",
+            "initiative": {
+              "style": "quick",
+              "playerAgility": 16,
+              "enemyAgility": 12,
+              "round": 4,
+              "order": [
+                "player",
+                "target"
+              ],
+              "playerScore": 14,
+              "targetScore": 7,
+              "seedState": 1029717001
+            },
+            "breakbar": null,
+            "responsePractice": false,
+            "wardAvailable": false,
+            "pending": null,
+            "resolution": [],
+            "round": 3,
+            "hp": 33,
+            "maxHp": 100,
+            "enemyHp": 96,
+            "charges": 2,
+            "effects": [
+              {
+                "effect": "Poison",
+                "remaining": 2
+              }
+            ],
+            "threat": "Contact: 20 direct damage.",
+            "events": [
+              "Initiative round 3: target then player; scores 14/18.",
+              "Target contact: 20 incoming direct damage; 20 actual HP lost.",
+              "Guard raised in player slot; only later contact is halved. DOT is unchanged.",
+              "End round 3: Poison incoming DOT 6; actual HP lost 6; 2 rounds remain. Guard does not reduce this tick.",
+              "End round 3: Bleed incoming DOT 3; actual HP lost 3; 0 rounds remain. Guard does not reduce this tick.",
+              "Round 3 resolved: active."
+            ],
+            "outcome": "active",
+            "last": "Round 3 resolved: active.",
+            "weaponEnabled": true,
+            "attackMultiplier": 1,
+            "healingMultiplier": 1,
+            "passive": "none",
+            "armor": "light",
+            "rescueSpent": false,
+            "lastHit": {
+              "kind": "PhysicalDirect",
+              "incoming": 20,
+              "effectiveDamage": 20,
+              "hpBefore": 62,
+              "hpAfter": 42,
+              "damageReduced": 0,
+              "actualHpLost": 20,
+              "avoidedHpLoss": 0,
+              "rescued": false
+            }
+          }
+        },
+        {
+          "command": "guard",
+          "accepted": true,
+          "state": {
+            "profile": "toxic",
+            "initiative": {
+              "style": "quick",
+              "playerAgility": 16,
+              "enemyAgility": 12,
+              "round": 5,
+              "order": [
+                "player",
+                "target"
+              ],
+              "playerScore": 15,
+              "targetScore": 15,
+              "seedState": 2461614630
+            },
+            "breakbar": null,
+            "responsePractice": false,
+            "wardAvailable": false,
+            "pending": null,
+            "resolution": [],
+            "round": 4,
+            "hp": 17,
+            "maxHp": 100,
+            "enemyHp": 96,
+            "charges": 2,
+            "effects": [
+              {
+                "effect": "Poison",
+                "remaining": 1
+              }
+            ],
+            "threat": "Pressure: 20 direct damage, then extends poison (toxic) or burn (heated) by two rounds.",
+            "events": [
+              "Initiative round 4: player then target; scores 14/7.",
+              "Guard raised in player slot; only later contact is halved. DOT is unchanged.",
+              "Target contact: 10 incoming direct damage; 10 actual HP lost.",
+              "End round 4: Poison incoming DOT 6; actual HP lost 6; 1 rounds remain. Guard does not reduce this tick.",
+              "Round 4 resolved: active."
+            ],
+            "outcome": "active",
+            "last": "Round 4 resolved: active.",
+            "weaponEnabled": true,
+            "attackMultiplier": 1,
+            "healingMultiplier": 1,
+            "passive": "none",
+            "armor": "light",
+            "rescueSpent": false,
+            "lastHit": {
+              "kind": "PhysicalDirect",
+              "incoming": 10,
+              "effectiveDamage": 10,
+              "hpBefore": 33,
+              "hpAfter": 23,
+              "damageReduced": 0,
+              "actualHpLost": 10,
+              "avoidedHpLoss": 0,
+              "rescued": false
+            }
+          }
+        },
+        {
+          "command": "guard",
+          "accepted": true,
+          "state": {
+            "profile": "toxic",
+            "initiative": {
+              "style": "quick",
+              "playerAgility": 16,
+              "enemyAgility": 12,
+              "round": 6,
+              "order": [
+                "player",
+                "target"
+              ],
+              "playerScore": 22,
+              "targetScore": 9,
+              "seedState": 2578611272
+            },
+            "breakbar": null,
+            "responsePractice": false,
+            "wardAvailable": false,
+            "pending": null,
+            "resolution": [],
+            "round": 5,
+            "hp": 1,
+            "maxHp": 100,
+            "enemyHp": 96,
+            "charges": 2,
+            "effects": [
+              {
+                "effect": "Poison",
+                "remaining": 2
+              }
+            ],
+            "threat": "Contact: 20 direct damage.",
+            "events": [
+              "Initiative round 5: player then target; scores 15/15.",
+              "Guard raised in player slot; only later contact is halved. DOT is unchanged.",
+              "Target contact: 10 incoming direct damage; 10 actual HP lost.",
+              "Announced pressure reapplied Poison: remaining 3 before tick.",
+              "End round 5: Poison incoming DOT 6; actual HP lost 6; 2 rounds remain. Guard does not reduce this tick.",
+              "Round 5 resolved: active."
+            ],
+            "outcome": "active",
+            "last": "Round 5 resolved: active.",
+            "weaponEnabled": true,
+            "attackMultiplier": 1,
+            "healingMultiplier": 1,
+            "passive": "none",
+            "armor": "light",
+            "rescueSpent": false,
+            "lastHit": {
+              "kind": "PhysicalDirect",
+              "incoming": 10,
+              "effectiveDamage": 10,
+              "hpBefore": 17,
+              "hpAfter": 7,
+              "damageReduced": 0,
+              "actualHpLost": 10,
+              "avoidedHpLoss": 0,
+              "rescued": false
+            }
+          }
+        },
+        {
+          "command": "guard",
+          "accepted": true,
+          "state": {
+            "profile": "toxic",
+            "initiative": {
+              "style": "quick",
+              "playerAgility": 16,
+              "enemyAgility": 12,
+              "round": 6,
+              "order": [
+                "player",
+                "target"
+              ],
+              "playerScore": 22,
+              "targetScore": 9,
+              "seedState": 2578611272
+            },
+            "breakbar": null,
+            "responsePractice": false,
+            "wardAvailable": false,
+            "pending": null,
+            "resolution": [],
+            "round": 6,
+            "hp": 0,
+            "maxHp": 100,
+            "enemyHp": 96,
+            "charges": 2,
+            "effects": [
+              {
+                "effect": "Poison",
+                "remaining": 1
+              }
+            ],
+            "threat": "No further threat; encounter ended.",
+            "events": [
+              "Initiative round 6: player then target; scores 22/9.",
+              "Guard raised in player slot; only later contact is halved. DOT is unchanged.",
+              "Target contact: 10 incoming direct damage; 1 actual HP lost.",
+              "End round 6: Poison incoming DOT 6; actual HP lost 0; 1 rounds remain. Guard does not reduce this tick.",
+              "Round 6 resolved: defeated."
+            ],
+            "outcome": "defeated",
+            "last": "Round 6 resolved: defeated.",
+            "weaponEnabled": true,
+            "attackMultiplier": 1,
+            "healingMultiplier": 1,
+            "passive": "none",
+            "armor": "light",
+            "rescueSpent": false,
+            "lastHit": {
+              "kind": "PhysicalDirect",
+              "incoming": 10,
+              "effectiveDamage": 10,
+              "hpBefore": 1,
+              "hpAfter": 0,
+              "damageReduced": 0,
+              "actualHpLost": 1,
+              "avoidedHpLoss": 0,
+              "rescued": false
+            }
+          }
+        }
+      ],
+      "final": {
+        "profile": "toxic",
+        "initiative": {
+          "style": "quick",
+          "playerAgility": 16,
+          "enemyAgility": 12,
+          "round": 6,
+          "order": [
+            "player",
+            "target"
+          ],
+          "playerScore": 22,
+          "targetScore": 9,
+          "seedState": 2578611272
+        },
+        "breakbar": null,
+        "responsePractice": false,
+        "wardAvailable": false,
+        "pending": null,
+        "resolution": [],
+        "round": 6,
+        "hp": 0,
+        "maxHp": 100,
+        "enemyHp": 96,
+        "charges": 2,
+        "effects": [
+          {
+            "effect": "Poison",
+            "remaining": 1
+          }
+        ],
+        "threat": "No further threat; encounter ended.",
+        "events": [
+          "Initiative round 6: player then target; scores 22/9.",
+          "Guard raised in player slot; only later contact is halved. DOT is unchanged.",
+          "Target contact: 10 incoming direct damage; 1 actual HP lost.",
+          "End round 6: Poison incoming DOT 6; actual HP lost 0; 1 rounds remain. Guard does not reduce this tick.",
+          "Round 6 resolved: defeated."
+        ],
+        "outcome": "defeated",
+        "last": "Round 6 resolved: defeated.",
+        "weaponEnabled": true,
+        "attackMultiplier": 1,
+        "healingMultiplier": 1,
+        "passive": "none",
+        "armor": "light",
+        "rescueSpent": false,
+        "lastHit": {
+          "kind": "PhysicalDirect",
+          "incoming": 10,
+          "effectiveDamage": 10,
+          "hpBefore": 1,
+          "hpAfter": 0,
+          "damageReduced": 0,
+          "actualHpLost": 1,
+          "avoidedHpLoss": 0,
+          "rescued": false
+        }
+      }
+    },
+    {
+      "style": "quick",
+      "profile": "heated",
+      "policy": [
+        "cleanse",
+        "strike",
+        "strike",
+        "strike",
+        "strike",
+        "strike",
+        "strike"
+      ],
+      "steps": [
+        {
+          "command": "cleanse",
+          "accepted": true,
+          "state": {
+            "profile": "heated",
+            "initiative": {
+              "style": "quick",
+              "playerAgility": 16,
+              "enemyAgility": 12,
+              "round": 2,
+              "order": [
+                "player",
+                "target"
+              ],
+              "playerScore": 22,
+              "targetScore": 6,
+              "seedState": 1424732933
+            },
+            "breakbar": null,
+            "responsePractice": false,
+            "wardAvailable": false,
+            "pending": null,
+            "resolution": [],
+            "round": 1,
+            "hp": 80,
+            "maxHp": 100,
+            "enemyHp": 96,
+            "charges": 1,
+            "effects": [],
+            "threat": "Pressure: 20 direct damage, then extends poison (toxic) or burn (heated) by two rounds.",
+            "events": [
+              "Initiative round 1: player then target; scores 15/11.",
+              "Treatment spent in player slot: removed 2 effects.",
+              "Target contact: 20 incoming direct damage; 20 actual HP lost.",
+              "Round 1 resolved: active."
+            ],
+            "outcome": "active",
+            "last": "Round 1 resolved: active.",
+            "weaponEnabled": true,
+            "attackMultiplier": 1,
+            "healingMultiplier": 1,
+            "passive": "none",
+            "armor": "light",
+            "rescueSpent": false,
+            "lastHit": {
+              "kind": "PhysicalDirect",
+              "incoming": 20,
+              "effectiveDamage": 20,
+              "hpBefore": 100,
+              "hpAfter": 80,
+              "damageReduced": 0,
+              "actualHpLost": 20,
+              "avoidedHpLoss": 0,
+              "rescued": false
+            }
+          }
+        },
+        {
+          "command": "strike",
+          "accepted": true,
+          "state": {
+            "profile": "heated",
+            "initiative": {
+              "style": "quick",
+              "playerAgility": 16,
+              "enemyAgility": 12,
+              "round": 3,
+              "order": [
+                "target",
+                "player"
+              ],
+              "playerScore": 14,
+              "targetScore": 18,
+              "seedState": 2807505791
+            },
+            "breakbar": null,
+            "responsePractice": false,
+            "wardAvailable": false,
+            "pending": null,
+            "resolution": [],
+            "round": 2,
+            "hp": 57,
+            "maxHp": 100,
+            "enemyHp": 80,
+            "charges": 1,
+            "effects": [
+              {
+                "effect": "Burn",
+                "remaining": 1
+              }
+            ],
+            "threat": "Contact: 20 direct damage.",
+            "events": [
+              "Initiative round 2: player then target; scores 22/6.",
+              "strike: 16 direct damage to target. Burn multiplier 1.0.",
+              "Target contact: 20 incoming direct damage; 20 actual HP lost.",
+              "Announced pressure reapplied Burn: remaining 2 before tick.",
+              "End round 2: Burn incoming DOT 3; actual HP lost 3; 1 rounds remain. Guard does not reduce this tick.",
+              "Round 2 resolved: active."
+            ],
+            "outcome": "active",
+            "last": "Round 2 resolved: active.",
+            "weaponEnabled": true,
+            "attackMultiplier": 0.7,
+            "healingMultiplier": 1,
+            "passive": "none",
+            "armor": "light",
+            "rescueSpent": false,
+            "lastHit": {
+              "kind": "PhysicalDirect",
+              "incoming": 20,
+              "effectiveDamage": 20,
+              "hpBefore": 80,
+              "hpAfter": 60,
+              "damageReduced": 0,
+              "actualHpLost": 20,
+              "avoidedHpLoss": 0,
+              "rescued": false
+            }
+          }
+        },
+        {
+          "command": "strike",
+          "accepted": true,
+          "state": {
+            "profile": "heated",
+            "initiative": {
+              "style": "quick",
+              "playerAgility": 16,
+              "enemyAgility": 12,
+              "round": 4,
+              "order": [
+                "player",
+                "target"
+              ],
+              "playerScore": 14,
+              "targetScore": 7,
+              "seedState": 1029717001
+            },
+            "breakbar": null,
+            "responsePractice": false,
+            "wardAvailable": false,
+            "pending": null,
+            "resolution": [],
+            "round": 3,
+            "hp": 34,
+            "maxHp": 100,
+            "enemyHp": 69,
+            "charges": 1,
+            "effects": [],
+            "threat": "Contact: 20 direct damage.",
+            "events": [
+              "Initiative round 3: target then player; scores 14/18.",
+              "Target contact: 20 incoming direct damage; 20 actual HP lost.",
+              "strike: 11 direct damage to target. Burn multiplier 0.7.",
+              "End round 3: Burn incoming DOT 3; actual HP lost 3; 0 rounds remain. Guard does not reduce this tick.",
+              "Round 3 resolved: active."
+            ],
+            "outcome": "active",
+            "last": "Round 3 resolved: active.",
+            "weaponEnabled": true,
+            "attackMultiplier": 1,
+            "healingMultiplier": 1,
+            "passive": "none",
+            "armor": "light",
+            "rescueSpent": false,
+            "lastHit": {
+              "kind": "PhysicalDirect",
+              "incoming": 20,
+              "effectiveDamage": 20,
+              "hpBefore": 57,
+              "hpAfter": 37,
+              "damageReduced": 0,
+              "actualHpLost": 20,
+              "avoidedHpLoss": 0,
+              "rescued": false
+            }
+          }
+        },
+        {
+          "command": "strike",
+          "accepted": true,
+          "state": {
+            "profile": "heated",
+            "initiative": {
+              "style": "quick",
+              "playerAgility": 16,
+              "enemyAgility": 12,
+              "round": 5,
+              "order": [
+                "player",
+                "target"
+              ],
+              "playerScore": 15,
+              "targetScore": 15,
+              "seedState": 2461614630
+            },
+            "breakbar": null,
+            "responsePractice": false,
+            "wardAvailable": false,
+            "pending": null,
+            "resolution": [],
+            "round": 4,
+            "hp": 14,
+            "maxHp": 100,
+            "enemyHp": 53,
+            "charges": 1,
+            "effects": [],
+            "threat": "Pressure: 20 direct damage, then extends poison (toxic) or burn (heated) by two rounds.",
+            "events": [
+              "Initiative round 4: player then target; scores 14/7.",
+              "strike: 16 direct damage to target. Burn multiplier 1.0.",
+              "Target contact: 20 incoming direct damage; 20 actual HP lost.",
+              "Round 4 resolved: active."
+            ],
+            "outcome": "active",
+            "last": "Round 4 resolved: active.",
+            "weaponEnabled": true,
+            "attackMultiplier": 1,
+            "healingMultiplier": 1,
+            "passive": "none",
+            "armor": "light",
+            "rescueSpent": false,
+            "lastHit": {
+              "kind": "PhysicalDirect",
+              "incoming": 20,
+              "effectiveDamage": 20,
+              "hpBefore": 34,
+              "hpAfter": 14,
+              "damageReduced": 0,
+              "actualHpLost": 20,
+              "avoidedHpLoss": 0,
+              "rescued": false
+            }
+          }
+        },
+        {
+          "command": "strike",
+          "accepted": true,
+          "state": {
+            "profile": "heated",
+            "initiative": {
+              "style": "quick",
+              "playerAgility": 16,
+              "enemyAgility": 12,
+              "round": 5,
+              "order": [
+                "player",
+                "target"
+              ],
+              "playerScore": 15,
+              "targetScore": 15,
+              "seedState": 2461614630
+            },
+            "breakbar": null,
+            "responsePractice": false,
+            "wardAvailable": false,
+            "pending": null,
+            "resolution": [],
+            "round": 5,
+            "hp": 0,
+            "maxHp": 100,
+            "enemyHp": 37,
+            "charges": 1,
+            "effects": [],
+            "threat": "No further threat; encounter ended.",
+            "events": [
+              "Initiative round 5: player then target; scores 15/15.",
+              "strike: 16 direct damage to target. Burn multiplier 1.0.",
+              "Target contact: 20 incoming direct damage; 14 actual HP lost.",
+              "Round 5 resolved: defeated."
+            ],
+            "outcome": "defeated",
+            "last": "Round 5 resolved: defeated.",
+            "weaponEnabled": true,
+            "attackMultiplier": 1,
+            "healingMultiplier": 1,
+            "passive": "none",
+            "armor": "light",
+            "rescueSpent": false,
+            "lastHit": {
+              "kind": "PhysicalDirect",
+              "incoming": 20,
+              "effectiveDamage": 20,
+              "hpBefore": 14,
+              "hpAfter": 0,
+              "damageReduced": 0,
+              "actualHpLost": 14,
+              "avoidedHpLoss": 0,
+              "rescued": false
+            }
+          }
+        }
+      ],
+      "final": {
+        "profile": "heated",
+        "initiative": {
+          "style": "quick",
+          "playerAgility": 16,
+          "enemyAgility": 12,
+          "round": 5,
+          "order": [
+            "player",
+            "target"
+          ],
+          "playerScore": 15,
+          "targetScore": 15,
+          "seedState": 2461614630
+        },
+        "breakbar": null,
+        "responsePractice": false,
+        "wardAvailable": false,
+        "pending": null,
+        "resolution": [],
+        "round": 5,
+        "hp": 0,
+        "maxHp": 100,
+        "enemyHp": 37,
+        "charges": 1,
+        "effects": [],
+        "threat": "No further threat; encounter ended.",
+        "events": [
+          "Initiative round 5: player then target; scores 15/15.",
+          "strike: 16 direct damage to target. Burn multiplier 1.0.",
+          "Target contact: 20 incoming direct damage; 14 actual HP lost.",
+          "Round 5 resolved: defeated."
+        ],
+        "outcome": "defeated",
+        "last": "Round 5 resolved: defeated.",
+        "weaponEnabled": true,
+        "attackMultiplier": 1,
+        "healingMultiplier": 1,
+        "passive": "none",
+        "armor": "light",
+        "rescueSpent": false,
+        "lastHit": {
+          "kind": "PhysicalDirect",
+          "incoming": 20,
+          "effectiveDamage": 20,
+          "hpBefore": 14,
+          "hpAfter": 0,
+          "damageReduced": 0,
+          "actualHpLost": 14,
+          "avoidedHpLoss": 0,
+          "rescued": false
+        }
+      }
+    },
+    {
+      "style": "quick",
+      "profile": "heated",
+      "policy": [
+        "bash",
+        "bash",
+        "treat",
+        "strike",
+        "strike",
+        "strike",
+        "strike"
+      ],
+      "steps": [
+        {
+          "command": "bash",
+          "accepted": true,
+          "state": {
+            "profile": "heated",
+            "initiative": {
+              "style": "quick",
+              "playerAgility": 16,
+              "enemyAgility": 12,
+              "round": 2,
+              "order": [
+                "player",
+                "target"
+              ],
+              "playerScore": 22,
+              "targetScore": 6,
+              "seedState": 1424732933
+            },
+            "breakbar": null,
+            "responsePractice": false,
+            "wardAvailable": false,
+            "pending": null,
+            "resolution": [],
+            "round": 1,
+            "hp": 77,
+            "maxHp": 100,
+            "enemyHp": 89,
+            "charges": 2,
+            "effects": [
+              {
+                "effect": "Burn",
+                "remaining": 2
+              },
+              {
+                "effect": "Disarm",
+                "remaining": 1
+              }
+            ],
+            "threat": "Pressure: 20 direct damage, then extends poison (toxic) or burn (heated) by two rounds.",
+            "events": [
+              "Initiative round 1: player then target; scores 15/11.",
+              "bash: 7 direct damage to target. Burn multiplier 0.7.",
+              "Target contact: 20 incoming direct damage; 20 actual HP lost.",
+              "End round 1: Burn incoming DOT 3; actual HP lost 3; 2 rounds remain. Guard does not reduce this tick.",
+              "End round 1: Disarm incoming DOT 0; actual HP lost 0; 1 rounds remain. Guard does not reduce this tick.",
+              "Round 1 resolved: active."
+            ],
+            "outcome": "active",
+            "last": "Round 1 resolved: active.",
+            "weaponEnabled": false,
+            "attackMultiplier": 0.7,
+            "healingMultiplier": 1,
+            "passive": "none",
+            "armor": "light",
+            "rescueSpent": false,
+            "lastHit": {
+              "kind": "PhysicalDirect",
+              "incoming": 20,
+              "effectiveDamage": 20,
+              "hpBefore": 100,
+              "hpAfter": 80,
+              "damageReduced": 0,
+              "actualHpLost": 20,
+              "avoidedHpLoss": 0,
+              "rescued": false
+            }
+          }
+        },
+        {
+          "command": "bash",
+          "accepted": true,
+          "state": {
+            "profile": "heated",
+            "initiative": {
+              "style": "quick",
+              "playerAgility": 16,
+              "enemyAgility": 12,
+              "round": 3,
+              "order": [
+                "target",
+                "player"
+              ],
+              "playerScore": 14,
+              "targetScore": 18,
+              "seedState": 2807505791
+            },
+            "breakbar": null,
+            "responsePractice": false,
+            "wardAvailable": false,
+            "pending": null,
+            "resolution": [],
+            "round": 2,
+            "hp": 54,
+            "maxHp": 100,
+            "enemyHp": 82,
+            "charges": 2,
+            "effects": [
+              {
+                "effect": "Burn",
+                "remaining": 3
+              }
+            ],
+            "threat": "Contact: 20 direct damage.",
+            "events": [
+              "Initiative round 2: player then target; scores 22/6.",
+              "bash: 7 direct damage to target. Burn multiplier 0.7.",
+              "Target contact: 20 incoming direct damage; 20 actual HP lost.",
+              "Announced pressure reapplied Burn: remaining 4 before tick.",
+              "End round 2: Burn incoming DOT 3; actual HP lost 3; 3 rounds remain. Guard does not reduce this tick.",
+              "End round 2: Disarm incoming DOT 0; actual HP lost 0; 0 rounds remain. Guard does not reduce this tick.",
+              "Round 2 resolved: active."
+            ],
+            "outcome": "active",
+            "last": "Round 2 resolved: active.",
+            "weaponEnabled": true,
+            "attackMultiplier": 0.7,
+            "healingMultiplier": 1,
+            "passive": "none",
+            "armor": "light",
+            "rescueSpent": false,
+            "lastHit": {
+              "kind": "PhysicalDirect",
+              "incoming": 20,
+              "effectiveDamage": 20,
+              "hpBefore": 77,
+              "hpAfter": 57,
+              "damageReduced": 0,
+              "actualHpLost": 20,
+              "avoidedHpLoss": 0,
+              "rescued": false
+            }
+          }
+        },
+        {
+          "command": "treat",
+          "accepted": true,
+          "state": {
+            "profile": "heated",
+            "initiative": {
+              "style": "quick",
+              "playerAgility": 16,
+              "enemyAgility": 12,
+              "round": 4,
+              "order": [
+                "player",
+                "target"
+              ],
+              "playerScore": 14,
+              "targetScore": 7,
+              "seedState": 1029717001
+            },
+            "breakbar": null,
+            "responsePractice": false,
+            "wardAvailable": false,
+            "pending": null,
+            "resolution": [],
+            "round": 3,
+            "hp": 63,
+            "maxHp": 100,
+            "enemyHp": 82,
+            "charges": 1,
+            "effects": [
+              {
+                "effect": "Burn",
+                "remaining": 2
+              }
+            ],
+            "threat": "Contact: 20 direct damage.",
+            "events": [
+              "Initiative round 3: target then player; scores 14/18.",
+              "Target contact: 20 incoming direct damage; 20 actual HP lost.",
+              "Treatment spent in player slot: healed 32 (eligible 32).",
+              "End round 3: Burn incoming DOT 3; actual HP lost 3; 2 rounds remain. Guard does not reduce this tick.",
+              "Round 3 resolved: active."
+            ],
+            "outcome": "active",
+            "last": "Round 3 resolved: active.",
+            "weaponEnabled": true,
+            "attackMultiplier": 0.7,
+            "healingMultiplier": 1,
+            "passive": "none",
+            "armor": "light",
+            "rescueSpent": false,
+            "lastHit": {
+              "kind": "PhysicalDirect",
+              "incoming": 20,
+              "effectiveDamage": 20,
+              "hpBefore": 54,
+              "hpAfter": 34,
+              "damageReduced": 0,
+              "actualHpLost": 20,
+              "avoidedHpLoss": 0,
+              "rescued": false
+            }
+          }
+        },
+        {
+          "command": "strike",
+          "accepted": true,
+          "state": {
+            "profile": "heated",
+            "initiative": {
+              "style": "quick",
+              "playerAgility": 16,
+              "enemyAgility": 12,
+              "round": 5,
+              "order": [
+                "player",
+                "target"
+              ],
+              "playerScore": 15,
+              "targetScore": 15,
+              "seedState": 2461614630
+            },
+            "breakbar": null,
+            "responsePractice": false,
+            "wardAvailable": false,
+            "pending": null,
+            "resolution": [],
+            "round": 4,
+            "hp": 40,
+            "maxHp": 100,
+            "enemyHp": 71,
+            "charges": 1,
+            "effects": [
+              {
+                "effect": "Burn",
+                "remaining": 1
+              }
+            ],
+            "threat": "Pressure: 20 direct damage, then extends poison (toxic) or burn (heated) by two rounds.",
+            "events": [
+              "Initiative round 4: player then target; scores 14/7.",
+              "strike: 11 direct damage to target. Burn multiplier 0.7.",
+              "Target contact: 20 incoming direct damage; 20 actual HP lost.",
+              "End round 4: Burn incoming DOT 3; actual HP lost 3; 1 rounds remain. Guard does not reduce this tick.",
+              "Round 4 resolved: active."
+            ],
+            "outcome": "active",
+            "last": "Round 4 resolved: active.",
+            "weaponEnabled": true,
+            "attackMultiplier": 0.7,
+            "healingMultiplier": 1,
+            "passive": "none",
+            "armor": "light",
+            "rescueSpent": false,
+            "lastHit": {
+              "kind": "PhysicalDirect",
+              "incoming": 20,
+              "effectiveDamage": 20,
+              "hpBefore": 63,
+              "hpAfter": 43,
+              "damageReduced": 0,
+              "actualHpLost": 20,
+              "avoidedHpLoss": 0,
+              "rescued": false
+            }
+          }
+        },
+        {
+          "command": "strike",
+          "accepted": true,
+          "state": {
+            "profile": "heated",
+            "initiative": {
+              "style": "quick",
+              "playerAgility": 16,
+              "enemyAgility": 12,
+              "round": 6,
+              "order": [
+                "player",
+                "target"
+              ],
+              "playerScore": 22,
+              "targetScore": 9,
+              "seedState": 2578611272
+            },
+            "breakbar": null,
+            "responsePractice": false,
+            "wardAvailable": false,
+            "pending": null,
+            "resolution": [],
+            "round": 5,
+            "hp": 17,
+            "maxHp": 100,
+            "enemyHp": 60,
+            "charges": 1,
+            "effects": [
+              {
+                "effect": "Burn",
+                "remaining": 2
+              }
+            ],
+            "threat": "Contact: 20 direct damage.",
+            "events": [
+              "Initiative round 5: player then target; scores 15/15.",
+              "strike: 11 direct damage to target. Burn multiplier 0.7.",
+              "Target contact: 20 incoming direct damage; 20 actual HP lost.",
+              "Announced pressure reapplied Burn: remaining 3 before tick.",
+              "End round 5: Burn incoming DOT 3; actual HP lost 3; 2 rounds remain. Guard does not reduce this tick.",
+              "Round 5 resolved: active."
+            ],
+            "outcome": "active",
+            "last": "Round 5 resolved: active.",
+            "weaponEnabled": true,
+            "attackMultiplier": 0.7,
+            "healingMultiplier": 1,
+            "passive": "none",
+            "armor": "light",
+            "rescueSpent": false,
+            "lastHit": {
+              "kind": "PhysicalDirect",
+              "incoming": 20,
+              "effectiveDamage": 20,
+              "hpBefore": 40,
+              "hpAfter": 20,
+              "damageReduced": 0,
+              "actualHpLost": 20,
+              "avoidedHpLoss": 0,
+              "rescued": false
+            }
+          }
+        },
+        {
+          "command": "strike",
+          "accepted": true,
+          "state": {
+            "profile": "heated",
+            "initiative": {
+              "style": "quick",
+              "playerAgility": 16,
+              "enemyAgility": 12,
+              "round": 6,
+              "order": [
+                "player",
+                "target"
+              ],
+              "playerScore": 22,
+              "targetScore": 9,
+              "seedState": 2578611272
+            },
+            "breakbar": null,
+            "responsePractice": false,
+            "wardAvailable": false,
+            "pending": null,
+            "resolution": [],
+            "round": 6,
+            "hp": 0,
+            "maxHp": 100,
+            "enemyHp": 49,
+            "charges": 1,
+            "effects": [
+              {
+                "effect": "Burn",
+                "remaining": 1
+              }
+            ],
+            "threat": "No further threat; encounter ended.",
+            "events": [
+              "Initiative round 6: player then target; scores 22/9.",
+              "strike: 11 direct damage to target. Burn multiplier 0.7.",
+              "Target contact: 20 incoming direct damage; 17 actual HP lost.",
+              "End round 6: Burn incoming DOT 3; actual HP lost 0; 1 rounds remain. Guard does not reduce this tick.",
+              "Round 6 resolved: defeated."
+            ],
+            "outcome": "defeated",
+            "last": "Round 6 resolved: defeated.",
+            "weaponEnabled": true,
+            "attackMultiplier": 0.7,
+            "healingMultiplier": 1,
+            "passive": "none",
+            "armor": "light",
+            "rescueSpent": false,
+            "lastHit": {
+              "kind": "PhysicalDirect",
+              "incoming": 20,
+              "effectiveDamage": 20,
+              "hpBefore": 17,
+              "hpAfter": 0,
+              "damageReduced": 0,
+              "actualHpLost": 17,
+              "avoidedHpLoss": 0,
+              "rescued": false
+            }
+          }
+        }
+      ],
+      "final": {
+        "profile": "heated",
+        "initiative": {
+          "style": "quick",
+          "playerAgility": 16,
+          "enemyAgility": 12,
+          "round": 6,
+          "order": [
+            "player",
+            "target"
+          ],
+          "playerScore": 22,
+          "targetScore": 9,
+          "seedState": 2578611272
+        },
+        "breakbar": null,
+        "responsePractice": false,
+        "wardAvailable": false,
+        "pending": null,
+        "resolution": [],
+        "round": 6,
+        "hp": 0,
+        "maxHp": 100,
+        "enemyHp": 49,
+        "charges": 1,
+        "effects": [
+          {
+            "effect": "Burn",
+            "remaining": 1
+          }
+        ],
+        "threat": "No further threat; encounter ended.",
+        "events": [
+          "Initiative round 6: player then target; scores 22/9.",
+          "strike: 11 direct damage to target. Burn multiplier 0.7.",
+          "Target contact: 20 incoming direct damage; 17 actual HP lost.",
+          "End round 6: Burn incoming DOT 3; actual HP lost 0; 1 rounds remain. Guard does not reduce this tick.",
+          "Round 6 resolved: defeated."
+        ],
+        "outcome": "defeated",
+        "last": "Round 6 resolved: defeated.",
+        "weaponEnabled": true,
+        "attackMultiplier": 0.7,
+        "healingMultiplier": 1,
+        "passive": "none",
+        "armor": "light",
+        "rescueSpent": false,
+        "lastHit": {
+          "kind": "PhysicalDirect",
+          "incoming": 20,
+          "effectiveDamage": 20,
+          "hpBefore": 17,
+          "hpAfter": 0,
+          "damageReduced": 0,
+          "actualHpLost": 17,
+          "avoidedHpLoss": 0,
+          "rescued": false
+        }
+      }
+    },
+    {
+      "style": "quick",
+      "profile": "heated",
+      "policy": [
+        "guard",
+        "guard",
+        "guard",
+        "guard",
+        "guard",
+        "guard",
+        "guard"
+      ],
+      "steps": [
+        {
+          "command": "guard",
+          "accepted": true,
+          "state": {
+            "profile": "heated",
+            "initiative": {
+              "style": "quick",
+              "playerAgility": 16,
+              "enemyAgility": 12,
+              "round": 2,
+              "order": [
+                "player",
+                "target"
+              ],
+              "playerScore": 22,
+              "targetScore": 6,
+              "seedState": 1424732933
+            },
+            "breakbar": null,
+            "responsePractice": false,
+            "wardAvailable": false,
+            "pending": null,
+            "resolution": [],
+            "round": 1,
+            "hp": 87,
+            "maxHp": 100,
+            "enemyHp": 96,
+            "charges": 2,
+            "effects": [
+              {
+                "effect": "Burn",
+                "remaining": 2
+              },
+              {
+                "effect": "Disarm",
+                "remaining": 1
+              }
+            ],
+            "threat": "Pressure: 20 direct damage, then extends poison (toxic) or burn (heated) by two rounds.",
+            "events": [
+              "Initiative round 1: player then target; scores 15/11.",
+              "Guard raised in player slot; only later contact is halved. DOT is unchanged.",
+              "Target contact: 10 incoming direct damage; 10 actual HP lost.",
+              "End round 1: Burn incoming DOT 3; actual HP lost 3; 2 rounds remain. Guard does not reduce this tick.",
+              "End round 1: Disarm incoming DOT 0; actual HP lost 0; 1 rounds remain. Guard does not reduce this tick.",
+              "Round 1 resolved: active."
+            ],
+            "outcome": "active",
+            "last": "Round 1 resolved: active.",
+            "weaponEnabled": false,
+            "attackMultiplier": 0.7,
+            "healingMultiplier": 1,
+            "passive": "none",
+            "armor": "light",
+            "rescueSpent": false,
+            "lastHit": {
+              "kind": "PhysicalDirect",
+              "incoming": 10,
+              "effectiveDamage": 10,
+              "hpBefore": 100,
+              "hpAfter": 90,
+              "damageReduced": 0,
+              "actualHpLost": 10,
+              "avoidedHpLoss": 0,
+              "rescued": false
+            }
+          }
+        },
+        {
+          "command": "guard",
+          "accepted": true,
+          "state": {
+            "profile": "heated",
+            "initiative": {
+              "style": "quick",
+              "playerAgility": 16,
+              "enemyAgility": 12,
+              "round": 3,
+              "order": [
+                "target",
+                "player"
+              ],
+              "playerScore": 14,
+              "targetScore": 18,
+              "seedState": 2807505791
+            },
+            "breakbar": null,
+            "responsePractice": false,
+            "wardAvailable": false,
+            "pending": null,
+            "resolution": [],
+            "round": 2,
+            "hp": 74,
+            "maxHp": 100,
+            "enemyHp": 96,
+            "charges": 2,
+            "effects": [
+              {
+                "effect": "Burn",
+                "remaining": 3
+              }
+            ],
+            "threat": "Contact: 20 direct damage.",
+            "events": [
+              "Initiative round 2: player then target; scores 22/6.",
+              "Guard raised in player slot; only later contact is halved. DOT is unchanged.",
+              "Target contact: 10 incoming direct damage; 10 actual HP lost.",
+              "Announced pressure reapplied Burn: remaining 4 before tick.",
+              "End round 2: Burn incoming DOT 3; actual HP lost 3; 3 rounds remain. Guard does not reduce this tick.",
+              "End round 2: Disarm incoming DOT 0; actual HP lost 0; 0 rounds remain. Guard does not reduce this tick.",
+              "Round 2 resolved: active."
+            ],
+            "outcome": "active",
+            "last": "Round 2 resolved: active.",
+            "weaponEnabled": true,
+            "attackMultiplier": 0.7,
+            "healingMultiplier": 1,
+            "passive": "none",
+            "armor": "light",
+            "rescueSpent": false,
+            "lastHit": {
+              "kind": "PhysicalDirect",
+              "incoming": 10,
+              "effectiveDamage": 10,
+              "hpBefore": 87,
+              "hpAfter": 77,
+              "damageReduced": 0,
+              "actualHpLost": 10,
+              "avoidedHpLoss": 0,
+              "rescued": false
+            }
+          }
+        },
+        {
+          "command": "guard",
+          "accepted": true,
+          "state": {
+            "profile": "heated",
+            "initiative": {
+              "style": "quick",
+              "playerAgility": 16,
+              "enemyAgility": 12,
+              "round": 4,
+              "order": [
+                "player",
+                "target"
+              ],
+              "playerScore": 14,
+              "targetScore": 7,
+              "seedState": 1029717001
+            },
+            "breakbar": null,
+            "responsePractice": false,
+            "wardAvailable": false,
+            "pending": null,
+            "resolution": [],
+            "round": 3,
+            "hp": 51,
+            "maxHp": 100,
+            "enemyHp": 96,
+            "charges": 2,
+            "effects": [
+              {
+                "effect": "Burn",
+                "remaining": 2
+              }
+            ],
+            "threat": "Contact: 20 direct damage.",
+            "events": [
+              "Initiative round 3: target then player; scores 14/18.",
+              "Target contact: 20 incoming direct damage; 20 actual HP lost.",
+              "Guard raised in player slot; only later contact is halved. DOT is unchanged.",
+              "End round 3: Burn incoming DOT 3; actual HP lost 3; 2 rounds remain. Guard does not reduce this tick.",
+              "Round 3 resolved: active."
+            ],
+            "outcome": "active",
+            "last": "Round 3 resolved: active.",
+            "weaponEnabled": true,
+            "attackMultiplier": 0.7,
+            "healingMultiplier": 1,
+            "passive": "none",
+            "armor": "light",
+            "rescueSpent": false,
+            "lastHit": {
+              "kind": "PhysicalDirect",
+              "incoming": 20,
+              "effectiveDamage": 20,
+              "hpBefore": 74,
+              "hpAfter": 54,
+              "damageReduced": 0,
+              "actualHpLost": 20,
+              "avoidedHpLoss": 0,
+              "rescued": false
+            }
+          }
+        },
+        {
+          "command": "guard",
+          "accepted": true,
+          "state": {
+            "profile": "heated",
+            "initiative": {
+              "style": "quick",
+              "playerAgility": 16,
+              "enemyAgility": 12,
+              "round": 5,
+              "order": [
+                "player",
+                "target"
+              ],
+              "playerScore": 15,
+              "targetScore": 15,
+              "seedState": 2461614630
+            },
+            "breakbar": null,
+            "responsePractice": false,
+            "wardAvailable": false,
+            "pending": null,
+            "resolution": [],
+            "round": 4,
+            "hp": 38,
+            "maxHp": 100,
+            "enemyHp": 96,
+            "charges": 2,
+            "effects": [
+              {
+                "effect": "Burn",
+                "remaining": 1
+              }
+            ],
+            "threat": "Pressure: 20 direct damage, then extends poison (toxic) or burn (heated) by two rounds.",
+            "events": [
+              "Initiative round 4: player then target; scores 14/7.",
+              "Guard raised in player slot; only later contact is halved. DOT is unchanged.",
+              "Target contact: 10 incoming direct damage; 10 actual HP lost.",
+              "End round 4: Burn incoming DOT 3; actual HP lost 3; 1 rounds remain. Guard does not reduce this tick.",
+              "Round 4 resolved: active."
+            ],
+            "outcome": "active",
+            "last": "Round 4 resolved: active.",
+            "weaponEnabled": true,
+            "attackMultiplier": 0.7,
+            "healingMultiplier": 1,
+            "passive": "none",
+            "armor": "light",
+            "rescueSpent": false,
+            "lastHit": {
+              "kind": "PhysicalDirect",
+              "incoming": 10,
+              "effectiveDamage": 10,
+              "hpBefore": 51,
+              "hpAfter": 41,
+              "damageReduced": 0,
+              "actualHpLost": 10,
+              "avoidedHpLoss": 0,
+              "rescued": false
+            }
+          }
+        },
+        {
+          "command": "guard",
+          "accepted": true,
+          "state": {
+            "profile": "heated",
+            "initiative": {
+              "style": "quick",
+              "playerAgility": 16,
+              "enemyAgility": 12,
+              "round": 6,
+              "order": [
+                "player",
+                "target"
+              ],
+              "playerScore": 22,
+              "targetScore": 9,
+              "seedState": 2578611272
+            },
+            "breakbar": null,
+            "responsePractice": false,
+            "wardAvailable": false,
+            "pending": null,
+            "resolution": [],
+            "round": 5,
+            "hp": 25,
+            "maxHp": 100,
+            "enemyHp": 96,
+            "charges": 2,
+            "effects": [
+              {
+                "effect": "Burn",
+                "remaining": 2
+              }
+            ],
+            "threat": "Contact: 20 direct damage.",
+            "events": [
+              "Initiative round 5: player then target; scores 15/15.",
+              "Guard raised in player slot; only later contact is halved. DOT is unchanged.",
+              "Target contact: 10 incoming direct damage; 10 actual HP lost.",
+              "Announced pressure reapplied Burn: remaining 3 before tick.",
+              "End round 5: Burn incoming DOT 3; actual HP lost 3; 2 rounds remain. Guard does not reduce this tick.",
+              "Round 5 resolved: active."
+            ],
+            "outcome": "active",
+            "last": "Round 5 resolved: active.",
+            "weaponEnabled": true,
+            "attackMultiplier": 0.7,
+            "healingMultiplier": 1,
+            "passive": "none",
+            "armor": "light",
+            "rescueSpent": false,
+            "lastHit": {
+              "kind": "PhysicalDirect",
+              "incoming": 10,
+              "effectiveDamage": 10,
+              "hpBefore": 38,
+              "hpAfter": 28,
+              "damageReduced": 0,
+              "actualHpLost": 10,
+              "avoidedHpLoss": 0,
+              "rescued": false
+            }
+          }
+        },
+        {
+          "command": "guard",
+          "accepted": true,
+          "state": {
+            "profile": "heated",
+            "initiative": {
+              "style": "quick",
+              "playerAgility": 16,
+              "enemyAgility": 12,
+              "round": 7,
+              "order": [
+                "target",
+                "player"
+              ],
+              "playerScore": 11,
+              "targetScore": 13,
+              "seedState": 2324567226
+            },
+            "breakbar": null,
+            "responsePractice": false,
+            "wardAvailable": false,
+            "pending": null,
+            "resolution": [],
+            "round": 6,
+            "hp": 12,
+            "maxHp": 100,
+            "enemyHp": 96,
+            "charges": 2,
+            "effects": [
+              {
+                "effect": "Burn",
+                "remaining": 1
+              }
+            ],
+            "threat": "Contact: 20 direct damage.",
+            "events": [
+              "Initiative round 6: player then target; scores 22/9.",
+              "Guard raised in player slot; only later contact is halved. DOT is unchanged.",
+              "Target contact: 10 incoming direct damage; 10 actual HP lost.",
+              "End round 6: Burn incoming DOT 3; actual HP lost 3; 1 rounds remain. Guard does not reduce this tick.",
+              "Round 6 resolved: active."
+            ],
+            "outcome": "active",
+            "last": "Round 6 resolved: active.",
+            "weaponEnabled": true,
+            "attackMultiplier": 0.7,
+            "healingMultiplier": 1,
+            "passive": "none",
+            "armor": "light",
+            "rescueSpent": false,
+            "lastHit": {
+              "kind": "PhysicalDirect",
+              "incoming": 10,
+              "effectiveDamage": 10,
+              "hpBefore": 25,
+              "hpAfter": 15,
+              "damageReduced": 0,
+              "actualHpLost": 10,
+              "avoidedHpLoss": 0,
+              "rescued": false
+            }
+          }
+        },
+        {
+          "command": "guard",
+          "accepted": true,
+          "state": {
+            "profile": "heated",
+            "initiative": {
+              "style": "quick",
+              "playerAgility": 16,
+              "enemyAgility": 12,
+              "round": 7,
+              "order": [
+                "target",
+                "player"
+              ],
+              "playerScore": 11,
+              "targetScore": 13,
+              "seedState": 2324567226
+            },
+            "breakbar": null,
+            "responsePractice": false,
+            "wardAvailable": false,
+            "pending": null,
+            "resolution": [],
+            "round": 7,
+            "hp": 0,
+            "maxHp": 100,
+            "enemyHp": 96,
+            "charges": 2,
+            "effects": [],
+            "threat": "No further threat; encounter ended.",
+            "events": [
+              "Initiative round 7: target then player; scores 11/13.",
+              "Target contact: 20 incoming direct damage; 12 actual HP lost.",
+              "End round 7: Burn incoming DOT 3; actual HP lost 0; 0 rounds remain. Guard does not reduce this tick.",
+              "Round 7 resolved: defeated."
+            ],
+            "outcome": "defeated",
+            "last": "Round 7 resolved: defeated.",
+            "weaponEnabled": true,
+            "attackMultiplier": 1,
+            "healingMultiplier": 1,
+            "passive": "none",
+            "armor": "light",
+            "rescueSpent": false,
+            "lastHit": {
+              "kind": "PhysicalDirect",
+              "incoming": 20,
+              "effectiveDamage": 20,
+              "hpBefore": 12,
+              "hpAfter": 0,
+              "damageReduced": 0,
+              "actualHpLost": 12,
+              "avoidedHpLoss": 0,
+              "rescued": false
+            }
+          }
+        }
+      ],
+      "final": {
+        "profile": "heated",
+        "initiative": {
+          "style": "quick",
+          "playerAgility": 16,
+          "enemyAgility": 12,
+          "round": 7,
+          "order": [
+            "target",
+            "player"
+          ],
+          "playerScore": 11,
+          "targetScore": 13,
+          "seedState": 2324567226
+        },
+        "breakbar": null,
+        "responsePractice": false,
+        "wardAvailable": false,
+        "pending": null,
+        "resolution": [],
+        "round": 7,
+        "hp": 0,
+        "maxHp": 100,
+        "enemyHp": 96,
+        "charges": 2,
+        "effects": [],
+        "threat": "No further threat; encounter ended.",
+        "events": [
+          "Initiative round 7: target then player; scores 11/13.",
+          "Target contact: 20 incoming direct damage; 12 actual HP lost.",
+          "End round 7: Burn incoming DOT 3; actual HP lost 0; 0 rounds remain. Guard does not reduce this tick.",
+          "Round 7 resolved: defeated."
+        ],
+        "outcome": "defeated",
+        "last": "Round 7 resolved: defeated.",
+        "weaponEnabled": true,
+        "attackMultiplier": 1,
+        "healingMultiplier": 1,
+        "passive": "none",
+        "armor": "light",
+        "rescueSpent": false,
+        "lastHit": {
+          "kind": "PhysicalDirect",
+          "incoming": 20,
+          "effectiveDamage": 20,
+          "hpBefore": 12,
+          "hpAfter": 0,
+          "damageReduced": 0,
+          "actualHpLost": 12,
+          "avoidedHpLoss": 0,
+          "rescued": false
+        }
+      }
+    }
+  ]
+}

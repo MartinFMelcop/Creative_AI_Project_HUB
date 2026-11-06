@@ -1,0 +1,15 @@
+{
+  "kind": "observed_failed_test_invocation",
+  "command": [
+    "python3",
+    "tools/test_source_launch.py"
+  ],
+  "result": "one failure among six tests",
+  "failed_test": "test_occupied_port_refuses_without_host",
+  "expected": "Address already in use",
+  "observed": "An executable dotnet path is required; install the pinned SDK separately.",
+  "cause": "Required SOURCE_LAUNCH_DOTNET was omitted while SDK was external to PATH. Environment selector corrected; no code or assertion changed.",
+  "record_type": "Transcription of observed execution-tool output; initial stream was not redirected to a raw log.",
+  "subsequent_command": "SOURCE_LAUNCH_DOTNET=/workspace/work/takakae-t02/runtime/dotnet/dotnet python3 tools/test_source_launch.py",
+  "subsequent_result": "6passed"
+}

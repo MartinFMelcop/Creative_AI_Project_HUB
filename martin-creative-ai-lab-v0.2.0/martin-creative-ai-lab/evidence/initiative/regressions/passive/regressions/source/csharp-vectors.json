@@ -1,0 +1,347 @@
+{
+  "vectors": [
+    {
+      "component": "HIT",
+      "id": "HIT_001_balanced",
+      "expected": 0.45,
+      "actual": 0.45,
+      "passed": true
+    },
+    {
+      "component": "HIT",
+      "id": "HIT_002_eva0",
+      "expected": 0.9,
+      "actual": 0.9,
+      "passed": true
+    },
+    {
+      "component": "HIT",
+      "id": "HIT_003_acc0",
+      "expected": 0.05,
+      "actual": 0.05,
+      "passed": true
+    },
+    {
+      "component": "HIT",
+      "id": "HIT_004_tiny_ratio",
+      "expected": 0.05,
+      "actual": 0.05,
+      "passed": true
+    },
+    {
+      "component": "HIT",
+      "id": "HIT_005_high_ratio",
+      "expected": 0.8991,
+      "actual": 0.8991,
+      "passed": true
+    },
+    {
+      "component": "HIT",
+      "id": "HIT_006_lvl_cap_high",
+      "expected": 0.5175,
+      "actual": 0.5175,
+      "passed": true
+    },
+    {
+      "component": "HIT",
+      "id": "HIT_007_lvl_cap_low",
+      "expected": 0.3825,
+      "actual": 0.3825,
+      "passed": true
+    },
+    {
+      "component": "HIT",
+      "id": "HIT_008_basehit_1",
+      "expected": 0.5,
+      "actual": 0.5,
+      "passed": true
+    },
+    {
+      "component": "HIT",
+      "id": "HIT_009_basehit_0_7",
+      "expected": 0.35,
+      "actual": 0.35,
+      "passed": true
+    },
+    {
+      "component": "HIT",
+      "id": "HIT_010_clamp_high",
+      "expected": 0.95,
+      "actual": 0.95,
+      "passed": true
+    },
+    {
+      "component": "HIT",
+      "id": "HIT_011_clamp_low",
+      "expected": 0.05,
+      "actual": 0.05,
+      "passed": true
+    },
+    {
+      "component": "CRIT",
+      "id": "CRIT_001_zero",
+      "expected": 0,
+      "actual": 0,
+      "passed": true
+    },
+    {
+      "component": "CRIT",
+      "id": "CRIT_002_10pct",
+      "expected": 0.1,
+      "actual": 0.1,
+      "passed": true
+    },
+    {
+      "component": "CRIT",
+      "id": "CRIT_003_cap",
+      "expected": 0.5,
+      "actual": 0.5,
+      "passed": true
+    },
+    {
+      "component": "CRIT",
+      "id": "CRIT_004_base0_5",
+      "expected": 0.1,
+      "actual": 0.1,
+      "passed": true
+    },
+    {
+      "component": "CRIT",
+      "id": "CRIT_005_base2_cap",
+      "expected": 0.5,
+      "actual": 0.5,
+      "passed": true
+    },
+    {
+      "component": "RAW",
+      "id": "RAW_001_simple",
+      "expected": 100,
+      "actual": 100,
+      "passed": true
+    },
+    {
+      "component": "RAW",
+      "id": "RAW_002_lethality",
+      "expected": 120,
+      "actual": 120,
+      "passed": true
+    },
+    {
+      "component": "RAW",
+      "id": "RAW_003_magic",
+      "expected": 132,
+      "actual": 132,
+      "passed": true
+    },
+    {
+      "component": "RAW",
+      "id": "RAW_004_decimal",
+      "expected": 93.0365,
+      "actual": 93.0365,
+      "passed": true
+    },
+    {
+      "component": "MIT",
+      "id": "MIT_001_def0",
+      "expected": 100,
+      "actual": 100,
+      "passed": true
+    },
+    {
+      "component": "MIT",
+      "id": "MIT_002_half",
+      "expected": 50,
+      "actual": 50,
+      "passed": true
+    },
+    {
+      "component": "MIT",
+      "id": "MIT_003_rounding",
+      "expected": 52,
+      "actual": 52,
+      "passed": true
+    },
+    {
+      "component": "MIT",
+      "id": "MIT_004_small",
+      "expected": 0,
+      "actual": 0,
+      "passed": true
+    },
+    {
+      "component": "MIT",
+      "id": "MIT_005_large_raw",
+      "expected": 238,
+      "actual": 238,
+      "passed": true
+    },
+    {
+      "component": "APPLY",
+      "id": "APPLY_001_eff0",
+      "expected": 0.05,
+      "actual": 0.05,
+      "passed": true
+    },
+    {
+      "component": "APPLY",
+      "id": "APPLY_002_res0",
+      "expected": 0.95,
+      "actual": 0.95,
+      "passed": true
+    },
+    {
+      "component": "APPLY",
+      "id": "APPLY_003_balanced",
+      "expected": 0.5,
+      "actual": 0.5,
+      "passed": true
+    },
+    {
+      "component": "APPLY",
+      "id": "APPLY_004_base0_8",
+      "expected": 0.4,
+      "actual": 0.4,
+      "passed": true
+    },
+    {
+      "component": "APPLY",
+      "id": "APPLY_005_tiny",
+      "expected": 0.05,
+      "actual": 0.05,
+      "passed": true
+    },
+    {
+      "component": "APPLY",
+      "id": "APPLY_006_high_clamp",
+      "expected": 0.95,
+      "actual": 0.95,
+      "passed": true
+    },
+    {
+      "component": "DUR",
+      "id": "DUR_001_base3",
+      "expected": 3,
+      "actual": 3,
+      "passed": true
+    },
+    {
+      "component": "DUR",
+      "id": "DUR_002_plus50",
+      "expected": 5,
+      "actual": 5,
+      "passed": true
+    },
+    {
+      "component": "DUR",
+      "id": "DUR_003_ten50",
+      "expected": 2,
+      "actual": 2,
+      "passed": true
+    },
+    {
+      "component": "DUR",
+      "id": "DUR_004_min1",
+      "expected": 1,
+      "actual": 1,
+      "passed": true
+    },
+    {
+      "component": "DUR",
+      "id": "DUR_005_mixed",
+      "expected": 6,
+      "actual": 6,
+      "passed": true
+    },
+    {
+      "component": "DOT",
+      "id": "DOT_001_poison_1000",
+      "expected": 60,
+      "actual": 60,
+      "passed": true
+    },
+    {
+      "component": "DOT",
+      "id": "DOT_002_bleed_999",
+      "expected": 30,
+      "actual": 30,
+      "passed": true
+    },
+    {
+      "component": "DOT",
+      "id": "DOT_003_burn_333",
+      "expected": 10,
+      "actual": 10,
+      "passed": true
+    },
+    {
+      "component": "DOT",
+      "id": "DOT_004_unknown",
+      "expected": 0,
+      "actual": 0,
+      "passed": true
+    },
+    {
+      "component": "DOT",
+      "id": "DOT_005_poison_hp1",
+      "expected": 0,
+      "actual": 0,
+      "passed": true
+    },
+    {
+      "component": "REAPPLY",
+      "id": "REAP_001_add",
+      "expected": 5,
+      "actual": 5,
+      "passed": true
+    },
+    {
+      "component": "REAPPLY",
+      "id": "REAP_002_zero",
+      "expected": 1,
+      "actual": 1,
+      "passed": true
+    },
+    {
+      "component": "REAPPLY",
+      "id": "REAP_003_large",
+      "expected": 17,
+      "actual": 17,
+      "passed": true
+    },
+    {
+      "component": "FINAL_DAMAGE",
+      "id": "FINAL_001_no_defender",
+      "expected": 100,
+      "actual": 100,
+      "passed": true
+    },
+    {
+      "component": "FINAL_DAMAGE",
+      "id": "FINAL_002_defender",
+      "expected": 50,
+      "actual": 50,
+      "passed": true
+    },
+    {
+      "component": "FINAL_DAMAGE",
+      "id": "FINAL_003_with_def",
+      "expected": 60,
+      "actual": 60,
+      "passed": true
+    },
+    {
+      "component": "FINAL_DAMAGE",
+      "id": "FINAL_004_with_def_defender",
+      "expected": 30,
+      "actual": 30,
+      "passed": true
+    },
+    {
+      "component": "FINAL_DAMAGE",
+      "id": "FINAL_005_rounding_chain",
+      "expected": 28,
+      "actual": 28,
+      "passed": true
+    }
+  ]
+}

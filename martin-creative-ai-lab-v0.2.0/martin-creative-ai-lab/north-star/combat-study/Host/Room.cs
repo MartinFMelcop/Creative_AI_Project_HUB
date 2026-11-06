@@ -8,13 +8,14 @@ public sealed class Room
     private Trial game=new();
     private readonly PassiveSlot preparation=new();
     private string profile="toxic";
-    private bool preparing,responses,controls;
+    private bool preparing,responses,controls,initiative;
+    private string tempo="heavy";
     private long sequence;
     private object observation;
     public Room(){observation=Observe("initial",true);}
     private object Observe(string command,bool accepted)=>new {
         sequence,command,accepted,phase=preparing?"preparation":game.Active?"active":"ended",
-        preparation=new{profile,responses,controls,passive=PassiveIds.Name(preparation.Selection),armor=PassiveIds.Name(preparation.Armor)},
+        preparation=new{profile,responses,controls,initiative,tempo,passive=PassiveIds.Name(preparation.Selection),armor=PassiveIds.Name(preparation.Armor)},
         state=preparing?null:game.Snapshot()
     };
     public object Snapshot()=>observation;
@@ -26,7 +27,9 @@ public sealed class Room
         string command=fields[0].Value.GetString()!;
         bool responsePrepare=command is "prepare responses toxic" or "prepare responses heated";
         bool controlPrepare=command is "prepare controls toxic" or "prepare controls heated";
-        bool prepare=controlPrepare||responsePrepare||command is "prepare toxic" or "prepare heated";
+        bool initiativePrepare=command is "prepare initiative toxic" or "prepare initiative heated";
+        bool tempoSelect=command is "tempo heavy" or "tempo quick";
+        bool prepare=initiativePrepare||controlPrepare||responsePrepare||command is "prepare toxic" or "prepare heated";
         bool restart=command is "restart toxic" or "restart heated";
         bool equip=command.StartsWith("equip ",StringComparison.Ordinal);
         Passive selected=Passive.None;Armor armor=Armor.Light;
@@ -36,24 +39,28 @@ public sealed class Room
             if(words.Length!=3)throw new ArgumentException("Exact passive and armor required");
             selected=PassiveIds.Parse(words[1]);armor=PassiveIds.ParseArmor(words[2]);
         }
-        else if(!prepare&&!restart&&command is not ("begin" or "strike" or "bash" or "guard" or "treat" or "cleanse" or "retreat" or "commit" or "release" or "break-ward" or "light-control" or "hard-control"))throw new ArgumentException("Unknown command");
+        else if(!tempoSelect&&!prepare&&!restart&&command is not ("begin" or "strike" or "bash" or "guard" or "treat" or "cleanse" or "retreat" or "commit" or "release" or "break-ward" or "light-control" or "hard-control"))throw new ArgumentException("Unknown command");
         long next=checked(sequence+1);bool accepted;
         if(prepare)
         {
             // Explicit new practice discards the prior ephemeral trial; it is not a live swap.
-            responses=responsePrepare;controls=controlPrepare;profile=controlPrepare?command[17..]:responsePrepare?command[18..]:command[8..];preparation.Equip(Passive.None,Armor.Light,PassiveContext.Preparation);preparing=true;accepted=true;
+            initiative=initiativePrepare;tempo="heavy";responses=responsePrepare;controls=controlPrepare;profile=initiativePrepare?command[19..]:controlPrepare?command[17..]:responsePrepare?command[18..]:command[8..];preparation.Equip(Passive.None,Armor.Light,PassiveContext.Preparation);preparing=true;accepted=true;
         }
         else if(restart)
         {
             // Retained default consumer semantics: restart starts an active None trial immediately.
-            responses=false;controls=false;profile=command[8..];preparation.Equip(Passive.None,Armor.Light,PassiveContext.Preparation);game=new Trial(profile);preparing=false;accepted=true;
+            initiative=false;tempo="heavy";responses=false;controls=false;profile=command[8..];preparation.Equip(Passive.None,Armor.Light,PassiveContext.Preparation);game=new Trial(profile);preparing=false;accepted=true;
+        }
+        else if(tempoSelect)
+        {
+            accepted=preparing&&initiative;if(accepted)tempo=command[6..];
         }
         else if(equip)
             accepted=preparation.Equip(selected,armor,preparing?PassiveContext.Preparation:game.Active?PassiveContext.Combat:PassiveContext.Ended);
         else if(command=="begin")
         {
             accepted=preparing;
-            if(accepted){game=new Trial(profile,preparation.Selection,preparation.Armor,responses,controls);preparing=false;}
+            if(accepted){game=new Trial(profile,preparation.Selection,preparation.Armor,responses,controls,initiative,tempo);preparing=false;}
         }
         else accepted=!preparing&&game.Execute(command);
         sequence=next;observation=Observe(command,accepted);return observation;

@@ -1,0 +1,610 @@
+[
+  {
+    "id": "light-cycle",
+    "capacity": 5,
+    "steps": [
+      {
+        "category": "Light",
+        "immune": false,
+        "before_phase": "Protected",
+        "before_value": 5,
+        "after_phase": "Protected",
+        "after_value": 4,
+        "applied": false,
+        "drained": 1,
+        "refilled": 0
+      },
+      {
+        "category": "Light",
+        "immune": false,
+        "before_phase": "Protected",
+        "before_value": 4,
+        "after_phase": "Protected",
+        "after_value": 3,
+        "applied": false,
+        "drained": 1,
+        "refilled": 0
+      },
+      {
+        "category": "Light",
+        "immune": false,
+        "before_phase": "Protected",
+        "before_value": 3,
+        "after_phase": "Protected",
+        "after_value": 2,
+        "applied": false,
+        "drained": 1,
+        "refilled": 0
+      },
+      {
+        "category": "Light",
+        "immune": false,
+        "before_phase": "Protected",
+        "before_value": 2,
+        "after_phase": "Protected",
+        "after_value": 1,
+        "applied": false,
+        "drained": 1,
+        "refilled": 0
+      },
+      {
+        "category": "Light",
+        "immune": false,
+        "before_phase": "Protected",
+        "before_value": 1,
+        "after_phase": "Exposed",
+        "after_value": 0,
+        "applied": false,
+        "drained": 1,
+        "refilled": 0
+      },
+      {
+        "category": "Light",
+        "immune": false,
+        "before_phase": "Exposed",
+        "before_value": 0,
+        "after_phase": "Exposed",
+        "after_value": 1,
+        "applied": true,
+        "drained": 0,
+        "refilled": 1
+      },
+      {
+        "category": "Light",
+        "immune": false,
+        "before_phase": "Exposed",
+        "before_value": 1,
+        "after_phase": "Exposed",
+        "after_value": 2,
+        "applied": true,
+        "drained": 0,
+        "refilled": 1
+      },
+      {
+        "category": "Light",
+        "immune": false,
+        "before_phase": "Exposed",
+        "before_value": 2,
+        "after_phase": "Exposed",
+        "after_value": 3,
+        "applied": true,
+        "drained": 0,
+        "refilled": 1
+      },
+      {
+        "category": "Light",
+        "immune": false,
+        "before_phase": "Exposed",
+        "before_value": 3,
+        "after_phase": "Exposed",
+        "after_value": 4,
+        "applied": true,
+        "drained": 0,
+        "refilled": 1
+      },
+      {
+        "category": "Light",
+        "immune": false,
+        "before_phase": "Exposed",
+        "before_value": 4,
+        "after_phase": "Protected",
+        "after_value": 5,
+        "applied": true,
+        "drained": 0,
+        "refilled": 1
+      },
+      {
+        "category": "Light",
+        "immune": false,
+        "before_phase": "Protected",
+        "before_value": 5,
+        "after_phase": "Protected",
+        "after_value": 4,
+        "applied": false,
+        "drained": 1,
+        "refilled": 0
+      },
+      {
+        "category": "Light",
+        "immune": false,
+        "before_phase": "Protected",
+        "before_value": 4,
+        "after_phase": "Protected",
+        "after_value": 3,
+        "applied": false,
+        "drained": 1,
+        "refilled": 0
+      }
+    ]
+  },
+  {
+    "id": "hard-clamped-cycle",
+    "capacity": 5,
+    "steps": [
+      {
+        "category": "Hard",
+        "immune": false,
+        "before_phase": "Protected",
+        "before_value": 5,
+        "after_phase": "Protected",
+        "after_value": 2,
+        "applied": false,
+        "drained": 3,
+        "refilled": 0
+      },
+      {
+        "category": "Hard",
+        "immune": false,
+        "before_phase": "Protected",
+        "before_value": 2,
+        "after_phase": "Exposed",
+        "after_value": 0,
+        "applied": false,
+        "drained": 2,
+        "refilled": 0
+      },
+      {
+        "category": "Hard",
+        "immune": false,
+        "before_phase": "Exposed",
+        "before_value": 0,
+        "after_phase": "Exposed",
+        "after_value": 3,
+        "applied": true,
+        "drained": 0,
+        "refilled": 3
+      },
+      {
+        "category": "Hard",
+        "immune": false,
+        "before_phase": "Exposed",
+        "before_value": 3,
+        "after_phase": "Protected",
+        "after_value": 5,
+        "applied": true,
+        "drained": 0,
+        "refilled": 2
+      },
+      {
+        "category": "Hard",
+        "immune": false,
+        "before_phase": "Protected",
+        "before_value": 5,
+        "after_phase": "Protected",
+        "after_value": 2,
+        "applied": false,
+        "drained": 3,
+        "refilled": 0
+      },
+      {
+        "category": "Hard",
+        "immune": false,
+        "before_phase": "Protected",
+        "before_value": 2,
+        "after_phase": "Exposed",
+        "after_value": 0,
+        "applied": false,
+        "drained": 2,
+        "refilled": 0
+      }
+    ]
+  },
+  {
+    "id": "mixed-cycle",
+    "capacity": 5,
+    "steps": [
+      {
+        "category": "Light",
+        "immune": false,
+        "before_phase": "Protected",
+        "before_value": 5,
+        "after_phase": "Protected",
+        "after_value": 4,
+        "applied": false,
+        "drained": 1,
+        "refilled": 0
+      },
+      {
+        "category": "Hard",
+        "immune": false,
+        "before_phase": "Protected",
+        "before_value": 4,
+        "after_phase": "Protected",
+        "after_value": 1,
+        "applied": false,
+        "drained": 3,
+        "refilled": 0
+      },
+      {
+        "category": "Light",
+        "immune": false,
+        "before_phase": "Protected",
+        "before_value": 1,
+        "after_phase": "Exposed",
+        "after_value": 0,
+        "applied": false,
+        "drained": 1,
+        "refilled": 0
+      },
+      {
+        "category": "Light",
+        "immune": false,
+        "before_phase": "Exposed",
+        "before_value": 0,
+        "after_phase": "Exposed",
+        "after_value": 1,
+        "applied": true,
+        "drained": 0,
+        "refilled": 1
+      },
+      {
+        "category": "Hard",
+        "immune": false,
+        "before_phase": "Exposed",
+        "before_value": 1,
+        "after_phase": "Exposed",
+        "after_value": 4,
+        "applied": true,
+        "drained": 0,
+        "refilled": 3
+      },
+      {
+        "category": "Light",
+        "immune": false,
+        "before_phase": "Exposed",
+        "before_value": 4,
+        "after_phase": "Protected",
+        "after_value": 5,
+        "applied": true,
+        "drained": 0,
+        "refilled": 1
+      }
+    ]
+  },
+  {
+    "id": "specific-immunity",
+    "capacity": 5,
+    "steps": [
+      {
+        "category": "Hard",
+        "immune": true,
+        "before_phase": "Protected",
+        "before_value": 5,
+        "after_phase": "Protected",
+        "after_value": 5,
+        "applied": false,
+        "drained": 0,
+        "refilled": 0
+      },
+      {
+        "category": "Hard",
+        "immune": false,
+        "before_phase": "Protected",
+        "before_value": 5,
+        "after_phase": "Protected",
+        "after_value": 2,
+        "applied": false,
+        "drained": 3,
+        "refilled": 0
+      },
+      {
+        "category": "Hard",
+        "immune": false,
+        "before_phase": "Protected",
+        "before_value": 2,
+        "after_phase": "Exposed",
+        "after_value": 0,
+        "applied": false,
+        "drained": 2,
+        "refilled": 0
+      },
+      {
+        "category": "Light",
+        "immune": true,
+        "before_phase": "Exposed",
+        "before_value": 0,
+        "after_phase": "Exposed",
+        "after_value": 0,
+        "applied": false,
+        "drained": 0,
+        "refilled": 0
+      },
+      {
+        "category": "Hard",
+        "immune": false,
+        "before_phase": "Exposed",
+        "before_value": 0,
+        "after_phase": "Exposed",
+        "after_value": 3,
+        "applied": true,
+        "drained": 0,
+        "refilled": 3
+      },
+      {
+        "category": "Hard",
+        "immune": true,
+        "before_phase": "Exposed",
+        "before_value": 3,
+        "after_phase": "Exposed",
+        "after_value": 3,
+        "applied": false,
+        "drained": 0,
+        "refilled": 0
+      },
+      {
+        "category": "Hard",
+        "immune": false,
+        "before_phase": "Exposed",
+        "before_value": 3,
+        "after_phase": "Protected",
+        "after_value": 5,
+        "applied": true,
+        "drained": 0,
+        "refilled": 2
+      },
+      {
+        "category": "Light",
+        "immune": true,
+        "before_phase": "Protected",
+        "before_value": 5,
+        "after_phase": "Protected",
+        "after_value": 5,
+        "applied": false,
+        "drained": 0,
+        "refilled": 0
+      }
+    ]
+  },
+  {
+    "id": "source-capacity-twenty",
+    "capacity": 20,
+    "steps": [
+      {
+        "category": "Hard",
+        "immune": false,
+        "before_phase": "Protected",
+        "before_value": 20,
+        "after_phase": "Protected",
+        "after_value": 17,
+        "applied": false,
+        "drained": 3,
+        "refilled": 0
+      },
+      {
+        "category": "Hard",
+        "immune": false,
+        "before_phase": "Protected",
+        "before_value": 17,
+        "after_phase": "Protected",
+        "after_value": 14,
+        "applied": false,
+        "drained": 3,
+        "refilled": 0
+      },
+      {
+        "category": "Hard",
+        "immune": false,
+        "before_phase": "Protected",
+        "before_value": 14,
+        "after_phase": "Protected",
+        "after_value": 11,
+        "applied": false,
+        "drained": 3,
+        "refilled": 0
+      },
+      {
+        "category": "Hard",
+        "immune": false,
+        "before_phase": "Protected",
+        "before_value": 11,
+        "after_phase": "Protected",
+        "after_value": 8,
+        "applied": false,
+        "drained": 3,
+        "refilled": 0
+      },
+      {
+        "category": "Hard",
+        "immune": false,
+        "before_phase": "Protected",
+        "before_value": 8,
+        "after_phase": "Protected",
+        "after_value": 5,
+        "applied": false,
+        "drained": 3,
+        "refilled": 0
+      },
+      {
+        "category": "Hard",
+        "immune": false,
+        "before_phase": "Protected",
+        "before_value": 5,
+        "after_phase": "Protected",
+        "after_value": 2,
+        "applied": false,
+        "drained": 3,
+        "refilled": 0
+      },
+      {
+        "category": "Hard",
+        "immune": false,
+        "before_phase": "Protected",
+        "before_value": 2,
+        "after_phase": "Exposed",
+        "after_value": 0,
+        "applied": false,
+        "drained": 2,
+        "refilled": 0
+      },
+      {
+        "category": "Hard",
+        "immune": false,
+        "before_phase": "Exposed",
+        "before_value": 0,
+        "after_phase": "Exposed",
+        "after_value": 3,
+        "applied": true,
+        "drained": 0,
+        "refilled": 3
+      },
+      {
+        "category": "Hard",
+        "immune": false,
+        "before_phase": "Exposed",
+        "before_value": 3,
+        "after_phase": "Exposed",
+        "after_value": 6,
+        "applied": true,
+        "drained": 0,
+        "refilled": 3
+      },
+      {
+        "category": "Hard",
+        "immune": false,
+        "before_phase": "Exposed",
+        "before_value": 6,
+        "after_phase": "Exposed",
+        "after_value": 9,
+        "applied": true,
+        "drained": 0,
+        "refilled": 3
+      },
+      {
+        "category": "Hard",
+        "immune": false,
+        "before_phase": "Exposed",
+        "before_value": 9,
+        "after_phase": "Exposed",
+        "after_value": 12,
+        "applied": true,
+        "drained": 0,
+        "refilled": 3
+      },
+      {
+        "category": "Hard",
+        "immune": false,
+        "before_phase": "Exposed",
+        "before_value": 12,
+        "after_phase": "Exposed",
+        "after_value": 15,
+        "applied": true,
+        "drained": 0,
+        "refilled": 3
+      },
+      {
+        "category": "Hard",
+        "immune": false,
+        "before_phase": "Exposed",
+        "before_value": 15,
+        "after_phase": "Exposed",
+        "after_value": 18,
+        "applied": true,
+        "drained": 0,
+        "refilled": 3
+      },
+      {
+        "category": "Hard",
+        "immune": false,
+        "before_phase": "Exposed",
+        "before_value": 18,
+        "after_phase": "Protected",
+        "after_value": 20,
+        "applied": true,
+        "drained": 0,
+        "refilled": 2
+      },
+      {
+        "category": "Hard",
+        "immune": false,
+        "before_phase": "Protected",
+        "before_value": 20,
+        "after_phase": "Protected",
+        "after_value": 17,
+        "applied": false,
+        "drained": 3,
+        "refilled": 0
+      },
+      {
+        "category": "Hard",
+        "immune": false,
+        "before_phase": "Protected",
+        "before_value": 17,
+        "after_phase": "Protected",
+        "after_value": 14,
+        "applied": false,
+        "drained": 3,
+        "refilled": 0
+      }
+    ]
+  },
+  {
+    "id": "unit-capacity-destination-probe",
+    "capacity": 1,
+    "steps": [
+      {
+        "category": "Light",
+        "immune": false,
+        "before_phase": "Protected",
+        "before_value": 1,
+        "after_phase": "Exposed",
+        "after_value": 0,
+        "applied": false,
+        "drained": 1,
+        "refilled": 0
+      },
+      {
+        "category": "Hard",
+        "immune": false,
+        "before_phase": "Exposed",
+        "before_value": 0,
+        "after_phase": "Protected",
+        "after_value": 1,
+        "applied": true,
+        "drained": 0,
+        "refilled": 1
+      },
+      {
+        "category": "Hard",
+        "immune": true,
+        "before_phase": "Protected",
+        "before_value": 1,
+        "after_phase": "Protected",
+        "after_value": 1,
+        "applied": false,
+        "drained": 0,
+        "refilled": 0
+      },
+      {
+        "category": "Light",
+        "immune": true,
+        "before_phase": "Protected",
+        "before_value": 1,
+        "after_phase": "Protected",
+        "after_value": 1,
+        "applied": false,
+        "drained": 0,
+        "refilled": 0
+      }
+    ]
+  }
+]

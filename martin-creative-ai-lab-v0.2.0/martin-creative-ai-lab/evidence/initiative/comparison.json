@@ -1,0 +1,121 @@
+{
+  "baseline_commit": "95ce9d57e71b9d5d48e36cbd47acbd5e442baf4f",
+  "baseline_breakbar_native_equal": true,
+  "only_removed_additive_field": "initiative",
+  "native_order_causal_control": {
+    "policy": [
+      "cleanse",
+      "strike",
+      "strike",
+      "strike"
+    ],
+    "seeds": [
+      1314083905,
+      6
+    ],
+    "first_three_mechanical_states_equal": true,
+    "excluded_observations": [
+      "events",
+      "initiative",
+      "lastHit"
+    ],
+    "final_states": [
+      {
+        "profile": "toxic",
+        "initiative": {
+          "style": "heavy",
+          "playerAgility": 8,
+          "enemyAgility": 12,
+          "round": 4,
+          "order": [
+            "target",
+            "player"
+          ],
+          "playerScore": 6,
+          "targetScore": 7,
+          "seedState": 1029717001
+        },
+        "breakbar": null,
+        "responsePractice": false,
+        "wardAvailable": false,
+        "pending": null,
+        "resolution": [],
+        "round": 4,
+        "hp": 8,
+        "maxHp": 100,
+        "enemyHp": 0,
+        "charges": 1,
+        "effects": [],
+        "threat": "No further threat; encounter ended.",
+        "events": [
+          "Initiative round 4: target then player; scores 6/7.",
+          "Target contact: 20 incoming direct damage; 20 actual HP lost.",
+          "strike: 32 direct damage to target. Burn multiplier 1.0.",
+          "Round 4 resolved: secured."
+        ],
+        "outcome": "secured",
+        "last": "Round 4 resolved: secured.",
+        "weaponEnabled": true,
+        "attackMultiplier": 1,
+        "healingMultiplier": 1,
+        "passive": "none",
+        "armor": "light",
+        "rescueSpent": false,
+        "lastHit": {
+          "kind": "PhysicalDirect",
+          "incoming": 20,
+          "effectiveDamage": 20,
+          "hpBefore": 28,
+          "hpAfter": 8,
+          "damageReduced": 0,
+          "actualHpLost": 20,
+          "avoidedHpLoss": 0,
+          "rescued": false
+        }
+      },
+      {
+        "profile": "toxic",
+        "initiative": {
+          "style": "heavy",
+          "playerAgility": 8,
+          "enemyAgility": 12,
+          "round": 4,
+          "order": [
+            "player",
+            "target"
+          ],
+          "playerScore": 12,
+          "targetScore": 7,
+          "seedState": 588210286
+        },
+        "breakbar": null,
+        "responsePractice": false,
+        "wardAvailable": false,
+        "pending": null,
+        "resolution": [],
+        "round": 4,
+        "hp": 28,
+        "maxHp": 100,
+        "enemyHp": 0,
+        "charges": 1,
+        "effects": [],
+        "threat": "No further threat; encounter ended.",
+        "events": [
+          "Initiative round 4: player then target; scores 12/7.",
+          "strike: 32 direct damage to target. Burn multiplier 1.0.",
+          "Round 4 resolved: secured."
+        ],
+        "outcome": "secured",
+        "last": "Round 4 resolved: secured.",
+        "weaponEnabled": true,
+        "attackMultiplier": 1,
+        "healingMultiplier": 1,
+        "passive": "none",
+        "armor": "light",
+        "rescueSpent": false,
+        "lastHit": null
+      }
+    ]
+  },
+  "limits": "Seed variation is only the native Trial test configuration; Host always uses fixed seed. Heavy/Quick change damage and AGI together and do not isolate speed or prove balance."
+}

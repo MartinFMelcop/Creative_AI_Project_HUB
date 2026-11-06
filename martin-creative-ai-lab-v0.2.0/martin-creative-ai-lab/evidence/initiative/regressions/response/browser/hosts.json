@@ -1,0 +1,45 @@
+{
+  "complete": true,
+  "logs": [
+    {
+      "command": [
+        "/workspace/work/takakae-t02/runtime/dotnet/dotnet",
+        "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/combat-study/Host/bin/Release/net10.0/NorthStar.CombatStudy.dll",
+        "--serve",
+        "33239",
+        "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/combat-study/Host/web",
+        "--seconds",
+        "180"
+      ],
+      "stdout": "READY http://127.0.0.1:33239/\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/workspace/work/takakae-t02/runtime/dotnet/dotnet",
+        "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/combat-study/Host/bin/Release/net10.0/NorthStar.CombatStudy.dll",
+        "--serve",
+        "40155",
+        "/tmp/response-renderer-z2gz56/false-refund",
+        "--seconds",
+        "180"
+      ],
+      "stdout": "READY http://127.0.0.1:40155/\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/workspace/work/takakae-t02/runtime/dotnet/dotnet",
+        "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/combat-study/Host/bin/Release/net10.0/NorthStar.CombatStudy.dll",
+        "--serve",
+        "42217",
+        "/tmp/response-renderer-z2gz56/premature-hit",
+        "--seconds",
+        "180"
+      ],
+      "stdout": "READY http://127.0.0.1:42217/\n",
+      "stderr": ""
+    }
+  ],
+  "errors": []
+}

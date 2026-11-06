@@ -1,0 +1,64 @@
+{
+  "schema": "hub.source-launch.v1",
+  "status": "success",
+  "events": [
+    {
+      "event": "ready",
+      "id": "field-journey",
+      "url": "http://127.0.0.1:39961/",
+      "pid": 8756
+    },
+    {
+      "event": "expired",
+      "exit_code": 0
+    }
+  ],
+  "boundary": "Trusted-local source experiment, ephemeral and SDK-required. No Unity/Windows/Steam, recipient inclusion, sandbox or human validation.",
+  "stage": "expired",
+  "commands": [
+    {
+      "command": [
+        "/workspace/work/takakae-t02/runtime/dotnet/dotnet",
+        "--version"
+      ],
+      "exit_code": 0,
+      "stdout": "10.0.401\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/workspace/work/takakae-t02/runtime/dotnet/dotnet",
+        "build",
+        "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/field-journey/Host/NorthStar.FieldJourney.csproj",
+        "-c",
+        "Release",
+        "-m:1",
+        "--disable-build-servers"
+      ],
+      "exit_code": 0,
+      "stdout": "  Determining projects to restore...\n  Restored /workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/memory-study/Host/NorthStar.MemoryStudy.csproj (in 111 ms).\n  Restored /workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/memory-study/Rules/NorthStar.Memory.csproj (in 171 ms).\n  Restored /workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/memory-study/Conditions/NorthStar.Conditions.csproj (in 34 ms).\n  Restored /workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/field-journey/Sampling/NorthStar.FieldSampling.csproj (in 0.7 ms).\n  Restored /workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/field-journey/Presentation/NorthStar.FieldPresentation.csproj (in 0.5 ms).\n  Restored /workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/field-journey/Preparation/NorthStar.Preparation.csproj (in 0.7 ms).\n  Restored /workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/intake/Host/NorthStar.Intake.csproj (in 5 ms).\n  Restored /workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/field-journey/Gate/NorthStar.FieldGate.csproj (in 0.5 ms).\n  Restored /workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/field-journey/Host/NorthStar.FieldJourney.csproj (in 2 ms).\n  Restored /workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/Portable/Loadout/NorthStar.Loadout.csproj (in 1 ms).\n  Restored /workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/Portable/Forge/NorthStar.Forge.csproj (in 0.8 ms).\n  Restored /workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/Portable/Crossing/NorthStar.Crossing.csproj (in 0.7 ms).\n  Restored /workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/Domain/NorthStar.Domain.csproj (in 0.5 ms).\n  NorthStar.Domain -> /workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/Domain/bin/Release/netstandard2.1/NorthStar.Domain.dll\n  NorthStar.Crossing -> /workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/Portable/Crossing/bin/Release/netstandard2.1/NorthStar.Crossing.dll\n  NorthStar.Forge -> /workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/Portable/Forge/bin/Release/netstandard2.1/NorthStar.Forge.dll\n  NorthStar.Loadout -> /workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/Portable/Loadout/bin/Release/netstandard2.1/NorthStar.Loadout.dll\n  NorthStar.Preparation -> /workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/field-journey/Preparation/bin/Release/netstandard2.1/NorthStar.Preparation.dll\n  NorthStar.FieldGate -> /workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/field-journey/Gate/bin/Release/netstandard2.1/NorthStar.FieldGate.dll\n  NorthStar.FieldSampling -> /workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/field-journey/Sampling/bin/Release/netstandard2.1/NorthStar.FieldSampling.dll\n  NorthStar.FieldPresentation -> /workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/field-journey/Presentation/bin/Release/netstandard2.1/NorthStar.FieldPresentation.dll\n  NorthStar.Intake -> /workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/intake/Host/bin/Release/net10.0/NorthStar.Intake.dll\n  NorthStar.Memory -> /workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/memory-study/Rules/bin/Release/netstandard2.1/NorthStar.Memory.dll\n  NorthStar.Conditions -> /workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/memory-study/Conditions/bin/Release/netstandard2.1/NorthStar.Conditions.dll\n  NorthStar.MemoryStudy -> /workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/memory-study/Host/bin/Release/net10.0/NorthStar.MemoryStudy.dll\n  NorthStar.FieldJourney -> /workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/field-journey/Host/bin/Release/net10.0/NorthStar.FieldJourney.dll\n\nBuild succeeded.\n    0 Warning(s)\n    0 Error(s)\n\nTime Elapsed 00:00:15.19\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/workspace/work/takakae-t02/runtime/dotnet/dotnet",
+        "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/field-journey/Host/bin/Release/net10.0/NorthStar.FieldJourney.dll",
+        "--serve",
+        "39961",
+        "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/field-journey/web",
+        "--seconds",
+        "12"
+      ],
+      "exit_code": 0
+    }
+  ],
+  "id": "field-journey",
+  "pid": 8756,
+  "sdk": "10.0.401",
+  "url": "http://127.0.0.1:39961/",
+  "host_exit_code": 0,
+  "host_lines": [
+    "READY http://127.0.0.1:39961/"
+  ],
+  "owned_process_exited": true
+}

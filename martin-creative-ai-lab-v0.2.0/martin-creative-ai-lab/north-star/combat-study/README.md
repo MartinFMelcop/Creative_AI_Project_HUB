@@ -188,3 +188,36 @@ The source also declares a twenty-point category; library vectors exercise it, b
 this consumer does not stage that encounter. Complete boss immunity/effect/acquisition
 catalogs, trigger durations, full combat, Ruby/RGSS/RMXP, Unity/Windows/Steam and human
 assessment remain unresolved. New code is original; no source fiction was imported.
+
+
+## Optional initiative practice — announced order and surviving to act
+
+Prepare initiative explicitly, choose Heavy or Quick while preparing, then Begin the
+SAME Treatment Line. Heavy uses agility8 and strike32/bash18; Quick uses agility16 and
+strike16/bash10. The target uses agility12. These are original experimental trade-offs,
+not source classes or recovered numeric skill values. Existing treatment charges,
+effects, passive contact and HP remain authoritative.
+
+A reproducible per-encounter seed supplies bounded jitter to each actor each global
+round; the actual C# queue and scores are displayed before committing an action.
+Target-first contact may defeat the player before the chosen action can execute.
+Player-first lethal damage prevents later target contact. Guard cannot retroactively
+protect a contact already resolved; cure, treatment and withdrawal also occupy the
+player's actual queue position. Direct lethal damage is checked after each actor.
+Only the single global-round close applies DOT and expires effects. Reads, redraw and
+rejected unavailable actions never reroll or advance the queue.
+
+Only selected recalculation/variation/tie/visible-order requirements are adapted from
+preserved P10 source. Jitter formula, fixed seed, tempo values, tie algorithm and two
+one-turn actors are declared destination policies. Formation, extra turns, full
+AGI/trigger/slot ordering, fizzle, cooldown and historical Ruby/RGSS remain unresolved.
+Classic, passive, response and control modes remain available and separately verified.
+No FieldJourney, account, save, Unity, Windows or Steam integration is implied.
+
+```bash
+python3 north-star/combat-study/tools/initiative-verify.py --dotnet dotnet --output /tmp/initiative-new
+```
+
+See the [prospective method](../../labs/combat-response/initiative/PROTOCOL.md) and
+[new execution](../../evidence/initiative/RUN.json). Actual controls demonstrate software
+consequences, not balanced tempo choices, comprehension, enjoyment or final canon.

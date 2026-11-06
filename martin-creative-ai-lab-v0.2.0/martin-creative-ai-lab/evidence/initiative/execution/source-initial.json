@@ -1,0 +1,4117 @@
+{
+  "schema_version": 1,
+  "source": "references/rave-master/snapshots/36af1651271422ae33856e8b5d7b45702215f165/source/RM_CORE/DATA/CORE/REGRAS_DE_COMBATE.csv",
+  "source_sha256": "f2c97e85ce573c50aa1959ec81221882c4fff4d164126fc22c5e6c9dd64c17e9",
+  "source_rows": {
+    "FLW-002": [
+      "FLW-002",
+      "Fluxo",
+      "Turnos",
+      "Ação por turno",
+      "Cada unidade tem 1 ação por turno. Habilidades/passivas podem conceder pontos de ação que geram turnos extras.",
+      "1 ação",
+      "Todos",
+      "MVP",
+      "",
+      ""
+    ],
+    "FLW-003": [
+      "FLW-003",
+      "Fluxo",
+      "Rodada",
+      "Definição de rodada",
+      "A rodada termina quando todas as unidades vivas no início da rodada tiveram pelo menos 1 turno.",
+      "A",
+      "Todos",
+      "MVP",
+      "",
+      ""
+    ],
+    "FLW-005": [
+      "FLW-005",
+      "Fluxo",
+      "Rodada",
+      "Efeito de fim de rodada",
+      "Ao fim da rodada: tick de DOT, geração leve de SP, expiração de efeitos por rodada, e checagens finais.",
+      "Sim",
+      "Todos",
+      "MVP",
+      "",
+      ""
+    ],
+    "INI-001": [
+      "INI-001",
+      "Iniciativa",
+      "Cálculo",
+      "Recalcular por rodada",
+      "A iniciativa é recalculada no início de cada rodada com variação controlada baseada em AGI.",
+      "B",
+      "Todos",
+      "MVP",
+      "",
+      ""
+    ],
+    "INI-002": [
+      "INI-002",
+      "Iniciativa",
+      "Empate",
+      "Empate em AGI",
+      "Empate na ordem: desempate por RNG.",
+      "RNG",
+      "Todos",
+      "MVP",
+      "",
+      ""
+    ],
+    "INI-004": [
+      "INI-004",
+      "Iniciativa",
+      "Comunicação",
+      "Timeline visível",
+      "A UI exibe a fila de turnos (timeline) para leitura do fluxo.",
+      "Ativa",
+      "Todos",
+      "MVP",
+      "",
+      ""
+    ],
+    "INI-005": [
+      "INI-005",
+      "Iniciativa",
+      "Variação",
+      "Variação controlada",
+      "A variação controla pequenas mudanças na fila a cada rodada (não é ordem fixa).",
+      "Ativa",
+      "Todos",
+      "MVP",
+      "",
+      ""
+    ]
+  },
+  "helpers": [
+    {
+      "path": "references/rave-master/snapshots/36af1651271422ae33856e8b5d7b45702215f165/source/RM_ACT1/DATA/DEV/RGSS/RM_COMBAT_RUNTIME.rb",
+      "sha256": "60f1489f5dcfc3f92a112a369b6cefe66b5fb52be3ee2086c6cbe1e7f9ea87a6",
+      "size_bytes": 4221,
+      "methods": [
+        "clamp",
+        "safe_ratio",
+        "hit_chance",
+        "crit_chance",
+        "raw_damage",
+        "mitigate",
+        "apply_chance",
+        "final_duration",
+        "dot_tick",
+        "reapply_duration"
+      ],
+      "observed_boundary": "# - This module is a helper/API; full integration into RMXP battle loop can be done in follow-up AJ(s).",
+      "executed": false,
+      "limit": "These inspected files supply formula helpers, not an initiative scheduler. Not a claim of global absence or historical Ruby execution."
+    },
+    {
+      "path": "references/rave-master/snapshots/36af1651271422ae33856e8b5d7b45702215f165/source/RM_DIST/RMXP_BASE/ScriptsCustom/RM_COMBAT_RUNTIME.rb",
+      "sha256": "60f1489f5dcfc3f92a112a369b6cefe66b5fb52be3ee2086c6cbe1e7f9ea87a6",
+      "size_bytes": 4221,
+      "methods": [
+        "clamp",
+        "safe_ratio",
+        "hit_chance",
+        "crit_chance",
+        "raw_damage",
+        "mitigate",
+        "apply_chance",
+        "final_duration",
+        "dot_tick",
+        "reapply_duration"
+      ],
+      "observed_boundary": "# - This module is a helper/API; full integration into RMXP battle loop can be done in follow-up AJ(s).",
+      "executed": false,
+      "limit": "These inspected files supply formula helpers, not an initiative scheduler. Not a claim of global absence or historical Ruby execution."
+    }
+  ],
+  "cases": [
+    {
+      "style": "heavy",
+      "seed": 0,
+      "rounds": 32
+    },
+    {
+      "style": "heavy",
+      "seed": 1,
+      "rounds": 32
+    },
+    {
+      "style": "heavy",
+      "seed": 2,
+      "rounds": 32
+    },
+    {
+      "style": "heavy",
+      "seed": 17,
+      "rounds": 32
+    },
+    {
+      "style": "heavy",
+      "seed": 1314083905,
+      "rounds": 32
+    },
+    {
+      "style": "heavy",
+      "seed": 4294967295,
+      "rounds": 32
+    },
+    {
+      "style": "quick",
+      "seed": 0,
+      "rounds": 32
+    },
+    {
+      "style": "quick",
+      "seed": 1,
+      "rounds": 32
+    },
+    {
+      "style": "quick",
+      "seed": 2,
+      "rounds": 32
+    },
+    {
+      "style": "quick",
+      "seed": 17,
+      "rounds": 32
+    },
+    {
+      "style": "quick",
+      "seed": 1314083905,
+      "rounds": 32
+    },
+    {
+      "style": "quick",
+      "seed": 4294967295,
+      "rounds": 32
+    }
+  ],
+  "expected_vectors": [
+    {
+      "style": "heavy",
+      "seed": 0,
+      "rounds": [
+        {
+          "round": 1,
+          "playerScore": 9,
+          "targetScore": 8,
+          "seedState": 1196435762,
+          "order": [
+            "player",
+            "target"
+          ]
+        },
+        {
+          "round": 2,
+          "playerScore": 7,
+          "targetScore": 6,
+          "seedState": 2868466484,
+          "order": [
+            "player",
+            "target"
+          ]
+        },
+        {
+          "round": 3,
+          "playerScore": 5,
+          "targetScore": 9,
+          "seedState": 2670642822,
+          "order": [
+            "target",
+            "player"
+          ]
+        },
+        {
+          "round": 4,
+          "playerScore": 9,
+          "targetScore": 10,
+          "seedState": 2748932008,
+          "order": [
+            "target",
+            "player"
+          ]
+        },
+        {
+          "round": 5,
+          "playerScore": 10,
+          "targetScore": 18,
+          "seedState": 2498801434,
+          "order": [
+            "target",
+            "player"
+          ]
+        },
+        {
+          "round": 6,
+          "playerScore": 6,
+          "targetScore": 7,
+          "seedState": 3167820124,
+          "order": [
+            "target",
+            "player"
+          ]
+        },
+        {
+          "round": 7,
+          "playerScore": 9,
+          "targetScore": 14,
+          "seedState": 3801544430,
+          "order": [
+            "target",
+            "player"
+          ]
+        },
+        {
+          "round": 8,
+          "playerScore": 3,
+          "targetScore": 13,
+          "seedState": 2210837584,
+          "order": [
+            "target",
+            "player"
+          ]
+        },
+        {
+          "round": 9,
+          "playerScore": 10,
+          "targetScore": 8,
+          "seedState": 1338634754,
+          "order": [
+            "player",
+            "target"
+          ]
+        },
+        {
+          "round": 10,
+          "playerScore": 6,
+          "targetScore": 12,
+          "seedState": 2768872580,
+          "order": [
+            "target",
+            "player"
+          ]
+        },
+        {
+          "round": 11,
+          "playerScore": 5,
+          "targetScore": 8,
+          "seedState": 2326606934,
+          "order": [
+            "target",
+            "player"
+          ]
+        },
+        {
+          "round": 12,
+          "playerScore": 14,
+          "targetScore": 16,
+          "seedState": 1061592568,
+          "order": [
+            "target",
+            "player"
+          ]
+        },
+        {
+          "round": 13,
+          "playerScore": 3,
+          "targetScore": 14,
+          "seedState": 1140036074,
+          "order": [
+            "target",
+            "player"
+          ]
+        },
+        {
+          "round": 14,
+          "playerScore": 4,
+          "targetScore": 17,
+          "seedState": 2629538988,
+          "order": [
+            "target",
+            "player"
+          ]
+        },
+        {
+          "round": 15,
+          "playerScore": 3,
+          "targetScore": 16,
+          "seedState": 573775550,
+          "order": [
+            "target",
+            "player"
+          ]
+        },
+        {
+          "round": 16,
+          "playerScore": 6,
+          "targetScore": 10,
+          "seedState": 95141024,
+          "order": [
+            "target",
+            "player"
+          ]
+        },
+        {
+          "round": 17,
+          "playerScore": 6,
+          "targetScore": 10,
+          "seedState": 1618554578,
+          "order": [
+            "target",
+            "player"
+          ]
+        },
+        {
+          "round": 18,
+          "playerScore": 8,
+          "targetScore": 17,
+          "seedState": 2685635028,
+          "order": [
+            "target",
+            "player"
+          ]
+        },
+        {
+          "round": 19,
+          "playerScore": 6,
+          "targetScore": 16,
+          "seedState": 740185638,
+          "order": [
+            "target",
+            "player"
+          ]
+        },
+        {
+          "round": 20,
+          "playerScore": 2,
+          "targetScore": 12,
+          "seedState": 2426187848,
+          "order": [
+            "target",
+            "player"
+          ]
+        },
+        {
+          "round": 21,
+          "playerScore": 5,
+          "targetScore": 9,
+          "seedState": 366635194,
+          "order": [
+            "target",
+            "player"
+          ]
+        },
+        {
+          "round": 22,
+          "playerScore": 11,
+          "targetScore": 7,
+          "seedState": 3503432700,
+          "order": [
+            "player",
+            "target"
+          ]
+        },
+        {
+          "round": 23,
+          "playerScore": 8,
+          "targetScore": 8,
+          "seedState": 408928405,
+          "order": [
+            "target",
+            "player"
+          ]
+        },
+        {
+          "round": 24,
+          "playerScore": 11,
+          "targetScore": 16,
+          "seedState": 1263785871,
+          "order": [
+            "target",
+            "player"
+          ]
+        },
+        {
+          "round": 25,
+          "playerScore": 13,
+          "targetScore": 11,
+          "seedState": 594074265,
+          "order": [
+            "player",
+            "target"
+          ]
+        },
+        {
+          "round": 26,
+          "playerScore": 2,
+          "targetScore": 18,
+          "seedState": 3868161075,
+          "order": [
+            "target",
+            "player"
+          ]
+        },
+        {
+          "round": 27,
+          "playerScore": 6,
+          "targetScore": 9,
+          "seedState": 166605533,
+          "order": [
+            "target",
+            "player"
+          ]
+        },
+        {
+          "round": 28,
+          "playerScore": 12,
+          "targetScore": 9,
+          "seedState": 1798252823,
+          "order": [
+            "player",
+            "target"
+          ]
+        },
+        {
+          "round": 29,
+          "playerScore": 11,
+          "targetScore": 8,
+          "seedState": 171871585,
+          "order": [
+            "player",
+            "target"
+          ]
+        },
+        {
+          "round": 30,
+          "playerScore": 7,
+          "targetScore": 11,
+          "seedState": 698505787,
+          "order": [
+            "target",
+            "player"
+          ]
+        },
+        {
+          "round": 31,
+          "playerScore": 14,
+          "targetScore": 18,
+          "seedState": 634580517,
+          "order": [
+            "target",
+            "player"
+          ]
+        },
+        {
+          "round": 32,
+          "playerScore": 13,
+          "targetScore": 15,
+          "seedState": 2017242015,
+          "order": [
+            "target",
+            "player"
+          ]
+        }
+      ]
+    },
+    {
+      "style": "heavy",
+      "seed": 1,
+      "rounds": [
+        {
+          "round": 1,
+          "playerScore": 14,
+          "targetScore": 13,
+          "seedState": 1586005467,
+          "order": [
+            "player",
+            "target"
+          ]
+        },
+        {
+          "round": 2,
+          "playerScore": 7,
+          "targetScore": 15,
+          "seedState": 3027450565,
+          "order": [
+            "target",
+            "player"
+          ]
+        },
+        {
+          "round": 3,
+          "playerScore": 4,
+          "targetScore": 16,
+          "seedState": 1587069247,
+          "order": [
+            "target",
+            "player"
+          ]
+        },
+        {
+          "round": 4,
+          "playerScore": 6,
+          "targetScore": 16,
+          "seedState": 2388811721,
+          "order": [
+            "target",
+            "player"
+          ]
+        },
+        {
+          "round": 5,
+          "playerScore": 13,
+          "targetScore": 17,
+          "seedState": 2745540835,
+          "order": [
+            "target",
+            "player"
+          ]
+        },
+        {
+          "round": 6,
+          "playerScore": 2,
+          "targetScore": 18,
+          "seedState": 1814098701,
+          "order": [
+            "target",
+            "player"
+          ]
+        },
+        {
+          "round": 7,
+          "playerScore": 11,
+          "targetScore": 14,
+          "seedState": 3594602695,
+          "order": [
+            "target",
+            "player"
+          ]
+        },
+        {
+          "round": 8,
+          "playerScore": 13,
+          "targetScore": 11,
+          "seedState": 4212701329,
+          "order": [
+            "player",
+            "target"
+          ]
+        },
+        {
+          "round": 9,
+          "playerScore": 13,
+          "targetScore": 6,
+          "seedState": 1403919595,
+          "order": [
+            "player",
+            "target"
+          ]
+        },
+        {
+          "round": 10,
+          "playerScore": 8,
+          "targetScore": 14,
+          "seedState": 2282599509,
+          "order": [
+            "target",
+            "player"
+          ]
+        },
+        {
+          "round": 11,
+          "playerScore": 9,
+          "targetScore": 12,
+          "seedState": 448971087,
+          "order": [
+            "target",
+            "player"
+          ]
+        },
+        {
+          "round": 12,
+          "playerScore": 6,
+          "targetScore": 13,
+          "seedState": 1369582169,
+          "order": [
+            "target",
+            "player"
+          ]
+        },
+        {
+          "round": 13,
+          "playerScore": 11,
+          "targetScore": 8,
+          "seedState": 3037600243,
+          "order": [
+            "player",
+            "target"
+          ]
+        },
+        {
+          "round": 14,
+          "playerScore": 10,
+          "targetScore": 18,
+          "seedState": 1629134493,
+          "order": [
+            "target",
+            "player"
+          ]
+        },
+        {
+          "round": 15,
+          "playerScore": 7,
+          "targetScore": 8,
+          "seedState": 3225111255,
+          "order": [
+            "target",
+            "player"
+          ]
+        },
+        {
+          "round": 16,
+          "playerScore": 10,
+          "targetScore": 17,
+          "seedState": 761386273,
+          "order": [
+            "target",
+            "player"
+          ]
+        },
+        {
+          "round": 17,
+          "playerScore": 11,
+          "targetScore": 7,
+          "seedState": 4222990331,
+          "order": [
+            "player",
+            "target"
+          ]
+        },
+        {
+          "round": 18,
+          "playerScore": 7,
+          "targetScore": 14,
+          "seedState": 2353844709,
+          "order": [
+            "target",
+            "player"
+          ]
+        },
+        {
+          "round": 19,
+          "playerScore": 5,
+          "targetScore": 17,
+          "seedState": 4270654815,
+          "order": [
+            "target",
+            "player"
+          ]
+        },
+        {
+          "round": 20,
+          "playerScore": 14,
+          "targetScore": 11,
+          "seedState": 3055474921,
+          "order": [
+            "player",
+            "target"
+          ]
+        },
+        {
+          "round": 21,
+          "playerScore": 4,
+          "targetScore": 14,
+          "seedState": 4187559683,
+          "order": [
+            "target",
+            "player"
+          ]
+        },
+        {
+          "round": 22,
+          "playerScore": 4,
+          "targetScore": 15,
+          "seedState": 1598909997,
+          "order": [
+            "target",
+            "player"
+          ]
+        },
+        {
+          "round": 23,
+          "playerScore": 14,
+          "targetScore": 9,
+          "seedState": 702419175,
+          "order": [
+            "player",
+            "target"
+          ]
+        },
+        {
+          "round": 24,
+          "playerScore": 14,
+          "targetScore": 10,
+          "seedState": 746870193,
+          "order": [
+            "player",
+            "target"
+          ]
+        },
+        {
+          "round": 25,
+          "playerScore": 14,
+          "targetScore": 10,
+          "seedState": 3744487179,
+          "order": [
+            "player",
+            "target"
+          ]
+        },
+        {
+          "round": 26,
+          "playerScore": 9,
+          "targetScore": 17,
+          "seedState": 82416501,
+          "order": [
+            "target",
+            "player"
+          ]
+        },
+        {
+          "round": 27,
+          "playerScore": 8,
+          "targetScore": 9,
+          "seedState": 991464815,
+          "order": [
+            "target",
+            "player"
+          ]
+        },
+        {
+          "round": 28,
+          "playerScore": 10,
+          "targetScore": 6,
+          "seedState": 111242105,
+          "order": [
+            "player",
+            "target"
+          ]
+        },
+        {
+          "round": 29,
+          "playerScore": 12,
+          "targetScore": 13,
+          "seedState": 200775699,
+          "order": [
+            "target",
+            "player"
+          ]
+        },
+        {
+          "round": 30,
+          "playerScore": 3,
+          "targetScore": 18,
+          "seedState": 563241405,
+          "order": [
+            "target",
+            "player"
+          ]
+        },
+        {
+          "round": 31,
+          "playerScore": 12,
+          "targetScore": 7,
+          "seedState": 1751816951,
+          "order": [
+            "player",
+            "target"
+          ]
+        },
+        {
+          "round": 32,
+          "playerScore": 11,
+          "targetScore": 11,
+          "seedState": 3411398316,
+          "order": [
+            "player",
+            "target"
+          ]
+        }
+      ]
+    },
+    {
+      "style": "heavy",
+      "seed": 2,
+      "rounds": [
+        {
+          "round": 1,
+          "playerScore": 6,
+          "targetScore": 18,
+          "seedState": 1975575172,
+          "order": [
+            "target",
+            "player"
+          ]
+        },
+        {
+          "round": 2,
+          "playerScore": 7,
+          "targetScore": 11,
+          "seedState": 3186434646,
+          "order": [
+            "target",
+            "player"
+          ]
+        },
+        {
+          "round": 3,
+          "playerScore": 12,
+          "targetScore": 10,
+          "seedState": 503495672,
+          "order": [
+            "player",
+            "target"
+          ]
+        },
+        {
+          "round": 4,
+          "playerScore": 7,
+          "targetScore": 9,
+          "seedState": 2028691434,
+          "order": [
+            "target",
+            "player"
+          ]
+        },
+        {
+          "round": 5,
+          "playerScore": 12,
+          "targetScore": 16,
+          "seedState": 2992280236,
+          "order": [
+            "target",
+            "player"
+          ]
+        },
+        {
+          "round": 6,
+          "playerScore": 7,
+          "targetScore": 16,
+          "seedState": 460377278,
+          "order": [
+            "target",
+            "player"
+          ]
+        },
+        {
+          "round": 7,
+          "playerScore": 13,
+          "targetScore": 14,
+          "seedState": 3387660960,
+          "order": [
+            "target",
+            "player"
+          ]
+        },
+        {
+          "round": 8,
+          "playerScore": 10,
+          "targetScore": 13,
+          "seedState": 1919597778,
+          "order": [
+            "target",
+            "player"
+          ]
+        },
+        {
+          "round": 9,
+          "playerScore": 7,
+          "targetScore": 17,
+          "seedState": 1469204436,
+          "order": [
+            "target",
+            "player"
+          ]
+        },
+        {
+          "round": 10,
+          "playerScore": 10,
+          "targetScore": 16,
+          "seedState": 1796326438,
+          "order": [
+            "target",
+            "player"
+          ]
+        },
+        {
+          "round": 11,
+          "playerScore": 9,
+          "targetScore": 12,
+          "seedState": 2866302536,
+          "order": [
+            "target",
+            "player"
+          ]
+        },
+        {
+          "round": 12,
+          "playerScore": 7,
+          "targetScore": 10,
+          "seedState": 1677571770,
+          "order": [
+            "target",
+            "player"
+          ]
+        },
+        {
+          "round": 13,
+          "playerScore": 6,
+          "targetScore": 6,
+          "seedState": 782603563,
+          "order": [
+            "target",
+            "player"
+          ]
+        },
+        {
+          "round": 14,
+          "playerScore": 2,
+          "targetScore": 15,
+          "seedState": 312678037,
+          "order": [
+            "target",
+            "player"
+          ]
+        },
+        {
+          "round": 15,
+          "playerScore": 13,
+          "targetScore": 9,
+          "seedState": 2226101647,
+          "order": [
+            "player",
+            "target"
+          ]
+        },
+        {
+          "round": 16,
+          "playerScore": 7,
+          "targetScore": 7,
+          "seedState": 2532458788,
+          "order": [
+            "player",
+            "target"
+          ]
+        },
+        {
+          "round": 17,
+          "playerScore": 2,
+          "targetScore": 11,
+          "seedState": 2022054390,
+          "order": [
+            "target",
+            "player"
+          ]
+        },
+        {
+          "round": 18,
+          "playerScore": 4,
+          "targetScore": 9,
+          "seedState": 3506156696,
+          "order": [
+            "target",
+            "player"
+          ]
+        },
+        {
+          "round": 19,
+          "playerScore": 13,
+          "targetScore": 10,
+          "seedState": 3684761994,
+          "order": [
+            "player",
+            "target"
+          ]
+        },
+        {
+          "round": 20,
+          "playerScore": 7,
+          "targetScore": 10,
+          "seedState": 3713516876,
+          "order": [
+            "target",
+            "player"
+          ]
+        },
+        {
+          "round": 21,
+          "playerScore": 6,
+          "targetScore": 6,
+          "seedState": 1245955109,
+          "order": [
+            "target",
+            "player"
+          ]
+        },
+        {
+          "round": 22,
+          "playerScore": 6,
+          "targetScore": 15,
+          "seedState": 3819041183,
+          "order": [
+            "target",
+            "player"
+          ]
+        },
+        {
+          "round": 23,
+          "playerScore": 10,
+          "targetScore": 7,
+          "seedState": 3822440233,
+          "order": [
+            "player",
+            "target"
+          ]
+        },
+        {
+          "round": 24,
+          "playerScore": 3,
+          "targetScore": 15,
+          "seedState": 2246092611,
+          "order": [
+            "target",
+            "player"
+          ]
+        },
+        {
+          "round": 25,
+          "playerScore": 7,
+          "targetScore": 10,
+          "seedState": 6465645,
+          "order": [
+            "target",
+            "player"
+          ]
+        },
+        {
+          "round": 26,
+          "playerScore": 4,
+          "targetScore": 10,
+          "seedState": 2681242919,
+          "order": [
+            "target",
+            "player"
+          ]
+        },
+        {
+          "round": 27,
+          "playerScore": 14,
+          "targetScore": 10,
+          "seedState": 1499075569,
+          "order": [
+            "player",
+            "target"
+          ]
+        },
+        {
+          "round": 28,
+          "playerScore": 3,
+          "targetScore": 6,
+          "seedState": 2796154699,
+          "order": [
+            "target",
+            "player"
+          ]
+        },
+        {
+          "round": 29,
+          "playerScore": 4,
+          "targetScore": 12,
+          "seedState": 1961235893,
+          "order": [
+            "target",
+            "player"
+          ]
+        },
+        {
+          "round": 30,
+          "playerScore": 14,
+          "targetScore": 12,
+          "seedState": 630819247,
+          "order": [
+            "player",
+            "target"
+          ]
+        },
+        {
+          "round": 31,
+          "playerScore": 14,
+          "targetScore": 16,
+          "seedState": 510587321,
+          "order": [
+            "target",
+            "player"
+          ]
+        },
+        {
+          "round": 32,
+          "playerScore": 5,
+          "targetScore": 9,
+          "seedState": 3169073235,
+          "order": [
+            "target",
+            "player"
+          ]
+        }
+      ]
+    },
+    {
+      "style": "heavy",
+      "seed": 17,
+      "rounds": [
+        {
+          "round": 1,
+          "playerScore": 3,
+          "targetScore": 6,
+          "seedState": 3524153451,
+          "order": [
+            "target",
+            "player"
+          ]
+        },
+        {
+          "round": 2,
+          "playerScore": 13,
+          "targetScore": 7,
+          "seedState": 1276228565,
+          "order": [
+            "player",
+            "target"
+          ]
+        },
+        {
+          "round": 3,
+          "playerScore": 3,
+          "targetScore": 8,
+          "seedState": 1429761231,
+          "order": [
+            "target",
+            "player"
+          ]
+        },
+        {
+          "round": 4,
+          "playerScore": 12,
+          "targetScore": 17,
+          "seedState": 921854425,
+          "order": [
+            "target",
+            "player"
+          ]
+        },
+        {
+          "round": 5,
+          "playerScore": 3,
+          "targetScore": 18,
+          "seedState": 2398403955,
+          "order": [
+            "target",
+            "player"
+          ]
+        },
+        {
+          "round": 6,
+          "playerScore": 6,
+          "targetScore": 18,
+          "seedState": 1629392413,
+          "order": [
+            "target",
+            "player"
+          ]
+        },
+        {
+          "round": 7,
+          "playerScore": 4,
+          "targetScore": 14,
+          "seedState": 283534935,
+          "order": [
+            "target",
+            "player"
+          ]
+        },
+        {
+          "round": 8,
+          "playerScore": 3,
+          "targetScore": 11,
+          "seedState": 1882782881,
+          "order": [
+            "target",
+            "player"
+          ]
+        },
+        {
+          "round": 9,
+          "playerScore": 8,
+          "targetScore": 13,
+          "seedState": 2448477051,
+          "order": [
+            "target",
+            "player"
+          ]
+        },
+        {
+          "round": 10,
+          "playerScore": 8,
+          "targetScore": 12,
+          "seedState": 3092164965,
+          "order": [
+            "target",
+            "player"
+          ]
+        },
+        {
+          "round": 11,
+          "playerScore": 14,
+          "targetScore": 9,
+          "seedState": 471568607,
+          "order": [
+            "player",
+            "target"
+          ]
+        },
+        {
+          "round": 12,
+          "playerScore": 10,
+          "targetScore": 8,
+          "seedState": 2002448489,
+          "order": [
+            "player",
+            "target"
+          ]
+        },
+        {
+          "round": 13,
+          "playerScore": 4,
+          "targetScore": 18,
+          "seedState": 3333855875,
+          "order": [
+            "target",
+            "player"
+          ]
+        },
+        {
+          "round": 14,
+          "playerScore": 4,
+          "targetScore": 18,
+          "seedState": 2802531757,
+          "order": [
+            "target",
+            "player"
+          ]
+        },
+        {
+          "round": 15,
+          "playerScore": 7,
+          "targetScore": 11,
+          "seedState": 2696809575,
+          "order": [
+            "target",
+            "player"
+          ]
+        },
+        {
+          "round": 16,
+          "playerScore": 10,
+          "targetScore": 7,
+          "seedState": 2831375665,
+          "order": [
+            "player",
+            "target"
+          ]
+        },
+        {
+          "round": 17,
+          "playerScore": 9,
+          "targetScore": 12,
+          "seedState": 2944289419,
+          "order": [
+            "target",
+            "player"
+          ]
+        },
+        {
+          "round": 18,
+          "playerScore": 3,
+          "targetScore": 14,
+          "seedState": 1340166901,
+          "order": [
+            "target",
+            "player"
+          ]
+        },
+        {
+          "round": 19,
+          "playerScore": 7,
+          "targetScore": 11,
+          "seedState": 628619503,
+          "order": [
+            "target",
+            "player"
+          ]
+        },
+        {
+          "round": 20,
+          "playerScore": 7,
+          "targetScore": 7,
+          "seedState": 2910924804,
+          "order": [
+            "player",
+            "target"
+          ]
+        },
+        {
+          "round": 21,
+          "playerScore": 7,
+          "targetScore": 11,
+          "seedState": 465193942,
+          "order": [
+            "target",
+            "player"
+          ]
+        },
+        {
+          "round": 22,
+          "playerScore": 7,
+          "targetScore": 11,
+          "seedState": 1499275640,
+          "order": [
+            "target",
+            "player"
+          ]
+        },
+        {
+          "round": 23,
+          "playerScore": 8,
+          "targetScore": 7,
+          "seedState": 3625083242,
+          "order": [
+            "player",
+            "target"
+          ]
+        },
+        {
+          "round": 24,
+          "playerScore": 14,
+          "targetScore": 18,
+          "seedState": 1537511468,
+          "order": [
+            "target",
+            "player"
+          ]
+        },
+        {
+          "round": 25,
+          "playerScore": 9,
+          "targetScore": 18,
+          "seedState": 1751328318,
+          "order": [
+            "target",
+            "player"
+          ]
+        },
+        {
+          "round": 26,
+          "playerScore": 8,
+          "targetScore": 11,
+          "seedState": 3256004640,
+          "order": [
+            "target",
+            "player"
+          ]
+        },
+        {
+          "round": 27,
+          "playerScore": 12,
+          "targetScore": 16,
+          "seedState": 2213670482,
+          "order": [
+            "target",
+            "player"
+          ]
+        },
+        {
+          "round": 28,
+          "playerScore": 10,
+          "targetScore": 7,
+          "seedState": 3550213460,
+          "order": [
+            "player",
+            "target"
+          ]
+        },
+        {
+          "round": 29,
+          "playerScore": 14,
+          "targetScore": 11,
+          "seedState": 1003441574,
+          "order": [
+            "player",
+            "target"
+          ]
+        },
+        {
+          "round": 30,
+          "playerScore": 11,
+          "targetScore": 10,
+          "seedState": 694293448,
+          "order": [
+            "player",
+            "target"
+          ]
+        },
+        {
+          "round": 31,
+          "playerScore": 7,
+          "targetScore": 6,
+          "seedState": 602609722,
+          "order": [
+            "player",
+            "target"
+          ]
+        },
+        {
+          "round": 32,
+          "playerScore": 14,
+          "targetScore": 16,
+          "seedState": 4243062652,
+          "order": [
+            "target",
+            "player"
+          ]
+        }
+      ]
+    },
+    {
+      "style": "heavy",
+      "seed": 1314083905,
+      "rounds": [
+        {
+          "round": 1,
+          "playerScore": 7,
+          "targetScore": 11,
+          "seedState": 869409819,
+          "order": [
+            "target",
+            "player"
+          ]
+        },
+        {
+          "round": 2,
+          "playerScore": 14,
+          "targetScore": 6,
+          "seedState": 1424732933,
+          "order": [
+            "player",
+            "target"
+          ]
+        },
+        {
+          "round": 3,
+          "playerScore": 6,
+          "targetScore": 18,
+          "seedState": 2807505791,
+          "order": [
+            "target",
+            "player"
+          ]
+        },
+        {
+          "round": 4,
+          "playerScore": 6,
+          "targetScore": 7,
+          "seedState": 1029717001,
+          "order": [
+            "target",
+            "player"
+          ]
+        },
+        {
+          "round": 5,
+          "playerScore": 7,
+          "targetScore": 15,
+          "seedState": 1382221603,
+          "order": [
+            "target",
+            "player"
+          ]
+        },
+        {
+          "round": 6,
+          "playerScore": 9,
+          "targetScore": 18,
+          "seedState": 4125651789,
+          "order": [
+            "target",
+            "player"
+          ]
+        },
+        {
+          "round": 7,
+          "playerScore": 5,
+          "targetScore": 7,
+          "seedState": 1259074311,
+          "order": [
+            "target",
+            "player"
+          ]
+        },
+        {
+          "round": 8,
+          "playerScore": 9,
+          "targetScore": 12,
+          "seedState": 3893501137,
+          "order": [
+            "target",
+            "player"
+          ]
+        },
+        {
+          "round": 9,
+          "playerScore": 13,
+          "targetScore": 18,
+          "seedState": 307776299,
+          "order": [
+            "target",
+            "player"
+          ]
+        },
+        {
+          "round": 10,
+          "playerScore": 7,
+          "targetScore": 13,
+          "seedState": 1829059733,
+          "order": [
+            "target",
+            "player"
+          ]
+        },
+        {
+          "round": 11,
+          "playerScore": 12,
+          "targetScore": 18,
+          "seedState": 3307385743,
+          "order": [
+            "target",
+            "player"
+          ]
+        },
+        {
+          "round": 12,
+          "playerScore": 9,
+          "targetScore": 8,
+          "seedState": 67638937,
+          "order": [
+            "player",
+            "target"
+          ]
+        },
+        {
+          "round": 13,
+          "playerScore": 13,
+          "targetScore": 17,
+          "seedState": 2302545971,
+          "order": [
+            "target",
+            "player"
+          ]
+        },
+        {
+          "round": 14,
+          "playerScore": 4,
+          "targetScore": 11,
+          "seedState": 1329802973,
+          "order": [
+            "target",
+            "player"
+          ]
+        },
+        {
+          "round": 15,
+          "playerScore": 5,
+          "targetScore": 15,
+          "seedState": 3671688471,
+          "order": [
+            "target",
+            "player"
+          ]
+        },
+        {
+          "round": 16,
+          "playerScore": 9,
+          "targetScore": 12,
+          "seedState": 449136993,
+          "order": [
+            "target",
+            "player"
+          ]
+        },
+        {
+          "round": 17,
+          "playerScore": 2,
+          "targetScore": 15,
+          "seedState": 2653189691,
+          "order": [
+            "target",
+            "player"
+          ]
+        },
+        {
+          "round": 18,
+          "playerScore": 10,
+          "targetScore": 15,
+          "seedState": 4056377893,
+          "order": [
+            "target",
+            "player"
+          ]
+        },
+        {
+          "round": 19,
+          "playerScore": 8,
+          "targetScore": 8,
+          "seedState": 3834654834,
+          "order": [
+            "player",
+            "target"
+          ]
+        },
+        {
+          "round": 20,
+          "playerScore": 4,
+          "targetScore": 13,
+          "seedState": 3537443956,
+          "order": [
+            "target",
+            "player"
+          ]
+        },
+        {
+          "round": 21,
+          "playerScore": 8,
+          "targetScore": 13,
+          "seedState": 608018886,
+          "order": [
+            "target",
+            "player"
+          ]
+        },
+        {
+          "round": 22,
+          "playerScore": 9,
+          "targetScore": 8,
+          "seedState": 2272468200,
+          "order": [
+            "player",
+            "target"
+          ]
+        },
+        {
+          "round": 23,
+          "playerScore": 14,
+          "targetScore": 18,
+          "seedState": 997301850,
+          "order": [
+            "target",
+            "player"
+          ]
+        },
+        {
+          "round": 24,
+          "playerScore": 3,
+          "targetScore": 11,
+          "seedState": 334105244,
+          "order": [
+            "target",
+            "player"
+          ]
+        },
+        {
+          "round": 25,
+          "playerScore": 7,
+          "targetScore": 10,
+          "seedState": 3737205294,
+          "order": [
+            "target",
+            "player"
+          ]
+        },
+        {
+          "round": 26,
+          "playerScore": 5,
+          "targetScore": 14,
+          "seedState": 2715294096,
+          "order": [
+            "target",
+            "player"
+          ]
+        },
+        {
+          "round": 27,
+          "playerScore": 3,
+          "targetScore": 7,
+          "seedState": 1336461634,
+          "order": [
+            "target",
+            "player"
+          ]
+        },
+        {
+          "round": 28,
+          "playerScore": 13,
+          "targetScore": 17,
+          "seedState": 2055257540,
+          "order": [
+            "target",
+            "player"
+          ]
+        },
+        {
+          "round": 29,
+          "playerScore": 13,
+          "targetScore": 11,
+          "seedState": 2304761750,
+          "order": [
+            "player",
+            "target"
+          ]
+        },
+        {
+          "round": 30,
+          "playerScore": 4,
+          "targetScore": 16,
+          "seedState": 3468995384,
+          "order": [
+            "target",
+            "player"
+          ]
+        },
+        {
+          "round": 31,
+          "playerScore": 4,
+          "targetScore": 12,
+          "seedState": 4042084650,
+          "order": [
+            "target",
+            "player"
+          ]
+        },
+        {
+          "round": 32,
+          "playerScore": 11,
+          "targetScore": 6,
+          "seedState": 609605100,
+          "order": [
+            "player",
+            "target"
+          ]
+        }
+      ]
+    },
+    {
+      "style": "heavy",
+      "seed": 4294967295,
+      "rounds": [
+        {
+          "round": 1,
+          "playerScore": 4,
+          "targetScore": 16,
+          "seedState": 806866057,
+          "order": [
+            "target",
+            "player"
+          ]
+        },
+        {
+          "round": 2,
+          "playerScore": 11,
+          "targetScore": 10,
+          "seedState": 2709482403,
+          "order": [
+            "player",
+            "target"
+          ]
+        },
+        {
+          "round": 3,
+          "playerScore": 6,
+          "targetScore": 15,
+          "seedState": 3754216397,
+          "order": [
+            "target",
+            "player"
+          ]
+        },
+        {
+          "round": 4,
+          "playerScore": 8,
+          "targetScore": 17,
+          "seedState": 3109052295,
+          "order": [
+            "target",
+            "player"
+          ]
+        },
+        {
+          "round": 5,
+          "playerScore": 7,
+          "targetScore": 6,
+          "seedState": 2252062033,
+          "order": [
+            "player",
+            "target"
+          ]
+        },
+        {
+          "round": 6,
+          "playerScore": 14,
+          "targetScore": 13,
+          "seedState": 226574251,
+          "order": [
+            "player",
+            "target"
+          ]
+        },
+        {
+          "round": 7,
+          "playerScore": 7,
+          "targetScore": 14,
+          "seedState": 4008486165,
+          "order": [
+            "target",
+            "player"
+          ]
+        },
+        {
+          "round": 8,
+          "playerScore": 2,
+          "targetScore": 15,
+          "seedState": 208973839,
+          "order": [
+            "target",
+            "player"
+          ]
+        },
+        {
+          "round": 9,
+          "playerScore": 7,
+          "targetScore": 10,
+          "seedState": 1273349913,
+          "order": [
+            "target",
+            "player"
+          ]
+        },
+        {
+          "round": 10,
+          "playerScore": 4,
+          "targetScore": 10,
+          "seedState": 3255145651,
+          "order": [
+            "target",
+            "player"
+          ]
+        },
+        {
+          "round": 11,
+          "playerScore": 14,
+          "targetScore": 17,
+          "seedState": 4204242781,
+          "order": [
+            "target",
+            "player"
+          ]
+        },
+        {
+          "round": 12,
+          "playerScore": 9,
+          "targetScore": 6,
+          "seedState": 753602967,
+          "order": [
+            "player",
+            "target"
+          ]
+        },
+        {
+          "round": 13,
+          "playerScore": 4,
+          "targetScore": 16,
+          "seedState": 3537439201,
+          "order": [
+            "target",
+            "player"
+          ]
+        },
+        {
+          "round": 14,
+          "playerScore": 2,
+          "targetScore": 16,
+          "seedState": 3629943483,
+          "order": [
+            "target",
+            "player"
+          ]
+        },
+        {
+          "round": 15,
+          "playerScore": 12,
+          "targetScore": 7,
+          "seedState": 2217407141,
+          "order": [
+            "player",
+            "target"
+          ]
+        },
+        {
+          "round": 16,
+          "playerScore": 11,
+          "targetScore": 12,
+          "seedState": 3723863071,
+          "order": [
+            "target",
+            "player"
+          ]
+        },
+        {
+          "round": 17,
+          "playerScore": 14,
+          "targetScore": 9,
+          "seedState": 3309086121,
+          "order": [
+            "player",
+            "target"
+          ]
+        },
+        {
+          "round": 18,
+          "playerScore": 13,
+          "targetScore": 7,
+          "seedState": 3017425347,
+          "order": [
+            "player",
+            "target"
+          ]
+        },
+        {
+          "round": 19,
+          "playerScore": 7,
+          "targetScore": 11,
+          "seedState": 1504683757,
+          "order": [
+            "target",
+            "player"
+          ]
+        },
+        {
+          "round": 20,
+          "playerScore": 7,
+          "targetScore": 13,
+          "seedState": 1796900775,
+          "order": [
+            "target",
+            "player"
+          ]
+        },
+        {
+          "round": 21,
+          "playerScore": 2,
+          "targetScore": 13,
+          "seedState": 840678001,
+          "order": [
+            "target",
+            "player"
+          ]
+        },
+        {
+          "round": 22,
+          "playerScore": 9,
+          "targetScore": 16,
+          "seedState": 1112988107,
+          "order": [
+            "target",
+            "player"
+          ]
+        },
+        {
+          "round": 23,
+          "playerScore": 11,
+          "targetScore": 7,
+          "seedState": 710075445,
+          "order": [
+            "player",
+            "target"
+          ]
+        },
+        {
+          "round": 24,
+          "playerScore": 3,
+          "targetScore": 7,
+          "seedState": 2963528751,
+          "order": [
+            "target",
+            "player"
+          ]
+        },
+        {
+          "round": 25,
+          "playerScore": 6,
+          "targetScore": 11,
+          "seedState": 702900281,
+          "order": [
+            "target",
+            "player"
+          ]
+        },
+        {
+          "round": 26,
+          "playerScore": 14,
+          "targetScore": 8,
+          "seedState": 1286501075,
+          "order": [
+            "player",
+            "target"
+          ]
+        },
+        {
+          "round": 27,
+          "playerScore": 7,
+          "targetScore": 11,
+          "seedState": 2867186301,
+          "order": [
+            "target",
+            "player"
+          ]
+        },
+        {
+          "round": 28,
+          "playerScore": 9,
+          "targetScore": 17,
+          "seedState": 874496439,
+          "order": [
+            "target",
+            "player"
+          ]
+        },
+        {
+          "round": 29,
+          "playerScore": 11,
+          "targetScore": 17,
+          "seedState": 3941388033,
+          "order": [
+            "target",
+            "player"
+          ]
+        },
+        {
+          "round": 30,
+          "playerScore": 14,
+          "targetScore": 17,
+          "seedState": 3611372763,
+          "order": [
+            "target",
+            "player"
+          ]
+        },
+        {
+          "round": 31,
+          "playerScore": 11,
+          "targetScore": 7,
+          "seedState": 1247640005,
+          "order": [
+            "player",
+            "target"
+          ]
+        },
+        {
+          "round": 32,
+          "playerScore": 4,
+          "targetScore": 10,
+          "seedState": 1289771071,
+          "order": [
+            "target",
+            "player"
+          ]
+        }
+      ]
+    },
+    {
+      "style": "quick",
+      "seed": 0,
+      "rounds": [
+        {
+          "round": 1,
+          "playerScore": 17,
+          "targetScore": 8,
+          "seedState": 1196435762,
+          "order": [
+            "player",
+            "target"
+          ]
+        },
+        {
+          "round": 2,
+          "playerScore": 15,
+          "targetScore": 6,
+          "seedState": 2868466484,
+          "order": [
+            "player",
+            "target"
+          ]
+        },
+        {
+          "round": 3,
+          "playerScore": 13,
+          "targetScore": 9,
+          "seedState": 2670642822,
+          "order": [
+            "player",
+            "target"
+          ]
+        },
+        {
+          "round": 4,
+          "playerScore": 17,
+          "targetScore": 10,
+          "seedState": 2748932008,
+          "order": [
+            "player",
+            "target"
+          ]
+        },
+        {
+          "round": 5,
+          "playerScore": 18,
+          "targetScore": 18,
+          "seedState": 3421909937,
+          "order": [
+            "target",
+            "player"
+          ]
+        },
+        {
+          "round": 6,
+          "playerScore": 11,
+          "targetScore": 13,
+          "seedState": 2636375307,
+          "order": [
+            "target",
+            "player"
+          ]
+        },
+        {
+          "round": 7,
+          "playerScore": 18,
+          "targetScore": 7,
+          "seedState": 28987765,
+          "order": [
+            "player",
+            "target"
+          ]
+        },
+        {
+          "round": 8,
+          "playerScore": 17,
+          "targetScore": 14,
+          "seedState": 3039689583,
+          "order": [
+            "player",
+            "target"
+          ]
+        },
+        {
+          "round": 9,
+          "playerScore": 12,
+          "targetScore": 10,
+          "seedState": 1649346937,
+          "order": [
+            "player",
+            "target"
+          ]
+        },
+        {
+          "round": 10,
+          "playerScore": 16,
+          "targetScore": 9,
+          "seedState": 2254235155,
+          "order": [
+            "player",
+            "target"
+          ]
+        },
+        {
+          "round": 11,
+          "playerScore": 12,
+          "targetScore": 18,
+          "seedState": 1719328701,
+          "order": [
+            "target",
+            "player"
+          ]
+        },
+        {
+          "round": 12,
+          "playerScore": 20,
+          "targetScore": 7,
+          "seedState": 53332215,
+          "order": [
+            "player",
+            "target"
+          ]
+        },
+        {
+          "round": 13,
+          "playerScore": 18,
+          "targetScore": 8,
+          "seedState": 4224358465,
+          "order": [
+            "player",
+            "target"
+          ]
+        },
+        {
+          "round": 14,
+          "playerScore": 21,
+          "targetScore": 7,
+          "seedState": 1946028059,
+          "order": [
+            "player",
+            "target"
+          ]
+        },
+        {
+          "round": 15,
+          "playerScore": 20,
+          "targetScore": 10,
+          "seedState": 1473591045,
+          "order": [
+            "player",
+            "target"
+          ]
+        },
+        {
+          "round": 16,
+          "playerScore": 14,
+          "targetScore": 10,
+          "seedState": 1592739711,
+          "order": [
+            "player",
+            "target"
+          ]
+        },
+        {
+          "round": 17,
+          "playerScore": 14,
+          "targetScore": 12,
+          "seedState": 4257218569,
+          "order": [
+            "player",
+            "target"
+          ]
+        },
+        {
+          "round": 18,
+          "playerScore": 21,
+          "targetScore": 10,
+          "seedState": 2617994019,
+          "order": [
+            "player",
+            "target"
+          ]
+        },
+        {
+          "round": 19,
+          "playerScore": 20,
+          "targetScore": 6,
+          "seedState": 4194465613,
+          "order": [
+            "player",
+            "target"
+          ]
+        },
+        {
+          "round": 20,
+          "playerScore": 16,
+          "targetScore": 9,
+          "seedState": 967350023,
+          "order": [
+            "player",
+            "target"
+          ]
+        },
+        {
+          "round": 21,
+          "playerScore": 13,
+          "targetScore": 15,
+          "seedState": 2557108433,
+          "order": [
+            "target",
+            "player"
+          ]
+        },
+        {
+          "round": 22,
+          "playerScore": 11,
+          "targetScore": 12,
+          "seedState": 353185579,
+          "order": [
+            "target",
+            "player"
+          ]
+        },
+        {
+          "round": 23,
+          "playerScore": 12,
+          "targetScore": 8,
+          "seedState": 408928405,
+          "order": [
+            "player",
+            "target"
+          ]
+        },
+        {
+          "round": 24,
+          "playerScore": 19,
+          "targetScore": 16,
+          "seedState": 1263785871,
+          "order": [
+            "player",
+            "target"
+          ]
+        },
+        {
+          "round": 25,
+          "playerScore": 21,
+          "targetScore": 11,
+          "seedState": 594074265,
+          "order": [
+            "player",
+            "target"
+          ]
+        },
+        {
+          "round": 26,
+          "playerScore": 10,
+          "targetScore": 18,
+          "seedState": 3868161075,
+          "order": [
+            "target",
+            "player"
+          ]
+        },
+        {
+          "round": 27,
+          "playerScore": 14,
+          "targetScore": 9,
+          "seedState": 166605533,
+          "order": [
+            "player",
+            "target"
+          ]
+        },
+        {
+          "round": 28,
+          "playerScore": 20,
+          "targetScore": 9,
+          "seedState": 1798252823,
+          "order": [
+            "player",
+            "target"
+          ]
+        },
+        {
+          "round": 29,
+          "playerScore": 19,
+          "targetScore": 8,
+          "seedState": 171871585,
+          "order": [
+            "player",
+            "target"
+          ]
+        },
+        {
+          "round": 30,
+          "playerScore": 15,
+          "targetScore": 11,
+          "seedState": 698505787,
+          "order": [
+            "player",
+            "target"
+          ]
+        },
+        {
+          "round": 31,
+          "playerScore": 22,
+          "targetScore": 18,
+          "seedState": 634580517,
+          "order": [
+            "player",
+            "target"
+          ]
+        },
+        {
+          "round": 32,
+          "playerScore": 21,
+          "targetScore": 15,
+          "seedState": 2017242015,
+          "order": [
+            "player",
+            "target"
+          ]
+        }
+      ]
+    },
+    {
+      "style": "quick",
+      "seed": 1,
+      "rounds": [
+        {
+          "round": 1,
+          "playerScore": 22,
+          "targetScore": 13,
+          "seedState": 1586005467,
+          "order": [
+            "player",
+            "target"
+          ]
+        },
+        {
+          "round": 2,
+          "playerScore": 15,
+          "targetScore": 15,
+          "seedState": 217083232,
+          "order": [
+            "player",
+            "target"
+          ]
+        },
+        {
+          "round": 3,
+          "playerScore": 20,
+          "targetScore": 10,
+          "seedState": 3327581586,
+          "order": [
+            "player",
+            "target"
+          ]
+        },
+        {
+          "round": 4,
+          "playerScore": 20,
+          "targetScore": 17,
+          "seedState": 70837908,
+          "order": [
+            "player",
+            "target"
+          ]
+        },
+        {
+          "round": 5,
+          "playerScore": 21,
+          "targetScore": 6,
+          "seedState": 1075679462,
+          "order": [
+            "player",
+            "target"
+          ]
+        },
+        {
+          "round": 6,
+          "playerScore": 22,
+          "targetScore": 15,
+          "seedState": 2536995080,
+          "order": [
+            "player",
+            "target"
+          ]
+        },
+        {
+          "round": 7,
+          "playerScore": 18,
+          "targetScore": 17,
+          "seedState": 1009643386,
+          "order": [
+            "player",
+            "target"
+          ]
+        },
+        {
+          "round": 8,
+          "playerScore": 15,
+          "targetScore": 17,
+          "seedState": 3697481916,
+          "order": [
+            "target",
+            "player"
+          ]
+        },
+        {
+          "round": 9,
+          "playerScore": 10,
+          "targetScore": 12,
+          "seedState": 2931756366,
+          "order": [
+            "target",
+            "player"
+          ]
+        },
+        {
+          "round": 10,
+          "playerScore": 18,
+          "targetScore": 13,
+          "seedState": 927463856,
+          "order": [
+            "player",
+            "target"
+          ]
+        },
+        {
+          "round": 11,
+          "playerScore": 16,
+          "targetScore": 10,
+          "seedState": 302988898,
+          "order": [
+            "player",
+            "target"
+          ]
+        },
+        {
+          "round": 12,
+          "playerScore": 17,
+          "targetScore": 15,
+          "seedState": 557551588,
+          "order": [
+            "player",
+            "target"
+          ]
+        },
+        {
+          "round": 13,
+          "playerScore": 12,
+          "targetScore": 14,
+          "seedState": 2503481014,
+          "order": [
+            "target",
+            "player"
+          ]
+        },
+        {
+          "round": 14,
+          "playerScore": 22,
+          "targetScore": 11,
+          "seedState": 1129353048,
+          "order": [
+            "player",
+            "target"
+          ]
+        },
+        {
+          "round": 15,
+          "playerScore": 12,
+          "targetScore": 14,
+          "seedState": 3997329994,
+          "order": [
+            "target",
+            "player"
+          ]
+        },
+        {
+          "round": 16,
+          "playerScore": 21,
+          "targetScore": 15,
+          "seedState": 1435167756,
+          "order": [
+            "player",
+            "target"
+          ]
+        },
+        {
+          "round": 17,
+          "playerScore": 11,
+          "targetScore": 11,
+          "seedState": 2353844709,
+          "order": [
+            "target",
+            "player"
+          ]
+        },
+        {
+          "round": 18,
+          "playerScore": 13,
+          "targetScore": 17,
+          "seedState": 4270654815,
+          "order": [
+            "target",
+            "player"
+          ]
+        },
+        {
+          "round": 19,
+          "playerScore": 22,
+          "targetScore": 11,
+          "seedState": 3055474921,
+          "order": [
+            "player",
+            "target"
+          ]
+        },
+        {
+          "round": 20,
+          "playerScore": 12,
+          "targetScore": 14,
+          "seedState": 4187559683,
+          "order": [
+            "target",
+            "player"
+          ]
+        },
+        {
+          "round": 21,
+          "playerScore": 12,
+          "targetScore": 15,
+          "seedState": 1598909997,
+          "order": [
+            "target",
+            "player"
+          ]
+        },
+        {
+          "round": 22,
+          "playerScore": 22,
+          "targetScore": 9,
+          "seedState": 702419175,
+          "order": [
+            "player",
+            "target"
+          ]
+        },
+        {
+          "round": 23,
+          "playerScore": 22,
+          "targetScore": 10,
+          "seedState": 746870193,
+          "order": [
+            "player",
+            "target"
+          ]
+        },
+        {
+          "round": 24,
+          "playerScore": 22,
+          "targetScore": 10,
+          "seedState": 3744487179,
+          "order": [
+            "player",
+            "target"
+          ]
+        },
+        {
+          "round": 25,
+          "playerScore": 17,
+          "targetScore": 17,
+          "seedState": 4084797008,
+          "order": [
+            "player",
+            "target"
+          ]
+        },
+        {
+          "round": 26,
+          "playerScore": 13,
+          "targetScore": 14,
+          "seedState": 3571407874,
+          "order": [
+            "target",
+            "player"
+          ]
+        },
+        {
+          "round": 27,
+          "playerScore": 10,
+          "targetScore": 16,
+          "seedState": 1648664196,
+          "order": [
+            "target",
+            "player"
+          ]
+        },
+        {
+          "round": 28,
+          "playerScore": 17,
+          "targetScore": 7,
+          "seedState": 1484013142,
+          "order": [
+            "player",
+            "target"
+          ]
+        },
+        {
+          "round": 29,
+          "playerScore": 22,
+          "targetScore": 16,
+          "seedState": 3477354488,
+          "order": [
+            "player",
+            "target"
+          ]
+        },
+        {
+          "round": 30,
+          "playerScore": 11,
+          "targetScore": 15,
+          "seedState": 632699882,
+          "order": [
+            "target",
+            "player"
+          ]
+        },
+        {
+          "round": 31,
+          "playerScore": 15,
+          "targetScore": 7,
+          "seedState": 3411398316,
+          "order": [
+            "player",
+            "target"
+          ]
+        },
+        {
+          "round": 32,
+          "playerScore": 15,
+          "targetScore": 10,
+          "seedState": 47933630,
+          "order": [
+            "player",
+            "target"
+          ]
+        }
+      ]
+    },
+    {
+      "style": "quick",
+      "seed": 2,
+      "rounds": [
+        {
+          "round": 1,
+          "playerScore": 14,
+          "targetScore": 18,
+          "seedState": 1975575172,
+          "order": [
+            "target",
+            "player"
+          ]
+        },
+        {
+          "round": 2,
+          "playerScore": 15,
+          "targetScore": 11,
+          "seedState": 3186434646,
+          "order": [
+            "player",
+            "target"
+          ]
+        },
+        {
+          "round": 3,
+          "playerScore": 20,
+          "targetScore": 10,
+          "seedState": 503495672,
+          "order": [
+            "player",
+            "target"
+          ]
+        },
+        {
+          "round": 4,
+          "playerScore": 15,
+          "targetScore": 9,
+          "seedState": 2028691434,
+          "order": [
+            "player",
+            "target"
+          ]
+        },
+        {
+          "round": 5,
+          "playerScore": 20,
+          "targetScore": 16,
+          "seedState": 2992280236,
+          "order": [
+            "player",
+            "target"
+          ]
+        },
+        {
+          "round": 6,
+          "playerScore": 15,
+          "targetScore": 16,
+          "seedState": 460377278,
+          "order": [
+            "target",
+            "player"
+          ]
+        },
+        {
+          "round": 7,
+          "playerScore": 21,
+          "targetScore": 14,
+          "seedState": 3387660960,
+          "order": [
+            "player",
+            "target"
+          ]
+        },
+        {
+          "round": 8,
+          "playerScore": 18,
+          "targetScore": 13,
+          "seedState": 1919597778,
+          "order": [
+            "player",
+            "target"
+          ]
+        },
+        {
+          "round": 9,
+          "playerScore": 15,
+          "targetScore": 17,
+          "seedState": 1469204436,
+          "order": [
+            "target",
+            "player"
+          ]
+        },
+        {
+          "round": 10,
+          "playerScore": 18,
+          "targetScore": 16,
+          "seedState": 1796326438,
+          "order": [
+            "player",
+            "target"
+          ]
+        },
+        {
+          "round": 11,
+          "playerScore": 17,
+          "targetScore": 12,
+          "seedState": 2866302536,
+          "order": [
+            "player",
+            "target"
+          ]
+        },
+        {
+          "round": 12,
+          "playerScore": 15,
+          "targetScore": 10,
+          "seedState": 1677571770,
+          "order": [
+            "player",
+            "target"
+          ]
+        },
+        {
+          "round": 13,
+          "playerScore": 14,
+          "targetScore": 6,
+          "seedState": 640197116,
+          "order": [
+            "player",
+            "target"
+          ]
+        },
+        {
+          "round": 14,
+          "playerScore": 11,
+          "targetScore": 6,
+          "seedState": 628729998,
+          "order": [
+            "player",
+            "target"
+          ]
+        },
+        {
+          "round": 15,
+          "playerScore": 19,
+          "targetScore": 17,
+          "seedState": 1581479664,
+          "order": [
+            "player",
+            "target"
+          ]
+        },
+        {
+          "round": 16,
+          "playerScore": 13,
+          "targetScore": 11,
+          "seedState": 1427631522,
+          "order": [
+            "player",
+            "target"
+          ]
+        },
+        {
+          "round": 17,
+          "playerScore": 11,
+          "targetScore": 8,
+          "seedState": 2532458788,
+          "order": [
+            "player",
+            "target"
+          ]
+        },
+        {
+          "round": 18,
+          "playerScore": 10,
+          "targetScore": 11,
+          "seedState": 2022054390,
+          "order": [
+            "target",
+            "player"
+          ]
+        },
+        {
+          "round": 19,
+          "playerScore": 12,
+          "targetScore": 9,
+          "seedState": 3506156696,
+          "order": [
+            "player",
+            "target"
+          ]
+        },
+        {
+          "round": 20,
+          "playerScore": 21,
+          "targetScore": 10,
+          "seedState": 3684761994,
+          "order": [
+            "player",
+            "target"
+          ]
+        },
+        {
+          "round": 21,
+          "playerScore": 15,
+          "targetScore": 10,
+          "seedState": 3713516876,
+          "order": [
+            "player",
+            "target"
+          ]
+        },
+        {
+          "round": 22,
+          "playerScore": 14,
+          "targetScore": 6,
+          "seedState": 3989354590,
+          "order": [
+            "player",
+            "target"
+          ]
+        },
+        {
+          "round": 23,
+          "playerScore": 19,
+          "targetScore": 10,
+          "seedState": 698591040,
+          "order": [
+            "player",
+            "target"
+          ]
+        },
+        {
+          "round": 24,
+          "playerScore": 19,
+          "targetScore": 14,
+          "seedState": 3933508210,
+          "order": [
+            "player",
+            "target"
+          ]
+        },
+        {
+          "round": 25,
+          "playerScore": 11,
+          "targetScore": 7,
+          "seedState": 970313332,
+          "order": [
+            "player",
+            "target"
+          ]
+        },
+        {
+          "round": 26,
+          "playerScore": 19,
+          "targetScore": 11,
+          "seedState": 3775341510,
+          "order": [
+            "player",
+            "target"
+          ]
+        },
+        {
+          "round": 27,
+          "playerScore": 14,
+          "targetScore": 8,
+          "seedState": 53604072,
+          "order": [
+            "player",
+            "target"
+          ]
+        },
+        {
+          "round": 28,
+          "playerScore": 14,
+          "targetScore": 18,
+          "seedState": 1877098586,
+          "order": [
+            "target",
+            "player"
+          ]
+        },
+        {
+          "round": 29,
+          "playerScore": 14,
+          "targetScore": 7,
+          "seedState": 2625436828,
+          "order": [
+            "player",
+            "target"
+          ]
+        },
+        {
+          "round": 30,
+          "playerScore": 10,
+          "targetScore": 8,
+          "seedState": 3334143022,
+          "order": [
+            "player",
+            "target"
+          ]
+        },
+        {
+          "round": 31,
+          "playerScore": 16,
+          "targetScore": 18,
+          "seedState": 4151389072,
+          "order": [
+            "target",
+            "player"
+          ]
+        },
+        {
+          "round": 32,
+          "playerScore": 16,
+          "targetScore": 18,
+          "seedState": 3291327298,
+          "order": [
+            "target",
+            "player"
+          ]
+        }
+      ]
+    },
+    {
+      "style": "quick",
+      "seed": 17,
+      "rounds": [
+        {
+          "round": 1,
+          "playerScore": 11,
+          "targetScore": 6,
+          "seedState": 3524153451,
+          "order": [
+            "player",
+            "target"
+          ]
+        },
+        {
+          "round": 2,
+          "playerScore": 21,
+          "targetScore": 7,
+          "seedState": 1276228565,
+          "order": [
+            "player",
+            "target"
+          ]
+        },
+        {
+          "round": 3,
+          "playerScore": 11,
+          "targetScore": 8,
+          "seedState": 1429761231,
+          "order": [
+            "player",
+            "target"
+          ]
+        },
+        {
+          "round": 4,
+          "playerScore": 20,
+          "targetScore": 17,
+          "seedState": 921854425,
+          "order": [
+            "player",
+            "target"
+          ]
+        },
+        {
+          "round": 5,
+          "playerScore": 11,
+          "targetScore": 18,
+          "seedState": 2398403955,
+          "order": [
+            "target",
+            "player"
+          ]
+        },
+        {
+          "round": 6,
+          "playerScore": 14,
+          "targetScore": 18,
+          "seedState": 1629392413,
+          "order": [
+            "target",
+            "player"
+          ]
+        },
+        {
+          "round": 7,
+          "playerScore": 12,
+          "targetScore": 14,
+          "seedState": 283534935,
+          "order": [
+            "target",
+            "player"
+          ]
+        },
+        {
+          "round": 8,
+          "playerScore": 11,
+          "targetScore": 11,
+          "seedState": 1337257356,
+          "order": [
+            "player",
+            "target"
+          ]
+        },
+        {
+          "round": 9,
+          "playerScore": 17,
+          "targetScore": 12,
+          "seedState": 1975470750,
+          "order": [
+            "player",
+            "target"
+          ]
+        },
+        {
+          "round": 10,
+          "playerScore": 16,
+          "targetScore": 18,
+          "seedState": 1173959552,
+          "order": [
+            "target",
+            "player"
+          ]
+        },
+        {
+          "round": 11,
+          "playerScore": 13,
+          "targetScore": 14,
+          "seedState": 3411355826,
+          "order": [
+            "target",
+            "player"
+          ]
+        },
+        {
+          "round": 12,
+          "playerScore": 12,
+          "targetScore": 8,
+          "seedState": 35126964,
+          "order": [
+            "player",
+            "target"
+          ]
+        },
+        {
+          "round": 13,
+          "playerScore": 22,
+          "targetScore": 8,
+          "seedState": 739245574,
+          "order": [
+            "player",
+            "target"
+          ]
+        },
+        {
+          "round": 14,
+          "playerScore": 22,
+          "targetScore": 11,
+          "seedState": 947454760,
+          "order": [
+            "player",
+            "target"
+          ]
+        },
+        {
+          "round": 15,
+          "playerScore": 15,
+          "targetScore": 14,
+          "seedState": 1427480218,
+          "order": [
+            "player",
+            "target"
+          ]
+        },
+        {
+          "round": 16,
+          "playerScore": 11,
+          "targetScore": 13,
+          "seedState": 3208983772,
+          "order": [
+            "target",
+            "player"
+          ]
+        },
+        {
+          "round": 17,
+          "playerScore": 16,
+          "targetScore": 7,
+          "seedState": 3206487662,
+          "order": [
+            "player",
+            "target"
+          ]
+        },
+        {
+          "round": 18,
+          "playerScore": 18,
+          "targetScore": 11,
+          "seedState": 735758288,
+          "order": [
+            "player",
+            "target"
+          ]
+        },
+        {
+          "round": 19,
+          "playerScore": 15,
+          "targetScore": 11,
+          "seedState": 1074581890,
+          "order": [
+            "player",
+            "target"
+          ]
+        },
+        {
+          "round": 20,
+          "playerScore": 11,
+          "targetScore": 14,
+          "seedState": 2910924804,
+          "order": [
+            "target",
+            "player"
+          ]
+        },
+        {
+          "round": 21,
+          "playerScore": 15,
+          "targetScore": 11,
+          "seedState": 465193942,
+          "order": [
+            "player",
+            "target"
+          ]
+        },
+        {
+          "round": 22,
+          "playerScore": 15,
+          "targetScore": 11,
+          "seedState": 1499275640,
+          "order": [
+            "player",
+            "target"
+          ]
+        },
+        {
+          "round": 23,
+          "playerScore": 16,
+          "targetScore": 7,
+          "seedState": 3625083242,
+          "order": [
+            "player",
+            "target"
+          ]
+        },
+        {
+          "round": 24,
+          "playerScore": 22,
+          "targetScore": 18,
+          "seedState": 1537511468,
+          "order": [
+            "player",
+            "target"
+          ]
+        },
+        {
+          "round": 25,
+          "playerScore": 17,
+          "targetScore": 18,
+          "seedState": 1751328318,
+          "order": [
+            "target",
+            "player"
+          ]
+        },
+        {
+          "round": 26,
+          "playerScore": 16,
+          "targetScore": 11,
+          "seedState": 3256004640,
+          "order": [
+            "player",
+            "target"
+          ]
+        },
+        {
+          "round": 27,
+          "playerScore": 20,
+          "targetScore": 16,
+          "seedState": 2213670482,
+          "order": [
+            "player",
+            "target"
+          ]
+        },
+        {
+          "round": 28,
+          "playerScore": 18,
+          "targetScore": 7,
+          "seedState": 3550213460,
+          "order": [
+            "player",
+            "target"
+          ]
+        },
+        {
+          "round": 29,
+          "playerScore": 22,
+          "targetScore": 11,
+          "seedState": 1003441574,
+          "order": [
+            "player",
+            "target"
+          ]
+        },
+        {
+          "round": 30,
+          "playerScore": 19,
+          "targetScore": 10,
+          "seedState": 694293448,
+          "order": [
+            "player",
+            "target"
+          ]
+        },
+        {
+          "round": 31,
+          "playerScore": 15,
+          "targetScore": 6,
+          "seedState": 602609722,
+          "order": [
+            "player",
+            "target"
+          ]
+        },
+        {
+          "round": 32,
+          "playerScore": 22,
+          "targetScore": 16,
+          "seedState": 4243062652,
+          "order": [
+            "player",
+            "target"
+          ]
+        }
+      ]
+    },
+    {
+      "style": "quick",
+      "seed": 1314083905,
+      "rounds": [
+        {
+          "round": 1,
+          "playerScore": 15,
+          "targetScore": 11,
+          "seedState": 869409819,
+          "order": [
+            "player",
+            "target"
+          ]
+        },
+        {
+          "round": 2,
+          "playerScore": 22,
+          "targetScore": 6,
+          "seedState": 1424732933,
+          "order": [
+            "player",
+            "target"
+          ]
+        },
+        {
+          "round": 3,
+          "playerScore": 14,
+          "targetScore": 18,
+          "seedState": 2807505791,
+          "order": [
+            "target",
+            "player"
+          ]
+        },
+        {
+          "round": 4,
+          "playerScore": 14,
+          "targetScore": 7,
+          "seedState": 1029717001,
+          "order": [
+            "player",
+            "target"
+          ]
+        },
+        {
+          "round": 5,
+          "playerScore": 15,
+          "targetScore": 15,
+          "seedState": 2461614630,
+          "order": [
+            "player",
+            "target"
+          ]
+        },
+        {
+          "round": 6,
+          "playerScore": 22,
+          "targetScore": 9,
+          "seedState": 2578611272,
+          "order": [
+            "player",
+            "target"
+          ]
+        },
+        {
+          "round": 7,
+          "playerScore": 11,
+          "targetScore": 13,
+          "seedState": 2324567226,
+          "order": [
+            "target",
+            "player"
+          ]
+        },
+        {
+          "round": 8,
+          "playerScore": 16,
+          "targetScore": 17,
+          "seedState": 222212092,
+          "order": [
+            "target",
+            "player"
+          ]
+        },
+        {
+          "round": 9,
+          "playerScore": 22,
+          "targetScore": 11,
+          "seedState": 2953897614,
+          "order": [
+            "player",
+            "target"
+          ]
+        },
+        {
+          "round": 10,
+          "playerScore": 17,
+          "targetScore": 16,
+          "seedState": 3328402672,
+          "order": [
+            "player",
+            "target"
+          ]
+        },
+        {
+          "round": 11,
+          "playerScore": 22,
+          "targetScore": 13,
+          "seedState": 2612267938,
+          "order": [
+            "player",
+            "target"
+          ]
+        },
+        {
+          "round": 12,
+          "playerScore": 12,
+          "targetScore": 17,
+          "seedState": 3737784100,
+          "order": [
+            "target",
+            "player"
+          ]
+        },
+        {
+          "round": 13,
+          "playerScore": 21,
+          "targetScore": 8,
+          "seedState": 2214926326,
+          "order": [
+            "player",
+            "target"
+          ]
+        },
+        {
+          "round": 14,
+          "playerScore": 15,
+          "targetScore": 9,
+          "seedState": 2602132120,
+          "order": [
+            "player",
+            "target"
+          ]
+        },
+        {
+          "round": 15,
+          "playerScore": 19,
+          "targetScore": 13,
+          "seedState": 62971786,
+          "order": [
+            "player",
+            "target"
+          ]
+        },
+        {
+          "round": 16,
+          "playerScore": 16,
+          "targetScore": 6,
+          "seedState": 1579766604,
+          "order": [
+            "player",
+            "target"
+          ]
+        },
+        {
+          "round": 17,
+          "playerScore": 19,
+          "targetScore": 14,
+          "seedState": 1462203998,
+          "order": [
+            "player",
+            "target"
+          ]
+        },
+        {
+          "round": 18,
+          "playerScore": 19,
+          "targetScore": 12,
+          "seedState": 1433867584,
+          "order": [
+            "player",
+            "target"
+          ]
+        },
+        {
+          "round": 19,
+          "playerScore": 12,
+          "targetScore": 16,
+          "seedState": 3834654834,
+          "order": [
+            "target",
+            "player"
+          ]
+        },
+        {
+          "round": 20,
+          "playerScore": 12,
+          "targetScore": 13,
+          "seedState": 3537443956,
+          "order": [
+            "target",
+            "player"
+          ]
+        },
+        {
+          "round": 21,
+          "playerScore": 16,
+          "targetScore": 13,
+          "seedState": 608018886,
+          "order": [
+            "player",
+            "target"
+          ]
+        },
+        {
+          "round": 22,
+          "playerScore": 17,
+          "targetScore": 8,
+          "seedState": 2272468200,
+          "order": [
+            "player",
+            "target"
+          ]
+        },
+        {
+          "round": 23,
+          "playerScore": 22,
+          "targetScore": 18,
+          "seedState": 997301850,
+          "order": [
+            "player",
+            "target"
+          ]
+        },
+        {
+          "round": 24,
+          "playerScore": 11,
+          "targetScore": 11,
+          "seedState": 2294785355,
+          "order": [
+            "target",
+            "player"
+          ]
+        },
+        {
+          "round": 25,
+          "playerScore": 14,
+          "targetScore": 9,
+          "seedState": 938163125,
+          "order": [
+            "player",
+            "target"
+          ]
+        },
+        {
+          "round": 26,
+          "playerScore": 18,
+          "targetScore": 7,
+          "seedState": 229089199,
+          "order": [
+            "player",
+            "target"
+          ]
+        },
+        {
+          "round": 27,
+          "playerScore": 11,
+          "targetScore": 17,
+          "seedState": 799242169,
+          "order": [
+            "target",
+            "player"
+          ]
+        },
+        {
+          "round": 28,
+          "playerScore": 21,
+          "targetScore": 17,
+          "seedState": 1220062803,
+          "order": [
+            "player",
+            "target"
+          ]
+        },
+        {
+          "round": 29,
+          "playerScore": 15,
+          "targetScore": 8,
+          "seedState": 1057559037,
+          "order": [
+            "player",
+            "target"
+          ]
+        },
+        {
+          "round": 30,
+          "playerScore": 20,
+          "targetScore": 8,
+          "seedState": 3508270391,
+          "order": [
+            "player",
+            "target"
+          ]
+        },
+        {
+          "round": 31,
+          "playerScore": 16,
+          "targetScore": 15,
+          "seedState": 4092382849,
+          "order": [
+            "player",
+            "target"
+          ]
+        },
+        {
+          "round": 32,
+          "playerScore": 10,
+          "targetScore": 7,
+          "seedState": 739432539,
+          "order": [
+            "player",
+            "target"
+          ]
+        }
+      ]
+    },
+    {
+      "style": "quick",
+      "seed": 4294967295,
+      "rounds": [
+        {
+          "round": 1,
+          "playerScore": 12,
+          "targetScore": 16,
+          "seedState": 806866057,
+          "order": [
+            "target",
+            "player"
+          ]
+        },
+        {
+          "round": 2,
+          "playerScore": 19,
+          "targetScore": 10,
+          "seedState": 2709482403,
+          "order": [
+            "player",
+            "target"
+          ]
+        },
+        {
+          "round": 3,
+          "playerScore": 14,
+          "targetScore": 15,
+          "seedState": 3754216397,
+          "order": [
+            "target",
+            "player"
+          ]
+        },
+        {
+          "round": 4,
+          "playerScore": 16,
+          "targetScore": 17,
+          "seedState": 3109052295,
+          "order": [
+            "target",
+            "player"
+          ]
+        },
+        {
+          "round": 5,
+          "playerScore": 15,
+          "targetScore": 6,
+          "seedState": 2252062033,
+          "order": [
+            "player",
+            "target"
+          ]
+        },
+        {
+          "round": 6,
+          "playerScore": 22,
+          "targetScore": 13,
+          "seedState": 226574251,
+          "order": [
+            "player",
+            "target"
+          ]
+        },
+        {
+          "round": 7,
+          "playerScore": 15,
+          "targetScore": 14,
+          "seedState": 4008486165,
+          "order": [
+            "player",
+            "target"
+          ]
+        },
+        {
+          "round": 8,
+          "playerScore": 10,
+          "targetScore": 15,
+          "seedState": 208973839,
+          "order": [
+            "target",
+            "player"
+          ]
+        },
+        {
+          "round": 9,
+          "playerScore": 15,
+          "targetScore": 10,
+          "seedState": 1273349913,
+          "order": [
+            "player",
+            "target"
+          ]
+        },
+        {
+          "round": 10,
+          "playerScore": 12,
+          "targetScore": 10,
+          "seedState": 3255145651,
+          "order": [
+            "player",
+            "target"
+          ]
+        },
+        {
+          "round": 11,
+          "playerScore": 22,
+          "targetScore": 17,
+          "seedState": 4204242781,
+          "order": [
+            "player",
+            "target"
+          ]
+        },
+        {
+          "round": 12,
+          "playerScore": 17,
+          "targetScore": 6,
+          "seedState": 753602967,
+          "order": [
+            "player",
+            "target"
+          ]
+        },
+        {
+          "round": 13,
+          "playerScore": 12,
+          "targetScore": 16,
+          "seedState": 3537439201,
+          "order": [
+            "target",
+            "player"
+          ]
+        },
+        {
+          "round": 14,
+          "playerScore": 10,
+          "targetScore": 16,
+          "seedState": 3629943483,
+          "order": [
+            "target",
+            "player"
+          ]
+        },
+        {
+          "round": 15,
+          "playerScore": 20,
+          "targetScore": 7,
+          "seedState": 2217407141,
+          "order": [
+            "player",
+            "target"
+          ]
+        },
+        {
+          "round": 16,
+          "playerScore": 19,
+          "targetScore": 12,
+          "seedState": 3723863071,
+          "order": [
+            "player",
+            "target"
+          ]
+        },
+        {
+          "round": 17,
+          "playerScore": 22,
+          "targetScore": 9,
+          "seedState": 3309086121,
+          "order": [
+            "player",
+            "target"
+          ]
+        },
+        {
+          "round": 18,
+          "playerScore": 21,
+          "targetScore": 7,
+          "seedState": 3017425347,
+          "order": [
+            "player",
+            "target"
+          ]
+        },
+        {
+          "round": 19,
+          "playerScore": 15,
+          "targetScore": 11,
+          "seedState": 1504683757,
+          "order": [
+            "player",
+            "target"
+          ]
+        },
+        {
+          "round": 20,
+          "playerScore": 15,
+          "targetScore": 13,
+          "seedState": 1796900775,
+          "order": [
+            "player",
+            "target"
+          ]
+        },
+        {
+          "round": 21,
+          "playerScore": 10,
+          "targetScore": 13,
+          "seedState": 840678001,
+          "order": [
+            "target",
+            "player"
+          ]
+        },
+        {
+          "round": 22,
+          "playerScore": 17,
+          "targetScore": 16,
+          "seedState": 1112988107,
+          "order": [
+            "player",
+            "target"
+          ]
+        },
+        {
+          "round": 23,
+          "playerScore": 19,
+          "targetScore": 7,
+          "seedState": 710075445,
+          "order": [
+            "player",
+            "target"
+          ]
+        },
+        {
+          "round": 24,
+          "playerScore": 11,
+          "targetScore": 7,
+          "seedState": 2963528751,
+          "order": [
+            "player",
+            "target"
+          ]
+        },
+        {
+          "round": 25,
+          "playerScore": 14,
+          "targetScore": 11,
+          "seedState": 702900281,
+          "order": [
+            "player",
+            "target"
+          ]
+        },
+        {
+          "round": 26,
+          "playerScore": 22,
+          "targetScore": 8,
+          "seedState": 1286501075,
+          "order": [
+            "player",
+            "target"
+          ]
+        },
+        {
+          "round": 27,
+          "playerScore": 15,
+          "targetScore": 11,
+          "seedState": 2867186301,
+          "order": [
+            "player",
+            "target"
+          ]
+        },
+        {
+          "round": 28,
+          "playerScore": 17,
+          "targetScore": 17,
+          "seedState": 1947841450,
+          "order": [
+            "player",
+            "target"
+          ]
+        },
+        {
+          "round": 29,
+          "playerScore": 21,
+          "targetScore": 18,
+          "seedState": 3154697324,
+          "order": [
+            "player",
+            "target"
+          ]
+        },
+        {
+          "round": 30,
+          "playerScore": 21,
+          "targetScore": 15,
+          "seedState": 2214624382,
+          "order": [
+            "player",
+            "target"
+          ]
+        },
+        {
+          "round": 31,
+          "playerScore": 11,
+          "targetScore": 8,
+          "seedState": 636461152,
+          "order": [
+            "player",
+            "target"
+          ]
+        },
+        {
+          "round": 32,
+          "playerScore": 14,
+          "targetScore": 10,
+          "seedState": 623085714,
+          "order": [
+            "player",
+            "target"
+          ]
+        }
+      ]
+    }
+  ],
+  "case_count": 12,
+  "round_count": 384,
+  "score_tie_count": 15,
+  "same_cases_compared": false,
+  "false_queue_report_rejected": true,
+  "original_policy": "uint32 LCG1664525/1013904223; player draw then target draw, each%13-6; score AGI+jitter descending; equal score extra draw lowbit0 gives player first. Heavy AGI8/Quick16 versus target12; seeds/cases explicit.",
+  "source_boundary": "INI002 generic tie RNG is adapted to equal numeric scores, not recovered AGI formula. FLW005 only existing DOT/duration/final-state subset; no SP regeneration. FLW003 living-start one-turn subset; no bonus turns or complete historical scheduler.",
+  "limits": "Literal source requirements and SAME original deterministic policy controls. Not historical Ruby/RMXP, independently sampled people, balance, full combat, Unity/Windows/Steam or canon approval."
+}

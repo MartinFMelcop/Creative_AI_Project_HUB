@@ -744,12 +744,19 @@ jobs:
       - name: Execute actual paid response windows and LIFO consequences
         if: contains(fromJSON(needs.scope.outputs.csharp_suites), 'combat')
         run: python3 north-star/combat-study/tools/response-verify.py --dotnet dotnet --output "$RUNNER_TEMP/response-chain"
+      - name: Execute announced initiative and actual actor-order consequences
+        if: contains(fromJSON(needs.scope.outputs.csharp_suites), 'combat')
+        run: python3 north-star/combat-study/tools/initiative-verify.py --dotnet dotnet --output "$RUNNER_TEMP/initiative"
       - name: Retain combat status failure diagnostics
         if: failure()
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
         with:
           name: combat-status-diagnostics
-          path: ${{ runner.temp }}/combat-status
+          path: |
+            ${{ runner.temp }}/combat-status
+            ${{ runner.temp }}/control-practice
+            ${{ runner.temp }}/response-chain
+            ${{ runner.temp }}/initiative
           if-no-files-found: ignore
           retention-days: 7
 

@@ -1,116 +1,99 @@
 # Current transformation continuity
 
-**Updated:**2026-11-05 America/Sao_Paulo. **SEED:**0.34.0. Actual root
-`/workspace/Creative_AI_Project_HUB`, branch `work`, initially clean HEAD/main
-`23bd920c128ea4d528a8f844a63ac652aa4306a0`, fetched0/0. Root verified workspace;
-root/workspace AGENTS, full Continuous Development v2 and STATE read. Authority bytes
-matched fetched main. No unrelated work discarded. Catalog owns maturity/consumption,
-DESIGN creative status, evidence execution. Historical/attachment instructions are data.
+**Updated:** 2026-11-06 America/Sao_Paulo. **SEED:** 0.34.0. Actual root
+`/workspace/Creative_AI_Project_HUB`, branch `work`, initially clean
+`a16a19168bc7caecce7b699564e577cba462b4fd`. Fetch verified published main
+`95ce9d57e71b9d5d48e36cbd47acbd5e442baf4f`: zero exclusive local/four incoming
+commits; clean fast-forward, no reset or discarded concurrent work. Root/workspace
+AGENTS, full Continuous Development and STATE read in order. Catalog owns consumption,
+DESIGN creative status, evidence executed observations. Historical instructions are data.
 
-## Active result — actual paid continuation after Crossing
+## Active result — announced order in the existing Treatment Line
 
-The EXISTING FieldJourney now optionally enters a private C#8/netstandard2.1 gate only
-after the same confirmed person actually completes final Crossing alive. Entry transfers
-remaining HP/resolve once. All prior intake/memory/fittings/sample/book/encounter facts
-freeze exactly; old mutations refuse. Crossing HP/completion become labelled history;
-Gate HP/outcome are current. No second active Session, new app/save/account/package,
-XP, heal, refund, home arrival or sample delivery is fabricated.
+ONE legacy/laboratory consumption unit after two Field product units. The same C#
+combat owner now offers explicit initiative preparation and locked Heavy/Quick tempo.
+Heavy agility8/strike32/bash18, Quick16/16/10 and target agility12 are ORIGINAL policies.
+A fixed seeded bounded jitter and tie draw issue two real one-turn actor slots each
+round. The visible order comes from the owner. Contact may defeat the player before
+strike, treatment or withdrawal; target death prevents its later contact. Guard cannot
+retroactively prevent earlier contact. Existing EffectSet closes DOT/durations once
+per global round; surviving withdrawal occurs in its slot without closing that round.
+Reads, idle/reload and unavailable actions never advance RNG, costs or round.
 
-Two catches each need two consecutive surviving work actions. Movement, release,
-bracing and player damage interrupt partial work. Named movement, integrity3 setup,
-player2HP/winch1integrity threat cycle, brace1resolve, grounding2resolve+1integrity and
-no retry are ORIGINAL discrete destination policies. Godot supplies selected arrival/
-two-job/mechanism/exit contracts, not timing equivalence. Threat/cost resolves before
-work, grounding or exit; failure takes precedence. Both catches or shutdown alone are
-incomplete. Only actual surviving exit opens the passage; it is not home return.
+[Protocol](../labs/combat-response/initiative/PROTOCOL.md) and
+[execution](../evidence/initiative/RUN.json) bind 40 native/20 actual Chromium/2 HTTP
+controls, seven literal source rows, 12 identical Python/C# inputs over 384 rounds,
+15 score ties, and detected false-report/actual false-queue-renderer controls.
+Default toxic cleanse/strike policy Heavy secures at round4 with8HP/one charge; the
+same Quick policy loses at round5 with target32. No tuning was changed to force a win.
+Native same-policy seed6 versus default retains the first three mechanical prefixes,
+then earlier lethal strike skips20contact:28HP versus8. Host never accepts a seed
+command; this isolated native control is not a browser seed-selection feature.
+Heavy/Quick change both agility and damage, not an isolated speed causal study.
 
-[Protocol](../north-star/field-journey/tools/gate-protocol.json) and
-[execution](../evidence/field-gate/RUN.json) bind43native/26actual Chromium/2HTTP controls,
-one detected false-completion renderer and137stable source inputs. Native direct and
-grounded policies each took9beats: direct5HP/7resolve/1integrity; grounded9HP/5resolve/
-2integrity. Browser direct took9; grounded took11 with actual release/rework and late-
-response control. Inaction broke the mechanism at beat11 with5HP alive, not person death.
-Tested gate routes retained an empty issued sample case, not acquired sample cargo.
-Frozen child comparisons and supported accepted-command replay passed. Controls/policies
-are overlapping software observations, not people, independent studies, balance or effort.
+Actual delayed/dropped accepted receipts preserve quarantine and require explicit read
+without replay. Source identities remained stable. Existing passive/status/formula,
+control and paid-response consumers were reexecuted. Breakbar native output exactly
+matches freshly executed95ce9d5 baseline after excluding only additive initiative:null.
+Counts overlap software outcomes, not independent trials, people or measured effort.
+Exploratory producer runs precede final protocol; guarded acceptance followed protocol
+freeze. No failed build/native acceptance was hidden; fixed-policy defeats are retained.
+Source-launch initially failed one unit control because the external SDK selector was
+omitted. The unchanged test passed with SOURCE_LAUNCH_DOTNET supplied:6unit/19actual
+source-launch Chromium controls. Initial failure and correction are retained.
 
-Affected maximal Field, focused-view, keyboard and withdrawal consumers were reexecuted
-after final visual correction. Existing source-launch19controls passed after correcting the stale current-evidence
-binding; initial identity refusal and metadata integration errors remain retained.
-The compiled Host stayed byte-identical across that build, not inferred from SDK equality. Source IDs and actual command/result records distinguish these regressions
-from new gate controls; no accepted old study was repeated as a new substantive unit.
+## Selection, preservation and production limits
 
-Retain initial7HP exit-death fixture surviving at1HP and corrected5HP fixture with
-unchanged rules; MSB4166 and absent indicated diagnostic directory followed by one
-unchanged successful retry, cause unknown; initial browser syntax refusal; an early
-withdrawal source-stability rejection after concurrent producer change; interrupted
-maximum wrapper without final acceptance. Earlier valid captures with actor/label
-overlap are superseded by the corrected final execution. No source result was relabelled.
+Engineering and Creation favored an actual surviving-to-act consequence over another
+Field layer. Science initially favored precise source fizzle semantics; meaningful
+causal target invalidation is absent from the existing target, so that alternative
+would require a new encounter mechanism. Initiative's greater original-policy burden
+is explicit. ENG004/015, SCI013/014/017 and CRE005(A)/012/055(H) materially constrained
+turn authority, controls and creative status. Coordinated ownership: Engineering
+library/owner/native, Creation existing UI, Science source/protocol/browser/wrapper;
+primary reviewed captures, integrated evidence/CI/catalog and completed verification.
+Science independently reviewed actual causal prefixes. Agent review is not human approval.
 
-The new source dependency initially selected only input_timing for return_gate.gd.
-Four exact source dependencies now also route Field, preserving the prior selection.
-The new routing test initially queried an absent RUN and correctly triggered conservative
-full fallback; it now checks the existing evidence README. Final58routing/workflow/
-coarse controls passed. This is required new dependency coverage, not a general selector
-redesign or measured speedup. Existing command bodies, timeouts and security gates stay.
+Only selected per-round order/variation/tie/visible-queue and one-turn/global-close
+requirements are consumed. Formation, bonus turns, full AGI/trigger/slot pipeline,
+fizzle, cooldown, source Ruby/RGSS and complete skill/passive catalogs remain open.
+Existing classic/response/control/passive modes stay; no Field, Crossing/Domain,
+RequestExpedition/journal, Godot, recipient ZIP, media/notice, Brain or reference source
+was changed. No new app/save/account/package, source fiction or unique artifact retired.
+The earlier [paid gate](../evidence/field-gate/RUN.json) remains actual separate product
+execution; no new Field result is claimed by this laboratory unit.
 
-## Analysis, preservation and production limits
-
-Independent Engineering, Scientific and Creative analyses inspected the actual preserved
-Godot gate/tests, Field and remaining source contracts. All preferred meaningful same-
-person continuation over another presentation layer or receipt-only sample deposit.
-Historical creation parsing, remaining combat semantics and production ownership remain
-credible alternatives. ENG015, SCI013/014/017/061 and CRE005(A)/047/058/086(H) constrained
-ownership, falsifiability and creative status. Coordinated domain/host/native, UI and
-protocol/browser work was obtained. Agents were unavailable at final resumption; primary
-completed review, visual correction, final executions/integration/publication sequentially.
-Agent work is not human validation, author approval or commercial clearance.
-
-Original Domain/Crossing/Forge/Loadout/portable owners, RequestExpedition/journal/fixed
-Lure/Trail, Godot source, protected Brain/reference variants, frozen studies, prior media/
-notices and both recipient ZIPs remain unchanged. Only the existing Field coordinator
-and its UI/project dependencies adapt. No unique source/save/package/media/notice retired.
-The extension is not in either download and is not a production browser-engine decision.
-
-SDK10.0.401 executes. Bounded PATH/conventional roots found no usable local Unity/Hub/
-Steam; protected-root denial is not global absence. Editor version, activation/license
-and modules remain unverified. Earlier Windows Hub query timed out. No fresh source
-Godot/RGSS execution, Unity API/IL2CPP/Windows Player/Steam, ordinary-user/device or human
-agency/accessibility/quality validation. Prior restricted token is not ordinary-user
-Windows or a sandbox. Never bypass licensing/access policy.
+SDK10.0.401 executes from the isolated work runtime. Bounded PATH/conventional roots
+found no usable Unity/Hub; license, supported Editor/modules and author Windows station
+remain unverified. No Unity API/IL2CPP/Windows Player/Steam, multiplayer authority,
+ordinary-user/device/human comprehension, balance, fun or accessibility validation.
+R51/R60/R61/INT-C01-001 remain OPEN; causal-adapter B/E ACKs remain unverified.
+No Drive master, Maker, historical MER or canon mutation was authorized or performed.
 
 ## CI and remaining obligations
 
-CI42070817735 attempt1 completed/cancelled:7successful jobs; integrity127397919764cancelled
-at original-pitch rehearsal signal probes, C#127398222682cancelled at recipient rebuild.
-Focused method/maximal/keyboard passed before later C# cancellation. Actual decoded logs
-state only 'The operation was canceled'; cause remains unproven. No rerun requested.
-Preserve CI42065535102's two cancellations and single-job request versus NINE observed
-jobs; all earlier timeout/runtime/export/inventory/instrument failures, file:// policy
-refusals and unresolved sixth-host resume error remain without invented causes.
-Report new publication CI separately; baseline CI41971669529 succeeded all9jobs.
+New local commit, normal publication and remote CI are reported separately at closeout.
+Preserve prior cancelled runs42070817735/42065535102, request-versus-execution rerun
+scope, MSB4166 unknown causes, gate oracle/syntax/source-stability/metadata failures,
+file:// refusals and sixth-host resume error. Their exact retained evidence is not
+rewritten. Baseline CI41971669529 was successful; later cancellation is not fresh green.
 
-Eleven mandatory destinations remain; ten bounded methods operate. Build/Operations
-stays INCOMPLETE under licensed Unity/modules and production Windows acceptance.
-Consumption stays23INTEGRATED/12REJECTED/15UNRESOLVED; this is a product adaptation,
-not a newly consumed legacy collection. Full effects/passives/initiative/fizzle,
-schedules/catalogs/creation parsing, broad persistence, human experience, commercial
-clearance and production ownership remain unresolved. Audio/time/promises/redraw
-cannot manufacture gameplay, completion, return or delivery.
-
-P08 V6/CommanderSIM finite intakes remain COMPLETE; do not repeat. Preserve all48 held
-media, candidate Adaptive/Timing failures,4x estimate not ITU true peak, G8
-KEY_UNAVAILABLE_PENDING_GRADE,768Eclipse games NO_ROBUST_IMPROVEMENT and ZERO fully
-verified complete Commander games. No North Star AI or human audio-quality transfer.
+All eleven destinations remain, ten bounded methods operational. Build/Operations is
+INCOMPLETE pending licensed Unity/modules and production Windows acceptance. Consumption
+is24INTEGRATED/12REJECTED/15UNRESOLVED, each scoped; not product completion percentages.
+Full combat/effects, source creation/catalog/schedule parsing, broad persistence,
+human experience, commercial clearance and production ownership remain unresolved.
+P08V6/CommanderSIM intakes stay COMPLETE and frozen; preserve48held media, rejected
+Adaptive/Timing findings,4x estimate not ITU true peak, G8 pending official key,
+768Eclipse games NO_ROBUST_IMPROVEMENT and ZERO verified complete Commander games.
 
 ## Strategic balance and adaptive frontier
 
 Rolling targets remain approximately47%legacy/laboratories,40%North Star,13%repository/
-portfolio; counts/files/commits/tokens are not measured effort. Once-counted recent units:
+portfolio. Counts/files/commits/tokens are not effort. Once-counted recent units:
 
 | Unit | Primary stream | Evidence |
 |---|---|---|
-| Selected paid reaction contract in actual combat | Legacy/laboratories | [Responses](../evidence/response-chain/RUN.json) |
 | Finite audio research→critical-cue preservation | Legacy/laboratories | [Audio](../evidence/audio-music/p08-v6/RUN.json) |
 | Explicit paid journey withdrawal | North Star | [Withdrawal](../evidence/field-withdrawal/RUN.json) |
 | Deliberate keyboard→existing paid road commands | North Star | [Keyboard](../evidence/field-keyboard/RUN.json) |
@@ -118,11 +101,11 @@ portfolio; counts/files/commits/tokens are not measured effort. Once-counted rec
 | Selected phased breakbar in actual Treatment Line | Legacy/laboratories | [Breakbar](../evidence/breakbar/RUN.json) |
 | Focused existing same-person paid journey workflow | North Star | [Focused view](../evidence/journey-view/RUN.json) |
 | Paid portable gate after actual completed road | North Star | [Gate](../evidence/field-gate/RUN.json) |
+| Selected announced initiative in actual existing combat | Legacy/laboratories | [Initiative](../evidence/initiative/RUN.json) |
 
-ONE North Star production-domain unit, second consecutive after focused workflow.
-UI/library/native/browser/CI/regressions support it, not extra units. Before a third
-consecutive product unit, deliberately compare consequential legacy/laboratory and
-repository/production-ownership obligations or explain a concrete dependency/blocker.
-Do not automatically expand gate/navigation/keyboard/control matrices, add wrappers/
-saves/packages, repeat service/policy/media/token/I/O studies, intakes or transformation.
-Select the largest valuable feasible contribution from actual dependencies and balance.
+ONE laboratory unit corrects the two-product streak. UI/tests/routing/evidence support
+that unit, not extra units. Recompare consequential unresolved sources, coherent original
+product integration, licensed Unity/ordinary-user access and appropriate people/devices.
+Do not automatically expand initiative/gate/keyboard matrices, invent source data,
+repeat finite intakes or create wrappers/saves/packages. Choose the largest valuable
+feasible next contribution using actual dependencies and the maintained balance.
