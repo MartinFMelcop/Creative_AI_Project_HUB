@@ -545,7 +545,7 @@ jobs:
     needs: scope
     if: needs.scope.outputs.north_star_csharp == 'true'
     runs-on: ubuntu-24.04
-    timeout-minutes: 8
+    timeout-minutes: 12
     defaults:
       run:
         working-directory: martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab
@@ -771,8 +771,42 @@ jobs:
           path: ${{ runner.temp }}/npc-availability
           retention-days: 7
 
+
+  recipient-delivery:
+    needs: scope
+    if: contains(fromJSON(needs.scope.outputs.csharp_suites), 'recipient')
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    defaults:
+      run:
+        working-directory: martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab
+    env:
+      DOTNET_CLI_TELEMETRY_OPTOUT: '1'
+      DOTNET_NOLOGO: '1'
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-dotnet@67a3573c9a986a3f9c594539f4ab511d57bb3ce9 # v4
+        env:
+          DOTNET_INSTALL_DIR: ${{ runner.temp }}/north-star-sdk-10.0.401
+        with:
+          dotnet-version: '10.0.401'
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
+        with:
+          node-version: '24.19.0'
+      - name: Require the pinned SDK for recipient verification
+        run: test "$(dotnet --version)" = "10.0.401"
+      - name: Install locked recipient browser dependencies
+        run: npm ci --prefix projects/realtime-integration-lab
+      - name: Install matching Chromium for the extracted recipient
+        working-directory: martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/projects/realtime-integration-lab
+        run: |
+          npx --no-install playwright-core install --with-deps chromium
+          browser_path="$(node -p "require('playwright-core').chromium.executablePath()")"
+          test -x "$browser_path"
+          printf 'CHROMIUM_PATH=%s\n' "$browser_path" >> "$GITHUB_ENV"
       - name: Rebuild and execute the actual recipient demonstration without SDK on its PATH
-        if: contains(fromJSON(needs.scope.outputs.csharp_suites), 'recipient')
         run: |
           curl --fail --location --max-time 90 --output "$RUNNER_TEMP/recipient-sdk.tar.gz" https://builds.dotnet.microsoft.com/dotnet/Sdk/10.0.401/dotnet-sdk-10.0.401-linux-x64.tar.gz
           python3 delivery/authored-scene/verify.py --dotnet dotnet --sdk-archive "$RUNNER_TEMP/recipient-sdk.tar.gz" --compare delivery/authored-scene/dist/authored-scene-demo-linux-x64.zip --output "$RUNNER_TEMP/recipient-delivery"

@@ -39,7 +39,6 @@ EXPECTED = {
     'Execute selected reputation source contracts and actual service consumer': 'reputation',
     'Execute source-bound status, selected passives and actual C# practice consumer': 'combat',
     'Execute actual repair-to-watering journey and affected availability controls': 'availability',
-    'Rebuild and execute the actual recipient demonstration without SDK on its PATH': 'recipient',
 }
 
 
@@ -48,9 +47,9 @@ def require(condition, message):
         raise ValueError(message)
 
 
-def steps(text):
-    match = re.search(r'^  north-star-csharp:\n(?P<body>.*?)(?=^  [A-Za-z][\w-]*:\n|\Z)', text, re.M | re.S)
-    require(match is not None, 'Missing C# job')
+def steps(text, job_name='north-star-csharp'):
+    match = re.search(r'^  ' + re.escape(job_name) + r':\n(?P<body>.*?)(?=^  [A-Za-z][\w-]*:\n|\Z)', text, re.M | re.S)
+    require(match is not None, 'Missing job: ' + job_name)
     job = match.group('body')
     chunks = re.split(r'(?=^      - )', job, flags=re.M)
     rows = {}
@@ -83,7 +82,7 @@ def run_body(chunk):
 def validate_workflow(text):
     job, rows = steps(text)
     require("if: needs.scope.outputs.north_star_csharp == 'true'" in job, 'C# job gate changed')
-    require('timeout-minutes: 8' in job, 'C# timeout changed')
+    require('timeout-minutes: 12' in job, 'C# timeout changed')
     require("north_star_csharp: ${{ steps.affected.outputs.north_star_csharp == 'true' || steps.csharp.outputs.required == 'true' }}" in text,
             'New C# selection may not suppress old required job scope')
     for output in ('suites', 'browser'):
@@ -110,10 +109,37 @@ def validate_workflow(text):
     for name in ('Install existing locked browser instrument', 'Install matching browser for C# interaction verification'):
         require("        if: needs.scope.outputs.csharp_browser == 'true'\n" in rows[name], 'Browser setup guard differs')
     diagnostics = [row for name, row in rows.items() if name.startswith('Retain ')]
-    require(len(diagnostics) == 9, 'Retained C# diagnostic steps differ')
+    require(len(diagnostics) == 8, 'Retained C# diagnostic steps differ')
     require(all('\n        if: failure()\n' in row and 'actions/upload-artifact@' in row for row in diagnostics),
             'Failure diagnostics were weakened')
-    return {'verification_steps': len(EXPECTED), 'suite_keys': len(set(EXPECTED.values()))}
+    # The recipient archive requires a separate, still-mandatory execution budget.
+    recipient, delivery_rows = steps(text, 'recipient-delivery')
+    require("    needs: scope\n    if: contains(fromJSON(needs.scope.outputs.csharp_suites), 'recipient')\n" in recipient,
+            'Recipient must follow the exact source-based suite selection')
+    require('    timeout-minutes: 10\n' in recipient, 'Recipient timeout changed')
+    require("dotnet-version: '10.0.401'" in recipient and "node-version: '24.19.0'" in recipient,
+            'Recipient SDK/Node pins missing')
+    require('npm ci --prefix projects/realtime-integration-lab' in recipient
+            and 'playwright-core install --with-deps chromium' in recipient
+            and 'CHROMIUM_PATH' in recipient, 'Recipient browser preparation missing')
+    require(run_body(delivery_rows['Require the pinned SDK for recipient verification']) ==
+            'test "$(dotnet --version)" = "10.0.401"', 'Recipient SDK not verified')
+    delivery = delivery_rows['Rebuild and execute the actual recipient demonstration without SDK on its PATH']
+    require('        if: ' not in delivery, 'Recipient verification may not silently skip')
+    command = run_body(delivery)
+    require('curl --fail --location --max-time 90' in command
+            and 'dotnet-sdk-10.0.401-linux-x64.tar.gz' in command
+            and 'delivery/authored-scene/verify.py --dotnet dotnet --sdk-archive' in command
+            and '--compare delivery/authored-scene/dist/authored-scene-demo-linux-x64.zip' in command,
+            'Executable recipient rebuild, recovery and comparison missing')
+    receipt = delivery_rows['Retain recipient delivery failure diagnostics']
+    require('\n        if: failure()\n' in receipt
+            and 'actions/upload-artifact@' in receipt
+            and 'recipient-delivery-diagnostics' in receipt
+            and '${{ runner.temp }}/recipient-delivery' in receipt,
+            'Recipient failure evidence retention weakened')
+    return {'verification_steps': len(EXPECTED) + 1,
+            'suite_keys': len(set(EXPECTED.values())) + 1}
 
 
 def command_strings(path):
@@ -158,6 +184,20 @@ class WorkflowContract(unittest.TestCase):
         for mutant in mutants:
             with self.assertRaises(ValueError):
                 validate_workflow(mutant)
+
+    def test_recipient_split_fails_closed_when_required_gate_disappears(self):
+        text = WORKFLOW.read_text()
+        recipient, _ = steps(text, 'recipient-delivery')
+        variants = [
+            recipient.replace("if: contains(fromJSON(needs.scope.outputs.csharp_suites), 'recipient')", 'if: false', 1),
+            recipient.replace('npm ci --prefix projects/realtime-integration-lab', 'true', 1),
+            recipient.replace('playwright-core install --with-deps chromium', 'true', 1),
+            recipient.replace('delivery/authored-scene/verify.py --dotnet dotnet --sdk-archive', 'echo skipped', 1),
+            recipient.replace('if: failure()', 'if: false', 1),
+        ]
+        for variant in variants:
+            with self.subTest(mutant=variant[:100]), self.assertRaises(ValueError):
+                validate_workflow(text.replace(recipient, variant, 1))
 
     def test_nested_wrapper_obligations_exist_once_and_false_coverage_fails(self):
         validate_wrappers()
