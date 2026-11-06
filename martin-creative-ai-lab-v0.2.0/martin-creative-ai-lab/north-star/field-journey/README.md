@@ -279,3 +279,37 @@ python3 north-star/field-journey/tools/journey-view-verify.py --dotnet dotnet --
 
 [Execution](../../evidence/journey-view/RUN.json) separates the new focused-view
 controls from affected unchanged regressions and preserved failed attempts.
+
+## Optional paid gate after the actual road
+
+After actual final Crossing completion, explicit entry can transfer the same confirmed
+person's remaining HP/resolve into a private C#8/netstandard2.1 gate owner. It cannot
+start during survey, failure or withdrawal. The completed child and all earlier
+preparation, costs, XP, fittings and sample history freeze; their HP is then historical,
+while Gate HP is current. No new rig, healing, XP, retry reset, home arrival or sample
+delivery follows. This is the same consumer, not another application or recipient pack.
+
+The preserved Godot return gate supplies selected arrival/two-work/mechanism/exit
+contracts. This destination deliberately redesigns continuous time as paid actions:
+three mechanism integrity is disclosed new setup; two consecutive work beats raise each
+catch. Moving, waiting, bracing or grounding cancels partial work. Announced player
+contact costs two HP and interrupts work; winch contact costs one integrity but does
+not interrupt catch work unless the mechanism fails. Threat cycles player/quiet/winch/
+quiet by accepted gate beat. Refusals, GET, redraw and wall time never advance it.
+
+Brace spends one resolve and protects either announced contact for that action, from
+any gate position. Explicit grounding at Ground spends two resolve and one integrity
+for one beat; the current threat resolves before it suppresses future threats. These
+costs, positions, timing and protection are ORIGINAL experimental destination policies,
+not a faithful spatial/body-interception or 1.5-second grounding port. Both catches or
+shutdown alone are incomplete: move to Exit, then explicitly exit alive with surviving
+mechanism. Fatal damage or breakage wins over work/grounding/exit on that same action.
+
+[Protocol](tools/gate-protocol.json) separates prospective browser criteria from native
+implementation already underway. [Execution](../../evidence/field-gate/RUN.json) retains
+actual policies, negatives, source identities and affected regressions. Software success
+is not human agency, balance, accessibility, artistic approval or Unity/Windows/Steam.
+
+```sh
+python3 north-star/field-journey/tools/gate-verify.py --dotnet dotnet --output /tmp/field-gate-new
+```

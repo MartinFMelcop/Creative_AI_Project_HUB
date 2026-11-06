@@ -1,0 +1,90 @@
+{
+  "run": 42070817735,
+  "attempt": 1,
+  "conclusion": "cancelled",
+  "jobs": [
+    {
+      "id": 127397919764,
+      "name": "integrity-and-dialogue",
+      "status": "completed",
+      "conclusion": "cancelled",
+      "cancelled_steps": [
+        "Verify original-pitch rehearsal assets and encoded signal probes"
+      ]
+    },
+    {
+      "id": 127397920713,
+      "name": "scope",
+      "status": "completed",
+      "conclusion": "success",
+      "cancelled_steps": []
+    },
+    {
+      "id": 127398222164,
+      "name": "source-experiment-launch",
+      "status": "completed",
+      "conclusion": "success",
+      "cancelled_steps": []
+    },
+    {
+      "id": 127398222235,
+      "name": "north-star-remote",
+      "status": "completed",
+      "conclusion": "success",
+      "cancelled_steps": []
+    },
+    {
+      "id": 127398222342,
+      "name": "eclipse-economy",
+      "status": "completed",
+      "conclusion": "success",
+      "cancelled_steps": []
+    },
+    {
+      "id": 127398222428,
+      "name": "north-star-authority",
+      "status": "completed",
+      "conclusion": "success",
+      "cancelled_steps": []
+    },
+    {
+      "id": 127398222430,
+      "name": "native-arena",
+      "status": "completed",
+      "conclusion": "success",
+      "cancelled_steps": []
+    },
+    {
+      "id": 127398222472,
+      "name": "chat-and-evaluation",
+      "status": "completed",
+      "conclusion": "success",
+      "cancelled_steps": []
+    },
+    {
+      "id": 127398222682,
+      "name": "north-star-csharp",
+      "status": "completed",
+      "conclusion": "cancelled",
+      "cancelled_steps": [
+        "Rebuild and execute the actual recipient demonstration without SDK on its PATH"
+      ]
+    }
+  ],
+  "log_observations": [
+    {
+      "source": "GitHub decoded job log",
+      "markers": [
+        "2026-11-05T17:13:05.5254014Z ##[error]The operation was canceled."
+      ]
+    },
+    {
+      "source": "GitHub decoded job log",
+      "markers": [
+        "2026-11-05T17:13:50.3940064Z ##[error]The operation was canceled."
+      ]
+    }
+  ],
+  "cause": "unproven",
+  "rerun_requested": false
+}

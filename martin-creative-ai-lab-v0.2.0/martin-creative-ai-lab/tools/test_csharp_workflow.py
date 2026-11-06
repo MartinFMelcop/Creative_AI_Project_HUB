@@ -14,6 +14,7 @@ import unittest
 ROOT = Path(__file__).resolve().parents[1]
 WORKFLOW = ROOT.parents[1] / '.github/workflows/lab-checks.yml'
 EXPECTED = {
+    'Execute paid post-Crossing gate and frozen child outcomes': 'field',
     'Execute focused journey navigation and unchanged paid owner route': 'field',
     'Execute phased breakbar and payable actual combat consequences': 'combat',
     'Execute deliberate keyboard actions and interruption quarantine': 'field',
@@ -136,7 +137,7 @@ def validate_wrappers(overrides=None):
 
 class WorkflowContract(unittest.TestCase):
     def test_actual_workflow_has_all_guarded_existing_commands(self):
-        self.assertEqual(validate_workflow(WORKFLOW.read_text()), {'verification_steps': 24, 'suite_keys': 16})
+        self.assertEqual(validate_workflow(WORKFLOW.read_text()), {'verification_steps': 25, 'suite_keys': 16})
 
     def test_wrong_guard_and_removed_field_command_are_rejected(self):
         text = WORKFLOW.read_text()

@@ -98,6 +98,40 @@
   for(const site of s.sample_case.sites)$(site.id+'-sample-window').textContent='Expedition withdrawn. Historical site position cannot authorize another collection.';
   if(s.sample_case.loss_reason==='withdrawn'){$('sampling-state').textContent='FORFEITED / NO SAMPLE CARRIED';$('sampling-picture-title').textContent='Sample custody forfeited by withdrawal. No physical breakage observed.';$('sampling-case').textContent='The carried sample was forfeited by accepted expedition withdrawal. Its acquisition and paid collection receipt remain historical.';}
  }
+ function gateView(s){
+  if(!s.gate||typeof s.gate.entered!=='boolean')throw Error('Actual gate phase observation required');
+  const g=s.gate,entered=g.entered,panel=$('gate-panel');
+  const gateCompletedObserved = g.completed === true;
+  panel.dataset.entered=String(entered);panel.dataset.completed=String(gateCompletedObserved);panel.dataset.failed=String(entered&&g.failed===true);
+  $('gate-observation').hidden=!entered;
+  $('gate-state').textContent=!entered?'NOT ENTERED':gateCompletedObserved?'PASSAGE OPENED':g.failed?'GATE FAILED':'GATE ACTIVE';
+  $('gate-context').textContent=!entered?'Only the same living person after actual final Crossing completion may explicitly enter. The completed road stays historical. This mechanism supplies no healing, XP, refund, home return or sample delivery.':'The completed Crossing is frozen history. Current gate HP and resolve belong to this gate phase; they are not a heal or a rewrite of that road. Road-secured sample history does not prove current delivery or return.';
+  $('road-health-label').textContent=entered?'Historical Crossing HP':'Health';$('road-resolve-label').textContent=entered?'Historical Crossing resolve':'Resolve';
+  if(!entered)return;
+  if(!Array.isArray(g.legal)||!g.entry)throw Error('Actual gate command and entry facts required');
+  const id=g.entry,positions={left:180,ground:440,right:720,exit:900};
+  $('gate-current-person').textContent=`${id.handle} · ${id.class_id} · ${id.accent} accent · transferred ${id.rig} outfit. Entry HP ${id.health}, resolve ${id.resolve}; no extra supplies or rewards.`;
+  $('gate-entry-health').textContent=`Frozen entry resources: ${id.health} HP / ${id.resolve} resolve. Current phase resources are below.`;
+  $('gate-position').textContent=`Current gate position: ${g.position}. Actual movement is separate from exit acceptance.`;
+  $('gate-health').textContent=String(g.health);$('gate-resolve').textContent=String(g.resolve);$('gate-integrity').textContent=String(g.integrity);$('gate-beat').textContent=String(g.beat);
+  $('gate-left').textContent=g.left_raised?'raised':'not raised';$('gate-right').textContent=g.right_raised?'raised':'not raised';
+  $('gate-progress').textContent=g.progress>0?`Committed ${g.working} work: ${g.progress} of 2 actions. Moving, release, bracing or player contact damage cancels this partial work.`:'No partial catch work retained. Each catch needs two consecutive surviving work actions.';
+  $('gate-threat').textContent=g.active?`Next gate threat: ${g.next_threat==='player'?'player contact / 2 HP':g.next_threat==='winch'?'mechanism contact / 1 integrity':'quiet / no contact'}. Each accepted paid action resolves its announced threat before work or exit.`:'No next active gate action. This phase cannot restart or restore entry resources.';
+  $('gate-receipt').textContent=g.last_text;
+  $('gate-outcome').hidden=!gateCompletedObserved&&!g.failed;$('gate-outcome').textContent=gateCompletedObserved?'Both catches were raised and this living person used the actual exit. The passage is open; home return, sample delivery, healing and additional XP were not observed.':g.failed?'The gate phase failed. The prior road remains complete as history; no revival, retry, delivery or home return was supplied.':'';
+  $('gate-actor').setAttribute('transform',`translate(${positions[g.position]} 255)`);$('gate-cloth').setAttribute('fill',accents[id.accent]||accents.copper);$('gate-actor').dataset.alive=String(g.health>0);$('gate-actor').dataset.handle=id.handle;
+  $('gate-plate').style.display=String(id.rig).toLowerCase()==='plate'?'':'none';$('gate-trail').style.display=String(id.rig).toLowerCase()==='trail'?'':'none';
+  for(const side of ['left','right'])$('gate-'+side+'-catch').dataset.raised=String(g[side+'_raised']);
+  $('gate-exit-picture').dataset.open=String(g.left_raised&&g.right_raised);$('gate-mechanism').dataset.grounded=String(g.grounded);
+  $('gate-scene-threat').textContent=g.active?g.grounded?'WARD GROUNDED / WORK AND EXIT REMAIN':`NEXT: ${g.next_threat.toUpperCase()}`:gateCompletedObserved?'ACTUAL ALIVE EXIT / PASSAGE OPENED':'GATE FAILED / NO RETURN';
+  $('gate-picture-title').textContent=`${id.handle}, ${id.accent} accent, actual ${id.rig} outfit at ${g.position}. ${gateCompletedObserved?'Actual passage opened':g.failed?'Gate failed':'Gate work active'}.`;
+  $('gate-picture-description').textContent=`Current gate health ${g.health}, resolve ${g.resolve}, mechanism integrity ${g.integrity}. Left catch ${g.left_raised?'raised':'closed'}; right catch ${g.right_raised?'raised':'closed'}. Crossing facts are historical. No home return or delivery observed.`;
+  $('road-stage').textContent='HISTORICAL ROAD COMPLETE';$('field-encounter-board').dataset.historical='true';$('field-phase').textContent='HISTORICAL CROSSING COMPLETE';
+  $('field-outcome-label').textContent='COMPLETED ROAD / CURRENT GATE PHASE BELOW';$('field-scene-description').textContent='Frozen completed Crossing observation. Current person health and the separate gate objective are observed below.';
+  $('threat').textContent=`Historical Crossing ended with ${s.intake.state.health} HP and ${s.intake.state.resolve} resolve. Gate actions do not rewrite those facts. Read current gate resources below.`;
+  $('earned-state').textContent=`Historical earned points remaining: ${s.intake.state.unspent}. Gate entry locks this prior owner; no allocation, amendment, recovery or reward occurs here.`;
+  disarmKeyboard();
+ }
  function render(s){
   if(!s?.intake?.state||!s?.memory||!Array.isArray(s.fittings))throw Error('Incomplete actual journey observation');
   if(!['independent','ordered','single-offer'].includes(s.memory.policy))throw Error('Actual known service policy required');
@@ -141,7 +175,7 @@
   $('earned-state').textContent=`Earned points remaining: ${e.unspent}. Vitality ${e.vitality}; Focus ${e.focus}. Between encounters, a new whole proposal may equip earned Dash. Confirmation never heals, refunds or reopens the workshop.`;
   for(let n=1;n<=4;n++)$('use-slot'+n).textContent=`Slot ${n}${id?.slots[n-1]?' · '+id.slots[n-1]:''}`;
   $('completion').hidden=!completeObserved;$('completion').textContent=`${id?.handle||'This person'} completed the actual road. Workshop acquisition and assembly remain distinct from that completion.`;
-  $('sequence').textContent=String(s.sequence);$('notice').textContent=s.text;withdrawalView(s);journeyView();controls();
+  $('sequence').textContent=String(s.sequence);$('notice').textContent=s.text;withdrawalView(s);gateView(s);journeyView();controls();
  }
  // Local presentation preference only. No owner command, read or automatic stage change.
  function journeyView(){
@@ -164,7 +198,7 @@
   const quantity=name=>e.inventory[name]??0;
   const stock=`Actual rig stock: ${quantity('trail_rig')} Trail / ${quantity('plate_rig')} Plate`;
   const road=state.withdrawn===true?'Expedition withdrawn / child facts historical':e.complete?'Actual road complete':e.active?`Actual encounter active / stage ${e.stage+1} / beat ${e.beat}`:e.attempts?e.won?'Survey won / final road not complete':'Attempt ended / no completion':'Not departed';
-  $('journey-view-facts').textContent=`${person}. ${workshop}. ${stock}. ${road}. Viewing a section never makes its actions eligible.`;
+  $('journey-view-facts').textContent=`${person}. ${workshop}. ${stock}. ${road}.${state.gate?.entered?' Crossing is historical; current gate phase is '+(state.gate.completed?'passage opened':state.gate.failed?'failed':'active')+'.':''} Viewing a section never makes its actions eligible.`;
   $('journey-view-amendment').hidden=!c.confirmed||!c.pending||state.withdrawn===true;
  }
  function selectJourneyView(stage){
@@ -195,10 +229,21 @@
   for(const key of ['focus','vitality'])$(key).disabled=busy||uncertain||locked||e.unspent<1;
   $('withdraw-expedition').disabled=busy||uncertain||!state.workshop_closed||e.complete||state.withdrawn===true;
   if(state.withdrawn===true){for(const el of document.querySelectorAll('button,input,select'))if(el.id!=='read'&&!el.hasAttribute('data-journey-nav'))el.disabled=true;}
+  const gate=state.gate,gateCommands=['gate-work','gate-ground','gate-wait','gate-brace','gate-exit'];
+  if(gate.entered){
+   for(const el of document.querySelectorAll('button:not([data-journey-nav]),input,select'))if(el.id!=='read'&&!el.id.startsWith('gate-'))el.disabled=true;
+   disarmKeyboard();
+  }
+  $('gate-enter').disabled=busy||uncertain||state.withdrawn===true||!gate.eligible;
+  for(const key of gateCommands)$(key).disabled=busy||uncertain||!gate.entered||!gate.legal.includes(key);
+  for(const target of ['left','right','ground','exit'])$('gate-move-'+target).disabled=busy||uncertain||!gate.entered||!gate.legal.includes('gate-move')||(target==='exit'&&!(gate.left_raised&&gate.right_raised));
+
  }
  async function read(){if(busy)return;busy=true;controls();const g=++generation;try{const r=await fetch('/state',{cache:'no-store'});if(!r.ok)throw Error('Read refused');const s=await r.json();if(g!==generation)return;uncertain=false;render(s);adopt(s.intake.draft);$('connection').textContent='Current facts read from the owner. No action was retried.';}catch(e){uncertain=true;$('connection').textContent='Unable to read: '+e.message+'. Read again before acting.';}finally{busy=false;controls();}}
  async function send(command,fields={}){if(busy||uncertain||!state)throw Error('Read current facts before another action');busy=true;controls();const g=generation;try{const r=await fetch('/command',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({command,revision:state.sequence,...fields})});if(!r.ok)throw Error('Command receipt unavailable');const s=await r.json();if(g!==generation)throw Error('Response quarantined after interruption');render(s);if(command==='draft'||command==='propose-card')adopt(s.intake.draft);$('connection').textContent='Actual owner response. No automatic retry or clock conversion.';return s;}catch(e){uncertain=true;$('connection').textContent='Outcome uncertain: '+e.message+'. Explicitly read facts before acting again.';throw e;}finally{busy=false;controls();}}
  function invoke(command,fields={}){send(command,fields).catch(()=>{});}
+ for(const command of ['gate-enter','gate-work','gate-ground','gate-wait','gate-brace','gate-exit'])$(command).onclick=()=>invoke(command);
+ for(const target of ['left','right','ground','exit'])$('gate-move-'+target).onclick=()=>invoke('gate-move',{target});
  $('draft-form').onsubmit=e=>{e.preventDefault();invoke('draft',proposal());};$('review').onclick=()=>invoke('review');$('confirm').onclick=()=>invoke('confirm',{draft_revision:state.intake.draft_revision});
  for(const bench of ['west','east']){$(bench+'-help').onclick=()=>invoke(state.memory.benches.find(b=>b.id===bench).helped?'demonstrate':'help',{bench});$(bench+'-serve').onclick=()=>invoke('serve',{bench});$(bench+'-decline').onclick=()=>invoke('decline',{bench});}
  for(const site of ['ridge','channel'])$('sample-'+site).onclick=()=>invoke('sample',{site});

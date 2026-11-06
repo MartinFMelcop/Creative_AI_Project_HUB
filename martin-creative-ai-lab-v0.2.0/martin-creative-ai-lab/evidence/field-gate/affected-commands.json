@@ -1,0 +1,39 @@
+[
+  {
+    "name": "maximal",
+    "command": [
+      "python3",
+      "north-star/field-journey/tools/preparation-verify.py",
+      "--dotnet",
+      "/workspace/work/authored-scene/dotnet/dotnet",
+      "--output",
+      "/workspace/work/gate-final-review/maximal"
+    ],
+    "exit_code": 0,
+    "tail": "PASS: authored preparations and affected existing consumers\n"
+  },
+  {
+    "name": "focused",
+    "command": [
+      "python3",
+      "north-star/field-journey/tools/journey-view-verify.py",
+      "--dotnet",
+      "/workspace/work/authored-scene/dotnet/dotnet",
+      "--output",
+      "/workspace/work/gate-final-review/focused"
+    ],
+    "exit_code": 0,
+    "tail": "PASS: same-owner focused journey, exact route parity and source stability\n"
+  },
+  {
+    "name": "source-launch",
+    "command": [
+      "node",
+      "showcase/launch-browser.mjs",
+      "/workspace/work/authored-scene/dotnet/dotnet",
+      "/workspace/work/gate-final-review/source-launch"
+    ],
+    "exit_code": 1,
+    "tail": "node:internal/modules/run_main:107\n    triggerUncaughtException(\n    ^\n\nError: Launcher exited before readiness: {\"event\": \"preflight\", \"id\": \"field-journey\", \"boundary\": \"Trusted-local source experiment, ephemeral and SDK-required. No Unity/Windows/Steam, recipient inclusion, sandbox or human validation.\"}\n{\"event\": \"failed\", \"error\": \"Source experiment consumer identity mismatch\"}\n\n    at file:///workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/showcase/launch-browser.mjs:32:67\n\nNode.js v24.19.0\n"
+  }
+]

@@ -268,6 +268,22 @@ and guard feedback. See [execution](../evidence/north-star-return-gate/RUN.json)
 Revisit the adventure/identity direction after actual player observation; passing checks
 does not establish meaningfulness, recognition, fun or unassisted comprehension.
 
+## Discrete C# gate continuation — experimental
+
+The existing FieldJourney now offers voluntary paid work after its actual final road.
+The same confirmed person transfers remaining HP/resolve once; the completed Crossing
+becomes immutable history while a private portable gate owner controls current resources.
+Two interrupted jobs and an explicit surviving exit make opening a passage consequential.
+Direct work risks HP/mechanism damage; grounding spends resolve and mechanism integrity
+before suppressing future threats. Neither route establishes balance or human agency.
+
+This adapts the preserved Godot objective, with original discrete timing, named movement,
+three integrity setup, costs, brace and no-retry policies. It does not reproduce continuous
+Godot timing or checkpoint restoration. Passage opening is not home arrival, sample
+delivery, healing, XP or a refund. Prior Godot behavior remains preserved. Review after
+appropriate player observation and actual production execution; [software evidence](../evidence/field-gate/RUN.json)
+is not author approval, artistic quality or Unity/Windows/Steam acceptance.
+
 ## Character look — experimental, separate from author-approved identity direction
 
 CRE-001 D supplies the identity ambition. CRE-009/029/066 H inform this limited free

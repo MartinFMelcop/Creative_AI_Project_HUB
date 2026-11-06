@@ -654,6 +654,9 @@ jobs:
       - name: Execute focused journey navigation and unchanged paid owner route
         if: contains(fromJSON(needs.scope.outputs.csharp_suites), 'field')
         run: python3 north-star/field-journey/tools/journey-view-verify.py --dotnet dotnet --output "$RUNNER_TEMP/journey-view"
+      - name: Execute paid post-Crossing gate and frozen child outcomes
+        if: contains(fromJSON(needs.scope.outputs.csharp_suites), 'field')
+        run: python3 north-star/field-journey/tools/gate-verify.py --dotnet dotnet --output "$RUNNER_TEMP/field-gate"
       - name: Retain scoped memory failure diagnostics
         if: failure()
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4

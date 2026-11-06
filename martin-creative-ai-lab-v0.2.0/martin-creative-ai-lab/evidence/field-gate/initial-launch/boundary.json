@@ -1,0 +1,8 @@
+{
+  "first_error": "Source experiment consumer identity mismatch against stale pre-gate portfolio evidence. Correctly refused before readiness.",
+  "integration_errors": [
+    "KeyError: evidence; incomplete P09 lab has no evidence property. Actual schema respected.",
+    "KeyError: checks; launcher report uses controls. No runtime or test change."
+  ],
+  "resolution": "Verified new RUN/current catalog binding before unchanged source-launch rerun;19controls passed. Final evidence pin is frozen before a final catalog-bound launch."
+}

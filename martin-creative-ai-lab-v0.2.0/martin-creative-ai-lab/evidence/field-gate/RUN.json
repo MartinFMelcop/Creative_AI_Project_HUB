@@ -1,0 +1,864 @@
+{
+  "schema_version": 1,
+  "kind": "destination_execution",
+  "baseline_commit": "23bd920c128ea4d528a8f844a63ac652aa4306a0",
+  "capability_ids": [],
+  "consumer_paths": [
+    "north-star/csharp/Crossing/Session.cs",
+    "north-star/csharp/Forge/Expedition.cs",
+    "north-star/csharp/Loadout/PreparedExpedition.cs",
+    "north-star/field-journey/Gate/Gate.cs",
+    "north-star/field-journey/Host/Program.cs",
+    "north-star/field-journey/Host/Room.cs",
+    "north-star/intake/Host/Room.cs",
+    "north-star/memory-study/Conditions/Conditions.cs",
+    "north-star/memory-study/Host/Program.cs",
+    "north-star/memory-study/Host/Room.cs"
+  ],
+  "runtime": "SDK10.0.401/Linux; Node24.19.0/Chromium154; C#8/netstandard2.1 Gate with existing .NET10 host",
+  "scope": "Original paid post-Crossing gate in the same FieldJourney; previous children freeze at explicit entry. Selected Godot contracts redesigned as discrete paid actions, not timing equivalence.",
+  "checks": {
+    "passed": 43,
+    "failed": 0
+  },
+  "commands": [
+    {
+      "command": [
+        "/workspace/work/authored-scene/dotnet/dotnet",
+        "--version"
+      ],
+      "exit_code": 0,
+      "stdout": "10.0.401\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/workspace/work/authored-scene/dotnet/dotnet",
+        "build",
+        "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/field-journey/GateChecks/NorthStar.GateChecks.csproj",
+        "-c",
+        "Release"
+      ],
+      "exit_code": 0,
+      "stdout": "  Determining projects to restore...\n  All projects are up-to-date for restore.\n  NorthStar.Domain -> /workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/Domain/bin/Release/netstandard2.1/NorthStar.Domain.dll\n  NorthStar.Conditions -> /workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/memory-study/Conditions/bin/Release/netstandard2.1/NorthStar.Conditions.dll\n  NorthStar.Crossing -> /workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/Portable/Crossing/bin/Release/netstandard2.1/NorthStar.Crossing.dll\n  NorthStar.FieldGate -> /workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/field-journey/Gate/bin/Release/netstandard2.1/NorthStar.FieldGate.dll\n  NorthStar.Preparation -> /workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/field-journey/Preparation/bin/Release/netstandard2.1/NorthStar.Preparation.dll\n  NorthStar.FieldSampling -> /workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/field-journey/Sampling/bin/Release/netstandard2.1/NorthStar.FieldSampling.dll\n  NorthStar.Forge -> /workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/Portable/Forge/bin/Release/netstandard2.1/NorthStar.Forge.dll\n  NorthStar.Memory -> /workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/memory-study/Rules/bin/Release/netstandard2.1/NorthStar.Memory.dll\n  NorthStar.Loadout -> /workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/Portable/Loadout/bin/Release/netstandard2.1/NorthStar.Loadout.dll\n  NorthStar.FieldPresentation -> /workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/field-journey/Presentation/bin/Release/netstandard2.1/NorthStar.FieldPresentation.dll\n  NorthStar.MemoryStudy -> /workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/memory-study/Host/bin/Release/net10.0/NorthStar.MemoryStudy.dll\n  NorthStar.Intake -> /workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/intake/Host/bin/Release/net10.0/NorthStar.Intake.dll\n  NorthStar.FieldJourney -> /workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/field-journey/Host/bin/Release/net10.0/NorthStar.FieldJourney.dll\n  NorthStar.GateChecks -> /workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/field-journey/GateChecks/bin/Release/net10.0/NorthStar.GateChecks.dll\n\nBuild succeeded.\n    0 Warning(s)\n    0 Error(s)\n\nTime Elapsed 00:00:05.78\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/workspace/work/authored-scene/dotnet/dotnet",
+        "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/field-journey/GateChecks/bin/Release/net10.0/NorthStar.GateChecks.dll",
+        "/workspace/work/gate-final-review/execution/native.json"
+      ],
+      "exit_code": 0,
+      "stdout": "PASS: 43 actual gate native controls\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "node",
+        "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/field-journey/tools/gate-browser.mjs",
+        "/workspace/work/authored-scene/dotnet/dotnet",
+        "/workspace/work/gate-final-review/execution/browser"
+      ],
+      "exit_code": 0,
+      "stdout": "PASS 26 actual gate controls, 2 HTTP negatives and 1 isolated renderer negative\n",
+      "stderr": ""
+    }
+  ],
+  "source_artifacts": [
+    {
+      "local_path": "evidence/dialogue-conditions/protocol.json",
+      "size_bytes": 4269,
+      "sha256": "b4a14b2dd29a442870f044da42091ec3bb2e6ae87f3a12f6ef17558fe0b975b7"
+    },
+    {
+      "local_path": "evidence/field-journey/protocol.json",
+      "size_bytes": 3497,
+      "sha256": "99750d12a2d771ee36673f1e6f728aca26b1aea1131e80fc1a61fa0e466980b5"
+    },
+    {
+      "local_path": "evidence/field-presentation/protocol.json",
+      "size_bytes": 4677,
+      "sha256": "3f0e9fbafe7e3bcb5f2e6874cb251135993d194fcd3dd706b3626e34d0655aa5"
+    },
+    {
+      "local_path": "evidence/field-sampling/protocol.json",
+      "size_bytes": 7541,
+      "sha256": "5bec244ff9df955b6d4422114acdeb209c4695bdbdbe4db40dd7709e275b520c"
+    },
+    {
+      "local_path": "evidence/memory-study/protocol.json",
+      "size_bytes": 3026,
+      "sha256": "61470b70a436e1bcaf8ebd7916355e03ec7afeac093a37fc0485484f485450a2"
+    },
+    {
+      "local_path": "evidence/preparation-authoring/protocol.json",
+      "size_bytes": 5816,
+      "sha256": "9c699b3286781e1f32cf6047e643c035947473545d97a046b9a24cb2fb6d538f"
+    },
+    {
+      "local_path": "evidence/query-bindings/protocol.json",
+      "size_bytes": 5622,
+      "sha256": "d9f112609ddf2dede13c2136acd832a43114119659f6ecc77c34f9b407367a93"
+    },
+    {
+      "local_path": "labs/narrative-continuity/memory/run.py",
+      "size_bytes": 8904,
+      "sha256": "708c0aec025840f8fe72c6fc4b9f7f5ff929bdd53a36ec689fd0621bbf515ecb"
+    },
+    {
+      "local_path": "labs/world-gameplay/dialogue-conditions/README.md",
+      "size_bytes": 4995,
+      "sha256": "beddfa4fe45bd38494e0d0d6bc65591786f9eaacece3ed920ede06b21b19e26e"
+    },
+    {
+      "local_path": "labs/world-gameplay/dialogue-conditions/assay.py",
+      "size_bytes": 7215,
+      "sha256": "cf14c8284a44cc1d5ef35386e62a05deccef1ecc426114b9fac0b07ac4b709f2"
+    },
+    {
+      "local_path": "labs/world-gameplay/dialogue-conditions/query-assay.py",
+      "size_bytes": 9435,
+      "sha256": "650e4d4ee53c146d8c86570a5e6dbd6648b59d8277db639f89dfd9cd61c00676"
+    },
+    {
+      "local_path": "north-star/csharp/Crossing/NorthStar.Crossing.csproj",
+      "size_bytes": 352,
+      "sha256": "09fbdffe415d44079f66da83d4d22e5b91169f3f1abdd0e1ebc2bacd2e3f0c88"
+    },
+    {
+      "local_path": "north-star/csharp/Crossing/Program.cs",
+      "size_bytes": 4226,
+      "sha256": "268c1b5ac582dd06f15eb3e40e7ce859a9c58eecfc58c7586d94bcaecf9c595e"
+    },
+    {
+      "local_path": "north-star/csharp/Crossing/Session.cs",
+      "size_bytes": 5357,
+      "sha256": "d25ac05ba1a94432474dd1b14b4fd608e446fc5344dcc4f779d8d5fe27a1b2c5"
+    },
+    {
+      "local_path": "north-star/csharp/Domain/Crafting.cs",
+      "size_bytes": 8035,
+      "sha256": "5a5a892b3e68cff73f7a443d7c014c79dbebf2954d28f447e1bf3a9c4759de57"
+    },
+    {
+      "local_path": "north-star/csharp/Domain/Loadout.cs",
+      "size_bytes": 5692,
+      "sha256": "a1296ca13b5ba6728c073320b860e369ad2e01fdaacb45b5237ef40d0243f682"
+    },
+    {
+      "local_path": "north-star/csharp/Domain/NorthStar.Domain.csproj",
+      "size_bytes": 344,
+      "sha256": "9570b674acfea69bb60098f495afd3b9e2cef2575fcfeb6db71c2cdecb2c4876"
+    },
+    {
+      "local_path": "north-star/csharp/Domain/Progression.cs",
+      "size_bytes": 8331,
+      "sha256": "8495e1ad92fea069c2c3989f6f2cc2600980575e72812df9480ed193c51c8685"
+    },
+    {
+      "local_path": "north-star/csharp/Forge/Expedition.cs",
+      "size_bytes": 4688,
+      "sha256": "579c1eb8375a5c281d35338f1c93cb529c16bf330f0576046c970d42c816bfc3"
+    },
+    {
+      "local_path": "north-star/csharp/Forge/NorthStar.Forge.csproj",
+      "size_bytes": 420,
+      "sha256": "3f58ee26c26f3030dcdb7cc2c6db2b7e14bff43d81e936b95cc116bc82978d35"
+    },
+    {
+      "local_path": "north-star/csharp/Forge/Program.cs",
+      "size_bytes": 6419,
+      "sha256": "3a289847c487ca3bca8a406635b7f0a2334daa959d767d31b3f732445a398c3a"
+    },
+    {
+      "local_path": "north-star/csharp/Forge/README.md",
+      "size_bytes": 5243,
+      "sha256": "6a39641bb2b3c60df9f8b5148d82e69c7c83951f072cb5f0caf544d6400ec8b3"
+    },
+    {
+      "local_path": "north-star/csharp/Loadout/NorthStar.Loadout.csproj",
+      "size_bytes": 414,
+      "sha256": "8b7ae6ab602aa24a78926f23bdf1d0117d79293eeb493334c1a4a2d3d4c85613"
+    },
+    {
+      "local_path": "north-star/csharp/Loadout/PreparedExpedition.cs",
+      "size_bytes": 4861,
+      "sha256": "92fabdaa94f4ad4bb33a55a113a3d4f8cc63c86634d631413a529eb53df24668"
+    },
+    {
+      "local_path": "north-star/csharp/Loadout/Program.cs",
+      "size_bytes": 5919,
+      "sha256": "6409bc7a9d24a9c60ea59657b33925c6dd27e3a6a9a7a9736e2d3a5ff7d6d7d8"
+    },
+    {
+      "local_path": "north-star/csharp/Loadout/README.md",
+      "size_bytes": 4777,
+      "sha256": "796423b4450dbec4f37cb0c9a5f3a86aa21168f45464b7a5e46f349a6fb776a9"
+    },
+    {
+      "local_path": "north-star/csharp/Portable/Crossing/NorthStar.Crossing.csproj",
+      "size_bytes": 580,
+      "sha256": "bf08a1ba3db27ea0848f7f91583192e83d2ccec8168cfb55dd965db786daa3f8"
+    },
+    {
+      "local_path": "north-star/csharp/Portable/Forge/NorthStar.Forge.csproj",
+      "size_bytes": 656,
+      "sha256": "e32e631825a67f1931908e6adf8247f6936e6f79d8efd40b7bfee4aab08dddf0"
+    },
+    {
+      "local_path": "north-star/csharp/Portable/Loadout/NorthStar.Loadout.csproj",
+      "size_bytes": 668,
+      "sha256": "bea76c8d5c8c1e15a71815f19d575dbbdd84ce3cfa08f4288dee3e369d0ee012"
+    },
+    {
+      "local_path": "north-star/csharp/global.json",
+      "size_bytes": 55,
+      "sha256": "e0c0882461e712f6c2c66241bf2f175c60832e3ff077dc26091ff8c661d4193e"
+    },
+    {
+      "local_path": "north-star/field-journey/.gitignore",
+      "size_bytes": 16,
+      "sha256": "79810615b4063be5474618fd002df934762fe9ccebb448537ce74ce23b319202"
+    },
+    {
+      "local_path": "north-star/field-journey/Checks/NorthStar.FieldChecks.csproj",
+      "size_bytes": 349,
+      "sha256": "2c85290c7e35ed1da74af6a330182df52213129455c742521491db73fe813d69"
+    },
+    {
+      "local_path": "north-star/field-journey/Checks/Program.cs",
+      "size_bytes": 10120,
+      "sha256": "18e8539f4f04eee9704ab4788dcd279102f4e4d513f55e388a30ea3e0a1eae73"
+    },
+    {
+      "local_path": "north-star/field-journey/Gate/.gitignore",
+      "size_bytes": 10,
+      "sha256": "6c5082c7e6de3e350189c67a1aacf757485ecc26e0a3cf96683528565f3e5f12"
+    },
+    {
+      "local_path": "north-star/field-journey/Gate/Gate.cs",
+      "size_bytes": 5894,
+      "sha256": "54740af5b2894f7bae39f5ed089ae4f84909aa7010c652879066a193b179e5c0"
+    },
+    {
+      "local_path": "north-star/field-journey/Gate/NorthStar.FieldGate.csproj",
+      "size_bytes": 271,
+      "sha256": "d37f8d0693bc767a6871b1c234ce15aa7754e1a0e21a9c022bc821b620528bbe"
+    },
+    {
+      "local_path": "north-star/field-journey/GateChecks/.gitignore",
+      "size_bytes": 10,
+      "sha256": "6c5082c7e6de3e350189c67a1aacf757485ecc26e0a3cf96683528565f3e5f12"
+    },
+    {
+      "local_path": "north-star/field-journey/GateChecks/NorthStar.GateChecks.csproj",
+      "size_bytes": 356,
+      "sha256": "d019a090059277150b6c432c9a4332799073f8403d009261934e42cb3c017557"
+    },
+    {
+      "local_path": "north-star/field-journey/GateChecks/Program.cs",
+      "size_bytes": 11565,
+      "sha256": "dc65b6925849d3aef5805370853096eea64e20fc76925436b82428e76397d149"
+    },
+    {
+      "local_path": "north-star/field-journey/Host/NorthStar.FieldJourney.csproj",
+      "size_bytes": 1161,
+      "sha256": "b354cf3107437ba25fda9192754038d4d231a36907a2e831a7bb9e3f9fb89fba"
+    },
+    {
+      "local_path": "north-star/field-journey/Host/PackLoader.cs",
+      "size_bytes": 3471,
+      "sha256": "3336553d16602a1c98ef0b2bee6deccd54f78d457b8e28e9d8f984db1c13964f"
+    },
+    {
+      "local_path": "north-star/field-journey/Host/Program.cs",
+      "size_bytes": 5646,
+      "sha256": "98c6451ba46452e0588f6f22a7fff953e4eb9c4445eb9297f7a0cc27cfe69459"
+    },
+    {
+      "local_path": "north-star/field-journey/Host/Room.cs",
+      "size_bytes": 17599,
+      "sha256": "8d3d3d5fb69048331c20cc71d746213d303c986cd3a99d6635adc7bf34d6cb33"
+    },
+    {
+      "local_path": "north-star/field-journey/Preparation/.gitignore",
+      "size_bytes": 10,
+      "sha256": "6c5082c7e6de3e350189c67a1aacf757485ecc26e0a3cf96683528565f3e5f12"
+    },
+    {
+      "local_path": "north-star/field-journey/Preparation/Cards.cs",
+      "size_bytes": 3731,
+      "sha256": "3ee288ef5a3cf1e9a6c9ac0a47c0cd5f6fe07005a14c7acccb33f78a65ee7e29"
+    },
+    {
+      "local_path": "north-star/field-journey/Preparation/NorthStar.Preparation.csproj",
+      "size_bytes": 371,
+      "sha256": "c7bdb194b46d532a300566beebc52e5f9d978a20fbe431e6a6096f9c648754df"
+    },
+    {
+      "local_path": "north-star/field-journey/PreparationChecks/.gitignore",
+      "size_bytes": 10,
+      "sha256": "6c5082c7e6de3e350189c67a1aacf757485ecc26e0a3cf96683528565f3e5f12"
+    },
+    {
+      "local_path": "north-star/field-journey/PreparationChecks/NorthStar.PreparationChecks.csproj",
+      "size_bytes": 356,
+      "sha256": "d019a090059277150b6c432c9a4332799073f8403d009261934e42cb3c017557"
+    },
+    {
+      "local_path": "north-star/field-journey/PreparationChecks/Program.cs",
+      "size_bytes": 12348,
+      "sha256": "859270a5a72d7dac008ecd516c1308c448efebd19147624a2e41d8c99dcad89e"
+    },
+    {
+      "local_path": "north-star/field-journey/Presentation/.gitignore",
+      "size_bytes": 10,
+      "sha256": "6c5082c7e6de3e350189c67a1aacf757485ecc26e0a3cf96683528565f3e5f12"
+    },
+    {
+      "local_path": "north-star/field-journey/Presentation/EncounterView.cs",
+      "size_bytes": 6226,
+      "sha256": "396993f2f99245e51c7c43e0d36bbd39fe767499e65419a3ca34822d6c18b3c1"
+    },
+    {
+      "local_path": "north-star/field-journey/Presentation/NorthStar.FieldPresentation.csproj",
+      "size_bytes": 307,
+      "sha256": "ed7fcb71a3de213cf79cefb17ab64b7f0bd9f077750cecaa2d10ee12c2518c2a"
+    },
+    {
+      "local_path": "north-star/field-journey/PresentationChecks/.gitignore",
+      "size_bytes": 10,
+      "sha256": "6c5082c7e6de3e350189c67a1aacf757485ecc26e0a3cf96683528565f3e5f12"
+    },
+    {
+      "local_path": "north-star/field-journey/PresentationChecks/NorthStar.FieldPresentationChecks.csproj",
+      "size_bytes": 349,
+      "sha256": "2c85290c7e35ed1da74af6a330182df52213129455c742521491db73fe813d69"
+    },
+    {
+      "local_path": "north-star/field-journey/PresentationChecks/Program.cs",
+      "size_bytes": 6984,
+      "sha256": "9c189104669e7b18930fac498868f847fff12fafb0d9559e5bfef3dea9e06173"
+    },
+    {
+      "local_path": "north-star/field-journey/README.md",
+      "size_bytes": 19931,
+      "sha256": "44af2862824a4c0238da3fdd404b74edada4b0885cf654172140337fe695602a"
+    },
+    {
+      "local_path": "north-star/field-journey/Sampling/.gitignore",
+      "size_bytes": 10,
+      "sha256": "6c5082c7e6de3e350189c67a1aacf757485ecc26e0a3cf96683528565f3e5f12"
+    },
+    {
+      "local_path": "north-star/field-journey/Sampling/NorthStar.FieldSampling.csproj",
+      "size_bytes": 271,
+      "sha256": "d37f8d0693bc767a6871b1c234ce15aa7754e1a0e21a9c022bc821b620528bbe"
+    },
+    {
+      "local_path": "north-star/field-journey/Sampling/SampleCase.cs",
+      "size_bytes": 4588,
+      "sha256": "51f5674e42dc136051df5b9fc7b33d05302e841a7f4013279e029fbb815b2bc8"
+    },
+    {
+      "local_path": "north-star/field-journey/SamplingChecks/.gitignore",
+      "size_bytes": 10,
+      "sha256": "6c5082c7e6de3e350189c67a1aacf757485ecc26e0a3cf96683528565f3e5f12"
+    },
+    {
+      "local_path": "north-star/field-journey/SamplingChecks/NorthStar.FieldSamplingChecks.csproj",
+      "size_bytes": 356,
+      "sha256": "d019a090059277150b6c432c9a4332799073f8403d009261934e42cb3c017557"
+    },
+    {
+      "local_path": "north-star/field-journey/SamplingChecks/Program.cs",
+      "size_bytes": 12089,
+      "sha256": "1e1c225cb36360320a8a89933ca83007dff11178df62d0c25b61affc3dfacb98"
+    },
+    {
+      "local_path": "north-star/field-journey/WithdrawalChecks/NorthStar.WithdrawalChecks.csproj",
+      "size_bytes": 349,
+      "sha256": "2c85290c7e35ed1da74af6a330182df52213129455c742521491db73fe813d69"
+    },
+    {
+      "local_path": "north-star/field-journey/WithdrawalChecks/Program.cs",
+      "size_bytes": 9684,
+      "sha256": "3ebdf95fb11f82c2325298a7e2338877eec437fa3dbb4e6db8e94075764e322a"
+    },
+    {
+      "local_path": "north-star/field-journey/preparations.json",
+      "size_bytes": 1937,
+      "sha256": "d6771016c773bb10e95410050128094e2f3f1b243be464ef6be611b3dde5ea95"
+    },
+    {
+      "local_path": "north-star/field-journey/tools/browser.mjs",
+      "size_bytes": 22072,
+      "sha256": "0fad7eca61f595e25d7c3660bff08c23c59bed4e0404689109fa9bf9809de993"
+    },
+    {
+      "local_path": "north-star/field-journey/tools/gate-browser.mjs",
+      "size_bytes": 19200,
+      "sha256": "a1b2b957b7f9c16e28061b0aa3d4d53aa5751bc490b719af2a5c958d8ab8b6dd"
+    },
+    {
+      "local_path": "north-star/field-journey/tools/gate-protocol.json",
+      "size_bytes": 7209,
+      "sha256": "d5a61758811d209b97d602e3371a4c78de5d19088fc4713f8221afaf14382252"
+    },
+    {
+      "local_path": "north-star/field-journey/tools/gate-verify.py",
+      "size_bytes": 3287,
+      "sha256": "992122ba590b9373ff1266f50b49cf2cc24feb79c2d005e78e480bf6d0004e42"
+    },
+    {
+      "local_path": "north-star/field-journey/tools/journey-view-browser.mjs",
+      "size_bytes": 16980,
+      "sha256": "34edbc39c5d9a0735f18420cabd5ccd43284f683f0c3fd9cb7f1d9367340f019"
+    },
+    {
+      "local_path": "north-star/field-journey/tools/journey-view-protocol.json",
+      "size_bytes": 7288,
+      "sha256": "66b4de581266019f77b3ebfe3362816db541ddb36a1c0d3bf567a81a7cb56f19"
+    },
+    {
+      "local_path": "north-star/field-journey/tools/journey-view-verify.py",
+      "size_bytes": 2911,
+      "sha256": "ecc5dc510b72d6ddb539b1c33d5564603edc6453c2a99f997fecc7d0d5b09a4f"
+    },
+    {
+      "local_path": "north-star/field-journey/tools/keyboard-browser.mjs",
+      "size_bytes": 13118,
+      "sha256": "b1f67787ee7e11e879c0a3f3fde2ca938075e90aaa5759a864456edced9e072d"
+    },
+    {
+      "local_path": "north-star/field-journey/tools/keyboard-protocol.json",
+      "size_bytes": 1963,
+      "sha256": "dc05474cdc606a63355d614f8dd66c70809e5eabc0cd9166ed2e88c3c2b80d2e"
+    },
+    {
+      "local_path": "north-star/field-journey/tools/preparation-browser.mjs",
+      "size_bytes": 21624,
+      "sha256": "37172c8ff941a9eaf77061e54dc6891b1b778e13880f2d383299464ed0558fc3"
+    },
+    {
+      "local_path": "north-star/field-journey/tools/preparation-verify.py",
+      "size_bytes": 3235,
+      "sha256": "5f77b1c385bbdf0e620ee63324177fd6de8efcccd3a54e7df460f64d4a612736"
+    },
+    {
+      "local_path": "north-star/field-journey/tools/presentation-browser.mjs",
+      "size_bytes": 17706,
+      "sha256": "4a5dac3ce9f1d32190a01295bfaa3af1e263e4900b7f46b135c93ec81d288a51"
+    },
+    {
+      "local_path": "north-star/field-journey/tools/presentation-verify.py",
+      "size_bytes": 2725,
+      "sha256": "d44af96b4b1bcc34c115e5f2ea310c41f851e4c15b6ccbe2d967a27b053cf1bf"
+    },
+    {
+      "local_path": "north-star/field-journey/tools/sampling-browser.mjs",
+      "size_bytes": 19176,
+      "sha256": "7eaf0933dbc27fcb6319fb45134ac94344cbcc8b64812a68927d8f34708dd3c3"
+    },
+    {
+      "local_path": "north-star/field-journey/tools/sampling-verify.py",
+      "size_bytes": 3097,
+      "sha256": "80ca117cbed297e9d7dc38f0416c25b574a652ebdca8d68ccdb03c30677e8de6"
+    },
+    {
+      "local_path": "north-star/field-journey/tools/verify.py",
+      "size_bytes": 2992,
+      "sha256": "4b0228f39c2791e4c69bef6a541b647162f148e4b5574e87874e4e716a381b45"
+    },
+    {
+      "local_path": "north-star/field-journey/tools/withdrawal-browser.mjs",
+      "size_bytes": 13898,
+      "sha256": "c104be5e9d5a0624b1af06d17361c811621050e2ee58c22d68c352f7e0c93086"
+    },
+    {
+      "local_path": "north-star/field-journey/tools/withdrawal-protocol.json",
+      "size_bytes": 3258,
+      "sha256": "abde6bf9d8bd22d2735321a50abe2ba5f13c7188d9dbe372f6ece8c3e7fe5aa5"
+    },
+    {
+      "local_path": "north-star/field-journey/web/app.js",
+      "size_bytes": 39479,
+      "sha256": "c6dfc21a1dc3843de8615e21a345df22f7f2f9c1cfada173b152d3c47e5414be"
+    },
+    {
+      "local_path": "north-star/field-journey/web/index.html",
+      "size_bytes": 34849,
+      "sha256": "1be0796b2704df309bac92207b13aab14953b57943636e7d501993db31c70b12"
+    },
+    {
+      "local_path": "north-star/field-journey/web/style.css",
+      "size_bytes": 18218,
+      "sha256": "77aa6d45121b9d1c19b47c2489a3a39ec2a114ff519f610b6bd2bab8b0e3ea14"
+    },
+    {
+      "local_path": "north-star/intake/.gitignore",
+      "size_bytes": 16,
+      "sha256": "79810615b4063be5474618fd002df934762fe9ccebb448537ce74ce23b319202"
+    },
+    {
+      "local_path": "north-star/intake/Checks/NorthStar.IntakeChecks.csproj",
+      "size_bytes": 350,
+      "sha256": "0f123f0913619a8df7bfc9fef33a4664497b37ae71e5c6485b266fea3c6dc9f5"
+    },
+    {
+      "local_path": "north-star/intake/Checks/Program.cs",
+      "size_bytes": 7235,
+      "sha256": "58dd73ade0bf09f8a10ab933ee737abbd8075f3aaf77509d81b4b85bb7a28120"
+    },
+    {
+      "local_path": "north-star/intake/Host/NorthStar.Intake.csproj",
+      "size_bytes": 541,
+      "sha256": "0ee05535f0644acc8ff648218880dbd6b10faf74872fb07455ba7c628847749e"
+    },
+    {
+      "local_path": "north-star/intake/Host/Program.cs",
+      "size_bytes": 4991,
+      "sha256": "711c019d69a309f14d2469e13ac7f5bff2f3fb352d6dbaaa0da54af77a67fbae"
+    },
+    {
+      "local_path": "north-star/intake/Host/Room.cs",
+      "size_bytes": 7446,
+      "sha256": "b5d654a7fa2d64c2ea89d96ab3249d5655008a20a302be916633c688114d3c98"
+    },
+    {
+      "local_path": "north-star/intake/README.md",
+      "size_bytes": 4956,
+      "sha256": "69cef4e20f5cac23411fc913b31ff4c0458e072e9b0f0c0196764e3c687ae9bc"
+    },
+    {
+      "local_path": "north-star/intake/tools/browser.mjs",
+      "size_bytes": 20032,
+      "sha256": "07178095da56efde4179153122c9393b5539e9699e5a6360dc6d6f86f4fd3907"
+    },
+    {
+      "local_path": "north-star/intake/tools/verify.py",
+      "size_bytes": 2920,
+      "sha256": "d4f0a2d31b13cfe043b8b1d17d77d702579264a777c14e2b49e24e7f86257739"
+    },
+    {
+      "local_path": "north-star/intake/web/app.js",
+      "size_bytes": 7848,
+      "sha256": "db906517f8bc4d45b8bf7c30418513a42b2c6d7597f8cbe448f53e612c96c3c2"
+    },
+    {
+      "local_path": "north-star/intake/web/index.html",
+      "size_bytes": 7995,
+      "sha256": "94d79e28d92857ff906a12fe1eb1af68ac11c101fb5952fb5de849e7caf75cb5"
+    },
+    {
+      "local_path": "north-star/intake/web/style.css",
+      "size_bytes": 5253,
+      "sha256": "33a23577126f94b722b0f2a7d23fe754183fa1a43ad97c2466de3e99bdf6b7c3"
+    },
+    {
+      "local_path": "north-star/memory-study/.gitignore",
+      "size_bytes": 16,
+      "sha256": "79810615b4063be5474618fd002df934762fe9ccebb448537ce74ce23b319202"
+    },
+    {
+      "local_path": "north-star/memory-study/Checks/NorthStar.MemoryChecks.csproj",
+      "size_bytes": 348,
+      "sha256": "9c0ea4da0d10f712ab2249ff883dff348868caa2413bd63c565bec91ccd12370"
+    },
+    {
+      "local_path": "north-star/memory-study/Checks/Program.cs",
+      "size_bytes": 11396,
+      "sha256": "1268694ca86b383c66ccc8eef6ea63e91689fbb87b47e7a99a80d03f838bfcca"
+    },
+    {
+      "local_path": "north-star/memory-study/Conditions/.gitignore",
+      "size_bytes": 10,
+      "sha256": "6c5082c7e6de3e350189c67a1aacf757485ecc26e0a3cf96683528565f3e5f12"
+    },
+    {
+      "local_path": "north-star/memory-study/Conditions/Conditions.cs",
+      "size_bytes": 15705,
+      "sha256": "04faa4d84b061879f22891fcf3b9e6166a70a94ddb8bfa72f8ebe39e7d21c472"
+    },
+    {
+      "local_path": "north-star/memory-study/Conditions/NorthStar.Conditions.csproj",
+      "size_bytes": 267,
+      "sha256": "3acec7333496cb2bb2bb2a8c6aaf151f714f6402e133ead2ca8d3f166d77dd22"
+    },
+    {
+      "local_path": "north-star/memory-study/ConditionsChecks/.gitignore",
+      "size_bytes": 10,
+      "sha256": "6c5082c7e6de3e350189c67a1aacf757485ecc26e0a3cf96683528565f3e5f12"
+    },
+    {
+      "local_path": "north-star/memory-study/ConditionsChecks/NorthStar.ConditionsChecks.csproj",
+      "size_bytes": 353,
+      "sha256": "4df210d5dff78286d31bb7f19a8d0da91734e5a0305ae8740f548a4ab4ab7bc7"
+    },
+    {
+      "local_path": "north-star/memory-study/ConditionsChecks/Program.cs",
+      "size_bytes": 9313,
+      "sha256": "3c2b2e96e1674dfa4a34f10b4680810778e9fc5e8e996c43dfaa8bd66694ad0a"
+    },
+    {
+      "local_path": "north-star/memory-study/Host/NorthStar.MemoryStudy.csproj",
+      "size_bytes": 416,
+      "sha256": "d5dcc14b4facf695f9f91cc63e3d019c14f9f6200f4436457dd8925a7a70649a"
+    },
+    {
+      "local_path": "north-star/memory-study/Host/Program.cs",
+      "size_bytes": 5133,
+      "sha256": "afd5a812978202c78f9bec8ceec1e892edcec10eb37c7f43bfe8c966425e44e5"
+    },
+    {
+      "local_path": "north-star/memory-study/Host/Room.cs",
+      "size_bytes": 9987,
+      "sha256": "91dc190402af660d958749a26db7f670a799d285ceb0de7373ab8eacc14619ce"
+    },
+    {
+      "local_path": "north-star/memory-study/QueryChecks/.gitignore",
+      "size_bytes": 10,
+      "sha256": "6c5082c7e6de3e350189c67a1aacf757485ecc26e0a3cf96683528565f3e5f12"
+    },
+    {
+      "local_path": "north-star/memory-study/QueryChecks/NorthStar.QueryChecks.csproj",
+      "size_bytes": 348,
+      "sha256": "9c0ea4da0d10f712ab2249ff883dff348868caa2413bd63c565bec91ccd12370"
+    },
+    {
+      "local_path": "north-star/memory-study/QueryChecks/Program.cs",
+      "size_bytes": 11050,
+      "sha256": "ab124bfc150c842a1c31ccdf582277ab0ce99e5aea9bd1c49320e27d8a35bbed"
+    },
+    {
+      "local_path": "north-star/memory-study/README.md",
+      "size_bytes": 9017,
+      "sha256": "832292e36c4cf33d1667fdcca666b7d0e1252c2bbc83972c9219f9b83abfd9ea"
+    },
+    {
+      "local_path": "north-star/memory-study/Rules/Memory.cs",
+      "size_bytes": 6893,
+      "sha256": "4307f83a7e7cbed6ed8f08815ce3e216744be660545c4edd6a6985581abec852"
+    },
+    {
+      "local_path": "north-star/memory-study/Rules/NorthStar.Memory.csproj",
+      "size_bytes": 267,
+      "sha256": "3acec7333496cb2bb2bb2a8c6aaf151f714f6402e133ead2ca8d3f166d77dd22"
+    },
+    {
+      "local_path": "north-star/memory-study/ServiceChecks/.gitignore",
+      "size_bytes": 10,
+      "sha256": "6c5082c7e6de3e350189c67a1aacf757485ecc26e0a3cf96683528565f3e5f12"
+    },
+    {
+      "local_path": "north-star/memory-study/ServiceChecks/NorthStar.ConditionServiceChecks.csproj",
+      "size_bytes": 313,
+      "sha256": "bf9ffc3c68026bb2d51d6e23ff53741b70efafa7e1b0a57e05e0345100ac70ab"
+    },
+    {
+      "local_path": "north-star/memory-study/ServiceChecks/Program.cs",
+      "size_bytes": 6580,
+      "sha256": "2b7fc7843e74e7e741536f1e85fdfcb31586b6212beb9884137a0c8caa410616"
+    },
+    {
+      "local_path": "north-star/memory-study/tools/browser.mjs",
+      "size_bytes": 14577,
+      "sha256": "1ea73aaa7dfd1f3f5d2ab3d55918af9d857ec0126ee1ca02d855c481a62bb904"
+    },
+    {
+      "local_path": "north-star/memory-study/tools/conditions-browser.mjs",
+      "size_bytes": 19877,
+      "sha256": "35e99a0b7521f48d4f3c95006e9d5db88c3e14615184e1ec8b0a2758cf64863f"
+    },
+    {
+      "local_path": "north-star/memory-study/tools/conditions-verify.py",
+      "size_bytes": 4782,
+      "sha256": "46fbf48674a06761714487da56ea428e25bfafa29e07a3c038cc81fcf9aaf47f"
+    },
+    {
+      "local_path": "north-star/memory-study/tools/query-browser.mjs",
+      "size_bytes": 15961,
+      "sha256": "2a1e653060656e813dc850701103e1463d36e7f81f3ff348cc870cb24b4c1603"
+    },
+    {
+      "local_path": "north-star/memory-study/tools/verify.py",
+      "size_bytes": 3148,
+      "sha256": "237c261f84eb8a374d132dd424d99f16ce4a37608d2de831dd5a0467efadb3b2"
+    },
+    {
+      "local_path": "north-star/memory-study/web/app.js",
+      "size_bytes": 6678,
+      "sha256": "46403078ff7f4f5700691cd37d16fa32b819be1277d7a6f9655c545b36820e88"
+    },
+    {
+      "local_path": "north-star/memory-study/web/index.html",
+      "size_bytes": 8096,
+      "sha256": "17538d4d9a668c2b30fdbf901a648ce46c6675bd8307467605cb11f1deb2f773"
+    },
+    {
+      "local_path": "north-star/memory-study/web/style.css",
+      "size_bytes": 4507,
+      "sha256": "4e4b8fadef58240b275e440df0868369737b6ec2180eefcb3529bde89d500b51"
+    },
+    {
+      "local_path": "north-star/prototype/analysis/return_envelope.gd",
+      "size_bytes": 6772,
+      "sha256": "1b77af2c7e6441c0310db601b0eab211bdf0c7a807a6f6012116d44239287b9a"
+    },
+    {
+      "local_path": "north-star/prototype/return_gate.gd",
+      "size_bytes": 8050,
+      "sha256": "bc8a1e38c8e5c537b55ad8871167ace6e300fdec4909a6fcb30b5a142842bf88"
+    },
+    {
+      "local_path": "north-star/prototype/tests/gate_checks.gd",
+      "size_bytes": 8948,
+      "sha256": "3fba7468062a64e46e853fdc557a9425103485580aae7b1704eff11214479453"
+    },
+    {
+      "local_path": "north-star/prototype/tests/gate_policy.gd",
+      "size_bytes": 1187,
+      "sha256": "a40d249e877446f7da09890e4c84d1c3243ef4ea110de65b033d7bd8710680ed"
+    },
+    {
+      "local_path": "projects/realtime-integration-lab/package-lock.json",
+      "size_bytes": 42105,
+      "sha256": "aa191ef2158e6cc6f770bf4b3ee44dca17175ef1a3cd572b98115246bf46aea7"
+    },
+    {
+      "local_path": "projects/realtime-integration-lab/package.json",
+      "size_bytes": 1445,
+      "sha256": "42e3cc9633e522dd6d9a5c11023418331129632881a8bf0b95e3717247d57ebe"
+    },
+    {
+      "local_path": "references/rave-master/snapshots/36af1651271422ae33856e8b5d7b45702215f165/source/RM_ACT1/DATA/DEV/DIALOGUE_VARIANTS.csv",
+      "size_bytes": 7951,
+      "sha256": "7434223aa7fe25a8449796d1648b04257efa355bced6d62a0224e3b3f2606787"
+    },
+    {
+      "local_path": "references/rave-master/snapshots/36af1651271422ae33856e8b5d7b45702215f165/source/RM_ACT1/DATA/DEV/RGSS/RM_DIALOGUE_SCORING_RUNTIME.rb",
+      "size_bytes": 41365,
+      "sha256": "07682a3205ea2850d748e4f3ffeef7febe51df1ddb10d5e8689bef7d26d1a735"
+    },
+    {
+      "local_path": "references/rave-master/snapshots/36af1651271422ae33856e8b5d7b45702215f165/source/RM_DIST/RMXP_BASE/Data/RM_CSV/DIALOGUE_VARIANTS.csv",
+      "size_bytes": 7951,
+      "sha256": "7434223aa7fe25a8449796d1648b04257efa355bced6d62a0224e3b3f2606787"
+    },
+    {
+      "local_path": "references/rave-master/snapshots/36af1651271422ae33856e8b5d7b45702215f165/source/RM_DIST/RMXP_BASE/ScriptsCustom/RM_DIALOGUE_SCORING_RUNTIME.rb",
+      "size_bytes": 41365,
+      "sha256": "07682a3205ea2850d748e4f3ffeef7febe51df1ddb10d5e8689bef7d26d1a735"
+    }
+  ],
+  "result_artifacts": [
+    {
+      "local_path": "evidence/field-gate/execution/native.json",
+      "size_bytes": 25071,
+      "sha256": "b6fdaf77bdfae45693a031a72478356f4ccdaf4cba4d9b7db49b345b4765d0cf"
+    },
+    {
+      "local_path": "evidence/field-gate/execution/browser/gate-browser.json",
+      "size_bytes": 62242,
+      "sha256": "93dfee669f0b681b81f5b26315571d5038f93b33fcb9b6666fdb89720f9c7633"
+    },
+    {
+      "local_path": "evidence/field-gate/execution/verification.json",
+      "size_bytes": 23312,
+      "sha256": "aecc5c4b44a45fd5764d7859580b7b693d579f5dcb61359d4e78dbcdec27a0ec"
+    },
+    {
+      "local_path": "evidence/field-gate/regressions/maximal/verification.json",
+      "size_bytes": 17209,
+      "sha256": "679cc597f12c91c73aef395ec8b28a098c56e12eb5cf2213338f30552eaad8d5"
+    },
+    {
+      "local_path": "evidence/field-gate/regressions/focused/verification.json",
+      "size_bytes": 28050,
+      "sha256": "95dd02e749c694e490a6907d0160d1f732023c7a51ecd3d30d85c32eb160123e"
+    },
+    {
+      "local_path": "evidence/field-gate/keyboard-regression.json",
+      "size_bytes": 67018,
+      "sha256": "e1d6d6defdcd6256fa2d0a41260cc90c2cedfac130001fe571ddb04f9f908e8e"
+    },
+    {
+      "local_path": "evidence/field-gate/withdrawal-regression.json",
+      "size_bytes": 408225,
+      "sha256": "2ef9f0a40511ef744671590f1995604360fb565aabb8b6037f9978af419abac7"
+    }
+  ],
+  "source_inputs_stable": 137,
+  "native_controls": 43,
+  "browser_controls": 26,
+  "http_controls": 2,
+  "negative_controls": [
+    {
+      "id": "false-open",
+      "detected": true,
+      "error": "Visible gate completion follows actual surviving exit\n\n'true' !== 'false'\n",
+      "sha256": "ec7d8a765d1412670b418f9d67b908b5d1f744fd65f0f67d738b89e2259f1ffd",
+      "actual": {
+        "entered": true,
+        "eligible": false,
+        "active": true,
+        "completed": false,
+        "failed": false,
+        "health": 11,
+        "resolve": 7,
+        "integrity": 3,
+        "beat": 0,
+        "position": "ground",
+        "grounded": false,
+        "left_raised": false,
+        "right_raised": false,
+        "progress": 0,
+        "working": "none",
+        "next_threat": "player",
+        "last_text": "The road is historical. Two catches and actual exit remain.",
+        "legal": [
+          "gate-move",
+          "gate-wait",
+          "gate-brace",
+          "gate-ground"
+        ],
+        "entry": {
+          "health": 11,
+          "resolve": 7,
+          "handle": "Neri",
+          "accent": "teal",
+          "class_id": "lure",
+          "rig": "trail"
+        }
+      },
+      "visible": "true"
+    }
+  ],
+  "policies": "Native direct/grounded each9beats; browser direct9, grounded11 including paid release/rework and delayed-response controls. Direct5HP/7resolve/1integrity; grounded9HP/5resolve/2integrity. Inaction breaks mechanism at beat11 with5HP alive. No optimality/balance claim.",
+  "retained_failures": [
+    "Initial7HP exit-death fixture actually survived at1HP; corrected5HP fixture without rule change.",
+    "MSB4166 with unavailable indicated diagnostic directory; one unchanged retry passed, cause unknown.",
+    "Initial browser syntax refusal retained.",
+    "Initial withdrawal source-stability rejection after concurrent producer change; exact failure retained, stable rerun passed.",
+    "Initial new source routing omitted Field; corrected four exact dependencies preserve prior input_timing selection. New routing test initially queried absent RUN.json and correctly hit conservative full fallback; existing README path now tests the intended prefix.",
+    "Initial maximum wrapper interrupted without final verification; retained external output inventory is not acceptance.",
+    "Earlier valid execution/captures superseded after actor/label overlap correction; final source-stable instruments and regressions reexecuted.",
+    "Initial source-launch identity rejection while catalog still pointed to older Field evidence; optional P09 metadata field and report controls-key assumptions corrected against actual schemas; unchanged launch passed19controls."
+  ],
+  "limitations": [
+    "No fresh source Godot/RGSS/RMXP execution or continuous-time equivalence. New integrity3, named movement, costs, brace and no-retry rules are disclosed original policies.",
+    "Current gate health and frozen child health are distinct phases; no home return, sample delivery, XP, heal, refund or new save/package.",
+    "Software controls overlap outcomes; no participants, population estimates, balance, human agency/accessibility, physical device, Unity/Windows Player/Steam or commercial clearance."
+  ],
+  "strategic_unit": "ONE North Star production-domain unit, second consecutive after focused workflow. UI/instruments/CI/regressions support it, not additional units.",
+  "specialists": "Independent Engineering/Scientific/Creative analyses and coordinated implementation. Agents unavailable at final resumption; primary completed source review, visual correction, final executions and publication sequentially. No human validation.",
+  "source_launch_controls": 19,
+  "source_launch_evidence_path": "evidence/field-gate/source-launch.json",
+  "source_launch_binding": "Separate final catalog-bound execution; MANIFEST owns its exact artifact hash to avoid a RUN/catalog/result hash cycle.",
+  "compiled_host_after_source_launch": {
+    "sha256": "4a43d90f81f759fcb1cf62bd47346b5de0f73a281fb4c7fdaaee73bb25c5fad5",
+    "byte_equal_to_gate_execution": true,
+    "limit": "Observed binary identity, not inferred from SDK equality."
+  }
+}

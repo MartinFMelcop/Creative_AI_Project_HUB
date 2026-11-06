@@ -19,6 +19,7 @@ public sealed class Room
     private string? draftCardId,confirmedCardId;
     private readonly SampleCase sampleCase=new();
     private readonly MemoryRoom memory;
+    private NorthStar.FieldGate.Gate? gate;
     public Room(string servicePolicy="independent",Book? book=null)
     {
         preparationBook=book??PackLoader.Default();
@@ -43,13 +44,19 @@ public sealed class Room
     private bool Acquired(string bench)=>Memory().GetProperty("benches").EnumerateArray().Single(b=>b.GetProperty("id").GetString()==bench).GetProperty("delivered").GetBoolean();
     private object Observe(string cmd,bool ok,string message)=>new {
         sequence,command=cmd,accepted=ok,text=message,workshop_closed=workshopClosed,
-        withdrawn,encounter_historical=withdrawn,withdrawal_receipt=withdrawalReceipt,
+        withdrawn,encounter_historical=withdrawn||gate!=null,withdrawal_receipt=withdrawalReceipt,gate=GateView(),
         sample_case=sampleCase.Snapshot(SamplingFacts(Intake()),!withdrawn),
         preparation_book=PreparationBook(),
         intake=intake.Snapshot(),memory=memory.Snapshot(),encounter_view=Projector.Observe(Facts(Intake()),response),
         fittings=new[]{"west","east"}.Select(bench=>new {bench,acquired=Acquired(bench),spent=assembled.ContainsKey(bench),available=Acquired(bench)&&!assembled.ContainsKey(bench),rig=assembled.TryGetValue(bench,out var rig)?rig:null}).ToArray(),
         assembly_receipts=assembled.Select(pair=>new {bench=pair.Key,rig=pair.Value,request_id="fitting_"+pair.Key}).ToArray()
     };
+    private object GateView()
+    {
+        if(gate!=null)return gate.Snapshot();
+        var c=Intake();var e=c.GetProperty("state");
+        return new {entered=false,eligible=!withdrawn&&Flag(c,"confirmed")&&!Flag(c,"pending")&&Flag(e,"complete")&&!Flag(e,"active")&&e.GetProperty("health").GetInt32()>0};
+    }
     private object PreparationBook()
     {
         var card=Intake();var state=card.GetProperty("state");bool editable=!withdrawn&&!Flag(state,"active")&&!Flag(state,"complete");int level=state.GetProperty("level").GetInt32();
@@ -98,7 +105,8 @@ public sealed class Room
             "draft"=>new[]{"handle","accent","class_id","background_id","slots"},
             "confirm"=>new[]{"draft_revision"},"allocate"=>new[]{"axis","points"},"slot"=>new[]{"slot"},
             "help" or "demonstrate" or "serve" or "decline"=>new[]{"bench"},"craft"=>new[]{"bench","rig"},"begin"=>new[]{"rig"},
-            "sample"=>new[]{"site"},"propose-card"=>new[]{"card_id"},
+            "sample"=>new[]{"site"},"propose-card"=>new[]{"card_id"},"gate-move"=>new[]{"target"},
+            "gate-enter" or "gate-work" or "gate-wait" or "gate-brace" or "gate-ground" or "gate-exit"=>Array.Empty<string>(),
             "review" or "walk" or "wait" or "wait-window" or "withdraw"=>Array.Empty<string>(),_=>throw new ArgumentException("Unknown command.")};
         Fields(root,extras);
         // Parse every adapter-owned field before any child can change state.
@@ -107,11 +115,30 @@ public sealed class Room
         string? rig=cmd is "craft" or "begin"?Rig(root,cmd=="begin"):null;
         string? site=cmd=="sample"?Text(root,"site"):null;
         if(site!=null)SampleCase.ValidateSite(site);
+        string? gateTarget=cmd=="gate-move"?Text(root,"target"):null;
+        if(gateTarget!=null)NorthStar.FieldGate.Gate.ValidateTarget(gateTarget);
         Card? proposed=cmd=="propose-card"?preparationBook.Find(Text(root,"card_id")):null;
         if(revision!=sequence)return Observe(cmd,false,"Old outer intent refused. Read current facts before deliberately acting again.");
         int next=checked(sequence+1);bool ok=false;string message;
         var current=Intake();bool confirmed=Flag(current,"confirmed"),ready=confirmed&&!Flag(current,"pending");
         if(withdrawn)message="This person explicitly withdrew from this expedition. Recorded encounter facts are historical; no later action, retry, preparation, return, refund or completion is authorized.";
+        else if(cmd.StartsWith("gate-",StringComparison.Ordinal))
+        {
+            var e=current.GetProperty("state");
+            if(cmd=="gate-enter")
+            {
+                if(gate!=null||!ready||!Flag(e,"complete")||Flag(e,"active")||e.GetProperty("health").GetInt32()<=0)message="Gate entry requires this confirmed person alive after actual final Crossing completion. It cannot reset an existing gate.";
+                else
+                {
+                    var id=current.GetProperty("identity");
+                    gate=new NorthStar.FieldGate.Gate(e.GetProperty("health").GetInt32(),e.GetProperty("resolve").GetInt32(),id.GetProperty("handle").GetString()!,id.GetProperty("accent").GetString()!,id.GetProperty("class_id").GetString()!,e.GetProperty("rig").GetString()!.ToLowerInvariant());
+                    ok=true;message="Explicit gate entry transfers actual remaining HP and resolve. Crossing and all earlier children are now immutable history; no XP, refill, home return or delivery was granted.";
+                }
+            }
+            else if(gate==null)message="Explicit gate entry after actual final completion is required. No gate action occurred.";
+            else ok=gate.Execute(cmd,gateTarget,out message);
+        }
+        else if(gate!=null)message="Gate entry froze the earlier journey. Its preparation, resources, progression and encounters cannot be mutated or retried.";
         else if(cmd=="withdraw")
         {
             var e=current.GetProperty("state");
@@ -181,9 +208,9 @@ public sealed class Room
         }
         if(ok&&cmd=="draft")draftCardId=null;
         if(ok&&cmd=="confirm")confirmedCardId=draftCardId;
-        if(ok)sampleCase.ObserveAcceptedTransition(SamplingFacts(current),SamplingFacts(Intake()));
+        if(ok&&!cmd.StartsWith("gate-",StringComparison.Ordinal))sampleCase.ObserveAcceptedTransition(SamplingFacts(current),SamplingFacts(Intake()));
         // The projector describes the actual delegated draft; the outer receipt retains propose-card.
-        if(!withdrawn)response=Projector.Transition(Facts(current),Facts(Intake()),cmd=="propose-card"?"draft":cmd,ok,ActionKind(cmd,root,current),response.event_sequence);
+        if(!withdrawn&&gate==null&&!cmd.StartsWith("gate-",StringComparison.Ordinal))response=Projector.Transition(Facts(current),Facts(Intake()),cmd=="propose-card"?"draft":cmd,ok,ActionKind(cmd,root,current),response.event_sequence);
         sequence=next;command=cmd;accepted=ok;text=message;
         return Snapshot();
     }

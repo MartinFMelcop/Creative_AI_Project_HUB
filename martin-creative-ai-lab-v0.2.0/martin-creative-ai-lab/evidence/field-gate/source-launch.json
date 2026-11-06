@@ -1,0 +1,877 @@
+{
+  "schema": "portfolio.actual-source-launch-browser.v1",
+  "runtime": {
+    "node": "v24.19.0",
+    "chromium": "154.0.8037.57"
+  },
+  "source_sha256": {
+    "tools/run_source_experiment.py": "66641e19e9ce53c63f2afb450e1168902aa2a495364e99c1b42a577a8520709c",
+    "tools/check_portfolio.py": "10d854dda635b030575518892f53d3feba1dd5fc1b881a1d8026cbe470f4e74d",
+    "showcase/portfolio.json": "8cfc21f5810bd4e15f31f2d03443124d7ffb9d59ebfea5c2c5a2c713d9cf8e71",
+    "showcase/launch-browser.mjs": "02a7028bd5773d12836023a7cc4a7f96cba5d50e4c5af4e9f3abc52847832626",
+    "showcase/launch-protocol.json": "e0bcaed66e2227a2b9a4634c5d8bd5706418109ff5882c2ed89a42f6b5b4ca77",
+    "north-star/field-journey/Host/Program.cs": "98c6451ba46452e0588f6f22a7fff953e4eb9c4445eb9297f7a0cc27cfe69459",
+    "north-star/field-journey/Host/Room.cs": "8d3d3d5fb69048331c20cc71d746213d303c986cd3a99d6635adc7bf34d6cb33",
+    "north-star/field-journey/web/app.js": "c6dfc21a1dc3843de8615e21a345df22f7f2f9c1cfada173b152d3c47e5414be",
+    "north-star/combat-study/Host/Program.cs": "c50ae615810de00fefec849ca091db63db0cefca308e2d3befe9d5f3f6a90059",
+    "north-star/combat-study/Host/Room.cs": "95d58b1dd8b780ac2f2c796c851011e66d49ccccdfc94ddb8c82e7c1652e895f",
+    "north-star/combat-study/Host/web/app.js": "0559d8e6e5f732c7c2ae98c410ebb8d755e3c40cfd49445c01ce43ec581c4449",
+    "projects/realtime-integration-lab/package-lock.json": "aa191ef2158e6cc6f770bf4b3ee44dca17175ef1a3cd572b98115246bf46aea7"
+  },
+  "controls": [
+    "field-journey emits observed ready event",
+    "Field starts original unconfirmed identity without an encounter",
+    "Field repeated GET does not advance owner",
+    "Launched Field visibly confirms actual named person",
+    "Launched Field delegates actual paid workshop action",
+    "Workshop help does not fabricate road completion",
+    "field-journey launcher/host exits normally",
+    "field-journey owned listening port closes",
+    "field-journey final report records success",
+    "selected-passives emits observed ready event",
+    "Treatment repeated GET does not advance owner",
+    "Treatment opens actual original active practice",
+    "Launched Treatment delegates actual attack and round",
+    "Treatment actual result stays distinct from victory",
+    "selected-passives launcher/host exits normally",
+    "selected-passives owned listening port closes",
+    "selected-passives final report records success",
+    "No application exceptions",
+    "Source and producer identities stable"
+  ],
+  "trials": [
+    {
+      "id": "field-journey",
+      "command": [
+        "python3",
+        "tools/run_source_experiment.py",
+        "run",
+        "field-journey",
+        "--dotnet",
+        "/workspace/work/authored-scene/dotnet/dotnet",
+        "--port",
+        "44761",
+        "--seconds",
+        "12",
+        "--report",
+        "/workspace/work/gate-final-review/source-launch-frozen/field-journey.json"
+      ],
+      "port": 44761,
+      "initial": {
+        "sequence": 0,
+        "command": "initial",
+        "accepted": true,
+        "text": "Propose, review and confirm one person before paid preparation. Acquired fittings and field materials are separate finite supplies.",
+        "workshop_closed": false,
+        "withdrawn": false,
+        "encounter_historical": false,
+        "withdrawal_receipt": null,
+        "gate": {
+          "entered": false,
+          "eligible": false
+        },
+        "sample_case": {
+          "status": "empty",
+          "case_spent": false,
+          "acquired": false,
+          "site": null,
+          "collection_attempt": null,
+          "receipt": null,
+          "loss_reason": null,
+          "collection_open": true,
+          "sites": [
+            {
+              "id": "ridge",
+              "stage": 0,
+              "position": 1,
+              "eligible": false
+            },
+            {
+              "id": "channel",
+              "stage": 1,
+              "position": 2,
+              "eligible": false
+            }
+          ]
+        },
+        "preparation_book": {
+          "sha256": "d6771016c773bb10e95410050128094e2f3f1b243be464ef6be611b3dde5ea95",
+          "draft_card_id": null,
+          "confirmed_card_id": null,
+          "cards": [
+            {
+              "id": "anchor-start",
+              "title": "A steady opening",
+              "description": "Brace protects in place against a bolt. Walking during a pulse changes position. This is a starting proposal, not a supplied Plate rig or a promise of survival.",
+              "class_id": "anchor",
+              "background_id": "workshop",
+              "slots": [
+                "brace",
+                null,
+                null,
+                null
+              ],
+              "minimum_level": 1,
+              "recommended_rig": "plate",
+              "eligible": true
+            },
+            {
+              "id": "lure-start",
+              "title": "Draw a path",
+              "description": "Draw advances one cell against a bolt while spending three resolve. Move during a pulse. A Trail rig is suggested here, not acquired or equipped by this card.",
+              "class_id": "lure",
+              "background_id": "trailborn",
+              "slots": [
+                "draw",
+                null,
+                null,
+                null
+              ],
+              "minimum_level": 1,
+              "recommended_rig": "trail",
+              "eligible": true
+            },
+            {
+              "id": "anchor-dash",
+              "title": "Brace, then move",
+              "description": "Keep Brace and add earned Dash as a separate action. Dash spends one resolve to move two cells. This amendment requires actual level two; it grants no points or recovery.",
+              "class_id": "anchor",
+              "background_id": "workshop",
+              "slots": [
+                "brace",
+                "dash",
+                null,
+                null
+              ],
+              "minimum_level": 2,
+              "recommended_rig": "plate",
+              "eligible": false
+            },
+            {
+              "id": "lure-dash",
+              "title": "Draw, then range",
+              "description": "Keep Draw and add earned Dash for a different movement choice. Both spend actual resolve. This amendment requires actual level two and does not refill resources or begin the next encounter.",
+              "class_id": "lure",
+              "background_id": "trailborn",
+              "slots": [
+                "draw",
+                "dash",
+                null,
+                null
+              ],
+              "minimum_level": 2,
+              "recommended_rig": "trail",
+              "eligible": false
+            }
+          ]
+        },
+        "intake": {
+          "sequence": 0,
+          "command": "initial",
+          "accepted": true,
+          "text": "Draft only. Review exact preparation and explicitly confirm before spending supplies.",
+          "confirmed": false,
+          "pending": true,
+          "draft_revision": 1,
+          "reviewed_revision": null,
+          "draft": {
+            "handle": "Wayfarer",
+            "accent": "copper",
+            "class_id": "anchor",
+            "background_id": "workshop",
+            "slots": [
+              "brace",
+              null,
+              null,
+              null
+            ]
+          },
+          "identity": null,
+          "state": {
+            "class_id": "anchor",
+            "background_id": "workshop",
+            "slots": [
+              "brace",
+              null,
+              null,
+              null
+            ],
+            "active": false,
+            "complete": false,
+            "won": false,
+            "stage": 0,
+            "beat": 0,
+            "position": 0,
+            "health": 0,
+            "resolve": 0,
+            "rig": "Unprepared",
+            "attempts": 0,
+            "consumed_rigs": 0,
+            "transactions": 0,
+            "inventory": {
+              "fiber": 4,
+              "binder": 2
+            },
+            "level": 1,
+            "xp": 0,
+            "unspent": 0,
+            "vitality": 0,
+            "focus": 0
+          },
+          "threat": "BOLT: moving exposes health; the approach skill spends resolve to protect.",
+          "required_position": 2,
+          "maximum_beats": 4
+        },
+        "memory": {
+          "sequence": 0,
+          "command": "initial",
+          "accepted": true,
+          "text": "Two independent benches, four parts and two coins. No help has been observed and no fitting exists.",
+          "turn": 0,
+          "parts": 4,
+          "coins": 2,
+          "policy": "independent",
+          "complete": false,
+          "benches": [
+            {
+              "id": "west",
+              "helped": false,
+              "support": false,
+              "recent": false,
+              "offer_closed": false,
+              "expires": null,
+              "eligible": false,
+              "delivered": false,
+              "condition_expression": "Helped=true & Support=true & Recent=true",
+              "condition_satisfied": false,
+              "condition_complete": true
+            },
+            {
+              "id": "east",
+              "helped": false,
+              "support": false,
+              "recent": false,
+              "offer_closed": false,
+              "expires": null,
+              "eligible": false,
+              "delivered": false,
+              "condition_expression": "Helped=true & Support=true & Recent=true",
+              "condition_satisfied": false,
+              "condition_complete": true
+            }
+          ],
+          "history": []
+        },
+        "encounter_view": {
+          "person": {
+            "handle": null,
+            "accent": null,
+            "class_id": null,
+            "rig": "none",
+            "confirmed": false
+          },
+          "encounter": {
+            "phase": "unconfirmed",
+            "outcome": "unconfirmed",
+            "stage": 0,
+            "owner_stage": 0,
+            "active": false,
+            "complete": false,
+            "won": false,
+            "beat": 0,
+            "max_beats": 4,
+            "position": 0,
+            "required_position": 2,
+            "world_end": 8,
+            "threshold_reached": false,
+            "health": 0,
+            "resolve": 0,
+            "threat_kind": "none",
+            "threat_text": "No active encounter threat."
+          },
+          "action": {
+            "command": "initial",
+            "accepted": false,
+            "kind": "none",
+            "event_sequence": 0,
+            "from_position": 0,
+            "to_position": 0,
+            "health_lost": 0,
+            "resolve_spent": 0,
+            "resolve_gained": 0,
+            "moved": false,
+            "contact": "none"
+          }
+        },
+        "fittings": [
+          {
+            "bench": "west",
+            "acquired": false,
+            "spent": false,
+            "available": false,
+            "rig": null
+          },
+          {
+            "bench": "east",
+            "acquired": false,
+            "spent": false,
+            "available": false,
+            "rig": null
+          }
+        ],
+        "assembly_receipts": []
+      },
+      "after": {
+        "sequence": 4,
+        "command": "help",
+        "accepted": true,
+        "text": "One part and one action spent on actual local help. This bench observed the demonstration; its current window expires at turn 4.",
+        "workshop_closed": false,
+        "withdrawn": false,
+        "encounter_historical": false,
+        "withdrawal_receipt": null,
+        "gate": {
+          "entered": false,
+          "eligible": false
+        },
+        "sample_case": {
+          "status": "empty",
+          "case_spent": false,
+          "acquired": false,
+          "site": null,
+          "collection_attempt": null,
+          "receipt": null,
+          "loss_reason": null,
+          "collection_open": true,
+          "sites": [
+            {
+              "id": "ridge",
+              "stage": 0,
+              "position": 1,
+              "eligible": false
+            },
+            {
+              "id": "channel",
+              "stage": 1,
+              "position": 2,
+              "eligible": false
+            }
+          ]
+        },
+        "preparation_book": {
+          "sha256": "d6771016c773bb10e95410050128094e2f3f1b243be464ef6be611b3dde5ea95",
+          "draft_card_id": null,
+          "confirmed_card_id": null,
+          "cards": [
+            {
+              "id": "anchor-start",
+              "title": "A steady opening",
+              "description": "Brace protects in place against a bolt. Walking during a pulse changes position. This is a starting proposal, not a supplied Plate rig or a promise of survival.",
+              "class_id": "anchor",
+              "background_id": "workshop",
+              "slots": [
+                "brace",
+                null,
+                null,
+                null
+              ],
+              "minimum_level": 1,
+              "recommended_rig": "plate",
+              "eligible": true
+            },
+            {
+              "id": "lure-start",
+              "title": "Draw a path",
+              "description": "Draw advances one cell against a bolt while spending three resolve. Move during a pulse. A Trail rig is suggested here, not acquired or equipped by this card.",
+              "class_id": "lure",
+              "background_id": "trailborn",
+              "slots": [
+                "draw",
+                null,
+                null,
+                null
+              ],
+              "minimum_level": 1,
+              "recommended_rig": "trail",
+              "eligible": true
+            },
+            {
+              "id": "anchor-dash",
+              "title": "Brace, then move",
+              "description": "Keep Brace and add earned Dash as a separate action. Dash spends one resolve to move two cells. This amendment requires actual level two; it grants no points or recovery.",
+              "class_id": "anchor",
+              "background_id": "workshop",
+              "slots": [
+                "brace",
+                "dash",
+                null,
+                null
+              ],
+              "minimum_level": 2,
+              "recommended_rig": "plate",
+              "eligible": false
+            },
+            {
+              "id": "lure-dash",
+              "title": "Draw, then range",
+              "description": "Keep Draw and add earned Dash for a different movement choice. Both spend actual resolve. This amendment requires actual level two and does not refill resources or begin the next encounter.",
+              "class_id": "lure",
+              "background_id": "trailborn",
+              "slots": [
+                "draw",
+                "dash",
+                null,
+                null
+              ],
+              "minimum_level": 2,
+              "recommended_rig": "trail",
+              "eligible": false
+            }
+          ]
+        },
+        "intake": {
+          "sequence": 3,
+          "command": "confirm",
+          "accepted": true,
+          "text": "Reviewed identity and complete preparation confirmed atomically. No supply, health or reward grant.",
+          "confirmed": true,
+          "pending": false,
+          "draft_revision": 2,
+          "reviewed_revision": 2,
+          "draft": {
+            "handle": "Aster",
+            "accent": "copper",
+            "class_id": "anchor",
+            "background_id": "workshop",
+            "slots": [
+              "brace",
+              null,
+              null,
+              null
+            ]
+          },
+          "identity": {
+            "handle": "Aster",
+            "accent": "copper",
+            "class_id": "anchor",
+            "background_id": "workshop",
+            "slots": [
+              "brace",
+              null,
+              null,
+              null
+            ]
+          },
+          "state": {
+            "class_id": "anchor",
+            "background_id": "workshop",
+            "slots": [
+              "brace",
+              null,
+              null,
+              null
+            ],
+            "active": false,
+            "complete": false,
+            "won": false,
+            "stage": 0,
+            "beat": 0,
+            "position": 0,
+            "health": 0,
+            "resolve": 0,
+            "rig": "Unprepared",
+            "attempts": 0,
+            "consumed_rigs": 0,
+            "transactions": 0,
+            "inventory": {
+              "fiber": 4,
+              "binder": 2
+            },
+            "level": 1,
+            "xp": 0,
+            "unspent": 0,
+            "vitality": 0,
+            "focus": 0
+          },
+          "threat": "BOLT: moving exposes health; the approach skill spends resolve to protect.",
+          "required_position": 2,
+          "maximum_beats": 4
+        },
+        "memory": {
+          "sequence": 1,
+          "command": "help",
+          "accepted": true,
+          "text": "One part and one action spent on actual local help. This bench observed the demonstration; its current window expires at turn 4.",
+          "turn": 1,
+          "parts": 3,
+          "coins": 2,
+          "policy": "independent",
+          "complete": false,
+          "benches": [
+            {
+              "id": "west",
+              "helped": true,
+              "support": true,
+              "recent": true,
+              "offer_closed": false,
+              "expires": 4,
+              "eligible": true,
+              "delivered": false,
+              "condition_expression": "Helped=true & Support=true & Recent=true",
+              "condition_satisfied": true,
+              "condition_complete": true
+            },
+            {
+              "id": "east",
+              "helped": false,
+              "support": false,
+              "recent": false,
+              "offer_closed": false,
+              "expires": null,
+              "eligible": false,
+              "delivered": false,
+              "condition_expression": "Helped=true & Support=true & Recent=true",
+              "condition_satisfied": false,
+              "condition_complete": true
+            }
+          ],
+          "history": [
+            {
+              "sequence": 1,
+              "command": "help",
+              "bench": "west",
+              "turn": 1,
+              "parts": 3,
+              "coins": 2,
+              "fittings": 0
+            }
+          ]
+        },
+        "encounter_view": {
+          "person": {
+            "handle": "Aster",
+            "accent": "copper",
+            "class_id": "anchor",
+            "rig": "none",
+            "confirmed": true
+          },
+          "encounter": {
+            "phase": "preparation",
+            "outcome": "preparation",
+            "stage": 0,
+            "owner_stage": 0,
+            "active": false,
+            "complete": false,
+            "won": false,
+            "beat": 0,
+            "max_beats": 4,
+            "position": 0,
+            "required_position": 2,
+            "world_end": 8,
+            "threshold_reached": false,
+            "health": 0,
+            "resolve": 0,
+            "threat_kind": "none",
+            "threat_text": "No active encounter threat."
+          },
+          "action": {
+            "command": "help",
+            "accepted": true,
+            "kind": "workshop",
+            "event_sequence": 0,
+            "from_position": 0,
+            "to_position": 0,
+            "health_lost": 0,
+            "resolve_spent": 0,
+            "resolve_gained": 0,
+            "moved": false,
+            "contact": "none"
+          }
+        },
+        "fittings": [
+          {
+            "bench": "west",
+            "acquired": false,
+            "spent": false,
+            "available": false,
+            "rig": null
+          },
+          {
+            "bench": "east",
+            "acquired": false,
+            "spent": false,
+            "available": false,
+            "rig": null
+          }
+        ],
+        "assembly_receipts": []
+      },
+      "report": {
+        "schema": "hub.source-launch.v1",
+        "status": "success",
+        "events": [
+          {
+            "event": "ready",
+            "id": "field-journey",
+            "url": "http://127.0.0.1:44761/",
+            "pid": 42442
+          },
+          {
+            "event": "expired",
+            "exit_code": 0
+          }
+        ],
+        "boundary": "Trusted-local source experiment, ephemeral and SDK-required. No Unity/Windows/Steam, recipient inclusion, sandbox or human validation.",
+        "stage": "expired",
+        "commands": [
+          {
+            "command": [
+              "/workspace/work/authored-scene/dotnet/dotnet",
+              "--version"
+            ],
+            "exit_code": 0,
+            "stdout": "10.0.401\n",
+            "stderr": ""
+          },
+          {
+            "command": [
+              "/workspace/work/authored-scene/dotnet/dotnet",
+              "build",
+              "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/field-journey/Host/NorthStar.FieldJourney.csproj",
+              "-c",
+              "Release",
+              "-m:1",
+              "--disable-build-servers"
+            ],
+            "exit_code": 0,
+            "stdout": "  Determining projects to restore...\n  All projects are up-to-date for restore.\n  NorthStar.Domain -> /workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/Domain/bin/Release/netstandard2.1/NorthStar.Domain.dll\n  NorthStar.Crossing -> /workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/Portable/Crossing/bin/Release/netstandard2.1/NorthStar.Crossing.dll\n  NorthStar.Forge -> /workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/Portable/Forge/bin/Release/netstandard2.1/NorthStar.Forge.dll\n  NorthStar.Loadout -> /workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/csharp/Portable/Loadout/bin/Release/netstandard2.1/NorthStar.Loadout.dll\n  NorthStar.Preparation -> /workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/field-journey/Preparation/bin/Release/netstandard2.1/NorthStar.Preparation.dll\n  NorthStar.FieldGate -> /workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/field-journey/Gate/bin/Release/netstandard2.1/NorthStar.FieldGate.dll\n  NorthStar.FieldSampling -> /workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/field-journey/Sampling/bin/Release/netstandard2.1/NorthStar.FieldSampling.dll\n  NorthStar.FieldPresentation -> /workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/field-journey/Presentation/bin/Release/netstandard2.1/NorthStar.FieldPresentation.dll\n  NorthStar.Intake -> /workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/intake/Host/bin/Release/net10.0/NorthStar.Intake.dll\n  NorthStar.Memory -> /workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/memory-study/Rules/bin/Release/netstandard2.1/NorthStar.Memory.dll\n  NorthStar.Conditions -> /workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/memory-study/Conditions/bin/Release/netstandard2.1/NorthStar.Conditions.dll\n  NorthStar.MemoryStudy -> /workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/memory-study/Host/bin/Release/net10.0/NorthStar.MemoryStudy.dll\n  NorthStar.FieldJourney -> /workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/field-journey/Host/bin/Release/net10.0/NorthStar.FieldJourney.dll\n\nBuild succeeded.\n    0 Warning(s)\n    0 Error(s)\n\nTime Elapsed 00:00:03.80\n",
+            "stderr": ""
+          },
+          {
+            "command": [
+              "/workspace/work/authored-scene/dotnet/dotnet",
+              "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/field-journey/Host/bin/Release/net10.0/NorthStar.FieldJourney.dll",
+              "--serve",
+              "44761",
+              "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/field-journey/web",
+              "--seconds",
+              "12"
+            ],
+            "exit_code": 0
+          }
+        ],
+        "id": "field-journey",
+        "pid": 42442,
+        "sdk": "10.0.401",
+        "url": "http://127.0.0.1:44761/",
+        "host_exit_code": 0,
+        "host_lines": [
+          "READY http://127.0.0.1:44761/"
+        ],
+        "owned_process_exited": true
+      },
+      "stdout": "{\"event\": \"preflight\", \"id\": \"field-journey\", \"boundary\": \"Trusted-local source experiment, ephemeral and SDK-required. No Unity/Windows/Steam, recipient inclusion, sandbox or human validation.\"}\n{\"event\": \"ready\", \"id\": \"field-journey\", \"url\": \"http://127.0.0.1:44761/\", \"pid\": 42442}\n",
+      "stderr": "",
+      "elapsed_ms": 16842
+    },
+    {
+      "id": "selected-passives",
+      "command": [
+        "python3",
+        "tools/run_source_experiment.py",
+        "run",
+        "selected-passives",
+        "--dotnet",
+        "/workspace/work/authored-scene/dotnet/dotnet",
+        "--port",
+        "35741",
+        "--seconds",
+        "12",
+        "--report",
+        "/workspace/work/gate-final-review/source-launch-frozen/selected-passives.json"
+      ],
+      "port": 35741,
+      "initial": {
+        "sequence": 0,
+        "command": "initial",
+        "accepted": true,
+        "phase": "active",
+        "preparation": {
+          "profile": "toxic",
+          "responses": false,
+          "controls": false,
+          "passive": "none",
+          "armor": "light"
+        },
+        "state": {
+          "profile": "toxic",
+          "breakbar": null,
+          "responsePractice": false,
+          "wardAvailable": false,
+          "pending": null,
+          "resolution": [],
+          "round": 0,
+          "hp": 100,
+          "maxHp": 100,
+          "enemyHp": 96,
+          "charges": 2,
+          "effects": [
+            {
+              "effect": "Poison",
+              "remaining": 3
+            },
+            {
+              "effect": "Bleed",
+              "remaining": 3
+            }
+          ],
+          "threat": "Contact: 20 direct damage.",
+          "events": [
+            "Practice begins with poison and bleed, each lasting three global rounds."
+          ],
+          "outcome": "active",
+          "last": "Choose an action. Reads and elapsed time do not advance the round.",
+          "weaponEnabled": true,
+          "attackMultiplier": 1,
+          "healingMultiplier": 0.7,
+          "passive": "none",
+          "armor": "light",
+          "rescueSpent": false,
+          "lastHit": null
+        }
+      },
+      "after": {
+        "sequence": 1,
+        "command": "strike",
+        "accepted": true,
+        "phase": "active",
+        "preparation": {
+          "profile": "toxic",
+          "responses": false,
+          "controls": false,
+          "passive": "none",
+          "armor": "light"
+        },
+        "state": {
+          "profile": "toxic",
+          "breakbar": null,
+          "responsePractice": false,
+          "wardAvailable": false,
+          "pending": null,
+          "resolution": [],
+          "round": 1,
+          "hp": 71,
+          "maxHp": 100,
+          "enemyHp": 72,
+          "charges": 2,
+          "effects": [
+            {
+              "effect": "Poison",
+              "remaining": 2
+            },
+            {
+              "effect": "Bleed",
+              "remaining": 2
+            }
+          ],
+          "threat": "Pressure: 20 direct damage, then extends poison (toxic) or burn (heated) by two rounds.",
+          "events": [
+            "strike: 24 direct damage to target. Burn multiplier 1.0.",
+            "Target contact: 20 incoming direct damage; 20 actual HP lost.",
+            "End round 1: Poison incoming DOT 6; actual HP lost 6; 2 rounds remain. Guard does not reduce this tick.",
+            "End round 1: Bleed incoming DOT 3; actual HP lost 3; 2 rounds remain. Guard does not reduce this tick.",
+            "Round 1 resolved: active."
+          ],
+          "outcome": "active",
+          "last": "Round 1 resolved: active.",
+          "weaponEnabled": true,
+          "attackMultiplier": 1,
+          "healingMultiplier": 0.7,
+          "passive": "none",
+          "armor": "light",
+          "rescueSpent": false,
+          "lastHit": {
+            "kind": "PhysicalDirect",
+            "incoming": 20,
+            "effectiveDamage": 20,
+            "hpBefore": 100,
+            "hpAfter": 80,
+            "damageReduced": 0,
+            "actualHpLost": 20,
+            "avoidedHpLoss": 0,
+            "rescued": false
+          }
+        }
+      },
+      "report": {
+        "schema": "hub.source-launch.v1",
+        "status": "success",
+        "events": [
+          {
+            "event": "ready",
+            "id": "selected-passives",
+            "url": "http://127.0.0.1:35741/",
+            "pid": 42536
+          },
+          {
+            "event": "expired",
+            "exit_code": 0
+          }
+        ],
+        "boundary": "Trusted-local source experiment, ephemeral and SDK-required. No Unity/Windows/Steam, recipient inclusion, sandbox or human validation.",
+        "stage": "expired",
+        "commands": [
+          {
+            "command": [
+              "/workspace/work/authored-scene/dotnet/dotnet",
+              "--version"
+            ],
+            "exit_code": 0,
+            "stdout": "10.0.401\n",
+            "stderr": ""
+          },
+          {
+            "command": [
+              "/workspace/work/authored-scene/dotnet/dotnet",
+              "build",
+              "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/combat-study/Host/NorthStar.CombatStudy.csproj",
+              "-c",
+              "Release",
+              "-m:1",
+              "--disable-build-servers"
+            ],
+            "exit_code": 0,
+            "stdout": "  Determining projects to restore...\n  All projects are up-to-date for restore.\n  NorthStar.Combat -> /workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/combat-study/Rules/bin/Release/netstandard2.1/NorthStar.Combat.dll\n  NorthStar.CombatStudy -> /workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/combat-study/Host/bin/Release/net10.0/NorthStar.CombatStudy.dll\n\nBuild succeeded.\n    0 Warning(s)\n    0 Error(s)\n\nTime Elapsed 00:00:01.38\n",
+            "stderr": ""
+          },
+          {
+            "command": [
+              "/workspace/work/authored-scene/dotnet/dotnet",
+              "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/combat-study/Host/bin/Release/net10.0/NorthStar.CombatStudy.dll",
+              "--serve",
+              "35741",
+              "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/combat-study/Host/web",
+              "--seconds",
+              "12"
+            ],
+            "exit_code": 0
+          }
+        ],
+        "id": "selected-passives",
+        "pid": 42536,
+        "sdk": "10.0.401",
+        "url": "http://127.0.0.1:35741/",
+        "host_exit_code": 0,
+        "host_lines": [
+          "READY http://127.0.0.1:35741/"
+        ],
+        "owned_process_exited": true
+      },
+      "stdout": "{\"event\": \"preflight\", \"id\": \"selected-passives\", \"boundary\": \"Trusted-local source experiment, ephemeral and SDK-required. No Unity/Windows/Steam, recipient inclusion, sandbox or human validation.\"}\n{\"event\": \"ready\", \"id\": \"selected-passives\", \"url\": \"http://127.0.0.1:35741/\", \"pid\": 42536}\n",
+      "stderr": "",
+      "elapsed_ms": 14240
+    }
+  ],
+  "errors": [],
+  "limits": "Actual local launcher/HTTP/C# commands and synthetic Chromium only. No participant usability, accessibility, onboarding time, sandbox, Unity/Windows/Steam or recipient feature claim."
+}

@@ -25,6 +25,15 @@ class CurrentContracts(unittest.TestCase):
         for path in ['north-star/field-journey/Preparation/Cards.cs','north-star/field-journey/Sampling/SampleCase.cs','north-star/memory-study/Conditions/Conditions.cs','north-star/memory-study/QueryChecks/Program.cs','labs/world-gameplay/dialogue-conditions/query-assay.py','evidence/query-bindings/protocol.json']:
             with self.subTest(path=path):self.assertEqual(chosen(path),{'field'})
 
+    def test_gate_source_contracts_reach_the_actual_field_instrument(self):
+        for path in ('north-star/prototype/return_gate.gd','north-star/prototype/tests/gate_checks.gd','north-star/prototype/tests/gate_policy.gd','north-star/prototype/analysis/return_envelope.gd'):
+            with self.subTest(path=path):
+                suites=chosen(path)
+                self.assertIn('field',suites)
+                if path.endswith('/return_gate.gd'):self.assertIn('input_timing',suites)
+                self.assertFalse(scope.plan([w(path)])['full_fallback'])
+        self.assertEqual(chosen('evidence/field-gate/README.md'),{'field'})
+
     def test_intake_reaches_standalone_and_field_consumers(self):
         self.assertEqual(chosen('north-star/intake/Host/Room.cs'),{'intake','field'})
 
