@@ -1,0 +1,59 @@
+{
+  "scope": "Exact copied diagnostic output; .log files are excluded by the repository ignore contract, so this maintained record preserves their bytes as UTF-8 text. Initial and superseded results are not final acceptance.",
+  "outputs": [
+    {
+      "original_path": "evidence/field-gate/initial-launch/pre-metadata-error.log",
+      "bytes": 541,
+      "sha256": "e402e1adaee4c535b118d505fdaad3b4e782b574d2b26178dc0acc8360b364c9",
+      "text": "node:internal/modules/run_main:107\n    triggerUncaughtException(\n    ^\n\nError: Launcher exited before readiness: {\"event\": \"preflight\", \"id\": \"field-journey\", \"boundary\": \"Trusted-local source experiment, ephemeral and SDK-required. No Unity/Windows/Steam, recipient inclusion, sandbox or human validation.\"}\n{\"event\": \"failed\", \"error\": \"Source experiment consumer identity mismatch\"}\n\n    at file:///workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/showcase/launch-browser.mjs:32:67\n\nNode.js v24.19.0\n"
+    },
+    {
+      "original_path": "evidence/field-gate/initial-native/initial-native.log",
+      "bytes": 327,
+      "sha256": "14acf5d784394384e84664e5c31f26042c44d80a952bf15dd8da475efb54fc78",
+      "text": "Unhandled exception. System.Exception: Declared low-health exit fixture loses before passage completion\n   at Program.Check(String id, Boolean ok) in /workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/field-journey/GateChecks/Program.cs:line 12\n   at Program.Main(String[] args)\n"
+    },
+    {
+      "original_path": "evidence/field-gate/initial-native/msb4166.log",
+      "bytes": 353,
+      "sha256": "abaaec8645a235df52769e0dfed76c0b847b5209c90fc656d3104a39488f8250",
+      "text": "MSBUILD : error MSB4166: Child node \"2\" exited prematurely. Shutting down. Diagnostic information may be found in files in \"/tmp/MSBuildTempXON1ak/\" and will be named MSBuild_*.failure.txt. This location can be changed by setting the MSBUILDDEBUGPATH environment variable to a different directory.\n\nThe build failed. Fix the build errors and run again.\n"
+    },
+    {
+      "original_path": "evidence/field-gate/initial-native/native-final.log",
+      "bytes": 353,
+      "sha256": "abaaec8645a235df52769e0dfed76c0b847b5209c90fc656d3104a39488f8250",
+      "text": "MSBUILD : error MSB4166: Child node \"2\" exited prematurely. Shutting down. Diagnostic information may be found in files in \"/tmp/MSBuildTempXON1ak/\" and will be named MSBuild_*.failure.txt. This location can be changed by setting the MSBUILDDEBUGPATH environment variable to a different directory.\n\nThe build failed. Fix the build errors and run again.\n"
+    },
+    {
+      "original_path": "evidence/field-gate/initial-native/native-retry.log",
+      "bytes": 37,
+      "sha256": "7d7f73376f4885a8bcfad89138127edd1cb1938f6e4b3b7e71702fec8b260475",
+      "text": "PASS: 43 actual gate native controls\n"
+    },
+    {
+      "original_path": "evidence/field-gate/initial-routing/error.log",
+      "bytes": 1033,
+      "sha256": "a6d11c2802f52a779539a08953c63d17695c492e3a4c3481fcb3838a773cc699",
+      "text": "..............F...........................................\n======================================================================\nFAIL: test_gate_source_contracts_reach_the_actual_field_instrument (tools.test_csharp_scope.CurrentContracts.test_gate_source_contracts_reach_the_actual_field_instrument)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/tools/test_csharp_scope.py\", line 35, in test_gate_source_contracts_reach_the_actual_field_instrument\n    self.assertEqual(chosen('evidence/field-gate/RUN.json'),{'field'})\nAssertionError: Items in the first set but not the second:\n'loadout'\n'narrative'\n'recovery'\n'authored_scene'\n'presentation'\n'tooling'\n'crafting'\n'reputation'\n'combat'\n'intake'\n'audio'\n'recipient'\n'input_timing'\n'availability'\n'progression'\n\n----------------------------------------------------------------------\nRan 58 tests in 33.811s\n\nFAILED (failures=1)\n"
+    },
+    {
+      "original_path": "evidence/field-gate/initial-syntax/error.log",
+      "bytes": 372,
+      "sha256": "558b1569a82973816cb01dafce5e2e2ca7e169a4e52d3e7666e4090f85194ef5",
+      "text": "/workspace/Creative_AI_Project_HUB/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/field-journey/tools/gate-browser.mjs:39\nasync function fidelity(s,v=await owner(s)){\n                            ^^^^^\n\nSyntaxError: Illegal await-expression in formal parameters of async function\n    at checkSyntax (node:internal/main/check_syntax:72:5)\n\nNode.js v24.19.0\n"
+    },
+    {
+      "original_path": "evidence/field-gate/routing-final.log",
+      "bytes": 158,
+      "sha256": "3b80617596b2159126db063a6d35386af3ef216a1f99c0c8db7e440200b40949",
+      "text": "..........................................................\n----------------------------------------------------------------------\nRan 58 tests in 39.938s\n\nOK\n"
+    },
+    {
+      "original_path": "evidence/field-gate/source-launch.log",
+      "bytes": 46,
+      "sha256": "643562ebf0b53e1bec85ab7e9bb12e4532cfc2ea10aaf36ec14a2fa763b5e972",
+      "text": "PASS 19 actual source-launch browser controls\n"
+    }
+  ]
+}
