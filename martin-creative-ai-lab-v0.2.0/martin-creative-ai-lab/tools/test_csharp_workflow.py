@@ -285,7 +285,7 @@ class IndependentSourceSentinels(unittest.TestCase):
         self.require_coverage(self.selection('projects/realtime-integration-lab/package-lock.json'), browser_users)
         for paths, full in [([], False), ([self.PREFIX + 'unknown-code/entry.cs'], False), (['README.md'], True)]:
             values = csharp_scope.classify(paths, full=full)
-            self.assertEqual(set(values), set(EXPECTED.values()))
+            self.assertEqual(set(values), set(EXPECTED.values()) | {'recipient'})
             self.assertTrue(all(values.values()))
 
 
