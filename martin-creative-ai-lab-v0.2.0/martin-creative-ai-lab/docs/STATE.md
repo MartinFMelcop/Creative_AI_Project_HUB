@@ -13,9 +13,17 @@ STATE read in order. Historical instructions are source data, not current author
 
 Fresh remote inspection of [run42191589816](https://github.com/MartinFMelcop/Creative_AI_Project_HUB/actions/runs/42191589816)
 for5f8a97e confirms BOTH separated `north-star-csharp` and `recipient-delivery`
-completed successfully, including real recipient rebuild/execution. No rerun or gate
-change was needed to repair that run. [Observation](../evidence/portable-combat/ci-recovery.json)
-is existing-run evidence, separate from this increment's future publication/CI.
+completed successfully, including real recipient rebuild/execution. The new
+portable-owner commit`66f97a0` was published normally; its run42387219412 then
+failed current portfolio/source-launch identity checks because selected-passives
+still selected the old initiative proof. [Exact failure/correction](../evidence/portable-combat/ci-followup.json)
+retains both jobs. The current portfolio entry now selects the new actual owner
+execution; historical evidence and checks remain unchanged. Portfolio gate,7negative
+contract tests,6source-launch unit controls and19actual source-launch Chromium
+controls passed after correction. This is a separate follow-up commit/publication,
+not a rewrite or a retroactive green claim for42387219412. No rerun or gate
+change was needed for the ORIGINAL successful42191589816. Its [observation](../evidence/portable-combat/ci-recovery.json)
+is existing-run evidence, separate from the new increment and follow-up CI.
 Earlier42179260734 cancellation is not reclassified or assigned an invented cause.
 
 ## Active result — portable actual combat owner

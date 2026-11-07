@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "kind": "observed_ci_identity_correction",
+  "published_increment": "66f97a0a137e248e2ad7a73c92e261466247dd29",
+  "run_id": 42387219412,
+  "failures": [
+    {
+      "job_id": 128447043407,
+      "name": "integrity-and-dialogue",
+      "conclusion": "failure",
+      "step": "Reject false laboratory, consumption and execution claims",
+      "actual_command": "python3 tools/check_portfolio.py",
+      "excerpt": [
+        "2026-11-07T15:37:00.8615026Z python3 tools/check_portfolio.py",
+        "2026-11-07T15:37:00.8615425Z python3 tools/test_check_portfolio.py",
+        "2026-11-07T15:37:01.2389028Z Source experiment consumer identity mismatch",
+        "2026-11-07T15:37:01.2464987Z ##[error]Process completed with exit code 1."
+      ]
+    },
+    {
+      "job_id": 128447189787,
+      "name": "source-experiment-launch",
+      "conclusion": "failure",
+      "actual_command": "python3 tools/test_source_launch.py",
+      "excerpt": [
+        "2026-11-07T15:38:16.0075078Z FAIL: test_occupied_port_refuses_without_host (__main__.LaunchControls.test_occupied_port_refuses_without_host)",
+        "2026-11-07T15:38:16.0083673Z AssertionError: 'Address already in use' not found in '{\"event\": \"failed\", \"error\": \"Source experiment consumer identity mismatch\"}\\n'",
+        "2026-11-07T15:38:16.0085890Z FAIL: test_wrong_sdk_refuses_before_host (__main__.LaunchControls.test_wrong_sdk_refuses_before_host)",
+        "2026-11-07T15:38:16.0093380Z AssertionError: 'Exact SDK' not found in '{\"event\": \"failed\", \"error\": \"Source experiment consumer identity mismatch\"}\\n'",
+        "2026-11-07T15:38:16.0095485Z FAILED (failures=2)",
+        "2026-11-07T15:38:16.0223161Z ##[error]Process completed with exit code 1."
+      ]
+    }
+  ],
+  "cause": "Current showcase/portfolio.json selected-passives entry still selected historical initiative evidence, whose Trial source identity no longer matched the now-portable owner. Both observed failures report that same early catalog identity rejection.",
+  "correction": "Point only the current source experiment entry to the new actual destination execution and exact SHA256. Historical initiative evidence, launch identity, recipients and validators remain unchanged.",
+  "local_reproduction": {
+    "command": "python3 tools/check_portfolio.py",
+    "exit_code": 1,
+    "message": "Source experiment consumer identity mismatch"
+  },
+  "followup": "Separate normal commit, no history rewrite. Corrected local gates and actual source-launch execution recorded alongside this file; new remote CI reported separately."
+}
