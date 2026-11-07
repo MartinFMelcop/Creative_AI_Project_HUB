@@ -11,8 +11,15 @@ Its abstract target and presentation are original experimental staging, not appr
 ## Run the actual consumer
 
 Use the existing SDK10.0.401 pin from `north-star/csharp`; the library is C#8/netstandard2.1,
-while this observer/host is .NET10. No external runtime package or browser simulation owns
-combat. From the maintained workspace:
+while this observer/host is .NET10. The actual mutable `Trial` owner now compiles
+from its existing source path into that same portable assembly; the Host compiles
+no duplicate owner. No external runtime package or browser simulation owns combat.
+[Portable-owner execution](../../evidence/portable-combat/RUN.json) binds evaluated
+compiler inputs, actual copied DLL identities and exact fresh baseline parity across
+all five existing native modes plus their affected browser controls. The public type
+moved assembly: rebuild dependent consumers; precompiled binary compatibility is not
+promised. This is a production dependency, not Unity/IL2CPP or Windows execution.
+From the maintained workspace:
 
 ```sh
 (cd north-star/csharp && dotnet build ../combat-study/Host/NorthStar.CombatStudy.csproj -c Release -m:1 --disable-build-servers)

@@ -1,0 +1,62 @@
+[
+  {
+    "suite": "classic",
+    "command": [
+      "node",
+      "/workspace/work/verified-development/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/combat-study/tools/browser.mjs",
+      "/workspace/work/takakae-t02/runtime/dotnet/dotnet",
+      "/workspace/work/portable-combat-science/browser-classic"
+    ],
+    "exit_code": 0,
+    "stdout": "22 browser/HTTP controls passed; actual renderer negative detected\n",
+    "stderr": ""
+  },
+  {
+    "suite": "passive",
+    "command": [
+      "node",
+      "/workspace/work/verified-development/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/combat-study/tools/passive-browser.mjs",
+      "/workspace/work/takakae-t02/runtime/dotnet/dotnet",
+      "/workspace/work/portable-combat-science/browser-passive"
+    ],
+    "exit_code": 0,
+    "stdout": "PASS: 21 passive Chromium controls and 7 HTTP controls\n",
+    "stderr": ""
+  },
+  {
+    "suite": "response",
+    "command": [
+      "node",
+      "/workspace/work/verified-development/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/combat-study/tools/response-browser.mjs",
+      "/workspace/work/takakae-t02/runtime/dotnet/dotnet",
+      "/workspace/work/portable-combat-science/browser-response"
+    ],
+    "exit_code": 0,
+    "stdout": "PASS: 16 actual response Chromium controls and 3 HTTP negatives\n",
+    "stderr": ""
+  },
+  {
+    "suite": "control",
+    "command": [
+      "node",
+      "/workspace/work/verified-development/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/combat-study/tools/control-browser.mjs",
+      "/workspace/work/takakae-t02/runtime/dotnet/dotnet",
+      "/workspace/work/portable-combat-science/browser-control"
+    ],
+    "exit_code": 0,
+    "stdout": "PASS: 21 control Chromium controls\n",
+    "stderr": ""
+  },
+  {
+    "suite": "initiative",
+    "command": [
+      "node",
+      "/workspace/work/verified-development/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/combat-study/tools/initiative-browser.mjs",
+      "/workspace/work/takakae-t02/runtime/dotnet/dotnet",
+      "/workspace/work/portable-combat-science/browser-initiative"
+    ],
+    "exit_code": 0,
+    "stdout": "PASS: 20 initiative Chromium controls; 2 HTTP negatives\n",
+    "stderr": ""
+  }
+]

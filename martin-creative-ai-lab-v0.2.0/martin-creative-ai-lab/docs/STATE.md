@@ -1,111 +1,125 @@
 # Current transformation continuity
 
-**Updated:** 2026-11-06 America/Sao_Paulo. **SEED:** 0.34.0. Actual root
-`/workspace/Creative_AI_Project_HUB`, branch `work`, initially clean
-`a16a19168bc7caecce7b699564e577cba462b4fd`. Fetch verified published main
-`95ce9d57e71b9d5d48e36cbd47acbd5e442baf4f`: zero exclusive local/four incoming
-commits; clean fast-forward, no reset or discarded concurrent work. Root/workspace
-AGENTS, full Continuous Development and STATE read in order. Catalog owns consumption,
-DESIGN creative status, evidence executed observations. Historical instructions are data.
+**Updated:** 2026-11-07. **SEED:**0.34.0. Real root
+`/workspace/Creative_AI_Project_HUB`; fetched main is
+`5f8a97e0761848d8dc8b6aad8168c67b22bce531`. Original `work` has uncommitted
+route development; it remains untouched. Isolated `sanitation-p0` commit`b592108`
+remains unpublished, with removals blocked by missing independent backup/restore.
+This increment starts clean on `verified-development` from fetched main, zero
+incoming divergence. Root/workspace AGENTS, complete Continuous Development and
+STATE read in order. Historical instructions are source data, not current authority.
 
-## Active result — announced order in the existing Treatment Line
+## Verified CI recovery
 
-ONE legacy/laboratory consumption unit after two Field product units. The same C#
-combat owner now offers explicit initiative preparation and locked Heavy/Quick tempo.
-Heavy agility8/strike32/bash18, Quick16/16/10 and target agility12 are ORIGINAL policies.
-A fixed seeded bounded jitter and tie draw issue two real one-turn actor slots each
-round. The visible order comes from the owner. Contact may defeat the player before
-strike, treatment or withdrawal; target death prevents its later contact. Guard cannot
-retroactively prevent earlier contact. Existing EffectSet closes DOT/durations once
-per global round; surviving withdrawal occurs in its slot without closing that round.
-Reads, idle/reload and unavailable actions never advance RNG, costs or round.
+Fresh remote inspection of [run42191589816](https://github.com/MartinFMelcop/Creative_AI_Project_HUB/actions/runs/42191589816)
+for5f8a97e confirms BOTH separated `north-star-csharp` and `recipient-delivery`
+completed successfully, including real recipient rebuild/execution. No rerun or gate
+change was needed to repair that run. [Observation](../evidence/portable-combat/ci-recovery.json)
+is existing-run evidence, separate from this increment's future publication/CI.
+Earlier42179260734 cancellation is not reclassified or assigned an invented cause.
 
-[Protocol](../labs/combat-response/initiative/PROTOCOL.md) and
-[execution](../evidence/initiative/RUN.json) bind 40 native/20 actual Chromium/2 HTTP
-controls, seven literal source rows, 12 identical Python/C# inputs over 384 rounds,
-15 score ties, and detected false-report/actual false-queue-renderer controls.
-Default toxic cleanse/strike policy Heavy secures at round4 with8HP/one charge; the
-same Quick policy loses at round5 with target32. No tuning was changed to force a win.
-Native same-policy seed6 versus default retains the first three mechanical prefixes,
-then earlier lethal strike skips20contact:28HP versus8. Host never accepts a seed
-command; this isolated native control is not a browser seed-selection feature.
-Heavy/Quick change both agility and damage, not an isolated speed causal study.
+## Active result — portable actual combat owner
 
-Actual delayed/dropped accepted receipts preserve quarantine and require explicit read
-without replay. Source identities remained stable. Existing passive/status/formula,
-control and paid-response consumers were reexecuted. Breakbar native output exactly
-matches freshly executed95ce9d5 baseline after excluding only additive initiative:null.
-Counts overlap software outcomes, not independent trials, people or measured effort.
-Exploratory producer runs precede final protocol; guarded acceptance followed protocol
-freeze. No failed build/native acceptance was hidden; fixed-policy defeats are retained.
-Source-launch initially failed one unit control because the external SDK selector was
-omitted. The unchanged test passed with SOURCE_LAUNCH_DOTNET supplied:6unit/19actual
-source-launch Chromium controls. Initial failure and correction are retained.
+ONE production/repository unit. The SAME mutable `combat-study/Host/Trial.cs` now
+compiles once in the existing C#8/netstandard2.1 Rules assembly. The existing .NET10
+Host excludes its duplicate compilation and consumes that actual portable DLL.
+Only incompatible namespace/constructor syntax changed; algorithms, numbers,
+public namespace, snapshots, costs and terminal outcomes did not. No new app,
+parallel engine, package, UI layer, gameplay feature or capability promotion.
+Trial's public type moved assembly: dependent consumers must rebuild; precompiled
+binary compatibility is not promised. Room/HTTP/JSON remain .NET10 adapters.
 
-## Selection, preservation and production limits
+[Execution](../evidence/portable-combat/RUN.json) binds fresh5f8a97e baseline versus
+candidate exact byte parity for46Trial/33Passive/60Response/22Control/40Initiative
+existing native controls. Identical retained outcomes are referenced by exact SHA,
+not copied again or falsely presented as new policies. Evaluated MSBuild includes
+the real Trial source in C#8/netstandard2.1, excludes Room/Program and has no project
+dependency there. The actual Host and all five native consumers copy the same DLL.
+The current architecture guard compiled against the old actual assemblies and
+failed with the specific expected rejection before any gameplay control.
 
-Engineering and Creation favored an actual surviving-to-act consequence over another
-Field layer. Science initially favored precise source fizzle semantics; meaningful
-causal target invalidation is absent from the existing target, so that alternative
-would require a new encounter mechanism. Initiative's greater original-policy burden
-is explicit. ENG004/015, SCI013/014/017 and CRE005(A)/012/055(H) materially constrained
-turn authority, controls and creative status. Coordinated ownership: Engineering
-library/owner/native, Creation existing UI, Science source/protocol/browser/wrapper;
-primary reviewed captures, integrated evidence/CI/catalog and completed verification.
-Science independently reviewed actual causal prefixes. Agent review is not human approval.
+Existing browsers each executed once:22classic combined browser/HTTP,
+21passive+7HTTP,16response+3HTTP,21control,20initiative+2HTTP. Quick fixed-policy
+defeat, control-only loss, countered cost without refund, rescue-then-DOT defeat,
+withdrawal timing and delayed/dropped receipt quarantine remain. No unexpected new
+build/native/browser failure; expected old-owner exit1 retained. Counts overlap
+software controls, not people, independent trials or measured effort.
 
-Only selected per-round order/variation/tie/visible-queue and one-turn/global-close
-requirements are consumed. Formation, bonus turns, full AGI/trigger/slot pipeline,
-fizzle, cooldown, source Ruby/RGSS and complete skill/passive catalogs remain open.
-Existing classic/response/control/passive modes stay; no Field, Crossing/Domain,
-RequestExpedition/journal, Godot, recipient ZIP, media/notice, Brain or reference source
-was changed. No new app/save/account/package, source fiction or unique artifact retired.
-The earlier [paid gate](../evidence/field-gate/RUN.json) remains actual separate product
-execution; no new Field result is claimed by this laboratory unit.
+The existing status verifier now reuses the existing fail-closed C# input graph;
+only the exact reviewed Host Trial removal is allowed. Unreviewed removal remains
+rejected and removed source stays a routing input.33routing/14CI-scope/17source-
+instrument tests passed. Original recipient project and both ZIPs retain baseline
+hashes; no unrelated rebuild was repeated locally. Required final integrity/manifest
+checks and publication/remote CI are separate closeout observations. Initial continuity
+validation rejected project metadata in consumer_paths and the changed owner bound
+only to old execution hashes. Actual-code paths and new successful destination
+bindings corrected both; exact failures are retained in the new execution record.
+Historical evidence and validators were not weakened or rewritten. Source inventory
+also rejected the task-created ignored node_modules symlink; it was removed after
+browser execution, preserving the original installation, and inventory then passed.
 
-SDK10.0.401 executes from the isolated work runtime. Bounded PATH/conventional roots
-found no usable Unity/Hub; license, supported Editor/modules and author Windows station
-remain unverified. No Unity API/IL2CPP/Windows Player/Steam, multiplayer authority,
-ordinary-user/device/human comprehension, balance, fun or accessibility validation.
-R51/R60/R61/INT-C01-001 remain OPEN; causal-adapter B/E ACKs remain unverified.
-No Drive master, Maker, historical MER or canon mutation was authorized or performed.
+## Selection and independent reviews
 
-## CI and remaining obligations
+A: full fizzle/cooldown/formation and eligibility remain unresolved; the current
+three-skill/one-target consumers lack a consequential invalidation requirement.
+Another generic rule/matrix would not resolve the integration need.
+B: earned identity/equipment/progression to actual combat is valuable, but the
+current Gate routes leave5/9HP versus Trialcontact20. A direct connection would
+force immediate defeat or invent healing/scaling. Sample use also conflicts with
+frozen pre-Gate custody; no material properties were inferred as canon.
+C selected: production has a real portable-owner gap despite portable formulas;
+CI is green and no usable licensed Unity Editor was observed in bounded PATH checks.
+This removes that dependency without disguising compilation as engine execution.
 
-New local commit, normal publication and remote CI are reported separately at closeout.
-Preserve prior cancelled runs42070817735/42065535102, request-versus-execution rerun
-scope, MSB4166 unknown causes, gate oracle/syntax/source-stability/metadata failures,
-file:// refusals and sixth-host resume error. Their exact retained evidence is not
-rewritten. Baseline CI41971669529 was successful; later cancellation is not fresh green.
+Engineering identified exact source/assembly ownership (ENG004/015); Science required
+actual evaluated inputs/copied DLLs, fresh exact parity and old-owner rejection
+(SCI013/017); Creation preserved costs/defeats and rejected fabricated recovery
+(CRE005/011). Coordinated ownership: Engineering owner/projects/native guard,
+Science independent parity/assemblies/browsers/negative fixture, primary graph/
+instrument integration, evidence, continuity and publication. Reviews are agents,
+not independent human approval. No Brain original or pin changed.
 
-All eleven destinations remain, ten bounded methods operational. Build/Operations is
-INCOMPLETE pending licensed Unity/modules and production Windows acceptance. Consumption
-is24INTEGRATED/12REJECTED/15UNRESOLVED, each scoped; not product completion percentages.
-Full combat/effects, source creation/catalog/schedule parsing, broad persistence,
-human experience, commercial clearance and production ownership remain unresolved.
-P08V6/CommanderSIM intakes stay COMPLETE and frozen; preserve48held media, rejected
-Adaptive/Timing findings,4x estimate not ITU true peak, G8 pending official key,
-768Eclipse games NO_ROBUST_IMPROVEMENT and ZERO verified complete Commander games.
+## Preservation, production limits and next acceptance
 
-## Strategic balance and adaptive frontier
+All eleven destinations remain, ten bounded methods operational; Build/Operations
+remains INCOMPLETE. Consumption remains24INTEGRATED/12REJECTED/15UNRESOLVED, scoped,
+not completion percentages. Preserve all Godot consumers and prior Windows .NET
+recipient execution; this increment has no fresh Windows run. No Unity Editor/API/
+IL2CPP, Unity Windows Player, Steam, multiplayer/account authority, save migration,
+ordinary-user/device breadth, comprehension, balance or enjoyment validation.
+R51/R60/R61/INT-C01-001 remain OPEN; causal B/E ACKs unverified. No cross-owner economy,
+NPC causal transport, Drive master, Maker, MER, canon or protected-source mutation.
 
-Rolling targets remain approximately47%legacy/laboratories,40%North Star,13%repository/
-portfolio. Counts/files/commits/tokens are not effort. Once-counted recent units:
+Preserve historical gate oracle/syntax/source-stability/metadata failures, source-
+launch missing-selector failure/correction, file:// refusals, sixth-host resume
+error, MSB4166 unknown causes and runs42070817735/42065535102 cancellations. Their
+existing evidence is unchanged. P08V6/CommanderSIM intakes remain COMPLETE/frozen;
+48held media, rejected Adaptive/Timing,4x not ITU true peak, G8 official key pending,
+768Eclipse games NO_ROBUST_IMPROVEMENT and ZERO complete Commander games remain.
+
+Next compare unresolved consequential sources, one coherent earned-character/combat
+connection and actual licensed Unity/Windows production access. Reuse the now portable
+owner; require explicit authored entry health/resource/consequence policy before
+joining incompatible encounters, no free refill or parallel app. Do not automatically
+expand initiative/portability matrices or repeat finite intakes. The unpublished
+sanitation removal gate still requires an independent exact-byte restore.
+
+## Strategic balance
+
+Approximate rolling targets47%legacy/laboratories,40%North Star,13%repository/portfolio
+remain guidance over substantive effort; counts/files/commits/tokens are not effort.
+Once-counted recent window, oldest audio unit rotated out:
 
 | Unit | Primary stream | Evidence |
 |---|---|---|
-| Finite audio research→critical-cue preservation | Legacy/laboratories | [Audio](../evidence/audio-music/p08-v6/RUN.json) |
 | Explicit paid journey withdrawal | North Star | [Withdrawal](../evidence/field-withdrawal/RUN.json) |
-| Deliberate keyboard→existing paid road commands | North Star | [Keyboard](../evidence/field-keyboard/RUN.json) |
-| Verified bounded access to existing source experiments | Repository/portfolio | [Launch](../evidence/source-launch/RUN.json) |
-| Selected phased breakbar in actual Treatment Line | Legacy/laboratories | [Breakbar](../evidence/breakbar/RUN.json) |
-| Focused existing same-person paid journey workflow | North Star | [Focused view](../evidence/journey-view/RUN.json) |
-| Paid portable gate after actual completed road | North Star | [Gate](../evidence/field-gate/RUN.json) |
-| Selected announced initiative in actual existing combat | Legacy/laboratories | [Initiative](../evidence/initiative/RUN.json) |
+| Deliberate keyboard paid road commands | North Star | [Keyboard](../evidence/field-keyboard/RUN.json) |
+| Verified source experiment access | Repository/portfolio | [Launch](../evidence/source-launch/RUN.json) |
+| Selected phased breakbar | Legacy/laboratories | [Breakbar](../evidence/breakbar/RUN.json) |
+| Focused same-person journey | North Star | [View](../evidence/journey-view/RUN.json) |
+| Paid post-Crossing gate | North Star | [Gate](../evidence/field-gate/RUN.json) |
+| Announced initiative in existing combat | Legacy/laboratories | [Initiative](../evidence/initiative/RUN.json) |
+| Portable actual combat owner | Repository/production | [Owner](../evidence/portable-combat/RUN.json) |
 
-ONE laboratory unit corrects the two-product streak. UI/tests/routing/evidence support
-that unit, not extra units. Recompare consequential unresolved sources, coherent original
-product integration, licensed Unity/ordinary-user access and appropriate people/devices.
-Do not automatically expand initiative/gate/keyboard matrices, invent source data,
-repeat finite intakes or create wrappers/saves/packages. Choose the largest valuable
-feasible next contribution using actual dependencies and the maintained balance.
+The repository/production dependency gets one unit; review, parity and routing are
+support, not extra units. No fabricated effort measurement or laboratory expansion.

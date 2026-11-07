@@ -112,6 +112,14 @@ def project_inputs(root,seeds):
                 if item.attrib or list(item):raise ValueError('Unsupported build property')
             elif tag=='EnableDefaultCompileItems':
                 if project.relative_to(root).as_posix() not in PORTABLE_PROJECTS or item.attrib or list(item) or item.text!='false':raise ValueError('Unreviewed explicit source ownership')
+            elif tag=='Compile' and 'Remove' in item.attrib:
+                # Reviewed ownership transfer only; retain the removed source as a routing input.
+                if (project.relative_to(root).as_posix()!='north-star/combat-study/Host/NorthStar.CombatStudy.csproj'
+                        or item.attrib!={'Remove':'Trial.cs'} or list(item)):
+                    raise ValueError('Unreviewed compile removal')
+                target=regular(root,project.parent/'Trial.cs');files.add(target)
+                linked.append({'kind':'CompileRemove','from':project.relative_to(root).as_posix(),
+                               'input':target.relative_to(root).as_posix()})
             elif tag in ('ProjectReference','Compile','Content','None','EmbeddedResource'):
                 allowed={'Include','Link','CopyToOutputDirectory','CopyToPublishDirectory'}
                 if not item.attrib.get('Include') or set(item.attrib)-allowed:raise ValueError('Unsupported MSBuild input attributes')

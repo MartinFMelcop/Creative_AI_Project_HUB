@@ -47,6 +47,23 @@ class CurrentContracts(unittest.TestCase):
             self.assertNotIn('north-star/csharp/'+name+'/Program.cs',g['inputs'])
         self.assertEqual(len(g['projects']),4)
 
+    def test_actual_portable_combat_owner_reaches_combat_without_full_fallback(self):
+        g=scope.project_inputs(scope.ROOT,['north-star/combat-study/TrialChecks/NorthStar.TrialChecks.csproj'])
+        owner='north-star/combat-study/Host/Trial.cs'
+        self.assertIn(owner,g['inputs'])
+        self.assertIn({'kind':'Compile','from':'north-star/combat-study/Rules/NorthStar.Combat.csproj','input':owner},g['linked_inputs'])
+        self.assertIn({'kind':'CompileRemove','from':'north-star/combat-study/Host/NorthStar.CombatStudy.csproj','input':owner},g['linked_inputs'])
+        p=scope.plan([w(owner)])
+        self.assertEqual(p['suites'],['combat']);self.assertFalse(p['full_fallback'])
+
+    def test_compile_removal_requires_reviewed_project_and_exact_owner(self):
+        for value in ('Trial.cs','../Trial.cs','*.cs','Missing.cs'):
+            with tempfile.TemporaryDirectory() as td:
+                root=Path(td);(root/'Trial.cs').write_text('class Trial {}')
+                (root/'Unreviewed.csproj').write_text('<Project Sdk="Microsoft.NET.Sdk"><ItemGroup><Compile Remove="'+value+'"/></ItemGroup></Project>')
+                with self.assertRaisesRegex(ValueError,'Unreviewed compile removal'):
+                    scope.project_inputs(root,['Unreviewed.csproj'])
+
     def test_unreviewed_default_compile_switch_is_rejected(self):
         with tempfile.TemporaryDirectory() as td:
             root=Path(td);(root/'unreviewed.csproj').write_text('<Project Sdk="Microsoft.NET.Sdk"><PropertyGroup><EnableDefaultCompileItems>false</EnableDefaultCompileItems></PropertyGroup></Project>')

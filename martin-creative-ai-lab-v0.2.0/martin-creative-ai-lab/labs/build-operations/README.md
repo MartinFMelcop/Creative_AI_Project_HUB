@@ -28,3 +28,15 @@ were necessary to preserve those contracts; gates and ZIPs were not weakened or
 regenerated. Exact superseded producers/results remain discoverable in the evidence.
 This method proves bounded software compilation and behavior parity, not Unity API/
 runtime/IL2CPP, license, Windows Player, Steam, save migration or human experience.
+
+## Existing combat owner portability
+
+[Actual execution](../../evidence/portable-combat/RUN.json) now covers the SAME mutable
+Treatment Line Trial owner compiled into its existing C#8/netstandard2.1 Rules assembly.
+The .NET10 Host excludes duplicate compilation and consumes the actual copied portable
+DLL. Five fresh native baseline/candidate outputs match byte for byte; evaluated
+MSBuild, copied-assembly identities, a specific old-owner rejection and five affected
+browser instruments distinguish this from merely portable formulas. Existing source
+paths, policies, costs and defeats remain. Dependent consumers must rebuild because
+the public type moved assembly. No new laboratory, package or operational promotion;
+licensed Unity and production Windows Player acceptance remain outstanding.

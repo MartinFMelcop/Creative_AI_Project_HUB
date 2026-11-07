@@ -1,0 +1,405 @@
+{
+  "schema_version": 1,
+  "kind": "destination_execution",
+  "baseline_commit": "5f8a97e0761848d8dc8b6aad8168c67b22bce531",
+  "branch": "verified-development",
+  "selected": "C: actual mutable combat owner in the existing C#8/netstandard2.1 assembly, consumed by the existing host and native/browser consumers. No new app, rules copy, UI or package.",
+  "acceptance": [
+    "Trial must actually belong to the netstandard2.1 Rules assembly, not merely reference portable formulas. Host must exclude its duplicate compilation.",
+    "All five fresh baseline/candidate native outputs must match byte for byte, including costs, refusals, fixed defeats, clocks, RNG and global DOT.",
+    "Actual evaluated compile/reference inputs and copied DLL identities must establish production of and consumption from the portable assembly.",
+    "Current architecture guard must reject the actual old Host-owned Trial before gameplay controls.",
+    "Existing affected browser instruments must execute the same real owner; no new gameplay matrix or Unity claim."
+  ],
+  "acceptance_timing": "Acceptance stated during independent selection before candidate verification. Not external preregistration. A final input-only wrapper confinement guard and documentation were completed after browser execution; gameplay/host/project sources stayed frozen.",
+  "ci_recovery": "ci-recovery.json",
+  "native_parity": "native-parity.json",
+  "native_outcomes": "native-outcomes.json",
+  "independent_parity": "independent-parity.json",
+  "evaluated_projects": "evaluated-projects.json",
+  "consumer_assembly_copies": "assembly-copies.json",
+  "commands": [
+    {
+      "command": [
+        "/workspace/work/takakae-t02/runtime/dotnet/dotnet",
+        "build",
+        "/workspace/work/verified-development/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/combat-study/TrialChecks/NorthStar.TrialChecks.csproj",
+        "-c",
+        "Release",
+        "-m:1",
+        "--disable-build-servers"
+      ],
+      "exit_code": 0,
+      "stdout": "  Determining projects to restore...\n  Restored /workspace/work/verified-development/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/combat-study/TrialChecks/NorthStar.TrialChecks.csproj (in 109 ms).\n  Restored /workspace/work/verified-development/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/combat-study/Host/NorthStar.CombatStudy.csproj (in 2 ms).\n  Restored /workspace/work/verified-development/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/combat-study/Rules/NorthStar.Combat.csproj (in 442 ms).\n  NorthStar.Combat -> /workspace/work/verified-development/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/combat-study/Rules/bin/Release/netstandard2.1/NorthStar.Combat.dll\n  NorthStar.CombatStudy -> /workspace/work/verified-development/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/combat-study/Host/bin/Release/net10.0/NorthStar.CombatStudy.dll\n  NorthStar.TrialChecks -> /workspace/work/verified-development/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/combat-study/TrialChecks/bin/Release/net10.0/NorthStar.TrialChecks.dll\n\nBuild succeeded.\n    0 Warning(s)\n    0 Error(s)\n\nTime Elapsed 00:00:05.92\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/workspace/work/takakae-t02/runtime/dotnet/dotnet",
+        "/workspace/work/verified-development/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/combat-study/TrialChecks/bin/Release/net10.0/NorthStar.TrialChecks.dll",
+        "/workspace/work/portable-combat/migrated/TrialChecks.json"
+      ],
+      "exit_code": 0,
+      "stdout": "PASS observation-is-not-action\nPASS schema-reject-atomic-0\nPASS schema-reject-atomic-1\nPASS schema-reject-atomic-2\nPASS schema-reject-atomic-3\nPASS schema-reject-atomic-4\nPASS schema-reject-atomic-5\nPASS schema-reject-atomic-6\nPASS toxic-win-accepted-1\nPASS toxic-win-accepted-2\nPASS toxic-win-accepted-3\nPASS toxic-win-accepted-4\nPASS toxic-real-victory\nPASS heated-win-accepted-1\nPASS heated-win-accepted-2\nPASS heated-win-accepted-3\nPASS heated-win-accepted-4\nPASS heated-win-accepted-5\nPASS heated-win-accepted-6\nPASS heated-win-accepted-7\nPASS heated-real-victory\nPASS heated-mistimed-treatment-negative-accepted-1\nPASS heated-mistimed-treatment-negative-accepted-2\nPASS heated-mistimed-treatment-negative-accepted-3\nPASS heated-mistimed-treatment-negative-accepted-4\nPASS heated-mistimed-treatment-negative-accepted-5\nPASS heated-mistimed-treatment-negative-accepted-6\nPASS mistimed-treatment-does-not-secure\nPASS toxic-constant-guard-defeated\nPASS heated-constant-guard-defeated\nPASS guard-observation-accepted-1\nPASS strike-observation-accepted-1\nPASS guard-halves-contact-leaves-full-dot\nPASS cleanse-cost-accepted-1\nPASS cleanse-charge-and-opportunity\nPASS bleed-treatment-accepted-1\nPASS bleed-treatment-accepted-2\nPASS bleed-real-healing\nPASS disarm-refusal-atomic\nPASS disarm-bash-and-burn\nPASS disarm-global-expiry\nPASS burn-real-strike\nPASS withdrawal-no-fabricated-win\nPASS terminal-refusal-atomic\nPASS explicit-restart\nPASS exhausted-treatment-atomic\n46 consumer controls; passed: True\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/workspace/work/takakae-t02/runtime/dotnet/dotnet",
+        "build",
+        "/workspace/work/verified-development/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/combat-study/PassiveChecks/NorthStar.PassiveChecks.csproj",
+        "-c",
+        "Release",
+        "-m:1",
+        "--disable-build-servers"
+      ],
+      "exit_code": 0,
+      "stdout": "  Determining projects to restore...\n  Restored /workspace/work/verified-development/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/combat-study/PassiveChecks/NorthStar.PassiveChecks.csproj (in 88 ms).\n  2 of 3 projects are up-to-date for restore.\n  NorthStar.Combat -> /workspace/work/verified-development/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/combat-study/Rules/bin/Release/netstandard2.1/NorthStar.Combat.dll\n  NorthStar.CombatStudy -> /workspace/work/verified-development/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/combat-study/Host/bin/Release/net10.0/NorthStar.CombatStudy.dll\n  NorthStar.PassiveChecks -> /workspace/work/verified-development/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/combat-study/PassiveChecks/bin/Release/net10.0/NorthStar.PassiveChecks.dll\n\nBuild succeeded.\n    0 Warning(s)\n    0 Error(s)\n\nTime Elapsed 00:00:03.06\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/workspace/work/takakae-t02/runtime/dotnet/dotnet",
+        "/workspace/work/verified-development/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/combat-study/PassiveChecks/bin/Release/net10.0/NorthStar.PassiveChecks.dll",
+        "/workspace/work/portable-combat/migrated/PassiveChecks.json"
+      ],
+      "exit_code": 0,
+      "stdout": "PASS: 33 passive native controls\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/workspace/work/takakae-t02/runtime/dotnet/dotnet",
+        "build",
+        "/workspace/work/verified-development/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/combat-study/ResponseChecks/NorthStar.ResponseChecks.csproj",
+        "-c",
+        "Release",
+        "-m:1",
+        "--disable-build-servers"
+      ],
+      "exit_code": 0,
+      "stdout": "  Determining projects to restore...\n  Restored /workspace/work/verified-development/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/combat-study/ResponseChecks/NorthStar.ResponseChecks.csproj (in 81 ms).\n  2 of 3 projects are up-to-date for restore.\n  NorthStar.Combat -> /workspace/work/verified-development/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/combat-study/Rules/bin/Release/netstandard2.1/NorthStar.Combat.dll\n  NorthStar.CombatStudy -> /workspace/work/verified-development/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/combat-study/Host/bin/Release/net10.0/NorthStar.CombatStudy.dll\n  NorthStar.ResponseChecks -> /workspace/work/verified-development/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/combat-study/ResponseChecks/bin/Release/net10.0/NorthStar.ResponseChecks.dll\n\nBuild succeeded.\n    0 Warning(s)\n    0 Error(s)\n\nTime Elapsed 00:00:02.95\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/workspace/work/takakae-t02/runtime/dotnet/dotnet",
+        "/workspace/work/verified-development/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/combat-study/ResponseChecks/bin/Release/net10.0/NorthStar.ResponseChecks.dll",
+        "/workspace/work/portable-combat/migrated/ResponseChecks.json"
+      ],
+      "exit_code": 0,
+      "stdout": "PASS: 60 actual response-chain controls\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/workspace/work/takakae-t02/runtime/dotnet/dotnet",
+        "build",
+        "/workspace/work/verified-development/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/combat-study/ControlChecks/NorthStar.ControlChecks.csproj",
+        "-c",
+        "Release",
+        "-m:1",
+        "--disable-build-servers"
+      ],
+      "exit_code": 0,
+      "stdout": "  Determining projects to restore...\n  Restored /workspace/work/verified-development/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/combat-study/ControlChecks/NorthStar.ControlChecks.csproj (in 77 ms).\n  2 of 3 projects are up-to-date for restore.\n  NorthStar.Combat -> /workspace/work/verified-development/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/combat-study/Rules/bin/Release/netstandard2.1/NorthStar.Combat.dll\n  NorthStar.CombatStudy -> /workspace/work/verified-development/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/combat-study/Host/bin/Release/net10.0/NorthStar.CombatStudy.dll\n  NorthStar.ControlChecks -> /workspace/work/verified-development/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/combat-study/ControlChecks/bin/Release/net10.0/NorthStar.ControlChecks.dll\n\nBuild succeeded.\n    0 Warning(s)\n    0 Error(s)\n\nTime Elapsed 00:00:02.74\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/workspace/work/takakae-t02/runtime/dotnet/dotnet",
+        "/workspace/work/verified-development/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/combat-study/ControlChecks/bin/Release/net10.0/NorthStar.ControlChecks.dll",
+        "/workspace/work/portable-combat/migrated/ControlChecks.json"
+      ],
+      "exit_code": 0,
+      "stdout": "{\n  \"checks\": 22,\n  \"controls\": [\n    \"hard drains three without control\",\n    \"specific immunity neither drains nor applies\",\n    \"breaking application drains only\",\n    \"exposed hard applies and refills\",\n    \"positive exposed value remains vulnerable\",\n    \"full refill application applies before protection\",\n    \"renewed protection drains instead of controls\",\n    \"invalid category rejected\",\n    \"classic refuses new action\",\n    \"hard actual cost round and contact\",\n    \"light pays contact plus DOT\",\n    \"zero crossing still pays contact\",\n    \"exposed control suppresses contact but DOT payable\",\n    \"empty hard refused without advancing bar round\",\n    \"partial refill remains exposed\",\n    \"full refill controls actual contact\",\n    \"next immune contact defeats\",\n    \"terminal control refuses\",\n    \"explicit preparation has no owner state\",\n    \"begin creates original control practice\",\n    \"retreat remains explicit not boss-world escape\",\n    \"read stable\"\n  ],\n  \"trace\": {\n    \"profile\": \"toxic\",\n    \"initiative\": null,\n    \"breakbar\": {\n      \"phase\": \"protected\",\n      \"value\": 4,\n      \"capacity\": 5,\n      \"lastApplied\": false,\n      \"lastDrain\": 1,\n      \"lastRefill\": 0\n    },\n    \"responsePractice\": false,\n    \"wardAvailable\": false,\n    \"pending\": null,\n    \"resolution\": [],\n    \"round\": 7,\n    \"hp\": 0,\n    \"maxHp\": 100,\n    \"enemyHp\": 96,\n    \"charges\": 0,\n    \"effects\": [],\n    \"threat\": \"No further threat; encounter ended.\",\n    \"events\": [\n      \"Control paid: one actual round; drained 1, refilled 0, applied False. No target HP damage.\",\n      \"Target contact: 20 incoming direct damage; 1 actual HP lost.\",\n      \"Round 7 resolved: defeated.\"\n    ],\n    \"outcome\": \"defeated\",\n    \"last\": \"Encounter ended. Restart explicitly to practice again.\",\n    \"weaponEnabled\": true,\n    \"attackMultiplier\": 1,\n    \"healingMultiplier\": 1,\n    \"passive\": \"none\",\n    \"armor\": \"light\",\n    \"rescueSpent\": false,\n    \"lastHit\": {\n      \"kind\": \"PhysicalDirect\",\n      \"incoming\": 20,\n      \"effectiveDamage\": 20,\n      \"hpBefore\": 1,\n      \"hpAfter\": 0,\n      \"damageReduced\": 0,\n      \"actualHpLost\": 1,\n      \"avoidedHpLoss\": 0,\n      \"rescued\": false\n    }\n  }\n}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/workspace/work/takakae-t02/runtime/dotnet/dotnet",
+        "build",
+        "/workspace/work/verified-development/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/combat-study/InitiativeChecks/NorthStar.InitiativeChecks.csproj",
+        "-c",
+        "Release",
+        "-m:1",
+        "--disable-build-servers"
+      ],
+      "exit_code": 0,
+      "stdout": "  Determining projects to restore...\n  Restored /workspace/work/verified-development/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/combat-study/InitiativeChecks/NorthStar.InitiativeChecks.csproj (in 120 ms).\n  2 of 3 projects are up-to-date for restore.\n  NorthStar.Combat -> /workspace/work/verified-development/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/combat-study/Rules/bin/Release/netstandard2.1/NorthStar.Combat.dll\n  NorthStar.CombatStudy -> /workspace/work/verified-development/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/combat-study/Host/bin/Release/net10.0/NorthStar.CombatStudy.dll\n  NorthStar.InitiativeChecks -> /workspace/work/verified-development/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/combat-study/InitiativeChecks/bin/Release/net10.0/NorthStar.InitiativeChecks.dll\n\nBuild succeeded.\n    0 Warning(s)\n    0 Error(s)\n\nTime Elapsed 00:00:02.87\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/workspace/work/takakae-t02/runtime/dotnet/dotnet",
+        "/workspace/work/verified-development/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/combat-study/InitiativeChecks/bin/Release/net10.0/NorthStar.InitiativeChecks.dll",
+        "/workspace/work/portable-combat/migrated/InitiativeChecks.json"
+      ],
+      "exit_code": 0,
+      "stdout": "PASS: 40 initiative native controls\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/workspace/work/takakae-t02/runtime/dotnet/dotnet",
+        "build",
+        "north-star/combat-study/TrialChecks/NorthStar.TrialChecks.csproj",
+        "-c",
+        "Release",
+        "-m:1",
+        "--disable-build-servers"
+      ],
+      "exit_code": 0,
+      "stdout": "  Determining projects to restore...\n  All projects are up-to-date for restore.\n  NorthStar.Combat -> /workspace/work/verified-development/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/combat-study/Rules/bin/Release/netstandard2.1/NorthStar.Combat.dll\n  NorthStar.CombatStudy -> /workspace/work/verified-development/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/combat-study/Host/bin/Release/net10.0/NorthStar.CombatStudy.dll\n  NorthStar.TrialChecks -> /workspace/work/verified-development/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/combat-study/TrialChecks/bin/Release/net10.0/NorthStar.TrialChecks.dll\n\nBuild succeeded.\n    0 Warning(s)\n    0 Error(s)\n\nTime Elapsed 00:00:03.12\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/workspace/work/takakae-t02/runtime/dotnet/dotnet",
+        "north-star/combat-study/TrialChecks/bin/Release/net10.0/NorthStar.TrialChecks.dll",
+        "/workspace/work/portable-combat/migrated/TrialChecks.json"
+      ],
+      "exit_code": 0,
+      "stdout": "PASS observation-is-not-action\nPASS schema-reject-atomic-0\nPASS schema-reject-atomic-1\nPASS schema-reject-atomic-2\nPASS schema-reject-atomic-3\nPASS schema-reject-atomic-4\nPASS schema-reject-atomic-5\nPASS schema-reject-atomic-6\nPASS toxic-win-accepted-1\nPASS toxic-win-accepted-2\nPASS toxic-win-accepted-3\nPASS toxic-win-accepted-4\nPASS toxic-real-victory\nPASS heated-win-accepted-1\nPASS heated-win-accepted-2\nPASS heated-win-accepted-3\nPASS heated-win-accepted-4\nPASS heated-win-accepted-5\nPASS heated-win-accepted-6\nPASS heated-win-accepted-7\nPASS heated-real-victory\nPASS heated-mistimed-treatment-negative-accepted-1\nPASS heated-mistimed-treatment-negative-accepted-2\nPASS heated-mistimed-treatment-negative-accepted-3\nPASS heated-mistimed-treatment-negative-accepted-4\nPASS heated-mistimed-treatment-negative-accepted-5\nPASS heated-mistimed-treatment-negative-accepted-6\nPASS mistimed-treatment-does-not-secure\nPASS toxic-constant-guard-defeated\nPASS heated-constant-guard-defeated\nPASS guard-observation-accepted-1\nPASS strike-observation-accepted-1\nPASS guard-halves-contact-leaves-full-dot\nPASS cleanse-cost-accepted-1\nPASS cleanse-charge-and-opportunity\nPASS bleed-treatment-accepted-1\nPASS bleed-treatment-accepted-2\nPASS bleed-real-healing\nPASS disarm-refusal-atomic\nPASS disarm-bash-and-burn\nPASS disarm-global-expiry\nPASS burn-real-strike\nPASS withdrawal-no-fabricated-win\nPASS terminal-refusal-atomic\nPASS explicit-restart\nPASS exhausted-treatment-atomic\n46 consumer controls; passed: True\n",
+      "stderr": ""
+    },
+    {
+      "suite": "classic",
+      "command": [
+        "node",
+        "/workspace/work/verified-development/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/combat-study/tools/browser.mjs",
+        "/workspace/work/takakae-t02/runtime/dotnet/dotnet",
+        "/workspace/work/portable-combat-science/browser-classic"
+      ],
+      "exit_code": 0,
+      "stdout": "22 browser/HTTP controls passed; actual renderer negative detected\n",
+      "stderr": ""
+    },
+    {
+      "suite": "passive",
+      "command": [
+        "node",
+        "/workspace/work/verified-development/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/combat-study/tools/passive-browser.mjs",
+        "/workspace/work/takakae-t02/runtime/dotnet/dotnet",
+        "/workspace/work/portable-combat-science/browser-passive"
+      ],
+      "exit_code": 0,
+      "stdout": "PASS: 21 passive Chromium controls and 7 HTTP controls\n",
+      "stderr": ""
+    },
+    {
+      "suite": "response",
+      "command": [
+        "node",
+        "/workspace/work/verified-development/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/combat-study/tools/response-browser.mjs",
+        "/workspace/work/takakae-t02/runtime/dotnet/dotnet",
+        "/workspace/work/portable-combat-science/browser-response"
+      ],
+      "exit_code": 0,
+      "stdout": "PASS: 16 actual response Chromium controls and 3 HTTP negatives\n",
+      "stderr": ""
+    },
+    {
+      "suite": "control",
+      "command": [
+        "node",
+        "/workspace/work/verified-development/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/combat-study/tools/control-browser.mjs",
+        "/workspace/work/takakae-t02/runtime/dotnet/dotnet",
+        "/workspace/work/portable-combat-science/browser-control"
+      ],
+      "exit_code": 0,
+      "stdout": "PASS: 21 control Chromium controls\n",
+      "stderr": ""
+    },
+    {
+      "suite": "initiative",
+      "command": [
+        "node",
+        "/workspace/work/verified-development/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/combat-study/tools/initiative-browser.mjs",
+        "/workspace/work/takakae-t02/runtime/dotnet/dotnet",
+        "/workspace/work/portable-combat-science/browser-initiative"
+      ],
+      "exit_code": 0,
+      "stdout": "PASS: 20 initiative Chromium controls; 2 HTTP negatives\n",
+      "stderr": ""
+    }
+  ],
+  "browser": {
+    "classic": {
+      "combined_browser_http": 22
+    },
+    "passive": {
+      "chromium": 21,
+      "http": 7
+    },
+    "response": {
+      "chromium": 16,
+      "http": 3
+    },
+    "control": {
+      "chromium": 21
+    },
+    "initiative": {
+      "chromium": 20,
+      "http": 2
+    }
+  },
+  "architecture_negative": {
+    "fixture": "Existing current TrialChecks Program compiled outside maintained sources against actual baseline DLLs.",
+    "build_exit_code": 0,
+    "execution_exit_code": 1,
+    "specific_failure": "Actual Trial owner must execute from the shared netstandard2.1 combat assembly, not the host.",
+    "gameplay_controls_executed": 0
+  },
+  "supporting_checks": [
+    {
+      "command": "python3 tools/test_csharp_scope.py",
+      "exit_code": 0,
+      "tests": 33
+    },
+    {
+      "command": "python3 tools/test_ci_scope.py",
+      "exit_code": 0,
+      "tests": 14
+    },
+    {
+      "command": "python3 labs/combat-response/status/test_instrument.py",
+      "exit_code": 0,
+      "tests": 17
+    },
+    {
+      "command": "Import existing combat tools/verify.py and call inputs()",
+      "exit_code": 0,
+      "inputs": 35,
+      "assertions": [
+        "Actual linked Trial present",
+        "Existing graph implementation included in identity closure",
+        "Project dependency confinement retained"
+      ]
+    },
+    {
+      "command": "SHA256 compare original recipient project and both recipient archives against selected clean baseline",
+      "exit_code": 0
+    }
+  ],
+  "environment": {
+    "sdk": "10.0.401",
+    "sdk_path": "/workspace/work/takakae-t02/runtime/dotnet/dotnet",
+    "chromium": "/usr/bin/chromium",
+    "dependencies": "Existing locked Playwright installation reused via ignored node_modules symlink; no runtime install or global configuration change. The temporary symlink was removed after browser execution; no maintained source changed."
+  },
+  "review": {
+    "engineering": "ENG004/015: exact source owner, responsibility boundary, no duplicate implementation.",
+    "scientific": "SCI013/017: evaluated inputs, actual copied assemblies, exact fresh parity and specific old-owner rejection.",
+    "creative": "CRE005/011: preserve agency/cost/death policies; Gate survivors5/9HP versus Trialcontact20 make immediate integration require new authored policy. Portable ownership enables later work without fabricated healing."
+  },
+  "failures_and_negatives": "No unexpected build/native/browser failures in this increment. The deliberate old-owner fixture exits1 as required. Original Quick defeat, control-only defeat, no-refund response and rescue-then-DOT defeat persist; historical diagnostics remain untouched.",
+  "limits": [
+    "201 existing native controls overlap deterministic outcomes; not independent trials or human findings.",
+    "Public Trial type moved assembly; dependent consumers must rebuild. Precompiled binary compatibility is not promised.",
+    "No new gameplay policy, skill catalog, progression grant or capability promotion. Eleven destinations and24INTEGRATED/12REJECTED/15UNRESOLVED remain.",
+    "No fresh Unity Editor/API/IL2CPP, Unity Windows Player, Windows recipient, Steam, multiplayer, account/save migration, balance or human validation. Prior Windows .NET recipient evidence remains valid.",
+    "R51/R60/R61/INT-C01-001 remain OPEN; causal B/E ACKs unverified. No Brain original, Drive master, Maker, MER, canon, Godot consumer or historical evidence changed."
+  ],
+  "final_code_sha256": {
+    "north-star/combat-study/Host/Trial.cs": "ebc445829dbe27f69890531633028b32b9d351d0d1b7d32fc38bda881f6db6a9",
+    "north-star/combat-study/Host/NorthStar.CombatStudy.csproj": "93c5614414b9fc0fd22879817abe3cfa17daec3d697443876cb8eb3fffec7cc8",
+    "north-star/combat-study/Rules/NorthStar.Combat.csproj": "333b2e67b6e8c46089a5e5273fd1b09e5facb36aa719bde7b3ff1a8e97a70134",
+    "north-star/combat-study/TrialChecks/Program.cs": "0877bf9fa19134b011e728e92b452ff71c7ee259d7f47bad843b0f57a8be420e",
+    "north-star/combat-study/tools/verify.py": "f24ce1220dca749fcf39bdbc21706b7dfaf9f138c8dd4b32debb40e68fddb596",
+    "tools/csharp_scope.py": "a8bdcfd1bee766318c8c06865fb39a190cfadc0dea4033d769a94401b6afff03",
+    "tools/test_csharp_scope.py": "7e80a078c5a0f990aa42e2f4bc3ae2b5e95fa572a82929b56129ef2cb2fa8757"
+  },
+  "retained_integration_failures": [
+    {
+      "command": "python3 tools/validate_repo.py",
+      "exit_code": 1,
+      "observed": "ERROR: origin transition: lab build-operations: consumer_paths requires actual consumer code",
+      "correction": "Removed csproj metadata from consumer_paths; kept actual Trial.cs and Room.cs consumers. Project evidence remains evaluated separately."
+    },
+    {
+      "command": "python3 tools/check_transformation.py",
+      "exit_code": 1,
+      "observed": "FAIL: lab build-operations: consumer_paths requires actual consumer code",
+      "correction": "Removed project metadata from actual-code consumer list."
+    },
+    {
+      "command": "python3 tools/validate_repo.py",
+      "exit_code": 1,
+      "observed": "ERROR: origin transition: consumption XP-COMBAT-STATUS: integrated consumer source hash mismatch",
+      "correction": "Bound current consumer bytes to new actual destination execution and prepended it in affected current consumption records. Historical evidence bytes and gates unchanged."
+    },
+    {
+      "command": "python3 tools/inventory_origins.py --check labs/source-inventory.json",
+      "exit_code": 1,
+      "observed": "FAIL: Missing or linked source: projects/realtime-integration-lab/node_modules",
+      "correction": "Removed only the task-created ignored dependency symlink after browser checks. Existing original installation preserved; inventory checker unchanged."
+    }
+  ],
+  "execution_scope": "Existing actual combat owner portability; prior source intake and arithmetic policy unchanged.",
+  "consumer_paths": [
+    "north-star/combat-study/Host/Room.cs",
+    "north-star/combat-study/Host/Trial.cs",
+    "north-star/combat-study/Host/web/app.js",
+    "north-star/combat-study/Rules/Breakbar.cs",
+    "north-star/combat-study/Rules/Combat.cs",
+    "north-star/combat-study/Rules/Initiative.cs",
+    "north-star/combat-study/Rules/Passives.cs",
+    "north-star/combat-study/Rules/ResponseChain.cs"
+  ],
+  "source_artifacts": [
+    {
+      "local_path": "north-star/combat-study/Host/Room.cs",
+      "size_bytes": 4070,
+      "sha256": "fa07702ba83f807acc17126ea52b13709fe3d9c64d4b64a265f39878e08a1c85"
+    },
+    {
+      "local_path": "north-star/combat-study/Host/Trial.cs",
+      "size_bytes": 13992,
+      "sha256": "ebc445829dbe27f69890531633028b32b9d351d0d1b7d32fc38bda881f6db6a9"
+    },
+    {
+      "local_path": "north-star/combat-study/Host/web/app.js",
+      "size_bytes": 15057,
+      "sha256": "82826cbda2abea6fe3d9c546469d076a8d61535438e519916668f4f477cd7939"
+    },
+    {
+      "local_path": "north-star/combat-study/Rules/Breakbar.cs",
+      "size_bytes": 1813,
+      "sha256": "e63f1f3ba5165112da903a16e4a07bec2bd88b0832af6c923d5038cb27bfe5c5"
+    },
+    {
+      "local_path": "north-star/combat-study/Rules/Combat.cs",
+      "size_bytes": 5165,
+      "sha256": "2624d7596cca2cc4bef78c17f143004b48978866654e4c84f6b4960ff5800fb6"
+    },
+    {
+      "local_path": "north-star/combat-study/Rules/Initiative.cs",
+      "size_bytes": 2043,
+      "sha256": "44d56c704d5fe66825aeec3ffd27a77ff5b1a101c3b6eee8996a8273c01e2a9c"
+    },
+    {
+      "local_path": "north-star/combat-study/Rules/Passives.cs",
+      "size_bytes": 3997,
+      "sha256": "4ef33bc84c6fdf7849d3aa8bda925a0f7fd2293be29cdfbf884cc67bccc87d10"
+    },
+    {
+      "local_path": "north-star/combat-study/Rules/ResponseChain.cs",
+      "size_bytes": 2412,
+      "sha256": "ebcad92f15603d95b1cd0b32163e4fcfe17a082422cf003c172865f0bd4d6692"
+    }
+  ],
+  "checks": {
+    "passed": 201,
+    "failed": 0,
+    "scope": "Existing native gameplay controls after rebuild; overlapping modes, not independent trials. Architecture guard and browser counts reported separately."
+  },
+  "command_files": [
+    "baseline-commands.json",
+    "candidate-commands.json",
+    "architecture-commands.json",
+    "browser-commands.json",
+    "old-owner-negative-commands.json"
+  ],
+  "integrity_checks": "integrity-checks.json"
+}

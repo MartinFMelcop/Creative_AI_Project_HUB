@@ -1,0 +1,37 @@
+[
+  {
+    "suite": "TrialChecks",
+    "fresh_baseline_and_candidate_sha256": "987590174614c13e5e921d22fe80fc0c09b00ee73ce4d62d4a6eceb08bc3f076",
+    "bytes": 113332,
+    "retained_identical_outcome": "evidence/initiative/regressions/passive/regressions/native.json",
+    "note": "Fresh outputs were executed and compared; byte-identical retained content is referenced rather than copied again."
+  },
+  {
+    "suite": "PassiveChecks",
+    "fresh_baseline_and_candidate_sha256": "005c9a8bbdb18fbd7439147b1ced63065cc83a8da35a3002b144b36d3f33d307",
+    "bytes": 7246,
+    "retained_identical_outcome": "evidence/initiative/regressions/passive/native.json",
+    "note": "Fresh outputs were executed and compared; byte-identical retained content is referenced rather than copied again."
+  },
+  {
+    "suite": "ResponseChecks",
+    "fresh_baseline_and_candidate_sha256": "fc764314a885dcaf7535ec5a21d202d39b657ee29f1d2c2e9b0b2e4afb5462ce",
+    "bytes": 31222,
+    "retained_identical_outcome": "evidence/initiative/regressions/response/native.json",
+    "note": "Fresh outputs were executed and compared; byte-identical retained content is referenced rather than copied again."
+  },
+  {
+    "suite": "ControlChecks",
+    "fresh_baseline_and_candidate_sha256": "7db0a850cc40916e3c6e6c2ed018d5377cbd600d5e7ca8400566ce23b9aa0237",
+    "bytes": 2196,
+    "retained_identical_outcome": "evidence/initiative/regressions/control/native.json",
+    "note": "Fresh outputs were executed and compared; byte-identical retained content is referenced rather than copied again."
+  },
+  {
+    "suite": "InitiativeChecks",
+    "fresh_baseline_and_candidate_sha256": "d1777199b279d6f85733945a5ff06c11d852f231809ac9aa53ffb3e4980e821c",
+    "bytes": 173392,
+    "retained_identical_outcome": "evidence/initiative/exploratory/native-final.json",
+    "note": "Fresh outputs were executed and compared; byte-identical retained content is referenced rather than copied again."
+  }
+]

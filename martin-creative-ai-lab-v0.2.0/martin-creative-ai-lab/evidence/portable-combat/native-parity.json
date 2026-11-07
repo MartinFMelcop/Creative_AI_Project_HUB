@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "baseline_commit": "5f8a97e0761848d8dc8b6aad8168c67b22bce531",
+  "architecture_guard": "Trial assembly equals EffectSet assembly, differs from Room assembly, TargetFrameworkAttribute netstandard2.1; throwing precondition preserves original gameplay output.",
+  "suites": [
+    {
+      "suite": "TrialChecks",
+      "bytes": 113332,
+      "sha256": "987590174614c13e5e921d22fe80fc0c09b00ee73ce4d62d4a6eceb08bc3f076",
+      "gameplay_controls": 46,
+      "byte_equal": true
+    },
+    {
+      "suite": "PassiveChecks",
+      "bytes": 7246,
+      "sha256": "005c9a8bbdb18fbd7439147b1ced63065cc83a8da35a3002b144b36d3f33d307",
+      "gameplay_controls": 33,
+      "byte_equal": true
+    },
+    {
+      "suite": "ResponseChecks",
+      "bytes": 31222,
+      "sha256": "fc764314a885dcaf7535ec5a21d202d39b657ee29f1d2c2e9b0b2e4afb5462ce",
+      "gameplay_controls": 60,
+      "byte_equal": true
+    },
+    {
+      "suite": "ControlChecks",
+      "bytes": 2196,
+      "sha256": "7db0a850cc40916e3c6e6c2ed018d5377cbd600d5e7ca8400566ce23b9aa0237",
+      "gameplay_controls": 22,
+      "byte_equal": true
+    },
+    {
+      "suite": "InitiativeChecks",
+      "bytes": 173392,
+      "sha256": "d1777199b279d6f85733945a5ff06c11d852f231809ac9aa53ffb3e4980e821c",
+      "gameplay_controls": 40,
+      "byte_equal": true
+    }
+  ]
+}

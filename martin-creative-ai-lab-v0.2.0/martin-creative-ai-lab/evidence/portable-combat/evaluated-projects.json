@@ -1,0 +1,202 @@
+[
+  {
+    "project": "Rules/NorthStar.Combat.csproj",
+    "command": [
+      "/workspace/work/takakae-t02/runtime/dotnet/dotnet",
+      "msbuild",
+      "/workspace/work/verified-development/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/combat-study/Rules/NorthStar.Combat.csproj",
+      "-getProperty:TargetFramework,LangVersion",
+      "-getItem:Compile,ProjectReference"
+    ],
+    "result": {
+      "Properties": {
+        "TargetFramework": "netstandard2.1",
+        "LangVersion": "8.0"
+      },
+      "Items": {
+        "Compile": [
+          {
+            "Identity": "Breakbar.cs",
+            "FullPath": "/workspace/work/verified-development/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/combat-study/Rules/Breakbar.cs",
+            "RootDir": "/",
+            "Filename": "Breakbar",
+            "Extension": ".cs",
+            "RelativeDir": "",
+            "Directory": "workspace/work/verified-development/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/combat-study/Rules/",
+            "RecursiveDir": "",
+            "ModifiedTime": "",
+            "CreatedTime": "",
+            "AccessedTime": "",
+            "DefiningProjectFullPath": "/workspace/work/takakae-t02/runtime/dotnet/sdk/10.0.401/Sdks/Microsoft.NET.Sdk/targets/Microsoft.NET.Sdk.DefaultItems.props",
+            "DefiningProjectDirectory": "/workspace/work/takakae-t02/runtime/dotnet/sdk/10.0.401/Sdks/Microsoft.NET.Sdk/targets/",
+            "DefiningProjectName": "Microsoft.NET.Sdk.DefaultItems",
+            "DefiningProjectExtension": ".props"
+          },
+          {
+            "Identity": "Combat.cs",
+            "FullPath": "/workspace/work/verified-development/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/combat-study/Rules/Combat.cs",
+            "RootDir": "/",
+            "Filename": "Combat",
+            "Extension": ".cs",
+            "RelativeDir": "",
+            "Directory": "workspace/work/verified-development/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/combat-study/Rules/",
+            "RecursiveDir": "",
+            "ModifiedTime": "",
+            "CreatedTime": "",
+            "AccessedTime": "",
+            "DefiningProjectFullPath": "/workspace/work/takakae-t02/runtime/dotnet/sdk/10.0.401/Sdks/Microsoft.NET.Sdk/targets/Microsoft.NET.Sdk.DefaultItems.props",
+            "DefiningProjectDirectory": "/workspace/work/takakae-t02/runtime/dotnet/sdk/10.0.401/Sdks/Microsoft.NET.Sdk/targets/",
+            "DefiningProjectName": "Microsoft.NET.Sdk.DefaultItems",
+            "DefiningProjectExtension": ".props"
+          },
+          {
+            "Identity": "Initiative.cs",
+            "FullPath": "/workspace/work/verified-development/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/combat-study/Rules/Initiative.cs",
+            "RootDir": "/",
+            "Filename": "Initiative",
+            "Extension": ".cs",
+            "RelativeDir": "",
+            "Directory": "workspace/work/verified-development/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/combat-study/Rules/",
+            "RecursiveDir": "",
+            "ModifiedTime": "",
+            "CreatedTime": "",
+            "AccessedTime": "",
+            "DefiningProjectFullPath": "/workspace/work/takakae-t02/runtime/dotnet/sdk/10.0.401/Sdks/Microsoft.NET.Sdk/targets/Microsoft.NET.Sdk.DefaultItems.props",
+            "DefiningProjectDirectory": "/workspace/work/takakae-t02/runtime/dotnet/sdk/10.0.401/Sdks/Microsoft.NET.Sdk/targets/",
+            "DefiningProjectName": "Microsoft.NET.Sdk.DefaultItems",
+            "DefiningProjectExtension": ".props"
+          },
+          {
+            "Identity": "Passives.cs",
+            "FullPath": "/workspace/work/verified-development/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/combat-study/Rules/Passives.cs",
+            "RootDir": "/",
+            "Filename": "Passives",
+            "Extension": ".cs",
+            "RelativeDir": "",
+            "Directory": "workspace/work/verified-development/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/combat-study/Rules/",
+            "RecursiveDir": "",
+            "ModifiedTime": "",
+            "CreatedTime": "",
+            "AccessedTime": "",
+            "DefiningProjectFullPath": "/workspace/work/takakae-t02/runtime/dotnet/sdk/10.0.401/Sdks/Microsoft.NET.Sdk/targets/Microsoft.NET.Sdk.DefaultItems.props",
+            "DefiningProjectDirectory": "/workspace/work/takakae-t02/runtime/dotnet/sdk/10.0.401/Sdks/Microsoft.NET.Sdk/targets/",
+            "DefiningProjectName": "Microsoft.NET.Sdk.DefaultItems",
+            "DefiningProjectExtension": ".props"
+          },
+          {
+            "Identity": "ResponseChain.cs",
+            "FullPath": "/workspace/work/verified-development/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/combat-study/Rules/ResponseChain.cs",
+            "RootDir": "/",
+            "Filename": "ResponseChain",
+            "Extension": ".cs",
+            "RelativeDir": "",
+            "Directory": "workspace/work/verified-development/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/combat-study/Rules/",
+            "RecursiveDir": "",
+            "ModifiedTime": "",
+            "CreatedTime": "",
+            "AccessedTime": "",
+            "DefiningProjectFullPath": "/workspace/work/takakae-t02/runtime/dotnet/sdk/10.0.401/Sdks/Microsoft.NET.Sdk/targets/Microsoft.NET.Sdk.DefaultItems.props",
+            "DefiningProjectDirectory": "/workspace/work/takakae-t02/runtime/dotnet/sdk/10.0.401/Sdks/Microsoft.NET.Sdk/targets/",
+            "DefiningProjectName": "Microsoft.NET.Sdk.DefaultItems",
+            "DefiningProjectExtension": ".props"
+          },
+          {
+            "Identity": "../Host/Trial.cs",
+            "Link": "Trial.cs",
+            "FullPath": "/workspace/work/verified-development/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/combat-study/Host/Trial.cs",
+            "RootDir": "/",
+            "Filename": "Trial",
+            "Extension": ".cs",
+            "RelativeDir": "../Host/",
+            "Directory": "workspace/work/verified-development/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/combat-study/Host/",
+            "RecursiveDir": "",
+            "ModifiedTime": "",
+            "CreatedTime": "",
+            "AccessedTime": "",
+            "DefiningProjectFullPath": "/workspace/work/verified-development/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/combat-study/Rules/NorthStar.Combat.csproj",
+            "DefiningProjectDirectory": "/workspace/work/verified-development/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/combat-study/Rules/",
+            "DefiningProjectName": "NorthStar.Combat",
+            "DefiningProjectExtension": ".csproj"
+          }
+        ],
+        "ProjectReference": []
+      }
+    }
+  },
+  {
+    "project": "Host/NorthStar.CombatStudy.csproj",
+    "command": [
+      "/workspace/work/takakae-t02/runtime/dotnet/dotnet",
+      "msbuild",
+      "/workspace/work/verified-development/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/combat-study/Host/NorthStar.CombatStudy.csproj",
+      "-getProperty:TargetFramework,LangVersion",
+      "-getItem:Compile,ProjectReference"
+    ],
+    "result": {
+      "Properties": {
+        "TargetFramework": "net10.0",
+        "LangVersion": "14.0"
+      },
+      "Items": {
+        "Compile": [
+          {
+            "Identity": "Program.cs",
+            "FullPath": "/workspace/work/verified-development/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/combat-study/Host/Program.cs",
+            "RootDir": "/",
+            "Filename": "Program",
+            "Extension": ".cs",
+            "RelativeDir": "",
+            "Directory": "workspace/work/verified-development/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/combat-study/Host/",
+            "RecursiveDir": "",
+            "ModifiedTime": "",
+            "CreatedTime": "",
+            "AccessedTime": "",
+            "DefiningProjectFullPath": "/workspace/work/takakae-t02/runtime/dotnet/sdk/10.0.401/Sdks/Microsoft.NET.Sdk/targets/Microsoft.NET.Sdk.DefaultItems.props",
+            "DefiningProjectDirectory": "/workspace/work/takakae-t02/runtime/dotnet/sdk/10.0.401/Sdks/Microsoft.NET.Sdk/targets/",
+            "DefiningProjectName": "Microsoft.NET.Sdk.DefaultItems",
+            "DefiningProjectExtension": ".props"
+          },
+          {
+            "Identity": "Room.cs",
+            "FullPath": "/workspace/work/verified-development/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/combat-study/Host/Room.cs",
+            "RootDir": "/",
+            "Filename": "Room",
+            "Extension": ".cs",
+            "RelativeDir": "",
+            "Directory": "workspace/work/verified-development/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/combat-study/Host/",
+            "RecursiveDir": "",
+            "ModifiedTime": "",
+            "CreatedTime": "",
+            "AccessedTime": "",
+            "DefiningProjectFullPath": "/workspace/work/takakae-t02/runtime/dotnet/sdk/10.0.401/Sdks/Microsoft.NET.Sdk/targets/Microsoft.NET.Sdk.DefaultItems.props",
+            "DefiningProjectDirectory": "/workspace/work/takakae-t02/runtime/dotnet/sdk/10.0.401/Sdks/Microsoft.NET.Sdk/targets/",
+            "DefiningProjectName": "Microsoft.NET.Sdk.DefaultItems",
+            "DefiningProjectExtension": ".props"
+          }
+        ],
+        "ProjectReference": [
+          {
+            "Identity": "../Rules/NorthStar.Combat.csproj",
+            "Targets": "",
+            "OutputItemType": "",
+            "ReferenceSourceTarget": "ProjectReference",
+            "FullPath": "/workspace/work/verified-development/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/combat-study/Rules/NorthStar.Combat.csproj",
+            "RootDir": "/",
+            "Filename": "NorthStar.Combat",
+            "Extension": ".csproj",
+            "RelativeDir": "../Rules/",
+            "Directory": "workspace/work/verified-development/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/combat-study/Rules/",
+            "RecursiveDir": "",
+            "ModifiedTime": "",
+            "CreatedTime": "",
+            "AccessedTime": "",
+            "DefiningProjectFullPath": "/workspace/work/verified-development/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/combat-study/Host/NorthStar.CombatStudy.csproj",
+            "DefiningProjectDirectory": "/workspace/work/verified-development/martin-creative-ai-lab-v0.2.0/martin-creative-ai-lab/north-star/combat-study/Host/",
+            "DefiningProjectName": "NorthStar.CombatStudy",
+            "DefiningProjectExtension": ".csproj"
+          }
+        ]
+      }
+    }
+  }
+]

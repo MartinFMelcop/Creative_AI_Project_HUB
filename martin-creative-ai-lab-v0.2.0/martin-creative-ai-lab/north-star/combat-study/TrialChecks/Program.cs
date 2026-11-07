@@ -22,7 +22,14 @@ static class TrialChecks
     static int Main(string[] args)
     {
         string? path=args.Length==1?args[0]:null;bool passed=false;string? failure=null;
-        try{if(args.Length>1)throw new ArgumentException("Optional output JSON path only");Schema();Journeys();passed=true;return 0;}
+        try{if(args.Length>1)throw new ArgumentException("Optional output JSON path only");
+            // The actual gameplay owner must come from the existing portable rules assembly.
+            // This architecture guard does not add or change serialized gameplay controls.
+            var ownerAssembly=typeof(Trial).Assembly;
+            var target=(System.Runtime.Versioning.TargetFrameworkAttribute?)Attribute.GetCustomAttribute(ownerAssembly,typeof(System.Runtime.Versioning.TargetFrameworkAttribute));
+            if(ownerAssembly!=typeof(NorthStar.Combat.EffectSet).Assembly||ownerAssembly==typeof(Room).Assembly||target?.FrameworkName!=".NETStandard,Version=v2.1")
+                throw new Exception("Actual Trial owner must execute from the shared netstandard2.1 combat assembly, not the host.");
+            Schema();Journeys();passed=true;return 0;}
         catch(Exception e){failure=e.Message;Console.Error.WriteLine(failure);return 1;}
         finally{if(path!=null)File.WriteAllText(path,JsonSerializer.Serialize(new {passed,failure,controls,journeys},new JsonSerializerOptions{WriteIndented=true}));Console.WriteLine($"{controls.Count} consumer controls; passed: {passed}");}
     }

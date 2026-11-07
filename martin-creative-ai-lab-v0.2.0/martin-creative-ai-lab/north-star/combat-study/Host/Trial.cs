@@ -2,14 +2,15 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using NorthStar.Combat;
-namespace NorthStar.CombatStudy;
+namespace NorthStar.CombatStudy
+{
 
 // An original deterministic practice encounter. Its global rounds are separate
 // from Crossing beats; no historical characters, regions or battle loop imported.
 public sealed class Trial
 {
-    readonly EffectSet effects = new();
-    readonly List<string> events = new();
+    readonly EffectSet effects = new EffectSet();
+    readonly List<string> events = new List<string>();
     readonly string profile;
     readonly PassiveEncounter passive;
     HitResult? lastHit;
@@ -165,4 +166,5 @@ public sealed class Trial
     bool Refuse(string reason) { Last=reason;return false; }
     object? HitObservation()=>lastHit==null?null:new {kind=lastHit.Kind.ToString(),incoming=lastHit.Incoming,effectiveDamage=lastHit.EffectiveDamage,hpBefore=lastHit.HpBefore,hpAfter=lastHit.HpAfter,damageReduced=lastHit.DamageReduced,actualHpLost=lastHit.ActualHpLost,avoidedHpLoss=lastHit.AvoidedHpLoss,rescued=lastHit.Rescued};
     public object Snapshot()=>new { profile,initiative=initiative==null?null:new {style=initiative.Style,playerAgility=initiative.PlayerAgility,enemyAgility=initiative.TargetAgility,round=initiative.Current.Round,order=initiative.Current.Order,playerScore=initiative.Current.PlayerScore,targetScore=initiative.Current.TargetScore,seedState=initiative.Current.SeedState},breakbar=breakbar==null?null:new {phase=breakbar.Protected?"protected":"exposed",value=breakbar.Value,capacity=breakbar.Capacity,lastApplied=lastControl?.Applied??false,lastDrain=lastControl?.Drained??0,lastRefill=lastControl?.Refilled??0},responsePractice=responses,wardAvailable=responses&&wardAvailable,pending=pending==null?null:new {ward=pending.HasWard,items=pending.PendingCount},resolution=resolution.ToArray(),round,hp,maxHp=100,enemyHp,charges,effects=effects.Snapshot().Select(e=>new {effect=e.Effect.ToString(),remaining=e.Remaining}).ToArray(),threat=outcome=="active"?Threat:"No further threat; encounter ended.",events=events.ToArray(),outcome,last=Last,weaponEnabled=effects.WeaponEnabled,attackMultiplier=effects.AttackMultiplier,healingMultiplier=effects.HealingMultiplier,passive=PassiveIds.Name(passive.Selection),armor=PassiveIds.Name(passive.Armor),rescueSpent=passive.RescueSpent,lastHit=HitObservation() };
+}
 }

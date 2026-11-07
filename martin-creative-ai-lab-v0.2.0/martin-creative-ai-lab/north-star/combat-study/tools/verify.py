@@ -7,25 +7,22 @@ import os
 from pathlib import Path
 import shutil
 import subprocess
-import xml.etree.ElementTree as ET
+import sys
 ROOT=Path(__file__).resolve().parents[3]
 STUDY=ROOT/'north-star/combat-study'
 CSHARP=ROOT/'north-star/csharp'
+sys.path.insert(0,str(ROOT/'tools'))
+from csharp_scope import project_inputs
 
 def inputs():
     files={CSHARP/'global.json',ROOT/'projects/realtime-integration-lab/package.json',ROOT/'projects/realtime-integration-lab/package-lock.json'}
-    pending=[STUDY/'Checks/NorthStar.CombatChecks.csproj',STUDY/'TrialChecks/NorthStar.TrialChecks.csproj']
-    seen=set()
-    while pending:
-        p=pending.pop().resolve()
-        if p in seen: continue
-        if not p.is_relative_to(STUDY): raise ValueError('Unexpected project dependency')
-        seen.add(p);files.add(p)
-        files.update(x for x in p.parent.rglob('*.cs') if not {'bin','obj'} & set(x.parts))
-        for item in ET.parse(p).iter():
-            tag=item.tag.split('}')[-1]
-            if tag=='ProjectReference': pending.append((p.parent/item.attrib['Include']).resolve())
-            if tag in {'Compile','Import','PackageReference'}: raise ValueError('Uninventoried compile/import/package dependency')
+    # Reuse the existing fail-closed graph, including the reviewed owner transfer.
+    graph=project_inputs(ROOT,['north-star/combat-study/Checks/NorthStar.CombatChecks.csproj',
+                               'north-star/combat-study/TrialChecks/NorthStar.TrialChecks.csproj'])
+    if any(not (ROOT/name).is_relative_to(STUDY) for name in graph['inputs']):
+        raise ValueError('Unexpected project dependency')
+    files.update(ROOT/name for name in graph['inputs'])
+    files.update(ROOT/'tools'/name for name in ('csharp_scope.py','ci_scope.py'))
     for folder in (STUDY/'tools',STUDY/'Host/web',ROOT/'labs/combat-response/status'):
         files.update(p for p in folder.rglob('*') if p.suffix in {'.py','.mjs','.js','.html','.css','.json'} and '__pycache__' not in p.parts)
     if any(p.is_symlink() or not p.is_file() or not p.resolve().is_relative_to(ROOT) for p in files): raise ValueError('Invalid input')
